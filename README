@@ -1,0 +1,17 @@
+For project page see http://www.mediawiki.org/wiki/Heterogeneous_deployment
+
+Changes to be made for this version of Het Deploy:
+
+* Move wmf-config one level up
+* Change all references to wmf-confing to have the correct value in LocalSettings.php
+* Change all references to wmf-confing to have the correct value in includes/maintenance
+* For all new wikis being deployed add a /usr/local/apache/common/wikiversions.db (maybe add a script for this later)
+* Copy common/php-1.17/cache/trusted-xff.cdb to the new source directory
+* Apply patches to CommonSettings.php
+* In InitialiseSettings.php make the following change:
+'wgCacheDirectory' => array(
+    'default' => '/tmp/mw-cache-' . $wgVersionDirectory,
+* Create the following new symlinks
+** /apache/common/live-1.5/extensions-1.<new-version>
+** /apache/common/live-1.5/skins-1.<new-version>
+
