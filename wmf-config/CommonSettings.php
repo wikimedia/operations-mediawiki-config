@@ -46,12 +46,13 @@ wfProfileIn( "$fname-init" );
 
 #----------------------------------------------------------------------
 # Initialisation
-
+/*
 if ( defined( 'TESTWIKI' ) ) {
 	$IP = "/home/wikipedia/common/php-1.17";
 } else {
 	$IP = "/usr/local/apache/common/php-1.17";
 }
+*/
 //ini_set( "include_path", "$IP:$IP/includes:$IP/languages:$IP/templates:$IP/lib:$IP/extensions/wikihiero:/usr/local/lib/php:/usr/share/php" );
 // Modernized BV -- 2009-7-14
 set_include_path( "$IP:$IP/lib:/usr/local/lib/php:/usr/share/php" );
@@ -162,6 +163,14 @@ if ( $site == "wikipedia" ) {
 }
 $wgDBname = str_replace( "-", "_", $lang . $dbSuffix );
 
+//changed for hetdeploy testing --pdhanda
+$match = array();
+if ( preg_match("/^[0-9.]*/", $wgVersion, $match) ) {
+	$wgVersionDirectory = $match[0];
+} else {
+	$wgVersionDirectory = "1.17";
+}
+
 # Shutting eswiki down
 #if ( $wgDBname == 'eswiki' && php_sapi_name() != 'cli' ) { die(); }
 
@@ -169,12 +178,12 @@ wfProfileOut( "$fname-host" );
 
 # Initialise wgConf
 wfProfileIn( "$fname-wgConf" );
-require( "$IP/wmf-config/wgConf.php" );
+require( "$IP/../wmf-config/wgConf.php" );
 
 function wmfLoadInitialiseSettings( $conf ) {
 	global $IP;
 	$wgConf =& $conf; # b/c alias
-	require( "$IP/wmf-config/InitialiseSettings.php" );
+	require( "$IP/../wmf-config/InitialiseSettings.php" );
 }
 
 wfProfileOut( "$fname-wgConf" );
@@ -186,16 +195,16 @@ if ( array_search( $wgDBname, $wgLocalDatabases ) === false ){
 	if ( $wgCommandLineMode) {
 		print "Database name $wgDBname is not listed in $cluster.dblist\n";
 	} else {
-		require( "$IP/wmf-config/missing.php" );
+		require( "$IP/../wmf-config/missing.php" );
 	}
 	exit;
 }
 
 # Try configuration cache
 
-$filename = "/tmp/mw-cache-1.17/conf-$wgDBname";
+$filename = "/tmp/mw-cache-$wgVersionDirectory/conf-$wgDBname";
 $globals = false;
-if ( @filemtime( $filename ) >= filemtime( "$IP/wmf-config/InitialiseSettings.php" ) ) {
+if ( @filemtime( $filename ) >= filemtime( "$IP/../wmf-config/InitialiseSettings.php" ) ) {
 	$cacheRecord = @file_get_contents( $filename );
 	if ( $cacheRecord !== false ) {
 		$globals = unserialize( $cacheRecord );
@@ -205,7 +214,7 @@ wfProfileOut( "$fname-confcache" );
 if ( !$globals ) {
 	wfProfileIn( "$fname-recache-settings" );
 	# Get configuration from SiteConfiguration object
-	require( "$IP/wmf-config/InitialiseSettings.php" );
+	require( "$IP/../wmf-config/InitialiseSettings.php" );
 	
 	$wikiTags = array();
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'readonly', 'switchover-jun30' ) as $tag ) {
@@ -225,7 +234,7 @@ if ( !$globals ) {
 	
 	# Save cache
 	$oldUmask = umask( 0 );
-	@mkdir( '/tmp/mw-cache-1.17', 0777 );
+	@mkdir( '/tmp/mw-cache-' . $wgVersionDirectory, 0777 );
 	$file = fopen( $filename, 'w' );
 	if ( $file ) {
 		fwrite( $file, serialize( $globals ) );
@@ -245,11 +254,11 @@ extract( $globals );
 
 # Private settings such as passwords, that shouldn't be published
 # Needs to be before db.php
-require( "$IP/wmf-config/PrivateSettings.php" );
+require( "$IP/../wmf-config/PrivateSettings.php" );
 
 # Cluster-dependent files for database and memcached
-require( "$IP/wmf-config/db.php" );
-require("$IP/wmf-config/mc.php");
+require( "$IP/../wmf-config/db.php" );
+require("$IP/../wmf-config/mc.php");
 
 
 setlocale( LC_ALL, 'en_US.UTF-8' );
@@ -259,18 +268,18 @@ unset( $wgStyleSheetPath );
 #$wgStyleSheetPath = '/w/skins-1.17';
 if ( $wgDBname == 'testwiki' ) {
 	// Make testing skin/JS changes easier
-	$wgExtensionAssetsPath = 'http://test.wikipedia.org/w/extensions-1.17';
-	$wgStyleSheetPath = 'http://test.wikipedia.org/w/skins-1.17';
+	$wgExtensionAssetsPath = 'http://test.wikipedia.org/w/extensions-' . $wgVersionDirectory;
+	$wgStyleSheetPath = 'http://test.wikipedia.org/w/skins-' . $wgVersionDirectory;
 
 } else {
-	$wgExtensionAssetsPath = 'http://bits.wikimedia.org/w/extensions-1.17';
-	$wgStyleSheetPath = 'http://bits.wikimedia.org/skins-1.17';
+	$wgExtensionAssetsPath = 'http://bits.wikimedia.org/w/extensions-' . $wgVersionDirectory;
+	$wgStyleSheetPath = 'http://bits.wikimedia.org/skins-' . $wgVersionDirectory;
 }
 $wgStylePath = $wgStyleSheetPath;
 $wgArticlePath = "/wiki/$1";
 
 $wgScriptPath  = '/w';
-$wgLocalStylePath = "$wgScriptPath/skins-1.17";
+$wgLocalStylePath = "$wgScriptPath/skins-$wgVersionDirectory";
 $wgStockPath = '/images';
 $wgScript           = $wgScriptPath.'/index.php';
 $wgRedirectScript	= $wgScriptPath.'/redirect.php';
@@ -854,7 +863,7 @@ if ( $wgDBname == 'testwiki' ) {
 
 // Per-wiki config for Flagged Revisions
 if ( $wmgUseFlaggedRevs ) {
-	include( $IP.'/wmf-config/flaggedrevs.php');
+	include( $IP.'/../wmf-config/flaggedrevs.php');
 }
 
 $wgUseAjax = true;
@@ -865,7 +874,7 @@ require( $IP.'/extensions/CategoryTree/CategoryTree.php' );
 if ( $wmgUseProofreadPage ) {
 //if ( $wgDBname == 'frwikisource' || $wgDBname == 'enwikisource' || $wgDBname == 'ptwikisource' ) {
 	include( $IP . '/extensions/ProofreadPage/ProofreadPage.php' );
-    include( $IP . '/wmf-config/proofreadpage.php');
+    include( $IP . '/../wmf-config/proofreadpage.php');
 }
 if( $wmgUseLST ) {
 	include( $IP . '/extensions/LabeledSectionTransclusion/lst.php' );
@@ -914,7 +923,7 @@ if ( $wgDBname == 'foundationwiki' ) {
 	include( "$IP/extensions/skins/Donate/Donate.php" );
 	
 	include( "$IP/extensions/ContributionReporting/ContributionReporting.php" );
-	include( "$IP/wmf-config/reporting-setup.php");
+	include( "$IP/../wmf-config/reporting-setup.php");
 	
 	include( "$IP/extensions/ContactPageFundraiser/ContactPage.php" );
 	$wgContactUser = 'Storiescontact';
@@ -1082,7 +1091,7 @@ if ( $wmgUseWikimediaMobile && !$secure ) {
 
 // PoolCounter
 if ( $wmgUsePoolCounter ) {
-	include( "$IP/wmf-config/PoolCounterSettings.php" );
+	include( "$IP/../wmf-config/PoolCounterSettings.php" );
 }
 
 wfProfileOut( "$fname-ext-include1" );
@@ -1243,7 +1252,7 @@ wfProfileOut( "$fname-misc2" );
 
 if( $wgUseLuceneSearch ) {
 	wfProfileIn( "$fname-lucene" );
-	include( $IP.'/wmf-config/lucene.php' );
+	include( $IP.'/../wmf-config/lucene.php' );
 	wfProfileOut( "$fname-lucene" );
 }
 
@@ -1458,7 +1467,7 @@ if ( $wgDBname == 'enwiki' ) {
 #$mwBlockerHost = 'larousse';
 #$mwBlockerPort = 8126;
 ##$wgProxyList = array_flip( array_map( 'trim', file( 'udp://10.0.5.8:8420/mwblocker' ) ) );
-$wgProxyList = "$IP/wmf-config/mwblocker.log";
+$wgProxyList = "$IP/../wmf-config/mwblocker.log";
 
 if( getenv( 'WIKIDEBUG' ) ) {
 	$wgDebugLogFile = '/tmp/wiki.log';
@@ -1486,7 +1495,7 @@ wfProfileIn( "$fname-misc5" );
 $wgBrowserBlackList[] = '/^Lynx/';
 
 // Vandal checks
-require( $IP.'/wmf-config/checkers.php' );
+require( $IP.'/../wmf-config/checkers.php' );
 
 // Experimental ScanSet extension
 if ( $wgDBname == 'enwikisource' ) {
@@ -1527,7 +1536,7 @@ if( false /*$lang == 'zh' || $lang == 'en'*/ ) {
 
 // Customize URL handling for secure.wikimedia.org HTTPS logins
 if( $secure ) {
-	require( "$IP/wmf-config/secure.php" );
+	require( "$IP/../wmf-config/secure.php" );
 } elseif ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
 	// New HTTPS service on regular URLs
 	$wgServer = preg_replace( '/^http:/', 'https:', $wgServer );
@@ -1953,7 +1962,7 @@ if( $wmgUseCollection ) {
 }
 
 // Testing internally
-include "$IP/wmf-config/secret-projects.php";
+include "$IP/../wmf-config/secret-projects.php";
 
 /*
 if ( $wgDBname == 'idwiki' ) {
@@ -2011,7 +2020,7 @@ if( $wmgUseNewUserMessage ) {
 
 if( $wmgUseCodeReview ) {
 	include "$IP/extensions/CodeReview/CodeReview.php";
-	include( $IP.'/wmf-config/codereview.php');
+	include( $IP.'/../wmf-config/codereview.php');
 	$wgSubversionProxy = 'http://codereview-proxy.wikimedia.org/index.php';
 	
 	$wgGroupPermissions['user']['codereview-add-tag'] = false;
@@ -2043,7 +2052,7 @@ if( $wmgUseCodeReview ) {
 
 if( $wmgUseAbuseFilter ) {
 	include "$IP/extensions/AbuseFilter/AbuseFilter.php";
-        include( $IP.'/wmf-config/abusefilter.php');
+        include( $IP.'/../wmf-config/abusefilter.php');
 }
 
 if ($wmgUseCommunityVoice == true) {
@@ -2177,7 +2186,7 @@ if ( $wmgEnableLandingCheck ) {
 }
 
 if ( $wmgUseLiquidThreads ) {
-	require_once( "$IP/wmf-config/liquidthreads.php" );
+	require_once( "$IP/../wmf-config/liquidthreads.php" );
 }
 
 if ( $wmgUseFundraiserPortal ) {
@@ -2322,7 +2331,7 @@ if ( $wgUseVariablePage ) {
 // ContributionTracking for handling PayPal redirects
 if ( $wgUseContributionTracking ) {
 	include( "$IP/extensions/ContributionTracking/ContributionTracking.php" );
-	include( "$IP/wmf-config/contribution-tracking-setup.php");
+	include( "$IP/../wmf-config/contribution-tracking-setup.php");
 	$wgContributionTrackingPayPalIPN = "https://civicrm.wikimedia.org/fundcore_gateway/paypal";
 	$wgContributionTrackingPayPalRecurringIPN = "https://civicrm.wikimedia.org/IPNListener_Recurring.php";
 }
@@ -2412,7 +2421,7 @@ if ( $wmgUseIncubator ) {
 #
 # REALlY ... were not kidding here ... NO EXTENSIONS AFTER
 
-require( "$IP/wmf-config/ExtensionMessages.php" );
+require( "$IP/../wmf-config/ExtensionMessages.php" );
 
 wfProfileOut( "$fname-misc5" );
 wfProfileOut( $fname );
