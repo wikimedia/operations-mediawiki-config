@@ -98,55 +98,17 @@ wfProfileOut( "$fname-init" );
 wfProfileIn( "$fname-host" );
 
 # Determine domain and language
-$secure = getenv( 'MW_SECURE_HOST' );
+require_once( $IP . '/../wmf-config/MWMultiVersion.php' );
+$multiVersion = new MWMultiVersion;
+$siteInfo = array();
 if ( (@$_SERVER['SCRIPT_NAME']) == '/w/thumb.php' && (@$_SERVER['SERVER_NAME']) == 'upload.wikimedia.org' ) {
-	$pathBits = explode( '/', $_SERVER['PATH_INFO'] );
-	$site = $pathBits[1];
-	$lang = $pathBits[2];
-} elseif (php_sapi_name() == 'cgi-fcgi') {
-	if (!preg_match('/^([^.]+).([^.]+).*$/', $_SERVER['SERVER_NAME'], $m))
-		die("invalid hostname");
-
-	$lang = $m[1];
-	$site = $m[2];
-
-	if (in_array($lang, array("commons", "grants", "sources", "wikimania", "wikimania2006", "foundation", "meta")))
-		$site = "wikipedia";
-} elseif( $secure ) {
-	if (!preg_match('/^([^.]+).([^.]+).*$/', $secure, $m))
-		die("invalid hostname");
-
-	$lang = $m[1];
-	$site = $m[2];
-
-	if (in_array($lang, array("commons", "grants", "sources", "wikimania", "wikimania2006", "foundation", "meta")))
-		$site = "wikipedia";
+	$siteInfo = $multiVersion->getUploadSiteInfo( $_SERVER['PATH_INFO'] );
 } else {
-    if ( !isset( $site ) ) {
-            $site = "wikipedia";
-            if ( !isset( $lang ) ) {
-
-                    $server = $_SERVER['SERVER_NAME'];
-                    $docRoot = $_SERVER['DOCUMENT_ROOT'];
-                    if ( preg_match( '/^(?:\/usr\/local\/apache\/|\/home\/wikipedia\/)(?:htdocs|common\/docroot)\/([a-z]+)\.org/', $docRoot, $matches ) ) {
-                            $site = $matches[1];
-                            if ( preg_match( '/^(.*)\.' . preg_quote( $site ) . '\.org$/', $server, $matches ) ) {
-                                    $lang = $matches[1];
-                                    // For some special subdomains, like pa.us
-                                    $lang = str_replace( '.', '-', $lang );
-                            } else {
-                                    die( "Invalid host name, can't determine language" );
-                            }
-                    } elseif ( preg_match( "/^\/usr\/local\/apache\/(?:htdocs|common\/docroot)\/([a-z0-9\-_]*)$/", $docRoot, $matches ) ) {
-                            $site = "wikipedia";
-                            $lang = $matches[1];
-                    } else {
-                            die( "Invalid host name (docroot=" . $_SERVER['DOCUMENT_ROOT'] . "), can't determine language" );
-                    }
-            }
-    }
+	$siteInfo = $multiVersion->getSiteInfo( $_SERVER['SERVER_NAME'], $_SERVER['DOCUMENT_ROOT'] );
 }
-
+$site = $siteInfo['site'];
+$lang = $siteInfo['lang'];
+$wgDBname = $multiVersion->getDatabase( $site, $lang);
 
 # Disabled, no IPv6 support, waste of a regex -- TS 20051207
 /*
@@ -155,13 +117,6 @@ if (preg_match('/^[a-z]\.ipv6\./', $server)) {
 	$ipv6 = true;
 }*/
 
-
-if ( $site == "wikipedia" ) {
-	$dbSuffix = "wiki";
-} else {
-	$dbSuffix = $site;
-}
-$wgDBname = str_replace( "-", "_", $lang . $dbSuffix );
 
 //changed for hetdeploy testing --pdhanda
 $match = array();
@@ -190,7 +145,7 @@ wfProfileOut( "$fname-wgConf" );
 wfProfileIn( "$fname-confcache" );
 
 # Is this database listed in $cluster.dblist?
-if ( array_search( $wgDBname, $wgLocalDatabases ) === false ){ 
+if ( array_search( $wgDBname, $wgLocalDatabases ) === false ){
 	# No? Load missing.php
 	if ( $wgCommandLineMode) {
 		print "Database name $wgDBname is not listed in $cluster.dblist\n";
