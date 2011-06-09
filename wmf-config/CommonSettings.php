@@ -97,18 +97,17 @@ $DP = $IP;
 wfProfileOut( "$fname-init" );
 wfProfileIn( "$fname-host" );
 
-# Determine domain and language
+# Determine domain and language and the directories for this instance
 require_once( $IP . '/../wmf-config/MWMultiVersion.php' );
-$multiVersion = new MWMultiVersion;
-$siteInfo = array();
 if ( (@$_SERVER['SCRIPT_NAME']) == '/w/thumb.php' && (@$_SERVER['SERVER_NAME']) == 'upload.wikimedia.org' ) {
-	$siteInfo = $multiVersion->getUploadSiteInfo( $_SERVER['PATH_INFO'] );
+	$multiVersion = MWMultiVersion::getInstanceForUploadWiki( $_SERVER['PATH_INFO'] );
 } else {
-	$siteInfo = $multiVersion->getSiteInfo( $_SERVER['SERVER_NAME'], $_SERVER['DOCUMENT_ROOT'] );
+	$multiVersion = MWMultiVersion::getInstanceForWiki( $_SERVER['SERVER_NAME'], $_SERVER['DOCUMENT_ROOT'] );
 }
-$site = $siteInfo['site'];
-$lang = $siteInfo['lang'];
-$wgDBname = $multiVersion->getDatabase( $site, $lang);
+$site = $multiVersion->getSite();
+$lang = $multiVersion->getLang();
+$wgDBname = $multiVersion->getDatabase();
+$wgVersionDirectory = $multiVersion->getVersion();
 
 # Disabled, no IPv6 support, waste of a regex -- TS 20051207
 /*
@@ -116,15 +115,6 @@ $ipv6 = false;
 if (preg_match('/^[a-z]\.ipv6\./', $server)) {
 	$ipv6 = true;
 }*/
-
-
-//changed for hetdeploy testing --pdhanda
-$match = array();
-if ( preg_match("/^[0-9.]*/", $wgVersion, $match) ) {
-	$wgVersionDirectory = $match[0];
-} else {
-	$wgVersionDirectory = "1.17";
-}
 
 # Shutting eswiki down
 #if ( $wgDBname == 'eswiki' && php_sapi_name() != 'cli' ) { die(); }

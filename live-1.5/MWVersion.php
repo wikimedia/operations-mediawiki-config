@@ -1,20 +1,13 @@
 <?php
 
 function getMediaWiki( $file ) {
-$dbname = $multiVersion->getDatabase( $siteInfo['site'], $siteInfo['lang']);
 	$secure = getenv( 'MW_SECURE_HOST' );
     $host = $secure ? $secure : $_SERVER['HTTP_HOST'];
     
 	require( dirname( __FILE__ ) . '/../wmf-config/MWMultiVersion.php' );
-	$multiVersion = new MWMultiVersion;
-	$siteInfo = array();
-	if ( (@$_SERVER['SCRIPT_NAME']) == '/w/thumb.php' && (@$_SERVER['SERVER_NAME']) == 'upload.wikimedia.org' ) {
-		$siteInfo = $multiVersion->getUploadSiteInfo( $_SERVER['PATH_INFO'] );
-	} else {
-		$siteInfo = $multiVersion->getSiteInfo( $_SERVER['SERVER_NAME'], $_SERVER['DOCUMENT_ROOT'] );
-	}
+	$multiVersion = MWMultiVersion::getInstanceForWiki( $_SERVER['SERVER_NAME'], $_SERVER['DOCUMENT_ROOT'] );
 	
-	$version = $multiVersion->getVersion( $siteInfo['site'], $siteInfo['lang']);
+	$version = $multiVersion->getVersion();
 
 	if ( $host == 'test.wikipedia.org' && !$secure &&
 	!preg_match( '!thumb\.php!', $_SERVER['REQUEST_URI'] ) ) {
