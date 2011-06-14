@@ -1,0 +1,39 @@
+Index: doMaintenance.php
+===================================================================
+--- doMaintenance.php	(revision 89980)
++++ doMaintenance.php	(working copy)
+@@ -74,7 +74,7 @@
+ if ( defined( 'MW_CONFIG_CALLBACK' ) ) {
+ 	# Use a callback function to configure MediaWiki
+ 	MWFunction::call( MW_CONFIG_CALLBACK );
+-} elseif ( file_exists( "$IP/wmf-config/wikimedia-mode" ) ) {
++} elseif ( file_exists( "$IP/../wmf-config/wikimedia-mode" ) ) {
+ 	// Load settings, using wikimedia-mode if needed
+ 	// @todo FIXME: Replace this hack with general farm-friendly code
+ 	# @todo FIXME: Wikimedia-specific stuff needs to go away to an ext
+@@ -82,9 +82,9 @@
+ 	global $cluster;
+ 	$cluster = 'pmtpa';
+ 	require_once( MWInit::compiledPath( 'includes/SiteConfiguration.php' ) );
+-	require( MWInit::interpretedPath( 'wmf-config/wgConf.php' ) );
++	require( MWInit::interpretedPath( '/../wmf-config/wgConf.php' ) );
+ 	$maintenance->loadWikimediaSettings();
+-	require( MWInit::interpretedPath( '/wmf-config/CommonSettings.php' ) );
++	require( MWInit::interpretedPath( '/../wmf-config/CommonSettings.php' ) );
+ } else {
+ 	require_once( $maintenance->loadSettings() );
+ }
+Index: Maintenance.php
+===================================================================
+--- Maintenance.php	(revision 89980)
++++ Maintenance.php	(working copy)
+@@ -915,7 +915,9 @@
+ 			$wgUseNormalUser = true;
+ 		}
+ 
++		putenv( 'MW_DBNAME=' . $db );
+ 		putenv( 'wikilang=' . $lang );
++		putenv( 'wikisite=' . $site );
+ 
+ 		ini_set( 'include_path', ".:$IP:$IP/includes:$IP/languages:$IP/maintenance" );
+

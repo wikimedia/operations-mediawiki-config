@@ -101,6 +101,8 @@ wfProfileIn( "$fname-host" );
 require_once( $IP . '/../wmf-config/MWMultiVersion.php' );
 if ( (@$_SERVER['SCRIPT_NAME']) == '/w/thumb.php' && (@$_SERVER['SERVER_NAME']) == 'upload.wikimedia.org' ) {
 	$multiVersion = MWMultiVersion::getInstanceForUploadWiki( $_SERVER['PATH_INFO'] );
+} else if ( $wgCommandLineMode) {
+	$multiVersion = MWMultiVersion::getInstanceForMaintenance();
 } else {
 	$multiVersion = MWMultiVersion::getInstanceForWiki( $_SERVER['SERVER_NAME'], $_SERVER['DOCUMENT_ROOT'] );
 }
