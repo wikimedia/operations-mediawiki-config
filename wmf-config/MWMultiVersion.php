@@ -142,7 +142,6 @@ class MWMultiVersion {
 		}
 		return self::$mwversion; 
 	}
-		
 	
 	/**
 	 * Factory method to get an instance of MWMultiVersion used for calls to /w/thumb.php on upload.wikmedia.org.
@@ -164,8 +163,7 @@ class MWMultiVersion {
 	public static function getInstanceForMaintenance( ) {
 		if (!isset(self::$mwversion)) {
 		      self::$mwversion = new self;
-		      self::$mwversion->site = $site;
-		      self::$mwversion->lang = $lang;
+		      self::$mwversion->setSiteInfoForMaintenance();
 		}
 		return self::$mwversion;
 	}
