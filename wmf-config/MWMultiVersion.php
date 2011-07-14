@@ -1,7 +1,11 @@
 <?php
 
 class MWMultiVersion {
+	/**
+	 * @var MWMultiVersion
+	 */
 	private static $mwversion;
+
 	private $site;
 	private $lang;
 
@@ -10,7 +14,48 @@ class MWMultiVersion {
 	 * @see getInstanceForWiki
 	 * @see getInstanceForUploadWiki
 	 */
-  	private function __construct() {
+	private function __construct() {}
+	private function __clone() {}
+
+	/**
+	 * Factory method to get an instance of MWMultiVersion. 
+	 * Use this for all wikis except calls to /w/thumb.php on upload.wikmedia.org.
+	 * @param $serverName the ServerName for this wiki -- $_SERVER['SERVER_NAME']
+	 * @param $docroot the DocumentRoot for this wiki -- $_SERVER['DOCUMENT_ROOT']
+	 * @return An MWMultiVersion object for this wiki
+	 */
+	public static function getInstanceForWiki( $serverName, $docRoot ) {
+		if ( !isset( self::$mwversion ) ) {
+			self::$mwversion = new self;
+			self::$mwversion->setSiteInfoForWiki( $serverName, $docRoot );
+		}
+		return self::$mwversion; 
+	}
+
+	/**
+	 * Factory method to get an instance of MWMultiVersion used for calls to /w/thumb.php on upload.wikmedia.org.
+	 * @param $pathInfo the PathInfo -- $_SERVER['PATH_INFO']
+	 * @return An MWMultiVersion object for the wiki derived from the pathinfo
+	 */
+	public static function getInstanceForUploadWiki( $pathInfo ) {
+		if ( !isset( self::$mwversion ) ) {
+			self::$mwversion = new self;
+			self::$mwversion->setSiteInfoForUploadWiki( $PathInfo );
+		}
+		return self::$mwversion;
+	}
+
+	/**
+	 * Factory method to get an instance of MWMultiVersion
+	 * via maintenance scripts since they need to set site and lang.
+	 * @return An MWMultiVersion object for the wiki derived from the env variables set by Maintenance.php
+	 */
+	public static function getInstanceForMaintenance() {
+		if ( !isset( self::$mwversion ) ) {
+			self::$mwversion = new self;
+			self::$mwversion->setSiteInfoForMaintenance();
+		}
+		return self::$mwversion;
 	}
 
 	/**
@@ -18,17 +63,17 @@ class MWMultiVersion {
 	 *  @param $serverName the ServerName for this wiki -- $_SERVER['SERVER_NAME']
 	 *  @param $docroot the DocumentRoot for this wiki -- $_SERVER['DOCUMENT_ROOT']
 	 */
-	private function setSiteInfoForWiki( $serverName, $docRoot) {
+	private function setSiteInfoForWiki( $serverName, $docRoot ) {
 		$secure = getenv( 'MW_SECURE_HOST' );
 		$matches = array();
-		if( $secure ) {
+		if ( $secure ) {
 			if ( !preg_match('/^([^.]+).([^.]+).*$/', $secure, $matches ) ) {
 				die("invalid hostname");
 			}
-	
 			$this->lang = $matches[1];
 			$this->site = $matches[2];
-	
+
+			// @TODO: move/use some dblist?
 			if (in_array($this->lang, array("commons", "grants", "sources", "wikimania", "wikimania2006", "foundation", "meta")))
 			$this->site = "wikipedia";
 		} else {
@@ -51,15 +96,14 @@ class MWMultiVersion {
 				die( "Invalid host name (docroot=" . $_SERVER['DOCUMENT_ROOT'] . "), can't determine language" );
 			}
 		}
-		
 	}
-	
+
 	/**
 	 * Derives site and lang from the parameter and sets $site and $lang on the instance
 	 * @param $pathInfo the PathInfo -- $_SERVER['PATH_INFO']
 	 */
-	private function setSiteInfoForUploadWiki( $pathInfo) {
-		//TODO: error if we don't get what we expect
+	private function setSiteInfoForUploadWiki( $pathInfo ) {
+		// @TODO: error if we don't get what we expect
 		$pathBits = explode( '/', $pathInfo );
 		$this->site = $pathBits[1];
 		$this->lang = $pathBits[2];
@@ -69,11 +113,11 @@ class MWMultiVersion {
 	 * Gets the site and lang from env variables
 	 */
 	private function setSiteInfoForMaintenance() {
-		//TODO: some error checking
+		// @TODO: some error checking
 		$this->site = getenv( 'wikisite' );
 		$this->lang = getenv( 'wikilang' );
 	}
-	
+
 	/**
 	 * Get the site for this wiki
 	 * @return String site. Eg: wikipedia, wikinews, wikiversity
@@ -81,7 +125,7 @@ class MWMultiVersion {
 	public function getSite() {
 		return $this->site;
 	}
-	
+
 	/**
 	 * Get the lang for this wiki
 	 * @return String lang Eg: en, de, ar, hi
@@ -127,46 +171,4 @@ class MWMultiVersion {
 		}
 		return $version;
 	}
-	
-	/**
-	 * Factory method to get an instance of MWMultiVersion. 
-	 * Use this for all wikis except calls to /w/thumb.php on upload.wikmedia.org.
-	 * @param $serverName the ServerName for this wiki -- $_SERVER['SERVER_NAME']
-	 * @param $docroot the DocumentRoot for this wiki -- $_SERVER['DOCUMENT_ROOT']
-	 * @return An MWMultiVersion object for this wiki
-	 */
-	public static function getInstanceForWiki( $serverName, $docRoot ) {
-		if (!isset(self::$mwversion)) {
-		      self::$mwversion = new self;
-		      self::$mwversion->setSiteInfoForWiki( $serverName, $docRoot );
-		}
-		return self::$mwversion; 
-	}
-	
-	/**
-	 * Factory method to get an instance of MWMultiVersion used for calls to /w/thumb.php on upload.wikmedia.org.
-	 * @param $pathInfo the PathInfo -- $_SERVER['PATH_INFO']
-	 * @return An MWMultiVersion object for the wiki derived from the pathinfo
-	 */
-	public static function getInstanceForUploadWiki( $pathInfo ) {
-		if (!isset(self::$mwversion)) {
-		      self::$mwversion = new self;
-		      self::$mwversion->setSiteInfoForUploadWiki( $PathInfo );
-		}
-		return self::$mwversion;
-	}
-	
-	/**
-	 * Factory method to get an instance of MWMultiVersion via maintenance scripts since they need to set site and lang.
-	 * @return An MWMultiVersion object for the wiki derived from the env variables set by Maintenance.php
-	 */
-	public static function getInstanceForMaintenance( ) {
-		if (!isset(self::$mwversion)) {
-		      self::$mwversion = new self;
-		      self::$mwversion->setSiteInfoForMaintenance();
-		}
-		return self::$mwversion;
-	}
 }
-
-?>
