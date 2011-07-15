@@ -218,7 +218,7 @@ if ( $wgDBname != 'testwiki' ) {
 
 $oldLabsWikis = array( 'en_labswikimedia', 'de_labswikimedia', 'flaggedrevs_labswikimedia' );
 if ( !in_array( $wgDBname, $oldLabsWikis ) ) {
-	$wgCacheDirectory = '/tmp/mw-cache-1.17';
+	$wgCacheDirectory = '/tmp/mw-cache-' . $wgVersionDirectory;
 } else {
 	# @TODO: remove this hack (use multiversioning proper)
 	$wgCacheDirectory = '/tmp/mw-cache-labs';
