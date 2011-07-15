@@ -196,12 +196,12 @@ unset( $wgStyleSheetPath );
 #$wgStyleSheetPath = '/w/skins-1.17';
 if ( $wgDBname == 'testwiki' ) {
 	// Make testing skin/JS changes easier
-	$wgExtensionAssetsPath = "$urlprotocol//test.wikipedia.org/w/extensions-1.17";
-	$wgStyleSheetPath = "$urlprotocol//test.wikipedia.org/w/skins-1.17";
+	$wgExtensionAssetsPath = "$urlprotocol//test.wikipedia.org/w/extensions-" . $wgVersionDirectory;
+	$wgStyleSheetPath = "$urlprotocol//test.wikipedia.org/w/skins-" . $wgVersionDirectory;
 
 } else {
-	$wgExtensionAssetsPath = "$urlprotocol//bits.wikimedia.org/w/extensions-1.17";
-	$wgStyleSheetPath = "$urlprotocol//bits.wikimedia.org/skins-1.17";
+	$wgExtensionAssetsPath = "$urlprotocol//bits.wikimedia.org/w/extensions-" . $wgVersionDirectory;
+	$wgStyleSheetPath = "$urlprotocol//bits.wikimedia.org/skins-" . $wgVersionDirectory;
 }
 $wgStylePath = $wgStyleSheetPath;
 $wgArticlePath = "/wiki/$1";
