@@ -11,19 +11,14 @@
 # at least sometimes, but what we're running will send a 200.
 header( "Cache-control: no-cache" );
 
-
 # Try to control stuff:
 #define( 'DEBUG_LOG', true );
-
 
 # useful tokens to search for:
 
 # :SEARCH: - search settings
 # :SLAVES: - database slaves
 # :PROFILING:
-
-# header("HTTP/1.0 500 Internal server error" );
-# die("Wikipedia and its sister projects are experiencing technical problems. Please try again later. We apologise for the inconvenience, and thank you for your patience while developers are working to resolve the issue as soon as possible."); # temp to reduce load --brion
 
 # -----------------
 
@@ -46,6 +41,7 @@ wfProfileIn( "$fname-init" );
 
 #----------------------------------------------------------------------
 # Initialisation
+
 /*
 if ( defined( 'TESTWIKI' ) ) {
 	$IP = "/home/wikipedia/common/php-1.17";
@@ -53,8 +49,7 @@ if ( defined( 'TESTWIKI' ) ) {
 	$IP = "/usr/local/apache/common/php-1.17";
 }
 */
-//ini_set( "include_path", "$IP:$IP/includes:$IP/languages:$IP/templates:$IP/lib:$IP/extensions/wikihiero:/usr/local/lib/php:/usr/share/php" );
-// Modernized BV -- 2009-7-14
+
 set_include_path( "$IP:$IP/lib:/usr/local/lib/php:/usr/share/php" );
 
 if( getenv( 'WIKIBACKUP' ) ) {
@@ -64,15 +59,6 @@ if( getenv( 'WIKIBACKUP' ) ) {
 	}
 }
 
-/*
-$cluster = @file_get_contents( '/etc/cluster' );
-if ( !$cluster ) {
-	# Let's be nice until we're sure things are set up properly
-	# die( "Invalid or missing /etc/cluster file on host {$_ENV['HOSTNAME']}\n" );
-	$cluster = 'pmtpa';
-}
-$cluster = trim( $cluster );
- */
 $cluster = 'pmtpa';
 
 # Load site configuration
@@ -85,10 +71,6 @@ $hatesSafari = isset( $_SERVER['PATH_INFO'] ) &&
 if ( $hatesSafari ) {
 	$wgDisableOutputCompression = true;
 }
-/*
-if ( !$wgCommandLineMode && !defined( 'MW_NO_OUTPUT_BUFFER' ) && !$hatesSafari ) {
-	ob_start("ob_gzhandler");
-}*/
 
 ini_set( 'memory_limit', 120 * 1024 * 1024 );
 
@@ -111,38 +93,31 @@ $lang = $multiVersion->getLang();
 $wgDBname = $multiVersion->getDatabase();
 $wgVersionDirectory = $multiVersion->getVersion();
 
-# Disabled, no IPv6 support, waste of a regex -- TS 20051207
-/*
-$ipv6 = false;
-if (preg_match('/^[a-z]\.ipv6\./', $server)) {
-	$ipv6 = true;
-}*/
-
-# Shutting eswiki down
-#if ( $wgDBname == 'eswiki' && php_sapi_name() != 'cli' ) { die(); }
-
 wfProfileOut( "$fname-host" );
+
+# wmf-config directory
+$wmfConfigDir = "$IP/../wmf-config";
 
 # Initialise wgConf
 wfProfileIn( "$fname-wgConf" );
-require( "$IP/../wmf-config/wgConf.php" );
+require( "$wmfConfigDir/wgConf.php" );
 
 function wmfLoadInitialiseSettings( $conf ) {
 	global $IP;
 	$wgConf =& $conf; # b/c alias
-	require( "$IP/../wmf-config/InitialiseSettings.php" );
+	require( "$wmfConfigDir/InitialiseSettings.php" );
 }
 
 wfProfileOut( "$fname-wgConf" );
 wfProfileIn( "$fname-confcache" );
 
 # Is this database listed in $cluster.dblist?
-if ( array_search( $wgDBname, $wgLocalDatabases ) === false ){
+if ( array_search( $wgDBname, $wgLocalDatabases ) === false ){ 
 	# No? Load missing.php
 	if ( $wgCommandLineMode) {
 		print "Database name $wgDBname is not listed in $cluster.dblist\n";
 	} else {
-		require( "$IP/../wmf-config/missing.php" );
+		require( "$wmfConfigDir/missing.php" );
 	}
 	exit;
 }
@@ -151,7 +126,7 @@ if ( array_search( $wgDBname, $wgLocalDatabases ) === false ){
 
 $filename = "/tmp/mw-cache-$wgVersionDirectory/conf-$wgDBname";
 $globals = false;
-if ( @filemtime( $filename ) >= filemtime( "$IP/../wmf-config/InitialiseSettings.php" ) ) {
+if ( @filemtime( $filename ) >= filemtime( "$wmfConfigDir/InitialiseSettings.php" ) ) {
 	$cacheRecord = @file_get_contents( $filename );
 	if ( $cacheRecord !== false ) {
 		$globals = unserialize( $cacheRecord );
@@ -161,7 +136,7 @@ wfProfileOut( "$fname-confcache" );
 if ( !$globals ) {
 	wfProfileIn( "$fname-recache-settings" );
 	# Get configuration from SiteConfiguration object
-	require( "$IP/../wmf-config/InitialiseSettings.php" );
+	require( "$wmfConfigDir/InitialiseSettings.php" );
 	
 	$wikiTags = array();
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'readonly', 'switchover-jun30' ) as $tag ) {
@@ -176,7 +151,8 @@ if ( !$globals ) {
 			'lang'    => $lang,
 			'docRoot' => $_SERVER['DOCUMENT_ROOT'],
 			'site'    => $site,
-			'stdlogo' => "http://upload.wikimedia.org/$site/$lang/b/bc/Wiki.png" 
+			'stdlogo' => "http://upload.wikimedia.org/$site/$lang/b/bc/Wiki.png" ,
+			'prstdlogo' => "//upload.wikimedia.org/$site/$lang/b/bc/Wiki.png",
 		), $wikiTags );
 	
 	# Save cache
@@ -195,18 +171,23 @@ wfProfileIn( "$fname-misc1" );
 
 extract( $globals );
 
-
 #-------------------------------------------------------------------------
 # Settings common to all wikis
 
 # Private settings such as passwords, that shouldn't be published
 # Needs to be before db.php
-require( "$IP/../wmf-config/PrivateSettings.php" );
+require( "$wmfConfigDir/PrivateSettings.php" );
 
 # Cluster-dependent files for database and memcached
-require( "$IP/../wmf-config/db.php" );
-require("$IP/../wmf-config/mc.php");
+require( "$wmfConfigDir/db.php" );
+require( "$wmfConfigDir/mc.php" );
 
+# Protocol settings for urls
+if ( !$secure && $wmgHTTPSExperiment ) {
+	$urlprotocol = "";
+} else {
+	$urlprotocol = "http:";
+}
 
 setlocale( LC_ALL, 'en_US.UTF-8' );
 
@@ -215,12 +196,12 @@ unset( $wgStyleSheetPath );
 #$wgStyleSheetPath = '/w/skins-1.17';
 if ( $wgDBname == 'testwiki' ) {
 	// Make testing skin/JS changes easier
-	$wgExtensionAssetsPath = 'http://test.wikipedia.org/w/extensions-' . $wgVersionDirectory;
-	$wgStyleSheetPath = 'http://test.wikipedia.org/w/skins-' . $wgVersionDirectory;
+	$wgExtensionAssetsPath = "$urlprotocol//test.wikipedia.org/w/extensions-1.17";
+	$wgStyleSheetPath = "$urlprotocol//test.wikipedia.org/w/skins-1.17";
 
 } else {
-	$wgExtensionAssetsPath = 'http://bits.wikimedia.org/w/extensions-' . $wgVersionDirectory;
-	$wgStyleSheetPath = 'http://bits.wikimedia.org/skins-' . $wgVersionDirectory;
+	$wgExtensionAssetsPath = "$urlprotocol//bits.wikimedia.org/w/extensions-1.17";
+	$wgStyleSheetPath = "$urlprotocol//bits.wikimedia.org/skins-1.17";
 }
 $wgStylePath = $wgStyleSheetPath;
 $wgArticlePath = "/wiki/$1";
@@ -232,7 +213,15 @@ $wgScript           = $wgScriptPath.'/index.php';
 $wgRedirectScript	= $wgScriptPath.'/redirect.php';
 if ( $wgDBname != 'testwiki' ) {
 	// Make testing JS/skin changes easy by not running load.php through bits for testwiki
-	$wgLoadScript = "http://bits.wikimedia.org/{$_SERVER['SERVER_NAME']}/load.php";
+	$wgLoadScript = "$urlprotocol//bits.wikimedia.org/{$_SERVER['SERVER_NAME']}/load.php";
+}
+
+$oldLabsWikis = array( 'en_labswikimedia', 'de_labswikimedia', 'flaggedrevs_labswikimedia' );
+if ( !in_array( $wgDBname, $oldLabsWikis ) ) {
+	$wgCacheDirectory = '/tmp/mw-cache-1.17';
+} else {
+	# @TODO: remove this hack (use multiversioning proper)
+	$wgCacheDirectory = '/tmp/mw-cache-labs';
 }
 
 # Very wrong place for NFS access - brought the site down -- domas - 2009-01-27 
@@ -243,12 +232,12 @@ if ( $wgDBname != 'testwiki' ) {
 
 $wgFileStore['deleted']['directory'] = "/mnt/upload6/private/archive/$site/$lang";
 
-if ( $cluster == 'yaseo' ) {
-	$wgSharedThumbnailScriptPath = 'http://commons.wikimedia.org/w/thumb.php';
+/*if ( $cluster == 'yaseo' ) {
+	$wgSharedThumbnailScriptPath = "$urlprotocol//commons.wikimedia.org/w/thumb.php";
 	$wgUploadPath = '/upload';
 	$wgUploadDirectory = "/mnt/upload/$site/$lang";
 	$wgFileStore['deleted']['directory'] = "/mnt/upload/private/archive/$site/$lang";
-}
+}*/
 
 # used for mysql/search settings
 $tmarray = getdate(time());
@@ -280,7 +269,6 @@ if($wgLocaltimezone) {
 	$wgLocalTZoffset = date('Z') / 60;
 	putenv("TZ=$oldtz");
 }
-
 
 $wgShowIPinHeader = false;
 $wgUseGzip = true;
@@ -366,10 +354,6 @@ $wgFileBlacklist[] = 'txt';
 $wgFileBlacklist[] = 'mht';
 # $wgFileBlacklist[] = 'pdf';
 $wgFileExtensions[] = 'xcf';
-# Disabling this for now -- brion - 2007-08-21
-#if( $wgDBname != 'commonswiki' ) {
-#    $wgFileExtensions[] = 'xls';
-#}
 $wgFileExtensions[] = 'pdf';
 $wgFileExtensions[] = 'mid';
 #$wgFileExtensions[] = 'sxw'; # OOo writer       # -- disabling these as obsolete -- brion 2008-02-05
@@ -392,9 +376,7 @@ if ( /* use PagedTiffHandler */ true ) {
 if( $wgDBname == 'foundationwiki' ) { # per cary on 2010-05-11
    $wgFileExtensions[] = 'otf';
    $wgFileExtensions[] = 'ai';
-}
-
-if ( $wgDBname == 'outreachwiki' ) { # Per Frank, bug 25106
+} else if ( $wgDBname == 'outreachwiki' ) { # Per Frank, bug 25106
 	$wgFileExtensions[] = 'sla';
 }
 
@@ -654,28 +636,16 @@ $wgProxyWhitelist = array(
 $wgLogQueries = true;
 $wgSqlLogFile = $wgUploadDirectory.'/sqllog';
 
-
 $wgBlockOpenProxies = false;
 
 $wgDebugLogGroups['UploadBlacklist'] = 'udp://10.0.5.8:8420/upload-blacklist';
 
 $wgDebugLogGroups['404'] = 'udp://10.0.5.8:8420/four-oh-four';
 
-
 # Don't allow users to redirect other users' talk pages
 # Disabled because interwiki redirects are turned off, so it's not needed
 #include( "$IP/Filter-ext_redir.php" );
 
-#include("outage.php");
-#declareOutage( "2004-05-12", "02:00", "03:00" );
-/*
-$d = getdate();
-$hour = $d['hours'];
-if ( $lang == "en" && $hour >= 13 && $hour < 18 ) {
-	$wgUseWatchlistCache = true;
-	$wgWLCacheTimeout = 3600;
-}
-*/
 ## For attaching licensing metadata to pages, and displaying an
 ## appropriate copyright notice / icon. GNU Free Documentation
 ## License and Creative Commons licenses are supported so far.
@@ -683,18 +653,18 @@ $wgEnableCreativeCommonsRdf = false;
 
 if( $site == 'wikinews' ) {
 	#$wgRightsPage = "";# Set to the title of a wiki page that describes your license/copyright
-	$wgRightsUrl = 'http://creativecommons.org/licenses/by/2.5/';
+	$wgRightsUrl = "$urlprotocol//creativecommons.org/licenses/by/2.5/";
 	$wgRightsText = 'Creative Commons Attribution 2.5';
-	$wgRightsIcon = 'http://creativecommons.org/images/public/somerights20.png';
+	$wgRightsIcon = "$urlprotocol//creativecommons.org/images/public/somerights20.png";
 }  elseif ( $wgDBname == 'huwikinews') {
-	$wgRightsUrl = 'http://creativecommons.org/licenses/by/3.0/';
+	$wgRightsUrl = "$urlprotocol//creativecommons.org/licenses/by/3.0/";
 	$wgRightsText = 'Creative Commons Attribution 3.0 Unported';
-	$wgRightsIcon = 'http://creativecommons.org/images/public/somerights20.png';
+	$wgRightsIcon = "$urlprotocol//creativecommons.org/images/public/somerights20.png";
 }  else {
 	# Set 2009-06-22 -- BV
-	$wgRightsUrl = 'http://creativecommons.org/licenses/by-sa/3.0/';
+	$wgRightsUrl = "$urlprotocol//creativecommons.org/licenses/by-sa/3.0/";
 	$wgRightsText = 'Creative Commons Attribution-Share Alike 3.0 Unported';
-	$wgRightsIcon = 'http://creativecommons.org/images/public/somerights20.png';
+	$wgRightsIcon = "$urlprotocol//creativecommons.org/images/public/somerights20.png";
 }
 
 # FIXME: Turned off tidy for testing. --brion 2004-01-19
@@ -707,7 +677,7 @@ if( $site == 'wikinews' ) {
 $wgUseTidy = true;
 
 # Profiling, typically at 100 rate
-#Caution: moderate profiling rates can write 1.5GB per day each to the slow query and binary logs.
+# Caution: moderate profiling rates can write 1.5GB per day each to the slow query and binary logs.
 # If the master is low on disk space, you'll need to empty the slow query log
 # PLEASE TELL JAMES OR WHOEVER IS LOOKING AFTER THE DATABASE SERVERS IF YOU TURN ON PROFILING
 # :PROFILING:
@@ -748,16 +718,12 @@ if ( isset( $wgProfiler ) ) {
 	$wgProfileSampleRate = 1;
 }
 
-
 wfProfileOut( "$fname-misc1" );
 wfProfileIn( "$fname-ext-include1" );
 
 include($IP.'/extensions/timeline/Timeline.php');
 include($IP.'/extensions/wikihiero/wikihiero.php');
 
-// if ( $wgDBname == 'testwiki' ) {
-	// $wgTimelineSettings->fontFile = 'unifont-5.1.20080907.ttf';
-// }
 if ( $wgDBname == 'testwiki' || $wgDBname == 'mlwiki' ) {
 	// FreeSansWMF has been generated from FreeSans and FreeSerif by using this script with fontforge:
 	// Open("FreeSans.ttf");
@@ -766,7 +732,6 @@ if ( $wgDBname == 'testwiki' || $wgDBname == 'mlwiki' ) {
 	// Generate("FreeSansWMF.ttf", "", 4 );
 	$wgTimelineSettings->fontFile = 'FreeSansWMF.ttf';
 }
-
 
 include( $IP.'/extensions/SiteMatrix/SiteMatrix.php' );
 // Config for sitematrix
@@ -777,6 +742,8 @@ $wgSiteMatrixFishbowlSites = "$IP/../fishbowl.dblist";
 
 include( $IP.'/extensions/CharInsert/CharInsert.php' );
 include( $IP.'/extensions/CheckUser/CheckUser.php' );
+$wgCheckUserForceSummary = $wmgCheckUserForceSummary;
+
 include( $IP.'/extensions/ParserFunctions/ParserFunctions.php' );
 $wgMaxIfExistCount = 500; // obs
 $wgExpensiveParserFunctionLimit = 500;
@@ -798,7 +765,7 @@ include( $IP.'/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php' );
 
 // Experimental side-by-side comparison extension for wikisource. enabled brion 2006-01-13
 if( $wmgUseDoubleWiki ) {
-	    include( $IP.'/extensions/DoubleWiki/DoubleWiki.php' );
+	include( $IP.'/extensions/DoubleWiki/DoubleWiki.php' );
 }
 
 # Poem
@@ -810,7 +777,7 @@ if ( $wgDBname == 'testwiki' ) {
 
 // Per-wiki config for Flagged Revisions
 if ( $wmgUseFlaggedRevs ) {
-	include( $IP.'/../wmf-config/flaggedrevs.php');
+	include( "$wmfConfigDir/flaggedrevs.php" );
 }
 
 $wgUseAjax = true;
@@ -819,9 +786,8 @@ require( $IP.'/extensions/CategoryTree/CategoryTree.php' );
 
 
 if ( $wmgUseProofreadPage ) {
-//if ( $wgDBname == 'frwikisource' || $wgDBname == 'enwikisource' || $wgDBname == 'ptwikisource' ) {
 	include( $IP . '/extensions/ProofreadPage/ProofreadPage.php' );
-    include( $IP . '/../wmf-config/proofreadpage.php');
+    include( "$wmfConfigDir/proofreadpage.php" );
 }
 if( $wmgUseLST ) {
 	include( $IP . '/extensions/LabeledSectionTransclusion/lst.php' );
@@ -838,11 +804,10 @@ include( $IP.'/extensions/TitleBlacklist/TitleBlacklist.php' );
 $wgTitleBlacklistSources = array(
 	array(
 		'type' => TBLSRC_URL,
-		'src'  => 'http://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw&tb_ver=1',
+		'src'  => "$urlprotocol//meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw&tb_ver=1",
 	),
 );
 
-#if ( $site == 'wikiversity' || $wgDBname == 'ptwikibooks' || $wgDBname == 'itwikibooks' || $wgDBname == 'enwikinews' ) {
 if( $wmgUseQuiz ) {
    include( "$IP/extensions/Quiz/Quiz.php" );
 }
@@ -851,16 +816,16 @@ if ( $wmgUseGadgets ) {
 	include( "$IP/extensions/Gadgets/Gadgets.php" );
 }
 
-// if( $wgAutomaticGroups ) {
-// include( "$IP/extensions/AutomaticGroups/AutomaticGroups.php" );
-//}
-
 include( $IP.'/extensions/OggHandler/OggHandler.php' );
 $wgOggThumbLocation = '/usr/local/bin/oggThumb';
 // you can keep the filename the same and use maintenance/purgeList.php
-$wgCortadoJarFile = 'http://upload.wikimedia.org/jars/cortado.jar'; 
+$wgCortadoJarFile = "$urlprotocol//upload.wikimedia.org/jars/cortado.jar"; 
 
 include( $IP.'/extensions/AssertEdit/AssertEdit.php' );
+
+if ( $wgDBname == 'collabwiki' ) {
+	$wgUseTidy = false;
+}
 
 if ( $wgDBname == 'foundationwiki' ) {
 	include( "$IP/extensions/FormPreloadPostCache/FormPreloadPostCache.php" );
@@ -870,7 +835,7 @@ if ( $wgDBname == 'foundationwiki' ) {
 	include( "$IP/extensions/skins/Donate/Donate.php" );
 	
 	include( "$IP/extensions/ContributionReporting/ContributionReporting.php" );
-	include( "$IP/../wmf-config/reporting-setup.php");
+	include( "$wmfConfigDir/reporting-setup.php" );
 	
 	include( "$IP/extensions/ContactPageFundraiser/ContactPage.php" );
 	$wgContactUser = 'Storiescontact';
@@ -942,14 +907,12 @@ if ( $wgDBname == 'foundationwiki' ) {
 	$wgAllowedPaymentMethod = array(
         	'cc','pp'
 	);
-
-
 }
 
 if ( $wgDBname == 'mediawikiwiki' ) {
 	include( "$IP/extensions/ExtensionDistributor/ExtensionDistributor.php" );
 	$wgExtDistTarDir = '/mnt/upload6/ext-dist';
-	$wgExtDistTarUrl = 'http://upload.wikimedia.org/ext-dist';
+	$wgExtDistTarUrl = "$urlprotocol//upload.wikimedia.org/ext-dist";
 	$wgExtDistWorkingCopy = '/mnt/upload6/private/ExtensionDistributor/mw-snapshot';
 	$wgExtDistRemoteClient = '208.80.152.165:8430';
 
@@ -1027,6 +990,7 @@ function wmfSecurePollJumpUrl( $page, &$url ) {
 // NOTE: Must be BEFORE ArticleFeedback
 if ( $wgUseEmailCapture ) {
 	include( "$IP/extensions/EmailCapture/EmailCapture.php" );
+	$wgEmailCaptureAutoResponse['from'] = 'improve@wikimedia.org';
 }
 
 // Mobile redirect
@@ -1038,23 +1002,11 @@ if ( $wmgUseWikimediaMobile && !$secure ) {
 
 // PoolCounter
 if ( $wmgUsePoolCounter ) {
-	include( "$IP/../wmf-config/PoolCounterSettings.php" );
+	include( "$wmfConfigDir/PoolCounterSettings.php" );
 }
 
 wfProfileOut( "$fname-ext-include1" );
 wfProfileIn( "$fname-misc2" );
-
-/*
-# Per site additional spam blacklists
-# -- hashar Sat Jan  6 21:27:21 UTC 2007
-switch( $wgDBname ) {
-	'frwiki':
-#		$wgSpamBlacklistFiles[] = 'http://fr.wikipedia.org/w/index.php?title=<INSERT_TITLE>&action=raw&sb_ver=1';
-	break;
-	default:
-
-}
-*/
 
 # Upload spam system
 // SHA-1 hashes of blocked files:
@@ -1122,6 +1074,7 @@ $wgLocalFileRepo = array(
 	'name' => 'local',
 	'directory' => $wgUploadDirectory,
 	'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
+	'scriptDirUrl' => $wgScriptPath,
 	'hashLevels' => 2,
 	'thumbScriptUrl' => $wgThumbnailScriptPath,
 	'transformVia404' => true,
@@ -1136,13 +1089,13 @@ if( $wgDBname != 'commonswiki' ) {
 		'class'            => 'ForeignDBViaLBRepo',
 		'name'             => 'shared',
 		'directory'        => '/mnt/upload6/wikipedia/commons',
-		'url'              => 'http://upload.wikimedia.org/wikipedia/commons',
+		'url'              => "$urlprotocol//upload.wikimedia.org/wikipedia/commons",
 		'hashLevels'       => 2,
 		'thumbScriptUrl'   => false,
 		'transformVia404'  => true,
 		'hasSharedCache'   => true,
-		'descBaseUrl'      => 'http://commons.wikimedia.org/wiki/File:',
-		'scriptDirUrl'     => 'http://commons.wikimedia.org/w',
+		'descBaseUrl'      => "$urlprotocol//commons.wikimedia.org/wiki/File:",
+		'scriptDirUrl'     => "$urlprotocol//commons.wikimedia.org/w",
 		'fetchDescription' => true,
 		'wiki'             => 'commonswiki',
 		'initialCapital'   => true,
@@ -1152,23 +1105,24 @@ if( $wgDBname != 'commonswiki' ) {
 
 if($wgDBname == 'nostalgiawiki') {
 	# Link back to current version from the archive funhouse
+	# wgSiteNotice should use $urlprotocol when wikipedia domain has https enabled
 	if( ( isset( $_REQUEST['title'] ) && ( $title = $_REQUEST['title'] ) )
 	    || (isset( $_SERVER['PATH_INFO'] )  && ( $title = substr( $_SERVER['PATH_INFO'], 1 ) ) ) ) {
 		if( preg_match( '/^(.*)\\/Talk$/', $title, $matches ) ) {
 			$title = 'Talk:' . $matches[1];
 		}
-		$wgSiteNotice = '[http://en.wikipedia.org/wiki/' .
+		$wgSiteNotice = "[$urlprotocol//en.wikipedia.org/wiki/" .
 			htmlspecialchars( urlencode( $title ) ) .
 		' See the current version of this page on Wikipedia]';
 	} else {
-		$wgSiteNotice = '[http://en.wikipedia.org/ See current Wikipedia]';
+		$wgSiteNotice = "[$urlprotocol//en.wikipedia.org/ See current Wikipedia]";
 	}
 	$wgDefaultUserOptions['highlightbroken'] = 0;
 }
 
 $wgUseHashTable = true;
 
-$wgCopyrightIcon = '<a href="http://wikimediafoundation.org/"><img src="http://bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>';
+$wgCopyrightIcon = '<a href="' . $urlprotocol . '//wikimediafoundation.org/"><img src="' . $urlprotocol . '//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>';
 
 # For Special:Cite, we only want it on wikipedia (but can't count on $site),
 # not on these fakers.
@@ -1199,7 +1153,7 @@ wfProfileOut( "$fname-misc2" );
 
 if( $wgUseLuceneSearch ) {
 	wfProfileIn( "$fname-lucene" );
-	include( $IP.'/../wmf-config/lucene.php' );
+	include( "$wmfConfigDir/lucene.php" );
 	wfProfileOut( "$fname-lucene" );
 }
 
@@ -1235,6 +1189,7 @@ $wgCacheEpoch = '20060419151500'; # broken thumbnails due to power failure
 // Newer entries
 if( $wgDBname == 'zhwiki' ) $wgCacheEpoch = '20060528093500'; # parser bug?
 if( $wgDBname == 'lawikibooks' ) $wgCacheEpoch = '20060610090000'; # sidebar bug
+if ( $wmgHTTPSExperiment ) $wgCacheEpoch = '20110714183000';
 
 #$wgThumbnailEpoch = '20060227114700'; # various rsvg and imagemagick fixes
 $wgThumbnailEpoch = '20051227114700'; # various rsvg and imagemagick fixes
@@ -1264,6 +1219,12 @@ function wfLogXFF() {
 }
 $wgExtensionFunctions[] = 'wfLogXFF';
 
+// bug 24313, turn off minordefault on enwiki
+if( $wgDBname == 'enwiki' ) {
+	$wgHiddenPrefs[] = 'minordefault';
+}
+
+
 wfProfileOut( "$fname-misc3" );
 wfProfileIn( "$fname-ext-include2" );
 
@@ -1279,7 +1240,6 @@ if( $wmgUseDPL ) {
     include( $IP.'/extensions/intersection/DynamicPageList.php' );
 }
 
-# 2005-10-12 -ævar
 # 2010-01-22 hashar: disabled as per 16878
 //include( $IP.'/extensions/CrossNamespaceLinks/SpecialCrossNamespaceLinks.php' );
 
@@ -1312,21 +1272,14 @@ $wgGroupPermissions['user']['torunblocked'] = false;
 if ( $wmgUseRSSExtension ) {
 	include( "$IP/extensions/RSS/RSS.php" );
 	#$wgRSSProxy = 'url-downloader.wikimedia.org:8080';
+	$wgRSSAllowedFeeds = $wmgRSSAllowedFeeds;
 }
 
 wfProfileOut( "$fname-ext-include2" );
 wfProfileIn( "$fname-misc4" );
 
-# 2005-09-30: Disabled for potential XSS issue -ævar
-#include 'extensions/PageCSS/PageCSS.php';
 
 $wgDisabledActions = array( 'credits' );
-# $wgDisableHardRedirects = true; // moved to InitializeSettings.php
-
-# category rss feed extension, sponsored by kennisnet
-#include("extensions/catfeed/catfeed.php");
-# why is there, AGAIN, no explanation of safety or limitation to known places?
-
 
 # Process group overrides
 
@@ -1375,13 +1328,6 @@ $wgLegacySchemaConversion = true;
 #$wgReadOnly = '5 min DB server maintenance...';
 #$wgReadOnly = 'Read-only during network issues';
 
-# fcache stuff -kate
-#$fcuse = array("metawiki");
-#if (in_array($wgDBname, $fcuse) && file_exists('/mnt/fcache/fcache_is_mounted')) {
-#    $wgUseFileCache = true;
-#    /** Directory where the cached page will be saved */
-#    $wgFileCacheDirectory = "/mnt/fcache/$wgDBname/";
-#}
 
 if ( $cluster != 'pmtpa' ) {
 	$wgHTTPTimeout = 10;
@@ -1398,15 +1344,6 @@ if( //isset( $_POST['action'] ) &&
 	}
 }
 */
-/*
-if ( $wgDBname == 'enwiki' ) {
-	require( "$IP/extensions/CookieBlock/CookieBlock.php" );
-
-	$wgCookieBlocks = array(
-		# Test -- block Tim on aawiki for a day
-		#'d0e2a4080155d22cc2340e64b9930689' => array( 37, 86400 ),
-	);
-}*/
 
 // disabling so we don't worry about xmlrpc
 // 2006-10-21
@@ -1414,7 +1351,7 @@ if ( $wgDBname == 'enwiki' ) {
 #$mwBlockerHost = 'larousse';
 #$mwBlockerPort = 8126;
 ##$wgProxyList = array_flip( array_map( 'trim', file( 'udp://10.0.5.8:8420/mwblocker' ) ) );
-$wgProxyList = "$IP/../wmf-config/mwblocker.log";
+$wgProxyList = "$wmfConfigDir/mwblocker.log";
 
 if( getenv( 'WIKIDEBUG' ) ) {
 	$wgDebugLogFile = '/tmp/wiki.log';
@@ -1442,14 +1379,14 @@ wfProfileIn( "$fname-misc5" );
 $wgBrowserBlackList[] = '/^Lynx/';
 
 // Vandal checks
-require( $IP.'/../wmf-config/checkers.php' );
+require( "$wmfConfigDir/checkers.php" );
 
 // Experimental ScanSet extension
 if ( $wgDBname == 'enwikisource' ) {
 	require( $IP.'/extensions/ScanSet/ScanSet.php' );
 	$wgScanSetSettings = array( 
 		'baseDirectory' => '/mnt/upload6/wikipedia/commons/scans',
-		'basePath' => 'http://upload.wikimedia.org/wikipedia/commons/scans',
+		'basePath' => "$urlprotocol//upload.wikimedia.org/wikipedia/commons/scans",
 	);
 }
 
@@ -1483,7 +1420,7 @@ if( false /*$lang == 'zh' || $lang == 'en'*/ ) {
 
 // Customize URL handling for secure.wikimedia.org HTTPS logins
 if( $secure ) {
-	require( "$IP/../wmf-config/secure.php" );
+	require( "$wmfConfigDir/secure.php" );
 } elseif ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
 	// New HTTPS service on regular URLs
 	$wgServer = preg_replace( '/^http:/', 'https:', $wgServer );
@@ -1550,18 +1487,19 @@ if( $wmgEnableCaptcha ) {
 	}
 }
 
-
-
 require( "$IP/extensions/Oversight/HideRevision.php" );
-$wgGroupPermissions['oversight']['hiderevision'] = true;
-$wgGroupPermissions['oversight']['oversight'] = true;
+$wgGroupPermissions['oversight']['hiderevision'] = false;
+//$wgGroupPermissions['oversight']['oversight'] = true;
 
 if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgExternalDiffEngine = 'wikidiff2';
 }
 
 if( function_exists( 'dba_open' ) && file_exists( "$IP/cache/interwiki.cdb" ) ) {
-    $wgInterwikiCache = "$IP/cache/interwiki.cdb";
+	$wgInterwikiCache = "$IP/cache/interwiki.cdb";
+}
+if( $wmgHTTPSExperiment && function_exists( 'dba_open' ) && file_exists( "$IP/cache/interwiki-pr.cdb" ) ) {
+	$wgInterwikiCache = "$IP/cache/interwiki-pr.cdb";
 }
 
 $wgDebugLogGroups["ExternalStoreDB"] = "udp://10.0.5.8:8420/external";
@@ -1632,6 +1570,7 @@ if ( $wmgUseCentralAuth ) {
 		'.wikiversity.org' => 'enwikiversity',
 		'.mediawiki.org' => 'mediawikiwiki',
 		'species.wikimedia.org' => 'specieswiki',
+		'incubator.wikimedia.org' => 'incubatorwiki',
 	);
 	# Don't autologin to self
 	if ( isset( $wgCentralAuthAutoLoginWikis[$wmgSecondLevelDomain] ) ) {
@@ -1676,30 +1615,11 @@ if ( $wmgUseCentralAuth ) {
 	}
 }
 
-# Dismissable site notice demo
-//if ( $wgDBname == 'testwiki' ) {
-//	require( "$IP/sitenotice.php" );
-//}
-
 // taking it live 2006-12-15 brion
 if( $wmgUseDismissableSiteNotice ) {
 	require( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
 }
 $wgMajorSiteNoticeID = '2';
-
-#$wgSiteNotice = "<span class=\"ltr\">All community members are invited to give [[m:Board elections/2007/Candidates|Board Election Candidates]] their [[m:Board elections/2007/Endorsements|endorsements]].</span>";
-
-
-//require( "$IP/extensions/UsernameBlacklist/UsernameBlacklist.php" );  //Removed per bug 15888
-
-/*
-function wfInitDonationLinkMessage() {
-	global $wgMessageCache;
-	$wgMessageCache->addMessage( 'sitenotice_link', '[http://wikimediafoundation.org/wiki/Wikimedia_thanks_Virgin_Unite Virgin Unite]' );
-}
-$wgExtensionFunctions[] = 'wfInitDonationLinkMessage';
-
-*/
 
 $wgHooks['LoginAuthenticateAudit'][] = 'logBadPassword';
 $wgDebugLogGroups['badpass'] = 'udp://10.0.5.8:8420/badpass';
@@ -1796,15 +1716,21 @@ if( $wmgUseCentralNotice ) {
 	if( $secure ) {
         	# Don't load the JS from an insecure source!
         	$wgCentralPagePath = 'https://secure.wikimedia.org/wikipedia/meta/w/index.php';
-    	} else {
-        	$wgCentralPagePath = 'http://meta.wikimedia.org/w/index.php';
+	} elseif ( $wgDBname == 'testwiki' ) {
+		$wgCentralPagePath = "$urlprotocol//test.wikipedia.org/w/index.php";
+	} else {
+        	$wgCentralPagePath = "$urlprotocol//meta.wikimedia.org/w/index.php";
     	}
 
     	$wgNoticeProject = $wmgNoticeProject;
-    	$wgCentralDBname = 'metawiki';
+	
+	if ( $wgDBname == 'testwiki' ) {
+		$wgCentralDBname = 'testwiki';
+	} else {
+		$wgCentralDBname = 'metawiki';
+	}
 
-    	$wgCentralNoticeLoader = $wmgCentralNoticeLoader; 
-
+    $wgCentralNoticeLoader = $wmgCentralNoticeLoader; 
 
 	/*
 	$wgNoticeTestMode = true;
@@ -1830,18 +1756,17 @@ if( $wmgUseCentralNotice ) {
 	# Wed evening -- all on!
 	$wgNoticeTimeout = 3600;
 	$wgNoticeServerTimeout = 3600; // to let the counter update
-	$wgNoticeCounterSource = 'http://wikimediafoundation.org/wiki/Special:ContributionTotal' .
+	$wgNoticeCounterSource = $urlprotocol . '//wikimediafoundation.org/wiki/Special:ContributionTotal' .
 		'?action=raw' .
 		'&start=20101112000000' . // FY 10-11
 		'&fudgefactor=660000';   // fudge for pledged donations not in CRM
 	
-	if( $wgDBname == 'metawiki' ) {
+	if( $wgDBname == 'metawiki' || $wgDBname == 'testwiki' ) {
 		$wgNoticeInfrastructure = true;
 	} else {
 		$wgNoticeInfrastructure = false;
 	}
 }
-
 
 // Load our site-specific l10n extensions
 include "$IP/extensions/WikimediaMessages/WikimediaMessages.php";
@@ -1849,7 +1774,6 @@ include "$IP/extensions/WikimediaMessages/WikimediaMessages.php";
 if ( $wmgUseWikimediaLicenseTexts ) {
 	include "$IP/extensions/WikimediaMessages/WikimediaLicenseTexts.php";
 }
- 
 
 function wfNoDeleteMainPage( &$title, &$user, $action, &$result ) {
 	global $wgMessageCache, $wgDBname;
@@ -1885,7 +1809,7 @@ if( $wmgUseCollection ) {
 	#$wgCollectionMWServeURL = 'http://bindery.wikimedia.org/cgi-bin/mwlib.cgi';
 	#$wgCollectionMWServeURL = 'http://bindery.wikimedia.org:8080/mw-serve/';
 	#$wgCollectionMWServeURL = 'http://erzurumi.wikimedia.org:8080/mw-serve/';
-	$wgCollectionMWServeURL = 'http://pdf1.wikimedia.org:8080/mw-serve/';
+	$wgCollectionMWServeURL = "http://pdf1.wikimedia.org:8080/mw-serve/";
 	
 	// MediaWiki namespace is not a good default
 	$wgCommunityCollectionNamespace = NS_PROJECT;
@@ -1901,47 +1825,23 @@ if( $wmgUseCollection ) {
 		'odf' => 'OpenDocument Text',
 		'zim' => 'openZIM',
 	);
-	
-	$wgLicenseURL = 'http://en.wikipedia.org/w/index.php?title=Wikipedia:Text_of_the_GNU_Free_Documentation_License&action=raw';
+
+	$wgLicenseURL = "$urlprotocol//en.wikipedia.org/w/index.php?title=Wikipedia:Text_of_the_GNU_Free_Documentation_License&action=raw";
 	
 	$wgCollectionPortletForLoggedInUsersOnly = $wmgCollectionPortletForLoggedInUsersOnly;
 	$wgCollectionArticleNamespaces = $wmgCollectionArticleNamespaces;
 }
 
 // Testing internally
-include "$IP/../wmf-config/secret-projects.php";
-
-/*
-if ( $wgDBname == 'idwiki' ) {
-	# Account creation throttle disabled for outreach event
-	# Contact: Siska Doviana <serenity@gmail.com>
-	if ( time() > strtotime( '2008-08-08T08:00 +7:00' )
-	  && time() < strtotime( '2008-08-08T19:00 +7:00' ) )
-	{
-		$wgAccountCreationThrottle = 300;
-	}
-}
-*/
-
-/*
-if ( $wgDBname == 'enwiki' ) {
-	# Account creation throttle disabled for outreach event
-	# Contact: fschulenburg@wikimedia.org
-	if ( time() > strtotime( '2009-10-19T11:00 -7:00' )
-		&& time() < strtotime( '2009-10-19T16:00 -7:00' ) )
-	{
-		$wgAccountCreationThrottle = 300;
-	}
-}
- */
+include "$wmfConfigDir/secret-projects.php";
 
 if ( $wgDBname == 'elwiki' ) {
 	# Account creation throttle disabled for editing workshop
 	# Contact: ariel@wikimedia.org (irc: apergos)
-	if ( time() > strtotime( '2011-05-16T17:00 +3:00' )
-		&& time() < strtotime( '2011-05-16T20:00 +3:00') )
+	if ( time() > strtotime( '2011-06-16T13:00 +3:00' )
+		&& time() < strtotime( '2011-06-16T20:00 +3:00') )
 	{
-		$wgAccountCreationThrottle = 40;
+		$wgAccountCreationThrottle = 50;
 	}
 }
 
@@ -1967,7 +1867,7 @@ if( $wmgUseNewUserMessage ) {
 
 if( $wmgUseCodeReview ) {
 	include "$IP/extensions/CodeReview/CodeReview.php";
-	include( $IP.'/../wmf-config/codereview.php');
+	include( "$wmfConfigDir/codereview.php" );
 	$wgSubversionProxy = 'http://codereview-proxy.wikimedia.org/index.php';
 	
 	$wgGroupPermissions['user']['codereview-add-tag'] = false;
@@ -1979,6 +1879,7 @@ if( $wmgUseCodeReview ) {
 	$wgGroupPermissions['user']['codereview-associate'] = false;
 	
 	$wgGroupPermissions['user']['codereview-post-comment'] = true;
+	$wgGroupPermissions['user']['codereview-signoff'] = true;
 	
 	$wgGroupPermissions['coder']['codereview-add-tag'] = true;
 	$wgGroupPermissions['coder']['codereview-remove-tag'] = true;
@@ -1999,16 +1900,16 @@ if( $wmgUseCodeReview ) {
 
 if( $wmgUseAbuseFilter ) {
 	include "$IP/extensions/AbuseFilter/AbuseFilter.php";
-        include( $IP.'/../wmf-config/abusefilter.php');
+    include( "$wmfConfigDir/abusefilter.php" );
 }
 
 if ($wmgUseCommunityVoice == true) {
- include ( "$IP/extensions/ClientSide/ClientSide.php" );
- include ( "$IP/extensions/CommunityVoice/CommunityVoice.php" );
+    include ( "$IP/extensions/ClientSide/ClientSide.php" );
+    include ( "$IP/extensions/CommunityVoice/CommunityVoice.php" );
 }
 
 if ($wmgUsePdfHandler == true) {
- include ("$IP/extensions/PdfHandler/PdfHandler.php" );
+    include ("$IP/extensions/PdfHandler/PdfHandler.php" );
 }
 
 if ($wmgUseUsabilityInitiative) {
@@ -2023,7 +1924,7 @@ if ($wmgUseUsabilityInitiative) {
 	//if ( $wgDBname == 'testwiki' ) { $wgUsabilityInitiativeResourceMode = 'raw'; }
 	// Disable experimental things
 	$wgWikiEditorFeatures['templateEditor'] =
-	        $wgWikiEditorFeatures['preview'] =
+	    $wgWikiEditorFeatures['preview'] =
 		$wgWikiEditorFeatures['previewDialog'] =
 		$wgWikiEditorFeatures['publish'] =
 		$wgWikiEditorFeatures['templates'] =
@@ -2046,9 +1947,6 @@ if ($wmgUseUsabilityInitiative) {
 	} else {
 		$wgHiddenPrefs[] = 'vector-collapsiblenav';
 	}
-	if( $wgDBname == 'enwiki' ) {
-		$wgHiddenPrefs[] = 'minordefault';
-	}
 
 	if ($wmgUsabilityPrefSwitch) {
 		require_once( "$IP/extensions/PrefStats/PrefStats.php" );
@@ -2066,12 +1964,10 @@ if ($wmgUseUsabilityInitiative) {
 		$wgPrefSwitchShowLinks = false;
 	}
 
-	
 	if ($wmgUsabilityEnforce) {
 		$wgEditToolbarGlobalEnable = false;
 		$wgDefaultUserOptions['usebetatoolbar'] = 1;
 		$wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
-
 	}
 
 	// For Babaco... these are still experimental, won't be on by default
@@ -2086,6 +1982,7 @@ if ($wmgUseUsabilityInitiative) {
 		require "$IP/extensions/ClickTracking/ClickTracking.php";
 
 		$wgClickTrackThrottle = $wmgClickTrackThrottle;
+		$wgClickTrackingLog = $wmgClickTrackingLog;
 		# Disable Special:ClickTracking, not secure yet (as of r59230)
 		unset( $wgSpecialPages['ClickTracking'] );
 		# Remove the clicktracking permission because people see it in ListGroupRights and wonder what it does
@@ -2133,7 +2030,7 @@ if ( $wmgEnableLandingCheck ) {
 }
 
 if ( $wmgUseLiquidThreads ) {
-	require_once( "$IP/../wmf-config/liquidthreads.php" );
+	require_once( "$wmfConfigDir/liquidthreads.php" );
 }
 
 if ( $wmgUseFundraiserPortal ) {
@@ -2143,7 +2040,7 @@ if ( $wmgUseFundraiserPortal ) {
 		global $wgScriptPath; // SSL may change this after CommonSettings
 		global $wgFundraiserPortalDirectory, $wgFundraiserPortalPath, $wgFundraiserImageUrl;
 		$wgFundraiserPortalDirectory = "/mnt/upload6/portal";
-		$wgFundraiserPortalPath = "http://upload.wikimedia.org/portal";
+		$wgFundraiserPortalPath = "$urlprotocol//upload.wikimedia.org/portal";
 		$wgFundraiserImageUrl = "$wgScriptPath/extensions/FundraiserPortal/images";
 	}
 }
@@ -2194,8 +2091,8 @@ if ( $wmgUseArticleFeedback ) {
 
 	$wgArticleFeedbackTracking = array(
 		'buckets' => array(
-			'track' => 10,
-			'ignore' => 90,
+			'track' => 1.35,
+			'ignore' => 98.65,
 			//'track'=>0, 'ignore' => 100	
 		),
 		'version' => 8,
@@ -2220,9 +2117,10 @@ if ( $wmgUseArticleFeedback ) {
 
 
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
+$wgDefaultUserOptions['showhiddencats'] = $wmgShowHiddenCats;
 
 if ( $wgDBname == 'strategywiki' ) {
-        require_once( "$IP/extensions/StrategyWiki/ActiveStrategy/ActiveStrategy.php" );
+    require_once( "$IP/extensions/StrategyWiki/ActiveStrategy/ActiveStrategy.php" );
 }
 
 if ( $wgDBname == 'testwiki' || $wgDBname == 'foundationwiki' ) {
@@ -2264,7 +2162,7 @@ function wmfBlockJokerEmails( &$to, &$from, &$subject, &$text ) {
 if ( $wgUseVariablePage ) {
 	include( "$IP/extensions/VariablePage/VariablePage.php");
 	$wgVariablePagePossibilities = array(
-		'http://wikimediafoundation.org/wiki/WMFJA1/en' => 100,
+		"$urlprotocol//wikimediafoundation.org/wiki/WMFJA1/en" => 100,
 	);
 
 	$wgVariablePageShowSidebarLink = true;
@@ -2278,14 +2176,14 @@ if ( $wgUseVariablePage ) {
 // ContributionTracking for handling PayPal redirects
 if ( $wgUseContributionTracking ) {
 	include( "$IP/extensions/ContributionTracking/ContributionTracking.php" );
-	include( "$IP/../wmf-config/contribution-tracking-setup.php");
+	include( "$wmfConfigDir/contribution-tracking-setup.php" );
 	$wgContributionTrackingPayPalIPN = "https://civicrm.wikimedia.org/fundcore_gateway/paypal";
 	$wgContributionTrackingPayPalRecurringIPN = "https://civicrm.wikimedia.org/IPNListener_Recurring.php";
 }
 
 if ( $wmgUseUploadWizard ) {
 	require_once( "$IP/extensions/UploadWizard/UploadWizard.php" );
-	$wgUploadStashScalerBaseUrl = "http://upload.wikimedia.org/$site/$lang/thumb/temp";
+	$wgUploadStashScalerBaseUrl = "$urlprotocol//upload.wikimedia.org/$site/$lang/thumb/temp";
 	$wgUploadWizardConfig = array(
 		#'debug' => true,
 		'disableResourceLoader' => false,
@@ -2312,6 +2210,8 @@ if ( $wmgUseNarayam ) {
 
 if ( $wmgUseGoogleNewsSitemap ) {
 	include( "$IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php" );
+	$wgGNSMfallbackCategory = $wmgGNSMfallbackCategory;
+	$wgGNSMcommentNamespace = $wmgGNSMcommentNamespace;
 }
 
 if ( $wmgUseCLDR ) {
@@ -2324,22 +2224,22 @@ if ( $wmgUseCLDR ) {
 #	$wgAPIModules['parse'] = 'ApiDisabled';
 #}
 
-if ( $wgDBname == 'ptwikibooks' ) {
-	# Account creation throttle disabled for "Logística 2011" project from
-	# [[FCT]] / [[New University of Lisbon]]
-	$wgAccountCreationThrottle = 100;
-}
-
-$wgObjectCaches['ehcache-multiwrite'] = array(
+$wgObjectCaches['mysql-multiwrite'] = array(
 	'class' => 'MultiWriteBagOStuff',
 	'caches' => array(
 		0 => array(
-			'class' => 'EhcacheBagOStuff',
-			'servers' => array(
-				'10.0.6.50:8080',
+			'class' => 'SqlBagOStuff',
+			'server' => array(
+				'host' => '10.0.6.50', # db40
+				'dbname' => 'parsercache',
+				'user' => $wgDBuser,
+				'password' => $wgDBpassword,
+				'type' => 'mysql',
+				'flags' => 0,
 			),
-			'connectTimeout' => 0.5,
-			'timeout' => 5,
+			'purgePeriod' => 0,
+			'tableName' => 'pc',
+			'shards' => 256,
 		),
 		1 => array(
 			'factory' => 'ObjectCache::newMemcached',
@@ -2347,10 +2247,9 @@ $wgObjectCaches['ehcache-multiwrite'] = array(
 	)
 );
 
-
 # Style version appendix
 # Shouldn't be needed much in 1.17 due to ResourceLoader, but some legacy things still need it
-$wgStyleVersion .= '-2';
+$wgStyleVersion .= '-3';
 
 // DO NOT DISABLE WITHOUT CONTACTING PHILIPPE / LEGAL!
 // Installed by Andrew, 2011-04-26
@@ -2363,12 +2262,30 @@ if ( $wmgUseIncubator ) {
 	require_once( "$IP/extensions/WikimediaIncubator/WikimediaIncubator.php" );
 }
 
+if ( $wmgUseWikiLove ) {
+	require_once( "$IP/extensions/WikiLove/WikiLove.php" );
+	$wgWikiLoveLogging = true;
+	if ( $wmgWikiLoveDefault ) {
+		$wgDefaultUserOptions['wikilove-enabled'] = 1;
+	}
+}
+
+if ( $wmgUseSubPageList3 ) {
+	include( "$IP/extensions/SubPageList3/SubPageList3.php" );
+}
+
+if ( $wmgHTTPSExperiment ) {
+	$wgFooterIcons["poweredby"]["mediawiki"]["url"] = "//www.mediawiki.org/";
+	if ( isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
+		$wgCookieSecure = true;
+	}
+}
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
-# REALlY ... were not kidding here ... NO EXTENSIONS AFTER
+# REALLY ... were not kidding here ... NO EXTENSIONS AFTER
 
-require( "$IP/../wmf-config/ExtensionMessages.php" );
+require( "$wmfConfigDir/ExtensionMessages.php" );
 
 wfProfileOut( "$fname-misc5" );
 wfProfileOut( $fname );
