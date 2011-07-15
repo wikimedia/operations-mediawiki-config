@@ -79,24 +79,25 @@ $DP = $IP;
 wfProfileOut( "$fname-init" );
 wfProfileIn( "$fname-host" );
 
+# wmf-config directory (in common/)
+$wmfConfigDir = "$IP/../wmf-config";
+
 # Determine domain and language and the directories for this instance
-require_once( $IP . '/../wmf-config/MWMultiVersion.php' );
+require_once( "$wmfConfigDir/MWMultiVersion.php" );
 if ( (@$_SERVER['SCRIPT_NAME']) == '/w/thumb.php' && (@$_SERVER['SERVER_NAME']) == 'upload.wikimedia.org' ) {
 	$multiVersion = MWMultiVersion::getInstanceForUploadWiki( $_SERVER['PATH_INFO'] );
-} else if ( $wgCommandLineMode) {
+} else if ( $wgCommandLineMode ) {
 	$multiVersion = MWMultiVersion::getInstanceForMaintenance();
 } else {
 	$multiVersion = MWMultiVersion::getInstanceForWiki( $_SERVER['SERVER_NAME'], $_SERVER['DOCUMENT_ROOT'] );
 }
+
 $site = $multiVersion->getSite();
 $lang = $multiVersion->getLang();
 $wgDBname = $multiVersion->getDatabase();
 $wgVersionDirectory = $multiVersion->getVersion();
 
 wfProfileOut( "$fname-host" );
-
-# wmf-config directory
-$wmfConfigDir = "$IP/../wmf-config";
 
 # Initialise wgConf
 wfProfileIn( "$fname-wgConf" );

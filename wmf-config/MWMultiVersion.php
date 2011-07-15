@@ -67,7 +67,7 @@ class MWMultiVersion {
 		$secure = getenv( 'MW_SECURE_HOST' );
 		$matches = array();
 		if ( $secure ) {
-			if ( !preg_match('/^([^.]+).([^.]+).*$/', $secure, $matches ) ) {
+			if ( !preg_match('/^([^.]+)\.([^.]+)\./', $secure, $matches ) ) {
 				die("invalid hostname");
 			}
 			$this->lang = $matches[1];
@@ -108,7 +108,7 @@ class MWMultiVersion {
 		$this->site = $pathBits[1];
 		$this->lang = $pathBits[2];
 	}
-	
+
 	/**
 	 * Gets the site and lang from env variables
 	 */
