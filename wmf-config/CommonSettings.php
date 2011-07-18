@@ -42,13 +42,10 @@ wfProfileIn( "$fname-init" );
 #----------------------------------------------------------------------
 # Initialisation
 
-/*
-if ( defined( 'TESTWIKI' ) ) {
-	$IP = "/home/wikipedia/common/php-1.17";
-} else {
-	$IP = "/usr/local/apache/common/php-1.17";
-}
-*/
+# Get the version object for this Wiki (must be set by now, along with $IP)
+require_once( "./MWMultiVersion.php" );
+$multiVersion = MWMultiVersion::getInstance();
+$wgDBname = $multiVersion->getDatabase();
 
 set_include_path( "$IP:$IP/lib:/usr/local/lib/php:/usr/share/php" );
 
@@ -82,35 +79,24 @@ wfProfileIn( "$fname-host" );
 # wmf-config directory (in common/)
 $wmfConfigDir = "$IP/../wmf-config";
 
-# Determine domain and language and the directories for this instance
-require_once( "$wmfConfigDir/MWMultiVersion.php" );
-if ( (@$_SERVER['SCRIPT_NAME']) == '/w/thumb.php' && (@$_SERVER['SERVER_NAME']) == 'upload.wikimedia.org' ) {
-	$multiVersion = MWMultiVersion::getInstanceForUploadWiki( $_SERVER['PATH_INFO'] );
-} else if ( $wgCommandLineMode ) {
-	$multiVersion = MWMultiVersion::getInstanceForMaintenance();
-} else {
-	$multiVersion = MWMultiVersion::getInstanceForWiki( $_SERVER['SERVER_NAME'], $_SERVER['DOCUMENT_ROOT'] );
-}
-
-$site = $multiVersion->getSite();
-$lang = $multiVersion->getLang();
-$wgDBname = $multiVersion->getDatabase();
-$wgVersionDirectory = $multiVersion->getVersion();
-
 wfProfileOut( "$fname-host" );
 
 # Initialise wgConf
 wfProfileIn( "$fname-wgConf" );
 require( "$wmfConfigDir/wgConf.php" );
-
 function wmfLoadInitialiseSettings( $conf ) {
-	global $IP;
+	global $wmfConfigDir;
 	$wgConf =& $conf; # b/c alias
 	require( "$wmfConfigDir/InitialiseSettings.php" );
 }
-
 wfProfileOut( "$fname-wgConf" );
+
 wfProfileIn( "$fname-confcache" );
+
+# Determine domain and language and the directories for this instance
+$site = $multiVersion->getSite( $wgConf ); // must be called *after* $wgConf is set
+$lang = $multiVersion->getLang( $wgConf ); // must be called *after* $wgConf is set
+$wgVersionDirectory = $multiVersion->getVersion();
 
 # Is this database listed in $cluster.dblist?
 if ( array_search( $wgDBname, $wgLocalDatabases ) === false ){ 
