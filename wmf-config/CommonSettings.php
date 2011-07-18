@@ -94,8 +94,7 @@ wfProfileOut( "$fname-wgConf" );
 wfProfileIn( "$fname-confcache" );
 
 # Determine domain and language and the directories for this instance
-$site = $multiVersion->getSite( $wgConf ); // must be called *after* $wgConf is set
-$lang = $multiVersion->getLang( $wgConf ); // must be called *after* $wgConf is set
+list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 $wgVersionDirectory = $multiVersion->getVersion();
 
 # Is this database listed in $cluster.dblist?

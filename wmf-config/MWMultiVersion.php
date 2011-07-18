@@ -186,40 +186,6 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Load the site and lang for this wiki from the db name
-	 * @param $db string
-	 * @param $conf SiteConfiguration object
-	 * @return void
-	 */
-	private function loadSiteFromDB( $db, SiteConfiguration $conf ) {
-		list( $this->site, $this->lang ) = $conf->siteFromDB( $db );
-	}
-
-	/**
-	 * Get the site for this wiki
-	 * @param $conf SiteConfiguration object
-	 * @return String site. Eg: wikipedia, wikinews, wikiversity
-	 */
-	public function getSite( SiteConfiguration $conf ) {
-		if ( $this->site === null ) {
-			$this->loadSiteFromDB( $this->db, $conf );
-		}
-		return $this->site;
-	}
-
-	/**
-	 * Get the lang for this wiki
-	 * @param $conf SiteConfiguration object
-	 * @return String lang Eg: en, de, ar, hi
-	 */
-	public function getLang( SiteConfiguration $conf ) {
-		if ( $this->lang === null ) {
-			$this->loadSiteFromDB( $this->db, $conf );
-		}
-		return $this->lang;
-	}
-
-	/**
 	 * Get the DB name for this wiki
 	 * @return String the database name
 	 */
