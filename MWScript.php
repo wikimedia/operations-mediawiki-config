@@ -42,7 +42,7 @@ function runMWScript() {
 		die( "The MediaWiki script file \"{$file}\" does not exist." );
 	}
 
-	# Run the script!
+	# Run the script! (for HipHip, we will need to shell out here)
 	require_once( $file );
 }
 

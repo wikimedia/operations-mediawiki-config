@@ -8,10 +8,10 @@ class MWMultiVersion {
 	 * @var MWMultiVersion
 	 */
 	private static $instance;
-
+	/**
+	 * @var string
+	 */
 	private $db;
-	private $site;
-	private $lang;
 
 	/**
 	 * To get an inststance of this class, use the statuc helper methods.
@@ -94,36 +94,36 @@ class MWMultiVersion {
 			if ( !preg_match('/^([^.]+)\.([^.]+)\./', $secure, $matches ) ) {
 				die( "invalid hostname" );
 			}
-			$this->lang = $matches[1];
-			$this->site = $matches[2];
+			$lang = $matches[1];
+			$site = $matches[2];
 
 			// @TODO: move/use some special case dblist?
 			$idioSyncratics = array( "commons", "grants", "sources", "wikimania",
 				"wikimania2006", "foundation", "meta" );
-			if ( in_array( $this->lang, $idioSyncratics ) ) {
-				$this->site = "wikipedia";
+			if ( in_array( $lang, $idioSyncratics ) ) {
+				$site = "wikipedia";
 			}
 		} else {
-			$this->site = "wikipedia";	
+			$site = "wikipedia";	
 			if ( preg_match( '/^(?:\/usr\/local\/apache\/|\/home\/wikipedia\/)(?:htdocs|common\/docroot)\/([a-z]+)\.org/', $docRoot, $matches ) ) {
-				$this->site = $matches[1];
-				if ( preg_match( '/^(.*)\.' . preg_quote( $this->site ) . '\.org$/', $serverName, $matches ) ) {
-					$this->lang = $matches[1];
+				$site = $matches[1];
+				if ( preg_match( '/^(.*)\.' . preg_quote( $site ) . '\.org$/', $serverName, $matches ) ) {
+					$lang = $matches[1];
 					// For some special subdomains, like pa.us
-					$this->lang = str_replace( '.', '-', $this->lang );
+					$lang = str_replace( '.', '-', $lang );
 				} else if ( preg_match( '/^(.*)\.prototype\.wikimedia\.org$/', $serverName, $matches ) ) {
-					$this->lang = $matches[1];
+					$lang = $matches[1];
 				} else {
 					die( "Invalid host name ($serverName), can't determine language" );
 				}
 			} elseif ( preg_match( "/^\/usr\/local\/apache\/(?:htdocs|common\/docroot)\/([a-z0-9\-_]*)$/", $docRoot, $matches ) ) {
-				$this->site = "wikipedia";
-				$this->lang = $matches[1];
+				$site = "wikipedia";
+				$lang = $matches[1];
 			} else {
 				die( "Invalid host name (docroot=" . $docRoot . "), can't determine language." );
 			}
 		}
-		$this->loadDBFromSite( $this->site, $this->lang );
+		$this->loadDBFromSite( $site, $lang );
 	}
 
 	/**
@@ -136,9 +136,9 @@ class MWMultiVersion {
 		if ( count( $pathBits ) < 3 ) {
 			die( "Invalid file path info (pathinfo=" . $pathInfo . "), can't determine language." );
 		}
-		$this->site = $pathBits[1];
-		$this->lang = $pathBits[2];
-		$this->loadDBFromSite( $this->site, $this->lang );
+		$site = $pathBits[1];
+		$lang = $pathBits[2];
+		$this->loadDBFromSite( $site, $lang );
 	}
 
 	/**
