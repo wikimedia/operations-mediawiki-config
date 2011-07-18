@@ -233,7 +233,7 @@ class MWMultiVersion {
 	 * @return String the version wirectory for this wiki
 	 */
 	public function getVersion() {
-		$db = dba_open( '/usr/local/apache/common/wikiversions.db', 'r', 'cdb' );
+		$db = dba_open( '/usr/local/apache/common/wikiversions.cdb', 'r', 'cdb' );
 		if ( $db ) {
 			$version = dba_fetch( $this->getDatabase(), $db );
 		} else {
