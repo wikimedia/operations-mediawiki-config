@@ -3,6 +3,8 @@ if ( php_sapi_name() !== 'cli' ) {
 	exit; // sanity, script run via CLI
 }
 
+error_reporting( E_ALL );
+
 /**
  * Run a MediaWiki script based on the parameters (like --wiki) given to CLI.
  *
