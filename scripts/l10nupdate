@@ -15,25 +15,27 @@ else
 	exit 1
 fi
 
-mwDbNames=(`mwversionsinuse --dbonly`)
-if [ -z "$mwDbNames" ]; then
+mwVerDbSets=(`mwversionsinuse --withdb`)
+if [ -z "$mwVerDbSets" ]; then
 	/home/wikipedia/bin/dologmsg "!log LocalisationUpdate failed"
 	echo "FAILED"
 	exit 1
 fi
 
-for mwDb in "${mwDbNames[@]}"
+for i in "${mwVerDbSets[@]}"
 do
+	mwVerNum=${i%=*}
+	mwDbName=${i#*=}
 	if mwscript extensions/LocalisationUpdate/update.php \
-		  --wiki="$mwDb" \
-		  --outdir=/home/wikipedia/common/php/cache/l10n \
+		  --wiki="$mwDbName" \
+		  --outdir=/home/wikipedia/common/php-"$mwVerNum"/cache/l10n \
 		  --all \
 		  --quiet
 	then
 		echo "Completed. Syncing to Apaches"
 		/home/wikipedia/bin/sync-l10nupdate
 		echo "Clearing message blobs"
-		mwscript maintenance/wmf/clearMessageBlobs.php --wiki="$mwDb"
+		mwscript maintenance/wmf/clearMessageBlobs.php --wiki="$mwDbName"
 		echo "All done"
 	else
 		/home/wikipedia/bin/dologmsg "!log LocalisationUpdate failed"

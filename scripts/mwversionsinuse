@@ -1,8 +1,8 @@
 #!/bin/sh
 # Returns a space separated list of all active MW versions (e.g. "x.xx").
-# The versions are defined in /usr/local/apache/common-local/wmf-config/wikiversions.cdb.
-# If --dbonly is passed in, then each item in the list will be a DB name
-# for *some* wiki that uses that version instead of the version number.
+# Versions are defined in /usr/local/apache/common-local/wmf-config/wikiversions.cdb.
+# If --withdb is passed in, then each item in the list will be appended
+# with '=' followed by the DB name of *some* wiki that uses that version.
 # This script belongs in /usr/bin/.
 declare -a mwVersionsRes
 declare -a mwVersionsNums
@@ -23,8 +23,8 @@ do
 
 		if [ $mwVersionInArray -eq 0 ]; then
 			mwVersionsNums=("${mwVersionsNums[@]}" "$mwVersionNum")
-			if [ "$1" -eq "--dbonly" ]; then
-				mwVersionsRes=("${mwVersionsRes[@]}" "$mwDbName")
+			if [ "$1" -eq "--withdb" ]; then
+				mwVersionsRes=("${mwVersionsRes[@]}" "$mwVersionNum=$mwDbName")
 			else
 				mwVersionsRes=("${mwVersionsRes[@]}" "$mwVersionNum")
 			fi
