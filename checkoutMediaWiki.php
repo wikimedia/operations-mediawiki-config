@@ -29,7 +29,7 @@ function checkoutMediaWiki() {
 	if ( count( $argv ) >= 3 ) {
 		$svnVersion = $argv[1]; // e.g. "X.XXwmfX"
 		$dstVersion = $argv[2]; // e.g. "php-X.XX"
-		if ( preg_match( '/^php-(\d+\.\d+)$/', $dstVersion, $m ) ) {
+		if ( preg_match( '/^php-(\d+\.\d+|trunk)$/', $dstVersion, $m ) ) {
 			$dstVersionNum = $m[1];
 			$argsValid = true;
 		}
@@ -122,7 +122,7 @@ EOT;
 		print "File already exists: $path\n";
 	}
 
-	print "MediaWiki $dstVersionNum, from $svnVersion, successfully checked out.\n"; 
+	print "MediaWiki $dstVersionNum, from $svnVersion, successfully checked out.\n";
 }
 
 checkoutMediaWiki();

@@ -34,7 +34,7 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Factory method to get an instance of MWMultiVersion. 
+	 * Factory method to get an instance of MWMultiVersion.
 	 * Use this for all wikis except calls to /w/thumb.php on upload.wikmedia.org.
 	 * @param $serverName the ServerName for this wiki -- $_SERVER['SERVER_NAME']
 	 * @param $docRoot the DocumentRoot for this wiki -- $_SERVER['DOCUMENT_ROOT']
@@ -43,7 +43,7 @@ class MWMultiVersion {
 	public static function initializeForWiki( $serverName, $docRoot ) {
 		$instance = self::createInstance();
 		$instance->setSiteInfoForWiki( $serverName, $docRoot );
-		return $instance; 
+		return $instance;
 	}
 
 	/**
@@ -104,7 +104,7 @@ class MWMultiVersion {
 				$site = "wikipedia";
 			}
 		} else {
-			$site = "wikipedia";	
+			$site = "wikipedia";
 			if ( preg_match( '/^(?:\/usr\/local\/apache\/|\/home\/wikipedia\/)(?:htdocs|common\/docroot)\/([a-z]+)\.org/', $docRoot, $matches ) ) {
 				$site = $matches[1];
 				if ( preg_match( '/^(.*)\.' . preg_quote( $site ) . '\.org$/', $serverName, $matches ) ) {
@@ -203,7 +203,7 @@ class MWMultiVersion {
 		$db = dba_open( '/usr/local/apache/common/wikiversions.cdb', 'r', 'cdb' );
 		if ( $db ) {
 			$version = dba_fetch( $this->getDatabase(), $db );
-			if ( strpos( $version, '-' ) === false ) {
+			if ( strpos( $version, 'php-' ) !== 0 ) {
 				die( 'wikiversions.cdb entry should be of the format: php-...' );
 			}
 		} else {
