@@ -1,4 +1,9 @@
 #!/bin/sh
 # Shell wrapper for the local version of MWScript.php.
 # This script belongs in /usr/bin/ and should be in PATH.
-php /usr/local/apache/common/MWScript.php "$@"
+if php /usr/local/apache/common/MWScript.php "$@"
+then
+	exit 0
+else
+	exit 1
+fi

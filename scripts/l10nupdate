@@ -1,0 +1,21 @@
+#!/bin/sh
+umask 0002
+echo "Starting l10nupdate at `date`."
+if svn up --ignore-externals /home/wikipedia/l10n/trunk/phase3 &&
+	svn up --ignore-externals /home/wikipedia/l10n/trunk/extensions &&
+	php /home/wikipedia/common/php/extensions/LocalisationUpdate/update.php \
+	  --wiki=aawiki \
+	  --outdir=/home/wikipedia/common/php/cache/l10n \
+	  --all \
+	  --quiet
+then
+	echo "Completed. Syncing to Apaches"
+	/home/wikipedia/bin/sync-l10nupdate
+	echo "Clearing message blobs"
+	php /home/wikipedia/common/php/maintenance/wmf/clearMessageBlobs.php
+	echo "All done"
+else
+	/home/wikipedia/bin/dologmsg "!log LocalisationUpdate failed"; echo "FAILED";
+fi
+## Apache clients should sync updates locally every X hours or at scap time
+# Not needed anymore as of 3/20/2011 --Roan
