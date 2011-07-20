@@ -12,14 +12,14 @@ then
 else
 	/home/wikipedia/bin/dologmsg "!log LocalisationUpdate failed"
 	echo "FAILED"
-	exit 1;
+	exit 1
 fi
 
 mwDbNames=(`mwversionsinuse --dbonly`)
 if [ -z "$mwDbNames" ]; then
 	/home/wikipedia/bin/dologmsg "!log LocalisationUpdate failed"
 	echo "FAILED"
-	exit 1;
+	exit 1
 fi
 
 for mwDb in "${mwDbNames[@]}"
