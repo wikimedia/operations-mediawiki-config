@@ -1,21 +1,44 @@
 #!/bin/sh
+# This script belongs in /home/wikipedia/bin/.
+PATH=/bin:/usr/bin:/sbin:/usr/sbin:
+
 umask 0002
+
 echo "Starting l10nupdate at `date`."
 if svn up --ignore-externals /home/wikipedia/l10n/trunk/phase3 &&
-	svn up --ignore-externals /home/wikipedia/l10n/trunk/extensions &&
-	php /home/wikipedia/common/php/extensions/LocalisationUpdate/update.php \
-	  --wiki=aawiki \
-	  --outdir=/home/wikipedia/common/php/cache/l10n \
-	  --all \
-	  --quiet
+	svn up --ignore-externals /home/wikipedia/l10n/trunk/extensions
 then
-	echo "Completed. Syncing to Apaches"
-	/home/wikipedia/bin/sync-l10nupdate
-	echo "Clearing message blobs"
-	php /home/wikipedia/common/php/maintenance/wmf/clearMessageBlobs.php
-	echo "All done"
+	echo "SVN update completed."
 else
-	/home/wikipedia/bin/dologmsg "!log LocalisationUpdate failed"; echo "FAILED";
+	/home/wikipedia/bin/dologmsg "!log LocalisationUpdate failed"
+	echo "FAILED"
+	exit 1;
 fi
+
+mwDbNames=(`mwversionsinuse --dbonly`)
+if [ -z "$mwDbNames" ]; then
+	/home/wikipedia/bin/dologmsg "!log LocalisationUpdate failed"
+	echo "FAILED"
+	exit 1;
+fi
+
+for mwDb in "${mwDbNames[@]}"
+do
+	if mwscript extensions/LocalisationUpdate/update.php \
+		  --wiki="$mwDb" \
+		  --outdir=/home/wikipedia/common/php/cache/l10n \
+		  --all \
+		  --quiet
+	then
+		echo "Completed. Syncing to Apaches"
+		/home/wikipedia/bin/sync-l10nupdate
+		echo "Clearing message blobs"
+		mwscript maintenance/wmf/clearMessageBlobs.php --wiki="$mwDb"
+		echo "All done"
+	else
+		/home/wikipedia/bin/dologmsg "!log LocalisationUpdate failed"
+		echo "FAILED"
+	fi
+done
 ## Apache clients should sync updates locally every X hours or at scap time
 # Not needed anymore as of 3/20/2011 --Roan
