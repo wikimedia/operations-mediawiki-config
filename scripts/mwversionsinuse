@@ -1,0 +1,26 @@
+#!/bin/sh
+# Returns a space separated list of all active MW versions (e.g. x.xx).
+# This script belongs in /usr/bin/ and should be in PATH.
+declare -a mwVersionsionNums
+while read line
+do
+	mwVersion=${line#* }
+	mwVersionNum=${mwVersion#*-}
+    if [ -n "$mwVersion" -a -n "$mwVersionNum" ]; then
+		mwVersionInArray=0
+		for i in "${mwVersionsionNums[@]}"
+		do
+			if [ "$i" -eq "$mwVersionNum" ]; then
+				mwVersionInArray=1
+				break
+			fi
+		done
+		if [ mwVersionInArray -eq 0 ]; then
+			mwVersionsionNums=("${mwVersionsionNums[@]}" mwVersionNum)
+		fi
+	else
+		echo ""
+		exit 1
+	fi
+done < /usr/local/apache/common-local/wmf-config/wikiversions.cdb
+echo "${mwVersionsionNums[@]}"

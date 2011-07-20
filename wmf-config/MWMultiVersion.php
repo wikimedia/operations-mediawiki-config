@@ -194,18 +194,32 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Get the version as specified in a cdb file located in /usr/local/apache/common/wikiversions.db
-	 * The key should be the dbname and the version should be the version directory for this wiki
-	 * @return String the version wirectory for this wiki
+	 * Get the version as specified in a cdb file located
+	 * at /usr/local/apache/common/wikiversions.cdb.
+	 * The key should be the dbname and the version should be the version directory.
+	 * @return String the version directory for this wiki
 	 */
 	public function getVersion() {
 		$db = dba_open( '/usr/local/apache/common/wikiversions.cdb', 'r', 'cdb' );
 		if ( $db ) {
 			$version = dba_fetch( $this->getDatabase(), $db );
+			if ( strpos( $version, '-' ) === false ) {
+				die( 'wikiversions.cdb entry should be of the format: php-...' );
+			}
 		} else {
-			//trigger_error( "Unable to open /usr/local/apache/common/wikiversions.db. Assuming php-1.17", E_USER_ERROR );
+			//trigger_error( "Unable to open /usr/local/apache/common/wikiversions.cdb. Assuming php-1.17", E_USER_ERROR );
 			$version = 'php-1.17';
 		}
 		return $version;
+	}
+
+	/**
+	 * Get the version number as specified in a cdb file located
+	 * at /usr/local/apache/common/wikiversions.cdb.
+	 * @return String the version number for this wiki (e.g. "x.xx" or "trunk")
+	 */
+	public function getVersionNumber() {
+		list( /*...*/, $ver ) = explode( $this->getVersion(), '-', 2 );
+		return $ver;
 	}
 }

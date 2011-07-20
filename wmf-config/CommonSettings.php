@@ -95,7 +95,7 @@ wfProfileIn( "$fname-confcache" );
 
 # Determine domain and language and the directories for this instance
 list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
-$wgVersionDirectory = $multiVersion->getVersion();
+$wgVersionNumber = $multiVersion->getVersionNumber();
 
 # Is this database listed in $cluster.dblist?
 if ( array_search( $wgDBname, $wgLocalDatabases ) === false ){ 
@@ -110,7 +110,7 @@ if ( array_search( $wgDBname, $wgLocalDatabases ) === false ){
 
 # Try configuration cache
 
-$filename = "/tmp/mw-cache-$wgVersionDirectory/conf-$wgDBname";
+$filename = "/tmp/mw-cache-$wgVersionNumber/conf-$wgDBname";
 $globals = false;
 if ( @filemtime( $filename ) >= filemtime( "$wmfConfigDir/InitialiseSettings.php" ) ) {
 	$cacheRecord = @file_get_contents( $filename );
@@ -143,7 +143,7 @@ if ( !$globals ) {
 	
 	# Save cache
 	$oldUmask = umask( 0 );
-	@mkdir( '/tmp/mw-cache-' . $wgVersionDirectory, 0777 );
+	@mkdir( '/tmp/mw-cache-' . $wgVersionNumber, 0777 );
 	$file = fopen( $filename, 'w' );
 	if ( $file ) {
 		fwrite( $file, serialize( $globals ) );
@@ -182,18 +182,18 @@ unset( $wgStyleSheetPath );
 #$wgStyleSheetPath = '/w/skins-1.17';
 if ( $wgDBname == 'testwiki' ) {
 	// Make testing skin/JS changes easier
-	$wgExtensionAssetsPath = "$urlprotocol//test.wikipedia.org/w/extensions-" . $wgVersionDirectory;
-	$wgStyleSheetPath = "$urlprotocol//test.wikipedia.org/w/skins-" . $wgVersionDirectory;
+	$wgExtensionAssetsPath = "$urlprotocol//test.wikipedia.org/w/extensions-" . $wgVersionNumber;
+	$wgStyleSheetPath = "$urlprotocol//test.wikipedia.org/w/skins-" . $wgVersionNumber;
 
 } else {
-	$wgExtensionAssetsPath = "$urlprotocol//bits.wikimedia.org/w/extensions-" . $wgVersionDirectory;
-	$wgStyleSheetPath = "$urlprotocol//bits.wikimedia.org/skins-" . $wgVersionDirectory;
+	$wgExtensionAssetsPath = "$urlprotocol//bits.wikimedia.org/w/extensions-" . $wgVersionNumber;
+	$wgStyleSheetPath = "$urlprotocol//bits.wikimedia.org/skins-" . $wgVersionNumber;
 }
 $wgStylePath = $wgStyleSheetPath;
 $wgArticlePath = "/wiki/$1";
 
 $wgScriptPath  = '/w';
-$wgLocalStylePath = "$wgScriptPath/skins-$wgVersionDirectory";
+$wgLocalStylePath = "$wgScriptPath/skins-$wgVersionNumber";
 $wgStockPath = '/images';
 $wgScript           = $wgScriptPath.'/index.php';
 $wgRedirectScript	= $wgScriptPath.'/redirect.php';
@@ -204,7 +204,7 @@ if ( $wgDBname != 'testwiki' ) {
 
 $oldLabsWikis = array( 'en_labswikimedia', 'de_labswikimedia', 'flaggedrevs_labswikimedia' );
 if ( !in_array( $wgDBname, $oldLabsWikis ) ) {
-	$wgCacheDirectory = '/tmp/mw-cache-' . $wgVersionDirectory;
+	$wgCacheDirectory = '/tmp/mw-cache-' . $wgVersionNumber;
 } else {
 	# @TODO: remove this hack (use multiversioning proper)
 	$wgCacheDirectory = '/tmp/mw-cache-labs';
@@ -261,7 +261,7 @@ $wgUseGzip = true;
 $wgRCMaxAge = 30*86400;
 
 $wgUseTeX = true;
-$wgTexvc = "/usr/local/bin/texvc";
+$wgTexvc = "/usr/local/apache/uncommon/$wgVersionNumber/bin";
 $wgTmpDirectory     = '/tmp';
 $wgLegalTitleChars = "+ %!\"$&'()*,\\-.\\/0-9:;=?@A-Z\\\\^_`a-z~\\x80-\\xFF";
 
