@@ -1,0 +1,40 @@
+#!/bin/bash
+
+PATH=/bin:/usr/bin:/sbin:/usr/sbin:
+
+echo -n Copying to `hostname -s`...
+if rsync -a --delete --exclude=**/.svn/lock --no-perms \
+	10.0.5.8::common/ /usr/local/apache/common-local
+then
+	echo ok
+else
+	echo failed
+	exit 1
+fi
+
+
+echo -n Compiling texvc...
+
+builddir=`mktemp -dt texvc-build.XXXXXXXXXX`
+if [ -z "$builddir" ]; then
+	echo "Unable to create temporary directory"
+	exit 1
+fi
+
+rsync -r --exclude=.svn/ /usr/local/apache/common-local/php-1.17/math/ "$builddir"
+cd "$builddir"
+if make -f Makefile texvc >/dev/null 2>/dev/null; then
+	echo ok
+	install -d /usr/local/apache/uncommon/1.17/bin
+	install -m 755 "$builddir"/texvc /usr/local/apache/uncommon/1.17/bin
+else
+	echo failed
+	exit 1
+fi
+rm -r "$builddir"
+cd /
+
+
+#echo -n "Restarting apache... "
+#/usr/bin/apache-sanity-check && ( sudo /usr/sbin/apache2ctl stop; sudo killall -9 apache2;sleep 3; sudo /usr/sbin/apache2ctl start )
+
