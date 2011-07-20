@@ -1,6 +1,6 @@
 <?php
 if ( php_sapi_name() !== 'cli' ) {
-	exit; // sanity, script run via CLI
+	die( 'This script can only be run from the command line.' );
 }
 
 error_reporting( E_ALL );
@@ -74,10 +74,7 @@ EOT;
 	# Create LocalSettings.php stub...
 	$path = "$destIP/LocalSettings.php";
 	if ( !file_exists( $path ) ) {
-		$handle = fopen( $path, "w" );
-		if ( $handle ) {
-			fwrite( $handle, $localSettingsCode );
-			fclose( $handle );
+		if ( file_put_contents( $path, $localSettingsCode ) ) {
 			print "Created LocalSettings.php file.\n";
 		}
 	} else {
