@@ -38,7 +38,8 @@ function runMWScript() {
 		$argv[0] = $matches[1]; // make first arg the script file name
 	}
 
-	require_once( './wmf-config/MWVersion.php' );
+	# MWScript.php should be in common/
+	require_once( dirname( __FILE__ ) . '/wmf-config/MWVersion.php' );
 	$file = getMediaWikiCli( $relFile );
 	if ( !file_exists( $file ) ) {
 		die( "The MediaWiki script file \"{$file}\" does not exist." );
