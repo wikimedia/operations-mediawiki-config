@@ -177,6 +177,8 @@ require( "$wmfConfigDir/PrivateSettings.php" );
 require( "$wmfConfigDir/db.php" );
 require( "$wmfConfigDir/mc.php" );
 
+$secure = getenv( 'MW_SECURE_HOST' );
+
 # Protocol settings for urls
 if ( !$secure && $wmgHTTPSExperiment ) {
 	$urlprotocol = "";
