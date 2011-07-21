@@ -1,7 +1,7 @@
 <?php
 
 # WARNING: This file is publically viewable on the web. Do not put private data here.
-	
+
 # Godforsaken hack to work around problems with the Squid caching changes...
 #
 # To minimize damage on fatal PHP errors, output a default no-cache header
@@ -43,8 +43,17 @@ wfProfileIn( "$fname-init" );
 # Initialisation
 
 # Get the version object for this Wiki (must be set by now, along with $IP)
-require_once( "./MWMultiVersion.php" );
+require_once( dirname( __FILE__ ) . "/MWMultiVersion.php" );
 $multiVersion = MWMultiVersion::getInstance();
+/*
+if ( !$multiVersion ) {
+	die( "No MWMultiVersion instance initialized! Wrapper not used?" );
+}
+*/
+if ( !$multiVersion && php_sapi_name() == 'cli' ) {
+	# Allow for now since everything is 1.17 and we don't want scripts to break
+	$multiVersion = MWMultiVersion::initializeForMaintenance();
+}
 $wgDBname = $multiVersion->getDatabase();
 
 set_include_path( "$IP:$IP/lib:/usr/local/lib/php:/usr/share/php" );
@@ -72,7 +81,7 @@ if ( $hatesSafari ) {
 ini_set( 'memory_limit', 120 * 1024 * 1024 );
 
 $DP = $IP;
-                                                                           
+
 wfProfileOut( "$fname-init" );
 wfProfileIn( "$fname-host" );
 
@@ -98,7 +107,7 @@ list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 $wgVersionNumber = $multiVersion->getVersionNumber();
 
 # Is this database listed in $cluster.dblist?
-if ( array_search( $wgDBname, $wgLocalDatabases ) === false ){ 
+if ( array_search( $wgDBname, $wgLocalDatabases ) === false ){
 	# No? Load missing.php
 	if ( $wgCommandLineMode) {
 		print "Database name $wgDBname is not listed in $cluster.dblist\n";
@@ -123,7 +132,7 @@ if ( !$globals ) {
 	wfProfileIn( "$fname-recache-settings" );
 	# Get configuration from SiteConfiguration object
 	require( "$wmfConfigDir/InitialiseSettings.php" );
-	
+
 	$wikiTags = array();
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'readonly', 'switchover-jun30' ) as $tag ) {
 		$dblist = array_map( 'trim', file( "$IP/../$tag.dblist" ) );
@@ -132,7 +141,7 @@ if ( !$globals ) {
 		}
 	}
 
-	$globals = $wgConf->getAll( $wgDBname, $dbSuffix, 
+	$globals = $wgConf->getAll( $wgDBname, $dbSuffix,
 		array(
 			'lang'    => $lang,
 			'docRoot' => $_SERVER['DOCUMENT_ROOT'],
@@ -140,7 +149,7 @@ if ( !$globals ) {
 			'stdlogo' => "http://upload.wikimedia.org/$site/$lang/b/bc/Wiki.png" ,
 			'prstdlogo' => "//upload.wikimedia.org/$site/$lang/b/bc/Wiki.png",
 		), $wikiTags );
-	
+
 	# Save cache
 	$oldUmask = umask( 0 );
 	@mkdir( '/tmp/mw-cache-' . $wgVersionNumber, 0777 );
@@ -210,10 +219,10 @@ if ( !in_array( $wgDBname, $oldLabsWikis ) ) {
 	$wgCacheDirectory = '/tmp/mw-cache-labs';
 }
 
-# Very wrong place for NFS access - brought the site down -- domas - 2009-01-27 
+# Very wrong place for NFS access - brought the site down -- domas - 2009-01-27
 
-#if ( ! is_dir( $wgUploadDirectory ) && !$wgCommandLineMode ) { 
-#	@mkdir( $wgUploadDirectory, 0777 ); 
+#if ( ! is_dir( $wgUploadDirectory ) && !$wgCommandLineMode ) {
+#	@mkdir( $wgUploadDirectory, 0777 );
 #}
 
 $wgFileStore['deleted']['directory'] = "/mnt/upload6/private/archive/$site/$lang";
@@ -292,7 +301,7 @@ $wgNamespacesWithSubpages[4] = 1;
 # And namespace 101, which is probably a talk namespace of some description
 $wgNamespacesWithSubpages[101] = 1;
 
-/* <important notice> 
+/* <important notice>
  *
  * When you add a sitenotice make sure to wrap it in <span dir=ltr></span>,
  * otherwise it'll format badly on RTL wikis -ævar
@@ -304,7 +313,7 @@ $wgNamespacesWithSubpages[101] = 1;
 #$wgSiteNotice = "The databases are being moved to a less crash-prone server until the new machine is debugged. We'll be offline for probably an hour or two to get a consistent and complete backup transferred.";
 #$wgSiteNotice = "Completing transfer of database to less crash-prone server; will be offline for a few minutes.";
 #$wgSiteNotice = "Database should be working, but some files are still being transferred.";
-#$wgSiteNotice = "The wiki will be locked starting in a few minutes"; # to 
+#$wgSiteNotice = "The wiki will be locked starting in a few minutes"; # to
 #move the databases back to a faster machine. Downtime may be a few
 #hours, but things will be much faster after that!";
 #$wgSiteNotice = "The database is offline for a while from 05:00 UTC
@@ -351,7 +360,7 @@ $wgFileExtensions[] = 'ogv'; # Ogg audio & video
 $wgFileExtensions[] = 'svg';
 $wgFileExtensions[] = 'djvu'; # DjVu images/documents
 
-if ( /* use PagedTiffHandler */ true ) { 
+if ( /* use PagedTiffHandler */ true ) {
 	include( $IP.'/extensions/PagedTiffHandler/PagedTiffHandler.php' );
 	$wgTiffUseTiffinfo = true;
 } else {
@@ -385,7 +394,7 @@ if( $wmgPrivateWikiUploads ) {
 	$wgFileExtensions[] = 'odt';
 	$wgFileExtensions[] = 'odg'; // OpenOffice Graphics
 	$wgFileExtensions[] = 'ott'; // Templates
-	
+
 	# Temporary for office work :P
 	$wgFileExtensions[] = 'wmv';
 	$wgFileExtensions[] = 'dv';
@@ -397,7 +406,7 @@ if( $wmgPrivateWikiUploads ) {
 
 	# Becausee I hate having to find print drivers -- tomasz
 	$wgFileExtensions[] = 'ppd';
-	
+
 	# InDesign & PhotoShop, Illustrator wanted for Chapters logo work
 	$wgFileExtensions[] = 'indd';
 	$wgFileExtensions[] = 'inx';
@@ -408,7 +417,7 @@ if( $wmgPrivateWikiUploads ) {
 	$wgFileExtensions[] = 'omniplan';
 
 	# Dia Diagrams files --fred.
-	$wgFileExtensions[] = 'dia';	
+	$wgFileExtensions[] = 'dia';
 	// To allow OpenOffice doc formats we need to not blacklist zip files
 	$wgMimeTypeBlacklist = array_diff(
 		$wgMimeTypeBlacklist,
@@ -430,19 +439,19 @@ $wgUseESI = false;
 $wgSquidServers = array();
 
 # Accept XFF from these proxies
-$wgSquidServersNoPurge = array( 
+$wgSquidServersNoPurge = array(
 
 	# Wikimedia servers
 	# ------------------------------------------------
-	
+
 	# pmtpa external
-	# Note that all pmtpa squids must have an external address here, for the 
+	# Note that all pmtpa squids must have an external address here, for the
 	# benefit of the yaseo apaches.
 
 	'208.80.152.162',	# singer (secure)
 
 	'208.80.152.119',	# eiximenis (testing)
-	
+
 	'208.80.152.11',	# sq1
 	'208.80.152.12',	# sq2
 	'208.80.152.13',	# sq3
@@ -805,7 +814,7 @@ if ( $wmgUseGadgets ) {
 include( $IP.'/extensions/OggHandler/OggHandler.php' );
 $wgOggThumbLocation = '/usr/local/bin/oggThumb';
 // you can keep the filename the same and use maintenance/purgeList.php
-$wgCortadoJarFile = "$urlprotocol//upload.wikimedia.org/jars/cortado.jar"; 
+$wgCortadoJarFile = "$urlprotocol//upload.wikimedia.org/jars/cortado.jar";
 
 include( $IP.'/extensions/AssertEdit/AssertEdit.php' );
 
@@ -819,14 +828,14 @@ if ( $wgDBname == 'foundationwiki' ) {
 	include( "$IP/extensions/skins/Schulenburg/Schulenburg.php" );
 	include( "$IP/extensions/skins/Tomas/Tomas.php" );
 	include( "$IP/extensions/skins/Donate/Donate.php" );
-	
+
 	include( "$IP/extensions/ContributionReporting/ContributionReporting.php" );
 	include( "$wmfConfigDir/reporting-setup.php" );
-	
+
 	include( "$IP/extensions/ContactPageFundraiser/ContactPage.php" );
 	$wgContactUser = 'Storiescontact';
 	$wgUseTidy = false;
-	
+
 	$wgAllowedTemplates = array(
         	'enwiki_00','enwiki_01','enwiki_02','enwiki_03',
         	'enwiki_04','enwiki_05', 'donate','2009_Notice1',
@@ -847,9 +856,9 @@ if ( $wgDBname == 'foundationwiki' ) {
 		'2010_testing3B','2010_testing4','2010_testing4B','2010_testing5',
 		'2010_testing5_anon','2010_testing6','2010_testing6_anon','2010_testing7',
 		'2010_testing7_anon','2010_testing8','2010_testing8_anon','2010_testing9',
-		'2010_testing9_anon','2010_testing10','2010_testing10_anon','2010_testing11', 
-		'2010_testing11_anon','2010_testing12','2010_testing12_anon','2010_testing13', 
-		'2010_testing13_anon','2010_testing14','2010_testing14_anon','2010_testing15', 
+		'2010_testing9_anon','2010_testing10','2010_testing10_anon','2010_testing11',
+		'2010_testing11_anon','2010_testing12','2010_testing12_anon','2010_testing13',
+		'2010_testing13_anon','2010_testing14','2010_testing14_anon','2010_testing15',
 		'2010_testing15_anon','2010_testing16','2010_testing17','2010_testing18',
 		'2010_testing15_anon','2010_testing16','2010_testing17','2010_testing18',
 		'2010_testing19','2010_testing20','2010_testing21','2010_testing22',
@@ -967,7 +976,7 @@ $wgHooks['SecurePoll_JumpUrl'][] = 'wmfSecurePollJumpUrl';
 
 function wmfSecurePollJumpUrl( $page, &$url ) {
 	global $site, $lang;
-	
+
 	$url = wfAppendQuery( $url, array( 'site' => $site, 'lang' => $lang ) );
 	return true;
 }
@@ -1071,7 +1080,7 @@ $wgLocalFileRepo = array(
 	);
 # New commons settings
 if( $wgDBname != 'commonswiki' ) {
-	$wgForeignFileRepos[] = array( 
+	$wgForeignFileRepos[] = array(
 		'class'            => 'ForeignDBViaLBRepo',
 		'name'             => 'shared',
 		'directory'        => '/mnt/upload6/wikipedia/commons',
@@ -1133,7 +1142,7 @@ $wgUseLuceneSearch = true;
 if ( time() < 1234195258 ) {
 	$wgUseLuceneSearch = false;
 }*/
-	
+
 wfProfileOut( "$fname-misc2" );
 
 
@@ -1193,10 +1202,10 @@ $wgEnableUserEmail = true;
 # XFF log for vandal tracking
 function wfLogXFF() {
 	if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
-		$uri = ( $_SERVER['HTTPS'] ? 'https://' : 'http://' ) . 
+		$uri = ( $_SERVER['HTTPS'] ? 'https://' : 'http://' ) .
 			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-		wfErrorLog( 
-			gmdate('r') . "\t" . 
+		wfErrorLog(
+			gmdate('r') . "\t" .
 			"$uri\t" .
 			"{$_SERVER['HTTP_X_FORWARDED_FOR']}, {$_SERVER['REMOTE_ADDR']}\t" .
 			($_REQUEST['wpSave'] ? 'save' : '') . "\n",
@@ -1370,7 +1379,7 @@ require( "$wmfConfigDir/checkers.php" );
 // Experimental ScanSet extension
 if ( $wgDBname == 'enwikisource' ) {
 	require( $IP.'/extensions/ScanSet/ScanSet.php' );
-	$wgScanSetSettings = array( 
+	$wgScanSetSettings = array(
 		'baseDirectory' => '/mnt/upload6/wikipedia/commons/scans',
 		'basePath' => "$urlprotocol//upload.wikimedia.org/wikipedia/commons/scans",
 	);
@@ -1378,8 +1387,8 @@ if ( $wgDBname == 'enwikisource' ) {
 
 // 2005-11-27 Special:Cite for Wikipedia -Ævar
 // FIXME: This should really be done with $wmgUseSpecialCite in InitialiseSettings.php
-if (   ($site == 'wikipedia' && $wgLanguageCodeReal == $wgLanguageCode ) 
-     || $site == 'wikisource' 
+if (   ($site == 'wikipedia' && $wgLanguageCodeReal == $wgLanguageCode )
+     || $site == 'wikisource'
      || ( $site == 'wikiversity' && $wgLanguageCode == 'en' )
      || ( $site == 'wikibooks' && $wgLanguageCode == 'it' )
      || ( $site == 'wiktionary' && $wgLanguageCode == 'it' ) )
@@ -1417,7 +1426,7 @@ if( $secure ) {
 	}
 }
 
-if ( isset( $_REQUEST['captchabypass'] ) && $_REQUEST['captchabypass'] == $wmgCaptchaPassword ) { 
+if ( isset( $_REQUEST['captchabypass'] ) && $_REQUEST['captchabypass'] == $wmgCaptchaPassword ) {
 	$wmgEnableCaptcha = false;
 }
 
@@ -1454,7 +1463,7 @@ if( $wmgEnableCaptcha ) {
 	// Mystery proxy bot
 	// http://en.wikipedia.org/w/index.php?title=Killamanjaro&diff=prev&oldid=168037317
 	$wgCaptchaRegexes[] = '/^[a-z0-9]{5,}$/m';
-	
+
 	// 'XRumer' spambot
 	// adds non-real links
 	// http://meta.wikimedia.org/wiki/User:Cometstyles/XRumer
@@ -1465,7 +1474,7 @@ if( $wmgEnableCaptcha ) {
 	// https://bugzilla.wikimedia.org/show_bug.cgi?id=14544
 	// 2008-07-05
 	$wgCaptchaRegexes[] = '/\b(?i:anontalk\.com)\b/';
-	
+
 	// For emergencies
 	if( $wmgEmergencyCaptcha ) {
 		$wgCaptchaTriggers['edit'] = true;
@@ -1490,7 +1499,7 @@ if( $wmgHTTPSExperiment && function_exists( 'dba_open' ) && file_exists( "$IP/ca
 
 $wgDebugLogGroups["ExternalStoreDB"] = "udp://10.0.5.8:8420/external";
 
-#if( $wgDBname == 'frwikiquote' || 
+#if( $wgDBname == 'frwikiquote' ||
 if( $wgDBname == 'sep11wiki' ) {
   $wgSiteNotice = @file_get_contents( $wgReadOnlyFile );
 }
@@ -1504,7 +1513,7 @@ if( $wgEnotifWatchlist ) {
 
 # testing enotif via job queue, river 2007-05-10
 # turning this off since it's currently so lagged it's horrible -- brion 2009-01-20
-# turning back on while investigating other probs 
+# turning back on while investigating other probs
 $wgEnotifUseJobQ = true;
 
 // Quick hack for Makesysop vs enwiki
@@ -1533,7 +1542,7 @@ if ( $wmgUseCentralAuth ) {
 	#unset( $wgGroupPermissions['*']['centralauth-merge'] );
 	#$wgGroupPermissions['sysop']['centralauth-merge'] = true;
 	$wgCentralAuthCookies = true;
-	
+
 	# Broken -- TS
 	$wgCentralAuthUDPAddress = $wgRC2UDPAddress;
 	$wgCentralAuthNew2UDPPrefix = "#central\t";
@@ -1585,17 +1594,17 @@ if ( $wmgUseCentralAuth ) {
 			$privateWikis, $fishbowlWikis, $closedWikis );
 		return true;
 	}
-	
+
 	// Let's give it another try
 	$wgCentralAuthCreateOnView = true;
-	
+
 	// Enable global sessions for secure.wikimedia.org
 	if( $secure ) {
 		$wgCentralAuthCookies = true;
 		$wgCentralAuthCookieDomain = 'secure.wikimedia.org';
-		
+
 		$wgCentralAuthCookiePrefix = 'centralauth_';
-		
+
 		// Don't log in to the insecure URLs
 		$wgCentralAuthAutoLoginWikis = array();
 	}
@@ -1628,7 +1637,7 @@ function logBadPassword( $user, $pass, $retval ) {
 		default:
 			$bit = '???';
 		}
-			
+
 		wfDebugLog( 'badpass', "$bit for sysop '" .
 			$user->getName() . "' from " . wfGetIP() .
 			#" - " . serialize( apache_request_headers() )
@@ -1640,7 +1649,7 @@ function logBadPassword( $user, $pass, $retval ) {
 
 	# Looking for broken bot on toolserver -river 2007-10-13
 	if ($retval != LoginForm::SUCCESS
-		&& @strpos(@$headers['X-Forwarded-For'], "91.198.174.201") !== false) 
+		&& @strpos(@$headers['X-Forwarded-For'], "91.198.174.201") !== false)
 	{
 		wfDebugLog('ts_badpass', "bad login for '" . $user->getName() . "' - "
 			. @$headers['User-Agent']);
@@ -1697,7 +1706,7 @@ $wgImageMagickTempDir = '/a/magick-tmp';
 // Banner notice system
 if( $wmgUseCentralNotice ) {
 	include "$IP/extensions/CentralNotice/CentralNotice.php";
-	
+
 	// new settings for secure server support
 	if( $secure ) {
         	# Don't load the JS from an insecure source!
@@ -1709,14 +1718,14 @@ if( $wmgUseCentralNotice ) {
     	}
 
     	$wgNoticeProject = $wmgNoticeProject;
-	
+
 	if ( $wgDBname == 'testwiki' ) {
 		$wgCentralDBname = 'testwiki';
 	} else {
 		$wgCentralDBname = 'metawiki';
 	}
 
-    $wgCentralNoticeLoader = $wmgCentralNoticeLoader; 
+    $wgCentralNoticeLoader = $wmgCentralNoticeLoader;
 
 	/*
 	$wgNoticeTestMode = true;
@@ -1746,7 +1755,7 @@ if( $wmgUseCentralNotice ) {
 		'?action=raw' .
 		'&start=20101112000000' . // FY 10-11
 		'&fudgefactor=660000';   // fudge for pledged donations not in CRM
-	
+
 	if( $wgDBname == 'metawiki' || $wgDBname == 'testwiki' ) {
 		$wgNoticeInfrastructure = true;
 	} else {
@@ -1796,13 +1805,13 @@ if( $wmgUseCollection ) {
 	#$wgCollectionMWServeURL = 'http://bindery.wikimedia.org:8080/mw-serve/';
 	#$wgCollectionMWServeURL = 'http://erzurumi.wikimedia.org:8080/mw-serve/';
 	$wgCollectionMWServeURL = "http://pdf1.wikimedia.org:8080/mw-serve/";
-	
+
 	// MediaWiki namespace is not a good default
 	$wgCommunityCollectionNamespace = NS_PROJECT;
 
 	// Allow collecting Help pages
 	$wgCollectionArticleNamespaces[] = NS_HELP;
-	
+
 	// Sidebar cache doesn't play nice with this
 	$wgEnableSidebarCache = false;
 
@@ -1813,7 +1822,7 @@ if( $wmgUseCollection ) {
 	);
 
 	$wgLicenseURL = "$urlprotocol//en.wikipedia.org/w/index.php?title=Wikipedia:Text_of_the_GNU_Free_Documentation_License&action=raw";
-	
+
 	$wgCollectionPortletForLoggedInUsersOnly = $wmgCollectionPortletForLoggedInUsersOnly;
 	$wgCollectionArticleNamespaces = $wmgCollectionArticleNamespaces;
 }
@@ -1855,7 +1864,7 @@ if( $wmgUseCodeReview ) {
 	include "$IP/extensions/CodeReview/CodeReview.php";
 	include( "$wmfConfigDir/codereview.php" );
 	$wgSubversionProxy = 'http://codereview-proxy.wikimedia.org/index.php';
-	
+
 	$wgGroupPermissions['user']['codereview-add-tag'] = false;
 	$wgGroupPermissions['user']['codereview-remove-tag'] = false;
 	$wgGroupPermissions['user']['codereview-post-comment'] = false;
@@ -1863,10 +1872,10 @@ if( $wmgUseCodeReview ) {
 	$wgGroupPermissions['user']['codereview-link-user'] = false;
 	$wgGroupPermissions['user']['codereview-signoff'] = false;
 	$wgGroupPermissions['user']['codereview-associate'] = false;
-	
+
 	$wgGroupPermissions['user']['codereview-post-comment'] = true;
 	$wgGroupPermissions['user']['codereview-signoff'] = true;
-	
+
 	$wgGroupPermissions['coder']['codereview-add-tag'] = true;
 	$wgGroupPermissions['coder']['codereview-remove-tag'] = true;
 	$wgGroupPermissions['coder']['codereview-set-status'] = true;
@@ -1875,7 +1884,7 @@ if( $wmgUseCodeReview ) {
 	$wgGroupPermissions['coder']['codereview-associate'] = true;
 
 	$wgGroupPermissions['svnadmins']['repoadmin'] = true; // Default is stewards, but this has nothing to do with them
-	
+
 	$wgCodeReviewENotif = true; // let's experiment with this
 	$wgCodeReviewSharedSecret = $wmgCodeReviewSharedSecret;
 	$wgCodeReviewCommentWatcherEmail = 'mediawiki-codereview@lists.wikimedia.org';
@@ -1936,7 +1945,7 @@ if ($wmgUseUsabilityInitiative) {
 
 	if ($wmgUsabilityPrefSwitch) {
 		require_once( "$IP/extensions/PrefStats/PrefStats.php" );
-	
+
 		$wgPrefStatsTrackPrefs = array(
 			'skin' => $wgDefaultSkin != 'vector' ? 'vector' : 'monobook',
 			'usebetatoolbar' => $wmgUsabilityEnforce ? 0 : 1,
@@ -1944,7 +1953,7 @@ if ($wmgUseUsabilityInitiative) {
 			'usenavigabletoc' => 1,
 			'usebetatoolbar-cgd' => $wmgUsabilityEnforce ? 0 : 1,
 		);
-		
+
 		require_once( "$IP/extensions/PrefSwitch/PrefSwitch.php" );
 		$wgPrefSwitchGlobalOptOut = true;
 		$wgPrefSwitchShowLinks = false;
@@ -1959,11 +1968,11 @@ if ($wmgUseUsabilityInitiative) {
 	// For Babaco... these are still experimental, won't be on by default
 	$wgNavigableTOCUserEnable = true;
 	$wgEditToolbarCGDUserEnable = true;
-	
+
 	if( $wmgUserDailyContribs ) {
 		require "$IP/extensions/UserDailyContribs/UserDailyContribs.php";
 	}
-	
+
 	if( $wmgClickTracking ) {
 		require "$IP/extensions/ClickTracking/ClickTracking.php";
 
@@ -2008,10 +2017,10 @@ if( $wmgUseLocalisationUpdate ) {
 	$wgLocalisationUpdateDirectory = "$IP/cache/l10n";
 }
 
-if ( $wmgEnableLandingCheck ) { 
-	require_once(  "$IP/extensions/LandingCheck/LandingCheck.php" ); 
+if ( $wmgEnableLandingCheck ) {
+	require_once(  "$IP/extensions/LandingCheck/LandingCheck.php" );
 
-	$wgPriorityCountries = array( 'AU', 'AT', 'FR', 'DE', 'HU', 'IL', 'IT', 
+	$wgPriorityCountries = array( 'AU', 'AT', 'FR', 'DE', 'HU', 'IL', 'IT',
 		'NL', 'RU', 'SE', 'CH', 'GB');
 }
 
@@ -2052,8 +2061,8 @@ if ( $wmgUseLivePreview ) {
 
 if ( $wmgUseArticleAssessment ) {
 	require_once( "$IP/extensions/PrefSwitch/PrefSwitch.php" );
-	$wgPrefSwitchGlobalOptOut = true;                                                                                                                                   
-	$wgPrefSwitchShowLinks = false;      
+	$wgPrefSwitchGlobalOptOut = true;
+	$wgPrefSwitchShowLinks = false;
 	require_once( "$IP/extensions/ArticleAssessmentPilot/ArticleAssessmentPilot.php" );
 
 	$wgArticleAssessmentCategory = $wmgArticleAssessmentCategory;
@@ -2079,7 +2088,7 @@ if ( $wmgUseArticleFeedback ) {
 		'buckets' => array(
 			'track' => 1.35,
 			'ignore' => 98.65,
-			//'track'=>0, 'ignore' => 100	
+			//'track'=>0, 'ignore' => 100
 		),
 		'version' => 8,
 		'expires' => 30,
@@ -2174,7 +2183,7 @@ if ( $wmgUseUploadWizard ) {
 		#'debug' => true,
 		'disableResourceLoader' => false,
 		'autoCategory' => 'Uploaded with UploadWizard',
-		// If Special:UploadWizard again experiences unexplained slowness loading JavaScript (spinner on intial load spinning forever) 
+		// If Special:UploadWizard again experiences unexplained slowness loading JavaScript (spinner on intial load spinning forever)
 		// set fallbackToAltUploadForm to true.
 		'fallbackToAltUploadForm' => false, # Set by neilk, 2011-05-17
 		'altUploadForm' => 'Special:Upload', # Set by demon, 2011-05-10 per neilk

@@ -70,14 +70,10 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Factory method to get an instance of MWMultiVersion
-	 * via maintenance scripts since they need to set site and lang.
-	 * @return An MWMultiVersion object for the wiki
+	 * Get the instance of MWMultiVersion that was previously initialized
+	 * @return MWMultiVersion|null version object for the wiki
 	 */
 	public static function getInstance() {
-		if ( !isset( self::$instance ) ) {
-			die( "No MWMultiVersion instance initialized!" );
-		}
 		return self::$instance;
 	}
 
