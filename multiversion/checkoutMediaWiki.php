@@ -1,6 +1,6 @@
 <?php
 if ( php_sapi_name() !== 'cli' ) {
-	die( 'This script can only be run from the command line.' );
+	die( "This script can only be run from the command line.\n" );
 }
 
 error_reporting( E_ALL );
@@ -36,7 +36,7 @@ function checkoutMediaWiki() {
 	}
 
 	if ( !$argsValid ) {
-		die( "Usage: checkoutMediaWiki.php X.XXwmfX php-X.XX" );
+		die( "Usage: checkoutMediaWiki.php X.XXwmfX php-X.XX\n" );
 	}
 
 	# The url to SVN to checkout from
@@ -57,7 +57,7 @@ function checkoutMediaWiki() {
 	passthru( "svn checkout $source $destIP", $retval );
 	if ( $retval !== 0 ) {
 		rmdir( $destIP ); // rollback
-		die( "\nUnable to checkout SVN path." );
+		die( "\nUnable to checkout SVN path.\n" );
 	}
 	print "...SVN checkout done.\n";
 

@@ -1,6 +1,6 @@
 <?php
 if ( php_sapi_name() !== 'cli' ) {
-	die( 'This script can only be run from the command line.' );
+	die( "This script can only be run from the command line.\n" );
 }
 
 error_reporting( E_ALL );
@@ -26,7 +26,7 @@ function populateWikiversionsCDB() {
 	}
 
 	if ( !$argsValid ) {
-		die( "Usage: populateWikiVersionsCDB.php php-X.XX" );
+		die( "Usage: populateWikiVersionsCDB.php php-X.XX\n" );
 	}
 
 	$path = '/home/wikipedia/common/all.dblist';
@@ -42,7 +42,7 @@ function populateWikiversionsCDB() {
 
 	$path = '/home/wikipedia/common/wikiversions.cdb';
 	if ( !file_put_contents( $path, $wikiVersionList ) ) {
-		die( "Unable to write to wikiversions.cdb." );
+		die( "Unable to write to wikiversions.cdb.\n" );
 	}
 }
 

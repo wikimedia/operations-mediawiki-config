@@ -1,6 +1,6 @@
 <?php
 if ( php_sapi_name() !== 'cli' ) {
-	exit; // sanity, script run via CLI
+	die( "This script can only be run from the command line.\n" );
 }
 
 error_reporting( E_ALL );
@@ -22,7 +22,7 @@ error_reporting( E_ALL );
 function runMWScript() {
 	global $argv;
 	if ( count( $argv ) < 2 ) {
-		die( "The MediaWiki script file path must be the first argument." );
+		die( "The MediaWiki script file path must be the first argument.\n" );
 	}
 
 	$relFile = $argv[1]; // the script file to run
@@ -42,7 +42,7 @@ function runMWScript() {
 	require_once( dirname( __FILE__ ) . '/../wmf-config/MWVersion.php' );
 	$file = getMediaWikiCli( $relFile );
 	if ( !file_exists( $file ) ) {
-		die( "The MediaWiki script file \"{$file}\" does not exist." );
+		die( "The MediaWiki script file \"{$file}\" does not exist.\n" );
 	}
 
 	# Run the script! (for HipHip, we will need to shell out here)
