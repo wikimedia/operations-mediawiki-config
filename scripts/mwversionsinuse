@@ -11,19 +11,19 @@ do
 	mwDbName=${line% *}
 	mwVersion=${line#* }
 	mwVersionNum=${mwVersion#*-}
-	if [ -n "$mwDatabase" -a -n "$mwVersionNum" ]; then
+	if [ -n "$mwDbName" -a -n "$mwVersionNum" ]; then
 		mwVersionInArray=0
 		for i in "${mwVersionsNums[@]}"
 		do
-			if [ "$i" -eq "$mwVersionNum" ]; then
+			if [ "$i" = "$mwVersionNum" ]; then
 				mwVersionInArray=1
 				break
 			fi
 		done
 
-		if [ $mwVersionInArray -eq 0 ]; then
+		if [ "$mwVersionInArray" -eq "0" ]; then
 			mwVersionsNums=("${mwVersionsNums[@]}" "$mwVersionNum")
-			if [ "$1" -eq "--withdb" ]; then
+			if [ "$1" = "--withdb" ]; then
 				mwVersionsRes=("${mwVersionsRes[@]}" "$mwVersionNum=$mwDbName")
 			else
 				mwVersionsRes=("${mwVersionsRes[@]}" "$mwVersionNum")
@@ -32,5 +32,5 @@ do
 	else
 		exit 1
 	fi
-done < /usr/local/apache/common-local/wmf-config/wikiversions.cdb
+done < /usr/local/apache/common-local/wikiversions.cdb
 echo "${mwVersionsRes[@]}"
