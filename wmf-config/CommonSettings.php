@@ -43,7 +43,7 @@ wfProfileIn( "$fname-init" );
 # Initialisation
 
 # Get the version object for this Wiki (must be set by now, along with $IP)
-require_once( dirname( __FILE__ ) . "/MWMultiVersion.php" );
+require_once( dirname( __FILE__ ) . "/../multiversion/MWMultiVersion.php" );
 $multiVersion = MWMultiVersion::getInstance();
 /*
 if ( !$multiVersion ) {

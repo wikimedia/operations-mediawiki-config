@@ -18,7 +18,7 @@ function getMediaWiki( $file ) {
 	$serverName = @$_SERVER['SERVER_NAME'];
 	$documentRoot = @$_SERVER['DOCUMENT_ROOT'];
 
-	require( dirname( __FILE__ ) . '/../wmf-config/MWMultiVersion.php' );
+	require( dirname( __FILE__ ) . '/MWMultiVersion.php' );
 	# Upload URL hit (to upload.wikimedia.org rather than wiki of origin)...
 	if ( $scriptName === '/w/thumb.php' && $serverName === 'upload.wikimedia.org' ) {
 		$multiVersion = MWMultiVersion::initializeForUploadWiki( $_SERVER['PATH_INFO'] );
@@ -67,7 +67,7 @@ function getMediaWiki( $file ) {
 function getMediaWikiCli( $file ) {
 	global $IP;
 
-	require( dirname( __FILE__ ) . '/../wmf-config/MWMultiVersion.php' );
+	require( dirname( __FILE__ ) . '/MWMultiVersion.php' );
 	$multiVersion = MWMultiVersion::initializeForMaintenance();
 
 	# Get the MediaWiki version running on this wiki...
