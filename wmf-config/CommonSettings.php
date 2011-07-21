@@ -824,6 +824,11 @@ if ( $wgDBname == 'collabwiki' ) {
 	$wgUseTidy = false;
 }
 
+if ( $wgUseContactPageFundraiser ) {
+	include( "$IP/extensions/ContactPageFundraiser/ContactPage.php" );
+	$wgContactUser = 'Storiescontact';
+}
+
 if ( $wgDBname == 'foundationwiki' ) {
 	include( "$IP/extensions/FormPreloadPostCache/FormPreloadPostCache.php" );
 	include( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
@@ -834,8 +839,6 @@ if ( $wgDBname == 'foundationwiki' ) {
 	include( "$IP/extensions/ContributionReporting/ContributionReporting.php" );
 	include( "$wmfConfigDir/reporting-setup.php" );
 
-	include( "$IP/extensions/ContactPageFundraiser/ContactPage.php" );
-	$wgContactUser = 'Storiescontact';
 	$wgUseTidy = false;
 
 	$wgAllowedTemplates = array(
@@ -1185,8 +1188,8 @@ $wgCacheEpoch = '20060419151500'; # broken thumbnails due to power failure
 
 // Newer entries
 if( $wgDBname == 'zhwiki' ) $wgCacheEpoch = '20060528093500'; # parser bug?
-if( $wgDBname == 'lawikibooks' ) $wgCacheEpoch = '20060610090000'; # sidebar bug
-if ( $wmgHTTPSExperiment ) $wgCacheEpoch = '20110714183000';
+if( $wgDBname == 'lawikibooks' ) $wgCacheEpoch = '20060610090000'; # sidebar bug
+if ( $wmgHTTPSExperiment ) $wgCacheEpoch = '20110718202400';
 
 #$wgThumbnailEpoch = '20060227114700'; # various rsvg and imagemagick fixes
 $wgThumbnailEpoch = '20051227114700'; # various rsvg and imagemagick fixes
@@ -1773,7 +1776,7 @@ if ( $wmgUseWikimediaLicenseTexts ) {
 }
 
 function wfNoDeleteMainPage( &$title, &$user, $action, &$result ) {
-	global $wgMessageCache, $wgDBname;
+	global $wgMessageCache;
 	if ( $action !== 'delete' && $action !== 'move' ) {
 		return true;
 	}
@@ -1827,6 +1830,10 @@ if( $wmgUseCollection ) {
 
 	$wgCollectionPortletForLoggedInUsersOnly = $wmgCollectionPortletForLoggedInUsersOnly;
 	$wgCollectionArticleNamespaces = $wmgCollectionArticleNamespaces;
+
+	if ( $wmgCollectionHierarchyDelimiter ) {
+		$wgCollectionHierarchyDelimiter = $wmgCollectionHierarchyDelimiter;
+	}
 }
 
 // Testing internally
@@ -2085,11 +2092,12 @@ if ( $wmgUseArticleFeedback ) {
 	$wgArticleFeedbackCategories = $wmgArticleFeedbackCategories;
 	$wgArticleFeedbackLotteryOdds = $wmgArticleFeedbackLotteryOdds;
 	$wgArticleFeedbackTrackingVersion = 1;
+	$wgArticleFeedbackBlacklistCategories = array( 'Article Feedback Blacklist' );
 
 	$wgArticleFeedbackTracking = array(
 		'buckets' => array(
-			'track' => 1.35,
-			'ignore' => 98.65,
+			'track' => 0.386,
+			'ignore' => 99.614,
 			//'track'=>0, 'ignore' => 100
 		),
 		'version' => 8,
