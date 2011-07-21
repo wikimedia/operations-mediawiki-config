@@ -31,6 +31,7 @@ function populateWikiversionsCDB() {
 
 	$path = '/home/wikipedia/common/all.dblist';
 	$dbList = explode( "\n", file_get_contents( $path ) );
+	$dbList = array_filter( $dbList ); // remove whitespace entry
 	if ( !count( $dbList ) ) {
 		die( "Unable to read all.dblist." );
 	}
