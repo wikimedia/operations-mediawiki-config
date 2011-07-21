@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Returns a space separated list of all active MW versions (e.g. "x.xx").
 # Versions are defined in /usr/local/apache/common-local/wmf-config/wikiversions.cdb.
 # If --withdb is passed in, then each item in the list will be appended
