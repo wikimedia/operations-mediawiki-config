@@ -37,25 +37,22 @@ function populateWikiversionsCDB() {
 		die( "Unable to read all.dblist." );
 	}
 
-	$wikiVersionList = '';
+	$tmpDBPath = "$common/wikiversions.cdb.tmp";
+	$finalDBPath = "$common/wikiversions.cdb";
+
+	# Build new database at temp location...
+	$db = dba_open( $tmpDBPath, "n", "cdb_make" );
+	if ( !$db ) {
+		die( "Unable to create wikiversions.cdb." );
+	}
 	foreach ( $dbList as $dbName ) {
-		$wikiVersionList .= "$dbName $version\n";
+		dba_insert( $dbName, $version, $db );
 	}
+	dba_close( $db );
 
-	$path = "$common/wikiversions.dat";
-	if ( !file_put_contents( $path, $wikiVersionList ) ) {
-		die( "Unable to write to wikiversions.dat.\n" );
-	}
-
-	$ret = 1; // failed by default?
-	passthru( sprintf(
-		"$common/multiversion/cdbmake-12.sh %s %s < $common/wikiversions.dat",
-		"$common/wikiversions.cdb",
-		"$common/wikiversions.dat.tmp"
-	) );
-	if ( $ret != 0 ) {
-		die( "Unable to write to wikiversions.cdb.\n" );
-	}
+	# Move to final location only when finished...
+	@unlink( $finalDBPath );
+	rename( $tmpDBPath, $finalDBPath );
 }
 
 populateWikiversionsCDB();
