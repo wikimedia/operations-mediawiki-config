@@ -1,10 +1,5 @@
+#!/usr/bin/env php
 <?php
-if ( php_sapi_name() !== 'cli' ) {
-	die( "This script can only be run from the command line.\n" );
-}
-
-error_reporting( E_ALL );
-
 /*
  * Populate wikiversions.cdb file using all the items in all.dblist
  * as keys, each having a value of the specified MediaWiki version.
@@ -31,28 +26,23 @@ function populateWikiversionsCDB() {
 	}
 
 	$path = "$common/all.dblist";
-	$dbList = explode( "\n", file_get_contents( $path ) );
-	$dbList = array_filter( $dbList ); // remove whitespace entry
+	$dbList = array_filter( explode( "\n", file_get_contents( $path ) ) );
 	if ( !count( $dbList ) ) {
-		die( "Unable to read all.dblist." );
+		die( "Unable to read all.dblist.\n" );
 	}
 
-	$tmpDBPath = "$common/wikiversions.cdb.tmp";
-	$finalDBPath = "$common/wikiversions.cdb";
-
-	# Build new database at temp location...
-	$db = dba_open( $tmpDBPath, "n", "cdb_make" );
-	if ( !$db ) {
-		die( "Unable to create wikiversions.cdb." );
-	}
+	$datList = "";
 	foreach ( $dbList as $dbName ) {
-		dba_insert( $dbName, $version, $db );
+		$datList .= "$dbName $version\n";
 	}
-	dba_close( $db );
 
-	# Move to final location only when finished...
-	@unlink( $finalDBPath );
-	rename( $tmpDBPath, $finalDBPath );
+	# Create wikiversions.dat...
+	$path = "$common/wikiversions.dat";
+	if ( !file_put_contents( $path, $datList ) ) {
+		die( "Unable to write to wikiversions.dat.\n" );
+	}
+	# Rebuild wikiversions.cdb...
+	shell_exec( "cd $common/multiversion && ./refreshWikiversionsCDB" );
 }
 
 populateWikiversionsCDB();
