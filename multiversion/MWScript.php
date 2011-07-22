@@ -17,9 +17,9 @@ error_reporting( E_ALL );
  * Also, $argv[1] (the script path) will be changed to the script file name.
  * All other arguments will be preserved.
  *
- * @return void
+ * @return string Absolute MediaWiki script path
  */
-function runMWScript() {
+function getMWScriptWithArgs() {
 	global $argv;
 	if ( count( $argv ) < 2 ) {
 		die( "The MediaWiki script file path must be the first argument.\n" );
@@ -45,8 +45,8 @@ function runMWScript() {
 		die( "The MediaWiki script file \"{$file}\" does not exist.\n" );
 	}
 
-	# Run the script! (for HipHip, we will need to shell out here)
-	require_once( $file );
+	return $file;
 }
 
-runMWScript();
+# Run the script! (for HipHip, we will need to shell out here)
+require_once( getMWScriptWithArgs() );
