@@ -1188,7 +1188,7 @@ $wgCacheEpoch = '20060419151500'; # broken thumbnails due to power failure
 
 // Newer entries
 if( $wgDBname == 'zhwiki' ) $wgCacheEpoch = '20060528093500'; # parser bug?
-if( $wgDBname == 'lawikibooks' ) $wgCacheEpoch = '20060610090000'; # sidebar bug
+if( $wgDBname == 'lawikibooks' ) $wgCacheEpoch = '20060610090000'; # sidebar bug
 if ( $wmgHTTPSExperiment ) $wgCacheEpoch = '20110718202400';
 
 #$wgThumbnailEpoch = '20060227114700'; # various rsvg and imagemagick fixes
@@ -2096,8 +2096,8 @@ if ( $wmgUseArticleFeedback ) {
 
 	$wgArticleFeedbackTracking = array(
 		'buckets' => array(
-			'track' => 0.386,
-			'ignore' => 99.614,
+			'track' => 0.318,
+			'ignore' => 99.682,
 			//'track'=>0, 'ignore' => 100
 		),
 		'version' => 8,

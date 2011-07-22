@@ -16,6 +16,7 @@ error_reporting( E_ALL );
  */
 function populateWikiversionsCDB() {
 	global $argv;
+	$common = '/home/wikipedia/common';
 
 	$argsValid = false;
 	if ( count( $argv ) >= 2 ) {
@@ -29,7 +30,7 @@ function populateWikiversionsCDB() {
 		die( "Usage: populateWikiVersionsCDB.php php-X.XX\n" );
 	}
 
-	$path = '/home/wikipedia/common/all.dblist';
+	$path = "$common/all.dblist";
 	$dbList = explode( "\n", file_get_contents( $path ) );
 	$dbList = array_filter( $dbList ); // remove whitespace entry
 	if ( !count( $dbList ) ) {
@@ -41,8 +42,18 @@ function populateWikiversionsCDB() {
 		$wikiVersionList .= "$dbName $version\n";
 	}
 
-	$path = '/home/wikipedia/common/wikiversions.cdb';
+	$path = "$common/wikiversions.dat";
 	if ( !file_put_contents( $path, $wikiVersionList ) ) {
+		die( "Unable to write to wikiversions.dat.\n" );
+	}
+
+	$ret = 1; // failed by default?
+	passthru( sprintf(
+		"$common/multiversion/cdbmake-12.sh %s %s < $common/wikiversions.dat",
+		"$common/wikiversions.cdb",
+		"$common/wikiversions.dat.tmp"
+	) );
+	if ( $ret != 0 ) {
 		die( "Unable to write to wikiversions.cdb.\n" );
 	}
 }
