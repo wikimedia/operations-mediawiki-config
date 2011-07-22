@@ -27,7 +27,7 @@ class MWMultiVersion {
 	 */
 	private static function createInstance() {
 		if ( isset( self::$instance ) ) {
-			die( "MWMultiVersion instance already set!" );
+			die( "MWMultiVersion instance already set!\n" );
 		}
 		self::$instance = new self;
 		return self::$instance;
@@ -88,7 +88,7 @@ class MWMultiVersion {
 		$matches = array();
 		if ( $secure ) {
 			if ( !preg_match('/^([^.]+)\.([^.]+)\./', $secure, $matches ) ) {
-				die( "invalid hostname" );
+				die( "Invalid hostname.\n" );
 			}
 			$lang = $matches[1];
 			$site = $matches[2];
@@ -110,13 +110,13 @@ class MWMultiVersion {
 				} else if ( preg_match( '/^(.*)\.prototype\.wikimedia\.org$/', $serverName, $matches ) ) {
 					$lang = $matches[1];
 				} else {
-					die( "Invalid host name ($serverName), can't determine language" );
+					die( "Invalid host name ($serverName), can't determine language.\n" );
 				}
 			} elseif ( preg_match( "/^\/usr\/local\/apache\/(?:htdocs|common\/docroot)\/([a-z0-9\-_]*)$/", $docRoot, $matches ) ) {
 				$site = "wikipedia";
 				$lang = $matches[1];
 			} else {
-				die( "Invalid host name (docroot=" . $docRoot . "), can't determine language." );
+				die( "Invalid host name (docroot=" . $docRoot . "), can't determine language.\n" );
 			}
 		}
 		$this->loadDBFromSite( $site, $lang );
@@ -130,7 +130,7 @@ class MWMultiVersion {
 	private function setSiteInfoForUploadWiki( $pathInfo ) {
 		$pathBits = explode( '/', $pathInfo );
 		if ( count( $pathBits ) < 3 ) {
-			die( "Invalid file path info (pathinfo=" . $pathInfo . "), can't determine language." );
+			die( "Invalid file path info (pathinfo=" . $pathInfo . "), can't determine language.\n" );
 		}
 		$site = $pathBits[1];
 		$lang = $pathBits[2];
@@ -148,7 +148,7 @@ class MWMultiVersion {
 		$dbname = '';
 		# The --wiki param must the second argument to to avoid
 		# any "options with args" ambiguity (see Maintenance.php).
-		if ( substr( $argv[1], 0, 7 ) === '--wiki=' ) {
+		if ( isset( $argv[1] ) && substr( $argv[1], 0, 7 ) === '--wiki=' ) {
 			$dbname = substr( $argv[1], 7 );
 		} elseif ( $argv[0] === 'addwiki.php' ) {
 			# Most scripts assume that the wiki already exists. addwiki.php is
@@ -158,7 +158,7 @@ class MWMultiVersion {
 		}
 
 		if ( $dbname === '' ) {
-			die( "--wiki must be the first parameter." );
+			die( "--wiki must be the first parameter.\n" );
 		}
 
 		$this->db = $dbname;
@@ -200,7 +200,7 @@ class MWMultiVersion {
 		if ( $db ) {
 			$version = dba_fetch( $this->getDatabase(), $db );
 			if ( strpos( $version, 'php-' ) !== 0 ) {
-				die( 'wikiversions.cdb entry should be of the format: php-...' );
+				die( "wikiversions.cdb entry should be of the format: php-...\n" );
 			}
 		} else {
 			//trigger_error( "Unable to open /usr/local/apache/common/wikiversions.cdb. Assuming php-1.17", E_USER_ERROR );
