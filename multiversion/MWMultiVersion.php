@@ -199,8 +199,10 @@ class MWMultiVersion {
 		$db = dba_open( '/usr/local/apache/common/wikiversions.cdb', 'r', 'cdb' );
 		if ( $db ) {
 			$version = dba_fetch( $this->getDatabase(), $db );
-			if ( strpos( $version, 'php-' ) !== 0 ) {
-				die( "wikiversions.cdb entry should be of the format: php-...\n" );
+			if ( $version === false ) {
+				die( "wikiversions.cdb has no entry for `$db`.\n" );
+			} elseif ( strpos( $version, 'php-' ) !== 0 ) {
+				die( "wikiversions.cdb entry does not start with `php-` (got `$version`).\n" );
 			}
 		} else {
 			//trigger_error( "Unable to open /usr/local/apache/common/wikiversions.cdb. Assuming php-1.17", E_USER_ERROR );
