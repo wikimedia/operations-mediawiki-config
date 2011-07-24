@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sudo -u mwdeploy sh -c '
+rsync -a --no-perms 10.0.5.8::common/php-1.17/skins/ \
+/usr/local/apache/common-local/php-1.17/skins && \
+echo ok || \
+echo failed
+'
