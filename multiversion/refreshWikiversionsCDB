@@ -30,12 +30,14 @@ function refreshWikiversionsCDB() {
 
 	# Sanity...
 	if ( !file_exists( $tmpDBPath ) ) {
-		die( "Unable to create wikiversions.cdb.\n" );
+		die( "Unable to create wikiversions.cdb.tmp.\n" );
 	}
 
 	# Move to final location only when finished...
 	@unlink( $finalDBPath );
-	rename( $tmpDBPath, $finalDBPath );
+	if ( !rename( $tmpDBPath, $finalDBPath ) ) {
+		die( "Unable to create wikiversions.cdb.\n" );
+	}
 }
 
 refreshWikiversionsCDB();
