@@ -2290,7 +2290,7 @@ if ( $wmgHTTPSExperiment ) {
 #
 # REALLY ... were not kidding here ... NO EXTENSIONS AFTER
 
-require( "$wmfConfigDir/ExtensionMessages.php" );
+require( "$wmfConfigDir/ExtensionMessages-$wgVersionNumber.php" );
 
 wfProfileOut( "$fname-misc5" );
 wfProfileOut( $fname );

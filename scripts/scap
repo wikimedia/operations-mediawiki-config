@@ -1,31 +1,46 @@
 #!/bin/bash
 
 BINDIR=/home/wikipedia/bin
-SOURCE=/home/wikipedia/common/php-1.17
-DEST=/usr/local/apache/common-local/php-1.17
+SOURCE=/home/wikipedia/common
 
 # Perform syntax check
 
 if [ ! -S "$SSH_AUTH_SOCK" ]; then
-        echo >&2 "SSH_AUTH_SOCK not set or not pointing to a socket."
-        echo >&2 "Did you start your ssh-agent?"
+	echo >&2 "SSH_AUTH_SOCK not set or not pointing to a socket."
+	echo >&2 "Did you start your ssh-agent?"
 	exit 1
 fi
 
+mwVerDbSets=(`mwversionsinuse --withdb`)
+if [ -z "$mwVerDbSets" ]; then
+	echo "Unable to read wikiversions.dat or it is empty"
+	exit 1
+fi
 
 echo Checking syntax...
-if ! $BINDIR/lint "$SOURCE"; then
-	echo Found syntax errors, cannot sync
-	exit
-fi
+for i in "${mwVerDbSets[@]}"
+do
+	mwVerNum=${i%=*}
+	if ! $BINDIR/lint "$SOURCE"/php-"$mwVerNum"; then
+		echo Found syntax errors, cannot sync
+		exit
+	fi
+done
 
 # Update the current machine so that serialization works
 $BINDIR/sync-common
 
-# Regenerate the extension message file list
-echo Updating ExtensionMessages.php...
-php $SOURCE/maintenance/mergeMessageFileList.php --list-file=$SOURCE/../wmf-config/extension-list \
-	--output=$SOURCE/../wmf-config/ExtensionMessages.php
+
+for i in "${mwVerDbSets[@]}"
+do
+	mwVerNum=${i%=*}
+	mwDbName=${i#*=}
+	# Regenerate the extension message file list
+	echo Updating ExtensionMessages.php...
+	mwscript mergeMessageFileList.php --wiki="$mwDbName" \
+		--list-file=$SOURCE/wmf-config/extension-list \
+		--output=$SOURCE/wmf-config/ExtensionMessages-"$mwVerNum".php
+done
 
 # Notify
 $BINDIR/dologmsg "!log $USER synchronizing Wikimedia installation... $(cd /home/wikipedia/common/php-1.17; svn info|grep ^Revision): $*"
