@@ -1,0 +1,44 @@
+#!/bin/bash
+
+BINDIR=/home/wikipedia/bin
+SOURCE=/home/wikipedia/common/php-1.17
+DEST=/usr/local/apache/common-local/php-1.17
+
+# Perform syntax check
+
+if [ ! -S "$SSH_AUTH_SOCK" ]; then
+        echo >&2 "SSH_AUTH_SOCK not set or not pointing to a socket."
+        echo >&2 "Did you start your ssh-agent?"
+	exit 1
+fi
+
+
+echo Checking syntax...
+if ! $BINDIR/lint "$SOURCE"; then
+	echo Found syntax errors, cannot sync
+	exit
+fi
+
+# Update the current machine so that serialization works
+$BINDIR/sync-common
+
+# Regenerate the extension message file list
+echo Updating ExtensionMessages.php...
+php $SOURCE/maintenance/mergeMessageFileList.php --list-file=$SOURCE/../wmf-config/extension-list \
+	--output=$SOURCE/../wmf-config/ExtensionMessages.php
+
+# Notify
+$BINDIR/dologmsg "!log $USER synchronizing Wikimedia installation... $(cd /home/wikipedia/common/php-1.17; svn info|grep ^Revision): $*"
+
+
+# Copy
+$BINDIR/set-group-write
+
+echo Copying style sheets to apaches...
+ddsh -F30 -cM -g mediawiki-installation 'if [ -x /home/wikipedia/bin/scap-1skins ]; then echo "/home-mounted apache $(hostname)"; /home/wikipedia/bin/scap-1skins; else /usr/bin/scap-1skins; fi'
+
+echo Copying code to apaches...
+ddsh -F30 -cM -g mediawiki-installation 'if [ -x /home/wikipedia/bin/scap-1 ]; then echo "/home-mounted apache $(hostname)"; /home/wikipedia/bin/scap-1; else /usr/bin/scap-1; fi'
+echo Finished
+
+$BINDIR/dologmsg "sync done."
