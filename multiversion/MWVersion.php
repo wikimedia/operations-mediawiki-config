@@ -41,9 +41,9 @@ function getMediaWiki( $file ) {
 		define( 'TESTWIKI', 1 );
 		# Test wiki mostly runs off the version of MediaWiki on /home.
 		# As horrible hack for NFS-less image scalers, use regular docroot for thumbs?
-		$IP = getHomeMediaWikiDir() . "/$version";
+		$IP = "/home/wikipedia/common/$version";
 	} else {
-		$IP = getLocalMediaWikiDir() . "/$version";
+		$IP = "/usr/local/apache/common-local/$version";
 	}
 
 	chdir( $IP );
@@ -69,28 +69,18 @@ function getMediaWikiCli( $file ) {
 
 	require( dirname( __FILE__ ) . '/MWMultiVersion.php' );
 	$multiVersion = MWMultiVersion::initializeForMaintenance();
+	if ( $multiVersion->getDatabase() === 'testwiki' ) {
+		define( 'TESTWIKI', 1 );
+	}
 
 	# Get the MediaWiki version running on this wiki...
 	$version = $multiVersion->getVersion();
 
 	# Get the correct MediaWiki path based on this version...
-	if ( $multiVersion->getDatabase() === 'testwiki' ) {
-		define( 'TESTWIKI', 1 );
-		$IP = getHomeMediaWikiDir() . "/$version";
-	} else {
-		$IP = getLocalMediaWikiDir() . "/$version";
-	}
+	$IP = dirname( __FILE__ ) . "/../$version";
 
 	chdir( $IP );
 	putenv( "MW_INSTALL_PATH=$IP" );
 
 	return "$IP/$file";
-}
-
-function getLocalMediaWikiDir() {
-	return "/usr/local/apache/common";
-}
-
-function getHomeMediaWikiDir() {
-	return "/home/wikipedia/common";
 }
