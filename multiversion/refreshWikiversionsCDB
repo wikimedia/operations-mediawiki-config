@@ -21,7 +21,7 @@ function refreshWikiversionsCDB() {
 	# Build new database at temp location...
 	$db = dba_open( $tmpDBPath, "n", "cdb_make" );
 	if ( !$db ) {
-		die( "Unable to create wikiversions.cdb.\n" );
+		die( "Unable to create wikiversions.cdb.tmp.\n" );
 	}
 	foreach ( $verList as $row ) {
 		list( $dbName, $version ) = explode( ' ', $row );
@@ -37,7 +37,7 @@ function refreshWikiversionsCDB() {
 	# Move to final location only when finished...
 	@unlink( $finalDBPath );
 	if ( !rename( $tmpDBPath, $finalDBPath ) ) {
-		die( "Unable to create wikiversions.cdb.\n" );
+		die( "Unable to move wikiversions.cdb.tmp to wikiversions.cdb.\n" );
 	}
 }
 
