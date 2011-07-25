@@ -1,36 +1,4 @@
-#!/bin/bash
-# Returns a space separated list of all active MW versions (e.g. "x.xx").
-# Versions are defined in /usr/local/apache/common-local/wmf-config/wikiversions.cdb.
-# If --withdb is passed in, then each item in the list will be appended
-# with '=' followed by the DB name of *some* wiki that uses that version.
-# This script belongs in /usr/bin/.
-declare -a mwVersionsRes
-declare -a mwVersionsNums
-while read line
-do
-	mwDbName=${line% *}
-	mwVersion=${line#* }
-	mwVersionNum=${mwVersion#*-}
-	if [ -n "$mwDbName" -a -n "$mwVersionNum" ]; then
-		mwVersionInArray=0
-		for i in "${mwVersionsNums[@]}"
-		do
-			if [ "$i" = "$mwVersionNum" ]; then
-				mwVersionInArray=1
-				break
-			fi
-		done
-
-		if [ "$mwVersionInArray" -eq "0" ]; then
-			mwVersionsNums=("${mwVersionsNums[@]}" "$mwVersionNum")
-			if [ "$1" = "--withdb" ]; then
-				mwVersionsRes=("${mwVersionsRes[@]}" "$mwVersionNum=$mwDbName")
-			else
-				mwVersionsRes=("${mwVersionsRes[@]}" "$mwVersionNum")
-			fi
-		fi
-	else
-		exit 1
-	fi
-done < /usr/local/apache/common-local/wikiversions.dat
-echo "${mwVersionsRes[@]}"
+#!/bin/sh
+# Shell wrapper for the local version of multiversion/activeMWVersions.
+# This script belongs in /usr/bin/ and should be in PATH.
+echo `/usr/local/apache/common-local/multiversion/activeMWVersions $@`
