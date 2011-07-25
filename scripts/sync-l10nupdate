@@ -1,14 +1,13 @@
 #!/bin/bash
 # This script belongs in /home/wikipedia/bin/.
 PATH=/bin:/usr/bin:/sbin:/usr/sbin:
+MWVER="$1"
 
 mwVersionNums=(`mwversionsinuse`)
 
-for mwVerNum in "${mwVersionNums[@]}"
-do
-	echo "Synchronizing /home/wikipedia/common/php-$mwVerNum/cache/l10n to /usr/local/apache/common-local/php-$mwVerNum/cache/l10n..."
-	echo "mediawiki-installation:"
+echo "Synchronizing /home/wikipedia/common/php-$MWVER/cache/l10n to /usr/local/apache/common-local/php-$MWVER/cache/l10n..."
+echo "mediawiki-installation:"
 
-	ddsh -cM -g mediawiki-installation \
-	  "sudo -u mwdeploy rsync -a 10.0.5.8::common/php-$mwVerNum/cache/l10n/ /usr/local/apache/common-local/php-$mwVerNum/cache/l10n"
-done
+ddsh -cM -g mediawiki-installation \
+  "sudo -u mwdeploy rsync -a 10.0.5.8::common/php-$MWVER/cache/l10n/ /usr/local/apache/common-local/php-$MWVER/cache/l10n"
+

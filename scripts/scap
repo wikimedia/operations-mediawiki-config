@@ -3,47 +3,60 @@
 BINDIR=/home/wikipedia/bin
 SOURCE=/home/wikipedia/common
 
-# Perform syntax check
-
 if [ ! -S "$SSH_AUTH_SOCK" ]; then
 	echo >&2 "SSH_AUTH_SOCK not set or not pointing to a socket."
 	echo >&2 "Did you start your ssh-agent?"
 	exit 1
 fi
 
-mwVerDbSets=(`mwversionsinuse --withdb`)
+mwVerDbSets=(`mwversionsinuse --home --withdb`)
 if [ -z "$mwVerDbSets" ]; then
-	echo "Unable to read wikiversions.dat or it is empty"
+	echo "Unable to read wikiversions.dat or it is empty."
 	exit 1
 fi
 
+# Perform syntax check
 echo Checking syntax...
+if [ ! [ $BINDIR/lint $SOURCE/wmf-config && $BINDIR/lint $SOURCE/multiversion ] ]; then
+	echo "Found syntax errors, cannot sync."
+	exit 1
+fi
+# Check syntax for all active MediaWiki versions
 for i in "${mwVerDbSets[@]}"
 do
 	mwVerNum=${i%=*}
-	if ! $BINDIR/lint "$SOURCE"/php-"$mwVerNum"; then
-		echo Found syntax errors, cannot sync
-		exit
+	if [ ! $BINDIR/lint $SOURCE/php-"$mwVerNum" ]; then
+		echo "Found syntax errors, cannot sync."
+		exit 1
 	fi
 done
 
-# Update the current machine so that serialization works
+# Update wikiversions.cdb from wikiversions.dat
+if [ ! $SOURCE/multiversion/refreshWikiversionsCDB ]; then
+	echo "Unable to run refreshWikiversionsCDB."
+	exit 1
+fi
+
+
+# Update the current machine so that serialization works.
+# wikiversions.cdb update is pushed and mwscript works.
 $BINDIR/sync-common
 
 
+# Regenerate the extension message file list for all active MediaWiki versions
 for i in "${mwVerDbSets[@]}"
 do
 	mwVerNum=${i%=*}
 	mwDbName=${i#*=}
-	# Regenerate the extension message file list
-	echo Updating ExtensionMessages.php...
+	echo "Updating ExtensionMessages-$mwVerNum.php..."
 	mwscript mergeMessageFileList.php --wiki="$mwDbName" \
 		--list-file=$SOURCE/wmf-config/extension-list \
 		--output=$SOURCE/wmf-config/ExtensionMessages-"$mwVerNum".php
 done
 
+
 # Notify
-$BINDIR/dologmsg "!log $USER synchronizing Wikimedia installation... $(cd /home/wikipedia/common/php-1.17; svn info|grep ^Revision): $*"
+$BINDIR/dologmsg "!log $USER synchronizing Wikimedia installation... : $*"
 
 
 # Copy

@@ -33,7 +33,7 @@ do
 		  --quiet
 	then
 		echo "Completed. Syncing to Apaches"
-		/home/wikipedia/bin/sync-l10nupdate
+		/home/wikipedia/bin/sync-l10nupdate "$mwVerNum"
 		echo "Clearing message blobs"
 		mwscript maintenance/wmf/clearMessageBlobs.php --wiki="$mwDbName"
 		echo "All done"
