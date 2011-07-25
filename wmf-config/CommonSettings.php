@@ -208,7 +208,7 @@ $wgLocalStylePath = "$wgScriptPath/skins-$wgVersionNumber";
 $wgStockPath = '/images';
 $wgScript           = $wgScriptPath.'/index.php';
 $wgRedirectScript	= $wgScriptPath.'/redirect.php';
-if ( $wgDBname != 'testwiki' ) {
+if ( $wgDBname != 'testwiki' && isset( $_SERVER['SERVER_NAME'] ) ) {
 	// Make testing JS/skin changes easy by not running load.php through bits for testwiki
 	$wgLoadScript = "$urlprotocol//bits.wikimedia.org/{$_SERVER['SERVER_NAME']}/load.php";
 }
@@ -1206,7 +1206,7 @@ $wgEnableUserEmail = true;
 
 # XFF log for vandal tracking
 function wfLogXFF() {
-	if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
+	if ( (@$_SERVER['REQUEST_METHOD']) == 'POST' ) {
 		$uri = ( $_SERVER['HTTPS'] ? 'https://' : 'http://' ) .
 			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		wfErrorLog(
@@ -2041,6 +2041,7 @@ if ( $wmgUseFundraiserPortal ) {
 	require "$IP/extensions/FundraiserPortal/FundraiserPortal.php";
 	$wgExtensionFunctions[] = 'setupFundraiserPortal';
 	function setupFundraiserPortal() {
+		global $urlprotocol;
 		global $wgScriptPath; // SSL may change this after CommonSettings
 		global $wgFundraiserPortalDirectory, $wgFundraiserPortalPath, $wgFundraiserImageUrl;
 		$wgFundraiserPortalDirectory = "/mnt/upload6/portal";
@@ -2096,8 +2097,8 @@ if ( $wmgUseArticleFeedback ) {
 
 	$wgArticleFeedbackTracking = array(
 		'buckets' => array(
-			'track' => 0.318,
-			'ignore' => 99.682,
+			'track' => 0.27,
+			'ignore' => 99.73,
 			//'track'=>0, 'ignore' => 100
 		),
 		'version' => 8,
