@@ -101,7 +101,10 @@ class MWMultiVersion {
 			}
 		} else {
 			$site = "wikipedia";
-			if ( preg_match( '/^(?:\/usr\/local\/apache\/|\/home\/wikipedia\/)(?:htdocs|common\/docroot)\/([a-z]+)\.org/', $docRoot, $matches ) ) {
+			if ( getenv( 'MW_LANG' ) ) {
+				# Language forced from some hacky script like extract2.php
+				$lang = getenv( 'MW_LANG' );
+			} elseif ( preg_match( '/^(?:\/usr\/local\/apache\/|\/home\/wikipedia\/)(?:htdocs|common\/docroot)\/([a-z]+)\.org/', $docRoot, $matches ) ) {
 				$site = $matches[1];
 				if ( preg_match( '/^(.*)\.' . preg_quote( $site ) . '\.org$/', $serverName, $matches ) ) {
 					$lang = $matches[1];
