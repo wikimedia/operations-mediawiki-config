@@ -13,7 +13,8 @@ error_reporting( E_ALL );
  */
 function getActiveWikiVersions() {
 	global $argv;
-	$options = array_shift( $argv ); // this file
+	$options = $argv; // copy
+	array_shift( $options ); // first item is this file
 
 	if ( in_array( '--home', $options ) ) {
 		$path = '/home/wikipedia/common/wikiversions.dat';
@@ -43,4 +44,4 @@ function getActiveWikiVersions() {
 	return implode( ' ', $result );
 }
 
-echo getActiveWikiVersions();
+echo getActiveWikiVersions() . "\n";
