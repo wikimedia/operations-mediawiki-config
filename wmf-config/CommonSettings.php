@@ -42,19 +42,20 @@ wfProfileIn( "$fname-init" );
 #----------------------------------------------------------------------
 # Initialisation
 
-# Get the version object for this Wiki (must be set by now, along with $IP)
-require_once( dirname( __FILE__ ) . "/../multiversion/MWMultiVersion.php" );
-$multiVersion = MWMultiVersion::getInstance();
 /*
 if ( !$multiVersion ) {
 	die( "No MWMultiVersion instance initialized! Wrapper not used?" );
 }
 */
-if ( !$multiVersion && php_sapi_name() == 'cli' ) {
+if ( !isset( $IP ) && php_sapi_name() == 'cli' ) {
 	# Allow for now since everything is 1.17 and we don't want scripts to break
+	require_once( dirname( __FILE__ ) . "/../multiversion/MWMultiVersion.php" );
 	$multiVersion = MWMultiVersion::initializeForMaintenance();
+	echo "MWVersion wrapper not used!\n";
 }
-$wgDBname = $multiVersion->getDatabase();
+
+# Get the version object for this Wiki (must be set by now, along with $IP)
+$multiVersion = MWMultiVersion::getInstance();
 
 set_include_path( "$IP:$IP/lib:/usr/local/lib/php:/usr/share/php" );
 
@@ -81,6 +82,9 @@ if ( $hatesSafari ) {
 ini_set( 'memory_limit', 120 * 1024 * 1024 );
 
 $DP = $IP;
+
+# This must be set *after* the DefaultSettings.php inclusion
+$wgDBname = $multiVersion->getDatabase();
 
 wfProfileOut( "$fname-init" );
 wfProfileIn( "$fname-host" );
