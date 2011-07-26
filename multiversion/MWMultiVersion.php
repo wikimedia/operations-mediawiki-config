@@ -220,7 +220,7 @@ class MWMultiVersion {
 	 * @return String the version number for this wiki (e.g. "x.xx" or "trunk")
 	 */
 	public function getVersionNumber() {
-		list( /*...*/, $ver ) = explode( $this->getVersion(), '-', 2 );
+		list( /*...*/, $ver ) = explode( '-', $this->getVersion(), 2 );
 		return $ver;
 	}
 }
