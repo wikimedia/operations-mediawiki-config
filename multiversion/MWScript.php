@@ -3,8 +3,6 @@ if ( php_sapi_name() !== 'cli' ) {
 	die( "This script can only be run from the command line.\n" );
 }
 
-error_reporting( E_ALL );
-
 /**
  * Run a MediaWiki script based on the parameters (like --wiki) given to CLI.
  *
