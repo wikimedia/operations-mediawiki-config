@@ -2276,6 +2276,17 @@ if ( $wmgUseWikiLove ) {
 	}
 }
 
+if ( $wmgUseEditPageTracking ) {
+	require_once( "$IP/extensions/EditPageTracking/EditPageTracking.php" );
+	$wgEditPageTrackingRegistrationCutoff = '20110725221004';
+}
+
+if ( $wmgUseMoodBar ) {
+	require_once( "$IP/extensions/MoodBar/MoodBar.php" );
+	$wgMoodBarCutoffTime = '20110725221004';
+	$wgMoodBarConfig['privacyUrl'] = 'http://wikimediafoundation.org/wiki/Feedback_policy';
+}
+
 if ( $wmgUseSubPageList3 ) {
 	include( "$IP/extensions/SubPageList3/SubPageList3.php" );
 }
