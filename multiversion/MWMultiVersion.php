@@ -151,7 +151,9 @@ class MWMultiVersion {
 		$dbname = '';
 		# The --wiki param must the second argument to to avoid
 		# any "options with args" ambiguity (see Maintenance.php).
-		if ( isset( $argv[1] ) && substr( $argv[1], 0, 7 ) === '--wiki=' ) {
+		if ( isset( $argv[1] ) && $argv[1] === '--wiki' ) {
+			$dbname = isset( $argv[2] ) ? $argv[2] : '';
+		} elseif ( isset( $argv[1] ) && substr( $argv[1], 0, 7 ) === '--wiki=' ) {
 			$dbname = substr( $argv[1], 7 );
 		} elseif ( $argv[0] === 'addwiki.php' ) {
 			# Most scripts assume that the wiki already exists. addwiki.php is
