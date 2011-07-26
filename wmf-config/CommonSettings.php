@@ -47,11 +47,13 @@ if ( !$multiVersion ) {
 	die( "No MWMultiVersion instance initialized! Wrapper not used?" );
 }
 */
-if ( !isset( $IP ) && php_sapi_name() == 'cli' ) {
+if ( !class_exists( 'MWMultiVersion' ) && php_sapi_name() == 'cli' ) {
+	global $argv;
 	# Allow for now since everything is 1.17 and we don't want scripts to break
 	require_once( dirname( __FILE__ ) . "/../multiversion/MWMultiVersion.php" );
-	$multiVersion = MWMultiVersion::initializeForMaintenance();
-	echo "MWVersion wrapper not used!\n";
+	array_unshift( $argv, 'rein' ); // HACK for maintenance.php stripping argv[0]
+	MWMultiVersion::initializeForMaintenance();
+	array_shift( $argv ); // HACK for maintenance.php stripping argv[0]
 }
 
 # Get the version object for this Wiki (must be set by now, along with $IP)
