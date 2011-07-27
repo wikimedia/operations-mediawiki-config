@@ -157,9 +157,9 @@ class MWMultiVersion {
 			$dbname = substr( $argv[1], 7 ); // "script.php --wiki=dbname"
 		} elseif ( isset( $argv[1] )&& substr( $argv[1], 0, 2 ) !== '--' ) {
 			$dbname = $argv[1]; // "script.php dbname"
-		} elseif ( $argv[0] === 'addwiki.php' ) {
-			# Most scripts assume that the wiki already exists. addwiki.php is
-			# obviously an exception. Go ahead and assumme aawiki as normal.
+		} elseif ( $argv[0] === 'addwiki.php' || $argv[0] === 'nextJobDB.php' ) {
+			# For addwiki.php, the DB doesn't yet exist, and for nextJobDB.php
+			# we don't care what DB we use. Assumme aawiki as Maintenance.php does.
 			$dbname = 'aawiki';
 			$argv = array_merge( array( $argv[0], "--wiki=$dbname" ), array_slice( $argv, 1 ) );
 		}
