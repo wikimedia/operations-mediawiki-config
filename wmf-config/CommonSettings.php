@@ -148,6 +148,7 @@ if ( !$globals ) {
 		}
 	}
 
+	$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 	$globals = $wgConf->getAll( $wgDBname, $dbSuffix,
 		array(
 			'lang'    => $lang,
