@@ -85,11 +85,12 @@ ini_set( 'memory_limit', 120 * 1024 * 1024 );
 
 $DP = $IP;
 
-# This must be set *after* the DefaultSettings.php inclusion
-$wgDBname = $multiVersion->getDatabase();
-
 wfProfileOut( "$fname-init" );
 wfProfileIn( "$fname-host" );
+
+$secure = getenv( 'MW_SECURE_HOST' );
+# This must be set *after* the DefaultSettings.php inclusion
+$wgDBname = $multiVersion->getDatabase();
 
 # wmf-config directory (in common/)
 $wmfConfigDir = "$IP/../wmf-config";
@@ -183,7 +184,6 @@ require( "$wmfConfigDir/PrivateSettings.php" );
 require( "$wmfConfigDir/db.php" );
 require( "$wmfConfigDir/mc.php" );
 
-$secure = getenv( 'MW_SECURE_HOST' );
 
 # Protocol settings for urls
 if ( !$secure && $wmgHTTPSExperiment ) {
@@ -278,7 +278,7 @@ $wgUseGzip = true;
 $wgRCMaxAge = 30*86400;
 
 $wgUseTeX = true;
-$wgTexvc = "/usr/local/apache/uncommon/$wgVersionNumber/bin";
+$wgTexvc = "/usr/local/apache/uncommon/$wgVersionNumber/bin/texvc";
 $wgTmpDirectory     = '/tmp';
 $wgLegalTitleChars = "+ %!\"$&'()*,\\-.\\/0-9:;=?@A-Z\\\\^_`a-z~\\x80-\\xFF";
 
@@ -2290,7 +2290,7 @@ if ( $wmgUseEditPageTracking ) {
 if ( $wmgUseMoodBar ) {
 	require_once( "$IP/extensions/MoodBar/MoodBar.php" );
 	$wgMoodBarCutoffTime = '20110725221004';
-	$wgMoodBarConfig['privacyUrl'] = 'http://wikimediafoundation.org/wiki/Feedback_policy';
+	$wgMoodBarConfig['privacyUrl'] = 'http://wikimediafoundation.org/wiki/Feedback';
 }
 
 if ( $wmgUseSubPageList3 ) {
