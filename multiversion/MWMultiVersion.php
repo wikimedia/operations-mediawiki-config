@@ -179,7 +179,7 @@ class MWMultiVersion {
 	 * @return void
 	 */
 	private function loadDBFromSite( $site, $lang ) {
-		if ( $site == "wikipedia" ) {
+		if ( $site === "wikipedia" ) {
 			$dbSuffix = "wiki";
 		} else {
 			$dbSuffix = $site;
