@@ -39,6 +39,7 @@ function refreshWikiversionsCDB() {
 	if ( !rename( $tmpDBPath, $finalDBPath ) ) {
 		die( "Unable to move wikiversions.cdb.tmp to wikiversions.cdb.\n" );
 	}
+	chmod( $finalDBPath, 0664 ); // rw-rw-r
 }
 
 refreshWikiversionsCDB();
