@@ -157,7 +157,7 @@ class MWMultiVersion {
 			$dbname = substr( $argv[1], 7 ); // "script.php --wiki=dbname"
 		} elseif ( isset( $argv[1] )&& substr( $argv[1], 0, 2 ) !== '--' ) {
 			$dbname = $argv[1]; // "script.php dbname"
-		} elseif ( $argv[0] === 'addwiki.php' || $argv[0] === 'nextJobDB.php' ) {
+		} elseif ( in_array( $argv[0], self::wikilessScripts() ) ) {
 			# For addwiki.php, the DB doesn't yet exist, and for nextJobDB.php
 			# we don't care what DB we use. Assumme aawiki as Maintenance.php does.
 			$dbname = 'aawiki';
@@ -170,6 +170,14 @@ class MWMultiVersion {
 
 		$this->db = $dbname;
 		putenv( 'MW_DBNAME=' . $dbname );
+	}
+
+	/*
+	 * Return a list of scripts that don't need a --wiki param (assume aawiki)
+	 * @return Array
+	 */
+	private static function wikilessScripts() {
+		return array( 'addwiki.php', 'nextJobDB.php', 'mergeMessageFileList.php' );
 	}
 
 	/**
