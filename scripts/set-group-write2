@@ -1,12 +1,14 @@
 #!/bin/bash
 if [ $HOSTNAME == fenari ]; then
-    target2=/home/wikipedia/common/php-1.17
-	target3=/home/wikipedia/common/wmf-config
+    targetbase=/home/wikipedia/common
 else
-    target2=/apache/common/php-1.17
-	target3=/apache/common/wmf-config
+    targetbase=/apache/common
 fi
 
-#find $target1 -group wikidev -not -perm -020 -exec chmod g+w '{}' ';'
-find $target2 -group wikidev -not -perm -020 -exec chmod g+w '{}' ';'
-find $target3 -group wikidev -not -perm -020 -exec chmod g+w '{}' ';'
+mwVersionNums=`mwversionsinuse --home`
+for mwVerNum in "${mwVersionNums[@]}"
+do
+	find "$targetbase"/php-"$mwVerNum" -group wikidev -not -perm -020 -exec chmod g+w '{}' ';'
+done
+
+find "$targetbase"/wmf-config -group wikidev -not -perm -020 -exec chmod g+w '{}' ';'
