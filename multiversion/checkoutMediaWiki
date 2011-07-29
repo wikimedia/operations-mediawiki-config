@@ -1,10 +1,6 @@
+#!/usr/bin/env php
 <?php
-if ( php_sapi_name() !== 'cli' ) {
-	die( "This script can only be run from the command line.\n" );
-}
-
 error_reporting( E_ALL );
-
 /**
  * Automatically SVN checkout a MediaWiki version and do some basic wmf setup.
  * LocalSettings.php will be created (which loads CommonSettings.php) and verious
