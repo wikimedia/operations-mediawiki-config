@@ -1,5 +1,6 @@
 #!/usr/bin/env php
 <?php
+error_reporting( 0 );
 /*
  * Returns a space separated list of all active MW versions (e.g. "x.xx").
  * Versions are read from /usr/local/apache/common-local/wikiversions.cdb.
@@ -7,6 +8,7 @@
  * Given --home, versions are instead read from /home/wikipedia/common/wikiversions.cdb.
  * Given --withdb, each item in the list will be appended with '=' followed by
  * the DB name of *some* wiki that uses that version. Used to run maintenance scripts.
+ * Given --report, error messages would be displayed if this dies.
  *
  * @return string
  */
@@ -23,13 +25,22 @@ function getActiveWikiVersions() {
 
 	$verList = array_filter( explode( "\n", file_get_contents( $path ) ) );
 	if ( !count( $verList ) ) {
-		die( "Unable to read wikiversions.dat.\n" );
+		if ( in_array( '--report', $options ) ) {
+			echo( "Unable to read wikiversions.dat.\n" );
+		}
+		die( 1 );
 	}
 
 	$result = $activeVersions = array();
 	foreach ( $verList as $item ) {
 		list( $dbname, $version ) = explode( ' ', $item );
-		$version = str_replace( 'php-', '', $version ); // remove 'php-'
+		if ( substr( $version, 0, 4 ) !== 'php-' ) {
+			if ( in_array( '--report', $options ) ) {
+				echo( "Unable to read wikiversions.dat entry: $version.\n" );
+			}
+			die( 1 );
+		}
+		$version = substr( $version, 4 ); // remove 'php-'
 		if ( !isset( $activeVersions[$version] ) ) {
 			$activeVersions[$version] = 1;
 			if ( in_array( '--withdb', $options ) ) {
