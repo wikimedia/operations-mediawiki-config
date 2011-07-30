@@ -25,7 +25,7 @@ function checkoutMediaWiki() {
 	if ( count( $argv ) >= 3 ) {
 		$svnVersion = $argv[1]; // e.g. "X.XXwmfX"
 		$dstVersion = $argv[2]; // e.g. "php-X.XX"
-		if ( preg_match( '/^php-(\d+\.\d+|trunk)$/', $dstVersion, $m ) ) {
+		if ( preg_match( '/^php-((?:\d+\.\d+|trunk)(?:-\d)?)$/', $dstVersion, $m ) ) {
 			$dstVersionNum = $m[1];
 			$argsValid = true;
 		}

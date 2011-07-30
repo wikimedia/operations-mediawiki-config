@@ -15,7 +15,7 @@ else
 	exit 1
 fi
 
-mwVerDbSets=(`mwversionsinuse --withdb`)
+mwVerDbSets=(`mwversionsinuse --extended --withdb`)
 if [ -z "$mwVerDbSets" ]; then
 	/home/wikipedia/bin/dologmsg "!log LocalisationUpdate failed"
 	echo "FAILED"

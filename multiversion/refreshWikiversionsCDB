@@ -24,8 +24,13 @@ function refreshWikiversionsCDB() {
 		die( "Unable to create wikiversions.cdb.tmp.\n" );
 	}
 	foreach ( $verList as $row ) {
-		list( $dbName, $version ) = explode( ' ', $row );
-		dba_insert( $dbName, $version, $db );
+		$items = explode( ' ', $row );
+		$dbName = $items[0];
+		$version = $items[1];
+		$extVersion = isset( $items[2] ) ? $items[2] : '';
+
+		dba_insert( "ver:$dbName", $version, $db );
+		dba_insert( "ext:$dbName", $extVersion, $db );
 	}
 	dba_close( $db );
 

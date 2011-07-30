@@ -43,6 +43,7 @@ fi
 $BINDIR/sync-common
 
 
+mwVerDbSets=(`mwversionsinuse --extended --withdb`)
 # Regenerate the extension message file list for all active MediaWiki versions
 for i in "${mwVerDbSets[@]}"
 do

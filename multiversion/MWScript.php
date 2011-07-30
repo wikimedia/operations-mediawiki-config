@@ -46,5 +46,5 @@ function getMWScriptWithArgs() {
 	return $file;
 }
 
-# Run the script! (for HipHip, we will need to shell out here)
+# Run the script!
 require_once( getMWScriptWithArgs() );

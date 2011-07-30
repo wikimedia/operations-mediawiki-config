@@ -7,7 +7,9 @@ error_reporting( 0 );
  *
  * Given --home, versions are instead read from /home/wikipedia/common/wikiversions.cdb.
  * Given --withdb, each item in the list will be appended with '=' followed by
- * the DB name of *some* wiki that uses that version. Used to run maintenance scripts.
+ * 		the DB name of *some* wiki that uses that version. Used to run maintenance scripts.
+ * Given --extended, versions will include any extra suffix specified in wikiversions.cdb.
+ * 		This may result in more items being listed than without.
  * Given --report, error messages would be displayed if this dies.
  *
  * @return string
@@ -33,7 +35,11 @@ function getActiveWikiVersions() {
 
 	$result = $activeVersions = array();
 	foreach ( $verList as $item ) {
-		list( $dbname, $version ) = explode( ' ', $item );
+		$items = explode( ' ', $row );
+		$dbName = $items[0];
+		$version = $items[1];
+		$extVersion = isset( $items[2] ) ? $items[2] : '';
+
 		if ( substr( $version, 0, 4 ) !== 'php-' ) {
 			if ( in_array( '--report', $options ) ) {
 				echo( "Unable to read wikiversions.dat entry: $version.\n" );
@@ -41,10 +47,15 @@ function getActiveWikiVersions() {
 			die( 1 );
 		}
 		$version = substr( $version, 4 ); // remove 'php-'
+
+		if ( $extVersion !== '' && in_array( '--extended', $options ) ) {
+			$version .= "-$extVersion";
+		}
+
 		if ( !isset( $activeVersions[$version] ) ) {
 			$activeVersions[$version] = 1;
 			if ( in_array( '--withdb', $options ) ) {
-				$result[] = "{$version}={$dbname}";
+				$result[] = "{$version}={$dbName}";
 			} else {
 				$result[] = "{$version}";
 			}

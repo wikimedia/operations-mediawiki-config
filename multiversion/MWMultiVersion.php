@@ -12,6 +12,18 @@ class MWMultiVersion {
 	 * @var string
 	 */
 	private $db;
+	/**
+	 * @var string
+	 */
+	private $version;
+	/**
+	 * @var string
+	 */
+	private $extVersion;
+	/**
+	 * @var bool
+	 */
+	private $versionLoaded = false;
 
 	/**
 	 * To get an inststance of this class, use the statuc helper methods.
@@ -155,7 +167,7 @@ class MWMultiVersion {
 			$dbname = isset( $argv[2] ) ? $argv[2] : ''; // "script.php --wiki dbname"
 		} elseif ( isset( $argv[1] ) && substr( $argv[1], 0, 7 ) === '--wiki=' ) {
 			$dbname = substr( $argv[1], 7 ); // "script.php --wiki=dbname"
-		} elseif ( isset( $argv[1] )&& substr( $argv[1], 0, 2 ) !== '--' ) {
+		} elseif ( isset( $argv[1] ) && substr( $argv[1], 0, 2 ) !== '--' ) {
 			$dbname = $argv[1]; // "script.php dbname"
 		} elseif ( in_array( $argv[0], self::wikilessScripts() ) ) {
 			# For addwiki.php, the DB doesn't yet exist, and for nextJobDB.php
@@ -205,34 +217,75 @@ class MWMultiVersion {
 	}
 
 	/**
+	 * Get the space-seperated list of version params for this wiki.
+	 * The first item is the MW version and the optional second item
+	 * an extra version parameter to use for builds and caches.
+	 * @return void
+	 */
+	private function loadVersionInfo() {
+		if ( $this->versionLoaded ) {
+			return;
+		}
+		$this->versionLoaded = true;
+
+		$db = dba_open( '/usr/local/apache/common/wikiversions.cdb', 'r', 'cdb' );
+		if ( $db ) {
+			$version = dba_fetch( "ver:{$this->db}", $db );
+			if ( $version === false ) {
+				die( "wikiversions.cdb has no version entry for `$db`.\n" );
+			} elseif ( strpos( $version, 'php-' ) !== 0 ) {
+				die( "wikiversions.cdb version entry does not start with `php-` (got `$version`).\n" );
+			}
+			$extraVersion = dba_fetch( "ext:{$this->db}", $db );
+			if ( $extraVersion === false ) {
+				die( "wikiversions.cdb has no extra version entry for `$db`.\n" );
+			}
+		} else {
+			//trigger_error( "Unable to open wikiversions.cdb. Assuming php-1.17", E_USER_ERROR );
+			$version = 'php-1.17';
+			$extraVersion = '';
+		}
+		dba_close( $db );
+
+		$this->version = $version;
+		$this->extVersion = $extraVersion;
+	}
+
+	/**
 	 * Get the version as specified in a cdb file located
 	 * at /usr/local/apache/common/wikiversions.cdb.
-	 * The key should be the dbname and the version should be the version directory.
+	 * Result is of the form "php-X.XX" or "php-trunk".
 	 * @return String the version directory for this wiki
 	 */
 	public function getVersion() {
-		$db = dba_open( '/usr/local/apache/common/wikiversions.cdb', 'r', 'cdb' );
-		if ( $db ) {
-			$version = dba_fetch( $this->getDatabase(), $db );
-			if ( $version === false ) {
-				die( "wikiversions.cdb has no entry for `$db`.\n" );
-			} elseif ( strpos( $version, 'php-' ) !== 0 ) {
-				die( "wikiversions.cdb entry does not start with `php-` (got `$version`).\n" );
-			}
-		} else {
-			//trigger_error( "Unable to open /usr/local/apache/common/wikiversions.cdb. Assuming php-1.17", E_USER_ERROR );
-			$version = 'php-1.17';
-		}
-		return $version;
+		$this->loadVersionInfo();
+		return $this->version;
 	}
 
 	/**
 	 * Get the version number as specified in a cdb file located
-	 * at /usr/local/apache/common/wikiversions.cdb.
+	 * at /usr/local/apache/common/wikiversions.cdb. Do not use this
+	 * to determine the path to cache or binary files, only the core MW code.
 	 * @return String the version number for this wiki (e.g. "x.xx" or "trunk")
 	 */
 	public function getVersionNumber() {
-		list( /*...*/, $ver ) = explode( '-', $this->getVersion(), 2 );
+		$this->loadVersionInfo();
+		return substr( $this->version, 4 ); // remove "php-"
+	}
+
+	/*
+	 * Get the version number to use for building caches & binaries for this wiki.
+	 * Like getVersionNumber() but may have a dash with another string appended.
+	 * Some wikis may share core MW versions but be using different extension versions.
+	 * We need to keep the caches and binary builds separate for such wikis.
+	 * @return String
+	 */
+	public function getExtendedVersionNumber() {
+		$this->loadVersionInfo();
+		$ver = $this->getVersionNumber();
+		if ( $this->extVersion !== '' ) {
+			$ver .= "-{$this->extVersion}";
+		}
 		return $ver;
 	}
 }
