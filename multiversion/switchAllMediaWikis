@@ -1,0 +1,64 @@
+#!/usr/bin/env php
+<?php
+error_reporting( E_ALL );
+/*
+ * This script switches all wikis running one version to another version.
+ * It merely changes the wikiversions.dat and wikiversions.cdb files on /home,
+ * so they will still need to be synced to push the upgrade/downgrade.
+ *
+ * The first argument is the old version, typically of the format "php-X.XX".
+ *		If "all" is given, then all wikis will be switched over.
+ * The second argument is the new version, typically of the format "php-X.XX".
+ *
+ * @return void
+ */
+function switchAllMediaWikis() {
+	global $argv;
+	$common = '/home/wikipedia/common';
+
+	$argsValid = false;
+	if ( count( $argv ) >= 3 ) {
+		$oldVersion = $argv[1]; // e.g. "php-X.XX"
+		$newVersion = $argv[2]; // e.g. "php-X.XX"
+		if ( preg_match( '/^php-(?:\d+\.\d+|trunk)(?:-\d)?$/', $newVersion ) ) {
+			$argsValid = true;
+		}
+	}
+
+	if ( !$argsValid ) {
+		die( "Usage: upgradeMediaWikis php-X.XX php-X.XX\n" );
+	}
+
+	$path = "$common/wikiversions.dat";
+	$verList = array_filter( explode( "\n", file_get_contents( $path ) ) );
+	if ( !count( $verList ) ) {
+		die( "Unable to read wikiversions.dat.\n" );
+	}
+
+	$datList = "";
+	foreach ( $verList as $item ) {
+		$items = explode( ' ', $row );
+		# Existing values...
+		$dbName = $items[0];
+		$version = $items[1];
+		$extVersion = isset( $items[2] ) ? $items[2] : '';
+		# Update this wiki?
+		if ( $version === $oldVersion || $oldVersion === 'all' ) {
+			$version = $newVersion; // switch!
+		}
+		if ( $extVersion !== '' ) {
+			$datList .= "{$dbName} {$version} {$extVersion}\n";
+		} else {
+			$datList .= "{$dbName} {$version}\n";
+		}
+	}
+
+	# Create wikiversions.dat...
+	if ( !file_put_contents( $path, $datList ) ) {
+		die( "Unable to write to wikiversions.dat.\n" );
+	}
+	# Rebuild wikiversions.cdb...
+	shell_exec( "cd $common/multiversion && ./refreshWikiversionsCDB" );
+}
+
+switchAllMediaWikis();

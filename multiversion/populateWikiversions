@@ -7,6 +7,7 @@ error_reporting( E_ALL );
  * This means that all will be configured to run that version.
  *
  * The first argument is the version, typically of the format "php-X.XX".
+ * The second argument is a confirmation ("confirm").
  *
  * @return void
  */
@@ -15,9 +16,9 @@ function populateWikiversionsCDB() {
 	$common = '/home/wikipedia/common';
 
 	$argsValid = false;
-	if ( count( $argv ) >= 2 ) {
+	if ( count( $argv ) >= 3 && $argv[2] === 'confirm' ) {
 		$version = $argv[1]; // e.g. "php-X.XX"
-		if ( preg_match( '/^php-(\d+\.\d+|trunk)$/', $version ) ) {
+		if ( preg_match( '/^php-(?:\d+\.\d+|trunk)(?:-\d)?$/', $version ) ) {
 			$argsValid = true;
 		}
 	}

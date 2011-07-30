@@ -32,7 +32,7 @@ function checkoutMediaWiki() {
 	}
 
 	if ( !$argsValid ) {
-		die( "Usage: checkoutMediaWiki.php X.XXwmfX php-X.XX\n" );
+		die( "Usage: checkoutMediaWiki X.XXwmfX php-X.XX\n" );
 	}
 
 	# The url to SVN to checkout from
