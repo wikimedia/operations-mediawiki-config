@@ -29,6 +29,10 @@ function switchAllMediaWikis() {
 		die( "Usage: upgradeMediaWikis php-X.XX php-X.XX\n" );
 	}
 
+	if ( !file_exists( "$common/$newVersion" ) ) {
+		die( "The directory `$common/$newVersion` does not exist.\n" );
+	}
+
 	$path = "$common/wikiversions.dat";
 	$verList = array_filter( explode( "\n", file_get_contents( $path ) ) );
 	if ( !count( $verList ) ) {
@@ -36,6 +40,7 @@ function switchAllMediaWikis() {
 	}
 
 	$datList = "";
+	$count = 0;
 	foreach ( $verList as $item ) {
 		$items = explode( ' ', $row );
 		# Existing values...
@@ -45,6 +50,7 @@ function switchAllMediaWikis() {
 		# Update this wiki?
 		if ( $version === $oldVersion || $oldVersion === 'all' ) {
 			$version = $newVersion; // switch!
+			$count++;
 		}
 		if ( $extVersion !== '' ) {
 			$datList .= "{$dbName} {$version} {$extVersion}\n";
@@ -59,6 +65,8 @@ function switchAllMediaWikis() {
 	}
 	# Rebuild wikiversions.cdb...
 	shell_exec( "cd $common/multiversion && ./refreshWikiversionsCDB" );
+
+	echo "Re-configured $count wiki(s) from $oldVersion to $newVersion.\n";
 }
 
 switchAllMediaWikis();
