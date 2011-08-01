@@ -41,8 +41,8 @@ function switchAllMediaWikis() {
 
 	$datList = "";
 	$count = 0;
-	foreach ( $verList as $item ) {
-		$items = explode( ' ', $row );
+	foreach ( $verList as $row ) {
+		$items = explode( ' ', trim( $row ) );
 		# Existing values...
 		$dbName = $items[0];
 		$version = $items[1];

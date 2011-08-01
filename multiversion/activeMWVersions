@@ -34,8 +34,8 @@ function getActiveWikiVersions() {
 	}
 
 	$result = $activeVersions = array();
-	foreach ( $verList as $item ) {
-		$items = explode( ' ', $row );
+	foreach ( $verList as $row ) {
+		$items = explode( ' ', trim( $row ) );
 		$dbName = $items[0];
 		$version = $items[1];
 		$extVersion = isset( $items[2] ) ? $items[2] : '';
