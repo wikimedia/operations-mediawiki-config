@@ -232,13 +232,15 @@ class MWMultiVersion {
 		if ( $db ) {
 			$version = dba_fetch( "ver:{$this->db}", $db );
 			if ( $version === false ) {
-				die( "wikiversions.cdb has no version entry for `$db`.\n" );
-			} elseif ( strpos( $version, 'php-' ) !== 0 ) {
-				die( "wikiversions.cdb version entry does not start with `php-` (got `$version`).\n" );
-			}
-			$extraVersion = dba_fetch( "ext:{$this->db}", $db );
-			if ( $extraVersion === false ) {
-				die( "wikiversions.cdb has no extra version entry for `$db`.\n" );
+				$extraVersion = false;
+			} else {
+				if ( strpos( $version, 'php-' ) !== 0 ) {
+					die( "wikiversions.cdb version entry does not start with `php-` (got `$version`).\n" );
+				}
+				$extraVersion = dba_fetch( "ext:{$this->db}", $db );
+				if ( $extraVersion === false ) {
+					die( "wikiversions.cdb has no extra version entry for `$db`.\n" );
+				}
 			}
 		} else {
 			//trigger_error( "Unable to open wikiversions.cdb. Assuming php-1.17", E_USER_ERROR );
@@ -252,6 +254,26 @@ class MWMultiVersion {
 	}
 
 	/**
+	 * Sanity check that this wiki actually exists.
+	 * @return bool
+	 */
+	private function assertNotMissing() {
+		if ( $this->isMissing() ) {
+			die( "wikiversions.cdb has no version entry for `{$this->db}`.\n" );
+		}
+	}
+
+	/**
+	 * Check if this wiki is *not* specified in a cdb file
+	 * located at /usr/local/apache/common/wikiversions.cdb.
+	 * @return bool
+	 */
+	public function isMissing() {
+		$this->loadVersionInfo();
+		return ( $this->version === false );
+	}
+
+	/**
 	 * Get the version as specified in a cdb file located
 	 * at /usr/local/apache/common/wikiversions.cdb.
 	 * Result is of the form "php-X.XX" or "php-trunk".
@@ -259,6 +281,7 @@ class MWMultiVersion {
 	 */
 	public function getVersion() {
 		$this->loadVersionInfo();
+		$this->assertNotMissing(); // caller should have checked isMissing()
 		return $this->version;
 	}
 
@@ -270,6 +293,7 @@ class MWMultiVersion {
 	 */
 	public function getVersionNumber() {
 		$this->loadVersionInfo();
+		$this->assertNotMissing(); // caller should have checked isMissing()
 		return substr( $this->version, 4 ); // remove "php-"
 	}
 
@@ -282,6 +306,7 @@ class MWMultiVersion {
 	 */
 	public function getExtendedVersionNumber() {
 		$this->loadVersionInfo();
+		$this->assertNotMissing(); // caller should have checked isMissing()
 		$ver = $this->getVersionNumber();
 		if ( $this->extVersion !== '' ) {
 			$ver .= "-{$this->extVersion}";
