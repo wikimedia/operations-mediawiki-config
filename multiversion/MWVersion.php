@@ -3,7 +3,8 @@
  * Get the location of the correct version of a MediaWiki web
  * entry-point file given environmental variables such as the server name.
  *
- * This also has some other effects:
+ * If the wiki doesn't exist, then the path to missing.php will be returned.
+ * If it does, then this function also has some other effects:
  * (a) Sets the $IP global variable (path to MediaWiki)
  * (b) Sets the MW_INSTALL_PATH environmental variable
  * (c) Changes PHP's current directory to the directory of this file.
@@ -25,6 +26,12 @@ function getMediaWiki( $file ) {
 	# Regular URL hit (wiki of origin)...
 	} else {
 		$multiVersion = MWMultiVersion::initializeForWiki( $serverName, $documentRoot );
+	}
+
+	# Wiki doesn't exist yet?
+	if ( $multiVersion->isMissing() ) {
+		header( "Cache-control: no-cache" ); // same hack as CommonSettings.php
+		return "/usr/local/apache/common-local/wmf-config/missing.php";
 	}
 
 	# Get the MediaWiki version running on this wiki...
