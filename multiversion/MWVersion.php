@@ -88,7 +88,7 @@ function getMediaWikiCli( $file ) {
 	$version = $multiVersion->getVersion();
 
 	# Get the correct MediaWiki path based on this version...
-	$IP = dirname( __FILE__ ) . "/../$version";
+	$IP = dirname( dirname( __FILE__ ) ) . "/$version";
 
 	chdir( $IP );
 	putenv( "MW_INSTALL_PATH=$IP" );
