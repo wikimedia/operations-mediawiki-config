@@ -36,6 +36,18 @@ function getMWScriptWithArgs() {
 		$argv[0] = $matches[1]; // make first arg the script file name
 	}
 
+	# For addwiki.php, the wiki DB doesn't yet exist, and for some
+	# other maintenance scripts we don't care what wiki DB is used...
+	$wikiless = array(
+		'maintenance/mctest.php',
+		'maintenance/addwiki.php',
+		'maintenance/nextJobDB.php'
+	);
+	if ( in_array( $relFile, $wikiless ) ) {
+		# Assumme aawiki as Maintenance.php does.
+		$argv = array_merge( array( $argv[0], "--wiki=aawiki" ), array_slice( $argv, 1 ) );
+	};
+
 	# MWScript.php should be in common/
 	require_once( dirname( __FILE__ ) . '/MWVersion.php' );
 	$file = getMediaWikiCli( $relFile );
