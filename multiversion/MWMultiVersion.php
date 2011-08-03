@@ -179,14 +179,6 @@ class MWMultiVersion {
 		putenv( 'MW_DBNAME=' . $dbname );
 	}
 
-	/*
-	 * Return a list of scripts that don't need a --wiki param (assume aawiki)
-	 * @return Array
-	 */
-	private static function wikilessScripts() {
-		return array( 'addwiki.php', 'nextJobDB.php' );
-	}
-
 	/**
 	 * Load the DB from the site and lang for this wiki
 	 * @param $site string
