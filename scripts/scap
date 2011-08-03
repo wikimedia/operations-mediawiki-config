@@ -9,7 +9,7 @@ if [ ! -S "$SSH_AUTH_SOCK" ]; then
 	exit 1
 fi
 
-mwVerDbSets=(`mwversionsinuse --home --withdb`)
+mwVerDbSets=(`$BINDIR/mwversionsinuse --home --withdb`)
 if [ -z "$mwVerDbSets" ]; then
 	echo "Unable to read wikiversions.dat or it is empty."
 	exit 1
@@ -43,14 +43,14 @@ fi
 $BINDIR/sync-common
 
 
-mwVerDbSets=(`mwversionsinuse --extended --withdb`)
+mwVerDbSets=(`$BINDIR/mwversionsinuse --extended --withdb`)
 # Regenerate the extension message file list for all active MediaWiki versions
 for i in "${mwVerDbSets[@]}"
 do
 	mwVerNum=${i%=*}
 	mwDbName=${i#*=}
 	echo "Updating ExtensionMessages-$mwVerNum.php..."
-	mwscript mergeMessageFileList.php --wiki="$mwDbName" \
+	$BINDIR/mwscript mergeMessageFileList.php --wiki="$mwDbName" \
 		--list-file=$SOURCE/wmf-config/extension-list \
 		--output=$SOURCE/wmf-config/ExtensionMessages-"$mwVerNum".php
 done
