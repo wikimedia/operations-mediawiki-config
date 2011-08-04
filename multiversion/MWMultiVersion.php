@@ -229,11 +229,11 @@ class MWMultiVersion {
 					die( "wikiversions.cdb has no extra version entry for `$db`.\n" );
 				}
 			}
+			dba_close( $db );
 		} else {
 			//trigger_error( "Unable to open wikiversions.cdb. Assuming php-1.17", E_USER_ERROR );
 			$version = 'php-1.17';
 			$extraVersion = '';
-			dba_close( $db );
 		}
 
 		$this->version = $version;
