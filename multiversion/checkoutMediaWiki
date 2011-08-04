@@ -19,7 +19,8 @@ error_reporting( E_ALL );
  */
 function checkoutMediaWiki() {
 	global $argv;
-	$commonDir = '/home/wikipedia/common';
+	$commonHomeDir = '/home/wikipedia/common';
+	$commonLocalDir = '/usr/local/apache/common-local';
 
 	$argsValid = false;
 	if ( count( $argv ) >= 3 ) {
@@ -39,7 +40,7 @@ function checkoutMediaWiki() {
 	$source = "svn+ssh://svn.wikimedia.org/svnroot/mediawiki/branches/wmf/$svnVersion";
 
 	# Create the destination path to SVN checkout to...
-	$destIP = "$commonDir/$dstVersion";
+	$destIP = "$commonHomeDir/$dstVersion";
 	if ( file_exists( $destIP ) ) {
 		die( "Cannot checkout, the directory $destIP already exists.\n" );
 	}
@@ -98,18 +99,44 @@ EOT;
 	}
 
 	# Create bits.wikimedia.org symlinks...
-	$path = "$commonDir/docroot/bits/skins-$dstVersionNum";
+	$path = "$commonHomeDir/docroot/bits/skins-$dstVersionNum";
 	if ( !file_exists( $path ) ) {
-		if ( symlink( "/usr/local/apache/common/php-$dstVersionNum/skins/", $path ) ) {
+		if ( symlink( "$commonLocalDir/php-$dstVersionNum/skins/", $path ) ) {
 			print "Created skins-$dstVersionNum symlink.\n";
 		}
 	} else {
 		print "File already exists: $path\n";
 	}
-	$path = "$commonDir/docroot/bits/w/extensions-$dstVersionNum";
+	$path = "$commonHomeDir/docroot/bits/w/extensions-$dstVersionNum";
 	if ( !file_exists( $path ) ) {
-		if ( symlink( "/usr/local/apache/common/php-$dstVersionNum/extensions", $path ) ) {
+		if ( symlink( "$commonLocalDir/php-$dstVersionNum/extensions", $path ) ) {
 			print "Created w/extensions-$dstVersionNum symlink.\n";
+		}
+	} else {
+		print "File already exists: $path\n";
+	}
+
+	# Create skins/resources symlinks
+	$path = "$commonHomeDir/live-1.5/extensions-$dstVersionNum";
+	if ( !file_exists( $path ) ) {
+		if ( symlink( "$commonLocalDir/php-$dstVersionNum/extensions", $path ) ) {
+			print "Created live-1.5/extensions-$dstVersionNum symlink.\n";
+		}
+	} else {
+		print "File already exists: $path\n";
+	}
+	$path = "$commonHomeDir/live-1.5/skins-$dstVersionNum";
+	if ( !file_exists( $path ) ) {
+		if ( symlink( "$commonLocalDir/php-$dstVersionNum/skins", $path ) ) {
+			print "Created live-1.5/skins-$dstVersionNum symlink.\n";
+		}
+	} else {
+		print "File already exists: $path\n";
+	}
+	$path = "$commonHomeDir/live-1.5/resources-$dstVersionNum";
+	if ( !file_exists( $path ) ) {
+		if ( symlink( "$commonLocalDir/php-$dstVersionNum/resources", $path ) ) {
+			print "Created live-1.5/resources-$dstVersionNum symlink.\n";
 		}
 	} else {
 		print "File already exists: $path\n";
