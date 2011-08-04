@@ -12,7 +12,7 @@
  * (b) Sets the MW_INSTALL_PATH environmental variable
  * (c) Changes PHP's current directory to the directory of this file.
  *
- * @param string File path (relative to MediaWiki dir)
+ * @param $file string File path (relative to MediaWiki dir)
  * @return string Absolute file path with proper MW location
  */
 function getMediaWiki( $file ) {
@@ -72,7 +72,7 @@ function getMediaWiki( $file ) {
  * (b) Sets the MW_INSTALL_PATH environmental variable
  * (c) Changes PHP's current directory to the directory of this file.
  *
- * @param string File path (relative to MediaWiki dir)
+ * @param $file string File path (relative to MediaWiki dir)
  * @return string Absolute file path with proper MW location
  */
 function getMediaWikiCli( $file ) {

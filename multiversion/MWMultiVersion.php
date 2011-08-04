@@ -284,7 +284,7 @@ class MWMultiVersion {
 		return substr( $this->version, 4 ); // remove "php-"
 	}
 
-	/*
+	/**
 	 * Get the version number to use for building caches & binaries for this wiki.
 	 * Like getVersionNumber() but may have a dash with another string appended.
 	 * Some wikis may share core MW versions but be using different extension versions.
