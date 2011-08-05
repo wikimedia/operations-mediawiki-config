@@ -4,10 +4,12 @@
  * version of MediaWiki is running on a wiki installation
  */
 class MWMultiVersion {
+
 	/**
 	 * @var MWMultiVersion
 	 */
 	private static $instance;
+
 	/**
 	 * @var string
 	 */
@@ -26,7 +28,7 @@ class MWMultiVersion {
 	private $versionLoaded = false;
 
 	/**
-	 * To get an inststance of this class, use the statuc helper methods.
+	 * To get an inststance of this class, use the static helper methods.
 	 * @see getInstanceForWiki
 	 * @see getInstanceForUploadWiki
 	 */
@@ -93,7 +95,6 @@ class MWMultiVersion {
 	 * Derives site and lang from the parameters and sets $site and $lang on the instance
 	 * @param $serverName the ServerName for this wiki -- $_SERVER['SERVER_NAME']
 	 * @param $docRoot the DocumentRoot for this wiki -- $_SERVER['DOCUMENT_ROOT']
-	 * @return void
 	 */
 	private function setSiteInfoForWiki( $serverName, $docRoot ) {
 		$secure = getenv( 'MW_SECURE_HOST' );
@@ -140,7 +141,6 @@ class MWMultiVersion {
 	/**
 	 * Derives site and lang from the parameter and sets $site and $lang on the instance
 	 * @param $pathInfo the PathInfo -- $_SERVER['PATH_INFO']
-	 * @return void
 	 */
 	private function setSiteInfoForUploadWiki( $pathInfo ) {
 		$pathBits = explode( '/', $pathInfo );
@@ -155,7 +155,6 @@ class MWMultiVersion {
 	/**
 	 * Gets the site and lang from the --wiki argument.
 	 * This code reflects how Maintenance.php reads arguments.
-	 * @return void
 	 */
 	private function setSiteInfoForMaintenance() {
 		global $argv;
@@ -183,7 +182,6 @@ class MWMultiVersion {
 	 * Load the DB from the site and lang for this wiki
 	 * @param $site string
 	 * @param $lang string
-	 * @return void
 	 */
 	private function loadDBFromSite( $site, $lang ) {
 		if ( $site === "wikipedia" ) {
@@ -207,7 +205,6 @@ class MWMultiVersion {
 	 * Get the space-seperated list of version params for this wiki.
 	 * The first item is the MW version and the optional second item
 	 * an extra version parameter to use for builds and caches.
-	 * @return void
 	 */
 	private function loadVersionInfo() {
 		if ( $this->versionLoaded ) {
