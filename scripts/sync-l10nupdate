@@ -3,8 +3,6 @@
 PATH=/bin:/usr/bin:/sbin:/usr/sbin:
 MWVER="$1"
 
-mwVersionNums=(`mwversionsinuse --extended`)
-
 echo "Synchronizing /home/wikipedia/common/php-$MWVER/cache/l10n to /usr/local/apache/common-local/php-$MWVER/cache/l10n..."
 echo "mediawiki-installation:"
 

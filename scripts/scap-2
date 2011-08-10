@@ -12,6 +12,7 @@ else
 	exit 1
 fi
 
+# wikiversions.dat just synced above
 mwVersionNums=(`mwversionsinuse`)
 if [ -z "$mwVersionNums" ]; then
 	echo "Unable to read wikiversions.dat or it is empty"
@@ -41,6 +42,3 @@ do
 	rm -r "$builddir"
 	cd /
 done
-
-#echo -n "Restarting apache... "
-#/usr/bin/apache-sanity-check && ( sudo /usr/sbin/apache2ctl stop; sudo killall -9 apache2;sleep 3; sudo /usr/sbin/apache2ctl start )
