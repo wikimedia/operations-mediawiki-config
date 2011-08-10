@@ -1,46 +1,48 @@
 #!/bin/sh
 # This script belongs in /home/wikipedia/bin/.
 PATH=/bin:/usr/bin:/sbin:/usr/sbin:
+BINDIR=/home/wikipedia/bin
 
 umask 0002
 
+# SVN up i18 messages to /trunk HEAD
 echo "Starting l10nupdate at `date`."
 if svn up --ignore-externals /home/wikipedia/l10n/trunk/phase3 &&
 	svn up --ignore-externals /home/wikipedia/l10n/trunk/extensions
 then
 	echo "SVN update completed."
 else
-	/home/wikipedia/bin/dologmsg "!log LocalisationUpdate failed"
+	$BINDIR/dologmsg "!log LocalisationUpdate failed"
 	echo "FAILED"
 	exit 1
 fi
 
-mwVerDbSets=(`mwversionsinuse --extended --withdb`)
+# Get all MW message cache versions (and a wiki DB name for each)
+mwVerDbSets=(`$BINDIR/mwversionsinuse --extended --withdb`)
 if [ -z "$mwVerDbSets" ]; then
-	/home/wikipedia/bin/dologmsg "!log LocalisationUpdate failed"
+	$BINDIR/dologmsg "!log LocalisationUpdate failed"
 	echo "FAILED"
 	exit 1
 fi
 
+# Update l10n cache and clear the message cache for these versions
 for i in "${mwVerDbSets[@]}"
 do
 	mwVerNum=${i%=*}
 	mwDbName=${i#*=}
-	if mwscript extensions/LocalisationUpdate/update.php \
+	if $BINDIR/mwscript extensions/LocalisationUpdate/update.php \
 		  --wiki="$mwDbName" \
 		  --outdir=/home/wikipedia/common/php-"$mwVerNum"/cache/l10n \
 		  --all \
 		  --quiet
 	then
 		echo "Completed. Syncing to Apaches"
-		/home/wikipedia/bin/sync-l10nupdate "$mwVerNum"
+		$BINDIR/sync-l10nupdate "$mwVerNum"
 		echo "Clearing message blobs"
-		mwscript maintenance/wmf/clearMessageBlobs.php --wiki="$mwDbName"
+		$BINDIR/mwscript maintenance/wmf/clearMessageBlobs.php --wiki="$mwDbName"
 		echo "All done"
 	else
-		/home/wikipedia/bin/dologmsg "!log LocalisationUpdate failed"
+		$BINDIR/dologmsg "!log LocalisationUpdate failed"
 		echo "FAILED"
 	fi
 done
-## Apache clients should sync updates locally every X hours or at scap time
-# Not needed anymore as of 3/20/2011 --Roan
