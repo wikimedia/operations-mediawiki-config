@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 # This script belongs in /home/wikipedia/bin/.
-PATH=/bin:/usr/bin:/sbin:/usr/sbin:
 BINDIR=/home/wikipedia/bin
+MWMULTIDIR=/home/wikipedia/common/multiversion
 
 umask 0002
 
@@ -18,7 +18,7 @@ else
 fi
 
 # Get all MW message cache versions (and a wiki DB name for each)
-mwVerDbSets=(`$BINDIR/mwversionsinuse --extended --withdb`)
+mwVerDbSets=`$BINDIR/mwversionsinuse --extended --withdb`
 if [ -z "$mwVerDbSets" ]; then
 	$BINDIR/dologmsg "!log LocalisationUpdate failed"
 	echo "FAILED"
@@ -30,7 +30,8 @@ for i in "${mwVerDbSets[@]}"
 do
 	mwVerNum=${i%=*}
 	mwDbName=${i#*=}
-	if $BINDIR/mwscript extensions/LocalisationUpdate/update.php \
+	echo "Running updates for $mwVerNum (on $mwDbName)"
+	if php $MWMULTIDIR/MWScript.php extensions/LocalisationUpdate/update.php \
 		  --wiki="$mwDbName" \
 		  --outdir=/home/wikipedia/common/php-"$mwVerNum"/cache/l10n \
 		  --all \
@@ -39,10 +40,11 @@ do
 		echo "Completed. Syncing to Apaches"
 		$BINDIR/sync-l10nupdate "$mwVerNum"
 		echo "Clearing message blobs"
-		$BINDIR/mwscript maintenance/wmf/clearMessageBlobs.php --wiki="$mwDbName"
+		php $MWMULTIDIR/MWScript.php maintenance/wmf/clearMessageBlobs.php --wiki="$mwDbName"
+		$BINDIR/dologmsg "!log LocalisationUpdate completed ($mwVerNum) at `date`";
 		echo "All done"
 	else
-		$BINDIR/dologmsg "!log LocalisationUpdate failed"
+		$BINDIR/dologmsg "!log LocalisationUpdate failed ($mwVerNum)"
 		echo "FAILED"
 	fi
 done

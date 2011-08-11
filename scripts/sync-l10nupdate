@@ -1,6 +1,5 @@
 #!/bin/bash
 # This script belongs in /home/wikipedia/bin/.
-PATH=/bin:/usr/bin:/sbin:/usr/sbin:
 MWVER="$1"
 
 if [ -z "$MWVER" ]; then
