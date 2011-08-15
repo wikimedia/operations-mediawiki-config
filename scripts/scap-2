@@ -21,15 +21,22 @@ fi
 
 for mwVerNum in "${mwVersionNums[@]}"
 do
-	echo "MediaWiki $mwVerNum:"
-	echo -n "Compiling texvc..."
+	echo "MediaWiki $mwVerNum: Compiling texvc..."
 	builddir=`mktemp -dt texvc-build.XXXXXXXXXX`
 	if [ -z "$builddir" ]; then
 		echo "Unable to create temporary directory"
 		exit 1
 	fi
 
-	rsync -r --exclude=.svn/ /usr/local/apache/common-local/php-"$mwVerNum"/math/ "$builddir"
+	IP=/usr/local/apache/common-local/php-"$mwVerNum"
+	# Math was moved out to an extension in MW 1.18
+	if [ -d $IP/extensions/Math/math ]; then
+		MATHPATH=$IP/extensions/Math/math
+	else
+		MATHPATH=$IP/math
+	fi
+
+	rsync -r --exclude=.svn/ $MATHPATH/ "$builddir"
 	cd "$builddir"
 	if make -f Makefile texvc >/dev/null 2>/dev/null; then
 		echo "ok"
