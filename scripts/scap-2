@@ -13,7 +13,7 @@ else
 fi
 
 # wikiversions.dat just synced above
-mwVersionNums=(`mwversionsinuse`)
+mwVersionNums=`mwversionsinuse`
 if [ -z "$mwVersionNums" ]; then
 	echo "Unable to read wikiversions.dat or it is empty"
 	exit 1

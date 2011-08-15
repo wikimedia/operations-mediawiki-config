@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mwVersionNums=(`mwversionsinuse`)
+mwVersionNums=`mwversionsinuse`
 for mwVerNum in "${mwVersionNums[@]}"
 do
 	sudo -u mwdeploy sh -c "
