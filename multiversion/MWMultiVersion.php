@@ -175,7 +175,6 @@ class MWMultiVersion {
 		}
 
 		$this->db = $dbname;
-		putenv( 'MW_DBNAME=' . $dbname );
 	}
 
 	/**
@@ -190,7 +189,6 @@ class MWMultiVersion {
 			$dbSuffix = $site;
 		}
 		$this->db = str_replace( "-", "_", $lang . $dbSuffix );
-		putenv( 'MW_DBNAME=' . $this->db );
 	}
 
 	/**
