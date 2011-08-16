@@ -41,7 +41,7 @@ class MWMultiVersion {
 	 */
 	private static function createInstance() {
 		if ( isset( self::$instance ) ) {
-			die( "MWMultiVersion instance already set!\n" );
+			self::error( "MWMultiVersion instance already set!\n" );
 		}
 		self::$instance = new self;
 		return self::$instance;
@@ -101,7 +101,7 @@ class MWMultiVersion {
 		$matches = array();
 		if ( $secure ) {
 			if ( !preg_match('/^([^.]+)\.([^.]+)\./', $secure, $matches ) ) {
-				die( "Invalid hostname.\n" );
+				self::error( "Invalid hostname.\n" );
 			}
 			$lang = $matches[1];
 			$site = $matches[2];
@@ -126,13 +126,13 @@ class MWMultiVersion {
 				} else if ( preg_match( '/^(.*)\.prototype\.wikimedia\.org$/', $serverName, $matches ) ) {
 					$lang = $matches[1];
 				} else {
-					die( "Invalid host name ($serverName), can't determine language.\n" );
+					self::error( "Invalid host name ($serverName), can't determine language.\n" );
 				}
 			} elseif ( preg_match( "/^\/usr\/local\/apache\/(?:htdocs|common\/docroot)\/([a-z0-9\-_]*)$/", $docRoot, $matches ) ) {
 				$site = "wikipedia";
 				$lang = $matches[1];
 			} else {
-				die( "Invalid host name (docroot=" . $docRoot . "), can't determine language.\n" );
+				self::error( "Invalid host name (docroot=" . $docRoot . "), can't determine language.\n" );
 			}
 		}
 		$this->loadDBFromSite( $site, $lang );
@@ -145,7 +145,7 @@ class MWMultiVersion {
 	private function setSiteInfoForUploadWiki( $pathInfo ) {
 		$pathBits = explode( '/', $pathInfo );
 		if ( count( $pathBits ) < 3 ) {
-			die( "Invalid file path info (pathinfo=" . $pathInfo . "), can't determine language.\n" );
+			self::error( "Invalid file path info (pathinfo=" . $pathInfo . "), can't determine language.\n" );
 		}
 		$site = $pathBits[1];
 		$lang = $pathBits[2];
@@ -171,7 +171,7 @@ class MWMultiVersion {
 		}
 
 		if ( $dbname === '' ) {
-			die( "--wiki must be the first parameter.\n" );
+			self::error( "--wiki must be the first parameter.\n" );
 		}
 
 		$this->db = $dbname;
@@ -217,11 +217,11 @@ class MWMultiVersion {
 				$extraVersion = false;
 			} else {
 				if ( strpos( $version, 'php-' ) !== 0 ) {
-					die( "wikiversions.cdb version entry does not start with `php-` (got `$version`).\n" );
+					self::error( "wikiversions.cdb version entry does not start with `php-` (got `$version`).\n" );
 				}
 				$extraVersion = dba_fetch( "ext:{$this->db}", $db );
 				if ( $extraVersion === false ) {
-					die( "wikiversions.cdb has no extra version entry for `$db`.\n" );
+					self::error( "wikiversions.cdb has no extra version entry for `$db`.\n" );
 				}
 			}
 			dba_close( $db );
@@ -241,7 +241,7 @@ class MWMultiVersion {
 	 */
 	private function assertNotMissing() {
 		if ( $this->isMissing() ) {
-			die( "wikiversions.cdb has no version entry for `{$this->db}`.\n" );
+			self::error( "wikiversions.cdb has no version entry for `{$this->db}`.\n" );
 		}
 	}
 
@@ -294,5 +294,18 @@ class MWMultiVersion {
 			$ver .= "-{$this->extVersion}";
 		}
 		return $ver;
+	}
+
+	/**
+	 * Error out with a die() message
+	 * @param $msg String
+	 * @return void
+	 */
+	private static function error( $msg ) {
+		$msg = (string)$msg;
+		if ( php_sapi_name() !== 'cli' ) {
+			$msg = htmlspecialchars( $msg );
+		}
+		die( $msg );
 	}
 }
