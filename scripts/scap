@@ -65,7 +65,7 @@ $BINDIR/dologmsg "!log $USER synchronizing Wikimedia installation... : $*"
 $BINDIR/set-group-write
 
 echo 'Copying wikiversions dat file to apaches...'
-ddsh -F30 -cM -g mediawiki-installation 'if [ -x /home/wikipedia/bin/scap-1versions ]; then echo "/home-mounted apache $(hostname)"; /home/wikipedia/bin/scap-1versions; else /usr/bin/scap-1versions; fi'
+ddsh -F30 -cM -g mediawiki-installation 'sudo -u mwdeploy rsync -l 10.0.5.8::common/wikiversions.dat /usr/local/apache/common-local/wikiversions.dat'
 
 echo 'Copying style sheets to apaches...'
 ddsh -F30 -cM -g mediawiki-installation 'if [ -x /home/wikipedia/bin/scap-1skins ]; then echo "/home-mounted apache $(hostname)"; /home/wikipedia/bin/scap-1skins; else /usr/bin/scap-1skins; fi'

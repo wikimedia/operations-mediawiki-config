@@ -1,3 +1,0 @@
-#!/bin/bash
-
-sudo -u mwdeploy rsync -l 10.0.5.8::common/wikiversions.dat /usr/local/apache/common-local/wikiversions.dat
