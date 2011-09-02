@@ -210,7 +210,7 @@ class MWMultiVersion {
 		}
 		$this->versionLoaded = true;
 
-		$db = dba_open( '/usr/local/apache/common/wikiversions.cdb', 'r', 'cdb' );
+		$db = dba_open( '/usr/local/apache/common-local/wikiversions.cdb', 'r', 'cdb' );
 		if ( $db ) {
 			$version = dba_fetch( "ver:{$this->db}", $db );
 			if ( $version === false ) {
@@ -247,7 +247,7 @@ class MWMultiVersion {
 
 	/**
 	 * Check if this wiki is *not* specified in a cdb file
-	 * located at /usr/local/apache/common/wikiversions.cdb.
+	 * located at /usr/local/apache/common-local/wikiversions.cdb.
 	 * @return bool
 	 */
 	public function isMissing() {
@@ -257,7 +257,7 @@ class MWMultiVersion {
 
 	/**
 	 * Get the version as specified in a cdb file located
-	 * at /usr/local/apache/common/wikiversions.cdb.
+	 * at /usr/local/apache/common-local/wikiversions.cdb.
 	 * Result is of the form "php-X.XX" or "php-trunk".
 	 * @return String the version directory for this wiki
 	 */
@@ -269,7 +269,7 @@ class MWMultiVersion {
 
 	/**
 	 * Get the version number as specified in a cdb file located
-	 * at /usr/local/apache/common/wikiversions.cdb. Do not use this
+	 * at /usr/local/apache/common-local/wikiversions.cdb. Do not use this
 	 * to determine the path to cache or binary files, only the core MW code.
 	 * @return String the version number for this wiki (e.g. "x.xx" or "trunk")
 	 */
