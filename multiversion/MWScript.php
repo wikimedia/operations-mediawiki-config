@@ -41,7 +41,12 @@ function getMWScriptWithArgs() {
 	$wikiless = array(
 		'maintenance/mctest.php',
 		'maintenance/addwiki.php',
-		'maintenance/nextJobDB.php'
+		'maintenance/nextJobDB.php',
+		'maintenance/dumpInterwiki.php',
+		'maintenance/rebuildInterwiki.php',
+		'extensions/WikimediaMaintenance/addWiki.php', // 1.19
+		'extensions/WikimediaMaintenance/dumpInterwiki.php', // 1.19
+		'extensions/WikimediaMaintenance/rebuildInterwiki.php' // 1.19
 	);
 	if ( in_array( $relFile, $wikiless ) ) {
 		# Assumme aawiki as Maintenance.php does.
