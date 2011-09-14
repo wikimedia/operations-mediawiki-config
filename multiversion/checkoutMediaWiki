@@ -42,21 +42,22 @@ function checkoutMediaWiki() {
 	# Create the destination path to SVN checkout to...
 	$destIP = "$commonHomeDir/$dstVersion";
 	if ( file_exists( $destIP ) ) {
-		die( "Cannot checkout, the directory $destIP already exists.\n" );
-	}
-	print "Creating checkout directory $destIP...";
-	mkdir( $destIP, 0775 );
-	print "done.\n";
+		print "Skipping checkout, the directory $destIP already exists.\n";
+	} else {
+		print "Creating checkout directory $destIP...";
+		mkdir( $destIP, 0775 );
+		print "done.\n";
 
-	print "Checking out $source to $destIP...\n";
-	# Checkout the SVN directory...
-	$retval = 1; // error by default?
-	passthru( "svn checkout $source $destIP", $retval );
-	if ( $retval !== 0 ) {
-		rmdir( $destIP ); // rollback
-		die( "\nUnable to checkout SVN path.\n" );
+		print "Checking out $source to $destIP...\n";
+		# Checkout the SVN directory...
+		$retval = 1; // error by default?
+		passthru( "svn checkout $source $destIP", $retval );
+		if ( $retval !== 0 ) {
+			rmdir( $destIP ); // rollback
+			die( "\nUnable to checkout SVN path.\n" );
+		}
+		print "...SVN checkout done.\n";
 	}
-	print "...SVN checkout done.\n";
 
 	$localSettingsCode = <<<EOT
 <?php
