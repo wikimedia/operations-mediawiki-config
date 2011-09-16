@@ -86,7 +86,7 @@ EOT;
 			print "Created AdminSettings.php symlink.\n";
 		}
 	} else {
-		print "File already exists: $path\n";
+		print "Symlink file already exists: $path\n";
 	}
 
 	# Create symlink to wmf-config/StartProfiler.php...
@@ -96,7 +96,7 @@ EOT;
 			print "Created StartProfiler.php symlink.\n";
 		}
 	} else {
-		print "File already exists: $path\n";
+		print "Symlink file already exists: $path\n";
 	}
 
 	# Create bits.wikimedia.org symlinks...
@@ -106,7 +106,7 @@ EOT;
 			print "Created skins-$dstVersionNum symlink.\n";
 		}
 	} else {
-		print "File already exists: $path\n";
+		print "Symlink file already exists: $path\n";
 	}
 	$path = "$commonHomeDir/docroot/bits/w/extensions-$dstVersionNum";
 	if ( !file_exists( $path ) ) {
@@ -114,17 +114,17 @@ EOT;
 			print "Created w/extensions-$dstVersionNum symlink.\n";
 		}
 	} else {
-		print "File already exists: $path\n";
+		print "Symlink file already exists: $path\n";
 	}
 
-	# Create skins/resources symlinks
+	# Create skins/resources symlinks...
 	$path = "$commonHomeDir/live-1.5/extensions-$dstVersionNum";
 	if ( !file_exists( $path ) ) {
 		if ( symlink( "$commonLocalDir/php-$dstVersionNum/extensions", $path ) ) {
 			print "Created live-1.5/extensions-$dstVersionNum symlink.\n";
 		}
 	} else {
-		print "File already exists: $path\n";
+		print "Symlink file already exists: $path\n";
 	}
 	$path = "$commonHomeDir/live-1.5/skins-$dstVersionNum";
 	if ( !file_exists( $path ) ) {
@@ -132,7 +132,7 @@ EOT;
 			print "Created live-1.5/skins-$dstVersionNum symlink.\n";
 		}
 	} else {
-		print "File already exists: $path\n";
+		print "Symlink file already exists: $path\n";
 	}
 	$path = "$commonHomeDir/live-1.5/resources-$dstVersionNum";
 	if ( !file_exists( $path ) ) {
@@ -140,7 +140,21 @@ EOT;
 			print "Created live-1.5/resources-$dstVersionNum symlink.\n";
 		}
 	} else {
-		print "File already exists: $path\n";
+		print "Symlink file already exists: $path\n";
+	}
+
+	# Create libs symlinks...
+	$libDir = "$commonHomeDir/php-$dstVersionNum/lib";
+	if ( !file_exists( $libDir ) ) {
+		mkdir( $libDir, 0775 );
+	}
+	$path = "$libDir/geshi";
+	if ( !file_exists( $path ) ) {
+		if ( symlink( "../../lib/geshi", $path ) ) {
+			print "Created php-$dstVersionNum/lib/geshi symlink.\n";
+		}
+	} else {
+		print "Symlink file already exists: $path\n";
 	}
 
 	print "MediaWiki $dstVersionNum, from $svnVersion, successfully checked out.\n";
