@@ -36,6 +36,8 @@ function checkoutMediaWiki() {
 		die( "Usage: checkoutMediaWiki X.XXwmfX php-X.XX\n" );
 	}
 
+	echo "Creating new MediaWiki install at $commonHomeDir/$dstVersion...\n\n";
+
 	# The url to SVN to checkout from
 	$source = "svn+ssh://svn.wikimedia.org/svnroot/mediawiki/branches/wmf/$svnVersion";
 
@@ -157,7 +159,17 @@ EOT;
 		print "Symlink file already exists: $path\n";
 	}
 
-	print "MediaWiki $dstVersionNum, from $svnVersion, successfully checked out.\n";
+	# Create l10n cache dir
+	$l10nDir = "$commonHomeDir/php-$dstVersionNum/cache/l10n";
+	if ( !file_exists( $l10nDir ) ) {
+		if ( mkdir( $l10nDir, 0775 ) ) {
+			print "Created php-$dstVersionNum/cache/l10n directory.\n";
+		}
+	} else {
+		print "Directory already exists: $l10nDir\n";
+	}
+
+	print "\nMediaWiki $dstVersionNum, from $svnVersion, successfully checked out.\n";
 }
 
 checkoutMediaWiki();
