@@ -83,67 +83,40 @@ EOT;
 
 	# Create symlink to wmf-config/AdminSettings.php...
 	$path = "$destIP/AdminSettings.php";
-	if ( !file_exists( $path ) ) {
-		if ( symlink( "../wmf-config/AdminSettings.php", $path ) ) {
-			print "Created AdminSettings.php symlink.\n";
-		}
-	} else {
-		print "Symlink file already exists: $path\n";
-	}
+	$link = "../wmf-config/AdminSettings.php";
+	createSymlink( $path, $link, "Created AdminSettings.php symlink." );
 
 	# Create symlink to wmf-config/StartProfiler.php...
 	$path = "$destIP/StartProfiler.php";
-	if ( !file_exists( $path ) ) {
-		if ( symlink( "../wmf-config/StartProfiler.php", $path ) ) {
-			print "Created StartProfiler.php symlink.\n";
-		}
-	} else {
-		print "Symlink file already exists: $path\n";
-	}
+	$link = "../wmf-config/StartProfiler.php";
+	createSymlink( $path, $link, "Created StartProfiler.php symlink." );
 
 	# Create bits.wikimedia.org symlinks...
 	$path = "$commonHomeDir/docroot/bits/skins-$dstVersionNum";
-	if ( !file_exists( $path ) ) {
-		if ( symlink( "$commonLocalDir/php-$dstVersionNum/skins/", $path ) ) {
-			print "Created skins-$dstVersionNum symlink.\n";
-		}
-	} else {
-		print "Symlink file already exists: $path\n";
-	}
+	$link = "$commonLocalDir/php-$dstVersionNum/skins/";
+	createSymlink( $path, $link, "Created skins-$dstVersionNum symlink." );
+
 	$path = "$commonHomeDir/docroot/bits/w/extensions-$dstVersionNum";
-	if ( !file_exists( $path ) ) {
-		if ( symlink( "$commonLocalDir/php-$dstVersionNum/extensions", $path ) ) {
-			print "Created w/extensions-$dstVersionNum symlink.\n";
-		}
-	} else {
-		print "Symlink file already exists: $path\n";
-	}
+	$link = "$commonLocalDir/php-$dstVersionNum/extensions";
+	createSymlink( $path, $link, "Created w/extensions-$dstVersionNum symlink." );
+
+	# Create secure.wikimedia.org symlinks...
+	$path = "$commonHomeDir/docroot/secure/skins-$dstVersionNum";
+	$link = "$commonLocalDir/php-$dstVersionNum/skins";
+	createSymlink( $path, $link, "Created secure/skins-$dstVersionNum symlink." );
 
 	# Create skins/resources symlinks...
 	$path = "$commonHomeDir/live-1.5/extensions-$dstVersionNum";
-	if ( !file_exists( $path ) ) {
-		if ( symlink( "$commonLocalDir/php-$dstVersionNum/extensions", $path ) ) {
-			print "Created live-1.5/extensions-$dstVersionNum symlink.\n";
-		}
-	} else {
-		print "Symlink file already exists: $path\n";
-	}
+	$link = "$commonLocalDir/php-$dstVersionNum/extensions";
+	createSymlink( $path, $link, "Created live-1.5/extensions-$dstVersionNum symlink." );
+
 	$path = "$commonHomeDir/live-1.5/skins-$dstVersionNum";
-	if ( !file_exists( $path ) ) {
-		if ( symlink( "$commonLocalDir/php-$dstVersionNum/skins", $path ) ) {
-			print "Created live-1.5/skins-$dstVersionNum symlink.\n";
-		}
-	} else {
-		print "Symlink file already exists: $path\n";
-	}
+	$link = "$commonLocalDir/php-$dstVersionNum/skins";
+	createSymlink( $path, $link, "Created live-1.5/skins-$dstVersionNum symlink." );
+
 	$path = "$commonHomeDir/live-1.5/resources-$dstVersionNum";
-	if ( !file_exists( $path ) ) {
-		if ( symlink( "$commonLocalDir/php-$dstVersionNum/resources", $path ) ) {
-			print "Created live-1.5/resources-$dstVersionNum symlink.\n";
-		}
-	} else {
-		print "Symlink file already exists: $path\n";
-	}
+	$link = "$commonLocalDir/php-$dstVersionNum/resources";
+	createSymlink( $path, $link, "Created live-1.5/resources-$dstVersionNum symlink." );
 
 	# Create libs symlinks...
 	$libDir = "$commonHomeDir/php-$dstVersionNum/lib";
@@ -170,6 +143,16 @@ EOT;
 	}
 
 	print "\nMediaWiki $dstVersionNum, from $svnVersion, successfully checked out.\n";
+}
+
+function createSymlink( $path, $link, $createdMsg ) {
+	if ( !file_exists( $path ) ) {
+		if ( symlink( $link, $path ) ) {
+			print "$createdMsg\n";
+		}
+	} else {
+		print "Symlink file already exists: $path\n";
+	}
 }
 
 checkoutMediaWiki();
