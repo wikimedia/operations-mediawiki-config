@@ -115,7 +115,7 @@ EOT;
 	createSymlink( $path, $link, "Created live-1.5/skins-$dstVersionNum symlink." );
 
 	$path = "$commonHomeDir/live-1.5/resources-$dstVersionNum";
-	$link = "$commonLocalDir/php-$dstVersionNum/resources";
+	$link = "$commonLocalDir/php-$dstVersionNum";
 	createSymlink( $path, $link, "Created live-1.5/resources-$dstVersionNum symlink." );
 
 	# Create libs symlinks...
