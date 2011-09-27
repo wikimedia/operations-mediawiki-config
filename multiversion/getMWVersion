@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php
+error_reporting( 0 );
+// This script prints the MW version associated with a specified wikidb.
+if ( count( $argv ) < 2 ) {
+	die( "Usage: getMWVersion <dbname> \n" );
+}
+/**
+ * Prints the MW version associated with a specified wikidb (as listed e.g. in all.dblist).
+ * @param $dbName string
+ * @return string MW code version (e.g. "php-x.xx" or "php-trunk")
+ */
+function getWikiVersion( $dbName ) {
+	$db = dba_open( '/usr/local/apache/common-local/wikiversions.cdb', 'r', 'cdb' );
+	if ( $db ) {
+		$version = dba_fetch( "ver:$dbName", $db );
+		dba_close( $db );
+		if ( $version !== false ) {
+			return $version; // found version entry
+		}
+		die( "wikiversions.cdb has no extra version entry for `$dbName`.\n" );
+	}
+	die( "Unable to open wikiversions.cdb.\n" );
+}
+
+echo getWikiVersion( $argv[1] );
