@@ -3,7 +3,8 @@
 error_reporting( 0 );
 // This script prints the MW version associated with a specified wikidb.
 if ( count( $argv ) < 2 ) {
-	die( "Usage: getMWVersion <dbname> \n" );
+	print "Usage: getMWVersion <dbname> \n";
+	exit( 1 );
 }
 /**
  * Prints the MW version associated with a specified wikidb (as listed e.g. in all.dblist).
@@ -23,4 +24,4 @@ function getWikiVersion( $dbName ) {
 	die( "Unable to open wikiversions.cdb.\n" );
 }
 
-echo getWikiVersion( $argv[1] );
+echo getWikiVersion( $argv[1] ) . "\n";
