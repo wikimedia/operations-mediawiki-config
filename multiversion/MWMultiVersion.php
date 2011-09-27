@@ -1,7 +1,9 @@
 <?php
 /**
  * Class to handle basic information related to what
- * version of MediaWiki is running on a wiki installation
+ * version of MediaWiki is running on a wiki installation.
+ *
+ * Avoid setting environmental or globals variables here for OOP.
  */
 class MWMultiVersion {
 
@@ -36,7 +38,18 @@ class MWMultiVersion {
 	private function __clone() {}
 
 	/**
-	 * Create the version instance
+	 * Create a multiversion object based on a dbname
+	 * @param $dbName string
+	 * @return MWMultiVersion object for this wiki
+	 */
+	public static function newFromDBName( $dbName ) {
+		$m = new self();
+		$m->db = $dbName;
+		return $m;
+	}
+
+	/**
+	 * Create the singleton version instance
 	 * @return MWMultiVersion object for this wiki
 	 */
 	private static function createInstance() {
@@ -48,8 +61,8 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Factory method to get an instance of MWMultiVersion.
-	 * Use this for all wikis except calls to /w/thumb.php on upload.wikmedia.org.
+	 * Initialize and get the singleton instance of MWMultiVersion.
+	 * Use this for all web hits except to /w/thumb.php on upload.wikmedia.org.
 	 * @param $serverName the ServerName for this wiki -- $_SERVER['SERVER_NAME']
 	 * @param $docRoot the DocumentRoot for this wiki -- $_SERVER['DOCUMENT_ROOT']
 	 * @return MWMultiVersion object for this wiki
@@ -61,8 +74,8 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Factory method to get an instance of MWMultiVersion used
-	 * for calls to /w/thumb.php on upload.wikmedia.org.
+	 * Initialize and get the singleton instance of MWMultiVersion.
+	 * Use this for web hits to /w/thumb.php on upload.wikmedia.org.
 	 * @param $pathInfo the PathInfo -- $_SERVER['PATH_INFO']
 	 * @return MWMultiVersion object for the wiki derived from the pathinfo
 	 */
@@ -73,8 +86,8 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Factory method to get an instance of MWMultiVersion
-	 * via maintenance scripts since they need to set site and lang.
+	 * Initialize and get the singleton instance of MWMultiVersion.
+	 * Use this for PHP CLI hits to maintenance scripts.
 	 * @return MWMultiVersion object for the wiki derived from --wiki CLI parameter
 	 */
 	public static function initializeForMaintenance() {
@@ -84,7 +97,7 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Get the instance of MWMultiVersion that was previously initialized
+	 * Get the singleton instance of MWMultiVersion that was previously initialized
 	 * @return MWMultiVersion|null version object for the wiki
 	 */
 	public static function getInstance() {
