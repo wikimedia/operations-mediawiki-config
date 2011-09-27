@@ -226,9 +226,7 @@ class MWMultiVersion {
 			}
 			dba_close( $db );
 		} else {
-			//trigger_error( "Unable to open wikiversions.cdb. Assuming php-1.17", E_USER_ERROR );
-			$version = 'php-1.17';
-			$extraVersion = '';
+			self::error( "Unable to open wikiversions.cdb.\n" );
 		}
 
 		$this->version = $version;
