@@ -1,4 +1,5 @@
 <?php
+requre_once( dirname( __FILE__ ) . '/defines.php' );
 /**
  * Class to handle basic information related to what
  * version of MediaWiki is running on a wiki installation.
@@ -6,7 +7,6 @@
  * Avoid setting environmental or globals variables here for OOP.
  */
 class MWMultiVersion {
-
 	/**
 	 * @var MWMultiVersion
 	 */
@@ -223,7 +223,7 @@ class MWMultiVersion {
 		}
 		$this->versionLoaded = true;
 
-		$db = dba_open( '/usr/local/apache/common-local/wikiversions.cdb', 'r', 'cdb' );
+		$db = dba_open( MULTIVER_CDB_DIR_APACHE . '/wikiversions.cdb', 'r', 'cdb' );
 		if ( $db ) {
 			$version = dba_fetch( "ver:{$this->db}", $db );
 			if ( $version === false ) {

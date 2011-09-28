@@ -1,22 +1,21 @@
 #!/usr/bin/env php
 <?php
 error_reporting( E_ALL );
+requre_once( dirname( __FILE__ ) . '/defines.php' );
 /*
  * Populate wikiversions.cdb file using all the items in wikiversions.dat
  *
  * @return void
  */
 function refreshWikiversionsCDB() {
-	$common = '/home/wikipedia/common';
-
-	$path = "$common/wikiversions.dat";
+	$path = MULTIVER_CDB_DIR_HOME . '/wikiversions.dat';
 	$verList = array_filter( explode( "\n", file_get_contents( $path ) ) );
 	if ( !count( $verList ) ) {
 		die( "Unable to read wikiversions.dat.\n" );
 	}
 
-	$tmpDBPath = "$common/wikiversions.cdb.tmp";
-	$finalDBPath = "$common/wikiversions.cdb";
+	$tmpDBPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.cdb.tmp';
+	$finalDBPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.cdb';
 
 	# Build new database at temp location...
 	$db = dba_open( $tmpDBPath, "n", "cdb_make" );

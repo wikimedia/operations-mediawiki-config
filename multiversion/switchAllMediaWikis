@@ -1,6 +1,7 @@
 #!/usr/bin/env php
 <?php
 error_reporting( E_ALL );
+requre_once( dirname( __FILE__ ) . '/defines.php' );
 /*
  * This script switches all wikis running one version to another version.
  * It merely changes the wikiversions.dat and wikiversions.cdb files on /home,
@@ -33,8 +34,8 @@ function switchAllMediaWikis() {
 		die( "The directory `$common/$newVersion` does not exist.\n" );
 	}
 
-	$path = "$common/wikiversions.dat";
-	$verList = array_filter( explode( "\n", file_get_contents( $path ) ) );
+	$datPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.dat';
+	$verList = array_filter( explode( "\n", file_get_contents( $datPath ) ) );
 	if ( !count( $verList ) ) {
 		die( "Unable to read wikiversions.dat.\n" );
 	}
@@ -61,13 +62,13 @@ function switchAllMediaWikis() {
 
 	# Backup old wikiversions.dat...
 	$backupPath = "$common/multiversion/backup/wikiversions-" . time() . ".dat";
-	if ( !copy( "$common/wikiversions.dat", $backupPath ) ) {
+	if ( !copy( $datPath, $backupPath ) ) {
 		die( "Unable to write backup file `$backupPath`.\n" );
 	}
 	echo "Wrote backup file `$backupPath`.\n";
 
 	# Update wikiversions.dat...
-	if ( !file_put_contents( $path, $datList ) ) {
+	if ( !file_put_contents( $datPath, $datList ) ) {
 		die( "Unable to write to wikiversions.dat.\n" );
 	}
 	# Rebuild wikiversions.cdb...

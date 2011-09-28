@@ -17,12 +17,12 @@
  */
 function getMediaWiki( $file ) {
 	global $IP;
+	require( dirname( __FILE__ ) . '/MWMultiVersion.php' );
 
 	$scriptName = @$_SERVER['SCRIPT_NAME'];
 	$serverName = @$_SERVER['SERVER_NAME'];
 	$documentRoot = @$_SERVER['DOCUMENT_ROOT'];
 
-	require( dirname( __FILE__ ) . '/MWMultiVersion.php' );
 	# Upload URL hit (to upload.wikimedia.org rather than wiki of origin)...
 	if ( $scriptName === '/w/thumb.php' && $serverName === 'upload.wikimedia.org' ) {
 		$multiVersion = MWMultiVersion::initializeForUploadWiki( $_SERVER['PATH_INFO'] );

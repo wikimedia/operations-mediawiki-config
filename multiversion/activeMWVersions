@@ -1,6 +1,7 @@
 #!/usr/bin/env php
 <?php
 error_reporting( 0 );
+requre_once( dirname( __FILE__ ) . '/defines.php' );
 /*
  * Returns a space separated list of all active MW versions (e.g. "x.xx").
  * Versions are read from /usr/local/apache/common-local/wikiversions.cdb.
@@ -20,9 +21,9 @@ function getActiveWikiVersions() {
 	array_shift( $options ); // first item is this file
 
 	if ( in_array( '--home', $options ) ) {
-		$path = '/home/wikipedia/common/wikiversions.dat';
+		$path = MULTIVER_CDB_DIR_HOME . '/wikiversions.dat';
 	} else {
-		$path = '/usr/local/apache/common-local/wikiversions.dat';
+		$path = MULTIVER_CDB_DIR_APACHE . '/wikiversions.dat';
 	}
 
 	$verList = array_filter( explode( "\n", file_get_contents( $path ) ) );
