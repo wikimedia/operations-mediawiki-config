@@ -27,7 +27,7 @@ function switchAllMediaWikis() {
 	}
 
 	if ( !$argsValid ) {
-		die( "Usage: upgradeMediaWikis php-X.XX php-X.XX\n" );
+		die( "Usage: switchAllMediaWikis php-X.XX php-X.XX\n" );
 	}
 
 	if ( !file_exists( "$common/$newVersion" ) ) {
