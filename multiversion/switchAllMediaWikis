@@ -40,24 +40,15 @@ function switchAllMediaWikis() {
 		die( "Unable to read wikiversions.dat.\n" );
 	}
 
-	$datList = "";
+	$what = '/^(\w+) ' . preg_quote( $oldVersion ) . '( |$)/';
+	$with = '$1 ' . $newVersion . '$2';
+
 	$count = 0;
+	$datList = "";
 	foreach ( $verList as $row ) {
-		$items = explode( ' ', trim( $row ) );
-		# Existing values...
-		$dbName = $items[0];
-		$version = $items[1];
-		$extVersion = isset( $items[2] ) ? $items[2] : '';
-		# Update this wiki?
-		if ( $version === $oldVersion || $oldVersion === 'all' ) {
-			$version = $newVersion; // switch!
-			$count++;
-		}
-		if ( $extVersion !== '' ) {
-			$datList .= "{$dbName} {$version} {$extVersion}\n";
-		} else {
-			$datList .= "{$dbName} {$version}\n";
-		}
+		$n = 0;
+		$datList .= preg_replace( $what, $with, trim( $row ), -1, $n ) . "\n";
+		$count += $n;
 	}
 
 	# Backup old wikiversions.dat...
