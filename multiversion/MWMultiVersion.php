@@ -1,5 +1,5 @@
 <?php
-requre_once( dirname( __FILE__ ) . '/defines.php' );
+require_once( dirname( __FILE__ ) . '/defines.php' );
 /**
  * Class to handle basic information related to what
  * version of MediaWiki is running on a wiki installation.
