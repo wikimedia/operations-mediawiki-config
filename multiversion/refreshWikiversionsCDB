@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 error_reporting( E_ALL );
-requre_once( dirname( __FILE__ ) . '/defines.php' );
+require_once( dirname( __FILE__ ) . '/defines.php' );
 /*
  * Populate wikiversions.cdb file using all the items in wikiversions.dat
  *

@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 error_reporting( E_ALL );
-requre_once( dirname( __FILE__ ) . '/defines.php' );
+require_once( dirname( __FILE__ ) . '/defines.php' );
 /*
  * This script switches all wikis running one version to another version.
  * It merely changes the wikiversions.dat and wikiversions.cdb files on /home,
