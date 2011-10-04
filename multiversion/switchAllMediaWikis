@@ -52,7 +52,8 @@ function switchAllMediaWikis() {
 	}
 
 	# Backup old wikiversions.dat...
-	$backupPath = "$common/multiversion/backup/wikiversions-" . wfTimestampNow() . ".dat";
+	$timestamp = date( 'c' ); // ISO 8601
+	$backupPath = "$common/multiversion/backup/wikiversions-$timestamp.dat";
 	if ( !copy( $datPath, $backupPath ) ) {
 		die( "Unable to write backup file `$backupPath`.\n" );
 	}
