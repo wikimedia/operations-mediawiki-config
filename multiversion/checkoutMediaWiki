@@ -3,7 +3,7 @@
 error_reporting( E_ALL );
 /**
  * Automatically SVN checkout a MediaWiki version and do some basic wmf setup.
- * LocalSettings.php will be created (which loads CommonSettings.php) and verious
+ * LocalSettings.php will be created (which loads CommonSettings.php) and various
  * symlinks will also be created.
  *
  * The first argument is the SVN directory (relative to mediawiki/branches/wmf).
@@ -11,8 +11,7 @@ error_reporting( E_ALL );
  * The second argument is the target path (relative to /home/wikipedia/common/)
  * to store local copy of the SVN checkout. This is typically of the format "php-X.XX".
  *
- * The script will not run if files already existing in the target directory.
- * Also, assume the user running this script must have an SVN account
+ * This script assumes that the user running this script has an SVN account
  * with the SSH agent/key available.
  *
  * @return void
