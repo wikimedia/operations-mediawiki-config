@@ -26,7 +26,7 @@ function checkoutMediaWiki() {
 		$svnVersion = $argv[1]; // e.g. "X.XXwmfX"
 		$dstVersion = $argv[2]; // e.g. "php-X.XX"
 		if ( preg_match( '/^php-((?:\d+\.\d+|trunk)(?:-\w+)?)$/', $dstVersion, $m ) ) {
-			$dstVersionNum = $m[1];
+			$dstVersionNum = $m[1]; // everything after 'php-'
 			$argsValid = true;
 		}
 	}
@@ -118,7 +118,7 @@ EOT;
 	createSymlink( $path, $link, "Created live-1.5/resources-$dstVersionNum symlink." );
 
 	# Create libs symlinks...
-	$libDir = "$commonHomeDir/php-$dstVersionNum/lib";
+	$libDir = "$destIP/lib";
 	if ( !file_exists( $libDir ) ) {
 		mkdir( $libDir, 0775 );
 	}
@@ -132,7 +132,7 @@ EOT;
 	}
 
 	# Create l10n cache dir
-	$l10nDir = "$commonHomeDir/php-$dstVersionNum/cache/l10n";
+	$l10nDir = "$destIP/cache/l10n";
 	if ( !file_exists( $l10nDir ) ) {
 		if ( mkdir( $l10nDir, 0775 ) ) {
 			print "Created php-$dstVersionNum/cache/l10n directory.\n";
