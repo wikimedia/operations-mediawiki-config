@@ -1,0 +1,67 @@
+#!/usr/bin/env php
+<?php
+error_reporting( E_ALL );
+/**
+ * Delete various symlinks created by checkoutMediaWiki.
+ *
+ * The first argument is target path (relative to /home/wikipedia/common/)
+ * storing the local copy of the SVN checkout. This is typically of the format "php-X.XX".
+ *
+ * @return void
+ */
+function deleteMediaWiki() {
+	global $argv;
+	$commonHomeDir = '/home/wikipedia/common';
+
+	$argsValid = false;
+	if ( count( $argv ) >= 2 ) {
+		$dstVersion = $argv[1]; // e.g. "php-X.XX"
+		if ( preg_match( '/^php-((?:\d+\.\d+|trunk)(?:-\w+)?)$/', $dstVersion, $m ) ) {
+			$dstVersionNum = $m[1]; // everything after 'php-'
+			$argsValid = true;
+		}
+	}
+
+	if ( !$argsValid ) {
+		die( "Usage: deleteMediaWiki php-X.XX\n" );
+	}
+
+	# MW install path
+	$destIP = "$commonHomeDir/$dstVersion";
+
+	echo "Deleting symlink files for MediaWiki install at $destIP...\n\n";
+
+	# Check the destination path of the SVN checkout...
+	if ( !file_exists( $destIP ) ) {
+		die( "No MediaWiki install at $destIP.\n" );
+	}
+
+	# Destroy symlinks created by checkoutMediaWiki outside of $destIP
+	$symlinks = array(
+		"$commonHomeDir/docroot/bits/skins-$dstVersionNum",
+		"$commonHomeDir/docroot/bits/w/extensions-$dstVersionNum",
+		"$commonHomeDir/docroot/secure/skins-$dstVersionNum",
+		"$commonHomeDir/live-1.5/extensions-$dstVersionNum",
+		"$commonHomeDir/live-1.5/skins-$dstVersionNum",
+		"$commonHomeDir/live-1.5/resources-$dstVersionNum"
+	);
+	foreach ( $symlinks as $path ) {
+		deleteSymlink( $path );
+	}
+
+	print "\nReferences to MediaWiki $dstVersionNum deleted.\n";
+}
+
+function deleteSymlink( $path ) {
+	if ( !file_exists( $path ) ) {
+		print "Symlink file already removed: $path\n";
+	} elseif ( filetype( $path ) !== 'link' ) { // sanity
+		print "Expected symlink file is not actually a symlink: $path\n";
+	} else {
+		if ( unlink( $path ) ) {
+			print "Symlink file removed: $path\n";
+		}
+	}
+}
+
+deleteMediaWiki();

@@ -35,13 +35,15 @@ function checkoutMediaWiki() {
 		die( "Usage: checkoutMediaWiki X.XXwmfX php-X.XX\n" );
 	}
 
-	echo "Creating new MediaWiki install at $commonHomeDir/$dstVersion...\n\n";
+	# MW install path
+	$destIP = "$commonHomeDir/$dstVersion";
+
+	echo "Creating new MediaWiki install at $destIP...\n\n";
 
 	# The url to SVN to checkout from
 	$source = "svn+ssh://svn.wikimedia.org/svnroot/mediawiki/branches/wmf/$svnVersion";
 
 	# Create the destination path to SVN checkout to...
-	$destIP = "$commonHomeDir/$dstVersion";
 	if ( file_exists( $destIP ) ) {
 		print "Skipping checkout, the directory $destIP already exists.\n";
 	} else {
