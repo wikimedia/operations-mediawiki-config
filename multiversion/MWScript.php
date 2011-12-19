@@ -46,6 +46,7 @@ function getMWScriptWithArgs() {
 		'maintenance/rebuildInterwiki.php',
 		'extensions/WikimediaMaintenance/addWiki.php', // 1.19
 		'extensions/WikimediaMaintenance/dumpInterwiki.php', // 1.19
+		'extensions/WikimediaMaintenance/getJobQueueLengths.php',
 		'extensions/WikimediaMaintenance/rebuildInterwiki.php' // 1.19
 	);
 
