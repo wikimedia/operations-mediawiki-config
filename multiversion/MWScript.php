@@ -23,12 +23,6 @@ function getMWScriptWithArgs() {
 		die( "The MediaWiki script file path must be the first argument.\n" );
 	}
 
-	$relFile = $argv[1]; // the script file to run
-	# If no MW directory is given then assume this is a /maintenance script
-	if ( strpos( $relFile, '/' ) === false ) {
-		$relFile = "maintenance/$relFile"; // convenience
-	}
-
 	# Remove effects of this wrapper from $argv...
 	array_shift( $argv ); // remove this file's name from args
 	# Code stolen from wfBasename() in GlobalFunctions.php :)
@@ -50,20 +44,34 @@ function getMWScriptWithArgs() {
 		'extensions/WikimediaMaintenance/rebuildInterwiki.php' // 1.19
 	);
 
+	# MWScript.php should be in common/
+	require_once( dirname( __FILE__ ) . '/MWVersion.php' );
+
+	$relFile = $argv[0];
+
+	if ( strpos( $relFile, '/' ) === false ) {
+		// If no MW directory is given then assume this is either
+		// a /maintenance or an extensions/WikimediaMaintenance/
+		// script
+		$file = getMediaWikiCli( "maintenance/$relFile" );
+		if ( !file_exists( $file ) ) {
+			$file = getMediaWikiCli( "extensions/WikimediaMaintenance/$relFile" );
+		}
+	} else {
+		$file = getMediaWikiCli( $relFile );
+	}
+
+	if ( !file_exists( $file  ) ) {
+		die( "The MediaWiki script file \"{$file}\" does not exist.\n" );
+	}
+
 	# Check if a --wiki param was given...
 	# Maintenance.php will treat $argv[1] as the wiki if it doesn't start '-'
 	if ( !isset( $argv[1] ) || !preg_match( '/^([^-]|--wiki(=|$))/', $argv[1] ) ) {
 		if ( in_array( $relFile, $wikiless ) ) {
-			# Assumme aawiki as Maintenance.php does.
+			# Assume aawiki as Maintenance.php does.
 			$argv = array_merge( array( $argv[0], "--wiki=aawiki" ), array_slice( $argv, 1 ) );
 		}
-	}
-
-	# MWScript.php should be in common/
-	require_once( dirname( __FILE__ ) . '/MWVersion.php' );
-	$file = getMediaWikiCli( $relFile );
-	if ( !file_exists( $file ) ) {
-		die( "The MediaWiki script file \"{$file}\" does not exist.\n" );
 	}
 
 	return $file;

@@ -17,7 +17,7 @@
  */
 function getMediaWiki( $file ) {
 	global $IP;
-	require( dirname( __FILE__ ) . '/MWMultiVersion.php' );
+	require_once( dirname( __FILE__ ) . '/MWMultiVersion.php' );
 
 	$scriptName = @$_SERVER['SCRIPT_NAME'];
 	$serverName = @$_SERVER['SERVER_NAME'];
@@ -78,8 +78,11 @@ function getMediaWiki( $file ) {
 function getMediaWikiCli( $file ) {
 	global $IP;
 
-	require( dirname( __FILE__ ) . '/MWMultiVersion.php' );
-	$multiVersion = MWMultiVersion::initializeForMaintenance();
+	static $multiVersion = null;
+	if( !$multiVersion ) {
+		require_once( dirname( __FILE__ ) . '/MWMultiVersion.php' );
+		$multiVersion = MWMultiVersion::initializeForMaintenance();
+	}
 	if ( $multiVersion->getDatabase() === 'testwiki' ) {
 		define( 'TESTWIKI', 1 );
 	}
