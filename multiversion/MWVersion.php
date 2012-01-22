@@ -78,9 +78,9 @@ function getMediaWiki( $file ) {
 function getMediaWikiCli( $file ) {
 	global $IP;
 
-	static $multiVersion = null;
+	require_once( dirname( __FILE__ ) . '/MWMultiVersion.php' );
+	$multiVersion = MWMultiVersion::getInstance();
 	if( !$multiVersion ) {
-		require_once( dirname( __FILE__ ) . '/MWMultiVersion.php' );
 		$multiVersion = MWMultiVersion::initializeForMaintenance();
 	}
 	if ( $multiVersion->getDatabase() === 'testwiki' ) {
