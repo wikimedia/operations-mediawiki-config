@@ -213,6 +213,26 @@ class MWMultiVersion {
 	}
 
 	/**
+	 * Handler for the wfShellMaintenanceCmd hook.
+	 * This converts shell commands like "php $IP/maintenance/foo.php" into
+	 * commands that use the "MWScript.php" wrapper, for example:
+	 * "php /home/wikipedia/common/multiversion/MWScript.php maintenance/foo.php"
+	 * 
+	 * @param &$script string
+	 * @param &$params Array
+	 * @param &$options Array
+	 * @return boolean 
+	 */
+	public static function onWfShellMaintenanceCmd( &$script, array &$params, array &$options ) {
+		global $IP;
+		if ( strpos( $script, "{$IP}/" ) === 0 ) {
+			$script = substr( $script, strlen( "{$IP}/" ) );
+			$options['wrapper'] = '/home/wikipedia/common/multiversion/MWScript.php';
+		}
+		return true;
+	}
+
+	/**
 	 * Get the space-seperated list of version params for this wiki.
 	 * The first item is the MW version and the optional second item
 	 * an extra version parameter to use for builds and caches.
