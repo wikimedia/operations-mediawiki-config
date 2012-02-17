@@ -34,7 +34,7 @@ function getMediaWiki( $file ) {
 	# Wiki doesn't exist yet?
 	if ( $multiVersion->isMissing() ) {
 		header( "Cache-control: no-cache" ); // same hack as CommonSettings.php
-		include( "/usr/local/apache/common-local/wmf-config/missing.php" );
+		include( MULTIVER_404SCRIPT_PATH_APACHE );
 		exit;
 	}
 
@@ -52,9 +52,9 @@ function getMediaWiki( $file ) {
 		define( 'TESTWIKI', 1 );
 		# Test wiki mostly runs off the version of MediaWiki on /home.
 		# As horrible hack for NFS-less image scalers, use regular docroot for thumbs?
-		$IP = "/home/wikipedia/common/$version";
+		$IP = MULTIVER_COMMON_HOME . "/$version";
 	} else {
-		$IP = "/usr/local/apache/common-local/$version";
+		$IP = MULTIVER_COMMON_APACHE . "/$version";
 	}
 
 	chdir( $IP );
