@@ -52,19 +52,20 @@ function switchAllMediaWikis() {
 	}
 
 	# Backup old wikiversions.dat...
-	$timestamp = date( 'c' ); // ISO 8601
-	$backupPath = "$common/multiversion/backup/wikiversions-$timestamp.dat";
-	if ( !copy( $datPath, $backupPath ) ) {
-		die( "Unable to write backup file `$backupPath`.\n" );
-	}
-	echo "Wrote backup file `$backupPath`.\n";
+	$retVal = 1;
+	passthru( "cd $common/multiversion && ./backupWikiversions", $retVal );
+	( $retVal == 0 ) or die( 1 );
 
 	# Update wikiversions.dat...
-	if ( !file_put_contents( $datPath, $datList ) ) {
+	if ( !file_put_contents( $datPath, $datList, LOCK_EX ) ) {
 		die( "Unable to write to wikiversions.dat.\n" );
 	}
+	echo "Updated wikiversions.dat.\n";
+
 	# Rebuild wikiversions.cdb...
-	shell_exec( "cd $common/multiversion && ./refreshWikiversionsCDB" );
+	$retVal = 1;
+	passthru( "cd $common/multiversion && ./refreshWikiversionsCDB", $retVal );
+	( $retVal == 0 ) or die( 1 );
 
 	echo "Re-configured $count wiki(s) from $oldVersion to $newVersion.\n";
 }
