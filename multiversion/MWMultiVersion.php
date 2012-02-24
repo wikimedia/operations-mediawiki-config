@@ -227,7 +227,7 @@ class MWMultiVersion {
 		global $IP;
 		if ( strpos( $script, "{$IP}/" ) === 0 ) {
 			$script = substr( $script, strlen( "{$IP}/" ) );
-			$options['wrapper'] = '/home/wikipedia/common/multiversion/MWScript.php';
+			$options['wrapper'] = dirname( __FILE__ ) . '/MWScript.php';
 		}
 		return true;
 	}
