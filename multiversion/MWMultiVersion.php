@@ -337,6 +337,8 @@ class MWMultiVersion {
 		if ( php_sapi_name() !== 'cli' ) {
 			$msg = htmlspecialchars( $msg );
 		}
-		die( $msg );
+		header( 'HTTP/1.1 500 Internal server error' );
+		echo $msg;
+		exit( 1 );
 	}
 }
