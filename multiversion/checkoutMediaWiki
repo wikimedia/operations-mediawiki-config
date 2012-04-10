@@ -24,8 +24,8 @@ function checkoutMediaWiki() {
 	$argsValid = false;
 	if ( count( $argv ) >= 3 ) {
 		$svnVersion = $argv[1]; // e.g. "X.XXwmfX"
-		$dstVersion = $argv[2]; // e.g. "php-X.XX"
-		if ( preg_match( '/^php-((?:\d+\.\d+|trunk)(?:-\w+)?)$/', $dstVersion, $m ) ) {
+		$dstVersion = $argv[2]; // e.g. "php-X.XXwmf1"
+		if ( preg_match( '/^php-(\d+\.\d+wmf\d+|master)$/', $dstVersion, $m ) ) {
 			$dstVersionNum = $m[1]; // everything after 'php-'
 			$argsValid = true;
 		}
@@ -39,7 +39,7 @@ function checkoutMediaWiki() {
 	$destIP = "$commonHomeDir/$dstVersion";
 
 	echo "Creating new MediaWiki install at $destIP...\n\n";
-
+/*
 	# The url to SVN to checkout from
 	$source = "svn+ssh://svn.wikimedia.org/svnroot/mediawiki/branches/wmf/$svnVersion";
 
@@ -61,6 +61,7 @@ function checkoutMediaWiki() {
 		}
 		print "...SVN checkout done.\n";
 	}
+*/
 
 	$localSettingsCode = <<<EOT
 <?php
