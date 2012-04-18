@@ -24,7 +24,7 @@ function checkoutMediaWiki() {
 	$argsValid = false;
 	if ( count( $argv ) >= 3 ) {
 		$svnVersion = $argv[1]; // e.g. "X.XXwmfX"
-		$dstVersion = $argv[2]; // e.g. "php-X.XXwmf1"
+		$dstVersion = $argv[2]; // e.g. "php-X.XXwmfX"
 		if ( preg_match( '/^php-(\d+\.\d+wmf\d+|master)$/', $dstVersion, $m ) ) {
 			$dstVersionNum = $m[1]; // everything after 'php-'
 			$argsValid = true;
@@ -32,7 +32,7 @@ function checkoutMediaWiki() {
 	}
 
 	if ( !$argsValid ) {
-		die( "Usage: checkoutMediaWiki X.XXwmfX php-X.XX\n" );
+		die( "Usage: checkoutMediaWiki X.XXwmfX php-X.XXwmfX\n" );
 	}
 
 	# MW install path
