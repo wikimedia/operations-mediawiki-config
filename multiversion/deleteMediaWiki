@@ -38,12 +38,9 @@ function deleteMediaWiki() {
 
 	# Destroy symlinks created by checkoutMediaWiki outside of $destIP
 	$symlinks = array(
-		"$commonHomeDir/docroot/bits/skins-$dstVersionNum",
-		"$commonHomeDir/docroot/bits/w/extensions-$dstVersionNum",
+		"$commonHomeDir/docroot/bits/static-$dstVersionNum",
 		"$commonHomeDir/docroot/secure/skins-$dstVersionNum",
-		"$commonHomeDir/live-1.5/extensions-$dstVersionNum",
-		"$commonHomeDir/live-1.5/skins-$dstVersionNum",
-		"$commonHomeDir/live-1.5/resources-$dstVersionNum"
+		"$commonHomeDir/live-1.5/static-$dstVersionNum",
 	);
 	foreach ( $symlinks as $path ) {
 		deleteSymlink( $path );

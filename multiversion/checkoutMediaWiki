@@ -94,31 +94,43 @@ EOT;
 	createSymlink( $path, $link, "Created StartProfiler.php symlink." );
 
 	# Create bits.wikimedia.org symlinks...
-	$path = "$commonHomeDir/docroot/bits/skins-$dstVersionNum";
+	$bitsStaticDir = "$commonHomeDir/docroot/bits/static-$dstVersionNum";
+	if ( !file_exists( $bitsStaticDir ) ) {
+		mkdir( $bitsStaticDir, 0775 );
+	}
+	$path = "$commonHomeDir/docroot/bits/static-$dstVersionNum/skins";
 	$link = "$commonLocalDir/php-$dstVersionNum/skins/";
-	createSymlink( $path, $link, "Created skins-$dstVersionNum symlink." );
+	createSymlink( $path, $link, "Created static-$dstVersionNum/skins symlink." );
 
-	$path = "$commonHomeDir/docroot/bits/w/extensions-$dstVersionNum";
+	$path = "$commonHomeDir/docroot/bits/static-$dstVersionNum/extensions";
 	$link = "$commonLocalDir/php-$dstVersionNum/extensions";
-	createSymlink( $path, $link, "Created w/extensions-$dstVersionNum symlink." );
+	createSymlink( $path, $link, "Created static-$dstVersionNum/extensions symlink." );
+
+	$path = "$commonHomeDir/docroot/bits/static-$dstVersionNum/resources";
+	$link = "$commonLocalDir/php-$dstVersionNum/resources";
+	createSymlink( $path, $link, "Created static-$dstVersionNum/resources symlink." );
 
 	# Create secure.wikimedia.org symlinks...
 	$path = "$commonHomeDir/docroot/secure/skins-$dstVersionNum";
 	$link = "$commonLocalDir/php-$dstVersionNum/skins";
 	createSymlink( $path, $link, "Created secure/skins-$dstVersionNum symlink." );
 
-	# Create skins/resources symlinks...
-	$path = "$commonHomeDir/live-1.5/extensions-$dstVersionNum";
-	$link = "$commonLocalDir/php-$dstVersionNum/extensions";
-	createSymlink( $path, $link, "Created live-1.5/extensions-$dstVersionNum symlink." );
-
-	$path = "$commonHomeDir/live-1.5/skins-$dstVersionNum";
+	# Create static- symlinks in live-1.5...
+	$liveStaticDir = "$commonHomeDir/live-1.5/static-$dstVersionNum";
+	if ( !file_exists( $liveStaticDir ) ) {
+		mkdir( $liveStaticDir, 0775 );
+	}
+	$path = "$commonHomeDir/live-1.5/static-$dstVersionNum/skins";
 	$link = "$commonLocalDir/php-$dstVersionNum/skins";
-	createSymlink( $path, $link, "Created live-1.5/skins-$dstVersionNum symlink." );
+	createSymlink( $path, $link, "Created live-1.5/static-$dstVersionNum/skins symlink." );
 
-	$path = "$commonHomeDir/live-1.5/resources-$dstVersionNum";
-	$link = "$commonLocalDir/php-$dstVersionNum";
-	createSymlink( $path, $link, "Created live-1.5/resources-$dstVersionNum symlink." );
+	$path = "$commonHomeDir/live-1.5/static-$dstVersionNum/extensions";
+	$link = "$commonLocalDir/php-$dstVersionNum/extensions";
+	createSymlink( $path, $link, "Created live-1.5/static-$dstVersionNum/extensions symlink." );
+
+	$path = "$commonHomeDir/live-1.5/static-$dstVersionNum/resources";
+	$link = "$commonLocalDir/php-$dstVersionNum/resources";
+	createSymlink( $path, $link, "Created live-1.5/static-$dstVersionNum/resources symlink." );
 
 	# Create libs symlinks...
 	$libDir = "$destIP/lib";
