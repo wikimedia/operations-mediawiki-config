@@ -39,7 +39,7 @@ function populateWikiversionsCDB() {
 	}
 
 	# Create wikiversions.dat...
-	$path = "$common/wikiversions.dat";
+	$path = MULTIVER_CDB_DIR_HOME . "/wikiversions.dat";
 	if ( !file_put_contents( $path, $datList ) ) {
 		die( "Unable to write to wikiversions.dat.\n" );
 	}
