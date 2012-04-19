@@ -38,12 +38,23 @@ function deleteMediaWiki() {
 
 	# Destroy symlinks created by checkoutMediaWiki outside of $destIP
 	$symlinks = array(
-		"$commonHomeDir/docroot/bits/static-$dstVersionNum",
+		"$commonHomeDir/docroot/bits/static-$dstVersionNum/skins",
+		"$commonHomeDir/docroot/bits/static-$dstVersionNum/extensions",
+		"$commonHomeDir/docroot/bits/static-$dstVersionNum/resources",
 		"$commonHomeDir/docroot/secure/skins-$dstVersionNum",
+		"$commonHomeDir/live-1.5/static-$dstVersionNum/skins",
+		"$commonHomeDir/live-1.5/static-$dstVersionNum/extensions",
+		"$commonHomeDir/live-1.5/static-$dstVersionNum/resources",
+	);
+	$directories = array(
+		"$commonHomeDir/docroot/bits/static-$dstVersionNum",
 		"$commonHomeDir/live-1.5/static-$dstVersionNum",
 	);
 	foreach ( $symlinks as $path ) {
 		deleteSymlink( $path );
+	}
+	foreach ( $directories as $dir ) {
+		deleteDirectory( $dir );
 	}
 
 	print "\nReferences to MediaWiki $dstVersionNum deleted.\n";
@@ -57,6 +68,22 @@ function deleteSymlink( $path ) {
 	} else {
 		if ( unlink( $path ) ) {
 			print "Symlink file removed: $path\n";
+		} else {
+			print "COULD NOT REMOVE SYMLINK: $path\n";
+		}
+	}
+}
+
+function deleteDirectory( $path ) {
+	if ( !file_exists( $path ) ) {
+		print "Directory already removed: $path\n";
+	} elseif ( filetype( $path ) !== 'dir' ) { // sanity
+		print "Expected directory is not actually a directory: $path\n";
+	} else {
+		if ( rmdir( $path ) ) {
+			print "Directory removed: $path\n";
+		} else {
+			print "COULD NOT REMOVE DIRECTORY: $path\n";
 		}
 	}
 }
