@@ -217,11 +217,11 @@ class MWMultiVersion {
 	 * This converts shell commands like "php $IP/maintenance/foo.php" into
 	 * commands that use the "MWScript.php" wrapper, for example:
 	 * "php /home/wikipedia/common/multiversion/MWScript.php maintenance/foo.php"
-	 * 
+	 *
 	 * @param &$script string
 	 * @param &$params Array
 	 * @param &$options Array
-	 * @return boolean 
+	 * @return boolean
 	 */
 	public static function onWfShellMaintenanceCmd( &$script, array &$params, array &$options ) {
 		global $IP;
@@ -339,6 +339,7 @@ class MWMultiVersion {
 		}
 		header( 'HTTP/1.1 500 Internal server error' );
 		echo $msg;
-		exit( 1 );
+		trigger_error( $msg, E_USER_ERROR );
+		exit( 1 ); // sanity
 	}
 }
