@@ -33,7 +33,7 @@ do
 	echo "-------------------------------------"
 	echo "$DBNAME"
 	echo "-------------------------------------"
-	php /usr/local/apache/common-local/multiversion/MWScript.php "$SCRIPTFILE" "$DBNAME" "$SCRIPTARGS"
+	mwscript "$SCRIPTFILE" "$DBNAME" $SCRIPTARGS
 	echo "-------------------------------------"
 	echo ""
 done
