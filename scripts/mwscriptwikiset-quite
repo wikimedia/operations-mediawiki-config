@@ -31,7 +31,7 @@ SCRIPTARGS="${SCRIPTARGS[@]}"
 # Run the script on all wikis in the dblist                                                                                                      
 for DBNAME in $(cat $COMMONDIR/$LISTFILE)                                                                                                        
 do                                                                                                                                               
-	RES=$(php /home/wikipedia/common/multiversion/MWScript.php "$SCRIPTFILE" "$DBNAME" $SCRIPTARGS)                                        
+	RES=$(mwscript "$SCRIPTFILE" "$DBNAME" $SCRIPTARGS)                                        
 	if [ -n "$RES" ]; then                                                                                                                   
 		echo "-------------------------------------"                                                                                     
 		echo "$DBNAME"                                                                                                                   
