@@ -14,7 +14,7 @@ function refreshWikiversionsCDB() {
 	$finalDBPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.cdb';
 
 	// Get the array of sanitized wikiversion rows...
-	$rows = MWWikiversions::getWikiVerionRows( $srcPath );
+	$rows = MWWikiversions::readWikiVersionsFile( $srcPath );
 
 	# Build the new database at the temp location...
 	@unlink( $tmpDBPath ); // clear any old temp file for sanity

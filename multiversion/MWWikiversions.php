@@ -9,7 +9,7 @@ class MWWikiversions {
 	 * @param $srcPath string Path to wikiversions.dat
 	 * @return Array List of wiki version rows
 	 */
-	public static function getWikiVerionRows( $srcPath ) {
+	public static function readWikiVersionsFile( $srcPath ) {
 		$data = file_get_contents( $srcPath );
 		if ( $data === false ) {
 			die( "Unable to read $srcPath.\n" );
@@ -84,7 +84,7 @@ class MWWikiversions {
 	 * @param $srcPath string
 	 * @return Array (DB name => position in list)
 	 */
-	public static function getDbList( $srcPath ) {
+	public static function readDbListFile( $srcPath ) {
 		$data = file_get_contents( $srcPath );
 		if ( $data === false ) {
 			die( "Unable to read $srcPath.\n" );

@@ -40,10 +40,10 @@ function switchAllMediaWikis() {
 	}
 
 	# Read in .dblist file into an array with dbnames as keys...
-	$dbList = MWWikiversions::getDbList( "$common/$dbListName" );
+	$dbList = MWWikiversions::readDbListFile( "$common/$dbListName" );
 
 	# Get all the wikiversion rows in wikiversions.dat...
-	$versionRows = MWWikiversions::getWikiVerionRows( $datPath );
+	$versionRows = MWWikiversions::readWikiVersionsFile( $datPath );
 
 	$count = 0;
 	$newWikiVersionsData = "";
