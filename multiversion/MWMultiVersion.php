@@ -321,7 +321,7 @@ class MWMultiVersion {
 		$this->loadVersionInfo();
 		$this->assertNotMissing(); // caller should have checked isMissing()
 		$ver = $this->getVersionNumber();
-		if ( $this->extVersion !== '' ) {
+		if ( $this->extVersion !== '' && $this->extVersion !== '*' ) {
 			$ver .= "-{$this->extVersion}";
 		}
 		return $ver;
