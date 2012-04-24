@@ -2,6 +2,7 @@
 <?php
 error_reporting( E_ALL );
 require_once( dirname( __FILE__ ) . '/defines.php' );
+require_once( dirname( __FILE__ ) . '/MWWikiversions.php' );
 /*
  * Populate wikiversions.cdb file using all the items in wikiversions.dat
  *
@@ -13,7 +14,7 @@ function refreshWikiversionsCDB() {
 	$finalDBPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.cdb';
 
 	// Get the array of sanitized wikiversion rows...
-	$rows = getWikiVerionRows( $srcPath );
+	$rows = MWWikiversions::getWikiVerionRows( $srcPath );
 
 	# Build the new database at the temp location...
 	@unlink( $tmpDBPath ); // clear any old temp file for sanity
@@ -22,7 +23,7 @@ function refreshWikiversionsCDB() {
 		die( "Unable to create wikiversions.cdb.tmp.\n" );
 	}
 	foreach ( $rows as $row ) {
-		list( $dbName, $version, $extVersion ) = $row;
+		list( $dbName, $version, $extVersion, $comment ) = $row;
 		dba_insert( "ver:$dbName", $version, $db );
 		dba_insert( "ext:$dbName", $extVersion, $db );
 	}
@@ -40,47 +41,6 @@ function refreshWikiversionsCDB() {
 	chmod( $finalDBPath, 0664 ); // rw-rw-r
 
 	print "wikiversions.cdb successfully built.\n";
-}
-
-function getWikiVerionRows( $srcPath ) {
-	$data = file_get_contents( $srcPath );
-	if ( $data === false ) {
-		die( "Unable to read wikiversions.dat.\n" );
-	}
-	// Read the lines of the dat file into an array...
-	$verList = array_filter( explode( "\n", $data ) );
-	if ( !count( $verList ) ) {
-		die( "Empty table in wikiversions.dat.\n" );
-	}
-
-	$result = array();
-	foreach ( $verList as $lineNo => $line ) {
-		// Strip comments and ignore comment lines...
-		$len = strcspn( $line, '#' );
-		if ( $len === 0 ) {
-			continue; // comment line
-		}
-		$row = substr( $line, 0, $len );
-
-		// Get the column values for this row...
-		$items = explode( ' ', trim( $row ) ); // cleanup w/s
-		if ( count( $items ) === 3 ) {
-			list( $dbName, $version, $extVersion ) = $items;
-		} elseif ( count( $items ) === 2 ) {
-			list( $dbName, $version ) = $items;
-			$extVersion = ''; // none
-		} else {
-			die( "Invalid row on line $lineNo ('$line').\n" );
-		}
-
-		// Sanity check version directory
-		if ( !is_dir( MULTIVER_COMMON_HOME . '/' . $version ) ) {
-			die( "Invalid version dir on line $lineNo ('$line').\n" );
-		}
-
-		$result[] = array( $dbName, $version, $extVersion );
-	}
-	return $result;
 }
 
 refreshWikiversionsCDB();
