@@ -2,53 +2,62 @@
 <?php
 error_reporting( E_ALL );
 require_once( dirname( __FILE__ ) . '/defines.php' );
+require_once( dirname( __FILE__ ) . '/MWWikiversions.php' );
 /*
- * This script switches all wikis running one version to another version.
- * It merely changes the wikiversions.dat and wikiversions.cdb files on /home,
- * so they will still need to be synced to push the upgrade/downgrade.
+ * This script switches all wikis in a .dblist file running one MediaWiki
+ * version to another MediaWiki version. Since this only changes the wikiversions.dat
+ * and wikiversions.cdb files on /home, they will still need to be synced to push
+ * the upgrade/downgrade to the apaches.
  *
- * The first argument is the old version, typically of the format "php-X.XX".
+ * The first argument is the old version, typically of the format "php-X.XXwmfX".
  * If "all" is given, then all wikis will be switched over.
- * The second argument is the new version, typically of the format "php-X.XX".
+ * The second argument is the new version, typically of the format "php-X.XXwmfX".
+ * The third argument is the name of a .dblist file under the common/ dir.
  *
  * @return void
  */
 function switchAllMediaWikis() {
 	global $argv;
-	$common = '/home/wikipedia/common';
+	$common = MULTIVER_COMMON_HOME;
+	$datPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.dat';
 
 	$argsValid = false;
-	if ( count( $argv ) >= 3 ) {
+	if ( count( $argv ) >= 4 ) {
 		$oldVersion = $argv[1]; // e.g. "php-X.XX"
 		$newVersion = $argv[2]; // e.g. "php-X.XX"
 		if ( preg_match( '/^php-(?:\d+\.\d+|trunk)(?:-\d)?$/', $newVersion ) ) {
 			$argsValid = true;
 		}
+		$dbListName = $argv[3]; // e.g. "all.dblist"
 	}
 
 	if ( !$argsValid ) {
-		die( "Usage: switchAllMediaWikis php-X.XX php-X.XX\n" );
+		die( "Usage: switchAllMediaWikis php-X.XXwmfX php-X.XXwmfX <name>.dblist\n" );
 	}
 
-	if ( !file_exists( "$common/$newVersion" ) ) {
+	if ( !is_dir( "$common/$newVersion" ) ) {
 		die( "The directory `$common/$newVersion` does not exist.\n" );
 	}
 
-	$datPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.dat';
-	$verList = array_filter( explode( "\n", file_get_contents( $datPath ) ) );
-	if ( !count( $verList ) ) {
-		die( "Unable to read wikiversions.dat.\n" );
-	}
+	# Read in .dblist file into an array with dbnames as keys...
+	$dbList = MWWikiversions::getDbList( "$common/$dbListName" );
 
-	$what = '/^(\w+) ' . preg_quote( $oldVersion ) . '( |$)/';
-	$with = '$1 ' . $newVersion . '$2';
+	# Get all the wikiversion rows in wikiversions.dat...
+	$versionRows = MWWikiversions::getWikiVerionRows( $datPath );
 
 	$count = 0;
-	$datList = "";
-	foreach ( $verList as $row ) {
-		$n = 0;
-		$datList .= preg_replace( $what, $with, trim( $row ), -1, $n ) . "\n";
-		$count += $n;
+	$newWikiVersionsData = "";
+	# Go through all the rows and do the replacements...
+	foreach ( $versionRows as $row ) {
+		list( $dbName, $version, $extVersion, $comment ) = $row;
+		if ( isset( $dbList[$dbName] ) // wiki is in the .dblist file
+			&& ( $version === $oldVersion || $oldVersion === 'all' ) )
+		{
+			$newWikiVersionsData .= MWWikiversions::lineFromRow(
+				array( $dbName, $newVersion, $extVersion, $comment )
+			);
+			++$count;
+		}
 	}
 
 	# Backup old wikiversions.dat...
@@ -57,7 +66,7 @@ function switchAllMediaWikis() {
 	( $retVal == 0 ) or die( 1 );
 
 	# Update wikiversions.dat...
-	if ( !file_put_contents( $datPath, $datList, LOCK_EX ) ) {
+	if ( !file_put_contents( $datPath, $newWikiVersionsData, LOCK_EX ) ) {
 		die( "Unable to write to wikiversions.dat.\n" );
 	}
 	echo "Updated wikiversions.dat.\n";
