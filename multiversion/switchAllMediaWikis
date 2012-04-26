@@ -53,10 +53,14 @@ function switchAllMediaWikis() {
 		if ( isset( $dbList[$dbName] ) // wiki is in the .dblist file
 			&& ( $version === $oldVersion || $oldVersion === 'all' ) )
 		{
+			# Change the row and add it to the list
 			$newWikiVersionsData .= MWWikiversions::lineFromRow(
 				array( $dbName, $newVersion, $extVersion, $comment )
 			);
 			++$count;
+		} else {
+			# Just add the row back to the list
+			$newWikiVersionsData .= MWWikiversions::lineFromRow( $row );
 		}
 	}
 
