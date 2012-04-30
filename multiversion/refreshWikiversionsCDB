@@ -35,6 +35,9 @@ function refreshWikiversionsCDB() {
 	}
 	foreach ( $rows as $row ) {
 		list( $dbName, $version, $extVersion, $comment ) = $row;
+		if ( $extVersion === '*' ) {
+			$extVersion = ''; // "*" means "none"
+		}
 		dba_insert( "ver:$dbName", $version, $db );
 		dba_insert( "ext:$dbName", $extVersion, $db );
 	}
