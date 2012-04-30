@@ -137,14 +137,6 @@ EOT;
 	if ( !file_exists( $libDir ) ) {
 		mkdir( $libDir, 0775 );
 	}
-	$path = "$libDir/geshi";
-	if ( !file_exists( $path ) ) {
-		if ( symlink( "../../lib/geshi", $path ) ) {
-			print "Created php-$dstVersionNum/lib/geshi symlink.\n";
-		}
-	} else {
-		print "Symlink file already exists: $path\n";
-	}
 
 	# Create l10n cache dir
 	$l10nDir = "$destIP/cache/l10n";
