@@ -22,7 +22,7 @@ function getWikiVersion( $dbName ) {
 		if ( $version !== false ) {
 			return $version; // found version entry
 		}
-		die( "wikiversions.cdb has no extra version entry for `$dbName`.\n" );
+		die( "wikiversions.cdb has no version entry for `$dbName`.\n" );
 	}
 	die( "Unable to open wikiversions.cdb.\n" );
 }
