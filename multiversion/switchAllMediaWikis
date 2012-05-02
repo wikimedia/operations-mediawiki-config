@@ -62,6 +62,7 @@ function switchAllMediaWikis() {
 			# Just add the row back to the list
 			$newWikiVersionsData .= MWWikiversions::lineFromRow( $row );
 		}
+		$newWikiVersionsData .= "\n";
 	}
 
 	# Backup old wikiversions.dat...
