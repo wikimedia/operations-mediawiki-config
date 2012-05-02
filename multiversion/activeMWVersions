@@ -21,39 +21,29 @@ function getActiveWikiVersions() {
 	array_shift( $options ); // first item is this file
 
 	if ( in_array( '--home', $options ) ) {
-		$path = MULTIVER_CDB_DIR_HOME . '/wikiversions.dat';
+		$datPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.dat';
 	} else {
-		$path = MULTIVER_CDB_DIR_APACHE . '/wikiversions.dat';
+		$datPath = MULTIVER_CDB_DIR_APACHE . '/wikiversions.dat';
 	}
 
-	$verList = array_filter( explode( "\n", file_get_contents( $path ) ) );
-	if ( !count( $verList ) ) {
+	# Get all the wikiversion rows in wikiversions.dat...
+	try {
+		$versionRows = MWWikiversions::readWikiVersionsFile( $datPath );
+	} catch( Exception $e ) {
 		if ( in_array( '--report', $options ) ) {
-			echo( "Unable to read wikiversions.dat.\n" );
+			throw $e; // show error
+		} else {
+			die( 1 ); // silent death
 		}
-		die( 1 );
 	}
 
 	$result = $activeVersions = array();
-	foreach ( $verList as $row ) {
-		$items = explode( ' ', trim( $row ) );
-		$dbName = $items[0];
-		$version = $items[1];
-		$extVersion = isset( $items[2] ) ? $items[2] : '';
-
-		if ( substr( $version, 0, 4 ) !== 'php-' ) {
-			if ( in_array( '--report', $options ) ) {
-				echo( "Unable to read wikiversions.dat entry: $version.\n" );
-			}
-			die( 1 );
-		}
-		$version = substr( $version, 4 ); // remove 'php-'
-
-		if ( $extVersion !== '' && in_array( '--extended', $options ) ) {
+	foreach ( $versionRows as $row ) {
+		list( $dbName, $version, $extVersion, $comment ) = $row;
+		if ( $extVersion !== '*' && in_array( '--extended', $options ) ) {
 			$version .= "-$extVersion";
 		}
-
-		if ( !isset( $activeVersions[$version] ) ) {
+		if ( !isset( $activeVersions[$version] ) ) { // already listed?
 			$activeVersions[$version] = 1;
 			if ( in_array( '--withdb', $options ) ) {
 				$result[] = "{$version}={$dbName}";
@@ -61,6 +51,7 @@ function getActiveWikiVersions() {
 				$result[] = "{$version}";
 			}
 		}
+
 	}
 
 	return implode( ' ', $result );
