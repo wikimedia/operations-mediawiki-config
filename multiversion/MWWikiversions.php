@@ -12,12 +12,12 @@ class MWWikiversions {
 	public static function readWikiVersionsFile( $srcPath ) {
 		$data = file_get_contents( $srcPath );
 		if ( $data === false ) {
-			die( "Unable to read $srcPath.\n" );
+			throw new Exception( "Unable to read $srcPath.\n" );
 		}
 		// Read the lines of the dat file into an array...
 		$verList = explode( "\n", $data );
 		if ( !count( $verList ) ) {
-			die( "Empty table in $srcPath.\n" );
+			throw new Exception( "Empty table in $srcPath.\n" );
 		}
 		// Convert each raw line into a row array...
 		$result = array();
@@ -54,12 +54,12 @@ class MWWikiversions {
 			list( $dbName, $version ) = $items;
 			$extVersion = '*'; // none
 		} else {
-			die( "Invalid row on line $lineNo ('$line').\n" );
+			throw new Exception( "Invalid row on line $lineNo ('$line').\n" );
 		}
 
 		// Sanity check version directory
 		if ( !is_dir( MULTIVER_COMMON_HOME . '/' . $version ) ) {
-			die( "Invalid version dir on line $lineNo ('$line').\n" );
+			throw new Exception( "Invalid version dir on line $lineNo ('$line').\n" );
 		}
 
 		return array( $dbName, $version, $extVersion, $comment );
@@ -87,7 +87,7 @@ class MWWikiversions {
 	public static function readDbListFile( $srcPath ) {
 		$data = file_get_contents( $srcPath );
 		if ( $data === false ) {
-			die( "Unable to read $srcPath.\n" );
+			throw new Exception( "Unable to read $srcPath.\n" );
 		}
 		return array_flip( array_filter( explode( "\n", $data ) ) );
 	}
