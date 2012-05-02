@@ -44,7 +44,7 @@ class MWWikiversions {
 			return null; // comment line or empty line
 		}
 		$row = substr( $line, 0, $len );
-		$comment = substr( $line, $len + 1 ); // exclude the '#'
+		$comment = trim( substr( $line, $len + 1 ) ); // exclude the '#'
 
 		// Get the column values for this row...
 		$items = explode( ' ', trim( $row ) ); // cleanup w/s
