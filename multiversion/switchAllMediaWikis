@@ -82,6 +82,7 @@ function switchAllMediaWikis() {
 	( $retVal == 0 ) or die( 1 );
 
 	echo "Re-configured $count wiki(s) from $oldVersion to $newVersion.\n";
+	echo "The DB list contained " . count( $dbList ) . " wikis.\n";
 }
 
 switchAllMediaWikis();
