@@ -25,7 +25,7 @@ function switchAllMediaWikis() {
 	if ( count( $argv ) >= 4 ) {
 		$oldVersion = $argv[1]; // e.g. "php-X.XX"
 		$newVersion = $argv[2]; // e.g. "php-X.XX"
-		if ( preg_match( '/^php-(?:\d+\.\d+|trunk)(?:-\d)?$/', $newVersion ) ) {
+		if ( preg_match( '/^php-(\d+\.\d+wmf\d+|master)$/', $newVersion ) ) {
 			$argsValid = true;
 		}
 		$dbListName = $argv[3]; // e.g. "all.dblist"
