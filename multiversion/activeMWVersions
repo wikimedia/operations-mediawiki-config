@@ -46,6 +46,8 @@ function getActiveWikiVersions() {
 		}
 		if ( !isset( $activeVersions[$version] ) ) { // already listed?
 			$activeVersions[$version] = 1;
+
+			$version = substr( $version, 4 ); // remove 'php-'
 			if ( in_array( '--withdb', $options ) ) {
 				$result[] = "{$version}={$dbName}";
 			} else {
