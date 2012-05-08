@@ -88,7 +88,8 @@ elseif ( $wgDBname == 'bnwiki' ) { // http://bugzilla.wikimedia.org/show_bug.cgi
 	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'editor' ) );
 }
 
-elseif ( $wgDBname == 'testwiki' ) {
+elseif ( $wgDBname == 'testwiki' && false ) {
+	// Disabled temporarily, give testwiki enwiki's settings instead --Roan May 7 2012
 	$wgGroupsAddToSelf['*'][] = 'editor';
 	$wgGroupsAddToSelf['*'][] = 'reviewer';
 	$wgGroupsRemoveFromSelf['*'][] = 'editor';
@@ -161,7 +162,9 @@ elseif ( $wgDBname == 'dewiktionary' ) {
 	$wgFlaggedRevTags['accuracy']['levels'] = 1;
 }
 
-elseif ( $wgDBname == 'enwiki' ) {
+// Temporarily give testwiki enwiki's settings instead, for testing PageTriage --Roan May 7
+elseif ( $wgDBname == 'enwiki' || $wgDBname == 'testwiki' ) {
+
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_PROJECT );
 	# Show only on a per-page basis
 	$wgFlaggedRevsOverride = false;

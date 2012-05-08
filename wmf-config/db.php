@@ -65,49 +65,49 @@ $wgLBFactoryConf = array(
 # per invocation.
 #
 'sectionLoads' => array(
+	's1' => array(
+		'db38'	  => 0,
+		'db36'	  => 400,
+		'db32'	  => 50, # snapshot host
+		'db59'    => 400,
+		'db60'    => 400,
+		'db12'	  => 50, # special: watchlist, etc see groupLoadsByDB hardy - rebuild me
+	),
+	's2' => array(
+		'db52'	  => 0,
+		'db53'	  => 100, # snapshot host
+		'db54'	  => 300,
+		'db57'	  => 300,
+	),
 	/* s3 */ 'DEFAULT' => array(
 		'db39'    => 0,
 		'db34'	  => 400,
 		'db25'	  => 100, # snapshot host
 		'db11'	  => 400,
 	),
-	's2' => array(
-		'db13'	  => 0,
-		'db30'	  => 200,
-		'db24'	  => 100, # Snapshot host
-		'db54'	  => 300,
-	),
-	's7' => array(
-		'db37'  => 0,
-		'db16'	=> 500,
-		'db18'  => 500,  # 20110730 - is racking up ECC errors
-		'db26'	=> 300, # Snapshot hsot
-	),
 	's4' => array(
-		'db22'	 => 0,
-		'db31'	 => 400,
+		'db31'	 => 0,
+		'db22'	 => 400,
 		'db33'	 => 100, # Snapshot host
 		'db51'	 => 400,
 	),
 	's5' => array(
-		'db45'	 => 0,
-		'db35'	 => 500,
+		'db35'	 => 0,
+		'db45'	 => 500,
 		'db44'	 => 500, # snapshot host
 		'db55'	 => 1000,
 	),
 	's6' => array(
-		'db47'	   => 0,
-		'db43'	   => 1000, # hw died 12/18/2011
-		'db46'	   => 400, # snapshot host
+		'db43'	   => 0, # hw died 12/18/2011
+		'db47'	   => 1000,
+		#'db46'	   => 400, # snapshot host
 		'db50'	   => 1000,
 	),
-	's1' => array(
-		'db36'	  => 0,
-		'db12'	  => 50, # special: watchlist, etc see groupLoadsByDB hardy - rebuild me
-		'db32'	  => 50, # snapshot host
-		'db38'	  => 400, # mysql hung, depooled, repooled with lower load. 20110326 -- mark
-		'db52'	  => 400,
-		'db53'    => 400,
+	's7' => array(
+		'db37'  => 0,
+		'db56'  => 500,
+		'db58'	=> 500,
+		'db26'	=> 300, # Snapshot hsot
 	),
 ),
 
@@ -201,6 +201,11 @@ $wgLBFactoryConf = array(
 	'db53'	   => '10.0.6.63', # do not remove or comment out
 	'db54'	   => '10.0.6.64', # do not remove or comment out
 	'db55'	   => '10.0.6.65', # do not remove or comment out
+	'db56'	   => '10.0.6.66', # do not remove or comment out
+	'db57'	   => '10.0.6.67', # do not remove or comment out
+	'db58'	   => '10.0.6.68', # do not remove or comment out
+	'db59'	   => '10.0.6.69', # do not remove or comment out
+	'db60'	   => '10.0.6.70', # do not remove or comment out
 	'db1001'	=> '10.64.0.5', # do not remove or comment out
 	'db1002'	=> '10.64.0.6', # do not remove or comment out
 	'db1003'	=> '10.64.0.7', # do not remove or comment out
@@ -300,10 +305,14 @@ $wgLBFactoryConf = array(
 	# Dedicated server stores
 	'cluster22' => array(
 		'10.0.0.227' => 1, # es3
-		# '10.0.0.248' => 1, # ms3
-		# '10.0.0.249' => 3, # ms2
-		# '10.0.0.250' => 3, # ms1
 		# '10.0.0.225' => 3, #es1
+		'10.0.0.226' => 1, # es2
+		'10.0.0.228' => 1, # es4
+	),
+	#
+	# Dedicated server stores
+	'cluster23' => array(
+		'10.0.0.227' => 1, # es3
 		'10.0.0.226' => 3, # es2
 		'10.0.0.228' => 3, # es4
 	),
@@ -346,19 +355,20 @@ $wgLBFactoryConf = array(
 	'cluster20'	=> array( 'blobs table' => 'blobs_cluster20' ),
 	'cluster21'	=> array( 'blobs table' => 'blobs_cluster21' ),
 	'cluster22'	=> array( 'blobs table' => 'blobs_cluster22' ),
+	'cluster23'	=> array( 'blobs table' => 'blobs_cluster23' ),
 ),
 
 # This key must exist for the master switch script to work
 'readOnlyBySection' => array(
 # 'DEFAULT' => 'Emergency maintenance in progress',
 #	's1'	   => 'Maintenance in progress, please try again in 5 minutes',
-#	's4'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
+#	's2'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
 ),
 
 );
 
 $wgDefaultExternalStore = array(
-	'DB://cluster22',
+	'DB://cluster23',
 );
 $wgMasterWaitTimeout = 2;
 $wgDBAvgStatusPoll = 30000;

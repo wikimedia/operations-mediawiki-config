@@ -22,7 +22,7 @@ $wgHooks['LocalFilePurgeThumbnails'][] = 'wmfPurgeBackendThumbCache';
  * @return true
  */
 function wmfPurgeBackendThumbCache( File $file, $archiveName ) {
-	global $site, $lang; // CommonSettings.php
+	global $site, $lang, $wgDBname; // CommonSettings.php
 
 	// Get thumbnail dir relative to thumb zone
 	if ( $archiveName !== false ) {
@@ -32,7 +32,7 @@ function wmfPurgeBackendThumbCache( File $file, $archiveName ) {
 	}
 
 	// Get the container for the thumb zone and delete the objects
-	$container = wmfGetSwiftThumbContainer( $site, $lang, "$thumbRel/" );
+	$container = wmfGetSwiftThumbContainer( $site, $lang, $wgDBname, "$thumbRel/" );
 	if ( $container ) { // sanity
 		try {
 			$files = $container->list_objects( 0, NULL, "$thumbRel/" );
@@ -41,10 +41,15 @@ function wmfPurgeBackendThumbCache( File $file, $archiveName ) {
 			// Reported by Bidgee on IRC while uploading to commons
 			// http://i638.photobucket.com/albums/uu105/Busabout/Error.png
 			// -- hashar 20120216 - 09:25 UTC
-			wfDebugLog( 'swiftThumb', "bug 34440 InvalidResponseException trying to list_objects. Message `{$e->getMessage()}`; Site: `{$site}` Lang: `{$lang}` ThumbRel: `{$thumbRel}/`" );
+			wfDebugLog( 'swiftThumb', "bug 34440 InvalidResponseException trying to list_objects." .
+				" Message `{$e->getMessage()}`; Site: `{$site}` Lang: `{$lang}` ThumbRel: `{$thumbRel}/`" );
 		}
 		foreach ( $files as $file ) {
 			try {
+				if ( $file === '' ) {
+					wfDebugLog( 'swiftThumb', "SyntaxException trying to delete object with empty name avoided." );
+					continue;
+				}
 				$container->delete_object( $file );
 			} catch ( NoSuchObjectException $e ) { // probably a race condition
 				wfDebugLog( 'swiftThumb', "Could not delete `{$file}`; object does not exist." );
@@ -60,10 +65,11 @@ function wmfPurgeBackendThumbCache( File $file, $archiveName ) {
  *
  * @param $site string
  * @param $lang string
+ * @param $dbName string
  * @param $relPath string Path relative to container
  * @return CF_Container|null
  */
-function wmfGetSwiftThumbContainer( $site, $lang, $relPath ) {
+function wmfGetSwiftThumbContainer( $site, $lang, $dbName, $relPath ) {
 	global $wmfSwiftConfig; // from PrivateSettings.php
 
 	$auth = new CF_Authentication(
@@ -84,9 +90,14 @@ function wmfGetSwiftThumbContainer( $site, $lang, $relPath ) {
 
 	$wikiId = "{$site}-{$lang}";
 
+	$wmfSwiftBigWikis = array( # DO NOT change without proper migration first
+		'commonswiki', 'dewiki', 'enwiki', 'fiwiki', 'frwiki', 'hewiki', 'huwiki', 'idwiki',
+		'itwiki', 'jawiki', 'rowiki', 'ruwiki', 'thwiki', 'trwiki', 'ukwiki', 'zhwiki'
+	);
+
 	// Get the full swift container name, including any shard suffix
 	$name = "{$wikiId}-local-thumb";
-	if ( in_array( $wikiId, array( 'wikipedia-commons', 'wikipedia-en' ) ) ) {
+	if ( in_array( $dbName, $wmfSwiftBigWikis ) ) {
 		// Code stolen from FileBackend::getContainerShard()
 		if ( preg_match( "!^(?:[^/]{2,}/)*[0-9a-f]/(?P<shard>[0-9a-f]{2})(?:/|$)!", $relPath, $m ) ) {
 			$name .= '.' . $m['shard'];
@@ -104,3 +115,69 @@ function wmfGetSwiftThumbContainer( $site, $lang, $relPath ) {
 
 	return $container;
 }
+
+
+/**
+ * @param $file File
+ * @param $thumb MediaTransformOutput|null
+ * @param $tmpThumbPath string FS path
+ * @param $thumbPath string Storage path
+ * @return true
+ */
+function wmfOnFileTransformed( File $file, $thumb, $tmpThumbPath, $thumbPath ) {
+	global $site, $lang;
+
+	$backend = FileBackendGroup::singleton()->get( 'local-swift' );
+	// Get the equivalent swift storage path for the NFS one
+	list( $b, $container, $path ) = FileBackend::splitStoragePath( $thumbPath );
+	$swiftThumbPath = $backend->getRootStoragePath() . "/$container/$path";
+
+	$status = $backend->prepare( array( 'dir' => dirname( $swiftThumbPath ) ) );
+	$status->merge( $backend->store(
+		array( 'src' => $tmpThumbPath, 'dst' => $swiftThumbPath ),
+		array( 'nonJournaled' => 1, 'nonLocking' => 1, 'allowStale' => 1 ) ) );
+	if ( !$status->isOK() ) {
+		wfDebugLog( 'swiftThumb', "Could not store thumbnail." .
+			"Site: `{$site}` Lang: `{$lang}` src: `{$tmpThumbPath}` dst: `{$swiftThumbPath}`" );
+	}
+
+	return true;
+}
+
+/**
+ * @param $file File
+ * @param $archiveName string|false
+ * @return true
+ */
+function wmfOnLocalFilePurgeThumbnails( File $file, $archiveName ) {
+	global $site, $lang;
+
+	$backend = FileBackendGroup::singleton()->get( 'local-swift' );
+	// Get thumbnail dir relative to thumb zone
+	if ( $archiveName !== false ) {
+		$thumbRel = $file->getArchiveThumbRel( $archiveName ); // old version
+	} else {
+		$thumbRel = $file->getRel(); // current version
+	}
+	$thumbDir = $backend->getRootStoragePath() . "/local-thumb/$thumbRel";
+
+	$list = $backend->getFileList( array( 'dir' => $thumbDir ) );
+	if ( $list === null ) {
+		wfDebugLog( 'swiftThumb', "Could not get thumbnail listing." .
+			"Site: `{$site}` Lang: `{$lang}` ThumbRel: `{$thumbRel}/`" );
+	} else {
+		$ops = array();
+		foreach ( $list as $relFile ) {
+			$ops[] = array( 'op' => 'delete', 'src' => "{$thumbDir}/{$relFile}" );
+		}
+		$status = $backend->doOperations( $ops,
+			array( 'nonJournaled' => 1, 'nonLocking' => 1, 'allowStale' => 1 ) );
+		if ( !$status->isOK() ) {
+			wfDebugLog( 'swiftThumb', "Could not delete all thumbnails from listing." .
+				"Site: `{$site}` Lang: `{$lang}` ThumbRel: `{$thumbRel}/`" );
+		}
+	}
+
+	return true;
+}
+
