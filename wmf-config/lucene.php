@@ -21,29 +21,23 @@ $wgLuceneSearchTimeout = 10;
 
 # default host for mwsuggest backend
 $wgEnableLucenePrefixSearch = true;
-$wgLucenePrefixHost = '10.0.3.18'; # search18
+$wgLucenePrefixHost = '10.2.2.15'; # LVS search-prefix pool
 
 $wgLucenePort = 8123;
 if ( in_array( $wgDBname, array( 'enwiki' ) ) ) {
 	# Big RAM pool 1, via LVS
-	$wgLuceneHost = '10.2.1.11';
-        $wgLucenePrefixHost = '10.0.3.8'; # search8
+	$wgLuceneHost = '10.2.2.11';
+	$wgLucenePrefixHost = '10.2.2.15'; #kept in case we need to flip back to pmtpa
 	// $wmgUseTitleKey = false; // Breaks go matching: https://bugzilla.wikimedia.org/show_bug.cgi?id=19882
 } elseif ( in_array( $wgDBname, array( 'dewiki', 'frwiki', 'jawiki' ) ) ) {
 	# Big RAM pool 2, via LVS
-	$wgLuceneHost = '10.2.1.12';
-} elseif ( in_array( $wgDBname, array( 'itwiki', 'ptwiki', 'plwiki', 'nlwiki', 'ruwiki', 'svwiki', 'zhwiki'  ) ) ) {
+	$wgLuceneHost = '10.2.2.12';
+} elseif ( in_array( $wgDBname, array( 'itwiki', 'ptwiki', 'plwiki', 'nlwiki', 'ruwiki', 'svwiki', 'zhwiki', 'eswiki'  ) ) ) {
 	# Pool 3 LVS
-	$wgLuceneHost = '10.2.1.13';
-} elseif ( in_array( $wgDBname, array( 'eswiki' ) ) ) {
-	$wgLuceneHost = '10.0.3.14';
+	$wgLuceneHost = '10.2.2.13';
 } else {
-	# Split by db hash
-	$servers = array(
-		'10.0.3.11',	# search11
-#		'10.0.3.12',	# search12
-	);
-	$wgLuceneHost = $servers[abs( crc32( $wgDBname ) ) % count( $servers )];
+	# Pool 4 LVS
+	$wgLuceneHost = '10.2.2.14';
 }
 
 $wgLuceneCSSPath = '/w/extensions/LuceneSearch/lucenesearch.css';

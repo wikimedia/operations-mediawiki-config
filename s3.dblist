@@ -69,6 +69,7 @@ bewiki
 bewikibooks
 bewikimedia
 bewikiquote
+bewikisource
 bewiktionary
 bgwikibooks
 bgwikinews
@@ -124,7 +125,6 @@ chrwiki
 chrwiktionary
 chwiki
 chwikibooks
-chwikimedia
 chwiktionary
 chywiki
 ckbwiki
@@ -266,6 +266,7 @@ grantswiki
 guwiki
 guwikibooks
 guwikiquote
+guwikisource
 guwiktionary
 gvwiki
 gvwiktionary
@@ -408,6 +409,7 @@ lbwiki
 lbwikibooks
 lbwikiquote
 lbwiktionary
+lezwiki
 lgwiki
 lijwiki
 liwiki
@@ -632,6 +634,7 @@ slwiki
 slwikibooks
 slwikiquote
 slwikisource
+slwikiversity
 slwiktionary
 smwiki
 smwiktionary
@@ -777,6 +780,7 @@ wikimania2009wiki
 wikimania2010wiki
 wikimania2011wiki
 wikimania2012wiki
+wikimania2013wiki
 wikimaniateamwiki
 wowiki
 wowikiquote

@@ -86,14 +86,9 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 
 } elseif ( $wgDBname == 'hiwiki' ) {
 	$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
-	$wgGroupPermissions['bureaucrat']['abusefilter-modify-restricted'] = true;
-	$wgGroupPermissions['bureaucrat']['abusefilter-revert'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 	$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
-	$wgAbuseFilterAvailableActions[] = 'block';
-	$wgAbuseFilterAvailableActions[] = 'rangeblock';
-	$wgAbuseFilterBlockDuration = '1 month';
 } elseif ( $wgDBname == 'itwiki' ) {
 	$wgGroupPermissions['*']['abusefilter-view'] = false;
 	$wgGroupPermissions['*']['abusefilter-log'] = false;

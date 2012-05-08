@@ -65,16 +65,15 @@ $IP/extensions/OggHandler/OggHandler.php
 $IP/extensions/OpenSearchXml/OpenSearchXml.php
 $IP/extensions/Oversight/HideRevision.php
 $IP/extensions/PagedTiffHandler/PagedTiffHandler.php
+$IP/extensions/PageTriage/PageTriage.php
 $IP/extensions/ParserFunctions/ParserFunctions.php
 $IP/extensions/PdfHandler/PdfHandler.php
 $IP/extensions/Poem/Poem.php
 $IP/extensions/PoolCounter/PoolCounterClient.php
-$IP/extensions/PrefStats/PrefStats.php
-$IP/extensions/PrefSwitch/PrefSwitch.php
 $IP/extensions/ProofreadPage/ProofreadPage.php
 $IP/extensions/Quiz/Quiz.php
 $IP/extensions/ReaderFeedback/ReaderFeedback.php
-$IP/extensions/Renameuser/SpecialRenameuser.php
+$IP/extensions/Renameuser/Renameuser.php
 $IP/extensions/RSS/RSS.php
 $IP/extensions/ScanSet/ScanSet.php
 $IP/extensions/SecurePoll/SecurePoll.php
@@ -95,6 +94,7 @@ $IP/extensions/TitleBlacklist/TitleBlacklist.php
 $IP/extensions/TitleKey/TitleKey.php
 $IP/extensions/TorBlock/TorBlock.php
 $IP/extensions/Translate/Translate.php
+$IP/extensions/TranslationNotifications/TranslationNotifications.php
 $IP/extensions/TrustedXFF/TrustedXFF.php
 $IP/extensions/UnicodeConverter/UnicodeConverter.php
 $IP/extensions/UploadBlacklist/UploadBlacklist.php
