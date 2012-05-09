@@ -8,3 +8,5 @@ wmf-config/ExtensionMessages-*.php
 php-*
 wikiversions.cdb
 multiversion
+wmf-config/*-setup.php
+lib
