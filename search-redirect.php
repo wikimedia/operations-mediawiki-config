@@ -1,0 +1,42 @@
+<?php
+// get params
+$language = $_GET["language"];
+$search   = $_GET["search"];
+$fulltext = $_GET["fulltext"];
+$go       = $_GET["go"];
+if( isset( $_GET["family"] ) )
+	$family = $_GET["family"];
+else
+	$family = 'wikipedia';
+$proto = 'http';
+if ( ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) || ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] == 'on' ) ) {
+	$proto = 'https';
+}
+
+
+// validate $language
+if (!preg_match('/^[a-zA-Z\-]*$/', $language)) {
+	$language = 'en';
+}
+
+// validate $family
+$sites = array(
+	'wikipedia',
+	'wiktionary',
+	'wikisource',
+	'wikinews',
+	'wikiversity',
+	'wikimedia',
+	'wikiquote',
+	'wikibooks',
+);
+if( !in_array( $family, $sites ) ) $family = 'wikipedia';
+
+// make url
+$url      = "$proto://" . $language . "." . $family . ".org/wiki/Special:Search?search=" . urlencode($search);
+if ($fulltext) $url .= "&fulltext=Search";
+if ($go)       $url .= "&go=Go";
+
+// go there
+header( "Location: {$url}" );
+?>

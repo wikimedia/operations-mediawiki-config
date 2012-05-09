@@ -10,3 +10,6 @@ wikiversions.cdb
 multiversion
 wmf-config/*-setup.php
 lib
+cgi-bin
+images
+fonts
