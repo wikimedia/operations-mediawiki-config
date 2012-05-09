@@ -809,6 +809,7 @@ $wgConf->settings = array(
 	'trwikiquote'       => '$stdlogo',
 	'trwikisource'      => '$stdlogo',
 	'trwiktionary'      => '$stdlogo',
+	'tswiki'            => '//upload.wikimedia.org/wikipedia/commons/9/9a/Wikipedia-logo-v2-ts.svg',
 	'ttwiki'	    => '$stdlogo',
 	'ttwikibooks'       => '$stdlogo',
 	'ttwiktionary'	=> '$stdlogo',
@@ -928,7 +929,7 @@ $wgConf->settings = array(
 	'bgwiki'	=> '/wiki/MediaWiki:Uploadtext',
 	'bnwiki'	=> '/wiki/উইকিপিডিয়া:আপলোড',
 	'bswiki'	=> '/wiki/Wikipedia:Upload',
-	'cswiki'	    => '//commons.wikimedia.org/wiki/Special:Upload?uselang=cs',
+	'cswiki'	    => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
 	'cswikibooks'   => '//commons.wikimedia.org/wiki/Special:Upload?uselang=cs',
 	'cswikinews'    => '//commons.wikimedia.org/wiki/Special:Upload?uselang=cs',
 	'cswikiquote'   => '//commons.wikimedia.org/wiki/Special:Upload?uselang=cs',
@@ -1535,7 +1536,8 @@ $wgConf->settings = array(
 	'tawiktionary'	=> 'விக்சனரி',
 	'tawikiquote'   => 'விக்கிமேற்கோள்',
 	'tewiki'	=> 'వికీపీడియా',
-	'tenwiki'  => 'Wikipedia 10',
+	'tewiktionary'  => 'విక్షనరీ',
+	'tenwiki'       => 'Wikipedia 10',
 	'tgwiki'	=> 'Википедиа',
 	'thwiki'	=> 'วิกิพีเดีย',
 	'thwikiquote'   => 'วิกิคำคม',
@@ -6297,9 +6299,6 @@ $wgConf->settings = array(
 		'edit' => false,
 		'createaccount' => false
 	) ),
-	'wikimania2011wiki' => array(
-		'*' => array( 'edit' => false ),
-	),
 	'wikimania2012wiki' => array(
 		//'*' => array( 'edit' => false ),
 		'*' => array( 'createpage' => false ),
@@ -7440,7 +7439,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'inactive' ),
 	),
 	'+ptwiki' => array(
-		'bureaucrat' => array( 'eliminator', 'confirmed' ),
+		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer' ),
 		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed'  ),
 	),
 	'+quwiki' => array(
@@ -7807,7 +7806,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'sysop' ),
 	),
 	'+ptwiki' => array(
-		'bureaucrat' => array( 'eliminator', 'confirmed' ),
+		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer' ),
 		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed' ),
 	),
 	'+ptwikinews' => array(
@@ -8287,9 +8286,6 @@ $wgConf->settings = array(
 	'default' => true,
 	'dewiki' => false,
 	'enwiki' => false,
-	'frwiki' => false,
-	'jawiki' => false,
-	'ruwiki' => false,
 ),
 # @} end of wgShowUpdatedMarker
 
@@ -9366,6 +9362,7 @@ $wgConf->settings = array(
 	'ladwiki' => true, // https://bugzilla.wikimedia.org/show_bug.cgi?id=30221
 	'lvwiki' => true,
 	'metawiki' => true,
+	'mlwiki' => true, // bug 36595
 	'ndswiki' => true,
 	'rowiki' => true,
 	'rowikinews' => true,
@@ -9390,6 +9387,7 @@ $wgConf->settings = array(
 	'incubatorwiki' => true,
 	'lvwiki' => true,
 	'metawiki' => true,
+	'mlwiki' => true,
 	'ndswiki' => true,
 	'rowiki' => true,
 	'thwiki' => true,
@@ -10298,7 +10296,6 @@ $wgConf->settings = array(
 	'specieswiki' => '',
 	'mediawikiwiki' => '',
 	'test2wiki' => '',
-	'testwiki' => '',
 ),
 'wmgZeroDisableImages' => array(
 		'default' => 1,
@@ -10872,7 +10869,7 @@ $wgConf->settings = array(
 	'default' => false,
 ),
 'wmgMemoryLimit' => array(
-	'default' => 120*1024*1024,
+	'default' => 128*1024*1024, // 128MB
 
 	# Extra 60MB for zh wikis for converter tables
 	'zhwiki' => 180*1024*1024,

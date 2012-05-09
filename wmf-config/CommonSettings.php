@@ -1091,6 +1091,7 @@ $wgFileBackends[] = array( // backend config for wiki's local repo
 	'name'               => 'local-swift',
 	'wikiId'             => "{$site}-{$lang}",
 	'lockManager'        => 'nullLockManager', // LocalFile uses FOR UPDATE
+	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname ),
 	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
 	'swiftUser'          => $wmfSwiftConfig['user'],
 	'swiftKey'           => $wmfSwiftConfig['key'],
@@ -1106,6 +1107,7 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repoloo
 	'name'               => 'shared-swift',
 	'wikiId'             => "wikipedia-commons",
 	'lockManager'        => 'nullLockManager', // just thumbnails
+	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki' ),
 	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
 	'swiftUser'          => $wmfSwiftConfig['user'],
 	'swiftKey'           => $wmfSwiftConfig['key'],
@@ -1118,72 +1120,35 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repoloo
 );
 /* end Swift backend config */
 
-# More detailed repo/backend config --aaron
-if ( 1 || in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki', 'commonswiki', 'enwiki' ) ) ) {
-	$wgLocalFileRepo = array(
-			'class'             => 'LocalRepo',
-			'name'              => 'local',
-			'backend'           => 'local-NFS',
-			'url'               => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
-			'scriptDirUrl'      => $wgScriptPath,
-			'hashLevels'        => 2,
-			'thumbScriptUrl'    => $wgThumbnailScriptPath,
-			'transformVia404'   => true,
-			'initialCapital'    => $wgCapitalLinks,
-			'deletedHashLevels' => 3,
-	);
-	if ( $wgDBname != 'commonswiki' ) {
-		$wgForeignFileRepos[] = array(
-			'class'            => 'ForeignDBViaLBRepo',
-			'name'             => 'shared',
-			'backend'          => 'shared-NFS',
-			'url'              => "$urlprotocol//upload.wikimedia.org/wikipedia/commons",
-			'hashLevels'       => 2,
-			'thumbScriptUrl'   => false,
-			'transformVia404'  => true,
-			'hasSharedCache'   => true,
-			'descBaseUrl'      => "$urlprotocol//commons.wikimedia.org/wiki/File:",
-			'scriptDirUrl'     => "$urlprotocol//commons.wikimedia.org/w",
-			'fetchDescription' => true,
-			'wiki'             => 'commonswiki',
-			'initialCapital'   => true
-		);
-		$wgDefaultUserOptions['watchcreations'] = 1;
-	}
-} else { // old way
-	$wgLocalFileRepo = array(
-		'class' => 'LocalRepo',
-		'name' => 'local',
-		'directory' => $wgUploadDirectory,
-		'url' => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
-		'scriptDirUrl' => $wgScriptPath,
-		'hashLevels' => 2,
-		'thumbScriptUrl' => $wgThumbnailScriptPath,
-		'transformVia404' => true,
-		'initialCapital' => $wgCapitalLinks,
-		'deletedDir' => "/mnt/upload6/private/archive/$site/$lang",
+$wgLocalFileRepo = array(
+		'class'             => 'LocalRepo',
+		'name'              => 'local',
+		'backend'           => 'local-NFS',
+		'url'               => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
+		'scriptDirUrl'      => $wgScriptPath,
+		'hashLevels'        => 2,
+		'thumbScriptUrl'    => $wgThumbnailScriptPath,
+		'transformVia404'   => true,
+		'initialCapital'    => $wgCapitalLinks,
 		'deletedHashLevels' => 3,
-		'thumbDir' => str_replace( '/mnt/upload6', '/mnt/thumbs', "$wgUploadDirectory/thumb" ),
+);
+if ( $wgDBname != 'commonswiki' ) {
+	$wgForeignFileRepos[] = array(
+		'class'            => 'ForeignDBViaLBRepo',
+		'name'             => 'shared',
+		'backend'          => 'shared-NFS',
+		'url'              => "$urlprotocol//upload.wikimedia.org/wikipedia/commons",
+		'hashLevels'       => 2,
+		'thumbScriptUrl'   => false,
+		'transformVia404'  => true,
+		'hasSharedCache'   => true,
+		'descBaseUrl'      => "$urlprotocol//commons.wikimedia.org/wiki/File:",
+		'scriptDirUrl'     => "$urlprotocol//commons.wikimedia.org/w",
+		'fetchDescription' => true,
+		'wiki'             => 'commonswiki',
+		'initialCapital'   => true
 	);
-	if ( $wgDBname != 'commonswiki' ) {
-		$wgForeignFileRepos[] = array(
-			'class'            => 'ForeignDBViaLBRepo',
-			'name'             => 'shared',
-			'directory'        => '/mnt/upload6/wikipedia/commons',
-			'url'              => "$urlprotocol//upload.wikimedia.org/wikipedia/commons",
-			'hashLevels'       => 2,
-			'thumbScriptUrl'   => false,
-			'transformVia404'  => true,
-			'hasSharedCache'   => true,
-			'descBaseUrl'      => "$urlprotocol//commons.wikimedia.org/wiki/File:",
-			'scriptDirUrl'     => "$urlprotocol//commons.wikimedia.org/w",
-			'fetchDescription' => true,
-			'wiki'             => 'commonswiki',
-			'initialCapital'   => true,
-			'thumbDir'         => '/mnt/thumbs/wikipedia/commons/thumb',
-		);
-		$wgDefaultUserOptions['watchcreations'] = 1;
-	}
+	$wgDefaultUserOptions['watchcreations'] = 1;
 }
 
 if ( $wgDBname == 'nostalgiawiki' ) {
@@ -1850,8 +1815,7 @@ if ( $wmgUseCollection ) {
 	}
 }
 
-// Testing internally
-include "$wmfConfigDir/secret-projects.php";
+include( "$IP/extensions/OpenSearchXml/OpenSearchXml.php" );
 
 function efRaiseThrottle() {
 	global $wgAccountCreationThrottle;
@@ -2383,7 +2347,7 @@ if ( $wmgMobileFrontend ) {
 		$wgMFRemovableClasses = $wmgMFRemovableClasses;
 	}
 	$wgMFCustomLogos = $wmgMFCustomLogos;
-	$wgMobileResourceVersion = 1336433685;
+	$wgMobileResourceVersion = 1336519497;
 }
 
 // If a URL template is set for MobileFrontend, use it.
