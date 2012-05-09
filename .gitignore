@@ -4,3 +4,7 @@ AdminSettings.php
 PrivateSettings.php
 xrumer
 mwblocker.log
+wmf-config/ExtensionMessages-*.php
+php-*
+wikiversions.cdb
+multiversion
