@@ -7946,6 +7946,7 @@ $wgConf->settings = array(
 	'arzwiki' => array( 'incubator', 'en', 'ar', 'es', 'fr', ),
 	'betawikiversity' => array( 'meta', 'b', 'en', 'incubator' ),
 	'bewikimedia' => array( 'meta' ),
+	'bnwiki' => array ( 'en' ), # Bug 34791
 	'brwikimedia' => array( 'pt', 'meta', 'pt:w', 'pt:wikt', 'pt:s', 'pt:n', 'pt:q', 'pt:b', 'pt:v', 'commons' ),
 	'bnwikisource' => array( 'OldWikisource', 'w' ),
 	'cawikibooks' => array( 'w', 's', ),
