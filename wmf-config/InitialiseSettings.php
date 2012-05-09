@@ -10798,6 +10798,7 @@ $wgConf->settings = array(
 	'incubatorwiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
+	'outreachwiki' => true,
 	'testwiki' => true,
 	'wikimania2012wiki' => true,
 	'wikimania2013wiki' => true,
