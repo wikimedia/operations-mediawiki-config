@@ -1,0 +1,15 @@
+
+# Contact info submission
+
+url: wikipedia.org/
+site_owner: Wikimedia Foundation, Inc.
+address1: P.O. Box 78350
+address2: 
+city: San Francisco
+state: CA
+country: USA
+postal_code: 94107-8350
+phone_number: +1-415-839-6885
+display_email: info-en@wikimedia.org
+site_name: Wikipedia
+site_description: Wikipedia is a "copyleft" encyclopedia that is collaboratively developed using wiki software. Wikipedia is managed and operated by the non-profit Wikimedia Foundation. In addition to standard "encyclopedic" knowledge, Wikipedia includes information more often associated with almanacs and gazetteers, as well as coverage of current events.

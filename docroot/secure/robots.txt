@@ -1,0 +1,4 @@
+# secure.wikimedia.org
+
+User-Agent: *
+Disallow: /

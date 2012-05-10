@@ -1,0 +1,146 @@
+html {
+	margin: 0px;
+	padding: 0px;
+}
+
+body { 
+	font-family: Helvetica,Arial,sans-serif;
+	color: #000000; 
+	background: #f9f9f9 url("headbg.jpg") no-repeat 0px 0px; 
+	margin: 10pt; 
+	padding: 10pt;
+	text-align: center;
+}
+
+p { margin: 9pt; }
+hr, .unsichtbar, label { display: none; }
+br { clear:both; margin: 0; padding: 0; }
+
+a:link { text-decoration: none; color: #000090; }
+a:visited { text-decoration: none; color: #000090; }
+a:hover { text-decoration: underline; }
+
+.gruss {
+	margin-top: 8pt;
+	font-size: 110%;
+	text-align: center;
+}
+
+.grussklein {
+	font-size: 100%;
+	margin-top: 6pt;
+	margin-bottom: 3pt;
+	text-align: center;
+}
+
+.intro { text-align: left; }
+
+.hauptlink { font-weight: bold; }
+
+#deutsch, #francais, #italiano, #rumantsch, #english {
+	width: 36%;
+	border: 1px solid #dfdfdf;
+}
+
+.de-bg { background: #ffebeb; }
+.fr-bg { background: #faffea; }
+.it-bg { background: #eaffec; }
+.rm-bg { background: #faeaff; }
+.en-bg { background: #fffaea; }
+
+#deutsch, #italiano {
+	float:left;
+	margin-left: 10pt;
+	margin-right: 20pt;
+}
+
+#francais, #rumantsch, #english {
+	float:right;
+	margin-right: 10pt;
+	margin-left: 20pt;
+}
+
+#english {
+	clear: right;
+	margin-bottom: 10pt;
+	}
+
+#italiano { margin-bottom: 10pt; }
+
+#rumantsch { margin-bottom: 2px; }
+
+#andere {
+	width: 80%;
+	clear:both;
+	font-size: 80%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #dfdfdf;
+	background: #e6e8ff;
+	padding-bottom: 9pt;
+}
+
+.andere-titel {
+	font-weight: bold;
+	font-style:italic;
+	margin-left: 10pt;
+	margin-right: 10pt;
+	white-space: nowrap;
+}
+
+ul {
+	padding-left: 0;
+	padding-right: 0;
+	margin: 0;
+	text-align: center;	
+}
+
+.sprache {
+	display: inline;
+	list-style-type: none;
+	margin-left: 6pt;
+	margin-right: 6pt;
+}
+
+.klein {
+	font-size: 80%;
+	margin-top: 0pt;
+	margin-bottom: 0pt;}
+
+#extra1 {
+	background: url("logo.png") no-repeat center;
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: -90px;
+	margin-bottom: -180px;
+	height: 206px;
+	width: 123px;
+}
+
+#suche {
+	font-size: 90%;
+	clear:both;
+	padding-bottom: 0pt;
+}
+
+#eingabe {
+	border: inset 2px #dfdfdf;
+	color: #a0a0a0;
+}
+
+.knopf {
+	border: outset 2px #dfdfdf;
+	margin-left: 5px;
+}
+
+#impressum {
+	clear: both;
+	color: #a0a0a0;
+	font-size: 70%;
+}
+
+#impressum a { color: #a0a0a0; }

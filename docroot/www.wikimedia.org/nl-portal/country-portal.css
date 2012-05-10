@@ -1,0 +1,135 @@
+body { 
+	font-family: Helvetica,Arial,sans-serif;
+	color: #000000; 
+	background: #f9f9f9 url("country-portal.jpg") no-repeat 0px 0px; 
+	margin: 10pt; 
+	margin-bottom: 5pt;
+	padding: 10pt;
+	padding-bottom: 5pt;
+	text-align: center;
+}
+
+p { margin: 9pt;
+    margin-top: 0; }
+br { clear:both; margin: 0; padding: 0; }
+img { border: 0;}
+
+a { color: #000090; text-decoration: none;}
+a:hover { text-decoration: underline; }
+
+.hello {
+	margin-top: 8pt;
+	margin-bottom: 4pt;
+	font-size: 110%;
+	text-align: center;
+}
+
+.intro { text-align: left;}
+
+.main { font-weight: bold;}
+
+.aux { color: #000000;}
+.aux:hover { text-decoration: none;}
+
+
+.column { width: 36%;}
+.compact {
+	font-size: 80%;
+	margin-bottom: 0pt;
+}
+
+.left {
+	float:left;
+	margin-left: 10pt;
+	margin-right: 20pt;
+}
+
+.right {
+	float:right;
+	margin-right: 10pt;
+	margin-left: 20pt;
+}
+
+.field {
+	border: 1px solid #dfdfdf;
+	margin-top: 1px;
+}
+
+.red-bg    { background: #ffeaf2; }
+.orange-bg { background: #fff2ea; }
+.yellow-bg { background: #fdffea; }
+.green-bg  { background: #edffea; }
+.cyan-bg   { background: #eafff8; }
+.blue-bg   { background: #eaf8ff; }
+.indigo-bg { background: #edeaff; }
+.purple-bg { background: #fdeaff; }
+
+.en-bg     { background: #eaeaea; }
+
+
+#logo {
+	background: url("country-portal.png") no-repeat center;
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	top: -50px;
+	margin-bottom: -120px;
+	height: 150px; /* 144*/
+	width: 135px;
+}
+
+
+#search {
+	font-size: 90%;
+	clear:both;
+	padding-bottom: 0pt;
+	padding-top: 10pt;
+}
+
+.button {
+	border: outset 2px #dfdfdf;
+	margin-left: 5px;
+}
+
+
+#others {
+	width: 80%;
+	clear:both;
+	font-size: 80%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #dfdfdf;
+	background: #e6e8ff;
+	padding-top: 9pt;
+	padding-bottom: 2pt;
+}
+
+.otherstitle {
+	margin-left: 10pt;
+	margin-right: 10pt;
+	white-space: nowrap;
+	font-weight: bold;
+}
+
+.other {
+	margin-left: 6pt;
+	margin-right: 6pt;
+	white-space: nowrap;
+}
+
+
+#footer {
+	clear: both;
+	font-size: 70%;
+	margin: 20px;
+	margin-bottom: 0;
+	border: 1px solid #fabd23;
+	height: 39px;
+	padding: 2px;}
+
+.banner {
+	margin: 2px;
+}
