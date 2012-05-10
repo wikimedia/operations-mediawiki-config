@@ -2470,6 +2470,10 @@ $wgConf->settings = array(
 		'Utilisatrice' => NS_USER,
 		'Discussion_Utilisatrice' => NS_USER_TALK,
 	),
+	'frwikibooks' => array(
+		'WL' => 4, # bug 35977
+		'WJ' => 110, # bug 35977
+	),
 	'frwikinews' => array(
 		'WN' => NS_PROJECT,
 	),
@@ -5445,6 +5449,8 @@ $wgConf->settings = array(
 	'frwikibooks' => array(
 		100 => 'Transwiki',
 		101 => 'Discussion_Transwiki',
+		110 => 'Wikijunior', # bug 35977
+		111 => 'Wikijunior_talk', # bug 35977
 	),
 	'hewikibooks' => array(
 		100 => 'שער', # portal
