@@ -8285,7 +8285,6 @@ $wgConf->settings = array(
 # #wgShowUpdatedMarker @{
 'wgShowUpdatedMarker' => array(
 	'default' => true,
-	'dewiki' => false,
 	'enwiki' => false,
 ),
 # @} end of wgShowUpdatedMarker
