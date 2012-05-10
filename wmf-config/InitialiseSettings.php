@@ -2984,7 +2984,10 @@ $wgConf->settings = array(
 		'Index_talk' => 107,
 	),
 	'sqwikinews' => array(
-			'WL' => NS_PROJECT,
+		'WL' => NS_PROJECT,
+	),
+	'srwiki' => array(
+		'Vikipedija' => NS_PROJECT,
 	),
 	'svwiki' => array(
 		'WP' => NS_PROJECT,
@@ -4807,7 +4810,10 @@ $wgConf->settings = array(
 	'skwiki' => array( 100 => 'Portál', 101 => 'Diskusia_k_portálu' ),
 	'slwiki' => array( 100 => 'Portal', 101 => 'Pogovor_o_portalu' ),
 	'sqwiki' => array( 100 => 'Portal', 101 => 'Portal_diskutim' ),
-	'srwiki' => array( 100 => 'Портал', 101 => 'Разговор_о_порталу' ),
+	'srwiki' => array(
+		100 => 'Портал',
+		101 => 'Разговор_о_порталу',
+	),
 	'suwiki' => array( 100 => 'Portal', 101 => 'Obrolan_portal' ), # bug 8156
 	'svwiki' => array( 100 => 'Portal', 101 => 'Portaldiskussion' ),
 	'svwikiversity' => array (
