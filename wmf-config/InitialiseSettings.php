@@ -1527,6 +1527,7 @@ $wgConf->settings = array(
 	'srwiki'	=> 'Википедија',
 	'srwikibooks'   => 'Викикњиге',
 	'srwikinews'    => 'Викивести',
+	'srwikisource'  => 'Викизворник',
 	'strategywiki'  => 'Strategic Planning',
 	'strategyappswiki'  => 'Strategic Applications Planning',
 	'stewardwiki'       => 'Steward Wiki',
