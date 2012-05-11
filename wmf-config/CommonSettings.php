@@ -2358,8 +2358,8 @@ if ( $wmgZeroRatedMobileAccess ) {
 }
 
 if ( $wmgZeroDisableImages ) {
-	if ( isset( $_SERVER['X-Carrier'] ) && strtoupper( $_SERVER['X-Carrier'] ) == 'DIGI' || 
-		isset( $_SERVER['X-Carrier'] ) && strtoupper( $_SERVER['X-Carrier'] ) == 'WIKIMEDIA' ) {
+	if ( isset( $_SERVER['HTTP_X_CARRIER'] ) && strtoupper( $_SERVER['HTTP_X_CARRIER'] ) == 'DIGI' || 
+		isset( $_SERVER['HTTP_X_CARRIER'] ) && strtoupper( $_SERVER['HTTP_X_CARRIER'] ) == 'WIKIMEDIA' ) {
 		$wgZeroDisableImages = $wmgZeroDisableImages;
 	}
 }
