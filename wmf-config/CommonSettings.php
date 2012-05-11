@@ -2358,7 +2358,8 @@ if ( $wmgZeroRatedMobileAccess ) {
 }
 
 if ( $wmgZeroDisableImages ) {
-	if ( isset( $_SERVER['X-Carrier'] ) && $_SERVER['X-Carrier'] == 'DIGI' ) {
+	if ( isset( $_SERVER['X-Carrier'] ) && strtoupper( $_SERVER['X-Carrier'] ) == 'DIGI' || 
+		isset( $_SERVER['X-Carrier'] ) && strtoupper( $_SERVER['X-Carrier'] ) == 'WIKIMEDIA' ) {
 		$wgZeroDisableImages = $wmgZeroDisableImages;
 	}
 }
