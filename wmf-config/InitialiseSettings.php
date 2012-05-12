@@ -1370,6 +1370,7 @@ $wgConf->settings = array(
 	'hywikisource'	=> 'Վիքիդարան',
 	'hywiktionary'  => 'Վիքիբառարան',
 	'iawiktionary'	=> 'Wiktionario',
+	'idwikibooks'   => 'Wikibuku',
 	'ilwikimedia'   => 'ויקימדיה',
 	'incubatorwiki' => 'Wikimedia Incubator',
 	'internalwiki'  => 'Internal',
@@ -1821,6 +1822,7 @@ $wgConf->settings = array(
 	'hywikisource'	=> 'Վիքիդարան',
 	'hywiktionary'  => 'Վիքիբառարան',
 	'iawiktionary'	=> 'Wiktionario',
+	'idwikibooks'   => 'Wikibuku',
 	'ilwikimedia'   => 'ויקימדיה',
 	'incubatorwiki' => 'Incubator',
 	'internalwiki'  => 'Project',
@@ -2555,6 +2557,10 @@ $wgConf->settings = array(
 		'Page_talk' => 105,
 		'Index' => 106,
 		'Index_talk' => 107,
+	),
+	'idwikibooks' => array(
+		'Wikibooks'	       => NS_PROJECT,      # backcompat for shell req bug 36156
+		'Pembicaraan_Wikibooks'	  => NS_PROJECT_TALK, # backcompat for shell req bug 36156
 	),
 	'idwikisource' => array(
 		'Author' => 100,
