@@ -1370,6 +1370,7 @@ $wgConf->settings = array(
 	'hywikisource'	=> 'Վիքիդարան',
 	'hywiktionary'  => 'Վիքիբառարան',
 	'iawiktionary'	=> 'Wiktionario',
+	'idwikibooks'   => 'Wikibuku',
 	'ilwikimedia'   => 'ויקימדיה',
 	'incubatorwiki' => 'Wikimedia Incubator',
 	'internalwiki'  => 'Internal',
@@ -1821,6 +1822,7 @@ $wgConf->settings = array(
 	'hywikisource'	=> 'Վիքիդարան',
 	'hywiktionary'  => 'Վիքիբառարան',
 	'iawiktionary'	=> 'Wiktionario',
+	'idwikibooks'   => 'Wikibuku',
 	'ilwikimedia'   => 'ויקימדיה',
 	'incubatorwiki' => 'Incubator',
 	'internalwiki'  => 'Project',
@@ -5454,6 +5456,7 @@ $wgConf->settings = array(
 		105 => 'שיחת_מדף', # bookshelf talk
 	),
 	'idwikibooks' => array(
+		NS_PROJECT_TALK => 'Pembicaraan_Wikibuku', # https://bugzilla.wikimedia.org/show_bug.cgi?id=36156
 		100 => 'Resep', # http://bugzilla.wikimedia.org/show_bug.cgi?id=7124
 		101 => 'Pembicaraan_Resep',
 		102 => 'Wisata',
