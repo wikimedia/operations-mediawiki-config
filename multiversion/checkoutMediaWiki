@@ -67,7 +67,7 @@ function checkoutMediaWiki() {
 <?php
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 if ( defined('TESTWIKI') ) {
-	if( !dir_exists( "/home/wikipedia" ) ) {
+	if( !file_exists( "/home/wikipedia" ) ) {
 		# Jobs runner on apache do not have a /home/wikipedia !
 		include_once( "/apache/common/wmf-config/CommonSettings.php" );
 	} else {
