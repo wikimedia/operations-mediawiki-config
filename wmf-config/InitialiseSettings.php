@@ -1994,6 +1994,7 @@ $wgConf->settings = array(
 	'tawiktionary'	=> 'விக்சனரி',
 	'tawikiquote'   => 'விக்கிமேற்கோள்',
 	'tewiki'	=> 'వికీపీడియా',
+	'tewiktionary'  => 'విక్షనరీ',
 	'tgwiki'	=> 'Википедиа',
 	'thwiki'	=> 'วิกิพีเดีย',
 	'thwikinews'    => 'วิกิข่าว',
@@ -3038,6 +3039,10 @@ $wgConf->settings = array(
 		'Index_talk' => 107,
 				'పేజీ' => 104,
 				'పేజీ_చర్చ' => 105,
+	),
+	'tewiktionary' => array(
+		 'Wiktionary' => NS_PROJECT, # backcompat for shell req bug 36533
+		 'Wiktionary_చర్చ' => NS_PROJECT_TALK, # backcompat for shell req bug 36533
 	),
 	'tkwiktionary' => array(
 		'Wiktionary' => NS_PROJECT,
