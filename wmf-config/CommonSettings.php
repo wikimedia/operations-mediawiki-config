@@ -1540,6 +1540,9 @@ ini_set( 'user_agent', 'Wikimedia internal server fetcher (noc@wikimedia.org' );
 // CentralAuth
 if ( $wmgUseCentralAuth ) {
 	include "$IP/extensions/CentralAuth/CentralAuth.php";
+
+//	$wgDebugLogGroups['CentralAuth'] = 'udp://10.0.5.8:8420/CentralAuth';
+
 	$wgCentralAuthDryRun = false;
 	# unset( $wgGroupPermissions['*']['centralauth-merge'] );
 	# $wgGroupPermissions['sysop']['centralauth-merge'] = true;
@@ -2353,7 +2356,7 @@ if ( $wmgMobileFrontend ) {
 		$wgMFRemovableClasses = $wmgMFRemovableClasses;
 	}
 	$wgMFCustomLogos = $wmgMFCustomLogos;
-	$wgMobileResourceVersion = 1336519499;
+	$wgMobileResourceVersion = 1337123139;
 }
 
 // If a URL template is set for MobileFrontend, use it.
