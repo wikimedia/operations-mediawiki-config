@@ -1862,7 +1862,6 @@ if ( $wmgUseCodeReview ) {
 	$wgGroupPermissions['svnadmins']['repoadmin'] = true; // Default is stewards, but this has nothing to do with them
 
 	$wgCodeReviewENotif = true; // let's experiment with this
-	$wgCodeReviewSharedSecret = $wmgCodeReviewSharedSecret;
 	$wgCodeReviewCommentWatcherEmail = 'mediawiki-codereview@lists.wikimedia.org';
 	$wgCodeReviewRepoStatsCacheTime = 60 * 60; // 1 hour, default is 6
 
