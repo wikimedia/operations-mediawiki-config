@@ -57,8 +57,9 @@ class MWWikiversions {
 		}
 
 		// Sanity check version directory
-		if ( !is_dir( MULTIVER_COMMON_HOME . '/' . $version ) ) {
-			throw new Exception( "Invalid version dir on line $lineNo ('$line').\n" );
+		$versionDir = MULTIVER_COMMON_HOME . '/' . $version ;
+		if ( !is_dir( $versionDir ) ) {
+			throw new Exception( "Invalid version dir '$versionDir' on line $lineNo ('$line').\n" );
 		}
 
 		return array( $dbName, $version, $extVersion, $comment );
