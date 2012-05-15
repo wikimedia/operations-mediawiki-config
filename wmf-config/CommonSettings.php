@@ -2356,7 +2356,7 @@ if ( $wmgMobileFrontend ) {
 		$wgMFRemovableClasses = $wmgMFRemovableClasses;
 	}
 	$wgMFCustomLogos = $wmgMFCustomLogos;
-	$wgMobileResourceVersion = 1337123139;
+	$wgMobileResourceVersion = 1337123130;
 }
 
 // If a URL template is set for MobileFrontend, use it.
