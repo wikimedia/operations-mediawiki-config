@@ -637,6 +637,7 @@ $wgDebugLogGroups['UploadBlacklist'] = 'udp://10.0.5.8:8420/upload-blacklist';
 $wgDebugLogGroups['bug27452'] = 'udp://10.0.5.8:8420/bug27452';
 $wgDebugLogGroups['swiftThumb'] = 'udp://10.0.5.8:8420/swift-thumb'; // -aaron 1/30/12
 $wgDebugLogGroups['FileOperation'] = 'udp://10.0.5.8:8420/filebackend-ops';
+$wgDebugLogGroups['SwiftBackend'] = 'udp://10.0.5.8:8420/swift-backend'; // -aaron 5/15/12
 
 $wgDebugLogGroups['404'] = 'udp://10.0.5.8:8420/four-oh-four';
 
@@ -2314,10 +2315,10 @@ if ( $wmgMobileFrontend ) {
         	$articlePersonalSubject = $subjectPreface . wfMsgExt( 'mobile-frontend-leave-feedback-article-personal-link-text', $msgOpts );
         	$articleFactualSubject = $subjectPreface . wfMsgExt( 'mobile-frontend-leave-feedback-article-factual-link-text', $msgOpts );
         	$articleOtherSubject = $subjectPreface . wfMsgExt( 'mobile-frontend-leave-feedback-article-other-link-text', $msgOpts );
-		
+
 		/** Build links **/
         	$emailStub = "info-$lang";
-		
+
 		// factual error link
 		if ( $wgDBname == 'enwiki' ) {
                 	$articleFactualLink = "http://en.m.wikipedia.org/wiki/Wikipedia:Contact_us/Article_problem/Factual_error";
@@ -2333,7 +2334,7 @@ if ( $wmgMobileFrontend ) {
 		} else {
         		$articlePersonalLink = "mailto:$emailStub@wikimedia.org?subject=$articlePersonalSubject";
         		$articleOtherLink = "mailto:$emailStub@wikimedia.org?subject=$articleOtherSubject";
-		}	
+		}
 
         	$wgMFFeedbackLinks = array(
                 	'General' => $generalLink, // General feedback
@@ -2364,7 +2365,7 @@ if ( $wmgZeroRatedMobileAccess ) {
 }
 
 if ( $wmgZeroDisableImages ) {
-	if ( isset( $_SERVER['HTTP_X_CARRIER'] ) && strtoupper( $_SERVER['HTTP_X_CARRIER'] ) == 'DIGI' || 
+	if ( isset( $_SERVER['HTTP_X_CARRIER'] ) && strtoupper( $_SERVER['HTTP_X_CARRIER'] ) == 'DIGI' ||
 		isset( $_SERVER['HTTP_X_CARRIER'] ) && strtoupper( $_SERVER['HTTP_X_CARRIER'] ) == 'WIKIMEDIA' ) {
 		$wgZeroDisableImages = $wmgZeroDisableImages;
 	}
