@@ -17,6 +17,8 @@
 # öäü
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
+# Globals set in CommonSettings.php for use in settings values
+global $wmfUdp2logDest;
 
 $wgConf->settings = array(
 
@@ -4111,61 +4113,61 @@ $wgConf->settings = array(
 
 'wgDebugLogFile' => array(
 	'default' => '',
-	// 'aawiki' => 'udp://10.0.5.8:8420/aawiki',
+	// 'aawiki' => "udp://$wmfUdp2logDest/aawiki",
 	// 2005-09-10: Installed to monitor Exif debug output -ævar
 	// 2005-09-10: Took it out out again, got enough test data for now -avar
-	// 'commonswiki' => 'udp://10.0.5.8:8420/commonswiki',
-	'testwiki' => 'udp://10.0.5.8:8420/testwiki',
-	'test2wiki' => 'udp://10.0.5.8:8420/test2wiki',
+	// 'commonswiki' => "udp://$wmfUdp2logDest/commonswiki",
+	'testwiki' => "udp://$wmfUdp2logDest/testwiki",
+	'test2wiki' => "udp://$wmfUdp2logDest/test2wiki",
 ),
 
 # wgDebugLogGroups @{
 'wgDebugLogGroups' => array(
 	# 'default' => array(),
 	'default' => array(
-		'UserThrottle' => 'udp://10.0.5.8:8420/UserThrottle',
-		'cite' => 'udp://10.0.5.8:8420/cite', // to see how it's used;) -ævar
-		'thumbnail' => 'udp://10.0.5.8:8420/thumbnail',
-		'testing' => 'udp://10.0.5.8:8420/testing', // for temp testing hacks
-		'jobqueue' => 'udp://10.0.5.8:8420/jobqueue/web',
-		'mkdir' => 'udp://10.0.5.8:8420/mkdir',
-		'slow-parse' => 'udp://10.0.5.8:8420/slow-parse',
-		'exception' => 'udp://10.0.5.8:8420/exception',
-		'session' => 'udp://10.0.5.8:8420/session',
-		# 'ifexist' => 'udp://10.0.5.8:8420/ifexist',
-		# 'CentralAuth' => 'udp://10.0.5.8:8420/centralauth',
-		# 'baddiff' => 'udp://10.0.5.8:8420/baddiff',
-		'logging' => 'udp://10.0.5.8:8420/logging',
-		'badblock' => 'udp://10.0.5.8:8420/badblock',
-		'SimpleAntiSpam' => 'udp://10.0.5.8:8420/spam',
-		'AntiBot' => 'udp://10.0.5.8:8420/spam',
-		'SpamBlacklistHit' => 'udp://10.0.5.8:8420/spam',
-		'SpamRegex' => 'udp://10.0.5.8:8420/spam',
-		'ValidationStatistic' => 'udp://10.0.5.8:8420/valid',
-		'OutputBuffer' => 'udp://10.0.5.8:8420/buffer',
-		'exec' => 'udp://10.0.5.8:8420/exec',
-		'ExternalStoreDB' => 'udp://10.0.5.8:8420/ExternalStoreDB',
-		'runJobs' => 'udp://10.0.5.8:8420/runJobs',
-		'es-hit' => 'udp://10.0.5.8:8420/es-hit',
-		'wtf' => 'udp://10.0.5.8:8420/wtf', // -- bv 2009-07-29
-		'memcached' => 'udp://10.0.5.8:8420/memcached',
-		'poolcounter' => 'udp://10.0.5.8:8420/poolcounter',
-	'bug-27891' => 'udp://10.0.5.8:8420/bug-27891',
-	'lc-recache' => 'udp://10.0.5.8:8420/lc-recache',
+		'UserThrottle' => "udp://$wmfUdp2logDest/UserThrottle",
+		'cite' => "udp://$wmfUdp2logDest/cite", // to see how it's used;) -ævar
+		'thumbnail' => "udp://$wmfUdp2logDest/thumbnail",
+		'testing' => "udp://$wmfUdp2logDest/testing", // for temp testing hacks
+		'jobqueue' => "udp://$wmfUdp2logDest/jobqueue/web",
+		'mkdir' => "udp://$wmfUdp2logDest/mkdir",
+		'slow-parse' => "udp://$wmfUdp2logDest/slow-parse",
+		'exception' => "udp://$wmfUdp2logDest/exception",
+		'session' => "udp://$wmfUdp2logDest/session",
+		# 'ifexist' => "udp://$wmfUdp2logDest/ifexist",
+		# 'CentralAuth' => "udp://$wmfUdp2logDest/centralauth",
+		# 'baddiff' => "udp://$wmfUdp2logDest/baddiff",
+		'logging' => "udp://$wmfUdp2logDest/logging",
+		'badblock' => "udp://$wmfUdp2logDest/badblock",
+		'SimpleAntiSpam' => "udp://$wmfUdp2logDest/spam",
+		'AntiBot' => "udp://$wmfUdp2logDest/spam",
+		'SpamBlacklistHit' => "udp://$wmfUdp2logDest/spam",
+		'SpamRegex' => "udp://$wmfUdp2logDest/spam",
+		'ValidationStatistic' => "udp://$wmfUdp2logDest/valid",
+		'OutputBuffer' => "udp://$wmfUdp2logDest/buffer",
+		'exec' => "udp://$wmfUdp2logDest/exec",
+		'ExternalStoreDB' => "udp://$wmfUdp2logDest/ExternalStoreDB",
+		'runJobs' => "udp://$wmfUdp2logDest/runJobs",
+		'es-hit' => "udp://$wmfUdp2logDest/es-hit",
+		'wtf' => "udp://$wmfUdp2logDest/wtf", // -- bv 2009-07-29
+		'memcached' => "udp://$wmfUdp2logDest/memcached",
+		'poolcounter' => "udp://$wmfUdp2logDest/poolcounter",
+	'bug-27891' => "udp://$wmfUdp2logDest/bug-27891",
+	'lc-recache' => "udp://$wmfUdp2logDest/lc-recache",
 	),
-	# 'dewiki' => array( 'connect' => 'udp://10.0.5.8:8420/connect' ),
-	# 'commonswiki' => array( 'exif' => 'udp://10.0.5.8:8420/exif' ), # disabled due to too-big log file 2005-09-26 by brion
+	# 'dewiki' => array( 'connect' => "udp://$wmfUdp2logDest/connect" ),
+	# 'commonswiki' => array( 'exif' => "udp://$wmfUdp2logDest/exif" ), # disabled due to too-big log file 2005-09-26 by brion
 
 	// To measure the # of articles on enwiki during the <million => >million transition
 	'testwiki' => array(
-		'articles' => 'udp://10.0.5.8:8420/articles/testwiki',
-		'test' => 'udp://10.0.5.8:8420/testwiki',
-		'testing' =>  'udp://10.0.5.8:8420/testing', // for temp testing hacks
-		'session' => 'udp://10.0.5.8:8420/session',
-		'imagemove' => 'udp://10.0.5.8:8420/imagemove',
-		'exception' => 'udp://10.0.5.8:8420/exception',
+		'articles' => "udp://$wmfUdp2logDest/articles/testwiki",
+		'test' => "udp://$wmfUdp2logDest/testwiki",
+		'testing' =>  "udp://$wmfUdp2logDest/testing", // for temp testing hacks
+		'session' => "udp://$wmfUdp2logDest/session",
+		'imagemove' => "udp://$wmfUdp2logDest/imagemove",
+		'exception' => "udp://$wmfUdp2logDest/exception",
 
-		'wtf' => 'udp://10.0.5.8:8420/wtf', // -- bv 2009-07-29
+		'wtf' => "udp://$wmfUdp2logDest/wtf", // -- bv 2009-07-29
 	),
 ),
 # @} end of wgDebugLogGroup
@@ -6237,7 +6239,7 @@ $wgConf->settings = array(
 # @} end of wgRateLimits
 
 'wgRateLimitLog' => array(
-	'default' => 'udp://10.0.5.8:8420/limiter',
+	'default' => "udp://$wmfUdp2logDest/limiter",
 ),
 
 'wgRateLimitsExcludedGroups' => array(
@@ -8337,7 +8339,7 @@ $wgConf->settings = array(
 ),
 
 'wgJobLogFile' => array(
-	'default' => 'udp://10.0.5.8:8420/webJobs',
+	'default' => "udp://$wmfUdp2logDest/webJobs",
 ),
 
 'wgMaxArticleSize' => array(

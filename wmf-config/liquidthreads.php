@@ -18,5 +18,5 @@ if ( isset( $wmgLQTUserControlNamespaces ) ) {
 }
 
 if ( $wgDBname == 'liquidthreads_labswikimedia' ) {
-#	$wgDebugLogGroups['Lqt-debugging'] = 'udp://10.0.5.8:8420/lqt-debugging';
+#	$wgDebugLogGroups['Lqt-debugging'] = "udp://$wmfUdp2logDest/lqt-debugging";
 }
