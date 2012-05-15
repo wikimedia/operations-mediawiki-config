@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAALX//9iw\u003d",
+        "filename": "wmf-config/liquidthreads.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-05-15T09:18:10Z",
+      "side": 1,
+      "message": "Need double quotes to enable interpolation of $wmgUdp2logDest\n\nDone.",
+      "revId": "e881ce979f18a972a34cb7713d4c665fb90d66d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
