@@ -638,6 +638,7 @@ $wgDebugLogGroups['bug27452'] = 'udp://10.0.5.8:8420/bug27452';
 $wgDebugLogGroups['swiftThumb'] = 'udp://10.0.5.8:8420/swift-thumb'; // -aaron 1/30/12
 $wgDebugLogGroups['FileOperation'] = 'udp://10.0.5.8:8420/filebackend-ops';
 $wgDebugLogGroups['SwiftBackend'] = 'udp://10.0.5.8:8420/swift-backend'; // -aaron 5/15/12
+$wgDebugLogGroups['updateTranstagOnNullRevisions'] = 'udp://10.0.5.8:8420/updateTranstagOnNullRevisions';
 
 $wgDebugLogGroups['404'] = 'udp://10.0.5.8:8420/four-oh-four';
 
@@ -2352,7 +2353,7 @@ if ( $wmgMobileFrontend ) {
 		$wgMFRemovableClasses = $wmgMFRemovableClasses;
 	}
 	$wgMFCustomLogos = $wmgMFCustomLogos;
-	$wgMobileResourceVersion = 1336519498;
+	$wgMobileResourceVersion = 1336519499;
 }
 
 // If a URL template is set for MobileFrontend, use it.
