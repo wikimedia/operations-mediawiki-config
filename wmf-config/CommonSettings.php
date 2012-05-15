@@ -2,6 +2,13 @@
 
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
+#######################################################################
+# This file is the main and first configuration file of the WMF cluster.
+# It is included by LocalSettings.php
+#
+#######################################################################
+
+
 # Godforsaken hack to work around problems with the Squid caching changes...
 #
 # To minimize damage on fatal PHP errors, output a default no-cache header
