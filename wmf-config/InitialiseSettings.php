@@ -6749,6 +6749,9 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true, 'autopatrol' => true, ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 	),
+	'itwikisource' => array(
+		'flood' => array( 'bot' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=36600
+	),
 	'itwikiversity' => array( 'autoconfirmed' => array( 'patrol' => true ) ),
 	'itwikibooks' => array( 'user' => array( 'patrol' => false, 'move' => false ),
 							'autoconfirmed' => array( 'move' => true, 'patrol' => true ),
@@ -7735,6 +7738,9 @@ $wgConf->settings = array(
 	),
 	'+itwikibooks' => array(
 		'sysop'	 => array( 'autopatrolled', 'patroller' ),
+	),
+	'+itwikisource' => array(
+		'bureaucrat' => array( 'flood' ), #bug 36600
 	),
 	'+itwiktionary' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
@@ -9389,6 +9395,7 @@ $wgConf->settings = array(
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
+	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=36600
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
 	// 'simplewikibooks' => array( 'sysop' => array( 'flood' )),
 	'simplewikiquote' => array( 'sysop' => array( 'flood' ) ),
@@ -9403,6 +9410,7 @@ $wgConf->settings = array(
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'frwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
+	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=36600
 	'mlwiki' => array( 'botadmin' => array( 'botadmin' ) ),
 	'mlwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
