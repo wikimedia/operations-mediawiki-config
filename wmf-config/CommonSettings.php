@@ -63,6 +63,9 @@ if ( getenv( 'WIKIBACKUP' ) ) {
 }
 
 $cluster = 'pmtpa';
+if( getenv('INSTANCENAME') !== false ) {
+	$cluster = 'wmflabs';
+}
 
 # Load site configuration
 include( "$IP/includes/DefaultSettings.php" );
