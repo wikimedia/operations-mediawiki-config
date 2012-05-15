@@ -89,11 +89,14 @@ $wmfConfigDir = "$IP/../wmf-config";
 
 wfProfileOut( "$fname-host" );
 
+# Must be set before InitialiseSettings.php:
+$wmfUdp2logDest = '10.0.5.8:8420';
+
 # Initialise wgConf
 wfProfileIn( "$fname-wgConf" );
 require( "$wmfConfigDir/wgConf.php" );
 function wmfLoadInitialiseSettings( $conf ) {
-	global $wmfConfigDir, $wgConf;
+	global $wmfConfigDir, $wgConf, $wmfUdp2logDest;
 	# $wgConf =& $conf; # b/c alias
 	require( "$wmfConfigDir/InitialiseSettings.php" );
 }
@@ -257,12 +260,12 @@ $wgHTCPMulticastTTL = 8;
 if ( defined( 'DEBUG_LOG' ) ) {
 	if ( $wgDBname == 'aawiki' ) {
 		$wgMemCachedDebug = true;
-		$wgDebugLogFile = 'udp://10.0.5.8:8420/debug15';
+		$wgDebugLogFile = "udp://$wmfUdp2logDest/debug15";
 		$wgDebugDumpSql = true;
 	}
 }
 
-$wgDBerrorLog = 'udp://10.0.5.8:8420/dberror';
+$wgDBerrorLog = "udp://$wmfUdp2logDest/dberror";
 $wgCheckDBSchema = false;
 
 if ( !isset( $wgLocaltimezone ) ) $wgLocaltimezone = 'UTC';
@@ -633,12 +636,12 @@ $wgSqlLogFile = $wgUploadDirectory . '/sqllog';
 
 $wgBlockOpenProxies = false;
 
-$wgDebugLogGroups['UploadBlacklist'] = 'udp://10.0.5.8:8420/upload-blacklist';
-$wgDebugLogGroups['bug27452'] = 'udp://10.0.5.8:8420/bug27452';
-$wgDebugLogGroups['swiftThumb'] = 'udp://10.0.5.8:8420/swift-thumb'; // -aaron 1/30/12
-$wgDebugLogGroups['FileOperation'] = 'udp://10.0.5.8:8420/filebackend-ops';
+$wgDebugLogGroups['UploadBlacklist'] = "udp://$wmfUdp2logDest/upload-blacklist";
+$wgDebugLogGroups['bug27452'] = "udp://$wmfUdp2logDest/bug27452";
+$wgDebugLogGroups['swiftThumb'] = "udp://$wmfUdp2logDest/swift-thumb"; // -aaron 1/30/12
+$wgDebugLogGroups['FileOperation'] = "udp://$wmfUdp2logDest/filebackend-ops";
 
-$wgDebugLogGroups['404'] = 'udp://10.0.5.8:8420/four-oh-four';
+$wgDebugLogGroups['404'] = "udp://$wmfUdp2logDest/four-oh-four";
 
 # Don't allow users to redirect other users' talk pages
 # Disabled because interwiki redirects are turned off, so it's not needed
@@ -1232,7 +1235,7 @@ $oaiAgentRegex = '/experimental/';
 $oaiAuth = true; # broken... squid? php config? wtf
 $oaiAudit = true;
 $oaiAuditDatabase = 'oai';
-$wgDebugLogGroups['oai'] = 'udp://10.0.5.8:8420/oai';
+$wgDebugLogGroups['oai'] = "udp://$wmfUdp2logDest/oai";
 $oaiChunkSize = 40;
 
 $wgEnableUserEmail = true;
@@ -1247,7 +1250,7 @@ function wfLogXFF() {
 			"$uri\t" .
 			"{$_SERVER['HTTP_X_FORWARDED_FOR']}, {$_SERVER['REMOTE_ADDR']}\t" .
 			( $_REQUEST['wpSave'] ? 'save' : '' ) . "\n",
-			'udp://10.0.5.8:8420/xff' );
+			"udp://$wmfUdp2logDest/xff" );
 	}
 }
 $wgExtensionFunctions[] = 'wfLogXFF';
@@ -1452,7 +1455,7 @@ if ( $wmgEnableCaptcha ) {
 	$wgCaptchaClass = 'FancyCaptcha';
 	$wgCaptchaWhitelist = '#^(https?:)?//([.a-z0-9-]+\\.)?((wikimedia|wikipedia|wiktionary|wikiquote|wikibooks|wikisource|wikispecies|mediawiki|wikimediafoundation|wikinews|wikiversity)\.org|dnsstuff\.com|completewhois\.com|wikimedia\.de|toolserver\.org)(/|$)#i';
 	$wgCaptchaWhitelistIP = array( '91.198.174.0/24' ); # toolserver (bug 23982)
-	$wgDebugLogGroups["captcha"] = "udp://10.0.5.8:8420/captcha";
+	$wgDebugLogGroups["captcha"] = "udp://$wmfUdp2logDest/captcha";
 	/**
 	 * Possibly a broken spambot, or a spambot being tested before a real run.
 	 * Hitting lots of wikis in late June 2006
@@ -1504,7 +1507,7 @@ if ( function_exists( 'dba_open' ) && file_exists( "$IP/cache/interwiki.cdb" ) )
 	$wgInterwikiCache = "$IP/cache/interwiki.cdb";
 }
 
-$wgDebugLogGroups["ExternalStoreDB"] = "udp://10.0.5.8:8420/external";
+$wgDebugLogGroups["ExternalStoreDB"] = "udp://$wmfUdp2logDest/external";
 
 # if( $wgDBname == 'frwikiquote' ||
 if ( $wgDBname == 'sep11wiki' ) {
@@ -1525,12 +1528,12 @@ if ( isset( $sectionLoads ) ) {
 	}
 }
 
-$wgDebugLogGroups["query"] = "udp://10.0.5.8:8420/botquery";
+$wgDebugLogGroups["query"] = "udp://$wmfUdp2logDest/botquery";
 
 // Username spoofing / mixed-script / similarity check detection
 include $IP . '/extensions/AntiSpoof/AntiSpoof.php';
 // $wgAntiSpoofAccounts = false; // log only for now
-$wgDebugLogGroups['antispoof'] = 'udp://10.0.5.8:8420/antispoof';
+$wgDebugLogGroups['antispoof'] = "udp://$wmfUdp2logDest/antispoof";
 
 // For transwiki import
 ini_set( 'user_agent', 'Wikimedia internal server fetcher (noc@wikimedia.org' );
@@ -1617,8 +1620,8 @@ if ( $wmgUseDismissableSiteNotice ) {
 $wgMajorSiteNoticeID = '2';
 
 $wgHooks['LoginAuthenticateAudit'][] = 'logBadPassword';
-$wgDebugLogGroups['badpass'] = 'udp://10.0.5.8:8420/badpass';
-$wgDebugLogGroups['ts_badpass'] = 'udp://10.0.5.8:8420/ts_badpass';
+$wgDebugLogGroups['badpass'] = "udp://$wmfUdp2logDest/badpass";
+$wgDebugLogGroups['ts_badpass'] = "udp://$wmfUdp2logDest/ts_badpass";
 $wgHooks['PrefsEmailAudit'][] = 'logPrefsEmail';
 $wgHooks['PrefsPasswordAudit'][] = 'logPrefsPassword';
 
@@ -1783,7 +1786,7 @@ include "$IP/extensions/SwiftCloudFiles/SwiftCloudFiles.php";
 
 // Quickie extension that addsa  bogus field to edit form and whinges if it's filled out
 // Might or might not do anything useful :D
-// Enabling just to log to udp://10.0.5.8:8420/spam
+// Enabling just to log to udp://$wmfUdp2logDest/spam
 include "$IP/extensions/SimpleAntiSpam/SimpleAntiSpam.php";
 
 if ( $wmgUseCollection ) {
@@ -2103,7 +2106,7 @@ if ( $wgDBname == 'testwiki' || $wgDBname == 'foundationwiki' ) {
 
 # # Hack to block emails from some idiot user who likes 'The Joker' --Andrew 2009-05-28
 $wgHooks['EmailUser'][] = 'wmfBlockJokerEmails';
-$wgDebugLogGroups['block_joker_mail'] = 'udp://10.0.5.8:8420/jokermail';
+$wgDebugLogGroups['block_joker_mail'] = "udp://$wmfUdp2logDest/jokermail";
 
 function wmfBlockJokerEmails( &$to, &$from, &$subject, &$text ) {
 	$blockedAddresses = array( 'the4joker@gmail.com', 'testaccount@werdn.us', 'randomdude5555@gmail.com', 'siyang.li@yahoo.com', 'johnnywiki@gmail.com', 'wikifreedomfighter@googlemail.com' );
