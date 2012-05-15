@@ -1994,6 +1994,7 @@ $wgConf->settings = array(
 	'tawiktionary'	=> 'விக்சனரி',
 	'tawikiquote'   => 'விக்கிமேற்கோள்',
 	'tewiki'	=> 'వికీపీడియా',
+	'tewiktionary'  => 'విక్షనరీ',
 	'tgwiki'	=> 'Википедиа',
 	'thwiki'	=> 'วิกิพีเดีย',
 	'thwikinews'    => 'วิกิข่าว',
@@ -2472,6 +2473,11 @@ $wgConf->settings = array(
 		'Discussion_Wikipedia' => NS_PROJECT_TALK,
 		'Utilisatrice' => NS_USER,
 		'Discussion_Utilisatrice' => NS_USER_TALK,
+	),
+	'frwikibooks' => array(
+		'WL' => NS_PROJECT, # bug 35977
+		'WJ' => 102, # bug 35977
+		'Wikijunior_talk' => 103, # bug 35977
 	),
 	'frwikinews' => array(
 		'WN' => NS_PROJECT,
@@ -3038,6 +3044,10 @@ $wgConf->settings = array(
 		'Index_talk' => 107,
 				'పేజీ' => 104,
 				'పేజీ_చర్చ' => 105,
+	),
+	'tewiktionary' => array(
+		 'Wiktionary' => NS_PROJECT, # backcompat for shell req bug 36533
+		 'Wiktionary_చర్చ' => NS_PROJECT_TALK, # backcompat for shell req bug 36533
 	),
 	'tkwiktionary' => array(
 		'Wiktionary' => NS_PROJECT,
@@ -5458,6 +5468,8 @@ $wgConf->settings = array(
 	'frwikibooks' => array(
 		100 => 'Transwiki',
 		101 => 'Discussion_Transwiki',
+		102 => 'Wikijunior', # bug 35977
+		103 => 'Discussion_Wikijunior', # bug 35977
 	),
 	'hewikibooks' => array(
 		100 => 'שער', # portal
