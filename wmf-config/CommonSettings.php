@@ -1214,11 +1214,13 @@ if ( $wmgUseTitleKey ) {
 
 wfProfileIn( "$fname-misc3" );
 
+// Various DB contention settings
 $wgUseDumbLinkUpdate = false;
 $wgAntiLockFlags = ALF_NO_LINK_LOCK | ALF_NO_BLOCK_LOCK;
-# had been using
-# $wgUseDumbLinkUpdate = true;
 # $wgAntiLockFlags = ALF_PRELOAD_LINKS | ALF_PRELOAD_EXISTENCE;
+if ( in_array( $wgDBname, array( 'testwiki', 'test2wiki' ) ) ) {
+	$wgSiteStatsAsyncFactor = 1;
+}
 
 # $wgSquidFastPurge = true;
 # Deferred update still broken
