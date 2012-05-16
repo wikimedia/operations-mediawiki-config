@@ -9250,6 +9250,7 @@ $wgConf->settings = array(
 	'idwiki' => true, # 18430
 	'itwiki' => true,
 	'kawiki' => true,
+	'kkwiki' => true,
 	'kmwiki' => true, // bug 30680
 	'kowiki' => true,
 	'mediawikiwiki' => true, # Bug 29228
