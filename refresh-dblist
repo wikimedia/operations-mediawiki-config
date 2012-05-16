@@ -24,9 +24,6 @@ Split by cluster:
 	s2.dblist
 	s3.dblist
 
-Aaaand for compatibility we send a second copy of the full list to:
-	pmtpa.dblist
-
 */
 
 $base = "/home/wikipedia/common";
@@ -96,10 +93,6 @@ echo "Writing out db cluster assignments...\n";
 foreach ($clusterAssignments as $cluster => $list) {
 	listOut($cluster, $list);
 }
-
-echo "Writing out data center assignments...\n";
-listOut("pmtpa", $all);
-
 
 echo "Done.\n";
 
