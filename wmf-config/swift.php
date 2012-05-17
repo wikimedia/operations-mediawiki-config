@@ -11,8 +11,9 @@
  */
 
 if ( in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki' ) ) ) {
+	$wgHooks['FileTransformed'][] = 'wmfOnFileTransformed';
 	$wgHooks['LocalFilePurgeThumbnails'][] = 'wmfOnLocalFilePurgeThumbnails';
-} else {
+} else { // old hook
 	$wgHooks['LocalFilePurgeThumbnails'][] = 'wmfPurgeBackendThumbCache';
 }
 
