@@ -11,7 +11,7 @@
  */
 
 // disabled --aaron
-if ( false && in_array( $wgDBname, array( 'testwiki', 'test2wiki' ) ) ) {
+if ( in_array( $wgDBname, array( 'testwiki', 'test2wiki' ) ) ) {
 	$wgHooks['LocalFilePurgeThumbnails'][] = 'wmfOnLocalFilePurgeThumbnails';
 } else {
 	$wgHooks['LocalFilePurgeThumbnails'][] = 'wmfPurgeBackendThumbCache';
