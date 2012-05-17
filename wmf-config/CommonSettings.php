@@ -92,8 +92,7 @@ $wmfConfigDir = "$IP/../wmf-config";
 
 wfProfileOut( "$fname-host" );
 
-# Must be set before InitialiseSettings.php
-# Must be an IP address (hostname does not work), followed by a port number
+# Must be set before InitialiseSettings.php:
 $wmfUdp2logDest = '10.0.5.8:8420';
 
 # Initialise wgConf
