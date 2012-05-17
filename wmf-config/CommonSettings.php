@@ -721,6 +721,7 @@ $wgExpensiveParserFunctionLimit = 500;
 
 // <ref> and <references> tags -ævar, 2005-12-23
 require( $IP . '/extensions/Cite/Cite.php' );
+require( $IP . '/extensions/Cite/SpecialCite.php' );
 
 // psuedobotinterface -ævar, 2005-12-25
 // require( $IP.'/extensions/Filepath/SpecialFilepath.php' ); // obsolete 2008-02-12
@@ -1399,16 +1400,6 @@ if ( $wgDBname == 'enwikisource' ) {
 		'baseDirectory' => '/mnt/upload6/wikipedia/commons/scans',
 		'basePath' => "$urlprotocol//upload.wikimedia.org/wikipedia/commons/scans",
 	);
-}
-
-// 2005-11-27 Special:Cite for Wikipedia -Ævar
-// FIXME: This should really be done with $wmgUseSpecialCite in InitialiseSettings.php
-if (   ( $site == 'wikipedia' && $wgLanguageCodeReal == $wgLanguageCode )
-	 || $site == 'wikisource'
-	 || ( $site == 'wikiversity' && $wgLanguageCode == 'en' )
-	 || ( $site == 'wikibooks' && $wgLanguageCode == 'it' )
-	 || ( $site == 'wiktionary' && $wgLanguageCode == 'it' ) ) {
-		 require( $IP . '/extensions/Cite/SpecialCite.php' );
 }
 
 // Added throttle for account creations on zh due to mass registration attack 2005-12-16
