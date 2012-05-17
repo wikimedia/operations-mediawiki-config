@@ -10,7 +10,7 @@
  * This file belongs under wmf-config/ and should be included by CommonSettings.php.
  */
 
-if ( in_array( $wgDBname, array( 'testwiki', 'test2wiki' ) ) ) {
+if ( in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki' ) ) ) {
 	$wgHooks['LocalFilePurgeThumbnails'][] = 'wmfOnLocalFilePurgeThumbnails';
 } else {
 	$wgHooks['LocalFilePurgeThumbnails'][] = 'wmfPurgeBackendThumbCache';

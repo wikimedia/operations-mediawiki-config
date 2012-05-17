@@ -1116,7 +1116,8 @@ $wgFileBackends[] = array( // backend config for wiki's local repo
 		'local-thumb'   => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
 		'local-temp'    => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
 		'local-deleted' => array( 'levels' => $wmfSwiftShardLocal, 'base' => 36, 'repeat' => 0 )
-	)
+	),
+	'parallelize'        => 'implicit'
 );
 $wgFileBackends[] = array( // backend config for wiki's access to shared repoloo
 	'class'              => 'SwiftFileBackend',
@@ -1132,7 +1133,8 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repoloo
 		'shared-thumb'   => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
 		'shared-temp'    => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
 		'shared-deleted' => array( 'levels' => $wmfSwiftShardCommon, 'base' => 36, 'repeat' => 0 )
-	)
+	),
+	'parallelize'        => 'implicit'
 );
 /* end Swift backend config */
 
