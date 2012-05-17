@@ -1250,6 +1250,7 @@ $wgEnableUserEmail = true;
 
 # XFF log for vandal tracking
 function wfLogXFF() {
+	global $wmfUdp2logDest;
 	if ( ( @$_SERVER['REQUEST_METHOD'] ) == 'POST' ) {
 		$uri = ( $_SERVER['HTTPS'] ? 'https://' : 'http://' ) .
 			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
