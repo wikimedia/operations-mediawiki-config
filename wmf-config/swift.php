@@ -10,7 +10,7 @@
  * This file belongs under wmf-config/ and should be included by CommonSettings.php.
  */
 
-if ( in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki' ) ) ) {
+if ( in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki', 'commonswiki' ) ) ) {
 	$wgHooks['FileTransformed'][] = 'wmfOnFileTransformed';
 	$wgHooks['LocalFilePurgeThumbnails'][] = 'wmfOnLocalFilePurgeThumbnails';
 } else { // old hook
