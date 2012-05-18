@@ -1199,7 +1199,10 @@ if ( in_array( $wgLanguageCode, array( 'commons', 'meta', 'sources', 'species', 
 }
 
 # :SEARCH:
-$wgUseLuceneSearch = true;
+switch( $cluster ) {
+case 'pmtpa'  : $wgUseLuceneSearch = true ; break;
+case 'wmflabs': $wgUseLuceneSearch = false; break;
+}
 
 wfProfileOut( "$fname-misc2" );
 
