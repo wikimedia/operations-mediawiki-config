@@ -1641,7 +1641,7 @@ if ( $wmgUseCentralAuth ) {
 		if( $cluster == 'pmtpa' ) {
 			unset( $wgCentralAuthAutoLoginWikis['meta.wikimedia.org'] );
 			$wgCentralAuthCookieDomain = 'meta.wikimedia.org';
-		} else { // wmflabs
+		} else { // wmflabs
 			unset( $wgCentralAuthAutoLoginWikis['meta.wikimedia.beta.wmflabs.org'] );
 			$wgCentralAuthCookieDomain = 'meta.wikimedia.beta.wmflabs.org';
 		}
