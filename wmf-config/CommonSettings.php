@@ -665,6 +665,7 @@ $wgDebugLogGroups['swiftThumb'] = "udp://$wmfUdp2logDest/swift-thumb"; // -aaron
 $wgDebugLogGroups['FileOperation'] = "udp://$wmfUdp2logDest/filebackend-ops";
 $wgDebugLogGroups['SwiftBackend'] = "udp://$wmfUdp2logDest/swift-backend"; // -aaron 5/15/12
 $wgDebugLogGroups['updateTranstagOnNullRevisions'] = "udp://$wmfUdp2logDest/updateTranstagOnNullRevisions";
+$wgDebugLogGroups['headerfail'] = "udp://$wmfUdp2logDest/headerfail";
 
 $wgDebugLogGroups['404'] = "udp://$wmfUdp2logDest/four-oh-four";
 
