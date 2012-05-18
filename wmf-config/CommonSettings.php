@@ -1576,39 +1576,75 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthCookies = true;
 
 	# Broken -- TS
-	$wgCentralAuthUDPAddress = $wgRC2UDPAddress;
-	$wgCentralAuthNew2UDPPrefix = "#central\t";
+	if( $cluster == 'pmtpa' ) {
+		$wgCentralAuthUDPAddress = $wgRC2UDPAddress;
+		$wgCentralAuthNew2UDPPrefix = "#central\t";
+	}
 
 	# Determine second-level domain
-	if ( preg_match( '/^\w+\.\w+\./', strrev( $wgServer ), $m ) ) {
+	if( $cluster == 'pmtpa' ) {
+		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
+	} else { // wmflabs
+		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\.\w+\.\w+\./';
+	}
+	if ( preg_match( $wmgSecondLevelDomainRegex, strrev( $wgServer ), $m ) ) {
 		$wmgSecondLevelDomain = strrev( $m[0] );
 	} else {
 		$wmgSecondLevelDomain = false;
 	}
-	$wgCentralAuthAutoLoginWikis = array(
-		'.wikipedia.org' => 'enwiki',
-		'meta.wikimedia.org' => 'metawiki',
-		'.wiktionary.org' => 'enwiktionary',
-		'.wikibooks.org' => 'enwikibooks',
-		'.wikiquote.org' => 'enwikiquote',
-		'.wikisource.org' => 'enwikisource',
-		'commons.wikimedia.org' => 'commonswiki',
-		'.wikinews.org' => 'enwikinews',
-		'.wikiversity.org' => 'enwikiversity',
-		'.mediawiki.org' => 'mediawikiwiki',
-		'species.wikimedia.org' => 'specieswiki',
-		'incubator.wikimedia.org' => 'incubatorwiki',
-	);
+	unset( $wmgSecondLevelDomainRegex );
+
+	if( $cluster == 'pmtpa' ) {
+		// Production cluster
+		$wgCentralAuthAutoLoginWikis = array(
+			'.wikipedia.org' => 'enwiki',
+			'meta.wikimedia.org' => 'metawiki',
+			'.wiktionary.org' => 'enwiktionary',
+			'.wikibooks.org' => 'enwikibooks',
+			'.wikiquote.org' => 'enwikiquote',
+			'.wikisource.org' => 'enwikisource',
+			'commons.wikimedia.org' => 'commonswiki',
+			'.wikinews.org' => 'enwikinews',
+			'.wikiversity.org' => 'enwikiversity',
+			'.mediawiki.org' => 'mediawikiwiki',
+			'species.wikimedia.org' => 'specieswiki',
+			'incubator.wikimedia.org' => 'incubatorwiki',
+		);
+	} else {
+		// wmflabs beta cluster
+		$wgCentralAuthAutoLoginWikis = array(
+			'incubator.wikimedia.beta.wmflabs.org' => 'incubatorwiki',
+			'.wikipedia.beta.wmflabs.org' => 'enwiki',
+			'.wikisource.beta.wmflabs.org' => 'enwikisource',
+			'.wikibooks.beta.wmflabs.org' => 'enwikibooks',
+			'.wikiversity.beta.wmflabs.org' => 'enwikiversity',
+			'.wikiquote.beta.wmflabs.org' => 'enwikiquote',
+			'.wikinews.beta.wmflabs.org' => 'enwikinews',
+			'.wiktionary.beta.wmflabs.org' => 'enwiktionary',
+			'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
+			'deployment.wikimedia.beta.wmflabs.org' => 'labswiki',
+			'test.wikimedia.beta.wmflabs.org' => 'testwiki',
+			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
+			'ee-prototype.wikipedia.beta.wmflabs.org' => 'ee_prototypewiki',
+		);
+	}
+
+
 	# Don't autologin to self
 	if ( isset( $wgCentralAuthAutoLoginWikis[$wmgSecondLevelDomain] ) ) {
 		unset( $wgCentralAuthAutoLoginWikis[$wmgSecondLevelDomain] );
 		$wgCentralAuthCookieDomain = $wmgSecondLevelDomain;
-	} elseif ( $wgDBname == 'commonswiki' ) {
+	} elseif ( $cluster == 'pmtpa' && $wgDBname == 'commonswiki' ) {
 		unset( $wgCentralAuthAutoLoginWikis['commons.wikimedia.org'] );
 		$wgCentralAuthCookieDomain = 'commons.wikimedia.org';
 	} elseif ( $wgDBname == 'metawiki' ) {
-		unset( $wgCentralAuthAutoLoginWikis['meta.wikimedia.org'] );
-		$wgCentralAuthCookieDomain = 'meta.wikimedia.org';
+		if( $cluster == 'pmtpa' ) {
+			unset( $wgCentralAuthAutoLoginWikis['meta.wikimedia.org'] );
+			$wgCentralAuthCookieDomain = 'meta.wikimedia.org';
+		} else { // wmflabs
+			unset( $wgCentralAuthAutoLoginWikis['meta.wikimedia.beta.wmflabs.org'] );
+			$wgCentralAuthCookieDomain = 'meta.wikimedia.beta.wmflabs.org';
+		}
 	} else {
 		# Don't set 2nd-level cookies for *.wikimedia.org, insecure
 		$wgCentralAuthCookieDomain = '';
