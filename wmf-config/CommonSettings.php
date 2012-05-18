@@ -702,8 +702,10 @@ if ( $site == 'wikinews' ) {
 # Investigated cluster trouble, tidy seems to have been unrelated to them -- TS
 $wgUseTidy = true;
 
-$wgUDPProfilerHost = '10.0.6.30'; # professor
-$wgAggregateStatsID = $wgVersion;
+if( $cluster == 'pmtpa' ) {
+	$wgUDPProfilerHost = '10.0.6.30'; # professor
+	$wgAggregateStatsID = $wgVersion;
+}
 
 // $wgProfiler is set in index.php
 if ( isset( $wgProfiler ) ) {
