@@ -110,9 +110,14 @@ class MWMultiVersion {
 	 * @param $docRoot the DocumentRoot for this wiki -- $_SERVER['DOCUMENT_ROOT']
 	 */
 	private function setSiteInfoForWiki( $serverName, $docRoot ) {
+		# The old secure.wikimedia.org gateway, set a specific env variable for us
+		# to react differently.
 		$secure = getenv( 'MW_SECURE_HOST' );
+
 		$matches = array();
 		if ( $secure ) {
+			// secure.wikimedia.org
+
 			if ( !preg_match('/^([^.]+)\.([^.]+)\./', $secure, $matches ) ) {
 				self::error( "Invalid hostname.\n" );
 			}
@@ -126,6 +131,8 @@ class MWMultiVersion {
 				$site = "wikipedia";
 			}
 		} else {
+			// Most requests ;)
+
 			$site = "wikipedia";
 			if ( getenv( 'MW_LANG' ) ) {
 				# Language forced from some hacky script like extract2.php
