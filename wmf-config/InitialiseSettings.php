@@ -9217,7 +9217,8 @@ $wgConf->settings = array(
 'wmgUseCollection' => array(
 	// PDF generation / PediaPress stuff
 	'default' => false,
-	'testwiki' => true, # not ready quite yet
+	'testwiki' => true,
+	'test2wiki' => true,
 	'alswiki' => true, # Bug 18517
 	'arwiki' => true, # bug 33828
 	'bpywiki' => true, # Bug 18517
