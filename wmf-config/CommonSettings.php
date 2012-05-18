@@ -93,7 +93,16 @@ $wmfConfigDir = "$IP/../wmf-config";
 wfProfileOut( "$fname-host" );
 
 # Must be set before InitialiseSettings.php:
-$wmfUdp2logDest = '10.0.5.8:8420';
+switch( $cluster ) {
+case 'pmtpa'  :
+	$wmfUdp2logDest = '10.0.5.8:8420';
+	break;
+case 'wmflabs':
+	$wmfUdp2logDest = 'deployment-feed:8420';
+	break;
+default:
+	$wmfUdp2logDest = '127.0.0.1:8420';
+}
 
 # Initialise wgConf
 wfProfileIn( "$fname-wgConf" );
