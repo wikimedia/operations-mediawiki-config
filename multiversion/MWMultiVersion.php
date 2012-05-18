@@ -138,12 +138,17 @@ class MWMultiVersion {
 				# Language forced from some hacky script like extract2.php
 				$lang = getenv( 'MW_LANG' );
 			} elseif ( preg_match( '/^(?:\/usr\/local\/apache\/|\/home\/wikipedia\/)(?:htdocs|common\/docroot)\/([a-z]+)\.org/', $docRoot, $matches ) ) {
+				# This is the poor man / hacky routing engine for WMF cluster
 				$site = $matches[1];
 				if ( preg_match( '/^(.*)\.' . preg_quote( $site ) . '\.org$/', $serverName, $matches ) ) {
 					$lang = $matches[1];
 					// For some special subdomains, like pa.us
 					$lang = str_replace( '.', '-', $lang );
 				} else if ( preg_match( '/^(.*)\.prototype\.wikimedia\.org$/', $serverName, $matches ) ) {
+					// http://en.prototype.wikimedia.org/
+					$lang = $matches[1];
+				} else if ( preg_match( '/^([^.]+)\.[^.]+\.beta\.wmflabs\.org$/', $serverName, $matches ) ) {
+					// http://en.wikipedia.beta.wmflabs.org/
 					$lang = $matches[1];
 				} else {
 					self::error( "Invalid host name ($serverName), can't determine language.\n" );
