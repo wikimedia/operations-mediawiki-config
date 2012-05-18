@@ -1797,11 +1797,13 @@ if ( $wmgUseCentralNotice ) {
 
 	# Wed evening -- all on!
 	$wgNoticeTimeout = 3600;
-	$wgNoticeServerTimeout = 3600; // to let the counter update
-	$wgNoticeCounterSource = $urlprotocol . '//wikimediafoundation.org/wiki/Special:ContributionTotal' .
-		'?action=raw' .
-		'&start=20101112000000' . // FY 10-11
-		'&fudgefactor=660000';   // fudge for pledged donations not in CRM
+	if( $cluster = 'pmtpa' ) {
+		$wgNoticeServerTimeout = 3600; // to let the counter update
+		$wgNoticeCounterSource = $urlprotocol . '//wikimediafoundation.org/wiki/Special:ContributionTotal' .
+			'?action=raw' .
+			'&start=20101112000000' . // FY 10-11
+			'&fudgefactor=660000';   // fudge for pledged donations not in CRM
+	}
 
 	if ( $wgDBname == 'metawiki' || $wgDBname == 'testwiki' ) {
 		$wgNoticeInfrastructure = true;
