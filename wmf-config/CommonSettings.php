@@ -1760,7 +1760,11 @@ if ( file_exists( '/etc/wikimedia-image-scaler' ) ) {
 	$wgMaxShellMemory = 300000; // temp was 200M
 }
 $wgMaxShellTime = 50; // so it times out before PHP and curl and squid
-$wgImageMagickTempDir = '/a/magick-tmp';
+
+switch( $cluster ) {
+case 'pmtpa'  : $wgImageMagickTempDir = '/a/magick-tmp'; break;
+case 'wmflabs': $wgImageMagickTempDir = '/tmp/a/magick-tmp'; break;
+}
 
 // Banner notice system
 if ( $wmgUseCentralNotice ) {
