@@ -9822,6 +9822,8 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'test2wiki' => true,
 	'commonswiki' => true,
+	'donatewiki' => true,
+	'foundationwiki' => true,
 ),
 
 'wmgUseVisualEditor' => array(
