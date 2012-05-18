@@ -37,7 +37,7 @@ switch( $cluster ) {
 		);
 	break;
 
-	case 'beta':
+	case 'wmflabs':
 		$wgConf->localVHosts = array(
 			'wikipedia.beta.wmflabs.org',
 			'wiktionary.beta.wmflabs.org',
