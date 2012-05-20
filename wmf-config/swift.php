@@ -172,14 +172,18 @@ function wmfOnLocalFilePurgeThumbnails( File $file, $archiveName ) {
 			"Site: `{$site}` Lang: `{$lang}` ThumbRel: `{$thumbRel}/`" );
 	} else {
 		$ops = array();
+		wfProfileIn( __METHOD__ . '-list' );
 		foreach ( $list as $relFile ) {
 			$ops[] = array( 'op' => 'delete', 'src' => "{$thumbDir}/{$relFile}" );
 		}
+		wfProfileOut( __METHOD__ . '-list' );
+		wfProfileIn( __METHOD__ . '-purge' );
 		$status = $backend->doQuickOperations( $ops );
 		if ( !$status->isOK() ) {
 			wfDebugLog( 'swiftThumb', "Could not delete all thumbnails from listing." .
 				"Site: `{$site}` Lang: `{$lang}` ThumbRel: `{$thumbRel}/`" );
 		}
+		wfProfileOut( __METHOD__ . '-purge' );
 	}
 
 	return true;
