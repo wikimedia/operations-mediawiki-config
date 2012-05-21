@@ -2334,6 +2334,8 @@ $wgAvailableRights[] = 'moodbar-admin'; // To allow global groups to include thi
 
 if ( $wmgMobileFrontend ) {
 	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
+	$wgMFRemotePostFeedbackUsername = $wmgMFRemotePostFeedbackUsername;
+	$wgMFRemotePostFeedbackPassword = $wmgMFRemotePostFeedbackPassword;
 	$wgMFRemotePostFeedback = true;
 	$wgMFRemotePostFeedbackUrl = "http://www.mediawiki.org/w/api.php";
 	$wgMFRemotePostFeedbackArticle = "MobileFrontendFeedback";
@@ -2403,7 +2405,7 @@ if ( $wmgMobileFrontend ) {
         	$generalLink = "mailto:$emailStub@wikimedia.org?subject=$generalSubject";
 		if ( $lang == 'en' ) {
         		$articlePersonalLink = "mailto:$emailStub-q@wikimedia.org?subject=$articlePersonalSubject";
-        		$articleOtherLink = "mailto:$emailStub-c@wikimedia.org?subject=$articleOtherSubject";
+        		$articleOtherLink = "mailto:$emailStub-o@wikimedia.org?subject=$articleOtherSubject";
 		} else {
         		$articlePersonalLink = "mailto:$emailStub@wikimedia.org?subject=$articlePersonalSubject";
         		$articleOtherLink = "mailto:$emailStub@wikimedia.org?subject=$articleOtherSubject";
