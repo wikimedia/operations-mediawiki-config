@@ -10839,6 +10839,6 @@ $wgConf->settings = array(
 'wmgEnablePageTriage' => array(
 	'default' => false,
 	'testwiki' => true,
-	'enwiki' => false,
+	'enwiki' => true,
 ),
 );
