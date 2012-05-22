@@ -49,6 +49,7 @@ $IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php
 $IP/extensions/ImageMap/ImageMap.php
 $IP/extensions/InputBox/InputBox.php
 $IP/extensions/intersection/DynamicPageList.php
+$IP/extensions/Interwiki/Interwiki.php
 $IP/extensions/LabeledSectionTransclusion/lst.php
 $IP/extensions/LandingCheck/LandingCheck.php
 $IP/extensions/LiquidThreads/LiquidThreads.php

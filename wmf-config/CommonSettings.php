@@ -2589,6 +2589,11 @@ if ( $wmgEnablePageTriage ) {
 	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 }
 
+if ( $wmgEnableInterwiki ) {
+	require_once( "$IP/extensions/Interwiki/Interwiki.php" );
+	$wgInterwikiViewOnly = true;
+}
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER

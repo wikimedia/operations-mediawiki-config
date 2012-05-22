@@ -10841,4 +10841,8 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'enwiki' => true,
 ),
+'wmgEnableInterwiki' => array(
+	'default' => false,
+	'testwiki' => true,
+),
 );
