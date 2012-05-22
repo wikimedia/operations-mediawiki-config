@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAALX//65w\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2012-05-22T17:08:29Z",
+      "side": 1,
+      "message": "Tabbing of \u0027break\u0027 is off",
+      "revId": "43565c6653cdd7ace6eddadd58f45b44e3ae0faa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
