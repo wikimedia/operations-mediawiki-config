@@ -2256,7 +2256,7 @@ if ( $wmgMobileFrontend ) {
 	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 	$wgMFRemotePostFeedback = true;
 	$wgMFRemotePostFeedbackUrl = "http://www.mediawiki.org/w/api.php";
-	$wgMFRemotePostFeedbackArticle = "MobileFrontendFeedback";
+	$wgMFRemotePostFeedbackArticle = "Project:Mobile site feedback";
 	$wgMFFeedbackFallbackURL = 'http://en.m.wikipedia.org/wiki/Wikipedia:Contact_us';
 
 	$wgHooks['MobileFrontendOverrideFeedbackLinks'][] = 'MobileFrontendFeedbackConfig';
