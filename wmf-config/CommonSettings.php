@@ -191,8 +191,16 @@ extract( $globals );
 require( "$wmfConfigDir/PrivateSettings.php" );
 
 # Cluster-dependent files for database and memcached
-require( "$wmfConfigDir/db.php" );
-require( "$wmfConfigDir/mc.php" );
+switch( $cluster ) {
+case 'wmflabs':
+	require( "$wmfConfigDir/db-wmflabs.php" );
+	require( "$wmfConfigDir/mc-wmflabs.php" );
+	break;
+case 'pmtpa':
+default:
+	require( "$wmfConfigDir/db.php" );
+	require( "$wmfConfigDir/mc.php" );
+}
 
 ini_set( 'memory_limit', $wmgMemoryLimit );
 
