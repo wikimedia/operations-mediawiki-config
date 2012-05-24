@@ -2418,7 +2418,7 @@ if ( $wmgMobileFrontend ) {
 		}
 
 		$technicalBody = wfMsgExt( 'mobile-frontend-leave-feedback-email-body', $msgOpts ) . "\nUser-agent: " . $_SERVER['HTTP_USER_AGENT'] . "\n";
-		$technicalLink = "mailto:mobile-feedback-l@wikimedia.org?subject=$technicalSubject&body=$technicalBody";
+		$technicalLink = "mailto:feedbacktest@wikimedia.org?subject=$technicalSubject&body=$technicalBody";
 
 		$wgMFFeedbackLinks = array(
 			'Technical' => $technicalLink, // Technical feedback
