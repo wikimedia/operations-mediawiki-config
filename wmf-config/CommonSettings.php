@@ -2395,7 +2395,7 @@ if ( $wmgMobileFrontend ) {
         	$articlePersonalSubject = $subjectPreface . wfMsgExt( 'mobile-frontend-leave-feedback-article-personal-link-text', $msgOpts );
         	$articleFactualSubject = $subjectPreface . wfMsgExt( 'mobile-frontend-leave-feedback-article-factual-link-text', $msgOpts );
         	$articleOtherSubject = $subjectPreface . wfMsgExt( 'mobile-frontend-leave-feedback-article-other-link-text', $msgOpts );
-		$technicalSubject = $subjectPreface . wfMsgExt( 'mobile-frontend-leave-feedback-technical-text', $msgOpts );
+		$technicalSubject = $subjectPreface . wfMsgExt( 'mobile-frontend-leave-feedback-technical-link-text', $msgOpts );
 
 		/** Build links **/
         	$emailStub = "info-$lang";
