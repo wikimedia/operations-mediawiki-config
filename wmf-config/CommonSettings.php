@@ -2139,8 +2139,6 @@ if ( $wmgUseArticleFeedbackv5 ) {
 	$wgArticleFeedbackv5DashboardCategory = array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' );
 	$wgArticleFeedbackv5OversightEmails = $wmgArticleFeedbackv5OversightEmails;
 
-	$wgArticleFeedbackv5DisplayBuckets['version'] = 1;
-
 	foreach ( array( 'afttest', 'afttest-hide', 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
 		$wgGroupPermissions[$group]['aftv5-hide-feedback'] = true;
 		$wgGroupPermissions[$group]['aftv5-see-hidden-feedback'] = true;
