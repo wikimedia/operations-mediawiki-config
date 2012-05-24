@@ -2203,6 +2203,7 @@ if ( $wgUseContributionTracking ) {
 	include( "$wmfConfigDir/contribution-tracking-setup.php" );
 	$wgContributionTrackingPayPalIPN = "https://civicrm.wikimedia.org/fundcore_gateway/paypal";
 	$wgContributionTrackingPayPalRecurringIPN = "https://civicrm.wikimedia.org/IPNListener_Recurring.php";
+	$wgContributionTrackingUTMKey = true;
 }
 
 if ( $wmgUseUploadWizard ) {
