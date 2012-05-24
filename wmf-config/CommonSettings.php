@@ -2395,6 +2395,7 @@ if ( $wmgMobileFrontend ) {
         	$articlePersonalSubject = $subjectPreface . wfMsgExt( 'mobile-frontend-leave-feedback-article-personal-link-text', $msgOpts );
         	$articleFactualSubject = $subjectPreface . wfMsgExt( 'mobile-frontend-leave-feedback-article-factual-link-text', $msgOpts );
         	$articleOtherSubject = $subjectPreface . wfMsgExt( 'mobile-frontend-leave-feedback-article-other-link-text', $msgOpts );
+		$technicalSubject = $subjectPreface . wfMsgExt( 'mobile-frontend-leave-feedback-technical-text', $msgOpts );
 
 		/** Build links **/
         	$emailStub = "info-$lang";
@@ -2416,7 +2417,11 @@ if ( $wmgMobileFrontend ) {
         		$articleOtherLink = "mailto:$emailStub@wikimedia.org?subject=$articleOtherSubject";
 		}
 
-        	$wgMFFeedbackLinks = array(
+		$technicalBody = wfMsgExt( 'mobile-frontend-leave-feedback-email-body', $msgOpts ) . "\nUser-agent: " . $_SERVER['HTTP_USER_AGENT'] . "\n";
+		$technicalLink = "mailto:mobile-feedback-l@wikimedia.org?subject=$technicalSubject&body=$technicalBody";
+
+		$wgMFFeedbackLinks = array(
+			'Technical' => $technicalLink, // Technical feedback
                 	'General' => $generalLink, // General feedback
                 	'ArticlePersonal' => $articlePersonalLink, // Regarding me, a person, or a company I work for
                 	'ArticleFactual' => $articleFactualLink, // Regarding a factual error
