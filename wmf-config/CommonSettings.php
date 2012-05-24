@@ -2157,7 +2157,6 @@ if ( $wmgUseArticleFeedbackv5 ) {
 	$wgGroupPermissions['afttest-hide']['aftv5-feature-feedback']  = true;
 	$wgGroupPermissions['afttest']['aftv5-feature-feedback']  = true;
 
-	$wgArticleFeedbackv5SelectedCTA = 1;
 	$wgArticleFeedbackv5AbuseFiltering = $wmgArticleFeedbackv5AbuseFiltering;
 }
 
