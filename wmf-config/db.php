@@ -71,7 +71,7 @@ $wgLBFactoryConf = array(
 		'db32'	  => 50, # snapshot host
 		'db59'    => 400,
 		'db60'    => 400,
-		'db12'	  => 50, # special: watchlist, etc see groupLoadsByDB hardy - rebuild me
+		'db12'	  => 0, # special: watchlist, etc see groupLoadsByDB hardy - rebuild me
 	),
 	's2' => array(
 		'db52'	  => 0,
