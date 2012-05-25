@@ -1095,107 +1095,17 @@ $wgUploadSizeWarning = false;
 # Default address gets rejected by some mail hosts
 $wgPasswordSender = 'wiki@wikimedia.org';
 
-/* NFS backend config */
-$wgFileBackends[] = array( // backend config for wiki's local repo
-	'class'          => 'FSFileBackend',
-	'name'           => 'local-NFS',
-	'wikiId'         => "{$site}-{$lang}",
-	'lockManager'    => 'nullLockManager', # LocalFile uses FOR UPDATE
-	'fileJournal'    => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname ),
-	'fileMode'       => 0644,
-	'containerPaths' => array(
-		"local-public"  => $wgUploadDirectory,
-		"local-thumb"   => str_replace( '/mnt/upload6', '/mnt/thumbs', "$wgUploadDirectory/thumb" ),
-		"local-deleted" => "/mnt/upload6/private/archive/$site/$lang",
-		"local-temp"    => "$wgUploadDirectory/temp",
-	)
-);
-$wgFileBackends[] = array( // backend config for wiki's access to shared repo
-	'class'          => 'FSFileBackend',
-	'name'           => 'shared-NFS',
-	'wikiId'         => "wikipedia-commons",
-	'lockManager'    => 'nullLockManager', # just thumbnails
-	'fileJournal'    => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki' ),
-	'fileMode'       => 0644,
-	'containerPaths' => array(
-		"shared-public"  => "/mnt/upload6/wikipedia/commons",
-		"shared-thumb"   => "/mnt/thumbs/wikipedia/commons/thumb",
-		"shared-temp"    => "/mnt/upload6/wikipedia/commons/temp",
-	)
-);
-/* end NFS backend config */
+switch( $cluster ) {
+case 'wmflabs':
+	require( 'filebackend-wmflabs.php' );
+	break;
+case 'pmtpa':
+default:
+	require( 'filebackend.php' );
+	break;
+}
 
-/* OpenStack Swift backend config */
-$wmfSwiftBigWikis = array( # DO NOT change without proper migration first
-	'commonswiki', 'dewiki', 'enwiki', 'fiwiki', 'frwiki', 'hewiki', 'huwiki', 'idwiki',
-	'itwiki', 'jawiki', 'rowiki', 'ruwiki', 'thwiki', 'trwiki', 'ukwiki', 'zhwiki'
-);
-$wmfSwiftShardLocal = in_array( $wgDBname, $wmfSwiftBigWikis ) ? 2 : 0;
-$wmfSwiftShardCommon = in_array( 'commonswiki', $wmfSwiftBigWikis ) ? 2 : 0;
-$wgFileBackends[] = array( // backend config for wiki's local repo
-	'class'              => 'SwiftFileBackend',
-	'name'               => 'local-swift',
-	'wikiId'             => "{$site}-{$lang}",
-	'lockManager'        => 'nullLockManager', // LocalFile uses FOR UPDATE
-	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname ),
-	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
-	'swiftUser'          => $wmfSwiftConfig['user'],
-	'swiftKey'           => $wmfSwiftConfig['key'],
-	'shardViaHashLevels' => array(
-		'local-public'  => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-thumb'   => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-temp'    => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-deleted' => array( 'levels' => $wmfSwiftShardLocal, 'base' => 36, 'repeat' => 0 )
-	),
-	'parallelize'        => 'implicit'
-);
-$wgFileBackends[] = array( // backend config for wiki's access to shared repoloo
-	'class'              => 'SwiftFileBackend',
-	'name'               => 'shared-swift',
-	'wikiId'             => "wikipedia-commons",
-	'lockManager'        => 'nullLockManager', // just thumbnails
-	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki' ),
-	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
-	'swiftUser'          => $wmfSwiftConfig['user'],
-	'swiftKey'           => $wmfSwiftConfig['key'],
-	'shardViaHashLevels' => array(
-		'shared-public'  => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'shared-thumb'   => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'shared-temp'    => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'shared-deleted' => array( 'levels' => $wmfSwiftShardCommon, 'base' => 36, 'repeat' => 0 )
-	),
-	'parallelize'        => 'implicit'
-);
-/* end Swift backend config */
-
-$wgLocalFileRepo = array(
-		'class'             => 'LocalRepo',
-		'name'              => 'local',
-		'backend'           => 'local-NFS',
-		'url'               => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
-		'scriptDirUrl'      => $wgScriptPath,
-		'hashLevels'        => 2,
-		'thumbScriptUrl'    => $wgThumbnailScriptPath,
-		'transformVia404'   => true,
-		'initialCapital'    => $wgCapitalLinks,
-		'deletedHashLevels' => 3,
-);
-if ( $wgDBname != 'commonswiki' ) {
-	$wgForeignFileRepos[] = array(
-		'class'            => 'ForeignDBViaLBRepo',
-		'name'             => 'shared',
-		'backend'          => 'shared-NFS',
-		'url'              => "$urlprotocol//upload.wikimedia.org/wikipedia/commons",
-		'hashLevels'       => 2,
-		'thumbScriptUrl'   => false,
-		'transformVia404'  => true,
-		'hasSharedCache'   => true,
-		'descBaseUrl'      => "$urlprotocol//commons.wikimedia.org/wiki/File:",
-		'scriptDirUrl'     => "$urlprotocol//commons.wikimedia.org/w",
-		'fetchDescription' => true,
-		'wiki'             => 'commonswiki',
-		'initialCapital'   => true
-	);
+if( $wgDBname != 'commonswiki' ) {
 	$wgDefaultUserOptions['watchcreations'] = 1;
 }
 
