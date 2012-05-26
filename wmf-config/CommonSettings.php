@@ -800,6 +800,13 @@ if ( $wmgUseLST ) {
 
 if ( $wmgUseSpamBlacklist ) {
 	include( $IP . '/extensions/SpamBlacklist/SpamBlacklist.php' );
+	$wgBlacklistSettings = array(
+		'spam' => array(
+			'files' => array(
+				'http://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1'
+			),
+		),
+	);
 }
 
 include( $IP . '/extensions/UploadBlacklist/UploadBlacklist.php' );
