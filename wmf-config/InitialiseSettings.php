@@ -6460,6 +6460,7 @@ $wgConf->settings = array(
 	'cswikisource' => array(
 		'user'	  => array( 'upload' => false ),
 		'autoconfirmed' => array( 'upload' => false ),
+		'autopatrolled' => array( 'autopatrol' => true, ),
 	),
 	'cswikiversity' => array(
 		'user'	  => array( 'upload' => false ),
@@ -7231,6 +7232,9 @@ $wgConf->settings = array(
 	'+cswikiquote' => array(
 		'bureaucrat' => array( 'autopatrolled' ),
 	),
+	'+cswikisource' => array(
+		'bureaucrat' => array( 'autopatrolled' ),
+	),
 	'+cswiktionary' => array(
 		'bureaucrat' => array( 'autopatrolled' ),
 	),
@@ -7601,6 +7605,9 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autopatrolled' ),
 	),
 	'+cswikiquote' => array(
+		'bureaucrat' => array( 'autopatrolled' ),
+	),
+	'+cswikisource' => array(
 		'bureaucrat' => array( 'autopatrolled' ),
 	),
 	'+cswiktionary' => array(
