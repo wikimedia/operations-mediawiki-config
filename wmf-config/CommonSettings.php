@@ -1118,17 +1118,16 @@ if( $wgDBname != 'commonswiki' ) {
 
 if ( $wgDBname == 'nostalgiawiki' ) {
 	# Link back to current version from the archive funhouse
-	# wgSiteNotice should use $urlprotocol when wikipedia domain has https enabled
 	if ( ( isset( $_REQUEST['title'] ) && ( $title = $_REQUEST['title'] ) )
 		|| ( isset( $_SERVER['PATH_INFO'] )  && ( $title = substr( $_SERVER['PATH_INFO'], 1 ) ) ) ) {
 		if ( preg_match( '/^(.*)\\/Talk$/', $title, $matches ) ) {
 			$title = 'Talk:' . $matches[1];
 		}
-		$wgSiteNotice = "[http://en.wikipedia.org/wiki/" .
+		$wgSiteNotice = "[$urlprotocol//en.wikipedia.org/wiki/" .
 			htmlspecialchars( urlencode( $title ) ) .
 		' See the current version of this page on Wikipedia]';
 	} else {
-		$wgSiteNotice = "[http://en.wikipedia.org/ See current Wikipedia]";
+		$wgSiteNotice = "[$urlprotocol//en.wikipedia.org/ See current Wikipedia]";
 	}
 	$wgDefaultUserOptions['highlightbroken'] = 0;
 }
