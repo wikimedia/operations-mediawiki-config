@@ -1722,7 +1722,7 @@ if ( $wmgUseCentralNotice ) {
 
 	# Wed evening -- all on!
 	$wgNoticeTimeout = 3600;
-	if( $cluster = 'pmtpa' ) {
+	if( $cluster == 'pmtpa' ) {
 		$wgNoticeServerTimeout = 3600; // to let the counter update
 		$wgNoticeCounterSource = $urlprotocol . '//wikimediafoundation.org/wiki/Special:ContributionTotal' .
 			'?action=raw' .
