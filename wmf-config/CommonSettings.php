@@ -2506,8 +2506,10 @@ if ( $wmgDisplayFeedsInSidebar === false ) {
 	$wgDisplayFeedsInSidebar = false;
 }
 
-# Temporary code to purge swift thumbnails --aaron 2/1/2012
-require( "$wmfConfigDir/swift.php" );
+if( $cluster == 'pmtpa' ) {
+	# Temporary code to purge swift thumbnails --aaron 2/1/2012
+	require( "$wmfConfigDir/swift.php" );
+}
 
 if ( $wmgReduceStartupExpiry ) {
 	$wgResourceLoaderMaxage['unversioned'] = array( 'server' => 30, 'client' => 30 );
