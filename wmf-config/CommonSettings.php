@@ -1713,11 +1713,6 @@ if ( $wmgUseCentralNotice ) {
 		$wgCentralDBname = 'metawiki';
 	}
 
-	if( $wgDBname == 'testwiki' || $wgDBname == 'enwiki' ) {
-		$wgNoticeBanner_Harvard2011['enable'] = true;
-		$wgNoticeBanner_Harvard2011['salt'] = "42";
-	}
-
 	$wgCentralNoticeLoader = $wmgCentralNoticeLoader;
 
 	# Wed evening -- all on!
