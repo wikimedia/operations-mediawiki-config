@@ -2568,6 +2568,9 @@ if ( $wmgUseLastModified ) {
 # Timed Media Handler:
 $wgJobTypesExcludedFromDefaultQueue[] = 'webVideoTranscode';
 
+if( $cluster == 'wmflabs' ) {
+	require( "$wmfConfigDir/CommonSettings-wmflabs.php" );
+}
 
 #### Per cluster extensions
 
