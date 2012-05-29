@@ -2447,6 +2447,8 @@ if ( $wmgUseTranslate ) {
 
 if ( $wmgUseTranslationNotifications ) {
 	require_once( "$IP/extensions/TranslationNotifications/TranslationNotifications.php" );
+	$wgNotificationUsername = 'Translation Notification Bot';
+	$wgNotificationUserPassword = $wmgTranslationNotificationUserPassword;
 
 	$wgTranslationNotificationsContactMethods['talkpage-elsewhere'] = true;
 }
