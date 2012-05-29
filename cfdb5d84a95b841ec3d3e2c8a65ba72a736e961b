@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAALn//9u8\u003d",
+        "filename": "wmf-config/InitialiseSettings-wmflabs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2012-05-29T12:55:25Z",
+      "side": 1,
+      "message": "Woudn\u0027t be better to add the usual \"WARNING: This file is publically viewable on the web. Do not put private data here.\" on this file?",
+      "revId": "cfdb5d84a95b841ec3d3e2c8a65ba72a736e961b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
