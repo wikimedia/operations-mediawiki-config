@@ -16,6 +16,24 @@
       "revId": "e1b345b3fc4f65571570343828502b73a1620b40",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAALn//91o\u003d",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-05-29T07:54:37Z",
+      "side": 1,
+      "message": "That was already in the CommonSettings file so I have really no idea why it is there.  Most probably someone trusted asked over IRC or by direct email.\n\nIt is obsolete anyway.",
+      "parentUuid": "AAAALn//+CU\u003d",
+      "revId": "e1b345b3fc4f65571570343828502b73a1620b40",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
