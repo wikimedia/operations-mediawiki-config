@@ -7752,7 +7752,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'transwiki', 'import', 'coder', 'svnadmins' ),
 	),
 	'+metawiki' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'ipblock-exempt', 'flood' ),
+		'bureaucrat' => array( 'sysop', 'bureaucrat', 'ipblock-exempt', 'flood', 'translationadmin' ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=37198
 		'checkuser'  => array( 'ipblock-exempt' ),
 		'sysop'      => array( 'autopatrolled' ),
 	),
@@ -9378,7 +9378,7 @@ $wgConf->settings = array(
 ),
 
 'wgGroupsAddToSelf' => array(
-	'metawiki' => array( 'sysop' => array( 'flood' ) ),
+	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=37198
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
@@ -9391,7 +9391,7 @@ $wgConf->settings = array(
 	'zhwiki' => array( 'sysop' => array( 'flood' ) ),
 ),
 'wgGroupsRemoveFromSelf' => array(
-	'metawiki' => array( 'sysop' => array( 'flood' ) ),
+	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=37198
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
