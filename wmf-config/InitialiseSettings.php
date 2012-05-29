@@ -10852,3 +10852,10 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 );
+
+
+# WMF Labs override
+if( $cluster == 'wmflabs' ) {
+    require( "$wmfConfigDir/InitialiseSettings-wmflabs.php" );
+    wmfLabsOverrideSettings();
+}
