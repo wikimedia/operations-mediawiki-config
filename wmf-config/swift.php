@@ -11,11 +11,7 @@
  */
 
 $wgHooks['FileTransformed'][] = 'wmfOnFileTransformed';
-if ( in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki', 'commonswiki' ) ) ) {
-	$wgHooks['LocalFilePurgeThumbnails'][] = 'wmfOnLocalFilePurgeThumbnails';
-} else { // old hook
-	$wgHooks['LocalFilePurgeThumbnails'][] = 'wmfPurgeBackendThumbCache';
-}
+$wgHooks['LocalFilePurgeThumbnails'][] = 'wmfOnLocalFilePurgeThumbnails';
 
 /**
  * Handler for the LocalFilePurgeThumbnails hook.
