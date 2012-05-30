@@ -10852,4 +10852,8 @@ $wgConf->settings = array(
 'wmgEnableInterwiki' => array(
 	'default' => true,
 ),
+'wmgUseRandomRootPage' => array(
+	'default' => false,
+	'testwiki' => true,
+),
 );

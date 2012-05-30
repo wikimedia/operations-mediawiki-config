@@ -2520,6 +2520,9 @@ if ( $wmgEnableInterwiki ) {
 	$wgInterwikiViewOnly = true;
 }
 
+if ( $wmgUseRandomRootPage ) {
+	require_once( "$IP/extensions/RandomRootPage/Randomrootpage.php" );
+}
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
