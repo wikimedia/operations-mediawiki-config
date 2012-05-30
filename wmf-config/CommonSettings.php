@@ -2523,6 +2523,17 @@ if ( $wmgEnableInterwiki ) {
 if ( $wmgUseRandomRootPage ) {
 	require_once( "$IP/extensions/RandomRootPage/Randomrootpage.php" );
 }
+
+#
+# Job types to exclude from the default queue processing. Aka the very long
+# one.  That will exclude the types from any queries such as nextJobDB.php
+# We have to set this for any project cause we usually run PHP script against
+# the 'aawiki' database, but might as well run it against another name.
+
+# Timed Media Handler:
+$wgJobTypesExcludedFromDefaultQueue[] = 'webVideoTranscode';
+
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
