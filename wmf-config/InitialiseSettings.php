@@ -10261,7 +10261,7 @@ $wgConf->settings = array(
 'wmgMFCustomLogos' => array(
 	'default' => array(
 		'site' => 'wikipedia',
-		'logo' => '//upload.wikimedia.org/wikipedia/commons/1/16/W_logo_for_beta_test_of_Mobile_Frontend.gif'
+		'logo' => '//upload.wikimedia.org/wikipedia/commons/5/54/Mobile_W_beta_light.png'
 	),
 ),
 'wgExtraGenderNamespaces' => array(
