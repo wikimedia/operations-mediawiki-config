@@ -32,7 +32,7 @@ arbcom_fiwiki php-1.20wmf4 *
 arbcom_nlwiki php-1.20wmf4 *
 arcwiki php-1.20wmf3 *
 arwikibooks php-1.20wmf4 *
-arwikimedia php-1.20wmf3 *
+arwikimedia php-1.20wmf4 *
 arwikinews php-1.20wmf4 *
 arwiki php-1.20wmf3 *
 arwikiquote php-1.20wmf4 *
@@ -63,10 +63,10 @@ bat_smgwiki php-1.20wmf3 *
 bawikibooks php-1.20wmf4 *
 bawiki php-1.20wmf3 *
 bclwiki php-1.20wmf3 *
-bdwikimedia php-1.20wmf3 *
+bdwikimedia php-1.20wmf4 *
 betawikiversity php-1.20wmf4 *
 bewikibooks php-1.20wmf4 *
-bewikimedia php-1.20wmf3 *
+bewikimedia php-1.20wmf4 *
 bewiki php-1.20wmf3 *
 bewikiquote php-1.20wmf4 *
 bewikisource php-1.20wmf4 *
@@ -99,7 +99,7 @@ bowikibooks php-1.20wmf4 *
 bowiki php-1.20wmf3 *
 bowiktionary php-1.20wmf4 *
 bpywiki php-1.20wmf3 *
-brwikimedia php-1.20wmf3 *
+brwikimedia php-1.20wmf4 *
 brwiki php-1.20wmf3 *
 brwikiquote php-1.20wmf4 *
 brwikisource php-1.20wmf4 *
@@ -137,7 +137,7 @@ ckbwiki php-1.20wmf3 *
 collabwiki php-1.20wmf4 *
 commonswiki php-1.20wmf4 *
 cowikibooks php-1.20wmf4 *
-cowikimedia php-1.20wmf3 *
+cowikimedia php-1.20wmf4 *
 cowiki php-1.20wmf3 *
 cowikiquote php-1.20wmf4 *
 cowiktionary php-1.20wmf4 *
@@ -167,7 +167,7 @@ dawiki php-1.20wmf3 *
 dawikiquote php-1.20wmf4 *
 dawikisource php-1.20wmf4 *
 dawiktionary php-1.20wmf4 *
-de_labswikimedia php-1.20wmf3 *
+de_labswikimedia php-1.20wmf4 *
 dewikibooks php-1.20wmf4 *
 dewikinews php-1.20wmf4 *
 dewiki php-1.20wmf3 *
@@ -176,7 +176,7 @@ dewikisource php-1.20wmf4 *
 dewikiversity php-1.20wmf4 *
 dewiktionary php-1.20wmf4 *
 diqwiki php-1.20wmf3 *
-dkwikimedia php-1.20wmf3 *
+dkwikimedia php-1.20wmf4 *
 donatewiki php-1.20wmf4 *
 dsbwiki php-1.20wmf3 *
 dvwiki php-1.20wmf3 *
@@ -192,7 +192,7 @@ elwikisource php-1.20wmf4 *
 elwikiversity php-1.20wmf4 *
 elwiktionary php-1.20wmf4 *
 emlwiki php-1.20wmf3 *
-en_labswikimedia php-1.20wmf3 *
+en_labswikimedia php-1.20wmf4 *
 enwikibooks php-1.20wmf4 *
 enwikinews php-1.20wmf4 *
 enwiki php-1.20wmf3 *
@@ -214,7 +214,7 @@ eswikisource php-1.20wmf4 *
 eswikiversity php-1.20wmf4 *
 eswiktionary php-1.20wmf4 *
 etwikibooks php-1.20wmf4 *
-etwikimedia php-1.20wmf3 *
+etwikimedia php-1.20wmf4 *
 etwiki php-1.20wmf3 *
 etwikiquote php-1.20wmf4 *
 etwikisource php-1.20wmf4 *
@@ -234,7 +234,7 @@ fawiktionary php-1.20wmf4 *
 ffwiki php-1.20wmf3 *
 fiu_vrowiki php-1.20wmf3 *
 fiwikibooks php-1.20wmf4 *
-fiwikimedia php-1.20wmf3 *
+fiwikimedia php-1.20wmf4 *
 fiwikinews php-1.20wmf4 *
 fiwiki php-1.20wmf3 *
 fiwikiquote php-1.20wmf4 *
@@ -243,7 +243,7 @@ fiwikiversity php-1.20wmf4 *
 fiwiktionary php-1.20wmf4 *
 fjwiki php-1.20wmf3 *
 fjwiktionary php-1.20wmf4 *
-flaggedrevs_labswikimedia php-1.20wmf3 *
+flaggedrevs_labswikimedia php-1.20wmf4 *
 foundationwiki php-1.20wmf4 *
 fowiki php-1.20wmf3 *
 fowikisource php-1.20wmf4 *
@@ -470,7 +470,7 @@ miwikibooks php-1.20wmf4 *
 miwiki php-1.20wmf3 *
 miwiktionary php-1.20wmf4 *
 mkwikibooks php-1.20wmf4 *
-mkwikimedia php-1.20wmf3 *
+mkwikimedia php-1.20wmf4 *
 mkwiki php-1.20wmf3 *
 mkwikisource php-1.20wmf4 *
 mkwiktionary php-1.20wmf4 *
@@ -498,7 +498,7 @@ mtwiki php-1.20wmf3 *
 mtwiktionary php-1.20wmf4 *
 muswiki php-1.20wmf3 *
 mwlwiki php-1.20wmf3 *
-mxwikimedia php-1.20wmf3 *
+mxwikimedia php-1.20wmf4 *
 myvwiki php-1.20wmf3 *
 mywikibooks php-1.20wmf4 *
 mywiki php-1.20wmf3 *
@@ -523,7 +523,7 @@ newiktionary php-1.20wmf4 *
 newwiki php-1.20wmf3 *
 ngwiki php-1.20wmf3 *
 nlwikibooks php-1.20wmf4 *
-nlwikimedia php-1.20wmf3 *
+nlwikimedia php-1.20wmf4 *
 nlwikinews php-1.20wmf4 *
 nlwiki php-1.20wmf3 *
 nlwikiquote php-1.20wmf4 *
@@ -536,7 +536,7 @@ noboard_chapterswikimedia php-1.20wmf4 *
 nostalgiawiki php-1.20wmf4 *
 novwiki php-1.20wmf3 *
 nowikibooks php-1.20wmf4 *
-nowikimedia php-1.20wmf3 *
+nowikimedia php-1.20wmf4 *
 nowikinews php-1.20wmf4 *
 nowiki php-1.20wmf3 *
 nowikiquote php-1.20wmf4 *
@@ -545,9 +545,9 @@ nowiktionary php-1.20wmf4 *
 nrmwiki php-1.20wmf3 *
 nsowiki php-1.20wmf3 *
 nvwiki php-1.20wmf3 *
-nycwikimedia php-1.20wmf3 *
+nycwikimedia php-1.20wmf4 *
 nywiki php-1.20wmf3 *
-nzwikimedia php-1.20wmf3 *
+nzwikimedia php-1.20wmf4 *
 ocwikibooks php-1.20wmf4 *
 ocwiki php-1.20wmf3 *
 ocwiktionary php-1.20wmf4 *
@@ -562,7 +562,7 @@ outreachwiki php-1.20wmf4 *
 pagwiki php-1.20wmf3 *
 pamwiki php-1.20wmf3 *
 papwiki php-1.20wmf3 *
-pa_uswikimedia php-1.20wmf3 *
+pa_uswikimedia php-1.20wmf4 *
 pawikibooks php-1.20wmf4 *
 pawiki php-1.20wmf3 *
 pawiktionary php-1.20wmf4 *
@@ -573,7 +573,7 @@ pihwiki php-1.20wmf3 *
 piwiki php-1.20wmf3 *
 piwiktionary php-1.20wmf4 *
 plwikibooks php-1.20wmf4 *
-plwikimedia php-1.20wmf3 *
+plwikimedia php-1.20wmf4 *
 plwikinews php-1.20wmf4 *
 plwiki php-1.20wmf3 *
 plwikiquote php-1.20wmf4 *
@@ -587,7 +587,7 @@ pswikibooks php-1.20wmf4 *
 pswiki php-1.20wmf3 *
 pswiktionary php-1.20wmf4 *
 ptwikibooks php-1.20wmf4 *
-ptwikimedia php-1.20wmf3 *
+ptwikimedia php-1.20wmf4 *
 ptwikinews php-1.20wmf4 *
 ptwiki php-1.20wmf3 *
 ptwikiquote php-1.20wmf4 *
@@ -599,7 +599,7 @@ quwikibooks php-1.20wmf4 *
 quwiki php-1.20wmf3 *
 quwikiquote php-1.20wmf4 *
 quwiktionary php-1.20wmf4 *
-readerfeedback_labswikimedia php-1.20wmf3 *
+readerfeedback_labswikimedia php-1.20wmf4 *
 rmwikibooks php-1.20wmf4 *
 rmwiki php-1.20wmf3 *
 rmwiktionary php-1.20wmf4 *
@@ -618,7 +618,7 @@ rowiktionary php-1.20wmf4 *
 rswikimedia php-1.20wmf4 *
 ruewiki php-1.20wmf3 *
 ruwikibooks php-1.20wmf4 *
-ruwikimedia php-1.20wmf3 *
+ruwikimedia php-1.20wmf4 *
 ruwikinews php-1.20wmf4 *
 ruwiki php-1.20wmf3 *
 ruwikiquote php-1.20wmf4 *
@@ -643,7 +643,7 @@ sdwiki php-1.20wmf3 *
 sdwiktionary php-1.20wmf4 *
 searchcomwiki php-1.20wmf4 *
 sewikibooks php-1.20wmf4 *
-sewikimedia php-1.20wmf3 *
+sewikimedia php-1.20wmf4 *
 sewiki php-1.20wmf3 *
 sgwiki php-1.20wmf3 *
 sgwiktionary php-1.20wmf4 *
@@ -751,7 +751,7 @@ towiktionary php-1.20wmf4 *
 tpiwiki php-1.20wmf3 *
 tpiwiktionary php-1.20wmf4 *
 trwikibooks php-1.20wmf4 *
-trwikimedia php-1.20wmf3 *
+trwikimedia php-1.20wmf4 *
 trwikinews php-1.20wmf4 *
 trwiki php-1.20wmf3 *
 trwikiquote php-1.20wmf4 *
@@ -767,14 +767,14 @@ tumwiki php-1.20wmf3 *
 twwiki php-1.20wmf3 *
 twwiktionary php-1.20wmf4 *
 tywiki php-1.20wmf3 *
-uawikimedia php-1.20wmf3 *
+uawikimedia php-1.20wmf4 *
 udmwiki php-1.20wmf3 *
 ugwikibooks php-1.20wmf4 *
 ugwiki php-1.20wmf3 *
 ugwikiquote php-1.20wmf4 *
 ugwiktionary php-1.20wmf4 *
 ukwikibooks php-1.20wmf4 *
-ukwikimedia php-1.20wmf3 *
+ukwikimedia php-1.20wmf4 *
 ukwikinews php-1.20wmf4 *
 ukwiki php-1.20wmf3 *
 ukwikiquote php-1.20wmf4 *
@@ -792,7 +792,7 @@ uzwiktionary php-1.20wmf4 *
 vecwiki php-1.20wmf3 *
 vecwikisource php-1.20wmf4 *
 vepwiki php-1.20wmf3 *
-vewikimedia php-1.20wmf3 *
+vewikimedia php-1.20wmf4 *
 vewiki php-1.20wmf3 *
 viwikibooks php-1.20wmf4 *
 viwiki php-1.20wmf3 *
