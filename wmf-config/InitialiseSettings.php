@@ -8352,6 +8352,7 @@ $wgConf->settings = array(
 'wgNamespaceRobotPolicies' => array(
 	'dewiki' => array(
 		NS_TALK => 'noindex,follow',
+		NS_USER => 'noindex,follow', // Bug 36181
 		NS_USER_TALK => 'noindex,follow',
 		NS_PROJECT_TALK => 'noindex,follow',
 		NS_IMAGE_TALK => 'noindex,follow',
