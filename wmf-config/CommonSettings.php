@@ -273,10 +273,6 @@ $day = $tmarray['wday'];
 
 $wgEmergencyContact = 'noc@wikipedia.org';
 
-# HTCP multicast squid purging
-$wgHTCPMulticastAddress = '239.128.0.112';
-$wgHTCPMulticastTTL = 8;
-
 if ( defined( 'DEBUG_LOG' ) ) {
 	if ( $wgDBname == 'aawiki' ) {
 		$wgMemCachedDebug = true;
@@ -448,6 +444,10 @@ $wgUseSquid = true;
 $wgUseESI   = false;
 
 if( $cluster == 'pmtpa' ) {
+	# HTCP multicast squid purging
+	$wgHTCPMulticastAddress = '239.128.0.112';
+	$wgHTCPMulticastTTL = 8;
+
 	# As of 2005-04-08, this is empty
 	# Squids are purged by HTCP multicast, currently relayed to paris via udpmcast on larousse
 	$wgSquidServers = array();
