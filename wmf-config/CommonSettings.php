@@ -247,7 +247,7 @@ $wgStockPath = '/images';
 $wgScript           = $wgScriptPath . '/index.php';
 $wgRedirectScript	= $wgScriptPath . '/redirect.php';
 $wgInternalServer = $wgCanonicalServer;
-if ( $wgDBname != 'testwiki' && isset( $_SERVER['SERVER_NAME'] ) ) {
+if ( $cluster == 'pmtpa' && $wgDBname != 'testwiki' && isset( $_SERVER['SERVER_NAME'] ) ) {
 	// Make testing JS/skin changes easy by not running load.php through bits for testwiki
 	$wgLoadScript = "$urlprotocol//bits.wikimedia.org/{$_SERVER['SERVER_NAME']}/load.php";
 }
