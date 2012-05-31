@@ -151,7 +151,7 @@ function wmfOnFileTransformed( File $file, $thumb, $tmpThumbPath, $thumbPath ) {
  * @return true
  */
 function wmfOnLocalFilePurgeThumbnails( File $file, $archiveName ) {
-	global $site, $lang;
+	global $wgUseSquid, $site, $lang;
 
 	$backend = FileBackendGroup::singleton()->get( 'local-swift' );
 	// Get thumbnail dir relative to thumb zone
@@ -168,9 +168,11 @@ function wmfOnLocalFilePurgeThumbnails( File $file, $archiveName ) {
 			"Site: `{$site}` Lang: `{$lang}` ThumbRel: `{$thumbRel}/`" );
 	} else {
 		$ops = array();
+		$urls = array();
 		wfProfileIn( __METHOD__ . '-list' );
 		foreach ( $list as $relFile ) {
 			$ops[] = array( 'op' => 'delete', 'src' => "{$thumbDir}/{$relFile}" );
+			$urls[] = $file->getThumbUrl( $relFile );
 		}
 		wfProfileOut( __METHOD__ . '-list' );
 		wfProfileIn( __METHOD__ . '-purge' );
@@ -180,6 +182,9 @@ function wmfOnLocalFilePurgeThumbnails( File $file, $archiveName ) {
 				"Site: `{$site}` Lang: `{$lang}` ThumbRel: `{$thumbRel}/`" );
 		}
 		wfProfileOut( __METHOD__ . '-purge' );
+		if ( $wgUseSquid ) {
+			SquidUpdate::purge( $urls );
+		}
 	}
 
 	return true;
