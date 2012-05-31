@@ -6560,6 +6560,7 @@ $wgConf->settings = array(
 	'enwikisource' => array(
 		'autoconfirmed' => array( 'patrol' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=12355
 		'autopatrolled' => array( 'autopatrol' => true ), # Bug 18307
+		'flood' => array( 'bot' => true ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=36863
 	),
 	'enwikiversity' => array(
 		'user' => array( 'move' => false ), // autoconfirmed only
@@ -7284,7 +7285,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller', 'rollbacker' ),
 	),
 	'+enwikisource' => array(
-		'bureaucrat' => array( 'autopatrolled' ),
+		'bureaucrat' => array( 'autopatrolled', 'flood' ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=36863
 		'sysop' => array( 'abusefilter', 'autopatrolled' ),
 	),
 	'+enwiktionary' => array(
@@ -7638,7 +7639,7 @@ $wgConf->settings = array(
 		'sysop' => array ( 'flood' ),
 	),
 	'+enwikisource' => array(
-		'bureaucrat' => array( 'autopatrolled' ),
+		'bureaucrat' => array( 'autopatrolled', 'flood' ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=36863
 		'sysop' => array( 'abusefilter', 'autopatrolled', ),
 	),
 	'+eswiki' => array(
@@ -9391,6 +9392,7 @@ $wgConf->settings = array(
 	'metawiki' => array( 'sysop' => array( 'flood' ) ),
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
+	'enwikisource' => array( 'sysop' => array( 'flood' ) ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=36863
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=36600
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
@@ -9405,6 +9407,7 @@ $wgConf->settings = array(
 	'metawiki' => array( 'sysop' => array( 'flood' ) ),
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
+	'enwikisource' => array( 'sysop' => array( 'flood' ) ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=36863
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'frwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
 	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=36600
