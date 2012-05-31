@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<phpunit
+	backupGlobals="false"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+	convertErrorsToExceptions="true"
+	stopOnError="false"
+	stopOnFailure="false"
+	colors="true"
+	strict="true"
+	verbose="true"
+>
+	<testsuites>
+		<testsuite name="dblists">
+			<file>tests/dblistTest.php</file>
+		</testsuite>
+		<testsuite name="wmfconfig">
+			<directory>tests/wmf-config</directory>
+		</testsuite>
+	</testsuites>
+
+	<groups>
+		<exclude>
+			<group>Broken</group>
+		</exclude>
+	</groups>
+</phpunit>
