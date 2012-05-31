@@ -172,7 +172,9 @@ function wmfOnLocalFilePurgeThumbnails( File $file, $archiveName ) {
 		wfProfileIn( __METHOD__ . '-list' );
 		foreach ( $list as $relFile ) {
 			$ops[] = array( 'op' => 'delete', 'src' => "{$thumbDir}/{$relFile}" );
-			$urls[] = $file->getThumbUrl( $relFile );
+			$urls[] = ( $archiveName !== false )
+				? $file->getArchiveThumbUrl( $archiveName, $relFile )
+				: $file->getThumbUrl( $relFile );
 		}
 		wfProfileOut( __METHOD__ . '-list' );
 		wfProfileIn( __METHOD__ . '-purge' );
