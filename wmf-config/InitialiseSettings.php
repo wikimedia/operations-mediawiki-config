@@ -10859,6 +10859,8 @@ $wgConf->settings = array(
 'wmgUseRandomRootPage' => array(
 	'default' => false,
 	'testwiki' => true,
+	'wikibooks' => true,
+	'wikisource' => true,
 ),
 'wmgUseLastModified' => array(
 	'default' => false,
