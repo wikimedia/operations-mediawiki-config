@@ -15,6 +15,14 @@ function refreshWikiversionsCDB() {
 
 	// Get the array of sanitized wikiversion rows...
 	$rows = MWWikiversions::readWikiVersionsFile( $srcPath );
+	// Sanity check version directories...
+	foreach ( $rows as $row ) {
+		list( $dbName, $version, $extVersion, $comment ) = $row;
+		$versionDir = MULTIVER_COMMON_HOME . '/' . $version;
+		if ( !is_dir( $versionDir ) ) {
+			die( "Invalid version dir '$versionDir' for wiki '$dbName'.\n" );
+		}
+	}
 	// Make sure all wikis have an entry...
 	$dbNamesWithRows = array();
 	foreach ( $rows as $row ) {
