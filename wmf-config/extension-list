@@ -52,6 +52,8 @@ $IP/extensions/intersection/DynamicPageList.php
 $IP/extensions/Interwiki/Interwiki.php
 $IP/extensions/LabeledSectionTransclusion/lst.php
 $IP/extensions/LandingCheck/LandingCheck.php
+$IP/extensions/LastModified/LastModified.php
+$IP/extensions/LastModified/E3Experiments/E3Experiments.php
 $IP/extensions/LiquidThreads/LiquidThreads.php
 $IP/extensions/LocalisationUpdate/LocalisationUpdate.php
 $IP/extensions/MarkAsHelpful/MarkAsHelpful.php
