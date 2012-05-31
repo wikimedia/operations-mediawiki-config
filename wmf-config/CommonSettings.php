@@ -2524,6 +2524,14 @@ if ( $wmgUseRandomRootPage ) {
 	require_once( "$IP/extensions/RandomRootPage/Randomrootpage.php" );
 }
 
+if ( $wmgUseLastModified ) {
+	require_once( "$IP/extensions/LastModified/LastModified.php" );
+	# E3Experiments currently dependent on LastModified and ClickTracking
+	if ( $wmgUseE3Experiments ) {
+		require_once( "$IP/extensions/LastModified/E3Experiments/E3Experiments.php" );
+	}
+}
+
 #
 # Job types to exclude from the default queue processing. Aka the very long
 # one.  That will exclude the types from any queries such as nextJobDB.php

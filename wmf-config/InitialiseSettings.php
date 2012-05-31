@@ -10860,4 +10860,12 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 ),
+'wmgUseLastModified' => array(
+	'default' => false,
+	'testwiki' => true,
+),
+'wmgUseE3Experiments' => array(
+	'default' => false,
+	'testwiki' => true,
+),
 );
