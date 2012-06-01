@@ -9284,7 +9284,7 @@ $wgConf->settings = array(
 'wmgCollectionPortletFormats' => array(
 	'default' => array( 'rl' ),
 	'tawiki' => array( 'odf' ),
-	'tawikiwikibooks' => array( 'odf' ),
+	'tawikibooks' => array( 'odf' ),
 	'tawikisource' => array( 'odf' ),
 	'tawikinews' => array( 'odf' ),
 ),

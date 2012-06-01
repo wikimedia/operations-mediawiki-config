@@ -1814,7 +1814,7 @@ if ( $wmgUseCollection ) {
 		$wgCollectionHierarchyDelimiter = $wmgCollectionHierarchyDelimiter;
 	}
 
-	$wgCollectionPortletFormat = $wmgCollectionPortletFormats;
+	$wgCollectionPortletFormats = $wmgCollectionPortletFormats;
 }
 
 include( "$IP/extensions/OpenSearchXml/OpenSearchXml.php" );
