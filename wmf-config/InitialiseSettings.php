@@ -9254,6 +9254,10 @@ $wgConf->settings = array(
 	'srwiki' => true, # Per Brion on 2009-04-03
 	'strategywiki' => true, # 2009-11-07, Bug 21361
 	'svwiki'    => true, # 2009-03-24 Bug 18023 Enable Collection extension on svwiki
+	'tawiki' => true,
+	'tawikibooks' => true,
+	'tawikisource' => true,
+	'tawikinews' => true,
 	'thwiki'    => true,
 	'trwiki'	=> true, # Bug 22791
 	'ukwiki'    => true, # 23437
@@ -9276,6 +9280,14 @@ $wgConf->settings = array(
 'wmgCollectionHierarchyDelimiter' => array(
 	'default'  => false, // false == don't overwrite the extension's default settings
 	'wikibooks' => '/',
+),
+
+'wmgCollectionPortletFormats' => array(
+	'default' => array( 'rl' ),
+	'tawiki' => array( 'odf' ),
+	'tawikiwikibooks' => array( 'odf' ),
+	'tawikisource' => array( 'odf' ),
+	'tawikinews' => array( 'odf' ),
 ),
 
 'wmgUseSpamBlacklist' => array(

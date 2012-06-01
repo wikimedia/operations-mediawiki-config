@@ -1813,6 +1813,8 @@ if ( $wmgUseCollection ) {
 	if ( $wmgCollectionHierarchyDelimiter ) {
 		$wgCollectionHierarchyDelimiter = $wmgCollectionHierarchyDelimiter;
 	}
+
+	$wgCollectionPortletFormat = $wmgCollectionPortletFormats;
 }
 
 include( "$IP/extensions/OpenSearchXml/OpenSearchXml.php" );
