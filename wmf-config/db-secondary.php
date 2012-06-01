@@ -14,8 +14,8 @@
 $wgLBFactoryConf['sectionLoads'] = array(
 	's1' => array(
 		''     => 0,
-		'db1001'     => 1, # secondary master -- DEAD
 		'db1017'    => 1, # secondary master
+		'db1001'     => 1, 
 		'db1033'      => 1, # snapshot
 		'db1043'    => 1,
 		'db1047'      => 1, # alaytics
