@@ -14,7 +14,7 @@
 $wgLBFactoryConf['sectionLoads'] = array(
 	's1' => array(
 		''     => 0,
-		#'db1001'     => 1, # secondary master -- DEAD
+		'db1001'     => 1, # secondary master -- DEAD
 		'db1017'    => 1, # secondary master
 		'db1033'      => 1, # snapshot
 		'db1043'    => 1,
@@ -31,7 +31,7 @@ $wgLBFactoryConf['sectionLoads'] = array(
         ''  => 0,
 		'db1038'   => 1, # secondary master
 		'db1004'   => 1,
-		#'db1020'   => 1, # snapshot
+		'db1020'   => 1, # snapshot
 	),
 	's5' => array(
         ''  => 0,
