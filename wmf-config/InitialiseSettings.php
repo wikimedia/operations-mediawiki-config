@@ -9222,6 +9222,7 @@ $wgConf->settings = array(
 	'gdwiki' => true,
 	'glwiki' => true,
 	'hewiki' => true,
+	'hewiktionary' => true,
 	'hiwiki' => true,
 	'hrwiki' => true, # Bug 19013
 	'hsbwiki' => true,
