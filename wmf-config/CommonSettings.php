@@ -2349,7 +2349,11 @@ if ( $wmgMobileFrontend ) {
 	if ( $wmgMFRemovableClasses ) {
 		$wgMFRemovableClasses = $wmgMFRemovableClasses;
 	}
-	$wgMFCustomLogos = $wmgMFCustomLogos;
+	
+	if ( $wmgMFCustomLogos ) {
+		$wmgMFCustomLogos['copyright'] = str_replace( '{wgExtensionAssetsPath}', $wgExtensionAssetsPath, $wmgMFCustomLogos['copyright'] );
+		$wgMFCustomLogos = $wmgMFCustomLogos;
+	}	
 	$wgMobileResourceVersion = 1337623239;
 }
 
