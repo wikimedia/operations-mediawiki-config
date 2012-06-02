@@ -6028,6 +6028,7 @@ $wgConf->settings = array(
 	'huwiki' => false, // https://bugzilla.wikimedia.org/show_bug.cgi?id=19241
 	'sqwiki' => false, // bug 25822
 	'ruwiki' => false, // bug 31650
+	'ukwiki' => false, // bug 33273
 ),
 
 # wgNoFollow... @{

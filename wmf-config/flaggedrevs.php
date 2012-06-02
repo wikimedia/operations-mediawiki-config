@@ -526,6 +526,7 @@ elseif( $wgDBname == 'ukwiki' ) {
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_CATEGORY, NS_TEMPLATE );
 	$wgFlaggedRevTags['accuracy']['levels'] = 3;
 	$wgFlaggedRevsOverride = false;
+	$wgGroupPermissions['sysop']['stablesettings'] = true;
 }
 
 elseif ( $wgDBname == 'ukwiktionary' ) {}
