@@ -10284,6 +10284,12 @@ $wgConf->settings = array(
 		'site' => 'wikipedia',
 		'logo' => '//upload.wikimedia.org/wikipedia/commons/5/54/Mobile_W_beta_light.png'
 	),
+	'testwiki' => array(
+		'site' => 'wikipedia',
+		'logo' => '//upload.wikimedia.org/wikipedia/commons/5/54/Mobile_W_beta_light.png',
+		// {wgExtensionAssetsPath} will be replaced with $wgExtensionAsssetsPath in CommonSettings.php
+		'copyright' => '{wgExtensionAssetsPath}/MobileFrontend/stylesheets/images/logo-copyright-en.png'
+	),
 ),
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
