@@ -745,8 +745,6 @@ $wgSiteMatrixPrivateSites = "$IP/../private.dblist";
 $wgSiteMatrixFishbowlSites = "$IP/../fishbowl.dblist";
 
 include( $IP . '/extensions/CharInsert/CharInsert.php' );
-include( $IP . '/extensions/CheckUser/CheckUser.php' );
-$wgCheckUserForceSummary = $wmgCheckUserForceSummary;
 
 include( $IP . '/extensions/ParserFunctions/ParserFunctions.php' );
 $wgMaxIfExistCount = 500; // obs
