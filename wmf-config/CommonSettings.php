@@ -745,8 +745,6 @@ $wgSiteMatrixPrivateSites = "$IP/../private.dblist";
 $wgSiteMatrixFishbowlSites = "$IP/../fishbowl.dblist";
 
 include( $IP . '/extensions/CharInsert/CharInsert.php' );
-include( $IP . '/extensions/CheckUser/CheckUser.php' );
-$wgCheckUserForceSummary = $wmgCheckUserForceSummary;
 
 include( $IP . '/extensions/ParserFunctions/ParserFunctions.php' );
 $wgMaxIfExistCount = 500; // obs
@@ -2543,6 +2541,17 @@ if ( $wmgUseLastModified ) {
 # Timed Media Handler:
 $wgJobTypesExcludedFromDefaultQueue[] = 'webVideoTranscode';
 
+
+#### Per cluster extensions
+
+switch( $cluster ) {
+case 'pmtpa':
+	require( "$wmfConfigDir/ext-pmtpa.php" );
+	break;
+case 'wmflabs':
+	require( "$wmfConfigDir/ext-wmflabs.php" );
+	break;
+}
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
