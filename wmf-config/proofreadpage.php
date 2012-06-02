@@ -7,5 +7,7 @@
 
 if ( $wgDBname == 'dewikisource' ) {
 	$wgGroupPermissions['*']['pagequality'] = true; # 27516
+} elseif ( $wgDBname == 'enwikisource' || $wgDBname == 'svwikisource' ) {
+	$wgDefaultUserOptions['proofreadpage-showheaders'] = 1;
 }
 
