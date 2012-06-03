@@ -7308,7 +7308,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'import', 'transwiki', 'inactive' ),
 	),
 	'+frwiki' => array(
-		'bureaucrat' => array( 'abusefilter' ),
+		'bureaucrat' => array( 'abusefilter', 'accountcreator' ),
 	),
 	'+frwikibooks' => array(
 		'bureaucrat' => array( 'abusefilter' ),
@@ -7680,7 +7680,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'import', 'transwiki', 'inactive', 'confirmed' ),
 	),
 	'+frwiki' => array(
-		'bureaucrat' => array( 'abusefilter', 'sysop' ),
+		'bureaucrat' => array( 'abusefilter', 'sysop', 'accountcreator' ),
 	),
 	'+frwikibooks' => array(
 		'bureaucrat' => array( 'abusefilter' ),
