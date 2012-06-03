@@ -1202,6 +1202,8 @@ function wfLogXFF() {
 	global $wmfUdp2logDest;
 	if ( ( @$_SERVER['REQUEST_METHOD'] ) == 'POST' ) {
 		$uri = ( $_SERVER['HTTPS'] ? 'https://' : 'http://' ) .
+
+
 			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		wfErrorLog(
 			gmdate( 'r' ) . "\t" .
@@ -2552,6 +2554,9 @@ case 'wmflabs':
 	require( "$wmfConfigDir/ext-wmflabs.php" );
 	break;
 }
+
+// https://bugzilla.wikimedia.org/show_bug.cgi?id=37211
+$wgUseCombinedLoginLink = false;
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
