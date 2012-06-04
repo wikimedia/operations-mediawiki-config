@@ -18,6 +18,9 @@
 		<testsuite name="wmfconfig">
 			<directory>tests/wmf-config</directory>
 		</testsuite>
+		<testsuite name="main">
+			<directory>tests</directory>
+		</testsuite>
 	</testsuites>
 
 	<groups>
