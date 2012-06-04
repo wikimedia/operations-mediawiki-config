@@ -2449,6 +2449,10 @@ $wgConf->settings = array(
 	),
 	'fawiki' => array(
 				'وپ' => NS_PROJECT,
+				'Book' => 102,
+				'Book_talk' => 103,
+				'كتاب' => 102,
+				'بحث_كتاب' => 103,
 	),
 	'fawikinews' => array(
 				'وخ' => NS_PROJECT,
@@ -4536,6 +4540,8 @@ $wgConf->settings = array(
 	'fawiki' => array(
 		100 => 'درگاه',
 		101 => 'بحث_درگاه',
+		102 => 'کتاب',
+		103 => 'بحث_کتاب',
 	),
 	'fiwiki' => array(
 		100 => 'Teemasivu',
