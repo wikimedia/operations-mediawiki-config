@@ -2350,7 +2350,9 @@ if ( $wmgMobileFrontend ) {
 		$wgMFRemovableClasses = $wmgMFRemovableClasses;
 	}
 	if ( $wmgMFCustomLogos ) {
-		$wmgMFCustomLogos['copyright'] = str_replace( '{wgExtensionAssetsPath}', $wgExtensionAssetsPath, $wmgMFCustomLogos['copyright'] ); 
+		if ( isset( $wmgMFCustomLogos['copyright'] ) ) {
+			$wmgMFCustomLogos['copyright'] = str_replace( '{wgExtensionAssetsPath}', $wgExtensionAssetsPath, $wmgMFCustomLogos['copyright'] ); 
+		}
 		$wgMFCustomLogos = $wmgMFCustomLogos;
 	}
 	$wgMobileResourceVersion = 1337623239;
