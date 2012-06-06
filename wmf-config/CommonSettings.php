@@ -2257,7 +2257,7 @@ if ( $wmgMobileFrontend ) {
 	$wgMFRemotePostFeedback = true;
 	$wgMFRemotePostFeedbackUrl = "http://www.mediawiki.org/w/api.php";
 	$wgMFRemotePostFeedbackArticle = "Project:Mobile site feedback";
-	$wgMFFeedbackFallbackURL = 'http://en.m.wikipedia.org/wiki/Wikipedia:Contact_us';
+	$wgMFFeedbackFallbackURL = '//en.m.wikipedia.org/wiki/Wikipedia:Contact_us';
 
 	$wgHooks['MobileFrontendOverrideFeedbackLinks'][] = 'MobileFrontendFeedbackConfig';
 	function MobileFrontendFeedbackConfig() {
@@ -2315,7 +2315,7 @@ if ( $wmgMobileFrontend ) {
 
 		// factual error link
 		if ( $wgDBname == 'enwiki' ) {
-                	$articleFactualLink = "http://en.m.wikipedia.org/wiki/Wikipedia:Contact_us/Article_problem/Factual_error";
+                	$articleFactualLink = "//en.m.wikipedia.org/wiki/Wikipedia:Contact_us/Article_problem/Factual_error";
         	} else {
                 	$articleFactualLink = "mailto:$emailStub@wikimedia.org?subject=$articleFactualSubject";
         	}
