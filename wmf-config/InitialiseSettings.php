@@ -9971,6 +9971,7 @@ $wgConf->settings = array(
 	'commonswiki' => true, // bug 32619
 	'guwiki' => true, // bug 33423
 	'guwikisource' => true,
+	'guwiktionary' => true, // bug 37365
 	'hiwiki' => true, // Bug 35436
 	'incubatorwiki' => true, // bug 32418
 	'knwiki' => true, // bug 34516
