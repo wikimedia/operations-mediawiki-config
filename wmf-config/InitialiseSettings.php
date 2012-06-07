@@ -10774,13 +10774,14 @@ $wgConf->settings = array(
 ),
 'wmgUseTranslate' => array(
 	'default' => false,
-	'incubatorwiki' => true,
+	'bewikimedia' => true, // bug 37391
+	'incubatorwiki' => true, // bug 34213
 	'mediawikiwiki' => true,
 	'metawiki' => true,
 	'outreachwiki' => true,
 	'testwiki' => true,
-	'wikimania2012wiki' => true,
-	'wikimania2013wiki' => true,
+	'wikimania2012wiki' => true, // bug 34120
+	'wikimania2013wiki' => true, // bug 36477
 ),
 'wmgTranslateWorkflowStates' => array(
 	'default' => false,
