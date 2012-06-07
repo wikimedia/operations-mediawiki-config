@@ -10889,9 +10889,11 @@ $wgConf->settings = array(
 'wmgUseLastModified' => array(
 	'default' => false,
 	'testwiki' => true,
+	'enwiki' => true,
 ),
 'wmgUseE3Experiments' => array(
 	'default' => false,
 	'testwiki' => true,
+	'enwiki' => true,
 ),
 );
