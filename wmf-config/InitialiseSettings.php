@@ -10889,7 +10889,7 @@ $wgConf->settings = array(
 'wmgUseLastModified' => array(
 	'default' => false,
 	'testwiki' => true,
-	'enwiki' => true,
+	'enwiki' => false, // causes API overload due to POST on every page view -- TS 2012-06-08
 ),
 'wmgUseE3Experiments' => array(
 	'default' => false,
