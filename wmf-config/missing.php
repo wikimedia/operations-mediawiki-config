@@ -85,7 +85,7 @@ if( $url['host'] == 'secure.wikimedia.org' ) {
 }
 
 $project = strtolower( $project );
-$projectcode = $projects[$project];
+$projectcode = isset( $projects[$project] ) ? $projects[$project] : null;
 $project = ucfirst( $project ); // for 404 pages message
 
 $location = $url['scheme'] . '://' . $base . 'W' . $projectcode . '/' . urlencode( $language );
@@ -94,31 +94,23 @@ $location = $url['scheme'] . '://' . $base . 'W' . $projectcode . '/' . urlencod
 $location .= $page && $page !== '/' ? '/' . $page :
 	'?goto=mainpage' . ( isset( $_GET['uselang'] ) ? '&uselang=' . urlencode( $_GET['uselang'] ) : '' );
 
-$redir = false;
+$redir = true;
 
-switch( $projectcode ) {
-
-	# Wikisource
-	case 's':
-		$logo = '//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wikisource-logo.svg/280px-Wikisource-logo.svg.png';
-		$home = '//wikisource.org';
-		$name = 'Multilingual Wikisource';
-		break;
-
-	# Wikiversity
-	case 'v':
-		$logo = '//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/300px-Wikiversity-logo.svg.png';
-		$home = '//beta.wikiversity.org';
-		$name = 'Beta Wikiversity';
-		break;
-
-	# Wikipedia, Wiktionary, Wikiquote, Wikibooks and Wikinews
-	default:
-		$redir = true;
-
+if( $projectcode === 's' ) {
+	# Wikisource should redirect to the multilingual wikisource
+	$location = $url['scheme'] . '://wikisource.org/wiki/' . $page;
+} elseif( $projectcode === 'v' ) {
+	# Wikiversity gives an error page
+	$logo = '//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/300px-Wikiversity-logo.svg.png';
+	$home = '//beta.wikiversity.org';
+	$name = 'Beta Wikiversity';
+	$redir = false;
+} elseif( !$projectcode ) {
+	# Not recognised (probably a wikimedia.org domain) -> redirect to a Meta page
+	$location = $url['scheme'] . '://meta.wikimedia.org/wiki/Missing_wiki';
 }
 
-# If not Wikisource/Wikiversity and the URL seems valid, redirect to Incubator
+# If we should redirect and the URL seems valid, redirect to the given URL
 if( $redir && parse_url( $location ) !== false ) {
 
 	header( 'Location: ' . $location );
