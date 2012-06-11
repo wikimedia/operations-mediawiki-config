@@ -312,8 +312,8 @@ $wgLBFactoryConf = array(
 	#
 	# Dedicated server stores
 	'cluster23' => array(
-		'10.0.0.227' => 1, # es3
 		'10.0.0.225' => 3, # es1
+		'10.0.0.227' => 1, # es3
 		'10.0.0.226' => 3, # es2
 		'10.0.0.228' => 3, # es4
 	),
