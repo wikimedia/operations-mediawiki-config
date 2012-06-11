@@ -17,6 +17,7 @@ $wgLBFactoryConf['sectionLoads'] = array(
 		'db1017'    => 1, # secondary master
 		'db1001'     => 1,
 		'db1033'      => 1, # snapshot
+		'db1042'    => 1,
 		'db1043'    => 1,
 		'db1047'      => 1, # alaytics
 		'db42'      => 1, # analytics
