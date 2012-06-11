@@ -9832,6 +9832,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'foundationwiki' => true,
 	'mediawikiwiki' => true,
+	'uawikimedia' => true,
 ),
 'wmgRSSAllowedFeeds' => array(
 	'default' => array(),
