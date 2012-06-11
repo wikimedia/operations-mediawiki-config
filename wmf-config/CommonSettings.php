@@ -1800,7 +1800,7 @@ if ( $wmgUseCollection ) {
 	$wgCollectionFormats = array(
 		'rl' => 'PDF',
 		'odf' => 'OpenDocument Text',
-		'zim' => 'openZIM',
+		'zim' => 'ZIM',
 	);
 
 	# GFDL is long gone, we use CC-BY-SA 3.0 nowaday. See bug 32513
