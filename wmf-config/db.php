@@ -68,7 +68,7 @@ $wgLBFactoryConf = array(
 	's1' => array(
 		'db38'	  => 0,
 		'db36'	  => 400,
-		#'db32'	  => 50, # snapshot host
+		'db32'	  => 50, # snapshot host
 		'db59'    => 400,
 		'db60'    => 400,
 		'db12'	  => 0, # special: watchlist, etc see groupLoadsByDB hardy - rebuild me
@@ -76,30 +76,30 @@ $wgLBFactoryConf = array(
 	's2' => array(
 		'db52'	  => 0,
 		'db53'	  => 100, # snapshot host
-		#'db54'	  => 300,
+		'db54'	  => 300,
 		'db57'	  => 300,
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db39'    => 0,
 		'db34'	  => 400,
 		'db25'	  => 100, # snapshot host
-		#'db11'	  => 400,
+		'db11'	  => 400,
 	),
 	's4' => array(
 		'db31'	 => 0,
-		#'db22'	 => 400,
+		'db22'	 => 400,
 		'db33'	 => 100, # Snapshot host
 		'db51'	 => 500,
 	),
 	's5' => array(
 		'db35'	 => 0,
 		'db45'	 => 500,
-		#'db44'	 => 500, # snapshot host
+		'db44'	 => 500, # snapshot host
 		'db55'	 => 1000,
 	),
 	's6' => array(
 		'db43'	   => 0, # hw died 12/18/2011
-		#'db47'	   => 1000,
+		'db47'	   => 1000,
 		'db46'	   => 400, # snapshot host
 		'db50'	   => 1000,
 	),
@@ -107,7 +107,7 @@ $wgLBFactoryConf = array(
 		'db37'  => 0,
 		'db56'  => 500,
 		'db58'	=> 500,
-		#'db26'	=> 300, # Snapshot hsot
+		'db26'	=> 300, # Snapshot hsot
 	),
 ),
 
