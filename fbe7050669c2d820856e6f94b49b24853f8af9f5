@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAMH//+h8\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 4638,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-06-12T20:07:36Z",
+      "side": 1,
+      "message": "Use underscores, not spaces in namespace names. Here and in a few lines below.",
+      "revId": "fbe7050669c2d820856e6f94b49b24853f8af9f5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
