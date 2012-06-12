@@ -67,6 +67,26 @@ if( getenv('INSTANCENAME') !== false ) {
 	$cluster = 'wmflabs';
 }
 
+### List of some service hostnames
+# 'meta'   : meta wiki for user editable content
+# 'upload' : hostname where files are hosted
+# TODO: 'bits'
+# Whenever two clusters should use the same host, do not use $wmfHostnames but
+# use the hardcoded hostname instead. A good example are the spam blacklists
+# hosted on meta.wikimedia.org which you will surely want to reuse.
+$wmfHostnames = array();
+switch( $cluster ) {
+case 'wmflabs':
+	$wmfHostnames['meta']   = 'meta.wikimedia.beta.wmflabs.org';
+	$wmfHostnames['upload'] = 'upload.beta.wmflabs.org';
+	break;
+case 'pmtpa':
+default:
+	$wmfHostnames['meta']   = 'meta.wikimedia.org';
+	$wmfHostnames['upload'] = 'upload.wikimedia.org';
+	break;
+}
+
 # Load site configuration
 include( "$IP/includes/DefaultSettings.php" );
 
@@ -164,7 +184,7 @@ if ( !$globals ) {
 			'lang'    => $lang,
 			'docRoot' => $_SERVER['DOCUMENT_ROOT'],
 			'site'    => $site,
-			'stdlogo' => "//upload.wikimedia.org/$site/$lang/b/bc/Wiki.png" ,
+			'stdlogo' => "//{$wmfHostnames['upload']}/$site/$lang/b/bc/Wiki.png" ,
 		), $wikiTags );
 
 	# Save cache
@@ -1701,7 +1721,7 @@ if ( $wmgUseCentralNotice ) {
 	} elseif ( $wgDBname == 'testwiki' ) {
 		$wgCentralPagePath = "$urlprotocol//test.wikipedia.org/w/index.php";
 	} else {
-		$wgCentralPagePath = "$urlprotocol//meta.wikimedia.org/w/index.php";
+		$wgCentralPagePath = "$urlprotocol//{$wmfHostnames['meta']}/w/index.php";
 	}
 
 	$wgNoticeProject = $wmgNoticeProject;
