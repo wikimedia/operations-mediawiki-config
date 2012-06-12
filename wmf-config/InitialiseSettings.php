@@ -4631,7 +4631,22 @@ $wgConf->settings = array(
 	),
 	'kuwiki' => array(
 		100 => 'Portal',
-		101 => 'Portal_nîqaş',
+		101 => 'Gotûbêja_portalê', // Bug 37521
+		NS_PROJECT_TALK => 'Gotûbêja Wîkîpediyayê', // Bug 37521
+	),
+	'kuwikibooks' => array(
+		NS_PROJECT => 'Wîkîpirtûk', // Bug 37522
+		NS_PROJECT_TALK => 'Gotûbêja Wîkîpirtûkê', // Bug 37522
+	),
+	'kuwikiquote' => array(
+		NS_PROJECT => 'Wîkîgotin', // Bug 37523
+		NS_PROJECT_TALK => 'Gotûbêja Wîkîgotinê', // Bug 37523
+	),
+	'kuwiktionary ' => array(
+		NS_PROJECT_TALK => 'Gotûbêja Wîkîferhengê', // Bug 37524
+		101 => 'Gotûbêja pêvekê', // Bug 37524
+		103 => 'Gotûbêja nimînokê', // Bug 37524
+		105 => 'Gotûbêja portalê', // Bug 37524
 	),
 	'kwwiki' => array(
 		100 => 'Porth',
