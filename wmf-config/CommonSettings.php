@@ -2184,20 +2184,20 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 		0 => array(
 			'factory' => 'ObjectCache::newMemcached',
 		),
-#		1 => array(
-#			'class' => 'SqlBagOStuff',
-#			'server' => array(
-#				'host' => '10.0.6.50', # db40
-#				'dbname' => 'parsercache',
-#				'user' => $wgDBuser,
-#				'password' => $wgDBpassword,
-#				'type' => 'mysql',
-#				'flags' => 0,
-#			),
-#			'purgePeriod' => 0,
-#			'tableName' => 'pc',
-#			'shards' => 256,
-#		),
+		1 => array(
+			'class' => 'SqlBagOStuff',
+			'server' => array(
+				'host' => '10.0.6.50', # db40
+				'dbname' => 'parsercache',
+				'user' => $wgDBuser,
+				'password' => $wgDBpassword,
+				'type' => 'mysql',
+				'flags' => 0,
+			),
+			'purgePeriod' => 0,
+			'tableName' => 'pc',
+			'shards' => 256,
+		),
 	)
 );
 
