@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAMH//+qI\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2529,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2012-06-12T17:38:51Z",
+      "side": 1,
+      "message": "Why doesn\u0027t this use $wmfConfigDir?",
+      "revId": "447100317d3b36408b3838f5c32a4479a32962bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
