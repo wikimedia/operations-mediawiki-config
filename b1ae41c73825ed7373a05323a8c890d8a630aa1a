@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAMH//+jo\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4634,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2012-06-12T19:40:10Z",
+      "side": 1,
+      "message": "When updating an existing namespace name, you have to add the old name as an alias.",
+      "revId": "b1ae41c73825ed7373a05323a8c890d8a630aa1a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
