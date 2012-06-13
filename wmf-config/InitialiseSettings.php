@@ -9303,6 +9303,12 @@ $wgConf->settings = array(
 	'tawikinews' => array( 'odf' ),
 ),
 
+// MediaWiki namespace is not a good default:
+'wgCommunityCollectionNamespace' => array(
+    'default' => NS_PROJECT,
+    'fawiki'  => 102, # bug 37545
+),
+
 'wmgUseSpamBlacklist' => array(
 	'default' => true,
 	'private' => false,
