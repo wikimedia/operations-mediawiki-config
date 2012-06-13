@@ -12,7 +12,7 @@
 	<!-- Import the OS environnement: -->
 	<property environment="env" /> 
 
-	<target name="test" depends="php-lint-wmfconfig">
+	<target name="test" depends="php-lint-wmfconfig,phpunit">
 
 	</target>
 
@@ -32,5 +32,11 @@
 				excludes="extdist/*"
 			/>
 		</apply>
+	</target>
+
+	<target name="phpunit">
+		<exec executable="phpunit">
+			<arg line="--log-junit ${basedir}/logs/junit.xml" />
+		</exec>
 	</target>
 </project>
