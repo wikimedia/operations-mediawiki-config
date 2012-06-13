@@ -2375,14 +2375,6 @@ if ( $wmgUseShortUrl ) {
 	}
 }
 
-if ( $wmgUseCongressLookup ) {
-	require_once( "$IP/extensions/CongressLookup/CongressLookup.php" );
-}
-
-if ( $wmgCongressLookupBlackOnWhite ) {
-	$wgCongressLookupBlackOnWhite = true;
-}
-
 if ( $wmgUseFeaturedFeeds ) {
 	require_once( "$IP/extensions/FeaturedFeeds/FeaturedFeeds.php" );
 	require_once( "$IP/extensions/FeaturedFeeds/FeaturedFeedsWMF.php" );

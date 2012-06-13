@@ -10832,16 +10832,6 @@ $wgConf->settings = array(
 'wmgShortUrlPrefix' => array(
 	'default' => false,
 ),
-'wmgUseCongressLookup' => array(
-	'default' => false,
-	'testwiki' => true,
-	'enwiki' => true,
-),
-'wmgCongressLookupBlackOnWhite' => array(
-	'default' => false,
-	'testwiki' => true,
-	'enwiki' => true, //SOPA
-),
 'wmgUseFeaturedFeeds' => array(
 	'default' => true,
 ),
