@@ -6876,7 +6876,8 @@ $wgConf->settings = array(
 	'nlwikibooks' => array( 'user' => array( 'patrol' => true ) ),
 	// 'nlwikinews' => array( 'user' => array( 'patrol' => true ) ),
 	'nnwiki' => array(
-	'autopatrolled' => array( 'autopatrol' => true ),
+		'autopatrolled' => array( 'autopatrol' => true ),
+		'patroller' => array( 'autopatrol' => true, 'patrol' => true, 'rollback' => true ),
 	),
 	'nowiki' => array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true, 'unwatchedpages' => true, 'suppressredirect' => true, ),
@@ -7419,8 +7420,8 @@ $wgConf->settings = array(
 		'sysop' => array( 'abusefilter' ),
 	),
 	'+nnwiki' => array(
-		'bureaucrat' => array( 'autopatrolled', ),
-		'sysop' => array( 'autopatrolled', ),
+		'bureaucrat' => array( 'autopatrolled', 'patroller' ),
+		'sysop' => array( 'autopatrolled', 'patroller' ),
 	),
 	'+noboard_chapterswikimedia' => array(
 		'bureaucrat' => array( 'import', 'transwiki' ),
@@ -7798,8 +7799,8 @@ $wgConf->settings = array(
 		'sysop' => array( 'abusefilter' ),
 	),
 	'+nnwiki' => array(
-		'bureaucrat' => array( 'autopatrolled', ),
-		'sysop' => array( 'autopatrolled', ),
+		'bureaucrat' => array( 'autopatrolled', 'patroller' ),
+		'sysop' => array( 'autopatrolled' ),
 	),
 	'+noboard_chapterswikimedia' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'import', 'transwiki' ),
