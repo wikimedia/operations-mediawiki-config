@@ -687,6 +687,8 @@ $wgSqlLogFile = $wgUploadDirectory . '/sqllog';
 
 $wgBlockOpenProxies = false;
 
+$wgDebugLogGroups['tempDebug'] = "udp://$wmfUdp2logDest/temp-debug"; # generic temp debugging log
+
 $wgDebugLogGroups['UploadBlacklist'] = "udp://$wmfUdp2logDest/upload-blacklist";
 $wgDebugLogGroups['bug27452'] = "udp://$wmfUdp2logDest/bug27452";
 $wgDebugLogGroups['swiftThumb'] = "udp://$wmfUdp2logDest/swift-thumb"; // -aaron 1/30/12
