@@ -6180,6 +6180,7 @@ $wgConf->settings = array(
 	'tlwikibooks' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 100 => 1, 101 => 0 ),
 	'trwikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 100 => 1 ),
 	'vecwikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 100 => 1, 104 => 1 ),
+	'viwikibooks' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 102 => 1, 104 => 1, 106 => 1 ),
 	'viwikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 102 => 1, 106 => 1 ),
 	'zhwikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 102 => 1, 106 => 1 ),
 ),
@@ -9986,33 +9987,39 @@ $wgConf->settings = array(
 	'guwikisource' => true,
 	'guwiktionary' => true, // bug 37365
 	'guwikiquote' => true, //bug 37385
+	'metawiki' => true,  // Bug 32014
+	'aswiki' => true, // Bug 32042
+	'commonswiki' => true, // Bug 32619
+	'guwiki' => true, // Bug 33423
+	'guwikisource' => true, // Bug 35138
 	'hiwiki' => true, // Bug 35436
-	'incubatorwiki' => true, // bug 32418
-	'knwiki' => true, // bug 34516
+	'incubatorwiki' => true, // Bug 32418
+	'knwiki' => true, // Bug 34516
+	'knwikisource' => true, // Bug 37456
 	'mediawikiwiki' => true,
-	'mlwikiquote' => true,
-	'mlwikibooks' => true,
-	'mlwiktionary' => true,
-	'mlwikisource' => true,
-	'mlwiki' => true,
-	'mrwiki' => true,
-	'mrwikisource' => true,
-	'orwiki' => true,
-	'orwiktionary' => true,
-	'outreachwiki' => true,
-	'sawiki' => true,
-	'sawikibooks' => true,
-	'sawikisource' => true,
-	'sawiktionary' => true,
-	'siwiki' => true,
-	'siwikibooks' => true,
-	'siwiktionary' => true,
-	'tawiki' => true,
-	'tawikibooks' => true,
-	'tawikinews' => true,
-	'tawikiquote' => true,
-	'tawikisource' => true,
-	'tawiktionary' => true,
+	'mlwikiquote' => true, // Bug 27949
+	'mlwikibooks' => true, // Bug 27949
+	'mlwiktionary' => true, // Bug 27949
+	'mlwikisource' => true, // Bug 27949
+	'mlwiki' => true, // Bug 27949
+	'mrwiki' => true, // Bug 32669
+	'mrwikisource' => true, // Bug 34454
+	'orwiki' => true, // Bug 31814
+	'orwiktionary' => true, // Bug 31857
+	'outreachwiki' => true, // Bug 33899
+	'sawiki' => true, // Bug 29515
+	'sawikibooks' => true, // Bug 29515
+	'sawikisource' => true, // Bug 29515
+	'sawiktionary' => true, // Bug 29515
+	'siwiki' => true, // Bug 31372
+	'siwikibooks' => true, // Bug 31372
+	'siwiktionary' => true, // Bug 31372
+	'tawiki' => true, // Bug 29798
+	'tawikibooks' => true, // Bug 29798
+	'tawikinews' => true, // Bug 31142
+	'tawikiquote' => true, // Bug 31142
+	'tawikisource' => true, // Bug 29798
+	'tawiktionary' => true, // Bug 31142
 	'tewiki' => true, // Bug 33480
 	'tewikisource' => true, // Bug 37336
 	'tewiktionary' => true, // Bug 37336
@@ -10025,7 +10032,7 @@ $wgConf->settings = array(
 ),
 'wmgNarayamUseBetaMapping' => array(
 	'default' => false,
-	'incubatorwiki' => true,
+	'incubatorwiki' => true, // Bug 33001
 ),
 'wmgUseWebFonts' => array(
 	'default' => false,
