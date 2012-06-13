@@ -1793,8 +1793,7 @@ if ( $wmgUseCollection ) {
 	# $wgCollectionMWServeURL = 'http://erzurumi.wikimedia.org:8080/mw-serve/';
 	$wgCollectionMWServeURL = "http://pdf1.wikimedia.org:8080/mw-serve/";
 
-	// MediaWiki namespace is not a good default
-	$wgCommunityCollectionNamespace = NS_PROJECT;
+	$wgCommunityCollectionNamespace = $wmgCommunityCollectionNamespace;
 
 	// Allow collecting Help pages
 	$wgCollectionArticleNamespaces[] = NS_HELP;

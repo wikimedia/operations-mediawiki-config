@@ -9316,6 +9316,12 @@ $wgConf->settings = array(
 	'mlwikisource' => array( 'odf' ), // Bug 37672
 ),
 
+// MediaWiki namespace is not a good default:
+'wmgCommunityCollectionNamespace' => array(
+    'default' => NS_PROJECT,
+    'fawiki'  => 102, # bug 37545
+),
+
 'wmgUseSpamBlacklist' => array(
 	'default' => true,
 	'private' => false,
