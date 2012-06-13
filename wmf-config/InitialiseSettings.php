@@ -9297,10 +9297,12 @@ $wgConf->settings = array(
 
 'wmgCollectionPortletFormats' => array(
 	'default' => array( 'rl' ),
-	'tawiki' => array( 'odf' ),
-	'tawikibooks' => array( 'odf' ),
-	'tawikisource' => array( 'odf' ),
-	'tawikinews' => array( 'odf' ),
+	'tawiki' => array( 'odf' ),       // Bug 37154
+	'tawikibooks' => array( 'odf' ),  // Bug 37154
+	'tawikisource' => array( 'odf' ), // Bug 37154
+	'tawikinews' => array( 'odf' ),   // Bug 37154
+	'guwikibooks' => array( 'odf' ),  // Bug 37384
+	'guwikisource' => array( 'odf' ), // Bug 37384
 ),
 
 'wmgUseSpamBlacklist' => array(
