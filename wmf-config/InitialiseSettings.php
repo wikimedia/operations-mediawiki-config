@@ -10012,12 +10012,14 @@ $wgConf->settings = array(
 	'tawikisource' => true,
 	'tawiktionary' => true,
 	'tewiki' => true, // Bug 33480
+	'tewikisource' => true, // Bug 37336
+	'tewiktionary' => true, // Bug 37336
 ),
 'wmgNarayamEnabledByDefault' => array(
 	'default' => false, // Note Narayam default is true
 	'incubatorwiki' => false,
 	'commonswiki' => false, // Bug 32619
-	'knwiki' => true, // bug 34591
+	'knwiki' => true, // Bug 34591
 ),
 'wmgNarayamUseBetaMapping' => array(
 	'default' => false,
