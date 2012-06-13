@@ -8,6 +8,8 @@
 
 if( $cluster == 'wmflabs' ) {  # safe guard
 
+	include( "logging-wmflabs.php" );
+
 // test wiki
 if ( $wgDBname == 'testwiki' ) {
 	        $wgDebugToolbar = true;
