@@ -10449,6 +10449,15 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'User %code%-N',
 	),
+	'fowiki' => array(
+		'0' => false,
+		'1' => 'Brúkari %code%-1',
+		'2' => 'Brúkari %code%-2',
+		'3' => 'Brúkari %code%-3',
+		'4' => 'Brúkari %code%-4',
+		'5' => 'Brúkari %code%-5',
+		'N' => 'Brúkari %code%-N',
+	), // Bug 37401
 	'frwiki' => array(
 		'0' => 'Utilisateur %code%-0',
 		'1' => 'Utilisateur %code%-1',
