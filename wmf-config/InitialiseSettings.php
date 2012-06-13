@@ -5117,6 +5117,10 @@ $wgConf->settings = array(
 		101 => 'Overleg_hoofdportaal',
 		102 => 'Auteur',
 		103 => 'Overleg_auteur',
+		104 => 'Pagina',         // Bug 37482
+		105 => 'Overleg_pagina', // Bug 37482
+		106 => 'Index',          // Bug 37482
+		107 => 'Overleg_index',  // Bug 37482
 	),
 	'nowikisource' => array(
 		102 => 'Forfatter',
