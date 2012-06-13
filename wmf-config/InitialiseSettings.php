@@ -2797,10 +2797,6 @@ $wgConf->settings = array(
 	'nlwikisource' => array(
 		'Author' => 102,
 		'Author_talk' => 103,
-		'Pagina' => 104, // Bug 37482
-		'Overleg_pagina' => 105, // Bug 37482
-		'Index' => 106, // Bug 37482
-		'Overleg_index' => 107, // Bug 37482
 	),
 	'nnwiki' => array(
 		 'WP' => NS_PROJECT,
