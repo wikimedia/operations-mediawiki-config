@@ -10916,6 +10916,10 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'enwiki' => true,
 ),
+'wmgUseEducationProgram' => array(
+	'default' => false,
+	'test2wiki' => true,
+),
 );
 
 

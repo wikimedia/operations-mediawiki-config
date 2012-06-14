@@ -2428,6 +2428,10 @@ if ( $wmgUseLastModified ) {
 # Timed Media Handler:
 $wgJobTypesExcludedFromDefaultQueue[] = 'webVideoTranscode';
 
+if ( $wmgUseEducationProgram ) {
+	require_once( "$IP/extensions/EducationProgram/EducationProgram.php" );
+}
+
 if( $cluster == 'wmflabs' ) {
 	require( "$wmfConfigDir/CommonSettings-wmflabs.php" );
 }
