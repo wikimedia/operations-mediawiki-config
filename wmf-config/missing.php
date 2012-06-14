@@ -85,7 +85,7 @@ if( $url['host'] == 'secure.wikimedia.org' ) {
 }
 
 $project = strtolower( $project );
-$projectcode = $projects[$project];
+$projectcode = isset( $projects[$project] ) ? $projects[$project] : null;;
 $project = ucfirst( $project ); // for 404 pages message
 
 $location = $url['scheme'] . '://' . $base . 'W' . $projectcode . '/' . urlencode( $language );
@@ -93,6 +93,11 @@ $location = $url['scheme'] . '://' . $base . 'W' . $projectcode . '/' . urlencod
 # the main page Wx/xyz?goto=mainpage (WikimediaIncubator extension takes care of that)
 $location .= $page && $page !== '/' ? '/' . $page :
 	'?goto=mainpage' . ( isset( $_GET['uselang'] ) ? '&uselang=' . urlencode( $_GET['uselang'] ) : '' );
+
+# Not recognised (probably a wikimedia.org domain) -> redirect to a Meta page
+if( !$projectcode ) {
+	$location = $url['scheme'] . '://meta.wikimedia.org/wiki/Missing_wiki';
+}
 
 $redir = false;
 
