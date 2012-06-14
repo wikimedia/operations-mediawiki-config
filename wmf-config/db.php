@@ -99,7 +99,7 @@ $wgLBFactoryConf = array(
 	),
 	's6' => array(
 		'db47'	   => 0,
-		#'db43'	   => 1000, # hw died 12/18/2011
+		'db43'	   => 1000, # hw died 12/18/2011
 		'db46'	   => 400, # snapshot host
 		'db50'	   => 1000,
 	),
