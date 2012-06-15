@@ -21,7 +21,7 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 	 * Projects dblist should only contains databasenames which
 	 * belongs to them.
 	 *
-	 * @dataProvider provideProjectsDatabases
+	 * @dataProvider Provide::ProjectsDatabases
 	 */
 	function testDatabaseNamesUseProjectNameAsSuffix( $projectname, $database ) {
 
@@ -37,21 +37,6 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 		);
 	}
 
-	function provideProjectsDatabases() {
-		$cases=array();
-		foreach( DBList::getall() as $projectname => $databases ) {
-			if( !DBlist::isWikiProject( $projectname ) ) {
-				# Skip files such as s1, private ...
-				continue;
-			}
-			foreach( $databases as $database ) {
-				$cases[] = array(
-					$projectname, $database
-				);
-			}
-		}
-		return $cases;
-	}
 
 	/**
 	 * FIXME we want to keep continuing showing errors
@@ -91,39 +76,3 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 
 }
 
-/**
- * Helpers for DbListTests.
- */
-class DBList {
-	# List of project names. This array is used to verify that the various
-	# dblist project files only contains names of databases that belong to them
-	static $wiki_projects = array(
-		'wikibooks',
-		'wikinews',
-		'wikipedia',
-		'wikiquote',
-		'wikisource',
-		'wikiversity',
-		'wiktionary',
-	);
-
-	public static function getall() {
-		static $list = null;
-		if( $list ) return $list;
-
-		$objects = scandir(  dirname( __FILE__ ) . '/..'  );
-		foreach( $objects as $filename ) {
-			if( substr( $filename, -7, 7 ) == '.dblist' ) {
-				$projectname = substr( $filename, 0, -7 );
-				# Happilly prefetch the files content
-				$list[$projectname] = file( $filename, FILE_IGNORE_NEW_LINES);
-			}
-		}
-
-		return $list;
-	}
-
-	public static function isWikiProject( $dbname ) {
-		return in_array( $dbname, self::$wiki_projects );
-	}
-}
