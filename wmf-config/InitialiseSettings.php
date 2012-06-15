@@ -2064,7 +2064,6 @@ $wgConf->settings = array(
 	'bat_smgwiki' => 'Vikipedėjės_aptarėms',
 	'bdwikimedia'	=> 'উইকিমিডিয়া বাংলাদেশ আলোচনা',
 	'bewikisource'  => 'Размовы_пра_Вікікрыніцы',
-	'bjnwiki'		=> 'Wikipidia_pamandiran',
 	'brwikisource'	=> 'Kaozeadenn_Wikimammenn',
 	'cuwiki' => 'Википєдїѩ_бєсѣ́да',
 	'cowikimedia'   => 'Wikimedia_discusión',
@@ -2215,6 +2214,9 @@ $wgConf->settings = array(
 	'bgwikisource' => array(
 		'Author' => 100,
 		'Author_talk' => 101,
+	),
+	'bjnwiki' => array(
+		'Wikipidia_pamandiran' => NS_PROJECT_TALK,
 	),
 	'bnwiki' => array(
 		'Portal' => 100,
