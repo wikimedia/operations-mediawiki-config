@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAM3//+qk\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3273,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-06-16T02:56:17Z",
+      "side": 1,
+      "message": "Trailing space missing",
+      "revId": "088ea1fe9ba40bd16f90128a64bb15678c17fde2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
