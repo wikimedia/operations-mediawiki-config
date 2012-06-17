@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAM3//+T4\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-06-17T23:44:15Z",
+      "side": 1,
+      "message": "First line to long (to be decreased to 65 chars or less)",
+      "revId": "5c66ea4dfbc799bd1961122c9db172af0dad443d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAM3//+T0\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 843,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-06-17T23:44:15Z",
+      "side": 1,
+      "message": "(1) variable name error: $stdlogo in lowercase!\n\n(2) Add the bug reference at the end of the line. To be coherent with the currently most used format, it\u0027s:\n// Bug 37661",
+      "revId": "5c66ea4dfbc799bd1961122c9db172af0dad443d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
