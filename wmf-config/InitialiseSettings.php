@@ -946,6 +946,7 @@ $wgConf->settings = array(
 	'cswikisource'  => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
 	'cswikiversity' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
 	'cswiktionary'  => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
+	'dawiki'        => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=da&campaign=dk', // Bug 37662
 	'dewikisource'  => '//commons.wikimedia.org/wiki/Special:Upload?uselang=de',
 	'enwiki'        => '/wiki/Wikipedia:Upload',
 	'enwikibooks'   => '//commons.wikimedia.org/wiki/Commons:Upload',
