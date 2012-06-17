@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAM3//+fo\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8194,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-06-17T16:26:02Z",
+      "side": 1,
+      "message": "Add a reference to the new bug as well (37457).",
+      "revId": "c0e7ec38f602cb5cf249315c52bcee2fa11706e4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
