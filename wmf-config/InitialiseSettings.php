@@ -840,6 +840,7 @@ $wgConf->settings = array(
 	'vecwikisource'	=> '//upload.wikimedia.org/wikipedia/sources/b/bc/Wiki.png',
 	'vepwiki'          => '//upload.wikimedia.org/wikipedia/commons/f/f7/Wikipedia-logo-v2-vep.png',
 	'viwiki' 		=> '//upload.wikimedia.org/wikipedia/commons/0/01/Wikipedia-logo-v2-vi.png',
+	'viwikibooks'		=> '$stdLogo',
 	'viwikiquote'       => '$stdlogo',
 	'viwikisource'	=> '$stdlogo',
 	'viwiktionary'      => '$stdlogo',
