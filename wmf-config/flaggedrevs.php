@@ -484,12 +484,11 @@ elseif ( $wgDBname == 'ptwikisource' ) {
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 }
 
-elseif ( $wgDBname == 'ruwiki' ) {
-	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
+elseif ( $wgDBname == 'ruwiki' ) { // Bugs 15478 & 37675
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100 );
 	$wgFlaggedRevTags['accuracy']['levels'] = 3; // Is this needed?
 	$wgFlaggedRevsOverride = false;
 
-	// https://bugzilla.wikimedia.org/show_bug.cgi?id=15478
 	$wgGroupPermissions['autoeditor']['autoreview'] = true;
 	$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
 
