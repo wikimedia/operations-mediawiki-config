@@ -9972,9 +9972,9 @@ $wgConf->settings = array(
 ),
 'wmgArticleFeedbackv5BlacklistCategories' => array(
 	'default' => array(),
-	'en_labswikimedia' => array( 'Article_Feedback_Blacklist' ),
-	'enwiki' => array( 'Article_Feedback_Blacklist' ),
-	'testwiki' => array( 'Article_Feedback_Blacklist' ),
+	'en_labswikimedia' => array( 'Article_Feedback_Blacklist', 'Article_Feedback_Pilot', 'Article_Feedback', 'Article_Feedback_Additional_Articles' ),
+	'enwiki' => array( 'Article_Feedback_Blacklist', 'Article_Feedback_Pilot', 'Article_Feedback', 'Article_Feedback_Additional_Articles' ),
+	'testwiki' => array( 'Article_Feedback_Blacklist', 'Really_big_category' , 'Article_Feedback_Pilot' ),
 ),
 'wmgArticleFeedbackv5OversightEmails' => array(
 	'default' => 'aft@wikimedia.org',
@@ -9984,6 +9984,10 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'enwiki' => true,
+),
+'wmgArticleFeedbackv5LotteryOdds' => array(
+	'default' => 0,
+	'enwiki' => 1,
 ),
 'wmgUsePoolCounter' => array(
 	'default' => true,
