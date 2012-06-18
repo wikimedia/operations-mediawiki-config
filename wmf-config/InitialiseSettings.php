@@ -2756,6 +2756,7 @@ $wgConf->settings = array(
 		'Page_talk'	   => 107,
 		'Wikisource' => NS_PROJECT,
 		'WS' => NS_PROJECT,
+		'H' => NS_HELP, # bug 35712
 	),
 	'mlwiktionary' => array(
 		'Wiktionary' => NS_PROJECT,
