@@ -9312,6 +9312,8 @@ $wgConf->settings = array(
 	'tawikinews' => array( 'odf' ),   // Bug 37154
 	'guwikibooks' => array( 'odf' ),  // Bug 37384
 	'guwikisource' => array( 'odf' ), // Bug 37384
+	'mlwikibooks' => array( 'odf' ),  // Bug 37672
+	'mlwikisource' => array( 'odf' ), // Bug 37672
 ),
 
 'wmgUseSpamBlacklist' => array(
