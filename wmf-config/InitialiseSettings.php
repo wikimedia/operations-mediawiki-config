@@ -2663,6 +2663,16 @@ $wgConf->settings = array(
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	),
+	'knwikisource' => array( // Bug 37676
+		'Portal' => 100,
+		'Portal talk' => 101,
+		'Author' => 102,
+		'Author talk' => 103,
+		'Page' => 104,
+		'Page talk' => 105,
+		'Index' => 106,
+		'Index talk' => 107,
+	),
 	'kowiki' => array(
 		'백' => NS_PROJECT,
 		'백토' => NS_PROJECT_TALK,
@@ -4636,6 +4646,16 @@ $wgConf->settings = array(
 	'kkwiki' => array(
 		100 => 'Портал',
 		101 => 'Портал_талқылауы',
+	),
+	'knwikisource' => array( // Bug 37676
+		100 => 'ಸಂಪುಟ',         // Portal
+		101 => 'ಸಂಪುಟ_ಚರ್ಚೆ',
+		102 => 'ಕರ್ತೃ',         // Author
+		103 => 'ಕರ್ತೃ_ಚರ್ಚೆ',
+		104 => 'ಪುಟ',         // Page
+		105 => 'ಪುಟ_ಚರ್ಚೆ',
+		106 => 'ಪರಿವಿಡಿ',         // Index
+		107 => 'ಪರಿವಿಡಿ_ಚರ್ಚೆ',
 	),
 	'kowiki' => array(
 		100 => '들머리',
