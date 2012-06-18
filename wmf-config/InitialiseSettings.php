@@ -10822,12 +10822,12 @@ $wgConf->settings = array(
 'wmgTranslateWorkflowStates' => array(
 	'default' => false,
 	'metawiki' => array(
-		'progress' => 'E00',
-		'needs-updating' => 'FFBF00',
-		'updating' => 'FFBF00',
-		'proofreading' => 'FFBF00',
-		'ready' => 'FF0',
-		'published' => 'AEA',
+		'progress' => array( 'color' => 'E00' ),
+		'needs-updating' => array( 'color' => 'FFBF00' ),
+		'updating' => array( 'color' => 'FFBF00' ),
+		'proofreading' => array( 'color' => 'FFBF00' ),
+		'ready' => array( 'color' => 'FF0' ),
+		'published' => array( 'color' => 'AEA' ),
 	),
 ),
 'wmgUseTranslationNotifications' => array(
