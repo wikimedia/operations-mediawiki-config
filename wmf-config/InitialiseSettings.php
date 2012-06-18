@@ -7075,7 +7075,10 @@ $wgConf->settings = array(
 		'rollbacker'	=> array( 'rollback' => true, 'autopatrol' => true ),
 	),
 	'svwikisource' => array(
-		'autopatrolled' => array( 'autopatrol' => true, 'suppressredirect' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28614
+        // Bug 28614 & 36895
+		'autopatrolled' => array( 'autopatrol' => true, 'suppressredirect' => true, 'upload' => true, 'reupload' => true ),
+        'autoconfirmed' => array( 'upload' => false, 'reupload' => false),
+        'confirmed' => array( 'upload' => false, 'reupload' => false),
 	),
 	'svwiktionary' => array(
 		'user' => array( 'upload' => false ),
