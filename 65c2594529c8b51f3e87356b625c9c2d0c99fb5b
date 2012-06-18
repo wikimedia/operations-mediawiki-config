@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAM3//+S8\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-06-18T00:51:14Z",
+      "side": 1,
+      "message": "Commons with an uppercase C",
+      "revId": "65c2594529c8b51f3e87356b625c9c2d0c99fb5b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAM3//+S4\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 949,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-06-18T00:51:14Z",
+      "side": 1,
+      "message": "It would be nice if we start to unify the way we indicate bugs in the config file.\n\nCould you consider to adopt the most used syntax?\n\n// Bug 37662",
+      "revId": "65c2594529c8b51f3e87356b625c9c2d0c99fb5b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
