@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAM3//+PE\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-06-18T07:50:19Z",
+      "side": 1,
+      "message": "Please try to be descriptive and to avoid confusion between the common noun \"commons\" (according the English wiktionnary: \"The mutual good of all; the abstract concept of resources shared by more than one, for example air, water, information.\") and the proper noun \"Commons\" (like in \"Wikimedia Commons\").\n\nWikimedia Commons would allow to avoid more confusion with Creative Commons, The Commons on Flickr, etc.\n\n____________________________\n\nBy the way, speaking of being descriptive, ask yourself what\u0027s the goal of your commit message and try to answer to your question.\n\nFor example, if the question is \"What this bug solves as issue?\" the comment could be:\n\n(bug 37662) change wgUploadNavigationUrl @ da.wikipedia\n\nThe Danish Wikipedia wish their \"Upload file\" link now points to\nWikimedia Commons Upload Wizard (with a campaign to get statistics).",
+      "revId": "f31b1d9ceff8e9f2aaa6b6ccd5dd4bb6370ce7c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
