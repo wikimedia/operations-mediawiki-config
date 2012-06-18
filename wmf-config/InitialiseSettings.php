@@ -7122,7 +7122,7 @@ $wgConf->settings = array(
 	// due to mass vandalism complaint, 2006-04-11
 	'zhwiki' => array(
 	    // '*' => array( 'createpage' => false ),  # re-enabled createpage priv according to bug 25142, then redisabled *sigh*, then reenabled \o/
-	 	'rollbacker' 	=> array( 'rollback' => true ),
+		'rollbacker' 	=> array( 'rollback' => true, 'abusefilter-log-private' => true ), # Bugs 16988 & 37679
 	 	'patroller'		=> array( 'patrol' => true, 'autopatrol' => true ),
 	 	'autoreviewer'  => array( 'autopatrol' => true ),
 	 	'flood'	 => array( 'bot' => true ),
