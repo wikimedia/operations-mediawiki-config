@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAANX///kc\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-06-19T08:27:26Z",
+      "side": 1,
+      "message": "(1) Isn\u0027t \"bug\" in lowercase?\n\n(2) The commit message guidelines aren\u0027t respected\n\nIn a nutshell:\n- 65 characters maximum for the first paragraph ;\n- 72 characters per line for following paragraphs.\n\nURL: http://www.mediawiki.org/wiki/Git/Commit_message_guidelines\n\n_________________________________________________\n\nThat could give something like:\n\n(bug 37700) Change logo and favicon for stewardwiki\n\nThe new logo is:\nhttp://commons.wikimedia.org/wiki/File:Steward_wiki_logo_3.svg\n\nThe new favicon is the meta one.",
+      "revId": "764a87a02cf61ef4c22deefddac06714dd0e9d22",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAANX///kw\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 784,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-06-19T08:27:26Z",
+      "side": 1,
+      "message": "Could you consider the following syntax?\n// Bug 37700\n\nIf so, that would allow to have a unified way to mark bugs in the config file and so would help readability and maintenance.",
+      "revId": "764a87a02cf61ef4c22deefddac06714dd0e9d22",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAANX///k0\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8927,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-06-19T08:27:26Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we add the bug information here too?",
+      "revId": "764a87a02cf61ef4c22deefddac06714dd0e9d22",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
