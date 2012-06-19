@@ -110,7 +110,6 @@ if ( $wmgMobileFrontend ) {
 		}
 		$wgMFCustomLogos = $wmgMFCustomLogos;
 	}
-	$wgMobileResourceVersion = 1337623239;
 }
 
 
