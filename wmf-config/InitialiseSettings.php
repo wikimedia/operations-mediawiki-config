@@ -9930,6 +9930,7 @@ $wgConf->settings = array(
 ),
 'wmgArticleFeedbackLotteryOdds' => array(
 	'default' => 0,
+	'testwiki' => 100,
 	'en_labswikimedia' => 100,
 	'enwiki' => 100,
 	'eswiki' => 100,
