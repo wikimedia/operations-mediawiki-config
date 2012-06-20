@@ -3,21 +3,70 @@
 # WARNING: This file is publically viewable on the web.
 # Do not put private data here.
 
-function efRaiseThrottle() {
-	global $wgAccountCreationThrottle;
-	if ( wfGetIP() == '192.114.7.2' || wfGetIP() == '115.112.231.108' ) { // 192.114.7.2 -> bug 37740, 115.112.231.208 -> bug 37741
-		$wgAccountCreationThrottle = 50;
+## Add throttling definition below by calling efRaiseAccountCreationThrottle(),
+# The helper functions takes an array of parameters:
+#  'from'  => date/time to start raising account creation throttle
+#  'to'    => date/time to stop
+#  'value' => new value for $wgAccountCreationThrottle
+#
+# Additionally, one can restrict by client IP / dbname project:
+#  'IP'     => client IP as given by wfGetIP()
+#  'dbname' => a $wgDBname to compare to
+#
+
+# bug 37740
+efRaiseAccountCreationThrottle( array(
+	'from'  => '2012-06-20T13:00 +0:00',
+	'to'    => '2012-06-20T19:00 +0:00',
+	'IP'    => '192.114.7.2',
+	'value' => 50,
+) );
+# bug 37741
+efRaiseAccountCreationThrottle( array(
+	'from'   => '2012-06-23T04:30 +0:00',
+	'to'     => '2012-06-23T10:30 +0:00',
+	'IP'     => '115.112.231.108',
+	'dbname' => 'enwiki',
+	'value'  => 50,
+) );
+
+## Add throttling defintion above.
+
+# Will eventually raise value when fully initialized:
+$wgExtensionFunctions[] = 'efRaiseAccountCreationThrottle';
+
+/**
+ * Helper to easily add a throttling request.
+ *
+ */
+function efRaiseAccountCreationThrottle( $options ) {
+	# Validate entry, skip when it does not apply to our case
+
+	# 1) skip when it does not apply to our database name
+	global $wgDBname;
+	if( isset( $options['dbname'] ) && $wgDBname != $options['dbname'] ) {
+		return;
 	}
+
+	# 2) skip expired entries
+	$inTimeWindow =    time() >= strtotime( $options['from'] )
+	                && time() <= strtotime( $options['to'] );
+	if( !$inTimeWindow ) {
+		return;
+	}
+
+	# 3) skip when it does not apply to the client IP
+	if( isset( $options['IP'] ) && wfGetIP() != $throttle['IP'] ) {
+		return;
+	}
+
+	if( is_numeric( $throttle['value'] ) ) {
+		global $wgAccountCreationThrottle;
+		$wgAccountCreationThrottle = $throttle['value'];
+	}
+
 }
 
-if (   ( time() >= strtotime( '2012-06-20T13:00 +0:00' )
-	&& time() <= strtotime( '2012-06-20T19:00 +0:00' ) )
-	|| ( $wgDBname == "enwiki" &&
-		time() >= strtotime( '2012-06-23T04:30 +0:00' ) &&
-		time() <= strtotime( '2012-06-23T10:30 +0:00' ) )
-) {
-	$wgExtensionFunctions[] = 'efRaiseThrottle';
-}
 
 
 // Added throttle for account creations on zh due to mass registration attack 2005-12-16
