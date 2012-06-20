@@ -5,12 +5,14 @@
 
 function efRaiseThrottle() {
 	global $wgAccountCreationThrottle;
-	if ( wfGetIP() == '200.156.24.98' ) {
-		$wgAccountCreationThrottle = 40;
+	if ( wfGetIP() == '192.114.7.2' ) {
+		$wgAccountCreationThrottle = 50;
 	}
 }
 
-if ( $wgDBname == 'ptwiki' && time() >= strtotime( '2012-05-22T16:00 +0:00' ) && time() <= strtotime( '2012-05-22T21:00 +0:00' ) ) {
+if (   time() >= strtotime( '2012-06-20T13:00 +0:00' )
+	&& time() <= strtotime( '2012-06-20T19:00 +0:00' )
+) {
 	$wgExtensionFunctions[] = 'efRaiseThrottle';
 }
 
