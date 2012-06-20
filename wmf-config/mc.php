@@ -29,7 +29,7 @@ $wgMemCachedServers = array(
     # 79 active nodes (a nice prime number), 7 spares
 
 # SLOT      HOST
-0 => '10.0.2.245:11000'
+0 => '10.0.2.245:11000',
 1 => '10.0.8.19:11000',
 2 => '10.0.8.17:11000',
 3 => '10.0.2.227:11000',
