@@ -2451,6 +2451,11 @@ case 'wmflabs':
 // https://bugzilla.wikimedia.org/show_bug.cgi?id=37211
 $wgUseCombinedLoginLink = false;
 
+// Disable ApiPurge temporarily due to abuse
+if ( $wgDBname == 'commonswiki' ) {
+	$wgAPIModules['purge'] = 'ApiDisabled';
+}
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
