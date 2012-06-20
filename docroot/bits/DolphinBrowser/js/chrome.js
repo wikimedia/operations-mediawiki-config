@@ -27,7 +27,7 @@ window.chrome = function() {
 
 	function hideSpinner() {
 		$('#search').removeClass('inProgress');
-		$('.titlebar .spinner').css({display:'none'});	
+		$('.titlebar .spinner').css({display:'none'});
 		$('#clearSearch').css({height:30});
 	}
 
@@ -59,7 +59,7 @@ window.chrome = function() {
 			$contentBlock.append($(sectionHtml)).data('populated', true);
 			chrome.initContentLinkHandlers(selector);
 			MobileFrontend.references.init($contentBlock[0], false, {animation: 'none', onClickReference: onClickReference});
-		} 
+		}
 	}
 
 	function handleSectionExpansion() {
@@ -250,17 +250,17 @@ window.chrome = function() {
 			// sometimes we get loaded without the fixups, and everything esplodes.
 			//window.history.go(-1);
 			if(currentHistoryIndex < 0) {
-                console.log("no more history to browse exiting...");
-                navigator.notification.confirm("Do you want to exit?",
-                    function(index) {
-                        if (index === 1) {
-                            navigator.app.exitApp();
-                        } else {
-                            currentHistoryIndex = 0;
-                        }
-                    },
-                    "Exit",
-                    "Yes,No");
+				console.log("no more history to browse exiting...");
+				navigator.notification.confirm(mw.msg('exit-wikipedia-dialog-msg').toString(),
+					function(index) {
+						if (index === 2) {
+				navigator.app.exitApp();
+			} else {
+							currentHistoryIndex = 0;
+						}
+					},
+					mw.msg('exit-wikipedia-dialog-title').toString(),
+					mw.msg('confirm-button-no').toString() + ',' + mw.msg('confirm-button-yes').toString());
 			} else {
 				console.log('going back to item ' + currentHistoryIndex + ': ' + pageHistory[currentHistoryIndex]);
 				app.navigateToPage(pageHistory[currentHistoryIndex], {
@@ -314,9 +314,9 @@ window.chrome = function() {
 			}
 		});
 	}
-	
+
 	function setupScrolling(selector) {
-		// Setup iScroll4 in iOS 4.x. 
+		// Setup iScroll4 in iOS 4.x.
 		// NOOP otherwise
 	}
 

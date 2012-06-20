@@ -10,7 +10,7 @@ var platform = 'unknown',
 	ua = navigator.userAgent;
 
 if (window.DolphinPhoneGap && window.DolphinPhoneGap.available()) {
-    platform = 'dolphin';
+	platform = 'dolphin';
 }
 
 var detectorClasses = [];

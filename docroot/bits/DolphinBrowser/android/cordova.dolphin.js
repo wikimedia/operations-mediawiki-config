@@ -10,9 +10,9 @@
  to you under the Apache License, Version 2.0 (the
  "License"); you may not use this file except in compliance
  with the License.  You may obtain a copy of the License at
-
+ 
      http://www.apache.org/licenses/LICENSE-2.0
-
+ 
  Unless required by applicable law or agreed to in writing,
  software distributed under the License is distributed on an
  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -918,10 +918,16 @@ module.exports = function(success, fail, service, action, args) {
         cordova.callbacks[callbackId] = {success:success, fail:fail};
     }
 
-    console.log(JSON.stringify([service, action, callbackId, true]));
-    console.log(JSON.stringify(args));
+    if (cordova.log) {
+        console.log(JSON.stringify([service, action, callbackId, true]));
+        console.log(JSON.stringify(args));
+    }
+    
     var r = prompt(JSON.stringify(args), "gap:"+JSON.stringify([service, action, callbackId, true]));
-    console.log(JSON.stringify(r));
+    
+    if (cordova.log) {
+        console.log(JSON.stringify(r));
+    }
 
     // If a result was returned
     if (r.length > 0) {
@@ -3782,7 +3788,10 @@ var cordova = require('cordova'),
           setTimeout(function() {
               try {
                   msg = "" + msg;
-                  console.log(msg);
+                  
+                  if (cordova.log) {
+                      console.log(msg);
+                  }
                   var t = eval(msg);
               }
               catch (e) {
@@ -4652,10 +4661,10 @@ xhr.prototype._reset = function() {
 }
 
 xhr.prototype._fireReadyStateChange = function() {
-    if (this.onreadystatechange != null
+    if (this.onreadystatechange != null 
         && this.onreadystatechange instanceof Function) {
         this.onreadystatechange();
-   }
+   } 
 };
 
 xhr.prototype.abort = function() {};
@@ -4676,7 +4685,7 @@ xhr.prototype.open = function(method, url, async, user, password) {
 
     if (this.readyState == StateType.UNSENT) {
         this.readyState = StateType.OPENED;
-        exec(null, null, "Xhr", "open",
+        exec(null, null, "Xhr", "open", 
             [this._id, method, url, async, user, password]);
     }
 
@@ -4689,7 +4698,7 @@ function getXSSPermissions() {
         var meta = metas[i];
         if (meta.name && meta.content && meta.name == 'xss-permission') {
             permissions.push(meta.content);
-        }
+        } 
     }
 
     return permissions;
@@ -4738,7 +4747,7 @@ xhr.prototype.send = function(body) {
 //            permissions = getXSSPermissions();
 //           console.log(permissions);
 //            if (permissions) {
-//                exec(sendRequest, sendRequest, "Xhr", "permissions", permissions);
+//                exec(sendRequest, sendRequest, "Xhr", "permissions", permissions); 
 //            }
 //        } else {
             sendRequest();
@@ -4748,7 +4757,7 @@ xhr.prototype.send = function(body) {
 
 xhr.prototype.setRequestHeader = function(name, value) {
     if (this.readyState == StateType.OPENED) {
-        this._requestHeaders[name] = value;
+        this._requestHeaders[name] = value;  
     }
 };
 
