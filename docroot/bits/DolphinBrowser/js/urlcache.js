@@ -48,18 +48,18 @@ window.urlCache = function() {
 		}
 
 		console.log("Trying to open " + filePath);
-        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, 
-            function(fs) {
-                fs.root.getFile(filePath, {create: false}, 
-                    function(fileEntry) {
-                        console.log("Found!");
-                        d.resolve(fileEntry.fullPath);
-                    }, function(error) {
-                        console.log("Not found!");
-                        cacheUrl();
-                    }
-                );
-            });
+		window.requestFileSystem(LocalFileSystem.PERSISTENT, 0,
+			function(fs) {
+				fs.root.getFile(filePath, {create: false},
+				function(fileEntry) {
+					console.log("Found!");
+					d.resolve(fileEntry.fullPath);
+				}, function(error) {
+					console.log("Not found!");
+					cacheUrl();
+				}
+		);
+			});
 		return d;
 	}
 

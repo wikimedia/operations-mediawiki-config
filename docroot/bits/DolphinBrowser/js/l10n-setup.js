@@ -42,8 +42,8 @@
 		$.ajax({
 			url: url,
 			//async: false, // fails on WinPhone7.1
-            async: true,
-            dataType: 'text',
+			async: true,
+			dataType: 'text',
 			success: function(data) {
 				console.log('success loading ' + url);
 				try {

@@ -79,30 +79,30 @@ function updateMenuState() {
 var __hideMenu = null;
 
 function hideMenu() {
-    if (typeof __hideMenu === 'function') {
-        __hideMenu();
-        return true;
-    } else {
-        return false;
-    }
+	if (typeof __hideMenu === 'function') {
+		__hideMenu();
+		return true;
+	} else {
+		return false;
+	}
 }
 
 // Default emulation, override with platform-specific menu popups
 function popupMenu(items, callback, options) {
 	options = $.extend({destructiveButtonIndex: null, cancelButtonIndex: null}, options || {});
 
-    function eatTouchMove(e) {
-        e.preventDefault();
-    }
+	function eatTouchMove(e) {
+		e.preventDefault();
+	}
 
 	var $bg = $('<div class="actionsheet-bg"></div>').appendTo('body').bind('touchmove', eatTouchMove),
 		$sheet = $('<div class="actionsheet"></div>').appendTo('body').bind('touchmove', eatTouchMove);
 
-    __hideMenu = function () {
-        $bg.remove();
-        $sheet.remove();
-        __hideMenu = null;
-    }
+	__hideMenu = function () {
+		$bg.remove();
+		$sheet.remove();
+		__hideMenu = null;
+	}
 
 	$.each(items, function(index, label) {
 		var $button = $('<button>')
@@ -127,10 +127,10 @@ function showPageActions(origin) {
 		mw.msg('menu-savePage'),
 		mw.msg('menu-cancel')
 	], function(value, index) {
-            if (index == 0) {
-                savedPages.saveCurrentPage();
-            } 
-       }, {
+		if (index == 0) {
+			savedPages.saveCurrentPage();
+		}
+	}, {
 		cancelButtonIndex: 5,
 		origin: origin
 	});

@@ -20,7 +20,7 @@ l10n.navigatorLang = function(success) {
 }
 
 function getAboutVersionString() {
-	return "1.2RC3";
+	return "1.2.1";
 }
 
 (function() {
@@ -50,50 +50,49 @@ chrome.scrollTo = function(selector, posY) {
 	// This is the exact opposite of what we noticed on 2.x in the previous release
 	// I've no idea why this is happening, neither does jon
 	// This gives us what we want for now, but now for non-zero scroll positions the
-	// behavior of scrollTo might be different across platforms. 
+	// behavior of scrollTo might be different across platforms.
 	// Ugh. Will bite us when we try to do hashlinks.
 	window.scrollTo(0, posY);
 }
 
 chrome.addPlatformInitializer(function() {
-	$('html').addClass('android');
-	if (navigator.userAgent.match(/Android 2\./)) {
+	if ($('html').hasClass('android-2')) {
 		// Android 2.2/2.3 doesn't do overflow:scroll
 		// so we need to engage alternate styles for phone view.
 		$('html').removeClass('goodscroll').addClass('badscroll');
 	}
 
-    window.XMLHttpRequest = cordova.require("cordova/plugin/xhr");
+	window.XMLHttpRequest = cordova.require("cordova/plugin/xhr");
 
-    document.addEventListener("backbutton", onBackButton, false);
-    document.addEventListener("searchbutton", onSearchButton, false);
+	document.addEventListener("backbutton", onBackButton, false);
+	document.addEventListener("searchbutton", onSearchButton, false);
 
-    function onBackButton() {
-	    if (!hideMenu()) {
-	        chrome.goBack();
-        }
-    }
+	function onBackButton() {
+		if (!hideMenu()) {
+		chrome.goBack();
+	}
+	}
 
 	function onSearchButton() {
 		//hmmm...doesn't seem to set the cursor in the input field - maybe a browser bug???
-		
+
 		$('#searchParam').focus().addClass('active');
 		$('#searchParam').bind('blur', function() {
-			  $('#searchParam').removeClass('active');
-			  plugins.SoftKeyBoard.hide();
-			  $('#searchParam').unbind('blur');
+			$('#searchParam').removeClass('active');
+			plugins.SoftKeyBoard.hide();
+			$('#searchParam').unbind('blur');
 		});
-		
-		plugins.SoftKeyBoard.show();
-		
-    }
 
-    navigator.app.hideGestureButton();
+		plugins.SoftKeyBoard.show();
+
+	}
+
+	navigator.app.hideGestureButton();
 });
 
 
 function selectText() {
-    PhoneGap.exec(null, null, 'SelectTextPlugin', 'selectText', []);
+	PhoneGap.exec(null, null, 'SelectTextPlugin', 'selectText', []);
 }
 
 function sharePage() {
@@ -138,15 +137,15 @@ function _updateMenuState() {
 	});
 
 	window.plugins.SimpleMenu.loadMenu($('#appMenu')[0],
-									   menu_handlers,
-									   function(success) {
-										   console.log(success);
-										   d.resolve(success);
-									   },
-									   function(error) {
-										   console.log(error);
-										   d.reject(error);
-									   });
+									menu_handlers,
+									function(success) {
+										console.log(success);
+										d.resolve(success);
+									},
+									function(error) {
+										console.log(error);
+										d.reject(error);
+									});
 	return d;
 };
 
@@ -164,10 +163,10 @@ savedPages.doSave = function(options) {
 			var em = $(this);
 			var target = this.src.replace('file:', 'https:');
 			window.urlCache.getCachedPathForUrl(target).
-                done(function(imageFile) {
-                    readLocalFile(imageFile, asDataUrl).done(function(dataUrl) {
-                        em.attr('src', dataUrl);
-                    }); 
+				done(function(imageFile) {
+					readLocalFile(imageFile, asDataUrl).done(function(dataUrl) {
+						em.attr('src', dataUrl);
+					});
 				}).
 				fail(function() {
 					console.log("Error in image saving");

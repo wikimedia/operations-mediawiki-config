@@ -5,12 +5,12 @@ window.app = function() {
 	function getWikiMetadata() {
 		var d = $.Deferred();
 		if(wikis.length === 0) {
-            $.get(ROOT_URL + 'wikis.json').done(function(data) {
-                if (typeof data === 'string') {
-				    wikis = JSON.parse(data);
-                } else {
-                    wikis = data;
-                }
+			$.get(ROOT_URL + 'wikis.json').done(function(data) {
+				if (typeof data === 'string') {
+				wikis = JSON.parse(data);
+				} else {
+					wikis = data;
+				}
 
 				d.resolve(wikis);
 			});
@@ -46,21 +46,21 @@ window.app = function() {
 			$('#main img').each(function() {
 				var em = $(this);
 				var gotLinkPath = function(linkPath) {
-                        readLocalFile(linkPath, asDataUrl).then(function(data) {
-                        em.attr('src', data);
-                    });
+						readLocalFile(linkPath, asDataUrl).then(function(data) {
+						em.attr('src', data);
+					});
 				}
 				var target = this.src.replace('file:', window.PROTOCOL + ':');
 				window.urlCache.getCachedPathForUrl(target).done(gotLinkPath).fail(gotError);
 			});
 		};
 		var gotPath = function(cachedPage) {
-            readLocalFile(cachedPage, asText).done(function (data) {
-                var page = Page.fromRawJSON(title, JSON.parse(data), lang);
-                replaceRes();
-                setCurrentPage(page);
-                d.resolve();
-            })
+			readLocalFile(cachedPage, asText).done(function (data) {
+				var page = Page.fromRawJSON(title, JSON.parse(data), lang);
+				replaceRes();
+				setCurrentPage(page);
+				d.resolve();
+			})
 		}
 		var gotError = function(error) {
 			console.log('Error: ' + error);
@@ -68,7 +68,7 @@ window.app = function() {
 		}
 		window.urlCache.getCachedPathForUrl(url).done(gotPath).fail(gotError);
 		return d;
-    }
+	}
 
 	function setCurrentPage(page) {
 		app.curPage = page;
@@ -115,7 +115,7 @@ window.app = function() {
 					console.log("User cancelled action!");
 					return;
 				}
-				setErrorPage(xhr.status);	
+				setErrorPage(xhr.status);
 				d.reject(xhr);
 			});
 			chrome.setSpinningReq(req);
@@ -201,7 +201,7 @@ window.app = function() {
 			console.log("Navigating to " + title);
 			if(options.hideCurrent) {
 				$("#content").show();
-			}			
+			}
 		});
 		return d;
 	}
@@ -223,7 +223,7 @@ window.app = function() {
 	function languageForUrl(url) {
 		// Use the least significant part of the hostname as language
 		// So en.wikipedia.org would be 'en', and so would en.wiktionary.org
-		return url.match(/^https?:\/\/([^.]+)./)[1];	
+		return url.match(/^https?:\/\/([^.]+)./)[1];
 	}
 
 	function titleForUrl(url) {
@@ -280,7 +280,7 @@ window.app = function() {
 		baseUrlForLanguage: baseUrlForLanguage,
 		setCaching: setCaching,
 		loadPage: loadPage,
-		loadCachedPage: loadCachedPage, 
+		loadCachedPage: loadCachedPage,
 		makeCanonicalUrl: makeCanonicalUrl,
 		makeAPIRequest: makeAPIRequest,
 		setCurrentPage: setCurrentPage,
