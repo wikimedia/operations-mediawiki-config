@@ -4,17 +4,54 @@
 # Do not put private data here.
 
 function efRaiseThrottle() {
-	global $wgAccountCreationThrottle;
-	if ( wfGetIP() == '192.114.7.2' ) {
-		$wgAccountCreationThrottle = 50;
+	global $wmgAccountCreationThrottlers;
+	foreach( $wmgThrottling as $throttle ) {
+		if(    time() >= $throttle['from']
+		    && time() <= $throttle['to']
+		) {
+			if( wfGetIP() == $throttle['IP'] ) {
+				global $wgAccountCreationThrottle;
+				$wgAccountCreationThrottle = $throttle['value'];
+			}
+		}
 	}
 }
 
-if (   time() >= strtotime( '2012-06-20T13:00 +0:00' )
-	&& time() <= strtotime( '2012-06-20T19:00 +0:00' )
-) {
+/**
+ * Array of throttling requests.
+ */
+$wmgAccountCreationThrottlers = array();
+
+## Add throttling definition below:
+
+# bug 37740
+efRaiseAccountCreationThrottle(
+	'2012-06-20T13:00 +0:00',
+	'2012-06-20T19:00 +0:00',
+	'192.114.7.2', 50
+);
+
+## Add throttling defintion above.
+
+# Enable throttling if we had something defined above.
+if( count( $wmgAccountCreationThrottlers ) ) {
 	$wgExtensionFunctions[] = 'efRaiseThrottle';
 }
+
+
+/**
+ * Helper to easily add a throttling request.
+ */
+function efRaiseAccountCreationThrottle( $from, $to, $ipAddress, $upto ) {
+	global $wmgAccountCreationThrottlers;
+	$wmgThrottling[] = array(
+		'from'  => strtotime( $from ),
+		'to'    => strtotime( $to   ),
+		'IP'    => $ipAddress,
+		'value' => $upto,
+	);
+}
+
 
 
 // Added throttle for account creations on zh due to mass registration attack 2005-12-16
