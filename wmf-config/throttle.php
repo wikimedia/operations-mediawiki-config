@@ -5,13 +5,16 @@
 
 function efRaiseThrottle() {
 	global $wgAccountCreationThrottle;
-	if ( wfGetIP() == '192.114.7.2' ) {
+	if ( wfGetIP() == '192.114.7.2' || wfGetIP() == '115.112.231.108' ) { // 192.114.7.2 -> bug 37740, 115.112.231.208 -> bug 37741
 		$wgAccountCreationThrottle = 50;
 	}
 }
 
-if (   time() >= strtotime( '2012-06-20T13:00 +0:00' )
-	&& time() <= strtotime( '2012-06-20T19:00 +0:00' )
+if (   ( time() >= strtotime( '2012-06-20T13:00 +0:00' )
+	&& time() <= strtotime( '2012-06-20T19:00 +0:00' ) )
+	|| ( $wgDBname == "enwiki" &&
+		time() >= strtotime( '2012-06-23T04:30 +0:00' ) &&
+		time() <= strtotime( '2012-06-23T10:30 +0:00' ) )
 ) {
 	$wgExtensionFunctions[] = 'efRaiseThrottle';
 }
