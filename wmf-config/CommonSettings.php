@@ -63,9 +63,6 @@ if ( getenv( 'WIKIBACKUP' ) ) {
 }
 
 $cluster = 'pmtpa';
-if( getenv('INSTANCENAME') !== false ) {
-	$cluster = 'wmflabs';
-}
 
 ### List of some service hostnames
 # 'meta'   : meta wiki for user editable content
