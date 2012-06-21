@@ -246,4 +246,7 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
 	$wgAbuseFilterAvailableActions[] = 'block';
 	$wgAbuseFilterBlockDuration = 'infinite';
+} elseif ( $wgDBname == 'mediawikiwiki ') {
+	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
+	$wgAbuseFilterAvailableActions[] = 'block';
 }
