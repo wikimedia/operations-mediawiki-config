@@ -7454,7 +7454,6 @@ $wgConf->settings = array(
 	'+mediawikiwiki' => array(
 		'bureaucrat' => array( 'transwiki', 'coder', 'import', 'svnadmins' ),
 		'coder' => array( 'coder' ),
-		'sysop' => array( 'autoreview' ),
 	),
 	'+metawiki' => array(
 		'bureaucrat' => array( 'ipblock-exempt', ),

@@ -415,9 +415,6 @@ elseif ( $wgDBname == 'mediawikiwiki' ) {
 	$wgGroupPermissions['coder']['validate'] = true;
 	$wgGroupPermissions['coder']['unreviewedpages'] = true;
 	$wgGroupPermissions['coder']['autoreview'] = true;
-
-	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'autoreview' ) );
-	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'autoreview' ) );
 }
 
 elseif ( $wgDBname == 'plwiki' ) {
