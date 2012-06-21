@@ -2718,6 +2718,12 @@ $wgConf->settings = array(
 		'Wikisaurus' => 110,
 		'Wikisaurus_talk' => 111,
 	),
+	'kuwiktionary' => array(
+		'Wîkîferheng_gotûbêj' => NS_PROJECT_TALK, // Bug 37524 (old namespace name)
+		'Pêvek_nîqas' => 101,   // Bug 37524 (old namespace name)
+		'Nimînok_nîqas' => 103, // Bug 37524 (old namespace name)
+		'Portal_nîqas' => 105,  // Bug 37524 (old namespace name)
+	),
 	'kuwiki' => array(
 		'Portal_nîqaş' => 101, // Bug 37521
 	),
@@ -4744,12 +4750,6 @@ $wgConf->settings = array(
 		NS_PROJECT => 'Wîkîgotin', // Bug 37523
 		NS_PROJECT_TALK => 'Gotûbêja_Wîkîgotinê', // Bug 37523
 	),
-	'kuwiktionary ' => array(
-		NS_PROJECT_TALK => 'Gotûbêja_Wîkîferhengê', // Bug 37524
-		101 => 'Gotûbêja_pêvekê', // Bug 37524
-		103 => 'Gotûbêja_nimînokê', // Bug 37524
-		105 => 'Gotûbêja_portalê', // Bug 37524
-	),
 	'kwwiki' => array(
 		100 => 'Porth',
 		101 => 'Keskows_Porth',
@@ -5464,12 +5464,13 @@ $wgConf->settings = array(
 		111 => '미주알고주알_토론',
 	),
 	'kuwiktionary' => array(
-		100 => 'Pêvek',
-		101 => 'Pêvek_nîqaş',
-		102 => 'Nimînok',
-		103 => 'Nimînok_nîqaş',
-		104 => 'Portal',
-		105 => 'Portal_nîqaş',
+		NS_PROJECT_TALK => 'Gotûbêja_Wîkîferhengê', // Bug 37524
+		100 => 'Pêvek', // Bug 28398
+		101 => 'Gotûbêja_pêvekê', // Bug 37524
+		102 => 'Nimînok', // Bug 28398
+		103 => 'Gotûbêja_nimînokê', // Bug 37524
+		104 => 'Portal', //Bug 28398
+		105 => 'Gotûbêja_portalê', // Bug 37524
 	),
 	'lbwiktionary' => array(
 		100 => 'Annexen',
