@@ -62,7 +62,32 @@ if ( getenv( 'WIKIBACKUP' ) ) {
 	}
 }
 
+### Determine realm and cluster we are on #############################
+# $cluster is an historical variable used for the WMF MW conf
 $cluster = 'pmtpa';
+
+# $realm should be the realm as puppet understand it.
+# The possible values as of June 2012 are:
+#  - labs
+#  - production
+$realm   = 'production';
+
+# Puppet provision the realm in /etc/wikimedia-realm
+if( file_exists( '/etc/wikimedia-realm' ) ) {
+	$realm = trim( file_get_contents( '/etc/wikimedia-realm' ) );
+}
+
+# Set cluster based on realm
+switch( $realm ) {
+	case 'labs':
+		$cluster = 'wmflabs';
+	break;
+	case 'production':
+	default:
+		$cluster = 'pmtpa';
+	break;
+}
+### End /Determine realm and cluster we are on/ ########################
 
 ### List of some service hostnames
 # 'meta'   : meta wiki for user editable content
