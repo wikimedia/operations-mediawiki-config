@@ -62,7 +62,12 @@ if ( getenv( 'WIKIBACKUP' ) ) {
 	}
 }
 
+# Find out which cluster we are on, based on the content of /etc/wikimedia-realm
+# The content is provisioned by puppet.
 $cluster = 'pmtpa';
+if( file_exists( '/etc/wikimedia-realm' ) ) {
+	$cluster = trim( file_get_contents( '/etc/wikimedia-realm' ) );
+}
 
 ### List of some service hostnames
 # 'meta'   : meta wiki for user editable content
