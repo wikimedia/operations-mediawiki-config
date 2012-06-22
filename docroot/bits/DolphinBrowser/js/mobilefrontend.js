@@ -1,4 +1,4 @@
-MobileFrontend = (function() {
+mw.mobileFrontend = MobileFrontend = (function() {
 	return {
 		init: function() {
 		},
