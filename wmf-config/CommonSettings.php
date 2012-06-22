@@ -1726,10 +1726,12 @@ if ( $wmgUseCentralNotice ) {
 			'&fudgefactor=660000';   // fudge for pledged donations not in CRM
 	}
 
-	if ( $wgDBname == 'metawiki' || $wgDBname == 'testwiki' ) {
+	$wgNoticeInfrastructure = false;
+	if ( $wgDBname == 'metawiki' ) {
 		$wgNoticeInfrastructure = true;
-	} else {
-		$wgNoticeInfrastructure = false;
+	}
+	if( $cluster == 'pmtpa' && $wgDBname == 'testwiki' ) {
+		$wgNoticeInfrastructure = true;
 	}
 
 	// Set fundraising banners to use HTTPS on foundatoin wiki
