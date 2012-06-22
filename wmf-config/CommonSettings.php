@@ -1692,6 +1692,10 @@ case 'pmtpa'  : $wgImageMagickTempDir = '/a/magick-tmp'; break;
 case 'wmflabs': $wgImageMagickTempDir = '/tmp/a/magick-tmp'; break;
 }
 
+if ( $cluster == 'wmflabs' && file_exists( '/etc/wikimedia-transcoding' ) ) {
+	require( "$wmfConfigDir/transcoding-wmflabs.org" );
+}
+
 // Banner notice system
 if ( $wmgUseCentralNotice ) {
 	include "$IP/extensions/CentralNotice/CentralNotice.php";
