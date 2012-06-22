@@ -1708,10 +1708,10 @@ if ( $wmgUseCentralNotice ) {
 
 	$wgNoticeProject = $wmgNoticeProject;
 
-	if ( $wgDBname == 'testwiki' ) {
+	$wgCentralDBname = 'metawiki';
+	if ( $cluster == 'pmtpa' && $wgDBname == 'testwiki' ) {
+		# test.wikipedia.org has its own central database:
 		$wgCentralDBname = 'testwiki';
-	} else {
-		$wgCentralDBname = 'metawiki';
 	}
 
 	$wgCentralNoticeLoader = $wmgCentralNoticeLoader;
