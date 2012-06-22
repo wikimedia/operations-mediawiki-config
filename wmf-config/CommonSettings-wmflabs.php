@@ -47,6 +47,12 @@ if ($wgDBname == "commonswiki" || $wgDBname == 'enwiki') {
 	));
 }
 
+if ( $wmgUseWikimediaShopLink ) {
+	require_once( "$IP/extensions/WikimediaShopLink/WikimediaShopLink.php");
+	$wgDisplayShopLink = true;
+	$wgShowLinkTargets = 'US,CA,GB';
+}
+
 # Transcoding
 if ( file_exists( '/etc/wikimedia-transcoding' ) ) {
 	# configuration file for video transcoding provided by TimedMediaHandler

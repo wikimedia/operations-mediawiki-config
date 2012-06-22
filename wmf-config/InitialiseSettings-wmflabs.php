@@ -173,6 +173,11 @@ return array(
 	'-wmgUseContributionReporting' => array(
 		'default' => false,
 	),
+	'-wmgUseWikimediaShopLink' => array(
+		'default' => false,
+		'enwiki' => true,
+		'simplewiki' => true,
+	),
 );
 
 } # wmflLabsSettings()
