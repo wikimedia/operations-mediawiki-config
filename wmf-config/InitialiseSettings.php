@@ -9282,6 +9282,7 @@ $wgConf->settings = array(
 	'dawiki' => true, # 22444
 	'de_labswikimedia' => true,
 	'dewiki' => true, # live test on german - 2009-01-26
+	'dewikiversity' => true, # Bug 37898
 	'dsbwiki' => true,
 	'elwiki' => true, # bug 22924
 	'en_labswikimedia' => true,
