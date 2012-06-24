@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAOX//918\u003d",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2012-06-24T13:50:46Z",
+      "side": 1,
+      "message": "Should mention possibility of an array.",
+      "revId": "a9cf10b502138443549f1a65434f97f2f8068a6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
