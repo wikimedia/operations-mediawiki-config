@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAOX//9jo\u003d",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2012-06-25T14:52:51Z",
+      "side": 1,
+      "message": "The changes you made to the order of the if statements here need to be reversed. A string will always not equal an array, so the array check should be done first.",
+      "revId": "193d7ced61c1e650238e305c7e3fedc37e0370d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
