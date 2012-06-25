@@ -9262,8 +9262,6 @@ $wgConf->settings = array(
 
 'wgEnableWriteAPI' => array(
 	'default' => true,
-	'strategyappswiki' => true,
-	'testwiki' => true,
 ),
 'wgAPIMaxResultSize' => array(
 	'default' => 12582912, // 12 MB; temporary while I figure out what the deal with those overlarge revisions is --Roan
@@ -9315,6 +9313,7 @@ $wgConf->settings = array(
 	'kowiki' => true,
 	'mediawikiwiki' => true, # Bug 29228
 	'metawiki' => true, // Bug 18058 on 2009-03-19
+	'mkwiki' => true, # bug 37345
 	'mswiki' => true, # Bug 20402
 	'nlwiki' => true, # 2009-02-18
 	'nnwiki' => true, # 2009-05-05
