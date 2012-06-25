@@ -2321,7 +2321,7 @@ if ( $wmgUseTranslate ) {
 
 	$wgTranslateWorkflowStates = $wmgTranslateWorkflowStates;
 
-	$wgTranslateDisablePreSaveTransform = true; # bug 37304
+	$wgTranslateUsePreSaveTransform = true; # bug 37304
 
 	$wgEnablePageTranslation = true;
 
