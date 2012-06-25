@@ -5231,6 +5231,8 @@ $wgConf->settings = array(
 	'srwikisource' => array(
 		100 => 'Аутор',
 		101 => 'Разговор_о_аутору',
+		102 => 'Додатак', // Bug 37742
+		103 => 'Разговор_о_додатку', // Bug 37742
 	),
 	'svwikisource' => array(
 		104 => 'Sida',
