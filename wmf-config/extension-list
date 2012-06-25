@@ -18,7 +18,6 @@ $IP/extensions/ClientSide/ClientSide.php
 $IP/extensions/ClickTracking/ClickTracking.php
 $IP/extensions/CodeReview/CodeReview.php
 $IP/extensions/Collection/Collection.php
-$IP/extensions/CongressLookup/CongressLookup.php
 $IP/extensions/Contest/Contest.php
 $IP/extensions/CommunityApplications/CommunityApplications.php
 $IP/extensions/CommunityHiring/CommunityHiring.php
