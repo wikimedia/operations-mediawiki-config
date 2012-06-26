@@ -14,7 +14,9 @@ lib
 cgi-bin
 
 # Old images such as the ones used for $wgLogo
+/images/*.gif
 /images/*.png
+/images/*.xcf
 
 fonts
 boardvote.gpg
