@@ -10998,6 +10998,11 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 //	'enwiki' => true,
 ),
+'wmgUseWikimediaShopLink' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
 );
 
 
