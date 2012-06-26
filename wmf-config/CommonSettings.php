@@ -960,20 +960,20 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 	$wgExtDistRemoteClient = '208.80.152.165:8430';
 
 	$wgExtDistBranches = array(
-		'trunk' => array(
-			'tarLabel' => 'trunk',
+		'master' => array(
+			'tarLabel' => 'master',
 			'msgName' => 'extdist-current-version',
-			'vcs' => 'svn',
+			'vcs' => 'git',
 		),
 		/**
 		 * If you add a branch here, you must also check it out into the working copy directory.
 		 * If you add it here without doing that, the extension will break.
 		 */
-		/*'branches/REL1_19' => array(
+		'branches/REL1_19' => array(
 			'tarLabel' => 'MW1.19',
 			'name' => '1.19.x',
 			'vcs' => 'svn',
-		),*/
+		),
 		'branches/REL1_18' => array(
 			'tarLabel' => 'MW1.18',
 			'name' => '1.18.x',
