@@ -12,7 +12,10 @@ wmf-config/*-setup.php
 wmf-config/checkers.php
 lib
 cgi-bin
-images
+
+# Old images such as the ones used for $wgLogo
+/images/*.png
+
 fonts
 boardvote.gpg
 common
