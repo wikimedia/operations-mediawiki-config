@@ -16,7 +16,9 @@
 #
 # More modern PHP versions will send a 500 result code on fatal erorr,
 # at least sometimes, but what we're running will send a 200.
-header( "Cache-control: no-cache" );
+if( php_sapi_name() != 'cli' ) {
+	header( "Cache-control: no-cache" );
+}
 
 # Try to control stuff:
 # define( 'DEBUG_LOG', true );
