@@ -2437,6 +2437,12 @@ if ( $wmgUseEducationProgram ) {
 	require_once( "$IP/extensions/EducationProgram/EducationProgram.php" );
 }
 
+if ( $wmgUseWikimediaShopLink ) {
+	require_once( "$IP/extensions/WikimediaShopLink/WikimediaShopLink.php");
+	$wgDisplayShopLink = true;
+	$wgShowLinkTargets = 'US,CA,GB';
+}
+
 if( $cluster == 'wmflabs' ) {
 	require( "$wmfConfigDir/CommonSettings-wmflabs.php" );
 }
