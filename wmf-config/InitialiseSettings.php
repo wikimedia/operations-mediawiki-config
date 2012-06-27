@@ -10352,7 +10352,7 @@ $wgConf->settings = array(
 	'foundationwiki' => '',
 	'commonswiki' => '',
 	'specieswiki' => '',
-	'mediawikiwiki' => '',
+	'mediawikiwiki' => 'm.%h1.%h2',
 	'test2wiki' => '',
 ),
 'wmgZeroDisableImages' => array(
