@@ -10560,6 +10560,15 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'Utilisateurs %code%-M',
 	),
+	'ilowiki' => array( // Bug 37981
+		'0' => false,
+		'1' => 'Agar-aramat %code%-1',
+		'2' => 'Agar-aramat %code%-2',
+		'3' => 'Agar-aramat %code%-3',
+		'4' => 'Agar-aramat %code%-4',
+		'5' => 'Agar-aramat %code%-5',
+		'N' => 'Agar-aramat %code%-N',
+	),
 	'incubatorwiki' => array(
 		'0' => 'Users:By language:%code%-0',
 		'1' => 'Users:By language:%code%-1',
@@ -10841,6 +10850,7 @@ $wgConf->settings = array(
 	'frwiki' => 'Utilisateur %code%',
 	'frwikisource' => 'Utilisateurs %code%',
 	'frwiktionary' => 'Utilisateurs %code%',
+	'ilowiki' => 'Agar-aramat %code%', // Bug 37981
 	'incubatorwiki' => 'Users:By language:%code%',
 	'iswiki' => 'Notandi %code%',
 	'itwiki' => 'Utenti %code%',
