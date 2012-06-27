@@ -960,7 +960,7 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 	$wgExtDistRemoteClient = '208.80.152.165:8430';
 
 	$wgExtDistBranches = array(
-		'master' => array(
+		'trunk' => array(
 			'tarLabel' => 'master',
 			'msgName' => 'extdist-current-version',
 			'vcs' => 'git',
