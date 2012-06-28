@@ -654,6 +654,7 @@ $wgConf->settings = array(
 	'mywiki'	    => '$stdlogo',
 	'myvwiki'	   => '$stdlogo',
 	'mznwiki'	   => '$stdlogo',
+	'nawiki'           => '$stdlogo', // Bug 37674
 	'nahwiki'	   => '$stdlogo',
 	'napwiki'	   => '$stdlogo',
 	'nds_nlwiki'	=> '$stdlogo',
