@@ -2446,6 +2446,7 @@ if ( $wmgUseWikimediaShopLink ) {
 		'CA',
 		'GB',
 	);
+	$wgWikimediaShopLinkTarget = 'http://shop.wikimedia.org';
 }
 
 if( $cluster == 'wmflabs' ) {
