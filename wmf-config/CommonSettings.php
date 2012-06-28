@@ -92,20 +92,22 @@ switch( $realm ) {
 ### End /Determine realm and cluster we are on/ ########################
 
 ### List of some service hostnames
+# 'bits'   : hostname for static files
 # 'meta'   : meta wiki for user editable content
 # 'upload' : hostname where files are hosted
-# TODO: 'bits'
 # Whenever two clusters should use the same host, do not use $wmfHostnames but
 # use the hardcoded hostname instead. A good example are the spam blacklists
 # hosted on meta.wikimedia.org which you will surely want to reuse.
 $wmfHostnames = array();
 switch( $cluster ) {
 case 'wmflabs':
+	$wmfHostnames['bits']   = 'bits.beta.wmflabs.org';
 	$wmfHostnames['meta']   = 'meta.wikimedia.beta.wmflabs.org';
 	$wmfHostnames['upload'] = 'upload.beta.wmflabs.org';
 	break;
 case 'pmtpa':
 default:
+	$wmfHostnames['bits']   = 'bits.wikimedia.org';
 	$wmfHostnames['meta']   = 'meta.wikimedia.org';
 	$wmfHostnames['upload'] = 'upload.wikimedia.org';
 	break;
@@ -264,9 +266,9 @@ if ( version_compare( $wgVersion, '1.20wmf2', '>=' ) ) {
 		$wgStyleSheetPath = "$urlprotocol//test.wikipedia.org/w/static-$wmfVersionNumber/skins";
 		$wgResourceBasePath = "$urlprotocol//test.wikipedia.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
 	} else {
-		$wgExtensionAssetsPath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber/extensions";
-		$wgStyleSheetPath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber/skins";
-		$wgResourceBasePath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber"; // This means resources will be requested from /static-VERSION/resources
+		$wgExtensionAssetsPath = "$urlprotocol//{$wmfHostnames['bits']}/static-$wmfVersionNumber/extensions";
+		$wgStyleSheetPath = "$urlprotocol//{$wmfHostnames['bits']}/static-$wmfVersionNumber/skins";
+		$wgResourceBasePath = "$urlprotocol//{$wmfHostnames['bits']}/static-$wmfVersionNumber"; // This means resources will be requested from /static-VERSION/resources
 	}
 } else {
 	// Old URL scheme
@@ -276,9 +278,9 @@ if ( version_compare( $wgVersion, '1.20wmf2', '>=' ) ) {
 		$wgStyleSheetPath = "$urlprotocol//test.wikipedia.org/w/skins-$wmfVersionNumber";
 		$wgResourceBasePath = "$urlprotocol//test.wikipedia.org/w/resources-$wmfVersionNumber"; // This means resources will be requested from /w/resources-VERSION/resources
 	} else {
-		$wgExtensionAssetsPath = "$urlprotocol//bits.wikimedia.org/w/extensions-$wmfVersionNumber";
-		$wgStyleSheetPath = "$urlprotocol//bits.wikimedia.org/skins-$wmfVersionNumber";
-		$wgResourceBasePath = "$urlprotocol//bits.wikimedia.org/resources-$wmfVersionNumber"; // This means resources will be requested from /resources-VERSION/resources
+		$wgExtensionAssetsPath = "$urlprotocol//{$wmfHostnames['bits']}/w/extensions-$wmfVersionNumber";
+		$wgStyleSheetPath = "$urlprotocol//{$wmfHostnames['bits']}/skins-$wmfVersionNumber";
+		$wgResourceBasePath = "$urlprotocol//{$wmfHostnames['bits']}/resources-$wmfVersionNumber"; // This means resources will be requested from /resources-VERSION/resources
 	}
 }
 
@@ -293,7 +295,7 @@ $wgRedirectScript	= $wgScriptPath . '/redirect.php';
 $wgInternalServer = $wgCanonicalServer;
 if ( $cluster == 'pmtpa' && $wgDBname != 'testwiki' && isset( $_SERVER['SERVER_NAME'] ) ) {
 	// Make testing JS/skin changes easy by not running load.php through bits for testwiki
-	$wgLoadScript = "$urlprotocol//bits.wikimedia.org/{$_SERVER['SERVER_NAME']}/load.php";
+	$wgLoadScript = "$urlprotocol//{$wmfHostnames['bit']}/{$_SERVER['SERVER_NAME']}/load.php";
 }
 
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmfVersionNumber;
@@ -1179,7 +1181,10 @@ if ( $wgDBname == 'nostalgiawiki' ) {
 
 $wgUseHashTable = true;
 
-$wgCopyrightIcon = '<a href="' . $urlprotocol . '//wikimediafoundation.org/"><img src="' . $urlprotocol . '//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>';
+$wgCopyrightIcon =
+	 '<a href="' . $urlprotocol . '//wikimediafoundation.org/">'
+	. '<img src="' . $urlprotocol . '//'.$wmfHostnames['bits'].'/images/wikimedia-button.png"'
+	. ' width="88" height="31" alt="Wikimedia Foundation"/></a>';
 
 # For Special:Cite, we only want it on wikipedia (but can't count on $site),
 # not on these fakers.
