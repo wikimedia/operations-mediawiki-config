@@ -16,6 +16,10 @@ if ( $wgDBname == 'testwiki' ) {
 	        $wgProfiler['class'] = 'ProfilerSimpleText';
 }
 
+if( file_exists( '/etc/wmflabs-instancename' ) ) {
+	$wgOverrideHostname = trim( file_get_contents( '/etc/wmflabs-instancename' ) );
+}
+
 $wgDebugTimestamps=true;
 
 # see r110254 and bug 33746
