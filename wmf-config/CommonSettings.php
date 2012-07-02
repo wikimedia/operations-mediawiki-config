@@ -281,6 +281,17 @@ if ( version_compare( $wgVersion, '1.20wmf2', '>=' ) ) {
 		$wgResourceBasePath = "$urlprotocol//bits.wikimedia.org/resources-$wmfVersionNumber"; // This means resources will be requested from /resources-VERSION/resources
 	}
 }
+# For labs, override settings just above. This need to be done before
+# extensions so we can not use CommonSettings-wmflabs.php
+if( $cluster == 'wmflabs' ) {
+	# Base path:
+	$wgResourceBasePath    = "$urlprotocol//bits.beta.wmflabs.org/static-master";
+
+	# Assets:
+	$wgExtensionAssetsPath = $wgResourceBasePath . "/extensions";
+	$wgStyleSheetPath      = $wgResourceBasePath . "/skins";
+
+}
 
 $wgStylePath = $wgStyleSheetPath;
 $wgArticlePath = "/wiki/$1";
