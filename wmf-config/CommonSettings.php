@@ -2473,6 +2473,7 @@ if ( $wmgUseWikimediaShopLink ) {
 		'CA',
 		'GB',
 	);
+	$wgWikimediaShopLinkTarget = '//shop.wikimedia.org';
 }
 
 if( $cluster == 'wmflabs' ) {
