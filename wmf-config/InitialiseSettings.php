@@ -8250,7 +8250,7 @@ $wgConf->settings = array(
 	'vecwiki'      => array( 'it' ),
 	'viwiki'       => array( 'wikt', 'b', 's', 'q' ),
 	'viwiktionary' => array( 'w', 'b', 's', 'q' ),
-	'viwikibooks'  => array( 'en', 'w', 'wikt', 's', 'q', 'b:fr', 'b:it' ), # fr and it: bug 37457
+	'viwikibooks'  => array( 'en', 'w', 'wikt', 's', 'q', 'fr', 'it' ), # fr and it: bug 37457
 	'viwikisource' => array( 'w', 'wikt', 'b', 'q' ),
 	'viwikiquote'  => array( 'w', 'wikt', 'b', 's' ),
 
