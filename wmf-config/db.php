@@ -68,10 +68,10 @@ $wgLBFactoryConf = array(
 	's1' => array(
 		'db38'	  => 0,
 		'db36'	  => 400,
-		'db32'	  => 0, # snapshot host
+		'db32'	  => 0,
 		'db59'    => 400,
 		'db60'    => 400,
-		'db12'	  => 0, # special: watchlist, etc see groupLoadsByDB hardy - rebuild me
+		'db12'	  => 0, # watchlist, dump etc see groupLoadsByDB hardy - rebuild me
 	),
 	's2' => array(
 		'db52'	  => 0,
