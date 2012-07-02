@@ -63,11 +63,4 @@ if ( file_exists( '/etc/wikimedia-transcoding' ) ) {
 	$wgMaxShellFileSize = 100*102400; //1GB
 }
 
-# Bug 37852
-if ( $wmgUseWikimediaShopLink ) {
-	include( "$IP/extensions/WikimediaShopLink/WikimediaShopLink.php");
-	$wgDisplayShopLink = true;
-	$wgShowLinkTargets = 'US,CA,GB';
-}
-
 } # end safeguard
