@@ -2470,8 +2470,6 @@ if ( $wmgUseWikimediaShopLink ) {
 	$wgWikimediaShopEnableLink = true;
 	$wgWikimediaShopShowLinkCountries = array(
 		'US',
-		'CA',
-		'GB',
 	);
 	$wgWikimediaShopLinkTarget = '//shop.wikimedia.org';
 }
