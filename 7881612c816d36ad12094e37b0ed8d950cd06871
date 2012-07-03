@@ -34,6 +34,24 @@
       "revId": "7881612c816d36ad12094e37b0ed8d950cd06871",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAPX//9hM\u003d",
+        "filename": "extract2.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-07-03T17:21:34Z",
+      "side": 1,
+      "message": "Okay, I suppose we might we might as well keep that useless thing in place for now. Refactoring that is going to be the focus of another commit.",
+      "parentUuid": "AAAAPX//9hU\u003d",
+      "revId": "7881612c816d36ad12094e37b0ed8d950cd06871",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
