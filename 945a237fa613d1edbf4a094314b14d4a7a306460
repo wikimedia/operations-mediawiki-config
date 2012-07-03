@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAPX//9ss\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 4587,
+      "author": {
+        "id": 54
+      },
+      "writtenOn": "2012-07-03T10:43:01Z",
+      "side": 1,
+      "message": "It\u0027s probably not very important, but why these numbers? It\u0027s different from other languages.",
+      "revId": "945a237fa613d1edbf4a094314b14d4a7a306460",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
