@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAPX//9hg\u003d",
+        "filename": "extract2.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-07-03T17:11:24Z",
+      "side": 1,
+      "message": "Do we need the portal? This is no longer used. Adding new ones only makes more odd entries on Meta that will be protected for sanity.",
+      "revId": "7881612c816d36ad12094e37b0ed8d950cd06871",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
