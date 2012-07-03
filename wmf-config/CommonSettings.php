@@ -2107,6 +2107,7 @@ if ( $wmgUseArticleFeedbackv5 ) {
 	$wgGroupPermissions['rollbacker']['aftv5-feature-feedback'] = true;
 	$wgGroupPermissions['oversight']['aftv5-feature-feedback']  = true;
 	$wgGroupPermissions['autoconfirmed']['aftv5-feature-feedback']  = true;
+	$wgGroupPermissions['confirmed']['aftv5-feature-feedback']  = true;
 	$wgGroupPermissions['afttest-hide']['aftv5-feature-feedback']  = true;
 	$wgGroupPermissions['afttest']['aftv5-feature-feedback']  = true;
 
