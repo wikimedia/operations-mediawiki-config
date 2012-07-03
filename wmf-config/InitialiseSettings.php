@@ -2489,6 +2489,11 @@ $wgConf->settings = array(
 	'fiwiki' => array(
 		'WP' => NS_PROJECT,
 	),
+	'frrwiki' => array( // Bug 38023
+		'Page' => 102,
+		'Page talk' => 103,
+		'Index talk' => 105,
+	),
 	'frwiki' => array(
 		'Wikipedia' => NS_PROJECT,
 		'WP' => NS_PROJECT,
@@ -4579,6 +4584,14 @@ $wgConf->settings = array(
 		104 => 'Kirja',
 		105 => 'Keskustelu_kirjasta',
 	),
+	'frrwiki' => array( // Per bug 38023
+		102 => 'Seite',
+		103 => 'Seite Diskussion',
+		104 => 'Index',
+		105 => 'Index Diskussion',
+		106 => 'Text',
+		107 => 'Text Diskussion',
+	),
 	'frwiki' => array(
 		100 => 'Portail',
 		101 => 'Discussion_Portail',
@@ -6201,6 +6214,7 @@ $wgConf->settings = array(
 	'eswikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 104 => 1 ),
 	'etwikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 104 => 1, 106 => 1 ),
 	'fawikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 102 => 1 ),
+	'frrwiki' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 102 => 1, 104 => 1, 106 => 1 ), // Bug 38023
 	'frwikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 102 => 1, 112 => 1 ),
 	'frwikiversity' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 104 => 1, 106 => 1, 108 => 1 ),
 	'hewikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 108 => 1, 112 => 1 ),
@@ -8090,7 +8104,7 @@ $wgConf->settings = array(
 	'fiwikiversity' => array( 'b', 'q', 'n', 's', 'wikt', 'w', 'betawikiversity' ),
 	'fiwikimedia' => array( 'w', 'meta' ),
 	'foundationwiki' => array( 'meta' ),
-	'frrwiki' => array( 'en', 'de', 'nds' ),
+	'frrwiki' => array( 'en', 'de', 'nds', 's:de', 'oldwikisource' ), # s:de and oldwikisource per bug 38023
 	'frwiki' => array(
 		'meta', 'commons', 'species', 'q', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy',
 		'hi', 'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk',
@@ -8671,6 +8685,7 @@ $wgConf->settings = array(
 	'eswikisource' => array( NS_MAIN, 102, 104 ),
 	'etwikisource' => array( NS_MAIN, 102, 104, 106 ),
 	'fawikisource' => array( NS_MAIN, 102, 104 ),
+	'frrwiki' => array( NS_MAIN, 102, 104, 106 ), // bug 38023
 	'frwikisource' => array( NS_MAIN, 102, 104, 112 ),
 	'hewikisource' => array( NS_MAIN, 104, 108, 112 ),
 	'hrwikisource' => array( NS_MAIN, 100, 102, 104 ),
@@ -8726,6 +8741,7 @@ $wgConf->settings = array(
 	'wikisource' => true,
 	'sourceswiki' => true, // FIXME: Why isn't this part of wikisource?
 	'test2wiki' => true,
+	'frrwiki' => true, // bug 38023
 ),
 
 'wmgUseDPL' => array(
@@ -8737,6 +8753,7 @@ $wgConf->settings = array(
 	'enwikisource' => true, # 8563
 	'enwiktionary' => true,
 	'eswiktionary' => true, # 7952
+	'frrwiki' => true, # 38023
 	'hewikisource' => true, # 8563
 	'incubatorwiki' => true,
 	'iswiktionary' => true, # 7952
@@ -8778,6 +8795,7 @@ $wgConf->settings = array(
 	'cswiktionary' => true, // 22139
 	'dewikiversity' => true, // Per Bug 17773
 	'enwiktionary' => true,
+	'frrwiki' => true, // Bug 38023
 	'frwiki' => true,
 	'mediawikiwiki' => true, // requested by guillom
 	'metawiki' => true,
@@ -9286,6 +9304,7 @@ $wgConf->settings = array(
 	'euwiki' => true, # bug 28292
 	'fawiki' => true, # bug 26319
 	'fiwiki' => true,
+	'frrwiki' => true, # Bug 38023
 	'frwiki' => true, # 2009-02-18
 	'frwikiversity' => true, # Bug 16178
 	'foundationwiki' => true,
