@@ -56,4 +56,4 @@ $lastmod = gmdate( 'D, j M Y H:i:s', wfTimestamp(TS_UNIX, max( $wgArticle->getTo
 header( 'Cache-Control: s-maxage=3600, must-revalidate, max-age=0' );
 header( "Last-modified: $lastmod" );
 echo $text;
-?>
+
