@@ -9060,10 +9060,6 @@ $wgConf->settings = array(
 	'frwiki'  => array( 'autopatrolled', ),
 ),
 
-'wgCheckSerialized' => array(
-	'default' => true,
-),
-
 'wgDeleteRevisionsLimit' => array(
 	'default' => 5000,
 ),
@@ -9102,11 +9098,6 @@ $wgConf->settings = array(
 
 'wgUseLocalMessageCache' => array(
 	'default' => true,
-),
-
-'wgCheckSerialized' => array(
-	'default' => false,
-	'testwiki' => false, // was true... 2008-10-24 brion
 ),
 
 # CENTRAL AUTH @{
