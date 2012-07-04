@@ -8071,6 +8071,7 @@ $wgConf->settings = array(
 	'dewikibooks' => array( 'w', 'wikipedia', 'en', 'v' ),
 	'dewikiquote' => array( 'w', 'wikt', 's', 'b', 'v', 'en', 'la', ),
 	'dewikisource' => array( 'oldwikisource' ),
+	'dewikiversity' => array( 'w' ), # Bug 38159
 	'dewiktionary' => array( 'w', 'en' ),
 	'dsbwiki' => array( 'incubator', ),
 	'elwiki' => array( 'en', 'de', 'v', 's', 'wikt', 'b', 'q', 'fr', 'meta', 'commons', 'it',  ),
