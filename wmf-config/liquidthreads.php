@@ -16,7 +16,3 @@ if ( $wmgLiquidThreadsOptIn ) {
 if ( isset( $wmgLQTUserControlNamespaces ) ) {
 	$wgLiquidThreadsAllowUserControlNamespaces = $wmgLQTUserControlNamespaces;
 }
-
-if ( $wgDBname == 'liquidthreads_labswikimedia' ) {
-#	$wgDebugLogGroups['Lqt-debugging'] = "udp://$wmfUdp2logDest/lqt-debugging";
-}

@@ -128,7 +128,6 @@ $wgConf->settings = array(
 	'ilwikimedia' => 'he', // israel
 	'incubatorwiki' => 'en', # mixed
 	'langcomwiki' => 'en',
-	'liquidthreads_labswikimedia' => 'en',
 	'mkwikimedia' => 'mk',
 	'mxwikimedia' => 'es',
 	'noboard_chapterswikimedia' => 'no',
@@ -618,7 +617,6 @@ $wgConf->settings = array(
 	'lbwiki' 		=> '//upload.wikimedia.org/wikipedia/commons/9/9f/Wikipedia-logo-v2-lb.png',
 	'lbwiktionary'      => '//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Wiktionary-logo-lb.png/135px-Wiktionary-logo-lb.png',
 	'lezwiki'		=> '//upload.wikimedia.org/wikipedia/commons/3/3d/Wikipedia-logo-v2-lez.png',
-	'liquidthreads_labswikimedia' => '//upload.wikimedia.org/wikipedia/meta/7/79/Wikimedia_Labs_logo.png',
 	'liwiki'	    => '$stdlogo',
 	'liwiktionary'      => '$stdlogo',
 	'lmowiki'	   => '$stdlogo',
@@ -1064,7 +1062,6 @@ $wgConf->settings = array(
 	'incubatorwiki' => '//incubator.wikimedia.org',
 	'internalwiki'     => '//internal.wikimedia.org',
 	'langcomwiki' => '//langcom.wikimedia.org',
-	'liquidthreads_labswikimedia' => '//liquidthreads.labs.wikimedia.org',
 	'mediawikiwiki' => '//www.mediawiki.org',
 	'metawiki'      => '//meta.wikimedia.org',
 	'movementroleswiki'    => '//movementroles.wikimedia.org',
@@ -1145,7 +1142,6 @@ $wgConf->settings = array(
 	'incubatorwiki' => 'http://incubator.wikimedia.org',
 	'internalwiki'     => 'http://internal.wikimedia.org',
 	'langcomwiki' => 'http://langcom.wikimedia.org',
-	'liquidthreads_labswikimedia' => 'http://liquidthreads.labs.wikimedia.org',
 	'mediawikiwiki' => 'http://www.mediawiki.org',
 	'metawiki'      => 'http://meta.wikimedia.org',
 	'movementroleswiki'    => 'http://movementroles.wikimedia.org',
@@ -1433,7 +1429,6 @@ $wgConf->settings = array(
 	'lbwiktionary'  => 'Wiktionnaire',
 	'lbewiki'	=> 'Википедия',
 	'lezwiki'	=> 'Википедия',
-	'liquidthreads_labswikimedia' => 'LiquidThreads Labs',
 	'liwikibooks'   => 'Wikibeuk',
 	'liwikisource'  => 'Wikibrónne',
 	'lowiki'	=> 'ວິກິພີເດຍ',
@@ -3990,7 +3985,6 @@ $wgConf->settings = array(
 
 'wmgUseDismissableSiteNotice' => array(
 	'default' => true,
-	'liquidthreads_labswikimedia' => false, // Bad interaction with live preview
 	// Andrew 2010-02-12
 ),
 
@@ -9205,7 +9199,6 @@ $wgConf->settings = array(
 	'lezwiki' => true,
 	'liwikibooks' => true,
 	'liwikisource' => true,
-	'liquidthreads_labswikimedia' => true,
 	'ltgwiki' => true,
 	'mdfwiki' => true,
 	'mhrwiki' => true,
@@ -9774,7 +9767,6 @@ $wgConf->settings = array(
 //  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //
 	'default' => false,
-	'liquidthreads_labswikimedia' => true,
 	'testwiki' => true, // Expanding out to testwiki -- Andrew 2009-10-13
 	 // -------------------
 	'enwikinews' => true, // Per bug 21956 -- Andrew 2009-02-09
@@ -9794,7 +9786,6 @@ $wgConf->settings = array(
 
 'wmgLiquidThreadsOptIn' => array(
 	'default' => true, // New wikis by default are opt-in per-page LiquidThreads
-	'liquidthreads_labswikimedia' => false,
 	// ---------
 	'strategywiki' => false,
 ),
