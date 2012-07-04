@@ -9778,6 +9778,7 @@ $wgConf->settings = array(
 	 // -------------------
 	'enwikinews' => true, // Per bug 21956 -- Andrew 2009-02-09
 	'enwiktionary' => true, // Bug 23417 -- ariel 2010-16-05
+	'fiwikimedia' => true, // Bug 37778
 	'huwiki' => true, // Bug 22909 -- Andrew 2010-09-06
 	'mediawikiwiki' => true,
 	'officewiki' => true, // Erik requested, by mail.
