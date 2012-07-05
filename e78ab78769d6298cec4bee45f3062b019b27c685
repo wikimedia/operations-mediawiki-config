@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAPX//8G0\u003d",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2012-07-05T22:44:44Z",
+      "side": 1,
+      "message": "Missing a closing ) on this line.",
+      "revId": "e78ab78769d6298cec4bee45f3062b019b27c685",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
