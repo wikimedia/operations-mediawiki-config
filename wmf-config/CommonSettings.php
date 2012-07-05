@@ -2452,7 +2452,7 @@ if ( $wmgEnableInterwiki ) {
 	$wgInterwikiViewOnly = true;
 }
 
-if ( $wmgUseRandomRootPage ) {
+if ( $site !== 'wikipedia' ) {
 	require_once( "$IP/extensions/RandomRootPage/Randomrootpage.php" );
 }
 

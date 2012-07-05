@@ -10992,12 +10992,6 @@ $wgConf->settings = array(
 'wmgEnableInterwiki' => array(
 	'default' => true,
 ),
-'wmgUseRandomRootPage' => array(
-	'default' => false,
-	'testwiki' => true,
-	'wikibooks' => true,
-	'wikisource' => true,
-),
 'wmgUseLastModified' => array(
 	'default' => false,
 //	'testwiki' => true,
