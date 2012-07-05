@@ -2157,7 +2157,7 @@ $wgConf->settings = array(
 	'wikiquote' => array( 'Wikiquote' => NS_PROJECT ),
 	'wikisource' => array( 'Wikisource' => NS_PROJECT ),
 	'wikiversity' => array( 'Wikiversity' => NS_PROJECT ),
-	'wikipedia' => array( 'Wikipedia' => NS_PROJECT ),
+	'wiki' => array( 'Wikipedia' => NS_PROJECT ),
 	'wiktionary' => array( 'Wiktionary' => NS_PROJECT ),
 
 	'abwiki' => array(
@@ -2273,8 +2273,8 @@ $wgConf->settings = array(
 	'cewiki' => array( 'Wikipedia' => NS_PROJECT, ),
 	'commonswiki' => array(
 		'Museum' => 106,
-	'Museum_talk' => 107,
-	'COM' => NS_PROJECT, // http://bugzilla.wikimedia.org/show_bug.cgi?id=12600
+		'Museum_talk' => 107,
+		'COM' => NS_PROJECT, // http://bugzilla.wikimedia.org/show_bug.cgi?id=12600
 	),
 	'cswiki' => array(
 		'Uživatel'		=> NS_USER,	 # language default which is overriden in wgExtraNamespaces
@@ -2781,7 +2781,7 @@ $wgConf->settings = array(
 	),
 	'mrwiki' => array(
 		'Wikipedia'   => NS_PROJECT,
-				'विपी'		=> NS_PROJECT,
+		'विपी'		=> NS_PROJECT,
 	),
 	'mrwikisource' => array(
 		'Portal' => 100,
@@ -2808,8 +2808,8 @@ $wgConf->settings = array(
 		'Wikipedia گپ' => 5,
 	),
 	'nahwiki' => array(
-				'Wikipedia' => NS_PROJECT,
-				'Wikipedia_tēixnāmiquiliztli' => NS_PROJECT_TALK,
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_tēixnāmiquiliztli' => NS_PROJECT_TALK,
 	),
 	'ndswiki' => array(
 		'WP' => NS_PROJECT,
@@ -2882,17 +2882,17 @@ $wgConf->settings = array(
 		'WS' => NS_PROJECT,
 	),
 	'ptwiki' => array(
-	  'Utilizador' => NS_USER,  # bug 27495
-	  'Utilizador_Discussão' => NS_USER_TALK, # bug 27495
-	  'Discussão_Portal' => 101,
-	  'WP' => NS_PROJECT, # 27728
-	  'Wikipedia'	=> NS_PROJECT,
-	  'Wikipedia_Discussão' => NS_PROJECT_TALK,
+		'Utilizador' => NS_USER,  # bug 27495
+		'Utilizador_Discussão' => NS_USER_TALK, # bug 27495
+		'Discussão_Portal' => 101,
+		'WP' => NS_PROJECT, # 27728
+		'Wikipedia'	=> NS_PROJECT,
+		'Wikipedia_Discussão' => NS_PROJECT_TALK,
 	),
 	'ptwikibooks' => array(
-	  'Wikibooks' => NS_PROJECT,
-	  'Wikibooks_Talk' => NS_PROJECT_TALK,
-	  'Wikibooks_Discussão' => NS_PROJECT_TALK,
+		'Wikibooks' => NS_PROJECT,
+		'Wikibooks_Talk' => NS_PROJECT_TALK,
+		'Wikibooks_Discussão' => NS_PROJECT_TALK,
 	),
 	'ptwikisource' => array(
 		'Author' => 102,
@@ -2901,9 +2901,9 @@ $wgConf->settings = array(
 		'Index_talk' => 105,
 		'Page' => 106,
 		'Page_talk' => 107,
-	   'Em_tradução' => 108,
-	   'Discussão_Em_tradução' => 109,
-	   'Discussão_em_tradução' => 109,
+		'Em_tradução' => 108,
+		'Discussão_Em_tradução' => 109,
+		'Discussão_em_tradução' => 109,
 	),
 	'rowiki' => array(
 		'Discuţie' => 	NS_TALK,
@@ -2990,8 +2990,8 @@ $wgConf->settings = array(
 	'sawiki' => array(
 		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
-				'Wikipedia' => NS_PROJECT,
-				'Wikipedia_talk' => NS_PROJECT_TALK,
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_talk' => NS_PROJECT_TALK,
 	),
 	'scnwiktionary' => array(
 		'Wiktionary' => NS_PROJECT,
@@ -3008,8 +3008,8 @@ $wgConf->settings = array(
 	'siwiki' => array(
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
-				'Portal'	      => 100,
-				'Portal_talk' => 101,
+		'Portal'	      => 100,
+		'Portal_talk' => 101,
 	),
 	'siwikibooks' => array(
 		'Wikibooks' => NS_PROJECT,
@@ -3099,10 +3099,10 @@ $wgConf->settings = array(
 		'Author_talk' => 101,
 	),
 	'ttwiki' => array(
-				'WP' => NS_PROJECT,
-				'ВП' => NS_PROJECT,
-				'Wikipedia' => NS_PROJECT,
-				'Wikipedia_talk' => NS_PROJECT_TALK,
+		'WP' => NS_PROJECT,
+		'ВП' => NS_PROJECT,
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_talk' => NS_PROJECT_TALK,
 	),
 	'ukwiki' => array(
 		'ВП' => NS_PROJECT,

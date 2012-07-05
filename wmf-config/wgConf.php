@@ -8,7 +8,7 @@ $wgConf = new SiteConfiguration;
 
 $wgConf->wikis = array_map( 'trim', file( "$IP/../all.dblist" ) );
 $wgConf->suffixes = array(
-	'wikipedia',
+	// 'wikipedia',
 	'wiki',
 	'wiktionary',
 	'wikiquote',
@@ -59,4 +59,3 @@ switch( $cluster ) {
 $wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
 
 $wgLocalDatabases =& $wgConf->getLocalDatabases();
-
