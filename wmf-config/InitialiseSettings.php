@@ -9983,9 +9983,9 @@ $wgConf->settings = array(
 ),
 'wmgArticleFeedbackLotteryOdds' => array(
 	'default' => 0,
-	'testwiki' => 99,
+	'testwiki' => 98,
 	'en_labswikimedia' => 100,
-	'enwiki' => 99,
+	'enwiki' => 98,
 	'eswiki' => 100,
 	'eswikinews' => 100,
 	'hiwiki' => 100,
