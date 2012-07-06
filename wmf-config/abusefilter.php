@@ -74,6 +74,7 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 	$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 	$wgGroupPermissions['abusefilter']['abusefilter-revert'] = true;
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-private'] = true; // Bug 38216
 
 } elseif ( $wgDBname == 'eswiki' ) {
 	$wgGroupPermissions['user']['abusefilter-view'] = true;
