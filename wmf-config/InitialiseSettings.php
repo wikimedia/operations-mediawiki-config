@@ -10266,6 +10266,7 @@ $wgConf->settings = array(
 	'srwiki' => true, // bug 35913
 	'svwiki' => true, // bug 30756
 	'testwiki' => true,
+	'trwiki' => true, // bug 38227
 	'zhwiki' => true, // bug 30362
 ),
 'wmgWikiLoveDefault' => array(
