@@ -8029,6 +8029,14 @@ $wgConf->settings = array(
 // Sorted by database names
 # wgImportSources @{
 'wgImportSources' => array(
+	// Generic project entries
+
+	// Note: When adding a specific wiki you have to duplicate these generic sources
+	// otherwise they would be overwritten by the specific wiki entry
+	'wikisource' => array( 'meta', 'commons' ),
+	'wikiversity' => array( 'meta', 'b', 'incubator' ),
+
+	// Specific wikis
 	'alswiki'   => array( 'de', 'wikt', 'b', 'q', 'en', 'fr', 'it', 'b:de' ),
 	'alswikibooks' => array( 'b:de', 'w' ),
 	'arbcom_enwiki' => array( 'meta', 'w' ),
@@ -8250,6 +8258,7 @@ $wgConf->settings = array(
 	'szlwiki' => array( 'incubator' ),
 	'tawikisource' => array( 'oldwikisource', 'w', 'b' ),
 	'testwiki' => array( 'de', 'en', 'es', 'fr', 'ja', 'commons', 'meta', 'incubator', 'strategy' ),
+	'test2wiki' => array( 'en', 'cs' ),
 	'tetwiki' => array( 'en', 'de', 'pt' ),
 	'tewikisource' => array( 'w', 'b' ),
 	'tpiwiki' => array( 'en', 'simple', 'wikt:en', 'commons' ),
@@ -8266,16 +8275,12 @@ $wgConf->settings = array(
 
 	'wikimania2012wiki' => array( 'en', 'meta', 'wikimania2011wiki' ),
 	'wikimania2013wiki' => array( 'en', 'meta', 'wikimania2011wiki', 'wikimania2012wiki' ),
-	'wikisource' => array( 'meta', 'commons' ),
-	'wikiversity' => array( 'meta', 'b', 'incubator' ),
 	'wuuwiki' => array( 'en', 'th', 'fr', 'zh', ),
 
 	'zhwikiquote' => array( 'w', 'b', 'wikt', 's', 'meta', 'commons' ),
 	'zhwiktionary' => array( 'w', 'b', 'q', 's', 'meta', 'commons' ),
 	'zhwikibooks' => array( 'w', 'wikt', 'q', 's', 'meta', 'commons' ),
 	'zhwikisource' => array( 'w', 'b', 'q', 'wikt', 'meta', 'commons' ),
-
-	'test2wiki' => array( 'en', 'cs' ),
 ),
 # @} end of wgImportSources
 
