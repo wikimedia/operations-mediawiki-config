@@ -1,6 +1,0 @@
-# This doesn't make sense -- Domas - 2010 03 12
-# Special robots.txt for nl.wikimedia.org
-# No crawlers
-
-#User-agent: *
-#Disallow: /
