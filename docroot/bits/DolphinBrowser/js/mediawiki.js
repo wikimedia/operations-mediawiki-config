@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Core MediaWiki JavaScript Library
  */
 

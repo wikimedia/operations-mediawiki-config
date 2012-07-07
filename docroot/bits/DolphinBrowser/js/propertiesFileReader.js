@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Copyright (c) Brion Vibber 2011
  * Written initially for Wikipedia Mobile app
  *

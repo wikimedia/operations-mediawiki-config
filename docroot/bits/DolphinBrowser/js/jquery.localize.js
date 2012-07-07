@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Simple Placeholder-based Localization
  *
  * Call on a selection of HTML which contains <html:msg key="message-key" /> elements or elements with

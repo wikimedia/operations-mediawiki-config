@@ -1,4 +1,4 @@
-﻿window.l10n = function() {
+window.l10n = function() {
 	/**
 	 * Validate and normalize a language code.
 	 * Doesn't guarantee we know it or it's legit, but confirms the format is safe.
