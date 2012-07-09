@@ -1846,8 +1846,9 @@ if ( $wmgUseCollection ) {
 
 	$wgCollectionFormats = array(
 		'rl' => 'PDF',
-		'odf' => 'OpenDocument Text',
-		'zim' => 'ZIM',
+		'epub' => 'EPUB',
+		'odf' => 'ODT',
+		'zim' => 'openZIM',
 	);
 
 	# GFDL is long gone, we use CC-BY-SA 3.0 nowaday. See bug 32513
