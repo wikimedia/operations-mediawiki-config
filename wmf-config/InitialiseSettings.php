@@ -2157,7 +2157,7 @@ $wgConf->settings = array(
 	'wikiquote' => array( 'Wikiquote' => NS_PROJECT ),
 	'wikisource' => array( 'Wikisource' => NS_PROJECT ),
 	'wikiversity' => array( 'Wikiversity' => NS_PROJECT ),
-	'wiki' => array( 'Wikipedia' => NS_PROJECT ),
+	'wikipedia' => array( 'Wikipedia' => NS_PROJECT ),
 	'wiktionary' => array( 'Wiktionary' => NS_PROJECT ),
 
 	'abwiki' => array(
