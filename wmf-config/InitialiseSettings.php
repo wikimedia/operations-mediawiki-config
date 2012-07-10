@@ -2595,6 +2595,10 @@ $wgConf->settings = array(
 		'Page' => 104,
 		'Page_talk' => 105,
 	),
+	'ilowiki' => array(
+		'WP' => NS_PROJECT, //bug 38247
+		'WT' => NS_PROJECT_TALK, //bug 38247
+	),
 	'iowiki' => array(
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
