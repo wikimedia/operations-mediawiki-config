@@ -2427,7 +2427,7 @@ if ( $wmgUseShortUrl ) {
 
 if ( $wmgUseFeaturedFeeds ) {
 	require_once( "$IP/extensions/FeaturedFeeds/FeaturedFeeds.php" );
-	require_once( "$IP/extensions/FeaturedFeeds/FeaturedFeedsWMF.php" );
+	require_once( "$wmfConfigDir/FeaturedFeedsWMF.php" );
 }
 
 // $wgDisplayFeedsInSidebar from FeaturedFeeds defaults to true in the install file
