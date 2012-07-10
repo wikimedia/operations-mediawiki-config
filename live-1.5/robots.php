@@ -5,7 +5,7 @@ include "/apache/common/live-1.5/MWVersion.php";
 include getMediaWiki( "includes/WebStart.php" );
 
 $wgTitle = Title::newFromText( 'Mediawiki:robots.txt' );
-$wgArticle = new Article( $wgTitle );
+$wgArticle = new Article( $wgTitle, 0 );
 
 header( 'Content-Type: text/plain; charset=utf-8' );
 header( 'X-Article-ID: ' . $wgArticle->getID() );
