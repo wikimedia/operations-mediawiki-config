@@ -113,7 +113,6 @@ $wgConf->settings = array(
 	'chairwiki' => 'en',
 	'chapcomwiki' => 'en',
 	'checkuserwiki' => 'en',
-	'chwikimedia' => 'en', # seems to be the most common language here
 	'collabwiki' => 'en',
 	'cowikimedia'   => 'es',
 	'crhwiki' => 'crh-latn',
@@ -438,7 +437,6 @@ $wgConf->settings = array(
 	'checkuserwiki'	=> '//upload.wikimedia.org/wikipedia/commons/1/10/Wikimedia_CheckUser_wiki_logo.png', // Bug 28785
 	'chrwiki'	   => '//upload.wikimedia.org/wikipedia/commons/9/98/Wikipedia-logo-chr.png', // Bug 37327
 	'chwiki'		=> '$stdlogo',
-	'chwikimedia'       => '$stdlogo',
 	'ckbwiki'		=> '$stdlogo',
 	'collabwiki'	=> '//upload.wikimedia.org/wikipedia/meta/5/5d/Collab.png',
 	'comcomwiki'	=> '//upload.wikimedia.org/wikipedia/meta/a/a2/Wikimediainernal-logo135px.png',
@@ -1046,7 +1044,6 @@ $wgConf->settings = array(
 	'chairwiki' => '//chair.wikimedia.org',
 	'chapcomwiki' => '//chapcom.wikimedia.org',
 	'checkuserwiki' => '//checkuser.wikimedia.org',
-	'chwikimedia' => '//www.wikimedia.ch/',
 	'collabwiki' => '//collab.wikimedia.org',
 	'comcomwiki' => '//comcom.wikimedia.org',
 	'commonswiki'   => '//commons.wikimedia.org',
@@ -1126,7 +1123,6 @@ $wgConf->settings = array(
 	'chairwiki' => 'http://chair.wikimedia.org',
 	'chapcomwiki' => 'http://chapcom.wikimedia.org',
 	'checkuserwiki' => 'http://checkuser.wikimedia.org',
-	'chwikimedia' => 'http://www.wikimedia.ch/',
 	'collabwiki' => 'http://collab.wikimedia.org',
 	'comcomwiki' => 'http://comcom.wikimedia.org',
 	'commonswiki'   => 'http://commons.wikimedia.org',
@@ -6440,9 +6436,6 @@ $wgConf->settings = array(
 
 	// Account creation required
 	'nlwikimedia' => array( '*' => array(
-		'edit' => false,
-	) ),
-	'chwikimedia' => array( '*' => array(
 		'edit' => false,
 	) ),
 	'fiwikimedia' => array( '*' => array(
