@@ -8794,6 +8794,7 @@ $wgConf->settings = array(
 	'enwiktionary' => true,
 	'frrwiki' => true, // Bug 38023
 	'frwiki' => true,
+	'itwikibooks' => true, // Bug 38287
 	'mediawikiwiki' => true, // requested by guillom
 	'metawiki' => true,
 	'outreachwiki' => true, // bug 29238
