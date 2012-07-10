@@ -2763,7 +2763,7 @@ $wgConf->settings = array(
 	),
 	'mlwikiquote' => array(
 		'വിക്കി_ചൊല്ലുകൾ'	      => NS_PROJECT, // bug 38111
-		'വിക്കി_ചൊല്ലുകൾ_സംവാദം'	      => NS_PROJECT_TALK, bug // 38111
+		'വിക്കി_ചൊല്ലുകൾ_സംവാദം'	      => NS_PROJECT_TALK, // bug 38111
 	),
 	'mlwikisource' => array(
 		'Author'	      => 100,
