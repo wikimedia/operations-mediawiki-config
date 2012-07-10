@@ -2,16 +2,16 @@
 <?php
 error_reporting( E_ALL );
 /**
- * Automatically SVN checkout a MediaWiki version and do some basic wmf setup.
+ * Automatically git clone a MediaWiki version and do some basic wmf setup.
  * LocalSettings.php will be created (which loads CommonSettings.php) and various
  * symlinks will also be created.
  *
- * The first argument is the SVN directory (relative to mediawiki/branches/wmf).
+ * The first argument is the git branch (relative to wmf).
  * This is typically a version of the format "X.XXwmfX" ("e.g. 1.17wmf1").
  * The second argument is the target path (relative to /home/wikipedia/common/)
- * to store local copy of the SVN checkout. This is typically of the format "php-X.XX".
+ * to store local copy of the git checkout. This is typically of the format "php-X.XX".
  *
- * This script assumes that the user running this script has an SVN account
+ * This script assumes that the user running this script has an git account
  * with the SSH agent/key available.
  *
  * @return void
@@ -23,7 +23,7 @@ function checkoutMediaWiki() {
 
 	$argsValid = false;
 	if ( count( $argv ) >= 3 ) {
-		$svnVersion = $argv[1]; // e.g. "X.XXwmfX"
+		$gitVersion = $argv[1]; // e.g. "X.XXwmfX"
 		$dstVersion = $argv[2]; // e.g. "php-X.XXwmfX"
 		if ( preg_match( '/^php-(\d+\.\d+wmf\d+|master)$/', $dstVersion, $m ) ) {
 			$dstVersionNum = $m[1]; // everything after 'php-'
@@ -38,30 +38,45 @@ function checkoutMediaWiki() {
 	# MW install path
 	$destIP = "$commonHomeDir/$dstVersion";
 
-	echo "Creating new MediaWiki install at $destIP...\n\n";
-/*
-	# The url to SVN to checkout from
-	$source = "svn+ssh://svn.wikimedia.org/svnroot/mediawiki/branches/wmf/$svnVersion";
-
-	# Create the destination path to SVN checkout to...
-	if ( file_exists( $destIP ) ) {
-		print "Skipping checkout, the directory $destIP already exists.\n";
-	} else {
-		print "Creating checkout directory $destIP...";
-		mkdir( $destIP, 0775 );
-		print "done.\n";
-
-		print "Checking out $source to $destIP...\n";
-		# Checkout the SVN directory...
-		$retval = 1; // error by default?
-		passthru( "svn checkout $source $destIP", $retval );
-		if ( $retval !== 0 ) {
-			rmdir( $destIP ); // rollback
-			die( "\nUnable to checkout SVN path.\n" );
+	if ( !file_exists( $destIP ) ) {
+		$tmpDir = '/tmp/new-mw-clone-' . mt_rand( 0, 0x7fffffff );
+		echo "Cloning MediaWiki into $tmpDir...\n\n";
+		if ( !mkdir( $tmpDir, 0755 ) ) {
+			print "Unable to create $tmpDir\n";
+			exit( 1 );
 		}
-		print "...SVN checkout done.\n";
+		passthru( 'git clone -n ' .
+			'ssh://gerrit.wikimedia.org:29418/mediawiki/core.git ' .
+			escapeshellarg( "$tmpDir/mw" ),
+			$ret );
+		if ( $ret ) {
+			print "Error running git\n";
+			exit( 1 );
+		}
+		if ( !chdir( "$tmpDir/mw" ) ) {
+			print "Error changing directory\n";
+			exit( 1 );
+		}
+		passthru( 'git checkout ' . escapeshellarg( "wmf/$gitVersion" ), $ret );
+		if ( $ret ) {
+			print "Error running git\n";
+			exit( 1 );
+		}
+		passthru( 'git submodule update --init ' . escapeshellarg( "$tmpDir/mw" ), $ret );
+		if ( $ret ) {
+			print "Error running git\n";
+			exit( 1 );
+		}
+
+		echo "Moving the new clone into place\n";
+		renameAcrossFS( "$tmpDir/mw", $destIP );
+		if ( !rmdir( $tmpDir ) ) {
+			echo "Error moving the new directory\n";
+			exit( 1 );
+		}
+	} else {
+		echo "MediaWiki already checked out at $destIP\n";
 	}
-*/
 
 	$localSettingsCode = <<<EOT
 <?php
@@ -146,14 +161,18 @@ EOT;
 	# Create l10n cache dir
 	$l10nDir = "$destIP/cache/l10n";
 	if ( !file_exists( $l10nDir ) ) {
-		if ( mkdir( $l10nDir, 0775 ) ) {
-			print "Created php-$dstVersionNum/cache/l10n directory.\n";
+		chmod( "$destIP/cache", 0777 );
+		exec( "sudo -u l10nupdate -- mkdir $destIP/cache/l10n",  $output, $status );
+		chmod( "$destIP/cache", 0775 );
+		if ( $status ) {
+			print "Failed to create $destIP/cache/l10n\n";
+			exit( 1 );
 		}
 	} else {
 		print "Directory already exists: $l10nDir\n";
 	}
 
-	print "\nMediaWiki $dstVersionNum, from $svnVersion, successfully checked out.\n";
+	print "\nMediaWiki $dstVersionNum, from $gitVersion, successfully checked out.\n";
 }
 
 function createSymlink( $path, $link, $createdMsg ) {
@@ -163,6 +182,14 @@ function createSymlink( $path, $link, $createdMsg ) {
 		}
 	} else {
 		print "Symlink file already exists: $path\n";
+	}
+}
+
+function renameAcrossFS( $source, $dest ) {
+	passthru( "mv " . escapeshellarg( $source ) . ' ' . escapeshellarg( $dest ), $ret );
+	if ( $ret ) {
+		echo "Error renaming $source to $dest\n";
+		exit( 1 );
 	}
 }
 
