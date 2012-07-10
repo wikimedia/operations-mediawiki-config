@@ -43,6 +43,7 @@ function streamFavicon() {
 	header( 'Content-Length: ' . strlen( $content ) );
 	header( 'Content-Type: ' . $client->getResponseHeader( 'Content-Type' ) );
 	header( 'Cache-Control: public' );
+	header( 'Expires: ' . gmdate( 'r', time() + 86400 ) );
 	echo $content;
 }
 
