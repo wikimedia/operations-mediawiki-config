@@ -2014,7 +2014,7 @@ if ( $wmgUseReaderFeedback ) {
 
 if ( $wmgUseLocalisationUpdate ) {
 	require_once( "$IP/extensions/LocalisationUpdate/LocalisationUpdate.php" );
-	$wgLocalisationUpdateDirectory = dirname( $IP ) . "/php-$wmfExtendedVersionNumber/cache/l10n";
+	$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/cache-$wmfExtendedVersionNumber";
 }
 
 if ( $wmgEnableLandingCheck ) {
