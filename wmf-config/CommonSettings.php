@@ -759,13 +759,6 @@ if ( $site == 'wikinews' ) {
 	$wgRightsIcon = "$urlprotocol//creativecommons.org/images/public/somerights20.png";
 }
 
-# FIXME: Turned off tidy for testing. --brion 2004-01-19
-# turned it on again to see if this is the culprit --gwicke 2005-01-20
-# Anthere had problems with the quarto page on meta which contained broken markup
-# Turned off for performance reasons experimentally -- TS 2005-04-20
-#   -- Didn't seem to make any difference
-# Turned off, to investigate cluster trouble -- AV Mon Nov 14 21:45:49 UTC 2005
-# Investigated cluster trouble, tidy seems to have been unrelated to them -- TS
 $wgUseTidy = true;
 
 if( $cluster == 'pmtpa' ) {
@@ -893,7 +886,7 @@ $wgCortadoJarFile = "$urlprotocol//upload.wikimedia.org/jars/cortado.jar";
 
 include( $IP . '/extensions/AssertEdit/AssertEdit.php' );
 
-if ( $wgDBname == 'collabwiki' ) {
+if ( $wgDBname == 'collabwiki' || $wgDBname == 'donatewiki' ) {
 	$wgUseTidy = false;
 }
 
@@ -981,10 +974,6 @@ if ( $wgDBname == 'foundationwiki' ) {
 if ( $wmgUseContributionReporting ) {
 	include( "$IP/extensions/ContributionReporting/ContributionReporting.php" );
 	include( "$wmfConfigDir/reporting-setup.php" );
-}
-
-if ( $wgDBname == 'donatewiki' ) {
-	$wgUseTidy = false;
 }
 
 if ( $wmgPFEnableStringFunctions ) {
