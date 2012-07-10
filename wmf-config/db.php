@@ -228,6 +228,7 @@ $wgLBFactoryConf = array(
 	'db1040'	=> '10.64.16.29', # do not remove or comment out
 	'db1041'	=> '10.64.16.30', # do not remove or comment out
 	'db1047'	=> '10.64.16.36', # do not remove or comment out
+	'pc1'		=> '10.0.0.221', # do not remove or comment out # Parser Cache
 ),
 
 'externalLoads' => array(
