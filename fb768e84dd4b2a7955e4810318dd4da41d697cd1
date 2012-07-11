@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAQX//8v0\u003d",
+        "filename": "docroot/labs/error1.htm",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-07-11T12:34:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAQX//+XA\u003d",
+      "revId": "fb768e84dd4b2a7955e4810318dd4da41d697cd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAQX//+W4\u003d",
         "filename": "docroot/labs/error1.htm",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "AAAAQX//8vw\u003d",
+        "filename": "docroot/labs/error1.htm",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-07-11T12:34:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAAAQX//+W4\u003d",
+      "revId": "fb768e84dd4b2a7955e4810318dd4da41d697cd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAAQX//+W0\u003d",
         "filename": "docroot/labs/error1.htm",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2012-07-10T11:56:14Z",
       "side": 1,
       "message": "Debugging?",
+      "revId": "fb768e84dd4b2a7955e4810318dd4da41d697cd1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAQX//+Wg\u003d",
+        "filename": "docroot/labs/error1.htm",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-07-11T12:34:08Z",
+      "side": 1,
+      "message": "Ohh I did not even looked at the file content :-]\n\n\nI just deleted that PHP part.",
+      "parentUuid": "AAAAQX//+W0\u003d",
       "revId": "fb768e84dd4b2a7955e4810318dd4da41d697cd1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
