@@ -11007,7 +11007,10 @@ $wgConf->settings = array(
 );
 
 
-# WMF Labs override
+### WMF Labs override #####
+// Make sure $cluster and $realm are available in case we are
+// required()/included() inside a function.
+global $cluster, $realm;
 if( $cluster == 'wmflabs' ) {
     require( "$wmfConfigDir/InitialiseSettings-wmflabs.php" );
     wmfLabsOverrideSettings();
