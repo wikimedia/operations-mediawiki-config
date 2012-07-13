@@ -320,7 +320,7 @@ if ( defined( 'DEBUG_LOG' ) ) {
 }
 
 $wgDBerrorLog = "udp://$wmfUdp2logDest/dberror";
-$wgDBerrorLogInUTC = true;
+$wgDBerrorLogTZ = 'UTC';
 
 if ( !isset( $wgLocaltimezone ) ) {
 	$wgLocaltimezone = 'UTC';
