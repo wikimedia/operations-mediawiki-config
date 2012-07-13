@@ -10028,7 +10028,7 @@ $wgConf->settings = array(
 ),
 'wmgUseArticleFeedbackv5' => array(
 	'default' => false,
-	'en_labswikimedia' => true,
+	// 'en_labswikimedia' => true, // Disabled due to out of date schema --Reedy
 	'enwiki' => true,
 	'testwiki' => true,
 ),
