@@ -10491,12 +10491,12 @@ $wgConf->settings = array(
 	),
 	'eswiki' => array(
 		'0' => false,
-		'1' => 'Usuarios por idioma - %wikiname% básico',
-		'2' => 'Usuarios por idioma - %wikiname% intermedio',
-		'3' => 'Usuarios por idioma - %wikiname% avanzado',
-		'4' => 'Usuarios por idioma - %wikiname% experto',
-		'5' => 'Usuarios por idioma - %wikiname% profesional',
-		'N' => 'Usuarios por idioma - %wikiname% nativo',
+		'1' => 'Wikipedia:Wikipedistas con nivel básico de %wikiname%',
+		'2' => 'Wikipedia:Wikipedistas con nivel intermedio de %wikiname%',
+		'3' => 'Wikipedia:Wikipedistas con nivel avanzado de %wikiname%',
+		'4' => 'Wikipedia:Wikipedistas con nivel experto de %wikiname%',
+		'5' => 'Wikipedia:Wikipedistas con nivel profesional de %wikiname%',
+		'N' => 'Wikipedia:Wikipedistas con nivel nativo de %wikiname%',
 	),
 	'eswikibooks' => array(
 		'0' => false,
