@@ -9384,6 +9384,12 @@ $wgConf->settings = array(
 	'mlwikisource' => array( 'odf' ), // Bug 37672
 ),
 
+'wmgCollectionUseEpub' => array(
+	'default' => false,
+	'testwiki' => true,
+	'simplewiki' => true,	
+),
+
 'wmgUseSpamBlacklist' => array(
 	'default' => true,
 	'private' => false,

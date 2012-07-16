@@ -1837,10 +1837,13 @@ if ( $wmgUseCollection ) {
 
 	$wgCollectionFormats = array(
 		'rl' => 'PDF',
-		'epub' => 'EPUB',
+	//	'epub' => 'EPUB', // disabling by default per reqest from tfinc 14 July 2012
 		'odf' => 'ODT',
 		'zim' => 'openZIM',
 	);
+	if ( $wmgCollectionUseEpub ) {
+		$wgCollectionFormats[ 'epub' ] = 'EPUB';
+	}
 
 	# GFDL is long gone, we use CC-BY-SA 3.0 nowaday. See bug 32513
 	//$wgLicenseURL = "http://en.wikipedia.org/w/index.php?title=Wikipedia:Text_of_the_GNU_Free_Documentation_License&action=raw";
