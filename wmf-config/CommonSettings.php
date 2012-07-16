@@ -339,7 +339,9 @@ if ( defined( 'DEBUG_LOG' ) ) {
 $wgDBerrorLog = "udp://$wmfUdp2logDest/dberror";
 $wgDBerrorLogInUTC = true;
 
-if ( !isset( $wgLocaltimezone ) ) $wgLocaltimezone = 'UTC';
+if ( !isset( $wgLocaltimezone ) ) {
+	$wgLocaltimezone = 'UTC';
+}
 # Ugly hack warning! This needs smoothing out.
 if ( $wgLocaltimezone ) {
 	$oldtz = getenv( 'TZ' );
