@@ -30,6 +30,13 @@ if ( $wmfUseArticleCreationWorkflow ) {
 	$wgArticleCreationBucketConfig['buckets']['off'] = 0;
 }
 
+# Attempt to auto block users using faulty servers
+# See also http://www.us.sorbs.net/general/using.shtml
+$wgEnableDnsBlacklist = true;
+$wgDnsBlacklistUrls   = array(
+	'http.dnsbl.sorbs.net.',
+);
+
 //before you remove this, log somewhere why you did it
 //--Petrb
 //Commented until a dedicated wiki is created.
