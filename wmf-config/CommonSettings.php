@@ -83,11 +83,11 @@ if( file_exists( '/etc/wikimedia-realm' ) ) {
 switch( $realm ) {
 	case 'labs':
 		$cluster = 'wmflabs';
-	break;
+		break;
 	case 'production':
 	default:
 		$cluster = 'pmtpa';
-	break;
+		break;
 }
 ### End /Determine realm and cluster we are on/ ########################
 
@@ -255,32 +255,19 @@ setlocale( LC_ALL, 'en_US.UTF-8' );
 
 unset( $wgStylePath );
 unset( $wgStyleSheetPath );
-# $wgStyleSheetPath = '/w/skins-1.17';
-if ( version_compare( $wgVersion, '1.20wmf2', '>=' ) ) {
-	// New URL scheme
-	if ( $wgDBname == 'testwiki' ) {
-		// Make testing skin/JS changes easier
-		$wgExtensionAssetsPath = "$urlprotocol//test.wikipedia.org/w/static-$wmfVersionNumber/extensions";
-		$wgStyleSheetPath = "$urlprotocol//test.wikipedia.org/w/static-$wmfVersionNumber/skins";
-		$wgResourceBasePath = "$urlprotocol//test.wikipedia.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
-	} else {
-		$wgExtensionAssetsPath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber/extensions";
-		$wgStyleSheetPath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber/skins";
-		$wgResourceBasePath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber"; // This means resources will be requested from /static-VERSION/resources
-	}
+
+// New URL scheme
+if ( $wgDBname == 'testwiki' ) {
+	// Make testing skin/JS changes easier
+	$wgExtensionAssetsPath = "$urlprotocol//test.wikipedia.org/w/static-$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "$urlprotocol//test.wikipedia.org/w/static-$wmfVersionNumber/skins";
+	$wgResourceBasePath = "$urlprotocol//test.wikipedia.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
 } else {
-	// Old URL scheme
-	if ( $wgDBname == 'testwiki' ) {
-		// Make testing skin/JS changes easier
-		$wgExtensionAssetsPath = "$urlprotocol//test.wikipedia.org/w/extensions-$wmfVersionNumber";
-		$wgStyleSheetPath = "$urlprotocol//test.wikipedia.org/w/skins-$wmfVersionNumber";
-		$wgResourceBasePath = "$urlprotocol//test.wikipedia.org/w/resources-$wmfVersionNumber"; // This means resources will be requested from /w/resources-VERSION/resources
-	} else {
-		$wgExtensionAssetsPath = "$urlprotocol//bits.wikimedia.org/w/extensions-$wmfVersionNumber";
-		$wgStyleSheetPath = "$urlprotocol//bits.wikimedia.org/skins-$wmfVersionNumber";
-		$wgResourceBasePath = "$urlprotocol//bits.wikimedia.org/resources-$wmfVersionNumber"; // This means resources will be requested from /resources-VERSION/resources
-	}
+	$wgExtensionAssetsPath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber/skins";
+	$wgResourceBasePath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber"; // This means resources will be requested from /static-VERSION/resources
 }
+
 # For labs, override settings just above. This need to be done before
 # extensions so we can not use CommonSettings-wmflabs.php
 if( $cluster == 'wmflabs' ) {
@@ -312,12 +299,6 @@ $wgCacheDirectory = '/tmp/mw-cache-' . $wmfVersionNumber;
 // Comment out the following lines to get the old-style l10n caching -- TS 2011-02-22
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
-
-# Very wrong place for NFS access - brought the site down -- domas - 2009-01-27
-
-# if ( ! is_dir( $wgUploadDirectory ) && !$wgCommandLineMode ) {
-#	@mkdir( $wgUploadDirectory, 0777 );
-# }
 
 $wgFileStore['deleted']['directory'] = "/mnt/upload6/private/archive/$site/$lang";
 
@@ -367,20 +348,12 @@ $wgResourceLoaderValidateJS = false;
 # EMERGENCY OPTIMIZATION OPTIONS
 
 $wgMiserMode = true;
-# wgMiserMode now in the configuration object
-# enabled to test DB load balancing -- TS 2004-06-22
 
 # This is overridden in the Lucene section below
 $wgDisableTextSearch   = true;
 $wgDisableSearchUpdate = true;
 $wgDisableCounters     = true;
 
-# $wgSiteSupportPage = "http://wikimediafoundation.org/fundraising";
-# $wgDisableUploads = false;
-
-# Is this safe??
-# $wgCookieDomain = ".wikipedia.org";
-# ini_set('session.name', "{$lang}wikiSession" );
 session_name( $lang . 'wikiSession' );
 $wgSessionsInMemcached = true;
 
@@ -416,10 +389,6 @@ $wgFileBlacklist[] = 'mht';
 $wgFileExtensions[] = 'xcf';
 $wgFileExtensions[] = 'pdf';
 $wgFileExtensions[] = 'mid';
-# $wgFileExtensions[] = 'sxw'; # OOo writer       # -- disabling these as obsolete -- brion 2008-02-05
-# $wgFileExtensions[] = 'sxi'; # OOo presentation
-# $wgFileExtensions[] = 'sxc'; # OOo spreadsheet
-# $wgFileExtensions[] = 'sxd'; # OOo drawing
 $wgFileExtensions[] = 'ogg'; # Ogg audio & video
 $wgFileExtensions[] = 'ogv'; # Ogg audio & video
 $wgFileExtensions[] = 'svg';
@@ -736,15 +705,6 @@ $wgDebugLogGroups['json-hack'] = "udp://$wmfUdp2logDest/json-hack"; // Max 2012-
 
 $wgDebugLogGroups['404'] = "udp://$wmfUdp2logDest/four-oh-four";
 
-# Don't allow users to redirect other users' talk pages
-# Disabled because interwiki redirects are turned off, so it's not needed
-# include( "$IP/Filter-ext_redir.php" );
-
-# # For attaching licensing metadata to pages, and displaying an
-# # appropriate copyright notice / icon. GNU Free Documentation
-# # License and Creative Commons licenses are supported so far.
-$wgEnableCreativeCommonsRdf = false;
-
 if ( $site == 'wikinews' ) {
 	# $wgRightsPage = "";# Set to the title of a wiki page that describes your license/copyright
 	$wgRightsUrl = "$urlprotocol//creativecommons.org/licenses/by/2.5/";
@@ -807,14 +767,10 @@ $wgExpensiveParserFunctionLimit = 500;
 require( $IP . '/extensions/Cite/Cite.php' );
 require( $IP . '/extensions/Cite/SpecialCite.php' );
 
-// psuedobotinterface -ævar, 2005-12-25
-// require( $IP.'/extensions/Filepath/SpecialFilepath.php' ); // obsolete 2008-02-12
-
 # Inputbox extension for searching or creating articles
 include( $IP . '/extensions/InputBox/InputBox.php' );
 
 include( $IP . '/extensions/ExpandTemplates/ExpandTemplates.php' );
-// include( $IP.'/extensions/PicturePopup/PicturePopup.php' ); // extension deleted in december 2007...
 
 include( $IP . '/extensions/ImageMap/ImageMap.php' );
 include( $IP . '/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php' );
@@ -861,10 +817,7 @@ if ( $wmgUseSpamBlacklist ) {
 }
 
 include( $IP . '/extensions/UploadBlacklist/UploadBlacklist.php' );
-# disabled by Domas. reenabling without consulting will end up on wrath and torture
-# if ( $wgDBname !== 'kwwiktionary' ) {
-	include( $IP . '/extensions/TitleBlacklist/TitleBlacklist.php' );
-# }
+include( $IP . '/extensions/TitleBlacklist/TitleBlacklist.php' );
 
 $wgTitleBlacklistSources = array(
 	array(
@@ -1130,10 +1083,8 @@ $ubUploadBlacklist = array(
 
 if ( file_exists( '/usr/bin/ploticus' ) ) {
 	$wgTimelineSettings->ploticusCommand = '/usr/bin/ploticus';
-} else {
-	// Back-compat for Fedora boxes
-	$wgTimelineSettings->ploticusCommand = '/usr/local/bin/pl';
 }
+
 $wgTimelineSettings->epochTimestamp = '20110206135500'; // fixed font setting
 putenv( "GDFONTPATH=/usr/local/apache/common/fonts" );
 
@@ -1193,8 +1144,12 @@ if ( in_array( $wgLanguageCode, array( 'commons', 'meta', 'sources', 'species', 
 
 # :SEARCH:
 switch( $cluster ) {
-case 'pmtpa'  : $wgUseLuceneSearch = true ; break;
-case 'wmflabs': $wgUseLuceneSearch = false; break;
+case 'pmtpa':
+	$wgUseLuceneSearch = true;
+	break;
+case 'wmflabs':
+	$wgUseLuceneSearch = false;
+	break;
 }
 
 wfProfileOut( "$fname-misc2" );
@@ -1273,14 +1228,6 @@ if ( $wgDBname == 'enwiki' ) {
 wfProfileOut( "$fname-misc3" );
 wfProfileIn( "$fname-ext-include2" );
 
-# Experimental category intersection plugin.
-# Enabling on an exerimental basis for Wikinews only,
-# 2005-03-30 brion
-# if( $site == 'wikinews' || $site == 'wikiquote' ||
-#    $wgDBname == 'metawiki' ||
-#    $wgDBname == 'enwiktionary' || $wgDBname == 'dewiktionary' ||
-#    $site == 'wikibooks' ||
-#    $wgDBname == 'srwiki' ) {
 if ( $wmgUseDPL ) {
 	include( $IP . '/extensions/intersection/DynamicPageList.php' );
 }
@@ -1317,10 +1264,6 @@ wfProfileIn( "$fname-misc4" );
 $wgDisabledActions = array( 'credits' );
 
 # Process group overrides
-
-# makesysop permission removed, https://bugzilla.wikimedia.org/show_bug.cgi?id=23081
-# $wgGroupPermissions['steward'   ]['makesysop' ] = true;
-# $wgGroupPermissions['bureaucrat']['makesysop' ] = true;
 
 $wgGroupPermissions['steward'   ]['userrights'] = true;
 $wgGroupPermissions['bureaucrat']['userrights'] = false;
@@ -1491,7 +1434,6 @@ if ( function_exists( 'dba_open' ) && file_exists( "$IP/cache/interwiki.cdb" ) )
 
 $wgDebugLogGroups["ExternalStoreDB"] = "udp://$wmfUdp2logDest/external";
 
-# if( $wgDBname == 'frwikiquote' ||
 if ( $wgDBname == 'sep11wiki' ) {
   $wgSiteNotice = @file_get_contents( $wgReadOnlyFile );
 }
@@ -1820,10 +1762,6 @@ include "$IP/extensions/SimpleAntiSpam/SimpleAntiSpam.php";
 if ( $wmgUseCollection ) {
 	// PediaPress / PDF generation
 	include "$IP/extensions/Collection/Collection.php";
-	# $wgPDFServer = 'http://bindery.wikimedia.org/cgi-bin/pdfserver.py';
-	# $wgCollectionMWServeURL = 'http://bindery.wikimedia.org/cgi-bin/mwlib.cgi';
-	# $wgCollectionMWServeURL = 'http://bindery.wikimedia.org:8080/mw-serve/';
-	# $wgCollectionMWServeURL = 'http://erzurumi.wikimedia.org:8080/mw-serve/';
 	$wgCollectionMWServeURL = "http://pdf1.wikimedia.org:8080/mw-serve/";
 
 	// MediaWiki namespace is not a good default
@@ -2108,11 +2046,6 @@ if ( $wmgUseArticleFeedbackv5 ) {
 
 	$wgArticleFeedbackv5AbuseFiltering = $wmgArticleFeedbackv5AbuseFiltering;
 }
-
-# if ( $wgDBname == 'testwiki' ) {
-#   $wgDebugLogFile = '/tmp/debuglog_tmp.txt';
-# }
-
 
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
 $wgDefaultUserOptions['showhiddencats'] = $wmgShowHiddenCats;
