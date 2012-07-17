@@ -7032,6 +7032,7 @@ $wgConf->settings = array(
 		'uploader' => array( 'upload' => true ),
 		'closer' => array( 'delete' => true, 'suppressredirect' => true,  'upload' => true, ),
 		'filemover' => array( 'movefile' => true, 'suppressredirect' => true, 'upload' => true, ), // bug 30984
+		'suppressredirect' => array( 'suppressredirect' => true, ), // bug 38408
 		'sysop' => array( 'upload' => true, ),
 	),
 	'ruwikiquote' => array(
@@ -7539,7 +7540,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'abusefilter', 'patroller' ),
 	),
 	'+ruwiki' => array(
-		'sysop' => array( 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover' ),
+		'sysop' => array( 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ),
 	),
 	'+ruwikiquote' => array(
 		'sysop' => array( 'autoeditor' )
@@ -7916,7 +7917,7 @@ $wgConf->settings = array(
 	),
 	'+ruwiki' => array(
 		'bureaucrat' => array( 'sysop' ),
-		'sysop' => array( 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover' ),
+		'sysop' => array( 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ),
 	),
 	'+ruwikiquote' => array(
 		'sysop' => array( 'autoeditor' )
