@@ -158,7 +158,7 @@ return array(
 		'default' => false,
 	),
 	'-wmgEnableCaptcha' => array(
-		'default' => false,
+		'default' => true,
 	),
 	'-wmgClickTracking' => array(
 		'default' => false,
