@@ -8825,6 +8825,7 @@ $wgConf->settings = array(
 	'ptwikibooks' => true,
 	'hiwiki' => true,
 	'svwiki' => true,
+	'viwikibooks' => true, // Bug 38361
 	'zhwiki' => true,
 ),
 
