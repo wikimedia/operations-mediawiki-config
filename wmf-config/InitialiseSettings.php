@@ -8779,15 +8779,7 @@ $wgConf->settings = array(
 
 'wmgUseSpecialNuke' => array(
 	'default' => true,
-	'enwiki' => true,
-	'chrwiki' => true,
-	'commonswiki' => true,
-	'mediawikiwiki' => true,
-	'metawiki' => true,
-	'pdcwiki' => true,
-	'plwiki' => true,
 ),
-
 
 'wmgUseLST' => array(
 	// controls loading of LabeledSectionTransclusion extension
@@ -8805,7 +8797,6 @@ $wgConf->settings = array(
 	'outreachwiki' => true, // bug 29238
 	'sourceswiki' => true,
 	'testwiki' => false,
-
 ),
 
 'wmgUseQuiz' => array(
