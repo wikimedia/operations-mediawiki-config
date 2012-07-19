@@ -180,6 +180,10 @@ return array(
 		'enwiki'     => true,
 		'simplewiki' => true,
 	),
+
+	'-wmgArticleFeedbackLotteryOdds' => array(
+		'default' => 0,
+	),
 );
 
 } # wmflLabsSettings()
