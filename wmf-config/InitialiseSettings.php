@@ -10988,7 +10988,7 @@ $wgConf->settings = array(
 ),
 'wmgUseE3Experiments' => array(
 	'default' => false,
-//	'testwiki' => true,
+	'testwiki' => true,
 //	'enwiki' => true,
 ),
 'wmgUseEducationProgram' => array(
