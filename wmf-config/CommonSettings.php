@@ -2419,6 +2419,10 @@ if ( $wmgUseWikimediaShopLink ) {
 	$wgWikimediaShopLinkTarget = '//shop.wikimedia.org';
 }
 
+if ( $wmgUseE3Experiments ) {
+	require_once( "$IP/extensions/E3Experiments.php" );
+}
+
 if( $cluster == 'wmflabs' ) {
 	require( "$wmfConfigDir/CommonSettings-wmflabs.php" );
 }
