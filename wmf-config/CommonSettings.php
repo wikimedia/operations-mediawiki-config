@@ -2410,7 +2410,11 @@ if ( $wmgUseWikimediaShopLink ) {
 	$wgWikimediaShopEnableLink = true;
 	$wgWikimediaShopShowLinkCountries = array(
 		'US',
+		'VI',
+		'UM',
+		'PR',
 		'CA',
+		'MX',
 	);
 	$wgWikimediaShopLinkTarget = '//shop.wikimedia.org';
 }
