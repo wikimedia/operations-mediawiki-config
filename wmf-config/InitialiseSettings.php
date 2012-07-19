@@ -10340,10 +10340,8 @@ $wgConf->settings = array(
 ),
 'wmgMobileUrlTemplate' => array(
 	'default' => '%h0.m.%h1.%h2',
-	'metawiki' => '',
 	'foundationwiki' => '',
 	'commonswiki' => '',
-	'specieswiki' => '',
 	'mediawikiwiki' => 'm.%h1.%h2',
 	'test2wiki' => '',
 ),
