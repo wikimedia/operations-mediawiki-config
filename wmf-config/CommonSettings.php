@@ -2386,10 +2386,6 @@ if ( $wmgEnableRandomRootPage ) {
 
 if ( $wmgUseLastModified ) {
 	require_once( "$IP/extensions/LastModified/LastModified.php" );
-	# E3Experiments currently dependent on LastModified and ClickTracking
-	if ( $wmgUseE3Experiments ) {
-		require_once( "$IP/extensions/LastModified/E3Experiments/E3Experiments.php" );
-	}
 }
 
 #
@@ -2420,7 +2416,7 @@ if ( $wmgUseWikimediaShopLink ) {
 }
 
 if ( $wmgUseE3Experiments ) {
-	require_once( "$IP/extensions/E3Experiments.php" );
+	require_once( "$IP/extensions/E3Experiments/Experiments.php" );
 }
 
 if( $cluster == 'wmflabs' ) {
