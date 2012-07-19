@@ -123,13 +123,8 @@ if ( $wmgZeroRatedMobileAccess ) {
 }
 
 if ( $wmgZeroDisableImages ) {
-	if ( isset( $_SERVER['HTTP_X_CARRIER'] ) && strtoupper( $_SERVER['HTTP_X_CARRIER'] ) == 'DIGI' || 
-		isset( $_SERVER['HTTP_X_CARRIER'] ) && strtoupper( $_SERVER['HTTP_X_CARRIER'] ) == 'WIKIMEDIA' || 
-		isset( $_SERVER['HTTP_X_CARRIER'] ) && strtoupper( $_SERVER['HTTP_X_CARRIER'] ) == 'TELENOR MONTENEGRO' ||
-		isset( $_SERVER['HTTP_X_CARRIER'] ) && strtoupper( $_SERVER['HTTP_X_CARRIER'] ) == 'GRAMEENPHONE BANGLADESH' ) {
-		if ( isset( $_SERVER['HTTP_X_SUBDOMAIN'] ) && strtoupper( $_SERVER['HTTP_X_SUBDOMAIN'] ) == 'ZERO' ) {
-			$wgZeroDisableImages = $wmgZeroDisableImages;
-		}
+	if ( isset( $_SERVER['HTTP_X_SUBDOMAIN'] ) && strtoupper( $_SERVER['HTTP_X_SUBDOMAIN'] ) == 'ZERO' ) {
+		$wgZeroDisableImages = $wmgZeroDisableImages;
 	}
 }
 
