@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAQX//57M\u003d",
+        "filename": "README",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2012-07-19T15:56:47Z",
+      "side": 1,
+      "message": "Errrr... noooo.\n\nWe use wikiversions.dat/wikiversions.cdb for that\n\nThe *.dblist are literally as it says - lists of databases!",
+      "revId": "4a7002079cb8981a3cb95cbdb663c9834baeda45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAQX//57E\u003d",
+        "filename": "README",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2012-07-19T15:56:47Z",
+      "side": 1,
+      "message": "Where\u0027s this script?",
+      "revId": "4a7002079cb8981a3cb95cbdb663c9834baeda45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
