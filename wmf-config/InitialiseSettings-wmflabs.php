@@ -179,7 +179,9 @@ return array(
 	'-wmgUseE3Experiments' => array(
 		'default' => false,
 	),
-
+	'-wmgArticleFeedbackLotteryOdds' => array(
+		'default' => 0,
+	),
 );
 
 } # wmflLabsSettings()
