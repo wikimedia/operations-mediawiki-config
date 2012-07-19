@@ -1,0 +1,43 @@
+Files in this directory are almost a mirror of the Wikimedia Foundation cluster
+configuration.  Ommited files includes passwords and security measures.
+
+*.dblist
+ List of databases.
+
+wikiversions.dat, wikiversions.cdb
+ Let us associate a database with a specific copy of MediaWiki (generally a
+branch). The .cdb file is updated by editing wikiversions.dat first and then
+running multiversion/refreshWikiversionsCDB.
+
+docroot/
+ The Apache document root for several of our VirtualHosts.
+
+images/
+ Shared pictures for the unified login system
+
+live-1.5/
+ The docroot for any wiki.
+
+tests/
+ Hold some PHPUnit tests.
+
+wmf-config/
+ The MediaWiki configuration for all database. Think of it like a huge
+LocalSettings.php.
+
+wmf-config/CommonSettings.php
+ Generic configuration such as including extensions or calling over piece
+of configuration. This is mostly shared among all wikis.
+
+wmf-config/InitialiseSettings.php
+ Per wiki configuration.
+
+wmf-config/db.php
+ Databases related configuration
+
+wmf-config/mc.php
+ Memcached configuration
+
+wmf-config/*-wmflabs.php
+ Files used by the beta cluster to override production settings.
+
