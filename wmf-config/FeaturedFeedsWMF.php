@@ -1,11 +1,8 @@
 <?php
 /* 
+ * WARNING: This file is publically viewable on the web. Do not put private data here.
  * Feed settings for WMF projects
  */
-
-if ( !defined( 'MEDIAWIKI' ) ) {
-	die( 'Not a valid entry point' );
-}
 
 $wgHooks['FeaturedFeeds::getFeeds'][] = 'wfFeaturedFeedsWMF_getFeeds';
 
