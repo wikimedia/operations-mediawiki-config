@@ -7417,9 +7417,8 @@ $wgConf->settings = array(
 		'sysop' => array( 'rollbacker' ),
 	),
 	'+hewiki' => array(
-		'sysop' => array( 'patroller', 'autopatrolled' ),
+		'sysop' => array( 'patroller', 'autopatrolled', 'accountcreator' ),
 		'bureaucrat' => array( 'editinterface' ),
-
 	),
 	'+hewikibooks' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
@@ -7789,7 +7788,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'rollbacker' ),
 	),
 	'+hewiki' => array(
-		'sysop' => array( 'patroller', 'autopatrolled' ),
+		'sysop' => array( 'patroller', 'autopatrolled', 'accountcreator' ),
 		'bureaucrat' => array( 'editinterface' ),
 	),
 	'+hewikibooks' => array(
