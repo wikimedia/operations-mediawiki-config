@@ -7218,6 +7218,7 @@ $wgConf->settings = array(
 			'suppressredirect' => true, // http://meta.wikimedia.org/w/index.php?title=Wikimedia_Forum&oldid=1371655#Gives_sysops_to_.22suppressredirect.22_right
 			'noratelimit' => true,
 			'deleterevision' => true,
+			'deletelogentry' => true,
 		),
 		'bot' => array(
 			'noratelimit' => true,
@@ -7263,6 +7264,7 @@ $wgConf->settings = array(
 		# To allow for inline log suppression -- 2009-01-29 -- BV
 		'oversight' => array(
 			'deleterevision' => true,
+			'deletelogentry' => true,
 			'hideuser' => true, // was forgotten. added 2009-03-05 -- BV
 			'suppressrevision' => true,
 			'suppressionlog' => true,
