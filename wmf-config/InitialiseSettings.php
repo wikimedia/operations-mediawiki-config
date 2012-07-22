@@ -5856,7 +5856,6 @@ $wgConf->settings = array(
 	'private' => 0, // disable for wikis with sysop-only account creation
 	'fishbowl' => 0,
 	'idwiki' => 0,
-	'swwiki' => 150, // for event 2011-11-30, contact User:Ijon -- TS
 ),
 
 'wgDefaultSkin' => array(
