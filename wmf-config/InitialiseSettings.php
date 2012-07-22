@@ -10063,6 +10063,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'metawiki' => true,  // Bug 32014
 	'aswiki' => true, // Bug 32042
+	'bnwikisource' => true, // Bug 36104
 	'commonswiki' => true, // Bug 32619
 	'guwiki' => true, // Bug 33423
 	'guwikisource' => true, // Bug 35138
