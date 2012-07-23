@@ -3125,6 +3125,9 @@ $wgConf->settings = array(
 		'Wiktionary' => NS_PROJECT,
 		'ВС' => NS_PROJECT,
 	),
+	'urwiki' => array(
+	    'Portal' => 100,
+	),
 	'vecwikisource' => array(
 		'Author' => 100,
 		'Author_talk' => 101,
@@ -4944,6 +4947,9 @@ $wgConf->settings = array(
 	101 => 'Портал бәхәсе',
 	),
 	'ukwiki' => array( 100 => 'Портал', 101 => 'Обговорення_порталу' ),
+	'urwiki' => array(
+	    100 => 'باب',
+	),
 	'vecwiki' => array(
 		100 => 'Portałe',
 		101 => 'Discussion_portałe',
