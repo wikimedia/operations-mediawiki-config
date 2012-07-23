@@ -4432,7 +4432,10 @@ $wgConf->settings = array(
 		100 => 'በር',  # 28727
 		101 => 'በር_ውይይት',
 	),
-	'anwiki' => array( 100 => 'Portal', 101 => 'Descusión_Portal', ),
+	'anwiki' => array(
+		100 => 'Portal',
+		101 => 'Descusión_Portal',
+	),
 	'arwiki' => array(
 	100 => 'بوابة',
 	101 => 'نقاش_البوابة',
@@ -4527,8 +4530,14 @@ $wgConf->settings = array(
 		102 => 'Artikeldata',
 		103 => 'Artikeldatadiskussion'
 	),
-	'dewiki' => array( 100 => 'Portal', 101 => 'Portal_Diskussion' ),
-	'elwiki' => array( 100 => 'Πύλη', 101 => 'Συζήτηση_πύλης' ),
+	'dewiki' => array(
+		100 => 'Portal',
+		101 => 'Portal_Diskussion'
+	),
+	'elwiki' => array(
+		100 => 'Πύλη',
+		101 => 'Συζήτηση_πύλης'
+	),
 	'elwikinews' => array(
 		102 => 'Σχόλια', // Comments
 		103 => 'Συζήτηση_σχολίων', // Comment talk
@@ -4605,7 +4614,9 @@ $wgConf->settings = array(
 		102 => 'Libro',
 		103 => 'Conversa_libro',
 	),
-	'hewiki' => array( 100 => 'פורטל', 101 => 'שיחת_פורטל',
+	'hewiki' => array(
+		100 => 'פורטל',
+		101 => 'שיחת_פורטל',
 		108 => 'ספר', // Book
 		109 => 'שיחת_ספר', // Book talk
 	),
@@ -4613,7 +4624,12 @@ $wgConf->settings = array(
 		100 => 'प्रवेशद्वार',
 		101 => 'प्रवेशद्वार_वार्ता',
 	),
-	'hrwiki' => array( 100 => 'Portal', 101 => 'Razgovor_o_portalu', 102 => 'Dodatak', 103 => 'Razgovor_o_dodatku'  ),
+	'hrwiki' => array(
+		100 => 'Portal',
+		101 => 'Razgovor_o_portalu',
+		102 => 'Dodatak',
+		103 => 'Razgovor_o_dodatku'
+	),
 	'huwiki' => array(
 		100 => 'Portál',
 		101 => 'Portálvita',
@@ -4632,8 +4648,14 @@ $wgConf->settings = array(
 		102 => 'Appendice',
 		103 => 'Discussion_Appendice',
 	),
-	'idwiki' => array( 100 => 'Portal', 101 => 'Pembicaraan_Portal' ),
-	'iswiki' => array( 100 => 'Gátt', 101 => 'Gáttaspjall' ),
+	'idwiki' => array(
+		100 => 'Portal',
+		101 => 'Pembicaraan_Portal'
+	),
+	'iswiki' => array(
+		100 => 'Gátt',
+		101 => 'Gáttaspjall'
+	),
 	'itwiki' => array(
 		100 => 'Portale',
 		101 => 'Discussioni_portale',
@@ -4733,8 +4755,8 @@ $wgConf->settings = array(
 	'lvwiki' => array(
 		100 => 'Portāls',
 		101 => 'Portāla_diskusija',
-	102 => 'Vikiprojekts',
-	103 => 'Vikiprojekta_diskusija',
+		102 => 'Vikiprojekts',
+		103 => 'Vikiprojekta_diskusija',
 	),
 	'lvwiktionary' => array(
 		100 => 'Pielikums',
@@ -4744,7 +4766,10 @@ $wgConf->settings = array(
 		   102 => 'Автор',
 		   103 => 'Разговор_за_автор',
 	),
-	'mlwiki' => array( 100 => 'കവാടം', 101 => 'കവാടത്തിന്റെ_സംവാദം' ),
+	'mlwiki' => array(
+		100 => 'കവാടം',
+		101 => 'കവാടത്തിന്റെ_സംവാദം'
+	),
 	'mlwikisource' => array(
 		100 => 'രചയിതാവ്',
 		101 => 'രചയിതാവിന്റെ_സംവാദം',
@@ -4785,12 +4810,18 @@ $wgConf->settings = array(
 		100 => 'پورتال', # Portal
 		101 => 'پورتال گپ', # Portal talk
 	),
-	'ndswiki' => array( 100 => 'Portal', 101 => 'Portal_Diskuschoon' ),
+	'ndswiki' => array(
+		100 => 'Portal',
+		101 => 'Portal_Diskuschoon'
+	),
 	'newwiki' => array(
 		100 => 'दबू',
 		101 => 'दबू_खँलाबँला',
 	),
-	'nlwiki' => array( 100 => 'Portaal', 101 => 'Overleg_portaal' ),
+	'nlwiki' => array(
+		100 => 'Portaal',
+		101 => 'Overleg_portaal'
+	),
 	'nnwiki' => array(
 		100 => 'Tema',
 		101 => 'Temadiskusjon',
@@ -4809,7 +4840,10 @@ $wgConf->settings = array(
 		102 => 'Projècte',
 		103 => 'Discussion_Projècte',
 	),
-	'otrs_wikiwiki' => array( 100 => 'Response', 101 => 'Response_talk' ),
+	'otrs_wikiwiki' => array(
+		100 => 'Response',
+		101 => 'Response_talk'
+	),
 	'plwiki' => array(
 		NS_PROJECT_TALK => 'Dyskusja_Wikipedii',
 		NS_USER => 'Wikipedysta',
@@ -5298,7 +5332,10 @@ $wgConf->settings = array(
 	# @} end of wikisource wikis
 
 	// Wiktionary @{
-	'bgwiktionary' => array( 100 => "Словоформи", 101 => "Словоформи_беседа" ),
+	'bgwiktionary' => array(
+		100 => 'Словоформи',
+		101 => 'Словоформи_беседа'
+	),
 	'bswiktionary' => array(
 		100 => 'Portal',
 		101 => 'Razgovor_o_Portalu',
@@ -5463,7 +5500,10 @@ $wgConf->settings = array(
 		106 => 'Рифмы',
 		107 => 'Обсуждение_рифм',
 	),
-	'srwiktionary' => array( 100 => 'Портал', 101 => 'Разговор_о_порталу' ),
+	'srwiktionary' => array(
+		100 => 'Портал',
+		101 => 'Разговор_о_порталу'
+	),
 	'svwiktionary' => array(    # http://bugzilla.wikimedia.org/show_bug.cgi?id=7933
 		// 100 => 'WT', //removed, #22446
 		// 101 => 'WT-diskussion',
@@ -5500,9 +5540,18 @@ $wgConf->settings = array(
 		102 => 'বিষয়',
 		103 => 'বিষয়_আলাপ',
 	),
-	'cawikibooks' => array( 102 => 'Viquiprojecte', 103 => 'Viquiprojecte Discussió' ),
-	'cywikibooks' => array( 102 => 'Silff_lyfrau', 103 => 'Sgwrs_Silff_lyfrau' ),
-	'dewikibooks' => array( 102 => 'Regal', 103 => 'Regal_Diskussion' ),
+	'cawikibooks' => array(
+		102 => 'Viquiprojecte',
+		103 => 'Viquiprojecte Discussió'
+	),
+	'cywikibooks' => array(
+		102 => 'Silff_lyfrau',
+		103 => 'Sgwrs_Silff_lyfrau'
+	),
+	'dewikibooks' => array(
+		102 => 'Regal',
+		103 => 'Regal_Diskussion'
+	),
 	'enwikibooks' => array(
 		102 => 'Cookbook',
 		103 => 'Cookbook_talk',
@@ -5513,7 +5562,10 @@ $wgConf->settings = array(
 		112 => 'Subject',
 		113 => 'Subject_talk',
 	),
-	'eswikibooks' => array( 102 => 'Wikiversidad', 103 => 'Wikiversidad_Discusión' ),
+	'eswikibooks' => array(
+		102 => 'Wikiversidad',
+		103 => 'Wikiversidad_Discusión'
+	),
 	'frwikibooks' => array(
 		100 => 'Transwiki',
 		101 => 'Discussion_Transwiki',
@@ -5540,7 +5592,7 @@ $wgConf->settings = array(
 		103 => 'Discussioni_ripiano',
 		# Wikiversità deleted, http://bugzilla.wikimedia.org/show_bug.cgi?id=10287
 		# 102 => 'Wikiversità', # http://bugzilla.wikimedia.org/show_bug.cgi?id=7354
-	   # 103 => 'Discussioni_Wikiversità',
+		# 103 => 'Discussioni_Wikiversità',
 	),
 	'jawikibooks' => array(
 		100 => 'Transwiki',
@@ -5597,7 +5649,10 @@ $wgConf->settings = array(
 		114 => 'කණිෂ්ඨ_විකි',
 		115 => 'කණිෂ්ඨ_විකි_සාකච්ඡාව',
 	),
-	'srwikibooks' => array( 102 => 'Кувар', 103 => 'Разговор_о_кувару' ),
+	'srwikibooks' => array(
+		102 => 'Кувар',
+		103 => 'Разговор_о_кувару'
+	),
 
 	'tlwikibooks' => array(
 		100 => 'Pagluluto',
@@ -5750,11 +5805,13 @@ $wgConf->settings = array(
 		106 => 'Yorum',
 		107 => 'Yorum_tartışma',
 	),
-	'zhwikinews' => array( 100 => '频道', 101 => '频道_talk' ),
+	'zhwikinews' => array(
+		100 => '频道',
+		101 => '频道_talk'
+	),
 	// @} end of wikinews
 
 	// Wikiquote @{
-	'hewikiquote'	=> array( 100 => 'פורטל', 101 => 'שיחת_פורטל' ),
 	'dewikiquote' => array(
 		100 => 'Portal',
 		101 => 'Portal_Diskussion',
@@ -5769,7 +5826,14 @@ $wgConf->settings = array(
 		108 => 'Transwiki',
 		109 => 'Discussion_Transwiki',
 	),
-	'liwikiquote' => array( 100 => 'Portaol', 101 => 'Euverlèk_portaol' ),	// bug 12240
+	'hewikiquote' => array(
+		100 => 'פורטל',
+		101 => 'שיחת_פורטל'
+	),
+	'liwikiquote' => array(	// bug 12240
+		100 => 'Portaol',
+		101 => 'Euverlèk_portaol'
+	),
 	// @} end of wikiquote
 
 	// Wikiversity @{
@@ -6300,11 +6364,11 @@ $wgConf->settings = array(
 	'default' => array(),
 	'enwiki' => array(
 		'75.101.56.124', // usability office
-	'167.165.53.93', // proteins@msu.edu
-	'41.216.220.97', // ITOCA Tanzania for event 2011-11-30
+		'167.165.53.93', // proteins@msu.edu
+		'41.216.220.97', // ITOCA Tanzania for event 2011-11-30
 	),
 	'swwiki' => array(
-	'41.216.220.97', // ITOCA Tanzania for event 2011-11-30
+		'41.216.220.97', // ITOCA Tanzania for event 2011-11-30
 	),
 ),
 
@@ -6822,10 +6886,11 @@ $wgConf->settings = array(
 		'flood' => array( 'bot' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=36600
 	),
 	'itwikiversity' => array( 'autoconfirmed' => array( 'patrol' => true ) ),
-	'itwikibooks' => array( 'user' => array( 'patrol' => false, 'move' => false ),
-							'autoconfirmed' => array( 'move' => true, 'patrol' => true ),
-				'autopatrolled' => array( 'autopatrol' => true, ),
-				'patroller' => array( 'autopatrol' => true, 'rollback' => true, ),
+	'itwikibooks' => array(
+		'user' => array( 'patrol' => false, 'move' => false ),
+		'autoconfirmed' => array( 'move' => true, 'patrol' => true ),
+		'autopatrolled' => array( 'autopatrol' => true, ),
+		'patroller' => array( 'autopatrol' => true, 'rollback' => true, ),
 	 ),
 	'itwikinews' => array( 'autoconfirmed' => array( 'patrol' => true ) ),
 	'itwikiquote' => array(
@@ -6911,7 +6976,7 @@ $wgConf->settings = array(
 	'mkwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true ),
-			'autoreviewed' => array( 'autoreview' => true ),
+		'autoreviewed' => array( 'autoreview' => true ),
 	),
 	'mlwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -7133,11 +7198,10 @@ $wgConf->settings = array(
 		'autoconfirmed' => array( 'patrol' => true ),
 		'rollbacker'	=> array( 'rollback' => true, 'autopatrol' => true ),
 	),
-	'svwikisource' => array(
-        // Bug 28614 & 36895
+	'svwikisource' => array( // Bug 28614 & 36895
 		'autopatrolled' => array( 'autopatrol' => true, 'suppressredirect' => true, 'upload' => true, 'reupload' => true ),
-        'autoconfirmed' => array( 'upload' => false, 'reupload' => false),
-        'confirmed' => array( 'upload' => false, 'reupload' => false),
+		'autoconfirmed' => array( 'upload' => false, 'reupload' => false),
+		'confirmed' => array( 'upload' => false, 'reupload' => false),
 	),
 	'svwiktionary' => array(
 		'user' => array( 'upload' => false ),
@@ -7184,11 +7248,11 @@ $wgConf->settings = array(
 	),
 	// due to mass vandalism complaint, 2006-04-11
 	'zhwiki' => array(
-	    // '*' => array( 'createpage' => false ),  # re-enabled createpage priv according to bug 25142, then redisabled *sigh*, then reenabled \o/
-		'rollbacker' 	=> array( 'rollback' => true, 'abusefilter-log-private' => true ), # Bugs 16988 & 37679
-	 	'patroller'		=> array( 'patrol' => true, 'autopatrol' => true ),
-	 	'autoreviewer'  => array( 'autopatrol' => true ),
-	 	'flood'	 => array( 'bot' => true ),
+		// '*' => array( 'createpage' => false ),  # re-enabled createpage priv according to bug 25142, then redisabled *sigh*, then reenabled \o/
+		'rollbacker' => array( 'rollback' => true, 'abusefilter-log-private' => true ), # Bugs 16988 & 37679
+		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
+		'autoreviewer' => array( 'autopatrol' => true ),
+		'flood' => array( 'bot' => true ),
 	),
 
 	'zhwikinews' => array(
@@ -9563,7 +9627,7 @@ $wgConf->settings = array(
 
 # abuse filter @{
 'wmgUseAbuseFilter' => array(
-   'default' => true,
+	'default' => true,
 ),
 # @}
 
@@ -9578,8 +9642,8 @@ $wgConf->settings = array(
 ),
 
 'wgTorTagChanges' => array(
-  'default' => false, // pending discussion
-  'testwiki' => true,
+	'default' => false, // pending discussion
+	'testwiki' => true,
 ),
 
 'wmgContactPageConf' => array(
@@ -9588,8 +9652,8 @@ $wgConf->settings = array(
 	// bug 15624
 	'nlwiki' => array(
 		'wgContactUser' => 'WikiAdmin',
-	'wgContactSenderName' => 'Contactformulier op nl-Wikipedia',
-	'wgContactIncludeIP' => true,
+		'wgContactSenderName' => 'Contactformulier op nl-Wikipedia',
+		'wgContactIncludeIP' => true,
 	),
 ),
 
