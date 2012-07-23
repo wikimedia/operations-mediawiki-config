@@ -521,6 +521,10 @@ elseif ( $wgDBname == 'sqwiki' ) {
 	$wgGroupPermissions['sysop']['unreviewedpages'] = true;
 }
 
+elseif ( $wgDBname == 'trwikiquote' ) {
+	unset( $wgGroupPermissions['reviewer'] );
+}
+
 elseif( $wgDBname == 'ukwiki' ) {
 	$wgFlaggedRevValues = 1;
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_CATEGORY, NS_TEMPLATE );
