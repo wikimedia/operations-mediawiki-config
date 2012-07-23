@@ -226,8 +226,6 @@ elseif ( $wgDBname == 'enwikibooks' ) {
 	$wgGroupPermissions['sysop']['validate'] = true;
 
 	unset( $wgGroupPermissions['reviewer'] );
-	// @TODO: wtf is this here?
-	unset( $wgGroupPermissions['importupload'] );
 
 	$wgFeedbackAge = 180 * 24 * 3600;
 	$wgFeedbackSizeThreshhold = 5;
