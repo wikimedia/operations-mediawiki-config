@@ -6128,6 +6128,7 @@ $wgConf->settings = array(
 	'frwiktionary' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=21517
 	'fywiki' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=10584
 	'hewiki' => true, // https://bugzilla.wikimedia.org/show_bug.cgi?id=5232
+	'hewikibooks' => true, // Bug 27918
 	'hewikiquote' => true,
 	'hiwiki' => true,
 	'hrwiki' => true, // by request of stemd from #wikipedia-hr 2007-05-15 -jeronim
