@@ -142,7 +142,8 @@ case 'pmtpa'  :
 	$wmfUdp2logDest = '10.0.5.8:8420';
 	break;
 case 'wmflabs':
-	$wmfUdp2logDest = 'deployment-feed:8420';
+	# deployment-dbdump host the udp2log daemon
+	$wmfUdp2logDest = '10.4.0.56:8420';
 	break;
 default:
 	$wmfUdp2logDest = '127.0.0.1:8420';
