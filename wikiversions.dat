@@ -128,7 +128,6 @@ chowiki php-1.20wmf7 *
 chrwiki php-1.20wmf7 *
 chrwiktionary php-1.20wmf7 *
 chwikibooks php-1.20wmf7 *
-chwikimedia php-1.20wmf6 *
 chwiki php-1.20wmf7 *
 chwiktionary php-1.20wmf7 *
 chywiki php-1.20wmf7 *
@@ -717,7 +716,7 @@ tawikiquote php-1.20wmf7 *
 tawikisource php-1.20wmf7 *
 tawiktionary php-1.20wmf7 *
 tenwiki php-1.20wmf7 *
-test2wiki php-1.20wmf7 *
+test2wiki php-1.20wmf8 *
 testwiki php-1.20wmf7 *
 tetwiki php-1.20wmf7 *
 tewikibooks php-1.20wmf7 *
