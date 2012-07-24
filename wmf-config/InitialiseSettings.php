@@ -10147,6 +10147,7 @@ $wgConf->settings = array(
 	'orwiki' => true, // Bug 31814
 	'orwiktionary' => true, // Bug 31857
 	'outreachwiki' => true, // Bug 33899
+	'pawiki' => true, // Bug 32516
 	'sawiki' => true, // Bug 29515
 	'sawikibooks' => true, // Bug 29515
 	'sawikisource' => true, // Bug 29515
