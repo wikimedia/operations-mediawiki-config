@@ -10333,6 +10333,7 @@ $wgConf->settings = array(
 	'siwiki' => true, // bug 33485
 	'srwiki' => true, // bug 35913
 	'svwiki' => true, // bug 30756
+	'svwikinews' => true, // bug 31754
 	'testwiki' => true,
 	'trwiki' => true, // bug 38227
 	'zhwiki' => true, // bug 30362
