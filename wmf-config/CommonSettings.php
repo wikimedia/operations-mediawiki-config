@@ -1710,6 +1710,10 @@ if ( $wmgUseCentralNotice ) {
 	if( $cluster == 'pmtpa' && $wgDBname == 'testwiki' ) {
 		$wgNoticeInfrastructure = true;
 	}
+	
+	
+	// Set fundraising banners to use HTTPS on foundatoin wiki
+	$wgNoticeFundraisingUrl = 'https://donate.wikimedia.org/wiki/Special:LandingCheck';
 
 	// No caching for banners on testwiki, so we can develop them there a bit faster - NeilK 2012-01-16
 	// Never set this to zero on a highly trafficked wiki, there are server-melting consequences
