@@ -7227,7 +7227,41 @@ $wgConf->settings = array(
 		'researcher' => array( 'browsearchive' => true, 'deletedhistory' => true, 'apihighlimits' => true ),
 	),
 	'trwiki' => array(
-		'patroller' => array( 'patrol' => true ),
+		'autoreview' => array(
+			'autopatrol' => true, // Bug 38690
+		),
+		'checkuser' => array(
+			'browsearchive' => true, // Bug 38690
+			'deletedhistory' => true, // Bug 38690
+			'deletedtext' => true, // Bug 38690
+		),
+		'oversight' => array(
+			'browsearchive' => true, // Bug 38690
+			'deletedhistory' => true, // Bug 38690
+			'deletedtext' => true, // Bug 38690
+		),
+		'patroller' => array(
+			'autoconfirmed' = true, // Bug 38690
+			'autopatrol' => true, // Bug 38690
+			'autoreview' => true, // Bug 38690
+			'patrol' => true,
+			'review' => true, // Bug 38690
+			'rollback' => true, // Bug 38690
+			'unreviewedpages' => true, // Bug 38690
+		),
+		'sysop' => array(
+			'review' => true, // Bug 38690
+			'unreviewedpages' => true, //Bug 38690
+		),
+		'technician' => array(
+			'abusefilter-log-detail' => true, // Bug 38690
+			'abusefilter-modify' => true, // Bug 38690
+			'apihighlimits' => true, // Bug 38690
+			'editinterface' => true, // Bug 38690
+			'editusercss' => true, // Bug 38690
+			'edituserjs' => true, // Bug 38690
+			'noratelimit' => true, // Bug 38690
+		),
 	),
 	'ukwiki' => array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, ),
@@ -7669,7 +7703,8 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'nocreate' ),
 	),
 	'+trwiki' => array(
-		'bureaucrat' => array( 'patroller' )
+		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, Bug 38690
+		'bureaucrat' => array( 'technician' ), // Bug 39690
 	),
 	'+ukwiki' => array(
 		'sysop' => array( 'patroller', 'rollbacker' ),
@@ -8049,7 +8084,8 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'nocreate' ),
 	),
 	'+trwiki' => array(
-		'bureaucrat' => array( 'patroller' )
+		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, Bug 38690
+		'bureaucrat' => array( 'technician' ), // Bug 39690
 	),
 	'+ukwiki' => array(
 		'sysop' => array( 'patroller', 'rollbacker' ),

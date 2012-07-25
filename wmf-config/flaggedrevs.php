@@ -519,6 +519,10 @@ elseif ( $wgDBname == 'sqwiki' ) {
 	$wgGroupPermissions['sysop']['unreviewedpages'] = true;
 }
 
+elseif ( $wgDBname == 'trwiki' ) {
+	unset( $wgGroupPermissions['reviewer'] ); // Bug 38690
+}
+
 elseif ( $wgDBname == 'trwikiquote' ) {
 	unset( $wgGroupPermissions['reviewer'] );
 }
