@@ -153,10 +153,6 @@ return array(
 	'-wmgUseAPIRequestLog' => array(
 		'default' => false,
 	),
-	'-wmgEnablePageTriage' => array(
-		# hashar, pending database update
-		'default' => false,
-	),
 	'-wmgEnableCaptcha' => array(
 		'default' => true,
 	),
