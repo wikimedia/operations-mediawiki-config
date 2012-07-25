@@ -2358,10 +2358,7 @@ if ( $wmgUseFeaturedFeeds ) {
 	require_once( "$wmfConfigDir/FeaturedFeedsWMF.php" );
 }
 
-// $wgDisplayFeedsInSidebar from FeaturedFeeds defaults to true in the install file
-if ( $wmgDisplayFeedsInSidebar === false ) {
-	$wgDisplayFeedsInSidebar = false;
-}
+$wgDisplayFeedsInSidebar = $wmgDisplayFeedsInSidebar;
 
 if( $cluster == 'pmtpa' ) {
 	# Temporary code to purge swift thumbnails --aaron 2/1/2012
