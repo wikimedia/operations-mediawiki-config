@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAQ3//9LE\u003d",
+        "filename": "README",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2012-07-26T11:37:27Z",
+      "side": 1,
+      "message": "wikiversions.dat is generated using wikiversions.dat as a reference?",
+      "revId": "84962dc6f72aa1627b4443f65c2729d32b42f7c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAQ3//9LA\u003d",
+        "filename": "README",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2012-07-26T11:37:27Z",
+      "side": 1,
+      "message": "unified login system",
+      "revId": "84962dc6f72aa1627b4443f65c2729d32b42f7c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
