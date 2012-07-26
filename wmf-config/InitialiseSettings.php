@@ -10112,6 +10112,7 @@ $wgConf->settings = array(
 'wmgArticleFeedbackv5OversightEmails' => array(
 	'default' => 'aft@wikimedia.org',
 	'enwiki' => 'oversight-en-wp@wikipedia.org',
+	#'enwiki' => 'roan@wikimedia.org',
 ),
 'wmgArticleFeedbackv5AbuseFiltering' => array(
 	'default' => false,
@@ -10995,7 +10996,8 @@ $wgConf->settings = array(
 ),
 'wmgUseShortUrl' => array(
 	'default' => false,
-	#'testwiki' => true, #temp disable for testing AFTv5 --catrope
+	'testwiki' => true,
+	'test2wiki' => true,
 ),
 'wmgShortUrlPrefix' => array(
 	'default' => false,
