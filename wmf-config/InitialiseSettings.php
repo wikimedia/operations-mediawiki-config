@@ -10999,9 +10999,6 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'test2wiki' => true,
 ),
-'wmgShortUrlPrefix' => array(
-	'default' => false,
-),
 'wmgUseFeaturedFeeds' => array(
 	'default' => true,
 ),

@@ -2341,8 +2341,7 @@ if ( $wmgUseApiSandbox ) {
 
 if ( $wmgUseShortUrl ) {
 	require_once( "$IP/extensions/ShortUrl/ShortUrl.php" );
-	$wgShortUrlPrefix = $wmgShortUrlPrefix;
-	$wgShortUrlPath = "/s/$1";
+	$wgShortUrlTemplate = "/s/$1";
 	$wgHooks['WebRequestPathInfoRouter'][] = 'egShortURLRouter';
 	function egShortURLRouter( $router ) {
 		global $wgShortUrlPath;
