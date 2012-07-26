@@ -2347,7 +2347,7 @@ if ( $wmgUseShortUrl ) {
 	function egShortURLRouter( $router ) {
 		global $wgShortUrlPath;
 		if ( $wgShortUrlPath ) {
-			$router->add( $wgShortUrlPath, array( 'title' => Special::getTitleFor( 'ShortUrl', '$1' ) ) );
+			$router->add( $wgShortUrlPath, array( 'title' => SpecialPage::getTitleFor( 'ShortUrl', '$1' ) ) );
 		}
 		return true;
 	}
