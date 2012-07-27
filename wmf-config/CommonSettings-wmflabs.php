@@ -42,6 +42,9 @@ $wgDnsBlacklistUrls   = array(
 //Commented until a dedicated wiki is created.
 //require_once ("$IP/extensions/OnlineStatusBar/OnlineStatusBar.php");
 
+// So that people can easily test the captchas without making accounts -- Platonides
+$wgGroupPermissions['autoconfirmed']['skipcaptcha'] = false;
+
 $wgMaxShellMemory = 30000000;
 
 # temporary extensions
