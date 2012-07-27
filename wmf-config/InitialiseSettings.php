@@ -8272,6 +8272,7 @@ $wgConf->settings = array(
 	'nowikiquote' => array( 'w', 'en', 'nn' ),
 	'nowikisource' => array( 'w' ),
 	'nowiktionary' => array( 'w' ),
+	'nycwikimedia' => array( 'w:en', 'meta' ),
 	'orwiki' => array( 'en', 'commons' ),
 	'otrs_wikiwiki' => array( 'meta' ),
 	'outreachwiki'  => array( 'w:en', 'w:de', 'w:fr', 'w:pl', 'w:it', 'w:ja', 'w:es', 'w:nl', 'w:pt', 'w:ru', 'w:sv', 'commons', 'foundation', 'm', ),
