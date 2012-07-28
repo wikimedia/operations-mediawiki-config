@@ -176,6 +176,10 @@ return array(
 		'enwiki'     => true,
 		'simplewiki' => true,
 	),
+	'-wmgUseE3Experiments' => array(
+        	'default' => false,
+	),
+
 );
 
 } # wmflLabsSettings()
