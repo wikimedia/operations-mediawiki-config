@@ -7618,7 +7618,7 @@ $wgConf->settings = array(
 	'+sawiki' => array(
 		'sysop' => array( 'autopatrolled' ),
 	),
-	'+sawiki' => array(
+	'+sawikisource' => array(
 		'sysop' => array( 'autopatrolled' ),
 	),
 	'+scowiki' => array(
@@ -7995,7 +7995,7 @@ $wgConf->settings = array(
 	'+sawiki' => array(
 		'sysop' => array( 'autopatrolled' ),
 	),
-	'+sawiki' => array(
+	'+sawikisource' => array(
 		'sysop' => array( 'autopatrolled' ),
 	),
 	'+scowiki' => array(
