@@ -935,6 +935,7 @@ $wgConf->settings = array(
 	// Use relative paths for same-wiki links so the SSL converter can tweak them correctly
 	'incubatorwiki' => '/wiki/Special:MyLanguage/Incubator:Upload',
 
+	'aswiki'	=> '/wiki/ৱিকিপিডিয়া:ফাইল_আপল’ড_বিশেষজ্ঞ',
 	'bgwiki'	=> '/wiki/MediaWiki:Uploadtext',
 	'bnwiki'	=> '/wiki/উইকিপিডিয়া:আপলোড',
 	'bswiki'	=> '/wiki/Wikipedia:Upload',
