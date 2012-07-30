@@ -2342,14 +2342,6 @@ if ( $wmgUseApiSandbox ) {
 if ( $wmgUseShortUrl ) {
 	require_once( "$IP/extensions/ShortUrl/ShortUrl.php" );
 	$wgShortUrlTemplate = "/s/$1";
-	$wgHooks['WebRequestPathInfoRouter'][] = 'egShortURLRouter';
-	function egShortURLRouter( $router ) {
-		global $wgShortUrlPath;
-		if ( $wgShortUrlPath ) {
-			$router->add( $wgShortUrlPath, array( 'title' => SpecialPage::getTitleFor( 'ShortUrl', '$1' ) ) );
-		}
-		return true;
-	}
 }
 
 if ( $wmgUseFeaturedFeeds ) {
