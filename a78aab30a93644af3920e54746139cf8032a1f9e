@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAQ3//7nI\u003d",
+        "filename": "wmf-config/InitialiseSettings-wmflabs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2012-07-30T15:55:35Z",
+      "side": 1,
+      "message": "Why is it red?",
+      "revId": "a78aab30a93644af3920e54746139cf8032a1f9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
