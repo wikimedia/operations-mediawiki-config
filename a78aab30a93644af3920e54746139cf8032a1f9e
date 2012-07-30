@@ -16,6 +16,24 @@
       "revId": "a78aab30a93644af3920e54746139cf8032a1f9e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAAQ3//7c8\u003d",
+        "filename": "wmf-config/InitialiseSettings-wmflabs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 27
+      },
+      "writtenOn": "2012-07-30T19:29:16Z",
+      "side": 1,
+      "message": "The first \u0027tab\u0027 was made with spaces (copied from somewhere I guess).\nFixed.",
+      "parentUuid": "AAAAQ3//7nI\u003d",
+      "revId": "a78aab30a93644af3920e54746139cf8032a1f9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
