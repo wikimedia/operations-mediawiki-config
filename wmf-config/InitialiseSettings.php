@@ -11038,6 +11038,9 @@ $wgConf->settings = array(
 ),
 'wmgUseShortUrl' => array(
 	'default' => false,
+	'hiwiki' => true,
+	'orwiki' => true,
+	'tawiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
 ),
