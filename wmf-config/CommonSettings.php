@@ -2089,6 +2089,15 @@ if ( $wgUseContributionTracking ) {
 	$wgContributionTrackingUTMKey = true;
 }
 
+if ( $wmgUseMwEmbedSupport ) {
+	require_once( "$IP/extensions/MwEmbedSupport/MwEmbedSupport.php" );
+}
+
+if ( $wmgUseTimedMediaHandler ) {
+	require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
+	$wgEnableTranscode = false; // disabled initially
+}
+
 if ( $wmgUseUploadWizard ) {
 	require_once( "$IP/extensions/UploadWizard/UploadWizard.php" );
 	# Do not change $wgUploadStashScalerBaseUrl to a protocol-relative URL. This is how UploadStash fetches previews from our scaler, behind

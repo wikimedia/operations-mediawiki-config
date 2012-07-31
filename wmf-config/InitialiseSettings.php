@@ -10015,6 +10015,19 @@ $wgConf->settings = array(
 	'foundationwiki' => true,
 ),
 
+'wmgUseMwEmbedSupport' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
+
+// NOTE: TMH *requires* MwEmbedSupport to function
+'wmgUseTimedMediaHandler' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
+
 'wmgUseVisualEditor' => array(
 	'default' => false,
 	'testwiki' => true,
