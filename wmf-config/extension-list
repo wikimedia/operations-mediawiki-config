@@ -59,6 +59,7 @@ $IP/extensions/LocalisationUpdate/LocalisationUpdate.php
 $IP/extensions/MarkAsHelpful/MarkAsHelpful.php
 $IP/extensions/MoodBar/MoodBar.php
 $IP/extensions/MobileFrontend/MobileFrontend.php
+$IP/extensions/MwEmbedSupport.php
 $IP/extensions/MWSearch/MWSearch.php
 $IP/extensions/Narayam/Narayam.php
 $IP/extensions/NewUserMessage/NewUserMessage.php
@@ -93,6 +94,7 @@ $IP/extensions/SubPageList3/SubPageList3.php
 $IP/extensions/SwiftCloudFiles/SwiftCloudFiles.php
 $IP/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php
 $IP/extensions/UserThrottle/UserThrottle.php
+$IP/extensions/TimedMediaHandler.php
 $IP/extensions/timeline/Timeline.php
 $IP/extensions/TitleBlacklist/TitleBlacklist.php
 $IP/extensions/TitleKey/TitleKey.php
