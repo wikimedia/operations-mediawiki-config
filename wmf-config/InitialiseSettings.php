@@ -10056,8 +10056,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 ),
 'wmgUseArticleFeedback' => array(
-    'default' => false,
-     /* Disabled by TS due to overload from ArticleFeedbackv5Hooks::contributionsData()
+	'default' => false,
 	'testwiki' => true,
 	'en_labswikimedia' => true,
 	'enwiki' => true,
@@ -10070,7 +10069,6 @@ $wgConf->settings = array(
 	'ptwikibooks' => true,
 	'srwiki' => true,
     'zhwiki' => true,
-     */
 ),
 'wmgArticleFeedbackCategories' => array(
 	'default' => array(),
@@ -10133,11 +10131,9 @@ $wgConf->settings = array(
 ),
 'wmgUseArticleFeedbackv5' => array(
 	'default' => false,
-    // 'en_labswikimedia' => true, // Disabled due to out of date schema --Reedy
-     /* Disabled by TS due to overload from ArticleFeedbackv5Hooks::contributionsData()
+	// 'en_labswikimedia' => true, // Disabled due to out of date schema --Reedy
 	'enwiki' => true,
     'testwiki' => true,
-      */
 ),
 'wmgArticleFeedbackv5Categories' => array(
 	'default' => array(),
