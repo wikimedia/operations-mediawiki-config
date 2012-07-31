@@ -117,6 +117,9 @@ $wgLocalFileRepo = array(
 		'transformVia404'   => true,
 		'initialCapital'    => $wgCapitalLinks,
 		'deletedHashLevels' => 3,
+		'zones'             => array(
+			'thumb' => array( 'handlerUrl' => "$wgScriptPath/thumb_handler.php" )
+		)
 );
 if ( $wgDBname != 'commonswiki' ) {
 	$wgForeignFileRepos[] = array(
@@ -135,4 +138,3 @@ if ( $wgDBname != 'commonswiki' ) {
 		'initialCapital'   => true
 	);
 }
-
