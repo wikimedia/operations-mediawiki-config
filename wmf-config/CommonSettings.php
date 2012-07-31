@@ -835,7 +835,18 @@ if ( $wmgUseGadgets ) {
 	include( "$IP/extensions/Gadgets/Gadgets.php" );
 }
 
-include( $IP . '/extensions/OggHandler/OggHandler.php' );
+
+if ( $wmgUseMwEmbedSupport ) {
+	require_once( "$IP/extensions/MwEmbedSupport/MwEmbedSupport.php" );
+}
+
+if ( $wmgUseTimedMediaHandler ) {
+	require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
+	$wgEnableTranscode = false; // disabled initially
+} else {
+	include( $IP . '/extensions/OggHandler/OggHandler.php' );
+}
+
 $wgOggThumbLocation = '/usr/bin/oggThumb';
 // you can keep the filename the same and use maintenance/purgeList.php
 $wgCortadoJarFile = "$urlprotocol//upload.wikimedia.org/jars/cortado.jar";
@@ -2087,15 +2098,6 @@ if ( $wgUseContributionTracking ) {
 	$wgContributionTrackingPayPalIPN = "https://civicrm.wikimedia.org/fundcore_gateway/paypal";
 	$wgContributionTrackingPayPalRecurringIPN = "https://civicrm.wikimedia.org/IPNListener_Recurring.php";
 	$wgContributionTrackingUTMKey = true;
-}
-
-if ( $wmgUseMwEmbedSupport ) {
-	require_once( "$IP/extensions/MwEmbedSupport/MwEmbedSupport.php" );
-}
-
-if ( $wmgUseTimedMediaHandler ) {
-	require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
-	$wgEnableTranscode = false; // disabled initially
 }
 
 if ( $wmgUseUploadWizard ) {
