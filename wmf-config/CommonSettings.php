@@ -2435,6 +2435,11 @@ if ( $wmgEnableGeoData ) {
 	}
 }
 
+if ( $wmgUseEcho ) {
+	// Commented out because it's not done yet
+	// require_once( "$IP/extensions/Echo/Echo.php" );
+}
+
 if( $cluster == 'wmflabs' ) {
 	require( "$wmfConfigDir/CommonSettings-wmflabs.php" );
 }

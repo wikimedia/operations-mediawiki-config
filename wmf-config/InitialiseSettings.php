@@ -11140,6 +11140,10 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 ),
+
+'wmgUseEcho' => array(
+	'default' => false,
+),
 );
 
 
