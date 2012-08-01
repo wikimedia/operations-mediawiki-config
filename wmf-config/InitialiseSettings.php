@@ -2171,6 +2171,10 @@ $wgConf->settings = array(
 		'وب' => NS_PROJECT,
 		'نو' => NS_PROJECT_TALK,
 	),
+	'arwikinews' => array(
+		'وخ' => NS_PROJECT,
+		'نو' => NS_PROJECT_TALK,
+	),
 	'arwikisource' => array(
 		'Author' => 102,
 		'Author_talk' => 103,
