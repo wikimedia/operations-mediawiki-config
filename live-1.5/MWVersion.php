@@ -5,7 +5,7 @@ $secure = getenv( 'MW_SECURE_HOST' );
 $host = $secure ? $secure : $_SERVER['HTTP_HOST'];
 
 if ( $host === 'test.wikipedia.org' && !$secure
-	&& !preg_match( '!thumb\.php!', $_SERVER['REQUEST_URI'] ) )
+	&& !preg_match( '!thumb(_handler)?\.php!', $_SERVER['REQUEST_URI'] ) )
 {
 	# Test wiki mostly runs off the version of MediaWiki on /home.
 	# As horrible hack for NFS-less image scalers, use regular docroot for thumbs?
