@@ -11147,6 +11147,9 @@ $wgConf->settings = array(
 
 'wmgUseEcho' => array(
 	'default' => false,
+	// Launch pulled due to replication lag issues
+	// 'testwiki' => true,
+	// 'mediawikiwiki' => true,
 ),
 );
 
