@@ -2419,6 +2419,22 @@ if ( $wmgUseE3Experiments ) {
 	require_once( "$IP/extensions/E3Experiments/Experiments.php" );
 }
 
+if ( $wmgEnableGeoData ) {
+	require_once( "$IP/extensions/GeoData/GeoData.php" );
+	$wgMaxGeoSearchRadius = 5000;
+	$wgGeoDataIndexGranularity = 20;
+
+	# Uncomment these lines to disable these modules
+	# $wgAPIListModules['geosearch'] = 'ApiDisabled';
+	# $wgAPIPropModules['coordinates'] = 'ApiDisabled';
+
+	# These modules have been intentionally disabled for the first phase of deployment
+	if ( $wgDBname !== 'testwiki' ) {
+		unset( $wgAPIListModules['geopages'] );
+		unset( $wgAPIListModules['geopagesincategory'] );
+	}
+}
+
 if( $cluster == 'wmflabs' ) {
 	require( "$wmfConfigDir/CommonSettings-wmflabs.php" );
 }
