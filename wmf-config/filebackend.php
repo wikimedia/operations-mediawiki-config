@@ -109,7 +109,7 @@ $wgFileBackends[] = array(
 $wgLocalFileRepo = array(
 		'class'             => 'LocalRepo',
 		'name'              => 'local',
-		'backend'           => in_array( $wgDBname, array( 'testwiki', 'test2wiki' ) )
+		'backend'           => in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki' ) )
 			? 'local-multiwrite'
 			: 'local-NFS',
 		'url'               => $wgUploadBaseUrl ? $wgUploadBaseUrl . $wgUploadPath : $wgUploadPath,
@@ -127,7 +127,7 @@ if ( $wgDBname != 'commonswiki' ) {
 	$wgForeignFileRepos[] = array(
 		'class'            => 'ForeignDBViaLBRepo',
 		'name'             => 'shared',
-		'backend'          => in_array( $wgDBname, array( 'testwiki', 'test2wiki' ) )
+		'backend'          => in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki' ) )
 			? 'shared-multiwrite'
 			: 'shared-NFS',
 		'url'              => "$urlprotocol//upload.wikimedia.org/wikipedia/commons",
