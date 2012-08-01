@@ -58,16 +58,4 @@ if ($wgDBname == "commonswiki" || $wgDBname == 'enwiki') {
 	));
 }
 
-# Transcoding
-if ( file_exists( '/etc/wikimedia-transcoding' ) ) {
-	# configuration file for video transcoding provided by TimedMediaHandler
-
-	//transcoding environment needs more resources
-	//to create video derivatives(TimedMediaHandler)
-	$wgTranscodeBackgroundTimeLimit = 3600 * 4;
-	$wgMaxShellMemory = 3000000;
-	$wgMaxShellTime = 3600 * 4;
-	$wgMaxShellFileSize = 100*102400; //1GB
-}
-
 } # end safeguard
