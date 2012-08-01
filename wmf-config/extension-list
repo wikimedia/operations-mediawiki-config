@@ -44,6 +44,7 @@ $IP/extensions/FlaggedRevs/FlaggedRevs.php
 $IP/extensions/FormPreloadPostCache/FormPreloadPostCache.php
 $IP/extensions/FundraiserLandingPage/FundraiserLandingPage.php
 $IP/extensions/Gadgets/Gadgets.php
+$IP/extensions/GeoData/GeoData.php
 $IP/extensions/GlobalBlocking/GlobalBlocking.php
 $IP/extensions/GlobalUsage/GlobalUsage.php
 $IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php
