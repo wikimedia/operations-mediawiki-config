@@ -842,6 +842,7 @@ if ( $wmgUseMwEmbedSupport ) {
 
 if ( $wmgUseTimedMediaHandler ) {
 	require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
+	$wgTimedTextForeignNamespaces = array( 'commonswiki' => 102 );
 	$wgEnableTranscode = false; // disabled initially
 } else {
 	include( $IP . '/extensions/OggHandler/OggHandler.php' );
