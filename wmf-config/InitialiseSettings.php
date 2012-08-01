@@ -822,7 +822,7 @@ $wgConf->settings = array(
 	'ttwikibooks'       => '$stdlogo',
 	'ttwiktionary'	=> '$stdlogo',
 	'tywiki'	    => '$stdlogo',
-	'uawikimedia'       => '//commons.wikimedia.org/w/thumb.php?f=Wikimedia-UA-logo.svg&width=146px',
+	'uawikimedia'       => '//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Wikimedia-UA-logo.svg/135px-Wikimedia-UA-logo.svg.png',
 	'udmwiki'	   => '$stdlogo',
 	'ugwiki'	    => '$stdlogo',
 	'ukwiki' 		=> '//upload.wikimedia.org/wikipedia/commons/a/a6/Wikipedia-logo-v2-uk.png',
