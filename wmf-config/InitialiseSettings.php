@@ -10444,6 +10444,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'wikiversity' => true,
+	'cswiktionary' => true, // bug 38903
 ),
 'wmgShowHiddenCats' => array(
 	'default' => false,
