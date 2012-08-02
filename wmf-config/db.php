@@ -67,12 +67,11 @@ $wgLBFactoryConf = array(
 'sectionLoads' => array(
 	's1' => array(
 		'db38'	  => 0,
-		'db36'	  => 50,
-		'db32'	  => 0,
+		'db36'	  => 200,
+		'db32'	  => 0, # snapshot host
 		'db59'    => 400,
 		'db60'    => 400,
 		'db63'    => 100,
-		'db12'	  => 0, # watchlist, dump etc see groupLoadsByDB hardy - rebuild me
 	),
 	's2' => array(
 		'db52'	  => 0,
@@ -136,16 +135,16 @@ $wgLBFactoryConf = array(
 'groupLoadsByDB' => array(
 	'enwiki' => array(
 		'watchlist' => array(
-			'db12' => 1,
+			'db63' => 1,
 		),
 		'recentchangeslinked' => array(
-			'db12' => 1,
+			'db63' => 1,
 		),
 		'contributions' => array(
-			'db12' => 1,
+			'db63' => 1,
 		),
 		'dump' => array(
-			'db12' => 1,
+			'db63' => 1,
 		),
 	),
 ),
