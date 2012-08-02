@@ -10,7 +10,7 @@
  * Hashar, based on dammit comments. Nov 28 2005.
  *
  */
-$wgMemCachedPersistent = true;
+$wgMemCachedPersistent = false;
 $wgUseMemCached = true;
 $wgMainCacheType = CACHE_MEMCACHED;
 #$wgMemCachedTimeout = 3000000; # default is 100000
