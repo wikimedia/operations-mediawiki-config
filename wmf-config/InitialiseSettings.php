@@ -2264,6 +2264,9 @@ $wgConf->settings = array(
 		'Usuària' => NS_USER,
 		'Usuària_discussió' => NS_USER_TALK,
 	),
+	'bswiki' => array(
+		'Portal_talk' => 101,
+	),
 	'cawikisource' => array(
 		'Page' => 102,
 		'Page_talk' => 103,
@@ -4497,6 +4500,10 @@ $wgConf->settings = array(
 	'brwiktionary' => array(
 	   100 => 'Stagadenn', // Appendix
 	   101 => 'Kaozeadenn_Stagadenn', // Appendix talk
+	),
+	'bswiki' => array(
+		100 => 'Portal',
+		101 => 'Razgovor o portalu',
 	),
 	'cawiki' => array(
 		100 => 'Portal', 101 => 'Portal_Discussió',
