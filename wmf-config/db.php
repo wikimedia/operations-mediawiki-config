@@ -71,6 +71,7 @@ $wgLBFactoryConf = array(
 		'db32'	  => 0,
 		'db59'    => 400,
 		'db60'    => 400,
+		'db63'    => 100,
 		'db12'	  => 0, # watchlist, dump etc see groupLoadsByDB hardy - rebuild me
 	),
 	's2' => array(
@@ -206,6 +207,7 @@ $wgLBFactoryConf = array(
 	'db58'	   => '10.0.6.68', # do not remove or comment out
 	'db59'	   => '10.0.6.69', # do not remove or comment out
 	'db60'	   => '10.0.6.70', # do not remove or comment out
+	'db63'	   => '10.0.6.73', # do not remove or comment out
 	'db1001'	=> '10.64.0.5', # do not remove or comment out
 	'db1002'	=> '10.64.0.6', # do not remove or comment out
 	'db1003'	=> '10.64.0.7', # do not remove or comment out
