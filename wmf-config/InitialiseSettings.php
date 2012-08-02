@@ -8303,6 +8303,7 @@ $wgConf->settings = array(
 	'mswiktionary' => array( 'w' ),
 	'mxwikimedia' => array( 'meta', 'w:es', 'b:es', 'v:es', 'w:en', ),
 	'myvwiki' => array( 'incubator' ),
+	'ndswiki' => array( 'en', 'de', 'nl', 'nds-nl', 'wikt'  ),
 	'nlwikibooks' => array( 'w' ),
 	'nlwikisource' => array( 'w', 'wikt', 'q', 'b', 'n', 'nl', 'de', 'en' ),
 	'nlwiktionary' => array( 'w', 'en', 'fr' ),
