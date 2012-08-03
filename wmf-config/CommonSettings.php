@@ -2438,6 +2438,13 @@ if ( $wmgEnableGeoData ) {
 
 if ( $wmgUseEcho ) {
 	require_once( "$IP/extensions/Echo/Echo.php" );
+	
+	$wgEchoDisableStandardEmail = false;
+	$wgEchoDefaultNotificationTypes = array(
+		'all' => array(
+			'notify' => true, // Disable email
+		),
+	);
 }
 
 if( $cluster == 'wmflabs' ) {
