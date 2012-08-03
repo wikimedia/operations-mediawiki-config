@@ -10152,6 +10152,16 @@ $wgConf->settings = array(
 	'enwiki' => true,
     'testwiki' => true,
 ),
+'wmgArticleFeedbackv5LotteryOdds' => array(
+	'default' => 0,
+	'testwiki' => array( NS_MAIN => 10, NS_HELP => 100 ),
+	'enwiki' => array( NS_MAIN => 10, NS_HELP => 100 ),
+),
+'wmgArticleFeedbackv5Namespaces' => array(
+	'default' => array( NS_MAIN ),
+	'enwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
+	'testwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
+),
 'wmgArticleFeedbackv5Categories' => array(
 	'default' => array(),
 	'en_labswikimedia' => array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' ),
