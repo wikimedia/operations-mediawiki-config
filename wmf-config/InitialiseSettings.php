@@ -9439,14 +9439,15 @@ $wgConf->settings = array(
 	'rowiki' => true, # 28347
 	'ruwiki' => true, # 22330
 	'ruwikiversity' => true,
+	'sewikimedia' => true, # Bug 38988
 	'simplewiki' => true, # 2009-02-18
 	'skwiki' => true, # bug 22038
 	'slwiki' => true,
-	'sourceswiki' => true, # 2009-02-26 bv forgot this freak one the other day
-	'sqwiki' => true, # 26074
+	'sourceswiki' => true,
+	'sqwiki' => true, # bug 26074
 	'srwiki' => true, # Per Brion on 2009-04-03
 	'strategywiki' => true, # 2009-11-07, Bug 21361
-	'svwiki'    => true, # 2009-03-24 Bug 18023 Enable Collection extension on svwiki
+	'svwiki'    => true, # 2009-03-24 Bug 18023
 	'tawiki' => true,
 	'tewiki' => true,
 	'thwiki'    => true,
@@ -11148,9 +11149,9 @@ $wgConf->settings = array(
 
 'wmgUseEcho' => array(
 	'default' => false,
-	// Launch pulled due to replication lag issues
 	// 'testwiki' => true,
-	// 'mediawikiwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
 ),
 );
 
