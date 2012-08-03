@@ -10152,6 +10152,16 @@ $wgConf->settings = array(
 	'enwiki' => true,
     'testwiki' => true,
 ),
+'wmgArticleFeedbackv5Namespaces' => array(
+	'default' => array( NS_MAIN ),
+	'enwiki' => array( NS_MAIN, NS_HELP ),
+	'testwiki' => array( NS_MAIN, NS_HELP ),
+),
+'wmgArticleFeedbackv5TalkNamespaces' => array(
+	'default' => array( NS_TALK ),
+	'enwiki' => array( NS_TALK, NS_HELP_TALK ),
+	'testwiki' => array( NS_TALK, NS_HELP_TALK ),
+),
 'wmgArticleFeedbackv5Categories' => array(
 	'default' => array(),
 	'en_labswikimedia' => array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' ),
