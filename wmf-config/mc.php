@@ -13,8 +13,7 @@
 $wgMemCachedPersistent = false;
 $wgUseMemCached = true;
 $wgMainCacheType = CACHE_MEMCACHED;
-#$wgMemCachedTimeout = 3000000; # default is 100000
-$wgMemCachedTimeout = 200000;
+$wgMemCachedTimeout = 250000; # default is 100000
 
 $wgMemCachedInstanceSize = 2000;
 
