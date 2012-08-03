@@ -41,7 +41,7 @@ if ( $secure ) {
 	// Note that favicon.ico and robots.txt will be shared, oh wells.
 
 	$wgStyleSheetPath = $wgStylePath = '/skins-' . $wmfVersionNumber;
-	$wgExtensionAssetsPath = '/w/extensions-' . $wmfVersionNumber;
+	$wgExtensionAssetsPath = '//bits.wikimedia.org/static-' . $wmfVersionNumber . '/extensions;
 
 	// Uploads will come from http://upload.wikimedia.org/ anyway...
 	if ( $wgDBname == 'internalwiki' ) {
