@@ -40,8 +40,8 @@ if ( $secure ) {
 	// Stylesheets can be loaded through the global shared path.
 	// Note that favicon.ico and robots.txt will be shared, oh wells.
 
-	$wgStyleSheetPath = $wgStylePath = '/skins-' . $wmfVersionNumber;
-	$wgExtensionAssetsPath = '/w/extensions-' . $wmfVersionNumber;
+	//$wgStyleSheetPath = $wgStylePath = '/skins-' . $wmfVersionNumber;
+	//$wgExtensionAssetsPath = '/w/extensions-' . $wmfVersionNumber;
 
 	// Uploads will come from http://upload.wikimedia.org/ anyway...
 	if ( $wgDBname == 'internalwiki' ) {
