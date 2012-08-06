@@ -94,7 +94,8 @@ $wgFileBackends[] = array(
 	'wikiId'      => "{$site}-{$lang}",
 	'lockManager' => 'nullLockManager', # LocalFile uses FOR UPDATE
 	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname ),
-	'backends'    => $wmfLocalMultiBackends
+	'backends'    => $wmfLocalMultiBackends,
+	'syncChecks'  => ( 1 | 4 ) // (size,sha1)
 );
 
 $wgFileBackends[] = array(
