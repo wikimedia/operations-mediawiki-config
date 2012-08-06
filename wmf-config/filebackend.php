@@ -80,6 +80,13 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repoloo
 );
 /* end Swift backend config */
 
+$wmfLocalMultiBackends = in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki' ) )
+	? array(
+		array( 'template' => 'local-NFS', 'isMultiMaster' => true ),
+		array( 'template' => 'local-swift' ) )
+	: array(
+		array( 'template' => 'local-NFS', 'isMultiMaster' => true ) );
+
 /* NFS-Swift multiwrite backend config */
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
@@ -87,10 +94,7 @@ $wgFileBackends[] = array(
 	'wikiId'      => "{$site}-{$lang}",
 	'lockManager' => 'nullLockManager', # LocalFile uses FOR UPDATE
 	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname ),
-	'backends'    => array(
-		array( 'template' => 'local-NFS', 'isMultiMaster' => true ),
-		# array( 'template' => 'local-swift' ),
-	)
+	'backends'    => $wmfLocalMultiBackends
 );
 
 $wgFileBackends[] = array(
