@@ -2401,6 +2401,7 @@ if ( $wmgReduceStartupExpiry ) {
 
 if ( $wmgEnablePageTriage ) {
 	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
+	$wgPageTriageEnableCurationToolbar = $wmgPageTriageEnableCurationToolbar;
 }
 
 if ( $wmgEnableInterwiki ) {

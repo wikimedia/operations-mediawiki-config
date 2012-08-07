@@ -11111,6 +11111,10 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'enwiki' => true,
 ),
+'wmgPageTriageEnableCurationToolbar' => array(
+	'default' => false,
+	'testwiki' => true,
+),
 'wmgEnableInterwiki' => array(
 	'default' => true,
 ),
