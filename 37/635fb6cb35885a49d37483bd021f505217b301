@@ -1,0 +1,10 @@
+Code-Review+2: Reedy <reedy@wikimedia.org>
+Verified+1: Reedy <reedy@wikimedia.org>
+Verified+1: jenkins-bot
+Code-Review+2: Kaldari <rkaldari@wikimedia.org>
+Verified+1: Kaldari <rkaldari@wikimedia.org>
+Submitted-by: Kaldari <rkaldari@wikimedia.org>
+Submitted-at: Tue, 07 Aug 2012 22:37:30 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/18054
+Project: operations/mediawiki-config
+Branch: refs/heads/master
