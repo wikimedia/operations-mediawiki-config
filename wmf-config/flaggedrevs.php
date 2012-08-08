@@ -124,6 +124,11 @@ elseif ( $wgDBname == 'test2wiki' ) {
     $wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 }
 
+elseif ( $wgDBname == 'cawikinews' ) {
+	$wgGroupPermissions['sysop']['stablesettings'] = true; // Bug 34135
+	$wgFlaggedRevsNamespaces[] = 102; // Bug 34135
+}
+
 // New deployment 2008-05-03
 // --brion
 elseif ( $wgDBname == 'dewiki' ) {
