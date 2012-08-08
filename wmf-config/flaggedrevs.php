@@ -526,6 +526,12 @@ elseif ( $wgDBname == 'sqwiki' ) {
 
 elseif ( $wgDBname == 'trwiki' ) {
 	unset( $wgGroupPermissions['reviewer'] ); // Bug 38690
+	$wgAddGroups['bureaucrat'] = array_diff( $wgAddGroups['bureaucrat'], array( 'reviewer' ) ); // Bug 38690
+	$wgRemoveGroups['bureaucrat'] = array_diff( $wgRemoveGroups['bureaucrat'], array( 'reviewer' ) ); // Bug 38690
+
+	unset( $wgGroupPermissions['editor'] ); // Bug 38690
+	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'editor' ) ); // Bug 38690
+	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'editor' ) ); // Bug 38690
 }
 
 elseif ( $wgDBname == 'trwikiquote' ) {
