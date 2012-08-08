@@ -10055,6 +10055,12 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 ),
 
+'wmgVisualEditorParsoidPrefix' => array(
+	'default' => '', // This MUST be configured per-wiki for VE to work correctly
+	'testwiki' => 'test:',
+	'mediawikiwiki' => 'mw:'
+),
+
 'wmgUseRSSExtension' => array(
 	'default' => false,
 	'foundationwiki' => true,
