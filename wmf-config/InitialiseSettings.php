@@ -2265,7 +2265,7 @@ $wgConf->settings = array(
 		'Usuària_discussió' => NS_USER_TALK,
 	),
 	'bswiki' => array(
-		'Portal_talk' => 101,
+		'Portal_talk' => 101, // Bug 37226
 	),
 	'cawikisource' => array(
 		'Page' => 102,
@@ -4506,8 +4506,8 @@ $wgConf->settings = array(
 	   101 => 'Kaozeadenn_Stagadenn', // Appendix talk
 	),
 	'bswiki' => array(
-		100 => 'Portal',
-		101 => 'Razgovor o portalu',
+		100 => 'Portal', // Bug 37226
+		101 => 'Razgovor_o_portalu', // Bug 37226
 	),
 	'cawiki' => array(
 		100 => 'Portal', 101 => 'Portal_Discussió',
