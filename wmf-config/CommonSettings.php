@@ -1966,10 +1966,6 @@ if ( $wmgUseUsabilityInitiative ) {
 	}
 }
 
-if ( $wmgClickTracking && $wmgCustomUserSignup ) {
-	include "$IP/extensions/CustomUserSignup/CustomUserSignup.php";
-}
-
 if ( !$wmgEnableVector ) {
 	$wgSkipSkins[] = 'vector';
 }

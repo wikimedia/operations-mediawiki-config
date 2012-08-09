@@ -28,7 +28,6 @@ $IP/extensions/ContactPage/ContactPage.php
 $IP/extensions/ContactPageFundraiser/ContactPage.php
 $IP/extensions/ContributionReporting/ContributionReporting.php
 $IP/extensions/ContributionTracking/ContributionTracking.php
-$IP/extensions/CustomUserSignup/CustomUserSignup.php
 $IP/extensions/DisableAccount/DisableAccount.php
 $IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php
 $IP/extensions/DonationInterface/donationinterface_langonly.php
