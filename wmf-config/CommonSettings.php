@@ -2162,6 +2162,8 @@ if ( $wmgUseUploadWizard ) {
 if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
 	$wgVisualEditorParsoidURL = 'http://10.64.16.146:8000'; // 10.64.16.146 is cadmium.eqiad.wmnet
+	#$wgVisualEditorParsoidPrefix = 'mw:'; # Disabled, breaks things -Roan
+	$wgVisualEditorParsoidPrefix = '';
 }
 
 if ( $wmgUseNarayam ) {
