@@ -9931,12 +9931,11 @@ $wgConf->settings = array(
 	# Disabling due to CR r58099 -- TS 2010-06-03
 	'default' => false,
 	'en_labswikimedia' => true, // ArticleFeedbackv5 needs this
-	'enwiki' => true, // VectorSectionEditLinks and customusersignup needs this
+	'enwiki' => true, // VectorSectionEditLinks needs this
 	'eswiki' => true, // ArticleFeedback needs this
 	'eswikinews' => true, // ArticleFeedback needs this
 	'hiwiki' => true, // ArticleFeedback needs this
 	'huwiki' => true, // ArticleFeedback needs this
-	'mediawikiwiki' => true, // CustomUserSignup needs this
 	'metawiki' => true, // ArticleFeedback needs this
 	'mlwiki' => true, // ArticleFeedback needs this
 	'ptwiki' => true, // ArticleFeedback needs this
@@ -9950,12 +9949,6 @@ $wgConf->settings = array(
 	'default' => -1
 	# 'strategywiki' => 1,
 	# 'testwiki' => 1,
-),
-
-'wmgCustomUserSignup' => array(
-	'default' => false,
-	'enwiki' => true,
-	'testwiki' => true,
 ),
 
 'wmgDonationInterface' => array(
@@ -11130,6 +11123,7 @@ $wgConf->settings = array(
 'wmgPageTriageEnableCurationToolbar' => array(
 	'default' => false,
 	'testwiki' => true,
+	'enwiki' => true,
 ),
 'wmgEnableInterwiki' => array(
 	'default' => true,
