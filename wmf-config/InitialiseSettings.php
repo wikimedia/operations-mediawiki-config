@@ -6925,6 +6925,7 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'import' => array( 'suppressredirect' => true, ),
 		'transwiki' => array( 'suppressredirect' => true, ),
+		'flood' => array( 'bot' => true, ), // Bug 39306
 	),
 	'jawiki' => array(
 		'autoconfirmed' => array( 'patrol' => true ), // Requested by bug 13055
@@ -7947,7 +7948,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'flood' ), #bug 36600
 	),
 	'+itwiktionary' => array(
-		'sysop' => array( 'patroller', 'autopatrolled' ),
+		'sysop' => array( 'patroller', 'autopatrolled', 'flood' ), // Flood added per bug 39306
 	),
 	'+jawiki' => array(
 		'sysop' => array( 'abusefilter' ),
@@ -9627,6 +9628,7 @@ $wgConf->settings = array(
 	'enwikisource' => array( 'sysop' => array( 'flood' ) ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=36863
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=36600
+	'itwiktionary' => array( 'sysop' => array( 'flood' ) ), // Bug 39306
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
 	// 'simplewikibooks' => array( 'sysop' => array( 'flood' )),
 	'simplewikiquote' => array( 'sysop' => array( 'flood' ) ),
