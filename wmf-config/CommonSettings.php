@@ -139,7 +139,8 @@ wfProfileOut( "$fname-host" );
 # Must be set before InitialiseSettings.php:
 switch( $cluster ) {
 case 'pmtpa'  :
-	$wmfUdp2logDest = '10.0.5.8:8420';
+	# fluorine
+	$wmfUdp2logDest = '208.80.154.12:8420';
 	break;
 case 'wmflabs':
 	# deployment-dbdump host the udp2log daemon
