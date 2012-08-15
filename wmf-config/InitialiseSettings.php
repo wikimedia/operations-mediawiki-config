@@ -6384,13 +6384,6 @@ $wgConf->settings = array(
 	'default' => array(),
 	'enwiki' => array(
 		'167.165.53.93', // proteins@msu.edu
-        '27.108.200.111', // for Wikimedia Philippines event, 2012-08-15 only
-    ),
-    'bclwiki' => array(
-        '27.108.200.111', // for Wikimedia Philippines event, 2012-08-15 only
-    ),
-    'tlwiki' => array(
-        '27.108.200.111', // for Wikimedia Philippines event, 2012-08-15 only
     ),
 ),
 
