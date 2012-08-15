@@ -6381,6 +6381,8 @@ $wgConf->settings = array(
 ),
 
 'wgRateLimitsExcludedIPs' => array(
+    // see also wmf-config/throttle.php
+    // exemptions for outreach events should go in that file
 	'default' => array(),
 	'enwiki' => array(
 		'167.165.53.93', // proteins@msu.edu

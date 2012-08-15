@@ -1841,6 +1841,7 @@ if ( $wmgUseCollection ) {
 include( "$IP/extensions/OpenSearchXml/OpenSearchXml.php" );
 
 # Various system to allow/prevent flooding
+# (including exemptions for scheduled outreach events)
 require( "$wmfConfigDir/throttle.php" );
 
 
