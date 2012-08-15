@@ -6383,13 +6383,15 @@ $wgConf->settings = array(
 'wgRateLimitsExcludedIPs' => array(
 	'default' => array(),
 	'enwiki' => array(
-		'75.101.56.124', // usability office
 		'167.165.53.93', // proteins@msu.edu
-		'41.216.220.97', // ITOCA Tanzania for event 2011-11-30
-	),
-	'swwiki' => array(
-		'41.216.220.97', // ITOCA Tanzania for event 2011-11-30
-	),
+        '27.108.200.111', // for Wikimedia Philippines event, 2012-08-15 only
+    ),
+    'bclwiki' => array(
+        '27.108.200.111', // for Wikimedia Philippines event, 2012-08-15 only
+    ),
+    'tlwiki' => array(
+        '27.108.200.111', // for Wikimedia Philippines event, 2012-08-15 only
+    ),
 ),
 
 'wgEmailAuthentication' => array(
