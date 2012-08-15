@@ -2473,6 +2473,18 @@ if ( $wmgUseEcho ) {
 	);
 }
 
+if ( $wmgUseScribunto ) {
+	include( "$IP/extensions/CodeEditor/CodeEditor.php" );
+	// Don't enable core functionality until it has been reviewed and approved
+	$wgCodeEditorEnableCore = false;
+
+	include( "$IP/extensions/Scribunto/Scribunto.php" );
+	$wgScribuntoUseGeSHi = true;
+	$wgScribuntoUseCodeEditor = true;
+	$wgScribuntoDefaultEngine = 'luasandbox';
+	$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
+}
+
 if( $cluster == 'wmflabs' ) {
 	require( "$wmfConfigDir/CommonSettings-wmflabs.php" );
 }
