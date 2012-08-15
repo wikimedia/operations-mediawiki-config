@@ -16,6 +16,7 @@ $IP/extensions/Cite/SpecialCite.php
 $IP/extensions/cldr/cldr.php
 $IP/extensions/ClientSide/ClientSide.php
 $IP/extensions/ClickTracking/ClickTracking.php
+$IP/extensions/CodeEditor/CodeEditor.php
 $IP/extensions/CodeReview/CodeReview.php
 $IP/extensions/Collection/Collection.php
 $IP/extensions/Contest/Contest.php
@@ -82,6 +83,7 @@ $IP/extensions/ReaderFeedback/ReaderFeedback.php
 $IP/extensions/Renameuser/Renameuser.php
 $IP/extensions/RSS/RSS.php
 $IP/extensions/ScanSet/ScanSet.php
+$IP/extensions/Scribunto/Scribunto.php
 $IP/extensions/SecurePoll/SecurePoll.php
 $IP/extensions/ShortUrl/ShortUrl.php
 $IP/extensions/SimpleAntiSpam/SimpleAntiSpam.php
