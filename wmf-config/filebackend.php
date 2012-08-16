@@ -139,6 +139,12 @@ if ( $wgDBname != 'commonswiki' ) {
 		'scriptDirUrl'     => "$urlprotocol//commons.wikimedia.org/w",
 		'fetchDescription' => true,
 		'wiki'             => 'commonswiki',
-		'initialCapital'   => true
+		'initialCapital'   => true,
+		'zones'            => array( // actual swift containers have 'local-*'
+			'public'  => array( 'container' => 'local-public' ),
+			'thumb'   => array( 'container' => 'local-public' ),
+			'temp'    => array( 'container' => 'local-public' ),
+			'deleted' => array( 'container' => 'local-public' )
+		)
 	);
 }
