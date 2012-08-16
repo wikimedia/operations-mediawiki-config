@@ -30,9 +30,9 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repo
 	'fileJournal'    => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki' ),
 	'fileMode'       => 0644,
 	'containerPaths' => array(
-		"shared-public"  => "/mnt/upload6/wikipedia/commons",
-		"shared-thumb"   => "/mnt/thumbs/wikipedia/commons/thumb",
-		"shared-temp"    => "/mnt/upload6/wikipedia/commons/temp",
+		"local-public"  => "/mnt/upload6/wikipedia/commons",
+		"local-thumb"   => "/mnt/thumbs/wikipedia/commons/thumb",
+		"local-temp"    => "/mnt/upload6/wikipedia/commons/temp",
 	)
 );
 /* end NFS backend config */
@@ -74,7 +74,6 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repoloo
 		'local-public'  => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
 		'local-thumb'   => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
 		'local-temp'    => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'local-deleted' => array( 'levels' => $wmfSwiftShardCommon, 'base' => 36, 'repeat' => 0 )
 	),
 	'parallelize'        => 'implicit'
 );
