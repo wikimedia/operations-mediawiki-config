@@ -94,7 +94,7 @@ $wgFileBackends[] = array(
 	),
 	'syncChecks'  => ( 1 | 4 ) // (size & sha1)
 );
-$readFromSwiftShared = false;
+$readFromSwiftShared = true;
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
 	'name'        => 'shared-multiwrite',
