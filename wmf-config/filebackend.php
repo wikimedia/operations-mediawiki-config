@@ -71,10 +71,10 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repoloo
 	'swiftUser'          => $wmfSwiftConfig['user'],
 	'swiftKey'           => $wmfSwiftConfig['key'],
 	'shardViaHashLevels' => array(
-		'shared-public'  => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'shared-thumb'   => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'shared-temp'    => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'shared-deleted' => array( 'levels' => $wmfSwiftShardCommon, 'base' => 36, 'repeat' => 0 )
+		'local-public'  => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-thumb'   => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-temp'    => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-deleted' => array( 'levels' => $wmfSwiftShardCommon, 'base' => 36, 'repeat' => 0 )
 	),
 	'parallelize'        => 'implicit'
 );
