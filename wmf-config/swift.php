@@ -10,8 +10,8 @@
  * This file belongs under wmf-config/ and should be included by CommonSettings.php.
  */
 
-$wgHooks['FileTransformed'][] = 'wmfOnFileTransformed';
-$wgHooks['LocalFilePurgeThumbnails'][] = 'wmfOnLocalFilePurgeThumbnails';
+#$wgHooks['FileTransformed'][] = 'wmfOnFileTransformed';
+#$wgHooks['LocalFilePurgeThumbnails'][] = 'wmfOnLocalFilePurgeThumbnails';
 
 /**
  * @param $file File
