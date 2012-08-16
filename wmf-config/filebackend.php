@@ -82,7 +82,7 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repoloo
 
 
 /* NFS-Swift multiwrite backend config */
-$readFromSwift = in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki' ) );
+$readFromSwift = true;
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
 	'name'        => 'local-multiwrite',
