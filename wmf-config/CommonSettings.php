@@ -139,8 +139,8 @@ wfProfileOut( "$fname-host" );
 # Must be set before InitialiseSettings.php:
 switch( $cluster ) {
 case 'pmtpa'  :
-	# fluorine
-	$wmfUdp2logDest = '208.80.154.12:8420';
+	# fluorine (nfs1 while fluorine is down)
+	$wmfUdp2logDest = '10.64.0.21:8420';
 	break;
 case 'wmflabs':
 	# deployment-dbdump host the udp2log daemon
@@ -1302,7 +1302,7 @@ if ( $wmgUseRSSExtension ) {
 wfProfileOut( "$fname-ext-include2" );
 wfProfileIn( "$fname-misc4" );
 
-$wgDisabledActions = array( 'credits' );
+$wgActions['credits'] = false;
 
 # Process group overrides
 
