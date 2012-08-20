@@ -2164,8 +2164,7 @@ if ( $wmgUseUploadWizard ) {
 if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
 	$wgVisualEditorParsoidURL = 'http://10.0.0.23:8000'; // 10.0.0.23 is wtp1.pmtpa.wmnet
-	$wgVisualEditorParsoidPrefix = '';
-	#$wgVisualEditorParsoidPrefix = 'mw'; # Re-enable this after wmf10 deployment
+	$wgVisualEditorParsoidPrefix = 'mw'; # Re-enable this after wmf10 deployment
 }
 
 if ( $wmgUseNarayam ) {
