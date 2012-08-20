@@ -7231,6 +7231,7 @@ $wgConf->settings = array(
 		'filemover' => array( 'movefile' => true ), // bug 30121
 		'user' => array(
 			'upload_by_url' => true, // For wider testing
+			'upload' => true, // Exception to bug 12556, used for testing of upload tools
 		),
 		'sysop' => array( 'deleterevision' => true, 'revisionmove' => true, ),
 		'suppress' => array(
