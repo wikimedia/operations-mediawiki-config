@@ -990,11 +990,11 @@ $wgConf->settings = array(
 # @} end of wgUploadNavigationUrl
 
 
-'wgMathDirectory' => array( // these get overriden by extension inclusion!
+'wmgMathDirectory' => array(
 	'default' => '/mnt/upload6/math',
 ),
 
-'wgMathPath' => array( // these get overriden by extension inclusion!
+'wmgMathPath' => array(
 	'default' => '//upload.wikimedia.org/math',
 ),
 
