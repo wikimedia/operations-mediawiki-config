@@ -365,7 +365,7 @@ $wgLBFactoryConf = array(
 'readOnlyBySection' => array(
 # 'DEFAULT' => 'Emergency maintenance in progress',
 #	's1'	   => 'Maintenance in progress, please try again in 5 minutes',
-	's2'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
+#	's2'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
 ),
 
 );
