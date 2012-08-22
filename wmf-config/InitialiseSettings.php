@@ -11173,6 +11173,7 @@ $wgConf->settings = array(
 'wmgUseScribunto' => array(
     'default' => false,
     'test2wiki' => true,
+    'mediawikiwiki' => true,
 ),
 );
 
