@@ -2082,6 +2082,34 @@ if ( $wmgUseArticleFeedbackv5 ) {
 	$wgGroupPermissions['afttest-hide']['aftv5-feature-feedback']  = true;
 	$wgGroupPermissions['afttest']['aftv5-feature-feedback']  = true;
 
+
+	// @todo: this is the new permission "system"; the above permissions
+	// should be deleted once all existing code has been refactored
+
+	// every member (apart from blocked users) = reader
+	$wgGroupPermissions['*']['aft-reader'] = true;
+
+	// registered members = member
+	$wgGroupPermissions['user']['aft-member'] = true;
+
+	// (auto-)confirmed users = editor
+	$wgGroupPermissions['confirmed']['aft-editor'] = true;
+	$wgGroupPermissions['autoconfirmed']['aft-editor'] = true;
+
+	// rollbacker/reviewer = monitor
+	$wgGroupPermissions['rollbacker']['aft-monitor'] = true;
+	$wgGroupPermissions['reviewer']['aft-monitor'] = true;
+
+	// administrator = administrator
+	$wgGroupPermissions['sysop']['aft-administrator'] = true;
+
+	// oversight = oversighter
+	$wgGroupPermissions['oversight']['aft-oversighter'] = true;
+
+	// test-groups
+	$wgGroupPermissions['afttest']['aft-editor']  = true;
+	$wgGroupPermissions['afttest-hide']['aft-oversighter']  = true;
+
 	$wgArticleFeedbackv5AbuseFiltering = $wmgArticleFeedbackv5AbuseFiltering;
 }
 
