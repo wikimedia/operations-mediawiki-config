@@ -66,12 +66,12 @@ $wgLBFactoryConf = array(
 #
 'sectionLoads' => array(
 	's1' => array(
-		'db38'	  => 0,
-		'db36'	  => 200,
+		'db63'    => 0,
+		#'db38'	  => 350,
 		'db32'	  => 0, # snapshot host
 		'db59'    => 400,
 		'db60'    => 400,
-		'db63'    => 100,
+		'db36'	  => 100, # special contrib, watchlist, etc
 	),
 	's2' => array(
 		'db54'	  => 0,
@@ -135,16 +135,16 @@ $wgLBFactoryConf = array(
 'groupLoadsByDB' => array(
 	'enwiki' => array(
 		'watchlist' => array(
-			'db63' => 1,
+			'db36' => 1,
 		),
 		'recentchangeslinked' => array(
-			'db63' => 1,
+			'db36' => 1,
 		),
 		'contributions' => array(
-			'db63' => 1,
+			'db36' => 1,
 		),
 		'dump' => array(
-			'db63' => 1,
+			'db36' => 1,
 		),
 	),
 ),
@@ -364,7 +364,7 @@ $wgLBFactoryConf = array(
 # This key must exist for the master switch script to work
 'readOnlyBySection' => array(
 # 'DEFAULT' => 'Emergency maintenance in progress',
-#	's1'	   => 'Maintenance in progress, please try again in 5 minutes',
+	's1'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
 #	's2'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
 ),
 
