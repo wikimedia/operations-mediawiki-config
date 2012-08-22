@@ -59,7 +59,8 @@ $wgFileBackends[] = array( // backend config for wiki's local repo
 		'local-temp'    => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
 		'local-deleted' => array( 'levels' => $wmfSwiftShardLocal, 'base' => 36, 'repeat' => 0 )
 	),
-	'parallelize'        => 'implicit'
+	'parallelize'        => 'implicit',
+	'cacheAuthInfo'      => true
 );
 $wgFileBackends[] = array( // backend config for wiki's access to shared repoloo
 	'class'              => 'SwiftFileBackend',
@@ -75,7 +76,8 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repoloo
 		'local-thumb'   => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
 		'local-temp'    => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
 	),
-	'parallelize'        => 'implicit'
+	'parallelize'        => 'implicit',
+	'cacheAuthInfo'      => true
 );
 /* end Swift backend config */
 
