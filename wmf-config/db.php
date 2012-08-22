@@ -80,8 +80,8 @@ $wgLBFactoryConf = array(
 		'db57'	  => 300,
 	),
 	/* s3 */ 'DEFAULT' => array(
-		'db39'    => 0,
-		'db34'	  => 400,
+		'db34'	  => 0,
+		#'db39'    => 400,
 		'db25'	  => 100, # snapshot host
 		'db11'	  => 400,
 	),
@@ -363,7 +363,7 @@ $wgLBFactoryConf = array(
 
 # This key must exist for the master switch script to work
 'readOnlyBySection' => array(
-# 'DEFAULT' => 'Emergency maintenance in progress',
+	'DEFAULT' => 'Brief Database Maintenance in progress, please try again in 3 minutes', #s3
 #	's1'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
 #	's2'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
 ),
