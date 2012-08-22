@@ -92,8 +92,8 @@ $wgLBFactoryConf = array(
 		'db51'	 => 500,
 	),
 	's5' => array(
-		'db35'	 => 0,
-		'db45'	 => 500,
+		'db45'	 => 0,
+		#'db35'	 => 500,
 		'db44'	 => 500, # snapshot host
 		'db55'	 => 1000,
 	),
@@ -365,7 +365,7 @@ $wgLBFactoryConf = array(
 'readOnlyBySection' => array(
 #	'DEFAULT' => 'Brief Database Maintenance in progress, please try again in 3 minutes', #s3
 #	's1'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
-#	's2'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
+	's5'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
 ),
 
 );
