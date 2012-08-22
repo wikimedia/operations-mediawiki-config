@@ -553,7 +553,7 @@ if( $cluster == 'pmtpa' ) {
 		'91.198.174.54',	# amssq44
 		'91.198.174.55',	# amssq45
 		'91.198.174.56',	# amssq46
-		
+
 		# SSL
 		'208.80.152.16',	# ssl1
 		'208.80.152.17',	# ssl2
@@ -585,7 +585,7 @@ if( $cluster == 'pmtpa' ) {
 		# esams
 		'91.198.174.100', 	# cp3001
 		'91.198.174.100',	# cp3002
-		
+
 		# Upload
 		# pmtpa
 		'208.80.152.51',	# sq41
@@ -662,7 +662,7 @@ if( $cluster == 'pmtpa' ) {
 		'10.64.0.170',		# cp1042
 		'208.80.154.53',	# cp1043
 		'208.80.154.54',	# cp1044
-		
+
 		# OTHERS - Currently unused..?
 		'10.64.0.159',	# cp1037
 		'10.64.0.160',	# cp1038
@@ -2289,7 +2289,9 @@ if ( $wmgUseMath ) {
 	if ( $wgDBname === 'hewiki' ) {
 		$wgDefaultUserOptions['math'] = 0;
 	}
-	$wgUseMathJax = true;
+	$wgMathDirectory = $wmgMathDirectory;
+	$wgMathPath      = $wmgMathPath;
+	$wgUseMathJax    = true;
 }
 
 if ( $wmgUseBabel ) {
@@ -2465,7 +2467,7 @@ if ( $wmgEnableGeoData ) {
 
 if ( $wmgUseEcho ) {
 	require_once( "$IP/extensions/Echo/Echo.php" );
-	
+
 	$wgEchoDisableStandardEmail = false;
 	$wgEchoDefaultNotificationTypes = array(
 		'all' => array(
