@@ -2082,6 +2082,45 @@ if ( $wmgUseArticleFeedbackv5 ) {
 	$wgGroupPermissions['afttest-hide']['aftv5-feature-feedback']  = true;
 	$wgGroupPermissions['afttest']['aftv5-feature-feedback']  = true;
 
+
+	// @todo: this is the new permission "system"; the above permissions
+	// should be deleted once all existing code has been refactored
+
+	// every member (apart from blocked users) = reader
+	foreach ( array( '*', 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
+		$wgGroupPermissions[$group]['aft-reader'] = true;
+	}
+
+	// registered members = member
+	foreach ( array( 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
+		$wgGroupPermissions[$group]['aft-member'] = true;
+	}
+
+	// (auto-)confirmed users = editor
+	foreach ( array( 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
+		$wgGroupPermissions[$group]['aft-editor'] = true;
+	}
+
+	// rollbacker/reviewer = monitor
+	foreach ( array( 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
+		$wgGroupPermissions[$group]['aft-monitor'] = true;
+	}
+
+	// administrator = administrator
+	foreach ( array( 'sysop', 'oversight' ) as $group ) {
+		$wgGroupPermissions[$group]['aft-administrator'] = true;
+	}
+
+	// oversight = oversighter
+	foreach ( array( 'oversight', 'afttest-hide' ) as $group ) {
+		$wgGroupPermissions[$group]['aft-oversighter'] = true;
+	}
+
+	// test-groups
+	$wgGroupPermissions['afttest'] = $wgGroupPermissions['autoconfirmed'];
+	$wgGroupPermissions['afttest-hide'] = $wgGroupPermissions['oversight'];
+
+
 	$wgArticleFeedbackv5AbuseFiltering = $wmgArticleFeedbackv5AbuseFiltering;
 }
 
