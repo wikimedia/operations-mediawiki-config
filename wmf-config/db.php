@@ -364,7 +364,7 @@ $wgLBFactoryConf = array(
 # This key must exist for the master switch script to work
 'readOnlyBySection' => array(
 # 'DEFAULT' => 'Emergency maintenance in progress',
-	's1'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
+#	's1'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
 #	's2'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
 ),
 
