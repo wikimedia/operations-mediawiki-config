@@ -94,7 +94,9 @@ $wgFileBackends[] = array(
 		array( 'template' => 'local-NFS', 'isMultiMaster' => !$readFromSwiftLocal ),
 		array( 'template' => 'local-swift', 'isMultiMaster' => $readFromSwiftLocal )
 	),
-	'syncChecks'  => ( 1 | 4 ) // (size & sha1)
+	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
+	'noPushQuickOps ' => true,
+	'noPushDirConts'  => array( 'local-thumb' )
 );
 $readFromSwiftShared = true;
 $wgFileBackends[] = array(
@@ -107,7 +109,9 @@ $wgFileBackends[] = array(
 		array( 'template' => 'shared-NFS', 'isMultiMaster' => !$readFromSwiftShared ),
 		array( 'template' => 'shared-swift', 'isMultiMaster' => $readFromSwiftShared ),
 	),
-	'syncChecks'  => ( 1 | 4 ) // (size & sha1)
+	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
+	'noPushQuickOps' => true,
+	'noPushDirConts' => array( 'local-thumb' )
 );
 /* end multiwrite backend config */
 
