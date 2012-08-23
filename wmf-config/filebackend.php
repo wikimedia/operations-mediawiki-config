@@ -95,7 +95,7 @@ $wgFileBackends[] = array(
 		array( 'template' => 'local-swift', 'isMultiMaster' => $readFromSwiftLocal )
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
-	'noPushQuickOps ' => true,
+	'noPushQuickOps' => true,
 	'noPushDirConts'  => array( 'local-thumb' )
 );
 $readFromSwiftShared = true;
