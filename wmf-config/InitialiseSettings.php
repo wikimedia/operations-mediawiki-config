@@ -6760,7 +6760,7 @@ $wgConf->settings = array(
 		'user' => array( 'upload' => false ),
 		'autoconfirmed' => array( 'upload' => false ),
 		'sysop' => array( 'upload' => true ),
-		'atroller' => array( 'patrol' => true ),
+		'patroller' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 	),
