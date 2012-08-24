@@ -1,5 +1,10 @@
+# Repository management
 .svn
+
+# Editors
 *~
+
+# Wikimedia private/temporary stuff
 AdminSettings.php
 PrivateSettings.php
 xrumer
@@ -12,16 +17,21 @@ wmf-config/*-setup.php
 wmf-config/checkers.php
 lib
 cgi-bin
-
-# Old images such as the ones used for $wgLogo
-/images/*.gif
-/images/*.png
-/images/*.xcf
-
-fonts
 boardvote.gpg
 common
 google*
 slot*
 
+## Old images such as the ones used for $wgLogo
+/images/*.gif
+/images/*.png
+/images/*.xcf
+
+## Not in version control yet
+fonts
+
 /logs
+
+# Operating system stuff
+## Mac OS X
+.DS_Store
