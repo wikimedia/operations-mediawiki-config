@@ -11175,6 +11175,11 @@ $wgConf->settings = array(
     'test2wiki' => true,
     'mediawikiwiki' => true,
 ),
+
+'wgSecureLogin' => array(
+    'default' => false,
+    'enwiki' => true,
+),
 );
 
 
