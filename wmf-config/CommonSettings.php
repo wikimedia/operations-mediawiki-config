@@ -1141,6 +1141,9 @@ $wgUploadSizeWarning = false;
 # Default address gets rejected by some mail hosts
 $wgPasswordSender = 'wiki@wikimedia.org';
 
+# e-mailing password based on e-mail address (bug 34386) 
+$wgPasswordResetRoutes['email'] = true;
+
 switch( $cluster ) {
 case 'wmflabs':
 	require( 'filebackend-wmflabs.php' );
