@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAARX//0i4\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1144,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-08-24T15:06:08Z",
+      "side": 1,
+      "message": "Trailing space.",
+      "revId": "65d97565f8091746d549a304c16378c891f9793f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
