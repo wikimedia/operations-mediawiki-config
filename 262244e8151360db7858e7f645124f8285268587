@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAARX//0iU\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-08-24T15:13:29Z",
+      "side": 1,
+      "message": "to be coherent with other config bugs, please use (bug 36722) Article feedback ... syntax.",
+      "revId": "262244e8151360db7858e7f645124f8285268587",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
