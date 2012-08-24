@@ -16,6 +16,23 @@
       "revId": "b11e58dddf966dead9dc0eccca6924561cdd7ebc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//0jI\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 465,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-08-24T14:57:09Z",
+      "side": 1,
+      "message": "This setting will apply $wgSecureLogin for every Wikimedia site.\n\nBut this patch offers to solve the bug 39380 \"Set $wgSecureLogin \u003d true on enwiki.\".\n\nPlease open a new ticket or edit the existing one if you really wish to expand the scope from en.wikipedia to every Wikimedia site.",
+      "revId": "b11e58dddf966dead9dc0eccca6924561cdd7ebc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
