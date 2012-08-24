@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAARX//0iw\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-08-24T15:08:11Z",
+      "side": 1,
+      "message": "Please consider to add a link to a page documenting what AFT permission are for reference.",
+      "revId": "d81aaa65530f62649b6e1f8dc3692754e4108b74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//0io\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2094,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-08-24T15:08:11Z",
+      "side": 1,
+      "message": "Please be coherent in your choice of singular/plural",
+      "revId": "d81aaa65530f62649b6e1f8dc3692754e4108b74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//0is\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2119,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-08-24T15:08:11Z",
+      "side": 1,
+      "message": "test groups",
+      "revId": "d81aaa65530f62649b6e1f8dc3692754e4108b74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
