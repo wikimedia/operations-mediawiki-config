@@ -51,6 +51,24 @@
       "revId": "b11e58dddf966dead9dc0eccca6924561cdd7ebc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAARX//z3k\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 465,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-08-26T20:49:06Z",
+      "side": 1,
+      "message": "In InitializeSettings.php. Create a new wgConf item for \u0027wgSecureLogin\u0027.\n\n \u0027wgSecureLogin\u0027 \u003d\u003e array(\n     \u0027default\u0027 \u003d\u003e false,\n     \u0027enwiki\u0027 \u003d\u003e true,\n ),",
+      "parentUuid": "AAAARX//0hw\u003d",
+      "revId": "b11e58dddf966dead9dc0eccca6924561cdd7ebc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
