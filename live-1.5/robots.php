@@ -22,6 +22,8 @@ if ( $wgArticle->getID() != 0 ) {
 	$text =  $wgArticle->getContent( false ) ;
 	$lastmod = gmdate( 'D, j M Y H:i:s', wfTimestamp( TS_UNIX,  $wgArticle->getTouched() ) ) . ' GMT';
 	header( "Last-modified: $lastmod" );
+} elseif( $cluster == 'wmflabs' ) {
+	echo "User-agent: *\nDisallow: /\n";
 } else {
 	$stats = fstat( $robots );
 
