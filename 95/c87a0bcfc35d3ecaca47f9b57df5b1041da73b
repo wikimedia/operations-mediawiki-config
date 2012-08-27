@@ -1,0 +1,9 @@
+Verified+1: jenkins-bot
+Code-Review+2: Bsitu <bsitu@wikimedia.org>
+Verified+1: Bsitu <bsitu@wikimedia.org>
+Code-Review+1: Dereckson <dereckson@espace-win.org>
+Submitted-by: Bsitu <bsitu@wikimedia.org>
+Submitted-at: Mon, 27 Aug 2012 17:45:35 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/21141
+Project: operations/mediawiki-config
+Branch: refs/heads/master
