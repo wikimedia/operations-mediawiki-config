@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAARX//zt8\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-08-27T08:31:03Z",
+      "side": 1,
+      "message": "This commit change doesn\u0027t describe the config modification (disabling it by default, enabling it on en.).",
+      "revId": "48046a2e701452abe02a72c135cd050e936c6e3d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
