@@ -7143,17 +7143,14 @@ $wgConf->settings = array(
 		'*' => array(
 			'edit' => false,
 			'editallpages' => false,
-			'editprojekt' => false,
 		),
 		'user' => array(
 			'upload' => false,
-			'editallpages' => false,
-			'editprojekt' => true,
+			'editallpages' => true, // Bug 39671
 		),
 		'sysop' => array(
 			'upload' => false,
 			'editallpages' => true,
-			'editprojekt' => true,
 		),
 		'medlem' => array(
 			'move' => true,
@@ -7168,7 +7165,6 @@ $wgConf->settings = array(
 			'minoredit' => true,
 			'purge' => true,
 			'editallpages' => true,
-			'editprojekt' => true,
 		),
 	),
 	'simplewiki' => array(
@@ -9083,8 +9079,8 @@ $wgConf->settings = array(
 		NS_HELP_TALK => array( 'editallpages' ),
 		NS_CATEGORY => array( 'editallpages' ),
 		NS_CATEGORY_TALK => array( 'editallpages' ),
-		100 => array( 'editprojekt' ),
-		101 => array( 'editprojekt' ),
+		100 => array( 'editallpages' ),
+		101 => array( 'editallpages' ),
 	),
 ),
 # @} end of wgNamespaceProtection
