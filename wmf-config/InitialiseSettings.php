@@ -11042,6 +11042,10 @@ $wgConf->settings = array(
 		'published' => array( 'color' => 'AEA' ),
 	),
 ),
+'wmgUseTranslationMemory' => array(
+	'default' => true,
+	'testwiki' => true,
+),
 'wmgUseTranslationNotifications' => array(
 	'default' => false,
 	'testwiki' => true,

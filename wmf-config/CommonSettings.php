@@ -2357,6 +2357,20 @@ if ( $wmgUseTranslate ) {
 	$wgExtraLanguageNames['qqq']       = 'Message documentation'; # No linguistic content. Used for documenting messages
 
 	$wgTranslateTranslationServices = array();
+	if ( $wmgUseTranslationMemory ) {
+		require( "$IP/extensions/Translate/libs/Solarium/Autoloader.php" );
+		Solarium_Autoloader::register();
+		$wgTranslateTranslationServices['TTMServer'] = array(
+			'type' => 'ttmserver',
+			'class' => 'SolrTTMServer',
+			'cutoff' => 0.60,
+			'config' => array(
+				'adapteroptions' => array(
+					'host' => 'vanadium.eqiad.wmnet',
+				),
+			),
+		);
+	}
 
 	$wgTranslateTasks = array(
 		'view'                 => 'ViewMessagesTask',
