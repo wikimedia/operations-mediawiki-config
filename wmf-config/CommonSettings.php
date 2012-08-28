@@ -2060,7 +2060,6 @@ if ( $wmgUseArticleFeedbackv5 ) {
 	require_once( "$IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.php" );
 	$wgArticleFeedbackv5Categories = $wmgArticleFeedbackv5Categories;
 	$wgArticleFeedbackv5BlacklistCategories = $wmgArticleFeedbackv5BlacklistCategories;
-	$wgArticleFeedbackv5DashboardCategory = array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' );
 	$wgArticleFeedbackv5OversightEmails = $wmgArticleFeedbackv5OversightEmails;
 	$wgArticleFeedbackv5Namespaces = $wmgArticleFeedbackv5Namespaces;
 	$wgArticleFeedbackv5LotteryOdds = $wmgArticleFeedbackv5LotteryOdds;
