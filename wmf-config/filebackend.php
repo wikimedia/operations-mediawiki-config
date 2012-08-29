@@ -15,10 +15,12 @@ $wgFileBackends[] = array( // backend config for wiki's local repo
 	'fileJournal'    => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname ),
 	'fileMode'       => 0644,
 	'containerPaths' => array(
-		"local-public"  => $wgUploadDirectory,
-		"local-thumb"   => str_replace( '/mnt/upload6', '/mnt/thumbs', "$wgUploadDirectory/thumb" ),
-		"local-deleted" => "/mnt/upload6/private/archive/$site/$lang",
-		"local-temp"    => "$wgUploadDirectory/temp",
+		"local-public"    => $wgUploadDirectory,
+		"local-thumb"     => str_replace( '/mnt/upload6', '/mnt/thumbs', "$wgUploadDirectory/thumb" ),
+		"local-deleted"   => "/mnt/upload6/private/archive/$site/$lang",
+		"local-temp"      => "$wgUploadDirectory/temp",
+		"math-render"     => $wgMathDirectory,
+		"timeline-render" => "$wgUploadDirectory/timeline"
 	)
 );
 
