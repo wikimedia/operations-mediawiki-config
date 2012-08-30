@@ -19,7 +19,7 @@ $wgFileBackends[] = array( // backend config for wiki's local repo
 		"local-thumb"     => str_replace( '/mnt/upload6', '/mnt/thumbs', "$wgUploadDirectory/thumb" ),
 		"local-deleted"   => "/mnt/upload6/private/archive/$site/$lang",
 		"local-temp"      => "$wgUploadDirectory/temp",
-		"math-render"     => $wgMathDirectory,
+		"math-render"     => "/mnt/upload6/math", // see $wgMathDirectory
 		"timeline-render" => "$wgUploadDirectory/timeline"
 	)
 );
