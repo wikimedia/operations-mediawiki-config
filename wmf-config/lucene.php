@@ -31,10 +31,10 @@ if ( in_array( $wgDBname, array( 'enwiki' ) ) ) {
 	// $wmgUseTitleKey = false; // Breaks go matching: https://bugzilla.wikimedia.org/show_bug.cgi?id=19882
 } elseif ( in_array( $wgDBname, array( 'dewiki', 'frwiki', 'jawiki' ) ) ) {
 	# Big RAM pool 2, via LVS
-	$wgLuceneHost = '10.2.2.12';
+	$wgLuceneHost = '10.2.1.12';
 } elseif ( in_array( $wgDBname, array( 'itwiki', 'ptwiki', 'plwiki', 'nlwiki', 'ruwiki', 'svwiki', 'zhwiki', 'eswiki'  ) ) ) {
 	# Pool 3 LVS
-	$wgLuceneHost = '10.2.2.13';
+	$wgLuceneHost = '10.2.1.13';
 } else {
 	# Pool 4 LVS
 	$wgLuceneHost = '10.2.2.14';
