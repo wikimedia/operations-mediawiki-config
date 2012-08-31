@@ -130,7 +130,8 @@ $wgLocalFileRepo = array(
 		'deletedHashLevels' => 3,
 		'zones'             => array(
 			'thumb' => array( 'handlerUrl' => "$wgScriptPath/thumb_handler.php" )
-		)
+		),
+		'isPrivate'         => $wmgPrivateWiki
 );
 if ( $wgDBname != 'commonswiki' ) {
 	$wgForeignFileRepos[] = array(

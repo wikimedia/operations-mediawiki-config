@@ -4000,6 +4000,11 @@ $wgConf->settings = array(
 	'tlhwiki' => 'The Klingon Wiki has moved to [http://klingon.wikia.com klingon.wikia.com]'
 ),
 
+'wmgPrivateWiki' => array(
+	'default' => false,
+	'private' => true // make files private and such
+),
+
 'wmgUseDismissableSiteNotice' => array(
 	'default' => true,
 	// Andrew 2010-02-12
