@@ -2199,6 +2199,9 @@ if ( $wmgUseUploadWizard ) {
 		$wgUploadWizardConfig["missingCategoriesWikiText"] = "{{subst:unc}}";
 		$wgUploadWizardConfig['blacklistIssuesPage'] = 'Wikipedia:Upload_Wizard_blacklist_issues'; # Set by neilk, 2011-11-01, per erik
 	}
+
+	// Needed to make UploadWizard work in IE, see bug 39877
+	$wgApiFrameOptions = 'SAMEORIGIN';
 }
 
 if ( $wmgUseVisualEditor ) {
