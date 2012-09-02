@@ -7102,6 +7102,11 @@ $wgConf->settings = array(
 		'bureaucrat' => array(
 			'move-rootuserpages' => true,
 		),
+		'interface_editor' => array( // Bug 39905
+			'editinterface' => true,
+			'edituserjs' => true,
+			'editusercss' => true,
+		),
 	),
 	'quwiki' => array(
 	 	'rollbacker' => array( 'rollback' => true ),
@@ -7652,8 +7657,8 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'inactive' ),
 	),
 	'+ptwiki' => array(
-		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer' ),
-		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed'  ),
+		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface_editor' ), // Bug 39905
+		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed' ),
 	),
 	'+quwiki' => array(
 		'sysop' => array( 'rollbacker' ),
@@ -8026,7 +8031,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'sysop' ),
 	),
 	'+ptwiki' => array(
-		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer' ),
+		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface_editor' ), // Bug 39905
 		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed' ),
 	),
 	'+ptwikinews' => array(
