@@ -1523,10 +1523,6 @@ if ( function_exists( 'dba_open' ) && file_exists( "$IP/cache/interwiki.cdb" ) )
 
 $wgDebugLogGroups["ExternalStoreDB"] = "udp://$wmfUdp2logDest/external";
 
-if ( $wgDBname == 'sep11wiki' ) {
-  $wgSiteNotice = @file_get_contents( $wgReadOnlyFile );
-}
-
 # testing enotif via job queue, river 2007-05-10
 # turning this off since it's currently so lagged it's horrible -- brion 2009-01-20
 # turning back on while investigating other probs
