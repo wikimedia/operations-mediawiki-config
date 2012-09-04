@@ -418,6 +418,10 @@ elseif ( $wgDBname == 'mediawikiwiki' ) {
 	$wgGroupPermissions['coder']['validate'] = true;
 	$wgGroupPermissions['coder']['unreviewedpages'] = true;
 	$wgGroupPermissions['coder']['autoreview'] = true;
+	$wgGroupPermissions['sysop']['review'] = true;
+	$wgGroupPermissions['sysop']['validate'] = true;
+	$wgGroupPermissions['sysop']['unreviewedpages'] = true;
+	$wgGroupPermissions['sysop']['autoreview'] = true;
 }
 
 elseif ( $wgDBname == 'plwiki' ) {
