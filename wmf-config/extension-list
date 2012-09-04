@@ -93,6 +93,7 @@ $IP/extensions/SkinPerPage/SkinPerPage.php
 $IP/extensions/skins/Schulenburg/Schulenburg.php
 $IP/extensions/skins/Tomas/Tomas.php
 $IP/extensions/SpamBlacklist/SpamBlacklist.php
+$IP/extensions/SubpageSortkey/SubpageSortkey.php
 $IP/extensions/SubPageList3/SubPageList3.php
 $IP/extensions/SwiftCloudFiles/SwiftCloudFiles.php
 $IP/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php
