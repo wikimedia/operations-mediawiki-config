@@ -11192,9 +11192,12 @@ $wgConf->settings = array(
 ),
 
 'wmgUseScribunto' => array(
-    'default' => false,
-    'test2wiki' => true,
-    'mediawikiwiki' => true,
+	'default' => false,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
+),
+'wmfUseSubpageSortkey' => array(
+	'default' => false,
 ),
 );
 

@@ -2545,6 +2545,10 @@ if ( $wmgUseScribunto ) {
 	$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
 }
 
+if ( $wmfUseSubpageSortkey ) {
+	include( "$IP/extensions/SubpageSortkey/SubpageSortkey.php" );
+}
+
 if( $cluster == 'wmflabs' ) {
 	require( "$wmfConfigDir/CommonSettings-wmflabs.php" );
 }
