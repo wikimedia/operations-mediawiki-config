@@ -765,8 +765,6 @@ wfProfileOut( "$fname-misc1" );
 wfProfileIn( "$fname-ext-include1" );
 
 include( $IP . '/extensions/timeline/Timeline.php' );
-include( $IP . '/extensions/wikihiero/wikihiero.php' );
-
 if ( $wgDBname == 'testwiki' || $wgDBname == 'mlwiki' ) {
 	// FreeSansWMF has been generated from FreeSans and FreeSerif by using this script with fontforge:
 	// Open("FreeSans.ttf");
@@ -775,7 +773,9 @@ if ( $wgDBname == 'testwiki' || $wgDBname == 'mlwiki' ) {
 	// Generate("FreeSansWMF.ttf", "", 4 );
 	$wgTimelineSettings->fontFile = 'FreeSansWMF.ttf';
 }
+$wgTimelineSettings->fileBackend = 'local-multiwrite';
 
+include( $IP . '/extensions/wikihiero/wikihiero.php' );
 include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 // Config for sitematrix
 $wgSiteMatrixFile = '/apache/common/langlist';
