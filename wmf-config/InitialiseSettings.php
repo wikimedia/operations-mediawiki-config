@@ -3977,6 +3977,7 @@ $wgConf->settings = array(
 	'frwiki' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=4628
 	'jawiki' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=4405
 	'plwiki' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=4653
+	'ptwiki' => array( '', 'autoconfirmed', 'autoreviewer', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=39652
 	'rowiki' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=4674
 	'ruwiki' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=4997
 	'yiwiki' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=5000
