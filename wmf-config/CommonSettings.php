@@ -924,7 +924,11 @@ if ( $wmgUseTimedMediaHandler ) {
 
 $wgOggThumbLocation = '/usr/bin/oggThumb';
 // you can keep the filename the same and use maintenance/purgeList.php
-$wgCortadoJarFile = "$urlprotocol//upload.wikimedia.org/jars/cortado.jar";
+if ( $wgDBname == 'testwiki' || $wgDBname == 'test2wiki' ) {
+	$wgCortadoJarFile = "$urlprotocol//upload.wikimedia.org/jars/cortado-ovt-stripped-0.6.0.jar";
+} else {
+	$wgCortadoJarFile = "$urlprotocol//upload.wikimedia.org/jars/cortado.jar";
+}
 
 include( $IP . '/extensions/AssertEdit/AssertEdit.php' );
 
