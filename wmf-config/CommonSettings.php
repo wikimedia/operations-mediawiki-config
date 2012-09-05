@@ -761,6 +761,52 @@ if ( isset( $wgProfiler ) ) {
 	$wgProfileSampleRate = 1;
 }
 
+// CORS (cross-domain AJAX, bug 20814)
+// This lists the domains that are accepted as *origins* of CORS requests
+// DO NOT add domains here that aren't WMF wikis unless you really know what you're doing
+if ( $wmgUseCORS ) {
+	$wgCrossDomainAJAXdomains = array(
+		'*.wikipedia.org',
+		'*.wikinews.org',
+		'*.wiktionary.org',
+		'*.wikibooks.org',
+		'*.wikiversity.org',
+		'*.wikisource.org',
+		'wikisource.org',
+		'*.wikiquote.org',
+		'www.mediawiki.org',
+		'wikimediafoundation.org',
+		'advisory.wikimedia.org',
+		'auditcom.wikimedia.org',
+		'boardgovcom.wikimedia.org',
+		'board.wikimedia.org',
+		'chair.wikimedia.org',
+		'chapcom.wikimedia.org',
+		'checkuser.wikimedia.org',
+		'collab.wikimedia.org',
+		'commons.wikimedia.org',
+		'donate.wikimedia.org',
+		'exec.wikimedia.org',
+		'grants.wikimedia.org',
+		'incubator.wikimedia.org',
+		'internal.wikimedia.org',
+		'meta.wikimedia.org',
+		'movementroles.wikimedia.org',
+		'office.wikimedia.org',
+		'otrs-wiki.wikimedia.org',
+		'outreach.wikimedia.org',
+		'quality.wikimedia.org',
+		'searchcom.wikimedia.org',
+		'spcom.wikimedia.org',
+		'species.wikimedia.org',
+		'steward.wikimedia.org',
+		'strategy.wikimedia.org',
+		'usability.wikimedia.org',
+		'wikimania????.wikimedia.org',
+		'wikimaniateam.wikimedia.org',
+	);
+}
+
 wfProfileOut( "$fname-misc1" );
 wfProfileIn( "$fname-ext-include1" );
 
