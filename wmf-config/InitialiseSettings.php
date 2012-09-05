@@ -11198,6 +11198,11 @@ $wgConf->settings = array(
 'wmfUseSubpageSortkey' => array(
 	'default' => false,
 ),
+
+'wmgUseCORS' => array(
+	'default' => true,
+	'private' => false,
+),
 );
 
 
