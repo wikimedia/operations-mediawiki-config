@@ -8742,6 +8742,7 @@ $wgConf->settings = array(
 	'default' => true,
 	'donatewiki' => false,
 	'aswiki' => false,
+	'bewikimedia' => false,
 	'bnwiki' => false,
 	'bnwiktionary' => false,
 	'bnwikisource' => false,
