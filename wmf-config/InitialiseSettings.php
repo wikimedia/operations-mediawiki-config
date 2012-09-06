@@ -5959,7 +5959,7 @@ $wgConf->settings = array(
 'wgForceUIMsgAsContentMsg' => array(
 	'default' => array(),
 	'arwiki' => array( 'licenses', 'uploadtext', ),
-	'bewikimedia' => array( 'sitenotice' ),
+	'bewikimedia' => array( 'sitenotice', 'anonnotice' ),
 	'commonswiki' => array(
 		// Sidebar
 		'mainpage',
