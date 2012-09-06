@@ -9909,6 +9909,7 @@ $wgConf->settings = array(
 	'enwiktionary' => true, // Bug 23417 -- ariel 2010-16-05
 	'fiwikimedia' => true, // Bug 37778
 	'huwiki' => true, // Bug 22909 -- Andrew 2010-09-06
+	'liquidthreads_labswikimedia' => true,
 	'mediawikiwiki' => true,
 	'officewiki' => true, // Erik requested, by mail.
 	'ptwikibooks' => true, // Bug 24143 -- Andrew 2010-08-16
