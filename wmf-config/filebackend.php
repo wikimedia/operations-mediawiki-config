@@ -19,11 +19,9 @@ $wgFileBackends[] = array( // backend config for wiki's local repo
 		"local-thumb"     => str_replace( '/mnt/upload6', '/mnt/thumbs', "$wgUploadDirectory/thumb" ),
 		"local-deleted"   => "/mnt/upload6/private/archive/$site/$lang",
 		"local-temp"      => "$wgUploadDirectory/temp",
-		"math-render"     => "/mnt/upload6/math", // see $wgMathDirectory
 		"timeline-render" => "$wgUploadDirectory/timeline"
 	)
 );
-
 $wgFileBackends[] = array( // backend config for wiki's access to shared repo
 	'class'          => 'FSFileBackend',
 	'name'           => 'shared-NFS',
@@ -35,6 +33,16 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repo
 		"local-public"  => "/mnt/upload6/wikipedia/commons",
 		"local-thumb"   => "/mnt/thumbs/wikipedia/commons/thumb",
 		"local-temp"    => "/mnt/upload6/wikipedia/commons/temp",
+	)
+);
+$wgFileBackends[] = array( // backend config for wiki's access to global files
+	'class'          => 'FSFileBackend',
+	'name'           => 'global-NFS',
+	'wikiId'         => "global-data",
+	'lockManager'    => 'nullLockManager',
+	'fileMode'       => 0644,
+	'containerPaths' => array(
+		"math-render" => "/mnt/upload6/math", // see $wgMathDirectory
 	)
 );
 /* end NFS backend config */
@@ -64,7 +72,7 @@ $wgFileBackends[] = array( // backend config for wiki's local repo
 	'parallelize'        => 'implicit',
 	'cacheAuthInfo'      => true
 );
-$wgFileBackends[] = array( // backend config for wiki's access to shared repoloo
+$wgFileBackends[] = array( // backend config for wiki's access to shared repo
 	'class'              => 'SwiftFileBackend',
 	'name'               => 'shared-swift',
 	'wikiId'             => "wikipedia-commons",
@@ -78,6 +86,17 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repoloo
 		'local-thumb'   => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
 		'local-temp'    => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
 	),
+	'parallelize'        => 'implicit',
+	'cacheAuthInfo'      => true
+);
+$wgFileBackends[] = array( // backend config for wiki's access to shared files
+	'class'              => 'SwiftFileBackend',
+	'name'               => 'global-swift',
+	'wikiId'             => "global-data",
+	'lockManager'        => 'nullLockManager',
+	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
+	'swiftUser'          => $wmfSwiftConfig['user'],
+	'swiftKey'           => $wmfSwiftConfig['key'],
 	'parallelize'        => 'implicit',
 	'cacheAuthInfo'      => true
 );
@@ -112,6 +131,17 @@ $wgFileBackends[] = array(
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'noPushQuickOps' => true,
 	'noPushDirConts' => array( 'local-thumb' )
+);
+$wgFileBackends[] = array(
+	'class'       => 'FileBackendMultiWrite',
+	'name'        => 'global-multiwrite',
+	'wikiId'      => "global-data",
+	'lockManager' => 'nullLockManager',
+	'backends'    => array(
+		array( 'template' => 'global-NFS', 'isMultiMaster' => false ),
+		array( 'template' => 'global-swift', 'isMultiMaster' => true ),
+	),
+	'syncChecks'  => ( 1 | 4 ) // (size & sha1)
 );
 /* end multiwrite backend config */
 
