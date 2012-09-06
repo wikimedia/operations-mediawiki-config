@@ -6148,7 +6148,7 @@ $wgConf->settings = array(
 	'enwiktionary' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=7248
 	'eswiktionary' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=7953
 	'fawikinews' => true,
-	'fiwiki' => true, // By request of Nikerabbit in #wikimedia-tech on 2005-12-20 -ævar
+	'fiwiki' => false, // Bug 39942
 	'frwiki' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=7269
 	'frwikibooks' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=21517
 	'frwikisource' => true, // yannf asked in irc, 2006-07-25
@@ -6197,10 +6197,11 @@ $wgConf->settings = array(
 
 'wgUseNPPatrol' => array(
 	'default' => true, // brion 2007-11-16
-	'huwiki' => false, // https://bugzilla.wikimedia.org/show_bug.cgi?id=19241
-	'sqwiki' => false, // bug 25822
-	'ruwiki' => false, // bug 31650
-	'ukwiki' => false, // bug 33273
+	'fiwiki' => false, // Bug 39942
+	'huwiki' => false, // Bug 19241
+	'ruwiki' => false, // Bug 31650
+	'sqwiki' => false, // Bug 25822
+	'ukwiki' => false, // Bug 33273
 ),
 
 # wgNoFollow... @{
