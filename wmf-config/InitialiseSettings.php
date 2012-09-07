@@ -4975,6 +4975,12 @@ $wgConf->settings = array(
 		100 => 'باب', // Portal - bug 19569
 		101 => 'تبادلۂ خیال باب', // Portal talk - bug 19569
 	),
+	'uzwiki' => array (
+		100 => 'Portal',                     //Bug 38840 (Portal)
+		101 => 'Portal_munozarasi',          //Bug 38840
+		102 => 'Loyiha',                     //Bug 38840 (Project)
+		103 => 'Loyiha_munozarasi',          //Bug 38840
+	),
 	'vecwiki' => array(
 		100 => 'Portałe',
 		101 => 'Discussion_portałe',
