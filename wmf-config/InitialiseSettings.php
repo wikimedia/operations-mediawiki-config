@@ -990,8 +990,8 @@ $wgConf->settings = array(
 # @} end of wgUploadNavigationUrl
 
 
-'wmgMathDirectory' => array(
-	'default' => '/mnt/upload6/math',
+'wmgMathFileBackend' => array(
+	'default' => 'global-multiwrite'
 ),
 
 'wmgMathPath' => array(

@@ -2380,9 +2380,10 @@ if ( $wmgUseMath ) {
 	if ( $wgDBname === 'hewiki' ) {
 		$wgDefaultUserOptions['math'] = 0;
 	}
-	$wgMathDirectory = $wmgMathDirectory;
-	$wgMathPath      = $wmgMathPath;
-	$wgUseMathJax    = true;
+	$wgMathFileBackend = $wmgMathFileBackend;
+	$wgMathDirectory   = $wmgMathDirectory;
+	$wgMathPath        = $wmgMathPath;
+	$wgUseMathJax      = true;
 }
 
 if ( $wmgUseBabel ) {
