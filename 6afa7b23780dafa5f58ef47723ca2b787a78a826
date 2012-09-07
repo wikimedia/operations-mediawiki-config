@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAASn//+zA\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10220,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-09-07T16:10:02Z",
+      "side": 1,
+      "message": "Trailing space.",
+      "revId": "6afa7b23780dafa5f58ef47723ca2b787a78a826",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
