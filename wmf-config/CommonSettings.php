@@ -923,7 +923,6 @@ if ( $wmgUseTimedMediaHandler ) {
 }
 
 $wgOggThumbLocation = '/usr/bin/oggThumb';
-$wgCortadoJarFile = "$urlprotocol//upload.wikimedia.org/jars/cortado.jar";
 
 include( $IP . '/extensions/AssertEdit/AssertEdit.php' );
 
