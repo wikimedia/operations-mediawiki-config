@@ -11106,6 +11106,14 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 ),
+'wmgFeaturedFeedsOverrides' => array(
+	'default' => array(),
+	'frwikisource' => array(
+		'featuredtexts' => array(
+			'frequency' => 'weekly',
+		),
+	),
+),
 'wmfUseRevSha1Columns' => array(
 	'default' => true,
 ),
