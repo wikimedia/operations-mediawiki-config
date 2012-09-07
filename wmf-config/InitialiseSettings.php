@@ -89,8 +89,6 @@ $wgConf->settings = array(
 'wgLanguageCode' => array(
 	'default' => '$lang',
 	'special' => 'en', # overridden below by some wikis
-#	'alswiki' => 'gem-alsatian',
-#	'alswiktionary' => 'gem-alsatian',
 	'advisorywiki' => 'en',
 	'alswiki' => 'gsw', # FIXME: rename these wikis
 	'alswiktionary' => 'gsw', # FIXME: rename these wikis
@@ -122,7 +120,7 @@ $wgConf->settings = array(
 	'fiu_vrowiki' => 'vro', # to rename
 	'flaggedrevs_labswikimedia' => 'en',
 	'grantswiki' => 'en',
-	'ilwikimedia' => 'he', // israel
+	'ilwikimedia' => 'he',
 	'incubatorwiki' => 'en', # mixed
 	'langcomwiki' => 'en',
 	'mkwikimedia' => 'mk',
@@ -140,7 +138,7 @@ $wgConf->settings = array(
 	'rswikimedia' => 'sr',
 	'searchcomwiki' => 'en',
 	'sewikimedia' => 'sv',
-	'simplewiki' => 'en', # simple. pah!
+	'simplewiki' => 'en',
 	'stewardwiki' => 'en',
 	'strategywiki' => 'en',
 	'strategyappswiki' => 'en',
@@ -995,27 +993,13 @@ $wgConf->settings = array(
 	'default' => '//upload.wikimedia.org/math',
 ),
 
-/*'wmgUseMathJax' => array(
-	'default'       => false,
-	'mediawikiwiki' => true // --aaron 4/17/12
-),*/
-
 # Disable BC repo
 'wgUseSharedUploads' => array(
 	'default' => false,
 ),
 
 'wgMiserMode' => array(
-	'default' => true, # changed to test ariel
-					   # back to true, INSERT SELECT is replicated
-					   # set to false, we dont have a slow slave
-			# 2005-03-15 We don't have any slaves fast enough to generate all special pages all the time.
-	'wikimaniawiki' => false, # by special request 2005-04-11
-	'wikimania2005wiki' => false, # by special request 2005-04-11
-	'wikimania2006wiki' => false, # by special request 2005-04-11
-	'wikimania2007wiki' => false, # by special request 2005-04-11
-	'wikimania2008wiki' => false,
-	'wikimania2009wiki' => false,
+	'default' => true, // Slaves aren't fast enough to generate all special pages all the time.
 ),
 
 'wgQueryCacheLimit' => array(
@@ -1444,7 +1428,6 @@ $wgConf->settings = array(
 	'mlwikibooks'   => 'വിക്കിപാഠശാല',
 	'mlwikiquote'   => 'വിക്കിചൊല്ലുകൾ',
 	'mlwikisource'	=> 'വിക്കിഗ്രന്ഥശാല',
-//	'mlwiktionary'  => 'വിക്കി‌‌നിഘണ്ടു',
 	'mlwiktionary' => 'വിക്കിനിഘണ്ടു',
 	'movementroleswiki' => 'Movement Roles',
 	'mnwiki'	=> 'Википедиа',
@@ -1461,7 +1444,6 @@ $wgConf->settings = array(
 	'nds_nlwiki'    => 'Wikipedie',
 	'newiki'		=> 'विकिपीडिया',
 	'nlwiktionary'  => 'WikiWoordenboek',
-	# 'nomcomwiki'	=> 'NomCom',
 	'noboard_chapterswikimedia'   => 'Wikimedia Norway Internal Board',
 	'nowikibooks'   => 'Wikibøker',
 	'nowikimedia' => 'Wikimedia Norge',
@@ -1612,7 +1594,6 @@ $wgConf->settings = array(
 
 'wgSiteSupportPage' => array(
 	'default' => '//wikimediafoundation.org/fundraising',
-#	'frwiki' => '//fr.wikipedia.org/wiki/Wikip%C3%A9dia:Dons',
 	'dewiki' => '//wikimediafoundation.org/wiki/Spenden',
 	'frwiki' => '//wikimediafoundation.org/wiki/Faites_un_don',
 	'frwikibooks' => '//wikimediafoundation.org/wiki/Faites_un_don',
@@ -1629,7 +1610,6 @@ $wgConf->settings = array(
 ),
 
 'wgUploadDirectory' => array(
-	# Using upload5 since Feb 2009
 	# Using upload6 since Jan 2010
 	 'default'      => '/mnt/upload6/$site/$lang',
 	 'private' => '/mnt/upload6/private/$lang',
@@ -1913,7 +1893,6 @@ $wgConf->settings = array(
 	'newwiki'       => 'विकिपिडिया',
 	'nlwiktionary'  => 'WikiWoordenboek',
 	'noboard_chapterswikimedia'   => 'Wikimedia',
-	# 'nomcomwiki'    => 'NomCom',
 	'nowikibooks'   => 'Wikibøker',
 	'nowikimedia' => 'Wikimedia',
 	'nowikinews'    => 'Wikinytt',
@@ -2188,8 +2167,6 @@ $wgConf->settings = array(
 		'Portal_talk' => 101,
 	),
 	'aswiki' => array(
-//		'ৱিকিপিডিয়া' => NS_PROJECT,
-//		'ৱিকিপিডিয়া_আলোচনা' => NS_PROJECT_TALK,
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 		'প্ৰকল্প' => NS_PROJECT,
@@ -3601,7 +3578,7 @@ $wgConf->settings = array(
 # wgUseDynamicDates @{
 'wgUseDynamicDates' => array(
 	'default' => false,
-#	'enwiki'  => true, // commented out by bug 18479
+	//'enwiki' => true, // Bug 18479
 	'metawiki'  => true,
 	'enwikiquote' => true,
 	'enwiktionary' => true,
@@ -3621,7 +3598,6 @@ $wgConf->settings = array(
 	'donatewiki' => true,
 	'foundationwiki' => true,
 	'internalwiki' => true,
-//	'qualitywiki' => true,
 	'collabwiki' => true, // bug 29269
 ),
 
@@ -4136,35 +4112,10 @@ $wgConf->settings = array(
 
 # wgRestrictionLevels @{
 'wgRestrictionLevels' => array(
-//	'default' => array( '', 'sysop' ), // to disable semi-protection
 	'default' => array( '', 'autoconfirmed', 'sysop' ), // semi-protection level on
-
-	'alswiki' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=4909
-	'arwiki' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=4454
-	'dewiki' => array( '', 'autoconfirmed', 'sysop' ),
-	'enwiki' => array( '', 'autoconfirmed', 'sysop' ),
-	'eswiki' => array( '', 'autoconfirmed', 'sysop' ), // http://es.wikipedia.org/wiki/Wikipedia:Votaciones/2006/Pol%C3%ADtica_de_semi-protecci%C3%B3n_de_art%C3%ADculos
-	'frwiki' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=4628
-	'jawiki' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=4405
-	'plwiki' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=4653
 	'ptwiki' => array( '', 'autoconfirmed', 'autoreviewer', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=39652
-	'rowiki' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=4674
-	'ruwiki' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=4997
-	'yiwiki' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=5000
-	'simplewiki' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=4753
-	'jawikinews' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=4608
-	'dewikisource' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=4784
-	'dewiktionary' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=4789
-	'plwikiquote' => array( '', 'autoconfirmed', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=4697
-	'testwiki' => array( '', 'autoconfirmed', 'sysop' ),
 ),
 # @} end of wgRestrictionLevels
-
-/*
-'wgExtraRandompageSQL' => array(
-	'enwiki' => 'cur_user<>3903 AND cur_user<>6120',
-),
-*/
 
 'wgSiteNotice' => array(
 	'default' => '',
@@ -4257,64 +4208,6 @@ $wgConf->settings = array(
 	'default' => '',
 ),
 
-# wgReadOnly @{
-'wgReadOnly' => array(
-
-	# Now soft-locked via closed.dblist:
-
-	# 'aawikibooks' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Afar_Wikibooks',
-	# 'aawiktionary' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Afar_Wiktionary</b>',
-	# 'abwiktionary' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Abkhaz_Wiktionary',
-	# 'akwiktionary' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Akan_Wiktionary',
-	# 'aswikibooks' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Assamese_Wikibooks</b>',
-	# 'aswiktionary' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Assamese_Wiktionary ',
-	# 'avwiktionary' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Avar_Wiktionary',
-	# 'bawikibooks' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Bashkir_Wikibooks</b>',
-	# 'bhwiktionary' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Bihari_Wiktionary',
-	# 'biwiktionary' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Bislama_Wiktionary',
-	# 'bmwikiquote' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Bambara_Wikiquote',
-	# 'bmwiktionary' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Bambara_Wiktionary</b>',
-	# 'bowikibooks' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Tibetan_Wikibooks</b>',
-	# 'chwikibooks' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Chamorro_Wikibooks</b>',
-	# 'crwikiquote' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Nehiyaw_Wikiquote</b>',
-	# 'crwiktionary' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Nehiyaw_Wiktionary</b>',
-	# 'dzwiktionary' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Dzongkha_Wiktionary</b>',
-	# 'gawikibooks' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Gaeilge_Wikibooks</b>',
-	# 'gawikiquote' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Gaeilge_Wikiquote</b>',
-	# 'gnwikibooks' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Guarani_Wikibooks',
-	# 'gotwikibooks' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Gothic_Wikibooks</b>',
-	# 'guwikibooks' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Gujarati_Wikibooks</b>',
-	# 'htwikisource' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Haitian_Creole_Wikisource</b>',
-	# 'kswikibooks' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Kashmiri_Wikibooks</b>',
-	# 'kwwikiquote' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Kernewek_Wikiquote</b>',
-	# 'lnwikibooks' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Lingala_Wikibooks</b>',
-	# 'miwikibooks' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Maori_Wikibooks</b>',
-	# 'nahwikibooks' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Nahuatl_Wikibooks',
-	# 'nawikiquote' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Nauruan_Wikiquote</b>',
-	# 'piwiktionary' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Pali_Bhasa_Wiktionary</b>',
-	# 'quwikibooks' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Quechua_Wikibooks',
-	# 'rmwikibooks' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Rumantsch_Wikibooks',
-	# 'sewikibooks' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Sami_Wikibooks',
-	# 'snwiktionary' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Shona_Wiktionary</b>',
-	# 'tkwikiquote' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Turkmen_Wikiquote',
-	# 'towiktionary' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Tongan_Wiktionary',
-	# 'ttwikiquote' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Tatar_Wikiquote</b>',
-	# 'twwiktionary' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Twi_Wiktionary',
-	# 'ugwikibooks' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Uyghur_Wikibooks</b>',
-	# 'ugwikiquote' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Oyghurque_Wikiquote',
-	# 'vowikiquote' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Volapuk_Wikiquote</b>',
-	# 'xhwiktionary' => '<b>This wiki has been closed  per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Xhosa_Wiktionary',
-	# 'yowiktionary' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Yoruba_Wiktionary</b>',
-	# 'zawikiquote' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Zhuang_Wikiquote</b>',
-
-
-
-	# Unlocked:
-	// 'iuwiktionary' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Inuktitut_Wiktionary</b>',
-	// 'wowiktionary' => '<b>This wiki has been closed per http://meta.wikimedia.org/wiki/Proposals_for_closing_projects/Closure_of_Wolof_Wiktionary</b>',
-),
-# @} end of wgReadOnly
-
 # wgTranslateNumerals @{
 'wgTranslateNumerals' => array(
 	'default' => true,
@@ -4340,17 +4233,12 @@ $wgConf->settings = array(
 
 'wgDebugLogFile' => array(
 	'default' => '',
-	// 'aawiki' => "udp://$wmfUdp2logDest/aawiki",
-	// 2005-09-10: Installed to monitor Exif debug output -ævar
-	// 2005-09-10: Took it out out again, got enough test data for now -avar
-	// 'commonswiki' => "udp://$wmfUdp2logDest/commonswiki",
 	'testwiki' => "udp://$wmfUdp2logDest/testwiki",
 	'test2wiki' => "udp://$wmfUdp2logDest/test2wiki",
 ),
 
 # wgDebugLogGroups @{
 'wgDebugLogGroups' => array(
-	# 'default' => array(),
 	'default' => array(
 		'UserThrottle' => "udp://$wmfUdp2logDest/UserThrottle",
 		'cite' => "udp://$wmfUdp2logDest/cite", // to see how it's used;) -ævar
@@ -4383,8 +4271,6 @@ $wgConf->settings = array(
 		'lc-recache' => "udp://$wmfUdp2logDest/lc-recache",
 		'generated-pp-node-count' => "udp://$wmfUdp2logDest/generated-pp-node-count",
 	),
-	# 'dewiki' => array( 'connect' => "udp://$wmfUdp2logDest/connect" ),
-	# 'commonswiki' => array( 'exif' => "udp://$wmfUdp2logDest/exif" ), # disabled due to too-big log file 2005-09-26 by brion
 
 	// To measure the # of articles on enwiki during the <million => >million transition
 	'testwiki' => array(
@@ -5714,8 +5600,6 @@ $wgConf->settings = array(
 		101 => 'Разговор_о_порталу'
 	),
 	'svwiktionary' => array(    # http://bugzilla.wikimedia.org/show_bug.cgi?id=7933
-		// 100 => 'WT', //removed, #22446
-		// 101 => 'WT-diskussion',
 		102 => 'Appendix',
 		103 => 'Appendixdiskussion',
 		104 => 'Rimord',
@@ -9830,7 +9714,6 @@ $wgConf->settings = array(
 	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // Bug 36600
 	'itwiktionary' => array( 'sysop' => array( 'flood' ) ), // Bug 39306
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
-	// 'simplewikibooks' => array( 'sysop' => array( 'flood' )),
 	'simplewikiquote' => array( 'sysop' => array( 'flood' ) ),
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
 	'plwiki' => array( 'sysop' => array( 'flood' ) ), // Bug 20155
@@ -9848,7 +9731,6 @@ $wgConf->settings = array(
 	'mlwiki' => array( 'botadmin' => array( 'botadmin' ) ),
 	'mlwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
-	// 'simplewikibooks' => array( 'sysop' => array( 'flood' )),
 	'simplewikiquote' => array( 'sysop' => array( 'flood' ) ),
 	'plwiki' => array( 'flood' => array( 'flood' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=20155 , bug 21238
 	'strategywiki' => array( 'sysop' => array( 'flood' ) ),
@@ -9949,7 +9831,7 @@ $wgConf->settings = array(
 
 'wgMaxUploadSize' => array(
 	 // Only affects URL uploads; web uploads are enforced by PHP.
-	 'default' => 1024 * 1024 * 500, // 500MB try this :D
+	 'default' => 1024 * 1024 * 500, // 500 MB
 	 'ptwiki'  => 1024 * 500, // 500 KB, as requested in #23186
 ),
 
@@ -10489,17 +10371,7 @@ $wgConf->settings = array(
 	'knwikiquote' => true,
 	'knwikisource' => true,
 	'knwiktionary' => true,
-#	'iki' => true, # XXX probably shouldn't be included
-#	'kswikibooks' => true, # XXX probably shouldn't be included
-#	'kswikiquote' => true, # XXX probably shouldn't be included
-#	'kswiktionary' => true, # XXX probably shouldn't be included
 	'mediawikiwiki' => true,
-
-#	'mlwiki' => true,
-#	'mlwikibooks' => true,
-#	'ikiquote' => true,
-#	'mlwikisource' => true,
-#	'mlwiktionary' => true,
 	'mrwiki' => true,
 	'mrwikibooks' => true,
 	'mrwikiquote' => true,
@@ -10519,24 +10391,13 @@ $wgConf->settings = array(
 	'sawikibooks' => true,
 	'sawiktionary' => true,
 	'sawikisource' => true, // Bug 34159
-#	'siwiki' => true,
-#	'siwikibooks' => true,
-#	'ionary' => true,
-#	'tawiki' => true,
-#	'tawikibooks' => true,
-#	'tawikinews' => true,
-#	'tawikiquote' => true,
-#	'tawiktionary' => true,
 	'tewiki' => true,
 	'tewikibooks' => true,
 	'tewikiquote' => true,
 	'tewikisource' => true,
 	'tewiktionary' => true,
-#	'urwiki' => true, # XXX probably shouldn't be included
-#	'urwikibooks' => true, # XXX probably shouldn't be included
-#	'urwikiquote' => true, # XXX probably shouldn't be included
-#	'urwiktionary' => true, # XXX probably shouldn't be included
 ),
+
 'wmgUseGoogleNewsSitemap' => array(
 	'default' => false,
 	'enwikinews' => true,
@@ -10639,9 +10500,9 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'enwiki' => true,
-	#'incubatorwiki' => true,
-	#'nlwiki' => true,
-	#'sewikimedia' => true,
+	# 'incubatorwiki' => true,
+	# 'nlwiki' => true,
+	# 'sewikimedia' => true,
 ),
 'wmgUseMoodBar' => array(
 	'default' => false,
