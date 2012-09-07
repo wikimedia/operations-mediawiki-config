@@ -2381,7 +2381,7 @@ if ( $wmgUseMath ) {
 		$wgDefaultUserOptions['math'] = 0;
 	}
 	$wgMathFileBackend = $wmgMathFileBackend;
-	$wgMathDirectory   = $wmgMathDirectory;
+	$wgMathDirectory   = '/mnt/upload6/math'; // just for sanity
 	$wgMathPath        = $wmgMathPath;
 	$wgUseMathJax      = true;
 }
