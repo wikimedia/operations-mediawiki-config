@@ -11,7 +11,12 @@
 
 if( $cluster === 'wmflabs' ) {   # safeguard
 
-
+// Deployed by Petrb as a part of review.
+// This extension is scheduled for review and deployment on enwiki
+// Do not remove this extension, without contacting Petr Bena
+if ($wgDBname == "enwiki") {
+	include ("$IP/extensions/OnlineStatusBar/OnlineStatusBar.php");
+}
 
 
 } # safeguard
