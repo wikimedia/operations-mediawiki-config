@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAASn//+m8\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-09-07T21:39:35Z",
+      "side": 1,
+      "message": "Please consider the (bug 39919) Weekly feeds for fr.wikisource syntax to be more coherent with other wikimedia-config commits.",
+      "revId": "2ed31c6931ff8a0d90296a8e793c242d013a3082",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAASn//+nA\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-09-07T21:39:35Z",
+      "side": 1,
+      "message": "This line should be removed once it\u0027s merged.",
+      "revId": "2ed31c6931ff8a0d90296a8e793c242d013a3082",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAASn//+m4\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11111,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-09-07T21:39:35Z",
+      "side": 1,
+      "message": "Add \" // Bug 39919\"",
+      "revId": "2ed31c6931ff8a0d90296a8e793c242d013a3082",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
