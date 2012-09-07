@@ -10217,6 +10217,7 @@ $wgConf->settings = array(
 	'guwikiquote' => true, //bug 37385
 	'hiwiki' => true, // Bug 35436
 	'incubatorwiki' => true, // Bug 32418
+	'kawiki' => true, // Bug 39432 
 	'knwiki' => true, // Bug 34516
 	'knwikisource' => true, // Bug 37456
 	'mediawikiwiki' => true,
@@ -10255,6 +10256,7 @@ $wgConf->settings = array(
 	'default' => false, // Note Narayam default is true
 	'incubatorwiki' => false,
 	'commonswiki' => false, // Bug 32619
+	'kawiki' => true, // Bug 39432
 	'knwiki' => true, // Bug 34591
 ),
 'wmgNarayamUseBetaMapping' => array(
