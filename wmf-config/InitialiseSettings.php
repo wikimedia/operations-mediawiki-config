@@ -11969,7 +11969,21 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 ),
-
+'wmgFeaturedFeedsOverrides' => array(
+	'default' => array(),
+	'frwikisource' => array( // Bug 39919
+		'featuredtexts' => array(
+			'frequency' => 'weekly',
+		),
+	),
+),
+'wmfUseRevSha1Columns' => array(
+	'default' => true,
+),
+'wgResourceLoaderExperimentalAsyncLoading' => array(
+	'default' => false,
+	'test2wiki' => true,
+),
 'wmgReduceStartupExpiry' => array(
 	'default' => false,
 ),
