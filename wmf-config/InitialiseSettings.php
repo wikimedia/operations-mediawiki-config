@@ -10694,6 +10694,15 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'Utilisateur %code%-M',
 	),
+	'frwikiquote' => array( // Bug 39472
+		'0' => 'Utilisateur %code%-0',
+		'1' => 'Utilisateur %code%-1',
+		'2' => 'Utilisateur %code%-2',
+		'3' => 'Utilisateur %code%-3',
+		'4' => 'Utilisateur %code%-4',
+		'5' => 'Utilisateur %code%-5',
+		'N' => 'Utilisateur %code%-M',
+	),
 	'frwikisource' => array(
 		'0' => 'Utilisateurs %code%-0',
 		'1' => 'Utilisateurs %code%-1',
@@ -11000,6 +11009,7 @@ $wgConf->settings = array(
 	'fiwiki' => 'User %code%',
 	'fowiki' => 'Brúkari %code%', // Bug 37401
 	'frwiki' => 'Utilisateur %code%',
+	'frwikiquote' => 'Utilisateur %code%', // Bug 39472
 	'frwikisource' => 'Utilisateurs %code%',
 	'frwiktionary' => 'Utilisateurs %code%',
 	'ilowiki' => 'Agar-aramat %code%', // Bug 37981
