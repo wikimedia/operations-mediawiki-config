@@ -11115,7 +11115,6 @@ $wgConf->settings = array(
 ),
 'wmgReduceStartupExpiry' => array(
 	'default' => false,
-	'testwiki' => true, # Enabled temporarily for Berlin tutorial --Roan
 ),
 'wmgMemoryLimit' => array(
 	'default' => 128*1024*1024, // 128MB
