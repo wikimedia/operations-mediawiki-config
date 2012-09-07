@@ -8829,6 +8829,7 @@ $wgConf->settings = array(
 	'elwikisource' => array( NS_MAIN, 100, 102 ),
 	'enwikibooks' => array( NS_MAIN, 102, 110 ),
 	'enwikisource' => array( NS_MAIN, 102, 104, 106 ),
+	'eswiki' => array ( NS_MAIN, 104 ), // Bug 39866
 	'eswikisource' => array( NS_MAIN, 102, 104 ),
 	'etwikisource' => array( NS_MAIN, 102, 104, 106 ),
 	'fawikisource' => array( NS_MAIN, 102, 104 ),
