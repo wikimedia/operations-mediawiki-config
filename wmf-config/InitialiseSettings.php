@@ -4544,6 +4544,12 @@ $wgConf->settings = array(
 		100     => 'Porth', # 27684
 		101     => 'Sgwrs_Porth', # 27684
 	),
+	'cywikisource' => array(
+		104 => 'Tudalen',          //Bug 39264 (Page)
+		105 => 'Sgwrs_Tudalen',    //Bug 39264
+		106 => 'Indecs',           //Bug 39264 (Index)
+		107 => 'Sgwrs_Indecs',     //Bug 39264
+	),
 	'dawiki' => array(
 		NS_PROJECT_TALK   => 'Wikipedia-diskussion', # bug 27902
 		NS_MEDIAWIKI_TALK => 'MediaWiki-diskussion', # bug 27902
