@@ -11102,6 +11102,18 @@ $wgConf->settings = array(
 'wmgUseFeaturedFeeds' => array(
 	'default' => true,
 ),
+
+'wmgFeaturedFeedsDefaults' => array(
+	'default' => array(
+		'limit' => 10,
+		'inUserLanguage' => false,
+	),
+	'frwikisource' => array( // Bug 39919
+		'limit' => 70,
+		'inUserLanguage' => false,
+	),
+),
+
 'wmgDisplayFeedsInSidebar' => array(
 	'default' => false,
 	'testwiki' => true,
