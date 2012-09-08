@@ -1,0 +1,9 @@
+Code-Review+2: Reedy <reedy@wikimedia.org>
+Verified+1: Reedy <reedy@wikimedia.org>
+Verified+1: jenkins-bot
+Code-Review+1: Alex Monk <krenair@gmail.com>
+Submitted-by: Reedy <reedy@wikimedia.org>
+Submitted-at: Mon, 25 Jun 2012 20:44:54 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/12783
+Project: operations/mediawiki-config
+Branch: refs/heads/master

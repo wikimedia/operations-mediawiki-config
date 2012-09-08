@@ -1,0 +1,9 @@
+Change-Id: I2654b2be4d19e2dc90bf87b243b7e44ad2819766
+Code-Review+2: preilly <preilly@wikimedia.org>
+Verified+1: preilly <preilly@wikimedia.org>
+Verified+1: jenkins-bot
+Submitted-by: preilly <preilly@wikimedia.org>
+Submitted-at: Tue, 19 Jun 2012 23:05:55 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/12121
+Project: operations/mediawiki-config
+Branch: refs/heads/master
