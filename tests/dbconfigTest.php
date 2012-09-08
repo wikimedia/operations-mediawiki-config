@@ -37,9 +37,9 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 	 * you are doing when editing that configuration section, then increment or
 	 * decrement the first argument to assertEquals() below.
 	 */
-	function testDoNotRemoteLinesInHostsbyname() {
+	function testDoNotRemoveLinesInHostsbyname() {
 
-		$this->assertEquals(  74
+		$this->assertEquals(  76
 			, count( $this->lb['hostsByName'] )
 			, "You shall never remove hosts from hostsByName :-D"
 		);
