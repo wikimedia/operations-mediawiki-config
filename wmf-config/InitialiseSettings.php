@@ -3011,6 +3011,10 @@ $wgConf->settings = array(
 	'scnwiktionary' => array(
 		'Wiktionary' => NS_PROJECT,
 	),
+	'sewiki' => array(
+		'Temasiidu' => 100,                //Bug 39206
+		'Temasiidoságastallan' => 101,     //Bug 39206
+	),
 	'simplewiki' => array(
 		'WP' => NS_PROJECT,
 	),
@@ -4922,6 +4926,10 @@ $wgConf->settings = array(
 		102 => 'Pruggettu',
 		103 => 'Discussioni_pruggettu',
 	),
+	'sewiki' => array(
+		100 => 'Portála',              //Bug 39206
+		101 => 'Portálságastallan',    //Bug 39206
+	)
 	'shwiki' => array( 100 => 'Portal', 101 => 'Razgovor o portalu' ), # bug 30928
 	'siwiki' => array( 100 => 'ද්වාරය', 101 => 'ද්වාරය_සාකච්ඡාව' ), # bug 6435, 24936
 	'skwiki' => array( 100 => 'Portál', 101 => 'Diskusia_k_portálu' ),
