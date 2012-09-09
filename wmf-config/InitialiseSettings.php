@@ -9595,6 +9595,8 @@ $wgConf->settings = array(
 
 'wmgApplyGlobalBlocks' => array(
 	'default' => true,
+	'private' => false,
+	'fishbowl' => false,
 	'metawiki' => false,
 ),
 
