@@ -1,0 +1,29 @@
+/**
+ * Basic stylesheet for:
+ * - noc.wikimedia.org
+ */
+
+body {
+	background: #fff;
+	margin: 0;
+	padding: 0.5em 1em;
+	font: 14px/21px sans-serif;
+	color: #333;
+}
+
+a {
+	color: #0645AD;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #0b0080;
+}
+
+img {
+	vertical-align: middle;
+}
