@@ -11216,6 +11216,8 @@ $wgConf->settings = array(
 ),
 'wmfUseSubpageSortkey' => array(
 	'default' => false,
+	'enwikibooks' => true,
+	'ptwikibooks' => true,
 ),
 
 'wmgUseCORS' => array(
