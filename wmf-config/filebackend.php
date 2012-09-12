@@ -119,7 +119,7 @@ $wgFileBackends[] = array(
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'noPushQuickOps' => true,
-	'noPushDirConts'  => array( 'local-thumb' )
+	'noPushDirConts'  => array( 'local-thumb', 'local-temp' )
 );
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
@@ -133,7 +133,7 @@ $wgFileBackends[] = array(
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'noPushQuickOps' => true,
-	'noPushDirConts' => array( 'local-thumb' )
+	'noPushDirConts' => array( 'local-thumb', 'local-temp' )
 );
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
