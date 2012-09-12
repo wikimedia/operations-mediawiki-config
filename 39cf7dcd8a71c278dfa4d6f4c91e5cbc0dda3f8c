@@ -16,6 +16,24 @@
       "revId": "39cf7dcd8a71c278dfa4d6f4c91e5cbc0dda3f8c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAASn//84c\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8177,
+      "author": {
+        "id": 48
+      },
+      "writtenOn": "2012-09-12T21:28:23Z",
+      "side": 1,
+      "message": "This will work and is necessary and is good to go. It just follows the same algorithm as interwiki linking. if you can link to the page you\u0027re trying to import with a given prefix and click the link and actually end up at the right page then imports should work. If not, then not.",
+      "parentUuid": "AAAASn//86E\u003d",
+      "revId": "39cf7dcd8a71c278dfa4d6f4c91e5cbc0dda3f8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
