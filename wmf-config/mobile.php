@@ -142,7 +142,8 @@ if ( $wgDBname === 'commonswiki' || $wgDBname === 'testwiki' ) {
 }
 
 // Add a WLM mobile app banner
-/*$wgHooks['GetMobileNotice'][] = function( SkinMobileBase $skin, $notice ) {
+if ( $wmgMobileFrontendBanner ) {
+	$wgHooks['GetMobileNotice'][] = function( SkinMobileBase $skin, $notice ) {
 	if ( $skin instanceof SkinMobile ) {
 		global $wgMemc;
 		$key = wfMemcKey( 'wmf', 'wlm', 'banner', $skin->getLanguage()->getCode() );
@@ -169,6 +170,6 @@ HTML;
 		$notice .= $banner;
 	}
 	return true;
-};
-*/
+	};
+}
 } # safeguard
