@@ -10469,6 +10469,7 @@ $wgConf->settings = array(
 'wmgMobileFrontendBanner' => array(
 	'default' => false,
 	'testwiki' => true,
+	//'enwiki' => true,
 ),
 'wmgZeroRatedMobileAccess' => array(
 	'default' => true,
