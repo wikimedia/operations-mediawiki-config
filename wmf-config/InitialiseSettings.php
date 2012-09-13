@@ -11249,6 +11249,12 @@ $wgConf->settings = array(
 	'default' => true,
 	'private' => false,
 ),
+
+'wmgUseMicroDesign' => array(
+	'default' => false,
+	'testwiki' => true,
+	'enwiki' => true,
+),
 );
 
 
