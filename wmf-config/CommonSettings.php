@@ -2583,6 +2583,10 @@ if ( $wmfUseSubpageSortkey ) {
 	include( "$IP/extensions/SubpageSortkey/SubpageSortkey.php" );
 }
 
+if ( $wmgUseMicroDesign ) {
+	$wgVectorFeatures['footercleanup']['global'] = true;
+}
+
 if( $cluster == 'wmflabs' ) {
 	require( "$wmfConfigDir/CommonSettings-wmflabs.php" );
 }
