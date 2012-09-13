@@ -1966,6 +1966,7 @@ if ( $wmgUseUsabilityInitiative ) {
 		$wgWikiEditorFeatures['highlight'] = array( 'global' => false, 'user' => true ); // Hidden from prefs view
 	$wgVectorFeatures['simplesearch'] = array( 'global' => true, 'user' => false );
 	$wgVectorFeatures['expandablesearch'] = array( 'global' => false, 'user' => false );
+	$wgVectorFeatures['footercleanup']['global'] = true;
 	$wgVectorUseSimpleSearch = true;
 	// Enable EditWarning by default
 	$wgDefaultUserOptions['useeditwarning'] = 1;
