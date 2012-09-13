@@ -119,7 +119,8 @@ $wgFileBackends[] = array(
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'noPushQuickOps' => true,
-	'noPushDirConts'  => array( 'local-thumb', 'local-temp' )
+	'noPushDirConts' => array( 'local-thumb', 'local-temp' ),
+	'autoResync'  => true // bug 39221
 );
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
@@ -133,7 +134,8 @@ $wgFileBackends[] = array(
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'noPushQuickOps' => true,
-	'noPushDirConts' => array( 'local-thumb', 'local-temp' )
+	'noPushDirConts' => array( 'local-thumb', 'local-temp' ),
+	'autoResync'  => true // 39221
 );
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
