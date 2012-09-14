@@ -6467,7 +6467,7 @@ $wgConf->settings = array(
 		'createaccount' => false
 	) ),
 	'wikimania2012wiki' => array(
-		//'*' => array( 'edit' => false ),
+		'*' => array( 'edit' => false ),
 		'*' => array( 'createpage' => false ),
 	),
 	'wikimania2013wiki' => array(
