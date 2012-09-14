@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<p>Here are some Wikimedia configuration files which are not in version control. The files are dynamically generated and are perfectly up-to-date.</p>
+<p>Here are some Wikimedia configuration files which are in version control. The files are dynamically generated from fenari's working copy and are perfectly up-to-date.</p>
 
 <hr>
 
