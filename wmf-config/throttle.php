@@ -72,6 +72,7 @@ function efRaiseAccountCreationThrottle() {
 			continue;
 		}
 
+		# @TODO: Make IP address accept array
 		# 3) skip when throttle does not apply to the client IP
 		if( isset( $options['IP'] ) && wfGetIP() != $throttle['IP'] ) {
 			continue;
