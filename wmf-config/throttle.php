@@ -57,8 +57,9 @@ function efRaiseAccountCreationThrottle() {
 
 		if( isset( $options['dbname'] ) ) {
 			if ( is_array( $options['dbname'] ) ) {
-				if ( !in_array( $wgDBname, $options['dbname'] ) )
+				if ( !in_array( $wgDBname, $options['dbname'] ) ) {
 					continue;
+				}
 			} elseif ( $wgDBname != $options['dbname'] ) {
 				continue;
 			}
