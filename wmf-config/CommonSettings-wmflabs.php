@@ -73,4 +73,7 @@ if ( file_exists( '/etc/wikimedia-transcoding' ) ) {
 	$wgMaxShellFileSize = 100*102400; //1GB
 }
 
+if ($wgDBname == "testwiki") {
+	$wgCaptchaDirectory = '/mnt/upload6/private/captcha/random';
+}
 } # end safeguard
