@@ -7084,7 +7084,7 @@ $wgConf->settings = array(
 	'ptwiki' => array(
 		'autoconfirmed' => array( 'patrol' => true, 'abusefilter-log-detail' => true ),
 		'confirmed' => array( 'patrol' => true ),
-		'autoreviewer' => array( 'autopatrol' => true ),
+		'autoreviewer' => array( 'autopatrol' => true, 'autoreviewer' => true ),
 		'eliminator' => array(
 			'browsearchive' => true,
 			'delete' => true,
@@ -7104,6 +7104,7 @@ $wgConf->settings = array(
 			'move' => false,
 			'move-rootuserpages' => false,
 		),
+		'sysop' => array( 'autoreviewer' => true ),
 		'bureaucrat' => array(
 			'move-rootuserpages' => true,
 		),
