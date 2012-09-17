@@ -9879,10 +9879,7 @@ $wgConf->settings = array(
 ),
 
 'wgHtml5' => array(
-	'default' => false,
-	'mediawikiwiki' => true,
-	'testwiki' => true,
-	'test2wiki' => true,
+	'default' => true,
 ),
 
 'wgVectorShowVariantName' => array(
