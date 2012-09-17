@@ -2607,8 +2607,8 @@ $wgConf->settings = array(
 		'Page_talk' => 105,
 	),
 	'ilowiki' => array(
-		'WP' => NS_PROJECT, //bug 38247
-		'WT' => NS_PROJECT_TALK, //bug 38247
+		'WP' => NS_PROJECT, // bug 38247
+		'WT' => NS_PROJECT_TALK, // bug 38247
 	),
 	'iowiki' => array(
 		'Wikipedia' => NS_PROJECT,
@@ -2696,8 +2696,8 @@ $wgConf->settings = array(
 		'Portal_talk' => 101,
 		'들' => 100,
 		'들토' => 101,
-		'프'=> 102,
-		'프토'=> 103,
+		'프' => 102,
+		'프토' => 103,
 	),
 	'kowikinews' => array(
 		'뉴'   =>  NS_PROJECT,
@@ -4153,7 +4153,7 @@ $wgConf->settings = array(
 	'default' => true,
 
 	'arwiki' => false,
-	'arwiktionary' => false, //bug 33758
+	'arwiktionary' => false, // bug 33758
 	'aswiki' => false, # bug 31371
 	# bug 3442 -ævar
 	'arwikibooks' => false,
@@ -5053,8 +5053,8 @@ $wgConf->settings = array(
 		103 => 'Размовы_пра_аўтара',
 		104 => 'Старонка', // Page
 		105 => 'Размовы_пра_старонку',
-		106 =>'Індэкс', // Index
-		107 =>'Размовы_пра_індэкс',
+		106 => 'Індэкс', // Index
+		107 => 'Размовы_пра_індэкс',
 	),
 	'bgwikisource' => array(
 		100 => 'Автор',
@@ -6467,7 +6467,7 @@ $wgConf->settings = array(
 		'createaccount' => false
 	) ),
 	'wikimania2012wiki' => array(
-		//'*' => array( 'edit' => false ),
+		#'*' => array( 'edit' => false ),
 		'*' => array( 'createpage' => false ),
 	),
 	'wikimania2013wiki' => array(
@@ -7223,8 +7223,8 @@ $wgConf->settings = array(
 	),
 	'svwikisource' => array( // Bug 28614 & 36895
 		'autopatrolled' => array( 'autopatrol' => true, 'suppressredirect' => true, 'upload' => true, 'reupload' => true ),
-		'autoconfirmed' => array( 'upload' => false, 'reupload' => false),
-		'confirmed' => array( 'upload' => false, 'reupload' => false),
+		'autoconfirmed' => array( 'upload' => false, 'reupload' => false ),
+		'confirmed' => array( 'upload' => false, 'reupload' => false ),
 	),
 	'svwiktionary' => array(
 		'user' => array( 'upload' => false ),
@@ -7275,7 +7275,7 @@ $wgConf->settings = array(
 		),
 		'sysop' => array(
 			'review' => true, // Bug 38690
-			'unreviewedpages' => true, //Bug 38690
+			'unreviewedpages' => true, // Bug 38690
 		),
 		'technician' => array(
 			'abusefilter-log-detail' => true, // Bug 38690
@@ -7948,7 +7948,7 @@ $wgConf->settings = array(
 		'sysop'	 => array( 'autopatrolled', 'patroller' ),
 	),
 	'+itwikisource' => array(
-		'bureaucrat' => array( 'flood' ), #bug 36600
+		'bureaucrat' => array( 'flood' ), # bug 36600
 	),
 	'+itwiktionary' => array(
 		'sysop' => array( 'patroller', 'autopatrolled', 'flood' ), // Flood added per bug 39306
@@ -10117,7 +10117,7 @@ $wgConf->settings = array(
 	'hiwiki' => array( 'No Feedback', 'आकलन रहित लेख' ),
 	'ptwiki' => array( '!Páginas que não podem ser avaliadas pelos leitores' ),
 	'srwiki' => array( 'Чланци изузети од оцењивања' ),
-	'zhwiki' => array( '消歧义', '条目删除候选', '怀疑侵犯版权页面', '快速删除候选' ,'禁止索引的页面' ),
+	'zhwiki' => array( '消歧义', '条目删除候选', '怀疑侵犯版权页面', '快速删除候选' , '禁止索引的页面' ),
 ),
 'wmgArticleFeedbackLotteryOdds' => array(
 	'default' => 0,
@@ -10208,10 +10208,10 @@ $wgConf->settings = array(
 	'guwiki' => true, // Bug 33423
 	'guwikisource' => true, // Bug 35138
 	'guwiktionary' => true, // bug 37365
-	'guwikiquote' => true, //bug 37385
+	'guwikiquote' => true, // bug 37385
 	'hiwiki' => true, // Bug 35436
 	'incubatorwiki' => true, // Bug 32418
-	'kawiki' => true, // Bug 39432 
+	'kawiki' => true, // Bug 39432
 	'knwiki' => true, // Bug 34516
 	'knwikisource' => true, // Bug 37456
 	'mediawikiwiki' => true,
@@ -11129,15 +11129,15 @@ $wgConf->settings = array(
 	'testwiki' => true, # Enabled temporarily for Berlin tutorial --Roan
 ),
 'wmgMemoryLimit' => array(
-	'default' => 128*1024*1024, // 128MB
+	'default' => 128 * 1024 * 1024, // 128MB
 
 	# Extra 60MB for zh wikis for converter tables
-	'zhwiki' => 180*1024*1024,
-	'zhwikibooks' => 180*1024*1024,
-	'zhwikinews' => 180*1024*1024,
-	'zhwikiquote' => 180*1024*1024,
-	'zhwikisource' => 180*1024*1024,
-	'zhwiktionary' => 180*1024*1024,
+	'zhwiki' => 180 * 1024 * 1024,
+	'zhwikibooks' => 180 * 1024 * 1024,
+	'zhwikinews' => 180 * 1024 * 1024,
+	'zhwikiquote' => 180 * 1024 * 1024,
+	'zhwikisource' => 180 * 1024 * 1024,
+	'zhwiktionary' => 180 * 1024 * 1024,
 ),
 'wgBug34832TransitionalRollback' => array(
 	'default' => false,
@@ -11228,7 +11228,7 @@ $wgConf->settings = array(
 // Make sure $cluster and $realm are available in case we are
 // required()/included() inside a function.
 global $cluster, $realm;
-if( $cluster == 'wmflabs' ) {
+if ( $cluster == 'wmflabs' ) {
     require( "$wmfConfigDir/InitialiseSettings-wmflabs.php" );
     wmfLabsOverrideSettings();
 }
