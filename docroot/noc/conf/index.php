@@ -6,8 +6,15 @@
 </head>
 <body>
 
-<p>Here are some Wikimedia configuration files which are in version control. The files are dynamically generated from fenari's working copy and are perfectly up-to-date.</p>
-
+<p>Below is a selection of Wikimedia configuration files available for easy viewing.
+	The files are dynamically generated and are perfectly up-to-date.
+	Each of these files is also available in public version control in one of the following repositories:
+</p>
+<ul>
+	<li><a href="https://gerrit.wikimedia.org/r/gitweb?p=operations/mediawiki-config.git;a=tree">operations/mediawiki-config.git</a></li>
+	<li><a href="https://gerrit.wikimedia.org/r/gitweb?p=operations/apache-config.git;a=tree">operations/apache-config.git</a></li>
+	<li><a href="https://gerrit.wikimedia.org/r/gitweb?p=operations/puppet.git;a=tree;f=templates/lucene">operations/puppet.git</a></li>
+</ul>
 <hr>
 
 <h2><img src="./images/document.png" alt=""> Apache configuration</h2>
@@ -35,7 +42,8 @@
 	);
 	$viewFilenames[] = './langlist';
 	$viewFilenames = array_map( 'basename', $viewFilenames );
-	$srcPath = '/h/w/c/wmf-config';
+	natsort( $viewFilenames );
+	$srcPath = '/home/wikipedia/common/wmf-config';
 	foreach ( $viewFilenames as $viewFilename ) {
 		$srcFilename = substr( $viewFilename, -4 ) === '.txt'
 			? substr( $viewFilename, 0, -4 )

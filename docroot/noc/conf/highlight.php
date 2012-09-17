@@ -6,7 +6,7 @@ $viewFilenames = array_map( 'basename', glob( __DIR__ . '/*' ) );
 $srcFilename = $_GET['file'];
 
 $viewFilename = false;
-$found = false;
+$srcDir = false;
 
 foreach ( $viewFilenames as $view ) {
 	$src = substr( $view, -4 ) === '.txt'
@@ -32,23 +32,31 @@ if ( !$viewFilename ) {
 	# OK, authenticated developer, send password
 	$hlHtml = highlight_string( '<'."?php\n\$secretSitePassword = 'jgmeidj28gms';\n?" . '>', true );
 } else {
-	$phpSrcPath = "/home/wikipedia/common/wmf-config/$srcFilename";
-	$miscSrcPath = "/home/wikipedia/common/$srcFilename";
-	if ( substr( $srcFilename, -4 ) === '.php' && file_exists( $phpSrcPath ) ) {
+	$baseSrcDir = '/home/wikipedia/common';
+
+	// Find where it is
+	if ( file_exists( "$baseSrcDir/wmf-config/$srcFilename" ) ) {
+		$srcPath = "$baseSrcDir/wmf-config/$srcFilename";
 		$srcDir = 'wmf-config/';
-		$found = true;
-
-		$hlHtml = highlight_file( $phpSrcPath, true );
-		$hlHtml = str_replace( '&nbsp;', ' ', $hlHtml ); // https://bugzilla.wikimedia.org/19253
-		$hlHtml = str_replace( '    ', "\t", $hlHtml ); // convert 4 spaces to 1 tab character; bug #36576
-	} elseif ( file_exists( $miscSrcPath ) ) {
+	} elseif ( file_exists( "$baseSrcDir/$srcFilename" ) ) {
+		$srcPath = "$baseSrcDir/$srcFilename";
 		$srcDir = '';
-		$found = true;
+	}
 
-		$hlHtml = htmlspecialchars( file_get_contents( __DIR__ . '/' . $srcFilename ) );
+	// How to display it
+	if ( $srcDir !== false ) {
+		if ( substr( $srcFilename, -4 ) === '.php' ) {
+
+			$hlHtml = highlight_file( $srcPath, true );
+			$hlHtml = str_replace( '&nbsp;', ' ', $hlHtml ); // https://bugzilla.wikimedia.org/19253
+			$hlHtml = str_replace( '    ', "\t", $hlHtml ); // convert 4 spaces to 1 tab character; bug #36576
+		} else {
+			$hlHtml = htmlspecialchars( file_get_contents( __DIR__ . '/' . $srcFilename ) );
+		}
 	} else {
 		$hlHtml = 'Failed to read file. :(';
 	}
+
 	$hlHtml = "<pre>$hlHtml</pre>";
 }
 
@@ -65,7 +73,7 @@ $urlViewFilename = htmlspecialchars( urlencode( $viewFilename ) );
 <body>
 <h1><a href="./">&laquo;</a> <?php echo $titleSrcFilename; ?></h1>
 <?php
-if ( $found ) :
+if ( $srcDir !== false ) :
 ?>
 <p>(<a href="https://gerrit.wikimedia.org/r/gitweb?p=operations/mediawiki-config.git;a=history;f=<?php echo $urlSrcFilename; ?>;hb=HEAD">version control</a> &bull; <a href="https://gerrit.wikimedia.org/r/gitweb?p=operations/mediawiki-config.git;a=blame;f=<?php echo $urlSrcFilename; ?>;hb=HEAD">blame</a> &bull; <a href="./<?php echo $urlViewFilename; ?>">raw text</a>)</p>
 <?php
