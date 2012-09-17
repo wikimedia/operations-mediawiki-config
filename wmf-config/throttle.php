@@ -74,14 +74,14 @@ function efRaiseAccountCreationThrottle() {
 
 		# @TODO: Make IP address accept array
 		# 3) skip when throttle does not apply to the client IP
-		if( isset( $options['IP'] ) && wfGetIP() != $throttle['IP'] ) {
+		if( isset( $options['IP'] ) && wfGetIP() != $options['IP'] ) {
 			continue;
 		}
 
 		# Finally) set up the throttle value
 		global $wgAccountCreationThrottle;
-		if( isset( $throttle['value'] ) && is_numeric( $throttle['value'] ) ) {
-			$wgAccountCreationThrottle = $throttle['value'];
+		if( isset( $options['value'] ) && is_numeric( $options['value'] ) ) {
+			$wgAccountCreationThrottle = $options['value'];
 		} else {
 			$wgAccountCreationThrottle = 50; // Provide some sane default
 		}
