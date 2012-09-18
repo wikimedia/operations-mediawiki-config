@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAASn//6Hg\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 9807,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-09-18T19:27:14Z",
+      "side": 1,
+      "message": "I dont really like that one :-D  Easier to just have to delete the sharp.  It is a safe change anyway.",
+      "revId": "3b60f1f01984775d8027276bba3c5721af2a0895",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
