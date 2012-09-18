@@ -15,7 +15,7 @@ if ( $wmgMobileFrontend ) {
 	$wgMFFeedbackFallbackURL = '//en.m.wikipedia.org/wiki/Wikipedia:Contact_us';
 
 	$wgHooks['MobileFrontendOverrideFeedbackLinks'][] = 'MobileFrontendFeedbackConfig';
-	function MobileFrontendFeedbackConfig() {
+	function MobileFrontendFeedbackConfig( $feedbackSource, $referringArticle ) {
 		global $wgLanguageCode, $wgDBname, $wgMFFeedbackLinks;
 
 		$infoEmails = array(
@@ -84,8 +84,10 @@ if ( $wmgMobileFrontend ) {
 			$articleOtherLink = "mailto:$emailStub@wikimedia.org?subject=$articleOtherSubject";
 		}
 
-		$technicalBody = wfMessage( 'mobile-frontend-leave-feedback-email-body')->inLanguage( $lang )->escaped()
+		$technicalBody = wfMessage( 'mobile-frontend-leave-feedback-email-body' )->inLanguage( $lang )->escaped()
 			. "\nUser-agent: " . $_SERVER['HTTP_USER_AGENT'] . "\n";
+		$technicalBody .= "Source: " . $feedbackSource . "\n";
+		$technicalBody .= "Referring page: " . $referringArticle . "\n";
 		$technicalLink = "mailto:feedbacktest@wikimedia.org?subject=$technicalSubject&body=$technicalBody";
 
 		$wgMFFeedbackLinks = array(
