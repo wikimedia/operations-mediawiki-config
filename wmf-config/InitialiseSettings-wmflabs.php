@@ -156,8 +156,9 @@ return array(
 	'-wmgEnableCaptcha' => array(
 		'default' => true,
 	),
+	# ClickTracking is a required dependency for AFTv5
 	'-wmgClickTracking' => array(
-		'default' => false,
+		'default' => true,
 	),
 	# FIXME: make that settings to be applied
 	'-wgShowExceptionDetails' => array(
@@ -178,9 +179,6 @@ return array(
 	),
 	'-wmgUseE3Experiments' => array(
 		'default' => false,
-	),
-	'-wmgArticleFeedbackLotteryOdds' => array(
-		'default' => 0,
 	),
 );
 
