@@ -9503,9 +9503,9 @@ $wgConf->settings = array(
 ),
 
 'wmgCollectionUseEpub' => array(
-	'default' => false,
-	'testwiki' => true,
-	'simplewiki' => true,
+	'default' => true,
+	#'testwiki' => true,
+	#'simplewiki' => true,
 ),
 
 'wmgUseSpamBlacklist' => array(
