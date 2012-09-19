@@ -1429,16 +1429,6 @@ $wgBrowserBlackList[] = '/^Lynx/';
 // Vandal checks
 require( "$wmfConfigDir/checkers.php" );
 
-// Experimental ScanSet extension
-if ( $wgDBname == 'enwikisource' ) {
-	require( $IP . '/extensions/ScanSet/ScanSet.php' );
-	$wgScanSetSettings = array(
-		'baseDirectory' => '/mnt/upload6/wikipedia/commons/scans',
-		'basePath' => "$urlprotocol//upload.wikimedia.org/wikipedia/commons/scans",
-	);
-}
-
-
 // Customize URL handling for secure.wikimedia.org HTTPS logins
 if ( $secure ) {
 	require( "$wmfConfigDir/secure.php" );
