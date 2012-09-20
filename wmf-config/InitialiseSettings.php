@@ -11162,6 +11162,9 @@ $wgConf->settings = array(
 	'zhwikisource' => 180 * 1024 * 1024,
 	'zhwiktionary' => 180 * 1024 * 1024,
 ),
+'wgMaxGeneratedPPNodeCount' => array(
+	'default' => 4000000,
+),
 'wgBug34832TransitionalRollback' => array(
 	'default' => false,
 	'zhwiki' => true,
