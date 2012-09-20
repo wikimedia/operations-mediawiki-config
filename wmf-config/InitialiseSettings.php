@@ -1,7 +1,6 @@
 <?php
 /**
- * vim: set sw=4 ts=4 et foldmarker=@{,@} foldmethod=marker:
- * - Expand tabs so we can make all the arrows line up
+ * vim: set sw=4 ts=4 noet foldmarker=@{,@} foldmethod=marker:
  * - recognize folding markers just like DefaultSettings.php
  * You need to use 'set modeline' to activate this feature.
  * za to toggle a fold
@@ -1003,7 +1002,7 @@ $wgConf->settings = array(
 
 # Disable BC repo
 'wgUseSharedUploads' => array(
-   'default' => false,
+	'default' => false,
 ),
 
 'wgMiserMode' => array(
@@ -3282,7 +3281,7 @@ $wgConf->settings = array(
 	109 => true,
 	110 => true,
 	111 => true,   // extra namespaces usually want subpages
- ),
+),
 
 	// Wikipedia @{
 	'cswiki'	=> array( -1 => 0, 0 => 0, 1 => 1, 2 => 1, 3 => 1, 4 => 1, 5 => 1, 6 => 0, 7 => 1, 8 => 1, 9 => 1, 10 => 1, 11 => 1, 12 => 1, 13 => 1, 14 => 1, 15 => 1, 100 => 1, 101 => 1, 102 => 1, 103 => 1 ),
@@ -4211,8 +4210,8 @@ $wgConf->settings = array(
 		'wtf' => "udp://$wmfUdp2logDest/wtf", // -- bv 2009-07-29
 		'memcached' => "udp://$wmfUdp2logDest/memcached",
 		'poolcounter' => "udp://$wmfUdp2logDest/poolcounter",
-	'bug-27891' => "udp://$wmfUdp2logDest/bug-27891",
-	'lc-recache' => "udp://$wmfUdp2logDest/lc-recache",
+		'bug-27891' => "udp://$wmfUdp2logDest/bug-27891",
+		'lc-recache' => "udp://$wmfUdp2logDest/lc-recache",
 	),
 	# 'dewiki' => array( 'connect' => "udp://$wmfUdp2logDest/connect" ),
 	# 'commonswiki' => array( 'exif' => "udp://$wmfUdp2logDest/exif" ), # disabled due to too-big log file 2005-09-26 by brion
@@ -6406,12 +6405,12 @@ $wgConf->settings = array(
 ),
 
 'wgRateLimitsExcludedIPs' => array(
-    // see also wmf-config/throttle.php
-    // exemptions for outreach events should go in that file
+	// see also wmf-config/throttle.php
+	// exemptions for outreach events should go in that file
 	'default' => array(),
 	'enwiki' => array(
 		'167.165.53.93', // proteins@msu.edu
-    ),
+	),
 ),
 
 'wgEmailAuthentication' => array(
@@ -7631,7 +7630,7 @@ $wgConf->settings = array(
 	),
 	'+mlwiktionary' => array(
 		'bureaucrat' => array( 'botadmin' ),
- 	),
+	),
 	'+nlwiki' => array(
 		'bureaucrat' => array( 'abusefilter', 'arbcom', 'rollbacker' ),
 	),
@@ -8751,11 +8750,11 @@ $wgConf->settings = array(
 
 # DJVU @{
 'wgDjvuDump' => array(
-   'default' => '/usr/bin/djvudump',
+	'default' => '/usr/bin/djvudump',
 ),
 
 'wgDjvuRenderer' => array(
-   'default' => '/usr/bin/ddjvu',
+	'default' => '/usr/bin/ddjvu',
 ),
 
 'wgDjvuTxt' => array(
@@ -9684,13 +9683,13 @@ $wgConf->settings = array(
 ),
 
 'wmgUseCodeReview' => array(
-   'default' => false,
-   'mediawikiwiki' => true,
+	'default' => false,
+	'mediawikiwiki' => true,
 ),
 
 'wgSquidMaxage' => array(
-   'default' => 2678400, // 31 days seems about right
-   'foundationwiki' => 3600, // template links may be funky
+	'default' => 2678400, // 31 days seems about right
+	'foundationwiki' => 3600, // template links may be funky
 ),
 
 'wgUseOldSearchUI' => array(
@@ -10120,7 +10119,7 @@ $wgConf->settings = array(
 	'ptwiki' => true,
 	'ptwikibooks' => true,
 	'srwiki' => true,
-    'zhwiki' => true,
+	'zhwiki' => true,
 ),
 'wmgArticleFeedbackCategories' => array(
 	'default' => array(),
@@ -10185,7 +10184,7 @@ $wgConf->settings = array(
 	'default' => false,
 	// 'en_labswikimedia' => true, // Disabled due to out of date schema --Reedy
 	'enwiki' => true,
-    'testwiki' => true,
+	'testwiki' => true,
 ),
 'wmgArticleFeedbackv5LotteryOdds' => array(
 	'default' => 0,
@@ -11252,6 +11251,6 @@ $wgConf->settings = array(
 // required()/included() inside a function.
 global $cluster, $realm;
 if ( $cluster == 'wmflabs' ) {
-    require( "$wmfConfigDir/InitialiseSettings-wmflabs.php" );
-    wmfLabsOverrideSettings();
+	require( "$wmfConfigDir/InitialiseSettings-wmflabs.php" );
+	wmfLabsOverrideSettings();
 }
