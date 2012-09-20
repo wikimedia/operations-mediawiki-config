@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAASn//5M4\u003d",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2012-09-20T06:31:53Z",
+      "side": 1,
+      "message": "There is still one usage of $msgOpts around 30 lines below. I\u0027d move this variable closer to that line or change it to wfMessage too.",
+      "revId": "787be53514b37514fcecb5750b932d768e5add05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
