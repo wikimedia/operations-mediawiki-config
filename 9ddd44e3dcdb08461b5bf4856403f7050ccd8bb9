@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAASn//40Y\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1467,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-09-20T21:11:29Z",
+      "side": 0,
+      "message": "Om nom nom nom.",
+      "revId": "9ddd44e3dcdb08461b5bf4856403f7050ccd8bb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAASn//40U\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3987,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-09-20T21:11:29Z",
+      "side": 0,
+      "message": "Why are these being removed?\n\nIf they choose for these settings and later the default came to match that, it should still stay explicit for they did not agree to use the default they choose for this particular setting, right?",
+      "revId": "9ddd44e3dcdb08461b5bf4856403f7050ccd8bb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAASn//40Q\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6397,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-09-20T21:11:29Z",
+      "side": 0,
+      "message": "Just making sure, since it wasn\u0027t explicit from the commit message, this is no longer needed?\n\nIt wasn\u0027t commented out, may want to do this in a separate commit. Or at least re-assure somehow that this is indeed no longer needed.",
+      "revId": "9ddd44e3dcdb08461b5bf4856403f7050ccd8bb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
