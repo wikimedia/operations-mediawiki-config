@@ -16,6 +16,24 @@
       "revId": "787be53514b37514fcecb5750b932d768e5add05",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAASn//5L4\u003d",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2012-09-20T08:34:48Z",
+      "side": 1,
+      "message": "See commit summary:\n\nnote: i\u0027ve left one instance of wfMsg to avoid merge conflicts with\nhttps://gerrit.wikimedia.org/r/24180",
+      "parentUuid": "AAAASn//5M4\u003d",
+      "revId": "787be53514b37514fcecb5750b932d768e5add05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
