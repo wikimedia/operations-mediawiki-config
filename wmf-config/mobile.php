@@ -56,14 +56,13 @@ if ( $wmgMobileFrontend ) {
 		);
 
 		$lang = ( in_array( $wgLanguageCode, $infoEmails ) ) ? $wgLanguageCode : 'en';
-		$msgOpts = array( 'language' => $lang );
 		/** Get email subjects **/
 		$subjectPreface = "[Mobile feedback] ";
-		$generalSubject = $subjectPreface . wfMsgExt( 'mobile-frontend-leave-feedback-general-link-text', $msgOpts );
-		$articlePersonalSubject = $subjectPreface . wfMsgExt( 'mobile-frontend-leave-feedback-article-personal-link-text', $msgOpts );
-		$articleFactualSubject = $subjectPreface . wfMsgExt( 'mobile-frontend-leave-feedback-article-factual-link-text', $msgOpts );
-		$articleOtherSubject = $subjectPreface . wfMsgExt( 'mobile-frontend-leave-feedback-article-other-link-text', $msgOpts );
-		$technicalSubject = $subjectPreface . wfMsgExt( 'mobile-frontend-leave-feedback-technical-link-text', $msgOpts );
+		$generalSubject = $subjectPreface . wfMessage( 'mobile-frontend-leave-feedback-general-link-text' )->inLanguage( $lang )->escaped();
+		$articlePersonalSubject = $subjectPreface . wfMessage( 'mobile-frontend-leave-feedback-article-personal-link-text' )->inLanguage( $lang )->escaped();
+		$articleFactualSubject = $subjectPreface . wfMessage( 'mobile-frontend-leave-feedback-article-factual-link-text' )->inLanguage( $lang )->escaped();
+		$articleOtherSubject = $subjectPreface . wfMessage( 'mobile-frontend-leave-feedback-article-other-link-text' )->inLanguage( $lang )->escaped();
+		$technicalSubject = $subjectPreface . wfMessage( 'mobile-frontend-leave-feedback-technical-link-text' )->inLanguage( $lang )->escaped();
 
 		/** Build links **/
 		$emailStub = "info-$lang";
@@ -85,7 +84,8 @@ if ( $wmgMobileFrontend ) {
 			$articleOtherLink = "mailto:$emailStub@wikimedia.org?subject=$articleOtherSubject";
 		}
 
-		$technicalBody = wfMsgExt( 'mobile-frontend-leave-feedback-email-body', $msgOpts ) . "\nUser-agent: " . $_SERVER['HTTP_USER_AGENT'] . "\n";
+		$technicalBody = wfMessage( 'mobile-frontend-leave-feedback-email-body')->inLanguage( $lang )->escaped()
+			. "\nUser-agent: " . $_SERVER['HTTP_USER_AGENT'] . "\n";
 		$technicalLink = "mailto:feedbacktest@wikimedia.org?subject=$technicalSubject&body=$technicalBody";
 
 		$wgMFFeedbackLinks = array(
