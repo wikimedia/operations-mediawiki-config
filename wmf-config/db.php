@@ -311,14 +311,6 @@ $wgLBFactoryConf = array(
 		'10.0.0.227' => 1, # es3
 		'10.0.0.228' => 1, # es4
 	),
-	#
-	# Dedicated server stores
-	'cluster23' => array(
-		'10.0.0.225' => 3, # es1
-		'10.0.0.226' => 3, # es2
-		'10.0.0.227' => 1, # es3
-		'10.0.0.228' => 3, # es4
-	),
 
 	# Clusters required for bug 22624
 	'cluster1' => array(
@@ -332,6 +324,26 @@ $wgLBFactoryConf = array(
 		'10.0.0.226' => 1, # es2
 		'10.0.0.227' => 1, # es3
 		'10.0.0.228' => 1, # es4
+	),
+	# Dedicated server stores
+	# es1
+	'cluster23' => array(
+		'10.0.0.225' => 3, # es1
+		'10.0.0.226' => 3, # es2
+		'10.0.0.227' => 1, # es3
+		'10.0.0.228' => 3, # es4
+	),
+	# es2
+	'cluster24' => array(
+		'10.0.0.234' => 1, # es5
+		'10.0.0.235' => 3, # es6
+		'10.0.0.236' => 3, # es7
+	),
+	# es3
+	'cluster25' => array(
+		'10.0.0.237' => 1, # es8
+		'10.0.0.220' => 3, # es9
+		'10.0.0.224' => 3, # es10
 	),
 ),
 
@@ -359,6 +371,8 @@ $wgLBFactoryConf = array(
 	'cluster21'	=> array( 'blobs table' => 'blobs_cluster21' ),
 	'cluster22'	=> array( 'blobs table' => 'blobs_cluster22' ),
 	'cluster23'	=> array( 'blobs table' => 'blobs_cluster23' ),
+	'cluster24'	=> array( 'blobs table' => 'blobs_cluster24' ),
+	'cluster25'	=> array( 'blobs table' => 'blobs_cluster25' ),
 ),
 
 # This key must exist for the master switch script to work
