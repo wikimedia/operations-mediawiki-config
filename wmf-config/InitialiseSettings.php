@@ -4212,6 +4212,7 @@ $wgConf->settings = array(
 		'poolcounter' => "udp://$wmfUdp2logDest/poolcounter",
 		'bug-27891' => "udp://$wmfUdp2logDest/bug-27891",
 		'lc-recache' => "udp://$wmfUdp2logDest/lc-recache",
+		'generated-pp-node-count' => "udp://$wmfUdp2logDest/generated-pp-node-count",
 	),
 	# 'dewiki' => array( 'connect' => "udp://$wmfUdp2logDest/connect" ),
 	# 'commonswiki' => array( 'exif' => "udp://$wmfUdp2logDest/exif" ), # disabled due to too-big log file 2005-09-26 by brion
