@@ -385,7 +385,7 @@ $wgLBFactoryConf = array(
 );
 
 $wgDefaultExternalStore = array(
-	'DB://cluster23',
+	'DB://cluster24', 'DB://cluster25',
 );
 $wgMasterWaitTimeout = 2;
 $wgDBAvgStatusPoll = 30000;
