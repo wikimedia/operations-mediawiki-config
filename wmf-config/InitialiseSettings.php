@@ -11237,10 +11237,23 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
 ),
-'wmfUseSubpageSortkey' => array(
+
+'wmgUseSubpageSortkey' => array(
 	'default' => false,
 	'enwikibooks' => true,
 	'ptwikibooks' => true,
+),
+
+'wmgSubpageSortkeyByNamespace' => array(
+	'default' => array(),
+	'enwikibooks' => array( // Bug 22911
+		NS_MAIN => '1..',
+		102 => '1..', // Cookbook
+		110 => '1..', // Wikijunior
+	),
+	'ptwikibooks' => array( // Bug 22911
+		NS_MAIN => '1..',
+	),
 ),
 
 'wmgUseCORS' => array(
