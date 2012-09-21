@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "AAAATH///2Q\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3436,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-09-21T22:41:03Z",
+      "side": 0,
+      "message": "We might want to explicitly set it to false and keep the bug #.",
+      "revId": "9ddd44e3dcdb08461b5bf4856403f7050ccd8bb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAASn//40U\u003d",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
@@ -54,6 +71,41 @@
     },
     {
       "key": {
+        "uuid": "AAAATH///2M\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3987,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-09-21T22:41:03Z",
+      "side": 0,
+      "message": "That is a surge of requests where fast moving wikis asked for a new feature. It eventually got generalized, so I guess we can remove all those entry.\n\nIt is unlikely we will change the default, and if we do, I am pretty sure most wiki will agree. The ones that disagree, we can add an exception for them.",
+      "parentUuid": "AAAAS3///5g\u003d",
+      "revId": "9ddd44e3dcdb08461b5bf4856403f7050ccd8bb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAATH///2E\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4093,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-09-21T22:41:03Z",
+      "side": 0,
+      "message": "Can you please keep that around and just leave a placeholder such as:\n\n # \u0027somewiki\u0027 \u003d\u003e \u0027Some wiki is experiencing difficulties\u0027,\n\nWould let us easily set a specific wiki readonly by just uncommenting and changing the wiki name.\n\nOptional though since we no more use wgReadOnly nowadays.",
+      "revId": "9ddd44e3dcdb08461b5bf4856403f7050ccd8bb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAASn//40Q\u003d",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
@@ -83,6 +135,24 @@
       "side": 0,
       "message": "Before removing these lines, I sent a mail to the lab to ask if it were still needed. The mail address doesn\u0027t work (mailbox is full) and their full website let thinks it\u0027s rather inactive now.",
       "parentUuid": "AAAASn//40Q\u003d",
+      "revId": "9ddd44e3dcdb08461b5bf4856403f7050ccd8bb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAATH///10\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6397,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-09-21T22:41:03Z",
+      "side": 0,
+      "message": "Since that is a conf change, it should ideally be made a different commit.",
+      "parentUuid": "AAAAS3///5w\u003d",
       "revId": "9ddd44e3dcdb08461b5bf4856403f7050ccd8bb9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
