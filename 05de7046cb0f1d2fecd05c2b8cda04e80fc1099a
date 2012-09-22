@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAATH///k4\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11249,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-09-22T22:15:02Z",
+      "side": 1,
+      "message": "Add // Bug 22911",
+      "revId": "05de7046cb0f1d2fecd05c2b8cda04e80fc1099a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAATH///k0\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11254,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-09-22T22:15:02Z",
+      "side": 1,
+      "message": "Add // Bug 22911",
+      "revId": "05de7046cb0f1d2fecd05c2b8cda04e80fc1099a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
