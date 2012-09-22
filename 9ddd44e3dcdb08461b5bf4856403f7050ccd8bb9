@@ -156,6 +156,41 @@
       "revId": "9ddd44e3dcdb08461b5bf4856403f7050ccd8bb9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAATH///vs\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6397,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2012-09-22T06:07:53Z",
+      "side": 0,
+      "message": "Someone just forgot to specify an expiration here.\nYes, this commit should ideally move it to throttle.php I think, but the point of it is AFAICS to set a timespan becase the \"burden of proof\" is required for renewal, so it would still have to be removed (or added with an expired timespan and then removed).",
+      "parentUuid": "AAAATH///10\u003d",
+      "revId": "9ddd44e3dcdb08461b5bf4856403f7050ccd8bb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAATH///vw\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10447,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2012-09-22T06:07:53Z",
+      "side": 0,
+      "message": "Were those set to true by mistake together with the following config? If they\u0027ve lasted some time and then got disabled because wikis changed their mind, it\u0027s useful information (tracking usage of features across wikis is tricky).",
+      "revId": "9ddd44e3dcdb08461b5bf4856403f7050ccd8bb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
