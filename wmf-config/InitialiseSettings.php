@@ -3007,6 +3007,7 @@ $wgConf->settings = array(
 		'Wiktionary' => NS_PROJECT,
 	),
 	'sewiki' => array(
+		'WP' => NS_PROJECT,                //Bug 40436
 		'Temasiidu' => 100,                //Bug 39206
 		'Temasiidoságastallan' => 101,     //Bug 39206
 	),
