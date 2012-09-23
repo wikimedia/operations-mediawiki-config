@@ -11163,7 +11163,7 @@ $wgConf->settings = array(
 	'zhwiktionary' => 180 * 1024 * 1024,
 ),
 'wgMaxGeneratedPPNodeCount' => array(
-	'default' => 4000000,
+	'default' => 1500000,
 ),
 'wgBug34832TransitionalRollback' => array(
 	'default' => false,
