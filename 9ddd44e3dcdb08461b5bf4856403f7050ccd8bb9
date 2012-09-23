@@ -89,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "AAAATH///dQ\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3987,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-09-23T16:58:22Z",
+      "side": 0,
+      "message": "Sure, no problem. I just wanted it to have a bit more info on record as it wasn\u0027t obviously dead code. Generally if there is an explicit request for a config it shouldn\u0027t be merged in default but I suppose in this case its okay.",
+      "parentUuid": "AAAATH///2M\u003d",
+      "revId": "9ddd44e3dcdb08461b5bf4856403f7050ccd8bb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAATH///2E\u003d",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
