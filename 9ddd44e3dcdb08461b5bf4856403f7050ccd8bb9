@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "AAAATH//9g8\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3436,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-09-26T07:45:46Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "AAAATH///2Q\u003d",
+      "revId": "9ddd44e3dcdb08461b5bf4856403f7050ccd8bb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAASn//40U\u003d",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
@@ -124,6 +142,24 @@
     },
     {
       "key": {
+        "uuid": "AAAATH//9g0\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4093,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-09-26T07:45:46Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "AAAATH///2E\u003d",
+      "revId": "9ddd44e3dcdb08461b5bf4856403f7050ccd8bb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAASn//40Q\u003d",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
@@ -195,6 +231,24 @@
     },
     {
       "key": {
+        "uuid": "AAAATH//9gk\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6397,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-09-26T07:45:46Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "AAAATH///vs\u003d",
+      "revId": "9ddd44e3dcdb08461b5bf4856403f7050ccd8bb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAAATH///vw\u003d",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
@@ -206,6 +260,24 @@
       "writtenOn": "2012-09-22T06:07:53Z",
       "side": 0,
       "message": "Were those set to true by mistake together with the following config? If they\u0027ve lasted some time and then got disabled because wikis changed their mind, it\u0027s useful information (tracking usage of features across wikis is tricky).",
+      "revId": "9ddd44e3dcdb08461b5bf4856403f7050ccd8bb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAATH//9gw\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10447,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-09-26T07:45:46Z",
+      "side": 0,
+      "message": "Done\n\nI can\u0027t found any reference to MarkAsHelpful extension on nl.wikipedia.\n\nBut we should keep this, as it\u0027s an early 2012 extension deployment in parallel with mood bar (cf.  the bugs below).",
+      "parentUuid": "AAAATH///vw\u003d",
       "revId": "9ddd44e3dcdb08461b5bf4856403f7050ccd8bb9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
