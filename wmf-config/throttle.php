@@ -37,6 +37,15 @@ $wmgThrottlingExceptions[] = array(
         'value'  => 50,
 );
 
+# bug 40575
+$wmfThrottlingExceptions[] = array(
+	'from'   => '2012-09-27T18:00 +0:00',
+	'to'     => '2012-09-28T02:00 +0:00',
+	'IP'     => '177.32.49.25',
+	'dbname' => array( 'ptwikiversity' ),
+	'value'  => 50,
+);
+
 
 ## Add throttling defintion above.
 
