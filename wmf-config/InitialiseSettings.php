@@ -3430,6 +3430,168 @@ $wgConf->settings = array(
 ),
 # @} end of wgNamespacesWithSubpages
 
+# wgProofreadPageNamespaceIds @{
+'wgProofreadPageNamespaceIds' => array(
+	'sourceswiki' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	'enwikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	'arwikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	'bewikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	'bnwikisource' => array(
+		'page' => 104,
+		'index' => 102,
+	),
+	'brwikisource' => array(
+		'page' => 102,
+		'index' => 104,
+	),
+	'cawikisource' => array(
+		'page' => 102,
+		'index' => 104,
+	),
+	'dawikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	'dewikisource' => array(
+		'page' => 102,
+		'index' => 104,
+	),
+	'elwikisource' => array(
+		'page' => 100,
+		'index' => 102,
+	),
+	'eowikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	'eswikisource' => array(
+		'page' => 102,
+		'index' => 104,
+	),
+	'etwikisource' => array(
+		'page' => 102,
+		'index' => 104,
+	),
+	'fawikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	'frwikisource' => array(
+		'page' => 104,
+		'index' => 112,
+	),
+	'guwikisource' => array(
+		'page' => 104,
+		'index' => 106
+	),
+	'hewikisource' => array(
+		'page' => 104,
+		'index' => 112,
+	),
+	'hrwikisource' => array(
+		'page' => 102,
+		'index' => 104,
+	),
+	'huwikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	 'hywikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	'idwikisource' => array(
+		'page' => 104,
+		'index' => 102,
+	),
+	'itwikisource' => array(
+		'page' => 108,
+		'index' => 110,
+	),
+	'knwikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	'lawikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	'mlwikisource' => array(
+		'page' => 106,
+		'index' => 104,
+	),
+	'mrwikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	'nlwikisource' => array(
+		'page' => 104,
+		'index' => 106
+	),
+	'nowikisource' => array(
+		'page' => 104,
+		'index' => 106
+	),
+	'plwikisource' => array(
+		'page' => 100,
+		'index' => 102,
+	),
+	'ptwikisource' => array(
+		'page' => 106,
+		'index' => 104,
+	),
+	'rowikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	'ruwikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	'sawikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	'slwikisource' => array(
+		'page' => 100,
+		'index' => 104,
+	),
+
+	'svwikisource' => array(
+		'page' => 104,
+		'index' => 108,
+	),
+	'tewikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	'vecwikisource' => array(
+		'page' => 102,
+		'index' => 104,
+	),
+	'viwikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	'zhwikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+),
+# @} end of wgProofreadPageNamespaceIds
+
 # wgUseDynamicDates @{
 'wgUseDynamicDates' => array(
 	'default' => false,
