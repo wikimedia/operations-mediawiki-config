@@ -2571,8 +2571,9 @@ if ( $wmgUseScribunto ) {
 	$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
 }
 
-if ( $wmfUseSubpageSortkey ) {
+if ( $wmgUseSubpageSortkey ) {
 	include( "$IP/extensions/SubpageSortkey/SubpageSortkey.php" );
+	$wgSubpageSortkeyByNamespace = $wmgSubpageSortkeyByNamespace;
 }
 
 if ( $wmgUseMicroDesign ) {
