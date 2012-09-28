@@ -9763,12 +9763,13 @@ $wgConf->settings = array(
 	// Disabled by TS: breaks lucene search engine
 	# 'testwiki' => 'url-downloader.wikimedia.org:8080', // Proxy for upload-by-url tests
 ),
-
+'wgCopyUploadProxy' => array(
+	'default' => 'url-downloader.wikimedia.org:8080',
+),
 'wgAllowCopyUploads' => array(
 	'default' => false, // Disabled by mark 2009-11-05, pending HTTP proxy setup and security review // Whee! 2009-11-05 BV -- note limited by upload_by_url perm key to sysops
 
-	// Disabled by TS: breaks search engine
-	# 'testwiki' => true, // reenabled --catrope 2010-01-04
+	'testwiki' => true,
 	# 'commonswiki' => true, // catrope 2010-01-04
 ),
 
