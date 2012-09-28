@@ -7137,6 +7137,7 @@ $wgConf->settings = array(
 			'browsearchive' => true,
 			'deleterevision' => true,
 			'suppressredirect' => true,
+			'deletelogentry' => true, // Bug 40521
 			'unwatchedpages' => true,
 			'ipblock-exempt' => true,
 			'noratelimit' => true,
