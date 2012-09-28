@@ -1,0 +1,8 @@
+Change-Id: Id6a3ae4b9d84bc0e5ef66f6f9d9a574d247eeec8
+Code-Review+2: Reedy <reedy@wikimedia.org>
+Verified+1: Reedy <reedy@wikimedia.org>
+Submitted-by: Reedy <reedy@wikimedia.org>
+Submitted-at: Fri, 28 Sep 2012 20:44:47 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/25704
+Project: operations/mediawiki-config
+Branch: refs/heads/master
