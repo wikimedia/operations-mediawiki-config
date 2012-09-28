@@ -114,14 +114,6 @@ default:
 # Load site configuration
 include( "$IP/includes/DefaultSettings.php" );
 
-# Safari bug with URLs ending in ".gz" and gzip encoding
-# http://bugzilla.wikimedia.org/show_bug.cgi?id=4635
-$hatesSafari = isset( $_SERVER['PATH_INFO'] ) &&
-	strtolower( substr( $_SERVER['PATH_INFO'], -3 ) ) == '.gz';
-if ( $hatesSafari ) {
-	$wgDisableOutputCompression = true;
-}
-
 $DP = $IP;
 
 wfProfileOut( "$fname-init" );
