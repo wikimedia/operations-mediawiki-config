@@ -5739,6 +5739,8 @@ $wgConf->settings = array(
 		103 => 'Resept müzakirəsi', // Recipe talk
 		104 => 'Vikikitab', // Wikibooks
 		105 => 'Vikikitab_müzakirəsi', // Wikibooks talk
+		110 => 'Vikiuşaq', // Wikijunior, bug 31067
+		111 => 'Vikiuşaq_müzakirəsi',
 	),
 	'bnwikibooks' => array(
 		100 => 'উইকিশৈশব',
