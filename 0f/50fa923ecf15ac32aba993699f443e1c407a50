@@ -1,0 +1,10 @@
+Code-Review+2: Reedy <reedy@wikimedia.org>
+Verified+1: Reedy <reedy@wikimedia.org>
+Code-Review+1: Catrope <roan.kattouw@gmail.com>
+Code-Review-1: Hashar <hashar@free.fr>
+Verified+1: jenkins-bot
+Submitted-by: Reedy <reedy@wikimedia.org>
+Submitted-at: Fri, 28 Sep 2012 18:54:05 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/18125
+Project: operations/mediawiki-config
+Branch: refs/heads/master
