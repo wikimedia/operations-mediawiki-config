@@ -4416,12 +4416,14 @@ $wgConf->settings = array(
 'wgExtraNamespaces' => array(
 	// Meta wiki @{
 	'metawiki' => array(
-		200 => 'Grants',    // per bug #22810
+		200 => 'Grants',    // Bug 22810
 		201 => 'Grants_talk',
-		202 => 'Research',  // per bug #28742
+		202 => 'Research',  // Bug 28742
 		203 => 'Research_talk',
 		204 => 'Participation',
 		205 => 'Participation_talk',
+		206 => 'Iberocoop', // Bug 38398
+		207 => 'Iberocoop_talk',
 	),
 	// @}
 
