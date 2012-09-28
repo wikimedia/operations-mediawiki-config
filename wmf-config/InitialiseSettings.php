@@ -7008,6 +7008,10 @@ $wgConf->settings = array(
 		'confirmed' => array( 'upload' => false, 'reupload' => false ),
 		'user' => array( 'reupload-own' => false ),
 	),
+	'guwikisource' => array(
+		'user' => array( 'upload' => false ), // Bug 36345
+		'sysop' => array( 'upload' => true ), // Bug 36345
+	),
 	'hewiki' => array(
 		'user' => array( 'move' => false, 'upload' => true, ),
 		'sysop' => array( 'deleterevision' => true, 'abusefilter-modify-restricted' => true, ),
