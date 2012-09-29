@@ -2126,13 +2126,13 @@ $wgConf->settings = array(
 # wgNamespaceAliases @{
 'wgNamespaceAliases' => array(
 	// defaults to aid when things are switched
-	'wikibooks' => array( 'Wikibooks' => NS_PROJECT ),
-	'wikinews' => array( 'Wikinews' => NS_PROJECT ),
-	'wikiquote' => array( 'Wikiquote' => NS_PROJECT ),
-	'wikisource' => array( 'Wikisource' => NS_PROJECT ),
-	'wikiversity' => array( 'Wikiversity' => NS_PROJECT ),
-	'wikipedia' => array( 'Wikipedia' => NS_PROJECT ),
-	'wiktionary' => array( 'Wiktionary' => NS_PROJECT ),
+	'+wikibooks' => array( 'Wikibooks' => NS_PROJECT ),
+	'+wikinews' => array( 'Wikinews' => NS_PROJECT ),
+	'+wikiquote' => array( 'Wikiquote' => NS_PROJECT ),
+	'+wikisource' => array( 'Wikisource' => NS_PROJECT ),
+	'+wikiversity' => array( 'Wikiversity' => NS_PROJECT ),
+	'+wikipedia' => array( 'Wikipedia' => NS_PROJECT ),
+	'+wiktionary' => array( 'Wiktionary' => NS_PROJECT ),
 
 	'+amwiki' => array(
 		 100	<= 'በር',
@@ -2567,7 +2567,7 @@ $wgConf->settings = array(
 	'+incubatorwiki' => array(
 		'I' => NS_PROJECT,
 	),
-	'iswiktionary' => array(
+	'+iswiktionary' => array(
 		'Wikiorðabókspjall' => 5, // changed http://bugzilla.wikimedia.org/show_bug.cgi?id=7754
 		'Thesaurus' => 110,
 		'Thesaurus_talk' => 111,
@@ -2663,7 +2663,7 @@ $wgConf->settings = array(
 		'Wikisaurus' => 110,
 		'Wikisaurus_talk' => 111,
 	),
-	'kuwiktionary' => array(
+	'+kuwiktionary' => array(
 		'Wîkîferheng_gotûbêj' => NS_PROJECT_TALK, // Bug 37524 (old namespace name)
 		'Pêvek_nîqas' => 101,   // Bug 37524 (old namespace name)
 		'Nimînok_nîqas' => 103, // Bug 37524 (old namespace name)
@@ -2781,7 +2781,7 @@ $wgConf->settings = array(
 	'+nnwiki' => array(
 		 'WP' => NS_PROJECT,
 	),
-	'nowikimedia' => array(
+	'+nowikimedia' => array(
 		'Brukar' => NS_USER,
 		'Brukardiskusjon' => NS_USER_TALK,
 		'Fil' => NS_IMAGE,
@@ -2942,10 +2942,7 @@ $wgConf->settings = array(
 		'WT' => NS_PROJECT_TALK,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	),
-	'scnwiktionary' => array(
-		'Wiktionary' => NS_PROJECT,
-	),
-	'sewiki' => array(
+	'+sewiki' => array(
 		'WP' => NS_PROJECT,                //Bug 40436
 		'Temasiidu' => 100,                //Bug 39206
 		'Temasiidoságastallan' => 101,     //Bug 39206
