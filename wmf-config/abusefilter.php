@@ -67,6 +67,9 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 
 } elseif ( $wgDBname == 'frwiki' || $wgDBname == 'frwikibooks' ) {
 	// wikibooks by bug 26142
+	//
+	// !!! Please be careful if you edit these rules, they are shared
+	// by two wikis. Create two sections, one per wiki, if needed. !!!
 	$wgGroupPermissions['*']['abusefilter-view'] = false;
 	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true;
 	$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
@@ -112,6 +115,10 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 } elseif ( $wgDBname == 'ltwiki' ) {
 	$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 	$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
+
+} elseif ( $wgDBname == 'mrwiki' ) {
+	// Bug 40611
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true;
 
 } elseif ( $wgDBname == 'nlwiki' ) {
 	$wgGroupPermissions['*']['abusefilter-view'] = false;
