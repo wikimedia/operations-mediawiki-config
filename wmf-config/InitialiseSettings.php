@@ -10530,9 +10530,6 @@ $wgConf->settings = array(
 'wmgMobileFrontend' => array(
 	'default' => true,
 ),
-'wmgMobileFrontendBanner' => array(
-	'default' => true,
-),
 'wmgZeroRatedMobileAccess' => array(
 	'default' => true,
 ),
