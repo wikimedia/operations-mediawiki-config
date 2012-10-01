@@ -143,4 +143,9 @@ if ( $wgDBname === 'commonswiki' || $wgDBname === 'testwiki' ) {
 	};
 }
 
+// Enable loading of desktop-specific resources from MobileFrontend
+if ( $wmgMFEnableDesktopResources ) {
+	$wgMFEnableDesktopResources = true;
+}
+
 } # safeguard

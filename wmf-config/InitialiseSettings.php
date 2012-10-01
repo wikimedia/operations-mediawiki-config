@@ -10590,6 +10590,10 @@ $wgConf->settings = array(
 		'copyright' => '{wgExtensionAssetsPath}/MobileFrontend/stylesheets/images/logo-copyright-en.png'
 	),
 ),
+'wmgMFEnableDesktopResources' => array(
+	'default' => false,
+	'simplewiki' => true,
+),
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
 	'cswiki' => array(
