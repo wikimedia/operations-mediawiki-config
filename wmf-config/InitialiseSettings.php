@@ -9768,6 +9768,17 @@ $wgConf->settings = array(
 'wmgUseAbuseFilter' => array(
 	'default' => true,
 ),
+// emergency disable: shut off filters tagging >5% of posts on a total of at least 50 posts per day
+'wmgAbuseFilterEmergencyDisableThreshold' => array(
+	'default' => 0.05
+),
+'wmgAbuseFilterEmergencyDisableCount' => array(
+	'default' => 2,
+	'enwiki' => 50
+),
+'wmgAbuseFilterEmergencyDisableAge' => array(
+	'default' => 86400
+),
 # @}
 
 'wgThumbLimits' => array(
@@ -11172,6 +11183,7 @@ $wgConf->settings = array(
 ),
 'wmgUseFeaturedFeeds' => array(
 	'default' => true,
+	'enwiki' => false, // @todo: local change because of broken stuff, remove this line some day
 ),
 
 'wmgFeaturedFeedsDefaults' => array(
@@ -11252,6 +11264,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'enwiki' => true,
+	'enwiki' => false, // @todo: local change because of broken stuff, remove this line some day
 ),
 'wmgUseEducationProgram' => array(
 	'default' => false,
