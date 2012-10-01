@@ -9,6 +9,10 @@ if ( $wgCommandLineMode || php_sapi_name() == 'cli' ) {
 	$wgDebugLogFile = "udp://$wmfUdp2logDest/web";
 }
 
+// udp2log logging for beta:
+$wgDebugLogGroups['dnsblacklist'] = "udp://$wmfUdp2logDest/dnsblacklist";
+
+
 // Ugly code to create a random hash and put it in logs
 // temporary --Petrb
 $randomHash = $wgDBname . '-' . substr( md5(uniqid()), 0, 8 );
