@@ -1,0 +1,9 @@
+Change-Id: I23a3fb8c408dfcda7235e5f2cf15ff36a06d4490
+Code-Review+2: Tim Starling <tstarling@wikimedia.org>
+Verified+1: Tim Starling <tstarling@wikimedia.org>
+Verified+1: jenkins-bot
+Submitted-by: Tim Starling <tstarling@wikimedia.org>
+Submitted-at: Tue, 02 Oct 2012 01:50:18 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/25984
+Project: operations/mediawiki-config
+Branch: refs/heads/master
