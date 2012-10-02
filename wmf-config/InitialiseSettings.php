@@ -3083,6 +3083,14 @@ $wgConf->settings = array(
 		 'Wiktionary' => NS_PROJECT, # backcompat for shell req bug 36533
 		 'Wiktionary_చర్చ' => NS_PROJECT_TALK, # backcompat for shell req bug 36533
 	),
+	'thwikibooks' => array(
+		'Wikibooks' => NS_PROJECT,                  // Bug 40717
+		'คุยเรื่องWikibooks' => NS_PROJECT_TALK,
+	),
+	'thwiktionary' => array(
+		'Wiktionary' => NS_PROJECT,                 // Bug 40717
+		'คุยเรื่องWiktionary' => NS_PROJECT_TALK,
+	),
 	'tkwiktionary' => array(
 		'Wiktionary' => NS_PROJECT,
 	),
@@ -5011,6 +5019,14 @@ $wgConf->settings = array(
 		100 => 'สถานีย่อย',
 		101 => 'คุยเรื่องสถานีย่อย',
 	),
+	'thwikibooks' => array {
+		NS_PROJECT => 'วิกิตำรา',                   // Bug 40717
+		NS_PROJECT_TALK => 'คุยเรื่องวิกิตำรา',
+	},
+	'thwiktionary' => array {
+		NS_PROJECT => 'วิกิพจนานุกรม',               // Bug 40717
+		NS_PROJECT_TALK => 'คุยเรื่องวิกิพจนานุกรม',
+	}
 	'tlwiki' => array(
 		100 => 'Portada', // Portal
 		101 => 'Usapang Portada', // Portal talk
