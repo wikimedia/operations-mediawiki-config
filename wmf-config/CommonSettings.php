@@ -348,48 +348,8 @@ $wgDisableTextSearch   = true;
 $wgDisableSearchUpdate = true;
 $wgDisableCounters     = true;
 
-# Object cache and session settings
-
-$wgObjectCaches['mysql-multiwrite'] = array(
-	'class' => 'MultiWriteBagOStuff',
-	'caches' => array(
-		0 => array(
-			'factory' => 'ObjectCache::newMemcached',
-		),
-		1 => array(
-			'class' => 'SqlBagOStuff',
-			'server' => array(
-				'host' => '10.0.0.221', # pc1
-				'dbname' => 'parsercache',
-				'user' => $wgDBuser,
-				'password' => $wgDBpassword,
-				'type' => 'mysql',
-				'flags' => 0,
-			),
-			'purgePeriod' => 0,
-			'tableName' => 'pc',
-			'shards' => 256,
-		),
-	)
-);
-
-$wgObjectCaches['sessions'] = array(
-	'class' => 'MultiWriteBagOStuff',
-	'caches' => array(
-		0 => array(
-			'factory' => 'ObjectCache::newMemcached',
-		),
-		1 => array(
-			'class' => 'RedisBagOStuff',
-			'servers' => array(
-				'10.0.12.1', # mc1
-			),
-		),
-	)
-);
-$wgSessionCacheType = 'sessions';
-$wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
+$wgSessionsInMemcached = true;
 
 # Enable subpages in the meta space
 $wgNamespacesWithSubpages[4] = 1;
@@ -2294,6 +2254,29 @@ if ( $wmgUseGoogleNewsSitemap ) {
 if ( $wmgUseCLDR ) {
 	require_once( "$IP/extensions/cldr/cldr.php" );
 }
+
+$wgObjectCaches['mysql-multiwrite'] = array(
+	'class' => 'MultiWriteBagOStuff',
+	'caches' => array(
+		0 => array(
+			'factory' => 'ObjectCache::newMemcached',
+		),
+		1 => array(
+			'class' => 'SqlBagOStuff',
+			'server' => array(
+				'host' => '10.0.0.221', # pc1
+				'dbname' => 'parsercache',
+				'user' => $wgDBuser,
+				'password' => $wgDBpassword,
+				'type' => 'mysql',
+				'flags' => 0,
+			),
+			'purgePeriod' => 0,
+			'tableName' => 'pc',
+			'shards' => 256,
+		),
+	)
+);
 
 # APC not available in CLI mode
 if ( php_sapi_name() === 'cli' ) {
