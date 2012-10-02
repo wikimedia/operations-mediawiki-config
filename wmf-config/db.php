@@ -82,7 +82,7 @@ $wgLBFactoryConf = array(
 	/* s3 */ 'DEFAULT' => array(
 		'db34'	  => 0,
 		'db39'    => 400,
-		'db25'	  => 100, # snapshot host
+		#'db25'	  => 100, # snapshot host
 		'db11'	  => 400,
 	),
 	's4' => array(
@@ -343,7 +343,7 @@ $wgLBFactoryConf = array(
 	'cluster25' => array(
 		'10.0.0.237' => 1, # es8
 		'10.0.0.220' => 3, # es9
-		#'10.0.0.224' => 3, # es10
+		'10.0.0.224' => 3, # es10
 	),
 ),
 
