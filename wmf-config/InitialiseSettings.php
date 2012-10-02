@@ -1981,6 +1981,8 @@ $wgConf->settings = array(
 	'tewiktionary'  => 'విక్షనరీ',
 	'tgwiki'	=> 'Википедиа',
 	'thwiki'	=> 'วิกิพีเดีย',
+	'thwikibooks'   => 'วิกิตำรา',
+	'thwiktionary'  => 'วิกิพจนานุกรม',
 	'thwikinews'    => 'วิกิข่าว',
 	'thwikiquote'   => 'วิกิคำคม',
 	'thwikisource'  => 'วิกิซอร์ซ',
@@ -2114,7 +2116,9 @@ $wgConf->settings = array(
 	'tawikinews'	=> 'விக்கிசெய்தி_பேச்சு',
 	'tawikisource'  => 'விக்கிமூலம்_பேச்சு',
 	'tawiktionary'	=> 'விக்சனரி_பேச்சு',
-	'thwikiquote' => 'คุยเรื่องวิกิคำคม',
+	'thwikibooks'   => 'คุยเรื่องวิกิตำรา', // Bug 40717
+	'thwikiquote'   => 'คุยเรื่องวิกิคำคม',
+	'thwiktionary'  => 'คุยเรื่องวิกิพจนานุกรม', // Bug 40717
 	'trwikinews'    => 'Vikihaber_tartışma',
 	'uawikimedia'   => 'Обговорення_Вікімедіа',
 	'ukwiktionary' => 'Обговорення_Вікісловника',
@@ -3082,6 +3086,14 @@ $wgConf->settings = array(
 	'tewiktionary' => array(
 		 'Wiktionary' => NS_PROJECT, # backcompat for shell req bug 36533
 		 'Wiktionary_చర్చ' => NS_PROJECT_TALK, # backcompat for shell req bug 36533
+	),
+	'thwikibooks' => array(
+		'Wikibooks' => NS_PROJECT,                  // Bug 40717
+		'คุยเรื่องWikibooks' => NS_PROJECT_TALK,
+	),
+	'thwiktionary' => array(
+		'Wiktionary' => NS_PROJECT,                 // Bug 40717
+		'คุยเรื่องWiktionary' => NS_PROJECT_TALK,
 	),
 	'tkwiktionary' => array(
 		'Wiktionary' => NS_PROJECT,
