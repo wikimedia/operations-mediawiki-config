@@ -46,6 +46,15 @@ $wmfThrottlingExceptions[] = array(
 	'value'  => 50,
 );
 
+# bug 40736
+$wmfThrottlingExceptions[] = array(
+	'from'   => '2012-10-07T03:30 +0:00',
+	'to'     => '2012-10-07T15:30 +0:00',
+	'IP'     => array( '14.140.227.85', '14.140.227.65' ),
+	'dbname' => array( 'enwiki', 'commonswiki' ),
+	'value'  => 50,
+);
+
 
 ## Add throttling defintion above.
 
@@ -81,10 +90,13 @@ function efRaiseAccountCreationThrottle() {
 			continue;
 		}
 
-		# @TODO: Make IP address accept array
 		# 3) skip when throttle does not apply to the client IP
-		if( isset( $options['IP'] ) && wfGetIP() != $options['IP'] ) {
-			continue;
+		if ( isset( $options['IP'] ) ) {
+			if ( is_array( $options['IP'] ) && !in_array( wfGetIP(), $options['IP'] ) ) {
+				continue;
+			} elseif ( wfGetIP() != $options['IP'] ) {
+				continue;
+			}
 		}
 
 		# Finally) set up the throttle value
