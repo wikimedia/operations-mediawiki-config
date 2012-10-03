@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAAT3///YE\u003d",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2012-10-03T15:49:35Z",
+      "side": 0,
+      "message": "We\u0027ve got some duplication there..\n\nif( isset( $options[\u0027IP\u0027] )\n\t\u0026\u0026 ( ( wfGetIP() !\u003d $options[\u0027IP\u0027] )\n\t|| ( is_array( $options[\u0027IP\u0027] ) \u0026\u0026 !in_array( wfGetIP(), $options[\u0027IP\u0027] ) )\n\t) ) {\n\t}\n\nor\n\nif( isset( $options[\u0027IP\u0027] ) ) {\n\tif( wfGetIP() !\u003d $options[\u0027IP\u0027] ) {\n\t\tcontinue;\n\t} else ( is_array( $options[\u0027IP\u0027] ) \u0026\u0026 !in_array( wfGetIP(), $options[\u0027IP\u0027] ) ) {\n\t\tcontinue;\n\t}\n}\n\n\n\nHmmm :/",
+      "revId": "681f13f1b57304873feb3ed32a028395deb0b00e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
