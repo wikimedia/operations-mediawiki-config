@@ -8878,8 +8878,8 @@ $wgConf->settings = array(
 # @} end of CATEGORY TREE EXTENSION
 
 'wgContentNamespaces' => array(
-	'default' => array( 0 ),
-	'arwiki' => array( 0, 104 ), // bug 20623
+	'default' => array( NS_MAIN ),
+	'arwiki' => array( NS_MAIN, 104 ), // bug 20623
 	'arwikisource' => array( NS_MAIN, 102, 104 ),
 	'bgwikisource' => array( NS_MAIN, 100 ),
 	'bnwikisource' => array( NS_MAIN, 100 ),
@@ -8898,6 +8898,7 @@ $wgConf->settings = array(
 	'frrwiki' => array( NS_MAIN, 102, 104, 106 ), // bug 38023
 	'frwikisource' => array( NS_MAIN, 102, 104, 112 ),
 	'hewikisource' => array( NS_MAIN, 104, 108, 112 ),
+	'hrwiki' => array ( NS_MAIN, 102 ), // Bug 40732
 	'hrwikisource' => array( NS_MAIN, 100, 102, 104 ),
 	'huwikisource' => array( NS_MAIN, 100, 104, 106 ),
 	'hywikisource' => array( NS_MAIN, 100, 104, 106 ),
