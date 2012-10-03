@@ -46,6 +46,22 @@ $wmfThrottlingExceptions[] = array(
 	'value'  => 50,
 );
 
+# bug 40669
+$wmfThrottlingExceptions[] = array(
+	'from'   => '2012-10-04T00:00 +0:00',
+	'to'     => '2012-10-04T23:59 +0:00',
+	'IP'     => '12.183.19.7',
+	'dbname' => array( 'enwiki', 'commonswiki' ),
+	'value'  => '50',
+);
+$wmfThrottlingExceptions[] = array(
+	'from'   => '2012-10-06T00:00 +0:00',
+	'to'     => '2012-10-06T23:59 +0:00',
+	'IP'     => '12.183.19.7',
+	'dbname' => array( 'enwiki', 'commonswiki' ),
+	'value'  => '50',
+);
+
 
 ## Add throttling defintion above.
 
