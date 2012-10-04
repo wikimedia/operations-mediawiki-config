@@ -47,6 +47,11 @@ $wgGroupPermissions['autoconfirmed']['skipcaptcha'] = false;
 
 $wgMaxShellMemory = 30000000;
 
+
+// Disable AFTv4 completely on beta labs --Chris McMahon
+
+$wgArticleFeedbackLotteryOdds = 0; // Will turn off the voting for AFTv4 on all pages
+
 // Enabling AFTv5 globally for testing purposes -- Chris McMahon
 // Basically copy-pasted from http://www.mediawiki.org/w/index.php?title=Extension:ArticleFeedbackv5
 
