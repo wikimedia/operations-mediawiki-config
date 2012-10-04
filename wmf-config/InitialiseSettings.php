@@ -5207,6 +5207,12 @@ $wgConf->settings = array(
 		106 => 'فهرست', // Index
 		107 => 'گفتگوی_فهرست', // Index talk
 	),
+	'fiwikisource' => array(
+		104 => 'Sivu',                      // Bug 40759 (page)
+		105 => 'Keskustelu sivusta',        // Bug 40759
+		106 => 'Hakemisto',                 // Bug 40759 (index)
+		107 => 'Keskustelu hakemistosta',   // Bug 40759
+	),
 	'frwikisource' => array(
 		100 => 'Transwiki',
 		101 => 'Discussion_Transwiki',
