@@ -1954,12 +1954,12 @@ if ( $wmgUseAbuseFilter ) {
 	include( "$wmfConfigDir/abusefilter.php" );
 }
 
-if ( $wmgUseCommunityVoice == true ) {
+if ( $wmgUseCommunityVoice ) {
 	include ( "$IP/extensions/ClientSide/ClientSide.php" );
 	include ( "$IP/extensions/CommunityVoice/CommunityVoice.php" );
 }
 
-if ( $wmgUsePdfHandler == true ) {
+if ( $wmgUsePdfHandler ) {
 	include ( "$IP/extensions/PdfHandler/PdfHandler.php" );
 }
 
