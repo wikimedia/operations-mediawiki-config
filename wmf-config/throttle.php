@@ -49,7 +49,7 @@ $wmfThrottlingExceptions[] = array(
 # bug 40669
 $wmfThrottlingExceptions[] = array(
 	'from'   => '2012-10-04T00:00 +0:00',
-	'to'     => '2012-10-04T23:59 +0:00',
+	'to'     => '2012-10-05T23:59 +0:00',
 	'IP'     => '12.183.19.7',
 	'dbname' => array( 'enwiki', 'commonswiki' ),
 	'value'  => '50',
