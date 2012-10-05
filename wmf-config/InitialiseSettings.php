@@ -1610,13 +1610,13 @@ $wgConf->settings = array(
 ),
 
 'wgUploadDirectory' => array(
-	# Using upload6 since Jan 2010
-	 'default'      => '/mnt/upload6/$site/$lang',
-	 'private' => '/mnt/upload6/private/$lang',
+	# Using upload7 since Oct 2012
+	 'default'      => '/mnt/upload7/$site/$lang',
+	 'private' => '/mnt/upload7/private/$lang',
 
-	 'wikimania2005wiki' => '/mnt/upload6/wikipedia/wikimania', // back compat
-	 'otrs_wikiwiki' => '/mnt/upload6/private/otrs_wiki',
-	 'execwiki' => '/mnt/upload6/private/execwiki',
+	 'wikimania2005wiki' => '/mnt/upload7/wikipedia/wikimania', // back compat
+	 'otrs_wikiwiki' => '/mnt/upload7/private/otrs_wiki',
+	 'execwiki' => '/mnt/upload7/private/execwiki',
 ),
 
 # wgMetaNamespace @{
