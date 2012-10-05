@@ -1306,7 +1306,7 @@ $wgMaxSquidPurgeTitles = 500;
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
 // General Cache Epoch:
-$wgCacheEpoch = '20120101000000';
+$wgCacheEpoch = '20120908000000';
 
 $wgThumbnailEpoch = '20120101000000';
 
