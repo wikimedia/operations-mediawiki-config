@@ -1306,9 +1306,9 @@ $wgMaxSquidPurgeTitles = 500;
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
 // General Cache Epoch:
-$wgCacheEpoch = '20110101000000';
+$wgCacheEpoch = '20120101000000';
 
-$wgThumbnailEpoch = '20110101000000';
+$wgThumbnailEpoch = '20120101000000';
 
 # OAI repository for update server
 include( $IP . '/extensions/OAI/OAIRepo.php' );
