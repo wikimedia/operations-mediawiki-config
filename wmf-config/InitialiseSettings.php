@@ -1779,7 +1779,7 @@ $wgConf->settings = array(
 	'grantswiki'    => 'Project',
 	'guwiki'	=> 'વિકિપીડિયા',
 	'guwikisource'  => 'વિકિસ્રોત',
-	'guwiktionary'  => 'વિક્ષનરી',
+	'guwiktionary'  => 'વિક્શનરી', // Bug 40776
 	'hewiki'	=> "ויקיפדיה",
 	'hewikibooks'   => "ויקיספר",
 	'hewikinews'    => 'ויקיחדשות',
@@ -2497,6 +2497,9 @@ $wgConf->settings = array(
 	'gdwiki' => array(
 			'Wikipedia' => NS_PROJECT,
 			'Wikipedia_talk' => NS_PROJECT_TALK,
+	),
+	'guwiktionary' => array(
+		'વિક્શનરી' => NS_PROJECT // Bug 40776 (old namespace name)
 	),
 	'hewikisource' => array(
 		'Page' => 104,
