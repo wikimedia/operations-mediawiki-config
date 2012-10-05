@@ -1202,7 +1202,7 @@ if ( file_exists( '/usr/bin/ploticus' ) ) {
 	$wgTimelineSettings->ploticusCommand = '/usr/bin/ploticus';
 }
 
-$wgTimelineSettings->epochTimestamp = '20110206135500'; // fixed font setting
+$wgTimelineSettings->epochTimestamp = '20120101000000';
 putenv( "GDFONTPATH=/usr/local/apache/common/fonts" );
 
 $wgAllowRealName = false;
