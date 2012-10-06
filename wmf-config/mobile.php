@@ -66,6 +66,7 @@ if ( $wmgMobileFrontend ) {
 
 		/** Build links **/
 		$emailStub = "info-$lang";
+		$emailContext = "Source: " . $feedbackSource . "\nReferring page: " . $referringArticle . "\n";
 
 		// factual error link
 		if ( $wgDBname == 'enwiki' ) {
@@ -75,19 +76,18 @@ if ( $wmgMobileFrontend ) {
 		}
 
 		// all other links - only en uses suffix routing
-		$generalLink = "mailto:$emailStub@wikimedia.org?subject=$generalSubject";
+		$generalLink = "mailto:$emailStub@wikimedia.org?subject=$generalSubject&body=$emailContext";
 		if ( $lang == 'en' ) {
-			$articlePersonalLink = "mailto:$emailStub-q@wikimedia.org?subject=$articlePersonalSubject";
-			$articleOtherLink = "mailto:$emailStub-o@wikimedia.org?subject=$articleOtherSubject";
+			$articlePersonalLink = "mailto:$emailStub-q@wikimedia.org?subject=$articlePersonalSubject&body=$emailContext";
+			$articleOtherLink = "mailto:$emailStub-o@wikimedia.org?subject=$articleOtherSubject&body=$emailContext";
 		} else {
-			$articlePersonalLink = "mailto:$emailStub@wikimedia.org?subject=$articlePersonalSubject";
-			$articleOtherLink = "mailto:$emailStub@wikimedia.org?subject=$articleOtherSubject";
+			$articlePersonalLink = "mailto:$emailStub@wikimedia.org?subject=$articlePersonalSubject&body=$emailContext";
+			$articleOtherLink = "mailto:$emailStub@wikimedia.org?subject=$articleOtherSubject&body=$emailContext";
 		}
 
 		$technicalBody = wfMessage( 'mobile-frontend-leave-feedback-email-body' )->inLanguage( $lang )->escaped()
 			. "\nUser-agent: " . $_SERVER['HTTP_USER_AGENT'] . "\n";
-		$technicalBody .= "Source: " . $feedbackSource . "\n";
-		$technicalBody .= "Referring page: " . $referringArticle . "\n";
+		$technicalBody .= $emailContext;
 		$technicalLink = "mailto:feedbacktest@wikimedia.org?subject=$technicalSubject&body=$technicalBody";
 
 		$wgMFFeedbackLinks = array(
