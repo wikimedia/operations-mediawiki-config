@@ -1484,7 +1484,7 @@ if ( $wmgEnableCaptcha ) {
 	$wgGroupPermissions['autoconfirmed']['skipcaptcha'] = true;
 #	$wgCaptchaTriggers['edit'] = true;
 	$wgCaptchaSecret = $wmgCaptchaSecret;
-	$wgCaptchaDirectory = '/mnt/upload6/private/captcha';
+	$wgCaptchaDirectory = '/mnt/upload7/private/captcha';
 	$wgCaptchaDirectoryLevels = 3;
 	$wgCaptchaStorageClass = 'CaptchaCacheStore';
 	$wgCaptchaClass = 'FancyCaptcha';
