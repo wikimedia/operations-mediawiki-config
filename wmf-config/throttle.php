@@ -68,7 +68,7 @@ $wmfThrottlingExceptions[] = array(
 	'to'     => '2012-10-07T15:30 +0:00',
 	'IP'     => array( '14.140.227.85', '14.140.227.65' ),
 	'dbname' => array( 'enwiki', 'commonswiki' ),
-	'value'  => 50,
+	'value'  => 200,
 );
 
 ## Add throttling defintion above.
