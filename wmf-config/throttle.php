@@ -21,22 +21,6 @@ $wmgThrottlingExceptions = array();
 
 ## Add throttling definition below
 
-# bug 40263
-$wmgThrottlingExceptions[] = array(
-	'from'   => '2012-09-15T10:30 +0:00',
-	'to'     => '2012-09-15T16:00 +0:00',
-	'IP'     => '202.92.128.224',
-	'dbname' => array( 'enwiki', 'tlwiki' ),
-	'value'  => 50,
-);
-$wmgThrottlingExceptions[] = array(
-        'from'   => '2012-09-15T10:30 +0:00',
-        'to'     => '2012-09-15T16:00 +0:00',
-        'IP'     => '202.92.130.3',
-        'dbname' => array( 'enwiki', 'tlwiki' ),
-        'value'  => 50,
-);
-
 # bug 40575
 $wmfThrottlingExceptions[] = array(
 	'from'   => '2012-09-27T18:00 +0:00',
@@ -56,10 +40,10 @@ $wmfThrottlingExceptions[] = array(
 );
 $wmfThrottlingExceptions[] = array(
 	'from'   => '2012-10-06T00:00 +0:00',
-	'to'     => '2012-10-06T23:59 +0:00',
-	'IP'     => '12.183.19.7',
+	'to'     => '2012-10-07T23:59 +0:00',
+	'IP'     => '206.205.237.10',
 	'dbname' => array( 'enwiki', 'commonswiki' ),
-	'value'  => '50',
+	'value'  => '100',
 );
 
 # bug 40736
@@ -68,7 +52,7 @@ $wmfThrottlingExceptions[] = array(
 	'to'     => '2012-10-07T15:30 +0:00',
 	'IP'     => array( '14.140.227.85', '14.140.227.65' ),
 	'dbname' => array( 'enwiki', 'commonswiki' ),
-	'value'  => 50,
+	'value'  => 200,
 );
 
 ## Add throttling defintion above.
