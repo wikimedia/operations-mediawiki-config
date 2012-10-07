@@ -5664,10 +5664,10 @@ $wgConf->settings = array(
 		112 => 'Subject',
 		113 => 'Subject_talk',
 	),
-	'eswikibooks' => array(
-		102 => 'Wikiversidad',
-		103 => 'Wikiversidad_Discusión'
-	),
+//	'eswikibooks' => array(
+//		102 => 'Wikiversidad',            // Bug 40838 (removal)
+//		103 => 'Wikiversidad_Discusión',
+//	),
 	'frwikibooks' => array(
 		100 => 'Transwiki',
 		101 => 'Discussion_Transwiki',
