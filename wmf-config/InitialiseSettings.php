@@ -9966,8 +9966,10 @@ $wgConf->settings = array(
 
 'wgOldChangeTagsIndex' => array(
 	'default' => true, // For compat with index on changetags table
+
 	'flaggedrevs_labswikimedia' => false, // -Aaron 4-21-2010
 	'fawikinews' => false, // Strangely, this one has the new index names --catrope Oct 27 2010
+	'outreachwiki' => false,
 ),
 
 'wgMathCheckFiles' => array(
