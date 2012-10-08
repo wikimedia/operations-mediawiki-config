@@ -294,7 +294,7 @@ $wgCacheDirectory = '/tmp/mw-cache-' . $wmfVersionNumber;
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
-$wgFileStore['deleted']['directory'] = "/mnt/upload6/private/archive/$site/$lang";
+$wgFileStore['deleted']['directory'] = "/mnt/upload7/private/archive/$site/$lang";
 
 # used for mysql/search settings
 $tmarray = getdate( time() );
@@ -1054,9 +1054,9 @@ if ( $wmgPFEnableStringFunctions ) {
 
 if ( $wgDBname == 'mediawikiwiki' ) {
 	include( "$IP/extensions/ExtensionDistributor/ExtensionDistributor.php" );
-	$wgExtDistTarDir = '/mnt/upload6/ext-dist';
+	$wgExtDistTarDir = '/mnt/upload7/ext-dist';
 	$wgExtDistTarUrl = "$urlprotocol//upload.wikimedia.org/ext-dist";
-	$wgExtDistWorkingCopy = '/mnt/upload6/private/ExtensionDistributor/mw-snapshot';
+	$wgExtDistWorkingCopy = '/mnt/upload7/private/ExtensionDistributor/mw-snapshot';
 	$wgExtDistRemoteClient = '208.80.152.165:8430';
 
 	$wgExtDistBranches = array(
@@ -2375,7 +2375,7 @@ if ( $wmgUseMath ) {
 		$wgDefaultUserOptions['math'] = 0;
 	}
 	$wgMathFileBackend = $wmgMathFileBackend;
-	$wgMathDirectory   = '/mnt/upload6/math'; // just for sanity
+	$wgMathDirectory   = '/mnt/upload7/math'; // just for sanity
 	$wgMathPath        = $wmgMathPath;
 	$wgUseMathJax      = true;
 }
