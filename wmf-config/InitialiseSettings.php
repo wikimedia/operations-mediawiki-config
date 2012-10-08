@@ -2650,6 +2650,12 @@ $wgConf->settings = array(
 		'Wikiquote' => 4,
 		'Wikiquote_განხილვა' => 5,
 	),
+	'kkwiki' => array(
+		'Joba' => 102,
+		'Joba_talqılawı' => 103,
+		'جوبا' => 102,
+		'جوبا_تالقىلاۋى' => 103,
+	),
 	'knwiki' => array(
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
