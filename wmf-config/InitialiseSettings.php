@@ -10684,9 +10684,7 @@ $wgConf->settings = array(
 	),
 ),
 'wmgMFEnableDesktopResources' => array(
-	'default' => false,
-	'testwiki' => true,
-	'simplewiki' => true,
+	'default' => true,
 ),
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
