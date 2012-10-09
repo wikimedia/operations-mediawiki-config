@@ -4274,6 +4274,7 @@ $wgConf->settings = array(
 		'lc-recache' => "udp://$wmfUdp2logDest/lc-recache",
 		'generated-pp-node-count' => "udp://$wmfUdp2logDest/generated-pp-node-count",
 		'api' => "udp://$wmfUdp2logDest/api",
+		'bug-38273' => "udp://$wmfUdp2logDest/bug-38273",
 	),
 
 	// To measure the # of articles on enwiki during the <million => >million transition
