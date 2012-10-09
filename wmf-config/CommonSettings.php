@@ -2615,6 +2615,9 @@ case 'wmflabs':
 // https://bugzilla.wikimedia.org/show_bug.cgi?id=37211
 $wgUseCombinedLoginLink = false;
 
+// Temporary until content handler DB updates occur
+$wgContentHandlerUseDB = false;
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
