@@ -10674,13 +10674,13 @@ $wgConf->settings = array(
 	'enwiki' => array(
 		'site' => 'wikipedia',
 		'logo' => '//upload.wikimedia.org/wikipedia/commons/5/54/Mobile_W_beta_light.png',
-		'copyright' => '{wgExtensionAssetsPath}/MobileFrontend/stylesheets/images/logo-copyright-en.png'
+		'copyright' => '{wgExtensionAssetsPath}/MobileFrontend/stylesheets/common/images/logo-copyright-en.png'
 	),
 	'testwiki' => array(
 		'site' => 'wikipedia',
 		'logo' => '//upload.wikimedia.org/wikipedia/commons/5/54/Mobile_W_beta_light.png',
 		// {wgExtensionAssetsPath} will get replaced with $wgExtensionAssetsPath in CustomSettings.php
-		'copyright' => '{wgExtensionAssetsPath}/MobileFrontend/stylesheets/images/logo-copyright-en.png'
+		'copyright' => '{wgExtensionAssetsPath}/MobileFrontend/stylesheets/common/images/logo-copyright-en.png'
 	),
 ),
 'wmgMFEnableDesktopResources' => array(
