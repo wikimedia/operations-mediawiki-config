@@ -164,7 +164,7 @@ $wgLocalFileRepo = array(
 		'zones'             => array(
 			'thumb' => array( 'handlerUrl' => "$wgScriptPath/thumb_handler.php" )
 		),
-		'abbrvThreshold'    => in_array( $wgDBname, array( 'testwiki' ) ) ? 160 : 255,
+		'abbrvThreshold'    => 160,
 		'isPrivate'         => $wmgPrivateWiki
 );
 if ( $wgDBname != 'commonswiki' ) {
@@ -188,6 +188,6 @@ if ( $wgDBname != 'commonswiki' ) {
 			'temp'    => array( 'container' => 'local-temp' ),
 			'deleted' => array( 'container' => 'local-deleted' )
 		),
-		'abbrvThreshold'   => 255
+		'abbrvThreshold'   => 160
 	);
 }
