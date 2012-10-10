@@ -9993,6 +9993,7 @@ $wgConf->settings = array(
 	'eowikisource' => false,
 	'etwikimedia' => false,
 	'fawikinews' => false,
+	'fdcwiki' => false,
 	'fiwikimedia' => false,
 	'fiwikiversity' => false,
 	'flaggedrevs_labswikimedia' => false,
