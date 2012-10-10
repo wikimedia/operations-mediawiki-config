@@ -1714,9 +1714,10 @@ $wgHooks['PrefsEmailAudit'][] = 'logPrefsEmail';
 $wgHooks['PrefsPasswordAudit'][] = 'logPrefsPassword';
 
 function logBadPassword( $user, $pass, $retval ) {
-	$headers = apache_request_headers();
-
 	if ( $user->isAllowed( 'delete' ) && $retval != LoginForm::SUCCESS ) {
+		global $wgRequest;
+		$headers = apache_request_headers();
+
 		switch( $retval ) {
 		case LoginForm::WRONG_PASS:
 		case LoginForm::EMPTY_PASS:
@@ -1730,7 +1731,7 @@ function logBadPassword( $user, $pass, $retval ) {
 		}
 
 		wfDebugLog( 'badpass', "$bit for sysop '" .
-			$user->getName() . "' from " . wfGetIP() .
+			$user->getName() . "' from " . $wgRequest->getIP() .
 			# " - " . serialize( apache_request_headers() )
 			" - " . @$headers['X-Forwarded-For'] .
 			' - ' . @$headers['User-Agent'] .
@@ -1751,11 +1752,13 @@ function logBadPassword( $user, $pass, $retval ) {
 
 function logPrefsEmail( $user, $old, $new ) {
 	if ( $user->isAllowed( 'delete' ) ) {
+		global $wgRequest;
 		$headers = apache_request_headers();
+
 		wfDebugLog( 'badpass', "Email changed in prefs for sysop '" .
 			$user->getName() .
 			"' from '$old' to '$new'" .
-			" - " . wfGetIP() .
+			" - " . $wgRequest->getIP() .
 			# " - " . serialize( apache_request_headers() )
 			" - " . @$headers['X-Forwarded-For'] .
 			' - ' . @$headers['User-Agent'] .
@@ -1766,11 +1769,13 @@ function logPrefsEmail( $user, $old, $new ) {
 
 function logPrefsPassword( $user, $pass, $status ) {
 	if ( $user->isAllowed( 'delete' ) ) {
+		global $wgRequest;
 		$headers = apache_request_headers();
+
 		wfDebugLog( 'badpass', "Password change in prefs for sysop '" .
 			$user->getName() .
 			"': $status" .
-			" - " . wfGetIP() .
+			" - " . $wgRequest->getIP() .
 			# " - " . serialize( apache_request_headers() )
 			" - " . @$headers['X-Forwarded-For'] .
 			' - ' . @$headers['User-Agent'] .
