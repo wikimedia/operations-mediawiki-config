@@ -1037,6 +1037,7 @@ $wgConf->settings = array(
 	'elwikinews' => '//el.wikinews.org',
 	'en_labswikimedia' => '//en.labs.wikimedia.org',
 	'execwiki' => '//exec.wikimedia.org',
+	'fdcwiki' => '//fdc.wikimedia.org',
 	'flaggedrevs_labswikimedia'  => '//flaggedrevs.labs.wikimedia.org',
 	'foundationwiki' => '//wikimediafoundation.org',
 	'grantswiki'    => '//grants.wikimedia.org',
