@@ -8328,6 +8328,7 @@ $wgConf->settings = array(
 	'etwiktionary' => array( 'w' ),
 	'etwikimedia' => array( 'w', 'meta' ),
 	'extwiki' => array( 'incubator' ),
+	'fdcwiki' => array( 'meta' ),
 	'fiwikisource' => array( 'OldWikisource', 'w', 'b' ),
 	'fiwikiversity' => array( 'b', 'q', 'n', 's', 'wikt', 'w', 'betawikiversity' ),
 	'fiwikimedia' => array( 'w', 'meta' ),
