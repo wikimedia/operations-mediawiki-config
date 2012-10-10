@@ -49,6 +49,7 @@ $wgMaxShellMemory = 30000000;
 
 
 // Disable AFTv4 completely on beta labs --Chris McMahon
+// Adding a comment for demo purposes, this is a NOOP, feel free to -2 or +2, it doesn't matter
 
 $wgArticleFeedbackLotteryOdds = 0; // Will turn off the voting for AFTv4 on all pages
 
