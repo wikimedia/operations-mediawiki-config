@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAA/3///+g\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 9777,
+      "author": {
+        "id": 118
+      },
+      "writtenOn": "2012-10-11T17:26:06Z",
+      "side": 1,
+      "message": "Usually we\u0027d put a comma here, but I\u0027m not going to block this over a comma.",
+      "revId": "bb90540c7599e36009d77548668d568adeaa186c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAA/3///+c\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 9780,
+      "author": {
+        "id": 118
+      },
+      "writtenOn": "2012-10-11T17:26:06Z",
+      "side": 1,
+      "message": "Likewise.",
+      "revId": "bb90540c7599e36009d77548668d568adeaa186c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
