@@ -1952,6 +1952,10 @@ if ( $wmgUseCodeReview ) {
 if ( $wmgUseAbuseFilter ) {
 	include "$IP/extensions/AbuseFilter/AbuseFilter.php";
 	include( "$wmfConfigDir/abusefilter.php" );
+
+	$wgAbuseFilterEmergencyDisableThreshold = $wmgAbuseFilterEmergencyDisableThreshold;
+	$wgAbuseFilterEmergencyDisableCount = $wmgAbuseFilterEmergencyDisableCount;
+	$wgAbuseFilterEmergencyDisableAge = $wmgAbuseFilterEmergencyDisableAge;
 }
 
 if ( $wmgUseCommunityVoice ) {

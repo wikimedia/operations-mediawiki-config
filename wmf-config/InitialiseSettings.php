@@ -9790,6 +9790,17 @@ $wgConf->settings = array(
 'wmgUseAbuseFilter' => array(
 	'default' => true,
 ),
+// emergency disable: shut off filters tagging >5% of posts on a total of at least 25 posts per day
+'wmgAbuseFilterEmergencyDisableThreshold' => array(
+	'default' => 0.05,
+),
+'wmgAbuseFilterEmergencyDisableCount' => array(
+	'default' => 2,
+	'enwiki' => 25,
+),
+'wmgAbuseFilterEmergencyDisableAge' => array(
+	'default' => 86400,
+),
 # @}
 
 'wgThumbLimits' => array(
