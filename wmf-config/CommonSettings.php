@@ -760,6 +760,7 @@ $wgDebugLogGroups['FileOperation'] = "udp://$wmfUdp2logDest/filebackend-ops";
 $wgDebugLogGroups['SwiftBackend'] = "udp://$wmfUdp2logDest/swift-backend"; // -aaron 5/15/12
 $wgDebugLogGroups['updateTranstagOnNullRevisions'] = "udp://$wmfUdp2logDest/updateTranstagOnNullRevisions";
 $wgDebugLogGroups['json-hack'] = "udp://$wmfUdp2logDest/json-hack"; // Max 2012-06-27
+$wgDebugLogGroups['redis'] = "udp://$wmfUdp2logDest/redis"; // -asher 2012/10/12
 
 $wgDebugLogGroups['404'] = "udp://$wmfUdp2logDest/four-oh-four";
 
