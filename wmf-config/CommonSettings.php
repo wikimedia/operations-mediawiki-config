@@ -2059,7 +2059,7 @@ if ( $wmgUseLocalisationUpdate ) {
 if ( $wmgEnableLandingCheck ) {
 	require_once(  "$IP/extensions/LandingCheck/LandingCheck.php" );
 
-	$wgPriorityCountries = array( 'FR', 'DE', 'GB', 'CH', 'SY', 'IR', 'CU' );
+	$wgPriorityCountries = array( 'FR', 'DE', 'CH', 'SY', 'IR', 'CU' );
 	// $wgLandingCheckPriorityURLBase = "//wikimediafoundation.org/wiki/Special:LandingCheck";
 	// $wgLandingCheckNormalURLBase = "//donate.wikimedia.org/wiki/Special:LandingCheck";
 }
