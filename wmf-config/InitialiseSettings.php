@@ -10119,19 +10119,8 @@ $wgConf->settings = array(
 	# Note: Special:ClickTracking is disabled in CommonSettings.php
 	# Disabling due to CR r58099 -- TS 2010-06-03
 	'default' => false,
-	'en_labswikimedia' => true, // ArticleFeedbackv5 needs this
-	'enwiki' => true, // VectorSectionEditLinks needs this
-	'eswiki' => true, // ArticleFeedback needs this
-	'eswikinews' => true, // ArticleFeedback needs this
-	'hiwiki' => true, // ArticleFeedback needs this
-	'huwiki' => true, // ArticleFeedback needs this
-	'metawiki' => true, // ArticleFeedback needs this
-	'mlwiki' => true, // ArticleFeedback needs this
-	'ptwiki' => true, // ArticleFeedback needs this
-	'ptwikibooks' => true, // ArticleFeedback needs this
-	'srwiki' => true, // ArticleFeedback needs this
+	'enwiki' => true,
 	'testwiki' => true,
-	'zhwiki' => true, // ArticleFeedback needs this
 ),
 
 'wmgClickTrackThrottle' => array(
