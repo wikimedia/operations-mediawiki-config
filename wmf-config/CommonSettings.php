@@ -1781,7 +1781,7 @@ if ( $wmgUseCentralNotice ) {
 	// new settings for secure server support
 	if ( $secure ) {
 		# Don't load the JS from an insecure source!
-		$wgCentralPagePath = 'https://secure.wikimedia.org/wikipedia/meta/w/index.php';
+		$wgCentralPagePath = "https://{$wmfHostnames['meta']}/w/index.php";
 	} elseif ( $wgDBname == 'testwiki' ) {
 		$wgCentralPagePath = "$urlprotocol//test.wikipedia.org/w/index.php";
 	} else {
@@ -2059,7 +2059,7 @@ if ( $wmgUseLocalisationUpdate ) {
 if ( $wmgEnableLandingCheck ) {
 	require_once(  "$IP/extensions/LandingCheck/LandingCheck.php" );
 
-	$wgPriorityCountries = array( 'FR', 'DE', 'GB', 'CH', 'SY', 'IR', 'CU' );
+	$wgPriorityCountries = array( 'FR', 'DE', 'CH', 'SY', 'IR', 'CU' );
 	// $wgLandingCheckPriorityURLBase = "//wikimediafoundation.org/wiki/Special:LandingCheck";
 	// $wgLandingCheckNormalURLBase = "//donate.wikimedia.org/wiki/Special:LandingCheck";
 }
