@@ -1778,11 +1778,11 @@ if ( $cluster == 'wmflabs' && file_exists( '/etc/wikimedia-transcoding' ) ) {
 if ( $wmgUseCentralNotice ) {
 	include "$IP/extensions/CentralNotice/CentralNotice.php";
 
-	// new settings for secure server support
-	if ( $secure ) {
-		# Don't load the JS from an insecure source!
-		$wgCentralPagePath = "https://{$wmfHostnames['meta']}/w/index.php";
-	} elseif ( $wgDBname == 'testwiki' ) {
+	// for DNS prefetching
+	$wgCentralHost = "$urlprotocol//{$wmfHostnames['meta']}";
+
+	// for banner loading
+	if ( $wgDBname == 'testwiki' ) {
 		$wgCentralPagePath = "$urlprotocol//test.wikipedia.org/w/index.php";
 	} else {
 		$wgCentralPagePath = "$urlprotocol//{$wmfHostnames['meta']}/w/index.php";
