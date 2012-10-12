@@ -9911,63 +9911,6 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-# FEEDBACK @{
-'wmgUseReaderFeedback' => array(
-	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	// Setting this requires some extra tables
-	// Install extensions/ReaderFeedback/ReaderFeedback.sql
-	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	'default'			=> false,
-	#'en_labswikimedia'		=> true,	# disabled for AFTv5 testing per Erik --Roan
-	'enwikibooks'			=> true,
-	'enwikinews'			=> true,
-	'huwiki'			=> true,
-	'readerfeedback_labswikimedia'	=> true,
-	'ruwikinews'			=> true,
-	'strategyappswiki'		=> true,
-	'strategywiki'			=> true,
-//	'testwiki'			=> true,
-	'trwikinews'			=> true,
-),
-
-'wmgFeedbackNamespaces' => array(
-	'default'	=> array( NS_MAIN ),
-	'enwikibooks'	=> array( NS_MAIN, 102, 110 ),
-	'strategywiki'	=> array( 106 ),
-),
-'wmgFeedbackTags' => array(
-	'default' => false, // use default
-	'huwiki' => array(
-		'reliability'  => 3,
-		'completeness' => 2,
-		'npov'	 => 2,
-		'presentation' => 1
-	),
-	'strategywiki' => array(
-		'priority'     => 1,
-		'impact'       => 1,
-		'feasibility'  => 1,
-		'desirability' => 1,
-	),
-	'strategyappswiki' => array(
-		'priority'     => 1,
-		'desirability' => 1,
-		'statement'    => 1,
-		'skills'       => 1,
-		'group'	=> 1,
-	),
-	'readerfeedback_labswikimedia' => array(
-		'usefulness'   => 3,
-		'presentation' => 3,
-		'neutrality'   => 3,
-	),
-),
-'wmgFeedbackSizeThreshhold' => array(
-	'default'	  => 15,
-	'strategyappswiki' => 1,
-),
-# @} end of FEEDBACK
-
 'wmgUseLocalisationUpdate' => array(
 	'default' => true, // one more final test!
 	'testwiki' => true,

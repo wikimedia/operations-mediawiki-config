@@ -79,7 +79,6 @@ $IP/extensions/PoolCounter/PoolCounterClient.php
 $IP/extensions/ProofreadPage/ProofreadPage.php
 $IP/extensions/Quiz/Quiz.php
 $IP/extensions/RandomRootPage/Randomrootpage.php
-$IP/extensions/ReaderFeedback/ReaderFeedback.php
 $IP/extensions/Renameuser/Renameuser.php
 $IP/extensions/RSS/RSS.php
 $IP/extensions/ScanSet/ScanSet.php
