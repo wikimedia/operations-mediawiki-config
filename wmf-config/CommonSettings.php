@@ -1828,7 +1828,7 @@ if ( $wmgUseCentralNotice ) {
 
 // Set CentralNotice banner hide cookie; Needs to be enabled for all wikis that display banners ~awjr 2011-11-07
 if ( $wmgSetNoticeHideBannersExpiration && $wmgUseCentralNotice ) {
-	$wgNoticeHideBannersExpiration = 1327971600; // expire fundraising cookie on January 31, 2012
+	$wgNoticeHideBannersExpiration = 1359594000; // expire fundraising cookie on January 31, 2013
 }
 
 // Load our site-specific l10n extensions
