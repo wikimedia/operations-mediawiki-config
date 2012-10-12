@@ -87,7 +87,6 @@ $IP/extensions/Scribunto/Scribunto.php
 $IP/extensions/SecurePoll/SecurePoll.php
 $IP/extensions/ShortUrl/ShortUrl.php
 $IP/extensions/SimpleAntiSpam/SimpleAntiSpam.php
-$IP/extensions/SimpleSurvey/SimpleSurvey.php
 $IP/extensions/SiteMatrix/SiteMatrix.php
 $IP/extensions/SkinPerPage/SkinPerPage.php
 $IP/extensions/skins/Schulenburg/Schulenburg.php
