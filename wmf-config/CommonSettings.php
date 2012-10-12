@@ -1054,9 +1054,9 @@ if ( $wmgPFEnableStringFunctions ) {
 
 if ( $wgDBname == 'mediawikiwiki' ) {
 	include( "$IP/extensions/ExtensionDistributor/ExtensionDistributor.php" );
-	$wgExtDistTarDir = '/mnt/originals/ext-dist';
+	$wgExtDistTarDir = is_dir( '/mnt/originals' ) ? '/mnt/originals/ext-dist' : '/mnt/upload7/ext-dist';
 	$wgExtDistTarUrl = "$urlprotocol//upload.wikimedia.org/ext-dist";
-	$wgExtDistWorkingCopy = '/mnt/originals/private/ExtensionDistributor/mw-snapshot';
+	$wgExtDistWorkingCopy = is_dir( '/mnt/originals' ) ? '/mnt/originals/private/ExtensionDistributor/mw-snapshot' : '/mnt/upload7/private/ExtensionDistributor/mw-snapshot';
 	$wgExtDistRemoteClient = '208.80.152.165:8430';
 
 	$wgExtDistBranches = array(
