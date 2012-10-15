@@ -180,6 +180,17 @@ return array(
 	'-wmgUseE3Experiments' => array(
 		'default' => false,
 	),
+
+	//enable TimedMediaHandler and MwEmbedSupport for testing on commons and enwiki
+	'wmgUseMwEmbedSupport' => array(
+		'commonswiki'	=> true,
+		'enwiki'	=> true,
+	),
+	// NOTE: TMH *requires* MwEmbedSupport to function
+	'wmgUseTimedMediaHandler' => array(
+		'commonswiki'	=> true,
+		'enwiki'	=> true,
+	),
 );
 
 } # wmflLabsSettings()
