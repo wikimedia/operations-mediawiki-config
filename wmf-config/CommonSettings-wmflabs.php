@@ -114,15 +114,12 @@ $wgArticleFeedbackv5MaxCommentLength = 400;
 # temporary extensions
 # ========================================================================
 
-if ($wgDBname == "commonswiki" || $wgDBname == 'enwiki') {
-	// requested by Eloquence
-	include ("$IP/extensions/MwEmbedSupport/MwEmbedSupport.php");
-	include ("$IP/extensions/TimedMediaHandler/TimedMediaHandler.php");
-
+if ( $wmgUseTimedMediaHandler ) {
 	$wgMwEmbedModuleConfig[ 'MediaWiki.ApiProviders' ] =  array(
 	"commons" => array(
 		'url' => '//commons.wikimedia.beta.wmflabs.org/w/api.php'
 	));
+	$wgEnableTranscode = true; //enable transcoding on labs
 }
 
 if ($wgDBname == "testwiki") {
