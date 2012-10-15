@@ -1,1 +1,1 @@
-/home/wikipedia/common/php-1.21wmf1
+php-1.21wmf1
