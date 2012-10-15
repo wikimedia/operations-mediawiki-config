@@ -11371,7 +11371,7 @@ $wgConf->settings = array(
 'wmgUseEducationProgram' => array(
 	'default' => false,
 	'test2wiki' => true,
-//	'enwiki' => true,
+	'enwiki' => true,
 ),
 'wmgUseWikimediaShopLink' => array(
 	'default' => false,
