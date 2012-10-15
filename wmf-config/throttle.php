@@ -55,15 +55,6 @@ $wmfThrottlingExceptions[] = array(
 	'value'  => 200,
 );
 
-# bug 40911
-$wmfThrottlingExceptions[] = array(
-	'from'   => '2012-10-13T10:00 +5:30',
-	'to'     => '2012-10-13T17:00 +5:30',
-	'IP'     => '117.242.205.107',
-	'dbname' => 'mlwiki',
-	'value'  => 50,
-);
-
 ## Add throttling defintion above.
 
 # Will eventually raise value when MediaWiki is fully initialized:
