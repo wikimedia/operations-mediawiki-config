@@ -6284,7 +6284,7 @@ $wgConf->settings = array(
 
 'wgUseNPPatrol' => array(
 	'default' => true, // brion 2007-11-16
-	'fiwiki' => false, // Bug 39942
+//	'fiwiki' => false, // Bug 39942, temporarely disabled by bug 41016
 	'huwiki' => false, // Bug 19241
 	'ruwiki' => false, // Bug 31650
 	'sqwiki' => false, // Bug 25822
