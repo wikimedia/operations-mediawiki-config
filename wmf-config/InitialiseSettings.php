@@ -10407,6 +10407,7 @@ $wgConf->settings = array(
 	'guwiktionary' => true, // bug 37365
 	'guwikiquote' => true, // bug 37385
 	'hiwiki' => true, // Bug 35436
+	'hiwiktionary' => true, // Bug 41015
 	'incubatorwiki' => true, // Bug 32418
 	'kawiki' => true, // Bug 39432
 	'knwiki' => true, // Bug 34516
