@@ -2603,6 +2603,61 @@ if ( $wmgUseMicroDesign ) {
 	$wgVectorFeatures['footercleanup']['global'] = true;
 }
 
+if ( $wmgUseReplaceText ) {
+	require_once( "$IP/extensions/ReplaceText/ReplaceText.php" );
+}
+
+if ( $wmgUseBreadCrumbs ) {
+	require_once( "$IP/extensions/BreadCrumbs/BreadCrumbs.php" );
+}
+
+if ( $wmgUseCalendar ) {
+	require_once( "$IP/extensions/Calendar/Calendar.php" );
+}
+
+if ( $wmgUseCustomData ) {
+	// @todo: The docs at http://www.wikivoyage.org/tech/CustomData-Extension state that
+	// "no modifications of your LocalSettings.php file are required", so I'm guessing
+	// other extensions will have a require_once to this file? That's just plain nasty...
+//	require_once( "$IP/extensions/CustomData/CustomData.php" );
+}
+
+if ( $wmgUseGeoMath ) {
+	require_once( "$IP/extensions/GeoMath/GeoMath.php" );
+	require_once( "$IP/extensions/GeoMath/GeoTransform.php" );
+}
+
+if ( $wmgUseMapSources ) {
+	require_once( "$IP/extensions/MapSources/MapSources.php" );
+	// GeoMath is dependency of MapSources
+	require_once( "$IP/extensions/GeoMath/GeoMath.php" );
+	require_once( "$IP/extensions/GeoMath/GeoTransform.php" );
+}
+
+if ( $wmgUseCreditsSource ) {
+	require_once( "$IP/extensions/CreditSource/CreditsSource.php" );
+}
+
+if ( $wmgUseListings ) {
+	require_once( "$IP/extensions/Listings/Listings.php" );
+}
+
+if ( $wmgUseTocTree ) {
+	require_once( "$IP/extensions/TocTree/TocTree.php" );
+}
+
+if ( $wmgUseInsider ) {
+	require_once( "$IP/extensions/Insider/Insider.php" );
+}
+
+if ( $wmgUseRelatedArticles ) {
+	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
+}
+
+if ( $wmgUseRelatedSites ) {
+	require_once( "$IP/extensions/RelatedSites/RelatedSites.php" );
+}
+
 if( $cluster == 'wmflabs' ) {
 	require( "$wmfConfigDir/CommonSettings-wmflabs.php" );
 }
