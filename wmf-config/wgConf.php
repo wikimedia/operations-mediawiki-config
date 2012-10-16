@@ -31,6 +31,7 @@ switch( $cluster ) {
 			'wikinews.org',
 			'wikisource.org',
 			'wikiversity.org',
+			'wikivoyage.org',
 			// 'wikimedia.org' // Removed 2008-09-30 by brion -- breaks codereview-proxy.wikimedia.org
 			'meta.wikimedia.org', // Presumably needed to load meta spam list. Any others?
 			'commons.wikimedia.org',
@@ -46,6 +47,7 @@ switch( $cluster ) {
 			'wikinews.beta.wmflabs.org',
 			'wikisource.beta.wmflabs.org',
 			'wikiversity.beta.wmflabs.org',
+			'wikivoyage.beta.wmflabs.org',
 			// 'wikimedia.beta.wmflabs.org' // Removed 2008-09-30 by brion -- breaks codereview-proxy.wikimedia.org
 			'meta.wikimedia.beta.wmflabs.org', // Presumably needed to load meta spam list. Any others?
 			'incubator.wikimedia.beta.wmflabs.org',
