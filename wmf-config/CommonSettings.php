@@ -2604,6 +2604,61 @@ if ( $wmgUseMicroDesign ) {
 	$wgVectorFeatures['footercleanup']['global'] = true;
 }
 
+if ( $wmgUseReplaceText ) {
+	require_once( "$IP/extensions/ReplaceText/ReplaceText.php" );
+}
+
+if ( $wmgUseBreadCrumbs ) {
+	require_once( "$IP/extensions/BreadCrumbs/BreadCrumbs.php" );
+}
+
+if ( $wmgUseCalendar ) {
+	require_once( "$IP/extensions/Calendar/Calendar.php" );
+}
+
+if ( $wmgUseMapSources ) {
+	require_once( "$IP/extensions/MapSources/MapSources.php" );
+}
+
+if ( $wmgUseSlippyMap ) {
+	require_once( "$IP/extensions/OpenStreetMapSlippyMap/SlippyMap.php" );
+}
+
+if ( $wmgUseCreditsSource ) {
+	require_once( "$IP/extensions/CreditsSource/CreditsSource.php" );
+}
+
+if ( $wmgUseListings ) {
+	require_once( "$IP/extensions/Listings/Listings.php" );
+}
+
+if ( $wmgUseTocTree ) {
+	require_once( "$IP/extensions/TocTree/TocTree.php" );
+}
+
+if ( $wmgUseInsider ) {
+	require_once( "$IP/extensions/Insider/Insider.php" );
+	// dependency
+	require_once( "$IP/extensions/CustomData/CustomData.php" );
+}
+
+if ( $wmgUseRelatedArticles ) {
+	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
+	// dependency
+	require_once( "$IP/extensions/CustomData/CustomData.php" );
+}
+
+if ( $wmgUseRelatedSites ) {
+	require_once( "$IP/extensions/RelatedSites/RelatedSites.php" );
+	// dependency
+	require_once( "$IP/extensions/CustomData/CustomData.php" );
+
+	$wgRelatedSitesPrefixes = $wmgRelatedSitesPrefixes;
+}
+
+// additional "language names", adding to Names.php data
+$wgExtraLanguageNames = $wmgExtraLanguageNames;
+
 if( $cluster == 'wmflabs' ) {
 	require( "$wmfConfigDir/CommonSettings-wmflabs.php" );
 }
