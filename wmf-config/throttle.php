@@ -3,7 +3,6 @@
 # WARNING: This file is publically viewable on the web.
 # Do not put private data here.
 
-## Add throttling definitions below,
 # The helper functions takes an array of parameters:
 #  'from'  => date/time to start raising account creation throttle
 #  'to'    => date/time to stop
@@ -11,7 +10,7 @@
 # Optional arguments can be added to set the value or restrict by client IP
 # or project dbname. Options are:
 #  'value'  => new value for $wgAccountCreationThrottle (default: 50)
-#  'IP'     => client IP as given by wfGetIP() (default: any IP)
+#  'IP'     => client IP as given by wfGetIP() or array (default: any IP)
 #  'dbname' => a $wgDBname or array of dbnames to compare to
 #             (eg. enwiki, metawiki, frwikibooks, eswikiversity)
 #             (default: any project)
@@ -19,41 +18,7 @@
 # Initialize the array. Append to that array to add a throttle
 $wmgThrottlingExceptions = array();
 
-## Add throttling definition below
-
-# bug 40575
-$wmfThrottlingExceptions[] = array(
-	'from'   => '2012-09-27T18:00 +0:00',
-	'to'     => '2012-09-28T02:00 +0:00',
-	'IP'     => '177.32.49.25',
-	'dbname' => array( 'ptwikiversity' ),
-	'value'  => 50,
-);
-
-# bug 40669
-$wmfThrottlingExceptions[] = array(
-	'from'   => '2012-10-04T00:00 +0:00',
-	'to'     => '2012-10-05T23:59 +0:00',
-	'IP'     => '12.183.19.7',
-	'dbname' => array( 'enwiki', 'commonswiki' ),
-	'value'  => '50',
-);
-$wmfThrottlingExceptions[] = array(
-	'from'   => '2012-10-06T00:00 +0:00',
-	'to'     => '2012-10-07T23:59 +0:00',
-	'IP'     => '206.205.237.10',
-	'dbname' => array( 'enwiki', 'commonswiki' ),
-	'value'  => '100',
-);
-
-# bug 40736
-$wmfThrottlingExceptions[] = array(
-	'from'   => '2012-10-07T03:30 +0:00',
-	'to'     => '2012-10-07T15:30 +0:00',
-	'IP'     => array( '14.140.227.85', '14.140.227.65' ),
-	'dbname' => array( 'enwiki', 'commonswiki' ),
-	'value'  => 200,
-);
+## Add throttling definitions below.
 
 # bug 41069
 $wmfThrottlingExceptions[] = array(
@@ -64,7 +29,7 @@ $wmfThrottlingExceptions[] = array(
 	'value'  => 80, // ± 50 participants having to create an account
 );
 
-## Add throttling defintion above.
+## Add throttling definitions above.
 
 # Will eventually raise value when MediaWiki is fully initialized:
 $wgExtensionFunctions[] = 'efRaiseAccountCreationThrottle';
