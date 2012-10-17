@@ -11,6 +11,11 @@ $wgDBserver         = "deployment-sql";
 $wgDBprefix         = "";
 $wgDBTableOptions   = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
 
-
+if ( $wgDBname === 'wikivoyage' ) {
+	$wgDBtype           = "mysql";
+	$wgDBserver         = "deployment-sql02";
+	$wgDBprefix         = "";
+	$wgDBTableOptions   = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
+}
 
 } # end safe guard
