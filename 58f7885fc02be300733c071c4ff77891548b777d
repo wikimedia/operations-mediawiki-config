@@ -16,6 +16,23 @@
       "revId": "58f7885fc02be300733c071c4ff77891548b777d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABEn//9U0\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2630,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-10-17T15:23:10Z",
+      "side": 1,
+      "message": "should be /CreditsSource/\n\nSee also bug 41110 for the Git repository misspelling.",
+      "revId": "58f7885fc02be300733c071c4ff77891548b777d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
