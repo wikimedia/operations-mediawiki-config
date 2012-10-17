@@ -430,6 +430,7 @@ $wgFileExtensions[] = 'djvu'; # DjVu images/documents
 
 include( $IP . '/extensions/PagedTiffHandler/PagedTiffHandler.php' );
 $wgTiffUseTiffinfo = true;
+$wgMaxImageArea = 1.4e7;
 
 if ( $wgDBname == 'foundationwiki' ) { # per cary on 2010-05-11
    $wgFileExtensions[] = 'otf';
