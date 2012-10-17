@@ -123,6 +123,6 @@ if ( $wmgUseTimedMediaHandler ) {
 }
 
 if ($wgDBname == "testwiki") {
-	$wgCaptchaDirectory = '/mnt/upload6/private/captcha/random';
+	$wgCaptchaDirectory = '/mnt/upload7/private/captcha/random';
 }
 } # end safeguard

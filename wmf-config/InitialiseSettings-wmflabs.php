@@ -98,7 +98,7 @@ return array(
 	),
 
 	'-wgUploadDirectory' => array(
-		'default'      => '/mnt/upload6/$site/$lang',
+		'default'      => '/mnt/upload7/$site/$lang',
 	),
 
 	/* 'wmgUseOnlineStatusBar' => array( */
@@ -119,7 +119,7 @@ return array(
 	),
 
 	'-wgMathDirectory' => array(
-		'default' => '/mnt/upload6/math',
+		'default' => '/mnt/upload7/math',
 	),
 
 	'-wgMathPath' => array(

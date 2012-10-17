@@ -20,10 +20,10 @@ $wgLocalFileRepo = array(
 		'thumbScriptUrl' => $wgThumbnailScriptPath,
 		'transformVia404' => false,
 		'initialCapital' => $wgCapitalLinks,
-		'deletedDir' => "/mnt/upload6/private/archive/$site/$lang",
+		'deletedDir' => "/mnt/upload7/private/archive/$site/$lang",
 		'deletedHashLevels' => 3,
 // TODO: Thumbdir?
-//	'thumbDir' => str_replace( '/mnt/upload6', '/mnt/thumbs', "$wgUploadDirectory/thumb" ),
+//	'thumbDir' => str_replace( '/mnt/upload7', '/mnt/thumbs', "$wgUploadDirectory/thumb" ),
 );
 
 # New commons settings
@@ -31,7 +31,7 @@ if ( $wgDBname != 'commonswiki' ) {
 	$wgForeignFileRepos[] = array(
 		'class'            => 'ForeignDBViaLBRepo',
 		'name'             => 'shared',
-		'directory'        => '/mnt/upload6/wikipedia/commons',
+		'directory'        => '/mnt/upload7/wikipedia/commons',
 		'url'              => "$urlprotocol//upload.beta.wmflabs.org/wikipedia/commons",
 		'hashLevels'       => 2,
 		'thumbScriptUrl'   => "$urlprotocol//commons.wikimedia.beta.wmflabs.org/w/thumb.php",
@@ -42,7 +42,7 @@ if ( $wgDBname != 'commonswiki' ) {
 		'fetchDescription' => true,
 		'wiki'             => 'commonswiki',
 		'initialCapital'   => true,
-		'thumbDir'         => '/mnt/upload6/wikipedia/commons/thumb',
+		'thumbDir'         => '/mnt/upload7/wikipedia/commons/thumb',
 	);
 }
 
