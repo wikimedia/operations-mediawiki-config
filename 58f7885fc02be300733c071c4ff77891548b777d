@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABEn//9Vc\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2607,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2012-10-17T14:55:50Z",
+      "side": 1,
+      "message": "Where did ReplaceText come from? That also then needs code review...",
+      "revId": "58f7885fc02be300733c071c4ff77891548b777d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
