@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAABFX///5g\u003d",
+        "filename": "wmf-config/InitialiseSettings-wmflabs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 204
+      },
+      "writtenOn": "2012-10-17T22:20:49Z",
+      "side": 1,
+      "message": "\u0027default\u0027 is set in InitialiseSettings.php, and this should get merged into the existing array. At least, that\u0027s my understanding of line30.",
+      "parentUuid": "AAABFX///8o\u003d",
+      "revId": "2f03852e9bc75bb649a83400a7c37f3810ccfab3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABFX///80\u003d",
         "filename": "wmf-config/db-wmflabs.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2012-10-17T21:20:28Z",
       "side": 1,
       "message": "This and $wgDBprefix are the same, so there\u0027s no need to change them here.",
+      "revId": "2f03852e9bc75bb649a83400a7c37f3810ccfab3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX///5Y\u003d",
+        "filename": "wmf-config/db-wmflabs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 204
+      },
+      "writtenOn": "2012-10-17T22:20:49Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABFX///80\u003d",
       "revId": "2f03852e9bc75bb649a83400a7c37f3810ccfab3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
