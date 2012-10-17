@@ -46,6 +46,11 @@ return array(
 	'wgSitename' => array(
 		'labswiki' => 'Deployment',
 		'ee_prototypewiki' => 'Editor Engagement Prototype',
+		'wikivoyage'    => 'Wikivoyage',
+	),
+
+	'wmgUseDualLicense' => array(
+		'wikivoyage' => true,
 	),
 
 	'wgServer' => array(
@@ -59,6 +64,7 @@ return array(
 		'wikiquote'	=> '//$lang.wikiquote.beta.wmflabs.org',
 		'wikinews'	=> '//$lang.wikinews.beta.wmflabs.org',
 		'wikibooks'     => '//$lang.wikibooks.beta.wmflabs.org',
+		'wikivoyage'     => '//$lang.wikivoyage.beta.wmflabs.org',
 
 		'metawiki'      => '//meta.wikimedia.beta.wmflabs.org',
 		'commonswiki'   => '//commons.wikimedia.beta.wmflabs.org',
@@ -77,6 +83,7 @@ return array(
 		'wikiversity'     => 'http://$lang.wikiversity.beta.wmflabs.org',
 		'wiktionary'     => 'http://$lang.wiktionary.beta.wmflabs.org',
 		'wikispecies'     => 'http://$lang.wikispecies.beta.wmflabs.org',
+		'wikivoyage'     => 'http://$lang.wikivoyage.beta.wmflabs.org',
 
 		'incubatorwiki'	=> 'http://incubator.wikimedia.beta.wmflabs.org',
 		'metawiki'      => 'http://meta.wikimedia.beta.wmflabs.org',
