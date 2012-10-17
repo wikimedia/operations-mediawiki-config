@@ -36,6 +36,9 @@ function wmfLabsOverrideSettings() {
 
 /**
  * Return settings for wmflabs cluster. This is used by wmfLabsOverride().
+ * Keys that start with a hyphen will completely override the regular settings
+ * in InitializeSettings.php. Keys that don't start with a hyphen will have
+ * their settings combined with the regular settings.
  */
 function wmfLabsSettings() {
 return array(
@@ -143,10 +146,14 @@ return array(
 //		'commonswiki'       => '//commons.wikimedia.beta.wmflabs.org/w/thumb.php?f=Wiki.png&width=88&a',
 	),
 
+	// Editor Engagement stuff
 	'-wmfUseArticleCreationWorkflow' => array(
 		'default' => false,
 	),
-
+	'wmgUseEcho' => array(
+		'enwiki' => true,
+	),
+	
 	'-wmgUsePoolCounter' => array(
 		'default' => false, # bug 36891
 	),
