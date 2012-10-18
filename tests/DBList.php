@@ -21,7 +21,7 @@ class DBList {
 		'wiktionary',
 	);
 
-	public static function getall() {
+	public static function buildList() {
 		static $list = null;
 		if( $list ) return $list;
 
@@ -37,8 +37,11 @@ class DBList {
 		return $list;
 	}
 
+	public static function getAll () {
+		return file('all.dblist', FILE_IGNORE_NEW_LINES);
+	}
+
 	public static function isWikiProject( $dbname ) {
 		return in_array( $dbname, self::$wiki_projects );
 	}
 }
-
