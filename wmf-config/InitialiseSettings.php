@@ -1089,6 +1089,7 @@ $wgConf->settings = array(
 	'wikiquote'     => '//$lang.wikiquote.org',
 	'wikisource'    => '//$lang.wikisource.org',
 	'wikiversity'   => '//$lang.wikiversity.org',
+	'wikivoyage'    => '//$lang.wikivoyage.org',
 	'wiktionary'    => '//$lang.wiktionary.org',
 ),
 # @} end of wgServer
@@ -1170,6 +1171,7 @@ $wgConf->settings = array(
 	'wikiquote'     => 'http://$lang.wikiquote.org',
 	'wikisource'    => 'http://$lang.wikisource.org',
 	'wikiversity'   => 'http://$lang.wikiversity.org',
+	'wikivoyage'    => 'http://$lang.wikivoyage.org',
 	'wiktionary'    => 'http://$lang.wiktionary.org',
 ),
 # @} end of wgCanonicalServer
@@ -1182,6 +1184,7 @@ $wgConf->settings = array(
 	'wikiquote'     => 'Wikiquote',
 	'wiktionary'    => 'Wiktionary',
 	'wikiversity'   => 'Wikiversity',
+	'wikivoyage'    => 'Wikivoyage',
 	'wikinews'      => 'Wikinews',
 	'wikisource'    => 'Wikisource',
 
@@ -1632,6 +1635,7 @@ $wgConf->settings = array(
 	'wikiquote'     => 'Wikiquote',
 	'wikisource'    => 'Wikisource',
 	'wikiversity'   => 'Wikiversity',
+	'wikivoyage'    => 'Wikivoyage',
 	'wiktionary'    => 'Wiktionary',
 
 	// Wikis (alphabetical by DB name)
@@ -2132,10 +2136,11 @@ $wgConf->settings = array(
 	// defaults to aid when things are switched
 	'wikibooks' => array( 'Wikibooks' => NS_PROJECT ),
 	'wikinews' => array( 'Wikinews' => NS_PROJECT ),
+	'wikipedia' => array( 'Wikipedia' => NS_PROJECT ),
 	'wikiquote' => array( 'Wikiquote' => NS_PROJECT ),
 	'wikisource' => array( 'Wikisource' => NS_PROJECT ),
 	'wikiversity' => array( 'Wikiversity' => NS_PROJECT ),
-	'wikipedia' => array( 'Wikipedia' => NS_PROJECT ),
+	'wikivoyage' => array( 'Wikivoyage' => NS_PROJECT ),
 	'wiktionary' => array( 'Wiktionary' => NS_PROJECT ),
 
 	'abwiki' => array(
@@ -11438,6 +11443,94 @@ $wgConf->settings = array(
 	'testwiki' => true,
 ),
 
+'wmgUseReplaceText' => array(
+	'default' => false,
+	'enwikivoyage' => true,
+),
+
+'wmgUseBreadCrumbs' => array(
+	'default' => false,
+	'enwikivoyage' => true,
+),
+
+'wmgUseCalendar' => array(
+	'default' => false,
+	'enwikivoyage' => true,
+),
+
+'wmgUseMapSources' => array(
+	'default' => false,
+	'enwikivoyage' => true,
+),
+
+'wmgUseSlippyMap' => array(
+	'default' => false,
+	'enwikivoyage' => true,
+),
+
+'wmgUseCreditsSource' => array(
+	'default' => false,
+	'enwikivoyage' => true,
+),
+
+'wmgUseListings' => array(
+	'default' => false,
+	'enwikivoyage' => true,
+),
+
+'wmgUseTocTree' => array(
+	'default' => false,
+	'enwikivoyage' => true,
+),
+
+'wmgUseInsider' => array(
+	'default' => false,
+	'enwikivoyage' => true,
+),
+
+'wmgUseRelatedArticles' => array(
+	'default' => false,
+	'enwikivoyage' => true,
+),
+
+'wmgUseRelatedSites' => array(
+	'default' => false,
+	'enwikivoyage' => true,
+),
+
+'wmgRelatedSitesPrefixes' => array(
+	'default' => array(),
+	'enwikivoyage' => array(
+		'wikipedia',
+		'wikitravel',
+		'dmoz',
+		'citizendium',
+		'rezepte',
+	)
+),
+
+// @todo: settings for RelatedSites, might need to be revised ;)
+'wmgExtraLanguageNames' => array(
+	'default' => array(),
+	'enwikivoyage' => array(
+		'wikitravel' => 'Wikitravel',
+		'wikipedia' => 'Wikipedia',
+		'WikiPedia' => 'Wikipedia',
+		'citizendium' => 'Citizendium',
+		'dmoz' => 'Open Directory',
+		'Radreise-Wiki' => 'Radreise-Wiki',
+		'rezepte' => 'Rezepte-Wiki',
+		'commons' => 'Wikimedia Commons',
+		'wmc' => 'Wikimedia Commons',
+		'wtp' => 'Wikitravel Press',
+		'shared' => 'Shared',
+		'wts' => 'Shared',
+		'gen' => 'General',
+		'tech' => 'Technical',
+		'assoc' => 'Association',
+		'ldbwiki' => 'Location Database Wiki',
+	)
+),
 );
 
 
