@@ -42,7 +42,7 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 	 * FIXME we want to keep continuing showing errors
 	 */
 	function testDblistAllContainsAllDatabaseNames() {
-		$dbs = DBList::getall();
+		$dbs = DBList::buildList();
 
 		# Content of all.dblist
 		$all = $dbs['all'];
