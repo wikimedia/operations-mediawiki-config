@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "AAABFX///nI\u003d",
+        "filename": "wmf-config/db-wmflabs.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 64
+      },
+      "writtenOn": "2012-10-18T13:10:23Z",
+      "side": 1,
+      "message": "Hmm, there probably won\u0027t be a database with that name, there is a language code in front of this.",
+      "revId": "ef55456db6ab7f9fafa811a7ec9f0eab4f61aa13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABFX///ow\u003d",
         "filename": "wmf-config/db-wmflabs.php",
         "patchSetId": 4
