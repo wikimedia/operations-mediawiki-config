@@ -2,29 +2,73 @@
 /**
  * Generic providers for the 'WMF MediaWiki configuration' test suite.
  *
+ * It also provides variables allowing to access these list.
+ *
  * Inspired by MediaWiki tests/includes/Providers.php
  *
- * @license GPPLv2 or later
+ * @license GPLv2 or later
  * @author Antoine Musso
  * @copyright Copyright © 2012, Antoine Musso <hashar at free dot fr>
  * @file
  */
 
 class Provide {
-	function ProjectsDatabases() {
-		$cases=array();
-		foreach( DBList::getall() as $projectname => $databases ) {
-			if( !DBlist::isWikiProject( $projectname ) ) {
+
+	/**
+	 * The projects databases, excluding s1 or privates wikis
+	 * @var Array
+	 */
+	public static $projectsDatabases;
+
+	/**
+	 * The projects databases, including every wiki
+	 * @var Array
+	 */
+	public static $fullProjectsDatabases;
+
+	function __construct() {
+		self::$fullProjectsDatabases = DBList::getAll();
+	}
+
+	//
+	// Helper methods
+	//
+
+	/**
+	 * Gets projects databases
+	 *
+	 * @param Boolean $includeAll includes every wiki
+	 * @return Array the projects database array
+	 */
+	static private function GetProjectsDatabases( $includeAll = false ) {
+		$cases = array();
+		foreach ( DBList::buildList() as $projectname => $databases ) {
+			if ( !$includeAll && !DBlist::isWikiProject( $projectname ) ) {
 				# Skip files such as s1, private ...
 				continue;
 			}
-			foreach( $databases as $database ) {
+			foreach ( $databases as $database ) {
 				$cases[] = array(
 					$projectname, $database
 				);
 			}
 		}
 		return $cases;
+	}
+
+	//
+	// PHPUnit data providers
+	//
+
+	/**
+	 * Data provider to get databases list
+	 */
+	static function ProjectsDatabases() {
+		if( is_null(self::$projectsDatabases) ) {
+			self::$projectsDatabases =
+				self::GetProjectsDatabases();
+		}
+		return self::$projectsDatabases;
 	}
 
 }
