@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABFX///ow\u003d",
+        "filename": "wmf-config/db-wmflabs.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-18T11:01:10Z",
+      "side": 1,
+      "message": "Nice trick :-] It save us from having to configure the database loadbalancing system!",
+      "revId": "ef55456db6ab7f9fafa811a7ec9f0eab4f61aa13",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
