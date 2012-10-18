@@ -33,6 +33,24 @@
       "revId": "58f7885fc02be300733c071c4ff77891548b777d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX///nw\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2630,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-10-18T12:23:14Z",
+      "side": 1,
+      "message": "This is confirmed, repo name have been fixed.",
+      "parentUuid": "AAABEn//9U0\u003d",
+      "revId": "58f7885fc02be300733c071c4ff77891548b777d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
