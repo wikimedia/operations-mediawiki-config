@@ -1,0 +1,185 @@
+<?php
+/**
+ * Test InitialiseSettings.php syntax
+ *
+ * @author Sébastien Santoro aka Dereckson <dereckson@espace-win.org>
+ * @file
+ */
+
+@include("wmf-config/InitialiseSettings.php");
+
+/**
+ * Test cases for the InitialiseSettings.php file
+ */
+class InitialiseSettingsTests extends PHPUnit_Framework_TestCase {
+	//
+	// Configuration members and constructor
+	//
+
+	/**
+	 * List of the settings badly prefixed
+	 * (each setting should start with wg, wmf or wmg)
+	 *
+	 * @var Array
+	 */
+	private $settingsWithBadPrefix;
+
+	public function __construct () {
+		$this->settingsWithBadPrefix = array(
+			'groupOverrides',
+			'groupOverrides2',
+		);
+
+		$this->allowedConfigurationKeys = array(
+			//Generic keys
+			'default',
+			'special',
+			'flaggedrevs',
+
+			'wikibooks',
+			'wikimedia',
+			'wikinews',
+			'wikipedia',
+			'wikiquote',
+			'wikisource',
+//			'wikispecies',
+			'wikiversity',
+			'wiktionary',
+
+			//Strange generic keys
+			'sourcewiki',
+			'sourceswiki',
+			'quotewiki',
+			'wiki',
+
+			//Private projects not in all.dblist
+			'langcomwiki',
+			'strategyappswiki',
+			'comcomwiki',
+
+			//Deleted wikis not in all.dblist
+			'ptwikimedia',
+
+			//Closed wikis not in all.dblist
+			'ru_sibwiki',
+			'wikimaniawiki',
+			'iswiktionary',
+			'nomcom',
+
+			//Ghost projects not in lists
+			'zh-min-nanwikisource',
+			'yiwikinews',
+			'strategyappwiki',
+
+			//Future projects now in Incubator
+			'liwikinews',
+
+			//?
+			'private',
+			'fishbowl',
+			'closed',
+		);
+	}
+
+	/**
+	 * Tests if namespaces doesn't contain underscores.
+	 */
+	public function testNamespacesUseUnderscores () {
+		$configSettings = array('wgMetaNamespace', 'wgMetaNamespaceTalk');
+		foreach ($configSettings as $configSetting) {
+			$namespaces = $this::getSetting($configSetting);
+			foreach ($namespaces as $key => $value) {
+				$this->assertFalse(
+					strpos($value, ' '),
+					"[$configSetting] Namespace names must use underscores, not spaces at '$key' => '$value')"
+				);
+			}
+		}
+	}
+
+	/**
+	 * Tests settings start with 'wg' and 'wmg' followed by an uppercase letter
+	 */
+	public function testSettingsPrefix () {
+		global $wgConf;
+		foreach ($wgConf->settings as $setting => $value) {
+			//Skips test for allowed bogus names
+			if (in_array($setting, $this->settingsWithBadPrefix)) {
+				continue;
+			}
+			//Prefix
+			$this->assertTrue(
+				substr($setting, 0, 2) == 'wg'  ||
+				substr($setting, 0, 3) == 'wmg' ||
+				substr($setting, 0, 3) == 'wmf',
+				"[$setting] Setting name should start with wg, wmg or wmf"
+			);
+			//Camelcase
+			$this->assertTrue(
+				preg_match('/^[a-z][a-zA-Z0-9]*$/', $setting) == 1,
+				"[$setting] Setting name should use camelCase"
+			);
+		}
+	}
+
+	/**
+	 * Tests projects codes are valid
+	 */
+	public function testProjectsCodes () {
+		global $wgConf;
+		foreach ($wgConf->settings as $setting => $value) {
+			foreach ($value as $project => $config) {
+				$this->assertTrue(
+					self::isValidConfigurationKey($project),
+					"[$setting] $project isn't a valid projet nor a generic configuration key."
+				);
+			}
+		}
+	}
+
+	/**
+	 * Gets a $wgCong setting
+	 *
+	 * @param string $setting the setting to get
+	 * @return mixed the setting value
+	 */
+	private function getSetting ($setting) {
+		global $wgConf;
+
+		if (array_key_exists($setting, $wgConf->settings)) {
+			return $wgConf->settings[$setting];
+		}
+
+		throw new Exception("Setting doesn't exist: $setting");
+	}
+
+	//
+	// Helper methods
+	//
+
+	/**
+	 * Determines if the specified project exists
+	 *
+	 * @param string $project The project to check
+	 * @return Boolean true if the specified project exists; otherwise, false.
+	 */
+	private function isValidProject ($project) {
+		return in_array($project, Provide::$fullProjectsDatabases);
+	}
+
+	/**
+	 * Determines if the specified configuration key is a generic value or a valid project
+	 *
+	 * @param string $key The configuration key to check
+	 * @return Boolean true if 'default', 'wikipedia', etc. or a valid project; otherwise, false.
+	 */
+	private function isValidConfigurationKey ($key) {
+		if ($key[0] == '+') $key = substr($key, 1);
+		foreach ($this->allowedConfigurationKeys as $genericKey) {
+			if ($key == $genericKey) {
+				return true;
+			}
+		}
+		return self::isValidProject($key);
+	}
+}
