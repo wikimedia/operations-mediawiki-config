@@ -11439,7 +11439,7 @@ $wgConf->settings = array(
 'wmgEnablePostEdit' => array(
 	'default' => false,
 	// 'dewiki' => true,
-	// 'enwiki' => true,
+	'enwiki' => true,
 	'testwiki' => true,
 ),
 
