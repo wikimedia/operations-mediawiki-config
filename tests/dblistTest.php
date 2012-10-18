@@ -42,12 +42,12 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 	 * FIXME we want to keep continuing showing errors
 	 */
 	function testDblistAllContainsAllDatabaseNames() {
-		$dbs = DBList::getall();
+		$dbs = DBList::buildList();
 
 		# Content of all.dblist
 		$all = $dbs['all'];
 
-		unset( $dbs['all']);
+		unset( $dbs['all'] );
 
 		# dblist files we are just ignoring/skipping
 		# FIXME ideally we want to clean those files from any old dbnames
@@ -61,8 +61,8 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 			'todo',
 		);
 
-		foreach( $dbs as $dbfile => $dbnames ) {
-			if( in_array( $dbfile, $skip ) ) {
+		foreach ( $dbs as $dbfile => $dbnames ) {
+			if ( in_array( $dbfile, $skip ) ) {
 				continue;
 			}
 
