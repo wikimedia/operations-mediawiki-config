@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABFX///lw\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2050,
+      "author": {
+        "id": 90
+      },
+      "writtenOn": "2012-10-18T13:52:36Z",
+      "side": 1,
+      "message": "Incorrect configuration. Spaces should be written as underscores. The above line should be fixed as well.\n\nbtw. I don\u0027t think this line is needed. It\u0027s just using the standard suffix and can be derived from $wgMetaNamespace automatically.",
+      "revId": "1502021ae586eefa35a32dabc400ec3f921908d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
