@@ -2608,6 +2608,10 @@ if ( $wmgUseMicroDesign ) {
 	$wgVectorFeatures['footercleanup']['global'] = true;
 }
 
+if ( $wmgEnablePostEdit ) {
+	require_once( "$IP/extensions/PostEdit/PostEdit.php" );
+}
+
 if( $cluster == 'wmflabs' ) {
 	require( "$wmfConfigDir/CommonSettings-wmflabs.php" );
 }
