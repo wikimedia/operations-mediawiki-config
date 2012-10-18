@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABFX///O0\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 11516,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-10-18T19:56:26Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this wants point locally now?\n\nThis were to points to wikitravel, and so now should logically points to the wikitravel fork, ie the wiki itself.",
+      "revId": "1b6b56ea094436afaeba0668a48d55923547f699",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
