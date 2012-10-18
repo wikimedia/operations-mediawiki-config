@@ -120,7 +120,6 @@ $wgConf->settings = array(
 	'grantswiki' => 'en',
 	'ilwikimedia' => 'he',
 	'incubatorwiki' => 'en', # mixed
-	'langcomwiki' => 'en',
 	'mkwikimedia' => 'mk',
 	'mxwikimedia' => 'es',
 	'noboard_chapterswikimedia' => 'no',
@@ -139,7 +138,6 @@ $wgConf->settings = array(
 	'simplewiki' => 'en',
 	'stewardwiki' => 'en',
 	'strategywiki' => 'en',
-	'strategyappswiki' => 'en',
 	'tenwiki' => 'en',
 	'uawikimedia' => 'uk',
 	'ukwikimedia'   => 'en-gb',
@@ -434,7 +432,6 @@ $wgConf->settings = array(
 	'chwiki'		=> '//upload.wikimedia.org/wikipedia/commons/b/bc/Wikipedia-logo-v2-ch.png', // bug 40285
 	'ckbwiki'		=> '$stdlogo',
 	'collabwiki'	=> '//upload.wikimedia.org/wikipedia/meta/5/5d/Collab.png',
-	'comcomwiki'	=> '//upload.wikimedia.org/wikipedia/meta/a/a2/Wikimediainernal-logo135px.png',
 	'commonswiki'       => '//upload.wikimedia.org/wikipedia/commons/7/79/Wiki-commons.png',
 	'cowiki'	    => '//upload.wikimedia.org/wikipedia/commons/6/6f/Wikipedia-logo-v2-co.png', // bug 40285
 	'cowikimedia'	=> '//upload.wikimedia.org/wikipedia/commons/6/6b/Wikimedia-Colombia-logo.png',
@@ -603,7 +600,6 @@ $wgConf->settings = array(
 	'kwwiki'	    => '$stdlogo',
 	'kywiki'	    => '$stdlogo',
 	'ladwiki'	   => '$stdlogo',
-	'langcomwiki'	=> '//upload.wikimedia.org/wikipedia/meta/a/a2/Wikimediainernal-logo135px.png',
 	'lawiki'	    => '$stdlogo',
 	'lawikisource'      => '$stdlogo',
 	'lawiktionary'      => '$stdlogo',
@@ -775,7 +771,6 @@ $wgConf->settings = array(
 	'stewardwiki'	=> '//upload.wikimedia.org/wikipedia/commons/9/96/Steward_wiki_logo_3.png', # bug 37700
 	'stqwiki'		=> '//upload.wikimedia.org/wikipedia/commons/8/8f/Wikipedia-logo-v2-stq.png', // bug 40285
 	'strategywiki'      => '$stdlogo',
-	'strategyappswiki'  => '//strategyapps.wikimedia.org/w/img_auth.php/c/c9/Logo.png',
 	'suwiki'	    => '//upload.wikimedia.org/wikipedia/commons/2/21/Wikipedia-logo-v2-su.png', // bug 40285
 	'svwiki' 		=> '//upload.wikimedia.org/wikipedia/commons/d/d9/Wikipedia-logo-v2-sv.png',
 	'svwiktionary'      => '//upload.wikimedia.org/wiktionary/sv/b/bc/Wiki.png',
@@ -1028,7 +1023,6 @@ $wgConf->settings = array(
 	'chapcomwiki' => '//chapcom.wikimedia.org',
 	'checkuserwiki' => '//checkuser.wikimedia.org',
 	'collabwiki' => '//collab.wikimedia.org',
-	'comcomwiki' => '//comcom.wikimedia.org',
 	'commonswiki'   => '//commons.wikimedia.org',
 	'default'       => '//$lang.wikipedia.org',
 	'donatewiki'       => '//donate.wikimedia.org',
@@ -1042,7 +1036,6 @@ $wgConf->settings = array(
 	'grantswiki'    => '//grants.wikimedia.org',
 	'incubatorwiki' => '//incubator.wikimedia.org',
 	'internalwiki'     => '//internal.wikimedia.org',
-	'langcomwiki' => '//langcom.wikimedia.org',
 	'liquidthreads_labswikimedia' => '//liquidthreads.labs.wikimedia.org',
 	'mediawikiwiki' => '//www.mediawiki.org',
 	'metawiki'      => '//meta.wikimedia.org',
@@ -1063,7 +1056,6 @@ $wgConf->settings = array(
 	'spcomwiki' => '//spcom.wikimedia.org',
 	'specieswiki' => '//species.wikimedia.org',
 	'stewardwiki'       => '//steward.wikimedia.org',
-	'strategyappswiki'  => '//strategyapps.wikimedia.org',
 	'strategywiki'  => '//strategy.wikimedia.org',
 	'tenwiki' => '//ten.wikipedia.org',
 	'testwiki' => '//test.wikipedia.org',
@@ -1110,7 +1102,6 @@ $wgConf->settings = array(
 	'chapcomwiki' => 'http://chapcom.wikimedia.org',
 	'checkuserwiki' => 'http://checkuser.wikimedia.org',
 	'collabwiki' => 'http://collab.wikimedia.org',
-	'comcomwiki' => 'http://comcom.wikimedia.org',
 	'commonswiki'   => 'http://commons.wikimedia.org',
 	'default'       => 'http://$lang.wikipedia.org',
 	'de_labswikimedia' => 'http://de.labs.wikimedia.org',
@@ -1124,7 +1115,6 @@ $wgConf->settings = array(
 	'grantswiki'    => 'http://grants.wikimedia.org',
 	'incubatorwiki' => 'http://incubator.wikimedia.org',
 	'internalwiki'     => 'http://internal.wikimedia.org',
-	'langcomwiki' => 'http://langcom.wikimedia.org',
 	'liquidthreads_labswikimedia' => 'http://liquidthreads.labs.wikimedia.org',
 	'mediawikiwiki' => 'http://www.mediawiki.org',
 	'metawiki'      => 'http://meta.wikimedia.org',
@@ -1145,7 +1135,6 @@ $wgConf->settings = array(
 	'spcomwiki' => 'http://spcom.wikimedia.org',
 	'specieswiki' => 'http://species.wikimedia.org',
 	'stewardwiki'       => 'http://steward.wikimedia.org',
-	'strategyappswiki'  => 'http://strategyapps.wikimedia.org',
 	'strategywiki'  => 'http://strategy.wikimedia.org',
 	'tenwiki' => 'http://ten.wikipedia.org',
 	'testwiki' => 'http://test.wikipedia.org',
@@ -1258,7 +1247,6 @@ $wgConf->settings = array(
 	'checkuserwiki'     => 'CheckUser Wiki',
 	'chywiki'       => 'Tsétsêhéstâhese Wikipedia',
 	'collabwiki'    => 'Collab',
-	'comcomwiki'    => 'ComCom',
 	'commonswiki'   => 'Wikimedia Commons',
 	'cowikimedia'   => 'Wikimedia Colombia',
 	'crhwiki'	=> 'Vikipediya',
@@ -1408,7 +1396,6 @@ $wgConf->settings = array(
 	'kowiktionary'  => '위키낱말사전',
 	'krcwiki'	   => 'Википедия',
 	'kuwiki'	=> 'Wîkîpediya',
-	'langcomwiki'   => 'LangCom',
 	'lawiki'	=> 'Vicipaedia',
 	'lawikibooks'   => 'Vicilibri',
 	'lawikiquote'   => 'Vicicitatio',
@@ -1522,7 +1509,6 @@ $wgConf->settings = array(
 	'srwikinews'    => 'Викивести',
 	'srwikisource'  => 'Викизворник',
 	'strategywiki'  => 'Strategic Planning',
-	'strategyappswiki'  => 'Strategic Applications Planning',
 	'stewardwiki'       => 'Steward Wiki',
 	'tawiki'		=> 'விக்கிப்பீடியா',
 	'tawikibooks' => 'விக்கிநூல்கள்',
@@ -1706,7 +1692,6 @@ $wgConf->settings = array(
 	'checkuserwiki' => 'Project', // Bug 28781
 	'ckbwiki'       => 'ویکیپیدیا',
 	'collabwiki'    => 'Project',
-	'comcomwiki'    => 'ComCom',
 	'commonswiki'   => 'Commons',
 	'cowikimedia'   => 'Wikimedia',
 	'crhwiki'		=> 'Vikipediya',
@@ -1856,7 +1841,6 @@ $wgConf->settings = array(
 	'kuwiki'	=> 'Wîkîpediya',
 	'kuwiktionary'  => 'Wîkîferheng',
 	'kvwiki'	=> 'Википедия',
-	'langcomwiki'   => 'LangCom',
 	'lawiki'	=> 'Vicipaedia',
 	'lawikibooks'   => 'Vicilibri',
 	'lawikiquote'   => 'Vicicitatio',
@@ -1976,7 +1960,6 @@ $wgConf->settings = array(
 	'srwiktionary'  => "Викиречник",
 	'stewardwiki'   => 'Project',
 	'strategywiki'  => 'Strategic_Planning',
-	'strategyappswiki'  => 'Strategic_Applications_Planning',
 	'szlwiki'       => 'Wikipedyjo',
 	'tawiki'	=> 'விக்கிப்பீடியா',
 	'tawikibooks'	=> 'விக்கிநூல்கள்',
@@ -3345,7 +3328,6 @@ $wgConf->settings = array(
 	'+sewikimedia' => array(  0 => 1, ),
 	'stewardwiki'	  => array( -1 => 0, 0 => 1, 1 => 1, 2 => 1, 3 => 1, 4 => 1, 5 => 1, 6 => 1, 7 => 1, 8 => 1, 9 => 1, 10 => 1, 11 => 1, 12 => 1, 13 => 1, 14 => 1, 15 => 1, 100 => 1, 101 => 1, 102 => 1, 103 => 1, 104 => 1, 105 => 1, 106 => 1, 107 => 1, 108 => 1, 109 => 1, 110 => 1, 111 => 1 ),
 	'+strategywiki'     => array( 0 => 1 ),
-	'+strategyappswiki'     => array( 0 => 1 ),
 	'ukwikimedia' => array( -1 => 0, 0 => 1, 1 => 1, 2 => 1, 3 => 1, 4 => 1, 5 => 1, 6 => 0, 7 => 1, 8 => 0, 9 => 1, 10 => 0, 11 => 1 ),
 	'+usabilitywiki'   => array( 0 => 1, 4 => 1 ),
 	'wikimaniateamwiki' => array( -1 => 0, 0 => 1, 1 => 1, 2 => 1, 3 => 1, 4 => 1, 5 => 1, 6 => 0, 7 => 1, 8 => 0, 9 => 1, 10 => 0, 11 => 1 ),
@@ -4491,12 +4473,6 @@ $wgConf->settings = array(
 	'strategywiki' => array(
 		106 => "Proposal",
 		107 => "Proposal_talk",
-	),
-	'strategyappwiki' => array(  // Should be strategyappswiki, will fix once the namespace dupes doesnt delete talk pages -rob 2009-09-30
-		106 => "Proposal",
-		107 => "Proposal_talk",
-		110 => 'Participants',
-		110 => 'Participants_talk',
 	),
 	'usabilitywiki' => array(
 		100 => 'Multimedia',
@@ -6450,7 +6426,6 @@ $wgConf->settings = array(
 	'sourceswiki' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 106 => 1 ),
 	'svwikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 106 => 1, 108 => 1 ),
 	'strategywiki' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 106 => 1, 107 => 1 ), # 20514
-	'strategyappswiki' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 110 => 1 ),
 	'tewikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 102 => 1, 106 => 1 ),
 	'tlwikibooks' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 100 => 1, 101 => 0 ),
 	'trwikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 100 => 1 ),
@@ -9477,7 +9452,6 @@ $wgConf->settings = array(
 	'sqwikinews' => true,
 	'stewardwiki' => true,
 	'strategywiki' => true,
-	'strategyappswiki' => true,
 	'svwikiversity' => true,
 	'szlwiki' => true,
 	'srnwiki' => true,
@@ -9945,7 +9919,6 @@ $wgConf->settings = array(
 	'huwiki'			=> true,
 	'readerfeedback_labswikimedia'	=> true,
 	'ruwikinews'			=> true,
-	'strategyappswiki'		=> true,
 	'strategywiki'			=> true,
 //	'testwiki'			=> true,
 	'trwikinews'			=> true,
@@ -9970,13 +9943,6 @@ $wgConf->settings = array(
 		'feasibility'  => 1,
 		'desirability' => 1,
 	),
-	'strategyappswiki' => array(
-		'priority'     => 1,
-		'desirability' => 1,
-		'statement'    => 1,
-		'skills'       => 1,
-		'group'	=> 1,
-	),
 	'readerfeedback_labswikimedia' => array(
 		'usefulness'   => 3,
 		'presentation' => 3,
@@ -9985,7 +9951,6 @@ $wgConf->settings = array(
 ),
 'wmgFeedbackSizeThreshhold' => array(
 	'default'	  => 15,
-	'strategyappswiki' => 1,
 ),
 # @} end of FEEDBACK
 
