@@ -1,0 +1,310 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABFX//+9A\u003d",
+        "filename": "tests/DBList.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "I guess we want to refactor this class a bit.   The static $list iin buildList() could be made available at the class level and initialized on construction.\n\ngetAll() would then all about returning self::$list[\u0027all\u0027].\n\nCould even get a generic accessor like:\n\n static function get( $projectname ) {\n  return self::$list[$projectname];\n }",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//+84\u003d",
+        "filename": "tests/Provide.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "What about using __construct() ?",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//+8s\u003d",
+        "filename": "tests/Provide.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "When includeAll is true, you will end up having projects named \u0027s1\u0027, \u0027s2\u0027 etc which are wiki projects.\n\nI think that should be another method.",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//+88\u003d",
+        "filename": "tests/Provide.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "Consider moving the projectsDatabases and fullProjectsDatabases properties to the top of the class.",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//+80\u003d",
+        "filename": "tests/wmf-config/Defines.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "Ideally the tests suite should use the Defines.php coming from the wmf branch and we should run the full test suite against each branch.\nThat is a lot more work though, so I guess this hardcoded Defines.php is an acceptable workaround for now :-]",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//+8o\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "@ is definitely not recommended.  That will also load the content of InitialiseSettings.php in global context which can cause all kind of issues.\n\nShould probably wrapped in a providing class that will load the file in its local context. Then an accessor could be used to get the settings.  Maybe a testcase class that will be extended to build our tests.\n\nWe will probably have to split InitialiseSettingsTest.php in several smaller class.",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//+8g\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "Simply initialize the properties when they are declared.",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//+8c\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "Configuration -\u003e Project  aka something like:\n\n allowedProjectKeys",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//+8Y\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "That list of projects families should comes from DBList::$wiki_projects to avoid code duplication.  You could merge it with $this-\u003eallowedConfigurationKeys on construction.",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//+8U\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "Same this should be grabbed using DBList and find out projects listed in closed.dblist.",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//+8Q\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "We probably want, in another change, to either:\n- add them in closed.dblist\n- cleanup the configuration",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//+8M\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "We probably want an incubator.dblist :-)",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//+8I\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "Negation is a bit awkard. Consider using a direct form:\n\n Tests if meta namespaces uses underscores instead of spaces",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//+8E\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "assertFalse() is usually evil. Whenever that fails, PHPUnit will end up showing a message like:\n\n fail to assert that true is false\n ... optional message ...\n\nInstead of assertFalse() uses assertNotContains() :\n\n $this-\u003eassertNotContains( \u0027 \u0027, $value, \"message\" );\n\nOn error it will gives:\n\n Failed asserting that \u003cstring:$value\u003e does not contains \u0027 \u0027",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//+8A\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "uses assertNotContains() ;-)",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//+78\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 145,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "The three tests above that checks namespaces should probably grouped together. They seems to be copy pasted and just change which setting is gathered.\n\nYou could uses a dataProvider too. That will build an array of tests cases and pass the case to a test method.  Anyway, you should extract the foreach / assert in a new internal method such as assertNamespaceIsValid()",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//+7s\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "I am pretty sure that could be made a regex that will also check if it is followed by an upper case character class\n\nSomething like:\n\n /w(g|mg|mf)[:upper:]/\n\nUsing assertRegExp (see below )",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//+7w\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-19T12:31:39Z",
+      "side": 1,
+      "message": "You should use assertRegExp() \nhttp://www.phpunit.de/manual/3.4/en/api.html#api.assert.assertRegExp\n\nThe regexp itself is a bit awkward :-] will match something like \u0027wglowercase\u0027 or \u0027wGfoo\u0027.",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
