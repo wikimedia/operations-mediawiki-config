@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABFX///FU\u003d",
+        "filename": "wmf-config/wgConf.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 204
+      },
+      "writtenOn": "2012-10-19T00:14:38Z",
+      "side": 1,
+      "message": "or all-wmflabs.dblist?",
+      "revId": "a18ea004f170884710cb646fccc2ca29682b5ba6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
