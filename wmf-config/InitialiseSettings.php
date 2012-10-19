@@ -11457,7 +11457,7 @@ $wgConf->settings = array(
 
 'wmgUseSlippyMap' => array(
 	'default' => false,
-	'enwikivoyage' => true,
+	'enwikivoyage' => false,
 ),
 
 'wmgUseCreditsSource' => array(
