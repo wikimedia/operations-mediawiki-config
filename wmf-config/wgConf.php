@@ -16,7 +16,8 @@ $wgConf->suffixes = array(
 	'wikinews',
 	'wikisource',
 	'wikiversity',
-	'wikimedia'
+	'wikimedia',
+	'wikivoyage'
 );
 
 switch( $cluster ) {
