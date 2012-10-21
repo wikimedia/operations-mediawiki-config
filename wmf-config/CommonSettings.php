@@ -433,7 +433,7 @@ $wgTiffUseTiffinfo = true;
 if ( $wgDBname == 'testwiki' ) {
 	$wgMaxImageArea = 2.5e7; // 25MP
 } else {
-	$wgMaxImageArea = 1.7e7; // 17MP
+	$wgMaxImageArea = 2.0e7; // 20MP
 }
 
 if ( $wgDBname == 'foundationwiki' ) { # per cary on 2010-05-11
