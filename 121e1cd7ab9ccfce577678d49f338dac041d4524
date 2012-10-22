@@ -16,6 +16,24 @@
       "revId": "121e1cd7ab9ccfce577678d49f338dac041d4524",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//8hA\u003d",
+        "filename": "wmf-config/db-wmflabs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-22T21:01:49Z",
+      "side": 1,
+      "message": "Bah disregard this comment. That apply to the whole wmflabs cluster.",
+      "parentUuid": "AAABFX//8hI\u003d",
+      "revId": "121e1cd7ab9ccfce577678d49f338dac041d4524",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
