@@ -34,6 +34,24 @@
       "revId": "0ab755c02b185f81be52eb0f11fcdc756523f661",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//8hs\u003d",
+        "filename": "wmf-config/db-wmflabs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-22T20:53:02Z",
+      "side": 0,
+      "message": "Just keep the line as is ? We could always investigate that case later on :-)",
+      "parentUuid": "AAABFX//8i8\u003d",
+      "revId": "0ab755c02b185f81be52eb0f11fcdc756523f661",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
