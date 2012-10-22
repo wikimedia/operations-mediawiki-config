@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABFX//85Y\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2043,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2012-10-22T14:20:43Z",
+      "side": 1,
+      "message": "Why did you convert tabs to spaces here and elsewhere?",
+      "revId": "7d2e17779cd4cb281635ad71ddf3967a5cd9eaaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
