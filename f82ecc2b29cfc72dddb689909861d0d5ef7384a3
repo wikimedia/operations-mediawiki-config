@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAABFX//8js\u003d",
+        "filename": "wmf-config/db-wmflabs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 204
+      },
+      "writtenOn": "2012-10-22T20:18:05Z",
+      "side": 1,
+      "message": "Yes, we have a few more.. Good idea to add them now.",
+      "parentUuid": "AAABFX//8mA\u003d",
+      "revId": "f82ecc2b29cfc72dddb689909861d0d5ef7384a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABFX//8mU\u003d",
         "filename": "wmf-config/db-wmflabs.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2012-10-22T19:14:36Z",
       "side": 1,
       "message": "Has db2 been setup using the same users / passwords as db1 ?",
+      "revId": "f82ecc2b29cfc72dddb689909861d0d5ef7384a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//8jo\u003d",
+        "filename": "wmf-config/db-wmflabs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 204
+      },
+      "writtenOn": "2012-10-22T20:18:05Z",
+      "side": 1,
+      "message": "Yes, I did!",
+      "parentUuid": "AAABFX//8mU\u003d",
       "revId": "f82ecc2b29cfc72dddb689909861d0d5ef7384a3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "AAABFX//8jk\u003d",
+        "filename": "wmf-config/db-wmflabs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 204
+      },
+      "writtenOn": "2012-10-22T20:18:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABFX//8l8\u003d",
+      "revId": "f82ecc2b29cfc72dddb689909861d0d5ef7384a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABFX//8mg\u003d",
         "filename": "wmf-config/db-wmflabs.php",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2012-10-22T19:14:36Z",
       "side": 1,
       "message": "As a good practice, you should add a trailing comma to the last array item. That adds two benefits:\n- save you from a parse error next time you add an item and forget to update the line\n- adding an entry will show up as a one line diff in the patch :)",
+      "revId": "f82ecc2b29cfc72dddb689909861d0d5ef7384a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//8jc\u003d",
+        "filename": "wmf-config/db-wmflabs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 204
+      },
+      "writtenOn": "2012-10-22T20:18:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABFX//8mg\u003d",
       "revId": "f82ecc2b29cfc72dddb689909861d0d5ef7384a3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false

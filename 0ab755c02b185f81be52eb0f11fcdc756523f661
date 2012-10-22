@@ -16,6 +16,24 @@
       "revId": "0ab755c02b185f81be52eb0f11fcdc756523f661",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABFX//8i8\u003d",
+        "filename": "wmf-config/db-wmflabs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 204
+      },
+      "writtenOn": "2012-10-22T20:18:05Z",
+      "side": 0,
+      "message": "I wasn\u0027t sure where to add table options in the LB config. Is there a charset option in the serverTemplate?",
+      "parentUuid": "AAABFX//8l4\u003d",
+      "revId": "0ab755c02b185f81be52eb0f11fcdc756523f661",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
