@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABFX//8hI\u003d",
+        "filename": "wmf-config/db-wmflabs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-22T21:00:41Z",
+      "side": 1,
+      "message": "still need to be applied to non enwikivoyage databases :-]",
+      "revId": "121e1cd7ab9ccfce577678d49f338dac041d4524",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
