@@ -3,16 +3,40 @@
 #          Do not put private data here.
 
 if( $cluster == 'wmflabs' ) { # safe guard
-# Database configuration files for the beta labs
+	# Database configuration files for the beta labs
 
-// Pretend we have a complex database setup...
-$wgDBtype           = "mysql";
-$wgDBserver         = "deployment-sql";
-$wgDBprefix         = "";
-$wgDBTableOptions   = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
+	$wgLBFactoryConf = array(
 
-if ( $wgDBname === 'enwikivoyage' ) {
-	$wgDBserver         = "deployment-sql02";
-}
+		#Requires 'sectionsByDB', 'sectionLoads', 'serverTemplate'
+
+		'class' => 'LBFactory_Multi',
+
+		'sectionsByDB' => array(
+			'enwikivoyage' => 's2',
+		),
+
+		'sectionLoads' => array(
+			'DEFAULT' => array(
+				'db1'     => 0,
+			),
+			's2' => array(
+				'db2'	  => 0,
+			)
+		),
+
+		'serverTemplate' => array(
+			'dbname'	  => $wgDBname,
+			'user'		  => $wgDBuser,
+			'password'	  => $wgDBpassword,
+			'type'		  => 'mysql',
+			'flags'		  => DBO_DEFAULT,
+			'max lag'	  => 30,
+		),
+
+		'hostsByName' => array(
+			'db1'  => '10.4.0.53',
+			'db2'  => '10.4.0.248'
+		),
+	);
 
 } # end safe guard
