@@ -21,7 +21,7 @@ $wgLBFactoryConf['sectionLoads'] = array(
 		'db1050'    => 1, # snapshot 2.8TB sas
 		'db1043'    => 1, # 1.4TB sas
 		'db1047'      => 1, # analytics
-		'db42'      => 1, # analytics
+		'db67'      => 1, # analytics
 	),
 	's2' => array(
         ''  => 0,

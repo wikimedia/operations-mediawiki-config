@@ -87,9 +87,9 @@ $wgLBFactoryConf = array(
 	),
 	's4' => array(
 		'db31'	 => 0,
-		'db22'	 => 400,
 		'db33'	 => 100, # Snapshot host
 		'db51'	 => 500,
+		'db65'	 => 500,
 	),
 	's5' => array(
 		'db45'	 => 0,
@@ -208,6 +208,7 @@ $wgLBFactoryConf = array(
 	'db60'	   => '10.0.6.70', # do not remove or comment out
 	'db63'	   => '10.0.6.73', # do not remove or comment out
 	'db64'	   => '10.0.6.74', # do not remove or comment out
+	'db65'	   => '10.0.6.75', # do not remove or comment out
 	'db1001'	=> '10.64.0.5', # do not remove or comment out
 	'db1002'	=> '10.64.0.6', # do not remove or comment out
 	'db1003'	=> '10.64.0.7', # do not remove or comment out
