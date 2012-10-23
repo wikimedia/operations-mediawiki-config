@@ -2501,6 +2501,9 @@ $wgConf->settings = array(
 			'Wikipedia' => NS_PROJECT,
 			'Wikipedia_talk' => NS_PROJECT_TALK,
 	),
+	'glwiki' => array(
+		'Portal_talk' => 101, // Bug 41213 (old namespace name)
+	),
 	'guwiktionary' => array(
 		'વિક્શનરી' => NS_PROJECT // Bug 40776 (old namespace name)
 	),
@@ -4704,7 +4707,7 @@ $wgConf->settings = array(
 	),
 	'glwiki' => array(
 		100 => 'Portal',
-		101 => 'Portal_talk',
+		101 => 'Conversa_portal', // Bug 41213
 		102 => 'Libro',
 		103 => 'Conversa_libro',
 	),
