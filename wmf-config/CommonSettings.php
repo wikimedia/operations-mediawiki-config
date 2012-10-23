@@ -2064,8 +2064,8 @@ if ( $wmgEnableLandingCheck ) {
 	require_once(  "$IP/extensions/LandingCheck/LandingCheck.php" );
 
 	$wgPriorityCountries = array( 'FR', 'DE', 'CH', 'SY', 'IR', 'CU' );
-	// $wgLandingCheckPriorityURLBase = "//wikimediafoundation.org/wiki/Special:LandingCheck";
-	// $wgLandingCheckNormalURLBase = "//donate.wikimedia.org/wiki/Special:LandingCheck";
+	$wgLandingCheckPriorityURLBase = "//wikimediafoundation.org/wiki/Special:LandingCheck";
+	$wgLandingCheckNormalURLBase = "//donate.wikimedia.org/wiki/Special:LandingCheck";
 }
 
 if ( $wmgEnableFundraiserLandingPage ) {
