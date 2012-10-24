@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAABFX//678\u003d",
+        "filename": "all.dblist",
+        "patchSetId": 8
+      },
+      "lineNbr": 653,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2012-10-24T16:12:11Z",
+      "side": 1,
+      "message": "Swedish, but we\u0027ve just taken the same as it is/was on Wikivoyage\n\nWe should change it for deployment, so it\u0027s not another wiki to rename in the future",
+      "parentUuid": "AAABFX//+/Q\u003d",
+      "revId": "1b6b56ea094436afaeba0668a48d55923547f699",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABFX///O0\u003d",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 8
