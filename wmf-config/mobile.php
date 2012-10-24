@@ -130,19 +130,6 @@ if ( $wmgZeroDisableImages ) {
 	}
 }
 
-// Log WLM app API errors
-// Standard exception log does not log UsageException and does not filter by user-agent
-if ( $wgDBname === 'commonswiki' || $wgDBname === 'testwiki' ) {
-	$wgDebugLogGroups['wlm-api'] = "udp://$wmfUdp2logDest/wlm-api";
-	$wgHooks['ApiMain::onException'][] = function( $apiMain, $e ) {
-		$userAgent = $apiMain->getRequest()->getHeader( 'User-Agent' );
-		if ( $userAgent && strpos( $userAgent, 'WLMMobile' ) !== false ) {
-			wfDebugLog( 'wlm-api', $e->getLogMessage() . "\n\tUser-agent: $userAgent" );
-		}
-		return true;
-	};
-}
-
 // Enable loading of desktop-specific resources from MobileFrontend
 if ( $wmgMFEnableDesktopResources ) {
 	$wgMFEnableDesktopResources = true;
