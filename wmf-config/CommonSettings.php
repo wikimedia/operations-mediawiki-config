@@ -763,6 +763,7 @@ $wgDebugLogGroups['SwiftBackend'] = "udp://$wmfUdp2logDest/swift-backend"; // -a
 $wgDebugLogGroups['updateTranstagOnNullRevisions'] = "udp://$wmfUdp2logDest/updateTranstagOnNullRevisions";
 $wgDebugLogGroups['json-hack'] = "udp://$wmfUdp2logDest/json-hack"; // Max 2012-06-27
 $wgDebugLogGroups['redis'] = "udp://$wmfUdp2logDest/redis"; // -asher 2012/10/12
+$wgDebugLogGroups['memcached-serious'] = "udp://$wmfUdp2logDest/memcached-serious"; // -aaron 2012/10/24
 
 $wgDebugLogGroups['404'] = "udp://$wmfUdp2logDest/four-oh-four";
 $wgDebugLogGroups['resourceloader'] = "udp://$wmfUdp2logDest/resourceloader";

@@ -10,12 +10,42 @@
  * Hashar, based on dammit comments. Nov 28 2005.
  *
  */
+$wgMainCacheType = CACHE_MEMCACHED;
+if ( $wgDBname === 'testwiki' ) { // temporary hack
+	$wgMainCacheType = 'memcached-pecl';
+}
+
 $wgMemCachedPersistent = false;
 $wgUseMemCached = true;
-$wgMainCacheType = CACHE_MEMCACHED;
 $wgMemCachedTimeout = 250000; # default is 100000
-
 $wgMemCachedInstanceSize = 2000;
+
+# Newer "mc*" servers (only use the pecl client with these).
+# This does not use the "slot" system like the old setup, but
+# rather a consistent hash based on key and server addresses,
+# so the ordering of servers is not important. Additionally, the
+# number of servers can grow/shrink without *too* much disruption.
+$wgObjectCaches['memcached-pecl'] = array(
+	'class'   => 'MemcachedPeclBagOStuff',
+	'servers' => array(
+		'10.0.12.1:11000',
+		'10.0.12.2:11000',
+		'10.0.12.3:11000',
+		'10.0.12.4:11000',
+		'10.0.12.5:11000',
+		'10.0.12.6:11000',
+		'10.0.12.7:11000',
+		'10.0.12.8:11000',
+		'10.0.12.9:11000',
+		'10.0.12.10:11000',
+		'10.0.12.11:11000',
+		'10.0.12.12:11000',
+		'10.0.12.13:11000',
+		'10.0.12.14:11000',
+		'10.0.12.15:11000',
+		'10.0.12.16:11000',
+	)
+);
 
 $wgMemCachedServers = array(
     # ACTIVE LIST
