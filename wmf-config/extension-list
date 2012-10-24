@@ -6,6 +6,8 @@ $IP/extensions/ArticleFeedback/ArticleFeedback.php
 $IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.php
 $IP/extensions/AssertEdit/AssertEdit.php
 $IP/extensions/Babel/Babel.php
+$IP/extensions/BreadCrumbs/BreadCrumbs.php
+$IP/extensions/Calendar/Calendar.php
 $IP/extensions/CategoryTree/CategoryTree.php
 $IP/extensions/CentralAuth/CentralAuth.php
 $IP/extensions/CentralNotice/CentralNotice.php
@@ -29,6 +31,8 @@ $IP/extensions/ContactPage/ContactPage.php
 $IP/extensions/ContactPageFundraiser/ContactPage.php
 $IP/extensions/ContributionReporting/ContributionReporting.php
 $IP/extensions/ContributionTracking/ContributionTracking.php
+$IP/extensions/CreditsSource/CreditsSource.php
+$IP/extensions/CustomData/CustomData.php
 $IP/extensions/DisableAccount/DisableAccount.php
 $IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php
 $IP/extensions/DonationInterface/donationinterface_langonly.php
@@ -51,13 +55,16 @@ $IP/extensions/GlobalUsage/GlobalUsage.php
 $IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php
 $IP/extensions/ImageMap/ImageMap.php
 $IP/extensions/InputBox/InputBox.php
+$IP/extensions/Insider/Insider.php
 $IP/extensions/intersection/DynamicPageList.php
 $IP/extensions/Interwiki/Interwiki.php
 $IP/extensions/LabeledSectionTransclusion/lst.php
 $IP/extensions/LandingCheck/LandingCheck.php
 $IP/extensions/LastModified/LastModified.php
 $IP/extensions/LiquidThreads/LiquidThreads.php
+$IP/extensions/Listings/Listings.php
 $IP/extensions/LocalisationUpdate/LocalisationUpdate.php
+$IP/extensions/MapSources/MapSources.php
 $IP/extensions/MarkAsHelpful/MarkAsHelpful.php
 $IP/extensions/MoodBar/MoodBar.php
 $IP/extensions/MobileFrontend/MobileFrontend.php
@@ -80,6 +87,8 @@ $IP/extensions/ProofreadPage/ProofreadPage.php
 $IP/extensions/Quiz/Quiz.php
 $IP/extensions/RandomRootPage/Randomrootpage.php
 $IP/extensions/ReaderFeedback/ReaderFeedback.php
+$IP/extensions/RelatedArticles/RelatedArticles.php
+$IP/extensions/RelatedSites/RelatedSites.php
 $IP/extensions/Renameuser/Renameuser.php
 $IP/extensions/RSS/RSS.php
 $IP/extensions/ScanSet/ScanSet.php
@@ -101,6 +110,7 @@ $IP/extensions/TimedMediaHandler/TimedMediaHandler.php
 $IP/extensions/timeline/Timeline.php
 $IP/extensions/TitleBlacklist/TitleBlacklist.php
 $IP/extensions/TitleKey/TitleKey.php
+$IP/extensions/TocTree/TocTree.php
 $IP/extensions/TorBlock/TorBlock.php
 $IP/extensions/Translate/Translate.php
 $IP/extensions/TranslationNotifications/TranslationNotifications.php
