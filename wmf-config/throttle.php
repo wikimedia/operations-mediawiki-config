@@ -29,6 +29,15 @@ $wmfThrottlingExceptions[] = array(
 	'value'  => 80, // ± 50 participants having to create an account
 );
 
+#bug 41355
+$wmfThrottlingExceptions[] = array(
+	'from'   => '2012-10-24T05:30 +0:00',
+	'to'     => '2012-10-25T11:30 +0:00', //workshop end + 3 hours
+	'IP'     => '143.107.79.204',
+	'dbname' => 'ptwikiversity',
+	'value'  => 75, // ± 50 participants having to create an account
+);
+
 ## Add throttling definitions above.
 
 # Will eventually raise value when MediaWiki is fully initialized:
