@@ -918,6 +918,8 @@ $wgConf->settings = array(
 	'vowiki' => false, # bug 13740
 	'xmfwiki' => false,
 	'zhwikinews' => false,
+
+	'wikidatawiki' => false,
 ),
 # @} end of wgEnableUpload
 
@@ -11564,6 +11566,23 @@ $wgConf->settings = array(
 		'assoc' => 'Association',
 		'ldbwiki' => 'Location Database Wiki',
 	)
+),
+
+'wgContentHandlerUseDB' => array(
+	'default' => false,
+	'wikidatawiki' => true,
+),
+
+'wmgUseUniversalLanguageSelector' => array(
+	'default' => false,
+),
+
+'wmgUseWikibaseRepo' => array(
+	'default' => false,
+),
+
+'wmgUseWikibaseClient' => array(
+	'default' => false,
 ),
 );
 
