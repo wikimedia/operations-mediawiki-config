@@ -125,4 +125,10 @@ if ( $wmgUseTimedMediaHandler ) {
 if ($wgDBname == "testwiki") {
 	$wgCaptchaDirectory = '/mnt/upload7/private/captcha/random';
 }
+
+// Use InstantCommons for testing
+if ( $wgDBname == "enwikivoyage" ) {
+	$wgUseInstantCommons = true;
+}
+
 } # end safeguard
