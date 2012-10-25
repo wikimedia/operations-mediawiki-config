@@ -2664,6 +2664,16 @@ if ( $wmgUseRelatedSites ) {
 	$wgRelatedSitesPrefixes = $wmgRelatedSitesPrefixes;
 }
 
+if ( $wmgUseUniversalLanguageSelector ) {
+	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
+}
+
+if ( $wmgUseWikidataRepo ) {
+	require_once( "$IP/extensions/Diff/Diff.php" );
+	require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
+	require_once( "$IP/extensions/Wikibase/repo/Wikibase.php" );
+}
+
 // additional "language names", adding to Names.php data
 $wgExtraLanguageNames = $wmgExtraLanguageNames;
 
