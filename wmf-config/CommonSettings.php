@@ -2670,6 +2670,10 @@ if ( $wmgUseRelatedSites ) {
 	$wgRelatedSitesPrefixes = $wmgRelatedSitesPrefixes;
 }
 
+if ( $wmgUseEventLogging ) {
+	require_once( "$IP/extensions/EventLogging/EventLogging.php" );
+}
+
 // additional "language names", adding to Names.php data
 $wgExtraLanguageNames = $wmgExtraLanguageNames;
 

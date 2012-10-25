@@ -11518,6 +11518,12 @@ $wgConf->settings = array(
 	'enwikivoyage' => true,
 ),
 
+'wmgUseEventLogging' => array(
+	'default' => false,
+	'testwiki' => true,
+	'enwiki' => true,
+),
+
 'wmgRelatedSitesPrefixes' => array(
 	'default' => array(),
 	'enwikivoyage' => array(
