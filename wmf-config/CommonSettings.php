@@ -2672,6 +2672,7 @@ if ( $wmgUseRelatedSites ) {
 
 if ( $wmgUseEventLogging ) {
 	require_once( "$IP/extensions/EventLogging/EventLogging.php" );
+	$wgEventLoggingBaseUri = "//bits.wikimedia.org/event.gif?";
 }
 
 // additional "language names", adding to Names.php data
