@@ -1789,8 +1789,10 @@ if ( $wmgUseCentralNotice ) {
 	// for banner loading
 	if ( $wgDBname == 'testwiki' ) {
 		$wgCentralPagePath = "$urlprotocol//test.wikipedia.org/w/index.php";
+		$wgCentralBannerDispatcher = "$urlprotocol//test.wikipedia.org/wiki/Special:BannerLoader";
 	} else {
 		$wgCentralPagePath = "$urlprotocol//{$wmfHostnames['meta']}/w/index.php";
+		$wgCentralBannerDispatcher = "$urlprotocol//{$wmfHostnames['meta']}/wiki/Special:BannerLoader";
 	}
 
 	$wgNoticeProject = $wmgNoticeProject;
