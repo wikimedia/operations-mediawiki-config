@@ -11548,6 +11548,19 @@ $wgConf->settings = array(
 		'ldbwiki' => 'Location Database Wiki',
 	)
 ),
+
+'wgContentHandlerUseDB' => array(
+	'default' => false,
+	'wikidatawiki' => true,
+),
+
+'wmgUseUniversalLanguageSelector' => array(
+	'default' => false,
+),
+
+'wmgUseWikidataRepo' => array(
+	'default' => false,
+),
 );
 
 
