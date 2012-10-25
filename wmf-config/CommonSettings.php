@@ -430,6 +430,7 @@ $wgFileExtensions[] = 'djvu'; # DjVu images/documents
 
 include( $IP . '/extensions/PagedTiffHandler/PagedTiffHandler.php' );
 $wgTiffUseTiffinfo = true;
+$wgTiffMaxMetaSize = 1048576;
 
 $wgMaxImageArea = 2.5e7; // 25MP
 
