@@ -9789,14 +9789,25 @@ $wgConf->settings = array(
 ),
 // emergency disable: shut off filters tagging >5% of posts on a total of at least 25 posts per day
 'wmgAbuseFilterEmergencyDisableThreshold' => array(
-	'default' => 0.05,
+	'default' => array(
+		'default' => 0.05,
+		'feedback' => 0.10,
+	),
 ),
 'wmgAbuseFilterEmergencyDisableCount' => array(
-	'default' => 2,
-	'enwiki' => 25,
+	'default' => array(
+		'default' => 2,
+		'feedback' => 25,
+	),
+	'enwiki' => array(
+		'default' => 25,
+		'feedback' => 50,
+	),
 ),
 'wmgAbuseFilterEmergencyDisableAge' => array(
-	'default' => 86400,
+	'default' => array(
+		'default' => 86400,
+	),
 ),
 # @}
 
