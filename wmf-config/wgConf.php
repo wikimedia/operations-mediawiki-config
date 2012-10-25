@@ -17,7 +17,6 @@ $wgConf->suffixes = array(
 	'wikisource',
 	'wikiversity',
 	'wikimedia',
-	'wikidata',
 	'wikivoyage',
 );
 
