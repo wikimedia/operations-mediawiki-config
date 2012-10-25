@@ -11441,9 +11441,23 @@ $wgConf->settings = array(
 
 'wmgEnablePostEdit' => array(
 	'default' => false,
-	'dewiki' => true,
-	'enwiki' => true,
 	'testwiki' => true,
+	'bgwiki' => true,
+	'dewiki' => true,
+	'dsbwiki' => true,
+	'enwiki' => true,
+	'eswiki' => true,
+	'glwiki' => true,
+	'hewiki' => true,
+	'hsbwiki' => true,
+	'itwiki' => true,
+	'jawiki' => true,
+	'kowiki' => true,
+	'lbwiki' => true,
+	'mkwiki' => true,
+	'mswiki' => true,
+	'nlwiki' => true,
+	'plwiki' => true,
 ),
 
 'wmgUseReplaceText' => array(
