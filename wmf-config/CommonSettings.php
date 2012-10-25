@@ -1611,6 +1611,7 @@ if ( $wmgUseCentralAuth ) {
 			'.wikinews.org' => 'enwikinews',
 			'.wikiversity.org' => 'enwikiversity',
 			'.mediawiki.org' => 'mediawikiwiki',
+			'.wikidata.org' => 'wikidatawiki',
 			'species.wikimedia.org' => 'specieswiki',
 			'incubator.wikimedia.org' => 'incubatorwiki',
 		);
