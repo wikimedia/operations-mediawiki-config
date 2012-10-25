@@ -148,4 +148,7 @@ if ( $wmgMFEnableDesktopResources ) {
 	$wgMFEnableDesktopResources = true;
 }
 
+// Temporarily disable ResourceLoader integration in beta, as it's got some problems
+$wgMFEnableResourceLoader = false;
+
 } # safeguard
