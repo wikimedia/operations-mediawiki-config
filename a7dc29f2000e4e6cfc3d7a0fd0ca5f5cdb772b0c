@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABP3///90\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2679,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-10-26T02:46:51Z",
+      "side": 1,
+      "message": "Should this be NS_* instead of WB_* ?",
+      "revId": "a7dc29f2000e4e6cfc3d7a0fd0ca5f5cdb772b0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABP3///94\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2695,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-10-26T02:46:51Z",
+      "side": 1,
+      "message": "What is this?",
+      "revId": "a7dc29f2000e4e6cfc3d7a0fd0ca5f5cdb772b0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
