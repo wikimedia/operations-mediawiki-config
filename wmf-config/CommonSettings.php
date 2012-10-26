@@ -2677,6 +2677,7 @@ if ( $wmgUseEventLogging ) {
 
 if ( $wmgUseUniversalLanguageSelector ) {
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
+	$wgULSGeoService = false;
 }
 
 if ( $wmgUseWikibaseRepo ) {
