@@ -2626,6 +2626,12 @@ if ( $wmgUseBreadCrumbs ) {
 	require_once( "$IP/extensions/BreadCrumbs/BreadCrumbs.php" );
 }
 
+if ( $wmgUseGeoCrumbs ) {
+	require_once( "$IP/extensions/GeoCrumbs/GeoCrumbs.php" );
+	// dependency
+	require_once( "$IP/extensions/CustomData/CustomData.php" );
+}
+
 if ( $wmgUseCalendar ) {
 	require_once( "$IP/extensions/Calendar/Calendar.php" );
 }
@@ -2668,6 +2674,10 @@ if ( $wmgUseRelatedSites ) {
 	require_once( "$IP/extensions/CustomData/CustomData.php" );
 
 	$wgRelatedSitesPrefixes = $wmgRelatedSitesPrefixes;
+}
+
+if ( $wmgUseUserMerge ) {
+	require_once( "$IP/extensions/UserMerge/UserMerge.php" );
 }
 
 if ( $wmgUseEventLogging ) {
