@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAABTn////U\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 11563,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2012-10-26T08:43:37Z",
+      "side": 1,
+      "message": "Maybe, but I don\u0027t want a tonne of extensions that are just going to break the wiki straight away.\n\nIt\u0027s purposeful",
+      "parentUuid": "AAABTn////s\u003d",
+      "revId": "35c56dd4b3c4708c3541118baae824621f31cba4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABTn////o\u003d",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2012-10-26T08:26:07Z",
       "side": 1,
       "message": "Shouldn\u0027t this be enabled for wikidatawiki?",
+      "revId": "35c56dd4b3c4708c3541118baae824621f31cba4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABTn////c\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 11567,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2012-10-26T08:43:37Z",
+      "side": 1,
+      "message": "No, I don\u0027t think so",
+      "parentUuid": "AAABTn////o\u003d",
       "revId": "35c56dd4b3c4708c3541118baae824621f31cba4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
