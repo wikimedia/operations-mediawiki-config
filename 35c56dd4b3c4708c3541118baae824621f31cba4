@@ -69,6 +69,24 @@
       "revId": "35c56dd4b3c4708c3541118baae824621f31cba4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABTn///+4\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 11567,
+      "author": {
+        "id": 64
+      },
+      "writtenOn": "2012-10-26T08:44:59Z",
+      "side": 1,
+      "message": "You are right, didn\u0027t check it correctly, ignore this.",
+      "parentUuid": "AAABTn////c\u003d",
+      "revId": "35c56dd4b3c4708c3541118baae824621f31cba4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
