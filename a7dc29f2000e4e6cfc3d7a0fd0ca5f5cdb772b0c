@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "AAABTn////A\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2679,
+      "author": {
+        "id": 247
+      },
+      "writtenOn": "2012-10-26T08:46:10Z",
+      "side": 1,
+      "message": "Is there a standard for extensions for introducing new namespaces? In SMW, we also use SMW_NS_*. It also allows for having no collision, esp. on NS_PROPERTY. The code currently uses WB_*.",
+      "parentUuid": "AAABP3///90\u003d",
+      "revId": "a7dc29f2000e4e6cfc3d7a0fd0ca5f5cdb772b0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABP3///94\u003d",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 5
@@ -65,6 +83,24 @@
       "writtenOn": "2012-10-26T08:44:32Z",
       "side": 1,
       "message": "I have no idea. Ask someone who knows the wikidata code.\n\nI\u0027m just following the instructions I was given",
+      "parentUuid": "AAABP3///94\u003d",
+      "revId": "a7dc29f2000e4e6cfc3d7a0fd0ca5f5cdb772b0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABTn////g\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2695,
+      "author": {
+        "id": 247
+      },
+      "writtenOn": "2012-10-26T08:46:10Z",
+      "side": 1,
+      "message": "Easter egg to reserve some IDs. It also blocks malicious assignment of some IDs to sensitive items.",
       "parentUuid": "AAABP3///94\u003d",
       "revId": "a7dc29f2000e4e6cfc3d7a0fd0ca5f5cdb772b0c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
