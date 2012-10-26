@@ -9696,14 +9696,6 @@ $wgConf->settings = array(
 	'metawiki' => false,
 ),
 
-'wgEnableHtmlDiff' => array(
-	'default' => false,
-	# Testing!
-	'testwiki' => true,
-	'en_labswikimedia' => true,
-	'de_labswikimedia' => true,
-),
-
 'wmgUseFlaggedRevs' => array(
 	'default' => false,
 	# To update this dblist:
