@@ -9382,6 +9382,7 @@ $wgConf->settings = array(
 	'metawiki' => '/usr/local/apache/common/images/sul/meta.png',
 	'commonswiki' => '/usr/local/apache/common/images/sul/commons.png',
 	'mediawikiwiki' => '/usr/local/apache/common/images/sul/mediawiki.png',
+	'wikidatawiki' => '/usr/local/apache/common/images/sul/wikidata.png',
 	'specieswiki' => '/usr/local/apache/common/images/sul/wikispecies.png',
 	'incubatorwiki' => '/usr/local/apache/common/images/sul/incubatorwiki.png',
 ),
