@@ -87,6 +87,24 @@
       "revId": "35c56dd4b3c4708c3541118baae824621f31cba4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABUH////0\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 11567,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2012-10-26T09:27:29Z",
+      "side": 1,
+      "message": "the client will come later but fine to have it here now and set to false",
+      "parentUuid": "AAABTn////o\u003d",
+      "revId": "35c56dd4b3c4708c3541118baae824621f31cba4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
