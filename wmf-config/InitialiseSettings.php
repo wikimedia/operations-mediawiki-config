@@ -11482,7 +11482,7 @@ $wgConf->settings = array(
 	'enwikivoyage' => true,
 ),
 
-'wmgUseBreadCrumbs' => array(
+'wmgUseGeoCrumbs' => array(
 	'default' => false,
 	'enwikivoyage' => true,
 ),
@@ -11528,6 +11528,11 @@ $wgConf->settings = array(
 ),
 
 'wmgUseRelatedSites' => array(
+	'default' => false,
+	'enwikivoyage' => true,
+),
+
+'wmgUseUserMerge' => array(
 	'default' => false,
 	'enwikivoyage' => true,
 ),
