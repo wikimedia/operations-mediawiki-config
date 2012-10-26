@@ -11529,7 +11529,7 @@ $wgConf->settings = array(
 'wmgUseEventLogging' => array(
 	'default' => false,
 	'testwiki' => true,
-	'enwiki' => true,
+	// 'enwiki' => true,
 ),
 
 'wmgRelatedSitesPrefixes' => array(
