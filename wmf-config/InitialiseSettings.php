@@ -843,6 +843,7 @@ $wgConf->settings = array(
 	'warwiki'	   => '$stdlogo',
 	'wawiki'	    => '$stdlogo',
 	'wg_enwiki'	 => '//upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/120px-Wikimedia_Community_Logo.svg.png',
+	'wikidatawiki'  => '//upload.wikimedia.org/wikipedia/commons/e/e4/Wikidata-logo-en-135px.png',
 	'wikimania2005wiki' => '//upload.wikimedia.org/wikipedia/wikimania/b/bc/Wiki.png',
 	'wikimania2006wiki' => '//upload.wikimedia.org/wikipedia/wikimania2006/c/c0/Mania-logo.gif',
 	'wikimania2007wiki' => '//upload.wikimedia.org/wikipedia/wikimania2006/c/c0/Mania-logo.gif',
