@@ -137,3 +137,4 @@ $IP/extensions/Diff/Diff.php
 $IP/extensions/Wikibase/lib/WikibaseLib.php
 $IP/extensions/Wikibase/repo/Wikibase.php
 $IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php
+$IP/extensions/Wikibase/client/WikibaseClient.php
