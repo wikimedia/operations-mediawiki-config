@@ -6447,6 +6447,7 @@ $wgConf->settings = array(
 			'user' => array( 8, 60 ),
 		),
 		'edit' => array(
+			// 8 ed./min per each non-autoconfirmed, or group thereof from same IP
 			'ip'     => array( 8, 60 ),
 			'newbie' => array( 8, 60 ),
 		),
@@ -6461,7 +6462,7 @@ $wgConf->settings = array(
 		),
 		// For expanded rollback permissions...
 		'rollback' => array(
-			'user' => array( 10, 60 ), // was array( 5, 60 ), -- brino 2008-05-15
+			'user' => array( 10, 60 ), // was array( 5, 60 ), -- brion 2008-05-15
 			'newbie' => array( 5, 120 ),
 			// practicality has won out over paranoia on enwiki, raising from 20 to 100 -- TS 2008-05-21
 			'rollbacker' => array( 100, 60 ),
@@ -6474,13 +6475,10 @@ $wgConf->settings = array(
 	'default' => "udp://$wmfUdp2logDest/limiter",
 ),
 
-'wgRateLimitsExcludedGroups' => array(
-	'default' => array( 'sysop', 'bureaucrat', 'bot', 'accountcreator' ),
-),
-
 'wgRateLimitsExcludedIPs' => array(
 	// see also wmf-config/throttle.php
 	// exemptions for outreach events should go in that file
+	// note that account creation is not the only bottleneck
 	'default' => array(),
 ),
 
