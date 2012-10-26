@@ -11568,6 +11568,11 @@ $wgConf->settings = array(
 	'dewikivoyage' => true,
 ),
 
+'wmgUseUserMerge' => array(
+	'default' => false,
+	'enwikivoyage' => true,
+),
+
 'wmgUseEventLogging' => array(
 	'default' => false,
 	'testwiki' => true,
