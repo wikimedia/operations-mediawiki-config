@@ -347,6 +347,7 @@ $wgConf->settings = array(
 	# Defaults
 	'default'	   => '//upload.wikimedia.org/wikipedia/commons/d/d6/Wikipedia-logo-v2-en.png',
 	'wikibooks'	 => '//upload.wikimedia.org/wikipedia/commons/4/49/Wikibooks-logo-en-noslogan.png',
+	'wikidata'	=>	'//upload.wikimedia.org/wikipedia/commons/e/e4/Wikidata-logo-en-135px.png',
 	'wikinews'	  => '$stdlogo', // '/upload/b/bc/Wiki.png',
 	'wikiquote'	 => '//upload.wikimedia.org/wikiquote/en/b/bc/Wiki.png',
 	'wikisource'	=> '//upload.wikimedia.org/wikipedia/sources/b/bc/Wiki.png',
