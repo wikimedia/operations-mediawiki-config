@@ -2043,6 +2043,9 @@ $wgConf->settings = array(
 	'yiwiktionary'  => 'װיקיװערטערבוך',
 	'zh-min-nanwikisource' => 'Wiki Tô·-su-kóan',
 	'zh_classicalwiki' => '維基大典',
+
+	'wikidatawiki' => 'Wikidata',
+
 ),
 # @} end of wgMetaNamespace
 
@@ -11579,6 +11582,7 @@ $wgConf->settings = array(
 
 'wmgUseWikibaseRepo' => array(
 	'default' => false,
+	'wikidatawiki' => true,
 ),
 
 'wmgUseWikibaseClient' => array(
