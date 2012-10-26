@@ -11578,6 +11578,7 @@ $wgConf->settings = array(
 
 'wmgUseUniversalLanguageSelector' => array(
 	'default' => false,
+	'wikidatawiki' => true,
 ),
 
 'wmgUseWikibaseRepo' => array(
