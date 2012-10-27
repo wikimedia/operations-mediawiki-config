@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAABYn////4\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2625,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2012-10-27T01:00:15Z",
+      "side": 0,
+      "message": "Should probably remove the breadcrumbs code at the same time",
+      "revId": "9006820a8801651db66991a7359a2b206200c5bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABYn////8\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11485,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2012-10-27T01:00:15Z",
+      "side": 0,
+      "message": "Should probably remove the breadcrumbs code at the same time",
+      "revId": "9006820a8801651db66991a7359a2b206200c5bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
