@@ -16,6 +16,24 @@
       "revId": "7d2e17779cd4cb281635ad71ddf3967a5cd9eaaf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAABl3////8\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2043,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-10-28T19:31:27Z",
+      "side": 1,
+      "message": "That weren\u0027t expected. I\u0027ve struggled with some RTL languages and made copy/paste to check and recheck all is fine.\n\nThis is not especially problematic right now, as my next cleaning operation for this file to fix all the whitespace/tab issues, see bug 29902.",
+      "parentUuid": "AAABFX//85Y\u003d",
+      "revId": "7d2e17779cd4cb281635ad71ddf3967a5cd9eaaf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
