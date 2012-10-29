@@ -1,0 +1,8 @@
+Change-Id: I1cdbbf6d3958e4fb48740f39341baa8deddc29fd
+Code-Review+2: Demon <chadh@wikimedia.org>
+Verified+1: jenkins-bot
+Submitted-by: Demon <chadh@wikimedia.org>
+Submitted-at: Mon, 29 Oct 2012 17:49:56 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/30623
+Project: operations/mediawiki-config
+Branch: refs/heads/master
