@@ -2678,7 +2678,7 @@ if ( $wmgUseEventLogging ) {
 
 if ( $wmgUseUniversalLanguageSelector ) {
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
-	$wgULSGeoService = false;
+	$wgULSGeoService = "https://geoiplookup.wikimedia.org/";
 }
 
 if ( $wmgUseWikibaseRepo ) {
