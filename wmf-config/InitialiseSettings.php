@@ -5464,6 +5464,8 @@ $wgConf->settings = array(
 		105 => 'Page_talk',
 		106 => 'Index',
 		107 => 'Index_talk',
+		108 => 'Transwiki', # Bug 40474
+		109 => 'Transwiki_talk',
 	),
 	# @} end of wikisource wikis
 
@@ -5659,6 +5661,8 @@ $wgConf->settings = array(
 	'zhwiktionary' => array(
 		100 => '附录', // bug 29641 - appendix
 		101 => '附录讨论', // bug 29641 - appendix talk
+		102 => 'Transwiki', # Bug 40474
+		103 => 'Transwiki_talk',
 	),
 	// @} end of Wiktionary
 
@@ -5819,6 +5823,11 @@ $wgConf->settings = array(
 		106 => 'Nấu_ăn', // Cookbook
 		107 => 'Thảo_luận_Nấu_ăn', // Cookbook talk
 	),
+	# Bug 40474
+	'zhwikibooks' => array(
+		100 => 'Transwiki',
+		101 => 'Transwiki_talk',
+	),
 	// @} end of wikibooks
 
 	// Wikinews @{
@@ -5972,6 +5981,11 @@ $wgConf->settings = array(
 	'liwikiquote' => array(	// bug 12240
 		100 => 'Portaol',
 		101 => 'Euverlèk_portaol'
+	),
+	# Bug 40474
+	'zhwikiquote' => array(
+		100 => 'Transwiki',
+		101 => 'Transwiki_talk',
 	),
 	// @} end of wikiquote
 
@@ -8545,6 +8559,11 @@ $wgConf->settings = array(
 	'frwikinews' => 102, // Transwiki
 	'frwikiversity' => 110, // Transwiki
 	'frwikiquote' => 108, // transwiki
+	// Added zh wikis per bug 40474
+	'zhwiktionary' => 102, // Transwiki
+	'zhwikibooks' => 100, // Transwiki
+	'zhwikiquote' => 100, // Transwiki
+	'zhwikisource' => 108, // Transwiki
 ),
 
 'wgFilterRobotsWL' => array(
