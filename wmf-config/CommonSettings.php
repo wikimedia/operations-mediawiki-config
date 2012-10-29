@@ -1616,7 +1616,8 @@ if ( $wmgUseCentralAuth ) {
 			'.wikinews.org' => 'enwikinews',
 			'.wikiversity.org' => 'enwikiversity',
 			'.mediawiki.org' => 'mediawikiwiki',
-			'.wikidata.org' => 'wikidatawiki',
+			// Disabled by Chad 2012-10-29 until SSL is fixed (bug 41437)
+			// '.wikidata.org' => 'wikidatawiki',
 			'species.wikimedia.org' => 'specieswiki',
 			'incubator.wikimedia.org' => 'incubatorwiki',
 		);
