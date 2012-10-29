@@ -9784,12 +9784,6 @@ $wgConf->settings = array(
 	'foundationwiki' => 3600, // template links may be funky
 ),
 
-'wgUseOldSearchUI' => array(
-	'default' => false, // -- bv 2009-07-01
-	'testwiki' => false,
-	'usabilitywiki' => false,
-),
-
 'wgEnableSerializedMessages' => array(
 	'default' => true,
 	# 'testwiki' => false, # breaks it even more since it uses memcached instead -- TS 2009-06-15
