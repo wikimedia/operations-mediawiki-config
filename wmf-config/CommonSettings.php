@@ -1275,7 +1275,7 @@ if ( in_array( $wgLanguageCode, array( 'commons', 'meta', 'sources', 'species', 
 # :SEARCH:
 switch( $cluster ) {
 case 'pmtpa':
-	$wgUseLuceneSearch = true;
+	$wgUseLuceneSearch = $wgDBname != 'wikidatawiki';
 	break;
 case 'wmflabs':
 	$wgUseLuceneSearch = false;
