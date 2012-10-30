@@ -20,8 +20,8 @@ $wgConf->suffixes = array(
 	'wikivoyage',
 );
 
-switch( $cluster ) {
-	case 'pmtpa':
+switch( $realm ) {
+	case 'production':
 		$all = "$IP/../all.dblist";
 		$wgConf->localVHosts = array(
 			'wikipedia.org',
@@ -37,9 +37,9 @@ switch( $cluster ) {
 			'meta.wikimedia.org', // Presumably needed to load meta spam list. Any others?
 			'commons.wikimedia.org',
 		);
-	break;
+		break;
 
-	case 'wmflabs':
+	case 'labs':
 		$all = "$IP/../all-wmflabs.dblist";
 		$wgConf->localVHosts = array(
 			'wikipedia.beta.wmflabs.org',
@@ -55,7 +55,7 @@ switch( $cluster ) {
 			'incubator.wikimedia.beta.wmflabs.org',
 			'commons.wikimedia.beta.wmflabs.org',
 		);
-	break;
+		break;
 
 	default:
 }
