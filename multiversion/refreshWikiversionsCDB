@@ -9,7 +9,7 @@ require_once( dirname( __FILE__ ) . '/MWWikiversions.php' );
  * @return void
  */
 function refreshWikiversionsCDB() {
-	$srcPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.dat';
+	$srcPath = getRealmSpecifcFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
 	$tmpDBPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.cdb.tmp';
 	$finalDBPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.cdb';
 
@@ -28,7 +28,7 @@ function refreshWikiversionsCDB() {
 	foreach ( $rows as $row ) {
 		$dbNamesWithRows[$row[0]] = 1;
 	}
-	$dbNames = MWWikiversions::readDbListFile( MULTIVER_COMMON_HOME . '/all.dblist' );
+	$dbNames = MWWikiversions::readDbListFile( getRealmSpecificFilename( MULTIVER_COMMON_HOME . '/all.dblist' ) );
 	$diff = array_diff_key( $dbNames, $dbNamesWithRows );
 	if ( count( $diff ) ) {
 		print_r( $diff );
