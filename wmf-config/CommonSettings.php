@@ -64,47 +64,58 @@ if ( getenv( 'WIKIBACKUP' ) ) {
 	}
 }
 
-### Determine realm and cluster we are on #############################
-# $cluster is an historical variable used for the WMF MW conf
-$cluster = 'pmtpa';
-
-# $realm should be the realm as puppet understand it.
-# The possible values as of June 2012 are:
-#  - labs
-#  - production
+### Determine realm and datacenter we are on #############################
+# $realm and $datacenter are used to vary configuration based on server
+# location. Thet should be provisioned by puppet in /etc/wikimedia-site and
+# /etc/wikimedia-realm.
+#
+# The possible values of $realm and $datacenter as of October 2012 are:
+#  - labs + wmflabs
+#  - production + pmtpa
+#  - production + eqiad
 $realm   = 'production';
+$datacenter = 'pmtpa';
 
 # Puppet provision the realm in /etc/wikimedia-realm
 if( file_exists( '/etc/wikimedia-realm' ) ) {
 	$realm = trim( file_get_contents( '/etc/wikimedia-realm' ) );
 }
-
-# Set cluster based on realm
-switch( $realm ) {
-	case 'labs':
-		$cluster = 'wmflabs';
-		break;
-	case 'production':
-	default:
-		$cluster = 'pmtpa';
-		break;
+if( file_exists( '/etc/wikimedia-site' ) ) {
+	$datacenter = trim( file_get_contents( '/etc/wikimedia-site' ) );
 }
-### End /Determine realm and cluster we are on/ ########################
+
+# Validate setting
+switch( "$realm + $datacenter" ) {
+	case 'labs + wmflabs':
+	case 'production + pmtpa':
+	case 'production + eqiad':
+		break;
+
+	case 'labs + pmtpa':
+		# Backwards compat
+		$datacenter = 'wmflabs';
+		break;
+
+	default:
+		die( "Datacenter $datacenter in realm $realm is not known. Check /etc/wikimedia-realm and /etc/wikimedia-site\n" );
+}
+### End /Determine realm and datacenter we are on/ ########################
 
 ### List of some service hostnames
 # 'meta'   : meta wiki for user editable content
 # 'upload' : hostname where files are hosted
 # TODO: 'bits'
-# Whenever two clusters should use the same host, do not use $wmfHostnames but
-# use the hardcoded hostname instead. A good example are the spam blacklists
-# hosted on meta.wikimedia.org which you will surely want to reuse.
+# Whenever all realms/datacenters should use the same host, do not use
+# $wmfHostnames but use the hardcoded hostname instead. A good example are the
+# spam blacklists hosted on meta.wikimedia.org which you will surely want to
+# reuse.
 $wmfHostnames = array();
-switch( $cluster ) {
-case 'wmflabs':
+switch( $realm ) {
+case 'labs':
 	$wmfHostnames['meta']   = 'meta.wikimedia.beta.wmflabs.org';
 	$wmfHostnames['upload'] = 'upload.beta.wmflabs.org';
 	break;
-case 'pmtpa':
+case 'production':
 default:
 	$wmfHostnames['meta']   = 'meta.wikimedia.org';
 	$wmfHostnames['upload'] = 'upload.wikimedia.org';
@@ -129,8 +140,9 @@ $wmfConfigDir = "$IP/../wmf-config";
 wfProfileOut( "$fname-host" );
 
 # Must be set before InitialiseSettings.php:
-switch( $cluster ) {
+switch( $datacenter ) {
 case 'pmtpa'  :
+case 'eqiad'  :
 	# fluorine (nfs1 while fluorine is down)
 	$wmfUdp2logDest = '10.64.0.21:8420';
 	break;
@@ -154,13 +166,13 @@ wfProfileOut( "$fname-wgConf" );
 
 wfProfileIn( "$fname-confcache" );
 
-# Is this database listed in $cluster.dblist?
+# Is this database listed in $datacenter.dblist?
 # Note: $wgLocalDatabases set in wgConf.php.
 # Note: must be done before calling $multiVersion functions other than getDatabase().
 if ( array_search( $wgDBname, $wgLocalDatabases ) === false ) {
 	# No? Load missing.php
 	if ( $wgCommandLineMode ) {
-		print "Database name $wgDBname is not listed in $cluster.dblist\n";
+		print "Database name $wgDBname is not listed in $datacenter.dblist\n";
 	} else {
 		require( "$wmfConfigDir/missing.php" );
 	}
@@ -229,12 +241,13 @@ extract( $globals );
 require( "$wmfConfigDir/PrivateSettings.php" );
 
 # Cluster-dependent files for database and memcached
-switch( $cluster ) {
+switch( $datacenter ) {
 case 'wmflabs':
 	require( "$wmfConfigDir/db-wmflabs.php" );
 	require( "$wmfConfigDir/mc-wmflabs.php" );
 	break;
 case 'pmtpa':
+case 'eqiad':
 default:
 	require( "$wmfConfigDir/db.php" );
 	require( "$wmfConfigDir/mc.php" );
@@ -264,7 +277,7 @@ if ( $wgDBname == 'testwiki' ) {
 
 # For labs, override settings just above. This need to be done before
 # extensions so we can not use CommonSettings-wmflabs.php
-if( $cluster == 'wmflabs' ) {
+if( $realm == 'labs' ) {
 	# Base path:
 	$wgResourceBasePath    = "$urlprotocol//bits.beta.wmflabs.org/static-master";
 
@@ -283,7 +296,7 @@ $wgStockPath = '/images';
 $wgScript           = $wgScriptPath . '/index.php';
 $wgRedirectScript	= $wgScriptPath . '/redirect.php';
 $wgInternalServer = $wgCanonicalServer;
-if ( $cluster == 'pmtpa' && $wgDBname != 'testwiki' && isset( $_SERVER['SERVER_NAME'] ) ) {
+if ( $realm == 'production' && $wgDBname != 'testwiki' && isset( $_SERVER['SERVER_NAME'] ) ) {
 	// Make testing JS/skin changes easy by not running load.php through bits for testwiki
 	$wgLoadScript = "$urlprotocol//bits.wikimedia.org/{$_SERVER['SERVER_NAME']}/load.php";
 }
@@ -506,7 +519,9 @@ $wgAllowUserCss = true;
 $wgUseSquid = true;
 $wgUseESI   = false;
 
-if( $cluster == 'pmtpa' ) {
+switch ( $datacenter ) {
+case 'pmtpa':
+case 'eqiad':
 	# HTCP multicast squid purging
 	$wgHTCPMulticastAddress = '239.128.0.112';
 	$wgHTCPMulticastTTL = 8;
@@ -739,10 +754,13 @@ if( $cluster == 'pmtpa' ) {
 		'217.94.171.96',
 	);
 
-} elseif( $cluster == 'wmflabs' ) {
+	break;
 
+case 'wmflabs':
 	$wgSquidServers = array( '10.4.0.17' );
 	$wgSquidServersNoPurge = array( '10.4.0.17' );
+
+	break;
 }
 
 # Default:
@@ -790,9 +808,12 @@ if ( $site == 'wikinews' ) {
 
 $wgUseTidy = true;
 
-if( $cluster == 'pmtpa' ) {
+switch ( $datacenter ) {
+case 'pmtpa':
+case 'eqiad':
 	$wgUDPProfilerHost = '10.0.6.30'; # professor
 	$wgAggregateStatsID = $wgVersion;
+	break;
 }
 
 // $wgProfiler is set in index.php
@@ -1230,11 +1251,12 @@ $wgPasswordSender = 'wiki@wikimedia.org';
 # e-mailing password based on e-mail address (bug 34386)
 $wgPasswordResetRoutes['email'] = true;
 
-switch( $cluster ) {
+switch( $datacenter ) {
 case 'wmflabs':
 	require( 'filebackend-wmflabs.php' );
 	break;
 case 'pmtpa':
+case 'eqiad':
 default:
 	require( 'filebackend.php' );
 	break;
@@ -1273,8 +1295,9 @@ if ( in_array( $wgLanguageCode, array( 'commons', 'meta', 'sources', 'species', 
 }
 
 # :SEARCH:
-switch( $cluster ) {
+switch( $datacenter ) {
 case 'pmtpa':
+case 'eqiad':
 	$wgUseLuceneSearch = $wgDBname != 'wikidatawiki';
 	break;
 case 'wmflabs':
@@ -1442,7 +1465,7 @@ $wgLegacySchemaConversion = true;
 # $wgReadOnly = 'Read-only during network issues';
 
 
-if ( $cluster != 'pmtpa' ) {
+if ( $realm != 'production' ) {
 	$wgHTTPTimeout = 10;
 }
 
@@ -1590,16 +1613,23 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthCookies = true;
 
 	# Broken -- TS
-	if( $cluster == 'pmtpa' ) {
+	switch ( $datacenter ) {
+	case 'pmtpa':
+	case 'eqiad':
 		$wgCentralAuthUDPAddress = $wgRC2UDPAddress;
 		$wgCentralAuthNew2UDPPrefix = "#central\t";
+		break;
 	}
 
 	# Determine second-level domain
-	if( $cluster == 'pmtpa' ) {
+	switch ( $realm ) {
+	case 'production':
 		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
-	} else { // wmflabs
+		break;
+
+	case 'labs':
 		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\.\w+\.\w+\./';
+		break;
 	}
 	if ( preg_match( $wmgSecondLevelDomainRegex, strrev( $wgServer ), $m ) ) {
 		$wmgSecondLevelDomain = strrev( $m[0] );
@@ -1608,7 +1638,8 @@ if ( $wmgUseCentralAuth ) {
 	}
 	unset( $wmgSecondLevelDomainRegex );
 
-	if( $cluster == 'pmtpa' ) {
+	switch ( $realm ) {
+	case 'production':
 		// Production cluster
 		$wgCentralAuthAutoLoginWikis = array(
 			'.wikipedia.org' => 'enwiki',
@@ -1625,7 +1656,9 @@ if ( $wmgUseCentralAuth ) {
 			'species.wikimedia.org' => 'specieswiki',
 			'incubator.wikimedia.org' => 'incubatorwiki',
 		);
-	} else {
+		break;
+
+	case 'labs':
 		// wmflabs beta cluster
 		$wgCentralAuthAutoLoginWikis = array(
 			'incubator.wikimedia.beta.wmflabs.org' => 'incubatorwiki',
@@ -1642,6 +1675,7 @@ if ( $wmgUseCentralAuth ) {
 			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
 			'ee-prototype.wikipedia.beta.wmflabs.org' => 'ee_prototypewiki',
 		);
+		break;
 	}
 
 
@@ -1649,17 +1683,12 @@ if ( $wmgUseCentralAuth ) {
 	if ( isset( $wgCentralAuthAutoLoginWikis[$wmgSecondLevelDomain] ) ) {
 		unset( $wgCentralAuthAutoLoginWikis[$wmgSecondLevelDomain] );
 		$wgCentralAuthCookieDomain = $wmgSecondLevelDomain;
-	} elseif ( $cluster == 'pmtpa' && $wgDBname == 'commonswiki' ) {
-		unset( $wgCentralAuthAutoLoginWikis['commons.wikimedia.org'] );
-		$wgCentralAuthCookieDomain = 'commons.wikimedia.org';
+	} elseif ( $wgDBname == 'commonswiki' && isset( $wgCentralAuthAutoLoginWikis["commons.$wmgSecondLevelDomain"] ) ) {
+		unset( $wgCentralAuthAutoLoginWikis["commons.$wmgSecondLevelDomain"] );
+		$wgCentralAuthCookieDomain = "commons.$wmgSecondLevelDomain";
 	} elseif ( $wgDBname == 'metawiki' ) {
-		if( $cluster == 'pmtpa' ) {
-			unset( $wgCentralAuthAutoLoginWikis['meta.wikimedia.org'] );
-			$wgCentralAuthCookieDomain = 'meta.wikimedia.org';
-		} else { // wmflabs
-			unset( $wgCentralAuthAutoLoginWikis['meta.wikimedia.beta.wmflabs.org'] );
-			$wgCentralAuthCookieDomain = 'meta.wikimedia.beta.wmflabs.org';
-		}
+		unset( $wgCentralAuthAutoLoginWikis["meta.$wmgSecondLevelDomain"] );
+		$wgCentralAuthCookieDomain = "meta.$wmgSecondLevelDomain";
 	} else {
 		# Don't set 2nd-level cookies for *.wikimedia.org, insecure
 		$wgCentralAuthCookieDomain = '';
@@ -1776,12 +1805,13 @@ if ( file_exists( '/etc/wikimedia-image-scaler' ) ) {
 }
 $wgMaxShellTime = 50; // so it times out before PHP and curl and squid
 
-switch( $cluster ) {
+switch( $datacenter ) {
 case 'pmtpa'  : $wgImageMagickTempDir = '/a/magick-tmp'; break;
+case 'eqiad'  : $wgImageMagickTempDir = '/a/magick-tmp'; break;
 case 'wmflabs': $wgImageMagickTempDir = '/tmp/a/magick-tmp'; break;
 }
 
-if ( $cluster == 'wmflabs' && file_exists( '/etc/wikimedia-transcoding' ) ) {
+if ( $datacenter == 'wmflabs' && file_exists( '/etc/wikimedia-transcoding' ) ) {
 	require( "$wmfConfigDir/transcoding-wmflabs.org" );
 }
 
@@ -1804,7 +1834,7 @@ if ( $wmgUseCentralNotice ) {
 	$wgNoticeProject = $wmgNoticeProject;
 
 	$wgCentralDBname = 'metawiki';
-	if ( $cluster == 'pmtpa' && $wgDBname == 'testwiki' ) {
+	if ( $realm == 'production' && $wgDBname == 'testwiki' ) {
 		# test.wikipedia.org has its own central database:
 		$wgCentralDBname = 'testwiki';
 	}
@@ -1813,19 +1843,21 @@ if ( $wmgUseCentralNotice ) {
 
 	# Wed evening -- all on!
 	$wgNoticeTimeout = 3600;
-	if( $cluster == 'pmtpa' ) {
+	switch( $realm ) {
+	case 'production':
 		$wgNoticeServerTimeout = 3600; // to let the counter update
 		$wgNoticeCounterSource = $urlprotocol . '//wikimediafoundation.org/wiki/Special:ContributionTotal' .
 			'?action=raw' .
 			'&start=20101112000000' . // FY 10-11
 			'&fudgefactor=660000';   // fudge for pledged donations not in CRM
+		break;
 	}
 
 	$wgNoticeInfrastructure = false;
 	if ( $wgDBname == 'metawiki' ) {
 		$wgNoticeInfrastructure = true;
 	}
-	if( $cluster == 'pmtpa' && $wgDBname == 'testwiki' ) {
+	if ( $realm == 'production' && $wgDBname == 'testwiki' ) {
 		$wgNoticeInfrastructure = true;
 	}
 
@@ -2369,8 +2401,9 @@ $wgAvailableRights[] = 'moodbar-admin'; // To allow global groups to include thi
 
 # Mobile related configuration
 
-switch( $cluster ) {
+switch( $datacenter ) {
 case 'pmtpa':
+case 'eqiad':
 	require( "$wmfConfigDir/mobile.php" );
 	break;
 case 'wmflabs':
@@ -2513,7 +2546,8 @@ if ( $wmgUseFeaturedFeeds ) {
 
 $wgDisplayFeedsInSidebar = $wmgDisplayFeedsInSidebar;
 
-if( $cluster == 'pmtpa' ) {
+switch( $realm ) {
+case 'production':
 	# Temporary code to purge swift thumbnails --aaron 2/1/2012
 	require( "$wmfConfigDir/swift.php" );
 }
@@ -2721,17 +2755,17 @@ if ( $wmgUseWikibaseClient ) {
 // additional "language names", adding to Names.php data
 $wgExtraLanguageNames = $wmgExtraLanguageNames;
 
-if( $cluster == 'wmflabs' ) {
+if( $datacenter == 'wmflabs' ) {
 	require( "$wmfConfigDir/CommonSettings-wmflabs.php" );
 }
 
-#### Per cluster extensions
+#### Per realm extensions
 
-switch( $cluster ) {
-case 'pmtpa':
-	require( "$wmfConfigDir/ext-pmtpa.php" );
+switch( $realm ) {
+case 'production':
+	require( "$wmfConfigDir/ext-production.php" );
 	break;
-case 'wmflabs':
+case 'labs':
 	require( "$wmfConfigDir/ext-wmflabs.php" );
 	break;
 }

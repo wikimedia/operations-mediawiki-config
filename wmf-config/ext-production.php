@@ -9,7 +9,7 @@
 #
 #######################################################################
 
-if( $cluster === 'pmtpa' ) {   # safeguard
+if( $realm === 'production' ) {   # safeguard
 
 	include( $IP . '/extensions/CheckUser/CheckUser.php' );
 	$wgCheckUserForceSummary = $wmgCheckUserForceSummary;

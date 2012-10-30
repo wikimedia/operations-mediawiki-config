@@ -2,7 +2,7 @@
 # WARNING: This file is publically viewable on the web.
 #          Do not put private data here.
 
-if( $cluster == 'wmflabs' ) { # safe guard
+if( $datacenter == 'wmflabs' ) { # safe guard
 # Database configuration files for the beta labs
 
 // Pretend we have a complex database setup...
