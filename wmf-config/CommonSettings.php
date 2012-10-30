@@ -1793,7 +1793,7 @@ if ( $wmgUseCentralNotice ) {
 		$wgCentralBannerRecorder = "$urlprotocol//test.wikipedia.org/wiki/Special:RecordImpression";
 	} else {
 		$wgCentralPagePath = "$urlprotocol//{$wmfHostnames['meta']}/w/index.php";
-		$wgCentralBannerDispatcher = "$urlprotocol//{$wmfHostnames['meta']}/wiki/Special:BannerLoader";
+		$wgCentralBannerDispatcher = "$urlprotocol//{$wmfHostnames['meta']}/wiki/Special:BannerRandom";
 		$wgCentralBannerRecorder = "$urlprotocol//{$wmfHostnames['meta']}/wiki/Special:RecordImpression";
 	}
 
