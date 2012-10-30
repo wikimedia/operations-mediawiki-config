@@ -1,0 +1,174 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAB1H///9o\u003d",
+        "filename": "live-1.5/robots.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-30T18:32:08Z",
+      "side": 1,
+      "message": "$realm \u003d\u003d \u0027labs\u0027",
+      "revId": "0091399254b60bb891aa92714cd4fb39adb95150",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAB1H////s\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-30T18:32:08Z",
+      "side": 1,
+      "message": "Congratulations on phasing out the old $cluster value which did not make sense (production used \u0027pmtpa\u0027 and beta used \u0027wmflabs\u0027 which does not make any sense).\n\nNote that labs server can be either hosted in pmtpa or eqiad so we want to detect whether we are on beta by using $realm \u003d\u003d \u0027labs\u0027 regardless of the ops site (our $datacenter). That means that any:\n\n $datacenter \u003d\u003d \u0027wmflabs\u0027\n\nshould be replaced with:\n\n $realm \u003d\u003d \u0027labs\u0027\n\n:-(",
+      "revId": "0091399254b60bb891aa92714cd4fb39adb95150",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAB1H////o\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-30T18:32:08Z",
+      "side": 1,
+      "message": "fine, use the same method we used to retrieve the realm.",
+      "revId": "0091399254b60bb891aa92714cd4fb39adb95150",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAB1H////Y\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-30T18:32:08Z",
+      "side": 1,
+      "message": "We almost never die(). The reason is that if something goes wrong the Apache all send that message which in turns get cached in the frontend squid/varnish. That requires us to do a full purge of the caches and cause major havok since all requests are sent to the Apache backends which requires ton of processing and hence the site eventually goes down.\n\nWe should provide sane default instead such as assuming the $realm is \u0027production\u0027 and $datacenter is \u0027pmtpa\u0027. At worth, that means the eqiad production server will use the pmtpa configuration. That will degrade the service a bit but probably not so much as to cause a downtime.",
+      "revId": "0091399254b60bb891aa92714cd4fb39adb95150",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAB1H////A\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1810,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-30T18:32:08Z",
+      "side": 1,
+      "message": "We probably want to use $realm there.",
+      "revId": "0091399254b60bb891aa92714cd4fb39adb95150",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAB1H///+w\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2406,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-30T18:32:08Z",
+      "side": 1,
+      "message": "switch on $realm :-)",
+      "revId": "0091399254b60bb891aa92714cd4fb39adb95150",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAB1H///+A\u003d",
+        "filename": "wmf-config/db-wmflabs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-30T18:32:08Z",
+      "side": 1,
+      "message": "$realm \u003d\u003d \u0027labs\u0027",
+      "revId": "0091399254b60bb891aa92714cd4fb39adb95150",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAB1H///94\u003d",
+        "filename": "wmf-config/mc-wmflabs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-30T18:32:08Z",
+      "side": 1,
+      "message": "$realm \u003d\u003d \u0027labs\u0027",
+      "revId": "0091399254b60bb891aa92714cd4fb39adb95150",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAB1H///9w\u003d",
+        "filename": "wmf-config/mobile-wmflabs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-30T18:32:08Z",
+      "side": 1,
+      "message": "$realm \u003d\u003d \u0027labs\u0027",
+      "revId": "0091399254b60bb891aa92714cd4fb39adb95150",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAB1H///9s\u003d",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-10-30T18:32:08Z",
+      "side": 1,
+      "message": "$realm \u003d\u003d \u0027production\u0027",
+      "revId": "0091399254b60bb891aa92714cd4fb39adb95150",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
