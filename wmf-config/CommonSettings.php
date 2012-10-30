@@ -343,11 +343,6 @@ $wgResourceLoaderValidateJS = false;
 
 $wgMiserMode = true;
 
-# This is overridden in the Lucene section below
-$wgDisableTextSearch   = true;
-$wgDisableSearchUpdate = true;
-$wgDisableCounters     = true;
-
 # Object cache and session settings
 
 $wgObjectCaches['mysql-multiwrite'] = array(
@@ -1272,23 +1267,30 @@ if ( in_array( $wgLanguageCode, array( 'commons', 'meta', 'sources', 'species', 
 	$wgLanguageCode = 'en';
 }
 
+$wgDisableCounters     = true;
+
+wfProfileOut( "$fname-misc2" );
+
+if ( $wgDBname != 'wikidatawiki' ) {
+# This is overridden in the Lucene section below
+$wgDisableTextSearch   = true;
+$wgDisableSearchUpdate = true;
+
 # :SEARCH:
 switch( $cluster ) {
 case 'pmtpa':
-	$wgUseLuceneSearch = $wgDBname != 'wikidatawiki';
+	$wgUseLuceneSearch = true;
 	break;
 case 'wmflabs':
 	$wgUseLuceneSearch = false;
 	break;
 }
 
-wfProfileOut( "$fname-misc2" );
-
-
 if ( $wgUseLuceneSearch ) {
 	wfProfileIn( "$fname-lucene" );
 	include( "$wmfConfigDir/lucene.php" );
 	wfProfileOut( "$fname-lucene" );
+}
 }
 
 // Case-insensitive title prefix search extension
