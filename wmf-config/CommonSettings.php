@@ -1789,10 +1789,12 @@ if ( $wmgUseCentralNotice ) {
 	// for banner loading
 	if ( $wgDBname == 'testwiki' ) {
 		$wgCentralPagePath = "$urlprotocol//test.wikipedia.org/w/index.php";
-		$wgCentralBannerDispatcher = "$urlprotocol//test.wikipedia.org/wiki/Special:BannerLoader";
+		$wgCentralBannerDispatcher = "$urlprotocol//test.wikipedia.org/wiki/Special:BannerRandom";
+		$wgCentralBannerRecorder = "$urlprotocol//test.wikipedia.org/wiki/Special:RecordImpression";
 	} else {
 		$wgCentralPagePath = "$urlprotocol//{$wmfHostnames['meta']}/w/index.php";
-		$wgCentralBannerDispatcher = "$urlprotocol//{$wmfHostnames['meta']}/wiki/Special:BannerLoader";
+		$wgCentralBannerDispatcher = "$urlprotocol//{$wmfHostnames['meta']}/wiki/Special:BannerRandom";
+		$wgCentralBannerRecorder = "$urlprotocol//{$wmfHostnames['meta']}/wiki/Special:RecordImpression";
 	}
 
 	$wgNoticeProject = $wmgNoticeProject;
