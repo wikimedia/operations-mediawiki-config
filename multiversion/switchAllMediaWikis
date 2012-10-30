@@ -19,7 +19,7 @@ require_once( dirname( __FILE__ ) . '/MWWikiversions.php' );
 function switchAllMediaWikis() {
 	global $argv;
 	$common = MULTIVER_COMMON_HOME;
-	$datPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.dat';
+	$datPath = getRealmSpecifcFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
 
 	$argsValid = false;
 	if ( count( $argv ) >= 4 ) {
@@ -72,9 +72,9 @@ function switchAllMediaWikis() {
 
 	# Update wikiversions.dat...
 	if ( !file_put_contents( $datPath, $newWikiVersionsData, LOCK_EX ) ) {
-		die( "Unable to write to wikiversions.dat.\n" );
+		die( "Unable to write to $datPath.\n" );
 	}
-	echo "Updated wikiversions.dat.\n";
+	echo "Updated $datPath.\n";
 
 	# Rebuild wikiversions.cdb...
 	$retVal = 1;

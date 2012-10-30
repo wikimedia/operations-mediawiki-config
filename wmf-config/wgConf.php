@@ -20,9 +20,8 @@ $wgConf->suffixes = array(
 	'wikivoyage',
 );
 
-switch( $cluster ) {
-	case 'pmtpa':
-		$all = "$IP/../all.dblist";
+switch( $wmfRealm ) {
+	case 'production':
 		$wgConf->localVHosts = array(
 			'wikipedia.org',
 			'wiktionary.org',
@@ -37,10 +36,9 @@ switch( $cluster ) {
 			'meta.wikimedia.org', // Presumably needed to load meta spam list. Any others?
 			'commons.wikimedia.org',
 		);
-	break;
+		break;
 
-	case 'wmflabs':
-		$all = "$IP/../all-wmflabs.dblist";
+	case 'labs':
 		$wgConf->localVHosts = array(
 			'wikipedia.beta.wmflabs.org',
 			'wiktionary.beta.wmflabs.org',
@@ -55,12 +53,12 @@ switch( $cluster ) {
 			'incubator.wikimedia.beta.wmflabs.org',
 			'commons.wikimedia.beta.wmflabs.org',
 		);
-	break;
+		break;
 
 	default:
 }
 
-$wgConf->wikis = array_map( 'trim', file( $all ) );
+$wgConf->wikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../all.dblist" ) ) );
 
 $wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
 
