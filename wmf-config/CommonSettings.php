@@ -428,6 +428,7 @@ $wgTiffUseTiffinfo = true;
 $wgTiffMaxMetaSize = 1048576;
 
 $wgMaxImageArea = 2.5e7; // 25MP
+$wgMaxAnimatedGifArea = 2.5e7; // 25MP
 
 if ( $wgDBname == 'foundationwiki' ) { # per cary on 2010-05-11
    $wgFileExtensions[] = 'otf';
