@@ -6,9 +6,9 @@
 # This file hold configuration statement overriding CommonSettings.php
 # Should not be loaded on production
 
-if( $cluster == 'wmflabs' ) {  # safe guard
+if( $wmfRealm == 'labs' ) {  # safe guard
 
-	include( "logging-wmflabs.php" );
+	include( "logging-labs.php" );
 
 // test wiki
 if ( $wgDBname == 'testwiki' ) {
@@ -21,6 +21,8 @@ if( file_exists( '/etc/wmflabs-instancename' ) ) {
 }
 
 $wgDebugTimestamps=true;
+
+$wmgAddWikiNotify = false;
 
 # see r110254 and bug 33746
 $wgPreloadJavaScriptMwUtil = true;
