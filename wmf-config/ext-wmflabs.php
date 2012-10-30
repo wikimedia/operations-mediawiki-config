@@ -9,7 +9,7 @@
 #
 #######################################################################
 
-if( $cluster === 'wmflabs' ) {   # safeguard
+if( $realm === 'labs' ) {   # safeguard
 
 // Deployed by Petrb as a part of review.
 // This extension is scheduled for review and deployment on enwiki

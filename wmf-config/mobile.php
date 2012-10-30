@@ -3,7 +3,7 @@
 # WARNING: This file is publically viewable on the web.
 # # Do not put private data here.
 
-if( $cluster === 'pmtpa' ) {  # safeguard
+if( $realm === 'production' ) {  # safeguard
 
 if ( $wmgMobileFrontend ) {
 	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
