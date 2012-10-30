@@ -3,6 +3,7 @@
 error_reporting( 0 );
 
 require_once( dirname( __FILE__ ) . '/defines.php' );
+require_once( dirname( __FILE__ ) . '/MWRealm.php' );
 require_once( dirname( __FILE__ ) . '/MWWikiversions.php' );
 
 /*
@@ -24,9 +25,9 @@ function getActiveWikiVersions() {
 	array_shift( $options ); // first item is this file
 
 	if ( in_array( '--home', $options ) ) {
-		$datPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.dat';
+		$datPath = getRealmSpecifcFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
 	} else {
-		$datPath = MULTIVER_CDB_DIR_APACHE . '/wikiversions.dat';
+		$datPath = getRealmSpecifcFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
 	}
 
 	# Get all the wikiversion rows in wikiversions.dat...
