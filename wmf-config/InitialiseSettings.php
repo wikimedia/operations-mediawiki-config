@@ -2853,9 +2853,6 @@ $wgConf->settings = array(
 	'nnwiki' => array(
 		 'WP' => NS_PROJECT,
 	),
-	'nowiki' => array(
-		'WP' => NS_PROJECT,
-	),
 	'nowikimedia' => array(
 		'Brukar' => NS_USER,
 		'Brukardiskusjon' => NS_USER_TALK,
