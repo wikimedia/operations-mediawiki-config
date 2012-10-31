@@ -11,8 +11,8 @@
  *
  */
 $wgMainCacheType = CACHE_MEMCACHED;
-if ( $wgDBname === 'testwiki' ) { // temporary hack
-	$wgMainCacheType = 'memcached-pecl';
+if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) { // temporary hack
+	$wgMainCacheType = 'memcached-multiwrite';
 }
 
 $wgMemCachedPersistent = false;
@@ -45,6 +45,15 @@ $wgObjectCaches['memcached-pecl'] = array(
 		'10.0.12.14:11211',
 		'10.0.12.15:11211',
 		'10.0.12.16:11211',
+	)
+);
+
+# Writes to both apache and mc* caches
+$wgObjectCaches['memcached-multiwrite'] = array(
+	'class'  => 'MultiWriteBagOStuff',
+	'caches' => array(
+		0 => array( 'factory' => 'ObjectCache::newMemcached' ), // apaches
+		1 => $wgObjectCaches['memcached-pecl'] // mc* servers
 	)
 );
 
