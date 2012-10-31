@@ -10239,15 +10239,15 @@ $wgConf->settings = array(
 
 'wmgUseMwEmbedSupport' => array(
 	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
+//	'testwiki' => true,
+//	'test2wiki' => true,
 ),
 
 // NOTE: TMH *requires* MwEmbedSupport to function
 'wmgUseTimedMediaHandler' => array(
 	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
+//	'testwiki' => true,
+//	'test2wiki' => true,
 ),
 
 'wmgUseVisualEditor' => array(
