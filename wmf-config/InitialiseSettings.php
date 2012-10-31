@@ -6136,6 +6136,12 @@ $wgConf->settings = array(
 	'viwiki' => array(
 		'licenses',
 	),
+	'wikidatawiki'  => array(
+		'mainpage',
+		'portal-url',
+		'villagepump-url',
+		'helppage',
+	),
 	'wikimaniawiki' => array( 'currentevents-url', 'portal-url' ), // back compat
 	'wikimania2005wiki' => array( 'currentevents-url', 'portal-url' ),
 	'wikimania2006wiki' => array( 'currentevents-url', 'portal-url' ),
