@@ -10002,7 +10002,6 @@ $wgConf->settings = array(
 	'wikiquote' => true,
 ),
 
-
 'wgOldChangeTagsIndex' => array(
 	'default' => true, // For compat with index on changetags table
 
@@ -10078,6 +10077,7 @@ $wgConf->settings = array(
 	'vecwikisource' => false,
 	'vepwiki' => false,
 	'vewikimedia' => false,
+	'wikidatawiki' => false,
 	'wikimania2010wiki' => false,
 	'wikimania2011wiki' => false,
 	'wikimania2012wiki' => false,
