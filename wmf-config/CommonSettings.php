@@ -1776,7 +1776,7 @@ function logPrefsPassword( $user, $pass, $status ) {
 }
 
 if ( file_exists( '/etc/wikimedia-image-scaler' ) ) {
-	$wgMaxShellMemory = 300000; // temp was 200M
+	$wgMaxShellMemory = 400000; // temp was 200M
 }
 $wgMaxShellTime = 50; // so it times out before PHP and curl and squid
 
