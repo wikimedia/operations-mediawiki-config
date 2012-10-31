@@ -957,6 +957,10 @@ if ( $wmgUseTimedMediaHandler ) {
 		$wgTimedTextNS = 102;
 	}
 	$wgEnableTranscode = false; // disabled initially
+	//enable on test2 for testing tmh1/2 setup
+	if ( $wgDBname == 'test2' ) {
+		$wgEnableTranscode = true;
+	}
 } else {
 	include( $IP . '/extensions/OggHandler/OggHandler.php' );
 }
