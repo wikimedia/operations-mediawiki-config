@@ -21,7 +21,6 @@ $IP/extensions/ClickTracking/ClickTracking.php
 $IP/extensions/CodeEditor/CodeEditor.php
 $IP/extensions/CodeReview/CodeReview.php
 $IP/extensions/Collection/Collection.php
-$IP/extensions/Contest/Contest.php
 $IP/extensions/CommunityApplications/CommunityApplications.php
 $IP/extensions/CommunityHiring/CommunityHiring.php
 $IP/extensions/CommunityVoice/CommunityVoice.php

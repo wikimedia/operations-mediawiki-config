@@ -2484,19 +2484,6 @@ if ( $wmgUseTranslationNotifications ) {
 	$wgTranslationNotificationsContactMethods['talkpage-elsewhere'] = true;
 }
 
-if ( $wmgUseContest ) {
-	require_once( "$IP/extensions/Contest/Contest.php" );
-
-	$egContestSettings['mailSender'] = 'codingchallenge@wikimedia.org';
-	$egContestSettings['mailSenderName'] = 'Wikimedia Coding Challenge Team';
-	$egContestSettings['contestDeletionEnabled'] = false;
-
-	$wgGroupPermissions['sysop'        ]['contestjudge'] = false;
-	$wgGroupPermissions['sysop'        ]['contestadmin'] = false;
-
-	$wgGroupPermissions['*'            ]['contestparticipant'] = true;
-}
-
 if ( $wmgUseVipsTest ) {
 	include( "$IP/extensions/VipsScaler/VipsScaler.php" );
 	include( "$IP/extensions/VipsScaler/VipsTest.php" );

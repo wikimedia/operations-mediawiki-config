@@ -11303,11 +11303,6 @@ $wgConf->settings = array(
 	'wikimania2012wiki' => true,
 	'wikimania2013wiki' => true,
 ),
-'wmgUseContest' => array(
-	'default' => false,
-	'testwiki' => true,
-	'mediawikiwiki' => true,
-),
 'wmgUseVipsTest' => array(
 	'default' => false,
 	'test2wiki' => true,
