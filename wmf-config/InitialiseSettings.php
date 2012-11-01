@@ -11293,7 +11293,6 @@ $wgConf->settings = array(
 'wmgUseContest' => array(
 	'default' => false,
 	'testwiki' => true,
-	'mediawikiwiki' => true,
 ),
 'wmgUseVipsTest' => array(
 	'default' => false,
