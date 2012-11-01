@@ -11376,11 +11376,13 @@ $wgConf->settings = array(
 'wmgEnablePageTriage' => array(
 	'default' => false,
 	'testwiki' => true,
+	'test2wiki' => true,
 	'enwiki' => true,
 ),
 'wmgPageTriageEnableCurationToolbar' => array(
 	'default' => false,
 	'testwiki' => true,
+	'test2wiki' => true,
 	'enwiki' => true,
 ),
 'wmgEnableInterwiki' => array(
