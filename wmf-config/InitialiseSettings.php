@@ -10235,6 +10235,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
+	'enwiki' => true,
 ),
 
 // NOTE: TMH *requires* MwEmbedSupport to function
@@ -10242,6 +10243,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
+	'enwiki' => true,
 ),
 
 'wmgUseVisualEditor' => array(
