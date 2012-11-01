@@ -11266,12 +11266,21 @@ $wgConf->settings = array(
 	'metawiki' => true,
 	'outreachwiki' => true,
 	'testwiki' => true,
+	'wikidatawiki' => true, // bug 41585
 	'wikimania2012wiki' => true, // bug 34120
 	'wikimania2013wiki' => true, // bug 36477
 ),
 'wmgTranslateWorkflowStates' => array(
 	'default' => false,
 	'metawiki' => array(
+		'progress' => array( 'color' => 'E00' ),
+		'needs-updating' => array( 'color' => 'FFBF00' ),
+		'updating' => array( 'color' => 'FFBF00' ),
+		'proofreading' => array( 'color' => 'FFBF00' ),
+		'ready' => array( 'color' => 'FF0' ),
+		'published' => array( 'color' => 'AEA' ),
+	),
+	'wikidatawiki' => array(
 		'progress' => array( 'color' => 'E00' ),
 		'needs-updating' => array( 'color' => 'FFBF00' ),
 		'updating' => array( 'color' => 'FFBF00' ),
@@ -11290,6 +11299,7 @@ $wgConf->settings = array(
 	'incubatorwiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
+	'wikidatawiki' => true, // bug 41585
 	'wikimania2012wiki' => true,
 	'wikimania2013wiki' => true,
 ),
