@@ -11472,9 +11472,12 @@ $wgConf->settings = array(
 	'dsbwiki' => true,
 	'enwiki' => true,
 	'eswiki' => true,
+	'fiwiki' => true,
+	'frwiki' => true,
 	'glwiki' => true,
 	'hewiki' => true,
 	'hsbwiki' => true,
+	'idwiki' => true,
 	'itwiki' => true,
 	'jawiki' => true,
 	'kowiki' => true,
@@ -11483,6 +11486,8 @@ $wgConf->settings = array(
 	'mswiki' => true,
 	'nlwiki' => true,
 	'plwiki' => true,
+	'tewiki' => true,
+	'viwiki' => true,
 ),
 
 'wmgUseReplaceText' => array(
