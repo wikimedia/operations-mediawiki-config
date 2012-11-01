@@ -6145,7 +6145,7 @@ $wgConf->settings = array(
 	'viwiki' => array(
 		'licenses',
 	),
-	'wikidatawiki'  => array(
+	'wikidatawiki' => array(
 		'mainpage',
 		'portal-url',
 		'villagepump-url',
