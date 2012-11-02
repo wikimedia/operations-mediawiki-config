@@ -190,7 +190,7 @@ if ( !$globals ) {
 
 	$wikiTags = array();
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'readonly' ) as $tag ) {
-		$dblist = array_map( 'trim', file( "$IP/../$tag.dblist" ) );
+		$dblist = array_map( 'trim', file( "$wmfConfigDir/../$tag.dblist" ) );
 		if ( in_array( $wgDBname, $dblist ) ) {
 			$wikiTags[] = $tag;
 		}
