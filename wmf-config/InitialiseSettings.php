@@ -9832,7 +9832,21 @@ $wgConf->settings = array(
 ),
 'wmgThumbsizeIndex' => array(
 	'default' => 4,
-	'svwiki' => 2, // bug 16739
+	'hewiki' => 5, // Bug 41712 (250px)
+	'svwiki' => 2, // bug 16739 (250px)
+),
+
+'wgGalleryOptions' => array(
+	'default' => array (
+		'imagesPerRow' => 0, // Adapt to screensize
+		'imageWidth' => 120,
+		'imageHeight' => 120,
+		'captionLength' => 25,
+	),
+	'hewiki' => array( // Bug 41712
+		'imageWidth' => 200,
+		'imageHeight' => 200,
+	),
 ),
 
 'wgTorTagChanges' => array(
