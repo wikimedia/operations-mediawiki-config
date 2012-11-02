@@ -4,8 +4,6 @@
 
 $wgConf = new SiteConfiguration;
 
-# Read wiki lists
-
 $wgConf->suffixes = array(
 	// 'wikipedia',
 	'wiki',
@@ -20,9 +18,10 @@ $wgConf->suffixes = array(
 	'wikivoyage',
 );
 
+# Read wiki lists
 switch( $cluster ) {
 	case 'pmtpa':
-		$all = "$IP/../all.dblist";
+		$all = "$wmfConfigDir/../all.dblist";
 		$wgConf->localVHosts = array(
 			'wikipedia.org',
 			'wiktionary.org',
@@ -40,7 +39,7 @@ switch( $cluster ) {
 	break;
 
 	case 'wmflabs':
-		$all = "$IP/../all-wmflabs.dblist";
+		$all = "$wmfConfigDir/../all-wmflabs.dblist";
 		$wgConf->localVHosts = array(
 			'wikipedia.beta.wmflabs.org',
 			'wiktionary.beta.wmflabs.org',

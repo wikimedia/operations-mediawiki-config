@@ -190,7 +190,7 @@ if ( !$globals ) {
 
 	$wikiTags = array();
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'readonly' ) as $tag ) {
-		$dblist = array_map( 'trim', file( "$IP/../$tag.dblist" ) );
+		$dblist = array_map( 'trim', file( "$wmfConfigDir/../$tag.dblist" ) );
 		if ( in_array( $wgDBname, $dblist ) ) {
 			$wikiTags[] = $tag;
 		}
@@ -864,9 +864,9 @@ include( $IP . '/extensions/wikihiero/wikihiero.php' );
 include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 // Config for sitematrix
 $wgSiteMatrixFile = '/apache/common/langlist';
-$wgSiteMatrixClosedSites = "$IP/../closed.dblist";
-$wgSiteMatrixPrivateSites = "$IP/../private.dblist";
-$wgSiteMatrixFishbowlSites = "$IP/../fishbowl.dblist";
+$wgSiteMatrixClosedSites = "$wmfConfigDir/../closed.dblist";
+$wgSiteMatrixPrivateSites = "$wmfConfigDir/../private.dblist";
+$wgSiteMatrixFishbowlSites = "$wmfConfigDir/../fishbowl.dblist";
 
 include( $IP . '/extensions/CharInsert/CharInsert.php' );
 
@@ -1674,9 +1674,9 @@ if ( $wmgUseCentralAuth ) {
 	$wgHooks['CentralAuthWikiList'][] = 'wmfCentralAuthWikiList';
 	function wmfCentralAuthWikiList( &$list ) {
 		global $wgLocalDatabases, $IP;
-		$privateWikis = array_map( 'trim', file( "$IP/../private.dblist" ) );
-		$fishbowlWikis = array_map( 'trim', file( "$IP/../fishbowl.dblist" ) );
-		$closedWikis = array_map( 'trim', file( "$IP/../closed.dblist" ) );
+		$privateWikis = array_map( 'trim', file( "$wmfConfigDir/../private.dblist" ) );
+		$fishbowlWikis = array_map( 'trim', file( "$wmfConfigDir/../fishbowl.dblist" ) );
+		$closedWikis = array_map( 'trim', file( "$wmfConfigDir/../closed.dblist" ) );
 		$list = array_diff( $wgLocalDatabases,
 			$privateWikis, $fishbowlWikis, $closedWikis );
 		return true;
@@ -2341,7 +2341,7 @@ if ( $wmgUseDisableAccount ) {
 
 if ( $wmgUseIncubator ) {
 	require_once( "$IP/extensions/WikimediaIncubator/WikimediaIncubator.php" );
-	$wmincClosedWikis = "$IP/../closed.dblist";
+	$wmincClosedWikis = "$wmfConfigDir/../closed.dblist";
 }
 
 if ( $wmgUseWikiLove ) {
