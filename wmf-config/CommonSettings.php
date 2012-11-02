@@ -958,7 +958,7 @@ if ( $wmgUseTimedMediaHandler ) {
 	}
 	$wgEnableTranscode = false; // disabled initially
 	//enable on test2 for testing tmh1/2 setup
-	if ( $wgDBname == 'test2' ) {
+	if ( $wgDBname == 'test2wiki' ) {
 		$wgEnableTranscode = true;
 	}
 } else {
