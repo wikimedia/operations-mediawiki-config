@@ -45,8 +45,6 @@ $wgDnsBlacklistUrls   = array(
 // So that people can easily test the captchas without making accounts -- Platonides
 $wgGroupPermissions['autoconfirmed']['skipcaptcha'] = false;
 
-$wgMaxShellMemory = 30000000;
-
 
 // Disable AFTv4 completely on beta labs --Chris McMahon
 
