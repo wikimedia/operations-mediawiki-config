@@ -66,13 +66,15 @@ if ( getenv( 'WIKIBACKUP' ) ) {
 
 ### Determine realm and cluster we are on #############################
 # $cluster is an historical variable used for the WMF MW conf
-$cluster = 'pmtpa';
+# Test suite might have injected a value already so we want to keep it.
+if(!isset($cluster)) { $cluster = 'pmtpa'; }
 
 # $realm should be the realm as puppet understand it.
 # The possible values as of June 2012 are:
 #  - labs
 #  - production
-$realm   = 'production';
+# Test suite might have injected a value already so we want to keep it.
+if(!isset($realm)) { $realm = 'production'; }
 
 # Puppet provision the realm in /etc/wikimedia-realm
 if( file_exists( '/etc/wikimedia-realm' ) ) {
@@ -124,8 +126,9 @@ $secure = getenv( 'MW_SECURE_HOST' );
 $wgDBname = $multiVersion->getDatabase();
 
 # wmf-config directory (in common/)
-$wmfConfigDir = "$IP/../wmf-config";
-
+if(!isset($wmfConfigDir)) {
+	$wmfConfigDir = "$IP/../wmf-config";
+}
 wfProfileOut( "$fname-host" );
 
 # Must be set before InitialiseSettings.php:
