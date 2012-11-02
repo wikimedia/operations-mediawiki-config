@@ -2447,6 +2447,9 @@ if ( $wmgUseTranslate ) {
 		);
 	}
 
+	$wgTranslateWorkflowStates = $wmgTranslateWorkflowStates;
+	$wgTranslateRcFilterDefault = $wmgTranslateRcFilterDefault;
+
 	$wgTranslateTasks = array(
 		'view'                 => 'ViewMessagesTask',
 		'untranslated'         => 'ViewUntranslatedTask',
