@@ -12,7 +12,7 @@ if ( defined( 'MEDIAWIKI' ) ) {
 	// with backend plugin only
 	# $wgDisableInternalSearch = false;
 	$wgSearchType = 'LuceneSearch';
-	require( $IP . '/extensions/MWSearch/MWSearch.php' );
+	require_once( $IP . '/extensions/MWSearch/MWSearch.php' );
 }
 
 $wgLuceneCacheExpiry = 12 * 3600; // 12 hours
@@ -51,7 +51,7 @@ $wgLuceneSearchExactCase = !$wgCapitalLinks;
 // off due to intermittent breakage which hangs saves -- brion 2005-09-14
 if ( getenv( 'MWSEARCH' ) ) {
 	if ( defined( 'MEDIAWIKI' ) ) {
-		require( $IP . '/extensions/MWSearch/MWSearchUpdateHook.php' );
+		require_once( $IP . '/extensions/MWSearch/MWSearchUpdateHook.php' );
 	}
 	$mwSearchUpdateHost = '10.0.0.16'; // maurus
 }

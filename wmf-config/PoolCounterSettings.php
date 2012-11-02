@@ -2,7 +2,7 @@
 
 if ( !defined( 'MEDIAWIKI' ) ) exit( 1 );
 
-include( "$IP/extensions/PoolCounter/PoolCounterClient.php" );
+include_once( "$IP/extensions/PoolCounter/PoolCounterClient.php" );
 
 $wgPoolCountClientConf = array(
 	'servers' => array(

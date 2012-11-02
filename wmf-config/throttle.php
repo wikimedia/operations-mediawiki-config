@@ -99,7 +99,7 @@ function efRaiseAccountCreationThrottle() {
 // disabled temporarily due to tugela bug -- Tim
 
 if ( false /*$lang == 'zh' || $lang == 'en'*/ ) {
-	require( "$IP/extensions/UserThrottle/UserThrottle.php" );
+	require_once( "$IP/extensions/UserThrottle/UserThrottle.php" );
 	$wgGlobalAccountCreationThrottle = array(
 /*
 		'min_interval' => 30,   // Hard minimum time between creations (default 5)

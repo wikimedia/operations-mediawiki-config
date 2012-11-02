@@ -423,7 +423,7 @@ $wgFileExtensions[] = 'ogv'; # Ogg audio & video
 $wgFileExtensions[] = 'svg';
 $wgFileExtensions[] = 'djvu'; # DjVu images/documents
 
-include( $IP . '/extensions/PagedTiffHandler/PagedTiffHandler.php' );
+include_once( $IP . '/extensions/PagedTiffHandler/PagedTiffHandler.php' );
 $wgTiffUseTiffinfo = true;
 $wgTiffMaxMetaSize = 1048576;
 
@@ -849,7 +849,7 @@ if ( $wmgUseCORS ) {
 wfProfileOut( "$fname-misc1" );
 wfProfileIn( "$fname-ext-include1" );
 
-include( $IP . '/extensions/timeline/Timeline.php' );
+include_once( $IP . '/extensions/timeline/Timeline.php' );
 if ( $wgDBname == 'testwiki' || $wgDBname == 'mlwiki' ) {
 	// FreeSansWMF has been generated from FreeSans and FreeSerif by using this script with fontforge:
 	// Open("FreeSans.ttf");
@@ -860,42 +860,42 @@ if ( $wgDBname == 'testwiki' || $wgDBname == 'mlwiki' ) {
 }
 $wgTimelineSettings->fileBackend = 'local-multiwrite';
 
-include( $IP . '/extensions/wikihiero/wikihiero.php' );
-include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
+include_once( $IP . '/extensions/wikihiero/wikihiero.php' );
+include_once( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 // Config for sitematrix
 $wgSiteMatrixFile = '/apache/common/langlist';
 $wgSiteMatrixClosedSites = "$IP/../closed.dblist";
 $wgSiteMatrixPrivateSites = "$IP/../private.dblist";
 $wgSiteMatrixFishbowlSites = "$IP/../fishbowl.dblist";
 
-include( $IP . '/extensions/CharInsert/CharInsert.php' );
+include_once( $IP . '/extensions/CharInsert/CharInsert.php' );
 
-include( $IP . '/extensions/ParserFunctions/ParserFunctions.php' );
+include_once( $IP . '/extensions/ParserFunctions/ParserFunctions.php' );
 $wgMaxIfExistCount = 500; // obs
 $wgExpensiveParserFunctionLimit = 500;
 
 // <ref> and <references> tags -ævar, 2005-12-23
-require( $IP . '/extensions/Cite/Cite.php' );
-require( $IP . '/extensions/Cite/SpecialCite.php' );
+require_once( $IP . '/extensions/Cite/Cite.php' );
+require_once( $IP . '/extensions/Cite/SpecialCite.php' );
 
 # Inputbox extension for searching or creating articles
-include( $IP . '/extensions/InputBox/InputBox.php' );
+include_once( $IP . '/extensions/InputBox/InputBox.php' );
 
-include( $IP . '/extensions/ExpandTemplates/ExpandTemplates.php' );
+include_once( $IP . '/extensions/ExpandTemplates/ExpandTemplates.php' );
 
-include( $IP . '/extensions/ImageMap/ImageMap.php' );
-include( $IP . '/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php' );
+include_once( $IP . '/extensions/ImageMap/ImageMap.php' );
+include_once( $IP . '/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php' );
 
 // Experimental side-by-side comparison extension for wikisource. enabled brion 2006-01-13
 if ( $wmgUseDoubleWiki ) {
-	include( $IP . '/extensions/DoubleWiki/DoubleWiki.php' );
+	include_once( $IP . '/extensions/DoubleWiki/DoubleWiki.php' );
 }
 
 # Poem
-include( $IP . '/extensions/Poem/Poem.php' );
+include_once( $IP . '/extensions/Poem/Poem.php' );
 
 if ( $wgDBname == 'testwiki' ) {
-	include( $IP . '/extensions/UnicodeConverter/UnicodeConverter.php' );
+	include_once( $IP . '/extensions/UnicodeConverter/UnicodeConverter.php' );
 }
 
 // Per-wiki config for Flagged Revisions
@@ -905,19 +905,19 @@ if ( $wmgUseFlaggedRevs ) {
 
 $wgUseAjax = true;
 $wgCategoryTreeDynamicTag = true;
-require( $IP . '/extensions/CategoryTree/CategoryTree.php' );
+require_once( $IP . '/extensions/CategoryTree/CategoryTree.php' );
 $wgCategoryTreeDisableCache = false;
 
 if ( $wmgUseProofreadPage ) {
-	include( $IP . '/extensions/ProofreadPage/ProofreadPage.php' );
+	include_once( $IP . '/extensions/ProofreadPage/ProofreadPage.php' );
 	include( "$wmfConfigDir/proofreadpage.php" );
 }
 if ( $wmgUseLST ) {
-	include( $IP . '/extensions/LabeledSectionTransclusion/lst.php' );
+	include_once( $IP . '/extensions/LabeledSectionTransclusion/lst.php' );
 }
 
 if ( $wmgUseSpamBlacklist ) {
-	include( $IP . '/extensions/SpamBlacklist/SpamBlacklist.php' );
+	include_once( $IP . '/extensions/SpamBlacklist/SpamBlacklist.php' );
 	$wgBlacklistSettings = array(
 		'spam' => array(
 			'files' => array(
@@ -927,8 +927,8 @@ if ( $wmgUseSpamBlacklist ) {
 	);
 }
 
-include( $IP . '/extensions/UploadBlacklist/UploadBlacklist.php' );
-include( $IP . '/extensions/TitleBlacklist/TitleBlacklist.php' );
+include_once( $IP . '/extensions/UploadBlacklist/UploadBlacklist.php' );
+include_once( $IP . '/extensions/TitleBlacklist/TitleBlacklist.php' );
 
 $wgTitleBlacklistSources = array(
 	array(
@@ -938,11 +938,11 @@ $wgTitleBlacklistSources = array(
 );
 
 if ( $wmgUseQuiz ) {
-   include( "$IP/extensions/Quiz/Quiz.php" );
+   include_once( "$IP/extensions/Quiz/Quiz.php" );
 }
 
 if ( $wmgUseGadgets ) {
-	include( "$IP/extensions/Gadgets/Gadgets.php" );
+	include_once( "$IP/extensions/Gadgets/Gadgets.php" );
 }
 
 
@@ -958,28 +958,28 @@ if ( $wmgUseTimedMediaHandler ) {
 	}
 	$wgEnableTranscode = false; // disabled initially
 } else {
-	include( $IP . '/extensions/OggHandler/OggHandler.php' );
+	include_once( $IP . '/extensions/OggHandler/OggHandler.php' );
 }
 
 $wgOggThumbLocation = '/usr/bin/oggThumb';
 
-include( $IP . '/extensions/AssertEdit/AssertEdit.php' );
+include_once( $IP . '/extensions/AssertEdit/AssertEdit.php' );
 
 if ( $wgDBname == 'collabwiki' || $wgDBname == 'donatewiki' ) {
 	$wgUseTidy = false;
 }
 
 if ( $wgUseContactPageFundraiser ) {
-	include( "$IP/extensions/ContactPageFundraiser/ContactPage.php" );
+	include_once( "$IP/extensions/ContactPageFundraiser/ContactPage.php" );
 	$wgContactUser = 'Storiescontact';
 }
 
 if ( $wgDBname == 'foundationwiki' ) {
-	include( "$IP/extensions/FormPreloadPostCache/FormPreloadPostCache.php" );
-	include( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
-	include( "$IP/extensions/skins/Schulenburg/Schulenburg.php" );
-	include( "$IP/extensions/skins/Tomas/Tomas.php" );
-	include( "$IP/extensions/skins/Donate/Donate.php" );
+	include_once( "$IP/extensions/FormPreloadPostCache/FormPreloadPostCache.php" );
+	include_once( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
+	include_once( "$IP/extensions/skins/Schulenburg/Schulenburg.php" );
+	include_once( "$IP/extensions/skins/Tomas/Tomas.php" );
+	include_once( "$IP/extensions/skins/Donate/Donate.php" );
 
 	$wgUseTidy = false;
 
@@ -1051,8 +1051,8 @@ if ( $wgDBname == 'foundationwiki' ) {
 }
 
 if ( $wmgUseContributionReporting ) {
-	include( "$IP/extensions/ContributionReporting/ContributionReporting.php" );
-	include( "$wmfConfigDir/reporting-setup.php" );
+	include_once( "$IP/extensions/ContributionReporting/ContributionReporting.php" );
+	include_once( "$wmfConfigDir/reporting-setup.php" );
 }
 
 if ( $wmgPFEnableStringFunctions ) {
@@ -1060,7 +1060,7 @@ if ( $wmgPFEnableStringFunctions ) {
 }
 
 if ( $wgDBname == 'mediawikiwiki' ) {
-	include( "$IP/extensions/ExtensionDistributor/ExtensionDistributor.php" );
+	include_once( "$IP/extensions/ExtensionDistributor/ExtensionDistributor.php" );
 	$wgExtDistTarDir = '/mnt/upload7/ext-dist';
 	$wgExtDistTarUrl = "$urlprotocol//upload.wikimedia.org/ext-dist";
 	$wgExtDistWorkingCopy = '/mnt/upload7/private/ExtensionDistributor/mw-snapshot';
@@ -1132,19 +1132,19 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 	);
 }
 
-include( $IP . '/extensions/GlobalBlocking/GlobalBlocking.php' );
+include_once( $IP . '/extensions/GlobalBlocking/GlobalBlocking.php' );
 $wgGlobalBlockingDatabase = 'centralauth';
 $wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
 
-include( $IP . '/extensions/TrustedXFF/TrustedXFF.php' );
+include_once( $IP . '/extensions/TrustedXFF/TrustedXFF.php' );
 $wgTrustedXffFile = "$IP/cache/trusted-xff.cdb";
 
 if ( $wmgContactPageConf ) {
-	include( $IP . '/extensions/ContactPage/ContactPage.php' );
+	include_once( $IP . '/extensions/ContactPage/ContactPage.php' );
 	extract( $wmgContactPageConf );
 }
 
-include( $IP . '/extensions/SecurePoll/SecurePoll.php' );
+include_once( $IP . '/extensions/SecurePoll/SecurePoll.php' );
 
 $wgHooks['SecurePoll_JumpUrl'][] = 'wmfSecurePollJumpUrl';
 
@@ -1158,7 +1158,7 @@ function wmfSecurePollJumpUrl( $page, &$url ) {
 // Email capture
 // NOTE: Must be BEFORE ArticleFeedback
 if ( $wgUseEmailCapture ) {
-	include( "$IP/extensions/EmailCapture/EmailCapture.php" );
+	include_once( "$IP/extensions/EmailCapture/EmailCapture.php" );
 	$wgEmailCaptureAutoResponse['from'] = 'improve@wikimedia.org';
 }
 
@@ -1300,7 +1300,7 @@ if ( $wgUseLuceneSearch ) {
 // when available (for OpenSearch suggestions and AJAX search mode)
 // But note we still need TitleKey for "go" exact matches and similar.
 if ( $wmgUseTitleKey ) {
-	include "$IP/extensions/TitleKey/TitleKey.php";
+	include_once "$IP/extensions/TitleKey/TitleKey.php";
 }
 
 wfProfileIn( "$fname-misc3" );
@@ -1325,7 +1325,7 @@ $wgCacheEpoch = '20120908000000';
 $wgThumbnailEpoch = '20120101000000';
 
 # OAI repository for update server
-include( $IP . '/extensions/OAI/OAIRepo.php' );
+include_once( $IP . '/extensions/OAI/OAIRepo.php' );
 $oaiAgentRegex = '/experimental/';
 $oaiAuth = true; # broken... squid? php config? wtf
 $oaiAudit = true;
@@ -1363,21 +1363,21 @@ wfProfileOut( "$fname-misc3" );
 wfProfileIn( "$fname-ext-include2" );
 
 if ( $wmgUseDPL ) {
-	include( $IP . '/extensions/intersection/DynamicPageList.php' );
+	include_once( $IP . '/extensions/intersection/DynamicPageList.php' );
 }
 
-include( $IP . '/extensions/Renameuser/Renameuser.php' );
+include_once( $IP . '/extensions/Renameuser/Renameuser.php' );
 
 if ( $wmgUseSpecialNuke ) {
-	include( $IP . '/extensions/Nuke/Nuke.php' );
+	include_once( $IP . '/extensions/Nuke/Nuke.php' );
 }
 
-include( "$IP/extensions/AntiBot/AntiBot.php" );
+include_once( "$IP/extensions/AntiBot/AntiBot.php" );
 $wgAntiBotPayloads = array(
 	'default' => array( 'log', 'fail' ),
 );
 
-include( "$IP/extensions/TorBlock/TorBlock.php" );
+include_once( "$IP/extensions/TorBlock/TorBlock.php" );
 $wgTorLoadNodes = false;
 $wgTorIPs = array( '91.198.174.232', '208.80.152.2', '208.80.152.134' );
 $wgTorAutoConfirmAge = 90 * 86400;
@@ -1387,7 +1387,7 @@ $wgTorTagChanges = false;
 $wgGroupPermissions['user']['torunblocked'] = false;
 
 if ( $wmgUseRSSExtension ) {
-	include( "$IP/extensions/RSS/RSS.php" );
+	include_once( "$IP/extensions/RSS/RSS.php" );
 	# $wgRSSProxy = 'url-downloader.wikimedia.org:8080';
 	$wgRSSAllowedFeeds = $wmgRSSAllowedFeeds;
 }
@@ -1493,8 +1493,8 @@ if ( isset( $_REQUEST['captchabypass'] ) && $_REQUEST['captchabypass'] == $wmgCa
 }
 
 if ( $wmgEnableCaptcha ) {
-	require( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
-	require( "$IP/extensions/ConfirmEdit/FancyCaptcha.php" );
+	require_once( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
+	require_once( "$IP/extensions/ConfirmEdit/FancyCaptcha.php" );
 	$wgGroupPermissions['autoconfirmed']['skipcaptcha'] = true;
 #	$wgCaptchaTriggers['edit'] = true;
 	$wgCaptchaSecret = $wmgCaptchaSecret;
@@ -1544,7 +1544,7 @@ if ( $wmgEnableCaptcha ) {
 	}
 }
 
-require( "$IP/extensions/Oversight/HideRevision.php" );
+require_once( "$IP/extensions/Oversight/HideRevision.php" );
 $wgGroupPermissions['oversight']['hiderevision'] = false;
 // $wgGroupPermissions['oversight']['oversight'] = true;
 
@@ -1575,7 +1575,7 @@ if ( isset( $sectionLoads ) ) {
 $wgDebugLogGroups["query"] = "udp://$wmfUdp2logDest/botquery";
 
 // Username spoofing / mixed-script / similarity check detection
-include $IP . '/extensions/AntiSpoof/AntiSpoof.php';
+include_once $IP . '/extensions/AntiSpoof/AntiSpoof.php';
 // $wgAntiSpoofAccounts = false; // log only for now
 $wgDebugLogGroups['antispoof'] = "udp://$wmfUdp2logDest/antispoof";
 
@@ -1584,7 +1584,7 @@ ini_set( 'user_agent', 'Wikimedia internal server fetcher (noc@wikimedia.org' );
 
 // CentralAuth
 if ( $wmgUseCentralAuth ) {
-	include "$IP/extensions/CentralAuth/CentralAuth.php";
+	include_once "$IP/extensions/CentralAuth/CentralAuth.php";
 
 //	$wgDebugLogGroups['CentralAuth'] = 'udp://10.0.5.8:8420/CentralAuth';
 
@@ -1699,7 +1699,7 @@ if ( $wmgUseCentralAuth ) {
 
 // taking it live 2006-12-15 brion
 if ( $wmgUseDismissableSiteNotice ) {
-	require( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
+	require_once( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
 }
 $wgMajorSiteNoticeID = '2';
 
@@ -1791,7 +1791,7 @@ if ( $cluster == 'wmflabs' && file_exists( '/etc/wikimedia-transcoding' ) ) {
 
 // Banner notice system
 if ( $wmgUseCentralNotice ) {
-	include "$IP/extensions/CentralNotice/CentralNotice.php";
+	include_once "$IP/extensions/CentralNotice/CentralNotice.php";
 
 	// for DNS prefetching
 	$wgCentralHost = "$urlprotocol//{$wmfHostnames['meta']}";
@@ -1851,9 +1851,9 @@ if ( $wmgSetNoticeHideBannersExpiration && $wmgUseCentralNotice ) {
 }
 
 // Load our site-specific l10n extensions
-include "$IP/extensions/WikimediaMessages/WikimediaMessages.php";
+include_once "$IP/extensions/WikimediaMessages/WikimediaMessages.php";
 if ( $wmgUseWikimediaLicenseTexts ) {
-	include "$IP/extensions/WikimediaMessages/WikimediaLicenseTexts.php";
+	include_once "$IP/extensions/WikimediaMessages/WikimediaLicenseTexts.php";
 }
 
 function wfNoDeleteMainPage( &$title, &$user, $action, &$result ) {
@@ -1877,16 +1877,16 @@ if ( $wgDBname == 'enwiki' ) {
 }
 
 // PHP language binding to make Swift accessible via cURL
-include "$IP/extensions/SwiftCloudFiles/SwiftCloudFiles.php";
+include_once "$IP/extensions/SwiftCloudFiles/SwiftCloudFiles.php";
 
 // Quickie extension that addsa  bogus field to edit form and whinges if it's filled out
 // Might or might not do anything useful :D
 // Enabling just to log to udp://$wmfUdp2logDest/spam
-include "$IP/extensions/SimpleAntiSpam/SimpleAntiSpam.php";
+include_once "$IP/extensions/SimpleAntiSpam/SimpleAntiSpam.php";
 
 if ( $wmgUseCollection ) {
 	// PediaPress / PDF generation
-	include "$IP/extensions/Collection/Collection.php";
+	include_once "$IP/extensions/Collection/Collection.php";
 	$wgCollectionMWServeURL = "http://pdf1.wikimedia.org:8080/mw-serve/";
 
 	// MediaWiki namespace is not a good default
@@ -1922,7 +1922,7 @@ if ( $wmgUseCollection ) {
 	$wgCollectionPortletFormats = $wmgCollectionPortletFormats;
 }
 
-include( "$IP/extensions/OpenSearchXml/OpenSearchXml.php" );
+include_once( "$IP/extensions/OpenSearchXml/OpenSearchXml.php" );
 
 # Various system to allow/prevent flooding
 # (including exemptions for scheduled outreach events)
@@ -1930,14 +1930,14 @@ require( "$wmfConfigDir/throttle.php" );
 
 
 if ( $wmgUseNewUserMessage ) {
-	include "$IP/extensions/NewUserMessage/NewUserMessage.php";
+	include_once "$IP/extensions/NewUserMessage/NewUserMessage.php";
 	$wgNewUserSuppressRC = $wmgNewUserSuppressRC;
 	$wgNewUserMinorEdit = $wmgNewUserMinorEdit;
 	$wgNewUserMessageOnAutoCreate = $wmgNewUserMessageOnAutoCreate;
 }
 
 if ( $wmgUseCodeReview ) {
-	include "$IP/extensions/CodeReview/CodeReview.php";
+	include_once "$IP/extensions/CodeReview/CodeReview.php";
 	include( "$wmfConfigDir/codereview.php" );
 	$wgSubversionProxy = 'http://codereview-proxy.wikimedia.org/index.php';
 
@@ -1969,7 +1969,7 @@ if ( $wmgUseCodeReview ) {
 }
 
 if ( $wmgUseAbuseFilter ) {
-	include "$IP/extensions/AbuseFilter/AbuseFilter.php";
+	include_once "$IP/extensions/AbuseFilter/AbuseFilter.php";
 	include( "$wmfConfigDir/abusefilter.php" );
 
 	$wgAbuseFilterEmergencyDisableThreshold = $wmgAbuseFilterEmergencyDisableThreshold;
@@ -1978,21 +1978,21 @@ if ( $wmgUseAbuseFilter ) {
 }
 
 if ( $wmgUseCommunityVoice ) {
-	include ( "$IP/extensions/ClientSide/ClientSide.php" );
-	include ( "$IP/extensions/CommunityVoice/CommunityVoice.php" );
+	include_once( "$IP/extensions/ClientSide/ClientSide.php" );
+	include_once( "$IP/extensions/CommunityVoice/CommunityVoice.php" );
 }
 
 if ( $wmgUsePdfHandler ) {
-	include ( "$IP/extensions/PdfHandler/PdfHandler.php" );
+	include_once( "$IP/extensions/PdfHandler/PdfHandler.php" );
 }
 
 if ( $wmgUseUsabilityInitiative ) {
 
 	$wgNavigableTOCCollapseEnable = true;
 	$wgNavigableTOCResizable = true;
-	require( "$IP/extensions/Vector/Vector.php" );
+	require_once( "$IP/extensions/Vector/Vector.php" );
 
-	require( "$IP/extensions/WikiEditor/WikiEditor.php" );
+	require_once( "$IP/extensions/WikiEditor/WikiEditor.php" );
 
 	// Uncomment this line for debugging only
 	// if ( $wgDBname == 'testwiki' ) { $wgUsabilityInitiativeResourceMode = 'raw'; }
@@ -2252,8 +2252,8 @@ function wmfBlockJokerEmails( &$to, &$from, &$subject, &$text ) {
 
 // ContributionTracking for handling PayPal redirects
 if ( $wgUseContributionTracking ) {
-	include( "$IP/extensions/ContributionTracking/ContributionTracking.php" );
-	include( "$wmfConfigDir/contribution-tracking-setup.php" );
+	include_once( "$IP/extensions/ContributionTracking/ContributionTracking.php" );
+	include_once( "$wmfConfigDir/contribution-tracking-setup.php" );
 	$wgContributionTrackingPayPalIPN = "https://civicrm.wikimedia.org/fundcore_gateway/paypal";
 	$wgContributionTrackingPayPalRecurringIPN = "https://civicrm.wikimedia.org/IPNListener_Recurring.php";
 	$wgContributionTrackingUTMKey = true;
@@ -2314,7 +2314,7 @@ if ( $wmgUseWebFonts ) {
 }
 
 if ( $wmgUseGoogleNewsSitemap ) {
-	include( "$IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php" );
+	include_once( "$IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php" );
 	$wgGNSMfallbackCategory = $wmgGNSMfallbackCategory;
 	$wgGNSMcommentNamespace = $wmgGNSMcommentNamespace;
 }
@@ -2386,7 +2386,7 @@ case 'wmflabs':
 
 
 if ( $wmgUseSubPageList3 ) {
-	include( "$IP/extensions/SubPageList3/SubPageList3.php" );
+	include_once( "$IP/extensions/SubPageList3/SubPageList3.php" );
 }
 
 $wgFooterIcons["poweredby"]["mediawiki"]["url"] = "//www.mediawiki.org/";
@@ -2433,7 +2433,7 @@ if ( $wmgUseTranslate ) {
 
 	$wgTranslateTranslationServices = array();
 	if ( $wmgUseTranslationMemory ) {
-		require( "$IP/extensions/Translate/libs/Solarium/Autoloader.php" );
+		require_once( "$IP/extensions/Translate/libs/Solarium/Autoloader.php" );
 		Solarium_Autoloader::register();
 		$wgTranslateTranslationServices['TTMServer'] = array(
 			'type' => 'ttmserver',
@@ -2486,8 +2486,8 @@ if ( $wmgUseTranslationNotifications ) {
 }
 
 if ( $wmgUseVipsTest ) {
-	include( "$IP/extensions/VipsScaler/VipsScaler.php" );
-	include( "$IP/extensions/VipsScaler/VipsTest.php" );
+	include_once( "$IP/extensions/VipsScaler/VipsScaler.php" );
+	include_once( "$IP/extensions/VipsScaler/VipsTest.php" );
 	$wgVipsThumbnailerHost = '10.2.1.21';
 }
 
@@ -2593,11 +2593,11 @@ if ( $wmgUseEcho ) {
 }
 
 if ( $wmgUseScribunto ) {
-	include( "$IP/extensions/CodeEditor/CodeEditor.php" );
+	include_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
 	// Don't enable core functionality until it has been reviewed and approved
 	$wgCodeEditorEnableCore = false;
 
-	include( "$IP/extensions/Scribunto/Scribunto.php" );
+	include_once( "$IP/extensions/Scribunto/Scribunto.php" );
 	$wgScribuntoUseGeSHi = true;
 	$wgScribuntoUseCodeEditor = true;
 	$wgScribuntoDefaultEngine = 'luasandbox';
@@ -2605,7 +2605,7 @@ if ( $wmgUseScribunto ) {
 }
 
 if ( $wmgUseSubpageSortkey ) {
-	include( "$IP/extensions/SubpageSortkey/SubpageSortkey.php" );
+	include_once( "$IP/extensions/SubpageSortkey/SubpageSortkey.php" );
 	$wgSubpageSortkeyByNamespace = $wmgSubpageSortkeyByNamespace;
 }
 

@@ -6,7 +6,7 @@
 # list of wikis it needs to run updateStats.php on
 
 $path = "$IP/extensions/FlaggedRevs/FlaggedRevs.php";
-include( $path );
+include_once( $path );
 
 ///////////////////////////////////////
 // Common configuration

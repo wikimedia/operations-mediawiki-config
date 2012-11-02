@@ -11,7 +11,7 @@
 
 if( $cluster === 'pmtpa' ) {   # safeguard
 
-	include( $IP . '/extensions/CheckUser/CheckUser.php' );
+	include_once( $IP . '/extensions/CheckUser/CheckUser.php' );
 	$wgCheckUserForceSummary = $wmgCheckUserForceSummary;
 
 
