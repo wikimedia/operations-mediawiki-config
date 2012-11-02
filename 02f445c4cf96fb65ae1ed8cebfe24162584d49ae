@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "AAACHX////Y\u003d",
+        "filename": "tests/Provide.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-11-02T21:57:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABFX//+84\u003d",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABFX//+8s\u003d",
         "filename": "tests/Provide.php",
         "patchSetId": 4
@@ -87,6 +105,24 @@
     },
     {
       "key": {
+        "uuid": "AAACHX////c\u003d",
+        "filename": "tests/wmf-config/Defines.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-11-02T21:57:03Z",
+      "side": 1,
+      "message": "I have left a note in the comment block.",
+      "parentUuid": "AAABFX//+80\u003d",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABFX//+8o\u003d",
         "filename": "tests/wmf-config/InitialiseSettingsTest.php",
         "patchSetId": 4
@@ -121,6 +157,24 @@
     },
     {
       "key": {
+        "uuid": "AAACHX////M\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-11-02T21:57:03Z",
+      "side": 1,
+      "message": "disregard my comment, that is fine in __construct()",
+      "parentUuid": "AAABFX//+8g\u003d",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABFX//+8c\u003d",
         "filename": "tests/wmf-config/InitialiseSettingsTest.php",
         "patchSetId": 4
@@ -132,6 +186,24 @@
       "writtenOn": "2012-10-19T12:31:39Z",
       "side": 1,
       "message": "Configuration -\u003e Project  aka something like:\n\n allowedProjectKeys",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAACHX////I\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-11-02T21:57:03Z",
+      "side": 1,
+      "message": "renamed :-)",
+      "parentUuid": "AAABFX//+8c\u003d",
       "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
