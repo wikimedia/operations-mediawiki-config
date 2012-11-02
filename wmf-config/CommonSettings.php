@@ -2456,8 +2456,6 @@ if ( $wmgUseTranslate ) {
 		//'export-as-po'         => 'ExportasPoMessagesTask',
 	);
 
-	$wgTranslateWorkflowStates = $wmgTranslateWorkflowStates;
-
 	$wgTranslateUsePreSaveTransform = true; # bug 37304
 
 	$wgEnablePageTranslation = true;

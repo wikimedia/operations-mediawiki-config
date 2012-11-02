@@ -11270,7 +11270,7 @@ $wgConf->settings = array(
 	'wikimania2012wiki' => true, // bug 34120
 	'wikimania2013wiki' => true, // bug 36477
 ),
-'wmgTranslateWorkflowStates' => array(
+'wgTranslateWorkflowStates' => array(
 	'default' => false,
 	'metawiki' => array(
 		'progress' => array( 'color' => 'E00' ),
@@ -11289,6 +11289,12 @@ $wgConf->settings = array(
 		'published' => array( 'color' => 'AEA' ),
 	),
 ),
+
+'wgTranslateRcFilterDefault' => array(
+	'default' => 'filter',
+	'wikidatawiki' => 'noaction',
+),
+
 'wmgUseTranslationMemory' => array(
 	'default' => true,
 	'testwiki' => true,
