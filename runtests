@@ -1,0 +1,1 @@
+touch wmf-config/InitialiseSettings.php; MW_INSTALL_PATH=/srv/1.21wmf3  phpunit
