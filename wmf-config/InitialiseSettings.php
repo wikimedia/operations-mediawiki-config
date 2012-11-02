@@ -11505,56 +11505,67 @@ $wgConf->settings = array(
 'wmgUseReplaceText' => array(
 	'default' => false,
 	'enwikivoyage' => true,
+	'dewikivoyage' => true,
 ),
 
 'wmgUseGeoCrumbs' => array(
 	'default' => false,
 	'enwikivoyage' => true,
+	'dewikivoyage' => true,
 ),
 
 'wmgUseCalendar' => array(
 	'default' => false,
 	'enwikivoyage' => true,
+	'dewikivoyage' => true,
 ),
 
 'wmgUseMapSources' => array(
 	'default' => false,
 	'enwikivoyage' => true,
+	'dewikivoyage' => true,
 ),
 
 'wmgUseSlippyMap' => array(
 	'default' => false,
 	'enwikivoyage' => false,
+	'dewikivoyage' => true,
 ),
 
 'wmgUseCreditsSource' => array(
 	'default' => false,
 	'enwikivoyage' => true,
+	'dewikivoyage' => true,
 ),
 
 'wmgUseListings' => array(
 	'default' => false,
 	'enwikivoyage' => true,
+	'dewikivoyage' => true,
 ),
 
 'wmgUseTocTree' => array(
 	'default' => false,
 	'enwikivoyage' => true,
+	'dewikivoyage' => true,
 ),
 
 'wmgUseInsider' => array(
 	'default' => false,
 	'enwikivoyage' => true,
+	'dewikivoyage' => true,
 ),
 
 'wmgUseRelatedArticles' => array(
 	'default' => false,
 	'enwikivoyage' => true,
+	'dewikivoyage' => true,
 ),
 
 'wmgUseRelatedSites' => array(
 	'default' => false,
 	'enwikivoyage' => true,
+	'dewikivoyage' => true,
 ),
 
 'wmgUseEventLogging' => array(
@@ -11572,7 +11583,14 @@ $wgConf->settings = array(
 		'dmoz',
 		'citizendium',
 		'rezepte',
-	)
+	),
+	'dewikivoyage' => array(
+		'wikipedia',
+		'wikitravel',
+		'dmoz',
+		'citizendium',
+		'rezepte',
+	),
 ),
 
 // @todo: settings for RelatedSites, might need to be revised ;)
@@ -11595,7 +11613,25 @@ $wgConf->settings = array(
 		'tech' => 'Technical',
 		'assoc' => 'Association',
 		'ldbwiki' => 'Location Database Wiki',
-	)
+	),
+	'dewikivoyage' => array(
+		'wikitravel' => 'Wikitravel',
+		'wikipedia' => 'Wikipedia',
+		'WikiPedia' => 'Wikipedia',
+		'citizendium' => 'Citizendium',
+		'dmoz' => 'Open Directory',
+		'Radreise-Wiki' => 'Radreise-Wiki',
+		'rezepte' => 'Rezepte-Wiki',
+		'commons' => 'Wikimedia Commons',
+		'wmc' => 'Wikimedia Commons',
+		'wtp' => 'Wikitravel Press',
+		'shared' => 'Shared',
+		'wts' => 'Shared',
+		'gen' => 'General',
+		'tech' => 'Technical',
+		'assoc' => 'Association',
+		'ldbwiki' => 'Location Database Wiki',
+	),
 ),
 
 'wgContentHandlerUseDB' => array(
