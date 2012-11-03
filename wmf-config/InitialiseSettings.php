@@ -11243,6 +11243,7 @@ $wgConf->settings = array(
 	'svwiki' => 'Användare %code%',
 	'tlwiki' => 'User %code%',
 	'ukwiki' => 'User %code%',
+	'wikidatawiki' => 'User %code%',
 	'zhwiktionary' => '%wikiname%使用者',
 	'zhwiki' => '%code%_使用者',
 	'zhwikibooks' => '%code%_使用者',
