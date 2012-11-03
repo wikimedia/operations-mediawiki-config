@@ -47,11 +47,22 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 		# Content of all.dblist
 		$all = $dbs['all'];
 
+		# No point in checking that the db listed in 'all' are contained
+		# in 'all':
 		unset( $dbs['all']);
 
 		# dblist files we are just ignoring/skipping
 		# FIXME ideally we want to clean those files from any old dbnames
 		$skip = array(
+
+			# 'all-wmflabs' is for the 'beta' project which has wikis not yet
+			# available in production ('all'). So we do not verify it.
+			'all-wmflabs',
+
+			# Same goes for wikivoyage which is not in production as of
+			# November 2012
+			'wikivoyage',
+
 			'closed',
 			'deleted',
 			'new_wiktionaries',
