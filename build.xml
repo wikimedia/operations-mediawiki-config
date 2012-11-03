@@ -35,7 +35,7 @@
 	</target>
 
 	<target name="phpunit">
-		<exec executable="phpunit">
+		<exec executable="phpunit" failonerror="true">
 			<arg line="--log-junit ${basedir}/logs/junit.xml" />
 		</exec>
 	</target>
