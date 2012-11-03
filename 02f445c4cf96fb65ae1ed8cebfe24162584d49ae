@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAACNH///+I\u003d",
+        "filename": "tests/DBList.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-11-03T14:01:57Z",
+      "side": 1,
+      "message": "I have done that:\n\nrenamed buildList to getMap(), still caching the result in a class static variable.\n\nadded up a static get() method which takes a dblist name as argument and return the entry from the map.",
+      "parentUuid": "AAABFX//+9A\u003d",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABFX//+84\u003d",
         "filename": "tests/Provide.php",
         "patchSetId": 4
@@ -227,6 +245,24 @@
     },
     {
       "key": {
+        "uuid": "AAACNH///+k\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-11-03T14:01:57Z",
+      "side": 1,
+      "message": "Done by simply merging  DBList::$wiki_projects",
+      "parentUuid": "AAABFX//+8Y\u003d",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABFX//+8U\u003d",
         "filename": "tests/wmf-config/InitialiseSettingsTest.php",
         "patchSetId": 4
@@ -238,6 +274,24 @@
       "writtenOn": "2012-10-19T12:31:39Z",
       "side": 1,
       "message": "Same this should be grabbed using DBList and find out projects listed in closed.dblist.",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAACNH///90\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-11-03T14:01:57Z",
+      "side": 1,
+      "message": "Done by merging the result of DBList::get( \u0027closed\u0027 )\n\nThat simply removes the \u0027ru_sibwikiki\u0027 since wikimaniawiki and nomcom are not in closed.dblist :/",
+      "parentUuid": "AAABFX//+8U\u003d",
       "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -295,6 +349,24 @@
     },
     {
       "key": {
+        "uuid": "AAACNH///9s\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-11-03T14:01:57Z",
+      "side": 1,
+      "message": "done.",
+      "parentUuid": "AAABFX//+8I\u003d",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABFX//+8E\u003d",
         "filename": "tests/wmf-config/InitialiseSettingsTest.php",
         "patchSetId": 4
@@ -312,6 +384,24 @@
     },
     {
       "key": {
+        "uuid": "AAACNH///9o\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-11-03T14:01:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABFX//+8E\u003d",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABFX//+8A\u003d",
         "filename": "tests/wmf-config/InitialiseSettingsTest.php",
         "patchSetId": 4
@@ -323,6 +413,24 @@
       "writtenOn": "2012-10-19T12:31:39Z",
       "side": 1,
       "message": "uses assertNotContains() ;-)",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAACNH///9k\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-11-03T14:01:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABFX//+8A\u003d",
       "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -363,6 +471,24 @@
     },
     {
       "key": {
+        "uuid": "AAACNH///9Y\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-11-03T14:01:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABFX//+7s\u003d",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAABFX//+7w\u003d",
         "filename": "tests/wmf-config/InitialiseSettingsTest.php",
         "patchSetId": 4
@@ -374,6 +500,24 @@
       "writtenOn": "2012-10-19T12:31:39Z",
       "side": 1,
       "message": "You should use assertRegExp() \nhttp://www.phpunit.de/manual/3.4/en/api.html#api.assert.assertRegExp\n\nThe regexp itself is a bit awkward :-] will match something like \u0027wglowercase\u0027 or \u0027wGfoo\u0027.",
+      "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAACNH///9U\u003d",
+        "filename": "tests/wmf-config/InitialiseSettingsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-11-03T14:01:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "AAABFX//+7w\u003d",
       "revId": "02f445c4cf96fb65ae1ed8cebfe24162584d49ae",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
