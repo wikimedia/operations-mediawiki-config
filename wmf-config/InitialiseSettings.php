@@ -3032,7 +3032,7 @@ $wgConf->settings = array(
 		'Index' => 104,
 		'Index_talk' => 105,
 	),
-	'sourcewiki' => array(
+	'sourceswiki' => array(
 		'Page' => 104,
 		'Page_talk' => 105,
 		'Index' => 106,
