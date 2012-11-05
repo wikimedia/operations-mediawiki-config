@@ -10426,6 +10426,15 @@ $wgConf->settings = array(
 	'mediawikiwiki' => 'mw'
 ),
 
+'wmgVisualEditorNamespaces' => array(
+	'default' => array( ),
+),
+
+'wmgUseVisualEditorNamespace' => array(
+	'default' => false,
+	'mediawikiwiki' => true,
+),
+
 'wmgUseRSSExtension' => array(
 	'default' => false,
 	'foundationwiki' => true,

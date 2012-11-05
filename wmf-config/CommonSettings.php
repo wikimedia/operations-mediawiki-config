@@ -2305,6 +2305,23 @@ if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
 	$wgVisualEditorParsoidURL = 'http://10.0.0.23:8000'; // 10.0.0.23 is wtp1.pmtpa.wmnet
 	$wgVisualEditorParsoidPrefix = $wmgVisualEditorParsoidPrefix;
+	$wgVisualEditorNamespaces = $wmgVisualEditorNamespaces;
+
+	// VisualEditor namespace
+	// This used to be in the VisualEditor extension but was removed there
+	// We still need to be careful with double-defining NS_VISUALEDITOR though, for b/c
+	if ( $wmgUseVisualEditorNamespace ) {
+		if ( !defined( 'NS_VISUALEDITOR' ) ) {
+			define( 'NS_VISUALEDITOR', 2500 );
+		}
+		if ( !defined( 'NS_VISUALEDITOR_TALK' ) ) {
+			define( 'NS_VISUALEDITOR_TALK', 2501 );
+		}
+		$wgExtraNamespaces[NS_VISUALEDITOR] = 'VisualEditor';
+		$wgExtraNamespaces[NS_VISUALEDITOR_TALK] = 'VisualEditor_talk';
+		$wgVisualEditorNamespaces[] = NS_VISUALEDITOR;
+	}
+
 }
 
 if ( $wmgUseNarayam ) {
