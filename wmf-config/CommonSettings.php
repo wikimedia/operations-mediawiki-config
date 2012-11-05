@@ -2588,10 +2588,11 @@ if ( $wmgEnableGeoData ) {
 if ( $wmgUseEcho ) {
 	require_once( "$IP/extensions/Echo/Echo.php" );
 
-	$wgEchoDisableStandardEmail = false;
+	$wgEchoDisableStandardEmail = true;
 	$wgEchoDefaultNotificationTypes = array(
 		'all' => array(
-			'notify' => true, // Disable email
+			'notify' => true,
+			'email' => false,
 		),
 	);
 }

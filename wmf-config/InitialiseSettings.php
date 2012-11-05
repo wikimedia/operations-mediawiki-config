@@ -11605,10 +11605,8 @@ $wgConf->settings = array(
 
 'wmgUseEcho' => array(
 	'default' => false,
-	// 'testwiki' => true,
-	// Disabled due to https://bugzilla.wikimedia.org/show_bug.cgi?id=39085
-	// 'test2wiki' => true,
-	// 'mediawikiwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
 ),
 
 'wmgUseScribunto' => array(
