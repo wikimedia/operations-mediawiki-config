@@ -6,7 +6,6 @@ $IP/extensions/ArticleFeedback/ArticleFeedback.php
 $IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.php
 $IP/extensions/AssertEdit/AssertEdit.php
 $IP/extensions/Babel/Babel.php
-$IP/extensions/BreadCrumbs/BreadCrumbs.php
 $IP/extensions/Calendar/Calendar.php
 $IP/extensions/CategoryTree/CategoryTree.php
 $IP/extensions/CentralAuth/CentralAuth.php
@@ -49,6 +48,7 @@ $IP/extensions/FlaggedRevs/FlaggedRevs.php
 $IP/extensions/FormPreloadPostCache/FormPreloadPostCache.php
 $IP/extensions/FundraiserLandingPage/FundraiserLandingPage.php
 $IP/extensions/Gadgets/Gadgets.php
+$IP/extensions/GeoCrumbs/GeoCrumbs.php
 $IP/extensions/GeoData/GeoData.php
 $IP/extensions/GlobalBlocking/GlobalBlocking.php
 $IP/extensions/GlobalUsage/GlobalUsage.php
