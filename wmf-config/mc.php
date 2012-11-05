@@ -10,10 +10,7 @@
  * Hashar, based on dammit comments. Nov 28 2005.
  *
  */
-$wgMainCacheType = CACHE_MEMCACHED;
-if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' || $wgDBname === 'dewiki' || $wgDBname === 'zhwiki' ) { // temporary hack
-	$wgMainCacheType = 'memcached-multiwrite';
-}
+$wgMainCacheType = 'memcached-multiwrite';
 
 $wgMemCachedPersistent = false;
 $wgUseMemCached = true;
