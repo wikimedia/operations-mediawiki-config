@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAACaX///9M\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 9845,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-11-05T09:43:02Z",
+      "side": 1,
+      "message": "I believe the default should be inherited from whatever is set in DefaultSettings.php. If not, it still miss the \u0027showbytes\u0027 option:\n\n  \u0027showBytes\u0027 \u003d\u003e true, // Show the filesize in bytes in categories",
+      "revId": "b53a4e5456f121c0de6d93ac8c6268016498b526",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAACaX///9I\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 9848,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-11-05T09:43:02Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be set to 250px just like the default thumbsize above ?",
+      "revId": "b53a4e5456f121c0de6d93ac8c6268016498b526",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
