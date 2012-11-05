@@ -1205,6 +1205,7 @@ $wgConf->settings = array(
 	'wikivoyage'    => 'Wikivoyage',
 	'wikinews'      => 'Wikinews',
 	'wikisource'    => 'Wikisource',
+	'wikivoyage'    => 'Wikivoyage',
 
 	// Wikis, alphabetically by DB name
 	'abwiki'	=> 'Авикипедиа',
@@ -9604,6 +9605,7 @@ $wgConf->settings = array(
 	'dkwikimedia' => true,
 	'donatewiki' => true,
 	'elwikinews' => true,
+	'enwikivoyage' => true,
 	'eowikinews' => true,
 	'eowikisource' => true,
 	'etwikimedia' => true,
@@ -9661,6 +9663,7 @@ $wgConf->settings = array(
 	'ukwikimedia'   => true,
 	'usabilitywiki' =>  true,
 	'vewikimedia' => true,
+	'wikidatawiki' => true,
 	'wikimania2009wiki' => true,
 	'wikimania2010wiki' => true,
 	'wikimania2011wiki' => true,
