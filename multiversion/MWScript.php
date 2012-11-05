@@ -39,11 +39,6 @@ function getMWScriptWithArgs() {
 	# For addwiki.php, the wiki DB doesn't yet exist, and for some
 	# other maintenance scripts we don't care what wiki DB is used...
 	$wikiless = array(
-		'maintenance/mctest.php',
-		'maintenance/addWiki.php',
-		'maintenance/nextJobDB.php',
-		'maintenance/dumpInterwiki.php',
-		'maintenance/rebuildInterwiki.php',
 		'extensions/WikimediaMaintenance/addWiki.php', // 1.19
 		'extensions/WikimediaMaintenance/dumpInterwiki.php', // 1.19
 		'extensions/WikimediaMaintenance/getJobQueueLengths.php',
