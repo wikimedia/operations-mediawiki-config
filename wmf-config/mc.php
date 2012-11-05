@@ -11,7 +11,7 @@
  *
  */
 $wgMainCacheType = CACHE_MEMCACHED;
-if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' ) { // temporary hack
+if ( $wgDBname === 'testwiki' || $wgDBname === 'test2wiki' || $wgDBname === 'dewiki' || $wgDBname === 'zhwiki' ) { // temporary hack
 	$wgMainCacheType = 'memcached-multiwrite';
 }
 
@@ -52,8 +52,8 @@ $wgObjectCaches['memcached-pecl'] = array(
 $wgObjectCaches['memcached-multiwrite'] = array(
 	'class'  => 'MultiWriteBagOStuff',
 	'caches' => array(
-		0 => array( 'factory' => 'ObjectCache::newMemcached' ), // apaches
-		1 => $wgObjectCaches['memcached-pecl'] // mc* servers
+		0 => $wgObjectCaches['memcached-pecl'], // mc* servers
+		1 => array( 'factory' => 'ObjectCache::newMemcached' ), // apaches
 	)
 );
 
