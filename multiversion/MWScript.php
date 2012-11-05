@@ -40,7 +40,7 @@ function getMWScriptWithArgs() {
 	# other maintenance scripts we don't care what wiki DB is used...
 	$wikiless = array(
 		'maintenance/mctest.php',
-		'maintenance/addwiki.php',
+		'maintenance/addWiki.php',
 		'maintenance/nextJobDB.php',
 		'maintenance/dumpInterwiki.php',
 		'maintenance/rebuildInterwiki.php',
