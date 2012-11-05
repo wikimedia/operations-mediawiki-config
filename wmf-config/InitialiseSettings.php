@@ -8514,6 +8514,7 @@ $wgConf->settings = array(
 	'ptwikibooks' => array( 'w', 'wikt', 's', 'q', 'n', 'v', 'en', 'es', 'fr', 'it', 'de', 'ru', 'w:en' ),
 	'ptwikinews' => array( 'w', 'wikt', 's', 'v', 'b', 'q', 'meta', 'commons', 'it', 'fr', 'ca', 'en', 'es', 'de', ),
 	'ptwikiversity' => array( 'incubator', 'w', 'b', ),
+	'rowikibooks' => array( 'w', 's' ),
 	'ruwikibooks' => array( 'w', 's', ),
 	'ruwikimedia' => array( 'meta', 'foundation', 'r', ),
 	'ruwikiversity' => array( 'w', 'wikt', 'q', 'b', 's', 'n', 'betawikiversity' ),
