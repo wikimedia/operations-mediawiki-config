@@ -2628,7 +2628,7 @@ if ( $wmgEnablePostEdit ) {
 }
 
 if ( $wmgUseReplaceText ) {
-	//require_once( "$IP/extensions/ReplaceText/ReplaceText.php" );
+	require_once( "$IP/extensions/ReplaceText/ReplaceText.php" );
 }
 
 if ( $wmgUseGeoCrumbs ) {
