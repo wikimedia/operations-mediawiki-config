@@ -3497,7 +3497,7 @@ $wgConf->settings = array(
 	),
 	'brwikisource' => array(
 		'page' => 102,
-		'index' => 104,
+		'index' => 100,
 	),
 	'cawikisource' => array(
 		'page' => 102,
