@@ -11628,7 +11628,6 @@ $wgConf->settings = array(
 'wmgUseEcho' => array(
 	'default' => false,
 	'test2wiki' => true,
-	'mediawikiwiki' => true,
 ),
 
 'wmgUseScribunto' => array(
