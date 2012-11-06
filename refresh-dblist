@@ -29,18 +29,32 @@ Split by cluster:
 
 $base = "/home/wikipedia/common";
 
+# Puppet provision the realm in /etc/wikimedia-realm
+$realm   = 'production';
+if( file_exists( '/etc/wikimedia-realm' ) ) {
+	$realm = trim( file_get_contents( '/etc/wikimedia-realm' ) );
+}
+switch($realm) {
+case 'labs':
+case 'production':
+	break;
+default:
+	$realm = 'production';
+	break;
+}
+
 $defaultCluster = 's3';
-$clusterOverrides = loadClusterList("$base/wmf-config/db.php");
+$clusterOverrides = loadClusterList(getRealmedFilename("$base/wmf-config/db.php"));
 $clusterAssignments = array();
 
 
-$all = array_filter(array_map('trim', file("$base/all.dblist")));
+$all = array_filter(array_map('trim', file(getRealmedFilename("$base/all.dblist"))));
 sort($all);
 
-printf("%d wikis listed in all.dblist...\n", count($all));
+printf("%d wikis listed in " . basename(getRealmedFilename("$base/all.dblist")) . "...\n", count($all));
 
 
-$special = array_filter(array_map('trim', file("$base/special.dblist")));
+$special = array_filter(array_map('trim', file(getRealmedFilename("$base/special.dblist"))));
 sort($special);
 
 printf("%d special wikis to be exempted from wikipedia group...\n", count($special));
@@ -108,7 +122,7 @@ function loadClusterList($file) {
 function listOut($group, $list) {
 	global $base;
 	
-	$filename = "$base/$group.dblist";
+	$filename = getRealmedFilename("$base/$group.dblist");
 	printf("Listing %d wikis in %s...\n", count($list), $filename);
 	
 	$out = fopen("$filename.new", "xt");
@@ -126,3 +140,14 @@ function listOut($group, $list) {
 	}
 }
 
+function getRealmedFilename($filename) {
+	global $realm;
+
+	if ( $realm ) {
+		$realmed_filename = preg_replace( '/(\.[^.]*)$/', "$realm$1", $filename );
+		if ( file_exists( $realmed_filename ) ) {
+			return $realmed_filename;
+		}
+	}
+	return $filename;
+}

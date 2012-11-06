@@ -9920,7 +9920,7 @@ $wgConf->settings = array(
 	# To update this dblist:
 	#   * ADD THE TABLES TO THE DATABASE
 	#	e.g.mwscript sql.php ruwikinews php-1.18/extensions/FlaggedRevs/schema/mysql/FlaggedRevs.sql
-	#   * edit flaggedrevs.dblist
+	#   * edit flaggedrevs.dblist (or the corresponding file for the current realm)
 	#   * touch InitialiseSettings.php to invalidate the cache
 	#   * sync-common-all
 	#   * press enter
@@ -11823,6 +11823,6 @@ $wgConf->settings = array(
 // required()/included() inside a function.
 global $datacenter, $realm;
 if ( $realm == 'labs' ) {
-	require( "$wmfConfigDir/InitialiseSettings-wmflabs.php" );
+	require( "$wmfConfigDir/InitialiseSettings-labs.php" );
 	wmfLabsOverrideSettings();
 }

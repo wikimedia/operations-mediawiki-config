@@ -100,6 +100,20 @@ default:
 	$datacenter = 'pmtpa';
 	break;
 }
+
+# Function to get the filename for the current realm, falling back to the
+# "base" file if not found.
+function getRealmedFilename( $filename ) {
+	global $realm;
+
+	if ( $realm ) {
+		$realmed_filename = preg_replace( '/(\.[^.]*)$/', "$realm$1", $filename );
+		if ( file_exists( $realmed_filename ) ) {
+			return $realmed_filename;
+		}
+	}
+	return $filename;
+}
 ### End /Determine realm and datacenter we are on/ ########################
 
 ### List of some service hostnames
@@ -166,13 +180,13 @@ wfProfileOut( "$fname-wgConf" );
 
 wfProfileIn( "$fname-confcache" );
 
-# Is this database listed in $realm.dblist?
+# Is this database listed in dblist?
 # Note: $wgLocalDatabases set in wgConf.php.
 # Note: must be done before calling $multiVersion functions other than getDatabase().
 if ( array_search( $wgDBname, $wgLocalDatabases ) === false ) {
 	# No? Load missing.php
 	if ( $wgCommandLineMode ) {
-		print "Database name $wgDBname is not listed in $realm.dblist\n";
+		print "Database name $wgDBname is not listed in dblist\n";
 	} else {
 		require( "$wmfConfigDir/missing.php" );
 	}
@@ -202,7 +216,7 @@ if ( !$globals ) {
 
 	$wikiTags = array();
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'readonly' ) as $tag ) {
-		$dblist = array_map( 'trim', file( "$IP/../$tag.dblist" ) );
+		$dblist = array_map( 'trim', file( getRealmedFilename( "$IP/../$tag.dblist" ) ) );
 		if ( in_array( $wgDBname, $dblist ) ) {
 			$wikiTags[] = $tag;
 		}
@@ -241,17 +255,8 @@ extract( $globals );
 require( "$wmfConfigDir/PrivateSettings.php" );
 
 # Cluster-dependent files for database and memcached
-switch( $realm ) {
-case 'labs':
-	require( "$wmfConfigDir/db-wmflabs.php" );
-	require( "$wmfConfigDir/mc-wmflabs.php" );
-	break;
-case 'production':
-default:
-	require( "$wmfConfigDir/db.php" );
-	require( "$wmfConfigDir/mc.php" );
-	break;
-}
+require( getRealmedFilename( "$wmfConfigDir/db.php" ) );
+require( getRealmedFilename( "$wmfConfigDir/mc.php" ) );
 
 ini_set( 'memory_limit', $wmgMemoryLimit );
 
@@ -276,7 +281,7 @@ if ( $wgDBname == 'testwiki' ) {
 }
 
 # For labs, override settings just above. This need to be done before
-# extensions so we can not use CommonSettings-wmflabs.php
+# extensions so we can not use CommonSettings-labs.php
 if( $realm == 'labs' ) {
 	# Base path:
 	$wgResourceBasePath    = "$urlprotocol//bits.beta.wmflabs.org/static-master";
@@ -302,6 +307,9 @@ if ( $realm == 'production' && $wgDBname != 'testwiki' && isset( $_SERVER['SERVE
 }
 
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmfVersionNumber;
+
+// Whether addWiki.php should send email
+$wmgAddWikiNotify = true;
 
 // Comment out the following lines to get the old-style l10n caching -- TS 2011-02-22
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
@@ -881,9 +889,9 @@ include( $IP . '/extensions/wikihiero/wikihiero.php' );
 include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 // Config for sitematrix
 $wgSiteMatrixFile = '/apache/common/langlist';
-$wgSiteMatrixClosedSites = "$IP/../closed.dblist";
-$wgSiteMatrixPrivateSites = "$IP/../private.dblist";
-$wgSiteMatrixFishbowlSites = "$IP/../fishbowl.dblist";
+$wgSiteMatrixClosedSites = getRealmedFilename( "$IP/../closed.dblist" );
+$wgSiteMatrixPrivateSites = getRealmedFilename( "$IP/../private.dblist" );
+$wgSiteMatrixFishbowlSites = getRealmedFilename( "$IP/../fishbowl.dblist" );
 
 include( $IP . '/extensions/CharInsert/CharInsert.php' );
 
@@ -1251,15 +1259,7 @@ $wgPasswordSender = 'wiki@wikimedia.org';
 # e-mailing password based on e-mail address (bug 34386)
 $wgPasswordResetRoutes['email'] = true;
 
-switch( $realm ) {
-case 'labs':
-	require( 'filebackend-wmflabs.php' );
-	break;
-case 'production':
-default:
-	require( 'filebackend.php' );
-	break;
-}
+require( getRealmedFilename( "$wmfConfigDir/filebackend.php" ) );
 
 if( $wgDBname != 'commonswiki' ) {
 	$wgDefaultUserOptions['watchcreations'] = 1;
@@ -1694,9 +1694,9 @@ if ( $wmgUseCentralAuth ) {
 	$wgHooks['CentralAuthWikiList'][] = 'wmfCentralAuthWikiList';
 	function wmfCentralAuthWikiList( &$list ) {
 		global $wgLocalDatabases, $IP;
-		$privateWikis = array_map( 'trim', file( "$IP/../private.dblist" ) );
-		$fishbowlWikis = array_map( 'trim', file( "$IP/../fishbowl.dblist" ) );
-		$closedWikis = array_map( 'trim', file( "$IP/../closed.dblist" ) );
+		$privateWikis = array_map( 'trim', file( getRealmedFilename( "$IP/../private.dblist" ) ) );
+		$fishbowlWikis = array_map( 'trim', file( getRealmedFilename( "$IP/../fishbowl.dblist" ) ) );
+		$closedWikis = array_map( 'trim', file( getRealmedFilename( "$IP/../closed.dblist" ) ) );
 		$list = array_diff( $wgLocalDatabases,
 			$privateWikis, $fishbowlWikis, $closedWikis );
 		return true;
@@ -1806,7 +1806,7 @@ case 'labs'      : $wgImageMagickTempDir = '/tmp/a/magick-tmp'; break;
 }
 
 if ( $realm == 'labs' && file_exists( '/etc/wikimedia-transcoding' ) ) {
-	require( "$wmfConfigDir/transcoding-wmflabs.org" );
+	require( "$wmfConfigDir/transcoding-labs.org" );
 }
 
 // Banner notice system
@@ -2363,7 +2363,7 @@ if ( $wmgUseDisableAccount ) {
 
 if ( $wmgUseIncubator ) {
 	require_once( "$IP/extensions/WikimediaIncubator/WikimediaIncubator.php" );
-	$wmincClosedWikis = "$IP/../closed.dblist";
+	$wmincClosedWikis = getRealmedFilename( "$IP/../closed.dblist" );
 }
 
 if ( $wmgUseWikiLove ) {
@@ -2397,15 +2397,7 @@ $wgAvailableRights[] = 'moodbar-admin'; // To allow global groups to include thi
 
 # Mobile related configuration
 
-switch( $realm ) {
-case 'production':
-	require( "$wmfConfigDir/mobile.php" );
-	break;
-case 'labs':
-	require( "$wmfConfigDir/mobile-wmflabs.php" );
-	break;
-}
-
+require( getRealmedFilename( "$wmfConfigDir/mobile.php" ) );
 
 if ( $wmgUseSubPageList3 ) {
 	include( "$IP/extensions/SubPageList3/SubPageList3.php" );
@@ -2749,19 +2741,14 @@ if ( $wmgUseWikibaseClient ) {
 // additional "language names", adding to Names.php data
 $wgExtraLanguageNames = $wmgExtraLanguageNames;
 
-if( $realm == 'labs' ) {
-	require( "$wmfConfigDir/CommonSettings-wmflabs.php" );
+if ( file_exists( "$wmfConfigDir/CommonSettings-$realm.php" ) ) {
+	require( "$wmfConfigDir/CommonSettings-$realm.php" );
 }
 
 #### Per realm extensions
 
-switch( $realm ) {
-case 'production':
-	require( "$wmfConfigDir/ext-production.php" );
-	break;
-case 'labs':
-	require( "$wmfConfigDir/ext-wmflabs.php" );
-	break;
+if ( file_exists( "$wmfConfigDir/ext-$realm.php" ) ) {
+	require( "$wmfConfigDir/ext-$realm.php" );
 }
 
 // https://bugzilla.wikimedia.org/show_bug.cgi?id=37211
