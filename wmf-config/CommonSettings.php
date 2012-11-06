@@ -1597,6 +1597,8 @@ if ( $wmgUseCentralAuth ) {
 	# $wgGroupPermissions['sysop']['centralauth-merge'] = true;
 	$wgCentralAuthCookies = true;
 
+	$wgDisableUnmergedEditing = $wmgDisableUnmergedEdits;
+
 	# Broken -- TS
 	if( $cluster == 'pmtpa' ) {
 		$wgCentralAuthUDPAddress = $wgRC2UDPAddress;
