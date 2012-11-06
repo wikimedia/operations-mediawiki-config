@@ -16,6 +16,24 @@
       "revId": "789aaf1e5e9a51bf090031b902184c28f6625f6e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAACg3////c\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 4689,
+      "author": {
+        "id": 20
+      },
+      "writtenOn": "2012-11-06T10:23:28Z",
+      "side": 1,
+      "message": "They apparently have used it for some Wikinews-like purposes :-)\n\nSee http://wikivoyage.org/w/de/index.php?title\u003dSpezial%3AAlle+Seiten\u0026from\u003d\u0026namespace\u003d106",
+      "parentUuid": "AAACg3////k\u003d",
+      "revId": "789aaf1e5e9a51bf090031b902184c28f6625f6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
