@@ -1,0 +1,3 @@
+[submodule "multiversion"]
+	path = multiversion
+	url = https://gerrit.wikimedia.org/r/p/operations/mediawiki-multiversion.git
