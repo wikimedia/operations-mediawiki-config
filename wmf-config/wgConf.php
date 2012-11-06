@@ -22,7 +22,6 @@ $wgConf->suffixes = array(
 
 switch( $realm ) {
 	case 'production':
-		$all = "$IP/../all.dblist";
 		$wgConf->localVHosts = array(
 			'wikipedia.org',
 			'wiktionary.org',
@@ -40,7 +39,6 @@ switch( $realm ) {
 		break;
 
 	case 'labs':
-		$all = "$IP/../all-wmflabs.dblist";
 		$wgConf->localVHosts = array(
 			'wikipedia.beta.wmflabs.org',
 			'wiktionary.beta.wmflabs.org',
@@ -60,7 +58,7 @@ switch( $realm ) {
 	default:
 }
 
-$wgConf->wikis = array_map( 'trim', file( $all ) );
+$wgConf->wikis = array_map( 'trim', file( getRealmedFilename( "$IP/../all.dblist" ) ) );
 
 $wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
 
