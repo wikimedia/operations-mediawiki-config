@@ -961,6 +961,9 @@ if ( $wmgUseTimedMediaHandler ) {
 	if ( $wgDBname == 'test2wiki' ) {
 		$wgEnableTranscode = true;
 	}
+	//tmh1/2 have 12 cores and need lots of shared memory
+	//for avconv / ffmpeg2theora
+	$wgTranscodeBackgroundMemoryLimit = 4 * 1024 * 1024; // 4GB
 } else {
 	include( $IP . '/extensions/OggHandler/OggHandler.php' );
 }
