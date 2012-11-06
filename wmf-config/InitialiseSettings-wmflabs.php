@@ -166,6 +166,13 @@ return array(
 	'-wmgEnableCaptcha' => array(
 		'default' => true,
 	),
+	// Completely disabled AFTv4 & enable AFTv5
+	'-wmgArticleFeedbackLotteryOdds' => array(
+		'default' => 0,
+	),
+	'-wmgArticleFeedbackv5LotteryOdds' => array(
+		'default' => 100,
+	),
 	# ClickTracking is a required dependency for AFTv5
 	'-wmgClickTracking' => array(
 		'default' => true,
@@ -186,9 +193,6 @@ return array(
 		'default'    => false,
 		'enwiki'     => true,
 		'simplewiki' => true,
-	),
-	'-wmgUseE3Experiments' => array(
-		'default' => false,
 	),
 
 	//enable TimedMediaHandler and MwEmbedSupport for testing on commons and enwiki
