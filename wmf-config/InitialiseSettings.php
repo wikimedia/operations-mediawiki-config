@@ -3191,6 +3191,10 @@ $wgConf->settings = array(
 		'Index'      => 104,
 		'Index_talk' => 105,
 	),
+	'wikidatawiki' => array(
+		'WD' => NS_PROJECT,      // Bug 41834
+		'WT' => NS_PROJECT_TALK,
+	),
 	'yiwiki' => array(
 		'וויקיפעדיע' => NS_PROJECT,
 		'וויקיפעדיע_רעדן' => NS_PROJECT_TALK,
@@ -3630,10 +3634,6 @@ $wgConf->settings = array(
 	'viwikisource' => array(
 		'page' => 104,
 		'index' => 106,
-	),
-	'wikidata' => array(
-		'WD' => NS_PROJECT,      // Bug 41834
-		'WT' => NS_PROJECT_TALK,
 	),
 	'zhwikisource' => array(
 		'page' => 104,
