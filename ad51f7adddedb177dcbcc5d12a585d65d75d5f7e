@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAACgn////U\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2405,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-11-06T10:09:06Z",
+      "side": 1,
+      "message": "I guess that block should be in declared in wgExtraNamespaces starting at line 4383.",
+      "revId": "ad51f7adddedb177dcbcc5d12a585d65d75d5f7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
