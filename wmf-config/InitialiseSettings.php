@@ -2162,7 +2162,10 @@ $wgConf->settings = array(
 	'wikiquote' => array( 'Wikiquote' => NS_PROJECT ),
 	'wikisource' => array( 'Wikisource' => NS_PROJECT ),
 	'wikiversity' => array( 'Wikiversity' => NS_PROJECT ),
-	'wikivoyage' => array( 'Wikivoyage' => NS_PROJECT ),
+	'wikivoyage' => array(
+		'Wikivoyage' => NS_PROJECT,
+		'WV' => NS_PROJECT,
+	),
 	'wiktionary' => array( 'Wiktionary' => NS_PROJECT ),
 
 	'abwiki' => array(
@@ -3469,7 +3472,7 @@ $wgConf->settings = array(
 
 	// Wikivoyage
 	'enwikivoyage' => array( -1 => 0, 0 => 1, 1 => 1, 2 => 1, 3 => 1, 5 => 1, 7 => 1, 9 => 1, 10 => 1, 11 => 1, 12 => 1, 13 => 1, 15 => 1, 100 => 1, 101 => 1, 102 => 1, 103 => 1, 104 => 1, 105 => 1, 106 => 1, 107 => 1, 108 => 1, 109 => 1, 110 => 1, 111 => 1 ),
-	'dewikivoyage' => array( -1 => 0, 0 => 1, 1 => 1, 2 => 1, 3 => 1, 5 => 1, 7 => 1, 9 => 1, 10 => 1, 11 => 1, 12 => 1, 13 => 1, 15 => 1, 100 => 1, 101 => 1, 102 => 1, 103 => 1, 104 => 1, 105 => 1, 106 => 1, 107 => 1, 108 => 1, 109 => 1, 110 => 1, 111 => 1 ),
+	'dewikivoyage' => array( -1 => 0, 0 => 1, 1 => 1, 2 => 1, 3 => 1, 5 => 1, 7 => 1, 9 => 1, 10 => 1, 11 => 1, 12 => 1, 13 => 1, 15 => 1, 100 => 0, 101 => 1, 102 => 1, 103 => 1, 104 => 0, 105 => 1, 106 => 1, 107 => 1, 108 => 1, 109 => 1, 110 => 1, 111 => 1 ),
 ),
 # @} end of wgNamespacesWithSubpages
 
@@ -4675,6 +4678,16 @@ $wgConf->settings = array(
 	'dewiki' => array(
 		100 => 'Portal',
 		101 => 'Portal_Diskussion'
+	),
+	'dewikivoyage' => array(
+		100 => 'Portal',
+		101 => 'Portal_Diskussion',
+		102 => 'Wahl',
+		103 => 'Wahl_Diskussion',
+		104 => 'Thema',
+		105 => 'Thema_Diskussion',
+		106 => 'News',
+		107 => 'News_Diskussion',
 	),
 	'elwiki' => array(
 		100 => 'Πύλη',
@@ -6459,6 +6472,7 @@ $wgConf->settings = array(
 	'dawikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 102 => 1, 106 => 1 ),
 	'dewikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 102 => 1, 104 => 1 ),
 	'dewikiversity' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 106 => 1, 108 => 1 ),
+	'dewikivoyage' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 1, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 14 => 1, 100 => 1, 104 => 1, 106 => 1  ),
 	'elwikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 102 => 1 ),
 	'enwikibooks' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 1, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 112 => 1 ),
 	'enwikinews' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 100 => 1, 101 => 0 ),
