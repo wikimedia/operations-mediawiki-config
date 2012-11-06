@@ -120,6 +120,7 @@ $IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php
 $IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php
 $IP/extensions/UploadBlacklist/UploadBlacklist.php
 $IP/extensions/UploadWizard/UploadWizard.php
+$IP/extensions/UserMerge/UserMerge.php
 $IP/extensions/UserThrottle/UserThrottle.php
 $IP/extensions/Vector/Vector.php
 $IP/extensions/VipsScaler/VipsScaler.php
