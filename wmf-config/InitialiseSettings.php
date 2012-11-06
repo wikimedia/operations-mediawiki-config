@@ -3471,8 +3471,8 @@ $wgConf->settings = array(
 	'de_labswikimedia'     => array( -1 => 0, 0 => 1, 1 => 1, 2 => 1, 3 => 1, 4 => 0, 5 => 1, 6 => 0, 7 => 1, 8 => 0, 9 => 1, 10 => 0, 11 => 1 ),
 
 	// Wikivoyage
-	'enwikivoyage' => array( -1 => 0, 0 => 1, 1 => 1, 2 => 1, 3 => 1, 5 => 1, 7 => 1, 9 => 1, 10 => 1, 11 => 1, 12 => 1, 13 => 1, 15 => 1, 100 => 1, 101 => 1, 102 => 1, 103 => 1, 104 => 1, 105 => 1, 106 => 1, 107 => 1, 108 => 1, 109 => 1, 110 => 1, 111 => 1 ),
-	'dewikivoyage' => array( -1 => 0, 0 => 1, 1 => 1, 2 => 1, 3 => 1, 5 => 1, 7 => 1, 9 => 1, 10 => 1, 11 => 1, 12 => 1, 13 => 1, 15 => 1, 100 => 0, 101 => 1, 102 => 1, 103 => 1, 104 => 0, 105 => 1, 106 => 1, 107 => 1, 108 => 1, 109 => 1, 110 => 1, 111 => 1 ),
+	'enwikivoyage' => array( -1 => 0, 0 => 1, 1 => 1, 2 => 1, 3 => 1, 5 => 1, 7 => 1, 9 => 1, 10 => 1, 11 => 1, 12 => 1, 13 => 1, 15 => 1, 100 => 0, 101 => 1, 102 => 1, 103 => 1, 104 => 0, 105 => 1, 106 => 1, 107 => 1, 108 => 1, 109 => 1, 110 => 1, 111 => 1, 200 => 1, 201 => 1 ),
+	'dewikivoyage' => array( -1 => 0, 0 => 1, 1 => 1, 2 => 1, 3 => 1, 5 => 1, 7 => 1, 9 => 1, 10 => 1, 11 => 1, 12 => 1, 13 => 1, 15 => 1, 100 => 0, 101 => 1, 102 => 1, 103 => 1, 104 => 0, 105 => 1, 106 => 1, 107 => 1, 108 => 1, 109 => 1, 110 => 1, 111 => 1, 200 => 1, 201 => 1 ),
 ),
 # @} end of wgNamespacesWithSubpages
 
@@ -4688,6 +4688,8 @@ $wgConf->settings = array(
 		105 => 'Thema_Diskussion',
 		106 => 'News',
 		107 => 'News_Diskussion',
+		200 => 'WtTech',
+		201 => 'WtTech_Talk',
 	),
 	'elwiki' => array(
 		100 => 'Πύλη',
@@ -9789,6 +9791,7 @@ $wgConf->settings = array(
 	'wikibooks' => true, # on for all wikibooks! 2008-10-23
 	'wikisource' => true, # 2009-02-24
 	'wikinews' => true,
+	'wikivoyage' => true,
 ),
 
 'wmgCollectionPortletForLoggedInUsersOnly' => array(
@@ -11724,6 +11727,11 @@ $wgConf->settings = array(
 	'wikivoyage' => true,
 ),
 
+'wmgMaxCredits' => array(
+	'default' => 0,
+	'wikivoyage' => 10,
+),
+
 'wmgUseListings' => array(
 	'default' => false,
 	'wikivoyage' => true,
@@ -11763,13 +11771,7 @@ $wgConf->settings = array(
 
 'wmgRelatedSitesPrefixes' => array(
 	'default' => array(),
-	'wikivoyage' => array(
-		'wikipedia',
-		'wikitravel',
-		'dmoz',
-		'citizendium',
-		'rezepte',
-	),
+	'wikivoyage' => array( 'wikipedia', 'wikiPedia', 'wikitravel', 'wts', 'dmoz', 'citizendium', 'gen', 'shared', 'commons', 'tech', 'assoc', 'wmc', 'wtp' ),
 ),
 
 // @todo: settings for RelatedSites, might need to be revised ;)
@@ -11794,6 +11796,7 @@ $wgConf->settings = array(
 		'ldbwiki' => 'Location Database Wiki',
 	),
 ),
+
 'wgContentHandlerUseDB' => array(
 	'default' => false,
 	'wikidatawiki' => true,
