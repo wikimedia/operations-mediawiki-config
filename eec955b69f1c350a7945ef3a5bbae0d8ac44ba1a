@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAACmX////s\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 11803,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-11-06T23:47:13Z",
+      "side": 1,
+      "message": "* One per line please.\n* \u0027wikiPedia\u0027 does not exist I believe (for some reason we have wikipedia and WikiPedia, that last one is incorrect, the P should not be capitalised). but no wikiPedia.",
+      "revId": "eec955b69f1c350a7945ef3a5bbae0d8ac44ba1a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
