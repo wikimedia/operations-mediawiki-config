@@ -63,7 +63,6 @@ bawiki
 bawikibooks
 bclwiki
 bdwikimedia
-be_x_oldwiki
 betawikiversity
 bewiki
 bewikibooks
@@ -71,6 +70,7 @@ bewikimedia
 bewikiquote
 bewikisource
 bewiktionary
+be_x_oldwiki
 bgwikibooks
 bgwikinews
 bgwikiquote
@@ -165,6 +165,7 @@ dewikinews
 dewikiquote
 dewikisource
 dewikiversity
+dewikivoyage
 dewiktionary
 diqwiki
 dkwikimedia
@@ -188,6 +189,7 @@ enwikibooks
 enwikinews
 enwikisource
 enwikiversity
+enwikivoyage
 eowikibooks
 eowikinews
 eowikiquote
@@ -240,6 +242,7 @@ frwikinews
 frwikiquote
 frwikisource
 frwikiversity
+frwikivoyage
 furwiki
 fywiki
 fywikibooks
@@ -336,6 +339,7 @@ itwikinews
 itwikiquote
 itwikisource
 itwikiversity
+itwikivoyage
 itwiktionary
 iuwiki
 iuwiktionary
@@ -504,6 +508,7 @@ nlwikimedia
 nlwikinews
 nlwikiquote
 nlwikisource
+nlwikivoyage
 nlwiktionary
 nnwiki
 nnwikiquote
@@ -534,10 +539,10 @@ orwiktionary
 oswiki
 otrs_wikiwiki
 outreachwiki
-pa_uswikimedia
 pagwiki
 pamwiki
 papwiki
+pa_uswikimedia
 pawiki
 pawikibooks
 pawiktionary
@@ -594,6 +599,7 @@ ruwikinews
 ruwikiquote
 ruwikisource
 ruwikiversity
+ruwikivoyage
 ruwiktionary
 rwwiki
 rwwiktionary
@@ -674,6 +680,7 @@ svwikinews
 svwikiquote
 svwikisource
 svwikiversity
+svwikivoyage
 svwiktionary
 swwiki
 swwikibooks
@@ -773,6 +780,7 @@ wawiki
 wawikibooks
 wawiktionary
 wg_enwiki
+wikidatawiki
 wikimania2005wiki
 wikimania2006wiki
 wikimania2007wiki
@@ -809,20 +817,12 @@ zh_min_nanwikibooks
 zh_min_nanwikiquote
 zh_min_nanwikisource
 zh_min_nanwiktionary
-zh_yuewiki
 zhwikibooks
 zhwikinews
 zhwikiquote
 zhwikisource
 zhwiktionary
+zh_yuewiki
 zuwiki
 zuwikibooks
 zuwiktionary
-wikidatawiki
-enwikivoyage
-dewikivoyage
-itwikivoyage
-ruwikivoyage
-nlwikivoyage
-svwikivoyage
-frwikivoyage
