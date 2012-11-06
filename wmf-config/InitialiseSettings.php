@@ -3631,6 +3631,10 @@ $wgConf->settings = array(
 		'page' => 104,
 		'index' => 106,
 	),
+	'wikidata' => array(
+		'WD' => NS_PROJECT,      // Bug 41834
+		'WT' => NS_PROJECT_TALK,
+	),
 	'zhwikisource' => array(
 		'page' => 104,
 		'index' => 106,
