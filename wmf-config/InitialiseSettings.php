@@ -9605,7 +9605,6 @@ $wgConf->settings = array(
 	'dkwikimedia' => true,
 	'donatewiki' => true,
 	'elwikinews' => true,
-	'enwikivoyage' => true,
 	'eowikinews' => true,
 	'eowikisource' => true,
 	'etwikimedia' => true,
@@ -9670,6 +9669,8 @@ $wgConf->settings = array(
 	'wikimania2012wiki' => true,
 	'wikimania2013wiki' => true,
 	'xmfwiki' => true,
+
+	'wikivoyage' => true,
 ),
 
 'wgEnableNewpagesUserFilter' => array(
