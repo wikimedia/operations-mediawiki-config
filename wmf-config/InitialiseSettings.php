@@ -11675,79 +11675,68 @@ $wgConf->settings = array(
 
 'wmgDisableUnmergedEdits' => array(
 	'default' => false,
-	'enwikivoyage' => true,
-	'dewikivoyage' => true,
+	'wikivoyage' => true,
 ),
 
+// DO NOT USE. Not currently branched
 'wmgUseReplaceText' => array(
 	'default' => false,
-	'enwikivoyage' => true,
-	'dewikivoyage' => true,
+	//'wikivoyage' => true,
 ),
 
 'wmgUseGeoCrumbs' => array(
 	'default' => false,
-	'enwikivoyage' => true,
-	'dewikivoyage' => true,
+	'wikivoyage' => true,
 ),
 
 'wmgUseCalendar' => array(
 	'default' => false,
-	'enwikivoyage' => true,
-	'dewikivoyage' => true,
+	'wikivoyage' => true,
 ),
 
 'wmgUseMapSources' => array(
 	'default' => false,
-	'enwikivoyage' => true,
-	'dewikivoyage' => true,
+	'wikivoyage' => true,
 ),
 
 'wmgUseSlippyMap' => array(
 	'default' => false,
-	'enwikivoyage' => false,
-	'dewikivoyage' => true,
+	'wikivoyage' => false,
 ),
 
 'wmgUseCreditsSource' => array(
 	'default' => false,
-	'enwikivoyage' => true,
-	'dewikivoyage' => true,
+	'wikivoyage' => true,
 ),
 
 'wmgUseListings' => array(
 	'default' => false,
-	'enwikivoyage' => true,
-	'dewikivoyage' => true,
+	'wikivoyage' => true,
 ),
 
 'wmgUseTocTree' => array(
 	'default' => false,
-	'enwikivoyage' => true,
-	'dewikivoyage' => true,
+	'wikivoyage' => true,
 ),
 
 'wmgUseInsider' => array(
 	'default' => false,
-	'enwikivoyage' => true,
-	'dewikivoyage' => true,
+	'wikivoyage' => true,
 ),
 
 'wmgUseRelatedArticles' => array(
 	'default' => false,
-	'enwikivoyage' => true,
-	'dewikivoyage' => true,
+	'wikivoyage' => true,
 ),
 
 'wmgUseRelatedSites' => array(
 	'default' => false,
-	'enwikivoyage' => true,
-	'dewikivoyage' => true,
+	'wikivoyage' => true,
 ),
 
 'wmgUseUserMerge' => array(
 	'default' => false,
-	'enwikivoyage' => true,
+	'wikivoyage' => true,
 ),
 
 'wmgUseEventLogging' => array(
@@ -11759,14 +11748,7 @@ $wgConf->settings = array(
 
 'wmgRelatedSitesPrefixes' => array(
 	'default' => array(),
-	'enwikivoyage' => array(
-		'wikipedia',
-		'wikitravel',
-		'dmoz',
-		'citizendium',
-		'rezepte',
-	),
-	'dewikivoyage' => array(
+	'wikivoyage' => array(
 		'wikipedia',
 		'wikitravel',
 		'dmoz',
@@ -11778,7 +11760,7 @@ $wgConf->settings = array(
 // @todo: settings for RelatedSites, might need to be revised ;)
 'wmgExtraLanguageNames' => array(
 	'default' => array(),
-	'enwikivoyage' => array(
+	'wikivoyage' => array(
 		'wikitravel' => 'Wikitravel',
 		'wikipedia' => 'Wikipedia',
 		'WikiPedia' => 'Wikipedia',
@@ -11796,26 +11778,7 @@ $wgConf->settings = array(
 		'assoc' => 'Association',
 		'ldbwiki' => 'Location Database Wiki',
 	),
-	'dewikivoyage' => array(
-		'wikitravel' => 'Wikitravel',
-		'wikipedia' => 'Wikipedia',
-		'WikiPedia' => 'Wikipedia',
-		'citizendium' => 'Citizendium',
-		'dmoz' => 'Open Directory',
-		'Radreise-Wiki' => 'Radreise-Wiki',
-		'rezepte' => 'Rezepte-Wiki',
-		'commons' => 'Wikimedia Commons',
-		'wmc' => 'Wikimedia Commons',
-		'wtp' => 'Wikitravel Press',
-		'shared' => 'Shared',
-		'wts' => 'Shared',
-		'gen' => 'General',
-		'tech' => 'Technical',
-		'assoc' => 'Association',
-		'ldbwiki' => 'Location Database Wiki',
-	),
-),
-
+), ),
 'wgContentHandlerUseDB' => array(
 	'default' => false,
 	'wikidatawiki' => true,
