@@ -70,6 +70,24 @@
       "revId": "789aaf1e5e9a51bf090031b902184c28f6625f6e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAChH///94\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 4689,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2012-11-06T11:43:30Z",
+      "side": 1,
+      "message": "Sure :).",
+      "parentUuid": "AAACg3///+4\u003d",
+      "revId": "789aaf1e5e9a51bf090031b902184c28f6625f6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
