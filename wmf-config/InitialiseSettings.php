@@ -9563,6 +9563,7 @@ $wgConf->settings = array(
 	'wikidatawiki' => '/usr/local/apache/common/images/sul/wikidata.png',
 	'specieswiki' => '/usr/local/apache/common/images/sul/wikispecies.png',
 	'incubatorwiki' => '/usr/local/apache/common/images/sul/incubatorwiki.png',
+	'wikivoyage' => '/usr/local/apache/common/images/sul/wikvoyage.png',
 ),
 # @}
 

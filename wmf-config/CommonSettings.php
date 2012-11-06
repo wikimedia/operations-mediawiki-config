@@ -1632,6 +1632,7 @@ if ( $wmgUseCentralAuth ) {
 			'.wikidata.org' => 'wikidatawiki',
 			'species.wikimedia.org' => 'specieswiki',
 			'incubator.wikimedia.org' => 'incubatorwiki',
+			'.wikivoyage.org' => 'enwikivoyage',
 		);
 	} else {
 		// wmflabs beta cluster
