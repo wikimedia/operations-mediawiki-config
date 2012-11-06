@@ -172,6 +172,7 @@ dewikinews
 dewikiquote
 dewikisource
 dewikiversity
+dewikivoyage
 dewiktionary
 diqwiki
 dkwikimedia
@@ -197,6 +198,7 @@ enwikinews
 enwikiquote
 enwikisource
 enwikiversity
+enwikivoyage
 enwiktionary
 eowiki
 eowikibooks
@@ -255,6 +257,7 @@ frwikinews
 frwikiquote
 frwikisource
 frwikiversity
+frwikivoyage
 frwiktionary
 furwiki
 fywiki
@@ -356,6 +359,7 @@ itwikinews
 itwikiquote
 itwikisource
 itwikiversity
+itwikivoyage
 itwiktionary
 iuwiki
 iuwiktionary
@@ -528,6 +532,7 @@ nlwikimedia
 nlwikinews
 nlwikiquote
 nlwikisource
+nlwikivoyage
 nlwiktionary
 nnwiki
 nnwikiquote
@@ -623,6 +628,7 @@ ruwikinews
 ruwikiquote
 ruwikisource
 ruwikiversity
+ruwikivoyage
 ruwiktionary
 rwwiki
 rwwiktionary
@@ -704,6 +710,7 @@ svwikinews
 svwikiquote
 svwikisource
 svwikiversity
+svwikivoyage
 svwiktionary
 swwiki
 swwikibooks
@@ -807,6 +814,7 @@ wawiki
 wawikibooks
 wawiktionary
 wg_enwiki
+wikidatawiki
 wikimania2005wiki
 wikimania2006wiki
 wikimania2007wiki
@@ -853,11 +861,3 @@ zh_yuewiki
 zuwiki
 zuwikibooks
 zuwiktionary
-wikidatawiki
-enwikivoyage
-dewikivoyage
-itwikivoyage
-ruwikivoyage
-nlwikivoyage
-svwikivoyage
-frwikivoyage

@@ -172,6 +172,7 @@ dewiki php-1.21wmf2 *
 dewikiquote php-1.21wmf3 *
 dewikisource php-1.21wmf3 *
 dewikiversity php-1.21wmf3 *
+dewikivoyage php-1.21wmf3 *
 dewiktionary php-1.21wmf3 *
 diqwiki php-1.21wmf2 *
 dkwikimedia php-1.21wmf3 *
@@ -197,6 +198,7 @@ enwiki php-1.21wmf3 *
 enwikiquote php-1.21wmf3 *
 enwikisource php-1.21wmf3 *
 enwikiversity php-1.21wmf3 *
+enwikivoyage php-1.21wmf3 *
 enwiktionary php-1.21wmf3 *
 eowikibooks php-1.21wmf3 *
 eowikinews php-1.21wmf3 *
@@ -255,6 +257,7 @@ frwiki php-1.21wmf2 *
 frwikiquote php-1.21wmf3 *
 frwikisource php-1.21wmf3 *
 frwikiversity php-1.21wmf3 *
+frwikivoyage php-1.21wmf3 *
 frwiktionary php-1.21wmf3 *
 furwiki php-1.21wmf2 *
 fywikibooks php-1.21wmf3 *
@@ -356,6 +359,7 @@ itwiki php-1.21wmf2 *
 itwikiquote php-1.21wmf3 *
 itwikisource php-1.21wmf3 *
 itwikiversity php-1.21wmf3 *
+itwikivoyage php-1.21wmf3 *
 itwiktionary php-1.21wmf3 *
 iuwiki php-1.21wmf2 *
 iuwiktionary php-1.21wmf3 *
@@ -528,6 +532,7 @@ nlwikinews php-1.21wmf3 *
 nlwiki php-1.21wmf2 *
 nlwikiquote php-1.21wmf3 *
 nlwikisource php-1.21wmf3 *
+nlwikivoyage php-1.21wmf3 *
 nlwiktionary php-1.21wmf3 *
 nnwiki php-1.21wmf2 *
 nnwikiquote php-1.21wmf3 *
@@ -623,6 +628,7 @@ ruwiki php-1.21wmf2 *
 ruwikiquote php-1.21wmf3 *
 ruwikisource php-1.21wmf3 *
 ruwikiversity php-1.21wmf3 *
+ruwikivoyage php-1.21wmf3 *
 ruwiktionary php-1.21wmf3 *
 rwwiki php-1.21wmf2 *
 rwwiktionary php-1.21wmf3 *
@@ -705,7 +711,7 @@ svwiki php-1.21wmf2 *
 svwikiquote php-1.21wmf3 *
 svwikisource php-1.21wmf3 *
 svwikiversity php-1.21wmf3 *
-svwikivoyage php-1.21wmf2 *
+svwikivoyage php-1.21wmf3 *
 svwiktionary php-1.21wmf3 *
 swwikibooks php-1.21wmf3 *
 swwiki php-1.21wmf2 *
@@ -809,6 +815,7 @@ wawikibooks php-1.21wmf3 *
 wawiki php-1.21wmf2 *
 wawiktionary php-1.21wmf3 *
 wg_enwiki php-1.21wmf3 *
+wikidatawiki php-1.21wmf3 *
 wikimania2005wiki php-1.21wmf3 *
 wikimania2006wiki php-1.21wmf3 *
 wikimania2007wiki php-1.21wmf3 *
@@ -855,11 +862,3 @@ zh_yuewiki php-1.21wmf2 *
 zuwikibooks php-1.21wmf3 *
 zuwiki php-1.21wmf2 *
 zuwiktionary php-1.21wmf3 *
-dewikivoyage php-1.21wmf3 *
-enwikivoyage php-1.21wmf3 *
-frwikivoyage php-1.21wmf3 *
-itwikivoyage php-1.21wmf3 *
-nlwikivoyage php-1.21wmf3 *
-ruwikivoyage php-1.21wmf3 *
-svwikivoyage php-1.21wmf3 *
-wikidatawiki php-1.21wmf3 *
