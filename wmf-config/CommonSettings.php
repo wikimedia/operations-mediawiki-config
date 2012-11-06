@@ -2625,6 +2625,10 @@ if ( $wmgUseReplaceText ) {
 	require_once( "$IP/extensions/ReplaceText/ReplaceText.php" );
 }
 
+if ( $wmgDisableUnmergedEdits ) {
+	$wgDisableUnmergedEditing = true;
+}
+
 if ( $wmgUseGeoCrumbs ) {
 	require_once( "$IP/extensions/GeoCrumbs/GeoCrumbs.php" );
 

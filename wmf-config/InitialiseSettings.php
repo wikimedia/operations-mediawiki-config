@@ -11671,6 +11671,12 @@ $wgConf->settings = array(
 	'viwiki' => true,
 ),
 
+'wmgDisableUnmergedEdits' => array(
+	'default' => false,
+	'enwikivoyage' => true,
+	'dewikivoyage' => true,
+),
+
 'wmgUseReplaceText' => array(
 	'default' => false,
 	'enwikivoyage' => true,
