@@ -51,6 +51,24 @@
       "revId": "eec955b69f1c350a7945ef3a5bbae0d8ac44ba1a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAACmX///+0\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 11803,
+      "author": {
+        "id": 204
+      },
+      "writtenOn": "2012-11-07T00:26:09Z",
+      "side": 1,
+      "message": "It looks like the prefixes are compared without case, or lowercased at some ponit. On beta, we only have the \u0027wikipedia\u0027 prefix listed, but a link to {{WikiPedia:}} is correctly detected by RelatedSites.",
+      "parentUuid": "AAACmX////s\u003d",
+      "revId": "eec955b69f1c350a7945ef3a5bbae0d8ac44ba1a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
