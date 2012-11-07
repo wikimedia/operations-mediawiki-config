@@ -2724,6 +2724,9 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBSettings['idBlacklist'] = array( 1, 2, 3, 4, 5, 8, 13, 23, 24, 42, 80, 666, 1337, 1868, 1971, 2000, 2001, 2012, 2013 );
 
 	$wgWBSettings['useChangesTable'] = false;
+
+	// Disable editsection as it breaks the NS 0 editing (bug 41840)
+	$wgHiddenPrefs[] = 'editsection';
 }
 
 if ( $wmgUseWikibaseClient ) {
