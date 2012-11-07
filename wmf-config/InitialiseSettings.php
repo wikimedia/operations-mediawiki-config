@@ -10437,6 +10437,15 @@ $wgConf->settings = array(
 	'commonswiki' => false,
 ),
 
+'wmgEnableLocalTimedText' => array(
+	'default' => false,
+
+	'commonswiki' => true,
+	'enwiki' => true,
+	'test2wiki' => true,
+	'testwiki' => true,
+),
+
 'wmgUseVisualEditor' => array(
 	'default' => false,
 	'testwiki' => true,

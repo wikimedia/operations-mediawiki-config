@@ -956,6 +956,9 @@ if ( $wmgUseTimedMediaHandler ) {
 	if ( $wgDBname == 'commonswiki' ) {
 		$wgTimedTextNS = 102;
 	}
+	//overwrite enabling of local TimedText namespace
+	$wgEnableLocalTimedText = $wmgEnableLocalTimedText;
+
 	$wgEnableTranscode = false; // disabled initially
 	//enable on test2 for testing tmh1/2 setup
 	if ( $wgDBname == 'test2wiki' ) {
