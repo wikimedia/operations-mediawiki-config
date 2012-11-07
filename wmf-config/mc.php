@@ -25,7 +25,6 @@ $wgMemCachedInstanceSize = 2000;
 $wgObjectCaches['memcached-pecl'] = array(
 	'class'      => 'MemcachedPeclBagOStuff',
 	'serializer' => 'igbinary',
-	'persistent' => 1,
 	'servers'    => array(
 		'10.0.12.1:11211',
 		'10.0.12.2:11211',
