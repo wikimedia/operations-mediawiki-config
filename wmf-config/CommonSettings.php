@@ -1452,6 +1452,7 @@ $wgLegacySchemaConversion = true;
 # $wgReadOnly = '5 min DB server maintenance...';
 # $wgReadOnly = 'Read-only during network issues';
 
+if ( strpos( $wgDBname, 'voyage' ) ) { $wgReadOnly = true; }
 
 if ( $cluster != 'pmtpa' ) {
 	$wgHTTPTimeout = 10;
