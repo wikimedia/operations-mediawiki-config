@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAACsH////Y\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10430,
+      "author": {
+        "id": 64
+      },
+      "writtenOn": "2012-11-07T16:01:34Z",
+      "side": 1,
+      "message": "Hmm, this is a weird space between the array. Can we follow usual conventions and change it to just array()?",
+      "revId": "e2466e095beededee03b2fc22c1a01062266226d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAACsH////U\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10435,
+      "author": {
+        "id": 64
+      },
+      "writtenOn": "2012-11-07T16:01:34Z",
+      "side": 1,
+      "message": "I think we are missing out on testwiki, or is it on purpose?",
+      "revId": "e2466e095beededee03b2fc22c1a01062266226d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
