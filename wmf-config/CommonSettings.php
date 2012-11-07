@@ -2663,6 +2663,7 @@ if ( $wmgUseListings ) {
 
 if ( $wmgUseTocTree ) {
 	require_once( "$IP/extensions/TocTree/TocTree.php" );
+	$wgDefaultUserOptions['toc-floated'] = true;
 }
 
 if ( $wmgUseInsider ) {
