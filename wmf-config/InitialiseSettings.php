@@ -6688,6 +6688,12 @@ $wgConf->settings = array(
 		),
 	),
 
+	'wikivoyage' => array (
+		'bureaucrat' => array(
+			'usermerge' => true
+		)
+	),
+
 	// Read-only (except stewards)
 	'closed' => array(
 		'*' => array(
