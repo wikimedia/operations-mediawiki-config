@@ -372,9 +372,6 @@ $wgObjectCaches['sessions'] = array(
 	'class' => 'MultiWriteBagOStuff',
 	'caches' => array(
 		0 => array(
-			'factory' => 'ObjectCache::newMemcached',
-		),
-		1 => array(
 			'class' => 'RedisBagOStuff',
 			'servers' => array(
 				'10.0.12.1', # mc1
@@ -395,8 +392,12 @@ $wgObjectCaches['sessions'] = array(
 				'10.0.12.16', # mc16
 			),
 		),
+		1 => array(
+			'factory' => 'ObjectCache::newMemcached',
+		),
 	)
 );
+
 $wgSessionCacheType = 'sessions';
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
