@@ -374,12 +374,12 @@ $wgObjectCaches['sessions'] = array(
 		0 => array(
 			'factory' => 'ObjectCache::newMemcached',
 		),
-		1 => array(
-			'class' => 'RedisBagOStuff',
-			'servers' => array(
-				'10.0.12.1', # mc1
-			),
-		),
+		#1 => array(
+			#'class' => 'RedisBagOStuff',
+			#'servers' => array(
+				#'10.0.12.1', # mc1
+			#),
+		#),
 	)
 );
 $wgSessionCacheType = 'sessions';
