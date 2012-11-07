@@ -59,7 +59,7 @@ $wgFileBackends[] = array( // backend config for wiki's local repo
 	'name'               => 'local-swift',
 	'wikiId'             => "{$site}-{$lang}",
 	'lockManager'        => 'nullLockManager', // LocalFile uses FOR UPDATE
-	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname ),
+	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname, 'ttlDays' => 240 ),
 	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
 	'swiftUser'          => $wmfSwiftConfig['user'],
 	'swiftKey'           => $wmfSwiftConfig['key'],
@@ -77,7 +77,7 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repo
 	'name'               => 'shared-swift',
 	'wikiId'             => "wikipedia-commons",
 	'lockManager'        => 'nullLockManager', // just thumbnails
-	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki' ),
+	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki', 'ttlDays' => 240 ),
 	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
 	'swiftUser'          => $wmfSwiftConfig['user'],
 	'swiftKey'           => $wmfSwiftConfig['key'],
@@ -112,7 +112,7 @@ $wgFileBackends[] = array(
 	'name'        => 'local-multiwrite',
 	'wikiId'      => "{$site}-{$lang}",
 	'lockManager' => 'nullLockManager', # LocalFile uses FOR UPDATE
-	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname ),
+	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname, 'ttlDays' => 240 ),
 	'backends'    => array(
 		array( 'template' => 'local-NFS', 'isMultiMaster' => false ),
 		array( 'template' => 'local-swift', 'isMultiMaster' => true )
@@ -127,7 +127,7 @@ $wgFileBackends[] = array(
 	'name'        => 'shared-multiwrite',
 	'wikiId'      => "wikipedia-commons",
 	'lockManager' => 'nullLockManager', // just thumbnails
-	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki' ),
+	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki', 'ttlDays' => 240 ),
 	'backends'    => array(
 		array( 'template' => 'shared-NFS', 'isMultiMaster' => false ),
 		array( 'template' => 'shared-swift', 'isMultiMaster' => true ),
