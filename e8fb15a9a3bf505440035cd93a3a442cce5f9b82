@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAACmX///8I\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2012-11-07T00:51:18Z",
+      "side": 1,
+      "message": "Before it could never be reached either, since $cluster was always pmtpa or wmflabs.",
+      "parentUuid": "AAACmX///8Y\u003d",
+      "revId": "e8fb15a9a3bf505440035cd93a3a442cce5f9b82",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAACmX///8U\u003d",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2012-11-07T00:41:21Z",
       "side": 1,
       "message": "(same)",
+      "revId": "e8fb15a9a3bf505440035cd93a3a442cce5f9b82",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAACmX///8E\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2012-11-07T00:51:18Z",
+      "side": 1,
+      "message": "(same)\n\nIn this case it probably doesn\u0027t hurt, in case a new realm is added at some point.",
+      "parentUuid": "AAACmX///8U\u003d",
       "revId": "e8fb15a9a3bf505440035cd93a3a442cce5f9b82",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
