@@ -961,7 +961,7 @@ if ( $wmgUseTimedMediaHandler ) {
 
 	$wgEnableTranscode = false; // disabled initially
 	//enable on test2 for testing tmh1/2 setup
-	if ( $wgDBname == 'test2wiki' ) {
+	if ( $wgDBname == 'test2wiki' || $wgDBname == 'commonswiki' ) {
 		$wgEnableTranscode = true;
 	}
 	//tmh1/2 have 12 cores and need lots of shared memory
