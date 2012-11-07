@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAACmX///8Y\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-11-07T00:41:21Z",
+      "side": 1,
+      "message": "This will never happen since $realm now defaults to production if it isn\u0027t production or labs.",
+      "revId": "e8fb15a9a3bf505440035cd93a3a442cce5f9b82",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAACmX///8U\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-11-07T00:41:21Z",
+      "side": 1,
+      "message": "(same)",
+      "revId": "e8fb15a9a3bf505440035cd93a3a442cce5f9b82",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
