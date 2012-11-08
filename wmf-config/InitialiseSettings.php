@@ -3547,6 +3547,10 @@ $wgConf->settings = array(
 		'page' => 104,
 		'index' => 112,
 	),
+	'frrwiki' => array(
+		'page' => 102,
+		'index' => 104
+	),
 	'guwikisource' => array(
 		'page' => 104,
 		'index' => 106
