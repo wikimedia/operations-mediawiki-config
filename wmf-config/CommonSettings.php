@@ -348,10 +348,11 @@ $wgMiserMode = true;
 $wgObjectCaches['mysql-multiwrite'] = array(
 	'class' => 'MultiWriteBagOStuff',
 	'caches' => array(
-		0 => array(
+		0 => $wgObjectCaches['memcached-pecl'],
+		1 => array(
 			'factory' => 'ObjectCache::newMemcached',
 		),
-		1 => array(
+		2 => array(
 			'class' => 'SqlBagOStuff',
 			'server' => array(
 				'host' => '10.0.0.221', # pc1
@@ -392,7 +393,8 @@ $wgObjectCaches['sessions'] = array(
 				'10.0.12.16', # mc16
 			),
 		),
-		1 => array(
+		1 => $wgObjectCaches['memcached-pecl'],
+		2 => array(
 			'factory' => 'ObjectCache::newMemcached',
 		),
 	)
