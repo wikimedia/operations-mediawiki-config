@@ -1826,6 +1826,9 @@ if ( $wmgUseCentralNotice ) {
 		$wgCentralBannerRecorder = "$urlprotocol//{$wmfHostnames['meta']}/wiki/Special:RecordImpression";
 	}
 
+	// Allow only these domains to access CentralNotice data through the reporter
+	$wgNoticeReporterDomains = 'https://donate.wikimedia.org https://payments.wikimedia.org';
+
 	$wgNoticeProject = $wmgNoticeProject;
 
 	$wgCentralDBname = 'metawiki';

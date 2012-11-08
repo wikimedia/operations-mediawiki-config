@@ -4270,7 +4270,8 @@ $wgConf->settings = array(
 	'wikimania2011wiki' => 'wikimedia',
 	'wikimania2012wiki' => 'wikimedia',
 	'wikimania2013wiki' => 'wikimedia',
-	'wikidatawiki' => 'wikimedia', // temp for current banners until new NoticeProject option created for wikidata
+	'wikidatawiki' => 'wikidata',
+	'wikivoyage' => 'wikivoyage',
 ),
 
 'wgAllowHideBanners' => array(
