@@ -6386,6 +6386,7 @@ $wgConf->settings = array(
 	'srwiki' => true, // req by dungodung in #wikimedia-tech, 2008-02-25
 	'srwikisource' => true, // #25963
 	'viwiki' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=5060
+	'wikidatawiki' => true, // bug 41907
 	'zhwiktionary' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=5596
 
 	'test2wiki' => true, // request by Krinkle for testing
@@ -7522,6 +7523,9 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 		'flood' => array( 'bot' => true ),
 	),
+	'wikidatawiki' => array(
+		'autopatrolled' => array( 'autopatrol' => true ), // bug 41907
+	),
 	// due to mass vandalism complaint, 2006-04-11
 	'zhwiki' => array(
 		// '*' => array( 'createpage' => false ),  # re-enabled createpage priv according to bug 25142, then redisabled *sigh*, then reenabled \o/
@@ -7962,6 +7966,9 @@ $wgConf->settings = array(
 	'+vecwiki' => array(
 		'sysop' => array( 'flood' ),
 	),
+	'+wikidatawiki' => array(
+		'sysop' => array( 'autopatrolled' ), // bug 41907
+	),
 	'+zhwiki' => array(
 		'bureaucrat' => array( 'flood' ),
 		'sysop' => array( 'patroller', 'rollbacker', 'autoreviewer', 'confirmed' ),
@@ -8345,6 +8352,9 @@ $wgConf->settings = array(
 	),
 	'+vecwiki' => array(
 		'sysop' => array( 'flood' ),
+	),
+	'+wikidatawiki' => array(
+		'sysop' => array( 'autopatrolled' ), // bug 41907
 	),
 	'+wikimaniateamwiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'autopatrolled', 'import' ),
