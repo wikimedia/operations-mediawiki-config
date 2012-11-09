@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "AAAC8X////U\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10430,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2012-11-09T20:36:28Z",
+      "side": 1,
+      "message": "Sure",
+      "parentUuid": "AAACsH////Y\u003d",
+      "revId": "e2466e095beededee03b2fc22c1a01062266226d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "AAACsH////U\u003d",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2012-11-07T16:01:34Z",
       "side": 1,
       "message": "I think we are missing out on testwiki, or is it on purpose?",
+      "revId": "e2466e095beededee03b2fc22c1a01062266226d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAAC8X////Q\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10435,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2012-11-09T20:36:28Z",
+      "side": 1,
+      "message": "Hmm yeah I suppose I should add the test wikis here too",
+      "parentUuid": "AAACsH////U\u003d",
       "revId": "e2466e095beededee03b2fc22c1a01062266226d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
