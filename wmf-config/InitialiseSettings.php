@@ -2357,6 +2357,7 @@ $wgConf->settings = array(
 		'Wiktionary'	      => NS_PROJECT,      # pre project name localization backward compatibility
 		'Wiktionary_diskuse'      => NS_PROJECT_TALK, # pre project name localization backward compatibility cs generic
 		'Wiktionary_talk'	 => NS_PROJECT_TALK, # pre project name localization backward compatibility en generic
+		'Příloha_diskuse' => 101, # pre r65122-style backwards compatibility
 	),
 	'cuwiki' => array(
 		'Шаблон' => NS_TEMPLATE,
@@ -3466,7 +3467,7 @@ $wgConf->settings = array(
 	'plwikinews'	=> array( -1 => 0, 0 => 0, 1 => 1, 2 => 1, 3 => 1, 4 => 1, 5 => 1, 6 => 0, 7 => 1, 8 => 0, 9 => 1, 10 => 1, 11 => 1, 12 => 1, 13 => 1, 14 => 1, 15 => 1, 100 => 1, 101 => 1, 102 => 1, 103 => 1 ),
 
 	// Wiktionary
-	'cswiktionary'	=> array( -1 => 0, 0 => 1, 1 => 1, 2 => 1, 3 => 1, 4 => 1, 5 => 1, 6 => 0, 7 => 1, 8 => 1, 9 => 1, 10 => 1, 11 => 1, 12 => 1, 13 => 1, 14 => 1, 15 => 1 ),
+	'cswiktionary'	=> array( -1 => 0, 0 => 1, 1 => 1, 2 => 1, 3 => 1, 4 => 1, 5 => 1, 6 => 0, 7 => 1, 8 => 1, 9 => 1, 10 => 1, 11 => 1, 12 => 1, 13 => 1, 14 => 1, 15 => 1, 100 => 1, 101 => 1 ),
 	'iswiktionary'	=> array( -1 => 0, 0 => 1, 1 => 1, 2 => 1, 3 => 1, 4 => 1, 5 => 1, 6 => 0, 7 => 1, 8 => 0, 9 => 1, 10 => 1, 11 => 1, 12 => 1, 13 => 1, 14 => 1, 15 => 1, 100 => 1, 101 => 1, 102 => 1, 103 => 1 ),
 	'ltwiktionary'	=> array( -1 => 0, 0 => 0, 1 => 1, 2 => 1, 3 => 1, 4 => 1, 5 => 1, 6 => 0, 7 => 1, 8 => 0, 9 => 1, 10 => 1, 11 => 1, 12 => 1, 13 => 1, 14 => 1, 15 => 1, 100 => 1, 101 => 1, 102 => 1, 103 => 1 ),
 	'plwiktionary'	=> array( -1 => 0, 0 => 0, 1 => 1, 2 => 1, 3 => 1, 4 => 1, 5 => 1, 6 => 0, 7 => 1, 8 => 0, 9 => 1, 10 => 1, 11 => 1, 12 => 1, 13 => 1, 14 => 1, 15 => 1, 100 => 1, 101 => 1, 102 => 1, 103 => 1 ),
@@ -5541,6 +5542,10 @@ $wgConf->settings = array(
 		103 => 'Razgovor_o_Indeksu',
 		104 => 'Dodatak',
 		105 => 'Razgovor_o_Dodatku',
+	),
+	'cswiktionary' => array(
+		100 => 'Příloha',
+		101 => 'Diskuse_k_příloze',
 	),
 	'cywiktionary' => array(
 		100 => 'Atodiad',
