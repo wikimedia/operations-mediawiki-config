@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAAC53////A\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2012-11-09T12:45:05Z",
+      "side": 1,
+      "message": "Typo $wgm",
+      "revId": "14ec5e9def002f26cf9712db4c1761438a32c914",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
