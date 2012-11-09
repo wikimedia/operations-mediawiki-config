@@ -1827,7 +1827,7 @@ if ( $wmgUseCentralNotice ) {
 	}
 
 	// Allow only these domains to access CentralNotice data through the reporter
-	$wgNoticeReporterDomains = 'https://donate.wikimedia.org https://payments.wikimedia.org';
+	$wgNoticeReporterDomains = 'https://donate.wikimedia.org';
 
 	$wgNoticeProject = $wmgNoticeProject;
 
