@@ -11,8 +11,9 @@ $wgAbuseFilterStyleVersion = "9-1";
 $wgGroupPermissions['*']['abusefilter-view'] = true;
 $wgGroupPermissions['*']['abusefilter-log'] = true;
 
+$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true;
+
 $wgGroupPermissions['sysop']['abusefilter-modify'] = true;
-$wgGroupPermissions['sysop']['abusefilter-log-detail'] = true;
 
 # leaks IP addresses according to Werdna [TS]
 $wgGroupPermissions['sysop']['abusefilter-private'] = false;
@@ -96,6 +97,8 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 } elseif ( $wgDBname == 'itwiki' ) {
 	$wgGroupPermissions['*']['abusefilter-view'] = false;
 	$wgGroupPermissions['*']['abusefilter-log'] = false;
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-log-detail'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-view'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-log'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
