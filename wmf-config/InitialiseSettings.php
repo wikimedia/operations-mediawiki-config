@@ -11855,6 +11855,18 @@ $wgConf->settings = array(
 		'wmc',
 		'wtp'
 	),
+	'nlwikivoyage' => array(
+		'nl:wikipedia',
+		'wikitravel',
+		'dmoz',
+		'citizendium',
+		'gen',
+		'commons',
+		'tech',
+		'assoc',
+		'wmc',
+		'wtp'
+	),
 ),
 
 // @todo: settings for RelatedSites, might need to be revised ;)
