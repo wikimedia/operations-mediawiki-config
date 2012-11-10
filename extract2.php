@@ -24,6 +24,7 @@ $allowed_portals = array(
 	"Www.wikibooks.org_portal",
 	"Www.wikidata.org_portal",
 	"Secure.wikimedia.org_portal",
+	"Www.wikivoyage.org_portal",
 );
 $allowed_templates = array(
 	"Www.wikipedia.org_template",
@@ -35,6 +36,7 @@ $allowed_templates = array(
 	"Www.wikibooks.org_template",
 	"Www.wikidata.org_template",
 	"Secure.wikimedia.org_template",
+	"Www.wikivoyage.org_template",
 );
 
 $useportal = $wgRequest->getText( 'title', 'Www.wikipedia.org_portal' );
