@@ -11,8 +11,9 @@ $wgAbuseFilterStyleVersion = "9-1";
 $wgGroupPermissions['*']['abusefilter-view'] = true;
 $wgGroupPermissions['*']['abusefilter-log'] = true;
 
+$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true; // bug 42012
+
 $wgGroupPermissions['sysop']['abusefilter-modify'] = true;
-$wgGroupPermissions['sysop']['abusefilter-log-detail'] = true;
 
 # leaks IP addresses according to Werdna [TS]
 $wgGroupPermissions['sysop']['abusefilter-private'] = false;
@@ -28,6 +29,7 @@ $wgAvailableRights = array_diff( $wgAvailableRights, array( 'abusefilter-private
 // Custom permissions
 if ( $wgDBname == 'be_x_oldwiki' ) {
 	$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 	$wgGroupPermissions['abusefilter']['abusefilter-log-detail'] = true;
 	$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 	$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true;
@@ -64,6 +66,7 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 } elseif ( $wgDBname == 'enwikisource' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 	$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 
 } elseif ( $wgDBname == 'frwiki' || $wgDBname == 'frwikibooks' ) {
 	// wikibooks by bug 26142
@@ -80,6 +83,7 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 	$wgGroupPermissions['autoconfirmed']['abusefilter-log-private'] = true; // Bug 38216
 
 } elseif ( $wgDBname == 'eswiki' ) {
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 	$wgGroupPermissions['user']['abusefilter-view'] = true;
 	$wgGroupPermissions['user']['abusefilter-log'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
@@ -96,6 +100,8 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 } elseif ( $wgDBname == 'itwiki' ) {
 	$wgGroupPermissions['*']['abusefilter-view'] = false;
 	$wgGroupPermissions['*']['abusefilter-log'] = false;
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false;
+	$wgGroupPermissions['sysop']['abusefilter-log-detail'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-view'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-log'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
@@ -108,6 +114,7 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 	$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 	$wgGroupPermissions['*']['abusefilter-log-detail'] = false;
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 	$wgGroupPermissions['abusefilter']['abusefilter-log-detail'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
@@ -134,18 +141,21 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 } elseif ( $wgDBname == 'nowiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 	$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 
 } elseif ( $wgDBname == 'plwiki' ) {
 	$wgGroupPermissions['*']['abusefilter-view'] = false;
 	$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 	$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 
 } elseif ( $wgDBname == 'ptwiktionary' ) {
 	$wgGroupPermissions['user']['abusefilter-view'] = true;
 	$wgGroupPermissions['user']['abusefilter-log'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 } elseif ( $wgDBname == 'ruwiki' ) {
 	## Scaled back from sysop to autoconfirmed -- bug 17998 -- Andrew 2009-03-16
 	## Taken back to * per the same bug reopened -- Andrew 2009-04-24
@@ -162,12 +172,14 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 } elseif ( $wgDBname == 'ruwikisource' ) {
 	$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 	$wgGroupPermissions['abusefilter']['abusefilter-log-detail'] = true;
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 } elseif ( $wgDBname == 'thwiki' ) {
 	## http://bugzilla.wikimedia.org/show_bug.cgi?id=28502
 	$wgGroupPermissions['*']['abusefilter-view'] = false;
 	$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 	$wgGroupPermissions['*']['abusefilter-log'] = false;
 	$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 } elseif ( $wgDBname == 'zh_yuewiki' ) {
 	$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
@@ -198,6 +210,7 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 	$wgGroupPermissions['*']['abusefilter-log'] = false;
 	$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 	$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
@@ -213,6 +226,7 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 	$wgGroupPermissions['*']['abusefilter-log'] = false;
 	$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 	$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 } elseif ( $wgDBname == 'frwiktionary' ) {
 	$wgGroupPermissions['abusefilter']['abusefilter-log'] = true;
 	$wgGroupPermissions['abusefilter']['abusefilter-view'] = true;
@@ -231,6 +245,7 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 	$wgGroupPermissions['patroller']['abusefilter-view'] = true;
 	$wgGroupPermissions['*']['abusefilter-view'] = false;
 	$wgGroupPermissions['*']['abusefilter-log'] = false;
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 } elseif ( $wgDBname == 'metawiki' ) {
 	$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 } elseif ( $wgDBname == 'eswiktionary' ) {
@@ -249,12 +264,14 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 	$wgGroupPermissions['*']['abusefilter-log'] = false;
 	$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 	$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
 	$wgAbuseFilterAvailableActions[] = 'block';
 	$wgAbuseFilterBlockDuration = 'infinite';
 } elseif ( $wgDBname == 'mediawikiwiki' ) {
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 	$wgAbuseFilterAvailableActions[] = 'block';
 }
