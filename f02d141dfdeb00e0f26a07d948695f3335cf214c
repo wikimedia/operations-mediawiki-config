@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADD3///9s\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4702,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2012-11-10T19:46:34Z",
+      "side": 1,
+      "message": "I keep reading this as Thelma.\n\nNamespace 105 should be Louise.",
+      "revId": "f02d141dfdeb00e0f26a07d948695f3335cf214c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
