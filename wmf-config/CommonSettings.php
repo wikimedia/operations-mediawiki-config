@@ -1299,6 +1299,7 @@ $wgDisableCounters     = true;
 
 wfProfileOut( "$fname-misc2" );
 
+if ( $wgDBname != 'wikidatawiki' ) {
 # This is overridden in the Lucene section below
 $wgDisableTextSearch   = true;
 $wgDisableSearchUpdate = true;
@@ -1317,6 +1318,7 @@ if ( $wgUseLuceneSearch ) {
 	wfProfileIn( "$fname-lucene" );
 	include( "$wmfConfigDir/lucene.php" );
 	wfProfileOut( "$fname-lucene" );
+}
 }
 
 // Case-insensitive title prefix search extension
