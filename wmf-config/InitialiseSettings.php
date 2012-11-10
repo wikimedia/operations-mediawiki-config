@@ -4701,8 +4701,8 @@ $wgConf->settings = array(
 		103 => 'Wahl_Diskussion',
 		104 => 'Thema',
 		105 => 'Thema_Diskussion',
-		106 => 'News',
-		107 => 'News_Diskussion',
+//		106 => 'News',
+//		107 => 'News_Diskussion',
 	),
 	'itwikivoyage' => array(
 		100 => 'Portale',
