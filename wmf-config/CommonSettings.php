@@ -2773,6 +2773,10 @@ case 'wmflabs':
 // https://bugzilla.wikimedia.org/show_bug.cgi?id=37211
 $wgUseCombinedLoginLink = false;
 
+if ( $wgDBname == 'dewikivoyage' ) {
+	$wgUrlProtocols = array_diff( $wgUrlProtocols, array( 'news:' ) ); // Bug 41960 - news: protocol interferes with dewikivoyage News namespace.
+}
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
