@@ -44,6 +44,7 @@ $projects = array(
 	'wikiquote'   => 'q',
 	'wikisource'  => 's', // forward compatiblity, unused ATM
 	'wikiversity' => 'v', // forward compatiblity, unused ATM
+	'wikivoyage'  => 'y',
 	'wiktionary'  => 't',
 );
 
