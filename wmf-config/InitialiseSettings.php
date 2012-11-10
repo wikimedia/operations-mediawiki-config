@@ -6422,17 +6422,19 @@ $wgConf->settings = array(
 
 'wgNoFollowDomainExceptions' => array(
 	'default' => array(
-	# Original list 20111110 - bug 32309
-	'mediawiki.org',
-	'wikibooks.org',
-	'wikimediafoundation.org',
-	'wikimedia.org',
-	'wikinews.org',
-	'wikipedia.org',
-	'wikiquote.org',
-	'wikisource.org',
-	'wikiversity.org',
-	'wiktionary.org',
+		# Original list 20111110 - bug 32309
+		'mediawiki.org',
+		'wikibooks.org',
+		'wikimediafoundation.org',
+		'wikimedia.org',
+		'wikinews.org',
+		'wikipedia.org',
+		'wikiquote.org',
+		'wikisource.org',
+		'wikiversity.org',
+		'wiktionary.org',
+		'wikivoyage.org',
+		'wikidata.org',
 	),
 ),
 # @}
