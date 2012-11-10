@@ -2403,6 +2403,10 @@ $wgConf->settings = array(
 		'Index' => 104,
 		'Index_talk' => 105,
 	),
+	'dewikivoyage' => array(
+		'News' => 106,
+		'News_Diskussion' => 107,
+	),
 	'dewiktionary' => array(
 		'WT' => NS_PROJECT,
 		'WikiSaurus' => 104,
@@ -4701,8 +4705,8 @@ $wgConf->settings = array(
 		103 => 'Wahl_Diskussion',
 		104 => 'Thema',
 		105 => 'Thema_Diskussion',
-		106 => 'News',
-		107 => 'News_Diskussion',
+		106 => 'Nachrichten',
+		107 => 'Nachrichten_Diskussion',
 	),
 	'itwikivoyage' => array(
 		100 => 'Portale',
