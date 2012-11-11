@@ -11765,7 +11765,7 @@ $wgConf->settings = array(
 
 'wmgDisableUnmergedEdits' => array(
 	'default' => false,
-	'wikivoyage' => true,
+	'wikivoyage' => false,
 ),
 
 // DO NOT USE. Not currently branched
