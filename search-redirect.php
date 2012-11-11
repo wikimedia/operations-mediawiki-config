@@ -33,6 +33,7 @@ $sites = array(
 	'wikimedia',
 	'wikiquote',
 	'wikibooks',
+	'wikivoyage',
 );
 if ( !in_array( $family, $sites ) ) {
 	$family = 'wikipedia';
