@@ -904,6 +904,7 @@ $wgConf->settings = array(
 
 	// projects
 	'wikinews' => false,
+	'wikivoyage' => false,
 
 	// wikis:
 	'arwikinews' => true,
@@ -951,6 +952,7 @@ $wgConf->settings = array(
 
 	// projects
 	'wikinews' => '//commons.wikimedia.org/wiki/Special:Upload',
+	'wikivoyage' => '//commons.wikimedia.org/wiki/Special:Upload',
 
 	// Use relative paths for same-wiki links so the SSL converter can tweak them correctly
 	'incubatorwiki' => '/wiki/Special:MyLanguage/Incubator:Upload',
