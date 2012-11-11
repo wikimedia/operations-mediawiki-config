@@ -152,10 +152,6 @@ function wmfLoadInitialiseSettings( $conf ) {
 }
 wfProfileOut( "$fname-wgConf" );
 
-if( php_sapi_name() == 'cli' ) {
-	$wgShowExceptionDetails = true;
-}
-
 wfProfileIn( "$fname-confcache" );
 
 # Is this database listed in $cluster.dblist?
