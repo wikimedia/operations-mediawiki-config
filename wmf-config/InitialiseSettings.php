@@ -4620,6 +4620,16 @@ $wgConf->settings = array(
 	'barwiki' => array(
 		100 => 'Portal',
 		101 => 'Portal_Diskussion',
+		102 => 'Buach',                 // Bug 41962 - Wikibooks alt.
+		103 => 'Buach_Dischkrian',
+		104 => 'Woat',                  // Bug 41962 - Wiktionary alt.
+		105 => 'Woat_Dischkrian',
+		106 => 'Text',                  // Bug 41962 - Wikisource alt.
+		107 => 'Text_Dischkrian',
+		108 => 'Spruch',                // Bug 41962 - Wikiquote alt.
+		109 => 'Spruch_Dischkrian',
+		110 => 'Nochricht',             // Bug 41962 - Wikinews alt.
+		111 => 'Nochricht_Dischkrian',
 	),
 	'bewiki' => array(
 		100 => 'Партал', // Portal
