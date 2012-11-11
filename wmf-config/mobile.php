@@ -142,4 +142,7 @@ $wgMFEnableResourceLoader = false;
 // See bug 41141 though, we may wish to disable on some sites.
 $wgMFTrademarkSitename = true;
 
+// Enable event logging on beta (ori-l; 10-Nov-2012)
+$wgMFLogEvents = true;
+
 } # safeguard
