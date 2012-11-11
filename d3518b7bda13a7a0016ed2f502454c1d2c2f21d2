@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADJX///98\u003d",
+        "filename": "wmf-config/lucene.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2012-11-11T22:09:27Z",
+      "side": 0,
+      "message": "I\u0027m guessing this block is all dead...\n\nI\u0027m struggling to see anywhere MWSEARCH is defined...",
+      "revId": "d3518b7bda13a7a0016ed2f502454c1d2c2f21d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADJX///+E\u003d",
+        "filename": "wmf-config/lucene.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2012-11-11T22:09:27Z",
+      "side": 0,
+      "message": "This is definitely useless/doing nothing:\n\nreedy@fenari:/home/wikipedia/common$ nslookup 10.0.0.16\nServer:         208.80.152.131\nAddress:        208.80.152.131#53\n\nNon-authoritative answer:\n16.0.0.10.in-addr.arpa  name \u003d vl2-eth0.lvs6.wikimedia.org.",
+      "revId": "d3518b7bda13a7a0016ed2f502454c1d2c2f21d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
