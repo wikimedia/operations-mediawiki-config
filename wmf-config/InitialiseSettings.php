@@ -7535,7 +7535,10 @@ $wgConf->settings = array(
 		'flood' => array( 'bot' => true ),
 	),
 	'wikidatawiki' => array(
-		'autopatrolled' => array( 'autopatrol' => true ), // bug 41907
+		'autopatrolled' => array(
+			'autopatrol' => true, // bug 41907
+			'patrol' => true, // bug 42052
+		),
 	),
 	// due to mass vandalism complaint, 2006-04-11
 	'zhwiki' => array(
