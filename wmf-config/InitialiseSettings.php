@@ -10179,6 +10179,8 @@ $wgConf->settings = array(
 'wgVectorCombineUserTalk' => array(
 	'default'   => false,
 	'enwiki'    => true,
+	'testwiki'  => true,
+	'mediawikiwiki' => true,
 ),
 
 'wmgJQueryOnEveryPage' => array(
