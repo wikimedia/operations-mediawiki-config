@@ -1202,7 +1202,6 @@ $wgConf->settings = array(
 	'wikiquote'     => 'Wikiquote',
 	'wiktionary'    => 'Wiktionary',
 	'wikiversity'   => 'Wikiversity',
-	'wikivoyage'    => 'Wikivoyage',
 	'wikinews'      => 'Wikinews',
 	'wikisource'    => 'Wikisource',
 	'wikivoyage'    => 'Wikivoyage',
