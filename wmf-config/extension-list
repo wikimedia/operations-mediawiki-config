@@ -92,7 +92,6 @@ $IP/extensions/RelatedArticles/RelatedArticles.php
 $IP/extensions/RelatedSites/RelatedSites.php
 $IP/extensions/Renameuser/Renameuser.php
 $IP/extensions/RSS/RSS.php
-$IP/extensions/ScanSet/ScanSet.php
 $IP/extensions/Scribunto/Scribunto.php
 $IP/extensions/SecurePoll/SecurePoll.php
 $IP/extensions/ShortUrl/ShortUrl.php
