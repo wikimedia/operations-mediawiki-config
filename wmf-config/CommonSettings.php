@@ -2345,7 +2345,12 @@ if ( $wmgUseVisualEditor ) {
 		$wgExtraNamespaces[NS_VISUALEDITOR_TALK] = 'VisualEditor_talk';
 		$wgVisualEditorNamespaces[] = NS_VISUALEDITOR;
 	}
-
+	if ( $wmgVisualEditorHide ) {
+		$wgHiddenPrefs[] = 'visualeditor-enable';
+	}
+	if ( $wmgVisualEditorDefault ) {
+		$wgDefaultUserOptions['visualeditor-enable'] = 1;
+	}
 }
 
 if ( $wmgUseNarayam ) {
