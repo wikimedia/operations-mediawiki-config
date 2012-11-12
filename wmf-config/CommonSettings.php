@@ -1292,10 +1292,6 @@ $wgDisableCounters     = true;
 
 wfProfileOut( "$fname-misc2" );
 
-// Lucene is explicitly disabled for wikidatawiki
-// Due to both lucene indexing issues, and lack of
-// updated code support to OAI etc
-if ( $wgDBname != 'wikidatawiki' ) {
 # This is overridden in the Lucene section below
 $wgDisableTextSearch   = true;
 $wgDisableSearchUpdate = true;
@@ -1314,7 +1310,6 @@ if ( $wgUseLuceneSearch ) {
 	wfProfileIn( "$fname-lucene" );
 	include( "$wmfConfigDir/lucene.php" );
 	wfProfileOut( "$fname-lucene" );
-}
 }
 
 // Case-insensitive title prefix search extension
