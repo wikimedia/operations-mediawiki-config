@@ -10535,6 +10535,18 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 ),
 
+'wmgVisualEditorHide' => array(
+	'default' => false,
+	'testwiki' => true,
+	'mediawikiwiki' => true
+),
+
+'wmgVisualEditorDefault' => array(
+	'default' => false,
+	'testwiki' => true,
+	'mediawikiwiki' => true
+),
+
 'wmgUseRSSExtension' => array(
 	'default' => false,
 	'foundationwiki' => true,
