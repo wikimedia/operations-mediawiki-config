@@ -10,7 +10,7 @@
  * Hashar, based on dammit comments. Nov 28 2005.
  *
  */
-$wgMainCacheType = 'memcached-multiwrite';
+$wgMainCacheType = 'memcached-pecl';
 
 $wgMemCachedPersistent = false;
 $wgUseMemCached = true;
