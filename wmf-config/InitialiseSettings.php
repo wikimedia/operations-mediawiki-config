@@ -10137,18 +10137,13 @@ $wgConf->settings = array(
 # relies on http::get fetches (and shouldn't go through the proxy and get denied :-P) -- atg 2009-12-1
 'wgHTTPProxy' => array(
 	'default' => false, // No access to outside
-
-	// Disabled by TS: breaks lucene search engine
-	# 'testwiki' => 'url-downloader.wikimedia.org:8080', // Proxy for upload-by-url tests
 ),
 'wgCopyUploadProxy' => array(
 	'default' => 'url-downloader.wikimedia.org:8080',
 ),
 'wgAllowCopyUploads' => array(
-	'default' => false, // Disabled by mark 2009-11-05, pending HTTP proxy setup and security review // Whee! 2009-11-05 BV -- note limited by upload_by_url perm key to sysops
-
+	'default' => false,
 	'testwiki' => true,
-	# 'commonswiki' => true, // catrope 2010-01-04
 ),
 'wgCopyUploadsFromSpecialUpload' => array(
 	'default' => false,
@@ -10158,7 +10153,7 @@ $wgConf->settings = array(
 'wgMaxUploadSize' => array(
 	 // Only affects URL uploads; web uploads are enforced by PHP.
 	 'default' => 1024 * 1024 * 500, // 500 MB
-	 'ptwiki'  => 1024 * 500, // 500 KB, as requested in #23186
+	 'ptwiki'  => 1024 * 500, // 500 KB - https://bugzilla.wikimedia.org/23186
 ),
 
 'wmgUseCommunityVoice' => array (
@@ -10168,7 +10163,6 @@ $wgConf->settings = array(
 
 'wmgUsePdfHandler' => array (
 	'default' => true, // brion -- 2009-08-25
-	'usabilitywiki' => true,
 ),
 
 'wmgUseUsabilityInitiative' => array (
