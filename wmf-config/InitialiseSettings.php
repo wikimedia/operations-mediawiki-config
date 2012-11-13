@@ -10150,6 +10150,10 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	# 'commonswiki' => true, // catrope 2010-01-04
 ),
+'wgCopyUploadsFromSpecialUpload' => array(
+	'default' => false,
+	'testwiki' => true,
+),
 
 'wgMaxUploadSize' => array(
 	 // Only affects URL uploads; web uploads are enforced by PHP.
