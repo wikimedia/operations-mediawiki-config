@@ -5,7 +5,7 @@
 
 	Version 0.1 is based of MediaWiki import/export format 0.3
 	(i.e. export-0.3.xsd). With addition of one propery
-  references in page
+	references in page
 
 	The canonical URL to the schema document is:
 	http://www.mediawiki.org/xml/lsearch-0.1.xsd
@@ -14,9 +14,9 @@
 	http://www.mediawiki.org/xml/lsearch-0.1/
 -->
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-        xmlns:mw="http://www.mediawiki.org/xml/lsearch-0.1/"
-        targetNamespace="http://www.mediawiki.org/xml/lsearch-0.1/"
-        elementFormDefault="qualified">
+	xmlns:mw="http://www.mediawiki.org/xml/lsearch-0.1/"
+	targetNamespace="http://www.mediawiki.org/xml/lsearch-0.1/"
+	elementFormDefault="qualified">
 
 	<annotation>
 		<documentation xml:lang="en">
