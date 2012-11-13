@@ -350,9 +350,6 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 	'caches' => array(
 		0 => $wgObjectCaches['memcached-pecl'],
 		1 => array(
-			'factory' => 'ObjectCache::newMemcached',
-		),
-		2 => array(
 			'class' => 'SqlBagOStuff',
 			'server' => array(
 				'host' => '10.0.0.221', # pc1
