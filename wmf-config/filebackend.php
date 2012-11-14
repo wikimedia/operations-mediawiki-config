@@ -16,7 +16,7 @@ $wgFileBackends[] = array( // backend config for wiki's local repo
 	'fileMode'       => 0644,
 	'containerPaths' => array(
 		"local-public"    => $wgUploadDirectory,
-		"local-thumb"     => str_replace( '/mnt/upload7', '/mnt/thumbs', "$wgUploadDirectory/thumb" ),
+		"local-thumb"     => str_replace( '/mnt/upload7', '/mnt/thumbs2', "$wgUploadDirectory/thumb" ),
 		"local-deleted"   => "/mnt/upload7/private/archive/$site/$lang",
 		"local-temp"      => "$wgUploadDirectory/temp",
 		"timeline-render" => "$wgUploadDirectory/timeline"
@@ -31,7 +31,7 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repo
 	'fileMode'       => 0644,
 	'containerPaths' => array(
 		"local-public"  => "/mnt/upload7/wikipedia/commons",
-		"local-thumb"   => "/mnt/thumbs/wikipedia/commons/thumb",
+		"local-thumb"   => "/mnt/thumbs2/wikipedia/commons/thumb",
 		"local-temp"    => "/mnt/upload7/wikipedia/commons/temp",
 	)
 );
@@ -121,8 +121,6 @@ $wgFileBackends[] = array(
 		array( 'template' => 'local-swift', 'isMultiMaster' => true )
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
-	'noPushQuickOps' => true,
-	'noPushDirConts' => array( 'local-thumb', 'local-temp' ),
 	'autoResync'  => true // bug 39221
 );
 $wgFileBackends[] = array(
@@ -136,9 +134,7 @@ $wgFileBackends[] = array(
 		array( 'template' => 'shared-swift', 'isMultiMaster' => true ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
-	'noPushQuickOps' => true,
-	'noPushDirConts' => array( 'local-thumb', 'local-temp' ),
-	'autoResync'  => true // 39221
+	'autoResync'  => true // bug 39221
 );
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
