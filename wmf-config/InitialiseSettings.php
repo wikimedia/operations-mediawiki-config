@@ -7492,6 +7492,12 @@ $wgConf->settings = array(
 		),
 		'researcher' => array( 'browsearchive' => true, 'deletedhistory' => true, 'apihighlimits' => true ),
 	),
+	'test2wiki' => array(
+		'user' => array(
+			'upload_by_url' => true, // For testing of Flickr uploading via UploadWizard
+			'upload' => true,
+		),
+	),
 	'trwiki' => array(
 		'autoreview' => array(
 			'autopatrol' => true, // Bug 38690
@@ -10144,10 +10150,10 @@ $wgConf->settings = array(
 'wgAllowCopyUploads' => array(
 	'default' => false,
 	'testwiki' => true,
+	'test2wiki' => true,
 ),
 'wgCopyUploadsFromSpecialUpload' => array(
 	'default' => false,
-	'testwiki' => true,
 ),
 
 'wgMaxUploadSize' => array(
