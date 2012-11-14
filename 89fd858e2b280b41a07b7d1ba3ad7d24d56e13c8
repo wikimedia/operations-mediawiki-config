@@ -16,6 +16,24 @@
       "revId": "89fd858e2b280b41a07b7d1ba3ad7d24d56e13c8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADZH///h0\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8140,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2012-11-14T22:55:23Z",
+      "side": 0,
+      "message": "Please keep discussion on bugzilla, thanks. --\u003e https://bugzilla.wikimedia.org/show_bug.cgi?id\u003d42114",
+      "parentUuid": "AAADZH///io\u003d",
+      "revId": "89fd858e2b280b41a07b7d1ba3ad7d24d56e13c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
