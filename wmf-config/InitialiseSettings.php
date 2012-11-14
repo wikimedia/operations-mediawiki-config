@@ -10537,16 +10537,20 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'mediawikiwiki' => true,
+	'enwiki' => true, // dark launch
 ),
 
 'wmgVisualEditorParsoidPrefix' => array(
 	'default' => '', // This MUST be configured per-wiki for VE to work correctly
 	'testwiki' => 'test',
-	'mediawikiwiki' => 'mw'
+	'mediawikiwiki' => 'mw',
+	'enwiki' => 'en',
 ),
 
 'wmgVisualEditorNamespaces' => array(
-	'default' => array(),
+	'default' => array( NS_MAIN ),
+	'testwiki' => array(), // NS_VISUALEDITOR added in CommonSettings.php
+	'mediawikiwiki' => array(), // NS_VISUALEDITOR added in CommonSettings.php
 ),
 
 // For wikis that used VisualEditor before 2012-11-12
@@ -10558,14 +10562,15 @@ $wgConf->settings = array(
 
 'wmgVisualEditorHide' => array(
 	'default' => false,
-	'testwiki' => true,
-	'mediawikiwiki' => true
+	'testwiki' => true, // pre-2012-11-12 install
+	'mediawikiwiki' => true, // pre-2012-11-12 install
+	'enwiki' => true, // dark launch
 ),
 
 'wmgVisualEditorDefault' => array(
 	'default' => false,
-	'testwiki' => true,
-	'mediawikiwiki' => true
+	'testwiki' => true, // pre-2012-11-12 install
+	'mediawikiwiki' => true // pre-2012-11-12 install
 ),
 
 'wmgUseRSSExtension' => array(
