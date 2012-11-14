@@ -8127,7 +8127,6 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller', 'rollbacker' ),
 	),
 	'+enwiktionary' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', ),
 		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker', 'flood' ),
 	),
 	'+fawiki' => array(
@@ -8138,7 +8137,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'rollbacker', 'patroller', ),
 	),
 	'+fiwiki' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'arbcom' ),
+		'bureaucrat' => array( 'sysop', 'bureaucrat', 'arbcom' ), // Bug 42114
 		'sysop' => array( 'rollbacker', ),
 	),
 	'+fiwikimedia' => array(
@@ -8265,7 +8264,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'abusefilter' ),
 	),
 	'+nowikibooks' => array(
-		'bureaucrat' => array( 'bureaucrat', 'sysop', 'autopatrolled', 'patroller' ),
+		'bureaucrat' => array( 'autopatrolled', 'patroller' ), // Restored with bug 42105
 		'sysop' => array( 'autopatrolled', 'patroller' ),
 	),
 	'+officewiki' => array(
@@ -8305,7 +8304,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autoeditor' )
 	),
 	'+ruwikisource' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'autoeditor', 'rollbacker' ),
+		'bureaucrat' => array( 'autoeditor', 'rollbacker' ), // Restored with bug 42105
 		'sysop' => array( 'autoeditor', 'rollbacker', 'abusefilter', 'flood' ),
 	),
 	'+sawiki' => array(
@@ -8318,7 +8317,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'rollbacker', 'autopatrolled', )
 	),
 	'+sewikimedia' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'medlem' ),
+		'bureaucrat' => array( 'sysop', 'medlem' ), // Bug 42459
 	),
 	'+siwiki' => array(
 		'sysop' => array( 'rollbacker', 'accountcreator', 'abusefilter', 'autopatrolled', 'confirmed', 'reviewer', ),
