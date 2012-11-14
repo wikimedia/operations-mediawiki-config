@@ -63,6 +63,7 @@ $wgFileBackends[] = array( // backend config for wiki's local repo
 	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
 	'swiftUser'          => $wmfSwiftConfig['user'],
 	'swiftKey'           => $wmfSwiftConfig['key'],
+	'swiftTempUrlKey'    => $wmfSwiftConfig['tempUrlKey'],
 	'shardViaHashLevels' => array(
 		'local-public'  => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
 		'local-thumb'   => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
@@ -81,6 +82,7 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repo
 	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
 	'swiftUser'          => $wmfSwiftConfig['user'],
 	'swiftKey'           => $wmfSwiftConfig['key'],
+	'swiftTempUrlKey'    => $wmfSwiftConfig['tempUrlKey'],
 	'shardViaHashLevels' => array(
 		'local-public'  => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
 		'local-thumb'   => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
@@ -97,6 +99,7 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared files
 	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
 	'swiftUser'          => $wmfSwiftConfig['user'],
 	'swiftKey'           => $wmfSwiftConfig['key'],
+	'swiftTempUrlKey'    => $wmfSwiftConfig['tempUrlKey'],
 	'shardViaHashLevels' => array(
 		'math-render'  => array( 'levels' => 2, 'base' => 16, 'repeat' => 0 ),
 	),
