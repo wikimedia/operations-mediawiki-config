@@ -18,7 +18,7 @@ foreach ( $viewFilenames as $view ) {
 	}
 }
 
-ob_start( 'ob_gzhandler' ); 
+ob_start( 'ob_gzhandler' );
 header( 'Content-Type: text/html; charset=utf-8' );
 
 if ( !$viewFilename ) {
@@ -30,7 +30,7 @@ if ( !$viewFilename ) {
 		exit;
 	}
 	# OK, authenticated developer, send password
-	$hlHtml = highlight_string( '<'."?php\n\$secretSitePassword = 'jgmeidj28gms';\n?" . '>', true );
+	$hlHtml = highlight_string( '<'."?php\n\$secretSitePassword = 'jgmeidj28gms';\n", true );
 } else {
 	$baseSrcDir = '/home/wikipedia/common';
 
