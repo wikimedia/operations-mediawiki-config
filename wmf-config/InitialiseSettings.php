@@ -11945,6 +11945,10 @@ $wgConf->settings = array(
 	'wikidatawiki' => true,
 ),
 
+'wgULSEnable' => array(
+	'default' => false,
+),
+
 'wmgUseWikibaseRepo' => array(
 	'default' => false,
 	'wikidatawiki' => true,
