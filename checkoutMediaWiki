@@ -130,11 +130,6 @@ EOT;
 	$link = "$commonLocalDir/php-$dstVersionNum/resources";
 	createSymlink( $path, $link, "Created static-$dstVersionNum/resources symlink." );
 
-	# Create secure.wikimedia.org symlinks...
-	$path = "$commonHomeDir/docroot/secure/skins-$dstVersionNum";
-	$link = "$commonLocalDir/php-$dstVersionNum/skins";
-	createSymlink( $path, $link, "Created secure/skins-$dstVersionNum symlink." );
-
 	# Create static- symlinks in live-1.5...
 	$liveStaticDir = "$commonHomeDir/live-1.5/static-$dstVersionNum";
 	if ( !file_exists( $liveStaticDir ) ) {
