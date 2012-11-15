@@ -11947,6 +11947,10 @@ $wgConf->settings = array(
 	'wikidatawiki' => true,
 ),
 
+'wgULSEnableAnon' => array(
+	'default' => false,
+),
+
 'wmgUseWikibaseRepo' => array(
 	'default' => false,
 	'wikidatawiki' => true,
