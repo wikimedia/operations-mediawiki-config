@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADZH///FM\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 9630,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2012-11-15T19:07:10Z",
+      "side": 1,
+      "message": "There\u0027s a space on the wrong side of the quote here. Hooray for ugly coding conventions.",
+      "revId": "537686a6e42b245fb70f4751428fa8e94d2f5e9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
