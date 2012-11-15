@@ -9903,7 +9903,7 @@ $wgConf->settings = array(
 	'mlwikibooks' => array( 'odf' ),  // Bug 37672
 	'mlwikisource' => array( 'odf' ), // Bug 37672
 	'urwiki' => array  ( 'odf' ),     // Bug 41714
-	'urwikisource' => array (' odf' ),// Bug 41714
+	'urwikisource' => array ( 'odf' ),// Bug 41714
 ),
 
 'wmgCollectionUseEpub' => array(
