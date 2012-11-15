@@ -968,11 +968,13 @@ if ( $wmgUseTimedMediaHandler ) {
 	//overwrite enabling of local TimedText namespace
 	$wgEnableLocalTimedText = $wmgEnableLocalTimedText;
 
-	$wgEnableTranscode = false; // disabled initially
-	//enable on test2 for testing tmh1/2 setup
-	if ( $wgDBname == 'test2wiki' || $wgDBname == 'commonswiki' ) {
+	//enable transcoding on all wikis that allow uploads
+	if ( $wgEnableUploads == false ) {
+		$wgEnableTranscode = false;
+	} else {
 		$wgEnableTranscode = true;
 	}
+
 	//tmh1/2 have 12 cores and need lots of shared memory
 	//for avconv / ffmpeg2theora
 	$wgTranscodeBackgroundMemoryLimit = 4 * 1024 * 1024; // 4GB
