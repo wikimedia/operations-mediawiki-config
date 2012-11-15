@@ -9870,6 +9870,7 @@ $wgConf->settings = array(
 	'thwiki'    => true,
 	'trwiki'	=> true, # Bug 22791
 	'ukwiki'    => true, # 23437
+	'urwiki' => true, # Bug 41563
 	'viwiki' => true, # 2009-12-28 bug 21566
 	'wikibooks' => true, # on for all wikibooks! 2008-10-23
 	'wikisource' => true, # 2009-02-24
@@ -9879,7 +9880,6 @@ $wgConf->settings = array(
 
 'wmgCollectionPortletForLoggedInUsersOnly' => array(
 	'default' => false,
-	// 'enwiki' => true, // 2009-02-26 -- for initial test rollout // 2010-05-06 disabled, will remove line if the servers don't melt
 ),
 
 'wmgCollectionArticleNamespaces' => array(
@@ -9902,6 +9902,8 @@ $wgConf->settings = array(
 	'guwikisource' => array( 'odf' ), // Bug 37384
 	'mlwikibooks' => array( 'odf' ),  // Bug 37672
 	'mlwikisource' => array( 'odf' ), // Bug 37672
+	'urwiki' => array  ( 'odf' ),     // Bug 41714
+	'urwikisource' => array (' odf' ),// Bug 41714
 ),
 
 'wmgCollectionUseEpub' => array(
