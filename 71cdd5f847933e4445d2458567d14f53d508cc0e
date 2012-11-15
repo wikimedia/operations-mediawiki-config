@@ -16,6 +16,23 @@
       "revId": "71cdd5f847933e4445d2458567d14f53d508cc0e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADZH///ZQ\u003d",
+        "filename": "docroot/secure/skins-1.20wmf12",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2012-11-15T02:47:55Z",
+      "side": 0,
+      "message": "Remember to check (and/or update) the multiversion script that creates these.",
+      "revId": "71cdd5f847933e4445d2458567d14f53d508cc0e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
