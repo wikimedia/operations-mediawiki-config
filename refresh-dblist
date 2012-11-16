@@ -24,7 +24,10 @@ Split by cluster:
 	s1.dblist
 	s2.dblist
 	s3.dblist
-
+	s4.dblist
+	s5.dblist
+	s6.dblist
+	s7.dblist
 */
 
 $base = "/home/wikipedia/common";
