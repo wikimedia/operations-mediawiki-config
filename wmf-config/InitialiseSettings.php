@@ -9261,7 +9261,6 @@ $wgConf->settings = array(
 'wgDisableQueryPageUpdate' => array(
 	'enwiki' => array(
 		'Ancientpages',
-		// 'CrossNamespaceLinks', # disabled by hashar - bug 16878
 		'Deadendpages',
 		'Lonelypages',
 		'Mostcategories',
@@ -9281,7 +9280,7 @@ $wgConf->settings = array(
 		'Mostrevisions',
 		'Wantedpages',
 		'Fewestrevisions',
-		// 'CrossNamespaceLinks', # disabled by hashar - bug 16878
+		'ValidationStatistics',
 	),
 ),
 # @} end of wgDisableQueryPageUpdate
