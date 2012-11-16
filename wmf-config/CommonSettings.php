@@ -366,6 +366,7 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 	)
 );
 
+// Cache to hold user sessions in production:
 $wgObjectCaches['sessions'] = array(
 	'class'   => 'RedisBagOStuff',
 	'servers' => array(
@@ -388,6 +389,12 @@ $wgObjectCaches['sessions'] = array(
 	),
 );
 
+// Override for beta:
+if( $cluster == 'wmflabs' ) {
+	$wgObjectCaches['sessions'] = $wgObjectCaches['memcached-pecl'];
+}
+
+// Use the cache setup above and configure sessions caching
 $wgSessionCacheType = 'sessions';
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
