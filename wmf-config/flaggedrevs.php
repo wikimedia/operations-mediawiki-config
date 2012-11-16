@@ -8,6 +8,8 @@
 $path = "$IP/extensions/FlaggedRevs/FlaggedRevs.php";
 include( $path );
 
+$wgEnableValidationStatisticsUpdates = false; // Broken! See https://bugzilla.wikimedia.org/show_bug.cgi?id=42210
+
 ///////////////////////////////////////
 // Common configuration
 // DO NOT CHANGE without hard-coding these values into the relevant wikis first.
