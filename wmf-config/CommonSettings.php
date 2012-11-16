@@ -366,27 +366,31 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 	)
 );
 
-$wgObjectCaches['sessions'] = array(
-	'class'   => 'RedisBagOStuff',
-	'servers' => array(
-		'10.0.12.1', # mc1
-		'10.0.12.2', # mc2
-		'10.0.12.3', # mc3
-		'10.0.12.4', # mc4
-		'10.0.12.5', # mc5
-		'10.0.12.6', # mc6
-		'10.0.12.7', # mc7
-		'10.0.12.8', # mc8
-		'10.0.12.9', # mc9
-		'10.0.12.10', # mc10
-		'10.0.12.11', # mc11
-		'10.0.12.12', # mc12
-		'10.0.12.13', # mc13
-		'10.0.12.14', # mc14
-		'10.0.12.15', # mc15
-		'10.0.12.16', # mc16
-	),
-);
+if( $cluster == 'pmtpa' ) {
+	$wgObjectCaches['sessions'] = array(
+		'class'   => 'RedisBagOStuff',
+		'servers' => array(
+			'10.0.12.1', # mc1
+			'10.0.12.2', # mc2
+			'10.0.12.3', # mc3
+			'10.0.12.4', # mc4
+			'10.0.12.5', # mc5
+			'10.0.12.6', # mc6
+			'10.0.12.7', # mc7
+			'10.0.12.8', # mc8
+			'10.0.12.9', # mc9
+			'10.0.12.10', # mc10
+			'10.0.12.11', # mc11
+			'10.0.12.12', # mc12
+			'10.0.12.13', # mc13
+			'10.0.12.14', # mc14
+			'10.0.12.15', # mc15
+			'10.0.12.16', # mc16
+		),
+	);
+} elseif( $cluster == 'wmflabs' ) {
+	$wgObjectCaches['sessions'] = $wgObjectCaches['memcached-pecl'];
+}
 
 $wgSessionCacheType = 'sessions';
 $wgSessionsInObjectCache = true;
