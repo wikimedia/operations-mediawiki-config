@@ -41,6 +41,7 @@ $IP/extensions/Echo/Echo.php
 $IP/extensions/EditPageTracking/EditPageTracking.php
 $IP/extensions/EducationProgram/EducationProgram.php
 $IP/extensions/EmailCapture/EmailCapture.php
+$IP/extensions/EventLogging/EventLogging.php
 $IP/extensions/ExpandTemplates/ExpandTemplates.php
 $IP/extensions/ExtensionDistributor/ExtensionDistributor.php
 $IP/extensions/FeaturedFeeds/FeaturedFeeds.php
