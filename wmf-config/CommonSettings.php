@@ -2736,6 +2736,7 @@ if ( $wmgUseUserMerge ) {
 if ( $wmgUseEventLogging ) {
 	require_once( "$IP/extensions/EventLogging/EventLogging.php" );
 	$wgEventLoggingBaseUri = "//bits.wikimedia.org/event.gif?";
+	$wgEventLoggingDataModelsUri = "https://meta.wikimedia.org/w/index.php?title=MediaWiki:EventDataModels.json&action=raw&sb_ver=1";
 }
 
 if ( $wmgUseUniversalLanguageSelector ) {
