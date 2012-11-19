@@ -10991,7 +10991,7 @@ $wgConf->settings = array(
 ),
 'wmgMobileFrontend' => array(
 	'default' => true,
-	'wikivoyage' => false, // Disabled due to lack of mobile domain setup
+	'wikivoyage' => true, // In testing prior to mobile domain setup
 	'wikidatawiki' => false, // Disabled due to lack of mobile domain setup
 ),
 'wmgZeroRatedMobileAccess' => array(
