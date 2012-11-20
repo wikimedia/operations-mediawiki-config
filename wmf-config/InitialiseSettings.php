@@ -10799,6 +10799,8 @@ $wgConf->settings = array(
 	'amwiktionary' => true, // Bug 41460
 	'kawiki' => true, // Bug 39432
 	'knwiki' => true, // Bug 34591
+	'orwiki' => true, // Bug 31859
+        'orwiktionary' => true, // Bug 31859
 ),
 'wmgNarayamUseBetaMapping' => array(
 	'default' => false,
