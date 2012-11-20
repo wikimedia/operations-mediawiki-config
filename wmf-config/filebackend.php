@@ -43,6 +43,7 @@ $wgFileBackends[] = array( // backend config for wiki's access to global files
 	'fileMode'       => 0644,
 	'containerPaths' => array(
 		"math-render" => "/mnt/upload7/math", // see $wgMathDirectory
+		'score-render' => '/mnt/upload7/lilypond',
 	)
 );
 /* end NFS backend config */

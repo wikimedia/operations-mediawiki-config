@@ -1190,6 +1190,12 @@ if ( $wmgUsePoolCounter ) {
 	include( "$wmfConfigDir/PoolCounterSettings.php" );
 }
 
+if ( $wmgUseScore ) {
+	include( "$IP/extensions/Score/Score.php" );
+	$wgScoreFileBackend = $wmgScoreFileBackend;
+	$wgScorePath = $wmgScorePath;
+}
+
 wfProfileOut( "$fname-ext-include1" );
 wfProfileIn( "$fname-misc2" );
 
