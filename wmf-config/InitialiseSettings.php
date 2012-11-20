@@ -10830,6 +10830,7 @@ $wgConf->settings = array(
 	'bpywiki' => true, // Bug 33368
 	'bugwiki' => true, // Bug 34550
 	'enwikisource' => true,
+	'fawiki' => true, // Bug 42280
 	'frwikisource' => true, // Bug 35328
 	'guwiki' => true,
 	'guwikibooks' => true,
