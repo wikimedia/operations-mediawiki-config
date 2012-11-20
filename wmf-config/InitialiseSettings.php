@@ -10804,9 +10804,6 @@ $wgConf->settings = array(
 	'default' => false,
 	'incubatorwiki' => true, // Bug 33001
 	'betawikiversity' => true, // Bug 41912 (as incubator.)
-	'amwiki' => true, // Bug 41460
-	'amwikiquote' => true, // Bug 41460
-	'amwiktionary' => true, // Bug 41460
 ),
 'wmgUseWebFonts' => array(
 	'default' => false,
