@@ -6897,7 +6897,8 @@ $wgConf->settings = array(
 		'autopatrolled' => array ( 'autopatrol' => true ),
 		'filemover' => array( 'movefile' => true ),
 		'OTRS-member' => array( 'autopatrol' => true ),
-		'Image-reviewer' => array( 'autopatrol' => true, ),
+		'Image-reviewer' => array( 'autopatrol' => true ),
+		'sysop' => array( 'upload_by_url' => true ),
 	),
 	'dawiki' => array(
 		'patroller'		=> array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ),
@@ -10167,9 +10168,15 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
+	'commonswiki' => true,
 ),
 'wgCopyUploadsFromSpecialUpload' => array(
 	'default' => false,
+),
+// For Flickr uploads via UploadWizard - 2012-11-20
+'wgCopyUploadsDomains' => array(
+	'*.flickr.com',
+	'*.staticflickr.com',
 ),
 
 'wgMaxUploadSize' => array(
