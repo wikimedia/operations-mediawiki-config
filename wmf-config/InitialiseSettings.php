@@ -10168,7 +10168,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
-	'commonswiki' => true,
+//	'commonswiki' => true, // disabled until author bug is fixed
 ),
 'wgCopyUploadsFromSpecialUpload' => array(
 	'default' => false,
