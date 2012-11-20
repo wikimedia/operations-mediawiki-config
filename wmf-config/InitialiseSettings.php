@@ -1018,6 +1018,20 @@ $wgConf->settings = array(
 	'default' => '//upload.wikimedia.org/math',
 ),
 
+'wmgUseScore' => array(
+	'default' => false,
+	'test2wiki' => true,
+),
+
+'wmgScoreFileBackend' => array(
+	'default' => 'global-multiwrite'
+),
+
+'wmgScorePath' => array(
+	'default' => '//upload.wikimedia.org/score'
+),
+
+
 # Disable BC repo
 'wgUseSharedUploads' => array(
 	'default' => false,
@@ -11952,6 +11966,7 @@ $wgConf->settings = array(
 'wmgUseWikibaseClient' => array(
 	'default' => false,
 ),
+
 );
 
 
