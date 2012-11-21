@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADZH//7NY\u003d",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2012-11-21T18:29:51Z",
+      "side": 1,
+      "message": "Looks like comment 2 on the bug wants commonswiki added.",
+      "revId": "39adeeb28ee3f275d5528ef78252ccc17893f909",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
