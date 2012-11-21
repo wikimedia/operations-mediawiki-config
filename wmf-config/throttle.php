@@ -21,11 +21,11 @@ $wmgThrottlingExceptions = array();
 ## Add throttling definitions below.
 
 $wmfThrottlingExceptions[] = array(
-	'from'   => '2012-11-09T15:30 +1:00',
-	'to'     => '2012-11-09T21:00 +1:00',
-	'IP'     => array( '156.35.192.2', '156.35.192.3', '156.35.192.4' ),
-	'dbname' => array( 'eswiki' ),
-	'value'  => 30,
+	'from'   => '2012-11-24T04:00 +8:00',
+	'to'     => '2012-11-25T00:00 +8:00',
+	'IP'     => array( '202.78.87.131' ),
+	'dbname' => array( 'enwiki', 'tlwiki', 'bclwiki' ),
+	'value'  => 150,
 );
 
 ## Add throttling definitions above.
