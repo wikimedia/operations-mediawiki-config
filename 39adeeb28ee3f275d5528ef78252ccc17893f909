@@ -16,6 +16,24 @@
       "revId": "39adeeb28ee3f275d5528ef78252ccc17893f909",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADZH//7GU\u003d",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 48
+      },
+      "writtenOn": "2012-11-21T20:05:50Z",
+      "side": 1,
+      "message": "I\u0027m skeptical that it\u0027s really necessary. Anyway, we can always do followups. This is ready for merge as is.",
+      "parentUuid": "AAADZH//7NY\u003d",
+      "revId": "39adeeb28ee3f275d5528ef78252ccc17893f909",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
