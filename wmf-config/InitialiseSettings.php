@@ -10385,6 +10385,7 @@ $wgConf->settings = array(
 	# Disabling due to CR r58099 -- TS 2010-06-03
 	'default' => false,
 	'en_labswikimedia' => true, // ArticleFeedbackv5 needs this
+	'dewiki' => true, // ArticleFeedbackv5 needs this
 	'enwiki' => true, // VectorSectionEditLinks needs this
 	'eswiki' => true, // ArticleFeedback needs this
 	'eswikinews' => true, // ArticleFeedback needs this
@@ -10655,40 +10656,106 @@ $wgConf->settings = array(
 'wmgUseArticleFeedbackv5' => array(
 	'default' => false,
 	// 'en_labswikimedia' => true, // Disabled due to out of date schema --Reedy
+	'dewiki' => true,
 	'enwiki' => true,
 	'testwiki' => true,
 ),
 'wmgArticleFeedbackv5LotteryOdds' => array(
 	'default' => 0,
 	'testwiki' => array( NS_MAIN => 10, NS_HELP => 100 ),
+	'dewiki' => array( NS_MAIN => 0.1 ), // ~ 1500 articles out of 1.5 mio in total
 	'enwiki' => array( NS_MAIN => 10, NS_HELP => 100 ),
 ),
 'wmgArticleFeedbackv5Namespaces' => array(
 	'default' => array( NS_MAIN ),
+	'dewiki' => array( NS_MAIN ),
 	'enwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
 	'testwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
 ),
 'wmgArticleFeedbackv5Categories' => array(
 	'default' => array(),
+	'dewiki' => array(
+			'Wikipedia:Artikel-Feedback Grundstock',
+			'Wikipedia:Artikel-Feedback/Artikelgrundstock',
+			'Wikipedia:Artikel-Feedback/Artikel des Tages oder Schon gewusst',
+			'Wikipedia:Artikel-Feedback/Zusätzliche Artikel',
+		),
 	'en_labswikimedia' => array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' ),
 	'enwiki' => array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' ),
 	'testwiki' => array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' ),
 ),
 'wmgArticleFeedbackv5BlacklistCategories' => array(
 	'default' => array(),
+	'dewiki' => array( 'Wikipedia:Artikel-Feedback_Ausschlussliste', 'Wikipedia:Artikel-Feedback/Ausschlussliste' ),
 	'en_labswikimedia' => array( 'Article_Feedback_Blacklist' ),
 	'enwiki' => array( 'Article_Feedback_Blacklist' ),
 	'testwiki' => array( 'Article_Feedback_Blacklist' ),
 ),
 'wmgArticleFeedbackv5OversightEmails' => array(
 	'default' => 'aft@wikimedia.org',
+	'dewiki' => 'oversight-de-wp@wikimedia.org',
 	'enwiki' => 'oversight-en-wp@wikipedia.org',
 	#'enwiki' => 'roan@wikimedia.org',
+),
+'wmgArticleFeedbackv5OversightEmailHelp' => array(
+	'default' => '//en.wikipedia.org/wiki/Wikipedia:Article_Feedback_Tool/Version_5/Help/Feedback_page_Oversighters',
+	'dewiki' => '//de.wikipedia.org/wiki/Wikipedia:Artikel-Feedback/Umgang_mit_Feedback', # Could be changed once a separate page exists
+),
+'wgArticleFeedbackv5AutoHelp' => array(
+	'default' => '//en.wikipedia.org/wiki/Wikipedia:Article_Feedback_Tool/Version_5/Help',
+	'dewiki' => '//de.wikipedia.org/wiki/Wikipedia:Artikel-Feedback',
+),
+'wgArticleFeedbackv5LearnToEdit' => array(
+	'default' => '//en.wikipedia.org/wiki/Wikipedia:Tutorial',
+	'dewiki' => '//de.wikipedia.org/wiki/Wikipedia:Tutorial',
 ),
 'wmgArticleFeedbackv5AbuseFiltering' => array(
 	'default' => false,
 	'testwiki' => true,
+	'dewiki' => true,
 	'enwiki' => true,
+),
+'wgArticleFeedbackv5CTABuckets' => array(
+	'dewiki' => array(
+		'buckets' => array(
+			'0' => 0, // display nothing
+			'1' => 50, // display "Enticement to edit"
+			'2' => 0, // display "Learn more"
+			'3' => 0, // display "Take a survey"
+			'4' => 50, // display "Sign up or login"
+			'5' => 0, // display "View feedback"
+			'6' => 0, // display "Visit Teahouse"
+		),
+		// This version number is added to all tracking event names, so that
+		// changes in the software don't corrupt the data being collected. Bump
+		// this when you want to start a new "experiment".
+		'version' => 1,
+		// Users may constantly be rebucketed, giving them new CTAs each time.
+		'expires' => 30, // metrics testing of buckets, need fixed CTAs for now
+		// Track the event of users being bucketed - so we can be sure the odds
+		// worked out right. [LATER - depends on UDP logging being set up]
+		'tracked' => false,
+	),
+	'enwiki' => array(
+		'buckets' => array(
+			'0' => 0, // display nothing
+			'1' => 49, // display "Enticement to edit"
+			'2' => 0, // display "Learn more"
+			'3' => 0, // display "Take a survey"
+			'4' => 50, // display "Sign up or login"
+			'5' => 0, // display "View feedback"
+			'6' => 1, // display "Visit Teahouse"
+		),
+		// This version number is added to all tracking event names, so that
+		// changes in the software don't corrupt the data being collected. Bump
+		// this when you want to start a new "experiment".
+		'version' => 6,
+		// Users may constantly be rebucketed, giving them new CTAs each time.
+		'expires' => 30, // metrics testing of buckets, need fixed CTAs for now
+		// Track the event of users being bucketed - so we can be sure the odds
+		// worked out right. [LATER - depends on UDP logging being set up]
+		'tracked' => false,
+	),
 ),
 'wmgUsePoolCounter' => array(
 	'default' => true,
