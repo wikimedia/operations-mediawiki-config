@@ -2189,6 +2189,9 @@ if ( $wmgUseArticleFeedbackv5 ) {
 	$wgArticleFeedbackv5Categories = $wmgArticleFeedbackv5Categories;
 	$wgArticleFeedbackv5BlacklistCategories = $wmgArticleFeedbackv5BlacklistCategories;
 	$wgArticleFeedbackv5OversightEmails = $wmgArticleFeedbackv5OversightEmails;
+	$wgArticleFeedbackv5OversightEmailHelp = $wmgArticleFeedbackv5OversightEmailHelp;
+	$wgArticleFeedbackv5AutoHelp = $wmgArticleFeedbackv5AutoHelp;
+	$wgArticleFeedbackv5LearnToEdit = $wmgArticleFeedbackv5LearnToEdit;
 	$wgArticleFeedbackv5Namespaces = $wmgArticleFeedbackv5Namespaces;
 	$wgArticleFeedbackv5LotteryOdds = $wmgArticleFeedbackv5LotteryOdds;
 
@@ -2251,6 +2254,7 @@ if ( $wmgUseArticleFeedbackv5 ) {
 
 
 	$wgArticleFeedbackv5AbuseFiltering = $wmgArticleFeedbackv5AbuseFiltering;
+	$wgArticleFeedbackv5CTABuckets = $wmgArticleFeedbackv5CTABuckets;
 }
 
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
