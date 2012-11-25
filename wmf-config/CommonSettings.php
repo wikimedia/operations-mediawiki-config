@@ -2494,8 +2494,6 @@ if ( $wmgUseTranslate ) {
 
 	$wgTranslateTranslationServices = array();
 	if ( $wmgUseTranslationMemory ) {
-		require( "$IP/extensions/Translate/libs/Solarium/Autoloader.php" );
-		Solarium_Autoloader::register();
 		$wgTranslateTranslationServices['TTMServer'] = array(
 			'type' => 'ttmserver',
 			'class' => 'SolrTTMServer',
@@ -2784,6 +2782,10 @@ if ( $wmgUseWikibaseClient ) {
 	require_once( "$IP/extensions/Diff/Diff.php" );
 	require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
 	require_once( "$IP/extensions/Wikibase/client/WikibaseClient.php" );
+}
+
+if ( ( $wmgUseTranslate && $wmgUseTranslationMemory ) || $wmgEnableGeoData ) {
+	require_once( "$IP/extensions/Solarium/Solarium.php" );
 }
 
 // additional "language names", adding to Names.php data
