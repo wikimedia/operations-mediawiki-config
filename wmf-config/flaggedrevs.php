@@ -24,6 +24,8 @@ $wgFlaggedRevsAutopromote = false;
 
 $wgGroupPermissions['sysop']['stablesettings'] = false; // -aaron 3/20/10
 
+$wgEnableValidationStatisticsUpdates = false;
+
 # Rights for Bureaucrats (b/c)
 if ( !in_array( 'reviewer', $wgAddGroups['bureaucrat'] ) ) {
 	$wgAddGroups['bureaucrat'][] = 'reviewer'; // promote to full reviewers
