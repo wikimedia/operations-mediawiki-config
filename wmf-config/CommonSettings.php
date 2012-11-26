@@ -2306,7 +2306,7 @@ if ( $wmgUseUploadWizard ) {
 		// If Special:UploadWizard again experiences unexplained slowness loading JavaScript (spinner on intial load spinning forever)
 		// set fallbackToAltUploadForm to true.
 		'altUploadForm' => 'Special:Upload', # Set by demon, 2011-05-10 per neilk
-		'flickrApiUrl' => 'http://api.flickr.com/services/rest/?',
+		'flickrApiUrl' => 'https://secure.flickr.com/services/rest/?',
 		// Normally we don't include API keys in CommonSettings, but this key
 		// isn't private since it's used on the client-side, i.e. anyone can see
 		// it in the outgoing AJAX requests to Flickr.
