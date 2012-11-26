@@ -2243,6 +2243,15 @@ $wgConf->settings = array(
 	'be_x_oldwiki' => array(
 		'ВП' => NS_PROJECT,
 	),
+	'bewikisource' => array(
+		'ВК' => NS_PROJECT,     // Bug 41322
+		'Author' => 102,        // Bug 41322
+		'Author_talk' => 103,
+		'Page' => 104,          // Bug 41322
+		'Page_talk' => 105,
+		'Index' => 106,         // Bug 41322
+		'Index_talk' => 107,
+	),
 	'bgwikisource' => array(
 		'Author' => 100,
 		'Author_talk' => 101,
