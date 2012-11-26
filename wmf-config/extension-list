@@ -119,7 +119,6 @@ $IP/extensions/TranslationNotifications/TranslationNotifications.php
 $IP/extensions/TrustedXFF/TrustedXFF.php
 $IP/extensions/UnicodeConverter/UnicodeConverter.php
 $IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php
-$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php
 $IP/extensions/UploadBlacklist/UploadBlacklist.php
 $IP/extensions/UploadWizard/UploadWizard.php
 $IP/extensions/UserMerge/UserMerge.php
