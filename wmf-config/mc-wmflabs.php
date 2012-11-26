@@ -22,7 +22,7 @@ $wgSessionsInMemcached = true;
 $wgMemCachedInstanceSize = 2000;
 
 $wgMemCachedServers = array(
-0 => 'deployment-mc:11000',
+0 => '10.4.0.81:11000',
 );
 
 
