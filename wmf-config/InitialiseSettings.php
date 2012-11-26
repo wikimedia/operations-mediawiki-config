@@ -11732,6 +11732,7 @@ $wgConf->settings = array(
 
 'wmgUseScribunto' => array(
 	'default' => false,
+	//'testwiki' => true,
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
 ),
@@ -11925,6 +11926,13 @@ $wgConf->settings = array(
 
 'wmgUseWikibaseClient' => array(
 	'default' => false,
+),
+
+'wmgUseTemplateSandbox' => array(
+	'default' => false,
+	//'testwiki' => true,
+	'test2wiki' => true,
+	//'mediawikiwiki' => true,
 ),
 
 );

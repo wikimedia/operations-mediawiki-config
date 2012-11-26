@@ -2788,6 +2788,11 @@ if ( ( $wmgUseTranslate && $wmgUseTranslationMemory ) || $wmgEnableGeoData ) {
 	require_once( "$IP/extensions/Solarium/Solarium.php" );
 }
 
+if ( $wmgUseTemplateSandbox ) {
+	require_once( "$IP/extensions/TemplateSandbox/TemplateSandbox.php" );
+	$wgTemplateSandboxEditNamespaces[] = NS_MODULE;
+}
+
 // additional "language names", adding to Names.php data
 $wgExtraLanguageNames = $wmgExtraLanguageNames;
 
