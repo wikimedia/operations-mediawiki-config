@@ -968,7 +968,7 @@ $wgConf->settings = array(
 	'cswiktionary'  => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
 	'dawiki'        => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=da&campaign=dk', // Bug 37662
 	'dewikisource'  => '//commons.wikimedia.org/wiki/Special:Upload?uselang=de',
-	'enwiki'        => '/wiki/Wikipedia:Upload',
+	'enwiki'        => '/wiki/Wikipedia:File_Upload_Wizard', // Bug 42263
 	'enwikibooks'   => '//commons.wikimedia.org/wiki/Commons:Upload',
 	'enwikinews'    => false,
 	'enwikiquote'   => '//commons.wikimedia.org/wiki/Special:Upload',
