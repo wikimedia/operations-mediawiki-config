@@ -1,0 +1,191 @@
+#!/usr/bin/env php
+<?php
+error_reporting( E_ALL );
+/**
+ * Automatically git clone a MediaWiki version and do some basic wmf setup.
+ * LocalSettings.php will be created (which loads CommonSettings.php) and various
+ * symlinks will also be created.
+ *
+ * The first argument is the git branch (relative to wmf).
+ * This is typically a version of the format "X.XXwmfX" ("e.g. 1.17wmf1").
+ * The second argument is the target path (relative to /home/wikipedia/common/)
+ * to store local copy of the git checkout. This is typically of the format "php-X.XX".
+ *
+ * This script assumes that the user running this script has an git account
+ * with the SSH agent/key available.
+ *
+ * @return void
+ */
+function checkoutMediaWiki() {
+	global $argv;
+	$commonHomeDir = '/home/wikipedia/common';
+	$commonLocalDir = '/usr/local/apache/common-local';
+
+	$argsValid = false;
+	if ( count( $argv ) >= 3 ) {
+		$gitVersion = $argv[1]; // e.g. "X.XXwmfX"
+		$dstVersion = $argv[2]; // e.g. "php-X.XXwmfX"
+		if ( preg_match( '/^php-(\d+\.\d+wmf\d+|master)$/', $dstVersion, $m ) ) {
+			$dstVersionNum = $m[1]; // everything after 'php-'
+			$argsValid = true;
+		}
+	}
+
+	if ( !$argsValid ) {
+		die( "Usage: checkoutMediaWiki X.XXwmfX php-X.XXwmfX\n" );
+	}
+
+	# MW install path
+	$destIP = "$commonHomeDir/$dstVersion";
+
+	if ( !file_exists( $destIP ) ) {
+		$tmpDir = '/tmp/new-mw-clone-' . mt_rand( 0, 0x7fffffff );
+		echo "Cloning MediaWiki into $tmpDir...\n\n";
+		if ( !mkdir( $tmpDir, 0755 ) ) {
+			print "Unable to create $tmpDir\n";
+			exit( 1 );
+		}
+		passthru( 'git clone -n ' .
+			'ssh://gerrit.wikimedia.org:29418/mediawiki/core.git ' .
+			escapeshellarg( "$tmpDir/mw" ),
+			$ret );
+		if ( $ret ) {
+			print "Error running git\n";
+			exit( 1 );
+		}
+		if ( !chdir( "$tmpDir/mw" ) ) {
+			print "Error changing directory\n";
+			exit( 1 );
+		}
+		passthru( 'git checkout ' . escapeshellarg( "wmf/$gitVersion" ), $ret );
+		if ( $ret ) {
+			print "Error running git\n";
+			exit( 1 );
+		}
+		passthru( 'git submodule update --init ' . escapeshellarg( "$tmpDir/mw" ), $ret );
+		if ( $ret ) {
+			print "Error running git\n";
+			exit( 1 );
+		}
+
+		echo "Moving the new clone into place\n";
+		renameAcrossFS( "$tmpDir/mw", $destIP );
+		if ( !rmdir( $tmpDir ) ) {
+			echo "Error moving the new directory\n";
+			exit( 1 );
+		}
+	} else {
+		echo "MediaWiki already checked out at $destIP\n";
+	}
+
+	$localSettingsCode = <<<EOT
+<?php
+# WARNING: This file is publically viewable on the web. Do not put private data here.
+if ( defined('TESTWIKI') ) {
+	if( !file_exists( "/home/wikipedia" ) ) {
+		# Jobs runner on apache do not have a /home/wikipedia !
+		include_once( "/apache/common/wmf-config/CommonSettings.php" );
+	} else {
+		include_once( "/home/wikipedia/common/wmf-config/CommonSettings.php" );
+	}
+} else {
+	include_once( "/apache/common/wmf-config/CommonSettings.php" );
+}
+EOT;
+
+	# Create LocalSettings.php stub...
+	$path = "$destIP/LocalSettings.php";
+	if ( !file_exists( $path ) ) {
+		if ( file_put_contents( $path, $localSettingsCode ) ) {
+			print "Created LocalSettings.php file.\n";
+		}
+	} else {
+		print "File already exists: $path\n";
+	}
+
+	# Create symlink to wmf-config/AdminSettings.php...
+	$path = "$destIP/AdminSettings.php";
+	$link = "../wmf-config/AdminSettings.php";
+	createSymlink( $path, $link, "Created AdminSettings.php symlink." );
+
+	# Create symlink to wmf-config/StartProfiler.php...
+	$path = "$destIP/StartProfiler.php";
+	$link = "../wmf-config/StartProfiler.php";
+	createSymlink( $path, $link, "Created StartProfiler.php symlink." );
+
+	# Create bits.wikimedia.org symlinks...
+	$bitsStaticDir = "$commonHomeDir/docroot/bits/static-$dstVersionNum";
+	if ( !file_exists( $bitsStaticDir ) ) {
+		mkdir( $bitsStaticDir, 0775 );
+	}
+	$path = "$commonHomeDir/docroot/bits/static-$dstVersionNum/skins";
+	$link = "$commonLocalDir/php-$dstVersionNum/skins/";
+	createSymlink( $path, $link, "Created static-$dstVersionNum/skins symlink." );
+
+	$path = "$commonHomeDir/docroot/bits/static-$dstVersionNum/extensions";
+	$link = "$commonLocalDir/php-$dstVersionNum/extensions";
+	createSymlink( $path, $link, "Created static-$dstVersionNum/extensions symlink." );
+
+	$path = "$commonHomeDir/docroot/bits/static-$dstVersionNum/resources";
+	$link = "$commonLocalDir/php-$dstVersionNum/resources";
+	createSymlink( $path, $link, "Created static-$dstVersionNum/resources symlink." );
+
+	# Create static- symlinks in live-1.5...
+	$liveStaticDir = "$commonHomeDir/live-1.5/static-$dstVersionNum";
+	if ( !file_exists( $liveStaticDir ) ) {
+		mkdir( $liveStaticDir, 0775 );
+	}
+	$path = "$commonHomeDir/live-1.5/static-$dstVersionNum/skins";
+	$link = "$commonLocalDir/php-$dstVersionNum/skins";
+	createSymlink( $path, $link, "Created live-1.5/static-$dstVersionNum/skins symlink." );
+
+	$path = "$commonHomeDir/live-1.5/static-$dstVersionNum/extensions";
+	$link = "$commonLocalDir/php-$dstVersionNum/extensions";
+	createSymlink( $path, $link, "Created live-1.5/static-$dstVersionNum/extensions symlink." );
+
+	$path = "$commonHomeDir/live-1.5/static-$dstVersionNum/resources";
+	$link = "$commonLocalDir/php-$dstVersionNum/resources";
+	createSymlink( $path, $link, "Created live-1.5/static-$dstVersionNum/resources symlink." );
+
+	# Create libs symlinks...
+	$libDir = "$destIP/lib";
+	if ( !file_exists( $libDir ) ) {
+		mkdir( $libDir, 0775 );
+	}
+
+	# Create l10n cache dir
+	$l10nDir = "$destIP/cache/l10n";
+	if ( !file_exists( $l10nDir ) ) {
+		chmod( "$destIP/cache", 0777 );
+		exec( "sudo -u l10nupdate -- mkdir $destIP/cache/l10n",  $output, $status );
+		chmod( "$destIP/cache", 0775 );
+		if ( $status ) {
+			print "Failed to create $destIP/cache/l10n\n";
+			exit( 1 );
+		}
+	} else {
+		print "Directory already exists: $l10nDir\n";
+	}
+
+	print "\nMediaWiki $dstVersionNum, from $gitVersion, successfully checked out.\n";
+}
+
+function createSymlink( $path, $link, $createdMsg ) {
+	if ( !file_exists( $path ) ) {
+		if ( symlink( $link, $path ) ) {
+			print "$createdMsg\n";
+		}
+	} else {
+		print "Symlink file already exists: $path\n";
+	}
+}
+
+function renameAcrossFS( $source, $dest ) {
+	passthru( "mv " . escapeshellarg( $source ) . ' ' . escapeshellarg( $dest ), $ret );
+	if ( $ret ) {
+		echo "Error renaming $source to $dest\n";
+		exit( 1 );
+	}
+}
+
+checkoutMediaWiki();
