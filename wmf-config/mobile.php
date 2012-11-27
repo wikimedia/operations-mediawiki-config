@@ -72,7 +72,7 @@ if ( $wmgMobileFrontend ) {
 		if ( $wgDBname == 'enwiki' ) {
 			$articleFactualLink = "//en.m.wikipedia.org/wiki/Wikipedia:Contact_us/Article_problem/Factual_error";
 		} else {
-			$articleFactualLink = "mailto:$emailStub@wikimedia.org?subject=$articleFactualSubject";
+			$articleFactualLink = "mailto:$emailStub@wikimedia.org?subject=$articleFactualSubject&body=$emailContext";
 		}
 
 		// all other links - only en uses suffix routing
