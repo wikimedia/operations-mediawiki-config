@@ -4217,6 +4217,7 @@ $wgConf->settings = array(
 	'jawiki' => 10, // https://bugzilla.wikimedia.org/show_bug.cgi?id=40270
 	'plwiki' => 10,
 	'ptwiki' => 10,  # 27954
+	'ruwiki' => 15, // Bug 41831
 	'simplewiki' => 10,
 	'zhwiki' => 50, // https://bugzilla.wikimedia.org/show_bug.cgi?id=14624
 	'zh_yuewiki' => 10, // bug 30538
