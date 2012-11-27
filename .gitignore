@@ -1,3 +1,4 @@
+<<<<<<< HEAD   (0e11f7 Merge "Switching back to http flickr API per bug 42468")
 # Repository management
 .svn
 
@@ -35,3 +36,6 @@ fonts
 # Operating system stuff
 ## Mac OS X
 .DS_Store
+=======
+backup/*.dat
+>>>>>>> BRANCH (ffc883 Make purgeList wikiless)

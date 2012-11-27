@@ -1,0 +1,68 @@
+#!/usr/bin/env php
+<?php
+error_reporting( E_ALL );
+require_once( dirname( __FILE__ ) . '/defines.php' );
+require_once( dirname( __FILE__ ) . '/MWWikiversions.php' );
+/*
+ * Populate wikiversions.cdb file using all the items in wikiversions.dat
+ *
+ * @return void
+ */
+function refreshWikiversionsCDB() {
+	$srcPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.dat';
+	$tmpDBPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.cdb.tmp';
+	$finalDBPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.cdb';
+
+	// Get the array of sanitized wikiversion rows...
+	$rows = MWWikiversions::readWikiVersionsFile( $srcPath );
+	// Sanity check version directories...
+	foreach ( $rows as $row ) {
+		list( $dbName, $version, $extVersion, $comment ) = $row;
+		$versionDir = MULTIVER_COMMON_HOME . '/' . $version;
+		if ( !is_dir( $versionDir ) ) {
+			die( "Invalid version dir '$versionDir' for wiki '$dbName'.\n" );
+		}
+	}
+	// Make sure all wikis have an entry...
+	$dbNamesWithRows = array();
+	foreach ( $rows as $row ) {
+		$dbNamesWithRows[$row[0]] = 1;
+	}
+	$dbNames = MWWikiversions::readDbListFile( MULTIVER_COMMON_HOME . '/all.dblist' );
+	$diff = array_diff_key( $dbNames, $dbNamesWithRows );
+	if ( count( $diff ) ) {
+		print_r( $diff );
+		die( "The above " . count( $diff ) . " wiki DBs are missing wikiversion rows.\n" );
+	}
+
+	# Build the new database at the temp location...
+	@unlink( $tmpDBPath ); // clear any old temp file for sanity
+	$db = dba_open( $tmpDBPath, "n", "cdb_make" );
+	if ( !$db ) {
+		die( "Unable to create wikiversions.cdb.tmp.\n" );
+	}
+	foreach ( $rows as $row ) {
+		list( $dbName, $version, $extVersion, $comment ) = $row;
+		if ( $extVersion === '*' ) {
+			$extVersion = ''; // "*" means "none"
+		}
+		dba_insert( "ver:$dbName", $version, $db );
+		dba_insert( "ext:$dbName", $extVersion, $db );
+	}
+	dba_close( $db );
+
+	# Sanity check the temp file...
+	if ( !is_file( $tmpDBPath ) ) {
+		die( "Unable to create wikiversions.cdb.tmp.\n" );
+	}
+
+	# Move temp file to the final location only when finished...
+	if ( !rename( $tmpDBPath, $finalDBPath ) ) {
+		die( "Unable to move wikiversions.cdb.tmp to wikiversions.cdb.\n" );
+	}
+	chmod( $finalDBPath, 0664 ); // rw-rw-r
+
+	print "wikiversions.cdb successfully built.\n";
+}
+
+refreshWikiversionsCDB();
