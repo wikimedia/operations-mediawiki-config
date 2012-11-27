@@ -1,0 +1,63 @@
+#!/usr/bin/env php
+<?php
+error_reporting( 0 );
+require_once( dirname( __FILE__ ) . '/defines.php' );
+require_once( dirname( __FILE__ ) . '/MWWikiversions.php' );
+/*
+ * Returns a space separated list of all active MW versions (e.g. "x.xx").
+ * Versions are read from /usr/local/apache/common-local/wikiversions.cdb.
+ *
+ * Given --home, versions are instead read from /home/wikipedia/common/wikiversions.cdb.
+ * Given --withdb, each item in the list will be appended with '=' followed by
+ * 		the DB name of *some* wiki that uses that version. Used to run maintenance scripts.
+ * Given --extended, versions will include any extra suffix specified in wikiversions.cdb.
+ * 		This may result in more items being listed than without.
+ * Given --report, error messages would be displayed if this dies.
+ *
+ * @return string
+ */
+function getActiveWikiVersions() {
+	global $argv;
+	$options = $argv; // copy
+	array_shift( $options ); // first item is this file
+
+	if ( in_array( '--home', $options ) ) {
+		$datPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.dat';
+	} else {
+		$datPath = MULTIVER_CDB_DIR_APACHE . '/wikiversions.dat';
+	}
+
+	# Get all the wikiversion rows in wikiversions.dat...
+	try {
+		$versionRows = MWWikiversions::readWikiVersionsFile( $datPath );
+	} catch( Exception $e ) {
+		if ( in_array( '--report', $options ) ) {
+			throw $e; // show error
+		} else {
+			die( 1 ); // silent death
+		}
+	}
+
+	$result = $activeVersions = array();
+	foreach ( $versionRows as $row ) {
+		list( $dbName, $version, $extVersion, $comment ) = $row;
+		if ( $extVersion !== '*' && in_array( '--extended', $options ) ) {
+			$version .= "-$extVersion";
+		}
+		if ( !isset( $activeVersions[$version] ) ) { // already listed?
+			$activeVersions[$version] = 1;
+
+			$version = substr( $version, 4 ); // remove 'php-'
+			if ( in_array( '--withdb', $options ) ) {
+				$result[] = "{$version}={$dbName}";
+			} else {
+				$result[] = "{$version}";
+			}
+		}
+
+	}
+
+	return implode( ' ', $result );
+}
+
+echo getActiveWikiVersions() . "\n";

@@ -1,5 +1,11 @@
 [gerrit]
 host=gerrit.wikimedia.org
 port=29418
+<<<<<<< HEAD   (0e11f7 Merge "Switching back to http flickr API per bug 42468")
 project=operations/mediawiki-config.git
 defaultbranch=master
+=======
+project=operations/mediawiki-multiversion
+defaultbranch=master
+defaultrebase=0
+>>>>>>> BRANCH (ffc883 Make purgeList wikiless)

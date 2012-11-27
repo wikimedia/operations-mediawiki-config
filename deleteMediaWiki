@@ -1,0 +1,91 @@
+#!/usr/bin/env php
+<?php
+error_reporting( E_ALL );
+/**
+ * Delete various symlinks created by checkoutMediaWiki.
+ *
+ * The first argument is target path (relative to /home/wikipedia/common/)
+ * storing the local copy of the SVN checkout. This is typically of the format "php-X.XX".
+ *
+ * @return void
+ */
+function deleteMediaWiki() {
+	global $argv;
+	$commonHomeDir = '/home/wikipedia/common';
+
+	$argsValid = false;
+	if ( count( $argv ) >= 2 ) {
+		$dstVersion = $argv[1]; // e.g. "php-X.XXwmfX"
+		if ( preg_match( '/^php-(\d+\.\d+wmf\d+|master)$/', $dstVersion, $m ) ) {
+			$dstVersionNum = $m[1]; // everything after 'php-'
+			$argsValid = true;
+		}
+	}
+
+	if ( !$argsValid ) {
+		die( "Usage: deleteMediaWiki php-X.XXwmfX\n" );
+	}
+
+	# MW install path
+	$destIP = "$commonHomeDir/$dstVersion";
+
+	echo "Deleting symlink files for MediaWiki install at $destIP...\n\n";
+
+	# Check the destination path of the SVN checkout...
+	if ( !file_exists( $destIP ) ) {
+		die( "No MediaWiki install at $destIP.\n" );
+	}
+
+	# Destroy symlinks created by checkoutMediaWiki outside of $destIP
+	$symlinks = array(
+		"$commonHomeDir/docroot/bits/static-$dstVersionNum/skins",
+		"$commonHomeDir/docroot/bits/static-$dstVersionNum/extensions",
+		"$commonHomeDir/docroot/bits/static-$dstVersionNum/resources",
+		"$commonHomeDir/docroot/secure/skins-$dstVersionNum",
+		"$commonHomeDir/live-1.5/static-$dstVersionNum/skins",
+		"$commonHomeDir/live-1.5/static-$dstVersionNum/extensions",
+		"$commonHomeDir/live-1.5/static-$dstVersionNum/resources",
+	);
+	$directories = array(
+		"$commonHomeDir/docroot/bits/static-$dstVersionNum",
+		"$commonHomeDir/live-1.5/static-$dstVersionNum",
+	);
+	foreach ( $symlinks as $path ) {
+		deleteSymlink( $path );
+	}
+	foreach ( $directories as $dir ) {
+		deleteDirectory( $dir );
+	}
+
+	print "\nReferences to MediaWiki $dstVersionNum deleted.\n";
+}
+
+function deleteSymlink( $path ) {
+	if ( !file_exists( $path ) ) {
+		print "Symlink file already removed: $path\n";
+	} elseif ( filetype( $path ) !== 'link' ) { // sanity
+		print "Expected symlink file is not actually a symlink: $path\n";
+	} else {
+		if ( unlink( $path ) ) {
+			print "Symlink file removed: $path\n";
+		} else {
+			print "COULD NOT REMOVE SYMLINK: $path\n";
+		}
+	}
+}
+
+function deleteDirectory( $path ) {
+	if ( !file_exists( $path ) ) {
+		print "Directory already removed: $path\n";
+	} elseif ( filetype( $path ) !== 'dir' ) { // sanity
+		print "Expected directory is not actually a directory: $path\n";
+	} else {
+		if ( rmdir( $path ) ) {
+			print "Directory removed: $path\n";
+		} else {
+			print "COULD NOT REMOVE DIRECTORY: $path\n";
+		}
+	}
+}
+
+deleteMediaWiki();
