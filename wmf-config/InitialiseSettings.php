@@ -2232,6 +2232,10 @@ $wgConf->settings = array(
 		'Portal' => 100,
 		'Portal_talk' => 101,
 	),
+	'bawiki' => array(
+		'Wikipedia' => NS_PROJECT,                         // Bug 41167
+		'Wikipedia_буйынса_фекерләшеү' => NS_PROJECT_TALK,
+	),
 	'barwiki' => array(
 		'Portal_Diskussion' => 101, // Bug 41962 - now "Portal Dischkrian"
 	),
