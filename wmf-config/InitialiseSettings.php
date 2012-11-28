@@ -1732,6 +1732,7 @@ $wgConf->settings = array(
 	'bswikisource'  => 'Wikiizvor', // pre-emptive
 	'bswikisource'  => 'Wikizvor',
 	'bswiktionary'  => 'Vikirječnik',
+	'bxrwiki'	=> 'Википеэди', // Bug 41877
 	'cawiki'	=> "Viquip\xc3\xa8dia",
 	'cawikibooks'   => 'Viquillibres',
 	'cawikinews'    => 'Viquinotícies',
