@@ -3033,18 +3033,22 @@ $wgConf->settings = array(
 		'Index_talk' => 107,
 	),
 	'ruwiki' => array(
-		# Bug 12320
-		'Участница' => NS_USER,
+		'У' => NS_USER,           // Bug 42511
+		'Ш' => NS_TEMPLATE,       // Bug 42511
+		'T' => NS_TEMPLATE,       // Bug 42511
+		'К' => NS_CATEGORY,       // Bug 42511
+		'ВП' => NS_PROJECT,       // Bug 12320
+		'И' => 102,
+		'ПРО' => 104,             // Bug 34124
+		'АК' => 106,              // Bug 34527
+
+		'Участница' => NS_USER,                    // Bug 12320
 		'Обсуждение_участницы' => NS_USER_TALK,
-		'ВП' => NS_PROJECT,
 		'Incubator' => 102,
 		'Incubator_talk' => 103,
-		'И' => 102,
-		'ПРО' => 104,
-		'Wikiproject' => 104,
+		'Wikiproject' => 104,                      // Bug 34124
 		'Wikiproject_talk' => 105,
-		'АК' => 106,
-		'Arbcom' => 106,
+		'Arbcom' => 106,                           // Bug 34527
 	),
 	'ruwikibooks' => array(
 		'ВУ' => NS_PROJECT,
@@ -5117,9 +5121,9 @@ $wgConf->settings = array(
 		101 => 'Обсуждение_портала',
 		102 => 'Инкубатор', // Incubator
 		103 => 'Обсуждение_Инкубатора', // Incubator talk
-		104 => 'Проект', // Project
-		105 => 'Обсуждение_проекта', // Project talk
-		106 => 'Арбитраж', // Arbcom
+		104 => 'Проект', // Bug 34124 - Project
+		105 => 'Обсуждение_проекта', // Bug 34124 - Project talk
+		106 => 'Арбитраж', // Bug 34527 - Arbcom
 		107 => 'Обсуждение_арбитража',
 	),
 	'scnwiki' => array(
