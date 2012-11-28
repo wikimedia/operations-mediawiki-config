@@ -42,8 +42,8 @@ if( $cluster == 'wmflabs' ) { # safe guard
 		),
 
 		'hostsByName' => array(
-			'db1'  => 'deployment-sql',
-			'db2'  => 'deployment-sql02',
+			'db1'  => '10.4.0.53',   # deployment-sql
+			'db2'  => '10.4.0.248',  # deployment-sql02
 		),
 	);
 
