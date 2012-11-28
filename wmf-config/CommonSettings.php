@@ -2592,6 +2592,10 @@ if ( $wmgUseLastModified ) {
 }
 
 #
+# If a job runner takes to long to finish a job, assume it died and re-asign the job
+$wgJobTypeConf['default']['claimTTL'] = 3600;
+
+#
 # Job types to exclude from the default queue processing. Aka the very long
 # one.  That will exclude the types from any queries such as nextJobDB.php
 # We have to set this for any project cause we usually run PHP script against
@@ -2599,6 +2603,7 @@ if ( $wmgUseLastModified ) {
 
 # Timed Media Handler:
 $wgJobTypesExcludedFromDefaultQueue[] = 'webVideoTranscode';
+$wgJobTypeConf['webVideoTranscode'] = array( 'claimTTL' => 86400 ) + $wgJobTypeConf['default'];
 
 if ( $wmgUseEducationProgram ) {
 	require_once( "$IP/extensions/EducationProgram/EducationProgram.php" );
