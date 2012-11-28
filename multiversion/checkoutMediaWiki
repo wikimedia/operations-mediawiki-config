@@ -1,6 +1,7 @@
 #!/usr/bin/env php
 <?php
 error_reporting( E_ALL );
+
 /**
  * Automatically git clone a MediaWiki version and do some basic wmf setup.
  * LocalSettings.php will be created (which loads CommonSettings.php) and various

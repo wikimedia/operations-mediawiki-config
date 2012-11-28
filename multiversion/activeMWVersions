@@ -1,8 +1,10 @@
 #!/usr/bin/env php
 <?php
 error_reporting( 0 );
+
 require_once( dirname( __FILE__ ) . '/defines.php' );
 require_once( dirname( __FILE__ ) . '/MWWikiversions.php' );
+
 /*
  * Returns a space separated list of all active MW versions (e.g. "x.xx").
  * Versions are read from /usr/local/apache/common-local/wikiversions.cdb.

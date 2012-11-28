@@ -1,7 +1,9 @@
 #!/usr/bin/env php
 <?php
 error_reporting( 0 );
+
 require_once( dirname( __FILE__ ) . '/defines.php' );
+
 /**
  * This script prints the MW version associated with a specified wikidb.
  */
