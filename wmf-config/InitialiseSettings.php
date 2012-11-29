@@ -11054,6 +11054,9 @@ $wgConf->settings = array(
 'wmgMFEnableDesktopResources' => array(
 	'default' => true,
 ),
+'wmgMFPhotoUploadEndpoint' => array(
+	'default' => '//commons.wikimedia.org/w/api.php',
+),
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
 	'cswiki' => array(
