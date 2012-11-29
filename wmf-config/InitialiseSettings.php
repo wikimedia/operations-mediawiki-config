@@ -9238,6 +9238,7 @@ $wgConf->settings = array(
 	'outreachwiki' => true, // bug 29238
 	'sourceswiki' => true,
 	'testwiki' => false,
+	'test2wiki' => true,
 ),
 
 'wmgUseQuiz' => array(
