@@ -11954,8 +11954,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseTemplateSandbox' => array(
-	'default' => false,
-	//'testwiki' => true,
+	'default' => true,
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
 ),
