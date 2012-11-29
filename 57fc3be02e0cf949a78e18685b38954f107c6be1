@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//+SE\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2792,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2012-11-29T18:44:32Z",
+      "side": 1,
+      "message": "This might cause problems for everything that doesn\u0027t have Scribunto. Won\u0027t NS_MODULE be undefined then?",
+      "revId": "57fc3be02e0cf949a78e18685b38954f107c6be1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
