@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
+
 error_reporting( E_ALL );
+
 /*
  * Populate wikiversions.cdb file using all the items in all.dblist
  * as keys, each having a value of the specified MediaWiki version.

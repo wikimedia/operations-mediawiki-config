@@ -1,5 +1,6 @@
 <?php
 require_once( dirname( __FILE__ ) . '/defines.php' );
+
 /**
  * Helper class for reading the wikiversions.dat file
  */

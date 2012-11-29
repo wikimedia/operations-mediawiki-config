@@ -1,8 +1,11 @@
 #!/usr/bin/env php
 <?php
+
 error_reporting( E_ALL );
+
 require_once( dirname( __FILE__ ) . '/defines.php' );
 require_once( dirname( __FILE__ ) . '/MWWikiversions.php' );
+
 /*
  * This script switches all wikis in a .dblist file running one MediaWiki
  * version to another MediaWiki version. Since this only changes the wikiversions.dat
