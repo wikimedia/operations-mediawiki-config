@@ -6,6 +6,7 @@
 if( $cluster === 'pmtpa' ) {  # safeguard
 
 if ( $wmgMobileFrontend ) {
+	$wgMFPhotoUploadEndpoint = 'http://commons.wikimedia.org/w/api.php';
 	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 	$wgMFRemotePostFeedbackUsername = $wmgMFRemotePostFeedbackUsername;
 	$wgMFRemotePostFeedbackPassword = $wmgMFRemotePostFeedbackPassword;
