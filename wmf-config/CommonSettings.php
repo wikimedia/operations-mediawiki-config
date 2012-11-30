@@ -2751,6 +2751,8 @@ if ( $wmgUseUniversalLanguageSelector ) {
 }
 
 if ( $wmgUseWikibaseRepo ) {
+	// @todo: enable DataValues and do we want to rely on lazy loading of stuff there?
+	//require_once( "$IP/DataValues/DataValues.php" );
 	require_once( "$IP/extensions/Diff/Diff.php" );
 	require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
 	require_once( "$IP/extensions/Wikibase/repo/Wikibase.php" );
@@ -2776,13 +2778,34 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBSettings['idBlacklist'] = array( 1, 2, 3, 4, 5, 8, 13, 23, 24, 42, 80, 666, 1337, 1868, 1971, 2000, 2001, 2012, 2013 );
 
+	$wgWBSettings['withoutTermSearchKey'] = true;
+
+	// @todo: turn this on, once the pollforchanges is ready to run
 	$wgWBSettings['useChangesTable'] = false;
 }
 
 if ( $wmgUseWikibaseClient ) {
+	// @todo: are we okay with lazy loading of stuff in DataValues
+	require_once( "$IP/extensions/DataValues/DataValues.php" );
 	require_once( "$IP/extensions/Diff/Diff.php" );
 	require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
 	require_once( "$IP/extensions/Wikibase/client/WikibaseClient.php" );
+
+	$wgWBSettings['repoDatabase'] = 'wikidatawiki';
+	$wgWBSettings['changesDatabase'] = 'wikidatawiki';
+
+	// can use the default, protocol relative once https://gerrit.wikimedia.org/r/#/c/36193/
+	// gets merged and deployed
+	$wgWBSettings['repoUrl'] = 'https://wikidata.org';
+
+	// for test2wiki; once https://gerrit.wikimedia.org/r/#/c/36201/ is merged and
+	// deployed the default will be same as $wgDBname, so should work for all wikipedias
+	$wgWBSettings['siteGlobalID'] = 'enwiki';
+
+	$wgWBSettings['repoNamespaces'] = array(
+		'wikibase-item' => '',
+		'wikibase-property' => 'Property'
+	);
 }
 
 if ( ( $wmgUseTranslate && $wmgUseTranslationMemory ) || $wmgEnableGeoData ) {
