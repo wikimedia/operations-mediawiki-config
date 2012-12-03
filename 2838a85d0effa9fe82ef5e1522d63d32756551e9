@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//8FQ\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2595,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2012-12-03T03:21:24Z",
+      "side": 1,
+      "message": "* to -\u003e too\n* asign -\u003e assign",
+      "revId": "2838a85d0effa9fe82ef5e1522d63d32756551e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
