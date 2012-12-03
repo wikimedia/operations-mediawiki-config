@@ -1465,8 +1465,6 @@ if ( is_array( $wmgExtraImplicitGroups ) ) {
 	$wgImplicitGroups = array_merge( $wgImplicitGroups, $wmgExtraImplicitGroups );
 }
 
-$wgLegacySchemaConversion = true;
-
 # $wgReadOnly = '5 min DB server maintenance...';
 # $wgReadOnly = 'Read-only during network issues';
 
