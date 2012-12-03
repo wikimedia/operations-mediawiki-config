@@ -20,12 +20,12 @@ $wmgThrottlingExceptions = array();
 
 ## Add throttling definitions below.
 
-$wmfThrottlingExceptions[] = array(
-	'from'   => '2012-11-24T04:00 +8:00',
-	'to'     => '2012-11-25T00:00 +8:00',
-	'IP'     => array( '202.78.87.131' ),
-	'dbname' => array( 'enwiki', 'tlwiki', 'bclwiki' ),
-	'value'  => 150,
+$wmfThrottlingExceptions[] = array( // Bug 42644
+	'from'   => '2012-12-03T12:00 +0:00',
+	'to'     => '2012-12-03T22:00 +0:00', //event end +2 hours
+	'IP'     => array( '192.114.7.2' ),
+	'dbname' => array( 'enwiki', 'hewiki', 'hewikisource', 'commonswiki' ),
+	'value'  => 75,
 );
 
 ## Add throttling definitions above.
