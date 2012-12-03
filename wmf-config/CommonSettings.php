@@ -1467,10 +1467,6 @@ if ( is_array( $wmgExtraImplicitGroups ) ) {
 	$wgImplicitGroups = array_merge( $wgImplicitGroups, $wmgExtraImplicitGroups );
 }
 
-# $wgReadOnly = '5 min DB server maintenance...';
-# $wgReadOnly = 'Read-only during network issues';
-
-
 if ( $cluster != 'pmtpa' ) {
 	$wgHTTPTimeout = 10;
 }
@@ -2284,6 +2280,9 @@ function wmfBlockJokerEmails( &$to, &$from, &$subject, &$text ) {
 }
 
 # $wgReadOnly = "Emergency database maintenance, will be back to full shortly.";
+# $wgReadOnly = '5 min DB server maintenance...';
+# $wgReadOnly = 'Read-only during network issues';
+
 # $wgSiteNotice = "<div style='text-align: center; background: #f8f4f0; border: solid 1px #988; font-size: 90%; padding: 4px'>Software updates are being applied to Wikimedia sites; there may be some brief interruption as the servers update.</div>";
 # $wgSiteNotice = "<div style='text-align: center; background: #f8f4f0; border: solid 1px #988; font-size: 90%; padding: 4px'>Software updates are being applied to Wikimedia sites; we're shaking out a few remaining issues.</div>";
 
