@@ -52,6 +52,24 @@
       "revId": "8e01a083450915e935e9080cab9d548b01931587",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//7u4\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11956,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2012-12-03T16:21:45Z",
+      "side": 1,
+      "message": "I agree, doing this as an intermediate step is \"safer\"",
+      "parentUuid": "AAADbX//72Y\u003d",
+      "revId": "8e01a083450915e935e9080cab9d548b01931587",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
