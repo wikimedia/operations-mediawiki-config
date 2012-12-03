@@ -413,6 +413,8 @@ $wgNamespacesWithSubpages[101] = 1;
 # Not CLI, see http://bugs.php.net/bug.php?id=47540
 if ( php_sapi_name() != 'cli' ) {
 	ignore_user_abort( true );
+} else {
+	$wgShowExceptionDetails = true;
 }
 
 $wgUseImageResize               = true;
