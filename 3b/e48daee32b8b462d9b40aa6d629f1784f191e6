@@ -1,0 +1,10 @@
+Change-Id: I3be48daee32b8b462d9b40aa6d629f1784f191e6
+Code-Review+2: Pyoungmeister <py@wikimedia.org>
+Verified+1: Pyoungmeister <py@wikimedia.org>
+Code-Review+1: jenkins-bot
+Verified+1: jenkins-bot
+Submitted-by: Pyoungmeister <py@wikimedia.org>
+Submitted-at: Tue, 04 Dec 2012 23:26:21 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/36918
+Project: operations/mediawiki-config
+Branch: refs/heads/master
