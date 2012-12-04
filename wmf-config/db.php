@@ -105,7 +105,7 @@ $wgLBFactoryConf = array(
 	),
 	's7' => array(
 		'db37'  => 0,
-		#'db56'  => 400, # snapshot host
+		'db56'  => 400, # snapshot host
 		'db58'	=> 500,
 		'db68'	=> 700, 
 	),
