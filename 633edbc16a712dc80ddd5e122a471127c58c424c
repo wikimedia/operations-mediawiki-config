@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//6Go\u003d",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2012-12-04T23:57:11Z",
+      "side": 1,
+      "message": "needs to be protocol-relative",
+      "revId": "633edbc16a712dc80ddd5e122a471127c58c424c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
