@@ -5101,6 +5101,8 @@ $wgConf->settings = array(
 		101 => 'Discuție_Portal',
 		102 => 'Proiect',
 		103 => 'Discuție_Proiect',
+		108 => 'Cod',                    // Bug 42690 - Code
+		109 => 'Discuție_Cod',
 	),
 	'rowikisource' => array(
 		102 => 'Autor',
