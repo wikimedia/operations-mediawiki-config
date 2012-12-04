@@ -210,6 +210,7 @@ $wgLBFactoryConf = array(
 	'db64'	   => '10.0.6.74', # do not remove or comment out
 	'db65'	   => '10.0.6.75', # do not remove or comment out
 	'db66'	   => '10.0.6.76', # do not remove or comment out
+	'db68'	   => '10.0.6.78', # do not remove or comment out
 	'db1001'	=> '10.64.0.5', # do not remove or comment out
 	'db1002'	=> '10.64.0.6', # do not remove or comment out
 	'db1003'	=> '10.64.0.7', # do not remove or comment out
