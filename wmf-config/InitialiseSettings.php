@@ -6887,9 +6887,10 @@ $wgConf->settings = array(
 		'*' => array( 'createpage' => false ),
 	),
 	'cswiki' => array(
-		'autopatrolled' => array( 'autopatrol' => true, ),
-		'user'	  => array( 'upload' => false, ),
 		'autoconfirmed' => array( 'upload' => false, ),
+		'autopatrolled' => array( 'autopatrol' => true, ),
+		'bot' => array( 'ipblock-exempt' => true, ), // Bug 42720
+		'user'	  => array( 'upload' => false, ),
 	),
 	'cswikibooks' => array(
 		'user' => array( 'upload' => false ),
