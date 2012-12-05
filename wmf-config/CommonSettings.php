@@ -2254,7 +2254,7 @@ if ( $wmgUseArticleFeedbackv5 ) {
 
 
 	$wgArticleFeedbackv5AbuseFiltering = $wmgArticleFeedbackv5AbuseFiltering;
-	$wgArticleFeedbackv5CTABuckets = $wmgArticleFeedbackv5CTABuckets;
+//	$wgArticleFeedbackv5CTABuckets = $wmgArticleFeedbackv5CTABuckets;
 }
 
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
