@@ -12022,8 +12022,10 @@ $wgConf->settings = array(
 	'wikidatawiki' => true,
 ),
 
+// @todo enable test2wiki when ready
 'wmgUseWikibaseClient' => array(
 	'default' => false,
+	'test2wiki' => false,
 ),
 
 'wmgUseTemplateSandbox' => array(
