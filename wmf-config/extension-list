@@ -31,6 +31,11 @@ $IP/extensions/ContributionReporting/ContributionReporting.php
 $IP/extensions/ContributionTracking/ContributionTracking.php
 $IP/extensions/CreditsSource/CreditsSource.php
 $IP/extensions/CustomData/CustomData.php
+$IP/extensions/DataValues/DataTypes/DataTypes.i18n.php
+$IP/extensions/DataValues/DataValues/DataValues.i18n.php
+$IP/extensions/DataValues/ValueFormatters/ValueFormatters.i18n.php
+$IP/extensions/DataValues/ValueParsers/ValueParsers.i18n.php
+$IP/extensions/DataValues/ValueValidators/ValueValidators.i18n.php
 $IP/extensions/Diff/Diff.php
 $IP/extensions/DisableAccount/DisableAccount.php
 $IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php
