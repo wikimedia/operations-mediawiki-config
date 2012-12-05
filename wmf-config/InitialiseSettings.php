@@ -11123,6 +11123,8 @@ $wgConf->settings = array(
 ),
 'wmgMFPhotoUploadEndpoint' => array(
 	'default' => '//commons.wikimedia.org/w/api.php',
+	'testwiki' => '',
+	'test2wiki' => '',
 ),
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
