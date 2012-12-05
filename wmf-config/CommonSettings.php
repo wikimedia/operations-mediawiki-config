@@ -2635,12 +2635,11 @@ if ( $wmgUseE3Experiments ) {
 
 if ( $wmgEnableGeoData ) {
 	require_once( "$IP/extensions/GeoData/GeoData.php" );
-	$wgMaxGeoSearchRadius = 5000;
-	$wgGeoDataIndexGranularity = 20;
+	$wgGeoDataBackend = 'solr';
 
-	# Uncomment these lines to disable these modules
-	# $wgAPIListModules['geosearch'] = 'ApiDisabled';
-	# $wgAPIPropModules['coordinates'] = 'ApiDisabled';
+	# Data collection mode
+	$wgAPIListModules['geosearch'] = 'ApiDisabled';
+	#$wgGeoDataUpdatesViaJob = true; uncomment this when we have a Solr server around
 
 	# These modules have been intentionally disabled for the first phase of deployment
 	if ( $wgDBname !== 'testwiki' ) {
