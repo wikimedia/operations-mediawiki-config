@@ -10741,6 +10741,26 @@ $wgConf->settings = array(
 	'enwiki' => true,
 ),
 'wmgArticleFeedbackv5CTABuckets' => array(
+	'default' => array(
+		'buckets' => array(
+			'0' => 100, // display nothing
+			'1' => 0, // display "Enticement to edit"
+			'2' => 0, // display "Learn more"
+			'3' => 0, // display "Take a survey"
+			'4' => 0, // display "Sign up or login"
+			'5' => 0, // display "View feedback"
+			'6' => 0, // display "Visit Teahouse"
+		),
+		// This version number is added to all tracking event names, so that
+		// changes in the software don't corrupt the data being collected. Bump
+		// this when you want to start a new "experiment".
+		'version' => 1,
+		// Users may constantly be rebucketed, giving them new CTAs each time.
+		'expires' => 0,
+		// Track the event of users being bucketed - so we can be sure the odds
+		// worked out right. [LATER - depends on UDP logging being set up]
+		'tracked' => false,
+	),
 	'dewiki' => array(
 		'buckets' => array(
 			'0' => 0, // display nothing
@@ -10756,7 +10776,7 @@ $wgConf->settings = array(
 		// this when you want to start a new "experiment".
 		'version' => 1,
 		// Users may constantly be rebucketed, giving them new CTAs each time.
-		'expires' => 30, // metrics testing of buckets, need fixed CTAs for now
+		'expires' => 0,
 		// Track the event of users being bucketed - so we can be sure the odds
 		// worked out right. [LATER - depends on UDP logging being set up]
 		'tracked' => false,
@@ -10776,7 +10796,7 @@ $wgConf->settings = array(
 		// this when you want to start a new "experiment".
 		'version' => 6,
 		// Users may constantly be rebucketed, giving them new CTAs each time.
-		'expires' => 30, // metrics testing of buckets, need fixed CTAs for now
+		'expires' => 0,
 		// Track the event of users being bucketed - so we can be sure the odds
 		// worked out right. [LATER - depends on UDP logging being set up]
 		'tracked' => false,
