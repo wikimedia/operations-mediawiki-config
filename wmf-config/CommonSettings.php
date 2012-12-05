@@ -2638,7 +2638,7 @@ if ( $wmgEnableGeoData ) {
 	$wgGeoDataBackend = 'solr';
 
 	# Data collection mode
-	$wgAPIListModules['geosearch'] = 'ApiDisabled';
+	$wgAPIGeneratorModules['geosearch'] = 'ApiDisabled';
 	#$wgGeoDataUpdatesViaJob = true; uncomment this when we have a Solr server around
 
 	# These modules have been intentionally disabled for the first phase of deployment
