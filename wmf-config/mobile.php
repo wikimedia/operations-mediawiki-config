@@ -6,6 +6,7 @@
 if( $cluster === 'pmtpa' ) {  # safeguard
 
 if ( $wmgMobileFrontend ) {
+	$wgMFPhotoUploadEndpoint = $wmgMFPhotoUploadEndpoint;
 	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 	$wgMFRemotePostFeedbackUsername = $wmgMFRemotePostFeedbackUsername;
 	$wgMFRemotePostFeedbackPassword = $wmgMFRemotePostFeedbackPassword;
