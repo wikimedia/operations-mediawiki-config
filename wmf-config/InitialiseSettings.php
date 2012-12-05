@@ -11815,11 +11815,12 @@ $wgConf->settings = array(
 	'enwiki' => true,
 ),
 # *** DO NOT disable this extension if it causes an overload via API ***
-# or you will break a lot of pages where it is used. Instead, disable its
-# API modules in CommonSettings.php
+# or you will break a lot of pages where its parser function is used. Instead,
+# disable its API modules in CommonSettings.php
 'wmgEnableGeoData' => array(
 	'default' => false,
 	'testwiki' => true,
+	'enwiki' => true,
 ),
 
 'wmgUseEcho' => array(
