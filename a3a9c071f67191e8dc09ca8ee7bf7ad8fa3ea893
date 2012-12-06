@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//4DY\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2787,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2012-12-06T22:30:58Z",
+      "side": 1,
+      "message": "The line and the comment above it can just be removed as this is now the same as the default...",
+      "revId": "a3a9c071f67191e8dc09ca8ee7bf7ad8fa3ea893",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
