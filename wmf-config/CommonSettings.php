@@ -773,7 +773,6 @@ $wgDebugLogGroups['tempDebug'] = "udp://$wmfUdp2logDest/temp-debug"; # generic t
 
 $wgDebugLogGroups['UploadBlacklist'] = "udp://$wmfUdp2logDest/upload-blacklist";
 $wgDebugLogGroups['bug27452'] = "udp://$wmfUdp2logDest/bug27452";
-$wgDebugLogGroups['swiftThumb'] = "udp://$wmfUdp2logDest/swift-thumb"; // -aaron 1/30/12
 $wgDebugLogGroups['FileOperation'] = "udp://$wmfUdp2logDest/filebackend-ops";
 $wgDebugLogGroups['SwiftBackend'] = "udp://$wmfUdp2logDest/swift-backend"; // -aaron 5/15/12
 $wgDebugLogGroups['updateTranstagOnNullRevisions'] = "udp://$wmfUdp2logDest/updateTranstagOnNullRevisions";
@@ -2566,11 +2565,6 @@ if ( $wmgUseFeaturedFeeds ) {
 }
 
 $wgDisplayFeedsInSidebar = $wmgDisplayFeedsInSidebar;
-
-if( $cluster == 'pmtpa' ) {
-	# Temporary code to purge swift thumbnails --aaron 2/1/2012
-	require( "$wmfConfigDir/swift.php" );
-}
 
 if ( $wmgReduceStartupExpiry ) {
 	$wgResourceLoaderMaxage['unversioned'] = array( 'server' => 30, 'client' => 30 );
