@@ -11742,7 +11742,6 @@ $wgConf->settings = array(
 ),
 'wgResourceLoaderExperimentalAsyncLoading' => array(
 	'default' => false,
-	'test2wiki' => true,
 ),
 'wmgReduceStartupExpiry' => array(
 	'default' => false,
