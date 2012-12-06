@@ -641,6 +641,7 @@ $wgConf->settings = array(
 	'mrwiki'	    => '$stdlogo',
 	'mswiki' 		=> '//upload.wikimedia.org/wikipedia/commons/e/ee/Wikipedia-logo-v2-ms.png',
 	'mswikibooks'       => '$stdlogo',
+	'mrwikiquote'	    => '//upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Wikiquote-logo-ml.svg/135px-Wikiquote-logo-ml.svg.png', // Bug 42771
 	'mswiktionary'      => '$stdlogo',
 	'mtwiki' 		=> '//upload.wikimedia.org/wikipedia/commons/9/9b/Wikipedia-logo-v2-mt.png',
 	'mwlwiki'	   => '//upload.wikimedia.org/wikipedia/commons/1/10/Wikipedia-logo-v2-mwl.png', // bug 40285
