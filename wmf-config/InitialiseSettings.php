@@ -961,9 +961,9 @@ $wgConf->settings = array(
 	'incubatorwiki' => '/wiki/Special:MyLanguage/Incubator:Upload',
 
 	'aswiki'	=> '/wiki/ৱিকিপিডিয়া:ফাইল_আপল’ড_বিশেষজ্ঞ',
-	'bgwiki'	=> '/wiki/MediaWiki:Uploadtext',
+	'bgwiki'	=> '/wiki/MediaWiki:Uploadtext', // Bug 14836
 	'bnwiki'	=> '/wiki/উইকিপিডিয়া:আপলোড',
-	'bswiki'	=> '/wiki/Wikipedia:Upload',
+	'bswiki'	=> '/wiki/Wikipedia:Upload', // Bug 12044
 	'cswiki'	=> '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
 	'cswikibooks'   => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
 	'cswikinews'    => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
@@ -991,13 +991,14 @@ $wgConf->settings = array(
 	'itwikinews'    => false,
 	'jawiki'	=> '/wiki/Wikipedia:%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89',
 	'jawikisource'  => '//commons.wikimedia.org/wiki/Special:Upload',
-	'lawiki'	=> '//commons.wikimedia.org/wiki/Special:Upload?uselang=la',
+	'lawiki'	=> '//commons.wikimedia.org/wiki/Special:Upload?uselang=la', // Bug 13190
 	'mlwiki'	    => '/wiki/വിക്കിപീഡിയ:അപ്‌ലോഡ്',
 	'ndswiki'       => '//commons.wikimedia.org/wiki/Special:Upload',
 	'nlwiki'	=> '//commons.wikimedia.org/wiki/Commons:Upload/nl?uselang=nl',
 	'nlwikisource'   => '//commons.wikimedia.org/wiki/Commons:Upload/nl?uselang=nl',
 	'nlwikiquote'   => '//commons.wikimedia.org/wiki/Commons:Upload/nl?uselang=nl',
 	'nlwiktionary'  => '//commons.wikimedia.org/wiki/Commons:Upload/nl?uselang=nl',
+	'plwiki'        => '//pl.wikipedia.org/wiki/Wikipedia:Prześlij_plik', // Bug 42579
 	'plwikinews'    => false,
 	'plwikiquote'   => '//commons.wikimedia.org/wiki/Special:Upload?uselang=pl',
 	'ptwiki'	=> '/wiki/Wikipedia:Carregar_ficheiro',
