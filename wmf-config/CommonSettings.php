@@ -2338,7 +2338,7 @@ if ( $wmgUseUploadWizard ) {
 
 if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
-	$wgVisualEditorParsoidURL = 'http://10.0.0.23:8000'; // 10.0.0.23 is wtp1.pmtpa.wmnet
+	$wgVisualEditorParsoidURL = 'http://10.2.1.28:8000'; // 10.2.1.28 is parsoid.svc.pmtpa.wmnet
 	$wgVisualEditorParsoidPrefix = $wmgVisualEditorParsoidPrefix;
 	$wgVisualEditorNamespaces = $wmgVisualEditorNamespaces;
 
