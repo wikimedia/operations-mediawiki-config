@@ -16,6 +16,24 @@
       "revId": "5c8b8b1a72b8a3c9e4774ac8dd000eafdf1c23f7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADbX//4cI\u003d",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 48
+      },
+      "writtenOn": "2012-12-06T15:01:56Z",
+      "side": 1,
+      "message": "Errr, I only did *exactly* what they asked for.\n\nDo you want to discuss on the bug instead of in CR?\n\nAnyway, I guess I don\u0027t care that much about the end time.",
+      "parentUuid": "AAADbX//4cc\u003d",
+      "revId": "5c8b8b1a72b8a3c9e4774ac8dd000eafdf1c23f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
