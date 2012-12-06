@@ -2784,7 +2784,7 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBSettings['withoutTermSearchKey'] = true;
 
 	// @todo: turn this on, once the pollforchanges is ready to run
-	$wgWBSettings['useChangesTable'] = false;
+	$wgWBSettings['useChangesTable'] = true;
 }
 
 if ( $wmgUseWikibaseClient ) {
