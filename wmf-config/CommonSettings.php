@@ -119,7 +119,6 @@ $DP = $IP;
 wfProfileOut( "$fname-init" );
 wfProfileIn( "$fname-host" );
 
-$secure = getenv( 'MW_SECURE_HOST' );
 # This must be set *after* the DefaultSettings.php inclusion
 $wgDBname = $multiVersion->getDatabase();
 
@@ -1501,10 +1500,7 @@ $wgBrowserBlackList[] = '/^Lynx/';
 // Vandal checks
 require( "$wmfConfigDir/checkers.php" );
 
-// Customize URL handling for secure.wikimedia.org HTTPS logins
-if ( $secure ) {
-	require( "$wmfConfigDir/secure.php" );
-} elseif ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
+if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
 	// New HTTPS service on regular URLs
 	$wgInternalServer = $wgServer; // Keep this as HTTP for IRC notifications (bug 29925)
 	$wgServer = preg_replace( '/^http:/', 'https:', $wgServer );
@@ -1714,17 +1710,6 @@ if ( $wmgUseCentralAuth ) {
 
 	// Let's give it another try
 	$wgCentralAuthCreateOnView = true;
-
-	// Enable global sessions for secure.wikimedia.org
-	if ( $secure ) {
-		$wgCentralAuthCookies = true;
-		$wgCentralAuthCookieDomain = 'secure.wikimedia.org';
-
-		$wgCentralAuthCookiePrefix = 'centralauth_';
-
-		// Don't log in to the insecure URLs
-		$wgCentralAuthAutoLoginWikis = array();
-	}
 }
 
 // taking it live 2006-12-15 brion
