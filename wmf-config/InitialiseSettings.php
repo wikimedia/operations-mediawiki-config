@@ -8026,6 +8026,10 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autoeditor' ),
 		'sysop' => array( 'autoeditor' ),
 	),
+	'+urwiki' => array(
+		'bureaucrat' => array( 'import', 'uploader' ), // Bug 42737
+		//'sysop' => array( 'uploader' ), // Bug 42737 - a new group to create to restrict uploads?
+	),
 	'+viwiki' => array(
 		'sysop' => array( 'rollbacker', 'flood' ),
 		'bureaucrat' => array( 'flood' ),
@@ -8412,6 +8416,10 @@ $wgConf->settings = array(
 	'+ukwiktionary' => array(
 		'bureaucrat' => array( 'autoeditor' ),
 		'sysop' => array( 'autoeditor' ),
+	),
+	'+urwiki' => array(
+		'bureaucrat' => array( 'import', 'uploader' ), // Bug 42737
+		'sysop' => array( 'uploader' ), // Bug 42737 - a new group to create to restrict uploads?
 	),
 	'+viwiki' => array(
 		'sysop' => array( 'rollbacker', 'flood' ),
