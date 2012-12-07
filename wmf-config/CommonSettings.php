@@ -351,14 +351,14 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 		0 => $wgObjectCaches['memcached-pecl'],
 		1 => array(
 			'class' => 'SqlBagOStuff',
-			'server' => array(
-				'host' => '10.0.0.221', # pc1
-				'dbname' => 'parsercache',
-				'user' => $wgDBuser,
-				'password' => $wgDBpassword,
-				'type' => 'mysql',
-				'flags' => 0,
-			),
+			#'server' => array(
+			#	'host' => '10.0.0.221', # pc1
+			#	'dbname' => 'parsercache',
+			#	'user' => $wgDBuser,
+			#	'password' => $wgDBpassword,
+			#	'type' => 'mysql',
+			#	'flags' => 0,
+			#),
 			'purgePeriod' => 0,
 			'tableName' => 'pc',
 			'shards' => 256,
