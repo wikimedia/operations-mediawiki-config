@@ -8038,6 +8038,10 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autoeditor' ),
 		'sysop' => array( 'autoeditor' ),
 	),
+	'+urwiki' => array(
+		'bureaucrat' => array( 'import', 'confirmed' ), // Bug 42737
+		'sysop' => array( 'confirmed' ), // Bug 42737
+	),
 	'+viwiki' => array(
 		'sysop' => array( 'rollbacker', 'flood' ),
 		'bureaucrat' => array( 'flood' ),
@@ -8424,6 +8428,10 @@ $wgConf->settings = array(
 	'+ukwiktionary' => array(
 		'bureaucrat' => array( 'autoeditor' ),
 		'sysop' => array( 'autoeditor' ),
+	),
+	'+urwiki' => array(
+		'bureaucrat' => array( 'import', 'confirmed' ), // Bug 42737
+		'sysop' => array( 'confirmed' ), // Bug 42737
 	),
 	'+viwiki' => array(
 		'sysop' => array( 'rollbacker', 'flood' ),
