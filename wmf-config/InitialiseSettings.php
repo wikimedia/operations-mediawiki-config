@@ -11819,7 +11819,8 @@ $wgConf->settings = array(
 'wmgEnableGeoData' => array(
 	'default' => false,
 	'testwiki' => true,
-	'enwiki' => true,
+	'wikipedia' => true,
+	'wikivoyage' => true,
 ),
 
 'wmgUseEcho' => array(
