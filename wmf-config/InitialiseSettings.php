@@ -10194,7 +10194,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
-//	'commonswiki' => true, // disabled until flickr interface is ready --kaldari
+	'commonswiki' => true,
 ),
 'wgCopyUploadsFromSpecialUpload' => array(
 	'default' => false,
