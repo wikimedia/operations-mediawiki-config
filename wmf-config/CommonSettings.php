@@ -2430,7 +2430,7 @@ if ( $wmgUseMoodBar ) {
 	$wgMoodBarCutoffTime = $wmgMoodBarCutoffTime;
 	$wgMoodBarBlackoutInterval = array( '20120614000000,20120629000000' );
 	$wgMoodBarConfig['privacyUrl'] = "$urlprotocol//wikimediafoundation.org/wiki/Feedback_policy";
-	$wgMoodBarConfig['feedbackDashboardUrl'] = '//en.wikipedia.org/wiki/Special:FeedbackDashboard';
+	$wgMoodBarConfig['feedbackDashboardUrl'] = "$wgServer/wiki/Special:FeedbackDashboard";
 
 	$wgMoodBarConfig['infoUrl'] = "$urlprotocol$wmgMoodBarInfoUrl";
 }
