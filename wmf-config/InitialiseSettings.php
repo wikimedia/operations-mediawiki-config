@@ -11050,6 +11050,11 @@ $wgConf->settings = array(
 	'frwikisource' => '//fr.wikisource.org/wiki/Wikisource:MoodBar',
 	'nlwiki' => '//nl.wikipedia.org/wiki/Help:Feedback',
 ),
+'wmgMoodBarFeedbackDashboardUrl' => array(
+	'default' => '//en.wikipedia.org/wiki/Special:FeedbackDashboard',
+	'enwiki' => '//en.wikipedia.org/wiki/Special:FeedbackDashboard',
+	'nlwiki' => '//nl.wikipedia.org/wiki/Speciaal:DashboardTerugkoppeling', // Bug 41173
+),
 'wmgMoodBarCutoffTime' => array(
 	'default' => '20110725221004',
 	'frwikisource' => '20110304202000',
