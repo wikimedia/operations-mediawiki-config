@@ -2474,6 +2474,10 @@ $wgConf->settings = array(
 			'WN' => NS_PROJECT,
 		'CAT' => NS_CATEGORY,
 	),
+	'enwikisource' => array(
+		'WS' => NS_PROJECT,       // Bug 42853
+		'WT' => NS_PROJECT_TALK,  // Bug 42853
+	),
 	'enwikiversity' => array(
 		'WV' => NS_PROJECT,
 	),
