@@ -6929,7 +6929,7 @@ $wgConf->settings = array(
 		'autopatrolled' => array ( 'autopatrol' => true ),
 		'filemover' => array( 'movefile' => true ),
 		'OTRS-member' => array( 'autopatrol' => true ),
-		'Image-reviewer' => array( 'autopatrol' => true ),
+		'Image-reviewer' => array( 'autopatrol' => true, 'upload_by_url' => true ),
 		'sysop' => array( 'upload_by_url' => true ),
 	),
 	'dawiki' => array(
