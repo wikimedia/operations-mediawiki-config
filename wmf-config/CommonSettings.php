@@ -2640,6 +2640,7 @@ if ( $wmgEnableGeoData ) {
 		unset( $wgAPIListModules['geopages'] );
 		unset( $wgAPIListModules['geopagesincategory'] );
 	}
+	$wgMaxCoordinatesPerPage = 2000;
 }
 
 if ( $wmgUseEcho ) {
