@@ -2826,6 +2826,13 @@ if ( $wmgUseTemplateSandbox && $wgVersion != '1.21wmf4' ) {
 	}
 }
 
+// On Special:Version, link to useful release notes
+$wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
+	$matches = array();
+	preg_match( "/(\d+.\d+)wmf(\d+)/", $wgVersion, $matches );
+	$versionUrl = "https://www.mediawiki.org/wiki/MediaWiki_{$matches[1]}/wmf{$matches[2]}";
+};
+
 // additional "language names", adding to Names.php data
 $wgExtraLanguageNames = $wmgExtraLanguageNames;
 
