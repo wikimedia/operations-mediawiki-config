@@ -934,6 +934,7 @@ $wgConf->settings = array(
 	'outreachwiki' => false,
 	'plwikinews' => true,
 	'plwikiquote' => false,
+	'ptwikivoyage' => false, // Bug 42933
 	'ptwiktionary'  => false, # bug 14193
 	'ruwikiquote' => false,
 	'specieswiki'	=> false,
@@ -1005,6 +1006,7 @@ $wgConf->settings = array(
 	'plwikiquote'   => '//commons.wikimedia.org/wiki/Special:Upload?uselang=pl',
 	'ptwiki'	=> '/wiki/Wikipedia:Carregar_ficheiro',
 	'ptwikibooks'   => '//commons.wikimedia.org/wiki/Commons:Upload/pt?uselang=pt',
+	'ptwikivoyage'  => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pt', // Bug 42934
 	'rowiki'	    => '/wiki/Wikipedia:Trimite_fi%C5%9Fier',
 	'ruwikinews'    => '//commons.wikimedia.org/w/index.php?title=Special:Upload&uselang=ru',
 	'specieswiki'   => '//commons.wikimedia.org/wiki/Special:Upload',
