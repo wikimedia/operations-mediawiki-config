@@ -11815,11 +11815,16 @@ $wgConf->settings = array(
 ),
 # *** DO NOT disable this extension if it causes an overload via API ***
 # or you will break a lot of pages where its parser function is used. Instead,
-# disable its API modules in CommonSettings.php
+# disable its API modules in CommonSettings.php or below
 'wmgEnableGeoData' => array(
 	'default' => false,
 	'testwiki' => true,
 	'enwiki' => true,
+),
+
+'wmgEnableGeoSearch' => array(
+	'default' => false,
+	'testwiki' => true,
 ),
 
 'wmgUseEcho' => array(

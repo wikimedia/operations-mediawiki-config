@@ -2633,10 +2633,13 @@ if ( $wmgUseE3Experiments ) {
 if ( $wmgEnableGeoData ) {
 	require_once( "$IP/extensions/GeoData/GeoData.php" );
 	$wgGeoDataBackend = 'solr';
+	$wgGeoDataSolrHosts = $wgGeoDataSolrMaster = 'yttrium';
 
 	# Data collection mode
-	$wgAPIGeneratorModules['geosearch'] = 'ApiQueryDisabled';
-	$wgAPIListModules['geosearch'] = 'ApiQueryDisabled';
+	if ( !$wmgEnableGeoSearch ) {
+		$wgAPIGeneratorModules['geosearch'] = 'ApiQueryDisabled';
+		$wgAPIListModules['geosearch'] = 'ApiQueryDisabled';
+	}
 	#$wgGeoDataUpdatesViaJob = true; uncomment this when we have a Solr server around
 
 	# These modules have been intentionally disabled for the first phase of deployment
