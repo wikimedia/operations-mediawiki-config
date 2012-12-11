@@ -944,6 +944,7 @@ $wgConf->settings = array(
 	'eswiki' => false, # bug 6408
 	'eswikibooks' => false, # Bug 18865
 	'eswikiquote' => false, #  bug 9728
+	'eswikivoyage' => false, // Bug 42933
 	'euwiki' => false, # 28609
 	'fawikinews'  => true,  # bug 26565
 	'hewikinews' => true,
@@ -1004,6 +1005,7 @@ $wgConf->settings = array(
 	'enwiktionary'  => '//commons.wikimedia.org/wiki/Special:Upload',
 	'eswiki'        => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es',
 	'eswikibooks'   => '//commons.wikimedia.org/wiki/Commons:Upload/es?uselang=es', // '/wiki/Commons:Upload/es',
+	'eswikivoyage'  => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es', // Bug 42933
 	'eswiktionary'  => '//commons.wikimedia.org/wiki/Special:Upload?uselang=es',
 	'euwiki'	=> '//commons.wikimedia.org/wiki/Commons:Upload/eu?uselang=eu',
 	'frwiki'	=> '/wiki/Aide:Importer_un_fichier',
@@ -1360,6 +1362,7 @@ $wgConf->settings = array(
 	'eswikibooks'   => 'Wikilibros',
 	'eswikinews'    => 'Wikinoticias',
 	'eswikiversity' => 'Wikiversidad',
+	'eswikivoyage'	=> 'Wikiviajes', // Bug 42933
 	'eswiktionary'  => 'Wikcionario',
 	'etwiki'	=> 'Vikipeedia',
 	'etwikibooks'   => 'Vikiõpikud',
@@ -1808,6 +1811,7 @@ $wgConf->settings = array(
 	'eswikibooks'   => 'Wikilibros',
 	'eswikinews'    => 'Wikinoticias',
 	'eswikiversity' => 'Wikiversidad',
+	'eswikivoyage'	=> 'Wikiviajes', // Bug 42933
 	'eswiktionary'  => 'Wikcionario',
 	'etwiki'	=> 'Vikipeedia',
 	'etwikibooks'   => 'Vikiõpikud',
