@@ -11824,7 +11824,7 @@ $wgConf->settings = array(
 
 'wmgEnableGeoSearch' => array(
 	'default' => false,
-	'testwiki' => true,
+	'testwiki' => false,
 ),
 
 'wmgUseEcho' => array(
