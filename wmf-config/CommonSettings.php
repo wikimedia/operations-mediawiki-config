@@ -2120,9 +2120,6 @@ if ( $wmgEnableLandingCheck ) {
 
 if ( $wmgEnableFundraiserLandingPage ) {
 	require_once( "$IP/extensions/FundraiserLandingPage/FundraiserLandingPage.php" );
-	
-	// the following variables will disable all donation forms and send users to a maintenance page
-	$wgContributionTrackingFundraiserMaintenance = true;
 }
 
 if ( $wmgUseLiquidThreads ) {
@@ -2299,8 +2296,8 @@ if ( $wgUseContributionTracking ) {
 	$wgContributionTrackingUTMKey = true;
 
 	// the following variables will disable all donation forms and send users to a maintenance page
-	$wgContributionTrackingFundraiserMaintenance = true;
-	$wgContributionTrackingFundraiserMaintenanceUnsched = true;
+	$wgContributionTrackingFundraiserMaintenance = false;
+	$wgContributionTrackingFundraiserMaintenanceUnsched = false;
 }
 
 if ( $wmgUseUploadWizard ) {
