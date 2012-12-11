@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADbX//0rk\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2300,
+      "author": {
+        "id": 153
+      },
+      "writtenOn": "2012-12-11T00:41:34Z",
+      "side": 1,
+      "message": "We have scheduled and unscheduled at the same time! We\u0027re that cool.\n(Actually, this has zero impact on the code at this point, so.... sure)",
+      "revId": "fd5c7d2edc464eda0c53c7c966785add9c70b944",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
