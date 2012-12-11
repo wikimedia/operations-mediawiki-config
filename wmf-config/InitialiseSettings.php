@@ -10182,11 +10182,6 @@ $wgConf->settings = array(
 	// OK, ct_tag key exists, live-hacked that in for now --Andrew
 ),
 
-# temporarily turning off upload by url in order to test fundr extension that
-# relies on http::get fetches (and shouldn't go through the proxy and get denied :-P) -- atg 2009-12-1
-'wgHTTPProxy' => array(
-	'default' => false, // No access to outside
-),
 'wgCopyUploadProxy' => array(
 	'default' => 'url-downloader.wikimedia.org:8080',
 ),
