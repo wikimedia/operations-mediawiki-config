@@ -2294,6 +2294,10 @@ if ( $wgUseContributionTracking ) {
 	$wgContributionTrackingPayPalIPN = "https://civicrm.wikimedia.org/fundcore_gateway/paypal";
 	$wgContributionTrackingPayPalRecurringIPN = "https://civicrm.wikimedia.org/IPNListener_Recurring.php";
 	$wgContributionTrackingUTMKey = true;
+
+	// the following variables will disable all donation forms and send users to a maintenance page
+	$wgContributionTrackingFundraiserMaintenance = true;
+	$wgContributionTrackingFundraiserMaintenanceUnsched = true;
 }
 
 if ( $wmgUseUploadWizard ) {
