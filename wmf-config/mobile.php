@@ -136,9 +136,6 @@ if ( $wmgMFEnableDesktopResources ) {
 	$wgMFEnableDesktopResources = true;
 }
 
-// Temporarily disable ResourceLoader integration in beta, as it's got some problems
-$wgMFEnableResourceLoader = false;
-
 // Enable appending of TM (text) / (R) (icon) on site name in footer.
 // See bug 41141 though, we may wish to disable on some sites.
 $wgMFTrademarkSitename = true;
