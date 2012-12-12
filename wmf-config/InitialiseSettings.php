@@ -10562,7 +10562,6 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true, // pre-2012-11-12 install
 	'mediawikiwiki' => true, // pre-2012-11-12 install
-	'enwiki' => true, // dark launch
 ),
 
 'wmgVisualEditorDefault' => array(
