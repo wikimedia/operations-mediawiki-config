@@ -9347,6 +9347,18 @@ $wgConf->settings = array(
 		'Fewestrevisions',
 		// 'CrossNamespaceLinks', # disabled by hashar - bug 16878
 	),
+	'wikidatawiki' => array(
+		'Ancientpages',
+		'Deadendpages',
+		'Fewestrevisions',
+		'Lonelypages ',
+		'Mostlinked',
+		'Mostrevisions',
+		'Uncategorizedpages',
+		'Unwatchedpages',
+		'Wantedpages',
+		'Withoutinterwiki',
+	),
 ),
 # @} end of wgDisableQueryPageUpdate
 
