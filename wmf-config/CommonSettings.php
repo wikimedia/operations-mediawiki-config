@@ -2344,7 +2344,7 @@ if ( $wmgUseUploadWizard ) {
 
 if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
-	$wgVisualEditorParsoidURL = 'http://10.2.1.28:8000'; // 10.2.1.28 is parsoid.svc.pmtpa.wmnet
+	$wgVisualEditorParsoidURL = 'http://208.80.152.152:6081'; // 208.80.152.152 is celsus.wikimedia.org
 	$wgVisualEditorParsoidPrefix = $wmgVisualEditorParsoidPrefix;
 	$wgVisualEditorNamespaces = $wmgVisualEditorNamespaces;
 
