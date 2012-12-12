@@ -9345,6 +9345,18 @@ $wgConf->settings = array(
 		'Mostrevisions',
 		'Wantedpages',
 	),
+	'wikidatawiki' => array(
+		'Ancientpages',
+		'Deadendpages',
+		'Fewestrevisions',
+		'Lonelypages ',
+		'Mostlinked',
+		'Mostrevisions',
+		'Uncategorizedpages',
+		'Unwatchedpages',
+		'Wantedpages',
+		'Withoutinterwiki',
+	),
 ),
 # @} end of wgDisableQueryPageUpdate
 
