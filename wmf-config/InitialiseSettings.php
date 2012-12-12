@@ -11768,15 +11768,15 @@ $wgConf->settings = array(
 	'default' => false,
 ),
 'wmgMemoryLimit' => array(
-	'default' => 150 * 1024 * 1024, // 150MB
+	'default' => 175 * 1024 * 1024, // 175MB
 
-	# Extra for zh wikis for converter tables
-	'zhwiki' => 192 * 1024 * 1024,
-	'zhwikibooks' => 192 * 1024 * 1024,
-	'zhwikinews' => 192 * 1024 * 1024,
-	'zhwikiquote' => 192 * 1024 * 1024,
-	'zhwikisource' => 192 * 1024 * 1024,
-	'zhwiktionary' => 192 * 1024 * 1024,
+	# 200MB - Extra for zh wikis for converter tables
+	'zhwiki' => 200 * 1024 * 1024,
+	'zhwikibooks' => 200 * 1024 * 1024,
+	'zhwikinews' => 200 * 1024 * 1024,
+	'zhwikiquote' => 200 * 1024 * 1024,
+	'zhwikisource' => 200 * 1024 * 1024,
+	'zhwiktionary' => 200 * 1024 * 1024,
 ),
 'wgMaxGeneratedPPNodeCount' => array(
 	'default' => 1500000,
