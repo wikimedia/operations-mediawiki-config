@@ -11821,6 +11821,7 @@ $wgConf->settings = array(
 	'enwiki' => true,
 	'wiki' => true,
 	'wikivoyage' => true,
+	'commonswiki' => false,
 ),
 
 'wmgEnableGeoSearch' => array(
