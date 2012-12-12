@@ -4661,6 +4661,12 @@ $wgConf->settings = array(
 		103 => 'Müəllif_müzakirəsi', // Author talk
 
 	),
+	'bawiki' => array(
+		100 => 'Портал',                     // Bug 42077 - Portal
+		101 => 'Портал_буйынса_фекерләшеү',
+		102 => 'Проект',                     // Bug 42077 - Project
+		103 => 'Проект_буйынса_фекерләшеү',
+	),
 	'barwiki' => array(
 		100 => 'Portal',
 		101 => 'Portal_Dischkrian',     // Bug 41962 comment #7
