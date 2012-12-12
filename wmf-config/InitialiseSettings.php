@@ -10546,7 +10546,7 @@ $wgConf->settings = array(
 ),
 
 'wmgVisualEditorNamespaces' => array(
-	'default' => array( NS_MAIN ),
+	'default' => array( NS_MAIN, NS_USER ),
 	'testwiki' => array(), // NS_VISUALEDITOR added in CommonSettings.php
 	'mediawikiwiki' => array(), // NS_VISUALEDITOR added in CommonSettings.php
 ),
