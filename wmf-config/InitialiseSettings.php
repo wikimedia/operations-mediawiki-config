@@ -11819,11 +11819,12 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'enwiki' => true,
+	'wiki' => true,
+	'wikivoyage' => true,
 ),
 
 'wmgEnableGeoSearch' => array(
-	'default' => false,
-	'testwiki' => false,
+	'default' => true,
 ),
 
 'wmgUseEcho' => array(
