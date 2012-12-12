@@ -10745,8 +10745,8 @@ $wgConf->settings = array(
 	#'enwiki' => 'roan@wikimedia.org',
 ),
 'wmgArticleFeedbackv5OversightEmailHelp' => array(
-	'default' => '//en.wikipedia.org/wiki/Wikipedia:Article_Feedback_Tool/Version_5/Help/Feedback_page_Oversighters',
-	'dewiki' => '//de.wikipedia.org/wiki/Wikipedia:Artikel-Feedback/Umgang_mit_Feedback', # Could be changed once a separate page exists
+	'default' => 'http://en.wikipedia.org/wiki/Wikipedia:Article_Feedback_Tool/Version_5/Help/Feedback_page_Oversighters',
+	'dewiki' => 'http://de.wikipedia.org/wiki/Wikipedia:Artikel-Feedback/Umgang_mit_Feedback', # Could be changed once a separate page exists
 ),
 'wmgArticleFeedbackv5AutoHelp' => array(
 	'default' => '//en.wikipedia.org/wiki/Wikipedia:Article_Feedback_Tool/Version_5/Help',
