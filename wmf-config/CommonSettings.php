@@ -2677,6 +2677,10 @@ if ( $wmgEnablePostEdit ) {
 	require_once( "$IP/extensions/PostEdit/PostEdit.php" );
 }
 
+if ( $wmgUseGettingStarted ) {
+	require_once( "$IP/extensions/GettingStarted/GettingStarted.php" );
+}
+
 if ( $wmgUseReplaceText ) {
 	require_once( "$IP/extensions/ReplaceText/ReplaceText.php" );
 }
