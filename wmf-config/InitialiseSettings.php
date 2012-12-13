@@ -11857,8 +11857,8 @@ $wgConf->settings = array(
 'wmgUseGettingStarted' => array(
 	'default' => false,
 	'testwiki' => true,
-	'test2wiki' => true,
-	'enwiki' => true,
+	// 'test2wiki' => true,
+	// 'enwiki' => true,
 ),
 'wmgUseEducationProgram' => array(
 	'default' => false,

@@ -56,6 +56,7 @@ $IP/extensions/FundraiserLandingPage/FundraiserLandingPage.php
 $IP/extensions/Gadgets/Gadgets.php
 $IP/extensions/GeoCrumbs/GeoCrumbs.php
 $IP/extensions/GeoData/GeoData.php
+$IP/extensions/GettingStarted/GettingStarted.php
 $IP/extensions/GlobalBlocking/GlobalBlocking.php
 $IP/extensions/GlobalUsage/GlobalUsage.php
 $IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php
