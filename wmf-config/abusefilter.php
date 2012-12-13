@@ -60,6 +60,7 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 	$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
+	$wgAbuseFilterNotifications = "udp";
 
 } elseif ( $wgDBname == 'enwikisource' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
