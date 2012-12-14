@@ -9736,6 +9736,7 @@ $wgConf->settings = array(
 	'specieswiki' => '/usr/local/apache/common/images/sul/wikispecies.png',
 	'incubatorwiki' => '/usr/local/apache/common/images/sul/incubatorwiki.png',
 	'wikivoyage' => '/usr/local/apache/common/images/sul/wikivoyage.png',
+	'wikimania2013wiki' => '/usr/local/apache/common/images/sul/wikimania.png',
 ),
 # @}
 
