@@ -10455,6 +10455,7 @@ $wgConf->settings = array(
 	'ptwikibooks' => true, // ArticleFeedback needs this
 	'srwiki' => true, // ArticleFeedback needs this
 	'testwiki' => true,
+	'test2wiki' => true,
 	'zhwiki' => true, // ArticleFeedback needs this
 ),
 
