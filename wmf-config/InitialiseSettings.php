@@ -634,6 +634,7 @@ $wgConf->settings = array(
 	'mkwikimedia'	=> '//upload.wikimedia.org/wikipedia/meta/3/38/Wikimedia_Macedonia_logo_small_mk.png',
 	'mkwikisource'      => '$stdlogo',
 	'mlwiki' 		=> '//upload.wikimedia.org/wikipedia/commons/e/e2/Wikipedia-logo-v2-ml.png',
+	'mlwikibooks'	    => '//upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Wikibooks-logo-ml.svg/135px-Wikibooks-logo-ml.svg.png', // Bug 43111
 	'mlwikiquote'	    => '//upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Wikiquote-logo-ml.svg/135px-Wikiquote-logo-ml.svg.png', // Bug 42771
 	'mlwikisource'      => '$stdlogo',
 	'mlwiktionary'      => '//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Wiktionary-logo-ml.svg/135px-Wiktionary-logo-ml.svg.png', // Bug 41785
