@@ -170,6 +170,7 @@ $wgConf->settings = array(
 	'arbcom_fiwiki' => 'Europe/Helsinki',
 	'arbcom_nlwiki' => 'Europe/Berlin',
 	'alswiktionary' => 'Europe/Berlin',
+	'aswikisource' => 'Asia/Kolkata', // Bug 43129
 	'barwiki' => 'Europe/Berlin',
 	'bat_smgwiki' => 'Europe/Vilnius',
 	'be_x_oldwiki' => 'Europe/Minsk',
@@ -382,6 +383,7 @@ $wgConf->settings = array(
 	'astwiki'	   => '//upload.wikimedia.org/wikipedia/commons/f/fd/Wikipedia-logo-v2-ast.png', // bug 40285
 	'astwiktionary'      => '$stdlogo',
 	'aswiki'	    => '$stdlogo',
+	'aswikisource'	    => '//upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Wikisource-logo-as-3.svg/135px-Wikisource-logo-as-3.svg.png', // Bug 43129
 	'avwiki'	    => '$stdlogo',
 	'aywiki'	    => '$stdlogo',
 	'azwiki'	    => '$stdlogo',
@@ -1249,6 +1251,7 @@ $wgConf->settings = array(
 	'astwiki'       => 'Uiquipedia',
 	'astwiktionary' => 'Uiccionariu',
 	'aswiki'         => 'অসমীয়া ৱিকিপিডিয়া',
+	'aswikisource'	=> 'ৱিকিউৎস', // Bug 43129
 	'auditcomwiki'  => 'Audit Committee',
 	'azwiki'	=> 'Vikipediya',
 	'azwikiquote'   => 'Vikisitat',
@@ -1697,6 +1700,7 @@ $wgConf->settings = array(
 	'astwiki'       => 'Uiquipedia',
 	'astwiktionary' => 'Uiccionariu',
 	'aswiki'	=> 'ৱিকিপিডিয়া',
+	'aswikisource'	=> 'ৱিকিউৎস', // Bug 43129
 	'auditcomwiki'  => 'Project',
 	'aywiki'	=> 'Wikipidiya',
 	'azwiki'	=> 'Vikipediya',
@@ -2088,6 +2092,7 @@ $wgConf->settings = array(
 'wgMetaNamespaceTalk' => array(
 	'arwikiversity' => 'نقاش_ويكي_الجامعة',
 	'aswiki' => 'ৱিকিপিডিয়া_বাৰ্তা',
+	'aswikisource' => 'ৱিকিউ স_বাৰ্তা', // Bug 43129
 	'aywiki' => 'Wikipidiyan_Aruskipäwi',
 	'bawiki' => 'Википедия_буйынса_фекерләшеү', // Bug 41167
 	'bat_smgwiki' => 'Vikipedėjės_aptarėms',
@@ -2231,6 +2236,12 @@ $wgConf->settings = array(
 		'CAT' => NS_CATEGORY,
 		"বাটচ'ৰা" => 100,
 		"বাটচ'ৰা_আলোচনা" => 101,
+	),
+	'aswikisource' => array(
+		'Page' => 104,        // Bug 43129
+		'Page_talk' => 105,
+		'Index' => 106,       // Bug 43129
+		'Index_talk' => 107,
 	),
 	'azwikiquote' => array(
 		'Wikiquote'      => NS_PROJECT,
@@ -3546,6 +3557,10 @@ $wgConf->settings = array(
 		'index' => 106,
 	),
 	'arwikisource' => array(
+		'page' => 104,
+		'index' => 106,
+	),
+	'aswikisource' => array( // Bug 43129
 		'page' => 104,
 		'index' => 106,
 	),
@@ -5279,6 +5294,12 @@ $wgConf->settings = array(
 		106 => 'فهرس',
 		107 => 'نقاش_الفهرس',
 	),
+	'aswikisource' => array(
+		104 => 'পৃষ্ঠা',       // Bug 43129 - Page
+		105 => 'পৃষ্ঠা_আলোচনা',
+		106 => 'সূচী',       // Bug 43129 - Index
+		107 => 'সূচী_আলোচনা',
+	),
 	'bewikisource' => array(
 		102 => 'Аўтар', // Author
 		103 => 'Размовы_пра_аўтара',
@@ -6559,6 +6580,7 @@ $wgConf->settings = array(
 'wgNamespacesToBeSearchedDefault' => array(
 	'default' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0 ),
 	'arwikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 102 => 1 ),
+	'aswikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 104 => 1, 106 => 1 ), // Bug 43129
 	'bgwiki' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 100 => 1, 101 => 0 ),
 	'bgwikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 100 => 1 ),
 	'brwikisource' => array( -1 => 0, 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0, 100 => 1, 104 => 1 ),
@@ -9134,6 +9156,7 @@ $wgConf->settings = array(
 	'default' => array( NS_MAIN ),
 	'arwiki' => array( NS_MAIN, 104 ), // bug 20623
 	'arwikisource' => array( NS_MAIN, 102, 104 ),
+	'aswikisource' => array( NS_MAIN, 104, 106 ), // Bug 43129
 	'bgwikisource' => array( NS_MAIN, 100 ),
 	'bnwikisource' => array( NS_MAIN, 100 ),
 	'brwikisource' => array( NS_MAIN, 100, 102, 104 ),
@@ -10846,6 +10869,7 @@ $wgConf->settings = array(
 	'amwikiquote' => true, // Bug 41460
 	'amwiktionary' => true, // Bug 41460
 	'aswiki' => true, // Bug 32042
+	'aswikisource' => true, // Bug 43129
 	'betawikiversity' => true, // Bug 41912
 	'bnwiki' => true, // Bug 40366
 	'bnwikibooks' => true, // Bug 40366
@@ -10925,6 +10949,7 @@ $wgConf->settings = array(
 	'arwiktionary' => true, // 41359
 	'aswiki' => true,
 	'aswikibooks' => true,
+	'aswikisource' => true, // Bug 43129
 	'aswiktionary' => true,
 	'betawikiversity' => true, // Bug 41912 (as incubator.)
 	'bnwiki' => true,
