@@ -2524,6 +2524,17 @@ if ( $wmgUseTranslate ) {
 
 	$wgTranslateEC = array();
 
+	function addSidebarMessageGroup( $id ) {
+		$mg = new WikiMessageGroup( $id, 'sidebar-messages' );
+		$mg->setLabel( 'Sidebar' );
+		$mg->setDescription( 'Messages used in the sidebar of this wiki' );
+		return $mg;
+	}
+
+	if ( $wgDBname === 'wikimania2013wiki' ) {
+		$wgTranslateCC['wiki-sidebar'] = 'addSidebarMessageGroup';
+	}
+
 	unset( $wgSpecialPages['FirstSteps'] );
 	unset( $wgSpecialPages['ManageMessageGroups'] );
 	unset( $wgSpecialPages['ImportTranslations'] );
