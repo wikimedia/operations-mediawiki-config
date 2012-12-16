@@ -594,6 +594,7 @@ $wgConf->settings = array(
 	'kowiki' 		=> '$stdlogo',
 	'kowikinews'	=> '//upload.wikimedia.org/wikipedia/commons/3/37/Wikinews-logo-ko-135px.png',
 	'kowikiquote'   => '//upload.wikimedia.org/wikiquote/ko/b/bc/Wiki.png', # bug 27548
+	'kowikisource'  => '//upload.wikimedia.org/wikisource/ko/b/bc/Wiki.png', # bug 38543
 	'kowiktionary'      => '$stdlogo',
 	'krcwiki'		=> '$stdlogo',
 	'kshwiki'		=> '//upload.wikimedia.org/wikipedia/commons/7/75/Wikipedia-logo-v2-ksh.png',
