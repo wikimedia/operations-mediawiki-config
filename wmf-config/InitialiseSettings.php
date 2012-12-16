@@ -5088,6 +5088,10 @@ $wgConf->settings = array(
 		100 => 'Response',
 		101 => 'Response_talk'
 	),
+	'pflwiki' => array(
+		100 => 'Portal',             // Bug 42990
+		101 => 'Portal_Diskussion',
+	),
 	'plwiki' => array(
 		NS_PROJECT_TALK => 'Dyskusja_Wikipedii',
 		NS_USER => 'Wikipedysta',
