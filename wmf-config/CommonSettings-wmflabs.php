@@ -8,7 +8,7 @@
 
 if( $wmfRealm == 'production' ) {  # safe guard
 
-	include( "logging-wmflabs.php" );
+	include( "logging-labs.php" );
 
 // test wiki
 if ( $wgDBname == 'testwiki' ) {
