@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADfn//+04\u003d",
+        "filename": "wmf-config/CommonSettings-wmflabs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2012-12-17T21:09:22Z",
+      "side": 1,
+      "message": "Wrong value.",
+      "revId": "3763f8cbd45353603e4d3b1614caa270e8873758",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADfn//+00\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 133,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2012-12-17T21:09:22Z",
+      "side": 1,
+      "message": "Odd space before colon.",
+      "revId": "3763f8cbd45353603e4d3b1614caa270e8873758",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADfn//+0s\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2012-12-17T21:09:22Z",
+      "side": 1,
+      "message": "Missed a $cluster",
+      "revId": "3763f8cbd45353603e4d3b1614caa270e8873758",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADfn//+0U\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2441,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2012-12-17T21:09:22Z",
+      "side": 1,
+      "message": "Typo",
+      "revId": "3763f8cbd45353603e4d3b1614caa270e8873758",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
