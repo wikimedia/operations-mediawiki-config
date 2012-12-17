@@ -2853,7 +2853,7 @@ if( $wmfRealm == 'labs' ) {
 
 switch( $wmfRealm ) {
 case 'production':
-	require( "$wmfConfigDir/ext-pmtpa.php" );
+	require( "$wmfConfigDir/ext-production.php" );
 	break;
 case 'labs':
 	require( "$wmfConfigDir/ext-wmflabs.php" );
