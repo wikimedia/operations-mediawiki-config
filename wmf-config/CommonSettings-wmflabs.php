@@ -6,7 +6,7 @@
 # This file hold configuration statement overriding CommonSettings.php
 # Should not be loaded on production
 
-if( $cluster == 'wmflabs' ) {  # safe guard
+if( $wmfRealm == 'labs' ) {  # safe guard
 
 	include( "logging-wmflabs.php" );
 

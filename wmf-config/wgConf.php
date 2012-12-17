@@ -20,8 +20,8 @@ $wgConf->suffixes = array(
 	'wikivoyage',
 );
 
-switch( $cluster ) {
-	case 'pmtpa':
+switch( $wmfRealm ) {
+	case 'production':
 		$all = "$IP/../all.dblist";
 		$wgConf->localVHosts = array(
 			'wikipedia.org',
@@ -39,7 +39,7 @@ switch( $cluster ) {
 		);
 	break;
 
-	case 'wmflabs':
+	case 'labs':
 		$all = "$IP/../all-wmflabs.dblist";
 		$wgConf->localVHosts = array(
 			'wikipedia.beta.wmflabs.org',
