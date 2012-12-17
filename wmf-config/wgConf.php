@@ -40,7 +40,7 @@ switch( $wmfRealm ) {
 	break;
 
 	case 'labs':
-		$all = "$IP/../all-wmflabs.dblist";
+		$all = "$IP/../all-labs.dblist";
 		$wgConf->localVHosts = array(
 			'wikipedia.beta.wmflabs.org',
 			'wiktionary.beta.wmflabs.org',
