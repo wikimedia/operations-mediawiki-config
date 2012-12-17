@@ -12133,6 +12133,6 @@ $wgConf->settings = array(
 // required()/included() inside a function.
 global $wmfRealm;
 if ( $wmfRealm == 'labs' ) {
-	require( "$wmfConfigDir/InitialiseSettings-wmflabs.php" );
+	require( "$wmfConfigDir/InitialiseSettings-labs.php" );
 	wmfLabsOverrideSettings();
 }
