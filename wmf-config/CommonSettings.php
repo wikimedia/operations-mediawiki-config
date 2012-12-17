@@ -2179,16 +2179,27 @@ if ( $wmgUseUploadWizard ) {
 		$wgUploadWizardConfig['altUploadForm'] = 'Special:Upload';
 		$wgUploadWizardConfig["missingCategoriesWikiText"] = '<p><span class="errorbox"><b>Hey, no categories?</b></span></p>';
 		unset( $wgUploadWizardConfig['fallbackToAltUploadForm'] );
+		// Testwiki has the tl template defined as a "templatelink". It doesn't have a language template for Tagalog yet, but apparently
+		// it is supposed to live at Template:tgl. (At least Template:Tl says so. As long as that template doesn't exist, Tagalog will not
+		// appear in the description language dropdown.)
+		$wgUploadWizardConfig['languageTemplateFixups'] = array( 'tl' => 'tgl' );
 	} elseif ( $wgDBname == 'commonswiki' ) {
 		$wgUploadWizardConfig['feedbackPage'] = 'Commons:Upload_Wizard_feedback'; # Set by neilk, 2011-11-01, per erik
 		$wgUploadWizardConfig['altUploadForm'] = 'Commons:Upload';
 		$wgUploadWizardConfig["missingCategoriesWikiText"] = "{{subst:unc}}";
 		$wgUploadWizardConfig['blacklistIssuesPage'] = 'Commons:Upload_Wizard_blacklist_issues'; # Set by neilk, 2011-11-01, per erik
+		// Commons has a template 'tl' ("templatelink") conflicting with the language code for Tagalog. They use Template:tgl as the
+		// language template.
+		$wgUploadWizardConfig['languageTemplateFixups'] = array( 'tl' => 'tgl' );
 	} elseif ( $wgDBname == 'test2wiki' ) {
 		$wgUploadWizardConfig['feedbackPage'] = 'Wikipedia:Upload_Wizard_feedback'; # Set by neilk, 2011-11-01, per erik
 		$wgUploadWizardConfig['altUploadForm'] = 'Wikipedia:Upload';
 		$wgUploadWizardConfig["missingCategoriesWikiText"] = "{{subst:unc}}";
 		$wgUploadWizardConfig['blacklistIssuesPage'] = 'Wikipedia:Upload_Wizard_blacklist_issues'; # Set by neilk, 2011-11-01, per erik
+		// Testwiki has the tl template defined as a "templatelink". It doesn't have any language template for Tagalog. For consistency,
+		// we're defining it here the same as for the others. Unless that tgl template exists, Tagalog will not appear in the description
+		// language dropdown.
+		$wgUploadWizardConfig['languageTemplateFixups'] = array( 'tl' => 'tgl' );
 	}
 
 	// Needed to make UploadWizard work in IE, see bug 39877
