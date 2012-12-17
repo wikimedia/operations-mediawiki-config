@@ -41,6 +41,6 @@ wmf-config/db.php
 wmf-config/mc.php
  Memcached configuration
 
-wmf-config/*-wmflabs.php
+wmf-config/*-labs.php
  Files used by the beta cluster to override production settings.
 
