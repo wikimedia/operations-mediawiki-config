@@ -232,8 +232,8 @@ require( "$wmfConfigDir/PrivateSettings.php" );
 # Cluster-dependent files for database and memcached
 switch( $wmfRealm ) {
 case 'labs':
-	require( "$wmfConfigDir/db-wmflabs.php" );
-	require( "$wmfConfigDir/mc-wmflabs.php" );
+	require( "$wmfConfigDir/db-labs.php" );
+	require( "$wmfConfigDir/mc-labs.php" );
 	break;
 case 'production':
 default:
@@ -264,7 +264,7 @@ if ( $wgDBname == 'testwiki' ) {
 }
 
 # For labs, override settings just above. This need to be done before
-# extensions so we can not use CommonSettings-wmflabs.php
+# extensions so we can not use CommonSettings-labs.php
 if( $wmfRealm == 'labs' ) {
 	# Base path:
 	$wgResourceBasePath    = "$urlprotocol//bits.beta.wmflabs.org/static-master";
@@ -1261,7 +1261,7 @@ $wgPasswordResetRoutes['email'] = true;
 
 switch( $wmfRealm ) {
 case 'labs':
-	require( 'filebackend-wmflabs.php' );
+	require( 'filebackend-labs.php' );
 	break;
 case 'production':
 default:
@@ -1808,7 +1808,7 @@ case 'labs':
 }
 
 if ( $wmfRealm == 'labs' && file_exists( '/etc/wikimedia-transcoding' ) ) {
-	require( "$wmfConfigDir/transcoding-wmflabs.org" );
+	require( "$wmfConfigDir/transcoding-labs.org" );
 }
 
 // Banner notice system
@@ -2444,7 +2444,7 @@ case 'production':
 	require( "$wmfConfigDir/mobile.php" );
 	break;
 case 'labs':
-	require( "$wmfConfigDir/mobile-wmflabs.php" );
+	require( "$wmfConfigDir/mobile-labs.php" );
 	break;
 }
 
@@ -2846,7 +2846,7 @@ $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
 $wgExtraLanguageNames = $wmgExtraLanguageNames;
 
 if( $wmfRealm == 'labs' ) {
-	require( "$wmfConfigDir/CommonSettings-wmflabs.php" );
+	require( "$wmfConfigDir/CommonSettings-labs.php" );
 }
 
 #### Per realm extensions
@@ -2856,7 +2856,7 @@ case 'production':
 	require( "$wmfConfigDir/ext-production.php" );
 	break;
 case 'labs':
-	require( "$wmfConfigDir/ext-wmflabs.php" );
+	require( "$wmfConfigDir/ext-labs.php" );
 	break;
 }
 
