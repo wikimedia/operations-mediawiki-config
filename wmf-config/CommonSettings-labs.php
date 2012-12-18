@@ -22,6 +22,8 @@ if( file_exists( '/etc/wmflabs-instancename' ) ) {
 
 $wgDebugTimestamps=true;
 
+$wmgAddWikiNotify = false;
+
 # see r110254 and bug 33746
 $wgPreloadJavaScriptMwUtil = true;
 
