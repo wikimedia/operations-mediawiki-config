@@ -42,8 +42,9 @@ $wgFileBackends[] = array( // backend config for wiki's access to global files
 	'lockManager'    => 'nullLockManager',
 	'fileMode'       => 0644,
 	'containerPaths' => array(
-		"math-render" => "/mnt/upload7/math", // see $wgMathDirectory
-		'score-render' => '/mnt/upload7/score',
+		"math-render"    => "/mnt/upload7/math", // see $wgMathDirectory
+		"score-render"   => "/mnt/upload7/score",
+		"captcha-render" => "/mnt/upload7/private/captcha"
 	)
 );
 /* end NFS backend config */
