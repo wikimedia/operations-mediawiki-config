@@ -11898,7 +11898,16 @@ $wgConf->settings = array(
 
 'wmgUseEcho' => array(
 	'default' => false,
+	'testwiki' => true,
 	'test2wiki' => true,
+),
+
+'wmgEchoEnableEmailBatch' => array(
+	'default' => false,
+),
+
+'wmgEchoEmailFooterAddress' => array(
+	'default' => 'Wikimedia Foundation, 149 New Montgomery St., 3rd Fl., San Francisco, CA 94105.',
 ),
 
 'wmgUseScribunto' => array(

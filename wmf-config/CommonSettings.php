@@ -2661,6 +2661,8 @@ if ( $wmgUseEcho ) {
 			'email' => false,
 		),
 	);
+	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
+	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
 }
 
 if ( $wmgUseScribunto ) {
