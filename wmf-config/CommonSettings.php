@@ -2661,7 +2661,7 @@ if ( $wmgUseEcho ) {
 	$wgEchoDefaultNotificationTypes = array(
 		'all' => array(
 			'notify' => true,
-			'email' => false,
+			'email' => true,
 		),
 	);
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
