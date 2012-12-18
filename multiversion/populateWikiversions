@@ -29,10 +29,10 @@ function populateWikiversionsCDB() {
 		die( "Usage: populateWikiVersionsCDB.php php-X.XX\n" );
 	}
 
-	$path = "$common/all.dblist";
+	$path = getRealmSpecificFilename( "$common/all.dblist" );
 	$dbList = array_filter( explode( "\n", file_get_contents( $path ) ) );
 	if ( !count( $dbList ) ) {
-		die( "Unable to read all.dblist.\n" );
+		die( "Unable to read $path.\n" );
 	}
 
 	$datList = "";
@@ -41,9 +41,9 @@ function populateWikiversionsCDB() {
 	}
 
 	# Create wikiversions.dat...
-	$path = MULTIVER_CDB_DIR_HOME . "/wikiversions.dat";
+	$path = getRealmSpecifcFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
 	if ( !file_put_contents( $path, $datList ) ) {
-		die( "Unable to write to wikiversions.dat.\n" );
+		die( "Unable to write to $path.\n" );
 	}
 	# Rebuild wikiversions.cdb...
 	shell_exec( "cd $common/multiversion && ./refreshWikiversionsCDB" );

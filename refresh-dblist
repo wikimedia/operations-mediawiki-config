@@ -35,17 +35,17 @@ require_once( dirname( __FILE__ ) . '/multiversion/MWRealm.php' );
 $base = "/home/wikipedia/common";
 
 $defaultCluster = 's3';
-$clusterOverrides = loadClusterList("$base/wmf-config/db.php");
+$clusterOverrides = loadClusterList(getRealmSpecificFilename("$base/wmf-config/db.php"));
 $clusterAssignments = array();
 
 
-$all = array_filter(array_map('trim', file("$base/all.dblist")));
+$all = array_filter(array_map('trim', file(getRealmSpecificFilename("$base/all.dblist"))));
 sort($all);
 
-printf("%d wikis listed in all.dblist...\n", count($all));
+printf("%d wikis listed in " . basename(getRealmSpecificFilename("$base/all.dblist")) . "...\n", count($all));
 
 
-$special = array_filter(array_map('trim', file("$base/special.dblist")));
+$special = array_filter(array_map('trim', file(getRealmSpecificFilename("$base/special.dblist"))));
 sort($special);
 
 printf("%d special wikis to be exempted from wikipedia group...\n", count($special));
@@ -113,7 +113,7 @@ function loadClusterList($file) {
 function listOut($group, $list) {
 	global $base;
 	
-	$filename = "$base/$group.dblist";
+	$filename = getRealmSpecificFilename("$base/$group.dblist");
 	printf("Listing %d wikis in %s...\n", count($list), $filename);
 	
 	$out = fopen("$filename.new", "xt");
@@ -130,4 +130,3 @@ function listOut($group, $list) {
 		rename("$filename.new", $filename);
 	}
 }
-
