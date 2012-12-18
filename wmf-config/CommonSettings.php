@@ -96,9 +96,10 @@ switch( $wmfRealm ) {
 # 'meta'   : meta wiki for user editable content
 # 'upload' : hostname where files are hosted
 # TODO: 'bits'
-# Whenever two clusters should use the same host, do not use $wmfHostnames but
-# use the hardcoded hostname instead. A good example are the spam blacklists
-# hosted on meta.wikimedia.org which you will surely want to reuse.
+# Whenever all realms/datacenters should use the same host, do not use
+# $wmfHostnames but use the hardcoded hostname instead. A good example are the
+# spam blacklists hosted on meta.wikimedia.org which you will surely want to
+# reuse.
 $wmfHostnames = array();
 switch( $wmfRealm ) {
 case 'labs':
@@ -154,14 +155,13 @@ wfProfileOut( "$fname-wgConf" );
 
 wfProfileIn( "$fname-confcache" );
 
-# Is this database listed in $cluster.dblist?
+# Is this database listed in dblist?
 # Note: $wgLocalDatabases set in wgConf.php.
 # Note: must be done before calling $multiVersion functions other than getDatabase().
 if ( array_search( $wgDBname, $wgLocalDatabases ) === false ) {
 	# No? Load missing.php
 	if ( $wgCommandLineMode ) {
-		# FIXME: $cluster should be replaced.
-		print "Database name $wgDBname is not listed in $cluster.dblist\n";
+		print "Database name $wgDBname is not listed in dblist\n";
 	} else {
 		require( "$wmfConfigDir/missing.php" );
 	}
@@ -191,7 +191,7 @@ if ( !$globals ) {
 
 	$wikiTags = array();
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'readonly' ) as $tag ) {
-		$dblist = array_map( 'trim', file( "$IP/../$tag.dblist" ) );
+		$dblist = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../$tag.dblist" ) ) );
 		if ( in_array( $wgDBname, $dblist ) ) {
 			$wikiTags[] = $tag;
 		}
@@ -230,16 +230,8 @@ extract( $globals );
 require( "$wmfConfigDir/PrivateSettings.php" );
 
 # Cluster-dependent files for database and memcached
-switch( $wmfRealm ) {
-case 'labs':
-	require( "$wmfConfigDir/db-labs.php" );
-	require( "$wmfConfigDir/mc-labs.php" );
-	break;
-case 'production':
-default:
-	require( "$wmfConfigDir/db.php" );
-	require( "$wmfConfigDir/mc.php" );
-}
+require( getRealmSpecificFilename( "$wmfConfigDir/db.php" ) );
+require( getRealmSpecificFilename( "$wmfConfigDir/mc.php" ) );
 
 ini_set( 'memory_limit', $wmgMemoryLimit );
 
@@ -291,6 +283,9 @@ if ( $wmfRealm == 'production' && $wgDBname != 'testwiki' && isset( $_SERVER['SE
 }
 
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmfVersionNumber;
+
+// Whether addWiki.php should send email
+$wmgAddWikiNotify = true;
 
 // Comment out the following lines to get the old-style l10n caching -- TS 2011-02-22
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
@@ -519,7 +514,8 @@ $wgAllowUserCss = true;
 $wgUseSquid = true;
 $wgUseESI   = false;
 
-if( $wmfRealm == 'production' ) {
+switch ( $wmfRealm ) {
+case 'production':
 	# HTCP multicast squid purging
 	$wgHTCPMulticastAddress = '239.128.0.112';
 	$wgHTCPMulticastTTL = 8;
@@ -752,10 +748,13 @@ if( $wmfRealm == 'production' ) {
 		'217.94.171.96',
 	);
 
-} elseif( $wmfRealm == 'labs' ) {
+	break;
 
+case 'labs':
 	$wgSquidServers = array( '10.4.0.17' );
 	$wgSquidServersNoPurge = array( '10.4.0.17' );
+
+	break;
 }
 
 # Default:
@@ -882,9 +881,9 @@ include( $IP . '/extensions/wikihiero/wikihiero.php' );
 include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 // Config for sitematrix
 $wgSiteMatrixFile = '/apache/common/langlist';
-$wgSiteMatrixClosedSites = "$IP/../closed.dblist";
-$wgSiteMatrixPrivateSites = "$IP/../private.dblist";
-$wgSiteMatrixFishbowlSites = "$IP/../fishbowl.dblist";
+$wgSiteMatrixClosedSites = getRealmSpecificFilename( "$IP/../closed.dblist" );
+$wgSiteMatrixPrivateSites = getRealmSpecificFilename( "$IP/../private.dblist" );
+$wgSiteMatrixFishbowlSites = getRealmSpecificFilename( "$IP/../fishbowl.dblist" );
 
 include( $IP . '/extensions/CharInsert/CharInsert.php' );
 
@@ -1259,15 +1258,7 @@ $wgPasswordSender = 'wiki@wikimedia.org';
 # e-mailing password based on e-mail address (bug 34386)
 $wgPasswordResetRoutes['email'] = true;
 
-switch( $wmfRealm ) {
-case 'labs':
-	require( 'filebackend-labs.php' );
-	break;
-case 'production':
-default:
-	require( 'filebackend.php' );
-	break;
-}
+require( getRealmSpecificFilename( "$wmfConfigDir/filebackend.php" ) );
 
 if( $wgDBname != 'commonswiki' ) {
 	$wgDefaultUserOptions['watchcreations'] = 1;
@@ -1625,21 +1616,10 @@ if ( $wmgUseCentralAuth ) {
 		$wgCentralAuthNew2UDPPrefix = "#central\t";
 	}
 
-	# Determine second-level domain
-	if( $wmfRealm == 'production' ) {
-		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
-	} else { // wmflabs
-		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\.\w+\.\w+\./';
-	}
-	if ( preg_match( $wmgSecondLevelDomainRegex, strrev( $wgServer ), $m ) ) {
-		$wmgSecondLevelDomain = strrev( $m[0] );
-	} else {
-		$wmgSecondLevelDomain = false;
-	}
-	unset( $wmgSecondLevelDomainRegex );
-
-	if( $wmfRealm == 'production' ) {
+	switch ( $wmfRealm ) {
+	case 'production':
 		// Production cluster
+		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
 		$wgCentralAuthAutoLoginWikis = array(
 			'.wikipedia.org' => 'enwiki',
 			'meta.wikimedia.org' => 'metawiki',
@@ -1656,8 +1636,11 @@ if ( $wmgUseCentralAuth ) {
 			'incubator.wikimedia.org' => 'incubatorwiki',
 			'.wikivoyage.org' => 'enwikivoyage',
 		);
-	} else {
+		break;
+
+	case 'labs':
 		// wmflabs beta cluster
+		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\.\w+\.\w+\./';
 		$wgCentralAuthAutoLoginWikis = array(
 			'incubator.wikimedia.beta.wmflabs.org' => 'incubatorwiki',
 			'.wikipedia.beta.wmflabs.org' => 'enwiki',
@@ -1673,24 +1656,26 @@ if ( $wmgUseCentralAuth ) {
 			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
 			'ee-prototype.wikipedia.beta.wmflabs.org' => 'ee_prototypewiki',
 		);
+		break;
 	}
 
+	if ( preg_match( $wmgSecondLevelDomainRegex, strrev( $wgServer ), $m ) ) {
+		$wmgSecondLevelDomain = strrev( $m[0] );
+	} else {
+		$wmgSecondLevelDomain = false;
+	}
+	unset( $wmgSecondLevelDomainRegex );
 
 	# Don't autologin to self
 	if ( isset( $wgCentralAuthAutoLoginWikis[$wmgSecondLevelDomain] ) ) {
 		unset( $wgCentralAuthAutoLoginWikis[$wmgSecondLevelDomain] );
 		$wgCentralAuthCookieDomain = $wmgSecondLevelDomain;
-	} elseif ( $wmfRealm == 'production' && $wgDBname == 'commonswiki' ) {
-		unset( $wgCentralAuthAutoLoginWikis['commons.wikimedia.org'] );
-		$wgCentralAuthCookieDomain = 'commons.wikimedia.org';
+	} elseif ( $wgDBname == 'commonswiki' && isset( $wgCentralAuthAutoLoginWikis["commons.$wmgSecondLevelDomain"] ) ) {
+		unset( $wgCentralAuthAutoLoginWikis["commons.$wmgSecondLevelDomain"] );
+		$wgCentralAuthCookieDomain = "commons.$wmgSecondLevelDomain";
 	} elseif ( $wgDBname == 'metawiki' ) {
-		if( $wmfRealm == 'production' ) {
-			unset( $wgCentralAuthAutoLoginWikis['meta.wikimedia.org'] );
-			$wgCentralAuthCookieDomain = 'meta.wikimedia.org';
-		} else { // wmflabs
-			unset( $wgCentralAuthAutoLoginWikis['meta.wikimedia.beta.wmflabs.org'] );
-			$wgCentralAuthCookieDomain = 'meta.wikimedia.beta.wmflabs.org';
-		}
+		unset( $wgCentralAuthAutoLoginWikis["meta.$wmgSecondLevelDomain"] );
+		$wgCentralAuthCookieDomain = "meta.$wmgSecondLevelDomain";
 	} else {
 		# Don't set 2nd-level cookies for *.wikimedia.org, insecure
 		$wgCentralAuthCookieDomain = '';
@@ -1701,9 +1686,9 @@ if ( $wmgUseCentralAuth ) {
 	$wgHooks['CentralAuthWikiList'][] = 'wmfCentralAuthWikiList';
 	function wmfCentralAuthWikiList( &$list ) {
 		global $wgLocalDatabases, $IP;
-		$privateWikis = array_map( 'trim', file( "$IP/../private.dblist" ) );
-		$fishbowlWikis = array_map( 'trim', file( "$IP/../fishbowl.dblist" ) );
-		$closedWikis = array_map( 'trim', file( "$IP/../closed.dblist" ) );
+		$privateWikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../private.dblist" ) ) );
+		$fishbowlWikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../fishbowl.dblist" ) ) );
+		$closedWikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../closed.dblist" ) ) );
 		$list = array_diff( $wgLocalDatabases,
 			$privateWikis, $fishbowlWikis, $closedWikis );
 		return true;
@@ -1847,12 +1832,14 @@ if ( $wmgUseCentralNotice ) {
 
 	# Wed evening -- all on!
 	$wgNoticeTimeout = 3600;
-	if( $wmfRealm == 'production' ) {
+	switch( $wmfRealm ) {
+	case 'production':
 		$wgNoticeServerTimeout = 3600; // to let the counter update
 		$wgNoticeCounterSource = $urlprotocol . '//wikimediafoundation.org/wiki/Special:ContributionTotal' .
 			'?action=raw' .
 			'&start=20101112000000' . // FY 10-11
 			'&fudgefactor=660000';   // fudge for pledged donations not in CRM
+		break;
 	}
 
 	$wgNoticeInfrastructure = false;
@@ -2409,7 +2396,7 @@ if ( $wmgUseDisableAccount ) {
 
 if ( $wmgUseIncubator ) {
 	require_once( "$IP/extensions/WikimediaIncubator/WikimediaIncubator.php" );
-	$wmincClosedWikis = "$IP/../closed.dblist";
+	$wmincClosedWikis = getRealmSpecificFilename( "$IP/../closed.dblist" );
 }
 
 if ( $wmgUseWikiLove ) {
@@ -2443,15 +2430,7 @@ $wgAvailableRights[] = 'moodbar-admin'; // To allow global groups to include thi
 
 # Mobile related configuration
 
-switch( $wmfRealm ) {
-case 'production':
-	require( "$wmfConfigDir/mobile.php" );
-	break;
-case 'labs':
-	require( "$wmfConfigDir/mobile-labs.php" );
-	break;
-}
-
+require( getRealmSpecificFilename( "$wmfConfigDir/mobile.php" ) );
 
 if ( $wmgUseSubPageList3 ) {
 	include( "$IP/extensions/SubPageList3/SubPageList3.php" );
@@ -2866,19 +2845,14 @@ $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
 // additional "language names", adding to Names.php data
 $wgExtraLanguageNames = $wmgExtraLanguageNames;
 
-if( $wmfRealm == 'labs' ) {
-	require( "$wmfConfigDir/CommonSettings-labs.php" );
+if ( file_exists( "$wmfConfigDir/CommonSettings-$wmfRealm.php" ) ) {
+	require( "$wmfConfigDir/CommonSettings-$wmfRealm.php" );
 }
 
 #### Per realm extensions
 
-switch( $wmfRealm ) {
-case 'production':
-	require( "$wmfConfigDir/ext-production.php" );
-	break;
-case 'labs':
-	require( "$wmfConfigDir/ext-labs.php" );
-	break;
+if ( file_exists( "$wmfConfigDir/ext-$wmfRealm.php" ) ) {
+	require( "$wmfConfigDir/ext-$wmfRealm.php" );
 }
 
 // https://bugzilla.wikimedia.org/show_bug.cgi?id=37211
