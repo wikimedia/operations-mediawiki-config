@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgH///20\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2012-12-18T18:01:25Z",
+      "side": 1,
+      "message": "This block (lines 67–93) should be removed in favor of MWRealm.php.",
+      "revId": "88c143130759ec2fc2f9e3a62f2ee2a3363a100f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
