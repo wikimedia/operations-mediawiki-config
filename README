@@ -5,12 +5,15 @@ Files in this repository are almost a mirror of the Wikimedia Foundation
 cluster configuration.  Ommited files includes passwords and security measures.
 
 *.dblist
- List of databases.
+ List of databases. To vary by realm (eg: 'production', 'labs'), add the realm
+as a suffix before the extension, separated with a dash. Example:
+	"all-labs.dblist".
 
 wikiversions.dat, wikiversions.cdb
  Let us associate a database with a specific copy of MediaWiki (generally a
 branch). The .cdb file is updated by editing wikiversions.dat first and then
-running multiversion/refreshWikiversionsCDB.
+running multiversion/refreshWikiversionsCDB. To vary by realm, add a suffix
+before the extension, e.g. "wikiversions-labs.dat".
 
 docroot/
  The Apache document root for several of our VirtualHosts.

@@ -3,6 +3,7 @@
 error_reporting( E_ALL );
 
 require_once( dirname( __FILE__ ) . '/defines.php' );
+require_once( dirname( __FILE__ ) . '/MWRealm.php' );
 
 /*
  * This script backs up the current wikiversions dat file to the /backup directory.
@@ -11,15 +12,21 @@ require_once( dirname( __FILE__ ) . '/defines.php' );
  */
 function backupWikiversions() {
 	$common = '/home/wikipedia/common';
-	$datPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.dat';
+	$datPath = getRealmSpecifcFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
+
+	$filename = $datPath;
+	// Stolen from multiversion/MWScript.php
+	if ( preg_match( "#([^/\\\\]*?)[/\\\\]*$#", $filename, $matches ) ) {
+		$filename = $matches[1];
+	}
 
 	# Backup old wikiversions.dat...
 	$timestamp = date( 'c' ); // ISO 8601
-	$backupPath = "$common/multiversion/backup/wikiversions-$timestamp.dat";
+	$backupPath = "$common/multiversion/backup/" . preg_replace( '/(\.[^.]*)$/', "-$timestamp$1", $filename );
 	if ( !copy( $datPath, $backupPath ) ) {
-		die( "Unable to write wikiversions.dat backup file at `$backupPath`.\n" );
+		die( "Unable to write $filename backup file at `$backupPath`.\n" );
 	}
-	echo "Wrote wikiversions.dat backup file at `$backupPath`.\n";
+	echo "Wrote $filename backup file at `$backupPath`.\n";
 }
 
 backupWikiversions();

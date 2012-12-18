@@ -1,5 +1,6 @@
 <?php
 require_once( dirname( __FILE__ ) . '/defines.php' );
+require_once( dirname( __FILE__ ) . '/MWRealm.php' );
 
 /**
  * Class to handle basic information related to what
