@@ -22,7 +22,6 @@ $wgConf->suffixes = array(
 
 switch( $wmfRealm ) {
 	case 'production':
-		$all = "$IP/../all.dblist";
 		$wgConf->localVHosts = array(
 			'wikipedia.org',
 			'wiktionary.org',
@@ -37,10 +36,9 @@ switch( $wmfRealm ) {
 			'meta.wikimedia.org', // Presumably needed to load meta spam list. Any others?
 			'commons.wikimedia.org',
 		);
-	break;
+		break;
 
 	case 'labs':
-		$all = "$IP/../all-labs.dblist";
 		$wgConf->localVHosts = array(
 			'wikipedia.beta.wmflabs.org',
 			'wiktionary.beta.wmflabs.org',
@@ -55,12 +53,12 @@ switch( $wmfRealm ) {
 			'incubator.wikimedia.beta.wmflabs.org',
 			'commons.wikimedia.beta.wmflabs.org',
 		);
-	break;
+		break;
 
 	default:
 }
 
-$wgConf->wikis = array_map( 'trim', file( $all ) );
+$wgConf->wikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../all.dblist" ) ) );
 
 $wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
 
