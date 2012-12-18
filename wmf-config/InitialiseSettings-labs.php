@@ -156,7 +156,7 @@ return array(
 	'wmgUseEcho' => array(
 		'enwiki' => true,
 	),
-	
+
 	'-wmgUsePoolCounter' => array(
 		'default' => false, # bug 36891
 	),

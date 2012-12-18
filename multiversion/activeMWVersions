@@ -25,9 +25,9 @@ function getActiveWikiVersions() {
 	array_shift( $options ); // first item is this file
 
 	if ( in_array( '--home', $options ) ) {
-		$datPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.dat';
+		$datPath = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
 	} else {
-		$datPath = MULTIVER_CDB_DIR_APACHE . '/wikiversions.dat';
+		$datPath = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
 	}
 
 	# Get all the wikiversion rows in wikiversions.dat...
