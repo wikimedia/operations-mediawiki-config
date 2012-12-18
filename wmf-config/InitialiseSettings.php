@@ -11898,8 +11898,8 @@ $wgConf->settings = array(
 
 'wmgUseEcho' => array(
 	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
+	//'testwiki' => true,
+	//'test2wiki' => true,
 ),
 
 'wmgEchoEnableEmailBatch' => array(
