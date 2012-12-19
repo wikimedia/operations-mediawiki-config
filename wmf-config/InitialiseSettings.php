@@ -11962,6 +11962,7 @@ $wgConf->settings = array(
 	'hsbwiki' => true,
 	'idwiki' => true,
 	'itwiki' => true,
+	'itwikivoyage' => true, // Bug 43273
 	'jawiki' => true,
 	'kowiki' => true,
 	'lbwiki' => true,
