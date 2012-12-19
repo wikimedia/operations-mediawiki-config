@@ -1515,7 +1515,7 @@ if ( $wmgEnableCaptcha ) {
 	require( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 	require( "$IP/extensions/ConfirmEdit/FancyCaptcha.php" );
 	$wgGroupPermissions['autoconfirmed']['skipcaptcha'] = true;
-	if ( $wgDBname === 'test2wiki' ) {
+	if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki', 'mediawikiwiki' ) ) ) {
 		$wgCaptchaFileBackend = 'global-multiwrite';
 	}
 	# $wgCaptchaTriggers['edit'] = true;
