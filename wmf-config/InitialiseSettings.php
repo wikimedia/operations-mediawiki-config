@@ -10982,7 +10982,9 @@ $wgConf->settings = array(
 	'tewikisource' => true,
 	'tewiktionary' => true,
 ),
-
+'wmgWebFontsEnabledByDefault' => array(
+	'default' => true,
+),
 'wmgUseGoogleNewsSitemap' => array(
 	'default' => false,
 	'enwikinews' => true,
