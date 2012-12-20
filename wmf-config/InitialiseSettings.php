@@ -10818,11 +10818,14 @@ $wgConf->settings = array(
 	'hiwikibooks' => true,
 	'hiwikiquote' => true,
 	'hiwiktionary' => true,
+	'jvwiki' => true, // Bug 43359
+	'jvwiktionary' => true, // Bug 43359
 	'knwiki' => true,
 	'knwikibooks' => true,
 	'knwikiquote' => true,
 	'knwikisource' => true,
 	'knwiktionary' => true,
+	'map_bmswiki' => true, // Bug 43359
 	'mrwiki' => true,
 	'mrwikibooks' => true,
 	'mrwikiquote' => true,
@@ -10851,7 +10854,6 @@ $wgConf->settings = array(
 ),
 'wmgWebFontsEnabledByDefault' => array(
 	'default' => true,
-
 ),
 'wmgUseGoogleNewsSitemap' => array(
 	'default' => false,
