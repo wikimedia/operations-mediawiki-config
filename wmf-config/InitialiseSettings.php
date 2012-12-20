@@ -10951,11 +10951,15 @@ $wgConf->settings = array(
 	'hiwikiquote' => true,
 	'hiwiktionary' => true,
 	'incubatorwiki' => true,
+	'jvwiki' => true,       // Bug 39381
+	'jvwiktionary' => true, // Bug 39381
+	'jvwikibooks' => true,  // Bug 39381
 	'knwiki' => true,
 	'knwikibooks' => true,
 	'knwikiquote' => true,
 	'knwikisource' => true,
 	'knwiktionary' => true,
+	'map_bmswiki' => true,  // Bug 39381
 	'mediawikiwiki' => true,
 	'mrwiki' => true,
 	'mrwikibooks' => true,
@@ -10984,6 +10988,10 @@ $wgConf->settings = array(
 ),
 'wmgWebFontsEnabledByDefault' => array(
 	'default' => true,
+	'jvwiki' => false,       // Bug 39381
+	'jvwiktionary' => false, // Bug 39381
+	'jvwikibooks' => false,  // Bug 39381
+	'map_bmswiki' => false,  // Bug 39381
 ),
 'wmgUseGoogleNewsSitemap' => array(
 	'default' => false,
