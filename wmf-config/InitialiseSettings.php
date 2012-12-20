@@ -11954,6 +11954,7 @@ $wgConf->settings = array(
 'wmgEnablePostEdit' => array(
 	'default' => false,
 	'testwiki' => true,
+	'astwiki' => true,
 	'bgwiki' => true,
 	'dewiki' => true,
 	'dsbwiki' => true,
@@ -11977,6 +11978,7 @@ $wgConf->settings = array(
 	'ptwiki' => true,
 	'svwiki' => true,
 	'tewiki' => true,
+	'trwiki' => true,
 	'viwiki' => true,
 ),
 
