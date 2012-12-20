@@ -30,6 +30,8 @@ Split by cluster:
 	s7.dblist
 */
 
+require_once( dirname( __FILE__ ) . '/multiversion/MWRealm.php' );
+
 $base = "/home/wikipedia/common";
 
 $defaultCluster = 's3';

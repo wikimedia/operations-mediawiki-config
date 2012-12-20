@@ -3,6 +3,7 @@
 error_reporting( 0 );
 
 require_once( dirname( __FILE__ ) . '/defines.php' );
+require_once( dirname( __FILE__ ) . '/MWRealm.php' );
 require_once( dirname( __FILE__ ) . '/MWWikiversions.php' );
 
 /*
