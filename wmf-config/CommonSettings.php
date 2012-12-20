@@ -2651,7 +2651,7 @@ if ( $wmgEnableGeoData ) {
 		$wgAPIGeneratorModules['geosearch'] = 'ApiQueryDisabled';
 		$wgAPIListModules['geosearch'] = 'ApiQueryDisabled';
 	}
-	#$wgGeoDataUpdatesViaJob = true; uncomment this when we have a Solr server around
+	$wgGeoDataUpdatesViaJob = $wmgGeoDataUpdatesViaJob;
 
 	# These modules have been intentionally disabled for the first phase of deployment
 	if ( $wgDBname !== 'testwiki' ) {
