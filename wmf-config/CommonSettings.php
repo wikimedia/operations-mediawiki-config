@@ -2644,7 +2644,7 @@ if ( $wmgUseE3Experiments ) {
 if ( $wmgEnableGeoData ) {
 	require_once( "$IP/extensions/GeoData/GeoData.php" );
 	$wgGeoDataBackend = 'solr';
-	$wgGeoDataSolrHosts = $wgGeoDataSolrMaster = 'yttrium.eqiad.wmnet';
+	$wgGeoDataSolrHosts = $wgGeoDataSolrMaster = 'solr1001.eqiad.wmnet';
 
 	# Data collection mode
 	if ( !$wmgEnableGeoSearch ) {
