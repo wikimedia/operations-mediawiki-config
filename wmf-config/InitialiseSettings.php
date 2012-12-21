@@ -11899,6 +11899,7 @@ $wgConf->settings = array(
 
 'wmgGeoDataUpdatesViaJob' => array(
 	'default' => false,
+	'enwiki' => true,
 ),
 
 'wmgUseEcho' => array(
