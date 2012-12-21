@@ -11556,6 +11556,15 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'Användare %code%-N',
 	),
+	'svwiktionary' => array( // Bug 42288
+		'0' => 'Wiktionary:Användare %code%-0',
+		'1' => 'Wiktionary:Användare %code%-1',
+		'2' => 'Wiktionary:Användare %code%-2',
+		'3' => 'Wiktionary:Användare %code%-3',
+		'4' => 'Wiktionary:Användare %code%-4',
+		'5' => false,
+		'N' => 'Wiktionary:Användare %code%-N',
+	),
 	'tlwiki' => array(
 		'0' => false,
 		'1' => 'User %code%-1',
@@ -11687,6 +11696,7 @@ $wgConf->settings = array(
 	'ruwiki' => 'User %code%',
 	'specieswiki' => 'User %code%',
 	'svwiki' => 'Användare %code%',
+	'svwiktionary' => 'Wiktionary:Användare %code%', // Bug 42288
 	'tlwiki' => 'User %code%',
 	'ukwiki' => 'User %code%',
 	'wikidatawiki' => 'User %code%',
