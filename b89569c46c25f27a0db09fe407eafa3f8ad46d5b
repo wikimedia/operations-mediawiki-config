@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgH//9Yc\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 288,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2012-12-21T11:09:31Z",
+      "side": 1,
+      "message": "Still need to split this out of the change.",
+      "revId": "b89569c46c25f27a0db09fe407eafa3f8ad46d5b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
