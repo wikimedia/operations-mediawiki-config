@@ -506,6 +506,7 @@ $wgConf->settings = array(
 	'fiwikimedia'       => '$stdlogo',
 	'fiwikibooks'       => '$stdlogo',
 	'fiwikisource'      => '$stdlogo',
+	'fiwiktionary'      => '//upload.wikimedia.org/wikipedia/commons/thumb/9/97/Wiktionary-logo-fi.svg/135px-Wiktionary-logo-fi.svg.png', // Bug 43348
 	'flaggedrevs_labswikimedia' => '//upload.wikimedia.org/wikipedia/meta/7/79/Wikimedia_Labs_logo.png',
 	'foundationwiki'    => '//upload.wikimedia.org/wikipedia/foundation/9/9a/Wikimediafoundation-logo.png',
 	'fowiki'	    => '//upload.wikimedia.org/wikipedia/commons/7/77/Wikipedia-logo-v2-fo.png', // bug 40285
