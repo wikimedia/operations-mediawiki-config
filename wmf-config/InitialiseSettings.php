@@ -7218,6 +7218,9 @@ $wgConf->settings = array(
 		'autoconfirmed' => array( 'patrol' => true ),
 		'sysop' => array( 'autopatrol' => true ),
 	),
+	'itwikivoyage' => array(
+		'autopatrolled' => array( 'autopatrol' => true ), // Bug 43327
+	),
 	'itwiktionary' => array(
 		'user' => array( 'upload' => false ),
 		'autoconfirmed' => array( 'patrol' => true, 'upload' => false ),
@@ -7883,6 +7886,10 @@ $wgConf->settings = array(
 	'+itwikibooks' => array(
 		'sysop' => array( 'autopatrolled', 'patroller' ),
 	),
+	'+itwikivoyage' => array(
+		'sysop' => array( 'autopatrolled' ),          // Bug 43327
+		'bureaucrat' => array ( 'autopatrolled' ),
+	),
 	'+itwiktionary' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
 	),
@@ -8270,6 +8277,9 @@ $wgConf->settings = array(
 	),
 	'+itwikisource' => array(
 		'bureaucrat' => array( 'flood' ), // Bug 36600
+	),
+	'+itwikivoyage' => array(
+		'bureaucrat' => array ( 'autopatrolled' ),    // Bug 43327
 	),
 	'+itwiktionary' => array(
 		'sysop' => array( 'patroller', 'autopatrolled', 'flood' ), // Flood added per bug 39306
