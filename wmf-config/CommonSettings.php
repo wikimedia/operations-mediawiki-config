@@ -2376,6 +2376,7 @@ if ( $wmgUseNarayam ) {
 
 if ( $wmgUseWebFonts ) {
 	require_once( "$IP/extensions/WebFonts/WebFonts.php" );
+	$wgWebFontsEnabledByDefault = $wmgWebFontsEnabledByDefault;
 }
 
 if ( $wmgUseGoogleNewsSitemap ) {
