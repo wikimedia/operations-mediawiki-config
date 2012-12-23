@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgH//79M\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-12-23T15:04:04Z",
+      "side": 1,
+      "message": "now bug 43359",
+      "revId": "1e38564182c92a0eff787cb7760fa5bc3aba0bc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgH//79Q\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10956,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2012-12-23T15:04:04Z",
+      "side": 1,
+      "message": "wikiquote et non wikibooks",
+      "revId": "1e38564182c92a0eff787cb7760fa5bc3aba0bc0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
