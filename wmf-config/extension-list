@@ -85,6 +85,7 @@ $IP/extensions/OggHandler/OggHandler.php
 $IP/extensions/OpenSearchXml/OpenSearchXml.php
 $IP/extensions/Oversight/HideRevision.php
 $IP/extensions/PagedTiffHandler/PagedTiffHandler.php
+$IP/extensions/PageImages/PageImages.php
 $IP/extensions/PageTriage/PageTriage.php
 $IP/extensions/ParserFunctions/ParserFunctions.php
 $IP/extensions/PdfHandler/PdfHandler.php

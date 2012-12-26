@@ -12171,6 +12171,11 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 ),
 
+'wmgUsePageImages' => array(
+	'default' => false,
+	'testwiki' => true,
+),
+
 );
 
 

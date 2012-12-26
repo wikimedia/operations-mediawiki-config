@@ -2851,6 +2851,10 @@ if ( $wmgUseTemplateSandbox && $wgVersion != '1.21wmf4' ) {
 	}
 }
 
+if ( $wmgUsePageImages ) {
+	require_once( "$IP/extensions/PageImages" );
+}
+
 // On Special:Version, link to useful release notes
 $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
 	$matches = array();
