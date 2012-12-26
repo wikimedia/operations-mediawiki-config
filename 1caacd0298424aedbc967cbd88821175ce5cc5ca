@@ -16,6 +16,24 @@
       "revId": "1caacd0298424aedbc967cbd88821175ce5cc5ca",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX///Vo\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8448,
+      "author": {
+        "id": 64
+      },
+      "writtenOn": "2012-12-26T15:55:26Z",
+      "side": 1,
+      "message": "n:en, v:en and s:en will not work because the relevant projects in the Hindi language does not exist, and that will result in an error in Special:Import. It is always better to put the language prefix first as the English language version for all the projects will exist, but not necessarily in the projects of that said language.",
+      "parentUuid": "AAADbX//1is\u003d",
+      "revId": "1caacd0298424aedbc967cbd88821175ce5cc5ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
