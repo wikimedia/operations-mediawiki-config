@@ -12172,9 +12172,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUsePageImages' => array(
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
+	'default' => true,
 ),
 
 );
