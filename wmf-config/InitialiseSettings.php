@@ -8719,6 +8719,7 @@ $wgConf->settings = array(
 	'scnwiki' => array( 'it', 'en', 'fr' ),
 	'scnwiktionary' => array( 'w', 'it', 'en', 'fr' ),
 	'scowiki' => array( 'en', 'simple' ),
+	'sewikipedia' => array( 'en', 'fi', 'no', 'nn', 'sv' ), // Bug 43411
 	'sewikimedia' => array( 'w:sv' ),
 	'simplewiki' => array( 'en', 'wikt', 'b', 'q' ),
 	'simplewiktionary' => array( 'en', 'w', 'b', 'q' ),
