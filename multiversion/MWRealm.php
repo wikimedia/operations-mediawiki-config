@@ -50,18 +50,25 @@ default:
 function getRealmSpecificFilename( $filename ) {
 	global $wmfRealm, $wmfDatacenter;
 
-	$new_filename = preg_replace( '/(\.[^.]*)$/', "-{$wmfRealm}-{$wmfDatacenter}$1", $filename );
+	$dotPos = strrpos( $filename, '.' );
+	if ( $dotPos === false ) {
+		return $filename;
+	}
+	$base = substr( $filename, 0, $dotPos );
+	$ext = substr( $filename, $dotPos );
+
+	$new_filename = "{$base}-{$wmfRealm}-{$wmfDatacenter}{$ext}";
 	if ( file_exists( $new_filename ) ) {
 		return $new_filename;
 	}
 
 	# realm take precedence over datacenter.
-	$new_filename = preg_replace( '/(\.[^.]*)$/', "-{$wmfRealm}$1", $filename );
+	$new_filename = "{$base}-{$wmfRealm}{$ext}";
 	if ( file_exists( $new_filename ) ) {
 		return $new_filename;
 	}
 
-	$new_filename = preg_replace( '/(\.[^.]*)$/', "-{$wmfDatacenter}$1", $filename );
+	$new_filename = "{$base}-{$wmfDatacenter}{$ext}";
 	if ( file_exists( $new_filename ) ) {
 		return $new_filename;
 	}
