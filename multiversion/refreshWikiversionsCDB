@@ -5,6 +5,7 @@ error_reporting( E_ALL );
 
 require_once( dirname( __FILE__ ) . '/defines.php' );
 require_once( dirname( __FILE__ ) . '/MWWikiversions.php' );
+require_once( dirname( __FILE__ ) . '/MWRealm.php' );
 
 /*
  * Populate wikiversions.cdb file using all the items in wikiversions.dat
