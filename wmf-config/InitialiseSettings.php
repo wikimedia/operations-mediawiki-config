@@ -10561,6 +10561,7 @@ $wgConf->settings = array(
 
 'wgArticleCountMethod' => array(
 	'default' => 'link',
+	'cswikinews' => 'any',	      // Bug 43525
 	'enwikibooks' => 'comma',     // Bug 27256
 	'ptwikibooks' => 'comma',     // Bug 27256
 	'guwikisource' => 'any',      // Bug 40173
