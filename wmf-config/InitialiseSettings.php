@@ -1213,6 +1213,7 @@ $wgConf->settings = array(
 	'tenwiki' => 'http://ten.wikipedia.org',
 	'testwiki' => 'http://test.wikipedia.org',
 	'usabilitywiki' => 'http://usability.wikimedia.org',
+	'uzwiki' => 'https://uz.wikipedia.org', // https://bugzilla.wikimedia.org/43466
 	'vewikimedia' => 'http://ve.wikimedia.org',
 	'wg_enwiki' => 'http://wg.en.wikipedia.org',
 	'wikibooks'     => 'http://$lang.wikibooks.org',
