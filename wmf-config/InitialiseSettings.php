@@ -9913,6 +9913,7 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 	'alswiki' => true, # Bug 18517
 	'arwiki' => true, # bug 33828
+	'bawiki' => true, // Bug 40879
 	'bpywiki' => true, # Bug 18517
 	'cawiki' => true, # Bug 21174
 	'cswiki' => true, # Bug 20436
