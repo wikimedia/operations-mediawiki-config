@@ -7561,21 +7561,18 @@ $wgConf->settings = array(
 		'nocreate' => array( 'createpage' => false, ),
 	),
 	'testwiki' => array(
+		'accountcreator' => array( 'override-antispoof' => true, 'tboverride' => true ),
 		'filemover' => array( 'movefile' => true ), // bug 30121
 		'user' => array(
 			'upload_by_url' => true, // For wider testing
 			'upload' => true, // Exception to bug 12556, used for testing of upload tools
 		),
 		'sysop' => array( 'deleterevision' => true, 'revisionmove' => true, ),
-		'suppress' => array(
-			'ideuser' => true,
-			'suppressrevision' => true,
-			'uppressionlog' => true,
-		),
 		'reviewer' => array(
 			'stablesettings' => true,
 		),
 		'researcher' => array( 'browsearchive' => true, 'deletedhistory' => true, 'apihighlimits' => true ),
+		'rollbacker' => array( 'rollback' => true ),
 	),
 	'test2wiki' => array(
 		'user' => array(
@@ -7746,7 +7743,7 @@ $wgConf->settings = array(
 	),
 	'+testwiki' => array(
 		'bureaucrat' => array( 'researcher' ),
-		'sysop' => array( 'filemover' ),
+		'sysop' => array( 'filemover', 'rollbacker', 'accountcreator', 'confirmed' ),
 		# 'user' => array( 'editor', 'reviewer' ),
 	),
 	// ******************************************************************
@@ -8116,8 +8113,8 @@ $wgConf->settings = array(
 		'sysop' => array( 'ipblock-exempt' ),
 	),
 	'+testwiki' => array(
-		'bureaucrat' => array( 'sysop', 'researcher' ),
-		'sysop' => array( 'filemover' ),
+		'bureaucrat' => array( 'sysop', 'researcher', 'translationadmin' ),
+		'sysop' => array( 'filemover', 'rollbacker', 'accountcreator', 'confirmed' ),
 		# 'user' => array( 'editor', 'reviewer' ),
 	),
 	// ******************************************************************
