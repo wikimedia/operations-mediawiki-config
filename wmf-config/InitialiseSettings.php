@@ -12018,6 +12018,7 @@ $wgConf->settings = array(
 	'kowiki' => true,
 	'lbwiki' => true,
 	'mkwiki' => true,
+	'mlwiki' => true, // Bug 43532
 	'mswiki' => true,
 	'nlwiki' => true,
 	'plwiki' => true,
