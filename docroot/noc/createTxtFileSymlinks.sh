@@ -5,7 +5,6 @@ files_array=(
 	PoolCounterSettings.php
 	StartProfiler.php
 	abusefilter.php
-	codereview.php
 	db.php
 	flaggedrevs.php
 	liquidthreads.php

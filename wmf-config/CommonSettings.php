@@ -1955,29 +1955,7 @@ if ( $wmgUseNewUserMessage ) {
 
 if ( $wmgUseCodeReview ) {
 	include "$IP/extensions/CodeReview/CodeReview.php";
-	include( "$wmfConfigDir/codereview.php" );
 	$wgSubversionProxy = 'http://codereview-proxy.wikimedia.org/index.php';
-
-	$wgGroupPermissions['user']['codereview-add-tag'] = false;
-	$wgGroupPermissions['user']['codereview-remove-tag'] = false;
-	$wgGroupPermissions['user']['codereview-post-comment'] = false;
-	$wgGroupPermissions['user']['codereview-set-status'] = false;
-	$wgGroupPermissions['user']['codereview-link-user'] = false;
-	$wgGroupPermissions['user']['codereview-signoff'] = false;
-	$wgGroupPermissions['user']['codereview-associate'] = false;
-
-	$wgGroupPermissions['user']['codereview-post-comment'] = true;
-	$wgGroupPermissions['user']['codereview-signoff'] = true;
-
-	$wgGroupPermissions['coder']['codereview-add-tag'] = true;
-	$wgGroupPermissions['coder']['codereview-remove-tag'] = true;
-	$wgGroupPermissions['coder']['codereview-set-status'] = true;
-	$wgGroupPermissions['coder']['codereview-link-user'] = true;
-	$wgGroupPermissions['coder']['codereview-signoff'] = true;
-	$wgGroupPermissions['coder']['codereview-associate'] = true;
-
-	$wgGroupPermissions['svnadmins']['repoadmin'] = true; // Default is stewards, but this has nothing to do with them
-
 	$wgCodeReviewENotif = true; // let's experiment with this
 	$wgCodeReviewCommentWatcherEmail = 'mediawiki-codereview@lists.wikimedia.org';
 	$wgCodeReviewRepoStatsCacheTime = 60 * 60; // 1 hour, default is 6
