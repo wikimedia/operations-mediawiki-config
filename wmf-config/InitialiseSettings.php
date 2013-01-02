@@ -11543,6 +11543,15 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'Bruker %code%-N',
 	),
+	'oswiki' => array(
+		'0' => 'User %code%-0',
+		'1' => 'User %code%-1',
+		'2' => 'User %code%-2',
+		'3' => 'User %code%-3',
+		'4' => 'User %code%-4',
+		'5' => 'User %code%-5',
+		'N' => 'User %code%-N',
+	),
 	'plwiki' => array(
 		'0' => false,
 		'1' => 'User %code%-1',
@@ -11731,6 +11740,7 @@ $wgConf->settings = array(
 	'lawiki' => 'Usores %code%',
 	'metawiki' => 'User %code%',
 	'nowiki' => 'Bruker %code%',
+	'oswiki' => 'User %code%',
 	'otrs_wikiwiki' => 'User %code%',
 	'plwiki' => 'User %code%',
 	'ptwiki' => 'Usuários %code%',
