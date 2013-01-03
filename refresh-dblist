@@ -118,15 +118,21 @@ function listOut($group, $list) {
 	
 	$out = fopen("$filename.new", "xt");
 	if ($out) {
+		sort($list);
 		foreach ($list as $wiki) {
 			fwrite($out, "$wiki\n");
 		}
 		fclose($out);
 		
-		if (file_exists("$filename.bak"))
+		if (file_exists("$filename.bak")) {
 			unlink("$filename.bak");
-		if (file_exists($filename))
+		}
+		if (file_exists($filename)) {
 			rename($filename, "$filename.bak");
+		}
 		rename("$filename.new", $filename);
+		if (file_exists("$filename.bak")) {
+			unlink("$filename.bak");
+		}
 	}
 }
