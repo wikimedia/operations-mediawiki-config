@@ -198,6 +198,7 @@ $wgConf->settings = array(
 	'dsbwiki' => 'Europe/Berlin',
 	'elwikinews' => 'Europe/Athens',
 	'eowikisource' => 'UTC',
+	'eswikivoyage' => 'Europe/Madrid',
 	'etwiki'      => 'Europe/Tallinn',
 	'etwikibooks'  => 'Europe/Tallinn',
 	'etwikimedia'  => 'Europe/Tallinn',
