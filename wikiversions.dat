@@ -46,6 +46,7 @@ astwikiquote php-1.21wmf6 *
 astwiktionary php-1.21wmf6 *
 aswikibooks php-1.21wmf6 *
 aswiki php-1.21wmf6 *
+aswikisource php-1.21wmf6 *
 aswiktionary php-1.21wmf6 *
 auditcomwiki php-1.21wmf6 *
 avwiki php-1.21wmf6 *
@@ -212,6 +213,7 @@ eswiki php-1.21wmf6 *
 eswikiquote php-1.21wmf6 *
 eswikisource php-1.21wmf6 *
 eswikiversity php-1.21wmf6 *
+eswikivoyage php-1.21wmf6 *
 eswiktionary php-1.21wmf6 *
 etwikibooks php-1.21wmf6 *
 etwikimedia php-1.21wmf6 *
@@ -597,6 +599,7 @@ ptwiki php-1.21wmf6 *
 ptwikiquote php-1.21wmf6 *
 ptwikisource php-1.21wmf6 *
 ptwikiversity php-1.21wmf6 *
+ptwikivoyage php-1.21wmf6 *
 ptwiktionary php-1.21wmf6 *
 qualitywiki php-1.21wmf6 *
 quwikibooks php-1.21wmf6 *
@@ -862,5 +865,3 @@ zh_yuewiki php-1.21wmf6 *
 zuwikibooks php-1.21wmf6 *
 zuwiki php-1.21wmf6 *
 zuwiktionary php-1.21wmf6 *
-eswikivoyage php-1.21wmf6 *
-ptwikivoyage php-1.21wmf6 *
