@@ -3,6 +3,10 @@
 #
 # $Id$
 
+if ( !defined( 'DBO_DEFAULT' ) ) {
+	define( 'DBO_DEFAULT', 16 );
+}
+
 $wgLBFactoryConf = array(
 
 'class' => 'LBFactory_Multi',
@@ -107,7 +111,7 @@ $wgLBFactoryConf = array(
 		'db37'  => 0,
 		'db56'  => 400, # snapshot host
 		'db58'	=> 500,
-		'db68'	=> 700, 
+		'db68'	=> 700,
 	),
 ),
 
