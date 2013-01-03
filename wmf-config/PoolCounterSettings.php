@@ -6,7 +6,7 @@ include( "$IP/extensions/PoolCounter/PoolCounterClient.php" );
 
 $wgPoolCountClientConf = array(
 	'servers' => array(
-		'208.80.152.174'
+		'10.0.0.22'
 	),
 	'timeout' => 0.5
 );
