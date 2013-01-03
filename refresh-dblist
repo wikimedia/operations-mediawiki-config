@@ -40,7 +40,8 @@ $clusterAssignments = array();
 
 
 $all = array_filter(array_map('trim', file(getRealmSpecificFilename("$base/all.dblist"))));
-sort($all);
+
+listOut('all', $all, false);
 
 printf("%d wikis listed in " . basename(getRealmSpecificFilename("$base/all.dblist")) . "...\n", count($all));
 
@@ -110,11 +111,13 @@ function loadClusterList($file) {
 	return $wgLBFactoryConf['sectionsByDB'];
 }
 
-function listOut($group, $list) {
+function listOut($group, $list, $print = true) {
 	global $base;
 	
 	$filename = getRealmSpecificFilename("$base/$group.dblist");
-	printf("Listing %d wikis in %s...\n", count($list), $filename);
+	if ( $print ) {
+		printf("Listing %d wikis in %s...\n", count($list), $filename);
+	}
 	
 	$out = fopen("$filename.new", "xt");
 	if ($out) {
