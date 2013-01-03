@@ -11993,7 +11993,7 @@ $wgConf->settings = array(
 ),
 
 'wmgEchoEnableEmailBatch' => array(
-	'default' => false,
+	'default' => true,
 ),
 
 'wmgEchoEmailFooterAddress' => array(
