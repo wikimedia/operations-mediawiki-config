@@ -4275,6 +4275,7 @@ $wgConf->settings = array(
 	'arwiki' => 50, // https://bugzilla.wikimedia.org/show_bug.cgi?id=12123
 	'enwiki' => 10, // https://bugzilla.wikimedia.org/show_bug.cgi?id=14191
 	'eswiki' => 50, // bug 13261
+	'fawiki' => 10, // bug 43630
 	'itwiktionary' => 10, // bug 22274
 	'jawiki' => 10, // https://bugzilla.wikimedia.org/show_bug.cgi?id=40270
 	'plwiki' => 10,
