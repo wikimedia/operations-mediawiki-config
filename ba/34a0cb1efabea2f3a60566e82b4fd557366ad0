@@ -1,0 +1,9 @@
+Change-Id: Iba34a0cb1efabea2f3a60566e82b4fd557366ad0
+Code-Review+2: Asher <afeldman@wikimedia.org>
+Verified+2: Asher <afeldman@wikimedia.org>
+Verified+1: jenkins-bot
+Submitted-by: Asher <afeldman@wikimedia.org>
+Submitted-at: Fri, 04 Jan 2013 02:46:02 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/42215
+Project: operations/mediawiki-config
+Branch: refs/heads/master
