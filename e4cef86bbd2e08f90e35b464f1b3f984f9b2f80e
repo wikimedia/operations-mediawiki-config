@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//4UI\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 8129,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2013-01-04T18:33:37Z",
+      "side": 1,
+      "message": "Ok. Translates the local project consensus.",
+      "revId": "e4cef86bbd2e08f90e35b464f1b3f984f9b2f80e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4UM\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 8140,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2013-01-04T18:33:37Z",
+      "side": 1,
+      "message": "Ok. Translates the local project consensus.",
+      "revId": "e4cef86bbd2e08f90e35b464f1b3f984f9b2f80e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4UQ\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 8141,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2013-01-04T18:33:37Z",
+      "side": 1,
+      "message": "add \"\u0026 others\" to bug information, so we know this bug isn\u0027t the only one handling other bureaucrat rights",
+      "revId": "e4cef86bbd2e08f90e35b464f1b3f984f9b2f80e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4Tg\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 8267,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2013-01-04T18:33:37Z",
+      "side": 1,
+      "message": "Not currently OK. No local consensus to remove these rights.",
+      "revId": "e4cef86bbd2e08f90e35b464f1b3f984f9b2f80e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4Tk\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 8307,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2013-01-04T18:33:37Z",
+      "side": 1,
+      "message": "Not currently OK. No local consensus to remove these rights.",
+      "revId": "e4cef86bbd2e08f90e35b464f1b3f984f9b2f80e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4U0\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 8320,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2013-01-04T18:33:37Z",
+      "side": 1,
+      "message": "Not currently ok. The bug specified is \"keep desysop\", not \"revoke bureaucrat\".\n\nPlease ask them to clarify the matter or accept the Krenair position to not process this wiki configuration.",
+      "revId": "e4cef86bbd2e08f90e35b464f1b3f984f9b2f80e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADgX//4VA\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 8321,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2013-01-04T18:33:37Z",
+      "side": 1,
+      "message": "Not currently ok. The bug 42459 has been closed as invalid, and doesn\u0027t handle nor medlem nor bureaucrat\n\nPlease:\n- don\u0027t add reference to RESO INVALID bug (or reclose the  bug as RESO FIXED)\n- add \"\u0026 others\" or the relevant bugs for other configuration info",
+      "revId": "e4cef86bbd2e08f90e35b464f1b3f984f9b2f80e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
