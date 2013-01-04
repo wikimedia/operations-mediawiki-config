@@ -86,7 +86,7 @@ $wgLBFactoryConf = array(
 	/* s3 */ 'DEFAULT' => array(
 		'db34'	  => 0,
 		'db39'    => 400,
-		#'db64'	  => 200, # snapshot host
+		'db64'	  => 200, # snapshot host
 		'db66'	  => 400,
 	),
 	's4' => array(
