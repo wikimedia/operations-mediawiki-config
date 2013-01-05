@@ -12228,6 +12228,11 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgUseTorBlock' => array(
+	'default' => true,
+	'private' => false,
+),
+
 );
 
 
