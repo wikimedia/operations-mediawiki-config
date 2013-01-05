@@ -1394,14 +1394,16 @@ $wgAntiBotPayloads = array(
 	'default' => array( 'log', 'fail' ),
 );
 
-include( "$IP/extensions/TorBlock/TorBlock.php" );
-$wgTorLoadNodes = false;
-$wgTorIPs = array( '91.198.174.232', '208.80.152.2', '208.80.152.134' );
-$wgTorAutoConfirmAge = 90 * 86400;
-$wgTorAutoConfirmCount = 100;
-$wgTorDisableAdminBlocks = false;
-$wgTorTagChanges = false;
-$wgGroupPermissions['user']['torunblocked'] = false;
+if ( $wmgUseTorBlock ) {
+	include( "$IP/extensions/TorBlock/TorBlock.php" );
+	$wgTorLoadNodes = false;
+	$wgTorIPs = array( '91.198.174.232', '208.80.152.2', '208.80.152.134' );
+	$wgTorAutoConfirmAge = 90 * 86400;
+	$wgTorAutoConfirmCount = 100;
+	$wgTorDisableAdminBlocks = false;
+	$wgTorTagChanges = false;
+	$wgGroupPermissions['user']['torunblocked'] = false;
+}
 
 if ( $wmgUseRSSExtension ) {
 	include( "$IP/extensions/RSS/RSS.php" );
