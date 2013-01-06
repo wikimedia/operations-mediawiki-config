@@ -2169,32 +2169,44 @@ if ( $wmgUseArticleFeedbackv5 ) {
 
 	// every member (apart from blocked users) = reader
 	foreach ( array( '*', 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
-		$wgGroupPermissions[$group]['aft-reader'] = true;
+		if ( isset( $wgGroupPermissions[$group] ) ) { //skip rollbacker group on wikis without that
+			$wgGroupPermissions[$group]['aft-reader'] = true;
+		}
 	}
 
 	// registered member = member
 	foreach ( array( 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
-		$wgGroupPermissions[$group]['aft-member'] = true;
+		if ( isset( $wgGroupPermissions[$group] ) ) { //skip rollbacker group on wikis without that
+			$wgGroupPermissions[$group]['aft-member'] = true;
+		}
 	}
 
 	// (auto-)confirmed user = editor
 	foreach ( array( 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
-		$wgGroupPermissions[$group]['aft-editor'] = true;
+		if ( isset( $wgGroupPermissions[$group] ) ) { //skip rollbacker group on wikis without that
+			$wgGroupPermissions[$group]['aft-editor'] = true;
+		}
 	}
 
 	// rollbacker/reviewer = monitor
 	foreach ( array( 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
-		$wgGroupPermissions[$group]['aft-monitor'] = true;
+		if ( isset( $wgGroupPermissions[$group] ) ) { //skip rollbacker group on wikis without that
+			$wgGroupPermissions[$group]['aft-monitor'] = true;
+		}
 	}
 
 	// administrator = administrator
 	foreach ( array( 'sysop', 'oversight' ) as $group ) {
-		$wgGroupPermissions[$group]['aft-administrator'] = true;
+		if ( isset( $wgGroupPermissions[$group] ) ) { //skip rollbacker group on wikis without that
+			$wgGroupPermissions[$group]['aft-administrator'] = true;
+		}
 	}
 
 	// oversight = oversighter
 	foreach ( array( 'oversight', 'afttest-hide' ) as $group ) {
-		$wgGroupPermissions[$group]['aft-oversighter'] = true;
+		if ( isset( $wgGroupPermissions[$group] ) ) { //skip rollbacker group on wikis without that
+			$wgGroupPermissions[$group]['aft-oversighter'] = true;
+		}
 	}
 
 	// test groups
