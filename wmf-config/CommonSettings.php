@@ -2200,21 +2200,33 @@ if ( $wmgUseArticleFeedbackv5 ) {
 
 	// every member (apart from blocked users) = reader
 	foreach ( array( '*', 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
+		if( !isset( $wgGroupPermissions[$group] ) ) { //skip rollbacker group on wikis without that
+			continue;
+		}
 		$wgGroupPermissions[$group]['aft-reader'] = true;
 	}
 
 	// registered member = member
 	foreach ( array( 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
+		if( !isset( $wgGroupPermissions[$group] ) ) { //skip rollbacker group on wikis without that
+			continue;
+		}
 		$wgGroupPermissions[$group]['aft-member'] = true;
 	}
 
 	// (auto-)confirmed user = editor
 	foreach ( array( 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
+		if( !isset( $wgGroupPermissions[$group] ) ) { //skip rollbacker group on wikis without that
+			continue;
+		}
 		$wgGroupPermissions[$group]['aft-editor'] = true;
 	}
 
 	// rollbacker/reviewer = monitor
 	foreach ( array( 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
+		if( !isset( $wgGroupPermissions[$group] ) ) { //skip rollbacker group on wikis without that
+			continue;
+		}
 		$wgGroupPermissions[$group]['aft-monitor'] = true;
 	}
 
