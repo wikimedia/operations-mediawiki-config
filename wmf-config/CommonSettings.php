@@ -2175,29 +2175,6 @@ if ( $wmgUseArticleFeedbackv5 ) {
 	$wgArticleFeedbackv5Namespaces = $wmgArticleFeedbackv5Namespaces;
 	$wgArticleFeedbackv5LotteryOdds = $wmgArticleFeedbackv5LotteryOdds;
 
-	foreach ( array( 'afttest', 'afttest-hide', 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
-		$wgGroupPermissions[$group]['aftv5-hide-feedback'] = true;
-		$wgGroupPermissions[$group]['aftv5-see-hidden-feedback'] = true;
-	}
-
-	foreach ( array( 'afttest', 'oversight' ) as $group ) {
-		$wgGroupPermissions[$group]['aftv5-delete-feedback'] = true;
-		$wgGroupPermissions[$group]['aftv5-see-deleted-feedback'] = true;
-	}
-
-	// user groups allowed to feature
-	$wgGroupPermissions['sysop']['aftv5-feature-feedback']      = true;
-	$wgGroupPermissions['rollbacker']['aftv5-feature-feedback'] = true;
-	$wgGroupPermissions['oversight']['aftv5-feature-feedback']  = true;
-	$wgGroupPermissions['autoconfirmed']['aftv5-feature-feedback']  = true;
-	$wgGroupPermissions['confirmed']['aftv5-feature-feedback']  = true;
-	$wgGroupPermissions['afttest-hide']['aftv5-feature-feedback']  = true;
-	$wgGroupPermissions['afttest']['aftv5-feature-feedback']  = true;
-
-
-	// @todo: this is the new permission "system"; the above permissions
-	// should be deleted once all existing code has been refactored
-
 	// every member (apart from blocked users) = reader
 	foreach ( array( '*', 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
 		$wgGroupPermissions[$group]['aft-reader'] = true;
