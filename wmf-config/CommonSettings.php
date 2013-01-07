@@ -2605,9 +2605,9 @@ if ( $wmgEnableGeoData ) {
 		'solr1002.eqiad.wmnet' => 100,
 		'solr1003.eqiad.wmnet' => 100,
 		// the Tampa servers are weaker
-		'solr1.pmtpa.wmnet' => 50,
-		'solr2.pmtpa.wmnet' => 50,
-		'solr3.pmtpa.wmnet' => 50,
+		'solr1.pmtpa.wmnet' => 25,
+		'solr2.pmtpa.wmnet' => 25,
+		'solr3.pmtpa.wmnet' => 25,
 	);
 
 	# Data collection mode
