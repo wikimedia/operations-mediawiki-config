@@ -2599,7 +2599,15 @@ if ( $wmgUseE3Experiments ) {
 if ( $wmgEnableGeoData ) {
 	require_once( "$IP/extensions/GeoData/GeoData.php" );
 	$wgGeoDataBackend = 'solr';
-	$wgGeoDataSolrHosts = $wgGeoDataSolrMaster = 'solr1001.eqiad.wmnet';
+	$wgGeoDataSolrMaster = 'solr1001.eqiad.wmnet';
+	$wgGeoDataSolrHosts = array(
+		'solr1001.eqiad.wmnet' => 50, // master, put less read load on it
+		'solr1002.eqiad.wmnet' => 100,
+		'solr1003.eqiad.wmnet' => 100,
+		//'solr1.pmtpa.wmnet' => 100, not ready yet
+		'solr2.pmtpa.wmnet' => 100,
+		'solr3.pmtpa.wmnet' => 100,
+	);
 
 	# Data collection mode
 	if ( !$wmgEnableGeoSearch ) {
