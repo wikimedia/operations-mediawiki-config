@@ -1246,6 +1246,10 @@ $wgConf->settings = array(
 ),
 # @} end of wgCanonicalServer
 
+'wgEnableCanonicalServerLink' => array(
+	'uzwiki' => true, // https://bugzilla.wikimedia.org/43466
+),
+
 # wgSitename @{
 'wgSitename' => array(
 	// Site defaults
