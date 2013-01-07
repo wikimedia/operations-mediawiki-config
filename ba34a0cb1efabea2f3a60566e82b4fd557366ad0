@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgX//2JI\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4275,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-01-07T21:58:07Z",
+      "side": 0,
+      "message": "that change is unrelated and going to confuse git blame :-]  You  should probably just leave it as it was :-]",
+      "revId": "ba34a0cb1efabea2f3a60566e82b4fd557366ad0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
