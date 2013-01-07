@@ -2205,10 +2205,6 @@ if ( $wmgUseArticleFeedbackv5 ) {
 		$wgGroupPermissions[$group]['aft-oversighter'] = true;
 	}
 
-	// test groups
-	$wgGroupPermissions['afttest'] = $wgGroupPermissions['autoconfirmed'];
-	$wgGroupPermissions['afttest-hide'] = $wgGroupPermissions['oversight'];
-
 
 	$wgArticleFeedbackv5AbuseFiltering = $wmgArticleFeedbackv5AbuseFiltering;
 //	$wgArticleFeedbackv5CTABuckets = $wmgArticleFeedbackv5CTABuckets;
