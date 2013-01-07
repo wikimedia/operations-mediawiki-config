@@ -4268,17 +4268,17 @@ $wgConf->settings = array(
 
 'wgAutoConfirmCount' => array(
 	'default' => 0,
-	'arwiki' => 50, // https://bugzilla.wikimedia.org/show_bug.cgi?id=12123
-	'enwiki' => 10, // https://bugzilla.wikimedia.org/show_bug.cgi?id=14191
+	'arwiki' => 50, // bug 12123
+	'enwiki' => 10, // bug 14191
 	'eswiki' => 50, // bug 13261
 	'fawiki' => 10, // bug 43630
 	'itwiktionary' => 10, // bug 22274
-	'jawiki' => 10, // https://bugzilla.wikimedia.org/show_bug.cgi?id=40270
+	'jawiki' => 10, // bug 40270
 	'plwiki' => 10,
-	'ptwiki' => 10,  # 27954
-	'ruwiki' => 15, // Bug 41831
+	'ptwiki' => 10, // bug 27954
+	'ruwiki' => 15, // bug 41831
 	'simplewiki' => 10,
-	'zhwiki' => 50, // https://bugzilla.wikimedia.org/show_bug.cgi?id=14624
+	'zhwiki' => 50, // bug 14624
 	'zh_yuewiki' => 10, // bug 30538
 ),
 
