@@ -235,6 +235,9 @@ require( getRealmSpecificFilename( "$wmfConfigDir/mc.php" ) );
 
 ini_set( 'memory_limit', $wmgMemoryLimit );
 
+# Rewrite commands given to wfShellWikiCmd() to use Het-Deploy
+$wgHooks['wfShellWikiCmd'][] = 'MWMultiVersion::onWfShellMaintenanceCmd';
+
 # Protocol settings for urls
 $urlprotocol = "";
 
