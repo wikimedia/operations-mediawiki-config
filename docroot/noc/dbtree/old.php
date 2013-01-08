@@ -27,7 +27,7 @@
 <?php
 error_reporting(E_ERROR);
 date_default_timezone_set("GMT");
-$confdir = '/home/wikipedia/common/wmf-config/';
+$confdir = '/srv/deployment/mediawiki/common/wmf-config/';
 $confs = array('db.php', 'db-secondary.php');
 $url = 'http://ganglia.wikimedia.org/latest/graph.php?r=hour&title=&vl=&x=&n=&hreg[]=^db\d%2B&mreg[]=mysql_slave_lag&aggregate=1&json=1';
 $ghost = 'http://ganglia.wikimedia.org/latest/?r=hour&cs=&ce=&m=&tab=ch&vn=&hreg%5B%5D=';

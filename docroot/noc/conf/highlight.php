@@ -32,7 +32,7 @@ if ( !$viewFilename ) {
 	# OK, authenticated developer, send password
 	$hlHtml = highlight_string( '<'."?php\n\$secretSitePassword = 'jgmeidj28gms';\n", true );
 } else {
-	$baseSrcDir = '/home/wikipedia/common';
+	$baseSrcDir = '/srv/deployment/mediawiki/common';
 
 	// Find where it is
 	if ( file_exists( "$baseSrcDir/wmf-config/$srcFilename" ) ) {

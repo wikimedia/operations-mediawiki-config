@@ -16,7 +16,7 @@ ini_set( 'display_errors', 1 );
 $wgDBname = $wgDBuser = $wgDBpassword = null;
 define( 'DBO_DEFAULT', 'uniq' );
 
-require_once( '/home/wikipedia/common/wmf-config/db.php' );
+require_once( '/srv/deployment/mediawiki/common/wmf-config/db.php' );
 
 class wmfClusters {
 	private $clusters;

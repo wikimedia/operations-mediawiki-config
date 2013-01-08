@@ -25,5 +25,5 @@ fi
 
 for i in "${files_array[@]}"
 do
-   ln -f -s /home/wikipedia/common/wmf-config/$i /home/wikipedia/htdocs/noc/conf/$i.txt
+   ln -f -s /srv/deployment/mediawiki/common/wmf-config/$i /home/wikipedia/htdocs/noc/conf/$i.txt
 done

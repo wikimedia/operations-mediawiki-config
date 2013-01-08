@@ -4,7 +4,7 @@ Changes to be made for this version of Het Deploy:
 
 * Move wmf-config one level up
 * Change all references to wmf-config to have the correct value in LocalSettings.php
-* For all new wikis being deployed, add a /usr/local/apache/common/wikiversions.db
+* For all new wikis being deployed, add a /srv/deployment/mediawiki/common/wikiversions.db
 ** A helper script to do this is checked into scripts/cdbmake-12.sh
 ** A sample file that contains input for cdbmake-12.sh is checked into scripts/wikiversions.dat.sample
 * Copy common/php-1.17/cache/trusted-xff.cdb to the new source directory

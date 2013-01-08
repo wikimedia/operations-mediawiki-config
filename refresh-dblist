@@ -32,7 +32,7 @@ Split by cluster:
 
 require_once( dirname( __FILE__ ) . '/multiversion/MWRealm.php' );
 
-$base = "/home/wikipedia/common";
+$base = "/srv/deployment/mediawiki/common";
 
 $defaultCluster = 's3';
 $clusterOverrides = loadClusterList(getRealmSpecificFilename("$base/wmf-config/db.php"));

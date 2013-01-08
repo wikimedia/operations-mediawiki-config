@@ -71,8 +71,8 @@ function parse_ganglia_xml($db) {
 }
 
 function parse_db_conf() {
-	$confdir = '/home/wikipedia/common/wmf-config/';
-	$s3file = '/home/w/common/s3.dblist';
+	$confdir = '/srv/deployment/mediawiki/common/wmf-config/';
+	$s3file = '/srv/deployment/mediawiki/common/common/s3.dblist';
 	$confs = array('db.php', 'db-secondary.php');
 	$dbs = array();
 

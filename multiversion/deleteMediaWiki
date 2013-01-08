@@ -5,14 +5,14 @@ error_reporting( E_ALL );
 /**
  * Delete various symlinks created by checkoutMediaWiki.
  *
- * The first argument is target path (relative to /home/wikipedia/common/)
+ * The first argument is target path (relative to /srv/deployment/mediawiki/common)
  * storing the local copy of the SVN checkout. This is typically of the format "php-X.XX".
  *
  * @return void
  */
 function deleteMediaWiki() {
 	global $argv;
-	$commonHomeDir = '/home/wikipedia/common';
+	$commonHomeDir = '/srv/deployment/mediawiki/common';
 
 	$argsValid = false;
 	if ( count( $argv ) >= 2 ) {

@@ -139,7 +139,7 @@ class MWMultiVersion {
 			if ( getenv( 'MW_LANG' ) ) {
 				# Language forced from some hacky script like extract2.php
 				$lang = getenv( 'MW_LANG' );
-			} elseif ( preg_match( '/^(?:\/usr\/local\/apache\/|\/home\/wikipedia\/)(?:htdocs|common\/docroot)\/([a-z]+)\.org/', $docRoot, $matches ) ) {
+			} elseif ( preg_match( '/^(?:\/srv\/deployment\/mediawiki\/)(?:htdocs|common\/docroot)\/([a-z]+)\.org/', $docRoot, $matches ) ) {
 				# This is the poor man / hacky routing engine for WMF cluster
 				$site = $matches[1];
 				if ( preg_match( '/^(.*)\.' . preg_quote( $site ) . '\.org$/', $serverName, $matches ) ) {
@@ -155,7 +155,7 @@ class MWMultiVersion {
 				} else {
 					self::error( "Invalid host name ($serverName), can't determine language.\n" );
 				}
-			} elseif ( preg_match( "/^\/usr\/local\/apache\/(?:htdocs|common\/docroot)\/([a-z0-9\-_]*)$/", $docRoot, $matches ) ) {
+			} elseif ( preg_match( "/^\/srv\/deployment\/mediawiki\/(?:htdocs|common\/docroot)\/([a-z0-9\-_]*)$/", $docRoot, $matches ) ) {
 				$site = "wikipedia";
 				$lang = $matches[1];
 			} else {
@@ -230,7 +230,7 @@ class MWMultiVersion {
 	 * Handler for the wfShellMaintenanceCmd hook.
 	 * This converts shell commands like "php $IP/maintenance/foo.php" into
 	 * commands that use the "MWScript.php" wrapper, for example:
-	 * "php /home/wikipedia/common/multiversion/MWScript.php maintenance/foo.php"
+	 * "php /srv/deployment/mediawiki/common/multiversion/MWScript.php maintenance/foo.php"
 	 *
 	 * @param &$script string
 	 * @param &$params Array
@@ -292,7 +292,7 @@ class MWMultiVersion {
 
 	/**
 	 * Check if this wiki is *not* specified in a cdb file
-	 * located at /usr/local/apache/common-local/wikiversions.cdb.
+	 * located at /srv/deployment/mediawiki/common/wikiversions.cdb.
 	 * @return bool
 	 */
 	public function isMissing() {
@@ -302,7 +302,7 @@ class MWMultiVersion {
 
 	/**
 	 * Get the version as specified in a cdb file located
-	 * at /usr/local/apache/common-local/wikiversions.cdb.
+	 * at /srv/deployment/mediawiki/common/wikiversions.cdb.
 	 * Result is of the form "php-X.XX" or "php-trunk".
 	 * @return String the version directory for this wiki
 	 */
@@ -314,7 +314,7 @@ class MWMultiVersion {
 
 	/**
 	 * Get the version number as specified in a cdb file located
-	 * at /usr/local/apache/common-local/wikiversions.cdb. Do not use this
+	 * at /srv/deployment/mediawiki/common/wikiversions.cdb. Do not use this
 	 * to determine the path to cache or binary files, only the core MW code.
 	 * @return String the version number for this wiki (e.g. "x.xx" or "trunk")
 	 */

@@ -8,9 +8,8 @@ require_once( dirname( __FILE__ ) . '/MWWikiversions.php' );
 
 /*
  * Returns a space separated list of all active MW versions (e.g. "x.xx").
- * Versions are read from /usr/local/apache/common-local/wikiversions.cdb.
+ * Versions are read from /srv/deployment/mediawiki/common/wikiversions.cdb.
  *
- * Given --home, versions are instead read from /home/wikipedia/common/wikiversions.cdb.
  * Given --withdb, each item in the list will be appended with '=' followed by
  * 		the DB name of *some* wiki that uses that version. Used to run maintenance scripts.
  * Given --extended, versions will include any extra suffix specified in wikiversions.cdb.
@@ -24,11 +23,7 @@ function getActiveWikiVersions() {
 	$options = $argv; // copy
 	array_shift( $options ); // first item is this file
 
-	if ( in_array( '--home', $options ) ) {
-		$datPath = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
-	} else {
-		$datPath = getRealmSpecificFilename( MULTIVER_CDB_DIR_APACHE . '/wikiversions.dat' );
-	}
+	$datPath = MULTIVER_CDB_DIR_APACHE . '/wikiversions.dat';
 
 	# Get all the wikiversion rows in wikiversions.dat...
 	try {

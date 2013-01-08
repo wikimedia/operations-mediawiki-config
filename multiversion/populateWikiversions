@@ -15,7 +15,7 @@ require_once( __DIR__ . '/MWRealm.php' );
  */
 function populateWikiversionsCDB() {
 	global $argv;
-	$common = '/home/wikipedia/common';
+	$common = '/srv/deployment/mediawiki/common';
 
 	$argsValid = false;
 	if ( count( $argv ) >= 3 && $argv[2] === 'confirm' ) {

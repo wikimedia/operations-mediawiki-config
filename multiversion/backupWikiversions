@@ -11,14 +11,8 @@ require_once( dirname( __FILE__ ) . '/MWRealm.php' );
  * @return void
  */
 function backupWikiversions() {
-	$common = '/home/wikipedia/common';
-	$datPath = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
-
-	$filename = $datPath;
-	// Stolen from multiversion/MWScript.php
-	if ( preg_match( "#([^/\\\\]*?)[/\\\\]*$#", $filename, $matches ) ) {
-		$filename = $matches[1];
-	}
+	$common = '/srv/deployment/mediawiki/common';
+	$datPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.dat';
 
 	# Backup old wikiversions.dat...
 	$timestamp = date( 'c' ); // ISO 8601

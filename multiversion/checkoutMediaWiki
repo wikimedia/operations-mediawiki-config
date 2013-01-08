@@ -9,7 +9,7 @@ error_reporting( E_ALL );
  *
  * The first argument is the git branch (relative to wmf).
  * This is typically a version of the format "X.XXwmfX" ("e.g. 1.17wmf1").
- * The second argument is the target path (relative to /home/wikipedia/common/)
+ * The second argument is the target path (relative to /srv/deployment/mediawiki/common)
  * to store local copy of the git checkout. This is typically of the format "php-X.XX".
  *
  * This script assumes that the user running this script has an git account
@@ -19,8 +19,8 @@ error_reporting( E_ALL );
  */
 function checkoutMediaWiki() {
 	global $argv;
-	$commonHomeDir = '/home/wikipedia/common';
-	$commonLocalDir = '/usr/local/apache/common-local';
+	$commonHomeDir = '/srv/deployment/mediawiki/common';
+	$commonLocalDir = '/srv/deployment/mediawiki/common';
 
 	$argsValid = false;
 	if ( count( $argv ) >= 3 ) {
@@ -82,16 +82,7 @@ function checkoutMediaWiki() {
 	$localSettingsCode = <<<EOT
 <?php
 # WARNING: This file is publically viewable on the web. Do not put private data here.
-if ( defined('TESTWIKI') ) {
-	if( !file_exists( "/home/wikipedia" ) ) {
-		# Jobs runner on apache do not have a /home/wikipedia !
-		include_once( "/apache/common/wmf-config/CommonSettings.php" );
-	} else {
-		include_once( "/home/wikipedia/common/wmf-config/CommonSettings.php" );
-	}
-} else {
-	include_once( "/apache/common/wmf-config/CommonSettings.php" );
-}
+include_once( "/srv/deployment/mediawiki/common/wmf-config/CommonSettings.php" );
 EOT;
 
 	# Create LocalSettings.php stub...
