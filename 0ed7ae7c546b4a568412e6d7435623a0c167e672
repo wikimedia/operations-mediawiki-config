@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgn///7w\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2204,
+      "author": {
+        "id": 161
+      },
+      "writtenOn": "2013-01-08T16:13:06Z",
+      "side": 1,
+      "message": "Another instance of \"afttest\"",
+      "revId": "0ed7ae7c546b4a568412e6d7435623a0c167e672",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
