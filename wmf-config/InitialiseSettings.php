@@ -354,7 +354,7 @@ $wgConf->settings = array(
 	'wikisource'	=> '//upload.wikimedia.org/wikipedia/sources/b/bc/Wiki.png',
 	'wikiversity'       => '$stdlogo',
 	'wiktionary'	=> '//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/135px-Wiktionary-logo.svg.png',
-	'wikivoyage'	=> '//upload.wikimedia.org/wikipedia/commons/9/94/WikivoyageOldLogoSmall.png',
+	'wikivoyage'	=> '//upload.wikimedia.org/wikipedia/commons/d/da/WikivoyageLogoSmall.png',
 
 	# Wikis (alphabetical by DB name)
 	'abwiki'		=> '$stdlogo',
@@ -908,6 +908,7 @@ $wgConf->settings = array(
 	'wikimania2012wiki'		=> '//upload.wikimedia.org/wikipedia/wikimania2006/c/c0/Mania-logo.gif',
 	'wikimania2013wiki'		=> '//upload.wikimedia.org/wikipedia/wikimania2006/c/c0/Mania-logo.gif',
 	'wikimaniateamwiki'		=> '//wikimaniateam.wikimedia.org/w/img_auth.php/b/bc/Wiki.png',
+	'eswikivoyage'	=> '//upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Wikivoyage-logo-es.svg/135px-Wikivoyage-logo-es.svg.png',
 	'wowiki'		=> '//upload.wikimedia.org/wikipedia/commons/4/41/Wikipedia-logo-v2-wo.png', // bug 40285
 	'wowiktionary'		=> '$stdlogo',
 	'wuuwiki'		=> '$stdlogo',
