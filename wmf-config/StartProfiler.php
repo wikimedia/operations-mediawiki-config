@@ -20,7 +20,7 @@ if ( @defined( $_REQUEST['forceprofile'] ) ) {
 } elseif ( ( mt_rand( 0, 0x7fffffff ) % 50 ) == 0 ) {
 	require_once( $IP . '/includes/profiler/ProfilerSimpleUDP.php' );
 	$wgProfiler = new ProfilerSimpleUDP( array() );
-	// $IP is something like '/usr/local/apache/common-local/php-1.19'
+	// $IP is something like '/srv/deployment/mediawiki/common/php-1.19'
 	$version = str_replace( 'php-', '', basename( $IP ) );
 	if ( strpos( @$_SERVER['REQUEST_URI'], '/w/thumb.php' ) !== false ) {
 		$wgProfiler->setProfileID( "thumb-$version" );
