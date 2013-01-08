@@ -2214,16 +2214,11 @@ if ( $wmgUseArticleFeedbackv5 ) {
 	}
 
 	// oversight = oversighter
-	foreach ( array( 'oversight', 'afttest-hide' ) as $group ) {
+	foreach ( array( 'oversight' ) as $group ) {
 		if ( isset( $wgGroupPermissions[$group] ) ) { //skip rollbacker group on wikis without that
 			$wgGroupPermissions[$group]['aft-oversighter'] = true;
 		}
 	}
-
-	// test groups
-	$wgGroupPermissions['afttest'] = $wgGroupPermissions['autoconfirmed'];
-	$wgGroupPermissions['afttest-hide'] = $wgGroupPermissions['oversight'];
-
 
 	$wgArticleFeedbackv5AbuseFiltering = $wmgArticleFeedbackv5AbuseFiltering;
 //	$wgArticleFeedbackv5CTABuckets = $wmgArticleFeedbackv5CTABuckets;
