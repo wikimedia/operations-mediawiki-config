@@ -354,7 +354,7 @@ $wgConf->settings = array(
 	'wikisource'	=> '//upload.wikimedia.org/wikipedia/sources/b/bc/Wiki.png',
 	'wikiversity'       => '$stdlogo',
 	'wiktionary'	=> '//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/135px-Wiktionary-logo.svg.png',
-	'wikivoyage'	=> '//upload.wikimedia.org/wikipedia/commons/9/94/WikivoyageOldLogoSmall.png',
+	'wikivoyage'	=> '//upload.wikimedia.org/wikipedia/commons/d/da/WikivoyageLogoSmall.png',
 
 	# Wikis (alphabetical by DB name)
 	'abwiki'		=> '$stdlogo',
@@ -495,6 +495,7 @@ $wgConf->settings = array(
 	'eswiki'		=> '//upload.wikimedia.org/wikipedia/commons/8/8c/Wikipedia-logo-v2-es.png',
 	'eswikibooks'		=> '//upload.wikimedia.org/wikipedia/commons/0/05/Wikibooks-logo-es.png',
 	'eswikinews'		=> '//upload.wikimedia.org/wikipedia/commons/e/ed/Wikinews-logo-es-peq.png',
+	'eswikivoyage'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Wikivoyage-logo-es.svg/152px-Wikivoyage-logo-es.svg.png', // Bug 43565
 	'eswiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/c/c3/WiktionaryEs.svg/135px-WiktionaryEs.svg.png',
 	'etwiki'		=> '//upload.wikimedia.org/wikipedia/commons/4/41/Wikipedia-logo-v2-et.png',
 	'etwikibooks'		=> '//upload.wikimedia.org/wikibooks/et/b/bc/Wiki.png',
