@@ -11258,6 +11258,10 @@ $wgConf->settings = array(
 	'default' => '//commons.wikimedia.org/w/api.php',
 	'test2wiki' => '',
 ),
+'wmgMFForceSecureLogin' => array(
+	'default' => false,
+	'testwiki' => true,
+),
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
 	'cswiki' => array(
