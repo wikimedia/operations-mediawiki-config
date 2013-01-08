@@ -10706,6 +10706,7 @@ $wgConf->settings = array(
 'wgCategoryCollation' => array(
 	'default' => 'uppercase',
 	'ptwiki' => 'uca-default', # bug 35632
+	'iswiktionary' => 'identity', # bug 30722
 ),
 
 'wmgVectorEditSectionLinks' => array(  # TODO: rename to VectorSectionEditLinks
