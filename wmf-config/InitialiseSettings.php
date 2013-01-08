@@ -8975,6 +8975,10 @@ $wgConf->settings = array(
 	# 'private' => true, // img_auth is not very happy with this option off :D
 ),
 
+'wgUnwatchedPageThreshold' => array(
+	'default' => 30, // Default value of https://toolserver.org/~mzmcbride/watcher/
+),
+
 # ROBOT @{
 'wgNamespaceRobotPolicies' => array(
 	'dewiki' => array(
