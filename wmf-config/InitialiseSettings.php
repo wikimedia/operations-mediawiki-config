@@ -354,7 +354,7 @@ $wgConf->settings = array(
 	'wikisource'	=> '//upload.wikimedia.org/wikipedia/sources/b/bc/Wiki.png',
 	'wikiversity'       => '$stdlogo',
 	'wiktionary'	=> '//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/135px-Wiktionary-logo.svg.png',
-	'wikivoyage'	=> '//upload.wikimedia.org/wikipedia/commons/9/94/WikivoyageOldLogoSmall.png',
+	'wikivoyage'	=> '//upload.wikimedia.org/wikipedia/commons/d/da/WikivoyageLogoSmall.png',
 
 	# Wikis (alphabetical by DB name)
 	'abwiki'		=> '$stdlogo',
