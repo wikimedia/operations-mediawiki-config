@@ -22,8 +22,8 @@ require_once( dirname( __FILE__ ) . '/MWRealm.php' );
  */
 function switchAllMediaWikis() {
 	global $argv;
-	$common = MULTIVER_COMMON_HOME;
-	$datPath = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
+	$common = MULTIVER_COMMON;
+	$datPath = getRealmSpecificFilename( MULTIVER_CDB_DIR . '/wikiversions.dat' );
 
 	$argsValid = false;
 	if ( count( $argv ) >= 4 ) {

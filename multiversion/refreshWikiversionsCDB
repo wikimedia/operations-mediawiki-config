@@ -13,16 +13,16 @@ require_once( dirname( __FILE__ ) . '/MWRealm.php' );
  * @return void
  */
 function refreshWikiversionsCDB() {
-	$srcPath = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
-	$tmpDBPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.cdb.tmp';
-	$finalDBPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.cdb';
+	$srcPath = getRealmSpecificFilename( MULTIVER_CDB_DIR . '/wikiversions.dat' );
+	$tmpDBPath = MULTIVER_CDB_DIR . '/wikiversions.cdb.tmp';
+	$finalDBPath = MULTIVER_CDB_DIR . '/wikiversions.cdb';
 
 	// Get the array of sanitized wikiversion rows...
 	$rows = MWWikiversions::readWikiVersionsFile( $srcPath );
 	// Sanity check version directories...
 	foreach ( $rows as $row ) {
 		list( $dbName, $version, $extVersion, $comment ) = $row;
-		$versionDir = MULTIVER_COMMON_HOME . '/' . $version;
+		$versionDir = MULTIVER_COMMON . '/' . $version;
 		if ( !is_dir( $versionDir ) ) {
 			die( "Invalid version dir '$versionDir' for wiki '$dbName'.\n" );
 		}
@@ -32,7 +32,7 @@ function refreshWikiversionsCDB() {
 	foreach ( $rows as $row ) {
 		$dbNamesWithRows[$row[0]] = 1;
 	}
-	$dbNames = MWWikiversions::readDbListFile( getRealmSpecificFilename( MULTIVER_COMMON_HOME . '/all.dblist' ) );
+	$dbNames = MWWikiversions::readDbListFile( getRealmSpecificFilename( MULTIVER_COMMON . '/all.dblist' ) );
 	$diff = array_diff_key( $dbNames, $dbNamesWithRows );
 	if ( count( $diff ) ) {
 		print_r( $diff );

@@ -15,7 +15,6 @@ require_once( __DIR__ . '/MWRealm.php' );
  */
 function populateWikiversionsCDB() {
 	global $argv;
-	$common = '/srv/deployment/mediawiki/common';
 
 	$argsValid = false;
 	if ( count( $argv ) >= 3 && $argv[2] === 'confirm' ) {
@@ -29,7 +28,7 @@ function populateWikiversionsCDB() {
 		die( "Usage: populateWikiVersionsCDB.php php-X.XX\n" );
 	}
 
-	$path = getRealmSpecificFilename( "$common/all.dblist" );
+	$path = getRealmSpecificFilename( MULTIVER_COMMON . "/all.dblist" );
 	$dbList = array_filter( explode( "\n", file_get_contents( $path ) ) );
 	if ( !count( $dbList ) ) {
 		die( "Unable to read $path.\n" );
@@ -41,7 +40,7 @@ function populateWikiversionsCDB() {
 	}
 
 	# Create wikiversions.dat...
-	$path = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
+	$path = getRealmSpecificFilename( MULTIVER_CDB_DIR . '/wikiversions.dat' );
 	if ( !file_put_contents( $path, $datList ) ) {
 		die( "Unable to write to $path.\n" );
 	}

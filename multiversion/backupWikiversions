@@ -11,12 +11,12 @@ require_once( dirname( __FILE__ ) . '/MWRealm.php' );
  * @return void
  */
 function backupWikiversions() {
-	$common = '/srv/deployment/mediawiki/common';
-	$datPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.dat';
+	$datPath = MULTIVER_CDB_DIR . '/wikiversions.dat';
 
 	# Backup old wikiversions.dat...
 	$timestamp = date( 'c' ); // ISO 8601
-	$backupPath = "$common/multiversion/backup/" . preg_replace( '/(\.[^.]*)$/', "-$timestamp$1", $filename );
+	$backupPath = MULTIVER_COMMON . "/multiversion/backup/" .
+		preg_replace( '/(\.[^.]*)$/', "-$timestamp$1", $filename );
 	if ( !copy( $datPath, $backupPath ) ) {
 		die( "Unable to write $filename backup file at `$backupPath`.\n" );
 	}
