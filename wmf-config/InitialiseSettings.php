@@ -10229,7 +10229,7 @@ $wgConf->settings = array(
 'wmgAbuseFilterEmergencyDisableThreshold' => array(
 	'default' => array(
 		'default' => 0.05,
-		'feedback' => 0.10,
+		'feedback' => 0.20,
 	),
 ),
 'wmgAbuseFilterEmergencyDisableCount' => array(
