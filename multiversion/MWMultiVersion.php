@@ -257,7 +257,7 @@ class MWMultiVersion {
 		}
 		$this->versionLoaded = true;
 
-		$db = dba_open( MULTIVER_CDB_DIR_APACHE . '/wikiversions.cdb', 'r', 'cdb' );
+		$db = dba_open( MULTIVER_CDB_DIR . '/wikiversions.cdb', 'r', 'cdb' );
 		if ( $db ) {
 			$version = dba_fetch( "ver:{$this->db}", $db );
 			if ( $version === false ) {

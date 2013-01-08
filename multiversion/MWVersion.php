@@ -34,7 +34,7 @@ function getMediaWiki( $file ) {
 	# Wiki doesn't exist yet?
 	if ( $multiVersion->isMissing() ) {
 		header( "Cache-control: no-cache" ); // same hack as CommonSettings.php
-		include( MULTIVER_404SCRIPT_PATH_APACHE );
+		include( MULTIVER_404SCRIPT_PATH );
 		exit;
 	}
 
@@ -45,18 +45,7 @@ function getMediaWiki( $file ) {
 	$secure = getenv( 'MW_SECURE_HOST' );
 	$host = $secure ? $secure : $_SERVER['HTTP_HOST'];
 
-	# Get the correct MediaWiki path based on this version...
-	if ( $host === 'test.wikipedia.org' && !$secure &&
-		!preg_match( '!thumb\.php!', $_SERVER['REQUEST_URI'] ) &&
-		is_dir( MULTIVER_COMMON_HOME . "/$version" ) // home mounted
-	) {
-		define( 'TESTWIKI', 1 );
-		# Test wiki mostly runs off the version of MediaWiki on /home.
-		# As horrible hack for NFS-less image scalers, use regular docroot for thumbs?
-		$IP = MULTIVER_COMMON_HOME . "/$version";
-	} else {
-		$IP = MULTIVER_COMMON_APACHE . "/$version";
-	}
+	$IP = MULTIVER_COMMON . "/$version";
 
 	chdir( $IP );
 	putenv( "MW_INSTALL_PATH=$IP" );
@@ -83,9 +72,6 @@ function getMediaWikiCli( $file ) {
 	$multiVersion = MWMultiVersion::getInstance();
 	if( !$multiVersion ) {
 		$multiVersion = MWMultiVersion::initializeForMaintenance();
-	}
-	if ( $multiVersion->getDatabase() === 'testwiki' ) {
-		define( 'TESTWIKI', 1 );
 	}
 
 	# Get the MediaWiki version running on this wiki...

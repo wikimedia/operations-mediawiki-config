@@ -247,16 +247,9 @@ unset( $wgStylePath );
 unset( $wgStyleSheetPath );
 
 // New URL scheme
-if ( $wgDBname == 'testwiki' ) {
-	// Make testing skin/JS changes easier
-	$wgExtensionAssetsPath = "$urlprotocol//test.wikipedia.org/w/static-$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "$urlprotocol//test.wikipedia.org/w/static-$wmfVersionNumber/skins";
-	$wgResourceBasePath = "$urlprotocol//test.wikipedia.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
-} else {
-	$wgExtensionAssetsPath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber/skins";
-	$wgResourceBasePath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber"; // This means resources will be requested from /static-VERSION/resources
-}
+$wgExtensionAssetsPath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber/extensions";
+$wgStyleSheetPath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber/skins";
+$wgResourceBasePath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber"; // This means resources will be requested from /static-VERSION/resources
 
 # For labs, override settings just above. This need to be done before
 # extensions so we can not use CommonSettings-labs.php
@@ -280,8 +273,8 @@ $wgScript           = $wgScriptPath . '/index.php';
 $wgRedirectScript	= $wgScriptPath . '/redirect.php';
 $wgInternalServer = $wgCanonicalServer;
 
-if ( $wmfRealm == 'production' && $wgDBname != 'testwiki' && isset( $_SERVER['SERVER_NAME'] ) ) {
-	// Make testing JS/skin changes easy by not running load.php through bits for testwiki
+if ( $wmfRealm == 'production' && isset( $_SERVER['SERVER_NAME'] ) ) {
+	// Make testing JS/skin changes easy by not running load.php through bits for labs
 	$wgLoadScript = "$urlprotocol//bits.wikimedia.org/{$_SERVER['SERVER_NAME']}/load.php";
 }
 
@@ -1496,11 +1489,6 @@ if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_P
 	// New HTTPS service on regular URLs
 	$wgInternalServer = $wgServer; // Keep this as HTTP for IRC notifications (bug 29925)
 	$wgServer = preg_replace( '/^http:/', 'https:', $wgServer );
-} else {
-	# For non-SSL hosts...
-	if ( $wgDBname != 'testwiki' ) {
-#		$wgStyleSheetPath = 'http://upload.wikimedia.org/skins';
-	}
 }
 
 if ( isset( $_REQUEST['captchabypass'] ) && $_REQUEST['captchabypass'] == $wmgCaptchaPassword ) {
