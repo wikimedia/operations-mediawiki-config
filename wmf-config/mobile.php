@@ -143,4 +143,8 @@ $wgMFTrademarkSitename = true;
 // Enable event logging on beta (ori-l; 10-Nov-2012)
 $wgMFLogEvents = true;
 
+// Force HTTPS for login/account creation
+if ( $wmgMFForceSecureLogin ) {
+	$wgMFForceSecureLogin = true;
+}
 } # safeguard
