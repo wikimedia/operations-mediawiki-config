@@ -1,0 +1,3 @@
+[submodule "docroot/bits/WikipediaMobileFirefoxOS"]
+	path = docroot/bits/WikipediaMobileFirefoxOS
+	url = git://github.com/wikimedia/WikipediaMobileFirefoxOS.git
