@@ -10302,11 +10302,6 @@ $wgConf->settings = array(
 	'testwiki' => true,
 ),
 
-'wgUseTagFilter' => array(
-	'default' => true, // broken, no change_tag_tag_id key [TS]
-	// OK, ct_tag key exists, live-hacked that in for now --Andrew
-),
-
 'wgCopyUploadProxy' => array(
 	'default' => 'url-downloader.wikimedia.org:8080',
 ),
