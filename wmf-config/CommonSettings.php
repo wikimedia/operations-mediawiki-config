@@ -147,8 +147,6 @@ default:
 wfProfileIn( "$fname-wgConf" );
 require( "$wmfConfigDir/wgConf.php" );
 function wmfLoadInitialiseSettings( $conf ) {
-	global $wmfConfigDir, $wgConf, $wmfUdp2logDest;
-	# $wgConf =& $conf; # b/c alias
 	require( "$wmfConfigDir/InitialiseSettings.php" );
 }
 wfProfileOut( "$fname-wgConf" );
