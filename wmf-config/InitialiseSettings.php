@@ -17,7 +17,7 @@
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
 # Globals set in CommonSettings.php for use in settings values
-global $wmfUdp2logDest;
+global $wmfUdp2logDest, $wmfDatacenter, $wmfRealm, $wmfConfigDir, $wgConf;
 
 $wgConf->settings = array(
 
