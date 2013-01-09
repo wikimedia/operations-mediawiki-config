@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgn//+dw\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 8725,
+      "author": {
+        "id": 178
+      },
+      "writtenOn": "2013-01-09T18:56:07Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be \u0027sewiki\u0027?",
+      "revId": "8a17bc397f7d6166d79c80ce5a09f3fda02dcef6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
