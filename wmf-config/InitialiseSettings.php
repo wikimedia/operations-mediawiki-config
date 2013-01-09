@@ -8888,6 +8888,9 @@ $wgConf->settings = array(
 'wmgEnableCaptcha' => array(
 	'default' => true,
 
+	//experimentally disable on enwiki
+	'enwiki' => false,
+
 	// private wikis don't need it
 	'private' => false,
 	'fishbowl' => false,
