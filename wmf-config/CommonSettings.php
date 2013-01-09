@@ -1513,6 +1513,13 @@ if ( $wmgEnableCaptcha ) {
 	$wgGroupPermissions['autoconfirmed']['skipcaptcha'] = true;
 	$wgCaptchaFileBackend = 'global-multiwrite';
 	# $wgCaptchaTriggers['edit'] = true;
+
+	// experimentally disable captcha for new account reg on enwiki but leave addurl etc
+	// experiment will run for 1-3 hours
+	if ( $wgDBname == 'enwiki' ) {
+		$wgCaptchaTriggers['createaccount'] = false;
+	}
+
 	$wgCaptchaSecret = $wmgCaptchaSecret;
 	$wgCaptchaDirectory = '/mnt/upload7/private/captcha';
 	$wgCaptchaDirectoryLevels = 3;
