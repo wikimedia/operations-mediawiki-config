@@ -153,7 +153,6 @@ $wgConf->settings = array(
 	'zh_min_nanwiki' => 'nan', # to rename
 	'zh_min_nanwiktionary' => 'nan', # to rename
 	'zh_min_nanwikibooks' => 'nan', # to rename
-	'zh_min_nanwikiquote' => 'nan', # to rename
 	'zh_yuewiki' => 'yue', # to rename
 ),
 # @} end of wgLanguageCode
@@ -581,7 +580,6 @@ $wgConf->settings = array(
 	'idwiktionary'		=> '$stdlogo',
 	'iewiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Wiktionary-logo-ie.png/135px-Wiktionary-logo-ie.png', // bug 43240
 	'igwiki'		=> '$stdlogo',
-	'ikwiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/7/78/Wiktionary-logo-ik.png/135px-Wiktionary-logo-ik.png', // bug 43240
 	'ilwikimedia'		=> '$stdlogo',
 	'ilowiki'		=> '//upload.wikimedia.org/wikipedia/commons/5/57/Wikipedia-logo-v2-ilo.png', // bug 40285
 	'incubatorwiki'		=> '$stdlogo',
@@ -9617,7 +9615,6 @@ $wgConf->settings = array(
 	'hywiktionary' 		=> '//bits.wikimedia.org/favicon/piece.ico',
 	'iawiktionary' 		=> '//bits.wikimedia.org/favicon/piece.ico',
 	'iewiktionary' 		=> '//bits.wikimedia.org/favicon/piece.ico',
-	'ikwiktionary' 		=> '//bits.wikimedia.org/favicon/piece.ico',
 	'iuwiktionary' 		=> '//bits.wikimedia.org/favicon/piece.ico',
 	'jawiktionary' 		=> '//bits.wikimedia.org/favicon/piece.ico',
 	'jjvwiktionary' 		=> '//bits.wikimedia.org/favicon/piece.ico',
