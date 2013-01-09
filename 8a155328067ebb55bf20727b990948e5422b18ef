@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADgn//+fk\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2013-01-09T18:33:50Z",
+      "side": 1,
+      "message": "Seems odd that we put the global call for these here, but for $wgConf we do it in CommonSettings.php (line 150).",
+      "revId": "8a155328067ebb55bf20727b990948e5422b18ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
