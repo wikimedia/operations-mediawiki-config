@@ -19,6 +19,9 @@
 # Globals set in CommonSettings.php for use in settings values
 global $wmfUdp2logDest;
 
+global $wmfDatacenter;
+global $wmfRealm;
+
 $wgConf->settings = array(
 
 // For live conversion of old revisions:
