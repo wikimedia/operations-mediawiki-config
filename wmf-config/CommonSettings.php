@@ -237,9 +237,6 @@ ini_set( 'memory_limit', $wmgMemoryLimit );
 # Rewrite commands given to wfShellWikiCmd() to use Het-Deploy
 $wgHooks['wfShellWikiCmd'][] = 'MWMultiVersion::onWfShellMaintenanceCmd';
 
-# Protocol settings for urls
-$urlprotocol = "";
-
 setlocale( LC_ALL, 'en_US.UTF-8' );
 
 unset( $wgStylePath );
@@ -248,20 +245,20 @@ unset( $wgStyleSheetPath );
 // New URL scheme
 if ( $wgDBname == 'testwiki' ) {
 	// Make testing skin/JS changes easier
-	$wgExtensionAssetsPath = "$urlprotocol//test.wikipedia.org/w/static-$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "$urlprotocol//test.wikipedia.org/w/static-$wmfVersionNumber/skins";
-	$wgResourceBasePath = "$urlprotocol//test.wikipedia.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
+	$wgExtensionAssetsPath = "//test.wikipedia.org/w/static-$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "//test.wikipedia.org/w/static-$wmfVersionNumber/skins";
+	$wgResourceBasePath = "//test.wikipedia.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
 } else {
-	$wgExtensionAssetsPath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber/skins";
-	$wgResourceBasePath = "$urlprotocol//bits.wikimedia.org/static-$wmfVersionNumber"; // This means resources will be requested from /static-VERSION/resources
+	$wgExtensionAssetsPath = "//bits.wikimedia.org/static-$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "//bits.wikimedia.org/static-$wmfVersionNumber/skins";
+	$wgResourceBasePath = "//bits.wikimedia.org/static-$wmfVersionNumber"; // This means resources will be requested from /static-VERSION/resources
 }
 
 # For labs, override settings just above. This need to be done before
 # extensions so we can not use CommonSettings-labs.php
 if( $wmfRealm == 'labs' ) {
 	# Base path:
-	$wgResourceBasePath    = "$urlprotocol//bits.beta.wmflabs.org/static-master";
+	$wgResourceBasePath    = "//bits.beta.wmflabs.org/static-master";
 
 	# Assets:
 	$wgExtensionAssetsPath = $wgResourceBasePath . "/extensions";
@@ -281,7 +278,7 @@ $wgInternalServer = $wgCanonicalServer;
 
 if ( $wmfRealm == 'production' && $wgDBname != 'testwiki' && isset( $_SERVER['SERVER_NAME'] ) ) {
 	// Make testing JS/skin changes easy by not running load.php through bits for testwiki
-	$wgLoadScript = "$urlprotocol//bits.wikimedia.org/{$_SERVER['SERVER_NAME']}/load.php";
+	$wgLoadScript = "//bits.wikimedia.org/{$_SERVER['SERVER_NAME']}/load.php";
 }
 
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmfVersionNumber;
@@ -794,18 +791,18 @@ $wgDebugLogGroups['wikibase'] = "udp://$wmfUdp2logDest/wikibase";
 
 if ( $site == 'wikinews' ) {
 	# $wgRightsPage = "";# Set to the title of a wiki page that describes your license/copyright
-	$wgRightsUrl = "$urlprotocol//creativecommons.org/licenses/by/2.5/";
+	$wgRightsUrl = "//creativecommons.org/licenses/by/2.5/";
 	$wgRightsText = 'Creative Commons Attribution 2.5';
-	$wgRightsIcon = "$urlprotocol//creativecommons.org/images/public/somerights20.png";
+	$wgRightsIcon = "//creativecommons.org/images/public/somerights20.png";
 }  elseif ( $wgDBname == 'huwikinews' ) {
-	$wgRightsUrl = "$urlprotocol//creativecommons.org/licenses/by/3.0/";
+	$wgRightsUrl = "//creativecommons.org/licenses/by/3.0/";
 	$wgRightsText = 'Creative Commons Attribution 3.0 Unported';
-	$wgRightsIcon = "$urlprotocol//creativecommons.org/images/public/somerights20.png";
+	$wgRightsIcon = "//creativecommons.org/images/public/somerights20.png";
 }  else {
 	# Set 2009-06-22 -- BV
-	$wgRightsUrl = "$urlprotocol//creativecommons.org/licenses/by-sa/3.0/";
+	$wgRightsUrl = "//creativecommons.org/licenses/by-sa/3.0/";
 	$wgRightsText = 'Creative Commons Attribution-Share Alike 3.0 Unported';
-	$wgRightsIcon = "$urlprotocol//creativecommons.org/images/public/somerights20.png";
+	$wgRightsIcon = "//creativecommons.org/images/public/somerights20.png";
 }
 
 $wgUseTidy = true;
@@ -956,7 +953,7 @@ include( $IP . '/extensions/TitleBlacklist/TitleBlacklist.php' );
 $wgTitleBlacklistSources = array(
 	array(
 		'type' => TBLSRC_URL,
-		'src'  => "$urlprotocol//meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw&tb_ver=1",
+		'src'  => "//meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw&tb_ver=1",
 	),
 );
 
@@ -1217,18 +1214,18 @@ if ( $wgDBname == 'nostalgiawiki' ) {
 		if ( preg_match( '/^(.*)\\/Talk$/', $title, $matches ) ) {
 			$title = 'Talk:' . $matches[1];
 		}
-		$wgSiteNotice = "[$urlprotocol//en.wikipedia.org/wiki/" .
+		$wgSiteNotice = "[//en.wikipedia.org/wiki/" .
 			htmlspecialchars( urlencode( $title ) ) .
 		' See the current version of this page on Wikipedia]';
 	} else {
-		$wgSiteNotice = "[$urlprotocol//en.wikipedia.org/ See current Wikipedia]";
+		$wgSiteNotice = "[//en.wikipedia.org/ See current Wikipedia]";
 	}
 	$wgDefaultUserOptions['highlightbroken'] = 0;
 }
 
 $wgUseHashTable = true;
 
-$wgCopyrightIcon = '<a href="' . $urlprotocol . '//wikimediafoundation.org/"><img src="' . $urlprotocol . '//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>';
+$wgCopyrightIcon = '<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>';
 
 # For Special:Cite, we only want it on wikipedia (but can't count on $site),
 # not on these fakers.
@@ -1750,17 +1747,17 @@ if ( $wmgUseCentralNotice ) {
 	include "$IP/extensions/CentralNotice/CentralNotice.php";
 
 	// for DNS prefetching
-	$wgCentralHost = "$urlprotocol//{$wmfHostnames['meta']}";
+	$wgCentralHost = "//{$wmfHostnames['meta']}";
 
 	// for banner loading
 	if ( $wgDBname == 'testwiki' ) {
-		$wgCentralPagePath = "$urlprotocol//test.wikipedia.org/w/index.php";
-		$wgCentralBannerDispatcher = "$urlprotocol//test.wikipedia.org/wiki/Special:BannerRandom";
-		$wgCentralBannerRecorder = "$urlprotocol//test.wikipedia.org/wiki/Special:RecordImpression";
+		$wgCentralPagePath = "//test.wikipedia.org/w/index.php";
+		$wgCentralBannerDispatcher = "//test.wikipedia.org/wiki/Special:BannerRandom";
+		$wgCentralBannerRecorder = "//test.wikipedia.org/wiki/Special:RecordImpression";
 	} else {
-		$wgCentralPagePath = "$urlprotocol//{$wmfHostnames['meta']}/w/index.php";
-		$wgCentralBannerDispatcher = "$urlprotocol//{$wmfHostnames['meta']}/wiki/Special:BannerRandom";
-		$wgCentralBannerRecorder = "$urlprotocol//{$wmfHostnames['meta']}/wiki/Special:RecordImpression";
+		$wgCentralPagePath = "//{$wmfHostnames['meta']}/w/index.php";
+		$wgCentralBannerDispatcher = "//{$wmfHostnames['meta']}/wiki/Special:BannerRandom";
+		$wgCentralBannerRecorder = "//{$wmfHostnames['meta']}/wiki/Special:RecordImpression";
 	}
 
 	// Allow only these domains to access CentralNotice data through the reporter
@@ -1781,7 +1778,7 @@ if ( $wmgUseCentralNotice ) {
 	switch( $wmfRealm ) {
 	case 'production':
 		$wgNoticeServerTimeout = 3600; // to let the counter update
-		$wgNoticeCounterSource = $urlprotocol . '//wikimediafoundation.org/wiki/Special:ContributionTotal' .
+		$wgNoticeCounterSource = '//wikimediafoundation.org/wiki/Special:ContributionTotal' .
 			'?action=raw' .
 			'&start=20101112000000' . // FY 10-11
 			'&fudgefactor=660000';   // fudge for pledged donations not in CRM
@@ -2222,7 +2219,7 @@ if ( $wmgUseUploadWizard ) {
 	require_once( "$IP/extensions/UploadWizard/UploadWizard.php" );
 	# Do not change $wgUploadStashScalerBaseUrl to a protocol-relative URL. This is how UploadStash fetches previews from our scaler, behind
 	# the scenes, that it then streams to the client securely (much like img_auth.php). -- neilk, 2011-09-12
-	$wgUploadStashScalerBaseUrl = "$urlprotocol//{$wmfHostnames['upload']}/$site/$lang/thumb/temp";
+	$wgUploadStashScalerBaseUrl = "//{$wmfHostnames['upload']}/$site/$lang/thumb/temp";
 	$wgUploadWizardConfig = array(
 		# 'debug' => true,
 		'disableResourceLoader' => false,
@@ -2352,10 +2349,10 @@ if ( $wmgUseMoodBar ) {
 	require_once( "$IP/extensions/MoodBar/MoodBar.php" );
 	$wgMoodBarCutoffTime = $wmgMoodBarCutoffTime;
 	$wgMoodBarBlackoutInterval = array( '20120614000000,20120629000000' );
-	$wgMoodBarConfig['privacyUrl'] = "$urlprotocol//wikimediafoundation.org/wiki/Feedback_policy";
+	$wgMoodBarConfig['privacyUrl'] = "//wikimediafoundation.org/wiki/Feedback_policy";
 	$wgMoodBarConfig['feedbackDashboardUrl'] = "$wgServer/wiki/Special:FeedbackDashboard";
 
-	$wgMoodBarConfig['infoUrl'] = "$urlprotocol$wmgMoodBarInfoUrl";
+	$wgMoodBarConfig['infoUrl'] = $wmgMoodBarInfoUrl;
 }
 $wgAvailableRights[] = 'moodbar-admin'; // To allow global groups to include this right -AG
 
