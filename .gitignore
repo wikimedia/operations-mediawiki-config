@@ -4,6 +4,8 @@
 # Editors
 *~
 
+.deploy
+
 # Wikimedia private/temporary stuff
 AdminSettings.php
 PrivateSettings.php
