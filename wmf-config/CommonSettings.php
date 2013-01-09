@@ -2463,7 +2463,9 @@ if ( $wmgUseTranslate ) {
 			'config' => array(
 				'adapteroptions' => array(
 					'host' => 'vanadium.eqiad.wmnet',
+					'timeout' => 10,
 				),
+				'adapter' => 'Solarium_Client_Adapter_Curl',
 			),
 		);
 	}
