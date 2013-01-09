@@ -9984,6 +9984,7 @@ $wgConf->settings = array(
 	'hsbwiki' => true,
 	'huwiki' => true, # Bug 21005
 	'idwiki' => true, # 18430
+	'iswiki' => true, // Bug 43760
 	'itwiki' => true,
 	'kawiki' => true,
 	'kkwiki' => true,
