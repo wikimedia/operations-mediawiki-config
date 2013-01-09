@@ -1093,6 +1093,15 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 	$wgExtDistTarUrl = "$urlprotocol//upload.wikimedia.org/ext-dist";
 	$wgExtDistWorkingCopy = '/mnt/upload6/private/ExtensionDistributor/mw-snapshot';
 	$wgExtDistRemoteClient = '208.80.152.165:8430';
+	$wgExtDistListFile = 'https://gerrit.wikimedia.org/mediawiki-extensions.txt';
+	$wgExtDistArchiveAPI = 'https://api.github.com/repos/wikimedia/mediawiki-extensions-$EXT/tarball/$REF';
+	$wgExtDistProxy = 'url-downloader.wikimedia.org:8080';
+
+	$wgExtDistSnapshotRefs = array(
+		'master',
+		'REL1_20',
+		'REL1_19',
+	);
 
 	$wgExtDistBranches = array(
 		'trunk' => array(
