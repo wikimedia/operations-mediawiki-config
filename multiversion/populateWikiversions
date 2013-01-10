@@ -28,7 +28,7 @@ function populateWikiversionsCDB() {
 		die( "Usage: populateWikiVersionsCDB.php php-X.XX\n" );
 	}
 
-	$path = getRealmSpecificFilename( MULTIVER_COMMON . "/all.dblist" );
+	$path = getRealmSpecificFilename( MULTIVER_COMMON . '/dblists/all.dblist' );
 	$dbList = array_filter( explode( "\n", file_get_contents( $path ) ) );
 	if ( !count( $dbList ) ) {
 		die( "Unable to read $path.\n" );

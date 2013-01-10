@@ -32,7 +32,7 @@ function refreshWikiversionsCDB() {
 	foreach ( $rows as $row ) {
 		$dbNamesWithRows[$row[0]] = 1;
 	}
-	$dbNames = MWWikiversions::readDbListFile( getRealmSpecificFilename( MULTIVER_COMMON . '/all.dblist' ) );
+	$dbNames = MWWikiversions::readDbListFile( getRealmSpecificFilename( MULTIVER_COMMON . '/dblists/all.dblist' ) );
 	$diff = array_diff_key( $dbNames, $dbNamesWithRows );
 	if ( count( $diff ) ) {
 		print_r( $diff );

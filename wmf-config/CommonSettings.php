@@ -191,7 +191,7 @@ if ( !$globals ) {
 
 	$wikiTags = array();
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'readonly' ) as $tag ) {
-		$dblist = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../$tag.dblist" ) ) );
+		$dblist = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../dblists/$tag.dblist" ) ) );
 		if ( in_array( $wgDBname, $dblist ) ) {
 			$wikiTags[] = $tag;
 		}
@@ -877,9 +877,9 @@ include( $IP . '/extensions/wikihiero/wikihiero.php' );
 include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 // Config for sitematrix
 $wgSiteMatrixFile = '/apache/common/langlist';
-$wgSiteMatrixClosedSites = getRealmSpecificFilename( "$IP/../closed.dblist" );
-$wgSiteMatrixPrivateSites = getRealmSpecificFilename( "$IP/../private.dblist" );
-$wgSiteMatrixFishbowlSites = getRealmSpecificFilename( "$IP/../fishbowl.dblist" );
+$wgSiteMatrixClosedSites = getRealmSpecificFilename( "$IP/../dblists/closed.dblist" );
+$wgSiteMatrixPrivateSites = getRealmSpecificFilename( "$IP/../dblists/private.dblist" );
+$wgSiteMatrixFishbowlSites = getRealmSpecificFilename( "$IP/../dblists/fishbowl.dblist" );
 
 include( $IP . '/extensions/CharInsert/CharInsert.php' );
 
@@ -1675,9 +1675,9 @@ if ( $wmgUseCentralAuth ) {
 	$wgHooks['CentralAuthWikiList'][] = 'wmfCentralAuthWikiList';
 	function wmfCentralAuthWikiList( &$list ) {
 		global $wgLocalDatabases, $IP;
-		$privateWikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../private.dblist" ) ) );
-		$fishbowlWikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../fishbowl.dblist" ) ) );
-		$closedWikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../closed.dblist" ) ) );
+		$privateWikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../dblists/private.dblist" ) ) );
+		$fishbowlWikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../dblists/fishbowl.dblist" ) ) );
+		$closedWikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../dblists/closed.dblist" ) ) );
 		$list = array_diff( $wgLocalDatabases,
 			$privateWikis, $fishbowlWikis, $closedWikis );
 		return true;
@@ -2362,7 +2362,7 @@ if ( $wmgUseDisableAccount ) {
 
 if ( $wmgUseIncubator ) {
 	require_once( "$IP/extensions/WikimediaIncubator/WikimediaIncubator.php" );
-	$wmincClosedWikis = getRealmSpecificFilename( "$IP/../closed.dblist" );
+	$wmincClosedWikis = getRealmSpecificFilename( "$IP/../dblists/closed.dblist" );
 }
 
 if ( $wmgUseWikiLove ) {
