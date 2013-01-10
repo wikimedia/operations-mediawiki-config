@@ -65,6 +65,12 @@
 ?>
 </ul>
 
+<h2><img src="./images/document.png" alt=""> CDB files</h2>
+<ul>
+<li><a href="./interwiki.cdb">interwiki.cdb</a></li>
+<li><a href="./trusted-xff.cdb">trusted-xff.cdb</a></li>
+</ul>
+
 <h2>Lucene search configuration</h2>
 <ul>
 <li><a href="./lsearch-global-2.1.conf">lsearch-global-2.1.conf</a></li>
