@@ -263,9 +263,6 @@ class MWMultiVersion {
 			if ( $version === false ) {
 				$extraVersion = false;
 			} else {
-				if ( strpos( $version, 'php-' ) !== 0 ) {
-					self::error( "wikiversions.cdb version entry does not start with `php-` (got `$version`).\n" );
-				}
 				$extraVersion = dba_fetch( "ext:{$this->db}", $db );
 				if ( $extraVersion === false ) {
 					self::error( "wikiversions.cdb has no extra version entry for `$db`.\n" );
