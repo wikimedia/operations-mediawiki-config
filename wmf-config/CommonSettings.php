@@ -1088,10 +1088,6 @@ if ( $wmgPFEnableStringFunctions ) {
 
 if ( $wgDBname == 'mediawikiwiki' ) {
 	include( "$IP/extensions/ExtensionDistributor/ExtensionDistributor.php" );
-	$wgExtDistTarDir = '/mnt/upload6/ext-dist';
-	$wgExtDistTarUrl = "$urlprotocol//upload.wikimedia.org/ext-dist";
-	$wgExtDistWorkingCopy = '/mnt/upload6/private/ExtensionDistributor/mw-snapshot';
-	$wgExtDistRemoteClient = '208.80.152.165:8430';
 	$wgExtDistListFile = 'https://gerrit.wikimedia.org/mediawiki-extensions.txt';
 	$wgExtDistArchiveAPI = 'https://api.github.com/repos/wikimedia/mediawiki-extensions-$EXT/tarball/$REF';
 	$wgExtDistProxy = 'url-downloader.wikimedia.org:8080';
@@ -1100,71 +1096,6 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 		'master',
 		'REL1_20',
 		'REL1_19',
-	);
-
-	$wgExtDistBranches = array(
-		'trunk' => array(
-			'tarLabel' => 'master',
-			'msgName' => 'extdist-current-version',
-			'vcs' => 'git',
-		),
-		/**
-		 * If you add a branch here, you must also check it out into the working copy directory.
-		 * If you add it here without doing that, the extension will break.
-		 */
-		'branches/REL1_19' => array(
-			'tarLabel' => 'MW1.19',
-			'name' => '1.19.x',
-			'vcs' => 'svn',
-		),
-		'branches/REL1_18' => array(
-			'tarLabel' => 'MW1.18',
-			'name' => '1.18.x',
-			'vcs' => 'svn',
-		),
-		'branches/REL1_17' => array(
-			'tarLabel' => 'MW1.17',
-			'name' => '1.17.x',
-			'vcs' => 'svn',
-		),
-		'branches/REL1_16' => array(
-			'tarLabel' => 'MW1.16',
-			'name' => '1.16.x',
-			'vcs' => 'svn',
-		),
-		'branches/REL1_15' => array(
-			'tarLabel' => 'MW1.15',
-			'name' => '1.15.x',
-			'vcs' => 'svn',
-		),
-		'branches/REL1_14' => array(
-			'tarLabel' => 'MW1.14',
-			'name' => '1.14.x',
-			'vcs' => 'svn',
-		),
-		'branches/REL1_13' => array(
-			'tarLabel' => 'MW1.13',
-			'name' => '1.13.x',
-			'vcs' => 'svn',
-		),
-		'branches/REL1_12' => array(
-			'tarLabel' => 'MW1.12',
-			'name' => '1.12.x',
-			'vcs' => 'svn',
-		),
-		'branches/REL1_11' => array(
-			'tarLabel' => 'MW1.11',
-			'name' => '1.11.x',
-			'vcs' => 'svn',
-		),
-		/**
-		 * If you delete a branch, you must also delete it from the working copy
-		 */
-		'branches/REL1_10' => array(
-			'tarLabel' => 'MW1.10',
-			'name' => '1.10.x',
-			'vcs' => 'svn',
-		),
 	);
 }
 
