@@ -283,7 +283,7 @@ $wgCacheDirectory = '/tmp/mw-cache-' . $wmfVersionNumber;
 $wmgAddWikiNotify = true;
 
 // Comment out the following lines to get the old-style l10n caching -- TS 2011-02-22
-$wgLocalisationCacheConf['storeDirectory'] = MULTIVER_COMMON . "l10n-$wmfVersionNumber";
+$wgLocalisationCacheConf['storeDirectory'] = MULTIVER_COMMON . "/l10n-$wmfVersionNumber/cache";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
 $wgFileStore['deleted']['directory'] = "/mnt/upload7/private/archive/$site/$lang";
@@ -2786,7 +2786,7 @@ $wgUseCombinedLoginLink = false;
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
 
-require( "$wmfConfigDir/ExtensionMessages-$wmfExtendedVersionNumber.php" );
+require( MULTIVER_COMMON . "/l10n-$wmfVersionNumber/ExtensionMessages.php" );
 
 wfProfileOut( "$fname-misc5" );
 wfProfileOut( $fname );
