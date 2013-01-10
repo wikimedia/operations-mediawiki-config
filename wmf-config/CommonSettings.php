@@ -1483,7 +1483,7 @@ wfProfileIn( "$fname-misc5" );
 $wgBrowserBlackList[] = '/^Lynx/';
 
 // Vandal checks
-require( "/srv/deployment/mediawiki/private/wmf-config/checkers.php" );
+require( MULTIVER_PRIVATE . '/wmf-config/checkers.php' );
 
 if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
 	// New HTTPS service on regular URLs
