@@ -2359,7 +2359,7 @@ $wgVaryOnXFPForAPI = $wgVaryOnXFP = true;
 
 if ( $wmgUseMath ) {
 	require_once( "$IP/extensions/Math/Math.php" ); // Math move out from core in MW 1.18
-	$wgTexvc = "/usr/local/apache/uncommon/$wmfVersionNumber/bin/texvc"; // override default
+	$wgTexvc = MULTIVER_UNCOMMON . "/$wmfVersionNumber/bin/texvc"; // override default
 	if ( $wgDBname === 'hewiki' ) {
 		$wgDefaultUserOptions['math'] = 0;
 	}
