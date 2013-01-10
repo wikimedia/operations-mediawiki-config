@@ -11261,7 +11261,7 @@ $wgConf->settings = array(
 ),
 'wmgMFForceSecureLogin' => array(
 	'default' => false,
-	'testwiki' => false,
+	'testwiki' => true,
 ),
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
