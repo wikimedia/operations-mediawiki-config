@@ -1,1 +1,1 @@
-/home/wikipedia/common/wmf-config/codereview.php
+/srv/deployment/mediawiki/common/wmf-config/codereview.php

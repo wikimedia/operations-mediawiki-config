@@ -1,1 +1,1 @@
-/home/wikipedia/common/wmf-config/CommonSettings.php
+/srv/deployment/mediawiki/common/wmf-config/CommonSettings.php

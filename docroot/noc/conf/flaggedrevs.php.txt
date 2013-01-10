@@ -1,1 +1,1 @@
-/home/wikipedia/common/wmf-config/flaggedrevs.php
+/srv/deployment/mediawiki/common/wmf-config/flaggedrevs.php

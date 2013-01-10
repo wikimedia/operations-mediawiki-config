@@ -1,1 +1,1 @@
-/home/wikipedia/common/wmf-config/liquidthreads.php
+/srv/deployment/mediawiki/common/wmf-config/liquidthreads.php

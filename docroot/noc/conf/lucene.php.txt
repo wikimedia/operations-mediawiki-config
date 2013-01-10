@@ -1,1 +1,1 @@
-/home/wikipedia/common/wmf-config/lucene.php
+/srv/deployment/mediawiki/common/wmf-config/lucene.php
