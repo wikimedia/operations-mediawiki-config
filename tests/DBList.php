@@ -19,13 +19,16 @@ class DBList {
 		'wikisource',
 		'wikiversity',
 		'wiktionary',
+		'wikivoyage',
 	);
 
 	public static function getall() {
 		static $list = null;
-		if( $list ) return $list;
+		if( $list ) {
+			return $list;
+		}
 
-		$objects = scandir(  dirname( __FILE__ ) . '/..'  );
+		$objects = scandir(  dirname( __FILE__ ) . '/../dblists'  );
 		foreach( $objects as $filename ) {
 			if( substr( $filename, -7, 7 ) == '.dblist' ) {
 				$projectname = substr( $filename, 0, -7 );
