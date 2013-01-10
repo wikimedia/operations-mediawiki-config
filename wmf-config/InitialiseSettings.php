@@ -5686,6 +5686,8 @@ $wgConf->settings = array(
 		103 => 'Verzeichnis_Diskussion',
 		104 => 'Thesaurus',
 		105 => 'Thesaurus_Diskussion',
+		106 => 'Reim', // Bug 43830
+		107 => 'Reim_Diskussion',
 	),
 	'elwiktionary' => array(
 		100 => 'Παράρτημα',
