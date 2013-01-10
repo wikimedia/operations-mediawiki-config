@@ -329,7 +329,6 @@ $wgUseGzip = true;
 $wgRCMaxAge = 30 * 86400;
 
 $wgUseTeX = true;
-$wgTexvc = "/usr/local/apache/uncommon/$wmfVersionNumber/bin/texvc";
 $wgTmpDirectory     = '/tmp';
 $wgLegalTitleChars = "+ %!\"$&'()*,\\-.\\/0-9:;=?@A-Z\\\\^_`a-z~\\x80-\\xFF";
 
