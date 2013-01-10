@@ -55,7 +55,7 @@ if ( !class_exists( 'MWMultiVersion' ) ) {
 }
 $multiVersion = MWMultiVersion::getInstance();
 
-set_include_path( "$IP:$IP/lib:/usr/local/lib/php:/usr/share/php" );
+set_include_path( "$IP:/usr/local/lib/php:/usr/share/php" );
 
 if ( getenv( 'WIKIBACKUP' ) ) {
 	// hack while normal ext is not enabled sitewide
