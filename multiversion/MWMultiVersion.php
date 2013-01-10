@@ -318,7 +318,7 @@ class MWMultiVersion {
 	public function getVersionNumber() {
 		$this->loadVersionInfo();
 		$this->assertNotMissing(); // caller should have checked isMissing()
-		return substr( $this->version, 4 ); // remove "php-"
+		return $this->version;
 	}
 
 	/**

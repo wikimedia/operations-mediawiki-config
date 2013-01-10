@@ -125,7 +125,7 @@ wfProfileIn( "$fname-host" );
 $wgDBname = $multiVersion->getDatabase();
 
 # wmf-config directory (in common/)
-$wmfConfigDir = "$IP/../wmf-config";
+$wmfConfigDir = MULTIVER_COMMON . '/wmf-config';
 
 wfProfileOut( "$fname-host" );
 
@@ -191,7 +191,7 @@ if ( !$globals ) {
 
 	$wikiTags = array();
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'readonly' ) as $tag ) {
-		$dblist = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../dblists/$tag.dblist" ) ) );
+		$dblist = array_map( 'trim', file( getRealmSpecificFilename( MULTIVER_COMMON . "/dblists/$tag.dblist" ) ) );
 		if ( in_array( $wgDBname, $dblist ) ) {
 			$wikiTags[] = $tag;
 		}
@@ -227,7 +227,7 @@ extract( $globals );
 
 # Private settings such as passwords, that shouldn't be published
 # Needs to be before db.php
-require( "$wmfConfigDir/PrivateSettings.php" );
+require( MULTIVER_PRIVATE . '/wmf-config/PrivateSettings.php' );
 
 # Cluster-dependent files for database and memcached
 require( getRealmSpecificFilename( "$wmfConfigDir/db.php" ) );
@@ -877,9 +877,9 @@ include( $IP . '/extensions/wikihiero/wikihiero.php' );
 include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 // Config for sitematrix
 $wgSiteMatrixFile = '/apache/common/langlist';
-$wgSiteMatrixClosedSites = getRealmSpecificFilename( "$IP/../dblists/closed.dblist" );
-$wgSiteMatrixPrivateSites = getRealmSpecificFilename( "$IP/../dblists/private.dblist" );
-$wgSiteMatrixFishbowlSites = getRealmSpecificFilename( "$IP/../dblists/fishbowl.dblist" );
+$wgSiteMatrixClosedSites = getRealmSpecificFilename( MULTIVER_COMMON . '/dblists/closed.dblist' );
+$wgSiteMatrixPrivateSites = getRealmSpecificFilename( MULTIVER_COMMON .'/dblists/private.dblist' );
+$wgSiteMatrixFishbowlSites = getRealmSpecificFilename( MULTIVER_COMMON . '/dblists/fishbowl.dblist' );
 
 include( $IP . '/extensions/CharInsert/CharInsert.php' );
 
@@ -1483,7 +1483,7 @@ wfProfileIn( "$fname-misc5" );
 $wgBrowserBlackList[] = '/^Lynx/';
 
 // Vandal checks
-require( "$wmfConfigDir/checkers.php" );
+require( "/srv/deployment/mediawiki/private/wmf-config/checkers.php" );
 
 if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
 	// New HTTPS service on regular URLs
@@ -1675,11 +1675,10 @@ if ( $wmgUseCentralAuth ) {
 	$wgHooks['CentralAuthWikiList'][] = 'wmfCentralAuthWikiList';
 	function wmfCentralAuthWikiList( &$list ) {
 		global $wgLocalDatabases, $IP;
-		$privateWikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../dblists/private.dblist" ) ) );
-		$fishbowlWikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../dblists/fishbowl.dblist" ) ) );
-		$closedWikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../dblists/closed.dblist" ) ) );
-		$list = array_diff( $wgLocalDatabases,
-			$privateWikis, $fishbowlWikis, $closedWikis );
+		$privateWikis = array_map( 'trim', file( getRealmSpecificFilename( MULTIVER_COMMON . '/dblists/private.dblist' ) ) );
+		$fishbowlWikis = array_map( 'trim', file( getRealmSpecificFilename( MULTIVER_COMMON . '/dblists/fishbowl.dblist' ) ) );
+		$closedWikis = array_map( 'trim', file( getRealmSpecificFilename( MULTIVER_COMMON . '/dblists/closed.dblist' ) ) );
+		$list = array_diff( $wgLocalDatabases, $privateWikis, $fishbowlWikis, $closedWikis );
 		return true;
 	}
 
@@ -2362,7 +2361,7 @@ if ( $wmgUseDisableAccount ) {
 
 if ( $wmgUseIncubator ) {
 	require_once( "$IP/extensions/WikimediaIncubator/WikimediaIncubator.php" );
-	$wmincClosedWikis = getRealmSpecificFilename( "$IP/../dblists/closed.dblist" );
+	$wmincClosedWikis = getRealmSpecificFilename( MULTIVER_COMMON . '/dblists/closed.dblist' );
 }
 
 if ( $wmgUseWikiLove ) {

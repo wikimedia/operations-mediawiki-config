@@ -13,8 +13,8 @@ Changes to be made for this version of Het Deploy:
 'wgCacheDirectory' => array(
     'default' => '/tmp/mw-cache-' . $wgVersionDirectory,
 * Create the following new symlinks:
-** /apache/common/live-1.5/extensions-<version>
-** /apache/common/live-1.5/skins-<version>
+** /srv/deployment/mediawiki/common/live-1.5/extensions-<version>
+** /srv/deployment/mediawiki/live-1.5/skins-<version>
 
 * TODO: Maintenance script changes are not done yet. Checked in as a patch for now.
 

@@ -58,7 +58,7 @@ switch( $wmfRealm ) {
 	default:
 }
 
-$wgConf->wikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../dblists/all.dblist" ) ) );
+$wgConf->wikis = array_map( 'trim', file( getRealmSpecificFilename( MULTIVER_COMMON . '/dblists/all.dblist' ) ) );
 
 $wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
 
