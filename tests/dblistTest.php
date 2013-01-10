@@ -59,17 +59,13 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 			# available in production ('all'). So we do not verify it.
 			'all-labs',
 
-			# Same goes for wikivoyage which is not in production as of
-			# November 2012
-			'wikivoyage',
-
 			'closed',
 			'deleted',
-			'new_wiktionaries',
-			'news',
 			'private',
 			'special',
-			'todo',
+			'small',
+			'medium'
+			'large',
 		);
 
 		foreach( $dbs as $dbfile => $dbnames ) {
