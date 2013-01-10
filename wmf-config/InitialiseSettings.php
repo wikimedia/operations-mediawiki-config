@@ -11982,14 +11982,8 @@ $wgConf->settings = array(
 # disable its API modules in CommonSettings.php or below
 'wmgEnableGeoData' => array(
 	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'enwiki' => true,
 	'wiki' => true,
 	'wikivoyage' => true,
-	'commonswiki' => false,
-	'wikidatawiki' => false,
-	'metawiki' => false,
 ),
 
 'wmgEnableGeoSearch' => array(
