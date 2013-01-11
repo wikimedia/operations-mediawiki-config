@@ -205,6 +205,12 @@ return array(
 		'commonswiki'	=> true,
 		'enwiki'	=> true,
 	),
+
+	'wmgUseSearchExtraNS' => array(
+		'default' => false,
+		'commonswiki' => true,  // Bug 43329
+		'enwikivoyage' => true, // cf. http://www.mediawiki.org/wiki/Wikivoyage_migration/Extensions
+	),
 );
 
 } # wmflLabsSettings()

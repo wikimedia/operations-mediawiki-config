@@ -59,6 +59,11 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgEnableTranscode = true; //enable transcoding on labs
 }
 
+//Test SearchExtraNS for Wikivoyage and Commons -- Dereckson
+if ( $wmgUseSearchExtraNS ) {
+	require_once( "$IP/extensions/SearchExtraNS/SearchExtraNS.php" );
+}
+
 if ($wgDBname == "testwiki") {
 	$wgCaptchaDirectory = '/mnt/upload7/private/captcha/random';
 }
