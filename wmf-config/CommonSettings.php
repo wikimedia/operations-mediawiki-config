@@ -2512,6 +2512,9 @@ if ( $wmgUseLastModified ) {
 	require_once( "$IP/extensions/LastModified/LastModified.php" );
 }
 
+# Avoid excessive drops in squid hit rates
+$wgMaxBacklinksInvalidate = 200000;
+
 #
 # If a job runner takes too long to finish a job, assume it died and re-assign the job
 $wgJobTypeConf['default']['claimTTL'] = 3600;
