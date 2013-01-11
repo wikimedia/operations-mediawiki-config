@@ -31,6 +31,14 @@ $wmfThrottlingExceptions[] = array( // UCSF event at medical school
 	'dbname' => array( 'enwiki', 'commonswiki' ),
 	'value'  => 200,                          // 100 to 150 participants expected
 );
+// Wikipedia Summit Pune, https://bugzilla.wikimedia.org/show_bug.cgi?id=43856
+$wmfThrottlingExceptions[] = array(
+	'from'   => '2013-01-12T10:00 +5:30',
+	'to'     => '2013-01-12T17:00 +5:30',
+	'IP'     => array( '14.140.227.67', '14.140.227.68' ),
+	'dbname' => array( 'enwiki', 'commonswiki' ),
+	'value'  => ???,
+);
 
 ## Add throttling definitions above.
 
