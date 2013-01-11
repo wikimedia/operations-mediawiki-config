@@ -73,7 +73,7 @@ $wgLBFactoryConf = array(
 		'db63'    => 0,
 		'db38'	  => 200,
 		'db32'	  => 0, # snapshot host
-		# 'db59'    => 0, lagged -- TS 2013-01-11
+		'db59'    => 400,
 		'db60'    => 400,
 		'db36'	  => 100, # special contrib, watchlist, etc
 	),
