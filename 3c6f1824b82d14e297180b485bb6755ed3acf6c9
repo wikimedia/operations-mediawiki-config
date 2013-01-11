@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADg3///LM\u003d",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-01-11T13:33:23Z",
+      "side": 1,
+      "message": "Um, I\u0027m guessing you\u0027re waiting (as I was) for the actual number here?",
+      "revId": "3c6f1824b82d14e297180b485bb6755ed3acf6c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
