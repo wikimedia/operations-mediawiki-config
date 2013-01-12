@@ -1995,10 +1995,11 @@ if ( $wmgUseUsabilityInitiative ) {
 	}
 
 	if ( $wmgClickTracking ) {
+		// ClickTracking is deprecated and (as of 12-Jan-2013) slated for removal.
 		require "$IP/extensions/ClickTracking/ClickTracking.php";
 
 		$wgClickTrackThrottle = $wmgClickTrackThrottle;
-		$wgClickTrackingLog = 'udp://208.80.152.184:8421/' . $wgDBname; // 208.80.152.184 = emery
+		$wgClickTrackingLog = '/dev/null';
 		$wgClickTrackingDatabase = false;
 		# Disable Special:ClickTracking, not secure yet (as of r59230)
 		unset( $wgSpecialPages['ClickTracking'] );
