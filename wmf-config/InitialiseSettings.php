@@ -6474,6 +6474,7 @@ $wgConf->settings = array(
 	'dewikiversity' => true,
 	'dewiktionary' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=4542
 	'enwikisource' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=5475
+	'enwikivoyage' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=43908
 	'enwiktionary' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=7248
 	'eswiktionary' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=7953
 	'fawikinews' => true,
