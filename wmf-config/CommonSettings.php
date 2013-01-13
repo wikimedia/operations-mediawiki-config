@@ -1374,15 +1374,13 @@ foreach ( $groupOverrides2 as $group => $permissions ) {
 	}
 	$wgGroupPermissions[$group] = $permissions + $wgGroupPermissions[$group];
 }
+
 foreach ( $groupOverrides as $group => $permissions ) {
 	if ( !array_key_exists( $group, $wgGroupPermissions ) ) {
 		$wgGroupPermissions[$group] = array();
 	}
 	$wgGroupPermissions[$group] = $permissions + $wgGroupPermissions[$group];
 }
-
-$wgGroupPermissions['confirmed'] = $wgGroupPermissions['autoconfirmed'];
-$wgGroupPermissions['confirmed']['skipcaptcha'] = true;
 
 $wgAutopromote = array(
 	'autoconfirmed' => array( '&',
@@ -2796,6 +2794,10 @@ if ( file_exists( "$wmfConfigDir/ext-$wmfRealm.php" ) ) {
 
 // https://bugzilla.wikimedia.org/show_bug.cgi?id=37211
 $wgUseCombinedLoginLink = false;
+
+// Confirmed can do anything autoconfirmed can.
+$wgGroupPermissions['confirmed'] = $wgGroupPermissions['autoconfirmed'];
+$wgGroupPermissions['confirmed']['skipcaptcha'] = true;
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
