@@ -57,6 +57,15 @@ function getRealmSpecificFilename( $filename ) {
 	$base = substr( $filename, 0, $dotPos );
 	$ext = substr( $filename, $dotPos );
 
+	# Test existence of the following file suffix and return
+	# immediately whenever found:
+	#  - {realm}-{datacenter}
+	#  - {realm}
+	#  - {datacenter}
+	#  - {}
+	#
+	# Please update /README whenever changing code below.
+
 	$new_filename = "{$base}-{$wmfRealm}-{$wmfDatacenter}{$ext}";
 	if ( file_exists( $new_filename ) ) {
 		return $new_filename;
