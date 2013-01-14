@@ -2743,18 +2743,17 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBSettings['repoDatabase'] = 'wikidatawiki';
 	$wgWBSettings['changesDatabase'] = 'wikidatawiki';
 
-	// can use the default, protocol relative once https://gerrit.wikimedia.org/r/#/c/36193/
-	// gets merged and deployed
-	$wgWBSettings['repoUrl'] = 'https://wikidata.org';
-
-	// for test2wiki; once https://gerrit.wikimedia.org/r/#/c/36201/ is merged and
-	// deployed the default will be same as $wgDBname, so should work for all wikipedias
-	$wgWBSettings['siteGlobalID'] = 'enwiki';
+	// to be safe, keeping this here although $wgDBname is default setting
+	$wgWBSettings['siteGlobalID'] = $wgDBname;
 
 	$wgWBSettings['repoNamespaces'] = array(
 		'wikibase-item' => '',
 		'wikibase-property' => 'Property'
 	);
+
+	foreach( $wmgWikibaseClientSettings as $setting => $value ) {
+		$wgWBSettings[$setting] = $value;
+	}
 }
 
 if ( ( $wmgUseTranslate && $wmgUseTranslationMemory ) || $wmgEnableGeoData ) {
