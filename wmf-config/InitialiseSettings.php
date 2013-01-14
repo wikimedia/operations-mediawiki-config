@@ -12223,11 +12223,11 @@ $wgConf->settings = array(
 			NS_TEMPLATE, NS_TEMPLATE_TALK, NS_HELP, NS_HELP_TALK, NS_CATEGORY, NS_CATEGORY_TALK
 		),
 	),
-	'testwiki' => array(
+	'test2wiki' => array(
 		'siteGlobalID' => 'enwiki'
 	),
 	'huwiki' => array(
-		'namespaces' => array( 0, NS_TALK, NS_USER, NS_USER_TALK, NS_PROJECT,
+		'namespaces' => array( NS_MAIN, NS_TALK, NS_USER, NS_USER_TALK, NS_PROJECT,
 			NS_PROJECT_TALK, NS_FILE, NS_FILE_TALK, NS_MEDIAWIKI, NS_MEDIAWIKI_TALK,
 			NS_TEMPLATE, NS_TEMPLATE_TALK, NS_HELP, NS_HELP_TALK, NS_CATEGORY,
 			NS_CATEGORY_TALK, 100, 101 ),
