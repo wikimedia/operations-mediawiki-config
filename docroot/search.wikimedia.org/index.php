@@ -13,7 +13,6 @@ function dieOut( $msg='' ) {
 
 error_reporting(E_ALL);
 ini_set("display_errors", false);
-ini_set('user_agent', 'Wikimedia OpenSearch to Apple Dictionary bridge');
 
 $caching = true;
 
@@ -65,14 +64,22 @@ $urlSearch = urlencode( $search );
 
 # OpenSearch JSON suggest API
 $url = "http://$lang.$site.org/w/api.php?action=opensearch&search=$urlSearch&limit=$limit";
-
-$result = file_get_contents( $url );
-if( !$result ) {
+$c = curl_init( $url );
+curl_setopt_array( $c, array(
+	CURLOPT_RETURNTRANSFER => true,
+	CURLOPT_TIMEOUT_MS => 5000,
+	CURLOPT_USERAGENT => 'Wikimedia OpenSearch to Apple Dictionary bridge'
+) );
+$result = curl_exec( $c );
+$code = curl_getinfo( $c, CURLINFO_HTTP_CODE );
+if( $result === false || !$code ) {
 	dieOut( "Backend failure." );
+}
+if ( $code != 200 ) {
+	dieOut( "Backend failure: it returned HTTP code $code." );
 }
 
 $suggest = json_decode( $result );
-//echo "<pre>"; var_dump( $suggest ); echo "</pre>";
 
 // Confirm return result was format we expect
 // for opensearch...
@@ -92,7 +99,6 @@ print "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"DTD/xh
 	"<body>";
 
 foreach( $results as $result ) {
-	#<div><span class="language">en</span>:<span class="key">Leban_Mohamed_Nour</span></div>
 	$htmlResult = htmlspecialchars( str_replace( ' ', '_', $result ) );
 	print "<div><span class=\"language\">$lang</span>:<span class=\"key\">$htmlResult</span></div>";
 }
@@ -103,5 +109,3 @@ if( empty( $results ) ) {
 }
 
 print "</body></html>\n";
-
-?>
