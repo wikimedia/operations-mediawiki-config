@@ -47,3 +47,57 @@ wmf-config/mc.php
 wmf-config/*-labs.php
  Files used by the beta cluster to override production settings.
 
+
+By using getRealmSpecificFilename(), from multiversion/Realm.php, one can have
+configuration loaded depending on the realm or the datacenter the file is
+executed on.  The function will test out several file prefixes and return the
+filename of the first match.  The detection order is:
+
+ - realm datacenter
+ - realm
+ - datacenter
+
+Falling back to the filename given as argument.
+
+Example, per datacenter:
+
+ Given the files:
+  - mc-pmtpa.php
+  - mc.php
+
+ The call to getRealmSpecificFilename( 'mc.php' ) will return:
+
+  - on pmtpa: mc-pmtpa.php
+  - on any other datacenter (ex: eqiad): mc.php
+
+
+Example per realm with a non php file extension:
+
+ Given the files
+  - db-production.log
+  - db-labs.log
+
+ The call to getRealmSpecificFilename( 'db.log' ) will return:
+
+  - in a labs instance: 'db-labs.log'
+  - on a production server: 'db-production.log'
+
+A more complicated example:
+
+ Given the files:
+  - log-production.php
+  - log-eqiad.php
+  - log.php
+
+ The call to getRealmSpecificFilename( 'log.php' ) will return:
+
+  - in labs eqiad: 'log-eqiad.php'
+  - in labs pmtpa: 'log.php'
+  - in production pmtpa: 'log-production.php'
+  - in production eqiad: 'log-production.php'
+
+ The last case is because the realm takes precedence over the datacenter.
+ You can also use a realm/datacenter prefix:
+  'log-production-eqiad.php'.
+
+You can find more examples in tests/multiversion/MWRealmTest.php.
