@@ -12214,6 +12214,7 @@ $wgConf->settings = array(
 'wmgUseWikibaseClient' => array(
 	'default' => false,
 	'test2wiki' => true,
+	'huwiki' => true,
 ),
 
 'wmgWikibaseClientSettings' => array(
