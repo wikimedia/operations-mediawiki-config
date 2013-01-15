@@ -2262,7 +2262,11 @@ if ( $wmgUseUploadWizard ) {
 
 if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
-	$wgVisualEditorParsoidURL = 'http://208.80.152.152:6081'; // 208.80.152.152 is celsus.wikimedia.org
+	$wmgVisualEditorParsoidHosts = array(
+		'pmtpa' => '208.80.152.152', // celsus.wikimedia.org
+		'eqiad' => '208.80.154.147', // cerium.wikimedia.org
+	);
+	$wgVisualEditorParsoidURL = 'http://' . $wmgVisualEditorParsoidHosts[$wmfDatacenter] . ':6081';
 	$wgVisualEditorParsoidPrefix = $wmgVisualEditorParsoidPrefix;
 	$wgVisualEditorNamespaces = $wmgVisualEditorNamespaces;
 
