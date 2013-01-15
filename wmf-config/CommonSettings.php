@@ -2428,14 +2428,10 @@ if ( $wmgUseTranslate ) {
 	$wgTranslateWorkflowStates = $wmgTranslateWorkflowStates;
 	$wgTranslateRcFilterDefault = $wmgTranslateRcFilterDefault;
 
-	$wgTranslateTasks = array(
-		'view'                 => 'ViewMessagesTask',
-		'untranslated'         => 'ViewUntranslatedTask',
-		'acceptqueue'          => 'AcceptQueueMessagesTask',
-		'reviewall'            => 'ReviewAllMessagesTask',
-		// Makes no sense as import is not enabled
-		//'export-as-po'         => 'ExportasPoMessagesTask',
-	);
+	unset( $wgTranslateTasks['export-as-po'] );
+	unset( $wgTranslateTasks['export-as-file'] );
+	unset( $wgTranslateTasks['optional'] );
+	unset( $wgTranslateTasks['suggestions'] );
 
 	$wgTranslateUsePreSaveTransform = true; # bug 37304
 
