@@ -139,7 +139,7 @@ class MWMultiVersion {
 			if ( getenv( 'MW_LANG' ) ) {
 				# Language forced from some hacky script like extract2.php
 				$lang = getenv( 'MW_LANG' );
-			} elseif ( preg_match( '/^(?:\/srv\/deployment\/mediawiki\/)(?:htdocs|common\/docroot)\/([a-z]+)\.org/', $docRoot, $matches ) ) {
+			} elseif ( preg_match( '/^(?:\/srv\/deployment\/mediawiki\/)(?:htdocs|common\/docroot)\/([a-z]+)\.org/', $docRoot, $matches ) || preg_match( '/^(?:\/usr\/local\/apache\/|\/home\/wikipedia\/)(?:htdocs|common\/docroot)\/([a-z]+)\.org/', $docRoot, $matches ) ) {
 				# This is the poor man / hacky routing engine for WMF cluster
 				$site = $matches[1];
 				if ( preg_match( '/^(.*)\.' . preg_quote( $site ) . '\.org$/', $serverName, $matches ) ) {
@@ -155,7 +155,7 @@ class MWMultiVersion {
 				} else {
 					self::error( "Invalid host name ($serverName), can't determine language.\n" );
 				}
-			} elseif ( preg_match( "/^\/srv\/deployment\/mediawiki\/(?:htdocs|common\/docroot)\/([a-z0-9\-_]*)$/", $docRoot, $matches ) ) {
+			} elseif ( preg_match( "/^\/srv\/deployment\/mediawiki\/(?:htdocs|common\/docroot)\/([a-z0-9\-_]*)$/", $docRoot, $matches ) || preg_match( "/^\/usr\/local\/apache\/(?:htdocs|common\/docroot)\/([a-z0-9\-_]*)$/", $docRoot, $matches ) ) {
 				$site = "wikipedia";
 				$lang = $matches[1];
 			} else {
