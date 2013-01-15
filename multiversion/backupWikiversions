@@ -11,7 +11,7 @@ require_once( dirname( __FILE__ ) . '/MWRealm.php' );
  * @return void
  */
 function backupWikiversions() {
-	$datPath = MULTIVER_CDB_DIR . '/wikiversions.dat';
+	$datPath = getRealmSpecificFilename( MULTIVER_CDB_DIR . '/wikiversions.dat' );
 
 	# Backup old wikiversions.dat...
 	$timestamp = date( 'c' ); // ISO 8601

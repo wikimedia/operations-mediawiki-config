@@ -23,7 +23,7 @@ function getActiveWikiVersions() {
 	$options = $argv; // copy
 	array_shift( $options ); // first item is this file
 
-	$datPath = MULTIVER_CDB_DIR . '/wikiversions.dat';
+	$datPath = getRealmSpecificFilename( MULTIVER_CDB_DIR . '/wikiversions.dat' );
 
 	# Get all the wikiversion rows in wikiversions.dat...
 	try {
