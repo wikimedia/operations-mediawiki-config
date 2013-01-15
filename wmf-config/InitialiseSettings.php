@@ -12204,7 +12204,7 @@ $wgConf->settings = array(
 
 'wmgUseUniversalLanguageSelector' => array(
 	'default' => false,
-	'testwiki' => true
+	'testwiki' => true,
 	'wikidatawiki' => true,
 ),
 
