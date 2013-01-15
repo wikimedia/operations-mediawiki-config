@@ -7079,6 +7079,9 @@ $wgConf->settings = array(
 	'enwikiversity' => array(
 		'user' => array( 'move' => false ), // autoconfirmed only
 	),
+	'enwikivoyage' => array(
+		'autopatrolled' => array( 'autopatrol' => true ),
+	),
 	// http://bugzilla.wikimedia.org/show_bug.cgi?id=5033
 	'enwiktionary' => array(
 		'user' => array(
@@ -7851,6 +7854,9 @@ $wgConf->settings = array(
 		'bureaucrat' => array ( 'flood' ),
 		'sysop' => array ( 'flood' ),
 	),
+	'+enwikivoyage' => array(
+		'sysop' => array( 'autopatrolled' ),
+	),
 	'+eswiki' => array(
 		'bureaucrat' => array( 'rollbacker', 'confirmed' ),
 		'sysop' => array( 'rollbacker', 'autopatrolled', 'patroller' ),
@@ -8229,6 +8235,9 @@ $wgConf->settings = array(
 	'+enwikinews' => array(
 		'bureaucrat' => array ( 'flood', 'sysop' ),
 		'sysop' => array ( 'flood' ),
+	),
+	'+enwikivoyage' => array(
+		'sysop' => array( 'autopatrolled' ),
 	),
 	'+enwikisource' => array(
 		'bureaucrat' => array( 'autopatrolled', 'flood' ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=36863
