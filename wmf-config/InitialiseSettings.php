@@ -4448,6 +4448,7 @@ $wgConf->settings = array(
 		'generated-pp-node-count' => "udp://$wmfUdp2logDest/generated-pp-node-count",
 		'api' => "udp://$wmfUdp2logDest/api",
 		'bug-38273' => "udp://$wmfUdp2logDest/bug-38273",
+		'SQLBagOStuff' => "udp://$wmfUdp2logDest/sql-bagostuff"
 	),
 
 	// To measure the # of articles on enwiki during the <million => >million transition
