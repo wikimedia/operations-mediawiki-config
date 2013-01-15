@@ -343,24 +343,29 @@ $wgMiserMode = true;
 
 # Object cache and session settings
 
+$pcTemplate = array( 'type' => 'mysql',
+	'dbname' => 'parsercache',
+	'user' => $wgDBuser,
+	'password' => $wgDBpassword,
+	'flags' => 0,
+);
+
+# pc1, pc2, pc3
+foreach ( array( '10.0.0.221', '10.0.0.222', '10.0.0.223' ) as $host ) {
+	$pcServers[] = array( 'host' => $host ) + $pcTemplate;
+}
+
 $wgObjectCaches['mysql-multiwrite'] = array(
 	'class' => 'MultiWriteBagOStuff',
 	'caches' => array(
 		0 => $wgObjectCaches['memcached-pecl'],
-#		1 => array(
-#			'class' => 'SqlBagOStuff',
-#			'server' => array(
-#				'host' => '10.0.0.221', # pc1
-#				'dbname' => 'parsercache',
-#				'user' => $wgDBuser,
-#				'password' => $wgDBpassword,
-#				'type' => 'mysql',
-#				'flags' => 0,
-#			),
-#			'purgePeriod' => 0,
-#			'tableName' => 'pc',
-#			'shards' => 256,
-#		),
+		1 => array(
+			'class' => 'SqlBagOStuff',
+			'servers' => $pcServers,
+			'purgePeriod' => 0,
+			'tableName' => 'pc',
+			'shards' => 256,
+		),
 	)
 );
 
