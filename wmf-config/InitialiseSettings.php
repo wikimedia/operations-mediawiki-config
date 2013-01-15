@@ -6523,7 +6523,7 @@ $wgConf->settings = array(
 	'zhwiktionary' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=5596
 
 	'test2wiki' => true, // request by Krinkle for testing
-
+	'wikivoyage' => true, // requested by Erik
 ),
 # @}
 
