@@ -2700,8 +2700,7 @@ if ( $wmgUseEventLogging ) {
 
 if ( $wmgUseUniversalLanguageSelector ) {
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
-	$wgULSGeoService = "https://geoiplookup.wikimedia.org/";
-	$wgULSIMEEnabled = false;
+	$wgULSGeoService = false;
 	$wgULSEnableAnon = false;
 }
 
