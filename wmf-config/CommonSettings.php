@@ -16,7 +16,7 @@
 #
 # More modern PHP versions will send a 500 result code on fatal erorr,
 # at least sometimes, but what we're running will send a 200.
-if( php_sapi_name() != 'cli' ) {
+if( PHP_SAPI != 'cli' ) {
 	header( "Cache-control: no-cache" );
 }
 
@@ -29,7 +29,7 @@ if( php_sapi_name() != 'cli' ) {
 
 # -----------------
 
-if ( php_sapi_name() == 'cli' ) {
+if ( PHP_SAPI == 'cli' ) {
 	# Override for sanity's sake.
 	ini_set( 'display_errors', 1 );
 	# error_reporting(E_ALL);
@@ -414,7 +414,7 @@ $wgNamespacesWithSubpages[101] = 1;
  */
 
 # Not CLI, see http://bugs.php.net/bug.php?id=47540
-if ( php_sapi_name() != 'cli' ) {
+if ( PHP_SAPI != 'cli' ) {
 	ignore_user_abort( true );
 } else {
 	$wgShowExceptionDetails = true;
@@ -2312,7 +2312,7 @@ if ( $wmgUseCLDR ) {
 }
 
 # APC not available in CLI mode
-if ( php_sapi_name() === 'cli' ) {
+if ( PHP_SAPI === 'cli' ) {
 	$wgLanguageConverterCacheType = CACHE_NONE;
 }
 

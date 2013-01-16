@@ -348,7 +348,7 @@ class MWMultiVersion {
 	 */
 	private static function error( $msg ) {
 		$msg = (string)$msg;
-		if ( php_sapi_name() !== 'cli' ) {
+		if ( PHP_SAPI !== 'cli' ) {
 			$msg = htmlspecialchars( $msg );
 		}
 		header( 'HTTP/1.1 500 Internal server error' );

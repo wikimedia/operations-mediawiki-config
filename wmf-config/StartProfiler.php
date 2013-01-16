@@ -28,7 +28,7 @@ if ( @defined( $_REQUEST['forceprofile'] ) ) {
 		$wgProfiler->setProfileID( $version );
 	}
 	/*
-	if ( php_sapi_name() == 'cli' ) {
+	if ( PHP_SAPI == 'cli' ) {
 		$wgProfiler->setProfileID( 'cli' );
 	} else {
 		$wgProfiler->setProfileID( 'all' );
