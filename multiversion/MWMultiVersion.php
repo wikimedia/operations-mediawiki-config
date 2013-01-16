@@ -146,10 +146,10 @@ class MWMultiVersion {
 					$lang = $matches[1];
 					// For some special subdomains, like pa.us
 					$lang = str_replace( '.', '-', $lang );
-				} else if ( preg_match( '/^(.*)\.prototype\.wikimedia\.org$/', $serverName, $matches ) ) {
+				} elseif ( preg_match( '/^(.*)\.prototype\.wikimedia\.org$/', $serverName, $matches ) ) {
 					// http://en.prototype.wikimedia.org/
 					$lang = $matches[1];
-				} else if ( preg_match( '/^([^.]+)\.[^.]+\.beta\.wmflabs\.org$/', $serverName, $matches ) ) {
+				} elseif ( preg_match( '/^([^.]+)\.[^.]+\.beta\.wmflabs\.org$/', $serverName, $matches ) ) {
 					// http://en.wikipedia.beta.wmflabs.org/
 					$lang = $matches[1];
 				} else {
