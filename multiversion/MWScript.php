@@ -25,6 +25,17 @@ function getMWScriptWithArgs() {
 		exit( 1 );
 	}
 
+	# Security check -- don't allow scripts to run as privileged users
+	$gids = posix_getgroups();
+	foreach ( $gids as $gid ) {
+		$info = posix_getgrgid( $gid );
+		if ( $info && in_array( $info['name'], array( 'sudo', 'wikidev', 'root' ) ) ) {
+			fwrite( STDERR, "Cannot run a MediaWiki script as a user in the " .
+				"group {$info['name']}\n" );
+			exit( 1 );
+		}
+	}
+
 	$relFile = $argv[1]; // the script file to run
 	# If no MW directory is given then assume this is a /maintenance script
 	if ( strpos( $relFile, '/' ) === false ) {
