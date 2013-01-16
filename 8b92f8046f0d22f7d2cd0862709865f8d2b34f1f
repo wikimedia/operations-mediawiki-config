@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//8d4\u003d",
+        "filename": "multiversion/MWScript.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-01-16T08:10:44Z",
+      "side": 1,
+      "message": "Given I am in the wikidev group, how would I run \u0027mwscript eval.php --wiki\u003denwiki\u0027 ?  Should I sudo as apache  or mwdeploy?  Should I thus do something like:\n\n sudo -u apache mwscript eval.php --wiki\u003denwiki",
+      "revId": "8b92f8046f0d22f7d2cd0862709865f8d2b34f1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
