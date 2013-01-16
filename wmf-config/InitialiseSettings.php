@@ -8239,6 +8239,7 @@ $wgConf->settings = array(
 	),
 	'+enwikivoyage' => array(
 		'sysop' => array( 'autopatrolled' ),
+		'bureaucrat' => array( 'sysop' ),
 	),
 	'+enwikisource' => array(
 		'bureaucrat' => array( 'autopatrolled', 'flood' ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=36863
