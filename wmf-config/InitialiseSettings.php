@@ -7081,6 +7081,7 @@ $wgConf->settings = array(
 	),
 	'enwikivoyage' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
+		'bureaucrat' => array( 'usermerge' => true ),
 	),
 	// http://bugzilla.wikimedia.org/show_bug.cgi?id=5033
 	'enwiktionary' => array(
