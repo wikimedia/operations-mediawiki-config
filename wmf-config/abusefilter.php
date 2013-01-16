@@ -64,6 +64,7 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
 	$wgAbuseFilterNotifications = "udp";
+	$wgAbuseFilterNotificationsPrivate = true; // bug 44045
 
 } elseif ( $wgDBname == 'enwikisource' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
