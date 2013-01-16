@@ -1456,7 +1456,9 @@ if ( $wmgEnableCaptcha ) {
 	require( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 	require( "$IP/extensions/ConfirmEdit/FancyCaptcha.php" );
 	$wgGroupPermissions['autoconfirmed']['skipcaptcha'] = true;
-	$wgCaptchaFileBackend = 'global-multiwrite';
+	if ( $wmfRealm !== 'labs' ) {
+		$wgCaptchaFileBackend = 'global-multiwrite';
+	}
 	# $wgCaptchaTriggers['edit'] = true;
 	$wgCaptchaSecret = $wmgCaptchaSecret;
 	$wgCaptchaDirectory = '/mnt/upload7/private/captcha';
