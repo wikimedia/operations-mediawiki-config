@@ -1071,7 +1071,7 @@ if ( $wgDBname == 'foundationwiki' ) {
 
 if ( $wmgUseContributionReporting ) {
 	include( "$IP/extensions/ContributionReporting/ContributionReporting.php" );
-	include( "$wmfConfigDir/reporting-setup.php" );
+	include( MULTIVER_PRIVATE . '/wmf-config/reporting-setup.php' );
 }
 
 if ( $wmgPFEnableStringFunctions ) {
@@ -2193,7 +2193,7 @@ function wmfBlockJokerEmails( &$to, &$from, &$subject, &$text ) {
 // ContributionTracking for handling PayPal redirects
 if ( $wgUseContributionTracking ) {
 	include( "$IP/extensions/ContributionTracking/ContributionTracking.php" );
-	include( "$wmfConfigDir/contribution-tracking-setup.php" );
+	include( MULTIVER_PRIVATE . '/wmf-config/contribution-tracking-setup.php' );
 	$wgContributionTrackingPayPalIPN = "https://civicrm.wikimedia.org/fundcore_gateway/paypal";
 	$wgContributionTrackingPayPalRecurringIPN = "https://civicrm.wikimedia.org/IPNListener_Recurring.php";
 	$wgContributionTrackingUTMKey = true;
