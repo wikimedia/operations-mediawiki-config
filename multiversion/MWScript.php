@@ -1,6 +1,7 @@
 <?php
 if ( PHP_SAPI !== 'cli' ) {
-	die( "This script can only be run from the command line.\n" );
+	echo "This script can only be run from the command line.\n";
+	exit( 1 );
 }
 
 /**
@@ -20,7 +21,8 @@ if ( PHP_SAPI !== 'cli' ) {
 function getMWScriptWithArgs() {
 	global $argv;
 	if ( count( $argv ) < 2 ) {
-		die( "The MediaWiki script file path must be the first argument.\n" );
+		fwrite( STDERR, "This script can only be run from the command line.\n" );
+		exit( 1 );
 	}
 
 	$relFile = $argv[1]; // the script file to run
@@ -59,7 +61,8 @@ function getMWScriptWithArgs() {
 	require_once( dirname( __FILE__ ) . '/MWVersion.php' );
 	$file = getMediaWikiCli( $relFile );
 	if ( !file_exists( $file ) ) {
-		die( "The MediaWiki script file \"{$file}\" does not exist.\n" );
+		fwrite( STDERR, "The MediaWiki script file \"{$file}\" does not exist.\n" );
+		exit( 1 );
 	}
 
 	return $file;
