@@ -205,6 +205,18 @@ return array(
 		'commonswiki'	=> true,
 		'enwiki'	=> true,
 	),
+	'wmgMobileUrlTemplate' => array(
+		'default' => '',//'%h0.m.%h1.%h2',
+		'foundationwiki' => '',
+		'commonswiki' => '',
+		'mediawikiwiki' => '',//'m.%h1.%h2',
+	),
+	'wmgZeroRatedMobileAccess' => array(
+		'default' => false,
+	),
+	'wmgMFPhotoUploadEndpoint' => array(
+		'default' => '',
+	),
 );
 
 } # wmflLabsSettings()
