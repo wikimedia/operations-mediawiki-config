@@ -11,6 +11,7 @@ AdminSettings.php
 PrivateSettings.php
 xrumer
 mwblocker.log
+wikiversions.cdb
 wmf-config/*-setup.php
 wmf-config/checkers.php
 lib
