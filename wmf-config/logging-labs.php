@@ -3,7 +3,7 @@
 // tweak to logs
 //
 
-if ( $wgCommandLineMode || php_sapi_name() == 'cli' ) {
+if ( $wgCommandLineMode || PHP_SAPI == 'cli' ) {
 	$wgDebugLogFile = "udp://$wmfUdp2logDest/cli";
 } else {
 	$wgDebugLogFile = "udp://$wmfUdp2logDest/web";
