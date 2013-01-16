@@ -31,6 +31,7 @@ arwikiversity
 astwikibooks
 astwikiquote
 aswikibooks
+aswikisource
 aswiktionary
 auditcomwiki
 avwiki
@@ -136,6 +137,7 @@ eowikinews
 eowikiquote
 eowikisource
 eswikiversity
+eswikivoyage
 etwikibooks
 etwikimedia
 etwikiquote
@@ -158,7 +160,6 @@ fjwiki
 fowikisource
 fowiktionary
 frpwiki
-frrwiki
 furwiki
 fywikibooks
 gagwiki
@@ -222,7 +223,6 @@ jawikisource
 jawikiversity
 jbowiki
 jbowiktionary
-jvwiktionary
 kaawiki
 kabwiki
 kawikibooks
@@ -287,7 +287,6 @@ lvwikibooks
 lvwiktionary
 mdfwiki
 mgwikibooks
-mhrwiki
 mhwiki
 mhwiktionary
 miwikibooks
@@ -351,9 +350,9 @@ omwiktionary
 orwiktionary
 otrs_wikiwiki
 outreachwiki
+pa_uswikimedia
 pagwiki
 papwiki
-pa_uswikimedia
 pawikibooks
 pawiktionary
 pcdwiki
@@ -367,6 +366,7 @@ pnbwiktionary
 pntwiki
 pswikibooks
 ptwikiversity
+ptwikivoyage
 qualitywiki
 quwikibooks
 quwikiquote
@@ -497,7 +497,6 @@ urwikiquote
 usabilitywiki
 uzwikibooks
 uzwikiquote
-uzwiktionary
 vecwikisource
 vepwiki
 vewiki
@@ -537,7 +536,6 @@ zeawiki
 zh_min_nanwikibooks
 zh_min_nanwikiquote
 zh_min_nanwikisource
-zhwikiquote
 zuwiki
 zuwikibooks
 zuwiktionary
