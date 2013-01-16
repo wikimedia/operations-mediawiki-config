@@ -205,6 +205,61 @@ return array(
 		'commonswiki'	=> true,
 		'enwiki'	=> true,
 	),
+	'wmgMobileFrontend' => array(
+		'default' => true,
+	),
+	'wmgMobileFrontendLogo' => array(
+		'default' => '//upload.wikimedia.org/wikipedia/commons/8/84/W_logo_for_Mobile_Frontend.gif',
+		'wikinews' => '//upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/35px-Wikinews-logo.svg.png',
+		'wiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Wiktionary-logo-en.png/35px-Wiktionary-logo-en.png',
+		'wikibooks' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/35px-Wikibooks-logo.svg.png',
+		'wikiversity' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/35px-Wikiversity-logo.svg.png',
+		'specieswiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Wikispecies-logo.png/35px-Wikispecies-logo.png',
+		'commonswiki' => '//upload.wikimedia.org/wikipedia/commons/4/42/22x35px-Commons-logo.png',
+		'wikiquote' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikiquote-logo.svg/35px-Wikiquote-logo.svg.png',
+		'metawiki' => '//upload.wikimedia.org/wikipedia/commons/2/23/22x35px-Wikimedia_Community_Logo.png',
+		'foundationwiki' => '//upload.wikimedia.org/wikipedia/commons/8/81/35x22px-Wikimedia-logo.png',
+		'wikisource' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikisource-logo.svg/35px-Wikisource-logo.svg.png',
+	),
+	'wmgMobileUrlTemplate' => array(
+		'default' => '',//'%h0.m.%h1.%h2',
+		'foundationwiki' => '',
+		'commonswiki' => '',
+		'mediawikiwiki' => '',//'m.%h1.%h2',
+	),
+	'wmgMFRemovableClasses' => array(
+		'default' => array( 'table.metadata',
+				   '.metadata mbox-small',
+				   '.metadata plainlinks ambox ambox-content',
+				   '.metadata plainlinks ambox ambox-move',
+				   '.metadata plainlinks ambox ambox-style', ),
+	),
+	'wmgMFCustomLogos' => array(
+		'default' => array(
+			'site' => 'wikipedia',
+			'logo' => '//upload.wikimedia.org/wikipedia/commons/5/54/Mobile_W_beta_light.png'
+		),	
+		'enwiki' => array(
+			'site' => 'wikipedia',
+			'logo' => '//upload.wikimedia.org/wikipedia/commons/5/54/Mobile_W_beta_light.png',
+			'copyright' => '{wgExtensionAssetsPath}/MobileFrontend/stylesheets/common/images/logo-copyright-en.png'
+		),
+	),
+	'testwiki' => array(
+		'site' => 'wikipedia',
+		'logo' => '//upload.wikimedia.org/wikipedia/commons/5/54/Mobile_W_beta_light.png',
+		// {wgExtensionAssetsPath} will get replaced with $wgExtensionAssetsPath in CustomSettings.php
+		'copyright' => '{wgExtensionAssetsPath}/MobileFrontend/stylesheets/common/images/logo-copyright-en.png'
+	),
+	'wmgMFEnableDesktopResources' => array(
+		'default' => true,
+	),
+	#'wmgMFPhotoUploadEndpoint' => array(
+	#	'default' => '//commons.wikimedia.org/w/api.php',
+	#),
+	'wmgMFForceSecureLogin' => array(
+		'default' => true,
+	),
 );
 
 } # wmflLabsSettings()
