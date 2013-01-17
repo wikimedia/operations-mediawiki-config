@@ -22,8 +22,8 @@ $wgLucenePrefixHost = '10.2.1.15'; # LVS search-prefix pool
 $wgLucenePort = 8123;
 if ( in_array( $wgDBname, array( 'enwiki' ) ) ) {
 	# Big RAM pool 1, via LVS
-	#$wgLuceneHost = '10.2.2.11'; # eqiad
-	$wgLuceneHost = '10.2.1.11'; # pmtpa
+	$wgLuceneHost = '10.2.2.11'; # eqiad
+	#$wgLuceneHost = '10.2.1.11'; # pmtpa
 } elseif ( in_array( $wgDBname, array( 'dewiki', 'frwiki', 'jawiki' ) ) ) {
 	# Big RAM pool 2, via LVS
 	#$wgLuceneHost = '10.2.2.12'; # eqiad
