@@ -7400,6 +7400,12 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 	),
 	'nlwiktionary' => array( 'user' => array( 'patrol' => true ) ),
+	'nlwikivoyage' => array(
+		'autopatrolled' => array(
+			'autopatrol' => true, // bug 44082
+			'patrol' => true, // bug 44082
+		),
+	),
 	'nlwikibooks' => array( 'user' => array( 'patrol' => true ) ),
 	// 'nlwikinews' => array( 'user' => array( 'patrol' => true ) ),
 	'nnwiki' => array(
@@ -8007,6 +8013,9 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller' ),
 		'sysop' => array( 'autopatrolled', 'patroller' ),
 	),
+	'+nlwikivoyage' => array(
+		'bureaucrat ' => array( 'autopatrolled' ), // bug 44082
+	),
 	'+noboard_chapterswikimedia' => array(
 		'bureaucrat' => array( 'import', 'transwiki' ),
 	),
@@ -8396,6 +8405,9 @@ $wgConf->settings = array(
 	),
 	'+nlwikibooks' => array(
 		'sysop' => array( 'abusefilter' ),
+	),
+	'+nlwikivoyage' => array(
+		'bureaucrat ' => array( 'autopatrolled' ), // bug 44082
 	),
 	'+nnwiki' => array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller' ),
