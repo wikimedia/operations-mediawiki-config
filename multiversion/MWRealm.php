@@ -43,6 +43,7 @@ default:
 # Files checked are:
 #   base-realm-datacenter.ext
 #   base-realm.ext
+#   base-datacenter.ext
 #   base.ext
 #
 # @param $filename string Base filename, must contain an extension
