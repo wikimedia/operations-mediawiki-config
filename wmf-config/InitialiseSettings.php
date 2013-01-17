@@ -10759,6 +10759,7 @@ $wgConf->settings = array(
 	'eswiki' => array( 'Wikipedia:Desambiguación', 'Wikipedia:Exclusiones de la evaluación de artículos' ),
 	'hiwiki' => array( 'No Feedback', 'आकलन रहित लेख' ),
 	'ptwiki' => array( '!Páginas que não podem ser avaliadas pelos leitores' ),
+	'ptwikibooks' => array( 'Páginas que não podem ser avaliadas pelos leitores' ),
 	'srwiki' => array( 'Чланци изузети од оцењивања' ),
 	'zhwiki' => array( '消歧义', '条目删除候选', '怀疑侵犯版权页面', '快速删除候选' , '禁止索引的页面' ),
 ),
