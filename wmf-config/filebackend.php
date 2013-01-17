@@ -119,7 +119,7 @@ $wgFileBackends[] = array(
 	'lockManager' => 'nullLockManager', # LocalFile uses FOR UPDATE
 	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname, 'ttlDays' => 240 ),
 	'backends'    => array(
-		array( 'template' => 'local-NFS', 'isMultiMaster' => false ),
+		#array( 'template' => 'local-NFS', 'isMultiMaster' => false ),
 		array( 'template' => 'local-swift', 'isMultiMaster' => true )
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
@@ -132,7 +132,7 @@ $wgFileBackends[] = array(
 	'lockManager' => 'nullLockManager', // just thumbnails
 	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki', 'ttlDays' => 240 ),
 	'backends'    => array(
-		array( 'template' => 'shared-NFS', 'isMultiMaster' => false ),
+		#array( 'template' => 'shared-NFS', 'isMultiMaster' => false ),
 		array( 'template' => 'shared-swift', 'isMultiMaster' => true ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
@@ -144,7 +144,7 @@ $wgFileBackends[] = array(
 	'wikiId'      => "global-data",
 	'lockManager' => 'nullLockManager',
 	'backends'    => array(
-		array( 'template' => 'global-NFS', 'isMultiMaster' => false ),
+		#array( 'template' => 'global-NFS', 'isMultiMaster' => false ),
 		array( 'template' => 'global-swift', 'isMultiMaster' => true ),
 	),
 	'syncChecks'  => ( 1 | 4 ) // (size & sha1)
