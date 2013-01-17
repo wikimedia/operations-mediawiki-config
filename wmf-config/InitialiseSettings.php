@@ -11552,6 +11552,15 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'Utenti %code%-M',
 	),
+	'itwikivoyage' => array(
+		'0' => 'Utenti %code%-0',
+		'1' => 'Utenti %code%-1',
+		'2' => 'Utenti %code%-2',
+		'3' => 'Utenti %code%-3',
+		'4' => 'Utenti %code%-4',
+		'5' => false,
+		'N' => 'Utenti %code%-M',
+	),
 	'jawiki' => array(
 		'0' => false,
 		'1' => 'User %code%-1',
@@ -11781,6 +11790,7 @@ $wgConf->settings = array(
 	'itwikiquote' => 'Utenti %code%',
 	'itwikisource' => 'Utenti %code%',
 	'itwikiversity' => 'Utenti %code%',
+	'itwikivoyage' => 'Utenti %code%',
 	'jawiki' => 'User %code%',
 	'lawiki' => 'Usores %code%',
 	'metawiki' => 'User %code%',
