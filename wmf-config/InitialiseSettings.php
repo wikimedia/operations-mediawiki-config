@@ -11179,6 +11179,7 @@ $wgConf->settings = array(
 	'enwiki' => true,
 	'frwikisource' => true, // bug 34618
 	'incubatorwiki' => true, // bug 32417
+	'itwikivoyage' => true, // bug 43979
 	'nlwiki' => true, // bug 32202
 	'sewikimedia' => true, // bug 32757
 //	'tawiki' => true, // bug 34560 // Disable due to bug 34615
@@ -11187,6 +11188,7 @@ $wgConf->settings = array(
 	'default' => '//www.mediawiki.org/wiki/MoodBar',
 	'enwiki' => '//en.wikipedia.org/wiki/Wikipedia:New_editor_feedback',
 	'frwikisource' => '//fr.wikisource.org/wiki/Wikisource:MoodBar',
+	'itwikivoyage' => '//it.wikivoyage.org/wiki/Wikivoyage:MoodBar',
 	'nlwiki' => '//nl.wikipedia.org/wiki/Help:Feedback',
 ),
 'wmgMoodBarCutoffTime' => array(
