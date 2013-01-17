@@ -489,6 +489,7 @@ $wgConf->settings = array(
 	'eowiki'		=> '$stdlogo',
 	'eowikibooks'		=> '$stdlogo',
 	'eowikinews'		=> '//upload.wikimedia.org/wikipedia/commons/7/76/Wikinews-logo-eo.png',
+	'eowikiquote'		=> '//upload.wikimedia.org/wikiquote/eo/b/bc/Wiki.png', // bug 43879
 	'eowikisource'		=> '//upload.wikimedia.org/wikipedia/commons/5/54/Wikisource-logo-eo-small.png',
 	'eowiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Wiktionary-logo-eo.png/135px-Wiktionary-logo-eo.png', // bug 43240
 	'eswiki'		=> '//upload.wikimedia.org/wikipedia/commons/8/8c/Wikipedia-logo-v2-es.png',
