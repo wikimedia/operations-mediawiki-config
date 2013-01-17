@@ -17,7 +17,7 @@ $wgLuceneSearchTimeout = 10;
 
 # default host for mwsuggest backend
 $wgEnableLucenePrefixSearch = true;
-$wgLucenePrefixHost = '10.2.2.15'; # LVS search-prefix pool
+$wgLucenePrefixHost = '10.2.1.15'; # LVS search-prefix pool
 
 $wgLucenePort = 8123;
 if ( in_array( $wgDBname, array( 'enwiki' ) ) ) {

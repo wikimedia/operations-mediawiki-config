@@ -45,7 +45,9 @@ function getMWScriptWithArgs() {
 		'extensions/WikimediaMaintenance/addWiki.php', // 1.19
 		'extensions/WikimediaMaintenance/dumpInterwiki.php', // 1.19
 		'extensions/WikimediaMaintenance/getJobQueueLengths.php',
-		'extensions/WikimediaMaintenance/rebuildInterwiki.php' // 1.19
+		'extensions/WikimediaMaintenance/rebuildInterwiki.php', // 1.19
+		'maintenance/mctest.php',
+		'maintneance/mcc.php',
 	);
 
 	# Check if a --wiki param was given...
