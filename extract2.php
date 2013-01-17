@@ -22,7 +22,6 @@ $allowed_portals = array(
 	"Www.wikimedia.org_portal",
 	"Www.wikiversity.org_portal",
 	"Www.wikibooks.org_portal",
-	"Www.wikidata.org_portal",
 	"Secure.wikimedia.org_portal",
 	"Www.wikivoyage.org_portal",
 );
@@ -34,7 +33,6 @@ $allowed_templates = array(
 	"Www.wikimedia.org_template",
 	"Www.wikiversity.org_template",
 	"Www.wikibooks.org_template",
-	"Www.wikidata.org_template",
 	"Secure.wikimedia.org_template",
 	"Www.wikivoyage.org_template",
 );
