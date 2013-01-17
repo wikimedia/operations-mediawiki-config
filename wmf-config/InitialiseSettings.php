@@ -5204,6 +5204,10 @@ $wgConf->settings = array(
 	'shwiki' => array( 100 => 'Portal', 101 => 'Razgovor_o_portalu' ), # bug 30928
 	'siwiki' => array( 100 => 'ද්වාරය', 101 => 'ද්වාරය_සාකච්ඡාව' ), # bug 6435, 24936
 	'skwiki' => array( 100 => 'Portál', 101 => 'Diskusia_k_portálu' ),
+	'skwikiquote' => array(
+		100 => 'Deň',             // Bug 44052
+		101 => 'Diskusia_ku_dňu',
+	),
 	'slwiki' => array( 100 => 'Portal', 101 => 'Pogovor_o_portalu' ),
 	'sqwiki' => array( 100 => 'Portal', 101 => 'Portal_diskutim' ),
 	'srwiki' => array(
