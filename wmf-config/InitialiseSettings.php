@@ -12048,6 +12048,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'enwiki' => true,
+	'itwikivoyage' => true,
 ),
 
 'wmgEnablePostEdit' => array(
