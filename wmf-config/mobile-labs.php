@@ -3,9 +3,8 @@
 # WARNING: This file is publically viewable on the web.
 # # Do not put private data here.
 
-if( $wmfRealm === 'labs' ) {  # safeguard
+// Reuse most of production settings
+require_once( __DIR__ . '/mobile.php' );
 
-	# There is no mobile configuration on labs yet.
-	# -- hashar, 2012-06-12
-
-} # safeguard
+// Disabled on deployment-prep until there's EventLogging up and running
+$wgMFLogEvents = false;
