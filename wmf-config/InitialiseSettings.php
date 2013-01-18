@@ -11081,11 +11081,7 @@ $wgConf->settings = array(
 ),
 'wmgUseGoogleNewsSitemap' => array(
 	'default' => false,
-	'elwikinews' => true, // bug 37608
-	'enwikinews' => true,
-	'eswikinews' => true, // bug 38134
-	'fawikinews' => true, // bug 29563
-	'ptwikinews' => true, // bug 33137
+	'wikinews' => true,
 	'testwiki' => true,
 ),
 'wmgGNSMfallbackCategory' => array(
