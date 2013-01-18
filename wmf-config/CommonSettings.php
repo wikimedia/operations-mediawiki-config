@@ -1164,7 +1164,7 @@ if ( $wgUseEmailCapture ) {
 
 // PoolCounter
 if ( $wmgUsePoolCounter ) {
-	include( "$wmfConfigDir/PoolCounterSettings.php" );
+	include( getRealmSpecificFilename( "$wmfConfigDir/PoolCounterSettings.php" ) );
 }
 
 if ( $wmgUseScore ) {
