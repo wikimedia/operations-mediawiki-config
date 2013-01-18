@@ -6832,7 +6832,7 @@ $wgConf->settings = array(
 		 	'collectionsaveascommunitypage' => true,
 			'collectionsaveasuserpage' => true,
 	),
-	   'inactive' => array(
+	'inactive' => array(
 		  // for show only
 		),
 	),
@@ -8014,7 +8014,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller' ),
 	),
 	'+nlwikivoyage' => array(
-		'bureaucrat ' => array( 'autopatrolled' ), // bug 44082
+		'bureaucrat' => array( 'autopatrolled' ), // bug 44082
 	),
 	'+noboard_chapterswikimedia' => array(
 		'bureaucrat' => array( 'import', 'transwiki' ),
@@ -8407,7 +8407,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'abusefilter' ),
 	),
 	'+nlwikivoyage' => array(
-		'bureaucrat ' => array( 'autopatrolled' ), // bug 44082
+		'bureaucrat' => array( 'autopatrolled' ), // bug 44082
 	),
 	'+nnwiki' => array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller' ),
