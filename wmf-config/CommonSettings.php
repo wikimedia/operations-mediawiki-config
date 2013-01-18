@@ -350,16 +350,9 @@ $pcTemplate = array( 'type' => 'mysql',
 	'flags' => 0,
 );
 
-if ($wmfDatacenter == 'eqiad') {
-	# pc1001, pc1002, pc1003
-	foreach ( array( '10.64.16.156', '10.64.16.157', '10.64.16.158' ) as $host ) {
-		$pcServers[] = array( 'host' => $host ) + $pcTemplate;
-	}
-} else {
-	# pc1, pc2, pc3
-	foreach ( array( '10.0.0.221', '10.0.0.222', '10.0.0.223' ) as $host ) {
-		$pcServers[] = array( 'host' => $host ) + $pcTemplate;
-	}
+# pc1, pc2, pc3
+foreach ( array( '10.0.0.221', '10.0.0.222', '10.0.0.223' ) as $host ) {
+	$pcServers[] = array( 'host' => $host ) + $pcTemplate;
 }
 
 $wgObjectCaches['mysql-multiwrite'] = array(
@@ -376,8 +369,10 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 	)
 );
 
-$sessionRedis = array(
-	'pmtpa' => array(
+// Cache to hold user sessions in production:
+$wgObjectCaches['sessions'] = array(
+	'class'   => 'RedisBagOStuff',
+	'servers' => array(
 		'10.0.12.1', # mc1
 		'10.0.12.2', # mc2
 		'10.0.12.3', # mc3
@@ -395,30 +390,6 @@ $sessionRedis = array(
 		'10.0.12.15', # mc15
 		'10.0.12.16', # mc16
 	),
-	'eqiad' => array(
-		'10.64.0.180', # mc1001
-		'10.64.0.181', # mc1002
-		'10.64.0.182', # mc1003
-		'10.64.0.183', # mc1004
-		'10.64.0.184', # mc1005
-		'10.64.0.185', # mc1006
-		'10.64.0.186', # mc1007
-		'10.64.0.187', # mc1008
-		'10.64.0.188', # mc1009
-		'10.64.0.189', # mc1010
-		'10.64.0.190', # mc1011
-		'10.64.0.191', # mc1012
-		'10.64.0.192', # mc1013
-		'10.64.0.193', # mc1014
-		'10.64.0.194', # mc1015
-		'10.64.0.195', # mc1016
-	),
-);
-
-// Cache to hold user sessions in production:
-$wgObjectCaches['sessions'] = array(
-	'class'   => 'RedisBagOStuff',
-	'servers' => $sessionRedis[$wmfDatacenter],
 );
 
 // Override for beta:
