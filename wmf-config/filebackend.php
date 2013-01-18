@@ -110,6 +110,66 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared files
 );
 /* end Swift backend config */
 
+/* Ceph rados+rgw backend config */
+$wgFileBackends[] = array( // backend config for wiki's local repo
+	'class'              => 'SwiftFileBackend',
+	'name'               => 'local-ceph',
+	'wikiId'             => "{$site}-{$lang}",
+	'lockManager'        => 'nullLockManager', // LocalFile uses FOR UPDATE
+	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname, 'ttlDays' => 240 ),
+	'swiftAuthUrl'       => $wmfCephRgwConfig['authUrl'],
+	'swiftUser'          => $wmfCephRgwConfig['user'],
+	'swiftKey'           => $wmfCephRgwConfig['key'],
+	'swiftTempUrlKey'    => $wmfCephRgwConfig['tempUrlKey'],
+	'rgwS3AccessKey'     => $wmfCephRgwConfig['S3AccessKey'],
+	'rgwS3SecretKey'     => $wmfCephRgwConfig['S3SecretKey'],
+	'shardViaHashLevels' => array(
+		'local-public'  => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-thumb'   => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-temp'    => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-deleted' => array( 'levels' => $wmfSwiftShardLocal, 'base' => 36, 'repeat' => 0 )
+	),
+	'parallelize'        => 'implicit',
+	'cacheAuthInfo'      => true
+);
+$wgFileBackends[] = array( // backend config for wiki's access to shared repo
+	'class'              => 'SwiftFileBackend',
+	'name'               => 'shared-ceph',
+	'wikiId'             => "wikipedia-commons",
+	'lockManager'        => 'nullLockManager', // just thumbnails
+	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki', 'ttlDays' => 240 ),
+	'swiftAuthUrl'       => $wmfCephRgwConfig['authUrl'],
+	'swiftUser'          => $wmfCephRgwConfig['user'],
+	'swiftKey'           => $wmfCephRgwConfig['key'],
+	'swiftTempUrlKey'    => $wmfCephRgwConfig['tempUrlKey'],
+	'rgwS3AccessKey'     => $wmfCephRgwConfig['S3AccessKey'],
+	'rgwS3SecretKey'     => $wmfCephRgwConfig['S3SecretKey'],
+	'shardViaHashLevels' => array(
+		'local-public'  => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-thumb'   => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-temp'    => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+	),
+	'parallelize'        => 'implicit',
+	'cacheAuthInfo'      => true
+);
+$wgFileBackends[] = array( // backend config for wiki's access to shared files
+	'class'              => 'SwiftFileBackend',
+	'name'               => 'global-ceph',
+	'wikiId'             => "global-data",
+	'lockManager'        => 'nullLockManager',
+	'swiftAuthUrl'       => $wmfCephRgwConfig['authUrl'],
+	'swiftUser'          => $wmfCephRgwConfig['user'],
+	'swiftKey'           => $wmfCephRgwConfig['key'],
+	'swiftTempUrlKey'    => $wmfCephRgwConfig['tempUrlKey'],
+	'rgwS3AccessKey'     => $wmfCephRgwConfig['S3AccessKey'],
+	'rgwS3SecretKey'     => $wmfCephRgwConfig['S3SecretKey'],
+	'shardViaHashLevels' => array(
+		'math-render'  => array( 'levels' => 2, 'base' => 16, 'repeat' => 0 ),
+	),
+	'parallelize'        => 'implicit',
+	'cacheAuthInfo'      => true
+);
+/* end Ceph rados+rgw backend config */
 
 /* NFS-Swift multiwrite backend config */
 $wgFileBackends[] = array(
