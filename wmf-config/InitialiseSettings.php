@@ -7617,7 +7617,7 @@ $wgConf->settings = array(
 			'upload_by_url' => true, // For wider testing
 			'upload' => true, // Exception to bug 12556, used for testing of upload tools
 		),
-		'sysop' => array( 'deleterevision' => true, 'revisionmove' => true, ),
+		'sysop' => array( 'deleterevision' => true ),
 		'reviewer' => array(
 			'stablesettings' => true,
 		),
