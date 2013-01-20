@@ -4953,6 +4953,12 @@ $wgConf->settings = array(
 		100 => 'Gátt',
 		101 => 'Gáttaspjall'
 	),
+	'iswikisource' => array(
+		104 => 'Blaðsíða',              // Bug 44163 - Page
+		105 => 'Blaðsíðuspjall',
+		106 => 'Frumrit',               // Bug 44163 - Index
+		107 => 'Frumritsspjall',
+	),
 	'itwiki' => array(
 		100 => 'Portale',
 		101 => 'Discussioni_portale',
