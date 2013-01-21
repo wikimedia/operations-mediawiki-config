@@ -7,16 +7,23 @@
  * @copyright Copyright © 2012, Antoine Musso <hashar at free dot fr>
  * @file
  */
-
-class dbconfigTests extends PHPUnit_Framework_TestCase {
+abstract class DBConfigTestCase extends PHPUnit_Framework_TestCase {
 	public $cfgPath;
 
 	/** Array: will contains the load balancer configuration */
 	protected $lb;
 
-	function __construct() {
+	/**
+	 * @param $suffix string
+	 */
+	function __construct( $suffix ) {
 		parent::__construct();
-		$this->cfgPath = dirname(__FILE__). '/../wmf-config' ;
+
+		if ( is_null( $suffix ) ) {
+			$this->markTestSkipped( 'No database suffix given' );
+		}
+
+		$this->cfgPath = dirname( __FILE__ ). '/../wmf-config' ;
 
 		# "properly" load db.php in local context:
 		$wgDBname     = 'testwiki';
@@ -25,7 +32,7 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 		if( !defined( 'DBO_DEFAULT' ) ) {
 			define( 'DBO_DEFAULT', 16 );
 		}
-		include( $this->cfgPath . '/db.php' );
+		include( "{$this->cfgPath}/db-{$suffix}.php" );
 
 		$this->lb = $wgLBFactoryConf;
 	}
@@ -63,3 +70,24 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 	}
 
 }
+
+class pmtpaDBConfigTests extends DBConfigTestCase {
+	function __construct() {
+		parent::__construct( 'pmtpa' );
+	}
+}
+
+class eqiadDBConfigTests extends DBConfigTestCase {
+	function __construct() {
+		parent::__construct( 'eqiad' );
+	}
+}
+
+
+class labsDBConfigTests extends DBConfigTestCase {
+	function __construct() {
+		parent::__construct( 'labs' );
+	}
+}
+
+
