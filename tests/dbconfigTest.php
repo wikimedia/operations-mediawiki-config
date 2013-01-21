@@ -29,6 +29,7 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 		if( !defined( 'DBO_DEFAULT' ) ) {
 			define( 'DBO_DEFAULT', 16 );
 		}
+
 		include( getRealmSpecificFilename( __DIR__ . '/../wmf-config/db.php' ) );
 
 		list( $wmfRealm, $wmfDatacenter ) = array( $oldRealm, $oldDatacenter );
@@ -37,26 +38,17 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 	}
 
 	/**
-	 * Lame safeguard to raise attention of ops whenever they alter
-	 * the number of hosts set in hostsByName. If you really know what
-	 * you are doing when editing that configuration section, then increment or
-	 * decrement the first argument to assertEquals() below.
-	 *
 	 * @dataProvider provideRealmDatacenter
 	 */
-
-	/* This fails when adding new databases - not a good assertion!
-	function testDoNotRemoveLinesInHostsbyname( $realm, $datacenter ) {
+	function testSectionLoadsInHostsbyname( $realm, $datacenter ) {
 		$lb = $this->loadDbFile( $realm, $datacenter );
-
-		$this->assertEquals(  78
-			, count( $lb['hostsByName'] )
-			, "You shall never remove hosts from hostsByName :-D"
-		);
-
-
+var_dump( $realm, $datacenter, $lb );
+		foreach( $lb['sectionLoads'] as /*$dbname =>*/ $cluster ) {
+			foreach( $cluster as $host ) {
+				$this->assertArrayHasKey( $host, $lb['hostsByName'] );
+			}
+		}
 	}
-	*/
 
 	/**
 	 * Each database in 'sectionsByDB' must point to an existing cluster
