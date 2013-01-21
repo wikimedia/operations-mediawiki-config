@@ -37,6 +37,17 @@ default:
 	break;
 }
 
+# Function to list all valid realm/datacenter pairs, for testing purposes.
+# @returns array List of realm-datacenter pairs
+function listAllRealmsAndDatacenters() {
+	return array(
+		array( 'production', 'pmtpa' ),
+		array( 'production', 'eqiad' ),
+		array( 'labs', 'pmtpa' ),
+		array( 'labs', 'eqiad' ),
+	);
+}
+
 # Function to get the filename for the current realm/datacenter, falling back
 # to the "base" file if not found.
 #
