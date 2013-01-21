@@ -13,7 +13,6 @@ class MWRealmTests extends PHPUnit_Framework_TestCase {
 		if( !is_dir( self::$fixturesDir ) ) {
 			mkdir( self::$fixturesDir."/" );
 		}
-		var_dump( self::$fixturesDir );
 
 		$filenames = array(
 			'general.ext',
