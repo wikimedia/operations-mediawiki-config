@@ -1,0 +1,1 @@
+/home/wikipedia/common/wmf-config/db-eqiad.php
