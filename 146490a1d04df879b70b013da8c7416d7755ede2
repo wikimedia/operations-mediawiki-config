@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhH//3lY\u003d",
+        "filename": "tests/dbconfigTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-01-21T15:11:47Z",
+      "side": 1,
+      "message": "For this tests, I guess we want to refactor the wmf-config/db files to have a shared list of database hostname.  The code is currently duplicated in db-pmtpa.php and db-eqiad.php.",
+      "revId": "146490a1d04df879b70b013da8c7416d7755ede2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
