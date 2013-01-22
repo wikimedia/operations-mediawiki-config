@@ -2053,7 +2053,7 @@ if ( !$wmgEnableVector ) {
 	$wgSkipSkins[] = 'vector';
 }
 
-if ( $wmgUseReaderFeedback ) {
+if ( $wmgUseReaderFeedback && false ) { // Disabled because it uses NFS, which breaks in eqiad --Roan 2013-01-22
 	require_once( "$IP/extensions/ReaderFeedback/ReaderFeedback.php" );
 	$wgFeedbackStylePath = "$wgExtensionAssetsPath/ReaderFeedback";
 	$wgFeedbackNamespaces = $wmgFeedbackNamespaces;
