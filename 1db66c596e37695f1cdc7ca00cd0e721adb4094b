@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADhn////U\u003d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2724,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2013-01-22T21:57:12Z",
+      "side": 1,
+      "message": "Please document this requirement (for those who choose UDP) in EventLogging.php",
+      "revId": "1db66c596e37695f1cdc7ca00cd0e721adb4094b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
