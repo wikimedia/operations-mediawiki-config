@@ -7,7 +7,7 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 	define( 'DBO_DEFAULT', 16 );
 }
 
-$wgReadOnly = "Wikimedia Sites are currently read-only during maintenance, please try again soon.";
+#$wgReadOnly = "Wikimedia Sites are currently read-only during maintenance, please try again soon.";
 
 $wgLBFactoryConf = array(
 
