@@ -9,6 +9,13 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 
 #$wgReadOnly = "Wikimedia Sites are currently read-only during maintenance, please try again soon.";
 
+$wmgOldExtTemplate = array(
+	'10.64.0.25' => 1, # es1001
+	'10.64.16.40' => 1, # es1002
+	'10.64.16.41' => 1, # es1003
+	'10.64.16.42' => 1, # es1004
+);
+
 $wgLBFactoryConf = array(
 
 'class' => 'LBFactory_Multi',
@@ -160,6 +167,39 @@ $wgLBFactoryConf = array(
 # Removing a server from this list does not remove the server from rotation,
 # it just breaks the site horribly.
 'hostsByName' => array(
+	'db30'	   => '10.0.6.40', # do not remove or comment out
+	'db31'	   => '10.0.6.41', # do not remove or comment out
+	'db32'	   => '10.0.6.42', # do not remove or comment out
+	'db33'	   => '10.0.6.43', # do not remove or comment out
+	'db34'	   => '10.0.6.44', # do not remove or comment out
+	'db35'	   => '10.0.6.45', # do not remove or comment out
+	'db36'	   => '10.0.6.46', # do not remove or comment out
+	'db37'	   => '10.0.6.47', # do not remove or comment out
+	'db38'	   => '10.0.6.48', # do not remove or comment out
+	'db39'	   => '10.0.6.49', # do not remove or comment out
+	'db40'	   => '10.0.6.50', # do not remove or comment out # Parser cache
+	'db42'	   => '10.0.6.52', # do not remove or comment out # Analytics - NOT FOR PROD
+	'db43'	   => '10.0.6.53', # do not remove or comment out
+	'db44'	   => '10.0.6.54', # do not remove or comment out
+	'db45'	   => '10.0.6.55', # do not remove or comment out
+	'db46'	   => '10.0.6.56', # do not remove or comment out
+	'db47'	   => '10.0.6.57', # do not remove or comment out
+	'db50'	   => '10.0.6.60', # do not remove or comment out
+	'db51'	   => '10.0.6.61', # do not remove or comment out
+	'db52'	   => '10.0.6.62', # do not remove or comment out
+	'db53'	   => '10.0.6.63', # do not remove or comment out
+	'db54'	   => '10.0.6.64', # do not remove or comment out
+	'db55'	   => '10.0.6.65', # do not remove or comment out
+	'db56'	   => '10.0.6.66', # do not remove or comment out
+	'db57'	   => '10.0.6.67', # do not remove or comment out
+	'db58'	   => '10.0.6.68', # do not remove or comment out
+	'db59'	   => '10.0.6.69', # do not remove or comment out
+	'db60'	   => '10.0.6.70', # do not remove or comment out
+	'db63'	   => '10.0.6.73', # do not remove or comment out
+	'db64'	   => '10.0.6.74', # do not remove or comment out
+	'db65'	   => '10.0.6.75', # do not remove or comment out
+	'db66'	   => '10.0.6.76', # do not remove or comment out
+	'db68'	   => '10.0.6.78', # do not remove or comment out
 	'db1001' => '10.64.0.5', #do not remove or comment out
 	'db1002' => '10.64.0.6', #do not remove or comment out
 	'db1003' => '10.64.0.7', #do not remove or comment out
@@ -191,109 +231,33 @@ $wgLBFactoryConf = array(
 	'db1047' => '10.64.16.36', #do not remove or comment out
 	'db1049' => '10.64.16.144', #do not remove or comment out
 	'db1050' => '10.64.16.145', #do not remove or comment out
+	'pc1'		=> '10.0.0.221', # do not remove or comment out # Parser Cache
 ),
 
 'externalLoads' => array(
 	# Recompressed stores
-	'rc1' => array(
-		'10.64.0.25' => 1, # es1001
-		'10.64.16.40' => 1, # es1002
-		'10.64.16.41' => 1, # es1003
-		'10.64.16.42' => 1, # es1004
-	),
+	'rc1' => $wmgOldExtTemplate,
 
-	# Ubuntu dual-purpose stores
-	'cluster3' => array(
-		'10.64.0.25' => 1, # es1001
-		'10.64.16.40' => 1, # es1002
-		'10.64.16.41' => 1, # es1003
-		'10.64.16.42' => 1, # es1004
-	),
-	'cluster4' => array(
-		'10.64.0.25' => 1, # es1001
-		'10.64.16.40' => 1, # es1002
-		'10.64.16.41' => 1, # es1003
-		'10.64.16.42' => 1, # es1004
-	),
-	'cluster5' => array(
-		'10.64.0.25' => 1, # es1001
-		'10.64.16.40' => 1, # es1002
-		'10.64.16.41' => 1, # es1003
-		'10.64.16.42' => 1, # es1004
-	),
-	'cluster6' => array(
-		'10.64.0.25' => 1, # es1001
-		'10.64.16.40' => 1, # es1002
-		'10.64.16.41' => 1, # es1003
-		'10.64.16.42' => 1, # es1004
-	),
-	'cluster7' => array(
-		'10.64.0.25' => 1, # es1001
-		'10.64.16.40' => 1, # es1002
-		'10.64.16.41' => 1, # es1003
-		'10.64.16.42' => 1, # es1004
-	),
-	'cluster8' => array(
-		'10.64.0.25' => 1, # es1001
-		'10.64.16.40' => 1, # es1002
-		'10.64.16.41' => 1, # es1003
-		'10.64.16.42' => 1, # es1004
-	),
-	'cluster9' => array(
-		'10.64.0.25' => 1, # es1001
-		'10.64.16.40' => 1, # es1002
-		'10.64.16.41' => 1, # es1003
-		'10.64.16.42' => 1, # es1004
-	),
-	'cluster10' => array(
-		'10.64.0.25' => 1, # es1001
-		'10.64.16.40' => 1, # es1002
-		'10.64.16.41' => 1, # es1003
-		'10.64.16.42' => 1, # es1004
-	),
-
-	'cluster20' => array(
-		'10.64.0.25' => 1, # es1001
-		'10.64.16.40' => 1, # es1002
-		'10.64.16.41' => 1, # es1003
-		'10.64.16.42' => 1, # es1004
-	),
-	'cluster21' => array(
-		'10.64.0.25' => 1, # es1001
-		'10.64.16.40' => 1, # es1002
-		'10.64.16.41' => 1, # es1003
-		'10.64.16.42' => 1, # es1004
-	),
-
-	# Dedicated server stores
-	'cluster22' => array(
-		'10.64.0.25' => 3, # es1001
-		'10.64.16.40' => 1, # es1002
-		'10.64.16.41' => 1, # es1003
-		'10.64.16.42' => 1, # es1004
-	),
+	# Former Ubuntu dual-purpose stores
+	'cluster3' => $wmgOldExtTemplate,
+	'cluster4' => $wmgOldExtTemplate,
+	'cluster5' => $wmgOldExtTemplate,
+	'cluster6' => $wmgOldExtTemplate,
+	'cluster7' => $wmgOldExtTemplate,
+	'cluster8' => $wmgOldExtTemplate,
+	'cluster9' => $wmgOldExtTemplate,
+	'cluster10' => $wmgOldExtTemplate,
+	'cluster20' => $wmgOldExtTemplate,
+	'cluster21' => $wmgOldExtTemplate,
 
 	# Clusters required for bug 22624
-	'cluster1' => array(
-		'10.64.0.25' => 1, # es1001
-		'10.64.16.40' => 1, # es1002
-		'10.64.16.41' => 1, # es1003
-		'10.64.16.42' => 1, # es1004
-	),
-	'cluster2' => array(
-		'10.64.0.25' => 1, # es1001
-		'10.64.16.40' => 1, # es1002
-		'10.64.16.41' => 1, # es1003
-		'10.64.16.42' => 1, # es1004
-	),
-	# Dedicated server stores
-	# es1
-	'cluster23' => array(
-		'10.64.0.25' => 3, # es1001
-		'10.64.16.40' => 3, # es1002
-		'10.64.16.41' => 1, # es1003
-		'10.64.16.42' => 3, # es1004
-	),
+	'cluster1' => $wmgOldExtTemplate,
+	'cluster2' => $wmgOldExtTemplate,
+
+	# Old dedicated clusters
+	'cluster22' => $wmgOldExtTemplate,
+	'cluster23' => $wmgOldExtTemplate,
+
 	# es2
 	'cluster24' => array(
 		'10.64.16.153' => 1, # es1005

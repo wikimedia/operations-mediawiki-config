@@ -7,7 +7,15 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 	define( 'DBO_DEFAULT', 16 );
 }
 
-$wgReadOnly = "Wikimedia Sites are currently read-only during maintenance, please try again soon.";
+#$wgReadOnly = "Wikimedia Sites are currently read-only during maintenance, please try again soon.";
+
+$wmgOldExtTemplate = array(
+	'10.64.0.25' => 0, # es1001
+	'10.0.0.225' => 1, # es1, pmtpa master
+	'10.0.0.226' => 1, # es2
+	'10.0.0.227' => 1, # es3
+	'10.0.0.228' => 1, # es4
+);
 
 $wgLBFactoryConf = array(
 
@@ -72,7 +80,8 @@ $wgLBFactoryConf = array(
 #
 'sectionLoads' => array(
 	's1' => array(
-		'db63'    => 0,
+		'db1017'    => 0,
+		'db63'    => 0, # pmtpa master
 		'db38'	  => 200,
 		'db32'	  => 0, # snapshot host
 		'db59'    => 400,
@@ -80,37 +89,43 @@ $wgLBFactoryConf = array(
 		'db36'	  => 100, # special contrib, watchlist, etc
 	),
 	's2' => array(
-		'db54'	  => 0,
+		'db1034'    => 0,
+		'db54'	  => 0, # pmtpa master
 		'db52'	  => 300,
 		'db53'	  => 100, # snapshot host
 		'db57'	  => 300,
 	),
 	/* s3 */ 'DEFAULT' => array(
-		'db34'	  => 0,
+		'db1019'    => 0,
+		'db34'	  => 0, # pmtpa master
 		'db39'    => 400,
 		'db64'	  => 200, # snapshot host
 		'db66'	  => 400,
 	),
 	's4' => array(
-		'db31'	 => 0,
+		'db1038'   => 0,
+		'db31'	 => 0, # pmtpa master
 		'db33'	 => 100, # Snapshot host
 		'db51'	 => 500,
 		'db65'	 => 500,
 	),
 	's5' => array(
-		'db45'	 => 0,
+		'db1039'   => 0,
+		'db45'	 => 0, # pmtpa master
 		'db35'	 => 500,
 		'db44'	 => 500, # snapshot host
 		'db55'	 => 1000,
 	),
 	's6' => array(
-		'db47'	   => 0,
+		'db1006'   => 0,
+		'db47'	   => 0, # pmtpa master
 		'db43'	   => 1000, # hw died 12/18/2011
 		'db46'	   => 400, # snapshot host
 		'db50'	   => 1000,
 	),
 	's7' => array(
-		'db37'  => 0,
+		'db1041' => 0,
+		'db37'  => 0, # pmtpa master
 		'db56'  => 400, # snapshot host
 		'db58'	=> 500,
 		'db68'	=> 700,
@@ -160,30 +175,6 @@ $wgLBFactoryConf = array(
 # Removing a server from this list does not remove the server from rotation,
 # it just breaks the site horribly.
 'hostsByName' => array(
-	'thistle'  => '10.0.0.232', # do not remove or comment out
-	'db4'	   => '10.0.0.237', # do not remove or comment out
-	'db5'	   => '10.0.0.238', # do not remove or comment out
-	'db7'	   => '10.0.0.240', # do not remove or comment out
-	'db8'	   => '10.0.0.241', # do not remove or comment out
-	'db11'	   => '10.0.6.21', # do not remove or comment out
-	'db12'	   => '10.0.6.22', # do not remove or comment out
-	'db13'	   => '10.0.6.23', # do not remove or comment out
-	'db14'	   => '10.0.6.24', # do not remove or comment out
-	'db15'	   => '10.0.6.25', # do not remove or comment out
-	'db16'	   => '10.0.6.26', # do not remove or comment out
-	'db17'	   => '10.0.6.27', # do not remove or comment out
-	'db18'	   => '10.0.6.28', # do not remove or comment out
-	'db19'	   => '10.0.6.29', # do not remove or comment out
-	'db20'	   => '10.0.6.30', # do not remove or comment out
-	'db21'	   => '10.0.6.31', # do not remove or comment out
-	'db22'	   => '10.0.6.32', # do not remove or comment out
-	'db23'	   => '10.0.6.33', # do not remove or comment out
-	'db24'	   => '10.0.6.34', # do not remove or comment out
-	'db25'	   => '10.0.6.35', # do not remove or comment out
-	'db26'	   => '10.0.6.36', # do not remove or comment out
-	'db27'	   => '10.0.6.37', # do not remove or comment out
-	'db28'	   => '10.0.6.38', # do not remove or comment out
-	'db29'	   => '10.0.6.39', # do not remove or comment out
 	'db30'	   => '10.0.6.40', # do not remove or comment out
 	'db31'	   => '10.0.6.41', # do not remove or comment out
 	'db32'	   => '10.0.6.42', # do not remove or comment out
@@ -217,141 +208,76 @@ $wgLBFactoryConf = array(
 	'db65'	   => '10.0.6.75', # do not remove or comment out
 	'db66'	   => '10.0.6.76', # do not remove or comment out
 	'db68'	   => '10.0.6.78', # do not remove or comment out
-	'db1001'	=> '10.64.0.5', # do not remove or comment out
-	'db1002'	=> '10.64.0.6', # do not remove or comment out
-	'db1003'	=> '10.64.0.7', # do not remove or comment out
-	'db1004'	=> '10.64.0.8', # do not remove or comment out
-	'db1005'	=> '10.64.0.9', # do not remove or comment out
-	'db1006'	=> '10.64.0.10', # do not remove or comment out
-	'db1007'	=> '10.64.0.11', # do not remove or comment out
-	'db1017'	=> '10.64.16.6', # do not remove or comment out
-	'db1018'	=> '10.64.16.7', # do not remove or comment out
-	'db1019'	=> '10.64.16.8', # do not remove or comment out
-	'db1020'	=> '10.64.16.9', # do not remove or comment out
-	'db1021'	=> '10.64.16.10', # do not remove or comment out
-	'db1022'	=> '10.64.16.11', # do not remove or comment out
-	'db1024'	=> '10.64.16.13', # do not remove or comment out
-	'db1033'	=> '10.64.16.22', # do not remove or comment out
-	'db1034'	=> '10.64.16.23', # do not remove or comment out
-	'db1035'	=> '10.64.16.24', # do not remove or comment out
-	'db1038'	=> '10.64.16.27', # do not remove or comment out
-	'db1039'	=> '10.64.16.28', # do not remove or comment out
-	'db1040'	=> '10.64.16.29', # do not remove or comment out
-	'db1041'	=> '10.64.16.30', # do not remove or comment out
-	'db1047'	=> '10.64.16.36', # do not remove or comment out
+	'db1001' => '10.64.0.5', #do not remove or comment out
+	'db1002' => '10.64.0.6', #do not remove or comment out
+	'db1003' => '10.64.0.7', #do not remove or comment out
+	'db1004' => '10.64.0.8', #do not remove or comment out
+	'db1005' => '10.64.0.9', #do not remove or comment out
+	'db1006' => '10.64.0.10', #do not remove or comment out
+	'db1007' => '10.64.0.11', #do not remove or comment out
+	'db1009' => '10.64.0.13', #do not remove or comment out
+	'db1010' => '10.64.0.14', #do not remove or comment out
+	'db1011' => '10.64.0.15', #do not remove or comment out
+	'db1017' => '10.64.16.6', #do not remove or comment out
+	'db1018' => '10.64.16.7', #do not remove or comment out
+	'db1019' => '10.64.16.8', #do not remove or comment out
+	'db1020' => '10.64.16.9', #do not remove or comment out
+	'db1021' => '10.64.16.10', #do not remove or comment out
+	'db1022' => '10.64.16.11', #do not remove or comment out
+	'db1024' => '10.64.16.13', #do not remove or comment out
+	'db1026' => '10.64.16.15', #do not remove or comment out
+	'db1027' => '10.64.16.16', #do not remove or comment out
+	'db1028' => '10.64.16.17', #do not remove or comment out
+	'db1034' => '10.64.16.23', #do not remove or comment out
+	'db1035' => '10.64.16.24', #do not remove or comment out
+	'db1038' => '10.64.16.27', #do not remove or comment out
+	'db1039' => '10.64.16.28', #do not remove or comment out
+	'db1040' => '10.64.16.29', #do not remove or comment out
+	'db1041' => '10.64.16.30', #do not remove or comment out
+	'db1042' => '10.64.16.31', #do not remove or comment out
+	'db1043' => '10.64.16.32', #do not remove or comment out
+	'db1047' => '10.64.16.36', #do not remove or comment out
+	'db1049' => '10.64.16.144', #do not remove or comment out
+	'db1050' => '10.64.16.145', #do not remove or comment out
 	'pc1'		=> '10.0.0.221', # do not remove or comment out # Parser Cache
 ),
 
 'externalLoads' => array(
 	# Recompressed stores
-	'rc1' => array(
-		'10.0.0.225' => 1, # es1
-		'10.0.0.226' => 1, # es2
-		'10.0.0.227' => 1, # es3
-		'10.0.0.228' => 1, # es4
-	),
+	'rc1' => $wmgOldExtTemplate,
 
-	# Ubuntu dual-purpose stores
-	'cluster3' => array(
-		'10.0.0.225' => 1, # es1
-		'10.0.0.226' => 1, # es2
-		'10.0.0.227' => 1, # es3
-		'10.0.0.228' => 1, # es4
-	),
-	'cluster4' => array(
-		'10.0.0.225' => 1, # es1
-		'10.0.0.226' => 1, # es2
-		'10.0.0.227' => 1, # es3
-		'10.0.0.228' => 1, # es4
-	),
-	'cluster5' => array(
-		'10.0.0.225' => 1, # es1
-		'10.0.0.226' => 1, # es2
-		'10.0.0.227' => 1, # es3
-		'10.0.0.228' => 1, # es4
-	),
-	'cluster6' => array(
-		'10.0.0.225' => 1, # es1
-		'10.0.0.226' => 1, # es2
-		'10.0.0.227' => 1, # es3
-		'10.0.0.228' => 1, # es4
-	),
-	'cluster7' => array(
-		'10.0.0.225' => 1, # es1
-		'10.0.0.226' => 1, # es2
-		'10.0.0.227' => 1, # es3
-		'10.0.0.228' => 1, # es4
-	),
-	'cluster8' => array(
-		'10.0.0.225' => 1, # es1
-		'10.0.0.226' => 1, # es2
-		'10.0.0.227' => 1, # es3
-		'10.0.0.228' => 1, # es4
-	),
-	'cluster9' => array(
-		'10.0.0.225' => 1, # es1
-		'10.0.0.226' => 1, # es2
-		'10.0.0.227' => 1, # es3
-		'10.0.0.228' => 1, # es4
-	),
-	'cluster10' => array(
-		'10.0.0.225' => 1, # es1
-		'10.0.0.226' => 1, # es2
-		'10.0.0.227' => 1, # es3
-		'10.0.0.228' => 1, # es4
-	),
-
-	'cluster20' => array(
-		'10.0.0.225' => 1, # es1
-		'10.0.0.226' => 1, # es2
-		'10.0.0.227' => 1, # es3
-		'10.0.0.228' => 1, # es4
-	),
-	'cluster21' => array(
-		'10.0.0.225' => 1, # es1
-		'10.0.0.226' => 1, # es2
-		'10.0.0.227' => 1, # es3
-		'10.0.0.228' => 1, # es4
-	),
-
-	# Dedicated server stores
-	'cluster22' => array(
-		'10.0.0.225' => 3, # es1
-		'10.0.0.226' => 1, # es2
-		'10.0.0.227' => 1, # es3
-		'10.0.0.228' => 1, # es4
-	),
+	# Former Ubuntu dual-purpose stores
+	'cluster3' => $wmgOldExtTemplate,
+	'cluster4' => $wmgOldExtTemplate,
+	'cluster5' => $wmgOldExtTemplate,
+	'cluster6' => $wmgOldExtTemplate,
+	'cluster7' => $wmgOldExtTemplate,
+	'cluster8' => $wmgOldExtTemplate,
+	'cluster9' => $wmgOldExtTemplate,
+	'cluster10' => $wmgOldExtTemplate,
+	'cluster20' => $wmgOldExtTemplate,
+	'cluster21' => $wmgOldExtTemplate,
 
 	# Clusters required for bug 22624
-	'cluster1' => array(
-		'10.0.0.225' => 1, # es1
-		'10.0.0.226' => 1, # es2
-		'10.0.0.227' => 1, # es3
-		'10.0.0.228' => 1, # es4
-	),
-	'cluster2' => array(
-		'10.0.0.225' => 1, # es1
-		'10.0.0.226' => 1, # es2
-		'10.0.0.227' => 1, # es3
-		'10.0.0.228' => 1, # es4
-	),
+	'cluster1' => $wmgOldExtTemplate,
+	'cluster2' => $wmgOldExtTemplate,
+
+	# Old dedicated clusters
+	'cluster22' => $wmgOldExtTemplate,
+	'cluster23' => $wmgOldExtTemplate,
+
 	# Dedicated server stores
-	# es1
-	'cluster23' => array(
-		'10.0.0.225' => 3, # es1
-		'10.0.0.226' => 3, # es2
-		'10.0.0.227' => 1, # es3
-		'10.0.0.228' => 3, # es4
-	),
 	# es2
 	'cluster24' => array(
-		'10.0.0.234' => 1, # es5
+		'10.64.16.153' => 0, # es1005
+		'10.0.0.234' => 1, # es5, pmtpa master
 		'10.0.0.235' => 3, # es6
 		'10.0.0.236' => 3, # es7
 	),
 	# es3
 	'cluster25' => array(
-		'10.0.0.237' => 1, # es8
+		'10.64.32.18' => 0, # es1008
+		'10.0.0.237' => 1, # es8, pmtpa master
 		'10.0.0.220' => 3, # es9
 		'10.0.0.224' => 3, # es10
 	),
