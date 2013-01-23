@@ -6634,10 +6634,10 @@ $wgConf->settings = array(
 			// 5 password reminders per hour per IP
 			'ip'     => array( 5, 3600 ),
 		),
-		// 100 emails per hour
 		'emailuser' => array(
-			'ip' => array( 100, 3600 ),
-			'user' => array( 200, 86400 ),
+			'ip' => array( 5, 86400 ), // 5 per day per ip (logged-out and new users)
+			'newbie' => array( 5, 86400 ), // 5 per day for non-autoconfirmed
+			'user' => array( 20, 86400 ), // 20 per day for users
 		),
 		// For expanded rollback permissions...
 		'rollback' => array(
