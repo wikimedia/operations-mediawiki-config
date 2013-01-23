@@ -2721,7 +2721,7 @@ if ( $wmgUseUserMerge ) {
 if ( $wmgUseEventLogging ) {
 	require_once( "$IP/extensions/EventLogging/EventLogging.php" );
 	$wgEventLoggingBaseUri = '//bits.wikimedia.org/event.gif';
-	$wgEventLoggingFile = "udp://208.80.152.184:8421/$wgDBname";  // emery
+	$wgEventLoggingFile = 'udp://208.80.152.184:8421/EventLogging';
 	$wgEventLoggingDBname = 'metawiki';
 	$wgEventLoggingSchemaIndexUri = 'http://meta.wikimedia.org/w/index.php';
 	$wgDebugLogGroups[ 'EventLogging' ] = "udp://$wmfUdp2logDest/eventlogging";
