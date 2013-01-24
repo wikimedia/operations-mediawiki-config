@@ -11991,7 +11991,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
-	'enwiki' => true,
+	'enwiki' => false, // disabled due to bug 44298 -- TS
 ),
 'wmgUseGettingStarted' => array(
 	'default' => false,
