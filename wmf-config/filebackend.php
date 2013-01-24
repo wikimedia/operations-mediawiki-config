@@ -3,51 +3,8 @@
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
 #
-# This file hold the configuration for NFS and Swift files backends
+# This file hold the configuration for the file backends
 # for production.
-
-/* NFS backend config */
-$wgFileBackends[] = array( // backend config for wiki's local repo
-	'class'          => 'FSFileBackend',
-	'name'           => 'local-NFS',
-	'wikiId'         => "{$site}-{$lang}",
-	'lockManager'    => 'nullLockManager', # LocalFile uses FOR UPDATE
-	'fileJournal'    => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname ),
-	'fileMode'       => 0644,
-	'containerPaths' => array(
-		"local-public"    => $wgUploadDirectory,
-		"local-thumb"     => str_replace( '/mnt/upload7', '/mnt/thumbs2', "$wgUploadDirectory/thumb" ),
-		"local-deleted"   => "/mnt/upload7/private/archive/$site/$lang",
-		"local-temp"      => "$wgUploadDirectory/temp",
-		"timeline-render" => "$wgUploadDirectory/timeline"
-	)
-);
-$wgFileBackends[] = array( // backend config for wiki's access to shared repo
-	'class'          => 'FSFileBackend',
-	'name'           => 'shared-NFS',
-	'wikiId'         => "wikipedia-commons",
-	'lockManager'    => 'nullLockManager', # just thumbnails
-	'fileJournal'    => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki' ),
-	'fileMode'       => 0644,
-	'containerPaths' => array(
-		"local-public"  => "/mnt/upload7/wikipedia/commons",
-		"local-thumb"   => "/mnt/thumbs2/wikipedia/commons/thumb",
-		"local-temp"    => "/mnt/upload7/wikipedia/commons/temp",
-	)
-);
-$wgFileBackends[] = array( // backend config for wiki's access to global files
-	'class'          => 'FSFileBackend',
-	'name'           => 'global-NFS',
-	'wikiId'         => "global-data",
-	'lockManager'    => 'nullLockManager',
-	'fileMode'       => 0644,
-	'containerPaths' => array(
-		"math-render"    => "/mnt/upload7/math", // see $wgMathDirectory
-		"score-render"   => "/mnt/upload7/score",
-		"captcha-render" => "/mnt/upload7/private/captcha"
-	)
-);
-/* end NFS backend config */
 
 /* OpenStack Swift backend config */
 $wmfSwiftBigWikis = array( # DO NOT change without proper migration first
@@ -171,7 +128,7 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared files
 );
 /* end Ceph rados+rgw backend config */
 
-/* NFS-Swift multiwrite backend config */
+/* Multiwrite backend config */
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
 	'name'        => 'local-multiwrite',
@@ -179,7 +136,6 @@ $wgFileBackends[] = array(
 	'lockManager' => 'nullLockManager', # LocalFile uses FOR UPDATE
 	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname, 'ttlDays' => 240 ),
 	'backends'    => array(
-		#array( 'template' => 'local-NFS', 'isMultiMaster' => false ),
 		array( 'template' => 'local-swift', 'isMultiMaster' => true )
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
@@ -192,7 +148,6 @@ $wgFileBackends[] = array(
 	'lockManager' => 'nullLockManager', // just thumbnails
 	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki', 'ttlDays' => 240 ),
 	'backends'    => array(
-		#array( 'template' => 'shared-NFS', 'isMultiMaster' => false ),
 		array( 'template' => 'shared-swift', 'isMultiMaster' => true ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
@@ -204,7 +159,6 @@ $wgFileBackends[] = array(
 	'wikiId'      => "global-data",
 	'lockManager' => 'nullLockManager',
 	'backends'    => array(
-		#array( 'template' => 'global-NFS', 'isMultiMaster' => false ),
 		array( 'template' => 'global-swift', 'isMultiMaster' => true ),
 	),
 	'syncChecks'  => ( 1 | 4 ) // (size & sha1)

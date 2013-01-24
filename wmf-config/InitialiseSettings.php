@@ -10491,10 +10491,6 @@ $wgConf->settings = array(
 	'zhwiki' => true,
 ),
 
-'wgMathCheckFiles' => array(
-	'default' => false, // Reducing out NFS hits for math
-),
-
 'wgHtml5' => array(
 	'default' => true,
 ),
