@@ -1,5 +1,5 @@
 aawikibooks php-1.21wmf8 *
-aawiki php-1.21wmf7 *
+aawiki php-1.21wmf8 *
 aawiktionary php-1.21wmf8 *
 abwiki php-1.21wmf7 *
 abwiktionary php-1.21wmf8 *
@@ -125,7 +125,7 @@ cewiki php-1.21wmf7 *
 chairwiki php-1.21wmf8 *
 chapcomwiki php-1.21wmf8 *
 checkuserwiki php-1.21wmf8 *
-chowiki php-1.21wmf7 *
+chowiki php-1.21wmf8 *
 chrwiki php-1.21wmf7 *
 chrwiktionary php-1.21wmf8 *
 chwikibooks php-1.21wmf8 *
@@ -307,7 +307,7 @@ hiwikibooks php-1.21wmf8 *
 hiwiki php-1.21wmf7 *
 hiwikiquote php-1.21wmf8 *
 hiwiktionary php-1.21wmf8 *
-howiki php-1.21wmf7 *
+howiki php-1.21wmf8 *
 hrwikibooks php-1.21wmf8 *
 hrwiki php-1.21wmf7 *
 hrwikiquote php-1.21wmf8 *
@@ -328,7 +328,7 @@ hywiki php-1.21wmf7 *
 hywikiquote php-1.21wmf8 *
 hywikisource php-1.21wmf8 *
 hywiktionary php-1.21wmf8 *
-hzwiki php-1.21wmf7 *
+hzwiki php-1.21wmf8 *
 iawikibooks php-1.21wmf8 *
 iawiki php-1.21wmf7 *
 iawiktionary php-1.21wmf8 *
@@ -341,7 +341,7 @@ iewikibooks php-1.21wmf8 *
 iewiki php-1.21wmf7 *
 iewiktionary php-1.21wmf8 *
 igwiki php-1.21wmf7 *
-iiwiki php-1.21wmf7 *
+iiwiki php-1.21wmf8 *
 ikwiki php-1.21wmf7 *
 ikwiktionary php-1.21wmf8 *
 ilowiki php-1.21wmf7 *
@@ -385,7 +385,7 @@ kawiktionary php-1.21wmf8 *
 kbdwiki php-1.21wmf7 *
 kgwiki php-1.21wmf7 *
 kiwiki php-1.21wmf7 *
-kjwiki php-1.21wmf7 *
+kjwiki php-1.21wmf8 *
 kkwikibooks php-1.21wmf8 *
 kkwiki php-1.21wmf7 *
 kkwikiquote php-1.21wmf8 *
@@ -408,7 +408,7 @@ kowikiquote php-1.21wmf8 *
 kowikisource php-1.21wmf8 *
 kowiktionary php-1.21wmf8 *
 krcwiki php-1.21wmf7 *
-krwiki php-1.21wmf7 *
+krwiki php-1.21wmf8 *
 krwikiquote php-1.21wmf8 *
 kshwiki php-1.21wmf7 *
 kswikibooks php-1.21wmf8 *
@@ -470,7 +470,7 @@ mgwikibooks php-1.21wmf8 *
 mgwiki php-1.21wmf7 *
 mgwiktionary php-1.21wmf8 *
 mhrwiki php-1.21wmf7 *
-mhwiki php-1.21wmf7 *
+mhwiki php-1.21wmf8 *
 mhwiktionary php-1.21wmf8 *
 miwikibooks php-1.21wmf8 *
 miwiki php-1.21wmf7 *
@@ -489,7 +489,7 @@ mnwikibooks php-1.21wmf8 *
 mnwiki php-1.21wmf7 *
 mnwiktionary php-1.21wmf8 *
 movementroleswiki php-1.21wmf8 *
-mowiki php-1.21wmf7 *
+mowiki php-1.21wmf8 *
 mowiktionary php-1.21wmf8 *
 mrjwiki php-1.21wmf7 *
 mrwikibooks php-1.21wmf8 *
@@ -502,7 +502,7 @@ mswiki php-1.21wmf7 *
 mswiktionary php-1.21wmf8 *
 mtwiki php-1.21wmf7 *
 mtwiktionary php-1.21wmf8 *
-muswiki php-1.21wmf7 *
+muswiki php-1.21wmf8 *
 mwlwiki php-1.21wmf7 *
 mxwikimedia php-1.21wmf8 *
 myvwiki php-1.21wmf7 *
@@ -527,7 +527,7 @@ newikibooks php-1.21wmf8 *
 newiki php-1.21wmf7 *
 newiktionary php-1.21wmf8 *
 newwiki php-1.21wmf7 *
-ngwiki php-1.21wmf7 *
+ngwiki php-1.21wmf8 *
 nlwikibooks php-1.21wmf8 *
 nlwikimedia php-1.21wmf8 *
 nlwikinews php-1.21wmf8 *
