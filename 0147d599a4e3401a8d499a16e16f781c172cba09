@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//7Cw\u003d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2013-01-27T20:20:08Z",
+      "side": 1,
+      "message": "Please prefix \"(bug 44411)\"",
+      "revId": "0147d599a4e3401a8d499a16e16f781c172cba09",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
