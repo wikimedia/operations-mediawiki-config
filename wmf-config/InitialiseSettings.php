@@ -8622,6 +8622,7 @@ $wgConf->settings = array(
 	'dewikisource' => array( 'oldwikisource' ),
 	'dewikiversity' => array( 'w', 'meta', 'b', 'incubator' ), # Bug 38159
 	'dewiktionary' => array( 'w', 'en' ),
+       	'dewikivoyage' => array( 'w', 'en', 'meta' ),
 	'dsbwiki' => array( 'incubator', ),
 	'elwiki' => array( 'en', 'de', 'v', 's', 'wikt', 'b', 'q', 'fr', 'meta', 'commons', 'it',  ),
 	'elwikibooks' => array( 'en', 'w:en', 'w', 'v', 'q', 's', 'meta', 'wikt' ),
