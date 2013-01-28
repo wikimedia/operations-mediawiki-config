@@ -8862,11 +8862,6 @@ $wgConf->settings = array(
 	'zhwikisource' => 108, // Transwiki
 ),
 
-'wgFilterRobotsWL' => array(
-	'default' => false,
-	'dawiki' => true, # experimental 2005-08-27
-),
-
 # SVG related @{
 'wgSVGConverter' => array(
 	'default' => 'rsvg-secure',
