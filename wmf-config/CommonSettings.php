@@ -1830,6 +1830,11 @@ if ( $wmgUseCentralNotice ) {
 	if ( $wgDBname == 'testwiki' ) {
 		$wgNoticeBannerMaxAge = 0;
 	}
+
+	// Enable CentralNotice/Translate on testwiki for deployment testing/user feedback
+        if ( $wgDBname == 'testwiki' ) {
+		$wgNoticeUseTranslateExtension = true;
+	}
 }
 
 // Set CentralNotice banner hide cookie; Needs to be enabled for all wikis that display banners ~awjr 2011-11-07
