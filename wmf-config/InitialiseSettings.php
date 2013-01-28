@@ -9457,55 +9457,39 @@ $wgConf->settings = array(
 	'default' => array(
 		NS_MEDIAWIKI => array( 'editinterface' ),
 	),
-	'cswiki' => array(
-		NS_MEDIAWIKI => array( 'editinterface' ),
+	'+cswiki' => array(
 		NS_FILE      => array( 'editinterface' ),
 		NS_FILE_TALK => array( 'editinterface' ),
 	),
-
-	'cswikibooks' => array(
-		NS_MEDIAWIKI => array( 'editinterface' ),
+	'+cswikibooks' => array(
 		NS_FILE      => array( 'editinterface' ),
 		NS_FILE_TALK => array( 'editinterface' ),
 	),
-
-	'cswikinews' => array(
-		NS_MEDIAWIKI => array( 'editinterface' ),
+	'+cswikinews' => array(
 		NS_FILE      => array( 'editinterface' ),
 		NS_FILE_TALK => array( 'editinterface' ),
 	),
-
-	'cswikiquote' => array(
-		NS_MEDIAWIKI => array( 'editinterface' ),
+	'+cswikiquote' => array(
 		NS_FILE      => array( 'editinterface' ),
 		NS_FILE_TALK => array( 'editinterface' ),
 	),
-
-	'cswikisource' => array(
-		NS_MEDIAWIKI => array( 'editinterface' ),
+	'+cswikisource' => array(
 		NS_FILE      => array( 'editinterface' ),
 		NS_FILE_TALK => array( 'editinterface' ),
 	),
-
-	'cswikiversity' => array(
-		NS_MEDIAWIKI => array( 'editinterface' ),
+	'+cswikiversity' => array(
 		NS_FILE      => array( 'editinterface' ),
 		NS_FILE_TALK => array( 'editinterface' ),
 	),
-
-	'cswiktionary' => array(
-		NS_MEDIAWIKI => array( 'editinterface' ),
+	'+cswiktionary' => array(
 		NS_FILE      => array( 'editinterface' ),
 		NS_FILE_TALK => array( 'editinterface' ),
 	),
-
-	'eswiki' => array(
-		NS_MEDIAWIKI => array( 'editinterface' ),
+	'+eswiki' => array(
 		NS_IMAGE => array( 'editinterface' ),
 		NS_IMAGE_TALK => array( 'editinterface' ),
 	),
-	'ptwiki' => array(
-		NS_MEDIAWIKI => array( 'editinterface' ),
+	'+ptwiki' => array(
 		NS_IMAGE => array( 'autoconfirmed' ),
 	),
 	'ruwiki' => array(
