@@ -9428,19 +9428,13 @@ $wgConf->settings = array(
 # Disable all the query pages that take more than about 15 minutes to update
 # wgDisableQueryPageUpdate @{
 'wgDisableQueryPageUpdate' => array(
-	'enwiki' => array(
-		'Ancientpages',
-		'Deadendpages',
-		'Fewestrevisions',
+	'+enwiki' => array(
 		'Lonelypages',
 		'Mostcategories',
-		'Mostlinked',
 		'Mostlinkedcategories',
 		'Mostlinkedtemplates',
-		'Mostrevisions',
 		'Uncategorizedcategories',
 		'Wantedtemplates',
-		'Wantedpages',
 	),
 	'default' => array(
 		'Ancientpages',
@@ -9450,16 +9444,13 @@ $wgConf->settings = array(
 		'Mostrevisions',
 		'Wantedpages',
 	),
-	'wikidatawiki' => array(
-		'Ancientpages',
-		'Deadendpages',
-		'Fewestrevisions',
+	'+frwiki' => array(
+		'Mostcategories',
+	),
+	'+wikidatawiki' => array(
 		'Lonelypages ',
-		'Mostlinked',
-		'Mostrevisions',
 		'Uncategorizedpages',
 		'Unwatchedpages',
-		'Wantedpages',
 		'Withoutinterwiki',
 	),
 ),
