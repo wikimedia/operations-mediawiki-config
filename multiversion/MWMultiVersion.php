@@ -257,23 +257,27 @@ class MWMultiVersion {
 		}
 		$this->versionLoaded = true;
 
-		$db = dba_open( MULTIVER_CDB_DIR_APACHE . '/wikiversions.cdb', 'r', 'cdb' );
+		$cdbFilename = getRealmSpecificFilename(
+			MULTIVER_CDB_DIR_APACHE . '/wikiversions.cdb'
+		);
+
+		$db = dba_open( $cdbFilename, 'r', 'cdb' );
 		if ( $db ) {
 			$version = dba_fetch( "ver:{$this->db}", $db );
 			if ( $version === false ) {
 				$extraVersion = false;
 			} else {
 				if ( strpos( $version, 'php-' ) !== 0 ) {
-					self::error( "wikiversions.cdb version entry does not start with `php-` (got `$version`).\n" );
+					self::error( "$cdbFilename version entry does not start with `php-` (got `$version`).\n" );
 				}
 				$extraVersion = dba_fetch( "ext:{$this->db}", $db );
 				if ( $extraVersion === false ) {
-					self::error( "wikiversions.cdb has no extra version entry for `$db`.\n" );
+					self::error( "$cdbFilename has no extra version entry for `$db`.\n" );
 				}
 			}
 			dba_close( $db );
 		} else {
-			self::error( "Unable to open wikiversions.cdb.\n" );
+			self::error( "Unable to open $cdbFilename.\n" );
 		}
 
 		$this->version = $version;
@@ -285,8 +289,11 @@ class MWMultiVersion {
 	 * @return bool
 	 */
 	private function assertNotMissing() {
+		$cdbFilename = getRealmSpecificFilename(
+			MULTIVER_CDB_DIR_APACHE . '/wikiversions.cdb'
+		);
 		if ( $this->isMissing() ) {
-			self::error( "wikiversions.cdb has no version entry for `{$this->db}`.\n" );
+			self::error( "$cdbFilename has no version entry for `{$this->db}`.\n" );
 		}
 	}
 
