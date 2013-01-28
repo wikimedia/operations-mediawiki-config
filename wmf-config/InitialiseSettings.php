@@ -3764,12 +3764,8 @@ $wgConf->settings = array(
 ),
 # @} end of wgUseDynamicDates
 
-'wgUseCategoryBrowser' => array(
-	'default' => false,
-#	'testwiki' => true,
-),
-
 'wgRawHtml' => array(
+	'default' => false,
 	'donatewiki' => true,
 	'foundationwiki' => true,
 	'internalwiki' => true,
