@@ -11235,9 +11235,7 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 'wmgMFNearby' => array(
-	'default' => false,
-	'testwiki' => true,
-	'simplewiki' => true,
+	'default' => true, // Does not gets enabled on wikis w/o GeoData anyway
 ),
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
