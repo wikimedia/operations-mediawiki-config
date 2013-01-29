@@ -14,13 +14,8 @@ require_once( dirname( __FILE__ ) . '/MWRealm.php' );
  */
 function refreshWikiversionsCDB() {
 	$srcPath = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
-
-	$cdbFilename = getRealmSpecificFilename(
-		MULTIVER_CDB_DIR_HOME . 'wikiversions.cdb'
-	);
-
-	$tmpDBPath = $cdbFilename . '.tmp';
-	$finalDBPath = $cdbFilename;
+	$tmpDBPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.cdb.tmp';
+	$finalDBPath = MULTIVER_CDB_DIR_HOME . '/wikiversions.cdb';
 
 	// Get the array of sanitized wikiversion rows...
 	$rows = MWWikiversions::readWikiVersionsFile( $srcPath );
@@ -48,7 +43,7 @@ function refreshWikiversionsCDB() {
 	@unlink( $tmpDBPath ); // clear any old temp file for sanity
 	$db = dba_open( $tmpDBPath, "n", "cdb_make" );
 	if ( !$db ) {
-		die( "Unable to create {$tmpDBPath}.\n" );
+		die( "Unable to create wikiversions.cdb.tmp.\n" );
 	}
 	foreach ( $rows as $row ) {
 		list( $dbName, $version, $extVersion, $comment ) = $row;
@@ -62,16 +57,16 @@ function refreshWikiversionsCDB() {
 
 	# Sanity check the temp file...
 	if ( !is_file( $tmpDBPath ) ) {
-		die( "Unable to create {$tmpDBPath}.\n" );
+		die( "Unable to create wikiversions.cdb.tmp.\n" );
 	}
 
 	# Move temp file to the final location only when finished...
 	if ( !rename( $tmpDBPath, $finalDBPath ) ) {
-		die( "Unable to move {$tmpDBPath} to {$finalDBPath}.\n" );
+		die( "Unable to move wikiversions.cdb.tmp to wikiversions.cdb.\n" );
 	}
 	chmod( $finalDBPath, 0664 ); // rw-rw-r
 
-	print "{$cdbFilename} successfully built.\n";
+	print "wikiversions.cdb successfully built.\n";
 }
 
 refreshWikiversionsCDB();
