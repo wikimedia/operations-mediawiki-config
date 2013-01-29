@@ -35,13 +35,14 @@ if ( PHP_SAPI == 'cli' ) {
 	# error_reporting(E_ALL);
 }
 if ( isset( $_SERVER['SERVER_ADDR'] ) ) {
-  ini_set( 'error_append_string', ' (' . $_SERVER['SERVER_ADDR'] . ')' );
+	ini_set( 'error_append_string', ' (' . $_SERVER['SERVER_ADDR'] . ')' );
 }
 
 # Protection for unusual entry points
 if ( !function_exists( 'wfProfileIn' ) ) {
 	require( './includes/ProfilerStub.php' );
 }
+
 $fname = 'CommonSettings.php';
 wfProfileIn( $fname );
 wfProfileIn( "$fname-init" );
@@ -299,12 +300,10 @@ $day = $tmarray['wday'];
 
 $wgEmergencyContact = 'noc@wikipedia.org';
 
-if ( defined( 'DEBUG_LOG' ) ) {
-	if ( $wgDBname == 'aawiki' ) {
-		$wgMemCachedDebug = true;
-		$wgDebugLogFile = "udp://$wmfUdp2logDest/debug15";
-		$wgDebugDumpSql = true;
-	}
+if ( defined( 'DEBUG_LOG' ) && $wgDBname == 'aawiki' ) {
+	$wgMemCachedDebug = true;
+	$wgDebugLogFile = "udp://$wmfUdp2logDest/debug15";
+	$wgDebugDumpSql = true;
 }
 
 $wgDBerrorLog = "udp://$wmfUdp2logDest/dberror";
@@ -333,10 +332,6 @@ $wgSQLMode = null;
 
 # TEMP HACK for bug 31187 --roan
 $wgResourceLoaderValidateJS = false;
-
-# EMERGENCY OPTIMIZATION OPTIONS
-
-$wgMiserMode = true;
 
 # Object cache and session settings
 
@@ -451,14 +446,8 @@ $wgUseImageMagick               = true;
 $wgImageMagickConvertCommand    = '/usr/bin/convert';
 $wgSharpenParameter = '0x0.8'; # for IM>6.5, bug 24857
 
-# Strict checking is still off for now, but added
-# .txt and .mht to the blacklist.
-# -- brion 2004-09-23
-# Someone has obviously turned it on, look, the line to disable it is commented out: -- TS
-# $wgStrictFileExtensions = false;
 $wgFileBlacklist[] = 'txt';
 $wgFileBlacklist[] = 'mht';
-# $wgFileBlacklist[] = 'pdf';
 $wgFileExtensions[] = 'xcf';
 $wgFileExtensions[] = 'pdf';
 $wgFileExtensions[] = 'mid';
@@ -475,8 +464,8 @@ $wgMaxImageArea = 2.5e7; // 25MP
 $wgMaxAnimatedGifArea = 2.5e7; // 25MP
 
 if ( $wgDBname == 'foundationwiki' ) { # per cary on 2010-05-11
-   $wgFileExtensions[] = 'otf';
-   $wgFileExtensions[] = 'ai';
+	$wgFileExtensions[] = 'otf';
+	$wgFileExtensions[] = 'ai';
 } elseif ( $wgDBname == 'outreachwiki' ) { # Per Frank, bug 25106
 	$wgFileExtensions[] = 'sla';
 }
@@ -537,7 +526,6 @@ $wgSVGConverters['rsvg-secure'] = '$path/rsvg-convert --no-external-files -w $wi
 
 $wgAllowUserJs = true;
 $wgAllowUserCss = true;
-
 
 #######################################################################
 # Squid Configuration
@@ -910,7 +898,9 @@ if ( $wgDBname == 'testwiki' || $wgDBname == 'mlwiki' ) {
 $wgTimelineSettings->fileBackend = 'local-multiwrite';
 
 include( $IP . '/extensions/wikihiero/wikihiero.php' );
+
 include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
+
 // Config for sitematrix
 $wgSiteMatrixFile = '/apache/common/langlist';
 $wgSiteMatrixClosedSites = getRealmSpecificFilename( "$IP/../closed.dblist" );
@@ -987,7 +977,7 @@ $wgTitleBlacklistSources = array(
 );
 
 if ( $wmgUseQuiz ) {
-   include( "$IP/extensions/Quiz/Quiz.php" );
+	include( "$IP/extensions/Quiz/Quiz.php" );
 }
 
 if ( $wmgUseGadgets ) {
@@ -1333,15 +1323,15 @@ function wfLogXFF() {
 	global $wmfUdp2logDest;
 	if ( ( @$_SERVER['REQUEST_METHOD'] ) == 'POST' ) {
 		$uri = ( $_SERVER['HTTPS'] ? 'https://' : 'http://' ) .
-
-
 			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
 		wfErrorLog(
 			gmdate( 'r' ) . "\t" .
 			"$uri\t" .
 			"{$_SERVER['HTTP_X_FORWARDED_FOR']}, {$_SERVER['REMOTE_ADDR']}\t" .
 			( $_REQUEST['wpSave'] ? 'save' : '' ) . "\n",
-			"udp://$wmfUdp2logDest/xff" );
+			"udp://$wmfUdp2logDest/xff"
+		);
 	}
 }
 $wgExtensionFunctions[] = 'wfLogXFF';
@@ -1465,11 +1455,6 @@ if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_P
 	// New HTTPS service on regular URLs
 	$wgInternalServer = $wgServer; // Keep this as HTTP for IRC notifications (bug 29925)
 	$wgServer = preg_replace( '/^http:/', 'https:', $wgServer );
-} else {
-	# For non-SSL hosts...
-	if ( $wgDBname != 'testwiki' ) {
-#		$wgStyleSheetPath = 'http://upload.wikimedia.org/skins';
-	}
 }
 
 if ( isset( $_REQUEST['captchabypass'] ) && $_REQUEST['captchabypass'] == $wmgCaptchaPassword ) {
@@ -1572,8 +1557,6 @@ ini_set( 'user_agent', 'Wikimedia internal server fetcher (noc@wikimedia.org' );
 // CentralAuth
 if ( $wmgUseCentralAuth ) {
 	include "$IP/extensions/CentralAuth/CentralAuth.php";
-
-//	$wgDebugLogGroups['CentralAuth'] = 'udp://10.0.5.8:8420/CentralAuth';
 
 	$wgCentralAuthDryRun = false;
 	# unset( $wgGroupPermissions['*']['centralauth-merge'] );
@@ -1911,8 +1894,6 @@ if ( $wmgUseCollection ) {
 		$wgCollectionFormats[ 'epub' ] = 'EPUB';
 	}
 
-	# GFDL is long gone, we use CC-BY-SA 3.0 nowaday. See bug 32513
-	//$wgLicenseURL = "http://en.wikipedia.org/w/index.php?title=Wikipedia:Text_of_the_GNU_Free_Documentation_License&action=raw";
 	$wgLicenseURL = "http://creativecommons.org/licenses/by-sa/3.0/";
 
 	$wgCollectionPortletForLoggedInUsersOnly = $wmgCollectionPortletForLoggedInUsersOnly;
@@ -1930,7 +1911,6 @@ include( "$IP/extensions/OpenSearchXml/OpenSearchXml.php" );
 # Various system to allow/prevent flooding
 # (including exemptions for scheduled outreach events)
 require( "$wmfConfigDir/throttle.php" );
-
 
 if ( $wmgUseNewUserMessage ) {
 	include "$IP/extensions/NewUserMessage/NewUserMessage.php";
@@ -2257,12 +2237,6 @@ function wmfBlockJokerEmails( &$to, &$from, &$subject, &$text ) {
 	return true;
 }
 
-# $wgReadOnly = "Emergency database maintenance, will be back to full shortly.";
-# $wgReadOnly = '5 min DB server maintenance...';
-# $wgReadOnly = 'Read-only during network issues';
-
-# $wgSiteNotice = "<div style='text-align: center; background: #f8f4f0; border: solid 1px #988; font-size: 90%; padding: 4px'>Software updates are being applied to Wikimedia sites; there may be some brief interruption as the servers update.</div>";
-# $wgSiteNotice = "<div style='text-align: center; background: #f8f4f0; border: solid 1px #988; font-size: 90%; padding: 4px'>Software updates are being applied to Wikimedia sites; we're shaking out a few remaining issues.</div>";
 
 // ContributionTracking for handling PayPal redirects
 if ( $wgUseContributionTracking ) {
