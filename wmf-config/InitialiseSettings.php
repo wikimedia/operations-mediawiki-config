@@ -7560,10 +7560,6 @@ $wgConf->settings = array(
 		// 'flood' => array( 'bot' => true ),
 		// 'rollbacker' => array( 'rollback' => true, ),
 	// ),
-	'simplewikiquote' => array(
-		'rollbacker' => array( 'rollback' => true, ),
-		'flood' => array( 'bot' => true ),
-	),
 	'simplewiktionary' => array(
 		'rollbacker' => array( 'rollback' => true, ),
 		'autopatrolled' => array( 'patrol' => true, 'autopatrol' => true ),
@@ -8085,10 +8081,6 @@ $wgConf->settings = array(
 	'+siwiki' => array(
 		'sysop' => array( 'rollbacker', 'accountcreator', 'abusefilter', 'autopatrolled', 'confirmed', 'reviewer' ),
 	),
-	'+simplewikiquote' => array(
-		'bureaucrat' => array( 'rollbacker', 'flood', ),
-		'sysop' => array( 'rollbacker', 'flood' ),
-	),
 	'+simplewiktionary' => array(
 		'sysop' => array( 'rollbacker', 'autopatrolled' ),
 	),
@@ -8478,10 +8470,6 @@ $wgConf->settings = array(
 	'+simplewiki' => array(
 		'bureaucrat' => array( 'flood', 'rollbacker', 'sysop', 'import', 'transwiki', 'patroller' ),
 		'sysop' => array( 'rollbacker', 'flood', 'patroller' ),
-	),
-	'+simplewikiquote' => array(
-		'bureaucrat' => array( 'rollbacker', 'flood', 'sysop' ),
-		'sysop' => array( 'rollbacker', 'flood' ),
 	),
 	'+simplewiktionary' => array(
 		'bureaucrat' => array( 'sysop' ),
@@ -10181,7 +10169,6 @@ $wgConf->settings = array(
 	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // Bug 36600
 	'itwiktionary' => array( 'sysop' => array( 'flood' ) ), // Bug 39306
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
-	'simplewikiquote' => array( 'sysop' => array( 'flood' ) ),
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
 	'plwiki' => array( 'sysop' => array( 'flood' ) ), // Bug 20155
 	'strategywiki' => array( 'sysop' => array( 'flood' ), ),
@@ -10198,7 +10185,6 @@ $wgConf->settings = array(
 	'mlwiki' => array( 'botadmin' => array( 'botadmin' ) ),
 	'mlwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
-	'simplewikiquote' => array( 'sysop' => array( 'flood' ) ),
 	'plwiki' => array( 'flood' => array( 'flood' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=20155 , bug 21238
 	'strategywiki' => array( 'sysop' => array( 'flood' ) ),
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
