@@ -1834,6 +1834,15 @@ if ( $wmgUseCentralNotice ) {
 	// Enable CentralNotice/Translate on testwiki for deployment testing/user feedback
 	if ( $wgDBname == 'testwiki' ) {
 		$wgNoticeUseTranslateExtension = true;
+
+		// These are a stopgap until we figure out why namespaces don't get registered
+		// from post-init hooks
+		$wgExtraNamespaces[866] = 'CNBanner';
+		$wgNamespacesWithSubpages[866] = true;
+		$wgTranslateMessageNamespaces[] = 866;
+
+		$wgExtraNamespaces[867] = 'CNBanner_talk';
+		$wgNamespacesWithSubpages[867] = true;
 	}
 }
 
