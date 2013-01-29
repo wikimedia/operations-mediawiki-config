@@ -22,7 +22,6 @@ global $wmfUdp2logDest, $wmfDatacenter, $wmfRealm, $wmfConfigDir, $wgConf;
 $wgConf->settings = array(
 
 // For live conversion of old revisions:
-# wgLegacyEncoding @{
 'wgLegacyEncoding' => array(
 	'enwiki' => 'windows-1252',
 	'dawiki' => 'windows-1252',
@@ -34,18 +33,10 @@ $wgConf->settings = array(
 
 	'default' => false,
 ),
-# @} end of wgLegacyEncoding
-
-'wgAllowExternalImages' => array(
-	'default' => false,
-
-	# requested by waerth
-	# 'nlwiki' => true, # disabled by brion, 2006-04-19
-),
 
 'wgCapitalLinks' => array(
+	'default' => true,
 	'jbowiki' => false,
-
 	'wiktionary' => false,
 ),
 
@@ -70,16 +61,9 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-'wgDisableLangConversion' => array(
-	'zhwikiquote' => false,
-),
-
 'wgInterwikiMagic' => array (
-	'sourceswiki'   => true, # bug 29534
+	'default' => true,
 	'metawiki'      => false,
-
-	# http://species.wikimedia.org/wiki/Help_talk:Vernacular_names_section
-	'specieswiki'   => true,
 ),
 
 # wgLanguageCode @{
@@ -1070,12 +1054,6 @@ $wgConf->settings = array(
 	'default' => '//upload.wikimedia.org/score'
 ),
 
-
-# Disable BC repo
-'wgUseSharedUploads' => array(
-	'default' => false,
-),
-
 'wgMiserMode' => array(
 	'default' => true, // Slaves aren't fast enough to generate all special pages all the time.
 ),
@@ -1672,7 +1650,6 @@ $wgConf->settings = array(
 
 'wgMaxNameChars' => array(
 	'default' => 64,
-	'commonswiki' => 64,
 ),
 
 'wgSiteSupportPage' => array(
@@ -3753,7 +3730,6 @@ $wgConf->settings = array(
 # wgUseDynamicDates @{
 'wgUseDynamicDates' => array(
 	'default' => false,
-	//'enwiki' => true, // Bug 18479
 	'metawiki'  => true,
 	'enwikiquote' => true,
 	'enwiktionary' => true,
@@ -4249,12 +4225,9 @@ $wgConf->settings = array(
 	'wikimaniawiki' => ''
 ),
 'wgSkipSkins' => array(
-	// Note: Vector controlled via wmgEnableVector
-	// 2009-07-01 -- bv
 	'default' => array( 'htmldump', 'monobookcbt', 'drsport' ),
 	'dawiki' => array( 'htmldump', 'monobookcbt' ),
 	'testwiki' => array( 'htmldump', 'monobookcbt', 'drsport' ),
-// 	'usabilitywiki' => array( 'htmldump', 'monobookcbt', 'drsport' ),
 ),
 
 'wgAutoConfirmAge' => array(
@@ -4302,7 +4275,6 @@ $wgConf->settings = array(
 
 'wmgUseDismissableSiteNotice' => array(
 	'default' => true,
-	// Andrew 2010-02-12
 ),
 
 'wmgUseCentralNotice' => array(
@@ -4334,18 +4306,6 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-# Seems to be always false with mediawiki 1.17
-# http://www.mediawiki.org/wiki/Manual:$wgCategoryPrefixedDefaultSortkey
-# We might just remove it
-'wgCategoryPrefixedDefaultSortkey' => array(
-	'enwiki' => false,
-	'enwikinews' => false,
-	'huwiki' => false,
-	'plwiki' => true,
-	'plwikisource' => true,
-	'svwikisource' => false,
-),
-
 // For CentralNotice project pickers
 'wmgNoticeProject' => array(
 	'advisorywiki' => 'wikimedia',
@@ -4369,17 +4329,6 @@ $wgConf->settings = array(
 	'wikimania2013wiki' => 'wikimedia',
 	'wikidatawiki' => 'wikidata',
 	'wikivoyage' => 'wikivoyage',
-),
-
-'wgAllowHideBanners' => array(
-	'donatewiki' => true,
-	'foundationwiki' => true,
-	'testwiki' => true,
-	'default'  => true,
-),
-
-'wgReadOnlyFile' => array(
-	'default' => '',
 ),
 
 # wgTranslateNumerals @{
@@ -6259,10 +6208,6 @@ $wgConf->settings = array(
 ),
 # @} end of wgExtraNamespaces
 
-'wgDisableNewsURLs' => array(
-	'wikinews' => true,
-),
-
 'wgAccountCreationThrottle' => array(
 	'default' => 6, // previously 10
 	'private' => 0, // disable for wikis with sysop-only account creation
@@ -6483,7 +6428,6 @@ $wgConf->settings = array(
 	'enwiktionary' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=7248
 	'eswiktionary' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=7953
 	'fawikinews' => true,
-	'fiwiki' => false, // Bug 39942
 	'frwiki' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=7269
 	'frwikibooks' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=21517
 	'frwikisource' => true, // yannf asked in irc, 2006-07-25
@@ -6533,7 +6477,6 @@ $wgConf->settings = array(
 
 'wgUseNPPatrol' => array(
 	'default' => true, // brion 2007-11-16
-//	'fiwiki' => false, // Bug 39942, temporarely disabled by bug 41016
 	'huwiki' => false, // Bug 19241
 	'ruwiki' => false, // Bug 31650
 	'sqwiki' => false, // Bug 25822
@@ -6543,13 +6486,11 @@ $wgConf->settings = array(
 # wgNoFollow... @{
 'wgNoFollowLinks' => array(
 	'default' => true,
-#	'enwiki' => false, # waah waah we like spam :)
 	'fishbowl' => false, // not a spam measure here... https://bugzilla.wikimedia.org/show_bug.cgi?id=14105
 ),
 
 'wgNoFollowNsExceptions' => array(
 	'default' => array(),
-#	'enwiki' => array( 0 ), # waah waah we like spam :) -- removed 2007-01-20 by brion due to rumored mass spam attack
 ),
 
 'wgNoFollowDomainExceptions' => array(
@@ -6752,23 +6693,24 @@ $wgConf->settings = array(
 
 # wgBlockDisablesLogin @{
 'wgBlockDisablesLogin' => array(
-	'arbcom_dewiki' => 'true', // # 23357
-	'arbcom_nlwiki' => 'true', // # 22630
-	'auditcomwiki' => 'true', // #23231
-	'boardwiki' => 'true', // #23231
-	'chairwiki' => 'true', // #23231
-	'checkuserwiki' => 'true',
-	'collabwiki' => 'true', // #23231
-	'chapcomwiki' => 'true', // # 22319
-	'execwiki' => 'true', // # 22319
-	'fdcwiki' => 'true',
-	'foundationwiki' => 'true', // RT #690
-	'internalwiki' => 'true', // #23231
-	'noboard_chapterswikimedia' => 'true',
-	'officewiki' => 'true', // #23231
-	'otrs_wikiwiki' => 'true', // # 22319
-	'stewardwiki' => 'true',
-	'wikimaniateamwiki' => 'true', // # 22319
+	'default' => false,
+	'arbcom_dewiki' => true, // # 23357
+	'arbcom_nlwiki' => true, // # 22630
+	'auditcomwiki' => true, // #23231
+	'boardwiki' => true, // #23231
+	'chairwiki' => true, // #23231
+	'checkuserwiki' => true,
+	'collabwiki' => true, // #23231
+	'chapcomwiki' => true, // # 22319
+	'execwiki' => true, // # 22319
+	'fdcwiki' => true,
+	'foundationwiki' => true, // RT #690
+	'internalwiki' => true, // #23231
+	'noboard_chapterswikimedia' => true,
+	'officewiki' => true, // #23231
+	'otrs_wikiwiki' => true, // # 22319
+	'stewardwiki' => true,
+	'wikimaniateamwiki' => true, // # 22319
 ),
 # @}
 
@@ -8864,35 +8806,13 @@ $wgConf->settings = array(
 	'enwiki' => 15,
 ),
 
-// 2006-01-03 Standardizing live hack
-// 2006-06-28 allowing for short pages -- brion
-// 2008-09-20 emergency disable -- Tim
-// 2008-09-29 putting it back on, with the history rev limit again -- brion
 'wgExportAllowHistory' => array( 'default' => true ),
 'wgExportMaxHistory' => array(
 	'default' => 1000, # changed from 100 -- brion 2008-07-10
-	# 'enwiki' => 0, // experimention -- brion # turned back off brion 2008-09-10
-	# 'wikimania2006wiki' => 1000,
-	# 'wikimania2007wiki' => 1000,
 ),
-
-// Moved to db.php
-/*
-'wgDefaultExternalStore' => array(
-	'commonswiki' => 'DB://cluster3',
-	'metawiki' => 'DB://cluster3',
-
-	'enwiki' => 'DB://cluster3',
-
-),*/
 
 'wgParserCacheExpireTime' => array(
 	'default' => 86400 * 365,
-),
-
-# Enabling interwiki CDB cache on WMF -- midom 2006-01-21
-'wgInterwikiCache' => array(
-	'default' => false, // check in CommonSettings if available
 ),
 
 # Captcha ...
@@ -8913,10 +8833,6 @@ $wgConf->settings = array(
 ),
 # @} end of Captcha
 
-'wgMinimalPasswordLength' => array(
-	'default' => 1, // enforce prohibition of blank passwords
-),
-
 'wgWantedPagesThreshold' => array(
 	'default' => 2,
 ),
@@ -8927,12 +8843,6 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 # @} end of wgEnotifUserTalk
-
-# #wgShowUpdatedMarker @{
-'wgShowUpdatedMarker' => array(
-	'default' => true,
-),
-# @} end of wgShowUpdatedMarker
 
 # #wgEnotifWatchlist @{
 'wgEnotifWatchlist' => array(
@@ -8951,10 +8861,6 @@ $wgConf->settings = array(
 	'default' => 0,
 ),
 
-'wgJobLogFile' => array(
-	'default' => "udp://$wmfUdp2logDest/webJobs",
-),
-
 'wgMaxArticleSize' => array(
 	# Increased from 1024 to 2000 to alleviate problems with template expansion
 	# limits in AfD archives -- TS
@@ -8966,7 +8872,7 @@ $wgConf->settings = array(
 ),
 
 'wgEnableSidebarCache' => array(
-	'default' => true, // secure.php disables it for secure.wikimedia.org
+	'default' => true,
 ),
 
 'wgAllowTitlesInSVG' => array(
@@ -8984,7 +8890,6 @@ $wgConf->settings = array(
 
 'wgGenerateThumbnailOnParse' => array(
 	'default' => false,
-	# 'private' => true, // img_auth is not very happy with this option off :D
 ),
 
 'wgUnwatchedPageThreshold' => array(
@@ -9189,24 +9094,14 @@ $wgConf->settings = array(
 	'foundationwiki' => true, // whee restricted site
 ),
 
-'wgTiffThumbnailType' => array(
-	'default' => false,
-#	'default' => array( 'jpg', 'image/jpg' ), // TIFF->JPEG initial test?
-),
-
 # CATEGORY TREE EXTENSION @{
 'wgCategoryTreeDynamicTag' => array(
 	'default' => true,
 ),
 
-'wgCategoryTreeUnifiedView' => array(
-	'default' => true,
-),
-
-// CT_MODE_CATEGORIES	0
+// CT_MODE_CATEGORIES		 0
 // CT_MODE_PAGES		10
 // CT_MODE_ALL			20
-# OBSOLETE !!
 'wgCategoryTreeCategoryPageMode' => array(
 	'default' => 0,
 	'hewiki' => 10,
@@ -9291,7 +9186,6 @@ $wgConf->settings = array(
 
 # EXTENSIONS @{
 'wmgUseProofreadPage' => array(
-	// controls loading of ProofreadPage extension in CommonSettings.php
 	'default' => false,
 	'wikisource' => true,
 	'sourceswiki' => true, // FIXME: Why isn't this part of wikisource?
@@ -9376,12 +9270,6 @@ $wgConf->settings = array(
 
 'wmgUseGadgets' => array(
 	'default' => true, // set 2007-12-17 by brion
-	'commonswiki' => true,
-	'dewiki' => true,
-	'enwiki' => true,
-	'frwiki' => true,
-	'hewiki' => true,
-	'nlwiki' => true,
 ),
 
 # @} end of EXTENSIONS
@@ -9758,12 +9646,10 @@ $wgConf->settings = array(
 
 'wgStatsMethod' => array(
 	'default' => 'udp',
-	# 'enwiki' => 'udp',
 ),
 
 'wmgUseTitleKey' => array(
 	'default' => true, // enable/disable TitleKey prefix search case-insensitivity ext
-	'testwiki' => true,
 ),
 
 'wgUseLocalMessageCache' => array(
@@ -9776,7 +9662,6 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'private' => false,
 	'fishbowl' => false,
-	# 'closed' => false,
 ),
 
 'wmgCentralAuthLoginIcon' => array(
@@ -9799,12 +9684,6 @@ $wgConf->settings = array(
 	'wikimania2013wiki' => '/usr/local/apache/common/images/sul/wikimania.png',
 ),
 # @}
-
-'wgBreakFrames' => array(
-	'default' => false,
-	# consider this...
-	# 'enwiki' => true, // due to http://www.modernista.com/7/
-),
 
 'wgEnableMWSuggest' => array(
 	'default' => true,
@@ -9909,24 +9788,16 @@ $wgConf->settings = array(
 
 'wgEnableNewpagesUserFilter' => array(
 	'default' => true,
-#	'default' => false, // still broken somehow
 	'frwiki' => false,
 	'nlwiki' => false,
 	'svwiki' => false,
 ),
 
-'wgMaxPPNodeCount' => array(
-	// current MW default is 1 million
-	// 50k is still real slow, but should avoid *total* dos on super-insane templates
-	// set by brion 2008-05-09
-	// 'default' => 50000, // too low, lots of complaints
-	// 'default' => 100000, // still probably too low, but the DoS templates aren't deadly
-	// fuck it, tim can figure this out :D
-),
 
 'wgEnableWriteAPI' => array(
 	'default' => true,
 ),
+
 'wgAPIMaxResultSize' => array(
 	'default' => 12582912, // 12 MB; temporary while I figure out what the deal with those overlarge revisions is --Roan
 ),
@@ -10045,8 +9916,6 @@ $wgConf->settings = array(
 
 'wmgCollectionUseEpub' => array(
 	'default' => true,
-	#'testwiki' => true,
-	#'simplewiki' => true,
 ),
 
 'wmgUseSpamBlacklist' => array(
@@ -10056,7 +9925,6 @@ $wgConf->settings = array(
 ),
 
 'wgAllowImageMoving' => array(
-	# 'default' => false, // broken 2009-03-18 --bv // Testing 2009-03-16. Group permissions limit to sysop only. --BV
 	'default' => true, // brion 2009-09-21
 	'testwiki' => true,
 	'usabilitywiki' => true,
@@ -10190,6 +10058,7 @@ $wgConf->settings = array(
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
 	'zhwiki' => array( 'sysop' => array( 'flood' ) ),
 ),
+
 'wgEnableAPI' => array(
 	'default' => true,
 ),
@@ -10202,16 +10071,6 @@ $wgConf->settings = array(
 'wgSquidMaxage' => array(
 	'default' => 2678400, // 31 days seems about right
 	'foundationwiki' => 3600, // template links may be funky
-),
-
-'wgEnableSerializedMessages' => array(
-	'default' => true,
-	# 'testwiki' => false, # breaks it even more since it uses memcached instead -- TS 2009-06-15
-),
-
-'wgEnforceHtmlIds' => array(
-	'default' => true, // same old links for now
-	'testwiki' => false, // test the unicode ones
 ),
 
 # abuse filter @{
@@ -10244,7 +10103,7 @@ $wgConf->settings = array(
 
 'wgThumbLimits' => array(
 	'default' => array( 120, 150, 180, 200, 220, 250, 300 ),
-	'itwikiquote' => array( 120, 150, 180, 200, 220, 250, 300, 360 ),
+	'+itwikiquote' => array( 360 ),
 	'svwiki' => array( 120, 200, 250, 300, 360 ),
 ),
 'wmgThumbsizeIndex' => array(
@@ -10332,14 +10191,6 @@ $wgConf->settings = array(
 	'default'	=> true,
 ),
 
-'wgVectorCombineUserTalk' => array(
-	'default'   => true,
-),
-
-'wmgJQueryOnEveryPage' => array(
-	'default'	=> true,
-),
-
 'wgMaxMsgCacheEntrySize' => array(
 	'default' => 1024,
 ),
@@ -10397,16 +10248,7 @@ $wgConf->settings = array(
 # @} end of FEEDBACK
 
 'wmgUseLocalisationUpdate' => array(
-	'default' => true, // one more final test!
-	'testwiki' => true,
-	'aawiki' => true, // used for test runs :)
-	'incubatorwiki' => true, // bug 19312
-	// Smaller projects:
-	'wikibooks' => true,
-	'wiktionary' => true,
-	'wikinews' => true,
-	'wikiversity' => true,
-	'wikiquote' => true,
+	'default' => true,
 ),
 
 'wgOldChangeTagsIndex' => array(
@@ -10513,8 +10355,6 @@ $wgConf->settings = array(
 
 'wmgClickTrackThrottle' => array(
 	'default' => -1
-	# 'strategywiki' => 1,
-	# 'testwiki' => 1,
 ),
 
 'wmgDonationInterface' => array(
@@ -10523,6 +10363,7 @@ $wgConf->settings = array(
 	'foundationwiki' => true,
 	'donatewiki' => true,
 ),
+
 'wmgUseGlobalUsage' => array(
 	'default' => true, # Enabled on all PUBLIC wikis
 	'closed' => false,
@@ -10538,14 +10379,16 @@ $wgConf->settings = array(
 	'zhwikisource' => array( 'zh-cn', 'zh-hk', 'zh-mo', 'zh-my', 'zh-sg', 'zh-tw' ),
 	'zhwiktionary' => array( 'zh-cn', 'zh-hk', 'zh-mo', 'zh-my', 'zh-sg', 'zh-tw' ),
 ),
+
 'wmgUseWikimediaLicenseTexts' => array(
 	'default' => false,
 	'commonswiki' => true,
 ),
+
 'wmgUseAPIRequestLog' => array(
 	'default' => false,
-	'testwiki' => false,
 ),
+
 'wgSearchSuggestCacheExpiry' => array(
 	'default' => 86400,
 ),
@@ -10599,13 +10442,11 @@ $wgConf->settings = array(
 
 'wmgUseMwEmbedSupport' => array(
 	'default' => true,
-	'commonswiki' => true,
 ),
 
 // NOTE: TMH *requires* MwEmbedSupport to function
 'wmgUseTimedMediaHandler' => array(
 	'default' => true,
-	'commonswiki' => true,
 ),
 
 'wmgEnableLocalTimedText' => array(
@@ -10666,6 +10507,7 @@ $wgConf->settings = array(
 	'default' => array(),
 	'uawikimedia' => array( 'http://wikimediaukraine.wordpress.com/feed/' ),
 ),
+
 'wmgUseDoubleWiki' => array(
 	'default' => false,
 	'wikisource' => true,
@@ -10691,6 +10533,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 ),
+
 'wmgUseArticleFeedback' => array(
 	'default' => false,
 	'testwiki' => true,
@@ -10890,9 +10733,11 @@ $wgConf->settings = array(
 		'tracked' => false,
 	),
 ),
+
 'wmgUsePoolCounter' => array(
 	'default' => true,
 ),
+
 'wmgUseNarayam' => array(
 	'default' => false,
 	'amwiki' => true, // Bug 41460
@@ -10959,6 +10804,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'betawikiversity' => true, // Bug 41912 (as incubator.)
 ),
+
 'wmgUseWebFonts' => array(
 	'default' => false,
 	'amwiki' => true,
@@ -11026,6 +10872,7 @@ $wgConf->settings = array(
 ),
 'wmgWebFontsEnabledByDefault' => array(
 	'default' => true,
+
 ),
 'wmgUseGoogleNewsSitemap' => array(
 	'default' => false,
@@ -11042,19 +10889,23 @@ $wgConf->settings = array(
 	'elwikinews' => true,
 	'fawikinews' => 102,
 ),
+
 'wmgUseCLDR' => array(
 	'default' => true,
 	'testwiki' => true,
 ),
+
 'wgParserCacheType' => array(
 	# To disable the MySQL parser cache, uncomment the following line,
 	# and comment out the one after that
 	#'default' => CACHE_MEMCACHED,
 	'default' => 'mysql-multiwrite',
 ),
+
 'wgLanguageConverterCacheType' => array(
 	'default' => CACHE_ACCEL,
 ),
+
 'wmgPFEnableStringFunctions' => array(
 	'default' => false,
 	'donatewiki' => true,
@@ -11069,6 +10920,7 @@ $wgConf->settings = array(
 	'nlwiktionary' => '//commons.wikimedia.org/wiki/Special:Upload?uselang=nl',
 	'ptwikibooks' => '//commons.wikimedia.org/wiki/Special:Upload/pt?uselang=pt',
 ),
+
 // DO NOT DISABLE WITHOUT CONTACTING PHILIPPE / LEGAL!
 // Installed by Andrew, 2011-04-26
 'wmgUseDisableAccount' => array(
@@ -11077,15 +10929,17 @@ $wgConf->settings = array(
 	'checkuserwiki' => true,
 	'stewardwiki' => true,
 ),
+
 'wmgCheckUserForceSummary' => array(
 	'default' => false,
 	'enwiki' => true,
 ),
+
 'wmgUseIncubator' => array(
 	'default' => false,
 	'incubatorwiki' => true,
-	# 'testwiki' => true,	# Breaks in various ways
 ),
+
 'wmgUseWikiLove' => array(
 	'default' => false,
 	'arwiki' => true,
@@ -11121,14 +10975,17 @@ $wgConf->settings = array(
 'wmgWikiLoveDefault' => array(
 	'default' => true,
 ),
+
 'wmgUseEditPageTracking' => array(
 	'default' => false,
 	'testwiki' => true,
 	'enwiki' => true,
+
 ),
 'wmgUseMath' => array(
 	'default' => true, // moved from MW core
 ),
+
 'wmgUseMarkAsHelpful' => array(
 	'default' => false,
 	'testwiki' => true,
@@ -11137,6 +10994,7 @@ $wgConf->settings = array(
 	# 'nlwiki' => true,
 	# 'sewikimedia' => true,
 ),
+
 'wmgUseMoodBar' => array(
 	'default' => false,
 	'testwiki' => true,
@@ -11159,24 +11017,29 @@ $wgConf->settings = array(
 	'default' => '20110725221004',
 	'frwikisource' => '20110304202000',
 ),
+
 'wmgMobileFrontend' => array(
 	'default' => true,
 	'wikivoyage' => true, // In testing prior to mobile domain setup
 	'wikidatawiki' => false, // Disabled due to lack of mobile domain setup
 ),
+
 'wmgZeroRatedMobileAccess' => array(
 	'default' => true,
 ),
+
 'wmgUseSubPageList3' => array(
 	'default' => false,
 	'testwiki' => true,
 	'wikiversity' => true,
 	'cswiktionary' => true, // bug 38903
 ),
+
 'wmgShowHiddenCats' => array(
 	'default' => false,
 	'commonswiki' => true,
 ),
+
 'wmgMobileFrontendLogo' => array(
 	'default' => '//upload.wikimedia.org/wikipedia/commons/8/84/W_logo_for_Mobile_Frontend.gif',
 	'wikinews' => '//upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/35px-Wikinews-logo.svg.png',
@@ -11197,9 +11060,11 @@ $wgConf->settings = array(
 	'mediawikiwiki' => 'm.%h1.%h2',
 	'test2wiki' => '',
 ),
+
 'wmgZeroDisableImages' => array(
 		'default' => 1,
 ),
+
 'wmgMFRemovableClasses' => array(
 	'default' => array( 'table.metadata',
 			   '.metadata mbox-small',
@@ -11237,6 +11102,7 @@ $wgConf->settings = array(
 'wmgMFNearby' => array(
 	'default' => true, // Does not gets enabled on wikis w/o GeoData anyway
 ),
+
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
 	'cswiki' => array(
@@ -11261,10 +11127,9 @@ $wgConf->settings = array(
 	),
 	'test2wiki' => array( NS_USER => array( 'male' => 'Male_user', 'female' => 'Female_user' ) ),
 ),
+
 'wmgUseBabel' => array(
 	'default' => true,
-	'testwiki' => true,
-	'test2wiki' => true,
 ),
 'wmgBabelCategoryNames' => array(
 	'default' => array(
@@ -11788,6 +11653,7 @@ $wgConf->settings = array(
 	'commonswiki' => true,
 	'incubatorwiki' => true,
 ),
+
 'wmgUseTranslate' => array(
 	'default' => false,
 	'bewikimedia' => true, // bug 37391
@@ -11841,13 +11707,16 @@ $wgConf->settings = array(
 	'wikimania2012wiki' => true,
 	'wikimania2013wiki' => true,
 ),
+
 'wmgUseVipsTest' => array(
 	'default' => false,
 	'test2wiki' => true,
 ),
+
 'wmgUseApiSandbox' => array(
 	'default' => true,
 ),
+
 'wmgUseShortUrl' => array(
 	'default' => false,
 	'hiwiki' => true,
@@ -11861,10 +11730,10 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'test2wiki' => true,
 ),
+
 'wmgUseFeaturedFeeds' => array(
 	'default' => true,
 ),
-
 'wmgFeaturedFeedsDefaults' => array(
 	'default' => array(
 		'limit' => 10,
@@ -11875,20 +11744,15 @@ $wgConf->settings = array(
 		'inUserLanguage' => false,
 	),
 ),
-
 'wmgDisplayFeedsInSidebar' => array(
 	'default' => false,
 	'testwiki' => true,
 ),
-'wmfUseRevSha1Columns' => array(
-	'default' => true,
-),
-'wgResourceLoaderExperimentalAsyncLoading' => array(
-	'default' => false,
-),
+
 'wmgReduceStartupExpiry' => array(
 	'default' => false,
 ),
+
 'wmgMemoryLimit' => array(
 	'default' => 175 * 1024 * 1024, // 175MB
 
@@ -11903,19 +11767,12 @@ $wgConf->settings = array(
 'wgMaxGeneratedPPNodeCount' => array(
 	'default' => 1500000,
 ),
-'wgBug34832TransitionalRollback' => array(
-	'default' => false,
-	'zhwiki' => true,
-	'zhwikibooks' => true,
-	'zhwikinews' => true,
-	'zhwikiquote' => true,
-	'zhwikisource' => true,
-	'zhwiktionary' => true,
-),
+
 'wgEnableJavaScriptTest' => array(
 	'default' => false,
 	'test2wiki' => true,
 ),
+
 'wmgEnablePageTriage' => array(
 	'default' => false,
 	'testwiki' => true,
@@ -11928,41 +11785,49 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 	'enwiki' => true,
 ),
+
 'wmgEnableInterwiki' => array(
 	'default' => true,
 ),
+
 'wmgEnableRandomRootPage' => array(
 	'default' => true,
 	'wiki' => false,
 ),
+
 'wmgUseLastModified' => array(
 	'default' => false,
 //	'testwiki' => true,
 //	'enwiki' => true,
 ),
+
 'wmgUseE3Experiments' => array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
 	'enwiki' => true,
 ),
+
 'wmgUseGettingStarted' => array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
 	'enwiki' => true,
 ),
+
 'wmgUseEducationProgram' => array(
 	'default' => false,
 	'test2wiki' => true,
 	'enwiki' => true,
 ),
+
 'wmgUseWikimediaShopLink' => array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
 	'enwiki' => true,
 ),
+
 # *** DO NOT disable this extension if it causes an overload via API ***
 # or you will break a lot of pages where its parser function is used. Instead,
 # disable its API modules in CommonSettings.php or below
@@ -11971,11 +11836,9 @@ $wgConf->settings = array(
 	'wiki' => true,
 	'wikivoyage' => true,
 ),
-
 'wmgEnableGeoSearch' => array(
 	'default' => true,
 ),
-
 'wmgGeoDataUpdatesViaJob' => array(
 	'default' => false,
 ),
@@ -11986,11 +11849,9 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
 ),
-
 'wmgEchoEnableEmailBatch' => array(
 	'default' => true,
 ),
-
 'wmgEchoEmailFooterAddress' => array(
 	'default' => 'Wikimedia Foundation, 149 New Montgomery St., 3rd Fl., San Francisco, CA 94105.',
 ),
@@ -12007,7 +11868,6 @@ $wgConf->settings = array(
 	'enwikibooks' => true,
 	'ptwikibooks' => true,
 ),
-
 'wmgSubpageSortkeyByNamespace' => array(
 	'default' => array(),
 	'enwikibooks' => array( // Bug 22911
@@ -12211,7 +12071,6 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 	'huwiki' => true,
 ),
-
 'wmgWikibaseClientSettings' => array(
 	'default' => array(
 		'namespaces' => array( NS_MAIN, NS_TALK, NS_USER, NS_USER_TALK, NS_PROJECT,
