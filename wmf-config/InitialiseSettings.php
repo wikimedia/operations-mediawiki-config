@@ -11248,6 +11248,11 @@ $wgConf->settings = array(
 'wmgMFForceSecureLogin' => array(
 	'default' => true,
 ),
+'wmgMFNearby' => array(
+	'default' => false,
+	'testwiki' => true,
+	'simplewiki' => true,
+),
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
 	'cswiki' => array(
