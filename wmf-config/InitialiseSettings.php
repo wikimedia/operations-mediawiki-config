@@ -4378,8 +4378,12 @@ $wgConf->settings = array(
 	'default'  => true,
 ),
 
+'wgReadOnly' => array(
+	'default' => null,
+),
+
 'wgReadOnlyFile' => array(
-	'default' => '',
+	'default' => false,
 ),
 
 # wgTranslateNumerals @{
@@ -4423,9 +4427,6 @@ $wgConf->settings = array(
 		'slow-parse' => "udp://$wmfUdp2logDest/slow-parse",
 		'exception' => "udp://$wmfUdp2logDest/exception",
 		'session' => "udp://$wmfUdp2logDest/session",
-		# 'ifexist' => "udp://$wmfUdp2logDest/ifexist",
-		# 'CentralAuth' => "udp://$wmfUdp2logDest/centralauth",
-		# 'baddiff' => "udp://$wmfUdp2logDest/baddiff",
 		'logging' => "udp://$wmfUdp2logDest/logging",
 		'badblock' => "udp://$wmfUdp2logDest/badblock",
 		'SimpleAntiSpam' => "udp://$wmfUdp2logDest/spam",
@@ -4439,7 +4440,6 @@ $wgConf->settings = array(
 		'runJobs' => "udp://$wmfUdp2logDest/runJobs",
 		'es-hit' => "udp://$wmfUdp2logDest/es-hit",
 		'wtf' => "udp://$wmfUdp2logDest/wtf", // -- bv 2009-07-29
-		#'memcached' => "udp://$wmfUdp2logDest/memcached", // spammy
 		'poolcounter' => "udp://$wmfUdp2logDest/poolcounter",
 		'bug-27891' => "udp://$wmfUdp2logDest/bug-27891",
 		'lc-recache' => "udp://$wmfUdp2logDest/lc-recache",
@@ -4457,7 +4457,6 @@ $wgConf->settings = array(
 		'session' => "udp://$wmfUdp2logDest/session",
 		'imagemove' => "udp://$wmfUdp2logDest/imagemove",
 		'exception' => "udp://$wmfUdp2logDest/exception",
-
 		'wtf' => "udp://$wmfUdp2logDest/wtf", // -- bv 2009-07-29
 	),
 ),
