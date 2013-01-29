@@ -3,7 +3,6 @@
 error_reporting( 0 );
 
 require_once( dirname( __FILE__ ) . '/defines.php' );
-require_once( dirname( __FILE__ ) . '/MWRealm.php' );
 
 /**
  * This script prints the MW version associated with a specified wikidb.
@@ -18,19 +17,16 @@ if ( count( $argv ) < 2 ) {
  * @return string MW code version (e.g. "php-x.xx" or "php-trunk")
  */
 function getWikiVersion( $dbName ) {
-	$cdbFilename = getRealmSpecificFilename(
-		MULTIVER_CDB_DIR_APACHE . 'wikiversions.cdb'
-	);
-	$db = dba_open( $cdbFilename, 'r', 'cdb' );
+	$db = dba_open( MULTIVER_CDB_DIR_APACHE . '/wikiversions.cdb', 'r', 'cdb' );
 	if ( $db ) {
 		$version = dba_fetch( "ver:$dbName", $db );
 		dba_close( $db );
 		if ( $version !== false ) {
 			return $version; // found version entry
 		}
-		die( "$cdbFilename has no version entry for `$dbName`.\n" );
+		die( "wikiversions.cdb has no version entry for `$dbName`.\n" );
 	}
-	die( "Unable to open $cdbFilename.\n" );
+	die( "Unable to open wikiversions.cdb.\n" );
 }
 
 echo getWikiVersion( $argv[1] ) . "\n";
