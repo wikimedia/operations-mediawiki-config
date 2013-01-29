@@ -6,21 +6,9 @@
 if( $wmfRealm === 'production' ) {  # safeguard
 
 if ( $wmgMobileFrontend ) {
-	// Try disabling noindex on some enwiki pages per discussion with Google
-	// This hook handler should be set before MF's one
-	$wgHooks['RequestContextCreateSkin'][] = function(  IContextSource $context ) {
-		global $wgMFNoindexPages, $wgDBname;
-
-		$title = $context->getTitle()->getPrefixedText();
-		if ( ( $wgDBname === 'enwiki' || $wgDBname === 'testwiki' )
-			&& MobileContext::singleton()->shouldDisplayMobileView()
-			&& $title[0] === 'Q' )
-		{
-			$wgMFNoindexPages = false;
-		}
-		return true;
-	};
 	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
+	$wgMFNoindexPages = false;
+	$wgMFNearby = $wmgMFNearby && $wmgEnableGeoData;
 	$wgMFPhotoUploadEndpoint = $wmgMFPhotoUploadEndpoint;
 	$wgMFRemotePostFeedbackUsername = $wmgMFRemotePostFeedbackUsername;
 	$wgMFRemotePostFeedbackPassword = $wmgMFRemotePostFeedbackPassword;
