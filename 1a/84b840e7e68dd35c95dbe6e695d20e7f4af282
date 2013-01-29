@@ -1,0 +1,8 @@
+Change-Id: I1a84b840e7e68dd35c95dbe6e695d20e7f4af282
+Code-Review+2: MaxSem <maxsem.wiki@gmail.com>
+Verified+2: MaxSem <maxsem.wiki@gmail.com>
+Submitted-by: MaxSem <maxsem.wiki@gmail.com>
+Submitted-at: Tue, 29 Jan 2013 21:22:20 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/46616
+Project: operations/mediawiki-config
+Branch: refs/heads/master
