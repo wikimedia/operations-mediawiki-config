@@ -2763,8 +2763,7 @@ if ( ( $wmgUseTranslate && $wmgUseTranslationMemory ) || $wmgEnableGeoData ) {
 	require_once( "$IP/extensions/Solarium/Solarium.php" );
 }
 
-// Remove this hack as soon as 1.21wmf5 is everywhere
-if ( $wmgUseTemplateSandbox && $wgVersion != '1.21wmf4' ) {
+if ( $wmgUseTemplateSandbox ) {
 	require_once( "$IP/extensions/TemplateSandbox/TemplateSandbox.php" );
 	if( $wmgUseScribunto ) {
 		$wgTemplateSandboxEditNamespaces[] = NS_MODULE;

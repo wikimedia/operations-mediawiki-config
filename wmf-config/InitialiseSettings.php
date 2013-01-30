@@ -12132,8 +12132,6 @@ $wgConf->settings = array(
 
 'wmgUseTemplateSandbox' => array(
 	'default' => true,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
 ),
 
 'wmgUsePageImages' => array(
