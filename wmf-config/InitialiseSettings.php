@@ -8496,6 +8496,7 @@ $wgConf->settings = array(
 	),
 	'+wikidatawiki' => array(
 		'sysop' => array( 'autopatrolled' ), // bug 41907
+		'bureaucrat' => array( 'translationadmin' ), // bug 44395
 	),
 	'+wikimaniateamwiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'autopatrolled', 'import' ),
