@@ -2631,8 +2631,9 @@ if ( $wmgUseReplaceText ) {
 
 if ( $wmgUseGeoCrumbs ) {
 	require_once( "$IP/extensions/GeoCrumbs/GeoCrumbs.php" );
+}
 
-	// dependency
+if ( $wmgUseGeoCrumbs || $wmgUseInsider || $wmgUseRelatedArticles || $wmgUseRelatedSites ) {
 	require_once( "$IP/extensions/CustomData/CustomData.php" );
 }
 
@@ -2663,21 +2664,14 @@ if ( $wmgUseTocTree ) {
 
 if ( $wmgUseInsider ) {
 	require_once( "$IP/extensions/Insider/Insider.php" );
-	// dependency
-	require_once( "$IP/extensions/CustomData/CustomData.php" );
 }
 
 if ( $wmgUseRelatedArticles ) {
 	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
-	// dependency
-	require_once( "$IP/extensions/CustomData/CustomData.php" );
 }
 
 if ( $wmgUseRelatedSites ) {
 	require_once( "$IP/extensions/RelatedSites/RelatedSites.php" );
-	// dependency
-	require_once( "$IP/extensions/CustomData/CustomData.php" );
-
 	$wgRelatedSitesPrefixes = $wmgRelatedSitesPrefixes;
 }
 
