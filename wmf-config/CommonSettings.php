@@ -2699,8 +2699,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 }
 
 if ( $wmgUseWikibaseRepo ) {
-	// @todo: enable DataValues and do we want to rely on lazy loading of stuff there?
-	//require_once( "$IP/DataValues/DataValues.php" );
+	require_once( "$IP/extensions/DataValues/DataValues.php" );
 	require_once( "$IP/extensions/Diff/Diff.php" );
 	require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
 	require_once( "$IP/extensions/Wikibase/repo/Wikibase.php" );
@@ -2729,10 +2728,16 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBSettings['withoutTermSearchKey'] = true;
 
 	$wgWBSettings['useChangesTable'] = true;
+
+	$wgWBSettings['localClientDatabases'] = array(
+		'test2wiki' => 'test2wiki',
+		'hewiki' => 'hewiki',
+		'huwiki' => 'huwiki',
+		'itwiki' => 'itwiki'
+	);
 }
 
 if ( $wmgUseWikibaseClient ) {
-	// @todo: are we okay with lazy loading of stuff in DataValues
 	require_once( "$IP/extensions/DataValues/DataValues.php" );
 	require_once( "$IP/extensions/Diff/Diff.php" );
 	require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
