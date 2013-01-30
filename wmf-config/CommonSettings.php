@@ -423,12 +423,6 @@ $wgSessionCacheType = 'sessions';
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
 
-/* <important notice>
- *
- * When you add a sitenotice make sure to wrap it in <span dir=ltr></span>,
- * otherwise it'll format badly on RTL wikis -ævar
- */
-
 # Not CLI, see http://bugs.php.net/bug.php?id=47540
 if ( PHP_SAPI != 'cli' ) {
 	ignore_user_abort( true );
