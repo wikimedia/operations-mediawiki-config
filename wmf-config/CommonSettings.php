@@ -423,11 +423,6 @@ $wgSessionCacheType = 'sessions';
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
 
-# Enable subpages in the meta space
-$wgNamespacesWithSubpages[4] = 1;
-# And namespace 101, which is probably a talk namespace of some description
-$wgNamespacesWithSubpages[101] = 1;
-
 /* <important notice>
  *
  * When you add a sitenotice make sure to wrap it in <span dir=ltr></span>,
