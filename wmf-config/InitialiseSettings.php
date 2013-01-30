@@ -4399,11 +4399,32 @@ $wgConf->settings = array(
 		'generated-pp-node-count' => "udp://$wmfUdp2logDest/generated-pp-node-count",
 		'api' => "udp://$wmfUdp2logDest/api",
 		'bug-38273' => "udp://$wmfUdp2logDest/bug-38273",
-		'SQLBagOStuff' => "udp://$wmfUdp2logDest/sql-bagostuff"
+		'SQLBagOStuff' => "udp://$wmfUdp2logDest/sql-bagostuff",
+
+		'tempDebug' => "udp://$wmfUdp2logDest/temp-debug", # generic temp debugging log
+		'UploadBlacklist' => "udp://$wmfUdp2logDest/upload-blacklist",
+		'bug27452' => "udp://$wmfUdp2logDest/bug27452",
+		'FileOperation' => "udp://$wmfUdp2logDest/filebackend-ops",
+		'SwiftBackend' => "udp://$wmfUdp2logDest/swift-backend", // -aaron 5/15/12
+		'updateTranstagOnNullRevisions' => "udp://$wmfUdp2logDest/updateTranstagOnNullRevisions",
+		'json-hack' => "udp://$wmfUdp2logDest/json-hack", // Max 2012-06-27
+		'redis' => "udp://$wmfUdp2logDest/redis", // -asher 2012/10/12
+		'memcached-serious' => "udp://$wmfUdp2logDest/memcached-serious", // -aaron 2012/10/24
+		'404' => "udp://$wmfUdp2logDest/four-oh-four",
+		'resourceloader' => "udp://$wmfUdp2logDest/resourceloader",
+		'wikibase' => "udp://$wmfUdp2logDest/wikibase",
+		'oai' => "udp://$wmfUdp2logDest/oai",
+		'captcha' => "udp://$wmfUdp2logDest/captcha",
+		'ExternalStoreDB' => "udp://$wmfUdp2logDest/external",
+		'query' => "udp://$wmfUdp2logDest/botquery",
+		'antispoof' => "udp://$wmfUdp2logDest/antispoof",
+		'badpass' => "udp://$wmfUdp2logDest/badpass",
+		'ts_badpass' => "udp://$wmfUdp2logDest/ts_badpass",
+		'EventLogging'  => "udp://$wmfUdp2logDest/eventlogging",
 	),
 
 	// To measure the # of articles on enwiki during the <million => >million transition
-	'testwiki' => array(
+	'+testwiki' => array(
 		'articles' => "udp://$wmfUdp2logDest/articles/testwiki",
 		'test' => "udp://$wmfUdp2logDest/testwiki",
 		'testing' =>  "udp://$wmfUdp2logDest/testing", // for temp testing hacks

@@ -790,22 +790,6 @@ $wgSqlLogFile = $wgUploadDirectory . '/sqllog';
 
 $wgBlockOpenProxies = false;
 
-$wgDebugLogGroups['tempDebug'] = "udp://$wmfUdp2logDest/temp-debug"; # generic temp debugging log
-
-$wgDebugLogGroups['UploadBlacklist'] = "udp://$wmfUdp2logDest/upload-blacklist";
-$wgDebugLogGroups['bug27452'] = "udp://$wmfUdp2logDest/bug27452";
-$wgDebugLogGroups['FileOperation'] = "udp://$wmfUdp2logDest/filebackend-ops";
-$wgDebugLogGroups['SwiftBackend'] = "udp://$wmfUdp2logDest/swift-backend"; // -aaron 5/15/12
-$wgDebugLogGroups['updateTranstagOnNullRevisions'] = "udp://$wmfUdp2logDest/updateTranstagOnNullRevisions";
-$wgDebugLogGroups['json-hack'] = "udp://$wmfUdp2logDest/json-hack"; // Max 2012-06-27
-$wgDebugLogGroups['redis'] = "udp://$wmfUdp2logDest/redis"; // -asher 2012/10/12
-$wgDebugLogGroups['memcached-serious'] = "udp://$wmfUdp2logDest/memcached-serious"; // -aaron 2012/10/24
-
-$wgDebugLogGroups['404'] = "udp://$wmfUdp2logDest/four-oh-four";
-$wgDebugLogGroups['resourceloader'] = "udp://$wmfUdp2logDest/resourceloader";
-
-$wgDebugLogGroups['wikibase'] = "udp://$wmfUdp2logDest/wikibase";
-
 if ( $site == 'wikinews' ) {
 	# $wgRightsPage = "";# Set to the title of a wiki page that describes your license/copyright
 	$wgRightsUrl = "//creativecommons.org/licenses/by/2.5/";
@@ -1313,7 +1297,6 @@ $oaiAgentRegex = '/experimental/';
 $oaiAuth = true; # broken... squid? php config? wtf
 $oaiAudit = true;
 $oaiAuditDatabase = 'oai';
-$wgDebugLogGroups['oai'] = "udp://$wmfUdp2logDest/oai";
 $oaiChunkSize = 40;
 
 $wgEnableUserEmail = true;
@@ -1476,7 +1459,6 @@ if ( $wmgEnableCaptcha ) {
 	$wgCaptchaClass = 'FancyCaptcha';
 	$wgCaptchaWhitelist = '#^(https?:)?//([.a-z0-9-]+\\.)?((wikimedia|wikipedia|wiktionary|wikiquote|wikibooks|wikisource|wikispecies|mediawiki|wikimediafoundation|wikinews|wikiversity|wikivoyage|wikidata)\.org|dnsstuff\.com|completewhois\.com|wikimedia\.de|toolserver\.org)(/|$)#i';
 	$wgCaptchaWhitelistIP = array( '91.198.174.0/24' ); # toolserver (bug 23982)
-	$wgDebugLogGroups["captcha"] = "udp://$wmfUdp2logDest/captcha";
 	/**
 	 * Possibly a broken spambot, or a spambot being tested before a real run.
 	 * Hitting lots of wikis in late June 2006
@@ -1528,8 +1510,6 @@ if ( function_exists( 'dba_open' ) && file_exists( "$IP/cache/interwiki.cdb" ) )
 	$wgInterwikiCache = "$IP/cache/interwiki.cdb";
 }
 
-$wgDebugLogGroups["ExternalStoreDB"] = "udp://$wmfUdp2logDest/external";
-
 # testing enotif via job queue, river 2007-05-10
 # turning this off since it's currently so lagged it's horrible -- brion 2009-01-20
 # turning back on while investigating other probs
@@ -1544,12 +1524,9 @@ if ( isset( $sectionLoads ) ) {
 	}
 }
 
-$wgDebugLogGroups["query"] = "udp://$wmfUdp2logDest/botquery";
-
 // Username spoofing / mixed-script / similarity check detection
 include $IP . '/extensions/AntiSpoof/AntiSpoof.php';
 // $wgAntiSpoofAccounts = false; // log only for now
-$wgDebugLogGroups['antispoof'] = "udp://$wmfUdp2logDest/antispoof";
 
 // For transwiki import
 ini_set( 'user_agent', 'Wikimedia internal server fetcher (noc@wikimedia.org' );
@@ -1660,8 +1637,6 @@ if ( $wmgUseDismissableSiteNotice ) {
 $wgMajorSiteNoticeID = '2';
 
 $wgHooks['LoginAuthenticateAudit'][] = 'logBadPassword';
-$wgDebugLogGroups['badpass'] = "udp://$wmfUdp2logDest/badpass";
-$wgDebugLogGroups['ts_badpass'] = "udp://$wmfUdp2logDest/ts_badpass";
 $wgHooks['PrefsEmailAudit'][] = 'logPrefsEmail';
 $wgHooks['PrefsPasswordAudit'][] = 'logPrefsPassword';
 
@@ -2225,7 +2200,6 @@ if ( $wgDBname == 'testwiki' || $wgDBname == 'foundationwiki' ) {
 
 # # Hack to block emails from some idiot user who likes 'The Joker' --Andrew 2009-05-28
 $wgHooks['EmailUser'][] = 'wmfBlockJokerEmails';
-$wgDebugLogGroups['block_joker_mail'] = "udp://$wmfUdp2logDest/jokermail";
 
 function wmfBlockJokerEmails( &$to, &$from, &$subject, &$text ) {
 	$blockedAddresses = array( 'the4joker@gmail.com', 'testaccount@werdn.us', 'randomdude5555@gmail.com', 'siyang.li@yahoo.com', 'johnnywiki@gmail.com', 'wikifreedomfighter@googlemail.com' );
@@ -2728,9 +2702,7 @@ if ( $wmgUseEventLogging ) {
 	$wgEventLoggingFile = 'udp://208.80.152.184:8421/EventLogging';
 	$wgEventLoggingDBname = 'metawiki';
 	$wgEventLoggingSchemaIndexUri = 'http://meta.wikimedia.org/w/index.php';
-	$wgDebugLogGroups[ 'EventLogging' ] = "udp://$wmfUdp2logDest/eventlogging";
 }
-
 if ( $wmgUseUniversalLanguageSelector ) {
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
 	$wgULSGeoService = false;
