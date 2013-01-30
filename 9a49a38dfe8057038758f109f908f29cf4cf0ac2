@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADiH//3yc\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12103,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-01-30T17:05:02Z",
+      "side": 0,
+      "message": "We should probably poke around with this so we can use  +namespaces or something to add to defaults, instead of having to copy all the standard wiki namespaces...",
+      "revId": "9a49a38dfe8057038758f109f908f29cf4cf0ac2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
