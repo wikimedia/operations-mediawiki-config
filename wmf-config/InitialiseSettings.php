@@ -6728,7 +6728,6 @@ $wgConf->settings = array(
 	'chapcomwiki' => true, // # 22319
 	'execwiki' => true, // # 22319
 	'fdcwiki' => true,
-	'foundationwiki' => true, // RT #690
 	'internalwiki' => true, // #23231
 	'noboard_chapterswikimedia' => true,
 	'officewiki' => true, // #23231
