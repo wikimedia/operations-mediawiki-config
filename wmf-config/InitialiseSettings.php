@@ -11829,7 +11829,12 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 	'enwiki' => true,
 ),
-
+'wmgUseGuidedTour' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'enwiki' => true,
+),
 'wmgUseEducationProgram' => array(
 	'default' => false,
 	'test2wiki' => true,

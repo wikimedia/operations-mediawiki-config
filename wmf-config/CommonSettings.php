@@ -2343,6 +2343,10 @@ if ( $wmgUseEditPageTracking ) {
 	$wgEditPageTrackingRegistrationCutoff = '20110725221004';
 }
 
+if ( $wmgUseGuidedTour ) {
+	require_once( "$IP/extensions/GuidedTour/GuidedTour.php" );
+}
+
 if ( $wmgUseMarkAsHelpful ) {
 	require_once( "$IP/extensions/MarkAsHelpful/MarkAsHelpful.php" );
 	$wgMarkAsHelpfulType = array( 'mbresponse' );
