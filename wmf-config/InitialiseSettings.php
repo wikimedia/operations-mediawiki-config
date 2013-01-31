@@ -11027,7 +11027,12 @@ $wgConf->settings = array(
 	'default' => '20110725221004',
 	'frwikisource' => '20110304202000',
 ),
-
+'wmgMoodBarEnableTooltip' => array(
+	'default' => true,
+	'enwiki' => false,
+	'testwiki' => false,
+	'test2wiki' => false,
+),
 'wmgMobileFrontend' => array(
 	'default' => true,
 	'wikivoyage' => true, // In testing prior to mobile domain setup

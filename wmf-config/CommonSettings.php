@@ -2356,6 +2356,7 @@ if ( $wmgUseMoodBar ) {
 	$wgMoodBarConfig['feedbackDashboardUrl'] = "$wgServer/wiki/Special:FeedbackDashboard";
 
 	$wgMoodBarConfig['infoUrl'] = $wmgMoodBarInfoUrl;
+	$wgMoodBarConfig['enableTooltip'] = $wmgMoodBarEnableTooltip;
 }
 $wgAvailableRights[] = 'moodbar-admin'; // To allow global groups to include this right -AG
 
