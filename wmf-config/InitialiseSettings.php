@@ -3391,6 +3391,7 @@ $wgConf->settings = array(
 		NS_PROJECT        => true,
 		NS_PROJECT_TALK   => true,
 		NS_FILE_TALK      => true,
+		NS_MEDIAWIKI      => true,
 		NS_MEDIAWIKI_TALK => true,
 		NS_TEMPLATE       => true,
 		NS_TEMPLATE_TALK  => true,
@@ -3413,7 +3414,7 @@ $wgConf->settings = array(
 	),
 
 	// Wikipedia @{
-	'+cswiki' => array( 6 => 0, 8 => 1, 14 => 1 ),
+	'+cswiki' => array( 6 => 0, 14 => 1 ),
 	'+dewiki' => array( 6 => 0, 8 => 0, 10 => 0 ),
 	'+enwiki' => array( 6 => 0, 8 => 0 ),
 	'+eowiki' => array( 0 => 1, 6 => 0, 8 => 0 ),
@@ -3447,7 +3448,7 @@ $wgConf->settings = array(
 	'+execwiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+foundationwiki' => array( 0 => 1, 6 => 0, 8 => 0 ),
 	'+grantswiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+incubatorwiki' => array( 0 => 1, 6 => 0, 8 => 1, 14 => 1 ),
+	'+incubatorwiki' => array( 0 => 1, 6 => 0, 14 => 1 ),
 	'+internalwiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+mediawikiwiki' => array( 0 => 1, 6 => 0, 8 => 0, 14 => 1 ),
 	'+metawiki' => array( 0 => 1, 6 => 0, 8 => 0, 200 => 1, 201 => 1, 202 => 1, 203 => 1 ),
@@ -3460,9 +3461,9 @@ $wgConf->settings = array(
 	'+outreachwiki' => array( 0 => 1 ),
 	'+plwikimedia' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0, 14 => 1 ),
 	'+rswikimedia' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+ruwikimedia' => array( 0 => 1,  6 => 1, 7 => 0, 8 => 1, 9 => 0, 14 => 1, 15 => 0 ),
+	'+ruwikimedia' => array( 0 => 1,  6 => 1, 7 => 0, 9 => 0, 14 => 1, 15 => 0 ),
 	'+sewikimedia' => array( 0 => 1 ),
-	'+stewardwiki' => array( 0 => 1, 6 => 1, 8 => 1, 14 => 1 ),
+	'+stewardwiki' => array( 0 => 1, 6 => 1, 14 => 1 ),
 	'+strategywiki' => array( 0 => 1 ),
 	'+ukwikimedia' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+usabilitywiki' => array( 0 => 1 ),
@@ -3479,7 +3480,7 @@ $wgConf->settings = array(
 
 	// Wikibooks @{
 	'+wikibooks' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+cswikibooks' => array( 0 => 1, 6 => 0, 8 => 1, 14 => 1 ),
+	'+cswikibooks' => array( 0 => 1, 6 => 0, 14 => 1 ),
 	'+enwikibooks' => array( 0 => 1, 6 => 0, 8 => 0, 14 => 1 ),
 	'+eswikibooks' => array( 0 => 1, 6 => 0, 8 => 0 ),
 	'+idwikibooks' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
@@ -3493,47 +3494,47 @@ $wgConf->settings = array(
 	// Wikisource @{
 	# Enabled by default in the main namespace
 	'+wikisource' => array( 0 => 1, 6 => 0, 8 => 0, 14 => 0 ),
-	'+cswikisource' => array( 0 => 1, 6 => 0, 8 => 1, 14 => 1 ),
+	'+cswikisource' => array( 0 => 1, 6 => 0, 14 => 1 ),
 	'+enwikisource' => array( 0 => 1, 6 => 0, 8 => 0 ),
 	'+hewikisource' => array( 0 => 1, 6 => 0, 8 => 0 ),
 	'+huwikisource' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+idwikisource' => array( 0 => 1, 6 => 0, 8 => 0 ),
-	'+itwikisource' => array( 0 => 1, 6 => 0, 8 => 1 ),
-	'+mlwikisource' => array( 0 => 1, 6 => 0, 8 => 1 ),
+	'+itwikisource' => array( 0 => 1, 6 => 0 ),
+	'+mlwikisource' => array( 0 => 1, 6 => 0 ),
 	'+nowikisource' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+ptwikisource' => array( 0 => 1, 6 => 0, 8 => 0 ),
 	'+sawikisource' => array( 0 => 1 ),
 	'+ruwikisource' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+tewikisource' => array( 0 => 1, 6 => 0, 8 => 1 ),
+	'+tewikisource' => array( 0 => 1, 6 => 0 ),
 	'+trwikisource' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+viwikisource' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+zhwikisource' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	// @}
 
 	// Wikiversity @{
-	'+arwikiversity' => array( 0 => 1, 6 => 1, 8 => 1, 10 => 0 ),
+	'+arwikiversity' => array( 0 => 1, 6 => 1, 10 => 0 ),
 	'+betawikiversity' => array( 0 => 1, 10 => 0 ),
-	'+cswikiversity' => array( 0 => 1, 6 => 0, 8 => 1, 14 => 1 ),
+	'+cswikiversity' => array( 0 => 1, 6 => 0, 14 => 1 ),
 	'+dewikiversity' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+enwikiversity' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+fiwikiversity' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+frwikiversity' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0, 112 => 1, 113 => 1 ),
 	'+itwikiversity' => array( 0 => 1, 6 => 0, 8 => 0, 14 => 0 ),
 	'+ptwikiversity' => array( 0 => 1, 10 => 0 ),
-	'+ruwikiversity' => array( 0 => 1, 6 => 1, 8 => 1, 14 => 1 ),
+	'+ruwikiversity' => array( 0 => 1, 6 => 1, 14 => 1 ),
 	'+svwikiversity' => array( 0 => 1 ),
 	// @}
 
 	// Wikiquote
-	'+cswikiquote' => array( 0 => 1, 6 => 0, 8 => 1, 14 => 1 ),
+	'+cswikiquote' => array( 0 => 1, 6 => 0, 14 => 1 ),
 	'+plwikiquote' => array( 6 => 0, 8 => 0, 14 => 1 ),
 
 	// Wikinews
-	'+cswikinews' => array( 0 => 1, 6 => 0, 8 => 1, 14 => 1 ),
+	'+cswikinews' => array( 0 => 1, 6 => 0, 14 => 1 ),
 	'+plwikinews' => array( 6 => 0, 8 => 0, 14 => 1 ),
 
 	// Wiktionary
-	'+cswiktionary' => array( 0 => 1, 6 => 0, 8 => 1, 14 => 1 ),
+	'+cswiktionary' => array( 0 => 1, 6 => 0, 14 => 1 ),
 	'+iswiktionary' => array( 0 => 1, 6 => 0, 8 => 0, 14 => 1 ),
 	'+ltwiktionary' => array( 6 => 0, 8 => 0, 14 => 1 ),
 	'+plwiktionary' => array( 6 => 0, 8 => 0, 14 => 1 ),
