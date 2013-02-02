@@ -8823,7 +8823,7 @@ $wgConf->settings = array(
 ),
 
 'wgParserCacheExpireTime' => array(
-	'default' => 86400 * 365,
+	'default' => 86400 * 28, // 4 weeks/28 days
 ),
 
 # Captcha ...
