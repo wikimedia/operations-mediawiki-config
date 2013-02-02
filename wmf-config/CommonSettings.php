@@ -2773,6 +2773,10 @@ if ( $wmgUsePageImages ) {
 	require_once( "$IP/extensions/PageImages/PageImages.php" );
 }
 
+if ( $wmgUseSearchExtraNS ) {
+	require_once( "$IP/extensions/SearchExtraNS/SearchExtraNS.php" );
+}
+
 // On Special:Version, link to useful release notes
 $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
 	$matches = array();

@@ -12135,6 +12135,10 @@ $wgConf->settings = array(
 	'private' => false,
 ),
 
+'wmgUseSearchExtraNS' => array(
+	'default' => false,
+),
+
 );
 
 
