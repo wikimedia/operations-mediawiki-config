@@ -9315,6 +9315,7 @@ $wgConf->settings = array(
 		'Mostrevisions',
 		'Wantedpages',
 	),
+	'small' => array(),
 	'+frwiki' => array(
 		'Mostcategories',
 	),
