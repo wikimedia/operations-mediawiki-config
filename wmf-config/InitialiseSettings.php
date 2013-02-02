@@ -107,6 +107,7 @@ $wgConf->settings = array(
 	'mkwikimedia' => 'mk',
 	'mxwikimedia' => 'es',
 	'noboard_chapterswikimedia' => 'no',
+	'nowiki' => 'nb',
 	'nycwikimedia' => 'en',
 	'nzwikimedia' => 'en',
 	'officewiki' => 'en',
