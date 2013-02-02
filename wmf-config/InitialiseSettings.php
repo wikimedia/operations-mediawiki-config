@@ -9913,6 +9913,8 @@ $wgConf->settings = array(
 	'guwikisource' => array( 'odf' ), // Bug 37384
 	'mlwikibooks' => array( 'odf' ),  // Bug 37672
 	'mlwikisource' => array( 'odf' ), // Bug 37672
+	'newikibooks' => array( 'odf' ), // Bug 37374
+	'newiktionary' => array( 'odf' ), // Bug 37374
 	'urwiki' => array  ( 'odf' ),     // Bug 41714
 	'urwikisource' => array ( 'odf' ),// Bug 41714
 ),
