@@ -12140,6 +12140,10 @@ $wgConf->settings = array(
 	'default' => false,
 ),
 
+'wmgUseSecurePoll' => array(
+	'default' => true,
+),
+
 );
 
 

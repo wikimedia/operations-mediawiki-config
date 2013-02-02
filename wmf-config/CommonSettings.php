@@ -1104,15 +1104,17 @@ if ( $wmgContactPageConf ) {
 	extract( $wmgContactPageConf );
 }
 
-include( $IP . '/extensions/SecurePoll/SecurePoll.php' );
+if ( $wmgUseSecurePoll ) {
+	include( $IP . '/extensions/SecurePoll/SecurePoll.php' );
 
-$wgHooks['SecurePoll_JumpUrl'][] = 'wmfSecurePollJumpUrl';
+	$wgHooks['SecurePoll_JumpUrl'][] = 'wmfSecurePollJumpUrl';
 
-function wmfSecurePollJumpUrl( $page, &$url ) {
-	global $site, $lang;
+	function wmfSecurePollJumpUrl( $page, &$url ) {
+		global $site, $lang;
 
-	$url = wfAppendQuery( $url, array( 'site' => $site, 'lang' => $lang ) );
-	return true;
+		$url = wfAppendQuery( $url, array( 'site' => $site, 'lang' => $lang ) );
+		return true;
+	}
 }
 
 // Email capture
