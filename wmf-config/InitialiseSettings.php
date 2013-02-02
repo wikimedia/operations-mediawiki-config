@@ -12182,6 +12182,7 @@ $wgConf->settings = array(
 
 'wmgUseSearchExtraNS' => array(
 	'default' => false,
+	'commonswiki' => true,
 ),
 
 'wmgUseSecurePoll' => array(
