@@ -10154,8 +10154,8 @@ $wgConf->settings = array(
 ),
 // For Flickr uploads via UploadWizard - 2012-11-20
 'wgCopyUploadsDomains' => array(
-	'*.flickr.com',
-	'*.staticflickr.com',
+	'default' => array( '*.flickr.com', '*.staticflickr.com', ),
+	'+testwiki' => array( 'upload.wikimedia.org' ),
 ),
 
 'wgMaxUploadSize' => array(
