@@ -12146,6 +12146,26 @@ $wgConf->settings = array(
 	'metawiki' => true,
 ),
 
+'wgUrlProtocols' => array(
+	'default' => array(
+		'http://',
+		'https://',
+		'ftp://',
+		'irc://',
+		'ircs://',  // @bug 28503
+		'gopher://',
+		'telnet://', // Well if we're going to support the above.. -ævar
+		'nntp://', // @bug 3808 RFC 1738
+		'worldwind://',
+		'mailto:',
+		'news:',
+		'svn://',
+		'git://',
+		'mms://',
+		'//', // for protocol-relative URLs
+	),
+	'+wikivoyage' => array( 'tel://' ),
+),
 );
 
 
