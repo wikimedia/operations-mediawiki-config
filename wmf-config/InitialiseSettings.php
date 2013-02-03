@@ -7299,7 +7299,6 @@ $wgConf->settings = array(
 
 	'metawiki' => array(
 		'user' => array( 'move' => false ), // sigh. tired of this shit. brion -2007-01-10
-		// 'bureaucrat' => array( 'centralauth-admin' => true ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=14461
 		'steward' => array( 'userrights-interwiki' => true ), // new steward stuff, yay 2007-12-27
 		'flood' => array( 'bot' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -9686,6 +9685,8 @@ $wgConf->settings = array(
 	'incubatorwiki' => '/usr/local/apache/common/images/sul/incubatorwiki.png',
 	'wikivoyage' => '/usr/local/apache/common/images/sul/wikivoyage.png',
 	'wikimania2013wiki' => '/usr/local/apache/common/images/sul/wikimania.png',
+
+	'brwikimedia' => '/usr/local/apache/common/images/sul/foundation.png',
 ),
 
 'wmgCentralAuthAutoLoginWikis' => array(
@@ -9705,6 +9706,14 @@ $wgConf->settings = array(
 		'incubator.wikimedia.org' => 'incubatorwiki',
 		'.wikivoyage.org' => 'enwikivoyage',
 	),
+	'+ptwiki' => array( 'br.wikimedia.org' => 'brwikimedia' ),
+	'+ptwikibooks' => array( 'br.wikimedia.org' => 'brwikimedia' ),
+	'+ptwikinews' => array( 'br.wikimedia.org' => 'brwikimedia' ),
+	'+ptwikiquote' => array( 'br.wikimedia.org' => 'brwikimedia' ),
+	'+ptwikisource' => array( 'br.wikimedia.org' => 'brwikimedia' ),
+	'+ptwikiversity' => array( 'br.wikimedia.org' => 'brwikimedia' ),
+	'+ptwikivoyage' => array( 'br.wikimedia.org' => 'brwikimedia' ),
+
 ),
 
 # @}
