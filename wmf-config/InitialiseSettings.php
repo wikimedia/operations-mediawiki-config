@@ -10552,6 +10552,7 @@ $wgConf->settings = array(
 
 'wgCategoryCollation' => array(
 	'default' => 'uppercase',
+	'mediawikiwiki' => 'uca-default',
 	'ptwiki' => 'uca-default', # bug 35632
 	'ptwikibooks' => 'uca-default', # bug 43185
 	'iswiktionary' => 'identity', # bug 30722
