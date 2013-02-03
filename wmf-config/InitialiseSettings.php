@@ -290,6 +290,7 @@ $wgConf->settings = array(
 	'rmwiki' => 'Europe/Berlin',
 	'rowiki' => 'Europe/Chisinau',
 	'rowikisource' => 'Europe/Chisinau',
+	'rowikivoyage' => 'Europe/Bucharest',
 	'ruwikivoyage' => 'Europe/Moscow', // Bug 41992
 	'ruewiki'	=> 'Europe/Berlin',
 	'sahwikisource' => 'Asia/Yakutsk',
