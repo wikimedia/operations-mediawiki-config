@@ -12146,6 +12146,9 @@ $wgConf->settings = array(
 	'metawiki' => true,
 ),
 
+'wgUrlProtocols' => array(
+	'+wikivoyage' => array( 'tel://' ),
+),
 );
 
 
