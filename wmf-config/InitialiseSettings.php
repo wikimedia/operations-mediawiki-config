@@ -5705,6 +5705,10 @@ $wgConf->settings = array(
 		100 => 'נספח',
 		101 => 'שיחת_נספח'
 	),
+	'idwiktionary' => array(
+		100 => 'Indeks',
+		101 => 'Pembicaraan_Indeks',
+	),
 	'iswiktionary' => array(
 		106 => 'Viðauki',
 		107 => 'Viðaukaspjall',
