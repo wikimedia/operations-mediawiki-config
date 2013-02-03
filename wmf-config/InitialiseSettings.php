@@ -993,6 +993,7 @@ $wgConf->settings = array(
 	'enwikibooks'   => '//commons.wikimedia.org/wiki/Commons:Upload',
 	'enwikinews'    => false,
 	'enwikiquote'   => '//commons.wikimedia.org/wiki/Special:Upload',
+	'enwikivoyage'  => '//en.wikivoyage.org/wiki/Wikivoyage:Upload_file',
 	'enwiktionary'  => '//commons.wikimedia.org/wiki/Special:Upload',
 	'eswiki'        => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es',
 	'eswikibooks'   => '//commons.wikimedia.org/wiki/Commons:Upload/es?uselang=es', // '/wiki/Commons:Upload/es',
