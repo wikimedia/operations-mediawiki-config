@@ -2720,6 +2720,14 @@ if ( file_exists( "$wmfConfigDir/ext-$wmfRealm.php" ) ) {
 // https://bugzilla.wikimedia.org/show_bug.cgi?id=37211
 $wgUseCombinedLoginLink = false;
 
+if ( $wgRC2UDPPrefix === false ) {
+	$matches = null;
+	preg_match( '/^\/\/(.+).org$/', $wgServer, $matches );
+	if ( isset( $matches[1] ) ) {
+		$wgRC2UDPPrefix = "#{$matches[1]}\t";
+	}
+}
+
 // Confirmed can do anything autoconfirmed can.
 $wgGroupPermissions['confirmed'] = $wgGroupPermissions['autoconfirmed'];
 $wgGroupPermissions['confirmed']['skipcaptcha'] = true;
