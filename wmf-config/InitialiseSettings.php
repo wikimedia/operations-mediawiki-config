@@ -7029,6 +7029,7 @@ $wgConf->settings = array(
 	'enwikivoyage' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'bureaucrat' => array( 'usermerge' => true ),
+		'patroller' => array( 'patrol' => true, 'rollback' => true ),
 	),
 	// http://bugzilla.wikimedia.org/show_bug.cgi?id=5033
 	'enwiktionary' => array(
@@ -7809,6 +7810,7 @@ $wgConf->settings = array(
 	),
 	'+enwikivoyage' => array(
 		'sysop' => array( 'autopatrolled' ),
+		'bureaucrat' => array( 'patroller' ),
 	),
 	'+eswiki' => array(
 		'bureaucrat' => array( 'rollbacker', 'confirmed' ),
@@ -8190,7 +8192,7 @@ $wgConf->settings = array(
 	),
 	'+enwikivoyage' => array(
 		'sysop' => array( 'autopatrolled' ),
-		'bureaucrat' => array( 'sysop' ),
+		'bureaucrat' => array( 'sysop', 'patroller' ),
 	),
 	'+enwikisource' => array(
 		'bureaucrat' => array( 'autopatrolled', 'flood' ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=36863
