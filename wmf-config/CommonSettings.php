@@ -1543,22 +1543,7 @@ if ( $wmgUseCentralAuth ) {
 	case 'production':
 		// Production cluster
 		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
-		$wgCentralAuthAutoLoginWikis = array(
-			'.wikipedia.org' => 'enwiki',
-			'meta.wikimedia.org' => 'metawiki',
-			'.wiktionary.org' => 'enwiktionary',
-			'.wikibooks.org' => 'enwikibooks',
-			'.wikiquote.org' => 'enwikiquote',
-			'.wikisource.org' => 'enwikisource',
-			'commons.wikimedia.org' => 'commonswiki',
-			'.wikinews.org' => 'enwikinews',
-			'.wikiversity.org' => 'enwikiversity',
-			'.mediawiki.org' => 'mediawikiwiki',
-			'.wikidata.org' => 'wikidatawiki',
-			'species.wikimedia.org' => 'specieswiki',
-			'incubator.wikimedia.org' => 'incubatorwiki',
-			'.wikivoyage.org' => 'enwikivoyage',
-		);
+		$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 		break;
 
 	case 'labs':

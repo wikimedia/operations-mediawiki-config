@@ -9687,6 +9687,26 @@ $wgConf->settings = array(
 	'wikivoyage' => '/usr/local/apache/common/images/sul/wikivoyage.png',
 	'wikimania2013wiki' => '/usr/local/apache/common/images/sul/wikimania.png',
 ),
+
+'wmgCentralAuthAutoLoginWikis' => array(
+	'default' => array(
+		'.wikipedia.org' => 'enwiki',
+		'meta.wikimedia.org' => 'metawiki',
+		'.wiktionary.org' => 'enwiktionary',
+		'.wikibooks.org' => 'enwikibooks',
+		'.wikiquote.org' => 'enwikiquote',
+		'.wikisource.org' => 'enwikisource',
+		'commons.wikimedia.org' => 'commonswiki',
+		'.wikinews.org' => 'enwikinews',
+		'.wikiversity.org' => 'enwikiversity',
+		'.mediawiki.org' => 'mediawikiwiki',
+		'.wikidata.org' => 'wikidatawiki',
+		'species.wikimedia.org' => 'specieswiki',
+		'incubator.wikimedia.org' => 'incubatorwiki',
+		'.wikivoyage.org' => 'enwikivoyage',
+	),
+),
+
 # @}
 
 'wgEnableMWSuggest' => array(
