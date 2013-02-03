@@ -9233,23 +9233,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseLabeledSectionTransclusion' => array(
-	// controls loading of LabeledSectionTransclusion extension
-	'default' => false,
-	'wikisource' => true,
-	// ---------------
-	'cswiktionary' => true, // 22139
-	'dewikiversity' => true, // Per Bug 17773
-	'enwiktionary' => true,
-	'frrwiki' => true, // Bug 38023
-	'frwiki' => true,
-	'idwiktionary' => true, // Bug 44616
-	'itwikibooks' => true, // Bug 38287
-	'mediawikiwiki' => true, // requested by guillom
-	'metawiki' => true,
-	'outreachwiki' => true, // bug 29238
-	'sourceswiki' => true,
-	'testwiki' => false,
-	'test2wiki' => true,
+	'default' => true,
 ),
 
 'wmgUseQuiz' => array(
