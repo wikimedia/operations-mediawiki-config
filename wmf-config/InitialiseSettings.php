@@ -12141,7 +12141,9 @@ $wgConf->settings = array(
 ),
 
 'wmgUseSecurePoll' => array(
-	'default' => true,
+	'default' => false,
+	'enwiki' => true,
+	'metawiki' => true,
 ),
 
 );
