@@ -11715,7 +11715,6 @@ $wgConf->settings = array(
 	'metawiki' => array(
 		'progress' => array( 'color' => 'E00' ),
 		'needs-updating' => array( 'color' => 'FFBF00' ),
-		'updating' => array( 'color' => 'FFBF00' ),
 		'proofreading' => array( 'color' => 'FFBF00' ),
 		'ready' => array( 'color' => 'FF0' ),
 		'published' => array( 'color' => 'AEA' ),
