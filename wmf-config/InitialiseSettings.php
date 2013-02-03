@@ -9995,6 +9995,7 @@ $wgConf->settings = array(
 	'mrwiki' => true,
 	'mrwikisource' => true,
 	'ndswiki' => true,
+	'ptwiktionary' => true, // bug 44412
 	'rowiki' => true,
 	'rowikinews' => true,
 	'rowikisource' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=28307
