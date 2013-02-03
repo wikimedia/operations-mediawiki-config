@@ -7226,6 +7226,7 @@ $wgConf->settings = array(
 	),
 	'itwikivoyage' => array(
 		'autopatrolled' => array( 'autopatrol' => true ), // Bug 43327
+		'sysop' => array( 'upload' => true ), // Bug 43524
 	),
 	'itwiktionary' => array(
 		'user' => array( 'upload' => false ),
