@@ -7403,6 +7403,8 @@ $wgConf->settings = array(
 			'deletedtext' => true,
 			'autopatrol' => true,
 			'suppressredirect' => true,
+			'autopatrol' => true,
+			'autoreviewer' => true
 		),
 		'rollbacker' => array(
 			'rollback' => true,
@@ -7416,6 +7418,8 @@ $wgConf->settings = array(
 		'sysop' => array( 'autoreviewer' => true ),
 		'bureaucrat' => array(
 			'move-rootuserpages' => true,
+			'autopatrol' => true,
+			'autoreviewer' => true
 		),
 		'interface_editor' => array( // Bug 39905
 			'editinterface' => true,
