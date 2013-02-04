@@ -82,7 +82,6 @@ $IP/extensions/Narayam/Narayam.php
 $IP/extensions/NewUserMessage/NewUserMessage.php
 $IP/extensions/Nuke/SpecialNuke.php
 $IP/extensions/OAI/OAIRepo.php
-$IP/extensions/OggHandler/OggHandler.php
 $IP/extensions/OpenSearchXml/OpenSearchXml.php
 $IP/extensions/Oversight/HideRevision.php
 $IP/extensions/PagedTiffHandler/PagedTiffHandler.php
