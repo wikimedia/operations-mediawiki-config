@@ -1159,13 +1159,6 @@ $ubUploadBlacklist = array(
 );
 
 $wgHiddenPrefs[] = 'realname';
-$wgSysopRangeBans = true;
-$wgSysopUserBans = true;
-
-# Log IP addresses in the recentchanges table
-$wgPutIPinRC = true;
-
-$wgUploadSizeWarning = false;
 
 # Default address gets rejected by some mail hosts
 $wgPasswordSender = 'wiki@wikimedia.org';
