@@ -3,8 +3,6 @@
 # WARNING: This file is publically viewable on the web.
 # # Do not put private data here.
 
-if( $wmfRealm === 'production' ) {  # safeguard
-
 if ( $wmgMobileFrontend ) {
 	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 	$wgMFNoindexPages = false;
@@ -147,4 +145,3 @@ $wgMFLogEvents = true;
 
 // Force HTTPS for login/account creation
 $wgMFForceSecureLogin = $wmgMFForceSecureLogin;
-} # safeguard
