@@ -1641,15 +1641,6 @@ function logBadPassword( $user, $pass, $retval ) {
 			''
 			 );
 	}
-
-	# Looking for broken bot on toolserver -river 2007-10-13
-	if ( $retval != LoginForm::SUCCESS
-		&& @strpos( @$headers['X-Forwarded-For'], "91.198.174.201" ) !== false )
-	{
-		wfDebugLog( 'ts_badpass', "bad login for '" . $user->getName() . "' - "
-			. @$headers['User-Agent'] );
-	}
-
 	return true;
 }
 
