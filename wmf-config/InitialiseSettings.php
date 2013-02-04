@@ -7392,6 +7392,7 @@ $wgConf->settings = array(
 	// http://bugzilla.wikimedia.org/show_bug.cgi?id=9024 , 10362
 	'ptwiki' => array(
 		'autoconfirmed' => array( 'patrol' => true, 'abusefilter-log-detail' => true ),
+		'bot' => array( 'autoreviewer' => true, ),
 		'confirmed' => array( 'patrol' => true ),
 		'autoreviewer' => array( 'autopatrol' => true, 'autoreviewer' => true ),
 		'eliminator' => array(
