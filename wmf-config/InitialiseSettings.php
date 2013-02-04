@@ -12200,6 +12200,12 @@ $wgConf->settings = array(
 	),
 	'+wikivoyage' => array( 'tel://' ),
 ),
+'wgUseTidy' => array(
+	'default' => true,
+	'foundationwiki' => false,
+	'collabwiki' => false,
+	'donatewiki' => false,
+)
 );
 
 

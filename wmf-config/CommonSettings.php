@@ -784,8 +784,6 @@ if ( $site == 'wikinews' ) {
 	$wgRightsIcon = "//creativecommons.org/images/public/somerights20.png";
 }
 
-$wgUseTidy = true;
-
 if( $wmfRealm == 'production' ) {
 	$wgUDPProfilerHost = '10.0.6.30'; # professor
 	$wgAggregateStatsID = $wgVersion;
@@ -972,10 +970,6 @@ $wgOggThumbLocation = '/usr/bin/oggThumb';
 
 include( $IP . '/extensions/AssertEdit/AssertEdit.php' );
 
-if ( $wgDBname == 'collabwiki' || $wgDBname == 'donatewiki' ) {
-	$wgUseTidy = false;
-}
-
 if ( $wgUseContactPageFundraiser ) {
 	include( "$IP/extensions/ContactPageFundraiser/ContactPage.php" );
 	$wgContactUser = 'Storiescontact';
@@ -987,8 +981,6 @@ if ( $wgDBname == 'foundationwiki' ) {
 	include( "$IP/extensions/skins/Schulenburg/Schulenburg.php" );
 	include( "$IP/extensions/skins/Tomas/Tomas.php" );
 	include( "$IP/extensions/skins/Donate/Donate.php" );
-
-	$wgUseTidy = false;
 
 	$wgAllowedTemplates = array(
 		'enwiki_00', 'enwiki_01', 'enwiki_02', 'enwiki_03',
