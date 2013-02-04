@@ -3492,23 +3492,14 @@ $wgConf->settings = array(
 	// @}
 
 	// Wikisource @{
-	# Enabled by default in the main namespace
-	'+wikisource' => array( 0 => 1, 6 => 0, 8 => 0, 14 => 0 ),
-	'+cswikisource' => array( 0 => 1, 6 => 0, 14 => 1 ),
-	'+enwikisource' => array( 0 => 1, 6 => 0, 8 => 0 ),
-	'+hewikisource' => array( 0 => 1, 6 => 0, 8 => 0 ),
-	'+huwikisource' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+idwikisource' => array( 0 => 1, 6 => 0, 8 => 0 ),
-	'+itwikisource' => array( 0 => 1, 6 => 0 ),
-	'+mlwikisource' => array( 0 => 1, 6 => 0 ),
-	'+nowikisource' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+ptwikisource' => array( 0 => 1, 6 => 0, 8 => 0 ),
-	'+sawikisource' => array( 0 => 1 ),
-	'+ruwikisource' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+tewikisource' => array( 0 => 1, 6 => 0 ),
-	'+trwikisource' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+viwikisource' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+zhwikisource' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
+	'+wikisource' => array( 0 => 1, 6 => 0, 8 => 0 ),
+	'+cswikisource' => array( 14 => 1 ),
+	'+huwikisource' => array( 10 => 0 ),
+	'+nowikisource' => array( 10 => 0 ),
+	'+ruwikisource' => array( 10 => 0 ),
+	'+trwikisource' => array( 10 => 0 ),
+	'+viwikisource' => array( 10 => 0 ),
+	'+zhwikisource' => array( 10 => 0 ),
 	// @}
 
 	// Wikiversity @{
