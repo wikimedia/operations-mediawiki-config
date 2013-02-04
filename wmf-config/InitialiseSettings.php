@@ -11950,6 +11950,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'enwiki' => true,
 	'itwikivoyage' => true,
+	'mlwiki' => true, // Bug 44634
 ),
 
 'wmgEnablePostEdit' => array(
