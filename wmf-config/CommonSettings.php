@@ -766,17 +766,6 @@ case 'labs':
 	break;
 }
 
-# Default:
-# $wgSquidMaxage = 2678400;
-
-# Purge site message:
-# $wgSquidMaxage = 2678400;
-# $wgSquidMaxage = 3600;
-
-# Special:AskSQL
-$wgLogQueries = true;
-$wgSqlLogFile = $wgUploadDirectory . '/sqllog';
-
 $wgBlockOpenProxies = false;
 
 if ( $site == 'wikinews' ) {
