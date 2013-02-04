@@ -333,9 +333,6 @@ $wgLegalTitleChars = "+ %!\"$&'()*,\\-.\\/0-9:;=?@A-Z\\\\^_`a-z~\\x80-\\xFF";
 
 $wgSQLMode = null;
 
-# TEMP HACK for bug 31187 --roan
-$wgResourceLoaderValidateJS = false;
-
 # Object cache and session settings
 
 $pcTemplate = array( 'type' => 'mysql',
