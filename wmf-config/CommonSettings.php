@@ -857,6 +857,13 @@ if ( $wgDBname == 'testwiki' || $wgDBname == 'mlwiki' ) {
 }
 $wgTimelineSettings->fileBackend = 'local-multiwrite';
 
+if ( file_exists( '/usr/bin/ploticus' ) ) {
+	$wgTimelineSettings->ploticusCommand = '/usr/bin/ploticus';
+}
+
+$wgTimelineSettings->epochTimestamp = '20120101000000';
+putenv( "GDFONTPATH=/usr/local/apache/common/fonts" );
+
 include( $IP . '/extensions/wikihiero/wikihiero.php' );
 
 include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
@@ -1149,15 +1156,7 @@ $ubUploadBlacklist = array(
 
 	// Some singnet guy
 	'bed74eef04f5b54884dc650679e5688c7c1f74cb', // Peniscut.jpg
-	);
-
-
-if ( file_exists( '/usr/bin/ploticus' ) ) {
-	$wgTimelineSettings->ploticusCommand = '/usr/bin/ploticus';
-}
-
-$wgTimelineSettings->epochTimestamp = '20120101000000';
-putenv( "GDFONTPATH=/usr/local/apache/common/fonts" );
+);
 
 $wgHiddenPrefs[] = 'realname';
 $wgSysopRangeBans = true;
