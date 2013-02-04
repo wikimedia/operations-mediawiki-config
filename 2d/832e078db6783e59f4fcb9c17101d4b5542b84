@@ -1,0 +1,9 @@
+Code-Review+2: Reedy <reedy@wikimedia.org>
+Verified+2: Reedy <reedy@wikimedia.org>
+Verified+1: jenkins-bot
+Code-Review+1: Denny Vrandecic <denny.vrandecic@wikimedia.de>
+Submitted-by: Reedy <reedy@wikimedia.org>
+Submitted-at: Mon, 04 Feb 2013 18:17:38 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/47430
+Project: operations/mediawiki-config
+Branch: refs/heads/master
