@@ -2713,6 +2713,11 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBSettings['withoutTermSearchKey'] = true;
 
+	$wgWBSettings['dataTypes'] = array(
+		'wikibase-item',
+		'commonsMedia'
+	);
+
 	$wgWBSettings['useChangesTable'] = true;
 
 	$wgWBSettings['localClientDatabases'] = array(
