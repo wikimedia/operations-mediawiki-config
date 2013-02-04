@@ -40,21 +40,15 @@ function checkoutMediaWiki() {
 	$destIP = "$commonHomeDir/$dstVersion";
 
 	if ( !file_exists( $destIP ) ) {
-		$tmpDir = '/tmp/new-mw-clone-' . mt_rand( 0, 0x7fffffff );
-		echo "Cloning MediaWiki into $tmpDir...\n\n";
-		if ( !mkdir( $tmpDir, 0755 ) ) {
-			print "Unable to create $tmpDir\n";
-			exit( 1 );
-		}
 		passthru( 'git clone -n ' .
 			'ssh://gerrit.wikimedia.org:29418/mediawiki/core.git ' .
-			escapeshellarg( "$tmpDir/mw" ),
+			escapeshellarg( $destIP ),
 			$ret );
 		if ( $ret ) {
 			print "Error running git\n";
 			exit( 1 );
 		}
-		if ( !chdir( "$tmpDir/mw" ) ) {
+		if ( !chdir( $destIP ) ) {
 			print "Error changing directory\n";
 			exit( 1 );
 		}
@@ -66,13 +60,6 @@ function checkoutMediaWiki() {
 		passthru( 'git submodule update --init ' . escapeshellarg( "$tmpDir/mw" ), $ret );
 		if ( $ret ) {
 			print "Error running git\n";
-			exit( 1 );
-		}
-
-		echo "Moving the new clone into place\n";
-		renameAcrossFS( "$tmpDir/mw", $destIP );
-		if ( !rmdir( $tmpDir ) ) {
-			echo "Error moving the new directory\n";
 			exit( 1 );
 		}
 	} else {
@@ -178,14 +165,6 @@ function createSymlink( $path, $link, $createdMsg ) {
 		}
 	} else {
 		print "Symlink file already exists: $path\n";
-	}
-}
-
-function renameAcrossFS( $source, $dest ) {
-	passthru( "mv " . escapeshellarg( $source ) . ' ' . escapeshellarg( $dest ), $ret );
-	if ( $ret ) {
-		echo "Error renaming $source to $dest\n";
-		exit( 1 );
 	}
 }
 
