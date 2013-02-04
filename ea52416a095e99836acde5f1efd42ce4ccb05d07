@@ -16,6 +16,24 @@
       "revId": "ea52416a095e99836acde5f1efd42ce4ccb05d07",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "AAADiH//0WE\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 9234,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-02-04T16:07:55Z",
+      "side": 1,
+      "message": "Makes more sense just to rename the global",
+      "parentUuid": "AAADiH//0go\u003d",
+      "revId": "ea52416a095e99836acde5f1efd42ce4ccb05d07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
