@@ -3383,7 +3383,6 @@ $wgConf->settings = array(
 # @} end of wgNamespaceAliases
 
 # wgNamespacesWithSubpages @{
-# wgNamespaces @{
 'wgNamespacesWithSubpages' => array(
 	'default' => array(
 		NS_TALK	          => true,
