@@ -9232,7 +9232,7 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-'wmgUseLST' => array(
+'wmgUseLabeledSectionTransclusion' => array(
 	// controls loading of LabeledSectionTransclusion extension
 	'default' => false,
 	'wikisource' => true,

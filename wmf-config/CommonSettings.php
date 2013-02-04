@@ -913,7 +913,7 @@ if ( $wmgUseProofreadPage ) {
 	include( $IP . '/extensions/ProofreadPage/ProofreadPage.php' );
 	include( "$wmfConfigDir/proofreadpage.php" );
 }
-if ( $wmgUseLST ) {
+if ( $wmgUseLabeledSectionTransclusion ) {
 	include( $IP . '/extensions/LabeledSectionTransclusion/lst.php' );
 }
 
