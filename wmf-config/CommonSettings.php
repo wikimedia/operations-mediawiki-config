@@ -1946,16 +1946,6 @@ if ( !$wmgEnableVector ) {
 	$wgSkipSkins[] = 'vector';
 }
 
-if ( $wmgUseReaderFeedback && false ) { // Disabled because it uses NFS, which breaks in eqiad --Roan 2013-01-22
-	require_once( "$IP/extensions/ReaderFeedback/ReaderFeedback.php" );
-	$wgFeedbackStylePath = "$wgExtensionAssetsPath/ReaderFeedback";
-	$wgFeedbackNamespaces = $wmgFeedbackNamespaces;
-	if ( $wmgFeedbackTags ) {
-		$wgFeedbackTags = $wmgFeedbackTags;
-	}
-	$wgFeedbackSizeThreshhold = $wmgFeedbackSizeThreshhold;
-}
-
 if ( $wmgUseLocalisationUpdate ) {
 	require_once( "$IP/extensions/LocalisationUpdate/LocalisationUpdate.php" );
 	$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/cache-$wmfExtendedVersionNumber";

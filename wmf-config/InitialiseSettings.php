@@ -10082,47 +10082,6 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-# FEEDBACK @{
-'wmgUseReaderFeedback' => array(
-	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	// Setting this requires some extra tables
-	// Install extensions/ReaderFeedback/ReaderFeedback.sql
-	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	'default'			=> false,
-	'enwikibooks'			=> true,
-	'enwikinews'			=> true,
-	'huwiki'			=> true,
-	'ruwikinews'			=> true,
-	'strategywiki'			=> true,
-//	'testwiki'			=> true,
-	'trwikinews'			=> true,
-),
-
-'wmgFeedbackNamespaces' => array(
-	'default'	=> array( NS_MAIN ),
-	'enwikibooks'	=> array( NS_MAIN, 102, 110 ),
-	'strategywiki'	=> array( 106 ),
-),
-'wmgFeedbackTags' => array(
-	'default' => false, // use default
-	'huwiki' => array(
-		'reliability'  => 3,
-		'completeness' => 2,
-		'npov'	 => 2,
-		'presentation' => 1
-	),
-	'strategywiki' => array(
-		'priority'     => 1,
-		'impact'       => 1,
-		'feasibility'  => 1,
-		'desirability' => 1,
-	),
-),
-'wmgFeedbackSizeThreshhold' => array(
-	'default'	  => 15,
-),
-# @} end of FEEDBACK
-
 'wmgUseLocalisationUpdate' => array(
 	'default' => true,
 ),
