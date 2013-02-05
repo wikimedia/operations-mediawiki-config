@@ -1242,7 +1242,6 @@ if ( in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki', 'comm
 	$wgSiteStatsAsyncFactor = 1;
 }
 
-# $wgSquidFastPurge = true;
 # Deferred update still broken
 $wgMaxSquidPurgeTitles = 500;
 
@@ -1472,23 +1471,10 @@ if ( function_exists( 'dba_open' ) && file_exists( "$IP/cache/interwiki.cdb" ) )
 	$wgInterwikiCache = "$IP/cache/interwiki.cdb";
 }
 
-# testing enotif via job queue, river 2007-05-10
-# turning this off since it's currently so lagged it's horrible -- brion 2009-01-20
-# turning back on while investigating other probs
 $wgEnotifUseJobQ = true;
-
-// Quick hack for Makesysop vs enwiki
-// (Slightly slower hack now [TS])
-if ( isset( $sectionLoads ) ) {
-	$wgAlternateMaster = array( 'DEFAULT' => $dbHostsByName[key( $sectionLoads['DEFAULT'] )] );
-	foreach ( $sectionsByDB as $db => $section ) {
-		$wgAlternateMaster[$db] = $dbHostsByName[key( $sectionLoads[$section] )];
-	}
-}
 
 // Username spoofing / mixed-script / similarity check detection
 include $IP . '/extensions/AntiSpoof/AntiSpoof.php';
-// $wgAntiSpoofAccounts = false; // log only for now
 
 // For transwiki import
 ini_set( 'user_agent', 'Wikimedia internal server fetcher (noc@wikimedia.org' );
@@ -2330,8 +2316,8 @@ if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_P
 $wgVaryOnXFPForAPI = $wgVaryOnXFP = true;
 
 if ( $wmgUseMath ) {
-	require_once( "$IP/extensions/Math/Math.php" ); // Math move out from core in MW 1.18
-	$wgTexvc = "/usr/local/apache/uncommon/$wmfVersionNumber/bin/texvc"; // override default
+	require_once( "$IP/extensions/Math/Math.php" );
+	$wgTexvc = "/usr/local/apache/uncommon/$wmfVersionNumber/bin/texvc";
 	if ( $wgDBname === 'hewiki' ) {
 		$wgDefaultUserOptions['math'] = 0;
 	}
