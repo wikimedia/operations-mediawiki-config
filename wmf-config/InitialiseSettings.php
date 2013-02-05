@@ -11039,7 +11039,6 @@ $wgConf->settings = array(
 'wmgUseMoodBar' => array(
 	'default' => false,
 	'testwiki' => true,
-	'enwiki' => false,
 	'frwikisource' => true, // bug 34618
 	'incubatorwiki' => true, // bug 32417
 	'itwikivoyage' => true, // bug 43979
@@ -11049,7 +11048,6 @@ $wgConf->settings = array(
 ),
 'wmgMoodBarInfoUrl' => array(
 	'default' => '//www.mediawiki.org/wiki/MoodBar',
-	'enwiki' => '//en.wikipedia.org/wiki/Wikipedia:New_editor_feedback',
 	'frwikisource' => '//fr.wikisource.org/wiki/Wikisource:MoodBar',
 	'itwikivoyage' => '//it.wikivoyage.org/wiki/Wikivoyage:MoodBar',
 	'nlwiki' => '//nl.wikipedia.org/wiki/Help:Feedback',
@@ -11060,7 +11058,6 @@ $wgConf->settings = array(
 ),
 'wmgMoodBarEnableTooltip' => array(
 	'default' => true,
-	'enwiki' => false,
 	'testwiki' => false,
 	'test2wiki' => false,
 ),
