@@ -27,6 +27,12 @@ $wgAbuseFilterAvailableActions = array_diff(
 // bug 29922 Prevent anyone being given the abusefilter-private right by removing it
 $wgAvailableRights = array_diff( $wgAvailableRights, array( 'abusefilter-private' ) );
 
+// Enable global rules, stored on metawiki
+$wgAbuseFilterCentralDB = 'metawiki';
+if ( $wgDBname == $wgAbuseFilterCentralDB ) {
+	$wgAbuseFilterIsCentral = true;
+}
+
 // Custom permissions
 if ( $wgDBname == 'be_x_oldwiki' ) {
 	$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
