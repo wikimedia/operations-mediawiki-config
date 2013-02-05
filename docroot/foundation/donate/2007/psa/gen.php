@@ -1,6 +1,6 @@
 <?php
 
-if( php_sapi_name() != 'cli' ) die(":(");
+if( PHP_SAPI !== 'cli' ) die(":<");
 
 $subtitles = array(
 	'ar' => 'العربية',
