@@ -10566,7 +10566,7 @@ $wgConf->settings = array(
 	'iswiktionary' => 'identity', # bug 30722
 ),
 
-'wmgVectorEditSectionLinks' => array(  # TODO: rename to VectorSectionEditLinks
+'wmgVectorSectionEditLinks' => array(
 	'default' => false,
 	'testwiki' => true,
 ),

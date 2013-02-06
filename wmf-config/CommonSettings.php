@@ -1932,7 +1932,7 @@ if ( $wmgUseUsabilityInitiative ) {
 		unset( $wgGroupPermissions['sysop']['clicktrack'] );
 	}
 
-	if ( $wmgVectorEditSectionLinks ) {
+	if ( $wmgVectorSectionEditLinks ) {
 		$wgVectorFeatures['sectioneditlinks'] = array( 'global' => false, 'user' => true );
 		$wgVectorSectionEditLinksBucketTest = true;
 		$wgVectorSectionEditLinksLotteryOdds = 1;
