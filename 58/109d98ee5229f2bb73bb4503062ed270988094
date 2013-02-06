@@ -1,0 +1,9 @@
+Code-Review+2: Reedy <reedy@wikimedia.org>
+Verified+2: Reedy <reedy@wikimedia.org>
+Verified+1: jenkins-bot
+Code-Review+1: saper <saper@saper.info>
+Submitted-by: Reedy <reedy@wikimedia.org>
+Submitted-at: Wed, 06 Feb 2013 23:21:25 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/47348
+Project: operations/mediawiki-config
+Branch: refs/heads/master
