@@ -11988,6 +11988,7 @@ $wgConf->settings = array(
 
 'wmgUseGeoCrumbs' => array(
 	'default' => false,
+	'incubator' => true, // bug 44725
 	'wikivoyage' => true,
 ),
 
