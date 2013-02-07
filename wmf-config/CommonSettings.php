@@ -2486,6 +2486,7 @@ if ( $wmgUseWikimediaShopLink ) {
 		'PR',
 		'CA',
 		'MX',
+		'JP',
 	);
 	$wgWikimediaShopLinkTarget = '//shop.wikimedia.org';
 }
