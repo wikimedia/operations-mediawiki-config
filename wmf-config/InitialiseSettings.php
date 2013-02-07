@@ -11882,7 +11882,13 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
+	'bewiki' => true,
+	'dewiki' => true,
 	'enwiki' => true,
+	'frwiki' => true,
+	'glwiki' => true,
+	'mkwiki' => true,
+	'outreachwiki' => true,
 ),
 'wmgUseEducationProgram' => array(
 	'default' => false,
