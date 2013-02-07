@@ -1986,6 +1986,7 @@ $wgConf->settings = array(
 	'plwikimedia'   => 'Wikimedia',
 	'plwikiquote'   => 'Wikicytaty',
 	'plwikisource'  => 'Wikiźródła',
+	'plwikivoyage'  => 'Wikipodróże',
 	'plwiktionary'  => 'Wikisłownik',
 	'pnbwiktionary' => 'وکشنری',
 	'pntwiki'       => 'Βικιπαίδεια',
