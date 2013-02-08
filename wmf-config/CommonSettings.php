@@ -2718,6 +2718,11 @@ if ( $wmgUseSearchExtraNS ) {
 	require_once( "$IP/extensions/SearchExtraNS/SearchExtraNS.php" );
 }
 
+if ( $wmgUseGlobalAbuseFilters ) {
+	$wgAbuseFilterCentralDB = 'metawiki';
+	$wgAbuseFilterIsCentral = ( $wgDBname == $wgAbuseFilterCentralDB );
+}
+
 // On Special:Version, link to useful release notes
 $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
 	$matches = array();
