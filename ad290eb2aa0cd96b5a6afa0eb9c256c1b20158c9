@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3//9P8\u003d",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-02-08T20:52:12Z",
+      "side": 1,
+      "message": "Use $wmgUseEventLogging instead of module check.",
+      "revId": "ad290eb2aa0cd96b5a6afa0eb9c256c1b20158c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
