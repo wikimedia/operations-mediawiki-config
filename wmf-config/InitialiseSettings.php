@@ -10010,7 +10010,7 @@ $wgConf->settings = array(
 	'kowiki' => true,
 	'ladwiki' => true, // https://bugzilla.wikimedia.org/show_bug.cgi?id=30221
 	'lvwiki' => true,
-	'metawiki' => true,
+	// 'metawiki' => true, // Disabled due to bug 44754 and hence bug 44774
 	'mlwiki' => true, // bug 36595
 	'mrwiki' => true,
 	'mrwikisource' => true,
