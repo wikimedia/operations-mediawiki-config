@@ -143,5 +143,18 @@ $wgMFTrademarkSitename = true;
 // Enable event logging on beta (ori-l; 10-Nov-2012)
 $wgMFLogEvents = true;
 
+// Enable Schemas for event logging (jdlrobson; 07-Feb-2012)
+if ( $wgMFLogEvents &&  isset( $wgAutoloadClasses['ResourceLoaderSchemaModule'] ) ) {
+	$wgResourceModules['mobile.watchlist.schema'] = array(
+		'class' => 'ResourceLoaderSchemaModule',
+		'schema' => 'MobileBetaWatchlist',
+		'revision' => 4921083,
+		'targets' => 'mobile',
+		'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
+	);
+}
+
 // Force HTTPS for login/account creation
 $wgMFForceSecureLogin = $wmgMFForceSecureLogin;
+
+} # safeguard
