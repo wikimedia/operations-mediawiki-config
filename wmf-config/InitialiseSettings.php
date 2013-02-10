@@ -9429,6 +9429,7 @@ $wgConf->settings = array(
 	'cowiktionary'		=> '//bits.wikimedia.org/favicon/piece.ico',
 	'dewiktionary'		=> '//bits.wikimedia.org/favicon/piece.ico',
 	'elwiktionary'		=> '//bits.wikimedia.org/favicon/piece.ico',
+	'enwiktionary'		=> '//upload.wikimedia.org/wiktionary/en/f/f5/favicon.png', // Bug 44843
 	'eswiktionary'		=> '//bits.wikimedia.org/favicon/piece.ico', // Bug 40186
 	'etwiktionary'		=> '//bits.wikimedia.org/favicon/piece.ico',
 	'fawiktionary'		=> '//bits.wikimedia.org/favicon/piece.ico',
