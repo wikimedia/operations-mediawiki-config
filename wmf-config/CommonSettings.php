@@ -125,6 +125,9 @@ wfProfileIn( "$fname-host" );
 # This must be set *after* the DefaultSettings.php inclusion
 $wgDBname = $multiVersion->getDatabase();
 
+# Better have the proper username (bug 44251)
+$wgDBuser = 'wikiuser';
+
 # wmf-config directory (in common/)
 $wmfConfigDir = "$IP/../wmf-config";
 
