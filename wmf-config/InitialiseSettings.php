@@ -4405,6 +4405,7 @@ $wgConf->settings = array(
 		'badpass' => "udp://$wmfUdp2logDest/badpass",
 		'ts_badpass' => "udp://$wmfUdp2logDest/ts_badpass",
 		'EventLogging'  => "udp://$wmfUdp2logDest/eventlogging",
+		'torblock'  => "udp://$wmfUdp2logDest/torblock",
 	),
 
 	// To measure the # of articles on enwiki during the <million => >million transition
