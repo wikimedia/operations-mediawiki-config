@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3//618\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12106,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2013-02-11T20:42:00Z",
+      "side": 1,
+      "message": "Sorry not to have noticed that the first time, but we use as order:\n- default\n- the generic groups (e.g. wikipedia), following alphabetical order\n- the projects, by wiki database name, following alphabetical order\n\nSo it should be after outreachwiki and before testwiki.",
+      "revId": "a4307dfa3c6750de0fd2baad019d3ee8c706b10c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
