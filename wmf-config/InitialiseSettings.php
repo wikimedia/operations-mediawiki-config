@@ -12103,6 +12103,7 @@ $wgConf->settings = array(
 	'wikidatawiki' => true,
 	'wikimania2012wiki' => true,
 	'wikimania2013wiki' => true,
+	'sourceswiki' => true, // Bug 44032
 ),
 
 'wmgUseWikibaseRepo' => array(
