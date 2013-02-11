@@ -9022,7 +9022,7 @@ $wgConf->settings = array(
 	'metawiki' => true,
 	'commonswiki' => true,
 	'mediawikiwiki' => true,
-	'sourceswiki' => true,
+	'sourceswiki' => true, // Bug 44032
 	'specieswiki' => true,
 	'incubatorwiki' => true,
 ),
@@ -12103,6 +12103,7 @@ $wgConf->settings = array(
 	'wikidatawiki' => true,
 	'wikimania2012wiki' => true,
 	'wikimania2013wiki' => true,
+	'sourceswiki' => true,
 ),
 
 'wmgUseWikibaseRepo' => array(
