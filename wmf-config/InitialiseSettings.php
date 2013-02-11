@@ -12099,6 +12099,7 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 	'metawiki' => true,
 	'outreachwiki' => true,
+	'sourceswiki' => true, // Bug 44032
 	'testwiki' => true,
 	'wikidatawiki' => true,
 	'wikimania2012wiki' => true,
