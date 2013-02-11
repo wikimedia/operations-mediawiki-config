@@ -12147,6 +12147,7 @@ $wgConf->settings = array(
 'wmgUseWikibaseClient' => array(
 	'default' => false,
 	'test2wiki' => true,
+	'enwiki' => true,
 	'hewiki' => true,
 	'huwiki' => true,
 	'itwiki' => true,
@@ -12161,6 +12162,12 @@ $wgConf->settings = array(
 	),
 	'test2wiki' => array(
 		'siteGlobalID' => 'enwiki'
+	),
+	'enwiki' => array(
+		'namespaces' => array( NS_MAIN, NS_TALK, NS_USER, NS_USER_TALK, NS_PROJECT,
+			NS_PROJECT_TALK, NS_FILE, NS_FILE_TALK, NS_MEDIAWIKI, NS_MEDIAWIKI_TALK,
+			NS_TEMPLATE, NS_TEMPLATE_TALK, NS_HELP, NS_HELP_TALK, NS_CATEGORY,
+			NS_CATEGORY_TALK, 100, 101, 108, 109 ),
 	),
 	'hewiki' => array(
 		'namespaces' => array( NS_MAIN, NS_TALK, NS_USER, NS_USER_TALK, NS_PROJECT,
