@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "AAADi3//7AQ\u003d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12106,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2013-02-11T20:27:05Z",
+      "side": 1,
+      "message": "Add here a reference to the relevant bug:\n\n\u0027sourceswiki\u0027 \u003d\u003e true, // Bug 44032",
+      "revId": "dd113c427552d32dd43f5752852794b37f9bd59f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
