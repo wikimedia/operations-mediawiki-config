@@ -11724,6 +11724,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'bewikimedia' => true, // bug 37391
 	'brwikimedia' => true, // bug 44054
+	'foundationwiki' => true, //bug 44871
 	'incubatorwiki' => true, // bug 34213
 	'mediawikiwiki' => true,
 	'metawiki' => true,
