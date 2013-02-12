@@ -167,6 +167,15 @@ elseif ( $wgDBname == 'dewikiquote' ) {
 elseif ( $wgDBname == 'dewiktionary' ) {
 	$wgFlaggedRevsOverride = false;
 	$wgFlaggedRevTags['accuracy']['levels'] = 1;
+
+	$wgFlaggedRevsAutoconfirm = array( // Bug 44103
+		'days'                => 60,
+		'totalContentEdits'   => 250,
+		'totalCheckedEdits'   => 50,
+		'excludeLastDays'     => 2,
+		'uniqueContentPages'  => 50,
+		'neverBlocked'        => true,
+	);
 }
 
 // Temporarily give testwiki enwiki's settings instead, for testing PageTriage --Roan May 7
