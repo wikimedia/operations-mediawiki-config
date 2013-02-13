@@ -1,0 +1,9 @@
+Code-Review+2: Reedy <reedy@wikimedia.org>
+Verified+2: Reedy <reedy@wikimedia.org>
+Verified+2: jenkins-bot
+Code-Review+1: Daniel Kinzler <daniel.kinzler@wikimedia.de>
+Submitted-by: Reedy <reedy@wikimedia.org>
+Submitted-at: Wed, 13 Feb 2013 21:18:33 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/48893
+Project: operations/mediawiki-config
+Branch: refs/heads/master
