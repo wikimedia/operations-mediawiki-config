@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DlaEtRkY",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-02-13T20:10:52Z",
+      "side": 1,
+      "message": "Do you mean \"fiwikisource\" instead of \"is Wikisource\"?",
+      "revId": "0a5bcbb2ef7c11effdc857a137ead992b297750d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
