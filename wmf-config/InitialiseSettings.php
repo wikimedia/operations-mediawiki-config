@@ -12215,6 +12215,14 @@ $wgConf->settings = array(
 	'metawiki' => true,
 ),
 
+'wmgUseGlobalAbuseFilters' => array(
+	'default' => false,
+	'metawiki' => true,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
+),
+
 'wgUrlProtocols' => array(
 	'default' => array(
 		'http://',
