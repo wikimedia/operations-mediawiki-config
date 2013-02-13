@@ -7605,6 +7605,7 @@ $wgConf->settings = array(
 			'review' => true, // Bug 38690
 			'rollback' => true, // Bug 38690
 			'unreviewedpages' => true, // Bug 38690
+			'movefile' => true, // Bug 44587
 		),
 		'sysop' => array(
 			'review' => true, // Bug 38690

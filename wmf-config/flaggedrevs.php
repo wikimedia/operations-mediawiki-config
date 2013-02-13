@@ -538,6 +538,26 @@ elseif ( $wgDBname == 'trwiki' ) {
 	unset( $wgGroupPermissions['editor'] ); // Bug 38690
 	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'editor' ) ); // Bug 38690
 	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'editor' ) ); // Bug 38690
+
+	// Bug 44587:
+	$wgFlaggedRevsNamespaces[] = 100 /* NS_PORTAL */;
+	$wgFlaggedRevsNamespaces[] = NS_HELP;
+
+	$wgFlaggedRevsAutoconfirm = array(
+		'days'                  => 30,
+		'edits'                 => 50,
+		'excludeLastDays'       => 2,
+		'benchmarks'            => 7,
+		'spacing'               => 3,
+		'totalContentEdits'     => 150,
+		'totalCheckedEdits'     => 50,
+		'uniqueContentPages'    => 8,
+		'editComments'          => 20,
+		'email'                 => false,
+		'userpageBytes'         => 0,
+		'neverBlocked'          => true,
+		'maxRevertedEditRatio'  => .03,
+	);
 }
 
 elseif ( $wgDBname == 'trwikiquote' ) {
