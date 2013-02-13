@@ -2692,6 +2692,7 @@ if ( $wmgUseWikibaseClient ) {
 
 	// to be safe, keeping this here although $wgDBname is default setting
 	$wgWBSettings['siteGlobalID'] = $wgDBname;
+	$wgWBSettings['repoUrl'] = '//www.wikidata.org';
 
 	$wgWBSettings['repoNamespaces'] = array(
 		'wikibase-item' => '',
