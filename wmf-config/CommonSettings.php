@@ -2674,7 +2674,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBSettings['localClientDatabases'] = array(
 		'test2wiki' => 'test2wiki',
-//		'enwiki' => 'enwiki',
+		'enwiki' => 'enwiki',
 		'hewiki' => 'hewiki',
 		'huwiki' => 'huwiki',
 		'itwiki' => 'itwiki'
