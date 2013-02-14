@@ -2627,7 +2627,13 @@ if ( $wmgUseEventLogging ) {
 	require_once( "$IP/extensions/EventLogging/EventLogging.php" );
 	$wgEventLoggingBaseUri = '//bits.wikimedia.org/event.gif';
 	$wgEventLoggingFile = 'udp://208.80.152.184:8421/EventLogging';
-	$wgEventLoggingDBname = 'metawiki';
+	if ( $wgDBname === 'test2wiki' ) {
+		// test2wiki has its own Schema: NS.
+		$wgEventLoggingDBname = 'test2wiki';
+	} else {
+		// All other wikis reference metawiki.
+		$wgEventLoggingDBname = 'metawiki';
+	}
 	$wgEventLoggingSchemaIndexUri = 'http://meta.wikimedia.org/w/index.php';
 }
 if ( $wmgUseUniversalLanguageSelector ) {
