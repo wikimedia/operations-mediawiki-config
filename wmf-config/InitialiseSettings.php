@@ -839,6 +839,7 @@ $wgConf->settings = array(
 	'tawikisource'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikisource-logo-ta-new.svg/121px-Wikisource-logo-ta-new.svg.png',
 	'tawiktionary'		=> '$stdlogo',
 	'tewiki'		=> '//upload.wikimedia.org/wikipedia/commons/f/f2/Wikipedia-logo-v2-te.png',
+	'tewikisource'  => '//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Wikisource-logo-te.svg/135px-Wikisource-logo-te.svg.png', // bug 44796
 	'tewiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Wiktionary-logo-te.png/135px-Wiktionary-logo-te.png', // bug 43240
 	'tenwiki'		=> '$stdlogo',
 	'testwiki'		=> '$stdlogo',
