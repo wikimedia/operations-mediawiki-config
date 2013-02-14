@@ -1644,6 +1644,12 @@ if ( file_exists( '/etc/wikimedia-image-scaler' ) ) {
 }
 $wgMaxShellTime = 50; // so it times out before PHP and curl and squid
 
+// Use a cgroup for shell execution.
+// This will cause shell execution to fail if the cgroup is not installed.
+// If some misc server doesn't have the cgroup installed, you can create it
+// with: mkdir -p -m777 /sys/fs/cgroup/memory/mediawiki/job
+$wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
+
 switch( $wmfRealm ) {
 case 'production'  :
 	$wgImageMagickTempDir = '/a/magick-tmp';
