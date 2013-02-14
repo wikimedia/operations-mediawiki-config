@@ -2532,7 +2532,7 @@ if ( $wmgUseEcho ) {
 	$wgEchoDisableStandardEmail = true;
 	$wgEchoDefaultNotificationTypes = array(
 		'all' => array(
-			'notify' => true,
+			'web' => true,
 			'email' => true,
 		),
 	);
