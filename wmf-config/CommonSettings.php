@@ -2631,11 +2631,12 @@ if ( $wmgUseEventLogging ) {
 	if ( $wgDBname === 'test2wiki' ) {
 		// test2wiki has its own Schema: NS.
 		$wgEventLoggingDBname = 'test2wiki';
+		$wgEventLoggingSchemaIndexUri = 'http://test2.wikipedia.org/w/index.php';
 	} else {
 		// All other wikis reference metawiki.
 		$wgEventLoggingDBname = 'metawiki';
+		$wgEventLoggingSchemaIndexUri = 'http://meta.wikimedia.org/w/index.php';
 	}
-	$wgEventLoggingSchemaIndexUri = 'http://meta.wikimedia.org/w/index.php';
 }
 if ( $wmgUseUniversalLanguageSelector ) {
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
