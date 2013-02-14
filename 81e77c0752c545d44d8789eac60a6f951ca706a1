@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dlcojwqk",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2630,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2013-02-14T23:35:09Z",
+      "side": 1,
+      "message": "This seems like it should work, but it would have been preferable to use InitialiseSettings.",
+      "revId": "81e77c0752c545d44d8789eac60a6f951ca706a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
