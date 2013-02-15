@@ -16,6 +16,24 @@
       "revId": "74975a6a7f80b9f2aa2428a0c06124e9fe34ed58",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DleXNkTI",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2638,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-02-15T10:15:27Z",
+      "side": 1,
+      "message": "I did mean CentralNotice. It\u0027s the rest of the sentence that is ungrammatical and subverts my meaning. Words, words, words.",
+      "parentUuid": "DlQrjCt4",
+      "revId": "74975a6a7f80b9f2aa2428a0c06124e9fe34ed58",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
