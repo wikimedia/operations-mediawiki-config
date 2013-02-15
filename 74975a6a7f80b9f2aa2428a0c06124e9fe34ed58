@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DlQrjCt4",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2638,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-02-15T01:12:12Z",
+      "side": 1,
+      "message": "s/CentralNotice/EventLogging/",
+      "revId": "74975a6a7f80b9f2aa2428a0c06124e9fe34ed58",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
