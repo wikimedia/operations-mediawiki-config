@@ -2632,6 +2632,13 @@ if ( $wmgUseEventLogging ) {
 		// test2wiki has its own Schema: NS.
 		$wgEventLoggingDBname = 'test2wiki';
 		$wgEventLoggingSchemaIndexUri = 'http://test2.wikipedia.org/w/index.php';
+
+		// This NS should be registered via a hook, but it isn't. Commit
+		// f2a963f9 resorts to the same tactic that I am resorting to here
+		// for CentralNotice.
+		$wgExtraNamespaces[470] = 'Schema';
+		$wgExtraNamespaces[471] = 'Schema_talk';
+
 	} else {
 		// All other wikis reference metawiki.
 		$wgEventLoggingDBname = 'metawiki';
