@@ -11949,6 +11949,7 @@ $wgConf->settings = array(
 	'tewiki' => true,
 	'trwiki' => true,
 	'ukwiki' => true,
+	'urwiki' => true, // Bug 44604
 	'viwiki' => true,
 ),
 
