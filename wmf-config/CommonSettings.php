@@ -2685,6 +2685,8 @@ if ( $wmgUseWikibaseRepo ) {
 		'commonsMedia'
 	);
 
+	$wgWBSettings['changesAsJson'] = false;
+
 	$wgWBSettings['useChangesTable'] = true;
 
 	$wgWBSettings['localClientDatabases'] = array(
@@ -2713,6 +2715,8 @@ if ( $wmgUseWikibaseClient ) {
 		'wikibase-item' => '',
 		'wikibase-property' => 'Property'
 	);
+
+	$wgWBSettings['changesAsJson'] = false;
 
 	foreach( $wmgWikibaseClientSettings as $setting => $value ) {
 		$wgWBSettings[$setting] = $value;
