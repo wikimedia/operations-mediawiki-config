@@ -8102,7 +8102,10 @@ $wgConf->settings = array(
 		'sysop' => array( 'flood' ),
 	),
 	'+wikidatawiki' => array(
-		'sysop' => array( 'autopatrolled' ), // bug 41907
+		'sysop' => array(
+			'autopatrolled', // bug 41907
+			'confirmed', // bug 45124
+		),
 	),
 	'+zhwiki' => array(
 		'bureaucrat' => array( 'flood' ),
@@ -8499,7 +8502,10 @@ $wgConf->settings = array(
 		'sysop' => array( 'flood' ),
 	),
 	'+wikidatawiki' => array(
-		'sysop' => array( 'autopatrolled' ), // bug 41907
+		'sysop' => array(
+			'autopatrolled', // bug 41907
+			'confirmed', // bug 45124
+		),
 		'bureaucrat' => array( 'translationadmin' ), // bug 44395
 	),
 	'+wikimaniateamwiki' => array(
