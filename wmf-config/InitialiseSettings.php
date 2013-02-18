@@ -8105,7 +8105,11 @@ $wgConf->settings = array(
 		'sysop' => array( 'flood' ),
 	),
 	'+wikidatawiki' => array(
-		'sysop' => array( 'autopatrolled', 'rollbacker' ), // bug 41907, 45165
+		'sysop' => array(
+			'autopatrolled', // bug 41907
+			'rollbacker', // bug 45165
+			'confirmed', // bug 45124
+		),
 	),
 	'+zhwiki' => array(
 		'bureaucrat' => array( 'flood' ),
@@ -8502,7 +8506,11 @@ $wgConf->settings = array(
 		'sysop' => array( 'flood' ),
 	),
 	'+wikidatawiki' => array(
-		'sysop' => array( 'autopatrolled', 'rollbacker' ), // bug 41907, 45165
+		'sysop' => array(
+			'autopatrolled', // bug 41907
+			'rollbacker', // bug 45165
+			'confirmed', // bug 45124
+		),
 		'bureaucrat' => array( 'translationadmin' ), // bug 44395
 	),
 	'+wikimaniateamwiki' => array(
