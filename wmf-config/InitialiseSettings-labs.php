@@ -220,7 +220,7 @@ return array(
 
 	# Completely disable wikidata on the beta cluster
 	# There is no configuration for it yet
-	'wmgUseWikibaseClient' => array(
+	'-wmgUseWikibaseClient' => array(
 		'default' => false,
 	),
 );
