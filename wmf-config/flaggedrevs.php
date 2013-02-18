@@ -552,20 +552,42 @@ elseif ( $wgDBname == 'trwiki' ) {
 	$wgFlaggedRevsNamespaces[] = 100 /* NS_PORTAL */;
 	$wgFlaggedRevsNamespaces[] = NS_HELP;
 
-	$wgFlaggedRevsAutoconfirm = array(
-		'days'                  => 30,
-		'edits'                 => 50,
-		'excludeLastDays'       => 2,
-		'benchmarks'            => 7,
-		'spacing'               => 3,
-		'totalContentEdits'     => 150,
-		'totalCheckedEdits'     => 50,
-		'uniqueContentPages'    => 8,
-		'editComments'          => 20,
-		'email'                 => false,
-		'userpageBytes'         => 0,
-		'neverBlocked'          => true,
-		'maxRevertedEditRatio'  => .03,
+	$wgAutopromoteOnce['onEdit']['autoreview'] = array(
+		'&', // AND
+		array( APCOND_AGE, 30*86400 ),
+		array( APCOND_EDITCOUNT, 50, 2*86400 ),
+		array( APCOND_FR_EDITSUMMARYCOUNT, 20 ),
+		array( APCOND_FR_UNIQUEPAGECOUNT, 8 ),
+		array( APCOND_FR_EDITSPACING, 3, 7 ),
+		array( '|', // OR
+			array( APCOND_FR_CONTENTEDITCOUNT,
+				150, 2*86400 ),
+			array( APCOND_FR_CHECKEDEDITCOUNT,
+				50, 2*86400 )
+		),
+		array( APCOND_FR_NEVERBOCKED ),
+		array( APCOND_FR_MAXREVERTEDEDITRATIO, .03 ),
+		array( '!', array( APCOND_INGROUPS, array( 'sysop' ) ) ),
+		array( '!', array( APCOND_INGROUPS, array( 'bureaucrat' ) ) ),
+		array( '!', array( APCOND_INGROUPS, array( 'bot' ) ) ),
+		array( '!', array( APCOND_INGROUPS, array( 'patroller' ) ) ),
+	);
+
+	$wgAutopromoteOnce['onEdit']['patroller'] = array(
+		'&', // AND
+		array( APCOND_AGE, 60*86400 ),
+		array( APCOND_EDITCOUNT, 250, 1*86400 ),
+		array( APCOND_FR_EDITSUMMARYCOUNT, 50 ),
+		array( APCOND_FR_UNIQUEPAGECOUNT, 14 ),
+		array( APCOND_FR_EDITSPACING, 3, 15 ),
+		array( '|', // OR
+			array( APCOND_FR_CONTENTEDITCOUNT,
+				300, 1*86400 ),
+			array( APCOND_FR_CHECKEDEDITCOUNT,
+				200, 1*86400 )
+		),
+		array( APCOND_FR_NEVERBOCKED ),
+		array( APCOND_FR_MAXREVERTEDEDITRATIO, .03 )
 	);
 }
 
