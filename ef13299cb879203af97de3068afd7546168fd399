@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dl0rcdg8",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 282,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-02-18T23:55:16Z",
+      "side": 1,
+      "message": "capitalised True?",
+      "revId": "ef13299cb879203af97de3068afd7546168fd399",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
