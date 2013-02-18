@@ -277,4 +277,7 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 	$wgAbuseFilterAvailableActions[] = 'block';
+} elseif ( $wgDBname == 'wikidatawiki' ) {
+	$wgAbuseFilterNotifications = "udp"; // bug 45083
+	$wgAbuseFilterNotificationsPrivate = True; // bug 45083
 }
