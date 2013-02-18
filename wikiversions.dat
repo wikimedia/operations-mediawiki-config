@@ -465,7 +465,7 @@ lvwiki php-1.21wmf9 *
 lvwiktionary php-1.21wmf9 *
 map_bmswiki php-1.21wmf9 *
 mdfwiki php-1.21wmf9 *
-mediawikiwiki php-1.21wmf9 *
+mediawikiwiki php-1.21wmf10 *
 metawiki php-1.21wmf9 *
 mgwikibooks php-1.21wmf9 *
 mgwiki php-1.21wmf9 *
@@ -731,8 +731,8 @@ tawikiquote php-1.21wmf9 *
 tawikisource php-1.21wmf9 *
 tawiktionary php-1.21wmf9 *
 tenwiki php-1.21wmf9 *
-test2wiki php-1.21wmf9 *
-testwiki php-1.21wmf9 *
+test2wiki php-1.21wmf10 *
+testwiki php-1.21wmf10 *
 tetwiki php-1.21wmf9 *
 tewikibooks php-1.21wmf9 *
 tewiki php-1.21wmf9 *
@@ -822,7 +822,7 @@ wawikibooks php-1.21wmf9 *
 wawiki php-1.21wmf9 *
 wawiktionary php-1.21wmf9 *
 wg_enwiki php-1.21wmf9 *
-wikidatawiki php-1.21wmf9 *
+wikidatawiki php-1.21wmf10 *
 wikimania2005wiki php-1.21wmf9 *
 wikimania2006wiki php-1.21wmf9 *
 wikimania2007wiki php-1.21wmf9 *
