@@ -2675,7 +2675,6 @@ if ( $wmgUseWikibaseRepo ) {
 	// Assigning the correct content models to the namespaces
 	$wgWBSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_ITEM] = NS_MAIN;
 	$wgWBSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_PROPERTY] = WB_NS_PROPERTY;
-	$wgWBSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_QUERY] = WB_NS_QUERY;
 
 	$wgWBSettings['idBlacklist'] = array( 1, 2, 3, 4, 5, 8, 13, 23, 24, 42, 80, 666, 1337, 1868, 1971, 2000, 2001, 2012, 2013 );
 
