@@ -217,6 +217,12 @@ return array(
 	'wmgMFPhotoUploadEndpoint' => array(
 		'default' => '',
 	),
+
+	# Completely disable wikidata on the beta cluster
+	# There is no configuration for it yet
+	'wmgUseWikibaseClient' => array(
+		'default' => false,
+	),
 );
 
 } # wmflLabsSettings()
