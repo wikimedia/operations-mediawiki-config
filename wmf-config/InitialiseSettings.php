@@ -7649,6 +7649,7 @@ $wgConf->settings = array(
 			'autopatrol' => true, // bug 41907
 			'patrol' => true, // bug 42052
 		),
+		'rollbacker' => array( 'rollback' => true ), // bug 45165
 	),
 	// due to mass vandalism complaint, 2006-04-11
 	'zhwiki' => array(
@@ -8102,7 +8103,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'flood' ),
 	),
 	'+wikidatawiki' => array(
-		'sysop' => array( 'autopatrolled' ), // bug 41907
+		'sysop' => array( 'autopatrolled', 'rollbacker' ), // bug 41907, 45165
 	),
 	'+zhwiki' => array(
 		'bureaucrat' => array( 'flood' ),
@@ -8499,7 +8500,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'flood' ),
 	),
 	'+wikidatawiki' => array(
-		'sysop' => array( 'autopatrolled' ), // bug 41907
+		'sysop' => array( 'autopatrolled', 'rollbacker' ), // bug 41907, 45165
 		'bureaucrat' => array( 'translationadmin' ), // bug 44395
 	),
 	'+wikimaniateamwiki' => array(
