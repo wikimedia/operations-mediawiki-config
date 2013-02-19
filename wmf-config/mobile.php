@@ -8,6 +8,7 @@ if ( $wmgMobileFrontend ) {
 	$wgMFNoindexPages = false;
 	$wgMFNearby = $wmgMFNearby && $wmgEnableGeoData;
 	$wgMFPhotoUploadEndpoint = $wmgMFPhotoUploadEndpoint;
+	$wgMFPhotoUploadWiki = $wmgMFPhotoUploadWiki;
 	$wgMFRemotePostFeedbackUsername = $wmgMFRemotePostFeedbackUsername;
 	$wgMFRemotePostFeedbackPassword = $wmgMFRemotePostFeedbackPassword;
 	$wgMFRemotePostFeedback = true;
