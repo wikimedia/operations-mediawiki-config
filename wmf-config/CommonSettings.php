@@ -2551,7 +2551,6 @@ if ( $wmgUseScribunto ) {
 	$wgScribuntoUseCodeEditor = true;
 	$wgScribuntoDefaultEngine = 'luasandbox';
 	$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
-	$wgScribuntoEngineConf['luasandbox']['profilerPeriod'] = false;
 }
 
 if ( $wmgUseSubpageSortkey ) {
