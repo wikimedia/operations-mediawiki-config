@@ -274,7 +274,7 @@ $wgStylePath = $wgStyleSheetPath;
 $wgArticlePath = "/wiki/$1";
 
 $wgScriptPath  = '/w';
-$wgLocalStylePath = "$wgScriptPath/skins-$wmfVersionNumber";
+$wgLocalStylePath = "$wgScriptPath/static-$wmfVersionNumber/skins";
 $wgStockPath = '/images';
 $wgScript           = $wgScriptPath . '/index.php';
 $wgRedirectScript	= $wgScriptPath . '/redirect.php';
