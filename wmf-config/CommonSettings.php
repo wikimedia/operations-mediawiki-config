@@ -2503,13 +2503,12 @@ if ( $wmgEnableGeoData ) {
 	$wgGeoDataBackend = 'solr';
 	$wgGeoDataSolrMaster = 'solr1001.eqiad.wmnet';
 	$wgGeoDataSolrHosts = array(
-		'solr1001.eqiad.wmnet' => 50, // master, put less read load on it
+		'solr1001.eqiad.wmnet' => 75, // master, put less read load on it
 		'solr1002.eqiad.wmnet' => 100,
 		'solr1003.eqiad.wmnet' => 100,
-		// the Tampa servers are weaker
-		'solr1.pmtpa.wmnet' => 25,
-		'solr2.pmtpa.wmnet' => 25,
-		'solr3.pmtpa.wmnet' => 25,
+		//'solr1.pmtpa.wmnet' => 100,
+		//'solr2.pmtpa.wmnet' => 100,
+		//'solr3.pmtpa.wmnet' => 100,
 	);
 
 	# Data collection mode
