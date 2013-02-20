@@ -119,7 +119,7 @@ $wgLBFactoryConf = array(
 	's6' => array(
 		'db1006'   => 0,
 		'db47'	   => 0, # pmtpa master
-		#'db43'	   => 1000, # hw died 12/18/2011
+		'db43'	   => 1000, # hw died 12/18/2011
 		'db46'	   => 400, # snapshot host
 		'db50'	   => 1000,
 	),
@@ -127,7 +127,7 @@ $wgLBFactoryConf = array(
 		'db1041' => 0,
 		'db37'  => 0, # pmtpa master
 		'db56'  => 400, # snapshot host
-		'db58'	=> 500,
+		#'db58'	=> 500,
 		'db68'	=> 700,
 	),
 ),
