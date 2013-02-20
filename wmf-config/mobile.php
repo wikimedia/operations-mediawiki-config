@@ -153,6 +153,14 @@ if ( $wgMFLogEvents && $wmgUseEventLogging ) {
 		'targets' => 'mobile',
 		'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 	);
+
+	$wgResourceModules['mobile.uploads.schema'] = array(
+		'class' => 'ResourceLoaderSchemaModule',
+		'schema' => 'MobileWebUploads',
+		'revision' => 5246000,
+		'targets' => 'mobile',
+		'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
+	);
 }
 
 // Force HTTPS for login/account creation
