@@ -2631,25 +2631,28 @@ if ( $wmgUseUserMerge ) {
 
 if ( $wmgUseEventLogging ) {
 	require_once( "$IP/extensions/EventLogging/EventLogging.php" );
-	$wgEventLoggingBaseUri = '//bits.wikimedia.org/event.gif';
-	$wgEventLoggingFile = 'udp://208.80.152.184:8421/EventLogging';
 	if ( $wgDBname === 'test2wiki' ) {
 		// test2wiki has its own Schema: NS.
 		$wgEventLoggingDBname = 'test2wiki';
 		$wgEventLoggingSchemaIndexUri = 'http://test2.wikipedia.org/w/index.php';
-
-		// This NS should be registered via a hook, but it isn't. Commit
-		// f2a963f9 resorts to the same tactic that I am resorting to here
-		// for CentralNotice.
+		$wgEventLoggingBaseUri = '//bits.wikimedia.org/dummy.gif';
+		$wgEventLoggingFile = "udp://$wmfUdp2logDest/EventLogging-$wgDBname";
+	} else {
+		// All other wikis reference metawiki.
+		$wgEventLoggingBaseUri = '//bits.wikimedia.org/event.gif';
+		$wgEventLoggingDBname = 'metawiki';
+		$wgEventLoggingFile = 'udp://208.80.152.184:8421/EventLogging';
+		$wgEventLoggingSchemaIndexUri = 'http://meta.wikimedia.org/w/index.php';
+	}
+	if ( $wgEventLoggingDBname === $wgDBname ) {
+		// Bug 45031
 		$wgExtraNamespaces[470] = 'Schema';
 		$wgExtraNamespaces[471] = 'Schema_talk';
 
-	} else {
-		// All other wikis reference metawiki.
-		$wgEventLoggingDBname = 'metawiki';
-		$wgEventLoggingSchemaIndexUri = 'http://meta.wikimedia.org/w/index.php';
+		include_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
 	}
 }
+
 if ( $wmgUseUniversalLanguageSelector ) {
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
 	$wgULSGeoService = false;
