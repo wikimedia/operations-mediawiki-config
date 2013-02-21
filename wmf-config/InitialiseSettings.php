@@ -7322,6 +7322,7 @@ $wgConf->settings = array(
 		'steward' => array( 'userrights-interwiki' => true ), // new steward stuff, yay 2007-12-27
 		'flood' => array( 'bot' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
+		'centralnoticeadmin' => array( 'centralnotice-admin' => true, 'editinterface' => true ), //adding to allow CN access without local sysop JRA 2013-02-21
 	),
 	'mkwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -7582,6 +7583,7 @@ $wgConf->settings = array(
 		),
 		'researcher' => array( 'browsearchive' => true, 'deletedhistory' => true, 'apihighlimits' => true ),
 		'rollbacker' => array( 'rollback' => true ),
+		'centralnoticeadmin' => array( 'centralnotice-admin' => true, 'editinterface' => true ), //adding to allow CN access without local sysop JRA 2013-02-21
 	),
 	'test2wiki' => array(
 		'user' => array(
@@ -7752,7 +7754,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'ipblock-exempt' ),
 	),
 	'+testwiki' => array(
-		'bureaucrat' => array( 'researcher' ),
+		'bureaucrat' => array( 'researcher', 'centralnoticeadmin' ),
 		'sysop' => array( 'filemover', 'rollbacker', 'accountcreator', 'confirmed' ),
 		# 'user' => array( 'editor', 'reviewer' ),
 	),
@@ -7947,7 +7949,7 @@ $wgConf->settings = array(
 		'coder' => array( 'coder' ),
 	),
 	'+metawiki' => array(
-		'bureaucrat' => array( 'ipblock-exempt', ),
+		'bureaucrat' => array( 'ipblock-exempt', 'centralnoticeadmin' ),
 		'checkuser'  => array( 'ipblock-exempt' ),
 		'sysop'      => array( 'autopatrolled' ),
 	),
@@ -8126,7 +8128,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'ipblock-exempt' ),
 	),
 	'+testwiki' => array(
-		'bureaucrat' => array( 'sysop', 'researcher', 'translationadmin' ),
+		'bureaucrat' => array( 'sysop', 'researcher', 'translationadmin', 'centralnoticeadmin' ),
 		'sysop' => array( 'filemover', 'rollbacker', 'accountcreator', 'confirmed' ),
 		# 'user' => array( 'editor', 'reviewer' ),
 	),
@@ -8340,7 +8342,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'transwiki', 'import', 'coder', 'svnadmins' ),
 	),
 	'+metawiki' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'ipblock-exempt', 'flood', 'translationadmin' ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=37198
+		'bureaucrat' => array( 'sysop', 'bureaucrat', 'ipblock-exempt', 'flood', 'translationadmin', 'centralnoticeadmin' ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=37198
 		'checkuser'  => array( 'ipblock-exempt' ),
 		'sysop'      => array( 'autopatrolled' ),
 	),
