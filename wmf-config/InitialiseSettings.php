@@ -4332,7 +4332,6 @@ $wgConf->settings = array(
 
 'wgReadOnly' => array(
 	'default' => null,
-	'wikidatawiki' => "WikiData is currently read-only for scheduled maintenance, to end by 21 Feb 02:00 UTC. Sorry for the inconvenience.",
 ),
 
 'wgReadOnlyFile' => array(

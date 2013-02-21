@@ -46,6 +46,7 @@ $wgLBFactoryConf = array(
 	'commonswiki' => 's4',
 
 	'dewiki' => 's5',
+	'wikidatawiki' => 's5',
 
 	'frwiki' => 's6',
 	'jawiki' => 's6',
