@@ -282,6 +282,13 @@ $wgLBFactoryConf = array(
 		'10.0.0.220' => 3, # es9
 		'10.0.0.224' => 3, # es10
 	),
+	# ExtensionStore shard1 - initially for AFTv5
+	# TODO: pmtpa replica of the shard, currently only in eqiad
+	'extension1' => array(
+		'10.64.16.18' => 10, # db1029
+		'10.64.16.19' => 100, # db1030
+		'10.64.16.20' => 40, # db1031 snapshot host
+	),
 ),
 
 'masterTemplateOverrides' => array(

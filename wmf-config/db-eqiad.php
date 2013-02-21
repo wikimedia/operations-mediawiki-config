@@ -271,6 +271,12 @@ $wgLBFactoryConf = array(
 		'10.64.32.19' => 3, # es1009
 		'10.64.32.20' => 3, # es1010
 	),
+	# ExtensionStore shard1 - initially for AFTv5
+	'extension1' => array(
+		'10.64.16.18' => 10, # db1029
+		'10.64.16.19' => 100, # db1030
+		'10.64.16.20' => 40, # db1031 snapshot host
+	),
 ),
 
 'masterTemplateOverrides' => array(
