@@ -2690,6 +2690,10 @@ $wgConf->settings = array(
 		'Index' => 106,
 		'Index_talk' => 107,
 	),
+	'+huwiktionary' => array(
+		'Függelék_vita' => 101, // Bug 42505
+		'Index_vita' => 103,
+	),
 	'+hywikisource' => array(
 		'Author' => 100,
 		'Author_talk' => 101,
@@ -4885,6 +4889,12 @@ $wgConf->settings = array(
 	'huwiki' => array(
 		100 => 'Portál',
 		101 => 'Portálvita',
+	),
+	'huwiktionary' => array(
+		100 => 'Függelék',       // Bug 42505 - Appendix
+		101 => 'Függelékvita',
+		102 => 'Index',          // Bug 42505
+		103 => 'Indexvita',
 	),
 	'hywiki' => array(
 		100 => 'Պորտալ',
