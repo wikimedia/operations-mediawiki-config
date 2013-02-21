@@ -8013,6 +8013,9 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface_editor' ), // Bug 39905
 		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed' ),
 	),
+	'+ptwikivoyage' => array(
+		'sysop' => array( 'bot' ), // Bug 45233
+	),
 	'+quwiki' => array(
 		'sysop' => array( 'rollbacker' ),
 	),
@@ -8402,6 +8405,9 @@ $wgConf->settings = array(
 	),
 	'+ptwikinews' => array(
 		'sysop' => array( 'reviewer' ),
+	),
+	'+ptwikivoyage' => array(
+		'sysop' => array( 'bot' ), // Bug 45233
 	),
 	'+quwiki' => array(
 		'sysop' => array( 'rollbacker' ),
