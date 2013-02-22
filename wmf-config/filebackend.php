@@ -24,10 +24,11 @@ $wgFileBackends[] = array( // backend config for wiki's local repo
 	'swiftKey'           => $wmfSwiftConfig['key'],
 	'swiftTempUrlKey'    => $wmfSwiftConfig['tempUrlKey'],
 	'shardViaHashLevels' => array(
-		'local-public'  => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-thumb'   => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-temp'    => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-deleted' => array( 'levels' => $wmfSwiftShardLocal, 'base' => 36, 'repeat' => 0 )
+		'local-public'     => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-thumb'      => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-temp'       => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-transcoded' => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-deleted'    => array( 'levels' => $wmfSwiftShardLocal, 'base' => 36, 'repeat' => 0 )
 	),
 	'parallelize'        => 'implicit',
 	'cacheAuthInfo'      => true
@@ -43,9 +44,10 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repo
 	'swiftKey'           => $wmfSwiftConfig['key'],
 	'swiftTempUrlKey'    => $wmfSwiftConfig['tempUrlKey'],
 	'shardViaHashLevels' => array(
-		'local-public'  => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'local-thumb'   => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'local-temp'    => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-public'     => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-thumb'      => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-temp'       => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-transcoded' => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
 	),
 	'parallelize'        => 'implicit',
 	'cacheAuthInfo'      => true
@@ -81,10 +83,11 @@ $wgFileBackends[] = array( // backend config for wiki's local repo
 	'rgwS3AccessKey'     => $wmfCephRgwConfig['S3AccessKey'],
 	'rgwS3SecretKey'     => $wmfCephRgwConfig['S3SecretKey'],
 	'shardViaHashLevels' => array(
-		'local-public'  => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-thumb'   => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-temp'    => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-deleted' => array( 'levels' => $wmfSwiftShardLocal, 'base' => 36, 'repeat' => 0 )
+		'local-public'     => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-thumb'      => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-temp'       => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-transcoded' => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-deleted'    => array( 'levels' => $wmfSwiftShardLocal, 'base' => 36, 'repeat' => 0 )
 	),
 	'parallelize'        => 'implicit',
 	'cacheAuthInfo'      => true
@@ -102,9 +105,10 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repo
 	'rgwS3AccessKey'     => $wmfCephRgwConfig['S3AccessKey'],
 	'rgwS3SecretKey'     => $wmfCephRgwConfig['S3SecretKey'],
 	'shardViaHashLevels' => array(
-		'local-public'  => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'local-thumb'   => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'local-temp'    => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-public'     => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-thumb'      => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-temp'       => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-transcoded' => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
 	),
 	'parallelize'        => 'implicit',
 	'cacheAuthInfo'      => true
