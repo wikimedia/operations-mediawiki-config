@@ -11088,6 +11088,9 @@ $wgConf->settings = array(
 	'default' => 'commonswiki',
 	'test2wiki' => '',
 ),
+'wmgMFPhotoUploadAppendToDesc' => array(
+	'default' => '{{Uploaded from Mobile|platform=Web|version=}}',
+),
 
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
