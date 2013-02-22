@@ -10833,6 +10833,9 @@ $wgConf->settings = array(
 'wmgMFLogEvents' => array(
 	'default' => true,
 ),
+'wmgMFPhotoUploadAppendToDesc' => array(
+	'default' => '{{Uploaded from Mobile|platform=Web|version=}}',
+),
 
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
