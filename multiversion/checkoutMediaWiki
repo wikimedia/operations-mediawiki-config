@@ -57,7 +57,7 @@ function checkoutMediaWiki() {
 			print "Error running git\n";
 			exit( 1 );
 		}
-		passthru( 'git submodule update --init ' . escapeshellarg( $destIP ), $ret );
+		passthru( 'git submodule update --init --recursive ' . escapeshellarg( $destIP ), $ret );
 		if ( $ret ) {
 			print "Error running git\n";
 			exit( 1 );
