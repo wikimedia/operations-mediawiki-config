@@ -19,10 +19,10 @@ docroot/
  The Apache document root for several of our VirtualHosts.
 
 images/
- Shared pictures for the unified login system
+ Shared pictures for the unified login system.
 
 live-1.5/
- The docroot for any wiki.
+ The "w/" directory in the docroot of any mediawiki-serving VirtualHost.
 
 tests/
  Hold some PHPUnit tests.
@@ -33,16 +33,16 @@ LocalSettings.php.
 
 wmf-config/CommonSettings.php
  Generic configuration such as including extensions or calling over piece
-of configuration. This is mostly shared among all wikis.
+ of configuration. This is mostly shared among all wikis.
 
 wmf-config/InitialiseSettings.php
  Per wiki configuration.
 
 wmf-config/db.php
- Databases related configuration
+ Databases related configuration.
 
 wmf-config/mc.php
- Memcached configuration
+ Memcached configuration.
 
 wmf-config/*-labs.php
  Files used by the beta cluster to override production settings.
@@ -68,7 +68,7 @@ Example, per datacenter:
  The call to getRealmSpecificFilename( 'mc.php' ) will return:
 
   - on pmtpa: mc-pmtpa.php
-  - on any other datacenter (ex: eqiad): mc.php
+  - on any other datacenter (e.g. eqiad): mc.php
 
 
 Example per realm with a non php file extension:
