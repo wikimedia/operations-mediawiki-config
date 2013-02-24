@@ -3289,6 +3289,7 @@ $wgConf->settings = array(
 	'+wikidatawiki' => array(
 		'WD' => NS_PROJECT,      // Bug 41834
 		'WT' => NS_PROJECT_TALK,
+		'P' => 120, // bug 45079
 	),
 	'+yiwiki' => array(
 		'וויקיפעדיע' => NS_PROJECT,
