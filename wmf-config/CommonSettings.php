@@ -1074,6 +1074,8 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 	$wgExtDistArchiveAPI = 'https://api.github.com/repos/wikimedia/mediawiki-extensions-$EXT/tarball/$REF';
 	$wgExtDistProxy = 'url-downloader.wikimedia.org:8080';
 
+	// When changing the Snapshot Refs please change the corresponding
+	// extension distributor messages for mediawiki.org in WikimediaMessages.i18n.php too
 	$wgExtDistSnapshotRefs = array(
 		'master',
 		'REL1_20',
