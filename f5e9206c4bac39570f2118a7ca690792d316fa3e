@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DnWQivwY",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 281,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-02-25T19:56:14Z",
+      "side": 1,
+      "message": "I wonder if we should just enable this for all wikis..",
+      "revId": "f5e9206c4bac39570f2118a7ca690792d316fa3e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
