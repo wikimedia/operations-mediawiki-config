@@ -10426,6 +10426,9 @@ $wgConf->settings = array(
 	'enwiki' => true,
 	'testwiki' => true,
 ),
+'wmgArticleFeedbackv5Cluster' => array(
+	'default' => 'extension1',
+),
 'wmgArticleFeedbackv5LotteryOdds' => array(
 	'default' => 0,
 	'testwiki' => array( NS_MAIN => 10, NS_HELP => 100 ),
@@ -10433,9 +10436,16 @@ $wgConf->settings = array(
 ),
 'wmgArticleFeedbackv5Namespaces' => array(
 	'default' => array( NS_MAIN ),
-	'dewiki' => array( NS_MAIN ),
-	'enwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
-	'testwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
+
+	/*
+	 * Temporarily disabling to update code & merge data. We could disable
+	 * AFTv5 entirely by setting wmgUseArticleFeedbackv5 to false, but we
+	 * still want AFTv5 to be loaded because we'll want to run a maintenance
+	 * script to merge the data.
+	 */
+	'dewiki' => array(), // array( NS_MAIN ),
+	'enwiki' => array(), // array( NS_MAIN, NS_HELP, NS_PROJECT ),
+	'testwiki' => array(), // array( NS_MAIN, NS_HELP, NS_PROJECT ),
 ),
 'wmgArticleFeedbackv5Categories' => array(
 	'default' => array(),
@@ -10541,6 +10551,50 @@ $wgConf->settings = array(
 		// worked out right. [LATER - depends on UDP logging being set up]
 		'tracked' => false,
 	),
+),
+'wmgArticleFeedbackv5Permissions' => array(
+	'default' => array(
+		// every member (apart from blocked users) = reader
+		'aft-reader' => array( '*', 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
+		// registered member = member
+		'aft-member' => array( 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
+		// (auto-)confirmed user = editor
+		'aft-editor' => array( 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
+		// rollbacker/reviewer = monitor
+		'aft-monitor' => array( 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
+		// administrator = administrator
+		'aft-administrator' => array( 'sysop', 'oversight' ),
+		// oversight = oversighter
+		'aft-oversighter' => array( 'oversight' ),
+	),
+	'dewiki' => array(
+		// every member (apart from blocked users) = reader
+		'aft-reader' => array( '*', 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
+		// registered member = member
+		'aft-member' => array( 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
+		// (auto-)confirmed user = editor
+		'aft-editor' => array( 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
+		// administrator = monitor; no rollbacker/reviewer should have these permissions (= hide) here!
+		'aft-monitor' => array( 'sysop', 'oversight' ),
+		// administrator = administrator
+		'aft-administrator' => array( 'sysop', 'oversight' ),
+		// oversight = oversighter
+		'aft-oversighter' => array( 'oversight' ),
+	),
+),
+'wmgArticleFeedbackAutoArchiveEnabled' => array(
+	'default' => false,
+	'enwiki' => false,
+	'dewiki' => false,
+),
+'wmgArticleFeedbackAutoArchiveTtl' => array(
+	'default' => array(
+		0 => '+2 years', // < 9: 2 years
+		10 => '+1 month', // 10-19: 1 month
+		20 => '+1 week', // 20-29: 1 week
+		30 => '+3 days', // 30-39: 3 days
+		40 => '+2 days', // > 40: 2 days
+	)
 ),
 
 'wmgUsePoolCounter' => array(

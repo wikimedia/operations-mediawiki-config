@@ -2037,6 +2037,7 @@ if ( $wmgUseArticleFeedback ) {
 if ( $wmgUseArticleFeedbackv5 ) {
 	require_once( "$IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.php" );
 
+	$wgArticleFeedbackv5Cluster = $wmgArticleFeedbackv5Cluster;
 	$wgArticleFeedbackv5Categories = $wmgArticleFeedbackv5Categories;
 	$wgArticleFeedbackv5BlacklistCategories = $wmgArticleFeedbackv5BlacklistCategories;
 	$wgArticleFeedbackv5OversightEmails = $wmgArticleFeedbackv5OversightEmails;
@@ -2045,46 +2046,24 @@ if ( $wmgUseArticleFeedbackv5 ) {
 	$wgArticleFeedbackv5LearnToEdit = $wmgArticleFeedbackv5LearnToEdit;
 	$wgArticleFeedbackv5Namespaces = $wmgArticleFeedbackv5Namespaces;
 	$wgArticleFeedbackv5LotteryOdds = $wmgArticleFeedbackv5LotteryOdds;
+	$wgArticleFeedbackAutoArchiveEnabled = $wmgArticleFeedbackAutoArchiveEnabled;
+	$wgArticleFeedbackAutoArchiveTtl = $wmgArticleFeedbackAutoArchiveTtl;
 
-	// every member (apart from blocked users) = reader
-	foreach ( array( '*', 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
-		if ( isset( $wgGroupPermissions[$group] ) ) { // skip rollbacker group on wikis without that
-			$wgGroupPermissions[$group]['aft-reader'] = true;
+	// clear default permissions set in ArticleFeedbackv5.php
+	foreach ( $wgGroupPermissions as $group => $permissions ) {
+		foreach ( $wmgArticleFeedbackv5Permissions as $permission => $groups ) {
+			if ( isset( $wgGroupPermissions[$group][$permission] ) ) {
+				unset( $wgGroupPermissions[$group][$permission] );
+			}
 		}
 	}
 
-	// registered member = member
-	foreach ( array( 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
-		if ( isset( $wgGroupPermissions[$group] ) ) { // skip rollbacker group on wikis without that
-			$wgGroupPermissions[$group]['aft-member'] = true;
-		}
-	}
-
-	// (auto-)confirmed user = editor
-	foreach ( array( 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
-		if ( isset( $wgGroupPermissions[$group] ) ) { // skip rollbacker group on wikis without that
-			$wgGroupPermissions[$group]['aft-editor'] = true;
-		}
-	}
-
-	// rollbacker/reviewer = monitor
-	foreach ( array( 'rollbacker', 'reviewer', 'sysop', 'oversight' ) as $group ) {
-		if ( isset( $wgGroupPermissions[$group] ) ) { // skip rollbacker group on wikis without that
-			$wgGroupPermissions[$group]['aft-monitor'] = true;
-		}
-	}
-
-	// administrator = administrator
-	foreach ( array( 'sysop', 'oversight' ) as $group ) {
-		if ( isset( $wgGroupPermissions[$group] ) ) { // skip rollbacker group on wikis without that
-			$wgGroupPermissions[$group]['aft-administrator'] = true;
-		}
-	}
-
-	// oversight = oversighter
-	foreach ( array( 'oversight' ) as $group ) {
-		if ( isset( $wgGroupPermissions[$group] ) ) { // skip rollbacker group on wikis without that
-			$wgGroupPermissions[$group]['aft-oversighter'] = true;
+	// set permissions as defined for selected wiki
+	foreach ( $wmgArticleFeedbackv5Permissions as $permission => $groups ) {
+		foreach ( (array) $groups as $group ) {
+			if ( isset( $wgGroupPermissions[$group] ) ) {
+				$wgGroupPermissions[$group][$permission] = true;
+			}
 		}
 	}
 
@@ -2093,7 +2072,7 @@ if ( $wmgUseArticleFeedbackv5 ) {
 		'aft-reader' => true,
 		'aft-member' => true,
 		'aft-editor' => true,
-		'aft-monitor' => true,
+		'aft-monitor' => false,
 		'aft-administrator' => false,
 		'aft-oversighter' => false,
 	);
