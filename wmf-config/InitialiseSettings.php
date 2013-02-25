@@ -3267,6 +3267,12 @@ $wgConf->settings = array(
 	'+ukwikiquote' => array(
 		'ВЦ' => NS_PROJECT,
 	),
+	'+ukwikinews' => array(
+		'Comments' => 102,       // Bug 45333
+		'Comments_talk' => 103,
+		'Incubator' => 104,
+		'Incubator_talk' => 105,
+	),
 	'+ukwikisource' => array(
 		'ВД' => NS_PROJECT,
 	),
@@ -6120,6 +6126,12 @@ $wgConf->settings = array(
 		101 => 'Portal_tartışma',
 		106 => 'Yorum',
 		107 => 'Yorum_tartışma',
+	),
+	'ukwikinews' => array(
+		102 => 'Коментарі',                // Bug 45333 - Comments
+		103 => 'Обговорення_коментарів',
+		104 => 'Інкубатор',                // Bug 45333 - Incubator
+		105 => 'Обговорення_інкубатора',
 	),
 	'zhwikinews' => array(
 		100 => '频道',
