@@ -10703,6 +10703,51 @@ $wgConf->settings = array(
 		'tracked' => false,
 	),
 ),
+'wmgArticleFeedbackPermissions' => array(
+	'default' => array(
+		// every member (apart from blocked users) = reader
+		'aft-reader' => array( '*', 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
+		// registered member = member
+		'aft-member' => array( 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
+		// (auto-)confirmed user = editor
+		'aft-editor' => array( 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
+		'aft-editor2' => array( 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
+		// rollbacker/reviewer = monitor
+		'aft-monitor' => array( 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
+		// administrator = administrator
+		'aft-administrator' => array( 'sysop', 'oversight' ),
+		// oversight = oversighter
+		'aft-oversighter' => array( 'oversight' ),
+	),
+	'dewiki' => array(
+		// every member (apart from blocked users) = reader
+		'aft-reader' => array( '*', 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
+		// registered member = member
+		'aft-member' => array( 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
+		// (auto-)confirmed user = editor
+		'aft-editor' => array( 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
+		// rollbacker/reviewer = monitor
+		'aft-monitor' => array( 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
+		'aft-editor2' => array( 'rollbacker', 'reviewer', 'sysop', 'oversight' ), // only monitors can hide posts
+		// administrator = administrator
+		'aft-administrator' => array( 'sysop', 'oversight' ),
+		// oversight = oversighter
+		'aft-oversighter' => array( 'oversight' ),
+	),
+),
+'wmgArticleFeedbackAutoArchiveEnabled' => array(
+	'default' => false,
+	'enwiki' => true,
+),
+'wmgArticleFeedbackAutoArchiveTtl' => array(
+	'default' => array(
+		0 => '+2 years', // < 9: 2 years
+		10 => '+1 month', // 10-19: 1 month
+		20 => '+1 week', // 20-29: 1 week
+		30 => '+3 days', // 30-39: 3 days
+		40 => '+2 days', // > 40: 2 days
+	)
+),
 
 'wmgUsePoolCounter' => array(
 	'default' => true,
