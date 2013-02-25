@@ -2749,6 +2749,7 @@ if ( $wmgUsePageImages ) {
 
 if ( $wmgUseSearchExtraNS ) {
 	require_once( "$IP/extensions/SearchExtraNS/SearchExtraNS.php" );
+	$wgSearchExtraNamespaces = $wmgSearchExtraNamespaces;
 }
 
 if ( $wmgUseGlobalAbuseFilters ) {

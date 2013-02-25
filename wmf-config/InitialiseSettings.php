@@ -12184,6 +12184,10 @@ $wgConf->settings = array(
 	'default' => false,
 	'commonswiki' => true,
 ),
+'wmgSearchExtraNamespaces' => array(
+	'default' => false,
+	'commonswiki' => array( NS_CATEGORY ),
+),
 
 'wmgUseSecurePoll' => array(
 	'default' => false,
