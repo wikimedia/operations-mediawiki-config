@@ -217,6 +217,9 @@ return array(
 	'wmgMFPhotoUploadEndpoint' => array(
 		'default' => '',
 	),
+	'wmgMFLogEvents' => array(
+		'default' => false,
+	),
 
 	# Completely disable wikidata on the beta cluster
 	# There is no configuration for it yet

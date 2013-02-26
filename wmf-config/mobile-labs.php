@@ -8,6 +8,3 @@ $wmgMFRemotePostFeedbackPassword = '';
 
 // Reuse most of production settings
 require_once( __DIR__ . '/mobile.php' );
-
-// Disabled on deployment-prep until there's EventLogging up and running
-$wgMFLogEvents = false;
