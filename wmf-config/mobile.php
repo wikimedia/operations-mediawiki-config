@@ -141,8 +141,7 @@ if ( $wmgMFEnableDesktopResources ) {
 // See bug 41141 though, we may wish to disable on some sites.
 $wgMFTrademarkSitename = true;
 
-// Enable event logging on beta (ori-l; 10-Nov-2012)
-$wgMFLogEvents = true;
+$wgMFLogEvents = $wmgMFLogEvents;
 
 // Enable Schemas for event logging (jdlrobson; 07-Feb-2012)
 if ( $wgMFLogEvents && $wmgUseEventLogging ) {

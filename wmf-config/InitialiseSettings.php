@@ -11116,6 +11116,9 @@ $wgConf->settings = array(
 	'default' => 'commonswiki',
 	'test2wiki' => '',
 ),
+'wmgMFLogEvents' => array(
+	'default' => true,
+),
 
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
