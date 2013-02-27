@@ -554,17 +554,12 @@ elseif ( $wgDBname == 'trwiki' ) {
 
 	$wgAutopromoteOnce['onEdit']['autoreview'] = array(
 		'&', // AND
-		array( APCOND_AGE, 30*86400 ),
-		array( APCOND_EDITCOUNT, 50, 2*86400 ),
-		array( APCOND_FR_EDITSUMMARYCOUNT, 20 ),
-		array( APCOND_FR_UNIQUEPAGECOUNT, 8 ),
-		array( APCOND_FR_EDITSPACING, 3, 7 ),
-		array( '|', // OR
-			array( APCOND_FR_CONTENTEDITCOUNT,
-				150, 2*86400 ),
-			array( APCOND_FR_CHECKEDEDITCOUNT,
-				50, 2*86400 )
-		),
+		array( APCOND_AGE, 7*86400 ),
+		array( APCOND_EDITCOUNT, 30, 2*86400 ),
+		array( APCOND_FR_EDITSUMMARYCOUNT, 5 ),
+		array( APCOND_FR_UNIQUEPAGECOUNT, 5 ),
+		array( APCOND_FR_EDITSPACING, 7, 7 ),
+		array( APCOND_FR_CONTENTEDITCOUNT, 20, 2*86400 ),
 		array( APCOND_FR_NEVERBOCKED ),
 		array( APCOND_FR_MAXREVERTEDEDITRATIO, .03 ),
 		array( '!', array( APCOND_INGROUPS, array( 'sysop' ) ) ),
@@ -575,17 +570,12 @@ elseif ( $wgDBname == 'trwiki' ) {
 
 	$wgAutopromoteOnce['onEdit']['patroller'] = array(
 		'&', // AND
-		array( APCOND_AGE, 60*86400 ),
-		array( APCOND_EDITCOUNT, 250, 1*86400 ),
-		array( APCOND_FR_EDITSUMMARYCOUNT, 50 ),
-		array( APCOND_FR_UNIQUEPAGECOUNT, 14 ),
-		array( APCOND_FR_EDITSPACING, 3, 15 ),
-		array( '|', // OR
-			array( APCOND_FR_CONTENTEDITCOUNT,
-				300, 1*86400 ),
-			array( APCOND_FR_CHECKEDEDITCOUNT,
-				200, 1*86400 )
-		),
+		array( APCOND_AGE, 15*86400 ),
+		array( APCOND_EDITCOUNT, 150, 1*86400 ),
+		array( APCOND_FR_EDITSUMMARYCOUNT, 25 ),
+		array( APCOND_FR_UNIQUEPAGECOUNT, 10 ),
+		array( APCOND_FR_EDITSPACING, 7, 15 ),
+		array( APCOND_FR_CONTENTEDITCOUNT, 100, 1*86400 ),
 		array( APCOND_FR_NEVERBOCKED ),
 		array( APCOND_FR_MAXREVERTEDEDITRATIO, .03 )
 	);
