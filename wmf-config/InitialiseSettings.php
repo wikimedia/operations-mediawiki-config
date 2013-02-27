@@ -10107,7 +10107,7 @@ $wgConf->settings = array(
 
 'wgThumbLimits' => array(
 	'default' => array( 120, 150, 180, 200, 220, 250, 300 ),
-	'+frwiki' => array( 460, 620 ),
+	'frwiki' => array( 120, 150, 180, 200, 220, 250, 300, 460, 620 ),
 	'+itwikiquote' => array( 360 ),
 	'svwiki' => array( 120, 200, 250, 300, 360 ),
 ),
