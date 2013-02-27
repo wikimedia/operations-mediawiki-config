@@ -10560,10 +10560,13 @@ $wgConf->settings = array(
 
 'wgCategoryCollation' => array(
 	'default' => 'uppercase',
+	# Multilingual wikis
 	'mediawikiwiki' => 'uca-default',
+	# Single-language wikis
+	'iswiktionary' => 'identity', # bug 30722
+	'plwiki' => 'uca-pl', # bug 42413
 	'ptwiki' => 'uca-default', # bug 35632
 	'ptwikibooks' => 'uca-default', # bug 43185
-	'iswiktionary' => 'identity', # bug 30722
 ),
 
 'wmgVectorSectionEditLinks' => array(
