@@ -127,12 +127,7 @@ $wgConf->settings = array(
 	'uawikimedia' => 'uk',
 	'ukwikimedia'   => 'en-gb',
 	'usabilitywiki'     => 'en',
-	'wikimania2008wiki' => 'en',
-	'wikimania2009wiki' => 'en',
-	'wikimania2010wiki' => 'en',
-	'wikimania2011wiki' => 'en',
-	'wikimania2012wiki' => 'en',
-	'wikimania2013wiki' => 'en',
+	'wikimania' => 'en',
 	'wikimaniateamwiki' => 'en',
 	'zh_classicalwiki' => 'lzh', # to rename
 	'zh_min_nanwiki' => 'nan', # to rename
@@ -900,14 +895,7 @@ $wgConf->settings = array(
 	'warwiki'		=> '//upload.wikimedia.org/wikipedia/commons/8/81/Wikipedia-logo-v2-war.png', // bug 40285
 	'wg_enwiki'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/7/75/Wikimedia_Community_Logo.svg/120px-Wikimedia_Community_Logo.svg.png',
 	'wikimania2005wiki'		=> '//upload.wikimedia.org/wikipedia/wikimania/b/bc/Wiki.png',
-	'wikimania2006wiki'		=> '//upload.wikimedia.org/wikipedia/wikimania2006/c/c0/Mania-logo.gif',
-	'wikimania2007wiki'		=> '//upload.wikimedia.org/wikipedia/wikimania2006/c/c0/Mania-logo.gif',
-	'wikimania2008wiki'		=> '//upload.wikimedia.org/wikipedia/wikimania2006/c/c0/Mania-logo.gif',
-	'wikimania2009wiki'		=> '//upload.wikimedia.org/wikipedia/wikimania2006/c/c0/Mania-logo.gif',
-	'wikimania2010wiki'		=> '//upload.wikimedia.org/wikipedia/wikimania2006/c/c0/Mania-logo.gif',
-	'wikimania2011wiki'		=> '//upload.wikimedia.org/wikipedia/wikimania2006/c/c0/Mania-logo.gif',
-	'wikimania2012wiki'		=> '//upload.wikimedia.org/wikipedia/wikimania2006/c/c0/Mania-logo.gif',
-	'wikimania2013wiki'		=> '//upload.wikimedia.org/wikipedia/wikimania2006/c/c0/Mania-logo.gif',
+	'wikimania'		=> '//upload.wikimedia.org/wikipedia/wikimania2006/c/c0/Mania-logo.gif',
 	'wikimaniateamwiki'		=> '//wikimaniateam.wikimedia.org/w/img_auth.php/b/bc/Wiki.png',
 	'eswikivoyage'	=> '//upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Wikivoyage-logo-es.svg/135px-Wikivoyage-logo-es.svg.png',
 	'wowiki'		=> '//upload.wikimedia.org/wikipedia/commons/4/41/Wikipedia-logo-v2-wo.png', // bug 40285
@@ -1255,6 +1243,7 @@ $wgConf->settings = array(
 	'wikinews'      => 'Wikinews',
 	'wikisource'    => 'Wikisource',
 	'wikivoyage'    => 'Wikivoyage',
+	'wikimania'     => 'Wikimania',
 
 	// Wikis, alphabetically by DB name
 	'abwiki'	=> 'Авикипедиа',
@@ -1643,15 +1632,6 @@ $wgConf->settings = array(
 	'vowiktionary'	=> 'Vükivödabuk',
 	'wg_enwiki'     => 'Wikipedia Working Group',
 	'wikidatawiki' => 'Wikidata',
-	'wikimania2005wiki' => 'Wikimania',
-	'wikimania2006wiki' => 'Wikimania',
-	'wikimania2007wiki' => 'Wikimania',
-	'wikimania2008wiki' => 'Wikimania',
-	'wikimania2009wiki' => 'Wikimania',
-	'wikimania2010wiki' => 'Wikimania',
-	'wikimania2011wiki' => 'Wikimania',
-	'wikimania2012wiki' => 'Wikimania',
-	'wikimania2013wiki' => 'Wikimania',
 	'wikimaniateamwiki' => 'WikimaniaTeam',
 	'wikimaniawiki' => 'Wikimania', // back compat
 	'wikimedia'     => 'Wikimedia',
@@ -1707,6 +1687,7 @@ $wgConf->settings = array(
 	'wikiversity'   => 'Wikiversity',
 	'wikivoyage'    => 'Wikivoyage',
 	'wiktionary'    => 'Wiktionary',
+	'wikimania'     => 'Wikimania',
 
 	// Wikis (alphabetical by DB name)
 	'abwiki'		=> 'Авикипедиа',
@@ -2097,15 +2078,6 @@ $wgConf->settings = array(
 	'vowiktionary'	=> 'Vükivödabuk',
 	'vowiktionary'  => 'Vükivödabuk',
 	'wikibooks'     => 'Wikibooks',
-	'wikimania2005wiki' => 'Wikimania',
-	'wikimania2006wiki' => 'Wikimania',
-	'wikimania2007wiki' => 'Wikimania',
-	'wikimania2008wiki' => 'Wikimania',
-	'wikimania2009wiki' => 'Wikimania',
-	'wikimania2010wiki' => 'Wikimania',
-	'wikimania2011wiki' => 'Wikimania',
-	'wikimania2012wiki' => 'Wikimania',
-	'wikimania2013wiki' => 'Wikimania',
 	'wikimaniateamwiki' => 'WikimaniaTeam',
 	'wikimaniawiki' => 'Wikimania', // back compat
 	'xmfwiki'		=> 'ვიკიპედია',
@@ -3496,14 +3468,13 @@ $wgConf->settings = array(
 	'+ukwikimedia' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+usabilitywiki' => array( 0 => 1 ),
 	'+wikimaniateamwiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+wikimania2006wiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+wikimania2007wiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+wikimania2008wiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+wikimania2009wiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+wikimania2010wiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+wikimania2011wiki' => array( 0 => 1, 6 => 0, 8 => 0 ),
-	'+wikimania2012wiki' => array( 0 => 1, 6 => 0, 8 => 0 ),
-	'+wikimania2013wiki' => array( 0 => 1, 6 => 0, 8 => 0 ),
+
+	'+wikimania' => array( 0 => 1, 6 => 0, 8 => 0, ),
+	'+wikimania2006wiki' => array( 10 => 0 ),
+	'+wikimania2007wiki' => array( 10 => 0 ),
+	'+wikimania2008wiki' => array( 10 => 0 ),
+	'+wikimania2009wiki' => array( 10 => 0 ),
+	'+wikimania2010wiki' => array( 10 => 0 ),
 	// @}
 
 	// Wikibooks @{
@@ -4332,12 +4303,7 @@ $wgConf->settings = array(
 	'sourceswiki' => 'wikisource',
 	'specieswiki' => 'wikispecies',
 	'testwiki' => 'test',
-	'wikimania2008wiki' => 'wikimedia',
-	'wikimania2009wiki' => 'wikimedia',
-	'wikimania2010wiki' => 'wikimedia',
-	'wikimania2011wiki' => 'wikimedia',
-	'wikimania2012wiki' => 'wikimedia',
-	'wikimania2013wiki' => 'wikimedia',
+	'wikimania' => 'wikimedia',
 	'wikidatawiki' => 'wikidata',
 	'wikivoyage' => 'wikivoyage',
 ),
@@ -4477,41 +4443,9 @@ $wgConf->settings = array(
 		100 => 'Internal',
 		101 => 'Internal_talk',
 	),
-	'wikimania2005wiki' => array(
+	'wikimania' => array(
 		100 => 'Internal',
 		101 => 'Internal_talk',
-	),
-	'wikimania2006wiki' => array(
-		100 => 'Proceedings',
-		101 => 'Proceedings_talk',
-	),
-	'wikimania2007wiki' => array(
-		100 => 'Proceedings',
-		101 => 'Proceedings_talk',
-	),
-	'wikimania2008wiki' => array(
-		100 => 'Proceedings',
-		101 => 'Proceedings_talk',
-	),
-	'wikimania2009wiki' => array(
-		100 => 'Proceedings',
-		101 => 'Proceedings_talk',
-	),
-	'wikimania2010wiki' => array(
-		100 => 'Proceedings',
-		101 => 'Proceedings_talk',
-	),
-	'wikimania2011wiki' => array(
-		100 => 'Proceedings',
-		101 => 'Proceedings_talk',
-	),
-	'wikimania2012wiki' => array(
-		100 => 'Proceedings',
-		101 => 'Proceedings_talk',
-	),
-	'wikimania2013wiki' => array(
-		100 => 'Proceedings',
-		101 => 'Proceedings_talk',
 	),
 	# @}
 
@@ -6351,12 +6285,12 @@ $wgConf->settings = array(
 		'villagepump-url',
 		'helppage',
 	),
+
 	'wikimaniawiki' => array( 'currentevents-url', 'portal-url' ), // back compat
 	'wikimania2005wiki' => array( 'currentevents-url', 'portal-url' ),
 	'wikimania2006wiki' => array( 'currentevents-url', 'portal-url' ),
 	'wikimania2007wiki' => array( 'currentevents-url', 'portal-url' ),
 	'wikimania2008wiki' => array( 'currentevents-url', 'portal-url' ),
-#	'wikimania2009wiki' => array('currentevents-url','portal-url'),
 	'wikimania2009wiki' => array(
 		'registration-url',
 		'schedule-url',
@@ -9153,11 +9087,7 @@ $wgConf->settings = array(
 	'bpywiki' => false,
 	'enwikibooks' => false,
 	'rmwiki' => false,
-	'wikimania2009wiki' => false,
-	'wikimania2010wiki' => false,
-	'wikimania2011wiki' => false,
-	'wikimania2012wiki' => false,
-	'wikimania2013wiki' => false,
+	'wikimania' => false,
 	'zhwiki'  => false,
 	'foundationwiki' => false,
 ),
@@ -9288,11 +9218,7 @@ $wgConf->settings = array(
 	'strategywiki' => true,
 	'viwiktionary' => true, # bug 8886
 	'wikibooks' => true,
-	'wikimania2009wiki' => true,
-	'wikimania2010wiki' => true,
-	'wikimania2011wiki' => true,
-	'wikimania2012wiki' => true,
-	'wikimania2013wiki' => true,
+	'wikimania' => true,
 	'wikinews' => true,
 	'wikiquote' => true,
 	'wikisource' => true,  # 12423
@@ -9517,15 +9443,7 @@ $wgConf->settings = array(
 	'testwiki'	 			=> '//bits.wikimedia.org/favicon/black-globe.ico',
 	'usabilitywiki'			=> '//bits.wikimedia.org/favicon/usability.ico',
 	'wikidatawiki'			=> '//bits.wikimedia.org/favicon/wikidata.ico',
-	'wikimania2005wiki' 	=> '//bits.wikimedia.org/favicon/wikimania.ico',
-	'wikimania2006wiki' 	=> '//bits.wikimedia.org/favicon/wikimania.ico',
-	'wikimania2007wiki' 	=> '//bits.wikimedia.org/favicon/wikimania.ico',
-	'wikimania2008wiki' 	=> '//bits.wikimedia.org/favicon/wikimania.ico',
-	'wikimania2009wiki' 	=> '//bits.wikimedia.org/favicon/wikimania.ico',
-	'wikimania2010wiki' 	=> '//bits.wikimedia.org/favicon/wikimania.ico',
-	'wikimania2011wiki' 	=> '//bits.wikimedia.org/favicon/wikimania.ico',
-	'wikimania2012wiki' 	=> '//bits.wikimedia.org/favicon/wikimania.ico',
-	'wikimania2013wiki'     => '//bits.wikimedia.org/favicon/wikimania.ico',
+	'wikimania'                     => '//bits.wikimedia.org/favicon/wikimania.ico',
 	'wikimaniateamwiki' 	=> '//bits.wikimedia.org/favicon/wikimania.ico',
 	'wikimaniawiki'			=> '//bits.wikimedia.org/favicon/wikimania.ico',
 ),
