@@ -16,6 +16,24 @@
       "revId": "3e2b1e7f33a7b1836fcd9cda44c3cebc06939b4a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DnegAtWw",
+        "filename": "wmf-config/lucene.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 6
+      },
+      "writtenOn": "2013-02-27T20:24:24Z",
+      "side": 1,
+      "message": "I thought the point was to load balance eg searchpool4, not necessarily enwiki and other huge ones already in their own pool; for the pool of \u0027everything else\u0027 this approach is good enough. Guess the author can tell us what was intended.",
+      "parentUuid": "DneiENRA",
+      "revId": "3e2b1e7f33a7b1836fcd9cda44c3cebc06939b4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
