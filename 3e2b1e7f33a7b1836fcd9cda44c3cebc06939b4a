@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DneiENRA",
+        "filename": "wmf-config/lucene.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-02-27T20:05:27Z",
+      "side": 1,
+      "message": "This will produce a consistent result for enwiki and a 2:1 load distribution for ( \u0027dewiki\u0027, \u0027frwiki\u0027, \u0027jawiki\u0027 ).",
+      "revId": "3e2b1e7f33a7b1836fcd9cda44c3cebc06939b4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
