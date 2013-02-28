@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DnbLVi7c",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2013-02-28T06:33:11Z",
+      "side": 1,
+      "message": "So I have no idea how these files work, but couldn\u0027t you use something like `array_keys( IcuCollation::$tailoringFirstLetters )` to avoid duplicating the list? There is already a patchset pending to add rules for be-tarask, and there will probably be more.",
+      "revId": "1f81a5e48aebad62a9aa95ea2188174bbf1a31bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
