@@ -9217,6 +9217,7 @@ $wgConf->settings = array(
 	'chapcomwiki'			=> '//bits.wikimedia.org/favicon/chapcom.ico',
 	'checkuserwiki'			=> '//bits.wikimedia.org/favicon/community.ico',
 	'commonswiki'			=> '//bits.wikimedia.org/favicon/commons.ico',
+	'donatewiki'			=> '//bits.wikimedia.org/favicon/wmf.ico',
 	'foundationwiki'		=> '//bits.wikimedia.org/favicon/wmf.ico',
 	'grantswiki'			=> '//bits.wikimedia.org/favicon/wmf.ico',
 	'incubatorwiki'			=> '//bits.wikimedia.org/favicon/incubator.ico',
