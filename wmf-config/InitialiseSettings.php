@@ -235,6 +235,7 @@ $wgConf->settings = array(
 	'kowikiquote' => 'Asia/Seoul',
 	'kowikisource' => 'Asia/Seoul',
 	'kowikiversity' => 'Asia/Seoul',
+	'kowiktionary' => 'Asia/Seoul',
 	'kshwiki' => 'Europe/Berlin',
 	'lezwiki' => 'Europe/Moscow',
 	'liwiki' => 'Europe/Berlin',
