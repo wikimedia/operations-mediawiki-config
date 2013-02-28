@@ -10344,7 +10344,6 @@ $wgConf->settings = array(
 	'default' => 0,
 	'testwiki' => array( NS_MAIN => 10, NS_HELP => 100 ),
 	'dewiki' => array( NS_MAIN => 0.1 ), // ~ 1500 articles out of 1.5 mio in total
-	'enwiki' => array( NS_MAIN => 10, NS_HELP => 100 ),
 ),
 'wmgArticleFeedbackv5Namespaces' => array(
 	'default' => array( NS_MAIN ),
@@ -10449,7 +10448,7 @@ $wgConf->settings = array(
 		// This version number is added to all tracking event names, so that
 		// changes in the software don't corrupt the data being collected. Bump
 		// this when you want to start a new "experiment".
-		'version' => 6,
+		'version' => 7,
 		// Users may constantly be rebucketed, giving them new CTAs each time.
 		'expires' => 0,
 		// Track the event of users being bucketed - so we can be sure the odds
