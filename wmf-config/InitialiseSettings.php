@@ -121,6 +121,7 @@ $wgConf->settings = array(
 	'searchcomwiki' => 'en',
 	'sewikimedia' => 'sv',
 	'simplewiki' => 'en',
+	'simplewiktionary' => 'en',
 	'stewardwiki' => 'en',
 	'strategywiki' => 'en',
 	'tenwiki' => 'en',
