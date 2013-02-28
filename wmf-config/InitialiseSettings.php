@@ -11942,7 +11942,7 @@ $wgConf->settings = array(
 		'mms://',
 		'//', // for protocol-relative URLs
 	),
-	'+wikivoyage' => array( 'tel://' ),
+	'+wikivoyage' => array( 'tel:' ),
 ),
 'wgUseTidy' => array(
 	'default' => true,
