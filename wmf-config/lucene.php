@@ -35,6 +35,6 @@ if ( in_array( $wgDBname, array( 'enwiki' ) ) ) {
 	#$wgLuceneHost = '10.2.1.13'; # pmtpa
 } else {
 	# Pool 4 LVS
-	$wgLuceneHost = '10.2.2.14'; # eqiad
-	#$wgLuceneHost = '10.2.1.14'; # pmtpa
+	#$wgLuceneHost = '10.2.2.14'; # eqiad
+	$wgLuceneHost = '10.2.1.14'; # pmtpa
 }
