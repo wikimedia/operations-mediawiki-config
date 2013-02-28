@@ -7105,6 +7105,12 @@ $wgConf->settings = array(
 	'mlwikisource' => array(
 		'patroller' => array( 'patrol' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
+		'botadmin' => array(
+			'blockemail' => true, 'block' => true, 'ipblock-exempt' => true, 'proxyunbannable' => true, 'protect' => true, 'createaccount' => true, 'deleterevision' => true, 'delete' => true, 'globalblock-whitelist' => true, 'editusercss' => true, 'edituserjs' => true,
+			'autoconfirmed' => true, 'editinterface' => true, 'autopatrol' => true, 'import' => true, 'centralnotice-admin' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
+			'move-rootuserpages' => true, 'noratelimit' => true, 'suppressredirect' => true, 'reupload-shared' => true, 'override-antispoof' => true, 'tboverride' => true, 'reupload' => true, 'skipcaptcha' => true, 'rollback' => true, 'browsearchive' => true, 'unblockself' => true,
+			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
+		),
 	),
 	'mlwiktionary' => array(
 		'botadmin' => array(
@@ -7725,6 +7731,7 @@ $wgConf->settings = array(
 	),
 	'+mlwikisource' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
+		'bureaucrat' => array( 'botadmin' ),
 	),
 	'+mlwiktionary' => array(
 		'bureaucrat' => array( 'botadmin' ),
@@ -8125,6 +8132,7 @@ $wgConf->settings = array(
 	),
 	'+mlwikisource' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
+		'bureaucrat' => array( 'botadmin' ),
 	),
 	'+mlwiktionary' => array(
 		'bureaucrat' => array( 'botadmin' ),
@@ -9764,6 +9772,7 @@ $wgConf->settings = array(
 	'frwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
 	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=36600
 	'mlwiki' => array( 'botadmin' => array( 'botadmin' ) ),
+	'mlwikisource' => array( 'botadmin' => array( 'botadmin' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=44335
 	'mlwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
 	'plwiki' => array( 'flood' => array( 'flood' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=20155 , bug 21238
