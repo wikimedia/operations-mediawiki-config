@@ -7902,7 +7902,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'trusted' ),
 	),
 	'+kowiki' => array(
-		'sysop' => array( 'rollbacker' ),
+		'sysop' => array( 'rollbacker', 'confirmed' ),
 	),
 	'+ltwiki' => array(
 		'sysop' => array ( 'abusefilter' ),
@@ -8303,7 +8303,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'trusted' ),
 	),
 	'+kowiki' => array(
-		'sysop' => array( 'rollbacker' ),
+		'sysop' => array( 'rollbacker', 'confirmed' ),
 	),
 	'+ltwiki' => array(
 		'sysop' => array ( 'abusefilter' ),
