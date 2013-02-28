@@ -41,7 +41,27 @@ function wmfLabsOverrideSettings() {
  * their settings combined with the regular settings.
  */
 function wmfLabsSettings() {
+
+	# Collation sorting
+	# https://bugzilla.wikimedia.org/45525
+	# https://gerrit.wikimedia.org/r/#/c/49776/
+	# List out the collations supported by Mediawiki:
+	$specificCollations = array(
+		'af', 'ast', 'az', 'be', 'bg', 'br', 'bs', 'ca', 'co', 'cs', 'cy',
+		'da', 'de', 'dsb', 'el', 'en', 'eo', 'es', 'et', 'eu', 'fi', 'fo',
+		'fr', 'fur', 'fy', 'ga', 'gd', 'gl', 'hr', 'hsb', 'hu', 'is', 'it',
+		'kk', 'kl', 'ku', 'ky', 'la', 'lb', 'lt', 'lv', 'mk', 'mo', 'mt', 'nl',
+		'no', 'oc', 'pl', 'pt', 'rm', 'ro', 'ru', 'rup', 'sco', 'sk', 'sl',
+		'smn', 'sq', 'sr', 'sv', 'tk', 'tl', 'tr', 'tt', 'uk', 'uz', 'vi'
+	);
+	# Forge the $wgCategoryCollation parameter array:
+	foreach( $specificCollations as $lang ) {
+		$langCollations[$lang] = "uca-$lang";
+	}
+
 return array(
+	'wgCategoryCollation' => $langCollations,
+
 	'wgParserCacheType' => array(
 		'default' => CACHE_MEMCACHED,
 	),
