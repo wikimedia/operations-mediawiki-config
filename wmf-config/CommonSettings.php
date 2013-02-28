@@ -329,7 +329,6 @@ $wgRCMaxAge = 30 * 86400;
 
 $wgUseTeX = true;
 $wgTmpDirectory     = '/tmp';
-$wgLegalTitleChars = "+ %!\"$&'()*,\\-.\\/0-9:;=?@A-Z\\\\^_`a-z~\\x80-\\xFF";
 
 $wgSQLMode = null;
 
