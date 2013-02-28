@@ -10797,6 +10797,7 @@ $wgConf->settings = array(
 	'pawiktionary' => true,
 	'sawiki' => true,
 	'sawikibooks' => true,
+	'sawikiquote' => true, // Bug 45065
 	'sawiktionary' => true,
 	'sawikisource' => true, // Bug 34159
 	'tewiki' => true,
