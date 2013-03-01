@@ -140,8 +140,8 @@ case 'production':
 	$wmfUdp2logDest = '10.64.0.21:8420';
 	break;
 case 'labs':
-	# deployment-dbdump host the udp2log daemon
-	$wmfUdp2logDest = '10.4.0.56:8420';
+	# deployment-bastion hosts the udp2log daemon
+	$wmfUdp2logDest = '10.4.0.58:8420';
 	break;
 default:
 	$wmfUdp2logDest = '127.0.0.1:8420';
