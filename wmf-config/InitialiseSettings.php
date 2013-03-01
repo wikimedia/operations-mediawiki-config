@@ -10822,6 +10822,7 @@ $wgConf->settings = array(
 ),
 'wmgMFPhotoUploadEndpoint' => array(
 	'default' => '//commons.wikimedia.org/w/api.php',
+	'commonswiki' => '', # bug 45256
 	'test2wiki' => '',
 ),
 'wmgMFForceSecureLogin' => array(
