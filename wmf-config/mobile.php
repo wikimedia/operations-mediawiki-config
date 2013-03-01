@@ -148,7 +148,7 @@ if ( $wgMFLogEvents && $wmgUseEventLogging ) {
 	$wgResourceModules['mobile.watchlist.schema'] = array(
 		'class' => 'ResourceLoaderSchemaModule',
 		'schema' => 'MobileBetaWatchlist',
-		'revision' => 5235429,
+		'revision' => 5281061,
 		'targets' => 'mobile',
 		'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 	);
@@ -156,7 +156,7 @@ if ( $wgMFLogEvents && $wmgUseEventLogging ) {
 	$wgResourceModules['mobile.uploads.schema'] = array(
 		'class' => 'ResourceLoaderSchemaModule',
 		'schema' => 'MobileWebUploads',
-		'revision' => 5246000,
+		'revision' => 5281063,
 		'targets' => 'mobile',
 		'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 	);
