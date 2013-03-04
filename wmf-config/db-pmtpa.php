@@ -83,11 +83,11 @@ $wgLBFactoryConf = array(
 	's1' => array(
 		'db1017'    => 0,
 		'db63'    => 0, # pmtpa master
-		'db38'	  => 200,
 		'db32'	  => 0, # snapshot host
-		'db59'    => 400,
+		'db59'    => 200, # special contrib, watchlist, etc
 		'db60'    => 400,
-		'db36'	  => 100, # special contrib, watchlist, etc
+		'db69'    => 400,
+		'db71'    => 400,
 	),
 	's2' => array(
 		'db1034'    => 0,
@@ -157,16 +157,16 @@ $wgLBFactoryConf = array(
 'groupLoadsByDB' => array(
 	'enwiki' => array(
 		'watchlist' => array(
-			'db36' => 1,
+			'db59' => 1,
 		),
 		'recentchangeslinked' => array(
-			'db36' => 1,
+			'db59' => 1,
 		),
 		'contributions' => array(
-			'db36' => 1,
+			'db59' => 1,
 		),
 		'dump' => array(
-			'db36' => 1,
+			'db59' => 1,
 		),
 	),
 ),
@@ -209,6 +209,8 @@ $wgLBFactoryConf = array(
 	'db65'	   => '10.0.6.75', # do not remove or comment out
 	'db66'	   => '10.0.6.76', # do not remove or comment out
 	'db68'	   => '10.0.6.78', # do not remove or comment out
+	'db69'	   => '10.0.6.79', # do not remove or comment out
+	'db71'	   => '10.0.6.81', # do not remove or comment out
 	'db1001' => '10.64.0.5', #do not remove or comment out
 	'db1002' => '10.64.0.6', #do not remove or comment out
 	'db1003' => '10.64.0.7', #do not remove or comment out
