@@ -711,6 +711,7 @@ $wgConf->settings = array(
 	'ocwikibooks'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Wikibooks-logo-oc.png/135px-Wikibooks-logo-oc.png',
 	'ocwiktionary'		=> '$stdlogo',
 	'officewiki'		=> '//upload.wikimedia.org/wikipedia/meta/e/ed/WikimediaOFFICE-logo135px.png',
+	'ombudsmenwiki'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/135px-Wikimedia-logo.svg.png',
 	'omwiki'		=> '//upload.wikimedia.org/wikipedia/commons/3/37/Wikipedia-logo-v2-om.png', // bug 44974
 	'orwiki'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Wikipedia-logo-v2-or.svg/132px-Wikipedia-logo-v2-or.svg.png', # bug 27704
 	'orwiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/1/14/Wiktionary-logo-or.svg/135px-Wiktionary-logo-or.svg.png',
