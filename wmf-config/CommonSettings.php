@@ -1319,7 +1319,11 @@ if ( $wmgUseTorBlock ) {
 if ( $wmgUseRSSExtension ) {
 	include( "$IP/extensions/RSS/RSS.php" );
 	# $wgRSSProxy = 'url-downloader.wikimedia.org:8080';
-	$wgRSSAllowedFeeds = $wmgRSSAllowedFeeds;
+	if ( defined('EXTENSION_RSS_VERSION') && EXTENSION_RSS_VERSION > 2 ) {
+		$wgRSSUrlWhitelist = $wmgRSSAllowedFeeds;
+	} else {
+		$wgRSSAllowedFeeds = $wmgRSSAllowedFeeds;
+	}
 }
 
 wfProfileOut( "$fname-ext-include2" );
