@@ -111,6 +111,7 @@ $wgConf->settings = array(
 	'nycwikimedia' => 'en',
 	'nzwikimedia' => 'en',
 	'officewiki' => 'en',
+	'ombudsmen' => 'en',
 	'otrs_wikiwiki' => 'en',
 	'pa_uswikimedia' => 'en',
 	'qualitywiki' => 'en',
@@ -1109,6 +1110,7 @@ $wgConf->settings = array(
 	'nomcom'    => '//nomcom.wikimedia.org',
 	'nycwikimedia'  => '//nyc.wikimedia.org', // http://bugzilla.wikimedia.org/show_bug.cgi?id=29273
 	'officewiki' => '//office.wikimedia.org',
+	'ombudsmen' => '//ombudsmen.wikimedia.org',
 	'otrs_wikiwiki' => '//otrs-wiki.wikimedia.org',
 	'outreachwiki' => '//outreach.wikimedia.org',
 	'pa_uswikimedia' => '//pa.us.wikimedia.org',
@@ -1187,6 +1189,7 @@ $wgConf->settings = array(
 	'nomcom'    => 'http://nomcom.wikimedia.org',
 	'nycwikimedia'  => 'http://nyc.wikimedia.org', // http://bugzilla.wikimedia.org/show_bug.cgi?id=29273
 	'officewiki' => 'http://office.wikimedia.org',
+	'ombudsmenwiki' => 'http://ombudsmen.wikimedia.org',
 	'otrs_wikiwiki' => 'http://otrs-wiki.wikimedia.org',
 	'outreachwiki' => 'http://outreach.wikimedia.org',
 	'pa_uswikimedia' => 'http://pa.us.wikimedia.org',
@@ -1520,6 +1523,7 @@ $wgConf->settings = array(
 	'ocwikibooks'	=> 'Wikilibres',
 	'ocwiktionary'  => 'Wikiccionari',
 	'officewiki' => 'Wikimedia Office',
+	'ombudsmen'     => 'Ombudsmen Wiki',
 	'orwiki' => 'ଉଇକିପିଡ଼ିଆ',
 	'oswiki' 	    => 'Википеди',
 	'otrs_wikiwiki' => 'OTRS Wiki',
@@ -1963,6 +1967,7 @@ $wgConf->settings = array(
 	'ocwikibooks'   => 'Wikilibres',
 	'ocwiktionary'  => 'Wikiccionari',
 	'officewiki'    => 'Project',
+	'ombudsmen'     => 'Project',
 	'orwiki' => 'ଉଇକିପିଡ଼ିଆ',
 	'oswiki'	=> 'Википеди',
 	'otrs_wikiwiki' => 'Project',
@@ -3454,6 +3459,7 @@ $wgConf->settings = array(
 	'+nostalgiawiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+nowikimedia' => array( 0 => 1 ),
 	'+officewiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
+	'+ombudsmenwiki' => array( 0 => 1 ),
 	'+otrs_wikiwiki' => array( 0 => 1 ),
 	'+outreachwiki' => array( 0 => 1 ),
 	'+plwikimedia' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0, 14 => 1 ),
@@ -6494,6 +6500,7 @@ $wgConf->settings = array(
 	'internalwiki' => true, // #23231
 	'noboard_chapterswikimedia' => true,
 	'officewiki' => true, // #23231
+	'ombudsmenwiki' => true,
 	'otrs_wikiwiki' => true, // # 22319
 	'stewardwiki' => true,
 	'wikimaniateamwiki' => true, // # 22319
@@ -7157,6 +7164,29 @@ $wgConf->settings = array(
 	'+officewiki' => array(
 		'communityapps' => array( 'view-community-applications' => true ),
 	),
+	        '+ombudsmenwiki'  => array(
+                'autoconfirmed' => array(
+                        'autoconfirmed' => false,
+                        'reupload' => false,
+                        'upload' => false,
+                        'move' => false,
+                        'collectionsaveasuserpage' => false,
+                        'collectionsaveascommunitypage' => false,
+                        'skipcaptcha' => false,
+                ),
+                'confirmed' => array(
+                        'autoconfirmed' => false,
+                        'reupload' => false,
+                        'upload' => false,
+                        'move' => false,
+                        'collectionsaveasuserpage' => false,
+                        'collectionsaveascommunitypage' => false,
+                        'skipcaptcha' => false,
+                ),
+                'accountcreator' => array( 'noratelimit' => false, ),
+                'bureaucrat' => array( 'createaccount' => true, ),
+                'sysop' => array( 'createaccount' => false, ),
+        ),
 	'orwiki' => array(
 		'rollbacker' => array( 'rollback' => true ),
 		'sysop' => array( 'import' => true ),
@@ -7763,6 +7793,9 @@ $wgConf->settings = array(
 	'+officewiki' => array(
 		'bureaucrat' => array( 'import', 'transwiki', 'communityapps' ),
 	),
+	'+ombudsmenwiki' => array(
+		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', ),
+        ),
 	'+orwiki' => array(
 		'sysop' => array( 'rollbacker' ),
 	),
@@ -8163,6 +8196,9 @@ $wgConf->settings = array(
 	),
 	'+officewiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'import', 'transwiki', 'communityapps' ),
+	),
+	'+ombudsmenwiki' => array(
+		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt',  'bureaucrat', ),
 	),
 	'+orwiki' => array(
 		'sysop' => array( 'rollbacker' ),
@@ -9225,6 +9261,7 @@ $wgConf->settings = array(
 	'mediawikiwiki'			=> '//bits.wikimedia.org/favicon/mediawiki.ico',
 	'metawiki'				=> '//bits.wikimedia.org/favicon/community.ico',
 	'officewiki'			=> '//bits.wikimedia.org/favicon/office.ico',
+	'ombudsmenwiki'                 => '//bits.wikimedia.org/favicon/community.ico',
 	'otrs_wikiwiki'			=> '//bits.wikimedia.org/favicon/wmf.ico',
 	'outreachwiki'			=> '//bits.wikimedia.org/favicon/community.ico',
 	'searchcomwiki'			=> '//bits.wikimedia.org/favicon/wmf.ico',
@@ -9462,6 +9499,7 @@ $wgConf->settings = array(
 	# 'nomcomwiki'    =>  true,
 	'nsowiki' => true,
 	'nycwikimedia' => true,
+	'ombudsmenwiki' => true,
 	'pcdwiki' => true,
 	'pflwiki' => true,
 	'plwikivoyage' => true,
@@ -10648,6 +10686,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'arbcom_enwiki' => true,
 	'checkuserwiki' => true,
+	'ombudsmenwiki' => true,
 	'stewardwiki' => true,
 ),
 
