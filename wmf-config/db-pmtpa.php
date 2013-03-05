@@ -92,14 +92,14 @@ $wgLBFactoryConf = array(
 	's2' => array(
 		'db1034'    => 0,
 		'db54'	  => 0, # pmtpa master
-		#'db52'	  => 300,
+		'db52'	  => 300,
 		'db53'	  => 100, # snapshot host
 		#'db57'	  => 300, # enagaged in a mysqldump. PY: 20130305
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1019'    => 0,
 		'db34'	  => 0, # pmtpa master
-		#'db39'    => 400,
+		'db39'    => 400,
 		'db64'	  => 200, # snapshot host
 		#'db66'	  => 400, # enagaged in a mysqldump. PY: 20130305
 	),
@@ -107,13 +107,13 @@ $wgLBFactoryConf = array(
 		'db1038'   => 0,
 		'db31'	 => 0, # pmtpa master
 		'db33'	 => 100, # Snapshot host
-		#'db51'	 => 500,
+		'db51'	 => 500,
 		#'db65'	 => 500, # enagaged in a mysqldump. PY: 20130305
 	),
 	's5' => array(
 		'db1039'   => 0,
 		'db45'	 => 0, # pmtpa master
-		#'db35'	 => 500,
+		'db35'	 => 500,
 		'db44'	 => 500, # snapshot host
 		#'db55'	 => 1000, # enagaged in a mysqldump. PY: 20130305
 	),
