@@ -1,0 +1,8 @@
+Verified+1: jenkins-bot
+Code-Review+2: Matthias Mullie <mmullie@wikimedia.org>
+Verified+2: Matthias Mullie <mmullie@wikimedia.org>
+Submitted-by: Matthias Mullie <mmullie@wikimedia.org>
+Submitted-at: Tue, 05 Mar 2013 18:35:43 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/51341
+Project: operations/mediawiki-config
+Branch: refs/heads/master
