@@ -2203,7 +2203,7 @@ if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
 	$wmgVisualEditorParsoidHosts = array(
 		'pmtpa' => '208.80.152.152', // celsus.wikimedia.org
-		'eqiad' => '208.80.154.147', // cerium.wikimedia.org
+		'eqiad' => '10.2.2.29', // parsoidcache.svc.eqiad.wmnet
 	);
 	$wgVisualEditorParsoidURL = 'http://' . $wmgVisualEditorParsoidHosts[$wmfDatacenter] . ':6081';
 	$wgVisualEditorParsoidPrefix = $wmgVisualEditorParsoidPrefix;
