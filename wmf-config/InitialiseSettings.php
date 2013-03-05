@@ -10263,7 +10263,6 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'en_labswikimedia' => true,
-	'enwiki' => true,
 	'eswiki' => true,
 	'eswikinews' => true,
 	'hiwiki' => true,
@@ -10278,7 +10277,6 @@ $wgConf->settings = array(
 	'default' => array(),
 	'en_labswikimedia' => array( 'Article Feedback Pilot', 'Article Feedback', 'Article Feedback Additional Articles' ),
 	'testwiki' => array( 'Article Feedback Pilot', 'Article Feedback', 'Article Feedback Additional Articles' ),
-	'enwiki' => array( 'Article Feedback Pilot', 'Article Feedback', 'Article Feedback Additional Articles' ),
 	'hiwiki' => array( 'गुणवत्ता आकलन अतिरिक्त लेख', 'गुणवत्ता आकलन', 'आकलन', 'Article Feedback Pilot', 'Article Feedback', 'Article Feedback Additional Articles' ),
 	'huwiki' => array( 'ArticleFeedback teszt' ),
 	'metawiki' => array( 'Translation/Fundraising 2011/all' ),
@@ -10288,7 +10286,6 @@ $wgConf->settings = array(
 	'default' => array( 'Article Feedback Blacklist' ),
 	'en_labswikimedia' => array( 'Article Feedback Blacklist', 'Article Feedback 5', 'Article Feedback 5 Additional Articles' ),
 	'testwiki' => array( 'Article Feedback Blacklist', 'Article Feedback 5', 'Article Feedback 5 Additional Articles' ),
-	'enwiki' => array( 'Article Feedback Blacklist', 'Article Feedback 5', 'Article Feedback 5 Additional Articles' ),
 	'eswiki' => array( 'Wikipedia:Desambiguación', 'Wikipedia:Exclusiones de la evaluación de artículos' ),
 	'hiwiki' => array( 'No Feedback', 'आकलन रहित लेख' ),
 	'ptwiki' => array( '!Páginas que não podem ser avaliadas pelos leitores' ),
@@ -10300,7 +10297,6 @@ $wgConf->settings = array(
 	'default' => 0,
 	'testwiki' => 90,
 	'en_labswikimedia' => 100,
-	'enwiki' => 90,
 	'eswiki' => 100,
 	'eswikinews' => 100,
 	'hiwiki' => 100,
@@ -10312,7 +10308,6 @@ $wgConf->settings = array(
 'wmgArticleFeedbackDashboard' => array(
 	'default' => false,
 	'testwiki' => true,
-	'enwiki' => true,
 	'eswiki' => true,
 	'eswikinews' => true,
 	'hiwiki' => true,
@@ -10343,9 +10338,7 @@ $wgConf->settings = array(
 ),
 'wmgArticleFeedbackv5LotteryOdds' => array(
 	'default' => 0,
-	'testwiki' => array( NS_MAIN => 10, NS_HELP => 100 ),
 	'dewiki' => array( NS_MAIN => 0.1 ), // ~ 1500 articles out of 1.5 mio in total
-	'enwiki' => array( NS_MAIN => 10, NS_HELP => 100 ),
 ),
 'wmgArticleFeedbackv5Namespaces' => array(
 	'default' => array( NS_MAIN ),
