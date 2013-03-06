@@ -2677,6 +2677,14 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgExtraNamespaces[WB_NS_QUERY] = 'Query';
 	$wgExtraNamespaces[WB_NS_QUERY_TALK] = 'Query_talk';
 
+	$wgWBSettings['dataTypes'] = array(
+		'wikibase-item',
+		'commonsMedia',
+		'string',
+	);
+
+	$wgWBSettings['changesAsJson'] = false;
+
 	// Assigning the correct content models to the namespaces
 	$wgWBSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_ITEM] = NS_MAIN;
 	$wgWBSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_PROPERTY] = WB_NS_PROPERTY;
@@ -2685,15 +2693,16 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBSettings['withoutTermSearchKey'] = true;
 
-	$wgWBSettings['dataTypes'] = array(
-		'wikibase-item',
-		'commonsMedia'
+	$wgWBSettings['clientDbList'] = array_merge(
+		array( 'test2wiki' => 'test2wiki' ),
+		array_map( 'trim', file( getRealmSpecificFilename( "$IP/../wikipedia.dblist" ) ) )
 	);
-
-	$wgWBSettings['changesAsJson'] = false;
-
-	$wgWBSettings['useChangesTable'] = true;
-
+/*
+	$wgWBSettings['localClientDatabases'] = array_combine(
+		$wgWBSettings['clientDbList'],
+		$wgWBSettings['clientDbList']
+	);
+*/
 	$wgWBSettings['localClientDatabases'] = array(
 		'test2wiki' => 'test2wiki',
 		'enwiki' => 'enwiki',
@@ -2709,8 +2718,9 @@ if ( $wmgUseWikibaseClient ) {
 	require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
 	require_once( "$IP/extensions/Wikibase/client/WikibaseClient.php" );
 
-	$wgWBSettings['repoDatabase'] = 'wikidatawiki';
+	$wgWBSettings['changesAsJson'] = false;
 	$wgWBSettings['changesDatabase'] = 'wikidatawiki';
+	$wgWBSettings['repoDatabase'] = 'wikidatawiki';
 
 	// to be safe, keeping this here although $wgDBname is default setting
 	$wgWBSettings['siteGlobalID'] = $wgDBname;
@@ -2720,8 +2730,6 @@ if ( $wmgUseWikibaseClient ) {
 		'wikibase-item' => '',
 		'wikibase-property' => 'Property'
 	);
-
-	$wgWBSettings['changesAsJson'] = false;
 
 	foreach( $wmgWikibaseClientSettings as $setting => $value ) {
 		$wgWBSettings[$setting] = $value;
