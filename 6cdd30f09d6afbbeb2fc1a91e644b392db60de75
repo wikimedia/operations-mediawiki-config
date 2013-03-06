@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DoJbfDtM",
+        "filename": "wmf-config/lucene-common.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 9
+      },
+      "writtenOn": "2013-03-06T01:19:46Z",
+      "side": 1,
+      "message": "I think that\u0027s supposed to be lucene.php, not db",
+      "revId": "6cdd30f09d6afbbeb2fc1a91e644b392db60de75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
