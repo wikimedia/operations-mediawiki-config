@@ -2694,19 +2694,12 @@ if ( $wmgUseWikibaseRepo ) {
 		array( 'test2wiki' => 'test2wiki' ),
 		array_map( 'trim', file( getRealmSpecificFilename( "$IP/../wikipedia.dblist" ) ) )
 	);
-/*
+
 	$wgWBSettings['localClientDatabases'] = array_combine(
 		$wgWBSettings['clientDbList'],
 		$wgWBSettings['clientDbList']
 	);
-*/
-	$wgWBSettings['localClientDatabases'] = array(
-		'test2wiki' => 'test2wiki',
-		'enwiki' => 'enwiki',
-		'hewiki' => 'hewiki',
-		'huwiki' => 'huwiki',
-		'itwiki' => 'itwiki'
-	);
+
 }
 
 if ( $wmgUseWikibaseClient ) {
