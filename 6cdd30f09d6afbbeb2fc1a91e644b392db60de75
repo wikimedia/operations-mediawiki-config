@@ -16,6 +16,24 @@
       "revId": "6cdd30f09d6afbbeb2fc1a91e644b392db60de75",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoAQLxCY",
+        "filename": "wmf-config/lucene-common.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-03-06T07:01:08Z",
+      "side": 1,
+      "message": "well spotted.  I should not copy paste, I should not copy paste, I should not copy paste...",
+      "parentUuid": "DoJbfDtM",
+      "revId": "6cdd30f09d6afbbeb2fc1a91e644b392db60de75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
