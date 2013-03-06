@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "DoKojwVg",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 11854,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2013-03-06T18:49:37Z",
+      "side": 1,
+      "message": "any namespaces.  we\u0027re not technically restricting things now, but the community can figure out what\u0027s acceptable. (e.g. not user pages, according to policy)",
+      "parentUuid": "DoCpdcek",
+      "revId": "05c5782c984d2435d4723cc98d77e4cdbc19b687",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DoEpiNbI",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 4
@@ -47,6 +65,24 @@
       "writtenOn": "2013-03-06T18:39:37Z",
       "side": 1,
       "message": "Would be nice to always give the sort order explicitly. Just because it\u0027s not obvious what the default sort order would be.",
+      "revId": "05c5782c984d2435d4723cc98d77e4cdbc19b687",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoMoghU4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 11874,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2013-03-06T18:49:37Z",
+      "side": 1,
+      "message": "done",
+      "parentUuid": "DoEpiNbI",
       "revId": "05c5782c984d2435d4723cc98d77e4cdbc19b687",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
