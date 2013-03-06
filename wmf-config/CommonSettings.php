@@ -2694,6 +2694,12 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBSettings['useChangesTable'] = true;
 
+    $wgWBClientDbList = array_merge(
+		array( 'test2wiki' => 'test2wiki' ),
+		array_map( 'trim', file( getRealmSpecificFilename( "$IP/../wikipedia.dblist" ) ) )
+	);
+//    $wgWBSettings['localClientDatabases'] = array_combine( $wgWBClientDbList, $wgWBClientDbList );
+
 	$wgWBSettings['localClientDatabases'] = array(
 		'test2wiki' => 'test2wiki',
 		'enwiki' => 'enwiki',
