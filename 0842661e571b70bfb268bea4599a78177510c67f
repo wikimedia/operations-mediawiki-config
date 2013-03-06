@@ -34,6 +34,24 @@
       "revId": "0842661e571b70bfb268bea4599a78177510c67f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoD.QVUk",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2718,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2013-03-06T14:03:19Z",
+      "side": 1,
+      "message": "this kind of confusion is why i disliked changing the setting variable at all :(",
+      "parentUuid": "DoH.dfWE",
+      "revId": "0842661e571b70bfb268bea4599a78177510c67f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
