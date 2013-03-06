@@ -9315,17 +9315,17 @@ $wgConf->settings = array(
 
 'wmgAutopromoteOnceonEdit' => array(
 	'default' => array(),
-/*	'trwiki' => array(
+	'trwiki' => array(
 		'autoreview' => array(
 			'&', // AND
 			array( APCOND_AGE, 7*86400 ),
 			array( APCOND_EDITCOUNT, 30, 2*86400 ),
-			array( APCOND_FR_EDITSUMMARYCOUNT, 5 ),
-			array( APCOND_FR_UNIQUEPAGECOUNT, 5 ),
-			array( APCOND_FR_EDITSPACING, 7, 7 ),
-			array( APCOND_FR_CONTENTEDITCOUNT, 20, 2*86400 ),
-			array( APCOND_FR_NEVERBOCKED ),
-			array( APCOND_FR_MAXREVERTEDEDITRATIO, .03 ),
+			array( 70821 /*APCOND_FR_EDITSUMMARYCOUNT*/, 5 ),
+			array( 70823 /*APCOND_FR_UNIQUEPAGECOUNT*/, 5 ),
+			array( 70827 /*APCOND_FR_EDITSPACING*/, 7, 7 ),
+			array( 70824 /*APCOND_FR_CONTENTEDITCOUNT*/, 20, 2*86400 ),
+			array( 70822 /*APCOND_FR_NEVERBOCKED*/ ),
+			array( 70829 /*APCOND_FR_MAXREVERTEDEDITRATIO*/, .03 ),
 			array( '!', array( APCOND_INGROUPS, array( 'sysop' ) ) ),
 			array( '!', array( APCOND_INGROUPS, array( 'bureaucrat' ) ) ),
 			array( '!', array( APCOND_INGROUPS, array( 'bot' ) ) ),
@@ -9335,15 +9335,14 @@ $wgConf->settings = array(
 			'&', // AND
 			array( APCOND_AGE, 15*86400 ),
 			array( APCOND_EDITCOUNT, 150, 1*86400 ),
-			array( APCOND_FR_EDITSUMMARYCOUNT, 25 ),
-			array( APCOND_FR_UNIQUEPAGECOUNT, 10 ),
-			array( APCOND_FR_EDITSPACING, 7, 15 ),
-			array( APCOND_FR_CONTENTEDITCOUNT, 100, 1*86400 ),
-			array( APCOND_FR_NEVERBOCKED ),
-			array( APCOND_FR_MAXREVERTEDEDITRATIO, .03 )
+			array( 70821 /*APCOND_FR_EDITSUMMARYCOUNT*/, 25 ),
+			array( 70823 /*APCOND_FR_UNIQUEPAGECOUNT*/, 10 ),
+			array( 70827 /*APCOND_FR_EDITSPACING*/, 7, 15 ),
+			array( 70824 /*APCOND_FR_CONTENTEDITCOUNT*/, 100, 1*86400 ),
+			array( 70822 /*APCOND_FR_NEVERBOCKED*/ ),
+			array( 70829 /*APCOND_FR_MAXREVERTEDEDITRATIO*/, .03 )
 		),
 	),
-*/
 ),
 
 'wmgAutopromoteOnceonView' => array(
