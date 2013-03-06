@@ -514,7 +514,7 @@ $wgSVGConverters['rsvg-secure'] = '$path/rsvg-convert --no-external-files -w $wi
 
 $wgAllowUserJs = true;
 $wgAllowUserCss = true;
-$wgSecureLogin = true;
+$wgSecureLogin = false;
 
 #######################################################################
 # Squid Configuration
