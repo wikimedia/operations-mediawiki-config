@@ -10293,8 +10293,8 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 	'uawikimedia' => true,
 ),
-'wmgRSSAllowedFeeds' => array(
-	'default' => array(),
+'wmgRSSUrlWhitelist' => array(
+	'default' => array(),  // as of Ext:RSS v2, this means no URLs are allowed.
 	'uawikimedia' => array( 'http://wikimediaukraine.wordpress.com/feed/' ),
 ),
 
