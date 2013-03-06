@@ -2568,6 +2568,11 @@ if ( $wmgUseGettingStarted ) {
 	if ( !empty( $sessionRedis[$wmfDatacenter] ) ) {
 		$wgGettingStartedRedis = $sessionRedis[$wmfDatacenter][0];
 	}
+	$wgGettingStartedCategories = array(
+		'Copyedit' => 'All_articles_needing_copy_edit',
+		'Add links' => 'All_articles_with_too_few_wikilinks',
+		'Improve clarity' => 'All_Wikipedia_articles_needing_clarification'
+	);
 }
 
 if ( $wmgUseReplaceText ) {
