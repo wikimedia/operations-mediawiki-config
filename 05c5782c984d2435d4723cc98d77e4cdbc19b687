@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DoKpIoTA",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 2698,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2013-03-06T18:39:37Z",
+      "side": 1,
+      "message": "nice.",
+      "revId": "05c5782c984d2435d4723cc98d77e4cdbc19b687",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoCpdcek",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 11854,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2013-03-06T18:39:37Z",
+      "side": 1,
+      "message": "I suppose the namespace list now defaults to \"anything but talk pages\"?",
+      "revId": "05c5782c984d2435d4723cc98d77e4cdbc19b687",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoEpiNbI",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 11874,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2013-03-06T18:39:37Z",
+      "side": 1,
+      "message": "Would be nice to always give the sort order explicitly. Just because it\u0027s not obvious what the default sort order would be.",
+      "revId": "05c5782c984d2435d4723cc98d77e4cdbc19b687",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
