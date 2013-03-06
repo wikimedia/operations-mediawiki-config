@@ -11848,43 +11848,88 @@ $wgConf->settings = array(
 ),
 
 'wmgWikibaseClientSettings' => array(
-	'default' => array(
-		'namespaces' => array( NS_MAIN, NS_TALK, NS_USER, NS_USER_TALK, NS_PROJECT,
-			NS_PROJECT_TALK, NS_FILE, NS_FILE_TALK, NS_MEDIAWIKI, NS_MEDIAWIKI_TALK,
-			NS_TEMPLATE, NS_TEMPLATE_TALK, NS_HELP, NS_HELP_TALK, NS_CATEGORY, NS_CATEGORY_TALK
-		),
-		'sort' => 'code',
-	),
 	'test2wiki' => array(
-		'siteGlobalID' => 'enwiki'
+		'siteGlobalID' => 'enwiki',
 	),
-	'enwiki' => array(
-		'namespaces' => array( NS_MAIN, NS_TALK, NS_USER, NS_USER_TALK, NS_PROJECT,
-			NS_PROJECT_TALK, NS_FILE, NS_FILE_TALK, NS_MEDIAWIKI, NS_MEDIAWIKI_TALK,
-			NS_TEMPLATE, NS_TEMPLATE_TALK, NS_HELP, NS_HELP_TALK, NS_CATEGORY,
-			NS_CATEGORY_TALK, 100, 101, 108, 109 ),
+	'be_x_oldwiki' => array(
 		'sort' => 'alphabetic',
 	),
+	'enwiki' => array(
+		'sort' => 'alphabetic',
+	),
+	'etwiki' => array(
+		'sort' => 'alphabetic_revised',
+	),
+	'fiwiki' => array(
+		'sort' => 'alphabetic_revised',
+	),
+	'fiu_vrowiki' => array(
+		'sort' => 'alphabetic_revised',
+	),
+	// @todo https://gerrit.wikimedia.org/r/#/c/52417/ required for custom fy sort order
+	'fywiki' => array(
+		'sort' => 'code'
+	),
 	'hewiki' => array(
-		'namespaces' => array( NS_MAIN, NS_TALK, NS_USER, NS_USER_TALK, NS_PROJECT,
-			NS_PROJECT_TALK, NS_FILE, NS_FILE_TALK, NS_MEDIAWIKI, NS_MEDIAWIKI_TALK,
-			NS_TEMPLATE, NS_TEMPLATE_TALK, NS_HELP, NS_HELP_TALK, NS_CATEGORY,
-			NS_CATEGORY_TALK, 100, 101, 108, 109 ),
 		'sortPrepend' => array( 'en' ),
 	),
 	'huwiki' => array(
-		'namespaces' => array( NS_MAIN, NS_TALK, NS_USER, NS_USER_TALK, NS_PROJECT,
-			NS_PROJECT_TALK, NS_FILE, NS_FILE_TALK, NS_MEDIAWIKI, NS_MEDIAWIKI_TALK,
-			NS_TEMPLATE, NS_TEMPLATE_TALK, NS_HELP, NS_HELP_TALK, NS_CATEGORY,
-			NS_CATEGORY_TALK, 100, 101 ),
 		'sortPrepend' => array( 'en' ),
 	),
-	'itwiki' => array(
-		'namespaces' => array( NS_MAIN, NS_TALK, NS_USER, NS_USER_TALK, NS_PROJECT,
-			NS_PROJECT_TALK, NS_FILE, NS_FILE_TALK, NS_MEDIAWIKI, NS_MEDIAWIKI_TALK,
-			NS_TEMPLATE, NS_TEMPLATE_TALK, NS_HELP, NS_HELP_TALK, NS_CATEGORY,
-			NS_CATEGORY_TALK, 100, 101, 102, 103 ),
+	'lbwiki' => array(
+		'sort' => 'alphabetic',
 	),
+	'mkwiki' => array(
+		'sort' => 'alphabetic',
+	),
+	'mswiki' => array(
+		'sort' => 'alphabetic_revised',
+	),
+	'ndswiki' => array(
+		'sortPrepend' => array( 'nds-nl' ),
+	),
+	'nds_nlwiki' => array(
+		'sortPrepend' => array( 'nds' ),
+	),
+	'nnwiki' => array(
+		'sort' => 'alphabetic',
+		'sortPrepend' => array( 'no', 'sv', 'da' ),
+	),
+	'nowiki' => array(
+		'sort' => 'alphabetic',
+	),
+	'nvwiki' => array(
+		'sort' => 'alphabetic',
+		'sortPrepend' => array( 'en', 'es' ),
+	),
+	'pdcwiki' => array(
+		'sortPrepend' => array( 'de', 'en' ),
+	),
+	'plwiki' => array(
+		'sort' => 'alphabetic',
+	),
+	'simplewiki' => array(
+		'sort' => 'alphabetic',
+	),
+	'srwiki' => array(
+		'sort' => 'alphabetic_sr',
+	),
+	'svwiki' => array(
+		'sort' => 'alphabetic',
+	),
+	'tewiki' => array(
+		'sortPrepend' => array( 'en', 'hi', 'kn', 'ta', 'ml' ),
+	),
+	'urwiki' => array(
+		'sort' => 'alphabetic',
+		'sortPrepend' => array( 'ar', 'fa', 'en' ),
+	),
+	'viwiki' => array(
+		'sort' => 'alphabetic_revised',
+	),
+	'yiwiki' => array(
+		'sortPrepend' => array( 'en', 'he', 'de' ),
+	)
 ),
 
 'wmgUseTemplateSandbox' => array(
