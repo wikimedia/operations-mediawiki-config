@@ -19,17 +19,9 @@
 
 <h2><img src="./images/document.png" alt=""> Apache configuration</h2>
 <ul>
-<li><a href="./en2.conf">en2.conf</a></li>
-<li><a href="./foundation.conf">foundation.conf</a></li>
-<li><a href="./ganglia.conf">ganglia.conf</a></li>
-<li><a href="./main.conf">main.conf</a></li>
-<li><a href="./nagios.conf">nagios.conf</a></li>
-<li><a href="./nonexistent.conf">nonexistent.conf</a></li>
-<li><a href="./postrewrites.conf">postrewrites.conf</a></li>
-<li><a href="./redirects.conf">redirects.conf</a></li>
-<li><a href="./remnant.conf">remnant.conf</a></li>
-<li><a href="./wikimedia.conf">wikimedia.conf</a></li>
-<li><a href="./www.wikipedia.conf">www.wikipedia.conf</a></li>
+<?php
+        outputFiles( glob( __DIR__ . '/*.conf' ), false* );
+?>
 </ul>
 
 <h2><img src="./images/source_php.png" alt=""> MediaWiki configuration</h2>
@@ -41,18 +33,24 @@
 	);
 	$viewFilenames[] = './langlist';
 	outputFiles( $viewFilenames );
-	function outputFiles( $viewFilenames ) {
+	function outputFiles( $viewFilenames, $highlight = true ) {
 		$viewFilenames = array_map( 'basename', $viewFilenames );
 		natsort( $viewFilenames );
 		foreach ( $viewFilenames as $viewFilename ) {
 			$srcFilename = substr( $viewFilename, -4 ) === '.txt'
 				? substr( $viewFilename, 0, -4 )
 				: $viewFilename;
-			echo "\n"
-				. '<li><a href="./highlight.php?file=' . htmlspecialchars( urlencode( $srcFilename ) ) . '">'
-				. htmlspecialchars( $srcFilename )
-				. '</a> (<a href="./' . htmlspecialchars( urlencode( $viewFilename ) ) . '">raw text</a>)'
-				. '</li>';
+			echo "\n<li>";
+
+			if ( $highlight ) {
+				echo  '<a href="./highlight.php?file=' . htmlspecialchars( urlencode( $srcFilename ) ) . '">'
+					. htmlspecialchars( $srcFilename );
+				echo '</a> (<a href="./' . htmlspecialchars( urlencode( $viewFilename ) ) . '">raw text</a>)';
+			} else {
+				echo '</a> <a href="./' . htmlspecialchars( urlencode( $viewFilename ) ) . '">'
+					. htmlspecialchars( $srcFilename ) . '</a>';
+			}
+			echo '</li>';
 		}
 	}
 ?>
@@ -65,18 +63,17 @@
 ?>
 </ul>
 
+<h3><img src="./images/document.png" alt=""> CDB files</h3>
+<ul>
+<?php
+	outputFiles( glob( __DIR__ . '/*.cdb' ), false );
+?>
+</ul>
+
 <h2>Lucene search configuration</h2>
 <ul>
 <li><a href="./lsearch-global-2.1.conf">lsearch-global-2.1.conf</a></li>
 </ul>
-
-<!--
-<h2><img src="./images/txt.png" alt="">PHP configuration</h2>
-<ul>
-<li><a href="./php5-i386.ini">php5-i386.ini</a></li>
-<li><a href="./php5-x86_64.ini">php5-x86_64.ini</a></li>
-</ul>
--->
 
 <hr>
 </body>
