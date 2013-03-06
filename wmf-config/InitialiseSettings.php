@@ -11909,10 +11909,7 @@ $wgConf->settings = array(
 'wmgUseWikibaseClient' => array(
 	'default' => false,
 	'test2wiki' => true,
-	'enwiki' => true,
-	'hewiki' => true,
-	'huwiki' => true,
-	'itwiki' => true,
+	'wiki' => true,
 ),
 
 'wmgWikibaseClientSettings' => array(
