@@ -52,6 +52,24 @@
       "revId": "0842661e571b70bfb268bea4599a78177510c67f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DoEoLFdg",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2718,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2013-03-06T18:43:43Z",
+      "side": 1,
+      "message": "I agree, though having two distinct arrays for client and repo would be fine. Having a third array would be horrible, though.\n\nAnyway: currently, all three arrays are merged into one, it does not matter which one we use. So, either use WBSettings consistently, or WBRepoSettings and WBClientSettings consistently, but don\u0027t mix them.",
+      "parentUuid": "DoD.QVUk",
+      "revId": "0842661e571b70bfb268bea4599a78177510c67f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
