@@ -4543,12 +4543,10 @@ $wgConf->settings = array(
 	'itwikivoyage' => array(
 		100 => 'Portale',
 		101 => 'Discussioni_portale',
-		102 => 'Elezione',
-		103 => 'Discussioni_elezione',
+		//102 and 103 (Elezione) deleted per bug 45636
 		104 => 'Tematica',
 		105 => 'Discussioni_tematica',
-		106 => 'Notizie',
-		107 => 'Discussioni_notizie',
+		//106 and 107 (Notizie) deleted per bug 45636
 	),
 	'elwiki' => array(
 		100 => 'Πύλη',
