@@ -9315,7 +9315,7 @@ $wgConf->settings = array(
 
 'wmgAutopromoteOnceonEdit' => array(
 	'default' => array(),
-	'trwiki' => array(
+/*	'trwiki' => array(
 		'autoreview' => array(
 			'&', // AND
 			array( APCOND_AGE, 7*86400 ),
@@ -9343,6 +9343,7 @@ $wgConf->settings = array(
 			array( APCOND_FR_MAXREVERTEDEDITRATIO, .03 )
 		),
 	),
+*/
 ),
 
 'wmgAutopromoteOnceonView' => array(
