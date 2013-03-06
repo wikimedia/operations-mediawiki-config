@@ -1,19 +1,9 @@
 <?php
-# See: http://wikitech.leuksman.com/view/LuceneSearch
-# Contact Brion for advanced support.
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
-$wgDisableTextSearch = false;
-
-// Allow nagios configuration queries without requiring MediaWiki environment
-if ( defined( 'MEDIAWIKI' ) ) {
-	$wgSearchType = 'LuceneSearch';
-	require( $IP . '/extensions/MWSearch/MWSearch.php' );
-}
-
-$wgLuceneCacheExpiry = 12 * 3600; // 12 hours
-$wgLuceneSearchVersion = 2.1;
-$wgLuceneSearchTimeout = 10;
+# This file hold the MediaWiki lucene configuration which is specific
+# to the 'production' realm.
+# It should be loaded AFTER lucene-common.php
 
 # default host for mwsuggest backend
 $wgEnableLucenePrefixSearch = true;

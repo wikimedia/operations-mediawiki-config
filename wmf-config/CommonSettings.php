@@ -1211,18 +1211,11 @@ $wgDisableTextSearch   = true;
 $wgDisableSearchUpdate = true;
 
 # :SEARCH:
-switch( $wmfRealm ) {
-case 'production':
-	$wgUseLuceneSearch = true;
-	break;
-case 'labs':
-	$wgUseLuceneSearch = false;
-	break;
-}
-
+# Better make sure the global setting is enabled
+$wgUseLuceneSearch = true;
 if ( $wgUseLuceneSearch ) {
 	wfProfileIn( "$fname-lucene" );
-	include( "$wmfConfigDir/lucene.php" );
+	include( "$wmfConfigDir/lucene-common.php" );
 	wfProfileOut( "$fname-lucene" );
 }
 
