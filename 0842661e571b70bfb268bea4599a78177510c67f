@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DoP.3TfI",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2718,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2013-03-06T13:21:55Z",
+      "side": 1,
+      "message": "Please don\u0027t mix $wgWBSettings and $wgWBClientSettings. \n\nThis should not be necessary. The client should only use $wgWBClientSettings, the repo should only use $wgWBRepoSettings. $wgWBSettings should no longer be used at all (or we can using it for now, but then we should ONLY use $wgWBSettings, everywhere).\n\nIf that setup does not work, please report as a bug.",
+      "revId": "0842661e571b70bfb268bea4599a78177510c67f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
