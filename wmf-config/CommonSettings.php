@@ -2565,6 +2565,9 @@ if ( $wmgEnablePostEdit ) {
 
 if ( $wmgUseGettingStarted ) {
 	require_once( "$IP/extensions/GettingStarted/GettingStarted.php" );
+	if ( !empty( $sessionRedis[$wmfDatacenter] ) ) {
+		$wgGettingStartedRedis = $sessionRedis[$wmfDatacenter][0];
+	}
 }
 
 if ( $wmgUseReplaceText ) {
