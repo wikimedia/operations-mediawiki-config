@@ -20,7 +20,7 @@
 <h2><img src="./images/document.png" alt=""> Apache configuration</h2>
 <ul>
 <?php
-        outputFiles( glob( __DIR__ . '/*.conf' ), false* );
+        outputFiles( glob( __DIR__ . '/*.conf' ), false );
 ?>
 </ul>
 
