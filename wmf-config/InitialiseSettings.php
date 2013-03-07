@@ -10296,7 +10296,11 @@ $wgConf->settings = array(
 'wmgRSSUrlWhitelist' => array(
 	'default' => array(),  // as of Ext:RSS v2, this means no URLs are allowed.
 	'uawikimedia' => array( 'http://wikimediaukraine.wordpress.com/feed/' ),
-	'foundationwiki' => array( 'http://blog.wikimedia.org/feed/' ),
+	'foundationwiki' => array(
+		'http://blog.wikimedia.org/feed/',
+		'http://blog.wikimedia.org/c/our-wikis/wikimediacommons/feed/',
+		'http://blog.wikimedia.org/c/communications/picture-of-the-day/feed/',
+	),
 ),
 
 'wmgUseDoubleWiki' => array(
