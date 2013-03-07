@@ -2527,13 +2527,14 @@ if ( $wmgEnableGeoData ) {
 if ( $wmgUseEcho ) {
 	require_once( "$IP/extensions/Echo/Echo.php" );
 
-	$wgEchoDisableStandardEmail = true;
 	$wgEchoDefaultNotificationTypes = array(
 		'all' => array(
 			'web' => true,
 			'email' => true,
 		),
 	);
+	$wgEchoConfig['eventlogging']['Echo']['enabled'] = true;
+	$wgEchoConfig['eventlogging']['Echo']['revision'] = 5285750;
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
 }
