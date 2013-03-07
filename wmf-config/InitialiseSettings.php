@@ -10301,6 +10301,7 @@ $wgConf->settings = array(
 		'http://blog.wikimedia.org/c/our-wikis/wikimediacommons/feed/',
 		'http://blog.wikimedia.org/c/communications/picture-of-the-day/feed/',
 	),
+	'mediawikiwiki' => array( 'https://gerrit.wikimedia.org/r/gitweb?p=mediawiki/extensions/Translate.git&a=rss' ),
 ),
 
 'wmgUseDoubleWiki' => array(
