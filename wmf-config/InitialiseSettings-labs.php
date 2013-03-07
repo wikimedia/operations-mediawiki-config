@@ -206,8 +206,7 @@ return array(
 		'enwiki'	=> true,
 	),
 	'wmgMobileUrlTemplate' => array(
-		'default' => '',//'%h0.m.%h1.%h2',
-		'foundationwiki' => '',
+		'default' => '%h0.m.%h1.%h2.%h3.%h4',
 		'commonswiki' => '',
 		'mediawikiwiki' => '',//'m.%h1.%h2',
 	),
