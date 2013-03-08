@@ -25,10 +25,10 @@ if ( in_array( $wgDBname, array( 'enwiki' ) ) ) {
 	#$wgLuceneHost = '10.2.1.13'; # pmtpa
 } elseif ( in_array( $wgDBname, array( 'commonswiki', 'wikidatawiki', 'metawiki', 'enwiktionary' ) ) ) {
 	# Pool 5 LVS
-	#$wgLuceneHost = '10.2.2.16'; # eqiad - FUTURE
-	$wgLuceneHost = '10.2.1.16'; # pmtpa
+	$wgLuceneHost = '10.2.2.16'; # eqiad
+	#$wgLuceneHost = '10.2.1.16'; # pmtpa
 } else {
 	# Pool 4 LVS
-	#$wgLuceneHost = '10.2.2.14'; # eqiad
-	$wgLuceneHost = '10.2.1.14'; # pmtpa
+	$wgLuceneHost = '10.2.2.14'; # eqiad
+	#$wgLuceneHost = '10.2.1.14'; # pmtpa
 }
