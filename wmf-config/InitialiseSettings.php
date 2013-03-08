@@ -10567,6 +10567,7 @@ $wgConf->settings = array(
 	'plwiki' => 'uca-pl', // bug 42413
 	'ptwiki' => 'uca-default', // bug 35632
 	'ptwikibooks' => 'uca-default', // bug 43185
+	'svwiki' => 'uca-sv', // bug 45446
 	'ukwiki' => 'uca-uk', // bug 45444
 ),
 
