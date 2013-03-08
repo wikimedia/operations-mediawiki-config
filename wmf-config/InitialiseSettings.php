@@ -10565,8 +10565,8 @@ $wgConf->settings = array(
 	// Single-language wikis
 	'iswiktionary' => 'identity', // bug 30722
 	'plwiki' => 'uca-pl', // bug 42413
-	'ptwiki' => 'uca-default', // bug 35632
-	'ptwikibooks' => 'uca-default', // bug 43185
+	'ptwiki' => 'uca-pt', // bug 45911
+	'ptwikibooks' => 'uca-pt', // bug 45911
 	'svwiki' => 'uca-sv', // bug 45446
 	'ukwiki' => 'uca-uk', // bug 45444
 ),
