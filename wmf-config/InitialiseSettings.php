@@ -10264,7 +10264,6 @@ $wgConf->settings = array(
 
 'wmgVisualEditorNamespaces' => array(
 	'default' => array( NS_MAIN, NS_USER ),
-	'testwiki' => array(), // NS_VISUALEDITOR added in CommonSettings.php
 	'mediawikiwiki' => array(), // NS_VISUALEDITOR added in CommonSettings.php
 ),
 
@@ -10277,13 +10276,11 @@ $wgConf->settings = array(
 
 'wmgVisualEditorHide' => array(
 	'default' => false,
-	'testwiki' => true, // pre-2012-11-12 install
 	'mediawikiwiki' => true, // pre-2012-11-12 install
 ),
 
 'wmgVisualEditorDefault' => array(
 	'default' => false,
-	'testwiki' => true, // pre-2012-11-12 install
 	'mediawikiwiki' => true // pre-2012-11-12 install
 ),
 
