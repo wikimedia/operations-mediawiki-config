@@ -92,43 +92,43 @@ $wgLBFactoryConf = array(
 	's2' => array(
 		'db1034'    => 0,
 		'db54'	  => 0, # pmtpa master
-		#'db52'	  => 300, # slave stopped, also being used for dumping. PY: 20130308
-		'db53'	  => 100, # snapshot host
+		'db52'	  => 300, 
+		#'db53'	  => 100, # snapshot host # slave stopped, also being used for dumping. PY: 20130308
 		#'db57'	  => 300, # enagaged in a mysqldump. PY: 20130305
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1019'    => 0,
 		'db34'	  => 0, # pmtpa master
-		#'db39'    => 400, # slave stopped, also being used for dumping. PY: 20130308
-		'db64'	  => 200, # snapshot host
+		'db39'    => 400,
+		#'db64'	  => 200, # snapshot host # slave stopped, also being used for dumping. PY: 20130308
 		#'db66'	  => 400, # enagaged in a mysqldump. PY: 20130305
 	),
 	's4' => array(
 		'db1038'   => 0,
 		'db31'	 => 0, # pmtpa master
-		'db33'	 => 100, # Snapshot host
-		#'db51'	 => 500, # slave stopped, also being used for dumping. PY: 20130308
+		#'db33'	 => 100, # Snapshot host # slave stopped, also being used for dumping. PY: 20130308
+		'db51'	 => 500,
 		#'db65'	 => 500, # enagaged in a mysqldump. PY: 20130305
 	),
 	's5' => array(
 		'db1039'   => 0,
 		'db45'	 => 0, # pmtpa master
-		#'db35'	 => 500, # slave stopped, also being used for dumping. PY: 20130308
-		'db44'	 => 500, # snapshot host
+		'db35'	 => 500,
+		#'db44'	 => 500, # snapshot host # slave stopped, also being used for dumping. PY: 20130308
 		#'db55'	 => 1000, # enagaged in a mysqldump. PY: 20130305
 	),
 	's6' => array(
 		'db1006'   => 0,
 		'db47'	   => 0, # pmtpa master
-		#'db43'	   => 1000, # hw died 12/18/2011 # slave stopped, also being used for dumping. PY: 20130308
-		'db46'	   => 400, # snapshot host
+		'db43'	   => 1000, # hw died 12/18/2011
+		#'db46'	   => 400, # snapshot host # slave stopped, also being used for dumping. PY: 20130308
 		#'db50'	   => 1000, # enagaged in a mysqldump. PY: 20130305
 	),
 	's7' => array(
 		'db1041' => 0,
 		'db37'  => 0, # pmtpa master
-		'db56'  => 400, # snapshot host
-		#'db58'	=> 500, # slave stopped, also being used for dumping. PY: 20130308
+		#'db56'  => 400, # snapshot host # slave stopped, also being used for dumping. PY: 20130308
+		'db58'	=> 500,
 		#'db68'	=> 700, # enagaged in a mysqldump. PY: 20130305
 	),
 ),
