@@ -502,6 +502,7 @@ $wgConf->settings = array(
 	'fawikiquote'		=> '$stdlogo',
 	'fawikisource'		=> '//upload.wikimedia.org/wikipedia/commons/1/11/Wikisource_fa.png',
 	'fawiktionary'		=> '$stdlogo',
+	'fdcwiki'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/135px-Wikimedia-logo.svg.png',
 	'ffwiki'		=> '$stdlogo',
 	'fiwiki'		=> '//upload.wikimedia.org/wikipedia/commons/7/7f/Wikipedia-logo-v2-fi.png',
 	'fiwikibooks'		=> '$stdlogo',
