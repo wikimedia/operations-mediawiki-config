@@ -4209,6 +4209,10 @@ $wgConf->settings = array(
 		'torblock'  => "udp://$wmfUdp2logDest/torblock",
 	),
 
+	'+private' => array(
+		'slow-parse' => "udp://$wmfUdp2logDest/privatewiki-slow-parse",
+	),
+
 	// To measure the # of articles on enwiki during the <million => >million transition
 	'+testwiki' => array(
 		'articles' => "udp://$wmfUdp2logDest/articles/testwiki",
