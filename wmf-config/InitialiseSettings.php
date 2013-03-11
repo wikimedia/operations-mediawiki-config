@@ -4261,9 +4261,13 @@ $wgConf->settings = array(
 	// @}
 
 	# wikimania wikis @{
-	'wikimania' => array(
+	'wikimania2005wiki' => array(
 		100 => 'Internal',
 		101 => 'Internal_talk',
+	),
+	'wikimania' => array(
+		100 => 'Proceedings',
+		101 => 'Proceedings_talk',
 	),
 	# @}
 
