@@ -41,5 +41,3 @@ if ( $count > 10 ) {
 }
 
 echo "Request weight: $weight\n";
-
-?>

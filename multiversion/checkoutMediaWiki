@@ -101,41 +101,41 @@ EOT;
 	$link = "../wmf-config/StartProfiler.php";
 	createSymlink( $path, $link, "Created StartProfiler.php symlink." );
 
-	# Create bits.wikimedia.org symlinks...
+	# Create static- symlinks for bits.wikimedia.org...
 	$bitsStaticDir = "$commonHomeDir/docroot/bits/static-$dstVersionNum";
 	if ( !file_exists( $bitsStaticDir ) ) {
 		mkdir( $bitsStaticDir, 0775 );
 	}
 	$path = "$commonHomeDir/docroot/bits/static-$dstVersionNum/skins";
 	$link = "$commonLocalDir/php-$dstVersionNum/skins/";
-	createSymlink( $path, $link, "Created static-$dstVersionNum/skins symlink." );
+	createSymlink( $path, $link, "Created bits/static-$dstVersionNum/skins symlink." );
 
 	$path = "$commonHomeDir/docroot/bits/static-$dstVersionNum/extensions";
 	$link = "$commonLocalDir/php-$dstVersionNum/extensions";
-	createSymlink( $path, $link, "Created static-$dstVersionNum/extensions symlink." );
+	createSymlink( $path, $link, "Created bits/static-$dstVersionNum/extensions symlink." );
 
 	$path = "$commonHomeDir/docroot/bits/static-$dstVersionNum/resources";
 	$link = "$commonLocalDir/php-$dstVersionNum/resources";
-	createSymlink( $path, $link, "Created static-$dstVersionNum/resources symlink." );
+	createSymlink( $path, $link, "Created bits/static-$dstVersionNum/resources symlink." );
 
-	# Create static- symlinks in live-1.5...
-	$liveStaticDir = "$commonHomeDir/live-1.5/static-$dstVersionNum";
+	# Create static- symlinks for /w...
+	$liveStaticDir = "$commonHomeDir/w/static-$dstVersionNum";
 	if ( !file_exists( $liveStaticDir ) ) {
 		mkdir( $liveStaticDir, 0775 );
 	}
-	$path = "$commonHomeDir/live-1.5/static-$dstVersionNum/skins";
+	$path = "$commonHomeDir/w/static-$dstVersionNum/skins";
 	$link = "$commonLocalDir/php-$dstVersionNum/skins";
-	createSymlink( $path, $link, "Created live-1.5/static-$dstVersionNum/skins symlink." );
+	createSymlink( $path, $link, "Created /w/static-$dstVersionNum/skins symlink." );
 
-	$path = "$commonHomeDir/live-1.5/static-$dstVersionNum/extensions";
+	$path = "$commonHomeDir/w/static-$dstVersionNum/extensions";
 	$link = "$commonLocalDir/php-$dstVersionNum/extensions";
-	createSymlink( $path, $link, "Created live-1.5/static-$dstVersionNum/extensions symlink." );
+	createSymlink( $path, $link, "Created /w/static-$dstVersionNum/extensions symlink." );
 
-	$path = "$commonHomeDir/live-1.5/static-$dstVersionNum/resources";
+	$path = "$commonHomeDir/w/static-$dstVersionNum/resources";
 	$link = "$commonLocalDir/php-$dstVersionNum/resources";
-	createSymlink( $path, $link, "Created live-1.5/static-$dstVersionNum/resources symlink." );
+	createSymlink( $path, $link, "Created /w/static-$dstVersionNum/resources symlink." );
 
-	# Create libs symlinks...
+	# Create lib directory...
 	$libDir = "$destIP/lib";
 	if ( !file_exists( $libDir ) ) {
 		mkdir( $libDir, 0775 );

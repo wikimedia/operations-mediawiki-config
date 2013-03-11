@@ -42,14 +42,13 @@ function deleteMediaWiki() {
 		"$commonHomeDir/docroot/bits/static-$dstVersionNum/skins",
 		"$commonHomeDir/docroot/bits/static-$dstVersionNum/extensions",
 		"$commonHomeDir/docroot/bits/static-$dstVersionNum/resources",
-		"$commonHomeDir/docroot/secure/skins-$dstVersionNum",
-		"$commonHomeDir/live-1.5/static-$dstVersionNum/skins",
-		"$commonHomeDir/live-1.5/static-$dstVersionNum/extensions",
-		"$commonHomeDir/live-1.5/static-$dstVersionNum/resources",
+		"$commonHomeDir/w/static-$dstVersionNum/skins",
+		"$commonHomeDir/w/static-$dstVersionNum/extensions",
+		"$commonHomeDir/w/static-$dstVersionNum/resources",
 	);
 	$directories = array(
 		"$commonHomeDir/docroot/bits/static-$dstVersionNum",
-		"$commonHomeDir/live-1.5/static-$dstVersionNum",
+		"$commonHomeDir/w/static-$dstVersionNum",
 	);
 	foreach ( $symlinks as $path ) {
 		deleteSymlink( $path );
