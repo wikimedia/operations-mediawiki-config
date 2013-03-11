@@ -10254,6 +10254,7 @@ $wgConf->settings = array(
 	'enwiki' => true,
 	'test2wiki' => true,
 	'testwiki' => true,
+	'foundationwiki' => true,
 ),
 
 'wmgUseVisualEditor' => array(
