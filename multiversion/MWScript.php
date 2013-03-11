@@ -65,7 +65,7 @@ function getMWScriptWithArgs() {
 	# Maintenance.php will treat $argv[1] as the wiki if it doesn't start '-'
 	if ( !isset( $argv[1] ) || !preg_match( '/^([^-]|--wiki(=|$))/', $argv[1] ) ) {
 		if ( in_array( $relFile, $wikiless ) ) {
-			# Assumme aawiki as Maintenance.php does.
+			# Assume aawiki as Maintenance.php does.
 			$argv = array_merge( array( $argv[0], "--wiki=aawiki" ), array_slice( $argv, 1 ) );
 		}
 	}
