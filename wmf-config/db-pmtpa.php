@@ -287,9 +287,9 @@ $wgLBFactoryConf = array(
 	# ExtensionStore shard1 - initially for AFTv5
 	# TODO: pmtpa replica of the shard, currently only in eqiad
 	'extension1' => array(
-		'10.64.16.18' => 10, # db1029
-		'10.64.16.19' => 100, # db1030
-		'10.64.16.20' => 40, # db1031 snapshot host
+		'10.64.16.18' => 0, # db1029
+		'10.0.6.48' => 1, # db38
+		'10.0.6.46' => 1, # db36
 	),
 ),
 
