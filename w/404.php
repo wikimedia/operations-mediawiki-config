@@ -159,4 +159,3 @@ Foundation">Wikimedia Foundation</a></p>
 END;
 
 print ($base_404);
-?>

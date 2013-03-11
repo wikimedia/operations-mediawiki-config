@@ -1,7 +1,7 @@
 <?php
 define( "MEDIAWIKI", true );
 
-include "/apache/common/live-1.5/MWVersion.php";
+include "/apache/common/w/MWVersion.php";
 include getMediaWiki( "includes/WebStart.php" );
 
 $wgTitle = Title::newFromText( 'Mediawiki:robots.txt' );
@@ -34,4 +34,3 @@ if ( $wgArticle->getID() != 0 ) {
 fpassthru( $robots );
 
 echo "#\n#\n#----------------------------------------------------------#\n#\n#\n#\n" . $text;
-?>

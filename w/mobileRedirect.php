@@ -16,4 +16,3 @@ if ( !preg_match( "%^".preg_quote("http://".$_SERVER['SERVER_NAME']."/")."%", $r
 }
 
 header( 'Location: ' . $redir_to );
-

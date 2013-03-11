@@ -1,7 +1,7 @@
 <?php
 define( "MEDIAWIKI", true );
 
-require( "/apache/common/live-1.5/MWVersion.php" );
+require( "/apache/common/w/MWVersion.php" );
 require( getMediaWiki( "includes/WebStart.php" ) );
 
 function faviconShowError( $html ) {
@@ -48,4 +48,3 @@ function streamFavicon() {
 }
 
 streamFavicon();
-
