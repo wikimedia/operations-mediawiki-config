@@ -11,7 +11,7 @@ define( "MEDIAWIKI", true );
 
 #include_once("/apache/common/wmf-deployment/includes/WebStart.php");
 
-include "/apache/common/live-1.5/MWVersion.php";
+include "/apache/common/mw/MWVersion.php";
 include getMediaWiki("includes/WebStart.php");
 
 $allowed_portals = array(
@@ -58,4 +58,3 @@ $lastmod = gmdate( 'D, j M Y H:i:s', wfTimestamp(TS_UNIX, max( $wgArticle->getTo
 header( 'Cache-Control: s-maxage=3600, must-revalidate, max-age=0' );
 header( "Last-modified: $lastmod" );
 echo $text;
-
