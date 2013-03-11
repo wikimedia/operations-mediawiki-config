@@ -7020,8 +7020,14 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrol' => true ),
 	),
 	'itwikivoyage' => array(
-		'autopatrolled' => array( 'autopatrol' => true ), // Bug 43327
+		'autopatrolled' => array(
+			'autopatrol' => true, // Bug 43327
+			'upload' => false // Bug 43524
+		),
 		'sysop' => array( 'upload' => true ), // Bug 43524
+		'user' => array( 'upload' => false ), // Bug 43524
+		'confirmed' => array( 'upload' => false ), // Bug 43524
+		'autoconfirmed' => array( 'upload' => false ), // Bug 43524
 	),
 	'itwiktionary' => array(
 		'user' => array( 'upload' => false ),
