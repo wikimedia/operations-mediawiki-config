@@ -11739,6 +11739,7 @@ $wgConf->settings = array(
 'wmgUseVectorFooterCleanup' => array(
 	'default' => false,
 	'mlwiki' => true, // Bug 44634
+	'commonswiki' => true, // Bug 45946
 ),
 
 'wmgUseMicroDesign' => array(
