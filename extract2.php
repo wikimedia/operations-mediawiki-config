@@ -3,7 +3,7 @@ $lang = 'meta';
 putenv( "MW_LANG={$lang}" ); // notify MWMultiVersion
 define( 'MEDIAWIKI', true );
 
-include '/apache/common/live-1.5/MWVersion.php';
+include '/apache/common/w/MWVersion.php';
 include getMediaWiki( 'includes/WebStart.php' );
 
 $allowed_templates = array(

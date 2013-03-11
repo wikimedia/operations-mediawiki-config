@@ -22,7 +22,7 @@ docroot/
 images/
  Shared pictures for the unified login system.
 
-live-1.5/
+w/
  The "w/" directory in the docroot of any mediawiki-serving VirtualHost.
 
 tests/
