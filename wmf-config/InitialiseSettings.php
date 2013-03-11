@@ -11736,12 +11736,16 @@ $wgConf->settings = array(
 	'private' => false,
 ),
 
+'wmgUseVectorFooterCleanup' => array(
+	'default' => false,
+	'mlwiki' => true, // Bug 44634
+),
+
 'wmgUseMicroDesign' => array(
 	'default' => false,
 	'testwiki' => true,
 	'enwiki' => true,
 	'itwikivoyage' => true,
-	'mlwiki' => true, // Bug 44634
 ),
 
 'wmgEnablePostEdit' => array(

@@ -2556,7 +2556,7 @@ if ( $wmgUseSubpageSortkey ) {
 	$wgSubpageSortkeyByNamespace = $wmgSubpageSortkeyByNamespace;
 }
 
-if ( $wmgUseMicroDesign ) {
+if ( $wmgUseMicroDesign || $wmgUseVectorFooterCleanup ) {
 	$wgVectorFeatures['footercleanup']['global'] = true;
 }
 
