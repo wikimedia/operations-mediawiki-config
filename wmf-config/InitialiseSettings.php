@@ -11482,6 +11482,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'commonswiki' => true,
 	'incubatorwiki' => true,
+	'wikidatawiki' => true,
 ),
 
 'wmgUseTranslate' => array(
