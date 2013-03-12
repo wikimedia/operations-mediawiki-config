@@ -93,14 +93,11 @@ $wgConf->settings = array(
 	'collabwiki' => 'en',
 	'cowikimedia'   => 'es',
 	'crhwiki' => 'crh-latn',
-	'de_labswikimedia' => 'de',
 	'dkwikimedia' => 'da',
 	'donatewiki' => 'en',
-	'en_labswikimedia' => 'en',
 	'execwiki' => 'en',
 	'fdcwiki' => 'en',
 	'fiu_vrowiki' => 'vro', # to rename
-	'flaggedrevs_labswikimedia' => 'en',
 	'grantswiki' => 'en',
 	'ilwikimedia' => 'he',
 	'incubatorwiki' => 'en', # mixed
@@ -115,7 +112,6 @@ $wgConf->settings = array(
 	'otrs_wikiwiki' => 'en',
 	'pa_uswikimedia' => 'en',
 	'qualitywiki' => 'en',
-	'readerfeedback_labswikimedia' => 'en',
 	'roa_rupwiki' => 'rup', # to rename
 	'roa_rupwiktionary' => 'rup', # to rename
 	'rswikimedia' => 'sr',
@@ -452,7 +448,6 @@ $wgConf->settings = array(
 	'cywiktionary'		=> '$stdlogo',
 	'dawiki'		=> '//upload.wikimedia.org/wikipedia/commons/3/3e/Wikipedia-logo-v2-da.png',
 	'dawiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/8/82/Wiktionary-logo-da.png/135px-Wiktionary-logo-da.png', // bug 43240
-	'de_labswikimedia'		=> '//upload.wikimedia.org/wikipedia/meta/7/79/Wikimedia_Labs_logo.png',
 	'dewiki'		=> '//upload.wikimedia.org/wikipedia/commons/e/ec/Wikipedia-logo-v2-de.png',
 	'dewikibooks'		=> '//upload.wikimedia.org/wikibooks/de/b/bc/Wiki.png',
 	'dewikiquote'		=> '//upload.wikimedia.org/wikipedia/commons/1/1a/Wikiquote-logo-en.png',
@@ -471,7 +466,6 @@ $wgConf->settings = array(
 	'elwikiquote'		=> '$stdlogo',
 	'elwikisource'		=> '$stdlogo',
 	'elwiktionary'		=> '$stdlogo',
-	'en_labswikimedia'		=> '//upload.wikimedia.org/wikipedia/meta/7/79/Wikimedia_Labs_logo.png',
 	'enwiki'		=> '$stdlogo',
 	'enwikibooks'		=> '//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png',
 	'enwiktionary'		=> '$stdlogo',
@@ -510,7 +504,6 @@ $wgConf->settings = array(
 	'fiwikisource'		=> '$stdlogo',
 	'fiwiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Wiktionary-logo-fi.png/135px-Wiktionary-logo-fi.png', // bug 43240
 	'fiu_vrowiki'		=> '$stdlogo',
-	'flaggedrevs_labswikimedia'		=> '//upload.wikimedia.org/wikipedia/meta/7/79/Wikimedia_Labs_logo.png',
 	'fowiki'		=> '//upload.wikimedia.org/wikipedia/commons/7/77/Wikipedia-logo-v2-fo.png', // bug 40285
 	'fowiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Wiktionary-logo-fo.png/135px-Wiktionary-logo-fo.png', // bug 43240
 	'foundationwiki'		=> '//upload.wikimedia.org/wikipedia/foundation/9/9a/Wikimediafoundation-logo.png',
@@ -748,7 +741,6 @@ $wgConf->settings = array(
 	'qualitywiki'		=> '$stdlogo',
 	'quwiki'		=> '$stdlogo',
 	'quwiktionary'		=> '$stdlogo',
-	'readerfeedback_labswikimedia'		=> '//upload.wikimedia.org/wikipedia/meta/7/79/Wikimedia_Labs_logo.png',
 	'rmwiki'		=> '$stdlogo',
 	'rmywiki'		=> '$stdlogo',
 	'roa_rupwiki'		=> '//upload.wikimedia.org/wikipedia/commons/d/d9/Wikipedia-logo-v2-roa-rup.png', // bug 40285
@@ -1093,17 +1085,13 @@ $wgConf->settings = array(
 	'commonswiki'   => '//commons.wikimedia.org',
 	'default'       => '//$lang.wikipedia.org',
 	'donatewiki'       => '//donate.wikimedia.org',
-	'de_labswikimedia' => '//de.labs.wikimedia.org',
 	'elwikinews' => '//el.wikinews.org',
-	'en_labswikimedia' => '//en.labs.wikimedia.org',
 	'execwiki' => '//exec.wikimedia.org',
 	'fdcwiki' => '//fdc.wikimedia.org',
-	'flaggedrevs_labswikimedia'  => '//flaggedrevs.labs.wikimedia.org',
 	'foundationwiki' => '//wikimediafoundation.org',
 	'grantswiki'    => '//grants.wikimedia.org',
 	'incubatorwiki' => '//incubator.wikimedia.org',
 	'internalwiki'     => '//internal.wikimedia.org',
-	'liquidthreads_labswikimedia' => '//liquidthreads.labs.wikimedia.org',
 	'mediawikiwiki' => '//www.mediawiki.org',
 	'metawiki'      => '//meta.wikimedia.org',
 	'movementroleswiki'    => '//movementroles.wikimedia.org',
@@ -1118,7 +1106,6 @@ $wgConf->settings = array(
 	'pa_uswikimedia' => '//pa.us.wikimedia.org',
 	'qualitywiki' => '//quality.wikimedia.org',
 	'quotewiki'     => '//wikiquote.org',
-	'readerfeedback_labswikimedia' => '//readerfeedback.labs.wikimedia.org',
 	'searchcomwiki' => '//searchcom.wikimedia.org',
 	'sourceswiki'   => '//wikisource.org',
 	'spcomwiki' => '//spcom.wikimedia.org',
@@ -1171,18 +1158,14 @@ $wgConf->settings = array(
 	'collabwiki' => 'http://collab.wikimedia.org',
 	'commonswiki'   => 'http://commons.wikimedia.org',
 	'default'       => 'http://$lang.wikipedia.org',
-	'de_labswikimedia' => 'http://de.labs.wikimedia.org',
 	'donatewiki'   => 'http://donate.wikimedia.org',
 	'elwikinews' => 'http://el.wikinews.org',
-	'en_labswikimedia' => 'http://en.labs.wikimedia.org',
 	'execwiki' => 'http://exec.wikimedia.org',
 	'fdcwiki' => 'http://fdc.wikimedia.org',
-	'flaggedrevs_labswikimedia'  => 'http://flaggedrevs.labs.wikimedia.org',
 	'foundationwiki' => 'http://wikimediafoundation.org',
 	'grantswiki'    => 'http://grants.wikimedia.org',
 	'incubatorwiki' => 'http://incubator.wikimedia.org',
 	'internalwiki'     => 'http://internal.wikimedia.org',
-	'liquidthreads_labswikimedia' => 'http://liquidthreads.labs.wikimedia.org',
 	'mediawikiwiki' => 'http://www.mediawiki.org',
 	'metawiki'      => 'http://meta.wikimedia.org',
 	'movementroleswiki'    => 'http://movementroles.wikimedia.org',
@@ -1197,7 +1180,6 @@ $wgConf->settings = array(
 	'pa_uswikimedia' => 'http://pa.us.wikimedia.org',
 	'qualitywiki' => 'http://quality.wikimedia.org',
 	'quotewiki'     => 'http://wikiquote.org',
-	'readerfeedback_labswikimedia' => 'http://readerfeedback.labs.wikimedia.org',
 	'searchcomwiki' => 'http://searchcom.wikimedia.org',
 	'sourceswiki'   => 'http://wikisource.org',
 	'spcomwiki' => 'http://spcom.wikimedia.org',
@@ -1339,7 +1321,6 @@ $wgConf->settings = array(
 	'cywikisource'  => 'Wicitestun',
 	'cywiktionary'  => 'Wiciadur',
 	'dawikibooks'   => 'Wikibooks',
-	'de_labswikimedia' => 'Wikimedia Labs',
 	'dkwikimedia'   => 'Wikimedia Danmark',
 	'donatewiki'    => 'Donate',
 	'dsbwiki'       => 'Wikipedija',
@@ -1350,7 +1331,6 @@ $wgConf->settings = array(
 	'elwikisource'  => 'Βικιθήκη',
 	'elwikiversity' => 'Βικιεπιστήμιο',
 	'elwiktionary'	=> 'Βικιλεξικό',
-	'en_labswikimedia' => 'Wikimedia Labs',
 	'eowiki'	=> 'Vikipedio',
 	'eowikibooks'   => 'Vikilibroj',
 	'eowikinews'    => 'Vikinovaĵoj',
@@ -1783,7 +1763,6 @@ $wgConf->settings = array(
 	'cywikisource'  => 'Wicitestun',
 	'cywiktionary'  => 'Wiciadur',
 	'dawikibooks'   => 'Wikibooks',
-	'de_labswikimedia' => 'Wikibooks',
 	'dkwikimedia'   => 'Wikimedia',
 	'donatewiki'    => 'Donate',
 	'dsbwiki'       => 'Wikipedija',
@@ -1794,7 +1773,6 @@ $wgConf->settings = array(
 	'elwikisource'  => 'Βικιθήκη',
 	'elwikiversity' => 'Βικιεπιστήμιο',
 	'elwiktionary'  => 'Βικιλεξικό',
-	'en_labswikimedia' => 'Wikibooks',
 	'eowiki'	=> 'Vikipedio',
 	'eowikibooks'   => 'Vikilibroj',
 	'eowikinews'    => 'Vikinovaĵoj',
@@ -3533,10 +3511,6 @@ $wgConf->settings = array(
 	'+iswiktionary' => array( 0 => 1, 6 => 0, 8 => 0, 14 => 1 ),
 	'+ltwiktionary' => array( 6 => 0, 8 => 0, 14 => 1 ),
 	'+plwiktionary' => array( 6 => 0, 8 => 0, 14 => 1 ),
-
-	// Labs
-	'+en_labswikimedia' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+de_labswikimedia' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 
 	// Wikivoyage
 	'+dewikivoyage' => array( 0 => 1, 100 => 0, 104 => 0 ),
@@ -8421,7 +8395,6 @@ $wgConf->settings = array(
 	'elwikisource' => array( 'w', 'v' ),
 	'elwikiversity' => array( 'w', 'wikt', 'b', 'q', 's', 'betawikiversity', 'en', 'fr', 'de', 'es', 'it', 'w:fr', 'w:de', 'fi', 'commons', 'w:en' ),
 	'elwiktionary' => array( 'w', 'en', 'fr' ),
-	'en_labswikimedia' => array( 'wikipedia' ),
 	'enwiki' => array( 'meta', 'nost', 'de', 'es', 'fr', 'it', 'pl', 'outreachwiki', 'test2wiki' ),
 	'enwiktionary' => array(
 		'w', 'b', 's', 'q', 'v', 'n', 'commons', 'aa', 'ab', 'af', 'ak', 'als', 'am', 'an', 'ang', 'ar', 'as', 'ast', 'av', 'ay', 'az', 'ba', 'be', 'bg', 'bh', 'bi', 'bm', 'bn', 'bo', 'br', 'bs',
@@ -9615,12 +9588,10 @@ $wgConf->settings = array(
 	'cswikiversity' => true, # Bug 21077
 	'bnwiki' => true, # https://bugzilla.wikimedia.org/show_bug.cgi?id=20338
 	'dawiki' => true, # 22444
-	'de_labswikimedia' => true,
 	'dewiki' => true, # live test on german - 2009-01-26
 	'dewikiversity' => true, # Bug 37898
 	'dsbwiki' => true,
 	'elwiki' => true, # bug 22924
-	'en_labswikimedia' => true,
 	'enwiki' => true, # 2009-02-26 bv whee :D
 	'enwikiversity' => true,
 	'eowiki' => true, # 23434
@@ -10012,11 +9983,9 @@ $wgConf->settings = array(
 	// Install extensions/ReaderFeedback/ReaderFeedback.sql
 	// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	'default'			=> false,
-	#'en_labswikimedia'		=> true,	# disabled for AFTv5 testing per Erik --Roan
 	'enwikibooks'			=> true,
 	'enwikinews'			=> true,
 	'huwiki'			=> true,
-	'readerfeedback_labswikimedia'	=> true,
 	'ruwikinews'			=> true,
 	'strategywiki'			=> true,
 //	'testwiki'			=> true,
@@ -10041,11 +10010,6 @@ $wgConf->settings = array(
 		'impact'       => 1,
 		'feasibility'  => 1,
 		'desirability' => 1,
-	),
-	'readerfeedback_labswikimedia' => array(
-		'usefulness'   => 3,
-		'presentation' => 3,
-		'neutrality'   => 3,
 	),
 ),
 'wmgFeedbackSizeThreshhold' => array(
@@ -10115,7 +10079,6 @@ $wgConf->settings = array(
 	'enwiktionary' => true, // Bug 23417 -- ariel 2010-16-05
 	'fiwikimedia' => true, // Bug 37778
 	'huwiki' => true, // Bug 22909 -- Andrew 2010-09-06
-	'liquidthreads_labswikimedia' => true,
 	'mediawikiwiki' => true,
 	'officewiki' => true, // Erik requested, by mail.
 	'ptwikibooks' => true, // Bug 24143 -- Andrew 2010-08-16
@@ -10142,7 +10105,6 @@ $wgConf->settings = array(
 	# Note: Special:ClickTracking is disabled in CommonSettings.php
 	# Disabling due to CR r58099 -- TS 2010-06-03
 	'default' => false,
-	'en_labswikimedia' => true, // ArticleFeedbackv5 needs this
 	'dewiki' => true, // ArticleFeedbackv5 needs this
 	'enwiki' => true, // VectorSectionEditLinks needs this
 	'eswiki' => true, // ArticleFeedback needs this
@@ -10357,7 +10319,6 @@ $wgConf->settings = array(
 'wmgUseArticleFeedback' => array(
 	'default' => false,
 	'testwiki' => true,
-	'en_labswikimedia' => true,
 	'eswiki' => true,
 	'eswikinews' => true,
 	'hiwiki' => true,
@@ -10370,8 +10331,6 @@ $wgConf->settings = array(
 ),
 'wmgArticleFeedbackCategories' => array(
 	'default' => array(),
-	'en_labswikimedia' => array( 'Article Feedback Pilot', 'Article Feedback', 'Article Feedback Additional Articles' ),
-	'testwiki' => array( 'Article Feedback Pilot', 'Article Feedback', 'Article Feedback Additional Articles' ),
 	'hiwiki' => array( 'गुणवत्ता आकलन अतिरिक्त लेख', 'गुणवत्ता आकलन', 'आकलन', 'Article Feedback Pilot', 'Article Feedback', 'Article Feedback Additional Articles' ),
 	'huwiki' => array( 'ArticleFeedback teszt' ),
 	'metawiki' => array( 'Translation/Fundraising 2011/all' ),
@@ -10379,7 +10338,6 @@ $wgConf->settings = array(
 ),
 'wmgArticleFeedbackBlacklistCategories' => array(
 	'default' => array( 'Article Feedback Blacklist' ),
-	'en_labswikimedia' => array( 'Article Feedback Blacklist', 'Article Feedback 5', 'Article Feedback 5 Additional Articles' ),
 	'testwiki' => array( 'Article Feedback Blacklist', 'Article Feedback 5', 'Article Feedback 5 Additional Articles' ),
 	'eswiki' => array( 'Wikipedia:Desambiguación', 'Wikipedia:Exclusiones de la evaluación de artículos' ),
 	'hiwiki' => array( 'No Feedback', 'आकलन रहित लेख' ),
@@ -10391,7 +10349,6 @@ $wgConf->settings = array(
 'wmgArticleFeedbackLotteryOdds' => array(
 	'default' => 0,
 	'testwiki' => 90,
-	'en_labswikimedia' => 100,
 	'eswiki' => 100,
 	'eswikinews' => 100,
 	'hiwiki' => 100,
@@ -10426,7 +10383,6 @@ $wgConf->settings = array(
 ),
 'wmgUseArticleFeedbackv5' => array(
 	'default' => false,
-	// 'en_labswikimedia' => true, // Disabled due to out of date schema --Reedy
 	'dewiki' => true, // Bug 42693
 	'enwiki' => true,
 	'testwiki' => true,
@@ -10450,14 +10406,12 @@ $wgConf->settings = array(
 			'Wikipedia:Artikel-Feedback/Artikel des Tages oder Schon gewusst',
 			'Wikipedia:Artikel-Feedback/Zusätzliche Artikel',
 		),
-	'en_labswikimedia' => array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' ),
 	'enwiki' => array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' ),
 	'testwiki' => array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' ),
 ),
 'wmgArticleFeedbackv5BlacklistCategories' => array(
 	'default' => array(),
 	'dewiki' => array( 'Wikipedia:Artikel-Feedback_Ausschlussliste', 'Wikipedia:Artikel-Feedback/Ausschlussliste' ),
-	'en_labswikimedia' => array( 'Article_Feedback_Blacklist' ),
 	'enwiki' => array( 'Article_Feedback_Blacklist' ),
 	'testwiki' => array( 'Article_Feedback_Blacklist' ),
 ),
