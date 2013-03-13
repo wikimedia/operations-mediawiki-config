@@ -2045,6 +2045,7 @@ $wgConf->settings = array(
 	'tawiktionary'	=> 'விக்சனரி',
 	'tawikiquote'   => 'விக்கிமேற்கோள்',
 	'tewiki'	=> 'వికీపీడియా',
+	'tewikisource'  => 'వికీసోర్స్',
 	'tewiktionary'  => 'విక్షనరీ',
 	'tgwiki'	=> 'Википедиа',
 	'thwiki'	=> 'วิกิพีเดีย',
