@@ -1342,6 +1342,7 @@ $wgConf->settings = array(
 	'dkwikimedia'   => 'Wikimedia Danmark',
 	'donatewiki'    => 'Donate',
 	'dsbwiki'       => 'Wikipedija',
+	'dvwiktionary'	=> 'ވިކިރަދީފު',
 	'elwiki'	=> 'Βικιπαίδεια',
 	'elwikibooks'   => 'Βικιβιβλία',
 	'elwikinews'    => 'Βικινέα',
