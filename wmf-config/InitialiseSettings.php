@@ -11234,6 +11234,15 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'Usores %code%-N',
 	),
+	'minwiki' => array(
+		'0' => 'Pengguna %code%-0',
+		'1' => 'Pengguna %code%-1',
+		'2' => 'Pengguna %code%-2',
+		'3' => 'Pengguna %code%-3',
+		'4' => 'Pengguna %code%-4',
+		'5' => 'Pengguna %code%-5',
+		'N' => 'Pengguna %code%-M',
+	),
 	'nlwiki' => array(
 		'0' => false,
 		'1' => 'Wikipedia:Gebruiker %code%-1',
