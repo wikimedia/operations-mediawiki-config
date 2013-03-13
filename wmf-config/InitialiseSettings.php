@@ -11704,24 +11704,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseScribunto' => array(
-	'default' => false,
-	//'testwiki' => true,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
-	'enwiki' => true,
-	'frwiki' => true,
-	'huwiki' => true,
-	'enwikisource' => true,
-	'cswiktionary' => true,
-	'cswikisource' => true,
-	'cswikiquote' => true,
-	'cswikibooks' => true,
-	'cswikinews' => true,
-	'enwiktionary' => true,
-	'viwiktionary' => true,
-	'frwikisource' => true,
-	'itwikisource' => true,
-	'ptwikibooks' => true,
+	'default' => true,
 ),
 
 'wmgUseSubpageSortkey' => array(
