@@ -7336,10 +7336,6 @@ $wgConf->settings = array(
 		# bug 27875 (see comment 4)
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
 	),
-	// 'simplewikibooks' => array(
-		// 'flood' => array( 'bot' => true ),
-		// 'rollbacker' => array( 'rollback' => true, ),
-	// ),
 	'simplewiktionary' => array(
 		'rollbacker' => array( 'rollback' => true, ),
 		'autopatrolled' => array( 'patrol' => true, 'autopatrol' => true ),
@@ -8582,9 +8578,7 @@ $wgConf->settings = array(
 	'sewikimedia' => array( 'w:sv' ),
 	'simplewiki' => array( 'en', 'wikt', 'b', 'q' ),
 	'simplewiktionary' => array( 'en', 'w', 'b', 'q' ),
-	// 'simplewikibooks' => array( 'en', 'w', 'wikt', 'q'),
 	'simplewikiquote' => array( 'en', 'w', 'wikt', 'b' ),
-
 	'sourceswiki' => array(
 		'ang', 'ar', 'az', 'bg', 'bn', 'bs', 'ca', 'cs', 'cy',
 		'da', 'de', 'el', 'en', 'es', 'et', 'fa', 'fi', 'fo',
