@@ -889,7 +889,6 @@ $wgConf->settings = array(
 	'viwikibooks'		=> '$stdlogo', // Bug 37661
 	'viwikiquote'		=> '$stdlogo',
 	'viwikisource'		=> '$stdlogo',
-	'viwiktionary'		=> '$stdlogo',
 	'viwiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/7/74/Wiktionary-logo-vi.svg/135px-Wiktionary-logo-vi.svg.png', // bug 43240
 	'vlswiki'		=> '//upload.wikimedia.org/wikipedia/commons/2/25/Wikipedia-logo-v2-vls.png', // bug 40285
 	'vowiki'		=> '/images/wiki-$lang.png',
