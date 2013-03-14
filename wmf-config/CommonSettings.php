@@ -2654,6 +2654,14 @@ if ( $wmgUseEventLogging ) {
 	}
 }
 
+if ( $wmgUseEventLogging && $wmgUseNavigationTiming ) {
+	require_once( "$IP/extensions/NavigationTiming/NavigationTiming.php" );
+	// Careful! The LOWER the value, the MORE requests will be logged. A
+	// sampling factor of 1 means log every request. This should not be
+	// lowered without careful coordination with ops.
+	$wgNavigationTimingSamplingFactor = 10000;
+}
+
 if ( $wmgUseUniversalLanguageSelector ) {
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
 	$wgULSGeoService = false;

@@ -11866,6 +11866,11 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgUseNavigationTiming' => array(
+	'default' => false,
+	'test2wiki' => true,
+),
+
 'wmgRelatedSitesPrefixes' => array(
 	'default' => array(),
 	'wikivoyage' => array(
