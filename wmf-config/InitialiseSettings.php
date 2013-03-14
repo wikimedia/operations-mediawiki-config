@@ -8227,9 +8227,6 @@ $wgConf->settings = array(
 	'+outreachwiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'autopatrolled', 'import' ),
 	),
-	'+pa_uswikimedia' => array(
-		'bureaucrat' => array( 'sysop' ),
-	),
 	'+ptwiki' => array(
 		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface_editor' ), // Bug 39905
 		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed' ),
@@ -8560,7 +8557,6 @@ $wgConf->settings = array(
 	'orwiki' => array( 'en', 'commons' ),
 	'otrs_wikiwiki' => array( 'meta' ),
 	'outreachwiki'  => array( 'w:en', 'w:de', 'w:fr', 'w:pl', 'w:it', 'w:ja', 'w:es', 'w:nl', 'w:pt', 'w:ru', 'w:sv', 'commons', 'foundation', 'm', ),
-	'pa_uswikimedia' => array( 'meta', 'en' ),
 	'pflwiki' => array( 'de', 'fr', 'als', 'pdc', 'en' ),
 	'ptwikisource' => array( 'w', 'b' ),
 	'plwiki' => array( 's', 'b', 'q', 'n', 'wikt' ),
