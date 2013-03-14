@@ -11924,8 +11924,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseNavigationTiming' => array(
-	'default' => false,
-	'test2wiki' => true,
+	'default' => true,
 ),
 
 'wmgRelatedSitesPrefixes' => array(
