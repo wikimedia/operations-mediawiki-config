@@ -969,6 +969,11 @@ $wgConf->settings = array(
 ),
 # @} end of wgEnableUpload
 
+// Wikis which allow async uploads via the job queue if uploads are enabled
+'wgEnableAsyncUploads' => array(
+	'default' => true,
+),
+
 # wgUploadNavigationUrl @{
 'wgUploadNavigationUrl' => array(
 	'default' => false,
