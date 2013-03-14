@@ -1168,7 +1168,11 @@ $wgPasswordSender = 'wiki@wikimedia.org';
 # e-mailing password based on e-mail address (bug 34386)
 $wgPasswordResetRoutes['email'] = true;
 
+# Cluster-dependent files for file backend
 require( getRealmSpecificFilename( "$wmfConfigDir/filebackend.php" ) );
+
+# Cluster-dependent files for job queue and job queue aggregator
+require( getRealmSpecificFilename( "$wmfConfigDir/jobqueue.php" ) );
 
 if( $wgDBname != 'commonswiki' ) {
 	$wgDefaultUserOptions['watchcreations'] = 1;

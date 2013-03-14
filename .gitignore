@@ -35,3 +35,4 @@ fonts
 # Operating system stuff
 ## Mac OS X
 .DS_Store
+/nbproject/private/
