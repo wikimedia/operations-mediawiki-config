@@ -4,8 +4,7 @@ $wgJobQueueAggregator = array(
 	'class'       => 'JobQueueAggregatorRedis',
 	'redisServer' => '10.0.12.1', # mc1
 	'redisConfig' => array(
-		'connectTimeout' => 1,
-		'serializer'     => 'igbinary'
+		'connectTimeout' => 1
 	)
 );
 # vim: set sts=4 sw=4 et :
