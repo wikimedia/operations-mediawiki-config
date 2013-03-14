@@ -10903,7 +10903,7 @@ $wgConf->settings = array(
 	'enwiki' => array(
 		'site' => 'wikipedia',
 		'logo' => '//upload.wikimedia.org/wikipedia/commons/5/54/Mobile_W_beta_light.png',
-		'copyright' => '{wgExtensionAssetsPath}/MobileFrontend/stylesheets/common/images/logo-copyright-en.png'
+		'copyright' => '{wgExtensionAssetsPath}/MobileFrontend/images/logo-copyright-en.png'
 	),
 	'testwiki' => array(
 		'site' => 'wikipedia',
