@@ -88,7 +88,7 @@ $wgConf->settings = array(
 	'betawikiversity' => 'en',
 	'brwikimedia' => 'pt-br',
 	'chairwiki' => 'en',
-	'chapcomwiki' => 'en',
+	'affcomwiki' => 'en',
 	'checkuserwiki' => 'en',
 	'collabwiki' => 'en',
 	'cowikimedia'   => 'es',
@@ -423,7 +423,7 @@ $wgConf->settings = array(
 	'cebwiki'		=> '//upload.wikimedia.org/wikipedia/commons/5/56/Wikipedia-logo-v2-ceb.png', // bug 40285
 	'cewiki'		=> '$stdlogo',
 	'chairwiki'		=> '//upload.wikimedia.org/wikipedia/meta/7/7d/Wikimediaboard-logo135px.png',
-	'chapcomwiki'		=> '//upload.wikimedia.org/wikipedia/meta/1/1d/Wikimediachapcom-logo135px.png',
+	'affcomwiki'		=> '//upload.wikimedia.org/wikipedia/meta/1/1d/Wikimediachapcom-logo135px.png',
 	'checkuserwiki'		=> '//upload.wikimedia.org/wikipedia/commons/1/10/Wikimedia_CheckUser_wiki_logo.png', // Bug 28785
 	'chwiki'		=> '//upload.wikimedia.org/wikipedia/commons/b/bc/Wikipedia-logo-v2-ch.png', // bug 40285
 	'chrwiki'		=> '//upload.wikimedia.org/wikipedia/commons/9/98/Wikipedia-logo-chr.png', // Bug 37327
@@ -1085,7 +1085,7 @@ $wgConf->settings = array(
 	'boardwiki'    => '//board.wikimedia.org',
 	'brwikimedia' => '//br.wikimedia.org',
 	'chairwiki' => '//chair.wikimedia.org',
-	'chapcomwiki' => '//chapcom.wikimedia.org',
+	'affcomwiki' => '//affcom.wikimedia.org',
 	'checkuserwiki' => '//checkuser.wikimedia.org',
 	'collabwiki' => '//collab.wikimedia.org',
 	'commonswiki'   => '//commons.wikimedia.org',
@@ -1158,7 +1158,7 @@ $wgConf->settings = array(
 	'boardwiki'    => 'http://board.wikimedia.org',
 	'brwikimedia' => 'http://br.wikimedia.org',
 	'chairwiki' => 'http://chair.wikimedia.org',
-	'chapcomwiki' => 'http://chapcom.wikimedia.org',
+	'affcomwiki' => 'http://affcom.wikimedia.org',
 	'checkuserwiki' => 'http://checkuser.wikimedia.org',
 	'collabwiki' => 'http://collab.wikimedia.org',
 	'commonswiki'   => 'http://commons.wikimedia.org',
@@ -1304,7 +1304,7 @@ $wgConf->settings = array(
 	'ckbwiki'       => 'ویکیپیدیا',
 	'cewiki'		=> 'Википедийа',
 	'chairwiki'     => 'Wikimedia Board Chair',
-	'chapcomwiki'   => 'Chapcom', // ?
+	'affcomwiki'   => 'AffCom', // ?
 	'checkuserwiki'     => 'CheckUser Wiki',
 	'chywiki'       => 'Tsétsêhéstâhese Wikipedia',
 	'collabwiki'    => 'Collab',
@@ -1746,7 +1746,7 @@ $wgConf->settings = array(
 	'cawiktionary'  => 'Viccionari',
 	'cewiki'		=> 'Википедийа',
 	'chairwiki'     => 'Project',
-	'chapcomwiki'   => 'Chapcom', // ?
+	'affcomwiki'   => 'AffCom', // ?
 	'checkuserwiki' => 'Project', // Bug 28781
 	'ckbwiki'       => 'ویکیپیدیا',
 	'collabwiki'    => 'Project',
@@ -3429,7 +3429,7 @@ $wgConf->settings = array(
 	'+boardwiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+brwikimedia' => array( 0 => 1 ),
 	'+chairwiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+chapcomwiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
+	'+affcomwiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+checkuserwiki' => array( 0 => 1 ),
 	'+collabwiki' => array( 0 => 1 ),
 	'+commonswiki' => array( 6 => 0, 8 => 0 ),
@@ -6482,7 +6482,7 @@ $wgConf->settings = array(
 	'chairwiki' => true, // #23231
 	'checkuserwiki' => true,
 	'collabwiki' => true, // #23231
-	'chapcomwiki' => true, // # 22319
+	'affcomwiki' => true, // # 22319
 	'execwiki' => true, // # 22319
 	'fdcwiki' => true,
 	'internalwiki' => true, // #23231
@@ -9233,7 +9233,7 @@ $wgConf->settings = array(
 
 	# Other wikis
 	'advisorywiki'			=> '//bits.wikimedia.org/favicon/wmf.ico',
-	'chapcomwiki'			=> '//bits.wikimedia.org/favicon/chapcom.ico',
+	'affcomwiki'			=> '//bits.wikimedia.org/favicon/chapcom.ico',
 	'checkuserwiki'			=> '//bits.wikimedia.org/favicon/community.ico',
 	'commonswiki'			=> '//bits.wikimedia.org/favicon/commons.ico',
 	'donatewiki'			=> '//bits.wikimedia.org/favicon/wmf.ico',
