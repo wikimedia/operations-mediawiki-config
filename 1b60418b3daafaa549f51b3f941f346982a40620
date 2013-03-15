@@ -16,6 +16,23 @@
       "revId": "1b60418b3daafaa549f51b3f941f346982a40620",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DqJ2K0b8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1200,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2013-03-15T08:38:53Z",
+      "side": 1,
+      "message": "This makes it look a Wikipedia in wg-en language... (Good news is that at least it doesn\u0027t fight with the incubator redirects, it seems.) Perhaps wg-enwiki.wikimedia.org would be better: \u003cthingy\u003e-\u003cDBname\u003e.wikimedia.org seems a sustainable pattern.",
+      "revId": "1b60418b3daafaa549f51b3f941f346982a40620",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
