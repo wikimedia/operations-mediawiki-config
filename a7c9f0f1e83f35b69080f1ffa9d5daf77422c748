@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqOMMh0Q",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2042,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-03-15T23:49:06Z",
+      "side": 1,
+      "message": "Today is March 15, not March 5.",
+      "revId": "a7c9f0f1e83f35b69080f1ffa9d5daf77422c748",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
