@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DqN2f6f4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1179,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2013-03-15T08:36:13Z",
+      "side": 1,
+      "message": "It\u0027s not about chapters and there\u0027s noone else using this subdomain, so just \"noboard\" should do it, or perhaps board-no for analogy with pa-us reversed hierarchy.",
+      "revId": "1b60418b3daafaa549f51b3f941f346982a40620",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
