@@ -11290,6 +11290,15 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'User %code%-N',
 	),
+	'plwikisource' => array( // Bug 39225
+		'0' => false,
+		'1' => 'User %code%-1',
+		'2' => 'User %code%-2',
+		'3' => 'User %code%-3',
+		'4' => 'User %code%-4',
+		'5' => false,
+		'N' => 'User %code%-N',
+	),
 	'ptwiki' => array(
 		'0' => false,
 		'1' => 'Usuário %code%-1',
@@ -11473,6 +11482,7 @@ $wgConf->settings = array(
 	'oswiki' => 'User %code%',
 	'otrs_wikiwiki' => 'User %code%',
 	'plwiki' => 'User %code%',
+	'plwikisource' => 'User %code%', // Bug 39225
 	'ptwiki' => 'Usuários %code%',
 	'ruwiki' => 'User %code%',
 	'specieswiki' => 'User %code%',
