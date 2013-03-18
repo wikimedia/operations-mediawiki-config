@@ -2300,6 +2300,8 @@ if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_P
 }
 $wgVaryOnXFPForAPI = $wgVaryOnXFP = true;
 
+$wgCookieExpiration = 30 * 86400;
+
 if ( $wmgUseMath ) {
 	require_once( "$IP/extensions/Math/Math.php" );
 	$wgTexvc = "/usr/local/apache/uncommon/$wmfVersionNumber/bin/texvc";
