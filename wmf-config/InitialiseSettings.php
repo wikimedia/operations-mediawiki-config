@@ -10299,6 +10299,7 @@ $wgConf->settings = array(
 	// Multilingual wikis
 	'mediawikiwiki' => 'uca-default',
 	// Single-language wikis
+	'be_x_oldwiki' => 'uca-be-tarask', // bug 46005
 	'iswiktionary' => 'identity', // bug 30722
 	'huwiki' => 'uca-hu', // bug 45596
 	'plwiki' => 'uca-pl', // bug 42413
