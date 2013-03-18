@@ -10300,6 +10300,7 @@ $wgConf->settings = array(
 	'mediawikiwiki' => 'uca-default',
 	// Single-language wikis
 	'iswiktionary' => 'identity', // bug 30722
+	'huwiki' => 'uca-hu', // bug 45596
 	'plwiki' => 'uca-pl', // bug 42413
 	'plwikivoyage' => 'uca-pl', // bug 45968
 	'ptwiki' => 'uca-pt', // bug 45911
