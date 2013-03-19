@@ -11478,6 +11478,7 @@ $wgConf->settings = array(
 	'jawiki' => 'User %code%',
 	'lawiki' => 'Usores %code%',
 	'metawiki' => 'User %code%',
+	'minwiki' => 'Pengguna %code%',
 	'nowiki' => 'Bruker %code%',
 	'oswiki' => 'User %code%',
 	'otrs_wikiwiki' => 'User %code%',
