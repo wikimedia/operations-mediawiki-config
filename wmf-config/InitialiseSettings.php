@@ -10394,15 +10394,15 @@ $wgConf->settings = array(
 'wmgArticleFeedbackv5Namespaces' => array(
 	'default' => array( NS_MAIN ),
 
+	'dewiki' => array( NS_MAIN ),
 	/*
 	 * Temporarily disabling to update code & merge data. We could disable
 	 * AFTv5 entirely by setting wmgUseArticleFeedbackv5 to false, but we
 	 * still want AFTv5 to be loaded because we'll want to run a maintenance
 	 * script to merge the data.
 	 */
-	'dewiki' => array(), // array( NS_MAIN ),
 	'enwiki' => array(), // array( NS_MAIN, NS_HELP, NS_PROJECT ),
-	'testwiki' => array(), // array( NS_MAIN, NS_HELP, NS_PROJECT ),
+	'testwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
 ),
 'wmgArticleFeedbackv5Categories' => array(
 	'default' => array(),
