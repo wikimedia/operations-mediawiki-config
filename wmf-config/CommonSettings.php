@@ -2039,8 +2039,7 @@ if ( $wmgUseArticleFeedback ) {
 }
 
 if ( $wmgUseArticleFeedbackv5 ) {
-	## Breaking the site -- disabled for now - Ryan; Mar 5, 2013
-	#require_once( "$IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.php" );
+	require_once( "$IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.php" );
 
 	$wgArticleFeedbackv5Cluster = $wmgArticleFeedbackv5Cluster;
 	$wgArticleFeedbackv5Categories = $wmgArticleFeedbackv5Categories;
