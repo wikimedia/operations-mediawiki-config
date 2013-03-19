@@ -3467,11 +3467,11 @@ $wgConf->settings = array(
 	// @}
 
 	// Wikibooks @{
-	'+wikibooks' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
+	'+wikibooks' => array( 0 => 1, 6 => 0, 8 => 0 ),
 	'+cswikibooks' => array( 0 => 1, 6 => 0, 14 => 1 ),
 	'+enwikibooks' => array( 0 => 1, 6 => 0, 8 => 0, 14 => 1 ),
 	'+eswikibooks' => array( 0 => 1, 6 => 0, 8 => 0 ),
-	'+idwikibooks' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
+	'+idwikibooks' => array( 0 => 1, 6 => 0, 8 => 0 ),
 	'+itwikibooks' => array( 0 => 1, 6 => 0, 8 => 0 ),
 	'+plwikibooks' => array( 0 => 1, 6 => 0, 8 => 0, 14 => 1 ),
 	'+ptwikibooks' => array( 0 => 1, 6 => 0, 8 => 0, 14 => 1 ),
