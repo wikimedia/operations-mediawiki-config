@@ -93,8 +93,8 @@ $wgLBFactoryConf = array(
 		'db1034'    => 0,
 		'db54'	  => 0, # pmtpa master
 		'db52'	  => 300, 
-		#'db53'	  => 100, # snapshot host
-		#'db57'	  => 300, # innodb_file_per_table
+		'db53'	  => 100, # snapshot host
+		'db57'	  => 300, # innodb_file_per_table
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1019'    => 0,

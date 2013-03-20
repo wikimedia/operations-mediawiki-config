@@ -262,13 +262,13 @@ $wgLBFactoryConf = array(
 	# es2
 	'cluster24' => array(
 		'10.64.16.153' => 1, # es1005
-		#'10.64.16.154' => 3, # es1006
+		'10.64.16.154' => 3, # es1006
 		'10.64.32.17' => 1, # es1007 snapshot host
 	),
 	# es3
 	'cluster25' => array(
 		'10.64.32.18' => 1, # es1008
-		#'10.64.32.19' => 3, # es1009
+		'10.64.32.19' => 3, # es1009
 		'10.64.32.20' => 1, # es1010 snapshot host
 	),
 	# ExtensionStore shard1 - initially for AFTv5
