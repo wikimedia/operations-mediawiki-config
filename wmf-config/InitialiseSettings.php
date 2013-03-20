@@ -10380,7 +10380,7 @@ $wgConf->settings = array(
 'wmgUseArticleFeedbackv5' => array(
 	'default' => false,
 	'dewiki' => true, // Bug 42693
-	'enwiki' => true,
+	'enwiki' => false,
 	'testwiki' => true,
 ),
 'wmgArticleFeedbackv5Cluster' => array(
