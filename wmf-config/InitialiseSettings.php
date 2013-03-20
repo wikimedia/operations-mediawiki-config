@@ -11960,6 +11960,7 @@ $wgConf->settings = array(
 'wmgWikibaseClientSettings' => array(
 	'default' => array(
 		'sort' => 'code',
+		'allowDataTransclusion' => false,
 	),
 	'test2wiki' => array(
 		'siteGlobalID' => 'enwiki',
