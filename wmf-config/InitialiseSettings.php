@@ -11960,9 +11960,11 @@ $wgConf->settings = array(
 'wmgWikibaseClientSettings' => array(
 	'default' => array(
 		'sort' => 'code',
+		'allowDataTransclusion' => false,
 	),
 	'test2wiki' => array(
 		'siteGlobalID' => 'enwiki',
+		'allowDataTransclusion' => true,
 	),
 	'be_x_oldwiki' => array(
 		'sort' => 'alphabetic',
