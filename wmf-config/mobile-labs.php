@@ -8,3 +8,5 @@ $wmgMFRemotePostFeedbackPassword = '';
 
 // Reuse most of production settings
 require_once( __DIR__ . '/mobile.php' );
+
+$wgMFForceSecureLogin = false;
