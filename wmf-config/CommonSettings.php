@@ -2057,6 +2057,7 @@ if ( $wmgUseArticleFeedbackv5 ) {
 	$wgArticleFeedbackv5LotteryOdds = $wmgArticleFeedbackv5LotteryOdds;
 	$wgArticleFeedbackAutoArchiveEnabled = $wmgArticleFeedbackAutoArchiveEnabled;
 	$wgArticleFeedbackAutoArchiveTtl = $wmgArticleFeedbackAutoArchiveTtl;
+	$wgArticleFeedbackv5Watchlist = $wmgArticleFeedbackv5Watchlist;
 
 	// clear default permissions set in ArticleFeedbackv5.php
 	foreach ( $wgGroupPermissions as $group => $permissions ) {
