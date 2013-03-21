@@ -2480,9 +2480,6 @@ if ( $wmgUseWikimediaShopLink ) {
 
 if ( $wmgUseE3Experiments ) {
 	require_once( "$IP/extensions/E3Experiments/Experiments.php" );
-	// Per bug 44394, it appears that we are collectively unable to
-	// behave like adults.
-	$wgGrownUpBehavior = false;
 }
 
 if ( $wmgEnableGeoData ) {
