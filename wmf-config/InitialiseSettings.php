@@ -10383,17 +10383,21 @@ $wgConf->settings = array(
 	'enwiki' => true,
 	'testwiki' => true,
 ),
+/*
+ * AFTv5 data lives on its own dedicated database (ExternalLB).
+ * To connect to core MW db, this could be set to false.
+ */
 'wmgArticleFeedbackv5Cluster' => array(
 	'default' => 'extension1',
 ),
-'wmgArticleFeedbackv5LotteryOdds' => array(
-	'default' => 0,
-	'testwiki' => array( NS_MAIN => 10, NS_HELP => 100 ),
-	'dewiki' => array( NS_MAIN => 0.1 ), // ~ 1500 articles out of 1.5 mio in total
-),
+/*
+ * AFTv5 needs to be explicitly enabled per namespace. If a namespace is not
+ * listed here, the AFTv5 form will not show up on articles in that namespace,
+ * regardless of lottery odds and whitelist/blacklist categories (see below)
+ */
 'wmgArticleFeedbackv5Namespaces' => array(
 	'default' => array( NS_MAIN ),
-
+	'testwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
 	'dewiki' => array( NS_MAIN ),
 	/*
 	 * Temporarily disabling to update code & merge data. We could disable
@@ -10402,48 +10406,76 @@ $wgConf->settings = array(
 	 * script to merge the data.
 	 */
 	'enwiki' => array(), // array( NS_MAIN, NS_HELP, NS_PROJECT ),
-	'testwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
+	'frwiki' => array( NS_MAIN, NS_HELP ),
 ),
+/*
+ * The percentage of articles AFTv5 will be displayed on (based on the last 3 digits
+ * of the article id). This can either be an array of <namespace> => <percentage>
+ * tuples, or a simple integer for a fixed percentage over all enabled namespaces.
+ */
+'wmgArticleFeedbackv5LotteryOdds' => array(
+	'default' => 0,
+	'testwiki' => array( NS_MAIN => 10, NS_HELP => 100 ),
+	'dewiki' => array( NS_MAIN => 0.1 ), // ~ 1500 articles out of 1.5 mio in total
+	'frwiki' => array( NS_MAIN => 0, NS_HELP => 100 ),
+),
+/*
+ * Articles that include this category, will display AFTv5, regardless of lottery.
+ */
 'wmgArticleFeedbackv5Categories' => array(
 	'default' => array(),
-	'dewiki' => array(
-			'Wikipedia:Artikel-Feedback Grundstock',
-			'Wikipedia:Artikel-Feedback/Artikelgrundstock',
-			'Wikipedia:Artikel-Feedback/Artikel des Tages oder Schon gewusst',
-			'Wikipedia:Artikel-Feedback/Zusätzliche Artikel',
-		),
-	'enwiki' => array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' ),
 	'testwiki' => array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' ),
+	'dewiki' => array(
+		'Wikipedia:Artikel-Feedback Grundstock',
+		'Wikipedia:Artikel-Feedback/Artikelgrundstock',
+		'Wikipedia:Artikel-Feedback/Artikel des Tages oder Schon gewusst',
+		'Wikipedia:Artikel-Feedback/Zusätzliche Artikel',
+	),
+	'enwiki' => array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' ),
+	'frwiki' => array( 'Outil de retour des lecteurs' ),
 ),
+/*
+ * Articles that include this category, will NOT display AFTv5, regardless of lottery.
+ */
 'wmgArticleFeedbackv5BlacklistCategories' => array(
 	'default' => array(),
+	'testwiki' => array( 'Article_Feedback_Blacklist' ),
 	'dewiki' => array( 'Wikipedia:Artikel-Feedback_Ausschlussliste', 'Wikipedia:Artikel-Feedback/Ausschlussliste' ),
 	'enwiki' => array( 'Article_Feedback_Blacklist' ),
-	'testwiki' => array( 'Article_Feedback_Blacklist' ),
+	// @todo: frwiki
 ),
+/**
+ * Email address that oversight requests will mail to.
+ *
+ * @see http://meta.wikimedia.org/wiki/Oversight_policy/Requests_for_oversight
+ */
 'wmgArticleFeedbackv5OversightEmails' => array(
 	'default' => 'aft@wikimedia.org',
 	'dewiki' => 'oversight-de-wp@wikimedia.org',
 	'enwiki' => 'oversight-en-wp@wikipedia.org',
-	#'enwiki' => 'roan@wikimedia.org',
+	'frwiki' => 'privacy-wp-fr-at-wikimedia.org',
 ),
 'wmgArticleFeedbackv5OversightEmailHelp' => array(
 	'default' => 'http://en.wikipedia.org/wiki/Wikipedia:Article_Feedback_Tool/Version_5/Help/Feedback_page_Oversighters',
 	'dewiki' => 'http://de.wikipedia.org/wiki/Wikipedia:Artikel-Feedback/Umgang_mit_Feedback', # Could be changed once a separate page exists
+	// @todo: frwiki
 ),
 'wmgArticleFeedbackv5AutoHelp' => array(
 	'default' => '//en.wikipedia.org/wiki/Wikipedia:Article_Feedback_Tool/Version_5/Help',
 	'dewiki' => '//de.wikipedia.org/wiki/Wikipedia:Artikel-Feedback',
+	// @todo: frwiki
 ),
 'wmgArticleFeedbackv5LearnToEdit' => array(
 	'default' => '//en.wikipedia.org/wiki/Wikipedia:Tutorial',
 	'dewiki' => '//de.wikipedia.org/wiki/Wikipedia:Tutorial',
+	'frwiki' => '//fr.wikipedia.org/wiki/Aide:Article',
 ),
 'wmgArticleFeedbackv5AbuseFiltering' => array(
 	'default' => false,
 	'testwiki' => true,
 	'dewiki' => true,
 	'enwiki' => true,
+	'frwiki' => true,
 ),
 'wmgArticleFeedbackv5CTABuckets' => array(
 	'default' => array(
@@ -10462,9 +10494,6 @@ $wgConf->settings = array(
 		'version' => 1,
 		// Users may constantly be rebucketed, giving them new CTAs each time.
 		'expires' => 0,
-		// Track the event of users being bucketed - so we can be sure the odds
-		// worked out right. [LATER - depends on UDP logging being set up]
-		'tracked' => false,
 	),
 	'dewiki' => array(
 		'buckets' => array(
@@ -10476,15 +10505,8 @@ $wgConf->settings = array(
 			'5' => 0, // display "View feedback"
 			'6' => 0, // display "Visit Teahouse"
 		),
-		// This version number is added to all tracking event names, so that
-		// changes in the software don't corrupt the data being collected. Bump
-		// this when you want to start a new "experiment".
 		'version' => 1,
-		// Users may constantly be rebucketed, giving them new CTAs each time.
 		'expires' => 0,
-		// Track the event of users being bucketed - so we can be sure the odds
-		// worked out right. [LATER - depends on UDP logging being set up]
-		'tracked' => false,
 	),
 	'enwiki' => array(
 		'buckets' => array(
@@ -10496,17 +10518,26 @@ $wgConf->settings = array(
 			'5' => 0, // display "View feedback"
 			'6' => 1, // display "Visit Teahouse"
 		),
-		// This version number is added to all tracking event names, so that
-		// changes in the software don't corrupt the data being collected. Bump
-		// this when you want to start a new "experiment".
 		'version' => 7,
-		// Users may constantly be rebucketed, giving them new CTAs each time.
 		'expires' => 0,
-		// Track the event of users being bucketed - so we can be sure the odds
-		// worked out right. [LATER - depends on UDP logging being set up]
-		'tracked' => false,
+	),
+	'frwiki' => array(
+		'buckets' => array(
+			'0' => 0, // display nothing
+			'1' => 50, // display "Enticement to edit"
+			'2' => 0, // display "Learn more"
+			'3' => 0, // display "Take a survey"
+			'4' => 50, // display "Sign up or login"
+			'5' => 0, // display "View feedback"
+			'6' => 0, // display "Visit Teahouse"
+		),
+		'version' => 1,
+		'expires' => 0,
 	),
 ),
+/**
+ * @see http://www.mediawiki.org/wiki/Article_feedback/Version_5/Feature_Requirements#Access_and_permissions
+ */
 'wmgArticleFeedbackv5Permissions' => array(
 	'default' => array(
 		// every member (apart from blocked users) = reader
@@ -10537,19 +10568,56 @@ $wgConf->settings = array(
 		'aft-oversighter' => array( 'oversight' ),
 	),
 ),
+/*
+ * Enable/disable the "archive" filter & cronjob functionality.
+ * This should be manually set to true, to make sure the filter
+ * does not show up when the cronjob is not running.
+ */
 'wmgArticleFeedbackAutoArchiveEnabled' => array(
 	'default' => false,
-	'enwiki' => false,
-	'dewiki' => false,
 ),
+/*
+ * This is the TTL before an item is archived (if auto-archive is enabled);
+ * if there is a lot of feedback for a certain page, it makes sense to archive
+ * faster. For a fixed date, a simple integer can be passed instead of an
+ * array, to make it "amount of unreviewed feedback"-agnostic.
+ */
 'wmgArticleFeedbackAutoArchiveTtl' => array(
 	'default' => array(
-		0 => '+2 years', // < 9: 2 years
-		10 => '+1 month', // 10-19: 1 month
-		20 => '+1 week', // 20-29: 1 week
-		30 => '+3 days', // 30-39: 3 days
-		40 => '+2 days', // > 40: 2 days
-	)
+		0 => '+2 years', // < 9 unreviewed feedback
+		10 => '+1 month', // 10-19
+		20 => '+1 week', // 20-29
+		30 => '+3 days', // 30-39
+		40 => '+2 days', // > 40
+	),
+	'dewiki' => array(
+		0 => '+1 year', // < 9 unreviewed feedback
+		10 => '+6 months', // 10-19
+		20 => '+3 months', // 20-29
+		30 => '+2 months', // 30-39
+		40 => '+1 month', // > 40
+	),
+),
+/*
+ * Enable/disable AFTv5 watchlist (and the link to it from Special:Watchlist
+ * and central feedback page)
+ */
+'wmgArticleFeedbackv5Watchlist' => array(
+	'default' => false,
+	'dewiki' => true,
+	/*
+	 * Watchlist queries can be expensive (huge WHERE aft_page IN(...) clause)
+	 * for people who have a serious amount of watchlisted pages -- disable for now.
+	 */
+	'enwiki' => false,
+	'frwiki' => false,
+),
+/*
+ * Display a link to the page's Article Feedback list from the article page.
+ */
+'wmgArticleFeedbackv5ArticlePageLink' => array(
+	'default' => true,
+	'frwiki' => false,
 ),
 
 'wmgUsePoolCounter' => array(
