@@ -2057,6 +2057,8 @@ if ( $wmgUseArticleFeedbackv5 ) {
 	$wgArticleFeedbackv5LotteryOdds = $wmgArticleFeedbackv5LotteryOdds;
 	$wgArticleFeedbackAutoArchiveEnabled = $wmgArticleFeedbackAutoArchiveEnabled;
 	$wgArticleFeedbackAutoArchiveTtl = $wmgArticleFeedbackAutoArchiveTtl;
+	$wgArticleFeedbackv5Watchlist = $wmgArticleFeedbackv5Watchlist;
+	$wgArticleFeedbackv5ArticlePageLink = $wmgArticleFeedbackv5ArticlePageLink;
 
 	// clear default permissions set in ArticleFeedbackv5.php
 	foreach ( $wgGroupPermissions as $group => $permissions ) {
@@ -2081,7 +2083,7 @@ if ( $wmgUseArticleFeedbackv5 ) {
 		'aft-reader' => true,
 		'aft-member' => true,
 		'aft-editor' => true,
-		'aft-monitor' => false,
+		'aft-monitor' => true,
 		'aft-administrator' => false,
 		'aft-oversighter' => false,
 	);
