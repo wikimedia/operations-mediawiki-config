@@ -810,6 +810,7 @@ if ( $wmgUseCORS ) {
 		'wikisource.org',
 		'*.wikiquote.org',
 		'*.wikidata.org',
+		'wikidata.org',
 		'www.mediawiki.org',
 		'wikimediafoundation.org',
 		'advisory.wikimedia.org',
