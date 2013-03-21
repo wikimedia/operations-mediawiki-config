@@ -2525,6 +2525,10 @@ if ( $wmgUseEcho ) {
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
 }
 
+if ( $wmgUseThanks ) {
+	require_once( "$IP/extensions/Thanks/Thanks.php" );
+}
+
 if ( $wmgUseScribunto ) {
 	include( "$IP/extensions/CodeEditor/CodeEditor.php" );
 	// Don't enable core functionality until it has been reviewed and approved

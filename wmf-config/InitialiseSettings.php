@@ -11727,6 +11727,11 @@ $wgConf->settings = array(
 	'default' => 'Wikimedia Foundation, 149 New Montgomery St., 3rd Fl., San Francisco, CA 94105.',
 ),
 
+'wmgUseThanks' => array(
+	'default' => false,
+	'testwiki' => true,
+),
+
 'wmgUseScribunto' => array(
 	'default' => true,
 ),
