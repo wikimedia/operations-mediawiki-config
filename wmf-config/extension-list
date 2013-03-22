@@ -118,6 +118,7 @@ $IP/extensions/SubpageSortkey/SubpageSortkey.php
 $IP/extensions/SwiftCloudFiles/SwiftCloudFiles.php
 $IP/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php
 $IP/extensions/TemplateSandbox/TemplateSandbox.php
+$IP/extensions/Thanks/Thanks.php
 $IP/extensions/TimedMediaHandler/TimedMediaHandler.php
 $IP/extensions/timeline/Timeline.php
 $IP/extensions/TitleBlacklist/TitleBlacklist.php
