@@ -2479,11 +2479,7 @@ if ( $wmgUseWikimediaShopLink ) {
 }
 
 if ( $wmgUseE3Experiments ) {
-	if ( file_exists( "$IP/extensions/E3Experiments/E3Experiments.php" ) ) {
-		include_once( "$IP/extensions/E3Experiments/E3Experiments.php" );
-	} else {
-		include_once( "$IP/extensions/E3Experiments/Experiments.php" );
-	}
+	include_once( "$IP/extensions/E3Experiments/E3Experiments.php" );
 }
 
 if ( $wmgEnableGeoData ) {
