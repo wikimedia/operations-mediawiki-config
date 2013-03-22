@@ -4173,7 +4173,6 @@ $wgConf->settings = array(
 		'FileOperation' => "udp://$wmfUdp2logDest/filebackend-ops",
 		'SwiftBackend' => "udp://$wmfUdp2logDest/swift-backend", // -aaron 5/15/12
 		'updateTranstagOnNullRevisions' => "udp://$wmfUdp2logDest/updateTranstagOnNullRevisions",
-		'json-hack' => "udp://$wmfUdp2logDest/json-hack", // Max 2012-06-27
 		'redis' => "udp://$wmfUdp2logDest/redis", // -asher 2012/10/12
 		'memcached-serious' => "udp://$wmfUdp2logDest/memcached-serious", // -aaron 2012/10/24
 		'404' => "udp://$wmfUdp2logDest/four-oh-four",
