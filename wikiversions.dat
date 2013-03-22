@@ -166,7 +166,6 @@ dawiki php-1.21wmf11 *
 dawikiquote php-1.21wmf12 *
 dawikisource php-1.21wmf12 *
 dawiktionary php-1.21wmf12 *
-de_labswikimedia php-1.21wmf11 *
 dewikibooks php-1.21wmf12 *
 dewikinews php-1.21wmf12 *
 dewiki php-1.21wmf11 *
@@ -192,7 +191,6 @@ elwikisource php-1.21wmf12 *
 elwikiversity php-1.21wmf12 *
 elwiktionary php-1.21wmf12 *
 emlwiki php-1.21wmf11 *
-en_labswikimedia php-1.21wmf11 *
 enwikibooks php-1.21wmf12 *
 enwikinews php-1.21wmf12 *
 enwiki php-1.21wmf11 *
@@ -246,7 +244,6 @@ fiwikiversity php-1.21wmf12 *
 fiwiktionary php-1.21wmf12 *
 fjwiki php-1.21wmf11 *
 fjwiktionary php-1.21wmf12 *
-flaggedrevs_labswikimedia php-1.21wmf11 *
 foundationwiki php-1.21wmf12 *
 fowiki php-1.21wmf11 *
 fowikisource php-1.21wmf12 *
@@ -442,7 +439,6 @@ lbwiktionary php-1.21wmf12 *
 lezwiki php-1.21wmf11 *
 lgwiki php-1.21wmf11 *
 lijwiki php-1.21wmf11 *
-liquidthreads_labswikimedia php-1.21wmf11 *
 liwikibooks php-1.21wmf12 *
 liwiki php-1.21wmf11 *
 liwikiquote php-1.21wmf12 *
@@ -610,7 +606,6 @@ quwikibooks php-1.21wmf12 *
 quwiki php-1.21wmf11 *
 quwikiquote php-1.21wmf12 *
 quwiktionary php-1.21wmf12 *
-readerfeedback_labswikimedia php-1.21wmf11 *
 rmwikibooks php-1.21wmf12 *
 rmwiki php-1.21wmf11 *
 rmwiktionary php-1.21wmf12 *
