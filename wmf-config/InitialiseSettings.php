@@ -6687,6 +6687,7 @@ $wgConf->settings = array(
 	'cswikinews' => array(
 		'user'	  => array( 'upload' => false, ),
 		'autoconfirmed' => array( 'upload' => false, ),
+		'autopatrolled' => array( 'autopatrol' => true, ),
 	),
 	'cswikiquote' => array(
 		'user' => array( 'upload' => false, ),
@@ -7581,6 +7582,9 @@ $wgConf->settings = array(
 	'+cswiki' => array(
 		'bureaucrat' => array( 'autopatrolled' ),
 	),
+	'+cswikinews' => array(
+		'bureaucrat' => array( 'autopatrolled' ),
+	),
 	'+cswikiquote' => array(
 		'bureaucrat' => array( 'autopatrolled' ),
 	),
@@ -7979,6 +7983,9 @@ $wgConf->settings = array(
 		'steward' => array( 'OTRS-member' ),
 	),
 	'+cswiki' => array(
+		'bureaucrat' => array( 'autopatrolled' ),
+	),
+	'+cswikinews' => array(
 		'bureaucrat' => array( 'autopatrolled' ),
 	),
 	'+cswikiquote' => array(
