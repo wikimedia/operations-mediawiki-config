@@ -1396,9 +1396,6 @@ wfProfileIn( "$fname-misc5" );
 
 $wgBrowserBlackList[] = '/^Lynx/';
 
-// Vandal checks
-require( "$wmfConfigDir/checkers.php" );
-
 if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
 	// New HTTPS service on regular URLs
 	$wgInternalServer = $wgServer; // Keep this as HTTP for IRC notifications (bug 29925)
@@ -1424,26 +1421,9 @@ if ( $wmgEnableCaptcha ) {
 	$wgCaptchaClass = 'FancyCaptcha';
 	$wgCaptchaWhitelist = '#^(https?:)?//([.a-z0-9-]+\\.)?((wikimedia|wikipedia|wiktionary|wikiquote|wikibooks|wikisource|wikispecies|mediawiki|wikimediafoundation|wikinews|wikiversity|wikivoyage|wikidata)\.org|dnsstuff\.com|completewhois\.com|wikimedia\.de|toolserver\.org)(/|$)#i';
 	$wgCaptchaWhitelistIP = array( '91.198.174.0/24' ); # toolserver (bug 23982)
-	/**
-	 * Possibly a broken spambot, or a spambot being tested before a real run.
-	 * Hitting lots of wikis in late June 2006
-	 */
-	$wgCaptchaRegexes[] = '/\b\d{22,28}\b/';
-	/**
-	 * Somebody's been repeatedly hitting some user talk pages and other arts
-	 * with this; February 2007
-	 */
-	$wgCaptchaRegexes[] = '/\{\{indefblockeduser\}\}/';
-	// copyvio bot on be.wikipedia
-	if ( $lang == 'be' ) {
-		$wgCaptchaRegexes[] = '/\[\[Катэгорыя:Архітэктура\]\]/';
-	}
 	if ( $wgDBname == 'testwiki' ) {
 		$wgCaptchaTriggers['create'] = true;
 	}
-	// Mystery proxy bot
-	// http://en.wikipedia.org/w/index.php?title=Killamanjaro&diff=prev&oldid=168037317
-	$wgCaptchaRegexes[] = '/^[a-z0-9]{5,}$/m';
 
 	// 'XRumer' spambot
 	// adds non-real links
@@ -1451,10 +1431,6 @@ if ( $wmgEnableCaptcha ) {
 	// http://meta.wikimedia.org/wiki/User:Jorunn/tracks
 	// (added 2008-05-08 -- brion)
 	$wgCaptchaRegexes[] = '/<a +href/i';
-
-	// https://bugzilla.wikimedia.org/show_bug.cgi?id=14544
-	// 2008-07-05
-	$wgCaptchaRegexes[] = '/\b(?i:anontalk\.com)\b/';
 
 	// For emergencies
 	if ( $wmgEmergencyCaptcha ) {
