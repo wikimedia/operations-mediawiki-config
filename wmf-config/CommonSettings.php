@@ -970,13 +970,12 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgEnableTranscode = $wgEnableUploads;
 
 	$wgOggThumbLocation = false; // use ffmpeg for performance
+	// $wgOggThumbLocation = '/usr/bin/oggThumb';
 
 	//tmh1/2 have 12 cores and need lots of shared memory
 	//for avconv / ffmpeg2theora
 	$wgTranscodeBackgroundMemoryLimit = 4 * 1024 * 1024; // 4GB
 }
-
-$wgOggThumbLocation = '/usr/bin/oggThumb';
 
 include( $IP . '/extensions/AssertEdit/AssertEdit.php' );
 
