@@ -969,6 +969,8 @@ if ( $wmgUseTimedMediaHandler ) {
 	//enable transcoding on all wikis that allow uploads
 	$wgEnableTranscode = $wgEnableUploads;
 
+	$wgOggThumbLocation = false; // use ffmpeg for performance
+
 	//tmh1/2 have 12 cores and need lots of shared memory
 	//for avconv / ffmpeg2theora
 	$wgTranscodeBackgroundMemoryLimit = 4 * 1024 * 1024; // 4GB
