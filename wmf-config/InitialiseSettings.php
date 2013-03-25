@@ -11965,17 +11965,18 @@ $wgConf->settings = array(
 'wmgWikibaseClientSettings' => array(
 	'default' => array(
 		'sort' => 'code',
-		'allowDataTransclusion' => false,
 	),
 	'test2wiki' => array(
 		'siteGlobalID' => 'enwiki',
 		'allowDataTransclusion' => true,
+		'enableSiteLinkWidget' => true,
 	),
 	'be_x_oldwiki' => array(
 		'sort' => 'alphabetic',
 	),
 	'enwiki' => array(
 		'sort' => 'alphabetic',
+		'allowDataTransclusion' => false, // is the default, in CommonSettings, but for extra sanity here
 	),
 	'etwiki' => array(
 		'sort' => 'alphabetic_revised',
