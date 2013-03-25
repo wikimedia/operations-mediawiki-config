@@ -173,6 +173,12 @@ return array(
 	'-wmgArticleFeedbackv5LotteryOdds' => array(
 		'default' => 100,
 	),
+	'-wmgArticleFeedbackv5Namespaces' => array(
+		'default' => array( NS_MAIN ),
+		'dewiki' => array( NS_MAIN ),
+		'enwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
+		'testwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
+	),
 	# ClickTracking is a required dependency for AFTv5
 	'-wmgClickTracking' => array(
 		'default' => true,
