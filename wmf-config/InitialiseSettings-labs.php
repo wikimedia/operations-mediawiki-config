@@ -179,6 +179,10 @@ return array(
 		'enwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
 		'testwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
 	),
+	// On labs, there's no dedicated cluster for AFTv5's data; false will default to main MW db
+	'-wmgArticleFeedbackv5Cluster' => array(
+		'default' => false,
+	),
 	# ClickTracking is a required dependency for AFTv5
 	'-wmgClickTracking' => array(
 		'default' => true,
