@@ -2725,12 +2725,12 @@ if ( $wmgUseWikibaseClient ) {
 		'wikibase-property' => 'Property'
 	);
 
+	$wgWBSettings['allowDataTransclusion'] = false;
+	$wgWBSettings['enableSiteLinkWidget'] = false;
+
 	foreach( $wmgWikibaseClientSettings as $setting => $value ) {
 		$wgWBSettings[$setting] = $value;
 	}
-
-	$wgWBSettings['allowDataTransclusion'] = false;
-	$wgWBSettings['enableSiteLinkWidget'] = false;
 }
 
 if ( ( $wmgUseTranslate && $wmgUseTranslationMemory ) || $wmgEnableGeoData ) {
