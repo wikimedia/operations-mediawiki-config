@@ -4025,6 +4025,7 @@ $wgConf->settings = array(
 	'arwiki' => 50, // Bug 12123
 	'enwiki' => 10, // Bug 14191
 	'eswiki' => 50, // Bug 13261
+	'eswikivoyage' => 25, // bug 44285
 	'fawiki' => 10, // Bug 43630
 	'itwiktionary' => 10, // Bug 22274
 	'jawiki' => 10, // Bug 40270
@@ -6835,6 +6836,10 @@ $wgConf->settings = array(
 		'editprotected' => array( 'editprotected' => true ),
 		'flood' => array( 'bot' => true ),
 	),
+	'eswikivoyage' => array(
+		'rollbacker' => array( 'rollback' => true ),
+		'patroller' => array( 'patrol' => true ),
+	), // bug 44285
 	// http://bugzilla.wikimedia.org/show_bug.cgi?id=7152
 	'eswiktionary' => array(
 		'user' => array( 'upload' => false ),
@@ -7635,6 +7640,9 @@ $wgConf->settings = array(
 	'+eswikinews' => array(
 		'bureaucrat' => array( 'editprotected', 'flood', ),
 	),
+	'+eswikivoyage' => array(
+		'sysop' => array( 'rollbacker', 'patroller', ),
+	), // bug 44285
 	'+eswiktionary' => array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller', 'rollbacker' ),
 	),
@@ -8032,6 +8040,9 @@ $wgConf->settings = array(
 	'+eswikinews' => array(
 		'bureaucrat' => array( 'editprotected', 'flood', ),
 	),
+	'+eswikivoyage' => array(
+		'sysop' => array( 'rollbacker', 'patroller', ),
+	), // bug 44285
 	'+eswiktionary' => array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller', 'rollbacker' ),
 	),
