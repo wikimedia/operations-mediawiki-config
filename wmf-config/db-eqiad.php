@@ -81,13 +81,14 @@ $wgLBFactoryConf = array(
 'sectionLoads' => array(
 	's1' => array(
 		'db1017'    => 0, # 1.4TB
-		'db1001'    => 400, # 1.4TB sas
-		'db1042'    => 400, # 1.4TB sas
-		'db1049'    => 300, # 2.8TB sas 64GB future watchlist?
+		#'db1001'    => 400, # 1.4TB sas
+		'db1042'    => 100, # 1.4TB sas
+		'db1043'    => 100, # 1.4TB sas, special contrib, watchlist, etc 64GB
+		'db1049'    => 100, # 2.8TB sas 64GB future watchlist
 		'db1050'    => 100, # snapshot 2.8TB sas 64GB
 		'db1051'    => 400, # 2.8TB sas 96GB
-		#'db1052'    => 400, # 2.8TB sas 96GB
-		'db1043'    => 100, # 1.4TB sas, special contrib, watchlist, etc 64GB
+		'db1052'    => 400, # 2.8TB sas 96GB
+		#'db1056'    => 400, # 2.8TB sas 96GB future master
 	),
 	's2' => array(
 		'db1034'    => 0,
@@ -236,6 +237,7 @@ $wgLBFactoryConf = array(
 	'db1050' => '10.64.16.145', #do not remove or comment out
 	'db1051' => '10.64.32.21', #do not remove or comment out
 	'db1052' => '10.64.32.22', #do not remove or comment out
+	'db1056' => '10.64.32.26', #do not remove or comment out
 ),
 
 'externalLoads' => array(
