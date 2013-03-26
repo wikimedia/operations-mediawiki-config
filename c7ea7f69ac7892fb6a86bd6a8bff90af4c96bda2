@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dqsojmlg",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11009,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-03-26T21:18:56Z",
+      "side": 1,
+      "message": "Please disable it for Commons.",
+      "revId": "c7ea7f69ac7892fb6a86bd6a8bff90af4c96bda2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
