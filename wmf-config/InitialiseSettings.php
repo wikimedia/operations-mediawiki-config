@@ -11730,6 +11730,7 @@ $wgConf->settings = array(
 'wmgUseThanks' => array(
 	'default' => false,
 	'testwiki' => true,
+	'mediawikiwiki' => true,
 ),
 
 'wmgUseScribunto' => array(
