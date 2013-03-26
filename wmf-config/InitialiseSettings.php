@@ -10566,7 +10566,7 @@ $wgConf->settings = array(
 	'default' => 'aft@wikimedia.org',
 	'dewiki' => 'oversight-de-wp@wikimedia.org',
 	'enwiki' => 'oversight-en-wp@wikipedia.org',
-	'frwiki' => 'privacy-wp-fr-at-wikimedia.org',
+	'frwiki' => 'privacy-wp-fr@wikimedia.org',
 ),
 'wmgArticleFeedbackv5OversightEmailHelp' => array(
 	'default' => 'http://en.wikipedia.org/wiki/Wikipedia:Article_Feedback_Tool/Version_5/Help/Feedback_page_Oversighters',
@@ -10637,14 +10637,14 @@ $wgConf->settings = array(
 	'frwiki' => array(
 		'buckets' => array(
 			'0' => 0, // display nothing
-			'1' => 50, // display "Enticement to edit"
+			'1' => 0, // display "Enticement to edit"
 			'2' => 0, // display "Learn more"
 			'3' => 0, // display "Take a survey"
-			'4' => 50, // display "Sign up or login"
+			'4' => 100, // display "Sign up or login"
 			'5' => 0, // display "View feedback"
 			'6' => 0, // display "Visit Teahouse"
 		),
-		'version' => 1,
+		'version' => 2,
 		'expires' => 0,
 	),
 ),
@@ -10667,17 +10667,19 @@ $wgConf->settings = array(
 		'aft-oversighter' => array( 'oversight' ),
 	),
 	'dewiki' => array(
-		// every member (apart from blocked users) = reader
-		'aft-reader' => array( '*', 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
-		// registered member = member
-		'aft-member' => array( 'user', 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
-		// (auto-)confirmed user = editor
-		'aft-editor' => array( 'confirmed', 'autoconfirmed', 'rollbacker', 'reviewer', 'sysop', 'oversight' ),
-		// administrator = monitor; no rollbacker/reviewer should have these permissions (= hide) here!
+		'aft-reader' => array( '*', 'user', 'confirmed', 'autoconfirmed', 'reviewer', 'sysop', 'oversight' ),
+		'aft-member' => array( 'user', 'confirmed', 'autoconfirmed', 'reviewer', 'sysop', 'oversight' ),
+		'aft-editor' => array( 'confirmed', 'autoconfirmed', 'reviewer', 'sysop', 'oversight' ),
 		'aft-monitor' => array( 'sysop', 'oversight' ),
-		// administrator = administrator
 		'aft-administrator' => array( 'sysop', 'oversight' ),
-		// oversight = oversighter
+		'aft-oversighter' => array( 'oversight' ),
+	),
+	'dewiki' => array(
+		'aft-reader' => array( '*', 'user', 'confirmed', 'autoconfirmed', 'sysop', 'oversight' ),
+		'aft-member' => array( 'user', 'confirmed', 'autoconfirmed', 'sysop', 'oversight' ),
+		'aft-editor' => array( 'confirmed', 'autoconfirmed', 'sysop', 'oversight' ),
+		'aft-monitor' => array( 'sysop', 'oversight' ),
+		'aft-administrator' => array( 'sysop', 'oversight' ),
 		'aft-oversighter' => array( 'oversight' ),
 	),
 ),
