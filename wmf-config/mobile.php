@@ -165,3 +165,6 @@ if ( $wgMFLogEvents && $wmgUseEventLogging ) {
 
 // Force HTTPS for login/account creation
 $wgMFForceSecureLogin = $wmgMFForceSecureLogin;
+
+// Point to Common's Special:LoginHandshake page
+$wgMFLoginHandshakeUrl = $wmgMFLoginHandshakeUrl;
