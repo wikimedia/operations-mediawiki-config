@@ -1286,6 +1286,9 @@ if ( $wgDBname == 'enwiki' ) {
 	$wgHiddenPrefs[] = 'minordefault';
 }
 
+// bug 33186: turn off incomplete feature action=imagerotate
+$wgAPIModules['imagerotate'] = 'ApiDisabled';
+
 
 wfProfileOut( "$fname-misc3" );
 wfProfileIn( "$fname-ext-include2" );
