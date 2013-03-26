@@ -11005,6 +11005,9 @@ $wgConf->settings = array(
 'wmgMFPhotoUploadAppendToDesc' => array(
 	'default' => '{{Uploaded from Mobile|platform=Web|version=}}',
 ),
+'wmgMFLoginHandshakeUrl' => array(
+	'default' => '//commons.wikimedia.org/wiki/Special:LoginHandshake?useformat=mobile'
+),
 
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
