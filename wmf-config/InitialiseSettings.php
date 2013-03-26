@@ -10381,6 +10381,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'dewiki' => true, // Bug 42693
 	'enwiki' => true,
+	'frwiki' => true,
 	'testwiki' => true,
 ),
 /*
