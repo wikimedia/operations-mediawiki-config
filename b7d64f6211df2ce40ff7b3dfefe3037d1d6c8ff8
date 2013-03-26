@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dqocf27M",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 10456,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-03-26T19:49:02Z",
+      "side": 1,
+      "message": "Is this meant to be an invalid e-mail address?",
+      "revId": "b7d64f6211df2ce40ff7b3dfefe3037d1d6c8ff8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
