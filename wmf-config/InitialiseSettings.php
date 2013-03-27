@@ -1840,6 +1840,7 @@ $wgConf->settings = array(
 	'hewikinews'    => 'ויקיחדשות',
 	'hewikiquote'   => 'ויקיציטוט',
 	'hewikisource'  => "ויקיטקסט",
+	'hewikivoyage'  => 'ויקימסע',
 	'hewiktionary'  => "ויקימילון",
 	'hiwiki'	=> 'विकिपीडिया',
 	'hiwiktionary'  => 'विक्षनरी',
@@ -2057,6 +2058,7 @@ $wgConf->settings = array(
 	'ukwikibooks'	=> 'Вікіпідручник',
 	'ukwikinews'    => 'ВікіНовини',
 	'ukwikiquote'   => 'Вікіцитати',
+	'ukwikivoyage'  => 'Вікімандри',
 	'ukwiktionary'  => 'Вікісловник',
 	'urwiki'	=> 'منصوبہ',
         'urwikibooks'   => 'وکی_کتب',
@@ -5994,6 +5996,14 @@ $wgConf->settings = array(
 	),
 	// @} end of wikiversity
 
+	// Wikivoyage @{
+	// TODO: Move other wikivoyage from above into here
+	'hewikivoyage' => array(
+		108 => 'ספר', // Book
+		109 => 'שיחת_ספר', // Book talk
+	),
+	// @} end of wikivoyage
+
 ),
 # @} end of wgExtraNamespaces
 
@@ -9611,6 +9621,7 @@ $wgConf->settings = array(
 	'glwiki' => true,
 	'hewiki' => true,
 	'hewiktionary' => true,
+	'hewikivoyage' => true,
 	'hiwiki' => true,
 	'hrwiki' => true, # Bug 19013
 	'hsbwiki' => true,
@@ -10315,6 +10326,7 @@ $wgConf->settings = array(
 	'ptwikibooks' => 'uca-pt', // bug 45911
 	'svwiki' => 'uca-sv', // bug 45446
 	'ukwiki' => 'uca-uk', // bug 45444
+	'ukwikivoyage' => 'uca-uk',
 ),
 
 'wmgVectorSectionEditLinks' => array(
@@ -11968,6 +11980,12 @@ $wgConf->settings = array(
 'wmgUseUserMerge' => array(
 	'default' => false,
 	'wikivoyage' => true,
+	'eswikivoyage' => false,
+	'hewikivoyage' => false,
+	'plwikivoyage' => false,
+	'ptwikivoyaye' => false,
+	'rowikivoyage' => false,
+	'ukwikivoyage' => false,
 ),
 
 'wmgUseEventLogging' => array(
