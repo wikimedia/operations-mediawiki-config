@@ -7380,6 +7380,9 @@ $wgConf->settings = array(
 		),
 	),
 	'trwiki' => array(
+		'*' => array(
+			'createpage' => false, // Bug 45066
+		),
 		'autoreview' => array(
 			'autopatrol' => true, // Bug 38690
 		),
