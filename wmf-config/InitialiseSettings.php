@@ -4033,6 +4033,7 @@ $wgConf->settings = array(
 	'ptwiki' => 10, // Bug 27954
 	'ruwiki' => 15, // Bug 41831
 	'simplewiki' => 10,
+	'wikidatawiki' => 50, // Bug 46461
 	'zhwiki' => 50, // Bug 14624
 	'zh_yuewiki' => 10, // Bug 30538
 ),
