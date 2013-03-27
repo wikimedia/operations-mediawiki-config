@@ -12039,6 +12039,8 @@ $wgConf->settings = array(
 	'wikidataclient' => true,
 ),
 
+//it, he, hu,  ru, tr, uk, uz, hr, bs, sr, sh
+
 'wmgWikibaseClientSettings' => array(
 	'default' => array(
 		'sort' => 'code',
@@ -12050,6 +12052,9 @@ $wgConf->settings = array(
 	),
 	'be_x_oldwiki' => array(
 		'sort' => 'alphabetic',
+	),
+	'bswiki' => array(
+		'allowDataTransclusion' => true,
 	),
 	'enwiki' => array(
 		'sort' => 'alphabetic',
@@ -12070,9 +12075,17 @@ $wgConf->settings = array(
 	),
 	'hewiki' => array(
 		'sortPrepend' => array( 'en' ),
+		'allowDataTransclusion' => true,
+	),
+	'hrwiki' => array(
+		'allowDataTransclusion' => true,
 	),
 	'huwiki' => array(
 		'sortPrepend' => array( 'en' ),
+		'allowDataTransclusion' => true,
+	),
+	'itwiki' => array(
+		'allowDataTransclusion' => true,
 	),
 	'lbwiki' => array(
 		'sort' => 'alphabetic',
@@ -12106,11 +12119,18 @@ $wgConf->settings = array(
 	'plwiki' => array(
 		'sort' => 'alphabetic',
 	),
+	'ruwiki' => array(
+		'allowDataTransclusion' => true,
+	),
+	'shwiki' => array(
+		'allowDataTransclusion' => true,
+	),
 	'simplewiki' => array(
 		'sort' => 'alphabetic',
 	),
 	'srwiki' => array(
 		'sort' => 'alphabetic_sr',
+		'allowDataTransclusion' => true,
 	),
 	'svwiki' => array(
 		'sort' => 'alphabetic',
@@ -12118,9 +12138,18 @@ $wgConf->settings = array(
 	'tewiki' => array(
 		'sortPrepend' => array( 'en', 'hi', 'kn', 'ta', 'ml' ),
 	),
+	'trwiki' => array(
+		'allowDataTransclusion' => true,
+	),
+	'ukwiki' => array(
+		'allowDataTransclusion' => true,
+	),
 	'urwiki' => array(
 		'sort' => 'alphabetic',
 		'sortPrepend' => array( 'ar', 'fa', 'en' ),
+	),
+	'uzwiki' => array(
+		'allowDataTransclusion' => true,
 	),
 	'viwiki' => array(
 		'sort' => 'alphabetic_revised',
