@@ -11009,7 +11009,6 @@ $wgConf->settings = array(
 ),
 'wmgMFLoginHandshakeUrl' => array(
 	'default' => '//commons.wikimedia.org/wiki/Special:LoginHandshake?useformat=mobile',
-	'commonswiki' => false, // Commons doesn't require the Special:LoginHandshake workaround
 ),
 
 'wgExtraGenderNamespaces' => array(
