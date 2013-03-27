@@ -8410,6 +8410,7 @@ $wgConf->settings = array(
 	'eswiki' => array( 'b', 'q', 'v', 'wikt', 'n', 's', 'en' ),
 	'eswikibooks' => array( 'w', 'w:en', 'en', 'meta' ),
 	'eswikiversity' => array( 'w:es', 'b', 'meta' ),
+	'eswikivoyage' => array( 'w', 'meta', 'commons', 'en', 'de', 'fr', 'it', 'nl', 'pt', 'ru', 'sv' ), // Bug 43863
 	'eswiktionary' => array( 'w', 'w:en', 'w:fr', 'w:de', 'en', 'fr', 'de', ), # Bug 8202
 	'etwiki' => array( 'b', 'q', 's', 'wikt' ),
 	'etwikisource' => array( 'w' ),
