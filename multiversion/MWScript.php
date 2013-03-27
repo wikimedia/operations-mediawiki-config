@@ -32,6 +32,17 @@ function getMWScriptWithArgs() {
 		if ( $info && in_array( $info['name'], array( 'sudo', 'wikidev', 'root' ) ) ) {
 			fwrite( STDERR, "Cannot run a MediaWiki script as a user in the " .
 				"group {$info['name']}\n" );
+			fwrite( STDERR, <<<EOT
+Maintenance scripts should generally be run using sudo -u apache which
+is available to all wikidev users.  Running a maintenance script as a
+privileged user risks compromise of the user account.
+
+You should run this script as the apache user:
+
+ sudo -u apache <command>
+
+EOT
+			);
 			exit( 1 );
 		}
 	}
