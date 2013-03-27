@@ -10150,6 +10150,7 @@ $wgConf->settings = array(
 	'default' => true, // New wikis by default are opt-in per-page LiquidThreads
 	// ---------
 	'strategywiki' => false,
+	'sewikimedia' => false, // Bug 46182
 ),
 
 'wmgLQTUserControlNamespaces' => array(
