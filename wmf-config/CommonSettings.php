@@ -490,7 +490,6 @@ if ( $wmgUseCORS ) {
 		'wikisource.org',
 		'*.wikiquote.org',
 		'*.wikidata.org',
-		'wikidata.org',
 		'*.wikivoyage.org',
 		'www.mediawiki.org',
 		'm.mediawiki.org',
