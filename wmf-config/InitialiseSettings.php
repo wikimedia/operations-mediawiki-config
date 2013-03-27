@@ -3248,6 +3248,14 @@ $wgConf->settings = array(
 	'+ukwikisource' => array(
 		'ВД' => NS_PROJECT,
 	),
+	'+ukwikivoyage' => array(
+		'Portal' => 100,
+		'Portal_talk' => 101,
+		'BM' => 4,
+		'K' => 14,
+		'П' => 100,
+		'Д' =>  12,
+	),
 	'+ukwiktionary' => array(
 		'Wiktionary' => NS_PROJECT,
 		'ВС' => NS_PROJECT,
@@ -6002,6 +6010,10 @@ $wgConf->settings = array(
 		108 => 'ספר', // Book
 		109 => 'שיחת_ספר', // Book talk
 	),
+	'ukwikivoyage' => array(
+		100 => 'Портал', // Portal
+		101 => 'Обговорення_порталу', // Portal talk
+	),
 	// @} end of wikivoyage
 
 ),
@@ -7436,6 +7448,13 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, ),
 		'rollbacker' => array( 'rollback' => true ),
 	),
+	'ukwikivoyage' => array(
+		'autoconfirmed' => array( 'upload' => false, 'reupload' => false, ),
+		'confirmed' => array( 'reupload' => false, ),
+		'rollbacker' => array( 'rollback' => true ),
+		'uploader' => array( 'upload' => true, 'reupload' => true ),
+		'user' => array( 'upload' => false, 'reupload' => false, ),
+	),
 	'ukwiktionary' => array(
 		'autoeditor' => array( 'autoreview' => true ),
 	),
@@ -7899,6 +7918,9 @@ $wgConf->settings = array(
 	'+ukwiki' => array(
 		'sysop' => array( 'patroller', 'rollbacker' ),
 	),
+	'+ukwikivoyage' => array(
+		'sysop' => array( 'rollbacker', 'uploader' ),
+	),
 	'+ukwiktionary' => array(
 		'bureaucrat' => array( 'autoeditor' ),
 		'sysop' => array( 'autoeditor' ),
@@ -8303,6 +8325,9 @@ $wgConf->settings = array(
 	),
 	'+ukwikimedia' => array(
 		'bureaucrat' => array( 'sysop' ),
+	),
+	'+ukwikivoyage' => array(
+		'sysop' => array( 'rollbacker', 'uploader' ),
 	),
 	'+ukwiktionary' => array(
 		'bureaucrat' => array( 'autoeditor' ),
