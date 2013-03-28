@@ -11836,8 +11836,10 @@ $wgConf->settings = array(
 	'kowiki' => true,
 	'mediawikiwiki' => true,
 	'mkwiki' => true,
+	'mwlwiki' => true,
 	'nlwiki' => true,
 	'outreachwiki' => true,
+	'ptwiki' => true,
 	'viwiki' => true,
 ),
 'wmgUseEducationProgram' => array(
