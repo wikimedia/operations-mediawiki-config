@@ -7793,7 +7793,7 @@ $wgConf->settings = array(
 		'coder' => array( 'coder' ),
 	),
 	'+metawiki' => array(
-		'bureaucrat' => array( 'ipblock-exempt', 'centralnoticeadmin' ),
+		'bureaucrat' => array( 'ipblock-exempt', 'centralnoticeadmin', 'flood' ), // Bug 46639
 		'checkuser'  => array( 'ipblock-exempt' ),
 		'sysop'      => array( 'autopatrolled' ),
 	),
