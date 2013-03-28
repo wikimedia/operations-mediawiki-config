@@ -1196,6 +1196,17 @@ if ( $wgDBname == 'nostalgiawiki' ) {
 		$wgSiteNotice = "[//en.wikipedia.org/ See current Wikipedia]";
 	}
 	$wgDefaultUserOptions['highlightbroken'] = 0;
+} else {
+	$wgHooks['BeforePageDisplay'][] = function( &$out, $skin ) use ( $wgDBname ) {
+		$badSkinName = $skin->getSkinName();
+		if ( in_array( $badSkinName, array( 'chick', 'simple', 'myskin', 'nostalgia', 'standard' ) ) ) {
+			$metaPage = $wgDBname == 'metawiki' ? 'Turning off outdated skins' : 'meta:Turning off outdated skins';
+			$removeDate = $out->getLang()->date( '2013-04-15 00:00:00' );
+			$out->prependHTML( '<span class="warning">' . $out->msg( 'wikimedia-oldskin-removal',
+				$out->msg( "skinname-$badSkinName" )->text(), $removeDate, $metaPage )->parse() . '</span>' );
+		}
+		return true;
+	};
 }
 
 $wgUseHashTable = true;
