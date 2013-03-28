@@ -11814,9 +11814,6 @@ $wgConf->settings = array(
 
 'wmgUseE3Experiments' => array(
 	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'enwiki' => true,
 ),
 
 'wmgUseGettingStarted' => array(
