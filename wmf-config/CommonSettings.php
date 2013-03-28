@@ -1197,7 +1197,17 @@ if ( $wgDBname == 'nostalgiawiki' ) {
 
 	// Nostalgia skin
 	include( "$IP/extensions/Nostalgia/Nostalgia.php" );
-}
+} else {
+	$wgHooks['BeforePageDisplay'][] = function( $out, $skin ) {
+		$badSkinName = $skin-getSkinName();
+		if ( in_array( $badSkinName, array( 'chick', 'simple', 'myskin', 'nostalgia', 'standard' ) ) ) {
+			$metaPage = 'meta:Turning off outdated skins';
+			$removeDate = $out->getLang()->formatDate( '1358208000' /* 2013-04-15 */ );
+			$out->prependHTML( '<h1>' . wfMsgHtml( 'wikimedia-oldskin-removal', $badSkinName, $removeDate, $metaPage ) . '</h1>' );
+		}
+		return true;
+	};
+ }
 
 $wgUseHashTable = true;
 
