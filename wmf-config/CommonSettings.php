@@ -1194,6 +1194,9 @@ if ( $wgDBname == 'nostalgiawiki' ) {
 		$wgSiteNotice = "[//en.wikipedia.org/ See current Wikipedia]";
 	}
 	$wgDefaultUserOptions['highlightbroken'] = 0;
+
+	// Nostalgia skin
+	include( "$IP/extensions/Nostalgia/Nostalgia.php" );
 }
 
 $wgUseHashTable = true;
