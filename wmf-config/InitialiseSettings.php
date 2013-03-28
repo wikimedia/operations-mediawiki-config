@@ -12149,8 +12149,9 @@ $wgConf->settings = array(
 //it, he, hu,  ru, tr, uk, uz, hr, bs, sr, sh
 
 'wmgWikibaseClientSettings' => array(
+	// @note because of unconventional way of doing wikibase settings, the default setting
+	// here does not work the same way. Instead, put defaults in CommonSettings.php
 	'default' => array(
-		'sort' => 'code',
 	),
 	'test2wiki' => array(
 		'siteGlobalID' => 'enwiki',
@@ -12176,9 +12177,8 @@ $wgConf->settings = array(
 	'fiu_vrowiki' => array(
 		'sort' => 'alphabetic_revised',
 	),
-	// @todo https://gerrit.wikimedia.org/r/#/c/52417/ required for custom fy sort order
 	'fywiki' => array(
-		'sort' => 'code'
+		'sort' => 'alphabetic_fy',
 	),
 	'hewiki' => array(
 		'sortPrepend' => array( 'en' ),
