@@ -3259,8 +3259,8 @@ $wgConf->settings = array(
 	'+ukwikivoyage' => array(
 		'Portal' => 100,
 		'Portal_talk' => 101,
-		'BM' => 4,
-		'K' => 14,
+		'ВМ' => 4,
+		'К' => 14,
 		'П' => 100,
 		'Д' =>  12,
 	),
