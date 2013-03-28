@@ -10170,8 +10170,6 @@ $wgConf->settings = array(
 ),
 
 'wmgClickTracking' => array(
-	# Note: Special:ClickTracking is disabled in CommonSettings.php
-	# Disabling due to CR r58099 -- TS 2010-06-03
 	'default' => false,
 	'dewiki' => true, // ArticleFeedbackv5 needs this
 	'enwiki' => true, // VectorSectionEditLinks needs this
