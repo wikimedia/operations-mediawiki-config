@@ -1196,6 +1196,9 @@ if ( $wgDBname == 'nostalgiawiki' ) {
 		$wgSiteNotice = "[//en.wikipedia.org/ See current Wikipedia]";
 	}
 	$wgDefaultUserOptions['highlightbroken'] = 0;
+
+	// Nostalgia skin
+	include( "$IP/extensions/Nostalgia/Nostalgia.php" );
 } else {
 	$wgHooks['BeforePageDisplay'][] = function( &$out, $skin ) use ( $wgDBname ) {
 		$badSkinName = $skin->getSkinName();
