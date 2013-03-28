@@ -10374,16 +10374,22 @@ $wgConf->settings = array(
 	'be_x_oldwiki' => 'uca-be-tarask', // bug 46005
 	'bewiki' => 'uca-be', // bug 46004
 	'bewikisource' => 'uca-be', // bug 46004
-	'iswiktionary' => 'identity', // bug 30722
 	'huwiki' => 'uca-hu', // bug 45596
+	'iswiktionary' => 'identity', // bug 30722
 	'plwiki' => 'uca-pl', // bug 42413
 	'plwikivoyage' => 'uca-pl', // bug 45968
 	'plwiktionary' => 'uca-default', // bug 46081
 	'ptwiki' => 'uca-pt', // bug 45911
 	'ptwikibooks' => 'uca-pt', // bug 45911
 	'svwiki' => 'uca-sv', // bug 45446
+	'uawikimedia' => 'uca-uk', // bug 45776
 	'ukwiki' => 'uca-uk', // bug 45444
-	'ukwikivoyage' => 'uca-uk',
+	'ukwikibooks' => 'uca-uk', // bug 45776
+	'ukwikinews' => 'uca-uk', // bug 45776
+	'ukwikiquote' => 'uca-uk', // bug 45776
+	'ukwikisource' => 'uca-uk', // bug 45776
+	'ukwikivoyage' => 'uca-uk', // bug 46417
+	'ukwiktionary' => 'uca-uk', // bug 45776
 ),
 
 'wmgVectorSectionEditLinks' => array(
