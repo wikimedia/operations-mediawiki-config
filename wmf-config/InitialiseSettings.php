@@ -11805,17 +11805,6 @@ $wgConf->settings = array(
 	'default' => true,
 	'wiki' => false,
 ),
-
-'wmgUseLastModified' => array(
-	'default' => false,
-//	'testwiki' => true,
-//	'enwiki' => true,
-),
-
-'wmgUseE3Experiments' => array(
-	'default' => false,
-),
-
 'wmgUseGettingStarted' => array(
 	'default' => false,
 	'testwiki' => true,

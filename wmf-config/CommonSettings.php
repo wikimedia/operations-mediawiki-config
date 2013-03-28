@@ -2420,10 +2420,6 @@ if ( $wmgEnableRandomRootPage ) {
 	require_once( "$IP/extensions/RandomRootPage/Randomrootpage.php" );
 }
 
-if ( $wmgUseLastModified ) {
-	require_once( "$IP/extensions/LastModified/LastModified.php" );
-}
-
 # Avoid excessive drops in squid hit rates
 $wgMaxBacklinksInvalidate = 200000;
 
@@ -2458,10 +2454,6 @@ if ( $wmgUseWikimediaShopLink ) {
 		'JP',
 	);
 	$wgWikimediaShopLinkTarget = '//shop.wikimedia.org';
-}
-
-if ( $wmgUseE3Experiments ) {
-	include_once( "$IP/extensions/E3Experiments/E3Experiments.php" );
 }
 
 if ( $wmgEnableGeoData ) {
