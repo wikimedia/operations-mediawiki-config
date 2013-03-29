@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DrFZ-VBI",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1201,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-03-29T19:25:29Z",
+      "side": 1,
+      "message": "SiteNoticeAfter won\u0027t work since we need the skin object.",
+      "parentUuid": "DqhQppTk",
+      "revId": "e0ebcef67168fafd023c57ffbca263593da1b8e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqpTBNYU",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-03-29T10:18:11Z",
       "side": 1,
       "message": "Typo. This will cause a fatal error for every page view.",
+      "revId": "e0ebcef67168fafd023c57ffbca263593da1b8e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DrHZ80Bw",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1202,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-03-29T19:25:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DqpTBNYU",
       "revId": "e0ebcef67168fafd023c57ffbca263593da1b8e3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "DrBZ53Cs",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1204,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-03-29T19:25:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DqhRXZco",
+      "revId": "e0ebcef67168fafd023c57ffbca263593da1b8e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqhQ.hYg",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 1
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "DrLaaaF4",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1205,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-03-29T19:25:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DqhQ.hYg",
+      "revId": "e0ebcef67168fafd023c57ffbca263593da1b8e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqrRPmTQ",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 1
@@ -81,6 +153,24 @@
       "writtenOn": "2013-03-29T10:18:11Z",
       "side": 1,
       "message": "The deprecated wfMsgHtml doesn\u0027t do what you want it to (it doesn\u0027t parse the message, and it inserts the arguments unescaped). And the skin name should also be translated here for consistency with Special:Preferences.\n\n$out-\u003eprependHTML( \u0027\u003cspan class\u003d\"warning\"\u003e\u0027 . $out-\u003emsg(\n    \u0027wikimedia-oldskin-removal\u0027,\n    $out-\u003emsg( \"skinname-$badSkinName\" )-\u003etext(),\n    $removeDate, $metaPage\n)-\u003eparse() . \u0027\u003c/span\u003e\u0027 );\n\nOf course, if you end up using SiteNoticeAfter, get rid of the span and use parseAsBlock() instead.",
+      "revId": "e0ebcef67168fafd023c57ffbca263593da1b8e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DrBbDHD0",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1206,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-03-29T19:25:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DqrRPmTQ",
       "revId": "e0ebcef67168fafd023c57ffbca263593da1b8e3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
