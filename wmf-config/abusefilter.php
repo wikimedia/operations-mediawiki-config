@@ -280,4 +280,6 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 } elseif ( $wgDBname == 'wikidatawiki' ) {
 	$wgAbuseFilterNotifications = "udp"; // bug 45083
 	$wgAbuseFilterNotificationsPrivate = true; // bug 45083
+} elseif ( $wgDBname == 'urwiki' ) {
+	$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true; // bug 45643
 }

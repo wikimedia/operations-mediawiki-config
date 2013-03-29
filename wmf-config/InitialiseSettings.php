@@ -7492,6 +7492,9 @@ $wgConf->settings = array(
 	'ukwikimedia' => array(
 		'sysop' => array( 'importupload' => true ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=17167
 	),
+	'urwiki' => array(
+		'rollbacker' => array( 'rollback' => true ), // bug 45642
+	),
 	'vecwiki' => array(
 		'flood' => array( 'bot' => true ),
 	),
@@ -7962,8 +7965,8 @@ $wgConf->settings = array(
 		'sysop' => array( 'autoeditor' ),
 	),
 	'+urwiki' => array(
-		'bureaucrat' => array( 'import', 'confirmed' ), // Bug 42737
-		'sysop' => array( 'confirmed' ), // Bug 42737
+		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker' ), // Bug 42737 and 45643
+		'sysop' => array( 'confirmed', 'abusefilter', 'rollbacker' ), // Bug 42737 and 45643
 	),
 	'+viwiki' => array(
 		'sysop' => array( 'rollbacker', 'flood' ),
@@ -8376,7 +8379,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autoeditor' ),
 	),
 	'+urwiki' => array(
-		'bureaucrat' => array( 'import', 'confirmed' ), // Bug 42737
+		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker' ), // Bug 42737 and 45643
 		'sysop' => array( 'confirmed' ), // Bug 42737
 	),
 	'+viwiki' => array(
