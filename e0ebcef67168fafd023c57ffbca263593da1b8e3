@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "DrPnxs2o",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1201,
+      "author": {
+        "id": 166
+      },
+      "writtenOn": "2013-03-29T21:10:01Z",
+      "side": 1,
+      "message": "The skin object has been available to SiteNoticeAfter hooks (as the second parameter) since MW 1.18.",
+      "parentUuid": "DrFZ-VBI",
+      "revId": "e0ebcef67168fafd023c57ffbca263593da1b8e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqpTBNYU",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 1
