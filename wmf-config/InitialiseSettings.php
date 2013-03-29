@@ -978,6 +978,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
+	'commonswiki' => true
 ),
 
 # wgUploadNavigationUrl @{
