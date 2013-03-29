@@ -7422,6 +7422,12 @@ $wgConf->settings = array(
 			'upload' => true,
 		),
 	),
+	'thwiki' => array(
+		'autoconfirmed' => array(
+			'abusefilter-log-detail' => true, // Bug 46154
+			'patrol' => true, // Bug 46154
+		),
+	),
 	'trwiki' => array(
 		'autoreview' => array(
 			'autopatrol' => true, // Bug 38690
