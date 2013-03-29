@@ -20,33 +20,12 @@ $wmgThrottlingExceptions = array();
 
 ## Add throttling definitions below.
 
-$wmfThrottlingExceptions[] = array( // UCSF event at medical school
-	'from'   => '2013-01-07T16:00 +0:00',
-	'to'     => '2013-01-12T02:00 +0:00',
-	'IP'     => array(
-	             '205.154.255.252',
-		     '64.54.222.227',
-                     //Some IPs will be added here Monday
-	            ),
-	'dbname' => array( 'enwiki', 'commonswiki' ),
-	'value'  => 200,                          // 100 to 150 participants expected
-);
-// Wikipedia Summit Pune, https://bugzilla.wikimedia.org/show_bug.cgi?id=43856
-$wmfThrottlingExceptions[] = array(
-	'from'   => '2013-01-12T10:00 +5:30',
-	'to'     => '2013-01-14T17:00 +5:30',
-	'IP'     => array( '14.140.227.67', '14.140.227.68' ),
-	'dbname' => array( 'enwiki', 'commonswiki' ),
-	'value'  => 50,
-);
-
-// Israel Edithon https://bugzilla.wikimedia.org/show_bug.cgi?id=44506
-$wmfThrottlingExceptions[] = array(
-	'from'   => '2013-01-30T00:00 +2:00',
-	'to'     => '2013-02-01T00:00 +2:00',
-	'IP'     => '212.25.84.200',
-	'dbname' => array( 'frwiki', ),
-	'value'  => 50,
+$wmfThrottlingExceptions[] = array( // Bug 46686 - gu. workshop
+	'from'   => '2013-03-29T09:00 +0:00',
+	'to'     => '2013-03-30T05:30 +0:00',
+	'IP'     => '14.139.122.82',
+	'dbname' => array( 'guwiki', ),
+	'value'  => 100,
 );
 
 ## Add throttling definitions above.
