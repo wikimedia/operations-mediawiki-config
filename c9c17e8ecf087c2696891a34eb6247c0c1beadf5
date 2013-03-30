@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DrJ8K33k",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1205,
+      "author": {
+        "id": 166
+      },
+      "writtenOn": "2013-03-30T21:42:00Z",
+      "side": 1,
+      "message": "getLang() is deprecated in favor of getLanguage(), though that shouldn\u0027t really matter for something temporary like this.",
+      "revId": "c9c17e8ecf087c2696891a34eb6247c0c1beadf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
