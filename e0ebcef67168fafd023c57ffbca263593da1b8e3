@@ -55,6 +55,23 @@
     },
     {
       "key": {
+        "uuid": "DrF88Ry0",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1201,
+      "author": {
+        "id": 166
+      },
+      "writtenOn": "2013-03-30T21:17:35Z",
+      "side": 1,
+      "message": "Although I should note that because of DismissableSiteNotice, modifying the sitenotice might not work. (The order the hooks are registered in would be relevant.)",
+      "revId": "e0ebcef67168fafd023c57ffbca263593da1b8e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DqpTBNYU",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 1
