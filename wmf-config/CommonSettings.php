@@ -1543,12 +1543,9 @@ if ( $wmgUseCentralAuth ) {
 
 	$wgHooks['CentralAuthWikiList'][] = 'wmfCentralAuthWikiList';
 	function wmfCentralAuthWikiList( &$list ) {
-		global $wgLocalDatabases, $IP;
-		$privateWikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../private.dblist" ) ) );
-		$fishbowlWikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../fishbowl.dblist" ) ) );
-		$closedWikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../closed.dblist" ) ) );
+		global $wgLocalDatabases, $IP, $wgSiteMatrixClosedSites, $wgSiteMatrixPrivateSites, $wgSiteMatrixFishbowlSites;
 		$list = array_diff( $wgLocalDatabases,
-			$privateWikis, $fishbowlWikis, $closedWikis );
+			$wgSiteMatrixPrivateSites, $wgSiteMatrixFishbowlSites, $wgSiteMatrixClosedSites );
 		return true;
 	}
 
@@ -2243,7 +2240,7 @@ if ( $wmgUseDisableAccount ) {
 
 if ( $wmgUseIncubator ) {
 	require_once( "$IP/extensions/WikimediaIncubator/WikimediaIncubator.php" );
-	$wmincClosedWikis = getRealmSpecificFilename( "$IP/../closed.dblist" );
+	$wmincClosedWikis = $wgSiteMatrixClosedSites;
 }
 
 if ( $wmgUseWikiLove ) {
