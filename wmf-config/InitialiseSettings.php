@@ -860,6 +860,7 @@ $wgConf->settings = array(
 	'tnwiki'		=> '//upload.wikimedia.org/wikipedia/commons/0/00/Wikipedia-logo-v2-tn.png', // bug 40285
 	'towiki'		=> '//upload.wikimedia.org/wikipedia/$lang/9/96/Wiki-to.png',
 	'tpiwiki'		=> '//upload.wikimedia.org/wikipedia/commons/3/37/Wikipedia-logo-v2-tpi.png', # bug 27240
+	'transitionteamwiki'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/135px-Wikimedia-logo.svg.png',
 	'trwiki'		=> '//upload.wikimedia.org/wikipedia/commons/6/66/Wikipedia-logo-v2-tr.png',
 	'trwikibooks'		=> '$stdlogo',
 	'trwikimedia'		=> '$stdlogo',
