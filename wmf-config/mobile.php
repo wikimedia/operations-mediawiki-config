@@ -168,3 +168,7 @@ $wgMFForceSecureLogin = $wmgMFForceSecureLogin;
 
 // Point to Common's Special:LoginHandshake page
 $wgMFLoginHandshakeUrl = $wmgMFLoginHandshakeUrl;
+
+// Enable X-Analytics logging
+$wgMFEnableXAnalyticsLogging = $wmgMFEnableXAnalyticsLogging;
+

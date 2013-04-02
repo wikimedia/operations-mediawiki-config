@@ -11109,6 +11109,9 @@ $wgConf->settings = array(
 'wmgMFLoginHandshakeUrl' => array(
 	'default' => '//commons.wikimedia.org/wiki/Special:LoginHandshake?useformat=mobile',
 ),
+'wmgMFEnableXAnalyticsLogging' => array(
+	'default' => true,
+),
 
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
