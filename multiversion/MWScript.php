@@ -68,6 +68,7 @@ EOT
 		'extensions/WikimediaMaintenance/dumpInterwiki.php', // 1.19
 		'extensions/WikimediaMaintenance/getJobQueueLengths.php',
 		'extensions/WikimediaMaintenance/rebuildInterwiki.php', // 1.19
+		'extensions/WikimediaMaintenance/filebackend/setZoneAccess.php',
 		'maintenance/mctest.php',
 		'maintneance/mcc.php',
 	);
