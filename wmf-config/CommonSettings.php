@@ -187,6 +187,7 @@ if ( @filemtime( $filename ) >= filemtime( "$wmfConfigDir/InitialiseSettings.php
 	}
 }
 wfProfileOut( "$fname-confcache" );
+$wmgWikimediaDatabaseLists = array();
 if ( !$globals ) {
 	wfProfileIn( "$fname-recache-settings" );
 	# Get configuration from SiteConfiguration object
@@ -194,8 +195,8 @@ if ( !$globals ) {
 
 	$wikiTags = array();
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small', 'medium', 'large', 'wikimania', 'wikidataclient' ) as $tag ) {
-		$dblist = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../$tag.dblist" ) ) );
-		if ( in_array( $wgDBname, $dblist ) ) {
+		$wmgWikimediaDatabaseLists[$tag] = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../$tag.dblist" ) ) );
+		if ( in_array( $wgDBname, $wmgWikimediaDatabaseLists[$tag] ) ) {
 			$wikiTags[] = $tag;
 		}
 	}
@@ -869,9 +870,10 @@ include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 
 // Config for sitematrix
 $wgSiteMatrixFile = '/apache/common/langlist';
-$wgSiteMatrixClosedSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../closed.dblist" ) ) );
-$wgSiteMatrixPrivateSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../private.dblist" ) ) );
-$wgSiteMatrixFishbowlSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../fishbowl.dblist" ) ) );
+
+$wgSiteMatrixClosedSites = $wmgWikimediaDatabaseLists['closed'];
+$wgSiteMatrixPrivateSites = $wmgWikimediaDatabaseLists['private'];
+$wgSiteMatrixFishbowlSites = $wmgWikimediaDatabaseLists['fishbowl'];
 
 include( $IP . '/extensions/CharInsert/CharInsert.php' );
 
@@ -1570,14 +1572,12 @@ if ( $wmgUseCentralAuth ) {
 
 	$wgHooks['CentralAuthWikiList'][] = 'wmfCentralAuthWikiList';
 	function wmfCentralAuthWikiList( &$list ) {
-		global $wgLocalDatabases, $IP, $wgSiteMatrixPrivateSites,
-			$wgSiteMatrixFishbowlSites, $wgSiteMatrixClosedSites;
-
+		global $wgLocalDatabases, $wmgWikimediaDatabaseLists;
 		$list = array_diff(
 			$wgLocalDatabases,
-			$wgSiteMatrixPrivateSites,
-			$wgSiteMatrixFishbowlSites,
-			$wgSiteMatrixClosedSites
+			$wmgWikimediaDatabaseLists['private'],
+			$wmgWikimediaDatabaseLists['fishbowl'],
+			$wmgWikimediaDatabaseLists['closed']
 		);
 		return true;
 	}
@@ -2262,7 +2262,7 @@ if ( $wmgUseDisableAccount ) {
 
 if ( $wmgUseIncubator ) {
 	require_once( "$IP/extensions/WikimediaIncubator/WikimediaIncubator.php" );
-	$wmincClosedWikis = $wgSiteMatrixClosedSites;
+	$wmincClosedWikis = $wmgWikimediaDatabaseLists['closed'];
 }
 
 if ( $wmgUseWikiLove ) {
