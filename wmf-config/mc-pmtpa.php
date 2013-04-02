@@ -3,7 +3,6 @@
 $wgMainCacheType = 'memcached-pecl';
 
 $wgMemCachedPersistent = false;
-$wgUseMemCached = true;
 $wgMemCachedTimeout = 250000; # default is 100000
 $wgMemCachedInstanceSize = 2000;
 

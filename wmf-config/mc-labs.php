@@ -14,7 +14,6 @@ if( $wmfRealm == 'labs' ) {  # safe guard
  *
  */
 $wgMemCachedPersistent = true;
-$wgUseMemCached = true;
 $wgMainCacheType = CACHE_MEMCACHED;
 $wgMemCachedTimeout = 500000; # micro seconds
 $wgSessionsInMemcached = true;
