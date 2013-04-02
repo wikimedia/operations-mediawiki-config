@@ -4221,6 +4221,7 @@ $wgConf->settings = array(
 		'ts_badpass' => "udp://$wmfUdp2logDest/ts_badpass",
 		'EventLogging'  => "udp://$wmfUdp2logDest/eventlogging",
 		'torblock'  => "udp://$wmfUdp2logDest/torblock",
+		'mobile'  => "udp://$wmfUdp2logDest/mobile",
 	),
 
 	'+private' => array(
