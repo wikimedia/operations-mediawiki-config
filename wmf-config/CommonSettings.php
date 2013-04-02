@@ -1087,7 +1087,9 @@ $wgGlobalBlockingDatabase = 'centralauth';
 $wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
 
 include( $IP . '/extensions/TrustedXFF/TrustedXFF.php' );
-$wgTrustedXffFile = "$IP/cache/trusted-xff.cdb";
+if ( function_exists( 'dba_open' ) && file_exists( "$wmfConfigDir/trusted-xff.cdb" ) ) {
+	$wgTrustedXffFile = "$wmfConfigDir/trusted-xff.cdb";
+}
 
 if ( $wmgContactPageConf ) {
 	include( $IP . '/extensions/ContactPage/ContactPage.php' );
@@ -1447,8 +1449,8 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgExternalDiffEngine = 'wikidiff2';
 }
 
-if ( function_exists( 'dba_open' ) && file_exists( "$IP/cache/interwiki.cdb" ) ) {
-	$wgInterwikiCache = "$IP/cache/interwiki.cdb";
+if ( function_exists( 'dba_open' ) && file_exists( "$wmfConfigDir/interwiki.cdb" ) ) {
+	$wgInterwikiCache = "$wmfConfigDir/interwiki.cdb";
 }
 
 $wgEnotifUseJobQ = true;
