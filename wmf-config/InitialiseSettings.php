@@ -9903,6 +9903,7 @@ $wgConf->settings = array(
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
 	'plwiki' => array( 'sysop' => array( 'flood' ) ), // Bug 20155
 	'strategywiki' => array( 'sysop' => array( 'flood' ), ),
+	'wikidatawiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 46856
 	'zhwiki' => array( 'sysop' => array( 'flood' ) ),
 ),
 'wgGroupsRemoveFromSelf' => array(
@@ -9920,6 +9921,7 @@ $wgConf->settings = array(
 	'plwiki' => array( 'flood' => array( 'flood' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=20155 , bug 21238
 	'strategywiki' => array( 'sysop' => array( 'flood' ) ),
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
+	'wikidatawiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 46856
 	'zhwiki' => array( 'sysop' => array( 'flood' ) ),
 ),
 
