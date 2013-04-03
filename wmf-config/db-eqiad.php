@@ -9,6 +9,11 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 
 #$wgReadOnly = "Wikimedia Sites are currently read-only during maintenance, please try again soon.";
 
+// Parser cache - not configured in this file!
+// '10.64.16.156' => 'pc1001'
+// '10.64.16.157' => 'pc1002'
+// '10.64.16.158' => 'pc1003'
+
 $wmgOldExtTemplate = array(
 	'10.64.0.25' => 1, # es1001
 	'10.64.16.40' => 1, # es1002
