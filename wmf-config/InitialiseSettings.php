@@ -10079,6 +10079,13 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgUseFooterContactLink' => array(
+	'default' => false,
+	// 'enwiki' => true,  // Bug 46392
+	'test2wiki' => true,
+	'testwiki' => true,
+),
+
 'wmgUserDailyContribs' => array(
 	// Actively used by researchers and analysts.
 	// Contact person: Dario Taraborelli <dtaraborelli@wikimedia.org>
