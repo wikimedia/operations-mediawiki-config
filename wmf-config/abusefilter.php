@@ -282,4 +282,6 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 	$wgAbuseFilterNotificationsPrivate = true; // bug 45083
 } elseif ( $wgDBname == 'urwiki' ) {
 	$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true; // bug 45643
+} elseif ( $wgDBname == 'thwiki' ) {
+  	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true; // bug 46154
 }
