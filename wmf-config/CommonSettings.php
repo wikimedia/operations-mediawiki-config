@@ -2510,7 +2510,7 @@ if ( $wmgUseEcho ) {
 		),
 	);
 	$wgEchoConfig['eventlogging']['Echo']['enabled'] = true;
-	$wgEchoConfig['eventlogging']['Echo']['revision'] = 5285750;
+	$wgEchoConfig['eventlogging']['Echo']['revision'] = 5364744;
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
 }
