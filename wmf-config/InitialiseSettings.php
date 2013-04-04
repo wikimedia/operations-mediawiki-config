@@ -11902,7 +11902,7 @@ $wgConf->settings = array(
 
 'wmgUseEcho' => array(
 	'default' => false,
-	'testwiki' => false,
+	'testwiki' => true,
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
 ),
