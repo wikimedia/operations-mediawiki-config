@@ -10078,6 +10078,11 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgUseFooterContactLink' => array(
+	'default' => false,
+	'enwiki' => true,  // Bug 46392
+),
+
 'wmgUserDailyContribs' => array(
 	'default'	=> true, // For clicktracking usability stuff
 ),

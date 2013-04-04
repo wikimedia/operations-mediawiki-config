@@ -1302,6 +1302,14 @@ if ( $wgDBname == 'enwiki' ) {
 	$wgHiddenPrefs[] = 'minordefault';
 }
 
+if ( $wmgUseFooterContactLink ) {
+	$wgHooks['SkinTemplateOutputPageBeforeExec'][] = function ( $sk, &$tpl ) {
+		$tpl->set( 'contact', $sk->footerLink( 'contact', 'contact-url' ) );
+		$tpl->data['footerlinks']['places'][] = 'contact';
+		return true;
+	};
+}
+
 // bug 33186: turn off incomplete feature action=imagerotate
 $wgAPIModules['imagerotate'] = 'ApiDisabled';
 
