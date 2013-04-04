@@ -41,7 +41,6 @@ $IP/extensions/DisableAccount/DisableAccount.php
 $IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php
 $IP/extensions/DonationInterface/donationinterface_langonly.php
 $IP/extensions/DoubleWiki/DoubleWiki.php
-$IP/extensions/E3Experiments/E3Experiments.php
 $IP/extensions/Echo/Echo.php
 $IP/extensions/EditPageTracking/EditPageTracking.php
 $IP/extensions/EducationProgram/EducationProgram.php
@@ -68,7 +67,6 @@ $IP/extensions/intersection/DynamicPageList.php
 $IP/extensions/Interwiki/Interwiki.php
 $IP/extensions/LabeledSectionTransclusion/lst.php
 $IP/extensions/LandingCheck/LandingCheck.php
-$IP/extensions/LastModified/LastModified.php
 $IP/extensions/LiquidThreads/LiquidThreads.php
 $IP/extensions/Listings/Listings.php
 $IP/extensions/LocalisationUpdate/LocalisationUpdate.php
