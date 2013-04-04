@@ -7501,6 +7501,8 @@ $wgConf->settings = array(
 	'viwiki' => array(
 		'rollbacker' => array( 'rollback' => true ),
 		'flood' => array( 'bot' => true ),
+		'patroller' => array( 'patrol' => true ), // bug 46828
+		'autopatrolled' => array( 'autopatrol' => true ), // bug 46828
 	),
 	'wikidatawiki' => array(
 		'autopatrolled' => array(
@@ -7972,7 +7974,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'confirmed', 'abusefilter', 'rollbacker' ), // Bug 42737 and 45643
 	),
 	'+viwiki' => array(
-		'sysop' => array( 'rollbacker', 'flood' ),
+		'sysop' => array( 'rollbacker', 'flood', 'patroller', 'autopatrolled' ), // bug 46828
 		'bureaucrat' => array( 'flood' ),
 	),
 	'+vecwiki' => array(
@@ -8387,7 +8389,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'confirmed' ), // Bug 42737
 	),
 	'+viwiki' => array(
-		'sysop' => array( 'rollbacker', 'flood' ),
+		'sysop' => array( 'rollbacker', 'flood', 'patroller', 'autopatrolled' ), // bug 46828
 		'bureaucrat' => array( 'flood' ),
 	),
 	'+vecwiki' => array(
