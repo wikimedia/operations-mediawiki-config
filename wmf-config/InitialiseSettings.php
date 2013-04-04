@@ -10566,7 +10566,7 @@ $wgConf->settings = array(
 	'default' => 'aft@wikimedia.org',
 	'dewiki' => 'oversight-de-wp@wikimedia.org',
 	'enwiki' => 'oversight-en-wp@wikipedia.org',
-	'frwiki' => 'privacy-wp-fr-at-wikimedia.org',
+	'frwiki' => 'privacy-wp-fr@wikimedia.org',
 ),
 'wmgArticleFeedbackv5OversightEmailHelp' => array(
 	'default' => 'http://en.wikipedia.org/wiki/Wikipedia:Article_Feedback_Tool/Version_5/Help/Feedback_page_Oversighters',
