@@ -1299,6 +1299,16 @@ if ( $wgDBname == 'enwiki' ) {
 	$wgHiddenPrefs[] = 'minordefault';
 }
 
+// bug 46392, add 'Contact Wikipedia' footer link on enwiki
+function enwikiContact( $sk, &$tpl ) {
+	$tpl->set( 'contact', $sk->footerLink( 'contact', 'contact-url' ) );
+	$tpl->data['footerlinks']['places'][] = 'contact';
+	return true;
+}
+if ( $wgDBname == 'enwiki' ) {
+	$wgHooks['SkinTemplateOutputPageBeforeExec'][] = 'enwikiContact';
+}
+
 // bug 33186: turn off incomplete feature action=imagerotate
 $wgAPIModules['imagerotate'] = 'ApiDisabled';
 
