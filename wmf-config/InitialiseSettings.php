@@ -7052,13 +7052,14 @@ $wgConf->settings = array(
 	),
 	'itwikivoyage' => array(
 		'autopatrolled' => array(
+			'patrol' => true, // Bug 45638
 			'autopatrol' => true, // Bug 43327
 			'upload' => false // Bug 43524
 		),
 		'sysop' => array( 'upload' => true ), // Bug 43524
 		'user' => array( 'upload' => false ), // Bug 43524
 		'confirmed' => array( 'upload' => false ), // Bug 43524
-		'autoconfirmed' => array( 'patrol' => true, 'upload' => false ), // Bug 43524
+		'autoconfirmed' => array( 'upload' => false ), // Bug 43524
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true ), // Bug 45638
 	),
 	'itwiktionary' => array(
