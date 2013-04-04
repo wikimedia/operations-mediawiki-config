@@ -182,7 +182,7 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 	$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 	$wgGroupPermissions['*']['abusefilter-log'] = false;
 	$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
-	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
+	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true; // bug 46154
 } elseif ( $wgDBname == 'zh_yuewiki' ) {
 	$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 	$wgGroupPermissions['sysop']['abusefilter-revert'] = true;

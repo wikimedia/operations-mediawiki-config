@@ -7433,7 +7433,6 @@ $wgConf->settings = array(
 	),
 	'thwiki' => array(
 		'autoconfirmed' => array(
-			'abusefilter-log-detail' => true, // Bug 46154
 			'patrol' => true, // Bug 46154
 		),
 	),
