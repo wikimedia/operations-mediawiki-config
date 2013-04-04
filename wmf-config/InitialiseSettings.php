@@ -9316,6 +9316,7 @@ $wgConf->settings = array(
 	'enwiktionary'			=> '//bits.wikimedia.org/favicon/wiktionary/en.ico', // Bug 44843
 	'cswiktionary'			=> '//bits.wikimedia.org/favicon/wiktionary/en.ico', // Bug 45113
 	'siwiktionary'			=> '//bits.wikimedia.org/favicon/wiktionary/si.ico', // Bug 38036
+	'iswiktionary'			=> '//bits.wikimedia.org/favicon/wiktionary/en.ico', // Bug 46712
 
 	# Other wikis
 	'advisorywiki'			=> '//bits.wikimedia.org/favicon/wmf.ico',
