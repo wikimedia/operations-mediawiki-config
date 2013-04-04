@@ -11117,7 +11117,7 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 'wmgMFPhotoUploadAppendToDesc' => array(
-	'default' => '{{Uploaded from Mobile|platform=Web|version=}}',
+	'default' => '{{Uploaded from Mobile|platform=Web|version=}}{{subst:unc}}',
 ),
 'wmgMFLoginHandshakeUrl' => array(
 	'default' => '//commons.wikimedia.org/wiki/Special:LoginHandshake?useformat=mobile',
