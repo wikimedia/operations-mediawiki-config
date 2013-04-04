@@ -6444,6 +6444,7 @@ $wgConf->settings = array(
 	'+ruwiki' => array( 104 => 0, 105 => 0, 106 => 0, 107 => 0 ),
 	'+ruwikisource' => array( 106 => 1 ),
 	'+ruwikivoyage' => array( 6 => 1, 14 => 1, 100 => 1, 104 => 1, 106 => 1 ),
+	'+sewikimedia' => array( 100 => 1 ), // bug 46882
 	'+slwikisource' => array( 104 => 1 ),
 	'+sourceswiki' => array( 106 => 1 ),
 	'+svwikisource' => array( 106 => 1, 108 => 1 ),
