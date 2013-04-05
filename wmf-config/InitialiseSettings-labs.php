@@ -183,10 +183,6 @@ return array(
 	'-wmgArticleFeedbackv5Cluster' => array(
 		'default' => false,
 	),
-	# ClickTracking is a required dependency for AFTv5
-	'-wmgClickTracking' => array(
-		'default' => true,
-	),
 	# FIXME: make that settings to be applied
 	'-wgShowExceptionDetails' => array(
 		'default' => true,
