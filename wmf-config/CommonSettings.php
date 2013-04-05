@@ -1924,19 +1924,6 @@ if ( $wmgUseUsabilityInitiative ) {
 		require "$IP/extensions/UserDailyContribs/UserDailyContribs.php";
 	}
 
-	if ( $wmgClickTracking ) {
-		// ClickTracking is deprecated and (as of 12-Jan-2013) slated for removal.
-		require "$IP/extensions/ClickTracking/ClickTracking.php";
-
-		$wgClickTrackThrottle = $wmgClickTrackThrottle;
-		$wgClickTrackingLog = '/dev/null';
-		$wgClickTrackingDatabase = false;
-		# Disable Special:ClickTracking, not secure yet (as of r59230)
-		unset( $wgSpecialPages['ClickTracking'] );
-		# Remove the clicktracking permission because people see it in ListGroupRights and wonder what it does
-		unset( $wgGroupPermissions['sysop']['clicktrack'] );
-	}
-
 	if ( $wmgVectorSectionEditLinks ) {
 		$wgVectorFeatures['sectioneditlinks'] = array( 'global' => false, 'user' => true );
 		$wgVectorSectionEditLinksBucketTest = true;
