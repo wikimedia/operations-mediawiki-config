@@ -10191,28 +10191,6 @@ $wgConf->settings = array(
 	'enwikinews' => array( 102 ), // Comments namespace
 ),
 
-'wmgClickTracking' => array(
-	'default' => false,
-	'dewiki' => true, // ArticleFeedbackv5 needs this
-	'enwiki' => true, // VectorSectionEditLinks needs this
-	'eswiki' => true, // ArticleFeedback needs this
-	'eswikinews' => true, // ArticleFeedback needs this
-	'hiwiki' => true, // ArticleFeedback needs this
-	'huwiki' => true, // ArticleFeedback needs this
-	'metawiki' => true, // ArticleFeedback needs this
-	'mlwiki' => true, // ArticleFeedback needs this
-	'ptwiki' => true, // ArticleFeedback needs this
-	'ptwikibooks' => true, // ArticleFeedback needs this
-	'srwiki' => true, // ArticleFeedback needs this
-	'testwiki' => true,
-	'test2wiki' => true,
-	'zhwiki' => true, // ArticleFeedback needs this
-),
-
-'wmgClickTrackThrottle' => array(
-	'default' => -1
-),
-
 'wmgDonationInterface' => array(
 	'default' => false,
 	'testwiki' => true,
