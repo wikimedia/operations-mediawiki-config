@@ -11101,6 +11101,9 @@ $wgConf->settings = array(
 'wmgMFEnableXAnalyticsLogging' => array(
 	'default' => true,
 ),
+'wmgMFVaryResources' => array(
+	'default' => false,
+),
 
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
