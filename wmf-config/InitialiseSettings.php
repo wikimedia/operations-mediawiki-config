@@ -7508,6 +7508,9 @@ $wgConf->settings = array(
 			'patrol' => true, // bug 42052
 		),
 		'rollbacker' => array( 'rollback' => true ), // bug 45165
+		'propertycreator' => array( 'property-create' => true ), // bug 46953
+		'sysop' => array( 'property-create' => true ), // bug 46953
+		'*' => array ( 'property-create' => false ), // bug 46953
 	),
 	// due to mass vandalism complaint, 2006-04-11
 	'zhwiki' => array(
@@ -7980,6 +7983,7 @@ $wgConf->settings = array(
 			'autopatrolled', // bug 41907
 			'rollbacker', // bug 45165
 			'confirmed', // bug 45124
+			'propertycreator', // bug 46953
 		),
 	),
 	'+zhwiki' => array(
@@ -8394,6 +8398,7 @@ $wgConf->settings = array(
 			'autopatrolled', // bug 41907
 			'rollbacker', // bug 45165
 			'confirmed', // bug 45124
+			'propertycreator', // bug 46953
 		),
 		'bureaucrat' => array( 'translationadmin' ), // bug 44395
 	),
