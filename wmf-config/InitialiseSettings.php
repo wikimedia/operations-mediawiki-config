@@ -7326,6 +7326,9 @@ $wgConf->settings = array(
 	'ruwikiversity' => array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
 	),
+	'ruwikivoyage' => array(
+		 'autopatrolled' => array( 'autopatrol' => true ), // bug 46915
+	),
 	'sawiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 	),
@@ -7907,6 +7910,9 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autoeditor', 'rollbacker' ),
 		'sysop' => array( 'autoeditor', 'rollbacker', 'abusefilter', 'flood' ),
 	),
+	'+ruwikivoyage' => array(
+	 	'sysop' => array( 'autopatrolled' ), // bug 46915
+	),
 	'+sawiki' => array(
 		'sysop' => array( 'autopatrolled' ),
 	),
@@ -8315,6 +8321,9 @@ $wgConf->settings = array(
 	'+ruwikisource' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'autoeditor', 'rollbacker' ),
 		'sysop' => array( 'autoeditor', 'rollbacker', 'abusefilter', 'flood' ),
+	),
+	'+ruwikivoyage' => array(
+		'sysop' => array( 'autopatrolled' ), // bug 46915
 	),
 	'+sawiki' => array(
 		'sysop' => array( 'autopatrolled' ),
