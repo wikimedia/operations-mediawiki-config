@@ -2684,6 +2684,7 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBSettings['clientDbList']
 	);
 
+	$wgGroupPermissions['*']['property-create'] = false;
 }
 
 if ( $wmgUseWikibaseClient ) {
