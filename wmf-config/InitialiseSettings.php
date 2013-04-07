@@ -4074,6 +4074,7 @@ $wgConf->settings = array(
 # wgRestrictionLevels @{
 'wgRestrictionLevels' => array(
 	'default' => array( '', 'autoconfirmed', 'sysop' ), // semi-protection level on
+	'plwiki' => array( '', 'autoconfirmed', 'editor', 'sysop' ), // bug 46990
 	'ptwiki' => array( '', 'autoconfirmed', 'autoreviewer', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=39652
 ),
 # @} end of wgRestrictionLevels
@@ -7241,9 +7242,10 @@ $wgConf->settings = array(
 	'plwiki' => array(
 		'user' => array( 'upload' => false ),
 		'autoconfirmed' => array( 'upload' => true ),
-		'editor' => array( 'rollback' => true, 'patrolmarks' => true ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=20154
-		'flood' => array( 'bot' => true ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=20155
-		'sysop' => array( 'deleterevision' => true ),
+		'editor' => array( 'rollback' => true, 'patrolmarks' => true, 'editor' => true ), // bug 20154 and 46990
+		'flood' => array( 'bot' => true ), // bug 20155
+		'sysop' => array( 'deleterevision' => true, 'editor' => true ), // bug 46990
+		'bot' => array( 'editor' => true ), // bug 46990
 	),
 	'plwikiquote' =>  array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28479
