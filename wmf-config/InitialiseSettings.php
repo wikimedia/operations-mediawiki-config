@@ -8766,8 +8766,6 @@ $wgConf->settings = array(
 
 'wmgEmergencyCaptcha' => array(
 	'default' => false,
-	'ptwiki' => true, // 2008-01-25 by brion; reports of bot attack via cary
-	'ptwikinews' => true, // 2011-12-08 by laner; reports of major vandalism by open proxies
 ),
 # @} end of Captcha
 
