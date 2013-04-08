@@ -16,6 +16,24 @@
       "revId": "c6c5c25807e29291fbb8f87b5bfe3e50e23a0756",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dt5GDnM8",
+        "filename": "multiversion/checkoutMediaWiki",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-04-08T22:50:20Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DtzEcKL4",
+      "revId": "c6c5c25807e29291fbb8f87b5bfe3e50e23a0756",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
