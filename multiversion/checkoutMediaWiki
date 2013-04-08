@@ -45,7 +45,7 @@ function checkoutMediaWiki() {
 			escapeshellarg( $destIP ),
 			$ret );
 		if ( $ret ) {
-			print "Error running git\n";
+			print "Error cloning mediawiki\n";
 			exit( 1 );
 		}
 		if ( !chdir( $destIP ) ) {
@@ -54,13 +54,19 @@ function checkoutMediaWiki() {
 		}
 		passthru( 'git checkout ' . escapeshellarg( "wmf/$gitVersion" ), $ret );
 		if ( $ret ) {
-			print "Error running git\n";
+			print "Error checking out branch\n";
 			exit( 1 );
 		}
 		passthru( 'git submodule update --init --recursive', $ret );
 		if ( $ret ) {
-			print "Error running git\n";
+			print "Error updating submodules\n";
 			exit( 1 );
+		}
+
+		passthru( 'git config branch.autosetuprebase always', $ret );
+		if ( $ret ) {
+			# Don't exit, this isn't a show-stopper
+			print "Error running setting autosetuprebase\n";
 		}
 	} else {
 		echo "MediaWiki already checked out at $destIP\n";
