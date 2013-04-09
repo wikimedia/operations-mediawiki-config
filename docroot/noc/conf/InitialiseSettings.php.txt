@@ -1,1 +1,1 @@
-../../wmf-config/InitialiseSettings.php
+../../../wmf-config/InitialiseSettings.php

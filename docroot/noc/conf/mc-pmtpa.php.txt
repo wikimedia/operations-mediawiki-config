@@ -1,1 +1,1 @@
-../../wmf-config/mc-pmtpa.php
+../../../wmf-config/mc-pmtpa.php

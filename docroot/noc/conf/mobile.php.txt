@@ -1,1 +1,1 @@
-../../wmf-config/mobile.php
+../../../wmf-config/mobile.php
