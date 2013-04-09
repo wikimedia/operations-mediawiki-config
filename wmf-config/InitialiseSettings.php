@@ -1604,6 +1604,7 @@ $wgConf->settings = array(
 	'tenwiki'       => 'Wikipedia 10',
 	'tgwiki'	=> 'Википедиа',
 	'thwiki'	=> 'วิกิพีเดีย',
+	'thwikibooks'	=> 'วิกิตำรา', // Bug 46153
 	'thwikiquote'   => 'วิกิคำคม',
 	'thwikisource'  => 'วิกิซอร์ซ',
 	'tkwiki'	=> 'Wikipediýa',
@@ -3220,6 +3221,8 @@ $wgConf->settings = array(
 	'+thwikibooks' => array(
 		'Wikibooks' => NS_PROJECT,                  // Bug 40717
 		'คุยเรื่องWikibooks' => NS_PROJECT_TALK,
+		'Subject' => 102, // Bug 46153
+		'Subject_talk' => 103, // Bug 46153
 	),
 	'+thwiktionary' => array(
 		'Wiktionary' => NS_PROJECT,                 // Bug 40717
@@ -5754,7 +5757,10 @@ $wgConf->settings = array(
 		102 => 'Кувар',
 		103 => 'Разговор_о_кувару'
 	),
-
+	'thwikibooks' => array(
+		102 => 'หัวเรื่อง', // Bug 46153
+		103 => 'คุยเรื่องหัวเรื่อง', // Bug 46153
+	),
 	'tlwikibooks' => array(
 		100 => 'Pagluluto',
 		101 => 'Usapang_pagluluto',
