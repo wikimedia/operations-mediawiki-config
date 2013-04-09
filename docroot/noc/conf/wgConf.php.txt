@@ -1,1 +1,1 @@
-/home/wikipedia/common/wmf-config/wgConf.php
+../../wmf-config/wgConf.php

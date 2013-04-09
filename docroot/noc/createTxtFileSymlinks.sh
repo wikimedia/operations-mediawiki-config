@@ -1,29 +1,39 @@
 #!/bin/bash
+cd $(dirname $0)
+
 files_array=(
 	CommonSettings.php
 	InitialiseSettings.php
-	PoolCounterSettings.php
+	PoolCounterSettings-eqiad.php
+	PoolCounterSettings-pmtpa.php
 	StartProfiler.php
 	abusefilter.php
 	codereview.php
-	db.php
+	db-eqiad.php
+	db-labs.php
+	db-pmtpa.php
+	filebackend.php
 	flaggedrevs.php
 	liquidthreads.php
-	lucene.php
-	mc.php
+	lucene-common.php
+	lucene-labs.php
+	lucene-production.php
+	mc-eqiad.php
+	mc-labs.php
+	mc-pmtpa.php
 	mobile.php
 	proofreadpage.php
-	secure.php
+	throttle.php
 	wgConf.php
 )
 
-cleanup_pattern=/home/wikipedia/htdocs/noc/conf/*.txt
-
-if [ -a cleanup_pattern ]
-	then rm cleanup_pattern
+# if -e returns false if there is a symlink but target does not exist locally
+if ls ./conf/*.txt >/dev/null 2>&1
+then
+	rm ./conf/*.txt
 fi
 
 for i in "${files_array[@]}"
 do
-   ln -f -s /home/wikipedia/common/wmf-config/$i /home/wikipedia/htdocs/noc/conf/$i.txt
+   ln -s ../../wmf-config/$i conf/$i.txt
 done

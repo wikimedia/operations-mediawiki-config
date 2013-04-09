@@ -1,1 +1,1 @@
-/home/wikipedia/common/wmf-config/StartProfiler.php
+../../wmf-config/StartProfiler.php

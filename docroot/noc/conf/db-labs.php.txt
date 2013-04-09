@@ -1,1 +1,1 @@
-/home/wikipedia/common/wmf-config/db-labs.php
+../../wmf-config/db-labs.php

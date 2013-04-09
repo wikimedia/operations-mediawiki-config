@@ -1,1 +1,1 @@
-/home/wikipedia/common/wmf-config/abusefilter.php
+../../wmf-config/abusefilter.php

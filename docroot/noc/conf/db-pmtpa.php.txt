@@ -1,1 +1,1 @@
-/home/wikipedia/common/wmf-config/db-pmtpa.php
+../../wmf-config/db-pmtpa.php

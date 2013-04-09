@@ -1,1 +1,1 @@
-/home/wikipedia/common/wmf-config/CommonSettings.php
+../../wmf-config/CommonSettings.php

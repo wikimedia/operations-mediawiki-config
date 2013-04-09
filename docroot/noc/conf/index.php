@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<title>Wikimedia configuration files</title>
-	<link rel="stylesheet" href="/base.css">
+	<link rel="stylesheet" href="../base.css">
 </head>
 <body>
 

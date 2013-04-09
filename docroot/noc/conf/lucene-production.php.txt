@@ -1,1 +1,1 @@
-/home/wikipedia/common/wmf-config/lucene-production.php
+../../wmf-config/lucene-production.php

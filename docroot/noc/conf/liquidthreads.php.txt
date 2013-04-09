@@ -1,1 +1,1 @@
-/home/wikipedia/common/wmf-config/liquidthreads.php
+../../wmf-config/liquidthreads.php

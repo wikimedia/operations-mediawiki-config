@@ -1,1 +1,1 @@
-/home/wikipedia/common/wmf-config/throttle.php
+../../wmf-config/throttle.php

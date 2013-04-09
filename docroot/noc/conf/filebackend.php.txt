@@ -1,1 +1,1 @@
-/home/wikipedia/common/wmf-config/filebackend.php
+../../wmf-config/filebackend.php
