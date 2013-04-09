@@ -2612,7 +2612,7 @@ if ( $wmgUseEventLogging ) {
 		// All other wikis reference metawiki.
 		$wgEventLoggingBaseUri = '//bits.wikimedia.org/event.gif';
 		$wgEventLoggingDBname = 'metawiki';
-		$wgEventLoggingFile = 'udp://208.80.152.184:8421/EventLogging';
+		$wgEventLoggingFile = 'udp://10.64.21.123:8421/EventLogging';  // vanadium
 		$wgEventLoggingSchemaIndexUri = 'http://meta.wikimedia.org/w/index.php';
 	}
 	if ( $wgEventLoggingDBname === $wgDBname ) {
