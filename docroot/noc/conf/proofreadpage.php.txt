@@ -1,1 +1,1 @@
-../../wmf-config/proofreadpage.php
+../../../wmf-config/proofreadpage.php

@@ -1,1 +1,1 @@
-../../wmf-config/codereview.php
+../../../wmf-config/codereview.php

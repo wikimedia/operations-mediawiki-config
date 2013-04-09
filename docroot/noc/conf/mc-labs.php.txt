@@ -1,1 +1,1 @@
-../../wmf-config/mc-labs.php
+../../../wmf-config/mc-labs.php
