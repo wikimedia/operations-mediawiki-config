@@ -1,1 +1,1 @@
-../../../wmf-config/abusefilter.php
+../../wmf-config/abusefilter.php

@@ -1,1 +1,1 @@
-../../../wmf-config/CommonSettings.php
+../../wmf-config/CommonSettings.php

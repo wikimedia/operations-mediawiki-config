@@ -1,19 +1,19 @@
 <?php
+// Only allow viewing of files of which there is a copy (or link)
+// in noc/conf/* by the same name.
+$viewFilenames = array_map( 'basename', glob( __DIR__ . '/*' ) );
+
 $srcFilename = $_GET['file'];
+
 $viewFilename = false;
 $srcDir = false;
 
-// Build whitelist
-// Only allow viewing of files of which there is a link noc/conf/* by the same name.
-$viewFilenames = array_map( 'basename', glob( __DIR__ . '/*' ) );
-
-foreach ( $viewFilenames as &$viewFilename ) {
-	// Map .txt links to the original filename
-	if ( substr( $viewFilename, -4 ) === '.txt' ) {
-		$viewFilename =  substr( $viewFilename, 0, -4 );
-	}
-	if ( $srcFilename === $viewFilename ) {
-		$viewFilename = $viewFilename;
+foreach ( $viewFilenames as $view ) {
+	$src = substr( $view, -4 ) === '.txt'
+		? substr( $view, 0, -4 )
+		: $view;
+	if ( $srcFilename === $src ) {
+		$viewFilename = $view;
 		break;
 	}
 }
@@ -22,19 +22,19 @@ ob_start( 'ob_gzhandler' );
 header( 'Content-Type: text/html; charset=utf-8' );
 
 if ( !$viewFilename ) {
-	header( "HTTP/1.1 404 Not Found" );
-	if ( isset( $_SERVER['HTTP_REFERER'] ) && strpos( strtolower( $_SERVER['HTTP_REFERER'] ), 'google' ) !== false ) {
+	# Secret site password distribution :-D
+	# First implement access control
+	if ( isset( $_SERVER['HTTP_REFERER'] ) && strpos( $_SERVER['HTTP_REFERER'], 'google' ) !== false ) {
+		header( "HTTP/1.1 404 Not Found" );
 		echo "File not found\n";
 		exit;
 	}
-	// Easter egg
+	# OK, authenticated developer, send password
 	$hlHtml = highlight_string( '<'."?php\n\$secretSitePassword = 'jgmeidj28gms';\n", true );
-
 } else {
-	// Location: /home/wikipedia/common/ | docroot/noc/conf
-	$baseSrcDir = dirname( dirname( dirname( __DIR__ ) ) );
+	$baseSrcDir = '/home/wikipedia/common';
 
-	// Find the original
+	// Find where it is
 	if ( file_exists( "$baseSrcDir/wmf-config/$srcFilename" ) ) {
 		$srcPath = "$baseSrcDir/wmf-config/$srcFilename";
 		$srcDir = 'wmf-config/';
@@ -51,7 +51,7 @@ if ( !$viewFilename ) {
 			$hlHtml = str_replace( '&nbsp;', ' ', $hlHtml ); // https://bugzilla.wikimedia.org/19253
 			$hlHtml = str_replace( '    ', "\t", $hlHtml ); // convert 4 spaces to 1 tab character; bug #36576
 		} else {
-			$hlHtml = htmlspecialchars( file_get_contents( $srcPath ) );
+			$hlHtml = htmlspecialchars( file_get_contents( __DIR__ . '/' . $srcFilename ) );
 		}
 	} else {
 		$hlHtml = 'Failed to read file. :(';
@@ -67,9 +67,8 @@ $urlViewFilename = htmlspecialchars( urlencode( $viewFilename ) );
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title><?php echo $titleSrcFilename; ?> - Wikimedia configuration files</title>
-	<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wmf.ico">
-	<link rel="stylesheet" href="../base.css">
+	<title><?php echo $titleSrcFilename; ?></title>
+	<link rel="stylesheet" href="/base.css">
 </head>
 <body>
 <h1><a href="./">&laquo;</a> <?php echo $titleSrcFilename; ?></h1>
