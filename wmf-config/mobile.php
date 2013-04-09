@@ -172,3 +172,12 @@ $wgMFLoginHandshakeUrl = $wmgMFLoginHandshakeUrl;
 // Enable X-Analytics logging
 $wgMFEnableXAnalyticsLogging = $wmgMFEnableXAnalyticsLogging;
 
+if ( $wmgMFVaryResources ) {
+	$wgMFVaryResources = true;
+	// Point mobile load.php requests to a special path on bits that gets X-Device headers
+	$wgHooks['EnterMobileMode'][] = function() {
+		global $wgLoadScript;
+		$wgLoadScript = str_replace( 'bits.wikimedia.org/', 'bits.wikimedia.org/m/', $wgLoadScript );
+		return true;
+	};
+}
