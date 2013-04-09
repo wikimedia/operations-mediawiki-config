@@ -1,1 +1,1 @@
-../../../wmf-config/liquidthreads.php
+../../wmf-config/liquidthreads.php

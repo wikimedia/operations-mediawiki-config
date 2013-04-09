@@ -1,1 +1,1 @@
-../../../wmf-config/db-labs.php
+../../wmf-config/db-labs.php

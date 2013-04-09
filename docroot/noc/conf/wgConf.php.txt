@@ -1,1 +1,1 @@
-../../../wmf-config/wgConf.php
+../../wmf-config/wgConf.php

@@ -1,1 +1,1 @@
-../../../wmf-config/StartProfiler.php
+../../wmf-config/StartProfiler.php

@@ -1,1 +1,1 @@
-../../../wmf-config/mc-eqiad.php
+../../wmf-config/mc-eqiad.php
