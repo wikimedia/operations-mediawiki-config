@@ -35,5 +35,5 @@ fi
 
 for i in "${files_array[@]}"
 do
-   ln -s ../../wmf-config/$i conf/$i.txt
+   ln -s ../../../wmf-config/$i conf/$i.txt
 done
