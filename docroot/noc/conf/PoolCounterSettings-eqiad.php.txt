@@ -1,1 +1,1 @@
-../../wmf-config/PoolCounterSettings-eqiad.php
+../../../wmf-config/PoolCounterSettings-eqiad.php

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<title>Wikimedia configuration files</title>
+	<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wmf.ico">
 	<link rel="stylesheet" href="../base.css">
 </head>
 <body>
@@ -28,10 +29,8 @@
 <ul>
 <?php
 	$viewFilenames = array_merge(
-		glob( __DIR__ . '/*.dat' ),
-		glob( __DIR__ . '/*.php.txt' )
+		glob( __DIR__ . '/*.txt' )
 	);
-	$viewFilenames[] = './langlist';
 	outputFiles( $viewFilenames );
 	function outputFiles( $viewFilenames, $highlight = true ) {
 		$viewFilenames = array_map( 'basename', $viewFilenames );

@@ -1,1 +1,1 @@
-../../wmf-config/lucene-labs.php
+../../../wmf-config/lucene-labs.php
