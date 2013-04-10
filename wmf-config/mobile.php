@@ -178,6 +178,8 @@ if ( $wmgMFVaryResources ) {
 	$wgHooks['EnterMobileMode'][] = function() {
 		global $wgLoadScript;
 		$wgLoadScript = str_replace( 'bits.wikimedia.org/', 'bits.wikimedia.org/m/', $wgLoadScript );
+		// testwiki's resources aren't loaded from bits, it just needs a mobile domain
+		$wgLoadScript = str_replace( 'test.wikipedia.org/w/', 'test.m.wikipedia.org/w/', $wgLoadScript );
 		return true;
 	};
 }
