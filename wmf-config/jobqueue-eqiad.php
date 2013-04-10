@@ -10,6 +10,7 @@ $wgJobTypeConf['null'] = array(
 );
 $wgJobTypeConf['AssembleUploadChunks'] = $wgJobTypeConf['null'];
 $wgJobTypeConf['PublishStashedFile'] = $wgJobTypeConf['null'];
+$wgJobTypeConf['htmlCacheUpdate'] = $wgJobTypeConf['null'];
 // Note: on server failure, this should be changed to any other redis server
 $wgJobQueueAggregator = array(
 	'class'       => 'JobQueueAggregatorRedis',
