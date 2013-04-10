@@ -11120,6 +11120,7 @@ $wgConf->settings = array(
 ),
 'wmgMFVaryResources' => array(
 	'default' => false,
+	'testwiki' => true,
 ),
 
 'wgExtraGenderNamespaces' => array(
