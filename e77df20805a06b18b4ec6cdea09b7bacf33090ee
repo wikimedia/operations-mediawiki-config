@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DuKpcLyM",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1303,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-04-10T22:25:22Z",
+      "side": 1,
+      "message": "Prefix global function with \u0027wmf\u0027.",
+      "revId": "e77df20805a06b18b4ec6cdea09b7bacf33090ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
