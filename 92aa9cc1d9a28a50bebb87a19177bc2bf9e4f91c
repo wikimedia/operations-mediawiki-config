@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dt4Nu6S4",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-10T18:41:34Z",
+      "side": 1,
+      "message": "You can omit $mode if it\u0027s unused.",
+      "revId": "92aa9cc1d9a28a50bebb87a19177bc2bf9e4f91c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
