@@ -8,6 +8,8 @@ $wgJobTypeConf['null'] = array(
 	#'redisServer' => '10.64.32.77', # rdb1002 (slave)
 	'redisConfig' => array( 'connectTimeout' => 1 )
 );
+$wgJobTypeConf['AssembleUploadChunks'] = $wgJobTypeConf['null'];
+$wgJobTypeConf['PublishStashedFile'] = $wgJobTypeConf['null'];
 // Note: on server failure, this should be changed to any other redis server
 $wgJobQueueAggregator = array(
 	'class'       => 'JobQueueAggregatorRedis',
