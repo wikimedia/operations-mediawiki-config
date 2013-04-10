@@ -177,9 +177,12 @@ if ( $wmgMFVaryResources ) {
 	// Point mobile load.php requests to a special path on bits that gets X-Device headers
 	$wgHooks['EnterMobileMode'][] = function() {
 		global $wgLoadScript;
-		$wgLoadScript = str_replace( 'bits.wikimedia.org/', 'bits.wikimedia.org/m/', $wgLoadScript );
-		// testwiki's resources aren't loaded from bits, it just needs a mobile domain
-		$wgLoadScript = str_replace( 'test.wikipedia.org/w/', 'test.m.wikipedia.org/w/', $wgLoadScript );
+		if ( $wgDBname === 'testwiki' ) {
+			// testwiki's resources aren't loaded from bits, it just needs a mobile domain
+			$wgLoadScript = '//test.m.wikipedia.org/w/load.php';
+		} else {
+			$wgLoadScript = str_replace( 'bits.wikimedia.org/', 'bits.wikimedia.org/m/', $wgLoadScript );
+		}
 		return true;
 	};
 }
