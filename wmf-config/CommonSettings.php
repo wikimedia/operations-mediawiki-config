@@ -2489,6 +2489,9 @@ if ( $wmgUseEcho ) {
 			'email' => true,
 		),
 	);
+
+	$wgJobTypeConf['MWEchoNotificationEmailBundleJob'] = array( 'checkDelay' => true ) + $wgJobTypeConf['default'];
+
 	$wgEchoConfig['eventlogging']['Echo']['enabled'] = true;
 	$wgEchoConfig['eventlogging']['Echo']['revision'] = 5364744;
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
