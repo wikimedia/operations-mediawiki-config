@@ -10387,7 +10387,7 @@ $wgConf->settings = array(
 
 'wmgVectorSectionEditLinks' => array(
 	'default' => false,
-	'testwiki' => true,
+	'testwiki' => false,
 ),
 
 'wmgUseArticleFeedback' => array(
