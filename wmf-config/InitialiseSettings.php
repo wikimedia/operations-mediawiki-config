@@ -11877,7 +11877,7 @@ $wgConf->settings = array(
 
 'wmgUseEcho' => array(
 	'default' => false,
-	'testwiki' => true,
+	'testwiki' => false,
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
 ),
