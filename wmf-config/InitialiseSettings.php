@@ -6505,6 +6505,14 @@ $wgConf->settings = array(
 			'rollbacker' => array( 100, 60 ),
 		),
 	),
+	'+wikidatawiki' => array(
+		'edit' => array(
+			// 20 edits per min for all users on wikidata
+			'anon' => array( 20, 60 ),
+			'newbie' => array( 20, 60 ),
+			'user' => array( 20, 60 ),
+		),
+	),
 ),
 # @} end of wgRateLimits
 
