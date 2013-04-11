@@ -2496,6 +2496,7 @@ if ( $wmgUseEcho ) {
 	$wgEchoConfig['eventlogging']['Echo']['revision'] = 5364744;
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
+	$wgEchoBundleEmailInterval = $wmgEchoBundleEmailInterval;
 }
 
 if ( $wmgUseThanks ) {

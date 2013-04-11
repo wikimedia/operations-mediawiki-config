@@ -11892,6 +11892,13 @@ $wgConf->settings = array(
 	'default' => 'Wikimedia Foundation, 149 New Montgomery St., 3rd Fl., San Francisco, CA 94105.',
 ),
 
+// The time interval in seconds between each bundle-able email notification
+'wmgEchoBundleEmailInterval' => array(
+	'default' => 0, // no email bundling
+	'test2wiki' => 300,
+	'mediawikiwiki' => 14400,
+),
+
 'wmgUseThanks' => array(
 	'default' => false,
 	'testwiki' => true,
