@@ -176,7 +176,7 @@ if ( $wmgMFVaryResources ) {
 	$wgMFVaryResources = true;
 	// Point mobile load.php requests to a special path on bits that gets X-Device headers
 	$wgHooks['EnterMobileMode'][] = function() {
-		global $wgLoadScript;
+		global $wgDBname, $wgLoadScript;
 		if ( $wgDBname === 'testwiki' ) {
 			// testwiki's resources aren't loaded from bits, it just needs a mobile domain
 			$wgLoadScript = '//test.m.wikipedia.org/w/load.php';
