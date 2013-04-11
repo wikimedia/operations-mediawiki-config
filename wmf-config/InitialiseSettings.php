@@ -11827,6 +11827,10 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 	'enwiki' => true,
 ),
+'wmgGettingStartedExcludedCategories' => array(
+	'default' => array(),
+	'enwiki' => array( 'Living_people' ),
+),
 'wmgUseGuidedTour' => array(
 	'default' => false,
 	'testwiki' => true,
