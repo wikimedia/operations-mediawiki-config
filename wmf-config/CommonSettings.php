@@ -1710,7 +1710,7 @@ if ( $wmgUseCentralNotice ) {
 		$wgNoticeInfrastructure = true;
 	}
 
-	// Set fundraising banners to use HTTPS on foundatoin wiki
+	// Set fundraising banners to use HTTPS on foundation wiki
 	$wgNoticeFundraisingUrl = 'https://donate.wikimedia.org/wiki/Special:LandingCheck';
 
 	// No caching for banners on testwiki, so we can develop them there a bit faster - NeilK 2012-01-16
@@ -1719,19 +1719,26 @@ if ( $wmgUseCentralNotice ) {
 		$wgNoticeBannerMaxAge = 0;
 	}
 
-	// Enable CentralNotice/Translate on testwiki for deployment testing/user feedback
-	if ( $wgDBname == 'testwiki' ) {
-		$wgNoticeUseTranslateExtension = true;
+	// Enable the CentralNotice/Translate integration
+	$wgNoticeUseTranslateExtension = true;
+	/* Hopefully we don't need to use this anymore
+	$wgExtraNamespaces[866] = 'CNBanner';
+	$wgNamespacesWithSubpages[866] = true;
+	$wgTranslateMessageNamespaces[] = 866;
 
-		// These are a stopgap until we figure out why namespaces don't get registered
-		// from post-init hooks
-		$wgExtraNamespaces[866] = 'CNBanner';
-		$wgNamespacesWithSubpages[866] = true;
-		$wgTranslateMessageNamespaces[] = 866;
+	$wgExtraNamespaces[867] = 'CNBanner_talk';
+	$wgNamespacesWithSubpages[867] = true;
+	*/
 
-		$wgExtraNamespaces[867] = 'CNBanner_talk';
-		$wgNamespacesWithSubpages[867] = true;
-	}
+	$wgTranslateWorkflowStates['Centralnotice-tgroup'] = array(
+		'new' => array( 'color' => 'FF0000' ), // red
+		'needs_proofreading' => array( 'color' => '0000FF' ), // blue
+		'ready' => array( 'color' => 'FFFF00' ), // yellow
+		'published' => array(
+			'color' => '00FF00', // green
+			'right' => 'centralnotice-admin',
+		),
+	);
 }
 
 // Set CentralNotice banner hide cookie; Needs to be enabled for all wikis that display banners ~awjr 2011-11-07
