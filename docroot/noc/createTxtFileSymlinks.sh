@@ -1,8 +1,8 @@
 #!/bin/bash
 cd $(dirname $0)/conf
 
-files_array=(
-	# wmf-config/*.php
+# [mediawiki-config]/wmf-config/
+wmf_config_files=(
 	CommonSettings-labs.php
 	CommonSettings.php
 	InitialiseSettings-labs.php
@@ -37,18 +37,35 @@ files_array=(
 	proofreadpage.php
 	throttle.php
 	wgConf.php
+)
 
+# [mediawiki-config]/
+misc_files=(
 	wikiversions.dat
 	langlist
 )
 
-# if -e returns false if there is a symlink but target does not exist locally
 if ls ./*.txt >/dev/null 2>&1
 then
 	rm ./*.txt
 fi
 
-for i in "${files_array[@]}"
+for i in "${wmf_config_files[@]}"
 do
-   ln -s ../../../wmf-config/$i ./$i.txt
+	ln -s ../../../wmf-config/$i ./$i.txt
+done
+
+for i in "${misc_files[@]}"
+do
+	ln -s ../../../$i ./$i.txt
+
+	# backwards compatibity: Though non-txt sometimes triggers
+	# a download in browsers (so we use .txt for everything now)
+	# some users (RT-4927) still have links to /langlist or
+	# /wikiversions.dat
+	if [[ -e ./$i || -L ./$i ]]
+	then
+		rm ./$i
+	fi
+	ln -s ../../../$i ./$i
 done

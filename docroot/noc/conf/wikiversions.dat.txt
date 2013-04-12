@@ -1,1 +1,1 @@
-../../../wmf-config/wikiversions.dat
+../../../wikiversions.dat
