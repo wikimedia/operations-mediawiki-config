@@ -4226,6 +4226,7 @@ $wgConf->settings = array(
 		'EventLogging'  => "udp://$wmfUdp2logDest/eventlogging",
 		'torblock'  => "udp://$wmfUdp2logDest/torblock",
 		'mobile'  => "udp://$wmfUdp2logDest/mobile",
+		'mwsearch' => "upd://$wmfUdp2logDest/mwsearch",
 	),
 
 	'+private' => array(
