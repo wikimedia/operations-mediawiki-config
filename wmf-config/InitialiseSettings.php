@@ -10080,7 +10080,9 @@ $wgConf->settings = array(
 ),
 
 'wmgUserDailyContribs' => array(
-	'default'	=> true, // For clicktracking usability stuff
+	// Actively used by researchers and analysts.
+	// Contact person: Dario Taraborelli <dtaraborelli@wikimedia.org>
+	'default'	=> true,
 ),
 
 'wgVectorUseIconWatch' => array(
