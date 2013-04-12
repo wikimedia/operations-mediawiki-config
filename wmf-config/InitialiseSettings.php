@@ -9753,6 +9753,7 @@ $wgConf->settings = array(
 	'ruwikiversity' => true,
 	'sewikimedia' => true, # Bug 38988
 	'simplewiki' => true, # 2009-02-18
+	'shwiki' => true, # Bug 47166
 	'skwiki' => true, # bug 22038
 	'slwiki' => true,
 	'sourceswiki' => true,
