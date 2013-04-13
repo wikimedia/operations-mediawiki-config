@@ -1,81 +1,93 @@
 <?php
 // Only allow viewing of files of which there is a copy (or link)
 // in noc/conf/* by the same name.
-$viewFilenames = array_map( 'basename', glob( __DIR__ . '/*' ) );
+$selectableFilepaths = glob( __DIR__ . '/*' );
 
-$srcFilename = $_GET['file'];
+// Name of file from user input
+$selectedFileName = $_GET['file'];
 
-$viewFilename = false;
-$srcDir = false;
+// Absolute path to file on disk
+$selectedFilePath = false;
 
-foreach ( $viewFilenames as $view ) {
-	$src = substr( $view, -4 ) === '.txt'
-		? substr( $view, 0, -4 )
-		: $view;
-	if ( $srcFilename === $src ) {
-		$viewFilename = $view;
+// Path to file in mediawiki-config repository
+$selectedFileRepoDirName = false;
+$selectedFileRepoPath = false;
+
+// Relative path to the symlink in conf/*
+$selectedFileViewRawUrl = false;
+
+foreach ( $selectableFilepaths as $filePath ) {
+	$fileName = basename( $filePath );
+	// Map .txt links to the original filename
+	if ( substr( $fileName, -4 ) === '.txt' ) {
+		$fileName =  substr( $fileName, 0, -4 );
+	}
+	if ( $fileName === $selectedFileName ) {
+		$selectedFilePath = $filePath;
 		break;
 	}
 }
+if ( PHP_SAPI !== 'cli' ) {
+	ob_start( 'ob_gzhandler' );
+	header( 'Content-Type: text/html; charset=utf-8' );
+}
 
-ob_start( 'ob_gzhandler' );
-header( 'Content-Type: text/html; charset=utf-8' );
-
-if ( !$viewFilename ) {
-	# Secret site password distribution :-D
-	# First implement access control
-	if ( isset( $_SERVER['HTTP_REFERER'] ) && strpos( $_SERVER['HTTP_REFERER'], 'google' ) !== false ) {
+if ( !$selectedFilePath ) {
+	if ( PHP_SAPI !== 'cli' ) {
 		header( "HTTP/1.1 404 Not Found" );
+	}
+	if ( isset( $_SERVER['HTTP_REFERER'] ) && strpos( strtolower( $_SERVER['HTTP_REFERER'] ), 'google' ) !== false ) {
 		echo "File not found\n";
 		exit;
 	}
-	# OK, authenticated developer, send password
+	// Easter egg
 	$hlHtml = highlight_string( '<'."?php\n\$secretSitePassword = 'jgmeidj28gms';\n", true );
+
 } else {
-	$baseSrcDir = '/home/wikipedia/common';
+	// Follow symlink
+	if ( !file_exists( $selectedFilePath ) ) {
+		$hlHtml = 'Whitelist contains inexistant entry. :(';
+	} elseif ( !is_link( $selectedFilePath ) ) {
+		$hlHtml = 'Whitelist must only contain symlinks.';
+	} else {
+		$selectedFileViewRawUrl = './' . urlencode( basename( $selectedFilePath ) );
+		// Resolve symlink
+		// Don't use readlink since that will return a path relative to where the symlink is.
+		// Which is a problem if our PWD is not the same dir (such as in unit tests).
+		$selectedFilePath = realpath( $selectedFilePath );
+		// Figure out path to selected file in the mediawiki-config repository
+		$selectedFileRepoPath = ( dirname( $selectedFilePath ) === 'wmf-config' ? 'wmf-config/' : '' ) . $selectedFileName;
 
-	// Find where it is
-	if ( file_exists( "$baseSrcDir/wmf-config/$srcFilename" ) ) {
-		$srcPath = "$baseSrcDir/wmf-config/$srcFilename";
-		$srcDir = 'wmf-config/';
-	} elseif ( file_exists( "$baseSrcDir/$srcFilename" ) ) {
-		$srcPath = "$baseSrcDir/$srcFilename";
-		$srcDir = '';
-	}
+		if ( substr( $selectedFileName, -4 ) === '.php' ) {
 
-	// How to display it
-	if ( $srcDir !== false ) {
-		if ( substr( $srcFilename, -4 ) === '.php' ) {
-
-			$hlHtml = highlight_file( $srcPath, true );
+			$hlHtml = highlight_file( $selectedFilePath, true );
 			$hlHtml = str_replace( '&nbsp;', ' ', $hlHtml ); // https://bugzilla.wikimedia.org/19253
 			$hlHtml = str_replace( '    ', "\t", $hlHtml ); // convert 4 spaces to 1 tab character; bug #36576
 		} else {
-			$hlHtml = htmlspecialchars( file_get_contents( __DIR__ . '/' . $srcFilename ) );
+			$hlHtml = htmlspecialchars( file_get_contents( $selectedFilePath ) );
 		}
-	} else {
-		$hlHtml = 'Failed to read file. :(';
 	}
 
 	$hlHtml = "<pre>$hlHtml</pre>";
 }
 
-$titleSrcFilename = htmlspecialchars( $srcFilename );
-$urlSrcFilename = htmlspecialchars( urlencode( $srcDir . $srcFilename ) );
-$urlViewFilename = htmlspecialchars( urlencode( $viewFilename ) );
+$selectedFileNameEsc = htmlspecialchars( $selectedFileName );
+$selectedFileRepoPathEsc = htmlspecialchars( $selectedFileRepoPath );
+$selectedFileViewRawUrlEsc = htmlspecialchars( $selectedFileViewRawUrl );
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title><?php echo $titleSrcFilename; ?></title>
-	<link rel="stylesheet" href="/base.css">
+	<title><?php echo $selectedFileNameEsc; ?> - Wikimedia configuration files</title>
+	<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wmf.ico">
+	<link rel="stylesheet" href="../base.css">
 </head>
 <body>
-<h1><a href="./">&laquo;</a> <?php echo $titleSrcFilename; ?></h1>
+<h1><a href="./">&laquo;</a> <?php echo $selectedFileNameEsc; ?></h1>
 <?php
-if ( $srcDir !== false ) :
+if ( $selectedFilePath !== false ) :
 ?>
-<p>(<a href="https://gerrit.wikimedia.org/r/gitweb?p=operations/mediawiki-config.git;a=history;f=<?php echo $urlSrcFilename; ?>;hb=HEAD">version control</a> &bull; <a href="https://gerrit.wikimedia.org/r/gitweb?p=operations/mediawiki-config.git;a=blame;f=<?php echo $urlSrcFilename; ?>;hb=HEAD">blame</a> &bull; <a href="./<?php echo $urlViewFilename; ?>">raw text</a>)</p>
+<p>(<a href="https://gerrit.wikimedia.org/r/gitweb?p=operations/mediawiki-config.git;a=history;f=<?php echo $selectedFileRepoPathEsc; ?>;hb=HEAD">version control</a> &bull; <a href="https://gerrit.wikimedia.org/r/gitweb?p=operations/mediawiki-config.git;a=blame;f=<?php echo $selectedFileRepoPathEsc; ?>;hb=HEAD">blame</a> &bull; <a href="<?php echo $selectedFileViewRawUrlEsc; ?>">raw text</a>)</p>
 <?php
 endif;
 ?>
