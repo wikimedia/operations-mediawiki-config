@@ -1304,7 +1304,9 @@ if ( $wgDBname == 'enwiki' ) {
 
 if ( $wmgUseFooterContactLink ) {
 	$wgHooks['SkinTemplateOutputPageBeforeExec'][] = function ( $sk, &$tpl ) {
-		$tpl->set( 'contact', $sk->footerLink( 'contact', 'contact-url' ) );
+		$contactLink = Html::element( 'a', array( 'href' => $sk->msg( 'contact-url' )->escaped() ),
+			$sk->msg( 'contact' )->text() );
+		$tpl->set( 'contact', $contactLink );
 		$tpl->data['footerlinks']['places'][] = 'contact';
 		return true;
 	};
