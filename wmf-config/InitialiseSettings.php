@@ -10204,7 +10204,7 @@ $wgConf->settings = array(
 
 'wgDisabledVariants' => array(
 	'default' => array(),
-	'zhwiki' => array( 'zh-mo', 'zh-my' ),
+	'zhwiki' => array( 'zh-my' ),
 	'zhwikibooks' => array( 'zh-mo', 'zh-my' ),
 	'zhwikinews' => array( 'zh-mo', 'zh-my' ),
 	'zhwikiquote' => array( 'zh-mo', 'zh-my' ),
