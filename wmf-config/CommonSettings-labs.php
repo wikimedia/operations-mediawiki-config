@@ -68,4 +68,9 @@ if ( $wgDBname == "enwikivoyage" || $wgDBname == "dewikivoyage" ) {
 	$wgUseInstantCommons = true;
 }
 
+# Backends:
+if( $wmgUseMath ) {
+	$wgMathFileBackend = false;
+}
+
 } # end safeguard
