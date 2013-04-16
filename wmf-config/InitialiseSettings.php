@@ -10080,6 +10080,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseFooterContactLink' => array(
+	// Make sure 'MediaWiki:Contact' and 'MediaWiki:Contact-url' are defined.
 	'default' => false,
 	'enwiki' => true,  // Bug 46392
 ),
