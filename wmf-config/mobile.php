@@ -151,16 +151,24 @@ if ( $wgMFLogEvents && $wmgUseEventLogging ) {
 		'schema' => 'MobileBetaWatchlist',
 		'revision' => 5281061,
 		'targets' => 'mobile',
-		'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 	);
 
 	$wgResourceModules['mobile.uploads.schema'] = array(
 		'class' => 'ResourceLoaderSchemaModule',
 		'schema' => 'MobileWebUploads',
-		'revision' => 5281063,
+		'revision' => 5383883,
 		'targets' => 'mobile',
-		'mobileTargets' => array( 'stable', 'beta', 'alpha' ),
 	);
+
+	$wgHooks['EnableMobileModules'][] = function( $out, $mode ) {
+		$modules = array(
+			'mobile.uploads.schema',
+			'mobile.watchlist.schema',
+		);
+		// add regardless of mode
+		$out->addModules( $modules );
+		return true;
+	};
 }
 
 // Force HTTPS for login/account creation
