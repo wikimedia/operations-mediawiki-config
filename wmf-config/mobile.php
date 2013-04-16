@@ -180,7 +180,9 @@ $wgMFLoginHandshakeUrl = $wmgMFLoginHandshakeUrl;
 // Enable X-Analytics logging
 $wgMFEnableXAnalyticsLogging = $wmgMFEnableXAnalyticsLogging;
 
-if ( $wmgMFVaryResources ) {
+// Enable $wgMFVaryResources only if there's a mobile site (otherwise we'll end up
+// looking for X-WAP headers in requests coming from Squid
+if ( $wmgMFVaryResources && $wgMobileUrlTemplate !== '' ) {
 	$wgMFVaryResources = true;
 	// Point mobile load.php requests to a special path on bits that gets X-Device headers
 	$wgHooks['EnterMobileMode'][] = function() {
