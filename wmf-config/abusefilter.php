@@ -45,6 +45,11 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 	$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true;
 	$wgAbuseFilterAvailableActions[] = 'block';
 	$wgAbuseFilterBlockDuration = '2 hours';
+
+} elseif ( $wgDBname == 'cswiktionary' ) {
+	$wgAbuseFilterNotifications = "udp";
+	$wgAbuseFilterNotificationsPrivate = true;
+
 } elseif ( $wgDBname == 'dewiki' ) {
 	// Removed custom AbuseFilter settings per bug 18223 --Andrew 2009-03-29
 	// Where on earth did this come from? --Andrew
