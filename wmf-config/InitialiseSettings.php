@@ -10081,9 +10081,7 @@ $wgConf->settings = array(
 
 'wmgUseFooterContactLink' => array(
 	'default' => false,
-	// 'enwiki' => true,  // Bug 46392
-	'test2wiki' => true,
-	'testwiki' => true,
+	'enwiki' => true,  // Bug 46392
 ),
 
 'wmgUserDailyContribs' => array(
