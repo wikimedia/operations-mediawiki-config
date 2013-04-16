@@ -111,16 +111,16 @@ $wgLBFactoryConf = array(
 	's4' => array(
 		'db1038'   => 0,
 		'db31'	 => 0, # pmtpa master
-		'db33'	 => 100, # Snapshot host
-		'db51'	 => 500,
+		'db51'	 => 300, # Snapshot host
 		'db65'	 => 500, # innodb_file_per_table
+		'db72'	 => 500, # innodb_file_per_table
 	),
 	's5' => array(
 		'db1039'   => 0,
 		'db45'	 => 0, # pmtpa master
-		'db35'	 => 500,
 		'db44'	 => 500, # snapshot host
 		'db55'	 => 1000, # innodb_file_per_table
+		'db73'	 => 1000, # innodb_file_per_table
 	),
 	's6' => array(
 		'db1006'   => 0,
