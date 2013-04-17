@@ -1169,6 +1169,17 @@ $wgHiddenPrefs[] = 'realname';
 # Default address gets rejected by some mail hosts
 $wgPasswordSender = 'wiki@wikimedia.org';
 
+# Outgoing from and reply to address for Echo notifications extension
+$wgNotificationSender = 'no-reply-notifications@wikimedia.org';
+$wgNotificationSenderName = 'Wikimedia';
+$wgNotificationReplyName = 'No Reply';
+
+# Near term deployments are mediawiki.org (where defaults will work) and enwiki (that needs overrides)
+if ( $wgDBname == 'enwiki' ) {
+	$wgNotificationSender = 'no-reply-notifications@wikipedia.org';
+	$wgNotificationSenderName = 'Wikipedia';
+}
+
 # e-mailing password based on e-mail address (bug 34386)
 $wgPasswordResetRoutes['email'] = true;
 
