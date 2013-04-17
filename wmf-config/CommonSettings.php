@@ -2180,6 +2180,7 @@ if ( $wmgUseVisualEditor ) {
 	);
 	$wgVisualEditorParsoidURL = 'http://' . $wmgVisualEditorParsoidHosts[$wmfDatacenter] . ':6081';
 	$wgVisualEditorParsoidPrefix = $wmgVisualEditorParsoidPrefix;
+	$wgVisualEditorParsoidProblemReportURL = 'http://parsoid.wmflabs.org/_bugs/';
 	$wgVisualEditorNamespaces = $wmgVisualEditorNamespaces;
 
 	// VisualEditor namespace
