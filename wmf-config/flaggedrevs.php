@@ -501,8 +501,8 @@ elseif ( $wgDBname == 'ptwikisource' ) {
 
 elseif ( $wgDBname == 'ruwiki' ) {
 
-	// Bug 37675
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100 );
+	// Bugs 37675, 47337
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 );
 
 	$wgFlaggedRevTags['accuracy']['levels'] = 3; // Is this needed?
 	$wgFlaggedRevsOverride = false;
