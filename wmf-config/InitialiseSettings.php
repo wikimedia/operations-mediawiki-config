@@ -2710,6 +2710,12 @@ $wgConf->settings = array(
 	'+incubatorwiki' => array(
 		'I' => NS_PROJECT,
 	),
+	'+iswikisource' => array(
+		'Portal' => 100, // Bug 44164
+		'Portal_talk' => 101, // Bug 44164
+		'Author' => 102, // Bug 44164
+		'Author_talk' => 103, // Bug 44164
+	),
 	'+iswiktionary' => array(
 		'Wiktionary' => NS_PROJECT,
 		'Wikiorðabókspjall' => 5, // changed http://bugzilla.wikimedia.org/show_bug.cgi?id=7754
@@ -5275,6 +5281,12 @@ $wgConf->settings = array(
 		106 => 'Portal',
 		107 => 'Pembicaraan_Portal',
 	),
+	'iswikisource' => array(
+		100 => 'Gátt', // Bug 44164
+		101 => 'Gáttarspjall', // Bug 44164
+		102 => 'Höfundur', // Bug 44164
+		103 => 'Höfundarspjall', // Bug 44164
+	),
 	'itwikisource' => array(
 		102 => 'Autore',
 		103 => 'Discussioni_autore',
@@ -6438,6 +6450,7 @@ $wgConf->settings = array(
 	'+hywikisource' => array( 100 => 1, 106 => 1 ),
 	'+idwikibooks' => array( 100 => 1, 102 => 1 ),
 	'+idwikisource' => array( 100 => 1, 102 => 1 ),
+	'+iswikisource' => array( 100 => 1, 102 => 1 ), // Bug 44164
 	'+itwikisource' => array( 102 => 1, 110 => 1 ),
 	'+itwikivoyage' => array( 100 => 1, 104 => 1, 106 => 1 ),
 	'+kowikisource' => array( 100 => 1 ),
