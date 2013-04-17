@@ -86,7 +86,7 @@ $wgLBFactoryConf = array(
 #
 'sectionLoads' => array(
 	's1' => array(
-		'db1017'    => 0,
+		'db1056'    => 0,
 		'db63'    => 0, # pmtpa master
 		'db32'	  => 0, # snapshot host
 		'db59'    => 200, # special contrib, watchlist, etc
@@ -116,7 +116,7 @@ $wgLBFactoryConf = array(
 		'db65'	 => 500, # innodb_file_per_table
 	),
 	's5' => array(
-		'db1039'   => 0,
+		'db1058'   => 0,
 		'db45'	 => 0, # pmtpa master
 		'db35'	 => 500,
 		'db44'	 => 500, # snapshot host
