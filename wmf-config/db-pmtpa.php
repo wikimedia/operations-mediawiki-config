@@ -86,7 +86,7 @@ $wgLBFactoryConf = array(
 #
 'sectionLoads' => array(
 	's1' => array(
-		'db1017'    => 0,
+		'db1056'    => 0,
 		'db63'    => 0, # pmtpa master
 		'db32'	  => 0, # snapshot host
 		'db59'    => 200, # special contrib, watchlist, etc
@@ -116,7 +116,7 @@ $wgLBFactoryConf = array(
 		'db65'	 => 500, # innodb_file_per_table
 	),
 	's5' => array(
-		'db1039'   => 0,
+		'db1058'   => 0,
 		'db45'	 => 0, # pmtpa master
 		'db35'	 => 500,
 		'db44'	 => 500, # snapshot host
@@ -247,6 +247,8 @@ $wgLBFactoryConf = array(
 	'db1047' => '10.64.16.36', #do not remove or comment out
 	'db1049' => '10.64.16.144', #do not remove or comment out
 	'db1050' => '10.64.16.145', #do not remove or comment out
+	'db1056' => '10.64.32.26', #do not remove or comment out
+	'db1058' => '10.64.32.28', #do not remove or comment out
 	'pc1'		=> '10.0.0.221', # do not remove or comment out # Parser Cache
 ),
 
