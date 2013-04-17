@@ -6835,7 +6835,10 @@ $wgConf->settings = array(
 	),
 	'enwiki' => array(
 		'*' => array( 'createpage' => false ),
-		'user' => array( 'move' => false ), // autoconfirmed only
+		'user' => array( 
+			'move' => false, // autoconfirmed only
+			'collectionsaveasuserpage' => true, // Bug 46944
+		),
 		'autoconfirmed' => array( 'patrol' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=12007
 		'founder' => array( 'userrights' => true ),
 		'rollbacker' => array( 'rollback' => true ),
