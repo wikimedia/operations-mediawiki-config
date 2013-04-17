@@ -6898,14 +6898,19 @@ $wgConf->settings = array(
 		'flood' => array( 'bot' => true ),
 	),
 	'eswikivoyage' => array(
-		'rollbacker' => array( 'rollback' => true ),
-		'patroller' => array( 'patrol' => true ),
-	), // bug 44285
-	// http://bugzilla.wikimedia.org/show_bug.cgi?id=7152
+		'rollbacker' => array( 
+			'rollback' => true, // Bug 44285
+			'autopatrol' => true, // Bug 47325
+		),
+		'patroller' => array( 
+			'patrol' => true, // Bug 44285
+			'autopatrol' => true, // Bug 47325
+		),
+	),
 	'eswiktionary' => array(
-		'user' => array( 'upload' => false ),
-		'autoconfirmed' => array( 'upload' => false ),
-		'sysop' => array( 'upload' => true ),
+		'user' => array( 'upload' => false ), // Bug 7152
+		'autoconfirmed' => array( 'upload' => false ), // Bug 7152
+		'sysop' => array( 'upload' => true ), // Bug 7152
 		'patroller' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -7731,8 +7736,9 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'editprotected', 'flood', ),
 	),
 	'+eswikivoyage' => array(
-		'sysop' => array( 'rollbacker', 'patroller', ),
-	), // bug 44285
+		'bureaucrat' => array( 'confirmed', ), // Bug 47325
+		'sysop' => array( 'rollbacker', 'patroller', ), // Bug 44285
+	),
 	'+eswiktionary' => array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller', 'rollbacker' ),
 	),
@@ -8140,8 +8146,9 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'editprotected', 'flood', ),
 	),
 	'+eswikivoyage' => array(
-		'sysop' => array( 'rollbacker', 'patroller', ),
-	), // bug 44285
+		'bureaucrat' => array( 'confirmed', ), // Bug 47325
+		'sysop' => array( 'rollbacker', 'patroller', ), // Bug 44285
+	),
 	'+eswiktionary' => array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller', 'rollbacker' ),
 	),
