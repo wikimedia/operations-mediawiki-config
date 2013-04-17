@@ -11903,6 +11903,12 @@ $wgConf->settings = array(
 	'default' => 'Wikimedia Foundation, 149 New Montgomery St., 3rd Fl., San Francisco, CA 94105.',
 ),
 
+# from and reply to address when Echo sends email notifications
+'wmgNotificationSender' => array(
+	'default' => 'no-reply-notifications@wikimedia.org',
+	'enwiki' => 'no-reply-notifications@wikipedia.org',
+),
+
 // The time interval in seconds between each bundle-able email notification
 'wmgEchoBundleEmailInterval' => array(
 	'default' => 0, // no email bundling
