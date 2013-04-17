@@ -10003,6 +10003,7 @@ $wgConf->settings = array(
 	'default' => array( 120, 150, 180, 200, 220, 250, 300 ),
 	'+itwikiquote' => array( 360 ),
 	'svwiki' => array( 120, 200, 250, 300, 360 ),
+	'enwikivoyage' => array ( 120, 150, 180, 220, 270, 300, 350, 400, 450, 500 ),
 ),
 'wmgThumbsizeIndex' => array(
 	'default' => 4,
