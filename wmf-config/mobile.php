@@ -120,12 +120,13 @@ if ( $wmgMobileFrontend ) {
 	function wmfSetupMobileLoadScript() {
 		global $wgDBname, $wgLoadScript;
 
-		if ( MobileContext::singleton()->shouldDisplayMobileView()
-		if ( $wgDBname === 'testwiki' ) {
-			// testwiki's resources aren't loaded from bits, it just needs a mobile domain
-			$wgLoadScript = '//test.m.wikipedia.org/w/load.php';
-		} else {
-			$wgLoadScript = str_replace( 'bits.wikimedia.org/', 'bits.wikimedia.org/m/', $wgLoadScript );
+		if ( MobileContext::singleton()->shouldDisplayMobileView() ) {
+			if ( $wgDBname === 'testwiki' ) {
+				// testwiki's resources aren't loaded from bits, it just needs a mobile domain
+				$wgLoadScript = '//test.m.wikipedia.org/w/load.php';
+			} else {
+				$wgLoadScript = str_replace( 'bits.wikimedia.org/', 'bits.wikimedia.org/m/', $wgLoadScript );
+			}
 		}
 	}
 
