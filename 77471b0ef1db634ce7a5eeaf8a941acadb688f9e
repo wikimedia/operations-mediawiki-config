@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DvmdFDBc",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 123,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-04-18T08:40:13Z",
+      "side": 1,
+      "message": "There is the missing semicolon",
+      "revId": "77471b0ef1db634ce7a5eeaf8a941acadb688f9e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
