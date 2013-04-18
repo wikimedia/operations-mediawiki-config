@@ -11111,6 +11111,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'mediawikiwiki' => true,
+	'nlwiki' => true,
 ),
 
 'wgExtraGenderNamespaces' => array(
