@@ -1,0 +1,9 @@
+Verified+2: jenkins-bot
+Code-Review+2: awjrichards <arichards@wikimedia.org>
+Verified+2: awjrichards <arichards@wikimedia.org>
+Code-Review+1: Jdlrobson <jrobson@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Thu, 18 Apr 2013 22:49:13 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/59949
+Project: operations/mediawiki-config
+Branch: refs/heads/master
