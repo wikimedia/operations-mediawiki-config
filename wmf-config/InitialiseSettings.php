@@ -2814,6 +2814,9 @@ $wgConf->settings = array(
 		'Author' => 100,
 		'Author_talk' => 101,
 	),
+	'+kowikiversity' => array(
+		'Wikiversity토론' => NS_PROJECT_TALK, // Bug 44899
+	),
 	'+kowiktionary' => array(
 		'Wikisaurus' => 110,
 		'Wikisaurus_talk' => 111,
@@ -6035,6 +6038,12 @@ $wgConf->settings = array(
 		105 => 'Topic‐ノート',
 		110 => 'Transwiki',
 		111 => 'Transwiki‐ノート',
+	),
+	'kowikiversity' => array(
+		NS_PROJECT => '위키배움터', // Bug 44899
+		NS_PROJECT_TALK => '위키배움터토론', // Bug 44899
+		102 => '포털', // Bug 44899
+		103 => '포털토론', // Bug 44899
 	),
 	// @} end of wikiversity
 
