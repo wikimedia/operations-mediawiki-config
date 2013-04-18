@@ -16,6 +16,24 @@
       "revId": "bf81ef967c141f441732d1c6c94cee79e1926239",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dvkqsl.8",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2520,
+      "author": {
+        "id": 473
+      },
+      "writtenOn": "2013-04-18T16:01:58Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "DvueFfFw",
+      "revId": "bf81ef967c141f441732d1c6c94cee79e1926239",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
