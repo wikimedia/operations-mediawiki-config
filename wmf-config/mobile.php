@@ -201,3 +201,4 @@ $wgMFLoginHandshakeUrl = $wmgMFLoginHandshakeUrl;
 // Enable X-Analytics logging
 $wgMFEnableXAnalyticsLogging = $wmgMFEnableXAnalyticsLogging;
 
+$wgMFEnableSiteNotice = $wmgMFEnableSiteNotice;
