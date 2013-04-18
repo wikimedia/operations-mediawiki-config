@@ -448,8 +448,8 @@ include( $IP . '/extensions/PagedTiffHandler/PagedTiffHandler.php' );
 $wgTiffUseTiffinfo = true;
 $wgTiffMaxMetaSize = 1048576;
 
-$wgMaxImageArea = 2.5e7; // 25MP
-$wgMaxAnimatedGifArea = 2.5e7; // 25MP
+$wgMaxImageArea = 5e7; // 50MP
+$wgMaxAnimatedGifArea = 5e7; // 50MP
 
 if ( $wgDBname == 'foundationwiki' ) { # per cary on 2010-05-11
 	$wgFileExtensions[] = 'otf';
