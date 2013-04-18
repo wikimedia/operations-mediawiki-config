@@ -132,7 +132,7 @@ if ( $wmgMobileFrontend ) {
 
 	// Enable $wgMFVaryResources only if there's a mobile site (otherwise we'll end up
 	// looking for X-WAP headers in requests coming from Squid
-	if ( $wmgMFVaryResources && $wgMobileUrlTemplate !== '' ) {
+	if ( $wmgMFVaryResources && $wmgMobileUrlTemplate !== '' ) {
 		$wgMFVaryResources = true;
 		$wgExtensionFunctions[] = 'wmfSetupMobileLoadScript';
 	}
