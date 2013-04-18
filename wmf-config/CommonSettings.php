@@ -2679,7 +2679,7 @@ if ( $wmgUseWikibaseRepo ) {
 		'string',
 	);
 
-	$wgWBSettings['changesAsJson'] = false;
+	$wgWBSettings['changesAsJson'] = true;
 
 	// Assigning the correct content models to the namespaces
 	$wgWBSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_ITEM] = NS_MAIN;
@@ -2687,7 +2687,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBSettings['idBlacklist'] = array( 1, 2, 3, 4, 5, 8, 13, 23, 24, 42, 80, 666, 1337, 1868, 1971, 2000, 2001, 2012, 2013 );
 
-	$wgWBSettings['withoutTermSearchKey'] = true;
+	$wgWBSettings['withoutTermSearchKey'] = false;
 
 	$wgWBSettings['clientDbList'] = array_merge(
 		array( 'test2wiki' => 'test2wiki' ),
@@ -2708,7 +2708,6 @@ if ( $wmgUseWikibaseClient ) {
 	require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
 	require_once( "$IP/extensions/Wikibase/client/WikibaseClient.php" );
 
-	$wgWBSettings['changesAsJson'] = false;
 	$wgWBSettings['changesDatabase'] = 'wikidatawiki';
 	$wgWBSettings['repoDatabase'] = 'wikidatawiki';
 
