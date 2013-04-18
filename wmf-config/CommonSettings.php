@@ -2519,6 +2519,9 @@ if ( $wmgUseEcho ) {
 	$wgNotificationSender = $wmgNotificationSender;
 	$wgNotificationSenderName = $wgSitename;
 	$wgNotificationReplyName = 'No Reply';
+
+	// Define the cluster database, false to use main database
+	$wgEchoCluster = $wmgEchoCluster;
 }
 
 if ( $wmgUseThanks ) {

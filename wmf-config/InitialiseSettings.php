@@ -11918,6 +11918,11 @@ $wgConf->settings = array(
 	'mediawikiwiki' => 14400,
 ),
 
+'wmgEchoCluster' => array(
+       'default' => false,
+       'testwiki' => 'extension1',
+),
+
 'wmgUseThanks' => array(
 	'default' => false,
 	'testwiki' => true,
