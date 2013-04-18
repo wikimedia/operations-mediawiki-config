@@ -2514,6 +2514,11 @@ if ( $wmgUseEcho ) {
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
 	$wgEchoBundleEmailInterval = $wmgEchoBundleEmailInterval;
+
+	# Outgoing from and reply to address for Echo notifications extension
+	$wgNotificationSender = $wmgNotificationSender;
+	$wgNotificationSenderName = $wgSitename;
+	$wgNotificationReplyName = 'No Reply';
 }
 
 if ( $wmgUseThanks ) {
