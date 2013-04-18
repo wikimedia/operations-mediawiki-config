@@ -9502,6 +9502,7 @@ $wgConf->settings = array(
 
 	'testwiki' => '//upload.wikimedia.org/wikipedia/test/apple-touch-icon.png',
 	'enwikinews' => '//upload.wikimedia.org/wikipedia/commons/4/43/Apple-touch-icon.png',
+	'enwiktionary' => '//upload.wikimedia.org/wikipedia/commons/e/e7/Wiktionary-icon.png', // Bug 46431
 	'mediawikiwiki' => '//www.mediawiki.org/Apple-touch-icon.png',
 	'usabilitywiki' => '//usability.wikimedia.org/UsabilityWiki-AppleTouch-Icon.png',
 	'wikimania2005wiki' => '//$lang.$site.org/apple-touch-icon.png',
