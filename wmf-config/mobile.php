@@ -115,6 +115,27 @@ if ( $wmgMobileFrontend ) {
 		}
 		$wgMFCustomLogos = $wmgMFCustomLogos;
 	}
+
+	// Point mobile load.php requests to a special path on bits that gets X-Device headers
+	function wmfSetupMobileLoadScript() {
+		global $wgDBname, $wgLoadScript;
+
+		if ( MobileContext::singleton()->shouldDisplayMobileView()
+		if ( $wgDBname === 'testwiki' ) {
+			// testwiki's resources aren't loaded from bits, it just needs a mobile domain
+			$wgLoadScript = '//test.m.wikipedia.org/w/load.php';
+		} else {
+			$wgLoadScript = str_replace( 'bits.wikimedia.org/', 'bits.wikimedia.org/m/', $wgLoadScript );
+		}
+		return true;
+	}
+	
+	// Enable $wgMFVaryResources only if there's a mobile site (otherwise we'll end up
+	// looking for X-WAP headers in requests coming from Squid
+	if ( $wmgMFVaryResources && $wgMobileUrlTemplate !== '' ) {
+		$wgMFVaryResources = true;
+		$wgExtensionFunctions[] = 'wmfSetupMobileLoadScript';
+	}
 }
 
 
@@ -180,30 +201,3 @@ $wgMFLoginHandshakeUrl = $wmgMFLoginHandshakeUrl;
 // Enable X-Analytics logging
 $wgMFEnableXAnalyticsLogging = $wmgMFEnableXAnalyticsLogging;
 
-function wfAdjustLoadScript() {
-	global $wgDBname, $wgLoadScript;
-	if ( $wgDBname === 'testwiki' ) {
-		// testwiki's resources aren't loaded from bits, it just needs a mobile domain
-		$wgLoadScript = '//test.m.wikipedia.org/w/load.php';
-	} else {
-		$wgLoadScript = str_replace( 'bits.wikimedia.org/', 'bits.wikimedia.org/m/', $wgLoadScript );
-	}
-}
-
-// Enable $wgMFVaryResources only if there's a mobile site (otherwise we'll end up
-// looking for X-WAP headers in requests coming from Squid
-if ( $wmgMFVaryResources && $wgMobileUrlTemplate !== '' ) {
-	$wgMFVaryResources = true;
-	// Point mobile load.php requests to a special path on bits that gets X-Device headers
-	$wgHooks['EnterMobileMode'][] = function() {
-		wfAdjustLoadScript();
-		return true;
-	};
-	// Force an update early in startup module initialization
-	$wgHooks['ResourceLoaderGetStartupModules'][] = function() {
-		if ( MobileContext::singleton()->shouldDisplayMobileView() ) {
-			wfAdjustLoadScript();
-		}
-		return true;
-	};
-}
