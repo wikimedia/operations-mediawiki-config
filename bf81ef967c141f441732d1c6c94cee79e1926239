@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DvueFfFw",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2520,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2013-04-18T08:20:43Z",
+      "side": 1,
+      "message": "This should probably be:\n\n$wgNotificationSenderName \u003d $wgSitename;\n\n..so we aren\u0027t reinventing the wheel.",
+      "revId": "bf81ef967c141f441732d1c6c94cee79e1926239",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
