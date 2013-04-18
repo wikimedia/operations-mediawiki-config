@@ -20,12 +20,11 @@ $wmgThrottlingExceptions = array();
 
 ## Add throttling definitions below.
 
-$wmfThrottlingExceptions[] = array( // Bug 47221, itwiki GLAM event
-	'from'   => '2013-04-15T10:00 +0:00',
-	'to'     => '2013-04-15T17:00 +0:00',
-	'IP'     => '159.213.138.5',
+$wmfThrottlingExceptions[] = array( // Bug 47315, itwiki GLAM event
+	'from'   => '2013-04-20T11:00 +0:00',
+	'to'     => '2013-04-20T18:00 +0:00',
+	'IP'     => '46.255.84.17',
 	'dbname' => array( 'itwiki', ),
-	'value'  => 100,
 );
 
 ## Add throttling definitions above.
