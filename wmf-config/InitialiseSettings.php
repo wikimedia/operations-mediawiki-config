@@ -1917,7 +1917,8 @@ $wgConf->settings = array(
 	'kowikiquote'	=> '위키인용집',
 	'kowikisource'  => '위키문헌',
 	'kowiktionary'  => '위키낱말사전',
-	'krcwiki'	    => 'Википедия',
+	'kowikiversity'	=> '위키배움터', // Bug 44899
+	'krcwiki'	=> 'Википедия',
 	'kuwiki'	=> 'Wîkîpediya',
 	'kuwiktionary'  => 'Wîkîferheng',
 	'kvwiki'	=> 'Википедия',
@@ -2813,6 +2814,9 @@ $wgConf->settings = array(
 		'글쓴이토론' => 101,
 		'Author' => 100,
 		'Author_talk' => 101,
+	),
+	'+kowikiversity' => array(
+		'Wikiversity토론' => NS_PROJECT_TALK, // Bug 44899
 	),
 	'+kowiktionary' => array(
 		'Wikisaurus' => 110,
@@ -6035,6 +6039,11 @@ $wgConf->settings = array(
 		105 => 'Topic‐ノート',
 		110 => 'Transwiki',
 		111 => 'Transwiki‐ノート',
+	),
+	'kowikiversity' => array(
+		NS_PROJECT_TALK => '위키배움터토론', // Bug 44899
+		102 => '포털', // Bug 44899
+		103 => '포털토론', // Bug 44899
 	),
 	// @} end of wikiversity
 
