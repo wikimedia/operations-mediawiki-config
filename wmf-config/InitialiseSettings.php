@@ -4200,6 +4200,7 @@ $wgConf->settings = array(
 		'exec' => "udp://$wmfUdp2logDest/exec",
 		'ExternalStoreDB' => "udp://$wmfUdp2logDest/ExternalStoreDB",
 		'runJobs' => "udp://$wmfUdp2logDest/runJobs",
+		'JobQueueRedis' => "udp://$wmfUdp2logDest/redis-jobqueue",
 		'es-hit' => "udp://$wmfUdp2logDest/es-hit",
 		'poolcounter' => "udp://$wmfUdp2logDest/poolcounter",
 		'lc-recache' => "udp://$wmfUdp2logDest/lc-recache",
