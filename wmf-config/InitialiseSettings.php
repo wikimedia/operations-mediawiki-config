@@ -3283,6 +3283,10 @@ $wgConf->settings = array(
 		'Portal' => 100, // Bug 19569
 		'Portal_talk' => 101, // Bug 19569
 	),
+	'+uzwiki' => array(
+		'VP' => NS_PROJECT, // Bug 46534
+		'VM' => NS_PROJECT_TALK, // Bug 46534
+	),
 	'+vecwikisource' => array(
 		'Author' => 100,
 		'Author_talk' => 101,
