@@ -1792,6 +1792,7 @@ $wgConf->settings = array(
 	'dkwikimedia'   => 'Wikimedia',
 	'donatewiki'    => 'Donate',
 	'dsbwiki'       => 'Wikipedija',
+	'dvwiktionary'	=> 'ވިކިރަދީފު', // Bug 46846
 	'elwiki'	=> 'Βικιπαίδεια',
 	'elwikibooks'   => 'Βικιβιβλία',
 	'elwikinews'    => 'Βικινέα',
@@ -2481,6 +2482,9 @@ $wgConf->settings = array(
 	'+dvwiki' => array(
 		'Portal' => 100,
 		'Portal_talk' => 101,
+	),
+	'+dvwiktionary' => array(
+		'Wiktionary_talk' => NS_PROJECT_TALK, // Bug 46846
 	),
 	'+elwikisource' => array(
 		'Page' => 100,
@@ -5474,6 +5478,9 @@ $wgConf->settings = array(
 		105 => 'Thesaurus_Diskussion',
 		106 => 'Reim', // Bug 43830
 		107 => 'Reim_Diskussion',
+	),
+	'dvwiktionary' => array(
+		NS_PROJECT_TALK => 'ވިކިރަދީފު ޚިޔާ', // Bug 46846
 	),
 	'elwiktionary' => array(
 		100 => 'Παράρτημα',
