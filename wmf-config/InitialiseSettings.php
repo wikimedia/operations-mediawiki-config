@@ -7069,7 +7069,6 @@ $wgConf->settings = array(
 	),
 	'itwikivoyage' => array(
 		'autopatrolled' => array(
-			'patrol' => true, // Bug 45638
 			'autopatrol' => true, // Bug 43327
 			'upload' => false // Bug 43524
 		),
