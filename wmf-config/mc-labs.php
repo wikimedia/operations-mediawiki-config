@@ -18,8 +18,6 @@ $wgMainCacheType = CACHE_MEMCACHED;
 $wgMemCachedTimeout = 500000; # micro seconds
 $wgSessionsInMemcached = true;
 
-$wgMemCachedInstanceSize = 2000;
-
 $wgMemCachedServers = array(
 	0 => '10.4.0.166:11211',  # apache32
 	1 => '10.4.0.187:11211',  # apache33
