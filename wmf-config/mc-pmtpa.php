@@ -4,7 +4,6 @@ $wgMainCacheType = 'memcached-pecl';
 
 $wgMemCachedPersistent = false;
 $wgMemCachedTimeout = 250000; # default is 100000
-$wgMemCachedInstanceSize = 2000;
 
 # Newer "mc*" servers (only use the pecl client with these).
 # This does not use the "slot" system like the old setup, but
