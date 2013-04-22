@@ -3387,6 +3387,13 @@ $wgConf->settings = array(
 		'维基教科书' => NS_PROJECT,
 		'維基教科書' => NS_PROJECT,
 		'WB' => NS_PROJECT,
+		'CAT' => NS_CATEGORY, // Bug 44308
+		'維基兒童' => 110, // Bug 44308
+		'维基儿童' => 110, // Bug 44308
+		'WJ' => 110, // Bug 44308, Wikijunior
+		'書架' => 112, // Bug 44308
+		'书架' => 112, // Bug 44308
+		'SB' => 112, // Bug 44308, Subject
 	),
 	'+zhwikisource' => array(
 		'作者' => 102, // Author
@@ -5820,10 +5827,13 @@ $wgConf->settings = array(
 		106 => 'Nấu_ăn', // Cookbook
 		107 => 'Thảo_luận_Nấu_ăn', // Cookbook talk
 	),
-	# Bug 40474
 	'zhwikibooks' => array(
-		100 => 'Transwiki',
-		101 => 'Transwiki_talk',
+		100 => 'Transwiki', // Bug 40474
+		101 => 'Transwiki_talk', // Bug 40474
+		110 => 'Wikijunior', // Bug 44308
+		111 => 'Wikijunior_talk', // Bug 44308
+		112 => 'Subject', // Bug 44308
+		113 => 'Subject_talk', // Bug 44308
 	),
 	// @} end of wikibooks
 
