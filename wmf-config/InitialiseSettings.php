@@ -12199,7 +12199,8 @@ $wgConf->settings = array(
 	),
 	'enwiki' => array(
 		'sort' => 'alphabetic',
-		'allowDataTransclusion' => false, // is the default, in CommonSettings, but for extra sanity here
+		'allowDataTransclusion' => true,
+		'enableSiteLinkWidget' => true,
 	),
 	'etwiki' => array(
 		'sort' => 'alphabetic_revised',
