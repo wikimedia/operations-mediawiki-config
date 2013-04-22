@@ -11116,6 +11116,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'mediawikiwiki' => true,
+	'enwiki' => true,
 	'nlwiki' => true,
 ),
 'wmgMFEnableSiteNotice' => array(
