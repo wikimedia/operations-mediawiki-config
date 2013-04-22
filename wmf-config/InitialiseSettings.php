@@ -1061,8 +1061,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseScore' => array(
-	'default' => false,
-	'test2wiki' => true,
+	'default' => true,
 ),
 
 'wmgScoreFileBackend' => array(
