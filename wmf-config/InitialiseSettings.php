@@ -4231,6 +4231,10 @@ $wgConf->settings = array(
 		'temp-debug' => "udp://$wmfUdp2logDest/temp-debug", // generic admin debug log
 	),
 
+	'+enwiki' => array(
+		'bug46577' => "udp://$wmfUdp2logDest/bug46577", // Education Program debugging
+	),
+
 	'+private' => array(
 		'slow-parse' => "udp://$wmfUdp2logDest/privatewiki-slow-parse",
 	),
