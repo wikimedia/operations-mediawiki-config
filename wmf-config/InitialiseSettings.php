@@ -11113,11 +11113,8 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 'wmgMFVaryResources' => array(
-	'default' => false,
+	'default' => true,
 	'testwiki' => true,
-	'mediawikiwiki' => true,
-	'enwiki' => true,
-	'nlwiki' => true,
 ),
 'wmgMFEnableSiteNotice' => array(
 	'default' => false,
