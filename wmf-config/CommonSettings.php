@@ -2488,7 +2488,6 @@ if ( $wmgEnableGeoData ) {
 		$wgAPIGeneratorModules['geosearch'] = 'ApiQueryDisabled';
 		$wgAPIListModules['geosearch'] = 'ApiQueryDisabled';
 	}
-	$wgGeoDataUpdatesViaJob = $wmgGeoDataUpdatesViaJob;
 
 	# These modules have been intentionally disabled for the first phase of deployment
 	if ( $wgDBname !== 'testwiki' ) {
