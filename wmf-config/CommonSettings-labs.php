@@ -47,6 +47,29 @@ $wgDnsBlacklistUrls   = array(
 // So that people can easily test the captchas without making accounts -- Platonides
 $wgGroupPermissions['autoconfirmed']['skipcaptcha'] = false;
 
+if ( $wmgEnableGeoData ) {
+	require_once( "$IP/extensions/GeoData/GeoData.php" );
+	$wgGeoDataBackend = 'solr';
+	$wgGeoDataSolrMaster = 'deployment-solr.pmtpa.wmflabs';
+	$wgGeoDataSolrHosts = array(
+		'deployment-solr.pmtpa.wmflabs' => 100,
+	);
+
+	# Data collection mode
+	if ( !$wmgEnableGeoSearch ) {
+		$wgAPIGeneratorModules['geosearch'] = 'ApiQueryDisabled';
+		$wgAPIListModules['geosearch'] = 'ApiQueryDisabled';
+	}
+
+	# These modules have been intentionally disabled for the first phase of deployment
+	if ( $wgDBname !== 'testwiki' ) {
+		unset( $wgAPIListModules['geopages'] );
+		unset( $wgAPIListModules['geopagesincategory'] );
+	}
+	$wgMaxCoordinatesPerPage = 2000;
+}
+
+
 
 # temporary extensions
 # ========================================================================
