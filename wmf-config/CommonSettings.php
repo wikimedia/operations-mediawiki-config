@@ -2753,6 +2753,10 @@ if ( $wmgUseGlobalAbuseFilters ) {
 	$wgAbuseFilterIsCentral = ( $wgDBname == $wgAbuseFilterCentralDB );
 }
 
+if ( $wmgUseZeroNamespace ) {
+	$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
+}
+
 // On Special:Version, link to useful release notes
 $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
 	$matches = array();
