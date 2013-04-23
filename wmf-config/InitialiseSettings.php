@@ -8910,6 +8910,8 @@ $wgConf->settings = array(
 		NS_TEMPLATE_TALK => 'noindex,follow',
 		NS_HELP_TALK => 'noindex,follow',
 		NS_CATEGORY_TALK => 'noindex,follow',
+		101 => 'noindex,follow', // portal talk
+		829 => 'noindex,follow', // module talk
 	),
 	'dawiki' => array(
 		NS_USER => 'noindex,follow',
