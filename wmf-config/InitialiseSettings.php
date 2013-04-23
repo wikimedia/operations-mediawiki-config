@@ -10541,13 +10541,7 @@ $wgConf->settings = array(
 	'default' => array( NS_MAIN ),
 	'testwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
 	'dewiki' => array( NS_MAIN ),
-	/*
-	 * Temporarily disabling to update code & merge data. We could disable
-	 * AFTv5 entirely by setting wmgUseArticleFeedbackv5 to false, but we
-	 * still want AFTv5 to be loaded because we'll want to run a maintenance
-	 * script to merge the data.
-	 */
-	'enwiki' => array(), // array( NS_MAIN, NS_HELP, NS_PROJECT ),
+	'enwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
 	'frwiki' => array( NS_MAIN, NS_HELP ),
 ),
 /*
