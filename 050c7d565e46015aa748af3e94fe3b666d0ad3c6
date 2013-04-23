@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dvj.QaUk",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-23T01:17:13Z",
+      "side": 1,
+      "message": "this will be overwritten by the already-existing wmgMFEnableSiteNotice later in this file :p",
+      "revId": "050c7d565e46015aa748af3e94fe3b666d0ad3c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "Dvt.EtRA",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 196,
+      "author": {
+        "id": 91
+      },
+      "writtenOn": "2013-04-23T01:17:13Z",
+      "side": 1,
+      "message": "See line 207 of this file in this patchset.",
+      "revId": "050c7d565e46015aa748af3e94fe3b666d0ad3c6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
