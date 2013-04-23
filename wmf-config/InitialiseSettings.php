@@ -11942,9 +11942,6 @@ $wgConf->settings = array(
 'wmgEnableGeoSearch' => array(
 	'default' => true,
 ),
-'wmgGeoDataUpdatesViaJob' => array(
-	'default' => false,
-),
 
 'wmgUseEcho' => array(
 	'default' => false,
