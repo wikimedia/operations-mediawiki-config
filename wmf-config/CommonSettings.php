@@ -1343,6 +1343,7 @@ if ( $wmgUseTorBlock ) {
 	$wgTorDisableAdminBlocks = false;
 	$wgTorTagChanges = false;
 	$wgGroupPermissions['user']['torunblocked'] = false;
+	$wgTorBlockProxy = 'url-downloader.wikimedia.org:8080';
 }
 
 if ( $wmgUseRSSExtension ) {
