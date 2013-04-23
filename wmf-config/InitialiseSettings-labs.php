@@ -231,6 +231,12 @@ return array(
 	'-wmgUseWikibaseClient' => array(
 		'default' => false,
 	),
+
+	'wmgEnableGeoData' => array(
+		'default' => false,
+		'wiki' => true,
+		'wikivoyage' => true,
+	),
 );
 
 } # wmflLabsSettings()
