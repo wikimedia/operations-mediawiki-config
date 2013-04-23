@@ -9345,6 +9345,9 @@ $wgConf->settings = array(
 		NS_IMAGE => array( 'editinterface' ),
 		NS_IMAGE_TALK => array( 'editinterface' ),
 	),
+	'+metawiki' => array(
+		480 => array( 'zero-edit' ), // will be NS_ZERO in extension
+	),
 	'+ptwiki' => array(
 		NS_IMAGE => array( 'autoconfirmed' ),
 	),
@@ -12378,6 +12381,11 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
+),
+
+'wmgUseZeroNamespace' => array(
+	'default' = false,
+	'metawiki' => true,
 ),
 
 'wgUrlProtocols' => array(
