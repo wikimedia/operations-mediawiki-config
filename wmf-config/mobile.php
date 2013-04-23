@@ -207,6 +207,8 @@ $wgMFEnableSiteNotice = $wmgUseCentralNotice;
 
 // Hack to work around https://bugzilla.wikimedia.org/show_bug.cgi?id=35215
 $wgHooks['EnterMobileMode'][] = function() {
+	global $wgCentralHost, $wgCentralPagePath, $wgCentralBannerDispatcher, $wgCentralBannerRecorder;
+
 	$wgCentralHost = str_replace( 'meta.wikimedia.org', 'meta.m.wikimedia.org', $wgCentralHost );
 	$wgCentralPagePath = str_replace( 'meta.wikimedia.org', 'meta.m.wikimedia.org', $wgCentralPagePath );
 	$wgCentralBannerDispatcher = str_replace( 'meta.wikimedia.org', 'meta.m.wikimedia.org', $wgCentralBannerDispatcher );
