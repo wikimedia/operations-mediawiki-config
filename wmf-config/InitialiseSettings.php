@@ -34,6 +34,11 @@ $wgConf->settings = array(
 	'default' => false,
 ),
 
+'wmgMFEnableSiteNotice' => array(
+	'default' => true,
+),
+
+
 'wgCapitalLinks' => array(
 	'default' => true,
 	'jbowiki' => false,
