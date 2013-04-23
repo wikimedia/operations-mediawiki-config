@@ -192,6 +192,9 @@ if ( $wgMFLogEvents && $wmgUseEventLogging ) {
 	};
 }
 
+// Enable CentralNotice and friends
+$wgMFEnableSiteNotice = true;
+
 // Force HTTPS for login/account creation
 $wgMFForceSecureLogin = $wmgMFForceSecureLogin;
 
