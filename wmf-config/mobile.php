@@ -201,10 +201,6 @@ $wgMFLoginHandshakeUrl = $wmgMFLoginHandshakeUrl;
 // Enable X-Analytics logging
 $wgMFEnableXAnalyticsLogging = $wmgMFEnableXAnalyticsLogging;
 
-// Enable CentralNotice for mobile devices everywhere CentralNotice is enabled
-$wgMFEnableSiteNotice = $wmgUseCentralNotice;
-
-
 // Hack to work around https://bugzilla.wikimedia.org/show_bug.cgi?id=35215
 $wgHooks['EnterMobileMode'][] = function() {
 	global $wgCentralHost, $wgCentralPagePath, $wgCentralBannerDispatcher, $wgCentralBannerRecorder;
@@ -216,3 +212,5 @@ $wgHooks['EnterMobileMode'][] = function() {
 
 	return true;
 };
+
+$wgMFEnableSiteNotice = $wmgMFEnableSiteNotice;
