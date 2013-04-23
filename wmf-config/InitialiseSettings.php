@@ -11157,6 +11157,10 @@ $wgConf->settings = array(
 	'default' => true,
 	'testwiki' => true,
 ),
+'wmgMFEnableSiteNotice' => array(
+	'default' => false,
+	'testwiki' => true,
+),
 
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),

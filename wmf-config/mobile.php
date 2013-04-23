@@ -201,6 +201,4 @@ $wgMFLoginHandshakeUrl = $wmgMFLoginHandshakeUrl;
 // Enable X-Analytics logging
 $wgMFEnableXAnalyticsLogging = $wmgMFEnableXAnalyticsLogging;
 
-// Enable CentralNotice for mobile devices everywhere CentralNotice is enabled
-$wgMFEnableSiteNotice = $wmgUseCentralNotice;
-
+$wgMFEnableSiteNotice = $wmgMFEnableSiteNotice;
