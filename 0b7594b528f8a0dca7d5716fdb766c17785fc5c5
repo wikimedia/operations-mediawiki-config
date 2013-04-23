@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DvpBuKi8",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-04-23T18:10:00Z",
+      "side": 1,
+      "message": "Is this gerrit confusing utf-8 here or is there actually a mistake?",
+      "revId": "0b7594b528f8a0dca7d5716fdb766c17785fc5c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
