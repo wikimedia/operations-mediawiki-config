@@ -43,8 +43,8 @@ if ( $wgDBname == 'alswiki' ) {
 }
 
 elseif ( $wgDBname == 'arwiki' ) {
-	$wgFlaggedRevsWhitelist = array( 'الص�?حة_الرئيسية' );
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 100, 104 ); // bug 19332
+	$wgFlaggedRevsWhitelist = array( 'الص�?حة_الرئيسية' );
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, 100, 104 ); // bug 19332
 }
 
 elseif ( $wgDBname == 'bewiki' ) {
@@ -218,7 +218,7 @@ elseif ( $wgDBname == 'enwiki' || $wgDBname == 'testwiki' ) {
 elseif ( $wgDBname == 'enwikibooks' ) {
 	$wgFlaggedRevsOverride = false;
 	// Cookbook, WikiJunior
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 102, 110 );
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, 102, 110 );
 	$wgFlaggedRevTags = array(
 		'value' => array( 'levels' => 3, 'quality' => 2, 'pristine' => 3 )
 	);
@@ -310,13 +310,13 @@ elseif ( $wgDBname == 'fiwiki' ) {
 }
 
 elseif ( $wgDBname == 'frwikinews' ) {
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 104, 106 );
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, 104, 106 );
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 }
 
 elseif ( $wgDBname == 'hewikisource' ) {
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 100, 104, 106, 108, 110, 112 );
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, 100, 104, 106, 108, 110, 112 );
 	$wgFlaggedRevTags = array( 'completeness' => 3, 'accuracy' => 3, 'formatting' => 3 );
 	$wgFlaggedRevValues = 4;
 	$wgFlaggedRevsAutoReviewNew = false;
@@ -331,7 +331,7 @@ elseif ( $wgDBname == 'hewikisource' ) {
 # bug 29911
 elseif ( $wgDBname == 'hiwiki' ) {
 	// # namespaces
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_PROJECT, NS_IMAGE, NS_TEMPLATE, NS_CATEGORY, 100 ); # 100 = Portal
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_PROJECT, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100 ); # 100 = Portal
 	# Show only on a per-page basis
 	$wgFlaggedRevsOverride = false;
 	# We have only one tag with one level
@@ -368,7 +368,7 @@ elseif ( $wgDBname == 'huwiki' ) {
 	$wgFlaggedRevsLowProfile = false;
 
 	// # namespaces
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, NS_CATEGORY, 100 ); # 100 = Portal
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100 ); # 100 = Portal
 	$wgFeedbackNamespaces = array( NS_MAIN );
 
 	// # levels
@@ -452,7 +452,7 @@ elseif ( $wgDBname == 'plwiki' ) {
 }
 
 elseif ( $wgDBname == 'plwiktionary' ) {
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 100, 102 );
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, 100, 102 );
 }
 
 elseif ( $wgDBname == 'ptwikibooks' ) {
@@ -494,7 +494,7 @@ elseif ( $wgDBname == 'ptwikinews' ) {
 
 elseif ( $wgDBname == 'ptwikisource' ) {
 	$wgFlaggedRevsLowProfile = false;
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 102, 104, 106, 108, 110 );
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, 102, 104, 106, 108, 110 );
 	$wgFlaggedRevTags['accuracy']['levels'] = 1;
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 }
@@ -527,7 +527,7 @@ elseif ( $wgDBname == 'ruwikiquote' ) {}
 elseif ( $wgDBname == 'idwiki' ) {}
 
 elseif ( $wgDBname == 'ruwikisource' ) {
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, NS_HELP, NS_PROJECT );
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, NS_HELP, NS_PROJECT );
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
