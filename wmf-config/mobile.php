@@ -192,6 +192,9 @@ if ( $wgMFLogEvents && $wmgUseEventLogging ) {
 	};
 }
 
+// Enable CentralNotice for mobile devices everywhere CentralNotice is enabled
+$wgMFEnableSiteNotice = $wmgUseCentralNotice;
+
 // Force HTTPS for login/account creation
 $wgMFForceSecureLogin = $wmgMFForceSecureLogin;
 
