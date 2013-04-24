@@ -4251,7 +4251,7 @@ $wgConf->settings = array(
 		'EventLogging'  => "udp://$wmfUdp2logDest/eventlogging",
 		'torblock'  => "udp://$wmfUdp2logDest/torblock",
 		'mobile'  => "udp://$wmfUdp2logDest/mobile",
-		// 'mwsearch' => "udp://$wmfUdp2logDest/mwsearch",
+		'mwsearch' => "udp://$wmfUdp2logDest/mwsearch",
 		'temp-debug' => "udp://$wmfUdp2logDest/temp-debug", // generic admin debug log
 	),
 
