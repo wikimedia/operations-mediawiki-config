@@ -2511,7 +2511,7 @@ if ( $wmgUseEcho ) {
 	$wgJobTypeConf['MWEchoNotificationEmailBundleJob'] = array( 'checkDelay' => true ) + $wgJobTypeConf['default'];
 
 	$wgEchoConfig['eventlogging']['Echo']['enabled'] = true;
-	$wgEchoConfig['eventlogging']['Echo']['revision'] = 5364744;
+	$wgEchoConfig['eventlogging']['Echo']['revision'] = 5423520;
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
 	$wgEchoBundleEmailInterval = $wmgEchoBundleEmailInterval;
