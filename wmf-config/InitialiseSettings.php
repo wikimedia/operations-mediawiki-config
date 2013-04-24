@@ -6865,7 +6865,7 @@ $wgConf->settings = array(
 	),
 	'enwiki' => array(
 		'*' => array( 'createpage' => false ),
-		'user' => array( 
+		'user' => array(
 			'move' => false, // autoconfirmed only
 			'collectionsaveasuserpage' => true, // Bug 46944
 		),
@@ -6943,11 +6943,11 @@ $wgConf->settings = array(
 		'flood' => array( 'bot' => true ),
 	),
 	'eswikivoyage' => array(
-		'rollbacker' => array( 
+		'rollbacker' => array(
 			'rollback' => true, // Bug 44285
 			'autopatrol' => true, // Bug 47325
 		),
-		'patroller' => array( 
+		'patroller' => array(
 			'patrol' => true, // Bug 44285
 			'autopatrol' => true, // Bug 47325
 		),
@@ -12229,19 +12229,12 @@ $wgConf->settings = array(
 	),
 	'test2wiki' => array(
 		'siteGlobalID' => 'enwiki',
-		'allowDataTransclusion' => true,
-		'enableSiteLinkWidget' => true,
 	),
 	'be_x_oldwiki' => array(
 		'sort' => 'alphabetic',
 	),
-	'bswiki' => array(
-		'allowDataTransclusion' => true,
-	),
 	'enwiki' => array(
 		'sort' => 'alphabetic',
-		'allowDataTransclusion' => true,
-		'enableSiteLinkWidget' => true,
 	),
 	'etwiki' => array(
 		'sort' => 'alphabetic_revised',
@@ -12257,17 +12250,9 @@ $wgConf->settings = array(
 	),
 	'hewiki' => array(
 		'sortPrepend' => array( 'en' ),
-		'allowDataTransclusion' => true,
-	),
-	'hrwiki' => array(
-		'allowDataTransclusion' => true,
 	),
 	'huwiki' => array(
 		'sortPrepend' => array( 'en' ),
-		'allowDataTransclusion' => true,
-	),
-	'itwiki' => array(
-		'allowDataTransclusion' => true,
 	),
 	'lbwiki' => array(
 		'sort' => 'alphabetic',
@@ -12301,18 +12286,11 @@ $wgConf->settings = array(
 	'plwiki' => array(
 		'sort' => 'alphabetic',
 	),
-	'ruwiki' => array(
-		'allowDataTransclusion' => true,
-	),
-	'shwiki' => array(
-		'allowDataTransclusion' => true,
-	),
 	'simplewiki' => array(
 		'sort' => 'alphabetic',
 	),
 	'srwiki' => array(
 		'sort' => 'alphabetic_sr',
-		'allowDataTransclusion' => true,
 	),
 	'svwiki' => array(
 		'sort' => 'alphabetic',
@@ -12320,18 +12298,9 @@ $wgConf->settings = array(
 	'tewiki' => array(
 		'sortPrepend' => array( 'en', 'hi', 'kn', 'ta', 'ml' ),
 	),
-	'trwiki' => array(
-		'allowDataTransclusion' => true,
-	),
-	'ukwiki' => array(
-		'allowDataTransclusion' => true,
-	),
 	'urwiki' => array(
 		'sort' => 'alphabetic',
 		'sortPrepend' => array( 'ar', 'fa', 'en' ),
-	),
-	'uzwiki' => array(
-		'allowDataTransclusion' => true,
 	),
 	'viwiki' => array(
 		'sort' => 'alphabetic_revised',

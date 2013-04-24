@@ -2721,8 +2721,8 @@ if ( $wmgUseWikibaseClient ) {
 		'wikibase-property' => 'Property'
 	);
 
-	$wgWBSettings['allowDataTransclusion'] = false;
-	$wgWBSettings['enableSiteLinkWidget'] = false;
+	$wgWBSettings['allowDataTransclusion'] = true;
+	$wgWBSettings['enableSiteLinkWidget'] = true;
 
 	foreach( $wmgWikibaseClientSettings as $setting => $value ) {
 		$wgWBSettings[$setting] = $value;
