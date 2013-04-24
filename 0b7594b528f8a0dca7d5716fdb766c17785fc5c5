@@ -34,6 +34,24 @@
       "revId": "0b7594b528f8a0dca7d5716fdb766c17785fc5c5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DvoxP8jQ",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-04-24T19:39:49Z",
+      "side": 1,
+      "message": "Hm, your IDE might not be showing it but my command line is: http://p.defau.lt/?UAJ3ndBStIJVvrhleC18wg",
+      "parentUuid": "DvrBUhlI",
+      "revId": "0b7594b528f8a0dca7d5716fdb766c17785fc5c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
