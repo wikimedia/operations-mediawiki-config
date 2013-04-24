@@ -10449,6 +10449,10 @@ $wgConf->settings = array(
 	'ukwikisource' => 'uca-uk', // bug 45776
 	'ukwikivoyage' => 'uca-uk', // bug 46417
 	'ukwiktionary' => 'uca-uk', // bug 45776
+	'viwiki' => 'uca-vi', // bug 45979
+	'viwikibooks' => 'uca-vi', // bug 45979
+	'viwikisource' => 'uca-vi', // bug 45979
+	'viwiktionary' => 'uca-vi', // bug 45979
 ),
 
 'wmgVectorSectionEditLinks' => array(
