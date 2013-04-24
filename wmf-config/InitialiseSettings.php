@@ -9527,23 +9527,19 @@ $wgConf->settings = array(
 ),
 
 'wgAppleTouchIcon' => array(
-	'default' => false, // default iPhone/iPod Touch bookmark icon
+	#Sites
+	'default'      => false, // default iPhone/iPod Touch bookmark icon
+	'wiki'          => '//bits.wikimedia.org/favicon/apple-touch/wikipedia.png',
+	'wikinews'      => '//bits.wikimedia.org/favicon/apple-touch/wikinews.png',
+	'wiktionary'    => '//bits.wikimedia.org/favicon/apple-touch/wiktionary.png',
 
-	// Let the secure versions shine through with their own icons as well, set it explicitly
-	'wiki' => '//$lang.$site.org/apple-touch-icon.png',
-	'wiktionary' => '//$lang.$site.org/apple-touch-icon.png', // http://upload.wikimedia.org/wiktionary/en/4/48/Wiktionary-iphone_logo.png
-
-	'testwiki' => '//upload.wikimedia.org/wikipedia/test/apple-touch-icon.png',
-	'enwikinews' => '//upload.wikimedia.org/wikipedia/commons/4/43/Apple-touch-icon.png',
-	'enwiktionary' => '//upload.wikimedia.org/wikipedia/commons/e/e7/Wiktionary-icon.png', // Bug 46431
-	'mediawikiwiki' => '//www.mediawiki.org/Apple-touch-icon.png',
-	'usabilitywiki' => '//usability.wikimedia.org/UsabilityWiki-AppleTouch-Icon.png',
-	'wikimania2005wiki' => '//$lang.$site.org/apple-touch-icon.png',
-	'officewiki' => '//$lang.$site.org/apple-touch-icon.png',
-	'foundationwiki' => '//$lang.$site.org/apple-touch-icon.png',
-	'commonswiki' => '//$lang.$site.org/apple-touch-icon.png',
-	'metawiki' => '//$lang.$site.org/apple-touch-icon.png',
-),
+	#Other wikis
+	'commonswiki'   => '//bits.wikimedia.org/favicon/apple-touch/commons.png',
+	'enwiktionary'  => '//upload.wikimedia.org/wikipedia/commons/e/e7/Wiktionary-icon.png', // Bug 46431
+	'mediawikiwiki' => '//bits.wikimedia.org/favicon/apple-touch/mediawiki.png',
+	'testwiki'      => '//upload.wikimedia.org/wikipedia/test/apple-touch-icon.png',
+	'usabilitywiki' => '//bits.wikimedia.org/favicon/apple-touch/usability.png',
+	),
 
 'wgUserEmailUseReplyTo' => array(
 	'default' => false, // http://bugzilla.wikimedia.org/show_bug.cgi?id=12655
