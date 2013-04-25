@@ -160,8 +160,7 @@ if ( $wmgMFEnableDesktopResources ) {
 }
 
 // Enable appending of TM (text) / (R) (icon) on site name in footer.
-// See bug 41141 though, we may wish to disable on some sites.
-$wgMFTrademarkSitename = true;
+$wgMFTrademarkSitename = $wmgMFTrademarkSitename;
 
 $wgMFLogEvents = $wmgMFLogEvents;
 

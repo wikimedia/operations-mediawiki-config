@@ -11168,6 +11168,12 @@ $wgConf->settings = array(
 	'testwiki' => true,
 ),
 
+# trademark status
+'wmgMFTrademarkSitename' => array(
+	'default' => true,
+	'metawiki' => false,
+),
+
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
 	'cswiki' => array(
