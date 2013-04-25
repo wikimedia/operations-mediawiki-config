@@ -9527,17 +9527,8 @@ $wgConf->settings = array(
 ),
 
 'wgAppleTouchIcon' => array(
-	#Sites
-	'default'      => false, // default iPhone/iPod Touch bookmark icon
-	'wiki'          => '//bits.wikimedia.org/apple-touch/wikipedia.png',
-	'wikinews'      => '//bits.wikimedia.org/apple-touch/wikinews.png',
-	'wiktionary'    => '//bits.wikimedia.org/apple-touch/wiktionary.png',
-
-	#Other wikis
-	'commonswiki'   => '//bits.wikimedia.org/apple-touch/commons.png',
+	'default'      => false, // iOS searched for icons in docroot by default
 	'enwiktionary'  => '//bits.wikimedia.org/apple-touch/wiktionary/en.png', // Bug 46431
-	'mediawikiwiki' => '//bits.wikimedia.org/apple-touch/mediawiki.png',
-	'usabilitywiki' => '//bits.wikimedia.org/apple-touch/usability.png',
 	),
 
 'wgUserEmailUseReplyTo' => array(
