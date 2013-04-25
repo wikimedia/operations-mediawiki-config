@@ -10928,6 +10928,8 @@ $wgConf->settings = array(
 
 'wmgUseWikiLove' => array(
 	'default' => false,
+	'testwiki' => true,
+	/* Temporarily disabling per bug 47457 --kaldari
 	'arwiki' => true,
 	'commonswiki' => true,
 	'enwiki' => true,
@@ -10953,10 +10955,10 @@ $wgConf->settings = array(
 	'srwiki' => true, // bug 35913
 	'svwiki' => true, // bug 30756
 	'svwikinews' => true, // bug 31754
-	'testwiki' => true,
 	'trwiki' => true, // bug 38227
 	'urwiki' => true, // bug 40848
 	'zhwiki' => true, // bug 30362
+	*/
 ),
 'wmgWikiLoveDefault' => array(
 	'default' => true,
