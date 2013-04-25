@@ -2713,9 +2713,23 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBSettings['allowDataTransclusion'] = true;
 	$wgWBSettings['enableSiteLinkWidget'] = true;
 
+	$wgHooks['SetupAfterCache'][] = 'wmfWBClientExcludeNS';
+
+	function wmfWBClientExcludeNS() {
+		global $wgWBClientSettings;
+
+		$wgWBClientSettings['excludeNamespaces'] = array_merge(
+			MWNamespace::getTalkNamespaces(),
+			array( NS_USER )
+		);
+
+		return true;
+	};
+
 	foreach( $wmgWikibaseClientSettings as $setting => $value ) {
 		$wgWBSettings[$setting] = $value;
 	}
+
 }
 
 if ( ( $wmgUseTranslate && $wmgUseTranslationMemory ) || $wmgEnableGeoData ) {
