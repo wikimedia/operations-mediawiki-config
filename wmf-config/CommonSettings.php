@@ -2045,8 +2045,8 @@ if ( $wmgUseArticleFeedbackv5 ) {
 	$wgArticleFeedbackv5LearnToEdit = $wmgArticleFeedbackv5LearnToEdit;
 	$wgArticleFeedbackv5Namespaces = $wmgArticleFeedbackv5Namespaces;
 	$wgArticleFeedbackv5LotteryOdds = $wmgArticleFeedbackv5LotteryOdds;
-	$wgArticleFeedbackAutoArchiveEnabled = $wmgArticleFeedbackAutoArchiveEnabled;
-	$wgArticleFeedbackAutoArchiveTtl = $wmgArticleFeedbackAutoArchiveTtl;
+	$wgArticleFeedbackv5AutoArchiveEnabled = $wmgArticleFeedbackv5AutoArchiveEnabled;
+	$wgArticleFeedbackv5AutoArchiveTtl = $wmgArticleFeedbackv5AutoArchiveTtl;
 	$wgArticleFeedbackv5Watchlist = $wmgArticleFeedbackv5Watchlist;
 	$wgArticleFeedbackv5ArticlePageLink = $wmgArticleFeedbackv5ArticlePageLink;
 
