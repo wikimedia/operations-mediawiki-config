@@ -2513,6 +2513,9 @@ if ( $wmgUseEcho ) {
 
 	// Define the cluster database, false to use main database
 	$wgEchoCluster = $wmgEchoCluster;
+
+	// Allow for migration time functionality
+	$wgRecentEchoInstall = true;
 }
 
 if ( $wmgUseThanks ) {
