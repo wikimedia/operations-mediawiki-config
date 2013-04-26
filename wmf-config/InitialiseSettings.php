@@ -10040,6 +10040,12 @@ $wgConf->settings = array(
 ),
 # @}
 
+# wgDefaultUserOptions @{
+'wgDefaultUserOptions['toc-floated'] => array(
+	'default' => true,
+	'hewikivoyage' => false,
+# @} end of wgDefaultUserOptions
+
 'wgThumbLimits' => array(
 	'default' => array( 120, 150, 180, 200, 220, 250, 300 ),
 	'+itwikiquote' => array( 360 ),
