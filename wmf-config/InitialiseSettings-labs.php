@@ -233,9 +233,7 @@ return array(
 	),
 
 	'wmgEnableGeoData' => array(
-		'default' => false,
-		'wiki' => true,
-		'wikivoyage' => true,
+		'default' => true,
 	),
 );
 
