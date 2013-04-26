@@ -10376,8 +10376,7 @@ $wgConf->settings = array(
 ),
 
 'wmgVisualEditorNamespaces' => array(
-	'default' => array( NS_MAIN, NS_USER ),
-	'mediawikiwiki' => array(), // NS_VISUALEDITOR added in CommonSettings.php
+	'default' => array( NS_MAIN, NS_USER ),	// mediawikiwiki NS_VISUALEDITOR added in CommonSettings.php
 ),
 
 // For wikis that used VisualEditor before 2012-11-12
@@ -10387,14 +10386,9 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 ),
 
-'wmgVisualEditorHide' => array(
-	'default' => false,
-	'mediawikiwiki' => true, // pre-2012-11-12 install
-),
-
 'wmgVisualEditorDefault' => array(
 	'default' => false,
-	'mediawikiwiki' => true // pre-2012-11-12 install
+	'mediawikiwiki' => true // Enabled for all users
 ),
 
 'wmgUseRSSExtension' => array(
