@@ -11,4 +11,5 @@ return array(
 	'meta.wikimedia.beta.wmflabs.org',
 	'incubator.wikimedia.beta.wmflabs.org',
 	'commons.wikimedia.beta.wmflabs.org',
+	'wikidata.beta.wmflabs.org',
 );
