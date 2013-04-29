@@ -10352,6 +10352,7 @@ $wgConf->settings = array(
 	'plwiki' => true,
 	'ruwiki' => true,
 	'svwiki' => true,
+	'viwiki' => true,
 	'zhwiki' => true,
 ),
 
@@ -10374,6 +10375,7 @@ $wgConf->settings = array(
 	'plwiki' => 'pl',
 	'ruwiki' => 'ru',
 	'svwiki' => 'sv',
+	'viwiki' => 'vi',
 	'zhwiki' => 'zh',
 ),
 
