@@ -52,6 +52,7 @@ switch( $wmfRealm ) {
 			'meta.wikimedia.beta.wmflabs.org', // Presumably needed to load meta spam list. Any others?
 			'incubator.wikimedia.beta.wmflabs.org',
 			'commons.wikimedia.beta.wmflabs.org',
+			'wikidata.beta.wmflabs.org',
 		);
 		break;
 
