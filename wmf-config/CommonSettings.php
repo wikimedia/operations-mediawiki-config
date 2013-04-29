@@ -2748,6 +2748,10 @@ if ( $wmgUseZeroNamespace ) {
 	$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
 }
 
+if ( $wmgUseAccountAudit ) {
+	require_once( "$IP/extensions/AccountAudit/AccountAudit.php" );
+}
+
 // On Special:Version, link to useful release notes
 $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
 	$matches = array();
