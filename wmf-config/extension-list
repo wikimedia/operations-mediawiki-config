@@ -1,4 +1,5 @@
 $IP/extensions/AbuseFilter/AbuseFilter.php
+$IP/extensions/AccountAudit/AccountAudit.php
 $IP/extensions/AntiBot/AntiBot.php
 $IP/extensions/AntiSpoof/AntiSpoof.php
 $IP/extensions/ApiSandbox/ApiSandbox.php

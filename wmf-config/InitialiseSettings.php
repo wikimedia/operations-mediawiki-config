@@ -12395,6 +12395,10 @@ $wgConf->settings = array(
 	'foundationwiki' => false,
 	'collabwiki' => false,
 	'donatewiki' => false,
+),
+'wmgUseAccountAudit' => array(
+	'default' => false,
+	'test2wiki' => true
 )
 );
 
