@@ -10395,6 +10395,13 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true // Enabled for all users
 ),
 
+'wmgUseTemplateData' => array(
+	'default' => false,
+	'mediawikiwiki' => true,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
+
 'wmgUseRSSExtension' => array(
 	'default' => false,
 	'foundationwiki' => true,
