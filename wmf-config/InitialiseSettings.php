@@ -11962,7 +11962,10 @@ $wgConf->settings = array(
 'wmgEchoEmailFooterAddress' => array(
 	'default' => 'Wikimedia Foundation, 149 New Montgomery St., 3rd Fl., San Francisco, CA 94105.',
 ),
-
+'wmgEchoSiteNotificationIconUrl' => array(
+	'default' => false, // Placeholder icon
+	'enwiki' => '//upload.wikimedia.org/wikipedia/commons/f/ff/Wikipedia_Echo_notification_icon.png', // https://commons.wikimedia.org/wiki/File:Wikipedia_Echo_notification_icon.png
+),
 # from and reply to address when Echo sends email notifications
 'wmgNotificationSender' => array(
 	'default' => 'no-reply-notifications@mediawiki.org',

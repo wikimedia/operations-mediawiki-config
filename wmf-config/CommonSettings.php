@@ -2501,6 +2501,7 @@ if ( $wmgUseEcho ) {
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
 	$wgEchoBundleEmailInterval = $wmgEchoBundleEmailInterval;
+	$wgEchoNotificationIcons['site']['url'] = $wmgEchoSiteNotificationIconUrl;
 
 	# Outgoing from and reply to address for Echo notifications extension
 	$wgNotificationSender = $wmgNotificationSender;
