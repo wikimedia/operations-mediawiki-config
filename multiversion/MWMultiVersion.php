@@ -107,6 +107,18 @@ class MWMultiVersion {
 	}
 
 	/**
+	 * Destroy the singleton instance to let a subsequent call create a new
+	 * one. This should NEVER be used on non CLI interface, that will throw an
+	 * internal error.
+	 */
+	public static function destroySingleton() {
+		if( PHP_SAPI !== 'cli' ) {
+			self::error('Can not destroy singleton instance when used' .
+				'with non-CLI interface' );
+		}
+		self::$instance = null;
+	}
+	/**
 	 * Derives site and lang from the parameters and sets $site and $lang on the instance
 	 * @param $serverName the ServerName for this wiki -- $_SERVER['SERVER_NAME']
 	 * @param $docRoot the DocumentRoot for this wiki -- $_SERVER['DOCUMENT_ROOT']
