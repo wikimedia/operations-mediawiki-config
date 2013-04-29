@@ -104,13 +104,15 @@ switch( $wmfRealm ) {
 $wmfHostnames = array();
 switch( $wmfRealm ) {
 case 'labs':
-	$wmfHostnames['meta']   = 'meta.wikimedia.beta.wmflabs.org';
-	$wmfHostnames['upload'] = 'upload.beta.wmflabs.org';
+	$wmfHostnames['meta']     = 'meta.wikimedia.beta.wmflabs.org';
+	$wmfHostnames['upload']   = 'upload.beta.wmflabs.org';
+	$wmfHostnames['wikidata'] = 'wikidata.beta.wmflabs.org';
 	break;
 case 'production':
 default:
 	$wmfHostnames['meta']   = 'meta.wikimedia.org';
 	$wmfHostnames['upload'] = 'upload.wikimedia.org';
+	$wmfHostnames['wikidata'] = 'www.wikidata.org';
 	break;
 }
 
@@ -1526,6 +1528,7 @@ if ( $wmgUseCentralAuth ) {
 			'deployment.wikimedia.beta.wmflabs.org' => 'labswiki',
 			'test.wikimedia.beta.wmflabs.org' => 'testwiki',
 			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
+			$wmfHostnames['wikidata'] => 'wikidatawiki',
 			'ee-prototype.wikipedia.beta.wmflabs.org' => 'ee_prototypewiki',
 		);
 		break;
@@ -2714,7 +2717,7 @@ if ( $wmgUseWikibaseClient ) {
 
 	// to be safe, keeping this here although $wgDBname is default setting
 	$wgWBSettings['siteGlobalID'] = $wgDBname;
-	$wgWBSettings['repoUrl'] = '//www.wikidata.org';
+	$wgWBSettings['repoUrl'] = "//{$wmfHostnames['wikidata']}";
 
 	$wgWBSettings['repoNamespaces'] = array(
 		'wikibase-item' => '',
