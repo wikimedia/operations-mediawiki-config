@@ -2192,6 +2192,10 @@ if ( $wmgUseVisualEditor ) {
 	}
 }
 
+if ( $wmgUseTemplateData ) {
+	require_once( "$IP/extensions/TemplateData/TemplateData.php" );
+}
+
 if ( $wmgUseNarayam ) {
 	require_once( "$IP/extensions/Narayam/Narayam.php" );
 	$wgNarayamEnabledByDefault = $wmgNarayamEnabledByDefault;
