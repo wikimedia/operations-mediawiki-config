@@ -142,10 +142,11 @@ $wgFileBackends[] = array(
 	'lockManager' => 'nullLockManager', # LocalFile uses FOR UPDATE
 	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname, 'ttlDays' => $wmfFileJournalTTL ),
 	'backends'    => array(
-		array( 'template' => 'local-swift', 'isMultiMaster' => true )
+		array( 'template' => 'local-swift', 'isMultiMaster' => true ),
+		array( 'template' => 'local-ceph' )
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
-	'autoResync'  => true // bug 39221
+	#'autoResync'  => true // bug 39221
 );
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
@@ -155,9 +156,10 @@ $wgFileBackends[] = array(
 	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki', 'ttlDays' => $wmfFileJournalTTL ),
 	'backends'    => array(
 		array( 'template' => 'shared-swift', 'isMultiMaster' => true ),
+		array( 'template' => 'shared-ceph' )
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
-	'autoResync'  => true // bug 39221
+	#'autoResync'  => true // bug 39221
 );
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
@@ -166,6 +168,7 @@ $wgFileBackends[] = array(
 	'lockManager' => 'nullLockManager',
 	'backends'    => array(
 		array( 'template' => 'global-swift', 'isMultiMaster' => true ),
+		array( 'template' => 'global-ceph' )
 	),
 	'syncChecks'  => ( 1 | 4 ) // (size & sha1)
 );
