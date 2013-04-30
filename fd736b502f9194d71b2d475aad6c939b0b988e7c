@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DvziQg0k",
+        "filename": "wmf-config/missing.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-04-30T16:14:52Z",
+      "side": 1,
+      "message": "This check is not needed, and also redirects page tiles like \u00270\u0027 to main page. Fixing...",
+      "revId": "fd736b502f9194d71b2d475aad6c939b0b988e7c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
