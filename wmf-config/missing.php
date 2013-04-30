@@ -14,125 +14,99 @@
  * subdomains to Incubator, e.g. [[xyz:Page]] on en.wikipedia links to
  * http://incubator.wikimedia.org/wiki/Wp/xyz/Page
  * 
- * @copyright Copyright © 2011, Danny B., SPQRobin
+ * @copyright Copyright © 2011-2013, Danny B., SPQRobin, Tim Starling
  * 
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
+// define( 'MISSING_PHP_TEST', 1 );
+
+/**
+ * The main function
+ */
+function handleMissingWiki() {
+	$projects = array(
+		'wikibooks'   => 'b',
+		'wikinews'    => 'n',
+		'wikipedia'   => 'p',
+		'wikiquote'   => 'q',
+		'wikisource'  => 's', // forward compatiblity, unused ATM
+		'wikiversity' => 'v', // forward compatiblity, unused ATM
+		'wikivoyage'  => 'y',
+		'wiktionary'  => 't',
+	);
+
+	$url = parse_url( getSelfUrl() );
+
+	if ( strpos( $url['host'], '.m.' ) !== false ) {
+		// Invalid request to mobile site, not rewritten by Varnish
+		showMobileError();
+		return;
+	}
+
+	# http(s)://$language.$project.org/wiki/$page
+	$tmp = explode( '.', $url['host'] );
+	$project = $incubatorCode = false;
+	if ( count( $tmp ) == 3 ) {
+		list( $language, $project, $tld ) = $tmp;
+		if( isset( $_SERVER['PATH_INFO'] )
+			&& preg_match( '!^/wiki/(.*)$!', $_SERVER['PATH_INFO'], $m ) )
+		{
+			$page = $m[1];
+		} elseif( isset( $_GET['title'] ) ) {
+			$page = $_GET['title']; # index.php?title=Page
+		} else {
+			$page = ''; # Main page
+		}
+		$project = strtolower( $project );
+		$incubatorCode = isset( $projects[$project] ) ? $projects[$project] : null;
+	}
+
+	if ( !$incubatorCode ) {
+		showGenericError();
+	} elseif( $project === 'wikisource' ) {
+		# Wikisource should redirect to the multilingual wikisource
+		showRedirect( $url['scheme'] . '://wikisource.org/wiki/' . $page );
+	} elseif( $project === 'wikiversity' ) {
+		# Wikiversity gives an error page
+		showMissingSubdomainError( $project, $language );
+	} else {
+		# Redirect to incubator
+		$incubatorBase = 'incubator.wikimedia.org/wiki/';
+		$location = $url['scheme'] . '://' . $incubatorBase . 'W' . $incubatorCode . '/' . urlencode( $language );
+		# Go to the page if specified (look out for slashes), otherwise go to
+		# the main page Wx/xyz?goto=mainpage (WikimediaIncubator extension takes care of that)
+		$location .= $page && $page !== '/' ? '/' . $page :
+			'?goto=mainpage' . ( isset( $_GET['uselang'] ) ? '&uselang=' . urlencode( $_GET['uselang'] ) : '' );
+
+		showRedirect( $location );
+	}
+}
 
 /**
  * Obtaining the full self URL
  * @return string Actual URL except for fragment part
  */
 function getSelfUrl() {
-
-	// faking https on secure.wikimedia.org - thanks Ryan for hint
 	if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
-		$_SERVER['HTTPS'] = 'on';
-	}
-
-	$protocol = ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] == 'on' ) ? 'https' : 'http';
-	$port = ( $_SERVER['SERVER_PORT'] == '80' ) ? '' : ( ':' . $_SERVER['SERVER_PORT'] );
-	return $protocol . "://" . $_SERVER['SERVER_NAME'] . $port . $_SERVER['REQUEST_URI'];
-}
-
-
-$projects = array(
-	'wikibooks'   => 'b',
-	'wikinews'    => 'n',
-	'wikipedia'   => 'p',
-	'wikiquote'   => 'q',
-	'wikisource'  => 's', // forward compatiblity, unused ATM
-	'wikiversity' => 'v', // forward compatiblity, unused ATM
-	'wikivoyage'  => 'y',
-	'wiktionary'  => 't',
-);
-
-
-
-$url = parse_url( getSelfUrl() );
-
-// FIXME: the code below assumes getSelfUrl() contains /wiki/ , it should verify that
-if( $url['host'] == 'secure.wikimedia.org' ) {
-
-	# https://secure.wikimedia.org/$project/$language/wiki/$page
-	$tmp = explode( '/', ltrim( $url['path'], '/' ) );
-	$project = $tmp[0];
-	$language = $tmp[1];
-	$base = 'secure.wikimedia.org/wikipedia/incubator/wiki/';
-	if( isset( $_SERVER['PATH_INFO'] ) ) {
-		$page = implode( array_slice( $tmp, 3 ) ); # /wiki/Page (possibly /wiki/Page?foo=bar)
-	} elseif( isset( $_GET['title'] ) && $_GET['title'] ) {
-		$page = $_GET['title']; # index.php?title=Page
+		$protocol = 'https';
 	} else {
-		$page = ''; # no known title, fallback to main page
+		$protocol = 'http';
 	}
-
-} else {
-
-	# http(s)://$language.$project.org/wiki/$page
-	$tmp = explode( '.', $url['host'] );
-	$project = $tmp[1];
-	$language = $tmp[0];
-	$base = 'incubator.wikimedia.org/wiki/';
-	if( isset( $_SERVER['PATH_INFO'] ) ) {
-		$page = preg_replace( '/^\/wiki\//', '', $url['path'] ); # /wiki/Page (possibly /wiki/Page?foo=bar)
-	} elseif( isset( $_GET['title'] ) && $_GET['title'] ) {
-		$page = $_GET['title']; # index.php?title=Page
+	if ( defined( 'MISSING_PHP_TEST' ) && isset( $_GET['host'] ) ) {
+		$host = $_GET['host'];
 	} else {
-		$page = ''; # no known title, fallback to main page
+		$host = $_SERVER['HTTP_HOST'];
 	}
-
+	return $protocol . "://" . $host . $_SERVER['REQUEST_URI'];
 }
 
-$project = strtolower( $project );
-$projectcode = isset( $projects[$project] ) ? $projects[$project] : null;;
-$project = ucfirst( $project ); // for 404 pages message
-
-$location = $url['scheme'] . '://' . $base . 'W' . $projectcode . '/' . urlencode( $language );
-# Go to the page if specified (look out for slashes), otherwise go to
-# the main page Wx/xyz?goto=mainpage (WikimediaIncubator extension takes care of that)
-$location .= $page && $page !== '/' ? '/' . $page :
-	'?goto=mainpage' . ( isset( $_GET['uselang'] ) ? '&uselang=' . urlencode( $_GET['uselang'] ) : '' );
-
-$redir = true;
-
-if( $projectcode === 's' ) {
-	# Wikisource should redirect to the multilingual wikisource
-	$location = $url['scheme'] . '://wikisource.org/wiki/' . $page;
-} elseif( $projectcode === 'v' ) {
-	# Wikiversity gives an error page
-	$logo = '//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/300px-Wikiversity-logo.svg.png';
-	$home = '//beta.wikiversity.org';
-	$name = 'Beta Wikiversity';
-	$redir = false;
-} elseif( !$projectcode ) {
-	# Not recognised (probably a wikimedia.org domain) -> redirect to a Meta page
-	$location = $url['scheme'] . '://meta.wikimedia.org/wiki/Missing_wiki';
-}
-
-# If we should redirect and the URL seems valid, redirect to the given URL
-if( $redir && parse_url( $location ) !== false ) {
-
-	header( 'Location: ' . $location );
-	exit();
-
-}
-
-header( 'HTTP/1.x 404 Not Found' );
-header( 'Content-Type: text/html; charset=utf-8' );
-
-$escLanguage = htmlspecialchars( $language );
-$escProject = htmlspecialchars( $project );
-
-?><!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-	<title><?php echo "$escLanguage&nbsp;$escProject"; ?> does not exist</title>
-	<meta charset="UTF-8" />
-	<link rel="shortcut icon" href="<?php echo $home; ?>/favicon.ico" />
-	<style type="text/css">
-/* <![CDATA[ */
+/**
+ * Get a stylesheet with the specified logo in the background.
+ * @return string
+ */
+function getStyleSheet( $logo ) {
+	return <<<CSS
 * {
 	font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
 	margin: 0;
@@ -147,7 +121,7 @@ body {
 }
 
 #page {
-  background: url('<?php echo $logo; ?>') center left no-repeat;
+  background: url('$logo') center left no-repeat;
   height: 300px;
   left: 50%;
   margin: -150px 0 0 -360px;
@@ -174,7 +148,75 @@ a:link, a:visited {
 a:hover, a:active {
 	color: #900;
 }
+CSS;
+}
 
+/**
+ * Output an error which indicates that a request for *.m.wik*.org was received
+ */
+function showMobileError() {
+	header( 'HTTP/1.x 403 Forbidden' );
+	header( 'Content-Type: text/html; charset=utf-8' );
+
+	// Disable caching, due to the suspicion that bug 47807 is caused by cache poisoning.
+	header( 'Cache-Control: no-cache' );
+
+?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<style type="text/css">
+/* <![CDATA[ */
+<?php echo getStyleSheet( '//upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/300px-Wikimedia-logo.svg.png' ); ?>
+/* ]]> */
+</style>
+<title>Internal error</title>
+</head>
+<body>
+	<div id="page">
+		<div id="message">
+			<h1>Internal error</h1>
+			<p>Mobile domains are not served from this server IP address.</p>
+			<p style="font-size: smaller;">A&nbsp;project of the <a href="//wikimediafoundation.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
+		</div>
+	</div>
+</body>
+</html>
+
+<?
+}
+
+/**
+ * Output an error message explaining that no wiki for the given subdomain exists.
+ * This has been superseded by an Incubator redirect for all projects other than
+ * Wikiversity.
+ */
+function showMissingSubdomainError( $project, $language ) {
+	$projectInfos = array(
+		'wikiversity' => array(
+			'logo' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/300px-Wikiversity-logo.svg.png',
+			'home' => '//beta.wikiversity.org',
+			'name' => 'Wikiversity',
+			'home-name' => 'Beta Wikiversity',
+		)
+	);
+	$info = $projectInfos[$project];
+	header( 'HTTP/1.x 404 Not Found' );
+	header( 'Content-Type: text/html; charset=utf-8' );
+
+	$escLanguage = htmlspecialchars( $language );
+	$escName = htmlspecialchars( $info['name'] );
+
+?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<title><?php echo "$escLanguage&nbsp;$escName"; ?> does not exist</title>
+	<meta charset="UTF-8" />
+	<link rel="shortcut icon" href="<?php echo $info['home']; ?>/favicon.ico" />
+	<style type="text/css">
+/* <![CDATA[ */
+<?php echo getStyleSheet( $info['logo'] ); ?>
 /* ]]> */
 	</style>
 </head>
@@ -184,11 +226,11 @@ a:hover, a:active {
 
 			<h1>This wiki does not exist</h1>
 
-			<h2>Welcome to <?php echo $escProject; ?></h2>
+			<h2>Welcome to <?php echo $escName; ?></h2>
 
-			<p>Unfortunately, <?php echo $escProject; ?> in "<?php echo $escLanguage; ?>" does not exist on its own domain yet, or it has been closed.</p>
+			<p>Unfortunately, <?php echo $escName; ?> in "<?php echo $escLanguage; ?>" does not exist on its own domain yet, or it has been closed.</p>
 
-			<p>You may like to visit <a href="<?php echo $home; ?>"><?php echo $name; ?></a> to start or improve <em><?php echo "$escLanguage&nbsp;$escProject"; ?></em> there.</p>
+			<p>You may like to visit <a href="<?php echo $info['home']; ?>"><?php echo $info['home-name']; ?></a> to start or improve <em><?php echo "$escLanguage&nbsp;$escName"; ?></em> there.</p>
 
 			<p>If you would like to request that this wiki be created, see the <a href="//meta.wikimedia.org/wiki/Requests_for_new_languages">requests for new languages</a> page on Meta-Wiki.</p>
 
@@ -198,3 +240,62 @@ a:hover, a:active {
 	</div>
 </body>
 </html>
+
+<?
+}
+
+/**
+ * Show a generic error message which does not refer to any particular project.
+ */
+function showGenericError() {
+	header( 'HTTP/1.x 404 Not Found' );
+	header( 'Content-Type: text/html; charset=utf-8' );
+?>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<title>No wiki found</title>
+	<style type="text/css">
+/* <![CDATA[ */
+<?php echo getStyleSheet( '//upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/300px-Wikimedia-logo.svg.png' ); ?>
+/* ]]> */
+	</style>
+</head>
+<body>
+	<div id="page">
+		<div id="message">
+
+			<h1>No wiki found</h1>
+
+			<p>Sorry, we were not able to work out what wiki you were trying to view.
+			Please specify a valid Host header.</p>
+
+			<p style="font-size: smaller;">A&nbsp;project of the <a href="//wikimediafoundation.org" title="Wikimedia Foundation">Wikimedia Foundation</a></p>
+
+		</div>
+	</div>
+</body>
+</html>
+
+<?
+}
+
+/**
+ * Show a redirect, including "short hypertext note" as suggested by RFC 2616 section 10.3.2.
+ */
+function showRedirect( $url ) {
+	header( 'Location: ' . $url );
+	header( 'Content-Type: text/html; charset=utf-8' );
+	$escUrl = htmlspecialchars( $url );
+	echo <<<HTML
+<!DOCTYPE html>
+<html>
+<body>
+<a href="$escUrl">The document has moved.</a>
+</body>
+</html>
+
+HTML;
+}
+
+handleMissingWiki();
