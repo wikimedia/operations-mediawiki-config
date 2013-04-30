@@ -11964,6 +11964,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
+	'enwiki' => true,
 ),
 'wmgEchoEnableEmailBatch' => array(
 	'default' => true,
