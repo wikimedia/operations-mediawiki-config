@@ -12001,6 +12001,13 @@ $wgConf->settings = array(
        'enwiki' => 'extension1',
 ),
 
+// Whether to use job queue to process web and email notifications
+// turn it off for enwiki before verifying it works on testwiki
+'wmgEchoUseJobQueue' => array(
+	'default' => true,
+	'enwiki' => false,
+),
+
 'wmgUseThanks' => array(
 	'default' => false,
 	'testwiki' => true,
