@@ -2312,6 +2312,9 @@ if ( $wmgUseEcho ) {
 
 	// Allow for migration time functionality
 	$wgRecentEchoInstall = true;
+
+	// Whether to use job queue to process web and email notifications
+	$wgEchoUseJobQueue = $wmgEchoUseJobQueue;
 }
 
 if ( $wmgUseThanks ) {
