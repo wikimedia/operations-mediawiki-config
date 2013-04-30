@@ -11991,6 +11991,7 @@ $wgConf->settings = array(
 'wmgEchoCluster' => array(
        'default' => false,
        'testwiki' => 'extension1',
+       'enwiki' => 'extension1',
 ),
 
 'wmgUseThanks' => array(
