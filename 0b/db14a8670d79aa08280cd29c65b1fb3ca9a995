@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+2: Kaldari <rkaldari@wikimedia.org>
+Code-Review+1: EBernhardson (WMF) <ebernhardson@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Tue, 30 Apr 2013 17:36:04 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/61487
+Project: operations/mediawiki-config
+Branch: refs/heads/master
