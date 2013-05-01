@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DwOUZcIQ",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1531,
+      "author": {
+        "id": 64
+      },
+      "writtenOn": "2013-05-01T14:54:46Z",
+      "side": 1,
+      "message": "I doubt this is needed, it already is within case \u0027labs\u0027, so we can just directly call \u0027wikidata.beta.wmflabs.org\u0027 so that it is easier for the reader to understand without having to navigate around the file too much.",
+      "revId": "5ee77d54f4cd883140632cbf18d9aceece309523",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
