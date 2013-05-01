@@ -2767,7 +2767,8 @@ $wgConf->settings = array(
 		"ポータル‐ノート" => 101,
 		'Portal‐ノート' => 101,
 		'Portal・トーク' => 101,
-				'プロジェクト・トーク' => 103,
+		'プロジェクト・トーク' => 103,
+		'モジュール・トーク' => 829, // Bug 47933
 	),
 	'+jawikinews' => array(
 		"ポータル‐ノート" => 101,
@@ -4745,7 +4746,7 @@ $wgConf->settings = array(
 		101 => 'Discussioni_portale',
 		102 => 'Progetto',
 		103 => 'Discussioni_progetto',
-		),
+	),
 	'jawiki' => array(
 		NS_TALK => "ノート",
 		NS_USER_TALK => "利用者‐会話",
@@ -4762,6 +4763,7 @@ $wgConf->settings = array(
 		101 => 'Portal‐ノート',
 		102 => 'プロジェクト',
 		103 => 'プロジェクト‐ノート',
+		829 => 'モジュール‐ノート', // Bug 47933
 	),
 	'jawiktionary' => array(
 		100 => '付録', // Appendix
