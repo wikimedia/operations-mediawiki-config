@@ -2555,6 +2555,7 @@ if ( $wmgUseGettingStarted ) {
 		$wgGettingStartedRedis = $sessionRedis[$wmfDatacenter][0];
 	}
 	$wgGettingStartedExcludedCategories = $wmgGettingStartedExcludedCategories;
+	$wgGettingStartedRedisOptions['serializer'] = 'none';
 }
 
 if ( $wmgUseReplaceText ) {
