@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DwBa5LHg",
+        "filename": "multiversion/MWMultiVersion.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2013-05-01T21:12:08Z",
+      "side": 1,
+      "message": "this will show \"usedwith\", I don\u0027t see the reason for breaking that line anyway",
+      "revId": "6e4a818883f65c39dff78aaf82e7e1872f8d5db5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
