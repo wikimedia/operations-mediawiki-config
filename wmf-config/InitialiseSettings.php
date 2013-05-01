@@ -9080,6 +9080,7 @@ $wgConf->settings = array(
 	'bnwikibooks' => false,
 	'bdwikimedia' => false,
 	'bpywiki' => false,
+	'cswiktionary' => false,
 	'enwikibooks' => false,
 	'rmwiki' => false,
 	'wikimania' => false,
