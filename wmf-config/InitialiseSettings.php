@@ -9684,6 +9684,7 @@ $wgConf->settings = array(
 	'lezwiki' => true,
 	'liwikibooks' => true,
 	'liwikisource' => true,
+	'loginwikimedia' => true,
 	'ltgwiki' => true,
 	'mdfwiki' => true,
 	'mhrwiki' => true,
@@ -12460,14 +12461,17 @@ $wgConf->settings = array(
 
 'wgAllowUserJs' => array(
 	'default' => true,
+	'loginwikimedia' => false,
 ),
 
 'wgAllowUserCss' => array(
 	'default' => true,
+	'loginwikimedia' => false,
 ),
 
 'wgSecureLogin' => array(
 	'default' => false,
+	'loginwikimedia' => true,
 ),
 );
 
