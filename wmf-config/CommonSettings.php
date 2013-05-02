@@ -1364,6 +1364,21 @@ foreach ( $groupOverrides as $group => $permissions ) {
 	$wgGroupPermissions[$group] = $permissions + $wgGroupPermissions[$group];
 }
 
+if ( $wgDBname == 'loginwiki' ) {
+	$wgGroupPermissions['*'] = array(
+		'read' => true,
+		'centralauth-autoaccount' => true,
+	);
+	$wgGroupPermissions['user'] = array(
+		'read' => true,
+	);
+	$wgGroupPermissions['autoconfirmed'] = array(
+		'read' => true,
+	);
+
+	$wgGroupPermissions['sysop']['editinterface'] = false;
+}
+
 $wgAutopromote = array(
 	'autoconfirmed' => array( '&',
 		array( APCOND_EDITCOUNT, $wgAutoConfirmCount ),
