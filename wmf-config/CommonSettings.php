@@ -513,10 +513,6 @@ $wgSVGConverters['rsvg-broken'] = '$path/rsvg-convert -w $width -h $height -o $o
 # This converter will only work when rsvg has a suitable security patch
 $wgSVGConverters['rsvg-secure'] = '$path/rsvg-convert --no-external-files -w $width -h $height -o $output $input';
 
-$wgAllowUserJs = true;
-$wgAllowUserCss = true;
-$wgSecureLogin = false;
-
 #######################################################################
 # Squid Configuration
 #######################################################################

@@ -12430,7 +12430,19 @@ $wgConf->settings = array(
 ),
 'wmgUseAccountAudit' => array(
 	'default' => true,
-)
+),
+
+'wgAllowUserJs' => array(
+	'default' => true,
+),
+
+'wgAllowUserCss' => array(
+	'default' => true,
+),
+
+'wgSecureLogin' => array(
+	'default' => false,
+),
 );
 
 
