@@ -7601,6 +7601,7 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ), // bug 45165
 		'propertycreator' => array( 'property-create' => true ), // bug 46953
 		'sysop' => array( 'property-create' => true ), // bug 46953
+		'flood' => array( 'bot' => true ), // bug 48013
 		'*' => array ( 'property-create' => false ), // bug 46953
 	),
 	// due to mass vandalism complaint, 2006-04-11
@@ -8080,6 +8081,9 @@ $wgConf->settings = array(
 			'confirmed', // bug 45124
 			'propertycreator', // bug 46953
 		),
+		'bureaucrat' => array(
+			'flood', // bug 48013
+	),
 	),
 	'+zhwiki' => array(
 		'bureaucrat' => array( 'flood' ),
@@ -8499,7 +8503,9 @@ $wgConf->settings = array(
 			'confirmed', // bug 45124
 			'propertycreator', // bug 46953
 		),
-		'bureaucrat' => array( 'translationadmin' ), // bug 44395
+		'bureaucrat' => array( 
+			'translationadmin', // bug 44395
+			'flood', // bug 48013
 	),
 	'+wikimaniateamwiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'autopatrolled', 'import' ),
@@ -10000,8 +10006,8 @@ $wgConf->settings = array(
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
 	'plwiki' => array( 'sysop' => array( 'flood' ) ), // Bug 20155
-	'strategywiki' => array( 'sysop' => array( 'flood' ), ),
-	'wikidatawiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 46856
+	'strategywiki' => array( 'sysop' => array( 'flood' ) ),
+	'wikidatawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 48013, Bug 46856
 	'zhwiki' => array( 'sysop' => array( 'flood' ) ),
 ),
 'wgGroupsRemoveFromSelf' => array(
@@ -10019,7 +10025,10 @@ $wgConf->settings = array(
 	'plwiki' => array( 'flood' => array( 'flood' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=20155 , bug 21238
 	'strategywiki' => array( 'sysop' => array( 'flood' ) ),
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
-	'wikidatawiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 46856
+	'wikidatawiki' => array( 
+		'sysop' => array( 'flood', 'translationadmin' ), // Bug 48013, Bug 46856
+		'flood' => array( 'flood' ), // Bug 48013
+	),
 	'zhwiki' => array( 'sysop' => array( 'flood' ) ),
 ),
 
