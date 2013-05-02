@@ -21,16 +21,3 @@ $wgJobQueueAggregator = array(
 	)
 );
 
-$wgJobQueueMigrationConfig = array(
-	'db'    => array(
-		'class' => 'JobQueueDB'
-	),
-	'redis' => array(
-		'class'       => 'JobQueueRedis',
-		'redisServer' => '10.64.32.76',
-		'redisConfig' => array(
-			'connectTimeout' => 1,
-			'password' => $wmgRedisPassword,
-		)
-	)
-);
