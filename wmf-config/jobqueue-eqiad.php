@@ -20,7 +20,6 @@ $wgJobQueueAggregator = array(
 		'password' => $wmgRedisPassword,
 	)
 );
-# vim: set sts=4 sw=4 et :
 
 $wgJobQueueMigrationConfig = array(
 	'db'    => array(
