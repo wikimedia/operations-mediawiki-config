@@ -934,6 +934,8 @@ $wgConf->settings = array(
 'wgEnableUploads' => array(
 	'default' => true,
 
+	'loginwiki' => false,
+
 	// projects
 	'wikinews' => false,
 
@@ -1062,6 +1064,7 @@ $wgConf->settings = array(
 
 'wmgUseScore' => array(
 	'default' => true,
+	'loginwiki' => false,
 ),
 
 'wmgScoreFileBackend' => array(
@@ -9262,10 +9265,12 @@ $wgConf->settings = array(
 
 'wmgUseSpecialNuke' => array(
 	'default' => true,
+	'loginwiki' => false,
 ),
 
 'wmgUseLabeledSectionTransclusion' => array(
 	'default' => true,
+	'loginwiki' => false,
 ),
 
 'wmgUseQuiz' => array(
@@ -9291,6 +9296,7 @@ $wgConf->settings = array(
 
 'wmgUseGadgets' => array(
 	'default' => true, // set 2007-12-17 by brion
+	'loginwiki' => false,
 ),
 
 # @} end of EXTENSIONS
@@ -9702,6 +9708,7 @@ $wgConf->settings = array(
 	'lezwiki' => true,
 	'liwikibooks' => true,
 	'liwikisource' => true,
+	'loginwiki' => true,
 	'ltgwiki' => true,
 	'mdfwiki' => true,
 	'mhrwiki' => true,
@@ -10367,6 +10374,7 @@ $wgConf->settings = array(
 // NOTE: TMH *requires* MwEmbedSupport to function
 'wmgUseTimedMediaHandler' => array(
 	'default' => true,
+	'loginwiki' => false,
 ),
 
 'wmgEnableLocalTimedText' => array(
@@ -11089,6 +11097,7 @@ $wgConf->settings = array(
 ),
 'wmgUseMath' => array(
 	'default' => true, // moved from MW core
+	'loginwiki' => false,
 ),
 
 'wmgUseMarkAsHelpful' => array(
@@ -12481,10 +12490,12 @@ $wgConf->settings = array(
 
 'wgAllowUserJs' => array(
 	'default' => true,
+	'loginwiki' => false,
 ),
 
 'wgAllowUserCss' => array(
 	'default' => true,
+	'loginwiki' => false,
 ),
 
 'wgUseSiteJs' => array(
@@ -12497,6 +12508,7 @@ $wgConf->settings = array(
 
 'wgSecureLogin' => array(
 	'default' => false,
+	'loginwiki' => true,
 ),
 );
 
