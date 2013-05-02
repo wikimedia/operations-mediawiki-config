@@ -183,6 +183,9 @@ return array(
 	'-wmgArticleFeedbackv5Cluster' => array(
 		'default' => false,
 	),
+	'-wmgEchoCluster' => array(
+		'default' => false,
+	),
 	# FIXME: make that settings to be applied
 	'-wgShowExceptionDetails' => array(
 		'default' => true,
