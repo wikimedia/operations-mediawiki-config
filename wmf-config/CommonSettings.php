@@ -1364,6 +1364,19 @@ foreach ( $groupOverrides as $group => $permissions ) {
 	$wgGroupPermissions[$group] = $permissions + $wgGroupPermissions[$group];
 }
 
+if ( $wgDBname == 'loginwikimedia' ) {
+	$wgGroupPermissions['*'] = array(
+		'read' => true,
+		'centralauth-merge' => true,
+	);
+	$wgGroupPermissions['user'] = array(
+		'read' => true,
+	);
+	$wgGroupPermissions['autoconfirmed'] = array(
+		'read' => true,
+	);
+}
+
 $wgAutopromote = array(
 	'autoconfirmed' => array( '&',
 		array( APCOND_EDITCOUNT, $wgAutoConfirmCount ),
