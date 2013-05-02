@@ -9684,6 +9684,7 @@ $wgConf->settings = array(
 	'lezwiki' => true,
 	'liwikibooks' => true,
 	'liwikisource' => true,
+	'loginwiki' => true,
 	'ltgwiki' => true,
 	'mdfwiki' => true,
 	'mhrwiki' => true,
@@ -11068,6 +11069,7 @@ $wgConf->settings = array(
 ),
 'wmgUseMath' => array(
 	'default' => true, // moved from MW core
+	'loginwiki' => false,
 ),
 
 'wmgUseMarkAsHelpful' => array(
@@ -12460,14 +12462,17 @@ $wgConf->settings = array(
 
 'wgAllowUserJs' => array(
 	'default' => true,
+	'loginwiki' => false,
 ),
 
 'wgAllowUserCss' => array(
 	'default' => true,
+	'loginwiki' => false,
 ),
 
 'wgSecureLogin' => array(
 	'default' => false,
+	'loginwiki' => true,
 ),
 );
 
