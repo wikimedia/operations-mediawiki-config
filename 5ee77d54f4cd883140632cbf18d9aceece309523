@@ -34,6 +34,24 @@
       "revId": "5ee77d54f4cd883140632cbf18d9aceece309523",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwPcUgvU",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1531,
+      "author": {
+        "id": 64
+      },
+      "writtenOn": "2013-05-02T12:23:58Z",
+      "side": 1,
+      "message": "That is quite a valid reason, but given the context, I think it might be better to follow how it looks like just like the few lines before it.",
+      "parentUuid": "DwFyz1Zc",
+      "revId": "5ee77d54f4cd883140632cbf18d9aceece309523",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
