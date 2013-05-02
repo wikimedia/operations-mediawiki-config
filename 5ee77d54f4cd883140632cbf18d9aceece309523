@@ -16,6 +16,24 @@
       "revId": "5ee77d54f4cd883140632cbf18d9aceece309523",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwFyz1Zc",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1531,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-05-02T07:52:02Z",
+      "side": 1,
+      "message": "I agree :-]  The reason I have used the wmfHostnames lookup array there is to be consistent and define the hostname only once.",
+      "parentUuid": "DwOUZcIQ",
+      "revId": "5ee77d54f4cd883140632cbf18d9aceece309523",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
