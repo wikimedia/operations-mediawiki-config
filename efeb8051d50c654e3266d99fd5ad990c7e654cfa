@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DwAlI6oc",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1377,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2013-05-02T19:28:20Z",
+      "side": 1,
+      "message": "Do basic permissions such as \"edit\" need to be copied to sysop or some other group, then, since people will no longer be getting them from also being in these groups?",
+      "revId": "efeb8051d50c654e3266d99fd5ad990c7e654cfa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
