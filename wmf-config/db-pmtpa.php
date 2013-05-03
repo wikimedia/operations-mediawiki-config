@@ -119,6 +119,7 @@ $wgLBFactoryConf = array(
 		'db1058'   => 0,
 		'db73'	 => 0, # pmtpa master, innodb_file_per_table
 		'db45'	 => 1000,
+		'db74'	 => 1200, 
 		#'db44'	 => 500, # fix me!
 		'db55'	 => 800, # innodb_file_per_table # snapshot host
 	),
@@ -218,6 +219,7 @@ $wgLBFactoryConf = array(
 	'db71'	   => '10.0.6.81', # do not remove or comment out
 	'db72'	   => '10.0.6.82', # do not remove or comment out
 	'db73'	   => '10.0.6.83', # do not remove or comment out
+	'db74'	   => '10.0.6.84', # do not remove or comment out
 	'db1001' => '10.64.0.5', #do not remove or comment out
 	'db1002' => '10.64.0.6', #do not remove or comment out
 	'db1003' => '10.64.0.7', #do not remove or comment out
