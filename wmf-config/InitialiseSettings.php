@@ -1619,6 +1619,7 @@ $wgConf->settings = array(
 	'trwikisource'  => 'Vikikaynak', // Bug 42721
 	'trwiktionary'  => 'Vikisözlük',
 	'uawikimedia'   => 'Вікімедіа_Україна',
+	'udmwiki'	=> 'Википедия', // Bug 47820
 	'ukwiki'	=> 'Вікіпедія',
 	'ukwikibooks'	=> 'Вікіпідручник',
 	'ukwikimedia'   => 'Wikimedia UK', # Andrew 2009-04-27 Private request of current board member
@@ -3263,6 +3264,9 @@ $wgConf->settings = array(
 		'ВП' => NS_PROJECT,
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
+	),
+	'+udmwiki' => array(
+		'Wikipedia_сярысь_вераськон' => NS_PROJECT_TALK, // Bug 47820
 	),
 	'+ukwiki' => array(
 		'ВП' => NS_PROJECT,
@@ -5046,6 +5050,9 @@ $wgConf->settings = array(
 	'ttwiki' => array(
 	100 => 'Портал',
 	101 => 'Портал_бәхәсе',
+	),
+	'udmwiki' => array(
+		NS_PROJECT_TALK => 'Википедия_сярысь_вераськон', // Bug 47820
 	),
 	'ukwiki' => array( 100 => 'Портал', 101 => 'Обговорення_порталу' ),
 	'urwiki' => array(
