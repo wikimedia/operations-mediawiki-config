@@ -436,7 +436,8 @@ elseif ( $wgDBname == 'mediawikiwiki' ) {
 }
 
 elseif ( $wgDBname == 'plwiki' ) {
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_TEMPLATE, NS_CATEGORY, NS_HELP, 100 ); // Bug 43617
+	// Bugs 43617, 48043 
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_TEMPLATE, NS_CATEGORY, NS_HELP, 100, 828 );
 	$wgFlaggedRevTags['accuracy']['levels'] = 1;
 
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
