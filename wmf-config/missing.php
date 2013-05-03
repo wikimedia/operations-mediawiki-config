@@ -50,7 +50,7 @@ function handleMissingWiki() {
 	if ( count( $tmp ) == 3 ) {
 		list( $language, $project, $tld ) = $tmp;
 		if( isset( $_SERVER['PATH_INFO'] )
-			&& preg_match( '!^/wiki/(.*)$!', $_SERVER['PATH_INFO'], $m ) )
+			&& preg_match( '!^/(.*)$!', $_SERVER['PATH_INFO'], $m ) )
 		{
 			$page = $m[1];
 		} elseif( isset( $_GET['title'] ) ) {
