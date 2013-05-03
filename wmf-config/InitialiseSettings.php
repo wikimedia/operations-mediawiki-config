@@ -6187,6 +6187,7 @@ $wgConf->settings = array(
 		'portal-url',
 		'villagepump-url',
 		'helppage',
+		'sitesupport-url', //  Bug 45696
 	),
 
 	'wikimania2005wiki' => array( 'currentevents-url', 'portal-url' ),
