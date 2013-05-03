@@ -10807,6 +10807,7 @@ $wgConf->settings = array(
  */
 'wmgArticleFeedbackv5ArticlePageLink' => array(
 	'default' => true,
+	'dewiki' => false,
 	'frwiki' => false,
 ),
 
