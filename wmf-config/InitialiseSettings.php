@@ -2075,6 +2075,7 @@ $wgConf->settings = array(
 	'trwiktionary'  => 'Vikisözlük',
 	'ttwiki'	=> 'Википедия',
 	'uawikimedia'   => 'Вікімедіа',
+	'udmwiki'	=> 'Википедия', // Bug 47820
 	'ukwiki'	=> 'Вікіпедія',
 	'ukwikibooks'	=> 'Вікіпідручник',
 	'ukwikinews'    => 'ВікіНовини',
@@ -2108,7 +2109,6 @@ $wgConf->settings = array(
 
 ),
 # @} end of wgMetaNamespace
-
 
 # wgMetaNamespaceTalk @{
 'wgMetaNamespaceTalk' => array(
