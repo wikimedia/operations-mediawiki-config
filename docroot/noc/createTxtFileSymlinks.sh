@@ -69,7 +69,6 @@ mwconfig_files=(
 	wikibooks.dblist
 	wikidataclient.dblist
 	wikimania.dblist
-	wikimedia.conf
 	wikimedia.dblist
 	wikinews.dblist
 	wikipedia.dblist
