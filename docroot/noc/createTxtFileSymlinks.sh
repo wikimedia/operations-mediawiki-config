@@ -5,7 +5,6 @@ cd $(dirname $0)/conf
 mwconfig_files_txt=(
 	fc-list
 	langlist
-	trusted-xff.cdb
 	wikiversions.dat
 	wmf-config/CommonSettings-labs.php
 	wmf-config/CommonSettings.php
@@ -25,7 +24,6 @@ mwconfig_files_txt=(
 	wmf-config/filebackend-labs.php
 	wmf-config/filebackend.php
 	wmf-config/flaggedrevs.php
-	wmf-config/interwiki.cdb
 	wmf-config/jobqueue-eqiad.php
 	wmf-config/jobqueue-pmtpa.php
 	wmf-config/liquidthreads.php
@@ -68,7 +66,6 @@ mwconfig_files=(
 	s7.dblist
 	small.dblist
 	special.dblist
-	trusted-xff.cdb
 	wikibooks.dblist
 	wikidataclient.dblist
 	wikimania.dblist
@@ -83,6 +80,7 @@ mwconfig_files=(
 	wikivoyage.dblist
 	wiktionary.dblist
 	wmf-config/interwiki.cdb
+	wmf-config/trusted.cdb
 )
 
 # Create non-txt symlink from /home/wikipedia/conf
