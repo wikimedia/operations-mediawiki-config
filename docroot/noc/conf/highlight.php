@@ -56,8 +56,7 @@ if ( !$selectedFilePath ) {
 		// Which is a problem if our PWD is not the same dir (such as in unit tests).
 		$selectedFilePath = realpath( $selectedFilePath );
 		// Figure out path to selected file in the mediawiki-config repository
-		$selectedFileRepoPath = ( dirname( $selectedFilePath ) === 'wmf-config' ? 'wmf-config/' : '' ) . $selectedFileName;
-
+		$selectedFileRepoPath = ( basename( dirname( $selectedFilePath ) ) === 'wmf-config' ? 'wmf-config/' : '' ) . $selectedFileName;
 		if ( substr( $selectedFileName, -4 ) === '.php' ) {
 
 			$hlHtml = highlight_file( $selectedFilePath, true );
