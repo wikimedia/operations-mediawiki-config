@@ -80,7 +80,7 @@ mwconfig_files=(
 	wikivoyage.dblist
 	wiktionary.dblist
 	wmf-config/interwiki.cdb
-	wmf-config/trusted.cdb
+	wmf-config/trusted-xff.cdb
 )
 
 # Create non-txt symlink from /home/wikipedia/conf
