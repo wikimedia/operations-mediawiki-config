@@ -69,7 +69,7 @@
 <h3><img src="./images/document.png" alt=""> CDB files</h3>
 <ul>
 <?php
-	outputFiles( glob( __DIR__ . '/*.cdb.txt' ) );
+	outputFiles( glob( __DIR__ . '/*.cdb' ), false );
 ?>
 </ul>
 
