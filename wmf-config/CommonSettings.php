@@ -2644,7 +2644,7 @@ if ( $wmgUseEventLogging && $wmgUseNavigationTiming ) {
 if ( $wmgUseUniversalLanguageSelector ) {
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
 	$wgULSGeoService = false;
-	$wgULSEnableAnon = false;
+	$wgULSAnonCanChangeLanguage = false;
 }
 
 if ( $wmgUseWikibaseRepo ) {
