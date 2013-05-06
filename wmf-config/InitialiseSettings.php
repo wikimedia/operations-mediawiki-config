@@ -12487,6 +12487,14 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wgUseSiteJs' => array(
+	'default => true,
+),
+
+'wgUseSiteCss' => array(
+	'default' => true,
+),
+
 'wgSecureLogin' => array(
 	'default' => false,
 ),
