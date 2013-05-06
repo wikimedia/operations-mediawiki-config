@@ -16,6 +16,41 @@
       "revId": "b108db07d774b1d88eb55c7c1f734d71398a2636",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwiYNIjc",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1370,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-05-06T18:46:18Z",
+      "side": 1,
+      "message": "\u0027right-centralauth-merge\u0027       \u003d\u003e \u0027Merge their account\u0027,",
+      "parentUuid": "Dwsb7lhE",
+      "revId": "b108db07d774b1d88eb55c7c1f734d71398a2636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwoYaLms",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1371,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-05-06T18:46:18Z",
+      "side": 1,
+      "message": "\u0027right-centralauth-autoaccount\u0027 \u003d\u003e \u0027Automatically login with global account\u0027,",
+      "revId": "b108db07d774b1d88eb55c7c1f734d71398a2636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
