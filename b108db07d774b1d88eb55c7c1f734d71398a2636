@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dwsb7lhE",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1370,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2013-05-06T18:41:43Z",
+      "side": 1,
+      "message": "This right isn\u0027t needed.",
+      "revId": "b108db07d774b1d88eb55c7c1f734d71398a2636",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
