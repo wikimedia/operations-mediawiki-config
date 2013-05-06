@@ -12307,6 +12307,10 @@ $wgConf->settings = array(
 	'wikimania2014wiki' => true,
 ),
 
+'wmgULSPosition' => array(
+	'default' => 'personal',
+),
+
 'wmgUseWikibaseRepo' => array(
 	'default' => false,
 	'wikidatawiki' => true,
