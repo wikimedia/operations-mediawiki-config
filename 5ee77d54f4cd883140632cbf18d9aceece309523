@@ -52,6 +52,24 @@
       "revId": "5ee77d54f4cd883140632cbf18d9aceece309523",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwunRTVU",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1531,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-05-06T20:36:56Z",
+      "side": 1,
+      "message": "The potential issue is that if someone updates the wmfHostnames entry and forget to update it there, CentralAuth will be broken for wikidata.\n\nOn the other hand, we we could get rid of the \u0027wikidata\u0027 entry in wmfHostnames but that would mean sticking if( $wmfRealm \u003d\u003d \u0027production\u0027 )  elseif( $wmfRealm \u003d\u003d \u0027labs\u0027 )    all over the config. Which in turns lead to people forgetting about it.\n\nSo I definitely prefer to keep it this way although that looks unconsistent at this specific place, that makes it easier to handle the beta domain in the rest of the config.",
+      "parentUuid": "DwPcUgvU",
+      "revId": "5ee77d54f4cd883140632cbf18d9aceece309523",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
