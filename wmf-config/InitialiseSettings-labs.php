@@ -238,6 +238,23 @@ return array(
 	'wmgEnableGeoData' => array(
 		'default' => true,
 	),
+
+	# ULS predeployment testing 2013-05
+	'wmgUseUniversalLanguageSelector' => array(
+		'default' => true,
+	),
+
+	'-wmgULSPosition' => array(
+		'default' => 'interlanguage',
+		# Multilingual wikis (only the few existing on Beta)
+		'commonswiki' => 'personal', // Assuming the multilingualism prevails on 13M interwikis3
+		'metawiki' => 'personal',
+		'testwiki' => 'personal',
+		# Beta-specific
+		'ee-prototype' => 'personal',
+		'labswiki' => 'personal',
+	),
+
 );
 
 } # wmflLabsSettings()
