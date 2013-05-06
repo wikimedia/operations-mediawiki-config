@@ -238,6 +238,19 @@ return array(
 	'wmgEnableGeoData' => array(
 		'default' => true,
 	),
+
+	# ULS predeployment testing 2013-05
+	'wmgUseUniversalLanguageSelector' => array(
+		'default' => true,
+	),
+
+	'-wmgULSPosition' => array(
+		'default' => 'interlanguage',
+		'commonswiki' => 'personal',
+		'metawiki' => 'personal',
+		'mediawikiwiki' => 'personal',
+	),
+
 );
 
 } # wmflLabsSettings()
