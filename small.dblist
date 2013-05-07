@@ -52,7 +52,6 @@ bewikisource
 bewiktionary
 bgwikibooks
 bgwikinews
-bgwikiquote
 bgwikisource
 bhwiki
 bhwiktionary
@@ -265,16 +264,15 @@ lawikiquote
 lbewiki
 lbwikibooks
 lbwikiquote
-lbwiktionary
 lezwiki
 lgwiki
-lijwiki
 liwikibooks
 liwikiquote
 liwikisource
 lnwiki
 lnwikibooks
 lnwiktionary
+loginwiki
 lowiki
 ltgwiki
 ltwikibooks
@@ -377,6 +375,7 @@ rmwiktionary
 rmywiki
 rnwiki
 rnwiktionary
+roa_rupwiki
 roa_rupwiktionary
 rowikibooks
 rowikinews
@@ -453,7 +452,6 @@ test2wiki
 tetwiki
 tewikibooks
 tewikiquote
-tewikisource
 tgwikibooks
 tgwiktionary
 thwikibooks
@@ -471,6 +469,7 @@ towiki
 towiktionary
 tpiwiki
 tpiwiktionary
+transitionteamwiki
 trwikibooks
 trwikimedia
 trwikinews
@@ -519,6 +518,7 @@ wikimania2010wiki
 wikimania2011wiki
 wikimania2012wiki
 wikimania2013wiki
+wikimania2014wiki
 wikimaniateamwiki
 wowiki
 wowikiquote

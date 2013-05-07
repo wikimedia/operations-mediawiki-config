@@ -21,6 +21,7 @@ be_x_oldwiki
 betawikiversity
 bewiki
 bgwiki
+bgwikiquote
 bgwiktionary
 bnwiki
 bowiki
@@ -156,6 +157,8 @@ lawiki
 lawikisource
 lawiktionary
 lbwiki
+lbwiktionary
+lijwiki
 liwiki
 liwiktionary
 lmowiki
@@ -215,7 +218,6 @@ ptwikiquote
 ptwikisource
 ptwiktionary
 quwiki
-roa_rupwiki
 roa_tarawiki
 rowiki
 rowikisource
@@ -258,6 +260,7 @@ tawiki
 tawiktionary
 testwiki
 tewiki
+tewikisource
 tewiktionary
 tgwiki
 thwiki
@@ -296,3 +299,4 @@ zhwikibooks
 zhwikinews
 zhwikiquote
 zhwikisource
+
