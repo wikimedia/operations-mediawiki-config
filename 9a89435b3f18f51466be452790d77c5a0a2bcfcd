@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "DwvWz2uY",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2751,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2013-05-07T16:47:03Z",
+      "side": 1,
+      "message": "added \"once\" to the other scribunto",
+      "parentUuid": "DwtUulkM",
+      "revId": "9a89435b3f18f51466be452790d77c5a0a2bcfcd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "DwhUQ-v8",
         "filename": "wmf-config/mobile.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-05-07T16:23:29Z",
       "side": 1,
       "message": "Nevar evar https?",
+      "revId": "9a89435b3f18f51466be452790d77c5a0a2bcfcd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwvXeOjo",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2013-05-07T16:47:03Z",
+      "side": 1,
+      "message": "This is an internal cluster call, the link is never exposed to outside. No point to get an ssl session. Same as event system",
+      "parentUuid": "DwhUQ-v8",
       "revId": "9a89435b3f18f51466be452790d77c5a0a2bcfcd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
