@@ -824,6 +824,7 @@ if ( $wmgUseCORS ) {
 		'grants.wikimedia.org',
 		'incubator.wikimedia.org',
 		'internal.wikimedia.org',
+		'login.wikimedia.org',
 		'meta.wikimedia.org',
 		'movementroles.wikimedia.org',
 		'office.wikimedia.org',
@@ -1206,7 +1207,7 @@ $wgCopyrightIcon = '<a href="//wikimediafoundation.org/"><img src="//bits.wikime
 # not on these fakers.
 $wgLanguageCodeReal = $wgLanguageCode;
 # Fake it up
-if ( in_array( $wgLanguageCode, array( 'commons', 'meta', 'sources', 'species', 'foundation', 'nostalgia', 'mediawiki' ) ) ) {
+if ( in_array( $wgLanguageCode, array( 'commons', 'meta', 'sources', 'species', 'foundation', 'nostalgia', 'mediawiki', 'login' ) ) ) {
 	$wgLanguageCode = 'en';
 }
 
