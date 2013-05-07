@@ -118,6 +118,7 @@ class MWMultiVersion {
 		}
 		self::$instance = null;
 	}
+
 	/**
 	 * Derives site and lang from the parameters and sets $site and $lang on the instance
 	 * @param $serverName the ServerName for this wiki -- $_SERVER['SERVER_NAME']
@@ -129,47 +130,29 @@ class MWMultiVersion {
 		$secure = getenv( 'MW_SECURE_HOST' );
 
 		$matches = array();
-		if ( $secure ) {
-			// secure.wikimedia.org
 
-			if ( !preg_match('/^([^.]+)\.([^.]+)\./', $secure, $matches ) ) {
-				self::error( "Invalid hostname.\n" );
-			}
-			$lang = $matches[1];
-			$site = $matches[2];
-
-			// @TODO: move/use some special case dblist?
-			$idioSyncratics = array( "commons", "grants", "sources", "wikimania",
-				"wikimania2006", "foundation", "meta" );
-			if ( in_array( $lang, $idioSyncratics ) ) {
-				$site = "wikipedia";
-			}
-		} else {
-			// Most requests ;)
-
-			$site = "wikipedia";
-			if ( getenv( 'MW_LANG' ) ) {
-				# Language forced from some hacky script like extract2.php
-				$lang = getenv( 'MW_LANG' );
-			} elseif ( preg_match( '/^(?:\/usr\/local\/apache\/|\/home\/wikipedia\/)(?:htdocs|common\/docroot)\/([a-z]+)\.org/', $docRoot, $matches ) ) {
-				# This is the poor man / hacky routing engine for WMF cluster
-				$site = $matches[1];
-				if ( preg_match( '/^(.*)\.' . preg_quote( $site ) . '\.org$/', $serverName, $matches ) ) {
-					$lang = $matches[1];
-					// For some special subdomains, like pa.us
-					$lang = str_replace( '.', '-', $lang );
-				} elseif ( preg_match( '/^([^.]+)\.[^.]+\.beta\.wmflabs\.org$/', $serverName, $matches ) ) {
-					// http://en.wikipedia.beta.wmflabs.org/
-					$lang = $matches[1];
-				} else {
-					self::error( "Invalid host name ($serverName), can't determine language.\n" );
-				}
-			} elseif ( preg_match( "/^\/usr\/local\/apache\/(?:htdocs|common\/docroot)\/([a-z0-9\-_]*)$/", $docRoot, $matches ) ) {
-				$site = "wikipedia";
+		$site = "wikipedia";
+		if ( getenv( 'MW_LANG' ) ) {
+			# Language forced from some hacky script like extract2.php
+			$lang = getenv( 'MW_LANG' );
+		} elseif ( preg_match( '/^(?:\/usr\/local\/apache\/|\/home\/wikipedia\/)(?:htdocs|common\/docroot)\/([a-z]+)\.org/', $docRoot, $matches ) ) {
+			# This is the poor man / hacky routing engine for WMF cluster
+			$site = $matches[1];
+			if ( preg_match( '/^(.*)\.' . preg_quote( $site ) . '\.org$/', $serverName, $matches ) ) {
+				$lang = $matches[1];
+				// For some special subdomains, like pa.us
+				$lang = str_replace( '.', '-', $lang );
+			} elseif ( preg_match( '/^([^.]+)\.[^.]+\.beta\.wmflabs\.org$/', $serverName, $matches ) ) {
+				// http://en.wikipedia.beta.wmflabs.org/
 				$lang = $matches[1];
 			} else {
-				self::error( "Invalid host name (docroot=" . $docRoot . "), can't determine language.\n" );
+				self::error( "Invalid host name ($serverName), can't determine language.\n" );
 			}
+		} elseif ( preg_match( "/^\/usr\/local\/apache\/(?:htdocs|common\/docroot)\/([a-z0-9\-_]*)$/", $docRoot, $matches ) ) {
+			$site = "wikipedia";
+			$lang = $matches[1];
+		} else {
+			self::error( "Invalid host name (docroot=" . $docRoot . "), can't determine language.\n" );
 		}
 		$this->loadDBFromSite( $site, $lang );
 	}
