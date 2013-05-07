@@ -2522,7 +2522,7 @@ if ( $wmgUseThanks ) {
 }
 
 if ( $wmgUseScribunto ) {
-	include( "$IP/extensions/CodeEditor/CodeEditor.php" );
+	include_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
 	// Don't enable core functionality until it has been reviewed and approved
 	$wgCodeEditorEnableCore = false;
 
@@ -2748,7 +2748,10 @@ if ( $wmgUseGlobalAbuseFilters ) {
 }
 
 if ( $wmgUseZeroNamespace ) {
+	include_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
+	require_once( "$IP/extensions/ZeroRatedMobileAccess/ZeroRatedMobileAccess.php" );
 	$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
+	$wgZeroRatedMobileAccessEnableZeroConfigPages = true;
 }
 
 if ( $wmgUseAccountAudit ) {
