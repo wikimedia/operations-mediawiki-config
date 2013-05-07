@@ -110,7 +110,9 @@ $wgLBFactoryConf = array(
 		'db1038'   => 0,
 		'db1004'   => 400,
 		'db1011'   => 400,
-		#'db1020'   => 100, # snapshot
+		'db1042'   => 100, # snapshot
+		'db1059'   => 400, # to be the new mariadb master
+		#'db1020'   => 100,
 	),
 	's5' => array(
 		'db1058'   => 0,
@@ -244,6 +246,7 @@ $wgLBFactoryConf = array(
 	'db1052' => '10.64.32.22', #do not remove or comment out
 	'db1056' => '10.64.32.26', #do not remove or comment out
 	'db1058' => '10.64.32.28', #do not remove or comment out
+	'db1059' => '10.64.32.29', #do not remove or comment out
 ),
 
 'externalLoads' => array(
