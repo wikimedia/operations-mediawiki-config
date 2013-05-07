@@ -23,14 +23,16 @@ class DBList {
 
 	public static function getall() {
 		static $list = null;
-		if( $list ) return $list;
+		if( $list ) {
+			return $list;
+		}
 
 		$objects = scandir(  dirname( __FILE__ ) . '/..'  );
 		foreach( $objects as $filename ) {
 			if( substr( $filename, -7, 7 ) == '.dblist' ) {
 				$projectname = substr( $filename, 0, -7 );
 				# Happilly prefetch the files content
-				$list[$projectname] = file( $filename, FILE_IGNORE_NEW_LINES);
+				$list[$projectname] = file( $filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
 			}
 		}
 
