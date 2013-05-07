@@ -11232,6 +11232,7 @@ $wgConf->settings = array(
 'wmgMFEnableSiteNotice' => array(
 	'default' => false,
 	'testwiki' => true,
+	'metawiki' => true,
 ),
 
 # trademark status
