@@ -45,8 +45,6 @@ if ( $wgDBname != 'commonswiki' ) {
 		'thumbDir'         => '/mnt/upload7/wikipedia/commons/thumb',
 	);
 }
-
-/*
 $wgForeignFileRepos[] = array(
    'class'                   => 'ForeignAPIRepo',
    'name'                    => 'wikimediacommons',
@@ -56,5 +54,4 @@ $wgForeignFileRepos[] = array(
    'descriptionCacheExpiry'  => 43200,
    'apiThumbCacheExpiry'     => 86400,
 );
-*/
 
