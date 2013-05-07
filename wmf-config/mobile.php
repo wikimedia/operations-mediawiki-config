@@ -54,6 +54,7 @@ if ( $wmgMobileUrlTemplate ) {
 
 if ( $wmgZeroRatedMobileAccess ) {
 	require_once( "$IP/extensions/ZeroRatedMobileAccess/ZeroRatedMobileAccess.php" );
+	$wgZeroRatedMobileAccessConfigIndexUri = 'http://meta.wikimedia.org/w/index.php';
 }
 
 if ( $wmgZeroDisableImages ) {

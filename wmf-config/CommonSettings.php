@@ -2748,7 +2748,10 @@ if ( $wmgUseGlobalAbuseFilters ) {
 }
 
 if ( $wmgUseZeroNamespace ) {
+	include_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
+	require_once( "$IP/extensions/ZeroRatedMobileAccess/ZeroRatedMobileAccess.php" );
 	$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
+	$wgZeroRatedMobileAccessEnableZeroConfigPages = true;
 }
 
 if ( $wmgUseAccountAudit ) {
