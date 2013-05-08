@@ -2451,6 +2451,9 @@ if ( $wmgEnableRandomRootPage ) {
 # Avoid excessive drops in squid hit rates
 $wgMaxBacklinksInvalidate = 200000;
 
+# Hack due to slow jobs
+$wgJobTypesExcludedFromDefaultQueue[] = 'TTMServerMessageUpdateJob';
+
 #
 # If a job runner takes too long to finish a job, assume it died and re-assign the job
 $wgJobTypeConf['default']['claimTTL'] = 3600;
