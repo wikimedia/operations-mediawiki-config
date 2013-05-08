@@ -39,7 +39,8 @@ if ( isset( $_SERVER['SERVER_ADDR'] ) ) {
 
 # Protection for unusual entry points
 if ( !function_exists( 'wfProfileIn' ) ) {
-	require( './includes/ProfilerStub.php' );
+	require_once( './includes/profiler/Profiler.php' );
+	require_once( './includes/profiler/ProfilerStub.php' );
 }
 
 $fname = 'CommonSettings.php';
@@ -128,7 +129,8 @@ $wgDBname = $multiVersion->getDatabase();
 $wgDBuser = 'wikiuser';
 
 # wmf-config directory (in common/)
-$wmfConfigDir = "$IP/../wmf-config";
+$wmfCommonDir = dirname( __DIR__ );
+$wmfConfigDir = __DIR__;
 
 wfProfileOut( "$fname-host" );
 
@@ -193,7 +195,7 @@ if ( !$globals ) {
 
 	$wikiTags = array();
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small', 'medium', 'large', 'wikimania', 'wikidataclient' ) as $tag ) {
-		$dblist = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../$tag.dblist" ) ) );
+		$dblist = array_map( 'trim', file( getRealmSpecificFilename( "$wmfCommonDir/$tag.dblist" ) ) );
 		if ( in_array( $wgDBname, $dblist ) ) {
 			$wikiTags[] = $tag;
 		}
@@ -552,9 +554,9 @@ include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 
 // Config for sitematrix
 $wgSiteMatrixFile = '/apache/common/langlist';
-$wgSiteMatrixClosedSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../closed.dblist" ) ) );
-$wgSiteMatrixPrivateSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../private.dblist" ) ) );
-$wgSiteMatrixFishbowlSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../fishbowl.dblist" ) ) );
+$wgSiteMatrixClosedSites = array_map( 'trim', file( getRealmSpecificFilename( "$wmfCommonDir/closed.dblist" ) ) );
+$wgSiteMatrixPrivateSites = array_map( 'trim', file( getRealmSpecificFilename( "$wmfCommonDir/private.dblist" ) ) );
+$wgSiteMatrixFishbowlSites = array_map( 'trim', file( getRealmSpecificFilename( "$wmfCommonDir/fishbowl.dblist" ) ) );
 
 include( $IP . '/extensions/CharInsert/CharInsert.php' );
 
@@ -2452,7 +2454,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBSettings['clientDbList'] = array_merge(
 		array( 'test2wiki' => 'test2wiki' ),
-		array_map( 'trim', file( getRealmSpecificFilename( "$IP/../wikipedia.dblist" ) ) )
+		array_map( 'trim', file( getRealmSpecificFilename( "$wmfCommonDir/wikipedia.dblist" ) ) )
 	);
 
 	$wgWBSettings['localClientDatabases'] = array_combine(
