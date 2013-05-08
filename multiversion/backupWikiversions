@@ -11,7 +11,7 @@ require_once( dirname( __FILE__ ) . '/MWRealm.php' );
  * @return void
  */
 function backupWikiversions() {
-	$common = '/home/wikipedia/common';
+	$common = MULTIVER_COMMON_HOME;
 	$datPath = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
 
 	$filename = $datPath;
