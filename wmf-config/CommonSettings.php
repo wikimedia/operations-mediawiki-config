@@ -2550,11 +2550,12 @@ if ( $wmgUseThanks ) {
 	require_once( "$IP/extensions/Thanks/Thanks.php" );
 }
 
-if ( $wmgUseScribunto ) {
+if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgUseZeroNamespace ) {
 	include_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
-	// Don't enable core functionality until it has been reviewed and approved
-	$wgCodeEditorEnableCore = false;
+	$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore;
+}
 
+if ( $wmgUseScribunto ) {
 	include( "$IP/extensions/Scribunto/Scribunto.php" );
 	$wgScribuntoUseGeSHi = true;
 	$wgScribuntoUseCodeEditor = true;
@@ -2659,6 +2660,7 @@ if ( $wmgUseEventLogging ) {
 		$wgExtraNamespaces[471] = 'Schema_talk';
 
 		include_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
+		$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore; // For safety's sake
 	}
 }
 
@@ -2792,7 +2794,6 @@ if ( $wmgUseGlobalAbuseFilters ) {
 }
 
 if ( $wmgUseZeroNamespace ) {
-	include_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
 	require_once( "$IP/extensions/ZeroRatedMobileAccess/ZeroRatedMobileAccess.php" );
 	$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
 	$wgZeroRatedMobileAccessEnableZeroConfigPages = true;
