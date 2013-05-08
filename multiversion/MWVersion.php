@@ -43,7 +43,7 @@ function getMediaWiki( $file ) {
 
 	# MW_SECURE_HOST set from secure gateway?
 	$secure = getenv( 'MW_SECURE_HOST' );
-	$host = $secure ? $secure : $_SERVER['HTTP_HOST'];
+	$host = $secure ? $secure : @$_SERVER['HTTP_HOST'];
 
 	# Get the correct MediaWiki path based on this version...
 	$IP = MULTIVER_COMMON_APACHE . "/$version";
