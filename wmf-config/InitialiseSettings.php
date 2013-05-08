@@ -12033,6 +12033,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'test2wiki' => true,
 	'enwiki' => true,
+	'mkwiki' => true,
 ),
 
 'wmgUseWikimediaShopLink' => array(
