@@ -10381,6 +10381,7 @@ $wgConf->settings = array(
 
 'wmgUseMwEmbedSupport' => array(
 	'default' => true,
+	'loginwiki' => false,
 ),
 
 // NOTE: TMH *requires* MwEmbedSupport to function

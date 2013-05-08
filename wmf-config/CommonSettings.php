@@ -1377,7 +1377,17 @@ if ( $wgDBname == 'loginwiki' ) {
 		'read' => true,
 	);
 
-	$wgGroupPermissions['sysop']['editinterface'] = false;
+	unset( $wgGroupPermissions['import'] );
+	unset( $wgGroupPermissions['transwiki'] );
+
+	$wgGroupPermissions['sysop'] = array_merge(
+		$wgGroupPermissions['sysop'],
+		array(
+			'editinterface' => false,
+			'editusercss' => false,
+			'edituserjs' => false,
+		)
+	);
 }
 
 $wgAutopromote = array(
