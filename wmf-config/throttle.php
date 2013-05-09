@@ -20,11 +20,11 @@ $wmgThrottlingExceptions = array();
 
 ## Add throttling definitions below.
 
-$wmfThrottlingExceptions[] = array( // Bug 47315, itwiki GLAM event
-	'from'   => '2013-04-20T11:00 +0:00',
-	'to'     => '2013-04-20T18:00 +0:00',
-	'IP'     => '46.255.84.17',
-	'dbname' => array( 'itwiki', ),
+$wmfThrottlingExceptions[] = array( // Bug 48301 Haifa University workshop
+	'from'   => '2013-05-12T16:00 +3:00',
+	'to'     => '2013-05-12T21:00 +3:00',
+	'IP'     => '132.74.209.225',
+	'dbname' => array( 'enwiki', 'hewiki', 'eswiki', 'frwiki', 'ruwiki', 'plwiki' ),
 );
 
 ## Add throttling definitions above.
