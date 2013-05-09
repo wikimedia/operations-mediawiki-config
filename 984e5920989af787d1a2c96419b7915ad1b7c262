@@ -16,6 +16,24 @@
       "revId": "984e5920989af787d1a2c96419b7915ad1b7c262",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwtjogxQ",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 121
+      },
+      "writtenOn": "2013-05-09T14:42:23Z",
+      "side": 1,
+      "message": "This is probably the line which throws a warning about wrong UTF-8 by my iDE...\n\nMaybe the old line is wrong and your revision is fine? But I do not have a FR instance to test it.",
+      "parentUuid": "Dwhjq6xA",
+      "revId": "984e5920989af787d1a2c96419b7915ad1b7c262",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
