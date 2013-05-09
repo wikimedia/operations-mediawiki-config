@@ -11,6 +11,7 @@ include( $path );
 ///////////////////////////////////////
 // Common configuration
 // DO NOT CHANGE without hard-coding these values into the relevant wikis first.
+$wgFlaggedRevsNamespaces[] = 828; // NS_MODULE
 $wgFlaggedRevTags = array(
 	'accuracy' => array( 'levels' => 2, 'quality' => 2, 'pristine' => 4 ),
 );
@@ -437,7 +438,7 @@ elseif ( $wgDBname == 'mediawikiwiki' ) {
 
 elseif ( $wgDBname == 'plwiki' ) {
 	// Bugs 43617, 48043 
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_TEMPLATE, NS_CATEGORY, NS_HELP, 100, 828 );
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_TEMPLATE, NS_CATEGORY, NS_HELP, 100 );
 	$wgFlaggedRevTags['accuracy']['levels'] = 1;
 
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
@@ -503,7 +504,7 @@ elseif ( $wgDBname == 'ptwikisource' ) {
 elseif ( $wgDBname == 'ruwiki' ) {
 
 	// Bugs 37675, 47337
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 );
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100 );
 
 	$wgFlaggedRevTags['accuracy']['levels'] = 3; // Is this needed?
 	$wgFlaggedRevsOverride = false;
