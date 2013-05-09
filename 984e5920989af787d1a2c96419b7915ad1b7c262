@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dwhjq6xA",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 161
+      },
+      "writtenOn": "2013-05-09T14:32:50Z",
+      "side": 1,
+      "message": "Unrelated change, which is done by my IDE. Can some remove this? Thanks.",
+      "revId": "984e5920989af787d1a2c96419b7915ad1b7c262",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
