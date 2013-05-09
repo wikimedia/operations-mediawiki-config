@@ -12098,6 +12098,10 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 ),
 
+'wmgUseCodeEditorForCore' => array(
+	'default' => false,
+),
+
 'wmgUseScribunto' => array(
 	'default' => true,
 ),
