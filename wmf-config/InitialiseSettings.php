@@ -4274,6 +4274,7 @@ $wgConf->settings = array(
 		'mobile'  => "udp://$wmfUdp2logDest/mobile",
 		// 'mwsearch' => "udp://$wmfUdp2logDest/mwsearch",
 		'temp-debug' => "udp://$wmfUdp2logDest/temp-debug", // generic admin debug log
+		'CentralAuth' => "udp://$wmfUdp2logDest/centralauth", // -pgehres 2013/05/09, tmp for SUL finalization
 	),
 
 	'+enwiki' => array(
