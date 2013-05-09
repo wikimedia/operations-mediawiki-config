@@ -43,7 +43,7 @@ if ( $wgDBname == 'alswiki' ) {
 }
 
 elseif ( $wgDBname == 'arwiki' ) {
-	$wgFlaggedRevsWhitelist = array( 'الص�?حة_الرئيسية' );
+	$wgFlaggedRevsWhitelist = array( 'الص�?حة_الرئيسية' );
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 100, 104 ); // bug 19332
 }
 
@@ -135,6 +135,7 @@ elseif ( $wgDBname == 'cawikinews' ) {
 // --brion
 elseif ( $wgDBname == 'dewiki' ) {
 	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
+	$wgFlaggedRevsNamespaces[] = 828; // NS_MODULE
 	$wgFlaggedRevTags['accuracy']['levels'] = 1;
 
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
