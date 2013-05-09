@@ -135,6 +135,7 @@ elseif ( $wgDBname == 'cawikinews' ) {
 // --brion
 elseif ( $wgDBname == 'dewiki' ) {
 	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
+	$wgFlaggedRevsNamespaces[] = 828; // NS_MODULE
 	$wgFlaggedRevTags['accuracy']['levels'] = 1;
 
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
