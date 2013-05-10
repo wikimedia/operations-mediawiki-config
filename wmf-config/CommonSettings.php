@@ -1583,6 +1583,9 @@ if ( $wmgUseCentralAuth ) {
 
 	// Let's give it another try
 	$wgCentralAuthCreateOnView = true;
+
+	// Attempt to attach unattached accounts by password on login
+	$wgCentralAuthAutoMigrate = true;
 }
 
 // taking it live 2006-12-15 brion

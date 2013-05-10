@@ -12534,10 +12534,6 @@ $wgConf->settings = array(
 	'default' => false,
 	'loginwiki' => true,
 ),
-
-'wgCentralAuthAutoMigrate' => array(
-	'default' => true,
-),
 );
 
 
