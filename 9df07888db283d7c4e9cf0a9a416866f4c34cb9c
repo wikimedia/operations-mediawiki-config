@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dw6K9oNY",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12281,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-05-10T08:58:49Z",
+      "side": 1,
+      "message": "What\u0027s this for? (I thought that commonswiki and metawiki are missing here, but I think this may have something to do with it).",
+      "revId": "9df07888db283d7c4e9cf0a9a416866f4c34cb9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
