@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dwwgyq10",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10914,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2013-05-10T20:02:17Z",
+      "side": 0,
+      "message": "If I understand this correctly, this is quite a big change: experience shows people will complain a lot, especially if not warned.",
+      "revId": "c5706351bbbfb171ee22ea5f5cb0837049b05699",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
