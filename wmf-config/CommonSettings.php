@@ -1083,6 +1083,7 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 include( $IP . '/extensions/GlobalBlocking/GlobalBlocking.php' );
 $wgGlobalBlockingDatabase = 'centralauth';
 $wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
+$wgGlobalBlockingBlockXFF = $wmgUseXFFBlocks;
 
 include( $IP . '/extensions/TrustedXFF/TrustedXFF.php' );
 if ( function_exists( 'dba_open' ) && file_exists( "$wmfConfigDir/trusted-xff.cdb" ) ) {
@@ -2805,6 +2806,8 @@ if ( $wmgUseZeroNamespace ) {
 if ( $wmgUseAccountAudit ) {
 	require_once( "$IP/extensions/AccountAudit/AccountAudit.php" );
 }
+
+$wgApplyIpBlocksToXff = $wmgUseXFFBlocks;
 
 // On Special:Version, link to useful release notes
 $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
