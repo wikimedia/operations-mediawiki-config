@@ -16,6 +16,24 @@
       "revId": "9df07888db283d7c4e9cf0a9a416866f4c34cb9c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DwyLKMHA",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12281,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2013-05-10T09:01:28Z",
+      "side": 1,
+      "message": "@Siebrand: it means all the wikis in https://noc.wikimedia.org/conf/highlight.php?file\u003dspecial.dblist\nIt should match your definition of \"all wikis with no language subdomains\", although Commons is special here because it uses interlanguage wikilinks in mass (as well as sourceswiki and betawikiversity of course, which are much smaller though).",
+      "parentUuid": "Dw6K9oNY",
+      "revId": "9df07888db283d7c4e9cf0a9a416866f4c34cb9c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
