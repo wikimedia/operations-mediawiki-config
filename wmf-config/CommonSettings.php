@@ -2806,6 +2806,14 @@ if ( $wmgUseAccountAudit ) {
 	require_once( "$IP/extensions/AccountAudit/AccountAudit.php" );
 }
 
+if ( $wmgUseXFFBlocks ) {
+	$wgApplyIpBlocksToXff = true;
+	$wgGlobalBlockingBlockXFF = true;
+} else {
+	$wgApplyIpBlocksToXff = false;
+	$wgGlobalBlockingBlockXFF = false;
+}
+
 // On Special:Version, link to useful release notes
 $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
 	$matches = array();
