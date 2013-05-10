@@ -12480,6 +12480,11 @@ $wgConf->settings = array(
 	'metawiki' => true,
 ),
 
+// Apply blocks to IPs in XFF (bug 23343)
+'wmgUseXFFBlocks' => array(
+	'default' => true,
+),
+
 'wgUrlProtocols' => array(
 	'default' => array(
 		'http://',
