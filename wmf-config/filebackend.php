@@ -219,3 +219,37 @@ if ( $wgDBname != 'commonswiki' ) {
 		'abbrvThreshold'   => 160
 	);
 }
+
+// Make sure any thumbnails in swift but not ceph have the CDN get purged
+$wgHooks['LocalFilePurgeThumbnails'][] = function( File $file, $archiveName ) {
+	global $site, $lang;
+
+	$backend = FileBackendGroup::singleton()->get( 'local-swift' );
+	// Get thumbnail dir relative to thumb zone
+	if ( $archiveName !== false ) {
+		$thumbRel = $file->getArchiveThumbRel( $archiveName ); // old version
+	} else {
+		$thumbRel = $file->getRel(); // current version
+	}
+	$thumbDir = $backend->getRootStoragePath() . "/local-thumb/$thumbRel";
+
+	$list = $backend->getFileList( array( 'dir' => $thumbDir ) );
+	if ( $list === null ) {
+		wfDebugLog( 'SwiftBackend', "Could not get thumbnail listing." .
+			"Site: `{$site}` Lang: `{$lang}` ThumbRel: `{$thumbRel}/`" );
+	} else {
+		$urls = array();
+		wfProfileIn( __METHOD__ . '-list' );
+		foreach ( $list as $relFile ) {
+			$urls[] = ( $archiveName !== false )
+				? $file->getArchiveThumbUrl( $archiveName, $relFile )
+				: $file->getThumbUrl( $relFile );
+		}
+		wfProfileOut( __METHOD__ . '-list' );
+		wfProfileIn( __METHOD__ . '-purge' );
+		SquidUpdate::purge( $urls );
+		wfProfileOut( __METHOD__ . '-purge' );
+	}
+
+	return true;
+};
