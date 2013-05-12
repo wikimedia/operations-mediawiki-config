@@ -645,7 +645,8 @@ $wgConf->settings = array(
 	'lmowiki'		=> '//upload.wikimedia.org/wikipedia/commons/f/ff/Wikipedia-logo-v2-lmo.png', // bug 40285
 	'lnwiki'		=> '//upload.wikimedia.org/wikipedia/commons/a/aa/Wikipedia-logo-v2-ln.png', // bug 46589
 	'wikidatawiki'		=> '//upload.wikimedia.org/wikipedia/commons/e/e4/Wikidata-logo-en-135px.png',
-	'loginwiki'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/135px-Wikimedia-logo.svg.png',
+	'loginwiki'		=> '//upload.wikimedia.org/wikipedia/commons/e/ed/Wikimedia_logo-sc
+aled-down.png', // bug 48236
 	'lowiki'		=> '$stdlogo',
 	'ltgwiki'		=> '//upload.wikimedia.org/wikipedia/commons/7/77/Wikipedia-logo-v2-ltg.png',
 	'ltwiki'		=> '//upload.wikimedia.org/wikipedia/commons/1/1c/Wikipedia-logo-v2-lt.png', // bug 46589
