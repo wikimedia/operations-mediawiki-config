@@ -9937,14 +9937,6 @@ $wgConf->settings = array(
 	'usabilitywiki' => true,
 ),
 
-'wgHandheldStyle' => array(
-	// Set MonoBook's handheld stylesheet to use Chick's style
-	// in place of big fat nothin'.
-	// New Kindle should support it; Opera Mini in "mobile mode" should also see it.
-	// iPhone and Opera Mini in pretty mode will ignore it unless wgHandheldForIPhone is also turned on.
-	'default' => 'chick/main.css',
-),
-
 'wmgUseNewUserMessage' => array(
 	'default' => false,
 	'arwiki' => true,
