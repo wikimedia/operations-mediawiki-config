@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dw4h7Vrs",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2815,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-05-12T18:41:40Z",
+      "side": 1,
+      "message": "Any reason we can\u0027t just do:\n\n$wgApplyIpBlocksToXff \u003d $wmgUseXFFBlocks;\n\n$wgGlobalBlockingBlockXFF \u003d $wmgUseXFFBlocks;\n\n\n?\n\nWonder if the GlobalBlocking one would should go with the GlobalBlocking extension code",
+      "revId": "014faf9e4c3788782016cb9a26cc84050588e626",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
