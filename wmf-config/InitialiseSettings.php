@@ -11310,6 +11310,15 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'Usuaris %code%-N',
 	),
+	'cawiktionary' => array( // bug 47287
+		'0' => false,
+		'1' => 'Usuaris %code%-1',
+		'2' => 'Usuaris %code%-2',
+		'3' => 'Usuaris %code%-3',
+		'4' => 'Usuaris %code%-4',
+		'5' => false,
+		'N' => 'Usuaris %code%-N',
+	),
 	'commonswiki' => array(
 		'0' => 'User %code%-0',
 		'1' => 'User %code%-1',
