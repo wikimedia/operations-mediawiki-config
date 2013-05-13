@@ -11,6 +11,7 @@ include( $path );
 ///////////////////////////////////////
 // Common configuration
 // DO NOT CHANGE without hard-coding these values into the relevant wikis first.
+$wgFlaggedRevsNamespaces[] = 828; // NS_MODULE
 $wgFlaggedRevTags = array(
 	'accuracy' => array( 'levels' => 2, 'quality' => 2, 'pristine' => 4 ),
 );
@@ -44,7 +45,7 @@ if ( $wgDBname == 'alswiki' ) {
 
 elseif ( $wgDBname == 'arwiki' ) {
 	$wgFlaggedRevsWhitelist = array( 'الص�?حة_الرئيسية' );
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 100, 104 ); // bug 19332
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 100, 104 ) ); // bug 19332
 }
 
 elseif ( $wgDBname == 'bewiki' ) {
@@ -218,7 +219,7 @@ elseif ( $wgDBname == 'enwiki' || $wgDBname == 'testwiki' ) {
 elseif ( $wgDBname == 'enwikibooks' ) {
 	$wgFlaggedRevsOverride = false;
 	// Cookbook, WikiJunior
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 102, 110 );
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 102, 110 ) );
 	$wgFlaggedRevTags = array(
 		'value' => array( 'levels' => 3, 'quality' => 2, 'pristine' => 3 )
 	);
@@ -248,7 +249,7 @@ elseif ( $wgDBname == 'enwikibooks' ) {
 }
 elseif ( $wgDBname == 'elwikinews' ) {
     $wgFlaggedRevsAutoReviewNew = false;
-    $wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_CATEGORY, NS_TEMPLATE, 100 );
+    $wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_CATEGORY, 100 ) );
     $wgGroupPermissions['editor']['rollback'] = true;
     $wgGroupPermissions['editor']['autoreview'] = false;
     $wgGroupPermissions['sysop']['stablesettings'] = true;
@@ -262,7 +263,7 @@ elseif ( $wgDBname == 'elwikinews' ) {
 
 elseif ( $wgDBname == 'enwikinews' ) {
 	$wgFlaggedRevsAutoReviewNew = false; // https://bugzilla.wikimedia.org/show_bug.cgi?id=15639
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_CATEGORY, NS_TEMPLATE, 100 );
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_CATEGORY, 100 ) );
 	$wgGroupPermissions['editor']['rollback'] = true; // https://bugzilla.wikimedia.org/show_bug.cgi?id=19815
 	$wgGroupPermissions['editor']['autoreview'] = false; // https://bugzilla.wikimedia.org/show_bug.cgi?id=23948
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
@@ -282,7 +283,7 @@ elseif ( $wgDBname == 'eowiki' ) {
 
 elseif ( $wgDBname == 'fawikinews' ) {
 	$wgFlaggedRevsAutoReviewNew = false;
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_CATEGORY, NS_TEMPLATE, 100 );
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_CATEGORY, 100 ) );
 	$wgGroupPermissions['editor']['rollback'] = true;
 	$wgGroupPermissions['editor']['autoreview'] = false;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
@@ -310,13 +311,13 @@ elseif ( $wgDBname == 'fiwiki' ) {
 }
 
 elseif ( $wgDBname == 'frwikinews' ) {
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 104, 106 );
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 104, 106 ) );
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 }
 
 elseif ( $wgDBname == 'hewikisource' ) {
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 100, 104, 106, 108, 110, 112 );
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 100, 104, 106, 108, 110, 112 ) );
 	$wgFlaggedRevTags = array( 'completeness' => 3, 'accuracy' => 3, 'formatting' => 3 );
 	$wgFlaggedRevValues = 4;
 	$wgFlaggedRevsAutoReviewNew = false;
@@ -331,7 +332,7 @@ elseif ( $wgDBname == 'hewikisource' ) {
 # bug 29911
 elseif ( $wgDBname == 'hiwiki' ) {
 	// # namespaces
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_PROJECT, NS_IMAGE, NS_TEMPLATE, NS_CATEGORY, 100 ); # 100 = Portal
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_PROJECT, NS_CATEGORY, 100 ) ); # 100 = Portal
 	# Show only on a per-page basis
 	$wgFlaggedRevsOverride = false;
 	# We have only one tag with one level
@@ -368,7 +369,7 @@ elseif ( $wgDBname == 'huwiki' ) {
 	$wgFlaggedRevsLowProfile = false;
 
 	// # namespaces
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, NS_CATEGORY, 100 ); # 100 = Portal
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_CATEGORY, 100 ) ); # 100 = Portal
 	$wgFeedbackNamespaces = array( NS_MAIN );
 
 	// # levels
@@ -460,7 +461,7 @@ elseif ( $wgDBname == 'ptwikibooks' ) {
 	// Sets the most recent version as shown
 	$wgFlaggedRevsOverride = false;
 
-	$wgFlaggedRevsNamespaces = array(NS_MAIN, NS_TEMPLATE, NS_HELP, NS_PROJECT);
+	$wgFlaggedRevsNamespaces = array(NS_MAIN, NS_TEMPLATE, NS_HELP, NS_PROJECT, 828);
 
 	$wgSimpleFlaggedRevsUI = false;
 	$wgFlaggedRevComments = false;
@@ -495,7 +496,7 @@ elseif ( $wgDBname == 'ptwikinews' ) {
 
 elseif ( $wgDBname == 'ptwikisource' ) {
 	$wgFlaggedRevsLowProfile = false;
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 102, 104, 106, 108, 110 );
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 102, 104, 106, 108, 110 ) );
 	$wgFlaggedRevTags['accuracy']['levels'] = 1;
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 }
@@ -528,7 +529,7 @@ elseif ( $wgDBname == 'ruwikiquote' ) {}
 elseif ( $wgDBname == 'idwiki' ) {}
 
 elseif ( $wgDBname == 'ruwikisource' ) {
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, NS_HELP, NS_PROJECT );
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_HELP, NS_PROJECT ) );
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
@@ -569,7 +570,7 @@ elseif( $wgDBname == 'ukwiki' ) {
 elseif ( $wgDBname == 'ukwiktionary' ) {}
 
 elseif ( $wgDBname == 'plwikisource' ) {
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_TEMPLATE, NS_FILE, NS_CATEGORY, NS_HELP, 100, 102, 104 );
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_CATEGORY, NS_HELP, 100, 102, 104 ) );
 
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 	$wgFlaggedRevsAutopromote['edits'] = 100;
