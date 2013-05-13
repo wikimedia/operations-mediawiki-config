@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "Dw95c9O8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4132,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2013-05-13T10:52:19Z",
+      "side": 1,
+      "message": "Weird whitespacing. Do we even care in this repo? ;)",
+      "revId": "49c23594edca46ae6178f364f22e2dd7cdd7dbe1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
