@@ -4127,6 +4127,11 @@ $wgConf->settings = array(
 ),
 # @} end of wgRestrictionLevels
 
+'wgCascadingRestrictionLevels' => array(
+	'default' => array( 'sysop' ),
+	'plwiki' => array( 'editor', 'sysop' ), // Bug 48374
+),
+
 'wgSiteNotice' => array(
 	'default' => '',
 ),
