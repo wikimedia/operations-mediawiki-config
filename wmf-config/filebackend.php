@@ -143,11 +143,11 @@ $wgFileBackends[] = array(
 	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname, 'ttlDays' => $wmfFileJournalTTL ),
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-		array( 'template' => 'local-swift', 'isMultiMaster' => true ),
-		array( 'template' => 'local-ceph' )
+		array( 'template' => 'local-swift', 'isMultiMaster' => false ),
+		array( 'template' => 'local-ceph', 'isMultiMaster' => true )
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
-	'autoResync'  => true // bug 39221
+	'autoResync'  => 'conservative' // bug 39221
 );
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
@@ -157,11 +157,11 @@ $wgFileBackends[] = array(
 	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki', 'ttlDays' => $wmfFileJournalTTL ),
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-		array( 'template' => 'shared-swift', 'isMultiMaster' => true ),
-		array( 'template' => 'shared-ceph' )
+		array( 'template' => 'shared-swift', 'isMultiMaster' => false ),
+		array( 'template' => 'shared-ceph', 'isMultiMaster' => true )
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
-	'autoResync'  => true // bug 39221
+	'autoResync'  => 'conservative' // bug 39221
 );
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
@@ -170,11 +170,11 @@ $wgFileBackends[] = array(
 	'lockManager' => 'nullLockManager',
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-		array( 'template' => 'global-swift', 'isMultiMaster' => true ),
-		array( 'template' => 'global-ceph' )
+		array( 'template' => 'global-swift', 'isMultiMaster' => false ),
+		array( 'template' => 'global-ceph', 'isMultiMaster' => true )
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
-	'autoResync'  => true
+	'autoResync'  => 'conservative'
 );
 /* end multiwrite backend config */
 
