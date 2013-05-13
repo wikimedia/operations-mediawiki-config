@@ -20,11 +20,12 @@ $wmgThrottlingExceptions = array();
 
 ## Add throttling definitions below.
 
-$wmfThrottlingExceptions[] = array( // Bug 48301 Haifa University workshop
-	'from'   => '2013-05-12T16:00 +3:00',
-	'to'     => '2013-05-12T21:00 +3:00',
-	'IP'     => '132.74.209.225',
-	'dbname' => array( 'enwiki', 'hewiki', 'eswiki', 'frwiki', 'ruwiki', 'plwiki' ),
+$wmfThrottlingExceptions[] = array( // Bug 48396 - Journées Nationales de Calcul Formel (JNCF) 2013
+	'from'   => '2013-05-21T15:00 +0:00',
+	'to'     => '2013-05-22T12:00 +0:00',
+	'IP'     => '139.124.3.100',
+	'dbname' => array( 'enwiki', 'frwiki', 'commonswiki' ),
+	'value'  => 70,
 );
 
 ## Add throttling definitions above.
