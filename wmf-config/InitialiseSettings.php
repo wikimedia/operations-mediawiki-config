@@ -337,12 +337,12 @@ $wgConf->settings = array(
 # wgLogo @{
 'wgLogo' => array(
 	# Defaults
-	'default'	   => '//upload.wikimedia.org/wikipedia/commons/d/d6/Wikipedia-logo-v2-en.png',
-	'wikibooks'	 => '//upload.wikimedia.org/wikipedia/commons/4/49/Wikibooks-logo-en-noslogan.png',
-	'wikinews'	  => '$stdlogo', // '/upload/b/bc/Wiki.png',
-	'wikiquote'	 => '//upload.wikimedia.org/wikiquote/en/b/bc/Wiki.png',
+	'default'	=> '//upload.wikimedia.org/wikipedia/commons/d/d6/Wikipedia-logo-v2-en.png',
+	'wikibooks'	=> '//upload.wikimedia.org/wikipedia/commons/4/49/Wikibooks-logo-en-noslogan.png',
+	'wikinews'	=> '$stdlogo', // '/upload/b/bc/Wiki.png',
+	'wikiquote'	=> '//upload.wikimedia.org/wikiquote/en/b/bc/Wiki.png',
 	'wikisource'	=> '//upload.wikimedia.org/wikipedia/sources/b/bc/Wiki.png',
-	'wikiversity'       => '$stdlogo',
+	'wikiversity'	=> '$stdlogo',
 	'wiktionary'	=> '//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/135px-Wiktionary-logo.svg.png',
 	'wikivoyage'	=> '//upload.wikimedia.org/wikipedia/commons/d/da/WikivoyageLogoSmall.png',
 
@@ -2240,7 +2240,7 @@ $wgConf->settings = array(
 		'Wikipedia' => NS_PROJECT,
 	),
 	'+amwiki' => array(
-		 100	<= 'በር',
+		100	<= 'በር',
 	),
 	'+arcwiki' => array(
 		'Wikipedia' => NS_PROJECT,
@@ -2798,7 +2798,7 @@ $wgConf->settings = array(
 		"ポータル‐ノート" => 101,
 	),
 	'+jawikiversity' => array(
-		 'Wikiversity_talk' => NS_PROJECT_TALK,
+		'Wikiversity_talk' => NS_PROJECT_TALK,
 	),
 	'+kawikiquote' => array(
 		'Wikiquote' => 4,
@@ -2976,16 +2976,16 @@ $wgConf->settings = array(
 	'+nds_nlwiki' => array( 'Wikipedia' => NS_PROJECT ),
 	'+newiki' => array( 'Wikipedia' => NS_PROJECT ),
 	'+nlwiki' => array(
-		 'WP' => NS_PROJECT,
-		 'H' => NS_HELP,
-		 'P' => 100,
+		'WP' => NS_PROJECT,
+		'H' => NS_HELP,
+		'P' => 100,
 	),
 	'+nlwikisource' => array(
 		'Author' => 102,
 		'Author_talk' => 103,
 	),
 	'+nnwiki' => array(
-		 'WP' => NS_PROJECT,
+		'WP' => NS_PROJECT,
 	),
 	'+nowiki' => array(
 		'WP' => NS_PROJECT, // bug 41467
@@ -3179,7 +3179,7 @@ $wgConf->settings = array(
 	'+siwiki' => array(
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
-		'Portal'	      => 100,
+		'Portal'     => 100,
 		'Portal_talk' => 101,
 	),
 	'+siwikibooks' => array(
@@ -3231,16 +3231,16 @@ $wgConf->settings = array(
 		'Portal_talk' => 101,
 	),
 	'+tawiki' => array(
-		 'Wikipedia' => NS_PROJECT,
-		 'Wikipedia_talk' => NS_PROJECT_TALK,
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_talk' => NS_PROJECT_TALK,
 	),
 	'+testwiki' => array(
 		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
-	 ),
+	),
 	'+tewiki' => array(
-		 'Wikipedia' => NS_PROJECT,
-		 'Wikipedia_talk' => NS_PROJECT_TALK,
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_talk' => NS_PROJECT_TALK,
 	),
 	'+tewikisource' => array(
 		'Author' => 102,
@@ -3253,8 +3253,8 @@ $wgConf->settings = array(
 				'పేజీ_చర్చ' => 105,
 	),
 	'+tewiktionary' => array(
-		 'Wiktionary' => NS_PROJECT, # backcompat for shell req bug 36533
-		 'Wiktionary_చర్చ' => NS_PROJECT_TALK, # backcompat for shell req bug 36533
+		'Wiktionary' => NS_PROJECT, # backcompat for shell req bug 36533
+		'Wiktionary_చర్చ' => NS_PROJECT_TALK, # backcompat for shell req bug 36533
 	),
 	'+thwikibooks' => array(
 		'Wikibooks' => NS_PROJECT,                  // Bug 40717
@@ -3376,14 +3376,14 @@ $wgConf->settings = array(
 		'Cookbook_talk' => 107,
 	),
 	'+viwikisource' => array(
-	   'Portal'     => 100,
-	   'Portal_talk'    => 101,
-	   'Author'     => 102,
-	   'Author_talk'    => 103,
-	   'Page'       => 104,
-	   'Page_talk'  => 105,
-	   'Index'      => 106,
-	   'Index_talk' => 107,
+		'Portal'     => 100,
+		'Portal_talk'    => 101,
+		'Author'     => 102,
+		'Author_talk'    => 103,
+		'Page'       => 104,
+		'Page_talk'  => 105,
+		'Index'      => 106,
+		'Index_talk' => 107,
 	),
 	'+vowiki' => array(
 		'Wikipedia' => NS_PROJECT,
@@ -3697,7 +3697,7 @@ $wgConf->settings = array(
 		'page' => 104,
 		'index' => 106,
 	),
-	 'hywikisource' => array(
+	'hywikisource' => array(
 		'page' => 104,
 		'index' => 106,
 	),
@@ -4479,7 +4479,7 @@ $wgConf->settings = array(
 	'afwiki' => array(
 		100 => 'Portaal',
 		101 => 'Portaalbespreking',
-	   ),
+	),
 	'alswiki' => array(
 		100 => 'Portal',
 		101 => 'Portal_Diskussion',
@@ -4572,8 +4572,8 @@ $wgConf->settings = array(
 		101 => 'হমিলদুৱার_য়্যারী', // Portal_talk
 	),
 	'brwiktionary' => array(
-	   100 => 'Stagadenn', // Appendix
-	   101 => 'Kaozeadenn_Stagadenn', // Appendix talk
+		100 => 'Stagadenn', // Appendix
+		101 => 'Kaozeadenn_Stagadenn', // Appendix talk
 	),
 	'bswiki' => array(
 		100 => 'Portal', // Bug 37226
@@ -4592,16 +4592,16 @@ $wgConf->settings = array(
 	101 => 'لێدوانی_دەروازە',
 	),
 	'cswiki' => array(
-		NS_USER      => 'Wikipedista',	    # language default set back in wgNamespaceAliases
-		NS_USER_TALK => 'Diskuse_s_wikipedistou', # language default set back in wgNamespaceAliases
-		100	  => 'Portál',
-		101	  => 'Diskuse_k_portálu',
-		102	  => 'Rejstřík',
-		103	  => 'Diskuse_k_rejstříku',
+		NS_USER			=> 'Wikipedista',    # language default set back in wgNamespaceAliases
+		NS_USER_TALK	=> 'Diskuse_s_wikipedistou', # language default set back in wgNamespaceAliases
+		100		=> 'Portál',
+		101		=> 'Diskuse_k_portálu',
+		102		=> 'Rejstřík',
+		103		=> 'Diskuse_k_rejstříku',
 	),
 	'cswikisource' => array(
-		100	  => 'Autor',
-		101	  => 'Diskuse_k_autorovi',
+		100		=> 'Autor',
+		101		=> 'Diskuse_k_autorovi',
 	),
 	'cywiki' => array(
 		100     => 'Porth', # 27684
@@ -4805,7 +4805,7 @@ $wgConf->settings = array(
 		101 => 'პორტალი_განხილვა',
 	),
 	'kkwiki' => array(
-		100 => 'Портал',	    // Portal
+		100 => 'Портал',   // Portal
 		101 => 'Портал_талқылауы',
 		102 => 'Жоба',              // Bug 40794 - WikiProject
 		103 => 'Жоба_талқылауы',
@@ -4874,8 +4874,8 @@ $wgConf->settings = array(
 		101 => 'Pielikuma_diskusija',
 	),
 	'mkwikisource' => array(
-		   102 => 'Автор',
-		   103 => 'Разговор_за_автор',
+		102 => 'Автор',
+		103 => 'Разговор_за_автор',
 	),
 	'mlwiki' => array(
 		100 => 'കവാടം',
@@ -4978,14 +4978,14 @@ $wgConf->settings = array(
 		NS_PROJECT_TALK => 'Dyskusja_Wikipodróży',
 	),
 	'ptwiki' => array(
-	  NS_USER => 'Usuário(a)', # bug 27495
-	  NS_USER_TALK => 'Usuário(a)_Discussão',
-	  100 => 'Portal',
-	  101 => 'Portal_Discussão',
-	  102 => 'Anexo',
-	  103 => 'Anexo_Discussão',
-	  104 => 'Livro',
-	  105 => 'Livro_Discussão',
+		NS_USER => 'Usuário(a)', # bug 27495
+		NS_USER_TALK => 'Usuário(a)_Discussão',
+		100 => 'Portal',
+		101 => 'Portal_Discussão',
+		102 => 'Anexo',
+		103 => 'Anexo_Discussão',
+		104 => 'Livro',
+		105 => 'Livro_Discussão',
 	),
 	'roa_tarawiki' => array(
 		100 => 'Portale',
@@ -5055,7 +5055,7 @@ $wgConf->settings = array(
 	'tgwiki' => array(
 		100 => 'Портал',
 		101 => 'Баҳси_портал',
-	 ),
+	),
 	'thwiki' => array(
 		100 => 'สถานีย่อย',
 		101 => 'คุยเรื่องสถานีย่อย',
@@ -5116,21 +5116,21 @@ $wgConf->settings = array(
 	'zh_min_nanwiki' => array( 100 => 'Portal', 101 => 'Portal_talk' ),
 	'zh_yuewiki' => array(
 		# Override MediaWiki default namespace names for "yue".
-		NS_MEDIA	    => 'Media',
-		NS_SPECIAL	  => 'Special',
-		NS_TALK	     => 'Talk',
-		NS_USER	     => 'User',
+		NS_MEDIA		=> 'Media',
+		NS_SPECIAL		=> 'Special',
+		NS_TALK			=> 'Talk',
+		NS_USER			=> 'User',
 		NS_USER_TALK	=> 'User_talk',
-		NS_PROJECT_TALK     => '$1_talk',
-		NS_FILE	     => 'File',
+		NS_PROJECT_TALK	=> '$1_talk',
+		NS_FILE			=> 'File',
 		NS_FILE_TALK	=> 'File_talk',
-		NS_MEDIAWIKI_TALK   => 'MediaWiki_talk',
-		NS_TEMPLATE	 => 'Template',
-		NS_TEMPLATE_TALK    => 'Template_talk',
-		NS_HELP	     => 'Help',
-		NS_HELP_TALK	=> 'Help_talk',
-		NS_CATEGORY	 => 'Category',
-		NS_CATEGORY_TALK    => 'Category_talk',
+		NS_MEDIAWIKI_TALK	=> 'MediaWiki_talk',
+		NS_TEMPLATE			=> 'Template',
+		NS_TEMPLATE_TALK	=> 'Template_talk',
+		NS_HELP				=> 'Help',
+		NS_HELP_TALK		=> 'Help_talk',
+		NS_CATEGORY			=> 'Category',
+		NS_CATEGORY_TALK	=> 'Category_talk',
 		# Additional namespaces.
 		100 => 'Portal',
 		101 => 'Portal_talk',
@@ -5314,15 +5314,15 @@ $wgConf->settings = array(
 		106 => 'Index',
 		107 => 'Index_vita',
 	),
-	 'hywikisource' => array(
-	   100 => 'Հեղինակ',
-	   101 => 'Հեղինակի_քննարկում',
-	   102 => 'Պորտալ',
-	   103 => 'Պորտալի_քննարկում',
-	   104 => 'Էջ',
-	   105 => 'Էջի_քննարկում',
-	   106 => 'Ինդեքս',
-	   107 => 'Ինդեքսի_քննարկում',
+	'hywikisource' => array(
+		100 => 'Հեղինակ',
+		101 => 'Հեղինակի_քննարկում',
+		102 => 'Պորտալ',
+		103 => 'Պորտալի_քննարկում',
+		104 => 'Էջ',
+		105 => 'Էջի_քննարկում',
+		106 => 'Ինդեքս',
+		107 => 'Ինդեքսի_քննարկում',
 	),
 	'idwikisource' => array(
 		100 => 'Pengarang',
@@ -5398,22 +5398,22 @@ $wgConf->settings = array(
 		101 => 'Dyskusja_strony',
 		102 => 'Indeks',
 		103 => 'Dyskusja_indeksu',
-	104 => 'Autor',
-	105 => 'Dyskusja_autora',
+		104 => 'Autor',
+		105 => 'Dyskusja_autora',
 	),
 	'ptwikisource' => array(
 		100 => 'Portal',
 		101 => 'Portal_Discussão',
 		102 => 'Autor',
 		103 => 'Autor_Discussão',
-	   104 => 'Galeria',
-	   105 => 'Galeria_Discussão',
-	   106 => 'Página',
-	   107 => 'Página_Discussão',
-	   108 => 'Em_Tradução',
-	   109 => 'Discussão_Em_Tradução',
-	   110 => 'Anexo',
-	   111 => 'Anexo_Discussão',
+		104 => 'Galeria',
+		105 => 'Galeria_Discussão',
+		106 => 'Página',
+		107 => 'Página_Discussão',
+		108 => 'Em_Tradução',
+		109 => 'Discussão_Em_Tradução',
+		110 => 'Anexo',
+		111 => 'Anexo_Discussão',
 	),
 	'ruwikisource' => array(
 		104 => 'Страница',
@@ -5889,10 +5889,10 @@ $wgConf->settings = array(
 		103 => 'Secció_Discussió',
 	),
 	'cswikinews' => array(
-		NS_USER      => 'Redaktor',	       # language default set back in wgNamespaceAliases
+		NS_USER      => 'Redaktor',       # language default set back in wgNamespaceAliases
 		NS_USER_TALK => 'Diskuse_s_redaktorem',   # language default set back in wgNamespaceAliases
-		100	  => 'Portál',
-		101	  => 'Diskuse_k_portálu',
+		100 => 'Portál',
+		101 => 'Diskuse_k_portálu',
 	),
 	'dewikinews' => array(
 		100 => 'Portal',
@@ -5942,13 +5942,13 @@ $wgConf->settings = array(
 		101 => "ポータル・トーク",
 		108 => '短信',
 		109 => '短信‐ノート',
-	 ),
-	 'nowikinews' => array(
+	),
+	'nowikinews' => array(
 		100 => 'Kommentarer',
 		101 => 'Kommentarer-diskusjon',
 		106 => 'Portal',
 		107 => 'Portal-diskusjon',
-	 ),
+	),
 	'ptwikinews' => array(
 		100 => 'Portal',
 		101 => 'Portal_Discussão',
@@ -5956,7 +5956,7 @@ $wgConf->settings = array(
 		103 => 'Efeméride_Discussão',
 		104 => 'Transwiki',
 		105 => 'Transwiki_Discussão',
-	 ),
+	),
 	'plwikinews' => array(
 		NS_PROJECT_TALK => 'Dyskusja_Wikinews',
 		NS_USER => 'Wikireporter',
@@ -6048,8 +6048,8 @@ $wgConf->settings = array(
 		107 => 'نقاش_المجموعة',
 	),
 	'cswikiversity' => array(
-		100	  => 'Fórum',
-		101	  => 'Diskuse_k_fóru',
+		100 => 'Fórum',
+		101 => 'Diskuse_k_fóru',
 	),
 	'dewikiversity' => array(
 		106 => 'Kurs',
@@ -6323,9 +6323,9 @@ $wgConf->settings = array(
 		'Contact-url',
 	),
 	'incubatorwiki' => array(
-	   'sidebar-mainpage-url',
-	   'sidebar-help-url',
-	   'sidebar-sitesupport-url',
+		'sidebar-mainpage-url',
+		'sidebar-help-url',
+		'sidebar-sitesupport-url',
 	),
 	'specieswiki' => array(
 		'mainpage',
@@ -6462,7 +6462,7 @@ $wgConf->settings = array(
 ),
 
 'wgExternalStores' => array(
-	 'default' => array( 'DB' ),
+	'default' => array( 'DB' ),
 ),
 
 'wgRC2UDPAddress' => array(
@@ -6673,7 +6673,7 @@ $wgConf->settings = array(
 			'collectionsaveasuserpage' => true,
 		),
 		'inactive' => array(
-		  // for show only
+			// for show only
 		),
 	),
 	'wikimania2013wiki' => array(
@@ -6699,7 +6699,7 @@ $wgConf->settings = array(
 			'collectionsaveasuserpage' => true,
 	),
 	'inactive' => array(
-		  // for show only
+			// for show only
 		),
 	),
 
@@ -6830,14 +6830,14 @@ $wgConf->settings = array(
 		'autoconfirmed' => array( 'upload' => false, ),
 		'autopatrolled' => array( 'autopatrol' => true, ),
 		'bot' => array( 'ipblock-exempt' => true, ), // Bug 42720
-		'user'	  => array( 'upload' => false, ),
+		'user' => array( 'upload' => false, ),
 	),
 	'cswikibooks' => array(
 		'user' => array( 'upload' => false ),
 		'autoconfirmed' => array( 'upload' => false ),
 	),
 	'cswikinews' => array(
-		'user'	  => array( 'upload' => false, ),
+		'user' => array( 'upload' => false, ),
 		'autoconfirmed' => array( 'upload' => false, ),
 		'autopatrolled' => array( 'autopatrol' => true, ),
 	),
@@ -6847,17 +6847,17 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true, ),
 	),
 	'cswikisource' => array(
-		'user'	  => array( 'upload' => false ),
+		'user' => array( 'upload' => false ),
 		'autoconfirmed' => array( 'upload' => false ),
 		'autopatrolled' => array( 'autopatrol' => true, ),
 	),
 	'cswikiversity' => array(
-		'user'	  => array( 'upload' => false ),
+		'user' => array( 'upload' => false ),
 		'autoconfirmed' => array( 'upload' => false ),
 	),
 	'cswiktionary' => array(
 		'autopatrolled' => array( 'autopatrol' => true, ),
-		'user'	  => array( 'upload' => false, ),
+		'user' => array( 'upload' => false, ),
 		'autoconfirmed' => array( 'upload' => false, ),
 	),
 	'commonswiki' => array(
@@ -7024,7 +7024,7 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 		// https://bugzilla.wikimedia.org/show_bug.cgi?id=19561:
 		'arbcom' => array( 'deletedhistory' => true, 'deletedtext' => true, 'undelete' => true ),
-	 ),
+	),
 	'+foundationwiki' => array(
 		'user' => array( 'editinterface' => true ),
 		'flood' => array( 'bot' => true ),
@@ -7158,7 +7158,7 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true, ),
 		'patroller' => array( 'autopatrol' => true, 'rollback' => true, ),
 		'flooder' => array( 'bot' => true, ), // Bug 39569
-	 ),
+	),
 	'itwikinews' => array( 'autoconfirmed' => array( 'patrol' => true ) ),
 	'itwikiquote' => array(
 		'autoconfirmed' => array( 'patrol' => true ),
@@ -7221,7 +7221,7 @@ $wgConf->settings = array(
 	),
 	'jawikinews' => array(
 		'user' => array( 'move' => false ), // autoconfirmed only, per request by britty 2007-05-16
-	 ),
+	),
 	'jawikiversity' => array(
 		'user' => array( 'upload' => false ),
 		'autoconfirmed' => array( 'upload' => false ),
@@ -7439,7 +7439,7 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
 	),
 	'ruwikivoyage' => array(
-		 'autopatrolled' => array( 'autopatrol' => true ), // bug 46915
+		'autopatrolled' => array( 'autopatrol' => true ), // bug 46915
 	),
 	'sawiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -7992,7 +7992,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'abusefilter', 'flood' ),
 	),
 	'+plwikiquote' => array(
-	 'sysop' => array( 'patroller' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28479
+		'sysop' => array( 'patroller' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28479
 	),
 	'+ptwikinews' => array(
 		'sysop' => array( 'reviewer' ),
@@ -8140,7 +8140,7 @@ $wgConf->settings = array(
 	),
 	// ******************************************************************
 	'+arbcom_enwiki' => array(
-	  'bureaucrat' => array( 'sysop', 'bureaucrat' ),
+		'bureaucrat' => array( 'sysop', 'bureaucrat' ),
 	),
 	'+arbcom_fiwiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat' ),
@@ -8176,7 +8176,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'rollbacker', 'autopatrolled', 'abusefilter', ),
 	),
 	'+checkuserwiki' => array(
-		 'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt',  'bureaucrat', ),
+		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt',  'bureaucrat', ),
 	),
 	'+commonswiki' => array(
 		'bureaucrat' => array( 'ipblock-exempt', 'OTRS-member' ),
@@ -8324,7 +8324,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'flood', ),
 	),
 	'+itwikibooks' => array(
-		'sysop'	 => array( 'autopatrolled', 'patroller', 'flooder' ), // Flooder added per bug 39569
+		'sysop' => array( 'autopatrolled', 'patroller', 'flooder' ), // Flooder added per bug 39569
 	),
 	'+itwikisource' => array(
 		'bureaucrat' => array( 'flood' ), // Bug 36600
@@ -8596,7 +8596,7 @@ $wgConf->settings = array(
 	'cowikimedia' => array( 'meta', 'w:es', 'b:es', 'v:es', 'e:en' ),
 	'crhwiki' => array( 'incubator' ),
 	'crwiki' => array( 'en', 'fr'  ),
-	'cswiki'	 => array( 'b', 'n', 'q', 's', 'v', 'wikt' ),
+	'cswiki' => array( 'b', 'n', 'q', 's', 'v', 'wikt' ),
 	'cswikibooks'    => array( 'n', 'q', 's', 'v', 'w', 'wikt' ),
 	'cswikinews'     => array( 'b', 'q', 's', 'v', 'w', 'wikt', 'incubator' ),
 	'cswikiquote'    => array( 'b', 'n', 's', 'v', 'w', 'wikt' ),
@@ -9093,18 +9093,18 @@ $wgConf->settings = array(
 	# added dvd thingy against many spamming idiots 2007-05-02 river
 	# Removed, 2007-05-15 -- TS
 	'default' => array(
-	   '/overflow\s*:\s*auto\s*;\s*height\s*:|<div[^>]*font-size[^>]*font-color:\s*transparent[^>]*>/i',
-	   '/avril\.on\.nimp\.org/i', // http://en.wikipedia.org/wiki/Special:Contributions/Hochitup
-	   '/\.on\.nimp\.org/i', // per MrZ-man 2008-11-02 -- brion
-	   // bug 15063, these won't last:
-	   '/<TR>(<TD BGCOLOR=["\']?#......["\']?>(\.|We|are|Anonymous|)+<\/TD>){20,}<\/TR>/i',
-	   '/<table>.+?(<td bgcolor.+?){400,}.+?<\/table>/i',
-	   // Weird thingy http://en.wikipedia.org/w/index.php?title=Hellboy:_Sword_of_Storms&oldid=245477898&diff=prev
-	   '/<span onmouseover="_tipon/',
-	   // Reported on id.wikipedia.org 2008-12-17 Tim
-	   '/FIELD_MESSAGE_/',
-	   // Plaintext link spam https://bugzilla.wikimedia.org/show_bug.cgi?id=16597
-	   '/[wｗ]{3}[\.．][aＡａ][nｎ][oｏ]ｎ[tＴ][aａ][lｌ][kｋ][\.．][cｃ][oｏ][mｍ]/ui',
+		'/overflow\s*:\s*auto\s*;\s*height\s*:|<div[^>]*font-size[^>]*font-color:\s*transparent[^>]*>/i',
+		'/avril\.on\.nimp\.org/i', // http://en.wikipedia.org/wiki/Special:Contributions/Hochitup
+		'/\.on\.nimp\.org/i', // per MrZ-man 2008-11-02 -- brion
+		// bug 15063, these won't last:
+		'/<TR>(<TD BGCOLOR=["\']?#......["\']?>(\.|We|are|Anonymous|)+<\/TD>){20,}<\/TR>/i',
+		'/<table>.+?(<td bgcolor.+?){400,}.+?<\/table>/i',
+		// Weird thingy http://en.wikipedia.org/w/index.php?title=Hellboy:_Sword_of_Storms&oldid=245477898&diff=prev
+		'/<span onmouseover="_tipon/',
+		// Reported on id.wikipedia.org 2008-12-17 Tim
+		'/FIELD_MESSAGE_/',
+		// Plaintext link spam https://bugzilla.wikimedia.org/show_bug.cgi?id=16597
+		'/[wｗ]{3}[\.．][aＡａ][nｎ][oｏ]ｎ[tＴ][aａ][lｌ][kｋ][\.．][cｃ][oｏ][mｍ]/ui',
 	),
 	# Multiple requests on IRC -- TS 2006-07-11
 	'commonswiki' => '/overflow\s*:\s*auto\s*;\s*height\s*:|kryptonazi|freizeit-diktator/i',
@@ -9158,7 +9158,7 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-// CT_MODE_CATEGORIES		 0
+// CT_MODE_CATEGORIES		0
 // CT_MODE_PAGES		10
 // CT_MODE_ALL			20
 'wgCategoryTreeCategoryPageMode' => array(
@@ -9512,7 +9512,7 @@ $wgConf->settings = array(
 	'enwiki' => array(
 		'accountcreator' => array( '&',
 			array( APCOND_ISIP, '167.165.53.93' ),
-		 ),
+		),
 	),
 	'fiwiki' => array(
 		'patroller' => array( '&',
@@ -9521,10 +9521,10 @@ $wgConf->settings = array(
 		),
 	),
 	'frwiki' => array(
-	   'autopatrolled' => array( '&',
-				array( APCOND_EDITCOUNT, 500 ),
-				array( APCOND_AGE, 90 * 86400 ),
-	   ),
+		'autopatrolled' => array( '&',
+			array( APCOND_EDITCOUNT, 500 ),
+			array( APCOND_AGE, 90 * 86400 ),
+		),
 	),
 	'ruwikiversity' => array(
 		'patroller' => array( '&',
@@ -10158,9 +10158,9 @@ $wgConf->settings = array(
 ),
 
 'wgMaxUploadSize' => array(
-	 // Only affects URL uploads; web uploads are enforced by PHP.
-	 'default' => 1024 * 1024 * 500, // 500 MB
-	 'ptwiki'  => 1024 * 500, // 500 KB - https://bugzilla.wikimedia.org/23186
+	// Only affects URL uploads; web uploads are enforced by PHP.
+	'default' => 1024 * 1024 * 500, // 500 MB
+	'ptwiki'  => 1024 * 500, // 500 KB - https://bugzilla.wikimedia.org/23186
 ),
 
 'wmgUseCommunityVoice' => array (
@@ -10269,7 +10269,6 @@ $wgConf->settings = array(
 //
 	'default' => false,
 	'testwiki' => true, // Expanding out to testwiki -- Andrew 2009-10-13
-	 // -------------------
 	'enwikinews' => true, // Per bug 21956 -- Andrew 2009-02-09
 	'enwiktionary' => true, // Bug 23417 -- ariel 2010-16-05
 	'fiwikimedia' => true, // Bug 37778
@@ -10334,7 +10333,7 @@ $wgConf->settings = array(
 ),
 
 'wgDisableHardRedirects' => array(
-	'default' 	 => true,
+	'default' => true,
 	'donatewiki' => false,
 	'foundationwiki' => false,
 ),
@@ -10836,10 +10835,8 @@ $wgConf->settings = array(
 'wmgArticleFeedbackv5Watchlist' => array(
 	'default' => false,
 	'dewiki' => true,
-	/*
-	 * Watchlist queries can be expensive (huge WHERE aft_page IN(...) clause)
-	 * for people who have a serious amount of watchlisted pages -- disable for now.
-	 */
+	// Watchlist queries can be expensive (huge WHERE aft_page IN(...) clause)
+	// for people who have a serious amount of watchlisted pages -- disable for now.
 	'enwiki' => false,
 	'frwiki' => false,
 ),
@@ -11196,10 +11193,11 @@ $wgConf->settings = array(
 
 'wmgMFRemovableClasses' => array(
 	'default' => array( 'table.metadata',
-			   '.metadata mbox-small',
-			   '.metadata plainlinks ambox ambox-content',
-			   '.metadata plainlinks ambox ambox-move',
-			   '.metadata plainlinks ambox ambox-style', ),
+		'.metadata mbox-small',
+		'.metadata plainlinks ambox ambox-content',
+		'.metadata plainlinks ambox ambox-move',
+		'.metadata plainlinks ambox ambox-style',
+	),
 ),
 'wmgMFCustomLogos' => array(
 	'default' => array(
