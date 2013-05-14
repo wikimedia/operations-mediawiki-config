@@ -19,6 +19,51 @@
 # Globals set in CommonSettings.php for use in settings values
 global $wmfUdp2logDest, $wmfDatacenter, $wmfRealm, $wmfConfigDir, $wgConf;
 
+$privateWikiUploads = array(
+	# mav forced me to --midom
+	'ppt',
+
+	# mav forced me as well!!! -- Tim
+	'doc',
+	# adding since removed elsewhere now -- 2007-08-21 -- brion
+	'xls',
+	# delphine made me do it!!!!! --brion
+	'eps',
+	'zip',
+
+	# OpenOffice, hell if we're going to allow doc we may as well have these too -- Tim
+	'odf',
+	'odp',
+	'ods',
+	'odt',
+	'odg', // OpenOffice Graphics
+	'ott', // Templates
+
+	# Temporary for office work :P
+	'wmv',
+	'dv',
+	'avi',
+	'mov',
+	'mp3', // for Jay for fundraising bits
+	'aif', // "
+	'aiff', // "
+
+	# Becausee I hate having to find print drivers -- tomasz
+	'ppd',
+
+	# InDesign & PhotoShop, Illustrator wanted for Chapters logo work
+	'indd',
+	'inx',
+	'psd',
+	'ai',
+
+	# Pete made me --Roan
+	'omniplan',
+
+	# Dia Diagrams files --fred.
+	'dia',
+);
+
 $wgConf->settings = array(
 
 // For live conversion of old revisions:
@@ -12601,7 +12646,10 @@ $wgConf->settings = array(
 	'+outreachwiki' => array(
 		'sla',
 	),
-)
+	'+private' => $privateWikiUploads,
+	'+donatewiki' => $privateWikiUploads,
+	'foundationwiki' => $privateWikiUploads,
+),
 
 );
 
@@ -12611,3 +12659,5 @@ if ( $wmfRealm == 'labs' ) {
 	require( "$wmfConfigDir/InitialiseSettings-labs.php" );
 	wmfLabsOverrideSettings();
 }
+
+unset( $privateWikiUploads );

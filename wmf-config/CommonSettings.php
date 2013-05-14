@@ -447,48 +447,6 @@ $wgMaxAnimatedGifArea = 5e7; // 50MP
 $wgFileExtensions = array_merge( $wgFileExtensions, $wmgFileExtensions );
 
 if ( $wmgPrivateWikiUploads ) {
-	# mav forced me to --midom
-	$wgFileExtensions[] = 'ppt';
-
-	# mav forced me as well!!! -- Tim
-	$wgFileExtensions[] = 'doc';
-	# adding since removed elsewhere now -- 2007-08-21 -- brion
-	$wgFileExtensions[] = 'xls';
-	# delphine made me do it!!!!! --brion
-	$wgFileExtensions[] = 'eps';
-	$wgFileExtensions[] = 'zip';
-
-	# OpenOffice, hell if we're going to allow doc we may as well have these too -- Tim
-	$wgFileExtensions[] = 'odf';
-	$wgFileExtensions[] = 'odp';
-	$wgFileExtensions[] = 'ods';
-	$wgFileExtensions[] = 'odt';
-	$wgFileExtensions[] = 'odg'; // OpenOffice Graphics
-	$wgFileExtensions[] = 'ott'; // Templates
-
-	# Temporary for office work :P
-	$wgFileExtensions[] = 'wmv';
-	$wgFileExtensions[] = 'dv';
-	$wgFileExtensions[] = 'avi';
-	$wgFileExtensions[] = 'mov';
-	$wgFileExtensions[] = 'mp3'; // for Jay for fundraising bits
-	$wgFileExtensions[] = 'aif'; // "
-	$wgFileExtensions[] = 'aiff'; // "
-
-	# Becausee I hate having to find print drivers -- tomasz
-	$wgFileExtensions[] = 'ppd';
-
-	# InDesign & PhotoShop, Illustrator wanted for Chapters logo work
-	$wgFileExtensions[] = 'indd';
-	$wgFileExtensions[] = 'inx';
-	$wgFileExtensions[] = 'psd';
-	$wgFileExtensions[] = 'ai';
-
-	# Pete made me --Roan
-	$wgFileExtensions[] = 'omniplan';
-
-	# Dia Diagrams files --fred.
-	$wgFileExtensions[] = 'dia';
 	// To allow OpenOffice doc formats we need to not blacklist zip files
 	$wgMimeTypeBlacklist = array_diff(
 		$wgMimeTypeBlacklist,
