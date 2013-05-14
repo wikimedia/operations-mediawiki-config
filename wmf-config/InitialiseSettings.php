@@ -9858,6 +9858,7 @@ $wgConf->settings = array(
 	'kkwiki' => true,
 	'kmwiki' => true, // bug 30680
 	'kowiki' => true,
+	'lbwiki' => true, // bug 47469
 	'mediawikiwiki' => true, # Bug 29228
 	'metawiki' => true, // Bug 18058 on 2009-03-19
 	'mkwiki' => true, # bug 37345
