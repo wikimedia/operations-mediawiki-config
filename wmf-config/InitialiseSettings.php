@@ -12570,13 +12570,11 @@ $wgConf->settings = array(
 'wgRightsUrl' => array(
 	'default' => '//creativecommons.org/licenses/by-sa/3.0/',
 	'huwikinews' => '//creativecommons.org/licenses/by/3.0/',
-	'wikidatawiki' => '//creativecommons.org/publicdomain/zero/1.0/',
 	'wikinews' => '//creativecommons.org/licenses/by/2.5/',
 ),
 'wgRightsText' => array(
 	'default' => 'Creative Commons Attribution-Share Alike 3.0 Unported',
 	'huwikinews' => 'Creative Commons Attribution 3.0 Unported',
-	'wikidatawiki' => 'Creative Commons Publi Domain 1.0',
 	'wikinews' => 'Creative Commons Attribution 2.5',
 ),
 'wgRightsIcon' => array(

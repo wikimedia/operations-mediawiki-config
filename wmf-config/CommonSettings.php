@@ -2801,6 +2801,17 @@ $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
 	return false;
 };
 
+// bug 44617
+if ( $wgDBname == 'wikidatawiki' ) {
+	$wgHooks['SkinCopyrightFooter'][] = function( $title, $type, &$msg, &$link, &$forContent ) {
+		if ( $title->getNamespace() === NS_MAIN ) {
+			$msg = 'Creative Commons Public Domain 1.0';
+			$link = '//creativecommons.org/publicdomain/zero/1.0/';
+		}
+		return true;
+	}
+}
+
 // additional "language names", adding to Names.php data
 $wgExtraLanguageNames = $wmgExtraLanguageNames;
 
