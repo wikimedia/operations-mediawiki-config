@@ -39,6 +39,7 @@ if ( $wgDBname == 'be_x_oldwiki' ) {
 } elseif ( $wgDBname == 'cawiki' ) {
 	$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 	$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
+	$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true; // bug 48457
 	$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
 	$wgGroupPermissions['*']['abusefilter-view'] = false;
 	$wgGroupPermissions['user']['abusefilter-view'] = true;
