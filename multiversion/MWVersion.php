@@ -46,17 +46,7 @@ function getMediaWiki( $file ) {
 	$host = $secure ? $secure : $_SERVER['HTTP_HOST'];
 
 	# Get the correct MediaWiki path based on this version...
-	if ( $host === 'test.wikipedia.org' && !$secure &&
-		!preg_match( '!thumb\.php!', $_SERVER['REQUEST_URI'] ) &&
-		is_dir( MULTIVER_COMMON_HOME . "/$version" ) // home mounted
-	) {
-		define( 'TESTWIKI', 1 );
-		# Test wiki mostly runs off the version of MediaWiki on /home.
-		# As horrible hack for NFS-less image scalers, use regular docroot for thumbs?
-		$IP = MULTIVER_COMMON_HOME . "/$version";
-	} else {
-		$IP = MULTIVER_COMMON_APACHE . "/$version";
-	}
+	$IP = MULTIVER_COMMON_APACHE . "/$version";
 
 	chdir( $IP );
 	putenv( "MW_INSTALL_PATH=$IP" );

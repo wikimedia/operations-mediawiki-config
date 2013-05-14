@@ -131,7 +131,7 @@ class MWMultiVersion {
 		if ( getenv( 'MW_LANG' ) ) {
 			# Language forced from some hacky script like extract2.php
 			$lang = getenv( 'MW_LANG' );
-		} elseif ( preg_match( '/^(?:\/usr\/local\/apache\/|\/home\/wikipedia\/)(?:htdocs|common\/docroot)\/([a-z]+)\.org/', $docRoot, $matches ) ) {
+		} elseif ( preg_match( '/^\/usr\/local\/apache\/(?:htdocs|common\/docroot)\/([a-z]+)\.org/', $docRoot, $matches ) ) {
 			# This is the poor man / hacky routing engine for WMF cluster
 			$site = $matches[1];
 			if ( preg_match( '/^(.*)\.' . preg_quote( $site ) . '\.org$/', $serverName, $matches ) ) {
@@ -218,7 +218,7 @@ class MWMultiVersion {
 	 * Handler for the wfShellMaintenanceCmd hook.
 	 * This converts shell commands like "php $IP/maintenance/foo.php" into
 	 * commands that use the "MWScript.php" wrapper, for example:
-	 * "php /home/wikipedia/common/multiversion/MWScript.php maintenance/foo.php"
+	 * "php /a/common/multiversion/MWScript.php maintenance/foo.php"
 	 *
 	 * @param &$script string
 	 * @param &$params Array
