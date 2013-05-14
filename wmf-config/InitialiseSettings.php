@@ -1948,6 +1948,7 @@ $wgConf->settings = array(
 	'kowikiversity'	=> '위키배움터', // Bug 44899
 	'krcwiki'	=> 'Википедия',
 	'kuwiki'	=> 'Wîkîpediya',
+	'kuwikiquote'   => 'Wîkîgotin',
 	'kuwiktionary'  => 'Wîkîferheng',
 	'kvwiki'	=> 'Википедия',
 	'lawiki'	=> 'Vicipaedia',
@@ -4843,7 +4844,6 @@ $wgConf->settings = array(
 		NS_PROJECT_TALK => 'Gotûbêja_Wîkîpirtûkê', // Bug 37522
 	),
 	'kuwikiquote' => array(
-		NS_PROJECT => 'Wîkîgotin', // Bug 37523
 		NS_PROJECT_TALK => 'Gotûbêja_Wîkîgotinê', // Bug 37523
 	),
 	'kwwiki' => array(
