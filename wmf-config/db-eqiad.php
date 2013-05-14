@@ -107,12 +107,12 @@ $wgLBFactoryConf = array(
 		'db1035'    => 100, # snapshot
 	),
 	's4' => array(
-		'db1038'   => 0,
+		'db1059'   => 0,
 		'db1004'   => 400,
 		'db1011'   => 400,
 		'db1042'   => 100, # snapshot
-		'db1059'   => 400, # to be the new mariadb master
 		#'db1020'   => 100,
+		#'db1038'   => 0, # was 5.1-fb master
 	),
 	's5' => array(
 		'db1058'   => 0,
