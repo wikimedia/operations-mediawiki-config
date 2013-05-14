@@ -765,22 +765,6 @@ case 'labs':
 
 $wgBlockOpenProxies = false;
 
-if ( $site == 'wikinews' ) {
-	# $wgRightsPage = "";# Set to the title of a wiki page that describes your license/copyright
-	$wgRightsUrl = "//creativecommons.org/licenses/by/2.5/";
-	$wgRightsText = 'Creative Commons Attribution 2.5';
-	$wgRightsIcon = "//creativecommons.org/images/public/somerights20.png";
-}  elseif ( $wgDBname == 'huwikinews' ) {
-	$wgRightsUrl = "//creativecommons.org/licenses/by/3.0/";
-	$wgRightsText = 'Creative Commons Attribution 3.0 Unported';
-	$wgRightsIcon = "//creativecommons.org/images/public/somerights20.png";
-}  else {
-	# Set 2009-06-22 -- BV
-	$wgRightsUrl = "//creativecommons.org/licenses/by-sa/3.0/";
-	$wgRightsText = 'Creative Commons Attribution-Share Alike 3.0 Unported';
-	$wgRightsIcon = "//creativecommons.org/images/public/somerights20.png";
-}
-
 if( $wmfRealm == 'production' ) {
 	$wgUDPProfilerHost = '10.0.6.30'; # professor
 	$wgAggregateStatsID = $wgVersion;
