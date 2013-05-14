@@ -12580,6 +12580,29 @@ $wgConf->settings = array(
 'wgRightsIcon' => array(
 	'default' => '//creativecommons.org/images/public/somerights20.png',
 ),
+
+'wmgFileExtensions' => array(
+	'default' => array(
+		'xcf',
+		'pdf',
+		'mid',
+		'ogg',
+		'ogv',
+		'svg',
+		'djvu',
+	),
+	'+foundationwiki' => array(
+		'otf',
+		'ai',
+	),
+	'+incubatorwiki' => array(
+		'xml'
+	),
+	'+outreachwiki' => array(
+		'sla',
+	),
+)
+
 );
 
 

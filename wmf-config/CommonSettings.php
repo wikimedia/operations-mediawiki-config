@@ -1,5 +1,4 @@
 <?php
-
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
 #######################################################################
@@ -437,13 +436,6 @@ $wgSharpenParameter = '0x0.8'; # for IM>6.5, bug 24857
 
 $wgFileBlacklist[] = 'txt';
 $wgFileBlacklist[] = 'mht';
-$wgFileExtensions[] = 'xcf';
-$wgFileExtensions[] = 'pdf';
-$wgFileExtensions[] = 'mid';
-$wgFileExtensions[] = 'ogg'; # Ogg audio & video
-$wgFileExtensions[] = 'ogv'; # Ogg audio & video
-$wgFileExtensions[] = 'svg';
-$wgFileExtensions[] = 'djvu'; # DjVu images/documents
 
 include( $IP . '/extensions/PagedTiffHandler/PagedTiffHandler.php' );
 $wgTiffUseTiffinfo = true;
@@ -452,14 +444,7 @@ $wgTiffMaxMetaSize = 1048576;
 $wgMaxImageArea = 5e7; // 50MP
 $wgMaxAnimatedGifArea = 5e7; // 50MP
 
-if ( $wgDBname == 'foundationwiki' ) { # per cary on 2010-05-11
-	$wgFileExtensions[] = 'otf';
-	$wgFileExtensions[] = 'ai';
-} elseif ( $wgDBname == 'outreachwiki' ) { # Per Frank, bug 25106
-	$wgFileExtensions[] = 'sla';
-} elseif( $wgDBname == 'incubatorwiki' ) {
-	$wgFileExtensions[] = 'xml';
-}
+$wgFileExtensions = array_merge( $wgFileExtensions, $wmgFileExtensions );
 
 if ( $wmgPrivateWikiUploads ) {
 	# mav forced me to --midom
