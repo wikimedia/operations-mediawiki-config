@@ -11167,7 +11167,7 @@ $wgConf->settings = array(
 
 'wmgMobileFrontendLogo' => array(
 	'default' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/72px-Wikimedia-logo.svg.png',
-	'wikipedia' => '//bits.wikimedia.org/mobile/W.png',
+	'wiki' => '//bits.wikimedia.org/mobile/W.png',
 	'wikinews' => '//upload.wikimedia.org/wikipedia/commons/thumb/2/24/Wikinews-logo.svg/72px-Wikinews-logo.svg.png',
 	'wiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Wiktionary-logo-en.png/72px-Wiktionary-logo-en.png',
 	'wikibooks' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Wikibooks-logo.svg/72px-Wikibooks-logo.svg.png',
