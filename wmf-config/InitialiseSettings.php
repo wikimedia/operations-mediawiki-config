@@ -2336,8 +2336,8 @@ $wgConf->settings = array(
 		'വിഭാഗത്തിന്റെ_സംവാദം' => NS_CATEGORY_TALK,
 	),
 	'+bnwikibooks' => array(
-			'WB' => NS_PROJECT,
-			'Wikibooks' => NS_PROJECT,
+		'WB' => NS_PROJECT,
+		'Wikibooks' => NS_PROJECT,
 		'Wikijunior' => 100,
 		'wikijunior_talk' => 101,
 		'Subject' => 102,
@@ -2350,12 +2350,12 @@ $wgConf->settings = array(
 	'+brwiki' => array( 'Discussion_Wikipedia' => NS_PROJECT_TALK, ),
 	'+brwikiquote' => array( 'Wikiquote' => NS_PROJECT ),
 	'+brwikisource' => array(
-			'Index' => 100,
-			'Index_talk' => 101,
-			'Page' => 102,
-			'Page_talk' => 103,
-			'Author' => 104,
-			'Author_talk' => 105,
+		'Index' => 100,
+		'Index_talk' => 101,
+		'Page' => 102,
+		'Page_talk' => 103,
+		'Author' => 104,
+		'Author_talk' => 105,
 	),
 	'+brwiktionary' => array( 'Wiktionary' => NS_PROJECT, 'Wiktionary_talk' => NS_PROJECT_TALK ),
 	'+cawiki' => array(
@@ -2563,22 +2563,22 @@ $wgConf->settings = array(
 		'Portal_talk' => 101,
 	),
 	'+etwikisource' => array(
-			'Page' => 102,
-			'Page_talk' => 103,
-			'Index' => 104,
-			'Index_talk' => 105,
-			'Author' => 106,
-			'Author_talk' => 107,
+		'Page' => 102,
+		'Page_talk' => 103,
+		'Index' => 104,
+		'Index_talk' => 105,
+		'Author' => 106,
+		'Author_talk' => 107,
 	),
 	'+fawiki' => array(
-				'وپ' => NS_PROJECT,
-				'Book' => 102,
-				'Book_talk' => 103,
-				'كتاب' => 102,
-				'بحث_كتاب' => 103,
+		'وپ' => NS_PROJECT,
+		'Book' => 102,
+		'Book_talk' => 103,
+		'كتاب' => 102,
+		'بحث_كتاب' => 103,
 	),
 	'+fawikinews' => array(
-				'وخ' => NS_PROJECT,
+		'وخ' => NS_PROJECT,
 	),
 	'+fawikisource' => array(
 		'Portal' => 100,
@@ -2651,27 +2651,27 @@ $wgConf->settings = array(
 		'שיחת_באור' => 107,
 	),
 	'+hiwiki' => array(
-	   'वि' => NS_PROJECT,
-	   'विवा' => NS_PROJECT_TALK,
-	   'Wikipedia' => NS_PROJECT,
-	   'WP' => NS_PROJECT,
-	   'WPT' => NS_PROJECT_TALK,
-	   'U' => NS_USER,
-	   'UT' => NS_USER_TALK,
-	   'स' => NS_USER,
-	   'सवा' => NS_USER_TALK,
-	   'श्र' => NS_CATEGORY,
-	   'श्रवा' => NS_CATEGORY_TALK,
-	   'C' => NS_CATEGORY,
-	   'CT' => NS_CATEGORY_TALK,
-	   'सा' => NS_TEMPLATE,
-	   'सावा' => NS_TEMPLATE_TALK,
-	   'T' => NS_TEMPLATE,
-	   'मी' => NS_MEDIAWIKI,
-	   'मीवा' => NS_MEDIAWIKI_TALK,
-	   'P' => 100,
-	   'प्र' => 100,
-	   'प्रवा' => 101,
+		'वि' => NS_PROJECT,
+		'विवा' => NS_PROJECT_TALK,
+		'Wikipedia' => NS_PROJECT,
+		'WP' => NS_PROJECT,
+		'WPT' => NS_PROJECT_TALK,
+		'U' => NS_USER,
+		'UT' => NS_USER_TALK,
+		'स' => NS_USER,
+		'सवा' => NS_USER_TALK,
+		'श्र' => NS_CATEGORY,
+		'श्रवा' => NS_CATEGORY_TALK,
+		'C' => NS_CATEGORY,
+		'CT' => NS_CATEGORY_TALK,
+		'सा' => NS_TEMPLATE,
+		'सावा' => NS_TEMPLATE_TALK,
+		'T' => NS_TEMPLATE,
+		'मी' => NS_MEDIAWIKI,
+		'मीवा' => NS_MEDIAWIKI_TALK,
+		'P' => 100,
+		'प्र' => 100,
+		'प्रवा' => 101,
 	),
 	'+hrwikisource' => array(
 		'Author' => 100,
@@ -3134,9 +3134,9 @@ $wgConf->settings = array(
 		'П' => 100,
 		'Обсуждение_ВикиНовостей' => NS_PROJECT_TALK,
 	),
-		'ruwikiquote' => array(
-				'ВЦ' => NS_PROJECT,
-		),
+	'ruwikiquote' => array(
+		'ВЦ' => NS_PROJECT,
+	),
 	'+ruwikisource' => array(
 		'Page' => 104,
 		'Page_talk' => 105,
@@ -3249,8 +3249,8 @@ $wgConf->settings = array(
 		'Page_talk' => 105,
 		'Index' => 106,
 		'Index_talk' => 107,
-				'పేజీ' => 104,
-				'పేజీ_చర్చ' => 105,
+		'పేజీ' => 104,
+		'పేజీ_చర్చ' => 105,
 	),
 	'+tewiktionary' => array(
 		'Wiktionary' => NS_PROJECT, # backcompat for shell req bug 36533
@@ -3358,10 +3358,10 @@ $wgConf->settings = array(
 		'וויקינייעס_רעדן' => NS_PROJECT_TALK
 	),
 	'+yowiki' => array(
-			'Portal' => 100,
-			'Portal_talk' => 101,
-			'Book' => 108,
-			'Book_talk' => 109,
+		'Portal' => 100,
+		'Portal_talk' => 101,
+		'Book' => 108,
+		'Book_talk' => 109,
 	),
 	'+vecwiki' => array(
 		'WP' => NS_PROJECT,
@@ -4525,7 +4525,6 @@ $wgConf->settings = array(
 		101 => 'Portal_müzakirəsi',
 		102 => 'Müəllif', // Author
 		103 => 'Müəllif_müzakirəsi', // Author talk
-
 	),
 	'bawiki' => array(
 		100 => 'Портал',                     // Bug 42077 - Portal
@@ -4588,8 +4587,8 @@ $wgConf->settings = array(
 		101 => 'Ков_дийцаре',
 	),
 	'ckbwiki' => array(
-	100 => 'دەروازە',
-	101 => 'لێدوانی_دەروازە',
+		100 => 'دەروازە',
+		101 => 'لێدوانی_دەروازە',
 	),
 	'cswiki' => array(
 		NS_USER			=> 'Wikipedista',    # language default set back in wgNamespaceAliases
@@ -5069,12 +5068,12 @@ $wgConf->settings = array(
 		101 => 'Portal_tartışma'
 	),
 	'trwiktionary' => array(
-	100 => 'Portal',
-	101 => 'Portal_tartışma',
+		100 => 'Portal',
+		101 => 'Portal_tartışma',
 	),
 	'ttwiki' => array(
-	100 => 'Портал',
-	101 => 'Портал_бәхәсе',
+		100 => 'Портал',
+		101 => 'Портал_бәхәсе',
 	),
 	'udmwiki' => array(
 		NS_PROJECT_TALK => 'Википедия_сярысь_вераськон', // Bug 47820
