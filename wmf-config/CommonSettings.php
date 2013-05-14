@@ -2515,8 +2515,13 @@ if ( $wmgUseEcho ) {
 
 	$wgJobTypeConf['MWEchoNotificationEmailBundleJob'] = array( 'checkDelay' => true ) + $wgJobTypeConf['default'];
 
+	// Eventlogging for Schema:Echo
 	$wgEchoConfig['eventlogging']['Echo']['enabled'] = true;
 	$wgEchoConfig['eventlogging']['Echo']['revision'] = 5423520;
+	// Eventlogging for Schema:EchoMail
+	$wgEchoConfig['eventlogging']['EchoMail']['enabled'] = true;
+	$wgEchoConfig['eventlogging']['EchoMail']['revision'] = 5467650;
+
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
 	$wgEchoBundleEmailInterval = $wmgEchoBundleEmailInterval;
