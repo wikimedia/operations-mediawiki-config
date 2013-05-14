@@ -17,7 +17,7 @@ if ( @defined( $_REQUEST['forceprofile'] ) ) {
 	$wgProfiler = new ProfilerSimpleUDP( array() );
 	$wgProfiler->setProfileID( 'test2' );
 # Normal case: randomly selected for logged profiling sample
-} elseif ( ( mt_rand( 0, 0x7fffffff ) % 50 ) == 0 ) {
+} elseif ( PHP_SAPI !== 'cli' && ( mt_rand( 0, 0x7fffffff ) % 50 ) == 0 ) {
 	require_once( $IP . '/includes/profiler/ProfilerSimpleUDP.php' );
 	$wgProfiler = new ProfilerSimpleUDP( array() );
 	// $IP is something like '/usr/local/apache/common-local/php-1.19'
@@ -27,17 +27,6 @@ if ( @defined( $_REQUEST['forceprofile'] ) ) {
 	} else {
 		$wgProfiler->setProfileID( $version );
 	}
-	/*
-	if ( PHP_SAPI == 'cli' ) {
-		$wgProfiler->setProfileID( 'cli' );
-	} else {
-		$wgProfiler->setProfileID( 'all' );
-	}*/
-	# $wgProfiler->setMinimum(5 /* seconds */);
-# WTF is this for?
-} elseif ( defined( 'MW_FORCE_PROFILE' ) ) {
-	require_once( $IP . '/includes/profiler/Profiler.php' );
-	$wgProfiler = new Profiler( array() );
 # Normal case: randomly not selected for logged profiling sample
 } else {
 	require_once( $IP . '/includes/profiler/ProfilerStub.php' );
