@@ -2382,7 +2382,6 @@ if ( $wmgUseTranslate ) {
 
 	unset( $wgSpecialPages['FirstSteps'] );
 	unset( $wgSpecialPages['ManageMessageGroups'] );
-	unset( $wgSpecialPages['ImportTranslations'] );
 	unset( $wgSpecialPages['TranslationStats'] );
 
 	$wgAddGroups['bureaucrat'][] = 'translationadmin';
