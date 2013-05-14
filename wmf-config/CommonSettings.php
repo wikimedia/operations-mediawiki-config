@@ -457,6 +457,8 @@ if ( $wgDBname == 'foundationwiki' ) { # per cary on 2010-05-11
 	$wgFileExtensions[] = 'ai';
 } elseif ( $wgDBname == 'outreachwiki' ) { # Per Frank, bug 25106
 	$wgFileExtensions[] = 'sla';
+} elseif( $wgDBname == 'incubatorwiki' ) {
+	$wgFileExtensions[] = 'xml';
 }
 
 if ( $wmgPrivateWikiUploads ) {
