@@ -4285,6 +4285,7 @@ $wgConf->settings = array(
 		// 'mwsearch' => "udp://$wmfUdp2logDest/mwsearch",
 		'temp-debug' => "udp://$wmfUdp2logDest/temp-debug", // generic admin debug log
 		'CentralAuth' => "udp://$wmfUdp2logDest/centralauth", // -pgehres 2013/05/09, tmp for SUL finalization
+		'GettingStarted' => "udp://$wmfUdp2logDest/gettingstarted",
 	),
 
 	'+enwiki' => array(
