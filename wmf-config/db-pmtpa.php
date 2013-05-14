@@ -109,11 +109,12 @@ $wgLBFactoryConf = array(
 		'db66'	  => 400, # innodb_file_per_table
 	),
 	's4' => array(
-		'db1038'   => 0,
+		'db1059'   => 0,
 		'db31'	 => 0, # pmtpa master
 		'db51'	 => 300, 
 		'db65'	 => 300, # Snapshot host # innodb_file_per_table
 		'db72'	 => 500, # innodb_file_per_table
+		#'db1038'   => 0, # was 5.1-fb master
 	),
 	's5' => array(
 		'db1058'   => 0,
@@ -253,6 +254,7 @@ $wgLBFactoryConf = array(
 	'db1050' => '10.64.16.145', #do not remove or comment out
 	'db1056' => '10.64.32.26', #do not remove or comment out
 	'db1058' => '10.64.32.28', #do not remove or comment out
+	'db1059' => '10.64.32.29', #do not remove or comment out
 	'pc1'		=> '10.0.0.221', # do not remove or comment out # Parser Cache
 ),
 
