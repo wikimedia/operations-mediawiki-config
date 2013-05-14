@@ -2061,7 +2061,42 @@ if ( $wmgUseTranslate ) {
 	$wgEnablePageTranslation = true;
 
 	$wgTranslateBlacklist = array(
-		'*' => array( 'en' => 'English is the source language.', ),
+		'*' => array(
+			'en' => 'English is the source language.',
+
+			'gan-hans' => 'Translate in gan please.',
+			'gan-hant' => 'Translate in gan please.',
+
+			'ike-cans' => 'Translate in iu please.',
+			'ike-latn' => 'Translate in iu please.',
+
+			'kk-cyrl' => 'Translate in kk please.',
+			'kk-latn' => 'Translate in kk please.',
+			'kk-arab' => 'Translate in kk please.',
+			'kk-kz'   => 'Translate in kk please.',
+			'kk-tr'   => 'Translate in kk please.',
+			'kk-cn'   => 'Translate in kk please.',
+
+			'ku-latn' => 'Translate in ku please.',
+			'ku-arab' => 'Translate in ku please.',
+
+			'shi-tfng' => 'Translate in shi please.',
+			'shi-latn' => 'Translate in shi please.',
+
+			'sr-ec' => 'Translate in sr please.',
+			'sr-el' => 'Translate in sr please.',
+
+			'tg-latn' => 'Translate in tg please.',
+
+			'zh-hans' => 'Translate in zh please.',
+			'zh-hant' => 'Translate in zh please.',
+			'zh-cn' => 'Translate in zh please.',
+			'zh-hk' => 'Translate in zh please.',
+			'zh-mo' => 'Translate in zh please.',
+			'zh-my' => 'Translate in zh please.',
+			'zh-sg' => 'Translate in zh please.',
+			'zh-tw' => 'Translate in zh please.',
+		),
 	);
 
 	$wgTranslateEC = array();
