@@ -40,6 +40,8 @@ mwconfig_files_txt=(
 	wmf-config/proofreadpage.php
 	wmf-config/throttle.php
 	wmf-config/wgConf.php
+	wmf-config/squid.php
+	wmf-config/squid-labs.php
 )
 
 # Create non-txt symlink from mediawiki-config
