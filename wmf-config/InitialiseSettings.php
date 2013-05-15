@@ -937,7 +937,7 @@ $wgConf->settings = array(
 	'zhwiktionary'		=> '$stdlogo',
 	'zh_min_nanwiki'		=> '$stdlogo',
 	'zh_min_nanwikisource'		=> '//upload.wikimedia.org/wikisource/zh-min-nan/b/bc/Wiki.png',
-	'zh_min_nanwiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/a/a3/Wiktionary-logo-zh-min-nan.png/135px-Wiktionary-logo-zh-min-nan.png', // bug 43240
+	'zh_min_nanwiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Wiktionary-logo-zh-min-nan.png/135px-Wiktionary-logo-zh-min-nan.png', // bug 43240
 	'zh_yuewiki'		=> '//upload.wikimedia.org/wikipedia/commons/8/89/Wikipedia-logo-v2-zh-yue.png',
 ),
 # @} end of wgLogo
