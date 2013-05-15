@@ -1132,7 +1132,6 @@ $wgConf->settings = array(
 	'movementroleswiki'    => '//movementroles.wikimedia.org',
 	'mxwikimedia'	=> '//mx.wikimedia.org',
 	'noboard_chapterswikimedia'   => '//noboard.chapters.wikimedia.org',
-	'nomcom'    => '//nomcom.wikimedia.org',
 	'nycwikimedia'  => '//nyc.wikimedia.org', // http://bugzilla.wikimedia.org/show_bug.cgi?id=29273
 	'officewiki' => '//office.wikimedia.org',
 	'ombudsmenwiki' => '//ombudsmen.wikimedia.org',
@@ -1209,7 +1208,6 @@ $wgConf->settings = array(
 	'movementroleswiki'    => 'http://movementroles.wikimedia.org',
 	'mxwikimedia'	=> 'http://mx.wikimedia.org',
 	'noboard_chapterswikimedia'   => 'http://noboard.chapters.wikimedia.org',
-	'nomcom'    => 'http://nomcom.wikimedia.org',
 	'nycwikimedia'  => 'http://nyc.wikimedia.org', // http://bugzilla.wikimedia.org/show_bug.cgi?id=29273
 	'officewiki' => 'http://office.wikimedia.org',
 	'ombudsmenwiki' => 'http://ombudsmen.wikimedia.org',
@@ -9739,7 +9737,6 @@ $wgConf->settings = array(
 	'mxwikimedia' => true,
 	'myvwiki' => true,
 	'noboard_chapterswikimedia' => true,
-	# 'nomcomwiki'    =>  true,
 	'nsowiki' => true,
 	'nycwikimedia' => true,
 	'ombudsmenwiki' => true,
