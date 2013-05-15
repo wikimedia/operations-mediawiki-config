@@ -758,7 +758,7 @@ $wgConf->settings = array(
 	'rmwiki'		=> '//upload.wikimedia.org/wikipedia/commons/e/e2/Wikipedia-logo-v2-rm.png', // bug 46589
 	'rmywiki'		=> '//upload.wikimedia.org/wikipedia/commons/6/63/Wikipedia-logo-v2-rmy.png', // bug 46589
 	'roa_rupwiki'		=> '//upload.wikimedia.org/wikipedia/commons/d/d9/Wikipedia-logo-v2-roa-rup.png', // bug 40285
-	'roa_rupwiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/d/df/Wiktionary-logo-roa-rup.png/135px-Wiktionary-logo-roa-rup.png', // bug 43240
+	'roa_rupwiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/d/df/Wiktionary-logo-roa-rup.png/135px-Wiktionary-logo-roa-rup.png', // bug 43240
 	'roa_tarawiki'		=> '//upload.wikimedia.org/wikipedia/commons/3/3b/Wikipedia-logo-v2-roa-tara.png',
 	'rowiki'		=> '$stdlogo',
 	'rowikibooks'		=> '$stdlogo',
@@ -937,7 +937,7 @@ $wgConf->settings = array(
 	'zhwiktionary'		=> '$stdlogo',
 	'zh_min_nanwiki'		=> '$stdlogo',
 	'zh_min_nanwikisource'		=> '//upload.wikimedia.org/wikisource/zh-min-nan/b/bc/Wiki.png',
-	'zh_min_nanwiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/a/a3/Wiktionary-logo-zh-min-nan.png/135px-Wiktionary-logo-zh-min-nan.png', // bug 43240
+	'zh_min_nanwiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Wiktionary-logo-zh-min-nan.png/135px-Wiktionary-logo-zh-min-nan.png', // bug 43240
 	'zh_yuewiki'		=> '//upload.wikimedia.org/wikipedia/commons/8/89/Wikipedia-logo-v2-zh-yue.png',
 ),
 # @} end of wgLogo
