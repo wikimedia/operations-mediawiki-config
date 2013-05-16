@@ -43,7 +43,7 @@ mwconfig_files_txt=(
 	wmf-config/squid.php
 	wmf-config/squid-labs.php
 	wmf-config/session.php
-	wmf-config/session-labs
+	wmf-config/session-labs.php
 )
 
 # Create non-txt symlink from mediawiki-config
