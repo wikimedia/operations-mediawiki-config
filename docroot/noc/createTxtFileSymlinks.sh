@@ -40,6 +40,8 @@ mwconfig_files_txt=(
 	wmf-config/proofreadpage.php
 	wmf-config/throttle.php
 	wmf-config/wgConf.php
+	wmf-config/wgConfVHosts.php
+	wmf-config/wgConfVHosts-labs.php
 	wmf-config/squid.php
 	wmf-config/squid-labs.php
 	wmf-config/session.php
