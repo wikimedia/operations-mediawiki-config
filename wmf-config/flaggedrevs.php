@@ -540,9 +540,43 @@ elseif ( $wgDBname == 'ruwikisource' ) {
 }
 
 elseif ( $wgDBname == 'sqwiki' ) {
+	// Bug 42782
+	// @link https://bugzilla.wikimedia.org/show_bug.cgi?id=42782
+	//
+	// - Auto-promotion for registered users. When they reach 300 edits in 10 or more
+	// unique articles with a maximum of 5% reverted edits in 60 days or more since
+	// registration they must be auto-promoted to reviewer group.
+	// - Auto-promotion for registered users. When they reach 100 edits in 10 or more
+	// unique pages with a maximum of 5% reverted edits in 30 days or more since
+	// registration they must be auto-promoted to autoreviewer (or autopatrolled)
+	// group.
+	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+	$wgFlaggedRevsAutopromote['days'] = 60; # days since registration
+	$wgFlaggedRevsAutopromote['edits'] = 300; # total edit count
+	$wgFlaggedRevsAutopromote['excludeDeleted'] = true; # exclude deleted edits from 'edits' count above?
+	$wgFlaggedRevsAutopromote['spacing'] = 3; # spacing of edit intervals
+	$wgFlaggedRevsAutopromote['benchmarks'] = 15; # how many edit intervals are needed?
+	$wgFlaggedRevsAutopromote['recentContentEdits'] = 10; # $wgContentNamespaces edits in recent changes
+	$wgFlaggedRevsAutopromote['uniqueContentPages'] = 10; # $wgContentNamespaces unique pages edited
+	$wgFlaggedRevsAutopromote['neverBlocked'] = false; # user must be emailconfirmed?
+
+	$wgFlaggedRevsAutoconfirm = array(
+		'days'                => 30, # days since registration
+		'edits'               => 100, # total edit count
+		'spacing'             => 3, # spacing of edit intervals
+		'benchmarks'          => 7, # how many edit intervals are needed?
+		'excludeLastDays'     => 2, # exclude the last X days of edits from edit counts
+		// Either totalContentEdits reqs OR totalCheckedEdits requirements needed
+		'totalContentEdits'   => 150, # $wgContentNamespaces edits OR...
+		'totalCheckedEdits'   => 50, # ...Edits before the stable version of pages
+		'uniqueContentPages'  => 8, # $wgContentNamespaces unique pages edited
+		'editComments'        => 20, # how many edit comments used?
+		'email'               => false, # user must be emailconfirmed?
+		'neverBlocked'        => true, # Can users that were blocked be promoted?
+	);
+
 	$wgGroupPermissions['sysop']['review'] = true;
 	$wgGroupPermissions['sysop']['validate'] = true;
-	$wgGroupPermissions['sysop']['unreviewedpages'] = true;
 }
 
 elseif ( $wgDBname == 'trwiki' ) {
