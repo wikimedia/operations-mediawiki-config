@@ -12022,9 +12022,10 @@ $wgConf->settings = array(
 ),
 'wmgUseEducationProgram' => array(
 	'default' => false,
-	'test2wiki' => true,
+	'dewikiversity' => true,
 	'enwiki' => true,
 	'mkwiki' => true,
+	'test2wiki' => true,
 ),
 
 'wmgUseWikimediaShopLink' => array(
