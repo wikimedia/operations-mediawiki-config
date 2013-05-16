@@ -526,6 +526,10 @@ elseif ( $wgDBname == 'ruwikinews' ) {
 
 elseif ( $wgDBname == 'ruwikiquote' ) {}
 
+elseif ( $wgDBname == 'ruwiktionary' ) {
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_PROJECT, NS_CATEGORY, 100, 104, 106 ) );
+}
+
 elseif ( $wgDBname == 'idwiki' ) {}
 
 elseif ( $wgDBname == 'ruwikisource' ) {
