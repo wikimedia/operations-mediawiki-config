@@ -12595,7 +12595,13 @@ $wgConf->settings = array(
 	'+outreachwiki' => array(
 		'sla',
 	),
-)
+),
+
+'wgRedirectSources' => array(
+    'default' => false,
+    'donatewiki' => '!^https?://donate\.wikimedia\.org/!',
+    'foundationwiki' => '!^https?://(www\.)?wikimediafoundation\.org/!',
+),
 
 );
 
