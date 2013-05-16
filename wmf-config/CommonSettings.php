@@ -1838,8 +1838,6 @@ if ( $wmgUseUploadWizard ) {
 		'disableResourceLoader' => false,
 		'autoCategory' => 'Uploaded with UploadWizard',
 		// If Special:UploadWizard again experiences unexplained slowness loading JavaScript (spinner on intial load spinning forever)
-		// set fallbackToAltUploadForm to true.
-		'altUploadForm' => 'Special:Upload', # Set by demon, 2011-05-10 per neilk
 		'flickrApiUrl' => 'http://api.flickr.com/services/rest/?',
 		// Normally we don't include API keys in CommonSettings, but this key
 		// isn't private since it's used on the client-side, i.e. anyone can see
@@ -1848,20 +1846,18 @@ if ( $wmgUseUploadWizard ) {
 	);
 
 	$wgUploadWizardConfig['enableChunked'] = 'opt-in';
+	$wgUploadWizardConfig['altUploadForm'] = $wmgAltUploadForm; // bug 33513
 
 	if ( $wgDBname == 'testwiki' ) {
 		$wgUploadWizardConfig['feedbackPage'] = 'Prototype_upload_wizard_feedback';
-		$wgUploadWizardConfig['altUploadForm'] = 'Special:Upload';
 		$wgUploadWizardConfig["missingCategoriesWikiText"] = '<p><span class="errorbox"><b>Hey, no categories?</b></span></p>';
 		unset( $wgUploadWizardConfig['fallbackToAltUploadForm'] );
 	} elseif ( $wgDBname == 'commonswiki' ) {
 		$wgUploadWizardConfig['feedbackPage'] = 'Commons:Upload_Wizard_feedback'; # Set by neilk, 2011-11-01, per erik
-		$wgUploadWizardConfig['altUploadForm'] = 'Commons:Upload';
 		$wgUploadWizardConfig["missingCategoriesWikiText"] = "{{subst:unc}}";
 		$wgUploadWizardConfig['blacklistIssuesPage'] = 'Commons:Upload_Wizard_blacklist_issues'; # Set by neilk, 2011-11-01, per erik
 	} elseif ( $wgDBname == 'test2wiki' ) {
 		$wgUploadWizardConfig['feedbackPage'] = 'Wikipedia:Upload_Wizard_feedback'; # Set by neilk, 2011-11-01, per erik
-		$wgUploadWizardConfig['altUploadForm'] = 'Wikipedia:Upload';
 		$wgUploadWizardConfig["missingCategoriesWikiText"] = "{{subst:unc}}";
 		$wgUploadWizardConfig['blacklistIssuesPage'] = 'Wikipedia:Upload_Wizard_blacklist_issues'; # Set by neilk, 2011-11-01, per erik
 	}
