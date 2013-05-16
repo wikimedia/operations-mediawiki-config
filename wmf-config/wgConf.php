@@ -20,43 +20,7 @@ $wgConf->suffixes = array(
 	'wikivoyage',
 );
 
-switch( $wmfRealm ) {
-	case 'production':
-		$wgConf->localVHosts = array(
-			'wikipedia.org',
-			'wiktionary.org',
-			'wikiquote.org',
-			'wikibooks.org',
-			'wikiquote.org',
-			'wikinews.org',
-			'wikisource.org',
-			'wikiversity.org',
-			'wikivoyage.org',
-			// 'wikimedia.org' // Removed 2008-09-30 by brion -- breaks codereview-proxy.wikimedia.org
-			'meta.wikimedia.org', // Presumably needed to load meta spam list. Any others?
-			'commons.wikimedia.org',
-		);
-		break;
-
-	case 'labs':
-		$wgConf->localVHosts = array(
-			'wikipedia.beta.wmflabs.org',
-			'wiktionary.beta.wmflabs.org',
-			'wikibooks.beta.wmflabs.org',
-			'wikiquote.beta.wmflabs.org',
-			'wikinews.beta.wmflabs.org',
-			'wikisource.beta.wmflabs.org',
-			'wikiversity.beta.wmflabs.org',
-			'wikivoyage.beta.wmflabs.org',
-			// 'wikimedia.beta.wmflabs.org' // Removed 2008-09-30 by brion -- breaks codereview-proxy.wikimedia.org
-			'meta.wikimedia.beta.wmflabs.org', // Presumably needed to load meta spam list. Any others?
-			'incubator.wikimedia.beta.wmflabs.org',
-			'commons.wikimedia.beta.wmflabs.org',
-		);
-		break;
-
-	default:
-}
+$wgConf->localVHosts = require( getRealmSpecificFilename( "$wmfConfigDir/wgConfVHosts.php" ) );
 
 $wgConf->wikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../all.dblist" ) ) );
 
