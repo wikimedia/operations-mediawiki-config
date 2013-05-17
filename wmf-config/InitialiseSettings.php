@@ -10243,6 +10243,7 @@ $wgConf->settings = array(
 	// ---------
 	'strategywiki' => false,
 	'sewikimedia' => false, // Bug 46182
+	'ptwikibooks' => false, // Bug 48578
 ),
 
 'wmgLQTUserControlNamespaces' => array(
