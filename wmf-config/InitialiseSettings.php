@@ -2105,6 +2105,7 @@ $wgConf->settings = array(
 	'ukwikibooks'	=> 'Вікіпідручник',
 	'ukwikinews'    => 'ВікіНовини',
 	'ukwikiquote'   => 'Вікіцитати',
+	'ukwikisource'	=> 'Вікіджерела', // bug 48308
 	'ukwikivoyage'  => 'Вікімандри',
 	'ukwiktionary'  => 'Вікісловник',
 	'urwiki'	=> 'ویکیپیڈیا',
@@ -3314,6 +3315,7 @@ $wgConf->settings = array(
 	),
 	'+ukwikisource' => array(
 		'ВД' => NS_PROJECT,
+		'Обговорення_Wikisource' => NS_PROJECT_TALK, // bug 48308
 	),
 	'+ukwikivoyage' => array(
 		'Portal' => 100,
@@ -5433,6 +5435,11 @@ $wgConf->settings = array(
 	'trwikisource' => array(
 		100 => 'Kişi',
 		101 => 'Kişi_tartışma',
+	),
+	'ukwikisource' => array( // bug 48308
+		NS_PROJECT_TALK => 'Обговорення_Вікіджерел', 
+		102 => 'Автор', // Author
+		103 => 'Обговорення_автора',
 	),
 	'vecwikisource' => array(
 		100 => 'Autor',
