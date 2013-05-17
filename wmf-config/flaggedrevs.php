@@ -176,6 +176,11 @@ elseif ( $wgDBname == 'dewiktionary' ) {
 		'excludeLastDays'     => 2,
 		'uniqueContentPages'  => 50,
 		'neverBlocked'        => true,
+		'edits' => 1,
+		'editComments' => 1,
+		'spacing' => 1,
+		'benchmarks' => 1,
+		'email' => false
 	);
 }
 
