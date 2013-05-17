@@ -192,7 +192,7 @@ if ( !$globals ) {
 	require( "$wmfConfigDir/InitialiseSettings.php" );
 
 	$wikiTags = array();
-	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small', 'medium', 'large', 'wikimania', 'wikidataclient' ) as $tag ) {
+	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small', 'medium', 'large', 'wikimania', 'wikidataclient', 'visualeditor' ) as $tag ) {
 		$dblist = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../$tag.dblist" ) ) );
 		if ( in_array( $wgDBname, $dblist ) ) {
 			$wikiTags[] = $tag;
@@ -1926,7 +1926,7 @@ if ( $wmgUseVisualEditor ) {
 		'eqiad' => '10.2.2.29', // parsoidcache.svc.eqiad.wmnet
 	);
 	$wgVisualEditorParsoidURL = 'http://' . $wmgVisualEditorParsoidHosts[$wmfDatacenter] . ':6081';
-	$wgVisualEditorParsoidPrefix = $wmgVisualEditorParsoidPrefix;
+	$wgVisualEditorParsoidPrefix = $wgDBname;
 	$wgVisualEditorParsoidProblemReportURL = 'http://parsoid.wmflabs.org/_bugs/';
 	$wgVisualEditorNamespaces = $wmgVisualEditorNamespaces;
 
