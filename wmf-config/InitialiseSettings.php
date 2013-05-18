@@ -1337,7 +1337,7 @@ $wgConf->settings = array(
 	'cawikisource'  => 'Viquitexts',
 	'cawiktionary'  => 'Viccionari',
 	'ckbwiki'       => 'ویکیپیدیا',
-	'cewiki'		=> 'Википедийа',
+	'cewiki'	=> 'Википеди', // Bug 47574
 	'chairwiki'     => 'Wikimedia Board Chair',
 	'chapcomwiki'   => 'Chapcom', // ?
 	'checkuserwiki'     => 'CheckUser Wiki',
@@ -1788,7 +1788,7 @@ $wgConf->settings = array(
 	'cawikiquote'   => 'Viquidites',
 	'cawikisource'  => 'Viquitexts',
 	'cawiktionary'  => 'Viccionari',
-	'cewiki'		=> 'Википедийа',
+	'cewiki'	=> 'Википеди', // Bug 47574
 	'chairwiki'     => 'Project',
 	'chapcomwiki'   => 'Chapcom', // ?
 	'checkuserwiki' => 'Project', // Bug 28781
@@ -2377,7 +2377,10 @@ $wgConf->settings = array(
 		'Author' => 106,
 		'Author_talk' => 107,
 	),
-	'+cewiki' => array( 'Wikipedia' => NS_PROJECT, ),
+	'+cewiki' => array( // Bug 47574
+		'Википедийа' => NS_PROJECT,
+		'Википедийа_дийцаре' => NS_PROJECT_TALK,
+	),
 	'+commonswiki' => array(
 		'Museum' => 106,
 		'Museum_talk' => 107,
@@ -4553,6 +4556,7 @@ $wgConf->settings = array(
 		102 => 'Viquiprojecte', 103 => 'Viquiprojecte_Discussió',
 	),
 	'cewiki' => array(
+		NS_PROJECT_TALK => 'Википедин_дийцаре', // Bug 47574
 		100 => 'Ков',
 		101 => 'Ков_дийцаре',
 	),
