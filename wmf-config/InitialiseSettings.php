@@ -8148,7 +8148,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt',  'bureaucrat', ),
 	),
 	'+commonswiki' => array(
-		'bureaucrat' => array( 'ipblock-exempt', 'OTRS-member' ),
+		'bureaucrat' => array( 'ipblock-exempt', 'OTRS-member', 'translationadmin' ), // bug 48620
 		'checkuser' => array( 'ipblock-exempt' ),
 		'sysop' => array( 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer' ),
 		'steward' => array( 'OTRS-member' ),
@@ -11889,6 +11889,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'bewikimedia' => true, // bug 37391
 	'brwikimedia' => true, // bug 44054
+	'commonswiki' => true, // bug 48620
 	'incubatorwiki' => true, // bug 34213
 	'mediawikiwiki' => true,
 	'metawiki' => true,
@@ -11901,6 +11902,16 @@ $wgConf->settings = array(
 ),
 'wmgTranslateWorkflowStates' => array(
 	'default' => false,
+	'commonswiki' => array( // bug 48620
+		'progress' => array( 'color' => 'E00' ),
+		'proofreading' => array( 'color' => 'FFBF00' ),
+		'ready' => array( 'color' => 'FF0' ),
+		'state conditions' => array(
+			array( 'ready', array( 'PROOFREAD' => 'MAX' ) ),
+			array( 'proofreading', array( 'TRANSLATED' => 'MAX' ) ),
+			array( 'progress', array( 'UNTRANSLATED' => 'NONZERO' ) ),
+		),
+	),
 	'metawiki' => array(
 		'progress' => array( 'color' => 'E00' ),
 		'needs-updating' => array( 'color' => 'FFBF00' ),
@@ -12361,6 +12372,7 @@ $wgConf->settings = array(
 'wmgUseUniversalLanguageSelector' => array(
 	'default' => false,
 	'bewikimedia' => true,
+	'commonswiki' => true, // bug 48620
 	'incubatorwiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
