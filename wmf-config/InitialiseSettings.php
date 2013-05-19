@@ -9027,21 +9027,6 @@ $wgConf->settings = array(
 		NS_CATEGORY_TALK => 'noindex,follow',
 	),
 ),
-
-'wgArticleRobotPolicies' => array(
-	'testwiki' => array(
-		'Not indexed' => 'noindex,follow',
-	),
-	'enwiki' => array(
-		# IRC request from amidaniel, 2007-06-01 TS
-		'Wikipedia:Requests for arbitration/Badlydrawnjeff/Evidence' => 'noindex,follow',
-		'Wikipedia:Requests for arbitration/Badlydrawnjeff/Workshop' => 'noindex,follow',
-	),
-	'rowiki' => array(
-		'Wikipedia:Pagini de şters' => 'noindex,follow',
-		'Discuţie Wikipedia:Pagini de şters' => 'noindex,follow',
-	),
-),
 # @} end of ROBOT
 
 'wgLoginLanguageSelector' => array(
