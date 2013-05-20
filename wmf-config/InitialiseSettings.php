@@ -10496,10 +10496,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseTemplateData' => array(
-	'default' => false,
-	'mediawikiwiki' => true,
-	'testwiki' => true,
-	'test2wiki' => true,
+	'default' => true,
 ),
 
 'wmgUseRSSExtension' => array(
