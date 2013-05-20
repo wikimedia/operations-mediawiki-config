@@ -16,6 +16,24 @@
       "revId": "7646925302caff14ba0711a896599d064b5f1873",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxXUjQ1o",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11928,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2013-05-20T06:35:45Z",
+      "side": 0,
+      "message": "In any case I\u0027d leave it out of this patch.",
+      "parentUuid": "DxTX0G-A",
+      "revId": "7646925302caff14ba0711a896599d064b5f1873",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
