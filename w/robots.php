@@ -16,14 +16,20 @@ $robotsfile = "/apache/common/robots.txt";
 $robots = fopen( $robotsfile, 'rb' );
 $text = '';
 
+$zeroRated = isset( $_SERVER['HTTP_X_SUBDOMAIN'] ) && $_SERVER['HTTP_X_SUBDOMAIN'] === 'ZERO';
+
 header( 'Cache-Control: s-maxage=3600, must-revalidate, max-age=0' );
 
-if ( $wgArticle->getID() != 0 ) {
+$dontIndex = "User-agent: *\nDisallow: /\n";
+
+if ( $zeroRated ) {
+	echo $dontIndex;
+} elseif ( $wgArticle->getID() != 0 ) {
 	$text =  $wgArticle->getContent( false ) ;
 	$lastmod = gmdate( 'D, j M Y H:i:s', wfTimestamp( TS_UNIX,  $wgArticle->getTouched() ) ) . ' GMT';
 	header( "Last-modified: $lastmod" );
-} elseif( $wmfRealm == 'labs' ) {
-	echo "User-agent: *\nDisallow: /\n";
+} elseif( $wmfRealm == 'labs' || $zeroRated ) {
+	echo $dontIndex;
 } else {
 	$stats = fstat( $robots );
 
