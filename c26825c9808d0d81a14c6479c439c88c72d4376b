@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxesQEK0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12651,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-05-20T18:26:58Z",
+      "side": 1,
+      "message": "Duplicated above. Needs merging",
+      "revId": "c26825c9808d0d81a14c6479c439c88c72d4376b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
