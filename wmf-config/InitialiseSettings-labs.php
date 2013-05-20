@@ -258,7 +258,7 @@ return array(
 	// (bug 39653) The plan is to enable it for testing on labs first, so add
 	// the config hook to be able to do that.
 	'wmgUseCodeEditorForCore' => array(
-		'default' => false,
+		'default' => true,
 	),
 
 );
