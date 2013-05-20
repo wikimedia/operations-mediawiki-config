@@ -2,10 +2,10 @@ operations/mediawiki-config.git
 -------------------------------
 
 Files in this repository are almost a mirror of the Wikimedia Foundation
-cluster configuration.  Ommited files includes passwords and security measures.
+cluster configuration. Omitted files include passwords and security measures.
 
 *.dblist
- List of databases. To vary by realm (eg: 'production', 'labs'), add the realm
+ List of databases. To vary by realm (e.g. 'production', 'labs'), add the realm
 as a suffix before the extension, separated with a dash. Example:
 	"all-labs.dblist".
 
@@ -23,7 +23,7 @@ images/
  Shared pictures for the unified login system.
 
 w/
- The "w/" directory in the docroot of any mediawiki-serving VirtualHost.
+ The "w/" directory in the docroot of any MediaWiki-serving VirtualHost.
 
 tests/
  Hold some PHPUnit tests.
