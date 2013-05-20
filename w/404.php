@@ -24,7 +24,7 @@ if( preg_match( "|(%2f)|i", $loc, $matches ) ||
     preg_match( "|^/upload/(.*)|i",$loc, $matches ) || preg_match("|^/style/(.*)|i",$loc, $matches ) ||
     preg_match( "|^/wiki/(.*)|i",$loc, $matches ) || preg_match("|^/w/(.*)|i",$loc, $matches ) ||
     preg_match( "|^/extensions/(.*)|i",$loc, $matches ) ) {
-	$title = $matches[1];
+	$title = htmlspecialchars( $matches[1] );
 	$details = "<p style=\"font-weight: bold;\">To check for \"$title\" on Wikipedia, see: 
                 <a href=\"//en.wikipedia.org/wiki/$title\" title=\"Wikipedia:$title\">
                 //en.wikipedia.org/wiki/$title</a></p>";
