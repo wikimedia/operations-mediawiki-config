@@ -9639,7 +9639,6 @@ $wgConf->settings = array(
 'wmgCentralAuthLoginWiki' => array(
 	'default' => false,
 	'loginwiki' => 'loginwiki',
-	'testwiki' => 'loginwiki',
 	'test2wiki' => 'loginwiki',
 ),
 
