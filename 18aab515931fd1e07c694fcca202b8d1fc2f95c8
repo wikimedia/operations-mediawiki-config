@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxcWqXHI",
+        "filename": "README",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-05-21T19:22:50Z",
+      "side": 1,
+      "message": "Omitted.",
+      "revId": "18aab515931fd1e07c694fcca202b8d1fc2f95c8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
