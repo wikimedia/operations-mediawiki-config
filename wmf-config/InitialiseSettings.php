@@ -1363,6 +1363,7 @@ $wgConf->settings = array(
 	'dkwikimedia'   => 'Wikimedia Danmark',
 	'donatewiki'    => 'Donate',
 	'dsbwiki'       => 'Wikipedija',
+	'dvwiki'	=> 'ވިކިޕީޑި', // bug 48075
 	'dvwiktionary'	=> 'ވިކިރަދީފު',
 	'elwiki'	=> 'Βικιπαίδεια',
 	'elwikibooks'   => 'Βικιβιβλία',
@@ -1815,6 +1816,7 @@ $wgConf->settings = array(
 	'dkwikimedia'   => 'Wikimedia',
 	'donatewiki'    => 'Donate',
 	'dsbwiki'       => 'Wikipedija',
+	'dvwiki'	=> 'ވިކިޕީޑި', // bug 48075
 	'dvwiktionary'	=> 'ވިކިރަދީފު', // Bug 46846
 	'elwiki'	=> 'Βικιπαίδεια',
 	'elwikibooks'   => 'Βικιβιβλία',
@@ -2512,6 +2514,7 @@ $wgConf->settings = array(
 		'BD' => NS_USER_TALK,
 	),
 	'+dvwiki' => array(
+		'Wikipedia_talk' => NS_PROJECT_TALK, // bug 48075
 		'Portal' => 100,
 		'Portal_talk' => 101,
 	),
@@ -4601,6 +4604,11 @@ $wgConf->settings = array(
 		100 => 'Portal',
 		101 => 'Portal_Diskussion'
 	),
+	'dvwiki' => array(
+		NS_PROJECT_TALK => 'ވިކިޕީޑިއާ_ޚިޔާ', // bug 48075
+		100 => 'ނެރު',
+		101 => 'ނެރު_ޚ_ޔާލު',
+	), 
 	'dewikivoyage' => array(
 		100 => 'Portal',
 		101 => 'Portal_Diskussion',
@@ -5879,10 +5887,6 @@ $wgConf->settings = array(
 		101 => 'Portal_Diskussion',
 		102 => 'Meinungen',
 		103 => 'Meinungen_Diskussion'
-	),
-	'dvwiki' => array(
-		100 => 'ނެރު',
-		101 => 'ނެރު_ޚ_ޔާލު',
 	),
 	'enwikinews' => array(
 		100 => 'Portal',
