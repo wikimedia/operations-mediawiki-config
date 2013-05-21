@@ -1204,6 +1204,7 @@ if ( $wmgUseCentralAuth ) {
 		// Production cluster
 		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
 		$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
+		$wgCentralAuthLoginWiki = $wmgCentralAuthLoginWiki;
 		break;
 
 	case 'labs':
@@ -1224,6 +1225,7 @@ if ( $wmgUseCentralAuth ) {
 			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
 			'ee-prototype.wikipedia.beta.wmflabs.org' => 'ee_prototypewiki',
 		);
+		$wgCentralAuthLoginWiki = false;
 		break;
 	}
 
