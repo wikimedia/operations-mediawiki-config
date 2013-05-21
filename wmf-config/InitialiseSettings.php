@@ -9195,6 +9195,11 @@ $wgConf->settings = array(
 	'wikiversity' => true,
 ),
 
+'wmgUseFloatedToc' => array(
+	'default' => true,
+	'hewikivoyage' => false, // bug 46864
+),
+
 'wmgUseSpecialNuke' => array(
 	'default' => true,
 	'loginwiki' => false,
