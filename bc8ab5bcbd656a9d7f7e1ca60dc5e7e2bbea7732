@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxfStizI",
+        "filename": "wmf-config/wgConfVHosts-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-05-22T08:35:00Z",
+      "side": 1,
+      "message": "I am not sure whether this is needed.  The production counterpart does not have a www.wikidata.org entry.",
+      "revId": "bc8ab5bcbd656a9d7f7e1ca60dc5e7e2bbea7732",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
