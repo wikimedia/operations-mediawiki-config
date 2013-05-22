@@ -10906,7 +10906,6 @@ $wgConf->settings = array(
 	'bnwiki' => true, // Bug 40366
 	'bnwikibooks' => true, // Bug 40366
 	'bnwikisource' => true, // Bug 36104
-	'commonswiki' => true, // Bug 32619
 	'guwiki' => true, // Bug 33423
 	'guwikisource' => true, // Bug 35138
 	'guwiktionary' => true, // bug 37365
@@ -10949,7 +10948,6 @@ $wgConf->settings = array(
 ),
 'wmgNarayamEnabledByDefault' => array(
 	'default' => false, // Note Narayam default is true
-	'commonswiki' => false, // Bug 32619
 	'amwiki' => true, // Bug 41460
 	'amwikiquote' => true, // Bug 41460
 	'amwiktionary' => true, // Bug 41460
