@@ -2031,6 +2031,7 @@ if ( $wmgUseTranslate ) {
 	$wgGroupPermissions['*']['translate'] = true;
 	$wgGroupPermissions['translationadmin']['pagetranslation'] = true;
 	$wgGroupPermissions['translationadmin']['translate-manage'] = true;
+	$wgGroupPermissions['translationadmin']['translate-import'] = true; // bug 40341
 	$wgGroupPermissions['user']['translate-messagereview'] = true;
 	$wgGroupPermissions['user']['translate-groupreview'] = true;
 
