@@ -12153,6 +12153,7 @@ $wgConf->settings = array(
 	'default' => 0, // no email bundling
 	'test2wiki' => 300,
 	'mediawikiwiki' => 14400,
+	'enwiki' => 14400,
 ),
 
 'wmgEchoCluster' => array(
