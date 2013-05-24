@@ -1146,9 +1146,6 @@ if ( $wmgEnableCaptcha ) {
 	$wgCaptchaClass = 'FancyCaptcha';
 	$wgCaptchaWhitelist = '#^(https?:)?//([.a-z0-9-]+\\.)?((wikimedia|wikipedia|wiktionary|wikiquote|wikibooks|wikisource|wikispecies|mediawiki|wikimediafoundation|wikinews|wikiversity|wikivoyage|wikidata)\.org|dnsstuff\.com|completewhois\.com|wikimedia\.de|toolserver\.org)(/|$)#i';
 	$wgCaptchaWhitelistIP = array( '91.198.174.0/24' ); # toolserver (bug 23982)
-	if ( $wgDBname == 'testwiki' ) {
-		$wgCaptchaTriggers['create'] = true;
-	}
 
 	// 'XRumer' spambot
 	// adds non-real links
