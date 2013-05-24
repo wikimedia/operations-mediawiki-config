@@ -21,6 +21,8 @@ if( $wmfRealm == 'labs' ) { # safe guard
 			'frwikivoyage' => 's2',
 			'nlwikivoyage' => 's2',
 			'ruwikivoyage' => 's2',
+
+			'wikidatawiki' => 's2',
 		),
 
 		'sectionLoads' => array(
