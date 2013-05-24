@@ -12660,6 +12660,16 @@ $wgConf->settings = array(
     'foundationwiki' => '!^https?://(www\.)?wikimediafoundation\.org/!',
 ),
 
+// (bug 46333) Enable new look Login and Create account forms by default
+// Append ?useNew=0 to switch back.
+'wgUseVFormCreateAccount' => array(
+	'default' => true,
+),
+'wgUseVFormUserLogin' => array(
+	'default' => true,
+),
+
+
 );
 
 
