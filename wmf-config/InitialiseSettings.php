@@ -476,6 +476,7 @@ $wgConf->settings = array(
 	'elwikinews'		=> '//upload.wikimedia.org/wikipedia/commons/0/0e/WikiNews-Logo-el.png',
 	'elwikiquote'		=> '$stdlogo',
 	'elwikisource'		=> '$stdlogo',
+	'elwikivoyage'		=> '//upload.wikimedia.org/wikivoyage/el/5/58/Wikivoyage-el.png', // Bug 48763
 	'elwiktionary'		=> '$stdlogo',
 	'enwiki'		=> '$stdlogo',
 	'enwikibooks'		=> '//upload.wikimedia.org/wikibooks/en/b/bc/Wiki.png',
