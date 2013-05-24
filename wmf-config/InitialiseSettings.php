@@ -6960,6 +6960,7 @@ $wgConf->settings = array(
 		'*' => array( 'patrolmarks' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
+		'flood' => array( 'bot' => true ), // Bug 48682
 	),
 	'eswikibooks' => array(
 		'*'     => array( 'createpage' => false, 'createtalk' => false, ),
@@ -10002,6 +10003,7 @@ $wgConf->settings = array(
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'enwikisource' => array( 'sysop' => array( 'flood' ) ), //Bug 36863
+	'eswiki' => array( 'sysop' => array( 'flood' ) ), // Bug  48682
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'itwikibooks' => array( 'sysop' => array( 'flooder' ) ), // Bug 39569
 	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // Bug 36600
@@ -10018,6 +10020,7 @@ $wgConf->settings = array(
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'enwikisource' => array( 'sysop' => array( 'flood' ) ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=36863
+	'eswiki' => array( 'sysop' => array( 'flood' ) ), // Bug  48682
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'frwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
 	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=36600
