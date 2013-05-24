@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxvEFqno",
+        "filename": "multiversion/populateWikiversions",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-05-24T12:52:20Z",
+      "side": 1,
+      "message": "Why are you reverting back to dirname( __FILE__ ) ?\n\n__DIR__ was added in 5.3 and we\u0027re on 5.3.10 on the cluster\n\nYou\u0027re also adding new usages of __DIR__ in CommonSettings.php",
+      "revId": "f14c883e1216f51002603448b086af80255312f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
