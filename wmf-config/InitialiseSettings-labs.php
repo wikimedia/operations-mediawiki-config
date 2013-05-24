@@ -70,7 +70,7 @@ return array(
 		'labswiki'      => '//deployment.wikimedia.beta.wmflabs.org',
 		'ee_prototypewiki' => '//ee-prototype.wikipedia.beta.wmflabs.org',
 		'testwiki'      => '//test.wikimedia.beta.wmflabs.org',
-		'wikidata'      => '//wikidata.beta.wmflabs.org',
+		'wikidatawiki'  => '//wikidata.beta.wmflabs.org',
 	),
 
 	'wgCanonicalServer' => array(
@@ -91,7 +91,7 @@ return array(
 		'commonswiki'	=> 'http://commons.wikimedia.beta.wmflabs.org',
 		'labswiki'      => 'http://deployment.wikimedia.beta.wmflabs.org',
 		'testwiki'      => 'http://test.wikimedia.beta.wmflabs.org',
-		'wikidata'      => 'http://wikidata.beta.wmflabs.org',
+		'wikidatawiki'  => 'http://wikidata.beta.wmflabs.org',
 	),
 
 	'wmgUsabilityPrefSwitch' => array(
