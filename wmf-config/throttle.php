@@ -28,6 +28,13 @@ $wmfThrottlingExceptions[] = array( // Bug 48396 - Journées Nationales de Calcu
 	'value'  => 70,
 );
 
+$wmfThrottlingExceptions[] = array( // Wikimedia Hackathon Amsterdam 2013
+	'from' => '2013-05-26T00:00 +1:00',
+	'to' => '2013-05-27T00:00 +1:00',
+	'IP' => array( '77.170.89.227', '213.127.161.46' ),
+	'value' => 70,
+);
+
 ## Add throttling definitions above.
 
 # Will eventually raise value when MediaWiki is fully initialized:
