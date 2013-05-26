@@ -3278,6 +3278,12 @@ $wgConf->settings = array(
 		'Wiktionary' => NS_PROJECT,                 // Bug 40717
 		'คุยเรื่องWiktionary' => NS_PROJECT_TALK,
 	),
+	'+thwikisource' => array(
+		'Page' => 250,
+		'Page_talk' => 251,
+		'Index' => 252,
+		'Index_talk' => 253,
+	),
 	'+tkwiktionary' => array(
 		'Wiktionary' => NS_PROJECT,
 	),
