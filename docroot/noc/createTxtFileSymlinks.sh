@@ -73,6 +73,7 @@ mwconfig_files=(
 	small.dblist
 	special.dblist
 	wikibooks.dblist
+	wikidata.dblist
 	wikidataclient.dblist
 	wikimania.dblist
 	wikimedia.dblist
