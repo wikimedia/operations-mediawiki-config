@@ -3779,6 +3779,10 @@ $wgConf->settings = array(
 		'page' => 104,
 		'index' => 106,
 	),
+	'thwikisource' => array(
+		'page' => 250,
+		'index' => 252,
+	),
 	'vecwikisource' => array(
 		'page' => 102,
 		'index' => 104,
