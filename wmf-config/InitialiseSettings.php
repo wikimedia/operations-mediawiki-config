@@ -648,7 +648,7 @@ $wgConf->settings = array(
 	'liwiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Wiktionary-logo-li.png/135px-Wiktionary-logo-li.png', // bug 43240
 	'lmowiki'		=> '//upload.wikimedia.org/wikipedia/commons/f/ff/Wikipedia-logo-v2-lmo.png', // bug 40285
 	'lnwiki'		=> '//upload.wikimedia.org/wikipedia/commons/a/aa/Wikipedia-logo-v2-ln.png', // bug 46589
-	'wikidatawiki'		=> '//upload.wikimedia.org/wikipedia/commons/e/e4/Wikidata-logo-en-135px.png',
+	'wikidata'		=> '//upload.wikimedia.org/wikipedia/commons/e/e4/Wikidata-logo-en-135px.png',
 	'loginwiki'		=> '//upload.wikimedia.org/wikipedia/commons/e/ed/Wikimedia_logo-scaled-down.png', // bug 48236
 	'lowiki'		=> '//upload.wikimedia.org/wikipedia/commons/f/fe/Wikipedia-logo-v2-lo.png', // bug 48397
 	'ltgwiki'		=> '//upload.wikimedia.org/wikipedia/commons/7/77/Wikipedia-logo-v2-ltg.png',
@@ -989,7 +989,7 @@ $wgConf->settings = array(
 	'xmfwiki' => false,
 	'zhwikinews' => false,
 
-	'wikidatawiki' => false,
+	'wikidata' => false,
 ),
 # @} end of wgEnableUpload
 
@@ -1157,6 +1157,7 @@ $wgConf->settings = array(
 	'wg_enwiki' => '//wg.en.wikipedia.org',
 	'wikibooks'     => '//$lang.wikibooks.org',
 	'wikidatawiki' => '//www.wikidata.org',
+	'testwikidatawiki' => '//test.wikidata.org',
 	'wikimania2005wiki' => '//wikimania2005.wikimedia.org',
 	'wikimania2006wiki' => '//wikimania2006.wikimedia.org',
 	'wikimania2007wiki' => '//wikimania2007.wikimedia.org',
@@ -1234,6 +1235,7 @@ $wgConf->settings = array(
 	'wg_enwiki' => 'http://wg.en.wikipedia.org',
 	'wikibooks'     => 'http://$lang.wikibooks.org',
 	'wikidatawiki' => 'http://www.wikidata.org',
+	'testwikidatawiki' => 'http://test.wikidata.org',
 	'wikimania2005wiki' => 'http://wikimania2005.wikimedia.org',
 	'wikimania2006wiki' => 'http://wikimania2006.wikimedia.org',
 	'wikimania2007wiki' => 'http://wikimania2007.wikimedia.org',
@@ -1668,6 +1670,7 @@ $wgConf->settings = array(
 	'vowiktionary'	=> 'Vükivödabuk',
 	'wg_enwiki'     => 'Wikipedia Working Group',
 	'wikidatawiki' => 'Wikidata',
+	'testwikidatawiki' => 'Wikidata',
 	'wikimaniateamwiki' => 'WikimaniaTeam',
 	'wikimedia'     => 'Wikimedia',
 	'xmfwiki'		=> 'ვიკიპედია',
@@ -2135,6 +2138,7 @@ $wgConf->settings = array(
 	'zh_classicalwiki' => '維基大典',
 
 	'wikidatawiki' => 'Wikidata',
+	'testwikidatawiki' => 'Wikidata',
 
 ),
 # @} end of wgMetaNamespace
@@ -3355,7 +3359,7 @@ $wgConf->settings = array(
 		'Index'      => 104,
 		'Index_talk' => 105,
 	),
-	'+wikidatawiki' => array(
+	'+wikidata' => array(
 		'WD' => NS_PROJECT,      // Bug 41834
 		'WT' => NS_PROJECT_TALK,
 		'P' => 120, // bug 45079
@@ -4144,7 +4148,7 @@ $wgConf->settings = array(
 	'ptwiki' => 10, // Bug 27954
 	'ruwiki' => 15, // Bug 41831
 	'simplewiki' => 10,
-	'wikidatawiki' => 50, // Bug 46461
+	'wikidata' => 50, // Bug 46461
 	'zhwiki' => 50, // Bug 14624
 	'zh_yuewiki' => 10, // Bug 30538
 ),
@@ -4220,7 +4224,7 @@ $wgConf->settings = array(
 	'specieswiki' => 'wikispecies',
 	'testwiki' => 'test',
 	'wikimania' => 'wikimedia',
-	'wikidatawiki' => 'wikidata',
+	'wikidata' => 'wikidata',
 	'wikivoyage' => 'wikivoyage',
 ),
 
@@ -6209,7 +6213,7 @@ $wgConf->settings = array(
 	'viwiki' => array(
 		'licenses',
 	),
-	'wikidatawiki' => array(
+	'wikidata' => array(
 		'mainpage',
 		'portal-url',
 		'villagepump-url',
@@ -6396,7 +6400,7 @@ $wgConf->settings = array(
 	'srwiki' => true, // req by dungodung in #wikimedia-tech, 2008-02-25
 	'srwikisource' => true, // #25963
 	'viwiki' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=5060
-	'wikidatawiki' => true, // bug 41907
+	'wikidata' => true, // bug 41907
 	'zhwiktionary' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=5596
 
 	'test2wiki' => true, // request by Krinkle for testing
@@ -7616,7 +7620,7 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true ), // bug 46828
 		'autopatrolled' => array( 'autopatrol' => true ), // bug 46828
 	),
-	'wikidatawiki' => array(
+	'wikidata' => array(
 		'autopatrolled' => array(
 			'autopatrol' => true, // bug 41907
 			'patrol' => true, // bug 42052
@@ -8097,7 +8101,7 @@ $wgConf->settings = array(
 	'+vecwiki' => array(
 		'sysop' => array( 'flood' ),
 	),
-	'+wikidatawiki' => array(
+	'+wikidata' => array(
 		'sysop' => array(
 			'autopatrolled', // bug 41907
 			'rollbacker', // bug 45165
@@ -8519,7 +8523,7 @@ $wgConf->settings = array(
 	'+vecwiki' => array(
 		'sysop' => array( 'flood' ),
 	),
-	'+wikidatawiki' => array(
+	'+wikidata' => array(
 		'sysop' => array(
 			'autopatrolled', // bug 41907
 			'rollbacker', // bug 45165
@@ -8816,7 +8820,7 @@ $wgConf->settings = array(
 	'viwikisource' => array( 'w', 'wikt', 'b', 'q' ),
 	'viwikiquote'  => array( 'w', 'wikt', 'b', 's' ),
 
-	'wikidatawiki' => array( 'meta', 'commons', 'en', 'de', 'fr', 'es' ),
+	'wikidata' => array( 'meta', 'commons', 'en', 'de', 'fr', 'es' ),
 	'wikimania2012wiki' => array( 'en', 'meta', 'wm2011' ),
 	'wikimania2013wiki' => array( 'en', 'meta', 'wm2011', 'wm2012' ),
 	'wikimania2014wiki' => array( 'en', 'meta', 'wm2011', 'wm2012', 'wm2013' ),
@@ -9340,7 +9344,7 @@ $wgConf->settings = array(
 	'+frwiki' => array(
 		'Mostcategories',
 	),
-	'+wikidatawiki' => array(
+	'+wikidata' => array(
 		'Lonelypages ',
 		'Uncategorizedpages',
 		'Unwatchedpages',
@@ -9475,7 +9479,7 @@ $wgConf->settings = array(
 	'testwiki'			=> '//bits.wikimedia.org/favicon/black-globe.ico',
 	'transitionteamwiki'		=> '//bits.wikimedia.org/favicon/wmf.ico',
 	'usabilitywiki'			=> '//bits.wikimedia.org/favicon/usability.ico',
-	'wikidatawiki'			=> '//bits.wikimedia.org/favicon/wikidata.ico',
+	'wikidata'			=> '//bits.wikimedia.org/favicon/wikidata.ico',
 	'wikimania'                     => '//bits.wikimedia.org/favicon/wikimania.ico',
 	'wikimaniateamwiki'		=> '//bits.wikimedia.org/favicon/wikimania.ico',
 ),
@@ -9761,7 +9765,7 @@ $wgConf->settings = array(
 	'usabilitywiki' =>  true,
 	'vecwiktionary' => true,
 	'vewikimedia' => true,
-	'wikidatawiki' => true,
+	'wikidata' => true,
 	'wikimania2009wiki' => true,
 	'wikimania2010wiki' => true,
 	'wikimania2011wiki' => true,
@@ -10027,7 +10031,7 @@ $wgConf->settings = array(
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
 	'plwiki' => array( 'sysop' => array( 'flood' ) ), // Bug 20155
 	'strategywiki' => array( 'sysop' => array( 'flood' ) ),
-	'wikidatawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 48013, Bug 46856
+	'wikidata' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 48013, Bug 46856
 	'zhwiki' => array( 'sysop' => array( 'flood' ) ),
 ),
 'wgGroupsRemoveFromSelf' => array(
@@ -10046,7 +10050,7 @@ $wgConf->settings = array(
 	'plwiki' => array( 'flood' => array( 'flood' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=20155 , bug 21238
 	'strategywiki' => array( 'sysop' => array( 'flood' ) ),
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
-	'wikidatawiki' => array( 
+	'wikidata' => array( 
 		'sysop' => array( 'flood', 'translationadmin' ), // Bug 48013, Bug 46856
 		'flood' => array( 'flood' ), // Bug 48013
 	),
@@ -11161,7 +11165,7 @@ $wgConf->settings = array(
 'wmgMobileFrontend' => array(
 	'default' => true,
 	'wikivoyage' => true, // In testing prior to mobile domain setup
-	'wikidatawiki' => false, // Disabled due to lack of mobile domain setup
+	'wikidata' => false, // Disabled due to lack of mobile domain setup
 ),
 
 'wmgZeroRatedMobileAccess' => array(
@@ -11860,7 +11864,7 @@ $wgConf->settings = array(
 	'udmwiki' => 'User %code%', // Bug 47749
 	'ukwiki' => 'User %code%',
 	'ukwikinews' => 'User %code%', // Bug 46489
-	'wikidatawiki' => 'User %code%',
+	'wikidata' => 'User %code%',
 	'zhwiktionary' => '%wikiname%使用者',
 	'zhwiki' => '%code%_使用者',
 	'zhwikibooks' => '%code%_使用者',
@@ -11875,7 +11879,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'commonswiki' => true,
 	'incubatorwiki' => true,
-	'wikidatawiki' => true,
+	'wikidata' => true,
 ),
 
 'wmgUseTranslate' => array(
@@ -11888,7 +11892,7 @@ $wgConf->settings = array(
 	'metawiki' => true,
 	'outreachwiki' => true,
 	'testwiki' => true,
-	'wikidatawiki' => true, // bug 41585
+	'wikidata' => true, // bug 41585
 	'wikimania2012wiki' => true, // bug 34120
 	'wikimania2013wiki' => true, // bug 36477
 	'wikimania2014wiki' => true,
@@ -11912,7 +11916,7 @@ $wgConf->settings = array(
 		'ready' => array( 'color' => 'FF0' ),
 		'published' => array( 'color' => 'AEA' ),
 	),
-	'wikidatawiki' => array(
+	'wikidata' => array(
 		'progress' => array( 'color' => 'E00' ),
 		'needs-updating' => array( 'color' => 'FFBF00' ),
 		'updating' => array( 'color' => 'FFBF00' ),
@@ -11924,7 +11928,7 @@ $wgConf->settings = array(
 
 'wmgTranslateRcFilterDefault' => array(
 	'default' => 'filter',
-	'wikidatawiki' => 'noaction',
+	'wikidata' => 'noaction',
 ),
 
 'wmgUseTranslationMemory' => array(
@@ -11938,7 +11942,7 @@ $wgConf->settings = array(
 	'incubatorwiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
-	'wikidatawiki' => true, // bug 41585
+	'wikidata' => true, // bug 41585
 	'wikimania2012wiki' => true,
 	'wikimania2013wiki' => true,
 	'wikimania2014wiki' => true,
@@ -12398,7 +12402,7 @@ $wgConf->settings = array(
 
 'wgContentHandlerUseDB' => array(
 	'default' => false,
-	'wikidatawiki' => true,
+	'wikidata' => true,
 ),
 
 'wmgUseUniversalLanguageSelector' => array(
@@ -12411,7 +12415,7 @@ $wgConf->settings = array(
 	'outreachwiki' => true,
 	'sourceswiki' => true, // Bug 44032
 	'testwiki' => true,
-	'wikidatawiki' => true,
+	'wikidata' => true,
 	'wikimania2012wiki' => true,
 	'wikimania2013wiki' => true,
 	'wikimania2014wiki' => true,
@@ -12423,7 +12427,7 @@ $wgConf->settings = array(
 
 'wmgUseWikibaseRepo' => array(
 	'default' => false,
-	'wikidatawiki' => true,
+	'wikidata' => true,
 ),
 
 'wmgUseWikibaseClient' => array(
