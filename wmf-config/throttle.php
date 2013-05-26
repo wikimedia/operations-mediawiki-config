@@ -20,14 +20,6 @@ $wmgThrottlingExceptions = array();
 
 ## Add throttling definitions below.
 
-$wmfThrottlingExceptions[] = array( // Bug 48396 - Journées Nationales de Calcul Formel (JNCF) 2013
-	'from'   => '2013-05-21T15:00 +0:00',
-	'to'     => '2013-05-22T12:00 +0:00',
-	'IP'     => '139.124.3.100',
-	'dbname' => array( 'enwiki', 'frwiki', 'commonswiki' ),
-	'value'  => 70,
-);
-
 $wmfThrottlingExceptions[] = array( // Wikimedia Hackathon Amsterdam 2013
 	'from' => '2013-05-26T00:00 +1:00',
 	'to' => '2013-05-27T00:00 +1:00',
@@ -35,7 +27,53 @@ $wmfThrottlingExceptions[] = array( // Wikimedia Hackathon Amsterdam 2013
 	'value' => 70,
 );
 
+$wmfThrottlingExceptions[] = array( // Editing session at the NIH - http://www.ncbi.nlm.nih.gov/
+	'from' => '2013-05-28T08:00 -7:00',
+	'to' => '2013-05-30T20:00 -7:00',
+	'range' => array( '128.231.0.0/16', '130.14.0.0/16', '156.40.0.0/16', '137.187.0.0/16', '156.40.0.0/16', '165.112.0.0/16' ),
+	'dbname' => array( 'enwiki', 'commonswiki' ),
+	'value' => 100, // 50 to 100 accounts
+);
+
 ## Add throttling definitions above.
+
+## Helper methods:
+
+/**
+ * Determines if an IP address is a list of CIDR a.b.c.d/n ranges.
+ *
+ * @param string $ip the IP to check
+ * @param array $range the IP ranges, each element a range
+ *
+ * @return Boolean true if the specified adress belongs to the specified range; otherwise, false.
+ */
+function inCIDRRanges ( $ip, $ranges ) {
+	foreach ( $ranges as $range ) {
+		if ( inCIDRRange( $ip, $range ) ) {
+			return true;
+		}
+	}
+	return false;
+}
+
+/**
+ * Determines if an IP address is a CIDR a.b.c.d/n range.
+ *
+ * @param string $ip the IP to check
+ * @param string $range the IP range
+ *
+ * @return Boolean true if the specified adress belongs to the specified range; otherwise, false.
+ */
+function inCIDRRange ( $ip, $range ) {
+	// Thanks to claudiu at cnixs dot com
+	// http://php.net/manual/en/ref.network.php
+	list( $net, $mask ) = explode( "/", $range );
+	$ip_net = ip2long( $net );
+	$ip_mask = ~((1 << (32 - $mask)) - 1);
+	$ip_ip = ip2long ( $ip );
+	$ip_ip_net = $ip_ip & $ip_mask;
+	return ( $ip_ip_net == $ip_net );
+}
 
 # Will eventually raise value when MediaWiki is fully initialized:
 $wgExtensionFunctions[] = 'efRaiseAccountCreationThrottle';
@@ -74,6 +112,13 @@ function efRaiseAccountCreationThrottle() {
 			if ( is_array( $options['IP'] ) && !in_array( wfGetIP(), $options['IP'] ) ) {
 				continue;
 			} elseif ( wfGetIP() != $options['IP'] ) {
+				continue;
+			}
+		}
+		if ( isset ( $options['range'] ) ) {
+			if ( is_array( $options['range'] ) && !inCIDRRanges( wfGetIP(), $options['range'] ) ) {
+				continue;
+			} elseif ( !inCIDRRange( wfGetIP(), $options['range'] ) ) {
 				continue;
 			}
 		}
