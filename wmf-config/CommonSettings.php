@@ -2550,7 +2550,7 @@ $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
 };
 
 // bug 44617
-if ( $wgDBname == 'wikidatawiki' ) {
+if ( in_array( $wgDBname, array( 'wikidatawiki', 'testwikidatawiki' ) ) {
 	$wgHooks['SkinCopyrightFooter'][] = function( $title, $type, &$msg, &$link, &$forContent ) {
 		if ( $title->getNamespace() === NS_MAIN ) {
 			$msg = 'Creative Commons Public Domain 1.0';
