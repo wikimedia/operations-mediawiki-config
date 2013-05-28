@@ -1755,7 +1755,6 @@ if ( $wmgUseArticleFeedbackv5 ) {
 	$wgArticleFeedbackAutoArchiveTtl = $wmgArticleFeedbackAutoArchiveTtl;
 	$wgArticleFeedbackv5Watchlist = $wmgArticleFeedbackv5Watchlist;
 	$wgArticleFeedbackv5ArticlePageLink = $wmgArticleFeedbackv5ArticlePageLink;
-	$wgArticleFeedbackv5TalkPageLink = $wmgArticleFeedbackv5TalkPageLink;
 
 	// clear default permissions set in ArticleFeedbackv5.php
 	foreach ( $wgGroupPermissions as $group => $permissions ) {
