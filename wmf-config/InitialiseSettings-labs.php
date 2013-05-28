@@ -257,9 +257,6 @@ return array(
 		'default' => true,
 	),
 
-	'wmgUseWikibaseRepo' => array(
-		'wikidatawiki' => false,  # temporarly to fix the wiki installation
-	),
 );
 
 } # wmflLabsSettings()
