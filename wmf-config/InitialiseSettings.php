@@ -10901,12 +10901,6 @@ $wgConf->settings = array(
 	'dewiki' => false,
 	'frwiki' => false,
 ),
-/*
- * Display a link to the page's Article Feedback list from the talk page.
- */
-'wmgArticleFeedbackv5TalkPageLink' => array(
-	'default' => false,
-),
 
 'wmgUsePoolCounter' => array(
 	'default' => true,
