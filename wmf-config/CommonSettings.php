@@ -2434,12 +2434,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgExtraNamespaces[WB_NS_QUERY] = 'Query';
 	$wgExtraNamespaces[WB_NS_QUERY_TALK] = 'Query_talk';
 
-	$wgWBSettings['dataTypes'] = array(
-		'wikibase-item',
-		'commonsMedia',
-		'string',
-	);
-
 	$wgWBSettings['changesAsJson'] = true;
 
 	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
