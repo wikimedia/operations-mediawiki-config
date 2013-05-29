@@ -335,14 +335,15 @@ $wgSQLMode = null;
 
 # Object cache and session settings
 
-$pcTemplate = array( 'type' => 'mysql',
+$pcTemplate = array(
+	'type' => 'mysql',
 	'dbname' => 'parsercache',
 	'user' => $wgDBuser,
 	'password' => $wgDBpassword,
 	'flags' => 0,
 );
 
-if ($wmfDatacenter == 'eqiad') {
+if ( $wmfDatacenter == 'eqiad' ) {
 	# pc1001, pc1002, pc1003
 	foreach ( array( '10.64.16.156', '10.64.16.157', '10.64.16.158' ) as $host ) {
 		$pcServers[] = array( 'host' => $host ) + $pcTemplate;
@@ -419,7 +420,7 @@ if ( $wmgPrivateWikiUploads ) {
 	$wgFileExtensions[] = 'odg'; // OpenOffice Graphics
 	$wgFileExtensions[] = 'ott'; // Templates
 
-	# Temporary for office work :P
+	# Temporary for office work
 	$wgFileExtensions[] = 'wmv';
 	$wgFileExtensions[] = 'dv';
 	$wgFileExtensions[] = 'avi';
@@ -646,17 +647,17 @@ if ( $wmgUseTimedMediaHandler ) {
 	if ( $wgDBname == 'commonswiki' ) {
 		$wgTimedTextNS = 102;
 	}
-	//overwrite enabling of local TimedText namespace
+	// overwrite enabling of local TimedText namespace
 	$wgEnableLocalTimedText = $wmgEnableLocalTimedText;
 
-	//enable transcoding on all wikis that allow uploads
+	// enable transcoding on all wikis that allow uploads
 	$wgEnableTranscode = $wgEnableUploads;
 
 	$wgOggThumbLocation = false; // use ffmpeg for performance
 	// $wgOggThumbLocation = '/usr/bin/oggThumb';
 
-	//tmh1/2 have 12 cores and need lots of shared memory
-	//for avconv / ffmpeg2theora
+	// tmh1/2 have 12 cores and need lots of shared memory
+	// for avconv / ffmpeg2theora
 	$wgTranscodeBackgroundMemoryLimit = 4 * 1024 * 1024; // 4GB
 }
 
@@ -889,7 +890,7 @@ $wgUseHashTable = true;
 
 $wgCopyrightIcon = '<a href="//wikimediafoundation.org/"><img src="//bits.wikimedia.org/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>';
 
-# For Special:Cite, we only want it on wikipedia (but can't count on $site),
+# For Special:Cite, we only want it on Wikipedia (but can't count on $site),
 # not on these fakers.
 $wgLanguageCodeReal = $wgLanguageCode;
 # Fake it up
@@ -1107,11 +1108,11 @@ if ( getenv( 'WIKIDEBUG' ) ) {
 	$wgDebugDumpSql = true;
 	$wgDebugLogGroups = array();
 	foreach ( $wgDBservers as $key => $val ) {
-		$wgDBserver[$key]['flags'] |= 1;// DBO_DEBUG;
+		$wgDBserver[$key]['flags'] |= 1; // DBO_DEBUG;
 	}
 	foreach ( $wgExternalServers as $key => $val ) {
 		foreach ( $val as $x => $y ) {
-			$wgExternalServers[$key][$x]['flags'] |= 1;// DBO_DEBUG;
+			$wgExternalServers[$key][$x]['flags'] |= 1; // DBO_DEBUG;
 		}
 	}
 }
@@ -1176,10 +1177,10 @@ if ( function_exists( 'dba_open' ) && file_exists( "$wmfConfigDir/interwiki.cdb"
 $wgEnotifUseJobQ = true;
 
 // Username spoofing / mixed-script / similarity check detection
-include $IP . '/extensions/AntiSpoof/AntiSpoof.php';
+include( $IP . '/extensions/AntiSpoof/AntiSpoof.php' );
 
 // For transwiki import
-ini_set( 'user_agent', 'Wikimedia internal server fetcher (noc@wikimedia.org' );
+ini_set( 'user_agent', 'Wikimedia internal server fetcher (noc@wikimedia.org)' );
 
 // CentralAuth
 if ( $wmgUseCentralAuth ) {
@@ -1199,34 +1200,34 @@ if ( $wmgUseCentralAuth ) {
 	}
 
 	switch ( $wmfRealm ) {
-	case 'production':
-		// Production cluster
-		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
-		$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
-		$wgCentralAuthLoginWiki = $wmgCentralAuthLoginWiki;
-		break;
+		case 'production':
+			// Production cluster
+			$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
+			$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
+			$wgCentralAuthLoginWiki = $wmgCentralAuthLoginWiki;
+			break;
 
-	case 'labs':
-		// wmflabs beta cluster
-		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\.\w+\.\w+\./';
-		$wgCentralAuthAutoLoginWikis = array(
-			'incubator.wikimedia.beta.wmflabs.org' => 'incubatorwiki',
-			'.wikipedia.beta.wmflabs.org' => 'enwiki',
-			'.wikisource.beta.wmflabs.org' => 'enwikisource',
-			'.wikibooks.beta.wmflabs.org' => 'enwikibooks',
-			'.wikiversity.beta.wmflabs.org' => 'enwikiversity',
-			'.wikiquote.beta.wmflabs.org' => 'enwikiquote',
-			'.wikinews.beta.wmflabs.org' => 'enwikinews',
-			'.wiktionary.beta.wmflabs.org' => 'enwiktionary',
-			'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
-			'deployment.wikimedia.beta.wmflabs.org' => 'labswiki',
-			'test.wikimedia.beta.wmflabs.org' => 'testwiki',
-			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
-			$wmfHostnames['wikidata'] => 'wikidatawiki',
-			'ee-prototype.wikipedia.beta.wmflabs.org' => 'ee_prototypewiki',
-		);
-		$wgCentralAuthLoginWiki = false;
-		break;
+		case 'labs':
+			// wmflabs beta cluster
+			$wmgSecondLevelDomainRegex = '/^\w+\.\w+\.\w+\.\w+\./';
+			$wgCentralAuthAutoLoginWikis = array(
+				'incubator.wikimedia.beta.wmflabs.org' => 'incubatorwiki',
+				'.wikipedia.beta.wmflabs.org' => 'enwiki',
+				'.wikisource.beta.wmflabs.org' => 'enwikisource',
+				'.wikibooks.beta.wmflabs.org' => 'enwikibooks',
+				'.wikiversity.beta.wmflabs.org' => 'enwikiversity',
+				'.wikiquote.beta.wmflabs.org' => 'enwikiquote',
+				'.wikinews.beta.wmflabs.org' => 'enwikinews',
+				'.wiktionary.beta.wmflabs.org' => 'enwiktionary',
+				'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
+				'deployment.wikimedia.beta.wmflabs.org' => 'labswiki',
+				'test.wikimedia.beta.wmflabs.org' => 'testwiki',
+				'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
+				$wmfHostnames['wikidata'] => 'wikidatawiki',
+				'ee-prototype.wikipedia.beta.wmflabs.org' => 'ee_prototypewiki',
+			);
+			$wgCentralAuthLoginWiki = false;
+			break;
 	}
 
 	if ( preg_match( $wmgSecondLevelDomainRegex, strrev( $wgServer ), $m ) ) {
@@ -1302,7 +1303,9 @@ function logBadPassword( $user, $pass, $retval ) {
 		}
 
 		wfDebugLog( 'badpass', "$bit for sysop '" .
-			$user->getName() . "' from " . $wgRequest->getIP() .
+			$user->getName() .
+			"' from " .
+			$wgRequest->getIP() .
 			# " - " . serialize( apache_request_headers() )
 			" - " . @$headers['X-Forwarded-For'] .
 			' - ' . @$headers['User-Agent'] .
@@ -1410,7 +1413,7 @@ if ( $wmgUseCentralNotice ) {
 		$wgNoticeCounterSource = '//wikimediafoundation.org/wiki/Special:ContributionTotal' .
 			'?action=raw' .
 			'&start=20101112000000' . // FY 10-11
-			'&fudgefactor=660000';   // fudge for pledged donations not in CRM
+			'&fudgefactor=660000'; // fudge for pledged donations not in CRM
 		break;
 	}
 
@@ -1478,7 +1481,6 @@ function wfNoDeleteMainPage( &$title, &$user, $action, &$result ) {
 	}
 	return true;
 }
-
 if ( $wgDBname == 'enwiki' ) {
 	// Please don't interferew with our hundreds of wikis ability to manage themselves.
 	// Only use this shitty hack for enwiki. Thanks.
@@ -1510,7 +1512,7 @@ if ( $wmgUseCollection ) {
 
 	$wgCollectionFormats = array(
 		'rl' => 'PDF',
-	//	'epub' => 'EPUB', // disabling by default per reqest from tfinc 14 July 2012
+		// 'epub' => 'EPUB', // disabling by default per reqest from tfinc 14 July 2012
 		'odf' => 'ODT',
 		'zim' => 'openZIM',
 	);
@@ -1669,9 +1671,9 @@ if ( $wmgEnableLandingCheck ) {
 
 		// --- France and it's territories (per WMFr email 2012-06-13)
 		//     Not a fundraising chapter in 2013+ due to FR regulations 
-		//'FR',
-		//'GP', 'MQ', 'GF', 'RE', 'YT', 'PM',
-                //'NC', 'PF', 'WF', 'BL', 'MF', 'TF',
+		// 'FR',
+		// 'GP', 'MQ', 'GF', 'RE', 'YT', 'PM',
+                // 'NC', 'PF', 'WF', 'BL', 'MF', 'TF',
 
 		// === Blacklisted countries
                 'BY', 'CD', 'CI', 'CU', 'IQ', 'IR', 'KP', 'LB', 'LY', 'MM', 'SD', 'SO', 'SY', 'YE', 'ZW',
@@ -1757,6 +1759,7 @@ if ( $wmgUseArticleFeedbackv5 ) {
 	$wgArticleFeedbackAutoArchiveTtl = $wmgArticleFeedbackAutoArchiveTtl;
 	$wgArticleFeedbackv5Watchlist = $wmgArticleFeedbackv5Watchlist;
 	$wgArticleFeedbackv5ArticlePageLink = $wmgArticleFeedbackv5ArticlePageLink;
+	$wgArticleFeedbackv5TalkPageLink = $wmgArticleFeedbackv5TalkPageLink;
 
 	// clear default permissions set in ArticleFeedbackv5.php
 	foreach ( $wgGroupPermissions as $group => $permissions ) {
@@ -1795,7 +1798,7 @@ if ( $wmgUseArticleFeedbackv5 ) {
 	);
 
 	$wgArticleFeedbackv5AbuseFiltering = $wmgArticleFeedbackv5AbuseFiltering;
-//	$wgArticleFeedbackv5CTABuckets = $wmgArticleFeedbackv5CTABuckets;
+	// $wgArticleFeedbackv5CTABuckets = $wmgArticleFeedbackv5CTABuckets;
 }
 
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
@@ -1938,7 +1941,7 @@ if ( PHP_SAPI === 'cli' ) {
 }
 
 # Style version appendix
-# Shouldn't be needed much in 1.17 due to ResourceLoader, but some legacy things still need it
+# Shouldn't be needed much since 1.17 due to ResourceLoader, but some legacy things still need it
 $wgStyleVersion .= '-4';
 
 // DO NOT DISABLE WITHOUT CONTACTING PHILIPPE / LEGAL!
@@ -2222,9 +2225,9 @@ if ( $wmgEnableGeoData ) {
 		'solr1001.eqiad.wmnet' => 75, // master, put less read load on it
 		'solr1002.eqiad.wmnet' => 100,
 		'solr1003.eqiad.wmnet' => 100,
-		//'solr1.pmtpa.wmnet' => 100,
-		//'solr2.pmtpa.wmnet' => 100,
-		//'solr3.pmtpa.wmnet' => 100,
+		// 'solr1.pmtpa.wmnet' => 100,
+		// 'solr2.pmtpa.wmnet' => 100,
+		// 'solr3.pmtpa.wmnet' => 100,
 	);
 
 	# Data collection mode
@@ -2386,11 +2389,11 @@ if ( $wmgUseEventLogging ) {
 		// All other wikis reference metawiki.
 		$wgEventLoggingBaseUri = '//bits.wikimedia.org/event.gif';
 		$wgEventLoggingDBname = 'metawiki';
-		$wgEventLoggingFile = 'udp://10.64.21.123:8421/EventLogging';  // vanadium
+		$wgEventLoggingFile = 'udp://10.64.21.123:8421/EventLogging'; // vanadium
 		$wgEventLoggingSchemaIndexUri = 'http://meta.wikimedia.org/w/index.php';
 	}
 	if ( $wgEventLoggingDBname === $wgDBname ) {
-		// Bug 45031
+		// bug 45031
 		$wgExtraNamespaces[470] = 'Schema';
 		$wgExtraNamespaces[471] = 'Schema_talk';
 
@@ -2572,7 +2575,7 @@ if ( file_exists( "$wmfConfigDir/ext-$wmfRealm.php" ) ) {
 	require( "$wmfConfigDir/ext-$wmfRealm.php" );
 }
 
-// https://bugzilla.wikimedia.org/show_bug.cgi?id=37211
+// bug 37211
 $wgUseCombinedLoginLink = false;
 
 // Confirmed can do anything autoconfirmed can.
