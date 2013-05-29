@@ -2534,6 +2534,11 @@ if ( $wmgUseAccountAudit ) {
 	require_once( "$IP/extensions/AccountAudit/AccountAudit.php" );
 }
 
+if ( $wmgUseVForm ) {
+	$wgUseVFormUserLogin = true;
+	$wgUseVFormCreateAccount = true;
+}
+
 $wgApplyIpBlocksToXff = $wmgUseXFFBlocks;
 
 // On Special:Version, link to useful release notes
