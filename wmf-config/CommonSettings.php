@@ -93,8 +93,9 @@ switch( $wmfRealm ) {
 ### End /Determine realm and cluster we are on/ ########################
 
 ### List of some service hostnames
-# 'meta'   : meta wiki for user editable content
-# 'upload' : hostname where files are hosted
+# 'meta'    : meta wiki for user editable content
+# 'upload'  : hostname where files are hosted
+# 'wikidata': hostname for the data repository
 # TODO: 'bits'
 # Whenever all realms/datacenters should use the same host, do not use
 # $wmfHostnames but use the hardcoded hostname instead. A good example are the
