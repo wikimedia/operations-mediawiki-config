@@ -260,10 +260,7 @@ return array(
 	// (towards bug 46333) Make the new login and create account forms the default on labs.
 	// Append ?useNew=0 to switch back.
 	// Remove this when https://gerrit.wikimedia.org/r/65340 launches.
-	'wgUseVFormCreateAccount' => array(
-		'default' => true,
-	),
-	'wgUseVFormUserLogin' => array(
+	'wmgUseVForm' => array(
 		'default' => true,
 	),
 
