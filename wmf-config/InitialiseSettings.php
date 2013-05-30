@@ -12541,6 +12541,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'enwiki' => true,
 	'metawiki' => true,
+	'testwiki' => true,
 ),
 
 'wmgUseGlobalAbuseFilters' => array(
