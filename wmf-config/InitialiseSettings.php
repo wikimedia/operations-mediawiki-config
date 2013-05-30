@@ -3326,6 +3326,12 @@ $wgConf->settings = array(
 	'+ukwikisource' => array(
 		'ВД' => NS_PROJECT,
 		'Обговорення_Wikisource' => NS_PROJECT_TALK, // bug 48308
+		'Author' => 102,  // bug 48308
+		'Author_talk' => 103,
+		'Page' => 250,
+		'Page_talk' => 251,
+		'Index' => 252,
+		'Index_talk' => 253,
 	),
 	'+ukwikivoyage' => array(
 		'Portal' => 100,
@@ -3786,6 +3792,10 @@ $wgConf->settings = array(
 		'index' => 106,
 	),
 	'thwikisource' => array(
+		'page' => 250,
+		'index' => 252,
+	),
+	'ukwikisource' => array( // bug 48308
 		'page' => 250,
 		'index' => 252,
 	),
