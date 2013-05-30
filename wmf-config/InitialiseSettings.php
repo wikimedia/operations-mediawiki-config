@@ -10446,12 +10446,16 @@ $wgConf->settings = array(
 
 'wmgEnableLocalTimedText' => array(
 	'default' => false,
-
 	'commonswiki' => true,
 	'enwiki' => true,
 	'test2wiki' => true,
 	'testwiki' => true,
 	'foundationwiki' => true,
+),
+
+'wmgMinimumVideoPlayerSize' => array(
+	'default' => 200,
+	'enwiki' => 800, // beta testing -- Kaldari 2013-05-30
 ),
 
 'wmgUseVisualEditor' => array(
