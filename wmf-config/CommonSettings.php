@@ -973,6 +973,9 @@ if ( $wmgUseTimedMediaHandler ) {
 	//tmh1/2 have 12 cores and need lots of shared memory
 	//for avconv / ffmpeg2theora
 	$wgTranscodeBackgroundMemoryLimit = 4 * 1024 * 1024; // 4GB
+
+	// Minimum size for an embed video player
+	$wgMinimumVideoPlayerSize = $wmgMinimumVideoPlayerSize;
 }
 
 include( $IP . '/extensions/AssertEdit/AssertEdit.php' );
