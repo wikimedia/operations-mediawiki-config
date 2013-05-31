@@ -9419,6 +9419,10 @@ $wgConf->settings = array(
 		100 => array( 'editallpages' ),
 		101 => array( 'editallpages' ),
 	),
+	'+wikidatawiki' => array(  // bug 49001
+		122 => array( 'query-update' ),  # Query namespace
+		123 => array( 'query-update' ),  # Query_talk namespace
+	),
 ),
 # @} end of wgNamespaceProtection
 
