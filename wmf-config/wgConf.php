@@ -8,7 +8,7 @@ $wgConf = new SiteConfiguration;
 
 $wgConf->suffixes = array(
 	// 'wikipedia',
-	'wiki',
+	'wikipedia' => 'wiki',
 	'wiktionary',
 	'wikiquote',
 	'wikibooks',
