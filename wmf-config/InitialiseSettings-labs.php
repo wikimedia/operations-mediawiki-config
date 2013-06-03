@@ -225,7 +225,7 @@ return array(
 		'default' => false,
 	),
 	'wmgMFPhotoUploadEndpoint' => array(
-		'default' => '',
+		'default' => '//commons.wikimedia.beta.wmflabs.org/w/api.php',
 	),
 	'wmgMFLogEvents' => array(
 		'default' => false,
