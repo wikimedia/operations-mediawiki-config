@@ -11981,7 +11981,9 @@ $wgConf->settings = array(
 
 'wmgUseVipsTest' => array(
 	'default' => false,
+	'mediawikiwiki' => true,
 	'test2wiki' => true,
+	'testwiki' => true,
 ),
 
 'wmgUseApiSandbox' => array(
