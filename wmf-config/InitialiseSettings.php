@@ -12177,6 +12177,12 @@ $wgConf->settings = array(
 	'enwiki' => true,
 ),
 
+'wmgUseDisambiguator' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
+
 'wmgUseCodeEditorForCore' => array(
 	'default' => false,
 ),
