@@ -11053,12 +11053,13 @@ $wgConf->settings = array(
 
 'wmgMFRemovableClasses' => array(
 	'default' => array(
-		'.toc', // @todo: remove this once latest MobileFrontend is live
-		'table.metadata',
-		'.metadata mbox-small',
-		'.metadata plainlinks ambox ambox-content',
-		'.metadata plainlinks ambox ambox-move',
-		'.metadata plainlinks ambox ambox-style',
+		'.metadata',
+		'div.stub',
+		'div.sister-project',
+		'.portal',
+		'.boilerplate',
+		'.hiddenStructure',
+		'.medialist',
 	),
 ),
 'wmgMFCustomLogos' => array(
