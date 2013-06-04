@@ -16,6 +16,24 @@
       "revId": "f14c883e1216f51002603448b086af80255312f0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DxiIk2LA",
+        "filename": "multiversion/populateWikiversions",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-06-04T19:01:02Z",
+      "side": 1,
+      "message": "I copied it from another file with the intention of adding \"defines.php\". Agree we should be switching the other way around. For now I just did it to make the header more consistent with the other files. We can switch to __DIR__ later. Figured it would be *less* trivial this way since this commit already changes many files.\n\n $ ack dirname -Q\nmultiversion/activeMWVersions\n5:require_once( dirname( __FILE__ ) . \u0027/defines.php\u0027 );\n6:require_once( dirname( __FILE__ ) . \u0027/MWRealm.php\u0027 );\n7:require_once( dirname( __FILE__ ) . \u0027/MWWikiversions.php\u0027 );\n \nmultiversion/backupWikiversions\n5:require_once( dirname( __FILE__ ) . \u0027/defines.php\u0027 );\n6:require_once( dirname( __FILE__ ) . \u0027/MWRealm.php\u0027 );\n \nmultiversion/deleteMediaWiki\n5:require_once( dirname( __FILE__ ) . \u0027/defines.php\u0027 );\n \nmultiversion/getMWVersion\n5:require_once( dirname( __FILE__ ) . \u0027/defines.php\u0027 );\n6:require_once( dirname( __FILE__ ) . \u0027/MWRealm.php\u0027 );\n \nmultiversion/MWMultiVersion.php\n2:require_once( dirname( __FILE__ ) . \u0027/defines.php\u0027 );\n3:require_once( dirname( __FILE__ ) . \u0027/MWRealm.php\u0027 );\n232:\t\t\t$options[\u0027wrapper\u0027] \u003d dirname( __FILE__ ) . \u0027/MWScript.php\u0027;\n \nmultiversion/MWScript.php\n86:\trequire_once( dirname( __FILE__ ) . \u0027/MWVersion.php\u0027 );\n \nmultiversion/MWVersion.php\n20:\trequire_once( dirname( __FILE__ ) . \u0027/MWMultiVersion.php\u0027 );\n72:\trequire_once( dirname( __FILE__ ) . \u0027/MWMultiVersion.php\u0027 );\n85:\t$IP \u003d dirname( dirname( __FILE__ ) ) . \"/$version\";\n \nmultiversion/MWWikiversions.php\n2:require_once( dirname( __FILE__ ) . \u0027/defines.php\u0027 );\n \nmultiversion/refreshWikiversionsCDB\n6:require_once( dirname( __FILE__ ) . \u0027/defines.php\u0027 );\n7:require_once( dirname( __FILE__ ) . \u0027/MWWikiversions.php\u0027 );\n8:require_once( dirname( __FILE__ ) . \u0027/MWRealm.php\u0027 );\n \nmultiversion/switchAllMediaWikis\n6:require_once( dirname( __FILE__ ) . \u0027/defines.php\u0027 );\n7:require_once( dirname( __FILE__ ) . \u0027/MWWikiversions.php\u0027 );\n8:require_once( dirname( __FILE__ ) . \u0027/MWRealm.php\u0027 );",
+      "parentUuid": "DxvEFqno",
+      "revId": "f14c883e1216f51002603448b086af80255312f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
