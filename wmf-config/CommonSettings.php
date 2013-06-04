@@ -1886,7 +1886,7 @@ if ( $wmgUseVisualEditor ) {
 		'pmtpa' => '10.2.1.29', // parsoidcache.svc.pmtpa.wmnet
 		'eqiad' => '10.2.2.29', // parsoidcache.svc.eqiad.wmnet
 	);
-	$wgVisualEditorParsoidURL = 'http://' . $wmgVisualEditorParsoidHosts[$wmfDatacenter] . ':6081';
+	$wgVisualEditorParsoidURL = 'http://' . $wmgVisualEditorParsoidHosts[$wmfDatacenter];
 	$wgVisualEditorParsoidPrefix = $wgDBname;
 	$wgVisualEditorParsoidProblemReportURL = 'http://parsoid.wmflabs.org/_bugs/';
 	$wgVisualEditorNamespaces = $wmgVisualEditorNamespaces;
