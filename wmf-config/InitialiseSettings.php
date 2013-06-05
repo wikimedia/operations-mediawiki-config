@@ -12579,21 +12579,25 @@ $wgConf->settings = array(
 'wgAllowUserJs' => array(
 	'default' => true,
 	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wgAllowUserCss' => array(
 	'default' => true,
 	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wgUseSiteJs' => array(
 	'default' => true,
 	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wgUseSiteCss' => array(
 	'default' => true,
 	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wgSecureLogin' => array(
