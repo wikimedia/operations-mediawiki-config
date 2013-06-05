@@ -2288,6 +2288,10 @@ if ( $wmgUseThanks ) {
 	require_once( "$IP/extensions/Thanks/Thanks.php" );
 }
 
+if ( $wmgUseDisambiguator ) {
+	require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
+}
+
 if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgUseZeroNamespace ) {
 	include_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
 	$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore;
