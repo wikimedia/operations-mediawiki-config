@@ -11214,7 +11214,8 @@ $wgConf->settings = array(
 	),
 ),
 'wmgMFCustomLogos' => array(
-	'default' => array(
+	'default' => array(),
+	'wiki' => array(
 		'site' => 'wikipedia',
 		'logo' => '//upload.wikimedia.org/wikipedia/commons/5/54/Mobile_W_beta_light.png'
 	),
