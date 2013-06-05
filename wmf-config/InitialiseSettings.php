@@ -6867,7 +6867,7 @@ $wgConf->settings = array(
 		'filemover' => array( 'movefile' => true ),
 		'OTRS-member' => array( 'autopatrol' => true ),
 		'Image-reviewer' => array( 'autopatrol' => true, 'upload_by_url' => true ),
-		'sysop' => array( 'upload_by_url' => true ),
+		'sysop' => array( 'upload_by_url' => true, 'translate-manage' => true, 'translate-import' => true, 'pagetranslation' => true ), // Bug 49173
 	),
 	'dawiki' => array(
 		'patroller'		=> array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ),
