@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "DxyftCMU",
+        "filename": "w/wikidata-redirector.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2013-06-05T18:05:47Z",
+      "side": 1,
+      "message": "whitespace! :o",
+      "revId": "fbf86a39724eddfdba6cb543d5245e864aa69ddc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
