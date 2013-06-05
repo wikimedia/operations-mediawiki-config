@@ -89,10 +89,18 @@ if ( $wgMFLogEvents && $wmgUseEventLogging ) {
 		'targets' => 'mobile',
 	);
 
+	$wgResourceModules['mobile.editing.schema'] = array(
+		'class' => 'ResourceLoaderSchemaModule',
+		'schema' => 'MobileWebEditing',
+		'targets' => 'mobile',
+		'revision' => 5518026,
+	);
+
 	$wgHooks['EnableMobileModules'][] = function( $out, $mode ) {
 		$modules = array(
 			'mobile.uploads.schema',
 			'mobile.watchlist.schema',
+			'mobile.editing.schema',
 		);
 		// add regardless of mode
 		$out->addModules( $modules );
