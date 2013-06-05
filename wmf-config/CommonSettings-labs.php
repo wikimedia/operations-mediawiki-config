@@ -99,4 +99,13 @@ if( $wmgUseMath ) {
 	$wgMathFileBackend = false;
 }
 
+// CORS (cross-domain AJAX, bug 20814)
+// This lists the domains that are accepted as *origins* of CORS requests
+// DO NOT add domains here that aren't WMF wikis unless you really know what you're doing
+if ( $wmgUseCORS ) {
+	$wgCrossSiteAJAXdomains = array(
+		'*.beta.wmflabs.org',
+	);
+}
+
 } # end safeguard
