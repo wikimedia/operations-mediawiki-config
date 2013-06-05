@@ -20,19 +20,12 @@ $wmgThrottlingExceptions = array();
 
 ## Add throttling definitions below.
 
-$wmfThrottlingExceptions[] = array( // Bug 48396 - Journées Nationales de Calcul Formel (JNCF) 2013
-	'from'   => '2013-05-21T15:00 +0:00',
-	'to'     => '2013-05-22T12:00 +0:00',
-	'IP'     => '139.124.3.100',
-	'dbname' => array( 'enwiki', 'frwiki', 'commonswiki' ),
-	'value'  => 70,
-);
-
-$wmfThrottlingExceptions[] = array( // Wikimedia Hackathon Amsterdam 2013
-	'from' => '2013-05-26T00:00 +1:00',
-	'to' => '2013-05-27T00:00 +1:00',
-	'IP' => array( '77.170.89.227', '213.127.161.46' ),
-	'value' => 70,
+$wmfThrottlingExceptions[] = array( // bug 49176 it.wiki GLAM event
+	'from'   => '2013-06-08T12:00 +0:00',
+	'to'     => '2013-06-08T17:00 +0:00',
+	'IP'     => '46.255.84.17',
+	'dbname' => array( 'itwiki' ),
+	'value'  => 50,
 );
 
 ## Add throttling definitions above.
