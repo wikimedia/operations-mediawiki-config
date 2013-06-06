@@ -1883,11 +1883,7 @@ if ( $wmgUseUploadWizard ) {
 
 if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
-	$wmgVisualEditorParsoidHosts = array(
-		'pmtpa' => '10.2.1.29', // parsoidcache.svc.pmtpa.wmnet
-		'eqiad' => '10.2.2.29', // parsoidcache.svc.eqiad.wmnet
-	);
-	$wgVisualEditorParsoidURL = 'http://' . $wmgVisualEditorParsoidHosts[$wmfDatacenter];
+	$wgVisualEditorParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
 	$wgVisualEditorParsoidPrefix = $wgDBname;
 	$wgVisualEditorParsoidProblemReportURL = 'http://parsoid.wmflabs.org/_bugs/';
 	$wgVisualEditorNamespaces = $wmgVisualEditorNamespaces;
