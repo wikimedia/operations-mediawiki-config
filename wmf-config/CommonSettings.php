@@ -2311,10 +2311,6 @@ if ( $wmgUseMicroDesign || $wmgUseVectorFooterCleanup ) {
 	$wgVectorFeatures['footercleanup']['global'] = true;
 }
 
-if ( $wmgEnablePostEdit ) {
-	require_once( "$IP/extensions/PostEdit/PostEdit.php" );
-}
-
 if ( $wmgUseGettingStarted ) {
 	require_once( "$IP/extensions/GettingStarted/GettingStarted.php" );
 	if ( !empty( $sessionRedis[$wmfDatacenter] ) ) {
