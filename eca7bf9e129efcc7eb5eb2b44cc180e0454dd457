@@ -34,6 +34,24 @@
       "revId": "eca7bf9e129efcc7eb5eb2b44cc180e0454dd457",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DzPbZIFU",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 6481,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2013-06-06T22:08:29Z",
+      "side": 1,
+      "message": "actually forget the comment about testwikidatawiki and votewiki, those should be fine as long as they\u0027re not specified here.",
+      "parentUuid": "DzLbPqIs",
+      "revId": "eca7bf9e129efcc7eb5eb2b44cc180e0454dd457",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
