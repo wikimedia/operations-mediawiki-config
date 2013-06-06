@@ -905,6 +905,7 @@ $wgConf->settings = array(
 	'viwikisource'		=> '$stdlogo',
 	'viwiktionary'		=> '//upload.wikimedia.org/wikipedia/commons/thumb/7/74/Wiktionary-logo-vi.svg/135px-Wiktionary-logo-vi.svg.png', // bug 43240
 	'vlswiki'		=> '//upload.wikimedia.org/wikipedia/commons/2/25/Wikipedia-logo-v2-vls.png', // bug 40285
+	'votewiki'		=> '//upload.wikimedia.org/wikipedia/foundation/9/9a/Wikimediafoundation-logo.png',
 	'vowiki'		=> '/images/wiki-$lang.png',
 	'vowiktionary'		=> '$stdlogo',
 	'wawiki'		=> '//upload.wikimedia.org/wikipedia/commons/e/e6/Wikipedia-logo-v2-wa.png', // bug 40285
@@ -12525,7 +12526,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseSecurePoll' => array(
-	'default' => false,
+	'default' => true, // can be left on, doesn't hurt and needed for board elections
 	'enwiki' => true,
 	'metawiki' => true,
 	'testwiki' => true,
