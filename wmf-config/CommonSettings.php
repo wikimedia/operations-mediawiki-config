@@ -1905,6 +1905,21 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
 	}
+
+	// Also include the Parsoid extension when VE is enabled
+	require_once( "$IP/extensions/Parsoid/php/Parsoid.php" );
+	// List the parsoid cache servers to keep up to date. These are only the
+	// front-end caches for now, which means that purges won't reach the
+	// backends. Since purges are optional anyway that is fine for now.
+	// Implicit refreshes via the Cache-control header should reach the backends
+	// via the frontends.
+	$wgParsoidCacheServers = array(
+		'http://cerium.wikimedia.org',
+		'http://titanium.wikimedia.org',
+	);
+	// Skip most update requests initially. Ramp down towards 0 if things
+	// don't fall over.
+	$wgParsoidSkipRatio = 0.95;
 }
 
 if ( $wmgUseTemplateData ) {
