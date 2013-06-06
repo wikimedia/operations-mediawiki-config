@@ -786,6 +786,7 @@ if ( $wmgContactPageConf ) {
 if ( $wmgUseSecurePoll ) {
 	include( $IP . '/extensions/SecurePoll/SecurePoll.php' );
 
+	$wgSecurePollScript = 'auth-api.php';
 	$wgHooks['SecurePoll_JumpUrl'][] = 'wmfSecurePollJumpUrl';
 
 	function wmfSecurePollJumpUrl( $page, &$url ) {
