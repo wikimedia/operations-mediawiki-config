@@ -9484,6 +9484,7 @@ $wgConf->settings = array(
 	'testwiki'			=> '//bits.wikimedia.org/favicon/black-globe.ico',
 	'transitionteamwiki'		=> '//bits.wikimedia.org/favicon/wmf.ico',
 	'usabilitywiki'			=> '//bits.wikimedia.org/favicon/usability.ico',
+	'votewiki'			=> '//bits.wikimedia.org/favicon/wmf.ico',
 	'wikidata'			=> '//bits.wikimedia.org/favicon/wikidata.ico',
 	'wikimania'                     => '//bits.wikimedia.org/favicon/wikimania.ico',
 	'wikimaniateamwiki'		=> '//bits.wikimedia.org/favicon/wikimania.ico',
