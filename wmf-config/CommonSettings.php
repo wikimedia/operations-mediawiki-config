@@ -1923,7 +1923,7 @@ if ( $wmgUseVisualEditor ) {
 	);
 	// Skip most update requests initially. Ramp down towards 0 if things
 	// don't fall over.
-	$wgParsoidSkipRatio = 0.95;
+	$wgParsoidSkipRatio = 0.65;
 }
 
 if ( $wmgUseTemplateData ) {
