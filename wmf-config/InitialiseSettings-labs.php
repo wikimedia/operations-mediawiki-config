@@ -257,6 +257,10 @@ return array(
 		'default' => true,
 	),
 
+	'wmgVisualEditorExperimental' => array(
+		'default' => true,
+	),
+
 );
 
 } # wmflLabsSettings()

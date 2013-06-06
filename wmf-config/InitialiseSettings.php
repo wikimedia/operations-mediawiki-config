@@ -10492,6 +10492,11 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true // Enabled for all users
 ),
 
+'wmgVisualEditorExperimental' => array(
+	'default' => false,
+	'mediawikiwiki' => true,
+),
+
 'wmgUseTemplateData' => array(
 	'default' => true,
 ),

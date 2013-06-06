@@ -1906,6 +1906,9 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
 	}
+	if ( $wmgVisualEditorExperimental ) {
+		$wgVisualEditorEnableExperimentalCode = true;
+	}
 
 	// Also include the Parsoid extension when VE is enabled
 	require_once( "$IP/extensions/Parsoid/php/Parsoid.php" );
