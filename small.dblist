@@ -286,7 +286,6 @@ mdfwiki
 mgwikibooks
 mhwiki
 mhwiktionary
-minwiki
 miwikibooks
 miwiktionary
 mkwikibooks
@@ -451,6 +450,7 @@ tawikiquote
 tawikisource
 tenwiki
 test2wiki
+testwikidatawiki
 tetwiki
 tewikibooks
 tewikiquote
@@ -508,6 +508,7 @@ vewiki
 vewikimedia
 viwikibooks
 viwikiquote
+votewiki
 vowikibooks
 vowikiquote
 wawikibooks
