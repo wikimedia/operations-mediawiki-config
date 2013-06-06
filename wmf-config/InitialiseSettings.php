@@ -9665,6 +9665,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'loginwiki' => 'loginwiki',
 	'test2wiki' => 'loginwiki',
+	'testwikidatawiki' => 'loginwiki',
 ),
 
 # @}
