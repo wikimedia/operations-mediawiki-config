@@ -72,6 +72,7 @@ mwconfig_files=(
 	s7.dblist
 	small.dblist
 	special.dblist
+	visualeditor.dblist
 	wikibooks.dblist
 	wikidata.dblist
 	wikidataclient.dblist
