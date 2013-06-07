@@ -11129,6 +11129,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'trwiki' => true, // bug 38227
 	'urwiki' => true, // bug 40848
+	'viwiki' => true, // bug 48878
 	'zhwiki' => true, // bug 30362
 ),
 'wmgWikiLoveDefault' => array(
