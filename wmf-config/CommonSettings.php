@@ -1924,9 +1924,8 @@ if ( $wmgUseVisualEditor ) {
 	);
 	// The wiki prefix to use
 	$wgParsoidWikiPrefix = $wgDBname;
-	// Skip most update requests initially. Ramp down towards 0 if things
-	// don't fall over.
-	$wgParsoidSkipRatio = 0.33;
+	// Set to something between 0 (process all updates) and 1 (skip all updates).
+	$wgParsoidSkipRatio = 0;
 }
 
 if ( $wmgUseTemplateData ) {
