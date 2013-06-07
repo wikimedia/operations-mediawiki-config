@@ -12094,8 +12094,10 @@ $wgConf->settings = array(
 'wmgUseEducationProgram' => array(
 	'default' => false,
 	'dewikiversity' => true,
+	'hewiki' => true, // bug 48848
 	'enwiki' => true,
 	'mkwiki' => true,
+	'sewiki' => true, // bug 49009
 	'test2wiki' => true,
 ),
 
