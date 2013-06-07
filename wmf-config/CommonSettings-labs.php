@@ -90,7 +90,7 @@ if ($wgDBname == "testwiki") {
 }
 
 // Use InstantCommons for testing
-if ( $wgDBname == "enwikivoyage" || $wgDBname == "dewikivoyage" ) {
+if ( $wgDBname == "enwikivoyage" || $wgDBname == "dewikivoyage" || $wgDBname == "enwiki" ) {
 	$wgUseInstantCommons = true;
 }
 
