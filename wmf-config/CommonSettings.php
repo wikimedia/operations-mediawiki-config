@@ -1922,9 +1922,11 @@ if ( $wmgUseVisualEditor ) {
 		'http://cerium.wikimedia.org',
 		'http://titanium.wikimedia.org',
 	);
+	// The wiki prefix to use
+	$wgParsoidWikiPrefix = $wgDBname;
 	// Skip most update requests initially. Ramp down towards 0 if things
 	// don't fall over.
-	$wgParsoidSkipRatio = 0.65;
+	$wgParsoidSkipRatio = 0.33;
 }
 
 if ( $wmgUseTemplateData ) {
