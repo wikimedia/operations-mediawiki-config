@@ -9125,7 +9125,7 @@ $wgConf->settings = array(
 
 'wgRestrictDisplayTitle' => array(
 	'default' => true,
-	'donatewiki' => false,
+
 	'aswiki' => false,
 	'bewikimedia' => false,
 	'bnwiki' => false,
@@ -9135,11 +9135,18 @@ $wgConf->settings = array(
 	'bdwikimedia' => false,
 	'bpywiki' => false,
 	'cswiktionary' => false,
+	'donatewiki' => false,
 	'enwikibooks' => false,
+	'foundationwiki' => false,
 	'rmwiki' => false,
 	'wikimania' => false,
+	'wikivoyage' => false,
 	'zhwiki'  => false,
-	'foundationwiki' => false,
+),
+
+'wgAllowDisplayTitle' => array(
+	'default' => true,
+	'wikivoyage' => false,
 ),
 
 'wmgPrivateWikiUploads' => array(
