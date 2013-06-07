@@ -12096,6 +12096,7 @@ $wgConf->settings = array(
 	'nlwiki' => true,
 	'outreachwiki' => true,
 	'ptwiki' => true,
+	'ptwikibooks' => true, // bug 48778
 	'viwiki' => true,
 ),
 'wmgUseEducationProgram' => array(
