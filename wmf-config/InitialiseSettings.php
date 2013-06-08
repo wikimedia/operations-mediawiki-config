@@ -7442,6 +7442,12 @@ $wgConf->settings = array(
 		'filemover' => array( 'movefile' => true, 'suppressredirect' => true, 'upload' => true, ), // bug 30984
 		'suppressredirect' => array( 'suppressredirect' => true, ), // bug 38408
 		'sysop' => array( 'upload' => true, ),
+		'arbcom' => array( // bug 49334
+			'browsearchive' => true,
+			'deletedhistory' => true,
+			'deletedtext' => true,
+			'abusefilter-log-detail' => true,
+		),
 	),
 	'ruwikiquote' => array(
 		'autoeditor' => array( 'autoreview' => true, 'autoconfirmed' => true ),
@@ -8032,6 +8038,7 @@ $wgConf->settings = array(
 	),
 	'+ruwiki' => array(
 		'sysop' => array( 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ),
+		'bureaucrat' => array( 'arbcom' ), // bug 49334
 	),
 	'+ruwikiquote' => array(
 		'sysop' => array( 'autoeditor' )
@@ -8446,7 +8453,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled' ),
 	),
 	'+ruwiki' => array(
-		'bureaucrat' => array( 'sysop' ),
+		'bureaucrat' => array( 'sysop', 'arbcom' ), // bug 49334
 		'sysop' => array( 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ),
 	),
 	'+ruwikiquote' => array(
