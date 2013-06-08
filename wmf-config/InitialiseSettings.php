@@ -12111,7 +12111,7 @@ $wgConf->settings = array(
 	'hewiki' => true, // bug 48848
 	'enwiki' => true,
 	'mkwiki' => true,
-	'sewiki' => true, // bug 49009
+	'svwiki' => true, // bug 49009
 	'test2wiki' => true,
 ),
 
