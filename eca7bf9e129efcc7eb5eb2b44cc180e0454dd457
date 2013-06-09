@@ -52,6 +52,24 @@
       "revId": "eca7bf9e129efcc7eb5eb2b44cc180e0454dd457",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DzrRIQI0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 6481,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-06-09T05:07:29Z",
+      "side": 1,
+      "message": "\"Most of these should not be .wikipedia.\"\n\nYes they should. You probably don\u0027t get what this change is for (did you read the commit message?). Every thing you see below is simply documenting the ones currently wrong, it isn\u0027t changing anything. The old (current) code defaults to #$lang.$site.\n\nRight now advisorywiki for example, echoes to \"#advisory.wikipedia\".\n\nThis change hardcodes all cases where $lang.$site is not \"hostname without .org\". From there on we can migrate them away (if we choose to, see the bug report for details).",
+      "parentUuid": "DzPbZIFU",
+      "revId": "eca7bf9e129efcc7eb5eb2b44cc180e0454dd457",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
