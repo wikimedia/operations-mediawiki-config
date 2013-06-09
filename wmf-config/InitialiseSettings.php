@@ -4383,6 +4383,8 @@ $wgConf->settings = array(
 		205 => 'Participation_talk',
 		206 => 'Iberocoop', // Bug 38398
 		207 => 'Iberocoop_talk',
+		208 => 'Programs',  // Bug 49312
+		209 => 'Programs_talk',
 
 		// This is a placeholder so that new Zero configuration pages can be created and tested
 		// on meta before the mobile zero extension is fully deployed.
