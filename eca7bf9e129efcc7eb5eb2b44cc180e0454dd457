@@ -70,6 +70,24 @@
       "revId": "eca7bf9e129efcc7eb5eb2b44cc180e0454dd457",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "DzvRCuGo",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 6481,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-06-09T05:08:34Z",
+      "side": 1,
+      "message": "testwikidatawiki and votewiki were added after I ran the script and drafted this change. All the more important we change the default asap. The more we wait, the more exceptions we have to migrate. I\u0027ll add them.",
+      "parentUuid": "DzLbPqIs",
+      "revId": "eca7bf9e129efcc7eb5eb2b44cc180e0454dd457",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
