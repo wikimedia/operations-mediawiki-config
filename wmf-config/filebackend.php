@@ -144,7 +144,7 @@ $wgFileBackends[] = array(
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 		array( 'template' => 'local-swift', 'isMultiMaster' => true ),
-		#array( 'template' => 'local-ceph', 'isMultiMaster' => true )
+		#array( 'template' => 'local-ceph', 'isMultiMaster' => true ) -- aaron 5/30/2013
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'autoResync'  => 'conservative' // bug 39221
