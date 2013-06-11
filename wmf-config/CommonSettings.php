@@ -1913,14 +1913,15 @@ if ( $wmgUseVisualEditor ) {
 
 	// Also include the Parsoid extension when VE is enabled
 	require_once( "$IP/extensions/Parsoid/php/Parsoid.php" );
-	// List the parsoid cache servers to keep up to date. These are only the
-	// front-end caches for now, which means that purges won't reach the
-	// backends. Since purges are optional anyway that is fine for now.
-	// Implicit refreshes via the Cache-control header should reach the backends
-	// via the frontends.
+	// List the parsoid cache servers to keep up to date.
+	//
+	// We target the load balancer in front of the front-end caches, which
+	// will then pick one front-end. This works as we disabled caching in the
+	// front-ends. The main reason for doing it this way is that request
+	// coalescing in the backends does not work with req.hash_always_miss =
+	// true.
 	$wgParsoidCacheServers = array(
-		'http://cerium.wikimedia.org',
-		'http://titanium.wikimedia.org',
+		'http://10.2.2.29', // parsoidcache.svc.eqiad.wmnet
 	);
 	// The wiki prefix to use
 	$wgParsoidWikiPrefix = $wgDBname;
