@@ -12031,6 +12031,13 @@ $wgConf->settings = array(
 	'enwiki' => 'extension1',
 ),
 
+// Cohort study time, empty array to disable Cohort study
+'wmgEchoCohortInterval' => array(
+	'default' => array(),
+	'testwiki' => array( 20130611182949, 20130611184549, 20130611185949 ),
+	'enwiki' => array( 20130611200000, 20130618200000, 20130701200000 ),
+),
+
 'wmgUseThanks' => array(
 	'default' => false,
 	'testwiki' => true,

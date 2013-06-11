@@ -2268,6 +2268,12 @@ if ( $wmgUseEcho ) {
 	// Eventlogging for Schema:EchoPrefUpdate
 	$wgEchoConfig['eventlogging']['EchoPrefUpdate']['enabled'] = true;
 	$wgEchoConfig['eventlogging']['EchoPrefUpdate']['revision'] = 5488876;
+	// Eventlogging for Schema:EchoInteraction
+	$wgEchoConfig['eventlogging']['EchoInteraction']['enabled'] = true;
+	$wgEchoConfig['eventlogging']['EchoInteraction']['revision'] = 5539940;
+
+	// Cohort study time
+	$wgEchoCohortInterval = $wmgEchoCohortInterval;
 
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
