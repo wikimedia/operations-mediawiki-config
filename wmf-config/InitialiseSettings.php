@@ -9456,7 +9456,6 @@ $wgConf->settings = array(
 	'default'			=> '//bits.wikimedia.org/favicon/wmf.ico', // bug 48479
 	'wiki'				=> '//bits.wikimedia.org/favicon/wikipedia.ico', // bug 48479
 	'wikibooks'			=> '//bits.wikimedia.org/favicon/wikibooks.ico',
-	'wikidata'			=> '//bits.wikimedia.org/favicon/wikidata.ico',
 	'wikimania'                     => '//bits.wikimedia.org/favicon/wikimania.ico',
 	'wikinews'			=> '//bits.wikimedia.org/favicon/wikinews.ico',
 	'wikiquote'			=> '//bits.wikimedia.org/favicon/wikiquote.ico',
@@ -9500,6 +9499,8 @@ $wgConf->settings = array(
 	'transitionteamwiki'		=> '//bits.wikimedia.org/favicon/wmf.ico',
 	'usabilitywiki'			=> '//bits.wikimedia.org/favicon/usability.ico',
 	'votewiki'			=> '//bits.wikimedia.org/favicon/wmf.ico',
+	'wikidatawiki'			=> '//bits.wikimedia.org/favicon/wikidata.ico',
+	'testwikidatawiki'		=> '//bits.wikimedia.org/favicon/testwikidata.ico',
 	'wikimaniateamwiki'		=> '//bits.wikimedia.org/favicon/wikimania.ico',
 ),
 # @} end of wgFavicon
