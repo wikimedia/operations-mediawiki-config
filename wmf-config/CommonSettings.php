@@ -1933,17 +1933,6 @@ if ( $wmgUseTemplateData ) {
 	require_once( "$IP/extensions/TemplateData/TemplateData.php" );
 }
 
-if ( $wmgUseNarayam ) {
-	require_once( "$IP/extensions/Narayam/Narayam.php" );
-	$wgNarayamEnabledByDefault = $wmgNarayamEnabledByDefault;
-	$wgNarayamUseBetaMapping = $wmgNarayamUseBetaMapping;
-}
-
-if ( $wmgUseWebFonts ) {
-	require_once( "$IP/extensions/WebFonts/WebFonts.php" );
-	$wgWebFontsEnabledByDefault = $wmgWebFontsEnabledByDefault;
-}
-
 if ( $wmgUseGoogleNewsSitemap ) {
 	include( "$IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php" );
 	$wgGNSMfallbackCategory = $wmgGNSMfallbackCategory;
