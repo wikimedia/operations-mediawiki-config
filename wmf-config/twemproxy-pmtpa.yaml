@@ -8,6 +8,7 @@ memcached:
   auto_eject_hosts: true
   server_retry_timeout: 30000
   server_failure_limit: 3
+  server_connections: 2
   servers:
    - 10.0.12.1:11211:1
    - 10.0.12.2:11211:1
