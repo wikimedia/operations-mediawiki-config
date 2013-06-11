@@ -960,9 +960,10 @@ $wgConf->settings = array(
 	'loginwiki' => false,
 
 	// projects
+	'wikidata' => false,
 	'wikinews' => false,
 
-	// wikis:
+	// wikis
 	'arwikinews' => true,
 	'cswikinews' => true,
 	'dewikinews' => true,
@@ -994,9 +995,6 @@ $wgConf->settings = array(
 	'trwikinews' => true, # bug 20215
 	'vowiki' => false, # bug 13740
 	'xmfwiki' => false,
-	'zhwikinews' => false,
-
-	'wikidata' => false,
 ),
 # @} end of wgEnableUpload
 
@@ -1275,13 +1273,14 @@ $wgConf->settings = array(
 	// Site defaults
 	'default'       => 'Wikipedia',
 	'wikibooks'     => 'Wikibooks',
+	'wikidata'      => 'Wikidata',
+	'wikimania'     => 'Wikimania',
 	'wikiquote'     => 'Wikiquote',
-	'wiktionary'    => 'Wiktionary',
-	'wikiversity'   => 'Wikiversity',
 	'wikinews'      => 'Wikinews',
 	'wikisource'    => 'Wikisource',
+	'wikiversity'   => 'Wikiversity',
 	'wikivoyage'    => 'Wikivoyage',
-	'wikimania'     => 'Wikimania',
+	'wiktionary'    => 'Wiktionary',
 
 	// Wikis, alphabetically by DB name
 	'abwiki'	=> 'Авикипедиа',
@@ -1678,8 +1677,6 @@ $wgConf->settings = array(
 	'vowikibooks'	=>	'Vükibuks',
 	'vowiktionary'	=> 'Vükivödabuk',
 	'wg_enwiki'     => 'Wikipedia Working Group',
-	'wikidatawiki' => 'Wikidata',
-	'testwikidatawiki' => 'Wikidata',
 	'wikimaniateamwiki' => 'WikimaniaTeam',
 	'wikimedia'     => 'Wikimedia',
 	'xmfwiki'		=> 'ვიკიპედია',
@@ -1728,6 +1725,8 @@ $wgConf->settings = array(
 'wgMetaNamespace' => array(
 	// Defaults
 	'default'       => 'Wikipedia',
+	'wikidata'      => 'Wikidata',
+	'wikimania'     => 'Wikimania',
 	'wikimedia'     => 'Wikimedia', // chapters
 	'wikinews'      => 'Wikinews',
 	'wikiquote'     => 'Wikiquote',
@@ -1735,7 +1734,6 @@ $wgConf->settings = array(
 	'wikiversity'   => 'Wikiversity',
 	'wikivoyage'    => 'Wikivoyage',
 	'wiktionary'    => 'Wiktionary',
-	'wikimania'     => 'Wikimania',
 
 	// Wikis (alphabetical by DB name)
 	'abwiki'		=> 'Авикипедиа',
@@ -2145,10 +2143,6 @@ $wgConf->settings = array(
 	'yiwiktionary'  => 'װיקיװערטערבוך',
 	'zh-min-nanwikisource' => 'Wiki_Tô·-su-kóan',
 	'zh_classicalwiki' => '維基大典',
-
-	'wikidatawiki' => 'Wikidata',
-	'testwikidatawiki' => 'Wikidata',
-
 ),
 # @} end of wgMetaNamespace
 
@@ -9460,9 +9454,11 @@ $wgConf->settings = array(
 'wgFavicon' => array(
 	# Sites
 	'default'			=> '//bits.wikimedia.org/favicon/wmf.ico', // bug 48479
-	'wikibooks'			=> '//bits.wikimedia.org/favicon/wikibooks.ico',
-	'wikinews'			=> '//bits.wikimedia.org/favicon/wikinews.ico',
 	'wiki'				=> '//bits.wikimedia.org/favicon/wikipedia.ico', // bug 48479
+	'wikibooks'			=> '//bits.wikimedia.org/favicon/wikibooks.ico',
+	'wikidata'			=> '//bits.wikimedia.org/favicon/wikidata.ico',
+	'wikimania'                     => '//bits.wikimedia.org/favicon/wikimania.ico',
+	'wikinews'			=> '//bits.wikimedia.org/favicon/wikinews.ico',
 	'wikiquote'			=> '//bits.wikimedia.org/favicon/wikiquote.ico',
 	'wikisource'			=> '//bits.wikimedia.org/favicon/wikisource.ico',
 	'wikiversity'			=> '//bits.wikimedia.org/favicon/wikiversity.ico',
@@ -9504,8 +9500,6 @@ $wgConf->settings = array(
 	'transitionteamwiki'		=> '//bits.wikimedia.org/favicon/wmf.ico',
 	'usabilitywiki'			=> '//bits.wikimedia.org/favicon/usability.ico',
 	'votewiki'			=> '//bits.wikimedia.org/favicon/wmf.ico',
-	'wikidata'			=> '//bits.wikimedia.org/favicon/wikidata.ico',
-	'wikimania'                     => '//bits.wikimedia.org/favicon/wikimania.ico',
 	'wikimaniateamwiki'		=> '//bits.wikimedia.org/favicon/wikimania.ico',
 ),
 # @} end of wgFavicon
@@ -9701,6 +9695,8 @@ $wgConf->settings = array(
 
 'wmgUseDualLicense' => array(
 	'default' => false,
+	'wikidata' => true,
+	'wikivoyage' => true,
 	// Add new wikis  for dual-license here...
 	'acewiki' => true,
 	'arbcom_dewiki'    =>  true,
@@ -9733,7 +9729,6 @@ $wgConf->settings = array(
 	'gagwiki' => true,
 	'ganwiki' => true,
 	'guwikisource' => true,
-	'hewikivoyage' => true,
 	'huwikinews' => true,
 	'iegcomwiki' => true,
 	'jawikiversity' => true,
@@ -9761,10 +9756,8 @@ $wgConf->settings = array(
 	'ombudsmenwiki' => true,
 	'pcdwiki' => true,
 	'pflwiki' => true,
-	'plwikivoyage' => true,
 	'pnbwiki' => true,
 	'ptwikiversity' => true,
-	'rowikivoyage' => true,
 	'ruewiki'		=> true,
 	'nowikimedia'   =>  true,
 	'ruwikimedia' => true,
@@ -9787,11 +9780,9 @@ $wgConf->settings = array(
 	'trwikinews' => true,
 	'uawikimedia'   => true,
 	'ukwikimedia'   => true,
-	'ukwikivoyage' => true,
 	'usabilitywiki' =>  true,
 	'vecwiktionary' => true,
 	'vewikimedia' => true,
-	'wikidata' => true,
 	'wikimania2009wiki' => true,
 	'wikimania2010wiki' => true,
 	'wikimania2011wiki' => true,
@@ -9799,8 +9790,6 @@ $wgConf->settings = array(
 	'wikimania2013wiki' => true,
 	'wikimania2014wiki' => true,
 	'xmfwiki' => true,
-
-	'wikivoyage' => true,
 ),
 
 'wgEnableNewpagesUserFilter' => array(
