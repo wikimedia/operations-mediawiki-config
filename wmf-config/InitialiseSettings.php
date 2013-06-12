@@ -12084,6 +12084,7 @@ $wgConf->settings = array(
 'wmgUseVectorFooterCleanup' => array(
 	'default' => false,
 	'frwiki' => true, // bug 49252
+	'ilowiki' => true, // bug 46244
 	'mlwiki' => true, // Bug 44634
 	'commonswiki' => true, // Bug 45946
 ),
