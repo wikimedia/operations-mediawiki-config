@@ -10,6 +10,18 @@ $wgMemCachedTimeout = 250000; # default is 100000
 # rather a consistent hash based on key and server addresses,
 # so the ordering of servers is not important. Additionally, the
 # number of servers can grow/shrink without *too* much disruption.
+
+# Use twemproxy for memcached access - see twemproxy-eqiad.yaml
+$wgObjectCaches['memcached-pecl'] = array(
+	'class'      => 'MemcachedPeclBagOStuff',
+	'serializer' => 'igbinary',
+	'persistent' => true,
+	'servers'    => array( '127.0.0.1' ),
+	'server_failure_limit' => 0,
+	'retry_timeout' => 0
+);
+
+/*** No Twemproxy
 $wgObjectCaches['memcached-pecl'] = array(
 	'class'      => 'MemcachedPeclBagOStuff',
 	'serializer' => 'igbinary',
@@ -32,5 +44,6 @@ $wgObjectCaches['memcached-pecl'] = array(
 		'10.0.12.16',
 	)
 );
+***/
 
 # vim: set sts=4 sw=4 et :
