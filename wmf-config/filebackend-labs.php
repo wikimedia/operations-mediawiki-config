@@ -18,12 +18,12 @@ $wgLocalFileRepo = array(
 		'scriptDirUrl' => $wgScriptPath,
 		'hashLevels' => 2,
 		'thumbScriptUrl' => $wgThumbnailScriptPath,
-		'transformVia404' => false,
+		'transformVia404' => true,
 		'initialCapital' => $wgCapitalLinks,
 		'deletedDir' => "/mnt/upload7/private/archive/$site/$lang",
 		'deletedHashLevels' => 3,
-// TODO: Thumbdir?
-//	'thumbDir' => str_replace( '/mnt/upload7', '/mnt/thumbs', "$wgUploadDirectory/thumb" ),
+		'abbrvThreshold'    => 160,
+		'isPrivate'	    => $wmgPrivateWiki
 );
 
 # New commons settings
@@ -34,27 +34,15 @@ if ( $wgDBname != 'commonswiki' ) {
 		'directory'        => '/mnt/upload7/wikipedia/commons',
 		'url'              => "//upload.beta.wmflabs.org/wikipedia/commons",
 		'hashLevels'       => 2,
-		'thumbScriptUrl'   => "//commons.wikimedia.beta.wmflabs.org/w/thumb.php",
-		'transformVia404'  => false,
+		'thumbScriptUrl'   => false,
+		'transformVia404'  => true,
 		'hasSharedCache'   => true,
 		'descBaseUrl'      => "//commons.wikimedia.beta.wmflabs.org/wiki/File:",
 		'scriptDirUrl'     => "//commons.wikimedia.beta.wmflabs.org/w",
 		'fetchDescription' => true,
 		'wiki'             => 'commonswiki',
 		'initialCapital'   => true,
-		'thumbDir'         => '/mnt/upload7/wikipedia/commons/thumb',
+		'abbrvThreshold'   => 160,
 	);
 }
-
-/*
-$wgForeignFileRepos[] = array(
-   'class'                   => 'ForeignAPIRepo',
-   'name'                    => 'wikimediacommons',
-   'apibase'                 => 'http://commons.wikimedia.org/w/api.php',
-   'hashLevels'              => 2,
-   'fetchDescription'        => true,
-   'descriptionCacheExpiry'  => 43200,
-   'apiThumbCacheExpiry'     => 86400,
-);
-*/
 
