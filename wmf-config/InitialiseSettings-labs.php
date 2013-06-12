@@ -104,19 +104,16 @@ return array(
 
 	'-wgUploadDirectory' => array(
 		'default'      => '/mnt/upload7/$site/$lang',
+		'private'      => '/mnt/upload7/private/$lang',
 	),
 
 	/* 'wmgUseOnlineStatusBar' => array( */
 	/* 	'default' => false, */
 	/* ), */
 
-	'-wgThumbnailScriptPath' => array(
-		'default' => '/w/thumb.php',
-	),
-
 	'-wgUploadPath' => array(
 		'default' => '//upload.beta.wmflabs.org/$site/$lang',
-	//	'private' => '/w/img_auth.php',
+		'private' => '/w/img_auth.php',
 	//	'wikimania2005wiki' => '//upload..org/wikipedia/wikimania', // back compat
 		'commonswiki' => '//upload.beta.wmflabs.org/wikipedia/commons',
 		'metawiki' => '//upload.beta.wmflabs.org/wikipedia/meta',
