@@ -2499,7 +2499,7 @@ if ( $wmgUseWikibaseClient ) {
 
 		$wgWBClientSettings['excludeNamespaces'] = array_merge(
 			MWNamespace::getTalkNamespaces(),
-			array( NS_USER )
+			array( NS_USER, NS_MEDIAWIKI )
 		);
 
 		return true;
