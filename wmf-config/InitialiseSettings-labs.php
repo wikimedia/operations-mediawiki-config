@@ -256,6 +256,10 @@ return array(
 		'default' => true,
 	),
 
+	'wmgUseCampaigns' => array(
+		'default' => true,
+	),
+
 );
 
 } # wmflLabsSettings()

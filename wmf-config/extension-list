@@ -8,6 +8,7 @@ $IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.php
 $IP/extensions/AssertEdit/AssertEdit.php
 $IP/extensions/Babel/Babel.php
 $IP/extensions/Calendar/Calendar.php
+$IP/extensions/Campaigns/Campaigns.php
 $IP/extensions/CategoryTree/CategoryTree.php
 $IP/extensions/CentralAuth/CentralAuth.php
 $IP/extensions/CentralNotice/CentralNotice.php
