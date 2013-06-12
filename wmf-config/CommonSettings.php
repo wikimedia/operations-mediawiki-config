@@ -2412,6 +2412,12 @@ if ( $wmgUseEventLogging ) {
 		include_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
 		$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore; // For safety's sake
 	}
+
+	// Extensions dependent on EventLogging
+	if ( $wmgUseCampaigns ) {
+		include_once( "$IP/extensions/Campaigns/Campaigns.php" );
+	}
+	include_once( "$IP/extensions/CoreEvents/CoreEvents.php" );
 }
 
 if ( $wmgUseEventLogging && $wmgUseNavigationTiming ) {
@@ -2548,6 +2554,8 @@ if ( $wmgUseZeroNamespace ) {
 if ( $wmgUseAccountAudit ) {
 	require_once( "$IP/extensions/AccountAudit/AccountAudit.php" );
 }
+
+### End (roughly) of general extensions ########################
 
 if ( $wmgUseVForm ) {
 	$wgUseVFormUserLogin = true;

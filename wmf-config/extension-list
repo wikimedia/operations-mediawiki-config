@@ -8,6 +8,7 @@ $IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.php
 $IP/extensions/AssertEdit/AssertEdit.php
 $IP/extensions/Babel/Babel.php
 $IP/extensions/Calendar/Calendar.php
+$IP/extensions/Campaigns/Campaigns.php
 $IP/extensions/CategoryTree/CategoryTree.php
 $IP/extensions/CentralAuth/CentralAuth.php
 $IP/extensions/CentralNotice/CentralNotice.php
@@ -29,6 +30,7 @@ $IP/extensions/ContactPage/ContactPage.php
 $IP/extensions/ContactPageFundraiser/ContactPage.php
 $IP/extensions/ContributionReporting/ContributionReporting.php
 $IP/extensions/ContributionTracking/ContributionTracking.php
+$IP/extensions/CoreEvents/CoreEvents.php
 $IP/extensions/CreditsSource/CreditsSource.php
 $IP/extensions/CustomData/CustomData.php
 $IP/extensions/DataValues/DataTypes/DataTypes.i18n.php
