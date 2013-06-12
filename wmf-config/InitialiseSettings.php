@@ -12474,6 +12474,14 @@ $wgConf->settings = array(
 	'metawiki' => true,
 ),
 
+'wmgUseCampaigns' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
+
+### End (roughly) of general extensions ########################
+
 // Apply blocks to IPs in XFF (bug 23343)
 'wmgUseXFFBlocks' => array(
 	'default' => true,
