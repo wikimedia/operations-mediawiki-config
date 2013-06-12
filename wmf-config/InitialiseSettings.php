@@ -10652,7 +10652,7 @@ $wgConf->settings = array(
 	'eswiki' => array( NS_MAIN ),
 	'eswikinews' => array( NS_MAIN ),
 	'hiwiki' => array( NS_MAIN, 100 /*NS_PORTAL*/ ),
-	'ptwiki' => array( NS_MAIN, NS_HELP, 102 /* Anexo */ ),
+	'ptwiki' => array( NS_MAIN, 102 /* Anexo */ ),
 	'ptwikibooks' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
 ),
 'wmgArticleFeedbackRatingTypes' => array(
