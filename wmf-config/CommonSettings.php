@@ -2546,6 +2546,12 @@ if ( $wmgUseAccountAudit ) {
 	require_once( "$IP/extensions/AccountAudit/AccountAudit.php" );
 }
 
+if ( $wmgUseCampaigns ) {
+	require_once( "$IP/extensions/Campaigns/Campaigns.php" );
+}
+
+### End (roughly) of general extensions ########################
+
 if ( $wmgUseVForm ) {
 	$wgUseVFormUserLogin = true;
 	$wgUseVFormCreateAccount = true;
