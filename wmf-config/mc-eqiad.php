@@ -15,9 +15,9 @@ if (strpos(gethostname(), "mw113") !== false ) {
 		'class'      => 'MemcachedPeclBagOStuff',
 		'serializer' => 'igbinary',
 		'persistent' => true,
-		'servers'    => array(
-			'127.0.0.1',
-		)
+		'servers'    => array( '127.0.0.1' ),
+		'server_failure_limit' => 0,
+		'retry_timeout' => 0
 	);
 } else {
 	$wgObjectCaches['memcached-pecl'] = array(
