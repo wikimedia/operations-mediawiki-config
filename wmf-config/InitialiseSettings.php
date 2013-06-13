@@ -11037,7 +11037,6 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'frwikisource' => true, // bug 34618
 	'incubatorwiki' => true, // bug 32417
-	'itwikivoyage' => true, // bug 43979
 	'nlwiki' => true, // bug 32202
 	'sewikimedia' => true, // bug 32757
 //	'tawiki' => true, // bug 34560 // Disable due to bug 34615
