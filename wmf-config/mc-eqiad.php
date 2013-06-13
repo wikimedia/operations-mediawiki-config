@@ -16,8 +16,8 @@ if (strpos(gethostname(), "mw113") !== false ) {
 		'serializer' => 'igbinary',
 		'persistent' => true,
 		'servers'    => array( '127.0.0.1' ),
-		'server_failure_limit' => 0,
-		'retry_timeout' => 0
+		'server_failure_limit' => 1e9, // basically disable
+		'retry_timeout' => 1 // basically disable
 	);
 } else {
 	$wgObjectCaches['memcached-pecl'] = array(
