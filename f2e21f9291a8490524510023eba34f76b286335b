@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "D0-aA5E4",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2415,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-06-13T22:08:50Z",
+      "side": 1,
+      "message": "change \"require_once\" to \"include_once\"",
+      "revId": "f2e21f9291a8490524510023eba34f76b286335b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
