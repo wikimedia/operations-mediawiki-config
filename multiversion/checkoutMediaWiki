@@ -48,6 +48,7 @@ function checkoutMediaWiki() {
 			print "Error cloning mediawiki\n";
 			exit( 1 );
 		}
+		chmod( "$destIP", 0775 );
 		if ( !chdir( $destIP ) ) {
 			print "Error changing directory\n";
 			exit( 1 );
@@ -131,12 +132,6 @@ EOT;
 	$path = "$commonHomeDir/w/static-$dstVersionNum/resources";
 	$link = "$commonLocalDir/php-$dstVersionNum/resources";
 	createSymlink( $path, $link, "Created /w/static-$dstVersionNum/resources symlink." );
-
-	# Create lib directory...
-	$libDir = "$destIP/lib";
-	if ( !file_exists( $libDir ) ) {
-		mkdir( $libDir, 0775 );
-	}
 
 	# Create l10n cache dir
 	$l10nDir = "$destIP/cache/l10n";
