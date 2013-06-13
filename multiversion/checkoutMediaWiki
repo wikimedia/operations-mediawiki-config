@@ -133,12 +133,6 @@ EOT;
 	$link = "$commonLocalDir/php-$dstVersionNum/resources";
 	createSymlink( $path, $link, "Created /w/static-$dstVersionNum/resources symlink." );
 
-	# Create lib directory...
-	$libDir = "$destIP/lib";
-	if ( !file_exists( $libDir ) ) {
-		mkdir( $libDir, 0775 );
-	}
-
 	# Create l10n cache dir
 	$l10nDir = "$destIP/cache/l10n";
 	if ( !file_exists( $l10nDir ) ) {
