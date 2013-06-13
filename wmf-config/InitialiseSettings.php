@@ -10511,6 +10511,11 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgVisualEditorEnableEventLogging' => array(
+	'default' => false,
+	'enwiki' => true,
+),
+
 'wmgUseRSSExtension' => array(
 	'default' => false,
 	'foundationwiki' => true,
