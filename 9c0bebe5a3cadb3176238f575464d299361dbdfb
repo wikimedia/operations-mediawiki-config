@@ -16,6 +16,24 @@
       "revId": "9c0bebe5a3cadb3176238f575464d299361dbdfb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D0-sx7Qs",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2549,
+      "author": {
+        "id": 401
+      },
+      "writtenOn": "2013-06-13T21:41:14Z",
+      "side": 1,
+      "message": "Done. Setting a campaign cookie might be useful in the absence of EventLogging, but no customers yet.",
+      "parentUuid": "D0zt7dXo",
+      "revId": "9c0bebe5a3cadb3176238f575464d299361dbdfb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
