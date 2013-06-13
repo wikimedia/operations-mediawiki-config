@@ -10520,13 +10520,11 @@ $wgConf->settings = array(
 	'default' => array(),  // as of Ext:RSS v2, this means no URLs are allowed.
 	'uawikimedia' => array( 'http://wikimediaukraine.wordpress.com/feed/' ),
 	'foundationwiki' => array(
-		'http://blog.wikimedia.org/feed/',
-		'http://blog.wikimedia.org/c/our-wikis/wikimediacommons/feed/',
-		'http://blog.wikimedia.org/c/communications/picture-of-the-day/feed/',
+		'http://blog.wikimedia.org/',
 	),
 	'mediawikiwiki' => array(
 		'http://blog.wikimedia.org/feed/',
-		'https://git.wikimedia.org/feed/mediawiki/extensions/Translate.git',
+		'https://git.wikimedia.org/feed/',
 		
 	),
 ),
