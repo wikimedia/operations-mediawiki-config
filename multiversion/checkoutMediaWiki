@@ -48,6 +48,7 @@ function checkoutMediaWiki() {
 			print "Error cloning mediawiki\n";
 			exit( 1 );
 		}
+		chmod( "$destIP", 0775 );
 		if ( !chdir( $destIP ) ) {
 			print "Error changing directory\n";
 			exit( 1 );
