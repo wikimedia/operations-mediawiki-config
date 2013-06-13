@@ -1910,6 +1910,9 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorExperimental ) {
 		$wgVisualEditorEnableExperimentalCode = true;
 	}
+	if ( $wmgVisualEditorEnableEventLogging ) {
+		$wgVisualEditorEnableEventLogging = true;
+	}
 
 	// Also include the Parsoid extension when VE is enabled
 	require_once( "$IP/extensions/Parsoid/php/Parsoid.php" );
