@@ -7,8 +7,8 @@
 
 # default host for mwsuggest backend
 $wgEnableLucenePrefixSearch = true;
-#$wgLucenePrefixHost = '10.2.1.15'; # pmtpa LVS search-prefix pool
-$wgLucenePrefixHost = '10.2.2.15'; # eqiad LVS search-prefix pool
+$wgLucenePrefixHost = '10.2.1.15'; # pmtpa LVS search-prefix pool
+#$wgLucenePrefixHost = '10.2.2.15'; # eqiad LVS search-prefix pool
 
 $wgLucenePort = 8123;
 if ( in_array( $wgDBname, array( 'enwiki' ) ) ) {
@@ -21,8 +21,8 @@ if ( in_array( $wgDBname, array( 'enwiki' ) ) ) {
 	$wgLuceneHost = '10.2.1.12'; # pmtpa
 } elseif ( in_array( $wgDBname, array( 'itwiki', 'ptwiki', 'plwiki', 'nlwiki', 'ruwiki', 'svwiki', 'zhwiki', 'eswiki'  ) ) ) {
 	# Pool 3 LVS
-	$wgLuceneHost = '10.2.2.13'; # eqiad
-	#$wgLuceneHost = '10.2.1.13'; # pmtpa
+	#$wgLuceneHost = '10.2.2.13'; # eqiad
+	$wgLuceneHost = '10.2.1.13'; # pmtpa
 } elseif ( in_array( $wgDBname, array( 'commonswiki', 'wikidatawiki', 'metawiki', 'enwiktionary' ) ) ) {
 	# Pool 5 LVS
 	$wgLuceneHost = '10.2.2.16'; # eqiad
