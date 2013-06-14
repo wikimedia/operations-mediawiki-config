@@ -8832,6 +8832,7 @@ $wgConf->settings = array(
 
 	#  vi languages : bug 7854
 	'vecwiki'      => array( 'it' ),
+	'vecwiktionary' => array( 'w', 'en', 'fr', 'it' ), // bug 49575
 	'viwiki'       => array( 'wikt', 'b', 's', 'q' ),
 	'viwiktionary' => array( 'w', 'b', 's', 'q' ),
 	'viwikibooks'  => array( 'en', 'w', 'wikt', 's', 'q', 'fr', 'it' ), # fr and it: bug 37457
