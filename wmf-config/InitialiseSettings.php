@@ -10481,7 +10481,8 @@ $wgConf->settings = array(
 
 'wmgUseVisualEditor' => array(
 	'default' => false,
-	'visualeditor' => true,
+	'visualeditor' => false, // Disabling in prod as completely broken (bug 49577) -- JDF 2013-06-14
+	// 'visualeditor' => true,
 ),
 
 'wmgVisualEditorNamespaces' => array(
