@@ -1422,6 +1422,7 @@ $wgConf->settings = array(
 	'fowikisource'  => 'Wikiheimild',
 	'frpwiki'		=> 'Vouiquipèdia',
 	'frwiki'	=> 'Wikipédia',
+	'frwikibooks'	=> 'Wikilivres', // bug 49612
 	'frwikiversity' => 'Wikiversité',
 	'frwiktionary'  => 'Wiktionnaire',
 	'furwiki'       => 'Vichipedie',
