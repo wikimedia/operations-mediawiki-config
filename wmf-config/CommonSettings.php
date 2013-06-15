@@ -2438,6 +2438,10 @@ if ( $wmgUseUniversalLanguageSelector ) {
 if ( $wmgUseWikibaseRepo ) {
 	require_once( "$IP/extensions/DataValues/DataValues.php" );
 	require_once( "$IP/extensions/Diff/Diff.php" );
+	if ( $wmfRealm === 'labs' ) {
+		# bug 49594
+		require_once( "$IP/extensions/WikibaseDataModel/WikibaseDataModel.php" );
+	}
 	require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
 	require_once( "$IP/extensions/Wikibase/repo/Wikibase.php" );
 
@@ -2483,6 +2487,10 @@ if ( $wmgUseWikibaseRepo ) {
 if ( $wmgUseWikibaseClient ) {
 	require_once( "$IP/extensions/DataValues/DataValues.php" );
 	require_once( "$IP/extensions/Diff/Diff.php" );
+	if ( $wmfRealm === 'labs' ) {
+		# bug 49594
+		require_once( "$IP/extensions/WikibaseDataModel/WikibaseDataModel.php" );
+	}
 	require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
 	require_once( "$IP/extensions/Wikibase/client/WikibaseClient.php" );
 
