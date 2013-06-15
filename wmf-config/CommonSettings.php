@@ -1913,6 +1913,10 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorEnableEventLogging ) {
 		$wgVisualEditorEnableEventLogging = true;
 	}
+	// Bug 49604 - to remove once complete.
+	if ( $wmgVisualEditorEnableSplitTest ) {
+		$wgVisualEditorEnableSplitTest = true;
+	}
 
 	// Also include the Parsoid extension when VE is enabled
 	require_once( "$IP/extensions/Parsoid/php/Parsoid.php" );

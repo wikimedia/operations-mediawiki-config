@@ -10516,6 +10516,12 @@ $wgConf->settings = array(
 	'enwiki' => true,
 ),
 
+// Bug 49604 - to remove once complete.
+'wmgVisualEditorEnableSplitTest' => array(
+	'default' => false,
+	'enwiki' => true,
+),
+
 'wmgUseRSSExtension' => array(
 	'default' => false,
 	'foundationwiki' => true,
