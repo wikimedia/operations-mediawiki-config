@@ -35,9 +35,9 @@
 	Each of these files is also available in public version control in one of the following repositories:
 </p>
 <ul>
-	<li><a href="https://gerrit.wikimedia.org/r/gitweb?p=operations/apache-config.git;a=tree">operations/apache-config.git</a></li>
-	<li><a href="https://gerrit.wikimedia.org/r/gitweb?p=operations/mediawiki-config.git;a=tree">operations/mediawiki-config.git</a></li>
-	<li><a href="https://gerrit.wikimedia.org/r/gitweb?p=operations/puppet.git;a=tree;f=templates/lucene">operations/puppet.git</a></li>
+	<li><a href="https://git.wikimedia.org/tree/operations%2Fapache-config.git">operations/apache-config.git</a></li>
+	<li><a href="https://git.wikimedia.org/tree/operations%2Fmediawiki-config.git">operations/mediawiki-config.git</a></li>
+	<li><a href="https://git.wikimedia.org/tree/operations%2Fpuppet.git">operations/puppet.git</a></li>
 </ul>
 <hr>
 
