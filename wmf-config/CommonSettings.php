@@ -2395,6 +2395,7 @@ if ( $wmgUseEventLogging ) {
 		// test2wiki has its own Schema: NS.
 		$wgEventLoggingDBname = 'test2wiki';
 		$wgEventLoggingSchemaIndexUri = 'http://test2.wikipedia.org/w/index.php';
+		$wgEventLoggingSchemaApiUri = 'http://test2.wikipedia.org/w/api.php';
 		$wgEventLoggingBaseUri = '//bits.wikimedia.org/dummy.gif';
 		$wgEventLoggingFile = "udp://$wmfUdp2logDest/EventLogging-$wgDBname";
 	} else {
@@ -2403,6 +2404,7 @@ if ( $wmgUseEventLogging ) {
 		$wgEventLoggingDBname = 'metawiki';
 		$wgEventLoggingFile = 'udp://10.64.21.123:8421/EventLogging';  // vanadium
 		$wgEventLoggingSchemaIndexUri = 'http://meta.wikimedia.org/w/index.php';
+		$wgEventLoggingSchemaApiUri = 'http://meta.wikimedia.org/w/api.php';
 	}
 	if ( $wgEventLoggingDBname === $wgDBname ) {
 		// Bug 45031
