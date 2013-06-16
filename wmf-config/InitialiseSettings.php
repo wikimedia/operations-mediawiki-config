@@ -234,6 +234,7 @@ $wgConf->settings = array(
 	'kkwikiquote' => 'Asia/Almaty',
 	'koiwiki' => 'Asia/Yekaterinburg',
 	'kowiki' => 'Asia/Seoul',
+	'kowikibooks' => 'Asia/Seoul', // bug 49639
 	'kowikinews' => 'Asia/Seoul',
 	'kowikiquote' => 'Asia/Seoul',
 	'kowikisource' => 'Asia/Seoul',
