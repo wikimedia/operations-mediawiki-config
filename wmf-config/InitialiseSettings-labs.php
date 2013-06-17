@@ -120,11 +120,7 @@ return array(
 		'testwiki' => '//upload.beta.wmflabs.org/wikipedia/test',
 	),
 
-	'-wgMathDirectory' => array(
-		'default' => '/mnt/upload7/math',
-	),
-
-	'-wgMathPath' => array(
+	'-wmgMathPath' => array(
 		'default' => '//upload.beta.wmflabs.org/math',
 	),
 
