@@ -6572,6 +6572,7 @@ $wgConf->settings = array(
 	'+tewikisource' => array( 102 => 1, 106 => 1 ),
 	'+tlwikibooks' => array( 100 => 1, 101 => 0 ),
 	'+trwikisource' => array( 100 => 1 ),
+	'+ukwikinews' => array( 14 => 1), // bug 49335
 	'+vecwikisource' => array( 100 => 1, 104 => 1 ),
 	'+viwikibooks' => array( 102 => 1, 104 => 1, 106 => 1 ),
 	'+viwikisource' => array( 102 => 1, 106 => 1 ),
