@@ -253,6 +253,14 @@ return array(
 		'default' => true,
 	),
 
+	// disable eventlogging/timing
+	'wmgUseEventLogging' => array(
+	    'default' => false,
+	),
+
+	'wmgUseNavigationTiming' => array(
+	    'default' => false,
+	),
 );
 
 } # wmflLabsSettings()
