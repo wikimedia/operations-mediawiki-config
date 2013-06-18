@@ -11107,19 +11107,10 @@ $wgConf->settings = array(
 ),
 'wmgMFCustomLogos' => array(
 	'default' => array(),
-	'wiki' => array(
-		'site' => 'wikipedia',
-		'logo' => '//upload.wikimedia.org/wikipedia/commons/5/54/Mobile_W_beta_light.png'
-	),
 	'enwiki' => array(
-		'site' => 'wikipedia',
-		'logo' => '//upload.wikimedia.org/wikipedia/commons/5/54/Mobile_W_beta_light.png',
 		'copyright' => '{wgExtensionAssetsPath}/MobileFrontend/images/logo-copyright-en.png'
 	),
 	'testwiki' => array(
-		'site' => 'wikipedia',
-		'logo' => '//upload.wikimedia.org/wikipedia/commons/5/54/Mobile_W_beta_light.png',
-		// {wgExtensionAssetsPath} will get replaced with $wgExtensionAssetsPath in CustomSettings.php
 		'copyright' => '{wgExtensionAssetsPath}/MobileFrontend/images/logo-copyright-en.png'
 	),
 ),
