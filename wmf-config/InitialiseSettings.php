@@ -11122,6 +11122,9 @@ $wgConf->settings = array(
 	'commonswiki' => '', # bug 45256
 	'test2wiki' => '',
 ),
+'wmgMFUseCentralAuthToken' => array(
+	'default' => true,
+),
 'wmgMFForceSecureLogin' => array(
 	'default' => true,
 ),
