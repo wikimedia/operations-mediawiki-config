@@ -27,6 +27,11 @@ $wmgAddWikiNotify = false;
 # see r110254 and bug 33746
 $wgPreloadJavaScriptMwUtil = true;
 
+if ( $wmgUseEventLogging ) {
+	$wgEventLoggingBaseUri = '//bits.beta.wmflabs.org/event.gif';
+	$wgEventLoggingFile = 'udp://deployment-eventlogging.pmtpa.wmflabs:8421/EventLogging';
+}
+
 if ( $wmfUseArticleCreationWorkflow ) {
 	require_once( "$IP/extensions/ArticleCreationWorkflow/ArticleCreationWorkflow.php" );
 	$wgArticleCreationBucketConfig['buckets']['off'] = 0;
