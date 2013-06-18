@@ -6324,6 +6324,8 @@ $wgConf->settings = array(
 		'wiktionary.org',
 		'wikivoyage.org',
 		'wikidata.org',
+		'tools.wmflabs.org',
+		'etherpad.wmflabs.org',
 	),
 ),
 # @}
