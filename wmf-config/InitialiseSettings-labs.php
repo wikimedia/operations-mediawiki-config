@@ -259,9 +259,8 @@ return array(
 		'default' => true,
 	),
 
-	// disable eventlogging/timing
 	'wmgUseEventLogging' => array(
-	    'default' => false,
+	    'default' => true,
 	),
 
 	'wmgUseNavigationTiming' => array(
