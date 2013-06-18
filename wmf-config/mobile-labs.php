@@ -7,4 +7,4 @@
 require_once( __DIR__ . '/mobile.php' );
 
 $wgMFForceSecureLogin = false;
-$wgMFLoginHandshakeUrl = 'http://commons.wikimedia.beta.wmflabs.org/wiki/Special:LoginHandshake?useformat=mobile';
+$wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;

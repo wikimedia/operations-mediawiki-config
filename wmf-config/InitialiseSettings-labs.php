@@ -226,6 +226,9 @@ return array(
 	'wmgMFLoginHandshakeUrl' => array(
 		'default' => '//commons.wikimedia.beta.wmflabs.org/wiki/Special:LoginHandshake?useformat=mobile',
 	),
+	'wmgMFUseCentralAuthToken' => array(
+		'default' => true,
+	),
 
 	'wmgEnableGeoData' => array(
 		'default' => true,
