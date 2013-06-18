@@ -2415,6 +2415,9 @@ if ( $wmgUseEventLogging ) {
 		$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore; // For safety's sake
 	}
 
+	// Temporary hack for 'jsonschema' API module migration
+	$wgEventLoggingSchemaApiUri = $wgEventLoggingSchemaIndexUri;
+
 	// Extensions dependent on EventLogging
 	if ( $wmgUseCampaigns ) {
 		include_once( "$IP/extensions/Campaigns/Campaigns.php" );
