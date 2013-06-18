@@ -11143,7 +11143,7 @@ $wgConf->settings = array(
 	'default' => "{{Uploaded from Mobile|platform=Web|version=}}\n{{subst:unc}}",
 ),
 'wmgMFLoginHandshakeUrl' => array(
-	'default' => '//commons.wikimedia.org/wiki/Special:LoginHandshake?useformat=mobile',
+	'default' => '//commons.m.wikimedia.org/wiki/Special:LoginHandshake?useformat=mobile',
 ),
 'wmgMFEnableXAnalyticsLogging' => array(
 	'default' => true,
