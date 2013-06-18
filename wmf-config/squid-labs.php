@@ -1,6 +1,6 @@
 <?php
 
-$wgSquidServers = array( '10.4.0.17' );
+$wgSquidServers = array( '10.4.0.17', '10.4.0.214' );
 
 # our text squid in beta labs gets forwarded requests
 # from the ssl terminator, to 127.0.0.1, so adding that
