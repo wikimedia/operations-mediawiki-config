@@ -8,6 +8,7 @@ if ( $wmgMobileFrontend ) {
 	$wgMFNoindexPages = false;
 	$wgMFNearby = $wmgMFNearby && $wmgEnableGeoData;
 	$wgMFPhotoUploadEndpoint = $wmgMFPhotoUploadEndpoint;
+	$wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
 	$wgMFPhotoUploadWiki = $wmgMFPhotoUploadWiki;
 	$wgMFPhotoUploadAppendToDesc = $wmgMFPhotoUploadAppendToDesc;
 
