@@ -192,6 +192,10 @@ return array(
 		'default' => false,
 	),
 
+	'-wgAbuseFilterCentralDB' => array(
+		'default' => 'labswiki'
+	),
+
 	# Bug 37852
 	'wmgUseWikimediaShopLink' => array(
 		'default'    => false,

@@ -27,11 +27,6 @@ $wmgAddWikiNotify = false;
 # see r110254 and bug 33746
 $wgPreloadJavaScriptMwUtil = true;
 
-if ( $wmgUseAbuseFilter ) {
-	# beta does not have a 'metawiki' database
-	$wgAbuseFilterCentralDB = 'labswiki';
-}
-
 if ( $wmgUseEventLogging ) {
 	$wgEventLoggingBaseUri = '//bits.beta.wmflabs.org/event.gif';
 	$wgEventLoggingFile = 'udp://deployment-eventlogging.pmtpa.wmflabs:8421/EventLogging';
