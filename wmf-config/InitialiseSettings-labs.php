@@ -192,8 +192,8 @@ return array(
 		'default' => false,
 	),
 
-	'-wgAbuseFilterCentralDB' => array(
-		'default' => 'labswiki'
+	'-wmgAbuseFilterCentralDB' => array(
+		'default' => 'labswiki',
 	),
 
 	# Bug 37852

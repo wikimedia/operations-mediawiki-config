@@ -2546,7 +2546,7 @@ if ( $wmgUseSearchExtraNS ) {
 }
 
 if ( $wmgUseGlobalAbuseFilters ) {
-	$wgAbuseFilterCentralDB = 'metawiki';
+	$wgAbuseFilterCentralDB = $wmgAbuseFilterCentralDB;
 	$wgAbuseFilterIsCentral = ( $wgDBname == $wgAbuseFilterCentralDB );
 }
 
