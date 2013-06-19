@@ -192,8 +192,13 @@ return array(
 		'default' => false,
 	),
 
+	# To help fight spam, makes rules maintained on labswiki
+	# to be available on all beta wikis.
 	'-wmgAbuseFilterCentralDB' => array(
 		'default' => 'labswiki',
+	),
+	'-wmgUseGlobalAbuseFilters' => array(
+		'default' => true,
 	),
 
 	# Bug 37852
