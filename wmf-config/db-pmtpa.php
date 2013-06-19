@@ -105,7 +105,7 @@ $wgLBFactoryConf = array(
 		'db1019'    => 0,
 		'db34'	  => 0, # pmtpa master
 		'db39'    => 400,
-		'db64'	  => 200, # py: 2013-06-17: bad bbu
+		#'db64'	  => 200, # py: 2013-06-17: bad bbu
 		'db66'	  => 400, # innodb_file_per_table # snapshot host
 	),
 	's4' => array(
