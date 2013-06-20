@@ -79,7 +79,6 @@ $IP/extensions/MobileFrontend/MobileFrontend.php
 $IP/extensions/MoodBar/MoodBar.php
 $IP/extensions/MwEmbedSupport/MwEmbedSupport.php
 $IP/extensions/MWSearch/MWSearch.php
-$IP/extensions/Narayam/Narayam.php
 $IP/extensions/NavigationTiming/NavigationTiming.php
 $IP/extensions/NewUserMessage/NewUserMessage.php
 $IP/extensions/Nuke/SpecialNuke.php
@@ -140,7 +139,6 @@ $IP/extensions/Vector/Vector.php
 $IP/extensions/VipsScaler/VipsScaler.php
 $IP/extensions/VipsScaler/VipsTest.php
 $IP/extensions/VisualEditor/VisualEditor.php
-$IP/extensions/WebFonts/WebFonts.php
 $IP/extensions/Wikibase/client/WikibaseClient.php
 $IP/extensions/Wikibase/lib/WikibaseLib.php
 $IP/extensions/Wikibase/repo/Wikibase.php
