@@ -273,7 +273,7 @@ return array(
 	),
 
 	'wmgUseNavigationTiming' => array(
-	    'default' => false,
+	    'default' => true,
 	),
 );
 
