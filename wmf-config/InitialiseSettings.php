@@ -8919,6 +8919,7 @@ $wgConf->settings = array(
 
 'wmgEmergencyCaptcha' => array(
 	'default' => false,
+	'ptwiki' => true, # Do NOT remove again without agreement of ptwiki community
 ),
 # @} end of Captcha
 
