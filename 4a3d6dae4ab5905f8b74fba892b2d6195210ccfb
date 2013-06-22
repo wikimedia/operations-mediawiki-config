@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "D1CPTR2E",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8920,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-06-22T22:45:02Z",
+      "side": 0,
+      "message": "EmergencyCaptcha is just a shortcut for modifying CaptchaTriggers, as I understand it.\n\nIf this change is to be implemented, I don\u0027t think permanently setting a variable containing \"emergency\" is the right approach. Emergencies require immediate action to resolve. This variable somewhat casually hides exactly what\u0027s being done here under the guise of an emergency.\n\nPersonally, I\u0027d prefer either a clearer variable name or calling CaptchaTriggers directly over using the EmergencyCaptcha variable.",
+      "revId": "4a3d6dae4ab5905f8b74fba892b2d6195210ccfb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
