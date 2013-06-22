@@ -8917,8 +8917,9 @@ $wgConf->settings = array(
 	'fishbowl' => false,
 ),
 
-'wmgEmergencyCaptcha' => array(
+'wmgEnableEditAndCreateCaptcha' => array( # Enables captcha requirement on page edit/creation
 	'default' => false,
+	'ptwiki' => true, # bug 49860
 ),
 # @} end of Captcha
 
