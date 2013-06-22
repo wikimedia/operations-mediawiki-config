@@ -1,4 +1,4 @@
-<?php
+ <?php
 /**
  * vim: set sw=4 ts=4 noet foldmarker=@{,@} foldmethod=marker:
  * - recognize folding markers just like DefaultSettings.php
@@ -8917,8 +8917,9 @@ $wgConf->settings = array(
 	'fishbowl' => false,
 ),
 
-'wmgEmergencyCaptcha' => array(
+'wmgEnableEditAndCreateCaptcha' => array( # Enables captcha requirement on page edit/creation
 	'default' => false,
+	'ptwiki' => true, # bug 49860 - Do NOT remove again without agreement of ptwiki community
 ),
 # @} end of Captcha
 
