@@ -1160,8 +1160,7 @@ if ( $wmgEnableCaptcha ) {
 	// (added 2008-05-08 -- brion)
 	$wgCaptchaRegexes[] = '/<a +href/i';
 
-	// For emergencies
-	if ( $wmgEmergencyCaptcha ) {
+	if ( $wmgEnableEditAndCreateCaptcha ) {
 		$wgCaptchaTriggers['edit'] = true;
 		$wgCaptchaTriggers['create'] = true;
 	}
