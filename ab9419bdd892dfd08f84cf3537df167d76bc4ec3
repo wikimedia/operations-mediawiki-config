@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "D1ENIE4k",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 1766,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2013-06-23T16:09:55Z",
+      "side": 1,
+      "message": "probably should not be done in this commit",
+      "revId": "ab9419bdd892dfd08f84cf3537df167d76bc4ec3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D1KNdd0c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 12236,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2013-06-23T16:09:55Z",
+      "side": 1,
+      "message": "what.",
+      "revId": "ab9419bdd892dfd08f84cf3537df167d76bc4ec3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
