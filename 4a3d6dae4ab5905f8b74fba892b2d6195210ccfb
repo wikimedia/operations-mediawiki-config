@@ -16,6 +16,24 @@
       "revId": "4a3d6dae4ab5905f8b74fba892b2d6195210ccfb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D1ONRP2I",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8920,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2013-06-23T11:45:33Z",
+      "side": 0,
+      "message": "Agreed. I would prefer changing the values of the \u0027edit\u0027 and \u0027create\u0027 triggers directly on the wikis which request that (in this case just ptwiki), instead of creating a variable for this.",
+      "parentUuid": "D1CPTR2E",
+      "revId": "4a3d6dae4ab5905f8b74fba892b2d6195210ccfb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
