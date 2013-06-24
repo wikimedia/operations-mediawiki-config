@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "D1ba.bmA",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-06-24T23:23:40Z",
+      "side": 1,
+      "message": "I\u0027ll take a look at this as well.",
+      "parentUuid": "D1Hc2qec",
+      "revId": "23d5631ce6e36036ef6a1f2dc6fad960924e3fa3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "D1DckIbE",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2013-06-24T14:47:28Z",
       "side": 1,
       "message": "This change is unrelated to the bugzilla request and not mentioned in the commit message.",
+      "revId": "23d5631ce6e36036ef6a1f2dc6fad960924e3fa3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "D1XaUBuE",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1163,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-06-24T23:23:40Z",
+      "side": 1,
+      "message": "This change is most certainly related to the Bugzilla request, but it should get a mention in the commit message. I\u0027ll add it.",
+      "parentUuid": "D1DckIbE",
       "revId": "23d5631ce6e36036ef6a1f2dc6fad960924e3fa3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
