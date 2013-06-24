@@ -10987,6 +10987,7 @@ $wgConf->settings = array(
 	'arwiki' => true,
 	'commonswiki' => true,
 	'enwiki' => true,
+	'enwikivoyage' => true, // bug 50063
 	'fawiki' => true, // bug 33541
 	'fawiktionary' => true, // bug 33541
 	'hewiki' => true,
