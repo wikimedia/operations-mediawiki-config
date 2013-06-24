@@ -10623,17 +10623,8 @@ $wgConf->settings = array(
 
 'wmgUseArticleFeedback' => array(
 	'default' => false,
-	'testwiki' => true,
-	'eswiki' => true,
-	'eswikinews' => true,
-	'hiwiki' => true,
-	'huwiki' => true,
-	'metawiki' => true,
-	'ptwiki' => true,
-	'ptwikibooks' => true,
-	'srwiki' => true,
-	'zhwiki' => true,
 ),
+
 'wmgArticleFeedbackCategories' => array(
 	'default' => array(),
 	'hiwiki' => array( 'गुणवत्ता आकलन अतिरिक्त लेख', 'गुणवत्ता आकलन', 'आकलन', 'Article Feedback Pilot', 'Article Feedback', 'Article Feedback Additional Articles' ),
