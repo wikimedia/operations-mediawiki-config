@@ -104,12 +104,14 @@ switch( $wmfRealm ) {
 $wmfHostnames = array();
 switch( $wmfRealm ) {
 case 'labs':
+	$wmfHostnames['bits']     = 'bits.beta.wmflabs.org';
 	$wmfHostnames['meta']     = 'meta.wikimedia.beta.wmflabs.org';
 	$wmfHostnames['upload']   = 'upload.beta.wmflabs.org';
 	$wmfHostnames['wikidata'] = 'wikidata.beta.wmflabs.org';
 	break;
 case 'production':
 default:
+	$wmfHostnames['bits']   = 'bits.wikimedia.org';
 	$wmfHostnames['meta']   = 'meta.wikimedia.org';
 	$wmfHostnames['upload'] = 'upload.wikimedia.org';
 	$wmfHostnames['wikidata'] = 'www.wikidata.org';
@@ -282,9 +284,9 @@ $wgScript           = $wgScriptPath . '/index.php';
 $wgRedirectScript	= $wgScriptPath . '/redirect.php';
 $wgInternalServer = $wgCanonicalServer;
 
-if ( $wmfRealm == 'production' && $wgDBname != 'testwiki' && isset( $_SERVER['SERVER_NAME'] ) ) {
+if ( $wgDBname != 'testwiki' && isset( $_SERVER['SERVER_NAME'] ) ) {
 	// Make testing JS/skin changes easy by not running load.php through bits for testwiki
-	$wgLoadScript = "//bits.wikimedia.org/{$_SERVER['SERVER_NAME']}/load.php";
+	$wgLoadScript = "//{$wmfHostnames['bits']}/{$_SERVER['SERVER_NAME']}/load.php";
 }
 
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmfVersionNumber;
