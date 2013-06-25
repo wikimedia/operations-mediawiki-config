@@ -11172,6 +11172,14 @@ $wgConf->settings = array(
 	'default' => true,
 	'metawiki' => false, // bug 41141
 ),
+'wmgMFNoMobileCategory' => array(
+	'default' => false,
+	'foundationwiki' => 'Desktop-only_pages',
+),
+'wmgMFNoMobilePages' => array(
+	'default' => array(),
+	'foundationwiki' => array( 'Special:FundraiserStatistics' ),
+),
 
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
