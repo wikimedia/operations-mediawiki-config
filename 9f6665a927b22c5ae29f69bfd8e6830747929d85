@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "D1g9ayU0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 8922,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2013-06-25T14:42:29Z",
+      "side": 1,
+      "message": "Thanks for the bug number. The rest seems redundant, do we really need the all caps warning? I don\u0027t find any other: grep -E \"[Bb]ug.+[A-Z]{2,}\" InitialiseSettings.php",
+      "revId": "9f6665a927b22c5ae29f69bfd8e6830747929d85",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
