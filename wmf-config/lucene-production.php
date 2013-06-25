@@ -17,12 +17,12 @@ if ( in_array( $wgDBname, array( 'enwiki' ) ) ) {
 	#$wgLuceneHost = '10.2.1.11'; # pmtpa
 } elseif ( in_array( $wgDBname, array( 'dewiki', 'frwiki', 'jawiki' ) ) ) {
 	# Big RAM pool 2, via LVS
-	#$wgLuceneHost = '10.2.2.12'; # eqiad
-	$wgLuceneHost = '10.2.1.12'; # pmtpa
+	$wgLuceneHost = '10.2.2.12'; # eqiad
+	#$wgLuceneHost = '10.2.1.12'; # pmtpa
 } elseif ( in_array( $wgDBname, array( 'itwiki', 'ptwiki', 'plwiki', 'nlwiki', 'ruwiki', 'svwiki', 'zhwiki', 'eswiki'  ) ) ) {
 	# Pool 3 LVS
-	#$wgLuceneHost = '10.2.2.13'; # eqiad
-	$wgLuceneHost = '10.2.1.13'; # pmtpa
+	$wgLuceneHost = '10.2.2.13'; # eqiad
+	#$wgLuceneHost = '10.2.1.13'; # pmtpa
 } elseif ( in_array( $wgDBname, array( 'commonswiki', 'wikidatawiki', 'metawiki', 'enwiktionary' ) ) ) {
 	# Pool 5 LVS
 	#$wgLuceneHost = '10.2.2.16'; # eqiad
