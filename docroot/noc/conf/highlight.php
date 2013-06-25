@@ -86,7 +86,11 @@ $selectedFileViewRawUrlEsc = htmlspecialchars( $selectedFileViewRawUrl );
 <?php
 if ( $selectedFilePath !== false ) :
 ?>
-<p>(<a href="https://gerrit.wikimedia.org/r/gitweb?p=operations/mediawiki-config.git;a=history;f=<?php echo $selectedFileRepoPathEsc; ?>;hb=HEAD">version control</a> &bull; <a href="https://gerrit.wikimedia.org/r/gitweb?p=operations/mediawiki-config.git;a=blame;f=<?php echo $selectedFileRepoPathEsc; ?>;hb=HEAD">blame</a> &bull; <a href="<?php echo $selectedFileViewRawUrlEsc; ?>">raw text</a>)</p>
+<p>(
+<a href="https://git.wikimedia.org/history/operations%2Fmediawiki-config.git/HEAD/<?php echo urlencode( $selectedFileRepoPathEsc ); ?>">version control</a> &bull;
+<a href="https://git.wikimedia.org/blame/operations%2Fmediawiki-config.git/HEAD/<?php echo urlencode( $selectedFileRepoPathEsc ); ?>">blame</a> &bull;
+<a href="<?php echo $selectedFileViewRawUrlEsc; ?>">raw text</a>
+)</p>
 <?php
 endif;
 ?>
