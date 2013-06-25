@@ -2154,7 +2154,7 @@ if ( $wmgUseTranslationNotifications ) {
 	$wgTranslationNotificationsContactMethods['talkpage-elsewhere'] = true;
 }
 
-if ( $wmgUseVipsTest ) {
+if ( $wmgUseVips ) {
 	include( "$IP/extensions/VipsScaler/VipsScaler.php" );
 	include( "$IP/extensions/VipsScaler/VipsTest.php" );
 	$wgVipsThumbnailerHost = '10.2.1.21';

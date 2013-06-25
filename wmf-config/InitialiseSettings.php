@@ -11846,7 +11846,7 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-'wmgUseVipsTest' => array(
+'wmgUseVips' => array(
 	'default' => false,
 	'mediawikiwiki' => true,
 	'test2wiki' => true,
