@@ -11132,6 +11132,10 @@ $wgConf->settings = array(
 	'commonswiki' => '', # bug 45256
 	'test2wiki' => '',
 ),
+'wmgMFNearbyNamespace' => array(
+	'default' => NS_MAIN,
+	'commonswiki' => NS_FILE,
+),
 'wmgMFUseCentralAuthToken' => array(
 	'default' => true,
 ),

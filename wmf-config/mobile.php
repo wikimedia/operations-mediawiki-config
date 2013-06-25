@@ -10,6 +10,7 @@ if ( $wmgMobileFrontend ) {
 	$wgMFPhotoUploadEndpoint = $wmgMFPhotoUploadEndpoint;
 	$wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
 	$wgMFPhotoUploadWiki = $wmgMFPhotoUploadWiki;
+	$wgMFNearbyNamespace = $wmgMFNearbyNamespace;
 	$wgMFPhotoUploadAppendToDesc = $wmgMFPhotoUploadAppendToDesc;
 
 	if ( $wmgMobileFrontendLogo ) {
