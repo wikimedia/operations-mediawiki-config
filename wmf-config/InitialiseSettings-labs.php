@@ -230,7 +230,7 @@ return array(
 		'default' => '//commons.wikimedia.beta.wmflabs.org/w/api.php',
 	),
 	'wmgMFLogEvents' => array(
-		'default' => false,
+		'default' => true,
 	),
 	'wmgMFLoginHandshakeUrl' => array(
 		'default' => '//commons.wikimedia.beta.wmflabs.org/wiki/Special:LoginHandshake?useformat=mobile',
