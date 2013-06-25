@@ -232,9 +232,6 @@ return array(
 	'wmgMFLogEvents' => array(
 		'default' => true,
 	),
-	'wmgMFLoginHandshakeUrl' => array(
-		'default' => '//commons.wikimedia.beta.wmflabs.org/wiki/Special:LoginHandshake?useformat=mobile',
-	),
 	'wmgMFUseCentralAuthToken' => array(
 		'default' => true,
 	),
