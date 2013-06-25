@@ -10519,6 +10519,7 @@ $wgConf->settings = array(
 
 'wmgVisualEditorExperimental' => array(
 	'default' => false,
+	'test2wiki' => true,
 	'mediawikiwiki' => true,
 ),
 
