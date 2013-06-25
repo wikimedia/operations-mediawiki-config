@@ -2297,12 +2297,6 @@ $wgConf->settings = array(
 		"বাটচ'ৰা" => 100,
 		"বাটচ'ৰা_আলোচনা" => 101,
 	),
-	'aswikisource' => array(
-		'Page' => 104,        // Bug 43129
-		'Page_talk' => 105,
-		'Index' => 106,       // Bug 43129
-		'Index_talk' => 107,
-	),
 	'+azwikiquote' => array(
 		'Wikiquote'      => NS_PROJECT,
 		'Wikiquote_talk' => NS_PROJECT_TALK,
@@ -2330,10 +2324,6 @@ $wgConf->settings = array(
 		'ВК' => NS_PROJECT,     // Bug 41322
 		'Author' => 102,        // Bug 41322
 		'Author_talk' => 103,
-		'Page' => 104,          // Bug 41322
-		'Page_talk' => 105,
-		'Index' => 106,         // Bug 41322
-		'Index_talk' => 107,
 	),
 	'+bgwikisource' => array(
 		'Author' => 100,
@@ -2368,10 +2358,6 @@ $wgConf->settings = array(
 	'+brwiki' => array( 'Discussion_Wikipedia' => NS_PROJECT_TALK, ),
 	'+brwikiquote' => array( 'Wikiquote' => NS_PROJECT ),
 	'+brwikisource' => array(
-		'Index' => 100,
-		'Index_talk' => 101,
-		'Page' => 102,
-		'Page_talk' => 103,
 		'Author' => 104,
 		'Author_talk' => 105,
 	),
@@ -2384,10 +2370,6 @@ $wgConf->settings = array(
 		'Portal_talk' => 101, // Bug 37226
 	),
 	'+cawikisource' => array(
-		'Page' => 102,
-		'Page_talk' => 103,
-		'Index' => 104,
-		'Index_talk' => 105,
 		'Author' => 106,
 		'Author_talk' => 107,
 	),
@@ -2485,10 +2467,6 @@ $wgConf->settings = array(
 	'+dawikisource' => array(
 		'Author' => 102, // http://bugzilla.wikimedia.org/show_bug.cgi?id=7796
 		'Author_talk' => 103,
-		'Page' => 104,
-		'Page_talk' => 105,
-		'Index' => 106,
-		'Index_talk' => 107,
 	),
 	'+dewiki' => array(
 		'WP' => NS_PROJECT,
@@ -2509,10 +2487,6 @@ $wgConf->settings = array(
 	),
 	'+dewikisource' => array(
 		'WS' => 4,
-		'Page' => 102,
-		'Page_talk' => 103,
-		'Index' => 104,
-		'Index_talk' => 105,
 	),
 	'+dewikivoyage' => array(
 		'News' => 106,
@@ -2531,12 +2505,6 @@ $wgConf->settings = array(
 	),
 	'+dvwiktionary' => array(
 		'Wiktionary_talk' => NS_PROJECT_TALK, // Bug 46846
-	),
-	'+elwikisource' => array(
-		'Page' => 100,
-		'Page_talk' => 101,
-		'Index' => 102,
-		'Index_talk' => 103,
 	),
 	'+enwiki' => array(
 	 // bug 6313
@@ -2575,20 +2543,12 @@ $wgConf->settings = array(
 	'+eswikisource' => array(
 		'Auxtoro' => 102,
 		'Auxtoro-Diskuto' => 103,
-		'Page' => 104,
-		'Page_talk' => 105,
-		'Index' => 106,
-		'Index_talk' => 107,
 	),
 	'+etwiki' => array(
 		'Portal' => 100,
 		'Portal_talk' => 101,
 	),
 	'+etwikisource' => array(
-		'Page' => 102,
-		'Page_talk' => 103,
-		'Index' => 104,
-		'Index_talk' => 105,
 		'Author' => 106,
 		'Author_talk' => 107,
 	),
@@ -2609,10 +2569,6 @@ $wgConf->settings = array(
 		'Author_talk' => 103,
 		'پدیدآورنده' => 102,
 		'گفتگو_پدیدآورنده' => 103,
-		'Page' => 104,
-		'Page_talk' => 105,
-		'Index' => 106,
-		'Index_talk' => 107,
 		'ون' => NS_PROJECT,
 	),
 	'+fawiktionary' => array(
@@ -2620,11 +2576,6 @@ $wgConf->settings = array(
 	),
 	'+fiwiki' => array(
 		'WP' => NS_PROJECT,
-	),
-	'+frrwiki' => array( // Bug 38023
-		'Page' => 102,
-		'Page_talk' => 103,
-		'Index_talk' => 105,
 	),
 	'+frwiki' => array(
 		'Wikipedia' => NS_PROJECT,
@@ -2644,10 +2595,6 @@ $wgConf->settings = array(
 	'+frwikisource' => array(
 		'Author' => 102,
 		'Author_talk' => 103,
-		'Page' => 104,
-		'Page_talk' => 105,
-		'Index' => 112,
-		'Index_talk' => 113,
 	),
 	'+frwiktionary' => array(
 		'WT' => NS_PROJECT,
@@ -2663,12 +2610,8 @@ $wgConf->settings = array(
 		'વિક્શનરી' => NS_PROJECT // Bug 40776 (old namespace name)
 	),
 	'+hewikisource' => array(
-		'Page' => 104,
-		'Page_talk' => 105,
 		'Author' => 108,
 		'Author_talk' => 109,
-		'Index' => 112,
-		'Index_talk' => 113,
 		'באור' => 106,
 		'שיחת_באור' => 107,
 	),
@@ -2698,10 +2641,6 @@ $wgConf->settings = array(
 	'+hrwikisource' => array(
 		'Author' => 100,
 		'Author_talk' => 101,
-		'Page' => 102,
-		'Page_talk' => 103,
-		'Index' => 104,
-		'Index_talk' => 105,
 	),
 	'+hsbwiktionary' => array(
 		'Wiktionary' => NS_PROJECT, // Bug 41328 (old namespace)
@@ -2721,10 +2660,6 @@ $wgConf->settings = array(
 	'+huwikisource' => array(
 		'Author' => 100,
 		'Author_talk' => 101,
-		'Page' => 104,
-		'Page_talk' => 105,
-		'Index' => 106,
-		'Index_talk' => 107,
 	),
 	'+huwiktionary' => array(
 		'Függelék_vita' => 101, // Bug 42505
@@ -2733,10 +2668,6 @@ $wgConf->settings = array(
 	'+hywikisource' => array(
 		'Author' => 100,
 		'Author_talk' => 101,
-		'Page' => 104,
-		'Page_talk' => 105,
-		'Index' => 106,
-		'Index_talk' => 107,
 	),
 	'+idwikibooks' => array(
 		'Wikibooks'	       => NS_PROJECT,      # backcompat for shell req bug 36156
@@ -2745,10 +2676,6 @@ $wgConf->settings = array(
 	'+idwikisource' => array(
 		'Author' => 100,
 		'Author_talk' => 101,
-		'Index' => 102,
-		'Index_talk' => 103,
-		'Page' => 104,
-		'Page_talk' => 105,
 	),
 	'+ilowiki' => array(
 		'WP' => NS_PROJECT, // bug 38247
@@ -2786,10 +2713,6 @@ $wgConf->settings = array(
 	'+itwikisource' => array(
 		'Author' => 102,
 		'Author_talk' => 103,
-		'Page' => 108,
-		'Page_talk' => 109,
-		'Index' => 110,
-		'Index_talk' => 111,
 	),
 	'+itwiktionary' => array(
 		'WZ' => NS_PROJECT,
@@ -2841,10 +2764,6 @@ $wgConf->settings = array(
 		'Portal_talk' => 101,
 		'Author' => 102,
 		'Author_talk' => 103,
-		'Page' => 104,
-		'Page_talk' => 105,
-		'Index' => 106,
-		'Index_talk' => 107,
 	),
 	'+kowiki' => array(
 		'백' => NS_PROJECT,
@@ -2895,11 +2814,7 @@ $wgConf->settings = array(
 	'+lawikisource' => array(
 		'Author' => 102,
 		'Author_talk' => 103,
-		'Page' => 104,
-		'Page_talk' => 105,
-		'Index' => 106,
-		'Index_talk' => 107,
-		'Wikisource' => 4,
+		'Wikisource' => NS_PROJECT,
 	),
 	'+lbwiktionary' => array(
 		'Wiktionary' => 4,
@@ -2947,10 +2862,6 @@ $wgConf->settings = array(
 		'Author_talk' => 101,
 		'Portal'	      => 102,
 		'Portal_talk' => 103,
-		'Index'		       => 104,
-		'Index_talk'  => 105,
-		'Page'			=> 106,
-		'Page_talk'	   => 107,
 		'Wikisource' => NS_PROJECT,
 		'WS' => NS_PROJECT,
 		'H' => NS_HELP, # bug 35712
@@ -2969,10 +2880,6 @@ $wgConf->settings = array(
 		'Portal_talk' => 101,
 		'Author' => 102,
 		'Author_talk' => 103,
-		'Page' => 104,
-		'Page_talk' => 105,
-		'Index' => 106,
-		'Index_talk' => 107,
 	),
 	'+mswiki' => array(
 		'Portal_talk' => 101,
@@ -3023,10 +2930,6 @@ $wgConf->settings = array(
 	'+nowikisource' => array(
 		'Author' => 102, // http://bugzilla.wikimedia.org/show_bug.cgi?id=7796
 		'Author_talk' => 103,
-		'Page' => 104,
-		'Page_talk' => 105,
-		'Index' => 106,
-		'Index_talk' => 107,
 	),
 	'+nowiktionary' => array(
 		'Appendix' => 100,
@@ -3055,10 +2958,6 @@ $wgConf->settings = array(
 	),
 	'+plwikisource' => array(
 		'WS' => NS_PROJECT,
-		'Page' => 100,
-		'Page_talk' => 101,
-		'Index' => 102,
-		'Index_talk' => 103,
 		'Author' => 104,
 		'Author_talk' => 105,
 	),
@@ -3081,10 +2980,6 @@ $wgConf->settings = array(
 	'+ptwikisource' => array(
 		'Author' => 102,
 		'Author_talk' => 103,
-		'Index' => 104,
-		'Index_talk' => 105,
-		'Page' => 106,
-		'Page_talk' => 107,
 		'Em_tradução' => 108,
 		'Discussão_Em_tradução' => 109,
 		'Discussão_em_tradução' => 109,
@@ -3124,10 +3019,6 @@ $wgConf->settings = array(
 	'+rowikisource' => array(
 		'Author' => 102,
 		'Author_talk' => 103,
-		'Page' => 104,
-		'Page_talk' => 105,
-		'Index' => 106,
-		'Index_talk' => 107,
 	),
 	'+ruwiki' => array(
 		'У' => NS_USER,           // Bug 42511
@@ -3158,12 +3049,6 @@ $wgConf->settings = array(
 	),
 	'ruwikiquote' => array(
 		'ВЦ' => NS_PROJECT,
-	),
-	'+ruwikisource' => array(
-		'Page' => 104,
-		'Page_talk' => 105,
-		'Index' => 106,
-		'Index_talk' => 107,
 	),
 	'+ruwiktionary' => array(
 		'Appendix' => 100,
@@ -3212,18 +3097,6 @@ $wgConf->settings = array(
 		'Wiktionary' => NS_PROJECT,
 		'Wiktionary_talk' => NS_PROJECT_TALK,
 	),
-	'+slwikisource' => array(
-		'Page' => 100,
-		'Page_talk' => 101,
-		'Index' => 104,
-		'Index_talk' => 105,
-	),
-	'+sourceswiki' => array(
-		'Page' => 104,
-		'Page_talk' => 105,
-		'Index' => 106,
-		'Index_talk' => 107,
-	),
 	'+sqwikinews' => array(
 		'WL' => NS_PROJECT,
 	),
@@ -3237,12 +3110,8 @@ $wgConf->settings = array(
 		'WN' => NS_PROJECT,
 	),
 	'+svwikisource' => array(
-		'Page' => 104,
-		'Page_talk' => 105,
 		'Author' => 106,
 		'Author_talk' => 107,
-		'Index' => 108,
-		'Index_talk' => 109,
 	),
 	'+svwiktionary' => array(
 		'WT' => NS_PROJECT,
@@ -3267,10 +3136,6 @@ $wgConf->settings = array(
 	'+tewikisource' => array(
 		'Author' => 102,
 		'Author_talk' => 103,
-		'Page' => 104,
-		'Page_talk' => 105,
-		'Index' => 106,
-		'Index_talk' => 107,
 		'పేజీ' => 104,
 		'పేజీ_చర్చ' => 105,
 	),
@@ -3287,12 +3152,6 @@ $wgConf->settings = array(
 	'+thwiktionary' => array(
 		'Wiktionary' => NS_PROJECT,                 // Bug 40717
 		'คุยเรื่องWiktionary' => NS_PROJECT_TALK,
-	),
-	'+thwikisource' => array(
-		'Page' => 250,
-		'Page_talk' => 251,
-		'Index' => 252,
-		'Index_talk' => 253,
 	),
 	'+tkwiktionary' => array(
 		'Wiktionary' => NS_PROJECT,
@@ -3362,10 +3221,6 @@ $wgConf->settings = array(
 	'+vecwikisource' => array(
 		'Author' => 100,
 		'Author_talk' => 101,
-		'Page' => 102,
-		'Page_talk' => 103,
-		'Index'      => 104,
-		'Index_talk' => 105,
 	),
 	'+wikidata' => array(
 		'WD' => NS_PROJECT,      // Bug 41834
@@ -3411,10 +3266,6 @@ $wgConf->settings = array(
 		'Portal_talk'    => 101,
 		'Author'     => 102,
 		'Author_talk'    => 103,
-		'Page'       => 104,
-		'Page_talk'  => 105,
-		'Index'      => 106,
-		'Index_talk' => 107,
 	),
 	'+vowiki' => array(
 		'Wikipedia' => NS_PROJECT,
@@ -3800,14 +3651,6 @@ $wgConf->settings = array(
 	'tewikisource' => array(
 		'page' => 104,
 		'index' => 106,
-	),
-	'thwikisource' => array(
-		'page' => 250,
-		'index' => 252,
-	),
-	'ukwikisource' => array( // bug 48308
-		'page' => 250,
-		'index' => 252,
 	),
 	'vecwikisource' => array(
 		'page' => 102,
