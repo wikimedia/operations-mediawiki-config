@@ -1907,6 +1907,7 @@ if ( $wmgUseVisualEditor ) {
 	}
 	if ( $wmgVisualEditorDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
+		$wgHiddenPrefs[] = 'visualeditor-enable'; // Bug 48666
 	}
 	if ( $wmgVisualEditorExperimental ) {
 		$wgVisualEditorEnableExperimentalCode = true;
