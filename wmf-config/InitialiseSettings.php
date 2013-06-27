@@ -11847,10 +11847,11 @@ $wgConf->settings = array(
 
 'wmgUseEcho' => array(
 	'default' => false,
+	'enwiki' => true,
+	'enwikivoyage' => true,
+	'mediawikiwiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
-	'mediawikiwiki' => true,
-	'enwiki' => true,
 ),
 'wmgEchoEnableEmailBatch' => array(
 	'default' => true,
@@ -11895,9 +11896,10 @@ $wgConf->settings = array(
 
 'wmgUseThanks' => array(
 	'default' => false,
-	'testwiki' => true,
-	'mediawikiwiki' => true,
 	'enwiki' => true,
+	'enwikivoyage' => true,
+	'mediawikiwiki' => true,
+	'testwiki' => true,
 ),
 
 'wmgUseDisambiguator' => array(
