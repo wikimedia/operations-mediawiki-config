@@ -9,6 +9,5 @@ return array(
 	'wikiversity.beta.wmflabs.org',
 	'wikivoyage.beta.wmflabs.org',
 	'meta.wikimedia.beta.wmflabs.org',
-	'incubator.wikimedia.beta.wmflabs.org',
 	'commons.wikimedia.beta.wmflabs.org',
 );
