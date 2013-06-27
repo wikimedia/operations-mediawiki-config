@@ -9802,6 +9802,7 @@ $wgConf->settings = array(
 	'arwiki' => true,
 	'arwikisource' => true,
 	'commonswiki' => true,
+	'dewikiversity' => true, // Bug 49449
 	'enwikinews' => true,
 	'guwiki' => true, // Bug 40872
 	'guwikisource' => true, // Bug 40872
