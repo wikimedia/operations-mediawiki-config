@@ -1217,7 +1217,6 @@ if ( $wmgUseCentralAuth ) {
 		// wmflabs beta cluster
 		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\.\w+\.\w+\./';
 		$wgCentralAuthAutoLoginWikis = array(
-			'incubator.wikimedia.beta.wmflabs.org' => 'incubatorwiki',
 			'.wikipedia.beta.wmflabs.org' => 'enwiki',
 			'.wikisource.beta.wmflabs.org' => 'enwikisource',
 			'.wikibooks.beta.wmflabs.org' => 'enwikibooks',
