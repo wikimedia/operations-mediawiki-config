@@ -142,7 +142,6 @@ $IP/extensions/VisualEditor/VisualEditor.php
 $IP/extensions/Wikibase/client/WikibaseClient.php
 $IP/extensions/Wikibase/lib/WikibaseLib.php
 $IP/extensions/Wikibase/repo/Wikibase.php
-$IP/extensions/WikibaseDataModel/WikibaseDataModel.php
 $IP/extensions/WikiEditor/WikiEditor.php
 $IP/extensions/wikihiero/wikihiero.php
 $IP/extensions/WikiLove/WikiLove.php
