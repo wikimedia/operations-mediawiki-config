@@ -2443,6 +2443,10 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSPosition = $wmgULSPosition;
 }
 
+if ( $wmgUseWikibaseDataModel ) {
+	require_once( "$IP/extensions/WikibaseDataModel/WikibaseDataModel.php" );
+}
+
 if ( $wmgUseWikibaseRepo ) {
 	require_once( "$IP/extensions/DataValues/DataValues.php" );
 	require_once( "$IP/extensions/Diff/Diff.php" );
