@@ -7111,11 +7111,29 @@ $wgConf->settings = array(
 	),
 
 	'metawiki' => array(
-		'user' => array( 'move' => false ), // sigh. tired of this shit. brion -2007-01-10
+		/* 'user' => array( 'reupload-own' => false ), // bug 50287 */
+		'autoconfirmed' => array( // bug 50287
+			'upload' => false,
+			'reupload' => false,
+			),
+		'confirmed' => array( // bug 50287
+			'upload' => false,
+			'reupload' => false,
+			),
 		'steward' => array( 'userrights-interwiki' => true ), // new steward stuff, yay 2007-12-27
 		'flood' => array( 'bot' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'centralnoticeadmin' => array( 'centralnotice-admin' => true, 'editinterface' => true ), //adding to allow CN access without local sysop JRA 2013-02-21
+		'uploader' => array( // bug 50287
+			'upload' => true,
+			'reupload' => true,
+			'reupload-own' => true,
+			),
+		'sysop' => array( // bug 50287
+			'upload' => true,
+			'reupload' => true,
+			'reupload-own' => true,
+			),
 	),
 	'mkwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -7805,7 +7823,7 @@ $wgConf->settings = array(
 		'coder' => array( 'coder' ),
 	),
 	'+metawiki' => array(
-		'bureaucrat' => array( 'ipblock-exempt', 'centralnoticeadmin', 'flood' ), // Bug 46639
+		'bureaucrat' => array( 'ipblock-exempt', 'centralnoticeadmin', 'flood', 'uploader' ), // Bug 46639
 		'checkuser'  => array( 'ipblock-exempt' ),
 		'sysop'      => array( 'autopatrolled' ),
 	),
@@ -8228,7 +8246,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'transwiki', 'import', 'coder', 'svnadmins' ),
 	),
 	'+metawiki' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'ipblock-exempt', 'flood', 'translationadmin', 'centralnoticeadmin' ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=37198
+		'bureaucrat' => array( 'sysop', 'bureaucrat', 'ipblock-exempt', 'flood', 'translationadmin', 'centralnoticeadmin', 'uploader' ), // bug 37198, 50287
 		'checkuser'  => array( 'ipblock-exempt' ),
 		'sysop'      => array( 'autopatrolled' ),
 	),
