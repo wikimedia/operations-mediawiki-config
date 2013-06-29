@@ -6654,6 +6654,7 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
+		'flood' => array( 'bot' => true ), // bug 50425
 	),
 	'cawiki' => array(
 		'user' => array( 'patrol' => false ),
@@ -7629,7 +7630,8 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'import' ),
 	),
 	'+bswiki' => array(
-		'bureaucrat' => array( 'patroller', 'autopatrolled', 'rollbacker' )
+		'sysop' => array( 'flood' ), // bug 50425
+		'bureaucrat' => array( 'patroller', 'autopatrolled', 'rollbacker' ),
 	),
 	'+cawiki' => array(
 		'sysop' => array( 'rollbacker', 'autopatrolled', 'abusefilter', ),
@@ -8040,7 +8042,8 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'import' ),
 	),
 	'+bswiki' => array(
-		'bureaucrat' => array( 'patroller', 'autopatrolled', 'rollbacker' )
+		'sysop' => array( 'flood' ), // bug 50425
+		'bureaucrat' => array( 'patroller', 'autopatrolled', 'rollbacker' ),
 	),
 	'+cawiki' => array(
 		'sysop' => array( 'rollbacker', 'autopatrolled', 'abusefilter', ),
