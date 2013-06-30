@@ -10514,7 +10514,8 @@ $wgConf->settings = array(
 
 'wmgVisualEditorDefault' => array(
 	'default' => false,
-	'mediawikiwiki' => true // Enabled for all users
+	'mediawikiwiki' => true,
+	'enwiki' => true
 ),
 
 'wmgVisualEditorExperimental' => array(
@@ -10524,6 +10525,12 @@ $wgConf->settings = array(
 
 'wmgUseTemplateData' => array(
 	'default' => true,
+),
+
+// Bug 50000 - to remove once roll-out complete
+'wmgVisualEditorDisableForAnons' => array(
+	'default' => false,
+	'enwiki' => true, // Bug 49997: Temporarily set during enwiki phased deployment
 ),
 
 'wmgVisualEditorEnableEventLogging' => array(
