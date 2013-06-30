@@ -1912,6 +1912,10 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorExperimental ) {
 		$wgVisualEditorEnableExperimentalCode = true;
 	}
+	// Bug 50000 - to remove once roll-out is complete.
+	if ( $wmgVisualEditorDisableForAnons ) {
+		$wgVisualEditorDisableForAnons = true;
+	}
 	if ( $wmgVisualEditorEnableEventLogging ) {
 		$wgVisualEditorEnableEventLogging = true;
 	}
