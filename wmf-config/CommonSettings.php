@@ -2253,6 +2253,7 @@ if ( $wmgEnableGeoData ) {
 		unset( $wgAPIListModules['geopagesincategory'] );
 	}
 	$wgMaxCoordinatesPerPage = 2000;
+	$wgGeoDataSolrCommitPolicy = 'never';
 }
 
 if ( $wmgUseEcho ) {
