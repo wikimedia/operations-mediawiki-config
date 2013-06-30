@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e9daf9a7_5df2bb99",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2013-06-30T03:12:30Z",
+      "side": 1,
+      "message": "This is causing phplint to fail, unsurprisingly",
+      "revId": "efd9bf8fb974f292d297c20752eb089008ddfe2c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
