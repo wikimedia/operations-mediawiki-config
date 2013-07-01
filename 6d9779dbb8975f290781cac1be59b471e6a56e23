@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c9cff5e9_e87013a7",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2013-07-01T15:44:35Z",
+      "side": 1,
+      "message": "Can we kill 265–275 and just use the new var in lines 260–262 (and maybe something to handle lines 256–258)? Or does $wmfVersionNumber still need overriding?",
+      "revId": "6d9779dbb8975f290781cac1be59b471e6a56e23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c9cff5e9_08a927df",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 899,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2013-07-01T15:44:35Z",
+      "side": 1,
+      "message": "Here too?",
+      "revId": "6d9779dbb8975f290781cac1be59b471e6a56e23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c9cff5e9_68b6e33e",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2401,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2013-07-01T15:44:35Z",
+      "side": 1,
+      "message": "Here too?",
+      "revId": "6d9779dbb8975f290781cac1be59b471e6a56e23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c9cff5e9_48b31f4d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2405,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2013-07-01T15:44:35Z",
+      "side": 1,
+      "message": "Here too, replacing the override in CommonSettings-labs.php?",
+      "revId": "6d9779dbb8975f290781cac1be59b471e6a56e23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
