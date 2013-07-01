@@ -10397,6 +10397,8 @@ $wgConf->settings = array(
 
 'wmgVisualEditorEnableGenderSurvey' => array(
 	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
 	'enwiki' => true,
 ),
 
