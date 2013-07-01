@@ -10575,7 +10575,7 @@ $wgConf->settings = array(
 'wmgArticleFeedbackv5LotteryOdds' => array(
 	'default' => 0,
 	'testwiki' => array( NS_MAIN => 10, NS_HELP => 100 ),
-	'dewiki' => array( NS_MAIN => 0.1 ), // ~ 1500 articles out of 1.5 mio in total
+	'dewiki' => array( NS_MAIN => 0 ),
 	'frwiki' => array( NS_MAIN => 0, NS_HELP => 100 ),
 ),
 /*
@@ -10584,12 +10584,7 @@ $wgConf->settings = array(
 'wmgArticleFeedbackv5Categories' => array(
 	'default' => array(),
 	'testwiki' => array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' ),
-	'dewiki' => array(
-		'Wikipedia:Artikel-Feedback Grundstock',
-		'Wikipedia:Artikel-Feedback/Artikelgrundstock',
-		'Wikipedia:Artikel-Feedback/Artikel des Tages oder Schon gewusst',
-		'Wikipedia:Artikel-Feedback/Zusätzliche Artikel',
-	),
+	'dewiki' => array(),
 	'enwiki' => array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' ),
 	'frwiki' => array( 'Wikipédia:Outil_de_retour_des_lecteurs' ),
 ),
