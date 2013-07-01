@@ -10533,6 +10533,7 @@ $wgConf->settings = array(
 	'dewiki' => true, // Bug 42693
 	'enwiki' => true,
 	'frwiki' => true,
+	'ptwikibooks' => true,
 	'testwiki' => true,
 ),
 /*
@@ -10553,6 +10554,7 @@ $wgConf->settings = array(
 	'dewiki' => array( NS_MAIN ),
 	'enwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
 	'frwiki' => array( NS_MAIN, NS_HELP ),
+	'ptwikibooks' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
 ),
 /*
  * The percentage of articles AFTv5 will be displayed on (based on the last 3 digits
@@ -10564,6 +10566,7 @@ $wgConf->settings = array(
 	'testwiki' => array( NS_MAIN => 10, NS_HELP => 100 ),
 	'dewiki' => array( NS_MAIN => 0.1 ), // ~ 1500 articles out of 1.5 mio in total
 	'frwiki' => array( NS_MAIN => 0, NS_HELP => 100 ),
+	'ptwikibooks' => 100,
 ),
 /*
  * Articles that include this category, will display AFTv5, regardless of lottery.
@@ -10589,6 +10592,7 @@ $wgConf->settings = array(
 	'dewiki' => array( 'Wikipedia:Artikel-Feedback_Ausschlussliste', 'Wikipedia:Artikel-Feedback/Ausschlussliste' ),
 	'enwiki' => array( 'Article_Feedback_Blacklist' ),
 	'frwiki' => array( 'Wikipédia:Outil_de_retour_des_lecteurs/exclus' ),
+	'ptwikibooks' => array( 'Páginas que não podem ser avaliadas pelos leitores' ),
 ),
 /**
  * Email address that oversight requests will mail to.
@@ -10615,6 +10619,7 @@ $wgConf->settings = array(
 	'default' => '//en.wikipedia.org/wiki/Wikipedia:Tutorial',
 	'dewiki' => '//de.wikipedia.org/wiki/Wikipedia:Tutorial',
 	'frwiki' => '//fr.wikipedia.org/wiki/Aide:Comment_modifier_une_page',
+	'ptwikibooks' => '//pt.wikibooks.org/wiki/Help:Conteúdos',
 ),
 'wmgArticleFeedbackv5AbuseFiltering' => array(
 	'default' => false,
@@ -10622,6 +10627,7 @@ $wgConf->settings = array(
 	'dewiki' => true,
 	'enwiki' => true,
 	'frwiki' => true,
+	'ptwikibooks' => true,
 ),
 'wmgArticleFeedbackv5CTABuckets' => array(
 	'default' => array(
