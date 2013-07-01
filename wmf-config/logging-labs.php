@@ -11,6 +11,8 @@ if ( $wgCommandLineMode || PHP_SAPI == 'cli' ) {
 
 // udp2log logging for beta:
 $wgDebugLogGroups['dnsblacklist'] = "udp://$wmfUdp2logDest/dnsblacklist";
+$wgDebugLogGroups['mwsearch'] = "udp://$wmfUdp2logDest/mwsearch";
+$wgDebugLogGroups['squid'] = "udp://$wmfUdp2logDest/squid";
 
 
 // Ugly code to create a random hash and put it in logs
