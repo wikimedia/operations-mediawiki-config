@@ -5322,7 +5322,7 @@ $wgConf->settings = array(
 		101 => 'Kişi_tartışma',
 	),
 	'ukwikisource' => array( // bug 48308
-		NS_PROJECT_TALK => 'Обговорення_Вікіджерел', 
+		NS_PROJECT_TALK => 'Обговорення_Вікіджерел',
 		102 => 'Автор', // Author
 		103 => 'Обговорення_автора',
 	),
@@ -8400,7 +8400,7 @@ $wgConf->settings = array(
 			'confirmed', // bug 45124
 			'propertycreator', // bug 46953
 		),
-		'bureaucrat' => array( 
+		'bureaucrat' => array(
 			'translationadmin', // bug 44395
 			'flood', // bug 48013
 		),
@@ -9928,7 +9928,7 @@ $wgConf->settings = array(
 	'plwiki' => array( 'flood' => array( 'flood' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=20155 , bug 21238
 	'strategywiki' => array( 'sysop' => array( 'flood' ) ),
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
-	'wikidata' => array( 
+	'wikidata' => array(
 		'sysop' => array( 'flood', 'translationadmin' ), // Bug 48013, Bug 46856
 		'flood' => array( 'flood' ), // Bug 48013
 	),
