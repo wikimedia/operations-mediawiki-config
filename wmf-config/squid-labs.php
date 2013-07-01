@@ -3,6 +3,7 @@
 $wgSquidServers = array(
 	'10.4.0.17',   # deployment-squid
 	'10.4.0.51',   # deployment-cache-bits03
+	'10.4.1.133',  # deployment-cache-text1
 	'10.4.0.214',  # deployment-cache-upload03
 );
 
