@@ -1211,6 +1211,7 @@ if ( $wmgUseCentralAuth ) {
 		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
 		$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 		$wgCentralAuthLoginWiki = $wmgCentralAuthLoginWiki;
+		$wgCentralAuthSilentLogin = $wmgCentralAuthSilentLogin;
 		break;
 
 	case 'labs':
