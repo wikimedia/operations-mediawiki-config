@@ -6947,6 +6947,9 @@ $wgConf->settings = array(
 	'hewikiquote' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 	),
+	'hewikivoyage' => array(
+		'autopatrolled' => array( 'autopatrol' => true ), // bug 50377
+	),
 	'hiwiki' => array(
 		'reviewer' => array ( 'patrol' => true, 'autopatrol' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -7755,6 +7758,9 @@ $wgConf->settings = array(
 	'+hewikiquote' => array(
 		'sysop' => array( 'autopatrolled' ),
 	),
+	'+hewikivoyage' => array(
+		'sysop' => array( 'autopatrolled' ), // bug 50377
+	),
 	'+hiwiki' => array(
 		'sysop' => array( 'abusefilter', 'autopatrolled', 'reviewer' ),
 	),
@@ -8168,6 +8174,9 @@ $wgConf->settings = array(
 	),
 	'+hewikiquote' => array(
 		'sysop' => array( 'autopatrolled' ),
+	),
+	'+hewikivoyage' => array(
+		'sysop' => array( 'autopatrolled' ), // bug 50377
 	),
 	'+hiwiki' => array(
 		'sysop' => array( 'abusefilter', 'autopatrolled', 'reviewer' ),
