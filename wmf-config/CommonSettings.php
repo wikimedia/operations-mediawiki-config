@@ -2442,6 +2442,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSGeoService = false;
 	$wgULSAnonCanChangeLanguage = false;
 	$wgULSPosition = $wmgULSPosition;
+	$wgULSIMEEnabled = $wmgULSIMEEnabled;
 }
 
 if ( $wmgUseWikibaseRepo ) {

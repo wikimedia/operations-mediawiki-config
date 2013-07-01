@@ -12111,6 +12111,7 @@ $wgConf->settings = array(
 	'cebwiki' => true,
 	'dvwiki' => true,
 	'dvwiktionary' => true,
+	'enwiki' => true,
 	'enwikisource' => true,
 	'enwiktionary' => true,
 	'fawiki' => true,
@@ -12186,6 +12187,12 @@ $wgConf->settings = array(
 	'special' => 'personal',
 	'wikimedia' => 'personal',
 	'betawikiversity' => 'personal',
+),
+
+// Whether ime is enabled *by default*
+'wmgULSIMEEnabled' => array(
+	'default' => true,
+	'enwiki' => false,
 ),
 
 'wmgUseWikibaseRepo' => array(
