@@ -9537,6 +9537,13 @@ $wgConf->settings = array(
 	'testwikidatawiki' => 'loginwiki',
 ),
 
+'wmgCentralAuthSilentLogin' => array(
+	'default' => false,
+	'loginwiki' => true,
+	'test2wiki' => true,
+	'testwikidatawiki' => true,
+),
+
 # @}
 
 'wgEnableMWSuggest' => array(
