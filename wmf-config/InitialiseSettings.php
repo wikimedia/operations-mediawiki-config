@@ -12229,6 +12229,7 @@ $wgConf->settings = array(
 	),
 	'test2wiki' => array(
 		'siteGlobalID' => 'enwiki',
+		'propagateChangesToRepo' => false,
 	),
 	'be_x_oldwiki' => array(
 		'sort' => 'alphabetic',
