@@ -10392,7 +10392,6 @@ $wgConf->settings = array(
 // Bug 49604 - to remove once complete.
 'wmgVisualEditorEnableSplitTest' => array(
 	'default' => false,
-	'enwiki' => true,
 ),
 
 'wmgVisualEditorEnableGenderSurvey' => array(
