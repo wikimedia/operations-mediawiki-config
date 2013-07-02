@@ -44,7 +44,14 @@ if ( $wmgMobileFrontend ) {
 	// looking for X-WAP headers in requests coming from Squid
 	if ( $wmgMFVaryResources ) {
 		$wgMFVaryResources = true;
-		$wgExtensionFunctions[] = 'wmfSetupMobileLoadScript';
+		if ( $wgDBname === 'mediawikiwiki' ) {
+			$wgHooks['BeforeInitialize'][] = $wgHooks['ResourceLoaderRegisterModules'][] = function() {
+				wmfSetupMobileLoadScript();
+				return true;
+			};
+		} else {
+			$wgExtensionFunctions[] = 'wmfSetupMobileLoadScript';
+		}
 	}
 }
 
