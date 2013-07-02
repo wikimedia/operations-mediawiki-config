@@ -11840,9 +11840,10 @@ $wgConf->settings = array(
 'wmgUseEducationProgram' => array(
 	'default' => false,
 	'dewikiversity' => true,
-	'hewiki' => true, // bug 48848
 	'enwiki' => true,
+	'hewiki' => true, // bug 48848
 	'mkwiki' => true,
+	'nlwiki' => true, // bug 50574
 	'svwiki' => true, // bug 49009
 	'test2wiki' => true,
 ),
