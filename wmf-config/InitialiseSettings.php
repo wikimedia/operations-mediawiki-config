@@ -10563,7 +10563,6 @@ $wgConf->settings = array(
 'wmgArticleFeedbackv5Namespaces' => array(
 	'default' => array( NS_MAIN ),
 	'testwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
-	'dewiki' => array( NS_MAIN ),
 	'enwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
 	'frwiki' => array( NS_MAIN, NS_HELP ),
 ),
@@ -10575,7 +10574,6 @@ $wgConf->settings = array(
 'wmgArticleFeedbackv5LotteryOdds' => array(
 	'default' => 0,
 	'testwiki' => array( NS_MAIN => 10, NS_HELP => 100 ),
-	'dewiki' => array( NS_MAIN => 0 ),
 	'frwiki' => array( NS_MAIN => 0, NS_HELP => 100 ),
 ),
 /*
