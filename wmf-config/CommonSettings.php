@@ -2474,26 +2474,26 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgExtraNamespaces[WB_NS_QUERY] = 'Query';
 	$wgExtraNamespaces[WB_NS_QUERY_TALK] = 'Query_talk';
 
-	$wgWBSettings['changesAsJson'] = true;
+	$wgWBRepoSettings['changesAsJson'] = true;
 
 	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
 
 	// Assigning the correct content models to the namespaces
-	$wgWBSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_ITEM] = NS_MAIN;
-	$wgWBSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_PROPERTY] = WB_NS_PROPERTY;
+	$wgWBRepoSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_ITEM] = NS_MAIN;
+	$wgWBRepoSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_PROPERTY] = WB_NS_PROPERTY;
 
-	$wgWBSettings['idBlacklist'] = array( 1, 2, 3, 4, 5, 8, 13, 23, 24, 42, 80, 666, 1337, 1868, 1971, 2000, 2001, 2012, 2013 );
+	$wgWBRepoSettings['idBlacklist'] = array( 1, 2, 3, 4, 5, 8, 13, 23, 24, 42, 80, 666, 1337, 1868, 1971, 2000, 2001, 2012, 2013 );
 
-	$wgWBSettings['withoutTermSearchKey'] = false;
+	$wgWBRepoSettings['withoutTermSearchKey'] = false;
 
-	$wgWBSettings['clientDbList'] = array_merge(
+	$wgWBRepoSettings['clientDbList'] = array_merge(
 		array( 'test2wiki' => 'test2wiki' ),
 		array_map( 'trim', file( getRealmSpecificFilename( "$IP/../wikipedia.dblist" ) ) )
 	);
 
-	$wgWBSettings['localClientDatabases'] = array_combine(
-		$wgWBSettings['clientDbList'],
-		$wgWBSettings['clientDbList']
+	$wgWBRepoSettings['localClientDatabases'] = array_combine(
+		$wgWBRepoSettings['clientDbList'],
+		$wgWBRepoSettings['clientDbList']
 	);
 
 	$wgGroupPermissions['*']['property-create'] = false;
@@ -2505,20 +2505,20 @@ if ( $wmgUseWikibaseClient ) {
 	require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
 	require_once( "$IP/extensions/Wikibase/client/WikibaseClient.php" );
 
-	$wgWBSettings['changesDatabase'] = 'wikidatawiki';
-	$wgWBSettings['repoDatabase'] = 'wikidatawiki';
+	$wgWBClientSettings['changesDatabase'] = 'wikidatawiki';
+	$wgWBClientSettings['repoDatabase'] = 'wikidatawiki';
 
 	// to be safe, keeping this here although $wgDBname is default setting
-	$wgWBSettings['siteGlobalID'] = $wgDBname;
-	$wgWBSettings['repoUrl'] = "//{$wmfHostnames['wikidata']}";
+	$wgWBClientSettings['siteGlobalID'] = $wgDBname;
+	$wgWBClientSettings['repoUrl'] = "//{$wmfHostnames['wikidata']}";
 
-	$wgWBSettings['repoNamespaces'] = array(
+	$wgWBClientSettings['repoNamespaces'] = array(
 		'wikibase-item' => '',
 		'wikibase-property' => 'Property'
 	);
 
-	$wgWBSettings['allowDataTransclusion'] = true;
-	$wgWBSettings['enableSiteLinkWidget'] = true;
+	$wgWBClientSettings['allowDataTransclusion'] = true;
+	$wgWBClientSettings['enableSiteLinkWidget'] = true;
 
 	$wgHooks['SetupAfterCache'][] = 'wmfWBClientExcludeNS';
 
@@ -2534,7 +2534,7 @@ if ( $wmgUseWikibaseClient ) {
 	};
 
 	foreach( $wmgWikibaseClientSettings as $setting => $value ) {
-		$wgWBSettings[$setting] = $value;
+		$wgWBClientSettings[$setting] = $value;
 	}
 
 }
