@@ -16,6 +16,24 @@
       "revId": "9d2b2f8f439e282d97ba0a678d2976d1b577eab2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "89c97deb_cfd275d0",
+        "filename": ".gitignore",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-07-03T21:16:48Z",
+      "side": 1,
+      "message": "I think if you do a git add images , it will complain and ask you to use git add -force or something.\n\nBut yeah, that is merely for documentation . Git blame will point here and give a hint to the future developers about what this file is about.",
+      "parentUuid": "89c97deb_86a6aac2",
+      "revId": "9d2b2f8f439e282d97ba0a678d2976d1b577eab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
