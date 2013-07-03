@@ -3451,6 +3451,7 @@ $wgConf->settings = array(
 	// Wikisource @{
 	'+wikisource' => array( 0 => 1, 6 => 0, 8 => 0 ),
 	'+cswikisource' => array( 14 => 1 ),
+	'+enwikisource' => array( 114 => 1, 115 => 1 ), // bug 50007
 	'+huwikisource' => array( 10 => 0 ),
 	'+nowikisource' => array( 10 => 0 ),
 	'+ruwikisource' => array( 10 => 0 ),
@@ -4998,6 +4999,8 @@ $wgConf->settings = array(
 	// @} end of Wikipedia
 
 	// Wikisource wikis @{
+	// Please reserve NS 114 for 'Translation', thanks!
+
 	'sourceswiki' => array(
 		104 => 'Page',
 		105 => 'Page_talk',
@@ -5015,6 +5018,8 @@ $wgConf->settings = array(
 		105 => 'Page_talk',
 		106 => 'Index',
 		107 => 'Index_talk',
+		114 => 'Translation', // bug 50007
+		115 => 'Translation_talk', // bug 50007
 	),
 	'arwikisource' => array(
 		100 => 'بوابة',
@@ -6375,7 +6380,7 @@ $wgConf->settings = array(
 	'+elwikisource' => array( 102 => 1 ),
 	'+enwikibooks' => array( 4 => 1, 112 => 1 ),
 	'+enwikinews' => array( 100 => 1, 101 => 0 ),
-	'+enwikisource' => array( 102 => 1, 106 => 1 ),
+	'+enwikisource' => array( 102 => 1, 106 => 1, 114 => 1 ), // bug 50007
 	'+eswiki' => array( 100 => 1, 104 => 1 ),
 	'+eswikisource' => array( 104 => 1 ),
 	'+etwikisource' => array( 104 => 1, 106 => 1 ),
@@ -9043,7 +9048,7 @@ $wgConf->settings = array(
 	'+dewikisource' => array( 102, 104 ),
 	'+elwikisource' => array( 100, 102 ),
 	'+enwikibooks' => array( 102, 110 ),
-	'+enwikisource' => array( 102, 104, 106 ),
+	'+enwikisource' => array( 102, 104, 106, 114 ), // bug 50007
 	'+eswiki' => array( 104 ), // Bug 39866
 	'+eswikisource' => array( 102, 104 ),
 	'+etwikisource' => array( 102, 104, 106 ),
