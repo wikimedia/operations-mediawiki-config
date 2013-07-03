@@ -6,6 +6,9 @@
 # on the address in the SquidServers list
 $wgSquidServersNoPurge = array( '127.0.0.1',
 	'10.4.1.133',  # deployment-cache-text1
+	'10.4.0.51',   # deployment-cache-bits03
+	'10.4.0.211',  # deployment-cache-upload04
+	'10.4.1.82',   # deployment-cache-mobile01
 );
 
 # The beta cluster does not have multicast, hence we route the purge
