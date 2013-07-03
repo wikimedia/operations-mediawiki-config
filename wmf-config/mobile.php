@@ -12,6 +12,7 @@ if ( $wmgMobileFrontend ) {
 	$wgMFPhotoUploadWiki = $wmgMFPhotoUploadWiki;
 	$wgMFNearbyNamespace = $wmgMFNearbyNamespace;
 	$wgMFPhotoUploadAppendToDesc = $wmgMFPhotoUploadAppendToDesc;
+	$wgMFHomepageSpecialCasing = $wmgMFHomepageSpecialCasing;
 
 	if ( $wmgMobileFrontendLogo ) {
 		$wgMobileFrontendLogo = $wmgMobileFrontendLogo;
