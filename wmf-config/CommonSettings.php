@@ -257,21 +257,9 @@ if ( $wgDBname == 'testwiki' ) {
 	$wgStyleSheetPath = "//test.wikipedia.org/w/static-$wmfVersionNumber/skins";
 	$wgResourceBasePath = "//test.wikipedia.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
 } else {
-	$wgExtensionAssetsPath = "//bits.wikimedia.org/static-$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "//bits.wikimedia.org/static-$wmfVersionNumber/skins";
-	$wgResourceBasePath = "//bits.wikimedia.org/static-$wmfVersionNumber"; // This means resources will be requested from /static-VERSION/resources
-}
-
-# For labs, override settings just above. This need to be done before
-# extensions so we can not use CommonSettings-labs.php
-if( $wmfRealm == 'labs' ) {
-	# Base path:
-	$wgResourceBasePath    = "//bits.beta.wmflabs.org/static-master";
-
-	# Assets:
-	$wgExtensionAssetsPath = $wgResourceBasePath . "/extensions";
-	$wgStyleSheetPath      = $wgResourceBasePath . "/skins";
-
+	$wgExtensionAssetsPath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber/skins";
+	$wgResourceBasePath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber"; // This means resources will be requested from /static-VERSION/resources
 }
 
 $wgStylePath = $wgStyleSheetPath;
