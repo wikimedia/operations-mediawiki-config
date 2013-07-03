@@ -27,6 +27,9 @@ ganglia.dat
 /images/*.gif
 /images/*.png
 /images/*.xcf
+# Exceptions:
+# $wgCopyrightIcon
+!/images/wikimedia-button.png
 
 ## Not in version control yet
 fonts
