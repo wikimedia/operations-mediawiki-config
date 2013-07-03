@@ -11001,7 +11001,6 @@ $wgConf->settings = array(
 ),
 'wmgMFNearby' => array(
 	'default' => true, // Does not gets enabled on wikis w/o GeoData anyway
-	'wikivoyage' => false,
 ),
 'wmgMFPhotoUploadWiki' => array(
 	'default' => 'commonswiki',
