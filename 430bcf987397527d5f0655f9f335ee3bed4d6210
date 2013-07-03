@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "89c97deb_6679ee2b",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 254,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2013-07-03T15:19:52Z",
+      "side": 1,
+      "message": "\u0026\u0026 $wmfRealm \u003d\u003d \u0027production\u0027 ? Or maybe better, adjust the below to use test.wikipedia.beta.wmflabs.org on Labs.",
+      "revId": "430bcf987397527d5f0655f9f335ee3bed4d6210",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
