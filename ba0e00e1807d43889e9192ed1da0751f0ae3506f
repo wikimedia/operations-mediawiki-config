@@ -16,6 +16,24 @@
       "revId": "ba0e00e1807d43889e9192ed1da0751f0ae3506f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69c609db_057c721b",
+        "filename": "wmf-config/squid-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2013-07-03T23:07:20Z",
+      "side": 1,
+      "message": "If they should it won\u0027t be in this commit.",
+      "parentUuid": "69c609db_45eb0ade",
+      "revId": "ba0e00e1807d43889e9192ed1da0751f0ae3506f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
