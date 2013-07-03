@@ -27,14 +27,14 @@ if ( $wmgMobileFrontend ) {
 
 	// Point mobile load.php requests to a special path on bits that gets X-Device headers
 	function wmfSetupMobileLoadScript() {
-		global $wgDBname, $wgLoadScript;
+		global $wgDBname, $wgLoadScript, $wmfHostnames;
 
 		if ( MobileContext::singleton()->shouldDisplayMobileView() ) {
 			if ( $wgDBname === 'testwiki' ) {
 				// testwiki's resources aren't loaded from bits, it just needs a mobile domain
 				$wgLoadScript = '//test.m.wikipedia.org/w/load.php';
 			} else {
-				$wgLoadScript = str_replace( 'bits.wikimedia.org/', 'bits.wikimedia.org/m/', $wgLoadScript );
+				$wgLoadScript = str_replace( $wmfHostnames['bits'], $wmfHostnames['bits'].'/m/', $wgLoadScript );
 			}
 		}
 	}
