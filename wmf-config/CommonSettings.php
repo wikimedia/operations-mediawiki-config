@@ -2519,6 +2519,7 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['allowDataTransclusion'] = true;
 	$wgWBClientSettings['enableSiteLinkWidget'] = true;
+	$wgWBClientSettings['propagateChangesToRepo'] = true;
 
 	$wgHooks['SetupAfterCache'][] = 'wmfWBClientExcludeNS';
 
