@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "89c97deb_86b98acb",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2013-07-03T15:21:50Z",
+      "side": 1,
+      "message": "This should probably also vary based on production vs labs? Right now it looks like the labs version is going to still be pointing to production\u0027s loader.",
+      "revId": "4490dfab3d532717f98b16ed2d7a494acd7b5ff3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "89c97deb_069d9a54",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2013-07-03T15:21:50Z",
+      "side": 1,
+      "message": "Slightly different semantics here, not sure if that matters.",
+      "revId": "4490dfab3d532717f98b16ed2d7a494acd7b5ff3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
