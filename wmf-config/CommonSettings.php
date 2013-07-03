@@ -106,6 +106,7 @@ switch( $wmfRealm ) {
 case 'labs':
 	$wmfHostnames['bits']     = 'bits.beta.wmflabs.org';
 	$wmfHostnames['meta']     = 'meta.wikimedia.beta.wmflabs.org';
+	$wmfHostnames['test']     = 'test.wikimedia.beta.wmflabs.org';
 	$wmfHostnames['upload']   = 'upload.beta.wmflabs.org';
 	$wmfHostnames['wikidata'] = 'wikidata.beta.wmflabs.org';
 	break;
@@ -113,6 +114,7 @@ case 'production':
 default:
 	$wmfHostnames['bits']   = 'bits.wikimedia.org';
 	$wmfHostnames['meta']   = 'meta.wikimedia.org';
+	$wmfHostnames['test']   = 'test.wikipedia.org';
 	$wmfHostnames['upload'] = 'upload.wikimedia.org';
 	$wmfHostnames['wikidata'] = 'www.wikidata.org';
 	break;
@@ -253,25 +255,13 @@ unset( $wgStyleSheetPath );
 // New URL scheme
 if ( $wgDBname == 'testwiki' ) {
 	// Make testing skin/JS changes easier
-	$wgExtensionAssetsPath = "//test.wikipedia.org/w/static-$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "//test.wikipedia.org/w/static-$wmfVersionNumber/skins";
-	$wgResourceBasePath = "//test.wikipedia.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
+	$wgExtensionAssetsPath = "//{$wmfHostnames['test']}/w/static-$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "//{$wmfHostnames['test']}/w/static-$wmfVersionNumber/skins";
+	$wgResourceBasePath = "//{$wmfHostnames['test']}/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
 } else {
-	$wgExtensionAssetsPath = "//bits.wikimedia.org/static-$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "//bits.wikimedia.org/static-$wmfVersionNumber/skins";
-	$wgResourceBasePath = "//bits.wikimedia.org/static-$wmfVersionNumber"; // This means resources will be requested from /static-VERSION/resources
-}
-
-# For labs, override settings just above. This need to be done before
-# extensions so we can not use CommonSettings-labs.php
-if( $wmfRealm == 'labs' ) {
-	# Base path:
-	$wgResourceBasePath    = "//bits.beta.wmflabs.org/static-master";
-
-	# Assets:
-	$wgExtensionAssetsPath = $wgResourceBasePath . "/extensions";
-	$wgStyleSheetPath      = $wgResourceBasePath . "/skins";
-
+	$wgExtensionAssetsPath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber/skins";
+	$wgResourceBasePath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber"; // This means resources will be requested from /static-VERSION/resources
 }
 
 $wgStylePath = $wgStyleSheetPath;
