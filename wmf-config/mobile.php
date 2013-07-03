@@ -125,6 +125,10 @@ $wgMFForceSecureLogin = $wmgMFForceSecureLogin;
 // Enable X-Analytics logging
 $wgMFEnableXAnalyticsLogging = $wmgMFEnableXAnalyticsLogging;
 
+// Blacklist some pages
+$wgMFNoMobileCategory = $wmgMFNoMobileCategory;
+$wgMFNoMobilePages = $wmgMFNoMobilePages;
+
 // Hack to work around https://bugzilla.wikimedia.org/show_bug.cgi?id=35215
 $wgHooks['EnterMobileMode'][] = function() {
 	global $wgCentralHost, $wgCentralPagePath, $wgCentralBannerDispatcher, $wgCentralBannerRecorder, $wgCentralAuthCookieDomain;
