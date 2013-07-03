@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a9d4817d_2a421f42",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2403,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-07-03T11:12:10Z",
+      "side": 0,
+      "message": "Done with https://gerrit.wikimedia.org/r/71777",
+      "revId": "28f81eddbf694c0cf40b3555d7f816d515129cdf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

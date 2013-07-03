@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "a9d4817d_c7409e5c",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 274,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-07-03T11:12:10Z",
+      "side": 1,
+      "message": "Seems that can be removed:\n\n hashar@deployment-bastion:~$ mwscript eval.php --wiki\u003denwiki\n \u003e return $wmfVersionNumber;\n master\n \u003e \n\nDid that in a child change: https://gerrit.wikimedia.org/r/71774\n\nThank you to have spotted that :)",
+      "parentUuid": "c9cff5e9_e87013a7",
+      "revId": "6d9779dbb8975f290781cac1be59b471e6a56e23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c9cff5e9_08a927df",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "a9d4817d_e714c24e",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 899,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-07-03T11:12:10Z",
+      "side": 1,
+      "message": "It is not on beta :( http://bits.beta.wmflabs.org/images/wikimedia-button.png gives a 404.\n\nThat is an alias in the apache configuration :(\n\n\n\u003cVirtualHost *\u003e\n    DocumentRoot \"/usr/local/apache/common/docroot/bits/\"\n    ServerName bits.wikimedia.org\n    ...\n    Alias /images/ /apache/common/images/\n    ...\n\nSo it should be in  /images/ of operations/mediawiki-config.git but that fall under the git ignore rule \u0027/images/*.png\u0027  grmblbl.\n\nAdded it in our git repository with https://gerrit.wikimedia.org/r/71775\n\nwgCopyrightIcon changed with  https://gerrit.wikimedia.org/r/71776",
+      "parentUuid": "c9cff5e9_08a927df",
+      "revId": "6d9779dbb8975f290781cac1be59b471e6a56e23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "c9cff5e9_68b6e33e",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2013-07-01T15:44:35Z",
       "side": 1,
       "message": "Here too?",
+      "revId": "6d9779dbb8975f290781cac1be59b471e6a56e23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a9d4817d_ea5767ff",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2401,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-07-03T11:12:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c9cff5e9_68b6e33e",
       "revId": "6d9779dbb8975f290781cac1be59b471e6a56e23",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
