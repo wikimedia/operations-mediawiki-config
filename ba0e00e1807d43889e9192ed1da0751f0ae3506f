@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "69c609db_45eb0ade",
+        "filename": "wmf-config/squid-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 166
+      },
+      "writtenOn": "2013-07-03T22:59:13Z",
+      "side": 1,
+      "message": "Shouldn\u0027t these go under $wgSquidServersNoPurge as in the production squid.php?",
+      "revId": "ba0e00e1807d43889e9192ed1da0751f0ae3506f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
