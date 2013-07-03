@@ -28,7 +28,6 @@ $wmgAddWikiNotify = false;
 $wgPreloadJavaScriptMwUtil = true;
 
 if ( $wmgUseEventLogging ) {
-	$wgEventLoggingBaseUri = '//bits.beta.wmflabs.org/event.gif';
 	$wgEventLoggingFile = 'udp://deployment-eventlogging.pmtpa.wmflabs:8421/EventLogging';
 }
 
