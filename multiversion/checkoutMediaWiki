@@ -71,7 +71,7 @@ function checkoutMediaWiki() {
 		}
 
 		passthru( 'git config alias.up "pull --ff-only"', $ret );
-		if( $res ) {
+		if( $ret ) {
 			# Don't exit, no big deal
 			print "Error configuring 'up' alias\n";
 		}
