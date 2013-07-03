@@ -1,4 +1,12 @@
 <?php
+
+$wgSquidServers = array(
+	'10.4.0.17',   # deployment-squid
+	'10.4.0.51',   # deployment-cache-bits03
+	'10.4.1.133',  # deployment-cache-text1
+	'10.4.0.214',  # deployment-cache-upload03
+);
+
 # our text squid in beta labs gets forwarded requests
 # from the ssl terminator, to 127.0.0.1, so adding that
 # address to the NoPurge list so that XFF headers for it
@@ -14,8 +22,6 @@ $wgHTCPMulticastRouting = array(
 		'host' => '10.4.0.214',  # deployment-cache-upload03
 		'port' => 4827,
 	),
-
-	# bits?  10.4.0.51  # deployment-cache-bits03
 
 	# Fallback??
 	'' => array(
