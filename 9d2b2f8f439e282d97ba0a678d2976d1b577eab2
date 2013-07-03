@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "89c97deb_86a6aac2",
+        "filename": ".gitignore",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2013-07-03T15:12:48Z",
+      "side": 1,
+      "message": "Technically this isn\u0027t necessary. .gitignore applies only to untracked files; if you use \"git add\" to add it explicitly, the .gitignore entry will have no effect.\n\nOTOH, for documentation purposes it\u0027s still probably useful.",
+      "revId": "9d2b2f8f439e282d97ba0a678d2976d1b577eab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
