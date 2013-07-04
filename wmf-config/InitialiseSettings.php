@@ -3197,6 +3197,8 @@ $wgConf->settings = array(
 		'Обговорення_Wikisource' => NS_PROJECT_TALK, // bug 48308
 		'Author' => 102,  // bug 48308
 		'Author_talk' => 103,
+		'Translation' => 114,  // bug 50561
+		'Translation_talk' => 115,
 	),
 	'+ukwikivoyage' => array(
 		'Portal' => 100,
@@ -3456,6 +3458,7 @@ $wgConf->settings = array(
 	'+nowikisource' => array( 10 => 0 ),
 	'+ruwikisource' => array( 10 => 0 ),
 	'+trwikisource' => array( 10 => 0 ),
+	'+ukwikisource' => array( 114 => 1, 115 => 1 ), // bug 50561
 	'+viwikisource' => array( 10 => 0 ),
 	'+zhwikisource' => array( 10 => 0 ),
 	// @}
@@ -5330,6 +5333,8 @@ $wgConf->settings = array(
 		NS_PROJECT_TALK => 'Обговорення_Вікіджерел',
 		102 => 'Автор', // Author
 		103 => 'Обговорення_автора',
+		114 => 'Переклад', // bug 50561
+		115 => 'Обговорення_перекладу', // bug 50561
 	),
 	'vecwikisource' => array(
 		100 => 'Autor',
@@ -6425,6 +6430,7 @@ $wgConf->settings = array(
 	'+tlwikibooks' => array( 100 => 1, 101 => 0 ),
 	'+trwikisource' => array( 100 => 1 ),
 	'+ukwikinews' => array( 14 => 1), // bug 49335
+	'+ukwikisource' => array( 102 => 1, 114 => 1, 252 => 1), // bugs 48308, 50561
 	'+vecwikisource' => array( 100 => 1, 104 => 1 ),
 	'+viwikibooks' => array( 102 => 1, 104 => 1, 106 => 1 ),
 	'+viwikisource' => array( 102 => 1, 106 => 1 ),
@@ -9113,6 +9119,7 @@ $wgConf->settings = array(
 	'+tewikisource' => array( 102, 104, 106 ),
 	'+trwikibooks' => array( 100, 110, ),
 	'+trwikisource' => array( 100 ),
+	'+ukwikisource' => array( 102, 114, 250, 252 ), // bugs 48308, 50561
 	'+vecwikisource' => array( 100, 102, 104 ),
 	'+viwikibooks' => array( 104, 106 ),
 	'+viwikisource' => array( 102, 104, 106 ),
