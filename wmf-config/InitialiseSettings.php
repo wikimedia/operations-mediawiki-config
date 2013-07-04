@@ -8727,7 +8727,7 @@ $wgConf->settings = array(
 	'viwikiquote'  => array( 'w', 'wikt', 'b', 's' ),
 
 	'wikidata' => array( 'meta', 'commons', 'en', 'de', 'fr', 'es' ),
-	'+testwikidatawiki' => array( 'wikidata' ),
+	'+testwikidatawiki' => array( 'd' ),
 	'wikimania2012wiki' => array( 'en', 'meta', 'wm2011' ),
 	'wikimania2013wiki' => array( 'en', 'meta', 'wm2011', 'wm2012' ),
 	'wikimania2014wiki' => array( 'en', 'meta', 'wm2011', 'wm2012', 'wm2013' ),
