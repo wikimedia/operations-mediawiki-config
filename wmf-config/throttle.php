@@ -11,6 +11,7 @@
 # or project dbname. Options are:
 #  'value'  => new value for $wgAccountCreationThrottle (default: 50)
 #  'IP'     => client IP as given by wfGetIP() or array (default: any IP)
+#  'range'  => alternatively, the client IP CIDR ranges or array (default: any range)
 #  'dbname' => a $wgDBname or array of dbnames to compare to
 #             (eg. enwiki, metawiki, frwikibooks, eswikiversity)
 #             (default: any project)
@@ -26,9 +27,46 @@ $wmfThrottlingExceptions[] = array( // bug 49176 it.wiki GLAM event
 	'IP'     => '46.255.84.17',
 	'dbname' => array( 'itwiki' ),
 	'value'  => 50,
-);
 
 ## Add throttling definitions above.
+
+## Helper methods:
+
+/**
+ * Determines if an IP address is a list of CIDR a.b.c.d/n ranges.
+ *
+ * @param string $ip the IP to check
+ * @param array $range the IP ranges, each element a range
+ *
+ * @return Boolean true if the specified adress belongs to the specified range; otherwise, false.
+ */
+function inCIDRRanges ( $ip, $ranges ) {
+	foreach ( $ranges as $range ) {
+		if ( inCIDRRange( $ip, $range ) ) {
+			return true;
+		}
+	}
+	return false;
+}
+
+/**
+ * Determines if an IP address is a CIDR a.b.c.d/n range.
+ *
+ * @param string $ip the IP to check
+ * @param string $range the IP range
+ *
+ * @return Boolean true if the specified adress belongs to the specified range; otherwise, false.
+ */
+function inCIDRRange ( $ip, $range ) {
+	// Thanks to claudiu at cnixs dot com
+	// http://php.net/manual/en/ref.network.php
+	list( $net, $mask ) = explode( "/", $range );
+	$ip_net = ip2long( $net );
+	$ip_mask = ~((1 << (32 - $mask)) - 1);
+	$ip_ip = ip2long ( $ip );
+	$ip_ip_net = $ip_ip & $ip_mask;
+	return ( $ip_ip_net == $ip_net );
+}
 
 # Will eventually raise value when MediaWiki is fully initialized:
 $wgExtensionFunctions[] = 'efRaiseAccountCreationThrottle';
@@ -67,6 +105,13 @@ function efRaiseAccountCreationThrottle() {
 			if ( is_array( $options['IP'] ) && !in_array( wfGetIP(), $options['IP'] ) ) {
 				continue;
 			} elseif ( wfGetIP() != $options['IP'] ) {
+				continue;
+			}
+		}
+		if ( isset ( $options['range'] ) ) {
+			if ( is_array( $options['range'] ) && !inCIDRRanges( wfGetIP(), $options['range'] ) ) {
+				continue;
+			} elseif ( !inCIDRRange( wfGetIP(), $options['range'] ) ) {
 				continue;
 			}
 		}
