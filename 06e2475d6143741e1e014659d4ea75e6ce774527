@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "69c609db_d45b2af2",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2013-07-05T08:37:15Z",
+      "side": 1,
+      "message": "Byte order marker was added to the beginning of the file and that doesn\u0027t work with PHP. What editor did you use to edit this file? Notepad is known to add BOMs.",
+      "revId": "06e2475d6143741e1e014659d4ea75e6ce774527",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
