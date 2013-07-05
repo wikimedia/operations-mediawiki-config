@@ -4211,12 +4211,13 @@ $wgConf->settings = array(
 	),
 ),
 
-
-// Recommended namespace numbers:
-//    100 Portal
-//    102 WikiProject
-//    104 Reference
 # wgExtraNamespaces @{
+	// Recommended namespace numbers:
+	//    100 Portal
+	//    102 WikiProject
+	//    104 Reference
+	// Wikis are sorted by family (type), and then alphabetically
+
 'wgExtraNamespaces' => array(
 	// Meta wiki @{
 	'metawiki' => array(
@@ -4239,7 +4240,7 @@ $wgConf->settings = array(
 	),
 	// @}
 
-	# wikimania wikis @{
+	# Wikimania wikis @{
 	'wikimania2005wiki' => array(
 		100 => 'Internal',
 		101 => 'Internal_talk',
@@ -4261,6 +4262,10 @@ $wgConf->settings = array(
 		100 => 'Anfrage',
 		101 => 'Anfrage_Diskussion',
 	),
+	'boardwiki' => array(
+		100 => 'Resolution',
+		101 => 'Resolution_talk',
+	),
 	'commonswiki' => array(
 		100 => 'Creator',
 		101 => 'Creator_talk',
@@ -4271,15 +4276,19 @@ $wgConf->settings = array(
 		106 => 'Institution',
 		107 => 'Institution_talk',
 	),
+	'mediawikiwiki' => array(
+		100 => 'Manual',
+		101 => 'Manual_talk',
+		102 => 'Extension',
+		103 => 'Extension_talk',
+		104 => 'API',
+		105 => 'API_talk',
+		106 => 'Skin',
+		107 => 'Skin_talk',
+	),
 	'nlwikimedia' => array(
 		100 => 'De_Wikiaan',
 		101 => 'Overleg_De_Wikiaan',
-	),
-	'boardwiki' => array(
-		100 => 'Resolution',
-		101 => 'Resolution_talk',
-	),
-	'incubatorwiki' => array(
 	),
 	'officewiki' => array(
 		100 => 'Report',
@@ -4288,6 +4297,10 @@ $wgConf->settings = array(
 		111 => 'Outreach_talk',
 		112 => 'Archive',
 		113 => 'Archive_talk',
+	),
+	'otrs_wikiwiki' => array(
+		100 => 'Response',
+		101 => 'Response_talk'
 	),
 	'sewikimedia' => array(
 		100 => 'Projekt',
@@ -4301,6 +4314,10 @@ $wgConf->settings = array(
 		104 => 'Proposal',
 		105 => 'Proposal_talk',
 	),
+	'strategywiki' => array(
+		106 => "Proposal",
+		107 => "Proposal_talk",
+	),
 	'test2wiki' => array(
 		100 => 'Portal',
 		101 => 'Portal_talk',
@@ -4311,23 +4328,9 @@ $wgConf->settings = array(
 		106 => 'Index',
 		107 => 'Index_talk',
 	),
-	'strategywiki' => array(
-		106 => "Proposal",
-		107 => "Proposal_talk",
-	),
 	'usabilitywiki' => array(
 		100 => 'Multimedia',
 		101 => 'Multimedia_talk',
-	),
-	'mediawikiwiki' => array(
-		100 => 'Manual',
-		101 => 'Manual_talk',
-		102 => 'Extension',
-		103 => 'Extension_talk',
-		104 => 'API',
-		105 => 'API_talk',
-		106 => 'Skin',
-		107 => 'Skin_talk',
 	),
 	# @} end of special wikis
 
@@ -4376,12 +4379,6 @@ $wgConf->settings = array(
 		100 => 'Portal',
 		101 => 'Portal_müzakirəsi',
 	),
-	'azwikisource' => array(
-		100 => 'Portal',
-		101 => 'Portal_müzakirəsi',
-		102 => 'Müəllif', // Author
-		103 => 'Müəllif_müzakirəsi', // Author talk
-	),
 	'bawiki' => array(
 		100 => 'Портал',                     // Bug 42077 - Portal
 		101 => 'Портал_буйынса_фекерләшеү',
@@ -4418,17 +4415,9 @@ $wgConf->settings = array(
 		100 => 'প্রবেশদ্বার',
 		101 => 'প্রবেশদ্বার_আলোচনা',
 	),
-	'bnwiktionary' => array(
-		100 => 'উইকিসরাস',
-		101 => 'উইকিসরাস_আলোচনা',
-	),
 	'bpywiki' => array(
 		100 => 'হমিলদুৱার', // Portal
 		101 => 'হমিলদুৱার_য়্যারী', // Portal_talk
-	),
-	'brwiktionary' => array(
-		100 => 'Stagadenn', // Appendix
-		101 => 'Kaozeadenn_Stagadenn', // Appendix talk
 	),
 	'bswiki' => array(
 		100 => 'Portal', // Bug 37226
@@ -4455,19 +4444,9 @@ $wgConf->settings = array(
 		102		=> 'Rejstřík',
 		103		=> 'Diskuse_k_rejstříku',
 	),
-	'cswikisource' => array(
-		100		=> 'Autor',
-		101		=> 'Diskuse_k_autorovi',
-	),
 	'cywiki' => array(
 		100     => 'Porth', # 27684
 		101     => 'Sgwrs_Porth', # 27684
-	),
-	'cywikisource' => array(
-		104 => 'Tudalen',          //Bug 39264 (Page)
-		105 => 'Sgwrs_Tudalen',    //Bug 39264
-		106 => 'Indecs',           //Bug 39264 (Index)
-		107 => 'Sgwrs_Indecs',     //Bug 39264
 	),
 	'dawiki' => array(
 		NS_PROJECT_TALK   => 'Wikipedia-diskussion', # bug 27902
@@ -4487,31 +4466,9 @@ $wgConf->settings = array(
 		100 => 'ނެރު',
 		101 => 'ނެރު_ޚ_ޔާލު',
 	),
-	'dewikivoyage' => array(
-		100 => 'Portal',
-		101 => 'Portal_Diskussion',
-		102 => 'Wahl',
-		103 => 'Wahl_Diskussion',
-		104 => 'Thema',
-		105 => 'Thema_Diskussion',
-		106 => 'Nachrichten',
-		107 => 'Nachrichten_Diskussion',
-	),
-	'itwikivoyage' => array(
-		100 => 'Portale',
-		101 => 'Discussioni_portale',
-		//102 and 103 (Elezione) deleted per bug 45636
-		104 => 'Tematica',
-		105 => 'Discussioni_tematica',
-		//106 and 107 (Notizie) deleted per bug 45636
-	),
 	'elwiki' => array(
 		100 => 'Πύλη',
 		101 => 'Συζήτηση_πύλης'
-	),
-	'elwikinews' => array(
-		102 => 'Σχόλια', // Comments
-		103 => 'Συζήτηση_σχολίων', // Comment talk
 	),
 	'enwiki' => array(
 		100 => 'Portal',
@@ -4526,10 +4483,6 @@ $wgConf->settings = array(
 		101 => 'Portala_diskuto',
 		102 => 'Projekto',
 		103 => 'Projekta_diskuto',
-	),
-	'eowiktionary' => array(
-		NS_USER => 'Uzanto',	# bug 22426
-		NS_USER_TALK => 'Uzanta_diskuto',
 	),
 	'eswiki' => array(
 		100 => 'Portal',
@@ -4605,12 +4558,6 @@ $wgConf->settings = array(
 		100 => 'Portál',
 		101 => 'Portálvita',
 	),
-	'huwiktionary' => array(
-		100 => 'Függelék',       // Bug 42505 - Appendix
-		101 => 'Függelékvita',
-		102 => 'Index',          // Bug 42505
-		103 => 'Indexvita',
-	),
 	'hywiki' => array(
 		100 => 'Պորտալ',
 		101 => 'Պորտալի_քննարկում',
@@ -4618,10 +4565,6 @@ $wgConf->settings = array(
 	'iawiki' => array(
 		100 => 'Portal',
 		101 => 'Discussion_Portal',
-		102 => 'Appendice',
-		103 => 'Discussion_Appendice',
-	),
-	'iawiktionary' => array(
 		102 => 'Appendice',
 		103 => 'Discussion_Appendice',
 	),
@@ -4657,10 +4600,6 @@ $wgConf->settings = array(
 		103 => 'プロジェクト‐ノート',
 		829 => 'モジュール‐ノート', // Bug 47933
 	),
-	'jawiktionary' => array(
-		100 => '付録', // Appendix
-		101 => '付録・トーク', // Appendix talk
-	),
 	'kawiki' => array(
 		100 => 'პორტალი',
 		101 => 'პორტალი_განხილვა',
@@ -4670,16 +4609,6 @@ $wgConf->settings = array(
 		101 => 'Портал_талқылауы',
 		102 => 'Жоба',              // Bug 40794 - WikiProject
 		103 => 'Жоба_талқылауы',
-	),
-	'knwikisource' => array( // Bug 37676
-		100 => 'ಸಂಪುಟ',         // Portal
-		101 => 'ಸಂಪುಟ_ಚರ್ಚೆ',
-		102 => 'ಕರ್ತೃ',         // Author
-		103 => 'ಕರ್ತೃ_ಚರ್ಚೆ',
-		104 => 'ಪುಟ',         // Page
-		105 => 'ಪುಟ_ಚರ್ಚೆ',
-		106 => 'ಪರಿವಿಡಿ',         // Index
-		107 => 'ಪರಿವಿಡಿ_ಚರ್ಚೆ',
 	),
 	'kowiki' => array(
 		100 => '들머리',
@@ -4691,12 +4620,6 @@ $wgConf->settings = array(
 		100 => 'Portal',
 		101 => 'Gotûbêja_portalê', // Bug 37521
 		NS_PROJECT_TALK => 'Gotûbêja_Wîkîpediyayê', // Bug 37521
-	),
-	'kuwikibooks' => array(
-		NS_PROJECT_TALK => 'Gotûbêja_Wîkîpirtûkê', // Bug 37522
-	),
-	'kuwikiquote' => array(
-		NS_PROJECT_TALK => 'Gotûbêja_Wîkîgotinê', // Bug 37523
 	),
 	'kwwiki' => array(
 		100 => 'Porth',
@@ -4730,13 +4653,9 @@ $wgConf->settings = array(
 		102 => 'Vikiprojekts',
 		103 => 'Vikiprojekta_diskusija',
 	),
-	'lvwiktionary' => array(
-		100 => 'Pielikums',
-		101 => 'Pielikuma_diskusija',
-	),
-	'mkwikisource' => array(
-		102 => 'Автор',
-		103 => 'Разговор_за_автор',
+	'mkwiki' => array(
+		100 => 'Портал',
+		101 => 'Разговор_за_Портал',
 	),
 	'mlwiki' => array(
 		100 => 'കവാടം',
@@ -4746,33 +4665,9 @@ $wgConf->settings = array(
 		100 => 'Portal', // Portal
 		101 => 'Diskusi_Portal', // Portal talk
 	),
-	'mlwikisource' => array(
-		100 => 'രചയിതാവ്',
-		101 => 'രചയിതാവിന്റെ_സംവാദം',
-		102 => 'കവാടം',
-		103 => 'കവാടത്തിന്റെ_സംവാദം',
-		104 => 'സൂചിക',
-		105 => 'സൂചികയുടെ_സംവാദം',
-		106 => 'താൾ',
-		107 => 'താളിന്റെ_സംവാദം',
-	),
 	'mrwiki' => array(
 		100 => 'दालन',
 		101 => 'दालन_चर्चा',
-	),
-	'mrwikisource' => array(
-		100 => 'दालन', // Portal
-		101 => 'दालन_चर्चा', // Portal talk
-		102 => 'साहित्यिक', // Author
-		103 => 'साहित्यिक_चर्चा', // Author talk
-		104 => 'पान', // Page
-		105 => 'पान_चर्चा', // Page talk
-		106 => 'अनुक्रमणिका', // Index
-		107 => 'अनुक्रमणिका_चर्चा', // Index talk
-	),
-	'mrwiktionary' => array(
-		104 => 'सूची',
-		105 => 'सूची_चर्चा',
 	),
 	'mtwiki' => array(
 		100 => 'Portal',
@@ -4807,19 +4702,11 @@ $wgConf->settings = array(
 		100 => 'Portal',
 		101 => 'Portaldiskusjon',
 	),
-	'nowiktionary' => array(
-		100 => 'Tillegg',
-		101 => 'Tilleggdiskusjon',
-	),
 	'ocwiki' => array(
 		100 => 'Portal',
 		101 => 'Discussion_Portal',
 		102 => 'Projècte',
 		103 => 'Discussion_Projècte',
-	),
-	'otrs_wikiwiki' => array(
-		100 => 'Response',
-		101 => 'Response_talk'
 	),
 	'pflwiki' => array(
 		100 => 'Portal',             // Bug 42990
@@ -4834,9 +4721,6 @@ $wgConf->settings = array(
 		101 => 'Dyskusja_portalu',
 		102 => 'Wikiprojekt',
 		103 => 'Dyskusja_wikiprojektu',
-	),
-	'plwikivoyage' => array(
-		NS_PROJECT_TALK => 'Dyskusja_Wikipodróży',
 	),
 	'ptwiki' => array(
 		NS_USER => 'Usuário(a)', # bug 27495
@@ -4859,14 +4743,6 @@ $wgConf->settings = array(
 		103 => 'Discuție_Proiect',
 		108 => 'Cod',                    // Bug 42690 - Code
 		109 => 'Discuție_Cod',
-	),
-	'rowikisource' => array(
-		102 => 'Autor',
-		103 => 'Discuție_Autor',
-		104 => 'Pagină',
-		105 => 'Discuție_Pagină',
-		106 => 'Index',
-		107 => 'Discuție_Index',
 	),
 	'ruwiki' => array(
 		100 => 'Портал',
@@ -4891,10 +4767,6 @@ $wgConf->settings = array(
 	'shwiki' => array( 100 => 'Portal', 101 => 'Razgovor_o_portalu' ), # bug 30928
 	'siwiki' => array( 100 => 'ද්වාරය', 101 => 'ද්වාරය_සාකච්ඡාව' ), # bug 6435, 24936
 	'skwiki' => array( 100 => 'Portál', 101 => 'Diskusia_k_portálu' ),
-	'skwikiquote' => array(
-		100 => 'Deň',             // Bug 44052
-		101 => 'Diskusia_ku_dňu',
-	),
 	'slwiki' => array( 100 => 'Portal', 101 => 'Pogovor_o_portalu' ),
 	'sqwiki' => array( 100 => 'Portal', 101 => 'Portal_diskutim' ),
 	'srwiki' => array(
@@ -4903,10 +4775,6 @@ $wgConf->settings = array(
 	),
 	'suwiki' => array( 100 => 'Portal', 101 => 'Obrolan_portal' ), # bug 8156
 	'svwiki' => array( 100 => 'Portal', 101 => 'Portaldiskussion' ),
-	'svwikiversity' => array (
-		100 => 'Portal',
-		101 => 'Portaldiskussion',
-	),
 	'swwiki' => array(
 		100 => 'Lango',
 		101 => 'Majadiliano_ya_lango',
@@ -4928,10 +4796,6 @@ $wgConf->settings = array(
 	'trwiki' => array(
 		100 => 'Portal',
 		101 => 'Portal_tartışma'
-	),
-	'trwiktionary' => array(
-		100 => 'Portal',
-		101 => 'Portal_tartışma',
 	),
 	'ttwiki' => array(
 		100 => 'Портал',
@@ -5009,17 +4873,11 @@ $wgConf->settings = array(
 		108 => 'Author',
 		109 => 'Author_talk',
 	),
-	'enwikisource' => array(
+	'azwikisource' => array(
 		100 => 'Portal',
-		101 => 'Portal_talk',
-		102 => 'Author',
-		103 => 'Author_talk',
-		104 => 'Page', // http://fr.wikisource.org/wiki/Wikisource:Scriptorium#Page:_Namespace
-		105 => 'Page_talk',
-		106 => 'Index',
-		107 => 'Index_talk',
-		114 => 'Translation', // bug 50007
-		115 => 'Translation_talk', // bug 50007
+		101 => 'Portal_müzakirəsi',
+		102 => 'Müəllif', // Author
+		103 => 'Müəllif_müzakirəsi', // Author talk
 	),
 	'arwikisource' => array(
 		100 => 'بوابة',
@@ -5052,7 +4910,6 @@ $wgConf->settings = array(
 	'bnwikisource' => array(
 		100 => 'লেখক', // Author
 		101 => 'লেখক_আলাপ', // Author talk
-
 		102 => 'নির্ঘণ্ট', // Index
 		103 => 'নির্ঘণ্ট_আলাপ',
 		104 => 'পাতা', // Page
@@ -5077,6 +4934,16 @@ $wgConf->settings = array(
 		106 => 'Autor', # 27898
 		107 => 'Autor_Discussió',  # 27898
 	),
+	'cswikisource' => array(
+		100		=> 'Autor',
+		101		=> 'Diskuse_k_autorovi',
+	),
+	'cywikisource' => array(
+		104 => 'Tudalen',          //Bug 39264 (Page)
+		105 => 'Sgwrs_Tudalen',    //Bug 39264
+		106 => 'Indecs',           //Bug 39264 (Index)
+		107 => 'Sgwrs_Indecs',     //Bug 39264
+	),
 	'dawikisource' => array(
 		102 => 'Forfatter', // http://bugzilla.wikimedia.org/show_bug.cgi?id=7796
 		103 => 'Forfatterdiskussion',
@@ -5096,6 +4963,18 @@ $wgConf->settings = array(
 		101 => 'Συζήτηση_σελίδας',
 		102 => 'Βιβλίο',
 		103 => 'Συζήτηση_βιβλίου',
+	),
+	'enwikisource' => array(
+		100 => 'Portal',
+		101 => 'Portal_talk',
+		102 => 'Author',
+		103 => 'Author_talk',
+		104 => 'Page', // http://fr.wikisource.org/wiki/Wikisource:Scriptorium#Page:_Namespace
+		105 => 'Page_talk',
+		106 => 'Index',
+		107 => 'Index_talk',
+		114 => 'Translation', // bug 50007
+		115 => 'Translation_talk', // bug 50007
 	),
 	'eowikisource' => array(
 		102 => 'Aŭtoro', // Author
@@ -5217,6 +5096,16 @@ $wgConf->settings = array(
 		110 => 'Indice',
 		111 => 'Discussioni_indice',
 	),
+	'knwikisource' => array( // Bug 37676
+		100 => 'ಸಂಪುಟ',         // Portal
+		101 => 'ಸಂಪುಟ_ಚರ್ಚೆ',
+		102 => 'ಕರ್ತೃ',         // Author
+		103 => 'ಕರ್ತೃ_ಚರ್ಚೆ',
+		104 => 'ಪುಟ',         // Page
+		105 => 'ಪುಟ_ಚರ್ಚೆ',
+		106 => 'ಪರಿವಿಡಿ',         // Index
+		107 => 'ಪರಿವಿಡಿ_ಚರ್ಚೆ',
+	),
 	'kowikisource' => array(
 		100 => '저자',
 		101 => '저자토론',
@@ -5229,11 +5118,30 @@ $wgConf->settings = array(
 		106 => 'Liber',
 		107 => 'Disputatio_Libri',
 	),
-	'mkwiki' => array(
-		100 => 'Портал',
-		101 => 'Разговор_за_Портал',
+	'mkwikisource' => array(
+		102 => 'Автор',
+		103 => 'Разговор_за_автор',
 	),
-
+	'mlwikisource' => array(
+		100 => 'രചയിതാവ്',
+		101 => 'രചയിതാവിന്റെ_സംവാദം',
+		102 => 'കവാടം',
+		103 => 'കവാടത്തിന്റെ_സംവാദം',
+		104 => 'സൂചിക',
+		105 => 'സൂചികയുടെ_സംവാദം',
+		106 => 'താൾ',
+		107 => 'താളിന്റെ_സംവാദം',
+	),
+	'mrwikisource' => array(
+		100 => 'दालन', // Portal
+		101 => 'दालन_चर्चा', // Portal talk
+		102 => 'साहित्यिक', // Author
+		103 => 'साहित्यिक_चर्चा', // Author talk
+		104 => 'पान', // Page
+		105 => 'पान_चर्चा', // Page talk
+		106 => 'अनुक्रमणिका', // Index
+		107 => 'अनुक्रमणिका_चर्चा', // Index talk
+	),
 	'nlwikisource' => array(
 		100 => 'Hoofdportaal',
 		101 => 'Overleg_hoofdportaal',
@@ -5251,9 +5159,6 @@ $wgConf->settings = array(
 		105 => 'Sidediskusjon',
 		106 => 'Indeks',
 		107 => 'Indeksdiskusjon',
-	),
-	'plwikiquote' => array(
-		NS_PROJECT_TALK => 'Dyskusja_Wikicytatów',
 	),
 	'plwikisource' => array(
 		NS_USER => 'Wikiskryba',
@@ -5279,6 +5184,14 @@ $wgConf->settings = array(
 		109 => 'Discussão_Em_Tradução',
 		110 => 'Anexo',
 		111 => 'Anexo_Discussão',
+	),
+	'rowikisource' => array(
+		102 => 'Autor',
+		103 => 'Discuție_Autor',
+		104 => 'Pagină',
+		105 => 'Discuție_Pagină',
+		106 => 'Index',
+		107 => 'Discuție_Index',
 	),
 	'ruwikisource' => array(
 		104 => 'Страница',
@@ -5366,6 +5279,14 @@ $wgConf->settings = array(
 		100 => 'Словоформи',
 		101 => 'Словоформи_беседа'
 	),
+	'brwiktionary' => array(
+		100 => 'Stagadenn', // Appendix
+		101 => 'Kaozeadenn_Stagadenn', // Appendix talk
+	),
+	'bnwiktionary' => array(
+		100 => 'উইকিসরাস',
+		101 => 'উইকিসরাস_আলোচনা',
+	),
 	'bswiktionary' => array(
 		100 => 'Portal',
 		101 => 'Razgovor_o_Portalu',
@@ -5421,7 +5342,10 @@ $wgConf->settings = array(
 		116 => 'Sign_gloss',
 		117 => 'Sign_gloss_talk',
 	),
-
+	'eowiktionary' => array(
+		NS_USER => 'Uzanto',	# bug 22426
+		NS_USER_TALK => 'Uzanta_diskuto',
+	),
 	'eswiktionary' => array(
 		100 => 'Apéndice',
 		101 => 'Apéndice_Discusión',
@@ -5458,6 +5382,16 @@ $wgConf->settings = array(
 		100 => 'נספח',
 		101 => 'שיחת_נספח'
 	),
+	'huwiktionary' => array(
+		100 => 'Függelék',       // Bug 42505 - Appendix
+		101 => 'Függelékvita',
+		102 => 'Index',          // Bug 42505
+		103 => 'Indexvita',
+	),
+	'iawiktionary' => array(
+		102 => 'Appendice',
+		103 => 'Discussion_Appendice',
+	),
 	'idwiktionary' => array(
 		100 => 'Indeks',
 		101 => 'Pembicaraan_Indeks',
@@ -5471,6 +5405,10 @@ $wgConf->settings = array(
 	'itwiktionary' => array(
 		100 => 'Appendice',
 		101 => 'Discussioni_appendice',
+	),
+	'jawiktionary' => array(
+		100 => '付録', // Appendix
+		101 => '付録・トーク', // Appendix talk
 	),
 	'kowiktionary' => array(
 		100 => '부록',
@@ -5497,9 +5435,21 @@ $wgConf->settings = array(
 		102 => 'Priedas',
 		103 => 'Priedo_aptarimas',
 	),
+	'lvwiktionary' => array(
+		100 => 'Pielikums',
+		101 => 'Pielikuma_diskusija',
+	),
 	'mgwiktionary' => array(
 		100 => 'Rakibolana', # Portal
 		101 => "Dinika_amin'ny_rakibolana",
+	),
+	'mrwiktionary' => array(
+		104 => 'सूची',
+		105 => 'सूची_चर्चा',
+	),
+	'nowiktionary' => array(
+		100 => 'Tillegg',
+		101 => 'Tilleggdiskusjon',
 	),
 	'ocwiktionary' => array(
 		100 => 'Annèxa',
@@ -5555,6 +5505,10 @@ $wgConf->settings = array(
 		105 => 'Rimordsdiskussion',
 		106 => 'Transwiki',
 		107 => 'Transwikidiskussion',
+	),
+	'trwiktionary' => array(
+		100 => 'Portal',
+		101 => 'Portal_tartışma',
 	),
 	'ukwiktionary' => array(
 		// bug 13791
@@ -5650,6 +5604,9 @@ $wgConf->settings = array(
 		104 => 'თარო', # bookshelf
 		105 => 'თარო_განხილვა', # bookshelf talk
 	),
+	'kuwikibooks' => array(
+		NS_PROJECT_TALK => 'Gotûbêja_Wîkîpirtûkê', // Bug 37522
+	),
 	'mlwikibooks' => array(
 		100 => 'പാചകപുസ്തകം',		// Cookbook
 		101 => 'പാചകപുസ്തകസം‌വാദം',
@@ -5739,7 +5696,7 @@ $wgConf->settings = array(
 		112 => 'Subject', // Bug 44308
 		113 => 'Subject_talk', // Bug 44308
 	),
-	// @} end of wikibooks
+	// @} end of Wikibooks
 
 	// Wikinews @{
 	'arwikinews' => array(
@@ -5769,6 +5726,10 @@ $wgConf->settings = array(
 		101 => 'Portal_Diskussion',
 		102 => 'Meinungen',
 		103 => 'Meinungen_Diskussion'
+	),
+	'elwikinews' => array(
+		102 => 'Σχόλια', // Comments
+		103 => 'Συζήτηση_σχολίων', // Comment talk
 	),
 	'enwikinews' => array(
 		100 => 'Portal',
@@ -5870,7 +5831,7 @@ $wgConf->settings = array(
 		100 => '频道',
 		101 => '频道_talk'
 	),
-	// @} end of wikinews
+	// @} end of Wikinews
 
 	// Wikiquote @{
 	'dewikiquote' => array(
@@ -5891,16 +5852,25 @@ $wgConf->settings = array(
 		100 => 'פורטל',
 		101 => 'שיחת_פורטל'
 	),
+	'kuwikiquote' => array(
+		NS_PROJECT_TALK => 'Gotûbêja_Wîkîgotinê', // Bug 37523
+	),
 	'liwikiquote' => array(	// bug 12240
 		100 => 'Portaol',
 		101 => 'Euverlèk_portaol'
 	),
-	# Bug 40474
-	'zhwikiquote' => array(
+	'plwikiquote' => array(
+		NS_PROJECT_TALK => 'Dyskusja_Wikicytatów',
+	),
+	'skwikiquote' => array(
+		100 => 'Deň',             // Bug 44052
+		101 => 'Diskusia_ku_dňu',
+	),
+	'zhwikiquote' => array( // bug 40474
 		100 => 'Transwiki',
 		101 => 'Transwiki_talk',
 	),
-	// @} end of wikiquote
+	// @} end of Wikiquote
 
 	// Wikiversity @{
 	'arwikiversity' => array(
@@ -5939,6 +5909,18 @@ $wgConf->settings = array(
 		106 => 'Collection',
 		107 => 'Collection_talk',
 	),
+	'frwikiversity' => array(
+		102 => 'Projet',
+		103 => 'Discussion_Projet',
+		104 => 'Recherche', // bug 29015
+		105 => 'Discussion_Recherche',
+		106 => 'Faculté',
+		107 => 'Discussion_Faculté',
+		108 => 'Département',
+		109 => 'Discussion_Département',
+		110 => 'Transwiki',
+		111 => 'Discussion_Transwiki',
+	),
 	'itwikiversity' => array(
 		100 => 'Facoltà',
 		101 => 'Discussioni_facoltà',
@@ -5948,18 +5930,6 @@ $wgConf->settings = array(
 		105 => 'Discussioni_materia',
 		106 => 'Dipartimento',
 		107 => 'Discussioni_dipartimento',
-	),
-	'frwikiversity' => array(
-		102 => 'Projet',
-		103 => 'Discussion_Projet',
-		104 => 'Recherche', // http://bugzilla.wikimedia.org/show_bug.cgi?id=29015
-		105 => 'Discussion_Recherche',
-		106 => 'Faculté',
-		107 => 'Discussion_Faculté',
-		108 => 'Département',
-		109 => 'Discussion_Département',
-		110 => 'Transwiki',
-		111 => 'Discussion_Transwiki',
 	),
 	'jawikiversity' => array(
 		100 => 'School',
@@ -5976,19 +5946,43 @@ $wgConf->settings = array(
 		102 => '포털', // Bug 44899
 		103 => '포털토론', // Bug 44899
 	),
-	// @} end of wikiversity
+	'svwikiversity' => array (
+		100 => 'Portal',
+		101 => 'Portaldiskussion',
+	),
+	// @} end of Wikiversity
 
 	// Wikivoyage @{
-	// TODO: Move other wikivoyage from above into here
+	'dewikivoyage' => array(
+		100 => 'Portal',
+		101 => 'Portal_Diskussion',
+		102 => 'Wahl',
+		103 => 'Wahl_Diskussion',
+		104 => 'Thema',
+		105 => 'Thema_Diskussion',
+		106 => 'Nachrichten',
+		107 => 'Nachrichten_Diskussion',
+	),
 	'hewikivoyage' => array(
 		108 => 'ספר', // Book
 		109 => 'שיחת_ספר', // Book talk
+	),
+	'itwikivoyage' => array(
+		100 => 'Portale',
+		101 => 'Discussioni_portale',
+		//102 and 103 (Elezione) deleted per bug 45636
+		104 => 'Tematica',
+		105 => 'Discussioni_tematica',
+		//106 and 107 (Notizie) deleted per bug 45636
+	),
+	'plwikivoyage' => array(
+		NS_PROJECT_TALK => 'Dyskusja_Wikipodróży',
 	),
 	'ukwikivoyage' => array(
 		100 => 'Портал', // Portal
 		101 => 'Обговорення_порталу', // Portal talk
 	),
-	// @} end of wikivoyage
+	// @} end of Wikivoyage
 
 ),
 # @} end of wgExtraNamespaces
@@ -7119,7 +7113,7 @@ $wgConf->settings = array(
 	),
 
 	'metawiki' => array(
-		/* 'user' => array( 'reupload-own' => false ), // bug 50287 */
+		'user' => array( 'reupload-own' => false ), // bug 50287
 		'autoconfirmed' => array( // bug 50287
 			'upload' => false,
 			'reupload' => false,
