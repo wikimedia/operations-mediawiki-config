@@ -16,6 +16,24 @@
       "revId": "e767a2cdd79efc9d2018fcb7a6c3377369b9ca82",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69c609db_d49a0a5f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 6433,
+      "author": {
+        "id": 319
+      },
+      "writtenOn": "2013-07-05T09:52:02Z",
+      "side": 1,
+      "message": "That was something that our small community was not aware of at the time when the request was made. That\u0027s why it was not requested explicitly, but seems to be appropriate for the same reasons as in English Wikisource.",
+      "parentUuid": "69c609db_347f1e14",
+      "revId": "e767a2cdd79efc9d2018fcb7a6c3377369b9ca82",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
