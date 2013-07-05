@@ -52,6 +52,24 @@
       "revId": "e767a2cdd79efc9d2018fcb7a6c3377369b9ca82",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69c609db_5443bab2",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 6433,
+      "author": {
+        "id": 319
+      },
+      "writtenOn": "2013-07-05T10:42:07Z",
+      "side": 1,
+      "message": "In such a case, I feel it will be more optimal to provide appropriate changes separately once a community feedback is provided. So I removed this configuration and provided a new patch.",
+      "parentUuid": "69c609db_54f29a99",
+      "revId": "e767a2cdd79efc9d2018fcb7a6c3377369b9ca82",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
