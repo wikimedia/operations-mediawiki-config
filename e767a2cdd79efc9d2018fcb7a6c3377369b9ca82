@@ -34,6 +34,24 @@
       "revId": "e767a2cdd79efc9d2018fcb7a6c3377369b9ca82",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "69c609db_54f29a99",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 6433,
+      "author": {
+        "id": 650
+      },
+      "writtenOn": "2013-07-05T10:24:29Z",
+      "side": 1,
+      "message": "Still, we generally require all configuration changes to get community approval before they are deployed, so please talk with your community about that (or just inform them and make sure there\u0027s no major opposition against this change) and get back to us in a few days.",
+      "parentUuid": "69c609db_d49a0a5f",
+      "revId": "e767a2cdd79efc9d2018fcb7a6c3377369b9ca82",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
