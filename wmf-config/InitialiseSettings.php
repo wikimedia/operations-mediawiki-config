@@ -11000,7 +11000,9 @@ $wgConf->settings = array(
 ),
 
 'wmgMFRemovableClasses' => array(
-	'default' => array( 'table.metadata',
+	'default' => array(
+		'.toc', // @todo: remove this once latest MobileFrontend is live
+		'table.metadata',
 		'.metadata mbox-small',
 		'.metadata plainlinks ambox ambox-content',
 		'.metadata plainlinks ambox ambox-move',
