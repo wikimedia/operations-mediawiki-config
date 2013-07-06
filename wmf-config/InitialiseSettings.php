@@ -1635,6 +1635,7 @@ $wgConf->settings = array(
 	'tawiktionary'	=> 'விக்சனரி',
 	'tawikiquote'   => 'விக்கிமேற்கோள்',
 	'tewiki'	=> 'వికీపీడియా',
+	'tewikisource'	=> 'వికీసోర్స', // bug 50357
 	'tawikisource'  => 'விக்கிமூலம்',
 	'tewiktionary'  => 'విక్షనరీ',
 	'tenwiki'       => 'Wikipedia 10',
