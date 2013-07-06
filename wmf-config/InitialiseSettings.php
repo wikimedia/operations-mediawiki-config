@@ -8638,6 +8638,7 @@ $wgConf->settings = array(
 	'mgwiktionary' => array( 'fr', 'io', 'en', 'w', ),
 	'mkwikimedia' => array( 'meta', 'w'  ),
 	'mlwiki' => array( 'en' ),
+	'mlwikibooks' => array( 'w', 'en' ), // bug 50156
 	'mlwikisource' => array( 'w', 'en', 'w:en', ),
 	'mlwikiquote' => array( 'en', 'w:en', 'w' ),
 	'mswiki' => array( 'id' ), # bug 16033
