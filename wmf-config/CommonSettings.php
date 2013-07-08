@@ -2488,6 +2488,8 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['withoutTermSearchKey'] = false;
 
+	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
+
 	$wgWBRepoSettings['clientDbList'] = array_merge(
 		array( 'test2wiki' => 'test2wiki' ),
 		array_map( 'trim', file( getRealmSpecificFilename( "$IP/../wikipedia.dblist" ) ) )
