@@ -10612,6 +10612,14 @@ $wgConf->settings = array(
 	'frwiki' => array( NS_MAIN => 0, NS_HELP => 100 ),
 ),
 /*
+ * Allow/disallow the ability to enable or disable AFTv5 on a per-article basis
+ * via page protection settings.
+ */
+'wmgArticleFeedbackv5EnableProtection' => array(
+	'default' => true,
+	'dewiki' => false,
+),
+/*
  * Articles that include this category, will display AFTv5, regardless of lottery.
  */
 'wmgArticleFeedbackv5Categories' => array(
