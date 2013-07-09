@@ -10789,7 +10789,7 @@ $wgConf->settings = array(
  * This should be manually set to true, to make sure the filter
  * does not show up when the cronjob is not running.
  */
-'wmgArticleFeedbackAutoArchiveEnabled' => array(
+'wmgArticleFeedbackv5AutoArchiveEnabled' => array(
 	'default' => false,
 	'enwiki' => true,
 ),
@@ -10799,20 +10799,13 @@ $wgConf->settings = array(
  * faster. For a fixed date, a simple integer can be passed instead of an
  * array, to make it "amount of unreviewed feedback"-agnostic.
  */
-'wmgArticleFeedbackAutoArchiveTtl' => array(
+'wmgArticleFeedbackv5AutoArchiveTtl' => array(
 	'default' => array(
 		0 => '+2 years', // < 9 unreviewed feedback
 		10 => '+1 month', // 10-19
 		20 => '+1 week', // 20-29
 		30 => '+3 days', // 30-39
 		40 => '+2 days', // > 40
-	),
-	'dewiki' => array(
-		0 => '+1 year', // < 9 unreviewed feedback
-		10 => '+6 months', // 10-19
-		20 => '+3 months', // 20-29
-		30 => '+2 months', // 30-39
-		40 => '+1 month', // > 40
 	),
 ),
 /*
