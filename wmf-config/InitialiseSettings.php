@@ -11988,10 +11988,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseDisambiguator' => array(
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'enwiki' => true,
+	'default' => true,
 ),
 
 'wmgUseCodeEditorForCore' => array(
