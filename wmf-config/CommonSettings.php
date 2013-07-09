@@ -1762,6 +1762,7 @@ if ( $wmgUseArticleFeedbackv5 ) {
 	$wgArticleFeedbackv5LearnToEdit = $wmgArticleFeedbackv5LearnToEdit;
 	$wgArticleFeedbackv5Namespaces = $wmgArticleFeedbackv5Namespaces;
 	$wgArticleFeedbackv5LotteryOdds = $wmgArticleFeedbackv5LotteryOdds;
+	$wgArticleFeedbackv5EnableProtection = $wmgArticleFeedbackv5EnableProtection;
 	$wgArticleFeedbackAutoArchiveEnabled = $wmgArticleFeedbackAutoArchiveEnabled;
 	$wgArticleFeedbackAutoArchiveTtl = $wmgArticleFeedbackAutoArchiveTtl;
 	$wgArticleFeedbackv5Watchlist = $wmgArticleFeedbackv5Watchlist;

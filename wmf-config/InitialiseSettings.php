@@ -10635,6 +10635,18 @@ $wgConf->settings = array(
 	'frwiki' => array( NS_MAIN => 0, NS_HELP => 100 ),
 ),
 /*
+ * Allow/disallow the ability to enable or disable AFTv5 on a per-article basis.
+ * This feature will add an AFTv5 entry in page protection settings (for admins)
+ * or a simple enable/disable link for editors.
+ * Disabling this will remove said links & entry in ?action=protect & ignore
+ * existing opt-in/-outs, leaving only lottery & whitelist/blacklist categories
+ * to define if an article should get AFTv5.
+ */
+'wmgArticleFeedbackv5EnableProtection' => array(
+	'default' => true,
+	'dewiki' => false,
+),
+/*
  * Articles that include this category, will display AFTv5, regardless of lottery.
  */
 'wmgArticleFeedbackv5Categories' => array(
