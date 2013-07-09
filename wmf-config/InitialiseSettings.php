@@ -11567,6 +11567,15 @@ $wgConf->settings = array(
 		'5' => 'User %code%-5',
 		'N' => 'User %code%-N',
 	), // Bug 46489
+    'ukwikisource' => array(
+        '0' => 'Користувачі %code%-0',
+        '1' => 'Користувачі %code%-1',
+        '2' => 'Користувачі %code%-2',
+        '3' => 'Користувачі %code%-3',
+        '4' => 'Користувачі %code%-4',
+        '5' => 'Користувачі %code%-5',
+        'N' => 'Користувачі %code%-N',
+    ),
 	'vowiktionary' => array(
 		'0' => 'Geban %code%-0',
 		'1' => 'Geban %code%-1',
@@ -11682,6 +11691,7 @@ $wgConf->settings = array(
 	'udmwiki' => 'User %code%', // Bug 47749
 	'ukwiki' => 'User %code%',
 	'ukwikinews' => 'User %code%', // Bug 46489
+    'ukwikisource' => 'Користувачі %code%',
 	'wikidata' => 'User %code%',
 	'zhwiktionary' => '%wikiname%使用者',
 	'zhwiki' => '%code%_使用者',
