@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "69c609db_7cc4ca93",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 1163,
+      "author": {
+        "id": 278
+      },
+      "writtenOn": "2013-07-09T11:14:02Z",
+      "side": 1,
+      "message": "Just read commit message. Never mind.",
+      "parentUuid": "69c609db_bce5a23b",
+      "revId": "f9708eea27aa764179fede9fcb0b57923fd6fbbb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "69c609db_fcd71a48",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 10
