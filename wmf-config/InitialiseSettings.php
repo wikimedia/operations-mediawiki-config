@@ -10679,9 +10679,9 @@ $wgConf->settings = array(
 	'frwiki' => 'privacy-wp-fr@wikimedia.org',
 ),
 'wmgArticleFeedbackv5OversightEmailHelp' => array(
-	'default' => 'http://en.wikipedia.org/wiki/Wikipedia:Article_Feedback_Tool/Version_5/Help/Feedback_page_Oversighters',
-	'dewiki' => 'http://de.wikipedia.org/wiki/Wikipedia:Artikel-Feedback/Umgang_mit_Feedback', # Could be changed once a separate page exists
-	'frwiki' => 'http://fr.wikipedia.org/wiki/Aide:Outil_de_retour_des_lecteurs/Masqueurs',
+	'default' => 'https://en.wikipedia.org/wiki/Wikipedia:Article_Feedback_Tool/Version_5/Help/Feedback_page_Oversighters',
+	'dewiki' => 'https://de.wikipedia.org/wiki/Wikipedia:Artikel-Feedback/Umgang_mit_Feedback', # Could be changed once a separate page exists
+	'frwiki' => 'https://fr.wikipedia.org/wiki/Aide:Outil_de_retour_des_lecteurs/Masqueurs',
 ),
 'wmgArticleFeedbackv5AutoHelp' => array(
 	'default' => '//en.wikipedia.org/wiki/Wikipedia:Article_Feedback_Tool/Version_5/Help',
