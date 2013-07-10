@@ -11,7 +11,7 @@ $wgSquidServersNoPurge = array( '127.0.0.1' );
 # on UDP port 4827.
 $wgHTCPMulticastRouting = array(
 	'|^https?://upload\.beta\.wmflabs\.org|' => array(
-		'host' => '10.4.0.214',  # deployment-cache-upload03
+		'host' => '10.4.0.211',  # deployment-cache-upload04
 		'port' => 4827,
 	),
 
