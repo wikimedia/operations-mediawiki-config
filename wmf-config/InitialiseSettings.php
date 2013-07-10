@@ -4179,6 +4179,7 @@ $wgConf->settings = array(
 		'CentralAuth' => "udp://$wmfUdp2logDest/centralauth", // -pgehres 2013/05/09, tmp for SUL finalization
 		'GettingStarted' => "udp://$wmfUdp2logDest/gettingstarted",
 		'zero' => "udp://$wmfUdp2logDest/zero", // zero-rated debug log
+		'geodata' => "udp://$wmfUdp2logDest/geodata",
 	),
 
 	'+enwiki' => array(
