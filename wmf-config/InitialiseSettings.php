@@ -10457,7 +10457,10 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
-	'enwiki' => true,
+	'dewiki' => true,
+	'frwiki' => true,
+	'itwiki' => true,
+	'plwiki' => true,
 ),
 
 'wmgUseRSSExtension' => array(
