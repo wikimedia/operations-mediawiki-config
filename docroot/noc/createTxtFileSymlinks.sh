@@ -31,9 +31,8 @@ mwconfig_files_txt=(
 	wmf-config/lucene-common.php
 	wmf-config/lucene-labs.php
 	wmf-config/lucene-production.php
-	wmf-config/mc-eqiad.php
+	wmf-config/mc.php
 	wmf-config/mc-labs.php
-	wmf-config/mc-pmtpa.php
 	wmf-config/missing.php
 	wmf-config/mobile-labs.php
 	wmf-config/mobile.php
