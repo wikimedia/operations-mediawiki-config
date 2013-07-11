@@ -100,7 +100,7 @@ if ( $wgMFLogEvents && $wmgUseEventLogging ) {
 		'class' => 'ResourceLoaderSchemaModule',
 		'schema' => 'MobileWebEditing',
 		'targets' => 'mobile',
-		'revision' => 5518026,
+		'revision' => 5644223,
 	);
 
 	$wgHooks['EnableMobileModules'][] = function( $out, $mode ) {
