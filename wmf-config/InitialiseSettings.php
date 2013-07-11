@@ -10445,7 +10445,11 @@ $wgConf->settings = array(
 
 'wmgVisualEditorEnableEventLogging' => array(
 	'default' => false,
+	'dewiki' => true,
 	'enwiki' => true,
+	'frwiki' => true,
+	'itwiki' => true,
+	'plwiki' => true,
 ),
 
 // Bug 49604 - to remove once complete.
@@ -11897,12 +11901,14 @@ $wgConf->settings = array(
 	'enwiki' => true,
 	'frwiki' => true,
 	'glwiki' => true,
+	'itwiki' => true,
 	'kowiki' => true,
 	'mediawikiwiki' => true,
 	'mkwiki' => true,
 	'mwlwiki' => true,
 	'nlwiki' => true,
 	'outreachwiki' => true,
+	'plwiki' => true,
 	'ptwiki' => true,
 	'ptwikibooks' => true, // bug 48778
 	'viwiki' => true,
