@@ -10178,7 +10178,6 @@ $wgConf->settings = array(
 	'ptwiki' => true,
 	'rowiki' => true,
 	'ruwiki' => true,
-	'simplewiki' => true,
 	'svwiki' => true,
 	'trwiki' => true,
 	'ukwiki' => true,
