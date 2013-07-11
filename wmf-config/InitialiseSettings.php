@@ -8843,6 +8843,7 @@ $wgConf->settings = array(
 'wgEnotifMinorEdits' => array(
 	'default' => false,
 	'hiwiki' => true,
+	'metawiki' => true, // bug 51108
 	'ptwikibooks' => true,
 	'sourceswiki' => true,
 ),
