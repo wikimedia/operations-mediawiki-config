@@ -53,6 +53,7 @@ mwconfig_files_txt=(
 # (not triggering a download instead of a view, and rendering as plain text).
 mwconfig_files=(
 	all.dblist
+	all-labs.dblist
 	closed.dblist
 	deleted.dblist
 	fc-list
