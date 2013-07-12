@@ -10184,10 +10184,6 @@ $wgConf->settings = array(
 	'zhwiki' => true,
 ),
 
-'wgHtml5' => array(
-	'default' => true,
-),
-
 'wgVectorShowVariantName' => array(
 	'default' => false,
 	'zhwiki' => true, // bug 23531
