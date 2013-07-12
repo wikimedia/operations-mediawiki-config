@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "49c305cb_1ab3220b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10155,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-07-12T17:40:22Z",
+      "side": 0,
+      "message": "This whole configuration block can/should just be removed :)\n\nIt\u0027s defaulted to false in MediaWiki configuration already, and we shouldn\u0027t be reverting this change, so it isn\u0027t needed in future",
+      "revId": "ca8370e15aafcc66704e2d2a2942952a617a1a84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
