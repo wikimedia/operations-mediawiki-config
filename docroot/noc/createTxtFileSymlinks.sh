@@ -45,6 +45,7 @@ mwconfig_files_txt=(
 	wmf-config/squid-labs.php
 	wmf-config/session.php
 	wmf-config/session-labs.php
+	wmf-config/twemproxy.yaml
 )
 
 # Create non-txt symlink from mediawiki-config
