@@ -78,10 +78,8 @@ if ( $wmgMFEnableDesktopResources ) {
 // Enable appending of TM (text) / (R) (icon) on site name in footer.
 $wgMFTrademarkSitename = $wmgMFTrademarkSitename;
 
-$wgMFLogEvents = $wmgMFLogEvents;
-
 // Enable Schemas for event logging (jdlrobson; 07-Feb-2012)
-if ( $wgMFLogEvents && $wmgUseEventLogging ) {
+if ( $wmgUseEventLogging ) {
 	$wgResourceModules['mobile.watchlist.schema'] = array(
 		'class' => 'ResourceLoaderSchemaModule',
 		'schema' => 'MobileBetaWatchlist',
