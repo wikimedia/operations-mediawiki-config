@@ -11234,6 +11234,15 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => false,
 	),
+	'eswikinews' => array(
+		'0' => 'Usuario %code%-0',
+		'1' => 'Usuario %code%-1',
+		'2' => 'Usuario %code%-2',
+		'3' => 'Usuario %code%-3',
+		'4' => 'Usuario %code%-4',
+		'5' => false,
+		'N' => 'Usuario %code%-N',
+	),
 	'fiwiki' => array(
 		'0' => false,
 		'1' => 'User %code%-1',
@@ -11637,6 +11646,7 @@ $wgConf->settings = array(
 	'enwikinews' => 'User %code%',
 	'enwikiversity' => 'User %code%',
 	'eswiki' => 'Wikipedia:Wikipedistas con conocimientos de %wikiname%',
+	'eswikinews' => 'Usuario %code%',
 	'fiwiki' => 'User %code%',
 	'fowiki' => 'Brúkari %code%', // Bug 37401
 	'frwiki' => 'Utilisateur %code%',
