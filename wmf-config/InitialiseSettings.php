@@ -6710,6 +6710,7 @@ $wgConf->settings = array(
 	),
 	'ckbwiki' => array(
 		'*' => array( 'createpage' => false ),
+		'rollbacker' => array( 'rollback' => true ), // bug 51312
 	),
 	'cswiki' => array(
 		'autoconfirmed' => array( 'upload' => false, ),
@@ -7688,6 +7689,9 @@ $wgConf->settings = array(
 	'+checkuserwiki' => array(
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', ),
 	),
+	'+ckbwiki' => array(
+		'sysop' => array( 'rollbacker' ), // bug 51312
+	),
 	'+cswiki' => array(
 		'bureaucrat' => array( 'autopatrolled' ),
 	),
@@ -8106,6 +8110,9 @@ $wgConf->settings = array(
 	),
 	'+checkuserwiki' => array(
 		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt',  'bureaucrat', ),
+	),
+	'+ckbwiki' => array(
+		'sysop' => array( 'rollbacker' ), // bug 51312
 	),
 	'+commonswiki' => array(
 		'bureaucrat' => array( 'ipblock-exempt', 'OTRS-member', 'translationadmin' ), // bug 48620
