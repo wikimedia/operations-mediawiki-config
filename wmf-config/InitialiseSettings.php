@@ -8752,11 +8752,12 @@ $wgConf->settings = array(
 	'test2wiki' => array( 'en', 'cs' ),
 	'tetwiki' => array( 'en', 'de', 'pt' ),
 	'tewikisource' => array( 'w', 'b' ),
+	'tnwiki' => array( 'en' ), // bug 51327
 	'tpiwiki' => array( 'en', 'simple', 'wikt:en', 'commons' ),
 	'trwikimedia' => array( 'w', 'meta' ),
 	'ukwikimedia' => array( 'm' ),
 
-	#  vi languages : bug 7854
+	# vi languages: bug 7854
 	'vecwiki'      => array( 'it' ),
 	'vecwiktionary' => array( 'w', 'en', 'fr', 'it' ), // bug 49575
 	'viwiki'       => array( 'wikt', 'b', 's', 'q' ),
@@ -8771,11 +8772,12 @@ $wgConf->settings = array(
 	'wikimania2013wiki' => array( 'en', 'meta', 'wm2011', 'wm2012' ),
 	'wikimania2014wiki' => array( 'en', 'meta', 'wm2011', 'wm2012', 'wm2013' ),
 	'wuuwiki' => array( 'en', 'th', 'fr', 'zh', ),
-
+	'xhwiki' => array( 'en' ), // bug 51327
 	'zhwikiquote' => array( 'w', 'b', 'wikt', 's', 'meta', 'commons' ),
 	'zhwiktionary' => array( 'w', 'b', 'q', 's', 'meta', 'commons' ),
 	'zhwikibooks' => array( 'w', 'wikt', 'q', 's', 'meta', 'commons' ),
 	'zhwikisource' => array( 'w', 'b', 'q', 'wikt', 'meta', 'commons' ),
+	'zuwiki' => array( 'en' ), // bug 51327
 ),
 # @} end of wgImportSources
 
