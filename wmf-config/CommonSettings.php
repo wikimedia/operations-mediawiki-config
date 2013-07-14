@@ -1947,6 +1947,12 @@ if ( $wmgUseVisualEditor ) {
 	$wgParsoidWikiPrefix = $wgDBname;
 	// Set to something between 0 (process all updates) and 1 (skip all updates).
 	$wgParsoidSkipRatio = 0;
+
+	// Throttle rate of template updates by setting the number of tests per
+	// job to something lowish, and limiting the maximum number of updates to
+	// process per template edit
+	$wgParsoidCacheUpdateTitlesPerJob = 10;
+	$wgParsoidMaxBacklinksInvalidate = 500000;
 }
 
 if ( $wmgUseTemplateData ) {
