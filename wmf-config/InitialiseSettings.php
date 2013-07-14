@@ -3704,7 +3704,7 @@ $wgConf->settings = array(
 
 # wgWhitelistRead @{
 'wgWhitelistRead' => array(
-	'private' => array( 'Main Page', 'Special:Userlogin', 'Special:Userlogout', '-', 'MediaWiki:Monobook.css', 'MediaWiki:Monobook.js' ),
+	'private' => array( 'Main Page', 'Special:Userlogin', 'Special:Userlogout' ),
 	'grantswiki' => array( 'Main Page', 'Special:Userlogin', 'Special:Userlogout' ),
 	'wikimania2005wiki' => array( 'Main Page', 'Special:Userlogin', 'Special:Userlogout', // back compat
 		'-',
