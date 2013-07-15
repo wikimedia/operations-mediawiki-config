@@ -70,6 +70,24 @@
       "revId": "0b79a71e70e762aae5389d4ea2ea8fb076cba7d5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49c305cb_a5c74a66",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 8922,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2013-07-15T16:09:51Z",
+      "side": 1,
+      "message": "Ok, so it seems there\u0027s agreement on that being the correct technical way to implement this, if wanted (Tim\u0027s http://article.gmane.org/gmane.org.wikimedia.foundation/67137/ is also relevant).\nI\u0027ll update the commit message again to reflect it.",
+      "parentUuid": "49c305cb_65e43211",
+      "revId": "0b79a71e70e762aae5389d4ea2ea8fb076cba7d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
