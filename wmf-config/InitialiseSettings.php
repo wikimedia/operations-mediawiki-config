@@ -10406,7 +10406,6 @@ $wgConf->settings = array(
 // Bug 50000 - to remove once roll-out complete
 'wmgVisualEditorDisableForAnons' => array(
 	'default' => false,
-	'enwiki' => true, // Bug 49997: Temporarily set during enwiki phased deployment
 ),
 
 'wmgVisualEditorEnableEventLogging' => array(
