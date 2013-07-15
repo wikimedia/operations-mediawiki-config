@@ -16,6 +16,24 @@
       "revId": "0b79a71e70e762aae5389d4ea2ea8fb076cba7d5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49c305cb_ea2471b6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 8922,
+      "author": {
+        "id": 278
+      },
+      "writtenOn": "2013-07-15T03:25:57Z",
+      "side": 1,
+      "message": "I don\u0027t think a coded method would be proper for this. We can just have a revert commit prepared and have somebody submit it on the expiry date.",
+      "parentUuid": "49c305cb_0a0bcd26",
+      "revId": "0b79a71e70e762aae5389d4ea2ea8fb076cba7d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
