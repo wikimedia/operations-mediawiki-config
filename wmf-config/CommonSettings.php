@@ -1945,13 +1945,15 @@ if ( $wmgUseVisualEditor ) {
 	);
 	// The wiki prefix to use
 	$wgParsoidWikiPrefix = $wgDBname;
+
+	// Load shedding knob, affects whether new Parsoid jobs are enqueued.
 	// Set to something between 0 (process all updates) and 1 (skip all updates).
 	$wgParsoidSkipRatio = 0;
 
 	// Throttle rate of template updates by setting the number of tests per
 	// job to something lowish, and limiting the maximum number of updates to
 	// process per template edit
-	$wgParsoidCacheUpdateTitlesPerJob = 6;
+	$wgParsoidCacheUpdateTitlesPerJob = 8;
 	$wgParsoidMaxBacklinksInvalidate = 500000;
 }
 
