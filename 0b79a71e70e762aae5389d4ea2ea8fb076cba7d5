@@ -88,6 +88,24 @@
       "revId": "0b79a71e70e762aae5389d4ea2ea8fb076cba7d5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49c305cb_85c04e2f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 8922,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2013-07-15T16:18:29Z",
+      "side": 1,
+      "message": "Unless there is community consensus an expiry for this (by revert commit or code) should not be approved.",
+      "parentUuid": "49c305cb_65e43211",
+      "revId": "0b79a71e70e762aae5389d4ea2ea8fb076cba7d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
