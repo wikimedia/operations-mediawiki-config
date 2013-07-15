@@ -34,6 +34,24 @@
       "revId": "0b79a71e70e762aae5389d4ea2ea8fb076cba7d5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "49c305cb_8a4fbd34",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 8922,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2013-07-15T07:05:03Z",
+      "side": 1,
+      "message": "How so? We\u0027re already using hard expiry for IP throttle exceptions.",
+      "parentUuid": "49c305cb_ea2471b6",
+      "revId": "0b79a71e70e762aae5389d4ea2ea8fb076cba7d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
