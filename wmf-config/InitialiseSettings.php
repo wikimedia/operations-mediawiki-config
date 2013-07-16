@@ -12141,12 +12141,6 @@ $wgConf->settings = array(
 
 'wmgUseUniversalLanguageSelector' => array(
 	'default' => true,
-	// Bug 51019
-	'mlwiki' => false,
-	'mlwikibooks' => false,
-	'mlwikiquote' => false,
-	'mlwikisource' => false,
-	'mlwiktionary' => false,
 ),
 
 'wmgULSPosition' => array(
