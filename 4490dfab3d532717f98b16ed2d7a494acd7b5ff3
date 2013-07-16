@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "29c091be_636562e2",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-07-16T10:10:39Z",
+      "side": 1,
+      "message": "Indeed that needs to be http://test.m.wikimedia.beta.wmflabs.org/w/load.php\n\ndone.",
+      "parentUuid": "89c97deb_86b98acb",
+      "revId": "4490dfab3d532717f98b16ed2d7a494acd7b5ff3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "89c97deb_069d9a54",
         "filename": "wmf-config/mobile.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2013-07-03T15:21:50Z",
       "side": 1,
       "message": "Slightly different semantics here, not sure if that matters.",
+      "revId": "4490dfab3d532717f98b16ed2d7a494acd7b5ff3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29c091be_4362e6db",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-07-16T10:10:39Z",
+      "side": 1,
+      "message": "That would have added a double slash. Appended \u0027/\u0027 to the wmfHostnames part.\n\ndone.",
+      "parentUuid": "89c97deb_069d9a54",
       "revId": "4490dfab3d532717f98b16ed2d7a494acd7b5ff3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
