@@ -11051,10 +11051,6 @@ $wgConf->settings = array(
 'wmgMFEnableXAnalyticsLogging' => array(
 	'default' => true,
 ),
-'wmgMFVaryResources' => array(
-	'default' => true,
-	'testwiki' => true,
-),
 'wmgMFEnableSiteNotice' => array(
 	'default' => true,
 ),
