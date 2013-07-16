@@ -227,9 +227,6 @@ return array(
 	'wmgMFPhotoUploadEndpoint' => array(
 		'default' => '//commons.wikimedia.beta.wmflabs.org/w/api.php',
 	),
-	'wmgMFLogEvents' => array(
-		'default' => true,
-	),
 	'wmgMFUseCentralAuthToken' => array(
 		'default' => true,
 	),

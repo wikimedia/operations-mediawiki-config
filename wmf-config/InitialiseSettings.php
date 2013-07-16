@@ -11045,9 +11045,6 @@ $wgConf->settings = array(
 	'default' => 'commonswiki',
 	'test2wiki' => '',
 ),
-'wmgMFLogEvents' => array(
-	'default' => true,
-),
 'wmgMFPhotoUploadAppendToDesc' => array(
 	'default' => "{{Uploaded from Mobile|platform=Web|version=}}\n{{subst:unc}}",
 ),
