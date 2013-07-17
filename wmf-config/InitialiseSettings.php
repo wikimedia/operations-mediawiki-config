@@ -9610,14 +9610,14 @@ $wgConf->settings = array(
 ),
 
 'wmgCentralAuthLoginWiki' => array(
-	'default' => false,
+	'default' => 'loginwiki',
 	'loginwiki' => 'loginwiki',
 	'test2wiki' => 'loginwiki',
 	'testwikidatawiki' => 'loginwiki',
 ),
 
 'wmgCentralAuthSilentLogin' => array(
-	'default' => false,
+	'default' => true,
 	'loginwiki' => true,
 	'test2wiki' => true,
 	'testwikidatawiki' => true,
