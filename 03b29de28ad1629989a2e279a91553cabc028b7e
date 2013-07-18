@@ -16,6 +16,24 @@
       "revId": "03b29de28ad1629989a2e279a91553cabc028b7e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "c9845590_c0f19e6b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 12181,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2013-07-18T17:24:17Z",
+      "side": 1,
+      "message": "once they are hooked up together, yes!   configuring them is something todo, maybe next week",
+      "parentUuid": "c9845590_800156b4",
+      "revId": "03b29de28ad1629989a2e279a91553cabc028b7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
