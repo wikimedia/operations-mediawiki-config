@@ -7458,6 +7458,11 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 		'centralnoticeadmin' => array( 'centralnotice-admin' => true, 'editinterface' => true ), //adding to allow CN access without local sysop JRA 2013-02-21
 	),
+	'testwikidatawiki' => array(
+		'*' => array(
+			'property-create' => true, // Bug 51637
+			),
+	),
 	'test2wiki' => array(
 		'user' => array(
 			'upload_by_url' => true, // For testing of Flickr uploading via UploadWizard
