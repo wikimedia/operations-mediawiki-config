@@ -6710,7 +6710,15 @@ $wgConf->settings = array(
 	),
 	'ckbwiki' => array(
 		'*' => array( 'createpage' => false ),
+		'autopatrolled' => array( 'autopatrol' => true ), // bug 51328
 		'rollbacker' => array( 'rollback' => true ), // bug 51312
+		'user' => array( 'upload' => false ), // bug 51232
+		'autoconfirmed' => array( 'upload' => false ), // bug 51232
+		'uploader' => array( 
+			'upload' => true,
+			'reupload' => true,
+			'movefile' => true,
+		), // bug 51232
 	),
 	'cswiki' => array(
 		'autoconfirmed' => array( 'upload' => false, ),
@@ -7695,7 +7703,11 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', ),
 	),
 	'+ckbwiki' => array(
-		'sysop' => array( 'rollbacker' ), // bug 51312
+		'sysop' => array( 
+			'rollbacker', // bug 51312
+			'autopatrolled', // bug 51328
+			'uploader', // bug 51232
+		),
 	),
 	'+cswiki' => array(
 		'bureaucrat' => array( 'autopatrolled' ),
@@ -8117,7 +8129,11 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt',  'bureaucrat', ),
 	),
 	'+ckbwiki' => array(
-		'sysop' => array( 'rollbacker' ), // bug 51312
+		'sysop' => array( 
+			'rollbacker', // bug 51312
+			'autopatrolled', // bug 51328
+			'uploader', // bug 51232
+		),
 	),
 	'+commonswiki' => array(
 		'bureaucrat' => array( 'ipblock-exempt', 'OTRS-member', 'translationadmin' ), // bug 48620
