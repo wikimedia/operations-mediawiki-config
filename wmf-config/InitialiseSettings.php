@@ -12175,6 +12175,12 @@ $wgConf->settings = array(
 	'enwiki' => false,
 ),
 
+'wmgWikibaseCachePrefix' => array(
+	'default' => 'wikidatawiki',
+	'testwikidatawiki' => 'testwikidata',
+	'test2wiki' => 'wikidatawiki-test2'
+),
+
 'wmgUseWikibaseRepo' => array(
 	'default' => false,
 	'wikidata' => true,
@@ -12186,7 +12192,10 @@ $wgConf->settings = array(
 	'wikidataclient' => true,
 ),
 
-//it, he, hu,  ru, tr, uk, uz, hr, bs, sr, sh
+'wmgWikibaseDataTransclusion' => array(
+	'default' => true,
+	'wikivoyage' => false
+),
 
 'wmgWikibaseClientSettings' => array(
 	// @note because of unconventional way of doing wikibase settings, the default setting
