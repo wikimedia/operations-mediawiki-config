@@ -2185,6 +2185,15 @@ if ( $wmgUseVips ) {
 	include( "$IP/extensions/VipsScaler/VipsScaler.php" );
 	include( "$IP/extensions/VipsScaler/VipsTest.php" );
 	$wgVipsThumbnailerHost = '10.2.1.21';
+	$wgVipsOptions = array(
+		array(
+			'conditions' => array(
+				'mimeType' => 'image/png',
+				'minArea' => 3.5e7,
+			),
+		),
+	);
+
 }
 
 if ( $wmgUseApiSandbox ) {
