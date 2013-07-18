@@ -7579,6 +7579,7 @@ $wgConf->settings = array(
 'groupOverrides2' => array(
 	'default' => array(
 		'sysop' => array(
+			'bigdelete' => false,
 			'importupload' => false,
 			'suppressredirect' => true, // http://meta.wikimedia.org/w/index.php?title=Wikimedia_Forum&oldid=1371655#Gives_sysops_to_.22suppressredirect.22_right
 			'noratelimit' => true,
