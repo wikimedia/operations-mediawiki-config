@@ -4,7 +4,9 @@
 # address to the NoPurge list so that XFF headers for it
 # will be stripped; purge requests should get to it
 # on the address in the SquidServers list
-$wgSquidServersNoPurge = array( '127.0.0.1' );
+$wgSquidServersNoPurge = array( '127.0.0.1',
+	'10.4.1.133',  # deployment-cache-text1
+);
 
 # The beta cluster does not have multicast, hence we route the purge
 # requests directly to the varnish instances.  They have varnishhtcpd listening
