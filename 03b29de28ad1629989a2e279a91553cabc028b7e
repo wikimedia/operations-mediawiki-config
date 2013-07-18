@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c9845590_800156b4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 12181,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2013-07-18T16:00:01Z",
+      "side": 1,
+      "message": "test2wiki sahould have the same key as testwikidatawiki (clients can/should share *their* repo\u0027s cache)",
+      "revId": "03b29de28ad1629989a2e279a91553cabc028b7e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
