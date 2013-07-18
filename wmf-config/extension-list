@@ -139,6 +139,7 @@ $IP/extensions/Vector/Vector.php
 $IP/extensions/VipsScaler/VipsScaler.php
 $IP/extensions/VipsScaler/VipsTest.php
 $IP/extensions/VisualEditor/VisualEditor.php
+$IP/extensions/WikibaseDataModel/WikibaseDataModel.php
 $IP/extensions/Wikibase/client/WikibaseClient.php
 $IP/extensions/Wikibase/lib/WikibaseLib.php
 $IP/extensions/Wikibase/repo/Wikibase.php

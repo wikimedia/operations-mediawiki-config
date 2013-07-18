@@ -2462,10 +2462,14 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSIMEEnabled = $wmgULSIMEEnabled;
 }
 
-if ( $wmgUseWikibaseRepo ) {
+if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 	require_once( "$IP/extensions/DataValues/DataValues.php" );
 	require_once( "$IP/extensions/Diff/Diff.php" );
+	require_once( "$IP/extensions/WikibaseDataModel/WikibaseDataModel.php" );
 	require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
+}
+
+if ( $wmgUseWikibaseRepo ) {
 	require_once( "$IP/extensions/Wikibase/repo/Wikibase.php" );
 
 	$baseNs = 120;
@@ -2482,19 +2486,24 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgExtraNamespaces[WB_NS_QUERY] = 'Query';
 	$wgExtraNamespaces[WB_NS_QUERY_TALK] = 'Query_talk';
 
-	$wgWBRepoSettings['changesAsJson'] = true;
-
 	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
+	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
 
 	// Assigning the correct content models to the namespaces
 	$wgWBRepoSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_ITEM] = NS_MAIN;
 	$wgWBRepoSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_PROPERTY] = WB_NS_PROPERTY;
 
-	$wgWBRepoSettings['idBlacklist'] = array( 1, 2, 3, 4, 5, 8, 13, 23, 24, 42, 80, 666, 1337, 1868, 1971, 2000, 2001, 2012, 2013 );
-
-	$wgWBRepoSettings['withoutTermSearchKey'] = false;
-
 	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
+
+	if ( $wgDBname === 'testwikidatawiki' ) {
+		$wgWBRepoSettings['siteLinkGroups'] = array(
+			'wikipedia',
+			'wikivoyage'
+		);
+	}
+
+	$wgWBRepoSettings['withoutTermWeight'] = true;
+	$wgWBRepoSettings['usePropertyInfoTable'] = false;
 
 	$wgWBRepoSettings['clientDbList'] = array_merge(
 		array( 'test2wiki' => 'test2wiki' ),
@@ -2507,12 +2516,11 @@ if ( $wmgUseWikibaseRepo ) {
 	);
 
 	$wgGroupPermissions['*']['property-create'] = false;
+
+	$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfExtendedVersionNumber";
 }
 
 if ( $wmgUseWikibaseClient ) {
-	require_once( "$IP/extensions/DataValues/DataValues.php" );
-	require_once( "$IP/extensions/Diff/Diff.php" );
-	require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
 	require_once( "$IP/extensions/Wikibase/client/WikibaseClient.php" );
 
 	$wgWBClientSettings['changesDatabase'] = 'wikidatawiki';
@@ -2527,9 +2535,14 @@ if ( $wmgUseWikibaseClient ) {
 		'wikibase-property' => 'Property'
 	);
 
-	$wgWBClientSettings['allowDataTransclusion'] = true;
-	$wgWBClientSettings['enableSiteLinkWidget'] = true;
-	$wgWBClientSettings['propagateChangesToRepo'] = true;
+	$wgWBClientSettings['siteLinkGroups'] = array(
+		'wikipedia',
+		'wikivoyage'
+	);
+
+	$wgWBClientSettings['withoutTermWeight'] = true;
+	$wgWBClientSettings['usePropertyInfoTable'] = false;
+	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 
 	$wgHooks['SetupAfterCache'][] = 'wmfWBClientExcludeNS';
 
@@ -2548,6 +2561,8 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings[$setting] = $value;
 	}
 
+	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseDataTransclusion;
+	$wgWBClientSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfExtendedVersionNumber";
 }
 
 if ( ( $wmgUseTranslate && $wmgUseTranslationMemory ) || $wmgEnableGeoData ) {
