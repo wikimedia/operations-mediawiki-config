@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c9845590_b4a138af",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7464,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-07-18T21:35:03Z",
+      "side": 1,
+      "message": "Indented 1 place too much ;)",
+      "revId": "25cbb4cfc7c3c058cb1d747a4749f4ede31e6f8f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
