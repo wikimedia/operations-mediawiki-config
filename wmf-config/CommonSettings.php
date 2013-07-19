@@ -2543,6 +2543,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['withoutTermWeight'] = true;
 	$wgWBClientSettings['usePropertyInfoTable'] = false;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
+	$wgWBClientSettings['enableSiteLinkWidget'] = true;
 
 	$wgHooks['SetupAfterCache'][] = 'wmfWBClientExcludeNS';
 
