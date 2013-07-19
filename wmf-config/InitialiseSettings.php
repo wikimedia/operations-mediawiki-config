@@ -4013,6 +4013,7 @@ $wgConf->settings = array(
 'wgAutoConfirmCount' => array(
 	'default' => 0,
 	'arwiki' => 50, // Bug 12123
+	'ckbwiki' => 10, // Bug 51537
 	'enwiki' => 10, // Bug 14191
 	'eswiki' => 50, // Bug 13261
 	'eswikivoyage' => 25, // bug 44285
