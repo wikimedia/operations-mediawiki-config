@@ -1953,7 +1953,7 @@ if ( $wmgUseVisualEditor ) {
 	// Throttle rate of template updates by setting the number of tests per
 	// job to something lowish, and limiting the maximum number of updates to
 	// process per template edit
-	$wgParsoidCacheUpdateTitlesPerJob = 8;
+	$wgParsoidCacheUpdateTitlesPerJob = 10;
 	$wgParsoidMaxBacklinksInvalidate = 500000;
 }
 
