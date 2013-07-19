@@ -2515,7 +2515,8 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['clientDbList']
 	);
 
-	$wgGroupPermissions['*']['property-create'] = false;
+	// Bug 51637 and 46953
+	$wgGroupPermissions['*']['property-create'] = $wgDBname === 'testwikidatawiki' ? true : false;
 
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfExtendedVersionNumber";
 }
