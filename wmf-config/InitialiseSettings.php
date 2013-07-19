@@ -6441,7 +6441,7 @@ $wgConf->settings = array(
 	'+tlwikibooks' => array( 100 => 1, 101 => 0 ),
 	'+trwikisource' => array( 100 => 1 ),
 	'+ukwikinews' => array( 14 => 1), // bug 49335
-	'+ukwikisource' => array( 114 => 1 ), // bug 50561
+	'+ukwikisource' => array( 102 => 1, 114 => 1, 252 => 1 ), // bug 50561, 51684
 	'+vecwikisource' => array( 100 => 1, 104 => 1 ),
 	'+viwikibooks' => array( 102 => 1, 104 => 1, 106 => 1 ),
 	'+viwikisource' => array( 102 => 1, 106 => 1 ),
@@ -9176,7 +9176,7 @@ $wgConf->settings = array(
 	'+tewikisource' => array( 102, 104, 106 ),
 	'+trwikibooks' => array( 100, 110, ),
 	'+trwikisource' => array( 100 ),
-	'+ukwikisource' => array( 114 ), // bug 50561
+	'+ukwikisource' => array( 102, 114, 250, 252 ), // bug 50561, 51684
 	'+vecwikisource' => array( 100, 102, 104 ),
 	'+viwikibooks' => array( 104, 106 ),
 	'+viwikisource' => array( 102, 104, 106 ),
