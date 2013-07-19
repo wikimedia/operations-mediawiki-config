@@ -2379,6 +2379,9 @@ $wgConf->settings = array(
 		'Википедийа' => NS_PROJECT,
 		'Википедийа_дийцаре' => NS_PROJECT_TALK,
 	),
+	'+ckbwiki' => array(
+		'وپ' => NS_PROJECT, // bug 51605
+	),
 	'+commonswiki' => array(
 		'Museum' => 106,
 		'Museum_talk' => 107,
