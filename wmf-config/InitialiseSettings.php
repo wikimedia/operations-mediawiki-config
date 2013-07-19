@@ -7458,11 +7458,6 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 		'centralnoticeadmin' => array( 'centralnotice-admin' => true, 'editinterface' => true ), //adding to allow CN access without local sysop JRA 2013-02-21
 	),
-	'testwikidatawiki' => array(
-		'*' => array(
-			'property-create' => true, // Bug 51637
-		),
-	),
 	'test2wiki' => array(
 		'user' => array(
 			'upload_by_url' => true, // For testing of Flickr uploading via UploadWizard
@@ -7550,7 +7545,6 @@ $wgConf->settings = array(
 		'propertycreator' => array( 'property-create' => true ), // bug 46953
 		'sysop' => array( 'property-create' => true ), // bug 46953
 		'flood' => array( 'bot' => true ), // bug 48013
-		'*' => array ( 'property-create' => false ), // bug 46953
 	),
 	// due to mass vandalism complaint, 2006-04-11
 	'zhwiki' => array(
