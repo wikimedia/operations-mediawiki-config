@@ -7707,6 +7707,7 @@ $wgConf->settings = array(
 			'rollbacker', // bug 51312
 			'autopatrolled', // bug 51328
 			'uploader', // bug 51232
+			'confirmed', // bug 51715
 		),
 	),
 	'+cswiki' => array(
@@ -8133,6 +8134,7 @@ $wgConf->settings = array(
 			'rollbacker', // bug 51312
 			'autopatrolled', // bug 51328
 			'uploader', // bug 51232
+			'confirmed', // bug 51715
 		),
 	),
 	'+commonswiki' => array(
