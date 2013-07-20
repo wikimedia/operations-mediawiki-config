@@ -8206,7 +8206,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller', 'rollbacker' ),
 	),
 	'+enwiktionary' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', ),
+		'bureaucrat' => array( 'sysop' ), // bureaucrat removed per bug 42113
 		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker', 'flood' ),
 	),
 	'+fawiki' => array(
