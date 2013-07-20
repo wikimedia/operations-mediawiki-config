@@ -3684,19 +3684,6 @@ $wgConf->settings = array(
 ),
 # @} end of wgProofreadPageNamespaceIds
 
-# wgUseDynamicDates @{
-'wgUseDynamicDates' => array(
-	'default' => false,
-	'metawiki'  => true,
-	'enwikiquote' => true,
-	'enwiktionary' => true,
-	'enwikibooks' => true,
-	'enwikinews' => true,
-	'commonswiki' => true,
-	'testwiki' => true,
-),
-# @} end of wgUseDynamicDates
-
 'wgRawHtml' => array(
 	'default' => false,
 	'donatewiki' => true,
