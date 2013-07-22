@@ -596,6 +596,12 @@ if ( $wgDBname == 'testwiki' ) {
 if ( $wmgUseFlaggedRevs ) {
 	include( "$wmfConfigDir/flaggedrevs.php" );
 }
+#Adding Flaggedrevs rights so that they are available for globalgroups/staff rights - JRA 2013-07-22
+$wgAvailableRights[] = 'stablesettings';
+$wgAvailableRights[] = 'review';
+$wgAvailableRights[] = 'unreviewedpages';
+$wgAvailableRights[] = 'movestable';
+$wgAvailableRights[] = 'validate';
 
 $wgUseAjax = true;
 $wgCategoryTreeDynamicTag = true;
