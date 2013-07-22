@@ -1,0 +1,9 @@
+Code-Review+2: Asher <afeldman@wikimedia.org>
+Verified+2: Asher <afeldman@wikimedia.org>
+Code-Review+1: Aaron Schulz <aschulz@wikimedia.org>
+Verified+2: jenkins-bot
+Submitted-by: Asher <afeldman@wikimedia.org>
+Submitted-at: Mon, 22 Jul 2013 20:54:28 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/75146
+Project: operations/mediawiki-config
+Branch: refs/heads/master
