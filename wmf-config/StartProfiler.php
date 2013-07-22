@@ -17,7 +17,7 @@ if ( @defined( $_REQUEST['forceprofile'] ) ) {
 	$wgProfiler = new ProfilerSimpleUDP( array() );
 	$wgProfiler->setProfileID( 'test2' );
 # Normal case: randomly selected for logged profiling sample
-} elseif ( PHP_SAPI !== 'cli' && ( mt_rand( 0, 0x7fffffff ) % 50 ) == 0 ) {
+} elseif ( PHP_SAPI !== 'cli' && $wmfDatacenter == 'eqiad' && ( mt_rand( 0, 0x7fffffff ) % 50 ) == 0 ) {
 	require_once( $IP . '/includes/profiler/ProfilerSimpleUDP.php' );
 	$wgProfiler = new ProfilerSimpleUDP( array() );
 	// $IP is something like '/usr/local/apache/common-local/php-1.19'
