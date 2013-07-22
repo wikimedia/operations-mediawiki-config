@@ -10966,7 +10966,6 @@ $wgConf->settings = array(
 'wmgUseMarkAsHelpful' => array(
 	'default' => false,
 	'testwiki' => true,
-	'enwiki' => true,
 	# 'incubatorwiki' => true,
 	# 'nlwiki' => true,
 	# 'sewikimedia' => true,
