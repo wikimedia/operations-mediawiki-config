@@ -10426,17 +10426,20 @@ $wgConf->settings = array(
 'wmgUseVisualEditorNamespace' => array(
 	'default' => false,
 	'testwiki' => true,
+	'test2wiki' => true,
 	'mediawikiwiki' => true,
 ),
 
 'wmgVisualEditorDefault' => array(
 	'default' => false,
 	'mediawikiwiki' => true,
+	'test2wiki' => true,
 	'enwiki' => true
 ),
 
 'wmgVisualEditorExperimental' => array(
 	'default' => false,
+	'test2wiki' => true,
 	'mediawikiwiki' => true,
 ),
 
