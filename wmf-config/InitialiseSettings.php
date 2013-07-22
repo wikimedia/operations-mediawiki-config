@@ -4193,6 +4193,7 @@ $wgConf->settings = array(
 		'GettingStarted' => "udp://$wmfUdp2logDest/gettingstarted",
 		'zero' => "udp://$wmfUdp2logDest/zero", // zero-rated debug log
 		'geodata' => "udp://$wmfUdp2logDest/geodata",
+		'DBPerformance' => => "udp://$wmfUdp2logDest/dbperformance",
 	),
 
 	'+enwiki' => array(
