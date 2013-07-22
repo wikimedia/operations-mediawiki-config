@@ -10432,11 +10432,13 @@ $wgConf->settings = array(
 'wmgVisualEditorDefault' => array(
 	'default' => false,
 	'mediawikiwiki' => true,
+	'test2wiki' => true,
 	'enwiki' => true
 ),
 
 'wmgVisualEditorExperimental' => array(
 	'default' => false,
+	'test2wiki' => true,
 	'mediawikiwiki' => true,
 ),
 
