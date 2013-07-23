@@ -12219,12 +12219,18 @@ $wgConf->settings = array(
 'wmgUseWikibaseClient' => array(
 	'default' => false,
 	'test2wiki' => true,
+	'wikivoyage' => true,
 	'wikidataclient' => true,
 ),
 
 'wmgWikibaseDataTransclusion' => array(
 	'default' => true,
 	'wikivoyage' => false
+),
+
+'wmgWikibaseClientSiteGroup' => array(
+	'default' => 'wikipedia',
+	'wikivoyage' => 'wikivoyage'
 ),
 
 'wmgWikibaseClientSettings' => array(

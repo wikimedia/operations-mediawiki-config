@@ -2495,14 +2495,11 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
 
-	if ( $wgDBname === 'testwikidatawiki' ) {
-		$wgWBRepoSettings['siteLinkGroups'] = array(
-			'wikipedia',
-			'wikivoyage'
-		);
-	}
+	$wgWBRepoSettings['siteLinkGroups'] = array(
+		'wikipedia',
+		'wikivoyage'
+	);
 
-	$wgWBRepoSettings['withoutTermWeight'] = true;
 	$wgWBRepoSettings['usePropertyInfoTable'] = false;
 
 	$wgWBRepoSettings['clientDbList'] = array_merge(
@@ -2529,6 +2526,7 @@ if ( $wmgUseWikibaseClient ) {
 	// to be safe, keeping this here although $wgDBname is default setting
 	$wgWBClientSettings['siteGlobalID'] = $wgDBname;
 	$wgWBClientSettings['repoUrl'] = "//{$wmfHostnames['wikidata']}";
+	$wgWBClientSettings['siteGroup'] = $wmgWikibaseClientSiteGroup;
 
 	$wgWBClientSettings['repoNamespaces'] = array(
 		'wikibase-item' => '',
