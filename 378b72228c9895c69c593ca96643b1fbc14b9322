@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c9845590_68dfbe37",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2507,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-07-23T21:22:15Z",
+      "side": 1,
+      "message": "Really need to do something about this by finishing I019af45fc927699ac8b63cb238ba6fd9604e0151 somehow..",
+      "revId": "378b72228c9895c69c593ca96643b1fbc14b9322",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
