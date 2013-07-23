@@ -10526,6 +10526,7 @@ $wgConf->settings = array(
 	'ptwiki' => 'uca-pt', // bug 45911
 	'ptwikibooks' => 'uca-pt', // bug 45911
 	'svwiki' => 'uca-sv', // bug 45446
+	'svwikisource' => 'uca-sv@collation=standard', // bug 46058
 	'thwikibooks' => 'uca-default', // bug 48097
 	'thwikinews' => 'uca-default', // bug 48097
 	'thwiki' => 'uca-default', // bug 48097
