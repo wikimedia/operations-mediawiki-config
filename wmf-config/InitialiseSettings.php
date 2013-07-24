@@ -4774,6 +4774,7 @@ $wgConf->settings = array(
 	'siwiki' => array( 100 => 'ද්වාරය', 101 => 'ද්වාරය_සාකච්ඡාව' ), # bug 6435, 24936
 	'skwiki' => array( 100 => 'Portál', 101 => 'Diskusia_k_portálu' ),
 	'slwiki' => array( 100 => 'Portal', 101 => 'Pogovor_o_portalu' ),
+	'sowiki' => array( 100 => 'Portal', 101 => 'Portal_talk' ), // bug 49600
 	'sqwiki' => array( 100 => 'Portal', 101 => 'Portal_diskutim' ),
 	'srwiki' => array(
 		100 => 'Портал',
