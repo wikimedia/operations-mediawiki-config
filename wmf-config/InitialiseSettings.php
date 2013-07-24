@@ -3997,6 +3997,11 @@ $wgConf->settings = array(
 	'tenwiki' => 0, // bug 26554
 ),
 
+// Turn this on so UserMailer::send() will be able to send both text and html email
+'wgAllowHTMLEmail' => array(
+	'default' => true,
+),
+
 'wgAutoConfirmCount' => array(
 	'default' => 0,
 	'arwiki' => 50, // Bug 12123
