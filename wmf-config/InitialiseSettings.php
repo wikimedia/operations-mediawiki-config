@@ -10416,7 +10416,15 @@ $wgConf->settings = array(
 'wmgVisualEditorDefault' => array(
 	'default' => false,
 	'mediawikiwiki' => true,
-	'enwiki' => true
+	'dewiki' => true,
+	'enwiki' => true,
+	'eswiki' => true,
+	'frwiki' => true,
+	'hewiki' => true,
+	'itwiki' => true,
+	'plwiki' => true,
+	'ruwiki' => true,
+	'svwiki' => true
 ),
 
 'wmgVisualEditorExperimental' => array(
