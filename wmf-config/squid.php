@@ -57,6 +57,15 @@ $wgSquidServersNoPurge = array(
 	'10.64.0.161',	# cp1039, Varnish
 	'10.64.0.162',	# cp1040, Varnish
 
+	'10.64.32.104',	# cp1052, Varnish
+	'10.64.32.105',	# cp1053, Varnish
+	'10.64.32.106',	# cp1054, Varnish
+	'10.64.32.107',	# cp1055, Varnish
+	'10.64.0.102',	# cp1065, Varnish
+	'10.64.0.103',	# cp1066, Varnish
+	'10.64.0.104',	# cp1067, Varnish
+	'10.64.0.105',	# cp1068, Varnish
+
 	# esams
 	'91.198.174.33',	# knsq23
 	'91.198.174.34',	# knsq24
