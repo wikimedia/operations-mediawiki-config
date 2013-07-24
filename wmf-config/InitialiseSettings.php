@@ -12277,6 +12277,9 @@ $wgConf->settings = array(
 	'hewiki' => array(
 		'sortPrepend' => array( 'en' ),
 	),
+	'hewikivoyage' => array(
+		'sortPrepend' => array( 'en' ),
+	),
 	'huwiki' => array(
 		'sortPrepend' => array( 'en' ),
 	),
