@@ -11977,6 +11977,7 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
 	'enwiki' => true,
+	'metawiki' => true,
 ),
 'wmgEchoEnableEmailBatch' => array(
 	'default' => true,
@@ -12004,6 +12005,7 @@ $wgConf->settings = array(
 	'test2wiki' => 300,
 	'mediawikiwiki' => 14400,
 	'enwiki' => 14400,
+	'metawiki' => 14400,
 ),
 
 'wmgEchoCluster' => array(
@@ -12024,6 +12026,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'mediawikiwiki' => true,
 	'enwiki' => true,
+	'metawiki' => true,
 ),
 
 'wmgUseDisambiguator' => array(
