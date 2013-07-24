@@ -1911,6 +1911,9 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
 		$wgHiddenPrefs[] = 'visualeditor-enable'; // Bug 48666
+	} else {
+		// Only show the beta-disable preference if the wiki is in 'beta'.
+		$wgHiddenPrefs[] = 'visualeditor-betatempdisable';
 	}
 	if ( $wmgVisualEditorExperimental ) {
 		$wgVisualEditorEnableExperimentalCode = true;
