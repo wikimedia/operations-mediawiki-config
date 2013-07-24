@@ -6707,6 +6707,7 @@ $wgConf->settings = array(
 			'reupload' => true,
 			'movefile' => true,
 		), // bug 51232
+		'flood' => array( 'bot' => true ), // bug 51803
 	),
 	'cswiki' => array(
 		'autoconfirmed' => array( 'upload' => false, ),
@@ -7690,6 +7691,7 @@ $wgConf->settings = array(
 			'autopatrolled', // bug 51328
 			'uploader', // bug 51232
 			'confirmed', // bug 51715
+			'flood', // bug 51803
 		),
 	),
 	'+cswiki' => array(
@@ -8117,6 +8119,7 @@ $wgConf->settings = array(
 			'autopatrolled', // bug 51328
 			'uploader', // bug 51232
 			'confirmed', // bug 51715
+			'flood', // bug 51803
 		),
 	),
 	'+commonswiki' => array(
@@ -10002,6 +10005,7 @@ $wgConf->settings = array(
 ),
 'wgGroupsRemoveFromSelf' => array(
 	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=37198
+	'ckbwiki' => array( 'flood' => array( 'flood' ) ), // bug 51803
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'enwikisource' => array( 'sysop' => array( 'flood' ) ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=36863
