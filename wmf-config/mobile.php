@@ -117,3 +117,4 @@ $wgHooks['EnterMobileMode'][] = function() {
 };
 
 $wgMFEnableSiteNotice = $wmgMFEnableSiteNotice;
+$wgMFEnablePhotoUploadCTA = $wmgMFEnablePhotoUploadCTA;

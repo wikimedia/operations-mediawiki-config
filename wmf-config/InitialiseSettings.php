@@ -11124,6 +11124,9 @@ $wgConf->settings = array(
 	'default' => array(),
 	'foundationwiki' => array( 'Special:FundraiserStatistics' ),
 ),
+'wmgMFEnablePhotoUploadCTA' => array(
+	'default' => false,
+),
 
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
