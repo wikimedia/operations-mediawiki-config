@@ -11984,6 +11984,7 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
 	'enwiki' => true,
+	'metawiki' => true,
 ),
 'wmgEchoEnableEmailBatch' => array(
 	'default' => true,
@@ -11994,6 +11995,7 @@ $wgConf->settings = array(
 'wmgEchoHelpPage' => array(
 	'default' => '//www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:Echo',
 	'enwiki' => '//en.wikipedia.org/wiki/Wikipedia:Notifications/FAQ',
+	'metawiki' => '//meta.wikimedia.org/wiki/Help:Notifications',
 ),
 'wmgEchoSiteNotificationIconUrl' => array(
 	'default' => false, // Placeholder icon
@@ -12011,6 +12013,7 @@ $wgConf->settings = array(
 	'test2wiki' => 300,
 	'mediawikiwiki' => 14400,
 	'enwiki' => 14400,
+	'metawiki' => 14400,
 ),
 
 'wmgEchoCluster' => array(
@@ -12031,6 +12034,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'mediawikiwiki' => true,
 	'enwiki' => true,
+	'metawiki' => true,
 ),
 
 'wmgUseDisambiguator' => array(
