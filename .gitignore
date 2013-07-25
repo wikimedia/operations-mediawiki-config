@@ -3,6 +3,7 @@
 
 # Editors
 *~
+*.swp
 
 # Wikimedia private/temporary stuff
 AdminSettings.php
