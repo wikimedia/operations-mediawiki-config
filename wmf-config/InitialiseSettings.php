@@ -10429,7 +10429,6 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 	'enwiki' => true,
 	'dewiki' => true,
-	'enwiki' => true,
 	'eswiki' => true,
 	'frwiki' => true,
 	'hewiki' => true,
@@ -10449,17 +10448,10 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-// Bug 50000 - to remove once roll-out complete
+// Bug 50000 - Disable for logged-out users if wmgVisualEditorDefault is true
+// This is a temporary variable for roll-out, to be removed once complete.
 'wmgVisualEditorDisableForAnons' => array(
 	'default' => false,
-	'dewiki' => true,
-	'eswiki' => true,
-	'frwiki' => true,
-	'hewiki' => true,
-	'itwiki' => true,
-	'plwiki' => true,
-	'ruwiki' => true,
-	'svwiki' => true,
 ),
 
 'wmgVisualEditorEnableEventLogging' => array(
