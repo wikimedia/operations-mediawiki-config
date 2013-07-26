@@ -10452,14 +10452,7 @@ $wgConf->settings = array(
 // Bug 50000 - to remove once roll-out complete
 'wmgVisualEditorDisableForAnons' => array(
 	'default' => false,
-	'dewiki' => true,
-	'eswiki' => true,
-	'frwiki' => true,
-	'hewiki' => true,
-	'itwiki' => true,
-	'plwiki' => true,
-	'ruwiki' => true,
-	'svwiki' => true,
+	'dewiki' => true, // bug 52202
 ),
 
 'wmgVisualEditorEnableEventLogging' => array(
