@@ -1051,6 +1051,7 @@ $wgConf->settings = array(
 	'itwikinews'    => false,
 	'jawiki'	=> '/wiki/Wikipedia:%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89',
 	'jawikisource'  => '//commons.wikimedia.org/wiki/Special:Upload',
+	'kowiki'	=> '/wiki/위키백과:파일_올리기', // Bug 52076
 	'lawiki'	=> '//commons.wikimedia.org/wiki/Special:Upload?uselang=la', // Bug 13190
 	'mlwiki'	    => '/wiki/വിക്കിപീഡിയ:അപ്‌ലോഡ്',
 	'ndswiki'       => '//commons.wikimedia.org/wiki/Special:Upload',
