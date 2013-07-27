@@ -4159,7 +4159,6 @@ $wgConf->settings = array(
 		'api' => "udp://$wmfUdp2logDest/api",
 		'SQLBagOStuff' => "udp://$wmfUdp2logDest/sql-bagostuff",
 
-		'UploadBlacklist' => "udp://$wmfUdp2logDest/upload-blacklist",
 		'FileOperation' => "udp://$wmfUdp2logDest/filebackend-ops",
 		'SwiftBackend' => "udp://$wmfUdp2logDest/swift-backend", // -aaron 5/15/12
 		'updateTranstagOnNullRevisions' => "udp://$wmfUdp2logDest/updateTranstagOnNullRevisions",

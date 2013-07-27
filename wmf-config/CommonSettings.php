@@ -621,7 +621,6 @@ if ( $wmgUseSpamBlacklist ) {
 	);
 }
 
-include( $IP . '/extensions/UploadBlacklist/UploadBlacklist.php' );
 include( $IP . '/extensions/TitleBlacklist/TitleBlacklist.php' );
 
 $wgTitleBlacklistSources = array(
@@ -638,7 +637,6 @@ if ( $wmgUseQuiz ) {
 if ( $wmgUseGadgets ) {
 	include( "$IP/extensions/Gadgets/Gadgets.php" );
 }
-
 
 if ( $wmgUseMwEmbedSupport ) {
 	require_once( "$IP/extensions/MwEmbedSupport/MwEmbedSupport.php" );
@@ -822,40 +820,6 @@ if ( $wmgUseScore ) {
 
 wfProfileOut( "$fname-ext-include1" );
 wfProfileIn( "$fname-misc2" );
-
-# Upload spam system
-// SHA-1 hashes of blocked files:
-# FIXME should check file size too
-$ubUploadBlacklist = array(
-	// Goatse:
-	'aebbf277146e497c036937d3c3d6d0cac49a37a8', // 20050901082002!Patoo.jpg
-	// Spam:
-	'7740dab676725bcf6ea58b03b231aa4ec6c7ff34', // Austriaflaggemodern.jpg
-	'1f1c44af6ee4f6e4b6cb48b892e625fa52238bd1', // Nostalgieplattenspielerei.jpg
-	'e6eb4549756b88e2c69171ffbd278be51c3e2bfe', // Patioboy.jpg
-	'eeb9b16edb9b5e9c58f47a558589e7eb970f32c0', // Shoessss.jpg, 73464736474847367.jpg
-	'14e4858e63b008a7e087f2b90d3f57c021ab0f78', // Vacuumbigmell.jpg
-	'f989e303ef505c4706db42d5cdad67841042e2b9', // 998_pre_1.jpg
-	// Ass pus:
-	'27979159b13b819d1bf62e1071a0c2a54b373ed5', // Squish.png
-	'7176aeddf3d7d8aada785721773ffeb7ee7b292e', // 20050905221505!Linguistics_stub.png *
-	'27979159b13b819d1bf62e1071a0c2a54b373ed5', // 20050905235133!Leaf.png
-	'bb3acc61413ef813453a4b0c0198e30b2cd8fcf9', // Kitty100.jpg
-	'855e55c4925644aeaef262ef25dd00815761c076', // Wikipedia-logo-100px
-	'203bc24e5291e543779201734c49cfd88fcb2445', // Wikipodia-logo.png
-	'14d2a0c0f3081815d04493f72ab5970c51422bc7', // Bung.jpg
-	'3c610bc87d0ba49467c6f2d3cfba4b3321f6b351', // Blue_morpho_butterfly_300x271.png
-	'7176aeddf3d7d8aada785721773ffeb7ee7b292e', // 20050905235450!Blue_morpho_butterfly_300x271.png
-	'7a7f9d7ef52ed8967cb6b0171ef8d45e2a0c68b9', // Leaf.png
-	'1ecfaf883c4130e1827290ad063158d0037631e6', // Wikimedia-button1.png
-	'1c73d6596685175a8af6b08508468252c4dff8e2', // Windbuchencom.jpg
-	'203bc24e5291e543779201734c49cfd88fcb2445', // Leaf.png
-	'95d825bcf01ca3e553f4175dd7238ff12ba1d153', // 20050915055251!New_Orleans_Survivor_Flyover.jpg
-	'bbd292d917d7fa7dec9a524de77ca39bd8cdf738', // 20050915060435!New_Orleans_Survivor_Flyover.jpg
-
-	// Some singnet guy
-	'bed74eef04f5b54884dc650679e5688c7c1f74cb', // Peniscut.jpg
-);
 
 $wgHiddenPrefs[] = 'realname';
 
