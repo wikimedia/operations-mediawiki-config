@@ -538,7 +538,7 @@ elseif ( $wgDBname == 'ruwiktionary' ) {
 elseif ( $wgDBname == 'idwiki' ) {}
 
 elseif ( $wgDBname == 'ruwikisource' ) {
-	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_HELP, NS_PROJECT ) );
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_HELP, NS_PROJECT, 104, 106 ) );
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
