@@ -11630,6 +11630,15 @@ $wgConf->settings = array(
 		'5' => 'Geban %code%-5',
 		'N' => 'Geban %code%-N',
 	),
+	'wikidatawiki' => array( // bug 52145
+		'0' => 'User %code%-0',
+		'1' => 'User %code%-1',
+		'2' => 'User %code%-2',
+		'3' => 'User %code%-3',
+		'4' => 'User %code%-4',
+		'5' => 'User %code%-5',
+		'N' => 'User %code%-N',
+	),
 	'zhwiktionary' => array(
 		'0' => false,
 		'1' => '%wikiname%(初级)使用者',
