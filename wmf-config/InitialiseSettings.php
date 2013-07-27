@@ -1022,6 +1022,7 @@ $wgConf->settings = array(
 	'bgwiki'	=> '/wiki/MediaWiki:Uploadtext', // Bug 14836
 	'bnwiki'	=> '/wiki/উইকিপিডিয়া:আপলোড',
 	'bswiki'	=> '/wiki/Wikipedia:Upload', // Bug 12044
+	'ckbwiki'	=> '//commons.wikimedia.org/wiki/Commons:Upload/ckb?uselang=ckb',
 	'cswiki'	=> '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
 	'cswikibooks'   => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
 	'cswikinews'    => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
