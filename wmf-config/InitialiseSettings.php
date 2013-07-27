@@ -1042,6 +1042,7 @@ $wgConf->settings = array(
 	'eswikivoyage'  => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es', // Bug 42933
 	'eswiktionary'  => '//commons.wikimedia.org/wiki/Special:Upload?uselang=es',
 	'euwiki'	=> '//commons.wikimedia.org/wiki/Commons:Upload/eu?uselang=eu',
+	'fawiki'        => '/wiki/ویکی‌پدیا:بارگذاری',
 	'frwiki'	=> '/wiki/Aide:Importer_un_fichier',
 	'hewikinews'    => false,
 	'hiwiki'	=> '/wiki/विकिपीडिया:अपलोड',
