@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_94c6e84a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4026,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2013-07-27T13:34:47Z",
+      "side": 1,
+      "message": "Hm, why the hell are these working?\n\nFrom https://www.mediawiki.org/wiki/Manual:$wgRestrictionLevels :\n\n\"Note that this variable holds a list of user permissions/rights, not user groups.\"",
+      "revId": "5d7ddeef2d87490eea6dd9042dc23502aa66f9b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
