@@ -16,6 +16,24 @@
       "revId": "5d7ddeef2d87490eea6dd9042dc23502aa66f9b2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_7a230b5a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4026,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2013-07-28T00:50:07Z",
+      "side": 1,
+      "message": "I just added that to the docs myself, actually :) So if it\u0027s wrong you\u0027re welcome to fix it.\n\nBut it seems right: You can see that, e.g. the editor group on plwiki has the editor permission assigned to it, and similar thing for ptwiki. The \"sysop\" entry seems to be a specialcase AFAICS.",
+      "parentUuid": "a989e1a9_94c6e84a",
+      "revId": "5d7ddeef2d87490eea6dd9042dc23502aa66f9b2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
