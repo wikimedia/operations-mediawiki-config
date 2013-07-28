@@ -1589,7 +1589,7 @@ if ( $wmgUseCodeReview ) {
 
 	$wgCodeReviewENotif = true; // let's experiment with this
 	$wgCodeReviewCommentWatcherEmail = 'mediawiki-codereview@lists.wikimedia.org';
-	$wgCodeReviewRepoStatsCacheTime = 60 * 60; // 1 hour, default is 6
+	$wgCodeReviewRepoStatsCacheTime = 24 * 60 * 60;
 
 	$wgCodeReviewMaxDiffPaths = 100;
 }
