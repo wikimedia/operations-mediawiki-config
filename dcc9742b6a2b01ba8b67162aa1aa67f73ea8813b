@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_a551f862",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-07-28T19:16:44Z",
+      "side": 1,
+      "message": "Why all the space here?",
+      "revId": "dcc9742b6a2b01ba8b67162aa1aa67f73ea8813b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_85feb433",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-07-28T19:16:44Z",
+      "side": 1,
+      "message": "A bit of trailing whitespace.",
+      "revId": "dcc9742b6a2b01ba8b67162aa1aa67f73ea8813b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_05f2a46e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-07-28T19:16:44Z",
+      "side": 1,
+      "message": "Kill this line, please. If anyone fucks up the Unicode in this file, the entire cluster is going to be broken, I promise.",
+      "revId": "dcc9742b6a2b01ba8b67162aa1aa67f73ea8813b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

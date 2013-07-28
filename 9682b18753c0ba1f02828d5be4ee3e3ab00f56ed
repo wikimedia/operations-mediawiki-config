@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_a5e2d8a1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-07-28T19:16:44Z",
+      "side": 0,
+      "message": "Please remove the vim information. It seems painfully unlikely that anyone would be using vim, editing this file, and either care or not know about this info.",
+      "revId": "9682b18753c0ba1f02828d5be4ee3e3ab00f56ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_25a08846",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-07-28T19:16:44Z",
+      "side": 0,
+      "message": "Don\u0027t remove this warning. It\u0027s incredibly important.\n\nHowever, the note directly above about how to edit the file can be removed. It\u0027s 2013 and with pre-commit review, we can assume that anyone editing this file has mastered Unicode/file handling.",
+      "revId": "9682b18753c0ba1f02828d5be4ee3e3ab00f56ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
