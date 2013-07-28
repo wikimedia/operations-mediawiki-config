@@ -9,12 +9,24 @@
  * zM close all folds
 */
 
+# WARNING: This file is publically viewable on the web. Do not put private data here.
+
+#######################################################################
+# InitialiseSettings.php contains the specific configuration settings
+# for each wiki in the WMF cluster.
+# 
+# * Settings prefixed with 'wg' are standard MediaWiki configuration
+#   variables.
+# * Settings prefixed with 'wmg' are custom parameters handled by 
+#   CommonSettings.php.
+#######################################################################
+
 # When editing Devanagari text, some editor/terminal combinations (vim +
 # xterm/kconsole) cause problems.  Try an X editor instead if this happens
 # (gvim works well for me) - river
-# rev 73224
-# öäü
-# WARNING: This file is publically viewable on the web. Do not put private data here.
+# öäü ♠♣♥♦
+
+
 
 # Globals set in CommonSettings.php for use in settings values
 global $wmfUdp2logDest, $wmfDatacenter, $wmfRealm, $wmfConfigDir, $wgConf;
