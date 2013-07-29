@@ -16,6 +16,24 @@
       "revId": "f5a217d890fee20d980c6f1894234ddc4e4b733c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_ba0d8e38",
+        "filename": "wmf-config/squid.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2013-07-29T12:10:39Z",
+      "side": 1,
+      "message": "That\u0027s what I got from ops@",
+      "parentUuid": "a989e1a9_3a017e08",
+      "revId": "f5a217d890fee20d980c6f1894234ddc4e4b733c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
