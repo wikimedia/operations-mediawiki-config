@@ -16,6 +16,24 @@
       "revId": "cae86cc7a972134ff064241e840d8bd6afd0994c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_eb274f1f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2013-07-29T01:07:05Z",
+      "side": 1,
+      "message": "For me it is: clubs, spades, diamonds, hearts. But I just went with the order of characters in the Unicode Standard.",
+      "parentUuid": "a989e1a9_cbd9ab20",
+      "revId": "cae86cc7a972134ff064241e840d8bd6afd0994c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
