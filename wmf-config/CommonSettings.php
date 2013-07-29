@@ -2476,6 +2476,8 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSAnonCanChangeLanguage = false;
 	$wgULSPosition = $wmgULSPosition;
 	$wgULSIMEEnabled = $wmgULSIMEEnabled;
+	// Bug 50529
+	$wgULSNoImeSelectors[] = 'ul.ve-ui-menuWidget input';
 }
 
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
