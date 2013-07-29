@@ -34,6 +34,41 @@
       "revId": "ba0e00e1807d43889e9192ed1da0751f0ae3506f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_fa30f6e9",
+        "filename": "wmf-config/squid-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-07-29T12:13:39Z",
+      "side": 1,
+      "message": "$wgSquidServers is used to send purge requests.  In beta we are now using wgHTCPMulticastRouting since https://gerrit.wikimedia.org/r/#/c/71345/\n\n$wgSquidServersNoPurge is for the XFF.  That is definitely an horrible setting name :(  I have added the text cache to it with https://gerrit.wikimedia.org/r/#/c/74355/\n\n\nSo I guess you want to add the other instances to $wgSquidServersNoPurge.",
+      "parentUuid": "69c609db_057c721b",
+      "revId": "ba0e00e1807d43889e9192ed1da0751f0ae3506f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_5a580230",
+        "filename": "wmf-config/squid-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-07-29T12:13:39Z",
+      "side": 1,
+      "message": "This instance has been phased out in favor of:\n\n \u002710.4.1.133\u0027,  # deployment-cache-text1",
+      "revId": "ba0e00e1807d43889e9192ed1da0751f0ae3506f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
