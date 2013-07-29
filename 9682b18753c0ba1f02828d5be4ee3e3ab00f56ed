@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_9a0fea37",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 10432,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-07-29T15:54:55Z",
+      "side": 0,
+      "message": "The commit message makes no mention of this change and the database names are not in alphabetical order.",
+      "revId": "9682b18753c0ba1f02828d5be4ee3e3ab00f56ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_ba0cae43",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 10455,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-07-29T15:54:55Z",
+      "side": 0,
+      "message": "The German Wikipedia has specifically requested that VisualEditor be disabled for anonymous users, as I understand it.",
+      "revId": "9682b18753c0ba1f02828d5be4ee3e3ab00f56ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
