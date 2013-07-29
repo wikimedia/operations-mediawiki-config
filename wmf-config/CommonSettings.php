@@ -913,10 +913,13 @@ wfProfileOut( "$fname-misc2" );
 # :SEARCH:
 switch ( $wmfRealm ) {
 case 'labs':
-	wfProfileIn( "$fname-CirrusSearch" );
-	include( "$wmfConfigDir/CirrusSearch-common.php" );
-	wfProfileOut( "$fname-CirrusSearch" );
-	break;
+	// Silly hack since we're working on this one language at a time
+	if( in_array( $wgDBname, array( 'enwiki' ) ) ) {
+		wfProfileIn( "$fname-CirrusSearch" );
+		include( "$wmfConfigDir/CirrusSearch-common.php" );
+		wfProfileOut( "$fname-CirrusSearch" );
+		break;
+	}
 case 'production':
 default:
 	# This is overridden in the Lucene section below
