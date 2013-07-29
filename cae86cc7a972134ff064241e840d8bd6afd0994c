@@ -87,6 +87,24 @@
       "revId": "cae86cc7a972134ff064241e840d8bd6afd0994c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_067c6a7f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2013-07-29T07:20:06Z",
+      "side": 1,
+      "message": "The reason why I removed the bit about Devanagari is that it was (a) old (appearing some time in March 2008 [1]) and (b) very specific. But mainly (a). The relevant bug in vim/xterm/etc has probably been fixed since that notation was added.\n\nCould we perhaps ask River whether the comment is still relevant?\n\n[1] http://web.archive.org/web/20080601000000*/http://noc.wikimedia.org/conf/InitialiseSettings.php.html",
+      "parentUuid": "a989e1a9_4b1afb78",
+      "revId": "cae86cc7a972134ff064241e840d8bd6afd0994c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
