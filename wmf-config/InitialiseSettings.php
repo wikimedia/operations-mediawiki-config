@@ -10454,6 +10454,7 @@ $wgConf->settings = array(
 // This is a temporary variable for roll-out, to be removed once complete.
 'wmgVisualEditorDisableForAnons' => array(
 	'default' => false,
+	'dewiki' => true, // bug 52232
 ),
 
 'wmgVisualEditorEnableEventLogging' => array(
