@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_0b4e3397",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 10422,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-07-29T05:12:01Z",
+      "side": 1,
+      "message": "enwiki is defined twice here, BTW.",
+      "revId": "ffcaca324d9f6b9ce1529148c42130c9b7e20cd5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
