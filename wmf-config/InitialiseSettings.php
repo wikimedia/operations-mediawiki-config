@@ -10416,18 +10416,19 @@ $wgConf->settings = array(
 	'mediawikiwiki' => array( NS_MAIN, NS_USER, NS_PROJECT, NS_IMAGE, NS_HELP, NS_CATEGORY, 100, 102, 104, ), // Bug 48430
 ),
 
-// A namespace for which VisualEditor is enabled by default for all users (including anons)
+// Should a namespace in which VisualEditor is enabled by default for all users (including anons)
 'wmgUseVisualEditorNamespace' => array(
 	'default' => false,
 	'testwiki' => true,
 	'mediawikiwiki' => true,
 ),
 
+// Should VisualEditor be enabled for all users by default ('beta' mode)
 'wmgVisualEditorDefault' => array(
 	'default' => false,
 	'mediawikiwiki' => true,
 	'test2wiki' => true,
-	'dewiki' => true,
+	'dewiki' => false, // bug 52202
 	'enwiki' => true,
 	'eswiki' => true,
 	'frwiki' => true,
@@ -10438,6 +10439,7 @@ $wgConf->settings = array(
 	'svwiki' => true,
 ),
 
+// Should VisualEditor's "experimental" code be enabled for testing
 'wmgVisualEditorExperimental' => array(
 	'default' => false,
 	'test2wiki' => true,
@@ -10452,7 +10454,6 @@ $wgConf->settings = array(
 // This is a temporary variable for roll-out, to be removed once complete.
 'wmgVisualEditorDisableForAnons' => array(
 	'default' => false,
-	'dewiki' => true,
 ),
 
 'wmgVisualEditorEnableEventLogging' => array(
