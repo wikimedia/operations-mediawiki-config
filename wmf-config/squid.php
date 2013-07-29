@@ -240,12 +240,3 @@ $wgProxyWhitelist = array(
 	'62.214.230.86',
 	'217.94.171.96',
 );
-
-# Because the above variables don't support subnets, we'll have to do this the hard way
-$wgHooks['IsTrustedProxy'][] = function( &$ip, &$trusted ) {
-	# No need to do a full IPv6 validation here
-	if ( !$trusted && strpos( $ip, ':' ) ) {
-		$trusted = IP::isInRange( $ip, '2620:0:860::/46' );
-	}
-	return true;
-};
