@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_faf8f648",
+        "filename": "wmf-config/CirrusSearch-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-07-29T15:07:38Z",
+      "side": 1,
+      "message": "Could you split each host on its own line. Makes reviewing and blaming easier.",
+      "revId": "b53e2a9440858a4628fc12754547bf794c79213c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_dafb3243",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 918,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-07-29T15:07:38Z",
+      "side": 1,
+      "message": "You are missing a \"break;\" there to prevent lucene search on beta.",
+      "revId": "b53e2a9440858a4628fc12754547bf794c79213c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
