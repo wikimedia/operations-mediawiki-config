@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_cbd9ab20",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-07-29T01:01:02Z",
+      "side": 1,
+      "message": "Nit pick, but in a deck of cards the conventional order is: spades, diamonds, clubs, hearts.",
+      "revId": "cae86cc7a972134ff064241e840d8bd6afd0994c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
