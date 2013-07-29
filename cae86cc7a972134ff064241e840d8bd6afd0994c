@@ -51,6 +51,24 @@
       "revId": "cae86cc7a972134ff064241e840d8bd6afd0994c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_4b1afb78",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-07-29T05:47:22Z",
+      "side": 1,
+      "message": "It was explained in the lines TTO incorrectly removed in this patch.\n\n # When editing Devanagari text, some editor/terminal combinations\n # cause problems.\n\n\nIt is very important for the integrity of this file that these kind of characters are not mangled. Since this mangling can happen by just opening/closing the file without changing any of those lines, this helps easily spot such mangling.",
+      "parentUuid": "a989e1a9_6b25ff0b",
+      "revId": "cae86cc7a972134ff064241e840d8bd6afd0994c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
