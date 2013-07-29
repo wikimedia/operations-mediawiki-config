@@ -68,6 +68,24 @@
       "revId": "dcc9742b6a2b01ba8b67162aa1aa67f73ea8813b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_ebb4afd4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2013-07-29T00:51:11Z",
+      "side": 1,
+      "message": "All the more reason to leave the line there, surely!",
+      "parentUuid": "a989e1a9_05f2a46e",
+      "revId": "dcc9742b6a2b01ba8b67162aa1aa67f73ea8813b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
