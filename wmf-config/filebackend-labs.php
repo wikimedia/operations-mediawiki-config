@@ -7,8 +7,13 @@
 # for LABS
 #
 
-// labs does not have swift yet as of 20120525 -- hashar
+# Whenever the timeline extension is provided an empty string as a file
+# backend, it will gracefully fallback to a FSFileBackend pointing to
+# "{$wgUploadDirectory}/timeline"
+$wgTimelineSettings->fileBackend = '';
 
+
+// labs does not have swift yet as of 20120525 -- hashar
 
 $wgLocalFileRepo = array(
 		'class' => 'LocalRepo',
