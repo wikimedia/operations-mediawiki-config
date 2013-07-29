@@ -2480,6 +2480,11 @@ if ( $wmgUseUniversalLanguageSelector ) {
 
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 	require_once( "$IP/extensions/DataValues/DataValues.php" );
+
+	if ( !defined( 'DataTypes_VERSION' ) ) {
+		require_once( "$IP/extensions/DataTypes/DataTypes.php" );
+	}
+
 	require_once( "$IP/extensions/Diff/Diff.php" );
 	require_once( "$IP/extensions/WikibaseDataModel/WikibaseDataModel.php" );
 	require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
