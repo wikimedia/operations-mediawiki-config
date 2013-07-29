@@ -543,7 +543,14 @@ if ( $wgDBname == 'testwiki' || $wgDBname == 'mlwiki' ) {
 } elseif ( $lang == 'zh' ) {
 	$wgTimelineSettings->fontFile = 'wqy-zenhei.ttc';
 }
-$wgTimelineSettings->fileBackend = 'local-multiwrite';
+
+if ( $wmfRealm === 'labs' ) {
+	# timeline extension fallback to FSFileBackend pointing to
+	# "{$wgUploadDirectory}/timeline"
+	$wgTimelineSettings->fileBackend = '';
+} else {
+	$wgTimelineSettings->fileBackend = 'local-multiwrite';
+}
 
 if ( file_exists( '/usr/bin/ploticus' ) ) {
 	$wgTimelineSettings->ploticusCommand = '/usr/bin/ploticus';
