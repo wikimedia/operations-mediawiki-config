@@ -69,6 +69,24 @@
       "revId": "cae86cc7a972134ff064241e840d8bd6afd0994c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_e6fb0611",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-07-29T05:50:00Z",
+      "side": 1,
+      "message": "I fail to see how, in 2013 and with pre-commit review, this is a reasonable problem to try to prevent with a silly line at the top of the file.",
+      "parentUuid": "a989e1a9_4b1afb78",
+      "revId": "cae86cc7a972134ff064241e840d8bd6afd0994c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
