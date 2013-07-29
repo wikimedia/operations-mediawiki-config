@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_3a017e08",
+        "filename": "wmf-config/squid.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 248,
+      "author": {
+        "id": 8
+      },
+      "writtenOn": "2013-07-29T12:09:42Z",
+      "side": 1,
+      "message": "That range is way too wide. It includes everything we have, including stuff like labs...",
+      "revId": "f5a217d890fee20d980c6f1894234ddc4e4b733c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
