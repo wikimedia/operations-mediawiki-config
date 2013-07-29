@@ -15,6 +15,8 @@ mwconfig_files_txt=(
 	wmf-config/StartProfiler.php
 	wmf-config/abusefilter.php
 	wmf-config/codereview.php
+	wmf-config/CirrusSearch-common.php
+	wmf-config/CirrusSearch-labs.php
 	wmf-config/db-eqiad.php
 	wmf-config/db-labs.php
 	wmf-config/db-pmtpa.php
