@@ -33,6 +33,24 @@
       "revId": "9682b18753c0ba1f02828d5be4ee3e3ab00f56ed",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_8b9de356",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2013-07-29T00:50:07Z",
+      "side": 0,
+      "message": "I moved the warning higher in the file.",
+      "parentUuid": "a989e1a9_25a08846",
+      "revId": "9682b18753c0ba1f02828d5be4ee3e3ab00f56ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

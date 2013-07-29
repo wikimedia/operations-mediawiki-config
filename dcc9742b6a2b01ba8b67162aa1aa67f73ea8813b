@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "a989e1a9_6ba09f95",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2013-07-29T00:50:07Z",
+      "side": 1,
+      "message": "To separate the header comment (which applies to the entire file) from the \"godforsaken hack\" comment (which could arguably apply to this whole file :) but actually only applies to the if( PHP_SAPI !\u003d \u0027cli\u0027 ) statement)",
+      "parentUuid": "a989e1a9_a551f862",
+      "revId": "dcc9742b6a2b01ba8b67162aa1aa67f73ea8813b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a989e1a9_85feb433",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 2
