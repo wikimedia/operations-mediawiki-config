@@ -1455,15 +1455,6 @@ if ( $wmgUseCentralNotice ) {
 
 	// Enable the CentralNotice/Translate integration
 	$wgNoticeUseTranslateExtension = true;
-	/* Hopefully we don't need to use this anymore
-	$wgExtraNamespaces[866] = 'CNBanner';
-	$wgNamespacesWithSubpages[866] = true;
-	$wgTranslateMessageNamespaces[] = 866;
-
-	$wgExtraNamespaces[867] = 'CNBanner_talk';
-	$wgNamespacesWithSubpages[867] = true;
-	*/
-
 	$wgTranslateWorkflowStates['Centralnotice-tgroup'] = array(
 		'new' => array( 'color' => 'FF0000' ), // red
 		'needs_proofreading' => array( 'color' => '0000FF' ), // blue
@@ -1473,6 +1464,9 @@ if ( $wmgUseCentralNotice ) {
 			'right' => 'centralnotice-admin',
 		),
 	);
+
+	// Bug 49905
+	$wgNoticeUseLanguageConversion = true;
 }
 
 // Set CentralNotice banner hide cookie; Needs to be enabled for all wikis that display banners ~awjr 2011-11-07
