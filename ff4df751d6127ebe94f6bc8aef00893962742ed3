@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_7aa7860e",
+        "filename": "wmf-config/squid-labs.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-07-29T12:30:08Z",
+      "side": 1,
+      "message": "The variable is already declared below ...",
+      "revId": "ff4df751d6127ebe94f6bc8aef00893962742ed3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
