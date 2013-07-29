@@ -112,4 +112,7 @@ if ( $wmgUseCORS ) {
 	);
 }
 
+// No local-multiwrite in labs, just use local
+$wgTimelineSettings->fileBackend = 'local';
+
 } # end safeguard
