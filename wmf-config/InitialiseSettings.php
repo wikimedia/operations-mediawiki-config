@@ -12441,7 +12441,8 @@ $wgConf->settings = array(
 ),
 
 'wgSecureLogin' => array(
-	'default' => true,
+	'default' => false,
+	'loginwiki' => true,
 ),
 
 'wgRightsUrl' => array(
