@@ -269,6 +269,11 @@ return array(
 	'wmgUseNavigationTiming' => array(
 	    'default' => true,
 	),
+
+	'wgSecureLogin' => array(
+        'default' => false,
+        'loginwiki' => true,
+    ),
 );
 
 } # wmflLabsSettings()
