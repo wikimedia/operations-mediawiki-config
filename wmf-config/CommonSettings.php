@@ -2087,7 +2087,7 @@ if ( $wmgUseTranslate ) {
 			'cutoff' => 0.60,
 			'config' => array(
 				'adapteroptions' => array(
-					'host' => 'vanadium.eqiad.wmnet',
+					'host' => 'zinc.eqiad.wmnet',
 					'timeout' => 10,
 				),
 				'adapter' => 'Solarium_Client_Adapter_Curl',
