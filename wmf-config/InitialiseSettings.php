@@ -11790,6 +11790,7 @@ $wgConf->settings = array(
 	'wikimania2012wiki' => true, // bug 34120
 	'wikimania2013wiki' => true, // bug 36477
 	'wikimania2014wiki' => true,
+	'collabwiki' => true,
 ),
 'wmgTranslateWorkflowStates' => array(
 	'default' => false,
