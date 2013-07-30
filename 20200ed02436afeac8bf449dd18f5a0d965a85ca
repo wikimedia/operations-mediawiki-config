@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a989e1a9_5ff9cce5",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2013-07-30T11:40:29Z",
+      "side": 1,
+      "message": "Core has already dropped () from requires, maybe start doing that here too.",
+      "revId": "20200ed02436afeac8bf449dd18f5a0d965a85ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "a989e1a9_1fef4420",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2013-07-30T11:40:29Z",
+      "side": 1,
+      "message": "It seems weird to me that maxqueue is lower than workers. Either that or the comments are misleading.",
+      "revId": "20200ed02436afeac8bf449dd18f5a0d965a85ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
