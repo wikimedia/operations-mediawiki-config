@@ -1271,7 +1271,6 @@ $wgConf->settings = array(
 
 'wgEnableCanonicalServerLink' => array(
 	'default' => true, // https://bugzilla.wikimedia.org/48402
-	'uzwiki' => true, // https://bugzilla.wikimedia.org/43466
 ),
 
 # wgSitename @{
@@ -12399,10 +12398,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseSecurePoll' => array(
-	'default' => true, // can be left on, doesn't hurt and needed for board elections
-	'enwiki' => true,
-	'metawiki' => true,
-	'testwiki' => true,
+	'default' => true,
 ),
 
 'wmgUseGlobalAbuseFilters' => array(
