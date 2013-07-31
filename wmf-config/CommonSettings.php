@@ -1901,6 +1901,10 @@ if ( $wmgUseVisualEditor ) {
 		$wgVisualEditorEnableSplitTest = true;
 	}
 
+	if ( $wmgVisualEditorEnableGenderSurvey ) {
+		$wgVisualEditorEnableGenderSurvey = true;
+	}
+
 	// Also include the Parsoid extension when VE is enabled
 	require_once( "$IP/extensions/Parsoid/php/Parsoid.php" );
 	// List the parsoid cache servers to keep up to date.
