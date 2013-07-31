@@ -11,17 +11,21 @@ $wgSquidServersNoPurge = array( '127.0.0.1',
 # The beta cluster does not have multicast, hence we route the purge
 # requests directly to the varnish instances.  They have varnishhtcpd listening
 # on UDP port 4827.
-$wgHTCPMulticastRouting = array(
+$wgHTCPRouting = array(
 	'|^https?://upload\.beta\.wmflabs\.org|' => array(
 		'host' => '10.4.0.211',  # deployment-cache-upload04
 		'port' => 4827,
 	),
 
-	# bits?  10.4.0.51  # deployment-cache-bits03
-
-	# Fallback??
+	# Fallback  (text+mobile)
 	'' => array(
-		'host' => '10.4.1.133',  # deployment-cache-text1
-		'port' => 4827,
+		array(
+			'host' => '10.4.1.133',  # deployment-cache-text1
+			'port' => 4827,
+		),
+		array(
+			'host' => '10.4.1.82',  # deployment-cache-mobile01
+			'port' => 4827,
+		),
 	),
 );
