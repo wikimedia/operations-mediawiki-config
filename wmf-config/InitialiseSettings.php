@@ -10487,16 +10487,6 @@ $wgConf->settings = array(
 	'default' => false,
 ),
 
-'wmgVisualEditorEnableGenderSurvey' => array(
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'dewiki' => true,
-	'frwiki' => true,
-	'itwiki' => true,
-	'plwiki' => true,
-),
-
 'wmgUseRSSExtension' => array(
 	'default' => false,
 	'foundationwiki' => true,
