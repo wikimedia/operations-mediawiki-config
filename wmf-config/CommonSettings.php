@@ -1824,11 +1824,6 @@ if ( $wmgUseUploadWizard ) {
 	$wgUploadWizardConfig = array(
 		# 'debug' => true,
 		'disableResourceLoader' => false,
-		'autoAdd' => array(
-			'categories' => array(
-				'Uploaded with UploadWizard',
-			),
-		),
 		// If Special:UploadWizard again experiences unexplained slowness loading JavaScript (spinner on intial load spinning forever)
 		'flickrApiUrl' => 'http://api.flickr.com/services/rest/?',
 		// Normally we don't include API keys in CommonSettings, but this key
