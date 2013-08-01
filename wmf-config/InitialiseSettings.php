@@ -9657,6 +9657,10 @@ $wgConf->settings = array(
 	'testwikidatawiki' => true,
 ),
 
+'wmgCentralAuthUseEventLogging' => array(
+	'default' => true,
+),
+
 # @}
 
 'wgEnableMWSuggest' => array(

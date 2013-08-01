@@ -1171,6 +1171,7 @@ if ( $wmgUseCentralAuth ) {
 
 	$wgDisableUnmergedEditing = $wmgDisableUnmergedEdits;
 	$wgCentralAuthSilentLogin = $wmgCentralAuthSilentLogin;
+	$wgCentralAuthUseEventLogging = $wmgCentralAuthUseEventLogging;
 
 	# Broken -- TS
 	if( $wmfRealm == 'production' ) {
