@@ -1898,6 +1898,16 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorEnableSplitTest ) {
 		$wgVisualEditorEnableSplitTest = true;
 	}
+	if ( $wmgVisualEditorShowBetaWelcome ) {
+		$wgVisualEditorShowBetaWelcome = true;
+	}
+	if ( $wmgVisualEditorBetaInTab ) {
+		$wgVisualEditorTabPosition = 'after';
+		$wgVisualEditorTabMessages['editappendix'] =
+			$wgVisualEditorTabMessages['createappendix'] =
+			$wgVisualEditorTabMessages['editsectionappendix'] = 'visualeditor-beta-appendix';
+	}
+
 
 	// Also include the Parsoid extension when VE is enabled
 	require_once( "$IP/extensions/Parsoid/php/Parsoid.php" );

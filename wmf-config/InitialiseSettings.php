@@ -10491,6 +10491,16 @@ $wgConf->settings = array(
 	'default' => false,
 ),
 
+'wmgVisualEditorShowBetaWelcome' => array(
+	'default' => false,
+	'enwiki' => true,
+),
+
+'wmgVisualEditorBetaInTab' => array(
+	'default' => false,
+	'enwiki' => true,
+),
+
 'wmgUseRSSExtension' => array(
 	'default' => false,
 	'foundationwiki' => true,
