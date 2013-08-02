@@ -10471,8 +10471,7 @@ $wgConf->settings = array(
 ),
 
 'wmgVisualEditorShowBetaWelcome' => array(
-	'default' => false,
-	'enwiki' => true,
+	'default' => true,
 ),
 
 'wmgVisualEditorBetaInTab' => array(
