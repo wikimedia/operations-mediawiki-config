@@ -34,6 +34,24 @@
       "revId": "f2b3557e3b3ba8b5e880111844af7557a3e619cd",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "898eddaf_c50529c6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-08-03T10:19:16Z",
+      "side": 1,
+      "message": "Then put a comment above it saying what it\u0027s for",
+      "parentUuid": "898eddaf_931c4ec0",
+      "revId": "f2b3557e3b3ba8b5e880111844af7557a3e619cd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
