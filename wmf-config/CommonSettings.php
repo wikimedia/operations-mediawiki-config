@@ -2,10 +2,14 @@
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
 #######################################################################
-# This file is the main and first configuration file of the WMF cluster.
+# CommonSettings.php is the main configuration file of the WMF cluster.
 # It is included by LocalSettings.php
 #
+# This file contains settings common to all or many WMF wikis.
+# Per-wiki configuration is done in InitialiseSettings.php (included
+# into this file a little way down).
 #######################################################################
+
 
 
 # Godforsaken hack to work around problems with the Squid caching changes...
