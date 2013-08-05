@@ -4030,6 +4030,7 @@ $wgConf->settings = array(
 # wgRestrictionLevels @{
 'wgRestrictionLevels' => array(
 	'default' => array( '', 'autoconfirmed', 'sysop' ), // semi-protection level on
+	'ckbwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop' ), // bug 52533
 	'plwiki' => array( '', 'autoconfirmed', 'editor', 'sysop' ), // bug 46990
 	'ptwiki' => array( '', 'autoconfirmed', 'autoreviewer', 'sysop' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=39652
 ),
