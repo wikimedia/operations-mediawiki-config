@@ -3145,6 +3145,10 @@ $wgConf->settings = array(
 	'+testwiki' => array(
 		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
+		'Portal' => 100,
+		'Portal_talk' => 101,
+		'Index' => 102,
+		'Index_talk' => 103,
 	),
 	'+tewiki' => array(
 		'Wikipedia' => NS_PROJECT,
