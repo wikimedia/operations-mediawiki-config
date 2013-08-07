@@ -12513,6 +12513,14 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgUseCirrus' => array(
+	'default' => false,
+),
+
+'wmgUseCirrusAsAlternative' => array(
+	'default' => false,
+),
+
 ### End (roughly) of general extensions ########################
 
 // Apply blocks to IPs in XFF (bug 23343)

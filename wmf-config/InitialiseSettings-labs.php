@@ -278,6 +278,10 @@ return array(
 	'wgSearchSuggestCacheExpiry' => array(
 		'default' => 1800,
 	),
+
+	'wmgUseCirrus' => array(
+		'default' => true,
+	),
 );
 
 } # wmflLabsSettings()

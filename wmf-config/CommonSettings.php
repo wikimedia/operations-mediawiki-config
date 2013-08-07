@@ -875,26 +875,24 @@ $wgDisableCounters     = true;
 wfProfileOut( "$fname-misc2" );
 
 # :SEARCH:
-switch ( $wmfRealm ) {
-case 'labs':
+# This is overridden in the Lucene section below
+$wgDisableTextSearch   = true;
+$wgDisableSearchUpdate = true;
+
+# Better make sure the global setting is enabled
+$wgUseLuceneSearch = true;
+if ( $wgUseLuceneSearch ) {
+	wfProfileIn( "$fname-lucene" );
+	include( "$wmfConfigDir/lucene-common.php" );
+	wfProfileOut( "$fname-lucene" );
+}
+# New wikis are special and get Cirrus :)
+if ( $wmgUseCirrus || $wmgUseCirrusAsAlternative ) {
 	wfProfileIn( "$fname-CirrusSearch" );
+	# Cirrus uses SearchUpdate, turn it back on
+	$wgDisableSearchUpdate = false;
 	include( "$wmfConfigDir/CirrusSearch-common.php" );
 	wfProfileOut( "$fname-CirrusSearch" );
-	break;
-case 'production':
-default:
-	# This is overridden in the Lucene section below
-	$wgDisableTextSearch   = true;
-	$wgDisableSearchUpdate = true;
-
-	# Better make sure the global setting is enabled
-	$wgUseLuceneSearch = true;
-	if ( $wgUseLuceneSearch ) {
-		wfProfileIn( "$fname-lucene" );
-		include( "$wmfConfigDir/lucene-common.php" );
-		wfProfileOut( "$fname-lucene" );
-	}
-	break;
 }
 
 // Case-insensitive title prefix search extension
