@@ -7578,8 +7578,9 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ), # 27268
 		'user' => array( 'upload' => false, 'reupload' => false ),
 		'autoconfirmed' => array( 'upload' => false, 'reupload' => false ),
-		'sysop' => array( 'upload' => true, 'reupload' => true ) ),
-
+		'flood' => array( 'bot' => true ), // bug 52546
+		'sysop' => array( 'upload' => true, 'reupload' => true ),
+	),
 	// http://bugzilla.wikimedia.org/show_bug.cgi?id=5836
 	'zhwiktionary' => array( 'bot' => array( 'patrol' => true ) ),
 	'zh_yuewiki' => array(
@@ -8069,7 +8070,10 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller', 'rollbacker', 'autoreviewer', 'confirmed' ),
 	),
 	'+zhwikinews' => array(
-		'sysop' => array( 'rollbacker' ),
+		'sysop' => array( 
+			'rollbacker',
+			'flood', // bug 52546
+		),
 	),
 	'+zh_yuewiki' => array(
 		'sysop' => array( 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ),
@@ -8512,7 +8516,10 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'flood' ),
 	),
 	'+zhwikinews' => array(
-		'sysop' => array( 'rollbacker' ),
+		'sysop' => array( 
+			'rollbacker',
+			'flood', // bug 52546
+		),
 	),
 	'+zh_yuewiki' => array(
 		'sysop' => array( 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ),
@@ -10052,6 +10059,7 @@ $wgConf->settings = array(
 		'flood' => array( 'flood' ), // Bug 48013
 	),
 	'zhwiki' => array( 'sysop' => array( 'flood' ) ),
+	'zhwikinews' => array( 'flood' => array( 'flood' ) ), // bug 52546
 ),
 
 'wgEnableAPI' => array(
