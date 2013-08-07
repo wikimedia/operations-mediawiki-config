@@ -2433,6 +2433,7 @@ $wgConf->settings = array(
 		'Wikiquote'	       => NS_PROJECT,
 		'Wikiquote_diskuse'       => NS_PROJECT_TALK,
 		'Wikiquote_talk'	  => NS_PROJECT_TALK,
+		'Dílo_diskuse'	   => 101,
 	),
 	'+cswikisource' => array(
 		'WS'		      => NS_PROJECT,
@@ -5851,6 +5852,10 @@ $wgConf->settings = array(
 	// @} end of Wikinews
 
 	// Wikiquote @{
+	'cswikiquote' => array(
+		100		=> 'Dílo',
+		101		=> 'Diskuse_k_dílu',
+	),
 	'dewikiquote' => array(
 		100 => 'Portal',
 		101 => 'Portal_Diskussion',
@@ -6384,6 +6389,7 @@ $wgConf->settings = array(
 	'+cswiki' => array( 100 => 1, 101 => 0, 102 => 1 ),
 	'+commonswiki' => array( 6 => 1, 12 => 1, 14 => 1, 100 => 1, 106 => 1 ),
 	'+cswikinews' => array( 14 => 0, 15 => 0, 100 => 1, 101 => 0 ),
+	'+cswikiquote' => array( 14 => 0, 15 => 0, 100 => 1, 101 => 0 ),
 	'+cswikisource' => array( 100 => 1, 101 => 0 ),
 	'+cswikiversity' => array( 14 => 0, 15 => 0, 100 => 0, 101 => 0 ),
 	'+dawikisource' => array( 102 => 1, 106 => 1 ),
@@ -9143,6 +9149,7 @@ $wgConf->settings = array(
 	'+bnwikisource' => array( 100 ),
 	'+brwikisource' => array( 100, 102, 104 ),
 	'+cawikisource' => array( 102, 104, 106 ),
+	'+cswikiquote' => array( 100 ),
 	'+cswikisource' => array( 100 ),
 	'+dawikisource' => array( 102, 104, 106 ),
 	'+dewikisource' => array( 102, 104 ),
