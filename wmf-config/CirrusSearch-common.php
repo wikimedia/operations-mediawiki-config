@@ -13,6 +13,7 @@
 
 require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
 $wgSearchType = 'CirrusSearch';
+$wgSearchTypeAlternatives = array( 'LuceneSearch' );
 
 if ( $wmgUsePoolCounter ) {
 	$wgPoolCounterConf['CirrusSearch-Update'] = array(
