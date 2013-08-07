@@ -12,7 +12,13 @@
 # Contact Wikimedia operations or platform engineering for more details.
 
 require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
-$wgSearchType = 'CirrusSearch';
+if ( $wmgUseCirrusAsAlternative ) {
+	$wgSearchTypeAlternatives = array( 'CirrusSearch' );
+} else {
+	$wgSearchType = 'CirrusSearch';
+	$wgSearchTypeAlternatives = array( 'LuceneSearch' );
+	$wgEnableLucenePrefixSearch = false;
+}
 
 if ( $wmgUsePoolCounter ) {
 	$wgPoolCounterConf['CirrusSearch-Update'] = array(

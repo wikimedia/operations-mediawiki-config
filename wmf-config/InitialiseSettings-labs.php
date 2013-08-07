@@ -274,6 +274,10 @@ return array(
         'default' => false,
         'loginwiki' => true,
     ),
+
+    'wmgUseCirrus' => array(
+		'default' => true,
+    ),
 );
 
 } # wmflLabsSettings()
