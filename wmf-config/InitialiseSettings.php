@@ -6722,12 +6722,28 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ), // bug 51312
 		'user' => array( 'upload' => false ), // bug 51232
 		'autoconfirmed' => array( 'upload' => false ), // bug 51232
-		'uploader' => array( 
+		'uploader' => array(
 			'upload' => true,
 			'reupload' => true,
 			'movefile' => true,
 		), // bug 51232
 		'flood' => array( 'bot' => true ), // bug 51803
+		'botadmin' => array(
+			'protect' => true,
+			'editprotected' => true,
+			'delete' => true,
+			'bigdelete' => true,
+			'nuke' => true,
+			'deleterevision' => true,
+			'deletelogentry' => true,
+			'undelete' => true,
+			'block' => true,
+			'ipblock-exempt' => true,
+			'proxyunbannable' => true,
+			'import' => true,
+			'importupload' => true,
+			'move-subpages' => true,
+		), // Bug 52578
 	),
 	'cswiki' => array(
 		'autoconfirmed' => array( 'upload' => false, ),
@@ -7711,12 +7727,15 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', ),
 	),
 	'+ckbwiki' => array(
-		'sysop' => array( 
+		'sysop' => array(
 			'rollbacker', // bug 51312
 			'autopatrolled', // bug 51328
 			'uploader', // bug 51232
 			'confirmed', // bug 51715
 			'flood', // bug 51803
+		),
+		'bureaucrat' => array(
+			'botadmin', // Bug 52578
 		),
 	),
 	'+cswiki' => array(
@@ -8142,13 +8161,14 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt',  'bureaucrat', ),
 	),
 	'+ckbwiki' => array(
-		'sysop' => array( 
+		'sysop' => array(
 			'rollbacker', // bug 51312
 			'autopatrolled', // bug 51328
 			'uploader', // bug 51232
 			'confirmed', // bug 51715
 			'flood', // bug 51803
 		),
+		'bureaucrat' => array( 'botadmin' ), // Bug 52578
 	),
 	'+commonswiki' => array(
 		'bureaucrat' => array( 'ipblock-exempt', 'OTRS-member', 'translationadmin' ), // bug 48620
@@ -10046,7 +10066,10 @@ $wgConf->settings = array(
 ),
 'wgGroupsRemoveFromSelf' => array(
 	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=37198
-	'ckbwiki' => array( 'flood' => array( 'flood' ) ), // bug 51803
+	'ckbwiki' => array(
+		'flood' => array( 'flood' ), // Bug 51803
+		'botadmin' => array( 'botadmin' ), // Bug 51803
+	),
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'enwikisource' => array( 'sysop' => array( 'flood' ) ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=36863
