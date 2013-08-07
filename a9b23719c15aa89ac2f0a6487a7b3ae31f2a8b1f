@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "898eddaf_e11a0a7a",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 873
+      },
+      "writtenOn": "2013-08-07T19:56:42Z",
+      "side": 1,
+      "message": "We might want to make a $wmgEnabledCirrusSearchButDontDefaultToIt or something that we can turn on to make LuceneSearch the wgSearchType and CirrusSearch an alternative.",
+      "revId": "a9b23719c15aa89ac2f0a6487a7b3ae31f2a8b1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
