@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "898eddaf_ac6b961e",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 279,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-08-08T17:47:37Z",
+      "side": 1,
+      "message": "This is the same number as production.",
+      "revId": "bf83f1a0650c5e522c2753ff916ef9122a6d112f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
