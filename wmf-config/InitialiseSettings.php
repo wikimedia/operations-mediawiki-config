@@ -24,8 +24,12 @@ global $wmfUdp2logDest, $wmfDatacenter, $wmfRealm, $wmfConfigDir, $wgConf;
 
 $wgConf->settings = array(
 
+# ############### Basic settings ###############
+
 // For live conversion of old revisions:
 'wgLegacyEncoding' => array(
+	'default' => false,
+
 	'enwiki' => 'windows-1252',
 	'dawiki' => 'windows-1252',
 	'svwiki' => 'windows-1252',
@@ -33,8 +37,6 @@ $wgConf->settings = array(
 
 	'dawiktionary' => 'windows-1252',
 	'svwiktionary' => 'windows-1252',
-
-	'default' => false,
 ),
 
 'wgCapitalLinks' => array(
@@ -64,80 +66,89 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-'wgInterwikiMagic' => array (
+'wgInterwikiMagic' => array(
 	'default' => true,
-	'metawiki'      => false,
+	'metawiki' => false,
 ),
 
 # wgLanguageCode @{
 'wgLanguageCode' => array(
 	'default' => '$lang',
-	'special' => 'en', # overridden below by some wikis
-	'advisorywiki' => 'en',
-	'alswiki' => 'gsw', # FIXME: rename these wikis
-	'alswiktionary' => 'gsw', # FIXME: rename these wikis
-	'alswikibooks' => 'gsw', # to rename
-	'alswikiquote' => 'gsw', # to rename
-	'arbcom_dewiki' => 'de',
-	'arbcom_enwiki' => 'en',
-	'arbcom_nlwiki' => 'nl',
-	'arbcom_fiwiki' => 'fi',
+
+	# Non-ISO language codes
+	'crhwiki' => 'crh-latn',
+	'nowiki' => 'nb',
+	'simplewiki' => 'en',
+	'simplewiktionary' => 'en',
+
+	# Wikis at the wrong domain
+	# FIXME: rename these wikis (bug 19986)
+	'alswiki' => 'gsw',
+	'alswiktionary' => 'gsw',
+	'alswikibooks' => 'gsw',
+	'alswikiquote' => 'gsw',
+	'bat_smgwiki' => 'sgs',
+	'be_x_oldwiki' => 'be-tarask',
+	'fiu_vrowiki' => 'vro',
+	'roa_rupwiki' => 'rup',
+	'roa_rupwiktionary' => 'rup',
+	'zh_classicalwiki' => 'lzh',
+	'zh_min_nanwiki' => 'nan',
+	'zh_min_nanwiktionary' => 'nan',
+	'zh_min_nanwikibooks' => 'nan',
+	'zh_min_nanwikiquote' => 'nan',
+	'zh_yuewiki' => 'yue',
+
+	# Chapter wikis (xxwikimedia)
 	'arwikimedia'	=> 'es',
-	'auditcomwiki' => 'en',
-	'bat_smgwiki' => 'sgs', # to rename
 	'bdwikimedia' => 'bn',
 	'bewikimedia' => 'en',
-	'be_x_oldwiki' => 'be-tarask', # to rename
-	'betawikiversity' => 'en',
 	'brwikimedia' => 'pt-br',
+	'cowikimedia' => 'es',
+	'dkwikimedia' => 'da',
+	'ilwikimedia' => 'he',
+	'mkwikimedia' => 'mk',
+	'mxwikimedia' => 'es',
+	'noboard_chapterswikimedia' => 'no',
+	'nycwikimedia' => 'en',
+	'nzwikimedia' => 'en',
+	'pa_uswikimedia' => 'en',
+	'rswikimedia' => 'sr',
+	'sewikimedia' => 'sv',
+	'uawikimedia' => 'uk',
+	'ukwikimedia' => 'en-gb',
+
+	# Special wikis
+	'special' => 'en', # default - overridden below by some wikis
+	'advisorywiki' => 'en',
+	'arbcom_dewiki' => 'de',
+	'arbcom_enwiki' => 'en',
+	'arbcom_fiwiki' => 'fi',
+	'arbcom_nlwiki' => 'nl',
+	'auditcomwiki' => 'en',
+	'betawikiversity' => 'en',
 	'chairwiki' => 'en',
 	'chapcomwiki' => 'en',
 	'checkuserwiki' => 'en',
 	'collabwiki' => 'en',
-	'cowikimedia'   => 'es',
-	'crhwiki' => 'crh-latn',
-	'dkwikimedia' => 'da',
 	'donatewiki' => 'en',
 	'execwiki' => 'en',
 	'fdcwiki' => 'en',
-	'fiu_vrowiki' => 'vro', # to rename
 	'grantswiki' => 'en',
 	'iegcomwiki' => 'en',
-	'ilwikimedia' => 'he',
 	'incubatorwiki' => 'en', # mixed
-	'mkwikimedia' => 'mk',
-	'mxwikimedia' => 'es',
-	'noboard_chapterswikimedia' => 'no',
-	'nowiki' => 'nb',
-	'nycwikimedia' => 'en',
-	'nzwikimedia' => 'en',
 	'officewiki' => 'en',
 	'ombudsmenwiki' => 'en',
 	'otrs_wikiwiki' => 'en',
-	'pa_uswikimedia' => 'en',
 	'qualitywiki' => 'en',
-	'roa_rupwiki' => 'rup', # to rename
-	'roa_rupwiktionary' => 'rup', # to rename
-	'rswikimedia' => 'sr',
 	'searchcomwiki' => 'en',
-	'sewikimedia' => 'sv',
-	'simplewiki' => 'en',
-	'simplewiktionary' => 'en',
 	'stewardwiki' => 'en',
 	'strategywiki' => 'en',
 	'tenwiki' => 'en',
 	'transitionteamwiki' => 'en',
-	'uawikimedia' => 'uk',
-	'ukwikimedia'   => 'en-gb',
-	'usabilitywiki'     => 'en',
+	'usabilitywiki' => 'en',
 	'wikimania' => 'en',
 	'wikimaniateamwiki' => 'en',
-	'zh_classicalwiki' => 'lzh', # to rename
-	'zh_min_nanwiki' => 'nan', # to rename
-	'zh_min_nanwiktionary' => 'nan', # to rename
-	'zh_min_nanwikibooks' => 'nan', # to rename
-	'zh_min_nanwikiquote' => 'nan', # to rename
-	'zh_yuewiki' => 'yue', # to rename
 ),
 # @} end of wgLanguageCode
 
@@ -153,7 +164,7 @@ $wgConf->settings = array(
 	'arbcom_fiwiki' => 'Europe/Helsinki',
 	'arbcom_nlwiki' => 'Europe/Berlin',
 	'alswiktionary' => 'Europe/Berlin',
-	'aswikisource' => 'Asia/Kolkata', // Bug 43129
+	'aswikisource' => 'Asia/Kolkata', // bug 43129
 	'barwiki' => 'Europe/Berlin',
 	'bat_smgwiki' => 'Europe/Vilnius',
 	'be_x_oldwiki' => 'Europe/Minsk',
@@ -177,18 +188,18 @@ $wgConf->settings = array(
 	'dewikibooks' => 'Europe/Berlin',
 	'dewikiquote' => 'Europe/Berlin',
 	'dewikisource' => 'Europe/Berlin',
-	'dewikivoyage' => 'Europe/Berlin', // Bug 41992
+	'dewikivoyage' => 'Europe/Berlin', // bug 41992
 	'dewikiversity' => 'Europe/Berlin',
 	'dsbwiki' => 'Europe/Berlin',
-	'dvwiki' => 'Indian/Maldives', // Bug 46351
-	'dvwiktionary' => 'Indian/Maldives', // Bug 46351
+	'dvwiki' => 'Indian/Maldives', // bug 46351
+	'dvwiktionary' => 'Indian/Maldives', // bug 46351
 	'elwikinews' => 'Europe/Athens',
 	'elwikivoyage' => 'Europe/Athens',
 	'eowikisource' => 'UTC',
-	'etwiki'      => 'Europe/Tallinn',
-	'etwikibooks'  => 'Europe/Tallinn',
-	'etwikimedia'  => 'Europe/Tallinn',
-	'etwikiquote'  => 'Europe/Tallinn',
+	'etwiki' => 'Europe/Tallinn',
+	'etwikibooks' => 'Europe/Tallinn',
+	'etwikimedia' => 'Europe/Tallinn',
+	'etwikiquote' => 'Europe/Tallinn',
 	'etwikisource' => 'Europe/Tallinn',
 	'etwiktionary' => 'Europe/Tallinn',
 	'fawikinews' => 'Asia/Tehran',
@@ -210,7 +221,7 @@ $wgConf->settings = array(
 	'hewiktionary' => 'Asia/Tel_Aviv',
 	'hewikinews' => 'Asia/Tel_Aviv',
 	'ilwikimedia' => 'Asia/Tel_Aviv',
-	'itwikivoyage' => 'Europe/Rome', // Bug 41992
+	'itwikivoyage' => 'Europe/Rome', // bug 41992
 	'hrwiki' => 'Europe/Berlin',
 	'hrwikibooks' => 'Europe/Zagreb',
 	'hrwikiquote' => 'Europe/Berlin',
@@ -249,7 +260,7 @@ $wgConf->settings = array(
 	'ltgwiki' => 'Europe/Riga',
 	'ltwiki' => 'Europe/Vilnius',
 	'lmowiki' => 'Europe/Rome',
-	'lvwiki' => 'Europe/Riga', // Bug 43592
+	'lvwiki' => 'Europe/Riga', // bug 43592
 	'mkwiki' => 'Europe/Berlin',
 	'mkwikibooks' => 'Europe/Berlin',
 	'mkwikimedia' => 'Europe/Berlin',
@@ -269,7 +280,7 @@ $wgConf->settings = array(
 	'nlwikibooks' => 'Europe/Berlin',
 	'nlwikiquote' => 'Europe/Berlin',
 	'nlwikisource' => 'Europe/Berlin',
-	'nlwikivoyage' => 'Europe/Amsterdam', // Bug 41992
+	'nlwikivoyage' => 'Europe/Amsterdam', // bug 41992
 	'nlwiktionary' => 'Europe/Berlin',
 	'nnwiki' => 'Europe/Berlin',
 	'nnwikiquote' => 'Europe/Berlin',
@@ -298,7 +309,7 @@ $wgConf->settings = array(
 	'rowiki' => 'Europe/Chisinau',
 	'rowikisource' => 'Europe/Chisinau',
 	'rowikivoyage' => 'Europe/Bucharest',
-	'ruwikivoyage' => 'Europe/Moscow', // Bug 41992
+	'ruwikivoyage' => 'Europe/Moscow', // bug 41992
 	'ruewiki'	=> 'Europe/Berlin',
 	'sawikiquote' => 'Asia/Kolkata',
 	'sahwikisource' => 'Asia/Yakutsk',
@@ -309,8 +320,8 @@ $wgConf->settings = array(
 	'slwiki' => 'Europe/Berlin',
 	'slwikiquote' => 'Europe/Berlin',
 	'slwikiversity' => 'Europe/Ljubljana',
-	'sqwiki'	=> 'Europe/Berlin',
-	'sqwikinews'	=> 'Europe/Berlin',
+	'sqwiki' => 'Europe/Berlin',
+	'sqwikinews' => 'Europe/Berlin',
 	'srwiki' => 'Europe/Berlin',
 	'srwikibooks' => 'Europe/Berlin',
 	'srwikiquote' => 'Europe/Berlin',
@@ -323,7 +334,7 @@ $wgConf->settings = array(
 	'svwikisource' => 'Europe/Berlin',
 	'svwikinews' => 'Europe/Berlin',
 	'svwikiversity' => 'Europe/Berlin',
-	'svwikivoyage' => 'Europe/Stockholm', // Bug 41992
+	'svwikivoyage' => 'Europe/Stockholm', // bug 41992
 	'szlwiki' => 'Europe/Warsaw',
 	'thwiki' => 'Asia/Bangkok',
 	'thwikibooks' => 'Asia/Bangkok',
@@ -336,7 +347,7 @@ $wgConf->settings = array(
 	'vecwikisource' => 'Europe/Berlin',
 	'vecwiktionary' => 'Europe/Brussels',
 	'vepwiki' => 'Europe/Moscow',
-	'xmfwiki'		=> 'Asia/Tbilisi',
+	'xmfwiki' => 'Asia/Tbilisi',
 ),
 # @} end of wgLocaltimezone
 
