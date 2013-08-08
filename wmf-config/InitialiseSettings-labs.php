@@ -274,6 +274,10 @@ return array(
         'default' => false,
         'loginwiki' => true,
     ),
+
+	'wgSearchSuggestCacheExpiry' => array(
+		'default' => 1800,
+	),
 );
 
 } # wmflLabsSettings()
