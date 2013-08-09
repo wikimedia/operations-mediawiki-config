@@ -1685,6 +1685,7 @@ $wgConf->settings = array(
 	'vecwiktionary' => 'Wikisionario',
 	'vepwiki'       => 'Vikipedii',
 	'vewikimedia'   => 'Wikimedia Venezuela',
+	'viwikivoyage'  => 'Wikivoyage Vietnam',
 	'votewiki'      => 'Wikimedia Vote Wiki', // bug 51264
 	'vowiki'	=> 'Vükiped',
 	'vowikibooks'	=>	'Vükibuks',
