@@ -336,7 +336,8 @@ $wgConf->settings = array(
 	'vecwikisource' => 'Europe/Berlin',
 	'vecwiktionary' => 'Europe/Brussels',
 	'vepwiki' => 'Europe/Moscow',
-	'xmfwiki'		=> 'Asia/Tbilisi',
+	'viwikivoyage' => 'Asia/Ho_Chi_Minh',
+	'xmfwiki' => 'Asia/Tbilisi',
 ),
 # @} end of wgLocaltimezone
 
