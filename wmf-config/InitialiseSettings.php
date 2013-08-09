@@ -6726,6 +6726,7 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ), // bug 51312
 		'user' => array( 'upload' => false ), // bug 51232
 		'autoconfirmed' => array( 'upload' => false ), // bug 51232
+		'sysop' => array( 'importupload' => true ), // bug 52633
 		'uploader' => array(
 			'upload' => true,
 			'reupload' => true,
@@ -7740,6 +7741,8 @@ $wgConf->settings = array(
 		),
 		'bureaucrat' => array(
 			'botadmin', // Bug 52578
+			'import', // bug 52633
+			'transwiki', // bug 52633
 		),
 	),
 	'+cswiki' => array(
@@ -8172,7 +8175,11 @@ $wgConf->settings = array(
 			'confirmed', // bug 51715
 			'flood', // bug 51803
 		),
-		'bureaucrat' => array( 'botadmin' ), // Bug 52578
+		'bureaucrat' => array(
+			'botadmin', // bug 52578
+			'import', // bug 52633
+			'transwiki', // bug 52633
+		),
 	),
 	'+commonswiki' => array(
 		'bureaucrat' => array( 'ipblock-exempt', 'OTRS-member', 'translationadmin' ), // bug 48620
@@ -8598,6 +8605,7 @@ $wgConf->settings = array(
 	'cawikisource' => array( 'w', 'b', ),
 	'cawiktionary' => array( 'w', ),
 	'chywiki' => array( 'en', 'fr', ),
+	'ckbwiki' => array( 'fa', 'ar', 'ku', 'en', 'de', 'fr', 'it', 'es', 'ru', 'pt', ), // bug 52633
 	'commonswiki' => array( 'meta', 'en', 'de', 'b:en' ),
 	'cowikimedia' => array( 'meta', 'w:es', 'b:es', 'v:es', 'e:en' ),
 	'crhwiki' => array( 'incubator' ),
