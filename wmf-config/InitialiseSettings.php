@@ -9997,6 +9997,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'arwiki' => true,
 	'arwikisource' => true,
+	'ckbwiki' => true, // Bug 52678
 	'commonswiki' => true,
 	'enwikinews' => true,
 	'guwiki' => true, // Bug 40872
