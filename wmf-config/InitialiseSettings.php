@@ -6724,8 +6724,14 @@ $wgConf->settings = array(
 		'*' => array( 'createpage' => false ),
 		'autopatrolled' => array( 'autopatrol' => true ), // bug 51328
 		'rollbacker' => array( 'rollback' => true ), // bug 51312
-		'user' => array( 'upload' => false ), // bug 51232
-		'autoconfirmed' => array( 'upload' => false ), // bug 51232
+		'user' => array(
+			'upload' => false,
+			'reupload' => false,
+		), // bug 51232
+		'autoconfirmed' => array(
+			'upload' => false,
+			'reupload' => false,
+		), // bug 51232
 		'uploader' => array(
 			'upload' => true,
 			'reupload' => true,
