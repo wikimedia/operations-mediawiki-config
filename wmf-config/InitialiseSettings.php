@@ -11347,6 +11347,15 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'Usuario %code%-N',
 	),
+	'eswikivoyage' => array(
+		'0' => 'Usuario %code%-0',
+		'1' => 'Usuario %code%-1',
+		'2' => 'Usuario %code%-2',
+		'3' => 'Usuario %code%-3',
+		'4' => 'Usuario %code%-4',
+		'5' => 'Usuario %code%-5',
+		'N' => 'Usuario %code%-N',
+	),
 	'fiwiki' => array(
 		'0' => false,
 		'1' => 'User %code%-1',
