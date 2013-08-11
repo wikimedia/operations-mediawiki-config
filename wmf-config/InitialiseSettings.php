@@ -2388,6 +2388,11 @@ $wgConf->settings = array(
 	),
 	'+ckbwiki' => array(
 		'وپ' => NS_PROJECT, // bug 51605
+		'وپر' => 102, // bug 52665
+		'Wikiproject' => 102, // bug 52665
+		'WikiProject' => 102, // bug 52665
+		'Wikiproject_talk' => 103, // bug 52665
+		'WikiProject_talk' => 103, // bug 52665
 	),
 	'+commonswiki' => array(
 		'Museum' => 106,
@@ -4454,6 +4459,8 @@ $wgConf->settings = array(
 	'ckbwiki' => array(
 		100 => 'دەروازە',
 		101 => 'لێدوانی_دەروازە',
+		102 => 'ویکیپرۆژە', // bug 52665
+		103 => 'لێدوانی_ویکیپرۆژە', // bug 52665
 	),
 	'cswiki' => array(
 		NS_USER			=> 'Wikipedista',    # language default set back in wgNamespaceAliases
