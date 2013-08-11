@@ -9827,6 +9827,7 @@ $wgConf->settings = array(
 	'usabilitywiki' =>  true,
 	'vecwiktionary' => true,
 	'vewikimedia' => true,
+	'viwikivoyage' => true, // bug 52034
 	'wikimania2009wiki' => true,
 	'wikimania2010wiki' => true,
 	'wikimania2011wiki' => true,
