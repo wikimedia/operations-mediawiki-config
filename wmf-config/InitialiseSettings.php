@@ -4756,6 +4756,16 @@ $wgConf->settings = array(
 	'pflwiki' => array(
 		100 => 'Portal',             // Bug 42990
 		101 => 'Portal_Diskussion',
+		102 => 'Buch', // 102-111: bug 52671
+		103 => 'Buch_Dischbediere',
+		104 => 'Wort',
+		105 => 'Wort_Dischbediere',
+		106 => 'Text',
+		107 => 'Text_Dischbediere',
+		108 => 'Spruch',
+		109 => 'Spruch_Dischbediere',
+		110 => 'Nochricht',
+		111 => 'Nochricht_Dischbediere',
 	),
 	'plwiki' => array(
 		NS_PROJECT_TALK => 'Dyskusja_Wikipedii',
