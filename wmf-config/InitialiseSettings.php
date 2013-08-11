@@ -1012,6 +1012,7 @@ $wgConf->settings = array(
 	'svwiki' => false, # bug 11954
 	'svwikiversity' => false, # bug 26037
 	'trwikinews' => true, # bug 20215
+	'viwikivoyage' => false, # bug 52034
 	'vowiki' => false, # bug 13740
 	'xmfwiki' => false,
 ),
