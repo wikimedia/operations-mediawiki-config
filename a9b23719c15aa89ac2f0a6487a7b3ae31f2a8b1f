@@ -16,6 +16,24 @@
       "revId": "a9b23719c15aa89ac2f0a6487a7b3ae31f2a8b1f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "698b69a3_00b8e8e1",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-08-12T20:49:51Z",
+      "side": 1,
+      "message": "Yeah you\u0027re right, we\u0027ll want something like that. I\u0027ll fix this up.",
+      "parentUuid": "898eddaf_e11a0a7a",
+      "revId": "a9b23719c15aa89ac2f0a6487a7b3ae31f2a8b1f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
