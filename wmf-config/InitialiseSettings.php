@@ -10603,11 +10603,6 @@ $wgConf->settings = array(
 	'testwiki' => true,
 ),
 
-'wgLogAutocreatedAccounts' => array(
-	'default' => false,
-	'test2wiki' => true,
-),
-
 'wgCategoryCollation' => array(
 	'default' => 'uppercase',
 	// Multilingual wikis
