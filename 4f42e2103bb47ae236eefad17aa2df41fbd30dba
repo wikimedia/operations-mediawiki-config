@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_1cde956a",
+        "filename": "wmf-config/filebackend.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2013-08-15T18:42:12Z",
+      "side": 1,
+      "message": "This could be left on (or should at least be turned on not long after this change is applied). Same below.",
+      "revId": "4f42e2103bb47ae236eefad17aa2df41fbd30dba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
