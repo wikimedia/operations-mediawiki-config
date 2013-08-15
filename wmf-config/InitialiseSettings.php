@@ -6750,6 +6750,26 @@ $wgConf->settings = array(
 			'reupload' => true,
 			'movefile' => true,
 		), // bug 51232
+		'eliminator' => array(
+			'delete' => true,
+			'nuke' => true,
+			'suppressredirect' => true,
+			'undelete' => true,
+			'browsearchive' => true,
+			'deletedhistory' => true,
+			'deletedtext' => true,
+		), // bug 52866
+		'interface_editor' => array(
+			'editinterface' => true,
+			'editusercss' => true,
+			'edituserjs' => true,
+		), // bug 52866
+		'trusted' => array(
+			'block' => true,
+			'blockemail' => true,
+			'protect' => true,
+		), // bug 52866
+		'editprotected' => array( 'editprotected' => true ), // bug 52866
 		'flood' => array( 'bot' => true ), // bug 51803
 		'botadmin' => array(
 			'protect' => true,
@@ -7761,6 +7781,10 @@ $wgConf->settings = array(
 			'botadmin', // Bug 52578
 			'import', // bug 52633
 			'transwiki', // bug 52633
+			'eliminator', // bug 52866
+			'interface_editor', // bug 52866
+			'trusted', // bug 52866
+			'editprotected', // bug 52866
 		),
 	),
 	'+cswiki' => array(
@@ -8197,6 +8221,10 @@ $wgConf->settings = array(
 			'botadmin', // bug 52578
 			'import', // bug 52633
 			'transwiki', // bug 52633
+			'eliminator', // bug 52866
+			'interface_editor', // bug 52866
+			'trusted', // bug 52866
+			'editprotected', // bug 52866
 		),
 	),
 	'+commonswiki' => array(
