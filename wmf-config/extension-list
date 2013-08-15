@@ -14,6 +14,7 @@ $IP/extensions/CentralAuth/CentralAuth.php
 $IP/extensions/CentralNotice/CentralNotice.php
 $IP/extensions/CharInsert/CharInsert.php
 $IP/extensions/CheckUser/CheckUser.php
+$IP/extensions/CirrusSearch/CirrusSearch.php
 $IP/extensions/Cite/Cite.php
 $IP/extensions/Cite/SpecialCite.php
 $IP/extensions/cldr/cldr.php
