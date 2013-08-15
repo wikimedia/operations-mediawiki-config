@@ -10549,20 +10549,6 @@ $wgConf->settings = array(
 	'dewiki' => true, // bug 52232
 ),
 
-'wmgVisualEditorEnableEventLogging' => array(
-	'default' => false,
-	'dewiki' => true,
-	'enwiki' => true,
-	'frwiki' => true,
-	'itwiki' => true,
-	'plwiki' => true,
-),
-
-// Bug 49604 - to remove once complete.
-'wmgVisualEditorEnableSplitTest' => array(
-	'default' => false,
-),
-
 'wmgVisualEditorShowBetaWelcome' => array(
 	'default' => false,
 	'enwiki' => true,
