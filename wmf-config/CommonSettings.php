@@ -1915,13 +1915,6 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorDisableForAnons ) {
 		$wgVisualEditorDisableForAnons = true;
 	}
-	if ( $wmgVisualEditorEnableEventLogging ) {
-		$wgVisualEditorEnableEventLogging = true;
-	}
-	// Bug 49604 - to remove once complete.
-	if ( $wmgVisualEditorEnableSplitTest ) {
-		$wgVisualEditorEnableSplitTest = true;
-	}
 	if ( $wmgVisualEditorShowBetaWelcome ) {
 		$wgVisualEditorShowBetaWelcome = true;
 	}
