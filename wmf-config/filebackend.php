@@ -144,10 +144,10 @@ $wgFileBackends[] = array(
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 		array( 'template' => 'local-swift', 'isMultiMaster' => true ),
-		#array( 'template' => 'local-ceph', 'isMultiMaster' => true ) -- aaron 5/30/2013
+		array( 'template' => 'local-ceph', 'isMultiMaster' => false )
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
-	'autoResync'  => 'conservative' // bug 39221
+	#'autoResync'  => 'conservative' // bug 39221
 );
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
@@ -158,10 +158,10 @@ $wgFileBackends[] = array(
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 		array( 'template' => 'shared-swift', 'isMultiMaster' => true ),
-		#array( 'template' => 'shared-ceph', 'isMultiMaster' => true ) -- aaron 5/30/2013
+		array( 'template' => 'shared-ceph', 'isMultiMaster' => false )
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
-	'autoResync'  => 'conservative' // bug 39221
+	#'autoResync'  => 'conservative' // bug 39221
 );
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
@@ -171,10 +171,10 @@ $wgFileBackends[] = array(
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 		array( 'template' => 'global-swift', 'isMultiMaster' => true ),
-		#array( 'template' => 'global-ceph', 'isMultiMaster' => true ) -- aaron 5/30/2013
+		array( 'template' => 'global-ceph', 'isMultiMaster' => false )
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
-	'autoResync'  => 'conservative'
+	#'autoResync'  => 'conservative'
 );
 /* end multiwrite backend config */
 
