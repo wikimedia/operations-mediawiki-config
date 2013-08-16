@@ -7468,6 +7468,7 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
 		'filemover' => array( 'movefile' => true, 'suppressredirect' => true ),
+		'flood' => array( 'bot' => true ),
 	),
 	'siwiki' => array(
 		'rollbacker'    => array( 'rollback' => true ),
@@ -8044,9 +8045,15 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'rollbacker', 'transwiki', 'patroller' ),
 		'sysop' => array( 'rollbacker', 'flood', 'patroller' ),
 	),
-	'+shwiki' => array( // bug 50802
-		'bureaucrat' => array( 'autopatrolled', 'filemover', 'patroller', 'rollbacker' ),
-		'sysop' => array( 'autopatrolled', 'filemover', 'patroller', 'rollbacker' ),
+	'+shwiki' => array(
+		'bureaucrat' => array(
+			'autopatrolled', 'filemover', 'patroller', 'rollbacker', // bug 50802
+			'flood', // bug 52273
+		),
+		'sysop' => array(
+			'autopatrolled', 'filemover', 'patroller', 'rollbacker', // bug 50802
+			'flood', // bug 52273
+		),
 	),
 	'+siwiki' => array(
 		'sysop' => array( 'rollbacker', 'accountcreator', 'abusefilter', 'autopatrolled', 'confirmed', 'reviewer' ),
@@ -8480,9 +8487,15 @@ $wgConf->settings = array(
 	'+sewikimedia' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'medlem' ),
 	),
-	'+shwiki' => array( // bug 50802
-		'bureaucrat' => array( 'autopatrolled', 'filemover', 'patroller', 'rollbacker' ),
-		'sysop' => array( 'filemover', 'patroller', 'rollbacker' ),
+	'+shwiki' => array(
+		'sysop' => array(
+			'autopatrolled', 'filemover', 'patroller', 'rollbacker', // bug 50802
+			'flood', // bug 52273
+		),
+		'sysop' => array(
+			'filemover', 'patroller', 'rollbacker', // bug 50802
+			'flood', // bug 52273
+		),
 	),
 	'+siwiki' => array(
 		'sysop' => array( 'rollbacker', 'accountcreator', 'abusefilter', 'autopatrolled', 'confirmed', 'reviewer', ),
