@@ -225,6 +225,7 @@ switch ( $wgDBname ) {
 		break;
 	case 'metawiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
+		$wgAbuseFilterAvailableActions[] = 'block'; // bug 52681
 		break;
 	case 'mrwiki':
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true; // bug 40611
