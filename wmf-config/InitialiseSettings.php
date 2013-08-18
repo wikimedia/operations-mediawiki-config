@@ -2519,7 +2519,19 @@ $wgConf->settings = array(
 	'+dewikisource' => array(
 		'WS' => 4,
 	),
-	'+dewikivoyage' => array(
+	'+dewikivoyage' => array( // bug 51794
+		'WV' => NS_PROJECT,
+		'WD' => NS_PROJECT_TALK,
+		'BN' => NS_USER,
+		'BD' => NS_USER_TALK,
+		'H' => NS_HELP,
+		'HD' => NS_HELP_TALK,
+		'P' => 100, // Portal
+		'PD' => 101, // Portal Diskussion
+		'T' => 104, // Thema
+		'TD' => 105, // Thema Diskussion
+		'NR' => 106, // Nachrichten
+		'ND' => 107, // Nachrichten Diskussion
 		'News' => 106,
 		'News_Diskussion' => 107,
 	),
