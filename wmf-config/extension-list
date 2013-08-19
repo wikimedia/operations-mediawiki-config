@@ -85,6 +85,7 @@ $IP/extensions/NewUserMessage/NewUserMessage.php
 $IP/extensions/Nuke/SpecialNuke.php
 $IP/extensions/Nostalgia/Nostalgia.php
 $IP/extensions/OAI/OAIRepo.php
+$IP/extensions/OAuth/OAuth.php
 $IP/extensions/OpenSearchXml/OpenSearchXml.php
 $IP/extensions/Oversight/HideRevision.php
 $IP/extensions/PagedTiffHandler/PagedTiffHandler.php

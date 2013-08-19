@@ -9727,6 +9727,14 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgUseOAuth' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'testwikidatawiki' => true,
+	'mediawikiwiki' => true,
+),
+
 # @}
 
 'wgEnableMWSuggest' => array(
