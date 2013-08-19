@@ -10784,7 +10784,6 @@ $wgConf->settings = array(
 	'default' => array(),
 	'testwiki' => array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' ),
 	'dewiki' => array(),
-	'enwiki' => array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' ),
 	'frwiki' => array( 'Wikipédia:Outil_de_retour_des_lecteurs' ),
 ),
 /*
