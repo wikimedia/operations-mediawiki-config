@@ -332,6 +332,8 @@ $wgSQLMode = null;
 
 # Object cache and session settings
 
+$wgSessionName = $wgDBname . 'Session';
+
 $pcTemplate = array( 'type' => 'mysql',
 	'dbname' => 'parsercache',
 	'user' => $wgDBuser,
