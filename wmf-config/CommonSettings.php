@@ -2595,6 +2595,15 @@ if ( $wmgUseAccountAudit ) {
 	require_once( "$IP/extensions/AccountAudit/AccountAudit.php" );
 }
 
+if ( $wmgUseOAuth ) {
+	require_once( "$IP/extensions/OAuth/OAuth.php" );
+	$wgMWOAuthCentralWiki = 'mediawikiwiki';
+	$wgMWOAuthSharedUserSource = 'CentralAuth';
+	$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
+	$wgGroupPermissions['emailconfirmed']['mwoauthproposeconsumer'] = true;
+	$wgGroupPermissions['emailconfirmed']['mwoauthupdateownconsumer'] = true;
+}
+
 ### End (roughly) of general extensions ########################
 
 if ( $wmgUseVForm ) {
