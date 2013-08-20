@@ -12114,6 +12114,11 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 	'enwiki' => true,
 	'metawiki' => true,
+	'frwiki' => true,
+	'huwiki' => true,
+	'plwiki' => true,
+	'ptwiki' => true,
+	'svwiki' => true,
 ),
 'wmgEchoEnableEmailBatch' => array(
 	'default' => true,
@@ -12125,6 +12130,11 @@ $wgConf->settings = array(
 	'default' => '//www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:Echo',
 	'enwiki' => '//en.wikipedia.org/wiki/Wikipedia:Notifications/FAQ',
 	'metawiki' => '//meta.wikimedia.org/wiki/Help:Notifications',
+	'frwiki' => '//fr.wikipedia.org/wiki/Aide:Notifications',
+	'huwiki' => '//hu.wikipedia.org/wiki/Wikip%C3%A9dia:%C3%89rtes%C3%ADt%C3%A9sek',
+	'plwiki' => '//pl.wikipedia.org/wiki/Wikipedia:Powiadomienia/FAQ',
+	'ptwiki' => '//www.mediawiki.org/wiki/Help:Notifications/pt-br',
+	'svwiki' => '//www.mediawiki.org/wiki/Help:Notifications/sv',
 ),
 'wmgEchoSiteNotificationIconUrl' => array(
 	'default' => false, // Placeholder icon
@@ -12143,12 +12153,22 @@ $wgConf->settings = array(
 	'mediawikiwiki' => 14400,
 	'enwiki' => 14400,
 	'metawiki' => 14400,
+	'frwiki' => 14400,
+	'huwiki' => 14400,
+	'plwiki' => 14400,
+	'ptwiki' => 14400,
+	'svwiki' => 14400,
 ),
 
 'wmgEchoCluster' => array(
 	'default' => false,
 	'testwiki' => 'extension1',
 	'enwiki' => 'extension1',
+	'frwiki' => 'extension1',
+	'huwiki' => 'extension1',
+	'plwiki' => 'extension1',
+	'ptwiki' => 'extension1',
+	'svwiki' => 'extension1',
 ),
 
 // Cohort study time, empty array to disable Cohort study
