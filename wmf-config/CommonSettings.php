@@ -2600,8 +2600,8 @@ if ( $wmgUseOAuth ) {
 	$wgMWOAuthCentralWiki = 'mediawikiwiki';
 	$wgMWOAuthSharedUserSource = 'CentralAuth';
 	$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
-	$wgGroupPermissions['emailconfirmed']['mwoauthproposeconsumer'] = true;
-	$wgGroupPermissions['emailconfirmed']['mwoauthupdateownconsumer'] = true;
+	$wgGroupPermissions['autoconfirmed']['mwoauthproposeconsumer'] = true;
+	$wgGroupPermissions['autoconfirmed']['mwoauthupdateownconsumer'] = true;
 }
 
 ### End (roughly) of general extensions ########################
