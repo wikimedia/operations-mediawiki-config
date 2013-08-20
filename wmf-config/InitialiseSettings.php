@@ -12600,6 +12600,7 @@ $wgConf->settings = array(
 'wgSecureLogin' => array(
 	'default' => false,
 	'loginwiki' => true,
+	'test2wiki' => true,
 ),
 
 'wgRightsUrl' => array(
