@@ -271,7 +271,7 @@ return array(
 	),
 
 	'wgSecureLogin' => array(
-        'default' => false,
+        'default' => true,
         'loginwiki' => true,
     ),
 
