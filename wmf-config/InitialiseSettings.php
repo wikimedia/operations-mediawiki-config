@@ -12443,6 +12443,9 @@ $wgConf->settings = array(
 	'huwiki' => array(
 		'sortPrepend' => array( 'en' ),
 	),
+	'ilowiki' => array(
+		'sort' => 'alphabetic',
+	),
 	'lbwiki' => array(
 		'sort' => 'alphabetic',
 	),
