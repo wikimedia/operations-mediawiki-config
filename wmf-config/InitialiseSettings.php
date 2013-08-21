@@ -8553,7 +8553,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'medlem' ),
 	),
 	'+shwiki' => array(
-		'sysop' => array(
+		'bureaucrat' => array(
 			'autopatrolled', 'filemover', 'patroller', 'rollbacker', // bug 50802
 			'flood', // bug 52273
 		),
