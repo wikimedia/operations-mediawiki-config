@@ -12645,6 +12645,11 @@ $wgConf->settings = array(
     'foundationwiki' => '!^https?://(www\.)?wikimediafoundation\.org/!',
 ),
 
+'wmgHTTPSBlacklistCountries' => array(
+	'CN', // China
+	'IR', // Iran
+),
+
 );
 
 
