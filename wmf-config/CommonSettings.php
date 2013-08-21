@@ -2599,6 +2599,7 @@ if ( $wmgUseOAuth ) {
 	require_once( "$IP/extensions/OAuth/OAuth.php" );
 	$wgMWOAuthCentralWiki = 'mediawikiwiki';
 	$wgMWOAuthSharedUserSource = 'CentralAuth';
+	$wgMWOAuthSecureTokenTransfer = true;
 	$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
 	$wgGroupPermissions['autoconfirmed']['mwoauthproposeconsumer'] = true;
 	$wgGroupPermissions['autoconfirmed']['mwoauthupdateownconsumer'] = true;
