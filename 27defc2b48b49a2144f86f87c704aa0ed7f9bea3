@@ -34,6 +34,24 @@
       "revId": "27defc2b48b49a2144f86f87c704aa0ed7f9bea3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_a95d4120",
+        "filename": "w/robots.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 9
+      },
+      "writtenOn": "2013-08-22T20:39:54Z",
+      "side": 1,
+      "message": "Yep - disregard my original comment, the X-Sd header is being set appropriately by varnish.",
+      "parentUuid": "499865f5_e6d5b6b6",
+      "revId": "27defc2b48b49a2144f86f87c704aa0ed7f9bea3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
