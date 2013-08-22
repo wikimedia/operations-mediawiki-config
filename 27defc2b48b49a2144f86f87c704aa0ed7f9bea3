@@ -16,6 +16,24 @@
       "revId": "27defc2b48b49a2144f86f87c704aa0ed7f9bea3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "499865f5_e6d5b6b6",
+        "filename": "w/robots.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2013-08-22T20:17:08Z",
+      "side": 1,
+      "message": "I believe the origin server\u0027s returned Vary: header here would instruct the intermediate Varnish cache about which headers from Varnish\u0027s relayed/augmented _requests_ should be considered when bucketing a response for future cache cache retrieval in addition to the otherwise unique URL (\u003clang\u003e.wikipedia.org for mdot and zerodot as well as desktop after rewrites, if I\u0027m not mistaken).\n\nIn the case where the browser\u0027s requested domain is an mdot one, Varnish augments in an X-Subdomain request header with a value of M, whereas in the case where the domain is a zerodot one, the X-Subdomain that\u0027s passed into the origin server is ZERO.\n\nWhereas the Wikipedia Zero business program is indifferent to the M case potentially being crawled because of a lacking no-index directive (indeed, it may actually be a good signal to page ranking algorithms that there is solid mobile support, see recent Google broadcasting that they\u0027ll take this into consideration), for the ZERO case crawling shouldn\u0027t be further occurring.\n\nFor the case where no X-Subdomain is actually augmented into the request (e.g., Desktop), that can be considered as one variant of X-Subdomain (\u003cnull\u003e), with M being another variant, and ZERO being the final one.\n\nI don\u0027t believe that the origin server needs to actually return an X-Subdomain header in order for the intermediate Varnish cache to honor the Vary: X-Subdomain instruction. I may be wrong, though! Regardless, should the if ( $zeroRated) { } below also have a header( \u0027X-Subdomain; ZERO\u0027 ); prior to the echo $dontIndex;  for debugging purposes? I seem to recall some discussion of actually _not_ echoing the headers back at the client, but I don\u0027t remember the specifics...maybe security or privacy concerns (not so much an issue here).",
+      "parentUuid": "499865f5_c610ba51",
+      "revId": "27defc2b48b49a2144f86f87c704aa0ed7f9bea3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
