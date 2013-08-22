@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "499865f5_c610ba51",
+        "filename": "w/robots.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 9
+      },
+      "writtenOn": "2013-08-22T19:18:54Z",
+      "side": 1,
+      "message": "X-Subdomain isn\u0027t in the http://en.zero.wikipedia.org/robots.txt response.  It needs to be set, or this Vary header is a no-op.\nheader( \u0027X-Subdomain: \u0027 ...);\n\n$ curl -I http://en.zero.wikipedia.org/robots.txt\nHTTP/1.1 200 OK\nServer: Apache\nX-Powered-By: PHP/5.3.10-1ubuntu3.6+wmf1\nX-Content-Type-Options: nosniff\nX-Article-ID: 19292575\nX-Language: en\nX-Site: wikipedia\nLast-modified: Sun, 6 Jan 2013 23:38:43 GMT\nVary: Accept-Encoding\nX-Vary-Options: Accept-Encoding;list-contains\u003dgzip\nContent-Type: text/plain; charset\u003dutf-8\nX-Varnish: 3196515821, 3476500829 3473814081\nVia: 1.1 varnish, 1.1 varnish\nX-Device: generic\nDate: Thu, 22 Aug 2013 19:16:03 GMT\nAge: 3207\nConnection: keep-alive\nX-Cache: cp1047 miss (0), cp1046 frontend hit (85)\nCache-Control: s-maxage\u003d300, must-revalidate, max-age\u003d0",
+      "revId": "27defc2b48b49a2144f86f87c704aa0ed7f9bea3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
