@@ -12269,6 +12269,10 @@ $wgConf->settings = array(
 
 'wmgUseCodeEditorForCore' => array(
 	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'testwikidatawiki' => true,
+	'mediawikiwiki' => true,
 ),
 
 'wmgUseScribunto' => array(
