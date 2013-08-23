@@ -2497,10 +2497,23 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['usePropertyInfoTable'] = false;
 
-	$wgWBRepoSettings['clientDbList'] = array_map(
-		'trim',
-		file( getRealmSpecificFilename( "$IP/../wikidataclient.dblist" ) )
-	);
+	if ( $wgDBname === 'testwikidatawiki' ) {
+		$wgWBRepoSettings['clientDbList'] = array();
+
+		$wgWBRepoSettings['dataTypes'] = array(
+			'wikibase-item',
+			'commonsMedia',
+			'string',
+			'time',
+			'globe-coordinate',
+			'url'
+		);
+	} else {
+		$wgWBRepoSettings['clientDbList'] = array_map(
+			'trim',
+			file( getRealmSpecificFilename( "$IP/../wikidataclient.dblist" ) )
+		);
+	}
 
 	$wgWBRepoSettings['localClientDatabases'] = array_combine(
 		$wgWBRepoSettings['clientDbList'],
