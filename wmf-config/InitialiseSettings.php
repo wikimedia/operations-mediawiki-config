@@ -832,6 +832,7 @@ $wgConf->settings = array(
 	'rowikibooks' => '$stdlogo',
 	'ruwikibooks' => '$stdlogo',
 	'siwikibooks' => '//upload.wikimedia.org/wikipedia/commons/1/1c/Wikibooks-logo-si.png',
+	'skwikibooks' => '$stdlogo',
 	'slwikibooks' => '$stdlogo',
 	'sqwikibooks' => '$stdlogo',
 	'srwikibooks' => '$stdlogo',
