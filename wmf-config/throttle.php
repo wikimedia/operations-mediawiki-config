@@ -3,7 +3,10 @@
 # WARNING: This file is publically viewable on the web.
 # Do not put private data here.
 
-# The helper functions takes an array of parameters:
+# Initialize the array. Append to that array to add a throttle
+$wmgThrottlingExceptions = array();
+
+# $wmgThrottlingExceptions is an array of arrays of parameters:
 #  'from'  => date/time to start raising account creation throttle
 #  'to'    => date/time to stop
 #
@@ -14,17 +17,13 @@
 #  'dbname' => a $wgDBname or array of dbnames to compare to
 #             (eg. enwiki, metawiki, frwikibooks, eswikiversity)
 #             (default: any project)
-
-# Initialize the array. Append to that array to add a throttle
-$wmgThrottlingExceptions = array();
-
 ## Add throttling definitions below.
 
-$wmfThrottlingExceptions[] = array( // bug 49176 it.wiki GLAM event
-	'from'   => '2013-06-08T12:00 +0:00',
-	'to'     => '2013-06-08T17:00 +0:00',
-	'IP'     => '46.255.84.17',
-	'dbname' => array( 'itwiki' ),
+$wmgThrottlingExceptions[] = array( // bug 53218
+	'from'   => '2013-08-27T00:00 +0:00',
+	'to'     => '2013-08-27T13:00 +0:00',
+	'IP'     => array( '210.212.174.177', '14.139.114.194' ),
+	//'dbname' => array( 'itwiki' ),   -- so many indic wikis!
 	'value'  => 50,
 );
 
