@@ -4,30 +4,23 @@
 # NOTE: this file is loaded early on in WebStart.php, so be careful with globals.
 
 # Non-logged profiling for debugging
-if ( @defined( $_REQUEST['forceprofile'] ) ) {
-	require_once( $IP . '/includes/profiler/ProfilerSimpleText.php' );
-	$wgProfiler = new ProfilerSimpleText( array() );
+if ( isset( $_REQUEST['forceprofile'] ) ) {
+	$wgProfiler['class'] = 'ProfilerSimpleText';
 # Non-logged profiling for debugging
-} elseif ( @defined( $_REQUEST['forcetrace'] ) ) {
-	require_once( $IP . '/includes/profiler/ProfilerSimpleTrace.php' );
-	$wgProfiler = new ProfilerSimpleTrace( array() );
+} elseif ( isset( $_REQUEST['forcetrace'] ) ) {
+	$wgProfiler['class'] = 'ProfilerSimpleTrace';
 # Profiling hack for test2 wiki (not sampled, but shouldn't distort too much)
 } elseif ( @$_SERVER['HTTP_HOST'] === 'test2.wikipedia.org' ) {
-	require_once( $IP . '/includes/profiler/ProfilerSimpleUDP.php' );
-	$wgProfiler = new ProfilerSimpleUDP( array() );
-	$wgProfiler->setProfileID( 'test2' );
-# Normal case: randomly selected for logged profiling sample
-} elseif ( PHP_SAPI !== 'cli' && $wmfDatacenter == 'eqiad' && ( mt_rand( 0, 0x7fffffff ) % 50 ) == 0 ) {
-	require_once( $IP . '/includes/profiler/ProfilerSimpleUDP.php' );
-	$wgProfiler = new ProfilerSimpleUDP( array() );
+	$wgProfiler['class'] = 'ProfilerSimpleUDP';
+	$wgProfiler['profileID'] = 'test2';
+# Normal case: randomly (or not) selected for logged profiling sample
+} elseif ( PHP_SAPI !== 'cli' && $wmfDatacenter == 'eqiad' && ( mt_rand() % 50 ) == 0 ) {
+	$wgProfiler['class'] = 'ProfilerSimpleUDP';
 	// $IP is something like '/usr/local/apache/common-local/php-1.19'
 	$version = str_replace( 'php-', '', basename( $IP ) );
 	if ( strpos( @$_SERVER['REQUEST_URI'], '/w/thumb.php' ) !== false ) {
-		$wgProfiler->setProfileID( "thumb-$version" );
+		$wgProfiler['profileID'] = "thumb-$version";
 	} else {
-		$wgProfiler->setProfileID( $version );
+		$wgProfiler['profileID'] = $version;
 	}
-# Normal case: randomly not selected for logged profiling sample
-} else {
-	require_once( $IP . '/includes/profiler/ProfilerStub.php' );
 }
