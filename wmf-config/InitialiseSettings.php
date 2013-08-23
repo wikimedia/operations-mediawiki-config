@@ -6792,15 +6792,20 @@ $wgConf->settings = array(
 		'user' => array(
 			'upload' => false,
 			'reupload' => false,
+			'reupload-own' => false, // bug 52725
 		), // bug 51232
 		'autoconfirmed' => array(
 			'upload' => false,
 			'reupload' => false,
 		), // bug 51232
-		'sysop' => array( 'importupload' => true ), // bug 52633
+		'sysop' => array( 
+			'importupload' => true, // bug 52633
+			'reupload-own' => true, // bug 52725
+		),
 		'uploader' => array(
 			'upload' => true,
 			'reupload' => true,
+			'reupload-own' => true, // bug 52725
 			'movefile' => true,
 		), // bug 51232
 		'eliminator' => array(
