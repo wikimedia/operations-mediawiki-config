@@ -2455,6 +2455,9 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSAnonCanChangeLanguage = false;
 	$wgULSPosition = $wmgULSPosition;
 	$wgULSIMEEnabled = $wmgULSIMEEnabled;
+	if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgUseZeroNamespace ) {
+		$wgULSNoImeSelectors[] = '.ace_editor textarea';
+	}
 }
 
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
