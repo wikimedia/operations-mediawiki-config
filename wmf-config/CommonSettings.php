@@ -2569,7 +2569,7 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings[$setting] = $value;
 	}
 
-	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseDataTransclusion;
+	$wgWBClientSettings['allowDataTransclusion'] = true;
 	$wgWBClientSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfExtendedVersionNumber";
 }
 
