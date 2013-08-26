@@ -1113,6 +1113,8 @@ if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_P
 // Disable redirects to HTTPS for clients in some countries
 $wgHooks['CanIPUseHTTPS'][] = 'wmfCanIPUseHTTPS';
 function wmfCanIPUseHTTPS( $ip, &$canDo ) {
+	global $wmgHTTPSBlacklistCountries;
+
 	if ( !function_exists( 'geoip_country_code_by_name' ) ) {
 		return true;
 	}
