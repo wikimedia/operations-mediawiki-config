@@ -2518,7 +2518,8 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['usePropertyInfoTable'] = false;
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
-		$wgWBRepoSettings['clientDbList'] = array();
+		// there is no cronjob dispatcher yet, this will do nothing
+		$wgWBRepoSettings['clientDbList'] = array( 'test2wiki' );
 
 		$wgWBRepoSettings['dataTypes'] = array(
 			'wikibase-item',
