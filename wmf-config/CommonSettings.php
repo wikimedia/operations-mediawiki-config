@@ -1229,7 +1229,7 @@ if ( $wmgUseCentralAuth ) {
 			$wmfHostnames['wikidata'] => 'wikidatawiki',
 			'ee-prototype.wikipedia.beta.wmflabs.org' => 'ee_prototypewiki',
 		);
-		$wgCentralAuthLoginWiki = false;
+		$wgCentralAuthLoginWiki = $wmgCentralAuthLoginWiki;
 		break;
 	}
 
