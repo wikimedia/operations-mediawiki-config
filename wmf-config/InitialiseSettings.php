@@ -11232,13 +11232,26 @@ $wgConf->settings = array(
 
 'wmgMFRemovableClasses' => array(
 	'default' => array(
-		'.metadata',
-		'div.stub',
-		'div.sister-project',
-		'.portal',
-		'.boilerplate',
-		'.hiddenStructure',
-		'.medialist',
+		'base' => array(
+			'div.stub',
+			'div.sister-project',
+			'.portal',
+			'.boilerplate',
+			'.hiddenStructure',
+			'.medialist',
+		),
+		'HTML' => array(
+			'.topicon',
+		),
+		'WML' => array(
+			'.metadata',
+		),
+		'extracts' => array(
+			'.metadata',
+			'span.coordinates',
+			'span.geo-multi-punct',
+			'span.geo-nondefault',
+		),
 	),
 ),
 'wmgMFCustomLogos' => array(
