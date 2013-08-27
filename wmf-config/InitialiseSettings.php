@@ -12020,11 +12020,6 @@ $wgConf->settings = array(
 	'wikimania2014wiki' => true,
 ),
 
-// (towards bug 46333) Make the new login and create account forms the default.
-'wmgUseVForm' => array(
-	'default' => true,
-),
-
 'wmgUseVips' => array(
 	'default' => true,
 ),
