@@ -2662,11 +2662,6 @@ if ( $wmgUseOAuth ) {
 
 ### End (roughly) of general extensions ########################
 
-if ( $wmgUseVForm ) {
-	$wgUseVFormUserLogin = true;
-	$wgUseVFormCreateAccount = true;
-}
-
 $wgApplyIpBlocksToXff = $wmgUseXFFBlocks;
 
 // On Special:Version, link to useful release notes
