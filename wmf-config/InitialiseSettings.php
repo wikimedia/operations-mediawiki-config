@@ -12250,6 +12250,14 @@ $wgConf->settings = array(
 	'enwiki' => array( 20130611200000, 20130618200000, 20130701200000 ),
 ),
 
+// Whether to use job queue to process web and email notifications
+// turn it off for production wikis before verifying it works on testwiki
+'wmgEchoUseJobQueue' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
+
 'wmgUseThanks' => array(
 	'default' => false,
 	'testwiki' => true,
