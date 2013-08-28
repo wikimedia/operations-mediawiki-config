@@ -12166,11 +12166,16 @@ $wgConf->settings = array(
 'wmgUseEducationProgram' => array(
 	'default' => false,
 	'dewikiversity' => true,
-	'hewiki' => true, // bug 48848
 	'enwiki' => true,
+	'hewiki' => true, // bug 48848
 	'mkwiki' => true,
+	'ptwiki' => true, // bug 52870
 	'svwiki' => true, // bug 49009
 	'test2wiki' => true,
+),
+'wmgEducationProgramDYKCat' => array(
+	'default' => 'MyCourses Did You Know',
+	'ptwiki' => '!Você Sabia sobre cursos', // bug 52870
 ),
 
 'wmgUseWikimediaShopLink' => array(
