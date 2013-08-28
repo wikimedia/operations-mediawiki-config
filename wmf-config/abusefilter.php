@@ -58,6 +58,10 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterNotifications = "udp";
 		$wgAbuseFilterNotificationsPrivate = true;
 		break;
+	case 'cswikinews':
+		$wgAbuseFilterNotifications = "udp";
+		$wgAbuseFilterNotificationsPrivate = true;
+		break;
 	case 'cswikisource':
 		$wgAbuseFilterNotifications = "udp";
 		$wgAbuseFilterNotificationsPrivate = true;
