@@ -12646,6 +12646,7 @@ $wgConf->settings = array(
 
 'wmgUseCirrusAsAlternative' => array(
 	'default' => false,
+	'mediawikiwiki' => true,
 ),
 
 ### End (roughly) of general extensions ########################
