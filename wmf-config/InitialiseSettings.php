@@ -12641,12 +12641,12 @@ $wgConf->settings = array(
 
 'wmgUseCirrus' => array(
 	'default' => false,
-	'mediawikiwiki' => true,
 	'test2wiki' => true,
 ),
 
 'wmgUseCirrusAsAlternative' => array(
 	'default' => false,
+	'mediawikiwiki' => true,
 ),
 
 ### End (roughly) of general extensions ########################
