@@ -12265,7 +12265,7 @@ $wgConf->settings = array(
 
 // Whether to use job queue to process web and email notifications
 'wmgEchoUseJobQueue' => array(
-	'default' => true,
+	'default' => false,
 ),
 
 'wmgUseThanks' => array(
