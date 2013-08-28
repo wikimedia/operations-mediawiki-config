@@ -2226,6 +2226,7 @@ $wgJobTypeConf['webVideoTranscode'] = array( 'claimTTL' => 86400 ) + $wgJobTypeC
 
 if ( $wmgUseEducationProgram ) {
 	require_once( "$IP/extensions/EducationProgram/EducationProgram.php" );
+	$egEPSettings['dykCategory'] = $wmgEducationProgramDYKCat;
 }
 
 if ( $wmgUseWikimediaShopLink ) {
