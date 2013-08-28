@@ -12691,7 +12691,7 @@ $wgConf->settings = array(
 ),
 
 'wgSecureLogin' => array(
-	'default' => false,
+	'default' => true,
 	'loginwiki' => true,
 	'mediawikiwiki' => true,
 	'test2wiki' => true,
