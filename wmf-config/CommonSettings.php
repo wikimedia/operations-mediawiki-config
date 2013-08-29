@@ -2160,6 +2160,11 @@ if ( $wmgUseTranslationNotifications ) {
 	$wgTranslationNotificationsContactMethods['talkpage-elsewhere'] = true;
 }
 
+if ( $wmgUseCleanChanges ) {
+	$wgDefaultUserOptions['usenewrc'] = 1;
+	require_once( "$IP/extensions/CleanChanges/CleanChanges.php" );
+}
+
 if ( $wmgUseVips ) {
 	include( "$IP/extensions/VipsScaler/VipsScaler.php" );
 	include( "$IP/extensions/VipsScaler/VipsTest.php" );
