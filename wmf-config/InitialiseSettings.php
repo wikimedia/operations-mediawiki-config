@@ -9350,6 +9350,7 @@ $wgConf->settings = array(
 	'+eswiki' => array(
 		NS_IMAGE => array( 'editinterface' ),
 		NS_IMAGE_TALK => array( 'editinterface' ),
+		828 => array( 'autoconfirmed' ), // Bug 53558 - Module:
 	),
 	'+metawiki' => array(
 		480 => array( 'zero-edit' ), // will be NS_ZERO in extension
