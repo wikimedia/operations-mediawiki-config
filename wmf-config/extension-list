@@ -18,6 +18,7 @@ $IP/extensions/CirrusSearch/CirrusSearch.php
 $IP/extensions/Cite/Cite.php
 $IP/extensions/Cite/SpecialCite.php
 $IP/extensions/cldr/cldr.php
+$IP/extensions/CleanChanges/CleanChanges.php
 $IP/extensions/ClientSide/ClientSide.php
 $IP/extensions/CodeEditor/CodeEditor.php
 $IP/extensions/CodeReview/CodeReview.php
