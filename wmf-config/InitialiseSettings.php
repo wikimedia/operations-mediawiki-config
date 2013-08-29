@@ -11947,7 +11947,10 @@ $wgConf->settings = array(
 	'wikimania2013wiki' => true,
 	'wikimania2014wiki' => true,
 ),
-
+'wmgUseCleanChanges' => array(
+	'default' => false,
+	'metawiki' => true, // bug 53541
+),
 // (towards bug 46333) Make the new login and create account forms the default.
 'wmgUseVForm' => array(
 	'default' => true,
