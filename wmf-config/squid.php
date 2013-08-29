@@ -229,9 +229,11 @@ $wgSquidServersNoPurge = array(
 
 	# esams
 	'91.198.174.81',	# cp3011
-	'2620:0:862:1:26b6:fdff:fef5:b2d4',
+	'2620:0:862:1:26b6:fdff:fef5:b2d4', // @todo: remove lowercase forms after change 76843/ is deployed
+	'2620:0:862:1:26B6:FDFF:FEF5:B2D4',
 	'91.198.174.82',	# cp3012
 	'2620:0:862:1:26b6:fdff:fef5:abb4',
+	'2620:0:862:1:26B6:FDFF:FEF5:ABB4',
 	'91.198.174.83',	# cp3013
 	'91.198.174.84',	# cp3014
 
