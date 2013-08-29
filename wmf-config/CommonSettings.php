@@ -2530,7 +2530,7 @@ if ( $wmgUseWikibaseRepo ) {
 		'wikivoyage'
 	);
 
-	$wgWBRepoSettings['usePropertyInfoTable'] = false;
+	$wgWBRepoSettings['usePropertyInfoTable'] = true;
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		// there is no cronjob dispatcher yet, this will do nothing
@@ -2583,8 +2583,8 @@ if ( $wmgUseWikibaseClient ) {
 		'wikivoyage'
 	);
 
-	$wgWBClientSettings['withoutTermWeight'] = true;
-	$wgWBClientSettings['usePropertyInfoTable'] = false;
+	$wgWBClientSettings['withoutTermWeight'] = false;
+	$wgWBClientSettings['usePropertyInfoTable'] = true;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 	$wgWBClientSettings['enableSiteLinkWidget'] = true;
 
