@@ -10638,6 +10638,14 @@ $wgConf->settings = array(
 	'plwiktionary' => 'uca-default', // bug 46081
 	'ptwiki' => 'uca-pt', // bug 45911
 	'ptwikibooks' => 'uca-pt', // bug 45911
+	'ruwiki' => 'uca-ru', // bug 52997
+	'ruwikibooks' => 'uca-ru', // bug 52997
+	'ruwikinews' => 'uca-ru', // bug 52997
+	'ruwikiquote' => 'uca-ru', // bug 52997
+	'ruwikisource' => 'uca-ru', // bug 52997
+	'ruwikiversity' => 'uca-ru', // bug 52997
+	'ruwikivoyage' => 'uca-ru', // bug 52997
+	'ruwiktionary' => 'uca-ru', // bug 52997
 	'svwiki' => 'uca-sv', // bug 45446
 	'svwikisource' => 'uca-sv@collation=standard', // bug 46058
 	'thwikibooks' => 'uca-default', // bug 48097
