@@ -10032,6 +10032,7 @@ $wgConf->settings = array(
 	'viwiki' => true, # 2009-12-28 bug 21566
 	'wikibooks' => true, # on for all wikibooks! 2008-10-23
 	'wikisource' => true, # 2009-02-24
+	'wikimania' => true,
 	'wikinews' => true,
 	'wikivoyage' => true,
 ),
