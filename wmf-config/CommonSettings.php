@@ -2157,8 +2157,19 @@ if ( $wmgUseTranslate ) {
 		return $mg;
 	}
 
+	function addTranslatableMessageGroup( $id ) {
+		$mg = new WikiMessageGroup( $id, 'translatable-messages' );
+		$mg->setLabel( 'Interface' );
+		$mg->setDescription( 'Messages used in the custom interface of this wiki' );
+		return $mg;
+	}
+
 	if ( $wgDBname === 'wikimania2013wiki' ) {
 		$wgTranslateCC['wiki-sidebar'] = 'addSidebarMessageGroup';
+	}
+
+	if ( $wgDBname === 'commonswiki' ) {
+		$wgTranslateCC['wiki-translatable'] = 'addTranslatableMessageGroup';
 	}
 
 	unset( $wgSpecialPages['FirstSteps'] );
