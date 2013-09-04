@@ -12297,6 +12297,10 @@ $wgConf->settings = array(
 	'svwiki' => true,
 ),
 
+'wmgUseFlow' => array(
+	'default' => false,
+),
+
 'wmgUseDisambiguator' => array(
 	'default' => true,
 ),

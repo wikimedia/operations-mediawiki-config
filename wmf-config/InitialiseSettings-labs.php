@@ -282,6 +282,10 @@ return array(
 	'wmgUseCirrus' => array(
 		'default' => true,
 	),
+
+	'wmgUseFlow' => array(
+		'enwiki' => true,
+	)
 );
 
 } # wmflLabsSettings()
