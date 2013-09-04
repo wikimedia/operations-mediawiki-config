@@ -2342,6 +2342,10 @@ if ( $wmgUseThanks ) {
 	require_once( "$IP/extensions/Thanks/Thanks.php" );
 }
 
+if ( $wmgUseFlow ) {
+	require_once( "$IP/extensions/Flow/Flow.php" );
+}
+
 if ( $wmgUseDisambiguator ) {
 	require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
 }
