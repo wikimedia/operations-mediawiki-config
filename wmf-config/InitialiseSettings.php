@@ -12469,6 +12469,9 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
+	'specieswiki' => true,
+	'incubatorwiki' => true,
+	'outreachwiki' => true,
 ),
 
 'wmgUseZeroNamespace' => array(
