@@ -9456,11 +9456,6 @@ $wgConf->settings = array(
 				array( APCOND_AGE, 100 * 86400 ), // 100 days * seconds in a day
 		),
 	),
-	'enwiki' => array(
-		'accountcreator' => array( '&',
-			array( APCOND_ISIP, '167.165.53.93' ),
-		),
-	),
 	'fiwiki' => array(
 		'patroller' => array( '&',
 				array( APCOND_EDITCOUNT, 1000 ),
