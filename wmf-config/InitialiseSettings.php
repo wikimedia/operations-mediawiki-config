@@ -937,6 +937,9 @@ $wgConf->settings = array(
 	'ukwikimedia' => '$stdlogo',
 	'vewikimedia' => '$stdlogo',
 
+    // Wikivoyage
+    'plwikivoyage' => '//upload.wikimedia.org/wikipedia/commons/f/f2/Wikivoyage-Logo-v3-small-pl.png',
+
 	// Special wikis
 	'advisorywiki' => '//upload.wikimedia.org/wikipedia/meta/7/7d/Wikimediaboard-logo135px.png',
 	'arbcom_dewiki' => '$stdlogo',
