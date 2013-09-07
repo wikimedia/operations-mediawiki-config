@@ -911,6 +911,10 @@ $wgConf->settings = array(
 	'ruwikiversity' => '//upload.wikimedia.org/wikiversity/ru/b/bc/Wiki.png',
 	'slwikiversity' => '//upload.wikimedia.org/wikipedia/commons/4/4f/Sl-wikiversity-org.png',
 
+	// Wikivoyage
+	'hewikivoyage' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Wikivoyage-Logo-v3-he.png/153px-Wikivoyage-Logo-v3-he.png',
+	'plwikivoyage' => '//upload.wikimedia.org/wikipedia/commons/f/f2/Wikivoyage-Logo-v3-small-pl.png',
+
 	// Chapter wikis
 	'arwikimedia' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Wikimedia_Argentina_logo.svg/135px-Wikimedia_Argentina_logo.svg.png',
 	'bdwikimedia' => '//upload.wikimedia.org/wikipedia/commons/3/3d/Wikimedia_Bangladesh_site_logo.png',
@@ -936,9 +940,6 @@ $wgConf->settings = array(
 	'uawikimedia' => '//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Wikimedia-UA-logo.svg/135px-Wikimedia-UA-logo.svg.png',
 	'ukwikimedia' => '$stdlogo',
 	'vewikimedia' => '$stdlogo',
-
-	// Wikivoyage
-	'plwikivoyage' => '//upload.wikimedia.org/wikipedia/commons/f/f2/Wikivoyage-Logo-v3-small-pl.png',
 
 	// Special wikis
 	'advisorywiki' => '//upload.wikimedia.org/wikipedia/meta/7/7d/Wikimediaboard-logo135px.png',
