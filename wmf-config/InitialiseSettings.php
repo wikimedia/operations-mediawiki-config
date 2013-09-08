@@ -6585,23 +6585,7 @@ $wgConf->settings = array(
 # wgBlockDisablesLogin @{
 'wgBlockDisablesLogin' => array(
 	'default' => false,
-	'arbcom_dewiki' => true, // # 23357
-	'arbcom_nlwiki' => true, // # 22630
-	'auditcomwiki' => true, // #23231
-	'boardwiki' => true, // #23231
-	'chairwiki' => true, // #23231
-	'checkuserwiki' => true,
-	'collabwiki' => true, // #23231
-	'chapcomwiki' => true, // # 22319
-	'execwiki' => true, // # 22319
-	'fdcwiki' => true,
-	'internalwiki' => true, // #23231
-	'noboard_chapterswikimedia' => true,
-	'officewiki' => true, // #23231
-	'ombudsmenwiki' => true,
-	'otrs_wikiwiki' => true, // # 22319
-	'stewardwiki' => true,
-	'wikimaniateamwiki' => true, // # 22319
+	'private' => true, // Bug 53871
 ),
 # @}
 
