@@ -6960,6 +6960,7 @@ $wgConf->settings = array(
 		'flood' => array( 'bot' => true, ),
 		'rollbacker' => array( 'rollback' => true, 'autopatrol' => true, ),
 		'autopatrolled' => array( 'autopatrol' => true ),
+		'filemover' => array( 'movefile' => true ), // Bug 53913
 	),
 	'itwikisource' => array(
 		'flood' => array( 'bot' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=36600
@@ -7772,7 +7773,7 @@ $wgConf->settings = array(
 	),
 	'+itwiki' => array(
 		'bureaucrat' => array( 'rollbacker' ),
-		'sysop' => array( 'autopatrolled', 'flood', ),
+		'sysop' => array( 'autopatrolled', 'flood', 'filemover' ), // Bug 53913 (filemover)
 	),
 	'+itwikibooks' => array(
 		'sysop' => array( 'autopatrolled', 'patroller' ),
@@ -8226,7 +8227,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'test-sysop', 'translator', 'import', 'translationadmin' ),
 	),
 	'+itwiki' => array(
-		'bureaucrat' => array( 'rollbacker', 'autopatrolled' ),
+		'bureaucrat' => array( 'rollbacker', 'autopatrolled', 'filemover' ), // Bug 53913 (filemover)
 		'sysop' => array( 'flood', ),
 	),
 	'+itwikibooks' => array(
