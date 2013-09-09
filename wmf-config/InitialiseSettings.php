@@ -11281,11 +11281,7 @@ $wgConf->settings = array(
 	'default' => array(
 		'base' => array(
 			'div.stub',
-			'div.sister-project',
-			'.portal',
-			'.boilerplate',
 			'.hiddenStructure',
-			'.medialist',
 		),
 		'HTML' => array(
 			'.topicon',
