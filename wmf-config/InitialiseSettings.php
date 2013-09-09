@@ -12535,6 +12535,11 @@ $wgConf->settings = array(
 	'enwiki' => false,
 ),
 
+'wmgULSEventLogging' => array(
+	'default' => false,
+	'wiktionary' => true,
+),
+
 'wmgWikibaseCachePrefix' => array(
 	'default' => 'wikidatawiki',
 	'testwikidatawiki' => 'testwikidata',

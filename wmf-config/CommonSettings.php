@@ -2482,6 +2482,8 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgUseZeroNamespace ) {
 		$wgULSNoImeSelectors[] = '.ace_editor textarea';
 	}
+
+	$wgULSEventLogging = $wmgULSEventLogging;
 }
 
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
