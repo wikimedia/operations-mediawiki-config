@@ -1195,6 +1195,7 @@ if ( $wmgUseCentralAuth ) {
 
 	$wgDisableUnmergedEditing = $wmgDisableUnmergedEdits;
 	$wgCentralAuthSilentLogin = $wmgCentralAuthSilentLogin;
+	$wgCentralAuthUseOldAutoLogin = !$wgCentralAuthSilentLogin;
 	$wgCentralAuthUseEventLogging = $wmgCentralAuthUseEventLogging;
 
 	# Broken -- TS
