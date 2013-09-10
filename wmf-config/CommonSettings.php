@@ -748,11 +748,6 @@ if ( $wgDBname == 'foundationwiki' ) {
 	);
 }
 
-if ( $wmgUseContributionReporting ) {
-	include( "$IP/extensions/ContributionReporting/ContributionReporting.php" );
-	include( "$wmfConfigDir/reporting-setup.php" );
-}
-
 if ( $wmgPFEnableStringFunctions ) {
 	$wgPFEnableStringFunctions = true;
 }
