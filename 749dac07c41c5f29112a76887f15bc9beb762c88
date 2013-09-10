@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_6701c23c",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1830,
+      "author": {
+        "id": 384
+      },
+      "writtenOn": "2013-09-10T18:28:43Z",
+      "side": 0,
+      "message": "Eeeek! Not contribution tracking -- we still need this.",
+      "revId": "749dac07c41c5f29112a76887f15bc9beb762c88",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_87feae33",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10520,
+      "author": {
+        "id": 384
+      },
+      "writtenOn": "2013-09-10T18:28:43Z",
+      "side": 0,
+      "message": "Still need this bit.",
+      "revId": "749dac07c41c5f29112a76887f15bc9beb762c88",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_a7fbaa43",
+        "filename": "wmf-config/extension-list",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 384
+      },
+      "writtenOn": "2013-09-10T18:28:43Z",
+      "side": 0,
+      "message": "And still need this bit.",
+      "revId": "749dac07c41c5f29112a76887f15bc9beb762c88",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
