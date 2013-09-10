@@ -748,11 +748,6 @@ if ( $wgDBname == 'foundationwiki' ) {
 	);
 }
 
-if ( $wmgUseContributionReporting ) {
-	include( "$IP/extensions/ContributionReporting/ContributionReporting.php" );
-	include( "$wmfConfigDir/reporting-setup.php" );
-}
-
 if ( $wmgPFEnableStringFunctions ) {
 	$wgPFEnableStringFunctions = true;
 }
@@ -1823,20 +1818,6 @@ function wmfBlockJokerEmails( &$to, &$from, &$subject, &$text ) {
 		return false;
 	}
 	return true;
-}
-
-
-// ContributionTracking for handling PayPal redirects
-if ( $wgUseContributionTracking ) {
-	include( "$IP/extensions/ContributionTracking/ContributionTracking.php" );
-	include( "$wmfConfigDir/contribution-tracking-setup.php" );
-	$wgContributionTrackingPayPalIPN = "https://civicrm.wikimedia.org/fundcore_gateway/paypal";
-	$wgContributionTrackingPayPalRecurringIPN = "https://civicrm.wikimedia.org/IPNListener_Recurring.php";
-	$wgContributionTrackingUTMKey = true;
-
-	// the following variables will disable all donation forms and send users to a maintenance page
-	$wgContributionTrackingFundraiserMaintenance = false;
-	$wgContributionTrackingFundraiserMaintenanceUnsched = false;
 }
 
 if ( $wmgUseUploadWizard ) {

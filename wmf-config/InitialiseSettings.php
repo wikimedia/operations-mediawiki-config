@@ -4131,10 +4131,6 @@ $wgConf->settings = array(
 	'metawiki' => true,
 ),
 
-'wmgUseContributionReporting' => array(
-	'default' => false,
-),
-
 'wmgSetNoticeHideBannersExpiration' => array(
 	'default' => true,
 ),
@@ -10515,10 +10511,6 @@ $wgConf->settings = array(
 	'enwikibooks' => 'comma',     // Bug 27256
 	'ptwikibooks' => 'comma',     // Bug 27256
 	'guwikisource' => 'any',      // Bug 40173
-),
-
-'wgUseContributionTracking' => array(
-	'default' => false,
 ),
 
 'wmgUseUploadWizard' => array(
