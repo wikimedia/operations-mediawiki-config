@@ -4131,10 +4131,6 @@ $wgConf->settings = array(
 	'metawiki' => true,
 ),
 
-'wmgUseContributionReporting' => array(
-	'default' => false,
-),
-
 'wmgSetNoticeHideBannersExpiration' => array(
 	'default' => true,
 ),
