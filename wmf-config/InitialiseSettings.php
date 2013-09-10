@@ -4133,8 +4133,6 @@ $wgConf->settings = array(
 
 'wmgUseContributionReporting' => array(
 	'default' => false,
-	'testwiki' => true,
-	'foundationwiki' => true,
 ),
 
 'wmgSetNoticeHideBannersExpiration' => array(
