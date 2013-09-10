@@ -2541,15 +2541,6 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		// there is no cronjob dispatcher yet, this will do nothing
 		$wgWBRepoSettings['clientDbList'] = array( 'test2wiki' );
-
-		$wgWBRepoSettings['dataTypes'] = array(
-			'wikibase-item',
-			'commonsMedia',
-			'string',
-			'time',
-			'globe-coordinate',
-			'url'
-		);
 	} else {
 		$wgWBRepoSettings['clientDbList'] = array_map(
 			'trim',
