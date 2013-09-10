@@ -12575,6 +12575,10 @@ $wgConf->settings = array(
 	'be_x_oldwiki' => array(
 		'sort' => 'alphabetic',
 	),
+	// bug 53993
+	'ckbwiki' => array(
+		'sortPrepend' => array( 'ku', 'diq' ),
+	),
 	'enwiki' => array(
 		'sort' => 'alphabetic',
 	),
