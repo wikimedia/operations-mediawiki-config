@@ -105,8 +105,7 @@ $wgFileBackends[] = array(
 	'lockManager' => 'nullLockManager',
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-		array( 'template' => 'global-swift', 'isMultiMaster' => true ),
-		array( 'template' => 'global-ceph', 'isMultiMaster' => false )
+		array( 'template' => 'global-swift', 'isMultiMaster' => true )
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'autoResync'  => 'conservative'
