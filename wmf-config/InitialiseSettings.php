@@ -12170,12 +12170,6 @@ $wgConf->settings = array(
 	'wikivoyage' => false,
 ),
 
-// DO NOT USE. Not currently branched
-'wmgUseReplaceText' => array(
-	'default' => false,
-	//'wikivoyage' => true,
-),
-
 'wmgUseGeoCrumbs' => array(
 	'default' => false,
 	'incubatorwiki' => true, // bug 44725

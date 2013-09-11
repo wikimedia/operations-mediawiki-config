@@ -2378,10 +2378,6 @@ if ( $wmgUseGettingStarted ) {
 	$wgGettingStartedExcludedCategories = $wmgGettingStartedExcludedCategories;
 }
 
-if ( $wmgUseReplaceText ) {
-	require_once( "$IP/extensions/ReplaceText/ReplaceText.php" );
-}
-
 if ( $wmgUseGeoCrumbs ) {
 	require_once( "$IP/extensions/GeoCrumbs/GeoCrumbs.php" );
 }
