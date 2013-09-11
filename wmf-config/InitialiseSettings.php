@@ -11841,7 +11841,6 @@ $wgConf->settings = array(
 
 'wmgUseTranslationMemory' => array(
 	'default' => true,
-	'testwiki' => true,
 ),
 'wmgUseTranslationNotifications' => array(
 	'default' => false,
@@ -11913,7 +11912,7 @@ $wgConf->settings = array(
 ),
 
 'wmgMemoryLimit' => array(
-	'default' => 175 * 1024 * 1024, // 175MB
+	'default' => 192 * 1024 * 1024, // 192MB
 
 	# 200MB - Extra for zh wikis for converter tables
 	'zhwiki' => 200 * 1024 * 1024,
