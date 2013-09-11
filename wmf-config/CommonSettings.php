@@ -1443,6 +1443,7 @@ if ( $wmgUseCentralNotice ) {
 			'right' => 'centralnotice-admin',
 		),
 	);
+	$wgNoticeRunMessageIndexRebuildJobImmediately = true;
 
 	// Bug 49905
 	$wgNoticeUseLanguageConversion = true;
