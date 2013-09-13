@@ -2185,6 +2185,7 @@ if ( $wmgUseTranslationNotifications ) {
 if ( $wmgUseCleanChanges ) {
 	$wgDefaultUserOptions['usenewrc'] = 1;
 	require_once( "$IP/extensions/CleanChanges/CleanChanges.php" );
+	$wgCCTrailerFilter = true;
 }
 
 if ( $wmgUseVips ) {
