@@ -6591,6 +6591,7 @@ $wgConf->settings = array(
 		'autoconfirmed' => array(
 			'upload' => false,
 			'reupload' => false,
+			'patrolmarks' => true, // bug 54118
 		), // bug 51232
 		'sysop' => array( 
 			'importupload' => true, // bug 52633
