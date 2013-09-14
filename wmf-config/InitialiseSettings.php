@@ -12042,6 +12042,7 @@ $wgConf->settings = array(
 	'plwiki' => true,
 	'ptwiki' => true,
 	'svwiki' => true,
+	'fawiki' => true, // bug 54068
 ),
 'wmgEchoEnableEmailBatch' => array(
 	'default' => true,
@@ -12058,6 +12059,9 @@ $wgConf->settings = array(
 	'plwiki' => '//pl.wikipedia.org/wiki/Wikipedia:Powiadomienia/FAQ',
 	'ptwiki' => '//www.mediawiki.org/wiki/Help:Notifications/pt-br',
 	'svwiki' => '//sv.wikipedia.org/wiki/Wikipedia:Meddelanden',
+	'fawiki' => '//fa.wikipedia.org/wiki/%D9%88%DB%8C%DA%A9%DB%8C%E2%80'
+	.'%8C%D9%BE%D8%AF%DB%8C%D8%A7:%D8%A2%DA%AF%D8%A7%D9%87%E2%80%8C%D8%B'
+	.'3%D8%A7%D8%B2%DB%8C',
 ),
 'wmgEchoSiteNotificationIconUrl' => array(
 	'default' => false, // Placeholder icon
@@ -12081,6 +12085,7 @@ $wgConf->settings = array(
 	'plwiki' => 14400,
 	'ptwiki' => 14400,
 	'svwiki' => 14400,
+	'fawiki' => 14400,
 ),
 
 'wmgEchoCluster' => array(
@@ -12092,6 +12097,7 @@ $wgConf->settings = array(
 	'plwiki' => 'extension1',
 	'ptwiki' => 'extension1',
 	'svwiki' => 'extension1',
+	'fawiki' => 'extension1',
 ),
 
 // Cohort study time, empty array to disable Cohort study
@@ -12117,6 +12123,7 @@ $wgConf->settings = array(
 	'plwiki' => true,
 	'ptwiki' => true,
 	'svwiki' => true,
+	'fawiki' => true, //bug 54068
 ),
 
 'wmgUseDisambiguator' => array(
