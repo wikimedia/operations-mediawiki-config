@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_76a24401",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2346,
+      "author": {
+        "id": 401
+      },
+      "writtenOn": "2013-09-14T05:46:25Z",
+      "side": 1,
+      "message": "I think this is the logic we want:\n\n    if ( isset( $wgVisualEditorParsoidURL ) ) {\n        $wgFlowUseParsoid \u003d false;\n        $wgFlowParsoidURL \u003d $wgVisualEditorParsoidURL;\n    }\n\nI dunno about $wgFlowParsoidPrefix.",
+      "revId": "f365cc5bafa2de9e87ffbf7ea1aef96e12c36fac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
