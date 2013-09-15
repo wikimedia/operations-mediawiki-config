@@ -1398,7 +1398,7 @@ $wgConf->settings = array(
 	'cvwiki'	=> 'Википеди',
 	'cywiki'	=> 'Wicipedia',
 	'cywikibooks'   => 'Wicilyfrau',
-	'cywikisource'  => 'Wicitestun',
+	'cywikisource'  => 'Wicidestun',
 	'cywiktionary'  => 'Wiciadur',
 	'dawikibooks'   => 'Wikibooks',
 	'dkwikimedia'   => 'Wikimedia Danmark',
@@ -1857,7 +1857,7 @@ $wgConf->settings = array(
 	'cvwiki'	=> 'Википеди',
 	'cywiki'	=> 'Wicipedia',
 	'cywikibooks'   => 'Wicilyfrau',
-	'cywikisource'  => 'Wicitestun',
+	'cywikisource'  => 'Wicidestun',
 	'cywiktionary'  => 'Wiciadur',
 	'dawikibooks'   => 'Wikibooks',
 	'dkwikimedia'   => 'Wikimedia',
@@ -2506,7 +2506,10 @@ $wgConf->settings = array(
 		'Участник' => NS_USER,
 		'Википє́дїꙗ' => NS_PROJECT,
 		'Википє́дїѩ_бєсѣ́да' => NS_PROJECT_TALK,
-
+	),
+	'+cywikisource' => array(
+		'Wicitestun' => NS_PROJECT,
+		'Sgwrs_Wicitestun' => NS_PROJECT_TALK,
 	),
 	'+dawiki' => array(
 		'WP' => NS_PROJECT, # 27998
