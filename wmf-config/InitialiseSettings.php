@@ -10571,35 +10571,8 @@ $wgConf->settings = array(
 // This is a temporary variable for roll-out, to be removed once complete.
 'wmgVisualEditorDisableForAnons' => array(
 	'default' => false,
-
-	'bgwiki' => true,
-	'cawiki' => true,
-	'cebwiki' => true,
-	'cswiki' => true,
-	'dawiki' => true,
 	'dewiki' => true, // bug 52232
-	'elwiki' => true,
 	'enwiki' => true,
-	'etwiki' => true,
-	'euwiki' => true,
-	'fiwiki' => true,
-	'glwiki' => true,
-	'hrwiki' => true,
-	'huwiki' => true,
-	'idwiki' => true,
-	'lvwiki' => true,
-	'mswiki' => true,
-	'napwiki' => true,
-	'nnwiki' => true,
-	'nowiki' => true,
-	'simplewiki' => true,
-	'skwiki' => true,
-	'slwiki' => true,
-	'trwiki' => true,
-	'ukwiki' => true,
-	'vecwiki' => true,
-	'vowiki' => true,
-	'warwiki' => true,
 ),
 
 'wmgVisualEditorShowBetaWelcome' => array(
