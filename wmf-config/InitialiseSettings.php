@@ -12494,6 +12494,7 @@ $wgConf->settings = array(
 
 'wmgUseCirrusAsAlternative' => array(
 	'default' => false,
+	'itwiktionary' => true,
 ),
 
 ### End (roughly) of general extensions ########################
