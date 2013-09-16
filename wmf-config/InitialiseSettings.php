@@ -12488,13 +12488,15 @@ $wgConf->settings = array(
 
 'wmgUseCirrus' => array(
 	'default' => false,
+	'itwiktionary' => true,
 	'mediawikiwiki' => true,
 	'test2wiki' => true,
 ),
 
 'wmgUseCirrusAsAlternative' => array(
 	'default' => false,
-	'itwiktionary' => true,
+	'cawiki' => true,
+	'enwikisource' => true,
 ),
 
 ### End (roughly) of general extensions ########################
