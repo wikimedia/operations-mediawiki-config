@@ -912,6 +912,7 @@ $wgConf->settings = array(
 	'slwikiversity' => '//upload.wikimedia.org/wikipedia/commons/4/4f/Sl-wikiversity-org.png',
 
 	// Wikivoyage
+	'elwikivoyage' => '//upload.wikimedia.org/wikipedia/commons/f/fa/Wikivoyage-Logo-v3-small-el.png',
 	'hewikivoyage' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Wikivoyage-Logo-v3-he.png/153px-Wikivoyage-Logo-v3-he.png',
 	'plwikivoyage' => '//upload.wikimedia.org/wikipedia/commons/f/f2/Wikivoyage-Logo-v3-small-pl.png',
 
