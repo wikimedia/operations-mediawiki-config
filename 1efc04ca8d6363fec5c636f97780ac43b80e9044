@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_4aa2fbb2",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6595,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2013-09-16T14:23:17Z",
+      "side": 1,
+      "message": "//Bug 51232 should be moved to upload and reupload now, to track rights line by line.",
+      "revId": "1efc04ca8d6363fec5c636f97780ac43b80e9044",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
