@@ -12311,6 +12311,7 @@ $wgConf->settings = array(
 'wmgULSEventLogging' => array(
 	'default' => false,
 	'wiktionary' => true,
+	'special' => true,
 ),
 
 'wmgWikibaseCachePrefix' => array(
