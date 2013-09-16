@@ -12049,6 +12049,14 @@ $wgConf->settings = array(
 	'plwiki' => true,
 	'ptwiki' => true,
 	'svwiki' => true,
+	'bswiki' => true,
+	'nlwiki' => true,
+	'etwiki' => true,
+	'fawiki' => true,
+	'hewiki' => true,
+	'rowiki' => true,
+	'eswiki' => true,
+	'enwikivoyage' => true,
 ),
 'wmgEchoEnableEmailBatch' => array(
 	'default' => true,
@@ -12065,6 +12073,14 @@ $wgConf->settings = array(
 	'plwiki' => '//pl.wikipedia.org/wiki/Wikipedia:Powiadomienia/FAQ',
 	'ptwiki' => '//www.mediawiki.org/wiki/Help:Notifications/pt-br',
 	'svwiki' => '//sv.wikipedia.org/wiki/Wikipedia:Meddelanden',
+	'bswiki' => '//bs.wikipedia.org/wiki/Pomo%C4%87:Obavje%C5%A1tenja',
+	'nlwiki' => '//nl.wikipedia.org/wiki/Wikipedia:Notificaties',
+	'etwiki' => '//www.mediawiki.org/wiki/Help:Notifications/et',
+	'fawiki' => '//fa.wikipedia.org/wiki/Project:%D8%A2%DA%AF%D8%A7%D9%87%E2%80%8C%D8%B3%D8%A7%D8%B2%DB%8C',
+	'hewiki' => '', // this patch can't be merged till this is filled out
+	'rowiki' => '//www.mediawiki.org/wiki/Help:Notifications/uk',
+	'eswiki' => '//es.wikipedia.org/wiki/Wikipedia:Notificaciones/FAQ',
+	'enwikivoyage' => '//www.mediawiki.org/wiki/Help:Notifications',
 ),
 'wmgEchoSiteNotificationIconUrl' => array(
 	'default' => false, // Placeholder icon
@@ -12088,6 +12104,14 @@ $wgConf->settings = array(
 	'plwiki' => 14400,
 	'ptwiki' => 14400,
 	'svwiki' => 14400,
+	'bswiki' => 14400,
+	'nlwiki' => 14400,
+	'etwiki' => 14400,
+	'fawiki' => 14400,
+	'hewiki' => 14400,
+	'rowiki' => 14400,
+	'eswiki' => 14400,
+	'enwikivoyage' => 14400,
 ),
 
 'wmgEchoCluster' => array(
@@ -12099,6 +12123,14 @@ $wgConf->settings = array(
 	'plwiki' => 'extension1',
 	'ptwiki' => 'extension1',
 	'svwiki' => 'extension1',
+	'bswiki' => 'extension1',
+	'nlwiki' => 'extension1',
+	'etwiki' => 'extension1',
+	'fawiki' => 'extension1',
+	'hewiki' => 'extension1',
+	'rowiki' => 'extension1',
+	'eswiki' => 'extension1',
+	'enwikivoyage' => 'extension1',
 ),
 
 // Cohort study time, empty array to disable Cohort study
@@ -12124,6 +12156,14 @@ $wgConf->settings = array(
 	'plwiki' => true,
 	'ptwiki' => true,
 	'svwiki' => true,
+	'bswiki' => true,
+	'nlwiki' => true,
+	'etwiki' => true,
+	'fawiki' => true,
+	'hewiki' => true,
+	'rowiki' => true,
+	'eswiki' => true,
+	'enwikivoyage' => true,
 ),
 
 'wmgUseDisambiguator' => array(
