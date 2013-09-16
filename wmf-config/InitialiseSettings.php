@@ -10330,6 +10330,12 @@ $wgConf->settings = array(
 	'foundationwiki' => true,
 ),
 
+
+'wmgApiFrameOptions' => array(
+	'default' => 'DENY',
+	'enwiki' => 'SAMEORIGIN', // Bug 39877
+),
+
 'wmgAltUploadForm' => array( // bug 33513
 	'default' => 'Special:Upload',
 	'test2wiki' => 'Wikipedia:Upload',

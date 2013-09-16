@@ -1876,6 +1876,9 @@ if ( $wmgUseUploadWizard ) {
 
 	// Needed to make UploadWizard work in IE, see bug 39877
 	$wgApiFrameOptions = 'SAMEORIGIN';
+} else {
+	// If XFO wasn't specified due to UploadWizard, set it here
+	$wgApiFrameOptions = $wmgApiFrameOptions;
 }
 
 if ( $wmgUseVisualEditor ) {
