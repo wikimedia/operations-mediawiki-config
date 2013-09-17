@@ -1910,7 +1910,7 @@ if ( $wmgUseVisualEditor ) {
 		$wgHiddenPrefs[] = 'visualeditor-betatempdisable';
 	}
 	if ( $wmgVisualEditorExperimental ) {
-		$wgVisualEditorEnableExperimentalCode = true;
+		$wgDefaultUserOptions['visualeditor-enable-experimental'] = 1;
 	}
 	// Bug 50000 - to remove once roll-out is complete.
 	if ( $wmgVisualEditorDisableForAnons ) {
