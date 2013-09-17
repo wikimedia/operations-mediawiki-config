@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_6671aba8",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1150,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2013-09-17T15:57:04Z",
+      "side": 1,
+      "message": "You\u0027re overescaping here. Only the \u0027#\u0027 needs to be escaped, and you could avoid even that by changing the regex to use a different delimiter.",
+      "revId": "56a88a2f9314be18e4278a8773880d6188f81bb6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
