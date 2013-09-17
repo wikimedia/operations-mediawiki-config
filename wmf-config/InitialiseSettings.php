@@ -12172,6 +12172,10 @@ $wgConf->settings = array(
 	'simplewiki' => true,
 ),
 
+'wmgUseFlow' => array(
+	'default' => false,
+),
+
 'wmgUseDisambiguator' => array(
 	'default' => true,
 ),
