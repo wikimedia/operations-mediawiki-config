@@ -10828,7 +10828,7 @@ $wgConf->settings = array(
  */
 'wmgArticleFeedbackv5AutoArchiveEnabled' => array(
 	'default' => false,
-	'enwiki' => true,
+	// 'enwiki' => true, // Disabled due to repeated duplicate archiving
 ),
 /*
  * This is the TTL before an item is archived (if auto-archive is enabled);
