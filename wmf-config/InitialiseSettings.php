@@ -4058,6 +4058,7 @@ $wgConf->settings = array(
 		'geodata' => "udp://$wmfUdp2logDest/geodata",
 		'DBPerformance' => "udp://$wmfUdp2logDest/dbperformance",
 		'CirrusSearch' => "udp://$wmfUdp2logDest/CirrusSearch",
+		'wap' => "udp://$wmfUdp2logDest/wap",
 	),
 
 	'+enwiki' => array(
