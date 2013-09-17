@@ -16,6 +16,24 @@
       "revId": "c4f62440d6b461870e966e628b55969d8ecb9cef",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_e1510562",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12040,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2013-09-17T19:21:03Z",
+      "side": 0,
+      "message": "The echodblist file is only used to run the daily cron for email digest.  I am happy to correct it if this is not the right way to do it",
+      "parentUuid": "4946a543_01761104",
+      "revId": "c4f62440d6b461870e966e628b55969d8ecb9cef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
