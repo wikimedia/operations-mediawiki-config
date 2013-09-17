@@ -11,6 +11,7 @@
 #
 # Contact Wikimedia operations or platform engineering for more details.
 
+require_once( "$IP/extensions/Elastica/Elastica.php" );
 require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
 if ( $wmgUseCirrusAsAlternative ) {
 	$wgSearchTypeAlternatives = array( 'CirrusSearch' );

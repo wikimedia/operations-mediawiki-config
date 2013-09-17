@@ -45,6 +45,7 @@ $IP/extensions/DoubleWiki/DoubleWiki.php
 $IP/extensions/Echo/Echo.php
 $IP/extensions/EditPageTracking/EditPageTracking.php
 $IP/extensions/EducationProgram/EducationProgram.php
+$IP/extensions/Elastica/Elastica.php
 $IP/extensions/EmailCapture/EmailCapture.php
 $IP/extensions/EventLogging/EventLogging.php
 $IP/extensions/ExpandTemplates/ExpandTemplates.php
