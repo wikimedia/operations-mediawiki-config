@@ -2733,6 +2733,12 @@ $wgConf->settings = array(
 		'Függelék_vita' => 101, // Bug 42505
 		'Index_vita' => 103,
 	),
+	'+hywikibooks' => array( // bug 53162
+		'Cookbook' => 102,
+		'Cookbook_talk' => 103,
+		'Wikijunior' => 110,
+		'Wikijunior_talk' => 111,
+	),
 	'+hywikisource' => array(
 		'Author' => 100,
 		'Author_talk' => 101,
@@ -5479,6 +5485,12 @@ $wgConf->settings = array(
 		// Skip 102 and 103, reserved for wikiproject
 		104 => 'מדף', # bookshelf
 		105 => 'שיחת_מדף', # bookshelf talk
+	),
+	'hywikibooks' => array( // bug 53162
+		102 => 'Եփութուխ', // cookbook
+		103 => 'Եփութուխի_քննարկում', // cookbook talk
+		110 => 'Վիքիփոքրիկ', // wikijunior
+		111 => 'Վիքիփոքրիկի_քննարկում', // wikijunior talk
 	),
 	'idwikibooks' => array(
 		100 => 'Resep', # http://bugzilla.wikimedia.org/show_bug.cgi?id=7124
