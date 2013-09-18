@@ -59,6 +59,7 @@ mwconfig_files=(
 	all-labs.dblist
 	closed.dblist
 	deleted.dblist
+	echowikis.dblist
 	fc-list
 	fishbowl.dblist
 	flaggedrevs.dblist
