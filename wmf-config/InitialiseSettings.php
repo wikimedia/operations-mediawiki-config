@@ -9785,6 +9785,7 @@ $wgConf->settings = array(
 	'bawiki' => true, // Bug 40879
 	'bpywiki' => true, # Bug 18517
 	'cawiki' => true, # Bug 21174
+	'chapcomwiki' => true, # Bug 52833
 	'cswiki' => true, # Bug 20436
 	'cswikiversity' => true, # Bug 21077
 	'bnwiki' => true, # https://bugzilla.wikimedia.org/show_bug.cgi?id=20338
