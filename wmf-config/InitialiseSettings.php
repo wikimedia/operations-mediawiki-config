@@ -12021,6 +12021,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'dewikiversity' => true,
 	'enwiki' => true,
+	'enwikinews' => true, // bug 53984
 	'hewiki' => true, // bug 48848
 	'mkwiki' => true,
 	'ptwiki' => true, // bug 52870
