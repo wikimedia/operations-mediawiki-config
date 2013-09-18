@@ -87,6 +87,10 @@ Disallow: /
 User-agent: Download Ninja
 Disallow: /
 
+# Misbehaving: requests much too fast:
+User-agent: fast
+Disallow: /
+
 #
 # Sorry, wget in its recursive mode is a frequent problem.
 # Please read the man page and use it properly; there is a
@@ -444,3 +448,5 @@ Disallow: /wiki/Wikiquote:Votes_for_deletion_archive/
 Disallow: /wiki/Wikiquote%3AVotes_for_deletion_archive/
 Disallow: /wiki/Wikiquote_talk:Votes_for_deletion_archive/
 Disallow: /wiki/Wikiquote_talk%3AVotes_for_deletion_archive/
+
+Disallow: /wiki/Special:Maintenance
