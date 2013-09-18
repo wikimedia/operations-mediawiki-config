@@ -129,15 +129,14 @@ class MWMultiVersion {
 
 		$site = "wikipedia";
 		if ( getenv( 'MW_LANG' ) ) {
-			// Language forced from some hacky script like extract2.php
+			# Language forced from some hacky script like extract2.php
 			$lang = getenv( 'MW_LANG' );
 		} elseif ( preg_match( '/^\/usr\/local\/apache\/(?:htdocs|common\/docroot)\/([a-z]+)\.org/', $docRoot, $matches ) ) {
-			// This is the poor man / hacky routing engine for WMF cluster
-			// Caters for multi subdomain projects (ie *.wikipedia.org)
+			# This is the poor man / hacky routing engine for WMF cluster
 			$site = $matches[1];
 			if ( preg_match( '/^(.*)\.' . preg_quote( $site ) . '\.org$/', $serverName, $matches ) ) {
 				$lang = $matches[1];
-				// For some special subdomains, like arbcom.en (et al)
+				// For some special subdomains, like pa.us
 				$lang = str_replace( '.', '-', $lang );
 			} elseif ( preg_match( '/^([^.]+)\.[^.]+\.beta\.wmflabs\.org$/', $serverName, $matches ) ) {
 				// http://en.wikipedia.beta.wmflabs.org/
@@ -146,14 +145,8 @@ class MWMultiVersion {
 				self::error( "Invalid host name ($serverName), can't determine language.\n" );
 			}
 		} elseif ( preg_match( "/^\/usr\/local\/apache\/(?:htdocs|common\/docroot)\/([a-z0-9\-_]*)$/", $docRoot, $matches ) ) {
-			// Miscellaneous one off docroots
+			$site = "wikipedia";
 			$lang = $matches[1];
-
-			// Remove need for duplicate docroots for wikimania wikis
-			if ( $lang === 'wikimania' ) {
-				preg_match( '/^(wikimania\d{4})\.wikimedia\.org$/', $serverName, $matches );
-				$lang = $matches[1];
-			}
 		} else {
 			self::error( "Invalid host name (docroot=" . $docRoot . "), can't determine language.\n" );
 		}
