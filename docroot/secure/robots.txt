@@ -1,4 +1,1 @@
-# secure.wikimedia.org
-
-User-Agent: *
-Disallow: /
+/apache/common/robots-private.txt
