@@ -417,7 +417,6 @@ $wgConf->settings = array(
 	'chywiki' => '//upload.wikimedia.org/wikipedia/commons/8/8d/Wikipedia-logo-v2-chy.png', // bug 46589
 	'ckbwiki' => '//upload.wikimedia.org/wikipedia/commons/a/a4/Wikipedia-logo-v2-ckb.png', // bug 48397
 	'cowiki' => '//upload.wikimedia.org/wikipedia/commons/6/6f/Wikipedia-logo-v2-co.png', // bug 40285
-	'crwiki' => '//upload.wikimedia.org/wikipedia/commons/0/0a/Wikipedia-logo-cr.png',
 	'crhwiki' => '$stdlogo',
 	'csbwiki' => '//upload.wikimedia.org/wikipedia/commons/7/71/Wikipedia-logo-v2-csb.png', // bug 40285
 	'cswiki' => '$stdlogo',
