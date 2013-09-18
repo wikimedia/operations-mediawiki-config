@@ -12621,9 +12621,11 @@ $wgConf->settings = array(
 
 'wmgHTTPSBlacklistCountries' => array(
 	'default' => array(
-		'CN', // China
 		'IR', // Iran
-	)
+	),
+	'+wiki' => array(
+		'CN', // China
+	),
 ),
 
 );
