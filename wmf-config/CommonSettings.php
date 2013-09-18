@@ -140,6 +140,7 @@ $wgDBuser = 'wikiuser';
 
 # wmf-config directory (in common/)
 $wmfConfigDir = "$IP/../wmf-config";
+$wgMessageFileList = getRealmSpecificFilename( "$wmgConfigDir/extension-list" );
 
 wfProfileOut( "$fname-host" );
 
