@@ -12541,6 +12541,7 @@ $wgConf->settings = array(
 'wmgUseCirrusAsAlternative' => array(
 	'default' => false,
 	'itwiktionary' => true,
+	'testwikidatawiki' => true,
 ),
 
 ### End (roughly) of general extensions ########################
