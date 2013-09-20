@@ -21,14 +21,13 @@ function getMediaWiki( $file ) {
 
 	$scriptName = @$_SERVER['SCRIPT_NAME'];
 	$serverName = @$_SERVER['SERVER_NAME'];
-	$documentRoot = @$_SERVER['DOCUMENT_ROOT'];
 
 	# Upload URL hit (to upload.wikimedia.org rather than wiki of origin)...
 	if ( $scriptName === '/w/thumb.php' && $serverName === 'upload.wikimedia.org' ) {
 		$multiVersion = MWMultiVersion::initializeForUploadWiki( $_SERVER['PATH_INFO'] );
 	# Regular URL hit (wiki of origin)...
 	} else {
-		$multiVersion = MWMultiVersion::initializeForWiki( $serverName, $documentRoot );
+		$multiVersion = MWMultiVersion::initializeForWiki( $serverName );
 	}
 
 	# Wiki doesn't exist yet?
