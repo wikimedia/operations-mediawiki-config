@@ -12,9 +12,8 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 	/**
 	 * @dataProvider provideServerNameAndDocRoot
 	 */
-	function testRealmFilenames( $expectedDB, $serverName, $docRoot = '', $msg = '' ) {
-		$version = MWMultiversion::initializeForWiki( $serverName, $docRoot );
-
+	function testRealmFilenames( $expectedDB, $serverName ) {
+		$version = MWMultiversion::initializeForWiki( $serverName );
 		$this->assertEquals( $expectedDB, $version->getDatabase() );
 	}
 
@@ -22,29 +21,29 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 		$root = '/usr/local/apache/common/docroot';
 
 		return array(
-			// (expected DB, server name, [doc root[, message]]
-			array( 'enwiki', 'en.wikipedia.org', "$root/wikipedia.org" ),
-			array( 'enwiktionary', 'en.wiktionary.org', "$root/wiktionary.org" ),
-			array( 'enwikibooks', 'en.wikibooks.org', "$root/wikibooks.org" ),
-			array( 'enwikinews', 'en.wikinews.org', "$root/wikinews.org" ),
-			array( 'enwikiquote', 'en.wikiquote.org', "$root/wikiquote.org" ),
-			array( 'enwikisource', 'en.wikisource.org', "$root/wikisource.org" ),
-			array( 'enwikiversity', 'en.wikiversity.org', "$root/wikiversity.org" ),
-			array( 'enwikivoyage', 'en.wikivoyage.org', "$root/wikivoyage.org" ),
+			// (expected DB, server name
+			array( 'enwiki', 'en.wikipedia.org' ),
+			array( 'enwiktionary', 'en.wiktionary.org' ),
+			array( 'enwikibooks', 'en.wikibooks.org' ),
+			array( 'enwikinews', 'en.wikinews.org'  ),
+			array( 'enwikiquote', 'en.wikiquote.org' ),
+			array( 'enwikisource', 'en.wikisource.org' ),
+			array( 'enwikiversity', 'en.wikiversity.org' ),
+			array( 'enwikivoyage', 'en.wikivoyage.org' ),
 
-			array( 'wikidatawiki', 'www.wikidata.org', "$root/wikidata" ),
-			array( 'specieswiki', 'species.wikimedia.org', "$root/species" ),
-			array( 'sourceswiki', 'wikisource.org', "$root/sources" ),
-			array( 'mediawikiwiki', 'www.mediawiki.org', "$root/mediawiki" ),
+			array( 'wikidatawiki', 'www.wikidata.org' ),
+			array( 'specieswiki', 'species.wikimedia.org' ),
+			array( 'sourceswiki', 'wikisource.org' ),
+			array( 'mediawikiwiki', 'www.mediawiki.org' ),
 
-			array( 'pa_uswikimedia', 'pa.us.wikimedia.org', "$root/wikimedia.org" ),
+			array( 'pa_uswikimedia', 'pa.us.wikimedia.org' ),
 
-			array( 'wikimaniateamwiki', 'wikimaniateam.wikimedia.org', "$root/wikimaniateam" ),
-			array( 'wikimania2005wiki', 'wikimania2005.wikimedia.org', "$root/wikimania2005" ),
+			array( 'wikimaniateamwiki', 'wikimaniateam.wikimedia.org' ),
+			array( 'wikimania2005wiki', 'wikimania2005.wikimedia.org' ),
 
 			// labs stuffs
-			array( 'enwiki', 'en.wikipedia.beta.wmflabs.org', "$root/en" ),
-			array( 'wikidatawiki', 'wikidata.beta.wmflabs.org', "$root/wikidata" ),
+			array( 'enwiki', 'en.wikipedia.beta.wmflabs.org' ),
+			array( 'wikidatawiki', 'wikidata.beta.wmflabs.org' ),
 		);
 	}
 
