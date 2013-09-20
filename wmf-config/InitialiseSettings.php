@@ -12529,6 +12529,7 @@ $wgConf->settings = array(
 
 'wmgUseCirrus' => array(
 	'default' => false,
+	'closed' => true,
 	'mediawikiwiki' => true,
 	'test2wiki' => true,
 	'testwikidatawiki' => true,
