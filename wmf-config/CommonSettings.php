@@ -2545,6 +2545,10 @@ if ( $wmgUseWikibaseRepo ) {
 		'wikivoyage'
 	);
 
+	if ( $wgDBname === 'testwikidatawiki' ) {
+		$wgWBRepoSettings['siteLinkGroups'][] = 'commons';
+	}
+
 	$wgWBRepoSettings['usePropertyInfoTable'] = true;
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
