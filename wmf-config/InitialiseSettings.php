@@ -12595,8 +12595,8 @@ $wgConf->settings = array(
 	'wikinews' => '//creativecommons.org/licenses/by/2.5/',
 ),
 'wgRightsText' => array(
-	'default' => 'Creative Commons Attribution-Share Alike 3.0 Unported',
-	'huwikinews' => 'Creative Commons Attribution 3.0 Unported',
+	'default' => 'Creative Commons Attribution-Share Alike 3.0',
+	'huwikinews' => 'Creative Commons Attribution 3.0',
 	'wikinews' => 'Creative Commons Attribution 2.5',
 ),
 'wgRightsIcon' => array(
