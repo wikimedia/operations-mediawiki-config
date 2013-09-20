@@ -55,11 +55,12 @@ if( preg_match( "|(%2f)|i", $loc, $matches ) ||
 			  You will be automatically redirected there in five seconds.</p>";
 }
 $base_404=<<<END
+<!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Wikimedia page not found: $encUrl</title>
-			<link rel="shortcut icon" href="/favicon.ico" />
+			<link rel="shortcut icon" href="/favicon.ico">
 			<style type="text/css">
 				* {
 					font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
