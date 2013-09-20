@@ -3,6 +3,12 @@
 require_once( __DIR__ . '/../../multiversion/MWMultiVersion.php' );
 
 class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
+
+	protected function tearDown() {
+		MWMultiversion::destroySingleton();
+		parent::tearDown();
+	}
+
 	/**
 	 * @dataProvider provideServerNameAndDocRoot
 	 */
@@ -10,8 +16,6 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 		$version = MWMultiversion::initializeForWiki( $serverName, $docRoot );
 
 		$this->assertEquals( $expectedDB, $version->getDatabase() );
-
-		MWMultiversion::destroySingleton();
 	}
 
 	function provideServerNameAndDocRoot() {
