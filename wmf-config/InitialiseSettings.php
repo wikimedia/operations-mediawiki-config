@@ -12532,7 +12532,7 @@ $wgConf->settings = array(
 'wmgUseCirrus' => array(
 	'default' => false,
 	'mediawikiwiki' => true,
-	'officewiki' => true,
+	// 'officewiki' => true,
 	'test2wiki' => true,
 	'testwikidatawiki' => true,
 ),
