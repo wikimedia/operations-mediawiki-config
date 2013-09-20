@@ -32,7 +32,7 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 			array( 'enwikiversity', 'en.wikiversity.org', "$root/wikiversity.org" ),
 			array( 'enwikivoyage', 'en.wikivoyage.org', "$root/wikivoyage.org" ),
 
-			array( 'wikidatawiki', 'wikidata.wikimedia.org', "$root/wikidata" ),
+			array( 'wikidatawiki', 'www.wikidata.org', "$root/wikidata" ),
 			array( 'specieswiki', 'species.wikimedia.org', "$root/species" ),
 			array( 'sourceswiki', 'wikisource.org', "$root/sources" ),
 			array( 'mediawikiwiki', 'www.mediawiki.org', "$root/mediawiki" ),
