@@ -19,12 +19,11 @@ $wmgThrottlingExceptions = array();
 #             (default: any project)
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = array( // no bug; http://metro.org/events/417/
-	'from'   => '2013-09-18T13:00 +0:00',
-	'to'     => '2013-09-18T22:00 +0:00',
-	'IP'     => array( '64.80.165.148' ),
-	'dbname' => array( 'enwiki' ),
-	'value'  => 50,
+$wmgThrottlingExceptions[] = array( // https://bugzilla.wikimedia.org/show_bug.cgi?id=54400
+	'from'   => '2013-09-21T00:00 +0:00',
+	'to'     => '2013-09-21T24:00 +0:00',
+	'IP'     => array( '207.253.195.3' ),
+	'value'  => 500,
 );
 
 ## Add throttling definitions above.
