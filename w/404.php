@@ -1,31 +1,23 @@
 <?php
 header( 'Content-Type: text/html; charset=utf-8' );
 
-# $_SERVER['REQUEST_URI'] has two different definitions depending on PHP version
-if ( preg_match( '!^([a-z]*://)([a-z.]*)(/.*)$!', $_SERVER['REQUEST_URI'], $matches ) ) {
-	$prot = $matches[1];
-	$serv = $matches[2];
-	$loc = $matches[3];
-} else {
-	$prot = "http://";
-	$serv = strlen($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] :
-		$_SERVER['SERVER_NAME'];
-	$loc = $_SERVER["REQUEST_URI"];
-}
-# Fix protocol if needed
-if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
-	$prot = "https://";
-}
+$prot = ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' )
+	? "https://"
+	: "http://";
+$serv = strlen( $_SERVER['HTTP_HOST'] )
+	? $_SERVER['HTTP_HOST']
+	: $_SERVER['SERVER_NAME'];
+$loc = $_SERVER["REQUEST_URI"];
 
 $encUrl = htmlspecialchars( $prot . $serv . $loc );
 header( "Cache-Control: s-maxage=2678400, max-age=2678400");
 header( "X-Wikimedia-Debug: prot=$prot serv=$serv loc=$loc");
-if( preg_match( "|(%2f)|i", $loc, $matches ) ||
-	preg_match( "|^/upload/(.*)|i",$loc, $matches ) ||
-	preg_match("|^/style/(.*)|i",$loc, $matches ) ||
-	preg_match( "|^/wiki/(.*)|i",$loc, $matches ) ||
-	preg_match("|^/w/(.*)|i",$loc, $matches ) ||
-	preg_match( "|^/extensions/(.*)|i",$loc, $matches )
+if( preg_match( "|(%2f)|i", $loc, $matches )
+	|| preg_match( "|^/upload/(.*)|i",$loc, $matches )
+	|| preg_match("|^/style/(.*)|i",$loc, $matches )
+	|| preg_match( "|^/wiki/(.*)|i",$loc, $matches )
+	|| preg_match("|^/w/(.*)|i",$loc, $matches )
+	|| preg_match( "|^/extensions/(.*)|i",$loc, $matches )
 ) {
 	$title = htmlspecialchars( $matches[1] );
 	$details = "<p style=\"font-weight: bold;\">To check for \"$title\" on Wikipedia, see:
