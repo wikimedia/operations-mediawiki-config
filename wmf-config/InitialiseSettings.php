@@ -8339,7 +8339,10 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'import', 'transwiki' ),
 	),
 	'+outreachwiki' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'autopatrolled', 'import' ),
+		'bureaucrat' => array(
+			'sysop', 'bureaucrat', 'autopatrolled', 'import',
+			'translationadmin', // bug 54207
+		),
 	),
 	'+ptwiki' => array(
 		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface_editor' ), // Bug 39905
