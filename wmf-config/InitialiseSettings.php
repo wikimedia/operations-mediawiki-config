@@ -10760,6 +10760,7 @@ $wgConf->settings = array(
 	'viwikibooks' => 'uca-vi', // bug 45979
 	'viwikiquote' => 'uca-vi', // bug 45979
 	'viwikisource' => 'uca-vi', // bug 45979
+	'viwikivoyage' => 'uca-vi', // bug 53616
 	'viwiktionary' => 'uca-vi', // bug 45979
 ),
 
