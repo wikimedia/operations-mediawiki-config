@@ -15,7 +15,7 @@ function streamFavicon() {
 	if ( $wgFavicon === '/favicon.ico' ) {
 		# That's not very helpful, that's where we are already
 		header( 'HTTP/1.1 404 Not Found' );
-		faviconShowError( "\$wgFavicon is configured incorrectly, " . 
+		faviconShowError( "\$wgFavicon is configured incorrectly, " .
 			"it must be set to something other than /favicon.ico\n" );
 		return;
 	}
@@ -30,12 +30,11 @@ function streamFavicon() {
 	$url = wfExpandUrl( $wgFavicon, PROTO_INTERNAL );
 	$client = MWHttpRequest::factory( $url );
 	$client->setHeader( 'X-Favicon-Loop', '1' );
-	
+
 	$status = $client->execute();
 	if ( !$status->isOK() ) {
 		header( 'HTTP/1.1 500 Internal Server Error' );
-		faviconShowError( htmlspecialchars( 
-			"Failed to fetch URL \"$url\"" ) );
+		faviconShowError( htmlspecialchars( "Failed to fetch URL \"$url\"" ) );
 		return;
 	}
 

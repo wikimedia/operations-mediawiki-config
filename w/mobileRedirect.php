@@ -2,9 +2,9 @@
 // Used to set a 3-year-long cookie to stop mobile redirects from happening
 // Created by Hampton Catlin
 if($_GET['expires_in_days']) {
-  $date_of_expiry = time() + (intval($_GET['expires_in_days']) * 60 * 60 * 24);
+	$date_of_expiry = time() + ( intval( $_GET['expires_in_days'] ) * 60 * 60 * 24 );
 } else {
-  $date_of_expiry = 0;
+	$date_of_expiry = 0;
 }
 
 setcookie( "stopMobileRedirect", "true", $date_of_expiry, "/");

@@ -18,10 +18,7 @@ old queries to the new backend, please contact the folks on the
 mailing list.</p>
 
 <?php
-
-echo "<!-- filler for IE " .
-  str_repeat( "*", 1024 ) .
-  " -->";
+echo "<!-- filler for IE " . str_repeat( "*", 1024 ) . " -->";
 ?>
 </body>
 </html>
