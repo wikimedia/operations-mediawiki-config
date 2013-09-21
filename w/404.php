@@ -32,22 +32,6 @@ if( preg_match( "|(%2f)|i", $loc, $matches ) ||
 				<a href=\"//en.wikipedia.org/wiki/$title\" title=\"Wikipedia:$title\">
 				//en.wikipedia.org/wiki/$title</a></p>";
 } else {
-	if( in_array( $loc, array( '/Broccoli',
-		'/Romanesco',
-		'/Mandelbrot_set',
-		'/Mandelbrotmenge' ) )
-	) {
-		# HACKHACKHACK
-		# Special case for broken URLs which somebody
-		# put into a print ad. Why??!!?!??!?!?!?!
-		if ( headers_sent() ) {
-			return false;
-		}
-		header("HTTP/1.1 301 Moved Permanently");
-		header("Location: ".$prot.$serv."/wiki".$loc);
-		header("X-Wikimedia-Debug: prot=$prot serv=$serv loc=$loc");
-	}
-
 	$target = $prot . $serv . "/wiki" . $loc;
 	$encTarget = htmlspecialchars( $target );
 	header( "Refresh: 5; url=$encTarget" );
