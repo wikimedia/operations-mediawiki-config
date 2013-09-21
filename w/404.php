@@ -28,9 +28,9 @@ if( preg_match( "|(%2f)|i", $loc, $matches ) ||
 	preg_match( "|^/extensions/(.*)|i",$loc, $matches )
 ) {
 	$title = htmlspecialchars( $matches[1] );
-	$details = "<p style=\"font-weight: bold;\">To check for \"$title\" on Wikipedia, see:
-				<a href=\"//en.wikipedia.org/wiki/$title\" title=\"Wikipedia:$title\">
-				//en.wikipedia.org/wiki/$title</a></p>";
+	$details = "<p style=\"font-weight: bold;\">To check for \"$title\"  see:
+				<a href=\"//$serv/wiki/$title\" title=\"$title\">
+				//$serv/wiki/$title</a></p>";
 } else {
 	if( in_array( $loc, array( '/Broccoli',
 		'/Romanesco',
