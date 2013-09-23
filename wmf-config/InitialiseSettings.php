@@ -12078,6 +12078,14 @@ $wgConf->settings = array(
 	'eswiki' => '//es.wikipedia.org/wiki/Wikipedia:Notificaciones/FAQ',
 	'enwikivoyage' => '//www.mediawiki.org/wiki/Help:Notifications',
 	'simplewiki' => '//www.mediawiki.org/wiki/Help:Notifications/Simple',
+	'cawiki' => '//www.mediawiki.org/wiki/Help:Notifications/ca',
+	'jawiki' => '//www.mediawiki.org/wiki/Help:Notifications/ja',
+	'knwiki' => '//www.mediawiki.org/wiki/Help:Notifications/kn',
+	'kowiki' => '//www.mediawiki.org/wiki/Help:Notifications/ko',
+	'nowiki' => '//www.mediawiki.org/wiki/Help:Notifications/no',
+	'tewiki' => '//www.mediawiki.org/wiki/Help:Notifications/te',
+	'ukwiki' => '//www.mediawiki.org/wiki/Help:Notifications/uk',
+	'viwiki' => '//www.mediawiki.org/wiki/Help:Notifications/vi',
 ),
 'wmgEchoSiteNotificationIconUrl' => array(
 	'default' => false, // Placeholder icon
@@ -12090,28 +12098,14 @@ $wgConf->settings = array(
 ),
 
 // The time interval in seconds between each bundle-able email notification
+// Set to 0 to disable email bundling
 'wmgEchoBundleEmailInterval' => array(
-	'default' => 0, // no email bundling
+	'default' => 14400,
 	'test2wiki' => 300,
-	'mediawikiwiki' => 14400,
-	'enwiki' => 14400,
-	'metawiki' => 14400,
-	'frwiki' => 14400,
-	'huwiki' => 14400,
-	'plwiki' => 14400,
-	'ptwiki' => 14400,
-	'svwiki' => 14400,
-	'bswiki' => 14400,
-	'nlwiki' => 14400,
-	'etwiki' => 14400,
-	'fawiki' => 14400,
-	'hewiki' => 14400,
-	'rowiki' => 14400,
-	'eswiki' => 14400,
-	'enwikivoyage' => 14400,
-	'simplewiki' => 14400,
+	'officewiki' => 0,
 ),
 
+// Use extension1 db for large and medium wikis
 'wmgEchoCluster' => array(
 	'default' => false,
 	'testwiki' => 'extension1',
@@ -12130,6 +12124,15 @@ $wgConf->settings = array(
 	'eswiki' => 'extension1',
 	'enwikivoyage' => 'extension1',
 	'simplewiki' => 'extension1',
+	'cawiki' => 'extension1',
+	'dawiki' => 'extension1',
+	'jawiki' => 'extension1',
+	'knwiki' => 'extension1',
+	'kowiki' => 'extension1',
+	'nowiki' => 'extension1',
+	'tewiki' => 'extension1',
+	'ukwiki' => 'extension1',
+	'viwiki' => 'extension1',
 ),
 
 // Cohort study time, empty array to disable Cohort study
@@ -12144,26 +12147,10 @@ $wgConf->settings = array(
 	'default' => false,
 ),
 
+// Thanks should be enabled for wikis with Echo
 'wmgUseThanks' => array(
 	'default' => false,
-	'testwiki' => true,
-	'mediawikiwiki' => true,
-	'enwiki' => true,
-	'metawiki' => true,
-	'frwiki' => true,
-	'huwiki' => true,
-	'plwiki' => true,
-	'ptwiki' => true,
-	'svwiki' => true,
-	'bswiki' => true,
-	'nlwiki' => true,
-	'etwiki' => true,
-	'fawiki' => true,
-	'hewiki' => true,
-	'rowiki' => true,
-	'eswiki' => true,
-	'enwikivoyage' => true,
-	'simplewiki' => true,
+	'echowikis' => true,
 ),
 
 'wmgUseFlow' => array(
