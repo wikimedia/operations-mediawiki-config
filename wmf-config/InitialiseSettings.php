@@ -10466,7 +10466,7 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 	'test2wiki' => true,
 	'dewiki' => false, // bug 52202
-	'enwiki' => true,
+	'enwiki' => false,
 	'eswiki' => true,
 	'frwiki' => true,
 	'hewiki' => true,
@@ -10492,6 +10492,7 @@ $wgConf->settings = array(
 'wmgVisualEditorDisableForAnons' => array(
 	'default' => false,
 	'dewiki' => true, // bug 52232
+	'enwiki' => true,
 ),
 
 'wmgVisualEditorShowBetaWelcome' => array(
