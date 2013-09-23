@@ -11085,7 +11085,6 @@ $wgConf->settings = array(
 	'default' => array(
 		'base' => array(
 			'div.stub',
-			'.hiddenStructure',
 		),
 		'HTML' => array(
 			'.topicon',
