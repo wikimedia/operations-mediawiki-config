@@ -12529,6 +12529,7 @@ $wgConf->settings = array(
 	'itwiktionary' => true,
 	'mediawikiwiki' => true,
 	// 'officewiki' => true,
+	'testwiki' => true,
 	'test2wiki' => true,
 	'testwikidatawiki' => true,
 ),
