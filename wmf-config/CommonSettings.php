@@ -2542,12 +2542,9 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['siteLinkGroups'] = array(
 		'wikipedia',
-		'wikivoyage'
+		'wikivoyage',
+		'commons'
 	);
-
-	if ( $wgDBname === 'testwikidatawiki' ) {
-		$wgWBRepoSettings['siteLinkGroups'][] = 'commons';
-	}
 
 	$wgWBRepoSettings['usePropertyInfoTable'] = true;
 
@@ -2581,7 +2578,6 @@ if ( $wmgUseWikibaseClient ) {
 	// to be safe, keeping this here although $wgDBname is default setting
 	$wgWBClientSettings['siteGlobalID'] = $wgDBname;
 	$wgWBClientSettings['repoUrl'] = "//{$wmfHostnames['wikidata']}";
-	$wgWBClientSettings['siteGroup'] = $wmgWikibaseClientSiteGroup;
 
 	$wgWBClientSettings['repoNamespaces'] = array(
 		'wikibase-item' => '',
@@ -2590,8 +2586,14 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['siteLinkGroups'] = array(
 		'wikipedia',
-		'wikivoyage'
+		'wikivoyage',
+		'commons'
 	);
+
+	if ( $wgDBname === 'commonswiki' ) {
+		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
+		$wgWBClientSettings['allowDataTransclusion'] = false;
+	}
 
 	$wgWBClientSettings['withoutTermWeight'] = false;
 	$wgWBClientSettings['usePropertyInfoTable'] = true;
