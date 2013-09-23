@@ -3861,15 +3861,6 @@ $wgConf->settings = array(
 ),
 # @} end of wgWhitelistRead
 
-'wgSkipSkin' => array(
-	'default' => 'wikimania',
-),
-'wgSkipSkins' => array(
-	'default' => array( 'htmldump', 'monobookcbt', 'drsport' ),
-	'dawiki' => array( 'htmldump', 'monobookcbt' ),
-	'testwiki' => array( 'htmldump', 'monobookcbt', 'drsport' ),
-),
-
 'wgAutoConfirmAge' => array(
 	'default' => 4 * 3600 * 24, // 4 days to pass isNewbie()
 
