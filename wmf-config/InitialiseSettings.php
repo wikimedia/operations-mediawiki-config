@@ -6879,6 +6879,9 @@ $wgConf->settings = array(
 	'frwikiversity' => array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
 	),
+	'frwikivoyage' => array(
+		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
+	),
 	'frwiktionary' => array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ),
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -7760,6 +7763,9 @@ $wgConf->settings = array(
 	'+frwikiversity' => array(
 		'sysop' => array( 'patroller' ),
 	),
+	'+frwikivoyage' => array(
+		'sysop' => array( 'patroller' ),
+	),
 	'+frwiktionary' => array(
 		'bureaucrat' => array( 'accountcreator', 'import', 'patroller', 'transwiki', 'autopatrolled', 'confirmed', 'abusefilter', 'botadmin' ),
 	),
@@ -8207,6 +8213,9 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
 	),
 	'+frwikiversity' => array(
+		'sysop' => array( 'patroller' ),
+	),
+	'+frwikivoyage' => array(
 		'sysop' => array( 'patroller' ),
 	),
 	'+frwiktionary' => array(
