@@ -12,11 +12,6 @@ as of 25 August, 2008 in favor of MediaWiki's
 <p>Please update your scripts to use the current interfaces, which
 are actively maintained..</p>
 
-<p>If you're interested in creating an adaptor interface to translate
-old queries to the new backend, please contact the folks on the
-<a href="https://lists.wikimedia.org/mailman/listinfo/mediawiki-api">MediaWiki-API</a>
-mailing list.</p>
-
 <?php
 echo "<!-- filler for IE " . str_repeat( "*", 1024 ) . " -->";
 ?>
