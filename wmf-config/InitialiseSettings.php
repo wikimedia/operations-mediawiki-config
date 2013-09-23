@@ -12379,11 +12379,6 @@ $wgConf->settings = array(
 	'wikidataclient' => true,
 ),
 
-'wmgWikibaseClientSiteGroup' => array(
-	'default' => 'wikipedia',
-	'wikivoyage' => 'wikivoyage'
-),
-
 'wmgWikibaseClientSettings' => array(
 	// @note because of unconventional way of doing wikibase settings, the default setting
 	// here does not work the same way. Instead, put defaults in CommonSettings.php
