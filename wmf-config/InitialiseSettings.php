@@ -896,6 +896,7 @@ $wgConf->settings = array(
 	'tewikisource' => '//upload.wikimedia.org/wikipedia/commons/thumb/a/af/Wikisource-logo-te.svg/135px-Wikisource-logo-te.svg.png', // bug 44796
 	'thwikisource' => '//upload.wikimedia.org/wikipedia/commons/9/97/Wikisource-logo-th.png',
 	'trwikisource' => '$stdlogo',
+	'ukwikisource' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Wikisource-logo-uk-v2.svg/123px-Wikisource-logo-uk-v2.svg.png', // bug 54491
 	'vecwikisource' => '//upload.wikimedia.org/wikipedia/sources/b/bc/Wiki.png',
 	'viwikisource' => '$stdlogo',
 	'yiwikisource' => '$stdlogo',
