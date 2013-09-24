@@ -12527,6 +12527,7 @@ $wgConf->settings = array(
 
 'wmgUseCirrus' => array(
 	'default' => false,
+	'closed' => true,
 	'itwiktionary' => true,
 	'mediawikiwiki' => true,
 	// 'officewiki' => true,
