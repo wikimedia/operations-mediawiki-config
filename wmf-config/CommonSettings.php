@@ -2590,15 +2590,19 @@ if ( $wmgUseWikibaseClient ) {
 		'commons'
 	);
 
-	if ( $wgDBname === 'commonswiki' ) {
-		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
-		$wgWBClientSettings['allowDataTransclusion'] = false;
-	}
-
 	$wgWBClientSettings['withoutTermWeight'] = false;
 	$wgWBClientSettings['usePropertyInfoTable'] = true;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 	$wgWBClientSettings['enableSiteLinkWidget'] = true;
+
+
+	if ( $wgDBname === 'commonswiki' ) {
+		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
+		$wgWBClientSettings['allowDataTransclusion'] = false;
+
+		// per bug 54497, widget does not work yet for commons
+		$wgWBClientSettings['enableSiteLinkWidget'] = false;
+	}
 
 	$wgHooks['SetupAfterCache'][] = 'wmfWBClientExcludeNS';
 
