@@ -11881,7 +11881,7 @@ $wgConf->settings = array(
 ),
 'wmgUseCleanChanges' => array(
 	'default' => false,
-	'metawiki' => true, // bug 53541
+//	'metawiki' => true, // bug 53541
 ),
 'wmgUseVips' => array(
 	'default' => true,
