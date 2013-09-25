@@ -16,6 +16,24 @@
       "revId": "33b841f7dfd85d27663afef79602d9d434eac023",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4946a543_f3afed7b",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2596,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2013-09-25T15:08:20Z",
+      "side": 1,
+      "message": "evil spaces! :)  fixed",
+      "parentUuid": "4946a543_539c4158",
+      "revId": "33b841f7dfd85d27663afef79602d9d434eac023",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
