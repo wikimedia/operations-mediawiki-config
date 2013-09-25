@@ -78,11 +78,11 @@ if ( $wmgUseEventLogging ) {
 		'revision' => 5644223,
 	);
 
-	$wgResourceModules[ 'schema.MobileWatchlistInteraction' ] = array(
+	$wgResourceModules[ 'schema.MobileWebClickTracking' ] = array(
 		'class'  => 'ResourceLoaderSchemaModule',
-		'schema' => 'MobileWatchlistInteraction',
+		'schema' => 'MobileWebClickTracking',
 		'targets' => 'mobile',
-		'revision' => 5678021,
+		'revision' => 5830800,
 	);
 
 	$wgHooks['EnableMobileModules'][] = function( $out, $mode ) {
@@ -90,7 +90,7 @@ if ( $wmgUseEventLogging ) {
 			'mobile.uploads.schema',
 			'mobile.watchlist.schema',
 			'mobile.editing.schema',
-			'schema.MobileWatchlistInteraction',
+			'schema.MobileWebClickTracking',
 		);
 		// add regardless of mode
 		$out->addModules( $modules );
