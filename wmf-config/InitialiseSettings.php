@@ -10338,6 +10338,11 @@ $wgConf->settings = array(
 	'testwiki' => true,
 ),
 
+'wmgUseMassMessage' => array(
+	'default' => false,
+	'test2wiki' => true
+),
+
 'wmgUseUploadWizard' => array(
 	'default' => false,
 	'testwiki' => true,
