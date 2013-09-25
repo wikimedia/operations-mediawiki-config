@@ -1836,6 +1836,11 @@ if ( $wgUseContributionTracking ) {
 	$wgContributionTrackingFundraiserMaintenanceUnsched = false;
 }
 
+if ( $wmgUseMassMessage ) {
+	require_once( "$IP/extensions/MassMessage/MassMessage.php" );
+	$wgMassMessageAccountUsername = 'EdwardsBot';
+}
+
 if ( $wmgUseUploadWizard ) {
 	require_once( "$IP/extensions/UploadWizard/UploadWizard.php" );
 	# Do not change $wgUploadStashScalerBaseUrl to a protocol-relative URL. This is how UploadStash fetches previews from our scaler, behind
