@@ -6919,6 +6919,8 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ), // bug 50377
 	),
 	'hiwiki' => array(
+		'rollbacker' => array( 'rollback' => true ), // bug 54589
+		'filemover' => array( 'movefile' => true ), // bug 54589
 		'reviewer' => array ( 'patrol' => true, 'autopatrol' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'sysop' => array( 'validate' => true ),
@@ -7808,7 +7810,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled' ), // bug 50377
 	),
 	'+hiwiki' => array(
-		'sysop' => array( 'abusefilter', 'autopatrolled', 'reviewer' ),
+		'sysop' => array( 'abusefilter', 'autopatrolled', 'reviewer', 'rollbacker', 'filemover' ),
 	),
 	'+hrwiki' => array(
 		'bureaucrat' => array( 'patroller', 'autopatrolled' ),
@@ -8257,7 +8259,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled' ), // bug 50377
 	),
 	'+hiwiki' => array(
-		'sysop' => array( 'abusefilter', 'autopatrolled', 'reviewer' ),
+		'sysop' => array( 'abusefilter', 'autopatrolled', 'reviewer', 'rollbacker', 'filemover' ),
 	),
 	'+hiwiktionary' => array(
 			'bureaucrat' => array( 'sysop', ),
