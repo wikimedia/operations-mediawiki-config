@@ -6138,6 +6138,7 @@ $wgConf->settings = array(
 	'enwikivoyage' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=43908
 	'enwiktionary' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=7248
 	'eswiktionary' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=7953
+	'fawiki' => true, // bug 54596
 	'fawikinews' => true,
 	'frwiki' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=7269
 	'frwikibooks' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=21517
