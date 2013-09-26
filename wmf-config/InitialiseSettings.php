@@ -9651,6 +9651,7 @@ $wgConf->settings = array(
 	'incubatorwiki' => '/usr/local/apache/common/images/sul/incubatorwiki.png',
 	'wikivoyage' => '/usr/local/apache/common/images/sul/wikivoyage.png',
 	'wikimania2013wiki' => '/usr/local/apache/common/images/sul/wikimania.png',
+	'loginwiki' => '/usr/local/apache/common/images/sul/foundation.png',
 
 	'brwikimedia' => '/usr/local/apache/common/images/sul/foundation.png',
 ),
