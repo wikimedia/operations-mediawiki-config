@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4946a543_cc99721e",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1841,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-09-26T05:38:15Z",
+      "side": 1,
+      "message": "This is fine as long as it won\u0027t break EdwardsBot\u0027s current functionality on Wikimedia wikis.",
+      "revId": "51eb9b387418df93ec5bf6545b8a32ec0dd5c007",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
