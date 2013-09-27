@@ -7477,7 +7477,36 @@ $wgConf->settings = array(
 		'autoeditor' => array( 'autoreview' => true ),
 	),
 	'ukwikimedia' => array(
-		'sysop' => array( 'importupload' => true ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=17167
+		'*' => array(
+			'upload' => false,
+			'edit' => false,
+			'editallpages' => false,
+			'move' => false,
+			'createpage' => false,
+		),
+		'user' => array(
+			'upload' => false,
+			'edit' => true,
+			'editallpages' => false,
+			'move' => false,
+			'createpage' => false,
+		),
+		'sysop' => array(
+			'upload' => false,
+			'edit' => true,
+			'editallpages' => false,
+			'move' => false,
+			'importupload' => false,
+			'createpage' => false,
+		),
+		'bureaucrat' => array(
+			'upload' => false,
+			'edit' => true,
+			'editallpages' => true,
+			'move' => true,
+			'importupload' => false,
+			'createpage' => true,
+		),
 	),
 	'urwiki' => array(
 		'rollbacker' => array( 'rollback' => true ), // bug 45642
@@ -9402,6 +9431,25 @@ $wgConf->settings = array(
 		NS_CATEGORY_TALK => array( 'editallpages' ),
 		100 => array( 'editallpages' ),
 		101 => array( 'editallpages' ),
+	),
+	'ukwikimedia' => array(
+		NS_MAIN => array( 'editallpages' ),   // rt 5203: read-only except for user_talk
+		NS_TALK => array( 'editallpages' ),
+		NS_USER => array( 'editallpages' ),
+		NS_PROJECT => array( 'editallpages' ),
+		NS_PROJECT_TALK => array( 'editallpages' ),
+		NS_IMAGE => array( 'editallpages' ),
+		NS_IMAGE_TALK => array( 'editallpages' ),
+		NS_MEDIAWIKI => array( 'editallpages' ),
+		NS_MEDIAWIKI_TALK => array( 'editallpages' ),
+		NS_TEMPLATE => array( 'editallpages' ),
+		NS_TEMPLATE_TALK => array( 'editallpages' ),
+		NS_HELP => array( 'editallpages' ),
+		NS_HELP_TALK => array( 'editallpages' ),
+		NS_CATEGORY => array( 'editallpages' ),
+		NS_CATEGORY_TALK => array( 'editallpages' ),
+		NS_MODULE => array( 'editallpages' ),
+		NS_MODULE_TALK => array( 'editallpages' ),
 	),
 	'+wikidatawiki' => array(
 		122 => array( 'query-update' ),  // Query namespace per bug 49001
