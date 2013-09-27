@@ -9448,8 +9448,8 @@ $wgConf->settings = array(
 		NS_HELP_TALK => array( 'editallpages' ),
 		NS_CATEGORY => array( 'editallpages' ),
 		NS_CATEGORY_TALK => array( 'editallpages' ),
-		NS_MODULE => array( 'editallpages' ),
-		NS_MODULE_TALK => array( 'editallpages' ),
+		828 => array( 'editallpages' ),
+		829 => array( 'editallpages' ),
 	),
 	'+wikidatawiki' => array(
 		122 => array( 'query-update' ),  // Query namespace per bug 49001
