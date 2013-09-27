@@ -10604,6 +10604,7 @@ $wgConf->settings = array(
 	'fiwikiquote' => 'uca-fi', // bug 46330
 	'fiwikisource' => 'uca-fi', // bug 46330
 	'fiwikiversity' => 'uca-fi', // bug 46330
+	'frwiki' => 'uca-fr', // bug 54680
 	'huwiki' => 'uca-hu', // bug 45596
 	'iswiktionary' => 'identity', // bug 30722
 	'plwiki' => 'uca-pl', // bug 42413
