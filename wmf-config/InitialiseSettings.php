@@ -166,6 +166,7 @@ $wgConf->settings = array(
 	'barwiki' => 'Europe/Berlin',
 	'bat_smgwiki' => 'Europe/Vilnius',
 	'be_x_oldwiki' => 'Europe/Minsk',
+	'bewiki' => 'Europe/Minsk',
 	'bewikisource' => 'Europe/Minsk',
 	'bjnwiki' => 'Asia/Bangkok',
 	'brwikisource' => 'Europe/Paris',
