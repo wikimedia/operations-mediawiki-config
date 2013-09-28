@@ -10066,6 +10066,7 @@ $wgConf->settings = array(
 ),
 
 'wgGroupsAddToSelf' => array(
+	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 54732
 	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 37198
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
@@ -10083,23 +10084,24 @@ $wgConf->settings = array(
 	'zhwiki' => array( 'sysop' => array( 'flood' ) ),
 ),
 'wgGroupsRemoveFromSelf' => array(
-	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=37198
+	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 54732
+	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 37198
 	'ckbwiki' => array(
 		'flood' => array( 'flood' ), // Bug 51803
 		'botadmin' => array( 'botadmin' ), // Bug 51803
 	),
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
-	'enwikisource' => array( 'sysop' => array( 'flood' ) ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=36863
+	'enwikisource' => array( 'sysop' => array( 'flood' ) ), // Bug 36863
 	'eswiki' => array( 'sysop' => array( 'flood' ) ), // Bug  48682
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'frwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
-	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=36600
+	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // Bug 36600
 	'mlwiki' => array( 'botadmin' => array( 'botadmin' ) ),
-	'mlwikisource' => array( 'botadmin' => array( 'botadmin' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=44335
+	'mlwikisource' => array( 'botadmin' => array( 'botadmin' ) ), // Bug 44335
 	'mlwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
-	'plwiki' => array( 'flood' => array( 'flood' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=20155 , bug 21238
+	'plwiki' => array( 'flood' => array( 'flood' ) ), // Bug 20155 , bug 21238
 	'strategywiki' => array( 'sysop' => array( 'flood' ) ),
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
 	'wikidata' => array(
