@@ -10068,6 +10068,7 @@ $wgConf->settings = array(
 ),
 
 'wgGroupsAddToSelf' => array(
+	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=54732
 	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 37198
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
@@ -10085,6 +10086,7 @@ $wgConf->settings = array(
 	'zhwiki' => array( 'sysop' => array( 'flood' ) ),
 ),
 'wgGroupsRemoveFromSelf' => array(
+	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=54732
 	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=37198
 	'ckbwiki' => array(
 		'flood' => array( 'flood' ), // Bug 51803
