@@ -3492,7 +3492,7 @@ $wgConf->settings = array(
 	'+incubatorwiki' => array( 0 => 1, 6 => 0, 14 => 1 ),
 	'+internalwiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+mediawikiwiki' => array( 0 => 1, 6 => 0, 8 => 0, 14 => 1 ),
-	'+metawiki' => array( 0 => 1, 6 => 0, 8 => 0, 200 => 1, 201 => 1, 202 => 1, 203 => 1 ),
+	'+metawiki' => array( 0 => 1, 6 => 0, 8 => 0, 200 => 1, 201 => 1, 202 => 1, 203 => 1, 208 => 1, 209 => 1 ),
 	'+movementroleswiki' => array( 0 => 1 ),
 	'+nlwikimedia' => array( 0 => 1 ),
 	'+nostalgiawiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
