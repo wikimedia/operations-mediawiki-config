@@ -2670,6 +2670,10 @@ if ( $wmgUseOAuth ) {
 	$wgGroupPermissions['autoconfirmed']['mwoauthupdateownconsumer'] = true;
 }
 
+if ( $wmgIncludeMassMessage ) {
+	require_once( "$IP/extensions/MassMessage/MassMessage.php" );
+}
+
 ### End (roughly) of general extensions ########################
 
 $wgApplyIpBlocksToXff = $wmgUseXFFBlocks;
