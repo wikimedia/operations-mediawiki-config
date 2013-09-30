@@ -11193,12 +11193,11 @@ $wgConf->settings = array(
 'wmgMFRemovableClasses' => array(
 	'default' => array(
 		'base' => array(
-			'div.stub',
 		),
 		'HTML' => array(
-			'.topicon',
 		),
 		'WML' => array(
+			'.topicon',
 			'.metadata',
 		),
 		'extracts' => array(
