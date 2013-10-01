@@ -39,6 +39,8 @@ if ( $wmgUsePoolCounter ) {
 	);
 }
 
+$wgCirrusSearchUseAggressiveSplitting = $wmgUseCirrusAggressiveSplitting;
+
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php

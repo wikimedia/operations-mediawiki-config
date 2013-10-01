@@ -12637,6 +12637,13 @@ $wgConf->settings = array(
 	'enwikisource' => true,
 ),
 
+// Note that changing this on any supported (English) wiki requires an in place
+// reindex of that wiki to take effect.
+'wmgUseCirrusAggressiveSplitting' => array(
+	'default' => false,
+	'mediawikiwiki' => true,
+),
+
 ### End (roughly) of general extensions ########################
 
 // Apply blocks to IPs in XFF (bug 23343)
