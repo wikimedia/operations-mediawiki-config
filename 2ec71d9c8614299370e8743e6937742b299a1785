@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29433135_05be465f",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-10-01T15:07:31Z",
+      "side": 1,
+      "message": "This isn\u0027t necessary. You can just use $wgCirrusSearchUseAggressiveSplitting in InitialiseSettings.php rather than introducing a new $wmg",
+      "revId": "2ec71d9c8614299370e8743e6937742b299a1785",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
