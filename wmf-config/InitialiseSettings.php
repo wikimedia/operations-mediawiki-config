@@ -7471,6 +7471,7 @@ $wgConf->settings = array(
 	),
 	'ukwikivoyage' => array(
 		'autoconfirmed' => array( 'upload' => false, 'reupload' => false, ),
+		'autopatrolled' => array( 'autopatrol' => true ), // bug 54299
 		'confirmed' => array( 'reupload' => false, ),
 		'rollbacker' => array( 'rollback' => true ),
 		'uploader' => array( 'upload' => true, 'reupload' => true ),
@@ -8020,7 +8021,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller', 'rollbacker' ),
 	),
 	'+ukwikivoyage' => array(
-		'sysop' => array( 'rollbacker', 'uploader' ),
+		'sysop' => array( 'rollbacker', 'uploader', 'autopatrolled' ), // bug 54229
 	),
 	'+ukwiktionary' => array(
 		'bureaucrat' => array( 'autoeditor' ),
@@ -8477,7 +8478,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'sysop' ),
 	),
 	'+ukwikivoyage' => array(
-		'sysop' => array( 'rollbacker', 'uploader' ),
+		'sysop' => array( 'rollbacker', 'uploader', 'autopatrolled' ), // bug 54229
 	),
 	'+ukwiktionary' => array(
 		'bureaucrat' => array( 'autoeditor' ),
