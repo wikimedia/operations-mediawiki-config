@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29433135_ddcfa98a",
+        "filename": "multiversion/MWMultiVersion.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2013-10-02T18:57:13Z",
+      "side": 1,
+      "message": "i wonder if there is a better place to maintain this list of subdomains? is this the only place we have this list?",
+      "revId": "3fa774406dad106ba20caa330f28ed2a8fe31d7b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
