@@ -271,8 +271,10 @@ return array(
 	),
 
 	'wgSecureLogin' => array(
+		// Setting false throughout Labs for now due to untrusted SSL certificate
+		// bug 48501
 		'default' => false,
-		'loginwiki' => true,
+		'loginwiki' => false,
 	),
 
 	'wgSearchSuggestCacheExpiry' => array(
