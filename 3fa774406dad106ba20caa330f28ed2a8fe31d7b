@@ -16,6 +16,24 @@
       "revId": "3fa774406dad106ba20caa330f28ed2a8fe31d7b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "29433135_9dee01ed",
+        "filename": "multiversion/MWMultiVersion.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-10-02T18:59:55Z",
+      "side": 1,
+      "message": "It\u0027s all technically all there in wikimedia.dblist, but I\u0027m not sure about reading in the file and parsing it at this point...",
+      "parentUuid": "29433135_ddcfa98a",
+      "revId": "3fa774406dad106ba20caa330f28ed2a8fe31d7b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
