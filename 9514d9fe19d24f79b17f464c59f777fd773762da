@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "29433135_860dd238",
+        "filename": "wmf-config/Bug54847.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 147,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-10-02T23:04:11Z",
+      "side": 1,
+      "message": "$msg \u003d \u0027bug-54847-password-reset-prompt\u0027;",
+      "revId": "9514d9fe19d24f79b17f464c59f777fd773762da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
