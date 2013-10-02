@@ -2699,6 +2699,12 @@ if ( in_array( $wgDBname, array( 'wikidatawiki', 'testwikidatawiki' ) ) ) {
 	};
 }
 
+// Bug 54847
+if ( $wmgBug54847 ) {
+	require( "$wmfConfigDir/Bug54847.php" );
+}
+
+
 // additional "language names", adding to Names.php data
 $wgExtraLanguageNames = $wmgExtraLanguageNames;
 
