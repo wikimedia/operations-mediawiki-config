@@ -131,7 +131,7 @@ $wgHooks['UserLoadFromSession'][] = function ( $user, &$result ) {
 
 $wgHooks[ 'AbortLogin' ][] = function ( User $user, $password, &$retval, &$msg ) {
 	global $wgOut, $egBug54847;
-	if ( empty( $egBug54847 ) && efUserIsAffected( $user ) ) {
+	if ( empty( $egBug54847 ) && $user->checkPassword( $password )  && efUserIsAffected( $user ) ) {
 		wfDebugLog( "Bug54847", "Aborting login until they reset password: " . $user->getName() );
 		$msg = 'word-separator';
 		$wgOut->addWikiText( wfMessage( 'bug-54847-password-reset-prompt' )->text() );
