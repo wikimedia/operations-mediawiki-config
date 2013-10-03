@@ -271,9 +271,9 @@ return array(
 	),
 
 	'wgSecureLogin' => array(
-        'default' => false,
-        'loginwiki' => true,
-    ),
+		'default' => false,
+		'loginwiki' => true,
+	),
 
 	'wgSearchSuggestCacheExpiry' => array(
 		'default' => 1800,
@@ -285,7 +285,11 @@ return array(
 
 	'wmgUseFlow' => array(
 		'enwiki' => true,
-	)
+	),
+
+	'wmgBug54847' => array(
+		'default' => false,
+	),
 );
 
 } # wmflLabsSettings()
