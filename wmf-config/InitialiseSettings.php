@@ -7382,6 +7382,7 @@ $wgConf->settings = array(
 	'svwiki' => array(
 		'autoconfirmed' => array( 'patrol' => true ),
 		'rollbacker'	=> array( 'rollback' => true, 'autopatrol' => true ),
+		'accountcreator' => array( 'noratelimit' => true ), // bug 54922
 	),
 	'svwikisource' => array( // Bug 28614 & 36895
 		'autopatrolled' => array( 'autopatrol' => true, 'suppressredirect' => true, 'upload' => true, 'reupload' => true ),
@@ -7999,6 +8000,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt' ),
 	),
 	'+svwiki' => array(
+		'bureaucrat' => array( 'accountcreator' ), // bug 54922
 		'sysop' => array( 'rollbacker' ),
 	),
 	'+svwikisource' => array(
@@ -8453,6 +8455,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'flood' ),
 	),
 	'+svwiki' => array(
+		'bureaucrat' => array( 'accountcreator' ), // bug 54922
 		'sysop' => array( 'rollbacker', ),
 	),
 	'+svwikisource' => array(
