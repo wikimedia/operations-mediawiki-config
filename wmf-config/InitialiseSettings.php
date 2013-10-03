@@ -12739,9 +12739,8 @@ $wgConf->settings = array(
 ),
 
 'wmgBug54847' => array(
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
+	'default' => true,
+	'private' => false,
 ),
 
 );
