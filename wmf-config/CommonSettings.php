@@ -2700,7 +2700,7 @@ if ( in_array( $wgDBname, array( 'wikidatawiki', 'testwikidatawiki' ) ) ) {
 }
 
 // Bug 54847
-if ( $wmgBug54847 && $wmgUseCentralAuth ) {
+if ( $wmgBug54847 && $wmgUseCentralAuth && $wmfRealm == 'production' ) {
 	require( "$wmfConfigDir/Bug54847.php" );
 }
 
