@@ -103,7 +103,7 @@ $wgLBFactoryConf = array(
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1019'    => 0,
-		#'db1003'    => 400,
+		'db1003'    => 100,
 		'db1010'    => 400,
 		'db1038'    => 400,
 		#'db1035'    => 100, # snapshot
