@@ -82,7 +82,7 @@ if ( $wmgUseEventLogging ) {
 		'class'  => 'ResourceLoaderSchemaModule',
 		'schema' => 'MobileWebClickTracking',
 		'targets' => 'mobile',
-		'revision' => 5830800,
+		'revision' => 5929948,
 	);
 
 	$wgHooks['EnableMobileModules'][] = function( $out, $mode ) {
