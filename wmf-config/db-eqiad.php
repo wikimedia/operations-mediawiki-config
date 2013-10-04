@@ -112,8 +112,8 @@ $wgLBFactoryConf = array(
 		'db1059'   => 0,
 		'db1004'   => 400,
 		'db1011'   => 400,
-		#'db1042'   => 100, # snapshot
 		'db1020'   => 400,
+		'db1042'   => 100, # snapshot
 	),
 	's5' => array(
 		'db1058'   => 0,
