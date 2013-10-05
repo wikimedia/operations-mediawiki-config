@@ -1895,8 +1895,10 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorShowBetaWelcome ) {
 		$wgVisualEditorShowBetaWelcome = true;
 	}
-	if ( $wmgVisualEditorBetaInTab ) {
+	if ( $wmgVisualEditorSecondaryTabs ) {
 		$wgVisualEditorTabPosition = 'after';
+	}
+	if ( $wmgVisualEditorBetaInTab ) {
 		$wgVisualEditorTabMessages['editappendix'] =
 			$wgVisualEditorTabMessages['createappendix'] =
 			$wgVisualEditorTabMessages['editsectionappendix'] = 'visualeditor-beta-appendix';
