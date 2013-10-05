@@ -10494,6 +10494,8 @@ $wgConf->settings = array(
 	'enwiki' => 800, // beta testing -- Kaldari 2013-05-30
 ),
 
+// -------------- VisualEditor start --------------
+
 'wmgUseVisualEditor' => array(
 	'default' => false,
 	'visualeditor' => true,
@@ -10602,14 +10604,24 @@ $wgConf->settings = array(
 	'warwiki' => true,
 ),
 
+// Should VisualEditor's "beta welcome" be shown
 'wmgVisualEditorShowBetaWelcome' => array(
 	'default' => true,
 ),
 
+// Should VisualEditor's tab and section link come second behind those for wikitext?
+'wmgVisualEditorSecondaryTabs' => array(
+	'default' => false,
+	'enwiki' => true,
+),
+
+// Should VisualEditor's tab and section link have a "beta" superscript note?
 'wmgVisualEditorBetaInTab' => array(
 	'default' => false,
 	'enwiki' => true,
 ),
+
+// --------------- VisualEditor end ---------------
 
 'wmgUseRSSExtension' => array(
 	'default' => false,
