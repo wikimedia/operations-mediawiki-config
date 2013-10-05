@@ -10661,6 +10661,7 @@ $wgConf->settings = array(
 'wmgVisualEditorSecondaryTabs' => array(
 	'default' => false,
 	'enwiki' => true,
+	'hewiki' => true, // bug 52552
 ),
 
 // Should VisualEditor's tab and section link have a "beta" superscript note?
