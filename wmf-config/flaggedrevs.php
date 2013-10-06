@@ -459,7 +459,7 @@ elseif ( $wgDBname == 'plwiki' ) {
 }
 
 elseif ( $wgDBname == 'plwiktionary' ) {
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 100, 102 );
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 100, 102, 828 ); // bug 53373
 }
 
 elseif ( $wgDBname == 'ptwikibooks' ) {
