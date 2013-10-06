@@ -10328,15 +10328,6 @@ $wgConf->settings = array(
 'wmgUsabilityEnforce' => array(
 	'default' => true,
 ),
-'wmgUseCollapsibleNav' => array(
-	'default'	=> true,
-	'outreachwiki'	=> false,
-	'ukwikimedia'	=> false,
-),
-
-'wmgEnableVector' => array(
-	'default' => true,
-),
 
 'wmgUseFooterContactLink' => array(
 	// Make sure 'MediaWiki:Contact' and 'MediaWiki:Contact-url' are defined.
@@ -10350,10 +10341,6 @@ $wgConf->settings = array(
 	'default'	=> true,
 ),
 
-'wgVectorUseIconWatch' => array(
-	'default'	=> true,
-),
-
 'wgMaxMsgCacheEntrySize' => array(
 	'default' => 1024,
 ),
@@ -10364,12 +10351,6 @@ $wgConf->settings = array(
 
 'wmgUseLocalisationUpdate' => array(
 	'default' => true,
-),
-
-'wgVectorShowVariantName' => array(
-	'default' => false,
-	'zhwiki' => true, // bug 23531
-	'srwiki' => true,
 ),
 
 'wmgUseLiquidThreads' => array(
@@ -10772,11 +10753,6 @@ $wgConf->settings = array(
 	'viwikiquote' => 'uca-vi', // bug 45979
 	'viwikisource' => 'uca-vi', // bug 45979
 	'viwiktionary' => 'uca-vi', // bug 45979
-),
-
-'wmgVectorSectionEditLinks' => array(
-	'default' => false,
-	'testwiki' => false,
 ),
 
 'wmgUseArticleFeedback' => array(
@@ -12395,14 +12371,6 @@ $wgConf->settings = array(
 'wmgUseCORS' => array(
 	'default' => true,
 	'private' => false,
-),
-
-'wmgUseVectorFooterCleanup' => array(
-	'default' => false,
-	'frwiki' => true, // bug 49252
-	'ilowiki' => true, // bug 46244
-	'mlwiki' => true, // Bug 44634
-	'commonswiki' => true, // Bug 45946
 ),
 
 'wmgUseMicroDesign' => array(
