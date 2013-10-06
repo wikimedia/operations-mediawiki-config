@@ -11085,12 +11085,6 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-'wmgUseEditPageTracking' => array(
-	'default' => false,
-	'testwiki' => true,
-	'enwiki' => true,
-
-),
 'wmgUseMath' => array(
 	'default' => true, // moved from MW core
 	'loginwiki' => false,

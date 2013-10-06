@@ -2002,11 +2002,6 @@ if ( $wmgUseWikiLove ) {
 	}
 }
 
-if ( $wmgUseEditPageTracking ) {
-	require_once( "$IP/extensions/EditPageTracking/EditPageTracking.php" );
-	$wgEditPageTrackingRegistrationCutoff = '20110725221004';
-}
-
 if ( $wmgUseGuidedTour ) {
 	require_once( "$IP/extensions/GuidedTour/GuidedTour.php" );
 }
