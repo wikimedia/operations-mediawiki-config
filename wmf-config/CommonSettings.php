@@ -1593,7 +1593,6 @@ if ( $wmgUseUsabilityInitiative ) {
 
 	$wgNavigableTOCCollapseEnable = true;
 	$wgNavigableTOCResizable = true;
-	require( "$IP/extensions/Vector/Vector.php" );
 
 	require( "$IP/extensions/WikiEditor/WikiEditor.php" );
 
@@ -1605,13 +1604,7 @@ if ( $wmgUseUsabilityInitiative ) {
 		$wgWikiEditorFeatures['previewDialog'] =
 		$wgWikiEditorFeatures['publish'] =
 		$wgWikiEditorFeatures['templates'] =
-		$wgVectorFeatures['collapsiblenav'] =
 		$wgWikiEditorFeatures['highlight'] = array( 'global' => false, 'user' => true ); // Hidden from prefs view
-	$wgVectorFeatures['simplesearch'] = array( 'global' => true, 'user' => false );
-	$wgVectorFeatures['expandablesearch'] = array( 'global' => false, 'user' => false );
-	$wgVectorUseSimpleSearch = true;
-	// Enable EditWarning by default
-	$wgDefaultUserOptions['useeditwarning'] = 1;
 	$wgHiddenPrefs[] = 'usenavigabletoc';
 	$wgHiddenPrefs[] = 'wikieditor-templates';
 	$wgHiddenPrefs[] = 'wikieditor-template-editor';
@@ -1619,11 +1612,6 @@ if ( $wmgUseUsabilityInitiative ) {
 	$wgHiddenPrefs[] = 'wikieditor-previewDialog';
 	$wgHiddenPrefs[] = 'wikieditor-publish';
 	$wgHiddenPrefs[] = 'wikieditor-highlight';
-	if ( $wmgUseCollapsibleNav ) {
-		$wgDefaultUserOptions['vector-collapsiblenav'] = 1;
-	} else {
-		$wgHiddenPrefs[] = 'vector-collapsiblenav';
-	}
 
 	if ( $wmgUsabilityEnforce ) {
 		$wgEditToolbarGlobalEnable = false;
@@ -1638,17 +1626,6 @@ if ( $wmgUseUsabilityInitiative ) {
 	if ( $wmgUserDailyContribs ) {
 		require "$IP/extensions/UserDailyContribs/UserDailyContribs.php";
 	}
-
-	if ( $wmgVectorSectionEditLinks ) {
-		$wgVectorFeatures['sectioneditlinks'] = array( 'global' => false, 'user' => true );
-		$wgVectorSectionEditLinksBucketTest = true;
-		$wgVectorSectionEditLinksLotteryOdds = 1;
-		$wgVectorSectionEditLinksExperiment = 2;
-	}
-}
-
-if ( !$wmgEnableVector ) {
-	$wgSkipSkins[] = 'vector';
 }
 
 if ( $wmgUseLocalisationUpdate ) {
@@ -2382,10 +2359,6 @@ if ( $wmgUseScribunto ) {
 if ( $wmgUseSubpageSortkey ) {
 	include( "$IP/extensions/SubpageSortkey/SubpageSortkey.php" );
 	$wgSubpageSortkeyByNamespace = $wmgSubpageSortkeyByNamespace;
-}
-
-if ( $wmgUseMicroDesign || $wmgUseVectorFooterCleanup ) {
-	$wgVectorFeatures['footercleanup']['global'] = true;
 }
 
 if ( $wmgUseGettingStarted ) {
