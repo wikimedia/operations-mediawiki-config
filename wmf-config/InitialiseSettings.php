@@ -1687,7 +1687,7 @@ $wgConf->settings = array(
 	'ukwiki'	=> 'Вікіпедія',
 	'ukwikibooks'	=> 'Вікіпідручник',
 	'ukwikimedia'   => 'Wikimedia UK', # Andrew 2009-04-27 Private request of current board member
-	'ukwikinews'    => 'ВікіНовини',
+	'ukwikinews'    => 'Вікіновини', // bug 48843
 	'ukwikiquote'   => 'Вікіцитати',
 	'ukwikisource'  => 'Вікіджерела',
 	'ukwikivoyage'	=> 'Вікімандри',
@@ -2152,7 +2152,7 @@ $wgConf->settings = array(
 	'udmwiki'	=> 'Википедия', // Bug 47820
 	'ukwiki'	=> 'Вікіпедія',
 	'ukwikibooks'	=> 'Вікіпідручник',
-	'ukwikinews'    => 'ВікіНовини',
+	'ukwikinews'	=> 'Вікіновини', // bug 48843
 	'ukwikiquote'   => 'Вікіцитати',
 	'ukwikisource'	=> 'Вікіджерела', // bug 48308
 	'ukwikivoyage'  => 'Вікімандри',
@@ -2270,9 +2270,10 @@ $wgConf->settings = array(
 	'trwikinews'    => 'Vikihaber_tartışma',
 	'tyvwiki'	=> 'Википедия_дугайында_сүмелел', // bug 49328
 	'uawikimedia'   => 'Обговорення_Вікімедіа',
-	'ukwiktionary' => 'Обговорення_Вікісловника',
-	'vepwiki'      => 'Paginad_Vikipedii',
-	'xmfwiki'		=> 'ვიკიპედია_სხუნუა',
+	'ukwiktionary'  => 'Обговорення_Вікісловника',
+	'ukwikinews'	=> 'Обговорення_Вікіновин', // bug 48843
+	'vepwiki'      	=> 'Paginad_Vikipedii',
+	'xmfwiki'	=> 'ვიკიპედია_სხუნუა',
 ),
 # @} end of wgMetaNamespaceTalk
 
@@ -3269,9 +3270,15 @@ $wgConf->settings = array(
 		'ВЦ' => NS_PROJECT,
 	),
 	'+ukwikinews' => array(
-		'Comments' => 102,       // Bug 45333
+		'ВікіНовини' => NS_PROJECT, // bug 48843
+		'ВН' => NS_PROJECT, // bug 48843
+		'Обговорення_ВікіНовини' => NS_PROJECT_TALK, // bug 48843
+		'Д' => NS_HELP, // bug 48843
+		'К' => NS_CATEGORY, 
+		'Comments' => 102, // bug 45333
 		'Comments_talk' => 103,
 		'Incubator' => 104,
+		'І' => 104, // bug 48843
 		'Incubator_talk' => 105,
 	),
 	'+ukwikisource' => array(
