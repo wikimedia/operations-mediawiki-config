@@ -1050,7 +1050,7 @@ $wgConf->settings = array(
 'wgUploadNavigationUrl' => array(
 	// Projects
 	'default' => false,
-	'wikinews' => '//commons.wikimedia.org/wiki/Special:Upload',
+	'wikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 
 	// Individual wikis
 	// NOTE: Use relative paths for same-wiki links so the SSL converter can tweak them correctly
@@ -1058,7 +1058,7 @@ $wgConf->settings = array(
 	'bgwiki' => '/wiki/MediaWiki:Uploadtext', // bug 14836
 	'bnwiki' => '/wiki/উইকিপিডিয়া:আপলোড',
 	'bswiki' => '/wiki/Wikipedia:Upload', // bug 12044
-	'ckbwiki' => '//commons.wikimedia.org/wiki/Commons:Upload/ckb?uselang=ckb',
+	'ckbwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ckb',
 	'cswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
 	'cswikibooks' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
 	'cswikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
@@ -1067,49 +1067,49 @@ $wgConf->settings = array(
 	'cswikiversity' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
 	'cswiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
 	'dawiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=da&campaign=dk', // bug 37662
-	'dewikisource' => '//commons.wikimedia.org/wiki/Special:Upload?uselang=de',
+	'dewikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=de',
 	'enwiki' => '/wiki/Wikipedia:File_Upload_Wizard', // bug 42263
-	'enwikibooks' => '//commons.wikimedia.org/wiki/Commons:Upload',
+	'enwikibooks' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'enwikinews' => false,
-	'enwikiquote' => '//commons.wikimedia.org/wiki/Special:Upload',
+	'enwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'enwikivoyage' => '//en.wikivoyage.org/wiki/Wikivoyage:Upload_file',
-	'enwiktionary' => '//commons.wikimedia.org/wiki/Special:Upload',
+	'enwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'eswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es',
-	'eswikibooks' => '//commons.wikimedia.org/wiki/Commons:Upload/es?uselang=es',
+	'eswikibooks' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es',
 	'eswikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es', // bug 42933
-	'eswiktionary' => '//commons.wikimedia.org/wiki/Special:Upload?uselang=es',
-	'euwiki' => '//commons.wikimedia.org/wiki/Commons:Upload/eu?uselang=eu',
+	'eswiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es',
+	'euwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=eu',
 	'fawiki' => '/wiki/ویکی‌پدیا:بارگذاری',
 	'frwiki' => '/wiki/Aide:Importer_un_fichier',
 	'hewikinews' => false,
 	'hiwiki' => '/wiki/विकिपीडिया:अपलोड',
 	'hrwiki' => '/wiki/Wikipedija:Upload',
-	'huwiktionary' => '//commons.wikimedia.org/wiki/Commons:Upload/hu',
+	'huwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=hu',
 	'incubatorwiki' => '/wiki/Special:MyLanguage/Incubator:Upload',
 	'iswiktionary' => '/wiki/Wikior%C3%B0ab%C3%B3k:Hla%C3%B0a_inn_skr%C3%A1',
 	'itwikinews' => false,
 	'jawiki' => '/wiki/Wikipedia:%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89',
-	'jawikisource' => '//commons.wikimedia.org/wiki/Special:Upload',
+	'jawikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja',
 	'kowiki' => '/wiki/위키백과:파일_올리기', // bug 52076
-	'lawiki' => '//commons.wikimedia.org/wiki/Special:Upload?uselang=la', // bug 13190
+	'lawiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=la', // bug 13190
 	'mlwiki' => '/wiki/വിക്കിപീഡിയ:അപ്‌ലോഡ്',
-	'ndswiki' => '//commons.wikimedia.org/wiki/Special:Upload',
-	'nlwiki' => '//commons.wikimedia.org/wiki/Commons:Upload/nl?uselang=nl',
-	'nlwikisource' => '//commons.wikimedia.org/wiki/Commons:Upload/nl?uselang=nl',
-	'nlwikiquote' => '//commons.wikimedia.org/wiki/Commons:Upload/nl?uselang=nl',
-	'nlwiktionary' => '//commons.wikimedia.org/wiki/Commons:Upload/nl?uselang=nl',
+	'ndswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nds',
+	'nlwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
+	'nlwikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
+	'nlwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
+	'nlwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
 	'plwiki' => '//pl.wikipedia.org/wiki/Wikipedia:Prześlij_plik', // bug 42579
 	'plwikinews' => false,
-	'plwikiquote' => '//commons.wikimedia.org/wiki/Special:Upload?uselang=pl',
+	'plwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pl',
 	'ptwiki' => '/wiki/Wikipedia:Carregar_ficheiro',
-	'ptwikibooks' => '//commons.wikimedia.org/wiki/Commons:Upload/pt?uselang=pt',
+	'ptwikibooks' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pt',
 	'ptwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pt', // bug 42934
 	'rowiki' => '/wiki/Wikipedia:Trimite_fi%C5%9Fier',
-	'ruwikinews' => '//commons.wikimedia.org/w/index.php?title=Special:Upload&uselang=ru',
-	'specieswiki' => '//commons.wikimedia.org/wiki/Special:Upload',
+	'ruwikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ru',
+	'specieswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'thwiki' => '/wiki/%E0%B8%A7%E0%B8%B4%E0%B8%81%E0%B8%B4%E0%B8%9E%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2:%E0%B8%AD%E0%B8%B1%E0%B8%9B%E0%B9%82%E0%B8%AB%E0%B8%A5%E0%B8%94',
 	'zhwiki' => '/wiki/Project:%E4%B8%8A%E4%BC%A0',
-	'zhwikinews' => '//commons.wikimedia.org/wiki/Commons:Upload/zh-hans',
+	'zhwikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=zh-hans',
 	'zh_yuewiki' => '/wiki/Project:%E4%B8%8A%E8%BC%89',
 ),
 # @} end of wgUploadNavigationUrl
