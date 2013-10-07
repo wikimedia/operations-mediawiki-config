@@ -127,6 +127,7 @@ $wgLBFactoryConf = array(
 		#'db1022'   => 100, # snapshot
 		'db1027'   => 400,
 		'db1040'   => 400,
+		'db1015'   => 100,
 	),
 	's7' => array(
 		'db1041' => 0,
@@ -222,6 +223,7 @@ $wgLBFactoryConf = array(
 	'db1009' => '10.64.0.13', #do not remove or comment out
 	'db1010' => '10.64.0.14', #do not remove or comment out
 	'db1011' => '10.64.0.15', #do not remove or comment out
+	'db1015' => '10.64.0.19', #do not remove or comment out
 	'db1017' => '10.64.16.6', #do not remove or comment out
 	'db1018' => '10.64.16.7', #do not remove or comment out
 	'db1019' => '10.64.16.8', #do not remove or comment out
