@@ -3918,6 +3918,7 @@ $wgConf->settings = array(
 	'default' => array( '', 'autoconfirmed', 'sysop' ), // semi-protection level on
 	'arwiki' => array( '', 'autoconfirmed', 'autoreview', 'sysop' ), // bug 52109
 	'ckbwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop' ), // bug 52533
+	'enwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop' ), // bug 55432
 	'plwiki' => array( '', 'autoconfirmed', 'editor', 'sysop' ), // bug 46990
 	'ptwiki' => array( '', 'autoconfirmed', 'autoreviewer', 'sysop' ), // bug 39652
 ),
@@ -6774,6 +6775,8 @@ $wgConf->settings = array(
 		'oversight' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ), // bug 28465
 		'checkuser' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ), // bug 28465
 		'bureaucrat' => array( 'move-subpages' => true, 'suppressredirect' => true, 'tboverride' => true, ),
+		'templateeditor' => array( 'templateeditor' => true ), // bug 55432
+		'sysop' => array( 'templateeditor' => true ), // bug 55432
 	),
 	'enwikibooks' => array(
 		// 'rollbacker' 	=> array( 'rollback' => true ),
@@ -7737,7 +7740,7 @@ $wgConf->settings = array(
 	),
 	'+enwiki' => array(
 		'bureaucrat' => array( 'accountcreator' ),
-		'sysop' => array( 'abusefilter', 'accountcreator', 'autoreviewer', 'confirmed', 'filemover', 'reviewer', 'rollbacker' ),
+		'sysop' => array( 'abusefilter', 'accountcreator', 'autoreviewer', 'confirmed', 'filemover', 'reviewer', 'rollbacker', 'templateeditor' ),
 	),
 	'+enwikibooks' => array(
 		'sysop' => array( 'transwiki', 'uploader' ),
@@ -8186,7 +8189,7 @@ $wgConf->settings = array(
 	),
 	'+enwiki' => array(
 		'bureaucrat' => array( 'ipblock-exempt', 'accountcreator', 'sysop' ),
-		'sysop' => array( 'rollbacker', 'accountcreator', 'abusefilter', 'autoreviewer', 'confirmed', 'reviewer', 'filemover' ),
+		'sysop' => array( 'rollbacker', 'accountcreator', 'abusefilter', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor' ),
 	),
 	'+enwikibooks' => array(
 		'sysop' => array( 'transwiki', 'uploader', ),
