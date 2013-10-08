@@ -24,6 +24,8 @@ if ( $wmgUseCirrusAsAlternative ) {
 	$wgEnableLucenePrefixSearch = false;
 }
 
+$wgCirrusSearchContentReplicaCount = array( 'content' => 2, 'general' => 2 );
+
 if ( $wmgUsePoolCounter ) {
 	$wgPoolCounterConf['CirrusSearch-Update'] = array(
 		'class' => 'PoolCounter_Client',
