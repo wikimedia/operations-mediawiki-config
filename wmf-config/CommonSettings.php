@@ -798,13 +798,6 @@ if ( $wmgUseSecurePoll ) {
 	}
 }
 
-// Email capture
-// NOTE: Must be BEFORE ArticleFeedback
-if ( $wgUseEmailCapture ) {
-	include( "$IP/extensions/EmailCapture/EmailCapture.php" );
-	$wgEmailCaptureAutoResponse['from'] = 'improve@wikimedia.org';
-}
-
 // PoolCounter
 if ( $wmgUsePoolCounter ) {
 	include( getRealmSpecificFilename( "$wmfConfigDir/PoolCounterSettings.php" ) );
