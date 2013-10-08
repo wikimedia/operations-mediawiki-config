@@ -117,7 +117,6 @@ $wgLBFactoryConf = array(
 	),
 	's5' => array(
 		'db1058'   => 0,
-		#'db1039'   => 0, # was 51fb master
 		'db1005'   => 200, # snapshot
 		'db1026'   => 400,
 		'db1021'   => 100,
@@ -128,6 +127,7 @@ $wgLBFactoryConf = array(
 		'db1027'   => 400,
 		#'db1040'   => 400, # for upgrade, conversion to mariadb
 		'db1015'   => 400,
+		'db1039'   => 100,
 	),
 	's7' => array(
 		'db1041' => 0,
