@@ -112,6 +112,6 @@ if ( $wmgUseCORS ) {
 	);
 }
 
-$wgExtensionEntryPointListFiles[] = "$wmgConfigDir/extension-list-labs";
+$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-labs";
 
 } # end safeguard
