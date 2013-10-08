@@ -12121,6 +12121,7 @@ $wgConf->settings = array(
 	'dewikiversity' => true,
 	'enwiki' => true,
 	'enwikinews' => true, // bug 53984
+	'eswiki' => true, // bug 54826
 	'hewiki' => true, // bug 48848
 	'mkwiki' => true,
 	'ptwiki' => true, // bug 52870
@@ -12130,6 +12131,7 @@ $wgConf->settings = array(
 
 'wmgEducationProgramDYKCat' => array(
 	'default' => 'MyCourses Did You Know',
+	'eswiki' => 'Mis cursos ¿sabías que?', // bug 54826
 	'ptwiki' => '!Você Sabia sobre cursos', // bug 52870
 ),
 
