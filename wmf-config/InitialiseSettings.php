@@ -2845,6 +2845,7 @@ $wgConf->settings = array(
 	'+kowiki' => array(
 		'백' => NS_PROJECT,
 		'백토' => NS_PROJECT_TALK,
+		'사토' => NS_USER_TALK, // bug 55342
 		'Portal' => 100,
 		'Portal_talk' => 101,
 		'들' => 100,
