@@ -2474,12 +2474,7 @@ if ( $wmgUseEventLogging ) {
 		include_once( "$IP/extensions/Campaigns/Campaigns.php" );
 	}
 
-	// CoreEvents renamed to WikimediaEvents -- Ori, 7 Oct 2013
-	if ( file_exists( "$IP/extensions/WikimediaEvents/WikimediaEvents.php" ) ) {
-		include_once( "$IP/extensions/WikimediaEvents/WikimediaEvents.php" );
-	} else {
-		include_once( "$IP/extensions/CoreEvents/CoreEvents.php" );
-	}
+	include_once( "$IP/extensions/WikimediaEvents/WikimediaEvents.php" );
 }
 
 if ( $wmgUseEventLogging && $wmgUseNavigationTiming ) {

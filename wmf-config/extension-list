@@ -31,7 +31,7 @@ $IP/extensions/ConfirmEdit/FancyCaptcha.php
 $IP/extensions/ContactPage/ContactPage.php
 $IP/extensions/ContactPageFundraiser/ContactPage.php
 $IP/extensions/ContributionTracking/ContributionTracking.php
-$IP/extensions/CoreEvents/CoreEvents.php
+$IP/extensions/WikimediaEvents/WikimediaEvents.php
 $IP/extensions/CreditsSource/CreditsSource.php
 $IP/extensions/CustomData/CustomData.php
 $IP/extensions/DataValues/DataValues/DataValues.i18n.php
