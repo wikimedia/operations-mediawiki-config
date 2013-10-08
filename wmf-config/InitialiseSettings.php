@@ -12086,6 +12086,10 @@ $wgConf->settings = array(
 	'default' => array(),
 	'enwiki' => array( 'Living_people' ),
 ),
+'wmgGettingStartedRunTest' => array(
+	'default' => false,
+	'enwiki' => true,
+),
 'wmgUseGuidedTour' => array(
 	'default' => false,
 	'testwiki' => true,

@@ -2390,6 +2390,7 @@ if ( $wmgUseGettingStarted ) {
 		$wgGettingStartedRedisOptions['password'] = $wmgRedisPassword;
 	}
 	$wgGettingStartedExcludedCategories = $wmgGettingStartedExcludedCategories;
+	$wgGettingStartedRunTest = $wmgGettingStartedRunTest;
 }
 
 if ( $wmgUseGeoCrumbs ) {
