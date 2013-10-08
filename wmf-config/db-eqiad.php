@@ -125,7 +125,7 @@ $wgLBFactoryConf = array(
 		'db1006'   => 0,
 		#'db1022'   => 100, # snapshot
 		'db1027'   => 400,
-		#'db1040'   => 400, # for upgrade, conversion to mariadb
+		'db1040'   => 50, # warmup after upgrade
 		'db1015'   => 400,
 		'db1039'   => 100,
 	),
