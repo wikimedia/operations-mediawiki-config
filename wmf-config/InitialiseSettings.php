@@ -8063,6 +8063,15 @@ $wgConf->settings = array(
 		'bureaucrat' => array(
 			'flood', // bug 48013
 		),
+		'rollbacker' => array(
+			'autopatrolled', // bug 55495
+		),
+		'propertycreator' => array(
+			'autopatrolled', // bug 55495
+		),
+		'autopatrolled' => array(
+			'confirmed', // bug 55495
+		),
 	),
 	'+zhwiki' => array(
 		'bureaucrat' => array( 'flood' ),
