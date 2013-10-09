@@ -7539,9 +7539,47 @@ $wgConf->settings = array(
 		'autopatrolled' => array(
 			'autopatrol' => true, // bug 41907
 			'patrol' => true, // bug 42052
+			'editsemiprotected' => true, // bug 55495
+			'move' => true, // bug 55495
+			'autoconfirmed' => true, // bug 55495
+			'reupload' => true, // bug 55495
+			'skipcaptcha' => true, // bug 55495
+			'transcode-reset' => true, // bug 55495
+			'collectionsaveascommunitypage' => true, // bug 55495
+			'collectionsaveasuserpage' => true, // bug 55495
+			'upload' => true, // bug 55495
+			'abusefilter-log-detail' => true, // bug 55495
 		),
-		'rollbacker' => array( 'rollback' => true ), // bug 45165
-		'propertycreator' => array( 'property-create' => true ), // bug 46953
+		'rollbacker' => array( 
+			'rollback' => true, // bug 45165
+			'autopatrol' => true, // bug 55495
+			'patrol' => true, // bug 55495
+			'editsemiprotected' => true, // bug 55495
+			'move' => true, // bug 55495
+			'autoconfirmed' => true, // bug 55495
+			'reupload' => true, // bug 55495
+			'skipcaptcha' => true, // bug 55495
+			'transcode-reset' => true, // bug 55495
+			'collectionsaveascommunitypage' => true, // bug 55495
+			'collectionsaveasuserpage' => true, // bug 55495
+			'upload' => true, // bug 55495
+			'abusefilter-log-detail' => true, // bug 55495
+		),
+		'propertycreator' => array( 
+			'property-create' => true, // bug 46953
+			'autopatrol' => true, // bug 55495
+			'patrol' => true, // bug 55495
+			'editsemiprotected' => true, // bug 55495
+			'move' => true, // bug 55495
+			'autoconfirmed' => true, // bug 55495
+			'reupload' => true, // bug 55495
+			'skipcaptcha' => true, // bug 55495
+			'transcode-reset' => true, // bug 55495
+			'collectionsaveascommunitypage' => true, // bug 55495
+			'collectionsaveasuserpage' => true, // bug 55495
+			'upload' => true, // bug 55495
+			'abusefilter-log-detail' => true, // bug 55495
+		),
 		'sysop' => array( 'property-create' => true ), // bug 46953
 		'flood' => array( 'bot' => true ), // bug 48013
 	),
