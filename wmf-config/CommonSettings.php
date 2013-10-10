@@ -2543,6 +2543,8 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
 
+	$wgWBRepoSettings['specialSiteLinkGroups'] = array( 'commons' );
+
 	$wgWBRepoSettings['siteLinkGroups'] = array(
 		'wikipedia',
 		'wikivoyage',
