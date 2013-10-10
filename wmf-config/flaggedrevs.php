@@ -462,6 +462,45 @@ elseif ( $wgDBname == 'plwiktionary' ) {
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 100, 102, 828 ); // bug 53373
 }
 
+elseif ( $wgDBname == 'ptwiki' ) { // bug 54828
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_TEMPLATE, 102, 828 );
+	# Show only on a per-page basis
+	$wgFlaggedRevsOverride = false;
+	# We have only one tag with one level
+	$wgFlaggedRevTags = array(
+		'status' => array( 'levels' => 1, 'quality' => 2, 'pristine' => 3 ),
+	);
+	# Restrict autoconfirmed to flagging semi-protected
+	$wgFlagRestrictions = array(
+		'status' => array( 'review' => 1, 'autoreview' => 1 ),
+	);
+	# Restriction levels for autoconfirmed rights
+	$wgFlaggedRevsRestrictionLevels = array( '', 'autoconfirmed' );
+	# Use flag "protection" levels
+	$wgFlaggedRevsProtection = true;
+	# Use current templates/files
+	$wgFlaggedRevsHandleIncludes = FR_INCLUDES_CURRENT;
+
+	# Protect quota
+	$wgFlaggedRevsProtectQuota = 300;
+
+	# Group permissions
+	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
+	$wgGroupPermissions['autoreviewer']['review'] = true;
+	$wgGroupPermissions['rollbacker']['review'] = true;
+	$wgGroupPermissions['eliminator']['review'] = true;
+	$wgGroupPermissions['bureaucrat']['review'] = true;
+	$wgGroupPermissions['sysop']['review'] = true;
+	$wgGroupPermissions['sysop']['stablesettings'] = true;
+
+	# Remove 'editor', 'reviewer' and 'autoreview' groups
+	unset( $wgGroupPermissions['editor'], $wgGroupPermissions['reviewer'], $wgGroupPermissions['autoreview'] );
+	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'editor', 'reviewer' ) );
+	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'editor', 'reviewer' ) );
+	$wgAddGroups['bureaucrat'] = array_diff( $wgAddGroups['sysop'], array( 'reviewer' ) );
+	$wgRemoveGroups['bureaucrat'] = array_diff( $wgRemoveGroups['sysop'], array( 'reviewer' ) );
+}
+
 elseif ( $wgDBname == 'ptwikibooks' ) {
 	// Sets the most recent version as shown
 	$wgFlaggedRevsOverride = false;
