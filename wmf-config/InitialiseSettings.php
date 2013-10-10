@@ -10632,6 +10632,7 @@ $wgConf->settings = array(
 	'mediawikiwiki' => array(
 		'http://blog.wikimedia.org/feed/',
 		'https://git.wikimedia.org/feed/mediawiki/extensions/Translate.git',
+		'https://mingle.corp.wikimedia.org/projects/analytics/feeds/8z8k6vUfniLmWc2qGe6GMQsxBujvKRKuybLd8mdTbMFHwGfLH3oxK*MU0E8zM6go.atom',
 	),
 ),
 
