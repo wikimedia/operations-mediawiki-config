@@ -3467,7 +3467,7 @@ $wgConf->settings = array(
 	'+cswiki' => array( 6 => 0, 14 => 1 ),
 	'+dewiki' => array( 6 => 0, 8 => 0, 10 => 0 ),
 	'+enwiki' => array( 6 => 0, 8 => 0 ),
-	'+eowiki' => array( 0 => 1, 6 => 0, 8 => 0 ),
+	'+eowiki' => array( 6 => 0, 8 => 0 ), // 0 => 1 removed per bug 55563
 	'+eswiki' => array( 6 => 0, 8 => 0 ),
 	'+frwiki' => array( 6 => 0, 8 => 0 ),
 	'+guwiki' => array( 6 => 0, 8 => 0, 14 => 1 ),
