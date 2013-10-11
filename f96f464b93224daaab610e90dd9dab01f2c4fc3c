@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_71015507",
+        "filename": "tests/multiversion/MWMultiVersionTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2013-10-11T20:46:32Z",
+      "side": 0,
+      "message": "Still mentions \", [doc root]\".",
+      "revId": "f96f464b93224daaab610e90dd9dab01f2c4fc3c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
