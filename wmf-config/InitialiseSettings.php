@@ -8594,6 +8594,9 @@ $wgConf->settings = array(
 			'flood', // bug 48013
 		),
 	),
+	'+wikimania2014wiki' => array(
+		'bureaucrat' => array( 'sysop', 'bureaucrat', 'translationadmin' ), // for wikimania2014wiki: bug 55480
+	),
 	'+wikimaniateamwiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'autopatrolled', 'import' ),
 	),
