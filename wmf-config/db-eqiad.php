@@ -119,7 +119,8 @@ $wgLBFactoryConf = array(
 		'db1058'   => 0,
 		'db1005'   => 200, # snapshot
 		'db1026'   => 400,
-		'db1021'   => 100,
+		#'db1021'   => 100,
+		#'db1045'   => 100,
 	),
 	's6' => array(
 		'db1006'   => 0,
@@ -244,6 +245,7 @@ $wgLBFactoryConf = array(
 	'db1041' => '10.64.16.30', #do not remove or comment out
 	'db1042' => '10.64.16.31', #do not remove or comment out
 	'db1043' => '10.64.16.32', #do not remove or comment out
+	'db1045' => '10.64.16.34', #do not remove or comment out
 	'db1047' => '10.64.16.36', #do not remove or comment out
 	'db1049' => '10.64.16.144', #do not remove or comment out
 	'db1050' => '10.64.16.145', #do not remove or comment out
