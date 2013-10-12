@@ -497,8 +497,8 @@ elseif ( $wgDBname == 'ptwiki' ) { // bug 54828
 	unset( $wgGroupPermissions['editor'], $wgGroupPermissions['reviewer'], $wgGroupPermissions['autoreview'] );
 	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'editor', 'reviewer' ) );
 	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'editor', 'reviewer' ) );
-	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'reviewer' ) );
-	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'reviewer' ) );
+	$wgAddGroups['bureaucrat'] = array_diff( $wgAddGroups['bureaucrat'], array( 'reviewer' ) );
+	$wgRemoveGroups['bureaucrat'] = array_diff( $wgRemoveGroups['bureaucrat'], array( 'reviewer' ) );
 }
 
 elseif ( $wgDBname == 'ptwikibooks' ) {
