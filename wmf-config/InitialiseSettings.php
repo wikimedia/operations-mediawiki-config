@@ -6852,6 +6852,9 @@ $wgConf->settings = array(
 			'patrol' => true, // Bug 44285
 			'autopatrol' => true, // Bug 47325
 		),
+		'autopatrolled' => array(
+			'autopatrol' => true, // bug 55665
+		),
 	),
 	'eswiktionary' => array(
 		'user' => array( 'upload' => false ), // Bug 7152
@@ -7814,7 +7817,7 @@ $wgConf->settings = array(
 	),
 	'+eswikivoyage' => array(
 		'bureaucrat' => array( 'confirmed', ), // Bug 47325
-		'sysop' => array( 'rollbacker', 'patroller', ), // Bug 44285
+		'sysop' => array( 'rollbacker', 'patroller', 'autopatroller', ), // Bug 44285, 55665
 	),
 	'+eswiktionary' => array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller', 'rollbacker' ),
@@ -8267,7 +8270,7 @@ $wgConf->settings = array(
 	),
 	'+eswikivoyage' => array(
 		'bureaucrat' => array( 'confirmed', ), // Bug 47325
-		'sysop' => array( 'rollbacker', 'patroller', ), // Bug 44285
+		'sysop' => array( 'rollbacker', 'patroller', 'autopatroller', ), // Bug 44285, 55665
 	),
 	'+eswiktionary' => array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller', 'rollbacker' ),
