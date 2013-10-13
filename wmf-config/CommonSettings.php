@@ -1780,6 +1780,10 @@ if ( $wmgUseArticleFeedbackv5 ) {
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
 $wgDefaultUserOptions['showhiddencats'] = $wmgShowHiddenCats;
 
+// WMF is not hardcore enough to enable these. See bug 36316 about it.
+$wgDefaultUserOptions['watchcreations'] = 0;
+$wgDefaultUserOptions['watchdefault'] = 0;
+
 if ( $wgDBname == 'strategywiki' ) {
 	require_once( "$IP/extensions/StrategyWiki/ActiveStrategy/ActiveStrategy.php" );
 }
