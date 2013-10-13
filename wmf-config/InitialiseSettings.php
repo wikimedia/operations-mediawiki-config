@@ -9246,6 +9246,7 @@ $wgConf->settings = array(
 	'+idwikibooks' => array( 100, 102 ), // Bug 2282
 	'+idwikisource' => array( 100, 102, 104 ),
 	'+itwikisource' => array( 102, 108, 110 ),
+	'+itwikivoyage' => array( 100, 104 ), // bug 55620
 	'+kowikisource' => array( 100 ),
 	'+lawikisource' => array( 102, 104, 106 ),
 	'+mediawikiwiki' => array( 100, 102 ), // Manuals & extensions
@@ -9272,7 +9273,6 @@ $wgConf->settings = array(
 	'+viwikisource' => array( 102, 104, 106 ),
 	'+zhwikisource' => array( 102, 104, 106 ),
 	'+dewikivoyage' => array( 104 ),
-	'+itwikivoyage' => array( 104 ),
 ),
 
 'wgRevisionCacheExpiry' => array(
