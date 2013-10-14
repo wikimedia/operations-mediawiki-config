@@ -19,11 +19,12 @@ $wmgThrottlingExceptions = array();
 #             (default: any project)
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = array( // https://bugzilla.wikimedia.org/show_bug.cgi?id=54400
-	'from'   => '2013-09-21T00:00 +0:00',
-	'to'     => '2013-09-21T24:00 +0:00',
-	'IP'     => array( '207.253.195.3' ),
-	'value'  => 500,
+$wmgThrottlingExceptions[] = array( // bug 55687
+	'from'   => '2013-10-18T23:00 +0:00',
+	'to'     => '2013-10-19T11:00 +0:00',
+	'IP'     => array( '210.4.97.200' ),
+	'dbname' => array( 'enwiki', 'tlwiki', 'pamwiki', 'pagwiki', 'commonswiki' ),
+	'value'  => 60,
 );
 
 ## Add throttling definitions above.
