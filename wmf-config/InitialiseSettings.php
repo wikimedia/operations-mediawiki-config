@@ -4073,6 +4073,7 @@ $wgConf->settings = array(
 		'DBPerformance' => "udp://$wmfUdp2logDest/dbperformance",
 		'CirrusSearch' => "udp://$wmfUdp2logDest/CirrusSearch",
 		'wap' => "udp://$wmfUdp2logDest/wap",
+		'texvc' => "udp://$wmfUdp2logDest/texvc",
 	),
 
 	'+enwiki' => array(
