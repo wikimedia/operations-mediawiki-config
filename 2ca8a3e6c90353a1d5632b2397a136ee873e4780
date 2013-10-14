@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_3b75f393",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 5969,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2013-10-14T13:14:31Z",
+      "side": 1,
+      "message": "ml \u003c me?",
+      "revId": "2ca8a3e6c90353a1d5632b2397a136ee873e4780",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_1ba3cf04",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 8967,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2013-10-14T13:14:31Z",
+      "side": 1,
+      "message": "Fine. I don\u0027t remember, is this consistent across the file?",
+      "revId": "2ca8a3e6c90353a1d5632b2397a136ee873e4780",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
