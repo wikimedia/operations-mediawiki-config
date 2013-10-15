@@ -121,6 +121,7 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 			array( 'vewikimedia', 've.wikimedia.org' ),
 
 			// labs stuffs
+			array( 'labswiki', 'deployment.wikimedia.beta.wmflabs.org' ),
 			array( 'enwiki', 'en.wikipedia.beta.wmflabs.org' ),
 			array( 'wikidatawiki', 'wikidata.beta.wmflabs.org' ),
 		);
