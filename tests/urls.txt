@@ -21,7 +21,7 @@ https://chapcom.wikimedia.org/wiki/Main_page
 https://checkuser.wikimedia.org/wiki/Main_page
 https://collab.wikimedia.org/wiki/Main_page
 http://commons.wikimedia.org/wiki/Main_page
-https://donate.wikimedia.org/wiki/Main_page
+https://donate.wikimedia.org/
 https://exec.wikimedia.org/wiki/Main_page
 https://fdc.wikimedia.org/wiki/Main_page
 http://wikimediafoundation.org/wiki/Home
@@ -35,13 +35,12 @@ http://meta.wikimedia.org/wiki/Main_page
 https://movementroles.wikimedia.org/wiki/Main_page
 http://mx.wikimedia.org/wiki/Página_principal
 http://noboard.chapters.wikimedia.org/wiki/Main_page
-https://nomcom.wikimedia.org/wiki/Main_page
 http://nyc.wikimedia.org/wiki/Home
 https://office.wikimedia.org/wiki/Main_page
 https://ombudsmen.wikimedia.org/wiki/Main_page
 https://otrs-wiki.wikimedia.org/wiki/Main_page
 http://outreach.wikimedia.org/wiki/Main_page
-http://pa-us.wikimedia.org/wiki/Main_page
+http://pa-us.wikimedia.org/wiki/Main_Page
 http://quality.wikimedia.org/wiki/Portal
 https://searchcom.wikimedia.org/wiki/Main_page
 http://wikisource.org/wiki/Main_page
@@ -54,7 +53,7 @@ http://test.wikipedia.org/wiki/Main_page
 http://test.wikidata.org/wiki/Wikidata:Main_Page
 https://transitionteam.wikimedia.org/wiki/Main_page
 http://usability.wikimedia.org/wiki/Main_Page
-https://vote.wikimedia.org/wiki/Main_page
+https://vote.wikimedia.org/wiki/Main_Page
 http://wg.en.wikipedia.org/wiki/Main_page
 http://www.wikidata.org/wiki/Main_page
 http://wikimania2005.wikimedia.org/wiki/Main_Page
