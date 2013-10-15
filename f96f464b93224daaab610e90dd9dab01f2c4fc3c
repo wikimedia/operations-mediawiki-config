@@ -16,6 +16,24 @@
       "revId": "f96f464b93224daaab610e90dd9dab01f2c4fc3c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0932edd2_d9bf7ca5",
+        "filename": "multiversion/MWMultiVersion.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-10-15T14:47:04Z",
+      "side": 1,
+      "message": "Regex is about a third slower\n\n0.00020503997802734 rather than 0.00014805793762207 or so",
+      "parentUuid": "0932edd2_c1194420",
+      "revId": "f96f464b93224daaab610e90dd9dab01f2c4fc3c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
