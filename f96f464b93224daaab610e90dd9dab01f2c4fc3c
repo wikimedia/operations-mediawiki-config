@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_c1194420",
+        "filename": "multiversion/MWMultiVersion.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-10-15T00:25:05Z",
+      "side": 1,
+      "message": "I wonder if this would be nicer as a regex\n\nar|bd|be|br|co|dk|et|fi|il|mk|mx|nl|noboard_chapters|no|nyc|nz|pa_us|pl|rs|ru|se|tr|ua|uk|ve",
+      "revId": "f96f464b93224daaab610e90dd9dab01f2c4fc3c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
