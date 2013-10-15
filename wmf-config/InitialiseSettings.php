@@ -4017,6 +4017,7 @@ $wgConf->settings = array(
 	'default' => '',
 	'testwiki' => "udp://$wmfUdp2logDest/testwiki",
 	'test2wiki' => "udp://$wmfUdp2logDest/test2wiki",
+	'enwikisource' => "udp://$wmfUdp2logDest/enwikisource",
 ),
 
 # wgDebugLogGroups @{
