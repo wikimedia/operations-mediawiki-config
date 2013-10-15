@@ -12698,6 +12698,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'closed' => true,
 	'cawiki' => true,
+	'enwikisource' => true,
 	'itwiktionary' => true,
 	'mediawikiwiki' => true,
 	'testwiki' => true,
@@ -12707,7 +12708,6 @@ $wgConf->settings = array(
 
 'wmgUseCirrusAsAlternative' => array(
 	'default' => false,
-	'enwikisource' => true,
 ),
 
 // Note that changing this on any supported (English) wiki requires an in place
