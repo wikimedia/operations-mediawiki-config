@@ -8,13 +8,73 @@
 
 $wmfFileJournalTTL = 365; // days
 
-/* OpenStack Swift backend config */
+/* Common OpenStack Swift backend config */
 $wmfSwiftBigWikis = array( # DO NOT change without proper migration first
 	'commonswiki', 'dewiki', 'enwiki', 'fiwiki', 'frwiki', 'hewiki', 'huwiki', 'idwiki',
 	'itwiki', 'jawiki', 'rowiki', 'ruwiki', 'thwiki', 'trwiki', 'ukwiki', 'zhwiki'
 );
-$wmfSwiftShardLocal = in_array( $wgDBname, $wmfSwiftBigWikis ) ? 2 : 0;
-$wmfSwiftShardCommon = in_array( 'commonswiki', $wmfSwiftBigWikis ) ? 2 : 0;
+$wmfSwiftShardLocal = in_array( $wgDBname, $wmfSwiftBigWikis ) ? 2 : 0; // shard levels
+$wmfSwiftShardCommon = in_array( 'commonswiki', $wmfSwiftBigWikis ) ? 2 : 0; // shard levels
+/* end common Swift config */
+
+/* Eqiad Swift backend config */
+$wgFileBackends[] = array( // backend config for wiki's local repo
+	'class'              => 'SwiftFileBackend',
+	'name'               => 'local-swift-eqiad',
+	'wikiId'             => "{$site}-{$lang}",
+	'lockManager'        => 'nullLockManager', // LocalFile uses FOR UPDATE
+	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname, 'ttlDays' => $wmfFileJournalTTL ),
+	'swiftAuthUrl'       => $wmfSwiftEqiadConfig['authUrl'],
+	'swiftUser'          => $wmfSwiftEqiadConfig['user'],
+	'swiftKey'           => $wmfSwiftEqiadConfig['key'],
+	'swiftTempUrlKey'    => $wmfSwiftEqiadConfig['tempUrlKey'],
+	'shardViaHashLevels' => array(
+		'local-public'     => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-thumb'      => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-temp'       => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-transcoded' => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-deleted'    => array( 'levels' => $wmfSwiftShardLocal, 'base' => 36, 'repeat' => 0 )
+	),
+	'parallelize'        => 'implicit',
+	'cacheAuthInfo'      => true
+);
+$wgFileBackends[] = array( // backend config for wiki's access to shared repo
+	'class'              => 'SwiftFileBackend',
+	'name'               => 'shared-swift-eqiad',
+	'wikiId'             => "wikipedia-commons",
+	'lockManager'        => 'nullLockManager', // just thumbnails
+	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki', 'ttlDays' => $wmfFileJournalTTL ),
+	'swiftAuthUrl'       => $wmfSwiftEqiadConfig['authUrl'],
+	'swiftUser'          => $wmfSwiftEqiadConfig['user'],
+	'swiftKey'           => $wmfSwiftEqiadConfig['key'],
+	'swiftTempUrlKey'    => $wmfSwiftEqiadConfig['tempUrlKey'],
+	'shardViaHashLevels' => array(
+		'local-public'     => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-thumb'      => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-temp'       => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-transcoded' => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+	),
+	'parallelize'        => 'implicit',
+	'cacheAuthInfo'      => true
+);
+$wgFileBackends[] = array( // backend config for wiki's access to shared files
+	'class'              => 'SwiftFileBackend',
+	'name'               => 'global-swift-eqiad',
+	'wikiId'             => "global-data",
+	'lockManager'        => 'nullLockManager',
+	'swiftAuthUrl'       => $wmfSwiftEqiadConfig['authUrl'],
+	'swiftUser'          => $wmfSwiftEqiadConfig['user'],
+	'swiftKey'           => $wmfSwiftEqiadConfig['key'],
+	'swiftTempUrlKey'    => $wmfSwiftEqiadConfig['tempUrlKey'],
+	'shardViaHashLevels' => array(
+		'math-render'  => array( 'levels' => 2, 'base' => 16, 'repeat' => 0 ),
+	),
+	'parallelize'        => 'implicit',
+	'cacheAuthInfo'      => true
+);
+/* end Eqiad Swift backend config */
+
+/* Tampa Swift backend config */
 $wgFileBackends[] = array( // backend config for wiki's local repo
 	'class'              => 'SwiftFileBackend',
 	'name'               => 'local-swift',
@@ -69,7 +129,7 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared files
 	'parallelize'        => 'implicit',
 	'cacheAuthInfo'      => true
 );
-/* end Swift backend config */
+/* end Tampa Swift backend config */
 
 /* Multiwrite backend config */
 $wgFileBackends[] = array(
@@ -81,6 +141,7 @@ $wgFileBackends[] = array(
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 		array( 'template' => 'local-swift', 'isMultiMaster' => true ),
+		# array( 'template' => 'local-swift-eqiad', 'isMultiMaster' => false ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'autoResync'  => 'conservative' // bug 39221
@@ -94,6 +155,7 @@ $wgFileBackends[] = array(
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 		array( 'template' => 'shared-swift', 'isMultiMaster' => true ),
+		# array( 'template' => 'shared-swift-eqiad', 'isMultiMaster' => false ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'autoResync'  => 'conservative' // bug 39221
@@ -105,7 +167,8 @@ $wgFileBackends[] = array(
 	'lockManager' => 'nullLockManager',
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-		array( 'template' => 'global-swift', 'isMultiMaster' => true )
+		array( 'template' => 'global-swift', 'isMultiMaster' => true ),
+		# array( 'template' => 'global-swift-eqiad', 'isMultiMaster' => false ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'autoResync'  => 'conservative'
