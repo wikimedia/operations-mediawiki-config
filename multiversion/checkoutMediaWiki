@@ -1,6 +1,9 @@
 #!/usr/bin/env php
 <?php
 error_reporting( E_ALL );
+require_once './defines.php';
+require_once './updateBitsBranchPointers.php';
+
 
 /**
  * Automatically git clone a MediaWiki version and do some basic wmf setup.
@@ -19,8 +22,6 @@ error_reporting( E_ALL );
  */
 function checkoutMediaWiki() {
 	global $argv;
-	$commonHomeDir = '/a/common';
-	$commonLocalDir = '/usr/local/apache/common-local';
 
 	$argsValid = false;
 	if ( count( $argv ) >= 3 ) {
@@ -37,7 +38,7 @@ function checkoutMediaWiki() {
 	}
 
 	# MW install path
-	$destIP = "$commonHomeDir/$dstVersion";
+	$destIP = MULTIVER_COMMON_HOME . "/$dstVersion";
 
 	if ( !file_exists( $destIP ) ) {
 		passthru( 'git clone -n ' .
@@ -106,37 +107,37 @@ EOT;
 	createSymlink( $path, $link, "Created StartProfiler.php symlink." );
 
 	# Create static- symlinks for bits.wikimedia.org...
-	$bitsStaticDir = "$commonHomeDir/docroot/bits/static-$dstVersionNum";
+	$bitsStaticDir = MULTIVER_COMMON_HOME . "/docroot/bits/static-$dstVersionNum";
 	if ( !file_exists( $bitsStaticDir ) ) {
 		mkdir( $bitsStaticDir, 0775 );
 	}
-	$path = "$commonHomeDir/docroot/bits/static-$dstVersionNum/skins";
-	$link = "$commonLocalDir/php-$dstVersionNum/skins/";
+	$path = MULTIVER_COMMON_HOME . "/docroot/bits/static-$dstVersionNum/skins";
+	$link = MULTIVER_COMMON_APACHE . "/php-$dstVersionNum/skins/";
 	createSymlink( $path, $link, "Created bits/static-$dstVersionNum/skins symlink." );
 
-	$path = "$commonHomeDir/docroot/bits/static-$dstVersionNum/extensions";
-	$link = "$commonLocalDir/php-$dstVersionNum/extensions";
+	$path = MULTIVER_COMMON_HOME . "/docroot/bits/static-$dstVersionNum/extensions";
+	$link = MULTIVER_COMMON_APACHE . "/php-$dstVersionNum/extensions";
 	createSymlink( $path, $link, "Created bits/static-$dstVersionNum/extensions symlink." );
 
-	$path = "$commonHomeDir/docroot/bits/static-$dstVersionNum/resources";
-	$link = "$commonLocalDir/php-$dstVersionNum/resources";
+	$path = MULTIVER_COMMON_HOME . "/docroot/bits/static-$dstVersionNum/resources";
+	$link = MULTIVER_COMMON_APACHE . "/php-$dstVersionNum/resources";
 	createSymlink( $path, $link, "Created bits/static-$dstVersionNum/resources symlink." );
 
 	# Create static- symlinks for /w...
-	$liveStaticDir = "$commonHomeDir/w/static-$dstVersionNum";
+	$liveStaticDir = MULTIVER_COMMON_HOME . "/w/static-$dstVersionNum";
 	if ( !file_exists( $liveStaticDir ) ) {
 		mkdir( $liveStaticDir, 0775 );
 	}
-	$path = "$commonHomeDir/w/static-$dstVersionNum/skins";
-	$link = "$commonLocalDir/php-$dstVersionNum/skins";
+	$path = MULTIVER_COMMON_HOME . "/w/static-$dstVersionNum/skins";
+	$link = MULTIVER_COMMON_APACHE . "/php-$dstVersionNum/skins";
 	createSymlink( $path, $link, "Created /w/static-$dstVersionNum/skins symlink." );
 
-	$path = "$commonHomeDir/w/static-$dstVersionNum/extensions";
-	$link = "$commonLocalDir/php-$dstVersionNum/extensions";
+	$path = MULTIVER_COMMON_HOME . "/w/static-$dstVersionNum/extensions";
+	$link = MULTIVER_COMMON_APACHE . "/php-$dstVersionNum/extensions";
 	createSymlink( $path, $link, "Created /w/static-$dstVersionNum/extensions symlink." );
 
-	$path = "$commonHomeDir/w/static-$dstVersionNum/resources";
-	$link = "$commonLocalDir/php-$dstVersionNum/resources";
+	$path = MULTIVER_COMMON_HOME . "/w/static-$dstVersionNum/resources";
+	$link = MULTIVER_COMMON_APACHE . "/php-$dstVersionNum/resources";
 	createSymlink( $path, $link, "Created /w/static-$dstVersionNum/resources symlink." );
 
 	# Create l10n cache dir
@@ -167,3 +168,4 @@ function createSymlink( $path, $link, $createdMsg ) {
 }
 
 checkoutMediaWiki();
+updateBitsBranchPointers();
