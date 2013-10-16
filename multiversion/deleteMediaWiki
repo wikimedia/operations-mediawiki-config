@@ -2,7 +2,8 @@
 <?php
 error_reporting( E_ALL );
 
-require_once( dirname( __FILE__ ) . '/defines.php' );
+require_once( './defines.php' );
+require_once './updateBitsBranchPointers.php';
 
 /**
  * Delete various symlinks created by checkoutMediaWiki.
@@ -91,3 +92,4 @@ function deleteDirectory( $path ) {
 }
 
 deleteMediaWiki();
+updateBitsBranchPointers();
