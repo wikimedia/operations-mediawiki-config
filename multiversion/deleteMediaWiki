@@ -91,3 +91,4 @@ function deleteDirectory( $path ) {
 }
 
 deleteMediaWiki();
+require_once 'updateBitsBranchPointers.php';
