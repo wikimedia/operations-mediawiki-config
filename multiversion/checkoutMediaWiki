@@ -2,6 +2,9 @@
 <?php
 error_reporting( E_ALL );
 
+define( 'MW_COMMON_SOURCE', getenv( 'MW_COMMON_SOURCE' ) ?: '/a/common' );
+define( 'MW_COMMON', getenv( 'MW_COMMON' ) ?: '/usr/local/apache/common-local' );
+
 /**
  * Automatically git clone a MediaWiki version and do some basic wmf setup.
  * LocalSettings.php will be created (which loads CommonSettings.php) and various
@@ -19,8 +22,6 @@ error_reporting( E_ALL );
  */
 function checkoutMediaWiki() {
 	global $argv;
-	$commonHomeDir = '/a/common';
-	$commonLocalDir = '/usr/local/apache/common-local';
 
 	$argsValid = false;
 	if ( count( $argv ) >= 3 ) {
@@ -37,7 +38,7 @@ function checkoutMediaWiki() {
 	}
 
 	# MW install path
-	$destIP = "$commonHomeDir/$dstVersion";
+	$destIP = MW_COMMON_SOURCE . "/$dstVersion";
 
 	if ( !file_exists( $destIP ) ) {
 		passthru( 'git clone -n ' .
@@ -106,37 +107,37 @@ EOT;
 	createSymlink( $path, $link, "Created StartProfiler.php symlink." );
 
 	# Create static- symlinks for bits.wikimedia.org...
-	$bitsStaticDir = "$commonHomeDir/docroot/bits/static-$dstVersionNum";
+	$bitsStaticDir = MW_COMMON_SOURCE . "/docroot/bits/static-$dstVersionNum";
 	if ( !file_exists( $bitsStaticDir ) ) {
 		mkdir( $bitsStaticDir, 0775 );
 	}
-	$path = "$commonHomeDir/docroot/bits/static-$dstVersionNum/skins";
-	$link = "$commonLocalDir/php-$dstVersionNum/skins/";
+	$path = MW_COMMON_SOURCE . "/docroot/bits/static-$dstVersionNum/skins";
+	$link = MW_COMMON . "/php-$dstVersionNum/skins/";
 	createSymlink( $path, $link, "Created bits/static-$dstVersionNum/skins symlink." );
 
-	$path = "$commonHomeDir/docroot/bits/static-$dstVersionNum/extensions";
-	$link = "$commonLocalDir/php-$dstVersionNum/extensions";
+	$path = MW_COMMON_SOURCE . "/docroot/bits/static-$dstVersionNum/extensions";
+	$link = MW_COMMON . "/php-$dstVersionNum/extensions";
 	createSymlink( $path, $link, "Created bits/static-$dstVersionNum/extensions symlink." );
 
-	$path = "$commonHomeDir/docroot/bits/static-$dstVersionNum/resources";
-	$link = "$commonLocalDir/php-$dstVersionNum/resources";
+	$path = MW_COMMON_SOURCE . "/docroot/bits/static-$dstVersionNum/resources";
+	$link = MW_COMMON . "/php-$dstVersionNum/resources";
 	createSymlink( $path, $link, "Created bits/static-$dstVersionNum/resources symlink." );
 
 	# Create static- symlinks for /w...
-	$liveStaticDir = "$commonHomeDir/w/static-$dstVersionNum";
+	$liveStaticDir = MW_COMMON_SOURCE . "/w/static-$dstVersionNum";
 	if ( !file_exists( $liveStaticDir ) ) {
 		mkdir( $liveStaticDir, 0775 );
 	}
-	$path = "$commonHomeDir/w/static-$dstVersionNum/skins";
-	$link = "$commonLocalDir/php-$dstVersionNum/skins";
+	$path = MW_COMMON_SOURCE . "/w/static-$dstVersionNum/skins";
+	$link = MW_COMMON . "/php-$dstVersionNum/skins";
 	createSymlink( $path, $link, "Created /w/static-$dstVersionNum/skins symlink." );
 
-	$path = "$commonHomeDir/w/static-$dstVersionNum/extensions";
-	$link = "$commonLocalDir/php-$dstVersionNum/extensions";
+	$path = MW_COMMON_SOURCE . "/w/static-$dstVersionNum/extensions";
+	$link = MW_COMMON . "/php-$dstVersionNum/extensions";
 	createSymlink( $path, $link, "Created /w/static-$dstVersionNum/extensions symlink." );
 
-	$path = "$commonHomeDir/w/static-$dstVersionNum/resources";
-	$link = "$commonLocalDir/php-$dstVersionNum/resources";
+	$path = MW_COMMON_SOURCE . "/w/static-$dstVersionNum/resources";
+	$link = MW_COMMON . "/php-$dstVersionNum/resources";
 	createSymlink( $path, $link, "Created /w/static-$dstVersionNum/resources symlink." );
 
 	# Create l10n cache dir
