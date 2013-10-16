@@ -1,0 +1,76 @@
+#!/usr/bin/env php
+<?php
+/**
+ * Create/update symlinks from docroot/bits/static-current & docroot/bits/static-stable
+ * to the latest and next-to-latest production branches, respectively. These symlinks
+ * are used to provide stable URLs to large static assets that are served by extensions
+ * and which do not change frequently.
+ *
+ * Usage: updateBitsBranchPointers [OPTIONS]
+ *
+ * Options:
+ *   --dry-run: Don't touch the file system; only show what would be done.
+ *
+ */
+error_reporting( E_ALL );
+require_once './defines.php';
+
+$dryRun = isset( $argv[1] ) && $argv[1] === '--dry-run';
+$script = $argv[0];
+
+$branchDirs = glob( MULTIVER_COMMON_APACHE . '/php-*', GLOB_ONLYDIR );
+
+if ( !is_array( $branchDirs ) || count( $branchDirs ) < 1 ) {
+	fwrite( STDERR, $script . ': no deployment branch directories found in ' . MULTIVER_COMMON_APACHE . "\n" );
+	exit( 1 );
+}
+
+$branches = array();
+$branches['current'] = array_pop( $branchDirs );
+// If there's only one deployment branch, make both 'current' & 'stable' symlinks refer to it.
+$branches['stable'] = array_pop( $branchDirs ) ?: $branches['current'];
+
+foreach( $branches as $branch => $target ) {
+	echo "Updating $branch branch pointer...\n";
+
+	$parent = MULTIVER_COMMON_HOME . "/docroot/bits/static-$branch";
+
+	if ( !$dryRun && !file_exists( $parent ) && !mkdir( $parent, 0775 ) ) {
+		fwrite( STDERR, $script . ": $parent does not exist and could not be created.\n" );
+		exit( 1 );
+	}
+
+	foreach( array( 'skins', 'extensions', 'resources' ) as $child ) {
+		$link = $parent . '/' . $child;
+		$dest = $target . '/' . $child;
+
+		if ( !file_exists( $dest ) ) {
+			fwrite( STDERR, $script . ": link target $dest does not exist.\n" );
+			exit( 1 );
+		}
+
+		if ( file_exists( $link ) ) {
+			if ( realpath( $link ) === $dest ) {
+				echo "$link is already up-to-date.\n";
+				continue;
+			}
+
+			if ( !is_link( $link ) ) {
+				fwrite( STDERR, $script . ": $link exists and is not a symbolic link.\n" );
+				exit( 1 );
+			}
+
+			if ( !$dryRun && !unlink( $link ) ) {
+				fwrite( STDERR, $script . ": failed to unlink $link\n" );
+				exit( 1 );
+			}
+		}
+
+		if ( !$dryRun && !symlink( $dest, $link ) ) {
+			fwrite( STDERR, $script . ": failed to create $link\n" );
+			exit( 1 );
+		}
+		echo "$link => $dest\n";
+	}
+	echo "\n";
+}
