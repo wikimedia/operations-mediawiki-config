@@ -2465,6 +2465,10 @@ if ( $wmgUseUniversalLanguageSelector ) {
 		$wgULSNoImeSelectors[] = '.ace_editor textarea';
 	}
 
+	// Fetch fonts from stable URLs so that they're cached longer.
+	$wgULSFontRepositoryBasePath = ( 'https://bits.wikimedia.org/static-current/extensions'
+		. '/UniversalLanguageSelector/data/fontrepo/fonts/' );
+
 	$wgULSEventLogging = $wmgULSEventLogging;
 }
 
