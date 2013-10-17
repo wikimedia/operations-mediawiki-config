@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_ba662b52",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 6778,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2013-10-17T00:59:55Z",
+      "side": 1,
+      "message": "I believe enwiki also wants this group to have tboverride, so users in this group can edit subpages of Template:Editnotices",
+      "revId": "e72b7fbf0824ceb0bdda6a31c21b3cb291f58b74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
