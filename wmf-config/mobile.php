@@ -75,7 +75,7 @@ if ( $wmgUseEventLogging ) {
 		'class' => 'ResourceLoaderSchemaModule',
 		'schema' => 'MobileWebEditing',
 		'targets' => 'mobile',
-		'revision' => 5644223,
+		'revision' => 6077315,
 	);
 
 	$wgResourceModules[ 'schema.MobileWebClickTracking' ] = array(
