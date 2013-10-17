@@ -1,0 +1,9 @@
+Verified+2: jenkins-bot
+Code-Review+1: Ori.livneh <ori@wikimedia.org>
+Code-Review+1: Swalling <swalling@wikimedia.org>
+Code-Review+2: Mattflaschen <mflaschen@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Thu, 17 Oct 2013 20:14:57 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/90045
+Project: operations/mediawiki-config
+Branch: refs/heads/master
