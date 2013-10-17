@@ -8629,6 +8629,7 @@ $wgConf->settings = array(
 	'alswikibooks' => array( 'b:de', 'w' ),
 	'arbcom_enwiki' => array( 'meta', 'w' ),
 	'arbcom_dewiki' => array( 'w', 'w:de', ),
+	'arwiki' => array( 'meta' ),
 	'arwikibooks' => array( 'w' ),
 	'arwikinews' => array( 'w' ),
 	'arwikisource' => array( 'w' ),
