@@ -19,7 +19,7 @@ function isMain() {
 	return basename( __FILE__ ) === basename( $_SERVER['SCRIPT_FILENAME'] );
 }
 
-function updateBitsBranchPointers( $dryRun ) {
+function updateBitsBranchPointers( $dryRun = false ) {
 	$branchDirs = glob( MULTIVER_COMMON_APACHE . '/php-*', GLOB_ONLYDIR );
 
 	if ( !is_array( $branchDirs ) || count( $branchDirs ) < 1 ) {
