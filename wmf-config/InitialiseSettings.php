@@ -12675,6 +12675,7 @@ $wgConf->settings = array(
 	'cawiki' => true,
 	'enwikisource' => true,
 	'itwiktionary' => true,
+	'loginwiki' => true,
 	'mediawikiwiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
