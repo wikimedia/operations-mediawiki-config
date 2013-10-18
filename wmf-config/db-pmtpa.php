@@ -131,7 +131,7 @@ $wgLBFactoryConf = array(
 		'db50'	   => 1000, # innodb_file_per_table
 	),
 	's7' => array(
-		'db1041' => 0,
+		'db1039' => 0,
 		'db37'  => 0, # pmtpa master
 		'db56'  => 400, # snapshot host
 		'db58'	=> 500,
