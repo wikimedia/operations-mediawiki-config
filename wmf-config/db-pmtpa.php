@@ -339,7 +339,7 @@ $wgLBFactoryConf = array(
 #	'DEFAULT' => 'Brief Database Maintenance in progress, please try again in 3 minutes', #s3
 #	's1'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
 #	's5'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
-	's3'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
+#	's3'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
 ),
 
 );
