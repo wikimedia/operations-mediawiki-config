@@ -8,3 +8,6 @@ require_once( __DIR__ . '/mobile.php' );
 
 $wgMFForceSecureLogin = false;
 $wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
+
+// Zero extension
+$wgEnableZeroRatedMobileAccessTesting = true;
