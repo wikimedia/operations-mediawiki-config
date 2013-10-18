@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0932edd2_711cce75",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6395,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2013-10-18T19:57:28Z",
+      "side": 1,
+      "message": "This seems really high to me. A normal user agent is going to cap at 3-5 simultaneous requests to the backend. Even if viewing a gallery with 100 images per page I can\u0027t see getting anywhere near 900/min throughput. Am I missing a zerg rush use case or were you just aiming for \"so high it will never trigger\" with this number?",
+      "revId": "c78a54c98fdaf6aa3a12151970d27f860758687b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
