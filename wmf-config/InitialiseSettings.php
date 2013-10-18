@@ -12670,15 +12670,7 @@ $wgConf->settings = array(
 
 'wmgUseCirrus' => array(
 	'default' => false,
-	'closed' => true,
-	'cawiki' => true,
-	'enwikisource' => true,
-	'itwiktionary' => true,
-	'loginwiki' => true,
-	'mediawikiwiki' => true,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'testwikidatawiki' => true,
+	'cirrus' => true,
 ),
 
 'wmgUseCirrusAsAlternative' => array(

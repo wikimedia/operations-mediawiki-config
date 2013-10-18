@@ -57,6 +57,7 @@ mwconfig_files_txt=(
 mwconfig_files=(
 	all.dblist
 	all-labs.dblist
+	cirrus.dblist
 	closed.dblist
 	deleted.dblist
 	echowikis.dblist
