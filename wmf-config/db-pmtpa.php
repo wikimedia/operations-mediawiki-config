@@ -102,7 +102,7 @@ $wgLBFactoryConf = array(
 		'db57'	  => 300, # innodb_file_per_table
 	),
 	/* s3 */ 'DEFAULT' => array(
-		'db1019'    => 0,
+		'db1038'  => 0,
 		'db34'	  => 0, # pmtpa master
 		'db39'    => 400,
 		#'db64'	  => 200, # py: 2013-06-17: bad bbu
@@ -114,7 +114,6 @@ $wgLBFactoryConf = array(
 		'db51'	 => 300,
 		'db65'	 => 300, # Snapshot host # innodb_file_per_table
 		'db72'	 => 500, # innodb_file_per_table
-		#'db1038'   => 0, # was 5.1-fb master
 	),
 	's5' => array(
 		'db1058'   => 0,
@@ -340,6 +339,7 @@ $wgLBFactoryConf = array(
 #	'DEFAULT' => 'Brief Database Maintenance in progress, please try again in 3 minutes', #s3
 #	's1'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
 #	's5'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
+	's3'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
 ),
 
 );

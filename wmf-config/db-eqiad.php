@@ -102,10 +102,10 @@ $wgLBFactoryConf = array(
 		'db1018'    => 100, # snaphsot
 	),
 	/* s3 */ 'DEFAULT' => array(
-		'db1019'    => 0,
+		#'db1019'    => 0,
+		'db1038'    => 0,
 		'db1003'    => 400,
 		'db1010'    => 400,
-		'db1038'    => 400,
 		'db1035'    => 100, # snapshot
 	),
 	's4' => array(
@@ -333,6 +333,7 @@ $wgLBFactoryConf = array(
 #	'DEFAULT' => 'Brief Database Maintenance in progress, please try again in 3 minutes', #s3
 #	's1'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
 #	's5'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
+	's3'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
 ),
 
 );
