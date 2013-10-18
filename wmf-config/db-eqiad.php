@@ -95,7 +95,8 @@ $wgLBFactoryConf = array(
 		'db1037'    => 300, # 1.4TB sas 64GB
 	),
 	's2' => array(
-		'db1034'    => 0,
+		'db1033'    => 0, # haproxy
+		#'db1034'    => 0,
 		'db1036'    => 400,
 		'db1002'    => 400,
 		'db1009'    => 400,
@@ -235,6 +236,7 @@ $wgLBFactoryConf = array(
 	'db1026' => '10.64.16.15', #do not remove or comment out
 	'db1027' => '10.64.16.16', #do not remove or comment out
 	'db1028' => '10.64.16.17', #do not remove or comment out
+	'db1033' => '10.64.16.22', #do not remove or comment out
 	'db1034' => '10.64.16.23', #do not remove or comment out
 	'db1035' => '10.64.16.24', #do not remove or comment out
 	'db1036' => '10.64.16.25', #do not remove or comment out
