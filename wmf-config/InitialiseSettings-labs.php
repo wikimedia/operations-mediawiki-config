@@ -223,9 +223,9 @@ return array(
 		'commonswiki' => '',
 		'mediawikiwiki' => '',//'m.%h1.%h2',
 	),
-	'wmgZeroRatedMobileAccess' => array(
-		'default' => false,
-	),
+//	'wmgZeroRatedMobileAccess' => array(
+//		'default' => false,
+//	),
 	'wmgMFPhotoUploadEndpoint' => array(
 		'default' => '//commons.wikimedia.beta.wmflabs.org/w/api.php',
 	),
