@@ -95,7 +95,7 @@ $wgLBFactoryConf = array(
 		'db71'    => 400, # innodb_file_per_table
 	),
 	's2' => array(
-		'db1034'    => 0,
+		'db1036'    => 0,
 		'db54'	  => 0, # pmtpa master
 		'db52'	  => 300,
 		'db53'	  => 100, # snapshot host
@@ -242,6 +242,7 @@ $wgLBFactoryConf = array(
 	'db1028' => '10.64.16.17', #do not remove or comment out
 	'db1034' => '10.64.16.23', #do not remove or comment out
 	'db1035' => '10.64.16.24', #do not remove or comment out
+	'db1036' => '10.64.16.25', #do not remove or comment out
 	'db1037' => '10.64.16.26', #do not remove or comment out
 	'db1038' => '10.64.16.27', #do not remove or comment out
 	'db1039' => '10.64.16.28', #do not remove or comment out

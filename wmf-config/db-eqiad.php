@@ -95,9 +95,8 @@ $wgLBFactoryConf = array(
 		'db1037'    => 300, # 1.4TB sas 64GB
 	),
 	's2' => array(
-		'db1033'    => 0, # haproxy
 		#'db1034'    => 0,
-		#'db1036'    => 400,
+		'db1036'    => 0,
 		'db1002'    => 400,
 		'db1009'    => 400,
 		'db1018'    => 100, # snaphsot
