@@ -11111,6 +11111,7 @@ $wgConf->settings = array(
 	'itwikiquote' => true, // bug 40628
 	'itwikivoyage' => true, // bug 43274
 	'jawiki' => true, // bug 32312
+	'kowiki' => true, // bug 55914
 	'mediawikiwiki' => true,
 	'mkwiki' => true, // bug 31831
 	'mlwiki' => true, // bug 30500
