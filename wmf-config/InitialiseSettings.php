@@ -12059,6 +12059,14 @@ $wgConf->settings = array(
 			'frequency' => 'weekly',
 		),
 	),
+	'fawiki' => array ( // Bug 55884
+		'dyk' => array(
+			'frequency' => 'weekly',
+		),
+		'featured' => array(
+			'frequency' => 'weekly',
+		),
+	),
 ),
 'wmgReduceStartupExpiry' => array(
 	'default' => false,
