@@ -12054,6 +12054,16 @@ $wgConf->settings = array(
 ),
 'wmgFeaturedFeedsOverrides' => array(
 	'default' => array(),
+
+	'fawiki' => array ( // Bug 55884
+		'dyk' => array(
+			'frequency' => 'weekly',
+		),
+		'featured' => array(
+			'frequency' => 'weekly',
+		),
+	),
+
 	'frwikisource' => array( // Bug 39919
 		'featuredtexts' => array(
 			'frequency' => 'weekly',
