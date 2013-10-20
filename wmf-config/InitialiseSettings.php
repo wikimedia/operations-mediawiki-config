@@ -9678,6 +9678,14 @@ $wgConf->settings = array(
 
 'wgAppleTouchIcon' => array(
 	'default' => false, // iOS searches for icons in docroot by default
+
+	'commonswiki' => '//bits.wikimedia.org/apple-touch/commons.png',
+	'mediawikiwiki' => '//bits.wikimedia.org/apple-touch/mediawiki.png',
+	'usabilitywiki' => '//bits.wikimedia.org/apple-touch/usability.png',
+	'wikinews' => '//bits.wikimedia.org/apple-touch/wikinews.png',
+	'wiki' => '//bits.wikimedia.org/apple-touch/wikipedia.png',
+	'wiktionary' => '//bits.wikimedia.org/apple-touch/wiktionary.png',
+
 	'enwiktionary' => '//bits.wikimedia.org/apple-touch/wiktionary/en.png', // bug 46431
 ),
 
