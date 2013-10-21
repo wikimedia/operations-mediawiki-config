@@ -493,6 +493,7 @@ if ( $wmgUseCORS ) {
 		'wikidata.org',
 		'*.wikivoyage.org',
 		'www.mediawiki.org',
+		'm.mediawiki.org',
 		'wikimediafoundation.org',
 		'advisory.wikimedia.org',
 		'auditcom.wikimedia.org',
