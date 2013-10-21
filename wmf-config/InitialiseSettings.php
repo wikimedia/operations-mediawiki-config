@@ -10560,8 +10560,8 @@ $wgConf->settings = array(
 
 'wmgVisualEditorNamespaces' => array(
 	// NS_VISUALEDITOR is added in CommonSettings.php if wmgUseVisualEditorNamespace is true
-	'default' => array( NS_MAIN, NS_USER ),
-	'mediawikiwiki' => array( NS_MAIN, NS_USER, NS_PROJECT, NS_IMAGE, NS_HELP, NS_CATEGORY, 100, 102, 104, ), // Bug 48430
+	'default' => array( NS_MAIN, NS_USER, NS_FILE, NS_HELP, NS_CATEGORY ),
+	'+mediawikiwiki' => array( NS_PROJECT, 100 /* Manual */, 102 /* Extension */, 104 /* API */ ), // Bug 48430
 ),
 
 // Should a namespace in which VisualEditor is enabled by default for all users (including anons)
