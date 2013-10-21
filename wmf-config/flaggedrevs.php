@@ -487,10 +487,15 @@ elseif ( $wgDBname == 'ptwiki' ) { // bug 54828
 	# Group permissions
 	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
 	$wgGroupPermissions['autoreviewer']['review'] = true;
+	$wgGroupPermissions['autoreviewer']['validate'] = true;
 	$wgGroupPermissions['rollbacker']['review'] = true;
+	$wgGroupPermissions['rollbacker']['validate'] = true;
 	$wgGroupPermissions['eliminator']['review'] = true;
+	$wgGroupPermissions['eliminator']['validate'] = true;
 	$wgGroupPermissions['bureaucrat']['review'] = true;
+	$wgGroupPermissions['bureaucrat']['validate'] = true;
 	$wgGroupPermissions['sysop']['review'] = true;
+	$wgGroupPermissions['sysop']['validate'] = true;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 
 	# Remove 'editor', 'reviewer' and 'autoreview' groups
