@@ -141,7 +141,7 @@ $wgFileBackends[] = array(
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 		array( 'template' => 'local-swift', 'isMultiMaster' => true ),
-		# array( 'template' => 'local-swift-eqiad', 'isMultiMaster' => false ),
+		array( 'template' => 'local-swift-eqiad', 'isMultiMaster' => false ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'autoResync'  => 'conservative' // bug 39221
@@ -155,7 +155,7 @@ $wgFileBackends[] = array(
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 		array( 'template' => 'shared-swift', 'isMultiMaster' => true ),
-		# array( 'template' => 'shared-swift-eqiad', 'isMultiMaster' => false ),
+		array( 'template' => 'shared-swift-eqiad', 'isMultiMaster' => false ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'autoResync'  => 'conservative' // bug 39221
@@ -168,7 +168,7 @@ $wgFileBackends[] = array(
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 		array( 'template' => 'global-swift', 'isMultiMaster' => true ),
-		# array( 'template' => 'global-swift-eqiad', 'isMultiMaster' => false ),
+		array( 'template' => 'global-swift-eqiad', 'isMultiMaster' => false ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'autoResync'  => 'conservative'
