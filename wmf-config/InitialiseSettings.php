@@ -12682,6 +12682,7 @@ $wgConf->settings = array(
 
 'wmgUseCirrusAsAlternative' => array(
 	'default' => false,
+	'bnwiki' => true,
 ),
 
 // Note that changing this on any supported (English) wiki requires an in place
