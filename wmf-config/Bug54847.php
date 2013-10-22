@@ -191,7 +191,7 @@ $wgHooks['AbortChangePassword'][] = function ( $user, $password, $newpassword, &
 				__METHOD__
 			);
 			if ( $res !== false && User::comparePasswords( $res->user_password, $newpassword ) ) {
-				$result = 'password-recycled';
+				$errorMsg = 'password-recycled';
 				return false;
 			}
 		}
@@ -204,7 +204,7 @@ $wgHooks['AbortChangePassword'][] = function ( $user, $password, $newpassword, &
 			__METHOD__
 		);
 		if ( $res !== false && User::comparePasswords( $res->user_password, $newpassword ) ) {
-			$result = 'password-recycled';
+			$errorMsg = 'password-recycled';
 			return false;
 		}
 	}
