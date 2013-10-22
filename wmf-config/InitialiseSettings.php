@@ -10563,6 +10563,7 @@ $wgConf->settings = array(
 	'default' => array( NS_MAIN, NS_USER, NS_FILE, NS_HELP, NS_CATEGORY ),
 	'+mediawikiwiki' => array( NS_PROJECT, 100 /* Manual */, 102 /* Extension */, 104 /* API */ ), // Bug 48430
 	'+cawiki' => array( 100 /* Portal */, 102 /* Viquiprojecte */ ), // Bug 56000
+	'+enwiki' => array( 100 /* Portal */, 108 /* Book */ ), // Bug 56001
 ),
 
 // Should a namespace in which VisualEditor is enabled by default for all users (including anons)
