@@ -6401,6 +6401,14 @@ $wgConf->settings = array(
 			// practicality has won out over paranoia on enwiki, raising from 20 to 100 -- TS 2008-05-21
 			'rollbacker' => array( 100, 60 ),
 		),
+		'linkpurge' => array(
+			// 30 backlink purges per minute
+			'user' => array( 30, 60 ),
+		),
+		'renderfile' => array(
+			// 1800 new thumbnails per minute
+			'user' => array( 900, 30 ),
+		),
 	),
 ),
 # @} end of wgRateLimits
