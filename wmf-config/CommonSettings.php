@@ -1809,8 +1809,9 @@ if ( $wgUseContributionTracking ) {
 
 if ( $wmgUseMassMessage ) {
 	require_once( "$IP/extensions/MassMessage/MassMessage.php" );
-	// Uncomment the line below once deployed to all wikis
-	// $wgMassMessageAccountUsername = 'EdwardsBot';
+	$wgMassMessageAccountUsername = 'MediaWiki message delivery';
+	$wgNamespacesToPostIn = $wmgNamespacesToPostIn;
+	$wgAllowGlobalMessaging = $wmgAllowGlobalMessaging;
 }
 
 if ( $wmgUseUploadWizard ) {
