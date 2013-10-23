@@ -10441,9 +10441,16 @@ $wgConf->settings = array(
 ),
 
 'wmgUseMassMessage' => array(
+	'default' => true,
+),
+
+'wgNamespacesToPostIn' => array(
+	'+metawiki' => array( NS_MAIN )
+),
+
+'wgAllowGlobalMessaging' => array(
 	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true
+	'metawiki' => true,
 ),
 
 'wmgUseUploadWizard' => array(
