@@ -10546,8 +10546,7 @@ $wgConf->settings = array(
 ),
 
 'wmgMinimumVideoPlayerSize' => array(
-	'default' => 200,
-	'enwiki' => 800, // beta testing -- Kaldari 2013-05-30
+	'default' => 800,
 ),
 
 // -------------- VisualEditor start --------------
