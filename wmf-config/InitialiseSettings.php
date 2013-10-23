@@ -1334,6 +1334,7 @@ $wgConf->settings = array(
 	'aswikisource'	=> 'ৱিকিউৎস', // Bug 43129
 	'auditcomwiki'  => 'Audit Committee',
 	'azwiki'	=> 'Vikipediya',
+	'azwikibooks'	=> 'Vikikitab', // bug 31068
 	'azwikiquote'   => 'Vikisitat',
 	'azwikisource'  => 'VikiMənbə',
 	'bawiki'        => 'Википедия', // Bug 41167
@@ -2333,6 +2334,10 @@ $wgConf->settings = array(
 		'CAT' => NS_CATEGORY,
 		"বাটচ'ৰা" => 100,
 		"বাটচ'ৰা_আলোচনা" => 101,
+	),
+	'+azwikibooks' => array(
+		'Wikibooks_müzakirəsi' => NS_PROJECT_TALK, // bug 31068
+		'Wikibooks_talk' => NS_PROJECT_TALK, // bug 31068
 	),
 	'+azwikiquote' => array(
 		'Wikiquote'      => NS_PROJECT,
@@ -5428,8 +5433,6 @@ $wgConf->settings = array(
 	'azwikibooks' => array(
 		102 => 'Resept', // Recipe
 		103 => 'Resept_müzakirəsi', // Recipe talk
-		104 => 'Vikikitab', // Wikibooks
-		105 => 'Vikikitab_müzakirəsi', // Wikibooks talk
 		110 => 'Vikiuşaq', // Wikijunior, bug 31067
 		111 => 'Vikiuşaq_müzakirəsi',
 	),
