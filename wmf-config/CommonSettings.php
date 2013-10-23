@@ -1820,8 +1820,8 @@ if ( $wgUseContributionTracking ) {
 
 if ( $wmgUseMassMessage ) {
 	require_once( "$IP/extensions/MassMessage/MassMessage.php" );
-	// Uncomment the line below once deployed to all wikis
-	// $wgMassMessageAccountUsername = 'EdwardsBot';
+	$wgNamespacesToPostIn = $wmgNamespacesToPostIn;
+	$wgAllowGlobalMessaging = $wmgAllowGlobalMessaging;
 }
 
 if ( $wmgUseUploadWizard ) {
