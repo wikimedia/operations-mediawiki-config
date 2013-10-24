@@ -99,19 +99,16 @@ mwconfig_files=(
 # Create non-txt symlink from /home/wikipedia/conf
 other_config_file=(
 	httpd/all.conf
-	httpd/en2.conf
 	httpd/foundation.conf
-	httpd/ganglia.conf
 	httpd/main.conf
-	httpd/nagios.conf
 	httpd/nonexistent.conf
-	httpd/postrewrites.conf
 	httpd/redirects.conf
 	httpd/remnant.conf
 	httpd/search.wikimedia.conf
 	httpd/secure.wikimedia.conf
 	httpd/wikimedia.conf
-	httpd/www.wikipedia.conf
+	httpd/wikimania.conf
+	httpd/wwwportals.conf
 
 	lucene/lsearch-global-2.1.conf
 )
