@@ -55,6 +55,49 @@ if ( $wmgMFEnableDesktopResources ) {
 // Enable appending of TM (text) / (R) (icon) on site name in footer.
 $wgMFTrademarkSitename = $wmgMFTrademarkSitename;
 
+// Enable Schemas for event logging (jdlrobson; 07-Feb-2012)
+if ( $wmgUseEventLogging ) {
+	$wgResourceModules['mobile.watchlist.schema'] = array(
+		'class' => 'ResourceLoaderSchemaModule',
+		'schema' => 'MobileBetaWatchlist',
+		'revision' => 5281061,
+		'targets' => 'mobile',
+	);
+
+	$wgResourceModules['mobile.uploads.schema'] = array(
+		'class' => 'ResourceLoaderSchemaModule',
+		'schema' => 'MobileWebUploads',
+		'revision' => 5383883,
+		'targets' => 'mobile',
+	);
+
+	$wgResourceModules['mobile.editing.schema'] = array(
+		'class' => 'ResourceLoaderSchemaModule',
+		'schema' => 'MobileWebEditing',
+		'targets' => 'mobile',
+		'revision' => 5644223,
+	);
+
+	$wgResourceModules[ 'schema.MobileWebClickTracking' ] = array(
+		'class'  => 'ResourceLoaderSchemaModule',
+		'schema' => 'MobileWebClickTracking',
+		'targets' => 'mobile',
+		'revision' => 5929948,
+	);
+
+	$wgHooks['EnableMobileModules'][] = function( $out, $mode ) {
+		$modules = array(
+			'mobile.uploads.schema',
+			'mobile.watchlist.schema',
+			'mobile.editing.schema',
+			'schema.MobileWebClickTracking',
+		);
+		// add regardless of mode
+		$out->addModules( $modules );
+		return true;
+	};
+}
+
 // Force HTTPS for login/account creation
 $wgMFForceSecureLogin = $wmgMFForceSecureLogin;
 
