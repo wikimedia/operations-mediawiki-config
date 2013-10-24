@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_4dd2165a",
+        "filename": "docroot/noc/conf/activeMWVersions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-10-24T23:36:55Z",
+      "side": 1,
+      "message": "Not sure if hard coding is any better  or worse than having to do something like:\nrequire_once( dirname( dirname( dirname( __DIR__ ) ) ) . \u0027multiversion/activeMWVersions.php\u0027 );",
+      "revId": "f562b859aac3915f283ebe37ce7cef1b6885d990",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_edd2e25a",
+        "filename": "docroot/noc/conf/activeMWVersions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-10-24T23:36:55Z",
+      "side": 1,
+      "message": "To be pretty-fied!",
+      "revId": "f562b859aac3915f283ebe37ce7cef1b6885d990",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
