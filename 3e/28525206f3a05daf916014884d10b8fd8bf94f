@@ -1,0 +1,7 @@
+Verified+2: jenkins-bot
+Code-Review+2: Kaldari <rkaldari@wikimedia.org>
+Submitted-by: Kaldari <rkaldari@wikimedia.org>
+Submitted-at: Thu, 24 Oct 2013 01:34:26 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/91552
+Project: operations/mediawiki-config
+Branch: refs/heads/master
