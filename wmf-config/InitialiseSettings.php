@@ -10447,13 +10447,6 @@ $wgConf->settings = array(
 	'guwikisource' => 'any',      // Bug 40173
 ),
 
-'wgUseContributionTracking' => array(
-	'default' => false,
-	'donatewiki' => true,
-	'foundationwiki' => true,
-	'testwiki' => true,
-),
-
 'wmgUseMassMessage' => array(
 	'default' => false,
 	'testwiki' => true,
