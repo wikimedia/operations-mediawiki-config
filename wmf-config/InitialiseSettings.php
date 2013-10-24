@@ -6158,6 +6158,7 @@ $wgConf->settings = array(
 	'itwikiquote' => true, // bug 12826
 	'itwiktionary' => true, // bug 11424
 	'kshwiki' => true, // bug 8798
+	'mediawikiwiki' => true, // bug 56104
 	'metawiki' => true, // bug 4747
 	'mlwiki' => true,
 	'ndswiki' => true,
