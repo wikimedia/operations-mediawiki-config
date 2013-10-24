@@ -11216,6 +11216,7 @@ $wgConf->settings = array(
 	'default' => '%h0.m.%h1.%h2',
 	'foundationwiki' => 'm.%h0.%h1',
 	'mediawikiwiki' => 'm.%h1.%h2',
+	'sourceswiki' => 'm.%h0.%h1', // bug 36002
 ),
 
 'wmgZeroDisableImages' => array(
