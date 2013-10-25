@@ -6578,10 +6578,11 @@ $wgConf->settings = array(
 		'user' => array( 'patrol' => false ),
 		'autoconfirmed' => array( 'patrol' => false ),
 		'sysop' => array( 'patrol' => true ),
-		'autopatrolled' => array( 'autopatrol' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28717
-		'rollbacker' => array( 'rollback' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28717
-		'reviewer' => array( 'patrol' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28717
-		'flood' => array( 'bot' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28717
+		'autopatrolled' => array( 'autopatrol' => true ), // bug 28717
+		'rollbacker' => array( 'rollback' => true ), // bug 28717
+		'reviewer' => array( 'patrol' => true ), // bug 28717
+		'flood' => array( 'bot' => true ), // bug 28717
+		'filemover' => array( 'movefile' => true ), // bug 56103
 	),
 	'bgwiki' => array(
 		'user' => array( 'upload' => false, ),
@@ -7739,7 +7740,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled' ),
 	),
 	'+bnwiki' => array(
-		'sysop' => array( 'autopatrolled', 'rollbacker', 'flood' ),
+		'sysop' => array( 'autopatrolled', 'filemover', 'flood', 'rollbacker' ),
 		'bureaucrat' => array( 'import' ),
 	),
 	'+bswiki' => array(
@@ -8189,7 +8190,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled' ),
 	),
 	'+bnwiki' => array(
-		'sysop' => array( 'autopatrolled', 'rollbacker', 'flood' ),
+		'sysop' => array( 'autopatrolled', 'filemover', 'flood', 'rollbacker' ),
 		'bureaucrat' => array( 'import' ),
 	),
 	'+bswiki' => array(
