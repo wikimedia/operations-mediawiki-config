@@ -6871,6 +6871,9 @@ $wgConf->settings = array(
 		'autopatrolled' => array(
 			'autopatrol' => true, // bug 55665
 		),
+		'sysop' => array(
+			'mergehistory' => true, // bug 56198
+		),
 	),
 	'eswiktionary' => array(
 		'user' => array( 'upload' => false ), // Bug 7152
