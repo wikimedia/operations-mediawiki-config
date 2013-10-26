@@ -7565,19 +7565,13 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ), // bug 46828
 	),
 	'wikidata' => array(
-		'autopatrolled' => array(
-			'autopatrol' => true, // bug 41907
-			'patrol' => true, // bug 42052
-			'editsemiprotected' => true, // bug 55495
-			'move' => true, // bug 55495
-			'autoconfirmed' => true, // bug 55495
-			'reupload' => true, // bug 55495
-			'skipcaptcha' => true, // bug 55495
-			'transcode-reset' => true, // bug 55495
-			'collectionsaveascommunitypage' => true, // bug 55495
-			'collectionsaveasuserpage' => true, // bug 55495
-			'upload' => true, // bug 55495
-			'abusefilter-log-detail' => true, // bug 55495
+		'confirmed' => array(
+			'patrol' => true, // bug 56203
+			'autopatrol' => true, // bug 56203
+		),
+		'autoconfirmed' => array(
+			'patrol' => true, // bug 56203
+			'autopatrol' => true, // bug 56203
 		),
 		'rollbacker' => array( 
 			'rollback' => true, // bug 45165
@@ -7586,13 +7580,9 @@ $wgConf->settings = array(
 			'editsemiprotected' => true, // bug 55495
 			'move' => true, // bug 55495
 			'autoconfirmed' => true, // bug 55495
-			'reupload' => true, // bug 55495
 			'skipcaptcha' => true, // bug 55495
-			'transcode-reset' => true, // bug 55495
-			'collectionsaveascommunitypage' => true, // bug 55495
-			'collectionsaveasuserpage' => true, // bug 55495
-			'upload' => true, // bug 55495
 			'abusefilter-log-detail' => true, // bug 55495
+			'suppressredirect' => true, // bug 56203
 		),
 		'propertycreator' => array( 
 			'property-create' => true, // bug 46953
@@ -7601,12 +7591,7 @@ $wgConf->settings = array(
 			'editsemiprotected' => true, // bug 55495
 			'move' => true, // bug 55495
 			'autoconfirmed' => true, // bug 55495
-			'reupload' => true, // bug 55495
 			'skipcaptcha' => true, // bug 55495
-			'transcode-reset' => true, // bug 55495
-			'collectionsaveascommunitypage' => true, // bug 55495
-			'collectionsaveasuserpage' => true, // bug 55495
-			'upload' => true, // bug 55495
 			'abusefilter-log-detail' => true, // bug 55495
 		),
 		'sysop' => array( 'property-create' => true ), // bug 46953
@@ -8122,7 +8107,6 @@ $wgConf->settings = array(
 	),
 	'+wikidata' => array(
 		'sysop' => array(
-			'autopatrolled', // bug 41907
 			'rollbacker', // bug 45165
 			'confirmed', // bug 45124
 			'propertycreator', // bug 46953
@@ -8586,7 +8570,6 @@ $wgConf->settings = array(
 	),
 	'+wikidata' => array(
 		'sysop' => array(
-			'autopatrolled', // bug 41907
 			'rollbacker', // bug 45165
 			'confirmed', // bug 45124
 			'propertycreator', // bug 46953
