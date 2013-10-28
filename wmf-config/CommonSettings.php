@@ -1190,7 +1190,8 @@ if ( $wmgUseCentralAuth ) {
 
 	# Broken -- TS
 	if( $wmfRealm == 'production' ) {
-		$wgCentralAuthUDPAddress = $wgRC2UDPAddress;
+		$wgRC2UDPPort = $wmgRC2UDPPort;
+		$wgCentralAuthUDPAddress = $wmgRC2UDPAddress;
 		$wgCentralAuthNew2UDPPrefix = "#central\t";
 	}
 
@@ -2694,12 +2695,20 @@ if ( file_exists( "$wmfConfigDir/ext-$wmfRealm.php" ) ) {
 // https://bugzilla.wikimedia.org/show_bug.cgi?id=37211
 $wgUseCombinedLoginLink = false;
 
-if ( $wgRC2UDPPrefix === false ) {
-	$matches = null;
-	preg_match( '/^\/\/(.+).org$/', $wgServer, $matches );
-	if ( isset( $matches[1] ) ) {
-		$wgRC2UDPPrefix = "#{$matches[1]}\t";
+if ( $wmgUseRC2UDP ) {
+	if ( $wmgRC2UDPPrefix === false ) {
+		$matches = null;
+		if ( preg_match( '/^\/\/(.+).org$/', $wgServer, $matches ) && isset( $matches[1] ) ) {
+			$wmgRC2UDPPrefix = "#{$matches[1]}\t";
+		}
 	}
+
+	$wgRCFeeds['default'] = array(
+		'formatter' => 'IRCColourfulRCFeedFormatter',
+		'uri' => "udp://$wmgRC2UDPAddress:$wmgRC2UDPPort/$wmgRC2UDPPrefix", // pmtpa: ekrem
+		'add_interwiki_prefix' => false,
+		'omit_bots' => false,
+	);
 }
 
 // Confirmed can do anything autoconfirmed can.
