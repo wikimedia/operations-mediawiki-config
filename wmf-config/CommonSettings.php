@@ -1190,7 +1190,7 @@ if ( $wmgUseCentralAuth ) {
 
 	# Broken -- TS
 	if( $wmfRealm == 'production' ) {
-		$wgCentralAuthUDPAddress = $wgRC2UDPAddress;
+		$wgCentralAuthUDPAddress = $wmgRC2UDPAddress;
 		$wgCentralAuthNew2UDPPrefix = "#central\t";
 	}
 
@@ -2694,12 +2694,21 @@ if ( file_exists( "$wmfConfigDir/ext-$wmfRealm.php" ) ) {
 // https://bugzilla.wikimedia.org/show_bug.cgi?id=37211
 $wgUseCombinedLoginLink = false;
 
-if ( $wgRC2UDPPrefix === false ) {
-	$matches = null;
-	preg_match( '/^\/\/(.+).org$/', $wgServer, $matches );
-	if ( isset( $matches[1] ) ) {
-		$wgRC2UDPPrefix = "#{$matches[1]}\t";
+if ( $wmgRC2UDPAddress !== false ) {
+	if ( $wmgRC2UDPPrefix === false ) {
+		$matches = null;
+		preg_match( '/^\/\/(.+).org$/', $wgServer, $matches );
+		if ( isset( $matches[1] ) ) {
+			$wgRC2UDPPrefix = "#{$matches[1]}\t";
+		}
 	}
+
+	$wgRCFeeds['default'] = array(
+		'formatter' => 'IRCColourfulRCFeedFormatter',
+		'uri' => "udp://$wmgRC2UDPAddress:9390/$wmgRC2UDPPrefix",
+		'add_interwiki_prefix' => false,
+		'omit_bots' => false,
+	);
 }
 
 // Confirmed can do anything autoconfirmed can.
