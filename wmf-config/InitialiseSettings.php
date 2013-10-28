@@ -359,7 +359,7 @@ $wgConf->settings = array(
 	// Projects
 	'default' => '//upload.wikimedia.org/wikipedia/commons/d/d6/Wikipedia-logo-v2-en.png',
 	'wikibooks' => '//upload.wikimedia.org/wikipedia/commons/4/49/Wikibooks-logo-en-noslogan.png',
-	'wikidata' => '//upload.wikimedia.org/wikipedia/commons/e/e4/Wikidata-logo-en-135px.png',
+	'wikidata' => '//upload.wikimedia.org/wikipedia/commons/thumb/1/18/Wikidata_cupcake_2.svg/135px-Wikidata_cupcake_2.svg.png',
 	'wikinews' => '$stdlogo',
 	'wikiquote' => '//upload.wikimedia.org/wikiquote/en/b/bc/Wiki.png',
 	'wikisource' => '//upload.wikimedia.org/wikipedia/sources/b/bc/Wiki.png',
