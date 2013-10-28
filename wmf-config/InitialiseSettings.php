@@ -12669,6 +12669,7 @@ $wgConf->settings = array(
 'wmgUseCirrusAsAlternative' => array(
 	'default' => false,
 	'bnwiki' => true,
+	'wikidatawiki' => true,
 	'wikivoyage' => true,
 ),
 
