@@ -9321,30 +9321,30 @@ $wgConf->settings = array(
 ),
 
 'wmgUseDPL' => array(
-	// controls loading of DynamicPageList extension
+	// DynamicPageList extension
 	'default' => false,
-	'bswiki' => true, # 8240
-	'dewikisource' => true, # 8563
-	'dewiktionary' => true,
-	'enwikisource' => true, # 8563
-	'enwiktionary' => true,
-	'eswiktionary' => true, # 7952
-	'frrwiki' => true, # 38023
-	'hewikisource' => true, # 8563
-	'incubatorwiki' => true,
-	'iswiktionary' => true, # 7952
-	'metawiki' => true,
-	'ptwiki' => true, # bug 35308
-	'otrs_wikiwiki' => true,
-	'srwiki' => true,
-	'strategywiki' => true,
-	'viwiktionary' => true, # bug 8886
+
 	'wikibooks' => true,
 	'wikimania' => true,
 	'wikinews' => true,
 	'wikiquote' => true,
 	'wikisource' => true,  # 12423
 	'wikiversity' => true,
+
+	'bswiki' => true, # 8240
+	'dewiktionary' => true,
+	'enwiktionary' => true,
+	'eswiktionary' => true, # 7952
+	'frrwiki' => true, # 38023
+	'incubatorwiki' => true,
+	'iswiktionary' => true, # 7952
+	'metawiki' => true,
+	'ptwiki' => true, # bug 35308
+	'otrs_wikiwiki' => true,
+	'outreachwiki' => true, // Bug 56245
+	'srwiki' => true,
+	'strategywiki' => true,
+	'viwiktionary' => true, # bug 8886
 ),
 
 'wmgUseFloatedToc' => array(
