@@ -1197,9 +1197,9 @@ if ( $wmgUseCentralAuth ) {
 
 	# Broken -- TS
 	if( $wmfRealm == 'production' ) {
-		$wgRC2UDPPort = $wmgRC2UDPPort;
-		$wgCentralAuthUDPAddress = $wmgRC2UDPAddress;
-		$wgCentralAuthNew2UDPPrefix = "#central\t";
+		$wgCentralAuthRC[] = array(
+			'uri' => "udp://$wmgRC2UDPAddress:$wmgRC2UDPPort/$wmgRC2UDPPrefix",
+		);
 	}
 
 	switch ( $wmfRealm ) {
