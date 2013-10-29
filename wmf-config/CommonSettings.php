@@ -1190,9 +1190,12 @@ if ( $wmgUseCentralAuth ) {
 
 	# Broken -- TS
 	if( $wmfRealm == 'production' ) {
-		$wgRC2UDPPort = 9390;
-		$wgCentralAuthUDPAddress = '208.80.152.178'; // pmtpa: ekrem
-		$wgCentralAuthNew2UDPPrefix = "#central\t";
+		$$wgCentralAuthRC[] = array(
+			'formatter' => 'IRCColourfulRCFeedFormatter',
+			'uri' => "udp://208.80.152.178:9390/$wmgRC2UDPPrefix", // pmtpa: ekrem
+			'add_interwiki_prefix' => false,
+			'omit_bots' => false,
+		);
 	}
 
 	switch ( $wmfRealm ) {
