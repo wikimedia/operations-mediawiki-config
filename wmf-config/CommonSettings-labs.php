@@ -27,6 +27,10 @@ $wmgAddWikiNotify = false;
 # see r110254 and bug 33746
 $wgPreloadJavaScriptMwUtil = true;
 
+// Cache ResourceLoader modules in localStorage
+// Experimental! See <https://gerrit.wikimedia.org/r/#/c/86867/>.
+$wgResourceLoaderStorageEnabled = true;
+
 if ( $wmgUseEventLogging ) {
 	$wgEventLoggingFile = 'udp://deployment-eventlogging.pmtpa.wmflabs:8421/EventLogging';
 }
