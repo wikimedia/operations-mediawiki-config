@@ -136,7 +136,13 @@ Disallow: /
 # bot supports such a thing using the 'Crawl-delay' or another
 # instruction, please let us know.
 #
+# There is a special exception for API mobileview to allow dynamic
+# mobile web & app views to load section content.
+# These views aren't HTTP-cached but use parser cache aggressively
+# and don't expose special: pages etc.
+#
 User-agent: *
+Allow: /w/api.php?action=mobileview&
 Disallow: /w/
 Disallow: /trap/
 Disallow: /wiki/Especial:Search
