@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_d9beb55e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 9331,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2013-10-29T06:53:20Z",
+      "side": 1,
+      "message": "Could you keep the reference to bug 8563 here?",
+      "revId": "02544b0062bec1bebae6e6368c3dc54ea5fe8322",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
