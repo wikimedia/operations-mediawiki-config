@@ -12281,11 +12281,9 @@ $wgConf->settings = array(
 	'officewiki' => 0,
 ),
 
-// Use extension1 db for large and medium wikis
+// Use extension1 db for all wikis
 'wmgEchoCluster' => array(
-	'default' => false,
-	'medium' => 'extension1',
-	'large' => 'extension1',
+	'default' => 'extension1',
 	// The following wikis should be using extension1 db but started with
 	// the application main database, stick with the current setting
 	'mediawikiwiki' => false,
