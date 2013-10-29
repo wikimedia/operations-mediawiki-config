@@ -1,8 +1,8 @@
 <?php
 define( "MEDIAWIKI", true );
 
-include "/apache/common/w/MWVersion.php";
-include getMediaWiki( "includes/WebStart.php" );
+require_once( './MWVersion.php' );
+require getMediaWiki( 'includes/WebStart.php' );
 
 $wgTitle = Title::newFromText( 'Mediawiki:robots.txt' );
 $wgArticle = new Article( $wgTitle, 0 );
@@ -13,7 +13,7 @@ header( 'X-Language: ' . $lang );
 header( 'X-Site: ' . $site );
 header( 'Vary: X-Subdomain' );
 
-$robotsfile = "/apache/common/robots.txt";
+$robotsfile = '/usr/local/apache/common/robots.txt';
 $robots = fopen( $robotsfile, 'rb' );
 $text = '';
 
