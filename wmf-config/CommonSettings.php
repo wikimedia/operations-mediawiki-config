@@ -1192,6 +1192,11 @@ if ( $wmgUseCentralAuth ) {
 
 	# Broken -- TS
 	if( $wmfRealm == 'production' ) {
+		$wgCentralAuthRC[] = array(
+			'uri' => "udp://$wmgRC2UDPAddress:$wmgRC2UDPPort/#central\t",
+		);
+
+		// Temp. Should be removed when new CA is fully deployed
 		$wgRC2UDPPort = $wmgRC2UDPPort;
 		$wgCentralAuthUDPAddress = $wmgRC2UDPAddress;
 		$wgCentralAuthNew2UDPPrefix = "#central\t";
