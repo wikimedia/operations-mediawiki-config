@@ -10563,6 +10563,14 @@ $wgConf->settings = array(
 	'default' => 800,
 ),
 
+'wmgUseBetaFeatures' => array(
+	'default' => true,
+),
+
+'wmgUseMultimediaViewer' => array(
+	'default' => true,
+),
+
 // -------------- VisualEditor start --------------
 
 'wmgUseVisualEditor' => array(
