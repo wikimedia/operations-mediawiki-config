@@ -1536,7 +1536,6 @@ if ( $wmgUseNewUserMessage ) {
 if ( $wmgUseCodeReview ) {
 	include "$IP/extensions/CodeReview/CodeReview.php";
 	include( "$wmfConfigDir/codereview.php" );
-	$wgSubversionProxy = 'http://codereview-proxy.wikimedia.org/index.php';
 
 	$wgGroupPermissions['user']['codereview-add-tag'] = false;
 	$wgGroupPermissions['user']['codereview-remove-tag'] = false;
