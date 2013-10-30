@@ -1541,7 +1541,7 @@ if ( $wmgUseNewUserMessage ) {
 
 if ( $wmgUseCodeReview ) {
 	include "$IP/extensions/CodeReview/CodeReview.php";
-	include( "$wmfConfigDir/codereview.php" );
+
 	$wgSubversionProxy = 'http://codereview-proxy.wikimedia.org/index.php';
 
 	$wgGroupPermissions['user']['codereview-add-tag'] = false;
@@ -1569,6 +1569,11 @@ if ( $wmgUseCodeReview ) {
 	$wgCodeReviewRepoStatsCacheTime = 24 * 60 * 60;
 
 	$wgCodeReviewMaxDiffPaths = 100;
+
+	$importantPaths = array( '/trunk/phase3' );
+
+	$wgCodeReviewFixmePerPath['MediaWiki'] = $importantPaths;
+	$wgCodeReviewNewPerPath['MediaWiki'] = $importantPaths;
 }
 
 if ( $wmgUseAbuseFilter ) {

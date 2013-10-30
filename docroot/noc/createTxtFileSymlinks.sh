@@ -14,7 +14,6 @@ mwconfig_files_txt=(
 	wmf-config/PoolCounterSettings-pmtpa.php
 	wmf-config/StartProfiler.php
 	wmf-config/abusefilter.php
-	wmf-config/codereview.php
 	wmf-config/CirrusSearch-common.php
 	wmf-config/CirrusSearch-labs.php
 	wmf-config/db-eqiad.php
