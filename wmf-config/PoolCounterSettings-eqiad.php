@@ -23,7 +23,7 @@ $wgPoolCounterConf = array(
 		'class' => 'PoolCounter_Client',
 		'timeout' => 15,
 		'workers' => 78,
-		'maxqueue' => 400
+		'maxqueue' => 600
 	),
 );
 
