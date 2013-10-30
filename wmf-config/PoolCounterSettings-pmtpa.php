@@ -25,5 +25,17 @@ $wgPoolCounterConf = array(
 		'workers' => 78,
 		'maxqueue' => 600
 	),
+	'CirrusSearch-Update' => array(
+		'class' => 'PoolCounter_Client',
+		'timeout' => 120,
+		'workers' => 20,
+		'maxqueue' => 200,
+	),
+	'CirrusSearch-Search' => array(
+		'class' => 'PoolCounter_Client',
+		'timeout' => 15,
+		'workers' => 78,
+		'maxqueue' => 400,
+	),
 );
 
