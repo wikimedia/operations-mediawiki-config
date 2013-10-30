@@ -36,7 +36,7 @@ if ( $wmgMobileUrlTemplate ) {
 	$wgMobileUrlTemplate = $wmgMobileUrlTemplate;
 }
 
-if ( $wmgZeroRatedMobileAccess ) {
+if ( $wmgZeroRatedMobileAccess && $wmgMobileFrontend ) {
 	require_once( "$IP/extensions/ZeroRatedMobileAccess/ZeroRatedMobileAccess.php" );
 	$wgZeroRatedMobileAccessConfigIndexUri = 'http://meta.wikimedia.org/w/index.php';
 }
