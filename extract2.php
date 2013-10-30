@@ -1,7 +1,6 @@
 <?php
 $lang = 'meta';
 putenv( "MW_LANG={$lang}" ); // notify MWMultiVersion
-define( 'MEDIAWIKI', true );
 
 include '/apache/common/w/MWVersion.php';
 include getMediaWiki( 'includes/WebStart.php' );
