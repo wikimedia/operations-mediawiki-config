@@ -7,6 +7,7 @@ $IP/extensions/ArticleFeedback/ArticleFeedback.php
 $IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.php
 $IP/extensions/AssertEdit/AssertEdit.php
 $IP/extensions/Babel/Babel.php
+$IP/extensions/BetaFeatures/BetaFeatures.php
 $IP/extensions/Calendar/Calendar.php
 $IP/extensions/Campaigns/Campaigns.php
 $IP/extensions/CategoryTree/CategoryTree.php
@@ -23,6 +24,7 @@ $IP/extensions/ClientSide/ClientSide.php
 $IP/extensions/CodeEditor/CodeEditor.php
 $IP/extensions/CodeReview/CodeReview.php
 $IP/extensions/Collection/Collection.php
+$IP/extensions/CommonsMetadata/CommonsMetadata.php
 $IP/extensions/CommunityApplications/CommunityApplications.php
 $IP/extensions/CommunityHiring/CommunityHiring.php
 $IP/extensions/CommunityVoice/CommunityVoice.php
@@ -76,6 +78,7 @@ $IP/extensions/MassMessage/MassMessage.php
 $IP/extensions/Math/Math.php
 $IP/extensions/MobileFrontend/MobileFrontend.php
 $IP/extensions/MoodBar/MoodBar.php
+$IP/extensions/MultimediaViewer/MultimediaViewer.php
 $IP/extensions/MwEmbedSupport/MwEmbedSupport.php
 $IP/extensions/MWSearch/MWSearch.php
 $IP/extensions/NavigationTiming/NavigationTiming.php
