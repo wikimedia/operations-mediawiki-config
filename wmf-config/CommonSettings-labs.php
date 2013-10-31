@@ -77,18 +77,6 @@ if ( $wmgEnableGeoData ) {
 	$wgMaxCoordinatesPerPage = 2000;
 }
 
-if ( $wmgUseBetaFeatures ) {
-	require_once( "$IP/extensions/BetaFeatures/BetaFeatures.php" );
-}
-
-if ( $wmgUseCommonsMetadata ) {
-	require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
-}
-
-if ( $wmgUseMultimediaViewer ) {
-	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
-}
-
 if ( $wmgUseVisualEditor ) {
 	$wgVisualEditorParsoidURL = 'http://10.4.0.61/'; // deployment-parsoidcache2
 	$wgVisualEditorParsoidReportProblemURL = 'http://10.4.0.33/_bugs/'; // parsoid-spof
