@@ -1858,18 +1858,6 @@ if ( $wmgUseUploadWizard ) {
 	$wgApiFrameOptions = $wmgApiFrameOptions;
 }
 
-if ( $wmgUseBetaFeatures ) {
-	require_once( "$IP/extensions/BetaFeatures/BetaFeatures.php" );
-}
-
-if ( $wmgUseCommonsMetadata ) {
-	require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
-}
-
-if ( $wmgUseMultimediaViewer ) {
-	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
-}
-
 if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
 	$wgVisualEditorParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
