@@ -989,7 +989,7 @@ $wgConf->settings = array(
 	'wikimania2011wiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Wikimania_2011_logo.svg/135px-Wikimania_2011_logo.svg.png', // bug 48382
 	'wikimania2012wiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Wikimania_2012_logo.svg/135px-Wikimania_2012_logo.svg.png', // bug 48382
 	'wikimania2013wiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/52/Wikimania_2013_logo.svg/135px-Wikimania_2013_logo.svg.png', // bug 48382
-	'wikimania2014wiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Wikimania_2014_logo.svg/135px-Wikimania_2014_logo.svg.png', // bug 48382
+	'wikimania2014wiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/06/Wikimania_2014_Shard_logo_v3_with_logotype_and_date_(small).svg/135px-Wikimania_2014_Shard_logo_v3_with_logotype_and_date_(small).svg.png', // bug 56398
 	'wikimaniateamwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/07/Wikimania_team_logo.svg/135px-Wikimania_team_logo.svg.png', // bug 48376
 ),
 # @} end of wgLogo
