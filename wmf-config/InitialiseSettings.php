@@ -10568,7 +10568,7 @@ $wgConf->settings = array(
 	'testwikidatawiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
-	'mediawikiwiki' => true,
+	'mediawikiwiki' => false,
 ),
 
 'wmgUseCommonsMetadata' => array(
