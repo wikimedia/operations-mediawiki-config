@@ -1,4 +1,6 @@
 <?php
+ob_start();
+
 $lang = 'meta';
 putenv( "MW_LANG={$lang}" ); // notify MWMultiVersion
 
@@ -20,6 +22,7 @@ $template = $wgRequest->getText( 'template', 'Www.wikipedia.org_template' );
 if ( !in_array( $template, $allowed_templates ) ) {
 	header( 'Content-Type: text/plain; charset=utf-8' );
 	echo 'Invalid parameters...';
+	ob_flush();
 	exit;
 }
 
@@ -32,3 +35,4 @@ header( 'Content-Type: text/html; charset=utf-8' );
 header( 'Cache-Control: s-maxage=3600, must-revalidate, max-age=0' );
 header( "Last-modified: $lastmod" );
 echo $rawHtml;
+ob_flush();
