@@ -254,18 +254,6 @@ return array(
 		'default' => true,
 	),
 
-	'wmgUseBetaFeatures' => array(
-		'default' => true,
-	),
-
-	'wmgUseCommonsMetadata' => array(
-		'default' => true,
-	),
-
-	'wmgUseMultimediaViewer' => array(
-		'default' => true,
-	),
-
 	'wmgVisualEditorExperimental' => array(
 		'default' => true,
 	),
