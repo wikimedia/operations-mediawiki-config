@@ -10563,6 +10563,24 @@ $wgConf->settings = array(
 	'default' => 800,
 ),
 
+'wmgUseBetaFeatures' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
+
+'wmgUseCommonsMetadata' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
+
+'wmgUseMultimediaViewer' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
+
 // -------------- VisualEditor start --------------
 
 'wmgUseVisualEditor' => array(
