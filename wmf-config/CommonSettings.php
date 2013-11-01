@@ -938,9 +938,12 @@ function wfLogXFF() {
 			"udp://$wmfUdp2logDest/xff"
 		);
 		if ( wfGetIP() === '127.0.0.1' ) {
-			wfErrorLog( wfHostname() .
+			wfErrorLog(
+				gmdate( 'r' ) . "\t" .
+				wfHostname() .
 				"\t{$_SERVER['HTTP_X_FORWARDED_FOR']}, {$_SERVER['REMOTE_ADDR']}\t" .
-				WebRequest::detectProtocol(), "udp://$wmfUdp2logDest/localhost"
+				WebRequest::detectProtocol(),
+				"udp://$wmfUdp2logDest/localhost"
 			);
 		}
 	}
