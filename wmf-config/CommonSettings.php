@@ -2721,6 +2721,10 @@ if ( $wgRC2UDPPrefix === false ) {
 $wgGroupPermissions['confirmed'] = $wgGroupPermissions['autoconfirmed'];
 $wgGroupPermissions['confirmed']['skipcaptcha'] = true;
 
+if ( file_exists( "$wmfConfigDir/extension-list-$wmfExtendedVersionNumber" ) ) {
+	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-$wmfExtendedVersionNumber";
+}
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
