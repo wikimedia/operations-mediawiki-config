@@ -12714,6 +12714,13 @@ $wgConf->settings = array(
 	'collabwiki' => false,
 	'donatewiki' => false,
 ),
+
+'wgResourceLoaderStorageEnabled' => array(
+	'default' => false,
+	'test2wiki' => true,
+	'testwiki' => true,
+),
+
 'wmgUseAccountAudit' => array(
 	'default' => true,
 ),
