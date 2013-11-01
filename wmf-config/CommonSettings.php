@@ -1991,7 +1991,7 @@ $wgCookieExpiration = 30 * 86400;
 
 if ( $wmgUseMath ) {
 	require_once( "$IP/extensions/Math/Math.php" );
-	$wgTexvc = "/usr/local/apache/uncommon/$wmfVersionNumber/bin/texvc";
+	$wgTexvc = "/usr/local/apache/uncommon/bin/texvc";
 	if ( $wgDBname === 'hewiki' ) {
 		$wgDefaultUserOptions['math'] = 0;
 	}
