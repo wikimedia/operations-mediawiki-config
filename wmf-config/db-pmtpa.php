@@ -88,8 +88,8 @@ $wgLBFactoryConf = array(
 	's1' => array(
 		'db1056'    => 0,
 		'db63'    => 0, # pmtpa master
-		'db32'	  => 0, # snapshot host
-		'db59'    => 200, # special contrib, watchlist, etc
+		# pmtpa decom 'db32'	  => 0, # snapshot host
+		# pmtpa decom 'db59'    => 200, # special contrib, watchlist, etc
 		'db60'    => 400,
 		'db69'    => 400,
 		'db71'    => 400, # innodb_file_per_table
@@ -97,44 +97,44 @@ $wgLBFactoryConf = array(
 	's2' => array(
 		'db1036'    => 0,
 		'db54'	  => 0, # pmtpa master
-		'db52'	  => 300,
-		'db53'	  => 100, # snapshot host
+		# pmtpa decom 'db52'	  => 300,
+		# pmtpa decom 'db53'	  => 100, # snapshot host
 		'db57'	  => 300, # innodb_file_per_table
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038'  => 0,
 		'db34'	  => 0, # pmtpa master
-		'db39'    => 400,
+		# pmtpa decom 'db39'    => 400,
 		#'db64'	  => 200, # py: 2013-06-17: bad bbu
 		'db66'	  => 400, # innodb_file_per_table # snapshot host
 	),
 	's4' => array(
 		'db1059'   => 0,
 		'db31'	 => 0, # pmtpa master
-		'db51'	 => 300,
+		# pmtpa decom 'db51'	 => 300,
 		'db65'	 => 300, # Snapshot host # innodb_file_per_table
 		'db72'	 => 500, # innodb_file_per_table
 	),
 	's5' => array(
 		'db1058'   => 0,
 		'db73'	 => 0, # pmtpa master, innodb_file_per_table
-		'db45'	 => 1000,
+		# pmtpa decom 'db45'	 => 1000,
 		'db74'	 => 1200,
 		#'db44'	 => 500, # fix me!
-		'db55'	 => 800, # innodb_file_per_table # snapshot host
+		# pmtpa decom 'db55'	 => 800, # innodb_file_per_table # snapshot host
 	),
 	's6' => array(
 		'db1027'   => 0,
 		'db47'	   => 0, # pmtpa master
-		'db43'	   => 1000, # hw died 12/18/2011
-		'db46'	   => 400, # snapshot host
+		# pmtpa decom 'db43'	   => 1000, # hw died 12/18/2011
+		# pmtpa decom 'db46'	   => 400, # snapshot host
 		'db50'	   => 1000, # innodb_file_per_table
 	),
 	's7' => array(
 		'db1039' => 0,
 		'db37'  => 0, # pmtpa master
-		'db56'  => 400, # snapshot host
-		'db58'	=> 500,
+		# pmtpa decom 'db56'  => 400, # snapshot host
+		# pmtpa decom 'db58'	=> 500,
 		'db68'	=> 700, # innodb_file_per_table
 	),
 ),
@@ -161,6 +161,7 @@ $wgLBFactoryConf = array(
 
 
 'groupLoadsByDB' => array(
+/*
 	'enwiki' => array(
 		'watchlist' => array(
 			'db59' => 1,
@@ -175,6 +176,7 @@ $wgLBFactoryConf = array(
 			'db59' => 1,
 		),
 	),
+*/
 ),
 
 # Hosts settings
