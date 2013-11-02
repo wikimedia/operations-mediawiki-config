@@ -828,10 +828,6 @@ require( getRealmSpecificFilename( "$wmfConfigDir/filebackend.php" ) );
 # Cluster-dependent files for job queue and job queue aggregator
 require( getRealmSpecificFilename( "$wmfConfigDir/jobqueue.php" ) );
 
-if( $wgDBname != 'commonswiki' ) {
-	$wgDefaultUserOptions['watchcreations'] = 1;
-}
-
 if ( $wgDBname == 'nostalgiawiki' ) {
 	# Link back to current version from the archive funhouse
 	if ( ( isset( $_REQUEST['title'] ) && ( $title = $_REQUEST['title'] ) )
@@ -1780,8 +1776,13 @@ if ( $wmgUseArticleFeedbackv5 ) {
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
 $wgDefaultUserOptions['showhiddencats'] = $wmgShowHiddenCats;
 
-// WMF is not hardcore enough to enable these. See bug 36316 about it.
-$wgDefaultUserOptions['watchcreations'] = 0;
+if( $wgDBname == 'commonswiki' ) {
+	$wgDefaultUserOptions['watchcreations'] = 0;
+} else {
+	$wgDefaultUserOptions['watchcreations'] = 1;
+}
+
+// WMF is not hardcore enough to enable this. See bug 36316 about it.
 $wgDefaultUserOptions['watchdefault'] = 0;
 
 if ( $wgDBname == 'strategywiki' ) {
