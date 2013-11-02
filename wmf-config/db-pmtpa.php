@@ -91,8 +91,8 @@ $wgLBFactoryConf = array(
 		# pmtpa decom 'db32'	  => 0, # snapshot host
 		# pmtpa decom 'db59'    => 200, # special contrib, watchlist, etc
 		'db60'    => 400,
-		'db69'    => 400,
-		'db71'    => 400, # innodb_file_per_table
+		#'db69'    => 400,
+		#'db71'    => 400, # innodb_file_per_table
 	),
 	's2' => array(
 		'db1036'    => 0,
