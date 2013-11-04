@@ -2285,9 +2285,6 @@ if ( $wmgEnableGeoData ) {
 		'solr1001.eqiad.wmnet' => 75, // master, put less read load on it
 		'solr1002.eqiad.wmnet' => 100,
 		'solr1003.eqiad.wmnet' => 100,
-		//'solr1.pmtpa.wmnet' => 100,
-		//'solr2.pmtpa.wmnet' => 100,
-		//'solr3.pmtpa.wmnet' => 100,
 	);
 
 	# Data collection mode
