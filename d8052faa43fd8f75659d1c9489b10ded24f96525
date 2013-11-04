@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_664dfe6c",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2013-11-04T22:30:09Z",
+      "side": 1,
+      "message": "If we only use one repository, the name could be wikimediacommons (any name other than that will just display as \"a shared repository\" AFAIK). Alternatively, we could use betacommons first and real Commons as a fallback (I suppose it has more images?)",
+      "revId": "d8052faa43fd8f75659d1c9489b10ded24f96525",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
