@@ -94,6 +94,20 @@ return array(
 		'wikidatawiki'  => 'http://wikidata.beta.wmflabs.org',
 	),
 
+	'wgForeignFileRepos' => array(
+		'default' => array(
+			'class' => 'ForeignAPIRepo',
+			'name' => 'betacommons',
+			'apibase' => WebRequest::detectProtocol() === 'https' ?
+				'https://commons.wikimedia.org/w/api.php' :
+				'http://commons.wikimedia.org/w/api.php',
+			'hashlevels' => 2,
+			'fetchdescription' => true,
+			'descriptionCacheExpiry' => 43200,
+			'apiThumbCacheExpiry' => 86400,
+		),
+	),
+
 	'wmgUsabilityPrefSwitch' => array(
 		'default' => ''
 	),
