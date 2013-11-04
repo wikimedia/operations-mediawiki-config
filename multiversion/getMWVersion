@@ -4,6 +4,8 @@ error_reporting( 0 );
 
 require_once( dirname( __FILE__ ) . '/defines.php' );
 require_once( dirname( __FILE__ ) . '/MWRealm.php' );
+require_once( dirname( __FILE__ ) . '/Cdb.php' );
+require_once( dirname( __FILE__ ) . '/Cdb_PHP.php' );
 
 /**
  * This script prints the MW version associated with a specified wikidb.
@@ -21,10 +23,14 @@ function getWikiVersion( $dbName ) {
 	$cdbFilename = getRealmSpecificFilename(
 		MULTIVER_CDB_DIR_APACHE . '/wikiversions.cdb'
 	);
-	$db = dba_open( $cdbFilename, 'r', 'cdb' );
+	try {
+		$db = CdbReader::open( $cdbFilename );
+	} catch( Exception $e ) {}
+
+
 	if ( $db ) {
-		$version = dba_fetch( "ver:$dbName", $db );
-		dba_close( $db );
+		$version = $db->get( "ver:$dbName" );
+		$db->close();
 		if ( $version !== false ) {
 			return $version; // found version entry
 		}
