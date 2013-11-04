@@ -46,7 +46,10 @@ function refreshWikiversionsCDB() {
 
 	# Build the new database at the temp location...
 	@unlink( $tmpDBPath ); // clear any old temp file for sanity
-	$db = dba_open( $tmpDBPath, "n", "cdb_make" );
+	try {
+		$db = CdbWriter::open( $tmpDBPath );
+	} catch ( Exception $e ) {}
+
 	if ( !$db ) {
 		die( "Unable to create {$tmpDBPath}.\n" );
 	}
@@ -55,10 +58,10 @@ function refreshWikiversionsCDB() {
 		if ( $extVersion === '*' ) {
 			$extVersion = ''; // "*" means "none"
 		}
-		dba_insert( "ver:$dbName", $version, $db );
-		dba_insert( "ext:$dbName", $extVersion, $db );
+		$db->set( "ver:$dbName", $version );
+		$db->set( "ext:$dbName", $extVersion );
 	}
-	dba_close( $db );
+	$db->close();
 
 	# Sanity check the temp file...
 	if ( !is_file( $tmpDBPath ) ) {
