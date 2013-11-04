@@ -10565,19 +10565,25 @@ $wgConf->settings = array(
 
 'wmgUseBetaFeatures' => array(
 	'default' => false,
+	'mediawikiwiki' => true,
 	'testwiki' => true,
+	'testwikidatawiki' => true,
 	'test2wiki' => true,
 ),
 
 'wmgUseCommonsMetadata' => array(
 	'default' => false,
+	'mediawikiwiki' => true,
 	'testwiki' => true,
+	'testwikidatawiki' => true,
 	'test2wiki' => true,
 ),
 
 'wmgUseMultimediaViewer' => array(
 	'default' => false,
+	'mediawikiwiki' => true,
 	'testwiki' => true,
+	'testwikidatawiki' => true,
 	'test2wiki' => true,
 ),
 
