@@ -6588,6 +6588,7 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'sysop' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
+		'accountcreator' => array( 'noratelimit' => true ), // bug 56570
 	),
 	'+checkuserwiki'  => array( // http://bugzilla.wikimedia.org/show_bug.cgi?id=28781
 		'autoconfirmed' => array(
@@ -7733,7 +7734,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'patroller', 'autopatrolled', 'rollbacker' ),
 	),
 	'+cawiki' => array(
-		'sysop' => array( 'rollbacker', 'autopatrolled', 'abusefilter', ),
+		'sysop' => array( 'rollbacker', 'autopatrolled', 'abusefilter', 'accountcreator', ),
 	),
 	'+checkuserwiki' => array(
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', ),
@@ -8183,7 +8184,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'patroller', 'autopatrolled', 'rollbacker' ),
 	),
 	'+cawiki' => array(
-		'sysop' => array( 'rollbacker', 'autopatrolled', 'abusefilter', ),
+		'sysop' => array( 'rollbacker', 'autopatrolled', 'abusefilter', 'accountcreator', ),
 	),
 	'+checkuserwiki' => array(
 		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt',  'bureaucrat', ),
