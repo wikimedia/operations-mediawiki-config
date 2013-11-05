@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_46247d60",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12699,
+      "author": {
+        "id": 873
+      },
+      "writtenOn": "2013-11-05T21:00:01Z",
+      "side": 1,
+      "message": "I don\u0027t believe we follow the puppet formatting here.",
+      "revId": "03197726ca5c2d2136e27bdcef512b1b02348533",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
