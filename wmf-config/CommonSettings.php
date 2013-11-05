@@ -2624,12 +2624,7 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['enableSiteLinkWidget'] = false;
 	}
 
-	if ( $wgDBname === 'enwiki' ) {
-		// Leaving this unset makes WikibaseClient::getLangLinkSiteGroup
-		// default to WikibaseClient::getSite, which calls SiteSQLStore::getSites,
-		// which gets a huge object from memcached. -OL
-		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
-	}
+	$wgWBClientSettings['siteGroup'] = $wmgWikibaseSiteGroup;
 
 	$wgHooks['SetupAfterCache'][] = 'wmfWBClientExcludeNS';
 

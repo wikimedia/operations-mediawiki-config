@@ -12539,6 +12539,11 @@ $wgConf->settings = array(
 	'wikidataclient' => true,
 ),
 
+'wmgWikibaseSiteGroup' => array(
+	'default' => 'wikipedia', // commons is treated as a wikipedia, in this case, like interwikis
+	'wikivoyage' => 'wikivoyage'
+),
+
 'wmgWikibaseClientSettings' => array(
 	// @note because of unconventional way of doing wikibase settings, the default setting
 	// here does not work the same way. Instead, put defaults in CommonSettings.php
