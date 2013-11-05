@@ -10652,6 +10652,12 @@ $wgConf->settings = array(
 	'enwiki' => true,
 ),
 
+// Should VisualEditor forward users' Cookie: headers to Parsoid (for private wikis)
+'wmgVisualEditorParsoidForwardCookies' => array(
+	'default' => false,
+	'private' => true,
+),
+
 // --------------- VisualEditor end ---------------
 
 'wmgUseRSSExtension' => array(
