@@ -11,6 +11,7 @@ if ( $wgCommandLineMode || PHP_SAPI == 'cli' ) {
 
 // udp2log logging for beta:
 $wgDebugLogGroups['dnsblacklist'] = "udp://$wmfUdp2logDest/dnsblacklist";
+$wgDebugLogGroups['exception-json'] = "udp://$wmfUdp2logDest/exception-json";
 $wgDebugLogGroups['mwsearch'] = "udp://$wmfUdp2logDest/mwsearch";
 $wgDebugLogGroups['squid'] = "udp://$wmfUdp2logDest/squid";
 
