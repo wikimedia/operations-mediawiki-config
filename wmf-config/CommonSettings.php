@@ -1952,7 +1952,9 @@ if ( $wmgUseVisualEditor ) {
 			$wgVisualEditorTabMessages['createappendix'] =
 			$wgVisualEditorTabMessages['editsectionappendix'] = 'visualeditor-beta-appendix';
 	}
-
+	if ( $wmgVisualEditorParsoidForwardCookies ) {
+		$wgVisualEditorParsoidForwardCookies = true;
+	}
 
 	// Also include the Parsoid extension when VE is enabled
 	require_once( "$IP/extensions/Parsoid/php/Parsoid.php" );
