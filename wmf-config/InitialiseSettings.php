@@ -10651,6 +10651,11 @@ $wgConf->settings = array(
 	'vecwiki' => true,
 	'vowiki' => true,
 	'warwiki' => true,
+
+	'boardwiki' => true,
+	'collabwiki' => true,
+	'officewiki' => true,
+	'wikimaniateamwiki' => true,
 ),
 
 // Should VisualEditor's "experimental" code be enabled for testing
@@ -10688,6 +10693,12 @@ $wgConf->settings = array(
 'wmgVisualEditorBetaInTab' => array(
 	'default' => false,
 	'enwiki' => true,
+),
+
+// Should VisualEditor forward users' Cookie: headers to Parsoid (for private wikis)
+'wmgVisualEditorParsoidForwardCookies' => array(
+	'default' = false,
+	'private' = true,
 ),
 
 // --------------- VisualEditor end ---------------
