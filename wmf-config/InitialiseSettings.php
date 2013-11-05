@@ -12700,6 +12700,11 @@ $wgConf->settings = array(
 	'bnwiki' => true,
 	'wikidatawiki' => true,
 	'wikivoyage' => true,
+	'sewikimedia' => true,
+	'astwiki' => true,
+	'guwiki' => true,
+	'elwiki' => true,
+	'frwikisource' => true,
 ),
 
 // Note that changing this on any supported (English) wiki requires an in place
