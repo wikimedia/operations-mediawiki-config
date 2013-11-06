@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_10b393e9",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-11-06T19:31:39Z",
+      "side": 1,
+      "message": "You know, we could just configure the actual settings in InitialiseSettings and drop this whole block of reassignments.",
+      "revId": "2a4195d6fde168334e10681ce93c8d9ddfaffcda",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
