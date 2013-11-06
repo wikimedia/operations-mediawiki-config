@@ -11298,6 +11298,10 @@ $wgConf->settings = array(
 	'commonswiki' => '', # bug 45256
 	'test2wiki' => '',
 ),
+'wmgMFInfoboxLogging' => array(
+	'default' => false,
+	'enwiki' => true,
+),
 'wmgMFNearbyNamespace' => array(
 	'default' => NS_MAIN,
 	'commonswiki' => NS_FILE,
