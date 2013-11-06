@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "291c1151_4fa729aa",
+        "filename": "multiversion/MWMultiVersion.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-11-06T22:37:04Z",
+      "side": 1,
+      "message": "Yeah that\u0027s reasonable.",
+      "parentUuid": "291c1151_af86dd14",
+      "revId": "b133b6c86ec46d81f9f90e6b80a5d2c2c4775dd5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "291c1151_4f76493d",
         "filename": "multiversion/refreshWikiversionsCDB",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2013-11-06T22:35:41Z",
       "side": 1,
       "message": "Where does the cdb code get included?",
+      "revId": "b133b6c86ec46d81f9f90e6b80a5d2c2c4775dd5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_2facad8c",
+        "filename": "multiversion/refreshWikiversionsCDB",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-11-06T22:37:04Z",
+      "side": 1,
+      "message": "Magic!\n\n...you\u0027re right...will fix",
+      "parentUuid": "291c1151_4f76493d",
       "revId": "b133b6c86ec46d81f9f90e6b80a5d2c2c4775dd5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
