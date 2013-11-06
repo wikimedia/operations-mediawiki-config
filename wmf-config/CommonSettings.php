@@ -599,6 +599,8 @@ $wgAvailableRights[] = 'review';
 $wgAvailableRights[] = 'unreviewedpages';
 $wgAvailableRights[] = 'movestable';
 $wgAvailableRights[] = 'validate';
+// So enwiki's protection rights can be assigned to global groups
+$wgAvailableRights[] = 'templateeditor';
 
 $wgUseAjax = true;
 $wgCategoryTreeDynamicTag = true;
