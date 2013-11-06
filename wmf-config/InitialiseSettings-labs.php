@@ -266,6 +266,10 @@ return array(
 		'default' => true,
 	),
 
+	'wmgUseVectorBeta' => array(
+		'default' => true,
+	),
+
 	'wmgVisualEditorExperimental' => array(
 		'default' => true,
 	),

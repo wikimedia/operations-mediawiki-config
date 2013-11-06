@@ -89,6 +89,10 @@ if ( $wmgUseMultimediaViewer ) {
 	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
 }
 
+if ( $wmgUseVectorBeta ) {
+	require_once( "$IP/extensions/VectorBeta/VectorBeta.php" );
+}
+
 if ( $wmgUseVisualEditor ) {
 	$wgVisualEditorParsoidURL = 'http://10.4.0.61/'; // deployment-parsoidcache2
 	$wgVisualEditorParsoidReportProblemURL = 'http://10.4.0.33/_bugs/'; // parsoid-spof
