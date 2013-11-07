@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_b5f54cee",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2513,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-11-07T09:25:31Z",
+      "side": 1,
+      "message": "On beta https is served via a self signed certificate which causes the browser tests to choke because the browser reject the certificate.\n\nI would use a relative protocol url //.",
+      "revId": "a8474b95ab7a54c1dafc48d4731b8b83bc426bd8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
