@@ -12736,6 +12736,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'test2wiki' => true,
 	'testwiki' => true,
+	'mediawikiwiki' => true,
 ),
 
 'wmgUseAccountAudit' => array(
