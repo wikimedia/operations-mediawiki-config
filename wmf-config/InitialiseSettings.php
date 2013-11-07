@@ -10576,7 +10576,9 @@ $wgConf->settings = array(
 
 'wmgUseBetaFeatures' => array(
 	'default' => false,
+	'commonswiki' => true,
 	'mediawikiwiki' => true,
+	'metawiki' => true,
 	'testwiki' => true,
 	'testwikidatawiki' => true,
 	'test2wiki' => true,
@@ -10584,7 +10586,9 @@ $wgConf->settings = array(
 
 'wmgUseCommonsMetadata' => array(
 	'default' => false,
+	'commonswiki' => true
 	'mediawikiwiki' => true,
+	'metawiki' => true,
 	'testwiki' => true,
 	'testwikidatawiki' => true,
 	'test2wiki' => true,
@@ -10592,7 +10596,9 @@ $wgConf->settings = array(
 
 'wmgUseMultimediaViewer' => array(
 	'default' => false,
+	'commonswiki' => true
 	'mediawikiwiki' => true,
+	'metawiki' => true,
 	'testwiki' => true,
 	'testwikidatawiki' => true,
 	'test2wiki' => true,
