@@ -11240,8 +11240,10 @@ $wgConf->settings = array(
 ),
 
 'wmgZeroRatedMobileAccess' => array(
-	'default' => true,
+	'default' => false,
 	'wikidata' => false,
+	'wikipedia' => true,
+	'metawiki' => true,
 ),
 
 'wmgUseSubPageList3' => array(
