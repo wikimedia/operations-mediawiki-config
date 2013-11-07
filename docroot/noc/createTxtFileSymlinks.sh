@@ -47,6 +47,7 @@ mwconfig_files_txt=(
 	wmf-config/session.php
 	wmf-config/session-labs.php
 	wmf-config/twemproxy.yaml
+	wmf-config/Wikidata.php
 )
 
 # Create non-txt symlink from mediawiki-config
@@ -114,7 +115,7 @@ other_config_file=(
 
 for i in ./*
 do
-	if [[ $i != "./index.php" && $i != "./highlight.php" && $i != "./images" ]]
+	if [[ $i != "./index.php" && $i != "./highlight.php" && $i != "./images" && $i != "./activeMWVersions.php" ]]
 	then
 		rm $i
 	fi
