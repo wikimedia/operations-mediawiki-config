@@ -7,6 +7,7 @@ $IP/extensions/ArticleFeedback/ArticleFeedback.php
 $IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.php
 $IP/extensions/AssertEdit/AssertEdit.php
 $IP/extensions/Babel/Babel.php
+$IP/extensions/BetaFeatures/BetaFeatures.php
 $IP/extensions/Calendar/Calendar.php
 $IP/extensions/Campaigns/Campaigns.php
 $IP/extensions/CategoryTree/CategoryTree.php
@@ -23,6 +24,7 @@ $IP/extensions/ClientSide/ClientSide.php
 $IP/extensions/CodeEditor/CodeEditor.php
 $IP/extensions/CodeReview/CodeReview.php
 $IP/extensions/Collection/Collection.php
+$IP/extensions/CommonsMetadata/CommonsMetadata.php
 $IP/extensions/CommunityApplications/CommunityApplications.php
 $IP/extensions/CommunityHiring/CommunityHiring.php
 $IP/extensions/CommunityVoice/CommunityVoice.php
@@ -31,11 +33,10 @@ $IP/extensions/ConfirmEdit/FancyCaptcha.php
 $IP/extensions/ContactPage/ContactPage.php
 $IP/extensions/ContactPageFundraiser/ContactPage.php
 $IP/extensions/ContributionTracking/ContributionTracking.php
-$IP/extensions/WikimediaEvents/WikimediaEvents.php
 $IP/extensions/CreditsSource/CreditsSource.php
 $IP/extensions/CustomData/CustomData.php
-$IP/extensions/DataValues/DataValues/DataValues.i18n.php
 $IP/extensions/DataTypes/DataTypes.i18n.php
+$IP/extensions/DataValues/DataValues/DataValues.i18n.php
 $IP/extensions/Diff/Diff.php
 $IP/extensions/DisableAccount/DisableAccount.php
 $IP/extensions/Disambiguator/Disambiguator.php
@@ -76,12 +77,13 @@ $IP/extensions/MassMessage/MassMessage.php
 $IP/extensions/Math/Math.php
 $IP/extensions/MobileFrontend/MobileFrontend.php
 $IP/extensions/MoodBar/MoodBar.php
+$IP/extensions/MultimediaViewer/MultimediaViewer.php
 $IP/extensions/MwEmbedSupport/MwEmbedSupport.php
 $IP/extensions/MWSearch/MWSearch.php
 $IP/extensions/NavigationTiming/NavigationTiming.php
 $IP/extensions/NewUserMessage/NewUserMessage.php
-$IP/extensions/Nuke/SpecialNuke.php
 $IP/extensions/Nostalgia/Nostalgia.php
+$IP/extensions/Nuke/SpecialNuke.php
 $IP/extensions/OAI/OAIRepo.php
 $IP/extensions/OAuth/OAuth.php
 $IP/extensions/OpenSearchXml/OpenSearchXml.php
@@ -101,6 +103,7 @@ $IP/extensions/RelatedArticles/RelatedArticles.php
 $IP/extensions/RelatedSites/RelatedSites.php
 $IP/extensions/Renameuser/Renameuser.php
 $IP/extensions/RSS/RSS.php
+$IP/extensions/Score/Score.php
 $IP/extensions/Scribunto/Scribunto.php
 $IP/extensions/SearchExtraNS/SearchExtraNS.php
 $IP/extensions/SecurePoll/SecurePoll.php
@@ -110,7 +113,6 @@ $IP/extensions/SiteMatrix/SiteMatrix.php
 $IP/extensions/SkinPerPage/SkinPerPage.php
 $IP/extensions/skins/Schulenburg/Schulenburg.php
 $IP/extensions/skins/Tomas/Tomas.php
-$IP/extensions/Score/Score.php
 $IP/extensions/Solarium/Solarium.php
 $IP/extensions/SpamBlacklist/SpamBlacklist.php
 $IP/extensions/SubPageList3/SubPageList3.php
@@ -137,13 +139,14 @@ $IP/extensions/UserThrottle/UserThrottle.php
 $IP/extensions/VipsScaler/VipsScaler.php
 $IP/extensions/VipsScaler/VipsTest.php
 $IP/extensions/VisualEditor/VisualEditor.php
+$IP/extensions/Wikibase/client/WikibaseClient.php
 $IP/extensions/WikibaseDataModel/WikibaseDataModel.php
 $IP/extensions/Wikibase/lib/WikibaseLib.php
 $IP/extensions/Wikibase/repo/Wikibase.php
-$IP/extensions/Wikibase/client/WikibaseClient.php
 $IP/extensions/WikiEditor/WikiEditor.php
 $IP/extensions/wikihiero/wikihiero.php
 $IP/extensions/WikiLove/WikiLove.php
+$IP/extensions/WikimediaEvents/WikimediaEvents.php
 $IP/extensions/WikimediaIncubator/WikimediaIncubator.php
 $IP/extensions/WikimediaMessages/WikimediaLicenseTexts.php
 $IP/extensions/WikimediaMessages/WikimediaMessages.php
