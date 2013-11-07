@@ -16,6 +16,24 @@
       "revId": "2944abbebe347d9b00b21e89f900d442c88a2daa",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_126b9620",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2013-11-07T05:11:49Z",
+      "side": 1,
+      "message": "Yeah, it was a genuine typo, not an attempt to sneak around.",
+      "parentUuid": "291c1151_32a252ac",
+      "revId": "2944abbebe347d9b00b21e89f900d442c88a2daa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
