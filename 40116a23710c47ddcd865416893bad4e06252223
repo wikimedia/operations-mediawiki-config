@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_554fb834",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2514,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-11-07T09:37:02Z",
+      "side": 1,
+      "message": "Ah sorry just noticed \u0027static-current\u0027, that points to a wmf branch slot which is not used / inexistent on beta.\n\nSo you would have to vary by realm and on beta use \u0027static-master\u0027.",
+      "revId": "40116a23710c47ddcd865416893bad4e06252223",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
