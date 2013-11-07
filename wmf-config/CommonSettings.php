@@ -2328,6 +2328,12 @@ if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
 	$wgFlowEditorList = $wmgFlowEditorList;
 	$wgFlowOccupyPages = $wmgFlowOccupyPages;
+	// Requires that Parsoid is available for all wikis using Flow.
+	$wgFlowContentFormat = 'html';
+
+	$wgFlowDefaultWikiDb = $wmgFlowDefaultWikiDb;
+	$wgFlowCluster = $wmgFlowCluster;
+	$wgFlowExternalStore = $wgDefaultExternalStore;
 }
 
 if ( $wmgUseDisambiguator ) {
