@@ -2509,9 +2509,13 @@ if ( $wmgUseUniversalLanguageSelector ) {
 		$wgULSNoImeSelectors[] = '.ace_editor textarea';
 	}
 
-	// Fetch fonts from stable URLs so that they're cached longer.
-	$wgULSFontRepositoryBasePath = ( 'https://bits.wikimedia.org/static-current/extensions'
-		. '/UniversalLanguageSelector/data/fontrepo/fonts/' );
+	// Fetch fonts from stable URLs so that they're cached longer. This is to avoid
+	// re-downloading of fonts for each new branch. But that only works for production,
+	// not labs. If this variable is not set, $wgExtensionAssetsPath is used.
+	if ( $wmfRealm === 'production' ) {
+		$wgULSFontRepositoryBasePath = ( "https://{$wmfHostnames['bits']}/static-current"
+			. '/extensions/UniversalLanguageSelector/data/fontrepo/fonts/' );
+	}
 
 	$wgULSEventLogging = $wmgULSEventLogging;
 }
