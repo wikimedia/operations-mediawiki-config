@@ -20,10 +20,10 @@ function isMain() {
 }
 
 function updateBitsBranchPointers( $dryRun = false ) {
-	$branchDirs = glob( MULTIVER_COMMON_APACHE . '/php-*', GLOB_ONLYDIR );
+	$branchDirs = glob( MULTIVER_COMMON_HOME . '/php-*', GLOB_ONLYDIR );
 
 	if ( !is_array( $branchDirs ) || count( $branchDirs ) < 1 ) {
-		fwrite( STDERR, __FUNCTION__ . ': no deployment branch directories found in ' . MULTIVER_COMMON_APACHE . "\n" );
+		fwrite( STDERR, __FUNCTION__ . ': no deployment branch directories found in ' . MULTIVER_COMMON_HOME . "\n" );
 		exit( 1 );
 	}
 
