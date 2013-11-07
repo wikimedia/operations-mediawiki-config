@@ -307,6 +307,9 @@ return array(
 	# Extension:Flow's browsertests use Talk:Flow_QA.
 	'wgFlowOccupyPages' => array( 'Talk:Flow QA', 'Talk:Flow' ),
 
+	# No separate Flow DB (yet) for labs.
+	'-wgFlowDefaultWikiDb' => false,
+
 	'wmgBug54847' => array(
 		'default' => false,
 	),

@@ -12336,7 +12336,27 @@ $wgConf->settings = array(
 
 'wmgUseFlow' => array(
 	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
 ),
+
+'wmgFlowOccupyPages' => array(
+	'default' => false,
+	# Extension:Flow's browsertests use Talk:Flow_QA.
+	'testwiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
+	'test2wiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
+	'mediawikiwiki' => array( 'Talk:Flow QA', 'Talk:Sandbox', 'Talk:Flow' ),
+),
+
+// Use extension1 db for all wikis
+// XXX need wgFlowCluster set to 'extension1' as well as a name for the common Flow DB.
+'wmgFlowDefaultWikiDb' => array(
+	'default' => 'extension1',
+	// officewiki is private.
+	'officewiki' => false,
+),
+
 
 'wmgUseDisambiguator' => array(
 	'default' => true,

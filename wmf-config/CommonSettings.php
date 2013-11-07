@@ -2372,6 +2372,15 @@ if ( $wmgUseThanks ) {
 
 if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
+	$wgFlowOccupyPages = $wmgFlowOccupyPages;
+	// Disable VisualEditor inside Flow, leaving only the wikitext editor.
+	// XXX https://gerrit.wikimedia.org/r/#/c/96161/ does the same.
+	$wgFlowEditorList = array( 'none' );
+	// Requires that Parsoid is available for all wikis using Flow.
+	$wgFlowContentFormat = 'html';
+
+	$wgFlowDefaultWikiDb = $wmgFlowDefaultWikiDb;
+	$wgFlowExternalStore = $wgDefaultExternalStore;
 }
 
 if ( $wmgUseDisambiguator ) {
