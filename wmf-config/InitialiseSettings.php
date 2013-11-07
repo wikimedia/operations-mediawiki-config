@@ -12336,7 +12336,19 @@ $wgConf->settings = array(
 
 'wmgUseFlow' => array(
 	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
 ),
+
+'wmgFlowOccupyPages' => array(
+	'default' => false,
+	# Extension:Flow's browsertests use Talk:Flow_QA.
+	'testwiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
+	'test2wiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
+	'mediawikiwiki' => array( 'Talk:Flow QA', 'Talk:Sandbox', 'Talk:Flow' ),
+),
+
 
 'wmgUseDisambiguator' => array(
 	'default' => true,
