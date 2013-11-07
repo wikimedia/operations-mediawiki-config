@@ -2510,7 +2510,8 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	}
 
 	// Fetch fonts from stable URLs so that they're cached longer.
-	$wgULSFontRepositoryBasePath = ( 'https://bits.wikimedia.org/static-current/extensions'
+	// Ideally would use https only here, but not for labs currently.
+	$wgULSFontRepositoryBasePath = ( "//{$wmfHostnames['bits']}/static-current/extensions"
 		. '/UniversalLanguageSelector/data/fontrepo/fonts/' );
 
 	$wgULSEventLogging = $wmgULSEventLogging;
