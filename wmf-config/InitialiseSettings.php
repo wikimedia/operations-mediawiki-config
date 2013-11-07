@@ -12652,6 +12652,10 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgPageImagesExpandOpenSearchXml' => array(
+	'default' => true,
+),
+
 'wmgUseTorBlock' => array(
 	'default' => true,
 	'private' => false,
