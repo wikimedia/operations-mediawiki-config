@@ -12628,6 +12628,10 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
+'wmgPageImagesExpandOpenSearchXml' => array(
+	'default' => true,
+),
+
 'wmgUseTorBlock' => array(
 	'default' => true,
 	'private' => false,

@@ -2517,6 +2517,7 @@ if ( $wmgUseTemplateSandbox ) {
 
 if ( $wmgUsePageImages ) {
 	require_once( "$IP/extensions/PageImages/PageImages.php" );
+	$wgPageImagesExpandOpenSearchXml = $wmgPageImagesExpandOpenSearchXml;
 }
 
 if ( $wmgUseSearchExtraNS ) {
