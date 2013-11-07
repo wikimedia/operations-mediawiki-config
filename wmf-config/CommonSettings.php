@@ -2372,6 +2372,7 @@ if ( $wmgUseThanks ) {
 
 if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
+	$wgFlowOccupyPages = $wmgFlowOccupyPages;
 }
 
 if ( $wmgUseDisambiguator ) {
