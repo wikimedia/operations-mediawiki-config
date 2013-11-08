@@ -821,6 +821,7 @@ $wgConf->settings = array(
 	'iswikibooks' => '$stdlogo',
 	'itwikibooks' => '$stdlogo',
 	'kawikibooks' => '$stdlogo',
+	'kowikibooks' => '//upload.wikimedia.org/wikipedia/commons/a/a0/Wikibooks-logo-ko.png', // bug 56760
 	'ltwikibooks' => '//upload.wikimedia.org/wikibooks/lt/2/20/Wikibooks-logo-lt.png',
 	'mlwikibooks' => '//upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Wikibooks-logo-ml.svg/135px-Wikibooks-logo-ml.svg.png', // bug 43111
 	'mswikibooks' => '$stdlogo',
