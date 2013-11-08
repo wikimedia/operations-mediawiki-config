@@ -17,10 +17,10 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 	}
 
 	function loadDbFile( $realm, $datacenter ) {
-		global $wmfRealm, $wmfDatacenter;
+		global $wmgRealm, $wmgDatacenter;
 
-		list( $oldRealm, $oldDatacenter ) = array( $wmfRealm, $wmfDatacenter );
-		list( $wmfRealm, $wmfDatacenter ) = array( $realm, $datacenter );
+		list( $oldRealm, $oldDatacenter ) = array( $wmgRealm, $wmgDatacenter );
+		list( $wmgRealm, $wmgDatacenter ) = array( $realm, $datacenter );
 
 		# "properly" load db.php in local context:
 		$wgDBname     = 'testwiki';
@@ -32,7 +32,7 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 
 		include( getRealmSpecificFilename( __DIR__ . '/../wmf-config/db.php' ) );
 
-		list( $wmfRealm, $wmfDatacenter ) = array( $oldRealm, $oldDatacenter );
+		list( $wmgRealm, $wmgDatacenter ) = array( $oldRealm, $oldDatacenter );
 
 		return $wgLBFactoryConf;
 	}
