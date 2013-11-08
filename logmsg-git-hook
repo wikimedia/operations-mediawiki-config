@@ -26,11 +26,9 @@
 
   REPO_ROOT="$( git rev-parse --show-toplevel )" || exit
 
-  # Exclude security patches by determining the latest common commit between the
-  # local branch and upstream. Then work backwards if necessary to identify the
-  # latest nonmerge commit, so we can get a Change-Id.
-  COMMON="$( git show-branch --merge-base @{upstream} )" || exit
-  COMMIT="$( git rev-list -1 --no-merges --remotes=origin ${COMMON} )" || exit
+  # Exclude security patches by determining the latest common commit between
+  # the local branch and upstream. Exclude merge commits to get a Change-Id.
+  COMMIT="$( git rev-list -1 --no-merges @{upstream} )" || exit
 
   SUBJECT="$( git log -1 --format=%s ${COMMIT} )" || exit
   CHANGE="$( git log -1 --format=%B ${COMMIT} | grep -Po '(?<=Change-Id: ).{10}' )" || exit
