@@ -20,61 +20,52 @@ function isMain() {
 }
 
 function updateBitsBranchPointers( $dryRun = false ) {
-	$branchDirs = glob( MULTIVER_COMMON_HOME . '/php-*', GLOB_ONLYDIR );
+	$target = array_pop( glob( MULTIVER_COMMON_HOME . '/php-*', GLOB_ONLYDIR ) );
 
-	if ( !is_array( $branchDirs ) || count( $branchDirs ) < 1 ) {
+	if ( $target === null ) {
 		fwrite( STDERR, __FUNCTION__ . ': no deployment branch directories found in ' . MULTIVER_COMMON_HOME . "\n" );
 		exit( 1 );
 	}
 
-	$branches = array();
-	$branches['current'] = array_pop( $branchDirs );
-	// If there's only one deployment branch, make both 'current' & 'stable' symlinks refer to it.
-	$branches['stable'] = array_pop( $branchDirs ) ?: $branches['current'];
+	echo "Updating 'current' branch pointer...\n";
 
-	foreach( $branches as $branch => $target ) {
-		echo "Updating $branch branch pointer...\n";
+	$basePath = MULTIVER_COMMON_HOME . "/docroot/bits/static-current";
+	if ( !$dryRun && !file_exists( $basePath ) && !mkdir( $basePath, 0775 ) ) {
+		fwrite( STDERR, __FUNCTION__ . ": $basePath does not exist and could not be created.\n" );
+		exit( 1 );
+	}
 
-		$parent = MULTIVER_COMMON_HOME . "/docroot/bits/static-$branch";
+	foreach( array( 'skins', 'extensions', 'resources' ) as $child ) {
+		$link = $basePath . '/' . $child;
+		$dest = $target . '/' . $child;
 
-		if ( !$dryRun && !file_exists( $parent ) && !mkdir( $parent, 0775 ) ) {
-			fwrite( STDERR, __FUNCTION__ . ": $parent does not exist and could not be created.\n" );
+		if ( !file_exists( $dest ) ) {
+			fwrite( STDERR, __FUNCTION__ . ": link target $dest does not exist.\n" );
 			exit( 1 );
 		}
 
-		foreach( array( 'skins', 'extensions', 'resources' ) as $child ) {
-			$link = $parent . '/' . $child;
-			$dest = $target . '/' . $child;
+		if ( file_exists( $link ) ) {
+			if ( realpath( $link ) === $dest ) {
+				echo "$link is already up-to-date.\n";
+				continue;
+			}
 
-			if ( !file_exists( $dest ) ) {
-				fwrite( STDERR, __FUNCTION__ . ": link target $dest does not exist.\n" );
+			if ( !is_link( $link ) ) {
+				fwrite( STDERR, __FUNCTION__ . ": $link exists and is not a symbolic link.\n" );
 				exit( 1 );
 			}
 
-			if ( file_exists( $link ) ) {
-				if ( realpath( $link ) === $dest ) {
-					echo "$link is already up-to-date.\n";
-					continue;
-				}
-
-				if ( !is_link( $link ) ) {
-					fwrite( STDERR, __FUNCTION__ . ": $link exists and is not a symbolic link.\n" );
-					exit( 1 );
-				}
-
-				if ( !$dryRun && !unlink( $link ) ) {
-					fwrite( STDERR, __FUNCTION__ . ": failed to unlink $link\n" );
-					exit( 1 );
-				}
-			}
-
-			if ( !$dryRun && !symlink( $dest, $link ) ) {
-				fwrite( STDERR, __FUNCTION__ . ": failed to create $link\n" );
+			if ( !$dryRun && !unlink( $link ) ) {
+				fwrite( STDERR, __FUNCTION__ . ": failed to unlink $link\n" );
 				exit( 1 );
 			}
-			echo "$link => $dest\n";
 		}
-		echo "\n";
+
+		if ( !$dryRun && !symlink( $dest, $link ) ) {
+			fwrite( STDERR, __FUNCTION__ . ": failed to create $link\n" );
+			exit( 1 );
+		}
+		echo "$link => $dest\n";
 	}
 }
 
