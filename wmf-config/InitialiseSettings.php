@@ -6245,20 +6245,16 @@ $wgConf->settings = array(
 	'default' => array( 'DB' ),
 ),
 
-'wmgUseRC2UDP' => array(
-	'default' => true,
+'wgRC2UDPAddress' => array(
+	'default' => '208.80.152.178', // pmtpa: ekrem
 	'private' => false,
 ),
 
-'wmgRC2UDPAddress' => array(
-	'default' => '208.80.152.178', // pmtpa: ekrem
-),
-
-'wmgRC2UDPPort' => array(
+'wgRC2UDPPort' => array(
 	'default' => 9390,
 ),
 
-'wmgRC2UDPPrefix' => array(
+'wgRC2UDPPrefix' => array(
 	'default' => false,
 	'advisorywiki' => "#advisory.wikipedia\t",
 	'arbcom_dewiki' => "#arbcom-de.wikipedia\t",
