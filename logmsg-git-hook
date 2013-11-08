@@ -30,7 +30,7 @@
   # local branch and upstream. Then work backwards if necessary to identify the
   # latest nonmerge commit, so we can get a Change-Id.
   COMMON="$( git show-branch --merge-base @{upstream} )" || exit
-  COMMIT="$( git rev-list -1 --no-merges --first-parent --remotes=origin ${COMMON} )" || exit
+  COMMIT="$( git rev-list -1 --no-merges --remotes=origin ${COMMON} )" || exit
 
   SUBJECT="$( git log -1 --format=%s ${COMMIT} )" || exit
   CHANGE="$( git log -1 --format=%B ${COMMIT} | grep -Po '(?<=Change-Id: ).{10}' )" || exit
