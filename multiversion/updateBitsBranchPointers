@@ -32,10 +32,7 @@ function updateBitsBranchPointers( $dryRun = false ) {
 	// collections such as [1.23wmf9, 1.23wmf10].
 	usort( $branchDirs, 'version_compare' );
 
-	$branches = array();
-	$branches['current'] = array_pop( $branchDirs );
-	// If there's only one deployment branch, make both 'current' & 'stable' symlinks refer to it.
-	$branches['stable'] = array_pop( $branchDirs ) ?: $branches['current'];
+	$branches = array( 'current' => array_pop( $branchDirs ) );
 
 	foreach( $branches as $branch => $target ) {
 		echo "Updating $branch branch pointer...\n";
