@@ -9,12 +9,12 @@
 $wmfFileJournalTTL = 365; // days
 
 /* Common OpenStack Swift backend config */
-$wmfSwiftBigWikis = array( # DO NOT change without proper migration first
+$wmgSwiftBigWikis = array( # DO NOT change without proper migration first
 	'commonswiki', 'dewiki', 'enwiki', 'fiwiki', 'frwiki', 'hewiki', 'huwiki', 'idwiki',
 	'itwiki', 'jawiki', 'rowiki', 'ruwiki', 'thwiki', 'trwiki', 'ukwiki', 'zhwiki'
 );
-$wmfSwiftShardLocal = in_array( $wgDBname, $wmfSwiftBigWikis ) ? 2 : 0; // shard levels
-$wmfSwiftShardCommon = in_array( 'commonswiki', $wmfSwiftBigWikis ) ? 2 : 0; // shard levels
+$wmgSwiftShardLocal = in_array( $wgDBname, $wmgSwiftBigWikis ) ? 2 : 0; // shard levels
+$wmgSwiftShardCommon = in_array( 'commonswiki', $wmgSwiftBigWikis ) ? 2 : 0; // shard levels
 /* end common Swift config */
 
 /* Eqiad Swift backend config */
@@ -29,11 +29,11 @@ $wgFileBackends[] = array( // backend config for wiki's local repo
 	'swiftKey'           => $wmfSwiftEqiadConfig['key'],
 	'swiftTempUrlKey'    => $wmfSwiftEqiadConfig['tempUrlKey'],
 	'shardViaHashLevels' => array(
-		'local-public'     => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-thumb'      => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-temp'       => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-transcoded' => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-deleted'    => array( 'levels' => $wmfSwiftShardLocal, 'base' => 36, 'repeat' => 0 )
+		'local-public'     => array( 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-thumb'      => array( 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-temp'       => array( 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-transcoded' => array( 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-deleted'    => array( 'levels' => $wmgSwiftShardLocal, 'base' => 36, 'repeat' => 0 )
 	),
 	'parallelize'        => 'implicit',
 	'cacheAuthInfo'      => true
@@ -49,10 +49,10 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repo
 	'swiftKey'           => $wmfSwiftEqiadConfig['key'],
 	'swiftTempUrlKey'    => $wmfSwiftEqiadConfig['tempUrlKey'],
 	'shardViaHashLevels' => array(
-		'local-public'     => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'local-thumb'      => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'local-temp'       => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'local-transcoded' => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-public'     => array( 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-thumb'      => array( 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-temp'       => array( 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-transcoded' => array( 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
 	),
 	'parallelize'        => 'implicit',
 	'cacheAuthInfo'      => true
@@ -81,16 +81,16 @@ $wgFileBackends[] = array( // backend config for wiki's local repo
 	'wikiId'             => "{$site}-{$lang}",
 	'lockManager'        => 'nullLockManager', // LocalFile uses FOR UPDATE
 	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname, 'ttlDays' => $wmfFileJournalTTL ),
-	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
-	'swiftUser'          => $wmfSwiftConfig['user'],
-	'swiftKey'           => $wmfSwiftConfig['key'],
-	'swiftTempUrlKey'    => $wmfSwiftConfig['tempUrlKey'],
+	'swiftAuthUrl'       => $wmgSwiftConfig['authUrl'],
+	'swiftUser'          => $wmgSwiftConfig['user'],
+	'swiftKey'           => $wmgSwiftConfig['key'],
+	'swiftTempUrlKey'    => $wmgSwiftConfig['tempUrlKey'],
 	'shardViaHashLevels' => array(
-		'local-public'     => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-thumb'      => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-temp'       => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-transcoded' => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-deleted'    => array( 'levels' => $wmfSwiftShardLocal, 'base' => 36, 'repeat' => 0 )
+		'local-public'     => array( 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-thumb'      => array( 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-temp'       => array( 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-transcoded' => array( 'levels' => $wmgSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+		'local-deleted'    => array( 'levels' => $wmgSwiftShardLocal, 'base' => 36, 'repeat' => 0 )
 	),
 	'parallelize'        => 'implicit',
 	'cacheAuthInfo'      => true
@@ -101,15 +101,15 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repo
 	'wikiId'             => "wikipedia-commons",
 	'lockManager'        => 'nullLockManager', // just thumbnails
 	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki', 'ttlDays' => $wmfFileJournalTTL ),
-	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
-	'swiftUser'          => $wmfSwiftConfig['user'],
-	'swiftKey'           => $wmfSwiftConfig['key'],
-	'swiftTempUrlKey'    => $wmfSwiftConfig['tempUrlKey'],
+	'swiftAuthUrl'       => $wmgSwiftConfig['authUrl'],
+	'swiftUser'          => $wmgSwiftConfig['user'],
+	'swiftKey'           => $wmgSwiftConfig['key'],
+	'swiftTempUrlKey'    => $wmgSwiftConfig['tempUrlKey'],
 	'shardViaHashLevels' => array(
-		'local-public'     => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'local-thumb'      => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'local-temp'       => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'local-transcoded' => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-public'     => array( 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-thumb'      => array( 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-temp'       => array( 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		'local-transcoded' => array( 'levels' => $wmgSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
 	),
 	'parallelize'        => 'implicit',
 	'cacheAuthInfo'      => true
@@ -119,10 +119,10 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared files
 	'name'               => 'global-swift',
 	'wikiId'             => "global-data",
 	'lockManager'        => 'nullLockManager',
-	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
-	'swiftUser'          => $wmfSwiftConfig['user'],
-	'swiftKey'           => $wmfSwiftConfig['key'],
-	'swiftTempUrlKey'    => $wmfSwiftConfig['tempUrlKey'],
+	'swiftAuthUrl'       => $wmgSwiftConfig['authUrl'],
+	'swiftUser'          => $wmgSwiftConfig['user'],
+	'swiftKey'           => $wmgSwiftConfig['key'],
+	'swiftTempUrlKey'    => $wmgSwiftConfig['tempUrlKey'],
 	'shardViaHashLevels' => array(
 		'math-render'  => array( 'levels' => 2, 'base' => 16, 'repeat' => 0 ),
 	),
