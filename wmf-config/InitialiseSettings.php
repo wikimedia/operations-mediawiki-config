@@ -871,6 +871,7 @@ $wgConf->settings = array(
 	'brwikisource' => '//upload.wikimedia.org/wikipedia/commons/9/97/Wikisource-logo-br.png',
 	'cawikisource' => '$stdlogo',
 	'cswikisource' => '$stdlogo',
+	'cywikisource' => '//upload.wikimedia.org/wikipedia/commons/a/aa/Wikisource-logo-cy.png', // bug 56807
 	'dewikisource' => '$stdlogo',
 	'elwikisource' => '$stdlogo',
 	'eowikisource' => '//upload.wikimedia.org/wikipedia/commons/5/54/Wikisource-logo-eo-small.png',
