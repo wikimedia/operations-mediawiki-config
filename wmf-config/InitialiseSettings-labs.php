@@ -310,6 +310,10 @@ return array(
 	'wmgBug54847' => array(
 		'default' => false,
 	),
+
+	'wmgUseRC2UDP' => array(
+		'default' => false,
+	),
 );
 
 } # wmflLabsSettings()
