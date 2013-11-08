@@ -41,6 +41,6 @@
   [[ -r "/var/log/logmsg" ]] && ! grep -q "${CHANGE}" /var/log/logmsg || exit
   echo "${CHANGE}" >> /var/log/logmsg || exit
 
-  dologmsg "!log ${USER} updated ${REPO_ROOT} to ${CHANGE:0:10}: ${SUBJECT}"
+  dologmsg "!log ${USER} updated ${REPO_ROOT} to {{Gerrit|${CHANGE:0:10}}: ${SUBJECT}"
 
 } &>/dev/null
