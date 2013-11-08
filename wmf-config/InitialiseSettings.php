@@ -2879,6 +2879,7 @@ $wgConf->settings = array(
 	'+kowiktionary' => array(
 		'Wikisaurus' => 110,
 		'Wikisaurus_talk' => 111,
+		'낱' => NS_PROJECT, // bug 56761
 	),
 	'+kuwiktionary' => array(
 		'Wîkîferheng_gotûbêj' => NS_PROJECT_TALK, // Bug 37524 (old namespace name)
