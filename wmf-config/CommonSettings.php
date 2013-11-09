@@ -922,6 +922,7 @@ $oaiAuditDatabase = 'oai';
 $oaiChunkSize = 40;
 
 $wgEnableUserEmail = true;
+$wgNoFollowLinks = true; // In case the MediaWiki default changed, bug 42594
 
 # XFF log for vandal tracking
 function wfLogXFF() {
