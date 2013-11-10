@@ -16,7 +16,7 @@
  * Settings are fetched through wmfLabsSettings() defined below.
  */
 function wmfLabsOverrideSettings() {
-	global $wmfConfigDir, $wgConf;
+	global $wmgConfigDir, $wgConf;
 
 	// Override (or add) settings that we need within the labs environment,
 	// but not in production.

@@ -66,14 +66,14 @@ class wmfClusters {
 	}
 }
 
-$wmf = new wmfClusters();
+$wmg = new wmfClusters();
 
 print '<div id="tabs">';
 
 # Generates tabs:
 print '<ul>';
 $tab = 0;
-foreach ( $wmf->names() as $name ) {
+foreach ( $wmg->names() as $name ) {
 	$tab++;
 	print "\n";
 	print '<li><a href="#tabs-' . $tab . '">Cluster ' . $name . '</a></li>';
@@ -82,10 +82,10 @@ print '</ul>';
 
 # Generates tabs content
 $tab=0;
-foreach ( $wmf->names() as $name ) {
+foreach ( $wmg->names() as $name ) {
 	$tab++;
 	print "<div id=\"tabs-$tab\">\n";
-	$wmf->contentFor( $name );
+	$wmg->contentFor( $name );
 	print '</div>';
 }
 ?></div>

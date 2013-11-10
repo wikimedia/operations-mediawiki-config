@@ -20,7 +20,7 @@ $wgConf->suffixes = array(
 	'wikivoyage',
 );
 
-$wgConf->localVHosts = require( getRealmSpecificFilename( "$wmfConfigDir/wgConfVHosts.php" ) );
+$wgConf->localVHosts = require( getRealmSpecificFilename( "$wmgConfigDir/wgConfVHosts.php" ) );
 
 $wgConf->wikis = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../all.dblist" ) ) );
 
