@@ -10018,6 +10018,7 @@ $wgConf->settings = array(
 		NS_MAIN, NS_TALK, NS_USER, NS_USER_TALK, NS_PROJECT, NS_PROJECT_TALK, NS_MEDIAWIKI, NS_MEDIAWIKI_TALK,
 		NS_HELP, NS_HELP_TALK, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111
 	),
+	'+enwikisource' => array( 114 ), // bug 56899
 	'+metawiki' => array( 200 ),
 ),
 
