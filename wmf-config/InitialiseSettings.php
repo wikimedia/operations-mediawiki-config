@@ -12203,6 +12203,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'cswiki' => true, // bug 54223
 	'dewikiversity' => true,
+	'elwiki' => true, // bug 56771
 	'enwiki' => true,
 	'enwikinews' => true, // bug 53984
 	'eswiki' => true, // bug 54826
