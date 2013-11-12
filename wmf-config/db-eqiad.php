@@ -95,10 +95,10 @@ $wgLBFactoryConf = array(
 	),
 	's2' => array(
 		'db1036'    => 0,
+		'db1018'    => 0, # snapshot, recache
 		'db1002'    => 400,
 		'db1009'    => 400,
 		'db1034'    => 400,
-		'db1018'    => 100, # snapshot
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038'    => 0,
@@ -149,12 +149,11 @@ $wgLBFactoryConf = array(
 ),
 
 'groupLoadsBySection' => array(
-	/*
 	's2' => array(
 		'QueryPage::recache' => array(
-			'db8' => 100,
+			'db1018' => 100,
 		)
-	)*/
+	)
 ),
 
 
