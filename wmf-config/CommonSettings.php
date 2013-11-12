@@ -1863,6 +1863,8 @@ if ( $wmgUseUploadWizard ) {
 		// isn't private since it's used on the client-side, i.e. anyone can see
 		// it in the outgoing AJAX requests to Flickr.
 		'flickrApiKey' => 'e9d8174a79c782745289969a45d350e8',
+		// Slowwwwwwww
+		'campaignExpensiveStatsEnabled' => false,
 	);
 
 	$wgUploadWizardConfig['enableChunked'] = 'opt-in';
