@@ -97,7 +97,7 @@ $wgLBFactoryConf = array(
 		'db1036'    => 0,
 		'db1002'    => 400,
 		'db1009'    => 400,
-		'db1034'    => 100,
+		'db1034'    => 400,
 		'db1018'    => 100, # snapshot
 	),
 	/* s3 */ 'DEFAULT' => array(
@@ -117,7 +117,7 @@ $wgLBFactoryConf = array(
 	's5' => array(
 		'db1058'   => 0,
 		'db1005'   => 100, # snapshot
-		'db1026'   => 100,
+		'db1026'   => 400,
 		'db1021'   => 400,
 		'db1045'   => 400,
 	),
@@ -130,7 +130,7 @@ $wgLBFactoryConf = array(
 	),
 	's7' => array(
 		'db1039' => 0,
-		'db1041' => 100,
+		'db1041' => 400,
 		'db1024' => 400,
 		'db1028' => 400,
 		'db1007' => 100, # snapshot
