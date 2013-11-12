@@ -1503,11 +1503,6 @@ if ( $wgDBname == 'enwiki' ) {
 // PHP language binding to make Swift accessible via cURL
 include "$IP/extensions/SwiftCloudFiles/SwiftCloudFiles.php";
 
-// Quickie extension that addsa  bogus field to edit form and whinges if it's filled out
-// Might or might not do anything useful :D
-// Enabling just to log to udp://$wmfUdp2logDest/spam
-include "$IP/extensions/SimpleAntiSpam/SimpleAntiSpam.php";
-
 if ( $wmgUseCollection ) {
 	// PediaPress / PDF generation
 	include "$IP/extensions/Collection/Collection.php";
