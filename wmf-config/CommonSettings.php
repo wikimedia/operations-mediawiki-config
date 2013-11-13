@@ -1800,18 +1800,10 @@ if ( $wgDBname == 'strategywiki' ) {
 }
 
 # # Hack to block emails from some idiot user who likes 'The Joker' --Andrew 2009-05-28
-$wgHooks['EmailUser'][] = 'wmfBlockJokerEmails';
-
-function wmfBlockJokerEmails( &$to, &$from, &$subject, &$text ) {
-	$blockedAddresses = array( 'the4joker@gmail.com', 'testaccount@werdn.us', 'randomdude5555@gmail.com', 'siyang.li@yahoo.com', 'johnnywiki@gmail.com', 'wikifreedomfighter@googlemail.com' );
-	if ( in_array( $from->address, $blockedAddresses ) ) {
-		wfDebugLog( 'block_joker_mail', "Blocked attempted email from " . $from->toString() .
-					" to " . $to->address . " with subject " . $subject . "\n" );
-		return false;
-	}
-	return true;
+$wgHooks['EmailUser'][] = function ( &$to, &$from, &$subject, &$text ) {
+	$blockedAddresses = array( 'the4joker@gmail.com', 'randomdude5555@gmail.com', 'siyang.li@yahoo.com', 'johnnywiki@gmail.com', 'wikifreedomfighter@googlemail.com' );
+	return !in_array( $from->address, $blockedAddresses );
 }
-
 
 // ContributionTracking for handling PayPal redirects
 if ( $wgUseContributionTracking ) {
