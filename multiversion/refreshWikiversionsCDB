@@ -6,6 +6,7 @@ error_reporting( E_ALL );
 require_once( dirname( __FILE__ ) . '/defines.php' );
 require_once( dirname( __FILE__ ) . '/MWWikiversions.php' );
 require_once( dirname( __FILE__ ) . '/MWRealm.php' );
+require_once( dirname( __FILE__ ) . '/Cdb.php' );
 
 /*
  * Populate wikiversions.cdb file using all the items in wikiversions.dat
@@ -46,7 +47,10 @@ function refreshWikiversionsCDB() {
 
 	# Build the new database at the temp location...
 	@unlink( $tmpDBPath ); // clear any old temp file for sanity
-	$db = dba_open( $tmpDBPath, "n", "cdb_make" );
+	try {
+		$db = CdbWriter::open( $tmpDBPath );
+	} catch ( CdbException $e ) {}
+
 	if ( !$db ) {
 		die( "Unable to create {$tmpDBPath}.\n" );
 	}
@@ -55,10 +59,10 @@ function refreshWikiversionsCDB() {
 		if ( $extVersion === '*' ) {
 			$extVersion = ''; // "*" means "none"
 		}
-		dba_insert( "ver:$dbName", $version, $db );
-		dba_insert( "ext:$dbName", $extVersion, $db );
+		$db->set( "ver:$dbName", $version );
+		$db->set( "ext:$dbName", $extVersion );
 	}
-	dba_close( $db );
+	$db->close();
 
 	# Sanity check the temp file...
 	if ( !is_file( $tmpDBPath ) ) {

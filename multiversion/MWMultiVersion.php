@@ -1,6 +1,7 @@
 <?php
 require_once( dirname( __FILE__ ) . '/defines.php' );
 require_once( dirname( __FILE__ ) . '/MWRealm.php' );
+require_once( dirname( __FILE__ ) . '/Cdb.php' );
 
 /**
  * Class to handle basic information related to what
@@ -268,21 +269,24 @@ class MWMultiVersion {
 			MULTIVER_CDB_DIR_APACHE . '/wikiversions.cdb'
 		);
 
-		$db = dba_open( $cdbFilename, 'r', 'cdb' );
+		try {
+			$db = CdbReader::open( $cdbFilename );
+		} catch( CdbException $e ) {}
+
 		if ( $db ) {
-			$version = dba_fetch( "ver:{$this->db}", $db );
+			$version = $db->get( "ver:{$this->db}" );
 			if ( $version === false ) {
 				$extraVersion = false;
 			} else {
 				if ( strpos( $version, 'php-' ) !== 0 ) {
 					self::error( "$cdbFilename version entry does not start with `php-` (got `$version`).\n" );
 				}
-				$extraVersion = dba_fetch( "ext:{$this->db}", $db );
+				$extraVersion = $db->get( "ext:{$this->db}" );
 				if ( $extraVersion === false ) {
 					self::error( "$cdbFilename has no extra version entry for `$db`.\n" );
 				}
 			}
-			dba_close( $db );
+			$db->close();
 		} else {
 			self::error( "Unable to open $cdbFilename.\n" );
 		}
