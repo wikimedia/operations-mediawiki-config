@@ -1804,13 +1804,6 @@ if ( $wgDBname == 'strategywiki' ) {
 	require_once( "$IP/extensions/StrategyWiki/ActiveStrategy/ActiveStrategy.php" );
 }
 
-if ( $wgDBname == 'testwiki' || $wgDBname == 'foundationwiki' ) {
-	require_once( "$IP/extensions/CommunityHiring/CommunityHiring.php" );
-	$wgCommunityHiringDatabase = 'officewiki';
-} elseif ( $wgDBname == 'officewiki' ) {
-	require_once( "$IP/extensions/CommunityApplications/CommunityApplications.php" );
-}
-
 # # Hack to block emails from some idiot user who likes 'The Joker' --Andrew 2009-05-28
 $wgHooks['EmailUser'][] = 'wmfBlockJokerEmails';
 
