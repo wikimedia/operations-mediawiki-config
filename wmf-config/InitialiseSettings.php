@@ -10598,9 +10598,10 @@ $wgConf->settings = array(
 	'visualeditor' => true,
 ),
 
+// Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
+// NS_VISUALEDITOR is added in CommonSettings.php if wmgUseVisualEditorNamespace is true
 'wmgVisualEditorNamespaces' => array(
-	// NS_VISUALEDITOR is added in CommonSettings.php if wmgUseVisualEditorNamespace is true
-	'default' => array( NS_MAIN, NS_USER, NS_FILE, NS_HELP, NS_CATEGORY ),
+	'default' => array( NS_USER, NS_FILE, NS_HELP, NS_CATEGORY ),
 	'+mediawikiwiki' => array( NS_PROJECT, 100 /* Manual */, 102 /* Extension */, 104 /* API */ ), // Bug 48430
 	'+cawiki' => array( 100 /* Portal */, 102 /* Viquiprojecte */ ), // Bug 56000
 	'+enwiki' => array( 100 /* Portal */, 108 /* Book */ ), // Bug 56001
