@@ -2345,7 +2345,6 @@ $wgConf->settings = array(
 		'Wikibooks_talk' => NS_PROJECT_TALK, // bug 31068
 	),
 	'+azwikiquote' => array(
-		'Wikiquote'      => NS_PROJECT,
 		'Wikiquote_talk' => NS_PROJECT_TALK,
 	),
 	'+azwikisource' => array(
@@ -2392,7 +2391,6 @@ $wgConf->settings = array(
 	),
 	'+bnwikibooks' => array(
 		'WB' => NS_PROJECT,
-		'Wikibooks' => NS_PROJECT,
 		'Wikijunior' => 100,
 		'wikijunior_talk' => 101,
 		'Subject' => 102,
@@ -2405,13 +2403,16 @@ $wgConf->settings = array(
 		'Portal' => 100,
 		'Portal_talk' => 101,
 	),
-	'+brwiki' => array( 'Discussion_Wikipedia' => NS_PROJECT_TALK, ),
-	'+brwikiquote' => array( 'Wikiquote' => NS_PROJECT ),
+	'+brwiki' => array(
+		'Discussion_Wikipedia' => NS_PROJECT_TALK,
+	),
 	'+brwikisource' => array(
 		'Author' => 104,
 		'Author_talk' => 105,
 	),
-	'+brwiktionary' => array( 'Wiktionary' => NS_PROJECT, 'Wiktionary_talk' => NS_PROJECT_TALK ),
+	'+brwiktionary' => array(
+		'Wiktionary_talk' => NS_PROJECT_TALK,
+	),
 	'+cawiki' => array(
 		'Usuària' => NS_USER,
 		'Usuària_discussió' => NS_USER_TALK,
@@ -2438,77 +2439,71 @@ $wgConf->settings = array(
 	'+commonswiki' => array(
 		'Museum' => 106,
 		'Museum_talk' => 107,
-		'COM' => NS_PROJECT, // http://bugzilla.wikimedia.org/show_bug.cgi?id=12600
+		'COM' => NS_PROJECT, // bug 12600
 	),
 	'+cswiki' => array(
-		'Uživatel'		=> NS_USER,
-		'Wikipedistka'	    => NS_USER,
-		'Diskuse_s_uživatelem'    => NS_USER_TALK,
+		'Uživatel' => NS_USER,
+		'Wikipedistka' => NS_USER,
+		'Diskuse_s_uživatelem' => NS_USER_TALK,
 		'Diskuse_s_wikipedistkou' => NS_USER_TALK,
-		'Wikipedista_diskuse'     => NS_USER_TALK,
-		'Wikipedistka_diskuse'    => NS_USER_TALK,
-		'WP'		      => NS_PROJECT,
-		'Portal'		  => 100,
-		'Portal_talk'	     => 101,
-		'Portál_diskuse'	  => 101,
-		'Rejstřík_diskuse'	=> 103,
+		'Wikipedista_diskuse' => NS_USER_TALK,
+		'Wikipedistka_diskuse' => NS_USER_TALK,
+		'WP'  => NS_PROJECT,
+		'Portal' => 100,
+		'Portal_talk' => 101,
+		'Portál_diskuse' => 101,
+		'Rejstřík_diskuse' => 103,
 	),
 	'+cswikibooks' => array(
-		'WB'		      => NS_PROJECT,
-		'WK'		      => NS_PROJECT,
-		'Wikibooks'	       => NS_PROJECT,
-		'Wikibooks_diskuse'       => NS_PROJECT_TALK,
-		'Wikibooks_talk'	  => NS_PROJECT_TALK,
+		'WB' => NS_PROJECT,
+		'WK' => NS_PROJECT,
+		'Wikibooks_diskuse' => NS_PROJECT_TALK,
+		'Wikibooks_talk' => NS_PROJECT_TALK,
 	),
 	'+cswikinews' => array(
-		'Redaktorka'	      => NS_USER,
-		'Uživatel'		=> NS_USER,
-		'Diskuse_s_redaktorkou'   => NS_USER_TALK,
-		'Diskuse_s_uživatelem'    => NS_USER_TALK,
-		'Redaktor_diskuse'	=> NS_USER_TALK,
-		'Redaktorka_diskuse'      => NS_USER_TALK,
-		'WN'		      => NS_PROJECT,
-		'WZ'		      => NS_PROJECT,
-		'Wikinews'		=> NS_PROJECT,
-		'Wikinews_diskuse'	=> NS_PROJECT_TALK,
-		'Wikinews_talk'	   => NS_PROJECT_TALK,
-		'Portal'		  => 100,
-		'Portal_talk'	     => 101,
-		'Portál_diskuse'	  => 101,
+		'Redaktorka' => NS_USER,
+		'Uživatel' => NS_USER,
+		'Diskuse_s_redaktorkou' => NS_USER_TALK,
+		'Diskuse_s_uživatelem' => NS_USER_TALK,
+		'Redaktor_diskuse' => NS_USER_TALK,
+		'Redaktorka_diskuse' => NS_USER_TALK,
+		'WN' => NS_PROJECT,
+		'WZ' => NS_PROJECT,
+		'Wikinews_diskuse' => NS_PROJECT_TALK,
+		'Wikinews_talk' => NS_PROJECT_TALK,
+		'Portal' => 100,
+		'Portal_talk' => 101,
+		'Portál_diskuse' => 101,
 	),
 	'+cswikiquote' => array(
-		'WC'		      => NS_PROJECT,
-		'WQ'		      => NS_PROJECT,
-		'Wikiquote'	       => NS_PROJECT,
-		'Wikiquote_diskuse'       => NS_PROJECT_TALK,
-		'Wikiquote_talk'	  => NS_PROJECT_TALK,
-		'Dílo_diskuse'	   => 101,
+		'WC' => NS_PROJECT,
+		'WQ' => NS_PROJECT,
+		'Wikiquote_diskuse' => NS_PROJECT_TALK,
+		'Wikiquote_talk' => NS_PROJECT_TALK,
+		'Dílo_diskuse' => 101,
 	),
 	'+cswikisource' => array(
-		'WS'		      => NS_PROJECT,
-		'WZ'		      => NS_PROJECT,
-		'Wikisource'	      => NS_PROJECT,
-		'Wikisource_diskuse'      => NS_PROJECT_TALK,
-		'Wikisource_talk'	 => NS_PROJECT_TALK,
-		'Author'		  => 100,
-		'Author_talk'	     => 101,
-		'Autor_diskuse'	   => 101,
+		'WS' => NS_PROJECT,
+		'WZ' => NS_PROJECT,
+		'Wikisource_diskuse' => NS_PROJECT_TALK,
+		'Wikisource_talk' => NS_PROJECT_TALK,
+		'Author' => 100,
+		'Author_talk' => 101,
+		'Autor_diskuse' => 101,
 	),
 	'+cswikiversity' => array(
-		'WV'		      => NS_PROJECT,
-		'Wikiversity'	     => NS_PROJECT,
-		'Wikiversity_diskuse'     => NS_PROJECT_TALK,
-		'Wikiversity_talk'	=> NS_PROJECT_TALK,
-		'Forum'		   => 100,
-		'Forum_talk'	      => 101,
-		'Fórum_diskuse'	   => 101,
+		'WV' => NS_PROJECT,
+		'Wikiversity_diskuse' => NS_PROJECT_TALK,
+		'Wikiversity_talk' => NS_PROJECT_TALK,
+		'Forum' => 100,
+		'Forum_talk' => 101,
+		'Fórum_diskuse' => 101,
 	),
 	'+cswiktionary' => array(
-		'WS'		      => NS_PROJECT,
-		'WT'		      => NS_PROJECT,
-		'Wiktionary'	      => NS_PROJECT,
-		'Wiktionary_diskuse'      => NS_PROJECT_TALK,
-		'Wiktionary_talk'	 => NS_PROJECT_TALK,
+		'WS' => NS_PROJECT,
+		'WT' => NS_PROJECT,
+		'Wiktionary_diskuse' => NS_PROJECT_TALK,
+		'Wiktionary_talk' => NS_PROJECT_TALK,
 		'Příloha_diskuse' => 101,
 	),
 	'+cuwiki' => array(
@@ -2523,19 +2518,19 @@ $wgConf->settings = array(
 		'Sgwrs_Wicitestun' => NS_PROJECT_TALK,
 	),
 	'+dawiki' => array(
-		'WP' => NS_PROJECT, # 27998
-		'Portal_diskussion' => 101, // changed http://bugzilla.wikimedia.org/show_bug.cgi?id=7759
+		'WP' => NS_PROJECT, // bug 27998
+		'Portal_diskussion' => 101, // bug 7759
 	),
 	'+dawikisource' => array(
-		'Author' => 102, // http://bugzilla.wikimedia.org/show_bug.cgi?id=7796
+		'Author' => 102, // bug 7796
 		'Author_talk' => 103,
 	),
 	'+dewiki' => array(
 		'WP' => NS_PROJECT,
 		'P' => 100,
 		'PD' => 101,
-		'WD' => 5,
-		'BD' => 3,
+		'WD' => NS_PROJECT_TALK,
+		'BD' => NS_USER_TALK,
 		'H' => NS_HELP,
 		'HD' => NS_HELP_TALK,
 	),
@@ -2548,7 +2543,7 @@ $wgConf->settings = array(
 		'BD' => NS_USER_TALK,
 	),
 	'+dewikisource' => array(
-		'WS' => 4,
+		'WS' => NS_PROJECT,
 	),
 	'+dewikivoyage' => array( // bug 51794
 		'WV' => NS_PROJECT,
@@ -2580,39 +2575,38 @@ $wgConf->settings = array(
 	'+dvwiktionary' => array(
 		'Wiktionary_talk' => NS_PROJECT_TALK, // Bug 46846
 	),
-	'+enwiki' => array(
-	 // bug 6313
+	'+enwiki' => array( // bug 6313
 		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
 	),
 	'+enwikibooks' => array(
-		'WB' => 4,
+		'WB' => NS_PROJECT,
 		'WJ' => 110,
-		'CAT' => 14,
+		'CAT' => NS_CATEGORY,
 		'COOK' => 102,
 		'SUB' => 112,
 	),
 	'+enwikinews' => array(
-			'WN' => NS_PROJECT,
+		'WN' => NS_PROJECT,
 		'CAT' => NS_CATEGORY,
 	),
 	'+enwikisource' => array(
-		'WS' => NS_PROJECT,       // Bug 42853
-		'WT' => NS_PROJECT_TALK,  // Bug 42853
+		'WS' => NS_PROJECT, // bug 42853
+		'WT' => NS_PROJECT_TALK, // bug 42853
 	),
 	'+enwikiversity' => array(
 		'WV' => NS_PROJECT,
 	),
 	'+enwiktionary' => array(
-			'WS' => 110, // Wikisaurus
-			'WT' => NS_PROJECT,
+		'WS' => 110, // Wikisaurus
+		'WT' => NS_PROJECT,
 	),
 	'+eowiki' => array(
-			'VP' => NS_PROJECT,
+		'VP' => NS_PROJECT,
 	),
 	'+eowiktionary' => array(
-		'Vikipediisto' => NS_USER,		   # bug 22426
-		'Vikipediista_diskuto' => NS_USER_TALK,     # bug 22426
+		'Vikipediisto' => NS_USER, // bug 22426
+		'Vikipediista_diskuto' => NS_USER_TALK, // bug 22426
 	),
 	'+eswikisource' => array(
 		'Auxtoro' => 102,
@@ -2670,9 +2664,9 @@ $wgConf->settings = array(
 		'Discussion_Utilisatrice' => NS_USER_TALK,
 	),
 	'+frwikibooks' => array(
-		'WL' => NS_PROJECT, # bug 35977
-		'WJ' => 102, # bug 35977
-		'Wikijunior_talk' => 103, # bug 35977
+		'WL' => NS_PROJECT, // bug 35977
+		'WJ' => 102, // bug 35977
+		'Wikijunior_talk' => 103, // bug 35977
 	),
 	'+frwikinews' => array(
 		'WN' => NS_PROJECT,
@@ -2685,8 +2679,8 @@ $wgConf->settings = array(
 		'WT' => NS_PROJECT,
 	),
 	'+gdwiki' => array(
-			'Wikipedia' => NS_PROJECT,
-			'Wikipedia_talk' => NS_PROJECT_TALK,
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_talk' => NS_PROJECT_TALK,
 	),
 	'+glwiki' => array(
 		'Portal_talk' => 101, // Bug 41213 (old namespace name)
@@ -2728,7 +2722,6 @@ $wgConf->settings = array(
 		'Author_talk' => 101,
 	),
 	'+hsbwiktionary' => array(
-		'Wiktionary' => NS_PROJECT, // Bug 41328 (old namespace)
 		'Wiktionary diskusija' => NS_PROJECT_TALK,
 	),
 	'+htwiki' => array(
@@ -2761,8 +2754,7 @@ $wgConf->settings = array(
 		'Author_talk' => 101,
 	),
 	'+idwikibooks' => array(
-		'Wikibooks'	       => NS_PROJECT,      # backcompat for shell req bug 36156
-		'Pembicaraan_Wikibooks'	  => NS_PROJECT_TALK, # backcompat for shell req bug 36156
+		'Pembicaraan_Wikibooks' => NS_PROJECT_TALK, // bug 36156
 	),
 	'+idwikisource' => array(
 		'Author' => 100,
@@ -2786,8 +2778,7 @@ $wgConf->settings = array(
 		'Author_talk' => 103, // Bug 44164
 	),
 	'+iswiktionary' => array(
-		'Wiktionary' => NS_PROJECT,
-		'Wikiorðabókspjall' => 5, // changed http://bugzilla.wikimedia.org/show_bug.cgi?id=7754
+		'Wikiorðabókspjall' => NS_PROJECT_TALK, // bug 7754
 		'Thesaurus' => 110,
 		'Thesaurus_talk' => 111,
 	),
@@ -2837,11 +2828,10 @@ $wgConf->settings = array(
 		'Wikiversity_talk' => NS_PROJECT_TALK,
 	),
 	'+kawikiquote' => array(
-		'Wikiquote' => 4,
-		'Wikiquote_განხილვა' => 5,
+		'Wikiquote_განხილვა' => NS_PROJECT_TALK,
 	),
 	'+kkwiki' => array(
-		'Joba' => 102,           // Bug 40794
+		'Joba' => 102, // bug 40794
 		'Joba_talqılawı' => 103,
 		'جوبا' => 102,
 		'جوبا_تالقىلاۋى' => 103,
@@ -2876,7 +2866,6 @@ $wgConf->settings = array(
 		'인' => NS_PROJECT,
 	),
 	'+kowikisource' => array(
-		'Wikisource' => NS_PROJECT,
 		'Wikisource_talk' => NS_PROJECT_TALK,
 		'글쓴이' => 100,
 		'글쓴이토론' => 101,
@@ -2904,19 +2893,26 @@ $wgConf->settings = array(
 		'Wikipedia' => NS_PROJECT,
 		'Обсуждение_Wikipedia' => NS_PROJECT_TALK,
 	),
-	'+lawiki' => array( 'Disputatio_Wikipedia' => NS_PROJECT_TALK ),
+	'+lawiki' => array(
+		'Disputatio_Wikipedia' => NS_PROJECT_TALK,
+	),
 	'+lawikisource' => array(
 		'Author' => 102,
 		'Author_talk' => 103,
-		'Wikisource' => NS_PROJECT,
 	),
 	'+lbwiktionary' => array(
-		'Wiktionary' => 4,
-		'Wiktionary_Diskussioun' => 5,
+		'Wiktionary_Diskussioun' => NS_PROJECT_TALK,
 	),
-	'+ltwiki' => array( 'Wikipedia' => NS_PROJECT, 'Wikipedia_aptarimas' => NS_PROJECT_TALK ),
-	'+lvwiki' => array( 'Wikipedia' => NS_PROJECT ),
-	'+metawiki' => array( 'R' => 202 ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=29129
+	'+ltwiki' => array(
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_aptarimas' => NS_PROJECT_TALK,
+	),
+	'+lvwiki' => array(
+		'Wikipedia' => NS_PROJECT,
+	),
+	'+metawiki' => array( // bug 29129
+		'R' => 202,
+	),
 	'+mlwiki' => array(
 		'വിക്കി' => NS_PROJECT,
 		'വിക്കിസം' => NS_PROJECT_TALK,
@@ -2928,7 +2924,6 @@ $wgConf->settings = array(
 	'+mlwikibooks' => array(
 		'വിക്കി‌‌_പുസ്തകശാല' => NS_PROJECT,
 		'വിക്കി‌‌_പുസ്തകശാല_സംവാദം' => NS_PROJECT_TALK,
-		'Wikibooks' => NS_PROJECT,
 		'Wikibooks_talk' => NS_PROJECT_TALK,
 		'Cookbook' => 100,
 		'Cookbook_talk' => 101,
@@ -2948,26 +2943,24 @@ $wgConf->settings = array(
 		'സസം' => NS_HELP_TALK,
 	),
 	'+mlwikiquote' => array(
-		'വിക്കി_ചൊല്ലുകൾ'	      => NS_PROJECT, // bug 38111
-		'വിക്കി_ചൊല്ലുകൾ_സംവാദം'	      => NS_PROJECT_TALK, // bug 38111
+		'വിക്കി_ചൊല്ലുകൾ' => NS_PROJECT, // bug 38111
+		'വിക്കി_ചൊല്ലുകൾ_സംവാദം' => NS_PROJECT_TALK, // bug 38111
 	),
 	'+mlwikisource' => array(
-		'Author'	      => 100,
+		'Author' => 100,
 		'Author_talk' => 101,
-		'Portal'	      => 102,
+		'Portal' => 102,
 		'Portal_talk' => 103,
-		'Wikisource' => NS_PROJECT,
 		'WS' => NS_PROJECT,
-		'H' => NS_HELP, # bug 35712
+		'H' => NS_HELP, // bug 35712
 	),
 	'+mlwiktionary' => array(
-		'Wiktionary' => NS_PROJECT,
 		'വിക്കി‌‌_നിഘണ്ടു' => NS_PROJECT,
 		'വിക്കി‌‌_നിഘണ്ടു_സംവാദം' => NS_PROJECT_TALK,
 	),
 	'+mrwiki' => array(
-		'Wikipedia'   => NS_PROJECT,
-		'विपी'		=> NS_PROJECT,
+		'Wikipedia' => NS_PROJECT,
+		'विपी' => NS_PROJECT,
 	),
 	'+mrwikisource' => array(
 		'Portal' => 100,
@@ -2986,8 +2979,8 @@ $wgConf->settings = array(
 		'وپ' => NS_PROJECT,
 		'Portal' => 100,
 		'Portal_talk' => 101,
-		'Wikipedia' => 4,
-		'Wikipedia_گپ' => 5,
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_گپ' => NS_PROJECT_TALK,
 	),
 	'+nahwiki' => array(
 		'Wikipedia' => NS_PROJECT,
@@ -2996,8 +2989,12 @@ $wgConf->settings = array(
 	'+ndswiki' => array(
 		'WP' => NS_PROJECT,
 	),
-	'+nds_nlwiki' => array( 'Wikipedia' => NS_PROJECT ),
-	'+newiki' => array( 'Wikipedia' => NS_PROJECT ),
+	'+nds_nlwiki' => array(
+		'Wikipedia' => NS_PROJECT,
+	),
+	'+newiki' => array(
+		'Wikipedia' => NS_PROJECT,
+	),
 	'+nlwiki' => array(
 		'WP' => NS_PROJECT,
 		'H' => NS_HELP,
@@ -3022,7 +3019,7 @@ $wgConf->settings = array(
 		'Wikimedia_Norga' => NS_PROJECT,
 	),
 	'+nowikisource' => array(
-		'Author' => 102, // http://bugzilla.wikimedia.org/show_bug.cgi?id=7796
+		'Author' => 102, // bug 7796
 		'Author_talk' => 103,
 	),
 	'+nowiktionary' => array(
@@ -3032,15 +3029,14 @@ $wgConf->settings = array(
 	'+orwiki' => array(
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
-		'WP' => NS_PROJECT, // http://bugzilla.wikimedia.org/show_bug.cgi?id=28257
-		'WT' => NS_PROJECT_TALK, // http://bugzilla.wikimedia.org/show_bug.cgi?id=28257
+		'WP' => NS_PROJECT, // bug 28257
+		'WT' => NS_PROJECT_TALK, // bug 28257
 	),
 	'+outreachwiki' => array(
-			'Wikipedia' => NS_PROJECT,
-			'Wikipedia_talk' => NS_PROJECT_TALK,
+		'Wikipedia' => NS_PROJECT,
+		'Wikipedia_talk' => NS_PROJECT_TALK,
 	),
-	'+plwiki' => array(
-		// http://bugzilla.wikimedia.org/show_bug.cgi?id=10064
+	'+plwiki' => array( // bug 10064
 		'Wikipedystka' => NS_USER,
 		'Dyskusja_wikipedystki' => NS_USER_TALK,
 		'WP' => NS_PROJECT,
@@ -3059,15 +3055,14 @@ $wgConf->settings = array(
 		'WS' => NS_PROJECT,
 	),
 	'+ptwiki' => array(
-		'Utilizador' => NS_USER,  # bug 27495
-		'Utilizador_Discussão' => NS_USER_TALK, # bug 27495
+		'Utilizador' => NS_USER,  // bug 27495
+		'Utilizador_Discussão' => NS_USER_TALK, // bug 27495
 		'Discussão_Portal' => 101,
-		'WP' => NS_PROJECT, # 27728
-		'Wikipedia'	=> NS_PROJECT,
+		'WP' => NS_PROJECT, // bug 27728
+		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_Discussão' => NS_PROJECT_TALK,
 	),
 	'+ptwikibooks' => array(
-		'Wikibooks' => NS_PROJECT,
 		'Wikibooks_Talk' => NS_PROJECT_TALK,
 		'Wikibooks_Discussão' => NS_PROJECT_TALK,
 	),
@@ -3079,36 +3074,18 @@ $wgConf->settings = array(
 		'Discussão_em_tradução' => 109,
 	),
 	'+rowiki' => array(
-		'Discuţie' => 	NS_TALK,
-		'Discuţie_Utilizator' => 	NS_USER_TALK,
-		'Discuţie_Wikipedia' => 	NS_PROJECT_TALK,
-		'Fişier' => 	NS_FILE,
-		'Imagine' => 	NS_FILE,
-		'Discuţie_Fişier' => 	NS_FILE_TALK,
-		'Discuţie_Format' => 	NS_TEMPLATE_TALK,
-		'Discuţie_MediWiki' => 	NS_MEDIAWIKI_TALK,
-		'Discuţie_Ajutor' => 	NS_HELP_TALK,
-		'Discuţie_Categorie' => 	NS_CATEGORY_TALK,
+		'Discuţie_MediWiki' => NS_MEDIAWIKI_TALK,
 		'Discuţie_Portal' => 101,
 		'Discuţie_Proiect' => 103,
 	),
+	'+rowikibooks' => array(
+		'Discuţie_Wikibooks' => NS_PROJECT_TALK,
+	),
 	'+rowikinews' => array(
-		'Discuţie' => 	NS_TALK,
-		'Discuţie_Utilizator' => 	NS_USER_TALK,
 		'Wikiştiri' => NS_PROJECT,
 		'Wikinews' => NS_PROJECT,
-		'Discuţie_Wikiştiri' => 	NS_PROJECT_TALK,
-		'Fişier' => 	NS_FILE,
-		'Imagine' => 	NS_FILE,
-		'Discuţie_Fişier' => 	NS_FILE_TALK,
-		'Discuţie_Format' => 	NS_TEMPLATE_TALK,
-		'Discuţie_MediWiki' => 	NS_MEDIAWIKI_TALK,
-		'Discuţie_Ajutor' => 	NS_HELP_TALK,
-		'Discuţie_Categorie' => 	NS_CATEGORY_TALK,
-	),
-	'+rowikibooks' => array(
-		'Wikibooks' => NS_PROJECT,
-		'Discuţie_Wikibooks' => NS_PROJECT_TALK,
+		'Discuţie_Wikiştiri' => NS_PROJECT_TALK,
+		'Discuţie_MediWiki' => NS_MEDIAWIKI_TALK,
 	),
 	'+rowikisource' => array(
 		'Author' => 102,
@@ -3160,13 +3137,10 @@ $wgConf->settings = array(
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	),
-	'+scnwiktionary' => array(
-		'Wiktionary' => NS_PROJECT,
-	),
 	'+sewiki' => array(
-		'WP' => NS_PROJECT,                //Bug 40436
-		'Temasiidu' => 100,                //Bug 39206
-		'Temasiidoságastallan' => 101,     //Bug 39206
+		'WP' => NS_PROJECT, // bug 40436
+		'Temasiidu' => 100, // bug 39206
+		'Temasiidoságastallan' => 101, // bug 39206
 	),
 	'+simplewiki' => array(
 		'WP' => NS_PROJECT,
@@ -3180,24 +3154,20 @@ $wgConf->settings = array(
 	'+siwiki' => array(
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
-		'Portal'     => 100,
+		'Portal' => 100,
 		'Portal_talk' => 101,
 	),
 	'+siwikibooks' => array(
-		'Wikibooks' => NS_PROJECT,
 		'Wikibooks_talk' => NS_PROJECT_TALK,
 	),
 	'+siwiktionary' => array(
-		'Wiktionary' => NS_PROJECT,
 		'Wiktionary_talk' => NS_PROJECT_TALK,
 	),
 	'+skwikibooks' => array(
-		'Wikibooks'	      => NS_PROJECT,
-		'Wikibooks_talk'	 => NS_PROJECT_TALK,
+		'Wikibooks_talk' => NS_PROJECT_TALK,
 	),
 	'+skwikisource' => array(
-		'Wikisource'	      => NS_PROJECT,
-		'Wikisource_talk'	 => NS_PROJECT_TALK,
+		'Wikisource_talk' => NS_PROJECT_TALK,
 	),
 	'+sqwikinews' => array(
 		'WL' => NS_PROJECT,
@@ -3242,32 +3212,26 @@ $wgConf->settings = array(
 		'పేజీ_చర్చ' => 105,
 	),
 	'+tewiktionary' => array(
-		'Wiktionary' => NS_PROJECT, # backcompat for shell req bug 36533
-		'Wiktionary_చర్చ' => NS_PROJECT_TALK, # backcompat for shell req bug 36533
+		'Wiktionary_చర్చ' => NS_PROJECT_TALK, // bug 36533
 	),
 	'+thwikibooks' => array(
-		'Wikibooks' => NS_PROJECT,                  // Bug 40717
 		'คุยเรื่องWikibooks' => NS_PROJECT_TALK,
-		'Subject' => 102, // Bug 46153
-		'Subject_talk' => 103, // Bug 46153
+		'Subject' => 102, // bug 46153
+		'Subject_talk' => 103, // bug 46153
 	),
 	'+thwiktionary' => array(
-		'Wiktionary' => NS_PROJECT,                 // Bug 40717
 		'คุยเรื่องWiktionary' => NS_PROJECT_TALK,
-	),
-	'+tkwiktionary' => array(
-		'Wiktionary' => NS_PROJECT,
 	),
 	'+trwikibooks' => array(
 		'VK' => NS_PROJECT,
 		'VÇ' => 110,
 		'KAT' => NS_CATEGORY,
-				'KİT' => 112,
+		'KİT' => 112,
 	),
 	'+trwikisource' => array(
 		'Author' => 100,
 		'Author_talk' => 101,
-		'VikiKaynak' => NS_PROJECT, // Bug 42721
+		'VikiKaynak' => NS_PROJECT, // bug 42721
 		'Oluşturuluyor VikiKaynak tartışma' => NS_PROJECT_TALK,
 	),
 	'+ttwiki' => array(
@@ -3275,9 +3239,6 @@ $wgConf->settings = array(
 		'ВП' => NS_PROJECT,
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
-	),
-	'+udmwiki' => array(
-		'Wikipedia_сярысь_вераськон' => NS_PROJECT_TALK, // Bug 47820
 	),
 	'+ukwiki' => array(
 		'ВП' => NS_PROJECT,
@@ -3311,29 +3272,28 @@ $wgConf->settings = array(
 	'+ukwikivoyage' => array(
 		'Portal' => 100,
 		'Portal_talk' => 101,
-		'ВМ' => 4,
-		'К' => 14,
+		'ВМ' => NS_PROJECT,
+		'К' => NS_CATEGORY,
 		'П' => 100,
-		'Д' =>  12,
+		'Д' =>  NS_HELP,
 	),
 	'+ukwiktionary' => array(
-		'Wiktionary' => NS_PROJECT,
 		'ВС' => NS_PROJECT,
 	),
 	'+urwiki' => array(
-		'Portal' => 100, // Bug 19569
-		'Portal_talk' => 101, // Bug 19569
+		'Portal' => 100, // bug 19569
+		'Portal_talk' => 101, // bug 19569
 	),
 	'+uzwiki' => array(
-		'VP' => NS_PROJECT, // Bug 46534
-		'VM' => NS_PROJECT_TALK, // Bug 46534
+		'VP' => NS_PROJECT, // bug 46534
+		'VM' => NS_PROJECT_TALK, // bug 46534
 	),
 	'+vecwikisource' => array(
 		'Author' => 100,
 		'Author_talk' => 101,
 	),
 	'+wikidata' => array(
-		'WD' => NS_PROJECT,      // Bug 41834
+		'WD' => NS_PROJECT, // bug 41834
 		'WT' => NS_PROJECT_TALK,
 		'P' => 120, // bug 45079
 	),
@@ -3372,17 +3332,16 @@ $wgConf->settings = array(
 		'Cookbook_talk' => 107,
 	),
 	'+viwikisource' => array(
-		'Portal'     => 100,
-		'Portal_talk'    => 101,
-		'Author'     => 102,
-		'Author_talk'    => 103,
+		'Portal' => 100,
+		'Portal_talk' => 101,
+		'Author' => 102,
+		'Author_talk' => 103,
 	),
 	'+vowiki' => array(
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	),
 	'+vowiktionary' => array(
-		'Wiktionary' => NS_PROJECT,
 		'Wiktionary_talk' => NS_PROJECT_TALK,
 	),
 	'+zh_classicalwiki' => array(
