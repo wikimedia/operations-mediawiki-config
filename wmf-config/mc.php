@@ -15,7 +15,8 @@ $wgMemCachedTimeout = 250000; # default is 100000
 # NOTE: after deploying a new twemproxy.yaml config, run restart-twemproxy
 # from the deploy host to make it live.
 $wgObjectCaches['memcached-pecl'] = array(
-	'class'      => 'MemcachedPeclBagOStuff',
+	// Ugly hack until bug 56596 is solved
+	'class'      => !defined( 'HHVM_VERSION' ) ? 'MemcachedPeclBagOStuff' : 'EmptyBagOStuff',
 	'serializer' => 'igbinary',
 	'persistent' => false,
 	'servers'    => array( '127.0.0.1' ),
