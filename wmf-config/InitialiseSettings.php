@@ -10317,9 +10317,6 @@ $wgConf->settings = array(
 	'default' => true, // brion -- 2009-08-25
 ),
 
-'wmgUseUsabilityInitiative' => array (
-	'default' => true,
-),
 'wmgUsabilityEnforce' => array(
 	'default' => true,
 ),
