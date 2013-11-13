@@ -102,10 +102,10 @@ $wgLBFactoryConf = array(
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038'    => 0,
+		'db1035'    => 0, # snapshot, recache
 		'db1003'    => 400,
 		'db1010'    => 400,
 		'db1019'    => 400,
-		'db1035'    => 100, # snapshot
 	),
 	's4' => array(
 		'db1059'   => 0,
@@ -152,6 +152,11 @@ $wgLBFactoryConf = array(
 	's2' => array(
 		'QueryPage::recache' => array(
 			'db1018' => 100,
+		)
+	),
+	's3' => array(
+		'QueryPage::recache' => array(
+			'db1035' => 100,
 		)
 	)
 ),
