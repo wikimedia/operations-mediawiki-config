@@ -63,7 +63,39 @@ function handleMissingWiki() {
 
 	if ( !$incubatorCode ) {
 		showGenericError();
-	} elseif( $project === 'wikisource' ) {
+		return;
+	}
+
+	if( strpos( $page, ':' ) !== false ) {
+		# Open the interwiki file to see if we have an interwiki prefix
+		$db = dba_open( __DIR__ . '/interwiki.cdb', 'r-', 'cdb' );
+		if ( $db ) {
+			$prefix = strtok( $page, ':' );
+
+			# Try looking for lateral links (w: q: voy: ...)
+			$row = dba_fetch( "{$language}wiki:$prefix", $db );
+			if( !$row ) {
+				# Also try interlanguage links
+				$projectForCdb = ( $project === 'wikipedia' ? 'wiki' : $project );
+				$row = dba_fetch( "_$projectForCdb:$prefix", $db );
+			}
+
+			if( $row ) {
+				list( $iw_local, $iw_url ) = explode( ' ', $row );
+				if ( $iw_local ) {
+					# Redirect to the appropriate WMF wiki
+					# strtok gives us the remainder of the page title after the interwiki prefix
+					showRedirect( $protocol . ':' . str_replace( '$1', strtok( '' ), $iw_url ) );
+					dba_close( $db );
+					return;
+				}
+			}
+			# We don't have an interwiki link, keep going and see what else we could have
+			dba_close( $db );
+		}
+	}
+
+	if( $project === 'wikisource' ) {
 		# Wikisource should redirect to the multilingual wikisource
 		showRedirect( $protocol . '://wikisource.org/wiki/' . $page );
 	} elseif( $project === 'wikiversity' ) {
