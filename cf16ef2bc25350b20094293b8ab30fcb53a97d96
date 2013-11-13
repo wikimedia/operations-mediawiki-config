@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_b970c772",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1812,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-11-13T04:39:37Z",
+      "side": 1,
+      "message": "Given \u003chttps://gerrit.wikimedia.org/r/94697\u003e, this is now the extension default. I suppose it doesn\u0027t hurt to be explicit, though.",
+      "revId": "cf16ef2bc25350b20094293b8ab30fcb53a97d96",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
