@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_9c2214a5",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1805,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-11-13T22:02:32Z",
+      "side": 1,
+      "message": "While you\u0027re here, just make it an anonymous function :)",
+      "revId": "b50cff25fe0372aab1fa63d0bda6b129e2931326",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
