@@ -2623,6 +2623,8 @@ if ( $wmgUseRC2UDP ) {
 $wgGroupPermissions['confirmed'] = $wgGroupPermissions['autoconfirmed'];
 $wgGroupPermissions['confirmed']['skipcaptcha'] = true;
 
+$wgImgAuthDetails = true;
+
 if ( file_exists( "$wmfConfigDir/extension-list-$wmfExtendedVersionNumber" ) ) {
 	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-$wmfExtendedVersionNumber";
 }
