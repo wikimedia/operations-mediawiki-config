@@ -1313,8 +1313,10 @@ $wgConf->settings = array(
 
 	// Wikis, alphabetically by DB name
 	'abwiki'	=> 'Авикипедиа',
-	'advisorywiki' => 'Advisory Board',
+	'advisorywiki'  => 'Advisory Board',
+	'angwiki'       => 'Wikipǣdia', // bug 56634
 	'angwikisource' => 'Wicifruma',
+	'angwiktionary' => 'Wikiwordbōc', // bug 56634
 	'amwiki'	=> 'ውክፔዲያ',
 	'arbcom_dewiki' => 'Arbitration Committee',
 	'arbcom_enwiki' => 'Arbitration Committee',
@@ -1776,7 +1778,9 @@ $wgConf->settings = array(
 	'abwiki'		=> 'Авикипедиа',
 	'advisorywiki'  => 'Project',
 	'amwiki'	=> 'ውክፔዲያ',
+	'angwiki'	=> 'Wikipǣdia', // bug 56634
 	'angwikisource' => 'Wicifruma',
+	'angwiktionary' => 'Wikiwordbōc', // bug 56634
 	'arbcom_dewiki' => 'Project',
 	'arbcom_enwiki' => 'Project',
 	'arbcom_fiwiki' => 'Project',
@@ -2188,6 +2192,8 @@ $wgConf->settings = array(
 
 # wgMetaNamespaceTalk @{
 'wgMetaNamespaceTalk' => array(
+	'angwiki'       => 'Wikipǣdiamōtung', // bug 56634
+	'angwiktionary' => 'Wikiwordbōcmōtung', // bug 56634
 	'arwikiversity' => 'نقاش_ويكي_الجامعة',
 	'aswiki' => 'ৱিকিপিডিয়া_বাৰ্তা',
 	'aswikisource' => 'ৱিকিউ স_বাৰ্তা', // Bug 43129
@@ -2300,6 +2306,19 @@ $wgConf->settings = array(
 	),
 	'+amwiki' => array(
 		100	<= 'በር',
+	),
+	'+angwiki' => array( // bug 56634
+		'Wikipedia' => NS_PROJECT,
+		'Wikipaedia' => NS_PROJECT,
+		'Wikipædiamotung' => NS_PROJECT_TALK,
+		'Wikipaediamotung' => NS_PROJECT_TALK,
+	),
+	'+angwiktionary' => array( // bug 56634
+		'Wikiwordbocmotung' => NS_PROJECT_TALK,
+		'Æteaca' => 100,
+		'Æteacmotung' => 101,
+		'Aeteaca' => 100,
+		'Aeteacmotung' => 101,
 	),
 	'+arcwiki' => array(
 		'Wikipedia' => NS_PROJECT,
@@ -5186,6 +5205,10 @@ $wgConf->settings = array(
 	# @} end of wikisource wikis
 
 	// Wiktionary @{
+	'angwiktionary' => array( // bug 56634
+		100 => 'Ætēaca',
+		101 => 'Ætēacmōtung',
+	),
 	'bgwiktionary' => array(
 		100 => 'Словоформи',
 		101 => 'Словоформи_беседа'
