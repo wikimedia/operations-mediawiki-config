@@ -12677,6 +12677,8 @@ $wgConf->settings = array(
 	'elwiki' => true,
 	'frwikisource' => true,
 	'nlwiki' => true,
+	'itwiki' => true,
+	'plwiktionary' => true,
 ),
 
 // Note that changing this on any supported (English) wiki requires an in place
