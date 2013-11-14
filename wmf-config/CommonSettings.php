@@ -2539,9 +2539,9 @@ if ( $wmgUseGlobalAbuseFilters ) {
 }
 
 if ( $wmgUseZeroNamespace ) {
+	require_once( "$IP/extensions/ZeroRatedMobileAccess/ZeroRatedMobileAccess.php" );
 	$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
 	$wgZeroRatedMobileAccessEnableZeroConfigPages = true;
-	require_once( "$IP/extensions/ZeroRatedMobileAccess/ZeroRatedMobileAccess.php" );
 }
 
 if ( $wmgUseAccountAudit ) {
