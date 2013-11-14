@@ -792,9 +792,7 @@ if ( $wmgUseSecurePoll ) {
 	include( $IP . '/extensions/SecurePoll/SecurePoll.php' );
 
 	$wgSecurePollScript = 'auth-api.php';
-	$wgHooks['SecurePoll_JumpUrl'][] = 'wmfSecurePollJumpUrl';
-
-	function wmfSecurePollJumpUrl( $page, &$url ) {
+	$wgHooks['SecurePoll_JumpUrl'][] = function( $page, &$url ) {
 		global $site, $lang;
 
 		$url = wfAppendQuery( $url, array( 'site' => $site, 'lang' => $lang ) );
@@ -956,7 +954,7 @@ if ( $wgDBname == 'enwiki' ) {
 }
 
 if ( $wmgUseFooterContactLink ) {
-	$wgHooks['SkinTemplateOutputPageBeforeExec'][] = function ( $sk, &$tpl ) {
+	$wgHooks['SkinTemplateOutputPageBeforeExec'][] = function( $sk, &$tpl ) {
 		$contactLink = Html::element( 'a', array( 'href' => $sk->msg( 'contact-url' )->escaped() ),
 			$sk->msg( 'contact' )->text() );
 		$tpl->set( 'contact', $contactLink );
@@ -1108,8 +1106,7 @@ if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_P
 }
 
 // Disable redirects to HTTPS for clients in some countries
-$wgHooks['CanIPUseHTTPS'][] = 'wmfCanIPUseHTTPS';
-function wmfCanIPUseHTTPS( $ip, &$canDo ) {
+$wgHooks['CanIPUseHTTPS'][] = function( $ip, &$canDo ) {
 	global $wmgHTTPSBlacklistCountries;
 
 	if ( !function_exists( 'geoip_country_code_by_name' ) ) {
@@ -1256,8 +1253,7 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
 	$wgCentralAuthAutoNew = true;
 
-	$wgHooks['CentralAuthWikiList'][] = 'wmfCentralAuthWikiList';
-	function wmfCentralAuthWikiList( &$list ) {
+	$wgHooks['CentralAuthWikiList'][] = function( &$list ) {
 		global $wgLocalDatabases, $IP, $wgSiteMatrixPrivateSites,
 			$wgSiteMatrixFishbowlSites, $wgSiteMatrixClosedSites;
 
@@ -1283,11 +1279,7 @@ if ( $wmgUseDismissableSiteNotice ) {
 }
 $wgMajorSiteNoticeID = '2';
 
-$wgHooks['LoginAuthenticateAudit'][] = 'logBadPassword';
-$wgHooks['PrefsEmailAudit'][] = 'logPrefsEmail';
-$wgHooks['PrefsPasswordAudit'][] = 'logPrefsPassword';
-
-function logBadPassword( $user, $pass, $retval ) {
+$wgHooks['LoginAuthenticateAudit'][] = function( $user, $pass, $retval ) {
 	if ( $user->isAllowed( 'delete' ) && $retval != LoginForm::SUCCESS ) {
 		global $wgRequest;
 		$headers = apache_request_headers();
@@ -1315,7 +1307,7 @@ function logBadPassword( $user, $pass, $retval ) {
 	return true;
 }
 
-function logPrefsEmail( $user, $old, $new ) {
+$wgHooks['PrefsEmailAudit'][] = function( $user, $old, $new ) {
 	if ( $user->isAllowed( 'delete' ) ) {
 		global $wgRequest;
 		$headers = apache_request_headers();
@@ -1332,7 +1324,7 @@ function logPrefsEmail( $user, $old, $new ) {
 	return true;
 }
 
-function logPrefsPassword( $user, $pass, $status ) {
+$wgHooks['PrefsPasswordAudit'][] = function( $user, $pass, $status ) {
 	if ( $user->isAllowed( 'delete' ) ) {
 		global $wgRequest;
 		$headers = apache_request_headers();
@@ -1480,24 +1472,22 @@ if ( $wmgUseWikimediaLicenseTexts ) {
 	include "$IP/extensions/WikimediaMessages/WikimediaLicenseTexts.php";
 }
 
-function wfNoDeleteMainPage( &$title, &$user, $action, &$result ) {
-	if ( $action !== 'delete' && $action !== 'move' ) {
-		return true;
-	}
-	$main = Title::newMainPage();
-	$mainText = $main->getPrefixedDBkey();
-	if ( $mainText === $title->getPrefixedDBkey() ) {
-		$result = array( 'cant-delete-main-page' );
-		return false;
-	}
-	return true;
-}
-
 if ( $wgDBname == 'enwiki' ) {
-	// Please don't interferew with our hundreds of wikis ability to manage themselves.
+	// Please don't interfere with our hundreds of wikis ability to manage themselves.
 	// Only use this shitty hack for enwiki. Thanks.
 	// -- brion 2008-04-10
-	$wgHooks['getUserPermissionsErrorsExpensive'][] = 'wfNoDeleteMainPage';
+	$wgHooks['getUserPermissionsErrorsExpensive'][] = function( &$title, &$user, $action, &$result ) {
+		if ( $action !== 'delete' && $action !== 'move' ) {
+			return true;
+		}
+		$main = Title::newMainPage();
+		$mainText = $main->getPrefixedDBkey();
+		if ( $mainText === $title->getPrefixedDBkey() ) {
+			$result = array( 'cant-delete-main-page' );
+			return false;
+		}
+		return true;
+	}
 }
 
 // PHP language binding to make Swift accessible via cURL
