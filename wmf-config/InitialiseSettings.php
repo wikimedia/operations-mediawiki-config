@@ -1111,6 +1111,7 @@ $wgConf->settings = array(
 	'rowiki' => '/wiki/Wikipedia:Trimite_fi%C5%9Fier',
 	'ruwikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ru',
 	'specieswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
+	'tewiki' => '/wiki/వికీపీడియా:ఫైల్_ఎక్కింపు_విజర్డు', // bug 57042
 	'thwiki' => '/wiki/%E0%B8%A7%E0%B8%B4%E0%B8%81%E0%B8%B4%E0%B8%9E%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2:%E0%B8%AD%E0%B8%B1%E0%B8%9B%E0%B9%82%E0%B8%AB%E0%B8%A5%E0%B8%94',
 	'zhwiki' => '/wiki/Project:%E4%B8%8A%E4%BC%A0',
 	'zhwikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=zh-hans',
