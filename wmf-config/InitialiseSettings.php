@@ -10560,6 +10560,9 @@ $wgConf->settings = array(
 	'default' => 800,
 ),
 
+// ----------- BetaFeatures section ----------
+// Move things out of this when they're no longer in beta!
+
 'wmgUseBetaFeatures' => array(
 	'default' => false,
 	'commonswiki' => true,
@@ -10585,6 +10588,14 @@ $wgConf->settings = array(
 	'commonswiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
+	'testwiki' => true,
+	'testwikidatawiki' => true,
+	'test2wiki' => true,
+),
+
+'wmgUseVectorBeta' => array(
+	'default' => false,
+	'mediawikiwiki' => true,
 	'testwiki' => true,
 	'testwikidatawiki' => true,
 	'test2wiki' => true,
