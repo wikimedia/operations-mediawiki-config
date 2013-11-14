@@ -149,7 +149,7 @@ return array(
 		'default' => false,
 	),
 	'wmgUseEcho' => array(
-		'enwiki' => true,
+		'default' => true,
 	),
 
 	'-wmgUsePoolCounter' => array(
