@@ -301,6 +301,11 @@ return array(
 		'default' => true,
 	),
 
+	'wgCirrusSearchContentReplicaCount' => array(
+		// Keep two replicas just like production.
+		'default' => array( 'content' => 2, 'general' => 2 ),
+	),
+
 	'wmgUseFlow' => array(
 		'enwiki' => true,
 	),
