@@ -1874,6 +1874,10 @@ if ( $wmgUseMultimediaViewer ) {
 	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
 }
 
+if ( $wmgUseVectorBeta ) {
+	require_once( "$IP/extensions/VectorBeta/VectorBeta.php" );
+}
+
 if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
 	$wgVisualEditorParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
