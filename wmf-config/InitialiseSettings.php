@@ -4076,6 +4076,7 @@ $wgConf->settings = array(
 		'CirrusSearch' => "udp://$wmfUdp2logDest/CirrusSearch",
 		'wap' => "udp://$wmfUdp2logDest/wap",
 		'texvc' => "udp://$wmfUdp2logDest/texvc",
+		'Bug54847' => "udp://$wmfUdp2logDest/Bug54847",
 	),
 
 	'+enwiki' => array(
