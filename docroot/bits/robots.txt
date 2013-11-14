@@ -1,1 +1,1 @@
-/apache/common/robots-private.txt
+/apache/common/robots-bits.txt
