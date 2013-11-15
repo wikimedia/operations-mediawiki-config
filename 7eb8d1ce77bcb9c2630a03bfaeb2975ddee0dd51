@@ -16,6 +16,24 @@
       "revId": "7eb8d1ce77bcb9c2630a03bfaeb2975ddee0dd51",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "291c1151_b4b27ce2",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 447,
+      "author": {
+        "id": 702
+      },
+      "writtenOn": "2013-11-15T21:18:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "291c1151_f4ddd46c",
+      "revId": "7eb8d1ce77bcb9c2630a03bfaeb2975ddee0dd51",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
