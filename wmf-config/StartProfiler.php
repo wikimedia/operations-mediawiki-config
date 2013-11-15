@@ -23,4 +23,8 @@ if ( isset( $_REQUEST['forceprofile'] ) ) {
 	} else {
 		$wgProfiler['profileID'] = $version;
 	}
+} elseif ( $wmfRealm === 'labs' ) {
+	$wgProfiler['class'] = 'ProfilerSimpleUDP';
+	$coreGit = new GitInfo( $IP );
+	$wgProfiler['profileID'] = $coreGit->getHeadSHA1() ?: 'labs';
 }
