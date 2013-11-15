@@ -465,7 +465,7 @@ require( getRealmSpecificFilename( "$wmfConfigDir/squid.php" ) );
 $wgBlockOpenProxies = false;
 
 if( $wmfRealm == 'production' ) {
-	$wgUDPProfilerHost = '10.0.6.30'; # professor
+	$wgUDPProfilerHost = '10.64.0.18';  // tungsten
 	$wgAggregateStatsID = $wgVersion;
 }
 
