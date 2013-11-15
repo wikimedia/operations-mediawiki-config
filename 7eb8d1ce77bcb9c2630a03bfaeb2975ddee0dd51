@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_f4ddd46c",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 447,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2013-11-15T20:36:23Z",
+      "side": 1,
+      "message": "Should be $wgFlaggedRevsTags\n\nYou should probably set quality/pristine to 2/3 respectively so they are not mentioned anywhere (since there is only 1 level) rather than have everything be \"pristine\".\n\nYou probably also want:\nunset( $wgGroupPermissions[\u0027editor\u0027] ); // no Editor group\nunset( $wgGroupPermissions[\u0027reviewer\u0027] ); // no Reviewer group",
+      "revId": "7eb8d1ce77bcb9c2630a03bfaeb2975ddee0dd51",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
