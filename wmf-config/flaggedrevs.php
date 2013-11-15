@@ -441,6 +441,16 @@ elseif ( $wgDBname == 'mediawikiwiki' ) {
 	$wgGroupPermissions['sysop']['autoreview'] = true;
 }
 
+elseif ( $wgDBname == 'metawiki' ) {
+	$wgFlaggedRevsNamespaces = array ( 480 /* NS_ZERO */ );
+	$wgFlaggedRevTags = array(
+		'safeness' => array( 'levels' => 1, 'quality' => 1, 'pristine' => 1 ),
+	);
+	$wgFlagRestrictions = array( 'safeness' => array( 'review' => 1 ) );
+	$wgFlaggedRevsAutopromote = false;
+	$wgGroupPermissions['zeroadmin']['review'] = true;
+}
+
 elseif ( $wgDBname == 'plwiki' ) {
 	// Bugs 43617, 48043 
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_TEMPLATE, NS_CATEGORY, NS_HELP, 100, 828 );
