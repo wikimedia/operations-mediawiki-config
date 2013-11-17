@@ -95,42 +95,42 @@ $wgLBFactoryConf = array(
 	),
 	's2' => array(
 		'db1036'    => 0,
-		'db1018'    => 1, # snapshot, recache
+		'db1018'    => 0, # snapshot, recache
 		'db1002'    => 400,
 		'db1009'    => 400,
 		'db1034'    => 400,
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038'    => 0,
-		'db1035'    => 1, # snapshot, recache
+		'db1035'    => 0, # snapshot, recache
 		'db1003'    => 400,
 		'db1010'    => 400,
 		'db1019'    => 400,
 	),
 	's4' => array(
 		'db1059'   => 0,
-		'db1042'   => 1, # snapshot, recache
+		'db1042'   => 0, # snapshot, recache
 		'db1004'   => 400,
 		'db1011'   => 400,
 		'db1020'   => 400,
 	),
 	's5' => array(
 		'db1058'   => 0,
-		'db1005'   => 1, # snapshot, recache
+		'db1005'   => 0, # snapshot, recache
 		'db1026'   => 400,
 		'db1021'   => 400,
 		'db1045'   => 400,
 	),
 	's6' => array(
 		'db1027'   => 0,
-		'db1022'   => 1, # snapshot, recache
+		'db1022'   => 0, # snapshot, recache
 		'db1040'   => 400,
 		'db1015'   => 400,
 		'db1006'   => 400,
 	),
 	's7' => array(
 		'db1039' => 0,
-		'db1007' => 1, # snapshot, recache
+		'db1007' => 0, # snapshot, recache
 		'db1041' => 400,
 		'db1024' => 400,
 		'db1028' => 400,
