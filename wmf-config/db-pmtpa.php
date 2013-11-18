@@ -111,12 +111,12 @@ $wgLBFactoryConf = array(
 	's5' => array(
 		'db1058'   => 0,
 		'db73'	 => 0, # pmtpa master, innodb_file_per_table
-		'db74'	 => 1200,
 		#'db44'	 => 500, # fix me!
 	),
 	's6' => array(
 		'db1027'   => 0,
 		'db47'	   => 0, # pmtpa master
+		#'db74'	 => 1200,
 		'db50'	   => 1000, # innodb_file_per_table
 	),
 	's7' => array(
