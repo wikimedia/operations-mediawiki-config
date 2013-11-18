@@ -27,6 +27,7 @@ if ( $wmgUseCirrusAsAlternative ) {
 $wgCirrusSearchContentReplicaCount = array(
 	array( 'content' => 2, 'general' => 2 )
 );
+$wgCirrusSearchUseAggressiveSplitting = $wmgCirrusSearchUseAggressiveSplitting;
 
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
