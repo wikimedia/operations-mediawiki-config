@@ -47,7 +47,9 @@ mwconfig_files_txt=(
 	wmf-config/session.php
 	wmf-config/session-labs.php
 	wmf-config/twemproxy.yaml
-	wmf-config/Wikidata.php
+	wmf-config/Wikibase.php
+	wmf-config/Wikibase-labs.php
+	wmf-config/Wikibase-production.php
 )
 
 # Create non-txt symlink from mediawiki-config

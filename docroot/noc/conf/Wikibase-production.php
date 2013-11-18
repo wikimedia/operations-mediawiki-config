@@ -1,0 +1,1 @@
+../../../wmf-config/Wikibase-production.php
