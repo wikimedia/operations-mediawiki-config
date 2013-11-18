@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "291c1151_13d27dfe",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12686,
+      "author": {
+        "id": 873
+      },
+      "writtenOn": "2013-11-18T17:20:05Z",
+      "side": 1,
+      "message": "This one should get the same treatment but we can do that in another commit.",
+      "revId": "ca33a3f5950525456af1f83eedd9bdd88ea4d903",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
