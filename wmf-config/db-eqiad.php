@@ -154,7 +154,7 @@ $wgLBFactoryConf = array(
 			'db1018' => 100,
 		)
 	),
-	's3' => array(
+	/* s3 */ 'DEFAULT' => array(
 		'QueryPage::recache' => array(
 			'db1035' => 100,
 		)
