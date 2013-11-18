@@ -7588,7 +7588,7 @@ $wgConf->settings = array(
 			'patrol' => true, // bug 56203
 			'autopatrol' => true, // bug 56203
 		),
-		'rollbacker' => array( 
+		'rollbacker' => array(
 			'rollback' => true, // bug 45165
 			'autopatrol' => true, // bug 55495
 			'patrol' => true, // bug 55495
@@ -7599,7 +7599,7 @@ $wgConf->settings = array(
 			'abusefilter-log-detail' => true, // bug 55495
 			'suppressredirect' => true, // bug 56203
 		),
-		'propertycreator' => array( 
+		'propertycreator' => array(
 			'property-create' => true, // bug 46953
 			'autopatrol' => true, // bug 55495
 			'patrol' => true, // bug 55495
@@ -12307,6 +12307,11 @@ $wgConf->settings = array(
 
 'wmgUseFlow' => array(
 	'default' => false,
+),
+
+// Disable VE inside flow, leaving only the wikitext editor
+'wgFlowEditorList' => array(
+	'default' => array( 'none' )
 ),
 
 'wmgUseDisambiguator' => array(
