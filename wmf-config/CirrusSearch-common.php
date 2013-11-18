@@ -24,9 +24,7 @@ if ( $wmgUseCirrusAsAlternative ) {
 	$wgEnableLucenePrefixSearch = false;
 }
 
-$wgCirrusSearchContentReplicaCount = array(
-	array( 'content' => 2, 'general' => 2 )
-);
+$wgCirrusSearchContentReplicaCount = array( 'content' => 2, 'general' => 2 );
 $wgCirrusSearchUseAggressiveSplitting = $wmgCirrusSearchUseAggressiveSplitting;
 
 # Load per realm specific configuration, either:
