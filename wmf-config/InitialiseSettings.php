@@ -12683,7 +12683,7 @@ $wgConf->settings = array(
 
 // Note that changing this on any supported (English) wiki requires an in place
 // reindex of that wiki to take effect.
-'wgCirrusSearchUseAggressiveSplitting' => array(
+'wmgCirrusSearchUseAggressiveSplitting' => array(
 	'default' => false,
 	'mediawikiwiki' => true,
 ),
