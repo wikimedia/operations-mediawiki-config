@@ -12688,10 +12688,6 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 ),
 
-'wgCirrusSearchContentReplicaCount' => array(
-	'default' => array( 'content' => 2, 'general' => 2 ),
-),
-
 ### End (roughly) of general extensions ########################
 
 // Apply blocks to IPs in XFF (bug 23343)
