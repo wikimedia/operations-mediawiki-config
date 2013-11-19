@@ -11291,7 +11291,6 @@ $wgConf->settings = array(
 ),
 'wmgMFInfoboxLogging' => array(
 	'default' => false,
-	'enwiki' => true,
 ),
 'wmgMFNearbyNamespace' => array(
 	'default' => NS_MAIN,
