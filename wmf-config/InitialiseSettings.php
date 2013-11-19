@@ -12243,7 +12243,7 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 'wmgEchoEmailFooterAddress' => array(
-	'default' => '<span lang="en" dir="ltr">Wikimedia Foundation, 149 New Montgomery St., 3rd Fl., San Francisco, CA 94105 (USA).</span>',
+	'default' => 'Wikimedia Foundation, 149 New Montgomery St., 3rd Fl., San Francisco, CA 94105 (USA)',
 ),
 'wmgEchoHelpPage' => array(
 	'default' => '//www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:Echo',
