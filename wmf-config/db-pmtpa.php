@@ -114,10 +114,10 @@ $wgLBFactoryConf = array(
 		#'db44'	 => 500, # fix me!
 	),
 	's6' => array(
-		'db1027'   => 0,
-		'db47'	   => 200, # pmtpa master
-		#'db74'	 => 1200,
-		'db50'	   => 400, # innodb_file_per_table
+		'db1027' => 0,
+		'db74'	 => 200, # pmtpa master
+		'db47'	 => 300, # pmtpa old master (still for amaranth)
+		#pmtpa decom 'db50'	   => 400, # innodb_file_per_table
 	),
 	's7' => array(
 		'db1039' => 0,
