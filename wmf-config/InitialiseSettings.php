@@ -12245,7 +12245,7 @@ $wgConf->settings = array(
 	'default' => '<span lang="en" dir="ltr">Wikimedia Foundation, 149 New Montgomery St., 3rd Fl., San Francisco, CA 94105 (USA).</span>',
 ),
 'wmgEchoHelpPage' => array(
-	'default' => '//www.mediawiki.org/wiki/Special:MyLanguage/Help:Extension:Echo',
+	'default' => '//www.mediawiki.org/wiki/Special:MyLanguage/Help:Notifications',
 	'enwiki' => '//en.wikipedia.org/wiki/Wikipedia:Notifications/FAQ',
 	'metawiki' => '//meta.wikimedia.org/wiki/Help:Notifications',
 	'frwiki' => '//fr.wikipedia.org/wiki/Aide:Notifications',
