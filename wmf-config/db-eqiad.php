@@ -23,7 +23,7 @@ $wmgOldExtTemplate = array(
 
 $wgLBFactoryConf = array(
 
-'class' => 'LBFactory_Multi',
+'class' => 'LBFactoryMulti',
 
 'sectionsByDB' => array(
 	'enwiki' => 's1',

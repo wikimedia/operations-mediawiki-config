@@ -11,7 +11,7 @@ if( $wmfRealm == 'labs' ) { # safe guard
 
 		#Requires 'sectionsByDB', 'sectionLoads', 'serverTemplate'
 
-		'class' => 'LBFactory_Multi',
+		'class' => 'LBFactoryMulti',
 
 		'sectionsByDB' => array(
 			'enwikivoyage' => 's2',
