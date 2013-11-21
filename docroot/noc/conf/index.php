@@ -26,7 +26,7 @@
 <head>
 	<title>Wikimedia configuration files</title>
 	<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wmf.ico">
-	<link rel="stylesheet" href="../base.css">
+	<link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
 
