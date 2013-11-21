@@ -26,6 +26,13 @@ $wmgThrottlingExceptions[] = array( // bug 56930
 	'dbname' => array( 'dewiki', 'enwiki', 'dewikisource', 'enwikisource', 'commonswiki' ),
 	'value'  => 60,
 );
+$wmgThrottlingExceptions[] = array( // bug 57345
+	'from'   => '2013-11-25T08:00 +1:00',
+	'to'     => '2013:11-25T15:00 +1:00',
+	'IP'     => array( '193.152.184.149' ),
+	'dbname' => array( 'cawiki' ),
+	'value'	 => 20,
+);
 ## Add throttling definitions above.
 
 # Will eventually raise value when MediaWiki is fully initialized:
