@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_d75bfe55",
+        "filename": "mobilelanding.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2013-11-21T17:57:48Z",
+      "side": 1,
+      "message": "was copied from extract2.php. Done.",
+      "parentUuid": "0ee75395_37b7ca83",
+      "revId": "3e39e91dc40cab0ec79d8096cd19367479158a9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_d7a53e45",
         "filename": "mobilelanding.php",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_973576f6",
+        "filename": "mobilelanding.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2013-11-21T17:57:48Z",
+      "side": 1,
+      "message": "Totally agree, but this one is tricky - we might want to solicit gurus\u0027 help... Brion/Tim/??? Should this be a blocker though?",
+      "parentUuid": "0ee75395_d7a53e45",
+      "revId": "3e39e91dc40cab0ec79d8096cd19367479158a9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_f78162a5",
         "filename": "mobilelanding.php",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2013-11-21T17:26:59Z",
       "side": 1,
       "message": "Please sanitize this, to make sure no extra headers can be inserted",
+      "revId": "3e39e91dc40cab0ec79d8096cd19367479158a9f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_37446a6e",
+        "filename": "mobilelanding.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2013-11-21T17:57:48Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ee75395_f78162a5",
       "revId": "3e39e91dc40cab0ec79d8096cd19367479158a9f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
