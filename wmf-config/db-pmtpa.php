@@ -87,42 +87,38 @@ $wgLBFactoryConf = array(
 'sectionLoads' => array(
 	's1' => array(
 		'db1056'  => 0,
-		'db63'    => 200, # pmtpa master
-		'db60'    => 400,
+		'db63'    => 100, # pmtpa master
+		#'db60'    => 400,
 	),
 	's2' => array(
 		'db1036'  => 0,
-		'db69'    => 200, # pmtpa master
-		'db54'	  => 300, # pmtpa old master (still for amaranth)
-		# pmtpa decom 'db57'	  => 300, # innodb_file_per_table
+		'db69'    => 100, # pmtpa master
+		#'db54'	  => 300, # pmtpa old master (still for amaranth)
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038'  => 0,
-		'db71'    => 200, # pmtpa master
-		'db34'	  => 300, # pmtpa old master (still for amaranth)
-		# pmtpa decom 'db66'	  => 400, # innodb_file_per_table # snapshot host
+		'db71'    => 100, # pmtpa master
+		#'db34'	  => 300, # pmtpa old master (still for amaranth)
 	),
 	's4' => array(
 		'db1059'   => 0,
-		'db31'	 => 0, # pmtpa master
-		'db65'	 => 200, # Snapshot host # innodb_file_per_table
-		'db72'	 => 400, # innodb_file_per_table
+		'db72'	 => 100, # pmtpa master, innodb_file_per_table
+		#'db31'	 => 0, # pmtpa old master (still for amaranth)
+		#'db65'	 => 100, # Snapshot host # innodb_file_per_table
 	),
 	's5' => array(
 		'db1058'   => 0,
-		'db73'	 => 400, # pmtpa master, innodb_file_per_table
-		#'db44'	 => 500, # fix me!
+		'db73'	 => 100, # pmtpa master, innodb_file_per_table
 	),
 	's6' => array(
 		'db1027' => 0,
-		'db74'	 => 200, # pmtpa master
-		'db47'	 => 300, # pmtpa old master (still for amaranth)
-		#pmtpa decom 'db50'	   => 400, # innodb_file_per_table
+		'db74'	 => 100, # pmtpa master
+		#'db47'	 => 300, # pmtpa old master (still for amaranth)
 	),
 	's7' => array(
 		'db1039' => 0,
-		'db37'  => 200, # pmtpa master
-		'db68'	=> 400, # innodb_file_per_table
+		'db68'	=> 100, # pmtpa master, innodb_file_per_table
+		#'db37'  => 200, # pmtpa old master (still for amaranth)
 	),
 ),
 
