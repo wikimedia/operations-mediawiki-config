@@ -10571,41 +10571,31 @@ $wgConf->settings = array(
 // Move things out of this when they're no longer in beta!
 
 'wmgUseBetaFeatures' => array(
-	'default' => false,
-	'commonswiki' => true,
-	'mediawikiwiki' => true,
-	'metawiki' => true,
+	'default' => true,
 	'testwiki' => true,
-	'testwikidatawiki' => true,
 	'test2wiki' => true,
+	'wiki' => false,
 ),
 
 'wmgUseCommonsMetadata' => array(
-	'default' => false,
-	'commonswiki' => true,
-	'mediawikiwiki' => true,
-	'metawiki' => true,
+	'default' => true,
 	'testwiki' => true,
-	'testwikidatawiki' => true,
 	'test2wiki' => true,
+	'wiki' => false,
 ),
 
 'wmgUseMultimediaViewer' => array(
-	'default' => false,
-	'commonswiki' => true,
-	'mediawikiwiki' => true,
-	'metawiki' => true,
+	'default' => true,
 	'testwiki' => true,
-	'testwikidatawiki' => true,
 	'test2wiki' => true,
+	'wiki' => false,
 ),
 
 'wmgUseVectorBeta' => array(
-	'default' => false,
-	'mediawikiwiki' => true,
+	'default' => true,
 	'testwiki' => true,
-	'testwikidatawiki' => true,
 	'test2wiki' => true,
+	'wiki' => false,
 ),
 
 // -------------- VisualEditor start --------------
