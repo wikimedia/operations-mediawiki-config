@@ -11975,6 +11975,15 @@ $wgConf->settings = array(
 	'wikimania2013wiki' => true,
 	'wikimania2014wiki' => true,
 ),
+
+'wgExtraLanguageNames' => array(
+	'default' => array(),
+
+	'wikidata' => array(
+		'ota' => 'لسان توركى', // Bug 57342
+	),
+),
+
 'wmgUseCleanChanges' => array(
 	'default' => false,
 //	'metawiki' => true, // bug 53541
