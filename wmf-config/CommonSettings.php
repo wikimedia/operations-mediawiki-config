@@ -2294,7 +2294,7 @@ if ( $wmgUseEcho ) {
 
 	// Eventlogging for Schema:Echo
 	$wgEchoConfig['eventlogging']['Echo']['enabled'] = true;
-	$wgEchoConfig['eventlogging']['Echo']['revision'] = 5423520;
+	$wgEchoConfig['eventlogging']['Echo']['revision'] = 6081131;
 	// Eventlogging for Schema:EchoMail
 	$wgEchoConfig['eventlogging']['EchoMail']['enabled'] = true;
 	$wgEchoConfig['eventlogging']['EchoMail']['revision'] = 5467650;
