@@ -363,7 +363,7 @@ div.user_match {
 }
 
 .calendar_button {
-    background: transparent url("global/calendar.png") no-repeat;
+    background: transparent url("images/global/calendar.png") no-repeat;
     width: 20px;
     height: 20px;
     vertical-align: middle;
@@ -404,19 +404,19 @@ form#Create .comment {
 }
 
 #select_button {
-    background-image: url(global/right.png);
+    background-image: url(images/global/right.png);
 }
 
 #deselect_button {
-    background-image: url(global/left.png);
+    background-image: url(images/global/left.png);
 }
 
 #up_button {
-    background-image: url(global/up.png);
+    background-image: url(images/global/up.png);
 }
 
 #down_button {
-    background-image: url(global/down.png);
+    background-image: url(images/global/down.png);
 }
 .bz_emailprefs tr.bz_row_odd {
     background-color: #f0f0f0;

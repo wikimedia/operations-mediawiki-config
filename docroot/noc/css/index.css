@@ -71,9 +71,9 @@
         text-decoration: none;
     }
 
-    #enter_bug { background: url(index/bug.gif)     no-repeat; }
-    #query     { background: url(index/search.gif)  no-repeat; }
-    #account   { background: url(index/account.gif) no-repeat; }
+    #enter_bug { background: url(images/index/bug.gif)     no-repeat; }
+    #query     { background: url(images/index/search.gif)  no-repeat; }
+    #account   { background: url(images/index/account.gif) no-repeat; }
     
     #quicksearchForm
     {
