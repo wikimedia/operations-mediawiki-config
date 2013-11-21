@@ -2527,6 +2527,13 @@ if ( $wmgUseOAuth ) {
 	$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
 	$wgGroupPermissions['autoconfirmed']['mwoauthproposeconsumer'] = true;
 	$wgGroupPermissions['autoconfirmed']['mwoauthupdateownconsumer'] = true;
+
+	$wgHooks['OAuthReplaceMessage'][] = function( &$msgKey ) {
+		if ( $msgKey === 'mwoauth-form-privacypolicy-link' ) {
+			$msgKey = 'wikimedia-oauth-privacy-link';
+		}
+		return true;
+	};
 }
 
 ### End (roughly) of general extensions ########################
