@@ -12248,6 +12248,7 @@ $wgConf->settings = array(
 	'default' => '//www.mediawiki.org/wiki/Special:MyLanguage/Help:Notifications',
 	'enwiki' => '//en.wikipedia.org/wiki/Wikipedia:Notifications/FAQ',
 	'metawiki' => '//meta.wikimedia.org/wiki/Help:Notifications',
+	'dewiki' => '//de.wikipedia.org/wiki/Hilfe:Echo',
 	'frwiki' => '//fr.wikipedia.org/wiki/Aide:Notifications',
 	'huwiki' => '//hu.wikipedia.org/wiki/Wikip%C3%A9dia:%C3%89rtes%C3%ADt%C3%A9sek',
 	'plwiki' => '//pl.wikipedia.org/wiki/Wikipedia:Powiadomienia/FAQ',
