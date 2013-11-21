@@ -4071,6 +4071,7 @@ $wgConf->settings = array(
 		'wap' => "udp://$wmfUdp2logDest/wap",
 		'texvc' => "udp://$wmfUdp2logDest/texvc",
 		'Bug54847' => "udp://$wmfUdp2logDest/Bug54847",
+		'recursion-guard' => "udp://$wmfUdp2logDest/recursion-guard",
 	),
 
 	'+enwiki' => array(
