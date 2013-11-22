@@ -9789,11 +9789,8 @@ $wgConf->settings = array(
 ),
 
 'wmgUseOAuth' => array(
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'testwikidatawiki' => true,
-	'mediawikiwiki' => true,
+	'default' => true,
+	'private' => false,
 ),
 
 # @}
