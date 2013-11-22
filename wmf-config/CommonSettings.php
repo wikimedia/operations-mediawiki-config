@@ -672,8 +672,6 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgMinimumVideoPlayerSize = $wmgMinimumVideoPlayerSize;
 }
 
-include( $IP . '/extensions/AssertEdit/AssertEdit.php' );
-
 if ( $wgUseContactPageFundraiser ) {
 	include( "$IP/extensions/ContactPageFundraiser/ContactPage.php" );
 	$wgContactUser = 'Storiescontact';
