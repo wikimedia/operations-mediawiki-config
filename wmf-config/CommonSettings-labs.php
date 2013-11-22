@@ -85,6 +85,10 @@ if ( $wmgUseCommonsMetadata ) {
 	require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
 }
 
+if ( $wmgUseOAuth ) {
+	$wgMWOAuthCentralWiki = 'labswiki';  # bug 57403
+}
+
 if ( $wmgUseMultimediaViewer ) {
 	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
 }
