@@ -5,7 +5,6 @@ $IP/extensions/AntiSpoof/AntiSpoof.php
 $IP/extensions/ApiSandbox/ApiSandbox.php
 $IP/extensions/ArticleFeedback/ArticleFeedback.php
 $IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.php
-$IP/extensions/AssertEdit/AssertEdit.php
 $IP/extensions/Babel/Babel.php
 $IP/extensions/BetaFeatures/BetaFeatures.php
 $IP/extensions/Calendar/Calendar.php
