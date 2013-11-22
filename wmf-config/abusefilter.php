@@ -137,15 +137,15 @@ switch ( $wgDBname ) {
 		break;
 	case 'eswiktionary':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
-
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
-
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
-
 		$wgAbuseFilterAvailableActions = array( 'flag', 'throttle', 'warn', 'disallow', 'tag', 'block' );
-
 		$wgAbuseFilterBlockDuration = '2 days';
+		break;
+	case 'fiwiki': // bug 57395
+		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		break;
 	case 'frwiki':
 	case 'frwikibooks': // wikibooks by bug 26142
