@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_390c553d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12313,
+      "author": {
+        "id": 401
+      },
+      "writtenOn": "2013-11-23T03:17:45Z",
+      "side": 1,
+      "message": "The comment belongs inside the array above \u0027default\u0027 and should be\n// Disable VisualEditor inside Flow, leaving only the wikitext editor.\nsince doing it this way allows per-wiki overrides.\n\nIf we want to disable VE everywhere, it would be clearer to do it in CommonSettings.php, with\n\nif ( $wmgUseFlow ) {\n    require_once( \"$IP/extensions/Flow/Flow.php\" );\n    ...\n    // Disable VisualEditor inside Flow, leaving only the wikitext editor.\n    $wgFlowEditorList \u003d array( \u0027none\u0027 );\n}",
+      "revId": "ca34bba1c8e4fd47f383f447d8a6c622c997e57b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
