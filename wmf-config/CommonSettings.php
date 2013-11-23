@@ -565,8 +565,6 @@ require( $IP . '/extensions/Cite/SpecialCite.php' );
 # Inputbox extension for searching or creating articles
 include( $IP . '/extensions/InputBox/InputBox.php' );
 
-include( $IP . '/extensions/ExpandTemplates/ExpandTemplates.php' );
-
 include( $IP . '/extensions/ImageMap/ImageMap.php' );
 include( $IP . '/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php' );
 
