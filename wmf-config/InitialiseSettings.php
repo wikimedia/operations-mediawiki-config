@@ -9791,6 +9791,7 @@ $wgConf->settings = array(
 'wmgUseOAuth' => array(
 	'default' => true,
 	'private' => false,
+	'fishbowl' => false,
 ),
 
 # @}
