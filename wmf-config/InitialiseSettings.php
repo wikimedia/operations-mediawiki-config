@@ -2296,6 +2296,7 @@ $wgConf->settings = array(
 		'Wikipaediamotung' => NS_PROJECT_TALK,
 	),
 	'+angwiktionary' => array( // bug 56634
+		'Wikiwordboc' => NS_PROJECT,
 		'Wikiwordbocmotung' => NS_PROJECT_TALK,
 		'Æteaca' => 100,
 		'Æteacmotung' => 101,
