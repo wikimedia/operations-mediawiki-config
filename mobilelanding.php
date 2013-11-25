@@ -7,6 +7,11 @@ include getMediaWiki( 'includes/WebStart.php' );
 $code = '302';
 $state = Extensions\ZeroRatedMobileAccess\PageRenderingHooks::getState();
 $redirect = $state->getLandingRedirect();
+
+// Temporary fix as it duplicates the same call in getLandingRedirect()
+// The fix ensures that there is no relative redirects
+$redirect = wfExpandUrl( $redirect );
+
 $redirect = filter_var( $redirect, FILTER_VALIDATE_URL );
 if ( $redirect === false ) {
 	$code = '500';
