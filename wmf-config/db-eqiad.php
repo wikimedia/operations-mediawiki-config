@@ -86,12 +86,12 @@ $wgLBFactoryConf = array(
 'sectionLoads' => array(
 	's1' => array(
 		'db1056'    => 0, # 2.8TB sas 96GB future master
-		'db1043'    => 300, # 1.4TB sas 64GB
+		'db1050'    => 0, # snapshot 2.8TB sas 64GB
 		'db1049'    => 100, # 2.8TB sas 64GB watchlist
-#		'db1050'    => 100, # snapshot 2.8TB sas 64GB
+		'db1043'    => 300, # 1.4TB sas 64GB
+		#'db1037'    => 300, # 1.4TB sas 64GB
 		'db1051'    => 400, # 2.8TB sas 96GB
 		'db1052'    => 400, # 2.8TB sas 96GB
-		'db1037'    => 300, # 1.4TB sas 64GB
 	),
 	's2' => array(
 		'db1036'    => 0,
@@ -149,6 +149,11 @@ $wgLBFactoryConf = array(
 ),
 
 'groupLoadsBySection' => array(
+	's1' => array(
+		'QueryPage::recache' => array(
+			'db1050' => 100,
+		)
+	),
 	's2' => array(
 		'QueryPage::recache' => array(
 			'db1018' => 100,
@@ -194,7 +199,7 @@ $wgLBFactoryConf = array(
 			'db1049' => 1,
 		),
 		'dump' => array(
-			'db1052' => 1,
+			'db1050' => 1,
 		),
 	),
 ),
