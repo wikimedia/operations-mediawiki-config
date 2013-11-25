@@ -89,7 +89,7 @@ $wgLBFactoryConf = array(
 		'db1050'    => 0, # snapshot 2.8TB sas 64GB
 		'db1049'    => 100, # 2.8TB sas 64GB watchlist
 		'db1043'    => 300, # 1.4TB sas 64GB
-		#'db1037'    => 300, # 1.4TB sas 64GB
+		'db1037'    => 300, # 1.4TB sas 64GB
 		'db1051'    => 400, # 2.8TB sas 96GB
 		'db1052'    => 400, # 2.8TB sas 96GB
 	),
