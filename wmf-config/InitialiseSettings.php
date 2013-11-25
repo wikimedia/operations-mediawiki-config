@@ -9559,6 +9559,7 @@ $wgConf->settings = array(
 	'wiktionary' => '//bits.wikimedia.org/favicon/piece.ico',
 
 	# Wiktionaries
+	'angwiktionary' => '//bits.wikimedia.org/favicon/wiktionary/en.ico', // bug 57496
 	'cswiktionary' => '//bits.wikimedia.org/favicon/wiktionary/en.ico', // bug 45113
 	'enwiktionary' => '//bits.wikimedia.org/favicon/wiktionary/en.ico', // bug 44843
 	'iswiktionary' => '//bits.wikimedia.org/favicon/wiktionary/en.ico', // bug 46712
