@@ -7163,6 +7163,9 @@ $wgConf->settings = array(
 			'reupload' => true,
 			'reupload-own' => true,
 			),
+		'massmessage-sender' => array( // bug 57611
+			'massmessage' => true,
+			),
 	),
 	'mkwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -7942,7 +7945,7 @@ $wgConf->settings = array(
 	'+metawiki' => array(
 		'bureaucrat' => array( 'ipblock-exempt', 'centralnoticeadmin', 'flood', 'uploader' ), // Bug 46639
 		'checkuser'  => array( 'ipblock-exempt' ),
-		'sysop'      => array( 'autopatrolled' ),
+		'sysop'      => array( 'autopatrolled', 'massmessage-sender' ), // bug 57611
 	),
 	'+mkwiki' => array(
 		'bureaucrat' => array( 'patroller', 'autopatrolled', 'autoreviewed' ),
@@ -8402,7 +8405,7 @@ $wgConf->settings = array(
 	'+metawiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'ipblock-exempt', 'flood', 'translationadmin', 'centralnoticeadmin', 'uploader' ), // bug 37198, 50287
 		'checkuser'  => array( 'ipblock-exempt' ),
-		'sysop'      => array( 'autopatrolled' ),
+		'sysop'      => array( 'autopatrolled', 'massmessage-sender' ), // bug 57611
 	),
 	'+mkwiki' => array(
 		'bureaucrat' => array( 'patroller', 'autopatrolled', 'autoreviewed' ),
