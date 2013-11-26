@@ -1,6 +1,9 @@
+# Test wikis
 testwiki
 test2wiki
 mediawikiwiki
+
+# Wikipedias
 aawiki
 abwiki
 acewiki
@@ -288,6 +291,8 @@ zh_min_nanwiki
 zh_yuewiki
 zhwiki
 zuwiki
+
+# Private wikis
 boardwiki
 collabwiki
 officewiki
