@@ -90,42 +90,42 @@ $wgLBFactoryConf = array(
 		'db1049'    => 100, # 2.8TB sas 64GB watchlist
 		'db1043'    => 300, # 1.4TB sas 64GB
 		'db1037'    => 300, # 1.4TB sas 64GB
-		'db1051'    => 400, # 2.8TB sas 96GB
+		# upgrade 'db1051'    => 400, # 2.8TB sas 96GB
 		'db1052'    => 400, # 2.8TB sas 96GB
 	),
 	's2' => array(
 		'db1036'    => 0,
 		'db1018'    => 0, # snapshot, recache
 		'db1002'    => 400,
-		'db1009'    => 400,
+		# upgrade 'db1009'    => 400,
 		'db1034'    => 400,
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038'    => 0,
 		'db1035'    => 0, # snapshot, recache
 		'db1003'    => 400,
-		'db1010'    => 400,
+		# upgrade 'db1010'    => 400,
 		'db1019'    => 400,
 	),
 	's4' => array(
 		'db1059'   => 0,
 		'db1042'   => 0, # snapshot, recache
 		'db1004'   => 400,
-		'db1011'   => 400,
+		# upgrade 'db1011'   => 400,
 		'db1020'   => 400,
 	),
 	's5' => array(
 		'db1058'   => 0,
 		'db1005'   => 0, # snapshot, recache
 		'db1026'   => 400,
-		'db1021'   => 400,
+		# upgrade 'db1021'   => 400,
 		'db1045'   => 400,
 	),
 	's6' => array(
 		'db1027'   => 0,
 		'db1022'   => 0, # snapshot, recache
 		'db1040'   => 400,
-		'db1015'   => 400,
+		# upgrade 'db1015'   => 400,
 		'db1006'   => 400,
 	),
 	's7' => array(
@@ -133,7 +133,7 @@ $wgLBFactoryConf = array(
 		'db1007' => 0, # snapshot, recache
 		'db1041' => 400,
 		'db1024' => 400,
-		'db1028' => 400,
+		# upgrade 'db1028' => 400,
 	),
 ),
 
