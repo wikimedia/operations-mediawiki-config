@@ -4375,6 +4375,8 @@ $wgConf->settings = array(
 		# 107 => 'Table_talk',
 		108 => 'Book',
 		109 => 'Book_talk',
+		118 => 'Draft', // bug 57569
+		119 => 'Draft_talk',
 	),
 	'eowiki' => array(
 		100 => 'Portalo',
@@ -9060,6 +9062,8 @@ $wgConf->settings = array(
 	),
 	'enwiki' => array(
 		NS_USER_TALK => 'noindex,follow',
+		118 => 'noindex,nofollow', // draft
+		119 => 'noindex,nofollow', // draft talk
 	),
 	'frwiki' => array(
 		NS_USER => 'noindex,follow',
@@ -9269,6 +9273,11 @@ $wgConf->settings = array(
 	'+viwikisource' => array( 102, 104, 106 ),
 	'+zhwikisource' => array( 102, 104, 106 ),
 	'+dewikivoyage' => array( 104 ),
+),
+
+'wmgExemptFromUserRobotsControlExtra' => array(
+	'default' => array(),
+	'enwiki' => array( 118, 119 ), // draft and draft talk
 ),
 
 'wgRevisionCacheExpiry' => array(

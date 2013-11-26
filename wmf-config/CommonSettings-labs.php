@@ -132,16 +132,6 @@ if ( $wgDBname == "enwikivoyage" || $wgDBname == "dewikivoyage" || $wgDBname == 
 	$wgUseInstantCommons = true;
 }
 
-// Testing English Wikipedia draft namespace
-if ( $wgDBname == 'enwiki' ) {
-	$wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
-		if ( $action === 'create' && $title->getNamespace() === 110 && $user->isAnon() ) {
-			return false;
-		}
-		return true;
-	};
-}
-
 # Backends:
 if( $wmgUseMath ) {
 	$wgMathFileBackend = false;
@@ -155,8 +145,6 @@ if ( $wmgUseCORS ) {
 		'*.beta.wmflabs.org',
 	);
 }
-
-$wgExemptFromUserRobotsControl = array_merge( $wgContentNamespaces, $wmgExemptFromUserRobotsControl );
 
 $wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-labs";
 
