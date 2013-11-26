@@ -4370,6 +4370,8 @@ $wgConf->settings = array(
 		# 107 => 'Table_talk',
 		108 => 'Book',
 		109 => 'Book_talk',
+		110 => 'Draft',
+		111 => 'Draft_talk',
 	),
 	'eowiki' => array(
 		100 => 'Portalo',
@@ -9048,6 +9050,8 @@ $wgConf->settings = array(
 	),
 	'enwiki' => array(
 		NS_USER_TALK => 'noindex,follow',
+		110 => 'noindex,follow', // draft
+		111 => 'noindex,follow', // draft talk
 	),
 	'frwiki' => array(
 		NS_USER => 'noindex,follow',

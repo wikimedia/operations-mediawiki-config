@@ -1473,6 +1473,14 @@ if ( $wgDBname == 'enwiki' ) {
 		}
 		return true;
 	};
+
+	// Yet another shitty hack for bug 57569. You're welcome.
+	$wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
+		if ( $action === 'create' && $title->getNamespace() === 110 ) {
+			return false;
+		}
+		return true;
+	};
 }
 
 // PHP language binding to make Swift accessible via cURL
