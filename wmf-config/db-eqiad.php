@@ -90,8 +90,8 @@ $wgLBFactoryConf = array(
 		'db1049'    => 100, # 2.8TB sas 64GB watchlist
 		'db1043'    => 300, # 1.4TB sas 64GB
 		'db1037'    => 300, # 1.4TB sas 64GB
-		# upgrade 'db1051'    => 400, # 2.8TB sas 96GB
-		'db1052'    => 400, # 2.8TB sas 96GB
+		'db1051'    => 400, # 2.8TB sas 96GB
+		# upgrade 'db1052'    => 400, # 2.8TB sas 96GB
 	),
 	's2' => array(
 		'db1036'    => 0,
