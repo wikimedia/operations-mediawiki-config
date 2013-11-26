@@ -1473,6 +1473,14 @@ if ( $wgDBname == 'enwiki' ) {
 		}
 		return true;
 	};
+
+	// Yet another shitty hack for bug 57569. You're welcome.
+	$wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
+		if ( $action === 'create' && $title->getNamespace() === 110 ) {
+			return false;
+		}
+		return true;
+	};
 }
 
 // PHP language binding to make Swift accessible via cURL
@@ -2565,6 +2573,7 @@ if ( $wmgBug54847 && $wmgUseCentralAuth ) {
 	require( "$wmfConfigDir/Bug54847.php" );
 }
 
+$wgExemptFromUserRobotsControl = array_merge( $wgContentNamespaces, $wmgExemptFromUserRobotsControl );
 
 // additional "language names", adding to Names.php data
 $wgExtraLanguageNames = $wmgExtraLanguageNames;
