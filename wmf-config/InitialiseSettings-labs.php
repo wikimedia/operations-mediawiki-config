@@ -42,31 +42,6 @@ function wmfLabsOverrideSettings() {
  */
 function wmfLabsSettings() {
 return array(
-	// wgExtraNamespaces, wgNamespaceRobotPolicies, and wmgExemptFromUserRobotsControl
-	// are for testing bug 57569 (draft namespace on English Wikipedia).
-	'wgExtraNamespaces' => array(
-		'enwiki' => array(
-			100 => 'Portal',
-			101 => 'Portal_talk',
-			# 106 => 'Table',
-			# 107 => 'Table_talk',
-			108 => 'Book',
-			109 => 'Book_talk',
-			110 => 'Draft', // bug 57569
-			111 => 'Draft_talk',
-		),
-	),
-	'wgNamespaceRobotPolicies' => array(
-		'enwiki' => array(
-			NS_USER_TALK => 'noindex,follow',
-			110 => 'noindex,nofollow', // draft
-			111 => 'noindex,nofollow', // draft talk
-		),
-	),
-	'wmgExemptFromUserRobotsControl' => array(
-		'default' => array(),
-		'enwiki' => array( 110, 111 ), // draft and draft talk
-	),
 	'wgParserCacheType' => array(
 		'default' => CACHE_MEMCACHED,
 	),
@@ -323,10 +298,6 @@ return array(
 
 	'wmgVisualEditorExperimental' => array(
 		'default' => true,
-	),
-
-	'wmgVisualEditorNamespaces' => array(
-		'+enwiki' => array( 100 /* Portal */, 108 /* Book */, 110 /* Draft */ ),
 	),
 
 	'wmgUseCampaigns' => array(

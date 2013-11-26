@@ -1469,6 +1469,24 @@ if ( $wgDBname == 'enwiki' ) {
 		}
 		return true;
 	};
+
+	// Bug 57569
+	//
+	// If it's an anonymous user creating a page in the English Wikipedia Draft
+	// namespace, tell TitleQuickPermissions to abort the normal checkQuickPermissions
+	// checks.  This lets anonymous users create a page in this namespace, even though
+	// they don't have the general 'createpage' right.
+	//
+	// It does not affect other checks from getUserPermissionsErrorsInternal
+	// (e.g. protection and blocking).
+	//
+	// The return true tells it to proceed as normal in other cases.
+	$wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
+		if ( $action === 'create' && $title->getNamespace() === 118 && $user->isAnon() ) {
+			return false;
+		}
+		return true;
+	};
 }
 
 // PHP language binding to make Swift accessible via cURL
@@ -2531,6 +2549,7 @@ if ( $wmgBug54847 && $wmgUseCentralAuth ) {
 	require( "$wmfConfigDir/Bug54847.php" );
 }
 
+$wgExemptFromUserRobotsControl = array_merge( $wgContentNamespaces, $wmgExemptFromUserRobotsControlExtra );
 
 // additional "language names", adding to Names.php data
 $wgExtraLanguageNames = $wmgExtraLanguageNames;
