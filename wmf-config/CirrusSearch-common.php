@@ -22,6 +22,7 @@ if ( $wmgUseCirrusAsAlternative ) {
 	$wgSearchType = 'CirrusSearch';
 	$wgSearchTypeAlternatives = array( 'LuceneSearch' );
 	$wgEnableLucenePrefixSearch = false;
+	$wgCirrusSearchShowNowUsing = true;
 }
 
 $wgCirrusSearchContentReplicaCount = array( 'content' => 2, 'general' => 2 );
