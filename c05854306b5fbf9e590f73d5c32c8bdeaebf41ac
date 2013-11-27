@@ -34,6 +34,24 @@
       "revId": "c05854306b5fbf9e590f73d5c32c8bdeaebf41ac",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_5b193826",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12358,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2013-11-27T01:28:07Z",
+      "side": 1,
+      "message": "I\u0027m not quite sure what goes in this db, how it\u0027s used, etc., but...\n\nis the intention to eventually enable Flow everywhere, including all private wikis?\n\nIf so. I think all private wikis should be handled the same:\nhttp://noc.wikimedia.org/conf/highlight.php?file\u003dprivate.dblist\n\nIn the config here, you can specify a dblist group so, I think \u0027private\u0027 \u003d\u003e false can replace \u0027officewiki\u0027 \u003d\u003e false and that covers all private wikis (including office).",
+      "parentUuid": "0ee75395_bb22844e",
+      "revId": "c05854306b5fbf9e590f73d5c32c8bdeaebf41ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
