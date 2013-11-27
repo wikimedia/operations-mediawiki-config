@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_cc0c6940",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 650
+      },
+      "writtenOn": "2013-11-27T21:05:43Z",
+      "side": 1,
+      "message": "AbuseFilter sets $wgAbuseFilterBlockDuration to \u0027indefinite\u0027 by default in https://git.wikimedia.org/blob/mediawiki%2Fextensions%2FAbuseFilter.git/a865cba216d6e74244567861cf1f00799d5fa58a/AbuseFilter.php#L198 so there\u0027s no need to define it here again. Not to mention that you made a typo :-)",
+      "revId": "e19170a00780e675dcbdcbc84b5ea079b3747550",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
