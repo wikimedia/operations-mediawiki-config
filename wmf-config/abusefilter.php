@@ -312,6 +312,9 @@ switch ( $wgDBname ) {
 	case 'wikidatawiki':
 		$wgAbuseFilterNotifications = "udp"; // bug 45083
 		$wgAbuseFilterNotificationsPrivate = true; // bug 45083
+		$wgAbuseFilterAvailableActions[] = 'block'; // bug 57681
+		$wgAbuseFilterBlockDuration = 'indefinite'; // bug 57681
+		$wgAbuseFilterAnonBlockDuration = '3 months'; // bug 57681
 		break;
 	case 'zh_yuewiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
