@@ -304,8 +304,11 @@ return array(
 	'wmgUseFlow' => array(
 		'enwiki' => true,
 	),
+
 	# Extension:Flow's browsertests use Talk:Flow_QA.
-	'wgFlowOccupyPages' => array( 'Talk:Flow QA', 'Talk:Flow' ),
+	'wmgFlowOccupyPages' => array(
+		'enwiki' => array( 'Talk:Flow QA', 'Talk:Flow' ),
+	),
 
 	'wmgBug54847' => array(
 		'default' => false,
