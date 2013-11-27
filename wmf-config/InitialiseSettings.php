@@ -12306,6 +12306,10 @@ $wgConf->settings = array(
 	'default' => array( 'none' ),
 ),
 
+'wmgFlowOccupyPages' => array(
+	'default' => array(),
+),
+
 'wmgUseDisambiguator' => array(
 	'default' => true,
 ),
