@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_db754894",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12358,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2013-11-27T00:51:02Z",
+      "side": 1,
+      "message": "Looks like $wgFlowDefaultWikiDb is the name of the wiki used for flow data, we should name it to something like \u0027flowdb\u0027.  \u0027extension1\u0027 is a database cluster, I submitted another patch so we can set it in flow: https://gerrit.wikimedia.org/r/#/c/97868/\n\nalso why is officewiki is set to false?  I guess we can make it use the centralized db as well?",
+      "revId": "c05854306b5fbf9e590f73d5c32c8bdeaebf41ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
