@@ -16,6 +16,24 @@
       "revId": "c05854306b5fbf9e590f73d5c32c8bdeaebf41ac",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_bb22844e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12358,
+      "author": {
+        "id": 401
+      },
+      "writtenOn": "2013-11-27T01:21:46Z",
+      "side": 1,
+      "message": "People talk about private topics on officewiki, if there\u0027s accidentally a way to ask for a particular topic or post from the single DB regardless of its wiki, then !?!",
+      "parentUuid": "0ee75395_db754894",
+      "revId": "c05854306b5fbf9e590f73d5c32c8bdeaebf41ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
