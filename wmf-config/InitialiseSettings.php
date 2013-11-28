@@ -10773,7 +10773,7 @@ $wgConf->settings = array(
 
 'wmgUseArticleFeedbackv5' => array(
 	'default' => false,
-	'dewiki' => true, // Bug 42693
+	'dewiki' => false, // Bug 57605
 	'enwiki' => true,
 	'frwiki' => true,
 	'testwiki' => true,
@@ -10816,7 +10816,6 @@ $wgConf->settings = array(
  */
 'wmgArticleFeedbackv5EnableProtection' => array(
 	'default' => true,
-	'dewiki' => false,
 ),
 /*
  * Articles that include this category, will display AFTv5, regardless of lottery.
@@ -10824,7 +10823,6 @@ $wgConf->settings = array(
 'wmgArticleFeedbackv5Categories' => array(
 	'default' => array(),
 	'testwiki' => array( 'Article_Feedback_5', 'Article_Feedback_5_Additional_Articles' ),
-	'dewiki' => array(),
 	'frwiki' => array( 'Wikipédia:Outil_de_retour_des_lecteurs' ),
 ),
 /*
@@ -10833,7 +10831,6 @@ $wgConf->settings = array(
 'wmgArticleFeedbackv5BlacklistCategories' => array(
 	'default' => array(),
 	'testwiki' => array( 'Article_Feedback_Blacklist' ),
-	'dewiki' => array( 'Wikipedia:Artikel-Feedback_Ausschlussliste', 'Wikipedia:Artikel-Feedback/Ausschlussliste' ),
 	'enwiki' => array( 'Article_Feedback_Blacklist' ),
 	'frwiki' => array( 'Wikipédia:Outil_de_retour_des_lecteurs/exclus' ),
 ),
@@ -10844,29 +10841,24 @@ $wgConf->settings = array(
  */
 'wmgArticleFeedbackv5OversightEmails' => array(
 	'default' => 'aft@wikimedia.org',
-	'dewiki' => 'oversight-de-wp@wikimedia.org',
 	'enwiki' => 'oversight-en-wp@wikipedia.org',
 	'frwiki' => 'privacy-fr-wp@wikimedia.org',
 ),
 'wmgArticleFeedbackv5OversightEmailHelp' => array(
 	'default' => 'https://en.wikipedia.org/wiki/Wikipedia:Article_Feedback_Tool/Version_5/Help/Feedback_page_Oversighters',
-	'dewiki' => 'https://de.wikipedia.org/wiki/Wikipedia:Artikel-Feedback/Umgang_mit_Feedback', # Could be changed once a separate page exists
 	'frwiki' => 'https://fr.wikipedia.org/wiki/Aide:Outil_de_retour_des_lecteurs/Masqueurs',
 ),
 'wmgArticleFeedbackv5AutoHelp' => array(
 	'default' => '//en.wikipedia.org/wiki/Wikipedia:Article_Feedback_Tool/Version_5/Help',
-	'dewiki' => '//de.wikipedia.org/wiki/Wikipedia:Artikel-Feedback',
 	'frwiki' => '//fr.wikipedia.org/wiki/Aide:Outil_de_retour_des_lecteurs',
 ),
 'wmgArticleFeedbackv5LearnToEdit' => array(
 	'default' => '//en.wikipedia.org/wiki/Wikipedia:Tutorial',
-	'dewiki' => '//de.wikipedia.org/wiki/Wikipedia:Tutorial',
 	'frwiki' => '//fr.wikipedia.org/wiki/Aide:Comment_modifier_une_page',
 ),
 'wmgArticleFeedbackv5AbuseFiltering' => array(
 	'default' => false,
 	'testwiki' => true,
-	'dewiki' => true,
 	'enwiki' => true,
 	'frwiki' => true,
 ),
@@ -10886,19 +10878,6 @@ $wgConf->settings = array(
 		// this when you want to start a new "experiment".
 		'version' => 1,
 		// Users may constantly be rebucketed, giving them new CTAs each time.
-		'expires' => 0,
-	),
-	'dewiki' => array(
-		'buckets' => array(
-			'0' => 0, // display nothing
-			'1' => 50, // display "Enticement to edit"
-			'2' => 0, // display "Learn more"
-			'3' => 0, // display "Take a survey"
-			'4' => 50, // display "Sign up or login"
-			'5' => 0, // display "View feedback"
-			'6' => 0, // display "Visit Teahouse"
-		),
-		'version' => 1,
 		'expires' => 0,
 	),
 	'enwiki' => array(
@@ -10946,14 +10925,6 @@ $wgConf->settings = array(
 		// oversight = oversighter
 		'aft-oversighter' => array( 'oversight' ),
 	),
-	'dewiki' => array(
-		'aft-reader' => array( '*', 'user', 'confirmed', 'autoconfirmed', 'sysop', 'oversight' ),
-		'aft-member' => array( 'user', 'confirmed', 'autoconfirmed', 'sysop', 'oversight' ),
-		'aft-editor' => array( 'confirmed', 'autoconfirmed', 'sysop', 'oversight' ),
-		'aft-monitor' => array( 'sysop', 'oversight' ),
-		'aft-administrator' => array( 'sysop', 'oversight' ),
-		'aft-oversighter' => array( 'oversight' ),
-	),
 ),
 /*
  * Enable/disable the "archive" filter & cronjob functionality.
@@ -10985,7 +10956,6 @@ $wgConf->settings = array(
  */
 'wmgArticleFeedbackv5Watchlist' => array(
 	'default' => false,
-	'dewiki' => true,
 	// Watchlist queries can be expensive (huge WHERE aft_page IN(...) clause)
 	// for people who have a serious amount of watchlisted pages -- disable for now.
 	'enwiki' => false,
@@ -10996,7 +10966,6 @@ $wgConf->settings = array(
  */
 'wmgArticleFeedbackv5ArticlePageLink' => array(
 	'default' => true,
-	'dewiki' => false,
 	'frwiki' => false,
 ),
 
