@@ -342,16 +342,8 @@ $pcTemplate = array( 'type' => 'mysql',
 	'flags' => 0,
 );
 
-if ($wmfDatacenter == 'eqiad') {
-	# pc1001, pc1002, pc1003
-	foreach ( array( '10.64.16.156', '10.64.16.157', '10.64.16.158' ) as $host ) {
-		$pcServers[] = array( 'host' => $host ) + $pcTemplate;
-	}
-} else {
-	# pc1, pc2, pc3
-	foreach ( array( '10.0.0.221', '10.0.0.222', '10.0.0.223' ) as $host ) {
-		$pcServers[] = array( 'host' => $host ) + $pcTemplate;
-	}
+foreach ( $wmgParserCacheDBs as $host ) {
+	$pcServers[] = array( 'host' => $host ) + $pcTemplate;
 }
 
 $wgObjectCaches['mysql-multiwrite'] = array(
