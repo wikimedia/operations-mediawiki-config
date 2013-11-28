@@ -1,0 +1,1 @@
+/usr/local/apache/common/w/mobileredirect.php
