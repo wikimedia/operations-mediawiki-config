@@ -88,7 +88,7 @@ $wgLBFactoryConf = array(
 		'db1056'    => 0, # 2.8TB sas 96GB future master
 		'db1050'    => 0, # snapshot 2.8TB sas 64GB
 		'db1049'    => 100, # 2.8TB sas 64GB watchlist
-		'db1043'    => 50, # warm up # 1.4TB sas 64GB
+		'db1043'    => 300, # 1.4TB sas 64GB
 		'db1037'    => 300, # 1.4TB sas 64GB
 		'db1051'    => 400, # 2.8TB sas 96GB
 		'db1052'    => 400, # 2.8TB sas 96GB
@@ -96,7 +96,7 @@ $wgLBFactoryConf = array(
 	's2' => array(
 		'db1036'    => 0,
 		'db1018'    => 0, # snapshot, recache
-		'db1002'    => 50, # warm up
+		'db1002'    => 400,
 		'db1009'    => 400,
 		'db1034'    => 400,
 	),
@@ -105,14 +105,14 @@ $wgLBFactoryConf = array(
 		'db1035'    => 0, # snapshot, recache
 		'db1003'    => 400,
 		'db1010'    => 400,
-		'db1019'    => 50, # warm up
+		'db1019'    => 400,
 	),
 	's4' => array(
 		'db1059'   => 0,
 		'db1042'   => 0, # snapshot, recache
 		'db1004'   => 400,
 		'db1011'   => 400,
-		'db1020'   => 50, # warm up
+		'db1020'   => 400,
 	),
 	's5' => array(
 		'db1058'   => 0,
@@ -124,14 +124,14 @@ $wgLBFactoryConf = array(
 	's6' => array(
 		'db1027'   => 0,
 		'db1022'   => 0, # snapshot, recache
-		'db1040'   => 50, # warm up
+		'db1040'   => 400,
 		'db1015'   => 400,
 		'db1006'   => 400,
 	),
 	's7' => array(
 		'db1039' => 0,
 		'db1007' => 0, # snapshot, recache
-		'db1041' => 50, # warm up
+		'db1041' => 400,
 		'db1024' => 400,
 		'db1028' => 400,
 	),
