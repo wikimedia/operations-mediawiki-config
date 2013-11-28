@@ -10749,62 +10749,6 @@ $wgConf->settings = array(
 	'viwiktionary' => 'uca-vi', // bug 45979
 ),
 
-'wmgUseArticleFeedback' => array(
-	'default' => false,
-),
-
-'wmgArticleFeedbackCategories' => array(
-	'default' => array(),
-	'hiwiki' => array( 'गुणवत्ता आकलन अतिरिक्त लेख', 'गुणवत्ता आकलन', 'आकलन', 'Article Feedback Pilot', 'Article Feedback', 'Article Feedback Additional Articles' ),
-	'huwiki' => array( 'ArticleFeedback teszt' ),
-	'metawiki' => array( 'Translation/Fundraising 2011/all' ),
-	'ptwiki' => array( '!Páginas que podem ser avaliadas pelos leitores' ),
-),
-'wmgArticleFeedbackBlacklistCategories' => array(
-	'default' => array( 'Article Feedback Blacklist' ),
-	'testwiki' => array( 'Article Feedback Blacklist', 'Article Feedback 5', 'Article Feedback 5 Additional Articles' ),
-	'eswiki' => array( 'Wikipedia:Desambiguación', 'Wikipedia:Exclusiones de la evaluación de artículos' ),
-	'hiwiki' => array( 'No Feedback', 'आकलन रहित लेख' ),
-	'ptwiki' => array( '!Páginas que não podem ser avaliadas pelos leitores' ),
-	'ptwikibooks' => array( 'Páginas que não podem ser avaliadas pelos leitores' ),
-	'srwiki' => array( 'Чланци изузети од оцењивања' ),
-	'zhwiki' => array( '消歧义', '条目删除候选', '怀疑侵犯版权页面', '快速删除候选' , '禁止索引的页面' ),
-),
-'wmgArticleFeedbackLotteryOdds' => array(
-	'default' => 0,
-	'testwiki' => 90,
-	'eswiki' => 100,
-	'eswikinews' => 100,
-	'hiwiki' => 100,
-	'ptwiki' => 100,
-	'ptwikibooks' => 100,
-	'srwiki' => 100,
-	'zhwiki' => 100,
-),
-'wmgArticleFeedbackDashboard' => array(
-	'default' => false,
-	'testwiki' => true,
-	'eswiki' => true,
-	'eswikinews' => true,
-	'hiwiki' => true,
-	'metawiki' => true,
-	'ptwiki' => true,
-	'ptwikibooks' => true,
-	'srwiki' => true,
-	'zhwiki' => true,
-),
-'wmgArticleFeedbackNamespaces' => array(
-	'default' => false, // $wgContentNamespaces
-	'eswiki' => array( NS_MAIN ),
-	'eswikinews' => array( NS_MAIN ),
-	'hiwiki' => array( NS_MAIN, 100 /*NS_PORTAL*/ ),
-	'ptwiki' => array( NS_MAIN, NS_HELP, 102 /* Anexo */ ),
-	'ptwikibooks' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
-),
-'wmgArticleFeedbackRatingTypes' => array(
-	'default' => false, // use defaults
-	'metawiki' => array( 5 => 'accurate', 4 => 'wellwritten', 6 => 'errorfree' ),
-),
 'wmgUseArticleFeedbackv5' => array(
 	'default' => false,
 	'dewiki' => true, // Bug 42693

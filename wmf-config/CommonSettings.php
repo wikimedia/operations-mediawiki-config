@@ -1658,40 +1658,6 @@ if ( $wmgUseLivePreview ) {
 	$wgDefaultUserOptions['uselivepreview'] = 1;
 }
 
-if ( $wmgUseArticleFeedback ) {
-	require_once( "$IP/extensions/ArticleFeedback/ArticleFeedback.php" );
-	$wgArticleFeedbackCategories = $wmgArticleFeedbackCategories;
-	$wgArticleFeedbackBlacklistCategories = $wmgArticleFeedbackBlacklistCategories;
-	$wgArticleFeedbackLotteryOdds = $wmgArticleFeedbackLotteryOdds;
-	$wgArticleFeedbackTrackingVersion = 1;
-
-	$wgArticleFeedbackTracking = array(
-		'buckets' => array(
-			'track' => 100,
-			'ignore' => 0,
-			// 'track'=>0, 'ignore' => 100
-		),
-		'version' => 10,
-		'expires' => 30,
-		'tracked' => false
-	);
-	$wgArticleFeedbackOptions = array(
-		'buckets' => array(
-			'show' => 100,
-			'hide' => 0,
-		),
-		'version' => 8,
-		'expires' => 30,
-		'tracked' => false
-	);
-	$wgArticleFeedbackDashboard = $wmgArticleFeedbackDashboard;
-	$wgArticleFeedbackNamespaces = $wmgArticleFeedbackNamespaces === false ? $wgContentNamespaces : $wmgArticleFeedbackNamespaces;
-
-	if ( $wmgArticleFeedbackRatingTypes !== false ) {
-		$wgArticleFeedbackRatingTypes = $wmgArticleFeedbackRatingTypes;
-	}
-}
-
 if ( $wmgUseArticleFeedbackv5 ) {
 	require_once( "$IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.php" );
 
