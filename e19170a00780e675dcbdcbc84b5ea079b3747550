@@ -16,6 +16,24 @@
       "revId": "e19170a00780e675dcbdcbc84b5ea079b3747550",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_efd27f2b",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2013-11-28T02:14:47Z",
+      "side": 1,
+      "message": "\u0027infinite\u0027 is equal to \u0027indefinite\u0027 in this case.",
+      "parentUuid": "0ee75395_cc0c6940",
+      "revId": "e19170a00780e675dcbdcbc84b5ea079b3747550",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
