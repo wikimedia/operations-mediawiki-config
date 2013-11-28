@@ -86,7 +86,7 @@ $wgLBFactoryConf = array(
 'sectionLoads' => array(
 	's1' => array(
 		'db1056'    => 0, # 2.8TB sas 96GB future master
-		'db1050'    => 0, # snapshot 2.8TB sas 64GB
+		# upgrade 'db1050'    => 0, # snapshot 2.8TB sas 64GB
 		'db1049'    => 100, # 2.8TB sas 64GB watchlist
 		'db1043'    => 300, # 1.4TB sas 64GB
 		'db1037'    => 300, # 1.4TB sas 64GB
@@ -95,42 +95,42 @@ $wgLBFactoryConf = array(
 	),
 	's2' => array(
 		'db1036'    => 0,
-		'db1018'    => 0, # snapshot, recache
+		# upgrade 'db1018'    => 0, # snapshot, recache
 		'db1002'    => 400,
 		'db1009'    => 400,
 		'db1034'    => 400,
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038'    => 0,
-		'db1035'    => 0, # snapshot, recache
+		# upgrade 'db1035'    => 0, # snapshot, recache
 		'db1003'    => 400,
 		'db1010'    => 400,
 		'db1019'    => 400,
 	),
 	's4' => array(
 		'db1059'   => 0,
-		'db1042'   => 0, # snapshot, recache
+		# upgrade 'db1042'   => 0, # snapshot, recache
 		'db1004'   => 400,
 		'db1011'   => 400,
 		'db1020'   => 400,
 	),
 	's5' => array(
 		'db1058'   => 0,
-		'db1005'   => 0, # snapshot, recache
+		# upgrade 'db1005'   => 0, # snapshot, recache
 		'db1026'   => 400,
 		'db1021'   => 400,
 		'db1045'   => 400,
 	),
 	's6' => array(
 		'db1027'   => 0,
-		'db1022'   => 0, # snapshot, recache
+		# upgrade 'db1022'   => 0, # snapshot, recache
 		'db1040'   => 400,
 		'db1015'   => 400,
 		'db1006'   => 400,
 	),
 	's7' => array(
 		'db1039' => 0,
-		'db1007' => 0, # snapshot, recache
+		# upgrade 'db1007' => 0, # snapshot, recache
 		'db1041' => 400,
 		'db1024' => 400,
 		'db1028' => 400,
@@ -149,41 +149,41 @@ $wgLBFactoryConf = array(
 ),
 
 'groupLoadsBySection' => array(
-	's1' => array(
-		'QueryPage::recache' => array(
-			'db1050' => 100,
-		)
-	),
-	's2' => array(
-		'QueryPage::recache' => array(
-			'db1018' => 100,
-		)
-	),
-	/* s3 */ 'DEFAULT' => array(
-		'QueryPage::recache' => array(
-			'db1035' => 100,
-		)
-	),
-	's4' => array(
-		'QueryPage::recache' => array(
-			'db1042' => 100,
-		)
-	),
-	's5' => array(
-		'QueryPage::recache' => array(
-			'db1005' => 100,
-		)
-	),
-	's6' => array(
-		'QueryPage::recache' => array(
-			'db1022' => 100,
-		)
-	),
-	's7' => array(
-		'QueryPage::recache' => array(
-			'db1007' => 100,
-		)
-	),
+# upgrade	's1' => array(
+# upgrade		'QueryPage::recache' => array(
+# upgrade			'db1050' => 100,
+# upgrade		)
+# upgrade	),
+# upgrade	's2' => array(
+# upgrade		'QueryPage::recache' => array(
+# upgrade			'db1018' => 100,
+# upgrade		)
+# upgrade	),
+# upgrade	/* s3 */ 'DEFAULT' => array(
+# upgrade		'QueryPage::recache' => array(
+# upgrade			'db1035' => 100,
+# upgrade		)
+# upgrade	),
+# upgrade	's4' => array(
+# upgrade		'QueryPage::recache' => array(
+# upgrade			'db1042' => 100,
+# upgrade		)
+# upgrade	),
+# upgrade	's5' => array(
+# upgrade		'QueryPage::recache' => array(
+# upgrade			'db1005' => 100,
+# upgrade		)
+# upgrade	),
+# upgrade	's6' => array(
+# upgrade		'QueryPage::recache' => array(
+# upgrade			'db1022' => 100,
+# upgrade		)
+# upgrade	),
+# upgrade	's7' => array(
+# upgrade		'QueryPage::recache' => array(
+# upgrade			'db1007' => 100,
+# upgrade		)
+# upgrade	),
 ),
 
 
@@ -199,7 +199,7 @@ $wgLBFactoryConf = array(
 			'db1049' => 1,
 		),
 		'dump' => array(
-			'db1050' => 1,
+			'db1049' => 1,
 		),
 	),
 ),
