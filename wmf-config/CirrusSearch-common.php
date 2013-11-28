@@ -18,6 +18,7 @@ if ( file_exists( "$IP/extensions/Elastica/Elastica.php" ) ){
 require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
 if ( $wmgUseCirrusAsAlternative ) {
 	$wgSearchTypeAlternatives = array( 'CirrusSearch' );
+	$wgCirrusSearchEnablePref = true;
 } else {
 	$wgSearchType = 'CirrusSearch';
 	$wgSearchTypeAlternatives = array( 'LuceneSearch' );
