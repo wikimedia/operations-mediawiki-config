@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_73bad51f",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 317,
+      "author": {
+        "id": 650
+      },
+      "writtenOn": "2013-11-30T14:09:45Z",
+      "side": 1,
+      "message": "Can you add another tab here? Thanks :-)",
+      "revId": "67cdec31950eee1a6fc2f05f976e31ec6332dbe8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
