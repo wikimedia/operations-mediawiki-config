@@ -262,6 +262,11 @@ return array(
 		'default' => true,
 	),
 
+	'wmgUseGWToolset' => array(
+		'default' => false,
+		'commonswiki' => true,
+	),
+
 	'wmgUseMultimediaViewer' => array(
 		'default' => true,
 	),
