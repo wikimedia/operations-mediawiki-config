@@ -10648,6 +10648,7 @@ $wgConf->settings = array(
 'wmgVisualEditorBetaInTab' => array(
 	'default' => false,
 	'enwiki' => true,
+	'eswiki' => true,
 ),
 
 // Should VisualEditor forward users' Cookie: headers to Parsoid (for private wikis)
