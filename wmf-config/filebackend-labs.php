@@ -51,3 +51,11 @@ if ( $wgDBname != 'commonswiki' ) {
 	);
 }
 
+# not sure what to use for the basePath; experimenting with the value below
+$wgFileBackends[] = array(
+	'name'           => 'gwtoolset-backend',
+	'class'          => 'FSFileBackend',
+	'lockManager'    => 'nullLockManager',
+	'fileMode'       => 0644,
+	'basePath'       => "/mnt/upload7/private/gwtoolset/$site/$lang"
+);
