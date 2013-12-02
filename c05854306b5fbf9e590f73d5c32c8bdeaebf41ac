@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0ee75395_f8535c18",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 311,
+      "author": {
+        "id": 214
+      },
+      "writtenOn": "2013-12-02T12:40:24Z",
+      "side": 1,
+      "message": "Benny already mentioned this on InitialiseSettings.php, but the cluster variable is $wgFlowCluster.\n\nAnother gotcha with separate clusters: MW\u0027s update.php can\u0027t deal with them yet. On production, all schema changes are done manually so we can deal with it for now. Once we use this on labs (which, I think, lets update.php run for schema changes), we\u0027ll need to address this, or it\u0027ll keep applying all db patches against core DB.",
+      "revId": "c05854306b5fbf9e590f73d5c32c8bdeaebf41ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_db754894",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 3
