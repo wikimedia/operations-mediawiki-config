@@ -6429,6 +6429,11 @@ $wgConf->settings = array(
 			'user' => array( 900, 30 ),
 		),
 	),
+	'+dewiki' => array( // bug 57820
+		'rollback' => array(
+			'editor' => array( 100, 60 ),
+		),
+	),
 ),
 # @} end of wgRateLimits
 
