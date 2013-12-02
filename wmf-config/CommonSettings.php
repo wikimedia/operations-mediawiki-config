@@ -871,7 +871,7 @@ if ( $wgUseLuceneSearch ) {
 if ( $wmgUseCirrus || $wmgUseCirrusAsAlternative ) {
 	wfProfileIn( "$fname-CirrusSearch" );
 	# Cirrus uses SearchUpdate, turn it back on
-	$wgDisableSearchUpdate = false;
+	// $wgDisableSearchUpdate = false;
 	include( "$wmfConfigDir/CirrusSearch-common.php" );
 	wfProfileOut( "$fname-CirrusSearch" );
 }
