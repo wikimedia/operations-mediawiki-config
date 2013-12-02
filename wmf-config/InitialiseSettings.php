@@ -12673,7 +12673,7 @@ $wgConf->settings = array(
 
 'wmgUseCirrusAsAlternative' => array(
 	'default' => false,
-	'cirrus' => true,
+	/*'cirrus' => true,
 	'bnwiki' => true,
 	'wikidatawiki' => false,
 	'wikivoyage' => true,
@@ -12684,7 +12684,7 @@ $wgConf->settings = array(
 	'frwikisource' => true,
 	'nlwiki' => true,
 	'itwiki' => true,
-	'plwiktionary' => true,
+	'plwiktionary' => true,*/
 ),
 
 // Note that changing this on any supported (English) wiki requires an in place
