@@ -3955,10 +3955,6 @@ $wgConf->settings = array(
 	'metawiki' => true,
 ),
 
-'wmgSetNoticeHideBannersExpiration' => array(
-	'default' => true,
-),
-
 // For CentralNotice project pickers
 'wmgNoticeProject' => array(
 	'advisorywiki' => 'wikimedia',
