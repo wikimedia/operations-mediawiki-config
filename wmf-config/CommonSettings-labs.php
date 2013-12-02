@@ -85,6 +85,12 @@ if ( $wmgUseCommonsMetadata ) {
 	require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
 }
 
+if ( $wmgUseGWToolset ) {
+	require_once( "$IP/extensions/GWToolset/GWToolset.php" );
+	$wgGWTFileBackend = 'gwtoolset-backend';
+	$wgGWTFBMaxAge = '1 week';
+}
+
 if ( $wmgUseOAuth ) {
 	$wgMWOAuthCentralWiki = 'labswiki';  # bug 57403
 }
