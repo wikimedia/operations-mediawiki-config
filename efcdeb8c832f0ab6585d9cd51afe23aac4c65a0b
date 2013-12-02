@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_c0dada20",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2013-12-02T20:47:21Z",
+      "side": 1,
+      "message": "I think there is more config needed than just including the extension, but I don\u0027t know what the right bits are.",
+      "revId": "efcdeb8c832f0ab6585d9cd51afe23aac4c65a0b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
