@@ -10626,10 +10626,10 @@ $wgConf->settings = array(
 
 // Bug 50000 - Disable for logged-out users if wmgVisualEditorDefault is true
 // This is a temporary variable for roll-out, to be removed once complete.
+// If a wiki was previously enabled by default for all users but then disabled,
+// this will need to be set true for 30 days (anon cache epoch).
 'wmgVisualEditorDisableForAnons' => array(
 	'default' => false,
-	'dewiki' => true, // bug 52232
-	'enwiki' => true,
 ),
 
 // Should VisualEditor's "beta welcome" be shown
