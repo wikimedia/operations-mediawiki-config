@@ -16,6 +16,24 @@
       "revId": "45db278ae91b486518bdf3227109a43949810783",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_d53733aa",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1864,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2013-12-03T19:41:23Z",
+      "side": 1,
+      "message": "That would not be precisely functionally identical but I now realize that the order of the namespaces array doesn\u0027t matter :)",
+      "parentUuid": "0ee75395_95ad2bea",
+      "revId": "45db278ae91b486518bdf3227109a43949810783",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
