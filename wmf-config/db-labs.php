@@ -49,4 +49,7 @@ if( $wmfRealm == 'labs' ) { # safe guard
 		),
 	);
 
+	# No parser cache in beta yet
+	$wmgParserCacheDBs = array();
+
 } # end safe guard
