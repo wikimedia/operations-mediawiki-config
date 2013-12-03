@@ -1861,6 +1861,9 @@ if ( $wmgUseVisualEditor ) {
 	$wgVisualEditorParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
 	$wgVisualEditorParsoidPrefix = $wgDBname;
 	$wgVisualEditorParsoidProblemReportURL = 'http://parsoid.wmflabs.org/_bugs/';
+	if ( !$wmgVisualEditorInContentNamespaces ) {
+		$wgVisualEditorNamespaces = array(); // Wipe out default set by VisualEditor.php
+	}
 	$wgVisualEditorNamespaces = array_merge( $wgVisualEditorNamespaces, $wmgVisualEditorNamespaces );
 
 	// VisualEditor namespace
