@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_95ad2bea",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1864,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2013-12-03T19:33:41Z",
+      "side": 1,
+      "message": "Why not\n\n$wgVisualEditorNamespaces \u003d $wmgVisualEditorNamespaces;\nif ( $wmgVisualEditorInContentNamespaces ) {\n  $wgVisualEditorNamespaces \u003d array_merge(  $wgVisualEditorNamespaces, $wgContentNamespaces )\n}\n?",
+      "revId": "45db278ae91b486518bdf3227109a43949810783",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
