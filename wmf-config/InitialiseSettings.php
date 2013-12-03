@@ -12706,10 +12706,7 @@ $wgConf->settings = array(
 ),
 
 'wgResourceLoaderStorageEnabled' => array(
-	'default' => false,
-	'test2wiki' => true,
-	'testwiki' => true,
-	'mediawikiwiki' => true,
+	'default' => true,
 ),
 
 'wmgUseAccountAudit' => array(
