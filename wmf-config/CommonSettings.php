@@ -1861,7 +1861,11 @@ if ( $wmgUseVisualEditor ) {
 	$wgVisualEditorParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
 	$wgVisualEditorParsoidPrefix = $wgDBname;
 	$wgVisualEditorParsoidProblemReportURL = 'http://parsoid.wmflabs.org/_bugs/';
-	$wgVisualEditorNamespaces = array_merge( $wgVisualEditorNamespaces, $wmgVisualEditorNamespaces );
+	if ( $wmgVisualEditorInContentNamespaces ) {
+		$wgVisualEditorNamespaces = array_merge( $wgVisualEditorNamespaces, $wmgVisualEditorNamespaces );
+	} else {
+		$wgVisualEditorNamespaces = $wmgVisualEditorNamespaces;
+	}
 
 	// VisualEditor namespace
 	// This used to be in the VisualEditor extension but was removed there
