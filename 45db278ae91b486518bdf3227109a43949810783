@@ -34,6 +34,24 @@
       "revId": "45db278ae91b486518bdf3227109a43949810783",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_75486732",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1864,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2013-12-03T19:42:16Z",
+      "side": 1,
+      "message": "Specifically, I mean to over-ride rather than implicitly extend the default settting of $wgVisualEditorNamespaces to $wgContentNamespaces. :-)",
+      "parentUuid": "0ee75395_d53733aa",
+      "revId": "45db278ae91b486518bdf3227109a43949810783",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
