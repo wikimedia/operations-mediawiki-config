@@ -11241,7 +11241,7 @@ $wgConf->settings = array(
 		),
 		'extracts' => array(
 			'.metadata',
-			'span.coordinates',
+			'#coordinates',
 			'span.geo-multi-punct',
 			'span.geo-nondefault',
 		),
