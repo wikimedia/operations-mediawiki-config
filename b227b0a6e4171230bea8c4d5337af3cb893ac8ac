@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_0bad772e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 4373,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-12-04T05:59:58Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "0ee75395_8bb9877a",
+      "revId": "b227b0a6e4171230bea8c4d5337af3cb893ac8ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_4b9c9f12",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 3
@@ -48,6 +66,24 @@
       "side": 1,
       "message": "The bug number should probably go where the namespaces are actually added above.",
       "parentUuid": "0ee75395_4b9c9f12",
+      "revId": "b227b0a6e4171230bea8c4d5337af3cb893ac8ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_eba7f34b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 9266,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-12-04T05:59:58Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "0ee75395_ab8a0bbe",
       "revId": "b227b0a6e4171230bea8c4d5337af3cb893ac8ac",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
