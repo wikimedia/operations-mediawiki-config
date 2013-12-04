@@ -21,5 +21,5 @@ header( "HTTP/1.1 $code $message" );
 if ( $redirect !== false ) {
 	header( 'Location: ' . $redirect );
 }
-header( 'Vary: X-Subdomain,X-CS,Cookie' );
+header( 'Vary: X-Forwarded-Proto,X-CS' );
 header( 'Content-Type: text/html; charset=utf-8' );
