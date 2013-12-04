@@ -1434,7 +1434,7 @@ if ( $wmgUseCentralNotice ) {
 
 	// Bug 49905
 	$wgNoticeUseLanguageConversion = true;
-	
+
 	// *** Hide Cookies ***
 	// A little bit of historical breadcrumbs:
 	// In 2012 we expired cookies on 2012-12-26, then everyone had
@@ -2071,7 +2071,6 @@ if ( $wmgUseTranslate ) {
 	$wgTranslateWorkflowStates = $wmgTranslateWorkflowStates;
 	$wgTranslateRcFilterDefault = $wmgTranslateRcFilterDefault;
 
-	unset( $wgTranslateTasks['export-as-po'] );
 	unset( $wgTranslateTasks['export-as-file'] );
 	unset( $wgTranslateTasks['optional'] );
 	unset( $wgTranslateTasks['suggestions'] );
