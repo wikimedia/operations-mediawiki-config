@@ -1257,7 +1257,6 @@ $wgConf->settings = array(
 	'movementroleswiki' => 'https://movementroles.wikimedia.org',
 	'mxwikimedia' => 'http://mx.wikimedia.org',
 	'noboard_chapterswikimedia' => 'http://noboard.chapters.wikimedia.org',
-	'nomcomwiki' => 'https://nomcom.wikimedia.org',
 	'nycwikimedia' => 'http://nyc.wikimedia.org', // bug 29273
 	'officewiki' => 'https://office.wikimedia.org',
 	'ombudsmenwiki' => 'https://ombudsmen.wikimedia.org',
