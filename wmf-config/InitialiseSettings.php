@@ -10597,6 +10597,12 @@ $wgConf->settings = array(
 	'svwiktionary' => array( NS_USER ), // Bug 57356
 ),
 
+// Whether to add $wgContentNamespaces to $wmgVisualEditorNamespaces above
+'wmgVisualEditorInContentNamespaces' => array(
+	'default' => true,
+	'svwiktionary' => false,
+),
+
 // Should a namespace in which VisualEditor is enabled by default for all users (including anons)
 'wmgUseVisualEditorNamespace' => array(
 	'default' => false,
