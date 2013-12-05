@@ -16,6 +16,24 @@
       "revId": "4095d3a48d40902988c32b92fb8f396d636a2297",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_28c7164c",
+        "filename": "wmf-config/extension-list",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 401
+      },
+      "writtenOn": "2013-12-05T05:46:00Z",
+      "side": 1,
+      "message": "Does a scap sync mediawiki-config contents as well? If it does then I think you\u0027re right, this change alone should be in a first patch where we add the Flow extension and build its messages, but don\u0027t flip the switch.",
+      "parentUuid": "0ee75395_05a8bb1b",
+      "revId": "4095d3a48d40902988c32b92fb8f396d636a2297",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
