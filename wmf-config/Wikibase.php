@@ -27,6 +27,9 @@ if ( $wmgUseWikibaseRepo ) {
 	define( 'WB_NS_QUERY', $baseNs + 2 );
 	define( 'WB_NS_QUERY_TALK', $baseNs + 3 );
 
+	$wgNamespaceAliases['Item'] = NS_MAIN;
+	$wgNamespaceAliases['Item_talk'] = NS_TALK;
+
 	// Define the namespaces
 	$wgExtraNamespaces[WB_NS_PROPERTY] = 'Property';
 	$wgExtraNamespaces[WB_NS_PROPERTY_TALK] = 'Property_talk';
