@@ -33,9 +33,12 @@ $wgJobTypeConf['default'] = array(
 );
 // Note: on server failure, this should be changed to any other redis server
 $wgJobQueueAggregator = array(
-	'class'       => 'JobQueueAggregatorRedis',
-	'redisServer' => '10.64.0.180', # mc1001
-	'redisConfig' => array(
+	'class'        => 'JobQueueAggregatorRedis',
+	'redisServers' => array( // all after the first are fallbacks
+		'10.64.32.76', # rdb1001
+		'10.64.0.201', # rdb1003
+	),
+	'redisConfig'  => array(
 		'connectTimeout' => 2,
 		'password' => $wmgRedisPassword,
 	)
