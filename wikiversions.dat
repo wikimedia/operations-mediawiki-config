@@ -465,7 +465,7 @@ lvwiki php-1.23wmf5 *
 lvwiktionary php-1.23wmf5 *
 map_bmswiki php-1.23wmf5 *
 mdfwiki php-1.23wmf5 *
-mediawikiwiki php-1.23wmf5 *
+mediawikiwiki php-1.23wmf6 *
 metawiki php-1.23wmf5 *
 mgwikibooks php-1.23wmf5 *
 mgwiki php-1.23wmf5 *
@@ -731,9 +731,9 @@ tawikiquote php-1.23wmf5 *
 tawikisource php-1.23wmf5 *
 tawiktionary php-1.23wmf5 *
 tenwiki php-1.23wmf5 *
-test2wiki php-1.23wmf5 *
-testwiki php-1.23wmf5 *
-testwikidatawiki php-1.23wmf5 *
+test2wiki php-1.23wmf6 *
+testwiki php-1.23wmf6 *
+testwikidatawiki php-1.23wmf6 *
 tetwiki php-1.23wmf5 *
 tewikibooks php-1.23wmf5 *
 tewiki php-1.23wmf5 *
