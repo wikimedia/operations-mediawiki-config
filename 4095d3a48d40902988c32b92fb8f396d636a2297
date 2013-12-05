@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_05a8bb1b",
+        "filename": "wmf-config/extension-list",
+        "patchSetId": 4
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2013-12-05T02:01:37Z",
+      "side": 1,
+      "message": "We probably need to put this in a separate patch, this will be required for generating ExtensionMessages.php, you wouldn\u0027t want to flip Flow on at the same patch.",
+      "revId": "4095d3a48d40902988c32b92fb8f396d636a2297",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
