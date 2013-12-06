@@ -342,6 +342,7 @@ $pcTemplate = array( 'type' => 'mysql',
 	'flags' => 0,
 );
 
+$pcServers = array();
 foreach ( $wmgParserCacheDBs as $host ) {
 	$pcServers[] = array( 'host' => $host ) + $pcTemplate;
 }
