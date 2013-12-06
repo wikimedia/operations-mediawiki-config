@@ -152,13 +152,14 @@ class MWMultiVersion {
 				// http://wikidata.beta.wmflabs.org/
 				$lang = $matches[1];
 			}
-		} elseif ( preg_match( '/^(.*)\.([a-z]+)\.org$/', $serverName, $matches) ) {
+		} elseif ( preg_match( '/^(.*)\.([a-z]+)\.org$/', $serverName, $matches ) ) {
 			$lang = $matches[1];
 			if ( $matches[2] !== 'wikimedia'
 				|| ( $matches[2] === 'wikimedia' && in_array(
 					str_replace( '.', '_', $lang ),
-					array( 'ar', 'bd', 'be', 'br', 'co', 'dk', 'et', 'fi', 'il', 'mk', 'mx', 'nl', 'noboard_chapters',
-						'no', 'nyc', 'nz', 'pa_us', 'pl', 'rs', 'ru', 'se', 'tr', 'ua', 'uk', 've'
+					array(
+						'ar', 'bd', 'be', 'br', 'co', 'dk', 'et', 'fi', 'il', 'mk', 'mx', 'nl', 'noboard_chapters',
+						'no', 'nyc', 'nz', 'pa-us', 'pl', 'rs', 'ru', 'se', 'tr', 'ua', 'uk', 've'
 					)
 			) ) ) {
 				// wikimedia (non chapters) sites stay as wiki

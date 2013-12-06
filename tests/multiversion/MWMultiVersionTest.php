@@ -66,7 +66,7 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 			array( 'ombudsmenwiki', 'ombudsmen.wikimedia.org' ),
 			array( 'otrs_wikiwiki', 'otrs-wiki.wikimedia.org' ),
 			array( 'outreachwiki', 'outreach.wikimedia.org' ),
-			array( 'pa_uswikimedia', 'pa.us.wikimedia.org' ),
+			array( 'pa_uswikimedia', 'pa-us.wikimedia.org' ),
 			array( 'qualitywiki', 'quality.wikimedia.org' ),
 			array( 'searchcomwiki', 'searchcom.wikimedia.org' ),
 			array( 'sourceswiki', 'wikisource.org' ),
