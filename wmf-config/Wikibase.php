@@ -112,7 +112,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['usePropertyInfoTable'] = true;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 	$wgWBClientSettings['enableSiteLinkWidget'] = true;
-
+	$wgWBClientSettings['hideParserFunctionErrors'] = true;
 
 	if ( $wgDBname === 'commonswiki' ) {
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
