@@ -34,6 +34,24 @@
       "revId": "0a1ac1b85a5111771b1bcb0cdd7b87413affbcd4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_255614d3",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2013-12-06T03:32:46Z",
+      "side": 1,
+      "message": "Yeah, I agree with Brian on both counts.  This way, the actual condition we\u0027re special-casing is front-and-center.\n\nKeeping the \u0027return true\u0027 at the end also maps a little more clearly onto typical hooks.",
+      "parentUuid": "0ee75395_4538f89a",
+      "revId": "0a1ac1b85a5111771b1bcb0cdd7b87413affbcd4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
