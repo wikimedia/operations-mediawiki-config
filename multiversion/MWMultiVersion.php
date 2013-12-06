@@ -165,7 +165,8 @@ class MWMultiVersion {
 				// wikimedia (non chapters) sites stay as wiki
 				$site = $matches[2];
 
-				// For some special subdomains, like pa.us
+				// Hack for some multi subdomain wikis waiting to be renamed
+				// arbcom_dewiki, arbcom_enwiki, arbcom_fiwiki, arbcom_nlwiki, noboard_chapterswikimedia, wg_enwiki
 				$lang = str_replace( '.', '-', $lang );
 			}
 		} else {
