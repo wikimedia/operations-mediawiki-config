@@ -14,6 +14,8 @@ $wgCirrusSearchServers = array(
 
 if ( $wgDBname == 'commonswiki' ) {
 	$wgCirrusSearchNamespaceMappings[ NS_FILE ] = 'file';
+	$wgCirrusSearchShardCount['file'] = 4;
+	$wgCirrusSearchContentReplicaCount['file'] = 2;
 } else {
 	$wgCirrusSearchExtraIndexes[ NS_FILE ] = 'commonswiki_file';
 }
