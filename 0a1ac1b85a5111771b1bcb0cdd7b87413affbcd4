@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_45f23804",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-12-06T03:06:11Z",
+      "side": 1,
+      "message": "Do we really need the boolean return conditions?\n\nreturn ( $action !\u003d\u003d \u0027create\u0027 \u0026\u0026 $title-\u003egetNamespace() !\u003d\u003d 110 );",
+      "revId": "0a1ac1b85a5111771b1bcb0cdd7b87413affbcd4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
