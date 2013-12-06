@@ -292,6 +292,18 @@ return array(
 		'commonswiki' => true,
 	),
 
+	'wgCopyUploadsDomains' => array(
+		'default' => array( '*.flickr.com', '*.staticflickr.com', ),
+		'+testwiki' => array( 'upload.wikimedia.org' ),
+		'commonswiki' => array(
+			'*.flickr.com',
+			'*.staticflickr.com',
+			'*.rijksmuseum.nl',
+			'*.kb.nl',
+			'*.legermuseum.nl'
+		)
+	),
+
 	'wmgUseMultimediaViewer' => array(
 		'default' => true,
 	),
