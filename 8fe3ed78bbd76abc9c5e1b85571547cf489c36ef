@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_b16023cd",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 298,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2013-12-06T23:59:00Z",
+      "side": 1,
+      "message": "If you use +commonswiki you don\u0027t need to repeat the flickr domains again.",
+      "revId": "8fe3ed78bbd76abc9c5e1b85571547cf489c36ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
