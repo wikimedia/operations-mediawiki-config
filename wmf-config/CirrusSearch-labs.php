@@ -11,3 +11,9 @@ $wgCirrusSearchServers = array(
 	'deployment-es2',
 	'deployment-es3',
 );
+
+if ( $wgDBname == 'commonswiki' ) {
+	$wgCirrusSearchNamespaceMappings[ NS_FILE ] = 'file';
+} else {
+	$wgCirrusSearchExtraIndexes[ NS_FILE ] = 'commonswiki_file';
+}
