@@ -292,6 +292,12 @@ return array(
 		'commonswiki' => true,
 	),
 
+	'wgCopyUploadsDomains' => array(
+		'default' => array( '*.flickr.com', '*.staticflickr.com', ),
+		'+testwiki' => array( 'upload.wikimedia.org' ),
+		'commonswiki' => array()
+	),
+
 	'wmgUseMultimediaViewer' => array(
 		'default' => true,
 	),
