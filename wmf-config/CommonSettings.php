@@ -855,27 +855,6 @@ $wgDisableCounters     = true;
 
 wfProfileOut( "$fname-misc2" );
 
-# :SEARCH:
-# This is overridden in the Lucene section below
-$wgDisableTextSearch   = true;
-$wgDisableSearchUpdate = true;
-
-# Better make sure the global setting is enabled
-$wgUseLuceneSearch = true;
-if ( $wgUseLuceneSearch ) {
-	wfProfileIn( "$fname-lucene" );
-	include( "$wmfConfigDir/lucene-common.php" );
-	wfProfileOut( "$fname-lucene" );
-}
-# New wikis are special and get Cirrus :)
-if ( $wmgUseCirrus || $wmgUseCirrusAsAlternative ) {
-	wfProfileIn( "$fname-CirrusSearch" );
-	# Cirrus uses SearchUpdate, turn it back on
-	$wgDisableSearchUpdate = false;
-	include( "$wmfConfigDir/CirrusSearch-common.php" );
-	wfProfileOut( "$fname-CirrusSearch" );
-}
-
 // Case-insensitive title prefix search extension
 // Load this _after_ Lucene so Lucene's prefix search can be used
 // when available (for OpenSearch suggestions and AJAX search mode)
@@ -1843,6 +1822,30 @@ if ( $wmgUseUploadWizard ) {
 if ( $wmgUseBetaFeatures ) {
 	require_once( "$IP/extensions/BetaFeatures/BetaFeatures.php" );
 }
+
+# :SEARCH:
+# Must come after BetaFeatures for Cirrus to register itself as a beta feature
+
+# This is overridden in the Lucene section below
+$wgDisableTextSearch   = true;
+$wgDisableSearchUpdate = true;
+
+# Better make sure the global setting is enabled
+$wgUseLuceneSearch = true;
+if ( $wgUseLuceneSearch ) {
+	wfProfileIn( "$fname-lucene" );
+	include( "$wmfConfigDir/lucene-common.php" );
+	wfProfileOut( "$fname-lucene" );
+}
+# New wikis are special and get Cirrus :)
+if ( $wmgUseCirrus || $wmgUseCirrusAsAlternative ) {
+	wfProfileIn( "$fname-CirrusSearch" );
+	# Cirrus uses SearchUpdate, turn it back on
+	$wgDisableSearchUpdate = false;
+	include( "$wmfConfigDir/CirrusSearch-common.php" );
+	wfProfileOut( "$fname-CirrusSearch" );
+}
+
 
 if ( $wmgUseCommonsMetadata ) {
 	require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
