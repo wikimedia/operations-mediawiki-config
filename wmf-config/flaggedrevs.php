@@ -451,6 +451,7 @@ elseif ( $wgDBname == 'metawiki' ) {
 	unset( $wgGroupPermissions['editor'] );
 	unset( $wgGroupPermissions['reviewer'] );
 	$wgGroupPermissions['zeroadmin']['review'] = true;
+	$wgGroupPermissions['zeroadmin']['autoreview'] = true;
 }
 
 elseif ( $wgDBname == 'plwiki' ) {
