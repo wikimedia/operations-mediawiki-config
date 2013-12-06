@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0ee75395_45b7d8d3",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1479,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2013-12-06T04:22:13Z",
+      "side": 1,
+      "message": "Add isAnon at the end, per Labs version.  See https://gerrit.wikimedia.org/r/#/c/99600/3/wmf-config/CommonSettings-labs.php",
+      "revId": "7f862d6858c9126120864b80344f37f30b3904f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_c8d2ea00",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 4
