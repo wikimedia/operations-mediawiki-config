@@ -12182,6 +12182,7 @@ $wgConf->settings = array(
 	'enwiki' => true,
 	'enwikinews' => true, // bug 53984
 	'eswiki' => true, // bug 54826
+	'fawiki' => true,
 	'hewiki' => true, // bug 48848
 	'mkwiki' => true,
 	'ptwiki' => true, // bug 52870
@@ -12193,6 +12194,7 @@ $wgConf->settings = array(
 	'default' => 'MyCourses Did You Know',
 	'cswiki' => 'Moje kurzy - Víte že?', // bug 54223
 	'eswiki' => 'Mis cursos ¿sabías que?', // bug 54826
+	'fawiki' => 'نکته روز ویکی‌پدیا',
 	'ptwiki' => '!Você Sabia sobre cursos', // bug 52870
 ),
 
