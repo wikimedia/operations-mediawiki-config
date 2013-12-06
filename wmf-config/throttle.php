@@ -19,19 +19,12 @@ $wmgThrottlingExceptions = array();
 #             (default: any project)
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = array( // bug 56930
-	'from'   => '2013-11-21T00:00 +0:00',
-	'to'     => '2013-11-24T23:00 +0:00',
-	'IP'     => array( '195.37.186.62' ),
-	'dbname' => array( 'dewiki', 'enwiki', 'dewikisource', 'enwikisource', 'commonswiki' ),
-	'value'  => 60,
-);
-$wmgThrottlingExceptions[] = array( // bug 57345
-	'from'   => '2013-11-25T08:00 +1:00',
-	'to'     => '2013:11-25T15:00 +1:00',
-	'IP'     => array( '193.152.184.149' ),
-	'dbname' => array( 'cawiki' ),
-	'value'	 => 20,
+$wmgThrottlingExceptions[] = array( // bugless; queens public lib event
+	'from'   => '2013-12-06T00:00 +0:00',
+	'to'     => '2013-12-07T00:00 +0:00',
+	'IP'     => array( '207.159.196.253' ),
+	'dbname' => array( 'enwiki' ),
+	'value'  => 45,
 );
 ## Add throttling definitions above.
 
