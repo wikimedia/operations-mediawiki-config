@@ -4068,6 +4068,7 @@ $wgConf->settings = array(
 		'texvc' => "udp://$wmfUdp2logDest/texvc",
 		'Bug54847' => "udp://$wmfUdp2logDest/Bug54847",
 		'recursion-guard' => "udp://$wmfUdp2logDest/recursion-guard",
+		'Wikibase\TermPropertyLabelResolver' => "udp://$wmfUdp2logDest/bug58099",
 	),
 
 	'+enwiki' => array(
