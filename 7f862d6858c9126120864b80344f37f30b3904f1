@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_c8d2ea00",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 9266,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2013-12-06T02:55:43Z",
+      "side": 1,
+      "message": "I only meant to include the draft namespace as exempt.  I\u0027m not sure about draft talk, but you can leave it in for now.",
+      "revId": "7f862d6858c9126120864b80344f37f30b3904f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
