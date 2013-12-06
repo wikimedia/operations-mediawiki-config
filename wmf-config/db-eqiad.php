@@ -86,8 +86,8 @@ $wgLBFactoryConf = array(
 #
 'sectionLoads' => array(
 	's1' => array(
-		'db1056'    => 0, # 2.8TB sas 96GB future master
-		'db1050'    => 0, # snapshot 2.8TB sas 64GB
+		'db1056'    => 0, # 2.8TB sas 96GB
+		'db1050'    => 0, # 2.8TB sas 64GB, snapshot, vslow
 		'db1049'    => 100, # 2.8TB sas 64GB watchlist
 		'db1043'    => 300, # 1.4TB sas 64GB
 		'db1037'    => 300, # 1.4TB sas 64GB
@@ -96,42 +96,42 @@ $wgLBFactoryConf = array(
 	),
 	's2' => array(
 		'db1036'    => 0,
-		'db1018'    => 0, # snapshot, recache
+		'db1018'    => 0, # snapshot, vslow
 		'db1002'    => 400,
 		'db1009'    => 400,
 		'db1034'    => 400,
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038'    => 0,
-		'db1035'    => 0, # snapshot, recache
+		'db1035'    => 0, # snapshot, vslow
 		'db1003'    => 400,
 		'db1010'    => 400,
 		'db1019'    => 400,
 	),
 	's4' => array(
 		'db1059'   => 0,
-		'db1042'   => 0, # snapshot, recache
+		'db1042'   => 0, # snapshot, vslow
 		'db1004'   => 400,
 		'db1011'   => 400,
 		'db1020'   => 400,
 	),
 	's5' => array(
 		'db1058'   => 0,
-		'db1005'   => 0, # snapshot, recache
+		'db1005'   => 0, # snapshot, vslow
 		'db1026'   => 400,
 		'db1021'   => 400,
 		'db1045'   => 400,
 	),
 	's6' => array(
 		'db1027'   => 0,
-		'db1022'   => 0, # snapshot, recache
+		'db1022'   => 0, # snapshot, vslow
 		'db1040'   => 400,
 		'db1015'   => 400,
 		'db1006'   => 400,
 	),
 	's7' => array(
 		'db1039' => 0,
-		'db1007' => 0, # snapshot, recache
+		'db1007' => 0, # snapshot, vslow
 		'db1041' => 400,
 		'db1024' => 400,
 		'db1028' => 400,
@@ -150,39 +150,34 @@ $wgLBFactoryConf = array(
 ),
 
 'groupLoadsBySection' => array(
-	's1' => array(
-		'QueryPage::recache' => array(
-			'db1050' => 100,
-		)
-	),
 	's2' => array(
-		'QueryPage::recache' => array(
-			'db1018' => 100,
+		'vslow' => array(
+			'db1018' => 1,
 		)
 	),
 	/* s3 */ 'DEFAULT' => array(
-		'QueryPage::recache' => array(
-			'db1035' => 100,
+		'vslow' => array(
+			'db1035' => 1,
 		)
 	),
 	's4' => array(
-		'QueryPage::recache' => array(
-			'db1042' => 100,
+		'vslow' => array(
+			'db1042' => 1,
 		)
 	),
 	's5' => array(
-		'QueryPage::recache' => array(
-			'db1005' => 100,
+		'vslow' => array(
+			'db1005' => 1,
 		)
 	),
 	's6' => array(
-		'QueryPage::recache' => array(
-			'db1022' => 100,
+		'vslow' => array(
+			'db1022' => 1,
 		)
 	),
 	's7' => array(
-		'QueryPage::recache' => array(
-			'db1007' => 100,
+		'vslow' => array(
+			'db1007' => 1,
 		)
 	),
 ),
@@ -200,6 +195,9 @@ $wgLBFactoryConf = array(
 			'db1049' => 1,
 		),
 		'dump' => array(
+			'db1050' => 1,
+		),
+		'vslow' => array(
 			'db1050' => 1,
 		),
 	),
