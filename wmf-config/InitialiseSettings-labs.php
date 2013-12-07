@@ -292,6 +292,10 @@ return array(
 		'commonswiki' => true,
 	),
 
+	// Don't use an http/https proxy
+	'-wgCopyUploadProxy' => array(
+		'default' => false,
+	),
 	'wgCopyUploadsDomains' => array(
 		'default' => array( '*.flickr.com', '*.staticflickr.com', ),
 		'+testwiki' => array( 'upload.wikimedia.org' ),
