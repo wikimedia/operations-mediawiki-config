@@ -25,12 +25,6 @@ $wgPoolCounterConf = array(
 		'workers' => 78,
 		'maxqueue' => 600
 	),
-	'CirrusSearch-Update' => array(
-		'class' => 'PoolCounter_Client',
-		'timeout' => 5,      # We want to fail quickly so we can fix the problem and retry
-		'workers' => 20,
-		'maxqueue' => 200,
-	),
 	'CirrusSearch-Search' => array(
 		'class' => 'PoolCounter_Client',
 		'timeout' => 15,
