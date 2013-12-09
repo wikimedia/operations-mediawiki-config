@@ -128,8 +128,8 @@ return array(
 	),
 
 	'-wgUploadDirectory' => array(
-		'default'      => '/mnt/upload7/$site/$lang',
-		'private'      => '/mnt/upload7/private/$lang',
+		'default'      => '/data/project/upload7/$site/$lang',
+		'private'      => '/data/project/upload7/private/$lang',
 	),
 
 	/* 'wmgUseOnlineStatusBar' => array( */
