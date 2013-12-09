@@ -16,6 +16,24 @@
       "revId": "27f0d6926ce578cfb65198a2d44308ace1c4ed73",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_6bfa9c41",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12061,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-12-09T14:38:27Z",
+      "side": 1,
+      "message": "That\u0027s exactly the point.",
+      "parentUuid": "0ee75395_6b7cdc1b",
+      "revId": "27f0d6926ce578cfb65198a2d44308ace1c4ed73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
