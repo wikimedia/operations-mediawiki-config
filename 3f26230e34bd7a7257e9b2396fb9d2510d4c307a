@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_0b1e7075",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1477,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-12-09T15:23:52Z",
+      "side": 1,
+      "message": "For the sake of clarity and to avoid us having to read the 32 comments so far on the bug report: please add a summary message there.  That will save us time later on.",
+      "parentUuid": "0ee75395_0b50b035",
+      "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_2b8b74c5",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 5
@@ -72,6 +90,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_eb20eca9",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1483,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-12-09T15:23:52Z",
+      "side": 1,
+      "message": "The TitleQuickPermissions hack you are registering in this CommonSettings.php file has already been added by change https://gerrit.wikimedia.org/r/#/c/99600 albeit in file CommonSettings-labs.php.  So you end up with code duplication.\n\nThe beta cluster apply the configuration files from production (aka CommonSettings.php) then it override settings using the -labs.php files.\n\nSo if you register the hook for production in CommonSettings.php, you no more need the registration in the CommonSettings-labs.php since labs already applied the config form CommonSettings.php.",
+      "parentUuid": "0ee75395_cb49a891",
+      "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_0bbaf06c",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 5
@@ -101,6 +137,24 @@
       "side": 1,
       "message": "Did you test this?",
       "parentUuid": "0ee75395_0bbaf06c",
+      "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_2b06d423",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2576,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-12-09T15:23:52Z",
+      "side": 1,
+      "message": "There is nothing to test there. The $wgContentNamespaces on enwiki (as an example) contains NS_MAIN, so that line effectively put NS_MAIN in $wgExemptFromUserRobotsControl, thus preventing the use of __INDEX__ / __NOINDEX__ on the main namespace.\n\nYou probably wanted to merge with $wgExemptFromUserRobotsControl instead of $wgContentNamespaces.\n\n\nOr just remove that line and in the InitialiseSettings replace the wmg variable by the wg variable.",
+      "parentUuid": "0ee75395_4b5d9849",
       "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
