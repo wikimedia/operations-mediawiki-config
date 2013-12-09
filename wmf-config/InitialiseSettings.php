@@ -12698,6 +12698,11 @@ $wgConf->settings = array(
 	'wikidatawiki' => true,
 ),
 
+'wmgCirrusIsBuilding' => array(
+	'default' => false,
+	'wikidatawiki' => true,
+),
+
 // Note that changing this on any supported (English) wiki requires an in place
 // reindex of that wiki to take effect.
 'wmgCirrusSearchUseAggressiveSplitting' => array(
