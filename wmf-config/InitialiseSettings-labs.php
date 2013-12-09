@@ -301,10 +301,12 @@ return array(
 		'default' => array( '*.flickr.com', '*.staticflickr.com', ),
 		'+testwiki' => array( 'upload.wikimedia.org' ),
 		'+commonswiki' => array(
+			'*.collectie.legermuseum.nl',
 			'*.gahetna.nl',
 			'*.kb.nl',
 			'*.legermuseum.nl',
 			'*.lndb.lv',
+			'*.rbge.org.uk',
 			'*.rijksmuseum.nl',
 		),
 	),
