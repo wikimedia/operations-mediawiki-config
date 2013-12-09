@@ -144,6 +144,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_61775bd0",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1483,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-12-09T20:40:55Z",
+      "side": 1,
+      "message": "Most of it since you are moving to production what has been done for beta  . And since beta inherits production settings...",
+      "parentUuid": "0ee75395_6e0bca26",
+      "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_0bbaf06c",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 5
@@ -209,6 +227,24 @@
       "side": 1,
       "message": "You\u0027re confused. Perhaps you should read the relevant manual page. :-)",
       "parentUuid": "0ee75395_2b06d423",
+      "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_418697ad",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2576,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-12-09T20:40:55Z",
+      "side": 1,
+      "message": "Which manual page?\n\n$wgContentNamespaces is going to be added to $wgExemptFromUserRobotsControl isn\u0027t it?",
+      "parentUuid": "0ee75395_ae09d230",
       "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
