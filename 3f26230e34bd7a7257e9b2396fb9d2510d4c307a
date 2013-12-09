@@ -55,6 +55,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_ce1d3668",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1477,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-12-09T15:29:23Z",
+      "side": 1,
+      "message": "We\u0027ll try a clearer comment later.",
+      "parentUuid": "0ee75395_0b1e7075",
+      "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_2b8b74c5",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 5
@@ -108,6 +126,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_6e0bca26",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1483,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-12-09T15:29:23Z",
+      "side": 1,
+      "message": "It sounds like you\u0027re saying I need to undo \u003chttps://gerrit.wikimedia.org/r/99600\u003e in this change set. Is that correct?",
+      "parentUuid": "0ee75395_eb20eca9",
+      "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_0bbaf06c",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 5
@@ -155,6 +191,24 @@
       "side": 1,
       "message": "There is nothing to test there. The $wgContentNamespaces on enwiki (as an example) contains NS_MAIN, so that line effectively put NS_MAIN in $wgExemptFromUserRobotsControl, thus preventing the use of __INDEX__ / __NOINDEX__ on the main namespace.\n\nYou probably wanted to merge with $wgExemptFromUserRobotsControl instead of $wgContentNamespaces.\n\n\nOr just remove that line and in the InitialiseSettings replace the wmg variable by the wg variable.",
       "parentUuid": "0ee75395_4b5d9849",
+      "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_ae09d230",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2576,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-12-09T15:29:23Z",
+      "side": 1,
+      "message": "You\u0027re confused. Perhaps you should read the relevant manual page. :-)",
+      "parentUuid": "0ee75395_2b06d423",
       "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
