@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_6b817ca3",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1477,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-12-09T14:55:43Z",
+      "side": 1,
+      "message": "Please remove the reference to \u0027shitty\u0027 which I myself find offending.  Can you please be a bit more verbose there so we don\u0027t have to lookup the bug report and or what namespace 110 is :-]\n\nWhy do you get to override the permission anyway?",
+      "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_2b8b74c5",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1483,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-12-09T14:55:43Z",
+      "side": 1,
+      "message": "Finally you want to remove the same method that got introduced in the labs file previously: https://gerrit.wikimedia.org/r/#/c/99600/3/wmf-config/CommonSettings-labs.php,unified",
+      "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_0bbaf06c",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2576,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-12-09T14:55:43Z",
+      "side": 1,
+      "message": "Seems to me you that is going to disable the use of __INDEX__/__NOINDEX__ on all content namespaces of all wikis.",
+      "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
