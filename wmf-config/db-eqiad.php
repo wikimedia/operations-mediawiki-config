@@ -318,7 +318,7 @@ $wgLBFactoryConf = array(
 	'cluster25' => array(
 		'10.64.32.18' => 1, # es1008
 		'10.64.32.19' => 3, # es1009
-		'10.64.32.20' => 1, # es1010 snapshot host
+		//'10.64.32.20' => 1, # es1010 snapshot host
 	),
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => array(
