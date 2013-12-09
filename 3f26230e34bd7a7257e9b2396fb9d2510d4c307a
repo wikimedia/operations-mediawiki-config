@@ -248,6 +248,24 @@
       "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_c423d552",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2576,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2013-12-09T21:27:50Z",
+      "side": 1,
+      "message": "https://www.mediawiki.org/wiki/Manual:$wgExemptFromUserRobotsControl",
+      "parentUuid": "0ee75395_418697ad",
+      "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
