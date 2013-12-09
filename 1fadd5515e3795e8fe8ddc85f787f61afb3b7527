@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_f90569c5",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 308,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2013-12-09T10:30:23Z",
+      "side": 1,
+      "message": "adding a trailing comma there.",
+      "revId": "1fadd5515e3795e8fe8ddc85f787f61afb3b7527",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
