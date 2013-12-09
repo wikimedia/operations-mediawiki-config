@@ -3913,6 +3913,7 @@ $wgConf->settings = array(
 	'arwiki' => array( '', 'autoconfirmed', 'autoreview', 'sysop' ), // bug 52109
 	'ckbwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop' ), // bug 52533
 	'enwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop' ), // bug 55432
+	'hewiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop'), //bug 58207
 	'plwiki' => array( '', 'autoconfirmed', 'editor', 'sysop' ), // bug 46990
 	'ptwiki' => array( '', 'autoconfirmed', 'autoreviewer', 'sysop' ), // bug 39652
 ),
