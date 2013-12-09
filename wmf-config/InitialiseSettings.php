@@ -12685,7 +12685,6 @@ $wgConf->settings = array(
 	'default' => false,
 	'cirrus' => true,
 	'bnwiki' => true,
-	'wikidatawiki' => false,
 	'wikivoyage' => true,
 	'sewikimedia' => true,
 	'astwiki' => true,
