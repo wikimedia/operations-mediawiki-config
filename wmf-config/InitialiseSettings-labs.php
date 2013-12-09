@@ -296,14 +296,17 @@ return array(
 	'-wgCopyUploadProxy' => array(
 		'default' => false,
 	),
+
 	'wgCopyUploadsDomains' => array(
 		'default' => array( '*.flickr.com', '*.staticflickr.com', ),
 		'+testwiki' => array( 'upload.wikimedia.org' ),
 		'+commonswiki' => array(
-			'*.rijksmuseum.nl',
+			'*.gahetna.nl',
 			'*.kb.nl',
-			'*.legermuseum.nl'
-		)
+			'*.legermuseum.nl',
+			'*.lndb.lv',
+			'*.rijksmuseum.nl',
+		),
 	),
 
 	'wmgUseMultimediaViewer' => array(
