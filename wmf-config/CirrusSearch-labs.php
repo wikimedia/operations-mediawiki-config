@@ -17,5 +17,5 @@ if ( $wgDBname == 'commonswiki' ) {
 	$wgCirrusSearchShardCount['file'] = 4;
 	$wgCirrusSearchContentReplicaCount['file'] = 2;
 } else {
-	$wgCirrusSearchExtraIndexes[ NS_FILE ] = 'commonswiki_file';
+	$wgCirrusSearchExtraIndexes[ NS_FILE ] = array( 'commonswiki_file' );
 }
