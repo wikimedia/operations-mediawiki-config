@@ -358,11 +358,13 @@ return array(
 	'wmgUseFlow' => array(
 		'enwiki' => true,
 	),
-
 	# Extension:Flow's browsertests use Talk:Flow_QA.
 	'wmgFlowOccupyPages' => array(
 		'enwiki' => array( 'Talk:Flow QA', 'Talk:Flow' ),
 	),
+	# No separate Flow DB or cluster (yet) for labs.
+	'-wgFlowDefaultWikiDb' => false,
+	'-wgFlowCluster' => false,
 
 	'wmgBug54847' => array(
 		'default' => false,
