@@ -303,9 +303,10 @@ return array(
 		'+commonswiki' => array(
 			'*.collectie.legermuseum.nl',
 			'*.gahetna.nl',
+			'*.hu-berlin.de',
 			'*.kb.nl',
-			'*.legermuseum.nl',
 			'*.lndb.lv',
+			'*.memorix.nl',
 			'*.rbge.org.uk',
 			'*.rijksmuseum.nl',
 		),
