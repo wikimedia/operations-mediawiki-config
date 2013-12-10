@@ -49,6 +49,7 @@ $IP/extensions/ExpandTemplates/ExpandTemplates.php
 $IP/extensions/ExtensionDistributor/ExtensionDistributor.php
 $IP/extensions/FeaturedFeeds/FeaturedFeeds.php
 $IP/extensions/FlaggedRevs/FlaggedRevs.php
+$IP/extensions/Flow/Flow.php
 $IP/extensions/FormPreloadPostCache/FormPreloadPostCache.php
 $IP/extensions/FundraiserLandingPage/FundraiserLandingPage.php
 $IP/extensions/Gadgets/Gadgets.php
