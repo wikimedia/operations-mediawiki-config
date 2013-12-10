@@ -88,7 +88,7 @@ $wgLBFactoryConf = array(
 	's1' => array(
 		'db1056'    => 0, # 2.8TB sas 96GB
 		'db1050'    => 0, # 2.8TB sas 64GB, snapshot, vslow
-		//'db1049'    => 100, # 2.8TB sas 64GB watchlist
+		'db1049'    => 100, # 2.8TB sas 64GB watchlist
 		'db1043'    => 300, # 1.4TB sas 64GB
 		'db1037'    => 300, # 1.4TB sas 64GB
 		'db1051'    => 400, # 2.8TB sas 96GB
@@ -186,13 +186,13 @@ $wgLBFactoryConf = array(
 'groupLoadsByDB' => array(
 	'enwiki' => array(
 		'watchlist' => array(
-			'db1043' => 1,
+			'db1049' => 1,
 		),
 		'recentchangeslinked' => array(
-			'db1043' => 1,
+			'db1049' => 1,
 		),
 		'contributions' => array(
-			'db1043' => 1,
+			'db1049' => 1,
 		),
 		'dump' => array(
 			'db1050' => 1,
