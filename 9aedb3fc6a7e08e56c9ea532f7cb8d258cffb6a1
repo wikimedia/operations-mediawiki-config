@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_d26154a5",
+        "filename": "multiversion/MWMultiVersion.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 152,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2013-12-10T15:41:25Z",
+      "side": 1,
+      "message": "Wikimedia",
+      "revId": "9aedb3fc6a7e08e56c9ea532f7cb8d258cffb6a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
