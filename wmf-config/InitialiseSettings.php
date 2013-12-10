@@ -12311,15 +12311,29 @@ $wgConf->settings = array(
 
 'wmgUseFlow' => array(
 	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
 ),
-
 'wmgFlowEditorList' => array(
 	// Disable VE inside flow, leaving only the wikitext editor
 	'default' => array( 'none' ),
 ),
-
 'wmgFlowOccupyPages' => array(
 	'default' => array(),
+	# Extension:Flow's browsertests use Talk:Flow_QA.
+	#'testwiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
+	#'test2wiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
+	#'mediawikiwiki' => array( 'Talk:Flow QA', 'Talk:Sandbox', 'Talk:Flow' ),
+),
+// Use separate database on extension1 cluster for all non-private wikis.
+'wmgFlowDefaultWikiDb' => array(
+	'default' => 'flowdb',
+	'private' => false,
+),
+'wmgFlowCluster' => array(
+	'default' => 'extension1',
+	'private' => false,
 ),
 
 'wmgUseDisambiguator' => array(
