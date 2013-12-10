@@ -118,9 +118,35 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 			array( 'ukwikimedia', 'uk.wikimedia.org' ),
 			array( 'vewikimedia', 've.wikimedia.org' ),
 
-			// labs stuffs
+			// labs stuffs taken from /wikiversions-labs.dat
+			array( 'aawiki', 'aa.wikipedia.beta.wmflabs.org' ),
+			array( 'arwiki', 'ar.wikipedia.beta.wmflabs.org' ),
+			array( 'commonswiki', 'commons.wikimedia.beta.wmflabs.org' ),
 			array( 'labswiki', 'deployment.wikimedia.beta.wmflabs.org' ),
+			array( 'dewiki', 'de.wikipedia.beta.wmflabs.org' ),
+			array( 'dewikivoyage', 'de.wikivoyage.beta.wmflabs.org' ),
+
 			array( 'enwiki', 'en.wikipedia.beta.wmflabs.org' ),
+			array( 'enwikibooks', 'en.wikibooks.beta.wmflabs.org' ),
+			array( 'enwikinews', 'en.wikinews.beta.wmflabs.org' ),
+			array( 'enwikiquote', 'en.wikiquote.beta.wmflabs.org' ),
+			array( 'enwikisource', 'en.wikisource.beta.wmflabs.org' ),
+			array( 'enwikiversity', 'en.wikiversity.beta.wmflabs.org' ),
+			array( 'enwikivoyage', 'en.wikivoyage.beta.wmflabs.org' ),
+			array( 'enwiktionary', 'en.wiktionary.beta.wmflabs.org' ),
+
+			array( 'eowiki', 'eo.wikipedia.beta.wmflabs.org' ),
+			array( 'hewiki', 'he.wikipedia.beta.wmflabs.org' ),
+
+			array( 'labswiki', 'deployment.wikimedia.beta.wmflabs.org' ),
+
+			array( 'loginwiki', 'login.wikimedia.beta.wmflabs.org' ),
+			array( 'metawiki', 'meta.wikimedia.beta.wmflabs.org' ),
+
+			array( 'simplewiki', 'simple.wikipedia.beta.wmflabs.org' ),
+			array( 'sqwiki', 'sq.wikipedia.beta.wmflabs.org' ),
+			array( 'testwiki', 'test.wikipedia.beta.wmflabs.org' ),
+
 			array( 'wikidatawiki', 'wikidata.beta.wmflabs.org' ),
 		);
 	}
