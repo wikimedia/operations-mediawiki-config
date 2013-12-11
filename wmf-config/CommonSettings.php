@@ -760,6 +760,7 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 	// extension distributor messages for mediawiki.org in WikimediaMessages.i18n.php too
 	$wgExtDistSnapshotRefs = array(
 		'master',
+		'REL1_22',
 		'REL1_21',
 		'REL1_20',
 		'REL1_19',
