@@ -16,16 +16,16 @@ if ( file_exists( "$IP/extensions/Elastica/Elastica.php" ) ){
 }
 
 require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
-if ( $wmgUseCirrusAsAlternative ) {
-	$wgSearchTypeAlternatives = array( 'CirrusSearch' );
-	if ( !$wmgCirrusIsBuilding ) {
-		$wgCirrusSearchEnablePref = true;
-	}
-} else {
+if ( $wmgUseCirrus ) {
 	$wgSearchType = 'CirrusSearch';
 	$wgSearchTypeAlternatives = array( 'LuceneSearch' );
 	$wgEnableLucenePrefixSearch = false;
 	$wgCirrusSearchShowNowUsing = true;
+} else {
+	$wgSearchTypeAlternatives = array( 'CirrusSearch' );
+	if ( !$wmgCirrusIsBuilding ) {
+		$wgCirrusSearchEnablePref = true;
+	}
 }
 
 $wgCirrusSearchContentReplicaCount = array( 'content' => 2, 'general' => 2 );
