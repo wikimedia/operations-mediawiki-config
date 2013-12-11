@@ -12322,9 +12322,9 @@ $wgConf->settings = array(
 'wmgFlowOccupyPages' => array(
 	'default' => array(),
 	# Extension:Flow's browsertests use Talk:Flow_QA.
-	#'testwiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
-	#'test2wiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
-	#'mediawikiwiki' => array( 'Talk:Flow QA', 'Talk:Sandbox', 'Talk:Flow' ),
+	'testwiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
+	'test2wiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
+	'mediawikiwiki' => array( 'Talk:Flow QA', 'Talk:Sandbox', 'Talk:Flow' ),
 ),
 // Use separate database on extension1 cluster for all non-private wikis.
 'wmgFlowDefaultWikiDb' => array(
