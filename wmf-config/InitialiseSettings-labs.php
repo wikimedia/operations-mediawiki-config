@@ -363,8 +363,8 @@ return array(
 		'enwiki' => array( 'Talk:Flow QA', 'Talk:Flow' ),
 	),
 	# No separate Flow DB or cluster (yet) for labs.
-	'-wgFlowDefaultWikiDb' => false,
-	'-wgFlowCluster' => false,
+	'-wmgFlowDefaultWikiDb' => false,
+	'-wmgFlowCluster' => false,
 
 	'wmgBug54847' => array(
 		'default' => false,
