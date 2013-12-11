@@ -12685,21 +12685,24 @@ $wgConf->settings = array(
 	'default' => false,
 	'cirrus' => true,
 	'bnwiki' => true,
-	'wikivoyage' => true,
-	'sewikimedia' => true,
 	'astwiki' => true,
 	'guwiki' => true,
 	'elwiki' => true,
 	'frwikisource' => true,
 	'nlwiki' => true,
 	'itwiki' => true,
-	'plwiktionary' => true,
 	'wikidatawiki' => true,
+	'wikimania' => true,
+	'wikimedia' => true,
+	'wikivoyage' => true,
+	'wiktionary' => true,
 ),
 
 'wmgCirrusIsBuilding' => array(
 	'default' => false,
-	'wikidatawiki' => true,
+	'wikimania' => true,
+	'wikimedia' => true,
+	'wiktionary' => true,
 ),
 
 // Note that changing this on any supported (English) wiki requires an in place
