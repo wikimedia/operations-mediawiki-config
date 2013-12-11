@@ -105,6 +105,7 @@ if ( $wmgUseVectorBeta ) {
 
 if ( $wmgUseVisualEditor ) {
 	$wgVisualEditorParsoidURL = 'http://10.4.0.61/'; // deployment-parsoidcache3
+	$wgParsoidCacheServers = array ( 'http://10.4.0.61' ); // deployment-parsoidcache3
 	$wgVisualEditorParsoidReportProblemURL = 'http://10.4.0.33/_bugs/'; // parsoid-spof
 }
 
