@@ -7597,7 +7597,7 @@ $wgConf->settings = array(
 			'abusefilter-log-detail' => true, // bug 55495
 			'suppressredirect' => true, // bug 56203
 		),
-		'propertycreator' => array( 
+		'propertycreator' => array(
 			'property-create' => true, // bug 46953
 			'autopatrol' => true, // bug 55495
 			'patrol' => true, // bug 55495
@@ -7716,6 +7716,9 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'researcher', 'centralnoticeadmin' ),
 		'sysop' => array( 'filemover', 'rollbacker', 'accountcreator', 'confirmed' ),
 		# 'user' => array( 'editor', 'reviewer' ),
+	),
+	'+test2wiki' => array(
+		'bureaucrat' => array( 'oversight' ),
 	),
 	// ******************************************************************
 	'+arwiki' => array(
