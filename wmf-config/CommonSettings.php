@@ -1533,29 +1533,13 @@ if ( $wmgUseCodeReview ) {
 	$wgGroupPermissions['user']['codereview-link-user'] = false;
 	$wgGroupPermissions['user']['codereview-signoff'] = false;
 	$wgGroupPermissions['user']['codereview-associate'] = false;
-
-	$wgGroupPermissions['user']['codereview-post-comment'] = true;
-	$wgGroupPermissions['user']['codereview-signoff'] = true;
-
-	$wgGroupPermissions['coder']['codereview-add-tag'] = true;
-	$wgGroupPermissions['coder']['codereview-remove-tag'] = true;
-	$wgGroupPermissions['coder']['codereview-set-status'] = true;
-	$wgGroupPermissions['coder']['codereview-link-user'] = true;
-	$wgGroupPermissions['coder']['codereview-signoff'] = true;
-	$wgGroupPermissions['coder']['codereview-associate'] = true;
-
-	$wgGroupPermissions['svnadmins']['repoadmin'] = true; // Default is stewards, but this has nothing to do with them
+	$wgGroupPermissions['svnadmins']['repoadmin'] = false;
 
 	$wgCodeReviewENotif = true; // let's experiment with this
 	$wgCodeReviewCommentWatcherEmail = 'mediawiki-codereview@lists.wikimedia.org';
 	$wgCodeReviewRepoStatsCacheTime = 24 * 60 * 60;
 
 	$wgCodeReviewMaxDiffPaths = 100;
-
-	$importantPaths = array( '/trunk/phase3' );
-
-	$wgCodeReviewFixmePerPath['MediaWiki'] = $importantPaths;
-	$wgCodeReviewNewPerPath['MediaWiki'] = $importantPaths;
 }
 
 if ( $wmgUseAbuseFilter ) {
