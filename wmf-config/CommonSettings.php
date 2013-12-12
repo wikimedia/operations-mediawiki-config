@@ -1652,6 +1652,8 @@ if ( $wmgDonationInterface ) {
 if ( $wmgUseGlobalUsage ) {
 	require_once( "$IP/extensions/GlobalUsage/GlobalUsage.php" );
 	$wgGlobalUsageDatabase = 'commonswiki';
+	$wgGlobalUsageSharedRepoWiki = 'commonswiki';
+	$wgGlobalUsagePurgeBacklinks = true;
 }
 
 if ( $wmgUseAPIRequestLog ) {
