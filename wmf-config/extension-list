@@ -60,6 +60,7 @@ $IP/extensions/GlobalBlocking/GlobalBlocking.php
 $IP/extensions/GlobalUsage/GlobalUsage.php
 $IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php
 $IP/extensions/GuidedTour/GuidedTour.php
+IP/extensions/GWToolset/GWToolset.php
 $IP/extensions/ImageMap/ImageMap.php
 $IP/extensions/InputBox/InputBox.php
 $IP/extensions/Insider/Insider.php
