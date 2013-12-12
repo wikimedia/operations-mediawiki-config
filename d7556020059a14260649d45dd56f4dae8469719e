@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_a0d668c5",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1550,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-12-12T20:56:17Z",
+      "side": 0,
+      "message": "We might as well disable/remove these too. It\u0027s not like any new comments are going to be left after the changes above",
+      "revId": "d7556020059a14260649d45dd56f4dae8469719e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
