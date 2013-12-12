@@ -1799,6 +1799,16 @@ if ( $wmgUseCommonsMetadata ) {
 	require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
 }
 
+if ( $wmgUseGWToolset ) {
+	require_once( "$IP/extensions/GWToolset/GWToolset.php" );
+	$wgGWTFileBackend = 'local-multiwrite';
+	$wgGWTFBMaxAge = '1 week';
+	$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMetadataJob';
+	$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMediafileJob';
+	$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetGWTFileBackendCleanupJob';
+	$wgJobTypeConf['gwtoolsetUploadMetadataJob'] = array( 'checkDelay' => true ) + $wgJobTypeConf['default'];
+}
+
 if ( $wmgUseMultimediaViewer ) {
 	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
 }
