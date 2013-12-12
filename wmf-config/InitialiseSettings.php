@@ -1750,7 +1750,7 @@ $wgConf->settings = array(
 
 'wgUploadDirectory' => array(
 	# Using upload7 since Oct 2012
-	 'default'      => '/mnt/upload7/$site/$lang',
+	 'default' => '/mnt/upload7/$site/$lang',
 	 'private' => '/mnt/upload7/private/$lang',
 
 	 'wikimania2005wiki' => '/mnt/upload7/wikipedia/wikimania', // back compat
@@ -1758,6 +1758,13 @@ $wgConf->settings = array(
 	 'execwiki' => '/mnt/upload7/private/execwiki',
 	 'transitionteamwiki' => '/mnt/upload7/private/transitionteamwiki',
 	 'iegcomwiki' => '/mnt/upload7/private/iegcomwiki',
+),
+
+'wgImgAuthUrlPathMap' => array(
+	'default' => array(),
+	'private' => array(
+		'/timeline/' => 'mwstore://local-multiwrite/timeline-render/'
+	)
 ),
 
 # wgMetaNamespace @{
@@ -7591,7 +7598,7 @@ $wgConf->settings = array(
 			'patrol' => true, // bug 56203
 			'autopatrol' => true, // bug 56203
 		),
-		'rollbacker' => array( 
+		'rollbacker' => array(
 			'rollback' => true, // bug 45165
 			'autopatrol' => true, // bug 55495
 			'patrol' => true, // bug 55495
@@ -7602,7 +7609,7 @@ $wgConf->settings = array(
 			'abusefilter-log-detail' => true, // bug 55495
 			'suppressredirect' => true, // bug 56203
 		),
-		'propertycreator' => array( 
+		'propertycreator' => array(
 			'property-create' => true, // bug 46953
 			'autopatrol' => true, // bug 55495
 			'patrol' => true, // bug 55495
