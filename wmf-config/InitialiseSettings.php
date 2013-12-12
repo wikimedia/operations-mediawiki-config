@@ -12503,6 +12503,11 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+// Temporary for bug 58374
+'wgULSNoWebfontsSelectors' => array(
+	'default' => array( '.autonym' ),
+),
+
 'wmgULSPosition' => array(
 	'default' => 'interlanguage',
 	'special' => 'personal',
