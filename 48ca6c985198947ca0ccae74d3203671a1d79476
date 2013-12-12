@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0ee75395_c3af3977",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12497,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-12-12T13:57:11Z",
+      "side": 1,
+      "message": "Same pattern?",
+      "revId": "48ca6c985198947ca0ccae74d3203671a1d79476",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_0393e153",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 2
@@ -13,6 +30,24 @@
       "writtenOn": "2013-12-12T13:51:29Z",
       "side": 1,
       "message": "Hmm this might work, but it is a custom to not set wg globals directly here.\n\nI would just set this variable directly in CommonSettings.php near line 2473",
+      "revId": "48ca6c985198947ca0ccae74d3203671a1d79476",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_e3aa3d68",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12507,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2013-12-12T13:57:11Z",
+      "side": 1,
+      "message": "I though it was allowed given \u0027wgContentHandlerUseDB\u0027 a few lines above.",
+      "parentUuid": "0ee75395_0393e153",
       "revId": "48ca6c985198947ca0ccae74d3203671a1d79476",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
