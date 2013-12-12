@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_0393e153",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12507,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2013-12-12T13:51:29Z",
+      "side": 1,
+      "message": "Hmm this might work, but it is a custom to not set wg globals directly here.\n\nI would just set this variable directly in CommonSettings.php near line 2473",
+      "revId": "48ca6c985198947ca0ccae74d3203671a1d79476",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
