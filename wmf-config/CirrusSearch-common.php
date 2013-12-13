@@ -28,7 +28,8 @@ if ( $wmgUseCirrus ) {
 	}
 }
 
-$wgCirrusSearchContentReplicaCount = array( 'content' => 2, 'general' => 2 );
+$wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
+$wgCirrusSearchReplicaCount = $wmgCirrusSearchReplicaCount;
 $wgCirrusSearchUseAggressiveSplitting = $wmgCirrusSearchUseAggressiveSplitting;
 
 # Load per realm specific configuration, either:
