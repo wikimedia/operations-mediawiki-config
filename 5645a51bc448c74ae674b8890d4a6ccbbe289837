@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_8ff38f9a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12796,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-12-13T16:55:44Z",
+      "side": 1,
+      "message": "I\u0027m wondering if we should just move this into the Cirrus config files like I did for labs.  We can just append to the default array at that point.\n\nAlso, without assigning $wmgCirrusSearchNamespaceMappings to $wgCirrusSearchNamespaceMappings this doesn\u0027t do anything.\n\n(In any case, let\u0027s be consistent with labs)",
+      "revId": "5645a51bc448c74ae674b8890d4a6ccbbe289837",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_6feccbb8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12803,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2013-12-13T16:55:44Z",
+      "side": 1,
+      "message": "Same here.",
+      "revId": "5645a51bc448c74ae674b8890d4a6ccbbe289837",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
