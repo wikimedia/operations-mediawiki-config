@@ -10,3 +10,9 @@ $wgCirrusSearchServers = array(
 );
 
 $wgCirrusSearchConnectionAttempts = 3;
+
+if ( $wgDBname == 'commonswiki' ) {
+	$wgCirrusSearchNamespaceMappings[ NS_FILE ] = 'file';
+	$wgCirrusSearchShardCount['file'] = 4;
+	$wgCirrusSearchReplicaCount['file'] = 2;
+}
