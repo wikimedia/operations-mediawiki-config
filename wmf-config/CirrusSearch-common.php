@@ -28,7 +28,12 @@ if ( $wmgUseCirrus ) {
 	}
 }
 
-$wgCirrusSearchContentReplicaCount = array( 'content' => 2, 'general' => 2 );
+# Two replicas let use lose two any two machines before we lose any portion of
+# the index.
+$wgCirrusSearchReplicaCount = array( 'content' => 2, 'general' => 2 );
+
+# Settings customized per index.
+$wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
 $wgCirrusSearchUseAggressiveSplitting = $wmgCirrusSearchUseAggressiveSplitting;
 
 # Load per realm specific configuration, either:
