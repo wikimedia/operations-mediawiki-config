@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_ef521bdd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2013-12-13T15:53:27Z",
+      "side": 1,
+      "message": "You wiped out part of my fixes to your commit message from patch set 4. There was a bug reference here.",
+      "revId": "050cb39cdd727f8f62c270582ff59b11415ef7a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
