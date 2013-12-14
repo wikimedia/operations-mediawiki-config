@@ -90,6 +90,8 @@ if ( $wmgUseGWToolset ) {
 	$wgGWTFileBackend = 'gwtoolset-backend';
 	$wgGWTFBMaxAge = '1 week';
 	$wgJobTypeConf['gwtoolsetUploadMetadataJob'] = array( 'checkDelay' => true ) + $wgJobTypeConf['default'];
+	$wgAddGroups['sysop'][] = 'gwtoolset';
+	$wgRemoveGroups['sysop'][] = 'gwtoolset';
 }
 
 if ( $wmgUseOAuth ) {
