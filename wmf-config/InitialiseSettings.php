@@ -4147,7 +4147,7 @@ $wgConf->settings = array(
 	),
 	# @}
 
-	#  specials wikis @{
+	# special wikis @{
 	'arbcom_enwiki' => array(
 		100 => 'Case',
 		101 => 'Case_talk',
@@ -4607,6 +4607,10 @@ $wgConf->settings = array(
 		101 => 'Discussion_Portal',
 		102 => 'Projècte',
 		103 => 'Discussion_Projècte',
+	),
+	'orwiki' => array( // bug 58453
+		100 => 'ପୋର୍ଟାଲ',
+		101 => 'ପୋର୍ଟାଲ_ଆଲୋଚନା',
 	),
 	'pflwiki' => array(
 		100 => 'Portal',             // Bug 42990
