@@ -18,9 +18,9 @@ $wmgParserCacheDBs = array(
 $wmgOldExtTemplate = array(
 	'10.64.0.25' => 0, # es1001
 	'10.0.0.225' => 1, # es1, pmtpa master
-	'10.0.0.226' => 1, # es2
-	'10.0.0.227' => 1, # es3
-	'10.0.0.228' => 1, # es4
+	//'10.0.0.226' => 1, # es2
+	//'10.0.0.227' => 1, # es3
+	//'10.0.0.228' => 1, # es4
 );
 
 $wgLBFactoryConf = array(
