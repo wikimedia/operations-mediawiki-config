@@ -10628,10 +10628,15 @@ $wgConf->settings = array(
 // NS_VISUALEDITOR is added in CommonSettings.php if wmgUseVisualEditorNamespace is true
 'wmgVisualEditorNamespaces' => array(
 	'default' => array( NS_USER, NS_FILE, NS_HELP, NS_CATEGORY ),
+	// Test wikis
 	'+mediawikiwiki' => array( NS_PROJECT, 100 /* Manual */, 102 /* Extension */, 104 /* API */ ), // Bug 48430
+	// Wikipedias
 	'+cawiki' => array( 100 /* Portal */, 102 /* Viquiprojecte */ ), // Bug 56000
 	'+enwiki' => array( 100 /* Portal */, 108 /* Book */ ), // Bug 56001
+	// Wiktionaries
 	'svwiktionary' => array( NS_USER ), // Bug 57356
+	// Private wikis
+	'+officewiki' => array( 100 /* Report */ ),
 ),
 
 // Whether to add $wgContentNamespaces to $wmgVisualEditorNamespaces above
