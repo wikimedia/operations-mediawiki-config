@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_17642a10",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 1862,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2013-12-16T16:01:54Z",
+      "side": 1,
+      "message": "These aren\u0027t needed anymore due to I6bfc539 correct?",
+      "revId": "cb677b02d6850dfc07c9c5e378eb5c39cc84ac11",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
