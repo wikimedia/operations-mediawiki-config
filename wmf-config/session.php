@@ -42,6 +42,6 @@ $sessionRedis = array(
 // Cache to hold user sessions in production:
 $wgObjectCaches['sessions'] = array(
 	'class'   => 'RedisBagOStuff',
-	'servers' => $sessionRedis[$wmfDatacenter],
+	'servers' => $sessionRedis[$wmgDatacenter],
 	'password' => $wmgRedisPassword,
 );

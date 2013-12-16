@@ -9,7 +9,7 @@
 #
 #######################################################################
 
-if( $wmfRealm === 'production' ) {   # safeguard
+if( $wmgRealm === 'production' ) {   # safeguard
 
 	include( $IP . '/extensions/CheckUser/CheckUser.php' );
 	$wgCheckUserForceSummary = $wmgCheckUserForceSummary;

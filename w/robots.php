@@ -29,7 +29,7 @@ if ( $zeroRated ) {
 	$text =  $wgArticle->getContent( false ) ;
 	$lastmod = gmdate( 'D, j M Y H:i:s', wfTimestamp( TS_UNIX,  $wgArticle->getTouched() ) ) . ' GMT';
 	header( "Last-modified: $lastmod" );
-} elseif( $wmfRealm == 'labs' ) {
+} elseif( $wmgRealm == 'labs' ) {
 	echo $dontIndex;
 } else {
 	$stats = fstat( $robots );

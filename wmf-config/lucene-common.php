@@ -27,4 +27,4 @@ $wgLuceneSearchTimeout = 10;
 # - lucene-labs.php
 # - lucene-production.php
 #
-require( getRealmSpecificFilename( "$wmfConfigDir/lucene.php" ) );
+require( getRealmSpecificFilename( "$wmgConfigDir/lucene.php" ) );
