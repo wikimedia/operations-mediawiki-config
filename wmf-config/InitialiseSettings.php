@@ -6350,7 +6350,7 @@ $wgConf->settings = array(
 	'+lawikisource' => array( 102 => 1, 106 => 1 ),
 	'+ltwiki' => array( 100 => 1 ),
 	'+mediawikiwiki' => array( 12 => 1, 100 => 1, 102 => 1 ),
-	'+metawiki' => array( 12 => 1, 202 => 1 ),
+	'+metawiki' => array( 12 => 1, 200 => 1, 202 => 1 ),
 	'+mlwikisource' => array( 100 => 1, 104 => 1 ),
 	'+nlwikisource' => array( 102 => 1 ),
 	'+nlwikivoyage' => array( 6 => 1, 14 => 1, 100 => 1, 104 => 1, 106 => 1 ),
