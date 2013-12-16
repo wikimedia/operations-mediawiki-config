@@ -20,7 +20,7 @@ $wgFlagRestrictions = array(
 );
 $wgGroupPermissions['autoconfirmed']['movestable'] = true; // bug 14166
 
-$wmfStandardAutoPromote = $wgFlaggedRevsAutopromote; // flaggedrevs defaults
+$wmgStandardAutoPromote = $wgFlaggedRevsAutopromote; // flaggedrevs defaults
 $wgFlaggedRevsAutopromote = false;
 
 $wgGroupPermissions['sysop']['stablesettings'] = false; // -aaron 3/20/10
@@ -97,14 +97,14 @@ elseif ( $wgDBname == 'testwiki' && false ) {
 	$wgGroupsAddToSelf['*'][] = 'reviewer';
 	$wgGroupsRemoveFromSelf['*'][] = 'editor';
 	$wgGroupsRemoveFromSelf['*'][] = 'reviewer';
-	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+	$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 }
 
 elseif ( $wgDBname == 'test2wiki' ) {
     $wgFlaggedRevsNamespaces[] = NS_CATEGORY;
     $wgFlaggedRevTags['accuracy']['levels'] = 1;
 
-    $wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+    $wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
     $wgFlaggedRevsAutopromote['edits'] = 300;
     $wgFlaggedRevsAutopromote['recentContentEdits'] = 5;
     $wgFlaggedRevsAutopromote['editComments'] = 30;
@@ -138,7 +138,7 @@ elseif ( $wgDBname == 'dewiki' ) {
 	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 	$wgFlaggedRevTags['accuracy']['levels'] = 1;
 
-	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+	$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 	$wgFlaggedRevsAutopromote['edits'] = 300;
 	$wgFlaggedRevsAutopromote['recentContentEdits'] = 5;
 	$wgFlaggedRevsAutopromote['editComments'] = 30;
@@ -240,7 +240,7 @@ elseif ( $wgDBname == 'enwikibooks' ) {
 		  'totalContentEdits' => 50,
 		  'uniqueContentPages' => 10,
 		  'editComments' => 50,
-	) + $wmfStandardAutoPromote;
+	) + $wmgStandardAutoPromote;
 
 	$wgGroupPermissions['editor']['rollback'] = true;
 	$wgGroupPermissions['sysop']['review'] = true;
@@ -283,7 +283,7 @@ elseif ( $wgDBname == 'enwikinews' ) {
 elseif ( $wgDBname == 'eowiki' ) {
 	$wgFlaggedRevsOverride = false;
 	$wgFlaggedRevTags['accuracy']['levels'] = 1;
-	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+	$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 }
 
 elseif ( $wgDBname == 'fawikinews' ) {
@@ -317,7 +317,7 @@ elseif ( $wgDBname == 'fiwiki' ) {
 
 elseif ( $wgDBname == 'frwikinews' ) {
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 104, 106 ) );
-	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+	$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 }
 
@@ -331,7 +331,7 @@ elseif ( $wgDBname == 'hewikisource' ) {
 		'accuracy'     => array( 'review' => 3, 'autoreview' => 3 ),
 		'formatting'   => array( 'review' => 3, 'autoreview' => 3 ),
 	);
-	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+	$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 }
 # bug 29911
@@ -459,7 +459,7 @@ elseif ( $wgDBname == 'plwiki' ) {
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_TEMPLATE, NS_CATEGORY, NS_HELP, 100, 828 );
 	$wgFlaggedRevTags['accuracy']['levels'] = 1;
 
-	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+	$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 	$wgFlaggedRevsAutopromote['days'] = 90;
 	$wgFlaggedRevsAutopromote['edits'] = 500;
 	$wgFlaggedRevsAutopromote['spacing'] = 3;
@@ -542,7 +542,7 @@ elseif ( $wgDBname == 'ptwikibooks' ) {
 		'userpage' => false, # user must have a userpage?
 		'uniqueIPAddress' => false, # If $wgPutIPinRC is true, users sharing IPs won't be promoted
 		'neverBlocked' => true, # Can users that were blocked be promoted?
-	) + $wmfStandardAutoPromote;
+	) + $wmgStandardAutoPromote;
 
 	$wgGroupPermissions['editor']['rollback'] = true;
 	$wgGroupPermissions['sysop']['review'] = true;
@@ -551,7 +551,7 @@ elseif ( $wgDBname == 'ptwikibooks' ) {
 }
 
 elseif ( $wgDBname == 'ptwikinews' ) {
-	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+	$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 	$wgFlaggedRevsAutopromote['days'] = 30;
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 }
@@ -560,7 +560,7 @@ elseif ( $wgDBname == 'ptwikisource' ) {
 	$wgFlaggedRevsLowProfile = false;
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 102, 104, 106, 108, 110 ) );
 	$wgFlaggedRevTags['accuracy']['levels'] = 1;
-	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+	$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 }
 
 elseif ( $wgDBname == 'ruwiki' ) {
@@ -596,7 +596,7 @@ elseif ( $wgDBname == 'idwiki' ) {}
 
 elseif ( $wgDBname == 'ruwikisource' ) {
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_HELP, NS_PROJECT, 104, 106 ) );
-	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+	$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 }
@@ -612,7 +612,7 @@ elseif ( $wgDBname == 'sqwiki' ) {
 	// unique pages with a maximum of 5% reverted edits in 30 days or more since
 	// registration they must be auto-promoted to autoreviewer (or autopatrolled)
 	// group.
-	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+	$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 	$wgFlaggedRevsAutopromote['days'] = 60; # days since registration
 	$wgFlaggedRevsAutopromote['edits'] = 300; # total edit count
 	$wgFlaggedRevsAutopromote['excludeDeleted'] = true; # exclude deleted edits from 'edits' count above?
@@ -672,7 +672,7 @@ elseif ( $wgDBname == 'ukwiktionary' ) {}
 elseif ( $wgDBname == 'plwikisource' ) {
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_CATEGORY, NS_HELP, 100, 102, 104 ) );
 
-	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+	$wgFlaggedRevsAutopromote = $wmgStandardAutoPromote;
 	$wgFlaggedRevsAutopromote['edits'] = 100;
 	$wgFlaggedRevsAutopromote['totalContentEdits'] = 100;
 	$wgFlaggedRevsAutopromote['days'] = 14;

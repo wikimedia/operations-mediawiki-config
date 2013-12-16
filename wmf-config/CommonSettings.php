@@ -72,25 +72,25 @@ if ( getenv( 'WIKIBACKUP' ) ) {
 # $cluster is an historical variable used for the WMF MW conf
 $cluster = 'pmtpa';
 
-# $wmfRealm should be the realm as puppet understand it.
+# $wmgRealm should be the realm as puppet understand it.
 # The possible values as of June 2012 are:
 #  - labs
 #  - production
-$wmfRealm   = 'production';
+$wmgRealm   = 'production';
 
 # Puppet provision the realm in /etc/wikimedia-realm
 if( file_exists( '/etc/wikimedia-realm' ) ) {
-	$wmfRealm = trim( file_get_contents( '/etc/wikimedia-realm' ) );
+	$wmgRealm = trim( file_get_contents( '/etc/wikimedia-realm' ) );
 }
 
 # Set cluster based on realm
-switch( $wmfRealm ) {
+switch( $wmgRealm ) {
 	case 'labs':
 		$cluster = 'wmflabs';
 		break;
 	case 'production':
 	default:
-		$wmfRealm = 'production';
+		$wmgRealm = 'production';
 		$cluster = 'pmtpa';
 		break;
 }
@@ -102,25 +102,25 @@ switch( $wmfRealm ) {
 # 'wikidata': hostname for the data repository
 # 'bits'    : for load.php and js/css assets
 # Whenever all realms/datacenters should use the same host, do not use
-# $wmfHostnames but use the hardcoded hostname instead. A good example are the
+# $wmgHostnames but use the hardcoded hostname instead. A good example are the
 # spam blacklists hosted on meta.wikimedia.org which you will surely want to
 # reuse.
-$wmfHostnames = array();
-switch( $wmfRealm ) {
+$wmgHostnames = array();
+switch( $wmgRealm ) {
 case 'labs':
-	$wmfHostnames['bits']     = 'bits.beta.wmflabs.org';
-	$wmfHostnames['meta']     = 'meta.wikimedia.beta.wmflabs.org';
-	$wmfHostnames['test']     = 'test.wikimedia.beta.wmflabs.org';
-	$wmfHostnames['upload']   = 'upload.beta.wmflabs.org';
-	$wmfHostnames['wikidata'] = 'wikidata.beta.wmflabs.org';
+	$wmgHostnames['bits']     = 'bits.beta.wmflabs.org';
+	$wmgHostnames['meta']     = 'meta.wikimedia.beta.wmflabs.org';
+	$wmgHostnames['test']     = 'test.wikimedia.beta.wmflabs.org';
+	$wmgHostnames['upload']   = 'upload.beta.wmflabs.org';
+	$wmgHostnames['wikidata'] = 'wikidata.beta.wmflabs.org';
 	break;
 case 'production':
 default:
-	$wmfHostnames['bits']   = 'bits.wikimedia.org';
-	$wmfHostnames['meta']   = 'meta.wikimedia.org';
-	$wmfHostnames['test']   = 'test.wikipedia.org';
-	$wmfHostnames['upload'] = 'upload.wikimedia.org';
-	$wmfHostnames['wikidata'] = 'www.wikidata.org';
+	$wmgHostnames['bits']   = 'bits.wikimedia.org';
+	$wmgHostnames['meta']   = 'meta.wikimedia.org';
+	$wmgHostnames['test']   = 'test.wikipedia.org';
+	$wmgHostnames['upload'] = 'upload.wikimedia.org';
+	$wmgHostnames['wikidata'] = 'www.wikidata.org';
 	break;
 }
 
@@ -139,30 +139,30 @@ $wgDBname = $multiVersion->getDatabase();
 $wgDBuser = 'wikiuser';
 
 # wmf-config directory (in common/)
-$wmfConfigDir = "$IP/../wmf-config";
+$wmgConfigDir = "$IP/../wmf-config";
 
 wfProfileOut( "$fname-host" );
 
 # Must be set before InitialiseSettings.php:
-switch( $wmfRealm ) {
+switch( $wmgRealm ) {
 case 'production':
 	# fluorine (nfs1 while fluorine is down)
-	$wmfUdp2logDest = '10.64.0.21:8420';
+	$wmgUdp2logDest = '10.64.0.21:8420';
 	break;
 case 'labs':
 	# deployment-bastion hosts the udp2log daemon
-	$wmfUdp2logDest = '10.4.0.58:8420';
+	$wmgUdp2logDest = '10.4.0.58:8420';
 	break;
 default:
-	$wmfUdp2logDest = '127.0.0.1:8420';
+	$wmgUdp2logDest = '127.0.0.1:8420';
 }
 
 # Initialise wgConf
 wfProfileIn( "$fname-wgConf" );
-require( "$wmfConfigDir/wgConf.php" );
+require( "$wmgConfigDir/wgConf.php" );
 function wmfLoadInitialiseSettings( $conf ) {
-	global $wmfConfigDir;
-	require( "$wmfConfigDir/InitialiseSettings.php" );
+	global $wmgConfigDir;
+	require( "$wmgConfigDir/InitialiseSettings.php" );
 }
 wfProfileOut( "$fname-wgConf" );
 
@@ -176,7 +176,7 @@ if ( array_search( $wgDBname, $wgLocalDatabases ) === false ) {
 	if ( $wgCommandLineMode ) {
 		print "Database name $wgDBname is not listed in dblist\n";
 	} else {
-		require( "$wmfConfigDir/missing.php" );
+		require( "$wmgConfigDir/missing.php" );
 	}
 	exit;
 }
@@ -184,13 +184,13 @@ if ( array_search( $wgDBname, $wgLocalDatabases ) === false ) {
 # Determine domain and language and the directories for this instance
 list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 $wmfVersionNumber = $multiVersion->getVersionNumber();
-$wmfExtendedVersionNumber = $multiVersion->getExtendedVersionNumber();
+$wmgExtendedVersionNumber = $multiVersion->getExtendedVersionNumber();
 
 # Try configuration cache
 
 $filename = "/tmp/mw-cache-$wmfVersionNumber/conf-$wgDBname";
 $globals = false;
-if ( @filemtime( $filename ) >= filemtime( "$wmfConfigDir/InitialiseSettings.php" ) ) {
+if ( @filemtime( $filename ) >= filemtime( "$wmgConfigDir/InitialiseSettings.php" ) ) {
 	$cacheRecord = @file_get_contents( $filename );
 	if ( $cacheRecord !== false ) {
 		$globals = unserialize( $cacheRecord );
@@ -200,7 +200,7 @@ wfProfileOut( "$fname-confcache" );
 if ( !$globals ) {
 	wfProfileIn( "$fname-recache-settings" );
 	# Get configuration from SiteConfiguration object
-	require( "$wmfConfigDir/InitialiseSettings.php" );
+	require( "$wmgConfigDir/InitialiseSettings.php" );
 
 	$wikiTags = array();
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small',
@@ -218,7 +218,7 @@ if ( !$globals ) {
 			'lang'    => $lang,
 			'docRoot' => $_SERVER['DOCUMENT_ROOT'],
 			'site'    => $site,
-			'stdlogo' => "//{$wmfHostnames['upload']}/$site/$lang/b/bc/Wiki.png" ,
+			'stdlogo' => "//{$wmgHostnames['upload']}/$site/$lang/b/bc/Wiki.png" ,
 		), $wikiTags );
 
 	# Save cache
@@ -242,11 +242,11 @@ extract( $globals );
 
 # Private settings such as passwords, that shouldn't be published
 # Needs to be before db.php
-require( "$wmfConfigDir/PrivateSettings.php" );
+require( "$wmgConfigDir/PrivateSettings.php" );
 
 # Cluster-dependent files for database and memcached
-require( getRealmSpecificFilename( "$wmfConfigDir/db.php" ) );
-require( getRealmSpecificFilename( "$wmfConfigDir/mc.php" ) );
+require( getRealmSpecificFilename( "$wmgConfigDir/db.php" ) );
+require( getRealmSpecificFilename( "$wmgConfigDir/mc.php" ) );
 
 ini_set( 'memory_limit', $wmgMemoryLimit );
 
@@ -261,13 +261,13 @@ unset( $wgStyleSheetPath );
 // New URL scheme
 if ( $wgDBname == 'testwiki' ) {
 	// Make testing skin/JS changes easier
-	$wgExtensionAssetsPath = "//{$wmfHostnames['test']}/w/static-$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "//{$wmfHostnames['test']}/w/static-$wmfVersionNumber/skins";
-	$wgResourceBasePath = "//{$wmfHostnames['test']}/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
+	$wgExtensionAssetsPath = "//{$wmgHostnames['test']}/w/static-$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "//{$wmgHostnames['test']}/w/static-$wmfVersionNumber/skins";
+	$wgResourceBasePath = "//{$wmgHostnames['test']}/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
 } else {
-	$wgExtensionAssetsPath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber/skins";
-	$wgResourceBasePath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber"; // This means resources will be requested from /static-VERSION/resources
+	$wgExtensionAssetsPath = "//{$wmgHostnames['bits']}/static-$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "//{$wmgHostnames['bits']}/static-$wmfVersionNumber/skins";
+	$wgResourceBasePath = "//{$wmgHostnames['bits']}/static-$wmfVersionNumber"; // This means resources will be requested from /static-VERSION/resources
 }
 
 $wgStylePath = $wgStyleSheetPath;
@@ -281,7 +281,7 @@ $wgInternalServer = $wgCanonicalServer;
 
 if ( $wgDBname != 'testwiki' && isset( $_SERVER['SERVER_NAME'] ) ) {
 	// Make testing JS/skin changes easy by not running load.php through bits for testwiki
-	$wgLoadScript = "//{$wmfHostnames['bits']}/{$_SERVER['SERVER_NAME']}/load.php";
+	$wgLoadScript = "//{$wmgHostnames['bits']}/{$_SERVER['SERVER_NAME']}/load.php";
 }
 
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmfVersionNumber;
@@ -304,11 +304,11 @@ $wgEmergencyContact = 'noc@wikipedia.org';
 
 if ( defined( 'DEBUG_LOG' ) && $wgDBname == 'aawiki' ) {
 	$wgMemCachedDebug = true;
-	$wgDebugLogFile = "udp://$wmfUdp2logDest/debug15";
+	$wgDebugLogFile = "udp://$wmgUdp2logDest/debug15";
 	$wgDebugDumpSql = true;
 }
 
-$wgDBerrorLog = "udp://$wmfUdp2logDest/dberror";
+$wgDBerrorLog = "udp://$wmgUdp2logDest/dberror";
 $wgDBerrorLogTZ = 'UTC';
 
 if ( !isset( $wgLocaltimezone ) ) {
@@ -361,7 +361,7 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 	)
 );
 
-require( getRealmSpecificFilename( "$wmfConfigDir/session.php" ) );
+require( getRealmSpecificFilename( "$wmgConfigDir/session.php" ) );
 
 // Use the cache setup above and configure sessions caching
 $wgSessionCacheType = 'sessions';
@@ -453,11 +453,11 @@ $wgSVGConverters['rsvg-secure'] = '$path/rsvg-convert --no-external-files -w $wi
 $wgUseSquid = true;
 $wgUseESI   = false;
 
-require( getRealmSpecificFilename( "$wmfConfigDir/squid.php" ) );
+require( getRealmSpecificFilename( "$wmgConfigDir/squid.php" ) );
 
 $wgBlockOpenProxies = false;
 
-if( $wmfRealm == 'production' ) {
+if( $wmgRealm == 'production' ) {
 	$wgUDPProfilerHost = '10.64.0.18';  // tungsten
 	$wgAggregateStatsID = $wgVersion;
 }
@@ -584,7 +584,7 @@ if ( $wgDBname == 'testwiki' ) {
 
 // Per-wiki config for Flagged Revisions
 if ( $wmgUseFlaggedRevs ) {
-	include( "$wmfConfigDir/flaggedrevs.php" );
+	include( "$wmgConfigDir/flaggedrevs.php" );
 }
 #Adding Flaggedrevs rights so that they are available for globalgroups/staff rights - JRA 2013-07-22
 $wgAvailableRights[] = 'stablesettings';
@@ -602,7 +602,7 @@ $wgCategoryTreeDisableCache = false;
 
 if ( $wmgUseProofreadPage ) {
 	include( $IP . '/extensions/ProofreadPage/ProofreadPage.php' );
-	include( "$wmfConfigDir/proofreadpage.php" );
+	include( "$wmgConfigDir/proofreadpage.php" );
 }
 if ( $wmgUseLabeledSectionTransclusion ) {
 	include( $IP . '/extensions/LabeledSectionTransclusion/lst.php' );
@@ -773,8 +773,8 @@ $wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
 $wgGlobalBlockingBlockXFF = $wmgUseXFFBlocks;
 
 include( $IP . '/extensions/TrustedXFF/TrustedXFF.php' );
-if ( function_exists( 'dba_open' ) && file_exists( "$wmfConfigDir/trusted-xff.cdb" ) ) {
-	$wgTrustedXffFile = "$wmfConfigDir/trusted-xff.cdb";
+if ( function_exists( 'dba_open' ) && file_exists( "$wmgConfigDir/trusted-xff.cdb" ) ) {
+	$wgTrustedXffFile = "$wmgConfigDir/trusted-xff.cdb";
 }
 
 if ( $wmgContactPageConf ) {
@@ -796,7 +796,7 @@ if ( $wmgUseSecurePoll ) {
 
 // PoolCounter
 if ( $wmgUsePoolCounter ) {
-	include( getRealmSpecificFilename( "$wmfConfigDir/PoolCounterSettings.php" ) );
+	include( getRealmSpecificFilename( "$wmgConfigDir/PoolCounterSettings.php" ) );
 }
 
 if ( $wmgUseScore ) {
@@ -817,10 +817,10 @@ $wgPasswordSender = 'wiki@wikimedia.org';
 $wgPasswordResetRoutes['email'] = true;
 
 # Cluster-dependent files for file backend
-require( getRealmSpecificFilename( "$wmfConfigDir/filebackend.php" ) );
+require( getRealmSpecificFilename( "$wmgConfigDir/filebackend.php" ) );
 
 # Cluster-dependent files for job queue and job queue aggregator
-require( getRealmSpecificFilename( "$wmfConfigDir/jobqueue.php" ) );
+require( getRealmSpecificFilename( "$wmgConfigDir/jobqueue.php" ) );
 
 if ( $wgDBname == 'nostalgiawiki' ) {
 	# Link back to current version from the archive funhouse
@@ -843,7 +843,7 @@ if ( $wgDBname == 'nostalgiawiki' ) {
 
 $wgUseHashTable = true;
 
-$wgCopyrightIcon = '<a href="//wikimediafoundation.org/"><img src="//' . $wmfHostnames['bits'] . '/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>';
+$wgCopyrightIcon = '<a href="//wikimediafoundation.org/"><img src="//' . $wmgHostnames['bits'] . '/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>';
 
 # For Special:Cite, we only want it on wikipedia (but can't count on $site),
 # not on these fakers.
@@ -866,7 +866,7 @@ $wgDisableSearchUpdate = true;
 $wgUseLuceneSearch = true;
 if ( $wgUseLuceneSearch ) {
 	wfProfileIn( "$fname-lucene" );
-	include( "$wmfConfigDir/lucene-common.php" );
+	include( "$wmgConfigDir/lucene-common.php" );
 	wfProfileOut( "$fname-lucene" );
 }
 # New wikis are special and get Cirrus :)
@@ -874,7 +874,7 @@ if ( $wmgUseCirrus || $wmgUseCirrusAsAlternative ) {
 	wfProfileIn( "$fname-CirrusSearch" );
 	# Cirrus uses SearchUpdate, turn it back on
 	$wgDisableSearchUpdate = false;
-	include( "$wmfConfigDir/CirrusSearch-common.php" );
+	include( "$wmgConfigDir/CirrusSearch-common.php" );
 	wfProfileOut( "$fname-CirrusSearch" );
 }
 
@@ -918,7 +918,7 @@ $wgNoFollowLinks = true; // In case the MediaWiki default changed, bug 42594
 
 # XFF log for vandal tracking
 function wfLogXFF() {
-	global $wmfUdp2logDest;
+	global $wmgUdp2logDest;
 	if ( ( @$_SERVER['REQUEST_METHOD'] ) == 'POST' ) {
 		$uri = ( $_SERVER['HTTPS'] ? 'https://' : 'http://' ) .
 			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
@@ -928,7 +928,7 @@ function wfLogXFF() {
 			"$uri\t" .
 			"{$_SERVER['HTTP_X_FORWARDED_FOR']}, {$_SERVER['REMOTE_ADDR']}\t" .
 			( $_REQUEST['wpSave'] ? 'save' : '' ) . "\n",
-			"udp://$wmfUdp2logDest/xff"
+			"udp://$wmgUdp2logDest/xff"
 		);
 		if ( wfGetIP() === '127.0.0.1' ) {
 			wfErrorLog(
@@ -936,7 +936,7 @@ function wfLogXFF() {
 				wfHostname() .
 				"\t{$_SERVER['HTTP_X_FORWARDED_FOR']}, {$_SERVER['REMOTE_ADDR']}\t" .
 				WebRequest::detectProtocol(),
-				"udp://$wmfUdp2logDest/localhost"
+				"udp://$wmgUdp2logDest/localhost"
 			);
 		}
 	}
@@ -1069,11 +1069,11 @@ if ( is_array( $wmgExtraImplicitGroups ) ) {
 	$wgImplicitGroups = array_merge( $wgImplicitGroups, $wmgExtraImplicitGroups );
 }
 
-if ( $wmfRealm == 'labs' ) {
+if ( $wmgRealm == 'labs' ) {
 	$wgHTTPTimeout = 10;
 }
 
-$wgProxyList = "$wmfConfigDir/mwblocker.log";
+$wgProxyList = "$wmgConfigDir/mwblocker.log";
 
 if ( getenv( 'WIKIDEBUG' ) ) {
 	$wgDebugLogFile = '/tmp/wiki.log';
@@ -1127,7 +1127,7 @@ if ( $wmgEnableCaptcha ) {
 	require( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 	require( "$IP/extensions/ConfirmEdit/FancyCaptcha.php" );
 	$wgGroupPermissions['autoconfirmed']['skipcaptcha'] = true;
-	if ( $wmfRealm !== 'labs' ) {
+	if ( $wmgRealm !== 'labs' ) {
 		$wgCaptchaFileBackend = 'global-multiwrite';
 	}
 	# $wgCaptchaTriggers['edit'] = true;
@@ -1161,8 +1161,8 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgExternalDiffEngine = 'wikidiff2';
 }
 
-if ( function_exists( 'dba_open' ) && file_exists( "$wmfConfigDir/interwiki.cdb" ) ) {
-	$wgInterwikiCache = "$wmfConfigDir/interwiki.cdb";
+if ( function_exists( 'dba_open' ) && file_exists( "$wmgConfigDir/interwiki.cdb" ) ) {
+	$wgInterwikiCache = "$wmgConfigDir/interwiki.cdb";
 }
 
 $wgEnotifUseJobQ = true;
@@ -1188,13 +1188,13 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthUseEventLogging = $wmgCentralAuthUseEventLogging;
 
 	# Broken -- TS
-	if( $wmfRealm == 'production' ) {
+	if( $wmgRealm == 'production' ) {
 		$wgRC2UDPPort = $wmgRC2UDPPort;
 		$wgCentralAuthUDPAddress = $wmgRC2UDPAddress;
 		$wgCentralAuthNew2UDPPrefix = "#central\t";
 	}
 
-	switch ( $wmfRealm ) {
+	switch ( $wmgRealm ) {
 	case 'production':
 		// Production cluster
 		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\./';
@@ -1217,7 +1217,7 @@ if ( $wmgUseCentralAuth ) {
 			'deployment.wikimedia.beta.wmflabs.org' => 'labswiki',
 			'test.wikimedia.beta.wmflabs.org' => 'testwiki',
 			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
-			$wmfHostnames['wikidata'] => 'wikidatawiki',
+			$wmgHostnames['wikidata'] => 'wikidatawiki',
 			'ee-prototype.wikipedia.beta.wmflabs.org' => 'ee_prototypewiki',
 		);
 		$wgCentralAuthLoginWiki = 'loginwiki';
@@ -1348,7 +1348,7 @@ $wgMaxShellTime = 50; // so it times out before PHP and curl and squid
 // with: mkdir -p -m777 /sys/fs/cgroup/memory/mediawiki/job
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
-switch( $wmfRealm ) {
+switch( $wmgRealm ) {
 case 'production'  :
 	$wgImageMagickTempDir = '/a/magick-tmp';
 	break;
@@ -1357,8 +1357,8 @@ case 'labs':
 	break;
 }
 
-if ( $wmfRealm == 'labs' && file_exists( '/etc/wikimedia-transcoding' ) ) {
-	require( "$wmfConfigDir/transcoding-labs.org" );
+if ( $wmgRealm == 'labs' && file_exists( '/etc/wikimedia-transcoding' ) ) {
+	require( "$wmgConfigDir/transcoding-labs.org" );
 }
 
 // Banner notice system
@@ -1366,7 +1366,7 @@ if ( $wmgUseCentralNotice ) {
 	include "$IP/extensions/CentralNotice/CentralNotice.php";
 
 	// for DNS prefetching
-	$wgCentralHost = "//{$wmfHostnames['meta']}";
+	$wgCentralHost = "//{$wmgHostnames['meta']}";
 
 	// for banner loading
 	if ( $wgDBname == 'testwiki' ) {
@@ -1374,9 +1374,9 @@ if ( $wmgUseCentralNotice ) {
 		$wgCentralBannerDispatcher = "//test.wikipedia.org/wiki/Special:BannerRandom";
 		$wgCentralBannerRecorder = "//test.wikipedia.org/wiki/Special:RecordImpression";
 	} else {
-		$wgCentralPagePath = "//{$wmfHostnames['meta']}/w/index.php";
-		$wgCentralBannerDispatcher = "//{$wmfHostnames['meta']}/wiki/Special:BannerRandom";
-		$wgCentralBannerRecorder = "//{$wmfHostnames['meta']}/wiki/Special:RecordImpression";
+		$wgCentralPagePath = "//{$wmgHostnames['meta']}/w/index.php";
+		$wgCentralBannerDispatcher = "//{$wmgHostnames['meta']}/wiki/Special:BannerRandom";
+		$wgCentralBannerRecorder = "//{$wmgHostnames['meta']}/wiki/Special:RecordImpression";
 	}
 
 	// Allow only these domains to access CentralNotice data through the reporter
@@ -1385,7 +1385,7 @@ if ( $wmgUseCentralNotice ) {
 	$wgNoticeProject = $wmgNoticeProject;
 
 	$wgCentralDBname = 'metawiki';
-	if ( $wmfRealm == 'production' && $wgDBname == 'testwiki' ) {
+	if ( $wmgRealm == 'production' && $wgDBname == 'testwiki' ) {
 		# test.wikipedia.org has its own central database:
 		$wgCentralDBname = 'testwiki';
 	}
@@ -1394,7 +1394,7 @@ if ( $wmgUseCentralNotice ) {
 
 	# Wed evening -- all on!
 	$wgNoticeTimeout = 3600;
-	switch( $wmfRealm ) {
+	switch( $wmgRealm ) {
 	case 'production':
 		$wgNoticeServerTimeout = 3600; // to let the counter update
 		$wgNoticeCounterSource = '//wikimediafoundation.org/wiki/Special:ContributionTotal' .
@@ -1408,7 +1408,7 @@ if ( $wmgUseCentralNotice ) {
 	if ( $wgDBname == 'metawiki' ) {
 		$wgNoticeInfrastructure = true;
 	}
-	if( $wmfRealm == 'production' && $wgDBname == 'testwiki' ) {
+	if( $wmgRealm == 'production' && $wgDBname == 'testwiki' ) {
 		$wgNoticeInfrastructure = true;
 	}
 
@@ -1514,7 +1514,7 @@ include( "$IP/extensions/OpenSearchXml/OpenSearchXml.php" );
 
 # Various system to allow/prevent flooding
 # (including exemptions for scheduled outreach events)
-require( "$wmfConfigDir/throttle.php" );
+require( "$wmgConfigDir/throttle.php" );
 
 if ( $wmgUseNewUserMessage ) {
 	include "$IP/extensions/NewUserMessage/NewUserMessage.php";
@@ -1560,7 +1560,7 @@ if ( $wmgUseCodeReview ) {
 
 if ( $wmgUseAbuseFilter ) {
 	include "$IP/extensions/AbuseFilter/AbuseFilter.php";
-	include( "$wmfConfigDir/abusefilter.php" );
+	include( "$wmgConfigDir/abusefilter.php" );
 
 	$wgAbuseFilterEmergencyDisableThreshold = $wmgAbuseFilterEmergencyDisableThreshold;
 	$wgAbuseFilterEmergencyDisableCount = $wmgAbuseFilterEmergencyDisableCount;
@@ -1612,7 +1612,7 @@ if ( $wmgUserDailyContribs ) {
 
 if ( $wmgUseLocalisationUpdate ) {
 	require_once( "$IP/extensions/LocalisationUpdate/LocalisationUpdate.php" );
-	$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/cache-$wmfExtendedVersionNumber";
+	$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/cache-$wmgExtendedVersionNumber";
 }
 
 if ( $wmgEnableLandingCheck ) {
@@ -1640,7 +1640,7 @@ if ( $wmgEnableFundraiserLandingPage ) {
 }
 
 if ( $wmgUseLiquidThreads ) {
-	require_once( "$wmfConfigDir/liquidthreads.php" );
+	require_once( "$wmgConfigDir/liquidthreads.php" );
 }
 
 if ( $wmgDonationInterface ) {
@@ -1779,7 +1779,7 @@ $wgHooks['EmailUser'][] = function ( &$to, &$from, &$subject, &$text ) {
 // ContributionTracking for handling PayPal redirects
 if ( $wgUseContributionTracking ) {
 	include( "$IP/extensions/ContributionTracking/ContributionTracking.php" );
-	include( "$wmfConfigDir/contribution-tracking-setup.php" );
+	include( "$wmgConfigDir/contribution-tracking-setup.php" );
 	$wgContributionTrackingPayPalIPN = "https://civicrm.wikimedia.org/fundcore_gateway/paypal";
 	$wgContributionTrackingPayPalRecurringIPN = "https://civicrm.wikimedia.org/IPNListener_Recurring.php";
 	$wgContributionTrackingUTMKey = true;
@@ -1799,7 +1799,7 @@ if ( $wmgUseUploadWizard ) {
 	require_once( "$IP/extensions/UploadWizard/UploadWizard.php" );
 	# Do not change $wgUploadStashScalerBaseUrl to a protocol-relative URL. This is how UploadStash fetches previews from our scaler, behind
 	# the scenes, that it then streams to the client securely (much like img_auth.php). -- neilk, 2011-09-12
-	$wgUploadStashScalerBaseUrl = "//{$wmfHostnames['upload']}/$site/$lang/thumb/temp";
+	$wgUploadStashScalerBaseUrl = "//{$wmgHostnames['upload']}/$site/$lang/thumb/temp";
 	$wgUploadWizardConfig = array(
 		# 'debug' => true,
 		'disableResourceLoader' => false,
@@ -2003,7 +2003,7 @@ $wgAvailableRights[] = 'moodbar-admin'; // To allow global groups to include thi
 
 # Mobile related configuration
 
-require( getRealmSpecificFilename( "$wmfConfigDir/mobile.php" ) );
+require( getRealmSpecificFilename( "$wmgConfigDir/mobile.php" ) );
 
 if ( $wmgUseSubPageList3 ) {
 	include( "$IP/extensions/SubPageList3/SubPageList3.php" );
@@ -2195,7 +2195,7 @@ if ( $wmgUseShortUrl ) {
 
 if ( $wmgUseFeaturedFeeds ) {
 	require_once( "$IP/extensions/FeaturedFeeds/FeaturedFeeds.php" );
-	require_once( "$wmfConfigDir/FeaturedFeedsWMF.php" );
+	require_once( "$wmgConfigDir/FeaturedFeedsWMF.php" );
 }
 
 $wgDisplayFeedsInSidebar = $wmgDisplayFeedsInSidebar;
@@ -2364,8 +2364,8 @@ if ( $wmgUseSubpageSortkey ) {
 
 if ( $wmgUseGettingStarted ) {
 	require_once( "$IP/extensions/GettingStarted/GettingStarted.php" );
-	if ( !empty( $sessionRedis[$wmfDatacenter] ) ) {
-		$wgGettingStartedRedis = $sessionRedis[$wmfDatacenter][0];
+	if ( !empty( $sessionRedis[$wmgDatacenter] ) ) {
+		$wgGettingStartedRedis = $sessionRedis[$wmgDatacenter][0];
 		$wgGettingStartedRedisOptions['password'] = $wmgRedisPassword;
 	}
 	$wgGettingStartedExcludedCategories = $wmgGettingStartedExcludedCategories;
@@ -2428,11 +2428,11 @@ if ( $wmgUseEventLogging ) {
 		// test2wiki has its own Schema: NS.
 		$wgEventLoggingDBname = 'test2wiki';
 		$wgEventLoggingSchemaApiUri = 'http://test2.wikipedia.org/w/api.php';
-		$wgEventLoggingBaseUri = "//{$wmfHostnames['bits']}/dummy.gif";
-		$wgEventLoggingFile = "udp://$wmfUdp2logDest/EventLogging-$wgDBname";
+		$wgEventLoggingBaseUri = "//{$wmgHostnames['bits']}/dummy.gif";
+		$wgEventLoggingFile = "udp://$wmgUdp2logDest/EventLogging-$wgDBname";
 	} else {
 		// All other wikis reference metawiki.
-		$wgEventLoggingBaseUri = "//{$wmfHostnames['bits']}/event.gif";
+		$wgEventLoggingBaseUri = "//{$wmgHostnames['bits']}/event.gif";
 		$wgEventLoggingDBname = 'metawiki';
 		$wgEventLoggingFile = 'udp://10.64.21.123:8421/EventLogging';  // vanadium
 		$wgEventLoggingSchemaApiUri = 'http://meta.wikimedia.org/w/api.php';
@@ -2480,8 +2480,8 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	// Fetch fonts from stable URLs so that they're cached longer. This is to avoid
 	// re-downloading of fonts for each new branch. But that only works for production,
 	// not labs. If this variable is not set, $wgExtensionAssetsPath is used.
-	if ( $wmfRealm === 'production' ) {
-		$wgULSFontRepositoryBasePath = ( "https://{$wmfHostnames['bits']}/static-current"
+	if ( $wmgRealm === 'production' ) {
+		$wgULSFontRepositoryBasePath = ( "https://{$wmgHostnames['bits']}/static-current"
 			. '/extensions/UniversalLanguageSelector/data/fontrepo/fonts/' );
 	}
 
@@ -2489,7 +2489,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 }
 
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
-	include( "$wmfConfigDir/Wikibase.php" );
+	include( "$wmgConfigDir/Wikibase.php" );
 }
 
 if ( ( $wmgUseTranslate && $wmgUseTranslationMemory ) || $wmgEnableGeoData ) {
@@ -2569,21 +2569,21 @@ if ( in_array( $wgDBname, array( 'wikidatawiki', 'testwikidatawiki' ) ) ) {
 
 // Bug 54847
 if ( $wmgBug54847 && $wmgUseCentralAuth ) {
-	require( "$wmfConfigDir/Bug54847.php" );
+	require( "$wmgConfigDir/Bug54847.php" );
 }
 
 
 // additional "language names", adding to Names.php data
 $wgExtraLanguageNames = $wmgExtraLanguageNames;
 
-if ( file_exists( "$wmfConfigDir/CommonSettings-$wmfRealm.php" ) ) {
-	require( "$wmfConfigDir/CommonSettings-$wmfRealm.php" );
+if ( file_exists( "$wmgConfigDir/CommonSettings-$wmgRealm.php" ) ) {
+	require( "$wmgConfigDir/CommonSettings-$wmgRealm.php" );
 }
 
 #### Per realm extensions
 
-if ( file_exists( "$wmfConfigDir/ext-$wmfRealm.php" ) ) {
-	require( "$wmfConfigDir/ext-$wmfRealm.php" );
+if ( file_exists( "$wmgConfigDir/ext-$wmgRealm.php" ) ) {
+	require( "$wmgConfigDir/ext-$wmgRealm.php" );
 }
 
 // https://bugzilla.wikimedia.org/show_bug.cgi?id=37211
@@ -2611,15 +2611,15 @@ $wgGroupPermissions['confirmed']['skipcaptcha'] = true;
 
 $wgImgAuthDetails = true;
 
-if ( file_exists( "$wmfConfigDir/extension-list-$wmfExtendedVersionNumber" ) ) {
-	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-$wmfExtendedVersionNumber";
+if ( file_exists( "$wmgConfigDir/extension-list-$wmgExtendedVersionNumber" ) ) {
+	$wgExtensionEntryPointListFiles[] = "$wmgConfigDir/extension-list-$wmgExtendedVersionNumber";
 }
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
 
-require( "$wmfConfigDir/ExtensionMessages-$wmfExtendedVersionNumber.php" );
+require( "$wmgConfigDir/ExtensionMessages-$wmgExtendedVersionNumber.php" );
 
 wfProfileOut( "$fname-misc5" );
 wfProfileOut( $fname );

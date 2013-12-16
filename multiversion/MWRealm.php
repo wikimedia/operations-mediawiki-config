@@ -1,39 +1,39 @@
 <?php
 ### Determine realm and datacenter we are on #############################
-# $wmfRealm and $wmfDatacenter are used to vary configuration based on server
+# $wmgRealm and $wmgDatacenter are used to vary configuration based on server
 # location. Thet should be provisioned by puppet in /etc/wikimedia-site and
 # /etc/wikimedia-realm.
 #
-# The possible values of $wmfRealm and $wmfDatacenter as of October 2012 are:
+# The possible values of $wmgRealm and $wmgDatacenter as of October 2012 are:
 #  - labs + pmtpa
 #  - labs + eqiad
 #  - production + pmtpa
 #  - production + eqiad
-global $wmfDatacenter, $wmfRealm;
-$wmfRealm   = 'production';
-$wmfDatacenter = 'pmtpa';
+global $wmgDatacenter, $wmgRealm;
+$wmgRealm   = 'production';
+$wmgDatacenter = 'pmtpa';
 
 # Puppet provision the realm in /etc/wikimedia-realm
 if( file_exists( '/etc/wikimedia-realm' ) ) {
-	$wmfRealm = trim( file_get_contents( '/etc/wikimedia-realm' ) );
+	$wmgRealm = trim( file_get_contents( '/etc/wikimedia-realm' ) );
 }
 if( file_exists( '/etc/wikimedia-site' ) ) {
-	$wmfDatacenter = trim( file_get_contents( '/etc/wikimedia-site' ) );
+	$wmgDatacenter = trim( file_get_contents( '/etc/wikimedia-site' ) );
 }
 
 # Validate settings
-switch( $wmfRealm ) {
+switch( $wmgRealm ) {
 case 'labs':
 case 'production':
-	if ( ! in_array( $wmfDatacenter, array( 'pmtpa', 'eqiad' ) ) ) {
-		$wmfDatacenter = 'pmtpa';
+	if ( ! in_array( $wmgDatacenter, array( 'pmtpa', 'eqiad' ) ) ) {
+		$wmgDatacenter = 'pmtpa';
 	}
 	break;
 
 default:
 	# Assume something vaguely resembling a default
-	$wmfRealm   = 'production';
-	$wmfDatacenter = 'pmtpa';
+	$wmgRealm   = 'production';
+	$wmgDatacenter = 'pmtpa';
 	break;
 }
 
@@ -60,7 +60,7 @@ function listAllRealmsAndDatacenters() {
 # @param $filename string Base filename, must contain an extension
 # @returns string Filename to be used
 function getRealmSpecificFilename( $filename ) {
-	global $wmfRealm, $wmfDatacenter;
+	global $wmgRealm, $wmgDatacenter;
 
 	$dotPos = strrpos( $filename, '.' );
 	if ( $dotPos === false ) {
@@ -78,18 +78,18 @@ function getRealmSpecificFilename( $filename ) {
 	#
 	# Please update /README whenever changing code below.
 
-	$new_filename = "{$base}-{$wmfRealm}-{$wmfDatacenter}{$ext}";
+	$new_filename = "{$base}-{$wmgRealm}-{$wmgDatacenter}{$ext}";
 	if ( file_exists( $new_filename ) ) {
 		return $new_filename;
 	}
 
 	# realm take precedence over datacenter.
-	$new_filename = "{$base}-{$wmfRealm}{$ext}";
+	$new_filename = "{$base}-{$wmgRealm}{$ext}";
 	if ( file_exists( $new_filename ) ) {
 		return $new_filename;
 	}
 
-	$new_filename = "{$base}-{$wmfDatacenter}{$ext}";
+	$new_filename = "{$base}-{$wmgDatacenter}{$ext}";
 	if ( file_exists( $new_filename ) ) {
 		return $new_filename;
 	}

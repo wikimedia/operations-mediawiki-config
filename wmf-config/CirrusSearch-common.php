@@ -35,4 +35,4 @@ $wgCirrusSearchUseAggressiveSplitting = $wmgCirrusSearchUseAggressiveSplitting;
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
 #
-require( getRealmSpecificFilename( "$wmfConfigDir/CirrusSearch.php" ) );
+require( getRealmSpecificFilename( "$wmgConfigDir/CirrusSearch.php" ) );

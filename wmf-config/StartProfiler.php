@@ -14,7 +14,7 @@ if ( isset( $_REQUEST['forceprofile'] ) ) {
 	$wgProfiler['class'] = 'ProfilerSimpleUDP';
 	$wgProfiler['profileID'] = 'test2';
 # Normal case: randomly (or not) selected for logged profiling sample
-} elseif ( PHP_SAPI !== 'cli' && $wmfDatacenter == 'eqiad' && ( mt_rand() % 50 ) == 0 ) {
+} elseif ( PHP_SAPI !== 'cli' && $wmgDatacenter == 'eqiad' && ( mt_rand() % 50 ) == 0 ) {
 	$wgProfiler['class'] = 'ProfilerSimpleUDP';
 	// $IP is something like '/usr/local/apache/common-local/php-1.19'
 	$version = str_replace( 'php-', '', basename( $IP ) );
@@ -23,7 +23,7 @@ if ( isset( $_REQUEST['forceprofile'] ) ) {
 	} else {
 		$wgProfiler['profileID'] = $version;
 	}
-} elseif ( $wmfRealm === 'labs' ) {
+} elseif ( $wmgRealm === 'labs' ) {
 	$wgProfiler['class'] = 'ProfilerSimpleUDP';
 	$coreGit = new GitInfo( $IP );
 	$wgProfiler['profileID'] = $coreGit->getHeadSHA1() ?: 'labs';

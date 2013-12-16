@@ -6,7 +6,7 @@
 # This file hold configuration statement overriding CommonSettings.php
 # Should not be loaded on production
 
-if( $wmfRealm == 'labs' ) {  # safe guard
+if( $wmgRealm == 'labs' ) {  # safe guard
 
 	include( "logging-labs.php" );
 
@@ -35,7 +35,7 @@ if ( $wmgUseEventLogging ) {
 	$wgEventLoggingFile = 'udp://deployment-eventlogging.pmtpa.wmflabs:8421/EventLogging';
 }
 
-if ( $wmfUseArticleCreationWorkflow ) {
+if ( $wmgUseArticleCreationWorkflow ) {
 	require_once( "$IP/extensions/ArticleCreationWorkflow/ArticleCreationWorkflow.php" );
 	$wgArticleCreationBucketConfig['buckets']['off'] = 0;
 }
@@ -90,8 +90,6 @@ if ( $wmgUseGWToolset ) {
 	$wgGWTFileBackend = 'gwtoolset-backend';
 	$wgGWTFBMaxAge = '1 week';
 	$wgJobTypeConf['gwtoolsetUploadMetadataJob'] = array( 'checkDelay' => true ) + $wgJobTypeConf['default'];
-	$wgAddGroups['sysop'][] = 'gwtoolset';
-	$wgRemoveGroups['sysop'][] = 'gwtoolset';
 }
 
 if ( $wmgUseOAuth ) {
@@ -158,6 +156,6 @@ if ( $wmgUseCORS ) {
 
 $wgExemptFromUserRobotsControl = array_merge( $wgContentNamespaces, $wmgExemptFromUserRobotsControl );
 
-$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-labs";
+$wgExtensionEntryPointListFiles[] = "$wmgConfigDir/extension-list-labs";
 
 } # end safeguard
