@@ -267,22 +267,22 @@ $wgLBFactoryConf = array(
 	'cluster24' => array(
 		'10.64.16.153' => 0, # es1005
 		'10.0.0.234' => 1, # es5, pmtpa master
-		'10.0.0.235' => 3, # es6
-		'10.0.0.236' => 3, # es7
+		//'10.0.0.235' => 3, # es6
+		//'10.0.0.236' => 3, # es7
 	),
 	# es3
 	'cluster25' => array(
 		'10.64.32.18' => 0, # es1008
 		'10.0.0.237' => 1, # es8, pmtpa master
-		'10.0.0.220' => 3, # es9
-		'10.0.0.224' => 3, # es10
+		//'10.0.0.220' => 3, # es9
+		//'10.0.0.224' => 3, # es10
 	),
 	# ExtensionStore shard1 - initially for AFTv5
 	# TODO: pmtpa replica of the shard, currently only in eqiad
 	'extension1' => array(
 		'10.64.16.18' => 0, # db1029
 		'10.0.6.48' => 1, # db38
-		'10.0.6.46' => 1, # db36
+		//'10.0.6.46' => 1, # db36
 	),
 ),
 
