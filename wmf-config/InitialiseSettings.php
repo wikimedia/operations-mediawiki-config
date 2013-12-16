@@ -2910,6 +2910,8 @@ $wgConf->settings = array(
 		'WP' => NS_PROJECT,
 		'Portal' => 100,
 		'Portal_talk' => 101,
+		'ഘ' => NS_MODULE, // bug 54951
+		'ഘസം' => NS_MODULE_TALK, // bug 54951
 	),
 	'+mlwikibooks' => array(
 		'വിക്കി‌‌_പുസ്തകശാല' => NS_PROJECT,
@@ -2932,28 +2934,36 @@ $wgConf->settings = array(
 		'വസം' => NS_CATEGORY_TALK,
 		'സ' => NS_HELP,
 		'സസം' => NS_HELP_TALK,
+		'ഘ' => NS_MODULE, // bug 54951
+		'ഘസം' => NS_MODULE_TALK, // bug 54951
 	),
 	'+mlwikiquote' => array(
-		'വിക്കി_ചൊല്ലുകൾ'	      => NS_PROJECT, // bug 38111
-		'വിക്കി_ചൊല്ലുകൾ_സംവാദം'	      => NS_PROJECT_TALK, // bug 38111
+		'വിക്കി_ചൊല്ലുകൾ' => NS_PROJECT, // bug 38111
+		'വിക്കി_ചൊല്ലുകൾ_സംവാദം' => NS_PROJECT_TALK, // bug 38111
+		'ഘ' => NS_MODULE, // bug 54951
+		'ഘസം' => NS_MODULE_TALK, // bug 54951
 	),
 	'+mlwikisource' => array(
-		'Author'	      => 100,
+		'Author' => 100,
 		'Author_talk' => 101,
-		'Portal'	      => 102,
+		'Portal' => 102,
 		'Portal_talk' => 103,
 		'Wikisource' => NS_PROJECT,
 		'WS' => NS_PROJECT,
-		'H' => NS_HELP, # bug 35712
+		'H' => NS_HELP, // bug 35712
+		'ഘ' => NS_MODULE, // bug 54951
+		'ഘസം' => NS_MODULE_TALK, // bug 54951
 	),
 	'+mlwiktionary' => array(
 		'Wiktionary' => NS_PROJECT,
 		'വിക്കി‌‌_നിഘണ്ടു' => NS_PROJECT,
 		'വിക്കി‌‌_നിഘണ്ടു_സംവാദം' => NS_PROJECT_TALK,
+		'ഘ' => NS_MODULE, // bug 54951
+		'ഘസം' => NS_MODULE_TALK, // bug 54951
 	),
 	'+mrwiki' => array(
-		'Wikipedia'   => NS_PROJECT,
-		'विपी'		=> NS_PROJECT,
+		'Wikipedia' => NS_PROJECT,
+		'विपी' => NS_PROJECT,
 	),
 	'+mrwikisource' => array(
 		'Portal' => 100,
