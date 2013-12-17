@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_0473cb14",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 10317,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-12-17T18:26:29Z",
+      "side": 1,
+      "message": "Some annotation to these would be nice - what/where/why or similar",
+      "revId": "5d5b76cf57f64bc96b6dbbc5178087606593657d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
