@@ -73,6 +73,24 @@
     },
     {
       "key": {
+        "uuid": "0ee75395_ebd31a2e",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1477,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2013-12-17T10:10:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ee75395_ce1d3668",
+      "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ee75395_2b8b74c5",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 5
@@ -156,6 +174,24 @@
       "side": 1,
       "message": "Most of it since you are moving to production what has been done for beta  . And since beta inherits production settings...",
       "parentUuid": "0ee75395_6e0bca26",
+      "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_abc9927d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1483,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2013-12-17T10:10:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ee75395_61775bd0",
       "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -263,6 +299,24 @@
       "side": 1,
       "message": "https://www.mediawiki.org/wiki/Manual:$wgExemptFromUserRobotsControl",
       "parentUuid": "0ee75395_418697ad",
+      "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_4bac469d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2576,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2013-12-17T10:10:15Z",
+      "side": 1,
+      "message": "As noted, $wgExemptFromUserRobotsControl defaults to $wgContentNamespaces.  Before this set of changes, the WMF cluster was relying on that default too.\n\nHowever, we now want to add namespaces that are (deliberately) not content namespaces.  Thus, the union is intentional.\n\nHowever, wmgExemptFromUserRobotsControl (the Wikimedia gating variable) sounds the same as wgExemptFromUserRobotsControl (the variable built into core).  But it\u0027s actually just part of wgExemptFromUserRobotsControl.\n\nSo I renamed the wmg to wmgExemptFromUserRobotsControlExtra, to reflect the fact that it\u0027s extra beyond the content namespaces.",
+      "parentUuid": "0ee75395_c423d552",
       "revId": "3f26230e34bd7a7257e9b2396fb9d2510d4c307a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
