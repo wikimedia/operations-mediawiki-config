@@ -7,13 +7,12 @@
 # Should not be loaded on production
 
 if( $wmfRealm == 'labs' ) {  # safe guard
-
 	include( "logging-labs.php" );
 
 // test wiki
 if ( $wgDBname == 'testwiki' ) {
-	        $wgDebugToolbar = true;
-	        $wgProfiler['class'] = 'ProfilerSimpleText';
+	$wgDebugToolbar = true;
+	$wgProfiler['class'] = 'ProfilerSimpleText';
 }
 
 if( file_exists( '/etc/wmflabs-instancename' ) ) {
