@@ -11,3 +11,5 @@ $wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
 
 // Zero extension
 $wgEnableZeroRatedMobileAccessTesting = true;
+
+$wgVisualEditorEnableExperimentalCode = false;
