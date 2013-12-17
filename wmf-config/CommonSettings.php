@@ -884,6 +884,10 @@ if ( $wmgUseCirrus || $wmgUseCirrusAsAlternative ) {
 // But note we still need TitleKey for "go" exact matches and similar.
 if ( $wmgUseTitleKey ) {
 	include "$IP/extensions/TitleKey/TitleKey.php";
+	if ( $wmgUseCirrus ) {
+		array_pop( $wgExtensionFunctions );
+		$wgHooks['SearchGetNearMatch'][] = 'TitleKey::searchGetNearMatch';
+	}
 }
 
 wfProfileIn( "$fname-misc3" );
