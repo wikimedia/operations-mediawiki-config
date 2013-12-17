@@ -7803,7 +7803,7 @@ $wgConf->settings = array(
 	'+commonswiki' => array(
 		'bureaucrat' => array( 'ipblock-exempt', 'OTRS-member' ),
 		'checkuser'  => array( 'ipblock-exempt' ),
-		'sysop' => array( 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer'  ),
+		'sysop' => array( 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer', 'gwtoolset'  ),
 		'steward' => array( 'OTRS-member' ),
 		'Image-reviewer' => array( 'Image-reviewer' ),
 	),
@@ -8237,7 +8237,7 @@ $wgConf->settings = array(
 	'+commonswiki' => array(
 		'bureaucrat' => array( 'ipblock-exempt', 'OTRS-member', 'translationadmin' ), // bug 48620
 		'checkuser' => array( 'ipblock-exempt' ),
-		'sysop' => array( 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer' ),
+		'sysop' => array( 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer', 'gwtoolset' ),
 		'steward' => array( 'OTRS-member' ),
 	),
 	'+cswiki' => array(
