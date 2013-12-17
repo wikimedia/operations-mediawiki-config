@@ -299,10 +299,6 @@ return array(
 		'default' => true,
 	),
 
-	'wmgVisualEditorNamespaces' => array(
-		'+enwiki' => array( 100 /* Portal */, 108 /* Book */, 110 /* Draft */ ),
-	),
-
 	'wmgUseCampaigns' => array(
 		'default' => true,
 	),
