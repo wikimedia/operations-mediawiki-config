@@ -34,6 +34,24 @@
       "revId": "d1383796f1beb560bcbb8173fb4a23dd8e471384",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ee75395_1f7438cb",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 887,
+      "author": {
+        "id": 873
+      },
+      "writtenOn": "2013-12-17T19:17:46Z",
+      "side": 1,
+      "message": "I will withdraw my objection to how horrible this is if you file a bug against cirrus that it should do that.",
+      "parentUuid": "0ee75395_bfa30c3f",
+      "revId": "d1383796f1beb560bcbb8173fb4a23dd8e471384",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
