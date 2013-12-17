@@ -302,6 +302,7 @@ return array(
 		'+testwiki' => array( 'upload.wikimedia.org' ),
 		'+commonswiki' => array(
 			'*.collectie.legermuseum.nl',
+			'*.europeana1914-1918.eu',
 			'*.gahetna.nl',
 			'*.hu-berlin.de',
 			'*.kb.nl',
