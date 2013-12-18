@@ -19,7 +19,7 @@ if( file_exists( '/etc/wmflabs-instancename' ) ) {
 	$wgOverrideHostname = trim( file_get_contents( '/etc/wmflabs-instancename' ) );
 }
 
-$wgDebugTimestamps=true;
+$wgDebugTimestamps = true;
 
 $wmgAddWikiNotify = false;
 
@@ -55,43 +55,10 @@ $wgDnsBlacklistUrls   = array(
 $wgGroupPermissions['autoconfirmed']['skipcaptcha'] = false;
 
 if ( $wmgEnableGeoData ) {
-	require_once( "$IP/extensions/GeoData/GeoData.php" );
-	$wgGeoDataBackend = 'solr';
 	$wgGeoDataSolrMaster = 'deployment-solr.pmtpa.wmflabs';
 	$wgGeoDataSolrHosts = array(
 		'deployment-solr.pmtpa.wmflabs' => 100,
 	);
-
-	# Data collection mode
-	if ( !$wmgEnableGeoSearch ) {
-		$wgAPIGeneratorModules['geosearch'] = 'ApiQueryDisabled';
-		$wgAPIListModules['geosearch'] = 'ApiQueryDisabled';
-	}
-
-	# These modules have been intentionally disabled for the first phase of deployment
-	if ( $wgDBname !== 'testwiki' ) {
-		unset( $wgAPIListModules['geopages'] );
-		unset( $wgAPIListModules['geopagesincategory'] );
-	}
-	$wgMaxCoordinatesPerPage = 2000;
-}
-
-if ( $wmgUseBetaFeatures ) {
-	require_once( "$IP/extensions/BetaFeatures/BetaFeatures.php" );
-}
-
-if ( $wmgUseCommonsMetadata ) {
-	require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
-}
-
-if ( $wmgUseGWToolset ) {
-	require_once( "$IP/extensions/GWToolset/GWToolset.php" );
-	$wgGWTFileBackend = 'gwtoolset-backend';
-	$wgGWTFBMaxAge = '1 week';
-	$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMetadataJob';
-	$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMediafileJob';
-	$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetGWTFileBackendCleanupJob';
-	$wgJobTypeConf['gwtoolsetUploadMetadataJob'] = array( 'checkDelay' => true ) + $wgJobTypeConf['default'];
 }
 
 if ( $wmgUseOAuth ) {
@@ -123,7 +90,7 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgEnableTranscode = true; //enable transcoding on labs
 }
 
-if ($wgDBname == "testwiki") {
+if ( $wgDBname == "testwiki" ) {
 	$wgCaptchaDirectory = '/data/project/upload7/private/captcha/random';
 }
 
