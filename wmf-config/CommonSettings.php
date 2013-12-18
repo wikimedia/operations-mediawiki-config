@@ -1484,10 +1484,7 @@ if ( $wgDBname == 'enwiki' ) {
 	//
 	// The return true tells it to proceed as normal in other cases.
 	$wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
-		if ( $action === 'create' && $title->getNamespace() === 118 && $user->isAnon() ) {
-			return false;
-		}
-		return true;
+		return ( $action !== 'create' || $title->getNamespace() !== 118 || !$user->isAnon() );
 	};
 }
 
