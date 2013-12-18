@@ -1482,12 +1482,9 @@ if ( $wgDBname == 'enwiki' ) {
 	// It does not affect other checks from getUserPermissionsErrorsInternal
 	// (e.g. protection and blocking).
 	//
-	// The return true tells it to proceed as normal in other cases.
+	// Returning true tells it to proceed as normal in other cases.
 	$wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
-		if ( $action === 'create' && $title->getNamespace() === 118 && $user->isAnon() ) {
-			return false;
-		}
-		return true;
+		return ( $action !== 'create' || $title->getNamespace() !== 118 || !$user->isAnon() );
 	};
 }
 
