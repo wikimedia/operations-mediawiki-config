@@ -1807,6 +1807,9 @@ if ( $wmgUseGWToolset ) {
 	$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMediafileJob';
 	$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetGWTFileBackendCleanupJob';
 	$wgJobTypeConf['gwtoolsetUploadMetadataJob'] = array( 'checkDelay' => true ) + $wgJobTypeConf['default'];
+
+	$wgAddGroups['bureaucrat'][] = 'gwtoolset';
+	$wgRemoveGroups['bureaucrat'][] = 'gwtoolset';
 }
 
 if ( $wmgUseMultimediaViewer ) {
