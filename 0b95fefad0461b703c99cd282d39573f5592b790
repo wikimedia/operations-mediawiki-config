@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ee75395_e5ba1e6c",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1485,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-12-18T01:41:31Z",
+      "side": 1,
+      "message": "It\u0027s getting too late for doing things like this\n\nif ( $action \u003d\u003d\u003d \u0027create\u0027 \u0026\u0026 $title-\u003egetNamespace() \u003d\u003d\u003d 118 \u0026\u0026 $user-\u003eisAnon() ) {\n\treturn false;\n}\nreturn true;\n\n\n\nif ( !( $action \u003d\u003d\u003d \u0027create\u0027 \u0026\u0026 $title-\u003egetNamespace() \u003d\u003d\u003d 118 \u0026\u0026 $user-\u003eisAnon() ) ) {\n\treturn true;\n}\nreturn false;\n\n\n\nreturn !( $action \u003d\u003d\u003d \u0027create\u0027 \u0026\u0026 $title-\u003egetNamespace() \u003d\u003d\u003d 118 \u0026\u0026 $user-\u003eisAnon() );\n\n\n\nreturn ( $action !\u003d\u003d \u0027create\u0027 || $title-\u003egetNamespace() !\u003d\u003d 118 || !$user-\u003eisAnon() );",
+      "revId": "0b95fefad0461b703c99cd282d39573f5592b790",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
