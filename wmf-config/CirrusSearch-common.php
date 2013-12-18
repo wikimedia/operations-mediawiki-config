@@ -35,6 +35,7 @@ $wgCirrusSearchReplicaCount = array( 'content' => 2, 'general' => 2 );
 # Settings customized per index.
 $wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
 $wgCirrusSearchUseAggressiveSplitting = $wmgCirrusSearchUseAggressiveSplitting;
+$wgCirrusSearchPreferRecentDefaultDecayPortion = $wmgCirrusSearchPreferRecentDefaultDecayPortion;
 
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
