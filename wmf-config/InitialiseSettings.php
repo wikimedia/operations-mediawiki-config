@@ -1437,7 +1437,7 @@ $wgConf->settings = array(
 	'execwiki'      => 'Wikimedia Executive',
 	'extwiki'       => 'Güiquipeya',
 	'fawiki'	=> 'ویکی‌پدیا',
-	'fawikibooks'   => 'ویکی‌نسک',
+	'fawikibooks'   => 'ویکی‌کتاب', // Bug 58655
 	'fawikinews'	=> 'ویکی‌خبر',
 	'fawikiquote'   => 'ویکی‌گفتاورد',
 	'fawikisource'  => 'ویکی‌نبشته',
@@ -1900,7 +1900,7 @@ $wgConf->settings = array(
 	'execwiki'      => 'Project',
 	'extwiki'       => 'Güiquipeya',
 	'fawiki'	=> 'ویکی‌پدیا',
-	'fawikibooks'   => 'ویکی‌نسک',
+	'fawikibooks'   => 'ویکی‌کتاب', // Bug 58655
 	'fawikinews'	=> 'ویکی‌خبر',
 	'fawikiquote'   => 'ویکی‌گفتاورد',
 	'fawikisource'  => 'ویکی‌نبشته',
@@ -2636,6 +2636,9 @@ $wgConf->settings = array(
 		'Book_talk' => 103,
 		'كتاب' => 102,
 		'بحث_كتاب' => 103,
+	),
+	'+fawikibooks' => array(
+		'وک' => NS_PROJECT,
 	),
 	'+fawikinews' => array(
 		'وخ' => NS_PROJECT,
