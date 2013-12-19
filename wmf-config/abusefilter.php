@@ -204,6 +204,10 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterAvailableActions[] = 'block';
 		$wgAbuseFilterBlockDuration = '4 hours';
 		break;
+	case 'itwikinews':
+		$wgAbuseFilterAvailableActions[] = 'block';
+		$wgAbuseFilterBlockDuration = '24 hours';
+		break;
 	case 'itwikiquote':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 		break;
