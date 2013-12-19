@@ -10299,15 +10299,15 @@ $wgConf->settings = array(
 	'default' => array( '*.flickr.com', '*.staticflickr.com', ),
 	'+testwiki' => array( 'upload.wikimedia.org' ),
 	'+commonswiki' => array(
-		'*.collectie.legermuseum.nl',
-		'*.europeana1914-1918.eu',
-		'*.gahetna.nl',
-		'*.hu-berlin.de',
-		'*.kb.nl',
-		'*.lndb.lv',
-		'*.memorix.nl',
-		'*.rbge.org.uk',
-		'*.rijksmuseum.nl',
+		'*.collectie.legermuseum.nl',    // for GWToolset, mediafile server for the legermuseum
+		'*.europeana1914-1918.eu',       // for GWToolset, mediafile server for europeana 1914-1918
+		'*.gahetna.nl',                  // for GWToolset, mediafile server for the nationaal archief nederland
+		'*.hu-berlin.de',                // for GWToolset, mediafile server for humboldt-universität zu berlin
+		'*.kb.nl',                       // for GWToolset, mediafile server for the koninklijke bibliotheek, nationale bibliotheek van nederland
+		'*.lndb.lv',                     // for GWToolset, mediafile server for latvijas nacionālā bibliotēka
+		'*.memorix.nl',                  // for GWToolset, mediafile server for the archief eemland
+		'*.rbge.org.uk',                 // for GWToolset, mediafile server for the royal botanic garden edinburgh
+		'*.rijksmuseum.nl',              // for GWToolset, mediafile server for the rijksmuseum
 	),
 ),
 
