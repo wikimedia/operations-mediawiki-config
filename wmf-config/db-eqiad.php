@@ -151,248 +151,32 @@ $wgLBFactoryConf = array(
 
 'groupLoadsBySection' => array(
 	's2' => array(
-		'vslow' => array( // appears useless?
-			'db1018' => 1,
-		),
-		'Ancientpages' => array(
-			'db1018' => 1,
-		),
-		'Deadendpages' => array(
-			'db1018' => 1,
-		),
-		'Fewestrevisions' => array(
-			'db1018' => 1,
-		),
-		'Lonelypages' => array(
-			'db1018' => 1,
-		),
-		'Mostcategories' => array(
-			'db1018' => 1,
-		),
-		'Mostlinked' => array(
-			'db1018' => 1,
-		),
-		'Mostlinkedcategories' => array(
-			'db1018' => 1,
-		),
-		'Mostlinkedtemplates' => array(
-			'db1018' => 1,
-		),
-		'Mostrevisions' => array(
-			'db1018' => 1,
-		),
-		'Uncategorizedcategories' => array(
-			'db1018' => 1,
-		),
-		'Wantedpages' => array(
-			'db1018' => 1,
-		),
-		'Wantedtemplates' => array(
+		'vslow' => array(
 			'db1018' => 1,
 		),
 	),
 	/* s3 */ 'DEFAULT' => array(
-		'vslow' => array( // appears useless?
-			'db1035' => 1,
-		),
-		'Ancientpages' => array(
-			'db1035' => 1,
-		),
-		'Deadendpages' => array(
-			'db1035' => 1,
-		),
-		'Fewestrevisions' => array(
-			'db1035' => 1,
-		),
-		'Lonelypages' => array(
-			'db1035' => 1,
-		),
-		'Mostcategories' => array(
-			'db1035' => 1,
-		),
-		'Mostlinked' => array(
-			'db1035' => 1,
-		),
-		'Mostlinkedcategories' => array(
-			'db1035' => 1,
-		),
-		'Mostlinkedtemplates' => array(
-			'db1035' => 1,
-		),
-		'Mostrevisions' => array(
-			'db1035' => 1,
-		),
-		'Uncategorizedcategories' => array(
-			'db1035' => 1,
-		),
-		'Wantedpages' => array(
-			'db1035' => 1,
-		),
-		'Wantedtemplates' => array(
+		'vslow' => array(
 			'db1035' => 1,
 		),
 	),
 	's4' => array(
-		'vslow' => array( // appears useless?
-			'db1042' => 1,
-		),
-		'Ancientpages' => array(
-			'db1042' => 1,
-		),
-		'Deadendpages' => array(
-			'db1042' => 1,
-		),
-		'Fewestrevisions' => array(
-			'db1042' => 1,
-		),
-		'Lonelypages' => array(
-			'db1042' => 1,
-		),
-		'Mostcategories' => array(
-			'db1042' => 1,
-		),
-		'Mostlinked' => array(
-			'db1042' => 1,
-		),
-		'Mostlinkedcategories' => array(
-			'db1042' => 1,
-		),
-		'Mostlinkedtemplates' => array(
-			'db1042' => 1,
-		),
-		'Mostrevisions' => array(
-			'db1042' => 1,
-		),
-		'Uncategorizedcategories' => array(
-			'db1042' => 1,
-		),
-		'Wantedpages' => array(
-			'db1042' => 1,
-		),
-		'Wantedtemplates' => array(
+		'vslow' => array(
 			'db1042' => 1,
 		),
 	),
 	's5' => array(
-		'vslow' => array( // appears useless?
-			'db1005' => 1,
-		),
-		'Ancientpages' => array(
-			'db1005' => 1,
-		),
-		'Deadendpages' => array(
-			'db1005' => 1,
-		),
-		'Fewestrevisions' => array(
-			'db1005' => 1,
-		),
-		'Lonelypages' => array(
-			'db1005' => 1,
-		),
-		'Mostcategories' => array(
-			'db1005' => 1,
-		),
-		'Mostlinked' => array(
-			'db1005' => 1,
-		),
-		'Mostlinkedcategories' => array(
-			'db1005' => 1,
-		),
-		'Mostlinkedtemplates' => array(
-			'db1005' => 1,
-		),
-		'Mostrevisions' => array(
-			'db1005' => 1,
-		),
-		'Uncategorizedcategories' => array(
-			'db1005' => 1,
-		),
-		'Wantedpages' => array(
-			'db1005' => 1,
-		),
-		'Wantedtemplates' => array(
+		'vslow' => array(
 			'db1005' => 1,
 		),
 	),
 	's6' => array(
-		'vslow' => array( // appears useless?
-			'db1022' => 1,
-		),
-		'Ancientpages' => array(
-			'db1022' => 1,
-		),
-		'Deadendpages' => array(
-			'db1022' => 1,
-		),
-		'Fewestrevisions' => array(
-			'db1022' => 1,
-		),
-		'Lonelypages' => array(
-			'db1022' => 1,
-		),
-		'Mostcategories' => array(
-			'db1022' => 1,
-		),
-		'Mostlinked' => array(
-			'db1022' => 1,
-		),
-		'Mostlinkedcategories' => array(
-			'db1022' => 1,
-		),
-		'Mostlinkedtemplates' => array(
-			'db1022' => 1,
-		),
-		'Mostrevisions' => array(
-			'db1022' => 1,
-		),
-		'Uncategorizedcategories' => array(
-			'db1022' => 1,
-		),
-		'Wantedpages' => array(
-			'db1022' => 1,
-		),
-		'Wantedtemplates' => array(
+		'vslow' => array(
 			'db1022' => 1,
 		),
 	),
 	's7' => array(
-		'vslow' => array( // appears useless?
-			'db1007' => 1,
-		),
-		'Ancientpages' => array(
-			'db1007' => 1,
-		),
-		'Deadendpages' => array(
-			'db1007' => 1,
-		),
-		'Fewestrevisions' => array(
-			'db1007' => 1,
-		),
-		'Lonelypages' => array(
-			'db1007' => 1,
-		),
-		'Mostcategories' => array(
-			'db1007' => 1,
-		),
-		'Mostlinked' => array(
-			'db1007' => 1,
-		),
-		'Mostlinkedcategories' => array(
-			'db1007' => 1,
-		),
-		'Mostlinkedtemplates' => array(
-			'db1007' => 1,
-		),
-		'Mostrevisions' => array(
-			'db1007' => 1,
-		),
-		'Uncategorizedcategories' => array(
-			'db1007' => 1,
-		),
-		'Wantedpages' => array(
-			'db1007' => 1,
-		),
-		'Wantedtemplates' => array(
+		'vslow' => array(
 			'db1007' => 1,
 		),
 	),
@@ -413,43 +197,7 @@ $wgLBFactoryConf = array(
 		'dump' => array(
 			'db1050' => 1,
 		),
-		'vslow' => array( // appears useless?
-			'db1050' => 1,
-		),
-		'Ancientpages' => array(
-			'db1050' => 1,
-		),
-		'Deadendpages' => array(
-			'db1050' => 1,
-		),
-		'Fewestrevisions' => array(
-			'db1050' => 1,
-		),
-		'Lonelypages' => array(
-			'db1050' => 1,
-		),
-		'Mostcategories' => array(
-			'db1050' => 1,
-		),
-		'Mostlinked' => array(
-			'db1050' => 1,
-		),
-		'Mostlinkedcategories' => array(
-			'db1050' => 1,
-		),
-		'Mostlinkedtemplates' => array(
-			'db1050' => 1,
-		),
-		'Mostrevisions' => array(
-			'db1050' => 1,
-		),
-		'Uncategorizedcategories' => array(
-			'db1050' => 1,
-		),
-		'Wantedpages' => array(
-			'db1050' => 1,
-		),
-		'Wantedtemplates' => array(
+		'vslow' => array(
 			'db1050' => 1,
 		),
 	),
