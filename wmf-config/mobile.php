@@ -13,6 +13,7 @@ if ( $wmgMobileFrontend ) {
 	$wgMFNearbyNamespace = $wmgMFNearbyNamespace;
 	$wgMFPhotoUploadAppendToDesc = $wmgMFPhotoUploadAppendToDesc;
 	$wgMFInfoboxLogging = $wmgMFInfoboxLogging;
+	$wgMFKeepGoing = $wmgMFKeepGoing;
 
 	if ( $wmgMobileFrontendLogo ) {
 		$wgMobileFrontendLogo = $wmgMobileFrontendLogo;

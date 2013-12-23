@@ -11205,6 +11205,10 @@ $wgConf->settings = array(
 	'commonswiki' => '', # bug 45256
 	'test2wiki' => '',
 ),
+'wmgMFKeepGoing' => array(
+	'default' => false,
+	'enwiki' => true,
+),
 'wmgMFInfoboxLogging' => array(
 	'default' => false,
 ),

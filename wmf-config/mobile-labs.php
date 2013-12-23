@@ -11,3 +11,6 @@ $wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
 
 // Zero extension
 $wgEnableZeroRatedMobileAccessTesting = true;
+
+// Keep Going experiments
+$wgMFKeepGoing = true;
