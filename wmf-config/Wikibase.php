@@ -120,9 +120,6 @@ if ( $wmgUseWikibaseClient ) {
 	if ( $wgDBname === 'commonswiki' ) {
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
 		$wgWBClientSettings['allowDataTransclusion'] = false;
-
-		// per bug 54497, widget does not work yet for commons
-		$wgWBClientSettings['enableSiteLinkWidget'] = false;
 	}
 
 	$wgWBClientSettings['siteGroup'] = $wmgWikibaseSiteGroup;
@@ -134,7 +131,7 @@ if ( $wmgUseWikibaseClient ) {
 
 		$wgWBClientSettings['excludeNamespaces'] = array_merge(
 			MWNamespace::getTalkNamespaces(),
-			array( NS_USER, NS_MEDIAWIKI )
+			array( NS_USER, NS_FILE, NS_MEDIAWIKI )
 		);
 
 		return true;
