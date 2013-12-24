@@ -1824,9 +1824,6 @@ if ( $wmgUseGWToolset ) {
 	require_once( "$IP/extensions/GWToolset/GWToolset.php" );
 	$wgGWTFileBackend = 'local-multiwrite';
 	$wgGWTFBMaxAge = '1 week';
-	$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMetadataJob';
-	$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMediafileJob';
-	$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetGWTFileBackendCleanupJob';
 	$wgJobTypeConf['gwtoolsetUploadMetadataJob'] = array( 'checkDelay' => true ) + $wgJobTypeConf['default'];
 }
 
@@ -2200,18 +2197,27 @@ if ( $wmgEnableRandomRootPage ) {
 
 # Avoid excessive drops in squid hit rates
 $wgMaxBacklinksInvalidate = 200000;
+# Similar to above but not for single template/file changes
+$wgJobBackoffThrottling = array(
+	'htmlCacheUpdate' => 10 // 10 pages/sec per runner
+);
 
 # If a job runner takes too long to finish a job, assume it died and re-assign the job
 $wgJobTypeConf['default']['claimTTL'] = 3600;
 
 # Job types to exclude from the default queue processing. Aka the very long
-# one.  That will exclude the types from any queries such as nextJobDB.php
+# one. That will exclude the types from any queries such as nextJobDB.php
 # We have to set this for any project cause we usually run PHP script against
 # the 'aawiki' database, but might as well run it against another name.
 
 # Timed Media Handler:
 $wgJobTypesExcludedFromDefaultQueue[] = 'webVideoTranscode';
 $wgJobTypeConf['webVideoTranscode'] = array( 'claimTTL' => 86400 ) + $wgJobTypeConf['default'];
+
+# GWToolset
+$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMetadataJob';
+$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMediafileJob';
+$wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetGWTFileBackendCleanupJob';
 
 if ( $wmgUseEducationProgram ) {
 	require_once( "$IP/extensions/EducationProgram/EducationProgram.php" );
