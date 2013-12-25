@@ -67,6 +67,7 @@ $wgConf->settings = array(
 'wgInterwikiMagic' => array(
 	'default' => true,
 	'metawiki' => false,
+	'wikimedia' => false,
 ),
 
 # wgLanguageCode @{
