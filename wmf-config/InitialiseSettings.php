@@ -6794,6 +6794,9 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'move-subpages' => true, 'suppressredirect' => true, 'tboverride' => true, ),
 		'templateeditor' => array( 'templateeditor' => true, 'tboverride' => true, ), // bug 55432
 		'sysop' => array( 'templateeditor' => true ), // bug 55432
+		'massmessage-sender' => array( // bug 58962
+			'massmessage' => true,
+		),
 	),
 	'enwikibooks' => array(
 		// 'rollbacker' 	=> array( 'rollback' => true ),
@@ -7793,7 +7796,7 @@ $wgConf->settings = array(
 	),
 	'+enwiki' => array(
 		'bureaucrat' => array( 'accountcreator' ),
-		'sysop' => array( 'abusefilter', 'accountcreator', 'autoreviewer', 'confirmed', 'filemover', 'reviewer', 'rollbacker', 'templateeditor' ),
+		'sysop' => array( 'abusefilter', 'accountcreator', 'autoreviewer', 'confirmed', 'filemover', 'reviewer', 'rollbacker', 'templateeditor', 'massmessage-sender' ),
 	),
 	'+enwikibooks' => array(
 		'sysop' => array( 'transwiki', 'uploader' ),
@@ -8241,7 +8244,7 @@ $wgConf->settings = array(
 	),
 	'+enwiki' => array(
 		'bureaucrat' => array( 'ipblock-exempt', 'accountcreator', 'sysop' ),
-		'sysop' => array( 'rollbacker', 'accountcreator', 'abusefilter', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor' ),
+		'sysop' => array( 'rollbacker', 'accountcreator', 'abusefilter', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender' ),
 	),
 	'+enwikibooks' => array(
 		'sysop' => array( 'transwiki', 'uploader', ),
