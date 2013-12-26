@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_927d661a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2013-12-26T10:41:11Z",
+      "side": 1,
+      "message": "Ok, added explanation",
+      "parentUuid": "eeebdf60_f21cb26c",
+      "revId": "3a0f4a83322336f21fd77e56d12a85ac9ec91062",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_970d5844",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
@@ -101,6 +119,24 @@
       "side": 1,
       "message": "Just for clarity. in the whole rest of InitialiseSettings there\u0027s only one other \u0027m\u0027. (outreachwiki. was thinking about killing that too) \u0027meta\u0027 is less ambiguous for new users. I think. We could skip it if there\u0027s an objection.",
       "parentUuid": "eeebdf60_32fc5a08",
+      "revId": "3a0f4a83322336f21fd77e56d12a85ac9ec91062",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_727ae220",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8871,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2013-12-26T10:41:11Z",
+      "side": 1,
+      "message": "dunno which is used more, \"m\" is the one for crosswiki interoperability because it also works on Meta itself; but yes, if it\u0027s for consistency either all or none.",
+      "parentUuid": "eeebdf60_32233aa8",
       "revId": "3a0f4a83322336f21fd77e56d12a85ac9ec91062",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
