@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_52fc7eb1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8629,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2013-12-26T08:17:32Z",
+      "side": 1,
+      "message": "No space indents, pleeeeeeease",
+      "revId": "21ae027bf4fbc46b52d0d46b6e434efc6fbd32bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
