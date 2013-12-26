@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "eeebdf60_7219c27d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8810,
+      "author": {
+        "id": 48
+      },
+      "writtenOn": "2013-12-26T01:30:25Z",
+      "side": 1,
+      "message": "yes, was already working because I had fixed it in the past (a while ago)\n\nthat\u0027s why it was in the \"already was going through meta as the first hop\" section.",
+      "parentUuid": "eeebdf60_970d5844",
+      "revId": "3a0f4a83322336f21fd77e56d12a85ac9ec91062",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eeebdf60_32fc5a08",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
@@ -47,6 +65,24 @@
       "writtenOn": "2013-12-26T01:26:21Z",
       "side": 1,
       "message": "why?",
+      "revId": "3a0f4a83322336f21fd77e56d12a85ac9ec91062",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_32233aa8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8871,
+      "author": {
+        "id": 48
+      },
+      "writtenOn": "2013-12-26T01:30:25Z",
+      "side": 1,
+      "message": "Just for clarity. in the whole rest of InitialiseSettings there\u0027s only one other \u0027m\u0027. (outreachwiki. was thinking about killing that too) \u0027meta\u0027 is less ambiguous for new users. I think. We could skip it if there\u0027s an objection.",
+      "parentUuid": "eeebdf60_32fc5a08",
       "revId": "3a0f4a83322336f21fd77e56d12a85ac9ec91062",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
