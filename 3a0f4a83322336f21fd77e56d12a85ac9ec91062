@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_770ad42a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2013-12-26T01:25:58Z",
+      "side": 1,
+      "message": "How is this relevant?",
+      "revId": "3a0f4a83322336f21fd77e56d12a85ac9ec91062",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeebdf60_970d5844",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8810,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2013-12-26T01:25:58Z",
+      "side": 1,
+      "message": "ok for consistency but I doubt it\u0027s broken?",
+      "revId": "3a0f4a83322336f21fd77e56d12a85ac9ec91062",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
