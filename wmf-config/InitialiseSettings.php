@@ -10568,6 +10568,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'commonswiki' => true,
 	'enwiki' => true,
+	'ptwiki' => true, // bug 58984
 	'test2wiki' => true,
 	'testwiki' => true,
 	'foundationwiki' => true,
