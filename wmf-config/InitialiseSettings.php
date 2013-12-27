@@ -12650,9 +12650,6 @@ $wgConf->settings = array(
 
 'wmgCirrusIsBuilding' => array(
 	'default' => false,
-	'commonswiki' => true,
-	'wikinews' => true,
-	'specieswiki' => true,
 ),
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
@@ -12670,25 +12667,30 @@ $wgConf->settings = array(
 // Shard each wiki to be about 2gb of index per shard.  Changing this for a wiki
 // requires an in place reindex.  Last sized 2013-12-13.  See
 // https://wikitech.wikimedia.org/wiki/Search/New#Estimating_the_number_of_shards_required
-// for estimation methodology.
+// for estimation methodology.  At this point I'm declaring we should have no more than
+// 20 shards per index.  We might go higher.
 'wmgCirrusSearchShardCount' => array(
 	// Most wikis are too small to be worth sharding
 	'default' => array( 'content' => 1, 'general' => 1 ),
 	'cawiki' => array( 'content' => 6, 'general' => 1 ),
 	// Commons is special and has a 'file' index in addition to the regular ones.
-	'commonswiki' => array( 'content' => 2, 'general' => 4, 'file' => 10 ),  // Estimated before deployment
+	// File has shards at ~6GB each even with 20 of them
+	'commonswiki' => array( 'content' => 1, 'general' => 20, 'file' => 20 ),
 	'dewikisource' => array( 'content' => 2, 'general' => 1 ),
 	'elwiki' => array( 'content' => 2, 'general' => 1 ),
-	'enwikinews' => array( 'content' => 6, 'general' => 1 ),  // Estimated before deployment
+	'enwikinews' => array( 'content' => 1, 'general' => 3 ),
 	'enwikisource' => array( 'content' => 12, 'general' => 1 ),
 	'enwiktionary' => array( 'content' => 4, 'general' => 1 ),
+	'eswiki' => array( 'content' => 12, 'general' => 6 ),  // Estimated before deployment
+	'frwiki' => array( 'content' => 16, 'general' => 8 ),  // Estimated before deployment
 	'frwikisource' => array( 'content' => 12, 'general' => 1 ),
 	'frwikitionary' => array( 'content' => 2, 'general' => 1 ),
 	'itwiki' => array( 'content' => 13, 'general' => 9 ),
 	'mgwiktionary' => array( 'content' => 2, 'general' => 1 ),
 	'nlwiki' => array( 'content' => 8, 'general' => 4 ),
+	'ptwiki' => array( 'content' => 8, 'general' => 4 ),  // Estimated before deployment
+	'ruwiki' => array( 'content' => 8, 'general' => 4 ),  // Estimated before deployment
 	'ruwiktionary' => array( 'content' => 3, 'general' => 1 ),
-	'specieswiki' => array( 'content' => 4, 'general' => 1 ),  // Estimated before deployment
 	'wikidatawiki' => array( 'content' => 7, 'general' => 1 ),
 ),
 
