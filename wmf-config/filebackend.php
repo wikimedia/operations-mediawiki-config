@@ -136,7 +136,7 @@ $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
 	'name'        => 'local-multiwrite',
 	'wikiId'      => "{$site}-{$lang}",
-	'lockManager' => 'nullLockManager', # LocalFile uses FOR UPDATE
+	'lockManager' => 'redisLockManager',
 	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname, 'ttlDays' => $wmfFileJournalTTL ),
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
@@ -150,7 +150,7 @@ $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
 	'name'        => 'shared-multiwrite',
 	'wikiId'      => "wikipedia-commons",
-	'lockManager' => 'nullLockManager', // just thumbnails
+	'lockManager' => 'redisLockManager',
 	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki', 'ttlDays' => $wmfFileJournalTTL ),
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
@@ -164,7 +164,7 @@ $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
 	'name'        => 'global-multiwrite',
 	'wikiId'      => "global-data",
-	'lockManager' => 'nullLockManager',
+	'lockManager' => 'redisLockManager',
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 		array( 'template' => 'global-swift', 'isMultiMaster' => false ),
@@ -174,6 +174,23 @@ $wgFileBackends[] = array(
 	'autoResync'  => 'conservative'
 );
 /* end multiwrite backend config */
+
+$wgLockManagers[] = array(
+	'name'         => 'redisLockManager',
+	'class'        => 'RedisLockManager',
+	'lockServers'  => array(
+		'rdb1' => '10.64.0.180',
+		'rdb2' => '10.64.0.181',
+		'rdb3' => '10.64.0.182'
+	),
+	'srvsByBucket' => array(
+		0 => array( 'rdb1', 'rdb2', 'rdb3' )
+	),
+	'redisConfig'  => array(
+		'connectTimeout' => 2,
+		'password'       => $wmgRedisPassword
+	)
+);
 
 $wgLocalFileRepo = array(
 		'class'             => 'LocalRepo',
