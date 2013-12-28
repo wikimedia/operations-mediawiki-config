@@ -6,8 +6,6 @@
 # This file hold the configuration for the file backends
 # for production.
 
-$wmfFileJournalTTL = 365; // days
-
 /* Common OpenStack Swift backend config */
 $wmfSwiftBigWikis = array( # DO NOT change without proper migration first
 	'commonswiki', 'dewiki', 'enwiki', 'fiwiki', 'frwiki', 'hewiki', 'huwiki', 'idwiki',
@@ -23,7 +21,6 @@ $wgFileBackends[] = array( // backend config for wiki's local repo
 	'name'               => 'local-swift-eqiad',
 	'wikiId'             => "{$site}-{$lang}",
 	'lockManager'        => 'nullLockManager', // LocalFile uses FOR UPDATE
-	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname, 'ttlDays' => $wmfFileJournalTTL ),
 	'swiftAuthUrl'       => $wmfSwiftEqiadConfig['authUrl'],
 	'swiftUser'          => $wmfSwiftEqiadConfig['user'],
 	'swiftKey'           => $wmfSwiftEqiadConfig['key'],
@@ -43,7 +40,6 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repo
 	'name'               => 'shared-swift-eqiad',
 	'wikiId'             => "wikipedia-commons",
 	'lockManager'        => 'nullLockManager', // just thumbnails
-	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki', 'ttlDays' => $wmfFileJournalTTL ),
 	'swiftAuthUrl'       => $wmfSwiftEqiadConfig['authUrl'],
 	'swiftUser'          => $wmfSwiftEqiadConfig['user'],
 	'swiftKey'           => $wmfSwiftEqiadConfig['key'],
@@ -80,7 +76,6 @@ $wgFileBackends[] = array( // backend config for wiki's local repo
 	'name'               => 'local-swift',
 	'wikiId'             => "{$site}-{$lang}",
 	'lockManager'        => 'nullLockManager', // LocalFile uses FOR UPDATE
-	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname, 'ttlDays' => $wmfFileJournalTTL ),
 	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
 	'swiftUser'          => $wmfSwiftConfig['user'],
 	'swiftKey'           => $wmfSwiftConfig['key'],
@@ -100,7 +95,6 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repo
 	'name'               => 'shared-swift',
 	'wikiId'             => "wikipedia-commons",
 	'lockManager'        => 'nullLockManager', // just thumbnails
-	'fileJournal'        => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki', 'ttlDays' => $wmfFileJournalTTL ),
 	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
 	'swiftUser'          => $wmfSwiftConfig['user'],
 	'swiftKey'           => $wmfSwiftConfig['key'],
@@ -137,7 +131,6 @@ $wgFileBackends[] = array(
 	'name'        => 'local-multiwrite',
 	'wikiId'      => "{$site}-{$lang}",
 	'lockManager' => 'nullLockManager', # LocalFile uses FOR UPDATE
-	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => $wgDBname, 'ttlDays' => $wmfFileJournalTTL ),
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 		array( 'template' => 'local-swift', 'isMultiMaster' => false ),
@@ -151,7 +144,6 @@ $wgFileBackends[] = array(
 	'name'        => 'shared-multiwrite',
 	'wikiId'      => "wikipedia-commons",
 	'lockManager' => 'nullLockManager', // just thumbnails
-	'fileJournal' => array( 'class' => 'DBFileJournal', 'wiki' => 'commonswiki', 'ttlDays' => $wmfFileJournalTTL ),
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 		array( 'template' => 'shared-swift', 'isMultiMaster' => false ),
