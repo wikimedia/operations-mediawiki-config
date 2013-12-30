@@ -2516,6 +2516,9 @@ if ( $wmgUseAccountAudit ) {
 if ( $wmgUseOAuth ) {
 	require_once( "$IP/extensions/OAuth/OAuth.php" );
 	$wgMWOAuthCentralWiki = 'mediawikiwiki';
+	if ( $wmfRealm === 'labs' ) {
+		$wgMWOAuthCentralWiki = 'metawiki';
+	}
 	$wgMWOAuthSharedUserSource = 'CentralAuth';
 	$wgMWOAuthSecureTokenTransfer = true;
 	$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
