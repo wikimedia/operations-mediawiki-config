@@ -272,22 +272,6 @@ return array(
 		'default' => false,
 	),
 
-	'wgCopyUploadsDomains' => array(
-		'default' => array( '*.flickr.com', '*.staticflickr.com', ),
-		'+testwiki' => array( 'upload.wikimedia.org' ),
-		'+commonswiki' => array(
-			'*.collectie.legermuseum.nl',
-			'*.europeana1914-1918.eu',
-			'*.gahetna.nl',
-			'*.hu-berlin.de',
-			'*.kb.nl',
-			'*.lndb.lv',
-			'*.memorix.nl',
-			'*.rbge.org.uk',
-			'*.rijksmuseum.nl',
-		),
-	),
-
 	'wmgUseMultimediaViewer' => array(
 		'default' => true,
 	),
