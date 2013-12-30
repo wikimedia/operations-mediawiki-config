@@ -8852,8 +8852,6 @@ $wgConf->settings = array(
 
 'wmgEmergencyCaptcha' => array(
 	'default' => false,
-	// bug 49860; disable after 2013-12-31 (cf. comment 75)
-	'ptwiki' => true,
 ),
 # @} end of Captcha
 
