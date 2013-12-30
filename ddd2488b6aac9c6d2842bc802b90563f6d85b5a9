@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_996b3482",
+        "filename": "wmf-config/filebackend.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2013-12-30T22:14:55Z",
+      "side": 0,
+      "message": "This should go too?",
+      "revId": "ddd2488b6aac9c6d2842bc802b90563f6d85b5a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
