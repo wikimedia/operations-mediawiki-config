@@ -6459,9 +6459,6 @@ $wgConf->settings = array(
 			// for show only
 		),
 	),
-	'wikimania2013wiki' => array(
-		'*' => array( 'createpage' => false ),
-	),
 	'wikimania2014wiki' => array(
 		'*' => array( 'createpage' => false ),
 	),
