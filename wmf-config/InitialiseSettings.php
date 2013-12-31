@@ -12690,7 +12690,6 @@ $wgConf->settings = array(
 	'specieswiki' => true,
 	'wikibooks' => true,
 	'wikinews' => true,
-	'wikimania' => true,
 	'wikimedia' => true,
 	'wikisource' => true,
 	'wiktionary' => true,
