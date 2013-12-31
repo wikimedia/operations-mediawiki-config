@@ -2284,7 +2284,7 @@ if ( $wmgUseEcho ) {
 	$wgEchoConfig['eventlogging']['EchoMail']['revision'] = 5467650;
 	// Eventlogging for Schema:EchoInteraction
 	$wgEchoConfig['eventlogging']['EchoInteraction']['enabled'] = true;
-	$wgEchoConfig['eventlogging']['EchoInteraction']['revision'] = 5539940;
+	$wgEchoConfig['eventlogging']['EchoInteraction']['revision'] = 5782287;
 
 	// Cohort study time
 	$wgEchoCohortInterval = $wmgEchoCohortInterval;
