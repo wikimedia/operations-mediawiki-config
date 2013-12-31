@@ -624,8 +624,8 @@ rowikinews php-1.23wmf8 *
 rowiki php-1.23wmf7 *
 rowikiquote php-1.23wmf8 *
 rowikisource php-1.23wmf8 *
-rowiktionary php-1.23wmf8 *
 rowikivoyage php-1.23wmf8 *
+rowiktionary php-1.23wmf8 *
 rswikimedia php-1.23wmf8 *
 ruewiki php-1.23wmf7 *
 ruwikibooks php-1.23wmf8 *
@@ -732,8 +732,8 @@ tawikisource php-1.23wmf8 *
 tawiktionary php-1.23wmf8 *
 tenwiki php-1.23wmf8 *
 test2wiki php-1.23wmf8 *
-testwiki php-1.23wmf8 *
 testwikidatawiki php-1.23wmf8 *
+testwiki php-1.23wmf8 *
 tetwiki php-1.23wmf7 *
 tewikibooks php-1.23wmf8 *
 tewiki php-1.23wmf7 *
@@ -781,8 +781,8 @@ ttwiktionary php-1.23wmf8 *
 tumwiki php-1.23wmf7 *
 twwiki php-1.23wmf7 *
 twwiktionary php-1.23wmf8 *
-tywiki php-1.23wmf7 *
 tyvwiki php-1.23wmf7 *
+tywiki php-1.23wmf7 *
 uawikimedia php-1.23wmf8 *
 udmwiki php-1.23wmf7 *
 ugwikibooks php-1.23wmf8 *
@@ -815,8 +815,8 @@ vewiki php-1.23wmf7 *
 viwikibooks php-1.23wmf8 *
 viwiki php-1.23wmf7 *
 viwikiquote php-1.23wmf8 *
-viwikivoyage php-1.23wmf8 *
 viwikisource php-1.23wmf8 *
+viwikivoyage php-1.23wmf8 *
 viwiktionary php-1.23wmf8 *
 vlswiki php-1.23wmf7 *
 votewiki php-1.23wmf8 *
@@ -872,6 +872,7 @@ zhwikinews php-1.23wmf8 *
 zhwiki php-1.23wmf7 *
 zhwikiquote php-1.23wmf8 *
 zhwikisource php-1.23wmf8 *
+zhwikivoyage php-1.23wmf8 *
 zhwiktionary php-1.23wmf8 *
 zh_yuewiki php-1.23wmf7 *
 zuwikibooks php-1.23wmf8 *
