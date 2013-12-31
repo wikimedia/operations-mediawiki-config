@@ -293,6 +293,12 @@ $wmgAddWikiNotify = true;
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
+// Bug 27320: skip MessageBlobStore::clear(); handle via refreshMessageBlobs.php instead
+$wgHooks['LocalisationCacheRecache'][] = function( $cache, $code, &$allData, &$purgeBlobs = true ) {
+	$purgeBlobs = false;
+	return true;
+};
+
 $wgFileStore['deleted']['directory'] = "/mnt/upload7/private/archive/$site/$lang";
 
 # used for mysql/search settings
