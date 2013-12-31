@@ -12646,7 +12646,6 @@ $wgConf->settings = array(
 	'specieswiki' => true,
 	'wikidatawiki' => true,
 	'wikinews' => true,
-	'wikimania' => true,
 	'wikimedia' => true,
 	'wikisource' => true,
 	'wikivoyage' => true,
