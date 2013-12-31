@@ -61,6 +61,11 @@ if ( $wmgEnableGeoData ) {
 	);
 }
 
+// the beta cluster uses a different filebackend than production
+if ( $wmgUseGWToolset ) {
+	$wgGWTFileBackend = 'gwtoolset-backend';
+}
+
 if ( $wmgUseOAuth ) {
 	$wgMWOAuthCentralWiki = 'labswiki';  # bug 57403
 }
