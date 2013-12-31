@@ -350,6 +350,7 @@ $wgConf->settings = array(
 	'vepwiki' => 'Europe/Moscow',
 	'viwikivoyage' => 'Asia/Ho_Chi_Minh',
 	'xmfwiki' => 'Asia/Tbilisi',
+	'zhwikivoyage' => 'Asia/Shanghai', // bug 59077
 ),
 # @} end of wgLocaltimezone
 
@@ -917,6 +918,7 @@ $wgConf->settings = array(
 	'elwikivoyage' => '//upload.wikimedia.org/wikipedia/commons/f/fa/Wikivoyage-Logo-v3-small-el.png',
 	'hewikivoyage' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Wikivoyage-Logo-v3-he.png/153px-Wikivoyage-Logo-v3-he.png',
 	'plwikivoyage' => '//upload.wikimedia.org/wikipedia/commons/f/f2/Wikivoyage-Logo-v3-small-pl.png',
+	'zhwikivoyage' => '//upload.wikimedia.org/wikipedia/commons/3/3c/Wikivoyage-Logo-v3-zh-hans.png', // bug 59077
 
 	// Chapter wikis
 	'arwikimedia' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Wikimedia_Argentina_logo.svg/135px-Wikimedia_Argentina_logo.svg.png',
@@ -1716,6 +1718,7 @@ $wgConf->settings = array(
 	'yiwiktionary' => 'װיקיװערטערבוך',
 	'zh-min-nanwikisource' => 'Wiki Tô·-su-kóan',
 	'zh_classicalwiki' => '維基大典',
+	'zhwikivoyage'  => '维基导游', // bug 59077
 	'zh_yuewiki' => '維基百科',
 ),
 # @} end of wgSitename
@@ -12382,6 +12385,7 @@ $wgConf->settings = array(
 	'ptwikivoyaye' => false,
 	'rowikivoyage' => false,
 	'ukwikivoyage' => false,
+	'zhwikivoyage' => false,
 ),
 
 'wmgUseEventLogging' => array(
