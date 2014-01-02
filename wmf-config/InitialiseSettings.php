@@ -3881,6 +3881,7 @@ $wgConf->settings = array(
 	'hewiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop'), //bug 58207
 	'plwiki' => array( '', 'autoconfirmed', 'editor', 'sysop' ), // bug 46990
 	'ptwiki' => array( '', 'autoconfirmed', 'autoreviewer', 'sysop' ), // bug 39652
+	'testwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop' ), // bug 59084
 ),
 # @} end of wgRestrictionLevels
 
@@ -7446,7 +7447,8 @@ $wgConf->settings = array(
 			'upload_by_url' => true, // For wider testing
 			'upload' => true, // Exception to bug 12556, used for testing of upload tools
 		),
-		'sysop' => array( 'deleterevision' => true ),
+		'templateeditor' => array( 'templateeditor' => true, 'tboverride' => true, ), //bug 59084
+		'sysop' => array( 'deleterevision' => true, 'templateeditor' => true ),
 		'reviewer' => array(
 			'stablesettings' => true,
 		),
@@ -7700,7 +7702,7 @@ $wgConf->settings = array(
 	),
 	'+testwiki' => array(
 		'bureaucrat' => array( 'researcher', 'centralnoticeadmin' ),
-		'sysop' => array( 'filemover', 'rollbacker', 'accountcreator', 'confirmed' ),
+		'sysop' => array( 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ),
 		# 'user' => array( 'editor', 'reviewer' ),
 	),
 	// ******************************************************************
@@ -8140,7 +8142,7 @@ $wgConf->settings = array(
 	),
 	'+testwiki' => array(
 		'bureaucrat' => array( 'sysop', 'researcher', 'translationadmin', 'centralnoticeadmin' ),
-		'sysop' => array( 'filemover', 'rollbacker', 'accountcreator', 'confirmed' ),
+		'sysop' => array( 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ),
 		# 'user' => array( 'editor', 'reviewer' ),
 	),
 	// ******************************************************************
