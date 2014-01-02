@@ -2473,7 +2473,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	// re-downloading of fonts for each new branch. But that only works for production,
 	// not labs. If this variable is not set, $wgExtensionAssetsPath is used.
 	if ( $wmfRealm === 'production' ) {
-		$wgULSFontRepositoryBasePath = ( "https://{$wmfHostnames['bits']}/static-current"
+		$wgULSFontRepositoryBasePath = ( "//{$wmfHostnames['bits']}/static-current"
 			. '/extensions/UniversalLanguageSelector/data/fontrepo/fonts/' );
 	}
 
