@@ -32,6 +32,9 @@ $IP/extensions/ContactPageFundraiser/ContactPage.php
 $IP/extensions/ContributionTracking/ContributionTracking.php
 $IP/extensions/CreditsSource/CreditsSource.php
 $IP/extensions/CustomData/CustomData.php
+$IP/extensions/DataTypes/DataTypes.i18n.php
+$IP/extensions/DataValues/DataValues/DataValues.i18n.php
+$IP/extensions/Diff/Diff.php
 $IP/extensions/DisableAccount/DisableAccount.php
 $IP/extensions/Disambiguator/Disambiguator.php
 $IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php
@@ -134,6 +137,10 @@ $IP/extensions/VectorBeta/VectorBeta.php
 $IP/extensions/VipsScaler/VipsScaler.php
 $IP/extensions/VipsScaler/VipsTest.php
 $IP/extensions/VisualEditor/VisualEditor.php
+$IP/extensions/Wikibase/client/WikibaseClient.php
+$IP/extensions/WikibaseDataModel/WikibaseDataModel.php
+$IP/extensions/Wikibase/lib/WikibaseLib.php
+$IP/extensions/Wikibase/repo/Wikibase.php
 $IP/extensions/WikiEditor/WikiEditor.php
 $IP/extensions/wikihiero/wikihiero.php
 $IP/extensions/WikiLove/WikiLove.php

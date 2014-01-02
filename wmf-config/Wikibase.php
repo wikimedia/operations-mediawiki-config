@@ -1,24 +1,23 @@
 <?php
 
-if ( $wmfRealm === 'production' ) {
-		require_once( "$IP/extensions/DataValues/DataValues.php" );
-		require_once( "$IP/extensions/DataTypes/DataTypes.php" );
-		require_once( "$IP/extensions/Diff/Diff.php" );
-		require_once( "$IP/extensions/WikibaseDataModel/WikibaseDataModel.php" );
-		require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
+require_once( "$IP/extensions/DataValues/DataValues.php" );
 
-		$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikidata";
-} else {
-		require_once( "$IP/extensions/Wikidata/Wikidata.php" );
-
-		$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikidata-labs";
+// DataTypes is being moved out of the DataValues git repo.
+// this allows DataTypes in DataValues to be used if it exists, such as older code.
+// if it is not found in DataValues, then load it below.
+//
+// For localisation update, there is an empty "dummy" branch of DataTypes
+// so that localisation update can run okay.
+if ( !defined( 'DataTypes_VERSION' ) ) {
+	require_once( "$IP/extensions/DataTypes/DataTypes.php" );
 }
 
-if ( $wmgUseWikibaseRepo ) {
+require_once( "$IP/extensions/Diff/Diff.php" );
+require_once( "$IP/extensions/WikibaseDataModel/WikibaseDataModel.php" );
+require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
 
-	if ( $wmfRealm === 'production' ) {
-		require_once( "$IP/extensions/Wikibase/repo/Wikibase.php" );
-	}
+if ( $wmgUseWikibaseRepo ) {
+	require_once( "$IP/extensions/Wikibase/repo/Wikibase.php" );
 
 	$baseNs = 120;
 
@@ -92,10 +91,7 @@ if ( $wmgUseWikibaseRepo ) {
 }
 
 if ( $wmgUseWikibaseClient ) {
-
-	if ( $wmfRealm === 'production' ) {
-		require_once( "$IP/extensions/Wikibase/client/WikibaseClient.php" );
-	}
+	require_once( "$IP/extensions/Wikibase/client/WikibaseClient.php" );
 
 	$wgWBClientSettings['changesDatabase'] = 'wikidatawiki';
 	$wgWBClientSettings['repoDatabase'] = 'wikidatawiki';
