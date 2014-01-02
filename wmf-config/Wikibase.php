@@ -7,11 +7,11 @@ if ( $wmfRealm === 'production' ) {
 		require_once( "$IP/extensions/WikibaseDataModel/WikibaseDataModel.php" );
 		require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
 
-		$wgExtensionEntryPointListFiles[] = 'extension-list-wikidata';
+		$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikidata";
 } else {
 		require_once( "$IP/extensions/Wikidata/Wikidata.php" );
 
-		$wgExtensionEntryPointListFiles[] = 'extension-list-wikidata-labs';
+		$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikidata-labs";
 }
 
 if ( $wmgUseWikibaseRepo ) {
