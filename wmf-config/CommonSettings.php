@@ -886,12 +886,10 @@ if ( $wmgUseCirrus || $wmgUseCirrusAsAlternative ) {
 // Load this _after_ Lucene so Lucene's prefix search can be used
 // when available (for OpenSearch suggestions and AJAX search mode)
 // But note we still need TitleKey for "go" exact matches and similar.
-if ( $wmgUseTitleKey ) {
+// CirrusSearch, on the other hand, has absorbed its functionality so
+// for CirrusSearch wikis it is no longer required.
+if ( $wmgUseTitleKey && !$wmgUseCirrus ) {
 	include "$IP/extensions/TitleKey/TitleKey.php";
-	if ( $wmgUseCirrus ) {
-		array_pop( $wgExtensionFunctions );
-		$wgHooks['SearchGetNearMatch'][] = 'TitleKey::searchGetNearMatch';
-	}
 }
 
 wfProfileIn( "$fname-misc3" );
