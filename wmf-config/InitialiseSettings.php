@@ -6950,6 +6950,7 @@ $wgConf->settings = array(
 	),
 	'hewikivoyage' => array(
 		'autopatrolled' => array( 'autopatrol' => true ), // bug 50377
+		'sysop' => array( 'importupload' => true ), // bug 59601
 	),
 	'hiwiki' => array(
 		'rollbacker' => array( 'rollback' => true ), // bug 54589
@@ -8751,7 +8752,7 @@ $wgConf->settings = array(
 	'hewikiquote' => array( 'w', 'wikt', 'b', 's', 'n' ),
 	'hewiktionary' => array( 'w', 'q', 'b', 's', 'n' ),
 	'hewikisource' => array( 'w', 'wikt', 'q', 'b', 'n' ),
-	'hewikivoyage' => array( 'w', 'wikt', 'b', 'n', 'q', 's', 'commons' ), // bug 58527
+	'hewikivoyage' => array( 'w', 'wikt', 'b', 'n', 'q', 's', 'commons', 'en', 'de', 'el', 'fr', 'it', 'nl', 'pl', 'pt', 'ro', 'ru', 'sv', 'uk', 'vi' ), // bug 58527, 59601
 	'hiwiki' => array( 'wikt', 'commons', 'meta', 'species', 'de', 'en', 'en:b', 'en:q', 'en:n', 'en:s', 'en:v', 'es', 'fr', 'ml', 'ne', 'nl', 'ro', 'ru', 'pl', 'pt', 'simple', 'ta' ), // bug 41757
 	'hifwiki' => array( 'incubator' ),
 	'hsbwiktionary' => array( 'incubator', 'w' ),
