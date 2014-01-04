@@ -119,7 +119,7 @@ $wgLBFactoryConf = array(
 	's5' => array(
 		'db1058'   => 0,
 		'db1005'   => 0, # snapshot, vslow
-		'db1026'   => 100,
+		'db1026'   => 0, # reindexing wikidatawiki.wb_terms
 		'db1021'   => 400,
 		'db1045'   => 400,
 	),
