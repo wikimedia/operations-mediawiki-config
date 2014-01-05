@@ -2105,27 +2105,23 @@ if ( $wmgUseTranslate ) {
 
 	$wgTranslateEC = array();
 
-	function addSidebarMessageGroup( $id ) {
-		$mg = new WikiMessageGroup( $id, 'sidebar-messages' );
-		$mg->setLabel( 'Sidebar' );
-		$mg->setDescription( 'Messages used in the sidebar of this wiki' );
-		return $mg;
-	}
-
-	function addTranslatableMessageGroup( $id ) {
-		$mg = new WikiMessageGroup( $id, 'translatable-messages' );
-		$mg->setLabel( 'Interface' );
-		$mg->setDescription( 'Messages used in the custom interface of this wiki' );
-		return $mg;
-	}
-
 	if ( $wgDBname === 'wikimania2013wiki' ) {
-		$wgTranslateCC['wiki-sidebar'] = 'addSidebarMessageGroup';
+		$wgTranslateCC['wiki-sidebar'] = function ( $id ) {
+			$mg = new WikiMessageGroup( $id, 'sidebar-messages' );
+			$mg->setLabel( 'Sidebar' );
+			$mg->setDescription( 'Messages used in the sidebar of this wiki' );
+			return $mg;
+		};
 	}
 
 	if ( $wgDBname === 'commonswiki' ) {
-		$wgTranslateCC['wiki-translatable'] = 'addTranslatableMessageGroup';
-	}
+		$wgTranslateCC['wiki-translatable'] = function ( $id ) {
+			$mg = new WikiMessageGroup( $id, 'translatable-messages' );
+			$mg->setLabel( 'Interface' );
+			$mg->setDescription( 'Messages used in the custom interface of this wiki' );
+			return $mg;
+		};
+	};
 
 	unset( $wgSpecialPages['FirstSteps'] );
 	unset( $wgSpecialPages['ManageMessageGroups'] );
