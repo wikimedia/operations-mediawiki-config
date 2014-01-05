@@ -9269,19 +9269,26 @@ $wgConf->settings = array(
 # below seems to be for extensions
 
 # EXTENSIONS @{
-'wgCategoryTreeDynamicTag' => array(
+'wmgUseCategoryTree' => array(
+        'default' => true,
+        'loginwiki' => false,
+        'votewiki' => false,
+),
+
+'wmgCategoryTreeDynamicTag' => array(
 	'default' => true,
 ),
 
 // CT_MODE_CATEGORIES = 0
 // CT_MODE_PAGES = 10
 // CT_MODE_ALL = 20
-'wgCategoryTreeCategoryPageMode' => array(
+'wmgCategoryTreeCategoryPageMode' => array(
 	'default' => 0,
 	'hewiki' => 10,
 ),
 
-'wgCategoryTreeCategoryPageOptions' => array(
+'wmgCategoryTreeCategoryPageOptions' => array(
+	'default' => array( 'mode' => null, 'showcount' => true ),
 	'hewiki' => array( 'mode' => 10 /*CT_MODE_PAGES*/ ), # bug 11776
 ),
 
