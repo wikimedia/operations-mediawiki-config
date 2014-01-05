@@ -915,9 +915,7 @@ $wgThumbnailEpoch = '20120101000000';
 
 # OAI repository for update server
 include( $IP . '/extensions/OAI/OAIRepo.php' );
-$oaiAgentRegex = '/experimental/';
-$oaiAuth = true; # broken... squid? php config? wtf
-$oaiAudit = true;
+$oaiAuth = true;
 $oaiAuditDatabase = 'oai';
 $oaiChunkSize = 40;
 
