@@ -925,7 +925,7 @@ $wgEnableUserEmail = true;
 $wgNoFollowLinks = true; // In case the MediaWiki default changed, bug 42594
 
 # XFF log for vandal tracking
-function wfLogXFF() {
+$wgExtensionFunctions[] = function() {
 	global $wmfUdp2logDest;
 	if ( ( @$_SERVER['REQUEST_METHOD'] ) == 'POST' ) {
 		$uri = ( $_SERVER['HTTPS'] ? 'https://' : 'http://' ) .
@@ -946,10 +946,8 @@ function wfLogXFF() {
 				WebRequest::detectProtocol(),
 				"udp://$wmfUdp2logDest/localhost"
 			);
-		}
-	}
+		}	}
 }
-$wgExtensionFunctions[] = 'wfLogXFF';
 
 // bug 24313, turn off minordefault on enwiki
 if ( $wgDBname == 'enwiki' ) {
