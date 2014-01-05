@@ -9296,6 +9296,7 @@ $wgConf->settings = array(
 'wmgUseScore' => array(
 	'default' => true,
 	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgScoreFileBackend' => array(
@@ -9353,11 +9354,13 @@ $wgConf->settings = array(
 'wmgUseSpecialNuke' => array(
 	'default' => true,
 	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgUseLabeledSectionTransclusion' => array(
 	'default' => true,
 	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgUseQuiz' => array(
@@ -9386,6 +9389,7 @@ $wgConf->settings = array(
 'wmgUseGadgets' => array(
 	'default' => true, // set 2007-12-17 by brion
 	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 # @} end of EXTENSIONS
@@ -9775,16 +9779,10 @@ $wgConf->settings = array(
 
 'wmgCentralAuthLoginWiki' => array(
 	'default' => 'loginwiki',
-	'loginwiki' => 'loginwiki',
-	'test2wiki' => 'loginwiki',
-	'testwikidatawiki' => 'loginwiki',
 ),
 
 'wmgCentralAuthSilentLogin' => array(
 	'default' => true,
-	'loginwiki' => true,
-	'test2wiki' => true,
-	'testwikidatawiki' => true,
 ),
 
 'wmgCentralAuthUseEventLogging' => array(
@@ -11978,10 +11976,14 @@ $wgConf->settings = array(
 ),
 'wmgUseVips' => array(
 	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgUseApiSandbox' => array(
 	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgUseShortUrl' => array(
@@ -12282,6 +12284,8 @@ $wgConf->settings = array(
 
 'wmgUseScribunto' => array(
 	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgUseSubpageSortkey' => array(
@@ -12751,9 +12755,6 @@ $wgConf->settings = array(
 
 'wgSecureLogin' => array(
 	'default' => true,
-	'loginwiki' => true,
-	'mediawikiwiki' => true,
-	'test2wiki' => true,
 ),
 
 'wgRightsUrl' => array(
