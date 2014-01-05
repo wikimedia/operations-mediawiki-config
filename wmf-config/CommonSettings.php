@@ -545,7 +545,7 @@ if ( file_exists( '/usr/bin/ploticus' ) ) {
 	$wgTimelineSettings->ploticusCommand = '/usr/bin/ploticus';
 }
 
-$wgTimelineSettings->epochTimestamp = '20120101000000';
+$wgTimelineSettings->epochTimestamp = '20130101000000';
 putenv( "GDFONTPATH=/usr/local/apache/common/fonts" );
 
 include( $IP . '/extensions/wikihiero/wikihiero.php' );
@@ -908,10 +908,10 @@ $wgMaxSquidPurgeTitles = 500;
 
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
-// General Cache Epoch:
-$wgCacheEpoch = '20120908000000';
+// General Cache Epoch
+$wgCacheEpoch = '20130101000000';
 
-$wgThumbnailEpoch = '20120101000000';
+$wgThumbnailEpoch = '20130101000000';
 
 # OAI repository for update server
 include( $IP . '/extensions/OAI/OAIRepo.php' );
