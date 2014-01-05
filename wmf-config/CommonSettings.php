@@ -564,9 +564,10 @@ include( $IP . '/extensions/ParserFunctions/ParserFunctions.php' );
 $wgMaxIfExistCount = 500; // obs
 $wgExpensiveParserFunctionLimit = 500;
 
-// <ref> and <references> tags -ævar, 2005-12-23
-require( $IP . '/extensions/Cite/Cite.php' );
-require( $IP . '/extensions/Cite/SpecialCite.php' );
+if ( $wmgUseCite ) {
+	require( $IP . '/extensions/Cite/Cite.php' );
+	require( $IP . '/extensions/Cite/SpecialCite.php' );
+}
 
 # Inputbox extension for searching or creating articles
 include( $IP . '/extensions/InputBox/InputBox.php' );
@@ -599,10 +600,13 @@ $wgAvailableRights[] = 'validate';
 // So enwiki's protection rights can be assigned to global groups
 $wgAvailableRights[] = 'templateeditor';
 
-$wgUseAjax = true;
-$wgCategoryTreeDynamicTag = true;
-require( $IP . '/extensions/CategoryTree/CategoryTree.php' );
-$wgCategoryTreeDisableCache = false;
+if ( $wmgUseCategoryTree ) {
+	require( $IP . '/extensions/CategoryTree/CategoryTree.php' );
+	$wgCategoryTreeDynamicTag = $wmgCategoryTreeDynamicTag;
+	$wgCategoryTreeCategoryPageMode = $wmgCategoryTreeCategoryPageMode;
+	$wgCategoryTreeCategoryPageOptions = $wmgCategoryTreeCategoryPageOptions;
+	$wgCategoryTreeDisableCache = false;
+}
 
 if ( $wmgUseProofreadPage ) {
 	include( $IP . '/extensions/ProofreadPage/ProofreadPage.php' );
