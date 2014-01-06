@@ -569,21 +569,28 @@ if ( $wmgUseCite ) {
 	require( $IP . '/extensions/Cite/SpecialCite.php' );
 }
 
-# Inputbox extension for searching or creating articles
-include( $IP . '/extensions/InputBox/InputBox.php' );
 
-include( $IP . '/extensions/ImageMap/ImageMap.php' );
-include( $IP . '/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php' );
+if ( $wmgUseInputBox ) {
+	include( $IP . '/extensions/InputBox/InputBox.php' );
+}
 
-// Experimental side-by-side comparison extension for wikisource. enabled brion 2006-01-13
+if ( $wmgUseImageMap ) {
+	include( $IP . '/extensions/ImageMap/ImageMap.php' );
+}
+
+if ( $wmgUseGeSHi ) {
+	include( $IP . '/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php' );
+}
+
 if ( $wmgUseDoubleWiki ) {
 	include( $IP . '/extensions/DoubleWiki/DoubleWiki.php' );
 }
 
-# Poem
-include( $IP . '/extensions/Poem/Poem.php' );
+if ( $wmgUsePoem ) {
+	include( $IP . '/extensions/Poem/Poem.php' );
+}
 
-if ( $wgDBname == 'testwiki' ) {
+if ( $wgUseUnicodeConverter ) {
 	include( $IP . '/extensions/UnicodeConverter/UnicodeConverter.php' );
 }
 

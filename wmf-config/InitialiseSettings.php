@@ -10330,6 +10330,8 @@ $wgConf->settings = array(
 
 'wmgUsePdfHandler' => array (
 	'default' => true, // brion -- 2009-08-25
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgUsabilityEnforce' => array(
@@ -10467,6 +10469,8 @@ $wgConf->settings = array(
 
 'wmgUseMassMessage' => array(
 	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgNamespacesToPostIn' => array(
@@ -12734,6 +12738,35 @@ $wgConf->settings = array(
 ),
 
 'wmgUseCite' => array(
+	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
+),
+
+'wmgUsePoem' => array(
+	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
+),
+
+'wmgUseUnicodeConverter' => array(
+	'default' => false,
+	'testwiki' => true,
+),
+
+'wmgUseInputBox' => array(
+	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
+),
+
+'wmgUseImageMap' => array(
+	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
+),
+
+'wmgUseGeSHi' => array(
 	'default' => true,
 	'loginwiki' => false,
 	'votewiki' => false,
