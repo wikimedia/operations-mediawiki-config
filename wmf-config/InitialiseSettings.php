@@ -10588,18 +10588,26 @@ $wgConf->settings = array(
 
 'wmgUseBetaFeatures' => array(
 	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgUseCommonsMetadata' => array(
 	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgUseMultimediaViewer' => array(
 	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgUseVectorBeta' => array(
 	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 // -------------- VisualEditor start --------------
