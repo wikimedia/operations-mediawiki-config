@@ -12780,6 +12780,17 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
+'wmgUseTimeline' => array(
+	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
+),
+
+'wmgUseWikiHeiro' => array(
+	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
+),
 
 ### End (roughly) of general extensions ########################
 
