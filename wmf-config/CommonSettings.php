@@ -590,7 +590,7 @@ if ( $wmgUsePoem ) {
 	include( $IP . '/extensions/Poem/Poem.php' );
 }
 
-if ( $wgUseUnicodeConverter ) {
+if ( $wmgUseUnicodeConverter ) {
 	include( $IP . '/extensions/UnicodeConverter/UnicodeConverter.php' );
 }
 
