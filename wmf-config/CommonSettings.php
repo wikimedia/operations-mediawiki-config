@@ -2109,20 +2109,22 @@ if ( $wmgUseTranslate ) {
 	$wgTranslateEC = array();
 
 	if ( $wgDBname === 'wikimania2013wiki' ) {
-		$wgTranslateCC['wiki-sidebar'] = function ( $id ) {
-			$mg = new WikiMessageGroup( $id, 'sidebar-messages' );
+		$wgHooks['TranslatePostInitGroups'][] = function ( &$cc ) {
+			$mg = new WikiMessageGroup( 'wiki-sidebar', 'sidebar-messages' );
 			$mg->setLabel( 'Sidebar' );
 			$mg->setDescription( 'Messages used in the sidebar of this wiki' );
-			return $mg;
+			$cc['wiki-sidebar'] = $mg;
+			return true;
 		};
 	}
 
 	if ( $wgDBname === 'commonswiki' ) {
-		$wgTranslateCC['wiki-translatable'] = function ( $id ) {
-			$mg = new WikiMessageGroup( $id, 'translatable-messages' );
+		$wgHooks['TranslatePostInitGroups'][] = function ( &$cc ) {
+			$mg = new WikiMessageGroup( 'wiki-translatable', 'translatable-messages' );
 			$mg->setLabel( 'Interface' );
 			$mg->setDescription( 'Messages used in the custom interface of this wiki' );
-			return $mg;
+			$cc['wiki-translatable'] = $mg;
+			return true;
 		};
 	};
 
