@@ -7306,7 +7306,7 @@ $wgConf->settings = array(
 	),
 	'rowiki' => array(
 		'sysop' => array( 'autopatrol' => true, 'patrol' => true, ),
-		'patroller' => array( 'patrol' => true, ),
+		'patroller' => array( 'patrol' => true, 'upwizcampaigns' => true, ), // bug 59242
 		'autopatrolled' => array( 'autopatrol' => true, ),
 	),
 	// http://bugzilla.wikimedia.org/show_bug.cgi?id=12334
@@ -10476,6 +10476,7 @@ $wgConf->settings = array(
 
 'wmgUseUploadWizard' => array(
 	'default' => false,
+	'rowiki' => true, // bug 59242
 	'testwiki' => true,
 	'test2wiki' => true,
 	'commonswiki' => true,
