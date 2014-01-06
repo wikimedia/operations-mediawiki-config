@@ -12676,31 +12676,29 @@ $wgConf->settings = array(
 	'astwiki' => true,
 	'bnwiki' => true,
 	'commonswiki' => true,
+	'dewiki' => true,
 	'elwiki' => true,
 	'eswiki' => true,
 	'frwiki' => true,
-	'frwikisource' => true,
 	'guwiki' => true,
-	'itwiki' => true,
 	'nlwiki' => true,
 	'ptwiki' => true,
 	'ruwiki' => true,
 	'specieswiki' => true,
-	'wikidatawiki' => true,
+	'wikibooks' => true,
 	'wikinews' => true,
 	'wikimania' => true,
 	'wikimedia' => true,
 	'wikisource' => true,
-	'wikivoyage' => true,
 	'wiktionary' => true,
 ),
 
 'wmgCirrusIsBuilding' => array(
 	'default' => false,
-	'eswiki' => true,
-	'frwiki' => true,
-	'ptwiki' => true,
-	'ruwiki' => true,
+	'dewiki' => true,
+	// It is safe to put wikibooks here because the wikibooks that are on
+	// cirrus.dblist override this.
+	'wikibooks' => true,
 ),
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
@@ -12716,31 +12714,33 @@ $wgConf->settings = array(
 ),
 
 // Shard each wiki to be about 2gb of index per shard.  Changing this for a wiki
-// requires an in place reindex.  Last sized 2013-12-13.  See
+// requires an in place reindex.  Last full review 2013-12-13.  See
 // https://wikitech.wikimedia.org/wiki/Search/New#Estimating_the_number_of_shards_required
 // for estimation methodology.  At this point I'm declaring we should have no more than
-// 20 shards per index.  We might go higher.
+// 20 shards per index.  We might go higher but that is a tradeoff for easier maintenance
+// at the cost of search performance.
 'wmgCirrusSearchShardCount' => array(
 	// Most wikis are too small to be worth sharding
 	'default' => array( 'content' => 1, 'general' => 1 ),
 	'cawiki' => array( 'content' => 6, 'general' => 1 ),
 	// Commons is special and has a 'file' index in addition to the regular ones.
-	// File has shards at ~6GB each even with 20 of them
+	// File has shards at ~6GB each even with 20 of them.
 	'commonswiki' => array( 'content' => 1, 'general' => 20, 'file' => 20 ),
+	'dewiki' => array( 'content' => 9, 'general' => 6 ),        // Estimated before deployment
 	'dewikisource' => array( 'content' => 2, 'general' => 1 ),
 	'elwiki' => array( 'content' => 2, 'general' => 1 ),
 	'enwikinews' => array( 'content' => 1, 'general' => 3 ),
 	'enwikisource' => array( 'content' => 12, 'general' => 1 ),
 	'enwiktionary' => array( 'content' => 4, 'general' => 1 ),
-	'eswiki' => array( 'content' => 12, 'general' => 6 ),  // Estimated before deployment
-	'frwiki' => array( 'content' => 16, 'general' => 8 ),  // Estimated before deployment
+	'eswiki' => array( 'content' => 9, 'general' => 6 ),
+	'frwiki' => array( 'content' => 14, 'general' => 13 ),
 	'frwikisource' => array( 'content' => 12, 'general' => 1 ),
 	'frwikitionary' => array( 'content' => 2, 'general' => 1 ),
 	'itwiki' => array( 'content' => 13, 'general' => 9 ),
 	'mgwiktionary' => array( 'content' => 2, 'general' => 1 ),
 	'nlwiki' => array( 'content' => 8, 'general' => 4 ),
-	'ptwiki' => array( 'content' => 8, 'general' => 4 ),  // Estimated before deployment
-	'ruwiki' => array( 'content' => 8, 'general' => 4 ),  // Estimated before deployment
+	'ptwiki' => array( 'content' => 6, 'general' => 5 ),
+	'ruwiki' => array( 'content' => 13, 'general' => 9 ),
 	'ruwiktionary' => array( 'content' => 3, 'general' => 1 ),
 	'wikidatawiki' => array( 'content' => 7, 'general' => 1 ),
 ),
