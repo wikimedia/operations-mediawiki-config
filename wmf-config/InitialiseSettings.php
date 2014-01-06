@@ -12484,7 +12484,8 @@ $wgConf->settings = array(
 'wmgWikibaseCachePrefix' => array(
 	'default' => 'wikidatawiki',
 	'testwikidatawiki' => 'testwikidata',
-	'test2wiki' => 'wikidatawiki-test2'
+	'test2wiki' => 'wikidatawiki-test2',
+	'testwiki' => 'wikidatawiki-test'
 ),
 
 'wmgUseWikibaseRepo' => array(
@@ -12495,6 +12496,7 @@ $wgConf->settings = array(
 'wmgUseWikibaseClient' => array(
 	'default' => false,
 	'test2wiki' => true,
+	'testwiki' => true,
 	'wikidataclient' => true,
 ),
 
@@ -12508,6 +12510,10 @@ $wgConf->settings = array(
 	// @note because of unconventional way of doing wikibase settings, the default setting
 	// here does not work the same way. Instead, put defaults in CommonSettings.php
 	'default' => array(
+	),
+	'testwiki' => array(
+		'siteGlobalID' => 'enwiki',
+		'propagateChangesToRepo' => false,
 	),
 	'test2wiki' => array(
 		'siteGlobalID' => 'enwiki',
