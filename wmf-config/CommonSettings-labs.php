@@ -122,8 +122,4 @@ if ( file_exists( "$wmfConfigDir/extension-list-labs" ) ) {
 	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-labs";
 }
 
-if ( $wmgMobileFrontend ) {
-	$wgMFEnableBetaDiff = true;
-}
-
 } # end safeguard
