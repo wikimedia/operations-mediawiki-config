@@ -11296,6 +11296,8 @@ $wgConf->settings = array(
 
 'wmgUseBabel' => array(
 	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 'wmgBabelCategoryNames' => array(
 	'default' => array(
@@ -12017,6 +12019,8 @@ $wgConf->settings = array(
 
 'wmgUseFeaturedFeeds' => array(
 	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 'wmgFeaturedFeedsDefaults' => array(
 	'default' => array(
@@ -12167,6 +12171,8 @@ $wgConf->settings = array(
 # disable its API modules in CommonSettings.php or below
 'wmgEnableGeoData' => array(
 	'default' => false,
+	'loginwiki' => false,
+	'votewiki' => false,
 	'wiki' => true,
 	'wikivoyage' => true,
 ),
@@ -12599,10 +12605,14 @@ $wgConf->settings = array(
 
 'wmgUseTemplateSandbox' => array(
 	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgUsePageImages' => array(
 	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgUseTorBlock' => array(
@@ -12621,6 +12631,7 @@ $wgConf->settings = array(
 
 'wmgUseSecurePoll' => array(
 	'default' => true,
+	'loginwiki' => false,
 ),
 
 'wmgUseGlobalAbuseFilters' => array(
