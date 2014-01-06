@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_1fcec85f",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 873
+      },
+      "writtenOn": "2014-01-06T15:15:27Z",
+      "side": 1,
+      "message": "We\u0027re all snowflakes!",
+      "revId": "ce2eca7252e21860469dbc64cfca961d09580caf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
