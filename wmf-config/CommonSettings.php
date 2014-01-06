@@ -11,7 +11,6 @@
 #######################################################################
 
 
-
 # Godforsaken hack to work around problems with the Squid caching changes...
 #
 # To minimize damage on fatal PHP errors, output a default no-cache header
@@ -22,15 +21,6 @@
 if( PHP_SAPI != 'cli' ) {
 	header( "Cache-control: no-cache" );
 }
-
-# Try to control stuff:
-# define( 'DEBUG_LOG', true );
-
-# useful tokens to search for:
-
-# :SEARCH: - search settings
-
-# -----------------
 
 if ( PHP_SAPI == 'cli' ) {
 	# Override for sanity's sake.
@@ -61,11 +51,8 @@ $multiVersion = MWMultiVersion::getInstance();
 
 set_include_path( "$IP:/usr/local/lib/php:/usr/share/php" );
 
-if ( getenv( 'WIKIBACKUP' ) ) {
-	// hack while normal ext is not enabled sitewide
-	if ( !function_exists( 'utf8_normalize' ) ) {
-		dl( 'php_utfnormal.so' );
-	}
+if ( getenv( 'WIKIBACKUP' ) && !function_exists( 'utf8_normalize' ) ) {
+	dl( 'php_utfnormal.so' );
 }
 
 ### Determine realm and cluster we are on #############################
@@ -307,12 +294,6 @@ $hour = $tmarray['hours'];
 $day = $tmarray['wday'];
 
 $wgEmergencyContact = 'noc@wikipedia.org';
-
-if ( defined( 'DEBUG_LOG' ) && $wgDBname == 'aawiki' ) {
-	$wgMemCachedDebug = true;
-	$wgDebugLogFile = "udp://$wmfUdp2logDest/debug15";
-	$wgDebugDumpSql = true;
-}
 
 $wgDBerrorLog = "udp://$wmfUdp2logDest/dberror";
 $wgDBerrorLogTZ = 'UTC';
