@@ -528,27 +528,32 @@ if ( $wmgUseCORS ) {
 wfProfileOut( "$fname-misc1" );
 wfProfileIn( "$fname-ext-include1" );
 
-include( $IP . '/extensions/timeline/Timeline.php' );
-if ( $wgDBname == 'testwiki' || $wgDBname == 'mlwiki' ) {
-	// FreeSansWMF has been generated from FreeSans and FreeSerif by using this script with fontforge:
-	// Open("FreeSans.ttf");
-	// MergeFonts("FreeSerif.ttf");
-	// SetFontNames("FreeSans-WMF", "FreeSans WMF", "FreeSans WMF Regular", "Regular", "");
-	// Generate("FreeSansWMF.ttf", "", 4 );
-	$wgTimelineSettings->fontFile = 'FreeSansWMF.ttf';
-} elseif ( $lang == 'zh' ) {
-	$wgTimelineSettings->fontFile = 'wqy-zenhei.ttc';
-}
-$wgTimelineSettings->fileBackend = 'local-multiwrite';
+if ( $wmgUseTimeline ) {
+	include( $IP . '/extensions/timeline/Timeline.php' );
+	if ( $wgDBname == 'testwiki' || $wgDBname == 'mlwiki' ) {
+		// FreeSansWMF has been generated from FreeSans and FreeSerif by using this script with fontforge:
+		// Open("FreeSans.ttf");
+		// MergeFonts("FreeSerif.ttf");
+		// SetFontNames("FreeSans-WMF", "FreeSans WMF", "FreeSans WMF Regular", "Regular", "");
+		// Generate("FreeSansWMF.ttf", "", 4 );
+		$wgTimelineSettings->fontFile = 'FreeSansWMF.ttf';
+	} elseif ( $lang == 'zh' ) {
+		$wgTimelineSettings->fontFile = 'wqy-zenhei.ttc';
+	}
+	$wgTimelineSettings->fileBackend = 'local-multiwrite';
 
-if ( file_exists( '/usr/bin/ploticus' ) ) {
-	$wgTimelineSettings->ploticusCommand = '/usr/bin/ploticus';
+	if ( file_exists( '/usr/bin/ploticus' ) ) {
+		$wgTimelineSettings->ploticusCommand = '/usr/bin/ploticus';
+	}
+
+	$wgTimelineSettings->epochTimestamp = '20130101000000';
 }
 
-$wgTimelineSettings->epochTimestamp = '20130101000000';
 putenv( "GDFONTPATH=/usr/local/apache/common/fonts" );
 
-include( $IP . '/extensions/wikihiero/wikihiero.php' );
+if ( $wmgUseWikiHeiro ) {
+	include( $IP . '/extensions/wikihiero/wikihiero.php' );
+}
 
 include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 
@@ -568,7 +573,6 @@ if ( $wmgUseCite ) {
 	require( $IP . '/extensions/Cite/Cite.php' );
 	require( $IP . '/extensions/Cite/SpecialCite.php' );
 }
-
 
 if ( $wmgUseInputBox ) {
 	include( $IP . '/extensions/InputBox/InputBox.php' );
