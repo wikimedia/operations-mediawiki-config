@@ -8985,10 +8985,6 @@ $wgConf->settings = array(
 	'default' => 2000,
 ),
 
-'wgUseAjax' => array(
-	'default' => false,
-),
-
 'wgEnableSidebarCache' => array(
 	'default' => true,
 ),
