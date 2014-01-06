@@ -12649,6 +12649,8 @@ $wgConf->settings = array(
 	'specieswiki' => true,
 	'incubatorwiki' => true,
 	'outreachwiki' => true,
+	// feel free to remove Wikimania wikis once they are closed for editing
+	'wikimania2014wiki' => true,  // bug 59711
 ),
 
 'wmgUseZeroNamespace' => array(
