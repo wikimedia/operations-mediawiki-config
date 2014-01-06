@@ -2479,11 +2479,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSEventLogging = $wmgULSEventLogging;
 }
 
-if ( $wmfRealm === 'production' ) {
-	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikidata";
-} else {
-	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikidata-labs";
-}
+$wgExtensionEntryPointListFiles[] = getRealmSpecificFilename( "$wmfConfigDir/extension-list-wikidata" );
 
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 	include( "$wmfConfigDir/Wikibase.php" );
