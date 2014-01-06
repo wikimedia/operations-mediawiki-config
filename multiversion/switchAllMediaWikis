@@ -36,11 +36,13 @@ function switchAllMediaWikis() {
 	}
 
 	if ( !$argsValid ) {
-		die( "Usage: switchAllMediaWikis php-X.XXwmfX php-X.XXwmfX <name>.dblist\n" );
+		print "Usage: switchAllMediaWikis php-X.XXwmfX php-X.XXwmfX <name>.dblist\n";
+		exit( 1 );
 	}
 
 	if ( !is_dir( "$common/$newVersion" ) ) {
-		die( "The directory `$common/$newVersion` does not exist.\n" );
+		print "The directory `$common/$newVersion` does not exist.\n";
+		exit( 1 );
 	}
 
 	# Read in .dblist file into an array with dbnames as keys...
@@ -72,18 +74,19 @@ function switchAllMediaWikis() {
 	# Backup old wikiversions.dat...
 	$retVal = 1;
 	passthru( "cd $common/multiversion && ./backupWikiversions", $retVal );
-	( $retVal == 0 ) or die( 1 );
+	( $retVal == 0 ) or exit( 1 );
 
 	# Update wikiversions.dat...
 	if ( !file_put_contents( $datPath, $newWikiVersionsData, LOCK_EX ) ) {
-		die( "Unable to write to $datPath.\n" );
+		print "Unable to write to $datPath.\n";
+		exit( 1 );
 	}
 	echo "Updated $datPath.\n";
 
 	# Rebuild wikiversions.cdb...
 	$retVal = 1;
 	passthru( "cd $common/multiversion && ./refreshWikiversionsCDB", $retVal );
-	( $retVal == 0 ) or die( 1 );
+	( $retVal == 0 ) or exit( 1 );
 
 	echo "Re-configured $count wiki(s) from $oldVersion to $newVersion.\n";
 	echo "The DB list contained " . count( $dbList ) . " wiki(s).\n";

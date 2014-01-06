@@ -55,7 +55,8 @@ wfProfileIn( "$fname-init" );
 
 # Get the version object for this Wiki (must be set by now, along with $IP)
 if ( !class_exists( 'MWMultiVersion' ) ) {
-	die( "No MWMultiVersion instance initialized! MWScript.php wrapper not used?\n" );
+	print "No MWMultiVersion instance initialized! MWScript.php wrapper not used?\n";
+	exit(1);
 }
 $multiVersion = MWMultiVersion::getInstance();
 

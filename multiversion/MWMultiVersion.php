@@ -369,7 +369,7 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Error out with a die() message
+	 * Error out and exit(1);
 	 * @param $msg String
 	 * @return void
 	 */
