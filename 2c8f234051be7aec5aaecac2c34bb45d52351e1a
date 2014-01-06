@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeebdf60_955bd9fc",
+        "filename": "tests/wikiversionsTest.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2014-01-06T18:18:08Z",
+      "side": 1,
+      "message": "__DIR__",
+      "revId": "2c8f234051be7aec5aaecac2c34bb45d52351e1a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
