@@ -680,7 +680,10 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgMinimumVideoPlayerSize = $wmgMinimumVideoPlayerSize;
 }
 
-include( $IP . '/extensions/AssertEdit/AssertEdit.php' );
+// VERY temporary!!
+if ( $wgVersion == '1.23wmf9' ) {
+	include( $IP . '/extensions/AssertEdit/AssertEdit.php' );
+}
 
 if ( $wgUseContactPageFundraiser ) {
 	include( "$IP/extensions/ContactPageFundraiser/ContactPage.php" );
