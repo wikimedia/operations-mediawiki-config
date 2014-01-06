@@ -30,7 +30,8 @@ function refreshWikiversionsCDB() {
 		list( $dbName, $version, $extVersion, $comment ) = $row;
 		$versionDir = MULTIVER_COMMON_HOME . '/' . $version;
 		if ( !is_dir( $versionDir ) ) {
-			die( "Invalid version dir '$versionDir' for wiki '$dbName'.\n" );
+			print "Invalid version dir '$versionDir' for wiki '$dbName'.\n";
+			exit( 1 );
 		}
 	}
 	// Make sure all wikis have an entry...
@@ -42,7 +43,8 @@ function refreshWikiversionsCDB() {
 	$diff = array_diff_key( $dbNames, $dbNamesWithRows );
 	if ( count( $diff ) ) {
 		print_r( $diff );
-		die( "The above " . count( $diff ) . " wiki DBs are missing wikiversion rows.\n" );
+		print "The above " . count( $diff ) . " wiki DBs are missing wikiversion rows.\n";
+		exit( 1 );
 	}
 
 	# Build the new database at the temp location...
@@ -52,7 +54,8 @@ function refreshWikiversionsCDB() {
 	} catch ( CdbException $e ) {}
 
 	if ( !$db ) {
-		die( "Unable to create {$tmpDBPath}.\n" );
+		print "Unable to create {$tmpDBPath}.\n";
+		exit( 1 );
 	}
 	foreach ( $rows as $row ) {
 		list( $dbName, $version, $extVersion, $comment ) = $row;
@@ -66,12 +69,14 @@ function refreshWikiversionsCDB() {
 
 	# Sanity check the temp file...
 	if ( !is_file( $tmpDBPath ) ) {
-		die( "Unable to create {$tmpDBPath}.\n" );
+		print "Unable to create {$tmpDBPath}.\n";
+		exit( 1 );
 	}
 
 	# Move temp file to the final location only when finished...
 	if ( !rename( $tmpDBPath, $finalDBPath ) ) {
-		die( "Unable to move {$tmpDBPath} to {$finalDBPath}.\n" );
+		print "Unable to move {$tmpDBPath} to {$finalDBPath}.\n";
+		exit( 1 );
 	}
 	chmod( $finalDBPath, 0664 ); // rw-rw-r
 

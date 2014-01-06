@@ -33,7 +33,8 @@ function checkoutMediaWiki() {
 	}
 
 	if ( !$argsValid ) {
-		die( "Usage: checkoutMediaWiki X.XXwmfX php-X.XXwmfX\n" );
+		print "Usage: checkoutMediaWiki X.XXwmfX php-X.XXwmfX\n";
+		exit( 1 );
 	}
 
 	# MW install path

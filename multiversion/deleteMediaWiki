@@ -27,7 +27,8 @@ function deleteMediaWiki() {
 	}
 
 	if ( !$argsValid ) {
-		die( "Usage: deleteMediaWiki php-X.XXwmfX\n" );
+		print "Usage: deleteMediaWiki php-X.XXwmfX\n";
+		exit( 1 );
 	}
 
 	# MW install path
@@ -37,7 +38,8 @@ function deleteMediaWiki() {
 
 	# Check the destination path of the SVN checkout...
 	if ( !file_exists( $destIP ) ) {
-		die( "No MediaWiki install at $destIP.\n" );
+		print "No MediaWiki install at $destIP.\n";
+		exit( 1 );
 	}
 
 	# Destroy symlinks created by checkoutMediaWiki outside of $destIP
