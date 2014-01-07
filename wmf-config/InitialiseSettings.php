@@ -10565,12 +10565,14 @@ $wgConf->settings = array(
 'wmgUseMwEmbedSupport' => array(
 	'default' => true,
 	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 // NOTE: TMH *requires* MwEmbedSupport to function
 'wmgUseTimedMediaHandler' => array(
 	'default' => true,
 	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgEnableLocalTimedText' => array(
