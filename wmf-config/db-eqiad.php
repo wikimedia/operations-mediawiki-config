@@ -126,9 +126,9 @@ $wgLBFactoryConf = array(
 	's6' => array(
 		'db1027'   => 0,
 		'db1022'   => 0, # snapshot, vslow
-		'db1040'   => 400, # contributions, logpager
+		'db1040'   => 50, # contributions, logpager
 		'db1015'   => 400,
-		'db1006'   => 0, # LB drop during reindexing
+		'db1006'   => 400,
 	),
 	's7' => array(
 		'db1039' => 0,
