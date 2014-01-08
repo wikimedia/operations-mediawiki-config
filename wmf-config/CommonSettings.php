@@ -592,6 +592,11 @@ $wgAvailableRights[] = 'movestable';
 $wgAvailableRights[] = 'validate';
 // So enwiki's protection rights can be assigned to global groups
 $wgAvailableRights[] = 'templateeditor';
+// Adding Flow's rights so that they are available for global groups/staff rights
+$wgAvailableRights[] = 'flow-edit-post';
+$wgAvailableRights[] = 'flow-suppress';
+$wgAvailableRights[] = 'flow-hide';
+$wgAvailableRights[] = 'flow-delete';
 
 if ( $wmgUseCategoryTree ) {
 	require( $IP . '/extensions/CategoryTree/CategoryTree.php' );
