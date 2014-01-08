@@ -32,9 +32,11 @@ function getWikiVersion( $dbName ) {
 		if ( $version !== false ) {
 			return $version; // found version entry
 		}
-		die( "$cdbFilename has no version entry for `$dbName`.\n" );
+		print "$cdbFilename has no version entry for `$dbName`.\n";
+		exit( 1 );
 	}
-	die( "Unable to open $cdbFilename.\n" );
+	print "Unable to open $cdbFilename.\n";
+	exit( 1 );
 }
 
 echo getWikiVersion( $argv[1] ) . "\n";

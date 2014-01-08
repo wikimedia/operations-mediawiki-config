@@ -24,7 +24,8 @@ function backupWikiversions() {
 	$timestamp = date( 'c' ); // ISO 8601
 	$backupPath = "$common/multiversion/backup/" . preg_replace( '/(\.[^.]*)$/', "-$timestamp$1", $filename );
 	if ( !copy( $datPath, $backupPath ) ) {
-		die( "Unable to write $filename backup file at `$backupPath`.\n" );
+		print "Unable to write $filename backup file at `$backupPath`.\n";
+		exit( 1 );
 	}
 	echo "Wrote $filename backup file at `$backupPath`.\n";
 }
