@@ -12697,10 +12697,6 @@ $wgConf->settings = array(
 
 'wmgCirrusIsBuilding' => array(
 	'default' => false,
-	'dewiki' => true,
-	// It is safe to put wikibooks here because the wikibooks that are on
-	// cirrus.dblist override this.
-	'wikibooks' => true,
 ),
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
