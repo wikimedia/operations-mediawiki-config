@@ -84,6 +84,8 @@ if ( $wmgUseVisualEditor ) {
 	$wgVisualEditorParsoidReportProblemURL = 'http://10.4.0.33/_bugs/'; // parsoid-spof
 }
 
+require_once( "$IP/extensions/MobileApp/MobileApp.php" );
+
 # temporary extensions
 # ========================================================================
 
