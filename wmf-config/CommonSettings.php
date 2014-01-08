@@ -597,7 +597,6 @@ if ( $wmgUseCategoryTree ) {
 	$wgCategoryTreeDynamicTag = $wmgCategoryTreeDynamicTag;
 	$wgCategoryTreeCategoryPageMode = $wmgCategoryTreeCategoryPageMode;
 	$wgCategoryTreeCategoryPageOptions = $wmgCategoryTreeCategoryPageOptions;
-	$wgCategoryTreeDisableCache = false;
 }
 
 if ( $wmgUseProofreadPage ) {
