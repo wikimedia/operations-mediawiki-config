@@ -1023,7 +1023,6 @@ $wgConf->settings = array(
 	'itwikiquote' => false, // bug 12012
 	'jawikisource' => false, // bug 3572
 	'jawiktionary' => false, // bug 11775
-	'kowikinews' => true, // bug 24877
 	'loginwiki' => false,
 	'nowikinews' => true,
 	'ndswiki' => false, // http://mail.wikipedia.org/pipermail/wikitech-l/2005-October/032136.html
@@ -1096,6 +1095,7 @@ $wgConf->settings = array(
 	'jawiki' => '/wiki/Wikipedia:%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89',
 	'jawikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja',
 	'kowiki' => '/wiki/위키백과:파일_올리기', // bug 52076
+	'kowikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ko', // bug 59823
 	'lawiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=la', // bug 13190
 	'mlwiki' => '/wiki/വിക്കിപീഡിയ:അപ്‌ലോഡ്',
 	'ndswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nds',
