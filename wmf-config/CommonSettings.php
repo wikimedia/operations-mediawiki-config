@@ -594,7 +594,7 @@ $wgAvailableRights[] = 'templateeditor';
 
 if ( $wmgUseCategoryTree ) {
 	require( $IP . '/extensions/CategoryTree/CategoryTree.php' );
-	$wgCategoryTreeDynamicTag = $wmgCategoryTreeDynamicTag;
+	$wgCategoryTreeDynamicTag = true;
 	$wgCategoryTreeCategoryPageMode = $wmgCategoryTreeCategoryPageMode;
 	$wgCategoryTreeCategoryPageOptions = $wmgCategoryTreeCategoryPageOptions;
 }
