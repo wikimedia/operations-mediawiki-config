@@ -11275,6 +11275,10 @@ $wgConf->settings = array(
 'wmgMFEnablePhotoUploadCTA' => array(
 	'default' => false,
 ),
+'wmgMFEnableBetaDiff' => array(
+	'default' => false,
+	'testwiki' => true,
+),
 
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),

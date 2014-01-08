@@ -14,5 +14,3 @@ $wgEnableZeroRatedMobileAccessTesting = true;
 
 // Keep Going experiments
 $wgMFKeepGoing = true;
-
-$wgMFEnableBetaDiff = true;
