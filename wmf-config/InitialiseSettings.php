@@ -9269,9 +9269,9 @@ $wgConf->settings = array(
 
 # EXTENSIONS @{
 'wmgUseCategoryTree' => array(
-        'default' => true,
-        'loginwiki' => false,
-        'votewiki' => false,
+	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgCategoryTreeDynamicTag' => array(
