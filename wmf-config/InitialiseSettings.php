@@ -11276,8 +11276,7 @@ $wgConf->settings = array(
 	'default' => false,
 ),
 'wmgMFEnableBetaDiff' => array(
-	'default' => false,
-	'testwiki' => true,
+	'default' => true,
 ),
 
 'wgExtraGenderNamespaces' => array(
