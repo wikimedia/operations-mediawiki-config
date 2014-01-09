@@ -232,6 +232,9 @@ return array(
 	'wmgMFUseCentralAuthToken' => array(
 		'default' => true,
 	),
+	'wmgMFEnableBetaDiff' => array(
+		'default' => true,
+	),
 
 	'wmgEnableGeoData' => array(
 		'default' => true,

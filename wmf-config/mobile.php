@@ -88,4 +88,5 @@ if ( $wmgMobileFrontend ) {
 
 	$wgMFEnableSiteNotice = $wmgMFEnableSiteNotice;
 	$wgMFEnablePhotoUploadCTA = $wmgMFEnablePhotoUploadCTA;
+	$wgMFEnableBetaDiff = $wmgMFEnableBetaDiff;
 }
