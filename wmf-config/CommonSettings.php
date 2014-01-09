@@ -1491,7 +1491,7 @@ include "$IP/extensions/SwiftCloudFiles/SwiftCloudFiles.php";
 if ( $wmgUseCollection ) {
 	// PediaPress / PDF generation
 	include "$IP/extensions/Collection/Collection.php";
-	$wgCollectionMWServeURL = "http://pdf1.wikimedia.org:8080/mw-serve/";
+	$wgCollectionMWServeURL = "http://pdf2.wikimedia.org:8080/mw-serve/";
 
 	// MediaWiki namespace is not a good default
 	$wgCommunityCollectionNamespace = NS_PROJECT;
