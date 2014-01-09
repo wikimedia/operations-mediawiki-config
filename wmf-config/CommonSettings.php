@@ -2206,10 +2206,9 @@ if ( $wmgEnableRandomRootPage ) {
 	require_once( "$IP/extensions/RandomRootPage/Randomrootpage.php" );
 }
 
-# Avoid excessive drops in squid hit rates
-$wgMaxBacklinksInvalidate = 200000;
 # Similar to above but not for single template/file changes
 $wgJobBackoffThrottling = array(
+	# Avoid excessive CPU due to cache misses from rapid invalidations
 	'htmlCacheUpdate' => 10 // 10 pages/sec per runner
 );
 
