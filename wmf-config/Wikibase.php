@@ -60,8 +60,6 @@ if ( $wmgUseWikibaseRepo ) {
 		);
 	}
 
-	$wgWBRepoSettings['usePropertyInfoTable'] = true;
-
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		// there is no cronjob dispatcher yet, this will do nothing
 		$wgWBRepoSettings['clientDbList'] = array( 'test2wiki' );
@@ -121,11 +119,7 @@ if ( $wmgUseWikibaseClient ) {
 		'commons'
 	);
 
-	$wgWBClientSettings['withoutTermWeight'] = false;
-	$wgWBClientSettings['usePropertyInfoTable'] = true;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
-	$wgWBClientSettings['enableSiteLinkWidget'] = true;
-
 
 	if ( $wgDBname === 'commonswiki' ) {
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
