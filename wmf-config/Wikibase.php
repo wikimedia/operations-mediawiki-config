@@ -50,6 +50,16 @@ if ( $wmgUseWikibaseRepo ) {
 		'commons'
 	);
 
+	// temporary override for test wikidata
+	if ( $wgDBname === 'testwikidatawiki' ) {
+		$wgWBRepoSettings['siteLinkGroups'] = array(
+			'wikipedia',
+			'wikisource',
+			'wikivoyage',
+			'commons'
+		);
+	}
+
 	$wgWBRepoSettings['usePropertyInfoTable'] = true;
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
