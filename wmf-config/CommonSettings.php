@@ -2468,7 +2468,12 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSEventLogging = $wmgULSEventLogging;
 }
 
-$wgExtensionEntryPointListFiles[] = getRealmSpecificFilename( "$wmfConfigDir/extension-list-wikidata" );
+// @note getRealmSpecificFilename only works with filenames with .suffix
+if ( $wmfRealm === 'labs' ) {
+	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikidata-labs";
+} else {
+	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikidata";
+}
 
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 	include( "$wmfConfigDir/Wikibase.php" );
