@@ -98,7 +98,7 @@ $wgLBFactoryConf = array(
 	's2' => array(
 		'db1036'    => 0,
 		'db1018'    => 0, # snapshot, vslow
-		'db1002'    => 50, # watchlist, recentchangeslinked, contributions, logpager
+		'db1002'    => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1009'    => 400,
 		'db1034'    => 400,
 	),
@@ -112,28 +112,28 @@ $wgLBFactoryConf = array(
 	's4' => array(
 		'db1059'   => 0,
 		'db1042'   => 0, # snapshot, vslow
-		'db1004'   => 50, # watchlist, recentchangeslinked, contributions, logpager
+		'db1004'   => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1011'   => 400,
 		'db1020'   => 400,
 	),
 	's5' => array(
 		'db1058'   => 0,
 		'db1005'   => 0, # snapshot, vslow
-		'db1026'   => 50, # watchlist, recentchangeslinked, contributions, logpager
+		'db1026'   => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1021'   => 400,
 		'db1045'   => 400,
 	),
 	's6' => array(
 		'db1027'   => 0,
 		'db1022'   => 0, # snapshot, vslow
-		'db1040'   => 50, # watchlist, recentchangeslinked, contributions, logpager
+		'db1040'   => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1015'   => 400,
 		'db1006'   => 400,
 	),
 	's7' => array(
 		'db1039' => 0,
 		'db1007' => 0, # snapshot, vslow
-		'db1041' => 50, # watchlist, recentchangeslinked, contributions, logpager
+		'db1041' => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1024' => 400,
 		'db1028' => 400,
 	),
