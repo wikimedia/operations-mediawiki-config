@@ -2390,6 +2390,10 @@ $wgConf->settings = array(
 	),
 	'+bnwikisource' => array( // bug 57134
 		'WS' => NS_PROJECT,
+		'Author' => 100, // bug 59901
+		'Author_talk' => 101, // bug 59901
+		'Portal' => 106, // bug 59901
+		'Portal_talk' => 107, // bug 59901
 	),
 	'+bpywiki' => array(
 		'Portal' => 100,
