@@ -101,6 +101,7 @@ $wgLBFactoryConf = array(
 		'db1002'    => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1009'    => 400,
 		'db1034'    => 400,
+		'db1060'    => 50,
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038'    => 0,
@@ -359,6 +360,7 @@ $wgLBFactoryConf = array(
 	'db1056' => '10.64.32.26', #do not remove or comment out
 	'db1058' => '10.64.32.28', #do not remove or comment out
 	'db1059' => '10.64.32.29', #do not remove or comment out
+	'db1060' => '10.64.32.30', #do not remove or comment out
 ),
 
 'externalLoads' => array(
