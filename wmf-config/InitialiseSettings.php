@@ -8950,9 +8950,17 @@ $wgConf->settings = array(
 	'enwiki' => 15,
 ),
 
-'wgExportAllowHistory' => array( 'default' => true ),
+'wgExportAllowHistory' => array(
+	'default' => true
+),
+
 'wgExportMaxHistory' => array(
 	'default' => 1000, # changed from 100 -- brion 2008-07-10
+),
+
+'wgExportFromNamespaces' => array( // bug 59947
+	'default' => false,
+	'mediawikiwiki' => true,
 ),
 
 'wgParserCacheExpireTime' => array(
