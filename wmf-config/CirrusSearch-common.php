@@ -40,7 +40,10 @@ $wgCirrusSearchPreferRecentDefaultDecayPortion = $wmgCirrusSearchPreferRecentDef
 // Commons is special
 if ( $wgDBname == 'commonswiki' ) {
 	$wgCirrusSearchNamespaceMappings[ NS_FILE ] = 'file';
-	$wgCirrusSearchReplicaCount['file'] = 2;
+
+	// Temporarily lower redundancy for commonswiki's file namespace to save some space.
+	// Should be $wgCirrusSearchReplicaCount['file'] = 2;
+	$wgCirrusSearchReplicaCount['file'] = 1;
 // So is everyone else, for using commons
 }
 // Temporarily disabled until we've deployed the fix for
@@ -48,6 +51,12 @@ if ( $wgDBname == 'commonswiki' ) {
 //else {
 //	$wgCirrusSearchExtraIndexes[ NS_FILE ] = array( 'commonswiki_file' );
 //}
+
+
+// Temporarily lower redundancy for enwiki to save some space.
+if ( $wgDBName == 'enwiki' ) {
+	$wgCirrusSearchReplicaCount = array( 'content' => 1, 'general' => 1 );
+}
 
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
