@@ -10305,6 +10305,7 @@ $wgConf->settings = array(
 		'*.kb.nl',                       // for GWToolset, mediafile server for the koninklijke bibliotheek, nationale bibliotheek van nederland
 		'*.lndb.lv',                     // for GWToolset, mediafile server for latvijas nacionālā bibliotēka
 		'*.memorix.nl',                  // for GWToolset, mediafile server for the archief eemland
+		'*.openbeelden.nl',              // for GWToolset, mediafile server for open images, an initiative of the netherlands institute for sound and vision
 		'*.raa.se',                      // for GWToolset, mediafile server for the swedish national heritage board
 		'*.rbge.org.uk',                 // for GWToolset, mediafile server for the royal botanic garden edinburgh
 		'*.rijksmuseum.nl',              // for GWToolset, mediafile server for the rijksmuseum
