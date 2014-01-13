@@ -54,7 +54,7 @@ if ( $wgDBname == 'commonswiki' ) {
 
 
 // Temporarily lower redundancy for enwiki to save some space.
-if ( $wgDBName == 'enwiki' ) {
+if ( $wgDBname == 'enwiki' ) {
 	$wgCirrusSearchReplicaCount = array( 'content' => 1, 'general' => 1 );
 }
 
