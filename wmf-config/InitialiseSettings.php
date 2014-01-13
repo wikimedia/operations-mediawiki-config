@@ -10997,6 +10997,7 @@ $wgConf->settings = array(
 
 'wmgUsePoolCounter' => array(
 	'default' => true,
+	'jawiki' => false,
 ),
 
 'wmgUseGoogleNewsSitemap' => array(
