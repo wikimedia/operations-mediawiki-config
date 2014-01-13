@@ -2216,6 +2216,9 @@ $wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMetadataJob';
 $wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMediafileJob';
 $wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetGWTFileBackendCleanupJob';
 
+# Slow Parsoid jobs
+$wgJobTypesExcludedFromDefaultQueue[] = 'ParsoidCacheUpdateJobOnDependencyChange';
+
 if ( $wmgUseEducationProgram ) {
 	require_once( "$IP/extensions/EducationProgram/EducationProgram.php" );
 	$egEPSettings['dykCategory'] = $wmgEducationProgramDYKCat;
