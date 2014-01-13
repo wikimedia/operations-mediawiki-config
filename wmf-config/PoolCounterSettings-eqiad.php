@@ -17,7 +17,7 @@ $wgPoolCounterConf = array(
 		'class' => 'PoolCounter_Client',
 		'timeout' => 15,
 		'workers' => 2,
-		'maxqueue' => 100
+		'maxqueue' => 150
 	),
 	'LuceneSearchRequest' => array(
 		'class' => 'PoolCounter_Client',
