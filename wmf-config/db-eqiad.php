@@ -92,7 +92,7 @@ $wgLBFactoryConf = array(
 		'db1043'    => 100, # 1.4TB sas 64GB, vslow
 		'db1033'    => 300, # 1.4TB sas 64GB
 		'db1037'    => 300, # 1.4TB sas 64GB
-		'db1049'    => 50, # warm up, 2.8TB sas 64GB
+		'db1049'    => 300, # 2.8TB sas 64GB
 		'db1051'    => 400, # 2.8TB sas 96GB
 		'db1052'    => 400, # 2.8TB sas 96GB
 	),
