@@ -88,8 +88,8 @@ $wgLBFactoryConf = array(
 	's1' => array(
 		'db1056'    => 0, # 2.8TB sas 96GB
 		'db1050'    => 0, # 2.8TB sas 64GB, snapshot
-		'db1049'    => 0, # 2.8TB sas 64GB, watchlist, recentchangeslinked, contributions, logpager
-		'db1055'    => 0, # warmup to replace db1049, groupLoadsByDB
+		#reindexing 'db1049'    => 0, # 2.8TB sas 64GB
+		'db1055'    => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1043'    => 100, # 1.4TB sas 64GB, vslow
 		'db1033'    => 300, # 1.4TB sas 64GB
 		'db1037'    => 300, # 1.4TB sas 64GB
@@ -128,8 +128,8 @@ $wgLBFactoryConf = array(
 	's6' => array(
 		'db1027'   => 0,
 		'db1022'   => 0, # snapshot, vslow
-		'db1040'   => 0, # watchlist, recentchangeslinked, contributions, logpager
-		'db1023'   => 0, # warmup to replace db1040, groupLoadsBySection
+		#reindexing 'db1040'   => 0,
+		'db1023'   => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1015'   => 400,
 		'db1006'   => 400,
 	),
@@ -228,19 +228,15 @@ $wgLBFactoryConf = array(
 			'db1022' => 1,
 		),
 		'watchlist' => array(
-			'db1040' => 1,
 			'db1023' => 1,
 		),
 		'recentchangeslinked' => array(
-			'db1040' => 1,
 			'db1023' => 1,
 		),
 		'contributions' => array(
-			'db1040' => 1,
 			'db1023' => 1,
 		),
 		'logpager' => array(
-			'db1040' => 1,
 			'db1023' => 1,
 		),
 	),
@@ -267,19 +263,15 @@ $wgLBFactoryConf = array(
 'groupLoadsByDB' => array(
 	'enwiki' => array(
 		'watchlist' => array(
-			'db1049' => 1,
 			'db1055' => 1,
 		),
 		'recentchangeslinked' => array(
-			'db1049' => 1,
 			'db1055' => 1,
 		),
 		'contributions' => array(
-			'db1049' => 1,
 			'db1055' => 1,
 		),
 		'logpager' => array(
-			'db1049' => 1,
 			'db1055' => 1,
 		),
 		'dump' => array(
