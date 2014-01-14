@@ -89,6 +89,7 @@ $wgLBFactoryConf = array(
 		'db1056'    => 0, # 2.8TB sas 96GB
 		'db1050'    => 0, # 2.8TB sas 64GB, snapshot
 		'db1049'    => 0, # 2.8TB sas 64GB, watchlist, recentchangeslinked, contributions, logpager
+		'db1055'    => 0, # warmup to replace db1049, groupLoadsByDB
 		'db1043'    => 100, # 1.4TB sas 64GB, vslow
 		'db1033'    => 300, # 1.4TB sas 64GB
 		'db1037'    => 300, # 1.4TB sas 64GB
@@ -128,6 +129,7 @@ $wgLBFactoryConf = array(
 		'db1027'   => 0,
 		'db1022'   => 0, # snapshot, vslow
 		'db1040'   => 0, # watchlist, recentchangeslinked, contributions, logpager
+		'db1023'   => 0, # warmup to replace db1040, groupLoadsBySection
 		'db1015'   => 400,
 		'db1006'   => 400,
 	),
@@ -227,15 +229,19 @@ $wgLBFactoryConf = array(
 		),
 		'watchlist' => array(
 			'db1040' => 1,
+			'db1023' => 1,
 		),
 		'recentchangeslinked' => array(
 			'db1040' => 1,
+			'db1023' => 1,
 		),
 		'contributions' => array(
 			'db1040' => 1,
+			'db1023' => 1,
 		),
 		'logpager' => array(
 			'db1040' => 1,
+			'db1023' => 1,
 		),
 	),
 	's7' => array(
@@ -262,15 +268,19 @@ $wgLBFactoryConf = array(
 	'enwiki' => array(
 		'watchlist' => array(
 			'db1049' => 1,
+			'db1055' => 1,
 		),
 		'recentchangeslinked' => array(
 			'db1049' => 1,
+			'db1055' => 1,
 		),
 		'contributions' => array(
 			'db1049' => 1,
+			'db1055' => 1,
 		),
 		'logpager' => array(
 			'db1049' => 1,
+			'db1055' => 1,
 		),
 		'dump' => array(
 			'db1043' => 1,
@@ -336,6 +346,7 @@ $wgLBFactoryConf = array(
 	'db1020' => '10.64.16.9', #do not remove or comment out
 	'db1021' => '10.64.16.10', #do not remove or comment out
 	'db1022' => '10.64.16.11', #do not remove or comment out
+	'db1023' => '10.64.16.12', #do not remove or comment out
 	'db1024' => '10.64.16.13', #do not remove or comment out
 	'db1026' => '10.64.16.15', #do not remove or comment out
 	'db1027' => '10.64.16.16', #do not remove or comment out
@@ -357,6 +368,7 @@ $wgLBFactoryConf = array(
 	'db1050' => '10.64.16.145', #do not remove or comment out
 	'db1051' => '10.64.32.21', #do not remove or comment out
 	'db1052' => '10.64.32.22', #do not remove or comment out
+	'db1055' => '10.64.32.25', #do not remove or comment out
 	'db1056' => '10.64.32.26', #do not remove or comment out
 	'db1058' => '10.64.32.28', #do not remove or comment out
 	'db1059' => '10.64.32.29', #do not remove or comment out
