@@ -11150,8 +11150,7 @@ $wgConf->settings = array(
 	'wikidata' => false, // Disabled due to lack of mobile domain setup
 ),
 'wmgEnableTextExtracts' => array(
-	'default' => false,
-	'testwiki' => true,
+	'default' => true,
 ),
 
 'wmgZeroRatedMobileAccess' => array(
