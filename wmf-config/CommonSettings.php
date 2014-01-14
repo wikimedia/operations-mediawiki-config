@@ -1982,6 +1982,8 @@ require( getRealmSpecificFilename( "$wmfConfigDir/mobile.php" ) );
 # MUST be after MobileFrontend initialization
 if ( $wmgEnableTextExtracts ) {
 	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
+	$wgExtractsRemoveClasses[] = '.metadata';
+	$wgExtractsRemoveClasses[] = '#coordinates';
 }
 
 if ( $wmgUseSubPageList3 ) {
