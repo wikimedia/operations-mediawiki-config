@@ -12500,7 +12500,6 @@ $wgConf->settings = array(
 
 'wmgWikibaseEnableData' => array(
 	'default' => true,
-	'commonswiki' => false,
 	'wikisource' => false
 ),
 
