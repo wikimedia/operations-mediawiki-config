@@ -115,6 +115,7 @@ $IP/extensions/SwiftCloudFiles/SwiftCloudFiles.php
 $IP/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php
 $IP/extensions/TemplateData/TemplateData.php
 $IP/extensions/TemplateSandbox/TemplateSandbox.php
+$IP/extensions/TextExtracts/TextExtracts.php
 $IP/extensions/Thanks/Thanks.php
 $IP/extensions/TimedMediaHandler/TimedMediaHandler.php
 $IP/extensions/timeline/Timeline.php
