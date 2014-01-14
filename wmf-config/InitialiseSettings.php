@@ -11061,11 +11061,6 @@ $wgConf->settings = array(
 	'enwiki' => true,
 ),
 
-'wmgUseIncubator' => array(
-	'default' => false,
-	'incubatorwiki' => true,
-),
-
 'wmgUseWikiLove' => array(
 	'default' => false,
 	'arwiki' => true,
@@ -12623,6 +12618,11 @@ $wgConf->settings = array(
 	'default' => true,
 	'loginwiki' => false,
 	'votewiki' => false,
+),
+
+'wmgUseIncubator' => array(
+	'default' => false,
+	'incubatorwiki' => true,
 ),
 
 'wmgUsePageImages' => array(
