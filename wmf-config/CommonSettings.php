@@ -1979,6 +1979,11 @@ $wgAvailableRights[] = 'moodbar-admin'; // To allow global groups to include thi
 
 require( getRealmSpecificFilename( "$wmfConfigDir/mobile.php" ) );
 
+# MUST be after MobileFrontend initialization
+if ( $wmgEnableTextExtracts ) {
+	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
+}
+
 if ( $wmgUseSubPageList3 ) {
 	include( "$IP/extensions/SubPageList3/SubPageList3.php" );
 }
