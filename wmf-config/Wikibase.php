@@ -115,7 +115,6 @@ if ( $wmgUseWikibaseClient ) {
 
 	if ( $wgDBname === 'commonswiki' ) {
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
-		$wgWBClientSettings['allowDataTransclusion'] = false;
 	}
 
 	$wgWBClientSettings['siteGroup'] = $wmgWikibaseSiteGroup;
@@ -138,6 +137,6 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings[$setting] = $value;
 	}
 
-	$wgWBClientSettings['allowDataTransclusion'] = true;
+	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
 	$wgWBClientSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfExtendedVersionNumber";
 }

@@ -12498,6 +12498,12 @@ $wgConf->settings = array(
 	'testwiki' => 'wikidatawiki-test'
 ),
 
+'wmgWikibaseEnableData' => array(
+	'default' => true,
+	'commonswiki' => false,
+	'wikisource' => false
+),
+
 'wmgUseWikibaseRepo' => array(
 	'default' => false,
 	'wikidata' => true,
