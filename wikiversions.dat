@@ -1,5 +1,5 @@
 aawikibooks php-1.23wmf10 *
-aawiki php-1.23wmf9 *
+aawiki php-1.23wmf10 *
 aawiktionary php-1.23wmf10 *
 abwiki php-1.23wmf9 *
 abwiktionary php-1.23wmf10 *
@@ -125,7 +125,7 @@ cewiki php-1.23wmf9 *
 chairwiki php-1.23wmf10 *
 chapcomwiki php-1.23wmf10 *
 checkuserwiki php-1.23wmf10 *
-chowiki php-1.23wmf9 *
+chowiki php-1.23wmf10 *
 chrwiki php-1.23wmf9 *
 chrwiktionary php-1.23wmf10 *
 chwikibooks php-1.23wmf10 *
@@ -306,7 +306,7 @@ hiwikibooks php-1.23wmf10 *
 hiwiki php-1.23wmf9 *
 hiwikiquote php-1.23wmf10 *
 hiwiktionary php-1.23wmf10 *
-howiki php-1.23wmf9 *
+howiki php-1.23wmf10 *
 hrwikibooks php-1.23wmf10 *
 hrwiki php-1.23wmf9 *
 hrwikiquote php-1.23wmf10 *
@@ -327,7 +327,7 @@ hywiki php-1.23wmf9 *
 hywikiquote php-1.23wmf10 *
 hywikisource php-1.23wmf10 *
 hywiktionary php-1.23wmf10 *
-hzwiki php-1.23wmf9 *
+hzwiki php-1.23wmf10 *
 iawikibooks php-1.23wmf10 *
 iawiki php-1.23wmf9 *
 iawiktionary php-1.23wmf10 *
@@ -341,7 +341,7 @@ iewikibooks php-1.23wmf10 *
 iewiki php-1.23wmf9 *
 iewiktionary php-1.23wmf10 *
 igwiki php-1.23wmf9 *
-iiwiki php-1.23wmf9 *
+iiwiki php-1.23wmf10 *
 ikwiki php-1.23wmf9 *
 ikwiktionary php-1.23wmf10 *
 ilowiki php-1.23wmf9 *
@@ -385,7 +385,7 @@ kawiktionary php-1.23wmf10 *
 kbdwiki php-1.23wmf9 *
 kgwiki php-1.23wmf9 *
 kiwiki php-1.23wmf9 *
-kjwiki php-1.23wmf9 *
+kjwiki php-1.23wmf10 *
 kkwikibooks php-1.23wmf10 *
 kkwiki php-1.23wmf9 *
 kkwikiquote php-1.23wmf10 *
@@ -409,7 +409,7 @@ kowikisource php-1.23wmf10 *
 kowikiversity php-1.23wmf10 *
 kowiktionary php-1.23wmf10 *
 krcwiki php-1.23wmf9 *
-krwiki php-1.23wmf9 *
+krwiki php-1.23wmf10 *
 krwikiquote php-1.23wmf10 *
 kshwiki php-1.23wmf9 *
 kswikibooks php-1.23wmf10 *
@@ -471,7 +471,7 @@ mgwikibooks php-1.23wmf10 *
 mgwiki php-1.23wmf9 *
 mgwiktionary php-1.23wmf10 *
 mhrwiki php-1.23wmf9 *
-mhwiki php-1.23wmf9 *
+mhwiki php-1.23wmf10 *
 mhwiktionary php-1.23wmf10 *
 minwiki php-1.23wmf9 *
 miwikibooks php-1.23wmf10 *
@@ -491,7 +491,7 @@ mnwikibooks php-1.23wmf10 *
 mnwiki php-1.23wmf9 *
 mnwiktionary php-1.23wmf10 *
 movementroleswiki php-1.23wmf10 *
-mowiki php-1.23wmf9 *
+mowiki php-1.23wmf10 *
 mowiktionary php-1.23wmf10 *
 mrjwiki php-1.23wmf9 *
 mrwikibooks php-1.23wmf10 *
@@ -504,7 +504,7 @@ mswiki php-1.23wmf9 *
 mswiktionary php-1.23wmf10 *
 mtwiki php-1.23wmf9 *
 mtwiktionary php-1.23wmf10 *
-muswiki php-1.23wmf9 *
+muswiki php-1.23wmf10 *
 mwlwiki php-1.23wmf9 *
 mxwikimedia php-1.23wmf10 *
 myvwiki php-1.23wmf9 *
@@ -529,7 +529,7 @@ newikibooks php-1.23wmf10 *
 newiki php-1.23wmf9 *
 newiktionary php-1.23wmf10 *
 newwiki php-1.23wmf9 *
-ngwiki php-1.23wmf9 *
+ngwiki php-1.23wmf10 *
 nlwikibooks php-1.23wmf10 *
 nlwikimedia php-1.23wmf10 *
 nlwikinews php-1.23wmf10 *
