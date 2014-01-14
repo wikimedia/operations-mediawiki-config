@@ -1,13 +1,13 @@
 <?php
 
 if ( $wmfRealm === 'production' ) {
-		require_once( "$IP/extensions/DataValues/DataValues.php" );
-		require_once( "$IP/extensions/DataTypes/DataTypes.php" );
-		require_once( "$IP/extensions/Diff/Diff.php" );
-		require_once( "$IP/extensions/WikibaseDataModel/WikibaseDataModel.php" );
-		require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
+	require_once( "$IP/extensions/DataValues/DataValues.php" );
+	require_once( "$IP/extensions/DataTypes/DataTypes.php" );
+	require_once( "$IP/extensions/Diff/Diff.php" );
+	require_once( "$IP/extensions/WikibaseDataModel/WikibaseDataModel.php" );
+	require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
 } else {
-		require_once( "$IP/extensions/Wikidata/Wikidata.php" );
+	require_once( "$IP/extensions/Wikidata/Wikidata.php" );
 }
 
 if ( $wmgUseWikibaseRepo ) {
@@ -46,19 +46,10 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['siteLinkGroups'] = array(
 		'wikipedia',
+		'wikisource',
 		'wikivoyage',
 		'commons'
 	);
-
-	// temporary override for test wikidata
-	if ( $wgDBname === 'testwikidatawiki' ) {
-		$wgWBRepoSettings['siteLinkGroups'] = array(
-			'wikipedia',
-			'wikisource',
-			'wikivoyage',
-			'commons'
-		);
-	}
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		// there is no cronjob dispatcher yet, this will do nothing
@@ -115,6 +106,7 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['siteLinkGroups'] = array(
 		'wikipedia',
+		'wikisource',
 		'wikivoyage',
 		'commons'
 	);
