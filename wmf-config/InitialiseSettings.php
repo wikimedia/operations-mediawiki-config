@@ -12289,6 +12289,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
+	'enwiki' => true,
 ),
 'wmgFlowEditorList' => array(
 	// Disable VE inside flow, leaving only the wikitext editor
@@ -12300,6 +12301,11 @@ $wgConf->settings = array(
 	'testwiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
 	'test2wiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
 	'mediawikiwiki' => array( 'Talk:Flow QA', 'Talk:Sandbox', 'Talk:Flow' ),
+	'enwiki' => array( // Bug 60178
+		'Wikipedia talk:WikiProject Breakfast',
+		'Wikipedia talk:WikiProject Hampshire',
+		'Wikipedia talk:Flow/Developer test page',
+	),
 ),
 // Use separate database on extension1 cluster for all non-private wikis.
 'wmgFlowDefaultWikiDb' => array(
