@@ -7788,6 +7788,9 @@ $wgConf->settings = array(
 		'sysop' => array( 'inactive', 'flood' ),
 		'bureaucrat' => array( 'import', 'transwiki', 'inactive' ),
 	),
+	'+elwiki' => array(
+		'bureaucrat' => array( 'accountcreator' ), // bug 59997
+	),
 	'+elwiktionary' => array(
 		'bureaucrat' => array( 'interface_editors' ),
 		'sysop' => array( 'autopatrolled' ),
@@ -8235,6 +8238,9 @@ $wgConf->settings = array(
 	'+donatewiki' => array(
 		'sysop' => array( 'inactive', 'confirmed', 'flood' ),
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'import', 'transwiki', 'inactive', 'confirmed' ),
+	),
+	'+elwiki' => array(
+		'bureaucrat' => array( 'accountcreator' ), // bug 59997
 	),
 	'+elwiktionary' => array(
 		'bureaucrat' => array( 'interface_editors' ),
