@@ -918,7 +918,7 @@ $wgConf->settings = array(
 	'elwikivoyage' => '//upload.wikimedia.org/wikipedia/commons/f/fa/Wikivoyage-Logo-v3-small-el.png',
 	'hewikivoyage' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Wikivoyage-Logo-v3-he.png/153px-Wikivoyage-Logo-v3-he.png',
 	'plwikivoyage' => '//upload.wikimedia.org/wikipedia/commons/f/f2/Wikivoyage-Logo-v3-small-pl.png',
-	'zhwikivoyage' => '//upload.wikimedia.org/wikipedia/commons/3/3c/Wikivoyage-Logo-v3-zh-hans.png', // bug 59077
+	'zhwikivoyage' => '$stdlogo', // bug 60078
 
 	// Chapter wikis
 	'arwikimedia' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Wikimedia_Argentina_logo.svg/135px-Wikimedia_Argentina_logo.svg.png',
