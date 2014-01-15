@@ -117,6 +117,7 @@ $wgLBFactoryConf = array(
 		'db1004'   => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1011'   => 400,
 		'db1020'   => 400,
+		'db1040'   => 50,
 	),
 	's5' => array(
 		'db1058'   => 0,
@@ -128,7 +129,6 @@ $wgLBFactoryConf = array(
 	's6' => array(
 		'db1027'   => 0,
 		'db1022'   => 0, # snapshot, vslow
-		#reindexing 'db1040'   => 0,
 		'db1023'   => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1015'   => 400,
 		'db1006'   => 400,
