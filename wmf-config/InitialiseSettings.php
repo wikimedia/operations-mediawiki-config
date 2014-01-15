@@ -8130,6 +8130,9 @@ $wgConf->settings = array(
 			'flood', // bug 52546
 		),
 	),
+	'+zhwikivoyage' => array(
+		'sysop' => array( 'confirmed', 'import', 'transwiki' ), // bug 60085
+	),
 	'+zh_yuewiki' => array(
 		'sysop' => array( 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ),
 	),
@@ -8599,6 +8602,9 @@ $wgConf->settings = array(
 			'rollbacker',
 			'flood', // bug 52546
 		),
+	),
+	'+zhwikivoyage' => array(
+		'sysop' => array( 'confirmed', 'import', 'transwiki' ), // bug 60085
 	),
 	'+zh_yuewiki' => array(
 		'sysop' => array( 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ),
