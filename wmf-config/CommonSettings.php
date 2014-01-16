@@ -665,11 +665,6 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgMinimumVideoPlayerSize = $wmgMinimumVideoPlayerSize;
 }
 
-// VERY temporary!!
-if ( $wgVersion == '1.23wmf9' ) {
-	include( $IP . '/extensions/AssertEdit/AssertEdit.php' );
-}
-
 if ( $wgUseContactPageFundraiser ) {
 	include( "$IP/extensions/ContactPageFundraiser/ContactPage.php" );
 	$wgContactUser = 'Storiescontact';
