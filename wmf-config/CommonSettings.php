@@ -1797,6 +1797,7 @@ if ( $wmgUseUploadWizard ) {
 		$wgUploadWizardConfig['feedbackPage'] = 'Commons:Upload_Wizard_feedback'; # Set by neilk, 2011-11-01, per erik
 		$wgUploadWizardConfig["missingCategoriesWikiText"] = "{{subst:unc}}";
 		$wgUploadWizardConfig['blacklistIssuesPage'] = 'Commons:Upload_Wizard_blacklist_issues'; # Set by neilk, 2011-11-01, per erik
+		$wgUploadWizardConfig['flickrBlacklistPage'] = 'User:FlickreviewR/bad-authors';
 	} elseif ( $wgDBname == 'test2wiki' ) {
 		$wgUploadWizardConfig['feedbackPage'] = 'Wikipedia:Upload_Wizard_feedback'; # Set by neilk, 2011-11-01, per erik
 		$wgUploadWizardConfig["missingCategoriesWikiText"] = "{{subst:unc}}";
