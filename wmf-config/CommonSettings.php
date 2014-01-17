@@ -912,6 +912,7 @@ $wgThumbnailEpoch = '20130101000000';
 
 # OAI repository for update server
 include( $IP . '/extensions/OAI/OAIRepo.php' );
+$oaiAgentRegex = '/experimental/';
 $oaiAuth = true;
 $oaiAuditDatabase = 'oai';
 $oaiChunkSize = 40;
