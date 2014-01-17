@@ -133,15 +133,20 @@ return array(
 	'-wgJobLogFile' => array(),
 
 	'-wgRC2UDPAddress' => array(
+		'default' => true,
+	),
+
+	// bug 60013, 56758
+	'-wmgRC2UDPPrefix' => array(
 		'default' => false,
 	),
 
 	'wmgUseWebFonts' => array(
 		'mywiki' => true,
-        ),
+	),
 
-        'wgLogo' => array(
-//		'commonswiki'       => '//commons.wikimedia.beta.wmflabs.org/w/thumb.php?f=Wiki.png&width=88&a',
+	'wgLogo' => array(
+	//	'commonswiki' => '//commons.wikimedia.beta.wmflabs.org/w/thumb.php?f=Wiki.png&width=88&a',
 	),
 
 	// Editor Engagement stuff
