@@ -6236,7 +6236,7 @@ $wgConf->settings = array(
 ),
 
 'wmgRC2UDPAddress' => array(
-	'default' => '208.80.152.178', // pmtpa: ekrem
+	'default' => '208.80.154.157', // chromium, temporary relay
 ),
 
 'wmgRC2UDPPort' => array(
