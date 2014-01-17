@@ -133,7 +133,7 @@ $wgFileBackends[] = array(
 	'lockManager' => 'redisLockManager',
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-		array( 'template' => 'local-swift', 'isMultiMaster' => false ),
+#		array( 'template' => 'local-swift', 'isMultiMaster' => false ),
 		array( 'template' => 'local-swift-eqiad', 'isMultiMaster' => true ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
@@ -146,7 +146,7 @@ $wgFileBackends[] = array(
 	'lockManager' => 'redisLockManager',
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-		array( 'template' => 'shared-swift', 'isMultiMaster' => false ),
+#		array( 'template' => 'shared-swift', 'isMultiMaster' => false ),
 		array( 'template' => 'shared-swift-eqiad', 'isMultiMaster' => true ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
@@ -159,7 +159,7 @@ $wgFileBackends[] = array(
 	'lockManager' => 'redisLockManager',
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-		array( 'template' => 'global-swift', 'isMultiMaster' => false ),
+#		array( 'template' => 'global-swift', 'isMultiMaster' => false ),
 		array( 'template' => 'global-swift-eqiad', 'isMultiMaster' => true ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
