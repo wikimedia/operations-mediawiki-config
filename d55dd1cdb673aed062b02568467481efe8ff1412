@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aef5673e_448cc0db",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 216
+      },
+      "writtenOn": "2014-01-17T23:07:31Z",
+      "side": 1,
+      "message": "Tabs on a blank line.",
+      "revId": "d55dd1cdb673aed062b02568467481efe8ff1412",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aef5673e_648fc4d2",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 216
+      },
+      "writtenOn": "2014-01-17T23:07:31Z",
+      "side": 1,
+      "message": "Dito.",
+      "revId": "d55dd1cdb673aed062b02568467481efe8ff1412",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
