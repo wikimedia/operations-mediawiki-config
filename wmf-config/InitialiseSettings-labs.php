@@ -132,16 +132,17 @@ return array(
 	'-wgRateLimitLog' => array(),
 	'-wgJobLogFile' => array(),
 
-	'-wgRC2UDPAddress' => array(
+	// bug 60013, 56758
+	'-wmgRC2UDPPrefix' => array(
 		'default' => false,
 	),
 
 	'wmgUseWebFonts' => array(
 		'mywiki' => true,
-        ),
+	),
 
-        'wgLogo' => array(
-//		'commonswiki'       => '//commons.wikimedia.beta.wmflabs.org/w/thumb.php?f=Wiki.png&width=88&a',
+	'wgLogo' => array(
+	//	'commonswiki' => '//commons.wikimedia.beta.wmflabs.org/w/thumb.php?f=Wiki.png&width=88&a',
 	),
 
 	// Editor Engagement stuff
@@ -333,9 +334,6 @@ return array(
 		'default' => false,
 	),
 
-	'wmgUseRC2UDP' => array(
-		'default' => false,
-	),
 );
 
 } # wmflLabsSettings()
