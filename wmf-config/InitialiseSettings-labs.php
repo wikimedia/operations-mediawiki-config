@@ -133,9 +133,14 @@ return array(
 	'-wgJobLogFile' => array(),
 
 	'-wgRC2UDPAddress' => array(
+		'default' => true,
+	),
+		
+	// bug 60013, 56758
+	'-wmgRC2UDPPrefix' => array(
 		'default' => false,
 	),
-
+		
 	'wmgUseWebFonts' => array(
 		'mywiki' => true,
         ),
