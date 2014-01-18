@@ -136,7 +136,7 @@ $wgLBFactoryConf = array(
 	's7' => array(
 		'db1039' => 0,
 		'db1007' => 0, # snapshot, vslow
-		# schema changes 'db1041' => 0, # watchlist, recentchangeslinked, contributions, logpager
+		'db1041' => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1024' => 400,
 		'db1028' => 400,
 	),
@@ -263,16 +263,16 @@ $wgLBFactoryConf = array(
 			'db1007' => 1,
 		),
 		'watchlist' => array(
-			# schema changes 'db1041' => 1,
+			'db1041' => 1,
 		),
 		'recentchangeslinked' => array(
-			# schema changes 'db1041' => 1,
+			'db1041' => 1,
 		),
 		'contributions' => array(
-			# schema changes 'db1041' => 1,
+			'db1041' => 1,
 		),
 		'logpager' => array(
-			# schema changes 'db1041' => 1,
+			'db1041' => 1,
 		),
 	),
 ),
