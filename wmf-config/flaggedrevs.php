@@ -91,6 +91,20 @@ elseif ( $wgDBname == 'bnwiki' ) { // http://bugzilla.wikimedia.org/show_bug.cgi
 	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'editor' ) );
 }
 
+elseif ( $wgDBname == 'cewiki' ) { // based on ruwiki settings
+
+	// Bug 56408
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 );
+
+	$wgFlaggedRevTags['accuracy']['levels'] = 3; // Is this needed?
+	$wgFlaggedRevsOverride = false;
+
+	$wgGroupPermissions['autoeditor']['autoreview'] = true;
+	$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
+
+	$wgGroupPermissions['sysop']['stablesettings'] = true;
+}
+
 elseif ( $wgDBname == 'testwiki' && false ) {
 	// Disabled temporarily, give testwiki enwiki's settings instead --Roan May 7 2012
 	$wgGroupsAddToSelf['*'][] = 'editor';
