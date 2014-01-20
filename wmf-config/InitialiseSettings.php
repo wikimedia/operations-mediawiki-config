@@ -3378,6 +3378,10 @@ $wgConf->settings = array(
 		'作者讨论' => 103, // Author talk
 		'作者討論' => 103,
 	),
+	'+zhwikivoyage' => array( // bug 60122
+		'维基导游' => NS_PROJECT,
+		'維基導遊' => NS_PROJECT,
+	),
 	'+zh_yuewiki' => array(
 		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
