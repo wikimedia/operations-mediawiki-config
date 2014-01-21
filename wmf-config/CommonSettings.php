@@ -2480,6 +2480,10 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	}
 
 	$wgULSEventLogging = $wmgULSEventLogging;
+	if ( in_array( $wgDBname, array( 'wikidatawiki', 'testwikidatawiki' ) ) ) {
+		// See bug 46306 comment 96
+		$wgDefaultUserOptions['uls-enable'] = 1;
+	}
 }
 
 // @note getRealmSpecificFilename only works with filenames with .suffix
