@@ -6957,8 +6957,13 @@ $wgConf->settings = array(
 		),
 	),
 	'hewikibooks' => array(
-		'patroller' => array( 'patrol' => true, 'patrolmarks' => true ),  # bug 27918
-		'autopatrolled' => array( 'autopatrol' => true ), # bug 27918
+		'patroller' => array(
+			'patrol' => true, // bug 27918
+			'patrolmarks' => true, // bug 27918
+			'autopatrol' => true, // bug 60305
+			'rollback' => true, // bug 60305
+			),
+		'autopatrolled' => array( 'autopatrol' => true ), // bug 27918
 	),
 	'hewikiquote' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
