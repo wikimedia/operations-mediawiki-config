@@ -12512,6 +12512,14 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+// Should ULS be enabled for users by default
+'wmgUniversalLanguageSelectorDefault' => array(
+	'default' => false,
+	'testwiki' => true,
+	'testwikidatawiki' => true,
+	'wikidatawiki' => true,
+),
+
 'wmgULSPosition' => array(
 	'default' => 'interlanguage',
 	'special' => 'personal',
