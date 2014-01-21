@@ -7116,6 +7116,11 @@ $wgConf->settings = array(
 	'kowiki' => array(
 		'rollbacker' => array( 'rollback' => true ),
 	),
+    'kowikinews' => array(
+        'autoconfirmed' => array( 'reupload' => false, 'upload' => false ),
+        'confirmed' => array( 'reupload' => false, 'upload' => false ),
+        'user' => array( 'reupload-own' => false ),
+    ),
 	'lawiki' => array(
 		'user' => array( 'upload' => false ),
 		'autoconfirmed' => array( 'upload' => false ),
