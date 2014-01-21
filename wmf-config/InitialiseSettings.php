@@ -6398,11 +6398,13 @@ $wgConf->settings = array(
 		),
 		'linkpurge' => array(
 			// 30 backlink purges per minute
+			'ip'   => array( 30, 60 ),
 			'user' => array( 30, 60 ),
 		),
 		'renderfile' => array(
-			// 1800 new thumbnails per minute
-			'user' => array( 900, 30 ),
+			// 1400 new thumbnails per minute
+			'ip'   => array( 700, 30 ),
+			'user' => array( 700, 30 ),
 		),
 	),
 	'+dewiki' => array( // bug 57820
