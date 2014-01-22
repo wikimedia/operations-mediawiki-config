@@ -7625,8 +7625,13 @@ $wgConf->settings = array(
 		'flood' => array( 'bot' => true ), // bug 52546
 		'sysop' => array( 'upload' => true, 'reupload' => true ),
 	),
-	// http://bugzilla.wikimedia.org/show_bug.cgi?id=5836
-	'zhwiktionary' => array( 'bot' => array( 'patrol' => true ) ),
+	'zhwikivoyage' => array( // bug 60328
+		'autopatrolled' => array( 'autopatrol' => true ),
+		'patroller' => array( 'patrol' => true, 'rollback' => true ),
+	),
+	'zhwiktionary' => array( // bug 5836
+		'bot' => array( 'patrol' => true ),
+	),
 	'zh_yuewiki' => array(
 		'autoconfirmed' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
