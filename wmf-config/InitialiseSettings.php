@@ -12218,13 +12218,13 @@ $wgConf->settings = array(
 # disable its API modules in CommonSettings.php or below
 'wmgEnableGeoData' => array(
 	'default' => false,
-	'loginwiki' => false,
-	'votewiki' => false,
 	'wiki' => true,
 	'wikivoyage' => true,
 ),
 'wmgEnableGeoSearch' => array(
 	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgUseEcho' => array(
