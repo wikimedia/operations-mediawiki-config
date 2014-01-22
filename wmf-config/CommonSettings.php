@@ -2488,7 +2488,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 
 // @note getRealmSpecificFilename only works with filenames with .suffix
 if ( $wmfRealm === 'labs' ) {
-	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikidata-labs";
+	$wgExtensionEntryPointListFiles[] = "$IP/extensions/Wikidata/extension-list-wikidata";
 } else {
 	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikidata";
 }
