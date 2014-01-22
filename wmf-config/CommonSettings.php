@@ -1193,6 +1193,7 @@ if ( $wmgUseCentralAuth ) {
 	# Broken -- TS
 	if( $wmfRealm == 'production' ) {
 		$wgCentralAuthRC[] = array(
+			'formatter' => 'IRCColourfulCARCFeedFormatter',
 			'uri' => "udp://$wmgRC2UDPAddress:$wmgRC2UDPPort/#central\t",
 		);
 
