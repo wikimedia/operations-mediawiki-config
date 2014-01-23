@@ -2,9 +2,9 @@
 <?php
 error_reporting( 0 );
 
-require_once( dirname( __FILE__ ) . '/defines.php' );
-require_once( dirname( __FILE__ ) . '/MWRealm.php' );
-require_once( dirname( __FILE__ ) . '/Cdb.php' );
+require_once( __DIR__ . '/defines.php' );
+require_once( __DIR__ . '/MWRealm.php' );
+require_once( __DIR__ . '/Cdb.php' );
 
 /**
  * This script prints the MW version associated with a specified wikidb.

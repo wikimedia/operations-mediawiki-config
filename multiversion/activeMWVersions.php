@@ -1,9 +1,9 @@
 <?php
 error_reporting( 0 );
 
-require_once( dirname( __FILE__ ) . '/defines.php' );
-require_once( dirname( __FILE__ ) . '/MWRealm.php' );
-require_once( dirname( __FILE__ ) . '/MWWikiversions.php' );
+require_once( __DIR__ . '/defines.php' );
+require_once( __DIR__ . '/MWRealm.php' );
+require_once( __DIR__ . '/MWWikiversions.php' );
 
 /*
  * Returns an array of all active MW versions (e.g. "x.xx").

@@ -83,7 +83,7 @@ EOT
 	}
 
 	# MWScript.php should be in common/
-	require_once( dirname( __FILE__ ) . '/MWVersion.php' );
+	require_once( __DIR__ . '/MWVersion.php' );
 	$file = getMediaWikiCli( $relFile );
 	if ( !file_exists( $file ) ) {
 		fwrite( STDERR, "The MediaWiki script file \"{$file}\" does not exist.\n" );

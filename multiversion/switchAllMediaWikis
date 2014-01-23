@@ -3,10 +3,10 @@
 
 error_reporting( E_ALL );
 
-require_once( dirname( __FILE__ ) . '/defines.php' );
-require_once( dirname( __FILE__ ) . '/MWWikiversions.php' );
-require_once( dirname( __FILE__ ) . '/MWRealm.php' );
-require_once( dirname( __FILE__ ) . '/updateBitsBranchPointers' );
+require_once( __DIR__ . '/defines.php' );
+require_once( __DIR__ . '/MWWikiversions.php' );
+require_once( __DIR__ . '/MWRealm.php' );
+require_once( __DIR__ . '/updateBitsBranchPointers' );
 
 /*
  * This script switches all wikis in a .dblist file running one MediaWiki

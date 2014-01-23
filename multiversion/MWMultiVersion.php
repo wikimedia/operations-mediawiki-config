@@ -1,7 +1,7 @@
 <?php
-require_once( dirname( __FILE__ ) . '/defines.php' );
-require_once( dirname( __FILE__ ) . '/MWRealm.php' );
-require_once( dirname( __FILE__ ) . '/Cdb.php' );
+require_once( __DIR__ . '/defines.php' );
+require_once( __DIR__ . '/MWRealm.php' );
+require_once( __DIR__ . '/Cdb.php' );
 
 /**
  * Class to handle basic information related to what
@@ -258,7 +258,7 @@ class MWMultiVersion {
 		global $IP;
 		if ( strpos( $script, "{$IP}/" ) === 0 ) {
 			$script = substr( $script, strlen( "{$IP}/" ) );
-			$options['wrapper'] = dirname( __FILE__ ) . '/MWScript.php';
+			$options['wrapper'] = __DIR__ . '/MWScript.php';
 		}
 		return true;
 	}

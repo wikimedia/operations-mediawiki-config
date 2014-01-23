@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
 error_reporting( E_ALL );
-require_once( dirname( __FILE__ ) . '/defines.php' );
-require_once( dirname( __FILE__ ) . '/updateBitsBranchPointers' );
+require_once( __DIR__ . '/defines.php' );
+require_once( __DIR__ . '/updateBitsBranchPointers' );
 
 /**
  * Automatically git clone a MediaWiki version and do some basic wmf setup.
