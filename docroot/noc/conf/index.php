@@ -24,8 +24,8 @@ require_once( '/usr/local/apache/common-local/multiversion/activeMWVersions.php'
 
 ?><!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8" />
 <head>
+	<meta charset="UTF-8" />
 	<title>Wikimedia configuration files</title>
 	<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wmf.ico">
 	<link rel="stylesheet" href="../css/base.css">
