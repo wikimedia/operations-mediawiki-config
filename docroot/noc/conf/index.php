@@ -15,7 +15,7 @@ require_once( '/usr/local/apache/common-local/multiversion/activeMWVersions.php'
 					. htmlspecialchars( $srcFilename );
 				echo '</a> (<a href="./' . htmlspecialchars( urlencode( $viewFilename ) ) . '">raw text</a>)';
 			} else {
-				echo '</a> <a href="./' . htmlspecialchars( urlencode( $viewFilename ) ) . '">'
+				echo '<a href="./' . htmlspecialchars( urlencode( $viewFilename ) ) . '">'
 					. htmlspecialchars( $srcFilename ) . '</a>';
 			}
 			echo '</li>';
