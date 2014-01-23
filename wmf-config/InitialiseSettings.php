@@ -12892,6 +12892,9 @@ $wgConf->settings = array(
 
 'wgResourceLoaderStorageEnabled' => array(
 	'default' => false,
+	'itwiki' => true,
+	'dewiki' => true,
+	'eswiki' => true,
 ),
 
 'wmgUseAccountAudit' => array(
