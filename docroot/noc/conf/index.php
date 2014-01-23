@@ -1,4 +1,5 @@
 <?php
+require_once( '/usr/local/apache/common-local/multiversion/activeMWVersions.php' );
 
 	function outputFiles( $viewFilenames, $highlight = true ) {
 		$viewFilenames = array_map( 'basename', $viewFilenames );
@@ -39,6 +40,9 @@
 	<li><a href="https://git.wikimedia.org/tree/operations%2Fmediawiki-config.git">operations/mediawiki-config.git</a></li>
 	<li><a href="https://git.wikimedia.org/tree/operations%2Fpuppet.git">operations/puppet.git</a></li>
 </ul>
+
+<hr>
+<p>Currently active MediaWiki versions: <?php echo implode( ' ', getActiveWikiVersions() ); ?></p>
 <hr>
 
 <h2><img src="./images/document.png" alt=""> Apache configuration</h2>
