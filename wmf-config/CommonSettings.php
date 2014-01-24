@@ -2553,6 +2553,16 @@ if ( $wmgUseOAuth ) {
 		}
 		return true;
 	};
+
+	// Grants for other extensions' permissions.
+	// Note these have to be visible on all wikis, not just the ones the
+	// extension is enabled on, for proper display in OAuth pages.
+	$wgMWOAuthGrantPermissions['checkuser']['checkuser'] = true;
+	$wgMWOAuthGrantPermissions['checkuser']['checkuser-log'] = true;
+
+	// Categorize additional groups defined above.
+	// Corresponding messages are mwoauth-grant-* in WikimediaMessages.
+	$wgMWOAuthGrantPermissionGroups['checkuser'] = 'administration';
 }
 
 ### End (roughly) of general extensions ########################
