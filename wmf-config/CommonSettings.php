@@ -2553,6 +2553,21 @@ if ( $wmgUseOAuth ) {
 		}
 		return true;
 	};
+
+	// Rights needed to interact with wikibase
+	$wgMWOAuthGrantPermissions['createeditmovepage'][] = 'item-create';
+	$wgMWOAuthGrantPermissions['editpage'][] = 'item-override';
+	$wgMWOAuthGrantPermissions['editpage'][] = 'item-remove';
+	$wgMWOAuthGrantPermissions['editpage'][] = 'item-merge';
+	$wgMWOAuthGrantPermissions['editpage'][] = 'alias-update';
+	$wgMWOAuthGrantPermissions['editpage'][] = 'alias-remove';
+	$wgMWOAuthGrantPermissions['editpage'][] = 'sitelink-update';
+	$wgMWOAuthGrantPermissions['editpage'][] = 'sitelink-remove';
+	$wgMWOAuthGrantPermissions['editpage'][] = 'linktitles-update';
+	$wgMWOAuthGrantPermissions['editpage'][] = 'label-remove';
+	$wgMWOAuthGrantPermissions['editpage'][] = 'label-update';
+	$wgMWOAuthGrantPermissions['editpage'][] = 'description-remove';
+	$wgMWOAuthGrantPermissions['editpage'][] = 'description-update';
 }
 
 ### End (roughly) of general extensions ########################
