@@ -12732,15 +12732,14 @@ $wgConf->settings = array(
 
 'wmgUseGlobalAbuseFilters' => array(
 	'default' => false,
+	'small' => true,
+
 	'metawiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
 	'specieswiki' => true,
 	'incubatorwiki' => true,
-	'outreachwiki' => true,
-	// feel free to remove Wikimania wikis once they are closed for editing
-	'wikimania2014wiki' => true,  // bug 59711
 ),
 
 'wmgUseZeroNamespace' => array(
