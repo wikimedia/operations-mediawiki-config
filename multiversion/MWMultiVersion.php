@@ -133,6 +133,7 @@ class MWMultiVersion {
 			'www.mediawiki.org' => 'mediawiki',
 			'www.wikidata.org' => 'wikidata',
 			'wikisource.org' => 'sources',
+			'wiki.toolserver.org' => 'toolserver',
 
 			// Labs
 			'deployment.wikimedia.beta.wmflabs.org' => 'labs',

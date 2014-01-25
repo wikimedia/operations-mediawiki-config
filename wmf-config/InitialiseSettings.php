@@ -144,6 +144,7 @@ $wgConf->settings = array(
 	'stewardwiki' => 'en',
 	'strategywiki' => 'en',
 	'tenwiki' => 'en',
+	'toolserverwiki' => 'en',
 	'transitionteamwiki' => 'en',
 	'usabilitywiki' => 'en',
 	'wikimania' => 'en',
@@ -981,6 +982,7 @@ $wgConf->settings = array(
 	'tenwiki' => '$stdlogo',
 	'testwiki' => '$stdlogo',
 	'testwikidatawiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/4/43/Wikidata-logo-en-black.svg/135px-Wikidata-logo-en-black.svg.png',
+	'toolserverwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/be/Wikimedia_Community_Logo-Toolserver.svg/135px-Wikimedia_Community_Logo-Toolserver.svg.png',
 	'transitionteamwiki' => '//upload.wikimedia.org/wikipedia/commons/1/17/Wikimedia_EDTT_logo_full.png', // bug 48379
 	'usabilitywiki' => '//upload.wikimedia.org/wikipedia/commons/1/1e/Wikimedia_Usability_Initiative_Logo.png',
 	'votewiki' => '//upload.wikimedia.org/wikipedia/foundation/9/9a/Wikimediafoundation-logo.png',
@@ -1193,6 +1195,7 @@ $wgConf->settings = array(
 	'specieswiki' => '//species.wikimedia.org',
 	'stewardwiki' => '//steward.wikimedia.org',
 	'strategywiki' => '//strategy.wikimedia.org',
+	'toolserverwiki' => '//wiki.toolserver.org',
 	'transitionteamwiki' => '//transitionteam.wikimedia.org',
 	'tenwiki' => '//ten.wikipedia.org',
 	'testwiki' => '//test.wikipedia.org',
@@ -1276,6 +1279,7 @@ $wgConf->settings = array(
 	'tenwiki' => 'http://ten.wikipedia.org',
 	'testwiki' => 'http://test.wikipedia.org',
 	'testwikidatawiki' => 'http://test.wikidata.org',
+	'toolserverwiki' => 'http://wiki.toolserver.org',
 	'transitionteamwiki' => 'https://transitionteam.wikimedia.org',
 	'usabilitywiki' => 'http://usability.wikimedia.org',
 	'uzwiki' => 'https://uz.wikipedia.org', // bug 43466
@@ -1675,6 +1679,7 @@ $wgConf->settings = array(
 	'thwikisource' => 'วิกิซอร์ซ',
 	'tkwiki' => 'Wikipediýa',
 	'tkwiktionary' => 'Wikisözlük',
+	'toolserverwiki' => 'Toolserver wiki',
 	'transitionteamwiki' => 'Transition Team Wiki',
 	'trwiki' => 'Vikipedi',
 	'trwikibooks' => 'Vikikitap',
@@ -2139,6 +2144,7 @@ $wgConf->settings = array(
 	'thwikisource'  => 'วิกิซอร์ซ',
 	'tkwiki'	=> 'Wikipediýa',
 	'tkwiktionary'	=> 'Wikisözlük',
+	'toolserverwiki' => 'Toolserver',
 	'transitionteamwiki' => 'Project',
 	'trwiki'	=> 'Vikipedi',
 	'trwikibooks'   => 'Vikikitap',
@@ -3495,6 +3501,7 @@ $wgConf->settings = array(
 	'+sewikimedia' => array( 0 => 1 ),
 	'+stewardwiki' => array( 0 => 1, 6 => 1, 14 => 1 ),
 	'+strategywiki' => array( 0 => 1 ),
+	'+toolserverwiki' => array( 0 => 1 ),
 	'+ukwikimedia' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+usabilitywiki' => array( 0 => 1 ),
 	'+wikimaniateamwiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
@@ -3878,6 +3885,7 @@ $wgConf->settings = array(
 	'ptwiki' => 10, // Bug 27954
 	'ruwiki' => 15, // Bug 41831
 	'simplewiki' => 10,
+	'toolserverwiki' => 3,
 	'wikidata' => 50, // Bug 46461
 	'zhwiki' => 50, // Bug 14624
 	'zh_yuewiki' => 10, // Bug 30538
@@ -4197,6 +4205,10 @@ $wgConf->settings = array(
 		105 => 'Page_talk',
 		106 => 'Index',
 		107 => 'Index_talk',
+	),
+	'toolserverwiki' => array(
+		100 => 'Admin',
+		101 => 'Admin_talk',
 	),
 	'usabilitywiki' => array(
 		100 => 'Multimedia',
@@ -5907,6 +5919,7 @@ $wgConf->settings = array(
 'wgDefaultSkin' => array(
 	'default' => 'vector',
 	'nostalgiawiki' => 'nostalgia',
+	'toolserverwiki' => 'modern',
 ),
 
 # wgForceUIMsgAsContentMsg @{
@@ -6169,6 +6182,7 @@ $wgConf->settings = array(
 	'siwiki' => true,
 	'srwiki' => true, // req by dungodung in #wikimedia-tech, 2008-02-25
 	'srwikisource' => true, // #25963
+	'toolserverwiki' => true,
 	'viwiki' => true, // bug 5060
 	'testwiki' => true,
 	'test2wiki' => true, // request by Krinkle for testing
@@ -7488,6 +7502,11 @@ $wgConf->settings = array(
 		'autoconfirmed' => array(
 			'patrol' => true, // Bug 46154
 		),
+	),
+	'toolserverwiki' => array(
+		'sysop' => array(
+			'renameuser' => true,
+		)
 	),
 	'trwiki' => array(
 		'autoreview' => array(
@@ -8909,6 +8928,7 @@ $wgConf->settings = array(
 	'tetwiki' => array( 'en', 'de', 'pt' ),
 	'tewikisource' => array( 'w', 'b' ),
 	'tnwiki' => array( 'en' ), // bug 51327
+	'toolserverwiki' => array( 'm' ),
 	'tpiwiki' => array( 'en', 'simple', 'wikt:en', 'commons' ),
 
 	# vi languages: bug 7854
@@ -9773,6 +9793,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'private' => false,
 	'fishbowl' => false,
+	'toolserverwiki' => false,
 ),
 
 'wmgCentralAuthLoginIcon' => array(
@@ -10215,6 +10236,7 @@ $wgConf->settings = array(
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
 	'plwiki' => array( 'sysop' => array( 'flood' ) ), // Bug 20155
 	'strategywiki' => array( 'sysop' => array( 'flood' ) ),
+	'toolserverwiki' => array( 'user' => array( 'query-service' ) ),
 	'wikidata' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 48013, Bug 46856
 	'zhwiki' => array( 'sysop' => array( 'flood' ) ),
 ),
@@ -10239,6 +10261,7 @@ $wgConf->settings = array(
 	'plwiki' => array( 'flood' => array( 'flood' ) ), // Bug 20155 , bug 21238
 	'strategywiki' => array( 'sysop' => array( 'flood' ) ),
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
+	'toolserverwiki' => array( 'user' => array( 'query-service' ) ),
 	'wikidata' => array(
 		'sysop' => array( 'flood', 'translationadmin' ), // Bug 48013, Bug 46856
 		'flood' => array( 'flood' ), // Bug 48013
