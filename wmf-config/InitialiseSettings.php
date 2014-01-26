@@ -12733,6 +12733,8 @@ $wgConf->settings = array(
 'wmgUseGlobalAbuseFilters' => array(
 	'default' => false,
 	'small' => true,
+	'private' => false,
+	'fishbowl' => false,
 
 	'metawiki' => true,
 	'testwiki' => true,
