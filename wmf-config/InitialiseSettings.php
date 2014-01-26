@@ -5654,7 +5654,10 @@ $wgConf->settings = array(
 		106 => 'Dossier',
 		107 => 'Discussion_Dossier',
 	),
-	'hewikinews' => array( 100 => 'פורטל', 101 => 'שיחת_פורטל' ),
+	'hewikinews' => array(
+		100 => 'פורטל',
+		101 => 'שיחת_פורטל',
+	),
 	'huwikinews' => array(
 		102 => 'Portál',
 		103 => 'Portálvita',
