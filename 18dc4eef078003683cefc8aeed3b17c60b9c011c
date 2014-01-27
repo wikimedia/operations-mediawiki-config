@@ -34,6 +34,24 @@
       "revId": "18dc4eef078003683cefc8aeed3b17c60b9c011c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8efa632e_a1002205",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2140,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-01-27T17:50:51Z",
+      "side": 0,
+      "message": "Can\u0027t you just use \u0027+brwikimedia\u0027",
+      "parentUuid": "8efa632e_4610545b",
+      "revId": "18dc4eef078003683cefc8aeed3b17c60b9c011c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

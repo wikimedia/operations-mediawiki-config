@@ -51,6 +51,24 @@
       "revId": "92315a13826ef2929664dc715b99f14d3e3e3b6e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8efa632e_c1fb2e10",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-01-27T17:50:51Z",
+      "side": 1,
+      "message": "So? What\u0027s the harm? And what happens e.g. to Special:MyLanguage links?",
+      "parentUuid": "8efa632e_06336c0b",
+      "revId": "92315a13826ef2929664dc715b99f14d3e3e3b6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
