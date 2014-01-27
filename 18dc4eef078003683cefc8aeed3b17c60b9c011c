@@ -52,6 +52,24 @@
       "revId": "18dc4eef078003683cefc8aeed3b17c60b9c011c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8efa632e_6159fa00",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2140,
+      "author": {
+        "id": 650
+      },
+      "writtenOn": "2014-01-27T18:22:54Z",
+      "side": 0,
+      "message": "Sure, but it won\u0027t actually \u0027enable per-wiki addition to the \u0027translationadmin\u0027 user group\u0027; in case of brwikimedia, they want sysops to be able to add users to that group, not bureaucrats, and this patch lets them do exactly that.",
+      "parentUuid": "8efa632e_a1002205",
+      "revId": "18dc4eef078003683cefc8aeed3b17c60b9c011c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

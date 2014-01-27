@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8efa632e_a1d94285",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 650
+      },
+      "writtenOn": "2014-01-27T18:22:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8efa632e_664d909b",
+      "revId": "92315a13826ef2929664dc715b99f14d3e3e3b6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8efa632e_265f8846",
         "filename": "/COMMIT_MSG",
         "patchSetId": 1
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "So? What\u0027s the harm? And what happens e.g. to Special:MyLanguage links?",
       "parentUuid": "8efa632e_06336c0b",
+      "revId": "92315a13826ef2929664dc715b99f14d3e3e3b6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8efa632e_c1d44e4e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 650
+      },
+      "writtenOn": "2014-01-27T18:22:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8efa632e_c1fb2e10",
       "revId": "92315a13826ef2929664dc715b99f14d3e3e3b6e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
