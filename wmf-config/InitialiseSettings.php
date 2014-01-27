@@ -8797,6 +8797,7 @@ $wgConf->settings = array(
 	'simplewiki' => array( 'en', 'wikt', 'b', 'q' ),
 	'simplewiktionary' => array( 'en', 'w', 'b', 'q' ),
 	'simplewikiquote' => array( 'en', 'w', 'wikt', 'b' ),
+	'skwiki' => array( 'b', 'meta', 'q', 's', 'wikt' ),
 	'sourceswiki' => array(
 		'ang', 'ar', 'az', 'bg', 'bn', 'bs', 'ca', 'cs', 'cy',
 		'da', 'de', 'el', 'en', 'es', 'et', 'fa', 'fi', 'fo',
