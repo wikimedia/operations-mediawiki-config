@@ -10688,6 +10688,7 @@ $wgConf->settings = array(
 'wmgVisualEditorSecondaryTabs' => array(
 	'default' => false,
 	'enwiki' => true,
+	'eswiki' => true, // bug 60188
 	'hewiki' => true, // bug 52552
 ),
 
@@ -10695,6 +10696,7 @@ $wgConf->settings = array(
 'wmgVisualEditorBetaInTab' => array(
 	'default' => false,
 	'enwiki' => true,
+	'eswiki' => true,
 ),
 
 // Should VisualEditor forward users' Cookie: headers to Parsoid (for private wikis)
