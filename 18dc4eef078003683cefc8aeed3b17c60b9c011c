@@ -16,6 +16,24 @@
       "revId": "18dc4eef078003683cefc8aeed3b17c60b9c011c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8efa632e_4610545b",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2140,
+      "author": {
+        "id": 650
+      },
+      "writtenOn": "2014-01-27T17:47:56Z",
+      "side": 0,
+      "message": "This way I can add $wgAddGroups[\u0027sysop\u0027] \u003d \u0027translationadmin\u0027 on brwikimedia as requested in bug 58123.",
+      "parentUuid": "8efa632e_c63584f5",
+      "revId": "18dc4eef078003683cefc8aeed3b17c60b9c011c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

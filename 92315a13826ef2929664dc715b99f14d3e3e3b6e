@@ -33,6 +33,24 @@
       "revId": "92315a13826ef2929664dc715b99f14d3e3e3b6e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8efa632e_06336c0b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 650
+      },
+      "writtenOn": "2014-01-27T17:47:56Z",
+      "side": 1,
+      "message": "That wiki is closed.",
+      "parentUuid": "8efa632e_265f8846",
+      "revId": "92315a13826ef2929664dc715b99f14d3e3e3b6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
