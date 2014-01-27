@@ -12809,13 +12809,13 @@ $wgConf->settings = array(
 	// File has shards at ~6GB each even with 20 of them.
 	'commonswiki' => array( 'content' => 1, 'general' => 20, 'file' => 20 ),
 	'dewiki' => array( 'content' => 15, 'general' => 13 ),
-	'dewikisource' => array( 'content' => 2, 'general' => 1 ),
+	'dewikisource' => array( 'content' => 3, 'general' => 1 ),
 	'elwiki' => array( 'content' => 2, 'general' => 1 ),
 	// These shards are also signigicantly larger than the target 2GB.
 	'enwiki' => array( 'content' => 20, 'general' => 20 ),
 	'enwikinews' => array( 'content' => 1, 'general' => 3 ),
 	'enwikisource' => array( 'content' => 12, 'general' => 1 ),
-	'enwiktionary' => array( 'content' => 4, 'general' => 1 ),
+	'enwiktionary' => array( 'content' => 4, 'general' => 2 ),
 	'eswiki' => array( 'content' => 9, 'general' => 6 ),
 	'frwiki' => array( 'content' => 14, 'general' => 13 ),
 	'frwikisource' => array( 'content' => 12, 'general' => 1 ),
@@ -12825,8 +12825,10 @@ $wgConf->settings = array(
 	'nlwiki' => array( 'content' => 8, 'general' => 4 ),
 	'ptwiki' => array( 'content' => 6, 'general' => 5 ),
 	'ruwiki' => array( 'content' => 13, 'general' => 9 ),
+	'ruwikisource' => array( 'content' => 3, 'general' => 1),
 	'ruwiktionary' => array( 'content' => 3, 'general' => 1 ),
 	'wikidatawiki' => array( 'content' => 7, 'general' => 1 ),
+	'zhwikisource' => array( 'content' => 3, 'general' => 1 ),
 ),
 
 'wmgUseCite' => array(
