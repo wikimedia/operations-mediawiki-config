@@ -7728,7 +7728,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'ipblock-exempt' ),
 	),
 	'+testwiki' => array(
-		'bureaucrat' => array( 'researcher', 'centralnoticeadmin' ),
+		'bureaucrat' => array( 'researcher', 'centralnoticeadmin', 'translationadmin' ),
 		'sysop' => array( 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ),
 		# 'user' => array( 'editor', 'reviewer' ),
 	),
@@ -7743,6 +7743,9 @@ $wgConf->settings = array(
 	'+bewiki' => array(
 		'sysop' => array( 'autoeditor' ),
 	),
+	'+bewikimedia' => array(
+		'bureaucrat' => array( 'translationadmin' ),
+	),
 	'+be_x_oldwiki' => array(
 		'sysop' => array( 'abusefilter' ),
 	),
@@ -7753,6 +7756,9 @@ $wgConf->settings = array(
 	'+bnwiki' => array(
 		'sysop' => array( 'autopatrolled', 'filemover', 'flood', 'rollbacker' ),
 		'bureaucrat' => array( 'import' ),
+	),
+	'+brwikimedia' => array( // bug 58123
+		'sysop' => array( 'translationadmin' ),
 	),
 	'+bswiki' => array(
 		'sysop' => array( 'flood' ), // bug 50425
@@ -7782,6 +7788,9 @@ $wgConf->settings = array(
 			'editprotected', // bug 52866
 		),
 	),
+	'+collabwiki' => array(
+		'bureaucrat' => array( 'translationadmin' ),
+	),
 	'+cswiki' => array(
 		'bureaucrat' => array( 'autopatrolled' ),
 	),
@@ -7798,7 +7807,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autopatrolled' ),
 	),
 	'+commonswiki' => array(
-		'bureaucrat' => array( 'ipblock-exempt', 'OTRS-member' ),
+		'bureaucrat' => array( 'ipblock-exempt', 'OTRS-member', 'translationadmin' ),
 		'checkuser'  => array( 'ipblock-exempt' ),
 		'sysop' => array( 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer', 'gwtoolset'  ),
 		'steward' => array( 'OTRS-member' ),
@@ -7921,7 +7930,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'rollbacker' ),
 	),
 	'+incubatorwiki' => array(
-		'bureaucrat' => array( 'test-sysop', 'translator', 'import' ),
+		'bureaucrat' => array( 'test-sysop', 'translator', 'import', 'translationadmin' ),
 	),
 	'+itwiki' => array(
 		'bureaucrat' => array( 'rollbacker' ),
@@ -7953,11 +7962,11 @@ $wgConf->settings = array(
 		'sysop' => array( 'abusefilter' ),
 	),
 	'+mediawikiwiki' => array(
-		'bureaucrat' => array( 'transwiki', 'coder', 'import', 'svnadmins' ),
+		'bureaucrat' => array( 'transwiki', 'coder', 'import', 'svnadmins', 'translationadmin' ),
 		'coder' => array( 'coder' ),
 	),
 	'+metawiki' => array(
-		'bureaucrat' => array( 'ipblock-exempt', 'centralnoticeadmin', 'flood', 'uploader' ), // Bug 46639
+		'bureaucrat' => array( 'ipblock-exempt', 'centralnoticeadmin', 'flood', 'uploader', 'translationadmin' ), // bug 46639
 		'checkuser'  => array( 'ipblock-exempt' ),
 		'sysop'      => array( 'autopatrolled', 'massmessage-sender' ), // bug 57611
 	),
@@ -8010,6 +8019,9 @@ $wgConf->settings = array(
 	),
 	'+otrs_wikiwiki' => array(
 		'bureaucrat' => array( 'import', 'transwiki' ),
+	),
+	'+outreachwiki' => array(
+		'bureaucrat' => array( 'translationadmin' ),
 	),
 	'+plwiki' => array(
 		'bureaucrat' => array( 'abusefilter', 'flood' ),
@@ -8144,7 +8156,14 @@ $wgConf->settings = array(
 		),
 		'bureaucrat' => array(
 			'flood', // bug 48013
+			'translationadmin',
 		),
+	),
+	'+wikimania2013wiki' => array(
+		'bureaucrat' => array( 'translationadmin' ),
+	),
+	'+wikimania2014wiki' => array(
+		'bureaucrat' => array( 'translationadmin' ),
 	),
 	'+zhwiki' => array(
 		'bureaucrat' => array( 'flood' ),
@@ -8198,6 +8217,9 @@ $wgConf->settings = array(
 	'+bewiki' => array(
 		'sysop' => array( 'autoeditor' ),
 	),
+	'+bewikimedia' => array(
+		'bureaucrat' => array( 'translationadmin' ),
+	),
 	'+be_x_oldwiki' => array(
 		'sysop' => array( 'abusefilter' ),
 	),
@@ -8208,6 +8230,9 @@ $wgConf->settings = array(
 	'+bnwiki' => array(
 		'sysop' => array( 'autopatrolled', 'filemover', 'flood', 'rollbacker' ),
 		'bureaucrat' => array( 'import' ),
+	),
+	'+brwikimedia' => array( // bug 58123
+		'sysop' => array( 'translationadmin' ),
 	),
 	'+bswiki' => array(
 		'sysop' => array( 'flood' ), // bug 50425
@@ -8236,6 +8261,9 @@ $wgConf->settings = array(
 			'trusted', // bug 52866
 			'editprotected', // bug 52866
 		),
+	),
+	'+collabwiki' => array(
+		'bureaucrat' => array( 'translationadmin' ),
 	),
 	'+commonswiki' => array(
 		'bureaucrat' => array( 'ipblock-exempt', 'OTRS-member', 'translationadmin' ), // bug 48620
@@ -8420,7 +8448,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'abusefilter' ),
 	),
 	'+mediawikiwiki' => array(
-		'bureaucrat' => array( 'transwiki', 'import', 'coder', 'svnadmins' ),
+		'bureaucrat' => array( 'transwiki', 'import', 'coder', 'svnadmins', 'translationadmin' ),
 	),
 	'+metawiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'ipblock-exempt', 'flood', 'translationadmin', 'centralnoticeadmin', 'uploader' ), // bug 37198, 50287
@@ -8616,8 +8644,11 @@ $wgConf->settings = array(
 			'flood', // bug 48013
 		),
 	),
+	'+wikimania2013wiki' => array(
+		'bureaucrat' => array( 'translationadmin' )
+	),
 	'+wikimania2014wiki' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'translationadmin' ), // for wikimania2014wiki: bug 55480
+		'bureaucrat' => array( 'sysop', 'bureaucrat', 'translationadmin' ), // bug 55480
 	),
 	'+wikimaniateamwiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'autopatrolled', 'import' ),
@@ -8922,7 +8953,7 @@ $wgConf->settings = array(
 
 	'wikidata' => array( 'meta', 'commons', 'en', 'de', 'fr', 'es', 'testwikidata' ),
 	'testwikidatawiki' => array( 'd', 'meta', 'commons', 'en', 'de', 'fr', 'es' ),
-	'wikimania2012wiki' => array( 'en', 'meta', 'wm2011' ),
+	'wikimania2012wiki' => array( 'en', 'meta', 'wm2011'  ),
 	'wikimania2013wiki' => array( 'en', 'meta', 'wm2011', 'wm2012' ),
 	'wikimania2014wiki' => array( 'en', 'meta', 'wm2011', 'wm2012', 'wm2013' ),
 	'wuuwiki' => array( 'en', 'th', 'fr', 'zh', ),
