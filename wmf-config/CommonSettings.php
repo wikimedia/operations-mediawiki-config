@@ -2138,9 +2138,6 @@ if ( $wmgUseTranslate ) {
 	unset( $wgSpecialPages['ManageMessageGroups'] );
 	unset( $wgSpecialPages['TranslationStats'] );
 
-	$wgAddGroups['bureaucrat'][] = 'translationadmin';
-
-
 	// Caused apache overload 2013-08-11 TS
 	unset( $wgSpecialPages['SupportedLanguages'] );
 }
