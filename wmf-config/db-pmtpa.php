@@ -104,7 +104,7 @@ $wgLBFactoryConf = array(
 		'db73'	 => 100, # pmtpa master
 	),
 	's6' => array(
-		'db1027' => 0,
+		'db1023' => 0,
 		'db74'	 => 100, # pmtpa master
 	),
 	's7' => array(
@@ -212,6 +212,7 @@ $wgLBFactoryConf = array(
 	'db1020' => '10.64.16.9', #do not remove or comment out
 	'db1021' => '10.64.16.10', #do not remove or comment out
 	'db1022' => '10.64.16.11', #do not remove or comment out
+	'db1023' => '10.64.16.12', #do not remove or comment out
 	'db1024' => '10.64.16.13', #do not remove or comment out
 	'db1026' => '10.64.16.15', #do not remove or comment out
 	'db1027' => '10.64.16.16', #do not remove or comment out
