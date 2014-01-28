@@ -64,10 +64,10 @@ mwconfig_files=(
 	fc-list
 	fishbowl.dblist
 	flaggedrevs.dblist
+	group0.dblist
 	langlist
 	large.dblist
 	medium.dblist
-	phase1.dblist
 	private.dblist
 	s1.dblist
 	s2.dblist
