@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_e609af35",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 3224,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-01-28T23:33:11Z",
+      "side": 1,
+      "message": "If we\u0027re adding Index, shouldn\u0027t Page be added too?",
+      "revId": "0d83c24142806fffce881dd2d868a473b171f0e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
