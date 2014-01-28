@@ -2010,6 +2010,7 @@ $wgCookieExpiration = 30 * 86400;
 if ( $wmgUseMath ) {
 	require_once( "$IP/extensions/Math/Math.php" );
 	$wgTexvc = "/usr/local/apache/uncommon/bin/texvc";
+	$wgMathTexvcCheckExecutable = "/usr/local/apache/uncommon/bin/texvccheck";
 	if ( $wgDBname === 'hewiki' ) {
 		$wgDefaultUserOptions['math'] = 0;
 	}
