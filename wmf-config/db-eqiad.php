@@ -125,8 +125,6 @@ $wgLBFactoryConf = array(
 		'db1045'   => 400,
 	),
 	's6' => array(
-		'db1024'   => 0, # haproxy to db1027 & db1023 during rotation
-		#'db1027'   => 0, # old master, demoted for maintenance
 		'db1023'   => 0, # new master
 		'db1022'   => 0, # snapshot, vslow, dump
 		'db1010'   => 0, # watchlist, recentchangeslinked, contributions, logpager
