@@ -12731,6 +12731,7 @@ $wgConf->settings = array(
 	'eswiki' => true,
 	'frwiki' => true,
 	'guwiki' => true,
+	'huwiki' => true,
 	'nlwiki' => true,
 	'ptwiki' => true,
 	'ruwiki' => true,
@@ -12745,6 +12746,7 @@ $wgConf->settings = array(
 'wmgCirrusIsBuilding' => array(
 	'default' => false,
 	'enwiki' => true,
+	'huwiki' => true,
 ),
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
@@ -12760,7 +12762,7 @@ $wgConf->settings = array(
 ),
 
 // Shard each wiki to be about 2gb of index per shard.  Changing this for a wiki
-// requires an in place reindex.  Last full review 2013-12-13.  See
+// requires an in place reindex.  Last full review 2014-01-27.  See
 // https://wikitech.wikimedia.org/wiki/Search/New#Estimating_the_number_of_shards_required
 // for estimation methodology.  At this point I'm declaring we should have no more than
 // 20 shards per index.  We might go higher but that is a tradeoff for easier maintenance
@@ -12784,6 +12786,7 @@ $wgConf->settings = array(
 	'frwiki' => array( 'content' => 14, 'general' => 13 ),
 	'frwikisource' => array( 'content' => 12, 'general' => 1 ),
 	'frwikitionary' => array( 'content' => 2, 'general' => 1 ),
+	'huwiki' => array( 'content' => 6, 'general' => 1 ),   // Sized before deployment
 	'itwiki' => array( 'content' => 13, 'general' => 9 ),
 	'mgwiktionary' => array( 'content' => 2, 'general' => 1 ),
 	'nlwiki' => array( 'content' => 8, 'general' => 4 ),
