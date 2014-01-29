@@ -12524,6 +12524,10 @@ $wgConf->settings = array(
 
 'wmgWikibaseCachePrefix' => array(
 	'default' => 'wikidatawiki',
+	'wikipedia' => 'wikidatawiki-wikipedia',
+	'wikivoyage' => 'wikidatawiki-wikivoyage',
+	'wikisource' => 'wikidatawiki-wikisource',
+	'commonswiki' => 'wikidatawiki-commons',
 	'testwikidatawiki' => 'testwikidata',
 	'test2wiki' => 'wikidatawiki-test2',
 	'testwiki' => 'wikidatawiki-test'
