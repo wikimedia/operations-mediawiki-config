@@ -66,9 +66,9 @@ function handleMissingWiki() {
 		return;
 	}
 
-	if( strpos( $page, ':' ) !== false ) {
+	if( strpos( $page, ':' ) !== false && function_exists( 'dba_open' ) ) {
 		# Open the interwiki file to see if we have an interwiki prefix
-		$db = function_exists( 'dba_open' ) && dba_open( __DIR__ . '/interwiki.cdb', 'r-', 'cdb' );
+		$db = dba_open( __DIR__ . '/interwiki.cdb', 'r-', 'cdb' );
 		if ( $db ) {
 			$prefix = strtok( $page, ':' );
 
