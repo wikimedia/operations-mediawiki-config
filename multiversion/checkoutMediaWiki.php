@@ -96,11 +96,6 @@ PHP;
 		print "File already exists: $path\n";
 	}
 
-	# Create symlink to wmf-config/AdminSettings.php...
-	$path = "$destIP/AdminSettings.php";
-	$link = "../wmf-config/AdminSettings.php";
-	createSymlink( $path, $link, "Created AdminSettings.php symlink." );
-
 	# Create symlink to wmf-config/StartProfiler.php...
 	$path = "$destIP/StartProfiler.php";
 	$link = "../wmf-config/StartProfiler.php";
