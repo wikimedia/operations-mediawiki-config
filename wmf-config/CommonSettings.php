@@ -2017,7 +2017,7 @@ if ( $wmgUseMath ) {
 	$wgMathFileBackend = $wmgMathFileBackend;
 	$wgMathDirectory   = '/mnt/upload7/math'; // just for sanity
 	$wgMathPath        = $wmgMathPath;
-	$wgUseMathJax      = true;
+	$wgMathJax      = true;
 }
 
 if ( $wmgUseBabel ) {
