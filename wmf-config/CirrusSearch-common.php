@@ -45,12 +45,9 @@ if ( $wgDBname == 'commonswiki' ) {
 	// Should be $wgCirrusSearchReplicaCount['file'] = 2;
 	$wgCirrusSearchReplicaCount['file'] = 1;
 // So is everyone else, for using commons
+} else {
+	$wgCirrusSearchExtraIndexes[ NS_FILE ] = array( 'commonswiki_file' );
 }
-// Temporarily disabled until we've deployed the fix for
-// https://github.com/elasticsearch/elasticsearch/issues/4645
-//else {
-//	$wgCirrusSearchExtraIndexes[ NS_FILE ] = array( 'commonswiki_file' );
-//}
 
 
 // Temporarily lower redundancy for enwiki to save some space.
