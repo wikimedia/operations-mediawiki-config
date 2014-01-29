@@ -10,11 +10,6 @@ class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
 		$this->nocConfDir = dirname( dirname( __DIR__ ) ) . '/docroot/noc/conf';
 
 		// Created various files to test with
-		if ( !file_exists( "$wmfConfigDir/AdminSettings.php" ) ) {
-			$this->created[] = "$wmfConfigDir/AdminSettings.php";
-			file_put_contents( "$wmfConfigDir/AdminSettings.php", '<?php $forbiddenFruit = "a";' );
-		}
-
 		if ( !file_exists( "$wmfConfigDir/PrivateSettings.php" ) ) {
 			$this->created[] = "$wmfConfigDir/PrivateSettings.php";
 			file_put_contents( "$wmfConfigDir/PrivateSettings.php", '<?php $forbiddenFruit = "p";' );
@@ -70,10 +65,8 @@ class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
 			array( 'search-redirect.php' ),
 			array( 'robots.txt' ),
 			array( 'README' ),
-			array( 'wmf-config/AdminSettings.php' ),
 			array( 'wmf-config/PrivateSettings.php' ),
 			array( 'wmf-config/ExampleFile.php' ),
-			array( 'AdminSettings.php' ),
 			array( 'PrivateSettings.php' ),
 			array( 'ExampleInvalid.php' ),
 			array( 'ExampleContent.php', 'must only contain symlinks' ),
