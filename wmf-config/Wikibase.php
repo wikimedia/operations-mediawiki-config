@@ -42,6 +42,9 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
 
+	$wgWBRepoSettings['datalicensetext'] = 'Creative Commons CC0 License';
+	$wgWBRepoSettings['datalicenseurl'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
+
 	$wgWBRepoSettings['specialSiteLinkGroups'] = array( 'commons' );
 
 	$wgWBRepoSettings['siteLinkGroups'] = array(
