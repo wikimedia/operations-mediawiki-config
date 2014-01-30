@@ -16,6 +16,24 @@
       "revId": "0d83c24142806fffce881dd2d868a473b171f0e9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_57e801dd",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 3224,
+      "author": {
+        "id": 650
+      },
+      "writtenOn": "2014-01-30T22:14:58Z",
+      "side": 1,
+      "message": "I don\u0027t think we shouldn\u0027t adding Index at all; if people want to play with it, it would be much better to enable the ProofreadPage extension which creates Index: and Page: automatically.",
+      "parentUuid": "6ef7ef47_e609af35",
+      "revId": "0d83c24142806fffce881dd2d868a473b171f0e9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
