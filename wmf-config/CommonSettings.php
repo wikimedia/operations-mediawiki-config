@@ -670,11 +670,6 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgMinimumVideoPlayerSize = $wmgMinimumVideoPlayerSize;
 }
 
-if ( $wgUseContactPageFundraiser ) {
-	include( "$IP/extensions/ContactPageFundraiser/ContactPage.php" );
-	$wgContactUser = 'Storiescontact';
-}
-
 if ( $wgDBname == 'foundationwiki' ) {
 	include( "$IP/extensions/FormPreloadPostCache/FormPreloadPostCache.php" );
 	include( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
@@ -780,7 +775,7 @@ if ( function_exists( 'dba_open' ) && file_exists( "$wmfConfigDir/trusted-xff.cd
 	$wgTrustedXffFile = "$wmfConfigDir/trusted-xff.cdb";
 }
 
-if ( $wmgContactPageConf ) {
+if ( $wmgUseContactPage ) {
 	include( $IP . '/extensions/ContactPage/ContactPage.php' );
 	extract( $wmgContactPageConf );
 }
