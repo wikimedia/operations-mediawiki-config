@@ -679,11 +679,6 @@ if ( $wmgUseTimedMediaHandler ) {
 	array_unshift( $wgEnabledTranscodeSet, WebVideoTranscode::ENC_OGV_160P );
 }
 
-if ( $wgUseContactPageFundraiser ) {
-	include( "$IP/extensions/ContactPageFundraiser/ContactPage.php" );
-	$wgContactUser = 'Storiescontact';
-}
-
 if ( $wgDBname == 'foundationwiki' ) {
 	$wgAllowedTemplates = array(
 		'enwiki_00', 'enwiki_01', 'enwiki_02', 'enwiki_03',
