@@ -10311,9 +10311,11 @@ $wgConf->settings = array(
 	),
 ),
 
-'wgUseContactPageFundraiser' => array(
+'wmgUseContactPage' => array(
 	'default' => false,
 	'foundationwiki' => true,
+	'nlwiki' => true,
+	'testwiki' => true,
 ),
 
 'wgCopyUploadProxy' => array(
