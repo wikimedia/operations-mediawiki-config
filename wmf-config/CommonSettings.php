@@ -2490,8 +2490,10 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSEventLogging = $wmgULSEventLogging;
 }
 
+$wmgUseWikibaseBuild = !in_array( $wmfExtendedVersionNumber, array( '1.23wmf10', '1.23wmf11' ) );
+
 // @note getRealmSpecificFilename only works with filenames with .suffix
-if ( $wmfRealm === 'labs' ) {
+if ( $wmgUseWikibaseBuild ) {
 	$wgExtensionEntryPointListFiles[] = "$IP/extensions/Wikidata/extension-list-wikidata";
 } else {
 	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikidata";
