@@ -1,6 +1,8 @@
 <?php
 
-if ( $wmfRealm === 'production' ) {
+$wmgUseWikibaseBuild = !in_array( $wmfExtendedVersionNumber, array( '1.23wmf10', '1.23wmf11' ) );
+
+if ( !$wmgUseWikibaseBuild ) {
 	require_once( "$IP/extensions/DataValues/DataValues.php" );
 	require_once( "$IP/extensions/DataTypes/DataTypes.php" );
 	require_once( "$IP/extensions/Diff/Diff.php" );
@@ -11,8 +13,7 @@ if ( $wmfRealm === 'production' ) {
 }
 
 if ( $wmgUseWikibaseRepo ) {
-
-	if ( $wmfRealm === 'production' ) {
+	if ( !$wmgUseWikibaseBuild ) {
 		require_once( "$IP/extensions/Wikibase/repo/Wikibase.php" );
 	}
 
@@ -91,7 +92,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 if ( $wmgUseWikibaseClient ) {
 
-	if ( $wmfRealm === 'production' ) {
+	if ( !$wmgUseWikibaseBuild ) {
 		require_once( "$IP/extensions/Wikibase/client/WikibaseClient.php" );
 	}
 
