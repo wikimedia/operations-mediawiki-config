@@ -27,7 +27,6 @@ $IP/extensions/CommunityVoice/CommunityVoice.php
 $IP/extensions/ConfirmEdit/ConfirmEdit.php
 $IP/extensions/ConfirmEdit/FancyCaptcha.php
 $IP/extensions/ContactPage/ContactPage.php
-$IP/extensions/ContactPageFundraiser/ContactPage.php
 $IP/extensions/ContributionTracking/ContributionTracking.php
 $IP/extensions/CreditsSource/CreditsSource.php
 $IP/extensions/CustomData/CustomData.php

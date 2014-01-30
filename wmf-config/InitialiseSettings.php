@@ -10260,7 +10260,9 @@ $wgConf->settings = array(
 ),
 
 'wmgContactPageConf' => array(
-	'default' => false,
+	'default' => array(
+		'wgContactUser' => 'Storiescontact',
+	),
 
 	// bug 15624
 	'nlwiki' => array(
@@ -10270,10 +10272,11 @@ $wgConf->settings = array(
 	),
 ),
 
-'wgUseContactPageFundraiser' => array(
+'wmgUseContactPage' => array(
 	'default' => false,
 	'donatewiki' => true,
 	'foundationwiki' => true,
+	'nlwiki' => true,
 	'testwiki' => true,
 ),
 
