@@ -10300,7 +10300,9 @@ $wgConf->settings = array(
 
 'wmgUseContactPage' => array(
 	'default' => false,
+	'foundationwiki' => true,
 	'nlwiki' => true,
+	'testwiki' => true,
 ),
 'wmgContactPageConf' => array(
 	// bug 15624
@@ -10309,11 +10311,6 @@ $wgConf->settings = array(
 		'SenderName' => 'Contactformulier op nl-Wikipedia',
 		'IncludeIP' => true,
 	),
-),
-
-'wgUseContactPageFundraiser' => array(
-	'default' => false,
-	'foundationwiki' => true,
 ),
 
 'wgCopyUploadProxy' => array(
