@@ -76,20 +76,6 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['clientDbList']
 	);
 
-	// this allows test.wikidata to get the default data types,
-	// including the new quantity data type, while we don't want
-	// to enable it everywhere quite yet.
-	if ( $wgDBname !== 'testwikidatawiki' ) {
-		$wgWBRepoSettings['dataTypes'] = array(
-			'wikibase-item',
-			'commonsMedia',
-			'string',
-			'time',
-			'globe-coordinate',
-			'url'
-		);
-	}
-
 	// Bug 51637 and 46953
 	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
 
