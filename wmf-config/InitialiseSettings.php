@@ -8763,9 +8763,8 @@ $wgConf->settings = array(
 		'commons', 'd', 'mw', 'meta', 'foundation', 'w:ca',
 		'w:de', 'w:en', 'w:es', 'w:fr', 'w:he', 'w:hu',
 		'w:nl', 'w:pl', 'w:pt', 'w:ru', 's:fr', 'n:en',
-		'wikt:en', 'de', 'en', 'es', 'fr', 'nl', 'ru', 'sv',
+		'wikt:en', 'de', 'en', 'es', 'fr', 'nl', 'ru', 'sv', 'el'
 	), // Bug 43310
-	//TODO: add 'el' to itwikivoyage import sources (now in Incubator) when el.wikivoyage is live
 	'itwiktionary' => array( 'w', 'b', 's', 'q', 'n', 'v', 'en', 'fr', 'sc' ),
 	'jawikibooks' => array( 'w', 'wikt', 'q', 's', 'v', 'en' ),
 	'jawikiversity' => array( 'betawikiversity', 'w', 'wikt', 'en', 'b', 'q', 's', 'n' ),
