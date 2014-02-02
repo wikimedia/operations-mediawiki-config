@@ -40,8 +40,9 @@ if ( !$selectedFilePath ) {
 		echo "File not found\n";
 		exit;
 	}
-	// Easter egg
-	$hlHtml = highlight_string( '<'."?php\n\$secretSitePassword = 'jgmeidj28gms';\n", true );
+
+	//no filename given or filename not existing in this directory
+	$hlHtml = "No valid, whitelisted filename in parameter \"file\" given.";
 
 } else {
 	// Follow symlink
