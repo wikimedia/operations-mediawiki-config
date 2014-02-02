@@ -78,7 +78,7 @@ class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
 	/**
 	 * @dataProvider provideInvalidCases
 	 */
-	public function testInvalidCases( $q, $expect = 'secretSitePassword' ) {
+	public function testInvalidCases( $q, $expect = 'No valid, whitelisted filename' ) {
 		$this->assertContains(
 			$expect,
 			$this->runHighlight( $q ),

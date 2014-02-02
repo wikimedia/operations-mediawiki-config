@@ -4,7 +4,7 @@
 $selectableFilepaths = glob( __DIR__ . '/*' );
 
 // Name of file from user input
-if( isset($_GET['file']) ){
+if ( isset( $_GET['file'] ) ) {
 	$selectedFileName = $_GET['file'];
 } else {
 	$selectedFileName = null;
@@ -44,10 +44,8 @@ if ( !$selectedFilePath ) {
 		echo "File not found\n";
 		exit;
 	}
-
-	//no filename given or filename not existing in this directory
+	// No filename given or filename not existing in this directory
 	$hlHtml = "<pre>No valid, whitelisted filename in parameter \"file\" given.</pre>";
-
 } else {
 	// Follow symlink
 	if ( !file_exists( $selectedFilePath ) ) {
@@ -63,7 +61,6 @@ if ( !$selectedFilePath ) {
 		// Figure out path to selected file in the mediawiki-config repository
 		$selectedFileRepoPath = ( basename( dirname( $selectedFilePath ) ) === 'wmf-config' ? 'wmf-config/' : '' ) . $selectedFileName;
 		if ( substr( $selectedFileName, -4 ) === '.php' ) {
-
 			$hlHtml = highlight_file( $selectedFilePath, true );
 			$hlHtml = str_replace( '&nbsp;', ' ', $hlHtml ); // https://bugzilla.wikimedia.org/19253
 			$hlHtml = str_replace( '    ', "\t", $hlHtml ); // convert 4 spaces to 1 tab character; bug #36576
