@@ -8877,6 +8877,7 @@ $wgConf->settings = array(
 	'wuuwiki' => array( 'en', 'th', 'fr', 'zh', ),
 	'xhwiki' => array( 'en' ), // bug 51327
 	'zhwikiquote' => array( 'w', 'b', 'wikt', 's', 'meta', 'commons' ),
+	'zhwikivoyage' => array( 'w', 'b', 'q', 's', 'en', 'wikt', 'meta', 'commons' ), //bug 60248
 	'zhwiktionary' => array( 'w', 'b', 'q', 's', 'meta', 'commons' ),
 	'zhwikibooks' => array( 'w', 'wikt', 'q', 's', 'meta', 'commons' ),
 	'zhwikisource' => array( 'w', 'b', 'q', 'wikt', 'meta', 'commons' ),
