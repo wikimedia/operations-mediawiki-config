@@ -20,6 +20,8 @@ $selectedFileRepoPath = false;
 // Relative path to the symlink in conf/*
 $selectedFileViewRawUrl = false;
 
+$hlHtml = "";
+
 foreach ( $selectableFilepaths as $filePath ) {
 	$fileName = basename( $filePath );
 	// Map .txt links to the original filename
@@ -31,28 +33,43 @@ foreach ( $selectableFilepaths as $filePath ) {
 		break;
 	}
 }
-if ( PHP_SAPI !== 'cli' ) {
+if ( PHP_SAPI !== 'cli' ) { 
 	ob_start( 'ob_gzhandler' );
 	header( 'Content-Type: text/html; charset=utf-8' );
 }
 
 if ( !$selectedFilePath ) {
-	if ( PHP_SAPI !== 'cli' ) {
-		header( "HTTP/1.1 404 Not Found" );
-	}
 	if ( isset( $_SERVER['HTTP_REFERER'] ) && strpos( strtolower( $_SERVER['HTTP_REFERER'] ), 'google' ) !== false ) {
+		if ( PHP_SAPI !== 'cli' ) {
+			header( "HTTP/1.1 404 Not Found" );
+		}
 		echo "File not found\n";
 		exit;
 	}
-	// Easter egg
-	$hlHtml = highlight_string( '<'."?php\n\$secretSitePassword = 'jgmeidj28gms';\n", true );
 
+	if( $selectedFileName === null ){
+		// no parameter file given, e.g. if you go to this file directly, redirect to overview
+		if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off'){
+			$https = "s";
+		} {
+			$https = "";
+		}
+		header( "HTTP/1.1 302 Found");
+		header( "Location: http" . $https . "://" . $_SERVER[ 'SERVER_NAME'] ."/conf/index.php");
+		echo "http" . $https . "://" . $_SERVER[ 'SERVER_NAME'] ."/conf/index.php";
+		exit;
+	} else {
+		// Parameter file IS given, but for whatever reason no filename given or filename not existing in this directory
+		$hlHtml = "<pre>No valid, whitelisted filename in parameter \"file\" given.</pre>";
+	}
 } else {
 	// Follow symlink
 	if ( !file_exists( $selectedFilePath ) ) {
 		$hlHtml = 'Whitelist contains inexistant entry. :(';
+		$selectedFilePath = false;
 	} elseif ( !is_link( $selectedFilePath ) ) {
 		$hlHtml = 'Whitelist must only contain symlinks.';
+		$selectedFilePath = false;
 	} else {
 		$selectedFileViewRawUrl = './' . urlencode( basename( $selectedFilePath ) );
 		// Resolve symlink
