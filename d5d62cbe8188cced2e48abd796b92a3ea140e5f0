@@ -16,6 +16,24 @@
       "revId": "d5d62cbe8188cced2e48abd796b92a3ea140e5f0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_a0d36b60",
+        "filename": "docroot/noc/conf/highlight.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 657
+      },
+      "writtenOn": "2014-02-03T18:33:36Z",
+      "side": 1,
+      "message": "Is a redirect to the overview better than a error message?",
+      "parentUuid": "6ef7ef47_80e18f2b",
+      "revId": "d5d62cbe8188cced2e48abd796b92a3ea140e5f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
