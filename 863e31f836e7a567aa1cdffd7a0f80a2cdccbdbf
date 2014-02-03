@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_a39a5564",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2020,
+      "author": {
+        "id": 1025
+      },
+      "writtenOn": "2014-02-03T20:58:17Z",
+      "side": 1,
+      "message": "it looks like the equal signs should be kept aligned, here. As I said on another commit, I\u0027m wondering if the option should be called $wgMathUseMathJax instead but someone from MediaWiki must confirmed.",
+      "revId": "863e31f836e7a567aa1cdffd7a0f80a2cdccbdbf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
