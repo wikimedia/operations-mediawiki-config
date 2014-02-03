@@ -34,6 +34,24 @@
       "revId": "d5d62cbe8188cced2e48abd796b92a3ea140e5f0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_60c56390",
+        "filename": "docroot/noc/conf/highlight.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2014-02-03T18:40:13Z",
+      "side": 1,
+      "message": "Yes. If a user somehow reaches \u003chttps://noc.wikimedia.org/conf/highlight.php\u003e, receiving the error message \"No valid, whitelisted filename in parameter \u0027file\u0027 given.\" means nothing and isn\u0027t helpful. The user should simply be redirected back to the main index page, in my opinion.",
+      "parentUuid": "6ef7ef47_a0d36b60",
+      "revId": "d5d62cbe8188cced2e48abd796b92a3ea140e5f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

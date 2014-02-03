@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_c03d578c",
+        "filename": "docroot/noc/conf/highlight.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2014-02-03T18:40:13Z",
+      "side": 0,
+      "message": "This proposed change means that you\u0027ll be giving the user version control and blame links for non-existent files. If this proposed change is merged, users will be given a link to \u003chttps://git.wikimedia.org/blame/operations%2Fmediawiki-config.git/HEAD/\u003e in certain cases, as I understand it, which is not terribly helpful.\n\nI fail to see why you would remove this conditional logic. If a valid file name isn\u0027t provided, why output blame and raw text links? That doesn\u0027t make sense to me.",
+      "parentUuid": "6ef7ef47_e0d97384",
+      "revId": "818bd13f09479d3539831498965e23dbb8a052b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_a0fc8bd6",
         "filename": "docroot/noc/conf/highlight.php",
         "patchSetId": 1
