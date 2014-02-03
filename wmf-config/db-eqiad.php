@@ -90,9 +90,9 @@ $wgLBFactoryConf = array(
 		# schema changes 'db1050'    => 0, # 2.8TB sas 64GB, snapshot
 		'db1055'    => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1043'    => 100, # 1.4TB sas 64GB, vslow, dump
-		'db1037'    => 50, # 1.4TB sas 64GB, warm up
+		'db1037'    => 300, # 1.4TB sas 64GB
 		'db1049'    => 300, # 2.8TB sas 64GB
-		'db1051'    => 400, # 2.8TB sas 96GB
+		# schema changes 'db1051'    => 400, # 2.8TB sas 96GB
 		'db1052'    => 400, # 2.8TB sas 96GB
 	),
 	's2' => array(
