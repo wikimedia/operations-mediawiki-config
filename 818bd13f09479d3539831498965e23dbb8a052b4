@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_00ee9f1f",
+        "filename": "docroot/noc/conf/highlight.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2014-02-03T18:27:42Z",
+      "side": 0,
+      "message": "I don\u0027t understand this removal.",
+      "revId": "818bd13f09479d3539831498965e23dbb8a052b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_a0fc8bd6",
+        "filename": "docroot/noc/conf/highlight.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2014-02-03T18:27:42Z",
+      "side": 0,
+      "message": "I don\u0027t understand this removal.",
+      "revId": "818bd13f09479d3539831498965e23dbb8a052b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
