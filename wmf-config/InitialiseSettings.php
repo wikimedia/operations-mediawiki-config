@@ -12736,8 +12736,6 @@ $wgConf->settings = array(
 
 'wmgCirrusIsBuilding' => array(
 	'default' => false,
-	'enwiki' => true,
-	'huwiki' => true,
 ),
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
@@ -12765,7 +12763,7 @@ $wgConf->settings = array(
 	// Commons is special and has a 'file' index in addition to the regular ones.
 	// File has shards at ~6GB each even with 20 of them.
 	'commonswiki' => array( 'content' => 1, 'general' => 20, 'file' => 20 ),
-	'dewiki' => array( 'content' => 15, 'general' => 13 ),
+	'dewiki' => array( 'content' => 20, 'general' => 16 ),
 	'dewikisource' => array( 'content' => 3, 'general' => 1 ),
 	'elwiki' => array( 'content' => 2, 'general' => 1 ),
 	// These shards are also signigicantly larger than the target 2GB.
@@ -12777,7 +12775,7 @@ $wgConf->settings = array(
 	'frwiki' => array( 'content' => 14, 'general' => 13 ),
 	'frwikisource' => array( 'content' => 12, 'general' => 1 ),
 	'frwikitionary' => array( 'content' => 2, 'general' => 1 ),
-	'huwiki' => array( 'content' => 6, 'general' => 1 ),   // Sized before deployment
+	'huwiki' => array( 'content' => 4, 'general' => 2 ),
 	'itwiki' => array( 'content' => 13, 'general' => 9 ),
 	'mgwiktionary' => array( 'content' => 2, 'general' => 1 ),
 	'nlwiki' => array( 'content' => 8, 'general' => 4 ),
