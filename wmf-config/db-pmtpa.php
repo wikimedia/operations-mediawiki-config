@@ -96,7 +96,7 @@ $wgLBFactoryConf = array(
 		'db71'    => 100, # pmtpa master
 	),
 	's4' => array(
-		'db1059'   => 0,
+		'db1040'   => 0,
 		'db72'	 => 100, # pmtpa master
 	),
 	's5' => array(

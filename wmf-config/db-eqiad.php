@@ -110,8 +110,6 @@ $wgLBFactoryConf = array(
 		'db1019'    => 400,
 	),
 	's4' => array(
-		'db1024'   => 0, # temp master, haproxy
-		#'db1059'   => 0, # old master
 		'db1040'   => 0, # new master
 		'db1042'   => 0, # snapshot, vslow, dump
 		'db1004'   => 0, # watchlist, recentchangeslinked, contributions, logpager
