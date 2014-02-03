@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_80586f8d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12769,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-02-03T19:47:21Z",
+      "side": 1,
+      "message": "For next time: typo signigicantly",
+      "revId": "6e79a42ba45d96e7a1a79f267cd47809d4f8f369",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
