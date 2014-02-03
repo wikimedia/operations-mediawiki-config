@@ -37,5 +37,3 @@ function getWikiVersion( $dbName ) {
 	print "Unable to open $cdbFilename.\n";
 	exit( 1 );
 }
-
-echo getWikiVersion( $argv[1] ) . "\n";

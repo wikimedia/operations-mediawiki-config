@@ -2,4 +2,4 @@
 <?php
 require_once( __DIR__  . '/getMWVersion.php' );
 
-getWikiVersion( $argv[1] );
+echo getWikiVersion( $argv[1] ) . "\n";
