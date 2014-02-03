@@ -4,11 +4,7 @@
 $selectableFilepaths = glob( __DIR__ . '/*' );
 
 // Name of file from user input
-if( isset($_GET['file']) ){
-	$selectedFileName = $_GET['file'];
-} else {
-	$selectedFileName = null;
-}
+$selectedFileName = $_GET['file'];
 
 // Absolute path to file on disk
 $selectedFilePath = false;
@@ -44,9 +40,8 @@ if ( !$selectedFilePath ) {
 		echo "File not found\n";
 		exit;
 	}
-
-	//no filename given or filename not existing in this directory
-	$hlHtml = "<pre>No valid, whitelisted filename in parameter \"file\" given.</pre>";
+	// Easter egg
+	$hlHtml = highlight_string( '<'."?php\n\$secretSitePassword = 'jgmeidj28gms';\n", true );
 
 } else {
 	// Follow symlink
@@ -88,11 +83,17 @@ $selectedFileViewRawUrlEsc = htmlspecialchars( $selectedFileViewRawUrl );
 </head>
 <body>
 <h1><a href="./">&laquo;</a> <?php echo $selectedFileNameEsc; ?></h1>
+<?php
+if ( $selectedFilePath !== false ) :
+?>
 <p>(
 <a href="https://git.wikimedia.org/history/operations%2Fmediawiki-config.git/HEAD/<?php echo urlencode( $selectedFileRepoPathEsc ); ?>">version control</a> &bull;
 <a href="https://git.wikimedia.org/blame/operations%2Fmediawiki-config.git/HEAD/<?php echo urlencode( $selectedFileRepoPathEsc ); ?>">blame</a> &bull;
 <a href="<?php echo $selectedFileViewRawUrlEsc; ?>">raw text</a>
 )</p>
+<?php
+endif;
+?>
 <hr>
 <?php echo $hlHtml; ?>
 </body>
