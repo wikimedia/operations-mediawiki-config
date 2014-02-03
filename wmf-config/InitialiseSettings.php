@@ -10121,6 +10121,7 @@ $wgConf->settings = array(
 'wmgNewUserMinorEdit' => array(
 	'default' => true,
 	'arwiki' => false,
+	'fawiki' => false,
 	'incubatorwiki' => false,
 ),
 
@@ -12928,6 +12929,13 @@ $wgConf->settings = array(
     'foundationwiki' => '!^https?://(www\.)?wikimediafoundation\.org/!',
 ),
 
+        'default' => array(
+                'IR', // Iran
+        ),
+        '+wiki' => array(
+                'CN', // China
+        ),
+),
 'wmgHTTPSBlacklistCountries' => array(
 	'default' => array(
 		'IR', // Iran
