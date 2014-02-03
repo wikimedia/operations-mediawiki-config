@@ -16,6 +16,24 @@
       "revId": "863e31f836e7a567aa1cdffd7a0f80a2cdccbdbf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_d922f24f",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2020,
+      "author": {
+        "id": 183
+      },
+      "writtenOn": "2014-02-03T22:29:10Z",
+      "side": 1,
+      "message": "Ok. I don\u0027t like Use to much since I think Allow is more appropriate here.\nHowever, as long as the name is a unique, short and intuitive name that follows the naming convention I\u0027m ok with that. If you think the 3 additional letters are worth typing and reading them we can add them... even though I doubt that they improve the name reasonable.",
+      "parentUuid": "6ef7ef47_a39a5564",
+      "revId": "863e31f836e7a567aa1cdffd7a0f80a2cdccbdbf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
