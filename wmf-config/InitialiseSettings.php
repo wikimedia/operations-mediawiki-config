@@ -10121,6 +10121,7 @@ $wgConf->settings = array(
 'wmgNewUserMinorEdit' => array(
 	'default' => true,
 	'arwiki' => false,
+	'fawiki' => false,
 	'incubatorwiki' => false,
 ),
 
