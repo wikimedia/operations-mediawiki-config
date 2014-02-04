@@ -1,3 +1,6 @@
 [submodule "docroot/bits/WikipediaMobileFirefoxOS"]
 	path = docroot/bits/WikipediaMobileFirefoxOS
 	url = https://gerrit.wikimedia.org/r/p/apps/firefox/wikipedia.git
+[submodule "scap"]
+	path = scap
+	url = https://gerrit.wikimedia.org/r/p/mediawiki/tools/scap.git
