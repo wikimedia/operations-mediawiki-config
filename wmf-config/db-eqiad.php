@@ -115,6 +115,7 @@ $wgLBFactoryConf = array(
 		'db1004'   => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1011'   => 400,
 		'db1020'   => 400,
+		'db1059'   => 50, # warm up
 	),
 	's5' => array(
 		'db1058'   => 0,
