@@ -79,6 +79,7 @@ mwconfig_files=(
 	small.dblist
 	special.dblist
 	visualeditor.dblist
+	visualeditor-default.dblist
 	wikibooks.dblist
 	wikidata.dblist
 	wikidataclient.dblist
