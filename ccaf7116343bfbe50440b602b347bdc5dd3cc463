@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_5d911c9b",
+        "filename": "docroot/noc/conf/highlight.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2014-02-05T23:37:10Z",
+      "side": 1,
+      "message": "The referer check is just there in response to the easter egg being indexed by google, there\u0027s no need to have it after the easter egg is removed. The \"file not found\" message was meant to be the non-easter-egg version of this code path, but you have duplicated the message below by setting $hlHtml. So the whole if block here should be removed.",
+      "revId": "ccaf7116343bfbe50440b602b347bdc5dd3cc463",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
