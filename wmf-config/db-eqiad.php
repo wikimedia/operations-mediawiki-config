@@ -88,7 +88,7 @@ $wgLBFactoryConf = array(
 	's1' => array(
 		'db1056'    => 0, # 2.8TB sas 96GB
 		'db1050'    => 0, # 2.8TB sas 64GB, snapshot, vslow, dump
-		'db1055'    => 0, # watchlist, recentchangeslinked, contributions, logpager
+		# schema changes 'db1055'    => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1043'    => 50, # 1.4TB sas 64GB, warm up
 		'db1037'    => 300, # 1.4TB sas 64GB
 		'db1049'    => 300, # 2.8TB sas 64GB
@@ -279,18 +279,18 @@ $wgLBFactoryConf = array(
 
 'groupLoadsByDB' => array(
 	'enwiki' => array(
-		'watchlist' => array(
-			'db1055' => 1,
-		),
-		'recentchangeslinked' => array(
-			'db1055' => 1,
-		),
-		'contributions' => array(
-			'db1055' => 1,
-		),
-		'logpager' => array(
-			'db1055' => 1,
-		),
+# schema changes		'watchlist' => array(
+# schema changes			'db1055' => 1,
+# schema changes		),
+# schema changes		'recentchangeslinked' => array(
+# schema changes			'db1055' => 1,
+# schema changes		),
+# schema changes		'contributions' => array(
+# schema changes			'db1055' => 1,
+# schema changes		),
+# schema changes		'logpager' => array(
+# schema changes			'db1055' => 1,
+# schema changes		),
 		'dump' => array(
 			'db1050' => 1,
 		),
