@@ -84,7 +84,7 @@ $wgLBFactoryConf = array(
 #
 'sectionLoads' => array(
 	's1' => array(
-		'db1056'  => 0,
+		'db1052'  => 0,
 		'db63'    => 100, # pmtpa master
 	),
 	's2' => array(
