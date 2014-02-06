@@ -282,10 +282,12 @@ $wgSquidServersNoPurge = array(
 	'91.198.174.83',	# cp3013
 	'91.198.174.84',	# cp3014
 
+	# ulsfo
 	'10.128.0.111',	# cp4011
 	'10.128.0.112',	# cp4012
 	'10.128.0.119',	# cp4019
 	'10.128.0.120',	# cp4020
+	'10.2.4.26', # mobile.svc.ulsfo.wmnet, appears in XFF
 
 	# OTHERS - Currently unused..?
 );
