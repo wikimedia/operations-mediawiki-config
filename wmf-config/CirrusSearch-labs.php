@@ -11,3 +11,15 @@ $wgCirrusSearchServers = array(
 	'deployment-es2',
 	'deployment-es3',
 );
+
+if ( $wgDBname == 'enwiki' ) {
+	$wgCirrusSearchInterwikiSources = array(
+		'wiktionary' => 'enwiktionary',
+		'wikibooks' => 'enwikibooks',
+		'wikinews' => 'enwikinews',
+		'wikiquote' => 'enwikiquote',
+		'wikisource' => 'enwikisource',
+		'wikiversity' => 'enwikiversity',
+		'wikivoyage' => 'enwikivoyage',
+	);
+}
