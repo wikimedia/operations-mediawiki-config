@@ -10294,17 +10294,18 @@ $wgConf->settings = array(
 	'default' => array( '*.flickr.com', '*.staticflickr.com', ),
 	'+testwiki' => array( 'upload.wikimedia.org' ),
 	'+commonswiki' => array(
-		'*.collectie.legermuseum.nl',    // for GWToolset, mediafile server for the legermuseum
-		'*.europeana1914-1918.eu',       // for GWToolset, mediafile server for europeana 1914-1918
-		'*.gahetna.nl',                  // for GWToolset, mediafile server for the nationaal archief nederland
-		'*.hu-berlin.de',                // for GWToolset, mediafile server for humboldt-universität zu berlin
-		'*.kb.nl',                       // for GWToolset, mediafile server for the koninklijke bibliotheek, nationale bibliotheek van nederland
-		'*.lndb.lv',                     // for GWToolset, mediafile server for latvijas nacionālā bibliotēka
-		'*.memorix.nl',                  // for GWToolset, mediafile server for the archief eemland
-		'*.openbeelden.nl',              // for GWToolset, mediafile server for open images, an initiative of the netherlands institute for sound and vision
-		'*.raa.se',                      // for GWToolset, mediafile server for the swedish national heritage board
-		'*.rbge.org.uk',                 // for GWToolset, mediafile server for the royal botanic garden edinburgh
-		'*.rijksmuseum.nl',              // for GWToolset, mediafile server for the rijksmuseum
+		'*.collectie.legermuseum.nl',    // Legermuseum
+		'*.europeana1914-1918.eu',       // Europeana 1914-1918
+		'*.gahetna.nl',                  // Nationaal Archief Nederland
+		'*.hu-berlin.de',                // Humboldt-Universität zu Berlin
+		'*.kb.nl',                       // Koninklijke Bibliotheek, Nationale Bibliotheek van Nederland
+		'*.lndb.lv',                     // Latvijas Nacionālā Bibliotēka
+		'*.memorix.nl',                  // Archief Eemland
+		'*.openbeelden.nl',              // Open Beelden
+		'*.raa.se',                      // Swedish National Heritage Board
+		'*.rbge.org.uk',                 // Royal Botanic Garden Edinburgh
+		'*.rijksmuseum.nl',              // Rijksmuseum
+		'*.llgc.org.uk',		 // National Library of Wales
 	),
 ),
 
