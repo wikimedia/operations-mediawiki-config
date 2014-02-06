@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_3bd3f731",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12145,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2014-02-06T08:39:50Z",
+      "side": 1,
+      "message": "I like the idea of using spaces rather than the canonicalized underscores here.  However, if so there needs to be an accompanying change to RedisCategorySync.",
+      "revId": "b25b59cb049f5d281ec8db971698bf92e702faa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_7badff7f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12196,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2014-02-06T08:39:50Z",
+      "side": 1,
+      "message": "We should try to fill this out from https://www.wikidata.org/wiki/Q5312304 for the wikis we\u0027re adding.",
+      "revId": "b25b59cb049f5d281ec8db971698bf92e702faa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_dbc77366",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12208,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2014-02-06T08:39:50Z",
+      "side": 1,
+      "message": "Since we\u0027re making this automatic, we don\u0027t need to add these here, right?",
+      "revId": "b25b59cb049f5d281ec8db971698bf92e702faa5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
