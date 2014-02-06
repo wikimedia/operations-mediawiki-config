@@ -12197,6 +12197,7 @@ $wgConf->settings = array(
 	'wiki' => true,
 	'wikivoyage' => true,
 ),
+
 'wmgEnableGeoSearch' => array(
 	'default' => true,
 	'loginwiki' => false,
@@ -12204,9 +12205,11 @@ $wgConf->settings = array(
 ),
 
 'wmgUseEcho' => array(
-	'default' => false,
-	'echowikis' => true,
+	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
+
 'wmgEchoEnableEmailBatch' => array(
 	'default' => true,
 ),
@@ -12287,8 +12290,9 @@ $wgConf->settings = array(
 
 // Thanks should be enabled for wikis with Echo
 'wmgUseThanks' => array(
-	'default' => false,
-	'echowikis' => true,
+	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgUseFlow' => array(
