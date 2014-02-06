@@ -279,18 +279,18 @@ $wgLBFactoryConf = array(
 
 'groupLoadsByDB' => array(
 	'enwiki' => array(
-# schema changes		'watchlist' => array(
-# schema changes			'db1055' => 1,
-# schema changes		),
-# schema changes		'recentchangeslinked' => array(
-# schema changes			'db1055' => 1,
-# schema changes		),
-# schema changes		'contributions' => array(
-# schema changes			'db1055' => 1,
-# schema changes		),
-# schema changes		'logpager' => array(
-# schema changes			'db1055' => 1,
-# schema changes		),
+		'watchlist' => array(
+			'db1055' => 1,
+		),
+		'recentchangeslinked' => array(
+			'db1055' => 1,
+		),
+		'contributions' => array(
+			'db1055' => 1,
+		),
+		'logpager' => array(
+			'db1055' => 1,
+		),
 		'dump' => array(
 			'db1050' => 1,
 		),
