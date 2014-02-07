@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_613e69b7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12196,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2014-02-07T00:13:26Z",
+      "side": 1,
+      "message": "PageFilter also expects these in canonicalization format.",
+      "revId": "6fb82b3631d62c705d36fc60085467022110a6c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
