@@ -10663,6 +10663,7 @@ $wgConf->settings = array(
 
 'wmgTemplateDataUseGUI' => array(
 	'default' => false,
+	'mediawikiwiki' => true,
 ),
 
 // Bug 50000 - Disable for logged-out users if wmgVisualEditorDefault is true
