@@ -33,7 +33,7 @@ class MWMultiVersion {
 	private $versionLoaded = false;
 
 	/**
-	 * To get an inststance of this class, use the static helper methods.
+	 * To get an instance of this class, use the static helper methods.
 	 * @see getInstanceForWiki
 	 * @see getInstanceForUploadWiki
 	 */
