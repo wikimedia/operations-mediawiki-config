@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ef7ef47_69f1a7fd",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6872,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2014-02-08T09:12:30Z",
+      "side": 1,
+      "message": "Abusefilter rights normally go in abusefilter.php ... although I see hewiki already has lots of abusefilter stuff here. \n\nTechnically, everything to do with abusefilter should live in abusefilter.php, but it probably should be moved in a separate cleanup patch",
+      "revId": "849e675e8f774ec783cad65cd17849d51471a816",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
