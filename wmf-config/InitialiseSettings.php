@@ -7851,7 +7851,7 @@ $wgConf->settings = array(
 	),
 	'+itwiki' => array(
 		'bureaucrat' => array( 'rollbacker' ),
-		'sysop' => array( 'autopatrolled', 'flood', 'filemover' ), // Bug 53913 (filemover)
+		'sysop' => array( 'accountcreator', 'autopatrolled', 'flood', 'filemover' ), // bug 53913, 61109
 	),
 	'+itwikibooks' => array(
 		'sysop' => array( 'autopatrolled', 'patroller' ),
@@ -8333,8 +8333,8 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'test-sysop', 'translator', 'import', 'translationadmin' ),
 	),
 	'+itwiki' => array(
-		'bureaucrat' => array( 'rollbacker', 'autopatrolled', 'filemover' ), // Bug 53913 (filemover)
-		'sysop' => array( 'flood', ),
+		'bureaucrat' => array( 'rollbacker', 'autopatrolled', 'filemover' ), // bug 53913
+		'sysop' => array( 'accountcreator', 'flood', ), // bug 61109
 	),
 	'+itwikibooks' => array(
 		'sysop' => array( 'autopatrolled', 'patroller', 'flooder' ), // Flooder added per bug 39569
