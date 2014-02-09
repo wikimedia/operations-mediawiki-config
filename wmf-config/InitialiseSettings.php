@@ -6078,6 +6078,7 @@ $wgConf->settings = array(
 	'ruwikiversity' => true,
 	'sawiki' => true, // bug 33200
 	'sawikisource' => true, // bug 34769
+	'shwiki' => true, // bug 60818
 	'siwiki' => true,
 	'srwiki' => true, // req by dungodung in #wikimedia-tech, 2008-02-25
 	'srwikisource' => true, // #25963
@@ -7331,7 +7332,11 @@ $wgConf->settings = array(
 	),
 	'shwiki' => array( // bug 50802
 		'patroller' => array( 'patrol' => true ),
-		'autopatrolled' => array( 'autopatrol' => true ),
+		'autopatrolled' => array(
+			'autopatrol' => true,
+			'patrolmarks' => true, // bug 60818
+		),
+		'confirmed' => array( 'patrolmarks' => true, ),
 		'rollbacker' => array( 'rollback' => true ),
 		'filemover' => array( 'movefile' => true, 'suppressredirect' => true ),
 		'flood' => array( 'bot' => true ),
