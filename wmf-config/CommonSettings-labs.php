@@ -86,6 +86,8 @@ if ( $wmgUseVisualEditor ) {
 
 require_once( "$IP/extensions/MobileApp/MobileApp.php" );
 
+require_once( "$IP/extensions/Popups/Popups.php" );
+
 # temporary extensions
 # ========================================================================
 
