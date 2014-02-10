@@ -10424,7 +10424,7 @@ $wgConf->settings = array(
 ),
 
 'wgSearchSuggestCacheExpiry' => array(
-	'default' => 86400,
+	'default' => 43200,
 ),
 
 'wgDisableHardRedirects' => array(
