@@ -11592,7 +11592,6 @@ $wgConf->settings = array(
 // Should VisualEditor's tab and section link have a "beta" superscript note?
 'wmgVisualEditorBetaInTab' => array(
 	'default' => false,
-	'enwiki' => true,
 ),
 
 // Should VisualEditor forward users' Cookie: headers to Parsoid (for private wikis)
