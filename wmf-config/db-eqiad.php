@@ -101,7 +101,7 @@ $wgLBFactoryConf = array(
 		'db1002'    => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1009'    => 300,
 		'db1024'    => 300,
-		# schema changes 'db1060'    => 400,
+		'db1060'    => 50,
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038'    => 0,
