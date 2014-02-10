@@ -11139,6 +11139,11 @@ $wgConf->settings = array(
 	'testwiki' => false,
 	'test2wiki' => false,
 ),
+'wmgUseMobileApp' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
 'wmgMobileFrontend' => array(
 	'default' => true,
 	'wikidata' => false, // Disabled due to lack of mobile domain setup

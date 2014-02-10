@@ -1983,6 +1983,10 @@ if ( $wmgUseMoodBar ) {
 }
 $wgAvailableRights[] = 'moodbar-admin'; // To allow global groups to include this right -AG
 
+if ( $wmgUseMobileApp ) {
+	require_once( "$IP/extensions/MobileApp/MobileApp.php" );
+}
+
 # Mobile related configuration
 
 require( getRealmSpecificFilename( "$wmfConfigDir/mobile.php" ) );
