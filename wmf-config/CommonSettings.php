@@ -2469,12 +2469,14 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSAnonCanChangeLanguage = false;
 	$wgULSPosition = $wmgULSPosition;
 	$wgULSIMEEnabled = $wmgULSIMEEnabled;
+	$wgULSWebfontsEnabled = $wmgULSWebfontsEnabled;
 	// Temporary for bug 58374
 	$wgULSNoWebfontsSelectors = array( '.autonym' );
 	if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgUseZeroNamespace ) {
 		$wgULSNoImeSelectors[] = '.ace_editor textarea';
 	}
 
+	// Remove after ULS is re-deployed
 	if ( $wmgUniversalLanguageSelectorDefault ) {
 		$wgDefaultUserOptions['uls-enable'] = 1;
 	}

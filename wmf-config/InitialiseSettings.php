@@ -12495,6 +12495,7 @@ $wgConf->settings = array(
 ),
 
 // Should ULS be enabled for users by default
+// Remove this block after ULS is re-deployed
 'wmgUniversalLanguageSelectorDefault' => array(
 	'default' => false,
 	'testwiki' => true,
@@ -12513,6 +12514,11 @@ $wgConf->settings = array(
 'wmgULSIMEEnabled' => array(
 	'default' => true,
 	'enwiki' => false,
+),
+
+// Whether ime is enabled *by default*
+'wmgULSWebfontsEnabled' => array(
+	'default' => false,
 ),
 
 'wmgULSEventLogging' => array(
