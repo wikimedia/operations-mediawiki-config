@@ -1834,6 +1834,7 @@ if ( $wmgUseGWToolset ) {
 
 if ( $wmgUseMultimediaViewer ) {
 	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
+	$wgNetworkPerformanceSamplingFactor = 1000;
 }
 
 if ( $wmgUseVectorBeta ) {
