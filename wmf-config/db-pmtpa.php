@@ -88,7 +88,7 @@ $wgLBFactoryConf = array(
 		'db63'    => 100, # pmtpa master
 	),
 	's2' => array(
-		'db1056'  => 0, # haproxy rotation db1036 db1024
+		'db1024'  => 0,
 		'db69'    => 100, # pmtpa master
 	),
 	/* s3 */ 'DEFAULT' => array(
