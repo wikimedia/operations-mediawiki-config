@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "6ef7ef47_7deba177",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12142,
+      "author": {
+        "id": 468
+      },
+      "writtenOn": "2014-02-10T04:04:31Z",
+      "side": 1,
+      "message": "There are several wikis added here that are not in wmgUseGettingStarted. That doesn\u0027t make a whole lot of sense, we\u0027d be collecting articles in Redis that cannot be served to users...\n\nI think wikis not in wmgUseGettingStarted should be removed. These are arwiki, cebwiki, kawiki, mtwiki, slwiki, tewiki, and tlwiki. \n\nsimplewiki, which uses English, should probably just be added wmgUseGettingStarted.",
+      "revId": "6fb82b3631d62c705d36fc60085467022110a6c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_5deea587",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12194,
+      "author": {
+        "id": 468
+      },
+      "writtenOn": "2014-02-10T04:04:31Z",
+      "side": 1,
+      "message": "Same as above. Are we adding all excluded BLP categories just to save us future work?",
+      "revId": "6fb82b3631d62c705d36fc60085467022110a6c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_613e69b7",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 3
