@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_223e11b6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12142,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-02-10T19:21:04Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "6ef7ef47_7deba177",
+      "revId": "6fb82b3631d62c705d36fc60085467022110a6c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_5deea587",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 3
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6ef7ef47_0239d5ca",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12194,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-02-10T19:21:04Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "6ef7ef47_5deea587",
+      "revId": "6fb82b3631d62c705d36fc60085467022110a6c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ef7ef47_613e69b7",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 3
@@ -47,6 +83,24 @@
       "writtenOn": "2014-02-07T00:13:26Z",
       "side": 1,
       "message": "PageFilter also expects these in canonicalization format.",
+      "revId": "6fb82b3631d62c705d36fc60085467022110a6c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ef7ef47_e2bdc917",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12196,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-02-10T19:21:04Z",
+      "side": 1,
+      "message": "Done. See https://gerrit.wikimedia.org/r/#/c/112496/.",
+      "parentUuid": "6ef7ef47_613e69b7",
       "revId": "6fb82b3631d62c705d36fc60085467022110a6c1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
