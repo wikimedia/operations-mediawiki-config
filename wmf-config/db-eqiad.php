@@ -98,10 +98,10 @@ $wgLBFactoryConf = array(
 	's2' => array(
 		'db1036'    => 0,
 		'db1018'    => 0, # snapshot, vslow, dump
-		#'db1002'    => 0, # watchlist, recentchangeslinked, contributions, logpager
+		'db1002'    => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1009'    => 300,
 		'db1024'    => 300,
-		'db1060'    => 400,
+		# schema changes 'db1060'    => 400,
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038'    => 0,
@@ -161,18 +161,18 @@ $wgLBFactoryConf = array(
 		'dump' => array(
 			'db1018' => 1,
 		),
-#		'watchlist' => array(
-#			'db1002' => 1,
-#		),
-#		'recentchangeslinked' => array(
-#			'db1002' => 1,
-#		),
-#		'contributions' => array(
-#			'db1002' => 1,
-#		),
-#		'logpager' => array(
-#			'db1002' => 1,
-#		),
+		'watchlist' => array(
+			'db1002' => 1,
+		),
+		'recentchangeslinked' => array(
+			'db1002' => 1,
+		),
+		'contributions' => array(
+			'db1002' => 1,
+		),
+		'logpager' => array(
+			'db1002' => 1,
+		),
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'vslow' => array(
