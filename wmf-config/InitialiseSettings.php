@@ -12339,7 +12339,6 @@ $wgConf->settings = array(
 // Should VisualEditor's tab and section link have a "beta" superscript note?
 'wmgVisualEditorBetaInTab' => array(
 	'default' => false,
-	'enwiki' => true,
 ),
 
 // Should VisualEditor display a live version of the Table of Contents as you edit
