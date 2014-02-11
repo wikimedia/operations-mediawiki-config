@@ -12326,8 +12326,6 @@ $wgConf->settings = array(
 'wmgFlowMaintenanceMode' => array(
 	'default' => false,
 	'enwiki' => true,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
 ),
 'wmgUseDisambiguator' => array(
 	'default' => true,
