@@ -8101,7 +8101,7 @@ $wgConf->settings = array(
 		),
 	),
 	'+zhwikivoyage' => array(
-		'sysop' => array( 'autopatrolled', 'confirmed', 'import', 'patroller', 'transwiki' ), // bug 60085, 60328
+		'sysop' => array( 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ), // bug 60085, 60328
 	),
 	'+zh_yuewiki' => array(
 		'sysop' => array( 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ),
@@ -8589,7 +8589,7 @@ $wgConf->settings = array(
 		),
 	),
 	'+zhwikivoyage' => array(
-		'sysop' => array( 'autopatrolled', 'confirmed', 'import', 'patroller', 'transwiki' ), // bug 60085, 60328
+		'sysop' => array( 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ), // bug 60085, 60328
 	),
 	'+zh_yuewiki' => array(
 		'sysop' => array( 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ),
