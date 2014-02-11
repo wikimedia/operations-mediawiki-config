@@ -1962,7 +1962,7 @@ if ( $wmgUseWikiLove ) {
 	}
 }
 
-if ( $wmgUseGuidedTour ) {
+if ( $wmgUseGuidedTour || $wmgUseGettingStarted ) {
 	require_once( "$IP/extensions/GuidedTour/GuidedTour.php" );
 }
 
@@ -2366,6 +2366,7 @@ if ( $wmgUseGettingStarted ) {
 		$wgGettingStartedRedis = $sessionRedis[$wmfDatacenter][0];
 		$wgGettingStartedRedisOptions['password'] = $wmgRedisPassword;
 	}
+	$wgGettingStartedCategoriesForTaskTypes = $wmgGettingStartedCategoriesForTaskTypes;
 	$wgGettingStartedExcludedCategories = $wmgGettingStartedExcludedCategories;
 	$wgGettingStartedRunTest = $wmgGettingStartedRunTest;
 }
