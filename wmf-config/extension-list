@@ -69,6 +69,7 @@ $IP/extensions/MapSources/MapSources.php
 $IP/extensions/MarkAsHelpful/MarkAsHelpful.php
 $IP/extensions/MassMessage/MassMessage.php
 $IP/extensions/Math/Math.php
+$IP/extensions/MobileApp/MobileApp.php
 $IP/extensions/MobileFrontend/MobileFrontend.php
 $IP/extensions/MoodBar/MoodBar.php
 $IP/extensions/MultimediaViewer/MultimediaViewer.php
