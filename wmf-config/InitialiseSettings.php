@@ -12151,7 +12151,7 @@ $wgConf->settings = array(
 		'copyedit' => 'Articles amb ortografia per millorar',
 	),
 	'enwiki' => array(
-		'copyedit' => 'Wikipedia articles needing copy edit',
+		'copyedit' => 'All articles needing copy edit',
 		'clarify' => 'All Wikipedia articles needing clarification',
 		'addlinks' => 'All articles with too few wikilinks',
 	),
