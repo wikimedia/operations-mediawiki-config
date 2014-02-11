@@ -12323,7 +12323,13 @@ $wgConf->settings = array(
 	'default' => 'extension1',
 	'private' => false,
 ),
-
+'wmgFlowMaintenanceMode' => array(
+	'default' => false,
+	'enwiki' => true,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
+),
 'wmgUseDisambiguator' => array(
 	'default' => true,
 ),
