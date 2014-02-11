@@ -241,11 +241,6 @@ return array(
 		'default' => true,
 	),
 
-	# ULS predeployment testing 2013-05
-	'wmgUseUniversalLanguageSelector' => array(
-		'default' => true,
-	),
-
 	'wmgULSPosition' => array(
 		# Beta-specific
 		'ee-prototype' => 'personal',
