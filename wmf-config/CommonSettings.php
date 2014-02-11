@@ -1669,64 +1669,6 @@ if ( $wmgUseLivePreview ) {
 	$wgDefaultUserOptions['uselivepreview'] = 1;
 }
 
-if ( $wmgUseArticleFeedbackv5 ) {
-	require_once( "$IP/extensions/ArticleFeedbackv5/ArticleFeedbackv5.php" );
-
-	$wgArticleFeedbackv5Cluster = $wmgArticleFeedbackv5Cluster;
-	$wgArticleFeedbackv5Categories = $wmgArticleFeedbackv5Categories;
-	$wgArticleFeedbackv5BlacklistCategories = $wmgArticleFeedbackv5BlacklistCategories;
-	$wgArticleFeedbackv5OversightEmails = $wmgArticleFeedbackv5OversightEmails;
-	$wgArticleFeedbackv5OversightEmailHelp = $wmgArticleFeedbackv5OversightEmailHelp;
-	$wgArticleFeedbackv5AutoHelp = $wmgArticleFeedbackv5AutoHelp;
-	$wgArticleFeedbackv5LearnToEdit = $wmgArticleFeedbackv5LearnToEdit;
-	$wgArticleFeedbackv5Namespaces = $wmgArticleFeedbackv5Namespaces;
-	$wgArticleFeedbackv5LotteryOdds = $wmgArticleFeedbackv5LotteryOdds;
-	$wgArticleFeedbackv5EnableProtection = $wmgArticleFeedbackv5EnableProtection;
-	$wgArticleFeedbackv5AutoArchiveEnabled = $wmgArticleFeedbackv5AutoArchiveEnabled;
-	$wgArticleFeedbackv5AutoArchiveTtl = $wmgArticleFeedbackv5AutoArchiveTtl;
-	$wgArticleFeedbackv5Watchlist = $wmgArticleFeedbackv5Watchlist;
-	$wgArticleFeedbackv5ArticlePageLink = $wmgArticleFeedbackv5ArticlePageLink;
-
-	// clear default permissions set in ArticleFeedbackv5.php
-	foreach ( $wgGroupPermissions as $group => $permissions ) {
-		foreach ( $wmgArticleFeedbackv5Permissions as $permission => $groups ) {
-			if ( isset( $wgGroupPermissions[$group][$permission] ) ) {
-				unset( $wgGroupPermissions[$group][$permission] );
-			}
-		}
-	}
-
-	// set permissions as defined for selected wiki
-	foreach ( $wmgArticleFeedbackv5Permissions as $permission => $groups ) {
-		foreach ( (array) $groups as $group ) {
-			if ( isset( $wgGroupPermissions[$group] ) ) {
-				$wgGroupPermissions[$group][$permission] = true;
-			}
-		}
-	}
-
-	// test groups
-	$wgGroupPermissions['afttest'] = array(
-		'aft-reader' => true,
-		'aft-member' => true,
-		'aft-editor' => true,
-		'aft-monitor' => true,
-		'aft-administrator' => false,
-		'aft-oversighter' => false,
-	);
-	$wgGroupPermissions['afttest-hide'] = array(
-		'aft-reader' => true,
-		'aft-member' => true,
-		'aft-editor' => true,
-		'aft-monitor' => true,
-		'aft-administrator' => true,
-		'aft-oversighter' => true,
-	);
-
-	$wgArticleFeedbackv5AbuseFiltering = $wmgArticleFeedbackv5AbuseFiltering;
-//	$wgArticleFeedbackv5CTABuckets = $wmgArticleFeedbackv5CTABuckets;
-}
-
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
 $wgDefaultUserOptions['showhiddencats'] = $wmgShowHiddenCats;
 
