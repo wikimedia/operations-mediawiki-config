@@ -11140,9 +11140,7 @@ $wgConf->settings = array(
 	'test2wiki' => false,
 ),
 'wmgUseMobileApp' => array(
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
+	'default' => true,
 ),
 'wmgMobileFrontend' => array(
 	'default' => true,
