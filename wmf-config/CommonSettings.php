@@ -2340,6 +2340,7 @@ if ( $wmgUseFlow ) {
 	$wgFlowDefaultWikiDb = $wmgFlowDefaultWikiDb;
 	$wgFlowCluster = $wmgFlowCluster;
 	$wgFlowExternalStore = $wgDefaultExternalStore;
+	$wgFlowMaintenanceMode = $wmgFlowMaintenanceMode;
 }
 
 if ( $wmgUseDisambiguator ) {
