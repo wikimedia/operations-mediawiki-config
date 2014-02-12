@@ -136,6 +136,7 @@ $wgConf->settings = array(
 	'grantswiki' => 'en',
 	'iegcomwiki' => 'en',
 	'incubatorwiki' => 'en', # mixed
+	'legalteamwiki' => 'en',
 	'officewiki' => 'en',
 	'ombudsmenwiki' => 'en',
 	'otrs_wikiwiki' => 'en',
@@ -964,6 +965,7 @@ $wgConf->settings = array(
 	'iegcomwiki' => '//upload.wikimedia.org/wikipedia/commons/5/5e/Wikimedia_IEG_committee_logo.png', // bug 48379
 	'incubatorwiki' => '$stdlogo',
 	'internalwiki' => '//upload.wikimedia.org/wikipedia/meta/a/a2/Wikimediainernal-logo135px.png',
+	'legalteamwiki' => '$stdlogo',
 	'loginwiki' => '//upload.wikimedia.org/wikipedia/commons/e/ed/Wikimedia_logo-scaled-down.png', // bug 48236
 	'mediawikiwiki' => '$stdlogo',
 	'metawiki' => '$stdlogo',
@@ -1174,6 +1176,7 @@ $wgConf->settings = array(
 	'iegcomwiki' => '//iegcom.wikimedia.org',
 	'incubatorwiki' => '//incubator.wikimedia.org',
 	'internalwiki' => '//internal.wikimedia.org',
+	'legalteamwiki' => '//legalteam.wikimedia.org',
 	'loginwiki' => '//login.wikimedia.org',
 	'mediawikiwiki' => '//www.mediawiki.org',
 	'metawiki' => '//meta.wikimedia.org',
@@ -1254,6 +1257,7 @@ $wgConf->settings = array(
 	'iegcomwiki' => 'http://iegcom.wikimedia.org',
 	'incubatorwiki' => 'http://incubator.wikimedia.org',
 	'internalwiki' => 'https://internal.wikimedia.org',
+	'legalteamwiki' => 'https://legalteam.wikimedia.org',
 	'loginwiki' => 'http://login.wikimedia.org',
 	'mediawikiwiki' => 'http://www.mediawiki.org',
 	'metawiki' => 'http://meta.wikimedia.org',
@@ -1547,6 +1551,7 @@ $wgConf->settings = array(
 	'ladwiki' => 'Vikipedya',
 	'lbwiktionary' => 'Wiktionnaire',
 	'lbewiki' => 'Википедия',
+	'legalteamwiki' => 'Legal Team Wiki',
 	'lezwiki' => 'Википедия',
 	'liwikibooks' => 'Wikibeuk',
 	'liwikisource' => 'Wikibrónne',
@@ -2007,6 +2012,7 @@ $wgConf->settings = array(
 	'ladwiki'	=> 'Vikipedya',
 	'lbwiktionary'  => 'Wiktionnaire',
 	'lbewiki'       => 'Википедия',
+	'legalteamwiki' => 'Project',
 	'lezwiki'	=> 'Википедия',
 	'liwikibooks'   => 'Wikibeuk',
 	'liwikisource'  => 'Wikibrónne',
@@ -3513,6 +3519,7 @@ $wgConf->settings = array(
 	'+grantswiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+incubatorwiki' => array( 0 => 1, 6 => 0, 14 => 1 ),
 	'+internalwiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
+	'+legalteamwiki' => array( 0 => 1 ),
 	'+mediawikiwiki' => array( 0 => 1, 6 => 0, 8 => 0, 14 => 1 ),
 	'+metawiki' => array( 0 => 1, 6 => 0, 8 => 0, 200 => 1, 201 => 1, 202 => 1, 203 => 1, 208 => 1, 209 => 1 ),
 	'+movementroleswiki' => array( 0 => 1 ),
@@ -6215,6 +6222,7 @@ $wgConf->settings = array(
 	'foundationwiki' => "#wikimediafoundation.org\t",
 	'iegcomwiki' => "#iegcom.wikipedia\t",
 	'internalwiki' => "#internal.wikipedia\t",
+	'legalteamwiki' => "#legalteam.wikipedia\t",
 	'loginwiki' => "#login.wikipedia\t",
 	'mediawikiwiki' => "#mediawiki.wikipedia\t",
 	'movementroleswiki' => "#movementroles.wikipedia\t",
@@ -7085,6 +7093,11 @@ $wgConf->settings = array(
 		'autoconfirmed' => array( 'upload' => false ),
 		'sysop' => array( 'upload' => true ),
 	),
+	'+legalteamwiki' => array( // bug 61222
+		'accountcreator' => array( 'noratelimit' => false ),
+		'bureaucrat' => array( 'createaccount' => true ),
+		'sysop' => array( 'createaccount' => false ),
+	),
 	'mediawikiwiki' => array(
 		'user' => array( 'move' => false ),
 		'autoreview' => array( 'autopatrol' => true ),
@@ -7925,6 +7938,9 @@ $wgConf->settings = array(
 	'+kowiki' => array(
 		'sysop' => array( 'rollbacker', 'confirmed' ),
 	),
+	'+legalteamwiki' => array( // bug 61222
+		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'ipblock-exempt' ),
+	),
 	'+ltwiki' => array(
 		'sysop' => array ( 'abusefilter' ),
 	),
@@ -8410,6 +8426,9 @@ $wgConf->settings = array(
 	),
 	'+kowiki' => array(
 		'sysop' => array( 'rollbacker', 'confirmed' ),
+	),
+	'+legalteamwiki' => array( // bug 61222
+		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'bureaucrat' ),
 	),
 	'+ltwiki' => array(
 		'sysop' => array ( 'abusefilter' ),
@@ -9630,6 +9649,7 @@ $wgConf->settings = array(
 	'iegcomwiki' => '//bits.wikimedia.org/favicon/wmf.ico',
 	'incubatorwiki' => '//bits.wikimedia.org/favicon/incubator.ico',
 	'internalwiki' => '//bits.wikimedia.org/favicon/internal.ico',
+	'legalteamwiki' => '//bits.wikimedia.org/favicon/wmf.ico',
 	'loginwiki' => '//bits.wikimedia.org/favicon/wmf.ico',
 	'mediawikiwiki' => '//bits.wikimedia.org/favicon/mediawiki.ico',
 	'metawiki' => '//bits.wikimedia.org/favicon/community.ico',
@@ -9901,6 +9921,7 @@ $wgConf->settings = array(
 	'kbdwiki' => true,
 	'koiwiki' => true,
 	'kowikiversity' => true,
+	'legalteamwiki' => true,
 	'lezwiki' => true,
 	'liwikibooks' => true,
 	'liwikisource' => true,
@@ -11115,6 +11136,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'arbcom_enwiki' => true,
 	'checkuserwiki' => true,
+	'legalteamwiki' => true,
 	'ombudsmenwiki' => true,
 	'stewardwiki' => true,
 ),
