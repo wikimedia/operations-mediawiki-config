@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_3780dff8",
+        "filename": "multiversion/MWWikiversions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-02-12T21:42:54Z",
+      "side": 0,
+      "message": "TIL you can use list() to only take part of an array. I\u0027ve always added $junkN variables before.",
+      "revId": "696e1766d9daf5ccec947cc25ad7c0ac0dfd8fe7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
