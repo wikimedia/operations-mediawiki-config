@@ -42,10 +42,7 @@ function getActiveWikiVersions() {
 
 	$result = $activeVersions = array();
 	foreach ( $versionRows as $row ) {
-		list( $dbName, $version, $extVersion, $comment ) = $row;
-		if ( $extVersion !== '*' && in_array( '--extended', $options ) ) {
-			$version .= "-$extVersion";
-		}
+		list( $dbName, $version, $comment ) = $row;
 		if ( !isset( $activeVersions[$version] ) ) { // already listed?
 			$activeVersions[$version] = 1;
 

@@ -48,16 +48,15 @@ class MWWikiversions {
 
 		// Get the column values for this row...
 		$items = explode( ' ', trim( $row ) ); // cleanup w/s
-		if ( count( $items ) === 3 ) {
-			list( $dbName, $version, $extVersion ) = $items;
-		} elseif ( count( $items ) === 2 ) {
+		$count = count( $items );
+		// 3 items used to be valid. Just toss it
+		if ( $count === 2 || $count === 3 ) {
 			list( $dbName, $version ) = $items;
-			$extVersion = '*'; // none
 		} else {
 			throw new Exception( "Invalid row on line $lineNo ('$line').\n" );
 		}
 
-		return array( $dbName, $version, $extVersion, $comment );
+		return array( $dbName, $version, $comment );
 	}
 
 	/**
@@ -65,8 +64,8 @@ class MWWikiversions {
 	 * @return string Line for wikiversions.dat
 	 */
 	public static function lineFromRow( array $row ) {
-		list( $dbName, $version, $extVersion, $comment ) = $row;
-		$line = "$dbName $version $extVersion";
+		list( $dbName, $version, $comment ) = $row;
+		$line = "$dbName $version";
 		if ( $comment !== '' ) {
 			$line .= " #$comment";
 		}

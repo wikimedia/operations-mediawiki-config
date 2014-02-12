@@ -54,13 +54,13 @@ function switchAllMediaWikis() {
 	$newWikiVersionsData = "";
 	# Go through all the rows and do the replacements...
 	foreach ( $versionRows as $row ) {
-		list( $dbName, $version, $extVersion, $comment ) = $row;
+		list( $dbName, $version, $comment ) = $row;
 		if ( isset( $dbList[$dbName] ) // wiki is in the .dblist file
 			&& ( $version === $oldVersion || $oldVersion === 'all' ) )
 		{
 			# Change the row and add it to the list
 			$newWikiVersionsData .= MWWikiversions::lineFromRow(
-				array( $dbName, $newVersion, $extVersion, $comment )
+				array( $dbName, $newVersion, $comment )
 			);
 			++$count;
 		} else {
