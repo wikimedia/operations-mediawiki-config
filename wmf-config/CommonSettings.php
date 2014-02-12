@@ -1923,6 +1923,11 @@ if ( $wmgUseTemplateData ) {
 	require_once( "$IP/extensions/TemplateData/TemplateData.php" );
 }
 
+if ( $wmgTemplateDataUseGUI ) {
+	$wgTemplateDataUseGUI = true;
+}
+
+
 if ( $wmgUseGoogleNewsSitemap ) {
 	include( "$IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php" );
 	$wgGNSMfallbackCategory = $wmgGNSMfallbackCategory;

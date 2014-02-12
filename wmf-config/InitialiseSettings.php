@@ -10661,6 +10661,10 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgTemplateDataUseGUI' => array(
+	'default' => false,
+),
+
 // Bug 50000 - Disable for logged-out users if wmgVisualEditorDefault is true
 // This is a temporary variable for roll-out, to be removed once complete.
 // If a wiki was previously enabled by default for all users but then disabled,
