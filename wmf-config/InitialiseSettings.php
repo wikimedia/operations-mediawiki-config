@@ -10667,6 +10667,7 @@ $wgConf->settings = array(
 // this will need to be set true for 30 days (anon cache epoch).
 'wmgVisualEditorDisableForAnons' => array(
 	'default' => false,
+	'eswiki' => true, // Bug 60188; remove after mid-March 2014
 ),
 
 // Should VisualEditor's "beta welcome" be shown
@@ -10678,6 +10679,7 @@ $wgConf->settings = array(
 'wmgVisualEditorSecondaryTabs' => array(
 	'default' => false,
 	'enwiki' => true,
+	'eswiki' => true, // bug 60188
 	'hewiki' => true, // bug 52552
 ),
 
