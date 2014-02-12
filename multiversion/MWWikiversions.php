@@ -38,26 +38,15 @@ class MWWikiversions {
 	 * @return Array|null (dbname, version, extended version, comment)
 	 */
 	public static function rowFromLine( $line, $lineNo ) {
-		// Strip comments and ignore comment lines...
-		$len = strcspn( $line, '#' );
-		if ( $len === 0 ) {
-			return null; // comment line or empty line
-		}
-		$row = substr( $line, 0, $len );
-		$comment = trim( substr( $line, $len + 1 ) ); // exclude the '#'
-
 		// Get the column values for this row...
-		$items = explode( ' ', trim( $row ) ); // cleanup w/s
-		if ( count( $items ) === 3 ) {
-			list( $dbName, $version, $extVersion ) = $items;
-		} elseif ( count( $items ) === 2 ) {
+		$items = explode( ' ', trim( $line ) ); // cleanup w/s
+		if ( count( $items ) >= 2 ) {
 			list( $dbName, $version ) = $items;
-			$extVersion = '*'; // none
 		} else {
 			throw new Exception( "Invalid row on line $lineNo ('$line').\n" );
 		}
 
-		return array( $dbName, $version, $extVersion, $comment );
+		return array( $dbName, $version );
 	}
 
 	/**
@@ -65,12 +54,8 @@ class MWWikiversions {
 	 * @return string Line for wikiversions.dat
 	 */
 	public static function lineFromRow( array $row ) {
-		list( $dbName, $version, $extVersion, $comment ) = $row;
-		$line = "$dbName $version $extVersion";
-		if ( $comment !== '' ) {
-			$line .= " #$comment";
-		}
-		return $line;
+		list( $dbName, $version ) = $row;
+		return "$dbName $version";
 	}
 
 	/**
