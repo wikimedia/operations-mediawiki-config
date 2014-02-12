@@ -27,7 +27,7 @@ function refreshWikiversionsCDB() {
 	$rows = MWWikiversions::readWikiVersionsFile( $srcPath );
 	// Sanity check version directories...
 	foreach ( $rows as $row ) {
-		list( $dbName, $version, $extVersion, $comment ) = $row;
+		list( $dbName, $version ) = $row;
 		$versionDir = MULTIVER_COMMON_HOME . '/' . $version;
 		if ( !is_dir( $versionDir ) ) {
 			print "Invalid version dir '$versionDir' for wiki '$dbName'.\n";
