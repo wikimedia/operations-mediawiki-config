@@ -52,7 +52,9 @@ if ( !$selectedFilePath ) {
 		exit;
 	} else {
 		// Parameter file IS given, but for whatever reason no filename given or filename not existing in this directory
-		$hlHtml = "<pre>No valid, whitelisted filename in parameter \"file\" given.</pre>";
+		$hlHtml = "<pre>Valid filename
+in parameter \"file\"
+has not been given</pre>";
 	}
 } else {
 	// Follow symlink
