@@ -55,6 +55,7 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 			array( 'iegcomwiki', 'iegcom.wikimedia.org' ),
 			array( 'incubatorwiki', 'incubator.wikimedia.org' ),
 			array( 'internalwiki', 'internal.wikimedia.org' ),
+			array( 'legalteamwiki', 'legalteam.wikimedia.org' ),
 			array( 'loginwiki', 'login.wikimedia.org' ),
 			array( 'mediawikiwiki', 'www.mediawiki.org' ),
 			array( 'metawiki', 'meta.wikimedia.org' ),
