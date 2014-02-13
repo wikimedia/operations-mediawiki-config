@@ -100,8 +100,8 @@ $wgLBFactoryConf = array(
 		'db1018'    => 0, # snapshot, vslow, dump
 		'db1002'    => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1009'    => 300,
+		'db1036'    => 50, # warm up
 		'db1060'    => 400,
-		#'db1036'    => 0, # old master
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038'    => 0,
