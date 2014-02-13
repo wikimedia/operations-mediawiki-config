@@ -11430,6 +11430,15 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'User %code%-N',
 	),
+	'eowiktionary' => array( // bug 61116
+		'0' => 'Vikivortaristo %code%-0',
+		'1' => 'Vikivortaristo %code%-1',
+		'2' => 'Vikivortaristo %code%-2',
+		'3' => 'Vikivortaristo %code%-3',
+		'4' => 'Vikivortaristo %code%-4',
+		'5' => false,
+		'N' => 'Vikivortaristo %code%-D',
+	),
 	'eswiki' => array(
 		'0' => false,
 		'1' => 'Wikipedia:Wikipedistas con nivel básico de %wikiname%',
@@ -11904,6 +11913,7 @@ $wgConf->settings = array(
 	'enwikisource' => 'User %code%',
 	'enwikinews' => 'User %code%',
 	'enwikiversity' => 'User %code%',
+	'eowiktionary' => 'Vikivortaristo %code%', // bug 61116
 	'eswiki' => 'Wikipedia:Wikipedistas con conocimientos de %wikiname%',
 	'eswikinews' => 'Usuario %code%',
 	'fiwiki' => 'User %code%',
