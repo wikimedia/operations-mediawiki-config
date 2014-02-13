@@ -2579,19 +2579,19 @@ if ( $wmgUseOAuth ) {
 	$wgMWOAuthGrantPermissionGroups['checkuser'] = 'administration';
 
 	// Rights needed to interact with wikibase
-	$wgMWOAuthGrantPermissions['createeditmovepage'][] = 'item-create';
-	$wgMWOAuthGrantPermissions['editpage'][] = 'item-override';
-	$wgMWOAuthGrantPermissions['editpage'][] = 'item-remove';
-	$wgMWOAuthGrantPermissions['editpage'][] = 'item-merge';
-	$wgMWOAuthGrantPermissions['editpage'][] = 'alias-update';
-	$wgMWOAuthGrantPermissions['editpage'][] = 'alias-remove';
-	$wgMWOAuthGrantPermissions['editpage'][] = 'sitelink-update';
-	$wgMWOAuthGrantPermissions['editpage'][] = 'sitelink-remove';
-	$wgMWOAuthGrantPermissions['editpage'][] = 'linktitles-update';
-	$wgMWOAuthGrantPermissions['editpage'][] = 'label-remove';
-	$wgMWOAuthGrantPermissions['editpage'][] = 'label-update';
-	$wgMWOAuthGrantPermissions['editpage'][] = 'description-remove';
-	$wgMWOAuthGrantPermissions['editpage'][] = 'description-update';
+	$wgMWOAuthGrantPermissions['createeditmovepage']['item-create'] = true;
+	$wgMWOAuthGrantPermissions['editpage']['item-override'] = true;
+	$wgMWOAuthGrantPermissions['editpage']['item-remove'] = true;
+	$wgMWOAuthGrantPermissions['editpage']['item-merge'] = true;
+	$wgMWOAuthGrantPermissions['editpage']['alias-update'] = true;
+	$wgMWOAuthGrantPermissions['editpage']['alias-remove'] = true;
+	$wgMWOAuthGrantPermissions['editpage']['sitelink-update'] = true;
+	$wgMWOAuthGrantPermissions['editpage']['sitelink-remove'] = true;
+	$wgMWOAuthGrantPermissions['editpage']['linktitles-update'] = true;
+	$wgMWOAuthGrantPermissions['editpage']['label-remove'] = true;
+	$wgMWOAuthGrantPermissions['editpage']['label-update'] = true;
+	$wgMWOAuthGrantPermissions['editpage']['description-remove'] = true;
+	$wgMWOAuthGrantPermissions['editpage']['description-update'] = true;
 }
 
 ### End (roughly) of general extensions ########################
