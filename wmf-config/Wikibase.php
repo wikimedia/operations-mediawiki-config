@@ -79,6 +79,23 @@ if ( $wmgUseWikibaseRepo ) {
 	// Bug 51637 and 46953
 	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
 
+	if ( $wmgUseOAuth ) {
+		// Rights needed to interact with wikibase
+		$wgMWOAuthGrantPermissions['createeditmovepage']['item-create'] = true;
+		$wgMWOAuthGrantPermissions['editpage']['item-override'] = true;
+		$wgMWOAuthGrantPermissions['editpage']['item-remove'] = true;
+		$wgMWOAuthGrantPermissions['editpage']['item-merge'] = true;
+		$wgMWOAuthGrantPermissions['editpage']['alias-update'] = true;
+		$wgMWOAuthGrantPermissions['editpage']['alias-remove'] = true;
+		$wgMWOAuthGrantPermissions['editpage']['sitelink-update'] = true;
+		$wgMWOAuthGrantPermissions['editpage']['sitelink-remove'] = true;
+		$wgMWOAuthGrantPermissions['editpage']['linktitles-update'] = true;
+		$wgMWOAuthGrantPermissions['editpage']['label-remove'] = true;
+		$wgMWOAuthGrantPermissions['editpage']['label-update'] = true;
+		$wgMWOAuthGrantPermissions['editpage']['description-remove'] = true;
+		$wgMWOAuthGrantPermissions['editpage']['description-update'] = true;
+	}
+
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfExtendedVersionNumber";
 }
 
