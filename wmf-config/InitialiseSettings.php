@@ -10629,6 +10629,7 @@ $wgConf->settings = array(
 	'svwiktionary' => array( NS_USER ), // Bug 57356
 	// Private wikis
 	'+officewiki' => array( 100 /* Report */ ),
+	'+sewikimedia' => array( 100 ), // bug 60882
 ),
 
 // Whether to add $wgContentNamespaces to $wmgVisualEditorNamespaces above
