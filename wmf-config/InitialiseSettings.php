@@ -3801,6 +3801,7 @@ $wgConf->settings = array(
 	'hewiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop'), //bug 58207
 	'plwiki' => array( '', 'autoconfirmed', 'editor', 'sysop' ), // bug 46990
 	'ptwiki' => array( '', 'autoconfirmed', 'autoreviewer', 'sysop' ), // bug 39652
+	'rowiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop' ), // bug 61172
 	'testwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop' ), // bug 59084
 ),
 # @} end of wgRestrictionLevels
@@ -7245,12 +7246,16 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 	),
 	'rowiki' => array(
-		'sysop' => array( 'autopatrol' => true, 'patrol' => true, ),
+		'sysop' => array(
+			'autopatrol' => true,
+			'patrol' => true,
+			'templateeditor' => true, // bug 61172
+		),
 		'patroller' => array( 'patrol' => true, 'upwizcampaigns' => true, ), // bug 59242
 		'autopatrolled' => array( 'autopatrol' => true, ),
+		'templateeditor' => array( 'templateeditor' => true, ), // bug 61172
 	),
-	// http://bugzilla.wikimedia.org/show_bug.cgi?id=12334
-	'ruwiki' => array(
+	'ruwiki' => array( // bug 12334
 		'*' => array( 'patrolmarks' => true, ),
 		'user' => array( 'upload' => false ),
 		'autoconfirmed' => array( 'upload' => false ),
@@ -7962,9 +7967,9 @@ $wgConf->settings = array(
 	'+quwiki' => array(
 		'sysop' => array( 'rollbacker' ),
 	),
-	'+rowiki' => array( // bug 26634 --hashar 2011-01-14
-		'sysop' => array( 'autopatrolled' ),
-		'bureaucrat' => array( 'abusefilter', 'patroller' ),
+	'+rowiki' => array(
+		'sysop' => array( 'autopatrolled', 'templateeditor' ), // bug 61172
+		'bureaucrat' => array( 'abusefilter', 'patroller' ), // bug 26634
 	),
 	'+ruwiki' => array(
 		'sysop' => array( 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ),
@@ -8441,9 +8446,9 @@ $wgConf->settings = array(
 	'+quwiki' => array(
 		'sysop' => array( 'rollbacker' ),
 	),
-	'+rowiki' => array( // bug 26634 --hashar 2011-01-14
-		'bureaucrat' => array( 'abusefilter', 'patroller' ),
-		'sysop' => array( 'autopatrolled' ),
+	'+rowiki' => array(
+		'bureaucrat' => array( 'abusefilter', 'patroller' ), // bug 26634
+		'sysop' => array( 'autopatrolled', 'templateeditor' ), // bug 61172
 	),
 	'+ruwiki' => array(
 		'bureaucrat' => array( 'sysop', 'arbcom' ), // bug 49334
