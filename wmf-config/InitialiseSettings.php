@@ -7981,7 +7981,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'rollbacker' ),
 	),
 	'+otrs_wikiwiki' => array(
-		'bureaucrat' => array( 'import', 'transwiki' ),
+		'bureaucrat' => array( 'import', 'transwiki', 'translationadmin' ), // bug 61297
 	),
 	'+outreachwiki' => array(
 		'bureaucrat' => array( 'translationadmin' ),
@@ -8466,7 +8466,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'rollbacker' ),
 	),
 	'+otrs_wikiwiki' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'import', 'transwiki' ),
+		'bureaucrat' => array( 'sysop', 'bureaucrat', 'import', 'transwiki', 'translationadmin' ), // bug 61297
 	),
 	'+outreachwiki' => array(
 		'bureaucrat' => array(
@@ -10200,6 +10200,7 @@ $wgConf->settings = array(
 'wgGroupsAddToSelf' => array(
 	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 54732
 	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 37198
+	'otrs_wikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // bug 61297
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'enwikisource' => array( 'sysop' => array( 'flood' ) ), //Bug 36863
@@ -10218,6 +10219,7 @@ $wgConf->settings = array(
 'wgGroupsRemoveFromSelf' => array(
 	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 54732
 	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 37198
+	'otrs_wikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 61297
 	'ckbwiki' => array(
 		'flood' => array( 'flood' ), // Bug 51803
 		'botadmin' => array( 'botadmin' ), // Bug 51803
@@ -12021,6 +12023,7 @@ $wgConf->settings = array(
 	'incubatorwiki' => true, // bug 34213
 	'mediawikiwiki' => true,
 	'metawiki' => true,
+	'otrs_wikiwiki' => true, // bug 61297
 	'outreachwiki' => true,
 	'testwiki' => true,
 	'wikidata' => true, // bug 41585
@@ -12047,6 +12050,16 @@ $wgConf->settings = array(
 		'ready' => array( 'color' => 'FF0' ),
 		'published' => array( 'color' => 'AEA' ),
 	),
+	'otrs_wikiwiki' => array( // bug 61297
+		'progress' => array( 'color' => 'E00' ),
+		'proofreading' => array( 'color' => 'FFBF00' ),
+		'ready' => array( 'color' => 'FF0' ),
+		'state conditions' => array(
+			array( 'ready', array( 'PROOFREAD' => 'MAX' ) ),
+			array( 'proofreading', array( 'TRANSLATED' => 'MAX' ) ),
+			array( 'progress', array( 'UNTRANSLATED' => 'NONZERO' ) ),
+		),
+	),
 	'wikidata' => array(
 		'progress' => array( 'color' => 'E00' ),
 		'needs-updating' => array( 'color' => 'FFBF00' ),
@@ -12064,6 +12077,7 @@ $wgConf->settings = array(
 
 'wmgUseTranslationMemory' => array(
 	'default' => true,
+	'otrs_wikiwiki' => false, // bug 61297
 ),
 'wmgUseTranslationNotifications' => array(
 	'default' => false,
