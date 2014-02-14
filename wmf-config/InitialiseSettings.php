@@ -7447,6 +7447,10 @@ $wgConf->settings = array(
 			'upload_by_url' => true, // For testing of Flickr uploading via UploadWizard
 			'upload' => true,
 		),
+		'qa_automation' => array( // For browser tests, bug 58375
+			'flow-delete' => true,
+			'flow-suppress' => true,
+		),
 	),
 	'thwiki' => array(
 		'autoconfirmed' => array(
@@ -7695,6 +7699,9 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'researcher', 'centralnoticeadmin', 'translationadmin' ),
 		'sysop' => array( 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ),
 		# 'user' => array( 'editor', 'reviewer' ),
+	),
+	'+test2wiki' => array(
+		'qa_automation' => array( 'qa_automation' ), // For browser tests, bug 58375
 	),
 	// ******************************************************************
 	'+arwiki' => array(
