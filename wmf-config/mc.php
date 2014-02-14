@@ -20,7 +20,7 @@ $wgObjectCaches['memcached-pecl'] = array(
 	'persistent' => false,
 	'servers'    => array( '127.0.0.1' ),
 	'server_failure_limit' => 1e9,
-	'retry_timeout' => 1
+	'retry_timeout' => -1 // disabled (https://bugs.launchpad.net/libmemcached/+bug/1251482)
 );
 
 /*** No Twemproxy
