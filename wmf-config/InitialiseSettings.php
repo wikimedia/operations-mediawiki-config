@@ -6095,6 +6095,7 @@ $wgConf->settings = array(
 	'itwikibooks' => true, // bug 9159
 	'itwikiquote' => true, // bug 12826
 	'itwiktionary' => true, // bug 11424
+        'jawiktionary' => true, // bug 61366
 	'kshwiki' => true, // bug 8798
 	'mediawikiwiki' => true, // bug 56104
 	'metawiki' => true, // bug 4747
@@ -7070,6 +7071,9 @@ $wgConf->settings = array(
 		'autoconfirmed' => array( 'upload' => false ),
 		'sysop' => array( 'upload' => true ),
 	),
+	'jawiktionary' => array(
+		'autopatrolled' => array( 'autopatrol' => true, 'patrol' => true ), // bug 61366
+	),
 	'kawiki' => array(
 		'editor' => array( 'rollback' => true ),
 	),
@@ -7913,6 +7917,9 @@ $wgConf->settings = array(
 		'sysop' => array( 'abusefilter' ),
 		'bureaucrat' => array( 'rollbacker', 'eliminator', 'interface_editor' ),
 	),
+	'+jawiktionary' => array(
+		'sysop' => array( 'autopatrolled' ), // bug 61366
+	),
 	'+kawiki' => array(
 		'sysop' => array( 'trusted' ),
 	),
@@ -8398,6 +8405,9 @@ $wgConf->settings = array(
 	'+jawiki' => array(
 		'sysop' => array( 'abusefilter' ),
 		'bureaucrat' => array( 'rollbacker', 'eliminator', 'interface_editor' ),
+	),
+	'+jawiktionary' => array(
+		'sysop' => array( 'autopatrolled' ), // bug 61366
 	),
 	'+kawiki' => array(
 		'sysop' => array( 'trusted' ),
