@@ -154,7 +154,6 @@ $wgConf->settings = array(
 'wgLocalInterwiki' => array(
 	'default' => '$lang',
 	'mediawikiwiki' => 'mw',
-	'metawiki' => 'm',
 ),
 
 # wgLocaltimezone @{
