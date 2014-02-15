@@ -4,6 +4,7 @@
 # Editors
 *~
 *.swp
+.idea/
 
 # Wikimedia private/temporary stuff
 AdminSettings.php
