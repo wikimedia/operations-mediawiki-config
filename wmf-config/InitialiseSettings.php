@@ -6644,6 +6644,12 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true, ),
 		'bot' => array( 'ipblock-exempt' => true, ), // Bug 42720
 		'user' => array( 'upload' => false, ),
+		'arbcom' => array( // bug 61418
+			'browsearchive' => true,
+			'deletedhistory' => true,
+			'deletedtext' => true,
+			'abusefilter-log-detail' => true,
+		),
 	),
 	'cswikibooks' => array(
 		'user' => array( 'upload' => false ),
@@ -7765,7 +7771,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'translationadmin' ),
 	),
 	'+cswiki' => array(
-		'bureaucrat' => array( 'autopatrolled' ),
+		'bureaucrat' => array( 'arbcom', 'autopatrolled' ), // bug 61418
 	),
 	'+cswikinews' => array(
 		'bureaucrat' => array( 'autopatrolled' ),
@@ -8248,7 +8254,7 @@ $wgConf->settings = array(
 		'steward' => array( 'OTRS-member' ),
 	),
 	'+cswiki' => array(
-		'bureaucrat' => array( 'autopatrolled' ),
+		'bureaucrat' => array( 'arbcom', 'autopatrolled' ), // bug 61418
 	),
 	'+cswikinews' => array(
 		'bureaucrat' => array( 'autopatrolled' ),
