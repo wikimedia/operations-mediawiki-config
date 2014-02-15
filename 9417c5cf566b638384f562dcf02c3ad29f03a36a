@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_3f966650",
+        "filename": "multiversion/refreshWikiversionsCDB",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2014-02-15T00:25:04Z",
+      "side": 1,
+      "message": "Should be list( $dbName, $version ) \u003d $row;",
+      "revId": "9417c5cf566b638384f562dcf02c3ad29f03a36a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_ff9fde60",
+        "filename": "multiversion/refreshWikiversionsCDB",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2014-02-15T00:25:04Z",
+      "side": 1,
+      "message": "This whole if block can be removed; we\u0027ll simply always set it to \u0027\u0027.",
+      "revId": "9417c5cf566b638384f562dcf02c3ad29f03a36a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_5f99327f",
+        "filename": "multiversion/refreshWikiversionsCDB",
+        "patchSetId": 2
+      },
+      "lineNbr": 65,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2014-02-15T00:25:04Z",
+      "side": 1,
+      "message": "$extVersion should be replaced with a literal empty string (\u0027\u0027) here.",
+      "revId": "9417c5cf566b638384f562dcf02c3ad29f03a36a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
