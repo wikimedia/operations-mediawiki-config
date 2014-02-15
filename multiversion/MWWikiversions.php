@@ -38,8 +38,15 @@ class MWWikiversions {
 	 * @return Array|null (dbname, version, extended version, comment)
 	 */
 	public static function rowFromLine( $line, $lineNo ) {
+		$len = strcspn( $line, '#' );
+		if ( $len === 0 ) {
+			return null; // comment line or empty line
+		}
+		$row = substr( $line, 0, $len );
+		$comment = trim( substr( $line, $len + 1 ) ); // exclude the '#'
+
 		// Get the column values for this row...
-		$items = explode( ' ', trim( $line ) ); // cleanup w/s
+		$items = explode( ' ', trim( $row ) ); // cleanup w/s
 		if ( count( $items ) >= 2 ) {
 			list( $dbName, $version ) = $items;
 		} else {
