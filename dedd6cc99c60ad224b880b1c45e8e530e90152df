@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_096db501",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 48
+      },
+      "writtenOn": "2014-02-16T23:38:38Z",
+      "side": 1,
+      "message": "the docs above seem to indicate this should be under a \"range\" key (rather than \"IP\"). Also, exceptions should rarely be used for ranges because ranges typically indicate that each machine gets its own IP (and therefore each machine has its own separate throttle)\n\nIn any case, is useless (a noop) because we won\u0027t ever get account creations from RFC1918 reserved blocks. (as MaxSem pointed out)",
+      "revId": "dedd6cc99c60ad224b880b1c45e8e530e90152df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
