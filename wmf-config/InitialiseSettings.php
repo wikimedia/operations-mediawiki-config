@@ -2739,7 +2739,6 @@ $wgConf->settings = array(
 		'सवा' => NS_USER_TALK,
 		'श्र' => NS_CATEGORY,
 		'श्रवा' => NS_CATEGORY_TALK,
-		'C' => NS_CATEGORY,
 		'CT' => NS_CATEGORY_TALK,
 		'सा' => NS_TEMPLATE,
 		'सावा' => NS_TEMPLATE_TALK,
