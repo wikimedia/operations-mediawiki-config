@@ -16,6 +16,24 @@
       "revId": "dedd6cc99c60ad224b880b1c45e8e530e90152df",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_8978a5c0",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 650
+      },
+      "writtenOn": "2014-02-16T23:42:37Z",
+      "side": 1,
+      "message": "Thanks Jeremy – I\u0027ll fix it as soon as I get the external IP from Mary.",
+      "parentUuid": "4e04eb01_096db501",
+      "revId": "dedd6cc99c60ad224b880b1c45e8e530e90152df",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
