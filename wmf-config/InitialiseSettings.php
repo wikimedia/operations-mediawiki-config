@@ -7519,38 +7519,6 @@ $wgConf->settings = array(
 	'ukwiktionary' => array(
 		'autoeditor' => array( 'autoreview' => true ),
 	),
-	'ukwikimedia' => array(
-		'*' => array(
-			'upload' => false,
-			'edit' => false,
-			'editallpages' => false,
-			'move' => false,
-			'createpage' => false,
-		),
-		'user' => array(
-			'upload' => false,
-			'edit' => true,
-			'editallpages' => false,
-			'move' => false,
-			'createpage' => false,
-		),
-		'sysop' => array(
-			'upload' => false,
-			'edit' => true,
-			'editallpages' => false,
-			'move' => false,
-			'importupload' => false,
-			'createpage' => false,
-		),
-		'bureaucrat' => array(
-			'upload' => false,
-			'edit' => true,
-			'editallpages' => true,
-			'move' => true,
-			'importupload' => false,
-			'createpage' => true,
-		),
-	),
 	'urwiki' => array(
 		'rollbacker' => array( 'rollback' => true ), // bug 45642
 	),
