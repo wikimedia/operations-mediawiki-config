@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_8fcf8582",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12498,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-02-17T15:50:14Z",
+      "side": 1,
+      "message": "Reference: https://gerrit.wikimedia.org/r/#/c/108988/25/UniversalLanguageSelector.php",
+      "revId": "e0426d5304186e30451ae8bcfff9bd8f2387d5c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
