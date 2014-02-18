@@ -10668,6 +10668,22 @@ $wgConf->settings = array(
 
 // -------------- VisualEditor start --------------
 
+'wmgUseParsoid' => array(
+	'default' => false,
+
+	'wikipedia' => true,
+	'metawiki' => true,
+	'wiktionary' => true,
+	'wikiquote' => true,
+	'wikibooks' => true,
+	'wikisource' => true,
+	'incubatorwiki' => true,
+	'wikiversity' => true,
+	'wikivoyage' => true,
+
+	'visualeditor' => true,
+),
+
 'wmgUseVisualEditor' => array(
 	'default' => false,
 	'visualeditor' => true,
