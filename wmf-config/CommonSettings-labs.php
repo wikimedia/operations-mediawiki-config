@@ -78,10 +78,18 @@ if ( $wmgUseVectorBeta ) {
 	require_once( "$IP/extensions/VectorBeta/VectorBeta.php" );
 }
 
-if ( $wmgUseVisualEditor ) {
-	$wgVisualEditorParsoidURL = 'http://10.4.0.61/'; // deployment-parsoidcache3
+if ( $wmgUseParsoid ) {
+	$wgParsoidURL = 'http://10.4.0.61/'; // deployment-parsoidcache3
 	$wgParsoidCacheServers = array ( 'http://10.4.0.61' ); // deployment-parsoidcache3
+}
+
+if ( $wmgUseVisualEditor ) {
+	$wgVisualEditorParsoidURL = $wgParsoidURL; // Re-link now it's been set to a new value
 	$wgVisualEditorParsoidReportProblemURL = 'http://10.4.0.33/_bugs/'; // parsoid-spof
+}
+
+if ( $wmgUseFlow ) {
+	$wgFlowParsoidURL = $wgParsoidURL; // Re-link now it's been set to a new value
 }
 
 require_once( "$IP/extensions/MobileApp/MobileApp.php" );
