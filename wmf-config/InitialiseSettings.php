@@ -12467,7 +12467,13 @@ $wgConf->settings = array(
 	'testwiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
 	'test2wiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
 	'metawiki' => array( 'Talk:Flow/Developer test page' ),
-	'mediawikiwiki' => array( 'Talk:Flow QA', 'Talk:Sandbox', 'Talk:Flow' ),
+	'mediawikiwiki' => array( 
+		'Talk:Flow QA', 
+		'Talk:Sandbox', 
+		'Talk:Flow',
+		'Talk:Winter', // talk page for design refresh
+		'User talk:Jorm (WMF)',
+	),
 	'enwiki' => array( // Bug 60178
 		'Wikipedia talk:WikiProject Breakfast',
 		'Wikipedia talk:WikiProject Hampshire',
