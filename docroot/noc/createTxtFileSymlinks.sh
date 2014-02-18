@@ -3,9 +3,6 @@ cd $(dirname $0)/conf
 
 # Create .txt symlink from mediawiki-config
 mwconfig_files_txt=(
-	fc-list
-	langlist
-	wikiversions.dat
 	wmf-config/CommonSettings-labs.php
 	wmf-config/CommonSettings.php
 	wmf-config/InitialiseSettings-labs.php
@@ -93,6 +90,9 @@ mwconfig_files=(
 	wikiversity.dblist
 	wikivoyage.dblist
 	wiktionary.dblist
+	wmf-config/extension-list
+	wmf-config/extension-list-labs
+	wmf-config/extension-list-wikidata
 	wmf-config/interwiki.cdb
 	wmf-config/trusted-xff.cdb
 )
