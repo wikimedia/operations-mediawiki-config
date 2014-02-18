@@ -10668,6 +10668,10 @@ $wgConf->settings = array(
 
 // -------------- VisualEditor start --------------
 
+'wmgUseParsoid' => array(
+	'default' => true,
+),
+
 'wmgUseVisualEditor' => array(
 	'default' => false,
 	'visualeditor' => true,
