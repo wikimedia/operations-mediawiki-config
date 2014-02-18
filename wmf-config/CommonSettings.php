@@ -2338,6 +2338,13 @@ if ( $wmgUseThanks ) {
 
 if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
+
+	// Flow Parsoid - same as $wgVisualEditorParsoid*, but separate for those
+	// wikis where $wmgUseVisualEditor is false
+	$wgFlowParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
+	$wgFlowParsoidPrefix = $wgDBname;
+	$wgFlowParsoidTimeout = 100;
+
 	$wgFlowEditorList = $wmgFlowEditorList;
 	$wgFlowOccupyPages = $wmgFlowOccupyPages;
 	// Requires that Parsoid is available for all wikis using Flow.
