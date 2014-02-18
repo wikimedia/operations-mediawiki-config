@@ -10323,7 +10323,6 @@ $wgConf->settings = array(
 	'default' => false,
 	'donatewiki' => true,
 	'foundationwiki' => true,
-	'testwiki' => true,
 ),
 
 'wgCopyUploadProxy' => array(
