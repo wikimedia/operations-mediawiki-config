@@ -12473,6 +12473,7 @@ $wgConf->settings = array(
 	# Extension:Flow's browsertests use Talk:Flow_QA.
 	'testwiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
 	'test2wiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
+	'metawiki' => array( 'Talk:Flow/Developer test page' ),
 	'mediawikiwiki' => array( 'Talk:Flow QA', 'Talk:Sandbox', 'Talk:Flow' ),
 	'enwiki' => array( // Bug 60178
 		'Wikipedia talk:WikiProject Breakfast',
