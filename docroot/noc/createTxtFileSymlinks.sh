@@ -20,6 +20,9 @@ mwconfig_files_txt=(
 	wmf-config/db-labs.php
 	wmf-config/db-pmtpa.php
 	wmf-config/db-secondary.php
+	wmf-config/extension-list
+	wmf-config/extension-list-labs
+	wmf-config/extension-list-wikidata
 	wmf-config/ext-labs.php
 	wmf-config/ext-production.php
 	wmf-config/filebackend-labs.php
