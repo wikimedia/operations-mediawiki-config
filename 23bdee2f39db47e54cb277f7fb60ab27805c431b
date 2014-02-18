@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_600c433e",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2014-02-18T18:33:14Z",
+      "side": 1,
+      "message": "Seem a bit cleaner to do:\n\n$wgJobTypeConf[\u0027cirrusSearchLinksUpdateSecondary\u0027][\u0027checkDelay\u0027] \u003d true;",
+      "revId": "23bdee2f39db47e54cb277f7fb60ab27805c431b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
