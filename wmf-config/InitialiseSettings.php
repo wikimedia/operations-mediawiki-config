@@ -10322,8 +10322,6 @@ $wgConf->settings = array(
 'wgUseContactPageFundraiser' => array(
 	'default' => false,
 	'donatewiki' => true,
-	'foundationwiki' => true,
-	'testwiki' => true,
 ),
 
 'wgCopyUploadProxy' => array(
