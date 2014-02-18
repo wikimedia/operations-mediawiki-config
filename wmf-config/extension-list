@@ -130,7 +130,6 @@ $IP/extensions/UnicodeConverter/UnicodeConverter.php
 $IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php
 $IP/extensions/UploadWizard/UploadWizard.php
 $IP/extensions/UserMerge/UserMerge.php
-$IP/extensions/UserThrottle/UserThrottle.php
 $IP/extensions/VectorBeta/VectorBeta.php
 $IP/extensions/VipsScaler/VipsScaler.php
 $IP/extensions/VipsScaler/VipsTest.php

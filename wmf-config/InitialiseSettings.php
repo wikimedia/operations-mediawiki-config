@@ -3935,7 +3935,6 @@ $wgConf->settings = array(
 # wgDebugLogGroups @{
 'wgDebugLogGroups' => array(
 	'default' => array(
-		'UserThrottle' => "udp://$wmfUdp2logDest/UserThrottle",
 		'cite' => "udp://$wmfUdp2logDest/cite", // to see how it's used;) -ævar
 		'thumbnail' => "udp://$wmfUdp2logDest/thumbnail",
 		'jobqueue' => "udp://$wmfUdp2logDest/jobqueue/web",
