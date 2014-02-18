@@ -12455,7 +12455,8 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
-	'metawiki' => true,
+	// Needs parsoid config
+	// 'metawiki' => false,
 	'enwiki' => true,
 ),
 'wmgFlowEditorList' => array(
