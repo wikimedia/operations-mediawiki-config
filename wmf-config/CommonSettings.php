@@ -1840,10 +1840,16 @@ if ( $wmgUseVectorBeta ) {
 	require_once( "$IP/extensions/VectorBeta/VectorBeta.php" );
 }
 
+// Parsoid is used by VisualEditor & Flow and both connect to the same
+$wgParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
+$wgParsoidPrefix = $wgDBname;
+$wgParsoidTimeout = 100;
+
 if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
-	$wgVisualEditorParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
-	$wgVisualEditorParsoidPrefix = $wgDBname;
+	$wgVisualEditorParsoidURL = $wgParsoidURL;
+	$wgVisualEditorParsoidPrefix = $wgParsoidPrefix;
+	$wgVisualEditorParsoidTimeout = $wgParsoidTimeout;
 	$wgVisualEditorParsoidProblemReportURL = 'http://parsoid.wmflabs.org/_bugs/';
 	if ( !$wmgVisualEditorInContentNamespaces ) {
 		$wgVisualEditorNamespaces = array(); // Wipe out default set by VisualEditor.php
@@ -2339,11 +2345,9 @@ if ( $wmgUseThanks ) {
 if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
 
-	// Flow Parsoid - same values as $wgVisualEditorParsoid*, but separated for
-	// those wikis where $wmgUseVisualEditor is false
-	$wgFlowParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
-	$wgFlowParsoidPrefix = $wgDBname;
-	$wgFlowParsoidTimeout = 100;
+	$wgFlowParsoidURL = $wgParsoidURL;
+	$wgFlowParsoidPrefix = $wgParsoidPrefix;
+	$wgFlowParsoidTimeout = $wgParsoidTimeout;
 
 	$wgFlowEditorList = $wmgFlowEditorList;
 	$wgFlowOccupyPages = $wmgFlowOccupyPages;
