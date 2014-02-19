@@ -8,7 +8,7 @@ require_once( __DIR__ . '/MWRealm.php' );
 
 /*
  * This script switches all wikis in a .dblist file running one MediaWiki
- * version to another MediaWiki version. Since this only changes the wikiversions.dat
+ * version to another MediaWiki version. Since this only changes the wikiversions.json
  * and wikiversions.cdb files on tin, they will still need to be synced to push
  * the upgrade/downgrade to the apaches.
  *
@@ -22,20 +22,19 @@ require_once( __DIR__ . '/MWRealm.php' );
 function switchAllMediaWikis() {
 	global $argv;
 	$common = MULTIVER_COMMON_HOME;
-	$datPath = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
+	$jsonPath = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.json' );
 
 	$argsValid = false;
-	if ( count( $argv ) >= 4 ) {
-		$oldVersion = $argv[1]; // e.g. "php-X.XX"
-		$newVersion = $argv[2]; // e.g. "php-X.XX"
+	if ( count( $argv ) === 2 ) {
+		$newVersion = $argv[1]; // e.g. "php-X.XX"
 		if ( preg_match( '/^php-(\d+\.\d+wmf\d+|master)$/', $newVersion ) ) {
 			$argsValid = true;
 		}
-		$dbListName = $argv[3]; // e.g. "all.dblist"
+		$dbListName = $argv[2]; // e.g. "all.dblist"
 	}
 
 	if ( !$argsValid ) {
-		print "Usage: switchAllMediaWikis php-X.XXwmfX php-X.XXwmfX <name>.dblist\n";
+		print "Usage: switchAllMediaWikis php-X.XXwmfX <name>.dblist\n";
 		exit( 1 );
 	}
 
@@ -47,41 +46,22 @@ function switchAllMediaWikis() {
 	# Read in .dblist file into an array with dbnames as keys...
 	$dbList = MWWikiversions::readDbListFile( "$common/$dbListName" );
 
-	# Get all the wikiversion rows in wikiversions.dat...
-	$versionRows = MWWikiversions::readWikiVersionsFile( $datPath );
+	# Get all the wikiversion rows in wikiversions.json...
+	$versionRows = MWWikiversions::readWikiVersionsFile( $jsonPath );
 
-	$count = 0;
-	$newWikiVersionsData = "";
 	# Go through all the rows and do the replacements...
-	foreach ( $versionRows as $row ) {
-		list( $dbName, $version ) = $row;
-		if ( isset( $dbList[$dbName] ) // wiki is in the .dblist file
-			&& ( $version === $oldVersion || $oldVersion === 'all' ) )
-		{
-			# Change the row and add it to the list
-			$newWikiVersionsData .= MWWikiversions::lineFromRow(
-				array( $dbName, $newVersion )
-			);
-			++$count;
-		} else {
-			# Just add the row back to the list
-			$newWikiVersionsData .= MWWikiversions::lineFromRow( $row );
-		}
-		$newWikiVersionsData .= "\n";
+	foreach ( $dbList as $dbName ) {
+		$versionRows[$dbName] = $newVersion;
 	}
 
-	# Update wikiversions.dat...
-	if ( !file_put_contents( $datPath, $newWikiVersionsData, LOCK_EX ) ) {
-		print "Unable to write to $datPath.\n";
-		exit( 1 );
-	}
-	echo "Updated $datPath.\n";
+	MWWikiversions::writeWikiVersionsFile( $jsonPath, $newWikiVersions );
+	echo "Updated $jsonPath.\n";
 
 	# Rebuild wikiversions.cdb...
 	$retVal = 1;
 	passthru( "cd $common/multiversion && ./refreshWikiversionsCDB", $retVal );
 	( $retVal == 0 ) or exit( 1 );
 
-	echo "Re-configured $count wiki(s) from $oldVersion to $newVersion.\n";
-	echo "The DB list contained " . count( $dbList ) . " wiki(s).\n";
+	$numSwitched = count( $dbList );
+	echo "Switched $numSwitched wikis to $newVersion.\n";
 }
