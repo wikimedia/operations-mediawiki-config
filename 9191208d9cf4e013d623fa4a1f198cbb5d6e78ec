@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e04eb01_0616b0a9",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2014-02-19T22:51:51Z",
+      "side": 1,
+      "message": "Done but this is a mess, as I said.",
+      "parentUuid": "4e04eb01_d8c54792",
+      "revId": "9191208d9cf4e013d623fa4a1f198cbb5d6e78ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e04eb01_185a8ff6",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
@@ -53,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "4e04eb01_2611acb1",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1859,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2014-02-19T22:51:51Z",
+      "side": 1,
+      "message": "But it isn\u0027t, Blanche, it isn\u0027t.",
+      "parentUuid": "4e04eb01_b8683b85",
+      "revId": "9191208d9cf4e013d623fa4a1f198cbb5d6e78ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e04eb01_18116f08",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 2
@@ -64,6 +100,24 @@
       "writtenOn": "2014-02-19T20:07:23Z",
       "side": 1,
       "message": "Did you check this with Gabriel? It\u0027ll enable the Parsoid extension (and purging behavior etc) on all wikis.",
+      "revId": "9191208d9cf4e013d623fa4a1f198cbb5d6e78ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_a6249c08",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 10672,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2014-02-19T22:51:51Z",
+      "side": 1,
+      "message": "This was already fixed in PS2+, that I apparently forgot to `git review` on; see next PS.",
+      "parentUuid": "4e04eb01_18116f08",
       "revId": "9191208d9cf4e013d623fa4a1f198cbb5d6e78ec",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
