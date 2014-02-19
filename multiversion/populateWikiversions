@@ -4,6 +4,9 @@
 error_reporting( E_ALL );
 require_once( __DIR__ . '/defines.php' );
 require_once( __DIR__ . '/MWRealm.php' );
+require_once( __DIR__ . '/MWWikiversions.php' );
+require_once( __DIR__ . '/FormatJson.php' );
+
 /*
  * Populate wikiversions.cdb file using all the items in all.dblist
  * as keys, each having a value of the specified MediaWiki version.
@@ -38,17 +41,15 @@ function populateWikiversionsCDB() {
 		exit( 1 );
 	}
 
-	$datList = "";
+	$wikis = array();
 	foreach ( $dbList as $dbName ) {
-		$datList .= "$dbName $version\n";
+		$wikis[$dbName] = $version;
 	}
 
-	# Create wikiversions.dat...
-	$path = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
-	if ( !file_put_contents( $path, $datList ) ) {
-		print "Unable to write to $path.\n";
-		exit( 1 );
-	}
+	# Create wikiversions.json...
+	$path = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.json' );
+	MWWikiversions::writeWikiVersionsFile( $path, $wikis );
+
 	# Rebuild wikiversions.cdb...
 	shell_exec( "cd $common/multiversion && ./refreshWikiversionsCDB" );
 }
