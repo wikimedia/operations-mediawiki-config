@@ -86,7 +86,8 @@ mwconfig_files=(
 	wikipedia.dblist
 	wikiquote.dblist
 	wikisource.dblist
-	wikiversions.dat
+	wikiversions.json
+	wikiversions-labs.json
 	wikiversity.dblist
 	wikivoyage.dblist
 	wiktionary.dblist

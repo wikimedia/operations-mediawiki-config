@@ -33,17 +33,15 @@ function populateWikiversionsCDB() {
 
 	$dbList = MWWikiversions::readDbListFile( getRealmSpecificFilename( MULTIVER_COMMON_HOME . '/all.dblist' ) );
 
-	$datList = "";
+	$wikis = array();
 	foreach ( $dbList as $dbName ) {
-		$datList .= "$dbName $version\n";
+		$wikis[$dbName] = $version;
 	}
 
-	# Create wikiversions.dat...
-	$path = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
-	if ( !file_put_contents( $path, $datList ) ) {
-		print "Unable to write to $path.\n";
-		exit( 1 );
-	}
+	# Create wikiversions.json...
+	$path = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.json' );
+	MWWikiversions::writeWikiVersionsFile( $path, $wikis );
+
 	# Rebuild wikiversions.cdb...
 	shell_exec( 'cd ' . MULTIVER_COMMON_HOME . '/multiversion && ./refreshWikiversionsCDB' );
 }
