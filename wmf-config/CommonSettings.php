@@ -2494,8 +2494,6 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSPosition = $wmgULSPosition;
 	$wgULSIMEEnabled = $wmgULSIMEEnabled;
 	$wgULSWebfontsEnabled = $wmgULSWebfontsEnabled;
-	// Temporary for bug 58374
-	$wgULSNoWebfontsSelectors = array( '.autonym' );
 	if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgUseZeroNamespace ) {
 		$wgULSNoImeSelectors[] = '.ace_editor textarea';
 	}
