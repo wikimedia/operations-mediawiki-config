@@ -1,12 +1,13 @@
 <?php
 require_once( __DIR__ . '/defines.php' );
+require_once( __DIR__ . '/FormatJson.php' );
 
 /**
- * Helper class for reading the wikiversions.dat file
+ * Helper class for reading the wikiversions.json file
  */
 class MWWikiversions {
 	/**
-	 * @param $srcPath string Path to wikiversions.dat
+	 * @param $srcPath string Path to wikiversions.json
 	 * @return Array List of wiki version rows
 	 */
 	public static function readWikiVersionsFile( $srcPath ) {
@@ -14,55 +15,25 @@ class MWWikiversions {
 		if ( $data === false ) {
 			throw new Exception( "Unable to read $srcPath.\n" );
 		}
-		// Read the lines of the dat file into an array...
-		$verList = explode( "\n", $data );
+		// Read the lines of the json file into an array...
+		$verList = FormatJson::decode( $data, true );
 		if ( !count( $verList ) ) {
 			throw new Exception( "Empty table in $srcPath.\n" );
 		}
-		// Convert each raw line into a row array...
-		$result = array();
-		foreach ( $verList as $lineNo => $line ) {
-			$row = self::rowFromLine( $line, $lineNo );
-			if ( is_array( $row ) ) {
-				$result[] = $row;
-			}
-		}
-		return $result;
+		return $verList;
 	}
 
 	/**
-	 * Get a wiki version row from a line of wikiversions.dat
-	 *
-	 * @param $line string
-	 * @param $lineNo integer Line # from wikiversions.dat
-	 * @return Array|null (dbname, version, extended version, comment)
+	 * @param string $path Path to wikiversions.json
+	 * @param array $wikis Array of wikis array( dbname => version )
 	 */
-	public static function rowFromLine( $line, $lineNo ) {
-		$len = strcspn( $line, '#' );
-		if ( $len === 0 ) {
-			return null; // comment line or empty line
-		}
-		$row = substr( $line, 0, $len );
-		$comment = trim( substr( $line, $len + 1 ) ); // exclude the '#'
+	public static function writeWikiVersionsFile( $path, $wikis ) {
+		$json = FormatJson::encode( $wikis, true );
 
-		// Get the column values for this row...
-		$items = explode( ' ', trim( $row ) ); // cleanup w/s
-		if ( count( $items ) >= 2 ) {
-			list( $dbName, $version ) = $items;
-		} else {
-			throw new Exception( "Invalid row on line $lineNo ('$line').\n" );
-		}
-
-		return array( $dbName, $version );
-	}
-
-	/**
-	 * @param $row Array Wiki version row
-	 * @return string Line for wikiversions.dat
-	 */
-	public static function lineFromRow( array $row ) {
-		list( $dbName, $version ) = $row;
-		return "$dbName $version";
+	        if ( !file_put_contents( $path, $json, LOCK_EX ) ) {
+	                print "Unable to write to $path.\n";
+                	exit( 1 );
+        	}
 	}
 
 	/**
