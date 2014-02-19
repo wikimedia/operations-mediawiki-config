@@ -12919,11 +12919,13 @@ $wgConf->settings = array(
 	'wikinews' => true,
 	'wikimedia' => true,
 	'wikisource' => true,
+	'wikiversity' => true,
 	'wiktionary' => true,
 ),
 
 'wmgCirrusIsBuilding' => array(
 	'default' => false,
+	'wikiversity' => true,
 ),
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
