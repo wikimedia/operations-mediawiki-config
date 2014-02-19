@@ -8,7 +8,7 @@ require_once( __DIR__ . '/MWRealm.php' );
 
 /*
  * This script switches all wikis in a .dblist file running one MediaWiki
- * version to another MediaWiki version. Since this only changes the wikiversions.dat
+ * version to another MediaWiki version. Since this only changes the wikiversions.json
  * and wikiversions.cdb files on tin, they will still need to be synced to push
  * the upgrade/downgrade to the apaches.
  *
@@ -22,7 +22,7 @@ require_once( __DIR__ . '/MWRealm.php' );
 function switchAllMediaWikis() {
 	global $argv;
 	$common = MULTIVER_COMMON_HOME;
-	$datPath = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.dat' );
+	$jsonPath = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.json' );
 
 	$argsValid = false;
 	if ( count( $argv ) >= 4 ) {
@@ -47,35 +47,25 @@ function switchAllMediaWikis() {
 	# Read in .dblist file into an array with dbnames as keys...
 	$dbList = MWWikiversions::readDbListFile( "$common/$dbListName" );
 
-	# Get all the wikiversion rows in wikiversions.dat...
-	$versionRows = MWWikiversions::readWikiVersionsFile( $datPath );
+	# Get all the wikiversion rows in wikiversions.json...
+	$versionRows = MWWikiversions::readWikiVersionsFile( $jsonPath );
 
 	$count = 0;
-	$newWikiVersionsData = "";
+	$newWikiVersions = array();
 	# Go through all the rows and do the replacements...
-	foreach ( $versionRows as $row ) {
-		list( $dbName, $version ) = $row;
+	foreach ( $versionRows as $dbName => $version ) {
 		if ( isset( $dbList[$dbName] ) // wiki is in the .dblist file
 			&& ( $version === $oldVersion || $oldVersion === 'all' ) )
 		{
-			# Change the row and add it to the list
-			$newWikiVersionsData .= MWWikiversions::lineFromRow(
-				array( $dbName, $newVersion )
-			);
+			$newWikiVersions[$dbName] = $newVersion;
 			++$count;
 		} else {
-			# Just add the row back to the list
-			$newWikiVersionsData .= MWWikiversions::lineFromRow( $row );
+			$newWikiVersions[$dbName] = $version;
 		}
-		$newWikiVersionsData .= "\n";
 	}
 
-	# Update wikiversions.dat...
-	if ( !file_put_contents( $datPath, $newWikiVersionsData, LOCK_EX ) ) {
-		print "Unable to write to $datPath.\n";
-		exit( 1 );
-	}
-	echo "Updated $datPath.\n";
+	MWWikiversions::writeWikiVersionsFile( $jsonPath, $newWikiVersions );
+	echo "Updated $jsonPath.\n";
 
 	# Rebuild wikiversions.cdb...
 	$retVal = 1;
