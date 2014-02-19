@@ -12911,6 +12911,7 @@ $wgConf->settings = array(
 	'frwiki' => true,
 	'guwiki' => true,
 	'huwiki' => true,
+	'itwikiquote' => true,
 	'nlwiki' => true,
 	'ptwiki' => true,
 	'ruwiki' => true,
@@ -12919,11 +12920,14 @@ $wgConf->settings = array(
 	'wikinews' => true,
 	'wikimedia' => true,
 	'wikisource' => true,
+	'wikiversity' => true,
 	'wiktionary' => true,
 ),
 
 'wmgCirrusIsBuilding' => array(
 	'default' => false,
+	'itwikiquote' => true,
+	'wikiversity' => true,
 ),
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
