@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_d8c54792",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 82,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2014-02-19T20:07:23Z",
+      "side": 1,
+      "message": "Please use $wmgFoo for things that are local to wmf-config",
+      "revId": "9191208d9cf4e013d623fa4a1f198cbb5d6e78ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_185a8ff6",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1847,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2014-02-19T20:07:23Z",
+      "side": 1,
+      "message": "$wmg if this is local to wmf-config",
+      "revId": "9191208d9cf4e013d623fa4a1f198cbb5d6e78ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_b8683b85",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1859,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2014-02-19T20:07:23Z",
+      "side": 1,
+      "message": "$wmg if this is local to wmf-config",
+      "revId": "9191208d9cf4e013d623fa4a1f198cbb5d6e78ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_18116f08",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 10672,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2014-02-19T20:07:23Z",
+      "side": 1,
+      "message": "Did you check this with Gabriel? It\u0027ll enable the Parsoid extension (and purging behavior etc) on all wikis.",
+      "revId": "9191208d9cf4e013d623fa4a1f198cbb5d6e78ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
