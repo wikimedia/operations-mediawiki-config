@@ -84,6 +84,10 @@ if ( $wmgUseVisualEditor ) {
 	$wgVisualEditorParsoidReportProblemURL = 'http://10.4.0.33/_bugs/'; // parsoid-spof
 }
 
+if ( $wmgUseFlow ) {
+	$wgFlowParsoidURL = 'http://10.4.0.61/'; // deployment-parsoidcache3
+}
+
 require_once( "$IP/extensions/MobileApp/MobileApp.php" );
 
 require_once( "$IP/extensions/Popups/Popups.php" );
