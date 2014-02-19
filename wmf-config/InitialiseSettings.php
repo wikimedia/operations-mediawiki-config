@@ -12926,8 +12926,6 @@ $wgConf->settings = array(
 
 'wmgCirrusIsBuilding' => array(
 	'default' => false,
-	'itwikiquote' => true,
-	'wikiversity' => true,
 ),
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
