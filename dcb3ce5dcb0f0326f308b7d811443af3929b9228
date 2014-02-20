@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e04eb01_e3584b37",
+        "filename": "multiversion/MWWikiversions.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-02-20T22:39:41Z",
+      "side": 1,
+      "message": "The true gives it pretty print... Which when the file is supposed to be human readable/writeable, is probably better than just one line.\n\nForce of habit just reused FormatJson from MediaWiki\n\n\nFor encode the following should effectively be fine with\njson_encode( $value, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT );\n\nI don\u0027t think we\u0027ll even be using any common unicode characters etc in here, just [a-bA-B0-9-_.] or so. Nothing should cause us unexpected surprises...\n\nI\u0027m not against replacing it with json_decode/json_encode directly, unless someone can think of a \"good enough reason\" we should keep it in",
+      "parentUuid": "4e04eb01_0817d657",
+      "revId": "dcb3ce5dcb0f0326f308b7d811443af3929b9228",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e04eb01_a30c833e",
         "filename": "multiversion/populateWikiversions",
         "patchSetId": 9
@@ -30,6 +48,24 @@
       "writtenOn": "2014-02-20T22:33:06Z",
       "side": 1,
       "message": "Unused?",
+      "revId": "dcb3ce5dcb0f0326f308b7d811443af3929b9228",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_83474750",
+        "filename": "multiversion/populateWikiversions",
+        "patchSetId": 9
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-02-20T22:39:41Z",
+      "side": 1,
+      "message": "Yup",
+      "parentUuid": "4e04eb01_a30c833e",
       "revId": "dcb3ce5dcb0f0326f308b7d811443af3929b9228",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
