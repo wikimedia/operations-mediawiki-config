@@ -2,6 +2,7 @@
 <?php
 
 error_reporting( E_ALL );
+require_once( __DIR__ . '/defines.php' );
 require_once( __DIR__ . '/MWRealm.php' );
 /*
  * Populate wikiversions.cdb file using all the items in all.dblist
@@ -26,7 +27,7 @@ function populateWikiversionsCDB() {
 	}
 
 	if ( !$argsValid ) {
-		print "Usage: populateWikiVersionsCDB.php php-X.XX\n";
+		print "Usage: populateWikiversions php-X.XX confirm\n";
 		exit( 1 );
 	}
 
