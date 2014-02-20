@@ -5,8 +5,6 @@
 # You must also set wmgUseAbuseFilter in InitialiseSettings.php
 # This file is referenced from an include in CommonSettings.php
 
-$wgAbuseFilterStyleVersion = "9-1";
-
 $wgGroupPermissions['*']['abusefilter-view'] = true;
 $wgGroupPermissions['*']['abusefilter-log'] = true;
 
@@ -41,7 +39,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
-		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 		break;
 	case 'cawiki':
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
@@ -50,7 +47,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
 		$wgGroupPermissions['user']['abusefilter-view'] = true;
-		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true;
 		$wgAbuseFilterAvailableActions[] = 'block';
 		$wgAbuseFilterBlockDuration = '2 hours';
 		break;
@@ -65,15 +61,6 @@ switch ( $wgDBname ) {
 	case 'cswikisource':
 		$wgAbuseFilterNotifications = "udp";
 		$wgAbuseFilterNotificationsPrivate = true;
-		break;
-	case 'dewiki':
-		// Removed custom AbuseFilter settings per bug 18223 --Andrew 2009-03-29
-		// Where on earth did this come from? --Andrew
-		// Was from bug 17453, but doesn't belong here.
-		// Per bug 19208 now they want it off, using an abusefilter filter to do it.
-		// -- Brion 2009-07-13
-		// $wgDefaultUserOptions ['forceeditsummary'] = 1;
-		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true;
 		break;
 	case 'eewiki':
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
@@ -118,7 +105,6 @@ switch ( $wgDBname ) {
 		break;
 	case 'eswiki':
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
-		$wgGroupPermissions['user']['abusefilter-view'] = true;
 		$wgGroupPermissions['user']['abusefilter-log'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
@@ -152,7 +138,6 @@ switch ( $wgDBname ) {
 		// !!! Please be careful if you edit these rules, they are shared
 		// by two wikis. Create two sections, one per wiki, if needed. !!!
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
-		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
@@ -247,7 +232,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
-		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-revert'] = true;
@@ -265,8 +249,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 		break;
 	case 'ptwiktionary':
-		$wgGroupPermissions['user']['abusefilter-view'] = true;
-		$wgGroupPermissions['user']['abusefilter-log'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
@@ -304,7 +286,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
-		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true;
 		$wgAbuseFilterAvailableActions = array_diff(
 			$wgAbuseFilterAvailableActions,
 			array( 'blockautopromote' )
@@ -326,9 +307,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
-		break;
-	case 'zhwiki':
-		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true;
 		break;
 // Please add new wikis in their correct place in alphabetical order!
 }
