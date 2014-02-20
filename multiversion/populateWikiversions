@@ -11,8 +11,7 @@ require_once( __DIR__ . '/MWWikiversions.php' );
  * as keys, each having a value of the specified MediaWiki version.
  * This means that all will be configured to run that version.
  *
- * The first argument is the version, typically of the format "php-X.XX".
- * The second argument is a confirmation ("confirm").
+ * The first argument is the version, typically of the format "php-X.XXwmfX".
  *
  * @return void
  */
@@ -20,15 +19,15 @@ function populateWikiversionsCDB() {
 	global $argv;
 
 	$argsValid = false;
-	if ( count( $argv ) >= 3 && $argv[2] === 'confirm' ) {
-		$version = $argv[1]; // e.g. "php-X.XX"
-		if ( preg_match( '/^php-(?:\d+\.\d+|trunk)(?:-\d)?$/', $version ) ) {
+	if ( count( $argv ) == 2 ) {
+		$version = $argv[1]; // e.g. "php-X.XXwmfX"
+		if ( preg_match( '/^php-(\d+\.\d+wmf\d+|master)$/', $version ) ) {
 			$argsValid = true;
 		}
 	}
 
 	if ( !$argsValid ) {
-		print "Usage: populateWikiversions php-X.XX confirm\n";
+		print "Usage: populateWikiversions php-X.XXwmfX\n";
 		exit( 1 );
 	}
 
