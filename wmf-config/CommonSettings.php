@@ -668,6 +668,10 @@ if ( $wmgUseTimedMediaHandler ) {
 
 	// Minimum size for an embed video player
 	$wgMinimumVideoPlayerSize = $wmgMinimumVideoPlayerSize;
+
+	// Enable low-res Theora transcodes for fallback players on slow machines
+	$wgEnabledTranscodeSet[] = WebVideoTranscode::ENC_OGV_360P;
+	$wgEnabledTranscodeSet[] = WebVideoTranscode::ENC_OGV_160P;
 }
 
 if ( $wgUseContactPageFundraiser ) {
