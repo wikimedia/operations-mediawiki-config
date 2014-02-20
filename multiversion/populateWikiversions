@@ -4,6 +4,8 @@
 error_reporting( E_ALL );
 require_once( __DIR__ . '/defines.php' );
 require_once( __DIR__ . '/MWRealm.php' );
+require_once( __DIR__ . '/MWWikiversions.php' );
+
 /*
  * Populate wikiversions.cdb file using all the items in all.dblist
  * as keys, each having a value of the specified MediaWiki version.
@@ -31,12 +33,7 @@ function populateWikiversionsCDB() {
 		exit( 1 );
 	}
 
-	$path = getRealmSpecificFilename( "$common/all.dblist" );
-	$dbList = array_filter( explode( "\n", file_get_contents( $path ) ) );
-	if ( !count( $dbList ) ) {
-		print "Unable to read $path.\n";
-		exit( 1 );
-	}
+	$dbList = MWWikiversions::readDbListFile( getRealmSpecificFilename( MULTIVER_COMMON_HOME . '/all.dblist' ) );
 
 	$datList = "";
 	foreach ( $dbList as $dbName ) {
