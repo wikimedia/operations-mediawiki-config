@@ -70,11 +70,6 @@ function switchAllMediaWikis() {
 		$newWikiVersionsData .= "\n";
 	}
 
-	# Backup old wikiversions.dat...
-	$retVal = 1;
-	passthru( "cd $common/multiversion && ./backupWikiversions", $retVal );
-	( $retVal == 0 ) or exit( 1 );
-
 	# Update wikiversions.dat...
 	if ( !file_put_contents( $datPath, $newWikiVersionsData, LOCK_EX ) ) {
 		print "Unable to write to $datPath.\n";
