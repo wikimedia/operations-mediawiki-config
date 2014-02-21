@@ -20,6 +20,7 @@ class MWWikiversions {
 		if ( !is_array( $verList ) || array_values( $verList ) === $verList ) {
 			throw new Exception( "$srcPath did not decode to an associative array.\n" );
 		}
+		asort( $verList );
 		return $verList;
 	}
 
