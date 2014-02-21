@@ -16,6 +16,23 @@
       "revId": "469a3cda3f80b5e8b99883967e0f94841881769f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_dab88d27",
+        "filename": "wikiversions-labs.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 166
+      },
+      "writtenOn": "2014-02-21T18:00:39Z",
+      "side": 1,
+      "message": "This should be {.",
+      "revId": "469a3cda3f80b5e8b99883967e0f94841881769f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
