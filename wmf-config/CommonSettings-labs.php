@@ -93,6 +93,24 @@ require_once( "$IP/extensions/MobileApp/MobileApp.php" );
 
 require_once( "$IP/extensions/Popups/Popups.php" );
 
+// Config for GlobalCssJs
+require_once( "$IP/extensions/GlobalCssJs/GlobalCssJs.php" );
+
+// Disable sitewide global css/js
+$wgUseGlobalSiteCssJs = false;
+
+// Load from betalabs metawiki
+$wgResourceLoaderSources['metawiki'] = array(
+	'apiScript' => '//meta.wikimedia.beta.wmflabs.org/w/api.php',
+	'loadScript' => '//meta.wikimedia.beta.wmflabs.org/w/load.php',
+);
+
+$wgGlobalCssJsConfig = array(
+	'wiki' => 'metawiki',
+	'source' => 'metawiki',
+);
+
+
 # temporary extensions
 # ========================================================================
 
