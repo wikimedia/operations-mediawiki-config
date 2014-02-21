@@ -54,7 +54,6 @@ function refreshWikiversionsCDB() {
 	}
 	foreach ( $rows as $dbName => $version ) {
 		$db->set( "ver:$dbName", $version );
-		$db->set( "ext:$dbName", '' );
 	}
 	$db->close();
 
