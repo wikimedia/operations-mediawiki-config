@@ -1,0 +1,9 @@
+Verified+2: jenkins-bot
+Code-Review+2: MarkTraceur <mtraceur@member.fsf.org>
+Code-Review+1: Greg Grossmeier <greg@wikimedia.org>
+Code-Review+1: Deskana <dgarry@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Fri, 21 Feb 2014 21:02:13 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/114719
+Project: operations/mediawiki-config
+Branch: refs/heads/master
