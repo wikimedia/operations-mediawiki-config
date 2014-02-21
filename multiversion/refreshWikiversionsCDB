@@ -52,8 +52,7 @@ function refreshWikiversionsCDB() {
 		print "Unable to create {$tmpDBPath}.\n";
 		exit( 1 );
 	}
-	foreach ( $rows as $row ) {
-		list( $dbName, $version ) = $row;
+	foreach ( $rows as $dbName => $version ) {
 		$db->set( "ver:$dbName", $version );
 		$db->set( "ext:$dbName", '' );
 	}
