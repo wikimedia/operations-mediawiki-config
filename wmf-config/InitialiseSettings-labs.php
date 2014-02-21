@@ -328,6 +328,13 @@ return array(
 	'wmgBug54847' => array(
 		'default' => false,
 	),
+	# Note this is also guarded with wmgUseCentralAuth
+	'wmgUseGlobalCssJs' => array(
+		'default' => true,
+		'private' => false,
+		'fishbowl' => false,
+		'loginwiki' => false,
+	),
 
 );
 
