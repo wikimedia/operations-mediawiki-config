@@ -172,7 +172,7 @@ if ( array_search( $wgDBname, $wgLocalDatabases ) === false ) {
 # Determine domain and language and the directories for this instance
 list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 $wmfVersionNumber = $multiVersion->getVersionNumber();
-$wmfExtendedVersionNumber = $multiVersion->getExtendedVersionNumber();
+$wmfExtendedVersionNumber = $wmfVersionNumber;  // Deprecated; see Iac5b021c6
 
 # Try configuration cache
 
