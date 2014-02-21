@@ -24,10 +24,6 @@ class MWMultiVersion {
 	 */
 	private $version;
 	/**
-	 * @var string
-	 */
-	private $extVersion;
-	/**
 	 * @var bool
 	 */
 	private $versionLoaded = false;
@@ -265,8 +261,7 @@ class MWMultiVersion {
 
 	/**
 	 * Get the space-seperated list of version params for this wiki.
-	 * The first item is the MW version and the optional second item
-	 * an extra version parameter to use for builds and caches.
+	 * The first item is the MW version
 	 */
 	private function loadVersionInfo() {
 		if ( $this->versionLoaded ) {
@@ -284,16 +279,8 @@ class MWMultiVersion {
 
 		if ( $db ) {
 			$version = $db->get( "ver:{$this->db}" );
-			if ( $version === false ) {
-				$extraVersion = false;
-			} else {
-				if ( strpos( $version, 'php-' ) !== 0 ) {
-					self::error( "$cdbFilename version entry does not start with `php-` (got `$version`).\n" );
-				}
-				$extraVersion = $db->get( "ext:{$this->db}" );
-				if ( $extraVersion === false ) {
-					self::error( "$cdbFilename has no extra version entry for `$db`.\n" );
-				}
+			if ( $version !== false && strpos( $version, 'php-' ) !== 0 ) {
+				self::error( "$cdbFilename version entry does not start with `php-` (got `$version`).\n" );
 			}
 			$db->close();
 		} else {
@@ -301,7 +288,6 @@ class MWMultiVersion {
 		}
 
 		$this->version = $version;
-		$this->extVersion = $extraVersion;
 	}
 
 	/**
@@ -349,23 +335,6 @@ class MWMultiVersion {
 		$this->loadVersionInfo();
 		$this->assertNotMissing(); // caller should have checked isMissing()
 		return substr( $this->version, 4 ); // remove "php-"
-	}
-
-	/**
-	 * Get the version number to use for building caches & binaries for this wiki.
-	 * Like getVersionNumber() but may have a dash with another string appended.
-	 * Some wikis may share core MW versions but be using different extension versions.
-	 * We need to keep the caches and binary builds separate for such wikis.
-	 * @return String
-	 */
-	public function getExtendedVersionNumber() {
-		$this->loadVersionInfo();
-		$this->assertNotMissing(); // caller should have checked isMissing()
-		$ver = $this->getVersionNumber();
-		if ( $this->extVersion !== '' && $this->extVersion !== '*' ) {
-			$ver .= "-{$this->extVersion}";
-		}
-		return $ver;
 	}
 
 	/**
