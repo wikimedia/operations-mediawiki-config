@@ -7009,6 +7009,7 @@ $wgConf->settings = array(
 	'itwikinews' => array( 'autoconfirmed' => array( 'patrol' => true ) ),
 	'itwikiquote' => array(
 		'autoconfirmed' => array( 'patrol' => true ),
+		'autopatrolled' => array( 'autopatrol' => true ),
 		'sysop' => array( 'autopatrol' => true ),
 	),
 	'itwikivoyage' => array(
@@ -7918,6 +7919,9 @@ $wgConf->settings = array(
 	'+itwikibooks' => array(
 		'sysop' => array( 'autopatrolled', 'patroller' ),
 	),
+	'+itwikiquote' => array(
+		'sysop' => array( 'autopatrolled' ),
+	),
 	'+itwikivoyage' => array(
 		'sysop' => array( 'autopatrolled', 'patroller' ),          // Bug 43327 and 45638
 	),
@@ -8403,6 +8407,9 @@ $wgConf->settings = array(
 	),
 	'+itwikibooks' => array(
 		'sysop' => array( 'autopatrolled', 'patroller', 'flooder' ), // Flooder added per bug 39569
+	),
+	'+itwikiquote' => array(
+		'bureaucrat' => array( 'autopatrolled' ),
 	),
 	'+itwikisource' => array(
 		'bureaucrat' => array( 'flood' ), // Bug 36600
