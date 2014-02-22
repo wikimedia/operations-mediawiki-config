@@ -172,7 +172,6 @@ if ( array_search( $wgDBname, $wgLocalDatabases ) === false ) {
 # Determine domain and language and the directories for this instance
 list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 $wmfVersionNumber = $multiVersion->getVersionNumber();
-$wmfExtendedVersionNumber = $wmfVersionNumber;  // Deprecated; see Iac5b021c6
 
 # Try configuration cache
 
@@ -1627,7 +1626,7 @@ if ( $wmgUserDailyContribs ) {
 
 if ( $wmgUseLocalisationUpdate ) {
 	require_once( "$IP/extensions/LocalisationUpdate/LocalisationUpdate.php" );
-	$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/cache-$wmfExtendedVersionNumber";
+	$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/cache-$wmfVersionNumber";
 }
 
 if ( $wmgEnableLandingCheck ) {
@@ -2520,7 +2519,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSEventLogging = $wmgULSEventLogging;
 }
 
-$wmgUseWikibaseBuild = !in_array( $wmfExtendedVersionNumber, array( '1.23wmf10', '1.23wmf11' ) );
+$wmgUseWikibaseBuild = !in_array( $wmfVersionNumber, array( '1.23wmf10', '1.23wmf11' ) );
 
 // @note getRealmSpecificFilename only works with filenames with .suffix
 if ( $wmgUseWikibaseBuild ) {
@@ -2679,15 +2678,15 @@ $wgGroupPermissions['confirmed']['skipcaptcha'] = true;
 
 $wgImgAuthDetails = true;
 
-if ( file_exists( "$wmfConfigDir/extension-list-$wmfExtendedVersionNumber" ) ) {
-	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-$wmfExtendedVersionNumber";
+if ( file_exists( "$wmfConfigDir/extension-list-$wmfVersionNumber" ) ) {
+	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-$wmfVersionNumber";
 }
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
 
-require( "$wmfConfigDir/ExtensionMessages-$wmfExtendedVersionNumber.php" );
+require( "$wmfConfigDir/ExtensionMessages-$wmfVersionNumber.php" );
 
 wfProfileOut( "$fname-misc5" );
 wfProfileOut( $fname );
