@@ -670,8 +670,14 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgMinimumVideoPlayerSize = $wmgMinimumVideoPlayerSize;
 
 	// Enable low-res Theora transcodes for fallback players on slow machines
-	$wgEnabledTranscodeSet[] = WebVideoTranscode::ENC_OGV_360P;
-	$wgEnabledTranscodeSet[] = WebVideoTranscode::ENC_OGV_160P;
+	// Put them at the beginning of the array to keep ordering the way
+	// the popup player expects, so we pick the right WebM size in most
+	// cases.
+	//
+	// See https://bugzilla.wikimedia.org/61760
+	//
+	array_unshift( $wgEnabledTranscodeSet, WebVideoTranscode::ENC_OGV_360P );
+	array_unshift( $wgEnabledTranscodeSet, WebVideoTranscode::ENC_OGV_160P );
 }
 
 if ( $wgUseContactPageFundraiser ) {
