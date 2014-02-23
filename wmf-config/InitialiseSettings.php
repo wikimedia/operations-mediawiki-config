@@ -11773,6 +11773,15 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => '%code%_母语使用者',
 	),
+	'zhwikivoyage' => array( // bug 61819
+		'0' => '%code%-0_使用者',
+		'1' => '%code%-1_使用者',
+		'2' => '%code%-2_使用者',
+		'3' => '%code%-3_使用者',
+		'4' => '%code%-4_使用者',
+		'5' => false,
+		'N' => '%code%_母语使用者',
+	),
 
 ),
 'wmgBabelMainCategory' => array(
@@ -11837,6 +11846,7 @@ $wgConf->settings = array(
 	'zhwikinews' => '%code%_使用者',
 	'zhwikiquote' => '%code%_使用者',
 	'zhwikisource' => '%code%_使用者',
+	'zhwikivoyage' => '%code%_使用者', // bug 61819
 ),
 'wmgBabelDefaultLevel' => array(
 	'default' => 'N',
