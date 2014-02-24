@@ -7873,7 +7873,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller' ),
 	),
 	'+frwiktionary' => array(
-		'bureaucrat' => array( 'accountcreator', 'import', 'patroller', 'transwiki', 'autopatrolled', 'confirmed', 'abusefilter', 'botadmin' ),
+		'bureaucrat' => array( 'accountcreator', 'patroller', 'transwiki', 'autopatrolled', 'confirmed', 'abusefilter', 'botadmin' ),
 	),
 	'+gawiki' => array(
 		'sysop' => array( 'rollbacker' ),
@@ -8359,7 +8359,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller' ),
 	),
 	'+frwiktionary' => array(
-		'bureaucrat' => array( 'accountcreator', 'import', 'patroller', 'transwiki', 'autopatrolled', 'confirmed', 'abusefilter', 'botadmin' ),
+		'bureaucrat' => array( 'accountcreator', 'patroller', 'transwiki', 'autopatrolled', 'confirmed', 'abusefilter', 'botadmin' ),
 	),
 	'+gawiki' => array(
 		'sysop' => array( 'rollbacker' ),
