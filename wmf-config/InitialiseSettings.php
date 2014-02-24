@@ -10700,6 +10700,8 @@ $wgConf->settings = array(
 	'+enwiki' => array( 100 /* Portal */, 108 /* Book */, 118 /* Draft */ ), // Bug 56001
 	// Wiktionaries
 	'svwiktionary' => array( NS_USER ), // Bug 57356
+	// Wikiversities
+	'+frwikiversity' => array( 104 ), // Bug 61874
 	// Wikimedia wikis
 	'+sewikimedia' => array( 100 /* Projekt */ ), // bug 60882
 	// Private wikis
