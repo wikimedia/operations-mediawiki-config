@@ -12712,6 +12712,7 @@ $wgConf->settings = array(
 // Whether web fonts are enabled *by default*
 'wmgULSWebfontsEnabled' => array(
 	'default' => false,
+	'hewikisource' => true, // bug 60939
 ),
 
 'wmgULSEventLogging' => array(
