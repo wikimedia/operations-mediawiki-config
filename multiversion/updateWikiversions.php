@@ -62,6 +62,7 @@ function updateWikiversions() {
 	}
 
 	$total = count( $versionRows );
+	ksort( $versionRows );
 
 	MWWikiversions::writeWikiVersionsFile( $jsonPath, $versionRows );
 	echo "Updated $jsonPath: $inserted inserted, $migrated migrated.\n";
