@@ -18,9 +18,8 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( $wmgUseWikibaseBuild ) {
 		// bump for wikidatawiki and test wikidata
 		// @todo: can move to InitialiseSettings later, but having here
-		// helps with timing issues to have this switched same time as
-		// wikidata gets switched to 1.23wmf12
-		$wgCacheEpoch = '20140203203130';
+		// Issues with changes in Wikidata 1.23wmf15
+		$wgCacheEpoch = '20140225200000';
 	}
 
 	$baseNs = 120;
