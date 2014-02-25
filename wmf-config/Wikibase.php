@@ -88,12 +88,18 @@ if ( $wmgUseWikibaseClient ) {
 		require_once( "$IP/extensions/Wikibase/client/WikibaseClient.php" );
 	}
 
-	$wgWBClientSettings['changesDatabase'] = 'wikidatawiki';
-	$wgWBClientSettings['repoDatabase'] = 'wikidatawiki';
-
 	// to be safe, keeping this here although $wgDBname is default setting
 	$wgWBClientSettings['siteGlobalID'] = $wgDBname;
-	$wgWBClientSettings['repoUrl'] = "//{$wmfHostnames['wikidata']}";
+
+	if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki' ) ) ) {
+		$wgWBClientSettings['changesDatabase'] = 'testwikidatawiki';
+		$wgWBClientSettings['repoDatabase'] = 'testwikidatawiki';
+		$wgWBClientSettings['repoUrl'] = "//test.wikidata.org";
+	} else {
+		$wgWBClientSettings['changesDatabase'] = 'wikidatawiki';
+		$wgWBClientSettings['repoDatabase'] = 'wikidatawiki';
+		$wgWBClientSettings['repoUrl'] = "//{$wmfHostnames['wikidata']}";
+	}
 
 	$wgWBClientSettings['repoNamespaces'] = array(
 		'wikibase-item' => '',
