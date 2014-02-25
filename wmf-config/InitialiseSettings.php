@@ -12697,8 +12697,7 @@ $wgConf->settings = array(
 
 'wmgWikibaseEnableData' => array(
 	'default' => true,
-	'commonswiki' => false,
-	'wikisource' => false
+	'commonswiki' => false
 ),
 
 'wmgUseWikibaseRepo' => array(
