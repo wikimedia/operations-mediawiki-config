@@ -12690,9 +12690,9 @@ $wgConf->settings = array(
 
 'wmgWikibaseCachePrefix' => array(
 	'default' => 'wikidatawiki',
-	'testwikidatawiki' => 'testwikidata',
-	'test2wiki' => 'wikidatawiki-test2',
-	'testwiki' => 'wikidatawiki-test'
+	'testwikidatawiki' => 'testwikidatawiki',
+	'test2wiki' => 'testwikidatawiki',
+	'testwiki' => 'testwikidatawiki'
 ),
 
 'wmgWikibaseEnableData' => array(
@@ -12729,8 +12729,7 @@ $wgConf->settings = array(
 		'propagateChangesToRepo' => false,
 	),
 	'test2wiki' => array(
-		'siteGlobalID' => 'enwiki',
-		'propagateChangesToRepo' => false,
+		'siteGlobalID' => 'enwiki'
 	),
 	'be_x_oldwiki' => array(
 		'sort' => 'alphabetic',
