@@ -12449,7 +12449,6 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
-	'metawiki' => true,
 	'enwiki' => true,
 ),
 'wmgFlowEditorList' => array(
