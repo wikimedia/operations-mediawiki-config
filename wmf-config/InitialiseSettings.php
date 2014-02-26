@@ -12208,6 +12208,7 @@ $wgConf->settings = array(
 	'huwiki' => true,
 	'iswiki' => true,
 	'itwiki' => true,
+	'jawiki' => true,
 	'kowiki' => true,
 	'lbwiki' => true,
 	'mkwiki' => true,
@@ -12237,6 +12238,9 @@ $wgConf->settings = array(
 	),
 	'simplewiki' => array(
 		'copyedit' => 'Pages in need of copyedit',
+	),
+	'svwiki' => array (
+		'copyedit' => 'Wikipedia:Språkvård-samtliga',
 	),
 	'ukwiki' => array(
 		'copyedit' => 'Статті, що потребують вичитки',
