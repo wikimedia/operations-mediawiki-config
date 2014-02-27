@@ -9,7 +9,7 @@ require_once( __DIR__ . '/MWWikiversions.php' );
  * Returns an array of all active MW versions (e.g. "x.xx").
  * Versions are read from /usr/local/apache/common-local/wikiversions.json.
  *
- * Given --home, versions are instead read from /a/common/wikiversions.cdb.
+ * Given --home, versions are instead read from /a/common/wikiversions.json.
  * Given --withdb, each item in the list will be appended with '=' followed by
  * 		the DB name of *some* wiki that uses that version. Used to run maintenance scripts.
  * Given --report, error messages would be displayed if this dies.
