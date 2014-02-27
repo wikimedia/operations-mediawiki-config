@@ -2532,6 +2532,9 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgUseZeroNamespace ) {
 		$wgULSNoImeSelectors[] = '.ace_editor textarea';
 	}
+	if ( $wmgUseTranslate && $wmgULSPosition === 'personal' ) {
+		$wgTranslatePageTranslationULS = true;
+	}
 
 	// Remove after ULS is re-deployed
 	if ( $wmgUniversalLanguageSelectorDefault ) {
