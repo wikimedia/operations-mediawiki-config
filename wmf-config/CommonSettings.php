@@ -1505,9 +1505,6 @@ if ( $wgDBname == 'enwiki' ) {
 	};
 }
 
-// PHP language binding to make Swift accessible via cURL
-include "$IP/extensions/SwiftCloudFiles/SwiftCloudFiles.php";
-
 if ( $wmgUseCollection ) {
 	// PediaPress / PDF generation
 	include "$IP/extensions/Collection/Collection.php";

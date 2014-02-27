@@ -111,7 +111,6 @@ $IP/extensions/Solarium/Solarium.php
 $IP/extensions/SpamBlacklist/SpamBlacklist.php
 $IP/extensions/SubPageList3/SubPageList3.php
 $IP/extensions/SubpageSortkey/SubpageSortkey.php
-$IP/extensions/SwiftCloudFiles/SwiftCloudFiles.php
 $IP/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php
 $IP/extensions/TemplateData/TemplateData.php
 $IP/extensions/TemplateSandbox/TemplateSandbox.php
