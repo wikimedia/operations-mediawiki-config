@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_1ee36905",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1635,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-02-27T10:31:35Z",
+      "side": 1,
+      "message": "CodeEditor and the others are defined around line 2500, not a problem right?",
+      "revId": "8e70ca1833fbcd425ebada6a18c49998c12b91a6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
