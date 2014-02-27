@@ -78,7 +78,7 @@ if ( $wmgUseWikibaseRepo ) {
 	// Bug 51637 and 46953
 	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
 
-	$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfExtendedVersionNumber";
+	$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
 }
 
 if ( $wmgUseWikibaseClient ) {
@@ -133,5 +133,5 @@ if ( $wmgUseWikibaseClient ) {
 	}
 
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
-	$wgWBClientSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfExtendedVersionNumber";
+	$wgWBClientSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
 }
