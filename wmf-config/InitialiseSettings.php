@@ -10298,14 +10298,16 @@ $wgConf->settings = array(
 	'testwiki' => true,
 ),
 
-'wmgContactPageConf' => array(
+'wmgUseContactPage' => array(
 	'default' => false,
-
+	'nlwiki' => true,
+),
+'wmgContactPageConf' => array(
 	// bug 15624
 	'nlwiki' => array(
-		'wgContactUser' => 'WikiAdmin',
-		'wgContactSenderName' => 'Contactformulier op nl-Wikipedia',
-		'wgContactIncludeIP' => true,
+		'RecipientUser' => 'WikiAdmin',
+		'SenderName' => 'Contactformulier op nl-Wikipedia',
+		'IncludeIP' => true,
 	),
 ),
 
