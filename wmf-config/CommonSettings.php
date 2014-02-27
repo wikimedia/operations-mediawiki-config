@@ -1472,6 +1472,213 @@ if ( $wmgUseWikimediaLicenseTexts ) {
 	include "$IP/extensions/WikimediaMessages/WikimediaLicenseTexts.php";
 }
 
+if ( $wmgUseBabel ) {
+	require_once( "$IP/extensions/Babel/Babel.php" );
+	$wgBabelCategoryNames = $wmgBabelCategoryNames;
+	$wgBabelMainCategory = $wmgBabelMainCategory;
+	$wgBabelDefaultLevel = $wmgBabelDefaultLevel;
+	$wgBabelUseUserLanguage = $wmgBabelUseUserLanguage;
+}
+
+if ( $wmgUseCLDR ) {
+	require_once( "$IP/extensions/cldr/cldr.php" );
+}
+
+if ( $wmgUseCleanChanges ) {
+	$wgDefaultUserOptions['usenewrc'] = 1;
+	# If you need to disable this extension, do it here, DO NOT change the value of
+	# $wmgUseCleanChanges. Back and forths of $wgDefaultUserOptions are disruptive,
+	# as they delete personal preferences irreversibly.
+	require_once( "$IP/extensions/CleanChanges/CleanChanges.php" );
+	$wgCCTrailerFilter = true;
+}
+
+if ( $wmgEnableInterwiki ) {
+	require_once( "$IP/extensions/Interwiki/Interwiki.php" );
+	$wgInterwikiViewOnly = true;
+}
+
+if ( $wmgUseLocalisationUpdate ) {
+	require_once( "$IP/extensions/LocalisationUpdate/LocalisationUpdate.php" );
+	$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/cache-$wmfExtendedVersionNumber";
+}
+
+if ( $wmgUseTranslate ) {
+	require_once( "$IP/extensions/Translate/Translate.php" );
+
+	$wgGroupPermissions['*']['translate'] = true;
+	$wgGroupPermissions['translationadmin']['pagetranslation'] = true;
+	$wgGroupPermissions['translationadmin']['translate-manage'] = true;
+	$wgGroupPermissions['translationadmin']['translate-import'] = true; // bug 40341
+	$wgGroupPermissions['user']['translate-messagereview'] = true;
+	$wgGroupPermissions['user']['translate-groupreview'] = true;
+
+	unset( $wgGroupPermissions['translate-proofr'] );
+	unset( $wgAddGroups['translate-proofr'] );
+
+	$wgTranslateDocumentationLanguageCode = 'qqq';
+	$wgExtraLanguageNames['qqq']       = 'Message documentation'; # No linguistic content. Used for documenting messages
+
+	$wgTranslateTranslationServices = array();
+	if ( $wmgUseTranslationMemory ) {
+		$wgTranslateTranslationServices['TTMServer'] = array(
+			'type' => 'ttmserver',
+			'class' => 'SolrTTMServer',
+			'cutoff' => 0.60,
+			'config' => array(
+				'adapteroptions' => array(
+					'host' => 'zinc.eqiad.wmnet',
+					'timeout' => 10,
+				),
+				'adapter' => 'Solarium_Client_Adapter_Curl',
+			),
+		);
+	}
+
+	$wgTranslateWorkflowStates = $wmgTranslateWorkflowStates;
+	$wgTranslateRcFilterDefault = $wmgTranslateRcFilterDefault;
+
+	unset( $wgTranslateTasks['export-as-file'] );
+	unset( $wgTranslateTasks['optional'] );
+	unset( $wgTranslateTasks['suggestions'] );
+
+	$wgTranslateUsePreSaveTransform = true; # bug 37304
+
+	$wgEnablePageTranslation = true;
+
+	$wgTranslateBlacklist = array(
+		'*' => array(
+			'en' => 'English is the source language.',
+
+			'gan-hans' => 'Translate in gan please.',
+			'gan-hant' => 'Translate in gan please.',
+
+			'ike-cans' => 'Translate in iu please.',
+			'ike-latn' => 'Translate in iu please.',
+
+			'kk-cyrl' => 'Translate in kk please.',
+			'kk-latn' => 'Translate in kk please.',
+			'kk-arab' => 'Translate in kk please.',
+			'kk-kz'   => 'Translate in kk please.',
+			'kk-tr'   => 'Translate in kk please.',
+			'kk-cn'   => 'Translate in kk please.',
+
+			'ku-latn' => 'Translate in ku please.',
+			'ku-arab' => 'Translate in ku please.',
+
+			'shi-tfng' => 'Translate in shi please.',
+			'shi-latn' => 'Translate in shi please.',
+
+			'sr-ec' => 'Translate in sr please.',
+			'sr-el' => 'Translate in sr please.',
+
+			'tg-latn' => 'Translate in tg please.',
+
+			'zh-hans' => 'Translate in zh please.',
+			'zh-hant' => 'Translate in zh please.',
+			'zh-cn' => 'Translate in zh please.',
+			'zh-hk' => 'Translate in zh please.',
+			'zh-mo' => 'Translate in zh please.',
+			'zh-my' => 'Translate in zh please.',
+			'zh-sg' => 'Translate in zh please.',
+			'zh-tw' => 'Translate in zh please.',
+		),
+	);
+
+	$wgTranslateEC = array();
+
+	if ( $wgDBname === 'wikimania2013wiki' ) {
+		$wgHooks['TranslatePostInitGroups'][] = function ( &$cc ) {
+			$id = 'wiki-sidebar';
+			$mg = new WikiMessageGroup( $id, 'sidebar-messages' );
+			$mg->setLabel( 'Sidebar' );
+			$mg->setDescription( 'Messages used in the sidebar of this wiki' );
+			$cc[$id] = $mg;
+			return true;
+		};
+	}
+
+	if ( $wgDBname === 'commonswiki' ) {
+		$wgHooks['TranslatePostInitGroups'][] = function ( &$cc ) {
+			$id = 'wiki-translatable';
+			$mg = new WikiMessageGroup( $id, 'translatable-messages' );
+			$mg->setLabel( 'Interface' );
+			$mg->setDescription( 'Messages used in the custom interface of this wiki' );
+			$cc[$id] = $mg;
+			return true;
+		};
+	};
+
+	unset( $wgSpecialPages['FirstSteps'] );
+	unset( $wgSpecialPages['ManageMessageGroups'] );
+	unset( $wgSpecialPages['TranslationStats'] );
+
+	// Caused apache overload 2013-08-11 TS
+	unset( $wgSpecialPages['SupportedLanguages'] );
+}
+
+if ( $wmgUseTranslationNotifications ) {
+	require_once( "$IP/extensions/TranslationNotifications/TranslationNotifications.php" );
+	$wgNotificationUsername = 'Translation Notification Bot';
+	$wgNotificationUserPassword = $wmgTranslationNotificationUserPassword;
+
+	$wgTranslationNotificationsContactMethods['talkpage-elsewhere'] = true;
+}
+
+if ( $wmgUseUniversalLanguageSelector ) {
+	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
+	$wgULSGeoService = false;
+	$wgULSAnonCanChangeLanguage = false;
+	$wgULSPosition = $wmgULSPosition;
+	$wgULSIMEEnabled = $wmgULSIMEEnabled;
+	$wgULSWebfontsEnabled = $wmgULSWebfontsEnabled;
+	if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgUseZeroNamespace ) {
+		$wgULSNoImeSelectors[] = '.ace_editor textarea';
+	}
+	if ( $wmgUseTranslate && $wmgULSPosition === 'personal' ) {
+		$wgTranslatePageTranslationULS = true;
+	}
+
+	// Fetch fonts from stable URLs so that they're cached longer. This is to avoid
+	// re-downloading of fonts for each new branch. But that only works for production,
+	// not labs. If this variable is not set, $wgExtensionAssetsPath is used.
+	if ( $wmfRealm === 'production' ) {
+		$wgULSFontRepositoryBasePath = ( "//{$wmfHostnames['bits']}/static-current"
+			. '/extensions/UniversalLanguageSelector/data/fontrepo/fonts/' );
+	}
+
+	$wgULSEventLogging = $wmgULSEventLogging;
+}
+
+if ( $wmgEnableGeoData ) {
+	require_once( "$IP/extensions/GeoData/GeoData.php" );
+	$wgGeoDataBackend = 'solr';
+	$wgGeoDataSolrMaster = 'solr1001.eqiad.wmnet';
+	$wgGeoDataSolrHosts = array(
+		'solr1001.eqiad.wmnet' => 75, // master, put less read load on it
+		'solr1002.eqiad.wmnet' => 100,
+		'solr1003.eqiad.wmnet' => 100,
+	);
+
+	# Data collection mode
+	if ( !$wmgEnableGeoSearch ) {
+		$wgAPIGeneratorModules['geosearch'] = 'ApiQueryDisabled';
+		$wgAPIListModules['geosearch'] = 'ApiQueryDisabled';
+	}
+
+	# These modules have been intentionally disabled for the first phase of deployment
+	if ( $wgDBname !== 'testwiki' ) {
+		unset( $wgAPIListModules['geopages'] );
+		unset( $wgAPIListModules['geopagesincategory'] );
+	}
+	$wgMaxCoordinatesPerPage = 2000;
+	$wgGeoDataSolrCommitPolicy = 'never';
+}
+
+if ( ( $wmgUseTranslate && $wmgUseTranslationMemory ) || $wmgEnableGeoData ) {
+	require_once( "$IP/extensions/Solarium/Solarium.php" );
+}
+
 if ( $wgDBname == 'enwiki' ) {
 	// Please don't interfere with our hundreds of wikis ability to manage themselves.
 	// Only use this shitty hack for enwiki. Thanks.
@@ -1622,12 +1829,6 @@ $wgEditToolbarCGDUserEnable = true;
 
 if ( $wmgUserDailyContribs ) {
 	require "$IP/extensions/UserDailyContribs/UserDailyContribs.php";
-}
-
-
-if ( $wmgUseLocalisationUpdate ) {
-	require_once( "$IP/extensions/LocalisationUpdate/LocalisationUpdate.php" );
-	$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/cache-$wmfExtendedVersionNumber";
 }
 
 if ( $wmgEnableLandingCheck ) {
@@ -1938,15 +2139,10 @@ if ( $wmgTemplateDataUseGUI ) {
 	$wgTemplateDataUseGUI = true;
 }
 
-
 if ( $wmgUseGoogleNewsSitemap ) {
 	include( "$IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php" );
 	$wgGNSMfallbackCategory = $wmgGNSMfallbackCategory;
 	$wgGNSMcommentNamespace = $wmgGNSMcommentNamespace;
-}
-
-if ( $wmgUseCLDR ) {
-	require_once( "$IP/extensions/cldr/cldr.php" );
 }
 
 # APC not available in CLI mode
@@ -2041,140 +2237,11 @@ if ( $wmgUseMath ) {
 	$wgMathDisableTexFilter = true; // severe performance regression; --Aaron
 }
 
-if ( $wmgUseBabel ) {
-	require_once( "$IP/extensions/Babel/Babel.php" );
-	$wgBabelCategoryNames = $wmgBabelCategoryNames;
-	$wgBabelMainCategory = $wmgBabelMainCategory;
-	$wgBabelDefaultLevel = $wmgBabelDefaultLevel;
-	$wgBabelUseUserLanguage = $wmgBabelUseUserLanguage;
-}
-
-if ( $wmgUseTranslate ) {
-	require_once( "$IP/extensions/Translate/Translate.php" );
-
-	$wgGroupPermissions['*']['translate'] = true;
-	$wgGroupPermissions['translationadmin']['pagetranslation'] = true;
-	$wgGroupPermissions['translationadmin']['translate-manage'] = true;
-	$wgGroupPermissions['translationadmin']['translate-import'] = true; // bug 40341
-	$wgGroupPermissions['user']['translate-messagereview'] = true;
-	$wgGroupPermissions['user']['translate-groupreview'] = true;
-
-	unset( $wgGroupPermissions['translate-proofr'] );
-	unset( $wgAddGroups['translate-proofr'] );
-
-	$wgTranslateDocumentationLanguageCode = 'qqq';
-	$wgExtraLanguageNames['qqq']       = 'Message documentation'; # No linguistic content. Used for documenting messages
-
-	$wgTranslateTranslationServices = array();
-	if ( $wmgUseTranslationMemory ) {
-		$wgTranslateTranslationServices['TTMServer'] = array(
-			'type' => 'ttmserver',
-			'class' => 'SolrTTMServer',
-			'cutoff' => 0.60,
-			'config' => array(
-				'adapteroptions' => array(
-					'host' => 'zinc.eqiad.wmnet',
-					'timeout' => 10,
-				),
-				'adapter' => 'Solarium_Client_Adapter_Curl',
-			),
-		);
+if ( $wmgUseTemplateSandbox ) {
+	require_once( "$IP/extensions/TemplateSandbox/TemplateSandbox.php" );
+	if( $wmgUseScribunto ) {
+		$wgTemplateSandboxEditNamespaces[] = NS_MODULE;
 	}
-
-	$wgTranslateWorkflowStates = $wmgTranslateWorkflowStates;
-	$wgTranslateRcFilterDefault = $wmgTranslateRcFilterDefault;
-
-	unset( $wgTranslateTasks['export-as-file'] );
-	unset( $wgTranslateTasks['optional'] );
-	unset( $wgTranslateTasks['suggestions'] );
-
-	$wgTranslateUsePreSaveTransform = true; # bug 37304
-
-	$wgEnablePageTranslation = true;
-
-	$wgTranslateBlacklist = array(
-		'*' => array(
-			'en' => 'English is the source language.',
-
-			'gan-hans' => 'Translate in gan please.',
-			'gan-hant' => 'Translate in gan please.',
-
-			'ike-cans' => 'Translate in iu please.',
-			'ike-latn' => 'Translate in iu please.',
-
-			'kk-cyrl' => 'Translate in kk please.',
-			'kk-latn' => 'Translate in kk please.',
-			'kk-arab' => 'Translate in kk please.',
-			'kk-kz'   => 'Translate in kk please.',
-			'kk-tr'   => 'Translate in kk please.',
-			'kk-cn'   => 'Translate in kk please.',
-
-			'ku-latn' => 'Translate in ku please.',
-			'ku-arab' => 'Translate in ku please.',
-
-			'shi-tfng' => 'Translate in shi please.',
-			'shi-latn' => 'Translate in shi please.',
-
-			'sr-ec' => 'Translate in sr please.',
-			'sr-el' => 'Translate in sr please.',
-
-			'tg-latn' => 'Translate in tg please.',
-
-			'zh-hans' => 'Translate in zh please.',
-			'zh-hant' => 'Translate in zh please.',
-			'zh-cn' => 'Translate in zh please.',
-			'zh-hk' => 'Translate in zh please.',
-			'zh-mo' => 'Translate in zh please.',
-			'zh-my' => 'Translate in zh please.',
-			'zh-sg' => 'Translate in zh please.',
-			'zh-tw' => 'Translate in zh please.',
-		),
-	);
-
-	$wgTranslateEC = array();
-
-	if ( $wgDBname === 'wikimania2013wiki' ) {
-		$wgHooks['TranslatePostInitGroups'][] = function ( &$cc ) {
-			$id = 'wiki-sidebar';
-			$mg = new WikiMessageGroup( $id, 'sidebar-messages' );
-			$mg->setLabel( 'Sidebar' );
-			$mg->setDescription( 'Messages used in the sidebar of this wiki' );
-			$cc[$id] = $mg;
-			return true;
-		};
-	}
-
-	if ( $wgDBname === 'commonswiki' ) {
-		$wgHooks['TranslatePostInitGroups'][] = function ( &$cc ) {
-			$id = 'wiki-translatable';
-			$mg = new WikiMessageGroup( $id, 'translatable-messages' );
-			$mg->setLabel( 'Interface' );
-			$mg->setDescription( 'Messages used in the custom interface of this wiki' );
-			$cc[$id] = $mg;
-			return true;
-		};
-	};
-
-	unset( $wgSpecialPages['FirstSteps'] );
-	unset( $wgSpecialPages['ManageMessageGroups'] );
-	unset( $wgSpecialPages['TranslationStats'] );
-
-	// Caused apache overload 2013-08-11 TS
-	unset( $wgSpecialPages['SupportedLanguages'] );
-}
-
-if ( $wmgUseTranslationNotifications ) {
-	require_once( "$IP/extensions/TranslationNotifications/TranslationNotifications.php" );
-	$wgNotificationUsername = 'Translation Notification Bot';
-	$wgNotificationUserPassword = $wmgTranslationNotificationUserPassword;
-
-	$wgTranslationNotificationsContactMethods['talkpage-elsewhere'] = true;
-}
-
-if ( $wmgUseCleanChanges ) {
-	$wgDefaultUserOptions['usenewrc'] = 1;
-	require_once( "$IP/extensions/CleanChanges/CleanChanges.php" );
-	$wgCCTrailerFilter = true;
 }
 
 if ( $wmgUseVips ) {
@@ -2215,11 +2282,6 @@ if ( $wmgReduceStartupExpiry ) {
 if ( $wmgEnablePageTriage ) {
 	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 	$wgPageTriageEnableCurationToolbar = $wmgPageTriageEnableCurationToolbar;
-}
-
-if ( $wmgEnableInterwiki ) {
-	require_once( "$IP/extensions/Interwiki/Interwiki.php" );
-	$wgInterwikiViewOnly = true;
 }
 
 if ( $wmgEnableRandomRootPage ) {
@@ -2270,31 +2332,6 @@ if ( $wmgUseWikimediaShopLink ) {
 		'JP',
 	);
 	$wgWikimediaShopLinkTarget = '//shop.wikimedia.org';
-}
-
-if ( $wmgEnableGeoData ) {
-	require_once( "$IP/extensions/GeoData/GeoData.php" );
-	$wgGeoDataBackend = 'solr';
-	$wgGeoDataSolrMaster = 'solr1001.eqiad.wmnet';
-	$wgGeoDataSolrHosts = array(
-		'solr1001.eqiad.wmnet' => 75, // master, put less read load on it
-		'solr1002.eqiad.wmnet' => 100,
-		'solr1003.eqiad.wmnet' => 100,
-	);
-
-	# Data collection mode
-	if ( !$wmgEnableGeoSearch ) {
-		$wgAPIGeneratorModules['geosearch'] = 'ApiQueryDisabled';
-		$wgAPIListModules['geosearch'] = 'ApiQueryDisabled';
-	}
-
-	# These modules have been intentionally disabled for the first phase of deployment
-	if ( $wgDBname !== 'testwiki' ) {
-		unset( $wgAPIListModules['geopages'] );
-		unset( $wgAPIListModules['geopagesincategory'] );
-	}
-	$wgMaxCoordinatesPerPage = 2000;
-	$wgGeoDataSolrCommitPolicy = 'never';
 }
 
 if ( $wmgUseEcho ) {
@@ -2493,31 +2530,6 @@ if ( $wmgUseEventLogging && $wmgUseNavigationTiming ) {
 	$wgNavigationTimingSamplingFactor = 1000;
 }
 
-if ( $wmgUseUniversalLanguageSelector ) {
-	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
-	$wgULSGeoService = false;
-	$wgULSAnonCanChangeLanguage = false;
-	$wgULSPosition = $wmgULSPosition;
-	$wgULSIMEEnabled = $wmgULSIMEEnabled;
-	$wgULSWebfontsEnabled = $wmgULSWebfontsEnabled;
-	if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgUseZeroNamespace ) {
-		$wgULSNoImeSelectors[] = '.ace_editor textarea';
-	}
-	if ( $wmgUseTranslate && $wmgULSPosition === 'personal' ) {
-		$wgTranslatePageTranslationULS = true;
-	}
-
-	// Fetch fonts from stable URLs so that they're cached longer. This is to avoid
-	// re-downloading of fonts for each new branch. But that only works for production,
-	// not labs. If this variable is not set, $wgExtensionAssetsPath is used.
-	if ( $wmfRealm === 'production' ) {
-		$wgULSFontRepositoryBasePath = ( "//{$wmfHostnames['bits']}/static-current"
-			. '/extensions/UniversalLanguageSelector/data/fontrepo/fonts/' );
-	}
-
-	$wgULSEventLogging = $wmgULSEventLogging;
-}
-
 $wmgUseWikibaseBuild = !in_array( $wmfExtendedVersionNumber, array( '1.23wmf10', '1.23wmf11' ) );
 
 // @note getRealmSpecificFilename only works with filenames with .suffix
@@ -2529,17 +2541,6 @@ if ( $wmgUseWikibaseBuild ) {
 
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 	include( "$wmfConfigDir/Wikibase.php" );
-}
-
-if ( ( $wmgUseTranslate && $wmgUseTranslationMemory ) || $wmgEnableGeoData ) {
-	require_once( "$IP/extensions/Solarium/Solarium.php" );
-}
-
-if ( $wmgUseTemplateSandbox ) {
-	require_once( "$IP/extensions/TemplateSandbox/TemplateSandbox.php" );
-	if( $wmgUseScribunto ) {
-		$wgTemplateSandboxEditNamespaces[] = NS_MODULE;
-	}
 }
 
 if ( $wmgUsePageImages ) {
