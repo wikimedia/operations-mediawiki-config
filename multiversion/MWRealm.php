@@ -41,7 +41,6 @@ default:
 # @returns array List of realm-datacenter pairs
 function listAllRealmsAndDatacenters() {
 	return array(
-		array( 'production', 'pmtpa' ),
 		array( 'production', 'eqiad' ),
 		array( 'labs', 'pmtpa' ),
 		array( 'labs', 'eqiad' ),

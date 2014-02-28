@@ -15,7 +15,6 @@ mwconfig_files_txt=(
 	wmf-config/CirrusSearch-labs.php
 	wmf-config/db-eqiad.php
 	wmf-config/db-labs.php
-	wmf-config/db-pmtpa.php
 	wmf-config/db-secondary.php
 	wmf-config/ext-labs.php
 	wmf-config/ext-production.php
@@ -23,7 +22,6 @@ mwconfig_files_txt=(
 	wmf-config/filebackend.php
 	wmf-config/flaggedrevs.php
 	wmf-config/jobqueue-eqiad.php
-	wmf-config/jobqueue-pmtpa.php
 	wmf-config/liquidthreads.php
 	wmf-config/logging-labs.php
 	wmf-config/lucene-common.php
