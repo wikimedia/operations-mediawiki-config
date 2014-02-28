@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_ff40b45c",
+        "filename": "multiversion/MWRealm.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-02-28T01:57:25Z",
+      "side": 0,
+      "message": "Update date",
+      "revId": "915a2f48109518b9b394c89410805455dedcbe35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_1f3a40e4",
+        "filename": "multiversion/MWRealm.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-02-28T01:57:25Z",
+      "side": 0,
+      "message": "Remove pmtpa",
+      "revId": "915a2f48109518b9b394c89410805455dedcbe35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_df43b865",
+        "filename": "multiversion/MWRealm.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-02-28T01:57:25Z",
+      "side": 0,
+      "message": "These seems useless as overwritten below...",
+      "revId": "915a2f48109518b9b394c89410805455dedcbe35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_3f373cfe",
+        "filename": "multiversion/MWRealm.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-02-28T01:57:25Z",
+      "side": 0,
+      "message": "Should probably also remove pmtpa..",
+      "revId": "915a2f48109518b9b394c89410805455dedcbe35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_5f58c858",
+        "filename": "multiversion/MWRealm.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-02-28T01:57:25Z",
+      "side": 0,
+      "message": "Should be updated to eqiad",
+      "revId": "915a2f48109518b9b394c89410805455dedcbe35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_7f5dc449",
+        "filename": "multiversion/MWRealm.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-02-28T01:57:25Z",
+      "side": 0,
+      "message": "Should be updated to eqiad...",
+      "revId": "915a2f48109518b9b394c89410805455dedcbe35",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
