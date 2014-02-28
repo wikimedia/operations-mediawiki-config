@@ -6578,16 +6578,6 @@ $wgConf->settings = array(
 			'collectionsaveascommunitypage' => false,
 			'skipcaptcha' => false,
 		),
-		'confirmed' => array(
-			'autoconfirmed' => false,
-			'editsemiprotected' => false,
-			'reupload' => false,
-			'upload' => false,
-			'move' => false,
-			'collectionsaveasuserpage' => false,
-			'collectionsaveascommunitypage' => false,
-			'skipcaptcha' => false,
-		),
 		'accountcreator' => array( 'noratelimit' => false, ),
 		'bureaucrat' => array( 'createaccount' => true, ),
 		'sysop' => array( 'createaccount' => false, ),
@@ -6700,7 +6690,6 @@ $wgConf->settings = array(
 			'upload' => true, // exception for https://bugzilla.wikimedia.org/show_bug.cgi?id=12556
 		),
 		'rollbacker' => array( 'rollback' => true ),
-		'confirmed' => array( 'upload' => true, 'patrol' => true ),
 		'patroller' => array( 'autopatrol' => true, 'patrol' => true, 'abusefilter-log-detail' => true ),
 		'autopatrolled' => array ( 'autopatrol' => true ),
 		'filemover' => array( 'movefile' => true ),
@@ -6760,7 +6749,6 @@ $wgConf->settings = array(
 			'tboverride' => true,
 			// also in some exemption lists'
 		),
-		'confirmed' => array( 'upload' => true, 'patrol' => true ),
 		'autoreviewer' => array( 'autopatrol' => true ),
 		'researcher' => array( 'browsearchive' => true, 'deletedhistory' => true, 'apihighlimits' => true ),
 		'reviewer' => array( 'patrol' => true ),
@@ -6921,7 +6909,6 @@ $wgConf->settings = array(
 	),
 	'guwiki' => array(
 		'autoconfirmed' => array( 'upload' => false, 'reupload' => false ),
-		'confirmed' => array( 'upload' => false, 'reupload' => false ),
 		'user' => array( 'reupload-own' => false ),
 	),
 	'guwikisource' => array(
@@ -6969,8 +6956,7 @@ $wgConf->settings = array(
 	'huwiki' => array(
 		'editor' => array( 'noratelimit' => true ),
 		'sysop' => array( 'deleterevision' => true ),
-		'user' => array( 'upload' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28576
-		'confirmed' => array( 'upload' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28576
+		'user' => array( 'upload' => true ), // bug 28576
 	),
 	'idwiki' => array(
 		'*' => array( 'createpage' => false ),
@@ -7046,7 +7032,6 @@ $wgConf->settings = array(
 		),
 		'sysop' => array( 'upload' => true ), // Bug 43524
 		'user' => array( 'upload' => false ), // Bug 43524
-		'confirmed' => array( 'upload' => false ), // Bug 43524
 		'autoconfirmed' => array( 'upload' => false ), // Bug 43524
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true ), // Bug 45638
 	),
@@ -7114,7 +7099,6 @@ $wgConf->settings = array(
 	),
 	'kowikinews' => array(
 		'autoconfirmed' => array( 'reupload' => false, 'upload' => false ),
-		'confirmed' => array( 'reupload' => false, 'upload' => false ),
 		'user' => array( 'reupload-own' => false ),
 	),
 	'lawiki' => array(
@@ -7138,10 +7122,6 @@ $wgConf->settings = array(
 	'metawiki' => array(
 		'user' => array( 'reupload-own' => false ), // bug 50287
 		'autoconfirmed' => array( // bug 50287
-			'upload' => false,
-			'reupload' => false,
-			),
-		'confirmed' => array( // bug 50287
 			'upload' => false,
 			'reupload' => false,
 			),
@@ -7245,16 +7225,6 @@ $wgConf->settings = array(
 			'collectionsaveascommunitypage' => false,
 			'skipcaptcha' => false,
 		),
-		'confirmed' => array(
-			'autoconfirmed' => false,
-			'editsemiprotected' => false,
-			'reupload' => false,
-			'upload' => false,
-			'move' => false,
-			'collectionsaveasuserpage' => false,
-			'collectionsaveascommunitypage' => false,
-			'skipcaptcha' => false,
-		),
 		'accountcreator' => array( 'noratelimit' => false, ),
 		'bureaucrat' => array( 'createaccount' => true, ),
 		'sysop' => array( 'createaccount' => false, ),
@@ -7285,7 +7255,6 @@ $wgConf->settings = array(
 	'ptwiki' => array(
 		'autoconfirmed' => array( 'patrol' => true, 'abusefilter-log-detail' => true ),
 		'bot' => array( 'autoreviewer' => true, ),
-		'confirmed' => array( 'patrol' => true ),
 		'autoreviewer' => array( 'autopatrol' => true, 'autoreviewer' => true ),
 		'eliminator' => array(
 			'browsearchive' => true,
@@ -7429,7 +7398,6 @@ $wgConf->settings = array(
 			'autopatrol' => true,
 			'patrolmarks' => true, // bug 60818
 		),
-		'confirmed' => array( 'patrolmarks' => true, ),
 		'rollbacker' => array(
 			'rollback' => true,
 			'markbotedits' => true, // bug 62462
@@ -7470,7 +7438,6 @@ $wgConf->settings = array(
 	'svwikisource' => array( // Bug 28614 & 36895
 		'autopatrolled' => array( 'autopatrol' => true, 'suppressredirect' => true, 'upload' => true, 'reupload' => true ),
 		'autoconfirmed' => array( 'upload' => false, 'reupload' => false ),
-		'confirmed' => array( 'upload' => false, 'reupload' => false ),
 	),
 	'svwiktionary' => array(
 		'user' => array( 'upload' => false ),
@@ -7556,7 +7523,6 @@ $wgConf->settings = array(
 	'ukwikivoyage' => array(
 		'autoconfirmed' => array( 'upload' => false, 'reupload' => false, ),
 		'autopatrolled' => array( 'autopatrol' => true ), // bug 54299
-		'confirmed' => array( 'reupload' => false, ),
 		'rollbacker' => array( 'rollback' => true ),
 		'uploader' => array( 'upload' => true, 'reupload' => true ),
 		'user' => array( 'upload' => false, 'reupload' => false, ),
@@ -7577,10 +7543,6 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ), // bug 46828
 	),
 	'wikidata' => array(
-		'confirmed' => array(
-			'patrol' => true, // bug 56203
-			'autopatrol' => true, // bug 56203
-		),
 		'autoconfirmed' => array(
 			'patrol' => true, // bug 56203
 			'autopatrol' => true, // bug 56203
@@ -7636,7 +7598,6 @@ $wgConf->settings = array(
 		'autoconfirmed' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
 		'autoreviewer' => array( 'autopatrol' => true ),
-		'confirmed' => array( 'upload' => true, 'patrol' => true ),
 	),
 
 	'+strategywiki' => array( 'flood' => array( 'bot' => true ) ),
