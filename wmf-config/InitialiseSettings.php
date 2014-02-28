@@ -7350,10 +7350,22 @@ $wgConf->settings = array(
 		),
 		'user' => array(
 			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
 			'editallpages' => true, // Bug 39671
 		),
-		'sysop' => array(
+		'autoconfirmed' => array(
 			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
+		),
+		'sysop' => array(
+			'upload' => true, // bug 61947
+			'reupload' => true,
+			'reupload-own' => true,
+			'reupload-shared' => true,
 			'editallpages' => true,
 		),
 		'medlem' => array(
@@ -7363,9 +7375,6 @@ $wgConf->settings = array(
 			'edit' => true,
 			'createpage' => true,
 			'createtalk' => true,
-			'upload' => true,
-			'reupload' => true,
-			'reupload-shared' => true,
 			'minoredit' => true,
 			'purge' => true,
 			'editallpages' => true,
@@ -9216,6 +9225,7 @@ $wgConf->settings = array(
 	'private' => true,
 	'donatewiki' => true, // whee restricted site
 	'foundationwiki' => true, // whee restricted site
+	'sewikimedia' => true, // chapter site, only sysops can upload, bug 61947
 ),
 
 // Note that changing this for wikis with CirrusSearch will remove pages in the
