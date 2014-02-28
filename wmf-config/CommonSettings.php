@@ -791,7 +791,7 @@ if ( function_exists( 'dba_open' ) && file_exists( "$wmfConfigDir/trusted-xff.cd
 
 if ( $wmgUseContactPage ) {
 	include( $IP . '/extensions/ContactPage/ContactPage.php' );
-	$wgContactConfig['default'] += $wmgContactPageConf;
+	$wgContactConfig['default'] = array_merge( $wgContactConfig['default'], $wmgContactPageConf );
 }
 
 if ( $wmgUseSecurePoll ) {
