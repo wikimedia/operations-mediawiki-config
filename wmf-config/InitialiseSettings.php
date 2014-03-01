@@ -6689,7 +6689,7 @@ $wgConf->settings = array(
 		'patroller' => array( 'autopatrol' => true, 'patrol' => true, 'abusefilter-log-detail' => true ),
 		'autopatrolled' => array ( 'autopatrol' => true ),
 		'filemover' => array( 'movefile' => true ),
-		'OTRS-member' => array( 'autopatrol' => true ),
+		'OTRS-member' => array( 'autopatrol' => true, 'upload_by_url' => true  ),
 		'Image-reviewer' => array( 'autopatrol' => true, 'upload_by_url' => true ),
 		'sysop' => array( 'upload_by_url' => true ),
 	),
