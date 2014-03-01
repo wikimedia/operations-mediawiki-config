@@ -53,6 +53,7 @@ $wgDnsBlacklistUrls   = array(
 
 // So that people can easily test the captchas without making accounts -- Platonides
 $wgGroupPermissions['autoconfirmed']['skipcaptcha'] = false;
+$wgGroupPermissions['sysop']['skipcaptcha'] = true;
 
 if ( $wmgEnableGeoData ) {
 	$wgGeoDataSolrMaster = 'deployment-solr.pmtpa.wmflabs';
