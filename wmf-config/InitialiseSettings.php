@@ -10346,6 +10346,7 @@ $wgConf->settings = array(
 		'*.rijksmuseum.nl',              // Rijksmuseum
 		'*.llgc.org.uk',                 // National Library of Wales
 		'*.tounoki.org',                 // Musées de la Haute-Saône
+		'*.wikimedia.ch',		 // Wikimedia CH
 	),
 ),
 
