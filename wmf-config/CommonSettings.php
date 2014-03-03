@@ -1789,10 +1789,14 @@ if ( $wmgUseVectorBeta ) {
 	require_once( "$IP/extensions/VectorBeta/VectorBeta.php" );
 }
 
+if ( $wmgUseParsoid || $wmgUseVisualEditor ) {
+	// Needs to be set separately because some private wikis
+	// use VE but not Parsoid.
+	$wmgParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
+}
+
 if ( $wmgUseParsoid ) {
 	require_once( "$IP/extensions/Parsoid/php/Parsoid.php" );
-
-	$wmgParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
 
 	// List the parsoid cache servers to keep up to date.
 	//
