@@ -162,23 +162,6 @@ return array(
 	'-wmgEnableCaptcha' => array(
 		'default' => true,
 	),
-	// Completely disabled AFTv4 & enable AFTv5
-	'-wmgArticleFeedbackLotteryOdds' => array(
-		'default' => 0,
-	),
-	'-wmgArticleFeedbackv5LotteryOdds' => array(
-		'default' => 100,
-	),
-	'-wmgArticleFeedbackv5Namespaces' => array(
-		'default' => array( NS_MAIN ),
-		'dewiki' => array( NS_MAIN ),
-		'enwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
-		'testwiki' => array( NS_MAIN, NS_HELP, NS_PROJECT ),
-	),
-	// On labs, there's no dedicated cluster for AFTv5's data; false will default to main MW db
-	'-wmgArticleFeedbackv5Cluster' => array(
-		'default' => false,
-	),
 	'-wmgEchoCluster' => array(
 		'default' => false,
 	),
