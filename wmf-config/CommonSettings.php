@@ -1789,11 +1789,42 @@ if ( $wmgUseVectorBeta ) {
 	require_once( "$IP/extensions/VectorBeta/VectorBeta.php" );
 }
 
+if ( $wmgUseParsoid ) {
+	require_once( "$IP/extensions/Parsoid/php/Parsoid.php" );
+
+	$wmgParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
+
+	// List the parsoid cache servers to keep up to date.
+	//
+	// We target the load balancer in front of the front-end caches, which
+	// will then pick one front-end. This works as we disabled caching in the
+	// front-ends. The main reason for doing it this way is that request
+	// coalescing in the backends does not work with req.hash_always_miss =
+	// true.
+	$wgParsoidCacheServers = array(
+		'http://10.2.2.29', // parsoidcache.svc.eqiad.wmnet
+	);
+	// The wiki prefix to use
+	$wgParsoidWikiPrefix = $wgDBname;
+
+	// Load shedding knob, affects whether new Parsoid jobs are enqueued.
+	// Set to something between 0 (process all updates) and 1 (skip all updates).
+	$wgParsoidSkipRatio = 0;
+
+	// Throttle rate of template updates by setting the number of tests per
+	// job to something lowish, and limiting the maximum number of updates to
+	// process per template edit
+	$wgParsoidCacheUpdateTitlesPerJob = 10;
+	$wgParsoidMaxBacklinksInvalidate = 500000;
+}
+
 if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
-	$wgVisualEditorParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
-	$wgVisualEditorParsoidPrefix = $wgDBname;
+
+	$wgVisualEditorParsoidURL = $wmgParsoidURL;
+	$wgVisualEditorParsoidPrefix = $wgParsoidWikiPrefix;
 	$wgVisualEditorParsoidProblemReportURL = 'http://parsoid.wmflabs.org/_bugs/';
+
 	if ( !$wmgVisualEditorInContentNamespaces ) {
 		$wgVisualEditorNamespaces = array(); // Wipe out default set by VisualEditor.php
 	}
@@ -1841,31 +1872,6 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorParsoidForwardCookies ) {
 		$wgVisualEditorParsoidForwardCookies = true;
 	}
-
-	// Also include the Parsoid extension when VE is enabled
-	require_once( "$IP/extensions/Parsoid/php/Parsoid.php" );
-	// List the parsoid cache servers to keep up to date.
-	//
-	// We target the load balancer in front of the front-end caches, which
-	// will then pick one front-end. This works as we disabled caching in the
-	// front-ends. The main reason for doing it this way is that request
-	// coalescing in the backends does not work with req.hash_always_miss =
-	// true.
-	$wgParsoidCacheServers = array(
-		'http://10.2.2.29', // parsoidcache.svc.eqiad.wmnet
-	);
-	// The wiki prefix to use
-	$wgParsoidWikiPrefix = $wgDBname;
-
-	// Load shedding knob, affects whether new Parsoid jobs are enqueued.
-	// Set to something between 0 (process all updates) and 1 (skip all updates).
-	$wgParsoidSkipRatio = 0;
-
-	// Throttle rate of template updates by setting the number of tests per
-	// job to something lowish, and limiting the maximum number of updates to
-	// process per template edit
-	$wgParsoidCacheUpdateTitlesPerJob = 10;
-	$wgParsoidMaxBacklinksInvalidate = 500000;
 }
 
 if ( $wmgUseTemplateData ) {
@@ -2298,6 +2304,8 @@ if ( $wmgUseFlow ) {
 	$wgFlowOccupyPages = $wmgFlowOccupyPages;
 	// Requires that Parsoid is available for all wikis using Flow.
 	$wgFlowContentFormat = 'html';
+
+	$wgFlowParsoidURL = $wmgParsoidURL;
 
 	$wgFlowDefaultWikiDb = $wmgFlowDefaultWikiDb;
 	$wgFlowCluster = $wmgFlowCluster;
