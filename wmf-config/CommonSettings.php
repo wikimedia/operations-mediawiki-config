@@ -1793,6 +1793,8 @@ if ( $wmgUseParsoid || $wmgUseVisualEditor ) {
 	// Needs to be set separately because some private wikis
 	// use VE but not Parsoid.
 	$wmgParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
+	// The wiki prefix to use
+	$wgParsoidWikiPrefix = $wgDBname;
 }
 
 if ( $wmgUseParsoid ) {
@@ -1808,8 +1810,6 @@ if ( $wmgUseParsoid ) {
 	$wgParsoidCacheServers = array(
 		'http://10.2.2.29', // parsoidcache.svc.eqiad.wmnet
 	);
-	// The wiki prefix to use
-	$wgParsoidWikiPrefix = $wgDBname;
 
 	// Load shedding knob, affects whether new Parsoid jobs are enqueued.
 	// Set to something between 0 (process all updates) and 1 (skip all updates).
