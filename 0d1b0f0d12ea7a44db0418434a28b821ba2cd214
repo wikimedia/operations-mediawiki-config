@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_650c0346",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-03-04T11:12:47Z",
+      "side": 0,
+      "message": "here",
+      "revId": "0d1b0f0d12ea7a44db0418434a28b821ba2cd214",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_85114f61",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-03-04T11:12:47Z",
+      "side": 0,
+      "message": "here",
+      "revId": "0d1b0f0d12ea7a44db0418434a28b821ba2cd214",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
