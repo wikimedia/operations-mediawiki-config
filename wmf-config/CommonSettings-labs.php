@@ -93,6 +93,10 @@ if ( $wmgUseFlow ) {
 	$wgFlowParsoidURL = $wmgParsoidURL; // Re-link now it's been set to a new value
 }
 
+if ( $wmgUseCentralNotice ) {
+	$wgCentralGeoScriptURL = false;
+}
+
 require_once( "$IP/extensions/MobileApp/MobileApp.php" );
 
 require_once( "$IP/extensions/Popups/Popups.php" );
