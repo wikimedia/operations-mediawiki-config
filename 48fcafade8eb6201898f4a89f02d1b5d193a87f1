@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_4a1a3674",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1794,
+      "author": {
+        "id": 164
+      },
+      "writtenOn": "2014-03-04T00:25:02Z",
+      "side": 1,
+      "message": "This is misleading: They use Parsoid too of course, but don\u0027t use the Parsoid cache update extension.",
+      "revId": "48fcafade8eb6201898f4a89f02d1b5d193a87f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
