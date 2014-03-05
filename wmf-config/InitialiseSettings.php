@@ -12726,6 +12726,7 @@ $wgConf->settings = array(
 	'wikibooks' => true,
 	'wikinews' => true,
 	'wikimedia' => true,
+	'wikiquote' => true,
 	'wikisource' => true,
 	'wikiversity' => true,
 	'wiktionary' => true,
@@ -12733,6 +12734,7 @@ $wgConf->settings = array(
 
 'wmgCirrusIsBuilding' => array(
 	'default' => false,
+	'wikiquote' => true,
 ),
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
