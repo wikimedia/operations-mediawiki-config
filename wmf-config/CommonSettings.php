@@ -1386,6 +1386,9 @@ if ( $wmgUseCentralNotice ) {
 	// for DNS prefetching
 	$wgCentralHost = "//{$wmfHostnames['meta']}";
 
+	// Rely on GeoIP cookie for geolocation
+	$wgCentralGeoScriptURL = false;
+
 	// for banner loading
 	if ( $wgDBname == 'testwiki' ) {
 		$wgCentralPagePath = "//test.wikipedia.org/w/index.php";
