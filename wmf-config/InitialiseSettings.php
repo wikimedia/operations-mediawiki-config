@@ -12718,7 +12718,6 @@ $wgConf->settings = array(
 	'frwiki' => true,
 	'guwiki' => true,
 	'huwiki' => true,
-	'itwikiquote' => true,
 	'nlwiki' => true,
 	'ptwiki' => true,
 	'ruwiki' => true,
@@ -12734,8 +12733,6 @@ $wgConf->settings = array(
 
 'wmgCirrusIsBuilding' => array(
 	'default' => false,
-	'wikiquote' => true,
-	'itwikiquote' => false,
 ),
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
