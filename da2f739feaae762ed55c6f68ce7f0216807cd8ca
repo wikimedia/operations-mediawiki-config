@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_21a7fa0a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12732,
+      "author": {
+        "id": 873
+      },
+      "writtenOn": "2014-03-06T19:43:37Z",
+      "side": 1,
+      "message": "Not sure this is quite right.  We\u0027re not in meta and a few others I think.  Also no need for \"\u003d\u003e true\"s.",
+      "revId": "da2f739feaae762ed55c6f68ce7f0216807cd8ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
