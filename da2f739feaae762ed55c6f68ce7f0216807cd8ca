@@ -16,6 +16,24 @@
       "revId": "da2f739feaae762ed55c6f68ce7f0216807cd8ca",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_a1b2ea44",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12732,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-03-06T19:45:32Z",
+      "side": 1,
+      "message": "Bleh you\u0027re right. I\u0027ll avoid this for now :p",
+      "parentUuid": "4e04eb01_21a7fa0a",
+      "revId": "da2f739feaae762ed55c6f68ce7f0216807cd8ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
