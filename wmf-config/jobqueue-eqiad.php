@@ -49,13 +49,3 @@ $wgJobTypesExcludedFromDefaultQueue += array(
 	'ParsoidCacheUpdateJobOnEdit',
 	'ParsoidCacheUpdateJobOnDependencyChange'
 );
-
-// Disabled during Elasticsearch upgrade
-$wgJobTypesExcludedFromDefaultQueue += array(
-	'cirrusSearchDeletePages',
-	'cirrusSearchLinksUpdate',
-	'cirrusSearchLinksUpdatePrioritized',
-	'cirrusSearchLinksUpdateSecondary',
-	'cirrusSearchMassIndex',
-	'cirrusSearchOtherIndex',
-);

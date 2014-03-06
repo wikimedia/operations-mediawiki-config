@@ -12724,15 +12724,11 @@ $wgConf->settings = array(
 
 'wmgUseCirrus' => array(
 	'default' => false,
+	'cirrus' => true,
 ),
 
 'wmgUseCirrusAsAlternative' => array(
-	'default' => false,
-
-	// Moved temporarily during Elasticsearch upgrade
-	'cirrus' => true,
-
-
+	'default' => true,
 	'astwiki' => true,
 	'bnwiki' => true,
 	'commonswiki' => true,
@@ -12750,6 +12746,7 @@ $wgConf->settings = array(
 	'wikibooks' => true,
 	'wikinews' => true,
 	'wikimedia' => true,
+	'wikipedia' => false,
 	'wikiquote' => true,
 	'wikisource' => true,
 	'wikiversity' => true,
@@ -12757,9 +12754,7 @@ $wgConf->settings = array(
 ),
 
 'wmgCirrusIsBuilding' => array(
-	// Everything is "building" during the Elasticsearch upgrade so we're
-	// not a betafeature during that time
-	'default' => true,
+	'default' => false,
 ),
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
