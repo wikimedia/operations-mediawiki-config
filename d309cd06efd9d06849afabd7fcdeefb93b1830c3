@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_ec6eb0fd",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12741,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-03-06T01:27:39Z",
+      "side": 1,
+      "message": "Couldn\u0027t we just set default to true? If not, \u0027cirrus\u0027 needs to be added here too.",
+      "revId": "d309cd06efd9d06849afabd7fcdeefb93b1830c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
