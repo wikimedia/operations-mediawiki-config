@@ -319,6 +319,11 @@ return array(
 		'loginwiki' => false,
 	),
 
+	'wmgUseGuidedTour' => array(
+		'default' => false,
+		'wikidatawiki' => true,
+	),
+
 );
 
 } # wmflLabsSettings()
