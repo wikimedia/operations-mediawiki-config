@@ -10678,6 +10678,13 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
+'wmgULSCompactLinks' => array(
+	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
+),
+
+
 // -------------- VisualEditor start --------------
 
 'wmgUseParsoid' => array(
