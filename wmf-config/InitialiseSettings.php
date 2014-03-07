@@ -12127,6 +12127,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
+	'testwikidatawiki' => true,
 	'astwiki' => true,
 	'be_x_oldwiki' => true,
 	'bewiki' => true,
