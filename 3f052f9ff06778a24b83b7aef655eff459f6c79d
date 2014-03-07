@@ -52,6 +52,24 @@
       "revId": "3f052f9ff06778a24b83b7aef655eff459f6c79d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_0514039f",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-03-07T21:13:20Z",
+      "side": 1,
+      "message": "Just for completeness: In wmfLabsOverrideSettings() which applies these settings to the globals, the settings from prod are inherited by default. This behavior can be changed by prefixing the key with a \u0027-\u0027.",
+      "parentUuid": "4e04eb01_05fe4366",
+      "revId": "3f052f9ff06778a24b83b7aef655eff459f6c79d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
