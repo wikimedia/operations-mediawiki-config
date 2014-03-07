@@ -10680,12 +10680,6 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
-'wmgUseMultimediaViewer' => array(
-	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
-),
-
 'wmgUseVectorBeta' => array(
 	'default' => true,
 	'loginwiki' => false,
@@ -10698,6 +10692,21 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
+// -------------- Media Viewer configs --------------
+'wmgUseMultimediaViewer' => array(
+	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
+),
+
+'wmgMediaViewerBeta' => array(
+	'default' => true,
+	'mediaviewerpilot' => false,
+),
+
+'wmfMediaViewerLoggedIn' => array(
+	'default' => false,
+),
 
 // -------------- VisualEditor start --------------
 
