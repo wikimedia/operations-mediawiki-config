@@ -70,6 +70,24 @@
       "revId": "3f052f9ff06778a24b83b7aef655eff459f6c79d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_2586dfe0",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2014-03-07T21:14:54Z",
+      "side": 1,
+      "message": "And I am blind as wmgUseGuidedTour is clearly in InitialiseSettings.php",
+      "parentUuid": "4e04eb01_0514039f",
+      "revId": "3f052f9ff06778a24b83b7aef655eff459f6c79d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
