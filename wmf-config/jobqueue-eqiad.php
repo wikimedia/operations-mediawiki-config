@@ -47,11 +47,3 @@ $wgJobQueueAggregator = array(
 // Moved to its own job pipeline
 $wgJobTypesExcludedFromDefaultQueue[] = 'ParsoidCacheUpdateJobOnEdit';
 $wgJobTypesExcludedFromDefaultQueue[] = 'ParsoidCacheUpdateJobOnDependencyChange';
-
-// Disabled during Elasticsearch upgrade
-$wgJobTypesExcludedFromDefaultQueue[] = 'cirrusSearchDeletePages';
-$wgJobTypesExcludedFromDefaultQueue[] = 'cirrusSearchLinksUpdate';
-$wgJobTypesExcludedFromDefaultQueue[] = 'cirrusSearchLinksUpdatePrioritized';
-$wgJobTypesExcludedFromDefaultQueue[] = 'cirrusSearchLinksUpdateSecondary';
-$wgJobTypesExcludedFromDefaultQueue[] = 'cirrusSearchMassIndex';
-$wgJobTypesExcludedFromDefaultQueue[] = 'cirrusSearchOtherIndex';
