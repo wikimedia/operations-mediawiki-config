@@ -190,7 +190,7 @@ if ( !$globals ) {
 	require( "$wmfConfigDir/InitialiseSettings.php" );
 
 	$wikiTags = array();
-	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small',
+	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small', 'mediaviewerpilot',
 			'medium', 'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor',
 			'visualeditor-default', 'echowikis', 'cirrus' ) as $tag ) {
 		$dblist = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../$tag.dblist" ) ) );
@@ -1783,6 +1783,14 @@ if ( $wmgUseGWToolset ) {
 if ( $wmgUseMultimediaViewer ) {
 	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
 	$wgNetworkPerformanceSamplingFactor = 1000;
+
+	if ( $wmgMediaViewerBeta ) {
+		$wgMediaViewerIsInBeta = true;
+	}
+
+	if ( $wmgMediaViewerLoggedIn ) {
+		$wgEnableMediaViewerForLoggedInUsersOnly = true;
+	}
 }
 
 if ( $wmgUseVectorBeta ) {
