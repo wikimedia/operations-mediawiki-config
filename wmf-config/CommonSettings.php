@@ -1284,6 +1284,10 @@ if ( $wmgUseCentralAuth ) {
 
 	// Attempt to attach unattached accounts by password on login
 	$wgCentralAuthAutoMigrate = true;
+
+	// Temporary: Use type 'B' passwords while Password API is being deployed across wikis.
+	// Otherwise unmerging centralauth accounts can break login. (bug 28419 c91-93)
+	$wgPasswordDefault = 'B';
 }
 
 // taking it live 2006-12-15 brion
