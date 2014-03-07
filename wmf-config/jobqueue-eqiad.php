@@ -51,11 +51,13 @@ $wgJobTypesExcludedFromDefaultQueue += array(
 );
 
 // Disabled during Elasticsearch upgrade
-$wgJobTypesExcludedFromDefaultQueue += array(
-	'cirrusSearchDeletePages',
-	'cirrusSearchLinksUpdate',
-	'cirrusSearchLinksUpdatePrioritized',
-	'cirrusSearchLinksUpdateSecondary',
-	'cirrusSearchMassIndex',
-	'cirrusSearchOtherIndex',
+$wgJobTypesExcludedFromDefaultQueue = array_merge(
+	$wgJobTypesExcludedFromDefaultQueue, array(
+		'cirrusSearchDeletePages',
+		'cirrusSearchLinksUpdate',
+		'cirrusSearchLinksUpdatePrioritized',
+		'cirrusSearchLinksUpdateSecondary',
+		'cirrusSearchMassIndex',
+		'cirrusSearchOtherIndex',
+	)
 );
