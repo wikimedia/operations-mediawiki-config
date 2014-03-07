@@ -318,7 +318,9 @@ return array(
 		'fishbowl' => false,
 		'loginwiki' => false,
 	),
-
+	'wmgUseGuidedTour' => array(
+		'wikidatawiki' => true,
+	),
 );
 
 } # wmflLabsSettings()
