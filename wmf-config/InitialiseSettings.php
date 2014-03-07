@@ -10684,6 +10684,16 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
+// -------------- Media Viewer configs --------------
+'wmgMediaViewerBeta' => array(
+	'default' => true,
+	'mediaviewerpilot' => false,
+),
+
+'wmfMediaViewerLoggedIn' => array(
+	'default' => false,
+	'mediaviewerpilot' => true,
+),
 
 // -------------- VisualEditor start --------------
 
