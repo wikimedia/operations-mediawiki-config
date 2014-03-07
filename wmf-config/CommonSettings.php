@@ -2469,6 +2469,11 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	}
 
 	$wgULSEventLogging = $wmgULSEventLogging;
+
+	// Enable the compact language links Beta Feature
+	if ( $wmgULSCompactLinks ) {
+		$wgULSCompactLinks = true;
+	}
 }
 
 $wmgUseWikibaseBuild = !in_array( $wmfVersionNumber, array( '1.23wmf10', '1.23wmf11' ) );
