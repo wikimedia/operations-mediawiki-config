@@ -34,6 +34,24 @@
       "revId": "3f052f9ff06778a24b83b7aef655eff459f6c79d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_451e8bc5",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 106
+      },
+      "writtenOn": "2014-03-07T21:11:08Z",
+      "side": 1,
+      "message": "indeed we don\u0027t really want to force anything to change from the production file.\nProduction doesn\u0027t currently seem to use wmgUseGuidedTour as any uses come through wmgUseGettingStarted.\nThis change looks sound :)",
+      "parentUuid": "4e04eb01_25381f39",
+      "revId": "3f052f9ff06778a24b83b7aef655eff459f6c79d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
