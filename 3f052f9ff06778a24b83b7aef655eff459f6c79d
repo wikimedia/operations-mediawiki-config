@@ -16,6 +16,24 @@
       "revId": "3f052f9ff06778a24b83b7aef655eff459f6c79d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e04eb01_25381f39",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-03-07T21:04:27Z",
+      "side": 1,
+      "message": "AFAIS those are just overrides, so the default from the production file stays in place. See line 30 in here",
+      "parentUuid": "4e04eb01_05fe4366",
+      "revId": "3f052f9ff06778a24b83b7aef655eff459f6c79d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
