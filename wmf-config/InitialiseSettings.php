@@ -7402,7 +7402,10 @@ $wgConf->settings = array(
 			'patrolmarks' => true, // bug 60818
 		),
 		'confirmed' => array( 'patrolmarks' => true, ),
-		'rollbacker' => array( 'rollback' => true ),
+		'rollbacker' => array(
+			'rollback' => true,
+			'markbotedits' => true, // bug 62462
+		),
 		'filemover' => array( 'movefile' => true, 'suppressredirect' => true ),
 		'flood' => array( 'bot' => true ),
 	),
