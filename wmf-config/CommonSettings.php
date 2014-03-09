@@ -2122,7 +2122,7 @@ if ( $wmgUseVips ) {
 		array(
 			'conditions' => array(
 				'mimeType' => 'image/png',
-				'minArea' => 3.5e7,
+				'minArea' => 2e7,
 			),
 		),
 	);
