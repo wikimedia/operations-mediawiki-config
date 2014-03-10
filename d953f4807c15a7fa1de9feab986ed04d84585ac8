@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_d77ebf13",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10695,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2014-03-10T22:01:20Z",
+      "side": 1,
+      "message": "My understanding is this should be false - we want to enable for all users on the pilot sites.",
+      "revId": "d953f4807c15a7fa1de9feab986ed04d84585ac8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
