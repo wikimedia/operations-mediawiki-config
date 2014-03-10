@@ -687,9 +687,6 @@ if ( $wgUseContactPageFundraiser ) {
 if ( $wgDBname == 'foundationwiki' ) {
 	include( "$IP/extensions/FormPreloadPostCache/FormPreloadPostCache.php" );
 	include( "$IP/extensions/SkinPerPage/SkinPerPage.php" );
-	include( "$IP/extensions/skins/Schulenburg/Schulenburg.php" );
-	include( "$IP/extensions/skins/Tomas/Tomas.php" );
-	include( "$IP/extensions/skins/Donate/Donate.php" );
 
 	$wgAllowedTemplates = array(
 		'enwiki_00', 'enwiki_01', 'enwiki_02', 'enwiki_03',
