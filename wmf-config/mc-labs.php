@@ -18,7 +18,6 @@ $wgMemCachedPersistent = true;
 $wgMainCacheType = 'beta-memcached-multiwrite';
 
 $wgMemCachedTimeout = 500000; # micro seconds
-$wgSessionsInMemcached = true;
 
 # While migrating beta from pmtpa to eqiad, we want to write to memcached in
 # both datacenters.
