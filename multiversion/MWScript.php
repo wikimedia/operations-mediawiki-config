@@ -70,7 +70,7 @@ EOT
 		'extensions/WikimediaMaintenance/rebuildInterwiki.php', // 1.19
 		'extensions/WikimediaMaintenance/filebackend/setZoneAccess.php',
 		'maintenance/mctest.php',
-		'maintneance/mcc.php',
+		'maintenance/mcc.php',
 	);
 
 	# Check if a --wiki param was given...
