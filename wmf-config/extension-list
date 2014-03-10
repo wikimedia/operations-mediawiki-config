@@ -104,8 +104,6 @@ $IP/extensions/SecurePoll/SecurePoll.php
 $IP/extensions/ShortUrl/ShortUrl.php
 $IP/extensions/SiteMatrix/SiteMatrix.php
 $IP/extensions/SkinPerPage/SkinPerPage.php
-$IP/extensions/skins/Schulenburg/Schulenburg.php
-$IP/extensions/skins/Tomas/Tomas.php
 $IP/extensions/Solarium/Solarium.php
 $IP/extensions/SpamBlacklist/SpamBlacklist.php
 $IP/extensions/SubPageList3/SubPageList3.php
