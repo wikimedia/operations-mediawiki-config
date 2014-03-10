@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e04eb01_f0278cc3",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 692,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-03-10T00:16:21Z",
+      "side": 0,
+      "message": "Are they used via \u003cskin\u003e and the SkinPerPage extension? (per IRC discussion)\n\nMight be able to kill SkinPerPage too.\n\nNo idea about FormPreloadPostCache...",
+      "revId": "7ce7906fea37c31484e98b79f8f23e837d81e1a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
