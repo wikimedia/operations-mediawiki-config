@@ -10333,6 +10333,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 ),
 'wmgContactPageConf' => array(
+	'default' => array(),
 	// bug 15624
 	'nlwiki' => array(
 		'RecipientUser' => 'WikiAdmin',
