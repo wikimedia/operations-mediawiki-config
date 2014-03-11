@@ -1,3 +1,3 @@
 <?php
 
-$wgObjectCaches['sessions'] = $wgObjectCaches['beta-memcached-multiwrite'];
+$wgObjectCaches['sessions'] = $wgObjectCaches["beta-memcached-{$wmfDatacenter}"];

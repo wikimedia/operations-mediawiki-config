@@ -15,13 +15,13 @@ if( $wmfRealm == 'labs' ) {  # safe guard
  */
 $wgMemCachedPersistent = true;
 
-$wgMainCacheType = 'beta-memcached-multiwrite';
+$wgMainCacheType = "beta-memcached-{$wmfDatacenter}";
 
 $wgMemCachedTimeout = 500000; # micro seconds
 
-# While migrating beta from pmtpa to eqiad, we want to write to memcached in
-# both datacenters.
+# On labs, use one memcached cluster per datacenter
 
+# pmtpa
 $wgObjectCaches['beta-memcached-pmtpa'] = array(
 	'class'      => 'MemcachedPeclBagOStuff',
 	'serializer' => 'igbinary',
@@ -32,6 +32,8 @@ $wgObjectCaches['beta-memcached-pmtpa'] = array(
 	),
 	'retry_timeout' => 1,
 );
+
+# eqiad
 $wgObjectCaches['beta-memcached-eqiad'] = array(
 	'class'      => 'MemcachedPeclBagOStuff',
 	'serializer' => 'igbinary',
@@ -41,14 +43,6 @@ $wgObjectCaches['beta-memcached-eqiad'] = array(
 		1 => '10.68.16.15:11211',  # deployment-memc3.eqiad
 	),
 	'retry_timeout' => 1,
-);
-
-$wgObjectCaches['beta-memcached-multiwrite'] = array(
-	'class'  => 'MultiWriteBagOStuff',
-	'caches' => array(
-		0 => $wgObjectCaches['beta-memcached-pmtpa'],
-		1 => $wgObjectCaches['beta-memcached-eqiad'],
-	),
 );
 
 } # end safe guard
