@@ -129,6 +129,10 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterAvailableActions = array( 'flag', 'throttle', 'warn', 'disallow', 'tag', 'block' );
 		$wgAbuseFilterBlockDuration = '2 days';
 		break;
+	case 'eswikivoyage': // bug 62321
+		$wgAbuseFilterAvailableActions[] = 'block';
+		$wgAbuseFilterBlockDuration = '24 hours';
+		break;
 	case 'fiwiki': // bug 57395
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
