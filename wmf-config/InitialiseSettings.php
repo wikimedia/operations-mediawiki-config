@@ -8912,7 +8912,7 @@ $wgConf->settings = array(
 		'meta', 'commons',
 	),
 	'srnwiki' => array( 'incubator' ),
-	'srwiki' => array( 'wikt' ),
+	'srwiki' => array( 'wikt', 'meta' ), // bug 62533
 	'srwiktionary' => array( 'w' ),
 	'srwikinews' => array( 'no' ),
 	'srwikisource' => array( 'w' ),
