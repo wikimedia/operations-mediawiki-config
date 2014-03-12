@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e0177f3_3371130c",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-03-12T18:37:42Z",
+      "side": 1,
+      "message": "trailing space",
+      "revId": "d297342bfd2acaef77086bf8841b5b856bdb63e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
