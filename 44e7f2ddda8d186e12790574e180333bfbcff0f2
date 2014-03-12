@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e0177f3_93346748",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 11173,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2014-03-12T18:31:30Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this just be \u0027org.wikipedia\u0027?",
+      "revId": "44e7f2ddda8d186e12790574e180333bfbcff0f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
