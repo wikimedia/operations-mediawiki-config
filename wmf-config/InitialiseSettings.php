@@ -11168,6 +11168,10 @@ $wgConf->settings = array(
 'wmgMFEnableSiteNotice' => array(
 	'default' => true,
 ),
+'wmgMFAppPackageId' => array(
+	'default' => false,
+	'wiki' => 'org.wikipedia',
+),
 
 # trademark status
 'wmgMFTrademarkSitename' => array(
