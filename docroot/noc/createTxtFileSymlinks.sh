@@ -40,7 +40,7 @@ mwconfig_files_txt=(
 	wmf-config/squid-labs.php
 	wmf-config/session.php
 	wmf-config/session-labs.php
-	wmf-config/twemproxy.yaml
+	wmf-config/twemproxy-eqiad.yaml
 	wmf-config/Wikibase.php
 )
 
