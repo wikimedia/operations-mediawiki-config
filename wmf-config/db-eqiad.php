@@ -104,6 +104,7 @@ $wgLBFactoryConf = array(
 		'db1009' => 300,
 		'db1036' => 300,
 		'db1060' => 400, # 2.8TB sas 96GB
+		'db1063' => 500, # 2.8TB sas 128GB
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038' => 0,
@@ -390,6 +391,7 @@ $wgLBFactoryConf = array(
 	'db1059' => '10.64.32.29', #do not remove or comment out
 	'db1060' => '10.64.32.30', #do not remove or comment out
 	'db1061' => '10.64.48.14', #do not remove or comment out
+	'db1063' => '10.64.48.16', #do not remove or comment out
 ),
 
 'externalLoads' => array(
