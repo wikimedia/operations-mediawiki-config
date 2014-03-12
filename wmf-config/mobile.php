@@ -91,4 +91,11 @@ if ( $wmgMobileFrontend ) {
 	$wgMFEnablePhotoUploadCTA = $wmgMFEnablePhotoUploadCTA;
 	$wgMFEnableBetaDiff = $wmgMFEnableBetaDiff;
 	$wgMFTidyMobileViewSections = false; // experimental
+	
+	if ( $wmgMFAppPackageId ) {
+		$wgMFAppPackageId = $wmgMFAppPackageId;
+	}
+	if ( $wmgMFAppScheme ) {
+		$wgMFAppScheme = $wmgMFAppScheme;
+	}
 }
