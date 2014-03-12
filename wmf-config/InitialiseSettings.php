@@ -10372,6 +10372,7 @@ $wgConf->settings = array(
 	'default' => array( '*.flickr.com', '*.staticflickr.com', ),
 	'+testwiki' => array( 'upload.wikimedia.org' ),
 	'+commonswiki' => array(
+		'*.adlibhosting.com',            // Amsterdam Museum
 		'*.collectie.legermuseum.nl',    // Legermuseum
 		'*.europeana1914-1918.eu',       // Europeana 1914-1918
 		'*.gahetna.nl',                  // Nationaal Archief Nederland
@@ -10385,7 +10386,7 @@ $wgConf->settings = array(
 		'*.rijksmuseum.nl',              // Rijksmuseum
 		'*.llgc.org.uk',                 // National Library of Wales
 		'*.tounoki.org',                 // Musées de la Haute-Saône
-		'*.wikimedia.ch',		 // Wikimedia CH
+		'*.wikimedia.ch',                // Wikimedia CH
 	),
 ),
 
