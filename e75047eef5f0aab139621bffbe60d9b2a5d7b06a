@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_198beb21",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10375,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2014-03-13T17:50:14Z",
+      "side": 1,
+      "message": "adlibhosting.com is not found when I try to go there. Chrome suggest am.adlibhosting.com instead.\n\nI\u0027m not so sure we want to allow the unknown (and perhaps hosts other stuff? ) adlibhosting.com for uploads.\n\ndo we want the more specific url with the subdomain?",
+      "revId": "e75047eef5f0aab139621bffbe60d9b2a5d7b06a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
