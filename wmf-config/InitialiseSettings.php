@@ -12780,10 +12780,12 @@ $wgConf->settings = array(
 	'wikisource' => true,
 	'wikiversity' => true,
 	'wiktionary' => true,
+	'small' => true,
 ),
 
 'wmgCirrusIsBuilding' => array(
 	'default' => false,
+	'small' => true,
 ),
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
