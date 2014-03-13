@@ -12785,7 +12785,6 @@ $wgConf->settings = array(
 
 'wmgCirrusIsBuilding' => array(
 	'default' => false,
-	'small' => true,
 ),
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
