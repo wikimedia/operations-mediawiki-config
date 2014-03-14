@@ -12182,6 +12182,7 @@ $wgConf->settings = array(
 	'svwiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
+	'wikidatawiki' => true,
 ),
 'wmgUseEducationProgram' => array(
 	'default' => false,
