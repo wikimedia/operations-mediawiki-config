@@ -3384,6 +3384,19 @@ $wgConf->settings = array(
 		'Temasiidu' => 100, // Bug T41206
 		'Temasiidoságastallan' => 101, // Bug T41206
 	),
+	'+shwiki' => array(
+		'WP' => NS_PROJECT,
+		'VP' => NS_PROJECT,
+		'ВП' => NS_PROJECT,
+		'Wikipedija' => NS_PROJECT,
+		'Vikipedija' => NS_PROJECT,
+		'Википедија' => NS_PROJECT,
+		'Razgovor_Wikipedija' => NS_PROJECT_TALK,
+		'Razgovor_o_Wikipediji' => NS_PROJECT_TALK,
+		'Разговор_о_Википедији' => NS_PROJECT_TALK,
+		'Портал' =>  NS_PORTAL,
+		'Разговор_о_порталу' =>  NS_PORTAL_TALK,
+	),
 	'+simplewiki' => array(
 		'WP' => NS_PROJECT,
 	),
