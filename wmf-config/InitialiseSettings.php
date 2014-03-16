@@ -10815,7 +10815,7 @@ $wgConf->settings = array(
 		'http://blog.wikimedia.org/c/communications/picture-of-the-day/feed/',
 	),
 	'mediawikiwiki' => array(
-		'http://blog.wikimedia.org/feed/',
+		'http://blog.wikimedia.org/',
 		'https://git.wikimedia.org/feed/mediawiki/extensions/Translate.git',
 		'https://mingle.corp.wikimedia.org/projects/analytics/feeds/8z8k6vUfniLmWc2qGe6GMQsxBujvKRKuybLd8mdTbMFHwGfLH3oxK*MU0E8zM6go.atom',
 	),
