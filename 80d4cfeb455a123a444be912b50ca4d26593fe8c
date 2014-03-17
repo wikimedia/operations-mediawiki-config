@@ -34,6 +34,24 @@
       "revId": "80d4cfeb455a123a444be912b50ca4d26593fe8c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_db2c3592",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2014-03-17T20:17:17Z",
+      "side": 1,
+      "message": "That\u0027s for \"in case we remove it or misspell it in future\". If you prefer, take it out :D",
+      "parentUuid": "ee14bf34_10a60c51",
+      "revId": "80d4cfeb455a123a444be912b50ca4d26593fe8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
