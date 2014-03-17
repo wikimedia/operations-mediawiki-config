@@ -16,6 +16,24 @@
       "revId": "80d4cfeb455a123a444be912b50ca4d26593fe8c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_10a60c51",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-03-17T19:59:02Z",
+      "side": 1,
+      "message": "Technically, as it\u0027s the same default as $wgMFAppPackageId, you could just remove the conditional completely, and always assign it",
+      "parentUuid": "ee14bf34_b0bd2066",
+      "revId": "80d4cfeb455a123a444be912b50ca4d26593fe8c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
