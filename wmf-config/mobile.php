@@ -89,6 +89,6 @@ if ( $wmgMobileFrontend ) {
 
 	$wgMFEnableSiteNotice = $wmgMFEnableSiteNotice;
 	$wgMFEnablePhotoUploadCTA = $wmgMFEnablePhotoUploadCTA;
-	$wgMFEnableBetaDiff = $wmgMFEnableBetaDiff;
+	$wgMFCollapseSectionsByDefault = $wmgMFCollapseSectionsByDefault;
 	$wgMFTidyMobileViewSections = false; // experimental
 }
