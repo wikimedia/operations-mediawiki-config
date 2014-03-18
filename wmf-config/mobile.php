@@ -95,4 +95,5 @@ if ( $wmgMobileFrontend ) {
 	// Link to help Google spider associate pages on wiki with our Android app.
 	// They originally special-cased us but would like it done the normal way now. :)
 	$wgMFAppPackageId = $wmgMFAppPackageId;
+	$wgMFNearbyRange = $wmgMaxGeoSearchRadius;
 }

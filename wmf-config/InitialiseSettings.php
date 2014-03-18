@@ -12247,6 +12247,10 @@ $wgConf->settings = array(
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
+'wmgMaxGeoSearchRadius' => array(
+	'default' => 10000,
+	'wikivoyage' => 20000,
+),
 
 'wmgUseEcho' => array(
 	'default' => false,
