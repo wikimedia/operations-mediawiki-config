@@ -70,11 +70,6 @@ if ( $wmgUseOAuth ) {
 	$wgMWOAuthCentralWiki = 'labswiki';  # bug 57403
 }
 
-if ( $wmgUseMultimediaViewer ) {
-	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
-	$wgNetworkPerformanceSamplingFactor = 1;
-}
-
 if ( $wmgUseVectorBeta ) {
 	require_once( "$IP/extensions/VectorBeta/VectorBeta.php" );
 }

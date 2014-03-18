@@ -272,6 +272,10 @@ return array(
 		'default' => false,
 	),
 
+	'wmgNetworkPerformanceSamplingFactor' => array(
+		'default' => 1,
+	),
+
 	'wmgUseVectorBeta' => array(
 		'default' => true,
 	),
