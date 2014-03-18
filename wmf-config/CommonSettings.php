@@ -1766,7 +1766,11 @@ if ( $wmgUseGWToolset ) {
 
 if ( $wmgUseMultimediaViewer ) {
 	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
-	$wgNetworkPerformanceSamplingFactor = 1000;
+
+	// To make sure this is not accidentally left at a low value if / when
+	// MultimediaViewer is enabled by default, start at 10 on 20-March-2014,
+	// but go up by a power of ten every week thereafter.
+	$wgNetworkPerformanceSamplingFactor = pow( 10, ceil( ( time() - 1395360000 ) / 604800 ) );
 
 	if ( $wmgMediaViewerBeta ) {
 		$wgMediaViewerIsInBeta = true;
