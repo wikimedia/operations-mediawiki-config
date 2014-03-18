@@ -24,7 +24,7 @@ $wgMemCachedTimeout = 500000; # micro seconds
 # pmtpa
 $wgObjectCaches['beta-memcached-pmtpa'] = array(
 	'class'      => 'MemcachedPeclBagOStuff',
-	'serializer' => 'igbinary',
+	'serializer' => 'php',
 	'persistent' => false,
 	'servers'    => array(
 		0 => '10.4.1.86:11211',   # deployment-memc0.pmtpa
@@ -36,7 +36,7 @@ $wgObjectCaches['beta-memcached-pmtpa'] = array(
 # eqiad
 $wgObjectCaches['beta-memcached-eqiad'] = array(
 	'class'      => 'MemcachedPeclBagOStuff',
-	'serializer' => 'igbinary',
+	'serializer' => 'php',
 	'persistent' => false,
 	'servers'    => array(
 		0 => '10.68.16.14:11211',  # deployment-memc2.eqiad
