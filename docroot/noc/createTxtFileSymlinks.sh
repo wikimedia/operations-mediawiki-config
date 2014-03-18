@@ -61,7 +61,7 @@ mwconfig_files=(
 	group0.dblist
 	langlist
 	large.dblist
-	mediaviewerpilot.dblist
+	mediaviewer.dblist
 	medium.dblist
 	private.dblist
 	s1.dblist

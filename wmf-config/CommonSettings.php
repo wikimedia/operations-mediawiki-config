@@ -190,7 +190,7 @@ if ( !$globals ) {
 	require( "$wmfConfigDir/InitialiseSettings.php" );
 
 	$wikiTags = array();
-	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small', 'mediaviewerpilot',
+	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small', 'mediaviewer',
 			'medium', 'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor',
 			'visualeditor-default', 'echowikis', 'cirrus', 'noncirrus' ) as $tag ) {
 		$dblist = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../$tag.dblist" ) ) );

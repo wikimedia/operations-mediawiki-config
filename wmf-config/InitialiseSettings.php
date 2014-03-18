@@ -10701,7 +10701,7 @@ $wgConf->settings = array(
 
 'wmgMediaViewerBeta' => array(
 	'default' => true,
-	'mediaviewerpilot' => false,
+	'mediaviewer' => false,
 ),
 
 'wmfMediaViewerLoggedIn' => array(
