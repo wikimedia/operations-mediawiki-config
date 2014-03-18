@@ -2227,6 +2227,7 @@ if ( $wmgEnableGeoData ) {
 	}
 	$wgMaxCoordinatesPerPage = 2000;
 	$wgGeoDataSolrCommitPolicy = 'never';
+	$wgMaxGeoSearchRadius = $wmgMaxGeoSearchRadius;
 }
 
 if ( $wmgUseEcho ) {
