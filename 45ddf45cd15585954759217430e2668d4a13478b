@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_89b1cede",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 193,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2014-03-18T18:51:58Z",
+      "side": 1,
+      "message": "Why not just call it \"mediaviewer.dblist\"? The pilot phase may change into a half-deployed phase…",
+      "revId": "45ddf45cd15585954759217430e2668d4a13478b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
