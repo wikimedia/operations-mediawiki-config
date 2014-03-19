@@ -16,6 +16,24 @@
       "revId": "922b4d4ea039f7f524f48aeaad1ff4d93491e534",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_55cd8961",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2014-03-19T09:28:50Z",
+      "side": 1,
+      "message": "Yeah, Faidon asked as well. Aaron posted some measurements on IRC but I lost the scrollback. A question for him I suppose.",
+      "parentUuid": "ee14bf34_b5de2513",
+      "revId": "922b4d4ea039f7f524f48aeaad1ff4d93491e534",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
