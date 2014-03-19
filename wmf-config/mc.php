@@ -16,7 +16,7 @@ $wgMemCachedTimeout = 250000; # default is 100000
 # from the deploy host to make it live.
 $wgObjectCaches['memcached-pecl'] = array(
 	'class'      => 'MemcachedPeclBagOStuff',
-	'serializer' => 'igbinary',
+	'serializer' => 'php',
 	'persistent' => false,
 	'servers'    => array( '127.0.0.1' ),
 	'server_failure_limit' => 1e9,
@@ -26,7 +26,7 @@ $wgObjectCaches['memcached-pecl'] = array(
 /*** No Twemproxy
 	$wgObjectCaches['memcached-pecl'] = array(
 		'class'      => 'MemcachedPeclBagOStuff',
-		'serializer' => 'igbinary',
+		'serializer' => 'php',
 		'servers'    => array(
 			'10.64.0.180',
 			'10.64.0.181',
