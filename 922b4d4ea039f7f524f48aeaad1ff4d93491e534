@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_b5de2513",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2014-03-19T09:27:52Z",
+      "side": 1,
+      "message": "Any more details on this? Given that their package description claims \"Savings are significant when using memcached or similar memory based storages for serialized data.\" this could be a worthy topic for a short blog post to spread this information.",
+      "revId": "922b4d4ea039f7f524f48aeaad1ff4d93491e534",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
