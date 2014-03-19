@@ -10680,6 +10680,13 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
+// NOTE: Extension:Popups has a hard dependency on TextExtracts and PageImages.
+'wmgUsePopups' => array(
+	'default' => false,
+	'testwiki' => true,
+	'mediawikiwiki' => true,
+),
+
 'wmgUseVectorBeta' => array(
 	'default' => true,
 	'loginwiki' => false,

@@ -1777,6 +1777,10 @@ if ( $wmgUseMultimediaViewer ) {
 	}
 }
 
+if ( $wmgUsePopups ) {
+	require_once( "$IP/extensions/Popups/Popups.php" );
+}
+
 if ( $wmgUseVectorBeta ) {
 	require_once( "$IP/extensions/VectorBeta/VectorBeta.php" );
 }
