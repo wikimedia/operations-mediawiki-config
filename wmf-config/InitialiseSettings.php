@@ -10680,6 +10680,11 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
+'wmgUsePopups' => array(
+	'default' => false,
+	'mediawikiwiki' => true,
+),
+
 'wmgUseVectorBeta' => array(
 	'default' => true,
 	'loginwiki' => false,

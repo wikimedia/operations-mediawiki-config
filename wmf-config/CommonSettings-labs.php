@@ -99,8 +99,6 @@ if ( $wmgUseCentralNotice ) {
 
 require_once( "$IP/extensions/MobileApp/MobileApp.php" );
 
-require_once( "$IP/extensions/Popups/Popups.php" );
-
 // Config for GlobalCssJs
 // Only enable on CentralAuth wikis
 if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
@@ -120,7 +118,6 @@ if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
 		'source' => 'metawiki',
 	);
 }
-
 
 # temporary extensions
 # ========================================================================

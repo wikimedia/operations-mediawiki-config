@@ -258,6 +258,10 @@ return array(
 		'default' => true,
 	),
 
+	'wmgUsePopups' => array(
+		'default' => true,
+	),
+
 	'wmgUseVectorBeta' => array(
 		'default' => true,
 	),
