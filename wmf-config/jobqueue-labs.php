@@ -12,13 +12,19 @@ $wgJobTypeConf['default'] = array(
 	)
 );
 
+if( $wmfDatacenter === 'pmtpa' ) {
+	$jobRedisServer = '10.4.0.83';  # deployment-redisdb
+} else {  # eqiad
+	$jobRedisServer = '10.68.16.146';  # deployment-redis01
+}
 $wgJobQueueAggregator = array(
 	'class'       => 'JobQueueAggregatorRedis',
-	'redisServer' => '10.4.0.83', # deployment-redisdb
+	'redisServer' => $jobRedisServer,
 	'redisConfig' => array(
 		'connectTimeout' => 1,
 		'password' => $wmgRedisPassword,
 	)
 );
+unset($jobRedisServer);
 
 } # end safe guard
