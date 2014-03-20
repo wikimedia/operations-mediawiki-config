@@ -262,6 +262,16 @@ return array(
 		'default' => true,
 	),
 
+	'wmgMediaViewerBeta' => array(
+		'default' => false,
+		'dewiki' => true,
+		'enwiktionary' => true,
+	),
+
+	'wmgMediaViewerLoggedIn' => array(
+		'default' => false,
+	),
+
 	'wmgUseVectorBeta' => array(
 		'default' => true,
 	),
