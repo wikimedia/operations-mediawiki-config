@@ -2482,6 +2482,9 @@ if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 	include( "$wmfConfigDir/Wikibase.php" );
 }
 
+// put this here to ensure it is available for localisation cache rebuild
+$wgWBClientSettings['repoSiteName'] = 'wikibase-repo-name';
+
 if ( ( $wmgUseTranslate && $wmgUseTranslationMemory ) || $wmgEnableGeoData ) {
 	require_once( "$IP/extensions/Solarium/Solarium.php" );
 }
