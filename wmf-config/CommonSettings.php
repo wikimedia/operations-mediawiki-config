@@ -2473,14 +2473,10 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	}
 }
 
-$wmgUseWikibaseBuild = !in_array( $wmfVersionNumber, array( '1.23wmf10', '1.23wmf11' ) );
-
 // @note getRealmSpecificFilename only works with filenames with .suffix
-if ( $wmgUseWikibaseBuild ) {
-	$wgExtensionEntryPointListFiles[] = "$IP/extensions/Wikidata/extension-list-wikidata";
-} else {
-	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikidata";
-}
+// needs to be listed outside of use wikibase check below, as localisation cache
+// might be build as "aawikibooks" or something that does not have Wikibase.
+$wgExtensionEntryPointListFiles[] = "$IP/extensions/Wikidata/extension-list-wikidata";
 
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 	include( "$wmfConfigDir/Wikibase.php" );
