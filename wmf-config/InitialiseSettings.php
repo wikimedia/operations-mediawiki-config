@@ -11152,6 +11152,8 @@ $wgConf->settings = array(
 	'default' => '//commons.m.wikimedia.org/w/api.php',
 	'commonswiki' => '', # bug 45256
 	'test2wiki' => '',
+	'private' => '',
+	'fishbowl' => '',
 ),
 'wmgMFKeepGoing' => array(
 	'default' => false,
