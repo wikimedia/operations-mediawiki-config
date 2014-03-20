@@ -21,6 +21,7 @@ mwconfig_files_txt=(
 	filebackend.php
 	flaggedrevs.php
 	jobqueue-eqiad.php
+	LegalContactPages.php
 	liquidthreads.php
 	logging-labs.php
 	lucene-common.php
