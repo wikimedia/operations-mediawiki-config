@@ -10816,6 +10816,11 @@ $wgConf->settings = array(
 	'private' => true,
 ),
 
+// Should VisualEditor display a live version of the Table of Contents as you edit
+'wmgVisualEditorEnableTocWidget' => array(
+	'default' => false,
+),
+
 // --------------- VisualEditor end ---------------
 
 'wmgUseRSSExtension' => array(

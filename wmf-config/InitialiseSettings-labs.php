@@ -280,6 +280,10 @@ return array(
 		'default' => true,
 	),
 
+	'wmgVisualEditorEnableTocWidget' => array(
+		'enwiki' => true,
+	),
+
 	'wmgUseCampaigns' => array(
 		'default' => true,
 	),

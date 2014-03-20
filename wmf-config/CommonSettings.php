@@ -1872,6 +1872,9 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorParsoidForwardCookies ) {
 		$wgVisualEditorParsoidForwardCookies = true;
 	}
+	if ( $wmgVisualEditorEnableTocWidget ) {
+		$wgVisualEditorEnableTocWidget = true;
+	}
 }
 
 if ( $wmgUseTemplateData ) {
