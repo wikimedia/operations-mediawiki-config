@@ -1983,6 +1983,11 @@ if ( $wmgUseMath ) {
 	$wgMathPath        = $wmgMathPath;
 	$wgUseMathJax      = true;
 	$wgMathDisableTexFilter = true; // severe performance regression; --Aaron
+
+	if ( $wmgMathVisualEditorDefault ) {
+		// Enable the Math VE editing Beta Feature by default
+		$wgDefaultUserOptions['math-enable-visualeditor'] = 1;
+	}
 }
 
 if ( $wmgUseBabel ) {
