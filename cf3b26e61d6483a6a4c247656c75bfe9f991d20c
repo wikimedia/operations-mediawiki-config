@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_866526ad",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2014-03-20T23:19:32Z",
+      "side": 1,
+      "message": "Really? In the rebase conflict, flags were added and one of them seems like they should trigger this value to be set back to 1000. But I can\u0027t figure out why because 1) wmgMediaViewerBeta seems to be set backwards, 2) MediaViewerLoggedIn isn\u0027t symmetrical with it like I\u0027d expect and 3) there\u0027s no way for me to figure out what these flags are meant to do because THEY DON\u0027T EXIST IN THE MMV EXTENSION. WTF?",
+      "revId": "cf3b26e61d6483a6a4c247656c75bfe9f991d20c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
