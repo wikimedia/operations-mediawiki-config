@@ -10881,6 +10881,7 @@ $wgConf->settings = array(
 'wmgUseContactPage' => array(
 	'default' => false,
 	'foundationwiki' => true,
+	'metawiki' => true,
 	'nlwiki' => true,
 	'testwiki' => true,
 ),

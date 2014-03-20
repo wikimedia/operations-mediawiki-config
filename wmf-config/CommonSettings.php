@@ -831,6 +831,10 @@ if ( file_exists( "$wmfConfigDir/trusted-xff.cdb" ) ) {
 if ( $wmgUseContactPage ) {
 	include( $IP . '/extensions/ContactPage/ContactPage.php' );
 	$wgContactConfig['default'] = array_merge( $wgContactConfig['default'], $wmgContactPageConf );
+
+	if ( $wgDBname === 'metawiki' ) {
+		include( "$wmfConfigDir/LegalContactPages.php" );
+	}
 }
 
 if ( $wmgUseSecurePoll ) {
