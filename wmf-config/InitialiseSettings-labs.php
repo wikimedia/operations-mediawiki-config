@@ -262,6 +262,14 @@ return array(
 		'default' => true,
 	),
 
+	'wmgMediaViewerBeta' => array(
+		'default' => false,
+	),
+
+	'wmgMediaViewerLoggedIn' => array(
+		'default' => false,
+	),
+
 	'wmgUseVectorBeta' => array(
 		'default' => true,
 	),
