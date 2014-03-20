@@ -1,26 +1,12 @@
 <?php
 
-if ( !$wmgUseWikibaseBuild ) {
-	require_once( "$IP/extensions/DataValues/DataValues.php" );
-	require_once( "$IP/extensions/DataTypes/DataTypes.php" );
-	require_once( "$IP/extensions/Diff/Diff.php" );
-	require_once( "$IP/extensions/WikibaseDataModel/WikibaseDataModel.php" );
-	require_once( "$IP/extensions/Wikibase/lib/WikibaseLib.php" );
-} else {
-	require_once( "$IP/extensions/Wikidata/Wikidata.php" );
-}
+require_once( "$IP/extensions/Wikidata/Wikidata.php" );
 
 if ( $wmgUseWikibaseRepo ) {
-	if ( !$wmgUseWikibaseBuild ) {
-		require_once( "$IP/extensions/Wikibase/repo/Wikibase.php" );
-	}
-
-	if ( $wmgUseWikibaseBuild ) {
-		// bump for wikidatawiki and test wikidata
-		// @todo: can move to InitialiseSettings later, but having here
-		// Issues with changes in Wikidata 1.23wmf15
-		$wgCacheEpoch = '20140225200000';
-	}
+	// bump for wikidatawiki and test wikidata
+	// @todo: can move to InitialiseSettings later, but having here
+	// Issues with changes in Wikidata 1.23wmf15
+	$wgCacheEpoch = '20140225200000';
 
 	$baseNs = 120;
 
@@ -82,10 +68,6 @@ if ( $wmgUseWikibaseRepo ) {
 }
 
 if ( $wmgUseWikibaseClient ) {
-
-	if ( !$wmgUseWikibaseBuild ) {
-		require_once( "$IP/extensions/Wikibase/client/WikibaseClient.php" );
-	}
 
 	// to be safe, keeping this here although $wgDBname is default setting
 	$wgWBClientSettings['siteGlobalID'] = $wgDBname;
