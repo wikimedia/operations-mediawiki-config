@@ -42,6 +42,7 @@ mwconfig_files_txt=(
 	wmf-config/session-labs.php
 	wmf-config/twemproxy-eqiad.yaml
 	wmf-config/Wikibase.php
+	wmf-config/LegalContactPages.php
 )
 
 # Create non-txt symlink from mediawiki-config
