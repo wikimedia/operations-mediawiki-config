@@ -16,6 +16,24 @@
       "revId": "49fc5c3c26f58e29d3f18c1fd05ae0c5135b8a84",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_068c7636",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2014-03-20T23:32:47Z",
+      "side": 1,
+      "message": "It does, in InitialiseSettings.php.",
+      "parentUuid": "ee14bf34_06b596e0",
+      "revId": "49fc5c3c26f58e29d3f18c1fd05ae0c5135b8a84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
