@@ -16,6 +16,24 @@
       "revId": "cf3b26e61d6483a6a4c247656c75bfe9f991d20c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_a6a94a7a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2014-03-20T23:34:58Z",
+      "side": 1,
+      "message": "MediaViewerLoggedIn is kind of a decoy variable, we don\u0027t use it at all (and yeah it should be called MediaViewerLoggedInOnly). \n\nNot sure what\u0027s up with $wgMediaViewerIsInBeta though.",
+      "parentUuid": "ee14bf34_866526ad",
+      "revId": "cf3b26e61d6483a6a4c247656c75bfe9f991d20c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
