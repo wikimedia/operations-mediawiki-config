@@ -73,6 +73,14 @@ if ( $wmgUseOAuth ) {
 if ( $wmgUseMultimediaViewer ) {
 	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
 	$wgNetworkPerformanceSamplingFactor = 1;
+
+	if ( $wmgMediaViewerBeta ) {
+		$wgMediaViewerIsInBeta = true;
+	}
+
+	if ( $wmgMediaViewerLoggedIn ) {
+		$wgEnableMediaViewerForLoggedInUsersOnly = true;
+	}
 }
 
 if ( $wmgUseVectorBeta ) {
