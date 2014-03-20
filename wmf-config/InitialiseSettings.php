@@ -12374,6 +12374,7 @@ $wgConf->settings = array(
 		'Talk:Flow',
 		'Talk:Winter', // talk page for design refresh
 		'User talk:Jorm (WMF)',
+		'Talk:Beta Features/Hovercards',
 	),
 	'enwiki' => array( // Bug 60178
 		'Wikipedia talk:WikiProject Breakfast',
