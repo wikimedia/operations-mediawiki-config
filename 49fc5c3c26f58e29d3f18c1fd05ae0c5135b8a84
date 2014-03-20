@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_06b596e0",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2014-03-20T23:27:55Z",
+      "side": 1,
+      "message": "Make this \u0027default\u0027 \u003d\u003e true. We want it for all labs wikis.\n\nAlternatively, if you really only want it to be on enwiki labs, do \u0027default\u0027 \u003d\u003e false, \u0027enwiki\u0027 \u003d\u003e true. Either way, the \u0027default\u0027 key has to exist.",
+      "revId": "49fc5c3c26f58e29d3f18c1fd05ae0c5135b8a84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
