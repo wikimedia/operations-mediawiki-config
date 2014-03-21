@@ -4001,7 +4001,7 @@ $wgConf->settings = array(
 		'recursion-guard' => "udp://$wmfUdp2logDest/recursion-guard",
 		'MassMessage' => "udp://$wmfUdp2logDest/MassMessage", // for bug 57464 -legoktm 2013/12/15
 		'Bug58676' => "udp://$wmfUdp2logDest/Bug58676", # Invalid message parameter
-		'Flow' => "$udp://$wmfUdp2logDest/Flow", // -erikb 2014/03/08
+		'Flow' => "udp://$wmfUdp2logDest/Flow", // -erikb 2014/03/08
 	),
 
 	'+enwiki' => array(
