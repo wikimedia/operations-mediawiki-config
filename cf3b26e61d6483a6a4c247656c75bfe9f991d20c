@@ -34,6 +34,24 @@
       "revId": "cf3b26e61d6483a6a4c247656c75bfe9f991d20c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_a9191b80",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2014-03-21T00:19:17Z",
+      "side": 1,
+      "message": "We forgot to merge it, that\u0027s what\u0027s up :-/\n\nNow done: https://gerrit.wikimedia.org/r/119396",
+      "parentUuid": "ee14bf34_a6a94a7a",
+      "revId": "cf3b26e61d6483a6a4c247656c75bfe9f991d20c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
