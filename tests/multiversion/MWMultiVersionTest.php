@@ -94,6 +94,7 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 			array( 'wikimania2013wiki', 'wikimania2013.wikimedia.org' ),
 			array( 'wikimania2014wiki', 'wikimania2014.wikimedia.org' ),
 			array( 'wikimaniateamwiki', 'wikimaniateam.wikimedia.org' ),
+			array( 'zerowiki', 'zero.wikimedia.org' ),
 
 			array( 'arwikimedia', 'ar.wikimedia.org' ),
 			array( 'bdwikimedia', 'bd.wikimedia.org' ),
