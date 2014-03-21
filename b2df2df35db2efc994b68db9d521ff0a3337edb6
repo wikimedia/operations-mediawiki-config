@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee14bf34_6c91cc9b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1303,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2014-03-21T18:09:56Z",
+      "side": 1,
+      "message": "does https force SSL only?",
+      "revId": "b2df2df35db2efc994b68db9d521ff0a3337edb6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_ac97e492",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2188,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2014-03-21T18:09:56Z",
+      "side": 1,
+      "message": "Do we need this? it can stay default",
+      "revId": "b2df2df35db2efc994b68db9d521ff0a3337edb6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
