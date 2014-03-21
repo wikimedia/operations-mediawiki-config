@@ -149,6 +149,7 @@ $wgConf->settings = array(
 	'usabilitywiki' => 'en',
 	'wikimania' => 'en',
 	'wikimaniateamwiki' => 'en',
+	'zerowiki' => 'en',
 ),
 # @} end of wgLanguageCode
 
@@ -1216,6 +1217,7 @@ $wgConf->settings = array(
 	'wikimania2013wiki' => '//wikimania2013.wikimedia.org',
 	'wikimania2014wiki' => '//wikimania2014.wikimedia.org',
 	'wikimaniateamwiki' => '//wikimaniateam.wikimedia.org',
+	'zerowiki' => '//zero.wikimedia.org'
 ),
 # @} end of wgServer
 
@@ -1298,6 +1300,7 @@ $wgConf->settings = array(
 	'wikimania2013wiki' => 'http://wikimania2013.wikimedia.org',
 	'wikimania2014wiki' => 'http://wikimania2014.wikimedia.org',
 	'wikimaniateamwiki' => 'https://wikimaniateam.wikimedia.org',
+	'zerowiki' => 'https://zero.wikimedia.org',
 ),
 # @} end of wgCanonicalServer
 
@@ -2182,6 +2185,7 @@ $wgConf->settings = array(
 	'yiwiki'	=> 'װיקיפּעדיע',
 	'yiwikisource'  => 'װיקיביבליאָטעק',
 	'yiwiktionary'  => 'װיקיװערטערבוך',
+	'zerowiki'      => 'Project',
 	'zh-min-nanwikisource' => 'Wiki_Tô·-su-kóan',
 	'zh_classicalwiki' => '維基大典',
 ),
@@ -9674,6 +9678,7 @@ $wgConf->settings = array(
 	'votewiki' => '//bits.wikimedia.org/favicon/wmf.ico',
 	'wikidatawiki' => '//bits.wikimedia.org/favicon/wikidata.ico',
 	'wikimaniateamwiki' => '//bits.wikimedia.org/favicon/wikimania.ico',
+	'zerowiki' => '//bits.wikimedia.org/favicon/wmf.ico',
 ),
 # @} end of wgFavicon
 
