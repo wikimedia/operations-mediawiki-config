@@ -33,6 +33,23 @@
       "revId": "b2df2df35db2efc994b68db9d521ff0a3337edb6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee14bf34_afdeb66e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6209,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2014-03-21T19:37:47Z",
+      "side": 1,
+      "message": "I noticed many private wikies in this section, is it needed for zero?",
+      "revId": "b2df2df35db2efc994b68db9d521ff0a3337edb6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
