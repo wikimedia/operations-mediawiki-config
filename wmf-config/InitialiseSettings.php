@@ -6825,6 +6825,18 @@ $wgConf->settings = array(
 		'editprotected' => array( 'editprotected' => true, 'editsemiprotected' => true ),
 		'flood' => array( 'bot' => true ),
 	),
+	'eswikiquote' => array( // bug 62911
+		'rollbacker' => array(
+			'rollback' => true,
+		),
+		'autopatrolled' => array(
+			'autopatrol' => true,
+		),
+		'patroller' => array(
+			'patrol' => true,
+			'autopatrol' => true,
+		),
+	),
 	'eswikivoyage' => array(
 		'rollbacker' => array(
 			'rollback' => true, // Bug 44285
@@ -7828,6 +7840,9 @@ $wgConf->settings = array(
 	'+eswikinews' => array(
 		'bureaucrat' => array( 'editprotected', 'flood', ),
 	),
+	'+eswikiquote' => array(
+		'sysop' => array( 'autopatrolled', 'confirmed', 'patroller', 'rollbacker' ), // bug 62911
+	),
 	'+eswikivoyage' => array(
 		'bureaucrat' => array( 'confirmed', ), // Bug 47325
 		'sysop' => array( 'rollbacker', 'patroller', 'autopatrolled', ), // Bug 44285, 55665
@@ -8313,6 +8328,9 @@ $wgConf->settings = array(
 	),
 	'+eswikinews' => array(
 		'bureaucrat' => array( 'editprotected', 'flood', ),
+	),
+	'+eswikiquote' => array(
+		'sysop' => array( 'autopatrolled', 'confirmed', 'patroller', 'rollbacker' ), // bug 62911
 	),
 	'+eswikivoyage' => array(
 		'bureaucrat' => array( 'confirmed', ), // Bug 47325
