@@ -250,15 +250,6 @@ return array(
 		'default' => true,
 	),
 
-	'wmgUseBetaFeatures' => array(
-		'default' => true,
-	),
-
-	// Enable all Beta Features in Beta Labs, even if not in production whitelist
-	'wmgBetaFeaturesWhitelist' => array(
-		'default' => false,
-	),
-
 	'wmgUseCommonsMetadata' => array(
 		'default' => true,
 	),
@@ -271,6 +262,20 @@ return array(
 	// Don't use an http/https proxy
 	'-wgCopyUploadProxy' => array(
 		'default' => false,
+	),
+
+	// ----------- BetaFeatures start ----------
+	'wmgUseBetaFeatures' => array(
+		'default' => true,
+	),
+
+	// Enable all Beta Features in Beta Labs, even if not in production whitelist
+	'wmgBetaFeaturesWhitelist' => array(
+		'default' => false,
+	),
+
+	'wmgUseCommonsMetadata' => array(
+		'default' => true,
 	),
 
 	'wmgUseMultimediaViewer' => array(
@@ -314,6 +319,7 @@ return array(
 	'wmgVisualEditorEnableTocWidget' => array(
 		'enwiki' => true,
 	),
+	// ------------ BetaFeatures end -----------
 
 	'wmgUseRSSExtension' => array(
 		'dewiki' => true,
