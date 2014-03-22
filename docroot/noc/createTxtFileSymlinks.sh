@@ -51,6 +51,7 @@ mwconfig_files_txt=(
 mwconfig_files=(
 	all.dblist
 	all-labs.dblist
+	nonbetafeatures.dblist
 	cirrus.dblist
 	closed.dblist
 	commonsuploads.dblist
