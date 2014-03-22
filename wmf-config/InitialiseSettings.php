@@ -10671,33 +10671,30 @@ $wgConf->settings = array(
 
 'wmgUseBetaFeatures' => array(
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'nonbetafeatures' => false,
 ),
 
 'wmgUseCommonsMetadata' => array(
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'nonbetafeatures' => false,
 ),
 
 // NOTE: Extension:Popups has a hard dependency on TextExtracts and PageImages.
 'wmgUsePopups' => array(
 	'default' => false,
+	'nonbetafeatures' => false,
 	'testwiki' => true,
 	'mediawikiwiki' => true,
 ),
 
 'wmgUseVectorBeta' => array(
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'nonbetafeatures' => false,
 ),
 
 'wmgULSCompactLinks' => array(
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'nonbetafeatures' => false,
 ),
 
 // -------------- Media Viewer configs --------------
