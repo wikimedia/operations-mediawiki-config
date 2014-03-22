@@ -236,14 +236,6 @@ return array(
 		'default' => true,
 	),
 
-	'wmgUseBetaFeatures' => array(
-		'default' => true,
-	),
-
-	'wmgUseCommonsMetadata' => array(
-		'default' => true,
-	),
-
 	'wmgUseGWToolset' => array(
 		'default' => false,
 		'commonswiki' => true,
@@ -252,6 +244,15 @@ return array(
 	// Don't use an http/https proxy
 	'-wgCopyUploadProxy' => array(
 		'default' => false,
+	),
+
+	// ----------- BetaFeatures start ----------
+	'wmgUseBetaFeatures' => array(
+		'default' => true,
+	),
+
+	'wmgUseCommonsMetadata' => array(
+		'default' => true,
 	),
 
 	'wmgUseMultimediaViewer' => array(
@@ -279,6 +280,7 @@ return array(
 	'wmgUseVectorBeta' => array(
 		'default' => true,
 	),
+	// ------------ BetaFeatures end -----------
 
 	'wmgVisualEditorExperimental' => array(
 		'default' => true,
