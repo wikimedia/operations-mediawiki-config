@@ -52,7 +52,7 @@ mwconfig_files=(
 	all.dblist
 	all-labs.dblist
 	cirrus.dblist
-	notcirrus.dblist
+	noncirrus.dblist
 	closed.dblist
 	deleted.dblist
 	echowikis.dblist
