@@ -258,10 +258,6 @@ return array(
 		'default' => true,
 	),
 
-	'wmgUsePopups' => array(
-		'default' => true,
-	),
-
 	'wmgMediaViewerBeta' => array(
 		'default' => false,
 		'dewiki' => true,
