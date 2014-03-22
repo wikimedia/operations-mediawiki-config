@@ -10679,34 +10679,29 @@ $wgConf->settings = array(
 
 'wmgUseBetaFeatures' => array(
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'nonbetafeatures' => false,
 ),
 
 'wmgUseCommonsMetadata' => array(
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'nonbetafeatures' => false,
 ),
 
 // NOTE: Extension:Popups has a hard dependency on TextExtracts and PageImages.
 // @todo The pattern "everywhere but loginwiki and votewiki" repeats 32 times in this file.
 'wmgUsePopups' => array(
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'nonbetafeatures' => false,
 ),
 
 'wmgUseVectorBeta' => array(
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'nonbetafeatures' => false,
 ),
 
 'wmgULSCompactLinks' => array(
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'nonbetafeatures' => false,
 ),
 
 // -------------- Media Viewer configs --------------
