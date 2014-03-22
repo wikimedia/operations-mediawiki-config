@@ -10769,8 +10769,7 @@ $wgConf->settings = array(
 
 'wmgUseBetaFeatures' => array(
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'nonbetafeatures' => false,
 ),
 
 // Whitelist enablement of individual Beta Features for production; per-wiki
@@ -10792,32 +10791,29 @@ $wgConf->settings = array(
 
 'wmgUseCommonsMetadata' => array(
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'nonbetafeatures' => false,
 ),
 
 // NOTE: Extension:Popups has a hard dependency on TextExtracts and PageImages.
 // @todo The pattern "everywhere but loginwiki and votewiki" repeats 32 times in this file.
 'wmgUsePopups' => array(
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'nonbetafeatures' => false,
 ),
 
 'wmgUseVectorBeta' => array(
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'nonbetafeatures' => false,
 ),
 
 'wmgVectorBetaPersonalBar' => array(
 	'default' => true,
+	'nonbetafeatures' => false,
 ),
 
 'wmgULSCompactLinks' => array(
 	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	'nonbetafeatures' => false,
 ),
 
 // ------------ BetaFeatures end -----------
