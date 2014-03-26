@@ -139,7 +139,13 @@ case 'production':
 	break;
 case 'labs':
 	# deployment-bastion hosts the udp2log daemon
-	$wmfUdp2logDest = '10.4.0.58:8420';
+	if ( $wmfDatacenter === 'pmtpa' ) {
+		# deployment-bastion.pmtpa.wmflabs
+		$wmfUdp2logDest = '10.4.0.58:8420';
+	} else {  # eqiad
+		# deployment-bastion.eqiad.wmflabs
+		$wmfUdp2logDest = '10.68.16.58:8420';
+	}
 	break;
 default:
 	$wmfUdp2logDest = '127.0.0.1:8420';
