@@ -7781,9 +7781,9 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autopatrolled' ),
 	),
 	'+commonswiki' => array(
-		'bureaucrat' => array( 'ipblock-exempt', 'OTRS-member', 'translationadmin' ),
+		'bureaucrat' => array( 'gwtoolset', 'ipblock-exempt', 'OTRS-member', 'translationadmin' ), // bug 63124
 		'checkuser'  => array( 'ipblock-exempt' ),
-		'sysop' => array( 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer', 'gwtoolset'  ),
+		'sysop' => array( 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer' ),
 		'steward' => array( 'OTRS-member' ),
 		'Image-reviewer' => array( 'Image-reviewer' ),
 	),
@@ -8249,9 +8249,9 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'translationadmin' ),
 	),
 	'+commonswiki' => array(
-		'bureaucrat' => array( 'ipblock-exempt', 'OTRS-member', 'translationadmin' ), // bug 48620
+		'bureaucrat' => array( 'gwtoolset', 'ipblock-exempt', 'OTRS-member', 'translationadmin' ), // bug 48620, 63124
 		'checkuser' => array( 'ipblock-exempt' ),
-		'sysop' => array( 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer', 'gwtoolset' ),
+		'sysop' => array( 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer' ),
 		'steward' => array( 'OTRS-member' ),
 	),
 	'+cswiki' => array(
