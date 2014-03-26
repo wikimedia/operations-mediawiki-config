@@ -5,12 +5,21 @@
 # to the 'labs' realm which in most of the cases means the beta cluster.
 # It should be loaded AFTER CirrusSearch-common.php
 
-$wgCirrusSearchServers = array(
-	'deployment-es0',
-	'deployment-es1',
-	'deployment-es2',
-	'deployment-es3',
-);
+if ( $wmfDatacenter === 'pmtpa' ) {
+	$wgCirrusSearchServers = array(
+		'deployment-es0',
+		'deployment-es1',
+		'deployment-es2',
+		'deployment-es3',
+	);
+} else {  # eqiad
+	$wgCirrusSearchServers = array(
+		'deployment-elastic01',
+		'deployment-elastic02',
+		'deployment-elastic03',
+		'deployment-elastic04',
+	);
+}
 
 if ( $wgDBname == 'enwiki' ) {
 	$wgCirrusSearchInterwikiSources = array(
