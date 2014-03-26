@@ -88,8 +88,13 @@ if ( $wmgUseVectorBeta ) {
 }
 
 if ( $wmgUseParsoid ) {
-	$wmgParsoidURL = 'http://10.4.0.61/'; // deployment-parsoidcache3
-	$wgParsoidCacheServers = array ( 'http://10.4.0.61' ); // deployment-parsoidcache3
+	if ( $wmfDatacenter === 'pmtpa' ) {
+		$wmgParsoidURL = 'http://10.4.0.61/'; // deployment-parsoidcache3
+		$wgParsoidCacheServers = array ( 'http://10.4.0.61' ); // deployment-parsoidcache3
+	} else {  # eqiad
+		$wmgParsoidURL = 'http://10.68.16.145/'; // deployment-parsoidcache01.eqiad
+		$wgParsoidCacheServers = array ( 'http://10.68.16.145' ); // deployment-parsoidcache01.eqiad
+	}
 }
 
 if ( $wmgUseVisualEditor ) {
