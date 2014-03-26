@@ -10666,7 +10666,7 @@ $wgConf->settings = array(
 	'default' => 800,
 ),
 
-// ----------- BetaFeatures section ----------
+// ----------- BetaFeatures start ----------
 // Move things out of this when they're no longer in beta!
 
 'wmgUseBetaFeatures' => array(
@@ -10682,10 +10682,11 @@ $wgConf->settings = array(
 ),
 
 // NOTE: Extension:Popups has a hard dependency on TextExtracts and PageImages.
+// @todo The pattern "everywhere but loginwiki and votewiki" repeats 32 times in this file.
 'wmgUsePopups' => array(
-	'default' => false,
-	'testwiki' => true,
-	'mediawikiwiki' => true,
+	'default' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 'wmgUseVectorBeta' => array(
@@ -10720,6 +10721,7 @@ $wgConf->settings = array(
 	'default' => 10, // beta feature users do not generate enough data with 1:1000
 	'mediaviewer' => 1000,
 ),
+// ------------ BetaFeatures end -----------
 
 // -------------- VisualEditor start --------------
 
