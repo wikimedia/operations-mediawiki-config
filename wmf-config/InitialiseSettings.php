@@ -5887,7 +5887,6 @@ $wgConf->settings = array(
 		'aboutpage',
 		'disclaimerpage',
 		'copyright',
-		'recentchangestext',
 		'licenses',
 		'upload-url',
 		'helppage', // bug 5925
