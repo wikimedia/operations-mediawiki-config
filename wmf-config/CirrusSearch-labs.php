@@ -20,6 +20,5 @@ if ( $wgDBname == 'enwiki' ) {
 		'wikiquote' => 'enwikiquote',
 		'wikisource' => 'enwikisource',
 		'wikiversity' => 'enwikiversity',
-		'wikivoyage' => 'enwikivoyage',
 	);
 }

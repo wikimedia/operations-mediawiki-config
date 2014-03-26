@@ -14,14 +14,6 @@ if( $wmfRealm == 'labs' ) { # safe guard
 		'class' => 'LBFactoryMulti',
 
 		'sectionsByDB' => array(
-			'enwikivoyage' => 's2',
-			'dewikivoyage' => 's2',
-			'itwikivoyage' => 's2',
-			'svwikivoyage' => 's2',
-			'frwikivoyage' => 's2',
-			'nlwikivoyage' => 's2',
-			'ruwikivoyage' => 's2',
-
 			'wikidatawiki' => 's2',
 		),
 
