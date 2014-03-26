@@ -7781,9 +7781,9 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autopatrolled' ),
 	),
 	'+commonswiki' => array(
-		'bureaucrat' => array( 'ipblock-exempt', 'OTRS-member', 'translationadmin' ),
+		'bureaucrat' => array( 'ipblock-exempt', 'OTRS-member', 'translationadmin', 'gwtoolset' ),
 		'checkuser'  => array( 'ipblock-exempt' ),
-		'sysop' => array( 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer', 'gwtoolset'  ),
+		'sysop' => array( 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer'  ),
 		'steward' => array( 'OTRS-member' ),
 		'Image-reviewer' => array( 'Image-reviewer' ),
 	),
@@ -8881,7 +8881,7 @@ $wgConf->settings = array(
 	'pflwiki' => array( 'de', 'fr', 'als', 'pdc', 'en' ),
 	'ptwikisource' => array( 'w', 'b' ),
 	'plwiki' => array( 's', 'b', 'q', 'n', 'wikt' ),
-	'plwikibooks' => array( 'w', 's' ), # bug 8546
+	'plwikibooks' => array( 'w', 's' ), # bug 8546
 	'plwikisource' => array( 'w', 'b', 'q', 'n', 'wikt', 'oldwikisource' ),
 	'plwiktionary' => array( 'w' ),
 	'pntwiki'   => array( 'en', 'el', 'elwikiversity', 'incubator' ),
