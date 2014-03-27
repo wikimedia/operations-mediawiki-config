@@ -144,7 +144,7 @@ class MWMultiVersion {
 			if ( preg_match( '/^([^.]+)\.([^.]+)\.beta\.wmflabs\.org$/', $serverName, $matches ) ) {
 				// http://en.wikipedia.beta.wmflabs.org/
 				$lang = $matches[1];
-				if( $matches[2] == 'wikimedia' ) {
+				if ( $matches[2] === 'wikimedia' || $matches[2] === 'hhvm' ) {
 					# Beta uses 'wiki' as a DB suffix for WikiMedia databases
 					# Eg 'login.wikimedia.beta.wmflabs.org' => 'loginwiki'
 					$site = 'wikipedia';
