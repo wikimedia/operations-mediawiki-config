@@ -227,7 +227,7 @@ return array(
 		'default' => 'solr',
 	),
 	'wmgGeoDataUseCirrusSearch' => array(
-		'default' => false,
+		'default' => true,
 	),
 
 	'wmgULSPosition' => array(
