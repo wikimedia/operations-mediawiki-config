@@ -224,7 +224,7 @@ return array(
 		'default' => true,
 	),
 	'wmgGeoDataBackend' => array(
-		'default' => 'solr',
+		'default' => 'elastic',
 	),
 	'wmgGeoDataUseCirrusSearch' => array(
 		'default' => true,
