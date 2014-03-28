@@ -85,6 +85,8 @@ if ( $wmgUseMultimediaViewer ) {
 
 if ( $wmgUseVectorBeta ) {
 	require_once( "$IP/extensions/VectorBeta/VectorBeta.php" );
+	$wgVectorBetaPersonalBar = $wmgVectorBetaPersonalBar;
+	$wgVectorBetaWinter = $wmgVectorBetaWinter;
 }
 
 if ( $wmgUseParsoid ) {
