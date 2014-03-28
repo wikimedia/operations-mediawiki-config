@@ -2243,14 +2243,18 @@ if ( $wmgUseWikimediaShopLink ) {
 
 if ( $wmgEnableGeoData ) {
 	require_once( "$IP/extensions/GeoData/GeoData.php" );
-	$wgGeoDataBackend = $wmgGeoDataBackend;
+	if ( $wmgUseCirrus || $wmgUseCirrusAsAlternative ) {
+		$wgGeoDataBackend = $wmgGeoDataBackend;
+		$wgGeoDataUseCirrusSearch = $wmgGeoDataUseCirrusSearch;
+	} else {
+		$wgGeoDataBackend = 'solr';
+	}
 	$wgGeoDataSolrMaster = 'solr1001.eqiad.wmnet';
 	$wgGeoDataSolrHosts = array(
 		'solr1001.eqiad.wmnet' => 75, // master, put less read load on it
 		'solr1002.eqiad.wmnet' => 100,
 		'solr1003.eqiad.wmnet' => 100,
 	);
-	$wgGeoDataUseCirrusSearch = $wmgGeoDataUseCirrusSearch;
 
 	# Data collection mode
 	if ( !$wmgEnableGeoSearch ) {
