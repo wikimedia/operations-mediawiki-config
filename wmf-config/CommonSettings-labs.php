@@ -55,9 +55,9 @@ $wgDnsBlacklistUrls   = array(
 $wgGroupPermissions['autoconfirmed']['skipcaptcha'] = false;
 
 if ( $wmgEnableGeoData ) {
-	$wgGeoDataSolrMaster = 'deployment-solr.pmtpa.wmflabs';
+	$wgGeoDataSolrMaster = "deployment-solr.{$wmfDatacenter}.wmflabs";
 	$wgGeoDataSolrHosts = array(
-		'deployment-solr.pmtpa.wmflabs' => 100,
+		"deployment-solr.{$wmfDatacenter}.wmflabs" => 100,
 	);
 }
 
