@@ -246,6 +246,9 @@ return array(
 		'default' => true,
 	),
 
+	// Enable all Beta Features in Beta Labs, even if not in production whitelist
+	'wgBetaFeaturesWhitelist' => null,
+
 	'wmgUseCommonsMetadata' => array(
 		'default' => true,
 	),
