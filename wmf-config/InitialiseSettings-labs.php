@@ -282,6 +282,14 @@ return array(
 		'default' => true,
 	),
 
+	'wgVectorBetaPersonalBar' => array(
+		'default' => true,
+	),
+
+	'wgVectorBetaWinter' => array(
+		'default' => true,
+	),
+
 	'wmgVisualEditorExperimental' => array(
 		'default' => true,
 	),
