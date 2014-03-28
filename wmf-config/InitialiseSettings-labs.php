@@ -142,7 +142,7 @@ return array(
 	),
 
 	'wgLogo' => array(
-	//	'commonswiki' => '//commons.wikimedia.beta.wmflabs.org/w/thumb.php?f=Wiki.png&width=88&a',
+	'commonswiki' => '//commons.wikimedia.beta.wmflabs.org/w/thumb.php?f=Commons-Beta-logo.svg&width=88&a',
 	),
 
 	// Editor Engagement stuff
