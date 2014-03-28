@@ -1154,10 +1154,10 @@ $wgConf->settings = array(
 
 	// Individual wikis
 	'advisorywiki' => '//advisory.wikimedia.org',
-	'arbcom_dewiki' => '//arbcom.de.wikipedia.org',
-	'arbcom_enwiki' => '//arbcom.en.wikipedia.org',
-	'arbcom_fiwiki' => '//arbcom.fi.wikipedia.org',
-	'arbcom_nlwiki' => '//arbcom.nl.wikipedia.org',
+	'arbcom_dewiki' => '//arbcom-de.wikipedia.org',
+	'arbcom_enwiki' => '//arbcom-en.wikipedia.org',
+	'arbcom_fiwiki' => '//arbcom-fi.wikipedia.org',
+	'arbcom_nlwiki' => '//arbcom-nl.wikipedia.org',
 	'arwikimedia' => '//ar.wikimedia.org',
 	'auditcomwiki' => '//auditcom.wikimedia.org',
 	'boardgovcomwiki' => '//boardgovcom.wikimedia.org',
@@ -1235,10 +1235,10 @@ $wgConf->settings = array(
 
 	// Individual wikis
 	'advisorywiki' => 'http://advisory.wikimedia.org',
-	'arbcom_dewiki' => 'http://arbcom.de.wikipedia.org',
-	'arbcom_enwiki' => 'http://arbcom.en.wikipedia.org',
-	'arbcom_fiwiki' => 'http://arbcom.fi.wikipedia.org',
-	'arbcom_nlwiki' => 'http://arbcom.nl.wikipedia.org',
+	'arbcom_dewiki' => 'http://arbcom-de.wikipedia.org',
+	'arbcom_enwiki' => 'http://arbcom-en.wikipedia.org',
+	'arbcom_fiwiki' => 'http://arbcom-fi.wikipedia.org',
+	'arbcom_nlwiki' => 'http://arbcom-nl.wikipedia.org',
 	'arwikimedia' => 'http://ar.wikimedia.org',
 	'auditcomwiki' => 'https://auditcom.wikimedia.org',
 	'boardgovcomwiki' => 'https://boardgovcom.wikimedia.org',
