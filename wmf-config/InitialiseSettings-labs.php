@@ -223,6 +223,12 @@ return array(
 	'wmgEnableGeoData' => array(
 		'default' => true,
 	),
+	'wmgGeoDataBackend' => array(
+		'default' => 'solr',
+	),
+	'wmgGeoDataUseCirrusSearch' => array(
+		'default' => false,
+	),
 
 	'wmgULSPosition' => array(
 		# Beta-specific
