@@ -10674,6 +10674,22 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
+// Whitelist enablement of individual Beta Features for production; per-wiki
+// configuration should happen below this. Next to each entry, please note the
+// date 6 months after the last major change, which is the automatic cut-off.
+//
+// DO NOT add entries here without OK from Greg Grossmeier or James Forrester.
+'wgBetaFeaturesWhitelist' => array(
+	'visualeditor-enable',						// VisualEditor – on-going (special permission)
+
+	'math-enable-visualeditor',					// 2014-05-21 – VE formula editor
+	'multimedia-viewer',						// 2014-05-21 – MediaViewer
+	'betafeatures-geonotahack',					// 2014-05-21 – Near this page
+	'betafeatures-vector-typography-update',	// 2014-05-21 – Typography refresh
+	'uls-compact-links',						// 2014-09-06 – Compact language links
+	'popups',									// 2014-09-18 – Hovercards
+),
+
 'wmgUseCommonsMetadata' => array(
 	'default' => true,
 	'loginwiki' => false,
