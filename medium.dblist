@@ -8,6 +8,7 @@ arwikibooks
 arwikinews
 arwikiquote
 arwikisource
+arwikiversity
 arwiktionary
 arzwiki
 astwiki
@@ -26,6 +27,7 @@ bgwiki
 bgwikiquote
 bgwiktionary
 bnwiki
+bnwikisource
 bowiki
 bpywiki
 brwiki
@@ -40,6 +42,7 @@ cewiki
 chrwiktionary
 ckbwiki
 cowiki
+crhwiki
 cswiki
 cswikisource
 cswiktionary
@@ -63,7 +66,6 @@ elwikisource
 elwiktionary
 emlwiki
 enwikibooks
-enwikinews
 enwikiquote
 enwikiversity
 enwikivoyage
@@ -75,10 +77,12 @@ eswikiquote
 eswikisource
 eswiktionary
 etwiki
+etwikisource
 etwiktionary
 euwiki
 euwiktionary
 fawikinews
+fawikiquote
 fawikisource
 fawiktionary
 fiwiki
@@ -123,9 +127,9 @@ hywiki
 hywikisource
 hywiktionary
 iawiki
+idwikibooks
 idwiktionary
 ilowiki
-incubatorwiki
 iowiki
 iowiktionary
 iswiki
@@ -139,6 +143,7 @@ itwikivoyage
 itwiktionary
 jawikibooks
 jawikinews
+jawikisource
 jawiktionary
 jvwiki
 jvwiktionary
@@ -156,6 +161,7 @@ krcwiki
 kuwiki
 kuwiktionary
 kywiki
+ladwiki
 lawiki
 lawikisource
 lawiktionary
@@ -193,6 +199,7 @@ ndswiktionary
 newiki
 newwiki
 nlwikibooks
+nlwikisource
 nlwikivoyage
 nlwiktionary
 nnwiki
@@ -207,6 +214,7 @@ ocwiktionary
 officewiki
 orwiki
 oswiki
+outreachwiki
 pamwiki
 pawiki
 plwikibooks
@@ -222,10 +230,10 @@ ptwikibooks
 ptwikinews
 ptwikiquote
 ptwikisource
+ptwikiversity
 ptwiktionary
 quwiki
 roa_tarawiki
-rowiki
 rowikisource
 rowiktionary
 ruwikinews
@@ -239,8 +247,9 @@ sawikisource
 scnwiki
 scnwiktionary
 scowiki
+scwiki
 sewiki
-shwiki
+shwiktionary
 simplewiki
 simplewiktionary
 siwiki
@@ -249,6 +258,7 @@ slwiki
 slwikisource
 slwiktionary
 sourceswiki
+sowiki
 specieswiki
 sqwiki
 sqwiktionary
@@ -262,7 +272,9 @@ svwikisource
 svwiktionary
 swwiki
 swwiktionary
+szlwiki
 tawiki
+tawikinews
 tawiktionary
 test2wiki
 testwiki
@@ -280,6 +292,7 @@ trwikiquote
 trwikisource
 trwiktionary
 ttwiki
+ugwiki
 ukwikisource
 ukwiktionary
 urwiki
