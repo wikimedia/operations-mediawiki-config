@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0e4726_d2dc014e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 10682,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2014-03-31T15:32:51Z",
+      "side": 1,
+      "message": "This needs to be a \u0027wmg\u0027, and then an entry in CommonSettings settings $wg \u003d $wmg.",
+      "revId": "6069c52f9f3eb1b15c312a813ff2353ca0a9fb65",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
