@@ -157,6 +157,7 @@ if ( $wgDBname == "enwiki" ) {
 # Backends:
 if( $wmgUseMath ) {
 	$wgMathFileBackend = false;
+	$wgMathDirectory   = '/data/project/upload7/math';
 }
 
 // CORS (cross-domain AJAX, bug 20814)
