@@ -3964,7 +3964,6 @@ $wgConf->settings = array(
 		'generated-pp-node-count' => "udp://$wmfUdp2logDest/generated-pp-node-count",
 		'api' => "udp://$wmfUdp2logDest/api",
 		'SQLBagOStuff' => "udp://$wmfUdp2logDest/sql-bagostuff",
-
 		'FileOperation' => "udp://$wmfUdp2logDest/filebackend-ops",
 		'SwiftBackend' => "udp://$wmfUdp2logDest/swift-backend", // -aaron 5/15/12
 		'updateTranstagOnNullRevisions' => "udp://$wmfUdp2logDest/updateTranstagOnNullRevisions",
@@ -4002,6 +4001,7 @@ $wgConf->settings = array(
 		'MassMessage' => "udp://$wmfUdp2logDest/MassMessage", // for bug 57464 -legoktm 2013/12/15
 		'Bug58676' => "udp://$wmfUdp2logDest/Bug58676", # Invalid message parameter
 		'Flow' => "udp://$wmfUdp2logDest/Flow", // -erikb 2014/03/08
+		'upload' => "udp://$wmfUdp2logDest/upload",
 	),
 
 	'+enwiki' => array(
