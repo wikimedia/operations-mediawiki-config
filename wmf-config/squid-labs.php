@@ -38,13 +38,13 @@ if ( $wmfDatacenter === 'pmtpa' ) {
 } else {  # eqiad
 	$wgSquidServersNoPurge = array( '127.0.0.1',
 		'10.68.16.16',  # deployment-cache-text02
-		'10.68.16.53',  # deployment-cache-upload01
+		'10.68.17.51',  # deployment-cache-upload02
 		'10.68.16.12',  # deployment-cache-bits01
 		'10.68.16.13',  # deployment-cache-mobile03
 	);
 	$wgHTCPRouting = array(
 		'|^https?://upload\.beta\.wmflabs\.org|' => array(
-			'host' => '10.68.16.53',  # deployment-cache-upload01
+			'host' => '10.68.17.51',  # deployment-cache-upload02
 			'port' => 4827,
 		),
 
