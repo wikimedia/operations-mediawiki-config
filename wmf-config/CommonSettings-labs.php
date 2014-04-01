@@ -147,6 +147,8 @@ if ( $wmgUseTimedMediaHandler ) {
 
 if ( $wgDBname == "testwiki" ) {
 	$wgCaptchaDirectory = '/data/project/upload7/private/captcha/random';
+} else {
+	$wgCaptchaDirectory = '/data/project/upload7/private/captcha';
 }
 
 // Use InstantCommons for testing
