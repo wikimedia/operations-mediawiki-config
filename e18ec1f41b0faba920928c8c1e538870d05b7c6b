@@ -16,6 +16,24 @@
       "revId": "e18ec1f41b0faba920928c8c1e538870d05b7c6b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0e4726_a2f12d94",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2014-04-01T23:38:04Z",
+      "side": 1,
+      "message": "Null whitelist !\u003d\u003d empty whitelist seems totally sane to me, though it wasn\u0027t my suggestion.",
+      "parentUuid": "ae0e4726_42293135",
+      "revId": "e18ec1f41b0faba920928c8c1e538870d05b7c6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
