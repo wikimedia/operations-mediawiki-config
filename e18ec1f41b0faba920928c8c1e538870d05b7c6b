@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0e4726_42293135",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-04-01T23:24:56Z",
+      "side": 1,
+      "message": "\"null\" means all? Great API...",
+      "revId": "e18ec1f41b0faba920928c8c1e538870d05b7c6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
