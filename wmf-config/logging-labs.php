@@ -10,6 +10,7 @@ if ( $wgCommandLineMode || PHP_SAPI == 'cli' ) {
 }
 
 // udp2log logging for beta:
+$wgDebugLogGroups['CentralAuthVerbose'] = "udp://$wmfUdp2logDest/centralauth";
 $wgDebugLogGroups['dnsblacklist'] = "udp://$wmfUdp2logDest/dnsblacklist";
 $wgDebugLogGroups['exception-json'] = "udp://$wmfUdp2logDest/exception-json";
 $wgDebugLogGroups['mwsearch'] = "udp://$wmfUdp2logDest/mwsearch";
