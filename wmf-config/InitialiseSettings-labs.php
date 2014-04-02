@@ -318,7 +318,7 @@ return array(
 	),
 
 	'wgSearchSuggestCacheExpiry' => array(
-		'default' => 1800,
+		'default' => 300,
 	),
 
 	'wmgUseCirrus' => array(
