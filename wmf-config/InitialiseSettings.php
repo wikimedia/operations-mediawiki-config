@@ -10172,6 +10172,7 @@ $wgConf->settings = array(
 	'thwikisource' => true, // bug 31600
 	'thwikibooks' => true, // bug 31600
 	'thwikiquote' => true, // bug 31600
+	'urwiki' => true, // bug 62398
 	'zhwiki' => true, // bug 30362
 ),
 
