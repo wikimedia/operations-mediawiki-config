@@ -34,6 +34,24 @@
       "revId": "e18ec1f41b0faba920928c8c1e538870d05b7c6b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0e4726_7d5e1419",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 250,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2014-04-02T00:51:58Z",
+      "side": 1,
+      "message": "null means don\u0027t enable the whitelisting feature. If you have a better idea though, patches welcome :)",
+      "parentUuid": "ae0e4726_a2f12d94",
+      "revId": "e18ec1f41b0faba920928c8c1e538870d05b7c6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
