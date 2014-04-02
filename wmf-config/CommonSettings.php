@@ -2198,7 +2198,7 @@ if ( $wmgEnableRandomRootPage ) {
 # Similar to above but not for single template/file changes
 $wgJobBackoffThrottling = array(
 	# Avoid excessive CPU due to cache misses from rapid invalidations
-	'htmlCacheUpdate' => 10 // 10 pages/sec per runner
+	'htmlCacheUpdate' => 15 // 15 pages/sec per runner
 );
 
 # If a job runner takes too long to finish a job, assume it died and re-assign the job
