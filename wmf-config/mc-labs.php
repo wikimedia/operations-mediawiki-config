@@ -19,13 +19,11 @@ $wgMainCacheType = "beta-memcached-{$wmfDatacenter}";
 
 $wgMemCachedTimeout = 500000; # micro seconds
 
-$wgMemCachedClass = defined( 'HHVM_VERSION' ) ? 'MemcachedPhpBagOStuff' : 'MemcachedPeclBagOStuff';
-
 # On labs, use one memcached cluster per datacenter
 
 # pmtpa
 $wgObjectCaches['beta-memcached-pmtpa'] = array(
-	'class'      => $wgMemCachedClass,
+	'class'      => 'MemcachedPeclBagOStuff',
 	'serializer' => 'php',
 	'persistent' => false,
 	'servers'    => array(
@@ -37,7 +35,7 @@ $wgObjectCaches['beta-memcached-pmtpa'] = array(
 
 # eqiad
 $wgObjectCaches['beta-memcached-eqiad'] = array(
-	'class'      => $wgMemCachedClass,
+	'class'      => 'MemcachedPeclBagOStuff',
 	'serializer' => 'php',
 	'persistent' => false,
 	'servers'    => array(
