@@ -10,3 +10,20 @@ $wgCirrusSearchServers = array(
 );
 
 $wgCirrusSearchConnectionAttempts = 3;
+
+$projectsOkForInterwiki = array(
+	'itwiki' => 'w',
+	'itwiktionary' => 'wikt',
+	'itwikibooks' => 'b',
+	'itwikinews' => 'n',
+	'itwikiquote' => 'q',
+	'itwikisource' => 's',
+	'itwikivoyage' => 'voy',
+	'itwikiversity' => 'v',
+);
+
+if ( isset( $projectsOkForInterwiki[ $wgDBname ] ) ) {
+	unset( $projectsOkForInterwiki[$wgDBname] );
+	$interwikiSearchConf = array_flip( $projectsOkForInterwiki );
+	$wgCirrusSearchInterwikiSources = $interwikiSearchConf;
+}
