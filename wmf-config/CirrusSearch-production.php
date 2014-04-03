@@ -26,4 +26,5 @@ if ( isset( $projectsOkForInterwiki[ $wgDBname ] ) ) {
 	unset( $projectsOkForInterwiki[$wgDBname] );
 	$interwikiSearchConf = array_flip( $projectsOkForInterwiki );
 	$wgCirrusSearchInterwikiSources = $interwikiSearchConf;
+	$wgCirrusSearchInterwikiCacheTime = 60;
 }
