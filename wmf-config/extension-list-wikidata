@@ -1,7 +1,0 @@
-$IP/extensions/DataTypes/DataTypes.i18n.php
-$IP/extensions/DataValues/DataValues/DataValues.i18n.php
-$IP/extensions/Diff/Diff.php
-$IP/extensions/Wikibase/client/WikibaseClient.php
-$IP/extensions/WikibaseDataModel/WikibaseDataModel.php
-$IP/extensions/Wikibase/lib/WikibaseLib.php
-$IP/extensions/Wikibase/repo/Wikibase.php
