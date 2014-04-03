@@ -15,25 +15,10 @@ if( $wmfRealm == 'labs' ) {  # safe guard
  */
 $wgMemCachedPersistent = true;
 
-$wgMainCacheType = "beta-memcached-{$wmfDatacenter}";
+$wgMainCacheType = "beta-memcached-eqiad";
 
 $wgMemCachedTimeout = 500000; # micro seconds
 
-# On labs, use one memcached cluster per datacenter
-
-# pmtpa
-$wgObjectCaches['beta-memcached-pmtpa'] = array(
-	'class'      => 'MemcachedPeclBagOStuff',
-	'serializer' => 'php',
-	'persistent' => false,
-	'servers'    => array(
-		0 => '10.4.1.86:11211',   # deployment-memc0.pmtpa
-		1 => '10.4.1.106:11211',  # deployment-memc1.pmtpa
-	),
-	'retry_timeout' => 1,
-);
-
-# eqiad
 $wgObjectCaches['beta-memcached-eqiad'] = array(
 	'class'      => 'MemcachedPeclBagOStuff',
 	'serializer' => 'php',
