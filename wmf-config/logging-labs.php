@@ -16,7 +16,7 @@ $wgDebugLogGroups['exception-json'] = "udp://$wmfUdp2logDest/exception-json";
 $wgDebugLogGroups['mwsearch'] = "udp://$wmfUdp2logDest/mwsearch";
 $wgDebugLogGroups['squid'] = "udp://$wmfUdp2logDest/squid";
 
-$wgUDPProfilerHost = 'deployment-fluoride.pmtpa.wmflabs';  // OL, 2013-11-14
+$wgUDPProfilerHost = 'deployment-fluoride.eqiad.wmflabs';  // OL, 2013-11-14
 $wgAggregateStatsID = "$wgVersion-labs";
 
 // Ugly code to create a random hash and put it in logs
