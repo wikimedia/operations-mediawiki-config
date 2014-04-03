@@ -117,7 +117,7 @@ $wgLBFactoryConf = array(
 		'db1042' => 0, # snapshot, vslow, dump
 		'db1004' => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1011' => 300,
-		'db1020' => 300,
+		# hardware errors RT 7191 'db1020' => 300,
 		'db1059' => 400, # 2.8TB sas 96GB
 	),
 	's5' => array(
