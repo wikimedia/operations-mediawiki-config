@@ -22,3 +22,6 @@ if ( $wgDBname == 'enwiki' ) {
 		'wikiversity' => 'enwikiversity',
 	);
 }
+
+$wgCirrusSearchUseExperimentalHighlighter = true;
+$wgCirrusSearchOptimizeIndexForExperimentalHighlighter = true;
