@@ -2,7 +2,7 @@
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
 # NOTE: this file is now only included for wikis in flaggedrevs.dblist
-# It's set up this way to allow a cron job on hume to easily determine a
+# It's set up this way to allow a cron job on terbium to easily determine a
 # list of wikis it needs to run updateStats.php on
 
 $path = "$IP/extensions/FlaggedRevs/FlaggedRevs.php";
