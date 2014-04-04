@@ -52,6 +52,23 @@
       "revId": "e18ec1f41b0faba920928c8c1e538870d05b7c6b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_47d291d6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 10683,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-04-04T17:12:14Z",
+      "side": 1,
+      "message": "Avoid using tabs inside a line. Either use a single space or align them with spaces, never with tabs (see code conventions).",
+      "revId": "e18ec1f41b0faba920928c8c1e538870d05b7c6b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
