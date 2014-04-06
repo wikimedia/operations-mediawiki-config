@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_012d9b8b",
+        "filename": "wmf-config/FeaturedFeedsWMF.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-04-06T20:39:54Z",
+      "side": 1,
+      "message": "Not gonna work. This is a switch for family name, not InitializeSettings-style init where you can use a wiki name, family or dblist. This is an atavism from the time when this file was in the extension\u0027s repo.",
+      "revId": "03b11baec5bad26012ed84e194427af923472644",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_e1497f6b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 12046,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-04-06T20:39:54Z",
+      "side": 1,
+      "message": "70 weeks is more than a year.",
+      "revId": "03b11baec5bad26012ed84e194427af923472644",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
