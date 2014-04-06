@@ -10422,6 +10422,7 @@ $wgConf->settings = array(
 		'musees.cg70.fr',                // Musées de la Haute-Saône (prod)  Bug 63449
 		'*.musees.cg70.fr',              // Musées de la Haute-Saône (prod)  Bug 63449
 		'*.wikimedia.ch',                // Wikimedia CH
+		'link.nypl.org',		 // New York Public Library
 	),
 ),
 
