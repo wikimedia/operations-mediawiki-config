@@ -10393,6 +10393,7 @@ $wgConf->settings = array(
 		'*.llgc.org.uk',                 // National Library of Wales
 		'*.tounoki.org',                 // Musées de la Haute-Saône
 		'*.wikimedia.ch',                // Wikimedia CH
+		'link.nypl.org',		 // New York Public Library
 	),
 ),
 
