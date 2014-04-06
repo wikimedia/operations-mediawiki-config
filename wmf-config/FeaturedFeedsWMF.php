@@ -85,6 +85,15 @@ function wfFeaturedFeedsWMF_getFeeds( &$feeds ) {
 				'entryName' => 'ffeed-featuredtexts-entry',
 			);
 			break;
+		case 'metawiki':
+			$feeds['technews'] = array( // Tech News bulletin
+				'page' => 'ffeed-technews-page',
+				'title' => 'ffeed-technews-title',
+				'short-title' => 'ffeed-technews-short-title',
+				'description' => 'ffeed-technews-desc',
+				'entryName' => 'ffeed-technews-entry',
+			);
+			break;
 	}
 	foreach ( $wmgFeaturedFeedsOverrides as $feedName => $overrides ) {
 		if ( isset( $feeds[$feedName] ) ) {
