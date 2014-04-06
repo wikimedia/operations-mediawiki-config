@@ -12064,6 +12064,11 @@ $wgConf->settings = array(
 			'frequency' => 'weekly',
 		),
 	),
+	'metawiki' => array( // bug 63596
+		'technews' => array(
+			'frequency' => 'weekly',
+		),
+	),
 ),
 'wmgReduceStartupExpiry' => array(
 	'default' => false,
