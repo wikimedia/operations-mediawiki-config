@@ -12047,6 +12047,10 @@ $wgConf->settings = array(
 		'limit' => 70,
 		'inUserLanguage' => false,
 	),
+	'metawiki' => array( // bug 63596
+		'limit' => 10,
+		'inUserLanguage' => true,
+	),
 ),
 'wmgDisplayFeedsInSidebar' => array(
 	'default' => false,
@@ -12066,6 +12070,11 @@ $wgConf->settings = array(
 
 	'frwikisource' => array( // Bug 39919
 		'featuredtexts' => array(
+			'frequency' => 'weekly',
+		),
+	),
+	'metawiki' => array( // bug 63596
+		'technews' => array(
 			'frequency' => 'weekly',
 		),
 	),
