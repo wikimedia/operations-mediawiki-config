@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_a16a67af",
+        "filename": "wmf-config/FeaturedFeedsWMF.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 99
+      },
+      "writtenOn": "2014-04-06T21:05:21Z",
+      "side": 1,
+      "message": "Do something similar to line 35 ( if the lang is \u0027meta\u0027 in the wikipedia section)",
+      "parentUuid": "8e23439c_81588b36",
+      "revId": "03b11baec5bad26012ed84e194427af923472644",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_e1497f6b",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 4
