@@ -34,6 +34,15 @@ function wfFeaturedFeedsWMF_getFeeds( &$feeds ) {
 			$feeds += $media;
 			if ( $lang == 'commons' ) {
 				$feeds['potd']['inUserLanguage'] = $feeds['motd']['inUserLanguage'] = true;
+			}
+			elseif ( $lang == 'meta' ) {
+				$feeds['technews'] = array( // Tech News bulletin
+					'page' => 'ffeed-technews-page',
+					'title' => 'ffeed-technews-title',
+					'short-title' => 'ffeed-technews-short-title',
+					'description' => 'ffeed-technews-desc',
+					'entryName' => 'ffeed-technews-entry',
+					);
 			} else {
 				$feeds += array(
 					'featured' => array(
