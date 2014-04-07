@@ -12688,6 +12688,9 @@ $wgConf->settings = array(
 	'fiu_vrowiki' => array(
 		'sort' => 'alphabetic_revised',
 	),
+	'frwikisource' => array(
+		'otherProjectsLinks' => array( 'frwiki', 'frwikiquote', 'commonswiki', 'frwikivoyage' ),
+	),
 	'fywiki' => array(
 		'sort' => 'alphabetic_fy',
 	),
