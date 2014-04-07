@@ -7734,8 +7734,8 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'filemover', 'flood', 'rollbacker' ),
 		'bureaucrat' => array( 'import' ),
 	),
-	'+brwikimedia' => array( // bug 58123
-		'sysop' => array( 'translationadmin' ),
+	'+brwikimedia' => array(
+		'sysop' => array( 'translationadmin', 'autopatrolled', 'confirmed' ), // bug 58123, 63345
 	),
 	'+bswiki' => array(
 		'sysop' => array( 'flood' ), // bug 50425
@@ -8217,8 +8217,9 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'filemover', 'flood', 'rollbacker' ),
 		'bureaucrat' => array( 'import' ),
 	),
-	'+brwikimedia' => array( // bug 58123
-		'sysop' => array( 'translationadmin' ),
+	'+brwikimedia' => array(
+		'sysop' => array( 'translationadmin', 'autopatrolled', 'confirmed' ), // bug 5812, 63345
+		'bureaucrat' => array( 'sysop', 'bureaucrat' ), // bug 63345
 	),
 	'+bswiki' => array(
 		'sysop' => array( 'flood' ), // bug 50425
