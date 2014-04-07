@@ -1762,9 +1762,11 @@ if( $wgDBname == 'commonswiki' ) {
 	$wgDefaultUserOptions['watchcreations'] = 1;
 }
 
-// Temporary override: WMF is not hardcore enough to enable this. See bug 36316, 45022 about it.
+// Temporary override: WMF is not hardcore enough to enable this.
+// See bug 35785, 36316, 45022 about it.
 $wgDefaultUserOptions['watchdefault'] = 0;
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
+$wgDefaultUserOptions['usenewrc'] = 0;
 
 if ( $wgDBname == 'strategywiki' ) {
 	require_once( "$IP/extensions/StrategyWiki/ActiveStrategy/ActiveStrategy.php" );
