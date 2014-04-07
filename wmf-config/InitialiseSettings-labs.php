@@ -55,7 +55,9 @@ return array(
 	'wgServer' => array(
 		'default'     => '//$lang.wikipedia.beta.wmflabs.org',
 		'wiktionary'	=> '//$lang.wiktionary.beta.wmflabs.org',
-		'wikipedia'     => '//$lang.wikipedia.beta.wmflabs.org',
+		'wikipedia'     => defined( 'HHVM_VERSION' )
+			? '//$lang.hhvm.beta.wmflabs.org'
+			: '//$lang.wikipedia.beta.wmflabs.org',
 		'wikiversity'	=> '//$lang.wikiversity.beta.wmflabs.org',
 		'wikispecies'	=> '//$lang.wikispecies.beta.wmflabs.org',
 		'wikisource'	=> '//$lang.wikisource.beta.wmflabs.org',
@@ -75,7 +77,9 @@ return array(
 
 	'wgCanonicalServer' => array(
 		'default'     => 'http://$lang.wikipedia.beta.wmflabs.org',
-		'wikipedia'     => 'http://$lang.wikipedia.beta.wmflabs.org',
+		'wikipedia'     => defined( 'HHVM_VERSION' )
+			? 'http://$lang.wikipedia.beta.wmflabs.org'
+			: 'http://$lang.hhvm.beta.wmflabs.org',
 		'wikibooks'     => 'http://$lang.wikibooks.beta.wmflabs.org',
 		'wikiquote'	=> 'http://$lang.wikiquote.beta.wmflabs.org',
 		'wikinews'	=> 'http://$lang.wikinews.beta.wmflabs.org',
