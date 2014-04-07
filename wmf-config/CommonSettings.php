@@ -44,8 +44,7 @@ wfProfileIn( "$fname-init" );
 # Initialisation
 
 # Extensions disabled when running under HHVM due to compatibility issues.
-if ( defined ( 'HHVM_VERSION' ) ) {
-	$wmgUseScribunto = false;
+if ( defined( 'HHVM_VERSION' ) ) {
 	$wmgUseWikibaseRepo = false;
 	$wmgUseWikibaseClient = false;
 	$wmgUseMultimediaViewer = false;
@@ -2361,8 +2360,14 @@ if ( $wmgUseScribunto ) {
 	include( "$IP/extensions/Scribunto/Scribunto.php" );
 	$wgScribuntoUseGeSHi = true;
 	$wgScribuntoUseCodeEditor = true;
-	$wgScribuntoDefaultEngine = 'luasandbox';
-	$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
+
+	if ( defined( 'HHVM_VERSION' ) ) {
+		$wgScribuntoDefaultEngine = 'luastandalone';
+		$wgScribuntoEngineConf['luastandalone']['luaPath'] = '/usr/bin/lua5.1';
+	} else {
+		$wgScribuntoDefaultEngine = 'luasandbox';
+		$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
+	}
 }
 
 if ( $wmgUseSubpageSortkey ) {
