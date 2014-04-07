@@ -72,11 +72,13 @@ if ( $wmgUseWikibaseClient ) {
 	// to be safe, keeping this here although $wgDBname is default setting
 	$wgWBClientSettings['siteGlobalID'] = $wgDBname;
 
-	if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki' ) ) ) {
+	if ( $wgDBname === 'test2wiki' ) {
+		// connect to test.wikidata, per bug 61893
 		$wgWBClientSettings['changesDatabase'] = 'testwikidatawiki';
 		$wgWBClientSettings['repoDatabase'] = 'testwikidatawiki';
 		$wgWBClientSettings['repoUrl'] = "//test.wikidata.org";
 	} else {
+		// connect test.wikipedia to wikidata, per bug 63619
 		$wgWBClientSettings['changesDatabase'] = 'wikidatawiki';
 		$wgWBClientSettings['repoDatabase'] = 'wikidatawiki';
 		$wgWBClientSettings['repoUrl'] = "//{$wmfHostnames['wikidata']}";
@@ -99,6 +101,8 @@ if ( $wmgUseWikibaseClient ) {
 	if ( $wgDBname === 'commonswiki' ) {
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
 	}
+
+	$wgWBClientSettings['propagateChangesToRepo'] = $wmgWikibasePropagateChangesToRepo;
 
 	$wgWBClientSettings['siteGroup'] = $wmgWikibaseSiteGroup;
 

@@ -12627,8 +12627,7 @@ $wgConf->settings = array(
 'wmgWikibaseCachePrefix' => array(
 	'default' => 'wikidatawiki',
 	'testwikidatawiki' => 'testwikidatawiki',
-	'test2wiki' => 'testwikidatawiki',
-	'testwiki' => 'testwikidatawiki'
+	'test2wiki' => 'testwikidatawiki'
 ),
 
 'wmgWikibaseEnableData' => array(
@@ -12646,6 +12645,11 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 	'testwiki' => true,
 	'wikidataclient' => true,
+),
+
+'wmgWikibasePropagateChangesToRepo' => array(
+	'default' => true,
+	'testwiki' => false
 ),
 
 'wmgWikibaseSiteGroup' => array(
