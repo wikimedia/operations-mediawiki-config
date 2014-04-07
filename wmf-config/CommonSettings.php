@@ -43,7 +43,14 @@ wfProfileIn( "$fname-init" );
 # ----------------------------------------------------------------------
 # Initialisation
 
-$hhvm = defined( 'HHVM_VERSION' );
+# Extensions disabled when running under HHVM due to compatibility issues.
+if ( defined ( 'HHVM_VERSION' ) ) {
+	$wmgUseScribunto = false;
+	$wmgUseWikibaseRepo = false;
+	$wmgUseWikibaseClient = false;
+	$wmgUseMultimediaViewer = false;
+}
+
 
 # Get the version object for this Wiki (must be set by now, along with $IP)
 if ( !class_exists( 'MWMultiVersion' ) ) {
@@ -2350,7 +2357,7 @@ if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgUseZeroNamespace ) {
 	$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore;
 }
 
-if ( $wmgUseScribunto && !$hhvm ) {
+if ( $wmgUseScribunto ) {
 	include( "$IP/extensions/Scribunto/Scribunto.php" );
 	$wgScribuntoUseGeSHi = true;
 	$wgScribuntoUseCodeEditor = true;
@@ -2504,7 +2511,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 // might be build as "aawikibooks" or something that does not have Wikibase.
 $wgExtensionEntryPointListFiles[] = "$IP/extensions/Wikidata/extension-list-wikidata";
 
-if ( ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) && !$hhvm ) {
+if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 	include( "$wmfConfigDir/Wikibase.php" );
 }
 

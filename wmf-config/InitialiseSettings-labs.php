@@ -11,7 +11,7 @@
  */
 
 /**
- * Main entry point to override production settings. Supports key beginning wit
+ * Main entry point to override production settings. Supports key beginning with
  * a dash to completely override a setting.
  * Settings are fetched through wmfLabsSettings() defined below.
  */
