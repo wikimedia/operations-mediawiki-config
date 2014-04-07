@@ -8760,6 +8760,7 @@ $wgConf->settings = array(
 	'enwikisource' => array( 'w', 'OldWikisource', 'b', 'commons', 'q', ),
 	'enwikibooks' => array( 'w', 's', 'q', 'v', 'wikt', 'n', 'meta', 'simple', 'species' ),
 	'enwikiversity' => array( 'betawikiversity', 'w', 'b', 'q', 's' ),
+	'enwikivoyage' => array( 'b', 'meta', 'w' ), // Bug 63095
 	'eowikisource' => array( 'meta', 'commons', 'b:eo' ), // Bug 43659
 	'eswiki' => array( 'b', 'q', 'v', 'wikt', 'n', 's', 'en' ),
 	'eswikibooks' => array( 'w', 'w:en', 'en', 'meta' ),
