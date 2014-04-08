@@ -5,8 +5,8 @@ require_once( "$IP/extensions/Wikidata/Wikidata.php" );
 if ( $wmgUseWikibaseRepo ) {
 	// bump for wikidatawiki and test wikidata
 	// @todo: can move to InitialiseSettings later, but having here
-	// Issues with changes in Wikidata 1.23wmf15
-	$wgCacheEpoch = '20140225200000';
+	// Bumped after enabling langlinks to wikiquote
+	$wgCacheEpoch = '20140408173328';
 
 	$baseNs = 120;
 
