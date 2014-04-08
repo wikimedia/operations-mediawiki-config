@@ -12635,7 +12635,8 @@ $wgConf->settings = array(
 
 'wmgWikibaseEnableData' => array(
 	'default' => true,
-	'commonswiki' => false
+	'commonswiki' => false,
+	'wikiquote' => false
 ),
 
 'wmgUseWikibaseRepo' => array(
@@ -12652,6 +12653,7 @@ $wgConf->settings = array(
 
 'wmgWikibaseSiteGroup' => array(
 	'default' => 'wikipedia',
+	'wikiquote' => 'wikiquote',
 	'wikivoyage' => 'wikivoyage',
 	'wikisource' => 'wikisource',
 	'commonswiki' => 'commons'
