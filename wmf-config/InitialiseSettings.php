@@ -10392,8 +10392,9 @@ $wgConf->settings = array(
 		'*.rbge.org.uk',                 // Royal Botanic Garden Edinburgh
 		'*.rijksmuseum.nl',              // Rijksmuseum
 		'*.llgc.org.uk',                 // National Library of Wales
-		'*.tounoki.org',                 // Musées de la Haute-Saône (test)
-		'*.musees.cg70.fr',              // Musées de la Haute-Saône (prod)
+		'*.tounoki.org',                 // Musées de la Haute-Saône (test)  Bug 63449
+		'musees.cg70.fr',                // Musées de la Haute-Saône (prod)  Bug 63449
+		'*.musees.cg70.fr',              // Musées de la Haute-Saône (prod)  Bug 63449
 		'*.wikimedia.ch',                // Wikimedia CH
 	),
 ),
