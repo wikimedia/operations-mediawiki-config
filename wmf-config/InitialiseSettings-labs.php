@@ -233,6 +233,9 @@ return array(
 	'wmgGeoDataUseCirrusSearch' => array(
 		'default' => true,
 	),
+	'wmgGeoDataDebug' => array(
+		'default' => true,
+	),
 
 	'wmgULSPosition' => array(
 		# Beta-specific

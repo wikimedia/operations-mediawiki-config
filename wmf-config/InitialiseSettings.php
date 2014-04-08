@@ -12291,6 +12291,9 @@ $wgConf->settings = array(
 	'default' => 10000,
 	'wikivoyage' => 20000,
 ),
+'wmgGeoDataDebug' => array(
+	'default' => false,
+),
 
 'wmgUseEcho' => array(
 	'default' => false,
