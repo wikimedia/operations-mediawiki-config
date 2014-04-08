@@ -10723,6 +10723,10 @@ $wgConf->settings = array(
 	'default' => false,
 ),
 
+'wmgMediaViewerShowSurvey' => array(
+	'default' => false,
+),
+
 'wmgNetworkPerformanceSamplingFactor' => array(
 	'default' => 10, // beta feature users do not generate enough data with 1:1000
 	'mediaviewer' => 1000,

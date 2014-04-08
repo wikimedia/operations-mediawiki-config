@@ -1791,6 +1791,10 @@ if ( $wmgUseMultimediaViewer ) {
 	if ( $wmgMediaViewerLoggedIn ) {
 		$wgEnableMediaViewerForLoggedInUsersOnly = true;
 	}
+
+	if ( $wmgMediaViewerShowSurvey ) {
+		$wgMediaViewerShowSurvey = $wmgMediaViewerShowSurvey;
+	}
 }
 
 if ( $wmgUsePopups ) {
