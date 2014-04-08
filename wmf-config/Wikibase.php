@@ -41,6 +41,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['siteLinkGroups'] = array(
 		'wikipedia',
+		'wikiquote',
 		'wikisource',
 		'wikivoyage',
 		'commons'
@@ -89,6 +90,7 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['siteLinkGroups'] = array(
 		'wikipedia',
+		'wikiquote',
 		'wikisource',
 		'wikivoyage',
 		'commons'
