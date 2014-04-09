@@ -8151,6 +8151,7 @@ $wgConf->settings = array(
 	'+wikimania2014wiki' => array(
 		'bureaucrat' => array( 'translationadmin' ),
 	),
+	'zerowiki' => array(),
 	'+zhwiki' => array(
 		'bureaucrat' => array( 'flood' ),
 		'sysop' => array( 'patroller', 'rollbacker', 'autoreviewer', 'confirmed' ),
@@ -8648,6 +8649,7 @@ $wgConf->settings = array(
 	'+wikimaniateamwiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'autopatrolled', 'import' ),
 	),
+	'zerowiki' => array(),
 	'+zhwiki' => array(
 		'bureaucrat' => array( 'flood' ),
 		'sysop' => array( 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'flood' ),
