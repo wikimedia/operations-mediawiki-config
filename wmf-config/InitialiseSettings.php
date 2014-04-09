@@ -12283,6 +12283,7 @@ $wgConf->settings = array(
 ),
 'wmgGeoDataBackend' => array(
 	'default' => 'solr',
+	'testwiki' => 'elastic',
 ),
 'wmgGeoDataUseCirrusSearch' => array(
 	'default' => false,
@@ -12299,6 +12300,7 @@ $wgConf->settings = array(
 ),
 'wmgGeoDataDebug' => array(
 	'default' => false,
+	'testwiki' => true,
 ),
 
 'wmgUseEcho' => array(
