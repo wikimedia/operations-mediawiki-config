@@ -11110,6 +11110,7 @@ $wgConf->settings = array(
 	'wikidata' => false,
 	'wiki' => true,
 	'metawiki' => true,
+	'zerowiki' => true,
 ),
 
 'wmgUseSubPageList3' => array(
@@ -12827,6 +12828,7 @@ $wgConf->settings = array(
 'wmgUseZeroNamespace' => array(
 	'default' => false,
 	'metawiki' => true,
+	'zerowiki' => true,
 ),
 
 'wmgUseCampaigns' => array(
