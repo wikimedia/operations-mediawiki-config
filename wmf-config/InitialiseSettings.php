@@ -12281,6 +12281,7 @@ $wgConf->settings = array(
 ),
 'wmgGeoDataUseCirrusSearch' => array(
 	'default' => false,
+	'testwiki' => true,
 ),
 'wmgEnableGeoSearch' => array(
 	'default' => true,
