@@ -10732,6 +10732,8 @@ $wgConf->settings = array(
 
 'wmgMediaViewerShowSurvey' => array(
 	'default' => false,
+	// TODO disable 2014-05-10
+	'mediawikiwiki' => true,
 ),
 
 'wmgNetworkPerformanceSamplingFactor' => array(
