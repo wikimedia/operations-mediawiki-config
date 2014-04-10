@@ -22,6 +22,11 @@ function wmfLabsOverrideSettings() {
 	// but not in production.
 	$betaSettings = wmfLabsSettings();
 
+	// Temporary workaround for bug 63780 -- OL
+	$wgConf->siteParamsCallback = function( $conf, $wiki ) {
+		return array( 'params' => array( 'channel' => 'beta' ) );
+	};
+
 	foreach ( $betaSettings as $key => $value ) {
 		if ( substr( $key, 0, 1 ) == '-' ) {
 			// Settings prefixed with - are completely overriden
