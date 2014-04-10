@@ -43,14 +43,6 @@ wfProfileIn( "$fname-init" );
 # ----------------------------------------------------------------------
 # Initialisation
 
-# Extensions disabled when running under HHVM due to compatibility issues.
-if ( defined( 'HHVM_VERSION' ) ) {
-	$wmgUseWikibaseRepo = false;
-	$wmgUseWikibaseClient = false;
-	$wmgUseMultimediaViewer = false;
-}
-
-
 # Get the version object for this Wiki (must be set by now, along with $IP)
 if ( !class_exists( 'MWMultiVersion' ) ) {
 	print "No MWMultiVersion instance initialized! MWScript.php wrapper not used?\n";
@@ -242,6 +234,13 @@ if ( !$globals ) {
 wfProfileIn( "$fname-misc1" );
 
 extract( $globals );
+
+# Extensions disabled when running under HHVM due to compatibility issues.
+if ( defined( 'HHVM_VERSION' ) ) {
+	$wmgUseWikibaseRepo = false;
+	$wmgUseWikibaseClient = false;
+	$wmgUseMultimediaViewer = false;
+}
 
 # -------------------------------------------------------------------------
 # Settings common to all wikis
