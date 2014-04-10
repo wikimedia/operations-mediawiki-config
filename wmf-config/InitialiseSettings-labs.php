@@ -53,11 +53,9 @@ return array(
 	),
 
 	'wgServer' => array(
-		'default'     => '//$lang.wikipedia.beta.wmflabs.org',
+		'default'     => '//$lang.wikipedia.$channel.wmflabs.org',
 		'wiktionary'	=> '//$lang.wiktionary.beta.wmflabs.org',
-		'wikipedia'     => defined( 'HHVM_VERSION' )
-			? '//$lang.hhvm.beta.wmflabs.org'
-			: '//$lang.wikipedia.beta.wmflabs.org',
+		'wikipedia'     => '//$lang.wikipedia.$channel.wmflabs.org',
 		'wikiversity'	=> '//$lang.wikiversity.beta.wmflabs.org',
 		'wikispecies'	=> '//$lang.wikispecies.beta.wmflabs.org',
 		'wikisource'	=> '//$lang.wikisource.beta.wmflabs.org',
@@ -69,17 +67,15 @@ return array(
 		'metawiki'      => '//meta.wikimedia.beta.wmflabs.org',
 		'commonswiki'   => '//commons.wikimedia.beta.wmflabs.org',
 		'labswiki'      => '//deployment.wikimedia.beta.wmflabs.org',
-		'ee_prototypewiki' => '//ee-prototype.wikipedia.beta.wmflabs.org',
+		'ee_prototypewiki' => '//ee-prototype.wikipedia.$channel.wmflabs.org',
 		'loginwiki'     => '//login.wikimedia.beta.wmflabs.org',
 		'testwiki'      => '//test.wikimedia.beta.wmflabs.org',
 		'wikidatawiki'  => '//wikidata.beta.wmflabs.org',
 	),
 
 	'wgCanonicalServer' => array(
-		'default'     => 'http://$lang.wikipedia.beta.wmflabs.org',
-		'wikipedia'     => defined( 'HHVM_VERSION' )
-			? 'http://$lang.wikipedia.beta.wmflabs.org'
-			: 'http://$lang.hhvm.beta.wmflabs.org',
+		'default'     => 'http://$lang.wikipedia.$cluster.wmflabs.org',
+		'wikipedia'     => 'http://$lang.wikipedia.$channel.wmflabs.org',
 		'wikibooks'     => 'http://$lang.wikibooks.beta.wmflabs.org',
 		'wikiquote'	=> 'http://$lang.wikiquote.beta.wmflabs.org',
 		'wikinews'	=> 'http://$lang.wikinews.beta.wmflabs.org',
@@ -90,7 +86,7 @@ return array(
 		'wikivoyage'    => 'http://$lang.wikivoyage.beta.wmflabs.org',
 
 		'metawiki'      => 'http://meta.wikimedia.beta.wmflabs.org',
-		'ee_prototypewiki' => 'http://ee-prototype.wikipedia.beta.wmflabs.org',
+		'ee_prototypewiki' => 'http://ee-prototype.wikipedia.$channel.wmflabs.org',
 		'commonswiki'	=> 'http://commons.wikimedia.beta.wmflabs.org',
 		'labswiki'      => 'http://deployment.wikimedia.beta.wmflabs.org',
 		'loginwiki'     => 'http://login.wikimedia.beta.wmflabs.org',

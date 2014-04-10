@@ -179,6 +179,12 @@ if ( array_search( $wgDBname, $wgLocalDatabases ) === false ) {
 
 # Determine domain and language and the directories for this instance
 list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
+
+$channel = $wmfRealm === 'labs' ? 'beta' : 'stable';
+if ( defined( 'HHVM_VERSION' ) ) {
+	$channel .= '-hhvm';
+}
+
 $wmfVersionNumber = $multiVersion->getVersionNumber();
 
 # Try configuration cache
@@ -213,6 +219,7 @@ if ( !$globals ) {
 			'lang'    => $lang,
 			'docRoot' => $_SERVER['DOCUMENT_ROOT'],
 			'site'    => $site,
+			'channel' => $channel,
 			'stdlogo' => "//{$wmfHostnames['upload']}/$site/$lang/b/bc/Wiki.png" ,
 		), $wikiTags );
 
@@ -1217,6 +1224,7 @@ if ( $wmgUseCentralAuth ) {
 		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\.\w+\.\w+\./';
 		$wgCentralAuthAutoLoginWikis = array(
 			'.wikipedia.beta.wmflabs.org' => 'enwiki',
+			'.wikipedia.beta-hhvm.wmflabs.org' => 'enwiki',
 			'.wikisource.beta.wmflabs.org' => 'enwikisource',
 			'.wikibooks.beta.wmflabs.org' => 'enwikibooks',
 			'.wikiversity.beta.wmflabs.org' => 'enwikiversity',
