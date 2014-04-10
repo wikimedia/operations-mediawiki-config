@@ -74,7 +74,7 @@ return array(
 	),
 
 	'wgCanonicalServer' => array(
-		'default'     => 'http://$lang.wikipedia.$cluster.wmflabs.org',
+		'default'     => 'http://$lang.wikipedia.$channel.wmflabs.org',
 		'wikipedia'     => 'http://$lang.wikipedia.$channel.wmflabs.org',
 		'wikibooks'     => 'http://$lang.wikibooks.beta.wmflabs.org',
 		'wikiquote'	=> 'http://$lang.wikiquote.beta.wmflabs.org',
