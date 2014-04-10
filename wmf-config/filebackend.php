@@ -213,6 +213,7 @@ if ( $wgDBname != 'commonswiki' ) {
 		'hasSharedCache'   => true,
 		'descBaseUrl'      => "//commons.wikimedia.org/wiki/File:",
 		'scriptDirUrl'     => "//commons.wikimedia.org/w",
+		'favicon'          => "//bits.wikimedia.org/favicon/commons.ico",
 		'fetchDescription' => true,
 		'wiki'             => 'commonswiki',
 		'initialCapital'   => true,
