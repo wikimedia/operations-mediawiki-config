@@ -8022,8 +8022,8 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'inactive' ),
 	),
 	'+ptwiki' => array(
-		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface_editor' ), // Bug 39905
-		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed' ),
+		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface_editor', 'accountcreator' ), // bug 39905, 63750
+		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ), // bug 63750
 	),
 	'+ptwikivoyage' => array(
 		'sysop' => array( 'bot' ), // Bug 45233
@@ -8510,8 +8510,8 @@ $wgConf->settings = array(
 		),
 	),
 	'+ptwiki' => array(
-		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface_editor' ), // Bug 39905
-		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed' ),
+		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface_editor', 'accountcreator' ), // bug 39905, 63750
+		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ), // bug 63750
 	),
 	'+ptwikinews' => array(
 		'sysop' => array( 'reviewer' ),
