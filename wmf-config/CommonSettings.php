@@ -1228,7 +1228,6 @@ if ( $wmgUseCentralAuth ) {
 		$wmgSecondLevelDomainRegex = '/^\w+\.\w+\.\w+\.\w+\./';
 		$wgCentralAuthAutoLoginWikis = array(
 			'.wikipedia.beta.wmflabs.org' => 'enwiki',
-			'.wikipedia.beta-hhvm.wmflabs.org' => 'enwiki',
 			'.wikisource.beta.wmflabs.org' => 'enwikisource',
 			'.wikibooks.beta.wmflabs.org' => 'enwikibooks',
 			'.wikiversity.beta.wmflabs.org' => 'enwikiversity',
