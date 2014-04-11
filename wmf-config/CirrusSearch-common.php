@@ -35,6 +35,10 @@ $wgCirrusSearchReplicaCount = array( 'content' => 2, 'general' => 2 );
 $wgJobTypeConf['cirrusSearchLinksUpdateSecondary'] = array( 'checkDelay' => true ) +
 	$wgJobTypeConf['default'];
 
+# Turn off the more accurate but slower search mode.  It is most helpful when you
+# have many small shards.  We don't do that in production and we could use the speed.
+$wgCirrusSearchMoreAccurateScoringMode = false;
+
 # Settings customized per index.
 $wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
 $wgCirrusSearchUseAggressiveSplitting = $wmgCirrusSearchUseAggressiveSplitting;
