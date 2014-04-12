@@ -22,9 +22,13 @@ function wmfLabsOverrideSettings() {
 	// but not in production.
 	$betaSettings = wmfLabsSettings();
 
-	// Temporary workaround for bug 63780 -- OL
+	// Set configuration string placeholder 'variant' to 'beta-hhvm'
+	// or 'beta' depending on the the runtime executing the code.
+	// This is to ensure that *.beta-hhvm.wmflabs.org wikis use
+	// loginwiki.wikimedia.beta-hhvm.wmflabs.org as their loginwiki.
 	$wgConf->siteParamsCallback = function( $conf, $wiki ) {
-		return array( 'params' => array( 'channel' => 'beta' ) );
+		$variant = defined( 'HHVM_VERSION' ) ? 'beta-hhvm' : 'beta';
+		return array( 'params' => array( 'variant' => $variant ) );
 	};
 
 	foreach ( $betaSettings as $key => $value ) {
@@ -58,45 +62,45 @@ return array(
 	),
 
 	'wgServer' => array(
-		'default'     => '//$lang.wikipedia.$channel.wmflabs.org',
-		'wiktionary'	=> '//$lang.wiktionary.beta.wmflabs.org',
-		'wikipedia'     => '//$lang.wikipedia.$channel.wmflabs.org',
-		'wikiversity'	=> '//$lang.wikiversity.beta.wmflabs.org',
-		'wikispecies'	=> '//$lang.wikispecies.beta.wmflabs.org',
-		'wikisource'	=> '//$lang.wikisource.beta.wmflabs.org',
-		'wikiquote'	=> '//$lang.wikiquote.beta.wmflabs.org',
-		'wikinews'	=> '//$lang.wikinews.beta.wmflabs.org',
-		'wikibooks'     => '//$lang.wikibooks.beta.wmflabs.org',
-		'wikivoyage'    => '//$lang.wikivoyage.beta.wmflabs.org',
+		'default'     => '//$lang.wikipedia.$variant.wmflabs.org',
+		'wiktionary'	=> '//$lang.wiktionary.$variant.wmflabs.org',
+		'wikipedia'     => '//$lang.wikipedia.$variant.wmflabs.org',
+		'wikiversity'	=> '//$lang.wikiversity.$variant.wmflabs.org',
+		'wikispecies'	=> '//$lang.wikispecies.$variant.wmflabs.org',
+		'wikisource'	=> '//$lang.wikisource.$variant.wmflabs.org',
+		'wikiquote'	=> '//$lang.wikiquote.$variant.wmflabs.org',
+		'wikinews'	=> '//$lang.wikinews.$variant.wmflabs.org',
+		'wikibooks'     => '//$lang.wikibooks.$variant.wmflabs.org',
+		'wikivoyage'    => '//$lang.wikivoyage.$variant.wmflabs.org',
 
-		'metawiki'      => '//meta.wikimedia.beta.wmflabs.org',
-		'commonswiki'   => '//commons.wikimedia.beta.wmflabs.org',
-		'labswiki'      => '//deployment.wikimedia.beta.wmflabs.org',
-		'ee_prototypewiki' => '//ee-prototype.wikipedia.$channel.wmflabs.org',
-		'loginwiki'     => '//login.wikimedia.beta.wmflabs.org',
-		'testwiki'      => '//test.wikimedia.beta.wmflabs.org',
-		'wikidatawiki'  => '//wikidata.beta.wmflabs.org',
+		'metawiki'      => '//meta.wikimedia.$variant.wmflabs.org',
+		'commonswiki'   => '//commons.wikimedia.$variant.wmflabs.org',
+		'labswiki'      => '//deployment.wikimedia.$variant.wmflabs.org',
+		'ee_prototypewiki' => '//ee-prototype.wikipedia.$variant.wmflabs.org',
+		'loginwiki'     => '//login.wikimedia.$variant.wmflabs.org',
+		'testwiki'      => '//test.wikimedia.$variant.wmflabs.org',
+		'wikidatawiki'  => '//wikidata.$variant.wmflabs.org',
 	),
 
 	'wgCanonicalServer' => array(
-		'default'     => 'http://$lang.wikipedia.$channel.wmflabs.org',
-		'wikipedia'     => 'http://$lang.wikipedia.$channel.wmflabs.org',
-		'wikibooks'     => 'http://$lang.wikibooks.beta.wmflabs.org',
-		'wikiquote'	=> 'http://$lang.wikiquote.beta.wmflabs.org',
-		'wikinews'	=> 'http://$lang.wikinews.beta.wmflabs.org',
-		'wikisource'	=> 'http://$lang.wikisource.beta.wmflabs.org',
-		'wikiversity'     => 'http://$lang.wikiversity.beta.wmflabs.org',
-		'wiktionary'     => 'http://$lang.wiktionary.beta.wmflabs.org',
-		'wikispecies'     => 'http://$lang.wikispecies.beta.wmflabs.org',
-		'wikivoyage'    => 'http://$lang.wikivoyage.beta.wmflabs.org',
+		'default'     => 'http://$lang.wikipedia.$variant.wmflabs.org',
+		'wikipedia'     => 'http://$lang.wikipedia.$variant.wmflabs.org',
+		'wikibooks'     => 'http://$lang.wikibooks.$variant.wmflabs.org',
+		'wikiquote'	=> 'http://$lang.wikiquote.$variant.wmflabs.org',
+		'wikinews'	=> 'http://$lang.wikinews.$variant.wmflabs.org',
+		'wikisource'	=> 'http://$lang.wikisource.$variant.wmflabs.org',
+		'wikiversity'     => 'http://$lang.wikiversity.$variant.wmflabs.org',
+		'wiktionary'     => 'http://$lang.wiktionary.$variant.wmflabs.org',
+		'wikispecies'     => 'http://$lang.wikispecies.$variant.wmflabs.org',
+		'wikivoyage'    => 'http://$lang.wikivoyage.$variant.wmflabs.org',
 
-		'metawiki'      => 'http://meta.wikimedia.beta.wmflabs.org',
-		'ee_prototypewiki' => 'http://ee-prototype.wikipedia.$channel.wmflabs.org',
-		'commonswiki'	=> 'http://commons.wikimedia.beta.wmflabs.org',
-		'labswiki'      => 'http://deployment.wikimedia.beta.wmflabs.org',
-		'loginwiki'     => 'http://login.wikimedia.beta.wmflabs.org',
-		'testwiki'      => 'http://test.wikimedia.beta.wmflabs.org',
-		'wikidatawiki'  => 'http://wikidata.beta.wmflabs.org',
+		'metawiki'      => 'http://meta.wikimedia.$variant.wmflabs.org',
+		'ee_prototypewiki' => 'http://ee-prototype.wikipedia.$variant.wmflabs.org',
+		'commonswiki'	=> 'http://commons.wikimedia.$variant.wmflabs.org',
+		'labswiki'      => 'http://deployment.wikimedia.$variant.wmflabs.org',
+		'loginwiki'     => 'http://login.wikimedia.$variant.wmflabs.org',
+		'testwiki'      => 'http://test.wikimedia.$variant.wmflabs.org',
+		'wikidatawiki'  => 'http://wikidata.$variant.wmflabs.org',
 	),
 
 	'wmgUsabilityPrefSwitch' => array(
@@ -117,16 +121,16 @@ return array(
 	/* ), */
 
 	'-wgUploadPath' => array(
-		'default' => '//upload.beta.wmflabs.org/$site/$lang',
+		'default' => '//upload.$variant.wmflabs.org/$site/$lang',
 		'private' => '/w/img_auth.php',
 	//	'wikimania2005wiki' => '//upload..org/wikipedia/wikimania', // back compat
-		'commonswiki' => '//upload.beta.wmflabs.org/wikipedia/commons',
-		'metawiki' => '//upload.beta.wmflabs.org/wikipedia/meta',
-		'testwiki' => '//upload.beta.wmflabs.org/wikipedia/test',
+		'commonswiki' => '//upload.$variant.wmflabs.org/wikipedia/commons',
+		'metawiki' => '//upload.$variant.wmflabs.org/wikipedia/meta',
+		'testwiki' => '//upload.$variant.wmflabs.org/wikipedia/test',
 	),
 
 	'-wmgMathPath' => array(
-		'default' => '//upload.beta.wmflabs.org/math',
+		'default' => '//upload.$variant.wmflabs.org/math',
 	),
 
 	'wmgNoticeProject' => array(
@@ -147,7 +151,7 @@ return array(
 	),
 
 	'wgLogo' => array(
-	//	'commonswiki' => '//commons.wikimedia.beta.wmflabs.org/w/thumb.php?f=Wiki.png&width=88&a',
+	//	'commonswiki' => '//commons.wikimedia.$variant.wmflabs.org/w/thumb.php?f=Wiki.png&width=88&a',
 	),
 
 	// Editor Engagement stuff
@@ -216,7 +220,7 @@ return array(
 //		'default' => false,
 //	),
 	'wmgMFPhotoUploadEndpoint' => array(
-		'default' => '//commons.wikimedia.beta.wmflabs.org/w/api.php',
+		'default' => '//commons.wikimedia.$variant.wmflabs.org/w/api.php',
 	),
 	'wmgMFUseCentralAuthToken' => array(
 		'default' => true,
