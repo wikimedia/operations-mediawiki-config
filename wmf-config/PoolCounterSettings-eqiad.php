@@ -48,5 +48,11 @@ $wgPoolCounterConf = array(
 		'timeout' => 40,
 		'workers' => 3,
 		'maxqueue' => 50
+	),
+	'GetLocalFileCopy' => array(
+		'class' => 'PoolCounter_Client',
+		'timeout' => 40,
+		'workers' => 3,
+		'maxqueue' => 50
 	)
 );
