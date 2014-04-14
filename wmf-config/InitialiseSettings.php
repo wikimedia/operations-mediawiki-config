@@ -10760,6 +10760,8 @@ $wgConf->settings = array(
 	'default' => array( NS_USER, NS_FILE, NS_HELP, NS_CATEGORY ),
 	// Test wikis
 	'+mediawikiwiki' => array( NS_PROJECT, 100 /* Manual */, 102 /* Extension */, 104 /* API */ ), // Bug 48430
+	// Special wikis
+	'+metawiki' => array( 200 /* Grants */, 202  /* Research */, 204 /* Participation */, 206, 208 /* Programs */ ),
 	// Wikipedias
 	'+cawiki' => array( 100 /* Portal */, 102 /* Viquiprojecte */ ), // Bug 56000
 	'+enwiki' => array( 100 /* Portal */, 108 /* Book */, 118 /* Draft */ ), // Bug 56001
