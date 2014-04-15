@@ -51,7 +51,7 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterBlockDuration = '2 hours';
 		break;
 	case 'commonswiki':
-		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		break;
 	case 'cswiktionary':
 		$wgAbuseFilterNotifications = "udp";
