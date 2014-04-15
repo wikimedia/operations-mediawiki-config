@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_d3597d2e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-04-15T07:04:24Z",
+      "side": 1,
+      "message": "Why on earth would I merge it to core? I hate the feature.",
+      "parentUuid": "8e23439c_01631e0b",
+      "revId": "6eea7e4c9f8a9226fd4466fffc2f9fc84a48ba95",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_92aaf4cf",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 1
