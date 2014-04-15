@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "8e23439c_81684ef3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-04-15T05:26:23Z",
+      "side": 1,
+      "message": "REL1_23 was already branched so I doubt this will happen in 1.23.",
+      "revId": "6eea7e4c9f8a9226fd4466fffc2f9fc84a48ba95",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_92aaf4cf",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 1
