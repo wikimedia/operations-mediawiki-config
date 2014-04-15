@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_01631e0b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-04-15T05:50:23Z",
+      "side": 1,
+      "message": "Chad, you\u0027re still on time to merge the change in core. :) Backport is cheap before release.",
+      "parentUuid": "8e23439c_81684ef3",
+      "revId": "6eea7e4c9f8a9226fd4466fffc2f9fc84a48ba95",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_92aaf4cf",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 1
