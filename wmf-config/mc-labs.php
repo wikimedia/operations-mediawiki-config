@@ -24,7 +24,7 @@ $wgObjectCaches['beta-memcached-eqiad'] = array(
 	'serializer' => 'php',
 	'persistent' => false,
 	'servers'    => (
-		defined( 'HHVM_VERSION' ) ? array(
+		( defined( 'HHVM_VERSION' ) && false ) ? array(
 			0 => '10.68.17.69:11211',  # deployment-memc04.eqiad
 			1 => '10.68.17.71:11211',  # deployment-memc05.eqiad
 		) : array(
