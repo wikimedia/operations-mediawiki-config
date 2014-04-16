@@ -11114,6 +11114,12 @@ $wgConf->settings = array(
 		'.metadata',
 		// b/c rules, @todo: consider just whacking class="noexcerpt" on these
 		'span.coordinates', 'span.geo-multi-punct', 'span.geo-nondefault', '#coordinates',
+		// removes ToC templates on WikiVoyage
+		'.topbanner',
+		// removes hatnotes from everywhere
+		'.dablink',
+		// removes the definition lists used in untemplated hatenotes
+		'dl',
 	),
 ),
 
