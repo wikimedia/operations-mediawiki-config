@@ -39,6 +39,9 @@ $wgJobTypeConf['cirrusSearchLinksUpdateSecondary'] = array( 'checkDelay' => true
 # have many small shards.  We don't do that in production and we could use the speed.
 $wgCirrusSearchMoreAccurateScoringMode = false;
 
+# Raise the refresh interval to save some CPU at the cost of being slightly less realtime.
+$wgCirrusSearchRefreshInterval = 30;
+
 # Settings customized per index.
 $wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
 $wgCirrusSearchUseAggressiveSplitting = $wmgCirrusSearchUseAggressiveSplitting;
