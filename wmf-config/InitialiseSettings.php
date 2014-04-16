@@ -11146,24 +11146,6 @@ $wgConf->settings = array(
 		'default' => 1,
 ),
 
-'wmgMFRemovableClasses' => array(
-	'default' => array(
-		'base' => array(
-		),
-		'HTML' => array(
-		),
-		'WML' => array(
-			'.topicon',
-			'.metadata',
-		),
-		'extracts' => array(
-			'.metadata',
-			'#coordinates',
-			'span.geo-multi-punct',
-			'span.geo-nondefault',
-		),
-	),
-),
 'wmgMFCustomLogos' => array(
 	'default' => array(),
 	'enwiki' => array(
