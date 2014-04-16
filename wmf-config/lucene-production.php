@@ -7,7 +7,6 @@
 
 # default host for mwsuggest backend
 $wgEnableLucenePrefixSearch = true;
-#$wgLucenePrefixHost = '10.2.1.15'; # pmtpa LVS search-prefix pool
 $wgLucenePrefixHost = '10.2.2.15'; # eqiad LVS search-prefix pool
 
 $wgLucenePort = 8123;
