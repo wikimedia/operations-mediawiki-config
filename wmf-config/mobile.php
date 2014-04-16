@@ -19,12 +19,6 @@ if ( $wmgMobileFrontend ) {
 	if ( $wmgMobileFrontendLogo ) {
 		$wgMobileFrontendLogo = $wmgMobileFrontendLogo;
 	}
-	foreach( array_keys( $wgMFRemovableClasses ) as $class ) {
-		$wgMFRemovableClasses[$class] = array_merge(
-			$wgMFRemovableClasses[$class],
-			$wmgMFRemovableClasses[$class]
-		);
-	}
 	if ( $wmgMFCustomLogos ) {
 		if ( isset( $wmgMFCustomLogos['copyright'] ) ) {
 			$wmgMFCustomLogos['copyright'] = str_replace( '{wgExtensionAssetsPath}', $wgExtensionAssetsPath, $wmgMFCustomLogos['copyright'] );
