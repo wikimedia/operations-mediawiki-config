@@ -10414,6 +10414,7 @@ $wgConf->settings = array(
 		'*.lndb.lv',                     // Latvijas Nacionālā Bibliotēka
 		'*.memorix.nl',                  // Archief Eemland
 		'*.openbeelden.nl',              // Open Beelden
+		'*.panoramio.com',               // Panoramio by Google
 		'*.raa.se',                      // Swedish National Heritage Board
 		'*.rbge.org.uk',                 // Royal Botanic Garden Edinburgh
 		'*.rijksmuseum.nl',              // Rijksmuseum
@@ -10422,7 +10423,7 @@ $wgConf->settings = array(
 		'musees.cg70.fr',                // Musées de la Haute-Saône (prod)  Bug 63449
 		'*.musees.cg70.fr',              // Musées de la Haute-Saône (prod)  Bug 63449
 		'*.wikimedia.ch',                // Wikimedia CH
-		'link.nypl.org',		 // New York Public Library
+		'link.nypl.org',                 // New York Public Library
 	),
 ),
 
