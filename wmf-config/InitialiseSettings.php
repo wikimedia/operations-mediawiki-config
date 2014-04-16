@@ -12751,6 +12751,9 @@ $wgConf->settings = array(
 	'ilowiki' => array(
 		'sort' => 'alphabetic',
 	),
+	'itwikisource' => array(
+		'otherProjectsLinks' => array( 'itwiki', 'itwikiquote', 'commonswiki', 'itwikivoyage' ),
+	),
 	'lbwiki' => array(
 		'sort' => 'alphabetic',
 	),
