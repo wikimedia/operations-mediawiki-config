@@ -1,0 +1,9 @@
+Verified+2: jenkins-bot
+Code-Review+1: Lydia Pintscher <lydia.pintscher@wikimedia.de>
+Code-Review+2: Mwalker <mwalker@wikimedia.org>
+Code-Review+1: John F. Lewis <johnflewis93@gmail.com>
+Submitted-by: jenkins-bot
+Submitted-at: Wed, 16 Apr 2014 23:02:21 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/126223
+Project: operations/mediawiki-config
+Branch: refs/heads/master
