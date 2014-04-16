@@ -58,7 +58,7 @@ if ( getenv( 'WIKIBACKUP' ) && !function_exists( 'utf8_normalize' ) ) {
 
 ### Determine realm and cluster we are on #############################
 # $cluster is an historical variable used for the WMF MW conf
-$cluster = 'pmtpa';
+$cluster = 'eqiad';
 
 # $wmfRealm should be the realm as puppet understand it.
 # The possible values as of June 2012 are:
@@ -79,7 +79,7 @@ switch( $wmfRealm ) {
 	case 'production':
 	default:
 		$wmfRealm = 'production';
-		$cluster = 'pmtpa';
+		$cluster = 'eqiad';
 		break;
 }
 ### End /Determine realm and cluster we are on/ ########################
