@@ -6071,6 +6071,7 @@ $wgConf->settings = array(
 	'arwikisource' => true,
 	'bgwiki' => true,
 	'bnwiki' => true, // bug 11042
+	'brwikimedia' => true, // bug 63345
 	'cawiki' => true,
 	'commonswiki' => true, // bug 22834
 	'dawiki' => true, // wegge asked in #wikimedia-tech 2006-03-01
@@ -6549,6 +6550,9 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true, ),
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ),
 		'sysop' => array( 'upload' => true, 'autopatrol' => false, ),
+	),
+	'brwikimedia' => array( // bug 63345
+		'autopatrolled' => array( 'autopatrol' => true, ),
 	),
 	'bswiki' => array(
 		'patroller' => array( 'patrol' => true ),
