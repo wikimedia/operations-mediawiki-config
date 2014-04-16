@@ -11185,6 +11185,7 @@ $wgConf->settings = array(
 		'base' => array(
 		),
 		'HTML' => array(
+			'dl',
 		),
 		'WML' => array(
 			'.topicon',
@@ -11195,6 +11196,9 @@ $wgConf->settings = array(
 			'#coordinates',
 			'span.geo-multi-punct',
 			'span.geo-nondefault',
+			'.topbanner',
+			'.dablink',
+			'.noexcerpt',
 		),
 	),
 ),
