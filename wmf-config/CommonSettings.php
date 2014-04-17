@@ -1464,6 +1464,22 @@ if ( $wmgUseCentralNotice ) {
 	// 2013-12-02 we're now using a 10 month expiration.
 	$wgNoticeCookieShortExpiry = 1209600; // 2 weeks
 	$wgNoticeCookieLongExpiry = 25920000; // 10 months
+
+	// Bug 16821 
+	// Updates made here also need to be reflected in 
+	// wikimediafoundation.org/wiki/Template:HideBanners 
+	$wgNoticeHideUrls = array(
+		'//en.wikipedia.org/wiki/Special:HideBanners',
+		'//meta.wikimedia.org/wiki/Special:HideBanners',
+		'//commons.wikimedia.org/wiki/Special:HideBanners',
+		'//species.wikimedia.org/wiki/Special:HideBanners',
+		'//en.wikibooks.org/wiki/Special:HideBanners',
+		'//en.wikiquote.org/wiki/Special:HideBanners',
+		'//en.wikisource.org/wiki/Special:HideBanners',
+		'//en.wikinews.org/wiki/Special:HideBanners',
+		'//en.wikiversity.org/wiki/Special:HideBanners',
+		'//www.mediawiki.org/wiki/Special:HideBanners',
+	);
 }
 
 // Load our site-specific l10n extensions
