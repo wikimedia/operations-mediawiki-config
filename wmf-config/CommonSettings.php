@@ -1623,11 +1623,8 @@ $wgHiddenPrefs[] = 'wikieditor-preview';
 $wgHiddenPrefs[] = 'wikieditor-previewDialog';
 $wgHiddenPrefs[] = 'wikieditor-publish';
 $wgHiddenPrefs[] = 'wikieditor-highlight';
-if ( $wmgUsabilityEnforce ) {
-	$wgEditToolbarGlobalEnable = false;
-	$wgDefaultUserOptions['usebetatoolbar'] = 1;
-	$wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
-}
+$wgDefaultUserOptions['usebetatoolbar'] = 1;
+$wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 
 // For Babaco... these are still experimental, won't be on by default
 $wgNavigableTOCUserEnable = true;

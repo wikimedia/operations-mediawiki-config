@@ -10444,10 +10444,6 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
-'wmgUsabilityEnforce' => array(
-	'default' => true,
-),
-
 'wmgUseFooterContactLink' => array(
 	// Make sure 'MediaWiki:Contact' and 'MediaWiki:Contact-url' are defined.
 	'default' => false,
