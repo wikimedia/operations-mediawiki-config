@@ -8881,6 +8881,7 @@ $wgConf->settings = array(
 	'lawikibooks' => array( 'w' ),
 	'lawikisource' => array( 'ca', 'de', 'el', 'en', 'es', 'fr', 'it', 'pt', 'ro', 'w', 'b', 'oldwikisource' ),
 	'lbwiktionary' => array( 'w:fr', 'fr', 'w:en', 'en', 'w', 'meta' ),
+	'legalteamwiki' => array( 'meta' ),
 	'liwikinews' => array( 'incubator' ),
 	'lmowiki' => array( 'ca', 'en', 'fr' ), # bug 8319
 	'mdfwiki' => array( 'incubator' ),
