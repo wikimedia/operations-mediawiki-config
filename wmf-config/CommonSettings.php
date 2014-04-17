@@ -1284,6 +1284,29 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthAutoMigrate = true;
 }
 
+// Config for GlobalCssJs
+// Only enable on CentralAuth wikis
+// This is production specific for testing,
+// labs config is in CommonSettings-labs.php -- legoktm 04/17/14
+if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth && $wmfRealm == 'production' ) {
+	require_once( "$IP/extensions/GlobalCssJs/GlobalCssJs.php" );
+
+	// Disable site-wide global css/js
+	$wgUseGlobalSiteCssJs = false;
+
+	// Setup test2wiki as central wiki
+	$wgResourceLoaderSources['test2wiki'] = array(
+		'apiScript' => '//test2.wikipedia.org/w/api.php',
+		'loadScript' => '//bits.wikimedia.org/test2.wikipedia.org/load.php',
+	);
+
+	$wgGlobalCssJsConfig = array(
+		'wiki' => 'test2wiki',
+		'source' => 'test2wiki',
+	);
+}
+
+
 // taking it live 2006-12-15 brion
 if ( $wmgUseDismissableSiteNotice ) {
 	require( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
