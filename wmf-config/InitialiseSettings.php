@@ -11101,6 +11101,14 @@ $wgConf->settings = array(
 'wmgEnableTextExtracts' => array(
 	'default' => true,
 ),
+'wmgExtractsRemoveClasses' => array(
+	'default' => array(
+		// This is a good thing to remove in any case
+		'.metadata',
+		// b/c rules, @todo: consider just whacking class="noexcerpt" on these
+		'span.coordinates', 'span.geo-multi-punct', 'span.geo-nondefault', '#coordinates',
+	),
+),
 
 'wmgZeroRatedMobileAccess' => array(
 	'default' => false,
