@@ -9861,6 +9861,12 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgUseGlobalCssJs' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
+
 'wmgUseOAuth' => array(
 	'default' => true,
 	'private' => false,
