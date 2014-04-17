@@ -12509,13 +12509,6 @@ $wgConf->settings = array(
 	'private' => false,
 ),
 
-'wmgUseMicroDesign' => array(
-	'default' => false,
-	'testwiki' => true,
-	'enwiki' => true,
-	'itwikivoyage' => true,
-),
-
 'wmgDisableUnmergedEdits' => array(
 	'default' => false,
 	'wikivoyage' => false,
