@@ -12421,6 +12421,7 @@ $wgConf->settings = array(
 		'User talk:Jorm (WMF)',
 		'Talk:Beta Features/Hovercards',
 		'Talk:Compact Personal Bar',
+		'Talk:Beta Features/Nearby Pages',
 	),
 	'enwiki' => array( // Bug 60178
 		'Wikipedia talk:WikiProject Breakfast',
