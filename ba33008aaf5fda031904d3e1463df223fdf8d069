@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_6de7440e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11188,
+      "author": {
+        "id": 1434
+      },
+      "writtenOn": "2014-04-18T13:33:19Z",
+      "side": 1,
+      "message": "In the Avalance article - https://en.wikipedia.org/wiki/Avalanche - \"This article refers to…\" is enclosed in a classless `dl`\n\nShould this be elsewhere?",
+      "parentUuid": "8e23439c_fde794dd",
+      "revId": "ba33008aaf5fda031904d3e1463df223fdf8d069",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_b78a4d1a",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2014-04-18T04:12:38Z",
       "side": 1,
       "message": "This one is already blacklisteed.",
+      "revId": "ba33008aaf5fda031904d3e1463df223fdf8d069",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_8dece0f3",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11201,
+      "author": {
+        "id": 1434
+      },
+      "writtenOn": "2014-04-18T13:33:19Z",
+      "side": 1,
+      "message": "Removed",
+      "parentUuid": "8e23439c_b78a4d1a",
       "revId": "ba33008aaf5fda031904d3e1463df223fdf8d069",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
