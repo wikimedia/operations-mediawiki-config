@@ -2397,6 +2397,22 @@ $wgConf->settings = array(
 	'+barwiki' => array(
 		'Portal_Diskussion' => 101, // Bug 41962 - now "Portal Dischkrian"
 	),
+	'+betawikiversity' => array(
+		'Aptarimas' => NS_TALK,
+		'Naudotojas' => NS_USER,
+		'Naudotojo_aptarimas' => NS_USER_TALK,
+		'Vikiversitetas' => NS_PROJECT,
+		'Vikiversiteto_aptarimas' => NS_PROJECT_TALK,
+		'Vaizdas' => NS_FILE,
+		'Vaizdo_aptarimas' => NS_FILE_TALK,
+		'MediaWiki_aptarimas' => NS_MEDIAWIKI_TALK,
+		'Šablonas' => NS_TEMPLATE,
+		'Šablono_aptarimas' => NS_TEMPLATE_TALK,
+		'Pagalba' => NS_HELP,
+		'Pagalbos_aptarimas' => NS_HELP_TALK,
+		'Kategorija' => NS_CATEGORY,
+		'Kategorijos_aptarimas' => NS_CATEGORY_TALK,
+	), // Bug 64080
 	'+bewiki' => array(
 		'Portal' => 100,
 		'Portal_talk' => 101,
