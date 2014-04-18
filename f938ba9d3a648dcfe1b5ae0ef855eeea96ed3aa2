@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_70fa7b41",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 11118,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-04-18T17:45:00Z",
+      "side": 1,
+      "message": "These are divs, so are already removed.",
+      "revId": "f938ba9d3a648dcfe1b5ae0ef855eeea96ed3aa2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_30064324",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 11121,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-04-18T17:45:00Z",
+      "side": 1,
+      "message": "Typo.",
+      "revId": "f938ba9d3a648dcfe1b5ae0ef855eeea96ed3aa2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_8b3728e0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 11122,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2014-04-18T17:45:00Z",
+      "side": 1,
+      "message": "I\u0027m not convinced that indiscriminately removing all the definition lists is a good thing to do.",
+      "revId": "f938ba9d3a648dcfe1b5ae0ef855eeea96ed3aa2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
