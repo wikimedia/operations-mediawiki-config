@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_a17563ca",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2403,
+      "author": {
+        "id": 535
+      },
+      "writtenOn": "2014-04-18T23:22:52Z",
+      "side": 1,
+      "message": "This needs to be \u0027Naudotojo_aptarimas\u0027 with underscore \u003chttps://www.mediawiki.org/w/index.php?title\u003dManual:$wgNamespaceAliases\u0026oldid\u003d705823#Do_not_use_spaces\u003e",
+      "revId": "c435fcd6650e8f0ce2667a0fb82ca98e401c48b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_817ca7b5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2405,
+      "author": {
+        "id": 535
+      },
+      "writtenOn": "2014-04-18T23:22:52Z",
+      "side": 1,
+      "message": "Change space to underscore.",
+      "revId": "c435fcd6650e8f0ce2667a0fb82ca98e401c48b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_61774bd0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2407,
+      "author": {
+        "id": 535
+      },
+      "writtenOn": "2014-04-18T23:22:52Z",
+      "side": 1,
+      "message": "space -\u003e underscore",
+      "revId": "c435fcd6650e8f0ce2667a0fb82ca98e401c48b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_41868fad",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2408,
+      "author": {
+        "id": 535
+      },
+      "writtenOn": "2014-04-18T23:22:52Z",
+      "side": 1,
+      "message": "ditto",
+      "revId": "c435fcd6650e8f0ce2667a0fb82ca98e401c48b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_21815392",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2410,
+      "author": {
+        "id": 535
+      },
+      "writtenOn": "2014-04-18T23:22:52Z",
+      "side": 1,
+      "message": "same",
+      "revId": "c435fcd6650e8f0ce2667a0fb82ca98e401c48b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_01509735",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2412,
+      "author": {
+        "id": 535
+      },
+      "writtenOn": "2014-04-18T23:22:52Z",
+      "side": 1,
+      "message": "same",
+      "revId": "c435fcd6650e8f0ce2667a0fb82ca98e401c48b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_e1523b3e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2414,
+      "author": {
+        "id": 535
+      },
+      "writtenOn": "2014-04-18T23:22:52Z",
+      "side": 1,
+      "message": "same",
+      "revId": "c435fcd6650e8f0ce2667a0fb82ca98e401c48b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
