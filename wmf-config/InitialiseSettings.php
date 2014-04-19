@@ -7665,6 +7665,12 @@ $wgConf->settings = array(
 			'abusefilter-hide-log' => true, // Andrew, 2010-08-28
 			'abusefilter-hidden-log' => true, // Andrew, 2010-08-28
 		),
+
+		# Give checkuser and checkuser-log permissions to the checkuser group on all wikis -- see #43389
+		'checkuser' => array(
+			'checkuser' => true,
+			'checkuser-log' => true,
+		),
 	),
 ),
 # @} end of wgGroupOverrides2
