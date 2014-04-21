@@ -6370,6 +6370,11 @@ $wgConf->settings = array(
 			'ip'   => array( 700, 30 ),
 			'user' => array( 700, 30 ),
 		),
+		'renderfile-nonstandard' => array(
+			// 140 new thumbnails per minute
+			'ip'   => array( 70, 30 ),
+			'user' => array( 70, 30 ),
+		),
 	),
 	'+dewiki' => array( // bug 57820
 		'rollback' => array(
