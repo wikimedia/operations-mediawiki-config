@@ -37,18 +37,6 @@ $wgPoolCounterConf = array(
 		'workers' => 1,
 		'maxqueue' => 100
 	),
-	'downloadpdf' => array(
-		'class' => 'PoolCounter_Client',
-		'timeout' => 10,
-		'workers' => 2,
-		'maxqueue' => 5
-	),
-	'downloadtiff' => array(
-		'class' => 'PoolCounter_Client',
-		'timeout' => 10,
-		'workers' => 2,
-		'maxqueue' => 5
-	),
 	'GetLocalFileCopy' => array(
 		'class' => 'PoolCounter_Client',
 		'timeout' => 10,
