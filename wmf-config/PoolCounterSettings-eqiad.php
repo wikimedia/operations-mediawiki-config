@@ -39,20 +39,20 @@ $wgPoolCounterConf = array(
 	),
 	'downloadpdf' => array(
 		'class' => 'PoolCounter_Client',
-		'timeout' => 40,
-		'workers' => 3,
-		'maxqueue' => 50
+		'timeout' => 10,
+		'workers' => 2,
+		'maxqueue' => 5
 	),
 	'downloadtiff' => array(
 		'class' => 'PoolCounter_Client',
-		'timeout' => 40,
-		'workers' => 3,
-		'maxqueue' => 50
+		'timeout' => 10,
+		'workers' => 2,
+		'maxqueue' => 5
 	),
 	'GetLocalFileCopy' => array(
 		'class' => 'PoolCounter_Client',
-		'timeout' => 40,
-		'workers' => 3,
-		'maxqueue' => 50
+		'timeout' => 10,
+		'workers' => 2,
+		'maxqueue' => 5
 	)
 );
