@@ -59,12 +59,6 @@ if ( $wgDBname == 'commonswiki' ) {
 	$wgCirrusSearchExtraIndexes[ NS_FILE ] = array( 'commonswiki_file' );
 }
 
-
-// Temporarily lower redundancy for enwiki to save some space.
-if ( $wgDBname == 'enwiki' ) {
-	$wgCirrusSearchReplicaCount = array( 'content' => 1, 'general' => 1 );
-}
-
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
