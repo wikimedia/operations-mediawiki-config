@@ -10765,6 +10765,10 @@ $wgConf->settings = array(
 	'cawiki' => true,
 	'huwiki' => true,
 	'enwikivoyage' => true,
+	// TODO disabée 2014-05-22
+	'dewiki' => true,
+	'frwiki' => true,
+	'ptwiki' => true,
 ),
 
 'wmgNetworkPerformanceSamplingFactor' => array(
