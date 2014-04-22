@@ -5902,7 +5902,6 @@ $wgConf->settings = array(
 		'welcome-url',
 		// Other
 		'contact-url',
-		'privacypage',
 		'aboutpage',
 		'disclaimerpage',
 		'copyright',
