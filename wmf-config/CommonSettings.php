@@ -1809,7 +1809,9 @@ if ( $wmgUseUploadWizard ) {
 
 if ( $wmgUseBetaFeatures ) {
 	require_once( "$IP/extensions/BetaFeatures/BetaFeatures.php" );
-	$wgBetaFeaturesWhitelist = $wmgBetaFeaturesWhitelist;
+	if ( isset( $wmgBetaFeaturesWhitelist ) ) {
+		$wgBetaFeaturesWhitelist = $wmgBetaFeaturesWhitelist;
+	}
 }
 
 if ( $wmgUseCommonsMetadata ) {
