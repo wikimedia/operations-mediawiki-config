@@ -10025,7 +10025,8 @@ $wgConf->settings = array(
 'wmgUseCollection' => array(
 	// PDF generation / PediaPress stuff
 	'default' => false,
-	'testwiki' => true,
+	// Disabled for server migration
+	/**	'testwiki' => true,
 	'test2wiki' => true,
 	'alswiki' => true, # Bug 18517
 	'arwiki' => true, # bug 33828
@@ -10106,7 +10107,7 @@ $wgConf->settings = array(
 	'wikisource' => true, # 2009-02-24
 	'wikimania' => true,
 	'wikinews' => true,
-	'wikivoyage' => true,
+	'wikivoyage' => true, */
 ),
 
 'wmgCollectionPortletForLoggedInUsersOnly' => array(
