@@ -10705,14 +10705,15 @@ $wgConf->settings = array(
 //
 // DO NOT add entries here without OK from Greg Grossmeier or James Forrester.
 'wmgBetaFeaturesWhitelist' => array(
-	'visualeditor-enable',          // VisualEditor – on-going (special permission)
-
-	'math-enable-visualeditor',     // 2014-05-21 – VE formula editor
-	'multimedia-viewer',            // 2014-05-21 – MediaViewer
-	'betafeatures-geonotahack',     // 2014-05-21 – Near this page
-	'cirrussearch-default',         // 2014-06-09 – New Seach
-	'uls-compact-links',            // 2014-09-06 – Compact language links
-	'popups',                       // 2014-09-18 – Hovercards
+	'default' => array(
+		'visualeditor-enable',          // VisualEditor – on-going (special permission)
+		'math-enable-visualeditor',     // 2014-05-21 – VE formula editor
+		'multimedia-viewer',            // 2014-05-21 – MediaViewer
+		'betafeatures-geonotahack',     // 2014-05-21 – Near this page
+		'cirrussearch-default',         // 2014-06-09 – New Seach
+		'uls-compact-links',            // 2014-09-06 – Compact language links
+		'popups',                       // 2014-09-18 – Hovercards
+	),
 ),
 
 'wmgUseCommonsMetadata' => array(
