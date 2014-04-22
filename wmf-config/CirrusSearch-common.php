@@ -46,6 +46,8 @@ $wgCirrusSearchRefreshInterval = 30;
 $wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
 $wgCirrusSearchUseAggressiveSplitting = $wmgCirrusSearchUseAggressiveSplitting;
 $wgCirrusSearchPreferRecentDefaultDecayPortion = $wmgCirrusSearchPreferRecentDefaultDecayPortion;
+$wgCirrusSearchUseExperimentalHighlighter = $wmgCirrusSearchUserExperimentalHighlighter;
+$wgCirrusSearchOptimizeIndexForExperimentalHighlighter = $wmgCirrusSearchUserExperimentalHighlighter;
 
 // Commons is special
 if ( $wgDBname == 'commonswiki' ) {
