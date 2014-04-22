@@ -13001,6 +13001,14 @@ $wgConf->settings = array(
 	'zhwikisource' => array( 'content' => 3, 'general' => 1 ),
 ),
 
+'wmgCirrusSearchUserExperimentalHighlighter' => array(
+	'default' => false,
+	'mediawikiwiki' => true,
+	'test2wiki' => true,
+	'testwiki' => true,
+	'testwikidatawiki' => true,
+),
+
 'wmgUseCite' => array(
 	'default' => true,
 	'loginwiki' => false,
