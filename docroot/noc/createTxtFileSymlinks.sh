@@ -24,7 +24,6 @@ mwconfig_files_txt=(
 	wmf-config/liquidthreads.php
 	wmf-config/logging-labs.php
 	wmf-config/lucene-common.php
-	wmf-config/lucene-labs.php
 	wmf-config/lucene-production.php
 	wmf-config/mc.php
 	wmf-config/mc-labs.php

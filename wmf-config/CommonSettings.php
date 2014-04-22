@@ -878,7 +878,7 @@ $wgDisableTextSearch   = true;
 $wgDisableSearchUpdate = true;
 
 # Better make sure the global setting is enabled
-$wgUseLuceneSearch = true;
+$wgUseLuceneSearch = $wmfRealm != 'labs';
 if ( $wgUseLuceneSearch ) {
 	wfProfileIn( "$fname-lucene" );
 	include( "$wmfConfigDir/lucene-common.php" );
