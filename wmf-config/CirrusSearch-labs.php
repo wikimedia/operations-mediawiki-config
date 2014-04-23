@@ -23,5 +23,7 @@ if ( $wgDBname == 'enwiki' ) {
 	);
 }
 
+$wgSearchTypeAlternatives = array();
+
 $wgCirrusSearchUseExperimentalHighlighter = true;
 $wgCirrusSearchOptimizeIndexForExperimentalHighlighter = true;
