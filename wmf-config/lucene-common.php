@@ -11,8 +11,6 @@
 #
 # Contact Wikimedia operations or platform engineering for more details.
 
-$wgDisableTextSearch = false;
-
 // Allow nagios configuration queries without requiring MediaWiki environment
 if ( defined( 'MEDIAWIKI' ) ) {
 	$wgSearchType = 'LuceneSearch';

@@ -873,9 +873,6 @@ $wgDisableCounters     = true;
 wfProfileOut( "$fname-misc2" );
 
 # :SEARCH:
-# This is overridden in the Lucene section below
-$wgDisableTextSearch   = true;
-$wgDisableSearchUpdate = true;
 
 # Better make sure the global setting is enabled
 $wgUseLuceneSearch = $wmfRealm != 'labs';
@@ -888,7 +885,6 @@ if ( $wgUseLuceneSearch ) {
 if ( $wmgUseCirrus || $wmgUseCirrusAsAlternative ) {
 	wfProfileIn( "$fname-CirrusSearch" );
 	# Cirrus uses SearchUpdate, turn it back on
-	$wgDisableSearchUpdate = false;
 	include( "$wmfConfigDir/CirrusSearch-common.php" );
 	wfProfileOut( "$fname-CirrusSearch" );
 }
