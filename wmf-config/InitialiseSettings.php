@@ -11320,6 +11320,15 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => false,
 	),
+	'betawikiversity' => array( // bug 64168
+		'0' => false,
+		'1' => 'User %code%-1',
+		'2' => 'User %code%-2',
+		'3' => 'User %code%-3',
+		'4' => 'User %code%-4',
+		'5' => 'User %code%-5',
+		'N' => 'User %code%-N',
+	),
 	'cawiki' => array(
 		'0' => false,
 		'1' => 'Usuaris %code%-1',
@@ -11891,6 +11900,7 @@ $wgConf->settings = array(
 ),
 'wmgBabelMainCategory' => array(
 	'default' => false,
+	'betawikiversity' => 'User %code%', // bug 64168
 	'cawiki' => 'Usuaris %code%',
 	'cawiktionary' => 'Usuaris %code%', // Bug 47287
 	'checkuserwiki' => 'User %code%',
