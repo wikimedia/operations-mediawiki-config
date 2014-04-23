@@ -12,12 +12,19 @@
 	"enwikiversity": "php-master",
 	"enwiktionary": "php-master",
 	"eowiki": "php-master",
+	"fawiki": "php-master",
 	"hewiki": "php-master",
+	"hiwiki": "php-master",
+	"jawiki": "php-master",
+	"kowiki": "php-master",
 	"labswiki": "php-master",
 	"loginwiki": "php-master",
 	"metawiki": "php-master",
+	"ruwiki": "php-master",
 	"simplewiki": "php-master",
 	"sqwiki": "php-master",
 	"testwiki": "php-master",
-	"wikidatawiki": "php-master"
+	"ukwiki": "php-master",
+	"wikidatawiki": "php-master",
+	"zhwiki": "php-master"
 }
