@@ -12634,6 +12634,11 @@ $wgConf->settings = array(
 		'assoc' => 'Association',
 		'ldbwiki' => 'Location Database Wiki',
 	),
+	// Further languages for Wikidata not (yet) supported by MediaWiki (bug 59905)
+	'testwikidatawiki' => array(
+		'rwr' => 'मारवाड़ी',
+		'ora' => 'Ottoman Turkish',
+	),
 ),
 
 'wgContentHandlerUseDB' => array(
