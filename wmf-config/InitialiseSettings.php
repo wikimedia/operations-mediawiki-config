@@ -2129,8 +2129,8 @@ $wgConf->settings = array(
 	'nowikinews'    => 'Wikinytt',
 	'nowikisource'  => 'Wikikilden',
 	'nvwiki'	=> 'Wikiibíídiiya',
-	'nycwikimedia'  => 'Wikimedia', // http://bugzilla.wikimedia.org/show_bug.cgi?id=29273
-	'ocwiki'	=> 'Wikipèdia', # http://bugzilla.wikimedia.org/show_bug.cgi?id=7123
+	'nycwikimedia'  => 'Wikimedia', // bug 29273
+	'ocwiki'	=> 'Wikipèdia', // bug 7123
 	'ocwikibooks'   => 'Wikilibres',
 	'ocwiktionary'  => 'Wikiccionari',
 	'officewiki'    => 'OfficeWiki', // bug 64976
@@ -4236,7 +4236,7 @@ $wgConf->settings = array(
 		100 => 'Projekt',
 		101 => 'Projektdiskussion',
 	),
-	'stewardwiki' => array( // http://bugzilla.wikimedia.org/show_bug.cgi?id=28773
+	'stewardwiki' => array( // bug 28773
 		100 => 'Case',
 		101 => 'Case_talk',
 		102 => 'Archive',
@@ -4429,7 +4429,7 @@ $wgConf->settings = array(
 		101 => 'Portal_Discusión',
 		102 => 'Wikiproyecto',
 		103 => 'Wikiproyecto_Discusión',
-		104 => 'Anexo', # http://bugzilla.wikimedia.org/show_bug.cgi?id=9304
+		104 => 'Anexo', // bug 9304
 		105 => 'Anexo_Discusión',
 	),
 	'etwiki' => array(
@@ -4888,7 +4888,7 @@ $wgConf->settings = array(
 	),
 	'cawikisource' => array(
 		# 100, 101 reserved for Portal
-		102 => 'Pàgina', // http://bugzilla.wikimedia.org/show_bug.cgi?id=15784
+		102 => 'Pàgina', // bug 15784
 		103 => 'Pàgina_Discussió',
 		104 => 'Llibre',
 		105 => 'Llibre_Discussió',
@@ -4906,7 +4906,7 @@ $wgConf->settings = array(
 		107 => 'Sgwrs_Indecs',     //Bug 39264
 	),
 	'dawikisource' => array(
-		102 => 'Forfatter', // http://bugzilla.wikimedia.org/show_bug.cgi?id=7796
+		102 => 'Forfatter', // bug 7796
 		103 => 'Forfatterdiskussion',
 		104 => 'Side', // bug 24440
 		105 => 'Sidediskussion',
@@ -4914,9 +4914,9 @@ $wgConf->settings = array(
 		107 => 'Indeksdiskussion',
 	),
 	'dewikisource' => array(
-		102 => 'Seite', // http://bugzilla.wikimedia.org/show_bug.cgi?id=11101
+		102 => 'Seite', // bug 11101
 		103 => 'Seite_Diskussion',
-		104 => 'Index', // http://bugzilla.wikimedia.org/show_bug.cgi?id=11101
+		104 => 'Index', // bug 11101
 		105 => 'Index_Diskussion',
 	),
 	'elwikisource' => array(
@@ -4946,7 +4946,7 @@ $wgConf->settings = array(
 		107 => 'Indekso-Diskuto',
 	),
 	'eswikisource' => array(
-		102 => 'Página', // http://bugzilla.wikimedia.org/show_bug.cgi?id=15775
+		102 => 'Página', // bug 15775
 		103 => 'Página_Discusión',
 		104 => 'Índice',
 		105 => 'Índice_Discusión',
@@ -5326,7 +5326,7 @@ $wgConf->settings = array(
 		101 => "بحث_پیوست",
 	),
 	'fiwiktionary' => array(
-		100 => 'Liite', // http://bugzilla.wikimedia.org/show_bug.cgi?id=11672
+		100 => 'Liite', // bug 11672
 		101 => 'Keskustelu_liitteestä',
 	),
 	'frwiktionary' => array(
@@ -5469,7 +5469,7 @@ $wgConf->settings = array(
 		100 => 'Портал',
 		101 => 'Разговор_о_порталу'
 	),
-	'svwiktionary' => array(    # http://bugzilla.wikimedia.org/show_bug.cgi?id=7933
+	'svwiktionary' => array(    // bug 7933
 		102 => 'Appendix',
 		103 => 'Appendixdiskussion',
 		104 => 'Rimord',
@@ -5557,18 +5557,18 @@ $wgConf->settings = array(
 		111 => 'Վիքիփոքրիկի_քննարկում', // wikijunior talk
 	),
 	'idwikibooks' => array(
-		100 => 'Resep', # http://bugzilla.wikimedia.org/show_bug.cgi?id=7124
+		100 => 'Resep', // bug 7124
 		101 => 'Pembicaraan_Resep',
 		102 => 'Wisata',
 		103 => 'Pembicaraan_Wisata',
 	),
 	'itwikibooks' => array(
-		100 => 'Progetto', # http://bugzilla.wikimedia.org/show_bug.cgi?id=8408
-		101 => 'Discussioni_progetto', # http://bugzilla.wikimedia.org/show_bug.cgi?id=11938
-		102 => 'Ripiano', # http://bugzilla.wikimedia.org/show_bug.cgi?id=11937
+		100 => 'Progetto', # bug 8408
+		101 => 'Discussioni_progetto', # bug 11938
+		102 => 'Ripiano', # bug 11937
 		103 => 'Discussioni_ripiano',
-		# Wikiversità deleted, http://bugzilla.wikimedia.org/show_bug.cgi?id=10287
-		# 102 => 'Wikiversità', # http://bugzilla.wikimedia.org/show_bug.cgi?id=7354
+		# Wikiversità deleted, bug 10287
+		# 102 => 'Wikiversità', # bug 7354
 		# 103 => 'Discussioni_Wikiversità',
 	),
 	'jawikibooks' => array(
@@ -6728,7 +6728,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
 	),
-	'+checkuserwiki'  => array( // http://bugzilla.wikimedia.org/show_bug.cgi?id=28781
+	'+checkuserwiki'  => array( // bug 28781
 		'autoconfirmed' => array(
 			'autoconfirmed' => false,
 			'editsemiprotected' => false,
@@ -6825,7 +6825,7 @@ $wgConf->settings = array(
 	'commonswiki' => array(
 		'user' => array(
 			'move' => false, // requested by Bdka on #wikimedia-tech, 2006-05-04
-			'upload' => true, // exception for https://bugzilla.wikimedia.org/show_bug.cgi?id=12556
+			'upload' => true, // exception for bug 12556
 		),
 		'rollbacker' => array( 'rollback' => true ),
 		'patroller' => array( 'autopatrol' => true, 'patrol' => true, 'abusefilter-log-detail' => true ),
@@ -6842,10 +6842,10 @@ $wgConf->settings = array(
 	'dewiki' => array(
 		'user' => array(
 			'move' => false, // Report by sansculotte on #mediawiki, TS 2004-10-15
-			'upload' => false, // http://bugzilla.wikimedia.org/show_bug.cgi?id=12391
+			'upload' => false, // bug 12391
 		),
 		'autoconfirmed' => array(
-			'upload' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=12391
+			'upload' => true, // bug 12391
 		),
 		'editor' => array(
 			'rollback' => true, // per DaBPunkt's request, 2008-05-07
@@ -6878,7 +6878,7 @@ $wgConf->settings = array(
 	),
 	'+elwiktionary' => array(
 		'interface_editor' => array( 'editinterface' => true ),
-		'autopatrolled' => array( 'autopatrol' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28612
+		'autopatrolled' => array( 'autopatrol' => true ), // bug 28612
 	),
 	'enwiki' => array(
 		'*' => array( 'createpage' => false ),
@@ -6886,7 +6886,7 @@ $wgConf->settings = array(
 			'move' => false, // autoconfirmed only
 			'collectionsaveasuserpage' => true, // Bug 46944
 		),
-		'autoconfirmed' => array( 'patrol' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=12007
+		'autoconfirmed' => array( 'patrol' => true ), // bug 12007
 		'founder' => array( 'userrights' => true ),
 		'rollbacker' => array( 'rollback' => true ),
 		'accountcreator' => array(
@@ -6921,9 +6921,9 @@ $wgConf->settings = array(
 		'user' => array( 'move' => false ), // autoconfirmed only, per request due to wow 2007-05-08
 	),
 	'enwikisource' => array(
-		'autoconfirmed' => array( 'patrol' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=12355
+		'autoconfirmed' => array( 'patrol' => true ), // bug 12355
 		'autopatrolled' => array( 'autopatrol' => true ), # Bug 18307
-		'flood' => array( 'bot' => true ), // https://bugzilla.wikimedia.org/show_bug.cgi?id=36863
+		'flood' => array( 'bot' => true ), // bug 36863
 	),
 	'enwikiversity' => array(
 		'user' => array( 'move' => false ), // autoconfirmed only
@@ -6933,7 +6933,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'usermerge' => true ),
 		'patroller' => array( 'patrol' => true, 'rollback' => true ),
 	),
-	// http://bugzilla.wikimedia.org/show_bug.cgi?id=5033
+	// bug 5033
 	'+enwiktionary' => array(
 		'user' => array(
 			'move' => false, // requested in beer parlour, 13 june 2006
@@ -7009,7 +7009,7 @@ $wgConf->settings = array(
 	'fiwiki' => array(
 		'patroller' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
-		// https://bugzilla.wikimedia.org/show_bug.cgi?id=19561:
+		// bug 19561:
 		'arbcom' => array( 'deletedhistory' => true, 'deletedtext' => true, 'undelete' => true ),
 	),
 	'+foundationwiki' => array(
@@ -7113,8 +7113,8 @@ $wgConf->settings = array(
 			'renameuser' => true,
 		)
 	),
-	// http://bugzilla.wikimedia.org/show_bug.cgi?id=5836
-	// http://bugzilla.wikimedia.org/show_bug.cgi?id=11326
+	// bug 5836
+	// bug 11326
 	'itwiki' => array(
 		'user'	=> array( 'upload' => false, 'move' => false ),
 		'autoconfirmed' => array( 'patrol' => true, 'upload' => true ),
@@ -7124,7 +7124,7 @@ $wgConf->settings = array(
 		'filemover' => array( 'movefile' => true ), // Bug 53913
 	),
 	'+itwikisource' => array(
-		'flood' => array( 'bot' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=36600
+		'flood' => array( 'bot' => true ), // bug 36600
 	),
 	'+itwikiversity' => array( 'autoconfirmed' => array( 'patrol' => true ) ),
 	'itwikibooks' => array(
@@ -7137,7 +7137,7 @@ $wgConf->settings = array(
 	'+itwikinews' => array( 'autoconfirmed' => array( 'patrol' => true ) ),
 	'itwikiquote' => array(
 		'autoconfirmed' => array( 'patrol' => true ),
-		'autopatrolled' => array( 'autopatrol' => true ),
+		'autopatrolled' => array( 'autopatrol' => true ), // bug 62200
 		'sysop' => array( 'autopatrol' => true ),
 	),
 	'+itwikivoyage' => array(
@@ -7320,7 +7320,7 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 		'sysop' => array( 'import' => true ),
 	),
-	// http://bugzilla.wikimedia.org/show_bug.cgi?id=6303
+	// bug 6303
 	'plwiki' => array(
 		'user' => array( 'upload' => false ),
 		'autoconfirmed' => array( 'upload' => true ),
@@ -7330,7 +7330,7 @@ $wgConf->settings = array(
 		'bot' => array( 'editor' => true ), // bug 46990
 	),
 	'plwikiquote' =>  array(
-		'patroller' => array( 'patrol' => true, 'autopatrol' => true, ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28479
+		'patroller' => array( 'patrol' => true, 'autopatrol' => true, ), // bug 28479
 	),
 	'plwikisource' => array(
 		'editor' => array( 'patrolmarks' => true ),
@@ -7338,7 +7338,7 @@ $wgConf->settings = array(
 	'plwiktionary' => array(
 		'editor' => array( 'patrolmarks' => true ),
 	),
-	// http://bugzilla.wikimedia.org/show_bug.cgi?id=9024 , 10362
+	// bug 9024, 10362
 	'ptwiki' => array(
 		'autoconfirmed' => array( 'patrol' => true, 'abusefilter-log-detail' => true ),
 		'bot' => array( 'autoreviewer' => true, ),
@@ -7357,8 +7357,8 @@ $wgConf->settings = array(
 		'rollbacker' => array(
 			'rollback' => true,
 			'unwatchedpages' => true,
-			'block' => true, // https://bugzilla.wikimedia.org/show_bug.cgi?id=35261
-		), // https://bugzilla.wikimedia.org/show_bug.cgi?id=27563
+			'block' => true, // bug 35261
+		), // bug 27563
 		'user' => array(
 			'move' => false,
 			'move-rootuserpages' => false,
@@ -7522,7 +7522,7 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 	),
 	'+stewardwiki' => array(
-		'bureaucrat' => array( 'userrights' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28773
+		'bureaucrat' => array( 'userrights' => true ), // bug 28773
 	),
 	'svwiki' => array(
 		'autoconfirmed' => array( 'patrol' => true ),
@@ -7717,15 +7717,15 @@ $wgConf->settings = array(
 		'user' => array(
 			'reupload-shared' => false,
 			'reupload' => false,
-			'upload' => false, // https://bugzilla.wikimedia.org/show_bug.cgi?id=12556
+			'upload' => false, // bug 12556
 			'reupload-own' => true,
-			'move' => false, // http://bugzilla.wikimedia.org/show_bug.cgi?id=12071
+			'move' => false, // bug 12071
 			'move-subpages' => false, // for now...
 			'movefile' => false, // r93871 CR
 		),
 		'autoconfirmed' => array(
 			'reupload' => true,
-			'upload' => true, // https://bugzilla.wikimedia.org/show_bug.cgi?id=12556
+			'upload' => true, // bug 12556
 			'move' => true,
 			'collectionsaveasuserpage' => true,
 			'collectionsaveascommunitypage' => true,
@@ -7913,7 +7913,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller', 'rollbacker' ),
 	),
 	'+enwikisource' => array(
-		'bureaucrat' => array( 'autopatrolled', 'flood' ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=36863
+		'bureaucrat' => array( 'autopatrolled', 'flood' ), // bug 36863
 		'sysop' => array( 'abusefilter', 'autopatrolled' ),
 	),
 	'+enwiktionary' => array(
@@ -7991,7 +7991,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller' ),
 	),
 	'+itwikiquote' => array(
-		'sysop' => array( 'autopatrolled' ),
+		'sysop' => array( 'autopatrolled' ), // bug 62200
 	),
 	'+itwikivoyage' => array(
 		'sysop' => array( 'autopatrolled', 'patroller' ),          // Bug 43327 and 45638
@@ -8088,7 +8088,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'abusefilter', 'flood' ),
 	),
 	'+plwikiquote' => array(
-		'sysop' => array( 'patroller' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28479
+		'sysop' => array( 'patroller' ), // bug 28479
 	),
 	'+ptwikinews' => array(
 		'sysop' => array( 'reviewer' ),
@@ -8396,7 +8396,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'sysop', 'patroller' ),
 	),
 	'+enwikisource' => array(
-		'bureaucrat' => array( 'autopatrolled', 'flood' ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=36863
+		'bureaucrat' => array( 'autopatrolled', 'flood' ), // bug 36863
 		'sysop' => array( 'abusefilter', 'autopatrolled', ),
 	),
 	'+eswiki' => array(
@@ -8508,7 +8508,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller', 'flooder' ), // Flooder added per bug 39569
 	),
 	'+itwikiquote' => array(
-		'bureaucrat' => array( 'autopatrolled' ),
+		'bureaucrat' => array( 'autopatrolled' ), // bug 62200
 	),
 	'+itwikisource' => array(
 		'bureaucrat' => array( 'flood' ), // Bug 36600
@@ -8605,6 +8605,12 @@ $wgConf->settings = array(
 			'sysop', 'bureaucrat', 'autopatrolled', 'import',
 			'translationadmin', // bug 54207
 		),
+	),
+	'+plwiki' => array(
+		'bureaucrat' => array( 'abusefilter', 'flood' ),
+	),
+	'+plwikiquote' => array(
+		'sysop' => array( 'patroller' ), // bug 28479
 	),
 	'+ptwiki' => array(
 		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface_editor', 'accountcreator' ), // bug 39905, 63750
@@ -8773,12 +8779,6 @@ $wgConf->settings = array(
 	),
 	'+zh_yuewiki' => array(
 		'sysop' => array( 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ),
-	),
-	'+plwiki' => array(
-		'bureaucrat' => array( 'abusefilter', 'flood' ),
-	),
-	'+plwikiquote' => array(
-	'sysop' => array( 'patroller' ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28479
 	),
 	'+private' => array(	// Cary	made me	do it! --Andrew	2009-05-01
 		'bureaucrat' =>	array( 'inactive' ),
@@ -9323,7 +9323,7 @@ $wgConf->settings = array(
 		'/<span onmouseover="_tipon/',
 		// Reported on id.wikipedia.org 2008-12-17 Tim
 		'/FIELD_MESSAGE_/',
-		// Plaintext link spam https://bugzilla.wikimedia.org/show_bug.cgi?id=16597
+		// Plaintext link spam bug 16597
 		'/[wｗ]{3}[\.．][aＡａ][nｎ][oｏ]ｎ[tＴ][aａ][lｌ][kｋ][\.．][cｃ][oｏ][mｍ]/ui',
 	),
 	# Multiple requests on IRC -- TS 2006-07-11
@@ -10149,7 +10149,7 @@ $wgConf->settings = array(
 	'chapcomwiki' => true, # Bug 52833
 	'cswiki' => true, # Bug 20436
 	'cswikiversity' => true, # Bug 21077
-	'bnwiki' => true, # https://bugzilla.wikimedia.org/show_bug.cgi?id=20338
+	'bnwiki' => true, # bug 20338
 	'dawiki' => true, # 22444
 	'dewiki' => true, # live test on german - 2009-01-26
 	'dewikiversity' => true, # Bug 37898
@@ -10287,7 +10287,7 @@ $wgConf->settings = array(
 	'hiwiki' => true,
 	'incubatorwiki' => true,
 	'kowiki' => true,
-	'ladwiki' => true, // https://bugzilla.wikimedia.org/show_bug.cgi?id=30221
+	'ladwiki' => true, // bug 30221
 	'lvwiki' => true,
 	'metawiki' => true,
 	'mlwiki' => true, // bug 36595
@@ -10297,10 +10297,10 @@ $wgConf->settings = array(
 	'ptwiktionary' => true, // bug 44412
 	'rowiki' => true,
 	'rowikinews' => true,
-	'rowikisource' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=28307
+	'rowikisource' => true, // bug 28307
 	'ruwikiversity' => true,
 	'strategywiki' => true,
-	'thwiki' => true, // http://bugzilla.wikimedia.org/show_bug.cgi?id=28689
+	'thwiki' => true, // bug 28689
 	'thwiktionary' => true, // bug 31600
 	'thwikisource' => true, // bug 31600
 	'thwikibooks' => true, // bug 31600
@@ -10550,7 +10550,7 @@ $wgConf->settings = array(
 	// Affects URL uploads and chunked uploads (experimental).
 	// Limit on other web uploads is enforced by PHP.
 	'default' => 1024 * 1024 * 1000, // 1000 MB
-	'ptwiki'  => 1024 * 500, // 500 KB - https://bugzilla.wikimedia.org/23186
+	'ptwiki'  => 1024 * 500, // 500 KB - bug 23186
 ),
 
 'wmgUseCommunityVoice' => array (
@@ -13338,7 +13338,7 @@ $wgConf->settings = array(
 	),
 	'itwikisource' => array(
 		'otherProjectsLinksByDefault' => true,
-		'otherProjectsLinks' => array( 'itwiki', 'itwikiquote', 'commonswiki', 'itwikivoyage' ),
+		'otherProjectsLinks' => array( 'itwiki', 'itwikiquote', 'commonswiki', 'itwikivoyage' ), // bug 63993
 	),
 	'kowiki' => array(
 		'otherProjectsLinks' => array( 'kowikiquote', 'kowikisource', 'commonswiki' ),
@@ -13526,7 +13526,7 @@ $wgConf->settings = array(
 	'dewiki' => array( 'content' => 5, 'general' => 10 ),
 	'dewikisource' => array( 'content' => 3, 'general' => 1 ),
 	'elwiki' => array( 'content' => 2, 'general' => 1 ),
-	// These shards are also signigicantly larger than the target 2GB.
+	// These shards are also significantly larger than the target 2GB.
 	'enwiki' => array( 'content' => 5, 'general' => 10 ),
 	'enwikinews' => array( 'content' => 1, 'general' => 4 ),
 	'enwikisource' => array( 'content' => 5, 'general' => 1 ),
