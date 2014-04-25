@@ -39,9 +39,11 @@ esac
 #   base-realm.ext
 #   base.ext
 #
-# @param $filename string Base filename, must contain an extension
-# @output string Filename to be used
-getRealmSpecificFilename () (
+# @note The full path to the file is returned, not just the filename
+#
+# @param $filename Full path to file. Must contain an extension
+# @output string Full path to file to be used
+getRealmSpecificFilename () {
 	BASE=${1%.*}
 	EXT=${1##*.}
 	RET=$1
@@ -60,4 +62,4 @@ getRealmSpecificFilename () (
 	fi
 
 	printf %s "$RET"
-)
+}
