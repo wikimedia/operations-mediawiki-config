@@ -1,0 +1,14 @@
+memcached:
+  listen: 127.0.0.1:11211
+  hash: md5
+  distribution: ketama
+  timeout: 250
+  preconnect: true
+  redis: false
+  auto_eject_hosts: true
+  server_retry_timeout: 30000
+  server_failure_limit: 3
+  server_connections: 2
+  servers:
+   - 10.68.17.69:11211:1
+   - 10.68.17.71:11211:1
