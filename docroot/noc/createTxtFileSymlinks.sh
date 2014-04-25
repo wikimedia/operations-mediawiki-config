@@ -40,6 +40,7 @@ mwconfig_files_txt=(
 	wmf-config/session.php
 	wmf-config/session-labs.php
 	wmf-config/twemproxy-eqiad.yaml
+	wmf-config/twemproxy-labs.yaml
 	wmf-config/Wikibase.php
 )
 
