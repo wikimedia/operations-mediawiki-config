@@ -16,10 +16,10 @@ fi
 case "$WMF_REALM" in
 	"production"|"labs")
 		case "$WMF_DATACENTER" in
-			"pmtpa"|"eqiad")
+			"eqiad")
 				;;
 			*)
-				WMF_DATACENTER=pmtpa
+				WMF_DATACENTER=eqiad
 				;;
 		esac
 		;;
@@ -27,7 +27,7 @@ case "$WMF_REALM" in
 	*)
 		# Assume something vaguely resembling a default
 		WMF_REALM=production
-		WMF_DATACENTER=pmtpa
+		WMF_DATACENTER=eqiad
 		;;
 esac
 
