@@ -4,8 +4,7 @@
 # location. Thet should be provisioned by puppet in /etc/wikimedia-site and
 # /etc/wikimedia-realm.
 #
-# The possible values of $wmfRealm and $wmfDatacenter as of February 2014 are:
-#  - labs + pmtpa
+# The possible values of $wmfRealm and $wmfDatacenter as of April 2014 are:
 #  - labs + eqiad
 #  - production + eqiad
 global $wmfDatacenter, $wmfRealm;
@@ -24,7 +23,7 @@ if( file_exists( '/etc/wikimedia-site' ) ) {
 switch( $wmfRealm ) {
 case 'labs':
 case 'production':
-	if ( ! in_array( $wmfDatacenter, array( 'pmtpa', 'eqiad' ) ) ) {
+	if ( ! in_array( $wmfDatacenter, array( 'eqiad' ) ) ) {
 		$wmfDatacenter = 'eqiad';
 	}
 	break;
@@ -41,7 +40,6 @@ default:
 function listAllRealmsAndDatacenters() {
 	return array(
 		array( 'production', 'eqiad' ),
-		array( 'labs', 'pmtpa' ),
 		array( 'labs', 'eqiad' ),
 	);
 }
