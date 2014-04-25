@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_ecf9ddc1",
+        "filename": "wmf-config/mc.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2014-04-25T10:40:13Z",
+      "side": 1,
+      "message": "This should be mc1016, no?",
+      "revId": "5051878a2177a9a90d7a6f60765355442b0838e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
