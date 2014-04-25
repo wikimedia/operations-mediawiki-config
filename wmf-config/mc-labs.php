@@ -27,10 +27,8 @@ $wgObjectCaches['beta-memcached-eqiad'] = array(
 		defined( 'HHVM_VERSION' ) ? array(
 			0 => '10.68.17.69:11211',  # deployment-memc04.eqiad
 			1 => '10.68.17.71:11211',  # deployment-memc05.eqiad
-		) : array(
-			0 => '10.68.16.14:11211',  # deployment-memc02.eqiad
-			1 => '10.68.16.15:11211',  # deployment-memc03.eqiad
 		)
+		: array( '127.0.0.1' )
 	),
 	'retry_timeout' => 1,
 );
