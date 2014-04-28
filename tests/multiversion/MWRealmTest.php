@@ -18,12 +18,11 @@ class MWRealmTests extends PHPUnit_Framework_TestCase {
 			'general.ext',
 			'realm-production.ext',
 			'realm.ext',
-			'dc-pmtpa.ext',
+			'dc-eqiad.ext',
 			'dc.ext',
-			'dc_and_realm-production-pmtpa.ext',
+			'dc_and_realm-production-eqiad.ext',
 			'dc_and_realm.ext',
 			# Real life use case:
-			'mc-pmtpa.php',
 			'mc-eqiad.php',
 			'mc-production.php',
 			'mc.php',
@@ -87,7 +86,7 @@ class MWRealmTests extends PHPUnit_Framework_TestCase {
 			 * realm file only vary per realm
 			 */
 			array( 'realm-production.ext', 'realm.ext', 'production' ),
-			array( 'realm-production.ext', 'realm.ext', 'production', 'pmtpa' ),
+			array( 'realm-production.ext', 'realm.ext', 'production', 'eqiad' ),
 			array( 'realm-production.ext', 'realm.ext', 'production', 'UNKNOWN_DC' ),
 
 			array( 'realm.ext', 'realm.ext', 'UNKNOWN_REALM' ),
@@ -98,33 +97,31 @@ class MWRealmTests extends PHPUnit_Framework_TestCase {
 			/**
 			 * dc file only vary per datacenter
 			 */
-			array( 'dc.ext', 'dc.ext', 'labs', 'eqiad' ),
-			array( 'dc.ext', 'dc.ext', 'production', 'eqiad' ),
-			array( 'dc-pmtpa.ext', 'dc.ext', 'labs', 'pmtpa' ),
-			array( 'dc-pmtpa.ext', 'dc.ext', 'production', 'pmtpa' ),
+			// array( 'dc.ext', 'dc.ext', 'labs', 'eqiad' ), // -'dc.ext' +'dc-eqiad.ext'
+			// array( 'dc.ext', 'dc.ext', 'production', 'eqiad' ), // -'dc.ext' +'dc-eqiad.ext'
+			array( 'dc-eqiad.ext', 'dc.ext', 'labs', 'eqiad' ),
+			array( 'dc-eqiad.ext', 'dc.ext', 'production', 'eqiad' ),
 
-			array( 'dc-pmtpa.ext', 'dc.ext', 'production', 'pmtpa' ),
+			array( 'dc-eqiad.ext', 'dc.ext', 'production', 'eqiad' ),
 
 			/**
 			 * dc_and_realm vary by both realm and datacenter
 			 */
 			array( 'dc_and_realm.ext', 'dc_and_realm.ext', 'labs', 'eqiad' ),
-			array( 'dc_and_realm.ext', 'dc_and_realm.ext', 'labs', 'pmtpa' ),
-			array( 'dc_and_realm.ext', 'dc_and_realm.ext', 'production', 'eqiad' ),
+			//array( 'dc_and_realm.ext', 'dc_and_realm.ext', 'production', 'eqiad' ), // -'dc_and_realm.ext' +'dc_and_realm-production-eqiad.ext'
+
 			# Get the filename when both realm and prod are set :)
-			array( 'dc_and_realm-production-pmtpa.ext', 'dc_and_realm.ext',
-				'production', 'pmtpa' ),
+			array( 'dc_and_realm-production-eqiad.ext', 'dc_and_realm.ext',
+				'production', 'eqiad' ),
 
 			# datacenter takes precedence over realm
 			array( 'mc-eqiad.php', 'mc.php', 'labs', 'eqiad' ),
-			array( 'mc-pmtpa.php', 'mc.php', 'labs', 'pmtpa' ),
 			array( 'mc.php', 'mc.php', 'labs', 'UNKONW_DC' ),
 
-			array( 'mc-pmtpa.php', 'mc.php', 'UNKNOWN_REALM', 'pmtpa' ),
+			array( 'mc-eqiad.php', 'mc.php', 'UNKNOWN_REALM', 'eqiad' ),
 
 			array( 'mc-production.php', 'mc.php', 'production', 'UNKNOWN_DC' ),
 			array( 'mc-production.php', 'mc.php', 'production', 'eqiad' ),
-			array( 'mc-production.php', 'mc.php', 'production', 'pmtpa' ),
 
 		);
 	}
