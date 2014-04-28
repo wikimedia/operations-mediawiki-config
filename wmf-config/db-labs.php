@@ -16,10 +16,10 @@ if( $wmfRealm == 'labs' ) { # safe guard
 		# Everyone to DEFAULT
 		'sectionsByDB' => array(),
 
-		# eqiad has a single server
 		'sectionLoads' => array(
 			'DEFAULT' => array(
 				'deployment-db1'     => 0,
+				'deployment-db2'     => 400,
 			),
 		),
 
@@ -33,7 +33,8 @@ if( $wmfRealm == 'labs' ) { # safe guard
 		),
 
 		'hostsByName' => array(
-			'deployment-db1'  => '10.68.16.193',   # deployment-db1.eqiad.wmflabs
+			'deployment-db1'  => '10.68.16.193', # deployment-db1.eqiad.wmflabs
+			'deployment-db2'  => '10.68.17.94', # deployment-db2.eqiad.wmflabs
 		),
 	);
 
