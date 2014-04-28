@@ -10420,6 +10420,7 @@ $wgConf->settings = array(
 		'link.nypl.org',                 // New York Public Library
 		'peacepalacelibrary.nl', 	 // Peace Palace Library, The Hague  bug 64372
 		'lcweb2.loc.gov',		 // Library of Congress
+		'digital.nls.uk',		 // National Library of Scotland
 	),
 ),
 
