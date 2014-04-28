@@ -10417,6 +10417,8 @@ $wgConf->settings = array(
 		'*.wikimedia.ch',                // Wikimedia CH
 		'link.nypl.org',                 // New York Public Library
 		'peacepalacelibrary.nl', 	 // Peace Palace Library, The Hague  bug 64372
+		'*.nb.admin.ch',		 // Swiss National Library
+		'*.bar.admin.ch',		 // Swiss Federal Archives
 	),
 ),
 
