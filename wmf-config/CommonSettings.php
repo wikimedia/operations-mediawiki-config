@@ -913,6 +913,10 @@ $wgMaxSquidPurgeTitles = 500;
 
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
+// until schema change is applied
+// see I217c4265 and bug 64411
+$wgPagePropsHaveSortkey = false;
+
 // General Cache Epoch
 $wgCacheEpoch = '20130101000000';
 
