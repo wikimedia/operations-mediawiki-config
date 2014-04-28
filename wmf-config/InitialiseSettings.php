@@ -10458,10 +10458,6 @@ $wgConf->settings = array(
 	'default' => 1024,
 ),
 
-'wgUseXVO' => array(
-	'default' => true,
-),
-
 'wmgUseLocalisationUpdate' => array(
 	'default' => true,
 ),
