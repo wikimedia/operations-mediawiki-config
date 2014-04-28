@@ -12407,7 +12407,7 @@ $wgConf->settings = array(
 ),
 # from and reply to address when Echo sends email notifications
 'wmgNotificationSender' => array(
-	'default' => 'no-reply-notifications@mediawiki.org',
+	'default' => 'wiki@wikimedia.org',
 	'enwiki' => 'no-reply-notifications@wikipedia.org',
 ),
 
