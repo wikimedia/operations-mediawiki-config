@@ -6886,7 +6886,7 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
 		'autopatrol' => array( 'autopatrol' => true ), // bug 29007
-		'image-reviewer' => array( 'movefile' => true ), // bug 64532
+		'Image-reviewer' => array( 'movefile' => true ), // bug 64532
 	),
 	'fawikinews' => array(
 		'rollbacker' => array( 'rollback' => true ),
@@ -7855,7 +7855,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'flood', 'patroller', 'rollbacker' ),
 	),
 	'+fawiki' => array(
-		'bureaucrat' => array( 'patroller', 'image-reviewer' ), // bug 64532
+		'bureaucrat' => array( 'patroller', 'Image-reviewer' ), // bug 64532
 		'sysop' => array( 'rollbacker', 'autopatrol' ),
 	),
 	'+fawikinews' => array(
@@ -8349,7 +8349,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker', 'flood' ),
 	),
 	'+fawiki' => array(
-		'bureaucrat' => array( 'patroller', 'image-reviewer' ), // bug 64532
+		'bureaucrat' => array( 'patroller', 'Image-reviewer' ), // bug 64532
 		'sysop' => array( 'rollbacker', 'autopatrol' ),
 	),
 	'+fawikinews' => array(
