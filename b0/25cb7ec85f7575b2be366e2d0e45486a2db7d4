@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+1: MarkTraceur <mtraceur@member.fsf.org>
+Code-Review+2: EBernhardson <ebernhardson@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Tue, 29 Apr 2014 23:23:59 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/130428
+Project: operations/mediawiki-config
+Branch: refs/heads/master
