@@ -10422,6 +10422,8 @@ $wgConf->settings = array(
 		'peacepalacelibrary.nl', 	 // Peace Palace Library, The Hague  bug 64372
 		'lcweb2.loc.gov',		 // Library of Congress
 		'digital.nls.uk',		 // National Library of Scotland
+		'*.nb.admin.ch',		 // Swiss National Library
+		'*.bar.admin.ch',		 // Swiss Federal Archives
 	),
 ),
 
