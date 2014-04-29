@@ -10424,6 +10424,7 @@ $wgConf->settings = array(
 		'digital.nls.uk',		 // National Library of Scotland
 		'*.nb.admin.ch',		 // Swiss National Library
 		'*.bar.admin.ch',		 // Swiss Federal Archives
+		'*.unine.ch',			 // University of Neuchâtel
 	),
 ),
 
