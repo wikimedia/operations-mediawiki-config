@@ -7432,6 +7432,9 @@ $wgConf->settings = array(
 		'filemover' => array( 'movefile' => true, 'suppressredirect' => true ),
 		'flood' => array( 'bot' => true ),
 	),
+	'shwiktionary' => array(
+		'autopatrolled' => array( 'autopatrol' => true ),
+	),
 	'siwiki' => array(
 		'rollbacker'    => array( 'rollback' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -8082,6 +8085,10 @@ $wgConf->settings = array(
 			'flood', // bug 52273
 		),
 	),
+	'+shwiktionary' => array(
+		'sysop' => array( 'autopatrolled' ),
+		'bureaucrat' => array( 'autopatrolled' ),
+	),
 	'+siwiki' => array(
 		'sysop' => array( 'rollbacker', 'accountcreator', 'abusefilter', 'autopatrolled', 'confirmed', 'reviewer' ),
 	),
@@ -8571,6 +8578,10 @@ $wgConf->settings = array(
 			'filemover', 'patroller', 'rollbacker', // bug 50802
 			'flood', // bug 52273
 		),
+	),
+	'+shwiktionary' => array(
+		'sysop' => array( 'autopatrolled' ),
+		'bureaucrat' => array( 'autopatrolled' ),
 	),
 	'+siwiki' => array(
 		'sysop' => array( 'rollbacker', 'accountcreator', 'abusefilter', 'autopatrolled', 'confirmed', 'reviewer', ),
