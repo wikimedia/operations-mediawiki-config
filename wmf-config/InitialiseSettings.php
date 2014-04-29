@@ -11341,7 +11341,7 @@ $wgConf->settings = array(
 		'N' => false,
 	),
 	'betawikiversity' => array( // bug 64168
-		'0' => false,
+		'0' => 'User %code%-0',
 		'1' => 'User %code%-1',
 		'2' => 'User %code%-2',
 		'3' => 'User %code%-3',
