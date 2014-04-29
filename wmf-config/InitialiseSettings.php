@@ -6878,10 +6878,11 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 	),
 	'fawiki' => array(
-		'*' => array( 'createpage' => false ), # 27195
+		'*' => array( 'createpage' => false ), // bug 27195
 		'patroller' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
-		'autopatrol' => array( 'autopatrol' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=29007
+		'autopatrol' => array( 'autopatrol' => true ), // bug 29007
+		'image-reviewer' => array( 'movefile' => true ), // bug 64532
 	),
 	'fawikinews' => array(
 		'rollbacker' => array( 'rollback' => true ),
@@ -7847,7 +7848,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'flood', 'patroller', 'rollbacker' ),
 	),
 	'+fawiki' => array(
-		'bureaucrat' => array( 'patroller' ),
+		'bureaucrat' => array( 'patroller', 'image-reviewer' ), // bug 64532
 		'sysop' => array( 'rollbacker', 'autopatrol' ),
 	),
 	'+fawikinews' => array(
@@ -8337,7 +8338,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker', 'flood' ),
 	),
 	'+fawiki' => array(
-		'bureaucrat' => array( 'patroller' ),
+		'bureaucrat' => array( 'patroller', 'image-reviewer' ), // bug 64532
 		'sysop' => array( 'rollbacker', 'autopatrol' ),
 	),
 	'+fawikinews' => array(
