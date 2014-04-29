@@ -4116,6 +4116,10 @@ $wgConf->settings = array(
 		106 => 'Institution',
 		107 => 'Institution_talk',
 	),
+	'chapcomwiki' => array(
+		100 => 'Draft', // bug 64123
+		101 => 'Draft_talk',
+	), 
 	'mediawikiwiki' => array(
 		100 => 'Manual',
 		101 => 'Manual_talk',
