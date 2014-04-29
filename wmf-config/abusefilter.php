@@ -25,6 +25,9 @@ $wgAbuseFilterAvailableActions = array_diff(
 // bug 29922 - Prevent anyone being given the abusefilter-private right by removing it
 $wgAvailableRights = array_diff( $wgAvailableRights, array( 'abusefilter-private' ) );
 
+// bug 64255 - Enable logging to irc.wikimedia.org by default
+$wgAbuseFilterNotifications = "udp";
+
 // Custom permissions
 switch ( $wgDBname ) {
 	case 'arwiki':
@@ -76,6 +79,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
 		$wgAbuseFilterAvailableActions[] = 'block';
 		$wgAbuseFilterBlockDuration = 'infinite';
+		$wgAbuseFilterNotifications = false;
 		break;
 	case 'elwiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
@@ -94,6 +98,7 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterAvailableActions = array( 'flag', 'throttle', 'warn', 'disallow', 'blockautopromote', 'tag' );
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
 		$wgGroupPermissions['*']['abusefilter-log'] = false;
+		$wgAbuseFilterNotifications = false;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
@@ -123,6 +128,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
 		$wgAbuseFilterAvailableActions[] = 'block';
 		$wgAbuseFilterBlockDuration = '24 hours';
+		$wgAbuseFilterNotifications = false;
 		break;
 	case 'eswiktionary':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
@@ -171,6 +177,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
 		$wgGroupPermissions['*']['abusefilter-log'] = false;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
+		$wgAbuseFilterNotifications = false;
 		break;
 	case 'hewiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
@@ -195,6 +202,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 		$wgAbuseFilterAvailableActions[] = 'block';
 		$wgAbuseFilterBlockDuration = '4 hours';
+		$wgAbuseFilterNotifications = false;
 		break;
 	case 'itwikinews':
 		$wgAbuseFilterAvailableActions[] = 'block';
@@ -242,6 +250,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-revert'] = true;
+		$wgAbuseFilterNotifications = false;
 		break;
 	case 'nowiki':
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
@@ -287,6 +296,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['*']['abusefilter-log'] = false;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true; // bug 46154
+		$wgAbuseFilterNotifications = false;
 		break;
 	case 'ukwiki':
 		$wgGroupPermissions['*']['abusefilter-log'] = false;
@@ -297,6 +307,7 @@ switch ( $wgDBname ) {
 			$wgAbuseFilterAvailableActions,
 			array( 'blockautopromote' )
 		);
+		$wgAbuseFilterNotifications = false;
 		break;
 	case 'urwiki':
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true; // bug 45643
