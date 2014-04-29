@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_f8baa6d8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4122,
+      "author": {
+        "id": 535
+      },
+      "writtenOn": "2014-04-29T15:14:07Z",
+      "side": 1,
+      "message": "Not a big deal obviously, but there\u0027s an extra space here.",
+      "revId": "48d444c9a285634808d3e6f258355f44da414b70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
