@@ -10789,6 +10789,8 @@ $wgConf->settings = array(
 	'dewiki' => true,
 	'frwiki' => true,
 	'ptwiki' => true,
+	// TODO disable 2014-05-28
+	'eswiki' => true,
 ),
 
 'wmgNetworkPerformanceSamplingFactor' => array(
