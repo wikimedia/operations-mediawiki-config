@@ -12493,6 +12493,7 @@ $wgConf->settings = array(
 		'Talk:Beta Features/Hovercards',
 		'Talk:Compact Personal Bar',
 		'Talk:Beta Features/Nearby Pages',
+		'Talk:VisualEditor/Beta Features/Language',
 	),
 	'enwiki' => array( // Bug 60178
 		'Wikipedia talk:WikiProject Breakfast',
