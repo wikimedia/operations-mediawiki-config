@@ -22,6 +22,14 @@ $projectsOkForInterwiki = array(
 	'itwikiversity' => 'v',
 );
 
+$wgCirrusSearchBackup['backups'] = array(
+	'type' => 'swift',
+	'swift_url' => $wmfSwiftConfig['authUrl'],
+	'swift_container' => 'elastic_backups',
+	'swift_username' => $wmfSwiftConfig['user'],
+	'swift_password' => $wmfSwiftConfig['key'],
+);
+
 if ( isset( $projectsOkForInterwiki[ $wgDBname ] ) ) {
 	unset( $projectsOkForInterwiki[$wgDBname] );
 	$interwikiSearchConf = array_flip( $projectsOkForInterwiki );
