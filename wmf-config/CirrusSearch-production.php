@@ -11,6 +11,15 @@ $wgCirrusSearchServers = array(
 
 $wgCirrusSearchConnectionAttempts = 3;
 
+$wgCirrusSearchBackup['backups'] = array(
+	'type' => 'swift',
+	'swift_url' => $wmfSwiftEqiadConfig['cirrusAuthUrl'],
+	'swift_container' => 'global-data-elastic-backups',
+	'swift_username' => $wmfSwiftEqiadConfig['cirrusUser'],
+	'swift_password' => $wmfSwiftEqiadConfig['cirrusKey'],
+	'max_snapshot_bytes_per_sec' => '10mb',
+);
+
 $projectsOkForInterwiki = array(
 	'itwiki' => 'w',
 	'itwiktionary' => 'wikt',
