@@ -10734,6 +10734,7 @@ $wgConf->settings = array(
 		'uls-compact-links',                        // 2014-09-06 – Compact language links
 		'popups',                                   // 2014-09-18 – Hovercards
 		'betafeatures-vector-compact-personal-bar', // 2014-11-01 – Compact personal bar
+		'visualeditor-enable-language',             // 2014-10-30 — VE language editor
 	),
 ),
 
