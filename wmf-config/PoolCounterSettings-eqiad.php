@@ -31,12 +31,6 @@ $wgPoolCounterConf = array(
 		'workers' => 432,
 		'maxqueue' => 600,
 	),
-	'TMHTransformFrame' => array(
-		'class' => 'PoolCounter_Client',
-		'timeout' => 15,
-		'workers' => 1,
-		'maxqueue' => 100
-	),
 	'FileRender' => array(
 		'class' => 'PoolCounter_Client',
 		'timeout' => 8,
