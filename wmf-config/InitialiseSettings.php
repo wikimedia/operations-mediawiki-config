@@ -9545,6 +9545,13 @@ $wgConf->settings = array(
 ),
 # @} end of wgVariantArticlePath
 
+# Disable all query pages for closed wikis, allow normal functioning for others
+'wgDisableQueryPages' => array(
+	'default' => false,
+
+	'closed' => true, // bug 42436
+),
+
 # Disable all the query pages that take more than about 15 minutes to update
 # wgDisableQueryPageUpdate @{
 'wgDisableQueryPageUpdate' => array(
