@@ -33,9 +33,9 @@ if ( $wmgMobileFrontend ) {
 
 	if ( $wmgZeroRatedMobileAccess ) {
 		require_once( "$IP/extensions/ZeroRatedMobileAccess/ZeroRatedMobileAccess.php" );
-		// TODO: remove ConfigIndexUri in favor of Api once proven out
-		$wgZeroRatedMobileAccessConfigIndexUri = 'http://meta.wikimedia.org/w/index.php';
-		$wgZeroRatedMobileAccessApiUri = 'http://meta.wikimedia.org/w/api.php';
+		$wgZeroRatedMobileAccessApiUri = 'https://zero.wikimedia.org/w/api.php';
+		$wgZeroRatedMobileAccessApiUserName = $wmgZeroRatedMobileAccessApiUserName;
+		$wgZeroRatedMobileAccessApiPassword = $wmgZeroRatedMobileAccessApiPassword;
 	}
 
 	if ( $wmgZeroDisableImages ) {
