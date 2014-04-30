@@ -10765,12 +10765,11 @@ $wgConf->settings = array(
 		'visualeditor-enable',                      // VisualEditor – on-going (special permission)
 		'math-enable-visualeditor',                 // 2014-05-21 – VE formula editor
 		'multimedia-viewer',                        // 2014-05-21 – MediaViewer
-		'betafeatures-geonotahack',                 // 2014-05-21 – Near this page
 		'cirrussearch-default',                     // 2014-06-09 – New Seach
 		'uls-compact-links',                        // 2014-09-06 – Compact language links
 		'popups',                                   // 2014-09-18 – Hovercards
 		'betafeatures-vector-compact-personal-bar', // 2014-11-01 – Compact personal bar
-		'visualeditor-enable-language',             // 2014-10-30 — VE language editor
+		'visualeditor-enable-language',             // 2014-11-01 — VE language editor
 	),
 ),
 
