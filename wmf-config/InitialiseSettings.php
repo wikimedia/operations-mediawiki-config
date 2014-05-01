@@ -719,7 +719,7 @@ $wgConf->settings = array(
 	'nlwiktionary' => '//upload.wikimedia.org/wiktionary/nl/2/26/WiktNL1.png',
 	'nnwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Wiktionary-logo-nn.svg/128px-Wiktionary-logo-nn.svg.png', // Bug 43240
 	'nowiktionary' => '$stdlogo',
-	'ocwiktionary' => '$stdlogo',
+	'ocwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Wiktionary-logo-oc.svg/128px-Wiktionary-logo-oc.svg.png', // bug 52019
 	'orwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/1/14/Wiktionary-logo-or.svg/128px-Wiktionary-logo-or.svg.png',
 	'pawiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Wiktionary-logo-pa.svg/128px-Wiktionary-logo-pa.svg.png', // Bug 43240
 	'plwiktionary' => '$stdlogo',
@@ -912,6 +912,7 @@ $wgConf->settings = array(
 
 	// Wikiversity
 	'arwikiversity' => '//upload.wikimedia.org/wikipedia/commons/5/5c/Wikiversity-logo-ar-small.png',
+	'cswikiversity' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/04/Wikiversity-logo-cs.svg/135px-Wikiversity-logo-cs.svg.png', // bug 52019
 	'kowikiversity' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Wikiversity-logo-ko.svg/135px-Wikiversity-logo-ko.svg.png',
 	'ruwikiversity' => '//upload.wikimedia.org/wikiversity/ru/b/bc/Wiki.png',
 	'slwikiversity' => '//upload.wikimedia.org/wikipedia/commons/4/4f/Sl-wikiversity-org.png',
