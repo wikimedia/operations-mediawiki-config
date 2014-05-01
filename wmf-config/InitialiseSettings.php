@@ -6753,6 +6753,10 @@ $wgConf->settings = array(
 		'editor' => array(
 			'rollback' => true, // per DaBPunkt's request, 2008-05-07
 		),
+		'noratelimit' => array( // bug 57819
+			'autoreview' => true,
+			'noratelimit' => true,
+		),
 	),
 	'dewikibooks' => array(
 		'user' => array( 'move' => false ), // Request by DaBPunkt on #wikimedia-tech, JF 2007-01-27
@@ -7818,6 +7822,9 @@ $wgConf->settings = array(
 	'+dawiki' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
 	),
+	'+dewiki' => array(
+		'bureaucrat' => array( 'noratelimit' ), // bug 57819
+	),
 	'+dewikivoyage' => array(
 		'sysop' => array( 'autopatrolled' ), // Bug 65495
 	),
@@ -8313,6 +8320,9 @@ $wgConf->settings = array(
 	),
 	'+dawiki' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
+	),
+	'+dewiki' => array(
+		'bureaucrat' => array( 'noratelimit' ), // bug 57819
 	),
 	'+dewikivoyage' => array(
 		'sysop' => array( 'autopatrolled' ), // Bug 65495
