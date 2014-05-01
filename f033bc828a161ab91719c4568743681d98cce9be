@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e23439c_e65315e0",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-05-01T01:45:26Z",
+      "side": 1,
+      "message": "The plugin will create the container if it doesn\u0027t already exist. Will amend to change the container name as suggested.",
+      "parentUuid": "8e23439c_e63c3590",
+      "revId": "f033bc828a161ab91719c4568743681d98cce9be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e23439c_464be92b",
         "filename": "wmf-config/CirrusSearch-production.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2014-05-01T01:34:32Z",
       "side": 1,
       "message": "Normally you send X-Auth-User: \u003cuser\u003e and X-Auth-Key: \u003ckey\u003e though the older form of X-Storage-User/X-Storage-Pass also works (e.g. with the SAIO install for example).",
+      "revId": "f033bc828a161ab91719c4568743681d98cce9be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_666705b5",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-05-01T01:45:26Z",
+      "side": 1,
+      "message": "I\u0027ll have a look and see if I can do it this way.",
+      "parentUuid": "8e23439c_464be92b",
       "revId": "f033bc828a161ab91719c4568743681d98cce9be",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
