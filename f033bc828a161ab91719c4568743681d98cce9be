@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_e63c3590",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2014-05-01T01:34:32Z",
+      "side": 1,
+      "message": "Does this container already exist or is it automatically created by the code? As long as it private it should be fine (e.g. no X-Container-Read: r* or such). \n\nI\u0027d prefer a name like \"global-data-elastic-backups\" since we tend to use \u003cproject\u003e\u003clanguage\u003e\u003crepo\u003e\u003czone\u003e.",
+      "revId": "f033bc828a161ab91719c4568743681d98cce9be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_464be92b",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2014-05-01T01:34:32Z",
+      "side": 1,
+      "message": "Normally you send X-Auth-User: \u003cuser\u003e and X-Auth-Key: \u003ckey\u003e though the older form of X-Storage-User/X-Storage-Pass also works (e.g. with the SAIO install for example).",
+      "revId": "f033bc828a161ab91719c4568743681d98cce9be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
