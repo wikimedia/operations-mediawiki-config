@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_198f9628",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2014-05-01T13:55:37Z",
+      "side": 1,
+      "message": "The ocwiktionary one doesn\u0027t seem very close to a 1:1 replica at all. The font, shading, and coloring are all different.\n\nBut as long as no one complains, I don\u0027t see a problem with the new version.",
+      "revId": "616aadf0d3948413d10e67fea37fd469fa142de7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
