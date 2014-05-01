@@ -16,6 +16,24 @@
       "revId": "616aadf0d3948413d10e67fea37fd469fa142de7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_79cb2a4e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 650
+      },
+      "writtenOn": "2014-05-01T14:07:19Z",
+      "side": 1,
+      "message": "The new logo conforms to the logo creation guidelines: it re-uses the tiles used by the original tile logo, and uses the font suggested in the original logo (Lucida Bright).\n\nI can only guess that the differences in shading and coloring are due to their use of interesting SVG-to-PNG converter.",
+      "parentUuid": "8e23439c_198f9628",
+      "revId": "616aadf0d3948413d10e67fea37fd469fa142de7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
