@@ -196,7 +196,11 @@ $wgLocalFileRepo = array(
 		'initialCapital'    => $wgCapitalLinks,
 		'deletedHashLevels' => 3,
 		'abbrvThreshold'    => 160,
-		'isPrivate'         => $wmgPrivateWiki
+		'isPrivate'         => $wmgPrivateWiki,
+		'zones'             => $wmgPrivateWiki
+			? array(
+				'thumb' => array( 'url' => "$wgScriptPath/thumb_handler.php" ) )
+			: array(),
 );
 if ( $wgDBname != 'commonswiki' ) {
 	$wgForeignFileRepos[] = array(
