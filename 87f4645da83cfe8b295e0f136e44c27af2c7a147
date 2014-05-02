@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_9247f87b",
+        "filename": "wmf-config/squid.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2014-05-02T13:23:33Z",
+      "side": 1,
+      "message": "This shouldn\u0027t appear in XFF. Why does it and why the equivalent eqiad or esams addresses do not?",
+      "revId": "87f4645da83cfe8b295e0f136e44c27af2c7a147",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
