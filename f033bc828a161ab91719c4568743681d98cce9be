@@ -69,6 +69,24 @@
       "revId": "f033bc828a161ab91719c4568743681d98cce9be",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_487ad2e7",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-05-02T04:58:29Z",
+      "side": 1,
+      "message": "We are using X-Auth-User and X-Auth-Key. The variable names are a bit confusing because it depends on AuthenticationMethod.* (we use BASIC, not TEMPAUTH). As far as I can tell, this is what you want.",
+      "parentUuid": "8e23439c_666705b5",
+      "revId": "f033bc828a161ab91719c4568743681d98cce9be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
