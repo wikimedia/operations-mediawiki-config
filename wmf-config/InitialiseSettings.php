@@ -4022,6 +4022,7 @@ $wgConf->settings = array(
 		'Bug58676' => "udp://$wmfUdp2logDest/Bug58676", # Invalid message parameter
 		'Flow' => "udp://$wmfUdp2logDest/Flow", // -erikb 2014/03/08
 		'upload' => "udp://$wmfUdp2logDest/upload",
+		'mccmnc' => "udp://$wmfUdp2logDest/mccmnc", // mobile operator code. see wikimedia-l/2014-April/071131.html
 	),
 
 	'+enwiki' => array(
