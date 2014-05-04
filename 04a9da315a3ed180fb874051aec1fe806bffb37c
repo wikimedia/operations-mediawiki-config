@@ -16,6 +16,24 @@
       "revId": "04a9da315a3ed180fb874051aec1fe806bffb37c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_0fd5f6b9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 891,
+      "author": {
+        "id": 650
+      },
+      "writtenOn": "2014-05-04T21:47:49Z",
+      "side": 1,
+      "message": "It does, just checked it by hand (I only added the Georgian logo today, too).",
+      "parentUuid": "8e23439c_4fcf6e2c",
+      "revId": "04a9da315a3ed180fb874051aec1fe806bffb37c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
