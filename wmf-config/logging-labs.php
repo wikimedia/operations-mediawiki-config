@@ -9,6 +9,13 @@ if ( $wgCommandLineMode || PHP_SAPI == 'cli' ) {
 	$wgDebugLogFile = "udp://$wmfUdp2logDest/web";
 }
 
+// stream recent changes to redis
+$wgRCFeeds['redis'] = array(
+	'formatter' => 'JSONRCFeedFormatter',
+	'uri'       => "redis://deployment-rcstream.eqiad.wmflabs:6379/rc.$wgDBname",
+);
+
+
 // udp2log logging for beta:
 $wgDebugLogGroups['CentralAuthVerbose'] = "udp://$wmfUdp2logDest/centralauth";
 $wgDebugLogGroups['dnsblacklist'] = "udp://$wmfUdp2logDest/dnsblacklist";
