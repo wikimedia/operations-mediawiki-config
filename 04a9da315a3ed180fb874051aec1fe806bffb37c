@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_4fcf6e2c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 891,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-05-04T21:45:50Z",
+      "side": 1,
+      "message": "The 150px width here is to match the others in height, ok; but does it even fit the container? It\u0027s what they have now though, so not a blocker I guess.",
+      "revId": "04a9da315a3ed180fb874051aec1fe806bffb37c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
