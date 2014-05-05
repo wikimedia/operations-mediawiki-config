@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_482d24ed",
+        "filename": "multiversion/checkoutMediaWiki.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-05-05T17:02:29Z",
+      "side": 1,
+      "message": "This is kind of yucky, but it was the only way I could find to enumerate the submodules short of parsing the gitmodules file directly which seemed really gross.",
+      "revId": "b9b99140925ece5870c45c6159b4aae5a294cd22",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
