@@ -2388,7 +2388,6 @@ if ( $wmgUseFlow ) {
 	$wgFlowCluster = $wmgFlowCluster;
 	$wgFlowExternalStore = $wgDefaultExternalStore;
 	$wgFlowMaintenanceMode = $wmgFlowMaintenanceMode;
-	$wgFlowCacheVersion = '4.2';
 }
 
 if ( $wmgUseDisambiguator ) {
