@@ -70,6 +70,19 @@ function checkoutMediaWiki() {
 			exit( 1 );
 		}
 
+		$submodules = array();
+		exec( 'git submodule status | cut -d" " -f3', $submodules, $ret );
+		if ( $ret ) {
+			print "Error finding list of submodules\n";
+		} else {
+			foreach ( $submodules as $moduleName ) {
+				passthru( "git config submodule.\"{$moduleName}\".update rebase", $ret );
+				if ( $ret ) {
+					print "Failed to set submodule \"{$moduleName}\" to rebase on update.\n";
+				}
+			}
+		}
+
 		passthru( 'git config alias.up "pull --ff-only"', $ret );
 		if( $ret ) {
 			# Don't exit, no big deal
