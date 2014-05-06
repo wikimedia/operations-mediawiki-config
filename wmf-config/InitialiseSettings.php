@@ -11069,6 +11069,7 @@ $wgConf->settings = array(
 	'nlwikiquote' => '//commons.wikimedia.org/wiki/Special:Upload?uselang=nl',
 	'nlwiktionary' => '//commons.wikimedia.org/wiki/Special:Upload?uselang=nl',
 	'ptwikibooks' => '//commons.wikimedia.org/wiki/Special:Upload/pt?uselang=pt',
+	'enwiki' => '//en.wikipedia.org/wiki/Special:Upload',
 ),
 
 // DO NOT DISABLE WITHOUT CONTACTING PHILIPPE / LEGAL!
