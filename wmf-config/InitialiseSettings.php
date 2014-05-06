@@ -11153,7 +11153,7 @@ $wgConf->settings = array(
 'wmgMFInfoboxLogging' => array(
 	'default' => false,
 ),
-'wmgMFNearbyNamespace' => array(
+'wmgMFContentNamespace' => array(
 	'default' => NS_MAIN,
 	'commonswiki' => NS_FILE,
 ),
