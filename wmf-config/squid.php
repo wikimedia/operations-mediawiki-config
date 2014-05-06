@@ -238,6 +238,13 @@ $wgSquidServersNoPurge = array(
 	'10.128.0.120',	# cp4020
 	'10.2.4.26', # mobile.svc.ulsfo.wmnet, appears in XFF
 
+	# Swift (rendering requests relay XFF to thumb_handler.php)
+	# eqiad
+	'10.64.0.167',   # ms-fe1001
+	'10.64.0.168',   # ms-fe1002
+	'10.64.16.150',  # ms-fe1003
+	'10.64.32.92',   # ms-fe1004
+
 	# OTHERS - Currently unused..?
 );
 
