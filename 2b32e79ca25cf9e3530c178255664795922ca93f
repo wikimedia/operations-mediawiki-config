@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_f1ae0d2a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3091,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2014-05-07T14:12:41Z",
+      "side": 1,
+      "message": "Unless I\u0027m mistaken, it\u0027s not necessary to alias \"Project\" and \"Project_talk\". The canonical names always work.",
+      "revId": "2b32e79ca25cf9e3530c178255664795922ca93f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
