@@ -2060,7 +2060,7 @@ $wgConf->settings = array(
 	'ocwiki'	=> 'Wikipèdia', # http://bugzilla.wikimedia.org/show_bug.cgi?id=7123
 	'ocwikibooks'   => 'Wikilibres',
 	'ocwiktionary'  => 'Wikiccionari',
-	'officewiki'    => 'Project',
+	'officewiki'    => 'OfficeWiki', // bug 64976
 	'ombudsmenwiki' => 'Project',
 	'orwiki'        => 'ଉଇକିପିଡ଼ିଆ',
 	'oswiki'	=> 'Википеди',
@@ -3084,6 +3084,9 @@ $wgConf->settings = array(
 	'+nowiktionary' => array(
 		'Appendix' => 100,
 		'Appendix_talk' => 101,
+	),
+	'+officewiki' => array( // bug 64976
+		'OW' => NS_PROJECT,
 	),
 	'+orwiki' => array(
 		'Wikipedia' => NS_PROJECT,
