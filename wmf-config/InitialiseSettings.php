@@ -10441,6 +10441,7 @@ $wgConf->settings = array(
 		'*.nb.admin.ch',		 // Swiss National Library
 		'*.bar.admin.ch',		 // Swiss Federal Archives
 		'*.unine.ch',			 // University of Neuchâtel
+                '*.mindat.org',                  // Mineral and locality database
 	),
 ),
 
