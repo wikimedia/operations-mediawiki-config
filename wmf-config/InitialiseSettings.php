@@ -10439,12 +10439,13 @@ $wgConf->settings = array(
 		'*.musees.cg70.fr',              // Musées de la Haute-Saône (prod)  bug 63449
 		'*.wikimedia.ch',                // Wikimedia CH
 		'link.nypl.org',                 // New York Public Library
-		'*.peacepalacelibrary.nl', 	 // Peace Palace Library, The Hague  bug 64372
-		'lcweb2.loc.gov',		 // Library of Congress
-		'digital.nls.uk',		 // National Library of Scotland
-		'*.nb.admin.ch',		 // Swiss National Library
-		'*.bar.admin.ch',		 // Swiss Federal Archives
-		'*.unine.ch',			 // University of Neuchâtel
+		'*.peacepalacelibrary.nl',       // Peace Palace Library, The Hague  bug 64372
+		'lcweb2.loc.gov',                // Library of Congress
+		'digital.nls.uk',                // National Library of Scotland
+		'*.nb.admin.ch',                 // Swiss National Library
+		'*.bar.admin.ch',                // Swiss Federal Archives
+		'*.unine.ch',                    // University of Neuchâtel
+		'*.mindat.org',                  // Mineral and locality database
 	),
 ),
 
