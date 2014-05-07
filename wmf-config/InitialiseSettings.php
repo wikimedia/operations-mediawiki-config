@@ -12945,10 +12945,6 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-'wmgCirrusIsBuilding' => array(
-	'default' => false,
-),
-
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
 	'default' => 0,
 	'wikinews' => .6,

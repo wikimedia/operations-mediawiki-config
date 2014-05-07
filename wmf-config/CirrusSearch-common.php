@@ -20,9 +20,7 @@ if ( $wmgUseCirrus ) {
 	$wgCirrusSearchShowNowUsing = true;
 } else {
 	$wgSearchTypeAlternatives = array( 'CirrusSearch' );
-	if ( !$wmgCirrusIsBuilding ) {
-		$wgCirrusSearchEnablePref = true;
-	}
+	$wgCirrusSearchEnablePref = true;
 }
 
 # Two replicas let use lose two any two machines before we lose any portion of
