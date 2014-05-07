@@ -11063,6 +11063,7 @@ $wgConf->settings = array(
 
 'wgUploadMissingFileUrl' => array(
 	'default' => false,
+	'enwiki' => '//en.wikipedia.org/wiki/Special:Upload',
 	'incubatorwiki' => '//commons.wikimedia.org/wiki/Special:Upload',
 	'nlwiki' => '//commons.wikimedia.org/wiki/Special:Upload?uselang=nl',
 	'nlwikisource' => '//commons.wikimedia.org/wiki/Special:Upload?uselang=nl',
