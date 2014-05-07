@@ -7241,6 +7241,7 @@ $wgConf->settings = array(
 
 	'+officewiki' => array(
 		'communityapps' => array( 'view-community-applications' => true ),
+		'user' => array( 'massmessage' => true, ), // bug 64978
 	),
 	'+ombudsmenwiki'  => array(
 		'autoconfirmed' => array(
