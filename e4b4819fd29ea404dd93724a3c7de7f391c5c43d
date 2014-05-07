@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_31cc8537",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10444,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-05-07T13:51:38Z",
+      "side": 1,
+      "message": "Use tabs for indentation, like the surrounding lines in the file.",
+      "revId": "e4b4819fd29ea404dd93724a3c7de7f391c5c43d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
