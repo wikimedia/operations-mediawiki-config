@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_3b3ea6d7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-05-07T07:05:11Z",
+      "side": 1,
+      "message": "No CamelCase please. https://www.mediawiki.org/wiki/Gerrit/Commit_message_guidelines",
+      "revId": "af9f3fc9cd5aeec4f08bd78b5a7c4db4034fd66c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
