@@ -50,6 +50,7 @@ $wgCirrusSearchOptimizeIndexForExperimentalHighlighter = $wmgCirrusSearchUserExp
 // Commons is special
 if ( $wgDBname == 'commonswiki' ) {
 	$wgCirrusSearchNamespaceMappings[ NS_FILE ] = 'file';
+	$wgCirrusSearchReplicaCount['file'] = 2;
 // So is everyone else, for using commons
 } else {
 	$wgCirrusSearchExtraIndexes[ NS_FILE ] = array( 'commonswiki_file' );
