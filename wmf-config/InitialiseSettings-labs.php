@@ -378,6 +378,10 @@ return array(
 	'wmgUseGuidedTour' => array(
 		'wikidatawiki' => true,
 	),
+	// Enable anonymous editor acquisition experiment across labs
+	'wgGettingStartedRunTest' => array(
+		'default' => true,
+	),
 );
 
 } # wmflLabsSettings()
