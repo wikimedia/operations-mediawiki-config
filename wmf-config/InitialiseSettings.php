@@ -4025,6 +4025,7 @@ $wgConf->settings = array(
 		'Bug58676' => "udp://$wmfUdp2logDest/Bug58676", # Invalid message parameter
 		'Flow' => "udp://$wmfUdp2logDest/Flow", // -erikb 2014/03/08
 		'upload' => "udp://$wmfUdp2logDest/upload",
+		'zeromemcache' => "udp://$wmfUdp2logDest/zeromemcache", // zero-rated memcache state change log
 	),
 
 	'+enwiki' => array(
