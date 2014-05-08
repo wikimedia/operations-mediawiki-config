@@ -92,6 +92,7 @@ $wgLBFactoryConf = array(
 		'db1056' => 400, # 2.8TB sas 96GB
 		'db1061' => 500, # 2.8TB sas 128GB
 		'db1062' => 500, # 2.8TB sas 128GB
+		'db1065' => 50, # 2.8TB sas 160GB, warm up
 	),
 	's2' => array(
 		'db1024' => 0,
@@ -114,9 +115,9 @@ $wgLBFactoryConf = array(
 		'db1042' => 0, # snapshot, vslow, dump
 		'db1004' => 0, # watchlist, recentchangeslinked, contributions, logpager
 		'db1011' => 300,
-		# hardware errors RT 7191 'db1020' => 300,
 		'db1049' => 300,
 		'db1059' => 400, # 2.8TB sas 96GB
+		'db1064' => 50, # 2.8TB sas 160GB, warm up
 	),
 	's5' => array(
 		'db1058' => 0,
@@ -392,6 +393,8 @@ $wgLBFactoryConf = array(
 	'db1061' => '10.64.48.14', #do not remove or comment out
 	'db1062' => '10.64.48.15', #do not remove or comment out
 	'db1063' => '10.64.48.16', #do not remove or comment out
+	'db1064' => '10.64.48.19', #do not remove or comment out
+	'db1065' => '10.64.48.20', #do not remove or comment out
 ),
 
 'externalLoads' => array(
