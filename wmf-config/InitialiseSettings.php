@@ -10763,11 +10763,7 @@ $wgConf->settings = array(
 ),
 
 'wmgVectorBetaPersonalBar' => array(
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
-	'testwikidatawiki' => true,
+	'default' => true,
 ),
 
 'wmgULSCompactLinks' => array(
