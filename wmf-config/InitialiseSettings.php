@@ -13027,7 +13027,12 @@ $wgConf->settings = array(
 
 'wmgCirrusSearchUserExperimentalHighlighter' => array(
 	'default' => false,
+	'commonswiki' => true,
+	'enwiki' => true,
+	'eswiki' => true,
+	'hewiki' => true,
 	'mediawikiwiki' => true,
+	'ruwiki' => true,
 	'test2wiki' => true,
 	'testwiki' => true,
 	'testwikidatawiki' => true,
