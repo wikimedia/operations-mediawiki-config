@@ -378,6 +378,10 @@ return array(
 	'wmgUseGuidedTour' => array(
 		'wikidatawiki' => true,
 	),
+	'+wmgExtraLanguageNames' => array(
+		'default' => array(),
+		'en_rtlwiki' => array( 'en-rtl' => 'English (rtl)' ),
+	),
 );
 
 } # wmflLabsSettings()
