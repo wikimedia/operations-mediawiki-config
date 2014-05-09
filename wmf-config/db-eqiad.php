@@ -72,7 +72,9 @@ $wgLBFactoryConf = array(
 
 # Load lists
 #
-# All servers which replicate the given databases should be in the load
+# Masters should be in slot [0].
+#
+# All servers for which replication lag matters should be in the load
 # list, not commented out, because otherwise maintenance scripts such
 # as compressOld.php won't wait for those servers when they lag.
 #
@@ -81,72 +83,70 @@ $wgLBFactoryConf = array(
 # when load zero servers will be used, such as if the others are lagged.
 # Servers which are down should be removed to avoid a timeout overhead
 # per invocation.
-#
+
 'sectionLoads' => array(
 	's1' => array(
-		'db1052' => 0, # 2.8TB sas 96GB, new master
-		# no pool 'db1050' => 0, # 2.8TB sas 64GB, snapshot
-		'db1055' => 0, # watchlist, recentchangeslinked, contributions, logpager
-		'db1043' => 0, # 1.4TB sas 64GB, vslow, api, dump
-		'db1051' => 300, # 2.8TB sas 96GB
-		'db1056' => 300, # 2.8TB sas 96GB
-		'db1061' => 400, # 2.8TB sas 128GB
-		'db1062' => 400, # 2.8TB sas 128GB
-		'db1065' => 500, # 2.8TB sas 160GB
-		'db1066' => 50, # 2.8TB sas 160GB
+		'db1052' => 0,   # 2.8TB  96GB
+		'db1055' => 0,   # 2.8TB  96GB, watchlist, recentchangeslinked, contributions, logpager
+		'db1043' => 0,   # 1.4TB  64GB, vslow, api, dump
+		'db1051' => 300, # 2.8TB  96GB
+		'db1056' => 300, # 2.8TB  96GB
+		'db1061' => 400, # 2.8TB 128GB
+		'db1062' => 400, # 2.8TB 128GB
+		'db1065' => 500, # 2.8TB 160GB
+		'db1066' => 50,  # 2.8TB 160GB
 	),
 	's2' => array(
-		'db1024' => 0,
-		'db1018' => 0, # snapshot, vslow, dump
-		'db1002' => 0, # watchlist, recentchangeslinked, contributions, logpager
-		'db1009' => 300,
-		'db1036' => 300,
-		'db1060' => 400, # 2.8TB sas 96GB
-		'db1063' => 500, # 2.8TB sas 128GB
-		'db1067' => 50, # 2.8TB sas 160GB
+		'db1024' => 0,   # 1.4TB  64GB
+		'db1018' => 0,   # 1.4TB  64GB, snapshot, vslow, dump
+		'db1002' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
+		'db1009' => 300, # 1.4TB  64GB
+		'db1036' => 300, # 1.4TB  64GB
+		'db1060' => 400, # 2.8TB  96GB
+		'db1063' => 500, # 2.8TB 128GB
+		'db1067' => 50,  # 2.8TB 160GB
 	),
 	/* s3 */ 'DEFAULT' => array(
-		'db1038' => 0,
-		'db1035' => 0, # snapshot, vslow, dump
-		'db1003' => 0, # watchlist, recentchangeslinked, contributions, logpager
-		'db1019' => 400,
-		'db1027' => 400,
+		'db1038' => 0,   # 1.4TB  64GB
+		'db1035' => 0,   # 1.4TB  64GB, snapshot, vslow, dump
+		'db1003' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
+		'db1019' => 400, # 1.4TB  64GB
+		'db1027' => 400, # 1.4TB  64GB
 	),
 	's4' => array(
-		'db1040' => 0,
-		'db1042' => 0, # snapshot, vslow, dump
-		'db1004' => 0, # watchlist, recentchangeslinked, contributions, logpager
-		'db1011' => 300,
-		'db1049' => 300,
-		'db1059' => 400, # 2.8TB sas 96GB
-		'db1064' => 500, # 2.8TB sas 160GB
+		'db1040' => 0,   # 1.4TB  64GB
+		'db1042' => 0,   # 1.4TB  64GB, snapshot, vslow, dump
+		'db1004' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
+		'db1011' => 300, # 1.4TB  64GB
+		'db1049' => 300, # 1.4TB  64GB
+		'db1059' => 400, # 2.8TB  96GB
+		'db1064' => 500, # 2.8TB 160GB
 	),
 	's5' => array(
-		'db1058' => 0,
-		'db1005' => 0, # snapshot, vslow, dump
-		'db1026' => 0, # watchlist, recentchangeslinked, contributions, logpager
-		'db1021' => 400,
-		'db1037' => 400,
-		'db1045' => 400,
+		'db1058' => 0,   # 2.8TB  96GB
+		'db1005' => 0,   # 1.4TB  64GB, snapshot, vslow, dump
+		'db1026' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
+		'db1021' => 400, # 1.4TB  64GB
+		'db1037' => 400, # 1.4TB  64GB
+		'db1045' => 400, # 1.4TB  64GB
 	),
 	's6' => array(
-		'db1023' => 0,
-		'db1022' => 0, # snapshot, vslow, dump
-		'db1030' => 0, # watchlist, recentchangeslinked, contributions, logpager
-		'db1010' => 400,
-		'db1015' => 400,
-		'db1006' => 400,
+		'db1023' => 0,   # 1.4TB  64GB
+		'db1022' => 0,   # 1.4TB  64GB, snapshot, vslow, dump
+		'db1030' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
+		'db1010' => 400, # 1.4TB  64GB
+		'db1015' => 400, # 1.4TB  64GB
+		'db1006' => 400, # 1.4TB  64GB
 	),
 	's7' => array(
-		'db1033' => 0,
-		'db1007' => 0, # snapshot, vslow
-		'db1041' => 0, # watchlist, recentchangeslinked, contributions, logpager
-		'db1028' => 400,
-		'db1034' => 400,
-		'db1039' => 400,
+		'db1033' => 0,   # 1.4TB  64GB, 
+		'db1007' => 0,   # 1.4TB  64GB, snapshot, vslow, dump
+		'db1041' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
+		'db1028' => 400, # 1.4TB  64GB
+		'db1034' => 400, # 1.4TB  64GB
+		'db1039' => 400, # 1.4TB  64GB
 	),
 ),
-
 
 'serverTemplate' => array(
 	'dbname'	  => $wgDBname,
