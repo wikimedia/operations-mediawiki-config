@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_73331760",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 382,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2014-05-09T09:05:54Z",
+      "side": 1,
+      "message": "I think this should be \u0027wmgGettingStartedRunTest\u0027 per https://git.wikimedia.org/blob/operations%2Fmediawiki-config.git/a939eab564f25d2d03180708fd59b17dcf555f4d/wmf-config%2FCommonSettings.php#L2429.",
+      "revId": "afa0c261637d93486b09a90d34591d666dd7feb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
