@@ -51,6 +51,8 @@ $wgCirrusSearchOptimizeIndexForExperimentalHighlighter = $wmgCirrusSearchUserExp
 if ( $wgDBname == 'commonswiki' ) {
 	$wgCirrusSearchNamespaceMappings[ NS_FILE ] = 'file';
 	$wgCirrusSearchReplicaCount['file'] = 2;
+	// Commons has to be the last wiki to optimize because all other wikis can search it implicitly....
+	$wgCirrusSearchOptimizeIndexForExperimentalHighlighter = false;
 // So is everyone else, for using commons
 } else {
 	$wgCirrusSearchExtraIndexes[ NS_FILE ] = array( 'commonswiki_file' );
