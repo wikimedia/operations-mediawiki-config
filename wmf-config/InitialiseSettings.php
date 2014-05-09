@@ -12348,6 +12348,7 @@ $wgConf->settings = array(
 	'ptwiki' => true, // bug 52870
 	'svwiki' => true, // bug 49009
 	'test2wiki' => true,
+	'ukwiki' => true, // bug 64143
 ),
 
 'wmgEducationProgramDYKCat' => array(
