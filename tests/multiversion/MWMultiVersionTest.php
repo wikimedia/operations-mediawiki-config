@@ -129,6 +129,7 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 			array( 'dewikivoyage', 'de.wikivoyage.beta.wmflabs.org' ),
 
 			array( 'enwiki', 'en.wikipedia.beta.wmflabs.org' ),
+			array( 'en_rtlwiki', 'en-rtl.wikipedia.beta.wmflabs.org' ),
 			array( 'enwikibooks', 'en.wikibooks.beta.wmflabs.org' ),
 			array( 'enwikinews', 'en.wikinews.beta.wmflabs.org' ),
 			array( 'enwikiquote', 'en.wikiquote.beta.wmflabs.org' ),
