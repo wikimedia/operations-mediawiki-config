@@ -12168,7 +12168,7 @@ $wgConf->settings = array(
 ),
 
 'wmgMemoryLimit' => array(
-	'default' => 220 * 1024 * 1024, // 220MB
+	'default' => 235 * 1024 * 1024, // 235MB
 ),
 'wgMaxGeneratedPPNodeCount' => array(
 	'default' => 1500000,
