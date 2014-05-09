@@ -1847,16 +1847,13 @@ if ( $wmgUseVectorBeta ) {
 	$wgVectorBetaPersonalBar = $wmgVectorBetaPersonalBar;
 }
 
-if ( $wmgUseParsoid || $wmgUseVisualEditor ) {
-	// Needs to be set separately because some private wikis
-	// use VE but not Parsoid.
-	$wmgParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
-	// The wiki prefix to use
-	$wgParsoidWikiPrefix = $wgDBname;
-}
-
 if ( $wmgUseParsoid ) {
 	require_once( "$IP/extensions/Parsoid/php/Parsoid.php" );
+
+	$wmgParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
+
+	// The wiki prefix to use
+	$wgParsoidWikiPrefix = $wgDBname;
 
 	// List the parsoid cache servers to keep up to date.
 	//

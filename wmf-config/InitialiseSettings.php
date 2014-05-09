@@ -10816,7 +10816,6 @@ $wgConf->settings = array(
 
 'wmgUseParsoid' => array(
 	'default' => true,
-	'private' => false,
 ),
 
 'wmgUseVisualEditor' => array(
