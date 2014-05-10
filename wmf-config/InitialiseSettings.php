@@ -10213,6 +10213,7 @@ $wgConf->settings = array(
 	'thwikisource' => true, // bug 31600
 	'thwikibooks' => true, // bug 31600
 	'thwikiquote' => true, // bug 31600
+	'ukwiki' => true, // bug 65125
 	'urwiki' => true, // bug 62398
 	'zhwiki' => true, // bug 30362
 ),
@@ -10237,6 +10238,7 @@ $wgConf->settings = array(
 	'thwikisource' => true, // bug 31600
 	'thwikibooks' => true, // bug 31600
 	'thwikiquote' => true, // bug 31600
+	'ukwiki' => true, // bug 65125
 ),
 
 'wmgNewUserSuppressRC' => array(
