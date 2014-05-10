@@ -378,6 +378,10 @@ return array(
 	'wmgUseGuidedTour' => array(
 		'wikidatawiki' => true,
 	),
+	// Enable anonymous editor acquisition experiment across labs
+	'wmgGettingStartedRunTest' => array(
+		'default' => true,
+	),
 	'+wmgExtraLanguageNames' => array(
 		'default' => array(),
 		'en_rtlwiki' => array( 'en-rtl' => 'English (rtl)' ),
