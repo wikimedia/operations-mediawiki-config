@@ -12799,6 +12799,7 @@ $wgConf->settings = array(
 		'sort' => 'alphabetic_revised',
 	),
 	'frwikisource' => array(
+		'otherProjectsLinksByDefault' => true,
 		'otherProjectsLinks' => array( 'frwiki', 'frwikiquote', 'commonswiki', 'frwikivoyage' ),
 	),
 	'fywiki' => array(
@@ -12817,6 +12818,7 @@ $wgConf->settings = array(
 		'sort' => 'alphabetic',
 	),
 	'itwikisource' => array(
+		'otherProjectsLinksByDefault' => true,
 		'otherProjectsLinks' => array( 'itwiki', 'itwikiquote', 'commonswiki', 'itwikivoyage' ),
 	),
 	'lbwiki' => array(
