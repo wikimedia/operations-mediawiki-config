@@ -352,6 +352,7 @@ return array(
 
 	'wmgUseFlow' => array(
 		'enwiki' => true,
+		'en_rtlwiki' => true,
 	),
 	# Extension:Flow's browsertests use Talk:Flow_QA.
 	'wmgFlowOccupyPages' => array(
