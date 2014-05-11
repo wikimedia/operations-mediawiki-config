@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e23439c_6ecc3e67",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-05-11T07:53:58Z",
+      "side": 1,
+      "message": "redundant",
+      "revId": "692dd2e995a901fe268b26c832d549e41ee27dba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_4ec98254",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-05-11T07:53:58Z",
+      "side": 1,
+      "message": "redundant",
+      "revId": "692dd2e995a901fe268b26c832d549e41ee27dba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_2ed646f7",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-05-11T07:53:58Z",
+      "side": 1,
+      "message": "redundant",
+      "revId": "692dd2e995a901fe268b26c832d549e41ee27dba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_0ed38a06",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-05-11T07:53:58Z",
+      "side": 1,
+      "message": "redundant",
+      "revId": "692dd2e995a901fe268b26c832d549e41ee27dba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e23439c_ce047283",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 316,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-05-11T07:53:58Z",
+      "side": 1,
+      "message": "redundant",
+      "revId": "692dd2e995a901fe268b26c832d549e41ee27dba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
