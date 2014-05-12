@@ -6769,6 +6769,7 @@ $wgConf->settings = array(
 		'*' => array( 'createpage' => false ),
 		'user' => array(
 			'move' => false, // autoconfirmed only
+			'move-categorypages' => false, // bug 65221
 			'collectionsaveasuserpage' => true, // Bug 46944
 		),
 		'autoconfirmed' => array( 'patrol' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=12007
