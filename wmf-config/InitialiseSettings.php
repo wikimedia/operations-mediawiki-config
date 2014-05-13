@@ -3438,8 +3438,12 @@ $wgConf->settings = array(
 	),
 	'+zhwikisource' => array(
 		'作者' => 102, // Author
-		'作者讨论' => 103, // Author talk
+		'作者讨论' => 103, // Author_talk
 		'作者討論' => 103,
+		'翻譯' => 114, // bug 64127
+		'翻译' => 114, // bug 64127
+		'翻譯討論' => 115, // bug 64127
+		'翻译讨论' => 115, // bug 64127
 	),
 	'+zhwikivoyage' => array( // bug 60122
 		'维基导游' => NS_PROJECT,
@@ -3594,7 +3598,7 @@ $wgConf->settings = array(
 	'+trwikisource' => array( 10 => 0 ),
 	'+ukwikisource' => array( 114 => 1, 115 => 1 ), // bug 50561
 	'+viwikisource' => array( 10 => 0 ),
-	'+zhwikisource' => array( 10 => 0 ),
+	'+zhwikisource' => array( 10 => 0, 114 => 1, 115 => 1 ), // bug 64127
 	// @}
 
 	// Wikiversity @{
@@ -5142,6 +5146,8 @@ $wgConf->settings = array(
 		107 => 'Index_talk',
 		108 => 'Transwiki', # Bug 40474
 		109 => 'Transwiki_talk',
+		114 => 'Translation', // bug 64127
+		115 => 'Translation_talk', // bug 64127
 	),
 	# @} end of wikisource wikis
 
@@ -6344,12 +6350,12 @@ $wgConf->settings = array(
 	'+tewikisource' => array( 102 => 1, 106 => 1 ),
 	'+tlwikibooks' => array( 100 => 1, 101 => 0 ),
 	'+trwikisource' => array( 100 => 1 ),
-	'+ukwikinews' => array( 14 => 1), // bug 49335
+	'+ukwikinews' => array( 14 => 1 ), // bug 49335
 	'+ukwikisource' => array( 102 => 1, 114 => 1, 252 => 1 ), // bug 50561, 51684
 	'+vecwikisource' => array( 100 => 1, 104 => 1 ),
 	'+viwikibooks' => array( 102 => 1, 104 => 1, 106 => 1 ),
 	'+viwikisource' => array( 102 => 1, 106 => 1 ),
-	'+zhwikisource' => array( 102 => 1, 106 => 1 ),
+	'+zhwikisource' => array( 102 => 1, 106 => 1, 114 => 1 ), // bug 64127
 ),
 # @} end of wgNamespacesToBeSearchedDefault
 
@@ -9353,7 +9359,7 @@ $wgConf->settings = array(
 	'+vecwikisource' => array( 100, 102, 104 ),
 	'+viwikibooks' => array( 104, 106 ),
 	'+viwikisource' => array( 102, 104, 106 ),
-	'+zhwikisource' => array( 102, 104, 106 ),
+	'+zhwikisource' => array( 102, 104, 106, 114 ), // bug 64127
 	'+dewikivoyage' => array( 104 ),
 ),
 
