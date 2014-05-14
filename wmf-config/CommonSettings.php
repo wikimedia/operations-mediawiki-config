@@ -533,7 +533,7 @@ if ( $wmgUseTimeline ) {
 		// Generate("FreeSansWMF.ttf", "", 4 );
 		$wgTimelineSettings->fontFile = 'FreeSansWMF.ttf';
 	} elseif ( $lang == 'zh' ) {
-		$wgTimelineSettings->fontFile = 'wqy-zenhei.ttc';
+		$wgTimelineSettings->fontFile = 'unifont-5.1.20080907.ttf';
 	}
 	$wgTimelineSettings->fileBackend = 'local-multiwrite';
 
