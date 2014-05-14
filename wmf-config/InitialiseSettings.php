@@ -6635,6 +6635,7 @@ $wgConf->settings = array(
 		'sysop' => array(
 			'importupload' => true, // bug 52633
 			'reupload-own' => true, // bug 52725
+			'mergehistory' => true, // bug 65348
 		),
 		'uploader' => array(
 			'upload' => true,
@@ -6652,32 +6653,30 @@ $wgConf->settings = array(
 			'deletedtext' => true,
 		), // bug 52866
 		'interface_editor' => array(
-			'editinterface' => true,
-			'editusercss' => true,
-			'edituserjs' => true,
-		), // bug 52866
+			'editinterface' => true, // bug 52866
+			'editusercss' => true, // bug 52866
+			'edituserjs' => true, // bug 52866
+			'apihighlimits' => true, // bug 65348
+			'noratelimit' => true, // bug 65348
+		),
 		'trusted' => array(
 			'block' => true,
 			'blockemail' => true,
-			'protect' => true,
 		), // bug 52866
-		'editprotected' => array( 'editprotected' => true ), // bug 52866
+		'editprotected' => array(
+			'editprotected' => true, // bug 52866
+			'protect' => true, // bug 65348
+		),
 		'flood' => array( 'bot' => true ), // bug 51803
 		'botadmin' => array(
 			'protect' => true,
 			'editprotected' => true,
 			'delete' => true,
 			'bigdelete' => true,
-			'nuke' => true,
-			'deleterevision' => true,
-			'deletelogentry' => true,
 			'undelete' => true,
 			'block' => true,
 			'ipblock-exempt' => true,
-			'proxyunbannable' => true,
-			'import' => true,
-			'importupload' => true,
-			'move-subpages' => true,
+			'rollback' => true, // bug 65348
 		), // Bug 52578
 	),
 	'cswiki' => array(
