@@ -6635,6 +6635,7 @@ $wgConf->settings = array(
 		'sysop' => array(
 			'importupload' => true, // bug 52633
 			'reupload-own' => true, // bug 52725
+			'mergehistory' => true, // bug *****
 		),
 		'uploader' => array(
 			'upload' => true,
@@ -6652,10 +6653,12 @@ $wgConf->settings = array(
 			'deletedtext' => true,
 		), // bug 52866
 		'interface_editor' => array(
-			'editinterface' => true,
-			'editusercss' => true,
-			'edituserjs' => true,
-		), // bug 52866
+			'editinterface' => true, // bug 52866
+			'editusercss' => true, // bug 52866
+			'edituserjs' => true, // bug 52866
+			'apihighlimits' => true, // bug *****
+			'noratelimit' => true, // bug *****
+		),
 		'trusted' => array(
 			'block' => true,
 			'blockemail' => true,
@@ -6678,6 +6681,7 @@ $wgConf->settings = array(
 			'import' => true,
 			'importupload' => true,
 			'move-subpages' => true,
+			'rollback' => true, // bug *****
 		), // Bug 52578
 	),
 	'cswiki' => array(
