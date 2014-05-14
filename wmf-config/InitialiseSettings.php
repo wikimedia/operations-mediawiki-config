@@ -12519,6 +12519,7 @@ $wgConf->settings = array(
 		'Talk:Beta Features/Nearby Pages',
 		'Talk:VisualEditor/Beta Features/Language',
 		'Talk:Content translation',
+		'Talk:Wikibase/Beta Features/Other projects sidebar',
 	),
 	'enwiki' => array( // Bug 60178
 		'Wikipedia talk:WikiProject Breakfast',
