@@ -10516,7 +10516,6 @@ $wgConf->settings = array(
 	'svwikisource' => true, // Bug 23220 -- Andrew 2010-08-28
 	'test2wiki' => true,
 	'wikimania2010wiki' => true, // Erik requested, by mail
-	'wikimania2011wiki' => true, // Erik requested, by mail
 ),
 
 'wmgLiquidThreadsOptIn' => array(
