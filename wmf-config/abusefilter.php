@@ -53,6 +53,18 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterAvailableActions[] = 'block';
 		$wgAbuseFilterBlockDuration = '2 hours';
 		break;
+	case 'ckbwiki':
+		$wgGroupPermissions['*']['abusefilter-view'] = false;
+		$wgGroupPermissions['*']['abusefilter-log'] = false;
+		$wgAbuseFilterNotifications = false;
+		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
+		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
+		$wgGroupPermissions['interface_editor']['abusefilter-modify'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-log-private'] = true;
+		break;
 	case 'commonswiki':
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		break;
