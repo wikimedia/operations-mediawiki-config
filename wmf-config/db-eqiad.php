@@ -123,7 +123,7 @@ $wgLBFactoryConf = array(
 	),
 	's5' => array(
 		'db1058' => 0,   # 2.8TB  96GB
-		'db1005' => 0,   # 1.4TB  64GB, snapshot, vslow, dump
+		'db1005' => 0,   # 1.4TB  64GB, snapshot, vslow, api, dump
 		'db1026' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
 		'db1021' => 400, # 1.4TB  64GB
 		'db1037' => 400, # 1.4TB  64GB
@@ -227,6 +227,9 @@ $wgLBFactoryConf = array(
 			'db1005' => 1,
 		),
 		'dump' => array(
+			'db1005' => 1,
+		),
+		'api' => array(
 			'db1005' => 1,
 		),
 		'watchlist' => array(
