@@ -12299,6 +12299,10 @@ $wgConf->settings = array(
 ),
 'wmgGettingStartedRunTest' => array(
 	'default' => false,
+	'dewiki' => true,
+	'enwiki' => true,
+	'frwiki' => true,
+	'itwiki' => true,
 ),
 'wmgUseGuidedTour' => array(
 	'default' => false,
