@@ -2,7 +2,7 @@
 <?php
 error_reporting( E_ALL );
 require_once( __DIR__ . '/checkoutMediaWiki.php' );
-require_once( __DIR__ . '/updateBitsBranchPointers' );
+require_once( __DIR__ . '/updateBranchPointers' );
 
 checkoutMediaWiki();
-updateBitsBranchPointers();
+updateBranchPointers();

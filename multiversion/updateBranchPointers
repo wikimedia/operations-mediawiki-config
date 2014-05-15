@@ -1,12 +1,15 @@
 #!/usr/bin/env php
 <?php
 /**
- * Create/update symlinks from docroot/bits/static-current & docroot/bits/static-stable
- * to the latest and next-to-latest production branches, respectively. These symlinks
- * are used to provide stable URLs to large static assets that are served by extensions
+ * Create/update various symlinks used in production.
+ *
+ * docroot/bits/static-current links to the latest production branch, respectively.
+ * This provides a stable URL to large static assets that are served by extensions
  * and which do not change frequently.
  *
- * Usage: updateBitsBranchPointers [OPTIONS]
+ * php links to the current primary deployed version of MediaWiki.
+ *
+ * Usage: updateBranchPointers [OPTIONS]
  *
  * Options:
  *   --dry-run: Don't touch the file system; only show what would be done.
@@ -19,7 +22,7 @@ function isMain() {
 	return basename( __FILE__ ) === basename( $_SERVER['SCRIPT_FILENAME'] );
 }
 
-function updateBitsBranchPointers( $dryRun = false ) {
+function updateBranchPointers( $dryRun = false ) {
 	$branchDirs = glob( MULTIVER_COMMON_APACHE . '/php-*', GLOB_ONLYDIR );
 
 	if ( !is_array( $branchDirs ) || count( $branchDirs ) < 1 ) {
@@ -34,6 +37,8 @@ function updateBitsBranchPointers( $dryRun = false ) {
 
 	$branches = array( 'current' => array_pop( $branchDirs ) );
 
+	updateSymlink( MULTIVER_COMMON_HOME . '/php', MULTIVER_COMMON_HOME . '/' . $branches['current'], $dryRun );
+
 	foreach( $branches as $branch => $target ) {
 		echo "Updating $branch branch pointer...\n";
 
@@ -47,40 +52,48 @@ function updateBitsBranchPointers( $dryRun = false ) {
 		foreach( array( 'skins', 'extensions', 'resources' ) as $child ) {
 			$link = $parent . '/' . $child;
 			$dest = $target . '/' . $child;
-
-			if ( !file_exists( $dest ) ) {
-				fwrite( STDERR, __FUNCTION__ . ": link target $dest does not exist.\n" );
-				exit( 1 );
-			}
-
-			if ( file_exists( $link ) ) {
-				if ( realpath( $link ) === $dest ) {
-					echo "$link is already up-to-date.\n";
-					continue;
-				}
-
-				if ( !is_link( $link ) ) {
-					fwrite( STDERR, __FUNCTION__ . ": $link exists and is not a symbolic link.\n" );
-					exit( 1 );
-				}
-
-				if ( !$dryRun && !unlink( $link ) ) {
-					fwrite( STDERR, __FUNCTION__ . ": failed to unlink $link\n" );
-					exit( 1 );
-				}
-			}
-
-			if ( !$dryRun && !symlink( $dest, $link ) ) {
-				fwrite( STDERR, __FUNCTION__ . ": failed to create $link\n" );
-				exit( 1 );
-			}
-			echo "$link => $dest\n";
+			updateSymlink( $link, $dest, $dryRun );
 		}
 		echo "\n";
 	}
 }
 
+/**
+ * @param string $link
+ * @param string $dest
+ * @param bool $dryRun
+ */
+function updateSymlink( $link, $dest, $dryRun ) {
+	if ( !file_exists( $dest ) ) {
+		fwrite( STDERR, __FUNCTION__ . ": link target $dest does not exist.\n" );
+		exit( 1 );
+	}
+
+	if ( file_exists( $link ) ) {
+		if ( realpath( $link ) === $dest ) {
+			echo "$link is already up-to-date.\n";
+			return;
+		}
+
+		if ( !is_link( $link ) ) {
+			fwrite( STDERR, __FUNCTION__ . ": $link exists and is not a symbolic link.\n" );
+			exit( 1 );
+		}
+
+		if ( !$dryRun && !unlink( $link ) ) {
+			fwrite( STDERR, __FUNCTION__ . ": failed to unlink $link\n" );
+			exit( 1 );
+		}
+	}
+
+	if ( !$dryRun && !symlink( $dest, $link ) ) {
+		fwrite( STDERR, __FUNCTION__ . ": failed to create $link\n" );
+		exit( 1 );
+	}
+	echo "$link => $dest\n";
+}
+
 if ( isMain() ) {
 	$dryRun = in_array( '--dry-run', $argv, true );
-	updateBitsBranchPointers( $dryRun );
+	updateBranchPointers( $dryRun );
 }
