@@ -6,7 +6,7 @@
  * are used to provide stable URLs to large static assets that are served by extensions
  * and which do not change frequently.
  *
- * Usage: updateBitsBranchPointers [OPTIONS]
+ * Usage: updateBranchPointers [OPTIONS]
  *
  * Options:
  *   --dry-run: Don't touch the file system; only show what would be done.
@@ -19,7 +19,7 @@ function isMain() {
 	return basename( __FILE__ ) === basename( $_SERVER['SCRIPT_FILENAME'] );
 }
 
-function updateBitsBranchPointers( $dryRun = false ) {
+function updateBranchPointers( $dryRun = false ) {
 	$branchDirs = glob( MULTIVER_COMMON_APACHE . '/php-*', GLOB_ONLYDIR );
 
 	if ( !is_array( $branchDirs ) || count( $branchDirs ) < 1 ) {
@@ -82,5 +82,5 @@ function updateBitsBranchPointers( $dryRun = false ) {
 
 if ( isMain() ) {
 	$dryRun = in_array( '--dry-run', $argv, true );
-	updateBitsBranchPointers( $dryRun );
+	updateBranchPointers( $dryRun );
 }
