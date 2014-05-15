@@ -182,6 +182,7 @@ elseif ( $wgDBname == 'dewikiquote' ) {
 elseif ( $wgDBname == 'dewiktionary' ) {
 	$wgFlaggedRevsOverride = false;
 	$wgFlaggedRevTags['accuracy']['levels'] = 1;
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 102, 104, 106 ) ); // bug 65316
 
 	$wgFlaggedRevsAutoconfirm = array( // Bug 44103
 		'days'                => 60,
