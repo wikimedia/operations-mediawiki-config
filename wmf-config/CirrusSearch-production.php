@@ -28,3 +28,5 @@ if ( isset( $projectsOkForInterwiki[ $wgDBname ] ) ) {
 	$wgCirrusSearchInterwikiSources = $interwikiSearchConf;
 	$wgCirrusSearchInterwikiCacheTime = 60;
 }
+
+$wgCirrusSearchBannedPlugins[] = 'analysis-icu';

@@ -27,3 +27,4 @@ $wgSearchTypeAlternatives = array();
 
 $wgCirrusSearchUseExperimentalHighlighter = true;
 $wgCirrusSearchOptimizeIndexForExperimentalHighlighter = true;
+$wgCirrusSearchBannedPlugins[] = 'elasticsearch-analysis-hebrew';
