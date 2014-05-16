@@ -68,6 +68,9 @@ if ( $wmgUseGWToolset ) {
 
 if ( $wmgUseOAuth ) {
 	$wgMWOAuthCentralWiki = 'labswiki';  # bug 57403
+
+	// Bug 59141 - Return this to true and reset secrets once SSL works in labs
+	$wgMWOAuthSecureTokenTransfer = false;
 }
 
 if ( $wmgUseMultimediaViewer ) {
