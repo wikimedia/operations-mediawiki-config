@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
 error_reporting( E_ALL );
-require_once( __DIR__ . '/updateBitsBranchPointers' );
+require_once( __DIR__ . '/updateBranchPointers' );
 require_once( __DIR__ . '/updateWikiversions.php' );
 
 updateWikiversions();
-updateBitsBranchPointers();
+updateBranchPointers();
