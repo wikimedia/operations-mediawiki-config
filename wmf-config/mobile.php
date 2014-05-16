@@ -11,7 +11,9 @@ if ( $wmgMobileFrontend ) {
 	$wgMFPhotoUploadEndpoint = $wmgMFPhotoUploadEndpoint;
 	$wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
 	$wgMFPhotoUploadWiki = $wmgMFPhotoUploadWiki;
-	$wgMFNearbyNamespace = $wmgMFNearbyNamespace;
+	$wgMFContentNamespace = $wmgMFContentNamespace;
+	// FIXME: Remove in a week when cache has cleared
+	$wgMFNearbyNamespace = $wmgMFContentNamespace;
 	$wgMFPhotoUploadAppendToDesc = $wmgMFPhotoUploadAppendToDesc;
 	$wgMFInfoboxLogging = $wmgMFInfoboxLogging;
 	$wgMFKeepGoing = $wmgMFKeepGoing;
