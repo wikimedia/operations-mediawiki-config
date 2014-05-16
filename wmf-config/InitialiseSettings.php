@@ -10816,6 +10816,12 @@ $wgConf->settings = array(
 	'default' => 10, // beta feature users do not generate enough data with 1:1000
 	'mediaviewer' => 1000,
 ),
+
+'wmgMediaViewerSamplingFactor' => array(
+	'default' => 1,
+	'mediaviewer' => 100,
+),
+
 // ------------ BetaFeatures end -----------
 
 // -------------- VisualEditor start --------------
