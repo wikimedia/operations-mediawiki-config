@@ -12387,9 +12387,7 @@ $wgConf->settings = array(
 	'wikivoyage' => true,
 ),
 'wmgGeoDataBackend' => array(
-	'default' => 'solr',
-	'testwiki' => 'elastic',
-	'wikivoyage' => 'elastic',
+	'default' => 'elastic',
 ),
 'wmgGeoDataUseCirrusSearch' => array(
 	'default' => true,
