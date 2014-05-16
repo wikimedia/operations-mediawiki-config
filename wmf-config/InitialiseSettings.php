@@ -10818,8 +10818,8 @@ $wgConf->settings = array(
 ),
 
 'wmgMediaViewerSamplingFactor' => array(
-	'default' => 1,
-	'mediaviewer' => 100,
+	'default' => 10,
+	'mediaviewer' => 1000,
 ),
 
 // ------------ BetaFeatures end -----------
