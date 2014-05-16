@@ -1623,31 +1623,18 @@ if ( $wmgUsePdfHandler ) {
 	include ( "$IP/extensions/PdfHandler/PdfHandler.php" );
 }
 
-$wgNavigableTOCCollapseEnable = true;
-$wgNavigableTOCResizable = true;
-
 require( "$IP/extensions/WikiEditor/WikiEditor.php" );
 
 // Disable experimental things
-$wgWikiEditorFeatures['templateEditor'] =
-	$wgWikiEditorFeatures['preview'] =
+$wgWikiEditorFeatures['preview'] =
 	$wgWikiEditorFeatures['previewDialog'] =
-	$wgWikiEditorFeatures['publish'] =
-	$wgWikiEditorFeatures['templates'] =
-	$wgWikiEditorFeatures['highlight'] = array( 'global' => false, 'user' => true ); // Hidden from prefs view
-$wgHiddenPrefs[] = 'usenavigabletoc';
-$wgHiddenPrefs[] = 'wikieditor-templates';
-$wgHiddenPrefs[] = 'wikieditor-template-editor';
+	$wgWikiEditorFeatures['publish'] = array( 'global' => false, 'user' => true ); // Hidden from prefs view
 $wgHiddenPrefs[] = 'wikieditor-preview';
 $wgHiddenPrefs[] = 'wikieditor-previewDialog';
 $wgHiddenPrefs[] = 'wikieditor-publish';
-$wgHiddenPrefs[] = 'wikieditor-highlight';
+
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
-
-// For Babaco... these are still experimental, won't be on by default
-$wgNavigableTOCUserEnable = true;
-$wgEditToolbarCGDUserEnable = true;
 
 if ( $wmgUserDailyContribs ) {
 	require "$IP/extensions/UserDailyContribs/UserDailyContribs.php";
