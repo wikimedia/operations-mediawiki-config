@@ -160,6 +160,7 @@ return array(
 	),
 	'wmgUseEcho' => array(
 		'enwiki' => true,
+		'en_rtlwiki' => true,
 	),
 
 	'-wmgUsePoolCounter' => array(
@@ -357,6 +358,7 @@ return array(
 	# Extension:Flow's browsertests use Talk:Flow_QA.
 	'wmgFlowOccupyPages' => array(
 		'enwiki' => array( 'Talk:Flow QA', 'Talk:Flow' ),
+		'en_rtlwiki' => array( 'Talk:Flow' ),
 	),
 	# No separate Flow DB or cluster (yet) for labs.
 	'-wmgFlowDefaultWikiDb' => array(
