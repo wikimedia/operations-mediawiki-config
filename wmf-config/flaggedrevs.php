@@ -301,6 +301,47 @@ elseif ( $wgDBname == 'eowiki' ) {
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 }
 
+elseif ( $wgDBname == 'fawiki') {
+	# Namespaces
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_PROJECT, NS_HELP, NS_TEMPLATE, NS_CATEGORY, NS_FILE, 100, 102, 828 );
+	# Show only on a per-page basis
+	$wgFlaggedRevsOverride = false;
+	# We have only one tag with one level
+	$wgFlaggedRevTags = array(
+		'status' => array( 'levels' => 1, 'quality' => 2, 'pristine' => 3 ),
+	);
+	# Restrict autoconfirmed to flagging semi-protected
+	$wgFlagRestrictions = array(
+		'status' => array( 'review' => 1, 'autoreview' => 1 ),
+	);
+	# Restriction levels for auto-review/review rights
+	$wgFlaggedRevsRestrictionLevels = array( '', 'autoconfirmed', 'autoreview' );
+	# Use flag "protection" levels
+	$wgFlaggedRevsProtection = true;
+	# Use current templates/files
+	$wgFlaggedRevsHandleIncludes = FR_INCLUDES_CURRENT;
+	# Trial quota
+	$wgFlaggedRevsProtectQuota = 2000;
+
+	# User groups permissions
+	$wgGroupPermissions['autopatrol']['autoreview'] = true;
+	$wgGroupPermissions['patroller']['autoreview'] = true;
+	$wgGroupPermissions['patroller']['review'] = true;
+	$wgGroupPermissions['patroller']['validate'] = true;
+	$wgGroupPermissions['patroller']['unreviewedpages'] = true;
+	$wgGroupPermissions['sysop']['review'] = true;
+	$wgGroupPermissions['sysop']['validate'] = true;
+	$wgGroupPermissions['sysop']['unreviewedpages'] = true;
+	$wgGroupPermissions['sysop']['stablesettings'] = true;
+
+	# Remove all user groups (editor, reviewer, autoreview)
+	unset( $wgGroupPermissions['editor'], $wgGroupPermissions['reviewer'], $wgGroupPermissions['autoreview'] );
+	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'editor', 'autoreview' ) );
+	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'editor', 'autoreview' ) );
+	$wgAddGroups['bureaucrat'] = array_diff( $wgAddGroups['bureaucrat'], array( 'reviewer' ) );
+	$wgRemoveGroups['bureaucrat'] = array_diff( $wgRemoveGroups['bureaucrat'], array( 'reviewer' ) );
+}
+
 elseif ( $wgDBname == 'fawikinews' ) {
 	$wgFlaggedRevsAutoReviewNew = false;
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_CATEGORY, 100 ) );
