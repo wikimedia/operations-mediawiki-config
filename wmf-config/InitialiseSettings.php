@@ -116,6 +116,7 @@ $wgConf->settings = array(
 	'sewikimedia' => 'sv',
 	'uawikimedia' => 'uk',
 	'ukwikimedia' => 'en-gb',
+	'us_newikimedia' => 'en',
 
 	# Special wikis
 	'special' => 'en', # default - overridden below by some wikis
@@ -947,6 +948,7 @@ $wgConf->settings = array(
 	'trwikimedia' => '$stdlogo',
 	'uawikimedia' => '//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Wikimedia-UA-logo.svg/135px-Wikimedia-UA-logo.svg.png',
 	'ukwikimedia' => '$stdlogo',
+	'us_newikimedia' => '$stdlogo',
 	'vewikimedia' => '$stdlogo',
 
 	// Special wikis
@@ -1203,6 +1205,7 @@ $wgConf->settings = array(
 	'testwiki' => '//test.wikipedia.org',
 	'testwikidatawiki' => '//test.wikidata.org',
 	'usabilitywiki' => '//usability.wikimedia.org',
+	'us_newikimedia' => '//us-ne.wikimedia.org',
 	'votewiki' => '//vote.wikimedia.org',
 	'vewikimedia' => '//ve.wikimedia.org',
 	'wg_enwiki' => '//wg.en.wikipedia.org',
@@ -1285,6 +1288,7 @@ $wgConf->settings = array(
 	'testwikidatawiki' => 'http://test.wikidata.org',
 	'transitionteamwiki' => 'https://transitionteam.wikimedia.org',
 	'usabilitywiki' => 'http://usability.wikimedia.org',
+	'us_newikimedia' => 'http://us-ne.wikimedia.org',
 	'uzwiki' => 'https://uz.wikipedia.org', // bug 43466
 	'votewiki' => 'https://vote.wikimedia.org',
 	'vewikimedia' => 'http://ve.wikimedia.org',
@@ -1708,6 +1712,7 @@ $wgConf->settings = array(
 	'urwikiquote' => 'وکی اقتباسات',
 	'urwiktionary' => 'وکی لغت',
 	'usabilitywiki' => 'Wikimedia Usability Initiative',
+	'us_newikimedia' => 'Wikimedia New England',
 	'uzwiki' => 'Vikipediya',
 	'uzwikibooks' => 'Vikikitob',
 	'uzwikiquote' => 'Vikiiqtibos',
@@ -2171,6 +2176,7 @@ $wgConf->settings = array(
 	'urwikibooks'   => 'وکی_کتب',
 	'urwikiquote'   => 'وکی_اقتباسات',
 	'urwiktionary'  => 'وکی_لغت',
+	'us_newikimedia' => 'Project',
 	'uzwiki'	=> 'Vikipediya',
 	'uzwikibooks'	=> 'Vikikitob',
 	'uzwikiquote'   => 'Vikiiqtibos',
@@ -6272,6 +6278,7 @@ $wgConf->settings = array(
 	'stewardwiki' => "#steward.wikipedia\t",
 	'testwikidatawiki' => "#testwikidata.wikipedia\t",
 	'transitionteamwiki' => "#transitionteam.wikipedia\t",
+	'us_newikimedia' => "#us-ne.wikimedia\t",
 	'votewiki' => "#vote.wikipedia\t",
 	'wg_enwiki' => "#wg-en.wikipedia\t",
 	'wikidatawiki' => "#wikidata.wikipedia\t",
@@ -6555,6 +6562,9 @@ $wgConf->settings = array(
 		'edit' => false,
 	) ),
 	'trwikimedia' => array( '*' => array(
+		'edit' => false,
+	) ),
+	'us_newikimedia' => array( '*' = array(
 		'edit' => false,
 	) ),
 
@@ -8150,6 +8160,9 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker' ), // Bug 42737 and 45643
 		'sysop' => array( 'confirmed', 'abusefilter', 'rollbacker' ), // Bug 42737 and 45643
 	),
+	'+us_newikimedia' => array(
+		'bureaucrat' => array( 'translationadmin' ),
+	),
 	'+viwiki' => array(
 		'sysop' => array( 'rollbacker', 'flood', 'patroller', 'autopatrolled' ), // bug 46828
 		'bureaucrat' => array( 'flood' ),
@@ -8654,6 +8667,9 @@ $wgConf->settings = array(
 	'+urwiki' => array(
 		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker' ), // Bug 42737 and 45643
 		'sysop' => array( 'confirmed' ), // Bug 42737
+	),
+	'+us_newikimedia' => array(
+		'bureaucrat' => array( 'translationadmin' ),
 	),
 	'+viwiki' => array(
 		'sysop' => array( 'rollbacker', 'flood', 'patroller', 'autopatrolled' ), // bug 46828
@@ -10022,6 +10038,7 @@ $wgConf->settings = array(
 	'uawikimedia'   => true,
 	'ukwikimedia'   => true,
 	'usabilitywiki' =>  true,
+	'us_newikimedia' => true,
 	'vecwiktionary' => true,
 	'vewikimedia' => true,
 	'viwikivoyage' => true, // bug 52034
@@ -12035,6 +12052,7 @@ $wgConf->settings = array(
 	'otrs_wikiwiki' => true, // bug 61297
 	'outreachwiki' => true,
 	'testwiki' => true,
+	'us_newikimedia' => true,
 	'wikidata' => true, // bug 41585
 	'wikimania2012wiki' => true, // bug 34120
 	'wikimania2013wiki' => true, // bug 36477
