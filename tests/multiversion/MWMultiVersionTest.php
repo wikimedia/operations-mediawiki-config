@@ -118,6 +118,7 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 			array( 'trwikimedia', 'tr.wikimedia.org' ),
 			array( 'uawikimedia', 'ua.wikimedia.org' ),
 			array( 'ukwikimedia', 'uk.wikimedia.org' ),
+			array( 'us_newikimedia', 'us-ne.wikimedia.org'),
 			array( 'vewikimedia', 've.wikimedia.org' ),
 
 			// labs stuffs taken from /wikiversions-labs.dat
