@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e20cf91_66158e9c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1127,
+      "author": {
+        "id": 1523
+      },
+      "writtenOn": "2014-05-18T19:42:31Z",
+      "side": 1,
+      "message": "Should we also automatically route people to Commons from the sidebar while still keeping Special:Upload enabled?",
+      "revId": "9e9cafcc0fa1a9879a20ec2367eb9e04bf727683",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_8610aaae",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 9106,
+      "author": {
+        "id": 1523
+      },
+      "writtenOn": "2014-05-18T19:42:31Z",
+      "side": 1,
+      "message": "Should we allow email notifications on minor edits as well?",
+      "revId": "9e9cafcc0fa1a9879a20ec2367eb9e04bf727683",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
