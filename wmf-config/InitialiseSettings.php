@@ -10974,7 +10974,6 @@ $wgConf->settings = array(
 	'bewiki' => 'uca-be', // bug 46004
 	'bewikisource' => 'uca-be', // bug 46004
 	'ckbwiki' => 'xx-uca-ckb', // bug 55630
-	'cswiki' => 'uca-cs', // bug 64885
 	'cywiki' => 'uca-cy', // bug 59800
 	'cywikibooks' => 'uca-cy', // bug 59800
 	'cywikiquote' => 'uca-cy', // bug 59800
