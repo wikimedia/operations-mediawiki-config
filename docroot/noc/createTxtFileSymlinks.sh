@@ -3,45 +3,45 @@ cd $(dirname $0)/conf
 
 # Create .txt symlink from mediawiki-config
 mwconfig_files_txt=(
-	wmf-config/CommonSettings-labs.php
-	wmf-config/CommonSettings.php
-	wmf-config/InitialiseSettings-labs.php
-	wmf-config/InitialiseSettings.php
-	wmf-config/PoolCounterSettings-eqiad.php
-	wmf-config/StartProfiler.php
-	wmf-config/abusefilter.php
-	wmf-config/CirrusSearch-common.php
-	wmf-config/CirrusSearch-labs.php
-	wmf-config/db-eqiad.php
-	wmf-config/db-labs.php
-	wmf-config/db-secondary.php
-	wmf-config/ext-labs.php
-	wmf-config/ext-production.php
-	wmf-config/filebackend-labs.php
-	wmf-config/filebackend.php
-	wmf-config/flaggedrevs.php
-	wmf-config/jobqueue-eqiad.php
-	wmf-config/liquidthreads.php
-	wmf-config/logging-labs.php
-	wmf-config/lucene-common.php
-	wmf-config/lucene-production.php
-	wmf-config/mc.php
-	wmf-config/mc-labs.php
-	wmf-config/missing.php
-	wmf-config/mobile-labs.php
-	wmf-config/mobile.php
-	wmf-config/proofreadpage.php
-	wmf-config/throttle.php
-	wmf-config/wgConf.php
-	wmf-config/wgConfVHosts.php
-	wmf-config/wgConfVHosts-labs.php
-	wmf-config/squid.php
-	wmf-config/squid-labs.php
-	wmf-config/session.php
-	wmf-config/session-labs.php
-	wmf-config/twemproxy-eqiad.yaml
-	wmf-config/twemproxy-labs.yaml
-	wmf-config/Wikibase.php
+	CommonSettings-labs.php
+	CommonSettings.php
+	InitialiseSettings-labs.php
+	InitialiseSettings.php
+	PoolCounterSettings-eqiad.php
+	StartProfiler.php
+	abusefilter.php
+	CirrusSearch-common.php
+	CirrusSearch-labs.php
+	db-eqiad.php
+	db-labs.php
+	db-secondary.php
+	ext-labs.php
+	ext-production.php
+	filebackend-labs.php
+	filebackend.php
+	flaggedrevs.php
+	jobqueue-eqiad.php
+	liquidthreads.php
+	logging-labs.php
+	lucene-common.php
+	lucene-production.php
+	mc.php
+	mc-labs.php
+	missing.php
+	mobile-labs.php
+	mobile.php
+	proofreadpage.php
+	throttle.php
+	wgConf.php
+	wgConfVHosts.php
+	wgConfVHosts-labs.php
+	squid.php
+	squid-labs.php
+	session.php
+	session-labs.php
+	twemproxy-eqiad.yaml
+	twemproxy-labs.yaml
+	Wikibase.php
 )
 
 # Create non-txt symlink from mediawiki-config
@@ -122,7 +122,7 @@ done
 
 for i in "${mwconfig_files_txt[@]}"
 do
-	ln -s ../../../$i "./$(basename $i).txt"
+	ln -s ../../../wmf-config/$i "./$(basename $i).txt"
 done
 
 for i in "${mwconfig_files[@]}"
