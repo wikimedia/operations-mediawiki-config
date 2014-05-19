@@ -1,0 +1,32 @@
+#!/usr/bin/env php
+<?php
+error_reporting( E_ALL );
+
+if ( count( $argv ) !== 2 ) {
+	print "Usage: updateGroup1 php-X.XXwmfX\n";
+	exit( 1 );
+}
+
+$argv[2] = $argv[1];
+$argv[1] = "";
+
+require_once( __DIR__ . '/updateBranchPointers' );
+require_once( __DIR__ . '/updateWikiversions.php' );
+
+foreach( 
+	array(
+		'wiktionary.dblist',
+		'wikisource.dblist',
+		'wikinews.dblist',
+		'wikibooks.dblist',
+		'wikiquote.dblist',
+		'wikiversity.dblist',
+		'wikivoyage.dblist',
+		'special.dblist',
+		'private.dblist'
+	) as $db ) {
+
+	$argv[1] = $db;
+	updateWikiversions();
+}
+updateBranchPointers();
