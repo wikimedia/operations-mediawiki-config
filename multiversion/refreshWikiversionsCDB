@@ -34,7 +34,7 @@ function refreshWikiversionsCDB() {
 		}
 	}
 
-	$dbNames = MWWikiversions::readDbListFile( getRealmSpecificFilename( MULTIVER_COMMON_HOME . '/all.dblist' ) );
+	$dbNames = MWWikiversions::readDbListFile( getRealmSpecificFilename( MULTIVER_COMMON_HOME . '/dblist/all.dblist' ) );
 	$diff = array_diff( $dbNames, array_keys( $rows ) );
 	if ( count( $diff ) ) {
 		print_r( $diff );
