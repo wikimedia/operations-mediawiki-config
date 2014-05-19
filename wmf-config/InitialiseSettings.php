@@ -6759,6 +6759,9 @@ $wgConf->settings = array(
 		'autoconfirmed'	=> array( 'patrol' => false, ),
 		'sysop'			=> array( 'patrol' => true, ),
 	),
+    'dewikivoyage' => array(
+        'autopatrolled' => array( 'autopatrol' => true, ), // Bug 65495
+    ),
 	'dewiktionary' => array(
 		'sysop' => array( 'importupload' => true, ),
 	),
@@ -7809,6 +7812,9 @@ $wgConf->settings = array(
 	'+dawiki' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
 	),
+    '+dewikivoyage' => array(
+        'sysop' => array( 'autopatrolled' ), // Bug 65495
+    ),
 	'+donatewiki' => array(
 		'sysop' => array( 'inactive', 'flood' ),
 		'bureaucrat' => array( 'import', 'transwiki', 'inactive' ),
@@ -8302,6 +8308,9 @@ $wgConf->settings = array(
 	'+dawiki' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
 	),
+    '+dewikivoyage' => array(
+        'sysop' => array( 'autopatrolled' ), // Bug 65495
+    ),
 	'+donatewiki' => array(
 		'sysop' => array( 'inactive', 'confirmed', 'flood' ),
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'import', 'transwiki', 'inactive', 'confirmed' ),
@@ -9753,6 +9762,12 @@ $wgConf->settings = array(
 
 'wmgAutopromoteOnceonEdit' => array(
 	'default' => array(),
+    'dewikivoyage' => array(
+        'autopatrolled' => array(
+            '&',
+            array( APCOND_EDITCOUNT, 200 ),
+        ),
+    ), // Bug 65495
 	'trwiki' => array(
 		'autoreview' => array(
 			'&', // AND
