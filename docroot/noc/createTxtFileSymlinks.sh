@@ -44,22 +44,16 @@ mwconfig_files_txt=(
 	wmf-config/Wikibase.php
 )
 
-# Create non-txt symlink from mediawiki-config
-# Except for dblists, these are mostly for backwards compatibility as
-# raw views should use txt for consistent behaviour in browsers
-# (not triggering a download instead of a view, and rendering as plain text).
-mwconfig_files=(
+mwconfig_dblist=(
 	all.dblist
 	all-labs.dblist
 	cirrus.dblist
 	closed.dblist
 	deleted.dblist
 	echowikis.dblist
-	fc-list
 	fishbowl.dblist
 	flaggedrevs.dblist
 	group0.dblist
-	langlist
 	large.dblist
 	mediaviewer.dblist
 	medium.dblist
@@ -84,11 +78,17 @@ mwconfig_files=(
 	wikipedia.dblist
 	wikiquote.dblist
 	wikisource.dblist
-	wikiversions.json
-	wikiversions-labs.json
 	wikiversity.dblist
 	wikivoyage.dblist
 	wiktionary.dblist
+)
+
+# Create non-txt symlink from mediawiki-config
+mwconfig_files=(
+	fc-list
+	langlist
+	wikiversions.json
+	wikiversions-labs.json
 	wmf-config/extension-list
 	wmf-config/extension-list-labs
 	wmf-config/interwiki.cdb
@@ -128,6 +128,11 @@ done
 for i in "${mwconfig_files[@]}"
 do
 	ln -s ../../../$i "./$(basename $i)"
+done
+
+for i in "${mwconfig_dblist[@]}"
+do
+        ln -s ../../../dblist/$i "./$(basename $i)"
 done
 
 for i in "${other_config_file[@]}"
