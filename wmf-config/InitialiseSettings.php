@@ -7273,7 +7273,6 @@ $wgConf->settings = array(
 	// http://bugzilla.wikimedia.org/show_bug.cgi?id=6303
 	'plwiki' => array(
 		'user' => array( 'upload' => false ),
-		'autoconfirmed' => array( 'upload' => true ),
 		'editor' => array( 'rollback' => true, 'patrolmarks' => true, 'editor' => true ), // bug 20154 and 46990
 		'flood' => array( 'bot' => true ), // bug 20155
 		'sysop' => array( 'deleterevision' => true, 'editor' => true ), // bug 46990
