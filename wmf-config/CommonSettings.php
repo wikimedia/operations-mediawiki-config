@@ -1090,14 +1090,6 @@ if ( getenv( 'WIKIDEBUG' ) ) {
 	$wgDebugLogFile = '/tmp/wiki.log';
 	$wgDebugDumpSql = true;
 	$wgDebugLogGroups = array();
-	foreach ( $wgDBservers as $key => $val ) {
-		$wgDBserver[$key]['flags'] |= 1;// DBO_DEBUG;
-	}
-	foreach ( $wgExternalServers as $key => $val ) {
-		foreach ( $val as $x => $y ) {
-			$wgExternalServers[$key][$x]['flags'] |= 1;// DBO_DEBUG;
-		}
-	}
 }
 
 wfProfileOut( "$fname-misc4" );
