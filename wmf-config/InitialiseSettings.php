@@ -6233,6 +6233,11 @@ $wgConf->settings = array(
 	'default' => '208.80.152.178', // pmtpa: ekrem
 ),
 
+//this replaces wmgRC2UDPAddress outright post testing
+'wmgRC2UDPAddressMIGRATION' => array(
+	'default' => '208.80.154.160', // eqiad: argon
+),
+
 'wmgRC2UDPPort' => array(
 	'default' => 9390,
 ),

@@ -2688,6 +2688,13 @@ if ( $wmgUseRC2UDP ) {
 		'add_interwiki_prefix' => false,
 		'omit_bots' => false,
 	);
+
+	$wgRCFeeds['ircd'] = array(
+		'formatter' => 'IRCColourfulRCFeedFormatter',
+		'uri' => "udp://$wmgRC2UDPAddressMIGRATION:$wmgRC2UDPPort/$wmgRC2UDPPrefix",
+		'add_interwiki_prefix' => false,
+		'omit_bots' => false,
+	);
 }
 
 // Confirmed can do anything autoconfirmed can.
