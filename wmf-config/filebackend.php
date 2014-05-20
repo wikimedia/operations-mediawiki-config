@@ -70,61 +70,6 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared files
 );
 /* end Eqiad Swift backend config */
 
-/* Tampa Swift backend config */
-$wgFileBackends[] = array( // backend config for wiki's local repo
-	'class'              => 'SwiftFileBackend',
-	'name'               => 'local-swift',
-	'wikiId'             => "{$site}-{$lang}",
-	'lockManager'        => 'nullLockManager', // LocalFile uses FOR UPDATE
-	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
-	'swiftUser'          => $wmfSwiftConfig['user'],
-	'swiftKey'           => $wmfSwiftConfig['key'],
-	'swiftTempUrlKey'    => $wmfSwiftConfig['tempUrlKey'],
-	'shardViaHashLevels' => array(
-		'local-public'     => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-thumb'      => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-temp'       => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-transcoded' => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-deleted'    => array( 'levels' => $wmfSwiftShardLocal, 'base' => 36, 'repeat' => 0 )
-	),
-	'parallelize'        => 'implicit',
-	'cacheAuthInfo'      => true
-);
-$wgFileBackends[] = array( // backend config for wiki's access to shared repo
-	'class'              => 'SwiftFileBackend',
-	'name'               => 'shared-swift',
-	'wikiId'             => "wikipedia-commons",
-	'lockManager'        => 'nullLockManager', // just thumbnails
-	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
-	'swiftUser'          => $wmfSwiftConfig['user'],
-	'swiftKey'           => $wmfSwiftConfig['key'],
-	'swiftTempUrlKey'    => $wmfSwiftConfig['tempUrlKey'],
-	'shardViaHashLevels' => array(
-		'local-public'     => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'local-thumb'      => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'local-temp'       => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'local-transcoded' => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-	),
-	'parallelize'        => 'implicit',
-	'cacheAuthInfo'      => true
-);
-$wgFileBackends[] = array( // backend config for wiki's access to shared files
-	'class'              => 'SwiftFileBackend',
-	'name'               => 'global-swift',
-	'wikiId'             => "global-data",
-	'lockManager'        => 'nullLockManager',
-	'swiftAuthUrl'       => $wmfSwiftConfig['authUrl'],
-	'swiftUser'          => $wmfSwiftConfig['user'],
-	'swiftKey'           => $wmfSwiftConfig['key'],
-	'swiftTempUrlKey'    => $wmfSwiftConfig['tempUrlKey'],
-	'shardViaHashLevels' => array(
-		'math-render'  => array( 'levels' => 2, 'base' => 16, 'repeat' => 0 ),
-	),
-	'parallelize'        => 'implicit',
-	'cacheAuthInfo'      => true
-);
-/* end Tampa Swift backend config */
-
 /* Multiwrite backend config */
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
@@ -133,7 +78,6 @@ $wgFileBackends[] = array(
 	'lockManager' => 'redisLockManager',
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-#		array( 'template' => 'local-swift', 'isMultiMaster' => false ),
 		array( 'template' => 'local-swift-eqiad', 'isMultiMaster' => true ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
@@ -146,7 +90,6 @@ $wgFileBackends[] = array(
 	'lockManager' => 'redisLockManager',
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-#		array( 'template' => 'shared-swift', 'isMultiMaster' => false ),
 		array( 'template' => 'shared-swift-eqiad', 'isMultiMaster' => true ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
@@ -159,7 +102,6 @@ $wgFileBackends[] = array(
 	'lockManager' => 'redisLockManager',
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-#		array( 'template' => 'global-swift', 'isMultiMaster' => false ),
 		array( 'template' => 'global-swift-eqiad', 'isMultiMaster' => true ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
