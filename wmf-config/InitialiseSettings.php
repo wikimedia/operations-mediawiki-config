@@ -1009,32 +1009,36 @@ $wgConf->settings = array(
 'wgEnableUploads' => array(
 	// Projects
 	'default' => true,
+	'commonsuploads' => true, // Soft-disabling
 	'wikidata' => false,
-	'wikinews' => false,
 
-	// Individual wikis
+	// Wikinews
+	'wikinews' => false,
 	'arwikinews' => true,
 	'cswikinews' => true,
 	'dewikinews' => true,
 	'enwikinews' => true,
+	'fawikinews' => true, // bug 26565
+	'hewikinews' => true,
+	'itwikinews' => true,
+	'kowikinews' => true, // bug 24877
+	'nowikinews' => true,
+	'plwikinews' => true,
+	'trwikinews' => true, // bug 20215
+
+	// Other individual wikis
 	'enwikiquote' => false, // http://en.wikiquote.org/wiki/Wikiquote_talk:Image_use_policy
 	'eswiki' => false, // bug 6408
 	'eswikibooks' => false, // bug 18865
 	'eswikiquote' => false, // bug 9728
 	'eswikivoyage' => false, // bug 42933
 	'euwiki' => false, // bug 28609
-	'fawikinews' => true, // bug 26565
-	'hewikinews' => true,
-	'itwikinews' => true,
 	'itwikiquote' => false, // bug 12012
 	'jawikisource' => false, // bug 3572
 	'jawiktionary' => false, // bug 11775
-	'kowikinews' => true, // bug 24877
 	'loginwiki' => false,
-	'nowikinews' => true,
 	'ndswiki' => false, // http://mail.wikipedia.org/pipermail/wikitech-l/2005-October/032136.html
 	'outreachwiki' => false,
-	'plwikinews' => true,
 	'plwikiquote' => false,
 	'ptwikivoyage' => false, // bug 42933
 	'ptwiktionary' => false, // bug 14193
@@ -1042,7 +1046,6 @@ $wgConf->settings = array(
 	'specieswiki' => false,
 	'svwiki' => false, // bug 11954
 	'svwikiversity' => false, // bug 26037
-	'trwikinews' => true, // bug 20215
 	'viwikivoyage' => false, // bug 52034
 	'vowiki' => false, // bug 13740
 	'xmfwiki' => false,
@@ -1061,6 +1064,7 @@ $wgConf->settings = array(
 'wgUploadNavigationUrl' => array(
 	// Projects
 	'default' => false,
+	'commonsuploads' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'wikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 
 	// Individual wikis
@@ -1084,7 +1088,6 @@ $wgConf->settings = array(
 	'enwikinews' => false,
 	'enwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'enwikivoyage' => '//en.wikivoyage.org/wiki/Wikivoyage:Upload_file',
-	'enwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'eswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es',
 	'eswikibooks' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es',
 	'eswikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es', // bug 42933
@@ -6581,11 +6584,9 @@ $wgConf->settings = array(
 		'filemover' => array( 'movefile' => true ), // bug 56103
 	),
 	'bgwiki' => array(
-		'user' => array( 'upload' => false, ),
-		'autoconfirmed' => array( 'upload' => false, ),
 		'autopatrolled' => array( 'autopatrol' => true, ),
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ),
-		'sysop' => array( 'upload' => true, 'autopatrol' => false, ),
+		'sysop' => array( 'autopatrol' => false, ),
 	),
 	'brwikimedia' => array( // bug 63345
 		'autopatrolled' => array( 'autopatrol' => true, ),
@@ -6830,15 +6831,12 @@ $wgConf->settings = array(
 	// http://bugzilla.wikimedia.org/show_bug.cgi?id=5033
 	'enwiktionary' => array(
 		'user' => array(
-			'upload' => false,
 			'move' => false, // requested in beer parlour, 13 june 2006
 		),
-		'autoconfirmed' => array( 'upload' => false ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'flood' => array( 'bot' => true ),
 		'patroller' => array( 'patrol' => true ),
-		'rollbacker' => array( 'rollback' => true ),
-		'sysop' => array( 'upload' => true )
+		'rollbacker' => array( 'rollback' => true )
 	),
 	'eswiki' => array(
 		'rollbacker' => array( 'rollback' => true ),
@@ -6886,9 +6884,6 @@ $wgConf->settings = array(
 		),
 	),
 	'eswiktionary' => array(
-		'user' => array( 'upload' => false ), // Bug 7152
-		'autoconfirmed' => array( 'upload' => false ), // Bug 7152
-		'sysop' => array( 'upload' => true ), // Bug 7152
 		'patroller' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -6950,10 +6945,6 @@ $wgConf->settings = array(
 		'autoconfirmed' => array( 'upload' => false, 'reupload' => false ),
 		'user' => array( 'reupload-own' => false ),
 	),
-	'guwikisource' => array(
-		'user' => array( 'upload' => false ), // Bug 36345
-		'sysop' => array( 'upload' => true ), // Bug 36345
-	),
 	'hewiki' => array(
 		'user' => array( 'move' => false, 'upload' => true, ),
 		'sysop' => array( 'deleterevision' => true, 'abusefilter-modify-restricted' => true, ),
@@ -7003,9 +6994,6 @@ $wgConf->settings = array(
 	),
 	'incubatorwiki' => array(
 		'bureaucrat' => array( 'upload' => true ),
-		'*' => array( 'upload' => false ),
-		'user' => array( 'upload' => false ),
-		'autoconfirmed' => array( 'upload' => false, 'reupload' => false ),
 		'sysop' => array( 'upload' => false ),
 		'test-sysop' => array(
 			'delete' => true,
@@ -7021,21 +7009,6 @@ $wgConf->settings = array(
 		'sysop' => array(
 			'renameuser' => true,
 		)
-	),
-	'iswikibooks' => array(
-		'user' => array( 'upload' => false ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=11318
-		'autoconfirmed' => array( 'upload' => false ),
-		'sop' => array( 'upload' => true ),
-	),
-	'iswikiquote' => array(
-		'user' => array( 'upload' => false ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=11317
-		'autoconfirmed' => array( 'upload' => false ),
-		'sysop' => array( 'upload' => true ),
-	),
-	'iswiktionary' => array(
-		'user' => array( 'upload' => false ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=11187
-		'autoconfirmed' => array( 'upload' => false ),
-		'sysop' => array( 'upload' => true ),
 	),
 	// http://bugzilla.wikimedia.org/show_bug.cgi?id=5836
 	// http://bugzilla.wikimedia.org/show_bug.cgi?id=11326
@@ -7067,17 +7040,11 @@ $wgConf->settings = array(
 	'itwikivoyage' => array(
 		'autopatrolled' => array(
 			'autopatrol' => true, // Bug 43327
-			'upload' => false // Bug 43524
 		),
-		'sysop' => array( 'upload' => true ), // Bug 43524
-		'user' => array( 'upload' => false ), // Bug 43524
-		'autoconfirmed' => array( 'upload' => false ), // Bug 43524
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true ), // Bug 45638
 	),
 	'itwiktionary' => array(
-		'user' => array( 'upload' => false ),
-		'autoconfirmed' => array( 'patrol' => true, 'upload' => false ),
-		'sysop' => array( 'upload' => true ),
+		'autoconfirmed' => array( 'patrol' => true ),
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'import' => array( 'suppressredirect' => true, ),
@@ -7122,11 +7089,6 @@ $wgConf->settings = array(
 	'jawikinews' => array(
 		'user' => array( 'move' => false ), // autoconfirmed only, per request by britty 2007-05-16
 	),
-	'jawikiversity' => array(
-		'user' => array( 'upload' => false ),
-		'autoconfirmed' => array( 'upload' => false ),
-		'sysop' => array( 'upload' => true ),
-	),
 	'jawiktionary' => array(
 		'autopatrolled' => array( 'autopatrol' => true, 'patrol' => true ), // bug 61366
 	),
@@ -7139,11 +7101,6 @@ $wgConf->settings = array(
 	'kowikinews' => array(
 		'autoconfirmed' => array( 'reupload' => false, 'upload' => false ),
 		'user' => array( 'reupload-own' => false ),
-	),
-	'lawiki' => array(
-		'user' => array( 'upload' => false ),
-		'autoconfirmed' => array( 'upload' => false ),
-		'sysop' => array( 'upload' => true ),
 	),
 	'+legalteamwiki' => array( // bug 61222
 		'accountcreator' => array( 'noratelimit' => false ),
@@ -7159,21 +7116,11 @@ $wgConf->settings = array(
 	),
 
 	'metawiki' => array(
-		'user' => array( 'reupload-own' => false ), // bug 50287
-		'autoconfirmed' => array( // bug 50287
-			'upload' => false,
-			'reupload' => false,
-			),
 		'steward' => array( 'userrights-interwiki' => true ), // new steward stuff, yay 2007-12-27
 		'flood' => array( 'bot' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'centralnoticeadmin' => array( 'centralnotice-admin' => true, 'editinterface' => true ), //adding to allow CN access without local sysop JRA 2013-02-21
 		'uploader' => array( // bug 50287
-			'upload' => true,
-			'reupload' => true,
-			'reupload-own' => true,
-			),
-		'sysop' => array( // bug 50287
 			'upload' => true,
 			'reupload' => true,
 			'reupload-own' => true,
@@ -7346,14 +7293,11 @@ $wgConf->settings = array(
 	),
 	'ruwiki' => array( // bug 12334
 		'*' => array( 'patrolmarks' => true, ),
-		'user' => array( 'upload' => false ),
-		'autoconfirmed' => array( 'upload' => false ),
 		'rollbacker' => array( 'rollback' => true ),
 		'uploader' => array( 'upload' => true ),
 		'closer' => array( 'delete' => true, 'suppressredirect' => true,  'upload' => true, ),
 		'filemover' => array( 'movefile' => true, 'suppressredirect' => true, 'upload' => true, ), // bug 30984
 		'suppressredirect' => array( 'suppressredirect' => true, ), // bug 38408
-		'sysop' => array( 'upload' => true, ),
 		'arbcom' => array( // bug 49334
 			'browsearchive' => true,
 			'deletedhistory' => true,
@@ -7391,23 +7335,9 @@ $wgConf->settings = array(
 			'editallpages' => false,
 		),
 		'user' => array(
-			'upload' => false,
-			'reupload' => false,
-			'reupload-own' => false,
-			'reupload-shared' => false,
 			'editallpages' => true, // Bug 39671
 		),
-		'autoconfirmed' => array(
-			'upload' => false,
-			'reupload' => false,
-			'reupload-own' => false,
-			'reupload-shared' => false,
-		),
-		'sysop' => array(
-			'upload' => true, // bug 61947
-			'reupload' => true,
-			'reupload-own' => true,
-			'reupload-shared' => true,
+		'sysop' => array( // bug 61947
 			'editallpages' => true,
 		),
 		'medlem' => array(
@@ -7564,11 +7494,10 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 	),
 	'ukwikivoyage' => array(
-		'autoconfirmed' => array( 'upload' => false, 'reupload' => false, ),
 		'autopatrolled' => array( 'autopatrol' => true ), // bug 54299
 		'rollbacker' => array( 'rollback' => true ),
 		'uploader' => array( 'upload' => true, 'reupload' => true ),
-		'user' => array( 'upload' => false, 'reupload' => false, ),
+		'sysop' => array( 'upload' => false, 'reupload' => false, ),
 	),
 	'ukwiktionary' => array(
 		'autoeditor' => array( 'autoreview' => true ),
@@ -7625,10 +7554,7 @@ $wgConf->settings = array(
 
 	'zhwikinews' => array(
 		'rollbacker' => array( 'rollback' => true ), # 27268
-		'user' => array( 'upload' => false, 'reupload' => false ),
-		'autoconfirmed' => array( 'upload' => false, 'reupload' => false ),
 		'flood' => array( 'bot' => true ), // bug 52546
-		'sysop' => array( 'upload' => true, 'reupload' => true ),
 	),
 	'zhwikivoyage' => array( // bug 60328
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -7707,6 +7633,26 @@ $wgConf->settings = array(
 			'suppressionlog' => true,
 			'abusefilter-hide-log' => true, // Andrew, 2010-08-28
 			'abusefilter-hidden-log' => true, // Andrew, 2010-08-28
+		),
+	),
+	'commonsuploads' => array(
+		'user' => array(
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
+		),
+		'autoconfirmed' => array(
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
+		),
+		'sysop' => array(
+			'upload' => true,
+			'reupload' => true,
+			'reupload-own' => true,
+			'reupload-shared' => true,
 		),
 	),
 ),
