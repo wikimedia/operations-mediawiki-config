@@ -10620,7 +10620,7 @@ $wgConf->settings = array(
 ),
 
 'wmgNamespacesToPostIn' => array(
-	'default' => array( NS_PROJECT, NS_USER_TALK ),
+	'default' => array( NS_PROJECT ),
 	'+metawiki' => array( NS_MAIN )
 ),
 
