@@ -12,7 +12,7 @@ if ( $wgCommandLineMode || PHP_SAPI == 'cli' ) {
 // stream recent changes to redis
 $wgRCFeeds['redis'] = array(
 	'formatter' => 'JSONRCFeedFormatter',
-	'uri'       => "redis://deployment-rcstream.eqiad.wmflabs:6379/rc.$wgDBname",
+	'uri'       => "redis://deployment-stream.eqiad.wmflabs:6379/rc.$wgDBname",
 );
 
 
