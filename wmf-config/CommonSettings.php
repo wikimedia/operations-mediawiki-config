@@ -197,7 +197,7 @@ if ( !$globals ) {
 	$wikiTags = array();
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small', 'mediaviewer',
 			'medium', 'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor',
-			'visualeditor-default', 'echowikis', 'cirrus' ) as $tag ) {
+			'visualeditor-default', 'echowikis', 'cirrus', 'commonsuploads' ) as $tag ) {
 		$dblist = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../$tag.dblist" ) ) );
 		if ( in_array( $wgDBname, $dblist ) ) {
 			$wikiTags[] = $tag;
