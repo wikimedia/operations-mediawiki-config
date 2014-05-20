@@ -12547,6 +12547,7 @@ $wgConf->settings = array(
 		'Talk:VisualEditor/Beta Features/Language',
 		'Talk:Content translation',
 		'Talk:Wikibase/Beta Features/Other projects sidebar',
+		'Talk:Design',
 		'Talk:Phabricator/Help',
 	),
 	'enwiki' => array( // Bug 60178
