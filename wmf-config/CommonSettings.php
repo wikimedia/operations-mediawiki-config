@@ -1811,7 +1811,8 @@ if ( $wmgUseGWToolset ) {
 if ( $wmgUseMultimediaViewer ) {
 	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
 	$wgNetworkPerformanceSamplingFactor = $wmgNetworkPerformanceSamplingFactor;
-	$wgMediaViewerSamplingFactor = $wmgMediaViewerSamplingFactor;
+	$wgMediaViewerDurationLoggingSamplingFactor = $wmgMediaViewerDurationLoggingSamplingFactor;
+	$wgMediaViewerActionLoggingSamplingFactorMap = $wmgMediaViewerActionLoggingSamplingFactorMap;
 
 	if ( $wmgMediaViewerBeta ) {
 		$wgMediaViewerIsInBeta = true;
