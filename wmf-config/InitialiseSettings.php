@@ -10639,7 +10639,8 @@ $wgConf->settings = array(
 ),
 
 'wmgNamespacesToPostIn' => array(
-	'default' => array( NS_PROJECT, NS_USER_TALK ),
+	# Implicitly true for odd-numbered namespaces
+	'default' => array( NS_PROJECT ),
 	'+metawiki' => array( NS_MAIN )
 ),
 
