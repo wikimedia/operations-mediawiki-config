@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e20cf91_111609f7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7638,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-05-20T18:08:56Z",
+      "side": 1,
+      "message": "Or should this be in groupOverrides?",
+      "revId": "f5c8a693bf8f0048353ab81fe29d2d9c65fa90c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_f1126d00",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7642,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-05-20T18:08:56Z",
+      "side": 1,
+      "message": "Only difference from default",
+      "revId": "f5c8a693bf8f0048353ab81fe29d2d9c65fa90c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_51d2412d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7646,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-05-20T18:08:56Z",
+      "side": 1,
+      "message": "Doesn\u0027t this imply the other three?",
+      "revId": "f5c8a693bf8f0048353ab81fe29d2d9c65fa90c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

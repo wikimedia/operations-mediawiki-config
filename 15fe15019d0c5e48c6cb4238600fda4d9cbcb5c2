@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e20cf91_915459cb",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6955,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-05-20T18:08:56Z",
+      "side": 0,
+      "message": "This never did what requested, because autoconfirmed was not set to false...",
+      "revId": "15fe15019d0c5e48c6cb4238600fda4d9cbcb5c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e20cf91_f1beedf9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7028,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-05-20T18:08:56Z",
+      "side": 0,
+      "message": "Note the typo",
+      "revId": "15fe15019d0c5e48c6cb4238600fda4d9cbcb5c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
