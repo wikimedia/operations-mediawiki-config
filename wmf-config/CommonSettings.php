@@ -230,7 +230,7 @@ wfProfileIn( "$fname-misc1" );
 extract( $globals );
 
 # Extensions disabled when running under HHVM due to compatibility issues.
-if ( defined( 'HHVM_VERSION' ) ) {
+if ( $wmfRealm === 'labs' && defined( 'HHVM_VERSION' ) ) {
 	$wmgUseWikibaseRepo = false;
 	$wmgUseWikibaseClient = false;
 	$wmgUseMultimediaViewer = false;
@@ -2381,7 +2381,7 @@ if ( $wmgUseScribunto ) {
 	$wgScribuntoUseGeSHi = true;
 	$wgScribuntoUseCodeEditor = true;
 
-	if ( defined( 'HHVM_VERSION' ) ) {
+	if ( $wmfRealm === 'labs' && defined( 'HHVM_VERSION' ) ) {
 		$wgScribuntoDefaultEngine = 'luastandalone';
 		$wgScribuntoEngineConf['luastandalone']['luaPath'] = '/usr/bin/lua5.1';
 	} else {
