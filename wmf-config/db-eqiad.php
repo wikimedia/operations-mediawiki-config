@@ -122,6 +122,7 @@ $wgLBFactoryConf = array(
 		'db1056' => 400, # 2.8TB  96GB
 		'db1059' => 400, # 2.8TB  96GB
 		'db1064' => 500, # 2.8TB 160GB
+		'db1068' => 50,  # 2.8TB 160GB, warm up
 	),
 	's5' => array(
 		'db1058' => 0,   # 2.8TB  96GB
@@ -406,6 +407,7 @@ $wgLBFactoryConf = array(
 	'db1065' => '10.64.48.20', #do not remove or comment out
 	'db1066' => '10.64.48.21', #do not remove or comment out
 	'db1067' => '10.64.48.22', #do not remove or comment out
+	'db1068' => '10.64.48.23', #do not remove or comment out
 	'db1070' => '10.64.48.25', #do not remove or comment out
 	'db1071' => '10.64.48.26', #do not remove or comment out
 ),
