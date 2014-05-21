@@ -37,7 +37,14 @@ function updateBranchPointers( $dryRun = false ) {
 
 	$branches = array( 'current' => array_pop( $branchDirs ) );
 
-	updateSymlink( MULTIVER_COMMON_HOME . '/php', MULTIVER_COMMON_HOME . '/' . $branches['current'], $dryRun );
+	// Symlink common/php to the current branch using a relative path so that
+	// the symlink works from both MULTIVER_COMMON_HOME and
+	// MULTIVER_COMMON_APACHE
+	$phpLinkTarget = substr(
+		$branches['current'],
+		strlen( MULTIVER_COMMON_APACHE ) + 1
+	);
+	updateSymlink( MULTIVER_COMMON_HOME . '/php', $phpLinkTarget, $dryRun );
 
 	foreach( $branches as $branch => $target ) {
 		echo "Updating $branch branch pointer...\n";
@@ -64,13 +71,16 @@ function updateBranchPointers( $dryRun = false ) {
  * @param bool $dryRun
  */
 function updateSymlink( $link, $dest, $dryRun ) {
+	// Change pwd to MULTIVER_COMMON_HOME so that relative paths can be verified
+	chdir( MULTIVER_COMMON_HOME );
+
 	if ( !file_exists( $dest ) ) {
 		fwrite( STDERR, __FUNCTION__ . ": link target $dest does not exist.\n" );
 		exit( 1 );
 	}
 
 	if ( file_exists( $link ) ) {
-		if ( realpath( $link ) === $dest ) {
+		if ( realpath( $link ) === realpath( $dest ) ) {
 			echo "$link is already up-to-date.\n";
 			return;
 		}
