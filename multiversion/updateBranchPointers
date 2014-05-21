@@ -37,7 +37,7 @@ function updateBranchPointers( $dryRun = false ) {
 
 	$branches = array( 'current' => array_pop( $branchDirs ) );
 
-	updateSymlink( MULTIVER_COMMON_HOME . '/php', MULTIVER_COMMON_HOME . '/' . $branches['current'], $dryRun );
+	updateSymlink( MULTIVER_COMMON_HOME . '/php', $branches['current'], $dryRun );
 
 	foreach( $branches as $branch => $target ) {
 		echo "Updating $branch branch pointer...\n";
