@@ -40,6 +40,9 @@ $wgCirrusSearchMoreAccurateScoringMode = false;
 # Raise the refresh interval to save some CPU at the cost of being slightly less realtime.
 $wgCirrusSearchRefreshInterval = 30;
 
+# Ban the hebrew plugin, it is unstable
+$wgCirrusSearchBannedPlugins[] = 'elasticsearch-analysis-hebrew';
+
 # Settings customized per index.
 $wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
 $wgCirrusSearchUseAggressiveSplitting = $wmgCirrusSearchUseAggressiveSplitting;
