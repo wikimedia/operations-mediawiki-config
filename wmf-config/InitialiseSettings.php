@@ -7160,10 +7160,11 @@ $wgConf->settings = array(
 	),
 	'mediawikiwiki' => array(
 		'user' => array( 'move' => false ),
+		// Kept 'autoreview' as substitute for 'autopatrolled' user group
+		// because previously MediaWiki.org did not have one and it would be
+		// tedious to rename everyone's userrights.
 		'autoreview' => array( 'autopatrol' => true ),
 		'coder' => array( 'autopatrol' => true ),
-		'editor' => array( 'autopatrol' => true ),
-		'reviewer' => array( 'autopatrol' => true ),
 	),
 
 	'metawiki' => array(
