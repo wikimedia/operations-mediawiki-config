@@ -10794,6 +10794,8 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
+// ------------ BetaFeatures end -----------
+
 // -------------- Media Viewer configs --------------
 'wmgUseMultimediaViewer' => array(
 	'default' => true,
@@ -10832,12 +10834,60 @@ $wgConf->settings = array(
 	'mediaviewer' => 1000,
 ),
 
-'wmgMediaViewerSamplingFactor' => array(
+'wmgMediaViewerDurationLoggingSamplingFactor' => array(
 	'default' => 10,
 	'mediaviewer' => 1000,
 ),
 
-// ------------ BetaFeatures end -----------
+'wmgMediaViewerActionLoggingSamplingFactorMap' => array(
+	'default' => array( 'default' => 1 ),
+	'mediaviewer' => array( 'default' => 1 ),
+	'commonswiki' => array(
+		'default' => 1,
+		'image-view' => 100,
+		'thumbnail-click' => 100,
+		'close' => 100,
+		'next-image' => 10,
+		'prev-image' => 10,
+		'history-navigation' => 10,
+	),
+	'eswiki' => array(
+		'default' => 1,
+		'image-view' => 100,
+		'thumbnail-click' => 100,
+		'close' => 100,
+		'next-image' => 10,
+		'prev-image' => 10,
+		'history-navigation' => 10,
+	),
+	'frwiki' => array(
+		'default' => 1,
+		'image-view' => 100,
+		'thumbnail-click' => 100,
+		'close' => 100,
+		'next-image' => 10,
+		'prev-image' => 10,
+		'history-navigation' => 10,
+	),
+	'jawiki' => array(
+		'default' => 1,
+		'image-view' => 100,
+		'thumbnail-click' => 100,
+		'close' => 100,
+		'next-image' => 10,
+		'prev-image' => 10,
+		'history-navigation' => 10,
+	),
+	'plwiki' => array(
+		'default' => 1,
+		'image-view' => 100,
+		'thumbnail-click' => 100,
+		'close' => 100,
+		'next-image' => 10,
+		'prev-image' => 10,
+		'history-navigation' => 10,
+	),
+),
 
 // -------------- VisualEditor start --------------
 
