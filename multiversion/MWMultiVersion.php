@@ -38,7 +38,7 @@ class MWMultiVersion {
 
 	/**
 	 * Create a multiversion object based on a dbname
-	 * @param $dbName string
+	 * @param string $dbName
 	 * @return MWMultiVersion object for this wiki
 	 */
 	public static function newFromDBName( $dbName ) {
@@ -62,7 +62,7 @@ class MWMultiVersion {
 	/**
 	 * Initialize and get the singleton instance of MWMultiVersion.
 	 * Use this for all web hits except to /w/thumb.php on upload.wikmedia.org.
-	 * @param $serverName the ServerName for this wiki -- $_SERVER['SERVER_NAME']
+	 * @param string $serverName the ServerName for this wiki -- $_SERVER['SERVER_NAME']
 	 * @return MWMultiVersion object for this wiki
 	 */
 	public static function initializeForWiki( $serverName ) {
@@ -74,7 +74,7 @@ class MWMultiVersion {
 	/**
 	 * Initialize and get the singleton instance of MWMultiVersion.
 	 * Use this for web hits to /w/thumb.php on upload.wikmedia.org.
-	 * @param $pathInfo the PathInfo -- $_SERVER['PATH_INFO']
+	 * @param string $pathInfo the PathInfo -- $_SERVER['PATH_INFO']
 	 * @return MWMultiVersion object for the wiki derived from the pathinfo
 	 */
 	public static function initializeForUploadWiki( $pathInfo ) {
@@ -117,7 +117,7 @@ class MWMultiVersion {
 
 	/**
 	 * Derives site and lang from the parameters and sets $site and $lang on the instance
-	 * @param $serverName the ServerName for this wiki -- $_SERVER['SERVER_NAME']
+	 * @param string $serverName the ServerName for this wiki -- $_SERVER['SERVER_NAME']
 	 */
 	private function setSiteInfoForWiki( $serverName ) {
 		$matches = array();
@@ -180,7 +180,7 @@ class MWMultiVersion {
 
 	/**
 	 * Derives site and lang from the parameter and sets $site and $lang on the instance
-	 * @param $pathInfo the PathInfo -- $_SERVER['PATH_INFO']
+	 * @param string $pathInfo the PathInfo -- $_SERVER['PATH_INFO']
 	 */
 	private function setSiteInfoForUploadWiki( $pathInfo ) {
 		$pathBits = explode( '/', $pathInfo );
