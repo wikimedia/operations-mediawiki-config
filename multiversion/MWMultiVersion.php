@@ -43,7 +43,7 @@ class MWMultiVersion {
 	 */
 	public static function newFromDBName( $dbName ) {
 		$m = new self();
-		$m->db = $dbName;
+		$m->db = $m->remapDatabase( $dbName );
 		return $m;
 	}
 
@@ -214,7 +214,19 @@ class MWMultiVersion {
 			self::error( "--wiki must be the first parameter.\n" );
 		}
 
-		$this->db = $dbname;
+		$this->db = $this->remapDatabase( $dbname );
+	}
+
+	/**
+	 * @param string $dbname
+	 * @return string
+	 */
+	private function remapDatabase( $dbName ) {
+		switch ( $dbName ) {
+			case 'chapcomwiki':
+				return 'affcomwiki';
+		}
+		return $dbName;
 	}
 
 	/**
@@ -228,7 +240,7 @@ class MWMultiVersion {
 		} else {
 			$dbSuffix = $site;
 		}
-		$this->db = str_replace( "-", "_", $lang . $dbSuffix );
+		$this->db = $this->remapDatabase( str_replace( "-", "_", $lang . $dbSuffix ) );
 	}
 
 	/**
