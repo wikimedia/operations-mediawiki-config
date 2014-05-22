@@ -159,7 +159,7 @@ class MWMultiVersion {
 			$lang = $matches[1];
 			if ( $matches[2] !== 'wikimedia'
 				|| ( $matches[2] === 'wikimedia' && in_array(
-					str_replace( '.', '_', $lang ),
+					$lang,
 					array(
 						'ar', 'bd', 'be', 'br', 'co', 'dk', 'et', 'fi', 'il', 'mk', 'mx', 'nl', 'noboard_chapters',
 						'no', 'nyc', 'nz', 'pa-us', 'pl', 'rs', 'ru', 'se', 'tr', 'ua', 'uk', 've'
@@ -167,10 +167,6 @@ class MWMultiVersion {
 			) ) ) {
 				// wikimedia (non chapters) sites stay as wiki
 				$site = $matches[2];
-
-				// Hack for some multi subdomain wikis waiting to be renamed
-				// arbcom_dewiki, arbcom_enwiki, arbcom_fiwiki, arbcom_nlwiki, noboard_chapterswikimedia, wg_enwiki
-				$lang = str_replace( '.', '-', $lang );
 			}
 		} else {
 			self::error( "Invalid host name ($serverName).\n" );
