@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_039a58bd",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 7461,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-05-22T10:59:14Z",
+      "side": 1,
+      "message": "Going to remove this line, it\u0027s implicitly true now and will stay so.",
+      "revId": "8d670a6b91ea11a1b62c9448f83738870e029010",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
