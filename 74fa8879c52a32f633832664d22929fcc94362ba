@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_917d8be7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7163,
+      "author": {
+        "id": 739
+      },
+      "writtenOn": "2014-05-22T23:28:14Z",
+      "side": 1,
+      "message": "I\u0027m not sure if this comment is really necessary. Explaining the reason for keeping the autoreview group in the commit message should be enough.",
+      "revId": "74fa8879c52a32f633832664d22929fcc94362ba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
