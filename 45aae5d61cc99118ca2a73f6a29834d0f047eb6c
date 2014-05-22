@@ -16,6 +16,24 @@
       "revId": "45aae5d61cc99118ca2a73f6a29834d0f047eb6c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_89d7a928",
+        "filename": "multiversion/updateBranchPointers",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-05-22T17:46:44Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e1dcb5b_c967e1b3",
+      "revId": "45aae5d61cc99118ca2a73f6a29834d0f047eb6c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
