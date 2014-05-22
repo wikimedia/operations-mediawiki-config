@@ -479,24 +479,6 @@ elseif ( $wgDBname == 'kawiki' ) {
 	$wgGroupPermissions['trusted']['autoreview'] = true;
 }
 
-elseif ( $wgDBname == 'mediawikiwiki' ) {
-	// Set up 2009-08-07 BV w/ config rec from ^demon
-	$wgFlaggedRevsNamespaces = array(
-		NS_HELP,
-		100 /* NS_MANUAL */,
-		102 /* Extension */,
-	);
-	$wgFlaggedRevsHandleIncludes = FR_INCLUDES_CURRENT;
-	$wgGroupPermissions['coder']['review'] = true;
-	$wgGroupPermissions['coder']['validate'] = true;
-	$wgGroupPermissions['coder']['unreviewedpages'] = true;
-	$wgGroupPermissions['coder']['autoreview'] = true;
-	$wgGroupPermissions['sysop']['review'] = true;
-	$wgGroupPermissions['sysop']['validate'] = true;
-	$wgGroupPermissions['sysop']['unreviewedpages'] = true;
-	$wgGroupPermissions['sysop']['autoreview'] = true;
-}
-
 elseif ( $wgDBname == 'metawiki' ) {
 	$wgFlaggedRevsNamespaces = array ( 480 /* NS_ZERO */ );
 	$wgFlaggedRevTags = array(
