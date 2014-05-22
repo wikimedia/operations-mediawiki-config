@@ -16,6 +16,23 @@
       "revId": "04bf775f92857ba933bd6ebee9b151e400188ac2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e1dcb5b_91d46b4d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7161,
+      "author": {
+        "id": 739
+      },
+      "writtenOn": "2014-05-22T22:10:33Z",
+      "side": 0,
+      "message": "Based on IRC, it looks like the plan is to keep the autoreview group and change any relevant MediaWiki: messages to say autopatrolled instead of autochecked.",
+      "revId": "04bf775f92857ba933bd6ebee9b151e400188ac2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
