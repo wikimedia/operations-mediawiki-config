@@ -43,7 +43,7 @@ class MWMultiVersion {
 	 */
 	public static function newFromDBName( $dbName ) {
 		$m = new self();
-		$m->db = $dbName;
+		$m->db = $m->remapDatabase( $dbName );
 		return $m;
 	}
 
@@ -220,7 +220,30 @@ class MWMultiVersion {
 			self::error( "--wiki must be the first parameter.\n" );
 		}
 
-		$this->db = $dbname;
+		$this->db = $this->remapDatabase( $dbname );
+	}
+
+	/**
+	 * Allows wikis to be have their subdomain changed,
+	 * but keep their old database name.
+	 *
+	 * MWMultiversion will determin the 'newname' from
+	 * the hostname, and then this will be replaced with
+	 * the 'oldname' for the actual database.
+	 *
+	 * @var array( 'newname' => 'oldname' )
+	 */
+	private static $databaseRenames = array();
+
+	/**
+	 * @param string $dbName
+	 * @return string
+	 */
+	private function remapDatabase( $dbName ) {
+		if ( isset( self::$databaseRenames[$dbName] ) ) {
+			return self::$databaseRenames[$dbName];
+		}
+		return $dbName;
 	}
 
 	/**
@@ -234,7 +257,7 @@ class MWMultiVersion {
 		} else {
 			$dbSuffix = $site;
 		}
-		$this->db = str_replace( "-", "_", $lang . $dbSuffix );
+		$this->db = $this->remapDatabase( str_replace( "-", "_", $lang . $dbSuffix ) );
 	}
 
 	/**
