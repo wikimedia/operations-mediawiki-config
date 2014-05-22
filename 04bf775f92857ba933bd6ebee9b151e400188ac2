@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_9e67da22",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7161,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-05-22T21:36:06Z",
+      "side": 0,
+      "message": "Any reason to believe the wiki doesn\u0027t want an autopatrolled group? If it\u0027s meant to be a terminological consolidation, you need to add the autopatrolled group on the same patch and that will mean 106*2 more userrights log actions.",
+      "revId": "04bf775f92857ba933bd6ebee9b151e400188ac2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
