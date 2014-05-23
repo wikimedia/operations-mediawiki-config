@@ -7979,6 +7979,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'abusefilter' ),
 	),
 	'+mediawikiwiki' => array(
+		'sysop' => array( 'autopatrolled' ),
 		'bureaucrat' => array( 'transwiki', 'coder', 'import', 'svnadmins', 'translationadmin' ),
 		'coder' => array( 'coder' ),
 	),
@@ -8488,6 +8489,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'abusefilter' ),
 	),
 	'+mediawikiwiki' => array(
+		'sysop' => array( 'autopatrolled' ),
 		'bureaucrat' => array( 'transwiki', 'import', 'coder', 'svnadmins', 'translationadmin' ),
 	),
 	'+metawiki' => array(
