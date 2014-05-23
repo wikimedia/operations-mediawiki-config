@@ -1476,9 +1476,9 @@ if ( $wmgUseCentralNotice ) {
 	$wgNoticeCookieShortExpiry = 1209600; // 2 weeks
 	$wgNoticeCookieLongExpiry = 25920000; // 10 months
 
-	// Bug 16821 
-	// Updates made here also need to be reflected in 
-	// wikimediafoundation.org/wiki/Template:HideBanners 
+	// Bug 16821
+	// Updates made here also need to be reflected in
+	// wikimediafoundation.org/wiki/Template:HideBanners
 	$wgNoticeHideUrls = array(
 		'//en.wikipedia.org/wiki/Special:HideBanners',
 		'//meta.wikimedia.org/wiki/Special:HideBanners',
@@ -2264,24 +2264,14 @@ if ( $wmgUseWikimediaShopLink ) {
 	$wgWikimediaShopLinkTarget = '//shop.wikimedia.org';
 }
 
-if ( $wmgEnableGeoData ) {
+if ( $wmgEnableGeoData
+	&& ( $wmgUseCirrus || $wmgUseCirrusAsAlternative ) )
+{
 	require_once( "$IP/extensions/GeoData/GeoData.php" );
-	if ( $wmgUseCirrus || $wmgUseCirrusAsAlternative ) {
-		$wgGeoDataBackend = $wmgGeoDataBackend;
-		$wgGeoDataUseCirrusSearch = $wmgGeoDataUseCirrusSearch;
-	} else {
-		$wgGeoDataBackend = 'solr';
-	}
-	$wgGeoDataSolrMaster = 'solr1001.eqiad.wmnet';
-	$wgGeoDataSolrHosts = array(
-		'solr1001.eqiad.wmnet' => 75, // master, put less read load on it
-		'solr1002.eqiad.wmnet' => 100,
-		'solr1003.eqiad.wmnet' => 100,
-	);
+	$wgGeoDataBackend = 'elastic';
 
 	# Data collection mode
 	if ( !$wmgEnableGeoSearch ) {
-		$wgAPIGeneratorModules['geosearch'] = 'ApiQueryDisabled';
 		$wgAPIListModules['geosearch'] = 'ApiQueryDisabled';
 	}
 
@@ -2291,7 +2281,6 @@ if ( $wmgEnableGeoData ) {
 		unset( $wgAPIListModules['geopagesincategory'] );
 	}
 	$wgMaxCoordinatesPerPage = 2000;
-	$wgGeoDataSolrCommitPolicy = 'never';
 	$wgMaxGeoSearchRadius = $wmgMaxGeoSearchRadius;
 	$wgGeoDataDebug = $wmgGeoDataDebug;
 }
@@ -2547,7 +2536,7 @@ if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 // put this here to ensure it is available for localisation cache rebuild
 $wgWBClientSettings['repoSiteName'] = 'wikibase-repo-name';
 
-if ( ( $wmgUseTranslate && $wmgUseTranslationMemory ) || $wmgEnableGeoData ) {
+if ( $wmgUseTranslate && $wmgUseTranslationMemory ) {
 	require_once( "$IP/extensions/Solarium/Solarium.php" );
 }
 

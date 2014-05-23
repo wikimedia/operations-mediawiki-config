@@ -4016,7 +4016,6 @@ $wgConf->settings = array(
 		'CentralAuth' => "udp://$wmfUdp2logDest/centralauth", // -pgehres 2013/05/09, tmp for SUL finalization
 		'GettingStarted' => "udp://$wmfUdp2logDest/gettingstarted",
 		'zero' => "udp://$wmfUdp2logDest/zero", // zero-rated debug log
-		'geodata' => "udp://$wmfUdp2logDest/geodata",
 		'DBPerformance' => "udp://$wmfUdp2logDest/dbperformance",
 		'CirrusSearch' => "udp://$wmfUdp2logDest/CirrusSearch",
 		'CirrusSearchChangeFailed' => "udp://$wmfUdp2logDest/CirrusSearch-failed",
@@ -4128,7 +4127,7 @@ $wgConf->settings = array(
 	'chapcomwiki' => array(
 		100 => 'Draft', // bug 64123
 		101 => 'Draft_talk',
-	), 
+	),
 	'mediawikiwiki' => array(
 		100 => 'Manual',
 		101 => 'Manual_talk',
@@ -12464,12 +12463,6 @@ $wgConf->settings = array(
 	'default' => false,
 	'wiki' => true,
 	'wikivoyage' => true,
-),
-'wmgGeoDataBackend' => array(
-	'default' => 'elastic',
-),
-'wmgGeoDataUseCirrusSearch' => array(
-	'default' => true,
 ),
 'wmgEnableGeoSearch' => array(
 	'default' => true,
