@@ -931,7 +931,7 @@ $wgNoFollowLinks = true; // In case the MediaWiki default changed, bug 42594
 # XFF log for vandal tracking
 $wgExtensionFunctions[] = function() {
 	global $wmfUdp2logDest;
-	if ( @$_SERVER['REQUEST_METHOD'] == 'POST' ) {
+	if ( isset( $_SERVER['REQUEST_METHOD'] ) && $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 		$uri = ( $_SERVER['HTTPS'] ? 'https://' : 'http://' ) .
 			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
@@ -1476,9 +1476,9 @@ if ( $wmgUseCentralNotice ) {
 	$wgNoticeCookieShortExpiry = 1209600; // 2 weeks
 	$wgNoticeCookieLongExpiry = 25920000; // 10 months
 
-	// Bug 16821 
-	// Updates made here also need to be reflected in 
-	// wikimediafoundation.org/wiki/Template:HideBanners 
+	// Bug 16821
+	// Updates made here also need to be reflected in
+	// wikimediafoundation.org/wiki/Template:HideBanners
 	$wgNoticeHideUrls = array(
 		'//en.wikipedia.org/wiki/Special:HideBanners',
 		'//meta.wikimedia.org/wiki/Special:HideBanners',
