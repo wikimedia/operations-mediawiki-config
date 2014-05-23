@@ -7979,7 +7979,8 @@ $wgConf->settings = array(
 		'sysop' => array( 'abusefilter' ),
 	),
 	'+mediawikiwiki' => array(
-		'bureaucrat' => array( 'transwiki', 'coder', 'import', 'svnadmins', 'translationadmin' ),
+		'sysop' => array( 'autoreview' ),
+		'bureaucrat' => array( 'autoreview', 'transwiki', 'coder', 'import', 'svnadmins', 'translationadmin' ),
 		'coder' => array( 'coder' ),
 	),
 	'+metawiki' => array(
@@ -8488,7 +8489,8 @@ $wgConf->settings = array(
 		'sysop' => array( 'abusefilter' ),
 	),
 	'+mediawikiwiki' => array(
-		'bureaucrat' => array( 'transwiki', 'import', 'coder', 'svnadmins', 'translationadmin' ),
+		'sysop' => array( 'autoreview' ),
+		'bureaucrat' => array( 'autoreview', 'transwiki', 'import', 'coder', 'svnadmins', 'translationadmin' ),
 	),
 	'+metawiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'ipblock-exempt', 'flood', 'translationadmin', 'centralnoticeadmin', 'uploader' ), // bug 37198, 50287
