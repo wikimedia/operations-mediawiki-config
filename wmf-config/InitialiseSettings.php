@@ -6901,9 +6901,11 @@ $wgConf->settings = array(
 	),
 	'fawiki' => array(
 		'*' => array( 'createpage' => false ), // bug 27195
-		'patroller' => array( 'patrol' => true ),
+		'user' => array( 'move-categorypages' => false ), // bug 65728
+		'bot' => array( 'move-categorypages' => true ), //bug 65728
+		'patroller' => array( 'patrol' => true, 'move-categorypages' => true ),
 		'rollbacker' => array( 'rollback' => true ),
-		'autopatrol' => array( 'autopatrol' => true ), // bug 29007
+		'autopatrol' => array( 'autopatrol' => true, 'move-categorypages' => true ), // bug 29007
 		'Image-reviewer' => array( 'movefile' => true ), // bug 64532
 	),
 	'fawikinews' => array(
