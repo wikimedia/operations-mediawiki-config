@@ -13072,7 +13072,7 @@ $wgConf->settings = array(
 	'dewikisource' => array( 'content' => 3, 'general' => 1 ),
 	'elwiki' => array( 'content' => 2, 'general' => 1 ),
 	// These shards are also signigicantly larger than the target 2GB.
-	'enwiki' => array( 'content' => 20, 'general' => 20 ),
+	'enwiki' => array( 'content' => 6, 'general' => 20 ),
 	'enwikinews' => array( 'content' => 1, 'general' => 4 ),
 	'enwikisource' => array( 'content' => 12, 'general' => 1 ),
 	'enwiktionary' => array( 'content' => 4, 'general' => 2 ),
