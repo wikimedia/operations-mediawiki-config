@@ -772,7 +772,7 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 	$wgExtDistProxy = 'url-downloader.wikimedia.org:8080';
 
 	// When changing the Snapshot Refs please change the corresponding
-	// extension distributor messages for mediawiki.org in WikimediaMessages.i18n.php too
+	// extension distributor messages for mediawiki.org in WikimediaMessages/i18n/wikimedia/*.json too
 	$wgExtDistSnapshotRefs = array(
 		'master',
 		'REL1_23',
