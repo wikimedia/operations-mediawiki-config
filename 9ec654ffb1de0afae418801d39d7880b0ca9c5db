@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e1dcb5b_7facdc32",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 7600,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-05-28T15:32:09Z",
+      "side": 1,
+      "message": "I\u0027m told the + should work, as it does in groupOverrides.",
+      "revId": "9ec654ffb1de0afae418801d39d7880b0ca9c5db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
