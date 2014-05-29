@@ -10818,6 +10818,7 @@ $wgConf->settings = array(
 'wmgMediaViewerBeta' => array(
 	'default' => true,
 	'mediaviewer' => false,
+	'wikisource' => false,
 ),
 
 'wmgMediaViewerLoggedIn' => array(
