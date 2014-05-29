@@ -12605,6 +12605,7 @@ $wgConf->settings = array(
 		'Talk:Wikibase/Beta Features/Other projects sidebar',
 		'Talk:Design',
 		'Talk:Phabricator/Help',
+		'Talk:Search',
 	),
 	'enwiki' => array( // Bug 60178
 		'Wikipedia talk:WikiProject Breakfast',
