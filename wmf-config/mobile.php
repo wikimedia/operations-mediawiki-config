@@ -40,12 +40,6 @@ if ( $wmgMobileFrontend ) {
 		$wgZeroRatedMobileAccessApiPassword = $wmgZeroRatedMobileAccessApiPassword;
 	}
 
-	if ( $wmgZeroDisableImages ) {
-		if ( isset( $_SERVER['HTTP_X_SUBDOMAIN'] ) && strtoupper( $_SERVER['HTTP_X_SUBDOMAIN'] ) == 'ZERO' ) {
-			$wgZeroDisableImages = $wmgZeroDisableImages;
-		}
-	}
-
 	// Enable loading of desktop-specific resources from MobileFrontend
 	if ( $wmgMFEnableDesktopResources ) {
 		$wgMFEnableDesktopResources = true;
