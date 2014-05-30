@@ -93,6 +93,15 @@ function wfFeaturedFeedsWMF_getFeeds( &$feeds ) {
 				'entryName' => 'ffeed-featuredtexts-entry',
 			);
 			break;
+		case 'wiktionary':
+			$feeds['featuredwords'] = array( // Featured Words
+				'page' => 'ffeed-featuredwords-page',
+				'title' => 'ffeed-featuredwords-title',
+				'short-title' => 'ffeed-featuredwords-short-title',
+				'description' => 'ffeed-featuredwords-desc',
+				'entryName' => 'ffeed-featuredwords-entry',
+			);
+			break;
 	}
 	foreach ( $wmgFeaturedFeedsOverrides as $feedName => $overrides ) {
 		if ( isset( $feeds[$feedName] ) ) {
