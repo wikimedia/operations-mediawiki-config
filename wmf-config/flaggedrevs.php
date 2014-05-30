@@ -105,6 +105,43 @@ elseif ( $wgDBname == 'cewiki' ) { // based on ruwiki settings
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 }
 
+elseif ( $wgDBname == 'ckbwiki') {
+	# Namespaces
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_PROJECT, NS_HELP, NS_TEMPLATE, NS_CATEGORY, NS_FILE, 100, 102, 828 );
+	# Show only on a per-page basis
+	$wgFlaggedRevsOverride = false;
+	# We have only one tag with one level
+	$wgFlaggedRevTags = array(
+		'status' => array( 'levels' => 1, 'quality' => 2, 'pristine' => 3 ),
+	);
+	# Restrict autoconfirmed to flagging semi-protected
+	$wgFlagRestrictions = array(
+		'status' => array( 'review' => 1, 'autoreview' => 1 ),
+	);
+	# Restriction levels for autoconfirmed, autopatrol and review rights
+	$wgFlaggedRevsRestrictionLevels = array( '', 'autoconfirmed', 'autopatrol', 'review' );
+	# Use flag "protection" levels
+	$wgFlaggedRevsProtection = true;
+	# Use current templates/files
+	$wgFlaggedRevsHandleIncludes = FR_INCLUDES_CURRENT;
+	# Trial quota
+	$wgFlaggedRevsProtectQuota = 2000;
+
+	# User groups permissions
+	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
+	$wgGroupPermissions['reviewer']['autopatrol'] = true;
+	$wgGroupPermissions['reviewer']['patrol'] = true;
+	$wgGroupPermissions['reviewer']['unwatchedpages'] = true;
+	$wgGroupPermissions['sysop']['review'] = true;
+	$wgGroupPermissions['sysop']['validate'] = true;
+	$wgGroupPermissions['sysop']['stablesettings'] = true;
+
+	# Remove editor and autoreview user groups
+	unset( $wgGroupPermissions['editor'], $wgGroupPermissions['autoreview'] );
+	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'editor', 'autoreview' ) );
+	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'editor', 'autoreview' ) );
+}
+
 elseif ( $wgDBname == 'testwiki' && false ) {
 	// Disabled temporarily, give testwiki enwiki's settings instead --Roan May 7 2012
 	$wgGroupsAddToSelf['*'][] = 'editor';
