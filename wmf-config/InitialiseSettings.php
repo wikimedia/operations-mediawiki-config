@@ -12608,6 +12608,7 @@ $wgConf->settings = array(
 		'Talk:Design',
 		'Talk:Phabricator/Help',
 		'Talk:Search',
+		'Talk:Cite-from-id',
 	),
 	'enwiki' => array( // Bug 60178
 		'Wikipedia talk:WikiProject Breakfast',
