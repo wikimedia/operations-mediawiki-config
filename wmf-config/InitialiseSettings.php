@@ -8754,6 +8754,7 @@ $wgConf->settings = array(
 	'mxwikimedia' => array( 'meta', 'wikipedia:es', 'wikibooks:es', 'wikiversity:es', 'wikipedia:en', ),
 	'nowikimedia' => array( 'meta', 'wikipedia:no', 'wikipedia:nn', 'wikipedia:se' ),
 	'nycwikimedia' => array( 'wikipedia:en', 'meta' ),
+	'plwikimedia' => array( 'b', 'n', 'q', 's', 'voy', 'w', 'wikt', ), // bug 65908
 	'ruwikimedia' => array( 'meta', 'foundation', 'wikipedia:ru', ),
 	'sewikimedia' => array( 'wikipedia:sv' ),
 	'trwikimedia' => array( 'wikipedia:tr', 'meta' ),
