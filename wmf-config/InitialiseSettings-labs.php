@@ -284,7 +284,6 @@ return array(
 
 	'wmgMediaViewerBeta' => array(
 		'default' => false,
-		'dewiki' => true,
 		'enwiktionary' => true,
 	),
 
