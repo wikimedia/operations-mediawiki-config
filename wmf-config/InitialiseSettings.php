@@ -12286,6 +12286,11 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 ),
 
+'wgIncludejQueryMigrate' => array(
+	'default' => true,
+	'test2wiki' => false,
+),
+
 'wmgEnablePageTriage' => array(
 	'default' => false,
 	'testwiki' => true,
