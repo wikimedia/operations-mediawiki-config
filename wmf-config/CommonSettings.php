@@ -1207,10 +1207,6 @@ if ( $wmgUseCentralAuth ) {
 			'formatter' => 'IRCColourfulCARCFeedFormatter',
 			'uri' => "udp://$wmgRC2UDPAddress:$wmgRC2UDPPort/#central\t",
 		);
-		$wgCentralAuthRC[] = array(
-			'formatter' => 'IRCColourfulCARCFeedFormatter',
-			'uri' => "udp://$wmgRC2UDPAddressMIGRATION:$wmgRC2UDPPort/#central\t",
-		);
 	}
 
 	switch ( $wmfRealm ) {
@@ -2693,13 +2689,6 @@ if ( $wmgUseRC2UDP ) {
 	$wgRCFeeds['default'] = array(
 		'formatter' => 'IRCColourfulRCFeedFormatter',
 		'uri' => "udp://$wmgRC2UDPAddress:$wmgRC2UDPPort/$wmgRC2UDPPrefix",
-		'add_interwiki_prefix' => false,
-		'omit_bots' => false,
-	);
-
-	$wgRCFeeds['ircd'] = array(
-		'formatter' => 'IRCColourfulRCFeedFormatter',
-		'uri' => "udp://$wmgRC2UDPAddressMIGRATION:$wmgRC2UDPPort/$wmgRC2UDPPrefix",
 		'add_interwiki_prefix' => false,
 		'omit_bots' => false,
 	);
