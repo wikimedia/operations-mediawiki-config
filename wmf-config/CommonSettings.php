@@ -1202,11 +1202,14 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthUseOldAutoLogin = !$wgCentralAuthSilentLogin;
 	$wgCentralAuthUseEventLogging = $wmgCentralAuthUseEventLogging;
 
-	# Broken -- TS
 	if( $wmfRealm == 'production' ) {
 		$wgCentralAuthRC[] = array(
 			'formatter' => 'IRCColourfulCARCFeedFormatter',
 			'uri' => "udp://$wmgRC2UDPAddress:$wmgRC2UDPPort/#central\t",
+		);
+		$wgCentralAuthRC[] = array(
+			'formatter' => 'IRCColourfulCARCFeedFormatter',
+			'uri' => "udp://$wmgRC2UDPAddressMIGRATION:$wmgRC2UDPPort/#central\t",
 		);
 	}
 
