@@ -6637,7 +6637,6 @@ $wgConf->settings = array(
 		'sysop' => array(
 			'importupload' => true, // bug 52633
 			'reupload-own' => true, // bug 52725
-			'mergehistory' => true, // bug 65348
 		),
 		'uploader' => array(
 			'upload' => true,
@@ -6883,9 +6882,6 @@ $wgConf->settings = array(
 		'autopatrolled' => array(
 			'autopatrol' => true, // bug 55665
 		),
-		'sysop' => array(
-			'mergehistory' => true, // bug 56198
-		),
 	),
 	'eswiktionary' => array(
 		'user' => array( 'upload' => false ), // Bug 7152
@@ -6903,7 +6899,6 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 		'autopatrol' => array( 'autopatrol' => true, 'move-categorypages' => true ), // bug 29007
 		'Image-reviewer' => array( 'movefile' => true ), // bug 64532
-		'sysop' => array( 'mergehistory' => true ),
 	),
 	'fawikinews' => array(
 		'rollbacker' => array( 'rollback' => true ),
