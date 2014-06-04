@@ -1,0 +1,9 @@
+Verified+2: jenkins-bot
+Code-Review+1: Dereckson <dereckson@espace-win.org>
+Code-Review+2: Mwalker <mwalker@wikimedia.org>
+Code-Review+1: Calak <Calakwiki@yahoo.com>
+Submitted-by: jenkins-bot
+Submitted-at: Wed, 04 Jun 2014 23:03:18 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/137353
+Project: operations/mediawiki-config
+Branch: refs/heads/master
