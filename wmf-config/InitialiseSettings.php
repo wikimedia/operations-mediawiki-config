@@ -11289,15 +11289,21 @@ $wgConf->settings = array(
 'wmgZeroRatedMobileAccess' => array(
 	'default' => false,
 	'wikidata' => false,
-	'wiki' => true,
-	'metawiki' => true,
-	'zerowiki' => true,
+	// 'wiki' => true,
+	// 'metawiki' => true,
+	// 'zerowiki' => true,
 ),
 
 'wmgZeroBanner' => array(
 	'default' => false,
 	'wikidata' => false,
-//	'wiki' => true,  // DO NOT ENABLE unless wmgZeroRatedMobileAccess is disabled
+	'wiki' => true,
+),
+
+'wmgZeroPortal' => array(
+	'default' => false,
+	'metawiki' => true,
+	'zerowiki' => true,
 ),
 
 'wmgUseSubPageList3' => array(
