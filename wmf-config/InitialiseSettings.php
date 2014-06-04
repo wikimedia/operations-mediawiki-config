@@ -13091,6 +13091,9 @@ $wgConf->settings = array(
 	'itwikisource' => array(
 		'otherProjectsLinks' => array( 'itwiki', 'itwikiquote', 'commonswiki', 'itwikivoyage' ),
 	),
+	'kowiki' => array(
+		'otherProjectsLinks' => array( 'kowikiquote', 'kowikisource', 'commonswiki' ),
+	),
 	'lbwiki' => array(
 		'sort' => 'alphabetic',
 	),
