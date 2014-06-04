@@ -6903,6 +6903,7 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 		'autopatrol' => array( 'autopatrol' => true, 'move-categorypages' => true ), // bug 29007
 		'Image-reviewer' => array( 'movefile' => true ), // bug 64532
+		'sysop' => array( 'mergehistory' => true ),
 	),
 	'fawikinews' => array(
 		'rollbacker' => array( 'rollback' => true ),
