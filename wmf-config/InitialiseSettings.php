@@ -4631,6 +4631,10 @@ $wgConf->settings = array(
 		102 => 'Pruggettu',
 		103 => 'Discussioni_pruggettu',
 	),
+	'scowiki' => array(
+		100 => 'Portal', // Bug 66107
+		101 => 'Portal_talk',
+	),
 	'sewiki' => array(
 		100 => 'Portála',              //Bug 39206
 		101 => 'Portálaságastallan',   //Bug 39206
