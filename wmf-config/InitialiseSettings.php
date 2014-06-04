@@ -11497,10 +11497,6 @@ $wgConf->settings = array(
 	'sourceswiki' => 'm.%h0.%h1', // bug 36002
 ),
 
-'wmgZeroDisableImages' => array(
-		'default' => 1,
-),
-
 'wmgMFCustomLogos' => array(
 	'default' => array(),
 	'enwiki' => array(
