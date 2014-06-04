@@ -11294,6 +11294,12 @@ $wgConf->settings = array(
 	'zerowiki' => true,
 ),
 
+'wmgZeroBanner' => array(
+	'default' => false,
+	'wikidata' => false,
+//	'wiki' => true,  // DO NOT ENABLE unless wmgZeroRatedMobileAccess is disabled
+),
+
 'wmgUseSubPageList3' => array(
 	'default' => false,
 	'testwiki' => true,

@@ -217,9 +217,12 @@ return array(
 		'commonswiki' => '',
 		'mediawikiwiki' => '',//'m.%h1.%h2',
 	),
-//	'wmgZeroRatedMobileAccess' => array(
-//		'default' => false,
-//	),
+	'wmgZeroRatedMobileAccess' => array(
+		'default' => false,
+	),
+	'wmgZeroBanner' => array(
+		'default' => true,
+	),
 	'wmgMFPhotoUploadEndpoint' => array(
 		'default' => '//commons.wikimedia.$variant.wmflabs.org/w/api.php',
 	),

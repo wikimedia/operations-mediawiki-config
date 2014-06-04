@@ -10,7 +10,9 @@ $wgMFForceSecureLogin = false;
 $wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
 
 // Zero extension
-$wgEnableZeroRatedMobileAccessTesting = true;
+$wgEnableZeroRatedMobileAccessTesting = true;  // Delete once ZRMA extension is removed
+$wgZeroEnableTesting = true;
+
 
 // Keep Going experiments
 $wgMFKeepGoing = true;
