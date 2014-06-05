@@ -73,12 +73,13 @@ return array(
 		'wikibooks'     => '//$lang.wikibooks.$variant.wmflabs.org',
 		'wikivoyage'    => '//$lang.wikivoyage.$variant.wmflabs.org',
 
-		'metawiki'      => '//meta.wikimedia.$variant.wmflabs.org',
 		'commonswiki'   => '//commons.wikimedia.$variant.wmflabs.org',
-		'labswiki'      => '//deployment.wikimedia.$variant.wmflabs.org',
 		'ee_prototypewiki' => '//ee-prototype.wikipedia.$variant.wmflabs.org',
+		'labswiki'      => '//deployment.wikimedia.$variant.wmflabs.org',
 		'loginwiki'     => '//login.wikimedia.$variant.wmflabs.org',
+		'metawiki'      => '//meta.wikimedia.$variant.wmflabs.org',
 		'testwiki'      => '//test.wikimedia.$variant.wmflabs.org',
+		'zerowiki'      => '//zero.wikimedia.$variant.wmflabs.org',
 		'wikidatawiki'  => '//wikidata.$variant.wmflabs.org',
 	),
 
@@ -219,6 +220,7 @@ return array(
 	),
 	'-wmgZeroRatedMobileAccess' => array(
 		'default' => false,
+		'zerowiki' => true,
 	),
 	'-wmgZeroBanner' => array(
 		'default' => false,
