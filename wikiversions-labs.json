@@ -4,8 +4,8 @@
 	"commonswiki": "php-master",
 	"dewiki": "php-master",
 	"ee_prototypewiki": "php-master",
-	"enwiki": "php-master",
 	"en_rtlwiki": "php-master",
+	"enwiki": "php-master",
 	"enwikibooks": "php-master",
 	"enwikinews": "php-master",
 	"enwikiquote": "php-master",
@@ -27,5 +27,6 @@
 	"testwiki": "php-master",
 	"ukwiki": "php-master",
 	"wikidatawiki": "php-master",
+	"zerowiki": "php-master",
 	"zhwiki": "php-master"
 }
