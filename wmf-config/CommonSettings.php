@@ -2713,6 +2713,18 @@ $wgGroupPermissions['confirmed']['skipcaptcha'] = true;
 $wgImgAuthDetails = true;
 
 if ( file_exists( "$wmfConfigDir/extension-list-$wmfVersionNumber" ) ) {
+	// Version specific extension-list files
+	//
+	// If a new extension is added only in one MediaWiki version,
+	// it should go in a version specific file, and be moved back into
+	// the versionless file when said version becomes the "main" version,
+	// and as such, all deployed versions of MediaWiki have this extension.
+	//
+	// If something is to be removed from newer versions, it should go in a
+	// version specific file for the older version. A symlink of this file may
+	// be created if it needs to cover multiple versions.
+	// This file can then be deleted once this version of MediaWiki isn't in
+	// production usage.
 	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-$wmfVersionNumber";
 }
 
