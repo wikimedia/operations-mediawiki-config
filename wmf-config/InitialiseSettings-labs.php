@@ -217,10 +217,10 @@ return array(
 		'commonswiki' => '',
 		'mediawikiwiki' => '',//'m.%h1.%h2',
 	),
-	'wmgZeroRatedMobileAccess' => array(
+	'-wmgZeroRatedMobileAccess' => array(
 		'default' => false,
 	),
-	'wmgZeroBanner' => array(
+	'-wmgZeroBanner' => array(
 		'default' => false,
 		'wikidata' => false,
 		'wiki' => true,
