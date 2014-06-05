@@ -137,3 +137,6 @@ $IP/extensions/WikimediaMessages/WikimediaLicenseTexts.php
 $IP/extensions/WikimediaMessages/WikimediaMessages.php
 $IP/extensions/WikimediaShopLink/WikimediaShopLink.php
 $IP/extensions/ZeroRatedMobileAccess/ZeroRatedMobileAccess.php
+$IP/skins/CologneBlue/CologneBlue.php
+$IP/skins/Modern/Modern.php
+$IP/skins/Nostalgia/Nostalgia.php
