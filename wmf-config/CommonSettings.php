@@ -2697,7 +2697,10 @@ if ( $wmgUseRC2UDP ) {
 		'add_interwiki_prefix' => false,
 		'omit_bots' => false,
 	);
+}
 
+// RCStream / stream.wikimedia.org
+if ( $wmfRealm === 'production' ) {
 	$wgRCFeeds['rcs1001'] = array(
 		'uri'       => "redis://rcs1001.eqiad.wmnet:6379/rc.$wgDBname",
 		'formatter' => 'JSONRCFeedFormatter',
