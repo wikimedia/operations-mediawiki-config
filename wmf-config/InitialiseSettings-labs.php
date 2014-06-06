@@ -226,6 +226,7 @@ return array(
 		'default' => false,
 		'wikidata' => false,
 		'wiki' => true,
+		'zerowiki' => false,
 	),
 	'wmgMFPhotoUploadEndpoint' => array(
 		'default' => '//commons.wikimedia.$variant.wmflabs.org/w/api.php',
