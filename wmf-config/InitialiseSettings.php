@@ -11160,6 +11160,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'mediawikiwiki' => true,
 	'cawiki' => true, // Bug 65785
+	'ptwiki' => true, // Bug 66255
 ),
 
 // Bug 50000 - Disable for logged-out users if wmgVisualEditorDefault is true
