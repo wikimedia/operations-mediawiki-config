@@ -25,7 +25,7 @@ if ( $wmgMobileFrontend ) {
 		unset( $wgGroupPermissions['zeroscript'] );
 		unset( $wgGroupPermissions['zeroscriptips'] );
 	}
-	if ( $wmgZeroPortal && $wmgZeroBanner ) {
+	if ( $wmgZeroPortal ) {
 		require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
 		require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
 		require_once( "$IP/extensions/ZeroPortal/ZeroPortal.php" );

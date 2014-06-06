@@ -220,7 +220,7 @@ return array(
 	),
 	'-wmgZeroRatedMobileAccess' => array(
 		'default' => false,
-		'zerowiki' => true, // Will be replaced by wmgZeroPortal
+		'zerowiki' => false, // Will be replaced by wmgZeroPortal
 	),
 	'-wmgZeroBanner' => array(
 		'default' => false,
@@ -230,7 +230,7 @@ return array(
 	),
 	'-wmgZeroPortal' => array(
 		'default' => false,
-		'zerowiki' => false, // Will replace wmgZeroRatedMobileAccess
+		'zerowiki' => true, // Will replace wmgZeroRatedMobileAccess
 	),
 	'wmgMFPhotoUploadEndpoint' => array(
 		'default' => '//commons.wikimedia.$variant.wmflabs.org/w/api.php',
