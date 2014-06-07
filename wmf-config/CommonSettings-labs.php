@@ -135,6 +135,51 @@ if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
 # temporary extensions
 # ========================================================================
 
+//
+// Zero Portal
+//
+if ( $wmgZeroPortal ) {
+	require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
+	require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
+	require_once( "$IP/extensions/ZeroPortal/ZeroPortal.php" );
+
+	//
+	$wgZeroEnableTesting = true; // BETA ONLY!
+	//
+
+	$wgJsonConfigs['JsonZeroConfig'] = array(
+		'namespace' => NS_ZERO,
+		'nsname' => 'Zero',
+		'islocal' => true,
+	);
+	$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
+	$wgGroupPermissions['zeroadmin']['zero-script'] = true;
+	$wgGroupPermissions['zeroadmin']['zero-script-ips'] = true;
+	$wgGroupPermissions['zeroscript']['zero-script'] = true;
+	$wgGroupPermissions['zeroscriptips']['zero-script-ips'] = true;
+}
+
+// This is a separate portion of CommonSettings, need to be merged with the if() there
+if ( $wmgZeroPortal ) {
+	include_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
+	$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore;
+}
+
+// This is a separate portion of CommonSettings, need to be merged with the if() there
+if ( $wmgUseUniversalLanguageSelector ) {
+	if ( $wmgZeroPortal ) {
+		if ( !in_array( '.ace_editor textarea', $wgULSNoImeSelectors ) ) { // this if() is not for production, avoids duplicate
+			$wgULSNoImeSelectors[] = '.ace_editor textarea';
+		}
+	}
+}
+
+//
+// End of ZeroPortal
+//
+
+
+
 if ( $wmgUseTimedMediaHandler ) {
 	$wgMwEmbedModuleConfig[ 'MediaWiki.ApiProviders' ] =  array(
 	"commons" => array(

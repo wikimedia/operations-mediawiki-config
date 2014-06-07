@@ -25,24 +25,6 @@ if ( $wmgMobileFrontend ) {
 		unset( $wgGroupPermissions['zeroscript'] );
 		unset( $wgGroupPermissions['zeroscriptips'] );
 	}
-	if ( $wmgZeroPortal ) {
-		require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
-		require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
-		require_once( "$IP/extensions/ZeroPortal/ZeroPortal.php" );
-
-		$wgZeroEnableTesting = true; // BETA ONLY!
-
-		$wgJsonConfigs['JsonZeroConfig'] = array(
-			'namespace' => NS_ZERO,
-			'nsname' => 'Zero',
-			'islocal' => true,
-		);
-		$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
-		$wgGroupPermissions['zeroadmin']['zero-script'] = true;
-		$wgGroupPermissions['zeroadmin']['zero-script-ips'] = true;
-		$wgGroupPermissions['zeroscript']['zero-script'] = true;
-		$wgGroupPermissions['zeroscriptips']['zero-script-ips'] = true;
-	}
 }
 
 $wgMFForceSecureLogin = false;
