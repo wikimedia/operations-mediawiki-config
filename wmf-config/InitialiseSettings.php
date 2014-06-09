@@ -7980,7 +7980,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'rollbacker', 'confirmed' ),
 	),
 	'+legalteamwiki' => array( // bug 61222
-		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'ipblock-exempt' ),
+		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'translationadmin' ),
 	),
 	'+ltwiki' => array(
 		'sysop' => array ( 'abusefilter' ),
@@ -8493,7 +8493,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'rollbacker', 'confirmed' ),
 	),
 	'+legalteamwiki' => array( // bug 61222
-		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'bureaucrat' ),
+		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'bureaucrat', 'translationadmin' ),
 	),
 	'+ltwiki' => array(
 		'sysop' => array ( 'abusefilter' ),
