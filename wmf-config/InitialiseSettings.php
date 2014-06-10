@@ -13041,7 +13041,6 @@ $wgConf->settings = array(
 'wmgWikibaseEnableData' => array(
 	'default' => true,
 	'commonswiki' => false,
-	'wikiquote' => false
 ),
 
 'wmgUseWikibaseRepo' => array(
