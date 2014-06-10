@@ -225,4 +225,14 @@ if ( $wmgUseCollection ) {
 	$wgCollectionPortletFormats[] = 'rdf2latex';
 }
 
+if ( $wmgUsePageImages ) {
+	require_once( "$IP/extensions/PageImages/PageImages.php" );
+	$wgPageImagesExpandOpenSearchXml = $wmgPageImagesExpandOpenSearchXml;
+	$wgPageImagesBlacklist[] = array(
+		'type' => 'db',
+		'page' => 'MediaWiki:Pageimages-blacklist',
+		'db' => 'commonswiki',
+	);
+}
+
 } # end safeguard
