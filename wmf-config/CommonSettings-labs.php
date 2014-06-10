@@ -147,16 +147,15 @@ if ( $wmgZeroPortal ) {
 	$wgZeroEnableTesting = true; // BETA ONLY!
 	//
 
-	$wgJsonConfigs['JsonZeroConfig'] = array(
-		'namespace' => NS_ZERO,
-		'nsname' => 'Zero',
-		'islocal' => true,
-	);
+	$wgJsonConfigStorage[] = 'JsonZeroConfig';
 	$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
 	$wgGroupPermissions['zeroadmin']['zero-script'] = true;
 	$wgGroupPermissions['zeroadmin']['zero-script-ips'] = true;
+	$wgGroupPermissions['zeroadmin']['jsonconfig-flush'] = true;
 	$wgGroupPermissions['zeroscript']['zero-script'] = true;
+	$wgGroupPermissions['zeroscript']['jsonconfig-flush'] = true;
 	$wgGroupPermissions['zeroscriptips']['zero-script-ips'] = true;
+	$wgGroupPermissions['zeroscriptips']['jsonconfig-flush'] = true;
 }
 
 // This is a separate portion of CommonSettings, need to be merged with the if() there
