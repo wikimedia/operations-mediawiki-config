@@ -10840,20 +10840,6 @@ $wgConf->settings = array(
 ),
 
 'wmgMediaViewerShowSurvey' => array(
-	'default' => false,
-	// TODO disable 2014-05-10
-	'mediawikiwiki' => true,
-	// TODO disable 2014-05-17
-	'cawiki' => true,
-	'huwiki' => true,
-	'enwikivoyage' => true,
-	// TODO disable 2014-05-22
-	'dewiki' => true,
-	'frwiki' => true,
-	'ptwiki' => true,
-	// TODO disable 2014-05-28
-	'eswiki' => true,
-	'nlwiki' => true,
 	// TODO disable 2014-07-03
 	'enwiki' => true,
 ),
