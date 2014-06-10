@@ -657,6 +657,7 @@ $wgTitleBlacklistSources = array(
 		'src'  => "//meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw&tb_ver=1",
 	),
 );
+$wgTitleBlacklistLogHits = true;
 
 if ( $wmgUseQuiz ) {
 	include( "$IP/extensions/Quiz/Quiz.php" );
