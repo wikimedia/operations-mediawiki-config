@@ -628,6 +628,7 @@ $wgTitleBlacklistSources = array(
 		'src'  => "https://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw&tb_ver=1",
 	),
 );
+$wgTitleBlacklistLogHits = true;
 
 $wgTitleBlacklistBlockAutoAccountCreation = false;
 
