@@ -147,7 +147,8 @@ if ( $wmgZeroPortal ) {
 	$wgZeroEnableTesting = true; // BETA ONLY!
 	//
 
-	$wgJsonConfigStorage[] = 'JsonZeroConfig';
+	$wgJsonConfigs['JsonZeroConfig']['store'] = true;
+
 	$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
 	$wgGroupPermissions['zeroadmin']['zero-script'] = true;
 	$wgGroupPermissions['zeroadmin']['zero-script-ips'] = true;
