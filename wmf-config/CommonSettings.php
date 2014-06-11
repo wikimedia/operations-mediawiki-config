@@ -2599,7 +2599,7 @@ if ( $wmgUseZeroNamespace ) {
 	$wgZeroRatedMobileAccessEnableZeroConfigPages = true;
 }
 
-if ( $wmgZeroPortal && !$wmgUseZeroNamespace ) {
+if ( $wmgZeroPortal && !$wmgUseZeroNamespace && !$wmgZeroRatedMobileAccess ) {
 	require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
 	require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
 	require_once( "$IP/extensions/ZeroPortal/ZeroPortal.php" );
