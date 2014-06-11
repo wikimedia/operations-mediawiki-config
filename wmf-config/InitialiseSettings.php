@@ -11270,6 +11270,7 @@ $wgConf->settings = array(
 	'fiwikisource' => 'uca-fi', // bug 46330
 	'fiwikiversity' => 'uca-fi', // bug 46330
 	'frwiki' => 'uca-fr', // bug 54680
+	'frwikinews' => 'uca-fr', // bug 66165
 	'huwiki' => 'uca-hu', // bug 45596
 	'iswiki' => 'uca-is', // bug 56859
 	'iswiktionary' => 'identity', // bug 30722
