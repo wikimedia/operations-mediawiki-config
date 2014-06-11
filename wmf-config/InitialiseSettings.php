@@ -11488,6 +11488,14 @@ $wgConf->settings = array(
 	'zerowiki' => true,
 ),
 
+'wmgZeroBanner' => array(
+	'default' => false,
+),
+
+'wmgZeroPortal' => array(
+	'default' => false,
+),
+
 'wmgUseSubPageList3' => array(
 	'default' => false,
 	'testwiki' => true,

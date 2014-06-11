@@ -40,6 +40,20 @@ if ( $wmgMobileFrontend ) {
 		$wgZeroRatedMobileAccessApiPassword = $wmgZeroRatedMobileAccessApiPassword;
 	}
 
+	if ( $wmgZeroBanner && !$wmgZeroPortal && !$wmgZeroRatedMobileAccess ) {
+		require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
+		require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
+
+		$wgJsonConfigs['JsonZeroConfig']['remote'] = array(
+			'url' => 'https://zero.wikimedia.org/w/api.php',
+			'username' => $wmgZeroPortalApiUserName,
+			'password' => $wmgZeroPortalApiPassword,
+		);
+
+		// @TODO: which group(s) on all wikies should Zero allow to flush cache?
+		$wgGroupPermissions['sysop']['jsonconfig-flush'] = true;
+	}
+
 	// Enable loading of desktop-specific resources from MobileFrontend
 	if ( $wmgMFEnableDesktopResources ) {
 		$wgMFEnableDesktopResources = true;

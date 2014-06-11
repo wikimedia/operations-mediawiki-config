@@ -58,6 +58,7 @@ $IP/extensions/InputBox/InputBox.php
 $IP/extensions/Insider/Insider.php
 $IP/extensions/intersection/DynamicPageList.php
 $IP/extensions/Interwiki/Interwiki.php
+$IP/extensions/JsonConfig/JsonConfig.php
 $IP/extensions/LabeledSectionTransclusion/lst.php
 $IP/extensions/LandingCheck/LandingCheck.php
 $IP/extensions/LiquidThreads/LiquidThreads.php
@@ -137,4 +138,6 @@ $IP/extensions/WikimediaIncubator/WikimediaIncubator.php
 $IP/extensions/WikimediaMessages/WikimediaLicenseTexts.php
 $IP/extensions/WikimediaMessages/WikimediaMessages.php
 $IP/extensions/WikimediaShopLink/WikimediaShopLink.php
+$IP/extensions/ZeroBanner/ZeroBanner.php
+$IP/extensions/ZeroPortal/ZeroPortal.php
 $IP/extensions/ZeroRatedMobileAccess/ZeroRatedMobileAccess.php

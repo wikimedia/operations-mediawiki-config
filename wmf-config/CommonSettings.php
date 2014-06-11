@@ -2388,7 +2388,7 @@ if ( $wmgUseDisambiguator ) {
 	require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
 }
 
-if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgUseZeroNamespace ) {
+if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgUseZeroNamespace || $wmgZeroPortal ) {
 	include_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
 	$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore;
 }
@@ -2523,7 +2523,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSPosition = $wmgULSPosition;
 	$wgULSIMEEnabled = $wmgULSIMEEnabled;
 	$wgULSWebfontsEnabled = $wmgULSWebfontsEnabled;
-	if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgUseZeroNamespace ) {
+	if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgUseZeroNamespace || $wmgZeroPortal ) {
 		$wgULSNoImeSelectors[] = '.ace_editor textarea';
 	}
 	if ( $wmgUseTranslate && $wmgULSPosition === 'personal' ) {
@@ -2598,6 +2598,24 @@ if ( $wmgUseZeroNamespace ) {
 	$wgGroupPermissions['zeroscriptips']['zero-script-ips'] = true;
 	$wgZeroRatedMobileAccessEnableZeroConfigPages = true;
 }
+
+if ( $wmgZeroPortal && !$wmgUseZeroNamespace ) {
+	require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
+	require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
+	require_once( "$IP/extensions/ZeroPortal/ZeroPortal.php" );
+
+	$wgJsonConfigs['JsonZeroConfig']['store'] = true;
+
+	$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
+	$wgGroupPermissions['zeroadmin']['zero-script'] = true;
+	$wgGroupPermissions['zeroadmin']['zero-script-ips'] = true;
+	$wgGroupPermissions['zeroadmin']['jsonconfig-flush'] = true;
+	$wgGroupPermissions['zeroscript']['zero-script'] = true;
+	$wgGroupPermissions['zeroscript']['jsonconfig-flush'] = true;
+	$wgGroupPermissions['zeroscriptips']['zero-script-ips'] = true;
+	$wgGroupPermissions['zeroscriptips']['jsonconfig-flush'] = true;
+}
+
 
 if ( $wmgUseAccountAudit ) {
 	require_once( "$IP/extensions/AccountAudit/AccountAudit.php" );

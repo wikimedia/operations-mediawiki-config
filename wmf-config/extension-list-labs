@@ -1,4 +1,2 @@
 $IP/extensions/MobileApp/MobileApp.php
 $IP/extensions/GlobalCssJs/GlobalCssJs.php
-$IP/extensions/JsonConfig/JsonConfig.php
-$IP/extensions/ZeroBanner/ZeroBanner.php
