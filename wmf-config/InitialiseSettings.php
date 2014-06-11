@@ -3270,6 +3270,10 @@ $wgConf->settings = array(
 	'+testwiki' => array(
 		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
+		'Test_namespace_1' => 100,
+		'Test_namespace_1_talk' => 101,
+		'Test_namespace_2' => 102,
+		'Test_namespace_2_talk' => 103,
 	),
 	'+tewiki' => array(
 		'Wikipedia' => NS_PROJECT,
