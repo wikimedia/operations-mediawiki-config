@@ -11484,16 +11484,32 @@ $wgConf->settings = array(
 	'default' => false,
 	'wikidata' => false,
 	'wiki' => true,
-	'metawiki' => true,
-	'zerowiki' => true,
+//	'metawiki' => true,
+//	'zerowiki' => true,
+	'ruwiki' => false,
+	'zerowiki' => false,
+	'metawiki' => false,
+),
+
+'wmgUseZeroNamespace' => array(
+	'default' => false,
+	// 'metawiki' => true,
+	// 'zerowiki' => true,
 ),
 
 'wmgZeroBanner' => array(
 	'default' => false,
+	'wikidatawiki' => false, // safety
+	//'wiki' => true,
+	'ruwiki' => true,
+	'metawiki' => false,
+	'zerowiki' => false,
 ),
 
 'wmgZeroPortal' => array(
 	'default' => false,
+	'metawiki' => true,
+	'zerowiki' => true,
 ),
 
 'wmgUseSubPageList3' => array(
@@ -13231,12 +13247,6 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 	'specieswiki' => true,
 	'incubatorwiki' => true,
-),
-
-'wmgUseZeroNamespace' => array(
-	'default' => false,
-	'metawiki' => true,
-	'zerowiki' => true,
 ),
 
 'wmgUseCampaigns' => array(
