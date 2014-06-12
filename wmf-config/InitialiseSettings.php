@@ -13196,6 +13196,8 @@ $wgConf->settings = array(
 
 'wmgUsePageImages' => array(
 	'default' => true,
+	'wikibooks' => false, # bug 66455
+	'wikisource' => false, # bug 66455
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
