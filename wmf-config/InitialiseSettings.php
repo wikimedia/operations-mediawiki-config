@@ -11487,12 +11487,14 @@ $wgConf->settings = array(
 'wmgZeroRatedMobileAccess' => array(
 	'default' => false,
 	'wikidata' => false,
-	'wiki' => true,
+//	'wiki' => true,
 //	'metawiki' => true,
 //	'zerowiki' => true,
-	'ruwiki' => false,
-	'zerowiki' => false,
-	'metawiki' => false,
+//
+//	one site + ru test
+//	'ruwiki' => false,
+//	'zerowiki' => false,
+//	'metawiki' => false,
 ),
 
 'wmgUseZeroNamespace' => array(
@@ -11504,8 +11506,8 @@ $wgConf->settings = array(
 'wmgZeroBanner' => array(
 	'default' => false,
 	'wikidatawiki' => false, // safety
-	//'wiki' => true,
-	'ruwiki' => true,
+	'wiki' => true,
+	//'ruwiki' => true,
 	'metawiki' => false,
 	'zerowiki' => false,
 ),
