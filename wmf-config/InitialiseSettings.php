@@ -1007,6 +1007,7 @@ $wgConf->settings = array(
 	'wikimania2012wiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Wikimania_2012_logo.svg/135px-Wikimania_2012_logo.svg.png', // bug 48382
 	'wikimania2013wiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/52/Wikimania_2013_logo.svg/135px-Wikimania_2013_logo.svg.png', // bug 48382
 	'wikimania2014wiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/06/Wikimania_2014_Shard_logo_v3_with_logotype_and_date_%28small%29.svg/135px-Wikimania_2014_Shard_logo_v3_with_logotype_and_date_%28small%29.svg.png', // bug 56398
+	'wikimania2015wiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Wikimania_2015_logo.svg/135px-Wikimania_2015_logo.svg.png', // bug 48382
 	'wikimaniateamwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/07/Wikimania_team_logo.svg/135px-Wikimania_team_logo.svg.png', // bug 48376
 ),
 # @} end of wgLogo
@@ -1225,6 +1226,7 @@ $wgConf->settings = array(
 	'wikimania2012wiki' => '//wikimania2012.wikimedia.org',
 	'wikimania2013wiki' => '//wikimania2013.wikimedia.org',
 	'wikimania2014wiki' => '//wikimania2014.wikimedia.org',
+	'wikimania2015wiki' => '//wikimania2015.wikimedia.org',
 	'wikimaniateamwiki' => '//wikimaniateam.wikimedia.org',
 	'zerowiki' => '//zero.wikimedia.org'
 ),
@@ -1308,6 +1310,7 @@ $wgConf->settings = array(
 	'wikimania2012wiki' => 'http://wikimania2012.wikimedia.org',
 	'wikimania2013wiki' => 'http://wikimania2013.wikimedia.org',
 	'wikimania2014wiki' => 'http://wikimania2014.wikimedia.org',
+	'wikimania2015wiki' => 'http://wikimania2015.wikimedia.org',
 	'wikimaniateamwiki' => 'https://wikimaniateam.wikimedia.org',
 	'zerowiki' => 'https://zero.wikimedia.org',
 ),
@@ -6100,6 +6103,21 @@ $wgConf->settings = array(
 		'IRC-url',
 		'Contact-url',
 	),
+	'wikimania2015wiki' => array(
+		'pagetitle',
+		'pagetitle-view-mainpage',
+		'Volunteers-url',
+		'Attendees-url',
+		'Press-url',
+		'Sponsors-url',
+		'Questions-url',
+		'FAQ-url',
+		'Site Map-url',
+		'Registration-url',
+		'Schedule-url',
+		'IRC-url',
+		'Contact-url',
+	),
 	'zhwiki' => array(
 		'pagetitle-view-mainpage',
 	),
@@ -6298,6 +6316,7 @@ $wgConf->settings = array(
 	'wikimania2012wiki' => "#wikimania2012.wikipedia\t",
 	'wikimania2013wiki' => "#wikimania2013.wikipedia\t",
 	'wikimania2014wiki' => "#wikimania2014.wikipedia\t",
+	'wikimania2015wiki' => "#wikimania2015.wikipedia\t",
 	'wikimaniateamwiki' => "#wikimaniateam.wikipedia\t",
 ),
 
@@ -6490,6 +6509,9 @@ $wgConf->settings = array(
 		),
 	),
 	'wikimania2014wiki' => array(
+		'*' => array( 'createpage' => false ),
+	),
+	'wikimania2015wiki' => array(
 		'*' => array( 'createpage' => false ),
 	),
 
@@ -8201,6 +8223,9 @@ $wgConf->settings = array(
 	'+wikimania2014wiki' => array(
 		'bureaucrat' => array( 'translationadmin' ),
 	),
+	'+wikimania2015wiki' => array(
+		'bureaucrat' => array( 'translationadmin' ),
+	),
 	'zerowiki' => array(
 		'sysop' => true,
 	),
@@ -8713,6 +8738,9 @@ $wgConf->settings = array(
 	'+wikimania2014wiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'translationadmin' ), // bug 55480
 	),
+	'+wikimania2015wiki' => array(
+		'bureaucrat' => array( 'translationadmin' ),
+	),
 	'+wikimaniateamwiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'autopatrolled', 'import' ),
 	),
@@ -9026,6 +9054,7 @@ $wgConf->settings = array(
 	'wikimania2012wiki' => array( 'en', 'meta', 'wm2011' ),
 	'wikimania2013wiki' => array( 'en', 'meta', 'wm2011', 'wm2012' ),
 	'wikimania2014wiki' => array( 'en', 'meta', 'wm2011', 'wm2012', 'wm2013' ),
+	'wikimania2015wiki' => array( 'en', 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014' ),
 	'wuuwiki' => array( 'en', 'th', 'fr', 'zh', ),
 	'xhwiki' => array( 'en' ), // bug 51327
 	'zhwikiquote' => array( 'w', 'b', 'wikt', 's', 'meta', 'commons' ),
@@ -10079,6 +10108,7 @@ $wgConf->settings = array(
 	'wikimania2012wiki' => true,
 	'wikimania2013wiki' => true,
 	'wikimania2014wiki' => true,
+	'wikimania2015wiki' => true,
 	'xmfwiki' => true,
 ),
 
@@ -12338,6 +12368,7 @@ $wgConf->settings = array(
 	'wikimania2012wiki' => true, // bug 34120
 	'wikimania2013wiki' => true, // bug 36477
 	'wikimania2014wiki' => true,
+	'wikimania2015wiki' => true,
 ),
 'wmgTranslateWorkflowStates' => array(
 	'default' => false,
@@ -12398,6 +12429,7 @@ $wgConf->settings = array(
 	'wikimania2012wiki' => true,
 	'wikimania2013wiki' => true,
 	'wikimania2014wiki' => true,
+	'wikimania2015wiki' => true,
 ),
 'wmgUseCleanChanges' => array(
 	'default' => false,
