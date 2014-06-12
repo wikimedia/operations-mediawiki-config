@@ -13284,43 +13284,43 @@ $wgConf->settings = array(
 // requires an in place reindex.  Last full review 2014-05-01.  See
 // https://wikitech.wikimedia.org/wiki/Search/New#Estimating_the_number_of_shards_required
 // for estimation of new wikis.  At this point I'm declaring we should have no more than
-// 20 shards per index.  We might go higher.  More then 20 might slow down searches due to
-// communication time.  Since we only have 16 servers at this point having 20 shards means
-// some servers are pulling double duty.
+// 5 shards per content index and 20 per general index.  5 because that assigned one
+// replica to most nodes and should be the most efficient for querying.  20 is somewhat
+// arbitrary.
 'wmgCirrusSearchShardCount' => array(
 	// Most wikis are too small to be worth sharding
 	'default' => array( 'content' => 1, 'general' => 1 ),
 	'arwiki' => array( 'content' => 3, 'general' => 4 ),
 	'arwikisource' => array( 'content' => 2, 'general' => 1 ),
 	'bgwiki' => array( 'content' => 2, 'general' => 1 ),
-	'cawiki' => array( 'content' => 6, 'general' => 1 ),
+	'cawiki' => array( 'content' => 5, 'general' => 1 ),
 	'cebwiki' => array( 'content' => 2, 'general' => 1 ),
 	'cswiki' => array( 'content' => 2, 'general' => 1 ),
 	// Commons is special and has a 'file' index in addition to the regular ones.
 	// File has shards at ~6GB each even with 20 of them.
 	'commonswiki' => array( 'content' => 1, 'general' => 20, 'file' => 20 ),
 	'dawiki' => array( 'content' => 2, 'general' => 1 ),
-	'dewiki' => array( 'content' => 20, 'general' => 16 ),
+	'dewiki' => array( 'content' => 5, 'general' => 16 ),
 	'dewikisource' => array( 'content' => 3, 'general' => 1 ),
 	'elwiki' => array( 'content' => 2, 'general' => 1 ),
 	// These shards are also signigicantly larger than the target 2GB.
-	'enwiki' => array( 'content' => 6, 'general' => 20 ),
+	'enwiki' => array( 'content' => 5, 'general' => 20 ),
 	'enwikinews' => array( 'content' => 1, 'general' => 4 ),
-	'enwikisource' => array( 'content' => 12, 'general' => 1 ),
+	'enwikisource' => array( 'content' => 5, 'general' => 1 ),
 	'enwiktionary' => array( 'content' => 4, 'general' => 2 ),
-	'eswiki' => array( 'content' => 11, 'general' => 6 ),
+	'eswiki' => array( 'content' => 5, 'general' => 6 ),
 	'eswikisource' => array( 'content' => 2, 'general' => 1 ),
 	'fawiki' => array( 'content' => 4, 'general' => 2 ),
 	'fiwiki' => array( 'content' => 2, 'general' => 13 ),
-	'frwiki' => array( 'content' => 20, 'general' => 14 ),
-	'frwikisource' => array( 'content' => 12, 'general' => 1 ),
+	'frwiki' => array( 'content' => 5, 'general' => 14 ),
+	'frwikisource' => array( 'content' => 5, 'general' => 1 ),
 	'frwiktionary' => array( 'content' => 2, 'general' => 1 ),
 	'hewiki' => array( 'content' => 2, 'general' => 2 ),
 	'huwiki' => array( 'content' => 4, 'general' => 2 ),
 	'idwiki' => array( 'content' => 2, 'general' => 2 ),
 	'incubatorwiki' => array( 'content' => 1, 'general' => 2 ),
-	'itwiki' => array( 'content' => 13, 'general' => 9 ),
-	'jawiki' => array( 'content' => 13, 'general' => 6 ),
+	'itwiki' => array( 'content' => 5, 'general' => 9 ),
+	'jawiki' => array( 'content' => 5, 'general' => 6 ),
 	'kkwiki' => array( 'content' => 2, 'general' => 1 ),
 	'kowiki' => array( 'content' => 3, 'general' => 1 ),
 	'ltwiktionary' => array( 'content' => 2, 'general' => 1 ),
@@ -13328,23 +13328,23 @@ $wgConf->settings = array(
 	'metawiki' => array( 'content' => 1, 'general' => 13 ),
 	'mgwiktionary' => array( 'content' => 2, 'general' => 1 ),
 	'nowiki' => array( 'content' => 1, 'general' => 2 ),
-	'nlwiki' => array( 'content' => 8, 'general' => 4 ),
-	'plwiki' => array( 'content' => 6, 'general' => 3 ),
-	'ptwiki' => array( 'content' => 7, 'general' => 5 ),
+	'nlwiki' => array( 'content' => 5, 'general' => 4 ),
+	'plwiki' => array( 'content' => 5, 'general' => 3 ),
+	'ptwiki' => array( 'content' => 5, 'general' => 5 ),
 	'rowiki' => array( 'content' => 3, 'general' => 2 ),
-	'ruwiki' => array( 'content' => 18, 'general' => 11 ),
+	'ruwiki' => array( 'content' => 5, 'general' => 11 ),
 	'ruwikisource' => array( 'content' => 3, 'general' => 1),
 	'ruwiktionary' => array( 'content' => 3, 'general' => 1 ),
 	'thwiki' => array( 'content' => 2, 'general' => 1 ),
 	'trwiki' => array( 'content' => 2, 'general' => 2 ),
 	'srwiki' => array( 'content' => 3, 'general' => 1 ),
 	'shwiki' => array( 'content' => 2, 'general' => 1 ),
-	'svwiki' => array( 'content' => 6, 'general' => 2 ),
-	'ukwiki' => array( 'content' => 6, 'general' => 2 ),
+	'svwiki' => array( 'content' => 5, 'general' => 2 ),
+	'ukwiki' => array( 'content' => 5, 'general' => 2 ),
 	'viwiki' => array( 'content' => 3, 'general' => 2 ),
-	'wikidatawiki' => array( 'content' => 7, 'general' => 1 ),
+	'wikidatawiki' => array( 'content' => 5, 'general' => 1 ),
 	'warwiki' => array( 'content' => 2, 'general' => 1 ),
-	'zhwiki' => array( 'content' => 6, 'general' => 5 ),
+	'zhwiki' => array( 'content' => 5, 'general' => 5 ),
 	'zhwikisource' => array( 'content' => 3, 'general' => 1 ),
 ),
 
