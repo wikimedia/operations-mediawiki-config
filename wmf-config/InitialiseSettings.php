@@ -11164,6 +11164,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'mediawikiwiki' => true,
 	'cawiki' => true, // Bug 65785
+	'hewiki' => true, // Bug 66538
 	'ptwiki' => true, // Bug 66255
 ),
 
