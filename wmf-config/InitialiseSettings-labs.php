@@ -251,15 +251,6 @@ return array(
 		'default' => true,
 	),
 
-	'wmgEnableGeoData' => array(
-		'default' => true,
-	),
-	'wmgGeoDataBackend' => array(
-		'default' => 'elastic',
-	),
-	'wmgGeoDataUseCirrusSearch' => array(
-		'default' => true,
-	),
 	'wmgGeoDataDebug' => array(
 		'default' => true,
 	),

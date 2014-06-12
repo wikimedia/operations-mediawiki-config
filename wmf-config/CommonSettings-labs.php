@@ -54,13 +54,6 @@ $wgDnsBlacklistUrls   = array(
 // So that people can easily test the captchas without making accounts -- Platonides
 $wgGroupPermissions['autoconfirmed']['skipcaptcha'] = false;
 
-if ( $wmgEnableGeoData ) {
-	$wgGeoDataSolrMaster = "deployment-solr.{$wmfDatacenter}.wmflabs";
-	$wgGeoDataSolrHosts = array(
-		"deployment-solr.{$wmfDatacenter}.wmflabs" => 100,
-	);
-}
-
 // the beta cluster uses a different filebackend than production
 if ( $wmgUseGWToolset ) {
 	$wgGWTFileBackend = 'gwtoolset-backend';
