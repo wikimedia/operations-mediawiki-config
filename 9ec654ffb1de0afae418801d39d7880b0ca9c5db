@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee391fd1_36a6a2a8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1064,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-06-13T19:08:42Z",
+      "side": 1,
+      "message": "I think that removing *any* upload link is an obvious configuration oversight, some upload link for some users must be available. AFAICS:\n* The is* wikis were requested in bulk and at least one of them has an upload link, probably the others didn\u0027t have the equivalent target and were forgotten.\n* For guwikisource the current config is completely wrong, they asked upload disabled but it was only for \"user\" so \"autoconfirmed\" can upload since the global default changed, and they have a lock hack to override this. The navigation url is another oversight.\n* Meta... I don\u0027t remember, but I agree on removing it from this patch because it was a recent config change. I think I thought for a moment that $wgUploadNavigationUrl would only take effect for those without upload permission.",
+      "parentUuid": "ee391fd1_36fc62b1",
+      "revId": "9ec654ffb1de0afae418801d39d7880b0ca9c5db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee391fd1_b627325f",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2014-06-13T18:41:49Z",
       "side": 1,
       "message": "Would it make more sense to change this to \"//commons.wikimedia.org/wiki/Special:UploadWizard?uselang\u003d$lang\" ?",
+      "revId": "9ec654ffb1de0afae418801d39d7880b0ca9c5db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_76cf8a83",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1067,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-06-13T19:08:42Z",
+      "side": 1,
+      "message": "The wikis which used that format are left their explicit definition on purpose below. For the future ones, nowadays it makes more sense to rely on ULS given all users with upload rights are logged in.",
+      "parentUuid": "ee391fd1_b627325f",
       "revId": "9ec654ffb1de0afae418801d39d7880b0ca9c5db",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
