@@ -7996,7 +7996,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller', 'autopatrolled', 'abusefilter', 'transwiki' ),
 	),
 	'+nowikibooks' => array(
-		'bureaucrat' => array( 'autopatrolled', 'patroller' ),
+		'bureaucrat' => array( 'sysop', 'bureaucrat', 'bot', 'patroller', 'autopatrolled' ),
 		'sysop' => array( 'autopatrolled', 'patroller' ),
 	),
 	'+officewiki' => array(
@@ -8511,7 +8511,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'abusefilter' ),
 	),
 	'+nowikibooks' => array(
-		'bureaucrat' => array( 'bureaucrat', 'sysop', 'autopatrolled', 'patroller' ),
+		'bureaucrat' => array( 'bot', 'patroller', 'autopatrolled' ),
 		'sysop' => array( 'autopatrolled', 'patroller' ),
 	),
 	'+officewiki' => array(
