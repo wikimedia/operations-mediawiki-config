@@ -91,9 +91,9 @@ $wgLBFactoryConf = array(
 		'db1051' => 0,   # 2.8TB  96GB, vslow, api, dump
 		'db1061' => 400, # 2.8TB 128GB
 		'db1062' => 400, # 2.8TB 128GB
-		'db1065' => 100, # 2.8TB 160GB, warm up
-		# schema change 'db1066' => 500, # 2.8TB 160GB
-		'db1070' => 500, # 2.8TB 160GB
+		'db1065' => 500, # 2.8TB 160GB
+		'db1066' => 100, # 2.8TB 160GB, warm up
+		# schema changes 'db1070' => 500, # 2.8TB 160GB
 		'db1071' => 500, # 2.8TB 160GB
 	),
 	's2' => array(
