@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "ee391fd1_36fc62b1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1064,
+      "author": {
+        "id": 99
+      },
+      "writtenOn": "2014-06-13T18:41:49Z",
+      "side": 1,
+      "message": "Doesn\u0027t this cause some wikis to change (e.g. guwikisource, iswikiquote, meta)",
+      "revId": "9ec654ffb1de0afae418801d39d7880b0ca9c5db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_b627325f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1067,
+      "author": {
+        "id": 99
+      },
+      "writtenOn": "2014-06-13T18:41:49Z",
+      "side": 1,
+      "message": "Would it make more sense to change this to \"//commons.wikimedia.org/wiki/Special:UploadWizard?uselang\u003d$lang\" ?",
+      "revId": "9ec654ffb1de0afae418801d39d7880b0ca9c5db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee391fd1_332d948c",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 6
