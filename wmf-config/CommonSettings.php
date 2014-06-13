@@ -2041,8 +2041,8 @@ if ( $wmgUseMath ) {
 	$wgMathPath        = $wmgMathPath;
 	$wgUseMathJax      = true;
 	$wgMathDisableTexFilter = true; // severe performance regression; --Aaron
-	// disable MW_MATH_MATHML until mathoid table is created (BUG 66492)
-	$wgMathValidModes = array( MW_MATH_PNG, MW_MATH_SOURCE );
+	// disable MW_MATH_MATHML and MW_MATH_SOURCe until mathoid table is created (bug 66492, 66587)
+	$wgMathValidModes = array( MW_MATH_PNG );
 
 	if ( $wmgMathVisualEditorDefault ) {
 		// Enable the Math VE editing Beta Feature by default
