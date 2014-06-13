@@ -144,7 +144,7 @@ if ( !$globals ) {
 	$wikiTags = array();
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small', 'medium',
 			'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-default',
-			'echowikis', 'flow', 'commonsuploads', 'nonbetafeatures', 'group0', 'wikipedia',
+			'flow', 'commonsuploads', 'nonbetafeatures', 'group0', 'wikipedia',
 			'arbitraryaccess', 'usagetracking', 'nonglobal',
 		) as $tag ) {
 		$dblist = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../$tag.dblist" ) );
