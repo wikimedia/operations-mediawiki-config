@@ -2121,8 +2121,6 @@ if ( $wmgUseMath ) {
 	$wgMathPath        = $wmgMathPath;
 	$wgUseMathJax      = true;
 	$wgMathDisableTexFilter = true; // severe performance regression; --Aaron
-	// disable MW_MATH_MATHML and MW_MATH_SOURCe until mathoid table is created (bug 66492, 66587)
-	$wgMathValidModes = array( MW_MATH_PNG );
 	// These variables point to non-WMF servers by default.
 	// Prevent accidental use.
 	$wgMathMathMLUrl = $wgMathLaTeXMLUrl = null;
