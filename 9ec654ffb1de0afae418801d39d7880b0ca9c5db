@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee391fd1_f375cc93",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1097,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-06-13T16:23:14Z",
+      "side": 1,
+      "message": "To ensure that this patch is a no-op. Presumably those wikis want the sidebar to point to Special:Upload for use by admins, and don\u0027t care about other users\u0027 uploads (or add links to Commons via JS).\nOr it may be an oversight, best handled in followups.",
+      "parentUuid": "ee391fd1_332d948c",
+      "revId": "9ec654ffb1de0afae418801d39d7880b0ca9c5db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e1dcb5b_7facdc32",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 6
