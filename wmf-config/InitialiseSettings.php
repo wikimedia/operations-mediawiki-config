@@ -13586,6 +13586,11 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
+'wgLegacyJavaScriptGlobals' => array(
+	'default' => true,
+	'test2wiki' => false, // bug 65011
+),
+
 'wgSecureLogin' => array(
 	'default' => true,
 ),
