@@ -1203,6 +1203,7 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthDryRun = false;
 	# unset( $wgGroupPermissions['*']['centralauth-merge'] );
 	# $wgGroupPermissions['sysop']['centralauth-merge'] = true;
+	$wgGroupPermissions['steward']['centralauth-rename'] = true;
 	$wgCentralAuthCookies = true;
 
 	$wgDisableUnmergedEditing = $wmgDisableUnmergedEdits;
