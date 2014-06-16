@@ -2049,6 +2049,9 @@ if ( $wmgUseMath ) {
 		$wgDefaultUserOptions['math-enable-visualeditor'] = 1;
 		$wgHiddenPrefs[] = 'math-enable-visualeditor';
 	}
+	// These variables point to non-WMF servers by default.
+	// Prevent accidental use.
+	$wgMathMathMLUrl = $wgMathLaTeXMLUrl = null;
 }
 
 if ( $wmgUseBabel ) {
