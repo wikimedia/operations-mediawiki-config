@@ -3154,6 +3154,8 @@ $wgConf->settings = array(
 		'Discuţie_MediWiki' => NS_MEDIAWIKI_TALK,
 		'Discuţie_Portal' => 101,
 		'Discuţie_Proiect' => 103,
+		'Book' => 110, // bug 66530
+		'Discuţie_Book' => 111,
 	),
 	'+rowikibooks' => array(
 		'Discuţie_Wikibooks' => NS_PROJECT_TALK,
@@ -4590,7 +4592,7 @@ $wgConf->settings = array(
 		101 => 'ପୋର୍ଟାଲ_ଆଲୋଚନା',
 	),
 	'pflwiki' => array(
-		100 => 'Portal',             // Bug 42990
+		100 => 'Portal', // Bug 42990
 		101 => 'Portal_Diskussion',
 		102 => 'Buch', // 102-111: bug 52671
 		103 => 'Buch_Dischbediere',
@@ -4614,7 +4616,7 @@ $wgConf->settings = array(
 		103 => 'Dyskusja_wikiprojektu',
 	),
 	'ptwiki' => array(
-		NS_USER => 'Usuário(a)', # bug 27495
+		NS_USER => 'Usuário(a)', // bug 27495
 		NS_USER_TALK => 'Usuário(a)_Discussão',
 		100 => 'Portal',
 		101 => 'Portal_Discussão',
@@ -4632,8 +4634,10 @@ $wgConf->settings = array(
 		101 => 'Discuție_Portal',
 		102 => 'Proiect',
 		103 => 'Discuție_Proiect',
-		108 => 'Cod',                    // Bug 42690 - Code
+		108 => 'Cod', // Bug 42690 - Code
 		109 => 'Discuție_Cod',
+		110 => 'Carte', // bug 66530
+		111 => 'Discuție_Carte',
 	),
 	'ruwiki' => array(
 		100 => 'Портал',
