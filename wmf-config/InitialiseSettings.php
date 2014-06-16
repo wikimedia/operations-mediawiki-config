@@ -6302,7 +6302,7 @@ $wgConf->settings = array(
 
 # wgNamespacesToBeSearchedDefault @{
 'wgNamespacesToBeSearchedDefault' => array(
-	'default' => array( 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0 ),
+	'default' => array( 0 => 1, 1 => 0,  2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 1, 13 => 0 ), // bug 66066
 	'+arwikisource' => array( 102 => 1 ),
 	'+aswikisource' => array( 104 => 1, 106 => 1 ), // bug 43129
 	'+bgwiki' => array( 100 => 1, 101 => 0 ),
