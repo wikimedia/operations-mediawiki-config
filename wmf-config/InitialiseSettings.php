@@ -12386,6 +12386,7 @@ $wgConf->settings = array(
 	'brwikimedia' => true, // bug 44054
 	'collabwiki' => true,
 	'commonswiki' => true, // bug 48620
+	'foundationwiki' => true,
 	'incubatorwiki' => true, // bug 34213
 	'legalteamwiki' => true, // bug 62610
 	'mediawikiwiki' => true,
