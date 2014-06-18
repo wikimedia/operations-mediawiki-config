@@ -3270,10 +3270,6 @@ $wgConf->settings = array(
 	'+testwiki' => array(
 		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
-		'Test_namespace_1' => 100,
-		'Test_namespace_1_talk' => 101,
-		'Test_namespace_2' => 102,
-		'Test_namespace_2_talk' => 103,
 	),
 	'+tewiki' => array(
 		'Wikipedia' => NS_PROJECT,
@@ -4181,6 +4177,12 @@ $wgConf->settings = array(
 	'strategywiki' => array(
 		106 => "Proposal",
 		107 => "Proposal_talk",
+	),
+	'testwiki' => array(
+		100 => 'Test_namespace_1',
+		101 => 'Test_namespace_1_talk',
+		102 => 'Test_namespace_2',
+		103 => 'Test_namespace_2_talk',
 	),
 	'test2wiki' => array(
 		100 => 'Portal',
