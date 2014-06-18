@@ -12421,6 +12421,25 @@ $wgConf->settings = array(
 			array( 'proofreading', array( 'TRANSLATED' => 'MAX' ) ),
 			array( 'progress', array( 'UNTRANSLATED' => 'NONZERO' ) ),
 		),
+
+		// Special workflow kludge for Fundraising translations
+		'page-Fundraising/Translation/Thank_you_email_20140606' => array(
+			'progress' => array( 'color' => 'E00' ),
+			'needs-updating' => array( 'color' => 'FFBF00' ),
+			'proofreading' => array( 'color' => 'FFBF00' ),
+			'ready' => array( 'color' => 'FF0' ),
+			'published' => array( 'color' => 'AEA',
+				// Here is the difference, it restricts publishing to
+				// only translation administrators.  We may tighten
+				// further in the future.
+				'right' => 'translate-manage',
+			),
+			'state conditions' => array(
+				array( 'ready', array( 'PROOFREAD' => 'MAX' ) ),
+				array( 'proofreading', array( 'TRANSLATED' => 'MAX' ) ),
+				array( 'progress', array( 'UNTRANSLATED' => 'NONZERO' ) ),
+			),
+		),
 	),
 	'otrs_wikiwiki' => array( // bug 61297
 		'progress' => array( 'color' => 'E00' ),
