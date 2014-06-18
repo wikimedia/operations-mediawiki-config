@@ -10844,21 +10844,23 @@ $wgConf->settings = array(
 
 'wmgMediaViewerShowSurvey' => array(
 	'default' => false,
-	// TODO disable 2014-05-10
+	// enabled 2014-04-10
 	'mediawikiwiki' => true,
-	// TODO disable 2014-05-17
+	// enabled 2014-04-17
 	'cawiki' => true,
 	'huwiki' => true,
 	'enwikivoyage' => true,
-	// TODO disable 2014-05-22
+	// enabled 2014-04-22
 	'dewiki' => true,
 	'frwiki' => true,
 	'ptwiki' => true,
-	// TODO disable 2014-05-28
+	// enabled 2014-04-28
 	'eswiki' => true,
 	'nlwiki' => true,
-	// TODO disable 2014-07-03
+	// enabled 2014-06-03
 	'enwiki' => true,
+	// enabled 2014-06-17
+	'commonswiki' => true,
 ),
 
 'wmgNetworkPerformanceSamplingFactor' => array(
