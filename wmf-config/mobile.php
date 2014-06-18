@@ -33,14 +33,7 @@ if ( $wmgMobileFrontend ) {
 		$wgMobileUrlTemplate = $wmgMobileUrlTemplate;
 	}
 
-	if ( $wmgZeroRatedMobileAccess ) {
-		require_once( "$IP/extensions/ZeroRatedMobileAccess/ZeroRatedMobileAccess.php" );
-		$wgZeroRatedMobileAccessApiUri = 'https://zero.wikimedia.org/w/api.php';
-		$wgZeroRatedMobileAccessApiUserName = $wmgZeroRatedMobileAccessApiUserName;
-		$wgZeroRatedMobileAccessApiPassword = $wmgZeroRatedMobileAccessApiPassword;
-	}
-
-	if ( $wmgZeroBanner && !$wmgZeroPortal && !$wmgZeroRatedMobileAccess ) {
+	if ( $wmgZeroBanner && !$wmgZeroPortal ) {
 		require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
 		require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
 

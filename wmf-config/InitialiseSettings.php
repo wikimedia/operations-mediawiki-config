@@ -11543,30 +11543,10 @@ $wgConf->settings = array(
 	),
 ),
 
-'wmgZeroRatedMobileAccess' => array(
-	'default' => false,
-	'wikidata' => false,
-//	'wiki' => true,
-//	'metawiki' => true,
-//	'zerowiki' => true,
-//
-//	one site + ru test
-//	'ruwiki' => false,
-//	'zerowiki' => false,
-//	'metawiki' => false,
-),
-
-'wmgUseZeroNamespace' => array(
-	'default' => false,
-	// 'metawiki' => true,
-	// 'zerowiki' => true,
-),
-
 'wmgZeroBanner' => array(
 	'default' => false,
-	'wikidatawiki' => false, // safety
 	'wiki' => true,
-	//'ruwiki' => true,
+	'wikidatawiki' => false, // safety
 	'metawiki' => false,
 	'zerowiki' => false,
 ),
