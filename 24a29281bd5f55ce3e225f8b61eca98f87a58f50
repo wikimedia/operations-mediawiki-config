@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_12d38ad8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 6476,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-06-18T16:09:24Z",
+      "side": 1,
+      "message": "Added just for clarity, the first three are already in core. I comment \u0027upload\u0027 out because \u0027closed\u0027 and \u0027incubatorwiki\u0027 set it to false and, better avoid overrides headaches.",
+      "revId": "24a29281bd5f55ce3e225f8b61eca98f87a58f50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
