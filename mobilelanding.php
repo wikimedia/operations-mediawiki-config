@@ -5,11 +5,7 @@ include '/apache/common/w/MWVersion.php';
 include getMediaWiki( 'includes/WebStart.php' );
 
 $code = '302';
-if ( class_exists( 'Extensions\ZeroRatedMobileAccess\PageRenderingHooks' ) ) {
-	$state = Extensions\ZeroRatedMobileAccess\PageRenderingHooks::getState();
-} else {
-	$state = ZeroBanner\PageRenderingHooks::getState();
-}
+$state = ZeroBanner\PageRenderingHooks::getState();
 $redirect = $state->getLandingRedirect();
 $redirect = filter_var( $redirect, FILTER_VALIDATE_URL );
 if ( $redirect === false ) {

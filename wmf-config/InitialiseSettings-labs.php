@@ -224,28 +224,6 @@ return array(
 		'mediawikiwiki' => '',//'m.%h1.%h2',
 	),
 
-	//
-	// Setting up ZeroBanner & ZeroPortal extensions, and removing ZeroRatedBannerAccess
-	//
-
-	'-wmgZeroRatedMobileAccess' => array(
-		'default' => false,
-	),
-	'-wmgUseZeroNamespace' => array(
-		'default' => false,
-	),
-	'-wmgZeroBanner' => array(
-		'default' => false,
-		'wikidata' => false,
-		'wiki' => true,
-		'zerowiki' => false,
-	),
-	'-wmgZeroPortal' => array(
-		'default' => false,
-		'zerowiki' => true,
-	),
-
-
 	'wmgMFPhotoUploadEndpoint' => array(
 		'default' => '//commons.wikimedia.$variant.wmflabs.org/w/api.php',
 	),
