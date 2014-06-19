@@ -898,7 +898,7 @@ if ( $wgUseLuceneSearch ) {
 	wfProfileOut( "$fname-lucene" );
 }
 # New wikis are special and get Cirrus :)
-if ( $wmgUseCirrus || $wmgUseCirrusAsAlternative ) {
+if ( $wmgUseCirrus ) {
 	wfProfileIn( "$fname-CirrusSearch" );
 	# Cirrus uses SearchUpdate, turn it back on
 	include( "$wmfConfigDir/CirrusSearch-common.php" );
@@ -2284,7 +2284,7 @@ if ( $wmgUseWikimediaShopLink ) {
 }
 
 if ( $wmgEnableGeoData
-	&& ( $wmgUseCirrus || $wmgUseCirrusAsAlternative ) )
+	&& ( $wmgUseCirrus ) )
 {
 	require_once( "$IP/extensions/GeoData/GeoData.php" );
 	$wgGeoDataBackend = 'elastic';
