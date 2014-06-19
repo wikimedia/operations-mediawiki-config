@@ -53,6 +53,7 @@ mwconfig_files=(
 	all-labs.dblist
 	cirrus.dblist
 	closed.dblist
+	commonsuploads.dblist
 	deleted.dblist
 	echowikis.dblist
 	fc-list
