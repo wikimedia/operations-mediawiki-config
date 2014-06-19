@@ -13,7 +13,7 @@ $wmgThrottlingExceptions = array();
 # Optional arguments can be added to set the value or restrict by client IP
 # or project dbname. Options are:
 #  'value'  => new value for $wgAccountCreationThrottle (default: 50)
-#  'IP'     => client IP as given by wfGetIP() or array (default: any IP)
+#  'IP'     => client IP as given by $wgRequest->getIP() or array (default: any IP)
 #  'range'  => alternatively, the client IP CIDR ranges or array (default: any range)
 #  'dbname' => a $wgDBname or array of dbnames to compare to
 #             (eg. enwiki, metawiki, frwikibooks, eswikiversity)
@@ -55,7 +55,7 @@ $wgExtensionFunctions[] = 'efRaiseAccountCreationThrottle';
  * Helper to easily add a throttling request.
  */
 function efRaiseAccountCreationThrottle() {
-	global $wmgThrottlingExceptions, $wgDBname;
+	global $wmgThrottlingExceptions, $wgDBname, $wgRequest;
 
 	foreach ( $wmgThrottlingExceptions as $options ) {
 		# Validate entry, skip when it does not apply to our case
@@ -81,24 +81,19 @@ function efRaiseAccountCreationThrottle() {
 		}
 
 		# 3) skip when throttle does not apply to the client IP
+		$ip = $wgRequest->getIP();
 		if ( isset( $options['IP'] ) ) {
-			if ( is_array( $options['IP'] ) && !in_array( wfGetIP(), $options['IP'] ) ) {
+			if ( is_array( $options['IP'] ) && !in_array( $ip, $options['IP'] ) ) {
 				continue;
-			} elseif ( wfGetIP() != $options['IP'] ) {
+			} elseif ( $ip != $options['IP'] ) {
 				continue;
 			}
 		}
 		if ( isset ( $options['range'] ) ) {
-			//Loads IP class from the MediaWiki code, for IP::isInRange.
-			global $IP;
-			define( 'MEDIAWIKI', true);
-			require_once( "$IP/includes/GlobalFunctions.php" );
-			require_once( "$IP/includes/IP.php" );
-
 			//Checks if the IP is in range
-			if ( is_array( $options['range'] ) && !inIPRanges( wfGetIP(), $options['range'] ) ) {
+			if ( is_array( $options['range'] ) && !inIPRanges( $ip, $options['range'] ) ) {
 				continue;
-			} elseif ( !IP::isInRange( wfGetIP(), $options['range'] ) ) {
+			} elseif ( !IP::isInRange( $ip, $options['range'] ) ) {
 				continue;
 			}
 		}
