@@ -100,6 +100,17 @@ if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Mantle/Mantle.php" ); // needed for Flow frontend-rewrite
 }
 
+if ( $wmgUseContentTranslation ) {
+	require_once( "$IP/extensions/ContentTranslation/ContentTranslation.php" );
+	$wgContentTranslationServerURL = 'https://cxserver-beta.wmflabs.org';
+	// Used for html2wikitext when publishing
+	$wgContentTranslationParsoid = array(
+		'url' => $wmgParsoidURL,
+		'timeout' => 10000,
+		'prefix' => $wgDBname,
+	);
+}
+
 if ( $wmgUseCentralNotice ) {
 	$wgCentralGeoScriptURL = false;
 }
