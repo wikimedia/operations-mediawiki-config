@@ -942,7 +942,7 @@ $wgNoFollowLinks = true; // In case the MediaWiki default changed, bug 42594
 
 # XFF log for vandal tracking
 $wgExtensionFunctions[] = function() {
-	global $wmfUdp2logDest;
+	global $wmfUdp2logDest, $wgRequest;
 	if ( isset( $_SERVER['REQUEST_METHOD'] ) && $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 		$uri = ( $_SERVER['HTTPS'] ? 'https://' : 'http://' ) .
 			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
@@ -954,7 +954,7 @@ $wgExtensionFunctions[] = function() {
 			( $_REQUEST['wpSave'] ? 'save' : '' ) . "\n",
 			"udp://$wmfUdp2logDest/xff"
 		);
-		if ( wfGetIP() === '127.0.0.1' ) {
+		if ( $wgRequest->getIP() === '127.0.0.1' ) {
 			wfErrorLog(
 				gmdate( 'r' ) . "\t" .
 				wfHostname() .
