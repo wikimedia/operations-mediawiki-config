@@ -2190,6 +2190,20 @@ if ( $wmgUseCleanChanges ) {
 	$wgCCTrailerFilter = true;
 }
 
+if ( $wmgUseContentTranslation ) {
+	require_once( "$IP/extensions/ContentTranslation/ContentTranslation.php" );
+	// There is no production instance yet, so hardcoding beta
+	$wgContentTranslationServerURL = 'http://cxserver-beta.wmflabs.org';
+	// Used for html2wikitext when publishing
+	$wgContentTranslationParsoid = array(
+		//  Hardcoded production labs here, as the beta-parsoid does
+		// not seem to support wikipedias which we need.
+		'url' => 'http://parsoid-lb.eqiad.wikimedia.org',
+		'timeout' => 10000,
+		'prefix' => $wgDBname,
+	);
+}
+
 if ( $wmgUseVips ) {
 	include( "$IP/extensions/VipsScaler/VipsScaler.php" );
 	include( "$IP/extensions/VipsScaler/VipsTest.php" );
