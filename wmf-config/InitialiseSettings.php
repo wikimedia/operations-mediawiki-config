@@ -7163,7 +7163,7 @@ $wgConf->settings = array(
 			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
 		),
 	),
-	'mlwiktionary' => array(
+	'+mlwiktionary' => array(
 		'botadmin' => array(
 			'blockemail' => true, 'block' => true, 'ipblock-exempt' => true, 'proxyunbannable' => true, 'protect' => true, 'editprotected' => true, 'createaccount' => true, 'deleterevision' => true, 'delete' => true, 'globalblock-whitelist' => true, 'editusercss' => true, 'edituserjs' => true,
 			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'autopatrol' => true, 'import' => true, 'centralnotice-admin' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
@@ -7178,7 +7178,7 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 	),
 	'nlwiktionary' => array( 'user' => array( 'patrol' => true ) ),
-	'nlwikivoyage' => array(
+	'+nlwikivoyage' => array(
 		'autopatrolled' => array(
 			'autopatrol' => true, // bug 44082
 			'patrol' => true, // bug 44082
@@ -7382,7 +7382,7 @@ $wgConf->settings = array(
 		# bug 27875 (see comment 4)
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
 	),
-	'simplewiktionary' => array(
+	'+simplewiktionary' => array(
 		'rollbacker' => array( 'rollback' => true, ),
 		'autopatrolled' => array( 'patrol' => true, 'autopatrol' => true ),
 	),
@@ -7399,14 +7399,14 @@ $wgConf->settings = array(
 		'filemover' => array( 'movefile' => true, 'suppressredirect' => true ),
 		'flood' => array( 'bot' => true ),
 	),
-	'shwiktionary' => array(
+	'+shwiktionary' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 	),
 	'siwiki' => array(
 		'rollbacker'    => array( 'rollback' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 	),
-	'skwiki' => array(
+	'+skwiki' => array(
 		'rollbacker' => array( 'rollback' => true ),
 	),
 	'srwiki' => array(
