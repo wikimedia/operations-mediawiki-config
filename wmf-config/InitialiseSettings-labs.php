@@ -400,6 +400,10 @@ return array(
 		'default' => array(),
 		'en_rtlwiki' => array( 'en-rtl' => 'English (rtl)' ),
 	),
+	'wmgUseContentTranslation' => array(
+		'default' => false,
+		'wikipedia' => true,
+	),
 );
 
 } # wmflLabsSettings()

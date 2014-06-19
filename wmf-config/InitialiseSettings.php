@@ -12388,10 +12388,17 @@ $wgConf->settings = array(
 	'wikimania2013wiki' => true,
 	'wikimania2014wiki' => true,
 ),
+
 'wmgUseCleanChanges' => array(
 	'default' => false,
 //	'metawiki' => true, // bug 53541
 ),
+
+// Do not enable before extension is properly set up for production
+'wmgUseContentTranslation' => array(
+	'default' => false,
+),
+
 'wmgUseVips' => array(
 	'default' => true,
 	'loginwiki' => false,
