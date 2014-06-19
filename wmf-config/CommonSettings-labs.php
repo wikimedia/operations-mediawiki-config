@@ -99,6 +99,10 @@ if ( $wmgUseFlow ) {
 	$wgFlowParsoidURL = $wmgParsoidURL; // Re-link now it's been set to a new value
 }
 
+if ( $wmgUseContentTranslation ) {
+	$wgContentTranslationParsoid['url'] = $wmgParsoidURL;
+}
+
 if ( $wmgUseCentralNotice ) {
 	$wgCentralGeoScriptURL = false;
 }
