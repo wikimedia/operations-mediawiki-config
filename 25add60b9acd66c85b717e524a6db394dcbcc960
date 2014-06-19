@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_9c542403",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2014-06-19T13:31:08Z",
+      "side": 1,
+      "message": "I\u0027ve heard we need to add loginwiki to the list here or it won\u0027t work. Probably wouldn\u0027t hurt to keep commons too in case they want to upload images.",
+      "revId": "25add60b9acd66c85b717e524a6db394dcbcc960",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
