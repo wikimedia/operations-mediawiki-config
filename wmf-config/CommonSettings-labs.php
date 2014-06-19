@@ -99,6 +99,17 @@ if ( $wmgUseFlow ) {
 	$wgFlowParsoidURL = $wmgParsoidURL; // Re-link now it's been set to a new value
 }
 
+if ( $wmgUseContentTranslation ) {
+	require_once( "$IP/extensions/ContentTranslation/ContentTranslation.php" );
+	$wgContentTranslationServerURL = 'https://cxserver-beta.wmflabs.org';
+	// Used for html2wikitext when publishing
+	$wgContentTranslationParsoid = array(
+		'url' => $wmgParsoidURL,
+		'timeout' => 10000,
+		'prefix' => $wgDBname,
+	);
+}
+
 if ( $wmgUseCentralNotice ) {
 	$wgCentralGeoScriptURL = false;
 }
