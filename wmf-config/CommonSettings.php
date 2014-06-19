@@ -2190,6 +2190,18 @@ if ( $wmgUseCleanChanges ) {
 	$wgCCTrailerFilter = true;
 }
 
+if ( $wmgUseContentTranslation ) {
+	require_once( "$IP/extensions/ContentTranslation/ContentTranslation.php" );
+	// There is no production instance yet, so hardcoding beta
+	$wgContentTranslationServerURL = 'http://cxserver-beta.wmflabs.org';
+	// Used for html2wikitext when publishing
+	$wgContentTranslationParsoid = array(
+		'url' =>
+		'timeout' => 10000,
+		'prefix' => $wgDBname,
+	);
+}
+
 if ( $wmgUseVips ) {
 	include( "$IP/extensions/VipsScaler/VipsScaler.php" );
 	include( "$IP/extensions/VipsScaler/VipsTest.php" );
