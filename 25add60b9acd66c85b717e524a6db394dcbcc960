@@ -16,6 +16,24 @@
       "revId": "25add60b9acd66c85b717e524a6db394dcbcc960",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_1c5f1415",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 650
+      },
+      "writtenOn": "2014-06-19T13:37:19Z",
+      "side": 1,
+      "message": "I closed bug 66491 without adding \u0027loginwiki\u0027 to the array, and there haven\u0027t been any comments on this not working, so I assume it\u0027s fine. \n\nThere isn\u0027t any need to add commonswiki, as bug 66822 states they want to create their accounts on tewiki — the throttle only restricts account creations and not file uploads (or so the in-file documentation says).",
+      "parentUuid": "ee391fd1_9c542403",
+      "revId": "25add60b9acd66c85b717e524a6db394dcbcc960",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
