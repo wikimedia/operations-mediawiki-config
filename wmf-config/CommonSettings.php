@@ -865,7 +865,11 @@ if ( $wgDBname == 'nostalgiawiki' ) {
 	$wgDefaultUserOptions['highlightbroken'] = 0;
 
 	// Nostalgia skin
-	include( "$IP/extensions/Nostalgia/Nostalgia.php" );
+	if ( file_exists( "$IP/skins/Nostalgia/Nostalgia.php" ) ) {
+		require_once "$IP/skins/Nostalgia/Nostalgia.php";
+	} else {
+		include( "$IP/extensions/Nostalgia/Nostalgia.php" );
+	}
 }
 
 $wgUseHashTable = true;
