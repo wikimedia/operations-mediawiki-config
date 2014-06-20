@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee391fd1_cc7b1123",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 2201,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-06-20T15:25:29Z",
+      "side": 1,
+      "message": "Don\u0027t we normally avoid DNS lookups where possible?\n\nAlso, can labs communicate with production?\n\nShouldn\u0027t it be using parsoid in labs or something? deployment-parsoid04 maybe?\n\nSee:\nreedy@ubuntu64-web-esxi:~/git/operations/mediawiki-config/wmf-config$ grep -R parsoid *\nCommonSettings-labs.php:        $wmgParsoidURL \u003d \u0027http://10.68.16.145/\u0027; // deployment-parsoidcache01.eqiad\nCommonSettings-labs.php:        $wgParsoidCacheServers \u003d array ( \u0027http://10.68.16.145\u0027 ); // deployment-parsoidcache01.eqiad\nCommonSettings-labs.php:        $wgVisualEditorParsoidReportProblemURL \u003d \u0027http://10.4.0.33/_bugs/\u0027; // parsoid-spof\nCommonSettings.php:     $wmgParsoidURL \u003d \u0027http://10.2.2.29\u0027; // parsoidcache.svc.eqiad.wmnet\nCommonSettings.php:     // List the parsoid cache servers to keep up to date.\nCommonSettings.php:             \u0027http://10.2.2.29\u0027, // parsoidcache.svc.eqiad.wmnet\nCommonSettings.php:     $wgVisualEditorParsoidProblemReportURL \u003d \u0027http://parsoid.wmflabs.org/_bugs/\u0027;\nCommonSettings.php:     $wgFlowParsoidURL \u003d \u0027http://10.2.2.29\u0027; // parsoidcache.svc.eqiad.wmnet",
+      "revId": "74e03c8ccc6889fa4a5cc3410506a75ee733db7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
