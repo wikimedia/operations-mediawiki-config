@@ -7309,12 +7309,20 @@ $wgConf->settings = array(
 			'reupload-own' => true,
 			'reupload' => true,
 		),
+		'user' => array( // bug 66871
+			'move-categorypages' => false,
+		),
 		'closer' => array(
+			'move-categorypages' => true, // bug 66871
 			'delete' => true,
 			'suppressredirect' => true,
 			'upload' => true,
 			'reupload-own' => true,
 			'reupload' => true,
+		),
+		'editor' => array( // bug 66871
+			'move-categorypages' => true,
+			'suppressredirect' => true,
 		),
 		'filemover' => array( // bug 30984
 			'movefile' => true,
@@ -7322,8 +7330,12 @@ $wgConf->settings = array(
 			'upload' => true,
 			'reupload-own' => true,
 			'reupload' => true,
+			'move-categorypages' => true, // bug 66871
 		),
-		'suppressredirect' => array( 'suppressredirect' => true, ), // bug 38408
+		'suppressredirect' => array( // bug 38408, 66871
+			'suppressredirect' => true,
+			'move-categorypages' => true,
+		),
 		'arbcom' => array( // bug 49334
 			'browsearchive' => true,
 			'deletedhistory' => true,
