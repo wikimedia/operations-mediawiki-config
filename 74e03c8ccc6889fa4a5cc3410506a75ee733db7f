@@ -16,6 +16,24 @@
       "revId": "74e03c8ccc6889fa4a5cc3410506a75ee733db7f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee391fd1_ec4375b4",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 2201,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-06-20T15:40:46Z",
+      "side": 1,
+      "message": "It sounds like we should fix parsoid in beta so that it works for your use case rather than trying to tie beta to production.",
+      "parentUuid": "ee391fd1_cc7b1123",
+      "revId": "74e03c8ccc6889fa4a5cc3410506a75ee733db7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
