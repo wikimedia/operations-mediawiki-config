@@ -10049,13 +10049,6 @@ $wgConf->settings = array(
 	'xmfwiki' => true,
 ),
 
-'wgEnableNewpagesUserFilter' => array(
-	'default' => true,
-	'frwiki' => false,
-	'nlwiki' => false,
-	'svwiki' => false,
-),
-
 'wgEnableWriteAPI' => array(
 	'default' => true,
 ),
