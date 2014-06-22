@@ -153,6 +153,11 @@ return array(
 
 	'wgLogo' => array(
 		'commonswiki' => '$stdlogo',
+		'dewiki' => '//upload.wikimedia.org/wikipedia/commons/8/8f/Wikipedia-logo-v2-de-beta.png',
+	),
+
+	'wgFavicon' => array(
+		'dewiki' => '//upload.wikimedia.org/wikipedia/commons/1/14/Favicon-beta-wikipedia.png',
 	),
 
 	// Editor Engagement stuff
