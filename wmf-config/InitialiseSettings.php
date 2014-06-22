@@ -10438,6 +10438,7 @@ $wgConf->settings = array(
 		'*.unine.ch',                    // University of Neuchâtel
 		'*.mindat.org',                  // Mineral and locality database
 		'*.culture.gouv.fr',             // French Ministry for Culture  bug 65905
+		'memory.loc.gov',                // Library of Congress  bug 66945
 	),
 ),
 
