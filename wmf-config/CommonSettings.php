@@ -1470,15 +1470,6 @@ if ( $wmgUseCentralNotice ) {
 
 	// Enable the CentralNotice/Translate integration
 	$wgNoticeUseTranslateExtension = true;
-	$wgTranslateWorkflowStates['Centralnotice-tgroup'] = array(
-		'new' => array( 'color' => 'FF0000' ), // red
-		'needs_proofreading' => array( 'color' => '0000FF' ), // blue
-		'ready' => array( 'color' => 'FFFF00' ), // yellow
-		'published' => array(
-			'color' => '00FF00', // green
-			'right' => 'centralnotice-admin',
-		),
-	);
 	$wgNoticeRunMessageIndexRebuildJobImmediately = false;
 
 	// Bug 49905
