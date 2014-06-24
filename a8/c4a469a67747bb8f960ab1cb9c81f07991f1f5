@@ -1,0 +1,10 @@
+Verified+2: jenkins-bot
+Code-Review+1: Alex Monk <krenair@wikimedia.org>
+Code-Review+1: Jforrester <jforrester@wikimedia.org>
+Code-Review+1: Bartosz Dziewoński <matma.rex@gmail.com>
+Code-Review+2: Manybubbles <neverett@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Tue, 24 Jun 2014 15:04:03 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/141053
+Project: operations/mediawiki-config
+Branch: refs/heads/master
