@@ -11552,11 +11552,6 @@ $wgConf->settings = array(
 	'loginwiki' => false,
 ),
 
-'wmgMathVisualEditorDefault' => array(
-	'default' => false,
-	'mediawikiwiki' => true,
-),
-
 'wmgUseMarkAsHelpful' => array(
 	'default' => false,
 	'testwiki' => true,

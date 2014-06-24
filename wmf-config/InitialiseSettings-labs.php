@@ -336,9 +336,6 @@ return array(
 	'wmgVisualEditorEnableTocWidget' => array(
 		'enwiki' => true,
 	),
-	'wmgMathVisualEditorDefault' => array(
-		'enwiki' => true,
-	),
 
 	'wmgUseCampaigns' => array(
 		'default' => true,
