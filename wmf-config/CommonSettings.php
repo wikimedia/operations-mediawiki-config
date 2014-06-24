@@ -2555,6 +2555,11 @@ if ( $wmgUseUniversalLanguageSelector ) {
 $wgExtensionEntryPointListFiles[] = "$IP/extensions/Wikidata/extension-list-wikidata";
 
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
+	if ( $wmgUseWikibaseRepo && $wmfRealm === 'labs' ) {
+		// enable on beta only
+		$wmgUseWikibasePropertySuggester = true;
+	}
+
 	include( "$wmfConfigDir/Wikibase.php" );
 }
 
