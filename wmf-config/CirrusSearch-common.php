@@ -43,19 +43,19 @@ $wgCirrusSearchRefreshInterval = 30;
 # Ban the hebrew plugin, it is unstable
 $wgCirrusSearchBannedPlugins[] = 'elasticsearch-analysis-hebrew';
 
+# Enable the "experimental" highlighter on all wikis
+$wgCirrusSearchUseExperimentalHighlighter = true;
+$wgCirrusSearchOptimizeIndexForExperimentalHighlighter = true;
+
 # Settings customized per index.
 $wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
 $wgCirrusSearchUseAggressiveSplitting = $wmgCirrusSearchUseAggressiveSplitting;
 $wgCirrusSearchPreferRecentDefaultDecayPortion = $wmgCirrusSearchPreferRecentDefaultDecayPortion;
-$wgCirrusSearchUseExperimentalHighlighter = $wmgCirrusSearchUserExperimentalHighlighter;
-$wgCirrusSearchOptimizeIndexForExperimentalHighlighter = $wmgCirrusSearchUserExperimentalHighlighter;
 
 // Commons is special
 if ( $wgDBname == 'commonswiki' ) {
 	$wgCirrusSearchNamespaceMappings[ NS_FILE ] = 'file';
 	$wgCirrusSearchReplicaCount['file'] = 2;
-	// Commons has to be the last wiki to optimize because all other wikis can search it implicitly....
-	$wgCirrusSearchOptimizeIndexForExperimentalHighlighter = false;
 // So is everyone else, for using commons
 } else {
 	$wgCirrusSearchExtraIndexes[ NS_FILE ] = array( 'commonswiki_file' );

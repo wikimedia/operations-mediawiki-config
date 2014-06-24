@@ -13462,19 +13462,6 @@ $wgConf->settings = array(
 	'zhwikisource' => array( 'content' => 3, 'general' => 1 ),
 ),
 
-'wmgCirrusSearchUserExperimentalHighlighter' => array(
-	'default' => false,
-	'commonswiki' => true,
-	'enwiki' => true,
-	'eswiki' => true,
-	'hewiki' => true,
-	'mediawikiwiki' => true,
-	'ruwiki' => true,
-	'test2wiki' => true,
-	'testwiki' => true,
-	'testwikidatawiki' => true,
-),
-
 'wmgUseCite' => array(
 	'default' => true,
 	'loginwiki' => false,
