@@ -10725,7 +10725,6 @@ $wgConf->settings = array(
 'wmgBetaFeaturesWhitelist' => array(
 	'default' => array(
 		'visualeditor-enable',                      // VisualEditor – on-going (special permission)
-		'multimedia-viewer',                        // 2014-05-21 – MediaViewer
 		'cirrussearch-default',                     // 2014-06-09 – New Seach
 		'uls-compact-links',                        // 2014-09-06 – Compact language links
 		'popups',                                   // 2014-09-18 – Hovercards
