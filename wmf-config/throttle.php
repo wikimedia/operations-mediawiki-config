@@ -27,6 +27,14 @@ $wmgThrottlingExceptions[] = array( // bug 66822
 	'dbname' => array( 'tewiki' ),
 	'value'  => 200,
 );
+
+$wmgThrottlingExceptions[] = array( // bug 67017
+	'from'   => '2014-06-24T06:00 +5:30',
+	'to'     => '2014-06-24T18:00 +5:30',
+	'IP'     => array( '117.211.82.67' ),
+	'dbname' => array( 'tewiki' ),
+	'value'  => 50,
+);
 ## Add throttling definitions above.
 
 ## Helper methods:
