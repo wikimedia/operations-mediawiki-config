@@ -11234,7 +11234,7 @@ $wgConf->settings = array(
 'wmgVisualEditorNamespaces' => array(
 	'default' => array( NS_USER, NS_FILE, NS_HELP, NS_CATEGORY ),
 	// Test wikis
-	'+mediawikiwiki' => array( NS_PROJECT, 100 /* Manual */, 102 /* Extension */, 104 /* API */ ), // Bug 48430
+	'+mediawikiwiki' => array( NS_PROJECT, 100 /* Manual */, 102 /* Extension */, 104 /* API */, 106 /* Skin */ ), // Bug 48430
 	// Special wikis
 	'+commonswiki' => array( 100 /* Creator */, 106 /* Institution */ ), // Bug 65067
 	'+metawiki' => array( 200 /* Grants */, 202 /* Research */, 204 /* Participation */, 206, 208 /* Programs */ ),
