@@ -7612,6 +7612,7 @@ $wgConf->settings = array(
 			'noratelimit' => true,
 			'deleterevision' => true,
 			'deletelogentry' => true,
+			'mergehistory' => true
 		),
 		'bot' => array(
 			'noratelimit' => true,
