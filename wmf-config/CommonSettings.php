@@ -2360,6 +2360,7 @@ if ( $wmgUseThanks ) {
 
 if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
+	require_once( "$IP/extensions/Mantle/Mantle.php" ); // needed for Flow frontend-rewrite
 
 	// Flow Parsoid - same values as $wgVisualEditorParsoid*, but separated for
 	// those wikis where $wmgUseVisualEditor is false
