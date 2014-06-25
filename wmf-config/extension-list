@@ -64,6 +64,7 @@ $IP/extensions/LandingCheck/LandingCheck.php
 $IP/extensions/LiquidThreads/LiquidThreads.php
 $IP/extensions/Listings/Listings.php
 $IP/extensions/LocalisationUpdate/LocalisationUpdate.php
+$IP/extensions/Mantle/Mantle.php
 $IP/extensions/MapSources/MapSources.php
 $IP/extensions/MarkAsHelpful/MarkAsHelpful.php
 $IP/extensions/MassMessage/MassMessage.php
