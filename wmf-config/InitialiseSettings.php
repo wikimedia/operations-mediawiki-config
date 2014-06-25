@@ -13375,8 +13375,7 @@ $wgConf->settings = array(
 
 'wmgUseCirrus' => array(
 	'default' => false,
-	'cirrus' => false,
-	'testwiki' => true,
+	'cirrus' => true,
 ),
 
 'wmgUseCirrusAsAlternative' => array(
