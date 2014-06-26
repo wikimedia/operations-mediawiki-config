@@ -286,6 +286,7 @@ if ( $wgDBname !== 'testwiki' && !defined( 'HHVM_VERSION' ) && isset( $_SERVER['
 }
 
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmfVersionNumber;
+$wgGitInfoCacheDirectory = "$IP/cache/gitinfo";
 
 // Whether addWiki.php should send email
 $wmgAddWikiNotify = true;
