@@ -140,3 +140,5 @@ $IP/extensions/WikimediaMessages/WikimediaMessages.php
 $IP/extensions/WikimediaShopLink/WikimediaShopLink.php
 $IP/extensions/ZeroBanner/ZeroBanner.php
 $IP/extensions/ZeroPortal/ZeroPortal.php
+$IP/skins/CologneBlue/CologneBlue.php
+$IP/skins/Modern/Modern.php
