@@ -76,7 +76,6 @@ $IP/extensions/MwEmbedSupport/MwEmbedSupport.php
 $IP/extensions/MWSearch/MWSearch.php
 $IP/extensions/NavigationTiming/NavigationTiming.php
 $IP/extensions/NewUserMessage/NewUserMessage.php
-$IP/extensions/Nostalgia/Nostalgia.php
 $IP/extensions/Nuke/SpecialNuke.php
 $IP/extensions/OAI/OAIRepo.php
 $IP/extensions/OAuth/OAuth.php
