@@ -6746,7 +6746,11 @@ $wgConf->settings = array(
 		'filemover' => array( 'movefile' => true ),
 		'OTRS-member' => array( 'autopatrol' => true ),
 		'Image-reviewer' => array( 'autopatrol' => true, 'upload_by_url' => true ),
-		'sysop' => array( 'upload_by_url' => true ),
+		'gwtoolset' => array( 'gwtoolset_edit' => true ),
+		'sysop' => array(
+			'gwtoolset_edit' => true, // https://bugzilla.wikimedia.org/show_bug.cgi?id=67209
+			'upload_by_url' => true,
+		),
 	),
 	'dawiki' => array(
 		'patroller'		=> array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ),
@@ -9554,6 +9558,9 @@ $wgConf->settings = array(
 'wgNamespaceProtection' => array(
 	'default' => array(
 		NS_MEDIAWIKI => array( 'editinterface' ),
+	),
+	'+commonswiki' => array(
+		NS_GWTOOLSET => array( 'gwtoolset_edit' ),
 	),
 	'+cswiki' => array(
 		NS_FILE      => array( 'editinterface' ),
