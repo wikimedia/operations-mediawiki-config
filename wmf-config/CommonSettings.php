@@ -621,6 +621,9 @@ $wgAvailableRights[] = 'flow-edit-post';
 $wgAvailableRights[] = 'flow-suppress';
 $wgAvailableRights[] = 'flow-hide';
 $wgAvailableRights[] = 'flow-delete';
+// So global groups can be given the ability to edit the GWToolset namespace on Commons
+$wgAvailableRights[] = 'gwtoolset_edit';
+
 
 if ( $wmgUseCategoryTree ) {
 	require( $IP . '/extensions/CategoryTree/CategoryTree.php' );
