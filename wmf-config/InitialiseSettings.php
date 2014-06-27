@@ -10781,6 +10781,10 @@ $wgConf->settings = array(
 	'default' => false,
 ),
 
+'wmgMediaViewerUseThumbnailGuessing' => array(
+	'default' => true,
+),
+
 'wmgMediaViewerShowSurvey' => array(
 	'default' => false,
 	// enabled 2014-04-10

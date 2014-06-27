@@ -1834,6 +1834,10 @@ if ( $wmgUseMultimediaViewer ) {
 		$wgEnableMediaViewerForLoggedInUsersOnly = true;
 	}
 
+	if ( $wmgMediaViewerUseThumbnailGuessing ) {
+		$wgMediaViewerUseThumbnailGuessing = true;
+	}
+
 	if ( $wmgMediaViewerShowSurvey ) {
 		$wgMediaViewerShowSurvey = $wmgMediaViewerShowSurvey;
 	}
