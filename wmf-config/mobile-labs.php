@@ -7,6 +7,9 @@
 require_once( __DIR__ . '/mobile.php' );
 
 if ( $wmgMobileFrontend ) {
+	if ( $wmgZeroBanner && !$wmgZeroPortal ) {
+		$wgJsonConfigs['JsonZeroConfig']['remote']['url'] = 'http://zero.wikimedia.beta.wmflabs.org/w/api.php';
+	}
 }
 
 $wgMFForceSecureLogin = false;
