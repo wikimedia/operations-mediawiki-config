@@ -38,7 +38,9 @@ if ( $wmgMobileFrontend ) {
 		require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
 
 		$wgJsonConfigs['JsonZeroConfig']['remote'] = array(
-			'url' => 'https://zero.wikimedia.org/w/api.php',
+			'url' => ( $wmfRealm === 'labs'
+				? 'http://zero.wikimedia.beta.wmflabs.org/w/api.php'
+				: 'https://zero.wikimedia.org/w/api.php' ),
 			'username' => $wmgZeroPortalApiUserName,
 			'password' => $wmgZeroPortalApiPassword,
 		);
