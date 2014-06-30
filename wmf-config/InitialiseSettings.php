@@ -7322,10 +7322,6 @@ $wgConf->settings = array(
 			'reupload-own' => true,
 			'reupload' => true,
 		),
-		'editor' => array( // bug 66871
-			'move-categorypages' => true,
-			'suppressredirect' => true,
-		),
 		'filemover' => array( // bug 30984
 			'movefile' => true,
 			'suppressredirect' => true,
