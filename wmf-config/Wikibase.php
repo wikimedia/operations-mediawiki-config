@@ -63,6 +63,7 @@ if ( $wmgUseWikibaseRepo ) {
 	// Bug 51637 and 46953
 	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
 
+	$wgWBRepoSettings['internalEntitySerializerClass'] = 'Wikibase\Lib\Serializers\LegacyInternalEntitySerializer';
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
 }
 
