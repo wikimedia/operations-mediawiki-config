@@ -3623,7 +3623,7 @@ $wgConf->settings = array(
 	'+dewikiversity' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+enwikiversity' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+fiwikiversity' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+frwikiversity' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0, 112 => 1, 113 => 1 ),
+	'+frwikiversity' => array( 0 => 1, 6 => 0, 8 => 0, 112 => 1, 113 => 1 ),
 	'+itwikiversity' => array( 0 => 1, 6 => 0, 8 => 0, 14 => 0 ),
 	'+ptwikiversity' => array( 0 => 1, 10 => 0 ),
 	'+ruwikiversity' => array( 0 => 1, 6 => 1, 14 => 1 ),
