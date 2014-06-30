@@ -1045,6 +1045,7 @@ $wgConf->settings = array(
 	'jawikisource' => false, // bug 3572
 	'jawiktionary' => false, // bug 11775
 	'loginwiki' => false,
+	'mswiktionary' => false, // bug 67152
 	'ndswiki' => false, // http://mail.wikipedia.org/pipermail/wikitech-l/2005-October/032136.html
 	'outreachwiki' => false,
 	'plwikiquote' => false,
@@ -1115,6 +1116,7 @@ $wgConf->settings = array(
 	'lawiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=la', // bug 13190
 	'metawiki' => false, // bug 50287
 	'mlwiki' => '/wiki/വിക്കിപീഡിയ:അപ്‌ലോഡ്',
+	'mswiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ms', // bug 67152
 	'ndswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nds',
 	'nlwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
 	'nlwikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
