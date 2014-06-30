@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+1: Gergő Tisza <gtisza@wikimedia.org>
+Code-Review+2: Manybubbles <neverett@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Mon, 30 Jun 2014 15:04:35 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/138634
+Project: operations/mediawiki-config
+Branch: refs/heads/master
