@@ -6735,7 +6735,10 @@ $wgConf->settings = array(
 			'block' => true,
 			'ipblock-exempt' => true,
 			'rollback' => true, // bug 65348
-		), // Bug 52578
+		), // bug 52578
+		'suppressredirect' => array(
+			'suppressredirect' => true,
+		), // bug 67278
 	),
 	'+cswiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true, ),
@@ -7749,6 +7752,7 @@ $wgConf->settings = array(
 			'uploader', // bug 51232
 			'confirmed', // bug 51715
 			'flood', // bug 51803
+			'suppressredirect', // bug 67278
 		),
 		'bureaucrat' => array(
 			'botadmin', // Bug 52578
@@ -8253,6 +8257,7 @@ $wgConf->settings = array(
 			'uploader', // bug 51232
 			'confirmed', // bug 51715
 			'flood', // bug 51803
+			'suppressredirect', // bug 67278
 		),
 		'bureaucrat' => array(
 			'botadmin', // bug 52578
