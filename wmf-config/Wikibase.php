@@ -63,6 +63,7 @@ if ( $wmgUseWikibaseRepo ) {
 	// Bug 51637 and 46953
 	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
 
+	$wgWBRepoSettings['internalEntitySerializerClass'] = 'Wikibase\Lib\Serializers\LegacyInternalEntitySerializer';
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
 }
 
@@ -94,6 +95,7 @@ if ( $wmgUseWikibaseClient ) {
 		'commons'
 	);
 
+	$wgWBClientSettings['internalEntitySerializerClass'] = 'Wikibase\Lib\Serializers\LegacyInternalEntitySerializer';
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 
 	if ( $wgDBname === 'commonswiki' ) {
