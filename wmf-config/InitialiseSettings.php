@@ -10783,19 +10783,8 @@ $wgConf->settings = array(
 
 'wmgMediaViewerShowSurvey' => array(
 	'default' => false,
-	// enabled 2014-04-10
-	'mediawikiwiki' => true,
-	// enabled 2014-04-17
-	'cawiki' => true,
-	'huwiki' => true,
-	'enwikivoyage' => true,
 	// enabled 2014-04-22
 	'dewiki' => true,
-	'frwiki' => true,
-	'ptwiki' => true,
-	// enabled 2014-04-28
-	'eswiki' => true,
-	'nlwiki' => true,
 	// enabled 2014-06-03
 	'enwiki' => true,
 	// enabled 2014-06-17
