@@ -6711,7 +6711,10 @@ $wgConf->settings = array(
 			'block' => true,
 			'ipblock-exempt' => true,
 			'rollback' => true, // bug 65348
-		), // Bug 52578
+		), // bug 52578
+		'suppressredirect' => array(
+			'suppressredirect' => true,
+		), // bug 67278
 	),
 	'+cswiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true, ),
