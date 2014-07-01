@@ -65,6 +65,8 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['internalEntitySerializerClass'] = 'Wikibase\Lib\Serializers\LegacyInternalEntitySerializer';
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
+
+	$wgPropertySuggesterMinProbability = 0.08;
 }
 
 if ( $wmgUseWikibaseClient ) {
