@@ -182,4 +182,9 @@ if ( $wmgUsePageImages ) {
 	);
 }
 
+if ( $wmgUseRSSExtension ) {
+	include( "$IP/extensions/RSS/RSS.php" );
+	$wgRSSUrlWhitelist = $wmgRSSUrlWhitelist;
+}
+
 } # end safeguard

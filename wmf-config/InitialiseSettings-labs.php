@@ -315,6 +315,16 @@ return array(
 		'enwiki' => true,
 	),
 
+	'wmgUseRSSExtension' => array(
+		'default' => false,
+		'dewiki' => true,
+	),
+
+	'wmgRSSUrlWhitelist' => array(
+		'default' => array(),  // as of Ext:RSS v2, this means no URLs are allowed.
+		'dewiki' => array( 'http://de.planet.wikimedia.org/atom.xml' ),
+	),
+
 	'wmgUseCampaigns' => array(
 		'default' => true,
 	),
