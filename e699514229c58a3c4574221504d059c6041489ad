@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_3c92ea00",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 873
+      },
+      "writtenOn": "2014-07-01T14:46:17Z",
+      "side": 1,
+      "message": "What\u0027s a commonet?",
+      "range": {
+        "startLine": 14,
+        "startChar": 58,
+        "endLine": 14,
+        "endChar": 66
+      },
+      "revId": "e699514229c58a3c4574221504d059c6041489ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
