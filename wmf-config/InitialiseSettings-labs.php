@@ -315,6 +315,24 @@ return array(
 		'enwiki' => true,
 	),
 
+	'wmgUseRSSExtension' => array(
+		'default' => false,
+		'dewiki' => true,
+	),
+
+	'wmgRSSUrlWhitelist' => array(
+		'default' => array(),  // as of Ext:RSS v2, this means no URLs are allowed.
+		'dewiki' => array( 'http://de.planet.wikimedia.org/atom.xml' ),
+	),
+	'mediawikiwiki' => array(
+		'http://blog.wikimedia.org/feed/',
+		'https://git.wikimedia.org/feed/mediawiki/extensions/Translate.git',
+		'https://mingle.corp.wikimedia.org/projects/analytics/feeds/8z8k6vUfniLmWc2qGe6GMQsxBujvKRKuybLd8mdTbMFHwGfLH3oxK*MU0E8zM6go.atom',
+		'https://bugzilla.wikimedia.org/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=PATCH_TO_REVIEW'
+			. '&bug_status=REOPENED&bug_status=VERIFIED&f1=keywords&list_id=288958&o1=substring&order=changeddate%20DESC%2Cbug_status%2Cpriority%2Cassigned_to%2Cbug_id'
+			. '&query_based_on=&query_format=advanced&title=Bug%20List&v1=hiphop&ctype=atom',
+	),
+),
 	'wmgUseCampaigns' => array(
 		'default' => true,
 	),
