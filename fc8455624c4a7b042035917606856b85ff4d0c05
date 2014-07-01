@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_e9aee6e3",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 317,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-07-01T12:03:35Z",
+      "side": 1,
+      "message": "You still have to set\n\u0027wmgUseRSSExtension\u0027 \u003d\u003e array(\n    \u0027dewiki\u0027 \u003d\u003e true,\n)\njust not the default",
+      "revId": "fc8455624c4a7b042035917606856b85ff4d0c05",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
