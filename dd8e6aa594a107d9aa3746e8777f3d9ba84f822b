@@ -34,6 +34,24 @@
       "revId": "dd8e6aa594a107d9aa3746e8777f3d9ba84f822b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_5a780eed",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2196,
+      "author": {
+        "id": 824
+      },
+      "writtenOn": "2014-07-01T17:15:53Z",
+      "side": 1,
+      "message": "Is it necessary to set it to something by default anyway? \nIt probably is better to move the whole block to the labs file indeed.",
+      "parentUuid": "ae43a74e_c0343549",
+      "revId": "dd8e6aa594a107d9aa3746e8777f3d9ba84f822b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
