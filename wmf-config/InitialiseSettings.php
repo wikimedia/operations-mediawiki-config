@@ -13200,7 +13200,7 @@ $wgConf->settings = array(
 
 'wmgUseWikibasePropertySuggester' => array(
 	'default' => false,
-	'testwikidatawiki' => true,
+	'wikidata' => true,
 ),
 
 'wmgUseWikibaseClient' => array(
