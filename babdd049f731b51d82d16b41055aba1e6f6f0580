@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_89199a80",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 185,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-07-01T11:55:33Z",
+      "side": 1,
+      "message": "I don\u0027t think this is needed, the production CommonSettings should already do what\u0027s needed",
+      "revId": "babdd049f731b51d82d16b41055aba1e6f6f0580",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_c90fa232",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 319,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-07-01T11:55:33Z",
+      "side": 1,
+      "message": "the default shouldn\u0027t be necessary as this is being taken from the production InitialiseSettings",
+      "revId": "babdd049f731b51d82d16b41055aba1e6f6f0580",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_a90c5e3e",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 324,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-07-01T11:55:33Z",
+      "side": 1,
+      "message": "the default shouldn\u0027t be necessary as this is being taken from the production InitialiseSettings",
+      "revId": "babdd049f731b51d82d16b41055aba1e6f6f0580",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
