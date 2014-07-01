@@ -315,6 +315,10 @@ return array(
 		'enwiki' => true,
 	),
 
+	'wmgRSSUrlWhitelist' => array(
+		'dewiki' => array( 'http://de.planet.wikimedia.org/atom.xml' ),
+	),
+
 	'wmgUseCampaigns' => array(
 		'default' => true,
 	),
