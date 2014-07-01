@@ -13408,12 +13408,13 @@ $wgConf->settings = array(
 ),
 
 // Shard each wiki to be under 2gb per shard if possible.  Changing this for a wiki
-// requires an in place reindex.  Last full review 2014-05-01.  See
+// requires an in place reindex.  Last full review 2014-07-01.  See
 // https://wikitech.wikimedia.org/wiki/Search/New#Estimating_the_number_of_shards_required
 // for estimation of new wikis.  At this point I'm declaring we should have no more than
-// 5 shards per content index and 20 per general index.  5 because that assigned one
-// replica to most nodes and should be the most efficient for querying.  20 is somewhat
-// arbitrary.
+// 5 shards per content index and 10 per general index.  5 because that assigns one
+// replica to most nodes and should be the most efficient for querying.  10 is somewhat
+// arbitrary but reflects that we care less about search performance for the general
+// index then we do for the content indexes.
 'wmgCirrusSearchShardCount' => array(
 	// Most wikis are too small to be worth sharding
 	'default' => array( 'content' => 1, 'general' => 1 ),
@@ -13424,22 +13425,23 @@ $wgConf->settings = array(
 	'cebwiki' => array( 'content' => 2, 'general' => 1 ),
 	'cswiki' => array( 'content' => 2, 'general' => 1 ),
 	// Commons is special and has a 'file' index in addition to the regular ones.
-	// File has shards at ~6GB each even with 20 of them.
-	'commonswiki' => array( 'content' => 1, 'general' => 20, 'file' => 20 ),
+	// We're sharding 'file' like it is a content index because searching it is
+	// very very common.
+	'commonswiki' => array( 'content' => 1, 'general' => 10, 'file' => 5 ),
 	'dawiki' => array( 'content' => 2, 'general' => 1 ),
-	'dewiki' => array( 'content' => 5, 'general' => 16 ),
+	'dewiki' => array( 'content' => 5, 'general' => 10 ),
 	'dewikisource' => array( 'content' => 3, 'general' => 1 ),
 	'elwiki' => array( 'content' => 2, 'general' => 1 ),
 	// These shards are also signigicantly larger than the target 2GB.
-	'enwiki' => array( 'content' => 5, 'general' => 20 ),
+	'enwiki' => array( 'content' => 5, 'general' => 10 ),
 	'enwikinews' => array( 'content' => 1, 'general' => 4 ),
 	'enwikisource' => array( 'content' => 5, 'general' => 1 ),
 	'enwiktionary' => array( 'content' => 4, 'general' => 2 ),
 	'eswiki' => array( 'content' => 5, 'general' => 6 ),
 	'eswikisource' => array( 'content' => 2, 'general' => 1 ),
 	'fawiki' => array( 'content' => 4, 'general' => 2 ),
-	'fiwiki' => array( 'content' => 2, 'general' => 13 ),
-	'frwiki' => array( 'content' => 5, 'general' => 14 ),
+	'fiwiki' => array( 'content' => 2, 'general' => 10 ),
+	'frwiki' => array( 'content' => 5, 'general' => 10 ),
 	'frwikisource' => array( 'content' => 5, 'general' => 1 ),
 	'frwiktionary' => array( 'content' => 2, 'general' => 1 ),
 	'hewiki' => array( 'content' => 2, 'general' => 2 ),
@@ -13452,14 +13454,14 @@ $wgConf->settings = array(
 	'kowiki' => array( 'content' => 3, 'general' => 1 ),
 	'ltwiktionary' => array( 'content' => 2, 'general' => 1 ),
 	'mswiki' => array( 'content' => 2, 'general' => 1 ),
-	'metawiki' => array( 'content' => 1, 'general' => 13 ),
+	'metawiki' => array( 'content' => 1, 'general' => 10 ),
 	'mgwiktionary' => array( 'content' => 2, 'general' => 1 ),
 	'nowiki' => array( 'content' => 1, 'general' => 2 ),
 	'nlwiki' => array( 'content' => 5, 'general' => 4 ),
 	'plwiki' => array( 'content' => 5, 'general' => 3 ),
 	'ptwiki' => array( 'content' => 5, 'general' => 5 ),
 	'rowiki' => array( 'content' => 3, 'general' => 2 ),
-	'ruwiki' => array( 'content' => 5, 'general' => 11 ),
+	'ruwiki' => array( 'content' => 5, 'general' => 10 ),
 	'ruwikisource' => array( 'content' => 3, 'general' => 1),
 	'ruwiktionary' => array( 'content' => 3, 'general' => 1 ),
 	'thwiki' => array( 'content' => 2, 'general' => 1 ),
