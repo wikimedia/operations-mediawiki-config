@@ -557,7 +557,7 @@ if ( $wmgUseTimeline ) {
 
 putenv( "GDFONTPATH=/usr/local/apache/common/fonts" );
 
-if ( $wmgUseWikiHeiro ) {
+if ( $wmgUseWikiHiero ) {
 	include( $IP . '/extensions/wikihiero/wikihiero.php' );
 }
 

@@ -13518,7 +13518,7 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
-'wmgUseWikiHeiro' => array(
+'wmgUseWikiHiero' => array(
 	'default' => true,
 	'loginwiki' => false,
 	'votewiki' => false,
