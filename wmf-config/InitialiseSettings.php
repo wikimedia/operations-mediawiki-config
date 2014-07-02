@@ -11748,6 +11748,10 @@ $wgConf->settings = array(
 	'default' => true,
 	'wiktionary' => false,
 ),
+'wmgMFRemovePageActions' => array(
+	'default' => array(),
+	'wikisource' => array( 'upload' ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=66958
+),
 
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),

@@ -93,4 +93,6 @@ if ( $wmgMobileFrontend ) {
 	// They originally special-cased us but would like it done the normal way now. :)
 	$wgMFAppPackageId = $wmgMFAppPackageId;
 	$wgMFNearbyRange = $wmgMaxGeoSearchRadius;
+
+	$wgMFPageActions = array_diff( $wgMFPageActions, $wmgMFRemovePageActions );
 }
