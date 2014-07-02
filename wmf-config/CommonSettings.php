@@ -2595,6 +2595,7 @@ if ( $wmgZeroPortal ) {
 	require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
 	require_once( "$IP/extensions/ZeroPortal/ZeroPortal.php" );
 
+	// 2014-7-1 this line can be deleted once ZeroPortal goes into prod - redundant
 	$wgJsonConfigs['JsonZeroConfig']['store'] = true;
 
 	$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
