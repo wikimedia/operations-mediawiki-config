@@ -10816,12 +10816,6 @@ $wgConf->settings = array(
 
 'wmgMediaViewerShowSurvey' => array(
 	'default' => false,
-	// enabled 2014-04-22
-	'dewiki' => true,
-	// enabled 2014-06-03
-	'enwiki' => true,
-	// enabled 2014-06-17
-	'commonswiki' => true,
 ),
 
 'wmgNetworkPerformanceSamplingFactor' => array(
