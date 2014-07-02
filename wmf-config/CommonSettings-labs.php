@@ -97,7 +97,6 @@ if ( $wmgUseVisualEditor ) {
 
 if ( $wmgUseFlow ) {
 	$wgFlowParsoidURL = $wmgParsoidURL; // Re-link now it's been set to a new value
-	require_once( "$IP/extensions/Mantle/Mantle.php" ); // needed for Flow frontend-rewrite
 }
 
 if ( $wmgUseContentTranslation ) {
