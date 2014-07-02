@@ -10472,6 +10472,7 @@ $wgConf->settings = array(
 		'*.culture.gouv.fr',             // French Ministry for Culture      bug 65905
 		'memory.loc.gov',                // Library of Congress              bug 66945
 		'*.ihs.nl',                      // IHS at Erasmus University        bug 67120
+		'*.eur.nl',                      // Erasmus University Rotterdam     bug 67355
 	),
 ),
 
