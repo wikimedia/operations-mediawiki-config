@@ -390,7 +390,7 @@ return array(
 	),
 	'wmgUseContentTranslation' => array(
 		'default' => false,
-		'wikipedia' => true,
+		'wiki' => true,
 	),
 );
 
