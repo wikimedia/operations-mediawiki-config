@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_905e52eb",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2014-07-02T07:49:06Z",
+      "side": 1,
+      "message": "That points to the reverse proxy, the DNS in labs has been tweaked to yield the instance private IP 10.68.16.65 whenever DNS is queried from an instance. So that is going to work.",
+      "revId": "71cc7423d7c20a71b6c3d75de40fa3d713a78fe1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
