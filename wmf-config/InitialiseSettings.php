@@ -12479,6 +12479,11 @@ $wgConf->settings = array(
 		'proofreading' => array( 'color' => 'FFBF00' ),
 		'ready' => array( 'color' => 'FF0' ),
 		'published' => array( 'color' => 'AEA' ),
+		'state conditions' => array(
+			array( 'ready', array( 'PROOFREAD' => 'MAX' ) ),
+			array( 'proofreading', array( 'TRANSLATED' => 'MAX' ) ),
+			array( 'progress', array( 'UNTRANSLATED' => 'NONZERO' ) ),
+		),
 	),
 	'otrs_wikiwiki' => array( // bug 61297
 		'progress' => array( 'color' => 'E00' ),
