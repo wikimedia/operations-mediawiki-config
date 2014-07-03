@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_ed6ed792",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-07-03T19:45:36Z",
+      "side": 1,
+      "message": "What?\n\nWe don\u0027t use the interwiki table. And what\u0027s removeDeletedWikis.php?",
+      "revId": "7e69e3a25e40b1f6e499686163bceea31bdf26b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
