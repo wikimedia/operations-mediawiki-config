@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae43a74e_62c79616",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13459,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2014-07-03T19:33:02Z",
+      "side": 1,
+      "message": "This should instead just be test2wiki for now.",
+      "revId": "e9ee9d732d1f68a1ae06daea6d0bd026a392ea77",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
