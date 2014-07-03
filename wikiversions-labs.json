@@ -1,6 +1,7 @@
 {
 	"aawiki": "php-master",
 	"arwiki": "php-master",
+	"cawiki": "php-master",
 	"commonswiki": "php-master",
 	"dewiki": "php-master",
 	"ee_prototypewiki": "php-master",
@@ -13,6 +14,7 @@
 	"enwikiversity": "php-master",
 	"enwiktionary": "php-master",
 	"eowiki": "php-master",
+	"eswiki": "php-master",
 	"fawiki": "php-master",
 	"hewiki": "php-master",
 	"hiwiki": "php-master",
