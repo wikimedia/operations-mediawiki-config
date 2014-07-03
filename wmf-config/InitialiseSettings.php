@@ -6802,7 +6802,7 @@ $wgConf->settings = array(
 	'dewikibooks' => array(
 		'user' => array( 'move' => false ), // Request by DaBPunkt on #wikimedia-tech, JF 2007-01-27
 	),
-	'dewikiquote' => array(
+	'+dewikiquote' => array(
 		'sysop' => array( 'importupload' => true, ),
 	),
 	'dewikiversity' => array(
@@ -6813,14 +6813,14 @@ $wgConf->settings = array(
 	'dewikivoyage' => array(
 		'autopatrolled' => array( 'autopatrol' => true, ), // Bug 65495
 	),
-	'dewiktionary' => array(
+	'+dewiktionary' => array(
 		'sysop' => array( 'importupload' => true, ),
 	),
 	'+donatewiki' => array(
 		'user' => array( 'editinterface' => true ),
 		'flood' => array( 'bot' => true ),
 	),
-	'elwiktionary' => array(
+	'+elwiktionary' => array(
 		'interface_editor' => array( 'editinterface' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28612
 	),
@@ -6962,7 +6962,7 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'patrol' => true, 'autopatrol' => true ), // bug 8904,21078
 		'checkuser' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ), // bug 21044
 	),
-	'frwikibooks' => array(
+	'+frwikibooks' => array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
 	),
 	'frwikinews' => array(
@@ -6972,13 +6972,13 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 	),
-	'frwikiversity' => array(
+	'+frwikiversity' => array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
 	),
 	'frwikivoyage' => array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
 	),
-	'frwiktionary' => array(
+	'+frwiktionary' => array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'botadmin' => array( 'autopatrol' => true, 'autoconfirmed' => true, 'editsemiprotected' => true, 'suppressredirect' => true, 'nominornewtalk' => true, 'noratelimit' => true, 'skipcaptcha' => true, 'apihighlimits' => true, 'writeapi' => true,
@@ -6986,7 +6986,7 @@ $wgConf->settings = array(
 'move-rootuserpages' => true, 'undelete' => true, 'rollback' => true, 'delete' => true, 'deleterevision' => true, 'reupload' => true
 			),
 	),
-	'gawiki' => array(
+	'+gawiki' => array(
 		'rollbacker' => array( 'rollback' => true ),
 	),
 	'hewiki' => array(
@@ -7064,18 +7064,18 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'filemover' => array( 'movefile' => true ), // Bug 53913
 	),
-	'itwikisource' => array(
+	'+itwikisource' => array(
 		'flood' => array( 'bot' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=36600
 	),
-	'itwikiversity' => array( 'autoconfirmed' => array( 'patrol' => true ) ),
-	'itwikibooks' => array(
+	'+itwikiversity' => array( 'autoconfirmed' => array( 'patrol' => true ) ),
+	'+itwikibooks' => array(
 		'user' => array( 'patrol' => false, 'move' => false ),
 		'autoconfirmed' => array( 'move' => true, 'patrol' => true ),
 		'autopatrolled' => array( 'autopatrol' => true, ),
 		'patroller' => array( 'autopatrol' => true, 'rollback' => true, ),
 		'flooder' => array( 'bot' => true, ), // Bug 39569
 	),
-	'itwikinews' => array( 'autoconfirmed' => array( 'patrol' => true ) ),
+	'+itwikinews' => array( 'autoconfirmed' => array( 'patrol' => true ) ),
 	'itwikiquote' => array(
 		'autoconfirmed' => array( 'patrol' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -7210,7 +7210,7 @@ $wgConf->settings = array(
 		'arbcom' => array( 'deletedhistory' => true, 'deletedtext' => true, 'browsearchive' => true ),
 		'rollbacker' => array( 'rollback' => true ),
 	),
-	'nlwiktionary' => array( 'user' => array( 'patrol' => true ) ),
+	'+nlwiktionary' => array( 'user' => array( 'patrol' => true ) ),
 	'+nlwikivoyage' => array(
 		'autopatrolled' => array(
 			'autopatrol' => true, // bug 44082
@@ -7219,7 +7219,7 @@ $wgConf->settings = array(
 	),
 	'nlwikibooks' => array( 'user' => array( 'patrol' => true ) ),
 	// 'nlwikinews' => array( 'user' => array( 'patrol' => true ) ),
-	'nnwiki' => array(
+	'+nnwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'patroller' => array( 'autopatrol' => true, 'patrol' => true, 'rollback' => true ),
 	),
@@ -7227,7 +7227,7 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true, 'unwatchedpages' => true, 'suppressredirect' => true, ),
 		'autopatrolled' => array( 'autopatrol' => true, 'unwatchedpages' => true ),
 	),
-	'nowikibooks' => array(
+	'+nowikibooks' => array(
 		'user' => array( 'patrol' => false ),
 		'autoconfirmed' => array( 'patrol' => false ),
 		'sysop' => array( 'patrol' => true ),
@@ -7316,7 +7316,7 @@ $wgConf->settings = array(
 			'editusercss' => true,
 		),
 	),
-	'quwiki' => array(
+	'+quwiki' => array(
 		'rollbacker' => array( 'rollback' => true ),
 	),
 	'rowiki' => array(
@@ -7384,13 +7384,13 @@ $wgConf->settings = array(
 	'ruwikivoyage' => array(
 		'autopatrolled' => array( 'autopatrol' => true ), // bug 46915
 	),
-	'sawiki' => array(
+	'+sawiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 	),
-	'sawikisource' => array(
+	'+sawikisource' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 	),
-	'scowiki' => array(
+	'+scowiki' => array(
 		'rollbacker' => array( 'rollback' => true ),
 		'autopatrolled' => array( 'autopatrol' => true, ),
 	),
@@ -7417,7 +7417,7 @@ $wgConf->settings = array(
 			'editallpages' => true,
 		),
 	),
-	'simplewiki' => array(
+	'+simplewiki' => array(
 		'flood' => array( 'bot' => true ),
 		'rollbacker' => array( 'rollback' => true, ),
 		# bug 27875 (see comment 4)
@@ -7458,7 +7458,7 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 		'flood' => array( 'bot' => true ),
 	),
-	'srwikisource' => array(
+	'+srwikisource' => array(
 		'patroller' => array( 'patrol' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 	),
@@ -7554,7 +7554,7 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 		'uploader' => array( 'upload' => true, 'reupload' => true ),
 	),
-	'ukwiktionary' => array(
+	'+ukwiktionary' => array(
 		'autoeditor' => array( 'autoreview' => true ),
 	),
 	'urwiki' => array(
@@ -7615,7 +7615,7 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'patroller' => array( 'patrol' => true, 'rollback' => true ),
 	),
-	'zhwiktionary' => array( // bug 5836
+	'+zhwiktionary' => array( // bug 5836
 		'bot' => array( 'patrol' => true ),
 	),
 	'zh_yuewiki' => array(
