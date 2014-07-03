@@ -348,6 +348,17 @@ return array(
 
 	'wmgUseCirrus' => array(
 		'default' => true,
+		'commonswiki' => true,
+		'dewiki' => true,
+		'enwiki' => true,
+		'eswiki' => true,
+		'frwiki' => true,
+		'jawiki' => true,
+		'nlwiki' => true,
+		'plwiki' => true,
+		'ruwiki' => true,
+		'svwiki' => true,
+		'zhwiki' => true,
 	),
 
 	'wmgUseFlow' => array(
