@@ -16,6 +16,24 @@
       "revId": "7e69e3a25e40b1f6e499686163bceea31bdf26b5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae43a74e_cdc1d335",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 11
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1523
+      },
+      "writtenOn": "2014-07-03T20:01:16Z",
+      "side": 1,
+      "message": "We don\u0027t? Forget what I said then.\n\nRemoveDeletedWikis.php is in WikimediaMaintenance.",
+      "parentUuid": "ae43a74e_ed6ed792",
+      "revId": "7e69e3a25e40b1f6e499686163bceea31bdf26b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
