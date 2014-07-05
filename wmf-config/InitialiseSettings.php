@@ -153,9 +153,62 @@ $wgConf->settings = array(
 ),
 # @} end of wgLanguageCode
 
-'wgLocalInterwiki' => array(
-	'default' => '$lang',
-	'mediawikiwiki' => 'mw',
+'wgLocalInterwikis' => array(
+	'default' => array( '$lang' ),
+
+	# Chinese projects seem to have some extras
+	'+zhwiki' => array( 'zh-cn', 'zh-tw' ),
+	'+zhwikibooks' => array( 'zh-cn', 'zh-tw' ),
+	'+zhwikinews' => array( 'zh-cn', 'zh-tw' ),
+	'+zhwikiquote' => array( 'zh-cn', 'zh-tw' ),
+	'+zhwikisource' => array( 'zh-cn', 'zh-tw' ),
+	'+zhwikivoyage' => array( 'zh-cn', 'zh-tw' ),
+	'+zhwiktionary' => array( 'zh-cn', 'zh-tw' ),
+
+	# Danish and Norwegian aliases (bug 4591)
+	'+dawiki' => array( 'dk' ),
+	'+dawikibooks' => array( 'dk' ),
+	'+dawikiquote' => array( 'dk' ),
+	'+dawikisource' => array( 'dk' ),
+	'+dawiktionary' => array( 'dk' ),
+	'+nowiki' => array( 'nb' ),
+	'+nowikibooks' => array( 'nb' ),
+	'+nowikinews' => array( 'nb' ),
+	'+nowikiquote' => array( 'nb' ),
+	'+nowikisource' => array( 'nb' ),
+	'+nowiktionary' => array( 'nb' ),
+
+	# Other individual wikis with additional local prefixes
+	'+enwiki' => array( 'w' ),
+	'+enwikibooks' => array( 'b' ),
+	'+enwikinews' => array( 'n' ),
+	'+enwikiquote' => array( 'q' ),
+	'+enwikisource' => array( 's' ),
+	'+enwikiversity' => array( 'v' ),
+	'+enwikivoyage' => array( 'voy' ),
+	'+enwiktionary' => array( 'wikt' ),
+
+	# Chapter sites...
+	'+wikimedia' => array( 'wm$lang' ),
+	# ...with some stupid exceptions (still-open chapter wikis that have been
+	# superseded by a non-WMF-hosted chapter site)
+	'arwikimedia' => array( '$lang' ),
+	'ilwikimedia' => array( '$lang' ),
+
+	# Special wikis with local prefixes that don't match the DB name
+	# (use + where the portion of the DB name before 'wiki' is also a valid
+	# local interwiki)
+	'betawikiversity' => array( 'betawikiversity' ),
+	'+commonswiki' => array( 'c' ),
+	'+foundationwiki' => array( 'wmf', 'wikimedia' ),
+	'mediawikiwiki' => array( 'mw', 'mediawikiwiki' ),
+	'+metawiki' => array( 'm', 'metawikipedia' ),
+	'+outreachwiki' => array( 'outreachwiki' ),
+	'sourceswiki' => array( 'mul', 'oldwikisource' ),
+	'+wikidatawiki' => array( 'd' ),
+	'wikimania2013wiki' => array( 'wm2013' ),
+	'wikimania2014wiki' => array( 'wm2014' ),
+	'wikimania2015wiki' => array( 'wm2015' ),
 ),
 
 # wgLocaltimezone @{
