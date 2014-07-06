@@ -7,8 +7,11 @@
 require_once( __DIR__ . '/mobile.php' );
 
 if ( $wmgMobileFrontend ) {
-	if ( $wmgZeroBanner && !$wmgZeroPortal ) {
-		$wgJsonConfigs['JsonZeroConfig']['remote']['url'] = 'http://zero.wikimedia.beta.wmflabs.org/w/api.php';
+	if ( $wmgZeroBanner ) {
+		$wgZeroBannerClusterDomain = 'beta.wmflabs.org'; // need a better way to calc this
+		if ( !$wmgZeroPortal ) {
+			$wgJsonConfigs['JsonZeroConfig']['remote']['url'] = 'http://zero.wikimedia.beta.wmflabs.org/w/api.php';
+		}
 	}
 }
 
