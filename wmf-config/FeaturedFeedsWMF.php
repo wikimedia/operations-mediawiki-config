@@ -101,6 +101,13 @@ function wfFeaturedFeedsWMF_getFeeds( &$feeds ) {
 				'description' => 'ffeed-wotd-desc',
 				'entryName' => 'ffeed-wotd-entry',
 			);
+			$feeds['fwotd'] = array( // Foreign Word of the Day
+				'page' => 'ffeed-fwotd-page',
+				'title' => 'ffeed-fwotd-title',
+				'short-title' => 'ffeed-fwotd-short-title',
+				'description' => 'ffeed-fwotd-desc',
+				'entryName' => 'ffeed-fwotd-entry',
+			);
 			break;
 	}
 	foreach ( $wmgFeaturedFeedsOverrides as $feedName => $overrides ) {
