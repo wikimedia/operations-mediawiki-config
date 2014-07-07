@@ -7069,7 +7069,7 @@ $wgConf->settings = array(
 		'flood' => array( 'bot' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=36600
 	),
 	'+itwikiversity' => array( 'autoconfirmed' => array( 'patrol' => true ) ),
-	'+itwikibooks' => array(
+	'itwikibooks' => array(
 		'user' => array( 'patrol' => false, 'move' => false ),
 		'autoconfirmed' => array( 'move' => true, 'patrol' => true ),
 		'autopatrolled' => array( 'autopatrol' => true, ),
