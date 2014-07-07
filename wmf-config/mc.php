@@ -18,7 +18,7 @@ $wgObjectCaches['memcached-pecl'] = array(
 	'class'      => 'MemcachedPeclBagOStuff',
 	'serializer' => 'php',
 	'persistent' => false,
-	'servers'    => array( '127.0.0.1' ),
+	'servers'    => ( gethostname() === 'mw1041' ? array( '127.0.0.1:11212' ) : array( '127.0.0.1' ) ),
 	'server_failure_limit' => 1e9,
 	'retry_timeout' => -1
 );
