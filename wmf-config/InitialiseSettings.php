@@ -6917,6 +6917,9 @@ $wgConf->settings = array(
 			'autopatrol' => true,
 		),
 	),
+	'+eswikisource' => array(
+		'autopatrolled' => array( 'autopatrol' => true ), // bug 67557
+	),
 	'eswikivoyage' => array(
 		'rollbacker' => array(
 			'rollback' => true, // Bug 44285
@@ -7844,6 +7847,9 @@ $wgConf->settings = array(
 	'+eswikiquote' => array(
 		'sysop' => array( 'autopatrolled', 'confirmed', 'patroller', 'rollbacker' ), // bug 62911
 	),
+	'+eswikisource' => array(
+		'sysop' => array( 'autopatrolled' ), // bug 67557
+	),
 	'+eswikivoyage' => array(
 		'bureaucrat' => array( 'confirmed', ), // Bug 47325
 		'sysop' => array( 'rollbacker', 'patroller', 'autopatrolled', ), // Bug 44285, 55665
@@ -8351,6 +8357,9 @@ $wgConf->settings = array(
 	),
 	'+eswikiquote' => array(
 		'sysop' => array( 'autopatrolled', 'confirmed', 'patroller', 'rollbacker' ), // bug 62911
+	),
+	'+eswikisource' => array(
+		'sysop' => array( 'autopatrolled' ), // bug 67557
 	),
 	'+eswikivoyage' => array(
 		'bureaucrat' => array( 'confirmed', ), // Bug 47325
