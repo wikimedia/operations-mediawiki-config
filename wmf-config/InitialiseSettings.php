@@ -11306,6 +11306,7 @@ $wgConf->settings = array(
 	'hewiki' => true, // Bug 66538
 	'itwiki' => true, // Bug 67376
 	'ptwiki' => true, // Bug 66255
+	'ruwiki' => true, // Bug 67704
 ),
 
 // Bug 50000 - Disable for logged-out users if wmgVisualEditorDefault is true
