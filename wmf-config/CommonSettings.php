@@ -1145,6 +1145,10 @@ if ( $wmgEnableCaptcha ) {
 	$wgGroupPermissions['autoconfirmed']['skipcaptcha'] = true;
 	if ( $wmfRealm !== 'labs' ) {
 		$wgCaptchaFileBackend = 'global-multiwrite';
+		// Disable addurl captcha trigger on beta labs -- KartikMistry
+		if ( $wgDBname == 'cawiki' || $wgDBname == 'eswiki' ) {
+			$wgCaptchaTriggers['addurl'] = false;
+		}
 	}
 	# $wgCaptchaTriggers['edit'] = true;
 	$wgCaptchaSecret = $wmgCaptchaSecret;
