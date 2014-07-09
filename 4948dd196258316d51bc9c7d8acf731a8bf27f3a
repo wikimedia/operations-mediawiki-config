@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_2ee89cae",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2014-07-09T07:55:23Z",
+      "side": 1,
+      "message": "I would just remove the line entirely. CommonSettings.php has:\n\n $wgGroupPermissions[\u0027autoconfirmed\u0027][\u0027skipcaptcha\u0027] \u003d true;\n\nFolks willing to test captcha can just create new accounts I guess or we can  end up with a specific group that force captcha for them.",
+      "revId": "4948dd196258316d51bc9c7d8acf731a8bf27f3a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
