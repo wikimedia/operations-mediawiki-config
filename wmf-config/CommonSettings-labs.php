@@ -51,8 +51,14 @@ $wgDnsBlacklistUrls   = array(
 //Commented until a dedicated wiki is created.
 //require_once ("$IP/extensions/OnlineStatusBar/OnlineStatusBar.php");
 
+// Disable captca for autoconfirmed users on ca/es wikis to test
+// ContentTranslation -- KartikMistry
+if ( $wgDBname == 'cawiki' || $wgDBname == 'eswiki' ) {
+	$wgGroupPermissions['autoconfirmed']['skipcaptcha'] = true;
+} else {
 // So that people can easily test the captchas without making accounts -- Platonides
-$wgGroupPermissions['autoconfirmed']['skipcaptcha'] = false;
+	$wgGroupPermissions['autoconfirmed']['skipcaptcha'] = false;
+}
 
 // the beta cluster uses a different filebackend than production
 if ( $wmgUseGWToolset ) {
