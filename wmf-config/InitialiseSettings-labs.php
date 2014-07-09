@@ -130,6 +130,10 @@ return array(
 		'testwiki' => '//upload.$variant.wmflabs.org/wikipedia/test',
 	),
 
+	'wgThumbnailBuckets' => array( 256, 512, 1024, 2048, 4096 ),
+
+	'wgThumbnailMinimumBucketDistance' => 32,
+
 	'-wmgMathPath' => array(
 		'default' => '//upload.$variant.wmflabs.org/math',
 	),
