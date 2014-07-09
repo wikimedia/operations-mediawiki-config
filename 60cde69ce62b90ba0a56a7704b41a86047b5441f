@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_4444e76e",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1146,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2014-07-09T13:47:32Z",
+      "side": 1,
+      "message": "This mean \u0027production\u0027 ...",
+      "revId": "60cde69ce62b90ba0a56a7704b41a86047b5441f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_e432b305",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1151,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2014-07-09T13:47:32Z",
+      "side": 1,
+      "message": "And you don\u0027t want to disable captcha on production :D\n\nAs I said on IRC, autoconfirmed should just have skipcaptcha \u003d true and that would skip captcha for them.",
+      "revId": "60cde69ce62b90ba0a56a7704b41a86047b5441f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
