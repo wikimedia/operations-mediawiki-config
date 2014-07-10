@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_2633150c",
+        "filename": "large.dblist",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-07-10T09:50:12Z",
+      "side": 1,
+      "message": "Hah! That\u0027s what one gets from massive article-bot-creations. :p",
+      "revId": "29f5f6a9cb5967a6559b21ce866207328e94ffac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
