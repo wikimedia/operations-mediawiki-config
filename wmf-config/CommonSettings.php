@@ -1776,6 +1776,12 @@ if ( $wmgUseUploadWizard ) {
 		'flickrApiKey' => 'e9d8174a79c782745289969a45d350e8',
 		// Slowwwwwwww
 		'campaignExpensiveStatsEnabled' => false,
+		'licenses' => array(
+			'pd-old-70-1923' => array(
+				'msg' => 'wm-license-upwiz-pd-old-70-1923',
+				'templates' => array( 'PD-old-70-1923' )
+			),
+		),
 	);
 
 	$wgUploadWizardConfig['enableChunked'] = 'opt-in';
