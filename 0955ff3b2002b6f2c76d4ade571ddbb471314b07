@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_597ba6bd",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10475,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2014-07-10T11:56:28Z",
+      "side": 1,
+      "message": "Tabs not spaces please :)",
+      "revId": "0955ff3b2002b6f2c76d4ade571ddbb471314b07",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
