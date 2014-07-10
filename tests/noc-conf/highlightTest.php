@@ -6,13 +6,15 @@ class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
 	protected function setUp() {
 		parent::setUp();
 
-		$wmfConfigDir = dirname( dirname( __DIR__ ) ) . '/wmf-config';
-		$this->nocConfDir = dirname( dirname( __DIR__ ) ) . '/docroot/noc/conf';
+		$common = dirname( dirname( __DIR__ ) );
+		$wmfConfigDir =  "$common/wmf-config";
+		$this->nocConfDir = "$common/docroot/noc/conf";
 
 		// Created various files to test with
-		if ( !file_exists( "$wmfConfigDir/PrivateSettings.php" ) ) {
-			$this->created[] = "$wmfConfigDir/PrivateSettings.php";
-			file_put_contents( "$wmfConfigDir/PrivateSettings.php", '<?php $forbiddenFruit = "p";' );
+		if ( !file_exists( "$common/private/PrivateSettings.php" ) ) {
+			$this->created[] = "$common/private/PrivateSettings.php";
+			mkdir( "$common/private" );
+			file_put_contents( "$common/private/PrivateSettings.php", '<?php $forbiddenFruit = "p";' );
 		}
 
 		$this->created[] = "$wmfConfigDir/ExampleValid.php";
@@ -65,6 +67,7 @@ class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
 			array( 'search-redirect.php' ),
 			array( 'robots.txt' ),
 			array( 'README' ),
+			array( 'private/PrivateSettings.php' ),
 			array( 'wmf-config/PrivateSettings.php' ),
 			array( 'wmf-config/ExampleFile.php' ),
 			array( 'PrivateSettings.php' ),
