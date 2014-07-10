@@ -2456,6 +2456,8 @@ if ( $wmgUseRelatedSites ) {
 
 if ( $wmgUseUserMerge ) {
 	require_once( "$IP/extensions/UserMerge/UserMerge.php" );
+	// Don't let users get deleted outright (bug 67789)
+	$wgUserMergeEnableDelete = false;
 }
 
 if ( $wmgUseEventLogging ) {
