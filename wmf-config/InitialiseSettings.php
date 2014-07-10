@@ -12932,11 +12932,12 @@ $wgConf->settings = array(
 
 'wmgUseFlow' => array(
 	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
+	'enwiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
-	'enwiki' => true,
+	'officewiki' => true,
+	'testwiki' => true,
+	'test2wiki' => true,
 ),
 'wmgFlowEditorList' => array(
 	// Disable VE inside flow, leaving only the wikitext editor
