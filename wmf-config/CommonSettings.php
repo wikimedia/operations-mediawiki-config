@@ -1768,6 +1768,69 @@ if ( $wmgUseUploadWizard ) {
 		'flickrApiKey' => 'e9d8174a79c782745289969a45d350e8',
 		// Slowwwwwwww
 		'campaignExpensiveStatsEnabled' => false,
+		'licensing' => array(
+			'thirdParty' => array(
+				'licenseGroups' => array(
+					array(
+						// This should be a list of all CC licenses we can reasonably expect to find around the web
+						'head' => 'mwe-upwiz-license-cc-head',
+						'subhead' => 'mwe-upwiz-license-cc-subhead',
+						'licenses' => array(
+							'cc-by-sa-4.0',
+							'cc-by-sa-3.0',
+							'cc-by-sa-2.5',
+							'cc-by-4.0',
+							'cc-by-3.0',
+							'cc-by-2.5',
+							'cc-zero'
+						)
+					),
+					array(
+						// n.b. as of April 2011, Flickr still uses CC 2.0 licenses.
+						// The White House also has an account there, hence the Public Domain US Government license
+						'head' => 'mwe-upwiz-license-flickr-head',
+						'subhead' => 'mwe-upwiz-license-flickr-subhead',
+						'prependTemplates' => array( 'flickrreview' ),
+						'licenses' => array(
+							'cc-by-sa-2.0',
+							'cc-by-2.0',
+							'pd-usgov',
+						)
+					),
+					array(
+						'head' => 'mwe-upwiz-license-public-domain-usa-head',
+						'subhead' => 'mwe-upwiz-license-public-domain-usa-subhead',
+						'licenses' => array(
+							'pd-us',
+							'pd-old-70-1923',
+							'pd-art',
+						)
+					),
+					array(
+						'head' => 'mwe-upwiz-license-usgov-head',
+						'licenses' => array(
+							'pd-usgov',
+							'pd-usgov-nasa'
+						)
+					),
+					array(
+						'head' => 'mwe-upwiz-license-custom-head',
+						'special' => 'custom',
+						'licenses' => array( 'custom' ),
+					),
+					array(
+						'head' => 'mwe-upwiz-license-none-head',
+						'licenses' => array( 'none' )
+					),
+				),
+			),
+		),
+		'licenses' => array(
+			'pd-old-70-1923' => array(
+				'msg' => 'mwe-upwiz-license-pd-old-70-1923',
+				'templates' => array( 'PD-old-70-1923' ),
+			),
+		),
 	);
 
 	$wgUploadWizardConfig['enableChunked'] = 'opt-in';
