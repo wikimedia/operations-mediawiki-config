@@ -10472,6 +10472,8 @@ $wgConf->settings = array(
 		'memory.loc.gov',                // Library of Congress              bug 66945
 		'*.ihs.nl',                      // IHS at Erasmus University        bug 67120
 		'*.eur.nl',                      // Erasmus University Rotterdam     bug 67355
+                'mochila_images.s3.amazonaws.com', //temporary for GWT upload        bug 67344
+                'mochila_images2.s3.amazonaws.com', //temporary for GWT upload       bug 67344
 	),
 ),
 
