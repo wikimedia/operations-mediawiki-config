@@ -189,4 +189,8 @@ if ( $wmgUsePageImages ) {
 	);
 }
 
+if ( $wmgUseFundraisingTranslateWorkflow ) {
+	include( "$IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php" );
+}
+
 } # end safeguard
