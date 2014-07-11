@@ -3230,6 +3230,7 @@ $wgConf->settings = array(
 	),
 	'+ruwiki' => array(
 		'У' => NS_USER,           // Bug 42511
+		'ОУ' => NS_USER_TALK,     // Bug 67844
 		'Ш' => NS_TEMPLATE,       // Bug 42511
 		'T' => NS_TEMPLATE,       // Bug 42511
 		'К' => NS_CATEGORY,       // Bug 42511
