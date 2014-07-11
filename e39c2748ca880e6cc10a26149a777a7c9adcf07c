@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_8ccf7f82",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 650
+      },
+      "writtenOn": "2014-07-11T11:54:03Z",
+      "side": 1,
+      "message": "Wikimedia Foundation is not Wikimedia, so this interwiki link is misleading.",
+      "revId": "e39c2748ca880e6cc10a26149a777a7c9adcf07c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
