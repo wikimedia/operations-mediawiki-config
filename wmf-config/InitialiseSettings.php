@@ -9482,6 +9482,11 @@ $wgConf->settings = array(
 	'default' => '//upload.wikimedia.org/math',
 ),
 
+'wmgUseFundraisingTranslateWorkflow' => array(
+	'default' => false,
+	'metawiki' => true,
+);
+
 'wmgUseScore' => array(
 	'default' => true,
 	'loginwiki' => false,
