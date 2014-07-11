@@ -9386,6 +9386,7 @@ $wgConf->settings = array(
 'wmfUseFundraisingTranslateWorkflow' => array(
 	'default' => false,
 	'testwiki' => true,
+	'metawiki' => true,
 );
 
 'wmgUseScore' => array(
