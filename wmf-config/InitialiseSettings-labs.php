@@ -415,7 +415,7 @@ return array(
 	),
 
 	// testing FundraisingTranslateWorkflow
-	'wmfUseFundraisingTranslateWorkflow' => array(
+	'wmgUseFundraisingTranslateWorkflow' => array(
 		'default' => false,
 		'metawiki' => true,
 	),
