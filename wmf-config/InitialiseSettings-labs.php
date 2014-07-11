@@ -413,6 +413,12 @@ return array(
 		'default' => false,
 		'wiki' => true,
 	),
+
+	// testing FundraisingTranslateWorkflow
+	'wmfUseFundraisingTranslateWorkflow' => array(
+		'default' => false,
+		'metawiki' => true,
+	),
 );
 
 } # wmflLabsSettings()
