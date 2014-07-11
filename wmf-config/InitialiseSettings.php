@@ -10863,6 +10863,7 @@ $wgConf->settings = array(
 	'default' => true,
 	'loginwiki' => false,
 	'votewiki' => false,
+	'private' => false,
 ),
 
 'wmgMediaViewerBeta' => array(
