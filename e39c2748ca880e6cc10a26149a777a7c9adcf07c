@@ -16,6 +16,24 @@
       "revId": "e39c2748ca880e6cc10a26149a777a7c9adcf07c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_0c06ef89",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 203,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2014-07-11T12:06:53Z",
+      "side": 1,
+      "message": "1. Yes, \"wikimedia\" shouldn\u0027t really be here, as Wikimedia: is the project namespace on wmfwiki. But it\u0027s doing no harm here either.\n2. wikimedia: has been an interwiki prefix since 2004 - http://meta.wikimedia.org/w/index.php?title\u003dInterwiki_map\u0026diff\u003d65254\u0026oldid\u003d61778 - so it\u0027s not really plausible to remove it now. If you want to discuss it, see [[m:Talk:Interwiki map]].",
+      "parentUuid": "8e28a382_8ccf7f82",
+      "revId": "e39c2748ca880e6cc10a26149a777a7c9adcf07c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
