@@ -1480,6 +1480,14 @@ if ( $wmgUseCentralNotice ) {
 	// 2013-12-02 we're now using a 10 month expiration.
 	$wgNoticeCookieShortExpiry = 1209600; // 2 weeks
 	$wgNoticeCookieLongExpiry = 25920000; // 10 months
+	// New variable: see https://gerrit.wikimedia.org/r/#/c/144853
+	// 'close' duration is used for the banner X button
+	// 'donate' duration is used for cookie set on Thank You page
+	// After above change is deployed, Short and LongExpiry can be removed.
+	$wgNoticeCookieDurations = array(
+		'close' => 1209600, // 2 weeks
+		'donate' => 25920000, // 10 months
+	);
 
 	// Bug 16821
 	// Updates made here also need to be reflected in
