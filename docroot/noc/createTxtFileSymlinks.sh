@@ -52,6 +52,7 @@ mwconfig_files=(
 	all.dblist
 	all-labs.dblist
 	nonbetafeatures.dblist
+	centralauth.dblist
 	cirrus.dblist
 	closed.dblist
 	commonsuploads.dblist
