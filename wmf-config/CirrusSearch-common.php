@@ -51,7 +51,7 @@ $wgCirrusSearchOptimizeIndexForExperimentalHighlighter = true;
 $wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
 $wgCirrusSearchUseAggressiveSplitting = $wmgCirrusSearchUseAggressiveSplitting;
 $wgCirrusSearchPreferRecentDefaultDecayPortion = $wmgCirrusSearchPreferRecentDefaultDecayPortion;
-$wgCirrusSearchPreferRecentDefaultDecayPortion = $wmgCirrusSearchPreferRecentDefaultDecayPortion;
+$wgCirrusSearchBoostLinks = $wmgCirrusSearchBoostLinks;
 
 // Enable cache warming for wikis with more than one shard.  Cache warming is good
 // for smoothing out I/O spikes caused by merges at the cost of potentially polluting
