@@ -11635,14 +11635,6 @@ $wgConf->settings = array(
 	'loginwiki' => false,
 ),
 
-'wmgUseMarkAsHelpful' => array(
-	'default' => false,
-	'testwiki' => true,
-	# 'incubatorwiki' => true,
-	# 'nlwiki' => true,
-	# 'sewikimedia' => true,
-),
-
 'wmgUseMoodBar' => array(
 	'default' => false,
 	'testwiki' => true,
