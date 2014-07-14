@@ -663,10 +663,6 @@ if ( $wmgUseQuiz ) {
 	include( "$IP/extensions/Quiz/Quiz.php" );
 }
 
-if ( $wmgUseFundraisingTranslateWorkflow ) {
-	include( "$IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php" );
-}
-
 if ( $wmgUseGadgets ) {
 	include( "$IP/extensions/Gadgets/Gadgets.php" );
 }
