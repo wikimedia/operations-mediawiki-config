@@ -108,7 +108,7 @@ $wgLBFactoryConf = array(
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038' => 0,   # 1.4TB  64GB
-		'db1035' => 0,   # 1.4TB  64GB, snapshot, vslow, dump
+		#'db1035' => 0,   # 1.4TB  64GB, snapshot, vslow, dump
 		'db1003' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
 		'db1019' => 400, # 1.4TB  64GB
 		'db1027' => 400, # 1.4TB  64GB
@@ -183,10 +183,10 @@ $wgLBFactoryConf = array(
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'vslow' => array(
-			'db1035' => 1,
+			'db1003' => 1,
 		),
 		'dump' => array(
-			'db1035' => 1,
+			'db1003' => 1,
 		),
 		'watchlist' => array(
 			'db1003' => 1,
