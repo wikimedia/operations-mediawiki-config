@@ -23,13 +23,7 @@ $wgObjectCaches['beta-memcached-eqiad'] = array(
 	'class'      => 'MemcachedPeclBagOStuff',
 	'serializer' => 'php',
 	'persistent' => false,
-	'servers'    => (
-		defined( 'HHVM_VERSION' ) ? array(
-			0 => '10.68.17.69:11211',  # deployment-memc04.eqiad
-			1 => '10.68.17.71:11211',  # deployment-memc05.eqiad
-		)
-		: array( '127.0.0.1' )
-	),
+	'servers'    => array( '127.0.0.1:11212' ),
 	'retry_timeout' => 1,
 );
 
