@@ -1837,10 +1837,6 @@ if ( $wmgUseMultimediaViewer ) {
 	if ( $wmgMediaViewerUseThumbnailGuessing ) {
 		$wgMediaViewerUseThumbnailGuessing = true;
 	}
-
-	if ( $wmgMediaViewerShowSurvey ) {
-		$wgMediaViewerShowSurvey = $wmgMediaViewerShowSurvey;
-	}
 }
 
 if ( $wmgUsePopups ) {
