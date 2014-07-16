@@ -303,11 +303,6 @@ return array(
 		'default' => false,
 	),
 
-	'wmgMediaViewerShowSurvey' => array(
-		'default' => false,
-		'enwiki' => true,
-	),
-
 	'wmgNetworkPerformanceSamplingFactor' => array(
 		'default' => 1,
 	),
