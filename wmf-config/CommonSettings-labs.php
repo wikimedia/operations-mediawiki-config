@@ -193,4 +193,8 @@ if ( $wmgUseFundraisingTranslateWorkflow ) {
 	include( "$IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php" );
 }
 
+if ( $wmgUsePetition ) {
+	require_once( "$IP/extensions/Petition/Petition.php" );
+}
+
 } # end safeguard
