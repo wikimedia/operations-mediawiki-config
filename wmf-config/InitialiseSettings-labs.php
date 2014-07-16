@@ -419,6 +419,11 @@ return array(
 		'default' => false,
 		'metawiki' => true,
 	),
+
+	'wmgUsePetition' => array(
+		'default' => false,
+		'metawiki' => true,
+	),
 );
 
 } # wmflLabsSettings()
