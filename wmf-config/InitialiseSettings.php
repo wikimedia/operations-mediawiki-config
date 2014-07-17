@@ -3351,6 +3351,11 @@ $wgConf->settings = array(
 	'+tewiktionary' => array(
 		'Wiktionary_చర్చ' => NS_PROJECT_TALK, // bug 36533
 	),
+	'+thwiki' => array(
+		'Wikipedia' => NS_PROJECT,
+		'WP' => NS_PROJECT,
+		'H' => NS_HELP,
+	), // Bug 68108
 	'+thwikibooks' => array(
 		'คุยเรื่องWikibooks' => NS_PROJECT_TALK,
 		'Subject' => 102, // bug 46153
