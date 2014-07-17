@@ -148,7 +148,7 @@ if ( $wgDBname == "testwiki" ) {
 }
 
 // Use InstantCommons for testing
-if ( $wgDBname == "enwiki" ) {
+if ( $wgDBname == "enwiki" || $wgDBname == 'eswiki' || $wgDBname == 'cawiki' ) {
 	$wgUseInstantCommons = true;
 }
 
