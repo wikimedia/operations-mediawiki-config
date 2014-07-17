@@ -10553,11 +10553,6 @@ $wgConf->settings = array(
 	'ptwiki'  => 1024 * 500, // 500 KB - https://bugzilla.wikimedia.org/23186
 ),
 
-'wmgUseCommunityVoice' => array (
-	'default' => false,
-	'usabilitywiki' => true,
-),
-
 'wmgUsePdfHandler' => array (
 	'default' => true, // brion -- 2009-08-25
 	'loginwiki' => false,

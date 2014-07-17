@@ -1623,11 +1623,6 @@ if ( $wmgUseAbuseFilter ) {
 	$wgAbuseFilterEmergencyDisableAge = $wmgAbuseFilterEmergencyDisableAge;
 }
 
-if ( $wmgUseCommunityVoice ) {
-	include ( "$IP/extensions/ClientSide/ClientSide.php" );
-	include ( "$IP/extensions/CommunityVoice/CommunityVoice.php" );
-}
-
 if ( $wmgUsePdfHandler ) {
 	include ( "$IP/extensions/PdfHandler/PdfHandler.php" );
 }

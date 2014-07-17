@@ -22,7 +22,6 @@ $IP/extensions/CodeEditor/CodeEditor.php
 $IP/extensions/CodeReview/CodeReview.php
 $IP/extensions/Collection/Collection.php
 $IP/extensions/CommonsMetadata/CommonsMetadata.php
-$IP/extensions/CommunityVoice/CommunityVoice.php
 $IP/extensions/ConfirmEdit/ConfirmEdit.php
 $IP/extensions/ConfirmEdit/FancyCaptcha.php
 $IP/extensions/ContactPage/ContactPage.php
