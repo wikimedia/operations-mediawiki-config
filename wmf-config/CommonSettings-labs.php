@@ -147,8 +147,8 @@ if ( $wgDBname == "testwiki" ) {
 	$wgCaptchaDirectory = '/data/project/upload7/private/captcha';
 }
 
-// Use InstantCommons for testing
-if ( $wgDBname == "enwiki" ) {
+// Use InstantCommons on all betawikis except commonswiki
+if ( $wgDBname != 'commonswiki' ) {
 	$wgUseInstantCommons = true;
 }
 
