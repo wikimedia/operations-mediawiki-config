@@ -105,6 +105,8 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['siteGroup'] = $wmgWikibaseSiteGroup;
 
+	$wgWBClientSettings['allowArbitraryDataAccess'] = false;
+
 	$wgHooks['SetupAfterCache'][] = 'wmfWBClientExcludeNS';
 
 	function wmfWBClientExcludeNS() {
