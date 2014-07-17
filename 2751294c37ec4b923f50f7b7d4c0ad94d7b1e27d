@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_e96483e3",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-07-17T05:18:24Z",
+      "side": 1,
+      "message": "How about enabling it everywhere except commonswiki?\n\n    if ( $wgDBname !\u003d \u0027commonswiki\u0027 ) {",
+      "revId": "2751294c37ec4b923f50f7b7d4c0ad94d7b1e27d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
