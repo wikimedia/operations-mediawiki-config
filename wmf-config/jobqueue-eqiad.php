@@ -13,7 +13,8 @@ $wgJobTypeConf['default'] = array(
 				'connectTimeout' => 2,
 				'password' => $wmgRedisPassword,
 				'compression' => 'gzip'
-			)
+			),
+			'daemonized' => true
 		),
 		'rdb2' => array(
 			'class'       => 'JobQueueRedis',
@@ -23,7 +24,8 @@ $wgJobTypeConf['default'] = array(
 				'connectTimeout' => 2,
 				'password' => $wmgRedisPassword,
 				'compression' => 'gzip'
-			)
+			),
+			'daemonized' => true
 		),
 	),
 	'sectionsByWiki'      => array(), // default
