@@ -10058,10 +10058,6 @@ $wgConf->settings = array(
 	'default' => 'loginwiki',
 ),
 
-'wmgCentralAuthSilentLogin' => array(
-	'default' => true,
-),
-
 'wmgCentralAuthUseEventLogging' => array(
 	'default' => true,
 ),
