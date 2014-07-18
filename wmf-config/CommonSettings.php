@@ -31,11 +31,6 @@ if ( isset( $_SERVER['SERVER_ADDR'] ) ) {
 	ini_set( 'error_append_string', ' (' . $_SERVER['SERVER_ADDR'] . ')' );
 }
 
-# Protection for unusual entry points
-if ( !function_exists( 'wfProfileIn' ) ) {
-	require( './includes/ProfilerStub.php' );
-}
-
 $fname = 'CommonSettings.php';
 wfProfileIn( $fname );
 wfProfileIn( "$fname-init" );
@@ -51,10 +46,6 @@ if ( !class_exists( 'MWMultiVersion' ) ) {
 $multiVersion = MWMultiVersion::getInstance();
 
 set_include_path( "$IP:/usr/local/lib/php:/usr/share/php" );
-
-if ( getenv( 'WIKIBACKUP' ) && !function_exists( 'utf8_normalize' ) ) {
-	dl( 'php_utfnormal.so' );
-}
 
 ### Determine realm and cluster we are on #############################
 # $cluster is an historical variable used for the WMF MW conf
@@ -111,11 +102,6 @@ default:
 	$wmfHostnames['wikidata'] = 'www.wikidata.org';
 	break;
 }
-
-# Load site configuration
-include( "$IP/includes/DefaultSettings.php" );
-
-$DP = $IP;
 
 wfProfileOut( "$fname-init" );
 wfProfileIn( "$fname-host" );
@@ -451,18 +437,9 @@ $wgUseESI   = false;
 
 require( getRealmSpecificFilename( "$wmfConfigDir/squid.php" ) );
 
-$wgBlockOpenProxies = false;
-
 if( $wmfRealm == 'production' ) {
 	$wgUDPProfilerHost = '10.64.0.18';  // tungsten
 	$wgAggregateStatsID = $wgVersion;
-}
-
-// $wgProfiler is set in index.php
-if ( isset( $wgProfiler ) ) {
-	$wgProfiling = true;
-	$wgProfileToDatabase = true;
-	$wgProfileSampleRate = 1;
 }
 
 // CORS (cross-domain AJAX, bug 20814)
@@ -564,7 +541,6 @@ $wgSiteMatrixFishbowlSites = array_map( 'trim', file( getRealmSpecificFilename( 
 include( $IP . '/extensions/CharInsert/CharInsert.php' );
 
 include( $IP . '/extensions/ParserFunctions/ParserFunctions.php' );
-$wgMaxIfExistCount = 500; // obs
 $wgExpensiveParserFunctionLimit = 500;
 
 if ( $wmgUseCite ) {
@@ -617,7 +593,6 @@ $wgAvailableRights[] = 'flow-delete';
 
 if ( $wmgUseCategoryTree ) {
 	require( $IP . '/extensions/CategoryTree/CategoryTree.php' );
-	$wgCategoryTreeDynamicTag = true;
 	$wgCategoryTreeCategoryPageMode = $wmgCategoryTreeCategoryPageMode;
 	$wgCategoryTreeCategoryPageOptions = $wmgCategoryTreeCategoryPageOptions;
 }
@@ -863,13 +838,10 @@ if ( $wgDBname == 'nostalgiawiki' ) {
 	} else {
 		$wgSiteNotice = "[//en.wikipedia.org/ See current Wikipedia]";
 	}
-	$wgDefaultUserOptions['highlightbroken'] = 0;
 
 	// Nostalgia skin
 	require_once "$IP/skins/Nostalgia/Nostalgia.php";
 }
-
-$wgUseHashTable = true;
 
 $wgCopyrightIcon = '<a href="//wikimediafoundation.org/"><img src="//' . $wmfHostnames['bits'] . '/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>';
 
@@ -915,8 +887,7 @@ if ( $wmgUseTitleKey && !$wmgUseCirrus ) {
 wfProfileIn( "$fname-misc3" );
 
 // Various DB contention settings
-$wgAntiLockFlags = ALF_NO_LINK_LOCK | ALF_NO_BLOCK_LOCK;
-# $wgAntiLockFlags = ALF_PRELOAD_LINKS | ALF_PRELOAD_EXISTENCE;
+$wgAntiLockFlags = ALF_NO_LINK_LOCK;
 if ( in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki', 'commonswiki' ) ) ) {
 	$wgSiteStatsAsyncFactor = 1;
 }
@@ -1204,8 +1175,6 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthCookies = true;
 
 	$wgDisableUnmergedEditing = $wmgDisableUnmergedEdits;
-	$wgCentralAuthSilentLogin = $wmgCentralAuthSilentLogin;
-	$wgCentralAuthUseOldAutoLogin = !$wgCentralAuthSilentLogin;
 	$wgCentralAuthUseEventLogging = $wmgCentralAuthUseEventLogging;
 
 	if( $wmfRealm == 'production' ) {
@@ -1470,7 +1439,6 @@ if ( $wmgUseCentralNotice ) {
 
 	// Enable the CentralNotice/Translate integration
 	$wgNoticeUseTranslateExtension = true;
-	$wgNoticeRunMessageIndexRebuildJobImmediately = false;
 
 	// Bug 49905
 	$wgNoticeUseLanguageConversion = true;
@@ -1754,7 +1722,6 @@ if ( $wmgUseUploadWizard ) {
 	$wgUploadStashScalerBaseUrl = "//{$wmfHostnames['upload']}/$site/$lang/thumb/temp";
 	$wgUploadWizardConfig = array(
 		# 'debug' => true,
-		'disableResourceLoader' => false,
 		'autoAdd' => array(
 			'categories' => array(
 				'Uploaded with UploadWizard',
