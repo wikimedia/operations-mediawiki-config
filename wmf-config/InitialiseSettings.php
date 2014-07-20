@@ -11506,6 +11506,7 @@ $wgConf->settings = array(
 	'ruwikiversity' => 'uca-ru', // bug 52997
 	'ruwikivoyage' => 'uca-ru', // bug 52997
 	'ruwiktionary' => 'uca-ru', // bug 52997
+	'shwiki' => 'uca-hr', // bug 67287
 	'svwiki' => 'uca-sv', // bug 45446
 	'svwikisource' => 'uca-sv@collation=standard', // bug 46058
 	'thwikibooks' => 'uca-default', // bug 48097
