@@ -105,6 +105,15 @@ if ( $wmgUseContentTranslation ) {
 		'timeout' => 10000,
 		'prefix' => $wgDBname,
 	);
+
+	// When opening Special:ContentTranslation from entry points,
+	// open it in a wiki in the target language
+	$wgContentTranslationTranslateInTarget = true;
+
+	// The domain template for creating a new page from scratch
+	// and for opening Special:ContentTranslation from entry points.
+	// $1 is replaced with language code.
+	$wgContentTranslationDomainTemplate = '$1.wikipedia.beta.wmflabs.org';
 }
 
 if ( $wmgUseCentralNotice ) {
