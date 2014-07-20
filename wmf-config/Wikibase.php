@@ -64,6 +64,10 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
 
 	$wgWBRepoSettings['internalEntitySerializerClass'] = 'Wikibase\Lib\Serializers\LegacyInternalEntitySerializer';
+
+	// until AddEppRedirectTarget.sql is applied (bug 68290)
+	$wgWBRepoSettings['useRedirectTargetColumn'] = false;
+
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
 
 	$wgPropertySuggesterMinProbability = 0.071;
