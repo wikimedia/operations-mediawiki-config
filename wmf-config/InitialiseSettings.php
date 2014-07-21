@@ -1179,6 +1179,7 @@ $wgConf->settings = array(
 	'plwiki' => '//pl.wikipedia.org/wiki/Wikipedia:Prześlij_plik', // bug 42579
 	'plwikinews' => false,
 	'plwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pl',
+	'plwikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pl', // bug 68191
 	'ptwiki' => '/wiki/Wikipedia:Carregar_ficheiro',
 	'ptwikibooks' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pt',
 	'ptwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pt', // bug 42934
