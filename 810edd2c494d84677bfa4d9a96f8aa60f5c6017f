@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_2d64b7ad",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 6329,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-07-21T02:45:48Z",
+      "side": 1,
+      "message": "No... please don\u0027t do that. This is a list of legacy exceptions. Every time anyone adds anything to this list, bot operators have to update their exceptions as well. The default channel is the host name -.org. That\u0027s what everybody expects. This used to be malformed based on $lang.$site, and we fixed that to be hostname instead and hardcoded the exceptions.",
+      "revId": "810edd2c494d84677bfa4d9a96f8aa60f5c6017f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
