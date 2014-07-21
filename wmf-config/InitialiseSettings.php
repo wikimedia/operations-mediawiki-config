@@ -6348,6 +6348,7 @@ $wgConf->settings = array(
 ),
 
 'wmgRC2UDPPrefix' => array(
+	// Do NOT add any more wikis here; this is a list of legacy exceptions
 	'default' => false,
 	'advisorywiki' => "#advisory.wikipedia\t",
 	'arbcom_dewiki' => "#arbcom-de.wikipedia\t",
@@ -6392,6 +6393,7 @@ $wgConf->settings = array(
 	'wikimania2013wiki' => "#wikimania2013.wikipedia\t",
 	'wikimania2014wiki' => "#wikimania2014.wikipedia\t",
 	'wikimaniateamwiki' => "#wikimaniateam.wikipedia\t",
+	// Do NOT add any more wikis here; this is a list of legacy exceptions
 ),
 
 # wgNamespacesToBeSearchedDefault @{
