@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_adbc27d6",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 110
+      },
+      "writtenOn": "2014-07-21T03:32:54Z",
+      "side": 1,
+      "message": "Make sure we understand the implication: getSourceArticleUrl in ext.cx.source.js uses this. But the cxserver loads articles from production wikis and does not respect wgContentTranslationDomainTemplate. \ngetSourceArticleUrl is used for \"view page\" link",
+      "revId": "06e0c7e30da2adad5640ffeccc5c9b2cbca2681e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
