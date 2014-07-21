@@ -1,3 +1,3 @@
 <?php
 
-$wgObjectCaches['sessions'] = $wgObjectCaches["beta-memcached-{$wmfDatacenter}"];
+$wgObjectCaches['sessions'] = $wgObjectCaches["memcached-pecl"];
