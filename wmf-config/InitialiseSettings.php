@@ -6196,6 +6196,9 @@ $wgConf->settings = array(
 	'zhwiki' => array(
 		'pagetitle-view-mainpage',
 	),
+	'zhwikivoyage' => array( // bug 64816
+		'pagetitle-view-mainpage',
+	),
 ),
 # @}
 
