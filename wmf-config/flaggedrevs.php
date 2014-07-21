@@ -736,7 +736,7 @@ elseif ( $wgDBname == 'trwikiquote' ) {
 
 elseif( $wgDBname == 'ukwiki' ) {
 	$wgFlaggedRevValues = 1;
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_CATEGORY, NS_TEMPLATE );
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_MAIN, NS_FILE, NS_CATEGORY, NS_TEMPLATE ) );
 	$wgFlaggedRevTags['accuracy']['levels'] = 3;
 	$wgFlaggedRevsOverride = false;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
