@@ -15,11 +15,11 @@ if( $wmfRealm == 'labs' ) {  # safe guard
  */
 $wgMemCachedPersistent = true;
 
-$wgMainCacheType = "beta-memcached-eqiad";
+$wgMainCacheType = "memcached-pecl";
 
 $wgMemCachedTimeout = 500000; # micro seconds
 
-$wgObjectCaches['beta-memcached-eqiad'] = array(
+$wgObjectCaches['memcached-pecl'] = array(
 	'class'      => 'MemcachedPeclBagOStuff',
 	'serializer' => 'php',
 	'persistent' => false,
