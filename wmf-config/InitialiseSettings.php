@@ -6391,7 +6391,6 @@ $wgConf->settings = array(
 	'wikimania2012wiki' => "#wikimania2012.wikipedia\t",
 	'wikimania2013wiki' => "#wikimania2013.wikipedia\t",
 	'wikimania2014wiki' => "#wikimania2014.wikipedia\t",
-	'wikimania2015wiki' => "#wikimania2015.wikipedia\t",
 	'wikimaniateamwiki' => "#wikimaniateam.wikipedia\t",
 ),
 
