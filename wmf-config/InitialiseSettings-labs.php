@@ -27,7 +27,7 @@ function wmfLabsOverrideSettings() {
 	// This is to ensure that *.beta-hhvm.wmflabs.org wikis use
 	// loginwiki.wikimedia.beta-hhvm.wmflabs.org as their loginwiki.
 	$wgConf->siteParamsCallback = function( $conf, $wiki ) {
-		$variant = defined( 'HHVM_VERSION' ) ? 'beta-hhvm' : 'beta';
+		$variant = 'beta';
 		return array( 'params' => array( 'variant' => $variant ) );
 	};
 

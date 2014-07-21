@@ -229,13 +229,6 @@ wfProfileIn( "$fname-misc1" );
 
 extract( $globals );
 
-# Extensions disabled when running under HHVM due to compatibility issues.
-if ( $wmfRealm === 'labs' && defined( 'HHVM_VERSION' ) ) {
-	$wmgUseWikibaseRepo = false;
-	$wmgUseWikibaseClient = false;
-	$wmgUseMultimediaViewer = false;
-}
-
 # -------------------------------------------------------------------------
 # Settings common to all wikis
 
@@ -278,10 +271,8 @@ $wgScript           = $wgScriptPath . '/index.php';
 $wgRedirectScript	= $wgScriptPath . '/redirect.php';
 $wgInternalServer = $wgCanonicalServer;
 
-if ( $wgDBname !== 'testwiki' && !defined( 'HHVM_VERSION' ) && isset( $_SERVER['SERVER_NAME'] ) ) {
+if ( $wgDBname != 'testwiki' && isset( $_SERVER['SERVER_NAME'] ) ) {
 	// Make testing JS/skin changes easy by not running load.php through bits for testwiki
-	// Avoid bits on *.beta-hhvm.wmflabs.org as well, since the VCL code for
-	// URL rewriting doesn't support having multiple domain suffixes.
 	$wgLoadScript = "//{$wmfHostnames['bits']}/{$_SERVER['SERVER_NAME']}/load.php";
 }
 
@@ -2390,13 +2381,8 @@ if ( $wmgUseScribunto ) {
 	$wgScribuntoUseGeSHi = true;
 	$wgScribuntoUseCodeEditor = true;
 
-	if ( $wmfRealm === 'labs' && defined( 'HHVM_VERSION' ) ) {
-		$wgScribuntoDefaultEngine = 'luastandalone';
-		$wgScribuntoEngineConf['luastandalone']['luaPath'] = '/usr/bin/lua5.1';
-	} else {
-		$wgScribuntoDefaultEngine = 'luasandbox';
-		$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
-	}
+	$wgScribuntoDefaultEngine = 'luasandbox';
+	$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
 }
 
 if ( $wmgUseSubpageSortkey ) {
