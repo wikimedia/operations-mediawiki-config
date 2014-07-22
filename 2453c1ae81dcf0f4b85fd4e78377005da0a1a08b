@@ -16,6 +16,24 @@
       "revId": "2453c1ae81dcf0f4b85fd4e78377005da0a1a08b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_585c551e",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 384
+      },
+      "writtenOn": "2014-07-22T17:01:04Z",
+      "side": 0,
+      "message": "No; it was an oversight on my part. I figured it was a trivial problem though that was not a blocker.",
+      "parentUuid": "8e28a382_58457546",
+      "revId": "2453c1ae81dcf0f4b85fd4e78377005da0a1a08b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
