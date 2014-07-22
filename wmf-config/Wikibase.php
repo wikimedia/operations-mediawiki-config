@@ -46,6 +46,11 @@ if ( $wmgUseWikibaseRepo ) {
 	);
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
+		$wgWBRepoSettings['siteLinkGroups'][] = 'testwikidata';
+		$wgWBRepoSettings['specialSiteLinkGroups'][] = 'testwikidata';
+	}
+
+	if ( $wgDBname === 'testwikidatawiki' ) {
 		// there is no cronjob dispatcher yet, this will do nothing
 		$wgWBRepoSettings['clientDbList'] = array( 'test2wiki' );
 	} else {
@@ -74,7 +79,7 @@ if ( $wmgUseWikibaseClient ) {
 	// to be safe, keeping this here although $wgDBname is default setting
 	$wgWBClientSettings['siteGlobalID'] = $wgDBname;
 
-	if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki' ) ) ) {
+	if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki', 'testwikidatawiki' ) ) ) {
 		$wgWBClientSettings['changesDatabase'] = 'testwikidatawiki';
 		$wgWBClientSettings['repoDatabase'] = 'testwikidatawiki';
 		$wgWBClientSettings['repoUrl'] = "//test.wikidata.org";
@@ -107,10 +112,6 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['allowArbitraryDataAccess'] = false;
 
-	if ( $wgDBname === 'testwikidatawiki' ) {
-		$wgWBClientSettings['allowArbitraryDataAccess'] = true;
-	}
-
 	$wgHooks['SetupAfterCache'][] = 'wmfWBClientExcludeNS';
 
 	function wmfWBClientExcludeNS() {
@@ -124,6 +125,20 @@ if ( $wmgUseWikibaseClient ) {
 
 		return true;
 	};
+
+	if ( $wgDBname === 'testwikidatawiki' ) {
+		$wgWBClientSettings['allowArbitraryDataAccess'] = true;
+
+		$wgWBClientSettings['namespaces'] = array(
+			NS_PROJECT,
+			NS_TEMPLATE,
+			NS_HELP
+		);
+
+		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
+		$wgWBClientSettings['injectRecentChanges'] = false;
+		$wgWBClientSettings['showExternalRecentChanges'] = false;
+	}
 
 	foreach( $wmgWikibaseClientSettings as $setting => $value ) {
 		$wgWBClientSettings[$setting] = $value;
