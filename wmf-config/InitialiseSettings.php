@@ -13196,39 +13196,18 @@ $wgConf->settings = array(
 
 'wmgRelatedSitesPrefixes' => array(
 	'default' => array(),
-	'wikivoyage' => array(
-		'wikipedia',
-		'wikitravel',
-		'dmoz',
-		'citizendium',
-		'gen',
-		'commons',
-		'tech',
-		'assoc',
-		'wmc',
-		'wtp'
-	),
+	'wikivoyage' => array( 'wikipedia', 'dmoz', 'citizendium', 'commons' ),
 ),
 
-// @todo: settings for RelatedSites, might need to be revised ;)
+'wgExtraInterlanguageLinkPrefixes' => array(
+	'default' => array(),
+	'wikisource' => array( 'mul' ),
+	'wikiversity' => array( 'mul' ),
+	'wikivoyage' => array( 'wikipedia', 'dmoz', 'citizendium', 'commons' ),
+),
+
 'wmgExtraLanguageNames' => array(
 	'default' => array(),
-	'wikivoyage' => array(
-		'wikitravel' => 'Wikitravel',
-		'wikipedia' => 'Wikipedia',
-		'WikiPedia' => 'Wikipedia',
-		'citizendium' => 'Citizendium',
-		'dmoz' => 'DMOZ',
-		'Radreise-Wiki' => 'Radreise-Wiki',
-		'rezepte' => 'Rezepte-Wiki',
-		'commons' => 'Wikimedia Commons',
-		'wmc' => 'Wikimedia Commons',
-		'wtp' => 'Wikitravel Press',
-		'gen' => 'General',
-		'tech' => 'Technical',
-		'assoc' => 'Association',
-		'ldbwiki' => 'Location Database Wiki',
-	),
 	// Further languages for (test)wikidata not (yet) supported by MediaWiki (bug 59905)
 	'wikidatawiki' => array(
 		'rwr' => 'मारवाड़ी',
