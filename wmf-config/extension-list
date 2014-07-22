@@ -87,6 +87,7 @@ $IP/extensions/PageTriage/PageTriage.php
 $IP/extensions/ParserFunctions/ParserFunctions.php
 $IP/extensions/Parsoid/php/Parsoid.php
 $IP/extensions/PdfHandler/PdfHandler.php
+$IP/extensions/Petition/Petition.php
 $IP/extensions/Poem/Poem.php
 $IP/extensions/PoolCounter/PoolCounterClient.php
 $IP/extensions/Popups/Popups.php

@@ -13733,6 +13733,12 @@ $wgConf->settings = array(
 	'private' => false,
 ),
 
+'wmgUsePetition' => array(
+	'default' => false,
+	'testwiki' => true,
+	'foundationwiki' => true,
+),
+
 );
 
 

@@ -2626,6 +2626,10 @@ if ( $wmgUseOAuth ) {
 	$wgMWOAuthGrantPermissions['editpage']['property-term'] = true;
 }
 
+if ( $wmgUsePetition ) {
+	require_once( "$IP/extensions/Petition/Petition.php" );
+}
+
 ### End (roughly) of general extensions ########################
 
 $wgApplyIpBlocksToXff = $wmgUseXFFBlocks;
