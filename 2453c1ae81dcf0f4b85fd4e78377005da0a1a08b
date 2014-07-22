@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_58457546",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-07-22T17:00:07Z",
+      "side": 0,
+      "message": "Did localisation ever work on labs? I see it wasn\u0027t added to extension-list-labs ;)",
+      "revId": "2453c1ae81dcf0f4b85fd4e78377005da0a1a08b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
