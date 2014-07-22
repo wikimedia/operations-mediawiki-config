@@ -105,6 +105,12 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['siteGroup'] = $wmgWikibaseSiteGroup;
 
+	$wgWBClientSettings['allowArbitraryDataAccess'] = false;
+
+	if ( $wgDBname === 'testwikidatawiki' ) {
+		$wgWBClientSettings['allowArbitraryDataAccess'] = true;
+	}
+
 	$wgHooks['SetupAfterCache'][] = 'wmfWBClientExcludeNS';
 
 	function wmfWBClientExcludeNS() {
