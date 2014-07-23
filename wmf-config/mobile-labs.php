@@ -12,6 +12,8 @@ if ( $wmgMobileFrontend ) {
 		if ( !$wmgZeroPortal ) {
 			$wgJsonConfigs['JsonZeroConfig']['remote']['url'] = 'http://zero.wikimedia.beta.wmflabs.org/w/api.php';
 		}
+		$wgZeroBannerFont = 'FreeSansWMF.ttf';
+		$wgZeroBannerFontSize = '8';
 	}
 }
 
