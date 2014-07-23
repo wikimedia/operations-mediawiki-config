@@ -13345,6 +13345,7 @@ $wgConf->settings = array(
 		'otherProjectsLinks' => array( 'itwiki', 'itwikiquote', 'commonswiki', 'itwikivoyage' ),
 	),
 	'kowiki' => array(
+		'otherProjectsLinksByDefault' => true,
 		'otherProjectsLinks' => array( 'kowikiquote', 'kowikisource', 'commonswiki' ),
 	),
 	'lbwiki' => array(
