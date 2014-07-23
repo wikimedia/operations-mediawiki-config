@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_865a4c51",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 950,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2014-07-23T23:30:34Z",
+      "side": 1,
+      "message": "a ternary expression with two conditions that is complicated enough to require parens for clarity should probably not be a ternary expression, let alone one embedded in the parameter list of a multi-line function invocation..",
+      "revId": "6b93c62f45c602aedb47b8ab2c39e4497dadc93a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
