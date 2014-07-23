@@ -193,10 +193,4 @@ if ( $wmgUseFundraisingTranslateWorkflow ) {
 	include( "$IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php" );
 }
 
-if ( $wmgUseScribunto && defined( 'HHVM_VERSION' ) ) {
-	// Temporary work around for bug 68413
-	$wgScribuntoDefaultEngine = 'luastandalone';
-	$wgScribuntoEngineConf['luastandalone']['luaPath'] = '/usr/bin/lua5.1';
-}
-
 } # end safeguard

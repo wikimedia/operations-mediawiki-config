@@ -2379,8 +2379,14 @@ if ( $wmgUseScribunto ) {
 	$wgScribuntoUseGeSHi = true;
 	$wgScribuntoUseCodeEditor = true;
 
-	$wgScribuntoDefaultEngine = 'luasandbox';
-	$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
+	// Temporary work around for bug 68413
+	if ( defined( 'HHVM_VERSION' ) ) {
+		$wgScribuntoDefaultEngine = 'luastandalone';
+		$wgScribuntoEngineConf['luastandalone']['luaPath'] = '/usr/bin/lua5.1';
+	} else {
+		$wgScribuntoDefaultEngine = 'luasandbox';
+		$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
+	}
 }
 
 if ( $wmgUseSubpageSortkey ) {
