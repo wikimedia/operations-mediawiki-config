@@ -952,7 +952,7 @@ $wgExtensionFunctions[] = function() {
 			gmdate( 'r' ) . "\t" .
 			"$uri\t" .
 			"{$_SERVER['HTTP_X_FORWARDED_FOR']}, {$_SERVER['REMOTE_ADDR']}\t" .
-			( $_REQUEST['wpSave'] ? 'save' : '' ) . "\n",
+			( empty( $_REQUEST['wpSave'] ) ? '' : 'save' ) . "\n",
 			"udp://$wmfUdp2logDest/xff"
 		);
 		if ( $wgRequest->getIP() === '127.0.0.1' ) {
