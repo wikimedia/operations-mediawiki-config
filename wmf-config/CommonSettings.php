@@ -866,7 +866,9 @@ if ( $wgDBname == 'nostalgiawiki' ) {
 
 $wgUseHashTable = true;
 
-$wgCopyrightIcon = '<a href="//wikimediafoundation.org/"><img src="//' . $wmfHostnames['bits'] . '/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>';
+$wgRightsUrl = '//wikimediafoundation.org/';
+$wgRightsIcon = "{$wmfHostnames['bits']}/images/wikimedia-button.png";
+$wgRightsText = 'Wikimedia Foundation';
 
 # For Special:Cite, we only want it on wikipedia (but can't count on $site),
 # not on these fakers.
