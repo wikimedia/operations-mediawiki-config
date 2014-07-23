@@ -2379,8 +2379,13 @@ if ( $wmgUseScribunto ) {
 	$wgScribuntoUseGeSHi = true;
 	$wgScribuntoUseCodeEditor = true;
 
-	$wgScribuntoDefaultEngine = 'luasandbox';
-	$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
+	if ( $wmfRealm === 'labs' && defined( 'HHVM_VERSION' ) ) {
+			$wgScribuntoDefaultEngine = 'luastandalone';
+			$wgScribuntoEngineConf['luastandalone']['luaPath'] = '/usr/bin/lua5.1';
+	} else {
+			$wgScribuntoDefaultEngine = 'luasandbox';
+			$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
+	}
 }
 
 if ( $wmgUseSubpageSortkey ) {
