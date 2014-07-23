@@ -1750,8 +1750,6 @@ if ( $wmgUseUploadWizard ) {
 				'Uploaded with UploadWizard',
 			),
 		),
-		// If Special:UploadWizard again experiences unexplained slowness loading JavaScript (spinner on intial load spinning forever)
-		'flickrApiUrl' => '//api.flickr.com/services/rest/?',
 		// Normally we don't include API keys in CommonSettings, but this key
 		// isn't private since it's used on the client-side, i.e. anyone can see
 		// it in the outgoing AJAX requests to Flickr.
