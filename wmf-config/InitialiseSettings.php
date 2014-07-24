@@ -13424,9 +13424,12 @@ $wgConf->settings = array(
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
-
 'wmgPageImagesExpandOpenSearchXml' => array(
 	'default' => true,
+),
+'wmgPageImagesUseGalleries' => array(
+	'default' => false,
+	'commonswiki' => true,
 ),
 
 'wmgUseTorBlock' => array(
