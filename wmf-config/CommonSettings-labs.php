@@ -193,4 +193,10 @@ if ( $wmgUseFundraisingTranslateWorkflow ) {
 	include( "$IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php" );
 }
 
+if ( $wmgUseScribunto && defined( 'HHVM_VERSION' ) ) {
+	// Testing fix for bug 68413 in hhvm-luasandbox 2.0-3
+	$wgScribuntoDefaultEngine = 'luasandbox';
+	$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
+}
+
 } # end safeguard
