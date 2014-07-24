@@ -13396,6 +13396,10 @@ $wgConf->settings = array(
 	'plwiki' => array(
 		'sort' => 'alphabetic',
 	),
+	'ruwiki' => array(
+		'otherProjectsLinksByDefault' => true,
+		'otherProjectsLinks' => array( 'ruwikivoyage', 'ruwikiquote', 'ruwikisource', 'commonswiki' ),
+	),
 	'simplewiki' => array(
 		'sort' => 'alphabetic',
 	),
