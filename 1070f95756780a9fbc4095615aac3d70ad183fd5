@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_4730db99",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 1629
+      },
+      "writtenOn": "2014-07-24T16:31:04Z",
+      "side": 1,
+      "message": "this would be generally good but let\u0027s play it safe and start with 10mb until the swift frontend bandwidth upgrade is in place",
+      "revId": "1070f95756780a9fbc4095615aac3d70ad183fd5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
