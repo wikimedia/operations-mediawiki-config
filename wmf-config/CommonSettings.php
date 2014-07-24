@@ -930,6 +930,7 @@ $wgThumbnailEpoch = '20130101000000';
 include( $IP . '/extensions/OAI/OAIRepo.php' );
 $oaiAgentRegex = '/experimental/';
 $oaiAuth = true;
+$oaiAudit = true;
 $oaiAuditDatabase = 'oai';
 $oaiChunkSize = 40;
 
