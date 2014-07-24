@@ -13038,6 +13038,7 @@ $wgConf->settings = array(
 		'Talk:Phabricator/Help',
 		'Talk:Search',
 		'Talk:Cite-from-id',
+		'Talk:Sparrow_(sandbox_for_testing_at_Wikimania)',
 	),
 	'enwiki' => array( // Bug 60178
 		'Wikipedia talk:WikiProject Breakfast',
