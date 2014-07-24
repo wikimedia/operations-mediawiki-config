@@ -150,4 +150,19 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
 	$wgWBClientSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
+
+	$wgWBClientSettings['specialSiteLinkGroups'] = array( 'commons' );
+
+	$wgWBClientSettings['siteLinkGroups'] = array(
+		'wikipedia',
+		'wikiquote',
+		'wikisource',
+		'wikivoyage',
+		'commons'
+	);
+
+	if ( $wgDBname === 'testwikidatawiki' ) {
+		$wgWBClientSettings['siteLinkGroups'][] = 'testwikidata';
+		$wgWBClientSettings['specialSiteLinkGroups'][] = 'testwikidata';
+	}
 }
