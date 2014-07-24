@@ -98,6 +98,8 @@ if ( $wmgUseWikibaseClient ) {
 		'wikibase-property' => 'Property'
 	);
 
+	$wgWBClientSettings['specialSiteLinkGroups'] = array( 'commons' );
+
 	$wgWBClientSettings['siteLinkGroups'] = array(
 		'wikipedia',
 		'wikiquote',
@@ -105,6 +107,11 @@ if ( $wmgUseWikibaseClient ) {
 		'wikivoyage',
 		'commons'
 	);
+
+	if ( $wgDBname === 'testwikidatawiki' ) {
+		$wgWBClientSettings['siteLinkGroups'][] = 'testwikidata';
+		$wgWBClientSettings['specialSiteLinkGroups'][] = 'testwikidata';
+	}
 
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 
