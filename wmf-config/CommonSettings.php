@@ -2352,7 +2352,7 @@ if ( $wmgUseFlow ) {
 
 	// Flow Parsoid - same values as $wgVisualEditorParsoid*, but separated for
 	// those wikis where $wmgUseVisualEditor is false
-	$wgFlowParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
+	$wgFlowParsoidURL = $wmgParsoidURL;
 	$wgFlowParsoidPrefix = $wgDBname;
 	$wgFlowParsoidTimeout = 100;
 
@@ -2361,7 +2361,6 @@ if ( $wmgUseFlow ) {
 	// Requires that Parsoid is available for all wikis using Flow.
 	$wgFlowContentFormat = 'html';
 
-	$wgFlowParsoidURL = $wmgParsoidURL;
 
 	$wgFlowDefaultWikiDb = $wmgFlowDefaultWikiDb;
 	$wgFlowCluster = $wmgFlowCluster;
