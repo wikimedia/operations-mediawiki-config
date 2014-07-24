@@ -2002,7 +2002,7 @@ if ( $wmgUseMobileApp ) {
 
 require( getRealmSpecificFilename( "$wmfConfigDir/mobile.php" ) );
 
-if ( $wmgUseMobileFrontend || $wmgUseFlow ) {
+if ( $wmgMobileFrontend || $wmgUseFlow ) {
 	// Needed for Flow frontend-rewrite and MobileFrontend
 	require_once( "$IP/extensions/Mantle/Mantle.php" );
 }
