@@ -2002,6 +2002,11 @@ if ( $wmgUseMobileApp ) {
 
 require( getRealmSpecificFilename( "$wmfConfigDir/mobile.php" ) );
 
+if ( $wmgUseMobileFrontend || $wmgUseFlow ) {
+	// Needed for Flow frontend-rewrite and MobileFrontend
+	require_once( "$IP/extensions/Mantle/Mantle.php" );
+}
+
 # MUST be after MobileFrontend initialization
 if ( $wmgEnableTextExtracts ) {
 	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
@@ -2344,7 +2349,6 @@ if ( $wmgUseThanks ) {
 
 if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
-	require_once( "$IP/extensions/Mantle/Mantle.php" ); // needed for Flow frontend-rewrite
 
 	// Flow Parsoid - same values as $wgVisualEditorParsoid*, but separated for
 	// those wikis where $wmgUseVisualEditor is false
