@@ -13,7 +13,7 @@ if ( $wmgMobileFrontend ) {
 			$wgJsonConfigs['JsonZeroConfig']['remote']['url'] = 'http://zero.wikimedia.beta.wmflabs.org/w/api.php';
 		}
 		$wgZeroBannerFont = '/usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf';
-		$wgZeroBannerFontSize = '8';
+		$wgZeroBannerFontSize = '10';
 	}
 }
 
