@@ -29,7 +29,7 @@ if( $wmfRealm == 'labs' ) { # safe guard
 			'password'	  => $wgDBpassword,
 			'type'		  => 'mysql',
 			'flags'		  => DBO_DEFAULT,
-			'max lag'	  => 30,
+			'max lag'	  => 300, // 5 minutes
 		),
 
 		'hostsByName' => array(
