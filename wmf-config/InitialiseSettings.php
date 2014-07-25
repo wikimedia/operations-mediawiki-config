@@ -7952,7 +7952,7 @@ $wgConf->settings = array(
 	),
 	'+foundationwiki' => array(
 		'sysop' => array( 'inactive', 'flood' ),
-		'bureaucrat' => array( 'import', 'transwiki', 'inactive' ),
+		'bureaucrat' => array( 'import', 'transwiki', 'inactive', 'petitiondata' ),
 	),
 	'+frwiki' => array(
 		'bureaucrat' => array( 'abusefilter', 'accountcreator' ),
@@ -8463,7 +8463,7 @@ $wgConf->settings = array(
 	),
 	'+foundationwiki' => array(
 		'sysop' => array( 'inactive', 'confirmed', 'flood' ),
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'import', 'transwiki', 'inactive', 'confirmed' ),
+		'bureaucrat' => array( 'sysop', 'bureaucrat', 'import', 'transwiki', 'inactive', 'confirmed', 'petitiondata' ),
 	),
 	'+frwiki' => array(
 		'bureaucrat' => array( 'abusefilter', 'sysop', 'accountcreator' ),
