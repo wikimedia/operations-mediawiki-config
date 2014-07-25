@@ -1388,7 +1388,7 @@ $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
 switch( $wmfRealm ) {
 case 'production'  :
-	$wgImageMagickTempDir = '/a/magick-tmp';
+	$wgImageMagickTempDir = '/tmp/magick-tmp';
 	break;
 case 'labs':
 	$wgImageMagickTempDir = '/tmp/a/magick-tmp';
