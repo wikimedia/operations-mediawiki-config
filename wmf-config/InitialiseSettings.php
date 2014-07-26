@@ -9450,6 +9450,12 @@ $wgConf->settings = array(
 	'+dewikivoyage' => array( 104 ),
 ),
 
+'wgExtraSignatureNamespaces' => array(
+	'default' => array( NS_PROJECT ),
+	'+metawiki' => array( NS_MAIN ),
+	'+wikimania2014wiki' => array( NS_MAIN ),
+),
+
 'wmgExemptFromUserRobotsControlExtra' => array(
 	'default' => array(),
 	'enwiki' => array( 118, 119 ), // draft and draft talk
