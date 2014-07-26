@@ -13,21 +13,25 @@
  * (c) Changes PHP's current directory to the directory of this file.
  *
  * @param $file string File path (relative to MediaWiki dir)
+ * @param $wiki string Force the Wiki ID rather than detecting it
  * @return string Absolute file path with proper MW location
  */
-function getMediaWiki( $file ) {
+function getMediaWiki( $file, $wiki = null ) {
 	global $IP;
 	require_once( __DIR__ . '/MWMultiVersion.php' );
 
-	$scriptName = @$_SERVER['SCRIPT_NAME'];
-	$serverName = @$_SERVER['SERVER_NAME'];
-
-	# Upload URL hit (to upload.wikimedia.org rather than wiki of origin)...
-	if ( $scriptName === '/w/thumb.php' && $serverName === 'upload.wikimedia.org' ) {
-		$multiVersion = MWMultiVersion::initializeForUploadWiki( $_SERVER['PATH_INFO'] );
-	# Regular URL hit (wiki of origin)...
+	if ( $wiki == null ) {
+		$scriptName = @$_SERVER['SCRIPT_NAME'];
+		$serverName = @$_SERVER['SERVER_NAME'];
+		# Upload URL hit (to upload.wikimedia.org rather than wiki of origin)...
+		if ( $scriptName === '/w/thumb.php' && $serverName === 'upload.wikimedia.org' ) {
+			$multiVersion = MWMultiVersion::initializeForUploadWiki( $_SERVER['PATH_INFO'] );
+		# Regular URL hit (wiki of origin)...
+		} else {
+			$multiVersion = MWMultiVersion::initializeForWiki( $serverName );
+		}
 	} else {
-		$multiVersion = MWMultiVersion::initializeForWiki( $serverName );
+		$multiVersion = MWMultiVersion::initializeFromDBName( $wiki );
 	}
 
 	# Wiki doesn't exist yet?
