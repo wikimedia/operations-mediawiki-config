@@ -9450,6 +9450,14 @@ $wgConf->settings = array(
 	'+dewikivoyage' => array( 104 ),
 ),
 
+'wgExtraSignatureNamespaces' => array(
+	// Namespaces not listed in $wgContentNamespaces are not necessary here
+	// for core, but reinforcing defalt config doesn't harm.
+	'default' => array( NS_PROJECT, NS_HELP ),
+	'+wikimedia' => array( NS_MAIN ),
+	'+special' => array( NS_MAIN ),
+),
+
 'wmgExemptFromUserRobotsControlExtra' => array(
 	'default' => array(),
 	'enwiki' => array( 118, 119 ), // draft and draft talk
