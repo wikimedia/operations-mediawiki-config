@@ -6649,8 +6649,8 @@ $wgConf->settings = array(
 	// Read-only (except stewards)
 	'closed' => array(
 		'*' => array(
-		'edit' => false,
-		'createaccount' => false,
+			'edit' => false,
+			'createaccount' => false,
 		),
 		'user' => array(
 			'edit' => false,
@@ -7636,8 +7636,17 @@ $wgConf->settings = array(
 		'flood' => array( 'bot' => true ),
 	),
 	'viwiki' => array(
-		'rollbacker' => array( 'rollback' => true ),
+		'eliminator' => array( // bug 68612
+			'autopatrol' => true,
+			'delete' => true,
+			'deleterevision' => true,
+			'patrol' => true,
+			'protect' => true,
+			'rollback' => true,
+			'undelete' => true
+		),
 		'flood' => array( 'bot' => true ),
+		'rollbacker' => array( 'rollback' => true ),
 		'patroller' => array( 'patrol' => true ), // bug 46828
 		'autopatrolled' => array( 'autopatrol' => true ), // bug 46828
 	),
@@ -8220,8 +8229,16 @@ $wgConf->settings = array(
 		'sysop' => array( 'confirmed', 'abusefilter', 'rollbacker' ), // Bug 42737 and 45643
 	),
 	'+viwiki' => array(
-		'sysop' => array( 'rollbacker', 'flood', 'patroller', 'autopatrolled' ), // bug 46828
-		'bureaucrat' => array( 'flood' ),
+		'sysop' => array(
+			'rollbacker',
+			'flood',
+			'patroller', // bug 46828
+			'autopatrolled' // bug 46828
+		),
+		'bureaucrat' => array(
+			'eliminator', // bug 68612
+			'flood'
+		),
 	),
 	'+vecwiki' => array(
 		'sysop' => array( 'flood' ),
@@ -8739,8 +8756,16 @@ $wgConf->settings = array(
 		'sysop' => array( 'confirmed' ), // Bug 42737
 	),
 	'+viwiki' => array(
-		'sysop' => array( 'rollbacker', 'flood', 'patroller', 'autopatrolled' ), // bug 46828
-		'bureaucrat' => array( 'flood' ),
+		'sysop' => array(
+			'rollbacker',
+			'flood',
+			'patroller', // bug 46828
+			'autopatrolled' // bug 46828
+		),
+		'bureaucrat' => array(
+			'eliminator', // bug 68612
+			'flood'
+		),
 	),
 	'+vecwiki' => array(
 		'sysop' => array( 'flood' ),
