@@ -2264,18 +2264,20 @@ if ( $wmgUseEducationProgram ) {
 }
 
 if ( $wmgUseWikimediaShopLink ) {
-	require_once( "$IP/extensions/WikimediaShopLink/WikimediaShopLink.php" );
-	$wgWikimediaShopEnableLink = true;
-	$wgWikimediaShopShowLinkCountries = array(
-		'US',
-		'VI',
-		'UM',
-		'PR',
-		'CA',
-		'MX',
-		'JP',
-	);
-	$wgWikimediaShopLinkTarget = '//shop.wikimedia.org';
+	/**
+	 * @param Skin $skin
+	 * @param array $sidebar
+	 * @return bool
+	 */
+	$wgHooks['SkinBuildSidebar'][] = function ( $skin, &$sidebar ) {
+		$sidebar['navigation'][] = array(
+			'text'  => $skin->msg( 'wikimediashoplink-linktext' ),
+			'href'  => '//shop.wikimedia.org',
+			'title' => $skin->msg( 'wikimediashoplink-link-tooltip' ),
+			'id'    => 'n-shoplink',
+		);
+		return true;
+	};
 }
 
 if ( $wmgEnableGeoData
