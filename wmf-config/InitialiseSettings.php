@@ -13588,6 +13588,12 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
+'wmgUseCiteThisPage' => array(
+	'default' => false,
+	'loginwiki' => false,
+	'votewiki' => false,
+),
+
 'wmgUsePoem' => array(
 	'default' => true,
 	'loginwiki' => false,
