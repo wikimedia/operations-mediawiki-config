@@ -572,6 +572,10 @@ if ( $wmgUseCite ) {
 	require( $IP . '/extensions/Cite/SpecialCite.php' );
 }
 
+if ( $wmgUseCiteThisPage ) {
+	require( $IP . '/extensions/CiteThisPage/CiteThisPage.php' );
+}
+
 if ( $wmgUseInputBox ) {
 	include( $IP . '/extensions/InputBox/InputBox.php' );
 }
