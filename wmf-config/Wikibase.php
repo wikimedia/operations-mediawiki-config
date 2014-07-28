@@ -48,6 +48,10 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['siteLinkGroups'][] = 'testwikidata';
 		$wgWBRepoSettings['specialSiteLinkGroups'][] = 'testwikidata';
+		$wgWBRepoSettings['badgeItems'] = array(
+			'Q608' => 'wb-badge-goodarticle',
+			'Q609' => 'wb-badge-featuredarticle'
+		);
 	}
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
