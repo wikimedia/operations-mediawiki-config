@@ -2002,12 +2002,13 @@ if ( $wmgUseMobileApp ) {
 
 # Mobile related configuration
 
-require( getRealmSpecificFilename( "$wmfConfigDir/mobile.php" ) );
-
 if ( $wmgMobileFrontend || $wmgUseFlow ) {
 	// Needed for Flow frontend-rewrite and MobileFrontend
 	require_once( "$IP/extensions/Mantle/Mantle.php" );
 }
+
+require( getRealmSpecificFilename( "$wmfConfigDir/mobile.php" ) );
+
 
 # MUST be after MobileFrontend initialization
 if ( $wmgEnableTextExtracts ) {
