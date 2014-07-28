@@ -24,3 +24,4 @@ if ( $wgDBname == 'enwiki' ) {
 }
 
 $wgSearchTypeAlternatives = array();
+$wgCirrusSearchAllFields = array( 'build' => true, 'use' => false );
