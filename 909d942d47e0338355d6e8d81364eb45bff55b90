@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_97adb99a",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2014-07-28T18:28:59Z",
+      "side": 1,
+      "message": "Since there are also featured portals, lists and \"anexos\" (this one on ptwiki), maybe this could be  \u0027wb-badge-goodpage\u0027 and \u0027wb-badge-featuredpage\u0027?",
+      "revId": "909d942d47e0338355d6e8d81364eb45bff55b90",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
