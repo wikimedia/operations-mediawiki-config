@@ -6957,10 +6957,17 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true )
 	),
 	'eswiki' => array(
-		'rollbacker' => array( 'rollback' => true ),
+		'rollbacker' => array(
+			'rollback' => true,
+			'abusefilter-log-detail' => true, // Bug 68319
+		),
 		'*' => array( 'patrolmarks' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
-		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
+		'patroller' => array(
+			'patrol' => true,
+			'autopatrol' => true,
+			'abusefilter-log-detail' => true, // Bug 68319
+		),
 		'flood' => array( 'bot' => true ), // Bug 48682
 	),
 	'eswikibooks' => array(
