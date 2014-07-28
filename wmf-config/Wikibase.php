@@ -45,6 +45,11 @@ if ( $wmgUseWikibaseRepo ) {
 		'commons'
 	);
 
+	$wgWBRepoSettings['badgeItems'] = array(
+		'Q17437798' => 'wb-badge-goodarticle',
+		'Q17437796' => 'wb-badge-featuredarticle'
+	);
+
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['siteLinkGroups'][] = 'testwikidata';
 		$wgWBRepoSettings['specialSiteLinkGroups'][] = 'testwikidata';
