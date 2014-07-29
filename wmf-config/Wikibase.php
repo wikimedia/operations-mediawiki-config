@@ -42,12 +42,13 @@ if ( $wmgUseWikibaseRepo ) {
 		'wikiquote',
 		'wikisource',
 		'wikivoyage',
-		'commons'
 	);
 
-	if ( $wgDBname === 'testwikidatawiki' ) {
-		$wgWBRepoSettings['siteLinkGroups'][] = 'testwikidata';
+	if ( $wgDBname !== 'testwikidatawiki' ) {
+		$wgWBRepoSettings['siteLinkGroups'][] = 'commons';
+	} else {
 		$wgWBRepoSettings['specialSiteLinkGroups'][] = 'testwikidata';
+		$wgWBRepoSettings['siteLinkGroups'][] = 'special';
 	}
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
