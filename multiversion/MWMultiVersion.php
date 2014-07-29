@@ -95,6 +95,18 @@ class MWMultiVersion {
 	}
 
 	/**
+	 * Initialize and get the singleton instance of MWMultiVersion.
+	 * Use this for all other special web entry points.
+	 * @param string $dbName DB name
+	 * @return MWMultiVersion object for this wiki
+	 */
+	public static function initializeFromDBName( $dbName ) {
+		$instance = self::createInstance();
+		$instance->db = $dbName;
+		return $instance;
+	}
+
+	/**
 	 * Get the singleton instance of MWMultiVersion that was previously initialized
 	 * @return MWMultiVersion|null version object for the wiki
 	 */
