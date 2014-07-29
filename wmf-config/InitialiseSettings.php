@@ -10263,19 +10263,19 @@ $wgConf->settings = array(
 ),
 
 'wmgCollectionPortletFormats' => array(
-	'default' => array( 'rl', 'rdf2latex' ),
-	'tawiki' => array( 'odf', 'rdf2latex' ),       // Bug 37154
-	'tawikibooks' => array( 'odf', 'rdf2latex' ),  // Bug 37154
-	'tawikisource' => array( 'odf', 'rdf2latex' ), // Bug 37154
-	'tawikinews' => array( 'odf', 'rdf2latex' ),   // Bug 37154
-	'guwikibooks' => array( 'odf', 'rdf2latex' ),  // Bug 37384
-	'guwikisource' => array( 'odf', 'rdf2latex' ), // Bug 37384
-	'mlwikibooks' => array( 'odf', 'rdf2latex' ),  // Bug 37672
-	'mlwikisource' => array( 'odf', 'rdf2latex' ), // Bug 37672
-	'newikibooks' => array( 'odf', 'rdf2latex' ), // Bug 37374
-	'newiktionary' => array( 'odf', 'rdf2latex' ), // Bug 37374
-	'urwiki' => array  ( 'odf', 'rdf2latex' ),     // Bug 41714
-	'urwikisource' => array ( 'odf', 'rdf2latex' ),// Bug 41714
+	'default' => array( 'rl' ),
+	'tawiki' => array( 'odf' ),       // Bug 37154
+	'tawikibooks' => array( 'odf' ),  // Bug 37154
+	'tawikisource' => array( 'odf' ), // Bug 37154
+	'tawikinews' => array( 'odf' ),   // Bug 37154
+	'guwikibooks' => array( 'odf' ),  // Bug 37384
+	'guwikisource' => array( 'odf' ), // Bug 37384
+	'mlwikibooks' => array( 'odf' ),  // Bug 37672
+	'mlwikisource' => array( 'odf' ), // Bug 37672
+	'newikibooks' => array( 'odf' ), // Bug 37374
+	'newiktionary' => array( 'odf' ), // Bug 37374
+	'urwiki' => array  ( 'odf' ),     // Bug 41714
+	'urwikisource' => array ( 'odf' ),// Bug 41714
 ),
 
 'wmgCollectionUseEpub' => array(
