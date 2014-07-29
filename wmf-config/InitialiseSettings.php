@@ -13167,7 +13167,6 @@ $wgConf->settings = array(
 
 'wmgUseRelatedSites' => array(
 	'default' => false,
-	'wikivoyage' => true,
 ),
 
 'wmgUseUserMerge' => array(
