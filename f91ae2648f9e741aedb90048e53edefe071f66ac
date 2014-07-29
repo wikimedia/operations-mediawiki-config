@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_ca5b8b87",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 11843,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2014-07-29T18:08:16Z",
+      "side": 1,
+      "message": "Let\u0027s also set the default to 10 while we\u0027re at it.",
+      "revId": "f91ae2648f9e741aedb90048e53edefe071f66ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
