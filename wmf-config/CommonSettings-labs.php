@@ -174,7 +174,6 @@ if ( file_exists( "$wmfConfigDir/extension-list-labs" ) ) {
 if ( $wmgUseCollection ) {
 	// MwLib (PediaPress PDF Generation) is still done on the production servers
 
-	$wgCollectionFormats['rdf2latex'] = 'WMF PDF';
 	$wgCollectionFormatToServeURL['rdf2latex'] = 'http://deployment-pdf01:8000';
 	$wgCollectionPortletFormats[] = 'rdf2latex';
 }
