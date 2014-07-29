@@ -97,4 +97,7 @@ if ( $wmgMobileFrontend ) {
 	$wgMFNearbyRange = $wmgMaxGeoSearchRadius;
 
 	$wgMFPageActions = array_diff( $wgMFPageActions, $wmgMFRemovePageActions );
+
+	// restrict access to mobile Uploads to users with minimum editcount https://bugzilla.wikimedia.org/show_bug.cgi?id=62598
+	$wgMFUploadMinEdits = $wmgMFUploadMinEdits;
 }
