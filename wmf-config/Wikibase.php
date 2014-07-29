@@ -3,8 +3,12 @@
 require_once( "$IP/extensions/Wikidata/Wikidata.php" );
 
 if ( $wmgUseWikibaseRepo ) {
-	// @todo: can move to InitialiseSettings later, but having here
-	$wgCacheEpoch = '20140429173328';
+	if ( $wgDBname === 'testwikidatawiki' ) {
+		$wgCacheEpoch = '20140729165329';
+	} else {
+		// @todo: can move to InitialiseSettings later, but having here
+		$wgCacheEpoch = '20140429173328';
+	}
 
 	$baseNs = 120;
 
