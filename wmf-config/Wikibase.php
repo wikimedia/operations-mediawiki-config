@@ -35,8 +35,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['dataRightsText'] = 'Creative Commons CC0 License';
 	$wgWBRepoSettings['dataRightsUrl'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
 
-	$wgWBRepoSettings['specialSiteLinkGroups'] = array( 'commons' );
-
 	$wgWBRepoSettings['siteLinkGroups'] = array(
 		'wikipedia',
 		'wikiquote',
@@ -47,7 +45,11 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname !== 'testwikidatawiki' ) {
 		$wgWBRepoSettings['siteLinkGroups'][] = 'commons';
 	} else {
-		$wgWBRepoSettings['specialSiteLinkGroups'][] = 'testwikidata';
+		$wgWBRepoSettings['specialSiteLinkGroups'] = array(
+			'commons',
+			'testwikidata'
+		);
+
 		$wgWBRepoSettings['siteLinkGroups'][] = 'special';
 	}
 
@@ -99,8 +101,6 @@ if ( $wmgUseWikibaseClient ) {
 		'wikibase-property' => 'Property'
 	);
 
-	$wgWBClientSettings['specialSiteLinkGroups'] = array( 'commons' );
-
 	$wgWBClientSettings['siteLinkGroups'] = array(
 		'wikipedia',
 		'wikiquote',
@@ -111,7 +111,11 @@ if ( $wmgUseWikibaseClient ) {
 	if ( $wgDBname !== 'testwikidatawiki' ) {
 		$wgWBClientSettings['siteLinkGroups'][] = 'commons';
 	} else {
-		$wgWBClientSettings['specialSiteLinkGroups'][] = 'testwikidata';
+		$wgWBClientSettings['specialSiteLinkGroups'] = array(
+			'commons',
+			'testwikidata'
+		);
+
 		$wgWBClientSettings['siteLinkGroups'][] = 'special';
 	}
 
