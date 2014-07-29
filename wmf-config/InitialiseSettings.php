@@ -13595,6 +13595,12 @@ $wgConf->settings = array(
 	'zhwikisource' => array( 'content' => 3, 'general' => 1 ),
 ),
 
+'wmgCirrusSearchAllFields' => array(
+	'default' => array( 'build' => true, 'use' => false ),
+	'group0' => array( 'build' => true, 'use' => false ),
+	'wikipedia' => array( 'build' => false, 'use' => false ),
+),
+
 'wmgUseCite' => array(
 	'default' => true,
 	'loginwiki' => false,
