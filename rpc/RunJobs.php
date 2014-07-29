@@ -20,21 +20,26 @@
  */
 if ( !in_array( $_SERVER['REMOTE_ADDR'], array( '127.0.0.1', '0:0:0:0:0:0:0:1' ), true ) ) {
 	die( "Only loopback requests are allowed.\n" );
+} elseif ( $_SERVER['REQUEST_METHOD'] !== 'POST' ) {
+	die( "Request must use POST.\n" );
 }
 
 require_once( '../multiversion/MWVersion.php' );
-$wiki = isset( $_POST['wiki'] ) ? $_POST['wiki'] : '';
+$wiki = isset( $_GET['wiki'] ) ? $_GET['wiki'] : '';
 require getMediaWiki( 'includes/WebStart.php', $wiki );
 
+error_reporting( E_ERROR ); // fatals but not random I/O warnings
+ini_set( 'display_errors', 1 );
 $wgShowExceptionDetails = true;
-$mediawiki = new MediaWiki();
 
+$mediawiki = new MediaWiki();
 $runner = new JobRunner();
 $response = $runner->run( array(
-	'type'     => $mediawiki->request()->get( 'type', false ),
-	'maxJobs'  => $mediawiki->request()->get( 'maxjobs', 1 ),
-	'maxTime'  => $mediawiki->request()->get( 'maxtime', 30 )
+	'type'     => isset( $_GET['type'] ) ? $_GET['type'] : false,
+	'maxJobs'  => isset( $_GET['maxjobs'] ) ? $_GET['maxjobs'] : 1,
+	'maxTime'  => isset( $_GET['maxtime'] ) ? $_GET['maxtime'] : 30
 ) );
+
 print FormatJson::encode( $response, true );
 
 $mediawiki->restInPeace();
