@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+2: Mwalker <mwalker@khaosdev.com>
+Code-Review+1: Cscott <cananian@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Tue, 29 Jul 2014 22:57:38 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/150393
+Project: operations/mediawiki-config
+Branch: refs/heads/master
