@@ -1546,6 +1546,7 @@ if ( $wmgUseCollection ) {
 	// PediaPress / PDF generation
 	include "$IP/extensions/Collection/Collection.php";
 	$wgCollectionMWServeURL = "http://pdf2.wikimedia.org:8080/mw-serve/";
+	$wgCollectionFormatToServeURL['rdf2latex'] = 'http://ocg.svc.eqiad.wmnet:8000';
 
 	// MediaWiki namespace is not a good default
 	$wgCommunityCollectionNamespace = NS_PROJECT;
@@ -1561,6 +1562,7 @@ if ( $wmgUseCollection ) {
 	//	'epub' => 'EPUB', // disabling by default per reqest from tfinc 14 July 2012
 		'odf' => 'ODT',
 		'zim' => 'openZIM',
+		'rdf2latex' => 'WMF PDF',
 	);
 	if ( $wmgCollectionUseEpub ) {
 		$wgCollectionFormats[ 'epub' ] = 'EPUB';
