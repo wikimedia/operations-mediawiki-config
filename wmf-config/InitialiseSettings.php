@@ -13212,7 +13212,6 @@ $wgConf->settings = array(
 	'wikivoyage' => array(
 		'wikitravel' => 'Wikitravel',
 		'wikipedia' => 'Wikipedia',
-		'WikiPedia' => 'Wikipedia',
 		'citizendium' => 'Citizendium',
 		'dmoz' => 'DMOZ',
 		'Radreise-Wiki' => 'Radreise-Wiki',
