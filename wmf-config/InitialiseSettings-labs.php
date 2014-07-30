@@ -190,6 +190,9 @@ return array(
 	'-wmgEchoCluster' => array(
 		'default' => false,
 	),
+	'wmgEchoUseJobQueue' => array(
+		'default' => true,
+	),
 	# FIXME: make that settings to be applied
 	'-wgShowExceptionDetails' => array(
 		'default' => true,
