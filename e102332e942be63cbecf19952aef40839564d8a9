@@ -16,6 +16,24 @@
       "revId": "e102332e942be63cbecf19952aef40839564d8a9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_ecb65c3b",
+        "filename": "docroot/mediawiki/xml/export-0.9.xsd",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-07-30T12:44:11Z",
+      "side": 1,
+      "message": "Lol, needs updating from https://gerrit.wikimedia.org/r/#/c/149642/\n\nURLs below are also wrong etc",
+      "parentUuid": "8e28a382_d10e9b3d",
+      "revId": "e102332e942be63cbecf19952aef40839564d8a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
