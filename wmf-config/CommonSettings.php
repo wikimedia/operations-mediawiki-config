@@ -951,11 +951,11 @@ $wgExtensionFunctions[] = function() {
 	if ( isset( $_SERVER['REQUEST_METHOD'] ) && $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 		$uri = ( $_SERVER['HTTPS'] ? 'https://' : 'http://' ) .
 			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-
+		$xff = isset( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : '';
 		wfErrorLog(
 			gmdate( 'r' ) . "\t" .
 			"$uri\t" .
-			"{$_SERVER['HTTP_X_FORWARDED_FOR']}, {$_SERVER['REMOTE_ADDR']}\t" .
+			"$xff, {$_SERVER['REMOTE_ADDR']}\t" .
 			( ( isset( $_REQUEST['wpSave'] ) && $_REQUEST['wpSave'] ) ? 'save' : '' )
 				. "\n",
 			"udp://$wmfUdp2logDest/xff"
@@ -964,7 +964,7 @@ $wgExtensionFunctions[] = function() {
 			wfErrorLog(
 				gmdate( 'r' ) . "\t" .
 				wfHostname() .
-				"\t{$_SERVER['HTTP_X_FORWARDED_FOR']}, {$_SERVER['REMOTE_ADDR']}\t" .
+				"\t$xff, {$_SERVER['REMOTE_ADDR']}\t" .
 				WebRequest::detectProtocol(),
 				"udp://$wmfUdp2logDest/localhost"
 			);
