@@ -782,7 +782,7 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 	$wgExtDistAPIConfig = array(
 		'class' => 'GerritExtDistProvider',
 		'apiUrl' => 'https://gerrit.wikimedia.org/r/projects/mediawiki%2Fextensions%2F$EXT/branches',
-		'tarballUrl' => 'http://extdist.wmflabs.org/dist/$EXT-$REF-$SHA.tar.gz',
+		'tarballUrl' => 'https://extdist.wmflabs.org/dist/$EXT-$REF-$SHA.tar.gz',
 		'tarballName' => '$EXT-$REF-$SHA.tar.gz',
 	);
 
