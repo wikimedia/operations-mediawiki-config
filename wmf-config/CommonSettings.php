@@ -775,8 +775,16 @@ if ( $wmgPFEnableStringFunctions ) {
 if ( $wgDBname == 'mediawikiwiki' ) {
 	include( "$IP/extensions/ExtensionDistributor/ExtensionDistributor.php" );
 	$wgExtDistListFile = 'https://gerrit.wikimedia.org/mediawiki-extensions.txt';
+	// @todo remove this once mediawiki.org is on 1.24wmf16
 	$wgExtDistArchiveAPI = 'https://api.github.com/repos/wikimedia/mediawiki-extensions-$EXT/tarball/$REF';
+	// @todo remove this once mediawiki.org is on 1.24wmf16
 	$wgExtDistProxy = 'url-downloader.wikimedia.org:8080';
+	$wgExtDistAPIConfig = array(
+		'class' => 'GerritExtDistProvider',
+		'apiUrl' => 'https://gerrit.wikimedia.org/r/projects/mediawiki%2Fextensions%2F$EXT/branches',
+		'tarballUrl' => 'http://extdist.wmflabs.org/dist/$EXT-$REF-$SHA.tar.gz',
+		'tarballName' => '$EXT-$REF-$SHA.tar.gz',
+	);
 
 	// When changing the Snapshot Refs please change the corresponding
 	// extension distributor messages for mediawiki.org in WikimediaMessages/i18n/wikimedia/*.json too
