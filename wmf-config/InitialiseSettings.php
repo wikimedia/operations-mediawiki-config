@@ -13002,9 +13002,7 @@ $wgConf->settings = array(
 
 // Whether to use job queue to process web and email notifications
 'wmgEchoUseJobQueue' => array(
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
+	'default' => true,
 ),
 
 // Thanks should be enabled for wikis with Echo
