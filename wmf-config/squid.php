@@ -1,6 +1,11 @@
 <?php
 # HTCP multicast squid purging
-$wgHTCPMulticastAddress = '239.128.0.112';
+$wgHTCPRouting = array(
+	'' => array(
+		'host' => '239.128.0.112',
+		'port' => 4827
+	)
+);
 $wgHTCPMulticastTTL = 8;
 
 # Accept XFF from these proxies
