@@ -8248,7 +8248,8 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'translationadmin' ),
 	),
 	'+wikimania2014wiki' => array(
-		'bureaucrat' => array( 'translationadmin' ),
+		'bureaucrat' => array( 'translationadmin', 'confirmed' ),
+		'sysop' => array( 'confirmed' ),
 	),
 	'+wikimania2015wiki' => array(
 		'bureaucrat' => array( 'translationadmin' ),
