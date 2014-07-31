@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_046bb116",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 869,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-07-31T18:26:11Z",
+      "side": 0,
+      "message": "/**\n * Set this to some HTML to override the rights icon with an arbitrary logo\n * @deprecated since 1.18 Use $wgFooterIcons[\u0027copyright\u0027][\u0027copyright\u0027]\n */\n$wgCopyrightIcon \u003d null;\n\n\n\nI guess that should probably be updated to tell people to use the other globals...",
+      "revId": "a964cc6429489bb9160168e9925d0deb0de06d95",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
