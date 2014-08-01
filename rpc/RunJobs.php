@@ -32,14 +32,18 @@ error_reporting( E_ERROR ); // fatals but not random I/O warnings
 ini_set( 'display_errors', 1 );
 $wgShowExceptionDetails = true;
 
-$mediawiki = new MediaWiki();
-$runner = new JobRunner();
-$response = $runner->run( array(
-	'type'     => isset( $_GET['type'] ) ? $_GET['type'] : false,
-	'maxJobs'  => isset( $_GET['maxjobs'] ) ? $_GET['maxjobs'] : 1,
-	'maxTime'  => isset( $_GET['maxtime'] ) ? $_GET['maxtime'] : 30
-) );
+try {
+	$mediawiki = new MediaWiki();
+	$runner = new JobRunner();
+	$response = $runner->run( array(
+		'type'     => isset( $_GET['type'] ) ? $_GET['type'] : false,
+		'maxJobs'  => isset( $_GET['maxjobs'] ) ? $_GET['maxjobs'] : 1,
+		'maxTime'  => isset( $_GET['maxtime'] ) ? $_GET['maxtime'] : 30
+	) );
 
-print FormatJson::encode( $response, true );
+	print FormatJson::encode( $response, true );
 
-$mediawiki->restInPeace();
+	$mediawiki->restInPeace();
+} catch ( Exception $e ) {
+	MWExceptionHandler::handle( $e );
+}
