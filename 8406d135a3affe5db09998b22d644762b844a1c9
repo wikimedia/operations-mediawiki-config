@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_63f824c0",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2014-08-01T16:25:20Z",
+      "side": 1,
+      "message": "Note to reviewers: This refers to http://test.wikidata.org/wiki/Q608 and http://test.wikidata.org/wiki/Q609.",
+      "revId": "8406d135a3affe5db09998b22d644762b844a1c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
