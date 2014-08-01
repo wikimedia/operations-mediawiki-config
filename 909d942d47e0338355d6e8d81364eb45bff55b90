@@ -34,6 +34,24 @@
       "revId": "909d942d47e0338355d6e8d81364eb45bff55b90",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_23c1fc82",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2014-08-01T16:08:36Z",
+      "side": 1,
+      "message": "I agree. It would be possible to style such namespace specific badges using the namespace class from the \u003cbody\u003e element. But I find it much cleaner to use different class names in these cases.",
+      "parentUuid": "8e28a382_77612d31",
+      "revId": "909d942d47e0338355d6e8d81364eb45bff55b90",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
