@@ -98,10 +98,10 @@ $wgLBFactoryConf = array(
 	),
 	's2' => array(
 		'db1024' => 0,   # 1.4TB  64GB
-		'db1018' => 0,   # 1.4TB  64GB, snapshot, vslow, dump
+		# lag 'db1018' => 0,   # 1.4TB  64GB, snapshot, 
 		'db1002' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
+		'db1036' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1009' => 300, # 1.4TB  64GB, traffic sampling
-		'db1036' => 300, # 1.4TB  64GB
 		'db1060' => 400, # 2.8TB  96GB
 		'db1063' => 500, # 2.8TB 128GB
 		'db1067' => 500, # 2.8TB 160GB
@@ -163,10 +163,10 @@ $wgLBFactoryConf = array(
 	// s1 => groupLoadsByDB
 	's2' => array(
 		'vslow' => array(
-			'db1018' => 1,
+			'db1036' => 1,
 		),
 		'dump' => array(
-			'db1018' => 1,
+			'db1036' => 1,
 		),
 		'watchlist' => array(
 			'db1002' => 1,
