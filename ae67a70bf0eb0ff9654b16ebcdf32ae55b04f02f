@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_7056a1d2",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2014-08-03T18:04:10Z",
+      "side": 1,
+      "message": "Um, I don\u0027t think you can have $wgAbuseFilterNotificationsPrivate \u003d true if $wgAbuseFilterNotifications \u003d false?",
+      "revId": "ae67a70bf0eb0ff9654b16ebcdf32ae55b04f02f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
