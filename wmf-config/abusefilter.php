@@ -150,6 +150,28 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterAvailableActions[] = 'block';
 		$wgAbuseFilterBlockDuration = '24 hours';
 		break;
+	case 'fawiki':
+		$wgGroupPermissions['*']['abusefilter-log'] = false;
+		$wgGroupPermissions['*']['abusefilter-view'] = false;
+		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false;
+		$wgGroupPermissions['patroller']['abusefilter-log'] = true;
+		$wgGroupPermissions['patroller']['abusefilter-view'] = true;
+		$wgGroupPermissions['patroller']['abusefilter-log-detail'] = true;
+		$wgGroupPermissions['autopatrol']['abusefilter-log'] = true;
+		$wgGroupPermissions['autopatrol']['abusefilter-view'] = true;
+		$wgGroupPermissions['autopatrol']['abusefilter-log-detail'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-log'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-log-private'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-view'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
+		$wgAbuseFilterAvailableActions[] =  array( 'flag', 'throttle', 'warn', 'disallow', 'blockautopromote', 'block', 'degroup', 'tag', 'rangeblock' );
+		$wgAbuseFilterAnonBlockDuration = '3 months';
+		$wgAbuseFilterBlockDuration = 'indefinite';
+		$wgAbuseFilterNotifications = false;
+		$wgAbuseFilterNotificationsPrivate = true;
+		break;
 	case 'fiwiki': // bug 57395
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
