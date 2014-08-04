@@ -12862,6 +12862,7 @@ $wgConf->settings = array(
 	'ruwiki' => true,
 	'sewikimedia' => true, // bug 61192
 	'svwiki' => true,
+	'tewiki' => true,
 	'ukwiki' => true,
 	'viwiki' => true,
 	'wikidatawiki' => true,
