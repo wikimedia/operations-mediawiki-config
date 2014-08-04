@@ -3626,6 +3626,7 @@ $wgConf->settings = array(
 	'+collabwiki' => array( 0 => 1 ),
 	'+commonswiki' => array( 6 => 0, 8 => 0 ),
 	'+execwiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
+	'+fdcwiki' => array( 0 => 1 ),
 	'+foundationwiki' => array( 0 => 1, 6 => 0, 8 => 0 ),
 	'+grantswiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+incubatorwiki' => array( 0 => 1, 6 => 0, 14 => 1 ),
