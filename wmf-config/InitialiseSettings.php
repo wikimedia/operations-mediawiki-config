@@ -7013,14 +7013,15 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 	),
-	'fawiki' => array(
+	'+fawiki' => array(
 		'*' => array( 'createpage' => false ), // bug 27195
 		'user' => array( 'move-categorypages' => false ), // bug 65728
 		'bot' => array( 'move-categorypages' => true ), //bug 65728
-		'patroller' => array( 'patrol' => true, 'move-categorypages' => true ),
-		'rollbacker' => array( 'rollback' => true ),
-		'autopatrol' => array( 'autopatrol' => true, 'move-categorypages' => true ), // bug 29007
+		'patroller' => array( 'patrol' => true, 'move-categorypages' => true ), // bug 65728
+		'rollbacker' => array( 'rollback' => true ), // bug 23233
+		'autopatrol' => array( 'autopatrol' => true, 'move-categorypages' => true ), // bug 29007 and 65728
 		'Image-reviewer' => array( 'movefile' => true ), // bug 64532
+		'uploader' => array( 'upload' => true, 'reupload' => true, 'reupload-own' => true ), // bug 69171
 	),
 	'fawikinews' => array(
 		'rollbacker' => array( 'rollback' => true ),
@@ -7941,7 +7942,7 @@ $wgConf->settings = array(
 	),
 	'+fawiki' => array(
 		'bureaucrat' => array( 'patroller', 'Image-reviewer' ), // bug 64532
-		'sysop' => array( 'rollbacker', 'autopatrol' ),
+		'sysop' => array( 'rollbacker', 'autopatrol', 'uploader' ), // bug 23233, 29007 and 69171
 	),
 	'+fawikinews' => array(
 		'sysop' => array( 'rollbacker', 'patroller' ),
@@ -8450,7 +8451,7 @@ $wgConf->settings = array(
 	),
 	'+fawiki' => array(
 		'bureaucrat' => array( 'patroller', 'Image-reviewer' ), // bug 64532
-		'sysop' => array( 'rollbacker', 'autopatrol' ),
+		'sysop' => array( 'rollbacker', 'autopatrol', 'uploader' ), // bug 23233, 29007 and 69171
 	),
 	'+fawikinews' => array(
 		'sysop' => array( 'rollbacker', 'patroller', ),
@@ -9909,11 +9910,20 @@ $wgConf->settings = array(
 			array( APCOND_AGE, 14 * 86400 ),
 		),
 	),
+	'fawiki' => array(
+		'uploader' => array( '&',
+			array( APCOND_EDITCOUNT, 10 ),
+			array( APCOND_AGE, 4 * 86400 ),
+			array( '!', array( APCOND_INGROUPS, array( 'sysop' ) ) ),
+			array( '!', array( APCOND_INGROUPS, array( 'bureaucrat' ) ) ),
+		),
+	), // bug 69171
 ),
 
 'wgAutopromoteOnceLogInRC' => array(
 	'default' => true,
 	'ruwiki' => false,
+	'fawiki' => false, // bug 69171
 ),
 
 'wmgExtraImplicitGroups' => array(
