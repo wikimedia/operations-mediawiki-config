@@ -166,7 +166,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
-		$wgAbuseFilterAvailableActions[] =  array( 'flag', 'throttle', 'warn', 'disallow', 'blockautopromote', 'block', 'degroup', 'tag', 'rangeblock' );
+		$wgAbuseFilterAvailableActions =  array( 'flag', 'throttle', 'warn', 'disallow', 'blockautopromote', 'block', 'degroup', 'tag', 'rangeblock' );
 		$wgAbuseFilterAnonBlockDuration = '3 months';
 		$wgAbuseFilterBlockDuration = 'indefinite';
 		$wgAbuseFilterNotifications = false;
