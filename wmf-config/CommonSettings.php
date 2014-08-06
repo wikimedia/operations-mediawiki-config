@@ -515,13 +515,8 @@ if ( $wmgUseCORS ) {
 wfProfileOut( "$fname-misc1" );
 wfProfileIn( "$fname-skin-include1" );
 
-if ( file_exists( "$IP/skins/Modern/Modern.php" ) ) {
-	require_once "$IP/skins/Modern/Modern.php";
-}
-
-if ( file_exists( "$IP/skins/CologneBlue/CologneBlue.php" ) ) {
-	require_once "$IP/skins/CologneBlue/CologneBlue.php";
-}
+require_once "$IP/skins/Modern/Modern.php";
+require_once "$IP/skins/CologneBlue/CologneBlue.php";
 
 wfProfileIn( "$fname-skin-include1" );
 wfProfileIn( "$fname-ext-include1" );
