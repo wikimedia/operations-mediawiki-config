@@ -515,6 +515,8 @@ if ( $wmgUseCORS ) {
 wfProfileOut( "$fname-misc1" );
 wfProfileIn( "$fname-skin-include1" );
 
+require_once "$IP/skins/Vector/Vector.php";
+require_once "$IP/skins/MonoBook/MonoBook.php";
 require_once "$IP/skins/Modern/Modern.php";
 require_once "$IP/skins/CologneBlue/CologneBlue.php";
 
