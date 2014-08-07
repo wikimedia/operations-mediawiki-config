@@ -1,3 +1,5 @@
 $IP/extensions/GlobalCssJs/GlobalCssJs.php
 $IP/extensions/ContentTranslation/ContentTranslation.php
 $IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php
+$IP/skins/MonoBook/MonoBook.php
+$IP/skins/Vector/Vector.php
