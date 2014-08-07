@@ -556,7 +556,7 @@ if ( $wmgUseWikiHiero ) {
 include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 
 // Config for sitematrix
-$wgSiteMatrixFile = '/apache/common/langlist';
+$wgSiteMatrixFile = '/usr/local/apache/common/langlist';
 $wgSiteMatrixClosedSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../closed.dblist" ) ) );
 $wgSiteMatrixPrivateSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../private.dblist" ) ) );
 $wgSiteMatrixFishbowlSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../fishbowl.dblist" ) ) );
