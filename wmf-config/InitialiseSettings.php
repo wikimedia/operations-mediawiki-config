@@ -6640,12 +6640,6 @@ $wgConf->settings = array(
 		),
 	),
 
-	'wikivoyage' => array (
-		'bureaucrat' => array(
-			'usermerge' => true
-		)
-	),
-
 	// Read-only (except stewards)
 	'closed' => array(
 		'*' => array(
@@ -6943,7 +6937,6 @@ $wgConf->settings = array(
 	),
 	'enwikivoyage' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
-		'bureaucrat' => array( 'usermerge' => true ),
 		'patroller' => array( 'patrol' => true, 'rollback' => true ),
 	),
 	// http://bugzilla.wikimedia.org/show_bug.cgi?id=5033
