@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_9c52273e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 13594,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-08-07T15:51:08Z",
+      "side": 1,
+      "message": "The default should be false here, and then default \u003d\u003e true in InitialiseSettings-labs\n\nOtherwise it\u0027s going to try and enable it on production when synced etc",
+      "revId": "5dbbcab1038077345b81b1bb32e6fa6da45a60f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
