@@ -13280,7 +13280,9 @@ $wgConf->settings = array(
 	'wikiquote' => 'wikiquote',
 	'wikivoyage' => 'wikivoyage',
 	'wikisource' => 'wikisource',
-	'commonswiki' => 'commons'
+	'commonswiki' => 'commons',
+	'wikidatawiki' => 'wikidata',
+	'testwikidatawiki' => 'testwikidata'
 ),
 
 'wmgWikibaseClientSettings' => array(
