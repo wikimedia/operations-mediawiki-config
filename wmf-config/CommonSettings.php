@@ -801,7 +801,7 @@ $wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
 $wgGlobalBlockingBlockXFF = $wmgUseXFFBlocks;
 
 include( $IP . '/extensions/TrustedXFF/TrustedXFF.php' );
-if ( function_exists( 'dba_open' ) && file_exists( "$wmfConfigDir/trusted-xff.cdb" ) ) {
+if ( file_exists( "$wmfConfigDir/trusted-xff.cdb" ) ) {
 	$wgTrustedXffFile = "$wmfConfigDir/trusted-xff.cdb";
 }
 
@@ -1181,7 +1181,7 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgExternalDiffEngine = 'wikidiff2';
 }
 
-if ( function_exists( 'dba_open' ) && file_exists( "$wmfConfigDir/interwiki.cdb" ) ) {
+if ( file_exists( "$wmfConfigDir/interwiki.cdb" ) ) {
 	$wgInterwikiCache = "$wmfConfigDir/interwiki.cdb";
 }
 
