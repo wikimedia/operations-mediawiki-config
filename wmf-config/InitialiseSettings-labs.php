@@ -299,10 +299,6 @@ return array(
 		'enwiktionary' => true,
 	),
 
-	'wmgMediaViewerLoggedIn' => array(
-		'default' => false,
-	),
-
 	'wmgNetworkPerformanceSamplingFactor' => array(
 		'default' => 1,
 	),

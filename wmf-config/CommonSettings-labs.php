@@ -70,10 +70,6 @@ if ( $wmgUseMultimediaViewer ) {
 	if ( $wmgMediaViewerBeta ) {
 		$wgMediaViewerIsInBeta = true;
 	}
-
-	if ( $wmgMediaViewerLoggedIn ) {
-		$wgEnableMediaViewerForLoggedInUsersOnly = true;
-	}
 }
 
 if ( $wmgUseVectorBeta ) {

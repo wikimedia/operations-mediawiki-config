@@ -10888,8 +10888,13 @@ $wgConf->settings = array(
 	'default' => false,
 ),
 
-'wmgMediaViewerLoggedIn' => array(
-	'default' => false,
+'wmgMediaViewerEnableByDefault' => array(
+	'default' => true,
+	'commonswiki' => false, // bug 69363
+),
+
+'wmgMediaViewerEnableByDefaultForAnonymous' => array(
+	'default' => true,
 ),
 
 'wmgMediaViewerUseThumbnailGuessing' => array(
