@@ -16,6 +16,24 @@
       "revId": "7c260ef1b4c4774a7f45b78188b544b11c20e610",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_2701c4b9",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 608,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2014-08-10T13:38:17Z",
+      "side": 1,
+      "message": "I would prefer just removing \"enwiki\u0027s\" since templateeditor is no longer specific to enwiki either.",
+      "parentUuid": "8e28a382_876ab87c",
+      "revId": "7c260ef1b4c4774a7f45b78188b544b11c20e610",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
