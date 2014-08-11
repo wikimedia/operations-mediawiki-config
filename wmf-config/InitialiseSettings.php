@@ -6756,46 +6756,23 @@ $wgConf->settings = array(
 		'sysop' => array( 'createaccount' => false, ),
 	),
 	'+ckbwiki' => array(
-		'*' => array( 'createpage' => false ),
+		'*' => array( 'createpage' => false ), //bug 23592
 		'autopatrolled' => array( 'autopatrol' => true ), // bug 51328
 		'rollbacker' => array( 'rollback' => true ), // bug 51312
-		// bug 51232
-		'autoconfirmed' => array(
-			'patrolmarks' => true, // bug 54118
-		),
-		'sysop' => array(
-			'importupload' => true, // bug 52633
-			'reupload-own' => true, // bug 52725
-		),
+		'autoconfirmed' => array( 'patrolmarks' => true ), // bug 54118
+		'sysop' => array( 'importupload' => true ), // bug 52633
 		'uploader' => array(
 			'upload' => true,
 			'reupload' => true,
 			'reupload-own' => true, // bug 52725
 			'movefile' => true,
 		), // bug 51232
-		'eliminator' => array(
-			'delete' => true,
-			'nuke' => true,
-			'suppressredirect' => true,
-			'undelete' => true,
-			'browsearchive' => true,
-			'deletedhistory' => true,
-			'deletedtext' => true,
-		), // bug 52866
 		'interface_editor' => array(
 			'editinterface' => true, // bug 52866
 			'editusercss' => true, // bug 52866
 			'edituserjs' => true, // bug 52866
 			'apihighlimits' => true, // bug 65348
 			'noratelimit' => true, // bug 65348
-		),
-		'trusted' => array(
-			'block' => true,
-			'blockemail' => true,
-		), // bug 52866
-		'editprotected' => array(
-			'editprotected' => true, // bug 52866
-			'protect' => true, // bug 65348
 		),
 		'flood' => array( 'bot' => true ), // bug 51803
 		'botadmin' => array(
@@ -6808,9 +6785,7 @@ $wgConf->settings = array(
 			'ipblock-exempt' => true,
 			'rollback' => true, // bug 65348
 		), // bug 52578
-		'suppressredirect' => array(
-			'suppressredirect' => true,
-		), // bug 67278
+		'suppressredirect' => array( 'suppressredirect' => true ), // bug 67278
 	),
 	'+cswiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true, ),
@@ -7839,10 +7814,8 @@ $wgConf->settings = array(
 			'botadmin', // Bug 52578
 			'import', // bug 52633
 			'transwiki', // bug 52633
-			'eliminator', // bug 52866
 			'interface_editor', // bug 52866
-			'trusted', // bug 52866
-			'editprotected', // bug 52866
+			'accountcreator', // bug 69394
 		),
 	),
 	'+collabwiki' => array(
@@ -8348,10 +8321,8 @@ $wgConf->settings = array(
 			'botadmin', // bug 52578
 			'import', // bug 52633
 			'transwiki', // bug 52633
-			'eliminator', // bug 52866
 			'interface_editor', // bug 52866
-			'trusted', // bug 52866
-			'editprotected', // bug 52866
+			'accountcreator', // bug 69394
 		),
 	),
 	'+collabwiki' => array(
