@@ -20,12 +20,12 @@ $wmgThrottlingExceptions = array();
 #             (default: any project)
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = array( // bug 66822
-	'from'   => '2014-06-23T06:00 +5:30',
-	'to'     => '2014-06-23T18:00 +5:30',
-	'IP'     => array( '117.211.82.55' ),
+$wmgThrottlingExceptions[] = array( // bug 69385, CIS/tewiki event
+	'from'   => '2014-08-11T06:00 +5:30',
+	'to'     => '2014-08-14T20:00 +5:30',
+	'IP'     => array( '210.212.222.211' ),
 	'dbname' => array( 'tewiki' ),
-	'value'  => 200,
+	'value'  => 1100,
 );
 ## Add throttling definitions above.
 
