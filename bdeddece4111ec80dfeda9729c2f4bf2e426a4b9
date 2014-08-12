@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_a02fd484",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 606,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-08-12T02:08:35Z",
+      "side": 1,
+      "message": "you might want to separate these from all the rights which just exist here for CentralAuth\u0027s global groups (just put them below or above).",
+      "revId": "bdeddece4111ec80dfeda9729c2f4bf2e426a4b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
