@@ -154,4 +154,13 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 		);
 	}
 
+	/**
+	 * Whenever a hostname is not recognized, we send an error message.
+	 *
+	 * @expectedException PHPUnit_Framework_Error
+	 */
+	function testInvalidHostDumpAnErrorMessage() {
+		$this->expectOutputString( "Invalid host name (invalidhost).\n" );
+		MWMultiversion::initializeForWiki( 'invalidhost' );
+	}
 }
