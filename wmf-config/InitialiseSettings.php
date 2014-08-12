@@ -7551,7 +7551,8 @@ $wgConf->settings = array(
 			'upload_by_url' => true, // For testing of Flickr uploading via UploadWizard
 			'upload' => true,
 		),
-		'qa_automation' => array( // For browser tests, bug 58375
+		'qa_automation' => array( // For browser tests, bug 58375 and bug 61799
+			'block' => true,
 			'flow-delete' => true,
 			'flow-suppress' => true,
 		),
