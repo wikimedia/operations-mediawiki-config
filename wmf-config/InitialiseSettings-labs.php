@@ -427,6 +427,11 @@ return array(
 		'default' => false,
 		'metawiki' => true,
 	),
+
+	'wmgUseGraph' => array(
+		'default' => true,
+	),
+
 );
 
 } # wmflLabsSettings()

@@ -194,4 +194,8 @@ if ( $wmgUseFundraisingTranslateWorkflow ) {
 	include( "$IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php" );
 }
 
+if ( $wmgUseGraph ) {
+	include_once( "$IP/extensions/Graph/Graph.php" );
+}
+
 } # end safeguard
