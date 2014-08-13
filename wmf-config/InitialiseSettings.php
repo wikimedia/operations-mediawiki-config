@@ -3917,6 +3917,7 @@ $wgConf->settings = array(
 	# http://de.wikibooks.org/wiki/Wikibooks:Meinungsbilder/_Verschiebefunktion_f%C3%BCr_neue_Nutzer
 	# TS 2007-02-06
 	'dewikibooks' => 7 * 86400,
+	'nowiki' => 7 * 86400, // bug 69302
 	'tenwiki' => 0, // bug 26554
 	'zhwiki' => 7 * 3600 * 24, // bug 14624
 ),
@@ -3937,6 +3938,7 @@ $wgConf->settings = array(
 	'itwiktionary' => 10, // Bug 22274
 	'jawiki' => 10, // Bug 40270
 	'kowiki' => 10,// Bug 44894
+	'nowiki' => 20, // bug 69302
 	'plwiki' => 10,
 	'ptwiki' => 10, // Bug 27954
 	'ruwiki' => 15, // Bug 41831
