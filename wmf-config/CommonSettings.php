@@ -361,6 +361,9 @@ $wgSessionCacheType = 'sessions';
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
 
+// Keep old MD5 password hashing as default (bug 68766)
+$wgPasswordDefault = 'B';
+
 # Not CLI, see http://bugs.php.net/bug.php?id=47540
 if ( PHP_SAPI != 'cli' ) {
 	ignore_user_abort( true );
