@@ -194,15 +194,4 @@ if ( $wmgUseFundraisingTranslateWorkflow ) {
 	include( "$IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php" );
 }
 
-if ( $wmgUseGraph ) {
-	include_once( "$IP/extensions/Graph/Graph.php" );
-	$wgEnableGraphParserTag = true;
-	$wgJsonConfigModels['Graph.JsonConfig'] = 'graph\Content';
-	$wgJsonConfigs['Graph.JsonConfig'] = array(
-	    'namespace' => 484,
-		'nsName' => 'Graph',
-		'isLocal' => true,
-	);
-}
-
 } # end safeguard
