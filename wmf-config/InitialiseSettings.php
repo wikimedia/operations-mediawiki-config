@@ -4076,6 +4076,7 @@ $wgConf->settings = array(
 		'SpamRegex' => "udp://$wmfUdp2logDest/spam",
 		'OutputBuffer' => "udp://$wmfUdp2logDest/buffer",
 		'exec' => "udp://$wmfUdp2logDest/exec",
+		'ratelimit' => "udp://$wmfUdp2logDest/limiter",
 		'runJobs' => "udp://$wmfUdp2logDest/runJobs",
 		'JobQueueRedis' => "udp://$wmfUdp2logDest/redis-jobqueue",
 		'es-hit' => "udp://$wmfUdp2logDest/es-hit",
@@ -6544,7 +6545,7 @@ $wgConf->settings = array(
 # @} end of wgRateLimits
 
 'wgRateLimitLog' => array(
-	'default' => "udp://$wmfUdp2logDest/limiter",
+	'default' => null,  # We use $wgDebugLogGroups['ratelimit']
 ),
 
 'wgRateLimitsExcludedIPs' => array(
