@@ -1,6 +1,0 @@
-# Managed at operations/mediawiki-config/robots-private.txt
-User-agent: *
-Disallow: /
-
-User-agent: ia_archiver
-Allow: /
