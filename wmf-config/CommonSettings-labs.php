@@ -133,6 +133,11 @@ if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
 	);
 }
 
+// BounceHandler
+require_once( "$IP/extensions/BounceHandler/BounceHandler.php" );
+//$wgVERPsecret = ''; // This was set in PrivateSettings.php by Legoktm
+$wgBounceHandlerUnconfirmUsers = false;
+
 if ( $wmgUseTimedMediaHandler ) {
 	$wgMwEmbedModuleConfig[ 'MediaWiki.ApiProviders' ] =  array(
 	"commons" => array(
