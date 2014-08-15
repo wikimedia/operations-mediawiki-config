@@ -13508,13 +13508,6 @@ $wgConf->settings = array(
 	'wikinews' => .6,
 ),
 
-// Note that changing this on any supported (English) wiki requires an in place
-// reindex of that wiki to take effect.
-'wmgCirrusSearchUseAggressiveSplitting' => array(
-	'default' => false,
-	'mediawikiwiki' => true,
-),
-
 'wmgCirrusSearchBoostLinks' => array(
 	'default' => true,
 	'commonswiki' => false,
@@ -13603,8 +13596,9 @@ $wgConf->settings = array(
 
 'wmgCirrusSearchAllFields' => array(
 	'default' => array( 'build' => true, 'use' => false ),
-	'group0' => array( 'build' => true, 'use' => false ),
-	'wikipedia' => array( 'build' => false, 'use' => false ),
+	'group0' => array( 'build' => true, 'use' => true ),
+	# 'wiki' means wikipedias
+	'wiki' => array( 'build' => true, 'use' => false ),
 ),
 
 'wmgUseCite' => array(

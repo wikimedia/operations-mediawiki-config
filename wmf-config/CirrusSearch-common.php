@@ -49,7 +49,6 @@ $wgCirrusSearchOptimizeIndexForExperimentalHighlighter = true;
 
 # Settings customized per index.
 $wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
-$wgCirrusSearchUseAggressiveSplitting = $wmgCirrusSearchUseAggressiveSplitting;
 $wgCirrusSearchPreferRecentDefaultDecayPortion = $wmgCirrusSearchPreferRecentDefaultDecayPortion;
 $wgCirrusSearchBoostLinks = $wmgCirrusSearchBoostLinks;
 $wgCirrusSearchWeights = array_merge( $wgCirrusSearchWeights, $wmgCirrusSearchWeightsOverrides );
