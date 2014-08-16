@@ -10016,10 +10016,12 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+// This is also guarded by $wmgUseCentralAuth
 'wmgUseGlobalCssJs' => array(
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
+	'default' => true,
+	'loginwiki' => false,
+	'private' => false,
+	'fishbowl' => false,
 ),
 
 'wmgUseOAuth' => array(

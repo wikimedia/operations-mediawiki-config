@@ -1291,23 +1291,21 @@ if ( $wmgUseCentralAuth ) {
 
 // Config for GlobalCssJs
 // Only enable on CentralAuth wikis
-// Note that config in CommonSettings-labs.php
-// will override this on beta labs-- legoktm 04/17/14
 if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
 	require_once( "$IP/extensions/GlobalCssJs/GlobalCssJs.php" );
 
 	// Disable site-wide global css/js
 	$wgUseGlobalSiteCssJs = false;
 
-	// Setup test2wiki as central wiki
-	$wgResourceLoaderSources['test2wiki'] = array(
-		'apiScript' => '//test2.wikipedia.org/w/api.php',
-		'loadScript' => '//bits.wikimedia.org/test2.wikipedia.org/load.php',
+	// Setup metawiki as central wiki
+	$wgResourceLoaderSources['metawiki'] = array(
+		'apiScript' => '//meta.wikimedia.org/w/api.php',
+		'loadScript' => '//bits.wikimedia.org/meta.wikimedia.org/load.php',
 	);
 
 	$wgGlobalCssJsConfig = array(
-		'wiki' => 'test2wiki',
-		'source' => 'test2wiki',
+		'wiki' => 'metawiki', // database name
+		'source' => 'metawiki', // ResourceLoader source name
 	);
 }
 
