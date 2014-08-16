@@ -3949,6 +3949,8 @@ $wgConf->settings = array(
 ),
 
 # wgRestrictionLevels @{
+// Don't use '+foowiki' syntax, as that results in bad ordering in the
+// protection form (bug 69640).
 'wgRestrictionLevels' => array(
 	'default' => array(
 		'',
@@ -3956,14 +3958,14 @@ $wgConf->settings = array(
 		'sysop',
 		'superprotect', // per request by Erik Möller
 	),
-	'+arwiki' => array( 'autoreview' ), // bug 52109
-	'+ckbwiki' => array( 'autopatrol' ), // bug 52533
-	'+enwiki' => array( 'templateeditor' ), // bug 55432
-	'+hewiki' => array( 'autopatrol'), //bug 58207
-	'+plwiki' => array( 'editor' ), // bug 46990
-	'+ptwiki' => array( 'autoreviewer' ), // bug 39652
-	'+rowiki' => array( 'templateeditor' ), // bug 61172
-	'+testwiki' => array( 'templateeditor' ), // bug 59084
+	'arwiki' => array( '', 'autoconfirmed', 'autoreview', 'sysop', 'superprotect' ), // bug 52109
+	'ckbwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), // bug 52533
+	'enwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // bug 55432
+	'hewiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), //bug 58207
+	'plwiki' => array( '', 'autoconfirmed', 'editor', 'sysop', 'superprotect' ), // bug 46990
+	'ptwiki' => array( '', 'autoconfirmed', 'autoreviewer', 'sysop', 'superprotect' ), // bug 39652
+	'rowiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // bug 61172
+	'testwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // bug 59084
 ),
 # @} end of wgRestrictionLevels
 
