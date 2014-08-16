@@ -7214,18 +7214,20 @@ $wgConf->settings = array(
 	),
 
 	'+metawiki' => array(
-		'steward' => array( 'userrights-interwiki' => true ), // new steward stuff, yay 2007-12-27
-		'flood' => array( 'bot' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
-		'centralnoticeadmin' => array( 'centralnotice-admin' => true, 'editinterface' => true ), //adding to allow CN access without local sysop JRA 2013-02-21
+		'centralnoticeadmin' => array( //adding to allow CN access without local sysop JRA 2013-02-21
+			'centralnotice-admin' => true,
+			'editinterface' => true,
+		),
+		'flood' => array( 'bot' => true ),
+		'global-renamer' => array( 'centralauth-rename' => true ), // bug 69651
+		'massmessage-sender' => array( 'massmessage' => true ), // bug 57611
+		'steward' => array( 'userrights-interwiki' => true ), // new steward stuff, yay 2007-12-27
 		'uploader' => array( // bug 50287
 			'upload' => true,
 			'reupload' => true,
 			'reupload-own' => true,
-			),
-		'massmessage-sender' => array( // bug 57611
-			'massmessage' => true,
-			),
+		),
 	),
 	'mkwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
