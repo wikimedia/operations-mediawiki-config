@@ -113,23 +113,12 @@ if ( $wmgUseCentralNotice ) {
 
 require_once( "$IP/extensions/MobileApp/MobileApp.php" );
 
-// Config for GlobalCssJs
-// Only enable on CentralAuth wikis
+// Labs override for GlobalCssJs
 if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
-	require_once( "$IP/extensions/GlobalCssJs/GlobalCssJs.php" );
-
-	// Disable site-wide global css/js
-	$wgUseGlobalSiteCssJs = false;
-
 	// Load from betalabs metawiki
 	$wgResourceLoaderSources['metawiki'] = array(
 		'apiScript' => '//meta.wikimedia.beta.wmflabs.org/w/api.php',
 		'loadScript' => '//bits.beta.wmflabs.org/meta.wikimedia.beta.wmflabs.org/load.php',
-	);
-
-	$wgGlobalCssJsConfig = array(
-		'wiki' => 'metawiki',
-		'source' => 'metawiki',
 	);
 }
 
