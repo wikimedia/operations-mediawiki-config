@@ -10483,7 +10483,7 @@ $wgConf->settings = array(
 	'svwiki' => array( 120, 200, 250, 300, 360 ),
 ),
 'wmgThumbsizeIndex' => array(
-	'default' => 4,
+	'default' => 6, // bug 67709
 	'svwiki' => 2, // bug 16739
 ),
 
