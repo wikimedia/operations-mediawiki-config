@@ -361,6 +361,7 @@ elseif ( $wgDBname == 'fawiki') {
 	$wgFlaggedRevsProtectQuota = 2000;
 
 	# User groups permissions
+	$wgGroupPermissions['rollbacker']['autoreviewrestore'] = true;
 	$wgGroupPermissions['autopatrol']['autoreview'] = true;
 	$wgGroupPermissions['patroller']['autoreview'] = true;
 	$wgGroupPermissions['patroller']['review'] = true;
