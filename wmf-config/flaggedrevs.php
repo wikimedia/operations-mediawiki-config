@@ -361,14 +361,13 @@ elseif ( $wgDBname == 'fawiki') {
 	$wgFlaggedRevsProtectQuota = 2000;
 
 	# User groups permissions
+	$wgGroupPermissions['rollbacker']['autoreviewrestore'] = true;
 	$wgGroupPermissions['autopatrol']['autoreview'] = true;
 	$wgGroupPermissions['patroller']['autoreview'] = true;
 	$wgGroupPermissions['patroller']['review'] = true;
 	$wgGroupPermissions['patroller']['validate'] = true;
-	$wgGroupPermissions['patroller']['unreviewedpages'] = true;
 	$wgGroupPermissions['sysop']['review'] = true;
 	$wgGroupPermissions['sysop']['validate'] = true;
-	$wgGroupPermissions['sysop']['unreviewedpages'] = true;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 
 	# Remove all user groups (editor, reviewer, autoreview)
