@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_488035c4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10022,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2014-08-17T10:37:16Z",
+      "side": 1,
+      "message": "You should probably also set false for votewiki like we normally do…",
+      "revId": "3e1fa27306339dfaf7813967e22376c095329ed0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
