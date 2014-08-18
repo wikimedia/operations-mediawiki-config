@@ -4223,6 +4223,8 @@ $wgConf->settings = array(
 	'chapcomwiki' => array(
 		100 => 'Draft', // bug 64123
 		101 => 'Draft_talk',
+		102 => 'Affiliate', // bug 69549
+		103 => 'Affiliate_talk',
 	),
 	'mediawikiwiki' => array(
 		100 => 'Manual',
