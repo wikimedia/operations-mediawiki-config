@@ -3004,6 +3004,8 @@ $wgConf->settings = array(
 		'글쓴이토론' => 101,
 		'Author' => 100,
 		'Author_talk' => 101,
+		'Portal' => 102, // Bug 69522
+		'Portal_talk' => 103,
 	),
 	'+kowikiversity' => array(
 		'Wikiversity토론' => NS_PROJECT_TALK, // Bug 44899
@@ -5090,6 +5092,8 @@ $wgConf->settings = array(
 	'kowikisource' => array(
 		100 => '저자',
 		101 => '저자토론',
+		102 => '포털', // Bug 69522
+		103 => '포털토론',
 	),
 	'lawikisource' => array(
 		102 => 'Scriptor',
