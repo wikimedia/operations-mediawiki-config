@@ -328,6 +328,14 @@ return array(
 	),
 	// ------------ BetaFeatures end -----------
 
+	'wgHTMLFormAllowTableFormat' => array(
+		'default' => false,
+	),
+
+	'wmgUseMediaWikiUIEverywhere' => array(
+		'default' => true,
+	),
+
 	'wmgUseRSSExtension' => array(
 		'dewiki' => true,
 	),
