@@ -13748,6 +13748,12 @@ $wgConf->settings = array(
 	'foundationwiki' => true,
 ),
 
+'wgMaxRedirects' => array(
+	'default' => 1,
+	'dewiki' => 2,
+	'enwiki' => 3,
+),
+
 );
 
 
