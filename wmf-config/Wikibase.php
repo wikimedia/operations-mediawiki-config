@@ -49,7 +49,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['specialSiteLinkGroups'] = array( 'commons' );
 
-	if ( $wgDBname !== 'testwikidatawiki' ) {
+	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['specialSiteLinkGroups'][] = 'testwikidata';
 	} else {
 		$wgWBRepoSettings['specialSiteLinkGroups'][] = 'wikidata';
