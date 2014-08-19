@@ -1,0 +1,9 @@
+Verified+2: jenkins-bot
+Code-Review+2: Anomie <bjorsch@wikimedia.org>
+Code-Review+1: Vogone <leon.liesener@wikipedia.de>
+Code-Review+1: Calak <Calakwiki@yahoo.com>
+Submitted-by: jenkins-bot
+Submitted-at: Tue, 19 Aug 2014 15:11:50 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/154713
+Project: operations/mediawiki-config
+Branch: refs/heads/master
