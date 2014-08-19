@@ -55,10 +55,17 @@ if ( $wmgUseWikibaseRepo ) {
 		);
 
 		$wgWBRepoSettings['siteLinkGroups'][] = 'special';
+	}
 
+	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['badgeItems'] = array(
 			'Q608' => 'wb-badge-goodarticle',
 			'Q609' => 'wb-badge-featuredarticle'
+		);
+	} else {
+		$wgWBRepoSettings['badgeItems'] = array(
+			'Q17437798' => 'wb-badge-goodarticle',
+			'Q17437796' => 'wb-badge-featuredarticle'
 		);
 	}
 
