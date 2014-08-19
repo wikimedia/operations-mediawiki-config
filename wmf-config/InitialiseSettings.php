@@ -13290,12 +13290,14 @@ $wgConf->settings = array(
 
 'wmgWikibaseEnableData' => array(
 	'default' => true,
+	'wikinews' => false,
 	'commonswiki' => false,
 ),
 
+// for loading the build entry point, w/o the extensions.
+// e.g. for running maintenance scripts to setup new clients.
 'wmgUseWikidataBuild' => array(
 	'default' => false,
-	'wikinews' => true,
 ),
 
 'wmgUseWikibaseRepo' => array(
