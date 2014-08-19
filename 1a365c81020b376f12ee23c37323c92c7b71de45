@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_79f3b769",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10562,
+      "author": {
+        "id": 1762
+      },
+      "writtenOn": "2014-08-19T09:32:06Z",
+      "side": 1,
+      "message": "Just noticed that the whole *.raa.se is white-listed above (line 10538) so the kmb white-listing is unnecessary.",
+      "revId": "1a365c81020b376f12ee23c37323c92c7b71de45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
