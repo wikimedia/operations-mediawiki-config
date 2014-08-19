@@ -2609,6 +2609,11 @@ if ( $wmgUseUniversalLanguageSelector ) {
 // might be build as "aawikibooks" or something that does not have Wikibase.
 $wgExtensionEntryPointListFiles[] = "$IP/extensions/Wikidata/extension-list-wikidata";
 
+// e.g. to load the build only, such as for running populateSitesTable.php script
+if ( $wmgUseWikidataBuild ) {
+	require_once( "$IP/extensions/Wikidata/Wikidata.php" );
+}
+
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 	if ( $wmgUseWikibaseRepo && $wmfRealm === 'labs' ) {
 		// enable on beta only
