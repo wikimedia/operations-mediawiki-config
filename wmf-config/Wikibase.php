@@ -6,8 +6,7 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgCacheEpoch = '20140814215741';
 	} else {
-		// @todo: can move to InitialiseSettings later, but having here
-		$wgCacheEpoch = '20140429173328';
+		$wgCacheEpoch = '20140819211643';
 	}
 
 	$baseNs = 120;
