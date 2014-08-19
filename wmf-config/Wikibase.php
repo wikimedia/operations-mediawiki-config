@@ -44,17 +44,15 @@ if ( $wmgUseWikibaseRepo ) {
 		'wikiquote',
 		'wikisource',
 		'wikivoyage',
+		'special'
 	);
 
-	if ( $wgDBname !== 'testwikidatawiki' ) {
-		$wgWBRepoSettings['siteLinkGroups'][] = 'commons';
-	} else {
-		$wgWBRepoSettings['specialSiteLinkGroups'] = array(
-			'commons',
-			'testwikidata'
-		);
+	$wgWBRepoSettings['specialSiteLinkGroups'] = array( 'commons' );
 
-		$wgWBRepoSettings['siteLinkGroups'][] = 'special';
+	if ( $wgDBname !== 'testwikidatawiki' ) {
+		$wgWBRepoSettings['specialSiteLinkGroups'][] = array( 'testwikidata' );
+	} else {
+		$wgWBRepoSettings['specialSiteLinkGroups'][] = array( 'wikidata' );
 	}
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
@@ -114,33 +112,27 @@ if ( $wmgUseWikibaseClient ) {
 		'wikibase-property' => 'Property'
 	);
 
-	$wgWBClientSettings['siteLinkGroups'] = array(
+	$wgWBRepoSettings['siteLinkGroups'] = array(
 		'wikipedia',
 		'wikiquote',
 		'wikisource',
 		'wikivoyage',
+		'special'
 	);
 
+	$wgWBRepoSettings['specialSiteLinkGroups'] = array( 'commons' );
+
 	if ( $wgDBname !== 'testwikidatawiki' ) {
-		$wgWBClientSettings['siteLinkGroups'][] = 'commons';
-	} else {
-		$wgWBClientSettings['specialSiteLinkGroups'] = array(
-			'commons',
-			'testwikidata'
-		);
-
-		$wgWBClientSettings['siteLinkGroups'][] = 'special';
+		$wgWBRepoSettings['specialSiteLinkGroups'][] = array( 'testwikidata' );
+	} elseif ( $wgDBname === 'wikidatawiki' ) {
+		$wgWBRepoSettings['specialSiteLinkGroups'][] = array( 'wikidata' );
 	}
-
-	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 
 	if ( $wgDBname === 'commonswiki' ) {
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
 	}
 
 	$wgWBClientSettings['siteGroup'] = $wmgWikibaseSiteGroup;
-
-	$wgWBClientSettings['allowArbitraryDataAccess'] = false;
 
 	$wgHooks['SetupAfterCache'][] = 'wmfWBClientExcludeNS';
 
@@ -157,8 +149,6 @@ if ( $wmgUseWikibaseClient ) {
 	};
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
-		$wgWBClientSettings['allowArbitraryDataAccess'] = true;
-
 		$wgWBClientSettings['namespaces'] = array(
 			NS_PROJECT,
 			NS_TEMPLATE,
@@ -169,6 +159,14 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['injectRecentChanges'] = false;
 		$wgWBClientSettings['showExternalRecentChanges'] = false;
 	}
+
+	if ( $wgDBname === 'testwikidatawiki' ) {
+		$wgWBClientSettings['allowArbitraryDataAccess'] = true;
+	}
+
+	$wgWBClientSettings['allowArbitraryDataAccess'] = false;
+
+	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 
 	foreach( $wmgWikibaseClientSettings as $setting => $value ) {
 		$wgWBClientSettings[$setting] = $value;
