@@ -13318,6 +13318,7 @@ $wgConf->settings = array(
 
 'wmgWikibaseSiteGroup' => array(
 	'default' => 'wikipedia',
+	'wikinews' => 'wikinews',
 	'wikiquote' => 'wikiquote',
 	'wikivoyage' => 'wikivoyage',
 	'wikisource' => 'wikisource',
