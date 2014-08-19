@@ -13305,6 +13305,7 @@ $wgConf->settings = array(
 
 'wmgUseWikibaseClient' => array(
 	'default' => false,
+	'wikidatawiki' => true,
 	'testwikidatawiki' => true,
 	'test2wiki' => true,
 	'testwiki' => true,
