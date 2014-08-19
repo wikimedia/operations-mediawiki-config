@@ -44,7 +44,7 @@ if ( $wgDBname == 'alswiki' ) {
 }
 
 elseif ( $wgDBname == 'arwiki' ) {
-	$wgFlaggedRevsWhitelist = array( 'الص�?حة_الرئيسية' );
+	$wgFlaggedRevsWhitelist = array( 'Ø§Ù„ØµÙ?Ø­Ø©_Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©' );
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 100, 104 ) ); // bug 19332
 }
 
@@ -736,7 +736,7 @@ elseif ( $wgDBname == 'trwikiquote' ) {
 
 elseif( $wgDBname == 'ukwiki' ) {
 	$wgFlaggedRevValues = 1;
-	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_MAIN, NS_FILE, NS_CATEGORY, NS_TEMPLATE ) );
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 828 ); // Bug 67748
 	$wgFlaggedRevTags['accuracy']['levels'] = 3;
 	$wgFlaggedRevsOverride = false;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
