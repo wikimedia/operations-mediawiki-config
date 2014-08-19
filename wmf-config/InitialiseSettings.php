@@ -13290,12 +13290,8 @@ $wgConf->settings = array(
 
 'wmgWikibaseEnableData' => array(
 	'default' => true,
+	'wikinews' => false,
 	'commonswiki' => false,
-),
-
-'wmgUseWikidataBuild' => array(
-	'default' => false,
-	'wikinews' => true,
 ),
 
 'wmgUseWikibaseRepo' => array(
