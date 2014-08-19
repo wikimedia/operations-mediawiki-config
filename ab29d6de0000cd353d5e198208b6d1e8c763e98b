@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e28a382_7f8a77c1",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-08-19T14:38:41Z",
+      "side": 1,
+      "message": "This is an array of strings, not an array oft arrays",
+      "revId": "ab29d6de0000cd353d5e198208b6d1e8c763e98b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_ffb54779",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-08-19T14:38:41Z",
+      "side": 1,
+      "message": "As above",
+      "revId": "ab29d6de0000cd353d5e198208b6d1e8c763e98b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_dfaccb34",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-08-19T14:38:41Z",
+      "side": 1,
+      "message": "As above",
+      "revId": "ab29d6de0000cd353d5e198208b6d1e8c763e98b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e28a382_7fa15735",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-08-19T14:38:41Z",
+      "side": 1,
+      "message": "As above",
+      "revId": "ab29d6de0000cd353d5e198208b6d1e8c763e98b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
