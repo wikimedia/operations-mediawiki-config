@@ -148,8 +148,13 @@ if ( $wmgUseWikibaseClient ) {
 		return true;
 	};
 
-	if ( $wgDBname === 'testwikidatawiki' ) {
+	$wgWBClientSettings['allowArbitraryDataAccess'] = false;
+
+	if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
+		$wgWBClientSettings['allowArbitraryDataAccess'] = true;
+
 		$wgWBClientSettings['namespaces'] = array(
+			NS_CATEGORY,
 			NS_PROJECT,
 			NS_TEMPLATE,
 			NS_HELP
@@ -159,12 +164,6 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['injectRecentChanges'] = false;
 		$wgWBClientSettings['showExternalRecentChanges'] = false;
 	}
-
-	if ( $wgDBname === 'testwikidatawiki' ) {
-		$wgWBClientSettings['allowArbitraryDataAccess'] = true;
-	}
-
-	$wgWBClientSettings['allowArbitraryDataAccess'] = false;
 
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 
