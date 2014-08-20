@@ -112,7 +112,8 @@ if ( $wmgUseWikibaseClient ) {
 		'wikibase-property' => 'Property'
 	);
 
-	$wgWBRepoSettings['siteLinkGroups'] = array(
+	// used by the sites module
+	$wgWBClientSettings['siteLinkGroups'] = array(
 		'wikipedia',
 		'wikinews',
 		'wikiquote',
@@ -121,12 +122,12 @@ if ( $wmgUseWikibaseClient ) {
 		'special'
 	);
 
-	$wgWBRepoSettings['specialSiteLinkGroups'] = array( 'commons' );
+	$wgWBClientSettings['specialSiteLinkGroups'] = array( 'commons' );
 
-	if ( $wgDBname !== 'testwikidatawiki' ) {
-		$wgWBRepoSettings['specialSiteLinkGroups'][] = 'testwikidata';
+	if ( $wgDBname === 'testwikidatawiki' ) {
+		$wgWBClientSettings['specialSiteLinkGroups'][] = 'testwikidata';
 	} elseif ( $wgDBname === 'wikidatawiki' ) {
-		$wgWBRepoSettings['specialSiteLinkGroups'][] = 'wikidata';
+		$wgWBClientSettings['specialSiteLinkGroups'][] = 'wikidata';
 	}
 
 	if ( $wgDBname === 'commonswiki' ) {
