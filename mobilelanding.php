@@ -1,7 +1,7 @@
 <?php
 putenv( "MW_LANG=en" ); // notify MWMultiVersion
 
-include '/apache/common/w/MWVersion.php';
+include '/usr/local/apache/common/w/MWVersion.php';
 include getMediaWiki( 'includes/WebStart.php' );
 
 $code = '302';

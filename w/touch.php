@@ -1,7 +1,7 @@
 <?php
 define( "MEDIAWIKI", true );
 
-require( "/apache/common/w/MWVersion.php" );
+require( "/usr/local/apache/common/w/MWVersion.php" );
 require( getMediaWiki( "includes/WebStart.php" ) );
 
 function faviconShowError( $html ) {
