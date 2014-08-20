@@ -2703,6 +2703,7 @@ if ( $wmgUseOAuth ) {
 	$wgMWOAuthGrantPermissions['editpage']['item-term'] = true;
 	$wgMWOAuthGrantPermissions['editpage']['item-merge'] = true;
 	$wgMWOAuthGrantPermissions['editpage']['property-term'] = true;
+	$wgMWOAuthGrantPermissions['editpage']['item-redirect'] = true;
 }
 
 if ( $wmgUsePetition ) {
