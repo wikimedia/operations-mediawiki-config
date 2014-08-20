@@ -13056,6 +13056,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
+	'mediawikiwiki' => true,
 ),
 
 // Thanks should be enabled for wikis with Echo
