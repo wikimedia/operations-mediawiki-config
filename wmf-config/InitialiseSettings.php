@@ -10597,6 +10597,7 @@ $wgConf->settings = array(
 		'mochila_images2.s3.amazonaws.com', //temporary for GWT upload       bug 67344
 		'*.universiteitsmuseum.nl',      // Universiteits Museum Utrecht
 		'data.kb.se',                    // National Library of Sweden Open Data bug 69439
+		'www.veikkos-archiv.com',        // Veikkos-archiv                   bug 69777
 	),
 ),
 
