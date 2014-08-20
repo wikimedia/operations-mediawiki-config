@@ -1887,8 +1887,12 @@ if ( $wmgUseMultimediaViewer ) {
 		$wgMediaViewerIsInBeta = true;
 	}
 
-	if ( $wmgMediaViewerLoggedIn ) {
-		$wgEnableMediaViewerForLoggedInUsersOnly = true;
+	if ( isset( $wmgMediaViewerEnableByDefault ) ) {
+		$wgMediaViewerEnableByDefault = $wmgMediaViewerEnableByDefault;
+	}
+
+	if ( isset( $wmgMediaViewerEnableByDefaultForAnonymous ) ) {
+		$wgMediaViewerEnableByDefaultForAnonymous = $wmgMediaViewerEnableByDefaultForAnonymous;
 	}
 
 	if ( $wmgMediaViewerUseThumbnailGuessing ) {
