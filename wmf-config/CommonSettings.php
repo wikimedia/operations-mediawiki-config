@@ -1392,6 +1392,15 @@ $wgMaxShellTime = 50; // so it times out before PHP and curl and squid
 // with: mkdir -p -m777 /sys/fs/cgroup/memory/mediawiki/job
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
+// Hacks to cut down on memory leaks
+if ( defined( 'HHVM_VERSION' ) ) {
+	$wgParserConf = array(
+		'class' => 'Parser',
+		'preprocessorClass' => 'Preprocessor_Hash',
+	);
+	$wgScribuntoDefaultEngine = 'luastandalone';
+}
+
 switch( $wmfRealm ) {
 case 'production'  :
 	$wgImageMagickTempDir = '/tmp/magick-tmp';
