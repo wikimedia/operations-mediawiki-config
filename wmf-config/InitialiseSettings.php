@@ -9802,7 +9802,10 @@ $wgConf->settings = array(
 # @} end of wgNamespaceProtection
 
 'wgParserConf' => array(
-	'default' => array( 'class' => 'Parser', 'preprocessorClass' => 'Preprocessor_DOM' ),
+	// libxml stuff seems to have iffy memory allocation
+	'default' => defined( 'HHVM_VERSION' )
+		? array( 'class' => 'Parser', 'preprocessorClass' => 'Preprocessor_Hash' )
+		: array( 'class' => 'Parser', 'preprocessorClass' => 'Preprocessor_DOM' ),
 	// Workaround for the issue discussed at https://oc.wikipedia.org/wiki/Discussion_Utilizaire:Midom -- TS
 	'ocwiki' => array( 'class' => 'Parser', 'preprocessorClass' => 'Preprocessor_Hash' ),
 ),
