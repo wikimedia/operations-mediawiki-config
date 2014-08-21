@@ -1392,6 +1392,14 @@ $wgMaxShellTime = 50; // so it times out before PHP and curl and squid
 // with: mkdir -p -m777 /sys/fs/cgroup/memory/mediawiki/job
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
+if ( defined( 'HHVM_VERSION' ) ) {
+	// libxml stuff seems to have iffy memory allocation
+	$wgParserConf = array(
+		'class' => 'Parser',
+		'preprocessorClass' => 'Preprocessor_Hash',
+	);
+}
+
 switch( $wmfRealm ) {
 case 'production'  :
 	$wgImageMagickTempDir = '/tmp/magick-tmp';
