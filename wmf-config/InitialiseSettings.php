@@ -556,6 +556,7 @@ $wgConf->settings = array(
 	'kwwiki' => '$stdlogo',
 	'kywiki' => '//upload.wikimedia.org/wikipedia/commons/3/3c/Wikipedia-logo-v2-ky.png', // bug 46589
 	'lawiki' => '$stdlogo',
+	'labswiki' => "https://wikitech.wikimedia.org/w/images/thumb/6/60/Wikimedia_labs_logo.svg/120px-Wikimedia_labs_logo.svg.png",
 	'ladwiki' => '$stdlogo',
 	'lbwiki' => '//upload.wikimedia.org/wikipedia/commons/9/9f/Wikipedia-logo-v2-lb.png',
 	'lbewiki' => '//upload.wikimedia.org/wikipedia/commons/9/95/Wikipedia-logo-v2-lbe.png', // bug 40285
@@ -1250,6 +1251,7 @@ $wgConf->settings = array(
 	'iegcomwiki' => '//iegcom.wikimedia.org',
 	'incubatorwiki' => '//incubator.wikimedia.org',
 	'internalwiki' => '//internal.wikimedia.org',
+	'labswiki' => "https://wikitech.wikimedia.org",
 	'legalteamwiki' => '//legalteam.wikimedia.org',
 	'loginwiki' => '//login.wikimedia.org',
 	'mediawikiwiki' => '//www.mediawiki.org',
@@ -1622,6 +1624,7 @@ $wgConf->settings = array(
 	'kowiktionary' => '위키낱말사전',
 	'krcwiki'  => 'Википедия',
 	'kuwiki' => 'Wîkîpediya',
+	'labswiki' => 'Wikitech',
 	'lawiki' => 'Vicipaedia',
 	'lawikibooks' => 'Vicilibri',
 	'lawikiquote' => 'Vicicitatio',
@@ -1836,6 +1839,7 @@ $wgConf->settings = array(
 	 'execwiki' => '/mnt/upload7/private/execwiki',
 	 'transitionteamwiki' => '/mnt/upload7/private/transitionteamwiki',
 	 'iegcomwiki' => '/mnt/upload7/private/iegcomwiki',
+	 'labswiki' => "/srv/org/wikimedia/controller/wikis/images",
 ),
 
 'wgImgAuthUrlPathMap' => array(
@@ -3607,6 +3611,7 @@ $wgConf->settings = array(
 	'+idwiki' => array( 6 => 0, 8 => 0 ),
 	'+itwiki' => array( 6 => 0, 8 => 0, 14 => 0 ),
 	'+kkwiki' => array( 6 => 0, 8 => 0, 12 => 0 ),
+	'labswiki' => array( 498 => 1 ),
 	'+ltwiki' => array( 6 => 0, 8 => 0 ),
 	'+plwiki' => array( 6 => 0, 8 => 0, 14 => 1 ),
 	'+rmwiki' => array( 0 => 1 ),
@@ -6463,6 +6468,7 @@ $wgConf->settings = array(
 	'+itwikivoyage' => array( 100 => 1, 104 => 1, 106 => 1 ),
 	'+kowikisource' => array( 100 => 1 ),
 	'+lawikisource' => array( 102 => 1, 106 => 1 ),
+	'labswiki' => array( 12 => 1 ),
 	'+ltwiki' => array( 100 => 1 ),
 	'+mediawikiwiki' => array( 12 => 1, 100 => 1, 102 => 1 ),
 	'+metawiki' => array( 12 => 1, 200 => 1, 202 => 1 ),
@@ -7216,6 +7222,43 @@ $wgConf->settings = array(
 	),
 	'kowiki' => array(
 		'rollbacker' => array( 'rollback' => true ),
+	),
+	'labswiki' => array(
+		'*' => array(
+			'edit' => false
+			'createaccount' => true,
+		),
+		'shell' => array('loginviashell' => true ),
+		'shellmanagers' => array('userrights' => false ),
+		'contentadmin' => array(
+			'protect' => true,
+			'editprotected' = true,
+			'bigdelete' = true,
+			'delete' = true,
+			'undelete' = true,
+			'block' = true,
+			'blockemail' = true,
+			'patrol' = true,
+			'autopatrol' = true,
+			'import' = true,
+			'importupload' = true,
+			'upload_by_url' = true,
+			'movefile' = true,
+			'suppressredirect' = true,
+			'rollback' = true,
+			'browsearchive' = true,
+			'deletedhistory' = true,
+			'deletedtext' = true,
+			'autoconfirmed' = true,
+		),
+		'cloudadmin' => array(
+			'listall' = true,
+			'manageproject' = true,
+			'userrights' = true,
+			'managednsdomain' = true,
+			'manageglobalpuppet' = true,
+			'accessrestrictedregions' = true,
+		),
 	),
 	'+legalteamwiki' => array( // bug 61222
 		'accountcreator' => array( 'noratelimit' => false ),
@@ -9977,6 +10020,7 @@ $wgConf->settings = array(
 	'wiktionary' => '//bits.wikimedia.org/apple-touch/wiktionary.png',
 
 	'enwiktionary' => '//bits.wikimedia.org/apple-touch/wiktionary/en.png', // bug 46431
+	'labswiki' => '/Wikitech-apple-touch-icon.png',
 ),
 
 'wgUserEmailUseReplyTo' => array(
@@ -11620,6 +11664,7 @@ $wgConf->settings = array(
 	# and comment out the one after that
 	#'default' => CACHE_MEMCACHED,
 	'default' => 'mysql-multiwrite',
+	'labswiki' => CACHE_MEMCACHED,
 ),
 
 'wgLanguageConverterCacheType' => array(
@@ -11696,6 +11741,7 @@ $wgConf->settings = array(
 	'trwiki' => true, // bug 38227
 	'urwiki' => true, // bug 40848
 	'viwiki' => true, // bug 48878
+	'labswiki' => true,
 	'zhwiki' => true, // bug 30362
 ),
 'wmgWikiLoveDefault' => array(
@@ -13809,4 +13855,10 @@ $wgConf->settings = array(
 if ( $wmfRealm == 'labs' ) {
 	require( "$wmfConfigDir/InitialiseSettings-labs.php" );
 	wmfLabsOverrideSettings();
+}
+
+### Wikitech override #####
+if ( $wgDBname == 'labswiki' ) {
+	require( "$wmfConfigDir/InitialiseSettings-wikitech.php" );
+	WikitechOverrideSettings();
 }
