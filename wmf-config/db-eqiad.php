@@ -37,6 +37,7 @@ $wgLBFactoryConf = array(
 	'fiwiki' => 's2',
 	'idwiki' => 's2',
 	'itwiki' => 's2',
+	'labswiki' => 'virt1000',
 	'nlwiki' => 's2',
 	'nowiki' => 's2',
 	'plwiki' => 's2',
@@ -146,6 +147,9 @@ $wgLBFactoryConf = array(
 		'db1028' => 400, # 1.4TB  64GB, vslow, dump
 		'db1034' => 400, # 1.4TB  64GB
 		'db1039' => 400, # 1.4TB  64GB
+	),
+	'virt1000' => array(
+		'virt1000' => 100,   # I have no idea if this is right
 	),
 ),
 
