@@ -20,6 +20,8 @@ if ( isset( $_REQUEST['forceprofile'] ) ) {
 	$version = str_replace( 'php-', '', basename( $IP ) );
 	if ( strpos( $_SERVER['REQUEST_URI'], '/w/thumb.php' ) !== false ) {
 		$wgProfiler['profileID'] = "thumb-$version";
+	} elseif ( strpos( $_SERVER['REQUEST_URI'], '/rpc/RunJobs.php' ) !== false ) {
+		$wgProfiler['profileID'] = "runjobs-$version";
 	} else {
 		$wgProfiler['profileID'] = $version;
 	}
