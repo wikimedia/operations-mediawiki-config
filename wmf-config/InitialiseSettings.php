@@ -13295,6 +13295,8 @@ $wgConf->settings = array(
 'wmgULSWebfontsEnabled' => array(
 	'default' => false,
 	'enwikisource' => true, // bug 69655
+	'dvwiki' => true,       // bug 69860
+	'dvwiktionary' => true, // bug 69860
 	'hewikisource' => true, // bug 60939
 ),
 
