@@ -141,6 +141,7 @@ class MWMultiVersion {
 			'www.mediawiki.org' => 'mediawiki',
 			'www.wikidata.org' => 'wikidata',
 			'wikisource.org' => 'sources',
+			'wikitech.wikimedia.org' => 'labswiki',
 		);
 
 		$site = "wikipedia";
