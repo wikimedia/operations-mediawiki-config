@@ -37,6 +37,7 @@ $wgLBFactoryConf = array(
 	'fiwiki' => 's2',
 	'idwiki' => 's2',
 	'itwiki' => 's2',
+	'labswiki' => 'virt1000',
 	'nlwiki' => 's2',
 	'nowiki' => 's2',
 	'plwiki' => 's2',
