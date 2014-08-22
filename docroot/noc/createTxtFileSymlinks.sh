@@ -14,6 +14,7 @@ mwconfig_files_txt=(
 	CirrusSearch-labs.php
 	db-eqiad.php
 	db-labs.php
+	db-wikitech.php
 	db-secondary.php
 	ext-labs.php
 	ext-production.php
@@ -27,6 +28,7 @@ mwconfig_files_txt=(
 	lucene-production.php
 	mc.php
 	mc-labs.php
+	mc-wikitech.php
 	missing.php
 	mobile-labs.php
 	mobile.php
