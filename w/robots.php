@@ -1,6 +1,4 @@
 <?php
-define( "MEDIAWIKI", true );
-
 require_once( './MWVersion.php' );
 require getMediaWiki( 'includes/WebStart.php' );
 
