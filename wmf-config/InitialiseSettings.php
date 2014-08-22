@@ -556,6 +556,7 @@ $wgConf->settings = array(
 	'kwwiki' => '$stdlogo',
 	'kywiki' => '//upload.wikimedia.org/wikipedia/commons/3/3c/Wikipedia-logo-v2-ky.png', // bug 46589
 	'lawiki' => '$stdlogo',
+	'labswiki' => "https://wikitech.wikimedia.org/w/images/thumb/6/60/Wikimedia_labs_logo.svg/120px-Wikimedia_labs_logo.svg.png",
 	'ladwiki' => '$stdlogo',
 	'lbwiki' => '//upload.wikimedia.org/wikipedia/commons/9/9f/Wikipedia-logo-v2-lb.png',
 	'lbewiki' => '//upload.wikimedia.org/wikipedia/commons/9/95/Wikipedia-logo-v2-lbe.png', // bug 40285
@@ -1250,6 +1251,7 @@ $wgConf->settings = array(
 	'iegcomwiki' => '//iegcom.wikimedia.org',
 	'incubatorwiki' => '//incubator.wikimedia.org',
 	'internalwiki' => '//internal.wikimedia.org',
+	'labswiki' => "https://wikitech.wikimedia.org",
 	'legalteamwiki' => '//legalteam.wikimedia.org',
 	'loginwiki' => '//login.wikimedia.org',
 	'mediawikiwiki' => '//www.mediawiki.org',
@@ -1622,6 +1624,7 @@ $wgConf->settings = array(
 	'kowiktionary' => '위키낱말사전',
 	'krcwiki'  => 'Википедия',
 	'kuwiki' => 'Wîkîpediya',
+	'labswiki' => 'Wikitech',
 	'lawiki' => 'Vicipaedia',
 	'lawikibooks' => 'Vicilibri',
 	'lawikiquote' => 'Vicicitatio',
@@ -1836,6 +1839,7 @@ $wgConf->settings = array(
 	 'execwiki' => '/mnt/upload7/private/execwiki',
 	 'transitionteamwiki' => '/mnt/upload7/private/transitionteamwiki',
 	 'iegcomwiki' => '/mnt/upload7/private/iegcomwiki',
+	 'labswiki' => "/srv/org/wikimedia/controller/wikis/images",
 ),
 
 'wgImgAuthUrlPathMap' => array(
@@ -3633,6 +3637,7 @@ $wgConf->settings = array(
 	'+grantswiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+incubatorwiki' => array( 0 => 1, 6 => 0, 14 => 1 ),
 	'+internalwiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
+	'+labswiki' => array( 0 => 1, 110 => 1, 112 => 1, 113 => 1, 498 => 1 ),
 	'+legalteamwiki' => array( 0 => 1 ),
 	'+mediawikiwiki' => array( 0 => 1, 6 => 0, 8 => 0, 14 => 1 ),
 	'+metawiki' => array( 0 => 1, 6 => 0, 8 => 0, 200 => 1, 201 => 1, 202 => 1, 203 => 1, 208 => 1, 209 => 1 ),
@@ -4230,6 +4235,12 @@ $wgConf->settings = array(
 		101 => 'Draft_talk',
 		102 => 'Affiliate', // bug 69549
 		103 => 'Affiliate_talk',
+	),
+	'labswiki' => array(
+		110 => 'Obsolete',
+		111 => 'Obsolete_talk',
+		112 => 'Ops',
+		113 => 'Ops_talk',
 	),
 	'mediawikiwiki' => array(
 		100 => 'Manual',
@@ -6463,6 +6474,7 @@ $wgConf->settings = array(
 	'+itwikivoyage' => array( 100 => 1, 104 => 1, 106 => 1 ),
 	'+kowikisource' => array( 100 => 1 ),
 	'+lawikisource' => array( 102 => 1, 106 => 1 ),
+	'+labswiki' => array( 12 => 1, 112 => 1 ),
 	'+ltwiki' => array( 100 => 1 ),
 	'+mediawikiwiki' => array( 12 => 1, 100 => 1, 102 => 1 ),
 	'+metawiki' => array( 12 => 1, 200 => 1, 202 => 1 ),
@@ -7216,6 +7228,44 @@ $wgConf->settings = array(
 	),
 	'kowiki' => array(
 		'rollbacker' => array( 'rollback' => true ),
+	),
+	'labswiki' => array(
+		'*' => array(
+			'edit' => false,
+			'createaccount' => true,
+		),
+		'contentadmin' => array(
+			'protect' => true,
+			'editprotected' => true,
+			'bigdelete' => true,
+			'delete' => true,
+			'undelete' => true,
+			'block' => true,
+			'blockemail' => true,
+			'patrol' => true,
+			'autopatrol' => true,
+			'import' => true,
+			'importupload' => true,
+			'upload_by_url' => true,
+			'movefile' => true,
+			'suppressredirect' => true,
+			'rollback' => true,
+			'browsearchive' => true,
+			'deletedhistory' => true,
+			'deletedtext' => true,
+			'autoconfirmed' => true,
+		),
+		'bots' => array('skipcaptcha' => true ),
+		'cloudadmin' => array(
+			'listall' => true,
+			'manageproject' => true,
+			'userrights' => true,
+			'managednsdomain' => true,
+			'manageglobalpuppet' => true,
+			'accessrestrictedregions' => true,
+		),
+		'shell' => array('loginviashell' => true ),
+		'shellmanagers' => array('userrights' => false ),
 	),
 	'+legalteamwiki' => array( // bug 61222
 		'accountcreator' => array( 'noratelimit' => false ),
@@ -8041,6 +8091,7 @@ $wgConf->settings = array(
 	'+kowiki' => array(
 		'sysop' => array( 'rollbacker', 'confirmed' ),
 	),
+	'+labswiki' => array('shellmanagers' => array( 'shell')),
 	'+legalteamwiki' => array( // bug 61222
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'translationadmin' ),
 	),
@@ -9456,6 +9507,7 @@ $wgConf->settings = array(
 	'+itwikisource' => array( 102, 108, 110 ),
 	'+itwikivoyage' => array( 100, 104 ), // bug 55620
 	'+kowikisource' => array( 100 ),
+	'+labswiki' => array( 112 ),
 	'+lawikisource' => array( 102, 104, 106 ),
 	'+mediawikiwiki' => array( 100, 102 ), // Manuals & extensions
 	'+metawiki' => array( NS_HELP ), // Bug 43687
@@ -9977,6 +10029,7 @@ $wgConf->settings = array(
 	'wiktionary' => '//bits.wikimedia.org/apple-touch/wiktionary.png',
 
 	'enwiktionary' => '//bits.wikimedia.org/apple-touch/wiktionary/en.png', // bug 46431
+	'labswiki' => '/Wikitech-apple-touch-icon.png',
 ),
 
 'wgUserEmailUseReplyTo' => array(
@@ -11620,6 +11673,7 @@ $wgConf->settings = array(
 	# and comment out the one after that
 	#'default' => CACHE_MEMCACHED,
 	'default' => 'mysql-multiwrite',
+	'labswiki' => CACHE_MEMCACHED,
 ),
 
 'wgLanguageConverterCacheType' => array(
@@ -11696,6 +11750,7 @@ $wgConf->settings = array(
 	'trwiki' => true, // bug 38227
 	'urwiki' => true, // bug 40848
 	'viwiki' => true, // bug 48878
+	'labswiki' => true,
 	'zhwiki' => true, // bug 30362
 ),
 'wmgWikiLoveDefault' => array(
