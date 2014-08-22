@@ -2622,6 +2622,12 @@ if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 	include( "$wmfConfigDir/Wikibase.php" );
 }
 
+if ( $wgDBname == 'labswiki' ) {
+	// A zillion wikitech-specific settings
+	include( "$wmfConfigDir/Wikitech.php" );
+	WikitechOverrideSettings();
+}
+
 // put this here to ensure it is available for localisation cache rebuild
 $wgWBClientSettings['repoSiteName'] = 'wikibase-repo-name';
 
