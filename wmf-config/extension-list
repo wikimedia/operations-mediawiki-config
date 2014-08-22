@@ -32,6 +32,7 @@ $IP/extensions/Disambiguator/Disambiguator.php
 $IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php
 $IP/extensions/DonationInterface/donationinterface_langonly.php
 $IP/extensions/DoubleWiki/DoubleWiki.php
+$IP/extensions/DynamicSidebar/DynamicSidebar.php
 $IP/extensions/Echo/Echo.php
 $IP/extensions/EducationProgram/EducationProgram.php
 $IP/extensions/Elastica/Elastica.php
@@ -60,6 +61,7 @@ $IP/extensions/Interwiki/Interwiki.php
 $IP/extensions/JsonConfig/JsonConfig.php
 $IP/extensions/LabeledSectionTransclusion/lst.php
 $IP/extensions/LandingCheck/LandingCheck.php
+$IP/extensions/LdapAuthentication/LdapAuthentication.php
 $IP/extensions/LiquidThreads/LiquidThreads.php
 $IP/extensions/Listings/Listings.php
 $IP/extensions/LocalisationUpdate/LocalisationUpdate.php
@@ -78,8 +80,10 @@ $IP/extensions/NavigationTiming/NavigationTiming.php
 $IP/extensions/NewUserMessage/NewUserMessage.php
 $IP/extensions/Nuke/SpecialNuke.php
 $IP/extensions/OAI/OAIRepo.php
+$IP/extensions/OATHAuth/OATHAuth.php
 $IP/extensions/OAuth/OAuth.php
 $IP/extensions/OpenSearchXml/OpenSearchXml.php
+$IP/extensions/OpenStackManager/OpenStackManager.php
 $IP/extensions/Oversight/HideRevision.php
 $IP/extensions/PagedTiffHandler/PagedTiffHandler.php
 $IP/extensions/PageImages/PageImages.php
@@ -102,6 +106,9 @@ $IP/extensions/Score/Score.php
 $IP/extensions/Scribunto/Scribunto.php
 $IP/extensions/SearchExtraNS/SearchExtraNS.php
 $IP/extensions/SecurePoll/SecurePoll.php
+$IP/extensions/SemanticForms/SemanticForms.php
+$IP/extensions/SemanticMediaWiki/SemanticMediaWiki.php
+$IP/extensions/SemanticResultFormats/SemanticResultFormats.php
 $IP/extensions/ShortUrl/ShortUrl.php
 $IP/extensions/SiteMatrix/SiteMatrix.php
 $IP/extensions/Solarium/Solarium.php
@@ -126,6 +133,7 @@ $IP/extensions/UnicodeConverter/UnicodeConverter.php
 $IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php
 $IP/extensions/UploadWizard/UploadWizard.php
 $IP/extensions/UserMerge/UserMerge.php
+$IP/extensions/Validator/Validator.php
 $IP/extensions/VectorBeta/VectorBeta.php
 $IP/extensions/VipsScaler/VipsScaler.php
 $IP/extensions/VipsScaler/VipsTest.php
