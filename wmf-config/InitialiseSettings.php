@@ -1836,6 +1836,7 @@ $wgConf->settings = array(
 	 'execwiki' => '/mnt/upload7/private/execwiki',
 	 'transitionteamwiki' => '/mnt/upload7/private/transitionteamwiki',
 	 'iegcomwiki' => '/mnt/upload7/private/iegcomwiki',
+	 'wikitech' => "/srv/org/wikimedia/controller/wikis/images",
 ),
 
 'wgImgAuthUrlPathMap' => array(
@@ -9977,6 +9978,7 @@ $wgConf->settings = array(
 	'wiktionary' => '//bits.wikimedia.org/apple-touch/wiktionary.png',
 
 	'enwiktionary' => '//bits.wikimedia.org/apple-touch/wiktionary/en.png', // bug 46431
+	'wikitech' => '/Wikitech-apple-touch-icon.png',
 ),
 
 'wgUserEmailUseReplyTo' => array(
@@ -11620,6 +11622,7 @@ $wgConf->settings = array(
 	# and comment out the one after that
 	#'default' => CACHE_MEMCACHED,
 	'default' => 'mysql-multiwrite',
+	'wikitech' => CACHE_MEMCACHED,
 ),
 
 'wgLanguageConverterCacheType' => array(
@@ -11696,6 +11699,7 @@ $wgConf->settings = array(
 	'trwiki' => true, // bug 38227
 	'urwiki' => true, // bug 40848
 	'viwiki' => true, // bug 48878
+	'wikitech' => true,
 	'zhwiki' => true, // bug 30362
 ),
 'wmgWikiLoveDefault' => array(
@@ -12986,6 +12990,7 @@ $wgConf->settings = array(
 'wmgUseEcho' => array(
 	'default' => false,
 	'echowikis' => true,
+	'wikitech' => true,
 ),
 'wmgEchoEnableEmailBatch' => array(
 	'default' => true,
@@ -13809,4 +13814,10 @@ $wgConf->settings = array(
 if ( $wmfRealm == 'labs' ) {
 	require( "$wmfConfigDir/InitialiseSettings-labs.php" );
 	wmfLabsOverrideSettings();
+}
+
+### Wikitech override #####
+if ( $wmfRealm == 'wikitech' ) {
+	require( "$wmfConfigDir/InitialiseSettings-wikitech.php" );
+	WikitechOverrideSettings();
 }
