@@ -172,6 +172,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_12829aa9",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2014-08-23T05:20:18Z",
+      "side": 1,
+      "message": "This should really be handled by the extension itself using the AuthPluginSetup hook (like how CentralAuth does it)",
+      "parentUuid": "4e322bf2_b2eaa671",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_d27772fc",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 3
