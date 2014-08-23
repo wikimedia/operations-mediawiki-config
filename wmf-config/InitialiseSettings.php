@@ -6784,6 +6784,8 @@ $wgConf->settings = array(
 			'editinterface' => true, // bug 52866
 			'editusercss' => true, // bug 52866
 			'edituserjs' => true, // bug 52866
+			'editsitecss' => true,
+			'editsitejs' => true,
 			'apihighlimits' => true, // bug 65348
 			'noratelimit' => true, // bug 65348
 		),
@@ -6873,11 +6875,11 @@ $wgConf->settings = array(
 		'sysop' => array( 'importupload' => true, ),
 	),
 	'+donatewiki' => array(
-		'user' => array( 'editinterface' => true ),
+		'user' => array( 'editinterface' => true, 'editsitecss' => true, 'editsitejs' => true ),
 		'flood' => array( 'bot' => true ),
 	),
 	'+elwiktionary' => array(
-		'interface_editor' => array( 'editinterface' => true ),
+		'interface_editor' => array( 'editinterface' => true, 'editsitecss' => true, 'editsitejs' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28612
 	),
 	'enwiki' => array(
@@ -7029,7 +7031,7 @@ $wgConf->settings = array(
 		'arbcom' => array( 'deletedhistory' => true, 'deletedtext' => true, 'undelete' => true ),
 	),
 	'+foundationwiki' => array(
-		'user' => array( 'editinterface' => true ),
+		'user' => array( 'editinterface' => true, 'editsitecss' => true, 'editsitejs' => true ),
 		'flood' => array( 'bot' => true ),
 	),
 	'frwiki' => array(
@@ -7057,7 +7059,7 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'botadmin' => array( 'autopatrol' => true, 'autoconfirmed' => true, 'editsemiprotected' => true, 'suppressredirect' => true, 'nominornewtalk' => true, 'noratelimit' => true, 'skipcaptcha' => true, 'apihighlimits' => true, 'writeapi' => true,
-'bot' => true, 'createaccount' => true, 'import' => true, 'patrol' => true, 'protect' => true, 'editprotected' => true, 'editusercss' => true, 'edituserjs' => true, 'editinterface' => true, 'browsearchive' => true, 'movefile' => true, 'move' => true,
+'bot' => true, 'createaccount' => true, 'import' => true, 'patrol' => true, 'protect' => true, 'editprotected' => true, 'editusercss' => true, 'edituserjs' => true, 'editinterface' => true, 'editsitecss' => true, 'editsitejs' => true, 'browsearchive' => true, 'movefile' => true, 'move' => true,
 'move-rootuserpages' => true, 'undelete' => true, 'rollback' => true, 'delete' => true, 'deleterevision' => true, 'reupload' => true
 			),
 	),
@@ -7071,7 +7073,7 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'editinterface' => array( 'abusefilter-hidden-log' => true, 'abusefilter-hide-log' => true, 'abusefilter-log' => true, 'abusefilter-log-detail' => true,
 			'abusefilter-modify'  => true, 'abusefilter-modify-restricted' => true, 'abusefilter-revert' => true, 'abusefilter-view' => true,
-			'abusefilter-view-private' => true, 'editinterface' => true, 'editusercssjs' => true, 'import' => true, 'tboverride' => true
+			'abusefilter-view-private' => true, 'editinterface' => true, 'editsitecss' => true, 'editsitejs' => true, 'editusercssjs' => true, 'import' => true, 'tboverride' => true
 		),
 		'checkuser' => array( 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true ),
 	),
@@ -7122,7 +7124,7 @@ $wgConf->settings = array(
 			'blockemail' => true,
 			'rollback' => true,
 		),
-		'translator' => array( 'editinterface' => true, ),
+		'translator' => array( 'editinterface' => true, 'editsitecss' => true, 'editsitejs' => true, ),
 	),
 	'iswiki' => array(
 		'sysop' => array(
@@ -7200,6 +7202,8 @@ $wgConf->settings = array(
 			'editsemiprotected' => true,
 			'edituserjs' => true,
 			'editusercss' => true,
+			'editsitecss' => true,
+			'editsitejs' => true,
 			'delete' => true,
 			'suppressredirect' => true,
 			'ipblock-exempt' => true,
@@ -7236,6 +7240,8 @@ $wgConf->settings = array(
 		'centralnoticeadmin' => array( //adding to allow CN access without local sysop JRA 2013-02-21
 			'centralnotice-admin' => true,
 			'editinterface' => true,
+			'editsitecss' => true,
+			'editsitejs' => true,
 		),
 		'flood' => array( 'bot' => true ),
 		'global-renamer' => array( 'centralauth-rename' => true ), // bug 69651
@@ -7258,7 +7264,7 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 		'botadmin' => array(
 			'blockemail' => true, 'block' => true, 'ipblock-exempt' => true, 'proxyunbannable' => true, 'protect' => true, 'editprotected' => true, 'createaccount' => true, 'deleterevision' => true, 'delete' => true, 'globalblock-whitelist' => true, 'editusercss' => true, 'edituserjs' => true,
-			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'autopatrol' => true, 'import' => true, 'centralnotice-admin' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
+			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'editsitecss' => true, 'editsitejs' => true, 'autopatrol' => true, 'import' => true, 'centralnotice-admin' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
 			'move-rootuserpages' => true, 'noratelimit' => true, 'suppressredirect' => true, 'reupload-shared' => true, 'override-antispoof' => true, 'tboverride' => true, 'reupload' => true, 'skipcaptcha' => true, 'rollback' => true, 'browsearchive' => true, 'unblockself' => true,
 			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
 		),
@@ -7268,7 +7274,7 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'botadmin' => array(
 			'blockemail' => true, 'block' => true, 'ipblock-exempt' => true, 'proxyunbannable' => true, 'protect' => true, 'editprotected' => true, 'createaccount' => true, 'deleterevision' => true, 'delete' => true, 'globalblock-whitelist' => true, 'editusercss' => true, 'edituserjs' => true,
-			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'autopatrol' => true, 'import' => true, 'centralnotice-admin' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
+			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'editsitecss' => true, 'editsitejs' => true, 'autopatrol' => true, 'import' => true, 'centralnotice-admin' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
 			'move-rootuserpages' => true, 'noratelimit' => true, 'suppressredirect' => true, 'reupload-shared' => true, 'override-antispoof' => true, 'tboverride' => true, 'reupload' => true, 'skipcaptcha' => true, 'rollback' => true, 'browsearchive' => true, 'unblockself' => true,
 			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
 		),
@@ -7276,7 +7282,7 @@ $wgConf->settings = array(
 	'+mlwiktionary' => array(
 		'botadmin' => array(
 			'blockemail' => true, 'block' => true, 'ipblock-exempt' => true, 'proxyunbannable' => true, 'protect' => true, 'editprotected' => true, 'createaccount' => true, 'deleterevision' => true, 'delete' => true, 'globalblock-whitelist' => true, 'editusercss' => true, 'edituserjs' => true,
-			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'autopatrol' => true, 'import' => true, 'centralnotice-admin' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
+			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'editsitecss' => true, 'editsitejs' => true, 'autopatrol' => true, 'import' => true, 'centralnotice-admin' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
 			'move-rootuserpages' => true, 'noratelimit' => true, 'suppressredirect' => true, 'reupload-shared' => true, 'override-antispoof' => true, 'tboverride' => true, 'reupload' => true, 'skipcaptcha' => true, 'rollback' => true, 'browsearchive' => true, 'unblockself' => true,
 			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
 		),
@@ -7391,6 +7397,8 @@ $wgConf->settings = array(
 			'editinterface' => true,
 			'edituserjs' => true,
 			'editusercss' => true,
+			'editsitecss' => true,
+			'editsitejs' => true,
 		),
 	),
 	'+quwiki' => array(
@@ -7407,6 +7415,8 @@ $wgConf->settings = array(
 		'templateeditor' => array( // bug 61172
 			'templateeditor' => true,
 			'editinterface' => true,
+			'editsitecss' => true,
+			'editsitejs' => true,
 		),
 	),
 	'+ruwiki' => array(
@@ -7566,7 +7576,7 @@ $wgConf->settings = array(
 		),
 		'researcher' => array( 'browsearchive' => true, 'deletedhistory' => true, 'apihighlimits' => true ),
 		'rollbacker' => array( 'rollback' => true ),
-		'centralnoticeadmin' => array( 'centralnotice-admin' => true, 'editinterface' => true ), //adding to allow CN access without local sysop JRA 2013-02-21
+		'centralnoticeadmin' => array( 'centralnotice-admin' => true, 'editinterface' => true, 'editsitecss' => true, 'editsitejs' => true ), //adding to allow CN access without local sysop JRA 2013-02-21
 	),
 	'test2wiki' => array(
 		'user' => array(
@@ -7620,6 +7630,8 @@ $wgConf->settings = array(
 			'editinterface' => true, // Bug 38690
 			'editusercss' => true, // Bug 38690
 			'edituserjs' => true, // Bug 38690
+			'editsitecss' => true,
+			'editsitejs' => true,
 			'noratelimit' => true, // Bug 38690
 		),
 	),

@@ -1071,6 +1071,8 @@ if ( $wgDBname == 'loginwiki' ) {
 			'editinterface' => false,
 			'editusercss' => false,
 			'edituserjs' => false,
+			'editsitecss' => false,
+			'editsitejs' => false,
 		)
 	);
 }
