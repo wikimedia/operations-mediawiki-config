@@ -1,0 +1,191 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e322bf2_3258f68b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-23T05:18:15Z",
+      "side": 1,
+      "message": "Add them to /a/common/private/PrivateSettings.php on tin inside `if( $wmfRealm \u003d\u003d \u0027wikitech\u0027 ) { ... }`",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_1255fa52",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-23T05:18:15Z",
+      "side": 1,
+      "message": "Reedy suggested adding an extension-list-wikitech file on bug 68751",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_5263823b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-23T05:18:15Z",
+      "side": 1,
+      "message": "/etc/wikimedia-realm",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_52d262d6",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-23T05:18:15Z",
+      "side": 1,
+      "message": "All of these need to be stuffed into $wgConf-\u003esettings[]. See wmfLabsOverrideSettings() for one way of doing that (settings array and merging function).",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_32d7d6c6",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-23T05:18:15Z",
+      "side": 1,
+      "message": "Goes in db-wikitech.php",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_d2dd32e3",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-23T05:18:15Z",
+      "side": 1,
+      "message": "Goes in mc-wikitech.php",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_b2c3c609",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-23T05:18:15Z",
+      "side": 1,
+      "message": "These would be handled by the extension-list-wikitech file",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_92c8ca26",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-23T05:18:15Z",
+      "side": 1,
+      "message": "Things from here would go in /a/common/private/PrivateSettings.php",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_b29186fd",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-23T05:18:15Z",
+      "side": 1,
+      "message": "I\u0027m not entirely sure how to handle this with SiteConfiguration",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_b2eaa671",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-23T05:18:15Z",
+      "side": 1,
+      "message": "I\u0027m not entirely sure how to handle this with SiteConfiguration",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_d27772fc",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12993,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-23T05:18:15Z",
+      "side": 1,
+      "message": "Could just add wikitech to echowikis.dblist",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
