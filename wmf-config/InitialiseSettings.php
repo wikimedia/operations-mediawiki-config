@@ -2606,9 +2606,6 @@ $wgConf->settings = array(
 		'WZ' => NS_PROJECT,
 		'Wikinews_diskuse' => NS_PROJECT_TALK,
 		'Wikinews_talk' => NS_PROJECT_TALK,
-		'Portal' => 100,
-		'Portal_talk' => 101,
-		'Portál_diskuse' => 101,
 	),
 	'+cswikiquote' => array(
 		'WC' => NS_PROJECT,
@@ -5721,8 +5718,6 @@ $wgConf->settings = array(
 	'cswikinews' => array(
 		NS_USER      => 'Redaktor',       # language default set back in wgNamespaceAliases
 		NS_USER_TALK => 'Diskuse_s_redaktorem',   # language default set back in wgNamespaceAliases
-		100 => 'Portál',
-		101 => 'Diskuse_k_portálu',
 	),
 	'dewikinews' => array(
 		100 => 'Portal',
@@ -6433,7 +6428,7 @@ $wgConf->settings = array(
 	'+cawikisource' => array( 104 => 1, 106 => 1 ),
 	'+cswiki' => array( 100 => 1, 101 => 0, 102 => 1 ),
 	'+commonswiki' => array( 6 => 1, 12 => 1, 14 => 1, 100 => 1, 106 => 1 ),
-	'+cswikinews' => array( 14 => 0, 15 => 0, 100 => 1, 101 => 0 ),
+	'+cswikinews' => array( 14 => 0, 15 => 0 ),
 	'+cswikiquote' => array( 14 => 0, 15 => 0, 100 => 1, 101 => 0 ),
 	'+cswikisource' => array( 100 => 1, 101 => 0 ),
 	'+cswikiversity' => array( 14 => 0, 15 => 0, 100 => 0, 101 => 0 ),
