@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_0816ea4d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-24T14:00:32Z",
+      "side": 1,
+      "message": "Many of those settings (ldap, openstack) are passwords that need to be in sync with puppet because they\u0027re referenced outside of mediawiki.  I\u0027d have to have to sync them by hand, although I guess that may be the best option...",
+      "parentUuid": "4e322bf2_3258f68b",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_1255fa52",
         "filename": "/COMMIT_MSG",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2014-08-23T05:18:15Z",
       "side": 1,
       "message": "Reedy suggested adding an extension-list-wikitech file on bug 68751",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_68368ee6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-24T14:00:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e322bf2_1255fa52",
       "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_283086e4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-24T14:00:32Z",
+      "side": 1,
+      "message": "Oh, so that comes straight from the puppet realm?  That\u0027s not going to work so well, since wikitech is obviously \u0027production\u0027 for all other purposes.  Hm...",
+      "parentUuid": "4e322bf2_5263823b",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_52d262d6",
         "filename": "wmf-config/InitialiseSettings-wikitech.php",
         "patchSetId": 3
@@ -64,6 +118,24 @@
       "writtenOn": "2014-08-23T05:18:15Z",
       "side": 1,
       "message": "All of these need to be stuffed into $wgConf-\u003esettings[]. See wmfLabsOverrideSettings() for one way of doing that (settings array and merging function).",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_a8535619",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-24T14:00:32Z",
+      "side": 1,
+      "message": "When you say \u0027all of these\u0027 you mean... every single thing in this file?",
+      "parentUuid": "4e322bf2_52d262d6",
       "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -190,6 +262,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_e8495e6b",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 114,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-24T14:00:32Z",
+      "side": 1,
+      "message": "I don\u0027t understand this comment.  Are you suggesting that I should modify the Ldap extension?",
+      "parentUuid": "4e322bf2_12829aa9",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_d27772fc",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 3
@@ -201,6 +291,24 @@
       "writtenOn": "2014-08-23T05:18:15Z",
       "side": 1,
       "message": "Could just add wikitech to echowikis.dblist",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_e8227ea1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12993,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-24T14:00:32Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e322bf2_d27772fc",
       "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
