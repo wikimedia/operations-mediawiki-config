@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_af911854",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-25T16:53:57Z",
+      "side": 1,
+      "message": "We could add something to PrivateSettings.php to import a file that is managed by puppet.",
+      "parentUuid": "4e322bf2_0816ea4d",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_1255fa52",
         "filename": "/COMMIT_MSG",
         "patchSetId": 3
@@ -101,6 +119,24 @@
       "side": 1,
       "message": "Oh, so that comes straight from the puppet realm?  That\u0027s not going to work so well, since wikitech is obviously \u0027production\u0027 for all other purposes.  Hm...",
       "parentUuid": "4e322bf2_5263823b",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_2f82c8a9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-25T16:53:57Z",
+      "side": 1,
+      "message": "Yeah. :( The more I think about this the more I realize that I steered you in the wrong direction with the separate realm idea. We can still add loading of custom config based on the wiki name where it is needed.",
+      "parentUuid": "4e322bf2_283086e4",
       "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
