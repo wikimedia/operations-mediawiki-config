@@ -7258,7 +7258,7 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 		'botadmin' => array(
 			'blockemail' => true, 'block' => true, 'ipblock-exempt' => true, 'proxyunbannable' => true, 'protect' => true, 'editprotected' => true, 'createaccount' => true, 'deleterevision' => true, 'delete' => true, 'globalblock-whitelist' => true, 'editusercss' => true, 'edituserjs' => true,
-			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'autopatrol' => true, 'import' => true, 'centralnotice-admin' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
+			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'autopatrol' => true, 'import' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
 			'move-rootuserpages' => true, 'noratelimit' => true, 'suppressredirect' => true, 'reupload-shared' => true, 'override-antispoof' => true, 'tboverride' => true, 'reupload' => true, 'skipcaptcha' => true, 'rollback' => true, 'browsearchive' => true, 'unblockself' => true,
 			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
 		),
@@ -7268,7 +7268,7 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'botadmin' => array(
 			'blockemail' => true, 'block' => true, 'ipblock-exempt' => true, 'proxyunbannable' => true, 'protect' => true, 'editprotected' => true, 'createaccount' => true, 'deleterevision' => true, 'delete' => true, 'globalblock-whitelist' => true, 'editusercss' => true, 'edituserjs' => true,
-			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'autopatrol' => true, 'import' => true, 'centralnotice-admin' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
+			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'autopatrol' => true, 'import' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
 			'move-rootuserpages' => true, 'noratelimit' => true, 'suppressredirect' => true, 'reupload-shared' => true, 'override-antispoof' => true, 'tboverride' => true, 'reupload' => true, 'skipcaptcha' => true, 'rollback' => true, 'browsearchive' => true, 'unblockself' => true,
 			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
 		),
@@ -7276,7 +7276,7 @@ $wgConf->settings = array(
 	'+mlwiktionary' => array(
 		'botadmin' => array(
 			'blockemail' => true, 'block' => true, 'ipblock-exempt' => true, 'proxyunbannable' => true, 'protect' => true, 'editprotected' => true, 'createaccount' => true, 'deleterevision' => true, 'delete' => true, 'globalblock-whitelist' => true, 'editusercss' => true, 'edituserjs' => true,
-			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'autopatrol' => true, 'import' => true, 'centralnotice-admin' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
+			'autoconfirmed' => true, 'editsemiprotected' => true, 'editinterface' => true, 'autopatrol' => true, 'import' => true, 'patrol' => true, 'markbotedits' => true, 'nuke' => true, 'abusefilter-modify' => true, 'movefile' => true, 'move' => true, 'move-subpages' => true,
 			'move-rootuserpages' => true, 'noratelimit' => true, 'suppressredirect' => true, 'reupload-shared' => true, 'override-antispoof' => true, 'tboverride' => true, 'reupload' => true, 'skipcaptcha' => true, 'rollback' => true, 'browsearchive' => true, 'unblockself' => true,
 			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
 		),
