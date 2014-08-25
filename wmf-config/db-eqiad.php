@@ -514,7 +514,6 @@ $wgDefaultExternalStore = array(
 	'DB://cluster24',
 	'DB://cluster25',
 );
-$wgMasterWaitTimeout = 2;
 $wgDBAvgStatusPoll = 30000;
 
 # $wgLBFactoryConf['readOnlyBySection']['s2'] =
