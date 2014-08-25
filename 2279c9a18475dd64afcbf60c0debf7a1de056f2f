@@ -87,6 +87,23 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_73555652",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-08-25T20:43:59Z",
+      "side": 1,
+      "message": "CheckUser should be installed everywhere. Can probably be removed.",
+      "revId": "2279c9a18475dd64afcbf60c0debf7a1de056f2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_d3108aaf",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 7
