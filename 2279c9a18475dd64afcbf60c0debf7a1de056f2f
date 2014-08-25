@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e322bf2_137e12e2",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-08-25T20:42:55Z",
+      "side": 1,
+      "message": "Can go to InitialiseSettings.",
+      "revId": "2279c9a18475dd64afcbf60c0debf7a1de056f2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_d3876adb",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-08-25T20:42:55Z",
+      "side": 1,
+      "message": "As can all these namespace things.",
+      "revId": "2279c9a18475dd64afcbf60c0debf7a1de056f2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_b38cde00",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-08-25T20:42:55Z",
+      "side": 1,
+      "message": "And this.",
+      "revId": "2279c9a18475dd64afcbf60c0debf7a1de056f2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_3378eeec",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-08-25T20:42:55Z",
+      "side": 1,
+      "message": "Can we see about these two settings possibly going in a more central location? Does IS set these?",
+      "revId": "2279c9a18475dd64afcbf60c0debf7a1de056f2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_1365f241",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-08-25T20:42:55Z",
+      "side": 1,
+      "message": "Definitely can go in InitialiseSettings",
+      "revId": "2279c9a18475dd64afcbf60c0debf7a1de056f2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_d3108aaf",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 3614,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-08-25T20:42:55Z",
+      "side": 1,
+      "message": "Should move under the \"specials\" section below. Also should use + syntax so it gets merged with the default (unless you\u0027re purposefully overriding the whole setting)",
+      "revId": "2279c9a18475dd64afcbf60c0debf7a1de056f2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_932a02d6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 6471,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-08-25T20:42:55Z",
+      "side": 1,
+      "message": "Same with +.",
+      "revId": "2279c9a18475dd64afcbf60c0debf7a1de056f2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
