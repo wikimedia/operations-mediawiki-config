@@ -25,7 +25,6 @@ if ( PHP_SAPI != 'cli' ) {
 if ( PHP_SAPI == 'cli' ) {
 	# Override for sanity's sake.
 	ini_set( 'display_errors', 1 );
-	# error_reporting(E_ALL);
 }
 if ( isset( $_SERVER['SERVER_ADDR'] ) ) {
 	ini_set( 'error_append_string', ' (' . $_SERVER['SERVER_ADDR'] . ')' );
@@ -51,7 +50,7 @@ $cluster = 'eqiad';
 # The possible values as of June 2012 are:
 #  - labs
 #  - production
-$wmfRealm   = 'production';
+$wmfRealm = 'production';
 
 # Puppet provision the realm in /etc/wikimedia-realm
 if( file_exists( '/etc/wikimedia-realm' ) ) {
@@ -704,7 +703,6 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgEnableTranscode = $wgEnableUploads;
 
 	$wgOggThumbLocation = false; // use ffmpeg for performance
-	// $wgOggThumbLocation = '/usr/bin/oggThumb';
 
 	//tmh1/2 have 12 cores and need lots of shared memory
 	//for avconv / ffmpeg2theora
@@ -1159,7 +1157,6 @@ if ( $wmgEnableCaptcha ) {
 	if ( $wmfRealm !== 'labs' ) {
 		$wgCaptchaFileBackend = 'global-multiwrite';
 	}
-	# $wgCaptchaTriggers['edit'] = true;
 	$wgCaptchaSecret = $wmgCaptchaSecret;
 	$wgCaptchaDirectory = '/mnt/upload7/private/captcha';
 	$wgCaptchaDirectoryLevels = 3;
@@ -1210,8 +1207,6 @@ if ( $wmgUseCentralAuth ) {
 	include "$IP/extensions/CentralAuth/CentralAuth.php";
 
 	$wgCentralAuthDryRun = false;
-	# unset( $wgGroupPermissions['*']['centralauth-merge'] );
-	# $wgGroupPermissions['sysop']['centralauth-merge'] = true;
 	$wgGroupPermissions['steward']['centralauth-rename'] = true;
 	$wgCentralAuthCookies = true;
 
