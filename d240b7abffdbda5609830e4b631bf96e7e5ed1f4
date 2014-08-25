@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e322bf2_b6584c36",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 8
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-25T21:09:10Z",
+      "side": 1,
+      "message": "They would have been loaded via getRealmSpecificFilename() when we were talking about making wikitech a realm. Now they need to go away in favor of folding into db-equiad.php \u0026 mc.php or other config places.",
+      "revId": "d240b7abffdbda5609830e4b631bf96e7e5ed1f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
