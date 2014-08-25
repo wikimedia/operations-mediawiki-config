@@ -25,7 +25,6 @@ if( PHP_SAPI != 'cli' ) {
 if ( PHP_SAPI == 'cli' ) {
 	# Override for sanity's sake.
 	ini_set( 'display_errors', 1 );
-	# error_reporting(E_ALL);
 }
 if ( isset( $_SERVER['SERVER_ADDR'] ) ) {
 	ini_set( 'error_append_string', ' (' . $_SERVER['SERVER_ADDR'] . ')' );
@@ -64,7 +63,7 @@ $cluster = 'eqiad';
 # The possible values as of June 2012 are:
 #  - labs
 #  - production
-$wmfRealm   = 'production';
+$wmfRealm = 'production';
 
 # Puppet provision the realm in /etc/wikimedia-realm
 if( file_exists( '/etc/wikimedia-realm' ) ) {
@@ -114,8 +113,6 @@ default:
 
 # Load site configuration
 include( "$IP/includes/DefaultSettings.php" );
-
-$DP = $IP;
 
 wfProfileOut( "$fname-init" );
 wfProfileIn( "$fname-host" );
@@ -267,8 +264,6 @@ $wgArticlePath = "/wiki/$1";
 
 $wgScriptPath  = '/w';
 $wgLocalStylePath = "$wgScriptPath/static-$wmfVersionNumber/skins";
-$wgScript           = $wgScriptPath . '/index.php';
-$wgRedirectScript	= $wgScriptPath . '/redirect.php';
 $wgInternalServer = $wgCanonicalServer;
 
 if ( $wgDBname != 'testwiki' && isset( $_SERVER['SERVER_NAME'] ) ) {
@@ -680,7 +675,6 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgEnableTranscode = $wgEnableUploads;
 
 	$wgOggThumbLocation = false; // use ffmpeg for performance
-	// $wgOggThumbLocation = '/usr/bin/oggThumb';
 
 	//tmh1/2 have 12 cores and need lots of shared memory
 	//for avconv / ffmpeg2theora
@@ -869,8 +863,6 @@ if ( $wgDBname == 'nostalgiawiki' ) {
 	require_once "$IP/skins/Nostalgia/Nostalgia.php";
 }
 
-$wgUseHashTable = true;
-
 $wgCopyrightIcon = '<a href="//wikimediafoundation.org/"><img src="//' . $wmfHostnames['bits'] . '/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>';
 
 # For Special:Cite, we only want it on wikipedia (but can't count on $site),
@@ -881,7 +873,7 @@ if ( in_array( $wgLanguageCode, array( 'commons', 'meta', 'sources', 'species', 
 	$wgLanguageCode = 'en';
 }
 
-$wgDisableCounters     = true;
+$wgDisableCounters = true;
 
 wfProfileOut( "$fname-misc2" );
 
@@ -916,7 +908,6 @@ wfProfileIn( "$fname-misc3" );
 
 // Various DB contention settings
 $wgAntiLockFlags = ALF_NO_LINK_LOCK | ALF_NO_BLOCK_LOCK;
-# $wgAntiLockFlags = ALF_PRELOAD_LINKS | ALF_PRELOAD_EXISTENCE;
 if ( in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki', 'commonswiki' ) ) ) {
 	$wgSiteStatsAsyncFactor = 1;
 }
@@ -1148,7 +1139,6 @@ if ( $wmgEnableCaptcha ) {
 	if ( $wmfRealm !== 'labs' ) {
 		$wgCaptchaFileBackend = 'global-multiwrite';
 	}
-	# $wgCaptchaTriggers['edit'] = true;
 	$wgCaptchaSecret = $wmgCaptchaSecret;
 	$wgCaptchaDirectory = '/mnt/upload7/private/captcha';
 	$wgCaptchaDirectoryLevels = 3;
@@ -1175,7 +1165,6 @@ if ( $wmgEnableCaptcha ) {
 
 require( "$IP/extensions/Oversight/HideRevision.php" );
 $wgGroupPermissions['oversight']['hiderevision'] = false;
-// $wgGroupPermissions['oversight']['oversight'] = true;
 
 if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgExternalDiffEngine = 'wikidiff2';
@@ -1198,8 +1187,6 @@ if ( $wmgUseCentralAuth ) {
 	include "$IP/extensions/CentralAuth/CentralAuth.php";
 
 	$wgCentralAuthDryRun = false;
-	# unset( $wgGroupPermissions['*']['centralauth-merge'] );
-	# $wgGroupPermissions['sysop']['centralauth-merge'] = true;
 	$wgGroupPermissions['steward']['centralauth-rename'] = true;
 	$wgCentralAuthCookies = true;
 
@@ -1565,7 +1552,6 @@ if ( $wmgUseCollection ) {
 
 	$wgCollectionFormats = array(
 		'rl' => 'PDF',
-	//	'epub' => 'EPUB', // disabling by default per reqest from tfinc 14 July 2012
 		'odf' => 'ODT',
 		'zim' => 'openZIM',
 		'rdf2latex' => 'WMF PDF',
