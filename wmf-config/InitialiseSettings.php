@@ -9597,6 +9597,7 @@ $wgConf->settings = array(
 	'incubatorwiki' => true,
 	'iswiktionary' => true, # 7952
 	'legalteamwiki' => true, // bug 62610
+	'mediawikiwiki' => true, // bug 69974
 	'metawiki' => true,
 	'ptwiki' => true, # bug 35308
 	'otrs_wikiwiki' => true,
