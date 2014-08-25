@@ -2,6 +2,57 @@
   "comments": [
     {
       "key": {
+        "uuid": "4e322bf2_b3d29ed3",
+        "filename": "wmf-config/CommonSettings-wikitech.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-25T21:07:00Z",
+      "side": 1,
+      "message": "Maybe this should be handled like extension-list-wikidata in CommonSettings.php? Grep for that and see what I mean. That also shows how to include a special config file that is only loaded if certain config settings are turned on ($wmgUseWikibaseRepo in that example).",
+      "revId": "2279c9a18475dd64afcbf60c0debf7a1de056f2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_33210ef7",
+        "filename": "wmf-config/CommonSettings-wikitech.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-25T21:07:00Z",
+      "side": 1,
+      "message": "if ( $wgDBname \u003d\u003d \u0027labswiki\u0027 ) {",
+      "revId": "2279c9a18475dd64afcbf60c0debf7a1de056f2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_f3bdc664",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-25T21:07:00Z",
+      "side": 1,
+      "message": "Because of where an InitialiseSettings file is loaded in CommonSettings, it needs to only modify things in $wgConf (SiteConfiguration object). If you need config like this that is outside the scope of a SiteConfiguration object you will need to do it like wmf-config/Wikibase.php does. Search CommonSettings.php for $wmgUseWikibaseRepo to see what they do to load the config, but it boils down to:\n\n  if (guard condition) {\n    include \"$wmfConfigDir/Wikibase.php\";\n  }",
+      "revId": "2279c9a18475dd64afcbf60c0debf7a1de056f2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_137e12e2",
         "filename": "wmf-config/InitialiseSettings-wikitech.php",
         "patchSetId": 7
@@ -132,6 +183,57 @@
       "writtenOn": "2014-08-25T20:42:55Z",
       "side": 1,
       "message": "Same with +.",
+      "revId": "2279c9a18475dd64afcbf60c0debf7a1de056f2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_5385ba9e",
+        "filename": "wmf-config/db-labswiki.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-25T21:07:00Z",
+      "side": 1,
+      "message": "Needs to merge into db-eqiad.php.\n\nsectionsByDB[\u0027labswiki\u0027] \u003d \u0027virt1000\u0027",
+      "revId": "2279c9a18475dd64afcbf60c0debf7a1de056f2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_3330eefb",
+        "filename": "wmf-config/db-labswiki.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-25T21:07:00Z",
+      "side": 1,
+      "message": "This goes away",
+      "revId": "2279c9a18475dd64afcbf60c0debf7a1de056f2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_760c243e",
+        "filename": "wmf-config/mc-labswiki.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-08-25T21:07:00Z",
+      "side": 1,
+      "message": "Since we are not talking about a wikitech realm now, these settings go either in CommonSettings.php or the custom wikitech override file that ends up being made.",
       "revId": "2279c9a18475dd64afcbf60c0debf7a1de056f2f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
