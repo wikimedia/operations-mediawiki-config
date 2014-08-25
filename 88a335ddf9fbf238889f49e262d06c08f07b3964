@@ -213,6 +213,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_2a6196d0",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-25T17:52:38Z",
+      "side": 1,
+      "message": "dropped!",
+      "parentUuid": "4e322bf2_4febd4db",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_d2dd32e3",
         "filename": "wmf-config/InitialiseSettings-wikitech.php",
         "patchSetId": 3
@@ -224,6 +242,24 @@
       "writtenOn": "2014-08-23T05:18:15Z",
       "side": 1,
       "message": "Goes in mc-wikitech.php",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_2ab0763d",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-25T17:52:38Z",
+      "side": 1,
+      "message": "Done, but... where does this get included?  I don\u0027t see mc-labs.php included anyplace either.",
+      "parentUuid": "4e322bf2_d2dd32e3",
       "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -247,6 +283,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_6a10be04",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-25T17:52:38Z",
+      "side": 1,
+      "message": "ok, moved, but can I add the \u0027shellmanager\u0027 group there?",
+      "parentUuid": "4e322bf2_2fe888dc",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_b2c3c609",
         "filename": "wmf-config/InitialiseSettings-wikitech.php",
         "patchSetId": 3
@@ -258,6 +312,24 @@
       "writtenOn": "2014-08-23T05:18:15Z",
       "side": 1,
       "message": "These would be handled by the extension-list-wikitech file",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_aadc664c",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-25T17:52:38Z",
+      "side": 1,
+      "message": "OK... all four of these, right?",
+      "parentUuid": "4e322bf2_b2c3c609",
       "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -298,6 +370,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_0a7a5a1f",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-25T17:52:38Z",
+      "side": 1,
+      "message": "Done but, again, unclear to me when/if this will get included",
+      "parentUuid": "4e322bf2_0ff5ccb5",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_cfbea4d1",
         "filename": "wmf-config/InitialiseSettings-wikitech.php",
         "patchSetId": 3
@@ -315,6 +405,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_2a7d1618",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-25T17:52:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e322bf2_cfbea4d1",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_afc35860",
         "filename": "wmf-config/InitialiseSettings-wikitech.php",
         "patchSetId": 3
@@ -326,6 +434,24 @@
       "writtenOn": "2014-08-25T16:15:49Z",
       "side": 1,
       "message": "More permissions stuff for IS.",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_4a8062f9",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-25T17:52:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e322bf2_afc35860",
       "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -431,6 +557,24 @@
       "writtenOn": "2014-08-25T16:15:49Z",
       "side": 1,
       "message": "This and the two settings below can go in InitialiseSettings.",
+      "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_0ac01a2e",
+        "filename": "wmf-config/InitialiseSettings-wikitech.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-25T17:52:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e322bf2_4fd2b42d",
       "revId": "88a335ddf9fbf238889f49e262d06c08f07b3964",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
