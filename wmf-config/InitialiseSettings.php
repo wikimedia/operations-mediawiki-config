@@ -6715,8 +6715,11 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'disableaccount' => true ),
 	),
 	'arwiki' => array(
+		'*' => array( 'abusefilter-log-detail' => true ),
+		'abusefilter' => array( 'abusefilter-modify' => true ),
 		'autoconfirmed' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
+		'sysop' => array( 'abusefilter-modify' => false ),
 	),
 	'arwikisource' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -6833,7 +6836,7 @@ $wgConf->settings = array(
 		'filemover' => array( 'movefile' => true ),
 		'OTRS-member' => array( 'autopatrol' => true ),
 		'Image-reviewer' => array( 'autopatrol' => true, 'upload_by_url' => true ),
-		'sysop' => array( 'upload_by_url' => true ),
+		'sysop' => array( 'abusefilter-modify-restricted' => true, 'upload_by_url' => true ),
 	),
 	'dawiki' => array(
 		'patroller'		=> array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ),
@@ -6876,12 +6879,31 @@ $wgConf->settings = array(
 		'user' => array( 'editinterface' => true ),
 		'flood' => array( 'bot' => true ),
 	),
+	'eewiki' => array(
+		'*' => array(
+			'abusefilter-view' => false,
+			'abusefilter-log' => false,
+		),
+		'autoconfirmed' => array(
+			'abusefilter-view' => true,
+			'abusefilter-log' => true,
+		),
+		'sysop' => array(
+			'abusefilter-modify-restricted' => true,
+			'abusefilter-revert' => true,
+			'abusefilter-view-private' => true,
+		),
+	),
+	'elwiki' => array(
+		'*' => array( 'abusefilter-log-detail' => true ),
+		'sysop' => array( 'abusefilter-revert' => true ),
+	),
 	'+elwiktionary' => array(
 		'interface_editor' => array( 'editinterface' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28612
 	),
 	'enwiki' => array(
-		'*' => array( 'createpage' => false ),
+		'*' => array( 'abusefilter-log-detail' => true, 'createpage' => false ),
 		'user' => array(
 			'move' => false, // autoconfirmed only
 			'collectionsaveasuserpage' => true, // Bug 46944
@@ -6894,6 +6916,7 @@ $wgConf->settings = array(
 			'tboverride' => true,
 			// also in some exemption lists'
 		),
+		'abusefilter' => array( 'abusefilter-modify' => true ),
 		'autoreviewer' => array( 'autopatrol' => true ),
 		'researcher' => array( 'browsearchive' => true, 'deletedhistory' => true, 'apihighlimits' => true ),
 		'reviewer' => array( 'patrol' => true ),
@@ -6903,7 +6926,12 @@ $wgConf->settings = array(
 		'checkuser' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ), // bug 28465
 		'bureaucrat' => array( 'move-subpages' => true, 'suppressredirect' => true, 'tboverride' => true, ),
 		'templateeditor' => array( 'templateeditor' => true, 'tboverride' => true, ), // bug 55432
-		'sysop' => array( 'templateeditor' => true ), // bug 55432
+		'sysop' => array(
+			'abusefilter-modify' => false,
+			'abusefilter-revert' => true,
+			'abusefilter-view-private' => true,
+			'templateeditor' => true, // bug 55432
+		),
 		'massmessage-sender' => array( // bug 58962
 			'massmessage' => true,
 		),
@@ -6911,6 +6939,14 @@ $wgConf->settings = array(
 	'+enwikibooks' => array(
 		// 'rollbacker' 	=> array( 'rollback' => true ),
 		// 'patroller'		=> array( 'patrol' => true, 'autopatrol' => true ),
+		'*' => array(
+			'abusefilter-view' => false,
+			'abusefilter-log' => false,
+		),
+		'autoconfirmed' => array(
+			'abusefilter-view' => true,
+			'abusefilter-log' => true,
+		),
 		'flood' 		=> array( 'bot' => true ),
 		'uploader'      => array( 'upload' => true, 'reupload' => true ),
 	),
@@ -6957,7 +6993,16 @@ $wgConf->settings = array(
 		'flood' => array( 'bot' => true ), // Bug 48682
 	),
 	'eswikibooks' => array(
-		'*'     => array( 'createpage' => false, 'createtalk' => false, ),
+		'*' => array(
+			'abusefilter-view' => false,
+			'abusefilter-log' => false,
+			'createpage' => false,
+			'createtalk' => false,
+		),
+		'autoconfirmed' => array(
+			'abusefilter-view' => true,
+			'abusefilter-log' => true,
+		),
 		'flood' => array( 'bot' => true ),
 		'rollbacker' => array( 'rollback' => true ),
 	),
@@ -7026,6 +7071,10 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
 		// https://bugzilla.wikimedia.org/show_bug.cgi?id=19561:
+		'sysop' => array(
+			'abusefilter-modify-restricted' => true, // bug 57395
+			'abusefilter-revert' => true, // bug 57395
+		),
 		'arbcom' => array( 'deletedhistory' => true, 'deletedtext' => true, 'undelete' => true ),
 	),
 	'+foundationwiki' => array(
@@ -7065,8 +7114,9 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 	),
 	'hewiki' => array(
+		'*' => array( 'abusefilter-log-detail' => true ),
 		'user' => array( 'move' => false, 'upload' => true, ),
-		'sysop' => array( 'deleterevision' => true, 'abusefilter-modify-restricted' => true, ),
+		'sysop' => array( 'deleterevision' => true, 'abusefilter-modify-restricted' => true, 'abusefilter-revert' => true ),
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'unwatchedpages' => true, 'rollback' => true, ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'editinterface' => array( 'abusefilter-hidden-log' => true, 'abusefilter-hide-log' => true, 'abusefilter-log' => true, 'abusefilter-log-detail' => true,
@@ -7092,11 +7142,13 @@ $wgConf->settings = array(
 		'sysop' => array( 'importupload' => true ), // bug 59601
 	),
 	'hiwiki' => array(
-		'rollbacker' => array( 'rollback' => true ), // bug 54589
+		'*' => array( 'abusefilter-log-detail' => true ),
+		'abusefilter' => array( 'abusefilter-modify' => true ),
+		'autopatrolled' => array( 'autopatrol' => true ),
 		'filemover' => array( 'movefile' => true ), // bug 54589
 		'reviewer' => array ( 'patrol' => true, 'autopatrol' => true ),
-		'autopatrolled' => array( 'autopatrol' => true ),
-		'sysop' => array( 'validate' => true ),
+		'rollbacker' => array( 'rollback' => true ), // bug 54589
+		'sysop' => array( 'abusefilter-modify' => false, 'abusefilter-revert' => true, 'validate' => true ),
 	),
 	'hrwiki' => array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true ),
@@ -7152,6 +7204,7 @@ $wgConf->settings = array(
 	),
 	'+itwikinews' => array( 'autoconfirmed' => array( 'patrol' => true ) ),
 	'itwikiquote' => array(
+		'*' => array( 'abusefilter-log-detail' => true ),
 		'autoconfirmed' => array( 'patrol' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'sysop' => array( 'autopatrol' => true ),
@@ -7282,10 +7335,26 @@ $wgConf->settings = array(
 		),
 	),
 	'nlwiki' => array(
-		'autoconfirmed' => array( 'patrol' => true  ),
-		'checkuser' => array( 'deletedhistory' => true, 'deletedtext' => true, 'browsearchive' => true ),
+		'*' => array(
+			'abusefilter-view' => false,
+			'abusefilter-log' => false,
+		),
+		'abusefilter' => array(
+			'abusefilter-modify' => true,
+			'abusefilter-modify-restricted' => true,
+			'abusefilter-revert' => true,
+		),
 		'arbcom' => array( 'deletedhistory' => true, 'deletedtext' => true, 'browsearchive' => true ),
+		'autoconfirmed' => array(
+			'abusefilter-view' => true,
+			'abusefilter-log' => true,
+			'patrol' => true
+		),
+		'checkuser' => array( 'deletedhistory' => true, 'deletedtext' => true, 'browsearchive' => true ),
 		'rollbacker' => array( 'rollback' => true ),
+		'sysop' => array(
+			'abusefilter-modify' => false,
+		),
 	),
 	'+nlwiktionary' => array( 'user' => array( 'patrol' => true ) ),
 	'+nlwikivoyage' => array(
@@ -7410,7 +7479,10 @@ $wgConf->settings = array(
 		),
 	),
 	'+ruwiki' => array(
-		'*' => array( 'patrolmarks' => true, ),
+		'*' => array(
+			'abusefilter-log-detail' => true, // bug 17998
+			'patrolmarks' => true,
+		),
 		'rollbacker' => array( 'rollback' => true ),
 		'uploader' => array( // bug 12334
 			'upload' => true,
@@ -7446,6 +7518,9 @@ $wgConf->settings = array(
 			'deletedtext' => true,
 			'abusefilter-log-detail' => true,
 		),
+	),
+	'ruwikinews' => array(
+		'*' => array( 'abusefilter-log-detail' => true ),
 	),
 	'ruwikiquote' => array(
 		'autoeditor' => array( 'autoreview' => true, 'autoconfirmed' => true, 'editsemiprotected' => true ),
@@ -7636,6 +7711,7 @@ $wgConf->settings = array(
 		'autoeditor' => array( 'autoreview' => true ),
 	),
 	'urwiki' => array(
+		'abusefilter' => array( 'abusefilter-modify' => true ), // bug 45643
 		'rollbacker' => array( 'rollback' => true ), // bug 45642
 	),
 	'vecwiki' => array(
@@ -7708,9 +7784,12 @@ $wgConf->settings = array(
 		'bot' => array( 'patrol' => true ),
 	),
 	'zh_yuewiki' => array(
+		'*' => array( 'abusefilter-log-detail' => true ),
+		'abusefilter' => array( 'abusefilter-modify' => true ),
 		'autoconfirmed' => array( 'patrol' => true ),
-		'rollbacker' => array( 'rollback' => true ),
 		'autoreviewer' => array( 'autopatrol' => true ),
+		'rollbacker' => array( 'rollback' => true ),
+		'sysop' => array( 'abusefilter-modify' => false, 'abusefilter-revert' => true ),
 	),
 
 	'+strategywiki' => array( 'flood' => array( 'bot' => true ) ),
@@ -7722,28 +7801,10 @@ $wgConf->settings = array(
 	// IMPORTANT: don't forget to use a '+' sign in front of any group name
 	// after 'default' or it will replace the defaults completely.
 	'default' => array(
-		'sysop' => array(
-			'importupload' => false,
-			'suppressredirect' => true, // http://meta.wikimedia.org/w/index.php?title=Wikimedia_Forum&oldid=1371655#Gives_sysops_to_.22suppressredirect.22_right
-			'noratelimit' => true,
-			'deleterevision' => true,
-			'deletelogentry' => true,
+		'*' => array(
+			'abusefilter-view' => true,
+			'abusefilter-log' => true,
 		),
-		'bot' => array(
-			'noratelimit' => true,
-		),
-		'accountcreator' => array(
-			'noratelimit' => true,
-		),
-		'bureaucrat' => array(
-			'noratelimit' => true,
-		),
-		'steward' => array(
-			'noratelimit' => true,
-		),
-		// 'rollback' => array( 'rollback' => true, ),
-		'import' => array( 'importupload' => true, 'import' => true ),
-		'transwiki' => array( 'import' => true ),
 		'user' => array(
 			'reupload-shared' => false,
 			'reupload' => false,
@@ -7760,15 +7821,35 @@ $wgConf->settings = array(
 			'collectionsaveasuserpage' => true,
 			'collectionsaveascommunitypage' => true,
 		),
+		'bot' => array(
+			'noratelimit' => true,
+		),
+		'sysop' => array(
+			'importupload' => false,
+			'suppressredirect' => true, // http://meta.wikimedia.org/w/index.php?title=Wikimedia_Forum&oldid=1371655#Gives_sysops_to_.22suppressredirect.22_right
+			'noratelimit' => true,
+			'deleterevision' => true,
+			'deletelogentry' => true,
+			'abusefilter-log-detail' => true,
+			'abusefilter-modify' => true,
+		),
+		'bureaucrat' => array(
+			'noratelimit' => true,
+		),
+		'steward' => array(
+			'noratelimit' => true,
+		),
 		// Deployed to all wikis by Andrew, 2009-04-28
 		'ipblock-exempt' => array(
 			'ipblock-exempt' => true,
 			'torunblocked' => true,
 		),
-
-		# So that I can rename users with more than 6800 edits -- TS
-		# Removed as obsolete -- 2009-03-05 BV
-		# 'developer' => array( 'siteadmin' => true ),
+		'accountcreator' => array(
+			'noratelimit' => true,
+		),
+		// 'rollback' => array( 'rollback' => true, ),
+		'import' => array( 'importupload' => true, 'import' => true ),
+		'transwiki' => array( 'import' => true ),
 
 		# To allow for inline log suppression -- 2009-01-29 -- BV
 		'oversight' => array(
@@ -7780,6 +7861,10 @@ $wgConf->settings = array(
 			'abusefilter-hide-log' => true, // Andrew, 2010-08-28
 			'abusefilter-hidden-log' => true, // Andrew, 2010-08-28
 		),
+
+		# So that I can rename users with more than 6800 edits -- TS
+		# Removed as obsolete -- 2009-03-05 BV
+		# 'developer' => array( 'siteadmin' => true ),
 	),
 ),
 # @} end of wgGroupOverrides2

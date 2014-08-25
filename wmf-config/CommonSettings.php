@@ -1617,6 +1617,10 @@ if ( $wmgUseCodeReview ) {
 
 if ( $wmgUseAbuseFilter ) {
 	include "$IP/extensions/AbuseFilter/AbuseFilter.php";
+	// leaks IP addresses according to Werdna [TS]
+	$wgGroupPermissions['sysop']['abusefilter-private'] = false;
+	// bug 29922 - Prevent anyone being given the abusefilter-private right by removing it
+	$wgAvailableRights = array_diff( $wgAvailableRights, array( 'abusefilter-private' ) );
 	include( "$wmfConfigDir/abusefilter.php" );
 
 	$wgAbuseFilterEmergencyDisableThreshold = $wmgAbuseFilterEmergencyDisableThreshold;
