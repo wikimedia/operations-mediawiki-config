@@ -56,7 +56,7 @@ return array(
 	),
 
 	'wgSitename' => array(
-		'labswiki' => 'Deployment',
+		'deploymentwiki' => 'Deployment',
 		'ee_prototypewiki' => 'Editor Engagement Prototype',
 		'wikivoyage'    => 'Wikivoyage',
 	),
@@ -74,8 +74,8 @@ return array(
 		'wikivoyage'    => '//$lang.wikivoyage.$variant.wmflabs.org',
 
 		'commonswiki'   => '//commons.wikimedia.$variant.wmflabs.org',
+		'deploymentwiki'      => '//deployment.wikimedia.$variant.wmflabs.org',
 		'ee_prototypewiki' => '//ee-prototype.wikipedia.$variant.wmflabs.org',
-		'labswiki'      => '//deployment.wikimedia.$variant.wmflabs.org',
 		'loginwiki'     => '//login.wikimedia.$variant.wmflabs.org',
 		'metawiki'      => '//meta.wikimedia.$variant.wmflabs.org',
 		'testwiki'      => '//test.wikimedia.$variant.wmflabs.org',
@@ -98,7 +98,7 @@ return array(
 		'metawiki'      => 'http://meta.wikimedia.$variant.wmflabs.org',
 		'ee_prototypewiki' => 'http://ee-prototype.wikipedia.$variant.wmflabs.org',
 		'commonswiki'	=> 'http://commons.wikimedia.$variant.wmflabs.org',
-		'labswiki'      => 'http://deployment.wikimedia.$variant.wmflabs.org',
+		'deploymentwiki'      => 'http://deployment.wikimedia.$variant.wmflabs.org',
 		'loginwiki'     => 'http://login.wikimedia.$variant.wmflabs.org',
 		'testwiki'      => 'http://test.wikimedia.$variant.wmflabs.org',
 		'wikidatawiki'  => 'http://wikidata.$variant.wmflabs.org',
@@ -143,7 +143,7 @@ return array(
 	),
 
 	'wmgNoticeProject' => array(
-		'labswiki' => 'meta',
+		'deploymentwiki' => 'meta',
 	),
 
 	//'-wgDebugLogGroups' => array(),
@@ -204,10 +204,10 @@ return array(
 		'default' => false,
 	),
 
-	# To help fight spam, makes rules maintained on labswiki
+	# To help fight spam, makes rules maintained on deploymentwiki
 	# to be available on all beta wikis.
 	'-wmgAbuseFilterCentralDB' => array(
-		'default' => 'labswiki',
+		'default' => 'deploymentwiki',
 	),
 	'-wmgUseGlobalAbuseFilters' => array(
 		'default' => true,
@@ -253,7 +253,7 @@ return array(
 	'wmgULSPosition' => array(
 		# Beta-specific
 		'ee-prototype' => 'personal',
-		'labswiki' => 'personal',
+		'deploymentwiki' => 'personal',
 	),
 
 	// (bug 39653) The plan is to enable it for testing on labs first, so add

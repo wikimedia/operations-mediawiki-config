@@ -124,7 +124,7 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 			array( 'aawiki', 'aa.wikipedia.beta.wmflabs.org' ),
 			array( 'arwiki', 'ar.wikipedia.beta.wmflabs.org' ),
 			array( 'commonswiki', 'commons.wikimedia.beta.wmflabs.org' ),
-			array( 'labswiki', 'deployment.wikimedia.beta.wmflabs.org' ),
+			array( 'deploymentwiki', 'deployment.wikimedia.beta.wmflabs.org' ),
 			array( 'dewiki', 'de.wikipedia.beta.wmflabs.org' ),
 			array( 'dewikivoyage', 'de.wikivoyage.beta.wmflabs.org' ),
 
@@ -140,8 +140,6 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 
 			array( 'eowiki', 'eo.wikipedia.beta.wmflabs.org' ),
 			array( 'hewiki', 'he.wikipedia.beta.wmflabs.org' ),
-
-			array( 'labswiki', 'deployment.wikimedia.beta.wmflabs.org' ),
 
 			array( 'loginwiki', 'login.wikimedia.beta.wmflabs.org' ),
 			array( 'metawiki', 'meta.wikimedia.beta.wmflabs.org' ),
