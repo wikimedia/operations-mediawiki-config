@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_4b8f3ad2",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 2625,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-26T21:10:29Z",
+      "side": 1,
+      "message": "OK, but... \u0027labswiki\u0027 is used in a bunch of other places as well, see basically everywhere in InitialiseSettings.php.  Those cases don\u0027t allow for this extra check.  What is \u0027labswiki\u0027 in beta, and can it be renamed?\n\nIn general I\u0027m peeved at the generic use of the term \u0027labs\u0027 throughout this repository to mean \u0027beta\u0027.",
+      "parentUuid": "4e322bf2_cb868a18",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_ebb706d2",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 13
@@ -30,6 +48,24 @@
       "writtenOn": "2014-08-26T20:21:51Z",
       "side": 1,
       "message": "The filename is all lower case:\n\n -Wikitech.php\n +wikitech.php",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_2ba3ce40",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 2627,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-26T21:10:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e322bf2_ebb706d2",
       "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_0b6812f1",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 2628,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-26T21:10:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e322bf2_cbac4a87",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_eb69461e",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 13
@@ -64,6 +118,24 @@
       "writtenOn": "2014-08-26T20:38:03Z",
       "side": 1,
       "message": "protocol-relative links? upload logo to commons and link from there like the others above?",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_abb7be80",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 559,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-26T21:10:29Z",
+      "side": 1,
+      "message": "This setting is exactly as it is set on the current (working) wikitech.  If you are positive that a different value will work without changes elsewhere, please tell me exactly what that value should be.",
+      "parentUuid": "4e322bf2_eb69461e",
       "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -104,6 +176,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_ab769ed3",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 1842,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-26T21:10:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e322bf2_0b7ed2e1",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_6b27960e",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 13
@@ -115,6 +205,24 @@
       "writtenOn": "2014-08-26T20:31:37Z",
       "side": 1,
       "message": "put on bits in the apple-touch directory with the others? local path vs. URL?",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_6ba9d620",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 10032,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-26T21:10:29Z",
+      "side": 1,
+      "message": "Again, I\u0027m just reproducing the existing config on wikitech.  I don\u0027t know what any of these settings mean or do, and I\u0027d prefer not to test and debug all possible settings at once when this change rolls out :)",
+      "parentUuid": "4e322bf2_6b27960e",
       "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -138,6 +246,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_6b78b6bf",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-26T21:10:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e322bf2_cb10caaf",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_2ba62ea8",
         "filename": "wmf-config/db-eqiad.php",
         "patchSetId": 13
@@ -149,6 +275,24 @@
       "writtenOn": "2014-08-26T20:21:51Z",
       "side": 1,
       "message": "Make sure the app server will be able to reach mysql on that IP. Might need some ferm:rule to be applied to allow that.",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_8b7be2bc",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-26T21:10:29Z",
+      "side": 1,
+      "message": "Is \u0027the app server\u0027 tin?",
+      "parentUuid": "4e322bf2_2ba62ea8",
       "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -172,6 +316,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_4b85fa9e",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-26T21:10:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e322bf2_ebdee613",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_ab9a1e64",
         "filename": "wmf-config/wikitech.php",
         "patchSetId": 13
@@ -189,6 +351,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_0b4ff298",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-26T21:10:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e322bf2_ab9a1e64",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_8b2ac2d5",
         "filename": "wmf-config/wikitech.php",
         "patchSetId": 13
@@ -200,6 +380,24 @@
       "writtenOn": "2014-08-26T20:33:48Z",
       "side": 1,
       "message": "InitialiseSettings :)",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_6b5f9645",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-26T21:10:29Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e322bf2_8b2ac2d5",
       "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
