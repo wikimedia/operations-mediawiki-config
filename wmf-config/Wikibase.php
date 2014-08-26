@@ -137,6 +137,7 @@ if ( $wmgUseWikibaseClient ) {
 	}
 
 	$wgWBClientSettings['siteGroup'] = $wmgWikibaseSiteGroup;
+	$wgWBClientSettings['otherProjectsLinksBeta'] = true;
 
 	$wgHooks['SetupAfterCache'][] = 'wmfWBClientExcludeNS';
 
