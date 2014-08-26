@@ -9749,6 +9749,10 @@ $wgConf->settings = array(
 		NS_IMAGE_TALK => array( 'editinterface' ),
 		828 => array( 'autoconfirmed' ), // Bug 53558 - Module:
 	),
+	'+kowikinews' => array(
+		NS_FILE => array( 'editinterface' ),
+		NS_FILE_TALK => array( 'editinterface' ), // Bug 70022
+	),
 	'+ptwiki' => array(
 		NS_IMAGE => array( 'autoconfirmed' ),
 	),
