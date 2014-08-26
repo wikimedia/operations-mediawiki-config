@@ -143,7 +143,7 @@ class MWMultiVersion {
 			'wikisource.org' => 'sources',
 
 			// Labs
-			'deployment.wikimedia.beta.wmflabs.org' => 'labs',
+			'deployment.wikimedia.beta.wmflabs.org' => 'deployment',
 		);
 
 		$site = "wikipedia";
