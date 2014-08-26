@@ -15,8 +15,6 @@ if ( $wmgMobileFrontend ) {
 	// FIXME: Remove in a week when cache has cleared
 	$wgMFNearbyNamespace = $wmgMFContentNamespace;
 	$wgMFPhotoUploadAppendToDesc = $wmgMFPhotoUploadAppendToDesc;
-	$wgMFInfoboxLogging = $wmgMFInfoboxLogging;
-	$wgMFKeepGoing = $wmgMFKeepGoing;
 
 	if ( $wmgMobileFrontendLogo ) {
 		$wgMobileFrontendLogo = $wmgMobileFrontendLogo;
@@ -57,9 +55,6 @@ if ( $wmgMobileFrontend ) {
 	// Enable appending of TM (text) / (R) (icon) on site name in footer.
 	$wgMFTrademarkSitename = $wmgMFTrademarkSitename;
 
-	// Force HTTPS for login/account creation
-	$wgMFForceSecureLogin = $wmgMFForceSecureLogin;
-
 	// Enable X-Analytics logging
 	$wgMFEnableXAnalyticsLogging = $wmgMFEnableXAnalyticsLogging;
 
@@ -87,7 +82,6 @@ if ( $wmgMobileFrontend ) {
 	};
 
 	$wgMFEnableSiteNotice = $wmgMFEnableSiteNotice;
-	$wgMFEnablePhotoUploadCTA = $wmgMFEnablePhotoUploadCTA;
 	$wgMFCollapseSectionsByDefault = $wmgMFCollapseSectionsByDefault;
 	$wgMFTidyMobileViewSections = false; // experimental
 

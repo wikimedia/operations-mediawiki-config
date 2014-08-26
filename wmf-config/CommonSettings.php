@@ -2361,11 +2361,6 @@ if ( $wmgEnableGeoData
 		$wgAPIListModules['geosearch'] = 'ApiQueryDisabled';
 	}
 
-	# These modules have been intentionally disabled for the first phase of deployment
-	if ( $wgDBname !== 'testwiki' ) {
-		unset( $wgAPIListModules['geopages'] );
-		unset( $wgAPIListModules['geopagesincategory'] );
-	}
 	$wgMaxCoordinatesPerPage = 2000;
 	$wgMaxGeoSearchRadius = $wmgMaxGeoSearchRadius;
 	$wgGeoDataDebug = $wmgGeoDataDebug;

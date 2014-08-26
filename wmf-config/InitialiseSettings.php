@@ -11826,21 +11826,11 @@ $wgConf->settings = array(
 	'private' => '',
 	'fishbowl' => '',
 ),
-'wmgMFKeepGoing' => array(
-	'default' => false,
-	'enwiki' => true,
-),
-'wmgMFInfoboxLogging' => array(
-	'default' => false,
-),
 'wmgMFContentNamespace' => array(
 	'default' => NS_MAIN,
 	'commonswiki' => NS_FILE,
 ),
 'wmgMFUseCentralAuthToken' => array(
-	'default' => true,
-),
-'wmgMFForceSecureLogin' => array(
 	'default' => true,
 ),
 'wmgMFNearby' => array(
@@ -11876,9 +11866,6 @@ $wgConf->settings = array(
 'wmgMFNoMobilePages' => array(
 	'default' => array(),
 	'foundationwiki' => array( 'Special:FundraiserStatistics' ),
-),
-'wmgMFEnablePhotoUploadCTA' => array(
-	'default' => false,
 ),
 'wmgMFCollapseSectionsByDefault' => array(
 	'default' => true,

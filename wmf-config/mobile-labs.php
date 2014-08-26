@@ -17,6 +17,3 @@ if ( $wmgMobileFrontend ) {
 
 $wgMFForceSecureLogin = false;
 $wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
-
-// Keep Going experiments
-$wgMFKeepGoing = true;
