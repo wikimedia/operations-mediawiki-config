@@ -1235,7 +1235,7 @@ if ( $wmgUseCentralAuth ) {
 			'.wikinews.beta.wmflabs.org' => 'enwikinews',
 			'.wiktionary.beta.wmflabs.org' => 'enwiktionary',
 			'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
-			'deployment.wikimedia.beta.wmflabs.org' => 'labswiki',
+			'deployment.wikimedia.beta.wmflabs.org' => 'deploymentwiki',
 			'test.wikimedia.beta.wmflabs.org' => 'testwiki',
 			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
 			$wmfHostnames['wikidata'] => 'wikidatawiki',
