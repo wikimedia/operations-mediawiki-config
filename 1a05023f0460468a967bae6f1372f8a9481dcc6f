@@ -87,6 +87,23 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_cb10caaf",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 589
+      },
+      "writtenOn": "2014-08-26T20:33:48Z",
+      "side": 1,
+      "message": "Perhaps move this to it\u0027s own separated section for, good looks? virt1000 in a section of s2 is you know.",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_2ba62ea8",
         "filename": "wmf-config/db-eqiad.php",
         "patchSetId": 13
@@ -132,6 +149,23 @@
       "writtenOn": "2014-08-26T20:21:51Z",
       "side": 1,
       "message": "All the variable assignment below are made in that function local scope. As soon as you exit the function they magically disappear.\n\nI would remove the function wrapper, and just include the file whenever the database is \u0027labswiki\u0027.",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_8b2ac2d5",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 589
+      },
+      "writtenOn": "2014-08-26T20:33:48Z",
+      "side": 1,
+      "message": "InitialiseSettings :)",
       "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
