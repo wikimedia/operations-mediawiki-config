@@ -160,6 +160,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_2644234a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 559,
+      "author": {
+        "id": 15
+      },
+      "writtenOn": "2014-08-26T21:34:45Z",
+      "side": 1,
+      "message": "Chad: right, we even enabled HSTS, so i guess we hardcode the protocol again. it\u0027s more of a reflex to ask for removing the protocols because we did in so many other places\n\nAndrew: fair, i could just make that a separate change if i cared and not ask you to change more at the same time. agreed",
+      "parentUuid": "4e322bf2_abb7be80",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_ab157e9e",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 13
@@ -188,6 +206,24 @@
       "writtenOn": "2014-08-26T21:15:01Z",
       "side": 1,
       "message": "Same as above, wikitech is https-only.",
+      "parentUuid": "4e322bf2_ab157e9e",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_a66ff3bf",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 1254,
+      "author": {
+        "id": 15
+      },
+      "writtenOn": "2014-08-26T21:34:45Z",
+      "side": 1,
+      "message": "ok, nevermind, that\u0027s true, we even enabled HSTS",
       "parentUuid": "4e322bf2_ab157e9e",
       "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
