@@ -142,6 +142,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_ebef0681",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 559,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-08-26T21:15:01Z",
+      "side": 1,
+      "message": "wikitech is https-only, so protocol relative makes less sense.",
+      "parentUuid": "4e322bf2_eb69461e",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_ab157e9e",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 13
@@ -153,6 +171,24 @@
       "writtenOn": "2014-08-26T20:31:37Z",
       "side": 1,
       "message": "protocol-relative links like the other wikis?",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_abe9fe7c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 1254,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-08-26T21:15:01Z",
+      "side": 1,
+      "message": "Same as above, wikitech is https-only.",
+      "parentUuid": "4e322bf2_ab157e9e",
       "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
