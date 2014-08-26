@@ -353,6 +353,24 @@
     },
     {
       "key": {
+        "uuid": "4e322bf2_262d438c",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-08-26T21:29:27Z",
+      "side": 1,
+      "message": "I\u0027ve been digging for a bit but don\u0027t see an equivalent ferm rule on our other db servers.  Can you tell me what ports to check and/or point me to an example of where this is done?",
+      "parentUuid": "4e322bf2_6b0d5641",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e322bf2_ebdee613",
         "filename": "wmf-config/wikitech.php",
         "patchSetId": 13
