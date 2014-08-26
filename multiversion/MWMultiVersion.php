@@ -141,9 +141,6 @@ class MWMultiVersion {
 			'www.mediawiki.org' => 'mediawiki',
 			'www.wikidata.org' => 'wikidata',
 			'wikisource.org' => 'sources',
-
-			// Labs
-			'deployment.wikimedia.beta.wmflabs.org' => 'labs',
 		);
 
 		$site = "wikipedia";
