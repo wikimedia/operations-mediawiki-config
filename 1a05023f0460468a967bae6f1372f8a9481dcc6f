@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e322bf2_cb868a18",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 2625,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2014-08-26T20:21:51Z",
+      "side": 1,
+      "message": "The beta cluster has a labswiki probably http://deployment.wikimedia.beta.wmflabs.org\n\nSo you need to further harness that condition with  $wmfRealm \u003d\u003d\u003d \u0027production\u0027 \u0026\u0026\n\nNit: use triple equals (paranoia).\n\n\n if ( $wgDBname \u003d\u003d\u003d \u0027labswiki\u0027 \u0026\u0026 $wmfRealm \u003d\u003d\u003d \u0027production\u0027 ) {\n\nSorry :-(",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_ebb706d2",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 2627,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2014-08-26T20:21:51Z",
+      "side": 1,
+      "message": "The filename is all lower case:\n\n -Wikitech.php\n +wikitech.php",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_cbac4a87",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 2628,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2014-08-26T20:21:51Z",
+      "side": 1,
+      "message": "Per my comment on wmf-config/wikitech.php , remove the function wrapper since the $wg variable have to be in the global scope.",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_2ba62ea8",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 418,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2014-08-26T20:21:51Z",
+      "side": 1,
+      "message": "Make sure the app server will be able to reach mysql on that IP. Might need some ferm:rule to be applied to allow that.",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_ebdee613",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2014-08-26T20:21:51Z",
+      "side": 1,
+      "message": "That comes from beta configuration. In the case of wikitech I guess you can just override everything.",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e322bf2_ab9a1e64",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2014-08-26T20:21:51Z",
+      "side": 1,
+      "message": "All the variable assignment below are made in that function local scope. As soon as you exit the function they magically disappear.\n\nI would remove the function wrapper, and just include the file whenever the database is \u0027labswiki\u0027.",
+      "revId": "1a05023f0460468a967bae6f1372f8a9481dcc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
