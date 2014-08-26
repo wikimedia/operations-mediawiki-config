@@ -13636,7 +13636,10 @@ $wgConf->settings = array(
 
 'wmgCirrusSearchAllFields' => array(
 	'default' => array( 'build' => true, 'use' => false ),
-	'group0' => array( 'build' => true, 'use' => true ),
+	'testwiki' => array( 'build' => true, 'use' => true ),
+	'test2wiki' => array( 'build' => true, 'use' => true ),
+	'testwikidatawiki' => array( 'build' => true, 'use' => true ),
+	'mediwikiwiki' => array( 'build' => true, 'use' => true ),
 	# 'wiki' means wikipedias
 	'wiki' => array( 'build' => true, 'use' => false ),
 ),
