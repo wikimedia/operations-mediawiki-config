@@ -94,4 +94,8 @@ if ( $wmgMobileFrontend ) {
 
 	// restrict access to mobile Uploads to users with minimum editcount https://bugzilla.wikimedia.org/show_bug.cgi?id=62598
 	$wgMFUploadMinEdits = $wmgMFUploadMinEdits;
+
+	// Disable mobile uploads per https://bugzilla.wikimedia.org/62598
+	$wgGroupPermissions['autoconfirmed']['mf-uploadbutton'] = false;
+	$wgGroupPermissions['sysop']['mf-uploadbutton'] = false;
 }

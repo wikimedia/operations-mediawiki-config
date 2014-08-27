@@ -11872,7 +11872,7 @@ $wgConf->settings = array(
 	'wiktionary' => false,
 ),
 'wmgMFRemovePageActions' => array(
-	'default' => array(),
+	'default' => array( 'upload' ),
 	'wikisource' => array( 'upload' ), # https://bugzilla.wikimedia.org/show_bug.cgi?id=66958
 ),
 'wmgMFUploadMinEdits' => array(
