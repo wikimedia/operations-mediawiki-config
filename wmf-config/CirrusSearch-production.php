@@ -18,6 +18,8 @@ $wgCirrusSearchBackup['backups'] = array(
 	'swift_username' => $wmfSwiftEqiadConfig['cirrusUser'],
 	'swift_password' => $wmfSwiftEqiadConfig['cirrusKey'],
 	'max_snapshot_bytes_per_sec' => '10mb',
+	'compress' => false,
+	'chunk_size' => '1g',
 );
 
 $projectsOkForInterwiki = array(
