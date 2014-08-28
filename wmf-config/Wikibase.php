@@ -135,6 +135,11 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['siteGroup'] = $wmgWikibaseSiteGroup;
 	$wgWBClientSettings['otherProjectsLinksBeta'] = true;
 
+	$wgWBClientSettings['badgeClassNames'] = array(
+		'Q17437796' => 'badge-featuredarticle',
+		'Q17437798' => 'badge-goodarticle'
+	);
+
 	$wgHooks['SetupAfterCache'][] = 'wmfWBClientExcludeNS';
 
 	function wmfWBClientExcludeNS() {
