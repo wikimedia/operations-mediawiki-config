@@ -98,4 +98,6 @@ if ( $wmgMobileFrontend ) {
 	// Disable mobile uploads per https://bugzilla.wikimedia.org/62598
 	$wgGroupPermissions['autoconfirmed']['mf-uploadbutton'] = false;
 	$wgGroupPermissions['sysop']['mf-uploadbutton'] = false;
+
+	$wgMFEnableBeta = true;
 }
