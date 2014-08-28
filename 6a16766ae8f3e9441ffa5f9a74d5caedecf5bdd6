@@ -16,6 +16,24 @@
       "revId": "6a16766ae8f3e9441ffa5f9a74d5caedecf5bdd6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_25ae82e5",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 166
+      },
+      "writtenOn": "2014-08-28T19:48:44Z",
+      "side": 0,
+      "message": "Ariel, is this still needed for dumps, or can this be removed now?",
+      "parentUuid": "2e2fb78d_9a9fd162",
+      "revId": "6a16766ae8f3e9441ffa5f9a74d5caedecf5bdd6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
