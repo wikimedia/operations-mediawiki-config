@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_9a9fd162",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-08-28T19:20:26Z",
+      "side": 0,
+      "message": "I\u0027m not sure about this one... Might want to loop in Ariel",
+      "revId": "6a16766ae8f3e9441ffa5f9a74d5caedecf5bdd6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
