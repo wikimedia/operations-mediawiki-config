@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_d16d442f",
+        "filename": "deleted.dblist",
+        "patchSetId": 5
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-08-28T15:33:09Z",
+      "side": 1,
+      "message": "This whitespace should be removed",
+      "revId": "0c88fdc0e8ca6a873854f860d28f9d3a2b149707",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
