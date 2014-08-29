@@ -13564,7 +13564,6 @@ $wgConf->settings = array(
 	),
 	'frwikisource' => array(
 		'otherProjectsLinksByDefault' => true,
-		'otherProjectsLinks' => array( 'frwiki', 'frwikiquote', 'commonswiki', 'frwikivoyage' ),
 	),
 	'fywiki' => array(
 		'sort' => 'alphabetic_fy',
@@ -13583,11 +13582,9 @@ $wgConf->settings = array(
 	),
 	'itwikisource' => array(
 		'otherProjectsLinksByDefault' => true,
-		'otherProjectsLinks' => array( 'itwiki', 'itwikiquote', 'commonswiki', 'itwikivoyage' ),
 	),
 	'kowiki' => array(
 		'otherProjectsLinksByDefault' => true,
-		'otherProjectsLinks' => array( 'kowikiquote', 'kowikisource', 'commonswiki' ),
 	),
 	'lbwiki' => array(
 		'sort' => 'alphabetic',
@@ -13623,7 +13620,6 @@ $wgConf->settings = array(
 	),
 	'ruwiki' => array(
 		'otherProjectsLinksByDefault' => true,
-		'otherProjectsLinks' => array( 'ruwikivoyage', 'ruwikiquote', 'ruwikisource', 'commonswiki' ),
 	),
 	'simplewiki' => array(
 		'sort' => 'alphabetic',
