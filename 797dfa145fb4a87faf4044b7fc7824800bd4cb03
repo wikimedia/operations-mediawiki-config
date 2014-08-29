@@ -34,6 +34,24 @@
       "revId": "797dfa145fb4a87faf4044b7fc7824800bd4cb03",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_26979e95",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2014-08-29T22:16:09Z",
+      "side": 1,
+      "message": "Yeah it\u0027s kind of both. If it runs for a minute or to, given how fast each job is, it\u0027s best approximated as per-runner rather than per-server. That would put it at ~1*20*16 per second max. This would be fine, though in practice runners would often be doing other job types anyway, so it would be less.\n\nIdeally only the number of servers would matter rather than servers and runners/server having to go into the napkin math. This could be the case if syncs were more frequent (e.g. using local memcached/redis or perhaps a file per job type with non-blocking first-past-the-post locks).",
+      "parentUuid": "2e2fb78d_43297c99",
+      "revId": "797dfa145fb4a87faf4044b7fc7824800bd4cb03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
