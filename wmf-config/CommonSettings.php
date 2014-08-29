@@ -1908,7 +1908,7 @@ if ( $wmgUseVectorBeta ) {
 }
 
 if ( $wmgUseParsoid ) {
-	require_once( "$IP/extensions/Parsoid/php/Parsoid.php" );
+	require_once( "$IP/extensions/Parsoid/Parsoid.php" );
 
 	$wmgParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
 
