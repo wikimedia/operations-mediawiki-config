@@ -39,8 +39,6 @@ mwconfig_files_txt=(
 	squid-labs.php
 	session.php
 	session-labs.php
-	twemproxy-eqiad.yaml
-	twemproxy-labs.yaml
 	Wikibase.php
 )
 
