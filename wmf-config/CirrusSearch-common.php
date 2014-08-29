@@ -40,6 +40,10 @@ $wgCirrusSearchMoreAccurateScoringMode = false;
 # Raise the refresh interval to save some CPU at the cost of being slightly less realtime.
 $wgCirrusSearchRefreshInterval = 30;
 
+# Set the backoff for Cirrus' job that reacts to template changes - slow and steady
+# will help prevent spikes in Elasticsearch load
+$wgJobBackoffThrottling['cirrusSearchLinksUpdate'] = 1;
+
 # Ban the hebrew plugin, it is unstable
 $wgCirrusSearchBannedPlugins[] = 'elasticsearch-analysis-hebrew';
 
