@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_03f81445",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2014-08-29T20:56:36Z",
+      "side": 1,
+      "message": "Can this maybe be 5 or something. 1 page per runner per second seems pretty low and might cause the queue to keep building up forever.\n\n\u003e $dbr \u003d wfGetDB( DB_SLAVE );\n\n\u003e $res \u003d $dbr-\u003eselect( \u0027recentchanges\u0027, array( \u0027rc_namespace\u0027, \u0027rc_title\u0027, \u0027rc_timestamp\u0027 ), array( \u0027rc_namespace\u0027 \u003d\u003e NS_TEMPLATE, NS_MODULE ), __METHOD__, array( \u0027ORDER BY\u0027 \u003d\u003e \u0027rc_timestamp DESC\u0027, \u0027LIMIT\u0027 \u003d\u003e 1000 ) );\n\n\u003e $tend \u003d wfTimestamp( TS_UNIX, $res-\u003efetchObject()-\u003erc_timestamp );\n\n\u003e $res-\u003eseek( $res-\u003enumRows() - 1 ); $tstart \u003d wfTimestamp( TS_UNIX, $res-\u003efetchObject()-\u003erc_timestamp );\n\n\u003e $res-\u003eseek( 0 ); $count \u003d 0;\n\n\u003e foreach ( $res as $row ) { $bc \u003d Title::makeTitle( $row-\u003erc_namespace, $row-\u003erc_title )-\u003egetBacklinkCache(); $count +\u003d $bc-\u003egetNumLinks( \u0027pagelinks\u0027 ); }\n\n\u003e var_dump( $count ); var_dump( $count / ( $tend - $tstart ) );\nint(563421)\nfloat(23.362954055399)\n\nJust on enwiki we need 23 pages / sec handled by the runners, which is ~1.5 per server (each of 16) per second. Commons, dewiki, wikidata, and some others will multiply this out.",
+      "revId": "797dfa145fb4a87faf4044b7fc7824800bd4cb03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
