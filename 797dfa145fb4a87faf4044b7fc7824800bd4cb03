@@ -16,6 +16,24 @@
       "revId": "797dfa145fb4a87faf4044b7fc7824800bd4cb03",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_43297c99",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 873
+      },
+      "writtenOn": "2014-08-29T21:13:34Z",
+      "side": 1,
+      "message": "5 is totally fine with me.  I didn\u0027t run any numbers to come up with 1.\n\nIt looked to me like this number is per executor _process_ not per executor node.  I see where it syncs and loads the file but once it is up and running each process handles the backoffs internally.",
+      "parentUuid": "2e2fb78d_03f81445",
+      "revId": "797dfa145fb4a87faf4044b7fc7824800bd4cb03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
