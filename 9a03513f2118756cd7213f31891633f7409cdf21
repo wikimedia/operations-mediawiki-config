@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_1df2b1df",
+        "filename": "wmf-config/mc.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2014-08-29T18:07:59Z",
+      "side": 0,
+      "message": "That\u0027s not true, by the way -- it\u0027s 500000",
+      "revId": "9a03513f2118756cd7213f31891633f7409cdf21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
