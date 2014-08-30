@@ -154,3 +154,9 @@ $wgMessageCacheType = 'memcached-pecl';
 
 $wgSessionsInObjectCache = true;
 $wgSessionCacheType = 'memcached-pecl';
+
+#$wgPasswordReminderResendTime = 0;
+#$wgPasswordAttemptThrottle = false;
+#$wgShowExceptionDetails = true;
+#$wgLDAPDebug = 5;
+#$wgDebugLogGroups["ldap"] = "/tmp/ldap-s-1-debug.log";
