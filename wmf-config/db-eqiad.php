@@ -93,8 +93,8 @@ $wgLBFactoryConf = array(
 		'db1062' => 200, # 2.8TB 128GB, api
 		'db1065' => 500, # 2.8TB 160GB
 		'db1066' => 500, # 2.8TB 160GB
-		'db1071' => 500, # 2.8TB 160GB
 		'db1072' => 500, # 2.8TB 160GB
+		'db1073' => 500, # 2.8TB 160GB
 	),
 	's2' => array(
 		'db1024' => 0,   # 1.4TB  64GB
@@ -415,6 +415,7 @@ $wgLBFactoryConf = array(
 	'db1070' => '10.64.48.25', #do not remove or comment out
 	'db1071' => '10.64.48.26', #do not remove or comment out
 	'db1072' => '10.64.48.27', #do not remove or comment out
+	'db1073' => '10.64.48.28', #do not remove or comment out
 ),
 
 'externalLoads' => array(
