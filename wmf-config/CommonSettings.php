@@ -2055,14 +2055,10 @@ if ( $wmgUseVisualEditor ) {
 	}
 }
 
-if ( $wmgUseTemplateData ) {
-	require_once( "$IP/extensions/TemplateData/TemplateData.php" );
-}
-
-if ( $wmgTemplateDataUseGUI ) {
-	$wgTemplateDataUseGUI = true;
-}
-
+// TemplateData enabled for all wikis - 2014-09-29
+require_once( "$IP/extensions/TemplateData/TemplateData.php" );
+// TemplateData GUI enabled for all wikis - 2014-11-06
+$wgTemplateDataUseGUI = true;
 
 if ( $wmgUseGoogleNewsSitemap ) {
 	include( "$IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php" );
