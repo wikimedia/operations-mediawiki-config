@@ -149,3 +149,4 @@ $wgCacheDirectory = "$IP/cache";
 $wgMainCacheType = CACHE_MEMCACHED;
 $wgMessageCacheType = CACHE_MEMCACHED;
 $wgSessionsInMemcached = true;
+$wgMemCachedServers = array( '127.0.0.1:11000' );
