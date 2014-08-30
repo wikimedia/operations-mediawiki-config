@@ -13886,6 +13886,11 @@ $wgConf->settings = array(
 	'foundationwiki' => true,
 ),
 
+'wmgUseClusterDb' => array(
+	'default'  => true,
+	'labswiki' => false,
+),
+
 );
 
 
