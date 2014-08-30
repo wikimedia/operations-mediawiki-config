@@ -11619,56 +11619,6 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 ),
 
-'wmgUseTemplateData' => array(
-	'default' => true,
-	'labswiki' => false,
-),
-
-'wmgTemplateDataUseGUI' => array(
-	'default' => false,
-	'mediawikiwiki' => true,
-	'arwiki' => true, // Bug 70217
-	'bgwiki' => true, // Bug 70217
-	'cawiki' => true, // Bug 65785
-	'cebwiki' => true, // Bug 70217
-	'cswiki' => true, // Bug 70217
-	'dawiki' => true, // Bug 70217
-	'dewiki' => true, // Bug 70217
-	'enwiki' => true, // Bug 67376
-	'eowiki' => true, // Bug 70217
-	'eswiki' => true, // Bug 70217
-	'euwiki' => true, // Bug 70217
-	'fawiki' => true, // Bug 70217
-	'fiwiki' => true, // Bug 68184
-	'frwiki' => true, // Bug 67376
-	'hewiki' => true, // Bug 66538
-	'hrwiki' => true, // Bug 70217
-	'huwiki' => true, // Bug 70217
-	'idwiki' => true, // Bug 70217
-	'itwiki' => true, // Bug 67376
-	'jawiki' => true, // Bug 70217
-	'kkwiki' => true, // Bug 70217
-	'kowiki' => true, // Bug 70217
-	'ltwiki' => true, // Bug 70217
-	'minwiki' => true, // Bug 70217
-	'mswiki' => true, // Bug 70217
-	'nlwiki' => true, // Bug 68795
-	'nowiki' => true, // Bug 70216
-	'plwiki' => true, // Bug 70217
-	'ptwiki' => true, // Bug 66255
-	'rowiki' => true, // Bug 70217
-	'ruwiki' => true, // Bug 67704
-	'shwiki' => true, // Bug 70217
-	'skwiki' => true, // Bug 70217
-	'srwiki' => true, // Bug 70217
-	'svwiki' => true, // Bug 70217
-	'trwiki' => true, // Bug 70217
-	'ukwiki' => true, // Bug 70217
-	'viwiki' => true, // Bug 70217
-	'warwiki' => true, // Bug 70217
-	'zhwiki' => true, // Bug 70217
-),
-
 // Bug 50000 - Disable for logged-out users if wmgVisualEditorDefault is true
 // This is a temporary variable for roll-out, to be removed once complete.
 // If a wiki was previously enabled by default for all users but then disabled,
