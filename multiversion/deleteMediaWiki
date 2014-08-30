@@ -8,7 +8,7 @@ require_once( __DIR__ . '/updateBranchPointers' );
 /**
  * Delete various symlinks created by checkoutMediaWiki.
  *
- * The first argument is target path (relative to /a/common/)
+ * The first argument is target path (relative to the deployment root)
  * storing the local copy of the SVN checkout. This is typically of the format "php-X.XX".
  *
  * @return void

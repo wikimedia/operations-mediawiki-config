@@ -248,7 +248,7 @@ class MWMultiVersion {
 	 * Handler for the wfShellMaintenanceCmd hook.
 	 * This converts shell commands like "php $IP/maintenance/foo.php" into
 	 * commands that use the "MWScript.php" wrapper, for example:
-	 * "php /a/common/multiversion/MWScript.php maintenance/foo.php"
+	 * "php MWScript.php maintenance/foo.php"
 	 *
 	 * @param &$script string
 	 * @param &$params Array
