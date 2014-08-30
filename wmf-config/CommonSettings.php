@@ -238,7 +238,10 @@ require( "$wmfConfigDir/PrivateSettings.php" );
 
 # Cluster-dependent files for database and memcached
 require( getRealmSpecificFilename( "$wmfConfigDir/db.php" ) );
-require( getRealmSpecificFilename( "$wmfConfigDir/mc.php" ) );
+
+if ( $wmgUseClusterMemcache ) {
+	require( getRealmSpecificFilename( "$wmfConfigDir/mc.php" ) );
+}
 
 ini_set( 'memory_limit', $wmgMemoryLimit );
 
@@ -358,7 +361,9 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 	)
 );
 
-require( getRealmSpecificFilename( "$wmfConfigDir/session.php" ) );
+if ( $wmgUseClusterSession ) {
+	require( getRealmSpecificFilename( "$wmfConfigDir/session.php" ) );
+}
 
 // Use the cache setup above and configure sessions caching
 $wgSessionCacheType = 'sessions';
@@ -450,10 +455,12 @@ $wgSVGConverters['rsvg-secure'] = '$path/rsvg-convert --no-external-files -w $wi
 # Squid Configuration
 #######################################################################
 
-$wgUseSquid = true;
-$wgUseESI   = false;
+if ( $wmgUseClusterSquid ) {
+	$wgUseSquid = true;
+	$wgUseESI   = false;
 
-require( getRealmSpecificFilename( "$wmfConfigDir/squid.php" ) );
+	require( getRealmSpecificFilename( "$wmfConfigDir/squid.php" ) );
+}
 
 $wgBlockOpenProxies = false;
 
@@ -855,11 +862,15 @@ $wgPasswordSender = 'wiki@wikimedia.org';
 # e-mailing password based on e-mail address (bug 34386)
 $wgPasswordResetRoutes['email'] = true;
 
-# Cluster-dependent files for file backend
-require( getRealmSpecificFilename( "$wmfConfigDir/filebackend.php" ) );
+if ( $wmgUseClusterFileBackend ) {
+	# Cluster-dependent files for file backend
+	require( getRealmSpecificFilename( "$wmfConfigDir/filebackend.php" ) );
+}
 
-# Cluster-dependent files for job queue and job queue aggregator
-require( getRealmSpecificFilename( "$wmfConfigDir/jobqueue.php" ) );
+if ( $wmgUseClusterJobqueue ) {
+	# Cluster-dependent files for job queue and job queue aggregator
+	require( getRealmSpecificFilename( "$wmfConfigDir/jobqueue.php" ) );
+}
 
 if ( $wgDBname == 'nostalgiawiki' ) {
 	# Link back to current version from the archive funhouse
@@ -2087,7 +2098,9 @@ if ( $wmgMobileFrontend || $wmgUseFlow ) {
 	require_once( "$IP/extensions/Mantle/Mantle.php" );
 }
 
-require( getRealmSpecificFilename( "$wmfConfigDir/mobile.php" ) );
+if ( $wmgMobileFrontend ) {
+	require( getRealmSpecificFilename( "$wmfConfigDir/mobile.php" ) );
+}
 
 
 # MUST be after MobileFrontend initialization

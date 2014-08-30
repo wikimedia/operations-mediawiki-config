@@ -11825,6 +11825,7 @@ $wgConf->settings = array(
 ),
 'wmgMobileFrontend' => array(
 	'default' => true,
+	'labswiki' => false,
 	'wikidata' => false, // Disabled due to lack of mobile domain setup
 ),
 'wmgEnableTextExtracts' => array(
@@ -13884,6 +13885,31 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'foundationwiki' => true,
+),
+
+'wmgUseClusterMemcache' => array(
+	'default'  => true,
+	'labswiki' => false,
+),
+
+'wmgUseClusterSession' => array(
+	'default'  => true,
+	'labswiki' => false,
+),
+
+'wmgUseClusterSquid' => array(
+	'default'  => true,
+	'labswiki' => false,
+),
+
+'wmgUseClusterFilebackend' => array(
+	'default'  => true,
+	'labswiki' => false,
+),
+
+'wmgUseClusterJobqueue' => array(
+	'default'  => true,
+	'labswiki' => false,
 ),
 
 );
