@@ -155,6 +155,9 @@ $wgMessageCacheType = 'memcached-pecl';
 $wgSessionsInObjectCache = true;
 $wgSessionCacheType = 'memcached-pecl';
 
+// No cluster for us!
+$wgDefaultExternalStore = false;
+
 require_once( '/usr/local/apache/common/private/WikitechPrivateLdapSettings.php' );
 
 #$wgPasswordReminderResendTime = 0;
