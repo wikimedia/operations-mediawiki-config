@@ -2,7 +2,7 @@ $IP/extensions/DynamicSidebar/DynamicSidebar.php
 $IP/extensions/LdapAuthentication/LdapAuthentication.php
 $IP/extensions/OATHAuth/OATHAuth.php
 $IP/extensions/OpenStackManager/OpenStackManager.php
-$IP/extensions/SemanticForms/SemanticForms.php
-$IP/extensions/SemanticMediaWiki/SemanticMediaWiki.php
-$IP/extensions/SemanticResultFormats/SemanticResultFormats.php
 $IP/extensions/Validator/Validator.php
+$IP/extensions/SemanticMediaWiki/SemanticMediaWiki.php
+$IP/extensions/SemanticForms/SemanticForms.php
+$IP/extensions/SemanticResultFormats/SemanticResultFormats.php
