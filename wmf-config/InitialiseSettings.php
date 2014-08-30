@@ -13886,6 +13886,37 @@ $wgConf->settings = array(
 	'foundationwiki' => true,
 ),
 
+'wmgUseClusterMemcache' => array(
+	'default'  => true,
+	'labswiki' => false,
+),
+
+'wmgUseClusterSession' => array(
+	'default'  => true,
+	'labswiki' => false,
+),
+
+'wmgUseClusterSquid' => array(
+	'default'  => true,
+	'labswiki' => false,
+),
+
+'wmgUseClusterFilebackend' => array(
+	'default'  => true,
+	'labswiki' => false,
+),
+
+'wmgUseClusterJobqueue' => array(
+	'default'  => true,
+	'labswiki' => false,
+),
+
+'wmgMobileFrontend' => array(
+	'default'  => true,
+	'labswiki' => false,
+),
+
+
 );
 
 
