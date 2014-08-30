@@ -8845,296 +8845,48 @@ $wgConf->settings = array(
 ),
 # @} end of wgRemoveGroups
 
-# wgImportSources @{
-'wgImportSources' => array(
-	// Generic project entries
+'wmgCommonlyUsedImportSources' => array(
+	// Commonly-used import sources. This currently only works for language
+	// versions, since there are few enough special wikis that they can all be
+	// seen at once in the UI.
 
-	// Note: When adding a specific wiki you have to duplicate these generic sources
-	// otherwise they would be overwritten by the specific wiki entry
-	'wikisource' => array( 'meta', 'commons' ),
-	'wikiversity' => array( 'meta', 'b', 'incubator' ),
-
-	// Specific wikis
-
-	// chapter wikis
-	'bewikimedia' => array( 'meta' ),
-	'brwikimedia' => array( 'wikipedia:pt', 'meta', 'wiktionary:pt', 'wikisource:pt', 'wikinews:pt', 'wikiquote:pt', 'wikibooks:pt', 'wikiversity:pt', 'commons' ),
-	'cowikimedia' => array( 'meta', 'wikipedia:es', 'wikibooks:es', 'wikiversity:es' ),
-	'etwikimedia' => array( 'wikipedia:et', 'meta' ),
-	'fiwikimedia' => array( 'wikipedia:fi', 'meta' ),
-	'mkwikimedia' => array( 'meta', 'wikipedia:mk'  ),
-	'mxwikimedia' => array( 'meta', 'wikipedia:es', 'wikibooks:es', 'wikiversity:es', 'wikipedia:en', ),
-	'nowikimedia' => array( 'meta', 'wikipedia:no', 'wikipedia:nn', 'wikipedia:se' ),
-	'nycwikimedia' => array( 'wikipedia:en', 'meta' ),
-	'plwikimedia' => array( 'b', 'n', 'q', 's', 'voy', 'w', 'wikt', ), // bug 65908
-	'ruwikimedia' => array( 'meta', 'foundation', 'wikipedia:ru', ),
-	'sewikimedia' => array( 'wikipedia:sv' ),
-	'trwikimedia' => array( 'wikipedia:tr', 'meta' ),
-	'ukwikimedia' => array( 'meta' ),
-
-	// content wikis
-	'alswiki'   => array( 'de', 'wikt', 'b', 'q', 'en', 'fr', 'it', 'b:de' ),
-	'alswikibooks' => array( 'b:de', 'w' ),
-	'arbcom_enwiki' => array( 'meta', 'w' ),
-	'arbcom_dewiki' => array( 'w', 'w:de', ),
-	'arwiki' => array( 'meta' ),
-	'arwikibooks' => array( 'w' ),
-	'arwikinews' => array( 'w' ),
-	'arwikisource' => array( 'w' ),
-	'arwikiversity' => array( 'w', 'b', 'n', 'q', 's', 'wikt' ),
-	'arzwiki' => array( 'incubator', 'en', 'ar', 'es', 'fr', ),
-	'betawikiversity' => array( 'meta', 'b', 'en', 'incubator', 'de', 'wikipedia:lt' ),
-	'bhwiki' => array( 'commons', 'meta', 'species', 'de', 'en', 'wikibooks:en', 'wikiquote:en', 'wikinews:en', 'wikisource:en', 'wikiversity:en', 'es', 'fa', 'fr', 'hi', 'ml', 'ne', 'nl', 'ro', 'ru', 'pl', 'pt', 'simple', 'ta', 'ur' ),
-	'bnwiki' => array( 'en' ), # Bug 34791
-	'bnwikisource' => array( 'OldWikisource', 'w', 'en' ),
-	'cawikibooks' => array( 'w', 's', ),
-	'cawikinews' => array( 'w', 'wikt', 'q', 'b', 's', 'v', 'fr', 'en', 'de', 'es', 'pt', 'it', 'commons', 'meta', 'eo' ),
-	'cawikiquote' =>  array( 'w' ),
-	'cawikisource' => array( 'w', 'b', ),
-	'cawiktionary' => array( 'w', ),
-	'chywiki' => array( 'en', 'fr', ),
-	'ckbwiki' => array( 'fa', 'ar', 'ku', 'en', 'de', 'fr', 'it', 'es', 'ru', 'pt', ), // bug 52633
-	'commonswiki' => array( 'meta', 'w:en', 'w:de', 'w:fr', 'w:pl', 'w:ja', 'w:es', 'w:nl', 'w:ru', 'w:sv', 'w:ja', 'w:it', 'w:pt', 'w:zh', 'wikibooks:en', 'mediawikiwiki', 'foundation', 'wikidata'), // bug 54001
-	'crhwiki' => array( 'incubator' ),
-	'crwiki' => array( 'en', 'fr'  ),
-	'cswiki' => array( 'b', 'meta', 'n', 'q', 's', 'v', 'wikt' ),
-	'cswikibooks'    => array( 'n', 'q', 's', 'v', 'w', 'wikt' ),
-	'cswikinews'     => array( 'b', 'q', 's', 'v', 'w', 'wikt', 'incubator' ),
-	'cswikiquote'    => array( 'b', 'n', 's', 'v', 'w', 'wikt' ),
-	'cswikisource'   => array( 'b', 'n', 'q', 'v', 'w', 'wikt', 'oldwikisource' ),
-	'cswikiversity'  => array( 'b', 'n', 'q', 's', 'w', 'wikt', 'betawikiversity' ),
-	'cswiktionary'   => array( 'b', 'n', 'q', 's', 'v', 'w' ),
-	'donatewiki' => array( 'meta', 'foundation' ),
-	'dewiki' => array( 'w', 'wikt', 'da', 'el', 'en', 'es', 'fr', 'hu', 'it', 'ja', 'nl', 'no', 'pl', 'pt', 'ru', 'sv', 'tr', 'uk', 'zh' ),
-	'dewikibooks' => array( 'w', 'wikipedia', 'en', 'v' ),
-	'dewikiquote' => array( 'w', 'wikt', 's', 'b', 'v', 'en', 'la', ),
-	'dewikisource' => array( 'b', 'commons', 'en', 'fr', 'la', 'meta', 'oldwikisource', 'q', 'v', 'w', 'wikt' ), // bug 56384
-	'dewikiversity' => array( 'w', 'meta', 'b', 'incubator' ), // bug 38159
-	'dewiktionary' => array( 'w', 'en' ),
-	'dewikivoyage' => array( 'w', 'en', 'meta' ),
-	'dsbwiki' => array( 'incubator', ),
-	'elwiki' => array( 'en', 'de', 'v', 's', 'wikt', 'b', 'q', 'fr', 'meta', 'commons', 'it',  ),
-	'elwikibooks' => array( 'en', 'w:en', 'w', 'v', 'q', 's', 'meta', 'wikt' ),
-	'elwikisource' => array( 'w', 'v' ),
-	'elwikiversity' => array( 'w', 'wikt', 'b', 'q', 's', 'betawikiversity', 'en', 'fr', 'de', 'es', 'it', 'w:fr', 'w:de', 'fi', 'commons', 'w:en' ),
-	'elwiktionary' => array( 'w', 'en', 'fr' ),
-	'enwiki' => array( 'meta', 'nost', 'de', 'es', 'fr', 'it', 'pl', 'outreachwiki', 'test2wiki' ),
-	'enwiktionary' => array(
-		'w', 'b', 's', 'q', 'v', 'n', 'commons', 'aa', 'ab', 'af', 'ak', 'als', 'am', 'an', 'ang', 'ar', 'as', 'ast', 'av', 'ay', 'az', 'ba', 'be', 'bg', 'bh', 'bi', 'bm', 'bn', 'bo', 'br', 'bs',
-		'ca', 'ch', 'chr', 'co', 'cr', 'cs', 'csb', 'cy', 'da', 'de', 'dv', 'dz', 'el', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fj', 'fo', 'fr', 'fy', 'ga', 'gd', 'gl', 'gn', 'gu', 'gv', 'ha', 'he',
-		'hi', 'hr', 'hsb', 'hu', 'hy', 'ia', 'id', 'ie', 'ik', 'io', 'is', 'it', 'iu', 'ja', 'jbo', 'jv', 'ka', 'kk', 'kl', 'km', 'kn', 'ko', 'ks', 'ku', 'kw', 'ky', 'la', 'lb', 'li', 'ln', 'lo', 'lt', 'lv',
-		'mg', 'mh', 'mi', 'mk', 'ml', 'mn', 'mo', 'mr', 'ms', 'mt', 'my', 'na', 'nah', 'nds', 'ne', 'nl', 'nn', 'no', 'oc', 'om', 'or', 'pa', 'pi', 'pl', 'ps', 'pt', 'qu', 'rm', 'rn', 'ro',
-		'roa-rup', 'ru', 'rw', 'sa', 'sc', 'scn', 'sd', 'sg', 'sh', 'si', 'simple', 'sk', 'sl', 'sm', 'sn', 'so', 'sq', 'sr', 'ss', 'st', 'su', 'sv', 'sw', 'ta', 'te', 'tg', 'th', 'ti', 'tk', 'tl', 'tn', 'to',
-		'tpi', 'tr', 'ts', 'tt', 'tw', 'ug', 'uk', 'ur', 'uz', 'vi', 'vo', 'wa', 'wo', 'xh', 'yi', 'yo', 'za', 'zh', 'zh-min-nan', 'zu'
+	// Putting the wiki's language, and "en" which is commonly wanted, at the top
+	// of the list. All wikis are still available later in the dropdown, this is
+	// just for convenience
+	'default' => array(
+		'w' => array( '$lang', 'en' ),
+		'wikt' => array( '$lang', 'en' ),
+		'b' => array( '$lang', 'en' ),
+		'n' => array( '$lang', 'en' ),
+		'q' => array( '$lang', 'en' ),
+		's' => array( '$lang', 'en' ),
+		'v' => array( '$lang', 'en' ),
+		'voy' => array( '$lang', 'en' ),
 	),
-	'enwikisource' => array( 'w', 'OldWikisource', 'b', 'commons', 'q', ),
-	'enwikibooks' => array( 'w', 's', 'q', 'v', 'wikt', 'n', 'meta', 'simple', 'species' ),
-	'enwikiversity' => array( 'betawikiversity', 'w', 'b', 'q', 's' ),
-	'enwikivoyage' => array( 'b', 'meta', 'w' ), // Bug 63095
-	'eowikisource' => array( 'meta', 'commons', 'b:eo' ), // Bug 43659
-	'eswiki' => array( 'b', 'q', 'v', 'wikt', 'n', 's', 'en' ),
-	'eswikibooks' => array( 'w', 'w:en', 'en', 'meta' ),
-	'eswikiquote' => array( 'en', 'b', 'm', 'mw', 'n', 's', 'v', 'voy', 'w', 'wikt' ), // bug 62912
-	'eswikiversity' => array( 'w:es', 'b', 'meta' ),
-	'eswikivoyage' => array( 'w', 'meta', 'commons', 'en', 'de', 'fr', 'it', 'nl', 'pt', 'ru', 'sv' ), // Bug 43863
-	'eswiktionary' => array( 'w', 'w:en', 'w:fr', 'w:de', 'en', 'fr', 'de', ), # Bug 8202
-	'etwiki' => array( 'b', 'q', 's', 'wikt' ),
-	'etwikisource' => array( 'w' ),
-	'etwiktionary' => array( 'w' ),
-	'extwiki' => array( 'incubator' ),
-	'fdcwiki' => array( 'meta' ),
-	'fiwikisource' => array( 'OldWikisource', 'w', 'b' ),
-	'fiwikiversity' => array( 'b', 'q', 'n', 's', 'wikt', 'w', 'betawikiversity' ),
-	'foundationwiki' => array( 'meta' ),
-	'frrwiki' => array( 'en', 'de', 'nds', 's:de', 'oldwikisource' ), # s:de and oldwikisource per bug 38023
-	'frwiki' => array(
-		'meta', 'commons', 'species', 'q', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy',
-		'hi', 'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk',
-		'sl', 'sq', 'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'wikt', 'v',
-	), # Bug 28024 and bug 22663 --pdhanda
-	'frwikisource' => array(
-		'meta', 'commons', 'species', 'q', 'b', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy', 'hi',
-		'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk', 'sl', 'sq',
-		'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'wikt', 'v',
-	), # Bug 28024 and bug 22663 --pdhanda
-	'frwikibooks' => array(
-		'meta', 'commons', 'species', 'q', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu',
-		'hy', 'hi', 'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple',
-		'sk', 'sl', 'sq', 'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'wikt', 'v',
-	),  # Bug 28024 and bug 22663 --pdhanda
-	'frwikinews' => array( 'w', 'en', 'de', 'es', 'it', 'b', 'wikt', 'v', 's', 'q', 'ca', 'pt', 'species', 'commons', 'meta', 'w:pl', 'pl' ),
-	'frwikiquote' => array( 'w', 'wikt', 's', 'b', 'n', 'v', 'meta', 'en' ),
-	'frwikiversity' => array(
-		'meta', 'commons', 'species', 'q', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy',
-		'hi', 'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk',
-		'sl', 'sq', 'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'wikt', 'b',
-	),  # Bug 28024 and bug 22663 --pdhanda
-	'frwikivoyage' => array( 'w', 'meta', 'de', 'el', 'en', 'es', 'he', 'it', 'nl', 'pl', 'pt', 'ro', 'ru', 'sv', 'uk', 'vi' ), // bug 55745
-	'frwiktionary' => array(
-		'meta', 'commons', 'species', 'q', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy', 'hi',
-		'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk', 'sl', 'sq',
-		'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'b', 'v',
-	),  # Bug 28024 and bug 22663 --pdhanda
-	'ganwiki' => array( 'incubator' ),
-	'gdwiki' => array( 'en', 'de', 'ga', 'gv' ),
-	'glwiktionary' => array( 'w', 's', 'q', 'b' ),
-	'glwikibooks' => array( 'w', 'wikt', 's', 'q' ),
-	'glwikisource' => array( 'w', 'wikt', 'q', 'b' ),
-	'glwikiquote' => array( 'w', 'wikt', 's', 'b' ),
-	'glwiki' => array( 'wikt', 's', 'q', 'b' ),
-	'guwiki' => array( 'en' ), // Bug 37511
-	'hakwiki' => array( 'incubator' ),
-	'hewiki' => array( 'wikt', 'q', 'b', 's', 'n', 'commons' ),
-	'hewikibooks' => array( 'w', 'wikt', 'q', 's', 'n' ),
-	'hewikinews' => array( 'w', 'wikt', 'q', 'b', 's' ),
-	'hewikiquote' => array( 'w', 'wikt', 'b', 's', 'n' ),
-	'hewiktionary' => array( 'w', 'q', 'b', 's', 'n' ),
-	'hewikisource' => array( 'w', 'wikt', 'q', 'b', 'n' ),
-	'hewikivoyage' => array( 'w', 'wikt', 'b', 'n', 'q', 's', 'commons', 'en', 'de', 'el', 'fr', 'it', 'nl', 'pl', 'pt', 'ro', 'ru', 'sv', 'uk', 'vi' ), // bug 58527, 59601
-	'hiwiki' => array( 'wikt', 'commons', 'meta', 'species', 'de', 'en', 'en:b', 'en:q', 'en:n', 'en:s', 'en:v', 'es', 'fr', 'ml', 'ne', 'nl', 'ro', 'ru', 'pl', 'pt', 'simple', 'ta' ), // bug 41757
-	'hifwiki' => array( 'incubator' ),
-	'hsbwiktionary' => array( 'incubator', 'w' ),
-	'huwikinews' => array( 'incubator' ),
-	'idwiki' => array( 'ms' ), // bug 16033
-	'idwikibooks' => array( 'w' ),
-	'idwikiquote' => array( 'w' ),
-	'idwikisource' => array( 'w' ),
-	'idwiktionary' => array( 'w' ),
-	'incubatorwiki' => array( 'meta', 'commons', 'w', 'w:de', 'w:fr', 'w:es', 'w:pt', 'w:nl', 'w:ru', 'wikt:en', 'b:en',  ),
-	'iswiki' => array( 'en', 'da', 'no', 'de' ),
-	'iswiktionary' => array( 'w' ),
-	'itwiki' => array( 'b', 'q', 's', 'wikt', 'n', 'v', 'de', 'es', 'en', 'fr', 'meta' ),
-	'itwikibooks' => array( 'w', 'wikt', 's', 'q', 'n', 'v', 'en' ),
-	'itwikinews' => array( 'w', 'wikt', 'b', 's', 'q', 'v', 'w:en', 'commons', 'en' ),
-	'itwikiquote' => array( 'w', 'wikt', 's', 'b', 'n', 'v' ),
-	'itwikisource' => array( 'w', 'b', 'wikt', 'q', 'n', 'v' ),
-	'itwikiversity' => array( 'w', 'b', 'wikt', 's', 'q', 'n' ),
-	'itwikivoyage' => array ( 'w', 'q', 's', 'n', 'wikt', 'b', 'v', 'species',
-		'commons', 'd', 'mw', 'meta', 'foundation', 'w:ca',
-		'w:de', 'w:en', 'w:es', 'w:fr', 'w:he', 'w:hu',
-		'w:nl', 'w:pl', 'w:pt', 'w:ru', 's:fr', 'n:en',
-		'wikt:en', 'de', 'en', 'es', 'fr', 'nl', 'ru', 'sv', 'el'
-	), // Bug 43310
-	'itwiktionary' => array( 'w', 'b', 's', 'q', 'n', 'v', 'en', 'fr', 'sc' ),
-	'jawikibooks' => array( 'w', 'wikt', 'q', 's', 'v', 'en' ),
-	'jawikiversity' => array( 'betawikiversity', 'w', 'wikt', 'en', 'b', 'q', 's', 'n' ),
-	'jawiktionary' => array( 'w' ),
-	'kaawiki' => array( 'incubator' ),
-	//'khmwiktionary' => array( 'en', 'fr', 'lm', 'th' ),
-	'kmwiki' => array( 'en', 'be', 'simple' ),
-	'knwiki' => array( 'en' ),
-	'kowikiquote' => array( 'w' ),
-	'lawikibooks' => array( 'w' ),
-	'lawikisource' => array( 'ca', 'de', 'el', 'en', 'es', 'fr', 'it', 'pt', 'ro', 'w', 'b', 'oldwikisource' ),
-	'lbwiktionary' => array( 'w:fr', 'fr', 'w:en', 'en', 'w', 'meta' ),
-	'legalteamwiki' => array( 'meta' ),
-	'liwikinews' => array( 'incubator' ),
-	'lmowiki' => array( 'ca', 'en', 'fr' ), # bug 8319
-	'mdfwiki' => array( 'incubator' ),
-	'mediawikiwiki' => array( 'meta', 'w:en', 'usability' ),
-	'metawiki' => array( 'commons', 'foundation', 'w', 'cs', 'fr', 'strategy' ),
-	'mgwiktionary' => array( 'fr', 'io', 'en', 'w', ),
-	'mlwiki' => array( 'en' ),
-	'mlwikibooks' => array( 'w', 'en' ), // bug 50156
-	'mlwikisource' => array( 'w', 'en', 'w:en', ),
-	'mlwikiquote' => array( 'en', 'w:en', 'w' ),
-	'mswiki' => array( 'id' ), # bug 16033
-	'mswiktionary' => array( 'w' ),
-	'myvwiki' => array( 'incubator' ),
-	'ndswiki' => array( 'en', 'de', 'nl', 'nds-nl', 'wikt'  ),
-	'nlwikibooks' => array( 'w' ),
-	'nlwikisource' => array( 'w', 'wikt', 'q', 'b', 'n', 'nl', 'de', 'en' ),
-	'nlwiktionary' => array( 'w', 'en', 'fr' ),
-	'nowiki' => array( 's', 'q', 'nn', 'da', 'sv', 'nl', 'en', 'de' ),
-	'nowikibooks' => array( 'sv', 'da', 'en', 'w', 'w:nn', 'w:sv', 'w:da', 'w:en' ),
-	'nowikinews' => array( 'sv' ),
-	'nowikiquote' => array( 'w', 'en', 'nn' ),
-	'nowikisource' => array( 'w' ),
-	'nowiktionary' => array( 'w' ),
-	'orwiki' => array( 'en', 'commons' ),
-	'otrs_wikiwiki' => array( 'meta' ),
-	'outreachwiki'  => array( 'w:en', 'w:de', 'w:fr', 'w:pl', 'w:it', 'w:ja', 'w:es', 'w:nl', 'w:pt', 'w:ru', 'w:sv', 'commons', 'foundation', 'm', ),
-	'pflwiki' => array( 'de', 'fr', 'als', 'pdc', 'en' ),
-	'ptwikisource' => array( 'w', 'b' ),
-	'plwiki' => array( 's', 'b', 'q', 'n', 'wikt' ),
-	'plwikibooks' => array( 'w', 's' ), # bug 8546
-	'plwikisource' => array( 'w', 'b', 'q', 'n', 'wikt', 'oldwikisource' ),
-	'plwiktionary' => array( 'w' ),
-	'pntwiki'   => array( 'en', 'el', 'elwikiversity', 'incubator' ),
-	'ptwikibooks' => array( 'w', 'wikt', 's', 'q', 'n', 'v', 'en', 'es', 'fr', 'it', 'de', 'ru', 'w:en' ),
-	'ptwikinews' => array( 'w', 'wikt', 's', 'v', 'b', 'q', 'meta', 'commons', 'it', 'fr', 'ca', 'en', 'es', 'de', ),
-	'ptwikiversity' => array( 'incubator', 'w', 'b', ),
-	'rowikibooks' => array( 'w', 's' ),
-	'ruwikibooks' => array( 'w', 's', ),
-	'ruwikiversity' => array( 'w', 'wikt', 'q', 'b', 's', 'n', 'betawikiversity' ),
-	'sahwiki' => array( 'incubator' ),
-	'sawiki' => array( 'en' ),
-	'sawikisource' => array( 'oldwikisource' ),
-	'sawiktionary' => array( 'en' ),
-	'scnwiki' => array( 'it', 'en', 'fr' ),
-	'scnwiktionary' => array( 'w', 'it', 'en', 'fr' ),
-	'scowiki' => array( 'en', 'simple' ),
-	'sewiki' => array( 'en', 'fi', 'no', 'nn', 'sv' ), // Bug 43411
-	'simplewiki' => array( 'en', 'wikt', 'b', 'q' ),
-	'simplewiktionary' => array( 'en', 'w', 'b', 'q' ),
-	'simplewikiquote' => array( 'en', 'w', 'wikt', 'b' ),
-	'skwiki' => array( 'b', 'meta', 'q', 's', 'wikt' ),
-	'sourceswiki' => array(
-		'ang', 'ar', 'az', 'bg', 'bn', 'bs', 'ca', 'cs', 'cy',
-		'da', 'de', 'el', 'en', 'es', 'et', 'fa', 'fi', 'fo',
-		'fr', 'gl', 'he', 'hr', 'ht', 'hu', 'hy', 'id', 'is',
-		'it', 'ja', 'kn', 'ko', 'la', 'lt', 'mk', 'ml', 'nl',
-		'no', 'pl', 'pt', 'ro', 'ru', 'sa', 'sk', 'sl', 'sr',
-		'sv', 'ta', 'te', 'th', 'tr', 'uk', 'vi', 'yi', 'zh',
-		'meta', 'commons',
-	),
-	'srnwiki' => array( 'incubator' ),
-	'srwiki' => array( 'wikt', 'meta' ), // bug 62533
-	'srwiktionary' => array( 'w' ),
-	'srwikinews' => array( 'no' ),
-	'srwikisource' => array( 'w' ),
-	'sswiki' => array( 've', 'st', 'zu', 'xh', 'af', 'en', 'es' ),
-	'sswiktionary' => array( 'w', 'en', 'af' ),
-	'stqwiki' => array( 'incubator' ),
-	'svwikibooks' => array( 'w', 's', 'betawikiversity' ),
-	'svwikisource' => array( 'w' ),
-	'svwikiversity' => array( 'w', 'b', 's', 'n', 'en', 'betawikiversity' ),
-	'svwiktionary' => array( 'w', 'meta' ),
-	'szlwiki' => array( 'incubator' ),
-	'tawikisource' => array( 'oldwikisource', 'w', 'b' ),
-	'tewiki' => array( 'en', 'commons' ), // Bug 41880
-	'testwiki' => array( 'de', 'en', 'es', 'fr', 'ja', 'commons', 'meta', 'incubator', 'strategy' ),
-	'test2wiki' => array( 'en', 'cs' ),
-	'tetwiki' => array( 'en', 'de', 'pt' ),
-	'tewikisource' => array( 'w', 'b' ),
-	'tnwiki' => array( 'en' ), // bug 51327
-	'tpiwiki' => array( 'en', 'simple', 'wikt:en', 'commons' ),
-
-	# vi languages: bug 7854
-	'vecwiki'      => array( 'it' ),
-	'vecwiktionary' => array( 'w', 'en', 'fr', 'it' ), // bug 49575
-	'viwiki'       => array( 'wikt', 'b', 's', 'q' ),
-	'viwiktionary' => array( 'w', 'b', 's', 'q' ),
-	'viwikibooks'  => array( 'en', 'w', 'wikt', 's', 'q', 'fr', 'it' ), # fr and it: bug 37457
-	'viwikisource' => array( 'w', 'wikt', 'b', 'q' ),
-	'viwikiquote'  => array( 'w', 'wikt', 'b', 's' ),
-
-	'wikidata' => array( 'meta', 'commons', 'en', 'de', 'fr', 'es' ),
-	'testwikidatawiki' => array( 'meta', 'commons', 'en', 'de', 'fr', 'es' ),
-	'wikimania2012wiki' => array( 'en', 'meta', 'wm2011' ),
-	'wikimania2013wiki' => array( 'en', 'meta', 'wm2011', 'wm2012' ),
-	'wikimania2014wiki' => array( 'en', 'meta', 'wm2011', 'wm2012', 'wm2013' ),
-	'wikimania2015wiki' => array( 'en', 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014' ),
-	'wuuwiki' => array( 'en', 'th', 'fr', 'zh', ),
-	'xhwiki' => array( 'en' ), // bug 51327
-	'zhwikiquote' => array( 'w', 'b', 'wikt', 's', 'meta', 'commons' ),
-	'zhwikivoyage' => array( 'w', 'b', 'q', 's', 'en', 'wikt', 'meta', 'commons' ), //bug 60248
-	'zhwiktionary' => array( 'w', 'b', 'q', 's', 'meta', 'commons' ),
-	'zhwikibooks' => array( 'w', 'wikt', 'q', 's', 'meta', 'commons' ),
-	'zhwikisource' => array( 'w', 'b', 'q', 'wikt', 'meta', 'commons' ),
-	'zuwiki' => array( 'en' ), // bug 51327
 ),
-# @} end of wgImportSources
+
+'wmgAdditionalImportSources' => array(
+	'default' => array(),
+
+	// Meta gets all chapter wikis and Wikimania wikis. Wikimania wikis also
+	// get other Wikimanias. This is done to avoid cluttering the list on all
+	// wikis. On the rare occasion that an import from these wikis to a project
+	// other than Meta is required, it can be done in two steps via Meta.
+	'metawiki' => array(
+		// Chapter wikis on the WMF cluster that are on the [[m:interwiki map]].
+		// Always check this before adding here.
+		'wmbd', 'wmbe', 'wmbr', 'wmco', 'wmdk', 'wmet', 'wmfi', 'wmmk', 'wmmx',
+		'wmnl', 'wmno', 'wmnyc', 'wmpa-us', 'wmpl', 'wmrs', 'wmru', 'wmse', 'wmtr',
+		'wmua',
+		// Wikimania
+		'wm2005', 'wm2006', 'wm2007', 'wm2008', 'wm2009', 'wm2010', 'wm2011',
+		'wm2012', 'wm2013', 'wm2014', 'wm2015',
+	),
+	'wikimania' => array(
+		'wm2005', 'wm2006', 'wm2007', 'wm2008', 'wm2009', 'wm2010', 'wm2011',
+		'wm2012', 'wm2013', 'wm2014', 'wm2015',
+	),
+),
 
 'wgImportTargetNamespace' => array(
 	'default' => null,
