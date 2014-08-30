@@ -34,6 +34,24 @@
       "revId": "9b38494bd8ee2c8f9ae878852a10e53952ba3990",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_92de8813",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 589
+      },
+      "writtenOn": "2014-08-30T21:37:42Z",
+      "side": 1,
+      "message": "Comment them out then? This is the list thing I have an issue with really.",
+      "parentUuid": "2e2fb78d_d2bc10b4",
+      "revId": "9b38494bd8ee2c8f9ae878852a10e53952ba3990",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
