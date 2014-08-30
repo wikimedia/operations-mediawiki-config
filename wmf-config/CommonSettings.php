@@ -1191,7 +1191,121 @@ $wgEnotifUseJobQ = true;
 include $IP . '/extensions/AntiSpoof/AntiSpoof.php';
 
 // For transwiki import
-ini_set( 'user_agent', 'Wikimedia internal server fetcher (noc@wikimedia.org' );
+ini_set( 'user_agent', 'Wikimedia internal server fetcher (noc@wikimedia.org)' );
+
+// Set up a global map of import sources
+$wgImportSources = array(
+	'w' => array(),
+	'wikt' => array(),
+	'b' => array(),
+	'n' => array(),
+	'q' => array(),
+	's' => array( 'oldwikisource' ),
+	'v' => array( 'betawikiversity' ),
+	'voy' => array(),
+	// common special wikis
+	'commons', 'incubator', 'mediawikiwiki', 'meta', 'wikispecies', 'wikidata',
+	// rarely-needed special wikis
+	'foundation', 'nostalgia', 'outreach', 'strategy', 'tenwiki', 'testwiki',
+	'test2wiki', 'testwikidata', 'usability', 'wikitech',
+);
+// Allow for "commonly used" import sources to appear at top of the list.
+// For now, this only works for language projects. There are few enough special
+// wikis that they can all be seen at once in the UI.
+foreach ( $wmgCommonlyUsedImportSources as $key => $value ) {
+	if ( is_array( $value ) ) {
+		$wgImportSources[$key] = array_merge( $wgImportSources[$key], 
+			array_unique( $value ) );
+	}
+}
+// Add new wikis here as they are added to the cluster.
+// Wikipedia
+$wgImportSources['w'] = array_merge( $wgImportSources['w'], array( 'aa', 'ab',
+'ace', 'af', 'ak', 'als',
+'am', 'ang', 'an', 'arc', 'ar', 'arz', 'ast', 'as', 'av', 'ay', 'az', 'bar',
+'bat_smg', 'ba', 'bcl', 'be_x_old', 'be', 'bg', 'bh', 'bi', 'bjn', 'bm', 'bn',
+'bo', 'bpy', 'br', 'bs', 'bug', 'bxr', 'ca', 'cbk_zam', 'cdo', 'ceb', 'ce',
+'cho', 'chr', 'ch', 'chy', 'ckb', 'co', 'crh', 'cr', 'csb', 'cs', 'cu', 'cv',
+'cy', 'da', 'de', 'diq', 'dsb', 'dv', 'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es',
+'et', 'eu', 'ext', 'fa', 'ff', 'fiu_vro', 'fi', 'fj', 'fo', 'frp', 'frr', 'fr',
+'fur', 'fy', 'gag', 'gan', 'ga', 'gd', 'glk', 'gl', 'gn', 'got', 'gu', 'gv',
+'hak', 'ha', 'haw', 'he', 'hif', 'hi', 'ho', 'hr', 'hsb', 'ht', 'hu', 'hy',
+'hz', 'ia', 'id', 'ie', 'ig', 'ii', 'ik', 'ilo', 'io', 'is', 'it', 'iu', 'ja',
+'jbo', 'jv', 'kaa', 'kab', 'ka', 'kbd', 'kg', 'ki', 'kj', 'kk', 'kl', 'km',
+'kn', 'koi', 'ko', 'krc', 'kr', 'ksh', 'ks', 'ku', 'kv', 'kw', 'ky', 'lad',
+'la', 'lbe', 'lb', 'lez', 'lg', 'lij', 'li', 'lmo', 'ln', 'lo', 'ltg', 'lt',
+'lv', 'map_bms', 'mdf', 'mg', 'mhr', 'mh', 'min', 'mi', 'mk', 'ml', 'mn', 'mo',
+'mrj', 'mr', 'ms', 'mt', 'mus', 'mwl', 'myv', 'my', 'mzn', 'nah', 'nap', 'na',
+'nds_nl', 'nds', 'ne', 'new', 'ng', 'nl', 'nn', 'nov', 'no', 'nrm', 'nso', 'nv',
+'ny', 'oc', 'om', 'or', 'os', 'pag', 'pam', 'pap', 'pa', 'pcd', 'pdc', 'pfl',
+'pih', 'pi', 'pl', 'pms', 'pnb', 'pnt', 'ps', 'pt', 'qu', 'rm', 'rmy', 'rn',
+'roa_rup', 'roa_tara', 'ro', 'rue', 'ru', 'rw', 'sah', 'sa', 'scn', 'sco', 'sc',
+'sd', 'se', 'sg', 'sh', 'simple', 'si', 'sk', 'sl', 'sm', 'sn', 'so', 'sq',
+'srn', 'sr', 'ss', 'stq', 'st', 'su', 'sv', 'sw', 'szl', 'ta', 'tet', 'te',
+'tg', 'th', 'ti', 'tk', 'tl', 'tn', 'to', 'tpi', 'tr', 'ts', 'tt', 'tum', 'tw',
+'tyv', 'ty', 'udm', 'ug', 'uk', 'ur', 'uz', 'vec', 'vep', 've', 'vi', 'vls',
+'vo', 'war', 'wa', 'wo', 'wuu', 'xal', 'xh', 'xmf', 'yi', 'yo', 'za', 'zea',
+'zh_classical', 'zh_min_nan', 'zh_yue', 'zh', 'zu' ) );
+// Wiktionary
+$wgImportSources['wikt'] = array_merge( $wgImportSources['wikt'], array( 'aa',
+'ab', 'af', 'ak', 'als',
+'am', 'ang', 'an', 'ar', 'ast', 'as', 'av', 'ay', 'az', 'be', 'bg', 'bh', 'bi',
+'bm', 'bn', 'bo', 'br', 'bs', 'ca', 'chr', 'ch', 'co', 'cr', 'csb', 'cs', 'cy',
+'da','de', 'dv', 'dz', 'el', 'en', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fj',
+'fo', 'fr', 'fy', 'ga', 'gd', 'gl', 'gn', 'gu', 'gv', 'ha', 'he', 'hi', 'hr',
+'hsb', 'hu', 'hy', 'ia', 'id', 'ie', 'ik', 'io', 'is', 'it', 'iu', 'ja', 'jbo',
+'jv', 'ka', 'kk', 'kl', 'km', 'kn', 'ko', 'ks', 'ku', 'kw', 'ky', 'la', 'lb',
+'li', 'ln', 'lo', 'lt', 'lv', 'mg', 'mh', 'mi', 'mk', 'ml', 'mn', 'mo', 'mr',
+'ms', 'mt', 'my', 'nah', 'na', 'nds', 'ne', 'nl', 'nn', 'no', 'oc', 'om', 'or',
+'pa', 'pi', 'pl', 'pnb', 'ps', 'pt', 'qu', 'rm', 'rn', 'roa_rup', 'ro', 'ru',
+'rw', 'sa', 'scn', 'sc', 'sd', 'sg', 'sh', 'simple', 'si', 'sk', 'sl', 'sm',
+'sn', 'so', 'sq', 'sr', 'ss', 'st', 'su', 'sv', 'sw', 'ta', 'te', 'tg', 'th',
+'ti', 'tk', 'tl', 'tn', 'to', 'tpi', 'tr', 'ts', 'tt', 'tw', 'ug', 'uk', 'ur',
+'uz', 'vec', 'vi', 'vo', 'wa', 'wo', 'xh', 'yi', 'yo', 'za', 'zh_min_nan', 'zh',
+'zu' ) );
+// Wikibooks
+$wgImportSources['b'] = array_merge( $wgImportSources['b'], array( 'aa', 'af',
+'ak', 'als', 'ang', 'ar',
+'ast', 'as', 'ay', 'az', 'ba', 'be', 'bg', 'bi', 'bm', 'bn', 'bo', 'bs', 'ca',
+'ch', 'co', 'cs', 'cv', 'cy', 'da', 'de', 'el', 'en', 'eo', 'es', 'et', 'eu',
+'fa', 'fi', 'fr', 'fy', 'ga', 'gl', 'gn', 'got', 'gu', 'he', 'hi', 'hr', 'hu',
+'hy', 'ia', 'id', 'ie', 'is', 'it', 'ja', 'ka', 'kk', 'km', 'kn', 'ko', 'ks',
+'ku', 'ky', 'la', 'lb', 'li', 'ln', 'lt', 'lv', 'mg', 'mi', 'mk', 'ml', 'mn',
+'mr', 'ms', 'my', 'nah', 'na', 'nds', 'ne', 'nl', 'no', 'oc', 'pa', 'pl', 'ps',
+'pt', 'qu', 'rm', 'ro', 'ru', 'sa', 'se', 'simple', 'si', 'sk', 'sl', 'sq',
+'sr', 'su', 'sv', 'sw', 'ta', 'te', 'tg', 'th', 'tk', 'tl', 'tr', 'tt', 'ug',
+'uk', 'ur', 'uz', 'vi', 'vo', 'wa', 'xh', 'yo', 'za', 'zh_min_nan', 'zh',
+'zu' ) );
+// Wikinews
+$wgImportSources['n'] = array_merge( $wgImportSources['n'], array( 'ar', 'bg',
+'bs', 'ca', 'cs', 'de', 'el', 'en', 'eo', 'es', 'fa', 'fi', 'fr', 'he', 'hu',
+'it', 'ja', 'ko', 'nl', 'no', 'pl', 'pt', 'ro', 'ru', 'sd', 'sq', 'sr', 'sv',
+'ta', 'th', 'tr', 'uk', 'zh' ) );
+// Wikiquote
+$wgImportSources['q'] = array_merge( $wgImportSources['q'], array( 'af', 'als',
+'am', 'ang', 'ar', 'ast', 'az', 'be', 'bg', 'bm', 'br', 'bs', 'ca', 'co', 'cr',
+'cs', 'cy', 'da', 'de', 'el', 'en', 'eo', 'es', 'et', 'eu', 'fa', 'fi', 'fr',
+'ga', 'gl', 'gu', 'he', 'hi', 'hr', 'hu', 'hy', 'id', 'is', 'it', 'ja', 'ka',
+'kk', 'kn', 'ko', 'kr', 'ks', 'ku', 'kw', 'ky', 'la', 'lb', 'li', 'lt', 'ml',
+'mr', 'na', 'nds', 'nl', 'nn', 'no', 'pl', 'pt', 'qu', 'ro', 'ru', 'sa',
+'simple', 'sk', 'sl', 'sq', 'sr', 'su', 'sv', 'ta', 'te', 'th', 'tk', 'tr',
+'tt', 'ug', 'uk', 'ur', 'uz', 'vi', 'vo', 'wo', 'za', 'zh_min_nan', 'zh' ) );
+// Wikisource
+$wgImportSources['s'] = array_merge( $wgImportSources['s'], array( 'ang', 'ar',
+'as', 'az', 'be', 'bg', 'bn', 'br', 'bs', 'ca', 'cs', 'cy', 'da', 'de', 'el',
+'en', 'eo', 'es', 'et', 'fa', 'fi', 'fo', 'fr', 'gl', 'gu', 'he', 'hr', 'ht',
+'hu', 'hy', 'id', 'is', 'it', 'ja', 'kn', 'ko', 'la', 'li', 'lt', 'mk', 'ml',
+'mr', 'nl', 'no', 'pl', 'pt', 'ro', 'ru', 'sah', 'sa', 'sk', 'sl', 'sr', 'sv',
+'ta', 'te', 'th', 'tr', 'uk', 'vec', 'vi', 'yi', 'zh_min_nan', 'zh' ) );
+// Wikiversity
+$wgImportSources['v'] = array_merge( $wgImportSources['v'], array( 'ar', 'cs',
+'de', 'el', 'en', 'es', 'fi', 'fr', 'it', 'ja', 'ko', 'pt', 'ru', 'sl',
+'sv' ) );
+// Wikivoyage
+$wgImportSources['voy'] = array_merge( $wgImportSources['voy'], array( 'de',
+'el', 'en', 'es', 'fr', 'he', 'it', 'nl', 'pl', 'pt', 'ro', 'ru', 'sv', 'uk',
+'vi', 'zh' ) );
+$wgImportSources = array_merge( $wgImportSources, $wmgAdditionalImportSources );
 
 // CentralAuth
 if ( $wmgUseCentralAuth ) {
