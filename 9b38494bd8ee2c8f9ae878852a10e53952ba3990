@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "2e2fb78d_52e820af",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2014-08-30T21:39:05Z",
+      "side": 1,
+      "message": "This can be removed, I think.",
+      "revId": "9b38494bd8ee2c8f9ae878852a10e53952ba3990",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e2fb78d_72867c1a",
         "filename": "wmf-config/wikitech.php",
         "patchSetId": 17
