@@ -9,7 +9,7 @@ require_once( __DIR__ . '/defines.php' );
  *
  * The first argument is the git branch (relative to wmf).
  * This is typically a version of the format "X.XXwmfX" ("e.g. 1.17wmf1").
- * The second argument is the target path (relative to /a/common/)
+ * The second argument is the target path (relative to to the deployment root)
  * to store local copy of the git checkout. This is typically of the format "php-X.XX".
  *
  * This script assumes that the user running this script has an git account
@@ -160,9 +160,6 @@ PHP;
 	} else {
 		print "Directory already exists: $l10nDir\n";
 	}
-
-	# Install logmsg hook
-	exec( '../logmsg-git-hook --install' );
 
 	print "\nMediaWiki $dstVersionNum, from $gitVersion, successfully checked out.\n";
 }
