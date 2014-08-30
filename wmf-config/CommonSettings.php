@@ -236,9 +236,11 @@ extract( $globals );
 # Needs to be before db.php
 require( "$wmfConfigDir/PrivateSettings.php" );
 
-# Cluster-dependent files for database and memcached
-require( getRealmSpecificFilename( "$wmfConfigDir/db.php" ) );
-require( getRealmSpecificFilename( "$wmfConfigDir/mc.php" ) );
+if ( $wgDBname == 'labswiki' ) {
+	# Cluster-dependent files for database and memcached
+	require( getRealmSpecificFilename( "$wmfConfigDir/db.php" ) );
+	require( getRealmSpecificFilename( "$wmfConfigDir/mc.php" ) );
+}
 
 ini_set( 'memory_limit', $wmgMemoryLimit );
 
@@ -358,7 +360,9 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 	)
 );
 
-require( getRealmSpecificFilename( "$wmfConfigDir/session.php" ) );
+if ( $wgDBname == 'labswiki' ) {
+	require( getRealmSpecificFilename( "$wmfConfigDir/session.php" ) );
+}
 
 // Use the cache setup above and configure sessions caching
 $wgSessionCacheType = 'sessions';
@@ -453,7 +457,9 @@ $wgSVGConverters['rsvg-secure'] = '$path/rsvg-convert --no-external-files -w $wi
 $wgUseSquid = true;
 $wgUseESI   = false;
 
-require( getRealmSpecificFilename( "$wmfConfigDir/squid.php" ) );
+if ( $wgDBname == 'labswiki' ) {
+	require( getRealmSpecificFilename( "$wmfConfigDir/squid.php" ) );
+}
 
 $wgBlockOpenProxies = false;
 
@@ -560,10 +566,12 @@ if ( $wmgUseWikiHiero ) {
 include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 
 // Config for sitematrix
-$wgSiteMatrixFile = '/usr/local/apache/common/langlist';
-$wgSiteMatrixClosedSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../closed.dblist" ) ) );
-$wgSiteMatrixPrivateSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../private.dblist" ) ) );
-$wgSiteMatrixFishbowlSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../fishbowl.dblist" ) ) );
+if ( $wgDBname == 'labswiki' ) {
+	$wgSiteMatrixFile = '/usr/local/apache/common/langlist';
+	$wgSiteMatrixClosedSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../closed.dblist" ) ) );
+	$wgSiteMatrixPrivateSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../private.dblist" ) ) );
+	$wgSiteMatrixFishbowlSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../fishbowl.dblist" ) ) );
+}
 
 include( $IP . '/extensions/CharInsert/CharInsert.php' );
 
@@ -855,11 +863,14 @@ $wgPasswordSender = 'wiki@wikimedia.org';
 # e-mailing password based on e-mail address (bug 34386)
 $wgPasswordResetRoutes['email'] = true;
 
-# Cluster-dependent files for file backend
-require( getRealmSpecificFilename( "$wmfConfigDir/filebackend.php" ) );
+if ( $wgDBname != 'labwiki' ) {
 
-# Cluster-dependent files for job queue and job queue aggregator
-require( getRealmSpecificFilename( "$wmfConfigDir/jobqueue.php" ) );
+	# Cluster-dependent files for file backend
+	require( getRealmSpecificFilename( "$wmfConfigDir/filebackend.php" ) );
+
+	# Cluster-dependent files for job queue and job queue aggregator
+	require( getRealmSpecificFilename( "$wmfConfigDir/jobqueue.php" ) );
+}
 
 if ( $wgDBname == 'nostalgiawiki' ) {
 	# Link back to current version from the archive funhouse
@@ -2087,7 +2098,9 @@ if ( $wmgMobileFrontend || $wmgUseFlow ) {
 	require_once( "$IP/extensions/Mantle/Mantle.php" );
 }
 
-require( getRealmSpecificFilename( "$wmfConfigDir/mobile.php" ) );
+if ( $wgDBname == 'labswiki' ) {
+	require( getRealmSpecificFilename( "$wmfConfigDir/mobile.php" ) );
+}
 
 
 # MUST be after MobileFrontend initialization
