@@ -1996,14 +1996,9 @@ if ( $wmgUseVisualEditor ) {
 	}
 }
 
-if ( $wmgUseTemplateData ) {
-	require_once( "$IP/extensions/TemplateData/TemplateData.php" );
-}
-
-if ( $wmgTemplateDataUseGUI ) {
-	$wgTemplateDataUseGUI = true;
-}
-
+// TemplateData enabled for all wikis - 2014-09-29
+require_once( "$IP/extensions/TemplateData/TemplateData.php" );
+$wgTemplateDataUseGUI = true;
 
 if ( $wmgUseGoogleNewsSitemap ) {
 	include( "$IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php" );
