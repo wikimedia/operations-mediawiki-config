@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_321c7418",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 589
+      },
+      "writtenOn": "2014-08-30T21:06:04Z",
+      "side": 1,
+      "message": "Left over comment.",
+      "revId": "a4f0c910b85c8f9986b494eb3bd2071f126e1344",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_12197827",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 589
+      },
+      "writtenOn": "2014-08-30T21:06:04Z",
+      "side": 1,
+      "message": "Loaded in extension-list-wikitech now.",
+      "revId": "a4f0c910b85c8f9986b494eb3bd2071f126e1344",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_f215ccea",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 589
+      },
+      "writtenOn": "2014-08-30T21:06:04Z",
+      "side": 1,
+      "message": "Loaded in extension-list-wikitech now.",
+      "revId": "a4f0c910b85c8f9986b494eb3bd2071f126e1344",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_d212d000",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 589
+      },
+      "writtenOn": "2014-08-30T21:06:04Z",
+      "side": 1,
+      "message": "Loaded in extension-list-wikitech now.",
+      "revId": "a4f0c910b85c8f9986b494eb3bd2071f126e1344",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_b2d74428",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 16
+      },
+      "lineNbr": 139,
+      "author": {
+        "id": 589
+      },
+      "writtenOn": "2014-08-30T21:06:04Z",
+      "side": 1,
+      "message": "Is this worth keeping?",
+      "revId": "a4f0c910b85c8f9986b494eb3bd2071f126e1344",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
