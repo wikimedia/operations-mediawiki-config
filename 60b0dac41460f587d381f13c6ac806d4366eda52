@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "2e2fb78d_6f3a0dc2",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 20
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 32
+      },
+      "writtenOn": "2014-09-01T21:21:42Z",
+      "side": 1,
+      "message": "During earlier reviews I was encouraged to remove these lines because the extensions are listed in extension-list-wikitech.  I can\u0027t claim to understand how it should work, though -- what does extension-list actually do?",
+      "revId": "60b0dac41460f587d381f13c6ac806d4366eda52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e2fb78d_ef003d06",
         "filename": "wmf-config/wikitech.php",
         "patchSetId": 20
