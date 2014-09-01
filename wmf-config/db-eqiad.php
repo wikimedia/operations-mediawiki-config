@@ -113,6 +113,7 @@ $wgLBFactoryConf = array(
 		'db1003' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
 		'db1019' => 400, # 1.4TB  64GB
 		'db1027' => 400, # 1.4TB  64GB
+		'db1044' => 400, # 1.4TB  64GB
 	),
 	's4' => array(
 		'db1040' => 0,   # 1.4TB  64GB
@@ -392,6 +393,7 @@ $wgLBFactoryConf = array(
 	'db1041' => '10.64.16.30', #do not remove or comment out
 	'db1042' => '10.64.16.31', #do not remove or comment out
 	'db1043' => '10.64.16.32', #do not remove or comment out
+	'db1044' => '10.64.16.33', #do not remove or comment out
 	'db1045' => '10.64.16.34', #do not remove or comment out
 	'db1047' => '10.64.16.36', #do not remove or comment out
 	'db1049' => '10.64.16.144', #do not remove or comment out
