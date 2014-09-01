@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_ef003d06",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 20
+      },
+      "lineNbr": 153,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-09-01T20:43:49Z",
+      "side": 1,
+      "message": "\u003e var_dump( $wgCacheDirectory, $wgMainCacheType, $wgMessageCacheType, $wgSessionsInMemcached );\nstring(23) \"/tmp/mw-cache-1.24wmf18\"\nstring(14) \"memcached-pecl\"\nint(-1)\nbool(false)\n\n\nProbably wants updating to go with production (at a later date).\n\n$wgSessionsInMemcached is deprecated in favour of $wgSessionsInObjectCache etc",
+      "revId": "60b0dac41460f587d381f13c6ac806d4366eda52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
