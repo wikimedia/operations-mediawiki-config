@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_7833f1f3",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 22
+      },
+      "lineNbr": 2616,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-09-02T15:47:58Z",
+      "side": 1,
+      "message": "This won\u0027t work. The l10n update code does not run with wiki\u003dlabswiki. $wgExtensionEntryPointListFiles should be appended to unconditionally just like we do for wikidata.",
+      "revId": "99e4f23528e1f9952d85a2244d8db523ff9658d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
