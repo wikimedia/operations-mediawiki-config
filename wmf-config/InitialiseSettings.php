@@ -9611,6 +9611,7 @@ $wgConf->settings = array(
 
 'wmgUseScore' => array(
 	'default' => true,
+	'labswiki' => false,
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
@@ -10922,6 +10923,7 @@ $wgConf->settings = array(
 
 'wmgUseMwEmbedSupport' => array(
 	'default' => true,
+	'labswiki' => false,
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
@@ -10929,6 +10931,7 @@ $wgConf->settings = array(
 // NOTE: TMH *requires* MwEmbedSupport to function
 'wmgUseTimedMediaHandler' => array(
 	'default' => true,
+	'labswiki' => false,
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
@@ -12739,6 +12742,7 @@ $wgConf->settings = array(
 ),
 'wmgUseVips' => array(
 	'default' => true,
+	'labswiki' => false,
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
@@ -13036,6 +13040,7 @@ $wgConf->settings = array(
 ),
 'wmgEnableGeoSearch' => array(
 	'default' => true,
+	'labswiki' => false,
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
@@ -13542,6 +13547,7 @@ $wgConf->settings = array(
 	'default' => true,
 	'wikibooks' => false, # bug 66455
 	'wikisource' => false, # bug 66455
+	'labswiki' => false,
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
@@ -13569,6 +13575,7 @@ $wgConf->settings = array(
 
 'wmgUseSecurePoll' => array(
 	'default' => true,
+	'labswiki' => false,
 	'loginwiki' => false,
 ),
 
