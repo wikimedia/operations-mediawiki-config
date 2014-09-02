@@ -149,8 +149,8 @@ $smwgNamespacesWithSemanticLinks[NS_NOVA_RESOURCE] = true;
 require_once( "$IP/extensions/OATHAuth/OATHAuth.php" );
 require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
 
-$wgMainCacheType = CACHE_MEMCACHED;
-$wgMessageCacheType = CACHE_MEMCACHED;
+$wgMainCacheType = 'memcached-pecl';
+$wgMessageCacheType = 'memcached-pecl';
 
 $wgSessionsInObjectCache = true;
-$wgSessionCacheType = CACHE_MEMCACHED;
+$wgSessionCacheType = 'memcached-pecl';
