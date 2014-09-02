@@ -40,6 +40,7 @@ mwconfig_files_txt=(
 	session.php
 	session-labs.php
 	Wikibase.php
+	wikitech.php
 )
 
 # Create non-txt symlink from mediawiki-config
