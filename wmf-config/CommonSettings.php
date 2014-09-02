@@ -2613,9 +2613,6 @@ if ( $wmgUseUniversalLanguageSelector ) {
 // might be build as "aawikibooks" or something that does not have Wikibase.
 $wgExtensionEntryPointListFiles[] = "$IP/extensions/Wikidata/extension-list-wikidata";
 
-// Tell localization cache builder about extensions used in wikitech
-$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikitech";
-
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 	if ( $wmgUseWikibaseRepo && $wmfRealm === 'labs' ) {
 		// enable on beta only
@@ -2623,6 +2620,12 @@ if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 	}
 
 	include( "$wmfConfigDir/Wikibase.php" );
+}
+
+// Do not attempt to load SMW for l10n in beta.
+if ( $wmfRealm != 'labs' ) {
+	// Tell localization cache builder about extensions used in wikitech
+	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikitech";
 }
 
 if ( $wgDBname == 'labswiki' ) {
