@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_18ee2d20",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 23
+      },
+      "lineNbr": 2617,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2014-09-02T16:02:10Z",
+      "side": 1,
+      "message": "i would put this below the Wikibase section, so it\u0027s together (but outside the if block) with the wikitech block.\n\njust a matter of taste though and is ok, as-is.",
+      "revId": "e522a89c14f047e787ef6269ee127ed62b8d9c12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
