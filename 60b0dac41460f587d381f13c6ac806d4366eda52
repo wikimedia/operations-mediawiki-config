@@ -37,6 +37,23 @@
     },
     {
       "key": {
+        "uuid": "2e2fb78d_d548708e",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 20
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-09-02T15:19:21Z",
+      "side": 1,
+      "message": "This needs to be moved out of this file and into CommonSettings.php. See comment in CommonSettings for more detail.",
+      "revId": "60b0dac41460f587d381f13c6ac806d4366eda52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e2fb78d_ef003d06",
         "filename": "wmf-config/wikitech.php",
         "patchSetId": 20

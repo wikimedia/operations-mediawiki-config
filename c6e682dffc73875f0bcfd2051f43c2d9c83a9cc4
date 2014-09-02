@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_957b08bd",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 20
+      },
+      "lineNbr": 2617,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-09-02T15:19:21Z",
+      "side": 0,
+      "message": "Need to insert something like:\n\n// Tell localization cache builder about extensions used in wikitech\n$wgExtensionEntryPointListFiles[] \u003d \"$wmfConfigDir/extension-list-wikitech\";\n\nThis should be outside of the $wgDBname guarded block below as the l10n update scripts typically operate on aawiki or an arbitrary group0 wiki.",
+      "revId": "c6e682dffc73875f0bcfd2051f43c2d9c83a9cc4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
