@@ -365,8 +365,10 @@ $wgSessionCacheType = 'sessions';
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
 
-// Keep old MD5 password hashing as default (bug 68766)
-$wgPasswordDefault = 'B';
+// Use PBKDF2 for password hashing (bug 68766)
+$wgPasswordDefault = 'pbkdf2';
+// This needs to be increased as allowable by server performance
+$wgPasswordConfig['pbkdf2']['cost'] = '64000';
 
 # Not CLI, see http://bugs.php.net/bug.php?id=47540
 if ( PHP_SAPI != 'cli' ) {
