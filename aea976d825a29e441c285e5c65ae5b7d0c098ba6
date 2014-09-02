@@ -16,6 +16,24 @@
       "revId": "aea976d825a29e441c285e5c65ae5b7d0c098ba6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_554da0df",
+        "filename": "wmf-config/extension-list",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2014-09-02T14:41:36Z",
+      "side": 1,
+      "message": "since it\u0027s included in CommonSettings, then i think here is ok",
+      "parentUuid": "2e2fb78d_b53e0425",
+      "revId": "aea976d825a29e441c285e5c65ae5b7d0c098ba6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
