@@ -1,4 +1,5 @@
 $IP/extensions/BounceHandler/BounceHandler.php
+$IP/extensions/CiteThisPage/CiteThisPage.php
 $IP/extensions/GlobalCssJs/GlobalCssJs.php
 $IP/extensions/ContentTranslation/ContentTranslation.php
 $IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php
