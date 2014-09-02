@@ -13113,6 +13113,7 @@ $wgConf->settings = array(
 	'default' => 'extension1',
 	// The following wikis should be using extension1 db but started with
 	// the application main database, stick with the current setting
+	'labswiki' => false,
 	'mediawikiwiki' => false,
 	'metawiki' => false,
 	'officewiki' => false,
