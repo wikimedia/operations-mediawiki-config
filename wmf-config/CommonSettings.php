@@ -569,7 +569,14 @@ $wgExpensiveParserFunctionLimit = 500;
 
 if ( $wmgUseCite ) {
 	require( $IP . '/extensions/Cite/Cite.php' );
+}
+
+if ( $wmgUseCite && !$wmgUseCiteThisPage ) {
 	require( $IP . '/extensions/Cite/SpecialCite.php' );
+}
+
+if ( $wmgUseCiteThisPage ) {
+	require( $IP . '/extensions/CiteThisPage/CiteThisPage.php' );
 }
 
 if ( $wmgUseInputBox ) {
