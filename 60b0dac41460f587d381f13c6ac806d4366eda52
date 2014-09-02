@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e2fb78d_958548b4",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 20
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-09-02T15:09:02Z",
+      "side": 1,
+      "message": "The various extension-list files are used to setup $wgExtensionEntryPointListFiles which is walked by maintenance/mergeMessageFileList.php when generating the l10n cache files. See \u003chttps://github.com/wikimedia/operations-mediawiki-config/blob/master/wmf-config/CommonSettings.php#L2604-L2607\u003e as an example of a similar usecase. This would not alleviate the need for actually loading the extension entry points here.",
+      "parentUuid": "2e2fb78d_6f3a0dc2",
+      "revId": "60b0dac41460f587d381f13c6ac806d4366eda52",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e2fb78d_ef003d06",
         "filename": "wmf-config/wikitech.php",
         "patchSetId": 20
