@@ -152,4 +152,6 @@ require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
 $wgCacheDirectory = "$IP/cache";
 $wgMainCacheType = CACHE_MEMCACHED;
 $wgMessageCacheType = CACHE_MEMCACHED;
-$wgSessionsInMemcached = true;
+
+$wgSessionsInObjectCache = true;
+$wgSessionCacheType = CACHE_MEMCACHED;
