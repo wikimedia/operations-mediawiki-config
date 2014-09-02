@@ -3,6 +3,9 @@
 #          Do not put private data here.
 
 
+error_reporting( -1 );
+ini_set( 'display_errors', 1 );
+
 /* From Settings.php on old wikitech*/
 
 $wgEmailConfirmToEdit = true;
