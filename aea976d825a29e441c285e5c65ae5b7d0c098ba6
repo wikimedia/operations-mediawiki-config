@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_b53e0425",
+        "filename": "wmf-config/extension-list",
+        "patchSetId": 6
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2014-09-02T14:40:03Z",
+      "side": 1,
+      "message": "think this goes in extension-list-labs ?  not 100% sure",
+      "revId": "aea976d825a29e441c285e5c65ae5b7d0c098ba6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
