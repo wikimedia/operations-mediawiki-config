@@ -22,8 +22,8 @@ require_once( "$IP/extensions/SemanticForms/SemanticForms.php" );
 require_once( "$IP/extensions/SemanticResultFormats/SemanticResultFormats.php" );
 enableSemantics('wikitech');
 
-$wgAuth = new LdapAuthenticationPlugin();
 require_once( "$IP/extensions/LdapAuthentication/LdapAuthentication.php" );
+$wgAuth = new LdapAuthenticationPlugin();
 $wgLDAPDomainNames = array( 'labs');
 $wgLDAPServerNames = array( 'labs' => 'virt1000.wikimedia.org' );
 $wgLDAPSearchAttributes = array( 'labs' => 'cn');
