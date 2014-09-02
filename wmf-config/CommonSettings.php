@@ -1965,29 +1965,30 @@ if ( $wmgUseParsoid ) {
 if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
 
+	// Parsoid connection configuration
 	$wgVisualEditorParsoidURL = $wmgParsoidURL;
 	$wgVisualEditorParsoidPrefix = $wgParsoidWikiPrefix;
 	$wgVisualEditorParsoidProblemReportURL = 'http://parsoid.wmflabs.org/_bugs/';
+	if ( $wmgVisualEditorParsoidForwardCookies ) {
+		$wgVisualEditorParsoidForwardCookies = true;
+	}
 
+	// Namespace configuration
 	if ( !$wmgVisualEditorInContentNamespaces ) {
 		$wgVisualEditorNamespaces = array(); // Wipe out default set by VisualEditor.php
 	}
+
 	$wgVisualEditorNamespaces = array_merge( $wgVisualEditorNamespaces, $wmgVisualEditorNamespaces );
 
-	// VisualEditor namespace
-	// This used to be in the VisualEditor extension but was removed there
-	// We still need to be careful with double-defining NS_VISUALEDITOR though, for b/c
 	if ( $wmgUseVisualEditorNamespace ) {
-		if ( !defined( 'NS_VISUALEDITOR' ) ) {
-			define( 'NS_VISUALEDITOR', 2500 );
-		}
-		if ( !defined( 'NS_VISUALEDITOR_TALK' ) ) {
-			define( 'NS_VISUALEDITOR_TALK', 2501 );
-		}
+		define( 'NS_VISUALEDITOR', 2500 );
+		define( 'NS_VISUALEDITOR_TALK', 2501 );
 		$wgExtraNamespaces[NS_VISUALEDITOR] = 'VisualEditor';
 		$wgExtraNamespaces[NS_VISUALEDITOR_TALK] = 'VisualEditor_talk';
 		$wgVisualEditorNamespaces[] = NS_VISUALEDITOR;
 	}
+
+	// User access configuration
 	if ( $wmgVisualEditorDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
 		$wgHiddenPrefs[] = 'visualeditor-enable'; // Bug 48666
@@ -1995,16 +1996,12 @@ if ( $wmgUseVisualEditor ) {
 		// Only show the beta-disable preference if the wiki is in 'beta'.
 		$wgHiddenPrefs[] = 'visualeditor-betatempdisable';
 	}
-	if ( $wmgVisualEditorExperimental ) {
-		$wgDefaultUserOptions['visualeditor-enable-experimental'] = 1;
-	}
 	// Bug 50000 - to remove once roll-out is complete.
 	if ( $wmgVisualEditorDisableForAnons ) {
 		$wgVisualEditorDisableForAnons = true;
 	}
-	if ( $wmgVisualEditorShowBetaWelcome ) {
-		$wgVisualEditorShowBetaWelcome = true;
-	}
+
+	// Tab configuration
 	if ( $wmgVisualEditorSecondaryTabs ) {
 		$wgVisualEditorTabPosition = 'after';
 	}
@@ -2013,8 +2010,15 @@ if ( $wmgUseVisualEditor ) {
 			$wgVisualEditorTabMessages['createappendix'] =
 			$wgVisualEditorTabMessages['editsectionappendix'] = 'visualeditor-beta-appendix';
 	}
-	if ( $wmgVisualEditorParsoidForwardCookies ) {
-		$wgVisualEditorParsoidForwardCookies = true;
+
+	// Welcome configuration
+	if ( $wmgVisualEditorShowBetaWelcome ) {
+		$wgVisualEditorShowBetaWelcome = true;
+	}
+
+	// Experimental code configuration
+	if ( $wmgVisualEditorExperimental ) {
+		$wgDefaultUserOptions['visualeditor-enable-experimental'] = 1;
 	}
 	if ( $wmgVisualEditorEnableTocWidget ) {
 		$wgVisualEditorEnableTocWidget = true;
