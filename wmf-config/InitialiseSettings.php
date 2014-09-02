@@ -11922,7 +11922,7 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 'wmgMFEnableSiteNotice' => array(
-	'default' => true,
+	'default' => false,
 ),
 'wmgMFAppPackageId' => array(
 	'default' => false,
