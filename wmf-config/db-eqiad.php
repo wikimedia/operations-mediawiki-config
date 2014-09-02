@@ -153,9 +153,6 @@ $wgLBFactoryConf = array(
 		'db1034' => 400, # 1.4TB  64GB
 		'db1039' => 400, # 1.4TB  64GB
 	),
-	'virt1000' => array(
-		'virt1000' => 100,   # I have no idea if this is right
-	),
 ),
 
 'serverTemplate' => array(
