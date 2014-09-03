@@ -43,7 +43,7 @@ require_once( '/usr/local/apache/common-local/multiversion/activeMWVersions.php'
 </ul>
 
 <hr>
-<p>Currently active MediaWiki versions: <?php echo implode( ' ', getActiveWikiVersions() ); ?></p>
+<p>Currently active MediaWiki versions: <?php echo implode( ', ', getActiveWikiVersions() ); ?></p>
 <hr>
 
 <h2><img src="./images/document.png" alt=""> Apache configuration</h2>
