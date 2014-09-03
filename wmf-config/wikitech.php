@@ -18,6 +18,8 @@ $wgCaptchaTriggers['addurl']        = false;
 /* from Local.php on old Wikitech */
 $wgPasswordSenderName = "Wikitech Mail";
 
+$wgCookieDomain       = "virt1000.wikimedia.org";
+
 require_once( "$IP/extensions/Validator/Validator.php" );
 require_once( "$IP/extensions/SemanticMediaWiki/SemanticMediaWiki.php" );
 require_once( "$IP/extensions/SemanticForms/SemanticForms.php" );
