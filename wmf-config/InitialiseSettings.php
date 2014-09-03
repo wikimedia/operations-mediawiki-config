@@ -13900,11 +13900,6 @@ $wgConf->settings = array(
 	'foundationwiki' => true,
 ),
 
-'wmgUseClusterMemcache' => array(
-	'default'  => true,
-	'labswiki' => false,
-),
-
 'wmgUseClusterSession' => array(
 	'default'  => true,
 	'labswiki' => false,

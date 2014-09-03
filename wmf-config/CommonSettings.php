@@ -238,10 +238,7 @@ require( "$wmfConfigDir/PrivateSettings.php" );
 
 # Cluster-dependent files for database and memcached
 require( getRealmSpecificFilename( "$wmfConfigDir/db.php" ) );
-
-if ( $wmgUseClusterMemcache ) {
-	require( getRealmSpecificFilename( "$wmfConfigDir/mc.php" ) );
-}
+require( getRealmSpecificFilename( "$wmfConfigDir/mc.php" ) );
 
 ini_set( 'memory_limit', $wmgMemoryLimit );
 
