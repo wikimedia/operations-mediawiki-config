@@ -13730,13 +13730,9 @@ $wgConf->settings = array(
 ),
 
 'wmgUseCiteThisPage' => array(
-	'default' => false,
+	'default' => true,
 	'loginwiki' => false,
 	'votewiki' => false,
-
-	'mediawikiwiki' => true,
-	'testwiki' => true,
-	'test2wiki' => true,
 ),
 
 'wmgUsePoem' => array(
