@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_27d421ec",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 242,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-09-03T18:01:45Z",
+      "side": 1,
+      "message": "wmgUseClusterMemcache",
+      "revId": "f31f32b33b67e4390e234b64a944c18ff893baf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_c7fafd72",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-09-03T18:01:45Z",
+      "side": 1,
+      "message": "wmgUseClusterSession",
+      "revId": "f31f32b33b67e4390e234b64a944c18ff893baf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_a7fff161",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 460,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-09-03T18:01:45Z",
+      "side": 1,
+      "message": "wmgUseCluserSquid (or Varnish or HttpCache)",
+      "revId": "f31f32b33b67e4390e234b64a944c18ff893baf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_67f10992",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 864,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-09-03T18:01:45Z",
+      "side": 1,
+      "message": "wmgUseClusterFilebackend",
+      "revId": "f31f32b33b67e4390e234b64a944c18ff893baf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_47ee0db3",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 869,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-09-03T18:01:45Z",
+      "side": 1,
+      "message": "wmgUseClusterJobqueue",
+      "revId": "f31f32b33b67e4390e234b64a944c18ff893baf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_07300552",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 2098,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-09-03T18:01:45Z",
+      "side": 1,
+      "message": "if ( $wmgMobileFrontend ) {",
+      "revId": "f31f32b33b67e4390e234b64a944c18ff893baf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
