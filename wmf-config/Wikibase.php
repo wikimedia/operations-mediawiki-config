@@ -22,9 +22,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgExtraNamespaces[WB_NS_QUERY] = 'Query';
 	$wgExtraNamespaces[WB_NS_QUERY_TALK] = 'Query_talk';
 
-	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
-	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
-
 	// Assigning the correct content models to the namespaces
 	$wgWBRepoSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_ITEM] = NS_MAIN;
 	$wgWBRepoSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_PROPERTY] = WB_NS_PROPERTY;
@@ -81,6 +78,8 @@ if ( $wmgUseWikibaseRepo ) {
 	// Bug 51637 and 46953
 	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
 
+	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
+	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
 
 	$wgPropertySuggesterMinProbability = 0.071;
