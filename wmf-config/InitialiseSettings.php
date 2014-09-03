@@ -13915,7 +13915,7 @@ $wgConf->settings = array(
 	'labswiki' => false,
 ),
 
-'wmgUseClusterFilebackend' => array(
+'wmgUseClusterFileBackend' => array(
 	'default'  => true,
 	'labswiki' => false,
 ),
