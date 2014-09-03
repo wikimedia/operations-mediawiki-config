@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "2e2fb78d_474deddf",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-09-03T18:03:37Z",
+      "side": 1,
+      "message": "With $wgDefaultExternalStore set to false, I don\u0027t think db.php needs conditional inclusion.\n\nWithout it, there\u0027ll be no db settings at all...",
+      "revId": "f31f32b33b67e4390e234b64a944c18ff893baf5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e2fb78d_27d421ec",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 4
