@@ -83,6 +83,14 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
 
 	$wgPropertySuggesterMinProbability = 0.071;
+
+	// Bug 70346
+	$wgPropertySuggesterDeprecatedIds = array(
+		70, // (OBSOLETE) order
+		107, // (OBSOLETE) main type (GND)
+		143, // imported from
+		741, // (OBSOLETE) playing hand
+	);
 }
 
 if ( $wmgUseWikibaseClient ) {
