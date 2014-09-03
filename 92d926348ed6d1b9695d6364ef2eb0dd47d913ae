@@ -34,6 +34,24 @@
       "revId": "92d926348ed6d1b9695d6364ef2eb0dd47d913ae",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_9d59e203",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 13914,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-09-03T20:31:06Z",
+      "side": 1,
+      "message": "wmgMobileFrontend",
+      "parentUuid": "2e2fb78d_42a6fb51",
+      "revId": "92d926348ed6d1b9695d6364ef2eb0dd47d913ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
