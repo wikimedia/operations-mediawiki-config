@@ -1,1 +1,1 @@
-/usr/local/apache/common/w/mobilelanding.php
+../../../w/mobilelanding.php

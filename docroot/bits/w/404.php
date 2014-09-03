@@ -1,1 +1,1 @@
-/usr/local/apache/common/live-1.5/404.php
+../../../live-1.5/404.php

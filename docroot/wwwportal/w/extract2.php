@@ -1,1 +1,1 @@
-/usr/local/apache/common/extract2.php
+../../../extract2.php
