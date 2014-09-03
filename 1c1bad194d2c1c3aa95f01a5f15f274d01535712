@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_a7bdb1d3",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 239,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-09-03T17:47:28Z",
+      "side": 1,
+      "message": "I think I\u0027d rather see guards for each require like:\n\n  if ( $wmgUseClusterDb ) {\n    ...\n  }\n\n\nThen these guard flags would be added to InitialiseSettings.php with \"\u0027default\u0027 \u003d\u003e true\" and \"\u0027labswiki\u0027 \u003d\u003e false\" values.\n\nThis matches the existing pattern for PoolCounterSettings.php",
+      "revId": "1c1bad194d2c1c3aa95f01a5f15f274d01535712",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_a7e6d111",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2102,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-09-03T17:47:28Z",
+      "side": 1,
+      "message": "This one has a guard condition internally \"if ( $wmgMobileFrontend ) {\"",
+      "revId": "1c1bad194d2c1c3aa95f01a5f15f274d01535712",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
