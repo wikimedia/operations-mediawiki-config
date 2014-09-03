@@ -257,9 +257,9 @@ if ( $wgDBname == 'testwiki' ) {
 	$wgStyleSheetPath = "//{$wmfHostnames['test']}/w/static-$wmfVersionNumber/skins";
 	$wgResourceBasePath = "//{$wmfHostnames['test']}/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
 } elseif ( $wgDBname == 'labswiki' ) {
-        $wgExtensionAssetsPath = "//virt1000.wikimedia.org/w/static-$wmfVersionNumber/extensions";
-        $wgStyleSheetPath = "//virt1000.wikimedia.org/w/static-$wmfVersionNumber/skins";
-        $wgResourceBasePath = "//virt1000.wikimedia.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
+        $wgExtensionAssetsPath = "//wikitech.wikimedia.org/w/static-$wmfVersionNumber/extensions";
+        $wgStyleSheetPath = "//wikitech.wikimedia.org/w/static-$wmfVersionNumber/skins";
+        $wgResourceBasePath = "//wikitech.wikimedia.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
 } else {
 	$wgExtensionAssetsPath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber/extensions";
 	$wgStyleSheetPath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber/skins";
