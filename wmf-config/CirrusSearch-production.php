@@ -9,6 +9,10 @@ $wgCirrusSearchServers = array(
 	'10.2.2.30', # search.svc.eqiad.wmnet
 );
 
+if ( in_array( $wgDBname, array( 'wikidatawiki', 'testwikidatawiki', 'labswiki' ) ) ) {
+	$wgSearchTypeAlternatives = array();
+}
+
 $wgCirrusSearchConnectionAttempts = 3;
 
 $wgCirrusSearchBackup['backups'] = array(
