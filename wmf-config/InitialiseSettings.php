@@ -13707,9 +13707,20 @@ $wgConf->settings = array(
 ),
 
 'wmgCirrusSearchAllFields' => array(
-	'default' => array( 'build' => true, 'use' => true ),
-	# 'wiki' means wikipedias
-	'wiki' => array( 'build' => true, 'use' => false ),
+	'default' => array( 'build' => true, 'use' => false ),
+	'wikibooks' => array( 'build' => true, 'use' => true ),
+	'wikidata' => array( 'build' => true, 'use' => true ),
+	'wikinews' => array( 'build' => true, 'use' => true ),
+	'wikiquote' => array( 'build' => true, 'use' => true ),
+	'wikisource' => array( 'build' => true, 'use' => true ),
+	'wikiversity' => array( 'build' => true, 'use' => true ),
+	'wiktionary' => array( 'build' => true, 'use' => true ),
+	'wikivoyage' => array( 'build' => true, 'use' => true ),
+	'commonswiki' => array( 'build' => true, 'use' => true ),
+	'testwiki' => array( 'build' => true, 'use' => true ),
+	'test2wiki' => array( 'build' => true, 'use' => true ),
+	'testwikidatawiki' => array( 'build' => true, 'use' => true ),
+	'mediawikiwiki' => array( 'build' => true, 'use' => true ),
 ),
 
 'wmgUseCite' => array(
