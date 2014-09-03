@@ -13265,6 +13265,7 @@ $wgConf->settings = array(
 		'Talk:Search',
 		'Talk:Cite-from-id',
 		'Talk:Sparrow (sandbox for testing at Wikimania)',
+		'Talk:MediaWiki 1.25',
 	),
 	'enwiki' => array( // Bug 60178
 		'Wikipedia talk:WikiProject Breakfast',
