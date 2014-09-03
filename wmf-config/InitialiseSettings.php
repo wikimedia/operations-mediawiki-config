@@ -13733,6 +13733,10 @@ $wgConf->settings = array(
 	'default' => false,
 	'loginwiki' => false,
 	'votewiki' => false,
+
+	'mediawikiwiki' => true,
+	'testwiki' => true,
+	'test2wiki' => true,
 ),
 
 'wmgUsePoem' => array(
