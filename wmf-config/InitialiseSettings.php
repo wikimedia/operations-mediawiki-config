@@ -14046,7 +14046,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseCiteThisPage' => array(
-	'default' => false,
+	'default' => true,
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
