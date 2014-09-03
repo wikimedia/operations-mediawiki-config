@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_22f52f4d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 454,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-09-03T20:24:36Z",
+      "side": 0,
+      "message": "I\u0027d move these 2 lines (wgUseSquid and wgUseESI) into the guard below.",
+      "revId": "fb903726b31b7ab3c76a0b626f87ec7d3fc5f783",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

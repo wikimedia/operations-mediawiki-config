@@ -16,6 +16,24 @@
       "revId": "92d926348ed6d1b9695d6364ef2eb0dd47d913ae",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_42a6fb51",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 13914,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-09-03T20:24:36Z",
+      "side": 1,
+      "message": "Yup. Line 11826 in my checkout.",
+      "parentUuid": "2e2fb78d_8271830d",
+      "revId": "92d926348ed6d1b9695d6364ef2eb0dd47d913ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
