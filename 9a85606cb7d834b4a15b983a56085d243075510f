@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_3d68ae83",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 2101,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-09-03T20:31:16Z",
+      "side": 1,
+      "message": "if not needed as the config is already wrapped inside mobile(-labs)?.php",
+      "revId": "9a85606cb7d834b4a15b983a56085d243075510f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
