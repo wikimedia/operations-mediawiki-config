@@ -10767,6 +10767,7 @@ $wgConf->settings = array(
 	'default' => true, # Enabled on all PUBLIC wikis
 	'closed' => false,
 	'private' => false,
+	'labswiki' => false,
 ),
 
 'wgDisabledVariants' => array(
