@@ -7,7 +7,7 @@ error_reporting( -1 );
 ini_set( 'display_errors', 1 );
 $wgShowExceptionDetails = true;
 
-/* From Settings.php on old wikitech*/
+/* From Settings.php on old wikitech */
 
 $wgEmailConfirmToEdit = true;
 $wgUseTeX = false;
@@ -17,8 +17,6 @@ $wgCaptchaTriggers['addurl']        = false;
 
 /* from Local.php on old Wikitech */
 $wgPasswordSenderName = "Wikitech Mail";
-
-$wgCookieDomain       = "virt1000.wikimedia.org";
 
 require_once( "$IP/extensions/Validator/Validator.php" );
 require_once( "$IP/extensions/SemanticMediaWiki/SemanticMediaWiki.php" );

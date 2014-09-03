@@ -142,7 +142,6 @@ class MWMultiVersion {
 			'www.wikidata.org' => 'wikidata',
 			'wikisource.org' => 'sources',
 			'wikitech.wikimedia.org' => 'labs',
-			'virt1000.wikimedia.org' => 'labs' // Temporary for wikitech migration to multiversion
 		);
 
 		$site = "wikipedia";
