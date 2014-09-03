@@ -13708,8 +13708,6 @@ $wgConf->settings = array(
 
 'wmgCirrusSearchAllFields' => array(
 	'default' => array( 'build' => true, 'use' => true ),
-	# 'wiki' means wikipedias
-	'wiki' => array( 'build' => true, 'use' => false ),
 ),
 
 'wmgUseCite' => array(
