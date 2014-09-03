@@ -1,1 +1,1 @@
-/usr/local/apache/common/w/404.php
+../../../../common/w/404.php

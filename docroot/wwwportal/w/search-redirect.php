@@ -1,1 +1,1 @@
-/usr/local/apache/common/search-redirect.php
+../../../../common/search-redirect.php
