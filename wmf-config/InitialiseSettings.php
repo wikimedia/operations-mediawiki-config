@@ -11853,6 +11853,12 @@ $wgConf->settings = array(
 	'zerowiki' => true,
 ),
 
+'wmgUseGraph' => array(
+	'default' => false,
+	'collabwiki' => true,
+	'zerowiki' => true,
+),
+
 'wmgUseSubPageList3' => array(
 	'default' => false,
 	'testwiki' => true,

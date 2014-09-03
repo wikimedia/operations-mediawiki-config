@@ -2685,6 +2685,40 @@ if ( $wmgZeroPortal ) {
 	$wgGroupPermissions['zeroscriptips']['jsonconfig-flush'] = true;
 }
 
+if ( $wmgUseGraph ) {
+	require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
+	require_once( "$IP/extensions/Graph/Graph.php" );
+	$wgEnableGraphParserTag = true;
+	$wgGraphDataDomains = array(
+			'mediawiki.org',
+			'wikibooks.org',
+			'wikidata.org',
+			'wikimedia.org',
+			'wikimediafoundation.org',
+			'wikinews.org',
+			'wikipedia.org',
+			'wikiquote.org',
+			'wikisource.org',
+			'wikiversity.org',
+			'wikivoyage.org',
+			'wiktionary.org',
+		);
+	$wgJsonConfigModels['Graph.JsonConfig'] = 'graph\Content';
+	$wgJsonConfigs['Graph.JsonConfig'] = array(
+			'namespace' => 484,
+			'nsName' => 'Graph',
+			'isLocal' => true,
+		);
+	$wgJsonConfigModels['Json.JsonConfig'] = null;
+	$wgJsonConfigs['Json.JsonConfig'] = array(
+			'namespace' => 486,
+			'nsName' => 'Data',
+			'isLocal' => true,
+			'name' => 'Json',
+			'isSubspace' => true,
+		);
+}
+
 
 if ( $wmgUseAccountAudit ) {
 	require_once( "$IP/extensions/AccountAudit/AccountAudit.php" );
