@@ -3920,6 +3920,7 @@ $wgConf->settings = array(
 	'foundationwiki' => true,
 	'internalwiki' => true,
 	'collabwiki' => true, // bug 29269
+	'zerowiki' => true,
 ),
 
 # wgWhitelistRead @{
