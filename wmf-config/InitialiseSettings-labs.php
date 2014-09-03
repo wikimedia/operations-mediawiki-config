@@ -383,10 +383,6 @@ return array(
 		'zhwiki' => true,
 	),
 
-	'wmgUseCiteThisPage' => array(
-		'default' => true,
-	),
-
 	'wmgUseFlow' => array(
 		'enwiki' => true,
 		'en_rtlwiki' => true,
