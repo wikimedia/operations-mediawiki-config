@@ -13785,6 +13785,12 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
+'wmgUseGlobalBlocking' => array(
+	'default' => true,
+	'labswiki' => false,
+	'private' => false,
+),
+
 ### End (roughly) of general extensions ########################
 
 // Apply blocks to IPs in XFF (bug 23343)

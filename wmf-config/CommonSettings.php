@@ -810,10 +810,12 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 	);
 }
 
-include( $IP . '/extensions/GlobalBlocking/GlobalBlocking.php' );
-$wgGlobalBlockingDatabase = 'centralauth';
-$wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
-$wgGlobalBlockingBlockXFF = $wmgUseXFFBlocks;
+if ( $wmgUseGlobalBlocking ) {
+	include( $IP . '/extensions/GlobalBlocking/GlobalBlocking.php' );
+	$wgGlobalBlockingDatabase = 'centralauth';
+	$wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
+	$wgGlobalBlockingBlockXFF = $wmgUseXFFBlocks;
+}
 
 include( $IP . '/extensions/TrustedXFF/TrustedXFF.php' );
 if ( file_exists( "$wmfConfigDir/trusted-xff.cdb" ) ) {
