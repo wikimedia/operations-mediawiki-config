@@ -1888,7 +1888,9 @@ if ( $wmgUseGWToolset ) {
 	require_once( "$IP/extensions/GWToolset/GWToolset.php" );
 	$wgGWTFileBackend = 'local-multiwrite';
 	$wgGWTFBMaxAge = '1 week';
-	$wgJobTypeConf['gwtoolsetUploadMetadataJob'] = array( 'checkDelay' => true ) + $wgJobTypeConf['default'];
+	if ( $wmgUseClusterJobqueue ) {
+		$wgJobTypeConf['gwtoolsetUploadMetadataJob'] = array( 'checkDelay' => true ) + $wgJobTypeConf['default'];
+	}
 	// extra throttling until the image scalers are more robust
 	GWToolset\Config::$mediafile_job_throttle_default = 5; // 5 files per batch
 	$wgJobBackoffThrottling['gwtoolsetUploadMetadataJob'] = 5 / 3600; // 5 batches per hour

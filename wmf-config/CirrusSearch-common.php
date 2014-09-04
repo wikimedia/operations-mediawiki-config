@@ -27,11 +27,13 @@ if ( $wmgUseCirrus ) {
 # the index.
 $wgCirrusSearchReplicaCount = array( 'content' => 2, 'general' => 2 );
 
-# The secondary update job has a delay of a few seconds to make sure that Elasticsearch
-# has completed a refresh cycle between when the data that the job needs is added and
-# when the job is run.
-$wgJobTypeConf['cirrusSearchLinksUpdateSecondary'] = array( 'checkDelay' => true ) +
-	$wgJobTypeConf['default'];
+if ( $wmgUseClusterJobqueue ) {
+	# The secondary update job has a delay of a few seconds to make sure that Elasticsearch
+	# has completed a refresh cycle between when the data that the job needs is added and
+	# when the job is run.
+	$wgJobTypeConf['cirrusSearchLinksUpdateSecondary'] = array( 'checkDelay' => true ) +
+		$wgJobTypeConf['default'];
+}
 
 # Turn off the more accurate but slower search mode.  It is most helpful when you
 # have many small shards.  We don't do that in production and we could use the speed.
