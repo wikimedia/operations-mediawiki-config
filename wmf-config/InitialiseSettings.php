@@ -1826,6 +1826,7 @@ $wgConf->settings = array(
 	'default' => '//upload.wikimedia.org/$site/$lang',
 	'private' => '/w/img_auth.php',
 	'commonswiki' => '//upload.wikimedia.org/wikipedia/commons',
+	'labswiki' => '//wikitech.wikimedia.org/w/images',
 	'metawiki' => '//upload.wikimedia.org/wikipedia/meta',
 	'testwiki' => '//upload.wikimedia.org/wikipedia/test',
 ),
