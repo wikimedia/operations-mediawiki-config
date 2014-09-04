@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e2fb78d_ed76eed4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13194,
+      "author": {
+        "id": 1446
+      },
+      "writtenOn": "2014-09-04T21:19:28Z",
+      "side": 1,
+      "message": "this is a duplicate of the line below (it should only be on enwiki)",
+      "parentUuid": "2e2fb78d_cdac5235",
+      "revId": "4d305232ba76129dde2437ea4358c5dbd74ab59b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e2fb78d_4d6862f2",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
