@@ -257,9 +257,9 @@ if ( $wgDBname == 'testwiki' ) {
 	$wgStyleSheetPath = "//{$wmfHostnames['test']}/w/static-$wmfVersionNumber/skins";
 	$wgResourceBasePath = "//{$wmfHostnames['test']}/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
 } elseif ( $wgDBname == 'labswiki' ) {
-        $wgExtensionAssetsPath = "//wikitech.wikimedia.org/w/static-$wmfVersionNumber/extensions";
-        $wgStyleSheetPath = "//wikitech.wikimedia.org/w/static-$wmfVersionNumber/skins";
-        $wgResourceBasePath = "//wikitech.wikimedia.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
+	$wgExtensionAssetsPath = "//wikitech.wikimedia.org/w/static-$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "//wikitech.wikimedia.org/w/static-$wmfVersionNumber/skins";
+	$wgResourceBasePath = "//wikitech.wikimedia.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
 } else {
 	$wgExtensionAssetsPath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber/extensions";
 	$wgStyleSheetPath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber/skins";
@@ -2395,7 +2395,9 @@ if ( $wmgUseEcho ) {
 		),
 	);
 
-	$wgJobTypeConf['MWEchoNotificationEmailBundleJob'] = array( 'checkDelay' => true ) + $wgJobTypeConf['default'];
+	if ( $wmgUseClusterJobqueue ) {
+		$wgJobTypeConf['MWEchoNotificationEmailBundleJob'] = array( 'checkDelay' => true ) + $wgJobTypeConf['default'];
+	}
 
 	// Eventlogging for Schema:Echo
 	$wgEchoConfig['eventlogging']['Echo']['enabled'] = true;
