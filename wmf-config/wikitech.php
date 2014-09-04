@@ -158,6 +158,9 @@ $wgSessionCacheType = 'memcached-pecl';
 // No cluster for us!
 $wgDefaultExternalStore = false;
 
+// Don't use checkDelay on jobs without having a redis job queue
+$wgJobTypeConf['MWEchoNotificationEmailBundleJob'] = $wgJobTypeConf['default'];
+
 require_once( '/usr/local/apache/common/private/WikitechPrivateLdapSettings.php' );
 
 #$wgPasswordReminderResendTime = 0;
