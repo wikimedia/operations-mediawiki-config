@@ -171,7 +171,7 @@ class MWMultiVersion {
 				|| ( $matches[2] === 'wikimedia' && in_array(
 					$lang,
 					array(
-						'ar', 'bd', 'be', 'br', 'co', 'dk', 'et', 'fi', 'il', 'mk', 'mx', 'nl', 'noboard-chapters',
+						'ar', 'bd', 'be', 'br', 'ca', 'co', 'dk', 'et', 'fi', 'il', 'mk', 'mx', 'nl', 'noboard-chapters',
 						'no', 'nyc', 'nz', 'pa-us', 'pl', 'rs', 'ru', 'se', 'tr', 'ua', 'uk', 've'
 					)
 			) ) ) {

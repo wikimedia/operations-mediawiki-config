@@ -100,6 +100,7 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 			array( 'bdwikimedia', 'bd.wikimedia.org' ),
 			array( 'bewikimedia', 'be.wikimedia.org' ),
 			array( 'brwikimedia', 'br.wikimedia.org' ),
+			array( 'cawikimedia', 'ca.wikimedia.org' ),
 			array( 'cowikimedia', 'co.wikimedia.org' ),
 			array( 'dkwikimedia', 'dk.wikimedia.org' ),
 			array( 'etwikimedia', 'et.wikimedia.org' ),
