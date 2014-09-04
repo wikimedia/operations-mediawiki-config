@@ -13203,6 +13203,15 @@ $wgConf->settings = array(
 		'Wikipedia talk:WikiProject Breakfast',
 		'Wikipedia talk:WikiProject Hampshire',
 		'Wikipedia talk:Flow/Developer test page',
+		'Wikipedia:Co-op/Mentorship match',
+		'Wikipedia:Teahouse/Questions/Flow test',
+	),
+	'frwiki' => array(
+		'Wikipédia:Forum des nouveaux/Flow',
+		'Discussion Wikipédia:Flow',
+	),
+	'hewiki' => array(
+		'שיחת ויקיפדיה:זרימה',
 	),
 ),
 // Use separate database on extension1 cluster for all non-private wikis.
