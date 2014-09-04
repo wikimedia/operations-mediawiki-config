@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_275f7c79",
+        "filename": "multiversion/MWMultiVersion.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-09-04T01:05:26Z",
+      "side": 1,
+      "message": "You added an extra comma",
+      "revId": "d8c79df8c14014b1984bb8bf4442b40b78550db1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
