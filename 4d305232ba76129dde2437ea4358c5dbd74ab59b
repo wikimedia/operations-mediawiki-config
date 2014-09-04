@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_cdac5235",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13194,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2014-09-04T21:15:58Z",
+      "side": 1,
+      "message": "these values dont get normalized, so it needs to be a space rather than _",
+      "revId": "4d305232ba76129dde2437ea4358c5dbd74ab59b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
