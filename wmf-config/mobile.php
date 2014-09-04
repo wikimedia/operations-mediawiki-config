@@ -10,6 +10,7 @@ if ( $wmgMobileFrontend ) {
 	$wgMFNearby = $wmgMFNearby && $wmgEnableGeoData;
 	$wgMFPhotoUploadEndpoint = $wmgMFPhotoUploadEndpoint;
 	$wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
+	$wgMFEnableWikiGrok = $wmgMFEnableWikiGrok;
 	$wgMFPhotoUploadWiki = $wmgMFPhotoUploadWiki;
 	$wgMFContentNamespace = $wmgMFContentNamespace;
 	// FIXME: Remove in a week when cache has cleared

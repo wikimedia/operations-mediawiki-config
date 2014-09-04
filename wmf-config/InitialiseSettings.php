@@ -11972,6 +11972,10 @@ $wgConf->settings = array(
 	'default' => 10,
 	'commonswiki' => 75, // https://bugzilla.wikimedia.org/show_bug.cgi?id=62598
 ),
+'wmgMFEnableWikiGrok' => array(
+	'default' => false,
+	'enwiki' => true, // prototype version is for en.wiki only
+),
 
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
