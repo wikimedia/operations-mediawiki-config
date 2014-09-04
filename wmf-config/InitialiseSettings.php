@@ -1826,6 +1826,7 @@ $wgConf->settings = array(
 	'default' => '//upload.wikimedia.org/$site/$lang',
 	'private' => '/w/img_auth.php',
 	'commonswiki' => '//upload.wikimedia.org/wikipedia/commons',
+	'labswiki' => '//wikitech.wikimedia.org/w/images',
 	'metawiki' => '//upload.wikimedia.org/wikipedia/meta',
 	'testwiki' => '//upload.wikimedia.org/wikipedia/test',
 ),
@@ -1840,7 +1841,7 @@ $wgConf->settings = array(
 	 'execwiki' => '/mnt/upload7/private/execwiki',
 	 'transitionteamwiki' => '/mnt/upload7/private/transitionteamwiki',
 	 'iegcomwiki' => '/mnt/upload7/private/iegcomwiki',
-	 'labswiki' => '/srv/org/wikimedia/controller/wikis/images',
+	 'labswiki' => '/usr/local/apache/images',
 ),
 
 'wgImgAuthUrlPathMap' => array(
