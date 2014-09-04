@@ -13168,6 +13168,8 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 	'metawiki' => true,
 	'enwiki' => true,
+	'frwiki' => true,
+	'hewiki' => true,
 ),
 'wmgFlowEditorList' => array(
 	// Disable VE inside flow, leaving only the wikitext editor
