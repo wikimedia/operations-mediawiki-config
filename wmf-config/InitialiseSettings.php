@@ -10959,6 +10959,7 @@ $wgConf->settings = array(
 'wmgUseBetaFeatures' => array(
 	'default' => true,
 	'nonbetafeatures' => false,
+	'labswiki' => false,
 ),
 
 // Whitelist enablement of individual Beta Features for production; per-wiki
@@ -10981,6 +10982,7 @@ $wgConf->settings = array(
 'wmgUseCommonsMetadata' => array(
 	'default' => true,
 	'nonbetafeatures' => false,
+	'labswiki' => false,
 ),
 
 // NOTE: Extension:Popups has a hard dependency on TextExtracts and PageImages.
@@ -11510,6 +11512,7 @@ $wgConf->settings = array(
 
 'wmgUseTemplateData' => array(
 	'default' => true,
+	'labswiki' => false,
 ),
 
 'wmgTemplateDataUseGUI' => array(
@@ -11789,6 +11792,7 @@ $wgConf->settings = array(
 'wmgUseMath' => array(
 	'default' => true, // moved from MW core
 	'loginwiki' => false,
+	'labswiki' => false,
 ),
 
 'wmgUseMarkAsHelpful' => array(
@@ -11825,6 +11829,7 @@ $wgConf->settings = array(
 ),
 'wmgUseMobileApp' => array(
 	'default' => true,
+	'labswiki' => false,
 ),
 'wmgMobileFrontend' => array(
 	'default' => true,
@@ -12781,6 +12786,7 @@ $wgConf->settings = array(
 	'default' => true,
 	'loginwiki' => false,
 	'votewiki' => false,
+	'labswiki' => false,
 ),
 'wmgFeaturedFeedsDefaults' => array(
 	'default' => array(
@@ -13324,6 +13330,7 @@ $wgConf->settings = array(
 
 'wmgUseNavigationTiming' => array(
 	'default' => true,
+	'labswiki' => false,
 ),
 
 'wmgRelatedSitesPrefixes' => array(
@@ -13572,6 +13579,7 @@ $wgConf->settings = array(
 'wmgUseTorBlock' => array(
 	'default' => true,
 	'private' => false,
+	'labswiki' => false,
 ),
 
 'wmgUseSearchExtraNS' => array(
@@ -13605,6 +13613,7 @@ $wgConf->settings = array(
 
 'wmgUseCampaigns' => array(
 	'default' => true,
+	'labswiki' => false,
 ),
 
 'wmgUseCirrus' => array(
@@ -13748,6 +13757,7 @@ $wgConf->settings = array(
 	'default' => true,
 	'loginwiki' => false,
 	'votewiki' => false,
+	'labswiki' => false,
 ),
 
 'wmgUseUnicodeConverter' => array(
@@ -13805,6 +13815,7 @@ $wgConf->settings = array(
 
 'wmgUseAccountAudit' => array(
 	'default' => true,
+	'labswiki' => false,
 ),
 
 'wgAllowUserJs' => array(
