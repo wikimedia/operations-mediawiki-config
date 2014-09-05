@@ -2173,8 +2173,7 @@ if ( $wmgUseMath ) {
 	$wgMathDirectory   = '/mnt/upload7/math'; // just for sanity
 	$wgMathPath        = $wmgMathPath;
 	$wgUseMathJax      = true;
-	$wgMathDisableTexFilter = true; // severe performance regression; --Aaron
-	// This variable points to non-WMF servers by default.
+	// This variable point to non-WMF servers by default.
 	// Prevent accidental use.
 	$wgMathLaTeXMLUrl = null;
 	$wgMathMathMLUrl = "http://mathoid.svc.eqiad.wmnet:10042";
