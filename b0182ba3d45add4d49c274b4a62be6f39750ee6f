@@ -16,6 +16,24 @@
       "revId": "b0182ba3d45add4d49c274b4a62be6f39750ee6f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_2c72af10",
+        "filename": "small.dblist",
+        "patchSetId": 2
+      },
+      "lineNbr": 525,
+      "author": {
+        "id": 15
+      },
+      "writtenOn": "2014-09-05T22:58:25Z",
+      "side": 1,
+      "message": "actually not whitespace, that would be marked red by gerrit. i think it\u0027s an EOL instead, one that vim (my editor) adds on purpose, and probably rightfully.\n\nsee http://stackoverflow.com/questions/1050640/vim-disable-automatic-newline-at-end-of-file\n\nquote from there: \" How do we tell all of the other editors that people in your shop are using to ensure the last line of the file does end with an EOL.\"",
+      "parentUuid": "2e2fb78d_8c90834f",
+      "revId": "b0182ba3d45add4d49c274b4a62be6f39750ee6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
