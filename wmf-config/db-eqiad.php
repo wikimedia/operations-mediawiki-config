@@ -455,7 +455,7 @@ $wgLBFactoryConf = array(
 	'cluster24' => array(
 		'10.64.16.153' => 1, # es1005
 		'10.64.16.154' => 3, # es1006
-		'10.64.32.17' => 1, # es1007 snapshot host
+		# cloning '10.64.32.17' => 1, # es1007 snapshot host
 	),
 	# es3
 	'cluster25' => array(
