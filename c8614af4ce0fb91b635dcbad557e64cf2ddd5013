@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_ef3ffed1",
+        "filename": "docroot/bits/static-master/extensions",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-09-05T17:49:51Z",
+      "side": 0,
+      "message": "I really suck at spelling",
+      "revId": "c8614af4ce0fb91b635dcbad557e64cf2ddd5013",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
