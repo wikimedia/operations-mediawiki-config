@@ -13735,6 +13735,15 @@ $wgConf->settings = array(
 	'zhwikisource' => array( 'content' => 3, 'general' => 1 ),
 ),
 
+'wmgCirrusSearchMaxShardsPerNode' => array(
+	'default' => array(),
+	'dewiki' => array( 'content' => 1 ),
+	'enwiki' => array( 'content' => 1 ),
+	'eswiki' => array( 'content' => 1 ),
+	'frwiki' => array( 'content' => 1 ),
+	'zhwiki' => array( 'content' => 1 ),
+),
+
 'wmgCirrusSearchAllFields' => array(
 	'default' => array( 'build' => true, 'use' => false ),
 	'wikibooks' => array( 'build' => true, 'use' => true ),
