@@ -17,3 +17,4 @@ if ( $wmgMobileFrontend ) {
 
 $wgMFForceSecureLogin = false;
 $wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
+$wgMFEnableWikiGrok = $wmgMFEnableWikiGrok;
