@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_8c90834f",
+        "filename": "small.dblist",
+        "patchSetId": 2
+      },
+      "lineNbr": 525,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-09-05T22:29:30Z",
+      "side": 1,
+      "message": "Extra whitespace",
+      "revId": "b0182ba3d45add4d49c274b4a62be6f39750ee6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
