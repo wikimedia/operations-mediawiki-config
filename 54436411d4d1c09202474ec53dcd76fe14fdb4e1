@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_8f8870ed",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2481,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2014-09-07T18:35:50Z",
+      "side": 1,
+      "message": "There ought to be a cleaner way to check whether we\u0027re running a job or serving a web request. I copied this one from change I8208f5c88.",
+      "revId": "54436411d4d1c09202474ec53dcd76fe14fdb4e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
