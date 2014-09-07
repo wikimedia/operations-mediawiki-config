@@ -2478,6 +2478,12 @@ if ( $wmgUseScribunto ) {
 
 	$wgScribuntoDefaultEngine = 'luasandbox';
 	$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
+	if ( strpos( $_SERVER['REQUEST_URI'], '/rpc/RunJobs.php' ) !== false ) {
+		// Make limit less strict on the job runners, to offset the increased
+		// load on these machines. -- Ori 7-Sept-2014
+		$wgScribuntoEngineConf['luasandbox']['cpuLimit'] *= 2;
+	}
+
 
 	if ( defined( 'HHVM_VERSION' ) ) {
 		// Disable Luasandbox's profiling feature to isolate bug 68413
