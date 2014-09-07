@@ -9230,7 +9230,7 @@ $wgConf->settings = array(
 	'default' => '/usr/bin',
 ),
 'wgSVGMaxSize' => array(
-	'default' => 2048, // 1024's a bit low?
+	'default' => 4096, // 1024's a bit low?
 ),
 # @} end of SVG related
 
