@@ -23,10 +23,6 @@ if ( $wmgUseCirrus ) {
 	$wgCirrusSearchEnablePref = true;
 }
 
-# Two replicas let use lose two any two machines before we lose any portion of
-# the index.
-$wgCirrusSearchReplicaCount = array( 'content' => 2, 'general' => 2 );
-
 if ( $wmgUseClusterJobqueue ) {
 	# The secondary update job has a delay of a few seconds to make sure that Elasticsearch
 	# has completed a refresh cycle between when the data that the job needs is added and
@@ -55,6 +51,7 @@ $wgCirrusSearchOptimizeIndexForExperimentalHighlighter = true;
 
 # Settings customized per index.
 $wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
+$wgCirrusSearchMaxShardsPerNode = $wmgCirrusSearchMaxShardsPerNode;
 $wgCirrusSearchPreferRecentDefaultDecayPortion = $wmgCirrusSearchPreferRecentDefaultDecayPortion;
 $wgCirrusSearchBoostLinks = $wmgCirrusSearchBoostLinks;
 $wgCirrusSearchWeights = array_merge( $wgCirrusSearchWeights, $wmgCirrusSearchWeightsOverrides );
