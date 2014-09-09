@@ -13219,7 +13219,6 @@ $wgConf->settings = array(
 		'Wikipedia talk:WikiProject Hampshire',
 		'Wikipedia talk:Flow/Developer test page',
 		'Wikipedia:Co-op/Mentorship match',
-		'Wikipedia:Teahouse/Questions/Flow test',
 	),
 	'frwiki' => array(
 		'Wikipédia:Forum des nouveaux/Flow',
