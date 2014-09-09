@@ -117,6 +117,7 @@ $wgConf->settings = array(
 	'sewikimedia' => 'sv',
 	'uawikimedia' => 'uk',
 	'ukwikimedia' => 'en-gb',
+	'vewikimedia' => 'es',
 
 	# Special wikis
 	'special' => 'en', # default - overridden below by some wikis
@@ -1011,7 +1012,7 @@ $wgConf->settings = array(
 	'trwikimedia' => '$stdlogo',
 	'uawikimedia' => '//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Wikimedia-UA-logo.svg/135px-Wikimedia-UA-logo.svg.png',
 	'ukwikimedia' => '$stdlogo',
-	'vewikimedia' => '$stdlogo',
+	'vewikimedia' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Wikimedia_Venezuela_logo.svg/135px-Wikimedia_Venezuela_logo.svg.png',
 
 	// Special wikis
 	'advisorywiki' => '//upload.wikimedia.org/wikipedia/meta/7/7d/Wikimediaboard-logo135px.png',
@@ -4323,6 +4324,12 @@ $wgConf->settings = array(
 	'usabilitywiki' => array(
 		100 => 'Multimedia',
 		101 => 'Multimedia_talk',
+	),
+	'vewikimedia' => array(
+		100 => 'WLM',
+		101 => 'WML_discusión',
+		102 => 'Wikiviajes',
+		103 => 'Wikiviajes_discusión',
 	),
 	# @} end of special wikis
 
@@ -8846,6 +8853,9 @@ $wgConf->settings = array(
 	),
 	'+vecwiki' => array(
 		'sysop' => array( 'flood' ),
+	),
+	'+vewikimedia' => array(
+		'bureaucrat' => array( 'sysop', 'bureaucrat' ),
 	),
 	'+wikidata' => array(
 		'sysop' => array(
