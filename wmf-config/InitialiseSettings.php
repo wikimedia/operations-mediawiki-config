@@ -7102,10 +7102,10 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 	),
 	'hewiki' => array(
-		'user' => array( 'move' => false, 'upload' => true, ),
+		'user' => array( 'move' => false, 'upload' => true, 'move-rootuserpages' => false, ),
 		'sysop' => array( 'deleterevision' => true, 'abusefilter-modify-restricted' => true, ),
-		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'unwatchedpages' => true, 'rollback' => true, ),
-		'autopatrolled' => array( 'autopatrol' => true ),
+		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'unwatchedpages' => true, 'rollback' => true, 'move-rootuserpages' => true,),
+		'autopatrolled' => array( 'autopatrol' => true, 'unwatchedpages' => true, ),
 		'editinterface' => array( 'abusefilter-hidden-log' => true, 'abusefilter-hide-log' => true, 'abusefilter-log' => true, 'abusefilter-log-detail' => true,
 			'abusefilter-modify'  => true, 'abusefilter-modify-restricted' => true, 'abusefilter-revert' => true, 'abusefilter-view' => true,
 			'abusefilter-view-private' => true, 'editinterface' => true, 'editusercssjs' => true, 'import' => true, 'tboverride' => true
