@@ -1,4 +1,4 @@
 <?php
 
-require_once( '/usr/local/apache/common-local/multiversion/activeMWVersions.php' );
+require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
 echo implode( ' ', getActiveWikiVersions() ) . "\n";

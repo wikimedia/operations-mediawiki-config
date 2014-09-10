@@ -16,7 +16,7 @@ if ( isset( $_REQUEST['forceprofile'] ) ) {
 # Normal case: randomly (or not) selected for logged profiling sample
 } elseif ( PHP_SAPI !== 'cli' && $wmfDatacenter == 'eqiad' && ( mt_rand() % 50 ) == 0 ) {
 	$wgProfiler['class'] = 'ProfilerSimpleUDP';
-	// $IP is something like '/usr/local/apache/common-local/php-1.19'
+	// $IP is something like '/srv/mediawiki/php-1.19'
 	$version = str_replace( 'php-', '', basename( $IP ) );
 	if ( strpos( $_SERVER['REQUEST_URI'], '/w/thumb.php' ) !== false ) {
 		$wgProfiler['profileID'] = "thumb-$version";
