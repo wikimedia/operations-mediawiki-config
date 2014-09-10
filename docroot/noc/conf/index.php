@@ -1,5 +1,5 @@
 <?php
-require_once( '/usr/local/apache/common-local/multiversion/activeMWVersions.php' );
+require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
 
 	function outputFiles( $viewFilenames, $highlight = true ) {
 		$viewFilenames = array_map( 'basename', $viewFilenames );

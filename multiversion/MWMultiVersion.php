@@ -311,7 +311,7 @@ class MWMultiVersion {
 
 	/**
 	 * Check if this wiki is *not* specified in a cdb file
-	 * located at /usr/local/apache/common-local/wikiversions.cdb.
+	 * located at /srv/mediawiki/wikiversions.cdb.
 	 * @return bool
 	 */
 	public function isMissing() {
@@ -321,7 +321,7 @@ class MWMultiVersion {
 
 	/**
 	 * Get the version as specified in a cdb file located
-	 * at /usr/local/apache/common-local/wikiversions.cdb.
+	 * at /srv/mediawiki/wikiversions.cdb.
 	 * Result is of the form "php-X.XX" or "php-trunk".
 	 * @return String the version directory for this wiki
 	 */
@@ -333,7 +333,7 @@ class MWMultiVersion {
 
 	/**
 	 * Get the version number as specified in a cdb file located
-	 * at /usr/local/apache/common-local/wikiversions.cdb. Do not use this
+	 * at /srv/mediawiki/wikiversions.cdb. Do not use this
 	 * to determine the path to cache or binary files, only the core MW code.
 	 * @return String the version number for this wiki (e.g. "x.xx" or "trunk")
 	 */
