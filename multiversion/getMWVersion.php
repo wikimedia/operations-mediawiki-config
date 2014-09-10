@@ -19,7 +19,7 @@ if ( count( $argv ) < 2 ) {
  */
 function getWikiVersion( $dbName ) {
 	$cdbFilename = getRealmSpecificFilename(
-		MULTIVER_CDB_DIR_APACHE . '/wikiversions.cdb'
+		MULTIVER_COMMON_APACHE . '/wikiversions.cdb'
 	);
 	try {
 		$db = CdbReader::open( $cdbFilename );

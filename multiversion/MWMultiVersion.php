@@ -276,7 +276,7 @@ class MWMultiVersion {
 		$this->versionLoaded = true;
 
 		$cdbFilename = getRealmSpecificFilename(
-			MULTIVER_CDB_DIR_APACHE . '/wikiversions.cdb'
+			MULTIVER_COMMON_APACHE . '/wikiversions.cdb'
 		);
 
 		try {
@@ -302,7 +302,7 @@ class MWMultiVersion {
 	 */
 	private function assertNotMissing() {
 		$cdbFilename = getRealmSpecificFilename(
-			MULTIVER_CDB_DIR_APACHE . '/wikiversions.cdb'
+			MULTIVER_COMMON_APACHE . '/wikiversions.cdb'
 		);
 		if ( $this->isMissing() ) {
 			self::error( "$cdbFilename has no version entry for `{$this->db}`.\n" );
