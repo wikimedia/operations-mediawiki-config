@@ -2,11 +2,6 @@
 # WARNING: This file is publically viewable on the web.
 #          Do not put private data here.
 
-
-error_reporting( -1 );
-ini_set( 'display_errors', 1 );
-$wgShowExceptionDetails = true;
-
 /* From Settings.php on old wikitech */
 
 $wgEmailConfirmToEdit = true;
