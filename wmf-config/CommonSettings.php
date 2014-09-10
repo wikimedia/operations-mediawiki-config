@@ -2694,17 +2694,27 @@ if ( $wmgZeroPortal ) {
 	require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
 	require_once( "$IP/extensions/ZeroPortal/ZeroPortal.php" );
 
-	// 2014-7-1 this line can be deleted once ZeroPortal goes into prod - redundant
-	$wgJsonConfigs['JsonZeroConfig']['store'] = true;
+	// zerowiki treats all logged-in users the same as anonymous, without giving them any extra rights
+	// Only sysops and scripts get additional rights on zerowiki
+	$zpUserRights = $wgGroupPermissions['user'];
+	$wgGroupPermissions['sysop'] = $wgGroupPermissions['sysop'] + $zpUserRights;
+	$wgGroupPermissions['user'] = $wgGroupPermissions['*'];
 
 	$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
 	$wgGroupPermissions['zeroadmin']['zero-script'] = true;
 	$wgGroupPermissions['zeroadmin']['zero-script-ips'] = true;
 	$wgGroupPermissions['zeroadmin']['jsonconfig-flush'] = true;
+	$wgGroupPermissions['zeroadmin'] = $wgGroupPermissions['zeroadmin'] + $zpUserRights;
+
 	$wgGroupPermissions['zeroscript']['zero-script'] = true;
 	$wgGroupPermissions['zeroscript']['jsonconfig-flush'] = true;
+	$wgGroupPermissions['zeroscript'] = $wgGroupPermissions['zeroscript'] + $zpUserRights;
+
 	$wgGroupPermissions['zeroscriptips']['zero-script-ips'] = true;
 	$wgGroupPermissions['zeroscriptips']['jsonconfig-flush'] = true;
+	$wgGroupPermissions['zeroscriptips'] = $wgGroupPermissions['zeroscriptips'] + $zpUserRights;
+
+	unset( $zpUserRights );
 }
 
 if ( $wmgUseGraph ) {
