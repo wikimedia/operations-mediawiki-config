@@ -14,10 +14,10 @@ require_once( __DIR__ . '/Cdb.php' );
  * @return void
  */
 function refreshWikiversionsCDB() {
-	$srcPath = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.json' );
+	$srcPath = getRealmSpecificFilename( MULTIVER_COMMON_HOME . '/wikiversions.json' );
 
 	$cdbFilename = getRealmSpecificFilename(
-		MULTIVER_CDB_DIR_HOME . '/wikiversions.cdb'
+		MULTIVER_COMMON_HOME . '/wikiversions.cdb'
 	);
 
 	$tmpDBPath = $cdbFilename . '.tmp';
