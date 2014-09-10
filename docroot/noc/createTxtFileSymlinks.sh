@@ -92,6 +92,7 @@ mwconfig_files=(
 	wiktionary.dblist
 	wmf-config/extension-list
 	wmf-config/extension-list-labs
+	wmf-config/extension-list-wikitech
 	wmf-config/interwiki.cdb
 	wmf-config/trusted-xff.cdb
 )
