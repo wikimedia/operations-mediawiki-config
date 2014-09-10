@@ -426,6 +426,12 @@ return array(
 		'default' => false,
 		'metawiki' => true,
 	),
+
+	// Already true in production for some wikis, bug 49193
+	'wgContentHandlerDB' => array(
+		'default' => false,
+		'enwiki' => true,
+	),
 );
 
 } # wmflLabsSettings()
