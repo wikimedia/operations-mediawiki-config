@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_7b5a8b23",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 13907,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2014-09-11T02:49:16Z",
+      "side": 1,
+      "message": "I think this is wrong. Labswiki was previously using InstantCommons, so this should be set true (or, rather, should go back to not existing).\n\nThis part undone in Id6485fb9.",
+      "revId": "5b6e79047153be4d820a89bf0e347a56d626afa8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
