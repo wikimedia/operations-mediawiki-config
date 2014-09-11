@@ -3,7 +3,7 @@
 require_once( "$IP/extensions/Wikidata/Wikidata.php" );
 
 if ( $wmgUseWikibaseRepo ) {
-	$wgCacheEpoch = '20140902191100';
+	$wgCacheEpoch = $wgDBname === 'testwikidatawiki' ? '20140911180000' : '20140902191100';
 
 	$baseNs = 120;
 
