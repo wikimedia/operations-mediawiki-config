@@ -13950,11 +13950,6 @@ $wgConf->settings = array(
 	'labswiki' => false,
 ),
 
-'wmgUseClusterFileBackend' => array(
-	'default'  => true,
-	'labswiki' => false,
-),
-
 'wmgUseClusterJobqueue' => array(
 	'default'  => true,
 	'labswiki' => false,
