@@ -7427,7 +7427,7 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=28479
 	),
 	'plwikisource' => array(
-		'editor' => array( 'patrolmarks' => true ),
+		'editor' => array( 'autopatrol' => true, 'patrol' => true ), //Bug 70459
 	),
 	'plwiktionary' => array(
 		'editor' => array( 'patrolmarks' => true ),
