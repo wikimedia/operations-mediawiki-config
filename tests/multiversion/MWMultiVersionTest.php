@@ -19,7 +19,7 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 	}
 
 	function provideServerNameAndDocRoot() {
-		$root = '/usr/local/apache/common/docroot';
+		$root = '/srv/mediawiki/docroot';
 
 		return array(
 			// (expected DB, server name [, message]]

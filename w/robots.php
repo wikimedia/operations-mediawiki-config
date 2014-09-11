@@ -11,7 +11,7 @@ header( 'X-Language: ' . $lang );
 header( 'X-Site: ' . $site );
 header( 'Vary: X-Subdomain' );
 
-$robotsfile = '/usr/local/apache/common/robots.txt';
+$robotsfile = '/srv/mediawiki/robots.txt';
 $robots = fopen( $robotsfile, 'rb' );
 $text = '';
 

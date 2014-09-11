@@ -1,5 +1,5 @@
 <?php
-require( "/usr/local/apache/common/w/MWVersion.php" );
+require( "/srv/mediawiki/w/MWVersion.php" );
 require( getMediaWiki( "includes/WebStart.php" ) );
 
 function faviconShowError( $html ) {

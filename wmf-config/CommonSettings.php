@@ -555,7 +555,7 @@ if ( $wmgUseTimeline ) {
 	$wgTimelineSettings->epochTimestamp = '20130101000000';
 }
 
-putenv( "GDFONTPATH=/usr/local/apache/common/fonts" );
+putenv( "GDFONTPATH=/srv/mediawiki/fonts" );
 
 if ( $wmgUseWikiHiero ) {
 	include( $IP . '/extensions/wikihiero/wikihiero.php' );
@@ -564,7 +564,7 @@ if ( $wmgUseWikiHiero ) {
 include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 
 // Config for sitematrix
-$wgSiteMatrixFile = '/usr/local/apache/common/langlist';
+$wgSiteMatrixFile = '/srv/mediawiki/langlist';
 $wgSiteMatrixClosedSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../closed.dblist" ) ) );
 $wgSiteMatrixPrivateSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../private.dblist" ) ) );
 $wgSiteMatrixFishbowlSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../fishbowl.dblist" ) ) );
