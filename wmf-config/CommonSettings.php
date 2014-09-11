@@ -2485,7 +2485,7 @@ if ( $wmgUseScribunto ) {
 	$wgScribuntoDefaultEngine = 'luasandbox';
 	$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
 
-	if ( defined( 'HHVM_VERSION' ) ) {
+	if ( defined( 'HHVM_VERSION' ) && $wmfRealm !== 'labs' ) {
 		// Disable Luasandbox's profiling feature to isolate bug 68413
 		$wgScribuntoEngineConf['luasandbox']['profilerPeriod'] = false;
 	}
