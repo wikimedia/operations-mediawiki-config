@@ -137,7 +137,6 @@ $IP/extensions/WikimediaEvents/WikimediaEvents.php
 $IP/extensions/WikimediaIncubator/WikimediaIncubator.php
 $IP/extensions/WikimediaMessages/WikimediaLicenseTexts.php
 $IP/extensions/WikimediaMessages/WikimediaMessages.php
-$IP/extensions/WikimediaShopLink/WikimediaShopLink.php
 $IP/extensions/ZeroBanner/ZeroBanner.php
 $IP/extensions/ZeroPortal/ZeroPortal.php
 $IP/skins/CologneBlue/CologneBlue.php
