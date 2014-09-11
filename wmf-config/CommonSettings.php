@@ -2706,9 +2706,9 @@ if ( $wmgZeroPortal ) {
 		// Only sysops and scripts get additional rights on zerowiki
 		$zpUserRights = $wgGroupPermissions['user'];
 
-		$wgGroupPermissions['*']['createtalk'] = fales;
-		$wgGroupPermissions['*']['createpage'] = fales;
-		$wgGroupPermissions['*']['writeapi'] = fales;
+		$wgGroupPermissions['*']['createtalk'] = false;
+		$wgGroupPermissions['*']['createpage'] = false;
+		$wgGroupPermissions['*']['writeapi'] = false;
 		$wgGroupPermissions['user'] = $wgGroupPermissions['*'];
 
 		// fixme: this should go into groupOverrides or groupOverrides2, with or without a '+'
