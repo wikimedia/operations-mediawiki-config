@@ -22,9 +22,9 @@ function getActiveWikiVersions() {
 	array_shift( $options ); // first item is this file
 
 	if ( in_array( '--home', $options ) ) {
-		$jsonPath = getRealmSpecificFilename( MULTIVER_COMMON_HOME . '/wikiversions.json' );
+		$jsonPath = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.json' );
 	} else {
-		$jsonPath = getRealmSpecificFilename( MULTIVER_COMMON_APACHE . '/wikiversions.json' );
+		$jsonPath = getRealmSpecificFilename( MULTIVER_CDB_DIR_APACHE . '/wikiversions.json' );
 	}
 
 	# Get all the wikiversion rows in wikiversions.json...

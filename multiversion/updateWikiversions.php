@@ -22,7 +22,7 @@ require_once( __DIR__ . '/MWRealm.php' );
 function updateWikiversions() {
 	global $argv;
 	$common = MULTIVER_COMMON_HOME;
-	$jsonPath = getRealmSpecificFilename( MULTIVER_COMMON_HOME . '/wikiversions.json' );
+	$jsonPath = getRealmSpecificFilename( MULTIVER_CDB_DIR_HOME . '/wikiversions.json' );
 
 	if ( count( $argv ) !== 3 ) {
 		print "Usage: updateWikiversions <name>.dblist php-X.XXwmfX\n";
