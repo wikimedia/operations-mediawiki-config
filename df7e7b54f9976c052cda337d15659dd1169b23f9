@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_13decb14",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2729,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-09-11T19:44:45Z",
+      "side": 1,
+      "message": "This indentation is wrong and makes it look like it\u0027s not a part of the parent if block.",
+      "revId": "df7e7b54f9976c052cda337d15659dd1169b23f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
