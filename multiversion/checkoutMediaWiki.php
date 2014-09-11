@@ -95,7 +95,7 @@ function checkoutMediaWiki() {
 	$localSettingsCode = <<<PHP
 <?php
 # WARNING: This file is publically viewable on the web. Do not put private data here.
-include_once( "/usr/local/apache/common/wmf-config/CommonSettings.php" );
+include_once( "/srv/mediawiki/wmf-config/CommonSettings.php" );
 PHP;
 
 	# Create LocalSettings.php stub...
