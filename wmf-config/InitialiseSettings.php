@@ -6308,6 +6308,7 @@ $wgConf->settings = array(
 	'itwiktionary' => true, // bug 11424
         'jawiktionary' => true, // bug 61366
 	'kshwiki' => true, // bug 8798
+	'lvwiki' => true, //Bug 70441
 	'mediawikiwiki' => true, // bug 56104
 	'metawiki' => true, // bug 4747
 	'mlwiki' => true,
@@ -7298,6 +7299,10 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'createaccount' => true ),
 		'sysop' => array( 'createaccount' => false ),
 	),
+	'lvwiki' => array(
+		'autopatrolled' => array( 'autopatrol' => true ), //Bug 70441
+		'patroller' => array( 'autopatrol' => true, 'patrol' => true ), //Bug 70441
+	),
 	'mediawikiwiki' => array(
 		'user' => array( 'move' => false ),
 		// Kept 'autoreview' as substitute for 'autopatrolled' user group
@@ -8127,6 +8132,9 @@ $wgConf->settings = array(
 	'+ltwiktionary' => array(
 		'sysop' => array( 'abusefilter' ),
 	),
+	'+lvwiki' => array(
+		'sysop' => array( 'autopatrolled', 'patroller' ), //Bug 70441
+	),
 	'+mediawikiwiki' => array(
 		'sysop' => array( 'autoreview' ),
 		'bureaucrat' => array( 'autoreview', 'transwiki', 'coder', 'import', 'svnadmins', 'translationadmin' ),
@@ -8654,6 +8662,9 @@ $wgConf->settings = array(
 	),
 	'+ltwiktionary' => array(
 		'sysop' => array( 'abusefilter' ),
+	),
+	'+lvwiki' => array(
+		'sysop' => array( 'autopatrolled', 'patroller' ), //Bug 70441
 	),
 	'+mediawikiwiki' => array(
 		'sysop' => array( 'autoreview' ),
