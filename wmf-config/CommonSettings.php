@@ -2694,27 +2694,48 @@ if ( $wmgZeroPortal ) {
 	require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
 	require_once( "$IP/extensions/ZeroPortal/ZeroPortal.php" );
 
-	// zerowiki treats all logged-in users the same as anonymous, without giving them any extra rights
-	// Only sysops and scripts get additional rights on zerowiki
-	$zpUserRights = $wgGroupPermissions['user'];
-	$wgGroupPermissions['sysop'] = $wgGroupPermissions['sysop'] + $zpUserRights;
-	$wgGroupPermissions['user'] = $wgGroupPermissions['*'];
+	// Until meta handles ZeroPortal, need to keep it intact
+	if ( $wgDBname == 'zerowiki' ) {
+		// zerowiki treats all logged-in users the same as anonymous, without giving them any extra rights
+		// Only sysops and scripts get additional rights on zerowiki
+		$zpUserRights = $wgGroupPermissions['user'];
 
-	$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
-	$wgGroupPermissions['zeroadmin']['zero-script'] = true;
-	$wgGroupPermissions['zeroadmin']['zero-script-ips'] = true;
-	$wgGroupPermissions['zeroadmin']['jsonconfig-flush'] = true;
-	$wgGroupPermissions['zeroadmin'] = $wgGroupPermissions['zeroadmin'] + $zpUserRights;
+		$wgGroupPermissions['*']['createtalk'] = fales;
+		$wgGroupPermissions['*']['createpage'] = fales;
+		$wgGroupPermissions['*']['writeapi'] = fales;
+		$wgGroupPermissions['user'] = $wgGroupPermissions['*'];
 
-	$wgGroupPermissions['zeroscript']['zero-script'] = true;
-	$wgGroupPermissions['zeroscript']['jsonconfig-flush'] = true;
-	$wgGroupPermissions['zeroscript'] = $wgGroupPermissions['zeroscript'] + $zpUserRights;
+		// fixme: this should go into groupOverrides or groupOverrides2, with or without a '+'
+		// 'sysop' => array( 'zero-edit', 'zero-script', 'zero-script-ips', 'jsonconfig-flush' ),
+		// 'zeroscript' => array( 'zero-script', 'jsonconfig-flush' ),
+		// 'zeroscriptips' => array( 'zero-script-ips', 'jsonconfig-flush' ),
 
-	$wgGroupPermissions['zeroscriptips']['zero-script-ips'] = true;
-	$wgGroupPermissions['zeroscriptips']['jsonconfig-flush'] = true;
-	$wgGroupPermissions['zeroscriptips'] = $wgGroupPermissions['zeroscriptips'] + $zpUserRights;
+		$wgGroupPermissions['sysop']['zero-edit'] = true;
+		$wgGroupPermissions['sysop']['zero-script'] = true;
+		$wgGroupPermissions['sysop']['zero-script-ips'] = true;
+		$wgGroupPermissions['sysop']['jsonconfig-flush'] = true;
+		$wgGroupPermissions['sysop'] = $wgGroupPermissions['sysop'] + $zpUserRights;
 
-	unset( $zpUserRights );
+		$wgGroupPermissions['zeroscript']['zero-script'] = true;
+		$wgGroupPermissions['zeroscript']['jsonconfig-flush'] = true;
+		$wgGroupPermissions['zeroscript'] = $wgGroupPermissions['zeroscript'] + $zpUserRights;
+
+		$wgGroupPermissions['zeroscriptips']['zero-script-ips'] = true;
+		$wgGroupPermissions['zeroscriptips']['jsonconfig-flush'] = true;
+		$wgGroupPermissions['zeroscriptips'] = $wgGroupPermissions['zeroscriptips'] + $zpUserRights;
+
+		unset( $zpUserRights );
+	} else {
+		// metawiki
+		$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
+		$wgGroupPermissions['zeroadmin']['zero-script'] = true;
+		$wgGroupPermissions['zeroadmin']['zero-script-ips'] = true;
+		$wgGroupPermissions['zeroadmin']['jsonconfig-flush'] = true;
+		$wgGroupPermissions['zeroscript']['zero-script'] = true;
+		$wgGroupPermissions['zeroscript']['jsonconfig-flush'] = true;
+		$wgGroupPermissions['zeroscriptips']['zero-script-ips'] = true;
+		$wgGroupPermissions['zeroscriptips']['jsonconfig-flush'] = true;
+	}
 }
 
 if ( $wmgUseGraph ) {
