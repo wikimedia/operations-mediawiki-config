@@ -3931,8 +3931,8 @@ $wgConf->settings = array(
 
 # wgWhitelistRead @{
 'wgWhitelistRead' => array(
-	'private' => array( 'Main Page', 'Special:Userlogin', 'Special:Userlogout' ),
-	'grantswiki' => array( 'Main Page', 'Special:Userlogin', 'Special:Userlogout' ),
+	'private' => array( 'Main Page', 'Special:UserLogin', 'Special:UserLogout' ),
+	'grantswiki' => array( 'Main Page', 'Special:UserLogin', 'Special:UserLogout' ),
 	'+zerowiki' => array( 'Special:ZeroPortal' ),
 ),
 # @} end of wgWhitelistRead
