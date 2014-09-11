@@ -16,6 +16,24 @@
       "revId": "df7e7b54f9976c052cda337d15659dd1169b23f9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_73ef4fae",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2729,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2014-09-11T19:45:41Z",
+      "side": 1,
+      "message": "I did it on purpose to remove it shortly, but maybe i should do it proper... fixing",
+      "parentUuid": "2e2fb78d_13decb14",
+      "revId": "df7e7b54f9976c052cda337d15659dd1169b23f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
