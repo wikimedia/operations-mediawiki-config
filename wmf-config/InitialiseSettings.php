@@ -11483,6 +11483,7 @@ $wgConf->settings = array(
 
 'wmgUseParsoid' => array(
 	'default' => true,
+	'labswiki' => false,
 ),
 
 'wmgUseVisualEditor' => array(
