@@ -8,6 +8,8 @@ $wgEmailConfirmToEdit = true;
 $wgUseTeX = false;
 $wgEnableCreativeCommonsRdf = true;
 
+$wgUseInstantCommons  = true;
+
 $wgCaptchaTriggers['addurl']        = false;
 
 /* from Local.php on old Wikitech */
