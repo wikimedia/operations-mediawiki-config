@@ -2697,14 +2697,22 @@ if ( $wmgZeroPortal ) {
 	// zerowiki treats all logged-in users the same as anonymous, without giving them any extra rights
 	// Only sysops and scripts get additional rights on zerowiki
 	$zpUserRights = $wgGroupPermissions['user'];
-	$wgGroupPermissions['sysop'] = $wgGroupPermissions['sysop'] + $zpUserRights;
+
+	$wgGroupPermissions['*']['createtalk'] = fales;
+	$wgGroupPermissions['*']['createpage'] = fales;
+	$wgGroupPermissions['*']['writeapi'] = fales;
 	$wgGroupPermissions['user'] = $wgGroupPermissions['*'];
 
-	$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
-	$wgGroupPermissions['zeroadmin']['zero-script'] = true;
-	$wgGroupPermissions['zeroadmin']['zero-script-ips'] = true;
-	$wgGroupPermissions['zeroadmin']['jsonconfig-flush'] = true;
-	$wgGroupPermissions['zeroadmin'] = $wgGroupPermissions['zeroadmin'] + $zpUserRights;
+	// fixme: this should go into groupOverrides or groupOverrides2, with or without a '+'
+	// 'sysop' => array( 'zero-edit', 'zero-script', 'zero-script-ips', 'jsonconfig-flush' ),
+	// 'zeroscript' => array( 'zero-script', 'jsonconfig-flush' ),
+	// 'zeroscriptips' => array( 'zero-script-ips', 'jsonconfig-flush' ),
+
+	$wgGroupPermissions['sysop']['zero-edit'] = true;
+	$wgGroupPermissions['sysop']['zero-script'] = true;
+	$wgGroupPermissions['sysop']['zero-script-ips'] = true;
+	$wgGroupPermissions['sysop']['jsonconfig-flush'] = true;
+	$wgGroupPermissions['sysop'] = $wgGroupPermissions['sysop'] + $zpUserRights;
 
 	$wgGroupPermissions['zeroscript']['zero-script'] = true;
 	$wgGroupPermissions['zeroscript']['jsonconfig-flush'] = true;
