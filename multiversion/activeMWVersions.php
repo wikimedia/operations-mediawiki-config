@@ -9,7 +9,7 @@ require_once( __DIR__ . '/MWWikiversions.php' );
  * Returns an array of all active MW versions (e.g. "x.xx").
  * Versions are read from /srv/mediawiki/wikiversions.json.
  *
- * Given --home, versions are instead read from /a/common/wikiversions.json.
+ * Given --staging, versions are instead read from MEDIAWIKI_STAGING_DIR.
  * Given --withdb, each item in the list will be appended with '=' followed by
  * 		the DB name of *some* wiki that uses that version. Used to run maintenance scripts.
  * Given --report, error messages would be displayed if this dies.
@@ -18,13 +18,13 @@ require_once( __DIR__ . '/MWWikiversions.php' );
  */
 function getActiveWikiVersions() {
 	global $argv;
-	$options = $argv; // copy
+	$options = str_replace( '--home', '--staging', $argv );  // accept '--home' as an alias for '--staging', for back-compat.
 	array_shift( $options ); // first item is this file
 
-	if ( in_array( '--home', $options ) ) {
-		$jsonPath = getRealmSpecificFilename( MULTIVER_COMMON_HOME . '/wikiversions.json' );
+	if ( in_array( '--staging', $options ) ) {
+		$jsonPath = getRealmSpecificFilename( MEDIAWIKI_STAGING_DIR . '/wikiversions.json' );
 	} else {
-		$jsonPath = getRealmSpecificFilename( MULTIVER_COMMON_APACHE . '/wikiversions.json' );
+		$jsonPath = getRealmSpecificFilename( MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.json' );
 	}
 
 	# Get all the wikiversion rows in wikiversions.json...

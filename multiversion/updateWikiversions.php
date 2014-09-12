@@ -21,8 +21,8 @@ require_once( __DIR__ . '/MWRealm.php' );
  */
 function updateWikiversions() {
 	global $argv;
-	$common = MULTIVER_COMMON_HOME;
-	$jsonPath = getRealmSpecificFilename( MULTIVER_COMMON_HOME . '/wikiversions.json' );
+	$common = MEDIAWIKI_STAGING_DIR;
+	$jsonPath = getRealmSpecificFilename( MEDIAWIKI_STAGING_DIR . '/wikiversions.json' );
 
 	if ( count( $argv ) !== 3 ) {
 		print "Usage: updateWikiversions <name>.dblist php-X.XXwmfX\n";

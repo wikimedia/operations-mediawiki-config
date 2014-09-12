@@ -3,8 +3,8 @@
 # Script to log repository modification on deployment hosts, so we have some
 # notion of what each sync and scap in the log pushed out.
 
-# If invoked with "--install", configure the hook for /a/common and its php-*
-# subdirectories.
+# If invoked with "--install", configure the hook for MediaWiki's staging dir
+# and its php-* subdirectories.
 [[ "$1" == --install ]] && {
     . /usr/local/lib/mw-deployment-vars.sh
 

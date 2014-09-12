@@ -249,7 +249,7 @@ class MWMultiVersion {
 	 * Handler for the wfShellMaintenanceCmd hook.
 	 * This converts shell commands like "php $IP/maintenance/foo.php" into
 	 * commands that use the "MWScript.php" wrapper, for example:
-	 * "php /a/common/multiversion/MWScript.php maintenance/foo.php"
+	 * "php /srv/mediawiki-staging/multiversion/MWScript.php maintenance/foo.php"
 	 *
 	 * @param &$script string
 	 * @param &$params Array
@@ -276,7 +276,7 @@ class MWMultiVersion {
 		$this->versionLoaded = true;
 
 		$cdbFilename = getRealmSpecificFilename(
-			MULTIVER_COMMON_APACHE . '/wikiversions.cdb'
+			MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.cdb'
 		);
 
 		try {
@@ -302,7 +302,7 @@ class MWMultiVersion {
 	 */
 	private function assertNotMissing() {
 		$cdbFilename = getRealmSpecificFilename(
-			MULTIVER_COMMON_APACHE . '/wikiversions.cdb'
+			MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.cdb'
 		);
 		if ( $this->isMissing() ) {
 			self::error( "$cdbFilename has no version entry for `{$this->db}`.\n" );
