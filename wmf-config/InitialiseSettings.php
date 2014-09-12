@@ -2466,6 +2466,12 @@ $wgConf->settings = array(
 		"বাটচ'ৰা" => 100,
 		"বাটচ'ৰা_আলোচনা" => 101,
 	),
+	'+aswikisource' => array(
+		'Author' => 102, // bug 70464
+		'Author_talk' => 103, // bug 70464
+		'লিখক' => 102, // bug 70464
+		'লিখক_আলোচনা' => 103, // bug 70464
+	),
 	'+azwikibooks' => array(
 		'Wikibooks_müzakirəsi' => NS_PROJECT_TALK, // bug 31068
 		'Wikibooks_talk' => NS_PROJECT_TALK, // bug 31068
@@ -4916,6 +4922,8 @@ $wgConf->settings = array(
 		107 => 'نقاش_الفهرس',
 	),
 	'aswikisource' => array(
+		102 => 'লেখক',       // Bug 70464 - Author
+		103 => 'লেখক_আলোচনা',
 		104 => 'পৃষ্ঠা',       // Bug 43129 - Page
 		105 => 'পৃষ্ঠা_আলোচনা',
 		106 => 'সূচী',       // Bug 43129 - Index
@@ -9518,7 +9526,7 @@ $wgConf->settings = array(
 	'default' => array( NS_MAIN ),
 	'+arwiki' => array( 104 ), // bug 20623
 	'+arwikisource' => array( 102, 104 ),
-	'+aswikisource' => array( 104, 106 ), // Bug 43129
+	'+aswikisource' => array( 102, 104, 106 ), // Bug 43129, 70464
 	'+bgwikisource' => array( 100 ),
 	'+bnwikisource' => array( 100 ),
 	'+brwikisource' => array( 100, 102, 104 ),
