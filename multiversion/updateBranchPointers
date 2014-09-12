@@ -23,10 +23,10 @@ function isMain() {
 }
 
 function updateBranchPointers( $dryRun = false ) {
-	$branchDirs = glob( MULTIVER_COMMON_APACHE . '/php-*', GLOB_ONLYDIR );
+	$branchDirs = glob( MEDIAWIKI_DEPLOYMENT_DIR . '/php-*', GLOB_ONLYDIR );
 
 	if ( !is_array( $branchDirs ) || count( $branchDirs ) < 1 ) {
-		fwrite( STDERR, __FUNCTION__ . ': no deployment branch directories found in ' . MULTIVER_COMMON_APACHE . "\n" );
+		fwrite( STDERR, __FUNCTION__ . ': no deployment branch directories found in ' . MEDIAWIKI_DEPLOYMENT_DIR . "\n" );
 		exit( 1 );
 	}
 
@@ -38,18 +38,18 @@ function updateBranchPointers( $dryRun = false ) {
 	$branches = array( 'current' => array_pop( $branchDirs ) );
 
 	// Symlink common/php to the current branch using a relative path so that
-	// the symlink works from both MULTIVER_COMMON_HOME and
-	// MULTIVER_COMMON_APACHE
+	// the symlink works from both MEDIAWIKI_STAGING_DIR and
+	// MEDIAWIKI_DEPLOYMENT_DIR
 	$phpLinkTarget = substr(
 		$branches['current'],
-		strlen( MULTIVER_COMMON_APACHE ) + 1
+		strlen( MEDIAWIKI_DEPLOYMENT_DIR ) + 1
 	);
-	updateSymlink( MULTIVER_COMMON_HOME . '/php', $phpLinkTarget, $dryRun );
+	updateSymlink( MEDIAWIKI_STAGING_DIR . '/php', $phpLinkTarget, $dryRun );
 
 	foreach( $branches as $branch => $target ) {
 		echo "Updating $branch branch pointer...\n";
 
-		$parent = MULTIVER_COMMON_HOME . "/docroot/bits/static-$branch";
+		$parent = MEDIAWIKI_STAGING_DIR . "/docroot/bits/static-$branch";
 
 		if ( !$dryRun && !file_exists( $parent ) && !mkdir( $parent, 0775 ) ) {
 			fwrite( STDERR, __FUNCTION__ . ": $parent does not exist and could not be created.\n" );
@@ -71,8 +71,8 @@ function updateBranchPointers( $dryRun = false ) {
  * @param bool $dryRun
  */
 function updateSymlink( $link, $dest, $dryRun ) {
-	// Change pwd to MULTIVER_COMMON_HOME so that relative paths can be verified
-	chdir( MULTIVER_COMMON_HOME );
+	// Change pwd to MEDIAWIKI_STAGING_DIR so that relative paths can be verified
+	chdir( MEDIAWIKI_STAGING_DIR );
 
 	if ( !file_exists( $dest ) ) {
 		fwrite( STDERR, __FUNCTION__ . ": link target $dest does not exist.\n" );

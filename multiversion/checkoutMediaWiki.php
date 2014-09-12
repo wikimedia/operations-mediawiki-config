@@ -36,7 +36,7 @@ function checkoutMediaWiki() {
 	}
 
 	# MW install path
-	$destIP = MULTIVER_COMMON_HOME . "/$dstVersion";
+	$destIP = MEDIAWIKI_STAGING_DIR . "/$dstVersion";
 
 	if ( !file_exists( $destIP ) ) {
 		passthru( 'git clone -n ' .
@@ -114,37 +114,37 @@ PHP;
 	createSymlink( $path, $link, "Created StartProfiler.php symlink." );
 
 	# Create static- symlinks for bits.wikimedia.org...
-	$bitsStaticDir = MULTIVER_COMMON_HOME . "/docroot/bits/static-$dstVersionNum";
+	$bitsStaticDir = MEDIAWIKI_STAGING_DIR . "/docroot/bits/static-$dstVersionNum";
 	if ( !file_exists( $bitsStaticDir ) ) {
 		mkdir( $bitsStaticDir, 0775 );
 	}
-	$path = MULTIVER_COMMON_HOME . "/docroot/bits/static-$dstVersionNum/skins";
-	$link = MULTIVER_COMMON_APACHE . "/php-$dstVersionNum/skins/";
+	$path = MEDIAWIKI_STAGING_DIR . "/docroot/bits/static-$dstVersionNum/skins";
+	$link = MEDIAWIKI_DEPLOYMENT_DIR . "/php-$dstVersionNum/skins/";
 	createSymlink( $path, $link, "Created bits/static-$dstVersionNum/skins symlink." );
 
-	$path = MULTIVER_COMMON_HOME . "/docroot/bits/static-$dstVersionNum/extensions";
-	$link = MULTIVER_COMMON_APACHE . "/php-$dstVersionNum/extensions";
+	$path = MEDIAWIKI_STAGING_DIR . "/docroot/bits/static-$dstVersionNum/extensions";
+	$link = MEDIAWIKI_DEPLOYMENT_DIR . "/php-$dstVersionNum/extensions";
 	createSymlink( $path, $link, "Created bits/static-$dstVersionNum/extensions symlink." );
 
-	$path = MULTIVER_COMMON_HOME . "/docroot/bits/static-$dstVersionNum/resources";
-	$link = MULTIVER_COMMON_APACHE . "/php-$dstVersionNum/resources";
+	$path = MEDIAWIKI_STAGING_DIR . "/docroot/bits/static-$dstVersionNum/resources";
+	$link = MEDIAWIKI_DEPLOYMENT_DIR . "/php-$dstVersionNum/resources";
 	createSymlink( $path, $link, "Created bits/static-$dstVersionNum/resources symlink." );
 
 	# Create static- symlinks for /w...
-	$liveStaticDir = MULTIVER_COMMON_HOME . "/w/static-$dstVersionNum";
+	$liveStaticDir = MEDIAWIKI_STAGING_DIR . "/w/static-$dstVersionNum";
 	if ( !file_exists( $liveStaticDir ) ) {
 		mkdir( $liveStaticDir, 0775 );
 	}
-	$path = MULTIVER_COMMON_HOME . "/w/static-$dstVersionNum/skins";
-	$link = MULTIVER_COMMON_APACHE . "/php-$dstVersionNum/skins";
+	$path = MEDIAWIKI_STAGING_DIR . "/w/static-$dstVersionNum/skins";
+	$link = MEDIAWIKI_DEPLOYMENT_DIR . "/php-$dstVersionNum/skins";
 	createSymlink( $path, $link, "Created /w/static-$dstVersionNum/skins symlink." );
 
-	$path = MULTIVER_COMMON_HOME . "/w/static-$dstVersionNum/extensions";
-	$link = MULTIVER_COMMON_APACHE . "/php-$dstVersionNum/extensions";
+	$path = MEDIAWIKI_STAGING_DIR . "/w/static-$dstVersionNum/extensions";
+	$link = MEDIAWIKI_DEPLOYMENT_DIR . "/php-$dstVersionNum/extensions";
 	createSymlink( $path, $link, "Created /w/static-$dstVersionNum/extensions symlink." );
 
-	$path = MULTIVER_COMMON_HOME . "/w/static-$dstVersionNum/resources";
-	$link = MULTIVER_COMMON_APACHE . "/php-$dstVersionNum/resources";
+	$path = MEDIAWIKI_STAGING_DIR . "/w/static-$dstVersionNum/resources";
+	$link = MEDIAWIKI_DEPLOYMENT_DIR . "/php-$dstVersionNum/resources";
 	createSymlink( $path, $link, "Created /w/static-$dstVersionNum/resources symlink." );
 
 	# Create l10n cache dir

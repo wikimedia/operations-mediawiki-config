@@ -14,10 +14,10 @@ require_once( __DIR__ . '/Cdb.php' );
  * @return void
  */
 function refreshWikiversionsCDB() {
-	$srcPath = getRealmSpecificFilename( MULTIVER_COMMON_HOME . '/wikiversions.json' );
+	$srcPath = getRealmSpecificFilename( MEDIAWIKI_STAGING_DIR . '/wikiversions.json' );
 
 	$cdbFilename = getRealmSpecificFilename(
-		MULTIVER_COMMON_HOME . '/wikiversions.cdb'
+		MEDIAWIKI_STAGING_DIR . '/wikiversions.cdb'
 	);
 
 	$tmpDBPath = $cdbFilename . '.tmp';
@@ -27,14 +27,14 @@ function refreshWikiversionsCDB() {
 	$rows = MWWikiversions::readWikiVersionsFile( $srcPath );
 	// Sanity check version directories...
 	foreach ( $rows as $dbName => $version ) {
-		$versionDir = MULTIVER_COMMON_HOME . '/' . $version;
+		$versionDir = MEDIAWIKI_STAGING_DIR . '/' . $version;
 		if ( !is_dir( $versionDir ) ) {
 			print "Invalid version dir '$versionDir' for wiki '$dbName'.\n";
 			exit( 1 );
 		}
 	}
 
-	$dbNames = MWWikiversions::readDbListFile( getRealmSpecificFilename( MULTIVER_COMMON_HOME . '/all.dblist' ) );
+	$dbNames = MWWikiversions::readDbListFile( getRealmSpecificFilename( MEDIAWIKI_STAGING_DIR . '/all.dblist' ) );
 	$diff = array_diff( $dbNames, array_keys( $rows ) );
 	if ( count( $diff ) ) {
 		print_r( $diff );

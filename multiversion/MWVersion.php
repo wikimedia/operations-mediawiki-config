@@ -37,7 +37,7 @@ function getMediaWiki( $file, $wiki = null ) {
 	# Wiki doesn't exist yet?
 	if ( $multiVersion->isMissing() ) {
 		header( "Cache-control: no-cache" ); // same hack as CommonSettings.php
-		include( MULTIVER_404SCRIPT_PATH_APACHE );
+		include( MEDIAWIKI_DEPLOYMENT_DIR . '/wmf-config/missing.php' );
 		exit;
 	}
 
@@ -45,7 +45,7 @@ function getMediaWiki( $file, $wiki = null ) {
 	$version = $multiVersion->getVersion();
 
 	# Get the correct MediaWiki path based on this version...
-	$IP = MULTIVER_COMMON_APACHE . "/$version";
+	$IP = MEDIAWIKI_DEPLOYMENT_DIR . "/$version";
 
 	chdir( $IP );
 	putenv( "MW_INSTALL_PATH=$IP" );

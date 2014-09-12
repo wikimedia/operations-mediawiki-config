@@ -15,7 +15,7 @@ require_once( __DIR__ . '/updateBranchPointers' );
  */
 function deleteMediaWiki() {
 	global $argv;
-	$commonHomeDir = MULTIVER_COMMON_HOME;
+	$commonHomeDir = MEDIAWIKI_STAGING_DIR;
 
 	$argsValid = false;
 	if ( count( $argv ) >= 2 ) {
