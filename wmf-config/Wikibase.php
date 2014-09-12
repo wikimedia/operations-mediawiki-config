@@ -3,8 +3,6 @@
 require_once( "$IP/extensions/Wikidata/Wikidata.php" );
 
 if ( $wmgUseWikibaseRepo ) {
-	$wgCacheEpoch = $wgDBname === 'testwikidatawiki' ? '20140911180000' : '20140902191100';
-
 	$baseNs = 120;
 
 	// Define the namespace indexes
@@ -78,9 +76,18 @@ if ( $wmgUseWikibaseRepo ) {
 	// Bug 51637 and 46953
 	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
 
+	$wgCacheEpoch = $wgDBname === 'testwikidatawiki' ? '20140911180000' : '20140902191100';
+
 	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
 	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
-	$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
+
+	if ( $wmfVersionNumber === '1.24wmf21' ) {
+		// temp hack to refresh cache for any broken things on test.wikidata / test2
+		// due to broken code deployed to 1.24wmf21.  set here and for client.
+		$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-1.24wmf21b";
+	} else {
+		$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
+	}
 
 	$wgPropertySuggesterMinProbability = 0.071;
 
@@ -174,12 +181,19 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['showExternalRecentChanges'] = false;
 	}
 
-	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
-
 	foreach( $wmgWikibaseClientSettings as $setting => $value ) {
 		$wgWBClientSettings[$setting] = $value;
 	}
 
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
-	$wgWBClientSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
+
+	if ( $wmfVersionNumber === '1.24wmf21' ) {
+		// temp hack to refresh cache for any broken things on test.wikidata / test2
+		// due to broken code deployed to 1.24wmf21. set here and for repo.
+		$wgWBClientSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-1.24wmf21b";
+	} else {
+		$wgWBClientSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
+	}
+
+	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 }
