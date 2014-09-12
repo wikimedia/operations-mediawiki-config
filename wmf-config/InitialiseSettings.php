@@ -10679,41 +10679,42 @@ $wgConf->settings = array(
 	'default' => array( '*.flickr.com', '*.staticflickr.com', ),
 	'+testwiki' => array( 'upload.wikimedia.org' ),
 	'+commonswiki' => array(
-		'am.adlibhosting.com',           // Amsterdam Museum
-		'*.collectie.legermuseum.nl',    // Legermuseum
-		'*.europeana1914-1918.eu',       // Europeana 1914-1918
-		'*.gahetna.nl',                  // Nationaal Archief Nederland
-		'*.hu-berlin.de',                // Humboldt-Universität zu Berlin
-		'*.kb.nl',                       // Koninklijke Bibliotheek, Nationale Bibliotheek van Nederland
-		'*.lndb.lv',                     // Latvijas Nacionālā Bibliotēka
-		'*.memorix.nl',                  // Archief Eemland
-		'*.openbeelden.nl',              // Open Beelden
-		'*.panoramio.com',               // Panoramio by Google
-		'*.raa.se',                      // Swedish National Heritage Board
-		'*.rbge.org.uk',                 // Royal Botanic Garden Edinburgh
-		'*.rijksmuseum.nl',              // Rijksmuseum
-		'*.llgc.org.uk',                 // National Library of Wales
-		'*.tounoki.org',                 // Musées de la Haute-Saône (test)  bug 63449
-		'musees.cg70.fr',                // Musées de la Haute-Saône (prod)  bug 63449
-		'*.musees.cg70.fr',              // Musées de la Haute-Saône (prod)  bug 63449
-		'*.wikimedia.ch',                // Wikimedia CH
-		'link.nypl.org',                 // New York Public Library
-		'*.peacepalacelibrary.nl',       // Peace Palace Library, The Hague  bug 64372
-		'lcweb2.loc.gov',                // Library of Congress
-		'deriv.nls.uk',                  // National Library of Scotland
-		'*.nb.admin.ch',                 // Swiss National Library
-		'*.bar.admin.ch',                // Swiss Federal Archives
-		'*.unine.ch',                    // University of Neuchâtel
-		'*.mindat.org',                  // Mineral and locality database
-		'*.culture.gouv.fr',             // French Ministry for Culture      bug 65905
-		'memory.loc.gov',                // Library of Congress              bug 66945
-		'*.ihs.nl',                      // IHS at Erasmus University        bug 67120
-		'*.eur.nl',                      // Erasmus University Rotterdam     bug 67355
-		'mochila_images.s3.amazonaws.com', //temporary for GWT upload        bug 67344
-		'mochila_images2.s3.amazonaws.com', //temporary for GWT upload       bug 67344
-		'*.universiteitsmuseum.nl',      // Universiteits Museum Utrecht
-		'data.kb.se',                    // National Library of Sweden Open Data bug 69439
-		'www.veikkos-archiv.com',        // Veikkos-archiv                   bug 69777
+		'am.adlibhosting.com',              // Amsterdam Museum
+		'*.collectie.legermuseum.nl',       // Legermuseum
+		'*.europeana1914-1918.eu',          // Europeana 1914-1918
+		'*.gahetna.nl',                     // Nationaal Archief Nederland
+		'*.hu-berlin.de',                   // Humboldt-Universität zu Berlin
+		'*.kb.nl',                          // Koninklijke Bibliotheek, Nationale Bibliotheek van Nederland
+		'*.lndb.lv',                        // Latvijas Nacionālā Bibliotēka
+		'*.memorix.nl',                     // Archief Eemland
+		'*.openbeelden.nl',                 // Open Beelden
+		'*.panoramio.com',                  // Panoramio by Google
+		'*.raa.se',                         // Swedish National Heritage Board
+		'*.rbge.org.uk',                    // Royal Botanic Garden Edinburgh
+		'*.rijksmuseum.nl',                 // Rijksmuseum
+		'*.llgc.org.uk',                    // National Library of Wales
+		'*.tounoki.org',                    // Musées de la Haute-Saône (test) - bug 63449
+		'musees.cg70.fr',                   // Musées de la Haute-Saône (prod) - bug 63449
+		'*.musees.cg70.fr',                 // Musées de la Haute-Saône (prod) - bug 63449
+		'*.wikimedia.ch',                   // Wikimedia CH
+		'link.nypl.org',                    // New York Public Library
+		'*.peacepalacelibrary.nl',          // Peace Palace Library, The Hague - bug 64372
+		'lcweb2.loc.gov',                   // Library of Congress
+		'deriv.nls.uk',                     // National Library of Scotland
+		'*.nb.admin.ch',                    // Swiss National Library
+		'*.bar.admin.ch',                   // Swiss Federal Archives
+		'*.unine.ch',                       // University of Neuchâtel
+		'*.mindat.org',                     // Mineral and locality database
+		'*.culture.gouv.fr',                // French Ministry for Culture - bug 65905
+		'memory.loc.gov',                   // Library of Congress - bug 66945
+		'*.ihs.nl',                         // IHS at Erasmus University - bug 67120
+		'*.eur.nl',                         // Erasmus University Rotterdam - bug 67355
+		'mochila_images.s3.amazonaws.com',  // temporary for GWT upload - bug 67344
+		'mochila_images2.s3.amazonaws.com', // temporary for GWT upload - bug 67344
+		'*.universiteitsmuseum.nl',         // Universiteits Museum Utrecht
+		'data.kb.se',                       // National Library of Sweden Open Data - bug 69439
+		'www.veikkos-archiv.com',           // Veikkos-archiv - bug 69777
+		'*.scienceimage.csiro.au'           // CSIRO - bug 70771
 	),
 ),
 
