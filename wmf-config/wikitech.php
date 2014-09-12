@@ -155,7 +155,7 @@ $wgSessionCacheType = 'memcached-pecl';
 // No cluster for us!
 $wgDefaultExternalStore = false;
 
-require_once( '/usr/local/apache/common/private/WikitechPrivateLdapSettings.php' );
+require_once( '/srv/mediawiki/private/WikitechPrivateLdapSettings.php' );
 
 #$wgPasswordReminderResendTime = 0;
 #$wgPasswordAttemptThrottle = false;
