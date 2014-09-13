@@ -1339,6 +1339,7 @@ $wgConf->settings = array(
 	'iegcomwiki' => 'http://iegcom.wikimedia.org',
 	'incubatorwiki' => 'http://incubator.wikimedia.org',
 	'internalwiki' => 'https://internal.wikimedia.org',
+	'labswiki' => 'https://wikitech.wikimedia.org',
 	'legalteamwiki' => 'https://legalteam.wikimedia.org',
 	'loginwiki' => 'http://login.wikimedia.org',
 	'mediawikiwiki' => 'http://www.mediawiki.org',
