@@ -262,6 +262,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgAbuseFilterAvailableActions[] = 'block';
+		$wgAbuseFilterAnonBlockDuration = '3 months'; // bug 70828
 		break;
 	case 'metawiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
