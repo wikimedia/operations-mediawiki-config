@@ -453,13 +453,13 @@ $wgLBFactoryConf = array(
 
 	# es2
 	'cluster24' => array(
-		# maintenance '10.64.16.153' => 1, # es1005
-		'10.64.16.154' => 3, # es1006
-		'10.64.32.17' => 1, # es1007 snapshot host
+		'10.64.16.154' => 1, # es1006, master
+		'10.64.16.153' => 3, # es1005
+		'10.64.32.17'  => 3, # es1007
 	),
 	# es3
 	'cluster25' => array(
-		'10.64.32.18' => 1, # es1008
+		'10.64.32.18' => 1, # es1008, master
 		'10.64.32.19' => 3, # es1009
 		'10.64.32.20' => 1, # es1010 snapshot host
 	),
@@ -510,7 +510,7 @@ $wgLBFactoryConf = array(
 );
 
 $wgDefaultExternalStore = array(
-	# es2 maintenance 'DB://cluster24',
+	'DB://cluster24',
 	'DB://cluster25',
 );
 $wgMasterWaitTimeout = 2;
