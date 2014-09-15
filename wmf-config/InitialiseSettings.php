@@ -7163,11 +7163,6 @@ $wgConf->settings = array(
 		),
 		'translator' => array( 'editinterface' => true, ),
 	),
-	'iswiki' => array(
-		'sysop' => array(
-			'renameuser' => true,
-		)
-	),
 	// http://bugzilla.wikimedia.org/show_bug.cgi?id=5836
 	// http://bugzilla.wikimedia.org/show_bug.cgi?id=11326
 	'itwiki' => array(
@@ -13847,6 +13842,13 @@ $wgConf->settings = array(
 	'default' => true,
 	'labswiki' => false,
 	'private' => false,
+),
+
+// Only allow local 'crats to rename on non-CentralAuth wikis
+'wmgAllowLocalRenameuser' => array(
+	'default' => false,
+	'private' => true,
+	'fishbowl' => true,
 ),
 
 ### End (roughly) of general extensions ########################

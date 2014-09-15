@@ -1019,6 +1019,7 @@ if ( $wmgUseDPL ) {
 }
 
 include( $IP . '/extensions/Renameuser/Renameuser.php' );
+$wgGroupPermissions['bureaucrat']['renameuser'] = $wmgAllowLocalRenameuser;
 
 if ( $wmgUseSpecialNuke ) {
 	include( $IP . '/extensions/Nuke/Nuke.php' );
