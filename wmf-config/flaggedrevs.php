@@ -26,14 +26,6 @@ $wgGroupPermissions['sysop']['stablesettings'] = false; // -aaron 3/20/10
 
 $wgEnableValidationStatisticsUpdates = false;
 
-# Rights for Bureaucrats (b/c)
-if ( !in_array( 'reviewer', $wgAddGroups['bureaucrat'] ) ) {
-	$wgAddGroups['bureaucrat'][] = 'reviewer'; // promote to full reviewers
-}
-if ( !in_array( 'reviewer', $wgRemoveGroups['bureaucrat'] ) ) {
-	$wgRemoveGroups['bureaucrat'][] = 'reviewer'; // demote from full reviewers
-}
-
 ///////////////////////////////////////
 // Wiki-specific configurations
 
@@ -768,4 +760,15 @@ elseif ( $wgDBname == 'zh_classicalwiki' ) {}
 
 
 # All wikis...
+
+# Rights for Bureaucrats (b/c)
+if ( isset ( $wgGroupPermissions['reviewer'] ) ) {
+	if ( !in_array( 'reviewer', $wgAddGroups['bureaucrat'] ) ) {
+		$wgAddGroups['bureaucrat'][] = 'reviewer'; // promote to full reviewers
+	}
+	if ( !in_array( 'reviewer', $wgRemoveGroups['bureaucrat'] ) ) {
+		$wgRemoveGroups['bureaucrat'][] = 'reviewer'; // demote from full reviewers
+	}
+}
+
 $wgFlaggedRevsStatsAge = false;
