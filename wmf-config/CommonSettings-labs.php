@@ -218,10 +218,6 @@ if ( $wmgUsePageImages ) {
 	);
 }
 
-if ( $wmgUseFundraisingTranslateWorkflow ) {
-	include "$IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php";
-}
-
 if ( $wmgUseSentry ) {
 	require_once( "$IP/extensions/Sentry/Sentry.php" );
 	$wgSentryDsn = $wmgSentryDsn;
