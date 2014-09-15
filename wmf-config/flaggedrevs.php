@@ -5,8 +5,7 @@
 # It's set up this way to allow a cron job on terbium to easily determine a
 # list of wikis it needs to run updateStats.php on
 
-$path = "$IP/extensions/FlaggedRevs/FlaggedRevs.php";
-include( $path );
+include( "$IP/extensions/FlaggedRevs/FlaggedRevs.php" );
 
 ///////////////////////////////////////
 // Common configuration
