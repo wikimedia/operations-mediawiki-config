@@ -481,12 +481,6 @@ return array(
 		'wiki' => true,
 	),
 
-	// testing FundraisingTranslateWorkflow
-	'wmgUseFundraisingTranslateWorkflow' => array(
-		'default' => false,
-		'metawiki' => true,
-	),
-
 	'wmgUsePetition' => array(
 		'default' => false,
 		'metawiki' => true,
