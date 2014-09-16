@@ -9,7 +9,7 @@ require_once( __DIR__ . '/updateBranchPointers' );
  * Delete various symlinks created by checkoutMediaWiki.
  *
  * The first argument is target path (relative to MEDIAWIKI_STAGING_DIR)
- * storing the local copy of the SVN checkout. This is typically of the format "php-X.XX".
+ * storing the local copy of the git checkout. This is typically of the format "php-X.XX".
  *
  * @return void
  */
@@ -36,7 +36,7 @@ function deleteMediaWiki() {
 
 	echo "Deleting symlink files for MediaWiki install at $destIP...\n\n";
 
-	# Check the destination path of the SVN checkout...
+	# Check the destination path of the git checkout...
 	if ( !file_exists( $destIP ) ) {
 		print "No MediaWiki install at $destIP.\n";
 		exit( 1 );
