@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_c413bfb7",
+        "filename": "multiversion/MWMultiVersion.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 251,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-09-16T15:47:13Z",
+      "side": 1,
+      "message": "Already updated",
+      "revId": "487059663a1aeeaf213cfed05fdc11ba8244f696",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_a42c33f3",
+        "filename": "multiversion/activeMWVersions.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-09-16T15:47:13Z",
+      "side": 1,
+      "message": "Already updated",
+      "revId": "487059663a1aeeaf213cfed05fdc11ba8244f696",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_441fcfba",
+        "filename": "multiversion/checkoutMediaWiki.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-09-16T15:47:13Z",
+      "side": 1,
+      "message": "Already updated",
+      "revId": "487059663a1aeeaf213cfed05fdc11ba8244f696",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e2fb78d_c48a9fe3",
+        "filename": "multiversion/deleteMediaWiki",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-09-16T15:47:13Z",
+      "side": 1,
+      "message": "Already updated",
+      "revId": "487059663a1aeeaf213cfed05fdc11ba8244f696",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

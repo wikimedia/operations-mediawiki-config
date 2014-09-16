@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e2fb78d_048547d4",
+        "filename": "multiversion/defines.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-09-16T15:47:13Z",
+      "side": 0,
+      "message": "All replaced/renamed/whatever",
+      "revId": "dad1bd0040cc1a8b6aecc27b336b832c258cec6d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
