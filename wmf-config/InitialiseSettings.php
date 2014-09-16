@@ -13373,15 +13373,9 @@ $wgConf->settings = array(
 ),
 
 'wmgUseUserMerge' => array(
-	'default' => false,
-	'wikivoyage' => true,
-	'eswikivoyage' => false,
-	'hewikivoyage' => false,
-	'plwikivoyage' => false,
-	'ptwikivoyaye' => false,
-	'rowikivoyage' => false,
-	'ukwikivoyage' => false,
-	'zhwikivoyage' => false,
+	'default' => true,
+	'private' => false,
+	'fishbowl' => false,
 ),
 
 'wmgUseEventLogging' => array(
