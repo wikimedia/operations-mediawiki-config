@@ -13207,6 +13207,7 @@ $wgConf->settings = array(
 	'enwiki' => true,
 	'frwiki' => true,
 	'hewiki' => true,
+	'outreachwiki' => true,
 ),
 'wmgFlowEditorList' => array(
 	// Disable VE inside flow, leaving only the wikitext editor
