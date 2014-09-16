@@ -30,9 +30,10 @@ Split by cluster:
 	s7.dblist
 */
 
-require_once( dirname( __FILE__ ) . '/multiversion/MWRealm.php' );
+require_once( __DIR__ . '/multiversion/MWRealm.php' );
+require_once( __DIR__ . '/multiversion/defines.php' );
 
-$base = "/a/common";
+$base = MEDIAWIKI_STAGING_DIR;
 
 $defaultCluster = 's3';
 $clusterOverrides = loadClusterList(getRealmSpecificFilename("$base/wmf-config/db.php"));
@@ -67,7 +68,7 @@ foreach ($all as $wiki) {
 		$cluster = $defaultCluster;
 	}
 	$clusterAssignments[$cluster][] = $wiki;
-	
+
 	if (in_array($wiki, $special)) {
 		$specialMatch[] = $wiki;
 		continue;
@@ -107,12 +108,12 @@ function loadClusterList($file) {
 
 function listOut($group, $list, $print = true) {
 	global $base;
-	
+
 	$filename = getRealmSpecificFilename("$base/$group.dblist");
 	if ( $print ) {
 		printf("Listing %d wikis in %s...\n", count($list), $filename);
 	}
-	
+
 	$out = fopen("$filename.new", "xt");
 	if ($out) {
 		sort($list);
@@ -120,7 +121,7 @@ function listOut($group, $list, $print = true) {
 			fwrite($out, "$wiki\n");
 		}
 		fclose($out);
-		
+
 		if (file_exists("$filename.bak")) {
 			unlink("$filename.bak");
 		}

@@ -161,9 +161,6 @@ PHP;
 		print "Directory already exists: $l10nDir\n";
 	}
 
-	# Install logmsg hook
-	exec( '../logmsg-git-hook --install' );
-
 	print "\nMediaWiki $dstVersionNum, from $gitVersion, successfully checked out.\n";
 }
 
