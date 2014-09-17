@@ -14,4 +14,17 @@ $wgObjectCaches['memcached-pecl'] = array(
 	'retry_timeout' => -1
 );
 
+$wgBloomFilterStores['main'] = array(
+	'cacheId'      => 'main-v1',
+	'class'        => 'BloomCacheRedis',
+	'redisServers' => array(
+		'10.64.0.162:6379', // master; rbf1001
+		'10.64.0.163:6379' // slave; rbf1002
+	),
+	'redisConfig'  => array(
+		'password' => $wmgRedisPassword,
+		'connectTimeout' => .25
+	)
+);
+
 # vim: set sts=4 sw=4 et :
