@@ -11913,6 +11913,8 @@ $wgConf->settings = array(
 'wmgUseGraph' => array(
 	'default' => false,
 	'collabwiki' => true,
+	'labswiki' => true,
+	'metawiki' => true,
 	'zerowiki' => true,
 ),
 
