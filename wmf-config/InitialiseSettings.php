@@ -13694,7 +13694,6 @@ $wgConf->settings = array(
 	'dewiki' => false,
 	'enwiki' => false,
 	'frwiki' => false,
-	'ruwiki' => false,
 	'zhwiki' => false,
 ),
 
