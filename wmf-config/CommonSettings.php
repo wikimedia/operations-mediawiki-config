@@ -16,7 +16,7 @@
 # To minimize damage on fatal PHP errors, output a default no-cache header
 # It will be overridden in cases where we actually specify caching behavior.
 #
-# More modern PHP versions will send a 500 result code on fatal erorr,
+# More modern PHP versions will send a 500 result code on fatal error,
 # at least sometimes, but what we're running will send a 200.
 if( PHP_SAPI != 'cli' ) {
 	header( "Cache-control: no-cache" );
