@@ -2729,6 +2729,8 @@ if ( $wmgZeroPortal ) {
 		$wgGroupPermissions['zeroscriptips']['jsonconfig-flush'] = true;
 		$wgGroupPermissions['zeroscriptips'] = $wgGroupPermissions['zeroscriptips'] + $zpUserRights;
 
+		$wgZeroPortalImpersonateUser = 'Impersonator';
+
 		unset( $zpUserRights );
 	} else {
 		// metawiki
