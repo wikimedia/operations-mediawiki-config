@@ -57,6 +57,8 @@ $wgCirrusSearchBoostLinks = $wmgCirrusSearchBoostLinks;
 $wgCirrusSearchWeights = array_merge( $wgCirrusSearchWeights, $wmgCirrusSearchWeightsOverrides );
 $wgCirrusSearchPowerSpecialRandom = $wmgCirrusSearchPowerSpecialRandom;
 $wgCirrusSearchAllFields = $wmgCirrusSearchAllFields;
+$wgCirrusSearchNamespaceWeights = array_merge( $wgCirrusSearchNamespaceWeights,
+	$wmgCirrusSearchNamespaceWeightOverrides );
 
 // Enable cache warming for wikis with more than one shard.  Cache warming is good
 // for smoothing out I/O spikes caused by merges at the cost of potentially polluting
