@@ -5,6 +5,8 @@ $wgMainCacheType = 'memcached-pecl';
 $wgMemCachedPersistent = false;
 $wgMemCachedTimeout = 0.25 * 1e6;  // 250kμs (a quarter of a second).
 
+$wgMemCachedServers = array( '127.0.0.1:11212' );
+
 $wgObjectCaches['memcached-pecl'] = array(
 	'class'      => 'MemcachedPeclBagOStuff',
 	'serializer' => 'php',
