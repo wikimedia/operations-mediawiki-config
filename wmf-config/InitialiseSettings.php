@@ -2094,6 +2094,7 @@ $wgConf->settings = array(
 	'kuwikiquote'   => 'Wîkîgotin',
 	'kuwiktionary'  => 'Wîkîferheng',
 	'kvwiki'	=> 'Википедия',
+	'labswiki'	=> 'Wikitech',
 	'lawiki'	=> 'Vicipaedia',
 	'lawikibooks'   => 'Vicilibri',
 	'lawikiquote'   => 'Vicicitatio',
