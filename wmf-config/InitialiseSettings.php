@@ -13772,10 +13772,13 @@ $wgConf->settings = array(
 
 'wmgCirrusSearchMaxShardsPerNode' => array(
 	'default' => array(),
+	'commonswiki' => array( 'file' => 1 ),
 	'dewiki' => array( 'content' => 1 ),
 	'enwiki' => array( 'content' => 1 ),
 	'eswiki' => array( 'content' => 1 ),
 	'frwiki' => array( 'content' => 1 ),
+	'nlwiki' => array( 'content' => 1 ),
+	'ruwiki' => array( 'content' => 1 ),
 	'zhwiki' => array( 'content' => 1 ),
 ),
 
