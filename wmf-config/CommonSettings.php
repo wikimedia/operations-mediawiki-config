@@ -2763,7 +2763,7 @@ if ( $wmgUseGraph ) {
 			'wikivoyage.org',
 			'wiktionary.org',
 		);
-	$wgJsonConfigModels['Graph.JsonConfig'] = 'graph\Content';
+	$wgJsonConfigModels['Graph.JsonConfig'] = 'Graph\Content';
 	$wgJsonConfigs['Graph.JsonConfig'] = array(
 			'namespace' => 484,
 			'nsName' => 'Graph',
