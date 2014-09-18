@@ -10719,7 +10719,8 @@ $wgConf->settings = array(
 		'*.universiteitsmuseum.nl',         // Universiteits Museum Utrecht
 		'data.kb.se',                       // National Library of Sweden Open Data - bug 69439
 		'www.veikkos-archiv.com',           // Veikkos-archiv - bug 69777
-		'*.scienceimage.csiro.au'           // CSIRO - bug 70771
+		'*.scienceimage.csiro.au',          // CSIRO - bug 70771
+		'www.soumaya.com.mx',               // Museo Soumaya - bug 70986
 	),
 ),
 
