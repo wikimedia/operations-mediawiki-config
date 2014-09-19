@@ -6954,6 +6954,7 @@ $wgConf->settings = array(
 		'massmessage-sender' => array( // bug 58962
 			'massmessage' => true,
 		),
+		'OTRS-member' => array( 'read' => true ), // bug 70386
 	),
 	'+enwikibooks' => array(
 		// 'rollbacker' 	=> array( 'rollback' => true ),
@@ -7991,7 +7992,7 @@ $wgConf->settings = array(
 	),
 	'+enwiki' => array(
 		'bureaucrat' => array( 'accountcreator' ),
-		'sysop' => array( 'abusefilter', 'accountcreator', 'autoreviewer', 'confirmed', 'filemover', 'reviewer', 'rollbacker', 'templateeditor', 'massmessage-sender' ),
+		'sysop' => array( 'abusefilter', 'accountcreator', 'autoreviewer', 'confirmed', 'filemover', 'reviewer', 'rollbacker', 'templateeditor', 'massmessage-sender', 'OTRS-member' ),
 	),
 	'+enwikibooks' => array(
 		'sysop' => array( 'transwiki', 'uploader' ),
@@ -8510,7 +8511,7 @@ $wgConf->settings = array(
 	),
 	'+enwiki' => array(
 		'bureaucrat' => array( 'ipblock-exempt', 'accountcreator', 'sysop' ),
-		'sysop' => array( 'rollbacker', 'accountcreator', 'abusefilter', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender' ),
+		'sysop' => array( 'rollbacker', 'accountcreator', 'abusefilter', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender', 'OTRS-member' ),
 	),
 	'+enwikibooks' => array(
 		'sysop' => array( 'transwiki', 'uploader', ),
