@@ -46,6 +46,3 @@ $wgJobQueueAggregator = array(
 	)
 );
 
-// Moved to its own job pipeline
-$wgJobTypesExcludedFromDefaultQueue[] = 'ParsoidCacheUpdateJobOnEdit';
-$wgJobTypesExcludedFromDefaultQueue[] = 'ParsoidCacheUpdateJobOnDependencyChange';
