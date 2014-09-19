@@ -18,6 +18,9 @@ if ( isset( $_REQUEST['forceprofile'] ) ) {
 	$wgProfiler['class'] = 'ProfilerSimpleUDP';
 	// $IP is something like '/srv/mediawiki/php-1.19'
 	$version = str_replace( 'php-', '', basename( $IP ) );
+	if ( defined( 'HHVM_VERSION' ) ) {
+		$version .= '-hhvm';
+	}
 	if ( strpos( $_SERVER['REQUEST_URI'], '/w/thumb.php' ) !== false ) {
 		$wgProfiler['profileID'] = "thumb-$version";
 	} elseif ( strpos( $_SERVER['REQUEST_URI'], '/rpc/RunJobs.php' ) !== false ) {
