@@ -311,12 +311,14 @@ $wgDBerrorLogTZ = 'UTC';
 if ( !isset( $wgLocaltimezone ) ) {
 	$wgLocaltimezone = 'UTC';
 }
-# Ugly hack warning! This needs smoothing out.
-if ( $wgLocaltimezone ) {
-	$oldtz = getenv( 'TZ' );
-	putenv( "TZ=$wgLocaltimezone" );
-	$wgLocalTZoffset = date( 'Z' ) / 60;
-	putenv( "TZ=$oldtz" );
+
+if ( $wgLocaltimezone !== 'UTC' ) {
+	$wgLocalTZOffset = timezone_offset_get(
+		timezone_open( $wgLocaltimezone ),
+		date_create( 'now', timezone_open( 'UTC' ) )
+	) / 60;
+} else {
+	$wgLocalTZOffset = 0;
 }
 
 $wgShowIPinHeader = false;
