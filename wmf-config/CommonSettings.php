@@ -1503,15 +1503,13 @@ if ( $wmgUseCentralNotice ) {
 	// a two week expiration until 2013-01-22 whereupon we introduced
 	// a year long expiration. For the 2013 fundraiser starting
 	// 2013-12-02 we're now using a 10 month expiration.
-	$wgNoticeCookieShortExpiry = 1209600; // 2 weeks
-	$wgNoticeCookieLongExpiry = 25920000; // 10 months
-	// New variable: see https://gerrit.wikimedia.org/r/#/c/144853
+	// For the 2014 fundraiser it's 250 days, though we can change it
+	// retroactively as the cookie value now has a create date and reason.
 	// 'close' duration is used for the banner X button
 	// 'donate' duration is used for cookie set on Thank You page
-	// After above change is deployed, Short and LongExpiry can be removed.
 	$wgNoticeCookieDurations = array(
 		'close' => 1209600, // 2 weeks
-		'donate' => 25920000, // 10 months
+		'donate' => 21600000, // 250 days
 	);
 
 	// Bug 16821
