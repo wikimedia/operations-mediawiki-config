@@ -7647,7 +7647,11 @@ $wgConf->settings = array(
 			'upload' => true, // Exception to bug 12556, used for testing of upload tools
 		),
 		'templateeditor' => array( 'templateeditor' => true, 'tboverride' => true, ), //bug 59084
-		'sysop' => array( 'deleterevision' => true, 'templateeditor' => true ),
+		'sysop' => array(
+			'deleterevision' => true,
+			'templateeditor' => true,
+			'securepoll-create-poll' => true,
+		),
 		'reviewer' => array(
 			'stablesettings' => true,
 		),
