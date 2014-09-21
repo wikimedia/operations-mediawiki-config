@@ -27,6 +27,22 @@ $wmgThrottlingExceptions[] = array( // bug 66822
 	'dbname' => array( 'tewiki' ),
 	'value'  => 200,
 );
+
+$wmgThrottlingExceptions[] = array( // bug 71090
+	'from'   => '2014-09-21T08:00 +5:30',
+	'to'     => '2014-09-21T20:00 +5:30',
+	'IP'     => array( '182.72.146.126' ),
+	'dbname' => array( 'enwiki' ),
+	'value'  => 150,
+);
+
+$wmgThrottlingExceptions[] = array( // bug 71090
+	'from'   => '2014-09-22T08:00 +5:30',
+	'to'     => '2014-09-27T20:00 +5:30',
+	'IP'     => array( '61.12.40.10', '123.63.128.158', '202.65.142.14' ),
+	'dbname' => array( 'enwiki' ),
+	'value'  => 100,
+);
 ## Add throttling definitions above.
 
 ## Helper methods:
