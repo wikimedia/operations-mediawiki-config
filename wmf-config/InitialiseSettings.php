@@ -1154,7 +1154,7 @@ $wgConf->settings = array(
 	'enwikinews' => false,
 	'enwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'enwikivoyage' => '//en.wikivoyage.org/wiki/Wikivoyage:Upload_file',
-	'eowiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard', // bug 69055
+	'eowiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=eo', // bug 69055
 	'eswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es',
 	'eswikibooks' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es',
 	'eswikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es', // bug 42933
