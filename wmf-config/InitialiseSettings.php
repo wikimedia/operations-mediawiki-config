@@ -11919,6 +11919,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'collabwiki' => true,
 	'labswiki' => true,
+	'mediawikiwiki' => true,
 	'metawiki' => true,
 	'zerowiki' => true,
 ),
