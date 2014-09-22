@@ -1406,8 +1406,8 @@ $wgHooks['PrefsPasswordAudit'][] = function( $user, $pass, $status ) {
 };
 
 if ( file_exists( '/etc/wikimedia-image-scaler' ) ) {
-	$wgMaxShellMemory = 400 * 1024;
-	$wgMaxShellFileSize = 400 * 1024;
+	$wgMaxShellMemory = 512 * 1024;
+	$wgMaxShellFileSize = 512 * 1024;
 }
 $wgMaxShellTime = 50; // so it times out before PHP and curl and squid
 
