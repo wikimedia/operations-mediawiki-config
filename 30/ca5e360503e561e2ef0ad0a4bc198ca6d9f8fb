@@ -1,0 +1,9 @@
+Verified+2: jenkins-bot
+Code-Review+2: Nikerabbit <niklas.laxstrom@gmail.com>
+Code-Review+1: KartikMistry <kartik.mistry@gmail.com>
+Code-Review+1: Jsahleen <jsahleen@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Mon, 22 Sep 2014 16:26:35 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/161968
+Project: operations/mediawiki-config
+Branch: refs/heads/master
