@@ -95,7 +95,7 @@ if ( $wmgUseFlow ) {
 if ( $wmgUseContentTranslation ) {
 	require_once( "$IP/extensions/ContentTranslation/ContentTranslation.php" );
 	$wgContentTranslationServerURL = 'https://cxserver-beta.wmflabs.org';
-	$wgContentTranslationDomainTemplate['cx'] = 'https://cxserver-beta.wmflabs.org/page/$1/$2';
+	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org/page/$1/$2';
 	// Used for html2wikitext when publishing
 	$wgContentTranslationParsoid = array(
 		'url' => $wmgParsoidURL,
