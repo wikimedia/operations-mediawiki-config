@@ -13816,6 +13816,13 @@ $wgConf->settings = array(
 	'default' => array( 'build' => true, 'use' => true ),
 ),
 
+'wmgCirrusSearchNamespaceWeightOverrides' => array(
+	'default' => array(),
+	'wikisource' => array(
+		'author' => 1,
+	),
+),
+
 'wmgUseCite' => array(
 	'default' => true,
 	'loginwiki' => false,
