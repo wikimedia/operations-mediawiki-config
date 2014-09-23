@@ -1042,12 +1042,12 @@ if ( $wmgUseTorBlock ) {
 	$wgTorDisableAdminBlocks = false;
 	$wgTorTagChanges = false;
 	$wgGroupPermissions['user']['torunblocked'] = false;
-	$wgTorBlockProxy = 'url-downloader.wikimedia.org:8080';
+	$wgTorBlockProxy = $wgCopyUploadProxy;
 }
 
 if ( $wmgUseRSSExtension ) {
 	include( "$IP/extensions/RSS/RSS.php" );
-	$wgRSSProxy = 'url-downloader.wikimedia.org:8080';
+	$wgRSSProxy = $wgCopyUploadProxy;
 	$wgRSSUrlWhitelist = $wmgRSSUrlWhitelist;
 }
 
