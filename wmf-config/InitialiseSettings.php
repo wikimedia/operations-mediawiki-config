@@ -11496,6 +11496,16 @@ $wgConf->settings = array(
 	),
 ),
 
+// ----------------- ImageMetrics -----------------
+
+'wmgUseImageMetrics' => array(
+	'default' => false,
+),
+
+'wmgImageMetricsSamplingFactor' => array(
+	'default' => 1000,
+),
+
 // -------------- VisualEditor start --------------
 
 'wmgUseParsoid' => array(

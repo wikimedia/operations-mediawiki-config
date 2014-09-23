@@ -3,5 +3,6 @@ $IP/extensions/CiteThisPage/CiteThisPage.php
 $IP/extensions/ContentTranslation/ContentTranslation.php
 $IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php
 $IP/extensions/GlobalCssJs/GlobalCssJs.php
+$IP/extensions/ImageMetrics/ImageMetrics.php
 $IP/skins/MonoBook/MonoBook.php
 $IP/skins/Vector/Vector.php
