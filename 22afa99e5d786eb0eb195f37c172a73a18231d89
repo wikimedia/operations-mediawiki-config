@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_740c1a3e",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 534,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2014-09-23T03:48:09Z",
+      "side": 1,
+      "message": "In-\u003eOut; fixed in I13428b6525c77.",
+      "revId": "22afa99e5d786eb0eb195f37c172a73a18231d89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
