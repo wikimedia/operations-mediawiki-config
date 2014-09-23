@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_df54ffcb",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8512,
+      "author": {
+        "id": 1725
+      },
+      "writtenOn": "2014-09-23T12:29:16Z",
+      "side": 1,
+      "message": "\u0027sysop\u0027 \u003d\u003e array( \u0027rollbacker\u0027, \u0027accountcreator\u0027, \u0027abusefilter\u0027, \u0027autoreviewer\u0027, \u0027co\nnfirmed\u0027, \u0027reviewer\u0027, \u0027filemover\u0027, \u0027templateeditor\u0027, \u0027massmessage-sender\u0027",
+      "revId": "3475946235dfe60e18f12dc170d92892c149c569",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
