@@ -13269,6 +13269,7 @@ $wgConf->settings = array(
 		'Talk:MediaWiki 1.25',
 		'User talk:Jdforrester (WMF)',
 		'Talk:HHVM/About',
+		'Talk:Mediawiki UI',
 	),
 	'enwiki' => array( // Bug 60178
 		'Wikipedia talk:WikiProject Breakfast',
