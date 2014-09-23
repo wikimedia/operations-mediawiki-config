@@ -308,6 +308,14 @@ return array(
 		'default' => 1,
 	),
 
+	'wmgUseImageMetrics' => array(
+		'default' => true,
+	),
+
+	'wmgImageMetricsSamplingFactor' => array(
+		'default' => 1,
+	),
+
 	'wmgUseVectorBeta' => array(
 		'default' => true,
 	),

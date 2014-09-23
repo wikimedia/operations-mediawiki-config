@@ -1926,6 +1926,11 @@ if ( $wmgUseMultimediaViewer ) {
 	}
 }
 
+if ( $wmgUseImageMetrics ) {
+	require_once( "$IP/extensions/ImageMetrics/ImageMetrics.php" );
+	$wgImageMetricsSamplingFactor = $wmgImageMetricsSamplingFactor;
+}
+
 if ( $wmgUsePopups ) {
 	require_once( "$IP/extensions/Popups/Popups.php" );
 }
