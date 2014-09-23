@@ -535,7 +535,7 @@ require_once "$IP/skins/MonoBook/MonoBook.php";
 require_once "$IP/skins/Modern/Modern.php";
 require_once "$IP/skins/CologneBlue/CologneBlue.php";
 
-wfProfileIn( "$fname-skin-include1" );
+wfProfileOut( "$fname-skin-include1" );
 wfProfileIn( "$fname-ext-include1" );
 
 if ( $wmgUseTimeline ) {
