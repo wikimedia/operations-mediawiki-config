@@ -680,6 +680,7 @@ if ( $wmgUseFundraisingTranslateWorkflow ) {
 
 if ( $wmgUseGadgets ) {
 	include( "$IP/extensions/Gadgets/Gadgets.php" );
+	$wgGadgetsCaching = false;
 }
 
 if ( $wmgUseMwEmbedSupport ) {
