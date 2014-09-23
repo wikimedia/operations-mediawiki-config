@@ -7065,6 +7065,7 @@ $wgConf->settings = array(
 			'protect' => true,
 			'undelete' => true,
 		), // bug 69411
+		'OTRS-member' => array( 'read' => true ), // bug 54368
 	),
 	'fawikinews' => array(
 		'rollbacker' => array( 'rollback' => true ),
@@ -8038,7 +8039,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'flood', 'patroller', 'rollbacker' ),
 	),
 	'+fawiki' => array(
-		'bureaucrat' => array( 'patroller', 'Image-reviewer', 'botadmin' ), // bug 64532 and 69411
+		'bureaucrat' => array( 'patroller', 'Image-reviewer', 'botadmin', 'OTRS-member' ), // bug 64532, 69411 and 54368
 		'sysop' => array( 'rollbacker', 'autopatrol', 'uploader' ), // bug 23233, 29007 and 69171
 		'botadmin' => array( 'patroller', 'Image-reviewer', 'rollbacker', 'autopatrol', 'uploader' ), // bug 69411
 	),
@@ -8558,7 +8559,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker', 'flood' ),
 	),
 	'+fawiki' => array(
-		'bureaucrat' => array( 'patroller', 'Image-reviewer', 'botadmin' ), // bug 64532 and 69411
+		'bureaucrat' => array( 'patroller', 'Image-reviewer', 'botadmin', 'OTRS-member' ), // bug 64532, 69411 and 54368
 		'sysop' => array( 'rollbacker', 'autopatrol', 'uploader' ), // bug 23233, 29007 and 69171
 		'botadmin' => array( 'patroller', 'Image-reviewer', 'rollbacker', 'autopatrol', 'uploader' ), // bug 69411
 	),
