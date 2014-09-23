@@ -393,8 +393,8 @@ include( $IP . '/extensions/PagedTiffHandler/PagedTiffHandler.php' );
 $wgTiffUseTiffinfo = true;
 $wgTiffMaxMetaSize = 1048576;
 
-$wgMaxImageArea = 5e7; // 50MP
-$wgMaxAnimatedGifArea = 5e7; // 50MP
+$wgMaxImageArea = 75e6; // 75MP
+$wgMaxAnimatedGifArea = 75e6; // 75MP
 
 $wgFileExtensions = array_merge( $wgFileExtensions, $wmgFileExtensions );
 
