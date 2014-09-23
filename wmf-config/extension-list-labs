@@ -5,3 +5,4 @@ $IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php
 $IP/extensions/GlobalCssJs/GlobalCssJs.php
 $IP/skins/MonoBook/MonoBook.php
 $IP/skins/Vector/Vector.php
+$IP/extensions/ImageMetrics/ImageMetrics.php
