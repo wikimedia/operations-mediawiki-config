@@ -93,10 +93,15 @@ if ( $wmgUseWikibaseRepo ) {
 
 	// Bug 70346
 	$wgPropertySuggesterDeprecatedIds = array(
+		45, // (OBSOLETE) grandparent
 		70, // (OBSOLETE) order
+		71, // (OBSOLETE) family
+		74, // (OBSOLETE) genus
 		107, // (OBSOLETE) main type (GND)
 		143, // imported from
+		643, // Genloc Chr (deprecated, use P1057)
 		741, // (OBSOLETE) playing hand
+		1384, // deleted
 	);
 }
 
