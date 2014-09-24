@@ -1047,7 +1047,11 @@ if ( $wmgUseTorBlock ) {
 
 if ( $wmgUseRSSExtension ) {
 	include( "$IP/extensions/RSS/RSS.php" );
-	$wgRSSProxy = $wgCopyUploadProxy;
+	// Only enable the proxy on foundationwiki since the blog
+	// is now on an external host
+	if ( $wgDBname === 'foundationwiki' ) {
+		$wgRSSProxy = $wgCopyUploadProxy;
+	}
 	$wgRSSUrlWhitelist = $wmgRSSUrlWhitelist;
 }
 
