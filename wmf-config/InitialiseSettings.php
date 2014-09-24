@@ -7129,6 +7129,7 @@ $wgConf->settings = array(
 			'patrolmarks' => true, // bug 27918
 			'autopatrol' => true, // bug 60305
 			'rollback' => true, // bug 60305
+			'unwatchedpages' => true, // bug 71193
 			),
 		'autopatrolled' => array( 'autopatrol' => true ), // bug 27918
 	),
