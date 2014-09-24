@@ -44,7 +44,7 @@ $wgJobBackoffThrottling['cirrusSearchLinksUpdate'] = 0.75;
 # Also engage a delay for the Cirrus job that counts incoming links to pages when
 # pages are newly linked or unlinked.  Too many link count queries at once could flood
 # Elasticsearch.
-$wgJobBackoffThrottling['cirrusSearchLinksUpdateSecondary'] = 0.25;
+$wgJobBackoffThrottling['cirrusSearchIncomingLinkCount'] = 0.25;
 
 # Ban the hebrew plugin, it is unstable
 $wgCirrusSearchBannedPlugins[] = 'elasticsearch-analysis-hebrew';
