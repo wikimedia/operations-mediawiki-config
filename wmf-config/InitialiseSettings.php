@@ -10729,6 +10729,7 @@ $wgConf->settings = array(
 		'*.scienceimage.csiro.au',          // CSIRO - bug 70771
 		'*.beeldbank.cultureelerfgoed.nl',  // Cultureel Erfgoed - bug 70840
 		'*.metilli.com',                    // Mart Museum - bug 71460
+		'*.nijmegen.nl',                    // Nijmegen - bug 71191
 	),
 ),
 
