@@ -7054,7 +7054,7 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true, 'move-categorypages' => true ), // bug 65728
 		'rollbacker' => array( 'rollback' => true ), // bug 23233
 		'autopatrol' => array( 'autopatrol' => true, 'move-categorypages' => true ), // bug 29007 and 65728
-		'Image-reviewer' => array( 'movefile' => true ), // bug 64532
+		'Image-reviewer' => array( 'movefile' => true, 'delete' => true ), // bug 64532 and 71229
 		'uploader' => array( 'upload' => true, 'reupload' => true, 'reupload-own' => true ), // bug 69171
 		'botadmin' => array(
 			'block' => true,
