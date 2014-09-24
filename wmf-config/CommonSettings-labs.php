@@ -185,4 +185,7 @@ if ( $wmgUseFundraisingTranslateWorkflow ) {
 	include( "$IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php" );
 }
 
+// Experimental
+$wgGadgetsCaching = false;
+
 } # end safeguard
