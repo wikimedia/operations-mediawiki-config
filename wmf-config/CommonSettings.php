@@ -1571,6 +1571,12 @@ if ( $wgDBname == 'enwiki' ) {
 	};
 }
 
+// Enable a "viewdeletedfile" userright for [[m:Global deleted image review]] (bug 14801)
+$wgAvailableRights[] = 'viewdeletedfile';
+$wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
+	return ( !in_array( $action, array( 'deletedhistory', 'deletedtext' ) ) || !$title->inNamespaces( NS_FILE, NS_FILE_TALK ) || !$user->isAllowed( 'viewdeletedfile' ) );
+};
+
 if ( $wmgUseCollection ) {
 	// PediaPress / PDF generation
 	include "$IP/extensions/Collection/Collection.php";
