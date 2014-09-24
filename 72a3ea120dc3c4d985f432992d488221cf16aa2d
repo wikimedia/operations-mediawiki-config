@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee62ffec_f6d3645f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 48
+      },
+      "writtenOn": "2014-09-24T09:12:01Z",
+      "side": 1,
+      "message": "wrap at \u003c\u003d60 chars (or at least \u003c\u003d65)\n\nbut maybe most of the line is unnecessary? (don\u0027t need to repeat stuff from first line I think. just mention GWT is enough and for anything else people can read the bug. IMO)",
+      "revId": "72a3ea120dc3c4d985f432992d488221cf16aa2d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee62ffec_16cf18b7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 48
+      },
+      "writtenOn": "2014-09-24T09:12:01Z",
+      "side": 1,
+      "message": "need a colon after \"Bug\" (should be \"Bug: 71191\"). and no blank lines after the \"Bug:\" line.",
+      "revId": "72a3ea120dc3c4d985f432992d488221cf16aa2d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
