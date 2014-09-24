@@ -27,7 +27,7 @@ if ( $wmgUseClusterJobqueue ) {
 	# The secondary update job has a delay of a few seconds to make sure that Elasticsearch
 	# has completed a refresh cycle between when the data that the job needs is added and
 	# when the job is run.
-	$wgJobTypeConf['cirrusSearchLinksUpdateSecondary'] = array( 'checkDelay' => true ) +
+	$wgJobTypeConf['cirrusSearchIncomingLinkCount'] = array( 'checkDelay' => true ) +
 		$wgJobTypeConf['default'];
 }
 
