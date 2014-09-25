@@ -2509,7 +2509,7 @@ if ( $wmgUseGettingStarted ) {
 
 	$wgGettingStartedRunTest = $wmgGettingStartedRunTest;
 	$wgTaskRecommendationsExperimentV1StartDate = 1410472800; // 9/11/2014 22:00:00
-	$wgTaskRecommendationsExperimentV1EndDate = 1411682400; // 9/25/2014 22:00:00
+	$wgTaskRecommendationsExperimentV1EndDate = 1411941600; // 9/28/2014 22:00:00
 }
 
 if ( $wmgUseGeoCrumbs ) {
