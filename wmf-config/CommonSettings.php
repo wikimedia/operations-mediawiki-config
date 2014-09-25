@@ -2737,6 +2737,7 @@ if ( $wmgZeroPortal ) {
 		$wgGroupPermissions['zeroscriptips'] = $wgGroupPermissions['zeroscriptips'] + $zpUserRights;
 
 		$wgZeroPortalImpersonateUser = 'Impersonator';
+		$wgZeroPortalEnableLuaExt = true;
 
 		unset( $zpUserRights );
 	} else {
