@@ -2132,7 +2132,11 @@ $wgCookieExpiration = 30 * 86400;
 
 if ( $wmgUseMath ) {
 	require_once( "$IP/extensions/Math/Math.php" );
-	$wgTexvc = "/usr/local/apache/uncommon/bin/texvc";
+
+	// Use the Debian-packaged texvc on Trusty. --Ori, 24-Sept-2014
+	$wgTexvc = defined( 'HHVM_VERSION' ) && $wmfRealm === 'production' ?
+		'/usr/bin/texvc' : '/usr/local/apache/uncommon/bin/texvc';
+
 	$wgMathTexvcCheckExecutable = "/usr/local/apache/uncommon/bin/texvccheck";
 	if ( $wgDBname === 'hewiki' ) {
 		$wgDefaultUserOptions['math'] = 0;
