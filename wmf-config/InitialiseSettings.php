@@ -12042,7 +12042,7 @@ $wgConf->settings = array(
 ),
 'wmgMFEnableWikiGrok' => array(
 	'default' => false,
-	'enwiki' => true, // prototype version is for en.wiki only
+	# 'enwiki' => true, // prototype version is for en.wiki only
 ),
 
 'wgExtraGenderNamespaces' => array(
