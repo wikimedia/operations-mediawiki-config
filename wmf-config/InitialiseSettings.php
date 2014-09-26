@@ -2379,9 +2379,6 @@ $wgConf->settings = array(
 	'+abwiki' => array(
 		'Wikipedia' => NS_PROJECT,
 	),
-	'+amwiki' => array(
-		100	<= 'በር',
-	),
 	'+angwiki' => array( // bug 56634, 58711
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
