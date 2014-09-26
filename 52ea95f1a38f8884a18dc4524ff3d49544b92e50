@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_665a6afb",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2014-09-26T21:20:07Z",
+      "side": 1,
+      "message": "It seems you can pass a list of servers separated by spaces. Probably for another change though.\n\nRelevant code:\n\nhttps://git.wikimedia.org/blob/mediawiki%2Fextensions%2FLdapAuthentication.git/942548516f56da3c61de3de689c097830c1a8b72/LdapAuthentication.php#L594\n\nIt is listed in examples as well:\n\nhttps://www.mediawiki.org/wiki/Extension:LDAP_Authentication/Configuration_Options#Domain.2C_server_and_connection_configuration_options",
+      "revId": "52ea95f1a38f8884a18dc4524ff3d49544b92e50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
