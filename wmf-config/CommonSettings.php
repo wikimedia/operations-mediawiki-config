@@ -1883,6 +1883,14 @@ if ( $wmgUseBetaFeatures ) {
 	require_once( "$IP/extensions/BetaFeatures/BetaFeatures.php" );
 	if ( $wmgBetaFeaturesWhitelist ) {
 		$wgBetaFeaturesWhitelist = $wmgBetaFeaturesWhitelist;
+
+		// Disabled until (at least) 30-Sept-2014; see bug 64415. -- ori & aude
+		if ( $wgDBname === 'wikidatawiki' ) {
+			$key = array_search( 'HHVM', $wgBetaFeaturesWhitelist );
+			if ( $key !== false ) {
+				unset( $wgBetaFeaturesWhitelist['HHVM'] );
+			}
+		}
 	}
 }
 
