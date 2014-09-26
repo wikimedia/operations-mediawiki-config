@@ -1898,8 +1898,9 @@ if ( $wmgUseBetaFeatures ) {
 		if ( $wgDBname === 'wikidatawiki' ) {
 			$key = array_search( 'HHVM', $wgBetaFeaturesWhitelist );
 			if ( $key !== false ) {
-				unset( $wgBetaFeaturesWhitelist['HHVM'] );
+				unset( $wgBetaFeaturesWhitelist[$key] );
 			}
+			unset( $key );
 		}
 	}
 }
