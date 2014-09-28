@@ -983,6 +983,7 @@ $wgConf->settings = array(
 
 	// Wikivoyage
 	'elwikivoyage' => '//upload.wikimedia.org/wikipedia/commons/f/fa/Wikivoyage-Logo-v3-small-el.png',
+	'fawikivoyage' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Wikivoyage-Logo-v3-fa.svg/153px-Wikivoyage-Logo-v3-fa.svg.png', // bug 71382
 	'hewikivoyage' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Wikivoyage-Logo-v3-he.png/153px-Wikivoyage-Logo-v3-he.png',
 	'plwikivoyage' => '//upload.wikimedia.org/wikipedia/commons/f/f2/Wikivoyage-Logo-v3-small-pl.png',
 	'zhwikivoyage' => '//upload.wikimedia.org/wikipedia/commons/3/3c/Wikivoyage-Logo-v3-zh-hans.png', // bug 59077
@@ -1099,6 +1100,7 @@ $wgConf->settings = array(
 	'eswikiquote' => false, // bug 9728
 	'eswikivoyage' => false, // bug 42933
 	'euwiki' => false, // bug 28609
+	'fawikivoyage' => false, // bug 71382
 	'itwikiquote' => false, // bug 12012
 	'jawikisource' => false, // bug 3572
 	'jawiktionary' => false, // bug 11775
@@ -1161,6 +1163,7 @@ $wgConf->settings = array(
 	'eswiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es', // bug 7152
 	'euwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=eu',
 	'fawiki' => '/wiki/ویکی‌پدیا:بارگذاری',
+	'fawikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=fa', // bug 71382
 	'frwiki' => '/wiki/Aide:Importer_un_fichier',
 	'guwiki' => false,
 	'hewikinews' => false,
@@ -1533,6 +1536,7 @@ $wgConf->settings = array(
 	'fawikinews' => 'ویکی‌خبر',
 	'fawikiquote' => 'ویکی‌گفتاورد',
 	'fawikisource' => 'ویکی‌نبشته',
+	'fawikivoyage' => 'ویکی‌سفر', // bug 71382
 	'fawiktionary' => 'ویکی‌واژه',
 	'fdcwiki' => 'Wikimedia FDC',
 	'fiwikibooks' => 'Wikikirjasto',
@@ -1994,6 +1998,7 @@ $wgConf->settings = array(
 	'fawikinews'	=> 'ویکی‌خبر',
 	'fawikiquote'   => 'ویکی‌گفتاورد',
 	'fawikisource'  => 'ویکی‌نبشته',
+	'fawikivoyage'  => 'ویکی‌سفر', // bug 71382
 	'fawiktionary'  => 'ویکی‌واژه',
 	'fiwikibooks'   => 'Wikikirjasto',
 	'fiwikinews'    => 'Wikiuutiset',
@@ -2299,6 +2304,7 @@ $wgConf->settings = array(
 	'eowikisource'  => 'Vikifontaro_diskuto',
 	'fawikinews' 	=> 'بحث_ویکی‌خبر',
 	'fawikisource' 	=> 'بحث_ویکی‌نبشته',
+	'fawikivoyage' 	=> 'بحث_ویکی‌سفر', // bug 71382
 	'fiwikiversity' => 'Keskustelu_Wikiopistosta',
 	'gagwiki'	=> 'Vikipediyanın_laflanması',
 	'guwikisource' 	=> 'વિકિસ્રોત_ચર્ચા',
@@ -5314,6 +5320,13 @@ $wgConf->settings = array(
 		115 => 'Translation_talk', // bug 64127
 	),
 	# @} end of wikisource wikis
+
+	// Wikivoyage @{
+	'fawikivoyage' => array( // Bug 71382
+		106 => 'عبارت‌نامه', // Phrasebook
+		107 => 'بحث_عبارت‌نامه', // Phrasebook talk
+	),
+	// @} end of wikivoyage wikis
 
 	// Wiktionary @{
 	'angwiktionary' => array( // bug 56634
