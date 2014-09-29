@@ -12043,6 +12043,7 @@ $wgConf->settings = array(
 ),
 'wmgMFEnableWikiGrok' => array(
 	'default' => false,
+	'testwiki' => true,
 	# 'enwiki' => true, // prototype version is for en.wiki only
 ),
 
