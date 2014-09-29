@@ -26,7 +26,7 @@ enableSemantics('wikitech');
 require_once( "$IP/extensions/LdapAuthentication/LdapAuthentication.php" );
 $wgAuth = new LdapAuthenticationPlugin();
 $wgLDAPDomainNames = array( 'labs');
-$wgLDAPServerNames = array( 'labs' => 'virt1000.wikimedia.org' );
+$wgLDAPServerNames = array( 'labs' => 'ldap-eqiad.wikimedia.org' );
 $wgLDAPSearchAttributes = array( 'labs' => 'cn');
 $wgLDAPBaseDNs = array( 'labs' => 'dc=wikimedia,dc=org' );
 $wgLDAPUserBaseDNs = array( 'labs' => 'ou=people,dc=wikimedia,dc=org' );
