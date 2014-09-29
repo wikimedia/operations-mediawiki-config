@@ -411,6 +411,9 @@ return array(
 	'wmgUseGuidedTour' => array(
 		'wikidatawiki' => true,
 	),
+	'wmgGettingStartedRedis' => array(
+		'default' => '10.68.16.146', // deployment-redis1; from mc-labs.php
+	),
 	// Enable anonymous editor acquisition experiment across labs
 	'wmgGettingStartedRunTest' => array(
 		'default' => true,

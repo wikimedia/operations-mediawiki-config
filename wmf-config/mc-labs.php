@@ -31,6 +31,9 @@ $wgBloomFilterStores['main'] = array(
 	'cacheId'      => 'main-v1',
 	'class'        => 'BloomCacheRedis',
 	'redisServers' => array(
+		// If you update this server's IP or decommission it, please coordinate
+		// with GettingStarted maintainers so testing on Beta Labs is not
+		// interrupted.
 		'10.68.16.146:6379', // master; deployment-redis1
 	),
 	'redisConfig'  => array(
