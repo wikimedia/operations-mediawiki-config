@@ -168,7 +168,6 @@ if ( $wmgUseCollection ) {
 	// MwLib (PediaPress PDF Generation) is still done on the production servers
 
 	$wgCollectionFormatToServeURL['rdf2latex'] = 'http://deployment-pdf01:8000';
-	$wgCollectionPortletFormats[] = 'rl';
 }
 
 if ( $wmgUsePageImages ) {
