@@ -10387,6 +10387,7 @@ $wgConf->settings = array(
 	'srwiki' => true, # Per Brion on 2009-04-03
 	'strategywiki' => true, # 2009-11-07, Bug 21361
 	'svwiki'    => true, # 2009-03-24 Bug 18023
+	'svwikiversity' => true, // bug 64994
 	'tawiki' => true,
 	'tewiki' => true,
 	'thwiki'    => true,
