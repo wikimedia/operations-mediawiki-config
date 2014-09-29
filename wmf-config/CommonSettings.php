@@ -2531,10 +2531,21 @@ if ( $wmgUseSubpageSortkey ) {
 
 if ( $wmgUseGettingStarted ) {
 	require_once( "$IP/extensions/GettingStarted/GettingStarted.php" );
-	if ( !empty( $sessionRedis[$wmfDatacenter] ) ) {
+	if ( isset( $wmgGettingStartedRedis ) ) {
+		// If set explicitly use that.
+		// This is currently used for Labs, since that does not use
+		// sessionRedis.
+		$wgGettingStartedRedis = $wmgGettingStartedRedis;
+	} else if ( !empty( $sessionRedis[$wmfDatacenter] ) ) {
+		// If it's not set explicitly, but sessionRedis is set, use that.
+		// Currently used in production.
 		$wgGettingStartedRedis = $sessionRedis[$wmfDatacenter][0];
+	}
+
+	if ( isset( $wgGettingStartedRedis ) ) {
 		$wgGettingStartedRedisOptions['password'] = $wmgRedisPassword;
 	}
+
 	$wgGettingStartedCategoriesForTaskTypes = $wmgGettingStartedCategoriesForTaskTypes;
 	$wgGettingStartedExcludedCategories = $wmgGettingStartedExcludedCategories;
 
