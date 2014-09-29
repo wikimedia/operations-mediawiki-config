@@ -10421,7 +10421,7 @@ $wgConf->settings = array(
 ),
 
 'wmgCollectionPortletFormats' => array(
-	'default' => array( 'rl' ),
+	'default' => array( 'rdf2latex' ),
 	'tawiki' => array( 'odf' ),       // Bug 37154
 	'tawikibooks' => array( 'odf' ),  // Bug 37154
 	'tawikisource' => array( 'odf' ), // Bug 37154
