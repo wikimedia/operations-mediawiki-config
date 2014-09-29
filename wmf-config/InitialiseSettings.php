@@ -1104,6 +1104,9 @@ $wgConf->settings = array(
 	'jawiktionary' => false, // bug 11775
 	'loginwiki' => false,
 	'mswiktionary' => false, // bug 67152
+	'nlwikisource' => false, // bug 71403
+	'nlwikivoyage' => false, // bug 71403
+	'nlwiktionary' => false, // bug 71403
 	'ndswiki' => false, // http://mail.wikipedia.org/pipermail/wikitech-l/2005-October/032136.html
 	'outreachwiki' => false,
 	'plwikiquote' => false,
@@ -1180,6 +1183,7 @@ $wgConf->settings = array(
 	'nlwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
 	'nlwikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
 	'nlwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
+	'nlwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl', // bug 71403
 	'nlwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
 	'plwiki' => '//pl.wikipedia.org/wiki/Wikipedia:Prześlij_plik', // bug 42579
 	'plwikinews' => false,
@@ -6765,7 +6769,7 @@ $wgConf->settings = array(
 		'autoconfirmed' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
 	),
-	'arwikisource' => array(
+	'+arwikisource' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'patroller' => array( 'patrol' => true ),
 	),
@@ -6908,12 +6912,12 @@ $wgConf->settings = array(
 	'+dewikiquote' => array(
 		'sysop' => array( 'importupload' => true, ),
 	),
-	'dewikiversity' => array(
+	'+dewikiversity' => array(
 		'user'			=> array( 'patrol' => false, ),
 		'autoconfirmed'	=> array( 'patrol' => false, ),
 		'sysop'			=> array( 'patrol' => true, ),
 	),
-	'dewikivoyage' => array(
+	'+dewikivoyage' => array(
 		'autopatrolled' => array( 'autopatrol' => true, ), // Bug 65495
 	),
 	'+dewiktionary' => array(
@@ -7067,7 +7071,7 @@ $wgConf->settings = array(
 		), // bug 69411
 		'OTRS-member' => array( 'read' => true ), // bug 54368
 	),
-	'fawikinews' => array(
+	'+fawikinews' => array(
 		'rollbacker' => array( 'rollback' => true ),
 		'patroller' => array( 'patrol' => true ),
 	),
@@ -7351,7 +7355,7 @@ $wgConf->settings = array(
 			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
 		),
 	),
-	'mlwikisource' => array(
+	'+mlwikisource' => array(
 		'patroller' => array( 'patrol' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'botadmin' => array(
@@ -7382,7 +7386,7 @@ $wgConf->settings = array(
 			'patrol' => true, // bug 44082
 		),
 	),
-	'nlwikibooks' => array( 'user' => array( 'patrol' => true ) ),
+	'+nlwikibooks' => array( 'user' => array( 'patrol' => true ) ),
 	// 'nlwikinews' => array( 'user' => array( 'patrol' => true ) ),
 	'+nnwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -7422,7 +7426,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'createaccount' => true, ),
 		'sysop' => array( 'createaccount' => false, ),
 	),
-	'orwiki' => array(
+	'+orwiki' => array(
 		'rollbacker' => array( 'rollback' => true ),
 		'sysop' => array( 'import' => true ),
 	),
