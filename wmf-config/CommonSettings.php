@@ -1601,7 +1601,7 @@ if ( $wmgUseCollection ) {
 	//	'epub' => 'EPUB', // disabling by default per reqest from tfinc 14 July 2012
 		'odf' => 'ODT',
 		'zim' => 'openZIM',
-		'rl' => 'mwlib PDF', // replaced by [[:mw:OCG]] 29 Sep 2014
+	//	'rl' => 'mwlib PDF', // replaced by [[:mw:OCG]] 29 Sep 2014
 	);
 	if ( $wmgCollectionUseEpub ) {
 		$wgCollectionFormats[ 'epub' ] = 'EPUB';
