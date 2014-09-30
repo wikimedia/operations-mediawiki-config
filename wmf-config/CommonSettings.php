@@ -1236,8 +1236,6 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthCookies = true;
 
 	$wgDisableUnmergedEditing = $wmgDisableUnmergedEdits;
-	$wgCentralAuthSilentLogin = $wmgCentralAuthSilentLogin;
-	$wgCentralAuthUseOldAutoLogin = !$wgCentralAuthSilentLogin;
 	$wgCentralAuthUseEventLogging = $wmgCentralAuthUseEventLogging;
 
 	if( $wmfRealm == 'production' ) {
