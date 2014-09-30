@@ -3,7 +3,7 @@
 
 if( $wmfRealm == 'labs' ) {  # safe guard
 
-$jobRedisServer = '10.68.16.146';  # deployment-redis01
+$jobRedisServer = 'deployment-redis01.eqiad.wmflabs';
 
 $wgJobTypeConf['default'] = array(
 	'class'       => 'JobQueueRedis',
