@@ -81,12 +81,11 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
 	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
 
-	if ( $wmfVersionNumber === '1.24wmf21' ) {
-		// temp hack to refresh cache for any broken things on test.wikidata / test2
-		// due to broken code deployed to 1.24wmf21.  set here and for client.
-		$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-1.24wmf21b";
-	} else {
-		$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
+	$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
+
+	if ( defined( 'HHVM_VERSION' ) ) {
+		// Split the cache up for hhvm. Bug 71461
+		$wgWBRepoSettings['sharedCacheKeyPrefix'] .= '-hhvm';
 	}
 
 	$wgPropertySuggesterMinProbability = 0.071;
