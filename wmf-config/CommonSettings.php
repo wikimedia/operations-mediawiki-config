@@ -942,8 +942,6 @@ if ( $wmgUseTitleKey && !$wmgUseCirrus ) {
 wfProfileIn( "$fname-misc3" );
 
 // Various DB contention settings
-$wgAntiLockFlags = ALF_NO_LINK_LOCK | ALF_NO_BLOCK_LOCK;
-# $wgAntiLockFlags = ALF_PRELOAD_LINKS | ALF_PRELOAD_EXISTENCE;
 if ( in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki', 'commonswiki' ) ) ) {
 	$wgSiteStatsAsyncFactor = 1;
 }
