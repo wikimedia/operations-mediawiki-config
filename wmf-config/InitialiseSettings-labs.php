@@ -440,6 +440,23 @@ return array(
 		'default' => false,
 		'enwiki' => true,
 	),
+
+	// Thumbnail prerendering at upload time
+	'wgUploadThumbnailRenderMap' => array(
+		'default' => array( 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ),
+	),
+
+	'wgUploadThumbnailRenderMethod' => array(
+		'default' => 'http',
+	),
+
+	'wgUploadThumbnailRenderHttpCustomHost' => array(
+		'default' => 'upload.beta.wmflabs.org',
+	),
+
+	'wgUploadThumbnailRenderHttpCustomDomain' => array(
+		'default' => 'deployment-cache-upload02.eqiad.wmflabs',
+	),
 );
 
 } # wmflLabsSettings()
