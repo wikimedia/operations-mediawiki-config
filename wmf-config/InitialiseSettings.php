@@ -13492,9 +13492,9 @@ $wgConf->settings = array(
 
 'wmgWikibaseCachePrefix' => array(
 	'default' => 'wikidatawiki',
-	'testwikidatawiki' => 'testwikidatawiki',
-	'test2wiki' => 'testwikidatawiki',
-	'testwiki' => 'testwikidatawiki'
+	'testwikidatawiki' => 'testwikidatawiki0',
+	'test2wiki' => 'testwikidatawiki0',
+	'testwiki' => 'testwikidatawiki0'
 ),
 
 'wmgWikibaseEnableData' => array(

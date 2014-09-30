@@ -2,6 +2,13 @@
 
 require_once( "$IP/extensions/Wikidata/Wikidata.php" );
 
+$wgWBSharedCacheKeyPrefix = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
+
+if ( defined( 'HHVM_VERSION' ) ) {
+	// Split the cache up for hhvm. Bug 71461
+	$wgWBSharedCacheKeyPrefix .= '-hhvm';
+}
+
 if ( $wmgUseWikibaseRepo ) {
 	$baseNs = 120;
 
@@ -80,14 +87,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
 	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
-
-	if ( $wmfVersionNumber === '1.24wmf21' ) {
-		// temp hack to refresh cache for any broken things on test.wikidata / test2
-		// due to broken code deployed to 1.24wmf21.  set here and for client.
-		$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-1.24wmf21b";
-	} else {
-		$wgWBRepoSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
-	}
+	$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wgWBSharedCacheKeyPrefix;
 
 	$wgPropertySuggesterMinProbability = 0.071;
 
@@ -192,13 +192,6 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
 
-	if ( $wmfVersionNumber === '1.24wmf21' ) {
-		// temp hack to refresh cache for any broken things on test.wikidata / test2
-		// due to broken code deployed to 1.24wmf21. set here and for repo.
-		$wgWBClientSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-1.24wmf21b";
-	} else {
-		$wgWBClientSettings['sharedCacheKeyPrefix'] = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
-	}
-
+	$wgWBClientSettings['sharedCacheKeyPrefix'] = $wgWBSharedCacheKeyPrefix;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 }
