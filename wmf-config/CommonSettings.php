@@ -31,11 +31,6 @@ if ( isset( $_SERVER['SERVER_ADDR'] ) ) {
 	ini_set( 'error_append_string', ' (' . $_SERVER['SERVER_ADDR'] . ')' );
 }
 
-# Protection for unusual entry points
-if ( !function_exists( 'wfProfileIn' ) ) {
-	require( './includes/ProfilerStub.php' );
-}
-
 $fname = 'CommonSettings.php';
 wfProfileIn( $fname );
 wfProfileIn( "$fname-init" );
