@@ -52,10 +52,6 @@ $multiVersion = MWMultiVersion::getInstance();
 
 set_include_path( "$IP:/usr/local/lib/php:/usr/share/php" );
 
-if ( getenv( 'WIKIBACKUP' ) && !function_exists( 'utf8_normalize' ) ) {
-	dl( 'php_utfnormal.so' );
-}
-
 ### Determine realm and cluster we are on #############################
 # $cluster is an historical variable used for the WMF MW conf
 $cluster = 'eqiad';
