@@ -112,11 +112,6 @@ default:
 	break;
 }
 
-# Load site configuration
-include( "$IP/includes/DefaultSettings.php" );
-
-$DP = $IP;
-
 wfProfileOut( "$fname-init" );
 wfProfileIn( "$fname-host" );
 
