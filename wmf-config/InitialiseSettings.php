@@ -4164,6 +4164,7 @@ $wgConf->settings = array(
 		'upload' => "udp://$wmfUdp2logDest/upload",
 		'Wikibase\UpdateRepoOnMoveJob' => "udp://$wmfUdp2logDest/updateRepoOnMove",
 		'BounceHandler' => "udp://$wmfUdp2logDest/bouncehandler",
+		'Echo' => "udp://$wmfUdp2logDest/echo",
 	),
 
 	'+enwiki' => array(
