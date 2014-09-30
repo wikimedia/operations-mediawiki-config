@@ -471,13 +471,6 @@ if( $wmfRealm == 'production' ) {
 	$wgAggregateStatsID = $wgVersion;
 }
 
-// $wgProfiler is set in index.php
-if ( isset( $wgProfiler ) ) {
-	$wgProfiling = true;
-	$wgProfileToDatabase = true;
-	$wgProfileSampleRate = 1;
-}
-
 // CORS (cross-domain AJAX, bug 20814)
 // This lists the domains that are accepted as *origins* of CORS requests
 // DO NOT add domains here that aren't WMF wikis unless you really know what you're doing
