@@ -1,6 +1,7 @@
 <?php
-$wgObjectCaches['sessions'] = array(
-	'class'    => 'RedisBagOStuff',
-	'servers'  => array( '10.68.16.231' ), # deployment-redis02
-	'password' => $wmgRedisPassword,
+
+$sessionRedis = array(
+	'eqiad' => array(
+		'10.68.16.231', # deployment-redis02
+	),
 );
