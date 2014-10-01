@@ -1788,7 +1788,6 @@ if ( $wmgUseUploadWizard ) {
 	$wgUploadStashScalerBaseUrl = "//{$wmfHostnames['upload']}/$site/$lang/thumb/temp";
 	$wgUploadWizardConfig = array(
 		# 'debug' => true,
-		'disableResourceLoader' => false,
 		'autoAdd' => array(
 			'categories' => array(
 				'Uploaded with UploadWizard',
