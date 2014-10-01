@@ -10317,7 +10317,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseCollection' => array(
-	// PDF generation / PediaPress stuff
+	// PDF generation / [[:mw:OCG]] stuff
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
@@ -10424,22 +10424,11 @@ $wgConf->settings = array(
 
 'wmgCollectionPortletFormats' => array(
 	'default' => array( 'rdf2latex' ),
-	'tawiki' => array( 'odf' ),       // Bug 37154
-	'tawikibooks' => array( 'odf' ),  // Bug 37154
-	'tawikisource' => array( 'odf' ), // Bug 37154
-	'tawikinews' => array( 'odf' ),   // Bug 37154
-	'guwikibooks' => array( 'odf' ),  // Bug 37384
-	'guwikisource' => array( 'odf' ), // Bug 37384
-	'mlwikibooks' => array( 'odf' ),  // Bug 37672
-	'mlwikisource' => array( 'odf' ), // Bug 37672
-	'newikibooks' => array( 'odf' ), // Bug 37374
-	'newiktionary' => array( 'odf' ), // Bug 37374
-	'urwiki' => array  ( 'odf' ),     // Bug 41714
-	'urwikisource' => array ( 'odf' ),// Bug 41714
-),
-
-'wmgCollectionUseEpub' => array(
-	'default' => true,
+	// The old PDF renderer choked on Indic languages.  The
+	// new renderer should render these fine (and the ODF
+	// renderer is in a data center which is being shut down).
+	// This array used to contain overrides for
+	// ta/gu/ml/ne/ur (bug 37154, 37384, 37672, 37374, 41714).
 ),
 
 'wmgUseSpamBlacklist' => array(

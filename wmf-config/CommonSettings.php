@@ -1585,8 +1585,7 @@ $wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $acti
 if ( $wmgUseCollection ) {
 	// PediaPress / PDF generation
 	include "$IP/extensions/Collection/Collection.php";
-	$wgCollectionMWServeURL = "http://pdf2.wikimedia.org:8080/mw-serve/";
-	$wgCollectionFormatToServeURL['rdf2latex'] = 'http://ocg.svc.eqiad.wmnet:8000';
+	$wgCollectionMWServeURL = 'http://ocg.svc.eqiad.wmnet:8000';
 
 	// MediaWiki namespace is not a good default
 	$wgCommunityCollectionNamespace = NS_PROJECT;
@@ -1599,14 +1598,15 @@ if ( $wmgUseCollection ) {
 
 	$wgCollectionFormats = array(
 		'rdf2latex' => 'PDF',
-	//	'epub' => 'EPUB', // disabling by default per reqest from tfinc 14 July 2012
-		'odf' => 'ODT',
-		'zim' => 'openZIM',
+		// The following formats used the old mwlib renderer
+		// which was shut down Oct 3, 2014.
+		// They may eventually be reinstated when new OCG backends
+		// are written for them.
+	//	'epub' => 'EPUB',
+	//	'odf' => 'ODT',
+	//	'zim' => 'openZIM',
 	//	'rl' => 'mwlib PDF', // replaced by [[:mw:OCG]] 29 Sep 2014
 	);
-	if ( $wmgCollectionUseEpub ) {
-		$wgCollectionFormats[ 'epub' ] = 'EPUB';
-	}
 
 	$wgLicenseURL = "http://creativecommons.org/licenses/by-sa/3.0/";
 
