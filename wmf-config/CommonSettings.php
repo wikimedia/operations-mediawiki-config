@@ -463,8 +463,6 @@ if ( $wmgUseClusterSquid ) {
 	require( getRealmSpecificFilename( "$wmfConfigDir/squid.php" ) );
 }
 
-$wgBlockOpenProxies = false;
-
 if( $wmfRealm == 'production' ) {
 	$wgUDPProfilerHost = '10.64.0.18';  // tungsten
 	$wgUDPProfilerPort = defined( 'HHVM_VERSION' ) ? '3812' : '3811';
@@ -577,7 +575,6 @@ $wgSiteMatrixFishbowlSites = array_map( 'trim', file( getRealmSpecificFilename( 
 include( $IP . '/extensions/CharInsert/CharInsert.php' );
 
 include( $IP . '/extensions/ParserFunctions/ParserFunctions.php' );
-$wgMaxIfExistCount = 500; // obs
 $wgExpensiveParserFunctionLimit = 500;
 
 if ( $wmgUseCite ) {
@@ -890,13 +887,10 @@ if ( $wgDBname == 'nostalgiawiki' ) {
 	} else {
 		$wgSiteNotice = "[//en.wikipedia.org/ See current Wikipedia]";
 	}
-	$wgDefaultUserOptions['highlightbroken'] = 0;
 
 	// Nostalgia skin
 	require_once "$IP/skins/Nostalgia/Nostalgia.php";
 }
-
-$wgUseHashTable = true;
 
 $wgCopyrightIcon = '<a href="//wikimediafoundation.org/"><img src="//' . $wmfHostnames['bits'] . '/images/wikimedia-button.png" width="88" height="31" alt="Wikimedia Foundation"/></a>';
 
