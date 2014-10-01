@@ -362,6 +362,12 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 
 if ( $wmgUseClusterSession ) {
 	require( getRealmSpecificFilename( "$wmfConfigDir/session.php" ) );
+
+	$wgObjectCaches['sessions'] = array(
+		'class' => 'RedisBagOStuff',
+		'servers' => $sessionRedis[$wmfDatacenter],
+		'password' => $wmgRedisPassword,
+	);
 }
 
 // Use the cache setup above and configure sessions caching

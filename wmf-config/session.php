@@ -20,10 +20,3 @@ $sessionRedis = array(
 		'10.64.0.195', # mc1016
 	),
 );
-
-// Cache to hold user sessions in production:
-$wgObjectCaches['sessions'] = array(
-	'class'   => 'RedisBagOStuff',
-	'servers' => $sessionRedis[$wmfDatacenter],
-	'password' => $wmgRedisPassword,
-);
