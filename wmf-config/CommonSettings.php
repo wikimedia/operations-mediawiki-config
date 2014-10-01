@@ -1506,7 +1506,6 @@ if ( $wmgUseCentralNotice ) {
 
 	// Enable the CentralNotice/Translate integration
 	$wgNoticeUseTranslateExtension = true;
-	$wgNoticeRunMessageIndexRebuildJobImmediately = false;
 
 	// Bug 49905
 	$wgNoticeUseLanguageConversion = true;
