@@ -14042,6 +14042,24 @@ $wgConf->settings = array(
 	'labswiki' => false,
 ),
 
+// Thumbnail prerendering at upload time
+'wgUploadThumbnailRenderMap' => array(
+	'default' => array( 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ),
+	'commonswiki' => array(),
+),
+
+'wgUploadThumbnailRenderMethod' => array(
+	'default' => 'http',
+),
+
+'wgUploadThumbnailRenderHttpCustomHost' => array(
+	'default' => 'upload.wikimedia.org',
+),
+
+'wgUploadThumbnailRenderHttpCustomDomain' => array(
+	'default' => 'upload.svc.eqiad.wmnet',
+),
+
 );
 
 
