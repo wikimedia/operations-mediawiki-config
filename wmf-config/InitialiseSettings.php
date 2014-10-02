@@ -9698,6 +9698,7 @@ $wgConf->settings = array(
 	'otrs_wikiwiki' => true,
 	'outreachwiki' => true, // Bug 56245
 	'srwiki' => true,
+	'srwiktionary' => true, // bug 68346
 	'strategywiki' => true,
 	'viwiktionary' => true, # bug 8886
 ),
