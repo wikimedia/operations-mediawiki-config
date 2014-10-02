@@ -462,14 +462,13 @@ $wgLBFactoryConf = array(
 	),
 	# es3
 	'cluster25' => array(
-		'10.64.32.18' => 1, # es1008, master
-		'10.64.32.19' => 3, # es1009
+		# maintenance '10.64.32.18' => 1, # es1008, old master
+		'10.64.32.19' => 3, # es1009, new master
 		'10.64.32.20' => 1, # es1010 snapshot host
 	),
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => array(
 		'10.64.16.18' => 10, # db1029
-		# maintenance '10.64.16.19' => 100, # db1030
 		'10.64.16.20' => 20, # db1031 snapshot host
 	),
 ),
@@ -514,7 +513,7 @@ $wgLBFactoryConf = array(
 
 $wgDefaultExternalStore = array(
 	'DB://cluster24',
-	'DB://cluster25',
+	# maintenance 'DB://cluster25',
 );
 $wgMasterWaitTimeout = 2;
 $wgDBAvgStatusPoll = 30000;
