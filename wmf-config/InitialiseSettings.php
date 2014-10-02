@@ -11084,6 +11084,10 @@ $wgConf->settings = array(
 	'default' => 1000,
 ),
 
+'wmgMediaViewerDimensionLoggingSamplingFactor' => array(
+	'default' => 1000,
+),
+
 'wmgMediaViewerActionLoggingSamplingFactorMap' => array(
 	'default' => array( 'default' => 1 ),
 	'mediaviewer' => array( 'default' => 1 ),
