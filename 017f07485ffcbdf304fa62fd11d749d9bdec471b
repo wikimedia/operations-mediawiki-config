@@ -34,6 +34,24 @@
       "revId": "017f07485ffcbdf304fa62fd11d749d9bdec471b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_e31645ac",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1586,
+      "author": {
+        "id": 121
+      },
+      "writtenOn": "2014-10-02T21:03:09Z",
+      "side": 1,
+      "message": "But the button \"Preview with PediaPress\" returns an error page now.",
+      "parentUuid": "ce8c5bf9_302234b2",
+      "revId": "017f07485ffcbdf304fa62fd11d749d9bdec471b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
