@@ -2332,6 +2332,14 @@ if ( $wmgUseVips ) {
 				'minArea' => 2e7,
 			),
 		),
+		array(
+			'conditions' => array(
+				'mimeType' => 'image/tiff',
+				'minShrinkFactor' => 1.2,
+				'minArea' => 5e7,
+			),
+			'sharpen' => array( 'sigma' => 0.8 ),
+		),
 	);
 
 }
