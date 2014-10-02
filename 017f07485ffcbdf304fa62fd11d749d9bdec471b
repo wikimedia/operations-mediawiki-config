@@ -16,6 +16,24 @@
       "revId": "017f07485ffcbdf304fa62fd11d749d9bdec471b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce8c5bf9_302234b2",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1586,
+      "author": {
+        "id": 664
+      },
+      "writtenOn": "2014-10-02T13:30:20Z",
+      "side": 1,
+      "message": "Almost.  The Collection extension still links to their Print-On-Demand service. So the comment\u0027s not incorrect.",
+      "parentUuid": "ce8c5bf9_d03f48d2",
+      "revId": "017f07485ffcbdf304fa62fd11d749d9bdec471b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
