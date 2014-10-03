@@ -11778,9 +11778,6 @@ $wgConf->settings = array(
 ),
 
 'wgParserCacheType' => array(
-	# To disable the MySQL parser cache, uncomment the following line,
-	# and comment out the one after that
-	#'default' => CACHE_MEMCACHED,
 	'default' => 'mysql-multiwrite',
 	'labswiki' => 'memcached-pecl',
 ),
