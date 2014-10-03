@@ -13111,6 +13111,7 @@ $wgConf->settings = array(
 'wmgUseEducationProgram' => array(
 	'default' => false,
 	'arwiki' => true, // bug 57729
+	'cawiki' => true, // bug 71381
 	'cswiki' => true, // bug 54223
 	'dewikiversity' => true,
 	'elwiki' => true, // bug 56771
