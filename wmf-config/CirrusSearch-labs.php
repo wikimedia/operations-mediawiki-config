@@ -34,3 +34,9 @@ if ( $wgDBname == 'enwiki' ) {
 
 $wgSearchTypeAlternatives = array();
 $wgCirrusSearchAllFields = array( 'build' => true, 'use' => true );
+$wgCirrusSearchWikimediaExtraPlugin = array(
+	'regex' => array(
+		'build',
+		// 'use',  Comes once we release and deploy the wikimedia/extra plugin.
+	),
+);
