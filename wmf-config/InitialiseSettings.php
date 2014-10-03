@@ -11782,7 +11782,7 @@ $wgConf->settings = array(
 	# and comment out the one after that
 	#'default' => CACHE_MEMCACHED,
 	'default' => 'mysql-multiwrite',
-	'labswiki' => CACHE_MEMCACHED,
+	'labswiki' => 'memcached-pecl',
 ),
 
 'wgLanguageConverterCacheType' => array(
