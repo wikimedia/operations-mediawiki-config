@@ -13604,6 +13604,9 @@ $wgConf->settings = array(
 	'itwikisource' => array(
 		'otherProjectsLinksByDefault' => true,
 	),
+	'itwikivoyage' => array(
+		'otherProjectsLinksByDefault' => true, // bug 71464
+	),
 	'kowiki' => array(
 		'otherProjectsLinksByDefault' => true,
 	),
