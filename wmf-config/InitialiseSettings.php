@@ -9368,6 +9368,20 @@ $wgConf->settings = array(
 
 # ROBOT @{
 'wgNamespaceRobotPolicies' => array(
+	'ckbwiki' => array(
+		NS_TALK => 'noindex,follow',
+		NS_USER => 'noindex,follow',
+		NS_USER_TALK => 'noindex,follow',
+		NS_PROJECT_TALK => 'noindex,follow',
+		NS_IMAGE_TALK => 'noindex,follow',
+		NS_MEDIAWIKI_TALK => 'noindex,follow',
+		NS_TEMPLATE_TALK => 'noindex,follow',
+		NS_HELP_TALK => 'noindex,follow',
+		NS_CATEGORY_TALK => 'noindex,follow',
+		101 => 'noindex,follow', // portal talk
+		103 => 'noindex,follow', // wikiproject talk
+		829 => 'noindex,follow', // module talk
+	), // bug 71663
 	'dewiki' => array(
 		NS_TALK => 'noindex,follow',
 		NS_USER => 'noindex,follow', // Bug 36181
