@@ -2820,6 +2820,10 @@ $wgConf->settings = array(
 		'گفتگو_پدیدآورنده' => 103,
 		'ون' => NS_PROJECT,
 	),
+	'+fawikivoyage' => array(
+		'وس' => NS_PROJECT,
+		'عب' => 106,
+	), // bug 71668
 	'+fawiktionary' => array(
 		'وو' => NS_PROJECT,
 	),
