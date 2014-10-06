@@ -2655,6 +2655,8 @@ if ( $wmgUseEventLogging && $wmgUseNavigationTiming ) {
 	// sampling factor of 1 means log every request. This should not be
 	// lowered without careful coordination with ops.
 	$wgNavigationTimingSamplingFactor = 1000;
+
+	$wgPercentHHVM = 1;  // ori, 6-Oct-2014
 }
 
 if ( $wmgUseUniversalLanguageSelector ) {
