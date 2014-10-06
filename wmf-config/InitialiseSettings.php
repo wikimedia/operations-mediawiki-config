@@ -3975,6 +3975,7 @@ $wgConf->settings = array(
 	'eswiki' => 50, // Bug 13261
 	'eswikivoyage' => 25, // bug 44285
 	'fawiki' => 10, // Bug 43630
+	'fawikivoyage' => 10, // Bug 71709
 	'itwiki' => 10, //Bug 70128
 	'itwiktionary' => 10, // Bug 22274
 	'jawiki' => 10, // Bug 40270
