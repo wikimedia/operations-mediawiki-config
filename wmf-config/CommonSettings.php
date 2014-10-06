@@ -2782,6 +2782,11 @@ if ( $wmgZeroPortal ) {
 		$wgZeroPortalImpersonateUser = 'Impersonator';
 
 		unset( $zpUserRights );
+
+		$wgUsersNotifiedOnAllChanges[] = 'ABaso(WMF)';
+		$wgUsersNotifiedOnAllChanges[] = 'Dfoy';
+		$wgUsersNotifiedOnAllChanges[] = 'Jhobs';
+		$wgUsersNotifiedOnAllChanges[] = 'Yurik';
 	} else {
 		// metawiki
 		$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
