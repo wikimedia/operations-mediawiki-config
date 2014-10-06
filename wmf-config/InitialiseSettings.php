@@ -11080,10 +11080,6 @@ $wgConf->settings = array(
 	'private' => false,
 ),
 
-'wmgMediaViewerBeta' => array(
-	'default' => false,
-),
-
 'wmgMediaViewerEnableByDefault' => array(
 	'default' => true,
 	'commonswiki' => false, // bug 69363

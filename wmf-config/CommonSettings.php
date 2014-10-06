@@ -1945,10 +1945,6 @@ if ( $wmgUseMultimediaViewer ) {
 	$wgMediaViewerDimensionLoggingSamplingFactor = $wmgMediaViewerDimensionLoggingSamplingFactor;
 	$wgMediaViewerActionLoggingSamplingFactorMap = $wmgMediaViewerActionLoggingSamplingFactorMap;
 
-	if ( $wmgMediaViewerBeta ) {
-		$wgMediaViewerIsInBeta = true;
-	}
-
 	if ( isset( $wmgMediaViewerEnableByDefault ) ) {
 		$wgMediaViewerEnableByDefault = $wmgMediaViewerEnableByDefault;
 	}

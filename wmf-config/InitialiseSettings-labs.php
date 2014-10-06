@@ -299,11 +299,6 @@ return array(
 		'default' => true,
 	),
 
-	'wmgMediaViewerBeta' => array(
-		'default' => false,
-		'enwiktionary' => true,
-	),
-
 	'wmgNetworkPerformanceSamplingFactor' => array(
 		'default' => 1,
 	),
