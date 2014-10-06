@@ -7081,6 +7081,9 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 		'patroller' => array( 'patrol' => true ),
 	),
+	'+fawikivoyage' => array(
+		'sysop' => array( 'importupload' => true ), // bug 71681
+	),
 	'fiwiki' => array(
 		'patroller' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
@@ -8057,6 +8060,9 @@ $wgConf->settings = array(
 	'+fawikinews' => array(
 		'sysop' => array( 'rollbacker', 'patroller' ),
 	),
+	'+fawikivoyage' => array(
+		'sysop' => array( 'transwiki' ), // bug 71681
+	),
 	'+fiwiki' => array(
 		'bureaucrat' => array( 'arbcom' ),
 		'sysop' => array( 'rollbacker' ),
@@ -8577,6 +8583,9 @@ $wgConf->settings = array(
 	'+fawikinews' => array(
 		'sysop' => array( 'rollbacker', 'patroller', ),
 	),
+	'+fawikivoyage' => array(
+		'sysop' => array( 'transwiki' ), // bug 71681
+	),
 	'+fiwiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'arbcom' ),
 		'sysop' => array( 'rollbacker', ),
@@ -9042,6 +9051,7 @@ $wgConf->settings = array(
 	'etwikisource' => array( 'w' ),
 	'etwiktionary' => array( 'w' ),
 	'extwiki' => array( 'incubator' ),
+	'fawikivoyage' => array( 'w', 'w:en', 'en' ), // Bug 71681
 	'fdcwiki' => array( 'meta' ),
 	'fiwikisource' => array( 'OldWikisource', 'w', 'b' ),
 	'fiwikiversity' => array( 'b', 'q', 'n', 's', 'wikt', 'w', 'betawikiversity' ),
