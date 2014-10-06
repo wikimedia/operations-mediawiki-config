@@ -11034,6 +11034,10 @@ $wgConf->settings = array(
 	'labswiki' => false,
 ),
 
+'wmgCommonsMetadataSetTrackingCategories' => array(
+	'default' => true,
+),
+
 // NOTE: Extension:Popups has a hard dependency on TextExtracts and PageImages.
 // @todo The pattern "everywhere but loginwiki and votewiki" repeats 32 times in this file.
 'wmgUsePopups' => array(
