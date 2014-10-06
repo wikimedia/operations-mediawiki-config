@@ -11946,6 +11946,7 @@ $wgConf->settings = array(
 	'labswiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
+	'outreachwiki' => true,
 	'zerowiki' => true,
 ),
 
