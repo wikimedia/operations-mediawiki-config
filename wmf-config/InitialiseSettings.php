@@ -4029,16 +4029,13 @@ $wgConf->settings = array(
 ),
 
 'wmgUseCentralNotice' => array(
-	'advisorywiki' => false, // Per Bug # 25519
 	'default' => true,
+	'advisorywiki' => false, // Per Bug # 25519
 	'fishbowl' => false, // Per bug 17718 Disable CentralNotice on private/fishbowl wikis
 	'fiwikimedia' => false, // bug 17718
-	'metawiki' => true, // Central interface
 	'private' => false, // :D
 	'qualitywiki' => false,
-	'testwiki' => true,
 	'ukwikimedia' => false,  // Per bug 17718 Disable CentralNotice on private/fishbowl wikis
-	'simplewiki' => true,
 ),
 
 'wmgCentralNoticeLoader' => array(
