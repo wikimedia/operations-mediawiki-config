@@ -7087,6 +7087,10 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true ),
 	),
 	'+fawikivoyage' => array(
+		'autopatrolled' => array( 'autopatrol' => true ), // bug 71760
+		'flood' => array( 'bot' => true ), // bug 71760
+		'patroller' => array( 'patrol' => true ), // bug 71760
+		'rollbacker' => array( 'rollback' => true ), // bug 71760
 		'sysop' => array( 'importupload' => true ), // bug 71681
 	),
 	'fiwiki' => array(
@@ -8066,7 +8070,14 @@ $wgConf->settings = array(
 		'sysop' => array( 'rollbacker', 'patroller' ),
 	),
 	'+fawikivoyage' => array(
-		'sysop' => array( 'transwiki' ), // bug 71681
+		'sysop' => array(
+			'autopatrolled', // bug 71760
+			'confirmed', // bug 71760
+			'flood', // bug 71760
+			'patroller', // bug 71760
+			'rollbacker', // bug 71760
+			'transwiki' // bug 71681
+		),
 	),
 	'+fiwiki' => array(
 		'bureaucrat' => array( 'arbcom' ),
