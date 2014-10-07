@@ -13163,6 +13163,8 @@ $wgConf->settings = array(
 	'default' => false,
 	'wiki' => true,
 	'wikivoyage' => true,
+	'wikidatawiki' => false,
+	'testwikidatawiki' => false,
 ),
 'wmgEnableGeoSearch' => array(
 	'default' => true,
