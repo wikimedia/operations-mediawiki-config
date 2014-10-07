@@ -37,7 +37,6 @@ require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
 	Each of these files is also available in public version control in one of the following repositories:
 </p>
 <ul>
-	<li><a href="https://git.wikimedia.org/tree/operations%2Fapache-config.git">operations/apache-config.git</a></li>
 	<li><a href="https://git.wikimedia.org/tree/operations%2Fmediawiki-config.git">operations/mediawiki-config.git</a></li>
 	<li><a href="https://git.wikimedia.org/tree/operations%2Fpuppet.git">operations/puppet.git</a></li>
 </ul>
@@ -45,13 +44,6 @@ require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
 <hr>
 <p>Currently active MediaWiki versions: <?php echo implode( ', ', getActiveWikiVersions() ); ?></p>
 <hr>
-
-<h2><img src="./images/document.png" alt=""> Apache configuration</h2>
-<ul>
-<?php
-    outputFiles( glob( __DIR__ . '/*.conf' ) );
-?>
-</ul>
 
 <h2><img src="./images/source_php.png" alt=""> MediaWiki configuration</h2>
 <ul>
