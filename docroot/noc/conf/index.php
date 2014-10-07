@@ -79,15 +79,6 @@ require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
 ?>
 </ul>
 
-<h2>Lucene search configuration</h2>
-<ul>
-<?php
-	outputFiles( array(
-		'./lsearch-global-2.1.conf',
-	) );
-?>
-</ul>
-
 <hr>
 </body>
 </html>
