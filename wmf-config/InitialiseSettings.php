@@ -4160,7 +4160,6 @@ $wgConf->settings = array(
 		'CirrusSearchChangeFailed' => "udp://$wmfUdp2logDest/CirrusSearch-failed",
 		'CirrusSearchRequests' => "udp://$wmfUdp2logDest/CirrusSearch-all",
 		'CirrusSearchSlowRequests' => "udp://$wmfUdp2logDest/CirrusSearch-slow",
-		'wap' => "udp://$wmfUdp2logDest/wap",
 		'texvc' => "udp://$wmfUdp2logDest/texvc",
 		'Bug54847' => "udp://$wmfUdp2logDest/Bug54847",
 		'recursion-guard' => "udp://$wmfUdp2logDest/recursion-guard",
