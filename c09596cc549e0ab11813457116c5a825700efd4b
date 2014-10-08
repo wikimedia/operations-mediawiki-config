@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce8c5bf9_ae7560ca",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2178,
+      "author": {
+        "id": 1629
+      },
+      "writtenOn": "2014-10-08T15:58:46Z",
+      "side": 1,
+      "message": "texvccheck isn\u0027t in trusty\u0027s version of mediawiki-math-texvc btw, I\u0027d keep the fallback for now (see RT #5270 for the related discussion)",
+      "revId": "c09596cc549e0ab11813457116c5a825700efd4b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
