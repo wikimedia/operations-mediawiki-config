@@ -349,6 +349,9 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterAnonBlockDuration = '3 months'; // bug 57681
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true; // bug 57681
 		break;
+	case 'zhwiki':
+		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true; // bug 71854
+		break;
 	case 'zh_yuewiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
