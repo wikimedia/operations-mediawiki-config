@@ -61,7 +61,9 @@ if ( $wmgUseWikibaseRepo ) {
 	} else {
 		$wgWBRepoSettings['badgeItems'] = array(
 			'Q17437798' => 'wb-badge-goodarticle',
-			'Q17437796' => 'wb-badge-featuredarticle'
+			'Q17437796' => 'wb-badge-featuredarticle',
+			'Q17559452' => 'wb-badge-recommendedarticle', // bug 70268
+			'Q17506997' => 'wb-badge-featuredlist' // bug 70332
 		);
 	}
 
