@@ -49,6 +49,15 @@ $wgJobBackoffThrottling['cirrusSearchIncomingLinkCount'] = 0.25;
 # Ban the hebrew plugin, it is unstable
 $wgCirrusSearchBannedPlugins[] = 'elasticsearch-analysis-hebrew';
 
+# Build the ngram index to support fast regex matching
+$wgCirrusSearchWikimediaExtraPlugin = array(
+	'regex' => array(
+		'build',
+		// 'use',  Turn this on once it is built everywhere and remove this from CirrusSearch-labs.php
+	),
+);
+
+
 # Enable the "experimental" highlighter on all wikis
 $wgCirrusSearchUseExperimentalHighlighter = true;
 $wgCirrusSearchOptimizeIndexForExperimentalHighlighter = true;
