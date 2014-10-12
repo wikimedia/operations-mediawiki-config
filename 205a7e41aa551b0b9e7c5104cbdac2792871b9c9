@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_af759694",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10779,
+      "author": {
+        "id": 178
+      },
+      "writtenOn": "2014-10-12T23:39:25Z",
+      "side": 1,
+      "message": "Seems ok\nExample link http://digitaltmuseum.no/things/jekt-med-trrfisklast-fra-nordland-ca-1903/NF/NF.10032-005/image/139232/download",
+      "revId": "205a7e41aa551b0b9e7c5104cbdac2792871b9c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_4f6ad2b2",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10780,
+      "author": {
+        "id": 178
+      },
+      "writtenOn": "2014-10-12T23:39:25Z",
+      "side": 1,
+      "message": "Some images used on the site use a specific server. It seems correct to use *.dimu.no for those cases. Still note that we normally will not use this link, we use the download link.\nExample link http://media35c.dimu.no/media/decoimage/NF/NF.10032-005/139232?size\u003d800",
+      "revId": "205a7e41aa551b0b9e7c5104cbdac2792871b9c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_2f3ae6c0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10781,
+      "author": {
+        "id": 178
+      },
+      "writtenOn": "2014-10-12T23:39:25Z",
+      "side": 1,
+      "message": "This is preceeded with \"www\" at the site. Perhaps use www.byarkivet.oslo.kommune.no or *.byarkivet.oslo.kommune.no\nExample link http://www.byarkivet.oslo.kommune.no/getfile.php/byarkivet%20%28BAR%29/Internett%20%28BAR%29/Bilder/Kart/Grosch/Kart_1830.jpg",
+      "revId": "205a7e41aa551b0b9e7c5104cbdac2792871b9c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_8f70daa4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10782,
+      "author": {
+        "id": 178
+      },
+      "writtenOn": "2014-10-12T23:39:25Z",
+      "side": 1,
+      "message": "This is preceeded with \"www\" at the site. Perhaps use www.nb.no or *.nb.no\nExample link http://www.nb.no/karl-xii-kart/bilder/1024x1536/img0011.jpg",
+      "revId": "205a7e41aa551b0b9e7c5104cbdac2792871b9c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_ef5abe21",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10783,
+      "author": {
+        "id": 178
+      },
+      "writtenOn": "2014-10-12T23:39:25Z",
+      "side": 1,
+      "message": "This is preceeded with \"www\" at the site. Perhaps use www.kartverket.no or *.kartverket.no\nExample link http://www.kartverket.no/historiske/amt2/jpg100dpi/amt2_kristiania-30_1780.jpg",
+      "revId": "205a7e41aa551b0b9e7c5104cbdac2792871b9c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_0f64cae0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10784,
+      "author": {
+        "id": 178
+      },
+      "writtenOn": "2014-10-12T23:39:25Z",
+      "side": 1,
+      "message": "This is preceeded with \"www\" at the site. Perhaps use www.arkivverket.no or *.arkivverket.no\nExample link http://www.arkivverket.no/var/arkivverket/storage/images/media/ra-bilder/kristiansands-befestning/74778-1-nor-NO/Kristiansands-befestning.jpg",
+      "revId": "205a7e41aa551b0b9e7c5104cbdac2792871b9c9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
