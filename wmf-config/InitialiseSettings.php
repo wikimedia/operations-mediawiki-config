@@ -10776,6 +10776,13 @@ $wgConf->settings = array(
 		'*.metilli.com',                    // Mart Museum - bug 71460
 		'*.nijmegen.nl',                    // Nijmegen - bug 71191
 		'edh-www.adw.uni-heidelberg.de',   // Heidelberg Academy of Sciences and Humanities, Epigraphic Database - bug 71990
+		'*.eyefilm.nl',                     // EYE Film Institute Netherlands - bug 71883
+		'digitaltmuseum.no',                // Digitalt Museum - bug 71195
+		'*.dimu.no',                        // Digitalt Museum - bug 71195
+		'*.byarkivet.oslo.kommune.no',      // Byarkivet - Oslo kommune - bug 71195
+		'*.nb.no',                          // Nasjonalbiblioteket - bug 71195
+		'*.kartverket.no',                  // Kartverket - bug 71195
+		'*.arkivverket.no',                 // The National Archives of Norway - bug 71195
 	),
 ),
 
