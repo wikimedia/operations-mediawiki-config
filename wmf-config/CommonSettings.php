@@ -2659,7 +2659,7 @@ if ( $wmgUseEventLogging && $wmgUseNavigationTiming ) {
 	// lowered without careful coordination with ops.
 	$wgNavigationTimingSamplingFactor = 1000;
 
-	$wgPercentHHVM = 1;  // ori, 6-Oct-2014
+	$wgPercentHHVM = 2;  // giuseppe, 13-Oct-2014
 }
 
 if ( $wmgUseUniversalLanguageSelector ) {
