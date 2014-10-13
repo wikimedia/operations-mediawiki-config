@@ -143,7 +143,6 @@ if ( $wgDBname != 'commonswiki' ) {
 if( $wmgUseMath ) {
 	$wgMathFileBackend = false;
 	$wgMathDirectory   = '/data/project/upload7/math';
-	$wgMathValidModes = array( MW_MATH_PNG, MW_MATH_SOURCE, MW_MATH_MATHML );
 	$wgMathMathMLUrl = 'http://deployment-mathoid.eqiad.wmflabs:10042';
 }
 
