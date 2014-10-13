@@ -10775,6 +10775,7 @@ $wgConf->settings = array(
 		'*.beeldbank.cultureelerfgoed.nl',  // Cultureel Erfgoed - bug 70840
 		'*.metilli.com',                    // Mart Museum - bug 71460
 		'*.nijmegen.nl',                    // Nijmegen - bug 71191
+		'edh-www.adw.uni-heidelberg.de/',   // Heidelberg Academy of Sciences and Humanities, Epigraphic Database - bug 71990
 	),
 ),
 
