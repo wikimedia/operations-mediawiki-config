@@ -16,6 +16,24 @@
       "revId": "9969a584ceed9cb97b8d7322aeccfc8061e8780b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e96e304_fbd35d03",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2178,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-10-14T15:09:46Z",
+      "side": 1,
+      "message": "It might just be easier doing a file_eixsts() on the newer...?",
+      "parentUuid": "8e96e304_9bb259e3",
+      "revId": "9969a584ceed9cb97b8d7322aeccfc8061e8780b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
