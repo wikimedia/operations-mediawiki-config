@@ -489,6 +489,11 @@ elseif ( $wgDBname == 'huwiki' ) {
 		unset( $wgAddGroups['sysop'][ array_search( 'editor', $wgAddGroups['sysop'] ) ] );
 	if ( is_array( $wgRemoveGroups['sysop'] ) )
 		unset( $wgRemoveGroups['sysop'][ array_search( 'editor', $wgRemoveGroups['sysop'] ) ] );
+
+	// # Remove 'autoreview' user groups; bug 72055
+	unset( $wgGroupPermissions['autoreview'] );
+	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'autoreview' ) );
+	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'autoreview' ) );
 }
 
 elseif ( $wgDBname == 'iawiki' ) {
