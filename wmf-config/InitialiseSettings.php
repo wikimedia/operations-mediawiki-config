@@ -4008,6 +4008,7 @@ $wgConf->settings = array(
 	'ckbwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), // bug 52533
 	'enwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // bug 55432
 	'hewiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), //bug 58207
+	'huwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // bug 72055
 	'plwiki' => array( '', 'autoconfirmed', 'editor', 'sysop', 'superprotect' ), // bug 46990
 	'ptwiki' => array( '', 'autoconfirmed', 'autoreviewer', 'sysop', 'superprotect' ), // bug 39652
 	'rowiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // bug 61172
@@ -7175,8 +7176,9 @@ $wgConf->settings = array(
 	),
 	'huwiki' => array(
 		'editor' => array( 'noratelimit' => true ),
-		'sysop' => array( 'deleterevision' => true ),
+		'sysop' => array( 'templateeditor' => true ), // bug 72055
 		'user' => array( 'upload' => true ), // bug 28576
+		'templateeditor' => array( 'templateeditor' => true ), // bug 72055
 	),
 	'idwiki' => array(
 		'*' => array( 'createpage' => false ),
@@ -8128,6 +8130,9 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'patroller', 'autopatrolled' ),
 		'sysop' => array( 'patroller', 'autopatrolled' ),
 	),
+	'+huwiki' => array(
+		'bureaucrat' => array( 'templateeditor' ), // bug 72055
+	),
 	'+idwiki' => array(
 		'sysop' => array( 'rollbacker' ),
 		'bureaucrat' => array( 'rollbacker' ),
@@ -8665,7 +8670,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
 	),
 	'+huwiki' => array(
-		'bureaucrat' => array( 'confirmed' ),
+		'bureaucrat' => array( 'sysop', 'bureaucrat', 'templateeditor' ), // bug 72055
 	),
 	'+idwiki' => array(
 		'sysop' => array( 'rollbacker' ),
