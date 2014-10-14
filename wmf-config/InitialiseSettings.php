@@ -13384,6 +13384,7 @@ $wgConf->settings = array(
 		'Wikipedia talk:WikiProject Breakfast',
 		'Wikipedia talk:WikiProject Hampshire',
 		'Wikipedia talk:Flow/Developer test page',
+		'Wikipedia talk:Flow/Sandbox',
 		'Wikipedia:Co-op/Mentorship match',
 	),
 	'frwiki' => array(
