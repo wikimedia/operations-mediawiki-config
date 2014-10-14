@@ -1,0 +1,9 @@
+Code-Review+2: Reedy <reedy@wikimedia.org>
+Verified+2: jenkins-bot
+Code-Review+1: GWicke <gwicke@wikimedia.org>
+Code-Review+1: Frédéric Wang <fred.wang@free.fr>
+Submitted-by: jenkins-bot
+Submitted-at: Tue, 14 Oct 2014 18:45:47 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/166410
+Project: operations/mediawiki-config
+Branch: refs/heads/master
