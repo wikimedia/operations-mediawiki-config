@@ -154,7 +154,9 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['badgeClassNames'] = array(
 		'Q17437796' => 'badge-featuredarticle',
-		'Q17437798' => 'badge-goodarticle'
+		'Q17437798' => 'badge-goodarticle',
+		'Q17559452' => 'badge-recommendedarticle', // bug 70268
+		'Q17506997' => 'badge-featuredlist' // bug 70332
 	);
 
 	$wgHooks['SetupAfterCache'][] = 'wmfWBClientExcludeNS';
