@@ -2750,55 +2750,42 @@ if ( $wmgZeroPortal ) {
 	require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
 	require_once( "$IP/extensions/ZeroPortal/ZeroPortal.php" );
 
-	// Until meta handles ZeroPortal, need to keep it intact
-	if ( $wgDBname == 'zerowiki' ) {
-		// zerowiki treats all logged-in users the same as anonymous, without giving them any extra rights
-		// Only sysops and scripts get additional rights on zerowiki
-		$zpUserRights = $wgGroupPermissions['user'];
+	// zerowiki treats all logged-in users the same as anonymous, without giving them any extra rights
+	// Only sysops and scripts get additional rights on zerowiki
+	$zpUserRights = $wgGroupPermissions['user'];
 
-		$wgGroupPermissions['*']['createtalk'] = false;
-		$wgGroupPermissions['*']['createpage'] = false;
-		$wgGroupPermissions['*']['writeapi'] = false;
-		$wgGroupPermissions['user'] = $wgGroupPermissions['*'];
+	$wgGroupPermissions['*']['createtalk'] = false;
+	$wgGroupPermissions['*']['createpage'] = false;
+	$wgGroupPermissions['*']['writeapi'] = false;
+	$wgGroupPermissions['user'] = $wgGroupPermissions['*'];
 
-		// fixme: this should go into groupOverrides or groupOverrides2, with or without a '+'
-		// 'sysop' => array( 'zero-edit', 'zero-script', 'zero-script-ips', 'jsonconfig-flush' ),
-		// 'zeroscript' => array( 'zero-script', 'jsonconfig-flush' ),
-		// 'zeroscriptips' => array( 'zero-script-ips', 'jsonconfig-flush' ),
+	// fixme: this should go into groupOverrides or groupOverrides2, with or without a '+'
+	// 'sysop' => array( 'zero-edit', 'zero-script', 'zero-script-ips', 'jsonconfig-flush' ),
+	// 'zeroscript' => array( 'zero-script', 'jsonconfig-flush' ),
+	// 'zeroscriptips' => array( 'zero-script-ips', 'jsonconfig-flush' ),
 
-		$wgGroupPermissions['sysop']['zero-edit'] = true;
-		$wgGroupPermissions['sysop']['zero-script'] = true;
-		$wgGroupPermissions['sysop']['zero-script-ips'] = true;
-		$wgGroupPermissions['sysop']['jsonconfig-flush'] = true;
-		$wgGroupPermissions['sysop'] = $wgGroupPermissions['sysop'] + $zpUserRights;
+	$wgGroupPermissions['sysop']['zero-edit'] = true;
+	$wgGroupPermissions['sysop']['zero-script'] = true;
+	$wgGroupPermissions['sysop']['zero-script-ips'] = true;
+	$wgGroupPermissions['sysop']['jsonconfig-flush'] = true;
+	$wgGroupPermissions['sysop'] = $wgGroupPermissions['sysop'] + $zpUserRights;
 
-		$wgGroupPermissions['zeroscript']['zero-script'] = true;
-		$wgGroupPermissions['zeroscript']['jsonconfig-flush'] = true;
-		$wgGroupPermissions['zeroscript'] = $wgGroupPermissions['zeroscript'] + $zpUserRights;
+	$wgGroupPermissions['zeroscript']['zero-script'] = true;
+	$wgGroupPermissions['zeroscript']['jsonconfig-flush'] = true;
+	$wgGroupPermissions['zeroscript'] = $wgGroupPermissions['zeroscript'] + $zpUserRights;
 
-		$wgGroupPermissions['zeroscriptips']['zero-script-ips'] = true;
-		$wgGroupPermissions['zeroscriptips']['jsonconfig-flush'] = true;
-		$wgGroupPermissions['zeroscriptips'] = $wgGroupPermissions['zeroscriptips'] + $zpUserRights;
+	$wgGroupPermissions['zeroscriptips']['zero-script-ips'] = true;
+	$wgGroupPermissions['zeroscriptips']['jsonconfig-flush'] = true;
+	$wgGroupPermissions['zeroscriptips'] = $wgGroupPermissions['zeroscriptips'] + $zpUserRights;
 
-		$wgZeroPortalImpersonateUser = 'Impersonator';
+	$wgZeroPortalImpersonateUser = 'Impersonator';
 
-		unset( $zpUserRights );
+	unset( $zpUserRights );
 
-		$wgUsersNotifiedOnAllChanges[] = 'ABaso(WMF)';
-		$wgUsersNotifiedOnAllChanges[] = 'Dfoy';
-		$wgUsersNotifiedOnAllChanges[] = 'Jhobs';
-		$wgUsersNotifiedOnAllChanges[] = 'Yurik';
-	} else {
-		// metawiki
-		$wgGroupPermissions['zeroadmin']['zero-edit'] = true;
-		$wgGroupPermissions['zeroadmin']['zero-script'] = true;
-		$wgGroupPermissions['zeroadmin']['zero-script-ips'] = true;
-		$wgGroupPermissions['zeroadmin']['jsonconfig-flush'] = true;
-		$wgGroupPermissions['zeroscript']['zero-script'] = true;
-		$wgGroupPermissions['zeroscript']['jsonconfig-flush'] = true;
-		$wgGroupPermissions['zeroscriptips']['zero-script-ips'] = true;
-		$wgGroupPermissions['zeroscriptips']['jsonconfig-flush'] = true;
-	}
+	$wgUsersNotifiedOnAllChanges[] = 'ABaso(WMF)';
+	$wgUsersNotifiedOnAllChanges[] = 'Dfoy';
+	$wgUsersNotifiedOnAllChanges[] = 'Jhobs';
+	$wgUsersNotifiedOnAllChanges[] = 'Yurik';
 }
 
 if ( $wmgUseGraph ) {

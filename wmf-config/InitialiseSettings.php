@@ -12011,7 +12011,6 @@ $wgConf->settings = array(
 
 'wmgZeroPortal' => array(
 	'default' => false,
-	'metawiki' => true,
 	'zerowiki' => true,
 ),
 
