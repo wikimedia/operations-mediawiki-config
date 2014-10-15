@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e96e304_3899c080",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 157,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-10-15T19:30:02Z",
+      "side": 0,
+      "message": "Missing ,",
+      "revId": "06921be2651a0a5107c83e1bc77adad7e8ee885d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
