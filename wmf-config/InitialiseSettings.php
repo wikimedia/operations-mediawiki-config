@@ -4018,6 +4018,7 @@ $wgConf->settings = array(
 
 'wgCascadingRestrictionLevels' => array(
 	'default' => array( 'sysop' ),
+	'fawiki' => array( 'templateeditor', 'sysop' ), // Bug 72146
 	'plwiki' => array( 'editor', 'sysop' ), // Bug 48374
 ),
 
@@ -7082,6 +7083,7 @@ $wgConf->settings = array(
 			'undelete' => true,
 		), // bug 69411
 		'OTRS-member' => array( 'read' => true ), // bug 54368
+		'templateeditor' => array( 'editprotected' => true, 'tboverride' => true ), // bug 72146
 	),
 	'+fawikinews' => array(
 		'rollbacker' => array( 'rollback' => true ),
@@ -8064,9 +8066,9 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'flood', 'patroller', 'rollbacker' ),
 	),
 	'+fawiki' => array(
-		'bureaucrat' => array( 'patroller', 'Image-reviewer', 'botadmin', 'OTRS-member' ), // bug 64532, 69411 and 54368
+		'bureaucrat' => array( 'patroller', 'Image-reviewer', 'botadmin', 'OTRS-member', 'templateeditor' ), // bug 64532, 69411, 54368 and 72146
 		'sysop' => array( 'rollbacker', 'autopatrol', 'uploader' ), // bug 23233, 29007 and 69171
-		'botadmin' => array( 'patroller', 'Image-reviewer', 'rollbacker', 'autopatrol', 'uploader' ), // bug 69411
+		'botadmin' => array( 'patroller', 'Image-reviewer', 'rollbacker', 'autopatrol', 'uploader', 'templateeditor' ), // bug 69411 and 72146
 	),
 	'+fawikinews' => array(
 		'sysop' => array( 'rollbacker', 'patroller' ),
@@ -8597,9 +8599,9 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker', 'flood' ),
 	),
 	'+fawiki' => array(
-		'bureaucrat' => array( 'patroller', 'Image-reviewer', 'botadmin', 'OTRS-member' ), // bug 64532, 69411 and 54368
+		'bureaucrat' => array( 'patroller', 'Image-reviewer', 'botadmin', 'OTRS-member', 'templateeditor' ), // bug 64532, 69411, 54368 and 72146
 		'sysop' => array( 'rollbacker', 'autopatrol', 'uploader' ), // bug 23233, 29007 and 69171
-		'botadmin' => array( 'patroller', 'Image-reviewer', 'rollbacker', 'autopatrol', 'uploader' ), // bug 69411
+		'botadmin' => array( 'patroller', 'Image-reviewer', 'rollbacker', 'autopatrol', 'uploader', 'templateeditor' ), // bug 69411 and 72146
 	),
 	'+fawikinews' => array(
 		'sysop' => array( 'rollbacker', 'patroller', ),
