@@ -6553,6 +6553,7 @@ $wgConf->settings = array(
 	'+vecwikisource' => array( 100 => 1, 104 => 1 ),
 	'+viwikibooks' => array( 102 => 1, 104 => 1, 106 => 1 ),
 	'+viwikisource' => array( 102 => 1, 106 => 1 ),
+	'+wikidatawiki' => array( 120 => 1 ),
 	'+zhwikisource' => array( 102 => 1, 106 => 1, 114 => 1 ), // bug 64127
 ),
 # @} end of wgNamespacesToBeSearchedDefault
