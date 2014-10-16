@@ -8998,7 +8998,7 @@ $wgConf->settings = array(
 	'nycwikimedia' => array( 'wikipedia:en', 'meta' ),
 	'plwikimedia' => array( 'b', 'n', 'q', 's', 'voy', 'w', 'wikt', ), // bug 65908
 	'ruwikimedia' => array( 'meta', 'foundation', 'wikipedia:ru', ),
-	'sewikimedia' => array( 'wikipedia:sv' ),
+	'sewikimedia' => array( 'wikipedia:sv', 'commons' ),
 	'trwikimedia' => array( 'wikipedia:tr', 'meta' ),
 	'ukwikimedia' => array( 'meta' ),
 
