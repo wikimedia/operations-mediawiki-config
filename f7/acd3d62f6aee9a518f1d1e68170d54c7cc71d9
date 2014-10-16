@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+2: MarkTraceur <mtraceur@member.fsf.org>
+Code-Review+1: Lydia Pintscher <lydia.pintscher@wikimedia.de>
+Submitted-by: jenkins-bot
+Submitted-at: Thu, 16 Oct 2014 15:27:23 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/166785
+Project: operations/mediawiki-config
+Branch: refs/heads/master
