@@ -804,6 +804,7 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 		'apiUrl' => 'https://gerrit.wikimedia.org/r/projects/mediawiki%2Fextensions%2F$EXT/branches',
 		'tarballUrl' => 'https://extdist.wmflabs.org/dist/$EXT-$REF-$SHA.tar.gz',
 		'tarballName' => '$EXT-$REF-$SHA.tar.gz',
+		'extensionListUrl' => 'https://gerrit.wikimedia.org/r/projects/?p=mediawiki/extensions/',
 	);
 
 	// When changing the Snapshot Refs please change the corresponding
