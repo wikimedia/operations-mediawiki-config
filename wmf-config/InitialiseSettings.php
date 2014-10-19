@@ -2140,6 +2140,7 @@ $wgConf->settings = array(
 	'mlwiktionary'  => 'വിക്കിനിഘണ്ടു',
 	'mrjwiki'	=> 'Википеди',
 	'mrwiki'	=> 'विकिपीडिया',
+	'mrwikibooks'	=> 'विकिबुक्स', // bug 71774
 	'mrwikisource'  => 'विकिस्रोत',
 	'mrwiktionary'  => 'विक्शनरी',
 	'mtwiki'	=> 'Wikipedija',
@@ -2336,6 +2337,7 @@ $wgConf->settings = array(
 	'ltwiktionary'  => 'Vikižodyno_aptarimas',
 	'lvwiki'	=> 'Vikipēdijas_diskusija',
 	'mrjwiki'	=> 'Википедим_кӓнгӓшӹмӓш',
+	'mrwikibooks'	=> 'विकिबुक्स_चर्चा', // bug 71774
 	'mznwiki'       => 'ویکی_پدیا_گپ',
 	'newiki'	=> 'विकिपीडिया_वार्ता',
 	'newwiki' 	=> 'विकिपिडिया_खँलाबँला',
@@ -3142,6 +3144,10 @@ $wgConf->settings = array(
 	'+mrwiki' => array(
 		'Wikipedia' => NS_PROJECT,
 		'विपी' => NS_PROJECT,
+	),
+	'+mrwikibooks' => array(
+		'Wikibooks_talk' => NS_PROJECT_TALK, // bug 71774
+		'Wikibooks_चर्चा' => NS_PROJECT_TALK, // bug 71774
 	),
 	'+mrwikisource' => array(
 		'Portal' => 100,
