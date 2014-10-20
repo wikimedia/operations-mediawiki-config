@@ -6377,6 +6377,8 @@ $wgConf->settings = array(
 
 'wgUseNPPatrol' => array(
 	'default' => true, // brion 2007-11-16
+	'fishbowl' => false, // bug 72239
+	'private' => false, // bug 72239
 	'huwiki' => false, // bug 19241
 	'ruwiki' => false, // bug 31650
 	'sqwiki' => false, // bug 25822
