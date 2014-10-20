@@ -166,6 +166,6 @@ if ( $wgDBname != 'commonswiki' ) {
 			'temp'    => array( 'container' => 'local-temp' ),
 			'deleted' => array( 'container' => 'local-deleted' )
 		),
-		'abbrvThreshold'   => 160
+		'abbrvThreshold'   => 140
 	);
 }
