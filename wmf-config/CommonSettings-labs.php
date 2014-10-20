@@ -108,6 +108,7 @@ require_once( "$IP/extensions/MobileApp/MobileApp.php" );
 
 if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthEnableGlobalRenameRequest = true;
+	$wgCentralAuthAutoMigrate = false; // temp to test with unattached accounts
 }
 
 // Labs override for GlobalCssJs
