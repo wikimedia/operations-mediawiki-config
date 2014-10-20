@@ -118,10 +118,10 @@ $wgLBFactoryConf = array(
 	),
 	's4' => array(
 		'db1040' => 0,   # 1.4TB  64GB
-		# fubar, disk issues 'db1042' => 0,   # 1.4TB  64GB, snapshot
+		'db1042' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1053' => 0,   # 2.8TB  96GB, watchlist, recentchangeslinked, contributions, logpager
-		'db1056' => 0,   # 2.8TB  96GB, vslow, dump
-		'db1059' => 200, # 2.8TB  96GB, api
+		'db1056' => 100, # 2.8TB  96GB, api
+		'db1059' => 100, # 2.8TB  96GB, api
 		'db1064' => 500, # 2.8TB 160GB
 		'db1068' => 500, # 2.8TB 160GB
 		'db1070' => 500, # 2.8TB 160GB
@@ -215,12 +215,13 @@ $wgLBFactoryConf = array(
 	),
 	's4' => array(
 		'vslow' => array(
-			'db1056' => 1,
+			'db1042' => 1,
 		),
 		'dump' => array(
-			'db1056' => 1,
+			'db1042' => 1,
 		),
 		'api' => array(
+			'db1056' => 1,
 			'db1059' => 1,
 		),
 		'watchlist' => array(
