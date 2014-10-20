@@ -106,6 +106,10 @@ if ( $wmgUseCentralNotice ) {
 
 require_once( "$IP/extensions/MobileApp/MobileApp.php" );
 
+if ( $wmgUseCentralAuth ) {
+	$wgCentralAuthEnableGlobalRenameRequest = true;
+}
+
 // Labs override for GlobalCssJs
 if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
 	// Load from betalabs metawiki
