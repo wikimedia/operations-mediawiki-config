@@ -13786,6 +13786,11 @@ $wgConf->settings = array(
 	'loginwiki' => false,
 ),
 
+'wmgSecurePollUseNamespace' => array(
+	'default' => false,
+	'testwiki' => true,
+),
+
 'wmgUseGlobalAbuseFilters' => array(
 	'default' => false,
 	'small' => true,

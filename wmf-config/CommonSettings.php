@@ -839,6 +839,7 @@ if ( $wmgUseContactPage ) {
 if ( $wmgUseSecurePoll ) {
 	include( $IP . '/extensions/SecurePoll/SecurePoll.php' );
 
+	$wgSecurePollUseNamespace = $wmgSecurePollUseNamespace;
 	$wgSecurePollScript = 'auth-api.php';
 	$wgHooks['SecurePoll_JumpUrl'][] = function( $page, &$url ) {
 		global $site, $lang;
