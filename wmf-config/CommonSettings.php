@@ -1766,6 +1766,7 @@ if( $wgDBname == 'commonswiki' ) {
 $wgDefaultUserOptions['watchdefault'] = 0;
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 $wgDefaultUserOptions['usenewrc'] = 0;
+$wgDefaultUserOptions['extendwatchlist'] = 0;
 
 if ( $wgDBname == 'strategywiki' ) {
 	require_once( "$IP/extensions/StrategyWiki/ActiveStrategy/ActiveStrategy.php" );
