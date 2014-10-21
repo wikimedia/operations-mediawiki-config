@@ -9207,6 +9207,7 @@ $wgConf->settings = array(
 	'nowikisource' => array( 'w' ),
 	'nowiktionary' => array( 'w' ),
 	'orwiki' => array( 'en', 'commons' ),
+	'orwikisource' => array( 'en', 'mul' ),
 	'otrs_wikiwiki' => array( 'meta' ),
 	'outreachwiki'  => array( 'w:en', 'w:de', 'w:fr', 'w:pl', 'w:it', 'w:ja', 'w:es', 'w:nl', 'w:pt', 'w:ru', 'w:sv', 'commons', 'foundation', 'm', ),
 	'pflwiki' => array( 'de', 'fr', 'als', 'pdc', 'en' ),
