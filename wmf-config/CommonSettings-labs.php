@@ -168,15 +168,6 @@ if ( $wmgUseCollection ) {
 	$wgCollectionMWServeURL = 'http://deployment-pdf01:8000';
 	$wgCollectionFormats[ 'rdf2text' ] = 'TXT';
 	$wgCollectionPortletFormats[] = 'rdf2text';
-	// enable pediapress in labs for testing (see bug 71675)
-	$wgCollectionPODPartners = array(
-		'pediapress' => array(
-			'name' => 'PediaPress',
-			'url' => 'http://pediapress.com/',
-			'posturl' => 'http://pediapress.com/api/collections/',
-			'infopagetitle' => 'coll-order_info_article',
-		),
-	);
 }
 
 if ( $wmgUsePageImages ) {
