@@ -168,6 +168,8 @@ if ( $wmgUseCollection ) {
 	$wgCollectionMWServeURL = 'http://deployment-pdf01:8000';
 	$wgCollectionFormats[ 'rdf2text' ] = 'TXT';
 	$wgCollectionPortletFormats[] = 'rdf2text';
+	// Don't use production proxy to reach PediaPress
+	$wgCollectionCommandToServeURL[ 'zip_post' ] = 'https://pediapress.com/wmfup/';
 }
 
 if ( $wmgUsePageImages ) {

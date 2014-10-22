@@ -1594,7 +1594,7 @@ if ( $wmgUseCollection ) {
 	$wgCollectionMWServeURL = 'http://ocg.svc.eqiad.wmnet:8000';
 	// Use pediapress server for POD function (bug 71675)
 	$wgCollectionCommandToServeURL = array(
-		'zip_post' => 'https://pediapress.com/wmfup/',
+		'zip_post' => 'http://url-downloader.wikimedia.org:8080|https://pediapress.com/wmfup/',
 	);
 	$wgCollectionPODPartners = array(
 		'pediapress' => array(
