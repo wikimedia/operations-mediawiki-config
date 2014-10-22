@@ -1592,18 +1592,13 @@ if ( $wmgUseCollection ) {
 	// PediaPress / PDF generation
 	include "$IP/extensions/Collection/Collection.php";
 	$wgCollectionMWServeURL = 'http://ocg.svc.eqiad.wmnet:8000';
-	// Use pediapress server for POD function (bug 71675)
+	// Use pediapress server for POD function
 	$wgCollectionCommandToServeURL = array(
 		'zip_post' => 'https://pediapress.com/wmfup/',
 	);
-	$wgCollectionPODPartners = array(
-		'pediapress' => array(
-			'name' => 'PediaPress',
-			'url' => 'http://pediapress.com/',
-			'posturl' => 'http://pediapress.com/api/collections/',
-			'infopagetitle' => 'coll-order_info_article',
-		),
-	);
+	// ...but disable pediapress for now (bug 71675)
+	// (until https://gerrit.wikimedia.org/r/165234 is deployed)
+	$wgCollectionPODPartners = false;
 
 	// MediaWiki namespace is not a good default
 	$wgCommunityCollectionNamespace = NS_PROJECT;
