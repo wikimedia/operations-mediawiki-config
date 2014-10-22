@@ -4184,6 +4184,7 @@ $wgConf->settings = array(
 		'Wikibase\UpdateRepoOnMoveJob' => "udp://$wmfUdp2logDest/updateRepoOnMove",
 		'BounceHandler' => "udp://$wmfUdp2logDest/bouncehandler",
 		'Echo' => "udp://$wmfUdp2logDest/echo",
+		'collection' => "udp://$wmfUdp2logDest/collection", // -cscott for bug 71675
 	),
 
 	'+enwiki' => array(
