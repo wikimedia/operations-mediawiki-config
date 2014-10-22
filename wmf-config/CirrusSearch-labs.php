@@ -6,10 +6,10 @@
 # It should be loaded AFTER CirrusSearch-common.php
 
 $wgCirrusSearchServers = array(
-	'deployment-elastic01',
-	'deployment-elastic02',
-	'deployment-elastic03',
-	'deployment-elastic04',
+	'deployment-elastic05',
+	'deployment-elastic06',
+	'deployment-elastic07',
+	'deployment-elastic08',
 );
 
 $wgCirrusSearchBackup['backups'] = array(
