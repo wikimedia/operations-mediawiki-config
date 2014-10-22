@@ -63,7 +63,7 @@ $wgOpenStackManagerDNSOptions = array(
 );
 $wgOpenStackManagerPuppetOptions = array(
 	'enabled' => true,
-	'defaultclasses' => array( 'base', 'role::labs::instance', 'sudo::labs_project' ),
+	'defaultclasses' => array( 'base', 'role::labs::instance' ),
 	'defaultvariables' => array( 'realm' => 'labs' ),
 );
 $wgOpenStackManagerInstanceUserData = array(
