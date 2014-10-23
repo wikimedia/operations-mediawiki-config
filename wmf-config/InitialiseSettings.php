@@ -11586,7 +11586,7 @@ $wgConf->settings = array(
 
 'wmgUseImageMetrics' => array(
 	'default' => false,
-	'testwiki' => true,
+	'group0' => true,
 ),
 
 'wmgImageMetricsSamplingFactor' => array(
