@@ -7217,18 +7217,18 @@ $wgConf->settings = array(
 		),
 		'translator' => array( 'editinterface' => true, ),
 	),
-	// http://bugzilla.wikimedia.org/show_bug.cgi?id=5836
-	// http://bugzilla.wikimedia.org/show_bug.cgi?id=11326
+	// bug 5836
+	// bug 11326
 	'itwiki' => array(
 		'user'	=> array( 'upload' => false, 'move' => false ),
 		'autoconfirmed' => array( 'patrol' => true, 'upload' => true ),
 		'flood' => array( 'bot' => true, ),
 		'rollbacker' => array( 'rollback' => true, 'autopatrol' => true, ),
 		'autopatrolled' => array( 'autopatrol' => true ),
-		'filemover' => array( 'movefile' => true ), // Bug 53913
+		'filemover' => array( 'movefile' => true ), // bug 53913
 	),
 	'+itwikisource' => array(
-		'flood' => array( 'bot' => true ), // http://bugzilla.wikimedia.org/show_bug.cgi?id=36600
+		'flood' => array( 'bot' => true ), // bug 36600
 	),
 	'+itwikiversity' => array( 'autoconfirmed' => array( 'patrol' => true ) ),
 	'itwikibooks' => array(
@@ -7236,7 +7236,7 @@ $wgConf->settings = array(
 		'autoconfirmed' => array( 'move' => true, 'patrol' => true ),
 		'autopatrolled' => array( 'autopatrol' => true, ),
 		'patroller' => array( 'autopatrol' => true, 'rollback' => true, ),
-		'flooder' => array( 'bot' => true, ), // Bug 39569
+		'flooder' => array( 'bot' => true, ), // bug 39569
 	),
 	'+itwikinews' => array( 'autoconfirmed' => array( 'patrol' => true ) ),
 	'itwikiquote' => array(
@@ -7246,20 +7246,20 @@ $wgConf->settings = array(
 	),
 	'+itwikivoyage' => array(
 		'autopatrolled' => array(
-			'autopatrol' => true, // Bug 43327, 43524
+			'autopatrol' => true, // bug 43327, 43524
 		),
-		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true ), // Bug 45638
+		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true ), // bug 45638
 	),
 	'+itwiktionary' => array(
 		'autoconfirmed' => array( 'patrol' => true ),
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'import' => array( 'suppressredirect' => true, ),
-		'transwiki' => array( 'suppressredirect' => true, ),
-		'flood' => array( 'bot' => true, ), // Bug 39306
+		'transwiki' => array( 'suppressredirect' => true, 'mergehistory' => true, ),
+		'flood' => array( 'bot' => true, ), // bug 39306
 	),
 	'jawiki' => array(
-		'autoconfirmed' => array( 'patrol' => true ), // Requested by bug 13055
+		'autoconfirmed' => array( 'patrol' => true ), // bug 13055
 		'rollbacker' => array(
 			'autopatrol' => true,
 			'ipblock-exempt' => true,
