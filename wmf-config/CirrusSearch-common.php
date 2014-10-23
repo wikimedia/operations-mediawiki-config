@@ -90,6 +90,10 @@ if ( $wgDBname == 'commonswiki' ) {
 } else {
 	$wgCirrusSearchExtraIndexes[ NS_FILE ] = array( 'commonswiki_file' );
 }
+if ( $wgDBname == 'enwiki' ) {
+	$wgCirrusSearchPoolCounterKey = '_elasticsearch_enwiki';
+	$wgCirrusSearchWikimediaExtraPlugin[ 'regex' ][] = 'use';
+}
 
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
