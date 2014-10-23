@@ -4019,6 +4019,7 @@ $wgConf->settings = array(
 	'arwiki' => array( '', 'autoconfirmed', 'autoreview', 'sysop', 'superprotect' ), // bug 52109
 	'ckbwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), // bug 52533
 	'enwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // bug 55432
+	'fawiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // bug 72146
 	'hewiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), //bug 58207
 	'huwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // bug 72055
 	'plwiki' => array( '', 'autoconfirmed', 'editor', 'sysop', 'superprotect' ), // bug 46990
@@ -7098,7 +7099,8 @@ $wgConf->settings = array(
 			'undelete' => true,
 		), // bug 69411
 		'OTRS-member' => array( 'read' => true ), // bug 54368
-		'templateeditor' => array( 'editprotected' => true, 'tboverride' => true ), // bug 72146
+		'templateeditor' => array( 'editprotected' => true, 'tboverride' => true, 'templateeditor' => true ), // bug 72146
+		'sysop' => array( 'templateeditor' => true ),  // bug 72146
 	),
 	'+fawikinews' => array(
 		'rollbacker' => array( 'rollback' => true ),
