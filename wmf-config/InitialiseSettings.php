@@ -10493,7 +10493,7 @@ $wgConf->settings = array(
 		NS_HELP, NS_HELP_TALK, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111
 	),
 	'+enwikisource' => array( 114 ), // bug 56899
-	'+metawiki' => array( 200 ),
+	'+metawiki' => array( 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215 ), // bug 72493
 ),
 
 'wmgCollectionHierarchyDelimiter' => array(
