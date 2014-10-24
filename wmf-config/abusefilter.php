@@ -150,7 +150,7 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterAvailableActions[] = 'block';
 		$wgAbuseFilterBlockDuration = '24 hours';
 		break;
-	case 'fawiki':
+	case 'fawiki': // bug 69073 and 72502
 		$wgGroupPermissions['*']['abusefilter-log'] = false;
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false;
@@ -160,6 +160,14 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['autopatrol']['abusefilter-log'] = true;
 		$wgGroupPermissions['autopatrol']['abusefilter-view'] = true;
 		$wgGroupPermissions['autopatrol']['abusefilter-log-detail'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-log'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-log-detail'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-log-private'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-view'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-view-private'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-revert'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-log'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-log-private'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-view'] = true;

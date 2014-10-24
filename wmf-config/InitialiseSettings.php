@@ -8081,9 +8081,24 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'flood', 'patroller', 'rollbacker' ),
 	),
 	'+fawiki' => array(
-		'bureaucrat' => array( 'patroller', 'Image-reviewer', 'botadmin', 'OTRS-member', 'templateeditor' ), // bug 64532, 69411, 54368 and 72146
+		'bureaucrat' => array(
+			'patroller',
+			'Image-reviewer', // bug 64532
+			'botadmin', // bug 69411
+			'OTRS-member', // bug 54368
+			'templateeditor', // bug 72146
+			'abusefilter' // bug 72502
+		),
 		'sysop' => array( 'rollbacker', 'autopatrol', 'uploader' ), // bug 23233, 29007 and 69171
-		'botadmin' => array( 'patroller', 'Image-reviewer', 'rollbacker', 'autopatrol', 'uploader', 'templateeditor' ), // bug 69411 and 72146
+		'botadmin' => array(
+			'patroller',
+			'Image-reviewer',
+			'rollbacker',
+			'autopatrol',
+			'uploader',
+			'templateeditor', // bug 72146
+			'abusefilter' // bug 72502
+		 ), // bug 69411
 	),
 	'+fawikinews' => array(
 		'sysop' => array( 'rollbacker', 'patroller' ),
@@ -8614,9 +8629,24 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker', 'flood' ),
 	),
 	'+fawiki' => array(
-		'bureaucrat' => array( 'patroller', 'Image-reviewer', 'botadmin', 'OTRS-member', 'templateeditor' ), // bug 64532, 69411, 54368 and 72146
+		'bureaucrat' => array(
+			'patroller',
+			'Image-reviewer', // bug 64532
+			'botadmin', // bug 69411
+			'OTRS-member', // bug 54368
+			'templateeditor', // bug 72146
+			'abusefilter' // bug 72502
+		),
 		'sysop' => array( 'rollbacker', 'autopatrol', 'uploader' ), // bug 23233, 29007 and 69171
-		'botadmin' => array( 'patroller', 'Image-reviewer', 'rollbacker', 'autopatrol', 'uploader', 'templateeditor' ), // bug 69411 and 72146
+		'botadmin' => array(
+			'patroller',
+			'Image-reviewer',
+			'rollbacker',
+			'autopatrol',
+			'uploader',
+			'templateeditor', // bug 72146
+			'abusefilter' // bug 72502
+		), // bug 69411
 	),
 	'+fawikinews' => array(
 		'sysop' => array( 'rollbacker', 'patroller', ),
