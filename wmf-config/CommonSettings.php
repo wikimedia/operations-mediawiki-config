@@ -286,6 +286,7 @@ $wgGitInfoCacheDirectory = "$IP/cache/gitinfo";
 
 // Whether addWiki.php should send email
 $wmgAddWikiNotify = true;
+$wmgAddWikiNotifyEmail = "newprojects@lists.wikimedia.org";
 
 // Comment out the following lines to get the old-style l10n caching -- TS 2011-02-22
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
