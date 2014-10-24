@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_035ed717",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 5561,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2014-10-24T17:44:20Z",
+      "side": 1,
+      "message": "Remove the spaces here perhaps?",
+      "revId": "e533951b0f56e6bd6871f6c5e9f52b6db24675ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
