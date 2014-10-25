@@ -10621,7 +10621,7 @@ $wgConf->settings = array(
 
 'wgGroupsAddToSelf' => array(
 	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 54732
-	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 37198
+	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin', 'centralnoticeadmin' ) ), // Bug 37198
 	'otrs_wikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // bug 61297
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
