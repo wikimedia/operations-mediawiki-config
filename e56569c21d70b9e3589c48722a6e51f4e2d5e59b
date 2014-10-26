@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_10eb7678",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7820,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2014-10-26T23:46:37Z",
+      "side": 1,
+      "message": "I don\u0027t think \"staff\" is a good name, as it already exists as a global group (and they use the same messages for localization)",
+      "revId": "e56569c21d70b9e3589c48722a6e51f4e2d5e59b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
