@@ -16,6 +16,24 @@
       "revId": "e56569c21d70b9e3589c48722a6e51f4e2d5e59b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_d0e42ea6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7820,
+      "author": {
+        "id": 442
+      },
+      "writtenOn": "2014-10-26T23:50:45Z",
+      "side": 1,
+      "message": "Actually this was my intention, so that no additional i18n work is needed. Anyway, if we insist on the \"WMDE\" prefix for every translation, I could change it to \"wmde-staff\" or the like.",
+      "parentUuid": "6e936f18_10eb7678",
+      "revId": "e56569c21d70b9e3589c48722a6e51f4e2d5e59b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
