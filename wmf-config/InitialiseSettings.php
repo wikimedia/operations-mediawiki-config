@@ -10838,6 +10838,7 @@ $wgConf->settings = array(
 'wgCopyUploadsFromSpecialUpload' => array(
 	'default' => false,
 	'testwiki' => true, // bug 71897
+	'commonswiki' => true, // bug 71897
 ),
 // For Flickr uploads via UploadWizard - 2012-11-20
 'wgCopyUploadsDomains' => array(
