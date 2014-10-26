@@ -2153,6 +2153,12 @@ if ( $wmgMobileFrontend || $wmgUseFlow ) {
 
 require( getRealmSpecificFilename( "$wmfConfigDir/mobile.php" ) );
 
+if ( $wgDBname === 'itwiki'
+	&& time() >= strtotime( '2014-11-01T00:01 +0:00' )
+	&& time() <= strtotime( '2014-12-31T23:59 +0:00' )
+) {
+	$wgMFAnonymousEditing = true; // Bug 72541
+}
 
 # MUST be after MobileFrontend initialization
 if ( $wmgEnableTextExtracts ) {
