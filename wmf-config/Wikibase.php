@@ -2,11 +2,19 @@
 
 require_once( "$IP/extensions/Wikidata/Wikidata.php" );
 
-$wgWBSharedCacheKeyPrefix = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
+// for 1.25wmf5 and above, the version comes from the Wikidata
+// build, included above, so that cache invalidations can
+// be more in sync with extension changes, whenever there
+// is a new branch or otherwise needed to do for a new build.
+if ( $wmfVersionNumber === '1.25wmf4' || $wmfVersionNumber === '1.25wmf3' ) {
+	$wgWBSharedCacheKey = "$wmgWikibaseCachePrefix/WBL-$wmfVersionNumber";
+} else {
+	$wgWBSharedCacheKey = '-' . $wmgWikibaseCachePrefix;
+}
 
 if ( defined( 'HHVM_VERSION' ) ) {
 	// Split the cache up for hhvm. Bug 71461
-	$wgWBSharedCacheKeyPrefix .= '-hhvm';
+	$wgWBSharedCacheKey .= '-hhvm';
 }
 
 if ( $wmgUseWikibaseRepo ) {
@@ -89,7 +97,12 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
 	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
-	$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wgWBSharedCacheKeyPrefix;
+
+	if ( $wmfVersionNumber === '1.25wmf4' || $wmfVersionNumber === '1.25wmf3' ) {
+		$wgWBRepoSettings['sharedCacheKeyPrefix'] = $wgWBSharedCacheKey;
+	} else {
+		$wgWBRepoSettings['sharedCacheKeyPrefix'] .= $wgWBSharedCacheKey;
+	}
 
 	$wgPropertySuggesterMinProbability = 0.071;
 
@@ -196,6 +209,11 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
 
-	$wgWBClientSettings['sharedCacheKeyPrefix'] = $wgWBSharedCacheKeyPrefix;
+	if ( $wmfVersionNumber === '1.25wmf4' || $wmfVersionNumber === '1.25wmf3' ) {
+		$wgWBClientSettings['sharedCacheKeyPrefix'] = $wgWBSharedCacheKey;
+	} else {
+		$wgWBClientSettings['sharedCacheKeyPrefix'] .= $wgWBSharedCacheKey;
+	}
+
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 }
