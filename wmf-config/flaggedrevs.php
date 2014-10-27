@@ -249,8 +249,6 @@ elseif ( $wgDBname == 'enwiki' || $wgDBname == 'testwiki' ) {
 	$wgFlaggedRevsHandleIncludes = FR_INCLUDES_CURRENT;
 	# Group permissions for autoconfirmed
 	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
-	# WP:FPPR trial quota
-	$wgFlaggedRevsProtectQuota = 2000;
 
 	# Group permissions for sysops
 	$wgGroupPermissions['sysop']['review']         = true;
