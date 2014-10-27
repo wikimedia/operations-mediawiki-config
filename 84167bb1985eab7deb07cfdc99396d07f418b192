@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_765bd226",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2156,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-27T08:51:51Z",
+      "side": 1,
+      "message": "Maybe it looks better, if you use a line break here, too?",
+      "revId": "84167bb1985eab7deb07cfdc99396d07f418b192",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
