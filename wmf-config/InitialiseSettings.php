@@ -7817,6 +7817,53 @@ $wgConf->settings = array(
 			'skipcaptcha' => true, // bug 55495
 			'abusefilter-log-detail' => true, // bug 55495
 		),
+		'wikidata-staff' => array(
+			'abusefilter-log-detail' => true,
+			'abusefilter-modify' => true,
+			'abusefilter-modify-restricted' => true,
+			'apihighlimits' => true,
+			'autoconfirmed' => true,
+			'autopatrol' => true,
+			'block' => true,
+			'blockemail' => true,
+			'browsearchive' => true,
+			'delete' => true,
+			'deletedhistory' => true,
+			'deletedtext' => true,
+			'deletelogentry' => true,
+			'deleterevision' => true,
+			'globalblock-whitelist' => true,
+			'editinterface' => true,
+			'editprotected' => true,
+			'editsemiprotected' => true,
+			'editusercss' => true,
+			'edituserjs' => true,
+			'import' => true,
+			'ipblock-exempt' => true,
+			'markbotedits' => true,
+			'massmessage' => true,
+			'mergehistory' => true,
+			'move-subpages' => true,
+			'noratelimit' => true,
+			'nuke' => true,
+			'override-antispoof' => true,
+			'pagetranslation' => true,
+			'patrol' => true,
+			'property-create' => true,
+			'protect' => true,
+			'proxyunbannable' => true,
+			'rollback' => true,
+			'skipcaptcha' => true,
+			'spamblacklistlog' => true,
+			'suppressredirect' => true,
+			'tboverride' => true,
+			'titleblacklistlog' => true,
+			'translate-import' => true,
+			'translate-manage' => true,
+			'unblockself' => true,
+			'undelete' => true,
+			'unwatchedpages' => true,
+		), // bug 72459
 		'sysop' => array( 'property-create' => true ), // bug 46953
 		'flood' => array( 'bot' => true ), // bug 48013
 	),
@@ -8408,7 +8455,11 @@ $wgConf->settings = array(
 		),
 		'bureaucrat' => array(
 			'flood', // bug 48013
+			'wikidata-staff', // bug 72459
 			'translationadmin',
+		),
+		'wikidata-staff' => array(
+			'wikidata-staff', // bug 72459
 		),
 	),
 	'+wikimania2013wiki' => array(
@@ -8950,8 +9001,12 @@ $wgConf->settings = array(
 			'propertycreator', // bug 46953
 		),
 		'bureaucrat' => array(
-			'translationadmin', // bug 44395
 			'flood', // bug 48013
+			'wikidata-staff', // bug 72459
+			'translationadmin', // bug 44395
+		),
+		'wikidata-staff' => array(
+			'wikidata-staff', // bug 72459
 		),
 	),
 	'+wikimania2013wiki' => array(
