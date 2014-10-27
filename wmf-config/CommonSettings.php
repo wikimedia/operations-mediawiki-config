@@ -2839,7 +2839,7 @@ if ( $wmgUseOAuth ) {
 	$wgMWOAuthCentralWiki = 'mediawikiwiki';
 	$wgMWOAuthSharedUserSource = 'CentralAuth';
 	$wgMWOAuthSecureTokenTransfer = true;
-	$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
+
 	$wgGroupPermissions['autoconfirmed']['mwoauthproposeconsumer'] = true;
 	$wgGroupPermissions['autoconfirmed']['mwoauthupdateownconsumer'] = true;
 
@@ -2867,6 +2867,14 @@ if ( $wmgUseOAuth ) {
 	$wgMWOAuthGrantPermissions['editpage']['item-merge'] = true;
 	$wgMWOAuthGrantPermissions['editpage']['property-term'] = true;
 	$wgMWOAuthGrantPermissions['editpage']['item-redirect'] = true;
+
+	$wgExtensionFunctions[] = function() {
+		global $wgDBname, $wgMWOAuthCentralWiki;
+		if ( $wgDBname === $wgMWOAuthCentralWiki ) {
+			// Only needed on the central wiki.
+			$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
+		}
+	};
 }
 
 if ( $wmgUsePetition ) {
