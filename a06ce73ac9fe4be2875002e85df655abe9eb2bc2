@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_b6339af2",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2156,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2014-10-27T08:37:14Z",
+      "side": 1,
+      "message": "I\u0027m not sure if it\u0027s the best way to implement two new function calls (for every page view) where we can use already transforemed values. So, i suggest to use:\n\nif ( time() \u003e\u003d 1414800060\n\t\u0026\u0026 time() \u003c\u003d 1420070340\n\t\u0026\u0026 ( $wgDBname \u003d\u003d\u003d \u0027itwiki\u0027 )\n) {\n\t$wgMFAnonymousEditing \u003d true; // Bug 72541\n}\n\nAlso, i\u0027m wondering if this would be better in mobile.php.",
+      "revId": "a06ce73ac9fe4be2875002e85df655abe9eb2bc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
