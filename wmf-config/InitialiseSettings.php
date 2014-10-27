@@ -13832,7 +13832,9 @@ $wgConf->settings = array(
 ),
 
 'wmgUseCirrus' => array(
-	'default' => true,
+	// 'default' => true,
+	'default' => false,
+	'test2wiki' => true,
 	'dewiki' => false,
 	'enwiki' => false,
 	'frwiki' => false,
@@ -13843,7 +13845,6 @@ $wgConf->settings = array(
 	// 'default' => true,
 	// Falling back to lsearchd while Elasticsearch is freaking out.
 	'default' => false,
-	'test2wiki' => true,
 ),
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
