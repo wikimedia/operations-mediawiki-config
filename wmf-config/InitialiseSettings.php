@@ -6656,6 +6656,7 @@ $wgConf->settings = array(
 'wgBlockDisablesLogin' => array(
 	'default' => false,
 	'private' => true, // bug 53871
+	'votewiki' => true, // bug 72589
 ),
 
 # groupOverrides @{
@@ -7791,6 +7792,17 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true ), // bug 46828
 		'autopatrolled' => array( 'autopatrol' => true ), // bug 46828
 	),
+	// bug 72589 SecurePoll rights
+	'+votewiki' => array(
+		'electcomm' => array(
+			'securepoll-create-poll' => true,
+			'editinterface' => true
+		),
+		'staffsupport' => array(
+			'securepoll-create-poll' => true,
+			'editinterface' => true
+		),
+	),
 	'wikidata' => array(
 		'autoconfirmed' => array(
 			'patrol' => true, // bug 56203
@@ -7845,7 +7857,6 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 		'autoreviewer' => array( 'autopatrol' => true ),
 	),
-
 	'+strategywiki' => array( 'flood' => array( 'bot' => true ) ),
 ),
 # @} end of groupOverrides
@@ -8400,6 +8411,13 @@ $wgConf->settings = array(
 	'+vecwiki' => array(
 		'sysop' => array( 'flood' ),
 	),
+	//bug 72589
+	'+votewiki' => array(
+		'bureaucrat' => array(
+			'electcomm',
+			'staffsupport'
+		),
+	),
 	'+wikidata' => array(
 		'sysop' => array(
 			'rollbacker', // bug 45165
@@ -8942,6 +8960,15 @@ $wgConf->settings = array(
 	),
 	'+vewikimedia' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat' ),
+	),
+	//bug 72589
+	'+votewiki' => array(
+		'bureaucrat' => array(
+			'electcomm',
+			'staffsupport',
+			'sysop',
+			'bureaucrat'
+		),
 	),
 	'+wikidata' => array(
 		'sysop' => array(
