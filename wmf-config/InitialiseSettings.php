@@ -1220,8 +1220,6 @@ $wgConf->settings = array(
 
 'wgQueryCacheLimit' => array(
 	'default' => 5000,
-	'enwiki' => 3000, // safe to raise?
-	'dewiki' => 4000, // safe to raise?
 ),
 
 'wgArticlePath' => array(
