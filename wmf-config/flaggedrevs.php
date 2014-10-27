@@ -67,8 +67,6 @@ elseif ( $wgDBname == 'bnwiki' ) { // http://bugzilla.wikimedia.org/show_bug.cgi
 	$wgFlaggedRevsHandleIncludes = FR_INCLUDES_CURRENT;
 	# Group permissions for autoconfirmed
 	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
-		# WP:FPPR trial quota
-	$wgFlaggedRevsProtectQuota = 2000;
 
 	# Group permissions for sysops
 	$wgGroupPermissions['sysop']['review']         = true;
@@ -115,8 +113,6 @@ elseif ( $wgDBname == 'ckbwiki') {
 	$wgFlaggedRevsProtection = true;
 	# Use current templates/files
 	$wgFlaggedRevsHandleIncludes = FR_INCLUDES_CURRENT;
-	# Trial quota
-	$wgFlaggedRevsProtectQuota = 2000;
 
 	# User groups permissions
 	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
@@ -346,8 +342,6 @@ elseif ( $wgDBname == 'fawiki') {
 	$wgFlaggedRevsProtection = true;
 	# Use current templates/files
 	$wgFlaggedRevsHandleIncludes = FR_INCLUDES_CURRENT;
-	# Trial quota
-	$wgFlaggedRevsProtectQuota = 2000;
 
 	# User groups permissions
 	$wgGroupPermissions['rollbacker']['autoreviewrestore'] = true;
@@ -561,9 +555,6 @@ elseif ( $wgDBname == 'ptwiki' ) { // bug 54828
 	$wgFlaggedRevsProtection = true;
 	# Use current templates/files
 	$wgFlaggedRevsHandleIncludes = FR_INCLUDES_CURRENT;
-
-	# Protect quota
-	$wgFlaggedRevsProtectQuota = 300;
 
 	# Group permissions
 	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
