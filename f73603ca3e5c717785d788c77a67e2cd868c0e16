@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_2fc0842e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8419,
+      "author": {
+        "id": 589
+      },
+      "writtenOn": "2014-10-27T21:58:40Z",
+      "side": 1,
+      "message": "Can be removed as it is specified by \u0027default\u0027",
+      "revId": "f73603ca3e5c717785d788c77a67e2cd868c0e16",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
