@@ -13,8 +13,6 @@ if ( $wmgMobileFrontend ) {
 	$wgMFEnableWikiGrok = $wmgMFEnableWikiGrok;
 	$wgMFPhotoUploadWiki = $wmgMFPhotoUploadWiki;
 	$wgMFContentNamespace = $wmgMFContentNamespace;
-	// FIXME: Remove in a week when cache has cleared
-	$wgMFNearbyNamespace = $wmgMFContentNamespace;
 	$wgMFPhotoUploadAppendToDesc = $wmgMFPhotoUploadAppendToDesc;
 
 	if ( $wmgMobileFrontendLogo ) {
