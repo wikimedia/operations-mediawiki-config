@@ -38,6 +38,10 @@ $wgCirrusSearchMoreAccurateScoringMode = false;
 # Raise the refresh interval to save some CPU at the cost of being slightly less realtime.
 $wgCirrusSearchRefreshInterval = 30;
 
+# Lower the regex timeouts - the defaults are too high in an environment with reverse proxies.
+$wgCirrusSearchSearchShardTimeout[ 'regex' ] = '40s';
+$wgCirrusSearchClientSideSearchTimeout[ 'regex' ] = 80;
+
 # Set the backoff for Cirrus' job that reacts to template changes - slow and steady
 # will help prevent spikes in Elasticsearch load.
 $wgJobBackoffThrottling['cirrusSearchLinksUpdate'] = 0.75;
