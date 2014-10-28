@@ -36,8 +36,15 @@ $wgPoolCounterConf = array(
 	'CirrusSearch-Regex' => array(
 		'class' => 'PoolCounter_Client',
 		'timeout' => 60,
-		'workers' => 2,
-		'maxqueue' => 20,
+		'workers' => 10,
+		'maxqueue' => 10,
+	),
+	// These should be very very fast and reasonably rare
+	'CirrusSearch-NamespaceLookup' => array(
+		'class' => 'PoolCounter_Client',
+		'timeout' => 5,
+		'workers' => 50,
+		'maxqueue' => 100,
 	),
 	'FileRender' => array(
 		'class' => 'PoolCounter_Client',

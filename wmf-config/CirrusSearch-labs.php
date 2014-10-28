@@ -34,12 +34,6 @@ if ( $wgDBname == 'enwiki' ) {
 
 $wgSearchTypeAlternatives = array();
 $wgCirrusSearchAllFields = array( 'build' => true, 'use' => true );
-$wgCirrusSearchWikimediaExtraPlugin = array(
-	'regex' => array(
-		'build',
-		'use',
-	),
-);
 
 # We don't have enough nodes to support these settings in beta so just turn
 # them off.
