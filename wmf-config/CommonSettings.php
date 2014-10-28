@@ -1206,12 +1206,6 @@ if ( $wmgEnableCaptcha ) {
 	}
 }
 
-if ( $wgDBname === 'enwiki' ) {
-	require( "$IP/extensions/Oversight/HideRevision.php" );
-	$wgGroupPermissions['oversight']['hiderevision'] = false;
-	// $wgGroupPermissions['oversight']['oversight'] = true;
-}
-
 if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgExternalDiffEngine = 'wikidiff2';
 }
