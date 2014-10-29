@@ -3775,6 +3775,10 @@ $wgConf->settings = array(
 
 # wgProofreadPageNamespaceIds @{
 'wgProofreadPageNamespaceIds' => array(
+	'default' => array(
+		'page' => 250,
+		'index' => 252
+	),
 	'test2wiki' => array(
 		'page' => 104,
 		'index' => 106
