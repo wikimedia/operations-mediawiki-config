@@ -318,6 +318,7 @@ $wgConf->settings = array(
 	'ltwiki' => 'Europe/Vilnius',
 	'lmowiki' => 'Europe/Rome',
 	'lvwiki' => 'Europe/Riga', // bug 43592
+	'maiwiki' => 'Asia/Kathmandu', // bug 72346
 	'mkwiki' => 'Europe/Berlin',
 	'mkwikibooks' => 'Europe/Berlin',
 	'mkwikimedia' => 'Europe/Berlin',
@@ -573,6 +574,7 @@ $wgConf->settings = array(
 	'ltwiki' => '//upload.wikimedia.org/wikipedia/commons/1/1c/Wikipedia-logo-v2-lt.png', // bug 46589
 	'ltgwiki' => '//upload.wikimedia.org/wikipedia/commons/7/77/Wikipedia-logo-v2-ltg.png',
 	'lvwiki' => '$stdlogo',
+	'maiwiki' => '//upload.wikimedia.org/wikipedia/commons/6/68/Wikipedia-logo-V2-Mai.png', // bug 72346
 	'map_bmswiki' => '$stdlogo',
 	'mdfwiki' => '//upload.wikimedia.org/wikipedia/commons/b/b2/Wikipedia-logo-v2-mdf.png', // bug 46589
 	'mgwiki' => '//upload.wikimedia.org/wikipedia/commons/d/d6/Wikipedia-logo-v2-mg.png', // bug 46589
@@ -1107,6 +1109,7 @@ $wgConf->settings = array(
 	'jawikisource' => false, // bug 3572
 	'jawiktionary' => false, // bug 11775
 	'loginwiki' => false,
+	'maiwiki' => false, // bug 72346
 	'mswiktionary' => false, // bug 67152
 	'nlwikisource' => false, // bug 71403
 	'nlwikivoyage' => false, // bug 71403
@@ -1182,6 +1185,7 @@ $wgConf->settings = array(
 	'jawikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja',
 	'kowiki' => '/wiki/위키백과:파일_올리기', // bug 52076
 	'lawiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=la', // bug 13190
+	'maiwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=mai', // bug 72346
 	'metawiki' => false, // bug 50287
 	'mlwiki' => '/wiki/വിക്കിപീഡിയ:അപ്‌ലോഡ്',
 	'mswiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ms', // bug 67152
@@ -1658,6 +1662,7 @@ $wgConf->settings = array(
 	'ltwikisource' => 'Vikišaltiniai',
 	'ltwiktionary' => 'Vikižodynas',
 	'lvwiki' => 'Vikipēdija',
+	'maiwiki' => 'विकिपिडिया', // bug 72346
 	'mdfwiki' => 'Википедиесь',
 	'mediawikiwiki' => 'MediaWiki',
 	'metawiki' => 'Meta',
@@ -2125,6 +2130,7 @@ $wgConf->settings = array(
 	'ltwikisource'  => 'Vikišaltiniai',
 	'ltwiktionary'	=> 'Vikižodynas',
 	'lvwiki'	=> 'Vikipēdija',
+	'maiwiki'	=> 'विकिपिडिया', // bug 72346
 	'mdfwiki'       => 'Википедиесь',
 	'mediawikiwiki' => 'Project',
 	'metawiki'      => 'Meta',
