@@ -11,7 +11,7 @@ error_reporting( E_ERROR );
 date_default_timezone_set( "GMT" );
 $ghost = 'http://ganglia.wikimedia.org/latest/?r=hour&amp;cs=&amp;ce=&amp;m=&amp;tab=ch&amp;vn=&amp;hreg%5B%5D=';
 $ishmael = 'https://ishmael.wikimedia.org/';
-$gangcache = 'cache/ganglia.dat';
+$gangcache = '/tmp/ganglia-dbtree.dat';
 // ttl for the local cache file
 $ttl = 120;
 // if a server hsan't reported in this many more seconds than the most recent
