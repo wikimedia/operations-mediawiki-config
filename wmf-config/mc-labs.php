@@ -31,7 +31,7 @@ $wgBloomFilterStores['main'] = array(
 	'cacheId'      => 'main-v1',
 	'class'        => 'BloomCacheRedis',
 	'redisServers' => array(
-		'10.68.16.146:6379', // master; deployment-redis1
+		'10.68.16.177:6379', // master; deployment-redis01
 	),
 	'redisConfig'  => array(
 		'password' => $wmgRedisPassword,
