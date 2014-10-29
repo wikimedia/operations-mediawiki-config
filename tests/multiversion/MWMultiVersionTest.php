@@ -43,7 +43,8 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 			array( 'boardwiki', 'board.wikimedia.org' ),
 			array( 'brwikimedia', 'br.wikimedia.org' ),
 			array( 'chairwiki', 'chair.wikimedia.org' ),
-			array( 'chapcomwiki', 'chapcom.wikimedia.org' ),
+			array( 'affcomwiki', 'affcom.wikimedia.org' ),
+			array( 'affcomwiki', 'chapcom.wikimedia.org' ), // chapcom renamed to affcom
 			array( 'checkuserwiki', 'checkuser.wikimedia.org' ),
 			array( 'collabwiki', 'collab.wikimedia.org' ),
 			array( 'commonswiki', 'commons.wikimedia.org' ),

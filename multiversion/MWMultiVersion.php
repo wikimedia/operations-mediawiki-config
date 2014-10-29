@@ -233,7 +233,9 @@ class MWMultiVersion {
 	 *
 	 * @var array( 'newname' => 'oldname' )
 	 */
-	private static $databaseRenames = array();
+	private static $databaseRenames = array(
+		'affcomwiki' => 'chapcomwiki',
+	);
 
 	/**
 	 * @param string $dbName
