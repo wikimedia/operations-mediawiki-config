@@ -19,6 +19,9 @@ if ( in_array( $wgDBname, array( 'enwiki' ) ) ) {
 } elseif ( in_array( $wgDBname, array( 'itwiki', 'ptwiki', 'plwiki', 'nlwiki', 'ruwiki', 'svwiki', 'zhwiki', 'eswiki'  ) ) ) {
 	# Pool 3 LVS
 	$wgLuceneHost = '10.2.2.13'; # eqiad
+} elseif ( in_array( $wgDBname, array( 'commonswiki', 'wikidatawiki', 'metawiki', 'enwiktionary' ) ) ) {
+	# Pool 5 LVS
+	$wgLuceneHost = '10.2.2.16'; # eqiad
 } else {
 	# Pool 4 LVS
 	$wgLuceneHost = '10.2.2.14'; # eqiad
