@@ -1700,6 +1700,7 @@ if ( $wmgUseLocalisationUpdate ) {
 	$wgLocalisationUpdateRepositories['local'] = array(
 		'mediawiki' => '/var/lib/l10nupdate/mediawiki/core/%PATH%',
 		'extension' => '/var/lib/l10nupdate/mediawiki/extensions/%NAME%/%PATH%',
+		'skins' => '/var/lib/l10nupdate/mediawiki/skins/%NAME%/%PATH%',
 	);
 }
 
