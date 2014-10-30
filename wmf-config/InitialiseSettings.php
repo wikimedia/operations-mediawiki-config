@@ -13689,14 +13689,6 @@ $wgConf->settings = array(
 	),
 ),
 
-'wgContentHandlerUseDB' => array(
-	'default' => false,
-	'wikidata' => true,
-	'mediawikiwiki' => true,
-	'testwiki' => true,
-	'test2wiki' => true,
-),
-
 'wmgUseUniversalLanguageSelector' => array(
 	'default' => true,
 ),
