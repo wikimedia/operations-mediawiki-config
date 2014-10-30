@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_37ec43f2",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2875,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2014-10-30T15:51:23Z",
+      "side": 1,
+      "message": "Don\u0027t you need $wgGroupPermissions to be global too? I see oauthadmin isn\u0027t showing up anymore on mediawiki.org.",
+      "revId": "28cde3d3dd0b85b87de76d13ce331c3a241b1a3c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
