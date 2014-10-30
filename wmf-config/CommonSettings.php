@@ -2861,7 +2861,7 @@ if ( $wmgUseOAuth ) {
 	$wgMWOAuthGrantPermissions['editpage']['item-redirect'] = true;
 
 	$wgExtensionFunctions[] = function() {
-		global $wgDBname, $wgMWOAuthCentralWiki;
+		global $wgDBname, $wgMWOAuthCentralWiki, $wgGroupPermissions;
 		if ( $wgDBname === $wgMWOAuthCentralWiki ) {
 			// Only needed on the central wiki.
 			$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
