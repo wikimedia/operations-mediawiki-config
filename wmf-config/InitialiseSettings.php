@@ -13521,6 +13521,7 @@ $wgConf->settings = array(
 		'Talk:Search',
 		'Talk:Cite-from-id',
 		'Talk:Sparrow (sandbox for testing at Wikimania)',
+		'Talk:Sparrow (usability testing)',
 		'Talk:MediaWiki 1.25',
 		'User talk:Jdforrester (WMF)',
 		'Talk:HHVM/About',
