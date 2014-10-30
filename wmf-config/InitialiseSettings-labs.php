@@ -427,7 +427,7 @@ return array(
 	),
 
 	// Already true in production for some wikis, bug 49193
-	'wgContentHandlerDB' => array(
+	'wgContentHandlerUseDB' => array(
 		'default' => false,
 		'enwiki' => true,
 	),
