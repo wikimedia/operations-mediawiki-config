@@ -14057,6 +14057,15 @@ $wgConf->settings = array(
 	'zhwikisource' => array( 'content' => 5, 'general' => 1 ),
 ),
 
+// Most wikis are fine with 0-2 replicas for all indexes
+// some of the larger ones will want more replicas for content indexes
+'wmgCirrusSearchReplicas' => array(
+	'default' => array( 'content' => '0-2', 'general' => '0-2' ),
+	'+commonswiki' => array( 'file' => '0-3' ),
+	'+dewiki' => array( 'content' => '0-3' ),
+	'+enwiki' => array( 'content' => '0-3' ),
+),
+
 'wmgCirrusSearchMaxShardsPerNode' => array(
 	'default' => array(),
 	'commonswiki' => array( 'file' => 1, 'general' => 2 ),
