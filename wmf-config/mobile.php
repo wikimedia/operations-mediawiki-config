@@ -102,5 +102,16 @@ if ( $wmgMobileFrontend ) {
 
 	if ( $wmgUseWikiGrok ) {
 		require_once( "$IP/extensions/WikiGrok/WikiGrok.php" );
+		
+		$wgWikiGrokSlowCampaigns = array(
+			// https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok/Claim_suggestions#Writer
+			'author' => array(
+				'type' => 'Simple',
+				'property' => 'P106',
+				'ifAll' => array( 'P31' => 'Q5', 'P106' => 'Q36180' ),
+				'ifNotAny' => array( 'P106' => 'Q482980' ),
+				'suggestions' => array( 'Q482980' ),
+			),
+		);
 	}
 }
