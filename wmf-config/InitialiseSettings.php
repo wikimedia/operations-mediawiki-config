@@ -13960,7 +13960,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseCirrusAsAlternative' => array(
-	'default' => false,
+	'default' => true,
 ),
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
