@@ -12138,6 +12138,8 @@ $wgConf->settings = array(
 ),
 'wmgUseWikiGrok' => array(
 	'default' => false,
+	'test2wiki' => true,
+	'testwiki' => true,
 ),
 'wmgEnableTextExtracts' => array(
 	'default' => true,
