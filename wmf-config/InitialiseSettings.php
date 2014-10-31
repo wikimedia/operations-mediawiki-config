@@ -13951,7 +13951,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseCirrus' => array(
-	'default' => true,
+	'default' => false,
 	'dewiki' => false,
 	'enwiki' => false,
 	'frwiki' => false,
