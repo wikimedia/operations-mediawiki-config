@@ -12140,6 +12140,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'test2wiki' => true,
 	'testwiki' => true,
+	'enwiki' => true,
 ),
 'wmgEnableTextExtracts' => array(
 	'default' => true,
