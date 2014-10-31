@@ -57,7 +57,7 @@ $wgCirrusSearchBannedPlugins[] = 'elasticsearch-analysis-hebrew';
 $wgCirrusSearchWikimediaExtraPlugin = array(
 	'regex' => array(
 		'build',
-		'use',
+		// 'use', - disabled on suspicion of causing issues
 	),
 );
 
