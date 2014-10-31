@@ -10,6 +10,7 @@ $wgCirrusSearchServers = array(
 );
 
 $wgCirrusSearchConnectionAttempts = 3;
+$wgCirrusSearchEnableRegex = false;
 
 $wgCirrusSearchBackup['backups'] = array(
 	'type' => 'swift',
