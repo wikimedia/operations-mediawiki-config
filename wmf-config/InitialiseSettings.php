@@ -13951,7 +13951,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseCirrus' => array(
-	'default' => true,
+	'default' => false,
 	'dewiki' => false,
 	'enwiki' => false,
 	'frwiki' => false,
@@ -13959,7 +13959,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseCirrusAsAlternative' => array(
-	'default' => true,
+	'default' => false,
 ),
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
