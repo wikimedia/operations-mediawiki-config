@@ -12136,6 +12136,9 @@ $wgConf->settings = array(
 	'labswiki' => false,
 	'wikidata' => false, // Disabled due to lack of mobile domain setup
 ),
+'wmgUseWikiGrok' => array(
+	'default' => false,
+),
 'wmgEnableTextExtracts' => array(
 	'default' => true,
 ),
