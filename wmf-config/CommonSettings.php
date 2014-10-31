@@ -2429,14 +2429,14 @@ if ( $wmgUseWikimediaShopLink ) {
 	};
 }
 
-if ( $wmgEnableGeoData
-	&& ( $wmgUseCirrus || $wmgUseCirrusAsAlternative ) )
-{
+if ( $wmgEnableGeoData ) {
 	require_once( "$IP/extensions/GeoData/GeoData.php" );
 	$wgGeoDataBackend = 'elastic';
 
-	# Data collection mode
-	if ( !$wmgEnableGeoSearch ) {
+	# Don't access Elasticsearch if CirrusSearch has problems
+	if ( !$wmgEnableGeoSearch
+		|| !( $wmgUseCirrus || $wmgUseCirrusAsAlternative ) )
+	{
 		$wgAPIListModules['geosearch'] = 'ApiQueryDisabled';
 	}
 
