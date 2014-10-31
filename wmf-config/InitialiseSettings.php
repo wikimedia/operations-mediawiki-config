@@ -13942,6 +13942,7 @@ $wgConf->settings = array(
 'wmgUseGlobalAbuseFilters' => array(
 	'default' => false,
 	'small' => true,
+	'medium' => true,
 	'private' => false,
 	'fishbowl' => false,
 
