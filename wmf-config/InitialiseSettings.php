@@ -10874,9 +10874,9 @@ $wgConf->settings = array(
 	'testwiki' => true, // bug 71897
 	'commonswiki' => true, // bug 71897
 ),
-// For Flickr uploads via UploadWizard - 2012-11-20
+
 'wgCopyUploadsDomains' => array(
-	'default' => array( '*.flickr.com', '*.staticflickr.com', ),
+	'default' => array( '*.flickr.com', '*.staticflickr.com', ), // For Flickr uploads via UploadWizard - 2012-11-20
 	'+testwiki' => array( 'upload.wikimedia.org' ),
 	'+commonswiki' => array(
 		'am.adlibhosting.com',              // Amsterdam Museum
@@ -10918,7 +10918,7 @@ $wgConf->settings = array(
 		'*.beeldbank.cultureelerfgoed.nl',  // Cultureel Erfgoed - bug 70840
 		'*.metilli.com',                    // Mart Museum - bug 71460
 		'*.nijmegen.nl',                    // Nijmegen - bug 71191
-		'edh-www.adw.uni-heidelberg.de',   // Heidelberg Academy of Sciences and Humanities, Epigraphic Database - bug 71990
+		'edh-www.adw.uni-heidelberg.de',    // Heidelberg Academy of Sciences and Humanities, Epigraphic Database - bug 71990
 		'*.eyefilm.nl',                     // EYE Film Institute Netherlands - bug 71883
 		'digitaltmuseum.no',                // Digitalt Museum - bug 71195
 		'*.dimu.no',                        // Digitalt Museum - bug 71195
