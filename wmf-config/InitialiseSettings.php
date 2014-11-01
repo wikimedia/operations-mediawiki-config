@@ -9503,12 +9503,6 @@ $wgConf->settings = array(
 	'default' => 0,
 ),
 
-'wgMaxArticleSize' => array(
-	# Increased from 1024 to 2000 to alleviate problems with template expansion
-	# limits in AfD archives -- TS
-	'default' => 2000,
-),
-
 'wgEnableSidebarCache' => array(
 	'default' => true,
 ),
