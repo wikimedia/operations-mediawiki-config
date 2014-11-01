@@ -147,6 +147,7 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterBlockDuration = '2 days';
 		break;
 	case 'eswikivoyage': // bug 62321
+		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgAbuseFilterAvailableActions[] = 'block';
 		$wgAbuseFilterBlockDuration = '24 hours';
 		break;
