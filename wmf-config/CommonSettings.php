@@ -562,7 +562,7 @@ if ( $wmgUseTimeline ) {
 		$wgTimelineSettings->ploticusCommand = '/usr/bin/ploticus';
 	}
 
-	$wgTimelineSettings->epochTimestamp = '20130101000000';
+	$wgTimelineSettings->epochTimestamp = '20130601000000';
 }
 
 putenv( "GDFONTPATH=/srv/mediawiki/fonts" );
@@ -956,9 +956,9 @@ $wgMaxSquidPurgeTitles = 500;
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
 // General Cache Epoch
-$wgCacheEpoch = '20130101000000';
+$wgCacheEpoch = '20130601000000';
 
-$wgThumbnailEpoch = '20130101000000';
+$wgThumbnailEpoch = '20130601000000';
 
 # OAI repository for update server
 include( $IP . '/extensions/OAI/OAIRepo.php' );
