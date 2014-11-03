@@ -99,4 +99,8 @@ if ( $wmgMobileFrontend ) {
 	$wgGroupPermissions['sysop']['mf-uploadbutton'] = false;
 
 	$wgMFEnableBeta = true;
+
+	if ( $wmgUseWikiGrok ) {
+		require_once( "$IP/extensions/WikiGrok/WikiGrok.php" );
+	}
 }
