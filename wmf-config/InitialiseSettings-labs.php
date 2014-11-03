@@ -448,6 +448,15 @@ return array(
 	'wgUploadThumbnailRenderHttpCustomDomain' => array(
 		'default' => 'deployment-cache-upload02.eqiad.wmflabs',
 	),
+
+	// Thumbnail chaining
+	'wgThumbnailBuckets' => array(
+		'default' => array( 128, 256, 512, 1024, 2048, 4096 ),
+	),
+
+	'wgThumbnailMinimumBucketDistance' => array(
+		'default' => 32,
+	),
 );
 
 } # wmflLabsSettings()
