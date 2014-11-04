@@ -10957,6 +10957,7 @@ $wgConf->settings = array(
 		'klymenko.data-tec.net',            // Ukraine interesting photography source - bug 73045
 		'serg-klymenko.narod.ru',           // Ukraine interesting photography source - bug 73045
 		'ua.vlasenko.net',                  // Ukraine interesting photography source - bug 73045
+		'*.wikiportret.nl',                 // Wikiportret - bug 72953
 	),
 ),
 
