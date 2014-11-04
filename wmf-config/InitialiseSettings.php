@@ -13499,6 +13499,7 @@ $wgConf->settings = array(
 	'enwiki' => true,
 	'frwiki' => true,
 	'hewiki' => true,
+	'officewiki' => true, // https://www.loomio.org/d/rTbveB9O/dogfood-flow-on-officewiki
 ),
 'wmgFlowEditorList' => array(
 	// Disable VE inside flow, leaving only the wikitext editor
@@ -13544,6 +13545,9 @@ $wgConf->settings = array(
 	),
 	'hewiki' => array(
 		'שיחת ויקיפדיה:זרימה',
+	),
+	'officewiki' => array( // per Loomio discussion
+		'Talk:Flow',
 	),
 ),
 // Use separate database on extension1 cluster for all non-private wikis.
