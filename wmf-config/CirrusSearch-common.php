@@ -67,6 +67,7 @@ $wgCirrusSearchOptimizeIndexForExperimentalHighlighter = true;
 
 # Settings customized per index.
 $wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
+$wgCirrusSearchReplicas = $wmgCirrusSearchReplicas;
 $wgCirrusSearchMaxShardsPerNode = $wmgCirrusSearchMaxShardsPerNode;
 $wgCirrusSearchPreferRecentDefaultDecayPortion = $wmgCirrusSearchPreferRecentDefaultDecayPortion;
 $wgCirrusSearchBoostLinks = $wmgCirrusSearchBoostLinks;
