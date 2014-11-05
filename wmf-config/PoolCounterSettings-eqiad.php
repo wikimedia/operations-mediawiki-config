@@ -44,7 +44,7 @@ $wgPoolCounterConf = array(
 		'class' => 'PoolCounter_Client',
 		'timeout' => 5,
 		'workers' => 50,
-		'maxqueue' => 100,
+		'maxqueue' => 200,
 	),
 	'FileRender' => array(
 		'class' => 'PoolCounter_Client',
