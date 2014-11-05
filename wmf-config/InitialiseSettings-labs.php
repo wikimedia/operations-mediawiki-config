@@ -348,6 +348,10 @@ return array(
 	    'default' => true,
 	),
 
+	'wgContentTranslationEventLogging' => array(
+		'default' => true,
+	),
+
 	'wmgUseNavigationTiming' => array(
 	    'default' => true,
 	),
