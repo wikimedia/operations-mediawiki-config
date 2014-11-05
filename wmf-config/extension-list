@@ -5,6 +5,7 @@ $IP/extensions/AntiSpoof/AntiSpoof.php
 $IP/extensions/ApiSandbox/ApiSandbox.php
 $IP/extensions/Babel/Babel.php
 $IP/extensions/BetaFeatures/BetaFeatures.php
+$IP/extensions/BounceHandler/BounceHandler.php
 $IP/extensions/Calendar/Calendar.php
 $IP/extensions/Campaigns/Campaigns.php
 $IP/extensions/CategoryTree/CategoryTree.php
