@@ -117,7 +117,6 @@ $wgConf->settings = array(
 	'sewikimedia' => 'sv',
 	'uawikimedia' => 'uk',
 	'ukwikimedia' => 'en-gb',
-	'vewikimedia' => 'es',
 
 	# Special wikis
 	'special' => 'en', # default - overridden below by some wikis
@@ -1019,7 +1018,6 @@ $wgConf->settings = array(
 	'trwikimedia' => '$stdlogo',
 	'uawikimedia' => '//upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Wikimedia-UA-logo.svg/135px-Wikimedia-UA-logo.svg.png',
 	'ukwikimedia' => '$stdlogo',
-	'vewikimedia' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Wikimedia_Venezuela_logo.svg/135px-Wikimedia_Venezuela_logo.svg.png',
 
 	// Special wikis
 	'advisorywiki' => '//upload.wikimedia.org/wikipedia/meta/7/7d/Wikimediaboard-logo135px.png',
@@ -1297,7 +1295,6 @@ $wgConf->settings = array(
 	'testwikidatawiki' => '//test.wikidata.org',
 	'usabilitywiki' => '//usability.wikimedia.org',
 	'votewiki' => '//vote.wikimedia.org',
-	'vewikimedia' => '//ve.wikimedia.org',
 	'wg_enwiki' => '//wg-en.wikipedia.org',
 	'wikidatawiki' => '//www.wikidata.org',
 	'wikimania2005wiki' => '//wikimania2005.wikimedia.org',
@@ -1382,7 +1379,6 @@ $wgConf->settings = array(
 	'usabilitywiki' => 'http://usability.wikimedia.org',
 	'uzwiki' => 'https://uz.wikipedia.org', // bug 43466
 	'votewiki' => 'https://vote.wikimedia.org',
-	'vewikimedia' => 'http://ve.wikimedia.org',
 	'wg_enwiki' => 'http://wg-en.wikipedia.org',
 	'wikidatawiki' => 'http://www.wikidata.org',
 	'wikimania2005wiki' => 'http://wikimania2005.wikimedia.org',
@@ -1815,7 +1811,6 @@ $wgConf->settings = array(
 	'uzwiktionary' => 'Vikilug‘at',
 	'vecwiktionary' => 'Wikisionario',
 	'vepwiki' => 'Vikipedii',
-	'vewikimedia' => 'Wikimedia Venezuela',
 	'votewiki' => 'Wikimedia Vote Wiki', // bug 51264
 	'vowiki' => 'Vükiped',
 	'vowikibooks' => 'Vükibuks',
@@ -4369,12 +4364,6 @@ $wgConf->settings = array(
 	'usabilitywiki' => array(
 		100 => 'Multimedia',
 		101 => 'Multimedia_talk',
-	),
-	'vewikimedia' => array(
-		100 => 'WLM',
-		101 => 'WML_discusión',
-		102 => 'Wikiviajes',
-		103 => 'Wikiviajes_discusión',
 	),
 	# @} end of special wikis
 
@@ -9083,9 +9072,6 @@ $wgConf->settings = array(
 	'+vecwiki' => array(
 		'sysop' => array( 'flood' ),
 	),
-	'+vewikimedia' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat' ),
-	),
 	//bug 72589
 	'+votewiki' => array(
 		'bureaucrat' => array(
@@ -10524,7 +10510,6 @@ $wgConf->settings = array(
 	'ukwikimedia'   => true,
 	'usabilitywiki' =>  true,
 	'vecwiktionary' => true,
-	'vewikimedia' => true,
 	'viwikivoyage' => true, // bug 52034
 	'wikimania2009wiki' => true,
 	'wikimania2010wiki' => true,
