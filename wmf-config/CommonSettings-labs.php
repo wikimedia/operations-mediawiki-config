@@ -98,6 +98,9 @@ if ( $wmgUseContentTranslation ) {
 		'timeout' => 10000,
 		'prefix' => $wgDBname,
 	);
+
+	$wgContentTranslationEventLogging = $wmgContentTranslationEventLogging;
+
 }
 
 if ( $wmgUseCentralNotice ) {
