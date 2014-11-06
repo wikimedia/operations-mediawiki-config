@@ -10926,6 +10926,12 @@ $wgConf->settings = array(
 		'*.kartverket.no',                  // Kartverket - bug 71195
 		'*.arkivverket.no',                 // The National Archives of Norway - bug 71195
 		'tools.wikimedia.pl',               // Facilities server for Wikimedia users - bug 72897
+		'wikimapia.org',                    // WikiMapia - bug 73045
+		'pslava.info',                      // Ukraine interesting photography source - bug 73045
+		'ukrainaincognita.com',             // Ukraine interesting photography source - bug 73045
+		'klymenko.data-tec.net',            // Ukraine interesting photography source - bug 73045
+		'serg-klymenko.narod.ru',           // Ukraine interesting photography source - bug 73045
+		'ua.vlasenko.net',                  // Ukraine interesting photography source - bug 73045
 	),
 ),
 
