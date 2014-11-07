@@ -4197,6 +4197,7 @@ $wgConf->settings = array(
 		'BounceHandler' => "udp://$wmfUdp2logDest/bouncehandler",
 		'Echo' => "udp://$wmfUdp2logDest/echo",
 		'collection' => "udp://$wmfUdp2logDest/collection", // -cscott for bug 71675
+		'GlobalTitleFail' => "udp://$wmfUdp2logDest/globaltitlefail", // chad hates $wgTitle
 	),
 
 	'+enwiki' => array(
