@@ -9480,6 +9480,9 @@ $wgConf->settings = array(
 	// private wikis don't need it
 	'private' => false,
 	'fishbowl' => false,
+
+	// testing
+	'testwiki' => false,
 ),
 
 'wmgEmergencyCaptcha' => array(
