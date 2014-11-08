@@ -4786,8 +4786,6 @@ $wgConf->settings = array(
 		NS_USER_TALK => 'Usuário(a)_Discussão',
 		100 => 'Portal',
 		101 => 'Portal_Discussão',
-		102 => 'Anexo',
-		103 => 'Anexo_Discussão',
 		104 => 'Livro',
 		105 => 'Livro_Discussão',
 	),
