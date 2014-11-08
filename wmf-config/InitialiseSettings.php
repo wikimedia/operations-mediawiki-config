@@ -9745,7 +9745,6 @@ $wgConf->settings = array(
 	'+dawikisource' => array( 102, 104, 106 ),
 	'+dewikisource' => array( 102, 104 ),
 	'+elwikisource' => array( 100, 102 ),
-	'+enwiki' => array( 118 ),
 	'+enwikibooks' => array( 102, 110 ),
 	'+enwikisource' => array( 102, 104, 106, 114 ), // bug 50007
 	'+eswiki' => array( 104 ), // Bug 39866
@@ -9801,8 +9800,8 @@ $wgConf->settings = array(
 ),
 
 'wmgExemptFromUserRobotsControlExtra' => array(
-	'default' => array(),           // Default to allowing page-level user control in all namespaces
-	'enwiki' => array( 118, 119 ),	// Prevent for Draft: and Draft_talk: (so always NOINDEX'ed)
+	'default' => array(),
+	'enwiki' => array( 118, 119 ), // draft and draft talk
 ),
 
 'wgRevisionCacheExpiry' => array(
@@ -11740,7 +11739,7 @@ $wgConf->settings = array(
 	'+metawiki' => array( 200 /* Grants */, 202 /* Research */, 204 /* Participation */, 206, 208 /* Programs */ ),
 	// Wikipedias
 	'+cawiki' => array( 100 /* Portal */, 102 /* Viquiprojecte */ ), // Bug 56000
-	'+enwiki' => array( 100 /* Portal */, 108 /* Book */ ), // Bug 56001
+	'+enwiki' => array( 100 /* Portal */, 108 /* Book */, 118 /* Draft */ ), // Bug 56001
 	// Wiktionaries
 	'svwiktionary' => array( NS_USER ), // Bug 57356
 	// Wikiversities
