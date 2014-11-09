@@ -16,6 +16,24 @@
       "revId": "635000d65d3dfe187dcb10c8b09d36ab52aa8c06",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_1e323b5c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13233,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-11-09T14:41:06Z",
+      "side": 0,
+      "message": "As long as this global exists in the extension\u0027s code, it may be necessary to override it globally or per-wiki, so I\u0027d leave it here as well.",
+      "parentUuid": "6e936f18_5eec43b8",
+      "revId": "635000d65d3dfe187dcb10c8b09d36ab52aa8c06",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
