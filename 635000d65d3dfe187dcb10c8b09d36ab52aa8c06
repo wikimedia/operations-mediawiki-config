@@ -34,6 +34,24 @@
       "revId": "635000d65d3dfe187dcb10c8b09d36ab52aa8c06",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_3e1e17c5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13233,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2014-11-09T15:13:52Z",
+      "side": 0,
+      "message": "I\u0027m not sure that\u0027s really our standard practice... we typically allow globals in extensions to act as defaults and only override when necessary.\n\nIn this case, I don\u0027t really want three extra lines of config clutter to live in this file indefinitely, but it\u0027s not a big deal.",
+      "parentUuid": "6e936f18_1e323b5c",
+      "revId": "635000d65d3dfe187dcb10c8b09d36ab52aa8c06",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
