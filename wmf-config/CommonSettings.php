@@ -2550,8 +2550,6 @@ if ( $wmgUseGettingStarted ) {
 	$wgGettingStartedExcludedCategories = $wmgGettingStartedExcludedCategories;
 
 	$wgGettingStartedRunTest = $wmgGettingStartedRunTest;
-	$wgTaskRecommendationsExperimentV1StartDate = 1410472800; // 9/11/2014 22:00:00
-	$wgTaskRecommendationsExperimentV1EndDate = 1411941600; // 9/28/2014 22:00:00
 }
 
 if ( $wmgUseGeoCrumbs ) {
