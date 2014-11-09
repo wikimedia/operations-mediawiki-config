@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_5eec43b8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13233,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2014-11-09T14:31:56Z",
+      "side": 0,
+      "message": "If future tests aren\u0027t planned, I\u0027d prefer to kill this whole block of code, if possible.",
+      "revId": "635000d65d3dfe187dcb10c8b09d36ab52aa8c06",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
