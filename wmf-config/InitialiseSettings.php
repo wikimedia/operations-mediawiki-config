@@ -6348,6 +6348,7 @@ $wgConf->settings = array(
 	'hewiki' => true, // bug 5232
 	'hewikibooks' => true, // Bug 27918
 	'hewikiquote' => true,
+	'hewiktionary' => true, // bug 73197
 	'hiwiki' => true,
 	'hrwiki' => true, // by request of stemd from #wikipedia-hr 2007-05-15 -jeronim
 	'idwiki' => true, // bug 6042
@@ -7195,6 +7196,10 @@ $wgConf->settings = array(
 	'hewikivoyage' => array(
 		'autopatrolled' => array( 'autopatrol' => true ), // bug 50377
 		'sysop' => array( 'importupload' => true ), // bug 59601
+	),
+	'hewiktionary' => array(
+		'patroller'     => array( 'patrol' => true, 'autopatrol' => true, 'unwatchedpages' => true, 'rollback' => true,), // bug 73197
+		'autopatrolled' => array( 'autopatrol' => true, 'unwatchedpages' => true, ), // bug 73197
 	),
 	'hiwiki' => array(
 		'rollbacker' => array( 'rollback' => true ), // bug 54589
