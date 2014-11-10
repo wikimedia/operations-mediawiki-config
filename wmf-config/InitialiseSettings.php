@@ -10929,6 +10929,7 @@ $wgConf->settings = array(
 		'*.kartverket.no',                  // Kartverket - bug 71195
 		'*.arkivverket.no',                 // The National Archives of Norway - bug 71195
 		'tools.wikimedia.pl',               // Facilities server for Wikimedia users - bug 72897
+		'*.nasa.gov',                       // Nasa
 	),
 ),
 
