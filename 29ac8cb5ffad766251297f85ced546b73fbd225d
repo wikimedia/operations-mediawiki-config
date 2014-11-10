@@ -33,6 +33,24 @@
       "revId": "29ac8cb5ffad766251297f85ced546b73fbd225d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_a742133d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2197,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-11-10T20:29:30Z",
+      "side": 1,
+      "message": "Or the other way of looking at it https://github.com/wikimedia/operations-puppet/blob/production/manifests/network.pp#L230-L237\n\nI guess the above link should include line 44 too",
+      "parentUuid": "6e936f18_27204395",
+      "revId": "29ac8cb5ffad766251297f85ced546b73fbd225d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
