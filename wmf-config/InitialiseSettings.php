@@ -12985,6 +12985,12 @@ $wgConf->settings = array(
 	'wikidata' => true,
 ),
 
+'wmgUseBounceHandler' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true
+),
+
 'wmgUseTranslate' => array(
 	'default' => false,
 	'bewikimedia' => true, // bug 37391
