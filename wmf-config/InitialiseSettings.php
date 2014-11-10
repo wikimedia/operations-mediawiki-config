@@ -12933,6 +12933,12 @@ $wgConf->settings = array(
 	'wikidata' => true,
 ),
 
+'wmgUseBounceHandler' => array(
+	'default' => true,
+	'private' => false,
+	'fishbowl' => false,
+),
+
 'wmgUseTranslate' => array(
 	'default' => false,
 	'bewikimedia' => true, // bug 37391

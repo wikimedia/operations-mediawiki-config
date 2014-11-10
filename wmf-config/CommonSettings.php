@@ -2188,6 +2188,15 @@ if ( $wmgUseBabel ) {
 	$wgBabelUseUserLanguage = $wmgBabelUseUserLanguage;
 }
 
+if ( $wmgUseBounceHandler ) {
+	// $wgVERPsecret is set in PrivateSettings.php
+	require_once "$IP/extensions/BounceHandler/BounceHandler.php";
+	$wgBounceHandlerUnconfirmUsers = false;
+	$wgBounceHandlerCluster = 'extension1';
+	$wgBounceHandlerSharedDB = '???';
+	$wgBounceHandlerInternalIPs = array( '???' );
+}
+
 if ( $wmgUseTranslate ) {
 	require_once( "$IP/extensions/Translate/Translate.php" );
 
