@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_6fe62741",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2653,
+      "author": {
+        "id": 1629
+      },
+      "writtenOn": "2014-11-10T10:41:15Z",
+      "side": 1,
+      "message": "any particular reason to be explicit here as opposed to git blame?",
+      "revId": "484a8923102ee14a7d92a60d3cf5601e30bdd22c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
