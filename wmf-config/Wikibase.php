@@ -1,5 +1,9 @@
 <?php
 
+if ( $wmfRealm === 'labs' ) {
+	define( 'WB_EXPERIMENTAL_FEATURES', 1 );
+}
+
 require_once( "$IP/extensions/Wikidata/Wikidata.php" );
 
 // The version number now comes from the Wikidata build,
