@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_84083531",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2196,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-11-10T20:25:49Z",
+      "side": 1,
+      "message": "wikishared\n\nmysql:wikiadmin@db1029 [wikishared]\u003e show tables;\n+----------------------+\n| Tables_in_wikishared |\n+----------------------+\n| bounce_records       |\n+----------------------+\n1 row in set (0.00 sec)\n\nmysql:wikiadmin@db1029 [wikishared]\u003e",
+      "revId": "29ac8cb5ffad766251297f85ced546b73fbd225d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_27204395",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2197,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-11-10T20:25:49Z",
+      "side": 1,
+      "message": "Probably https://github.com/wikimedia/operations-puppet/blob/production/modules/url_downloader/templates/squid.conf.erb#L45-L48",
+      "revId": "29ac8cb5ffad766251297f85ced546b73fbd225d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
