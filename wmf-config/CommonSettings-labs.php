@@ -123,10 +123,13 @@ if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
 	);
 }
 
-// BounceHandler
-require_once( "$IP/extensions/BounceHandler/BounceHandler.php" );
-//$wgVERPsecret = ''; // This was set in PrivateSettings.php by Legoktm
-$wgBounceHandlerUnconfirmUsers = false;
+// Labs override for BounceHandler
+if ( $wmgUseBounceHandler ) {
+	//$wgVERPsecret = ''; // This was set in PrivateSettings.php by Legoktm
+	$wgBounceHandlerCluster = false;
+	$wgBounceHandlerSharedDB = false;
+	$wgBounceHandlerInternalIPs = array( '127.0.0.1', '::1' );
+}
 
 if ( $wmgUseTimedMediaHandler ) {
 	$wgMwEmbedModuleConfig[ 'MediaWiki.ApiProviders' ] =  array(

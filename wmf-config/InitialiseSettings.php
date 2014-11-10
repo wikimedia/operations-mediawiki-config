@@ -12962,6 +12962,27 @@ $wgConf->settings = array(
 	'wikidata' => true,
 ),
 
+'wmgUseBounceHandler' => array(
+	'default' => false,
+	'private' => true,
+	'fishbowl' => true,
+	'special' => true,
+	'closed' => true,
+	'flaggedrevs' => true,
+	'small' => true,
+	'medium' => true,
+	'large' => true,
+	'wikimania' => true,
+	'wikidata' => true,
+	'wikidataclient' => true,
+	'mediaviewer' => true,
+	'visualeditor' => true,
+	'visualeditor-default' => true,
+	'echowikis' => true,
+	'commonsuploads' => true,
+	'nonbetafeatures' => true,
+),
+
 'wmgUseTranslate' => array(
 	'default' => false,
 	'bewikimedia' => true, // bug 37391
