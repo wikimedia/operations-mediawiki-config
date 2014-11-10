@@ -14277,6 +14277,16 @@ $wgConf->settings = array(
 	'default' => 'upload.svc.eqiad.wmnet',
 ),
 
+// Thumbnail chaining
+'wgThumbnailBuckets' => array(
+	'default' => array( 128, 256, 512, 1024, 2048, 4096 ),
+	'commonswiki' => array(),
+),
+
+'wgThumbnailMinimumBucketDistance' => array(
+	'default' => 32,
+),
+
 );
 
 
