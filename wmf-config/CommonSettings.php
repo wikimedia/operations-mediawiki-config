@@ -844,6 +844,9 @@ if ( $wmgUseSecurePoll ) {
 		$url = wfAppendQuery( $url, array( 'site' => $site, 'lang' => $lang ) );
 		return true;
 	};
+	$wgSecurePollCreateWikiGroups = array(
+		'securepollglobal' => 'securepoll-dblist-securepollglobal'
+	);
 }
 
 // PoolCounter
