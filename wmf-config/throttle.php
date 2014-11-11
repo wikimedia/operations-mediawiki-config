@@ -38,32 +38,10 @@ $wmgThrottlingExceptions[] = array( // bug 72611
 
 ## Add throttling definitions above.
 
-## Helper methods:
-
-/**
- * Determines if an IP address is a list of CIDR a.b.c.d/n ranges.
- *
- * @param string $ip the IP to check
- * @param array $range the IP ranges, each element a range
- *
- * @return Boolean true if the specified adress belongs to the specified range; otherwise, false.
- */
-function inIPRanges ( $ip, $ranges ) {
-	foreach ( $ranges as $range ) {
-		if ( IP::isInRange( $ip, $range ) ) {
-			return true;
-		}
-	}
-	return false;
-}
-
-# Will eventually raise value when MediaWiki is fully initialized:
-$wgExtensionFunctions[] = 'efRaiseAccountCreationThrottle';
-
 /**
  * Helper to easily add a throttling request.
  */
-function efRaiseAccountCreationThrottle() {
+$wgExtensionFunctions[] = function() {
 	global $wmgThrottlingExceptions, $wgDBname, $wgRequest;
 
 	foreach ( $wmgThrottlingExceptions as $options ) {
@@ -100,7 +78,7 @@ function efRaiseAccountCreationThrottle() {
 		}
 		if ( isset ( $options['range'] ) ) {
 			//Checks if the IP is in range
-			if ( is_array( $options['range'] ) && !inIPRanges( $ip, $options['range'] ) ) {
+			if ( is_array( $options['range'] ) && !IP::isInRanges( $ip, $options['range'] ) ) {
 				continue;
 			} elseif ( !IP::isInRange( $ip, $options['range'] ) ) {
 				continue;
@@ -116,5 +94,5 @@ function efRaiseAccountCreationThrottle() {
 		}
 		return; # No point in proceeding to another entry
 	}
-}
+};
 
