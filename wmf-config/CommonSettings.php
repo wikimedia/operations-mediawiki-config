@@ -2164,8 +2164,13 @@ if ( $wmgUseMath ) {
 
 	$wgTexvc = '/usr/bin/texvc';
 
-	$wgMathTexvcCheckExecutable = file_exists( '/usr/bin/texvccheck' ) ?
-		'/usr/bin/texvccheck' : '/usr/local/apache/uncommon/bin/texvccheck';
+	if ( file_exists( '/usr/bin/texvccheck' ) ) {
+		$wgMathTexvcCheckExecutable = '/usr/bin/texvccheck';
+	} elseif ( file_exists( '/usr/local/apache/uncommon/bin/texvccheck' ) ) {
+		$wgMathTexvcCheckExecutable = '/usr/local/apache/uncommon/bin/texvccheck';
+	} else {
+		$wgMathDisableTexFilter = true;
+	}
 	if ( $wgDBname === 'hewiki' ) {
 		$wgDefaultUserOptions['math'] = 0;
 	}
