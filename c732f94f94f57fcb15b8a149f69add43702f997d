@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_090f56e5",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2230,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2014-11-11T12:57:44Z",
+      "side": 1,
+      "message": "What do you suggest for number of shards/replicas?",
+      "revId": "c732f94f94f57fcb15b8a149f69add43702f997d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_a9f742cf",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2232,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2014-11-11T12:57:44Z",
+      "side": 1,
+      "message": "Does this need configuration variable, so that for example testwiki could have separate index which does not pollute the main index?",
+      "revId": "c732f94f94f57fcb15b8a149f69add43702f997d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_e909cae0",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2234,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2014-11-11T12:57:44Z",
+      "side": 1,
+      "message": "Is this okay, or should I be using ElasticaConnection?",
+      "revId": "c732f94f94f57fcb15b8a149f69add43702f997d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
