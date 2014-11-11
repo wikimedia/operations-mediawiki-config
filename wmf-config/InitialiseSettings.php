@@ -7816,6 +7816,9 @@ $wgConf->settings = array(
 			'securepoll-create-poll' => true,
 			'editinterface' => true
 		),
+		'electionadmin' => array(
+			'editinterface' => true
+		),
 	),
 	'wikidata' => array(
 		'autoconfirmed' => array(
@@ -8493,6 +8496,12 @@ $wgConf->settings = array(
 			'electcomm',
 			'staffsupport'
 		),
+		'staffsupport' => array(
+			'electionadmin'
+		),
+		'electcomm' => array(
+			'electionadmin'
+		),
 	),
 	'+wikidata' => array(
 		'sysop' => array(
@@ -9069,6 +9078,12 @@ $wgConf->settings = array(
 			'staffsupport',
 			'sysop',
 			'bureaucrat'
+		),
+		'staffsupport' => array(
+			'electionadmin'
+		),
+		'electcomm' => array(
+			'electionadmin'
 		),
 	),
 	'+wikidata' => array(
@@ -13893,6 +13908,7 @@ $wgConf->settings = array(
 'wmgSecurePollUseNamespace' => array(
 	'default' => false,
 	'testwiki' => true,
+	'votewiki' => true,
 ),
 
 'wmgUseGlobalAbuseFilters' => array(
