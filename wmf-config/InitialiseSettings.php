@@ -4198,6 +4198,7 @@ $wgConf->settings = array(
 		'Echo' => "udp://$wmfUdp2logDest/echo",
 		'collection' => "udp://$wmfUdp2logDest/collection", // -cscott for bug 71675
 		'GlobalTitleFail' => "udp://$wmfUdp2logDest/globaltitlefail", // chad hates $wgTitle
+		'FSFileBackend' => "udp://$wmfUdp2logDest/fsfilebackend", // - gilles for bug 73229
 	),
 
 	'+enwiki' => array(
