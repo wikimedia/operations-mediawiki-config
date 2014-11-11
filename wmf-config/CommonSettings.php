@@ -2218,6 +2218,22 @@ if ( $wmgUseTranslate ) {
 				'adapter' => 'Solarium_Client_Adapter_Curl',
 			),
 		);
+
+		$servers = array_map(
+			function ( $v ) { return array( 'host' => $v ); },
+			$wgCirrusSearchServers
+		);
+		// Read only until renamed to 'TTMServer'
+		$wgTranslateTranslationServices['TTMServer-esmigration'] = array(
+			'type' => 'ttmserver',
+			'class' => 'ElasticsearchTTMServer',
+			'shards' => 1,
+			'replicas' => 1,
+			'index' => 'ttmserver',
+			'config' => array(
+				'servers' => $servers,
+			),
+		);
 	}
 
 	$wgTranslateWorkflowStates = $wmgTranslateWorkflowStates;
