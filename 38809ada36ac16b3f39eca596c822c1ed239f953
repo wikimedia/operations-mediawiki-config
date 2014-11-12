@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_46f544e8",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2195,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-11-12T18:17:37Z",
+      "side": 1,
+      "message": "It\u0027s a database CLUSTER for \"extensions\"\n\nhttps://github.com/wikimedia/operations-mediawiki-config/blob/master/wmf-config/db-eqiad.php#L474-L478",
+      "parentUuid": "6e936f18_abe091c8",
+      "revId": "38809ada36ac16b3f39eca596c822c1ed239f953",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_60af0879",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 5
@@ -48,6 +66,24 @@
       "writtenOn": "2014-11-12T14:19:53Z",
       "side": 1,
       "message": "What about lead?",
+      "revId": "38809ada36ac16b3f39eca596c822c1ed239f953",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_66e4000b",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2197,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-11-12T18:17:37Z",
+      "side": 1,
+      "message": "208.80.154.89",
+      "parentUuid": "6e936f18_60af0879",
       "revId": "38809ada36ac16b3f39eca596c822c1ed239f953",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -83,6 +119,24 @@
       "side": 1,
       "message": "Ok, why not start with \"small\" and \"medium\" wikis then proceed with the rest?\nI\u0027m not sure how a local enabling works with the global-ness of the email confirmation for a CentralAuth account; but unless there is a specific issue with partial deployment it\u0027s better be cautious.",
       "parentUuid": "6e936f18_00c88458",
+      "revId": "38809ada36ac16b3f39eca596c822c1ed239f953",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_86182cd9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 12966,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-11-12T18:17:37Z",
+      "side": 1,
+      "message": "Needs to be somewhere with sufficient mail traffic too...",
+      "parentUuid": "6e936f18_cbeb9d9f",
       "revId": "38809ada36ac16b3f39eca596c822c1ed239f953",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
