@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_abe091c8",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2195,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-11-12T16:14:45Z",
+      "side": 1,
+      "message": "It\u0027s a database used for some secondary stuff; it was set up originally for AFT, IIRC.",
+      "parentUuid": "6e936f18_e0ba38b5",
+      "revId": "38809ada36ac16b3f39eca596c822c1ed239f953",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_60af0879",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 5
@@ -47,6 +65,24 @@
       "writtenOn": "2014-11-12T14:19:53Z",
       "side": 1,
       "message": "Deploying on all wikis right away? Probably a bad idea.",
+      "revId": "38809ada36ac16b3f39eca596c822c1ed239f953",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_cbeb9d9f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 12966,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-11-12T16:14:45Z",
+      "side": 1,
+      "message": "Ok, why not start with \"small\" and \"medium\" wikis then proceed with the rest?\nI\u0027m not sure how a local enabling works with the global-ness of the email confirmation for a CentralAuth account; but unless there is a specific issue with partial deployment it\u0027s better be cautious.",
+      "parentUuid": "6e936f18_00c88458",
       "revId": "38809ada36ac16b3f39eca596c822c1ed239f953",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
