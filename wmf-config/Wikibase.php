@@ -169,6 +169,9 @@ if ( $wmgUseWikibaseClient ) {
 		'Q17580674' => 'badge-featuredportal', // bug 73193
 	);
 
+	// until the tables are created and populated
+	$wgWBClientSettings['useLegacyUsageIndex'] = true;
+
 	$wgHooks['SetupAfterCache'][] = 'wmfWBClientExcludeNS';
 
 	function wmfWBClientExcludeNS() {
