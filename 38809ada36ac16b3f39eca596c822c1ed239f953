@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_e0ba38b5",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2195,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2014-11-12T14:19:53Z",
+      "side": 1,
+      "message": "What is \"extension1\"?",
+      "revId": "38809ada36ac16b3f39eca596c822c1ed239f953",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_60af0879",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2197,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2014-11-12T14:19:53Z",
+      "side": 1,
+      "message": "What about lead?",
+      "revId": "38809ada36ac16b3f39eca596c822c1ed239f953",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_00c88458",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 12966,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2014-11-12T14:19:53Z",
+      "side": 1,
+      "message": "Deploying on all wikis right away? Probably a bad idea.",
+      "revId": "38809ada36ac16b3f39eca596c822c1ed239f953",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
