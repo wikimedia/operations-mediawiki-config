@@ -1951,6 +1951,7 @@ if ( $wmgUseMultimediaViewer ) {
 if ( $wmgUseImageMetrics ) {
 	require_once( "$IP/extensions/ImageMetrics/ImageMetrics.php" );
 	$wgImageMetricsSamplingFactor = $wmgImageMetricsSamplingFactor;
+	$wgImageMetricsLoggedinSamplingFactor = $wmgImageMetricsLoggedinSamplingFactor;
 }
 
 if ( $wmgUsePopups ) {
