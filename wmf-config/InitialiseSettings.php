@@ -8228,6 +8228,9 @@ $wgConf->settings = array(
 	'+hewikivoyage' => array(
 		'sysop' => array( 'autopatrolled' ), // bug 50377
 	),
+    '+hewiktionary' => array(
+        'sysop' => array( 'patroller', 'autopatrolled' ),
+    ),
 	'+hiwiki' => array(
 		'sysop' => array( 'abusefilter', 'autopatrolled', 'reviewer', 'rollbacker', 'filemover' ),
 	),
