@@ -4072,7 +4072,7 @@ $wgConf->settings = array(
 	'default' => true, // *gulp* -- bv 2008-11-03
 ),
 
-'wmgCentralNoticeChooseBannerOnClient' => array(
+'wgCentralNoticeChooseBannerOnClient' => array(
 	'default' => false,
 	'testwiki' => true,
 ),
