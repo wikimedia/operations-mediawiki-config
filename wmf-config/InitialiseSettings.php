@@ -11757,12 +11757,20 @@ $wgConf->settings = array(
 	'default' => 10,
 ),
 
-// -------------- VisualEditor start --------------
+// -------------- Shared Parsoid start --------------
 
 'wmgUseParsoid' => array(
 	'default' => true,
 	'labswiki' => false,
 ),
+
+// Should a users' Cookie: headers be forwarded to Parsoid (for private wikis)
+'wmgParsoidForwardCookies' => array(
+	'default' => false,
+	'private' => true,
+),
+
+// -------------- VisualEditor start --------------
 
 'wmgUseVisualEditor' => array(
 	'default' => false,
@@ -11842,12 +11850,6 @@ $wgConf->settings = array(
 'wmgVisualEditorBetaInTab' => array(
 	'default' => false,
 	'enwiki' => true,
-),
-
-// Should VisualEditor forward users' Cookie: headers to Parsoid (for private wikis)
-'wmgVisualEditorParsoidForwardCookies' => array(
-	'default' => false,
-	'private' => true,
 ),
 
 // Should VisualEditor display a live version of the Table of Contents as you edit
