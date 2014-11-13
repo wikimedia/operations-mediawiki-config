@@ -4072,6 +4072,11 @@ $wgConf->settings = array(
 	'default' => true, // *gulp* -- bv 2008-11-03
 ),
 
+'wmgCentralNoticeChooseBannerOnClient' => array(
+	'default' => false,
+	'testwiki' => true,
+),
+
 // For CentralNotice project pickers
 'wmgNoticeProject' => array(
 	'advisorywiki' => 'wikimedia',
