@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_6e37e94a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11773,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2014-11-13T22:41:30Z",
+      "side": 1,
+      "message": "Should have a \n\n  // -------------- Shared Parsoid end --------------\n\n… comment.",
+      "revId": "1dc2c709afff9cfaf215fa39af51c280086e6c30",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
