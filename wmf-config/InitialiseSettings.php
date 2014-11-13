@@ -12029,8 +12029,7 @@ $wgConf->settings = array(
 ),
 
 'wmgCheckUserForceSummary' => array(
-	'default' => false,
-	'enwiki' => true,
+	'default' => true, // bug 71457
 ),
 
 'wmgUseIncubator' => array(
