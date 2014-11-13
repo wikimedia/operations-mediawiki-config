@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_eef5394e",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2230,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-11-13T22:55:07Z",
+      "side": 1,
+      "message": "We try to target an average shard size of ~2GB, plus or minus a tad. That will guide our # of shards to create.\n\nAs far as replicas: in production we\u0027ve had success with using auto_expand_replicas set to \u00270-2\u0027...this allows ES to scale the # of replicas up or down between 0 and 2 as needed. It\u0027ll sit at 2 usually, unless we lose redundancy at which point it will scale back.",
+      "parentUuid": "6e936f18_090f56e5",
+      "revId": "c732f94f94f57fcb15b8a149f69add43702f997d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_a9f742cf",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_0ef3c569",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2232,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-11-13T22:55:07Z",
+      "side": 1,
+      "message": "Can\u0027t hurt.",
+      "parentUuid": "6e936f18_a9f742cf",
+      "revId": "c732f94f94f57fcb15b8a149f69add43702f997d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_e909cae0",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2014-11-11T12:57:44Z",
       "side": 1,
       "message": "Is this okay, or should I be using ElasticaConnection?",
+      "revId": "c732f94f94f57fcb15b8a149f69add43702f997d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e936f18_ae93b102",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2234,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-11-13T22:55:07Z",
+      "side": 1,
+      "message": "I think this will be fine.",
+      "parentUuid": "6e936f18_e909cae0",
       "revId": "c732f94f94f57fcb15b8a149f69add43702f997d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
