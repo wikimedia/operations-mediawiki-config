@@ -113,5 +113,8 @@ if ( $wmgMobileFrontend ) {
 				'suggestions' => array( 'Q482980' ),
 			),
 		);
+
+		$wgMFWikiGrokAbTestStartDate = 1415921461; // 3:32PM Nov 13, 2014
+		$wgMFWikiGrokAbTestEndDate = 1415925061; // 4:32PM Nov 13, 2014
 	}
 }
