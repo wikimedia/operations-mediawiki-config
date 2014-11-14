@@ -114,7 +114,7 @@ if ( $wmgMobileFrontend ) {
 			),
 		);
 
-		$wgMFWikiGrokAbTestStartDate = 1415988000; // Fri, 14 Nov 2014 18:00:00 GMT
-		$wgMFWikiGrokAbTestEndDate = 1417197600; // Fri, 28 Nov 2014 18:00:00 GMT
+		$wgMFWikiGrokAbTestStartDate = 1416247200; // Mon, 17 Nov 2014 18:00:00 GMT
+		$wgMFWikiGrokAbTestEndDate = 1417456800; // Mon, 01 Dec 2014 18:00:00 GMT
 	}
 }
