@@ -13497,7 +13497,7 @@ $wgConf->settings = array(
 		'Talk:Flow QA',
 		'Talk:Sandbox',
 		// Requested by Jonathan Morgan
-		'Wikipedia:Co-op/Mentorship_match',
+		'Wikipedia:Co-op/Mentorship match',
 		'Wikipedia talk:Co-op/Person4',
 		'Wikipedia talk:Co-op/Mentor4',
 	),
