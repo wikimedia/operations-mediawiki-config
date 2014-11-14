@@ -8054,6 +8054,9 @@ $wgConf->settings = array(
 	'+cawiki' => array(
 		'sysop' => array( 'rollbacker', 'autopatrolled', 'abusefilter', 'accountcreator' ), // bug 56570
 	),
+	'+cawikimedia' => array(
+		'bureaucrat' => array ( 'translationadmin' ), // Bug 73394
+	),
 	'+checkuserwiki' => array(
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', ),
 	),
@@ -8621,6 +8624,9 @@ $wgConf->settings = array(
 	),
 	'+cawiki' => array(
 		'sysop' => array( 'rollbacker', 'autopatrolled', 'abusefilter', 'accountcreator' ), // bug 56570
+	),
+	'+cawikimedia' => array(
+		'bureaucrat' => array( 'translationadmin' ), // Bug 73394
 	),
 	'+checkuserwiki' => array(
 		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt',  'bureaucrat', ),
@@ -10771,6 +10777,7 @@ $wgConf->settings = array(
 	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 54732
 	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 37198
 	'otrs_wikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // bug 61297
+	'cawikimedia' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 73394
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'enwikisource' => array( 'sysop' => array( 'flood' ) ), //Bug 36863
@@ -10790,6 +10797,7 @@ $wgConf->settings = array(
 	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 54732
 	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 37198
 	'otrs_wikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 61297
+	'cawikimedia' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 73394
 	'ckbwiki' => array(
 		'flood' => array( 'flood' ), // Bug 51803
 		'botadmin' => array( 'botadmin' ), // Bug 51803
@@ -12981,6 +12989,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'bewikimedia' => true, // bug 37391
 	'brwikimedia' => true, // bug 44054
+	'cawikimedia' => true, // Bug 73394
 	'collabwiki' => true,
 	'commonswiki' => true, // bug 48620
 	'incubatorwiki' => true, // bug 34213
@@ -13053,6 +13062,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'brwikimedia' => true, // Bug 44054
+	'cawikimedia' => true, // Bug 73394
 	'incubatorwiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
