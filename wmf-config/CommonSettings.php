@@ -2003,7 +2003,7 @@ if ( $wmgUseVisualEditor ) {
 	$wgVisualEditorParsoidURL = $wmgParsoidURL;
 	$wgVisualEditorParsoidPrefix = $wgParsoidWikiPrefix;
 	$wgVisualEditorParsoidProblemReportURL = 'http://parsoid.wmflabs.org/_bugs/';
-	if ( $wmgVisualEditorParsoidForwardCookies ) {
+	if ( $wmgParsoidForwardCookies ) {
 		$wgVisualEditorParsoidForwardCookies = true;
 	}
 
@@ -2507,6 +2507,9 @@ if ( $wmgUseFlow ) {
 	$wgFlowParsoidURL = $wmgParsoidURL;
 	$wgFlowParsoidPrefix = $wgDBname;
 	$wgFlowParsoidTimeout = 100;
+	if ( $wmgParsoidForwardCookies ) {
+		$wgFlowParsoidForwardCookies = true;
+	}
 
 	$wgFlowEditorList = $wmgFlowEditorList;
 	$wgFlowOccupyPages = $wmgFlowOccupyPages;
