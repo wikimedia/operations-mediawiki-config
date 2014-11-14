@@ -13493,7 +13493,14 @@ $wgConf->settings = array(
 'wmgFlowOccupyPages' => array(
 	'default' => array(),
 	# Extension:Flow's browsertests use Talk:Flow_QA.
-	'testwiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
+	'testwiki' => array(
+		'Talk:Flow QA',
+		'Talk:Sandbox',
+		// Requested by Jonathan Morgan
+		'Wikipedia:Co-op/Mentorship_match',
+		'Wikipedia talk:Co-op/Person4',
+		'Wikipedia talk:Co-op/Mentor4',
+	),
 	'test2wiki' => array( 'Talk:Flow QA', 'Talk:Sandbox' ),
 	'metawiki' => array( 'Talk:Flow/Developer test page' ),
 	'mediawikiwiki' => array(
