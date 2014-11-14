@@ -114,7 +114,7 @@ if ( $wmgMobileFrontend ) {
 			),
 		);
 
-		$wgMFWikiGrokAbTestStartDate = 1415921461; // 3:32PM Nov 13, 2014
-		$wgMFWikiGrokAbTestEndDate = 1415925061; // 4:32PM Nov 13, 2014
+		$wgMFWikiGrokAbTestStartDate = 1415925496; // 4:38PM Nov 13, 2014
+		$wgMFWikiGrokAbTestEndDate = 1415929096; // 5:38PM Nov 13, 2014
 	}
 }
