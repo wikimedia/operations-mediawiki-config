@@ -6093,8 +6093,6 @@ $wgConf->settings = array(
 	'default' => 6, // previously 10
 	'private' => 0, // disable for wikis with sysop-only account creation
 	'fishbowl' => 0,
-
-	'hewiki' => 4,
 	'hewikibooks' => 4,
 	'hewikinews' => 4,
 	'hewikiquote' => 4,
