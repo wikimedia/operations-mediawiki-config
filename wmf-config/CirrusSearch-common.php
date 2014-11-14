@@ -44,11 +44,11 @@ $wgCirrusSearchClientSideSearchTimeout[ 'regex' ] = 80;
 
 # Set the backoff for Cirrus' job that reacts to template changes - slow and steady
 # will help prevent spikes in Elasticsearch load.
-$wgJobBackoffThrottling['cirrusSearchLinksUpdate'] = 0.75;
+$wgJobBackoffThrottling['cirrusSearchLinksUpdate'] = 5;
 # Also engage a delay for the Cirrus job that counts incoming links to pages when
 # pages are newly linked or unlinked.  Too many link count queries at once could flood
 # Elasticsearch.
-$wgJobBackoffThrottling['cirrusSearchIncomingLinkCount'] = 0.25;
+$wgJobBackoffThrottling['cirrusSearchIncomingLinkCount'] = 1;
 
 # Ban the hebrew plugin, it is unstable
 $wgCirrusSearchBannedPlugins[] = 'elasticsearch-analysis-hebrew';
