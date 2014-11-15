@@ -13958,6 +13958,7 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 	'specieswiki' => true,
 	'incubatorwiki' => true,
+	'wikidatawiki' => true,
 ),
 
 'wmgUseCampaigns' => array(
