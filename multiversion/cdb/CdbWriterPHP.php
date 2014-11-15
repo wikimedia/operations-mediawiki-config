@@ -25,274 +25,17 @@
  */
 
 /**
- * Common functions for readers and writers
- */
-class CdbFunctions {
-	/**
-	 * Take a modulo of a signed integer as if it were an unsigned integer.
-	 * $b must be less than 0x40000000 and greater than 0
-	 *
-	 * @param $a
-	 * @param $b
-	 *
-	 * @return int
-	 */
-	public static function unsignedMod( $a, $b ) {
-		if ( $a & 0x80000000 ) {
-			$m = ( $a & 0x7fffffff ) % $b + 2 * ( 0x40000000 % $b );
-
-			return $m % $b;
-		} else {
-			return $a % $b;
-		}
-	}
-
-	/**
-	 * Shift a signed integer right as if it were unsigned
-	 * @param $a
-	 * @param $b
-	 * @return int
-	 */
-	public static function unsignedShiftRight( $a, $b ) {
-		if ( $b == 0 ) {
-			return $a;
-		}
-		if ( $a & 0x80000000 ) {
-			return ( ( $a & 0x7fffffff ) >> $b ) | ( 0x40000000 >> ( $b - 1 ) );
-		} else {
-			return $a >> $b;
-		}
-	}
-
-	/**
-	 * The CDB hash function.
-	 *
-	 * @param $s string
-	 *
-	 * @return int
-	 */
-	public static function hash( $s ) {
-		$h = 5381;
-		$len = strlen( $s );
-		for ( $i = 0; $i < $len; $i++ ) {
-			$h5 = ( $h << 5 ) & 0xffffffff;
-			// Do a 32-bit sum
-			// Inlined here for speed
-			$sum = ( $h & 0x3fffffff ) + ( $h5 & 0x3fffffff );
-			$h =
-				(
-					( $sum & 0x40000000 ? 1 : 0 )
-					+ ( $h & 0x80000000 ? 2 : 0 )
-					+ ( $h & 0x40000000 ? 1 : 0 )
-					+ ( $h5 & 0x80000000 ? 2 : 0 )
-					+ ( $h5 & 0x40000000 ? 1 : 0 )
-				) << 30
-				| ( $sum & 0x3fffffff );
-			$h ^= ord( $s[$i] );
-			$h &= 0xffffffff;
-		}
-
-		return $h;
-	}
-}
-
-/**
- * CDB reader class
- */
-class CdbReaderPHP extends CdbReader {
-	/** The filename */
-	var $fileName;
-
-	/* number of hash slots searched under this key */
-	var $loop;
-
-	/* initialized if loop is nonzero */
-	var $khash;
-
-	/* initialized if loop is nonzero */
-	var $kpos;
-
-	/* initialized if loop is nonzero */
-	var $hpos;
-
-	/* initialized if loop is nonzero */
-	var $hslots;
-
-	/* initialized if findNext() returns true */
-	var $dpos;
-
-	/* initialized if cdb_findnext() returns 1 */
-	var $dlen;
-
-	/**
-	 * @param $fileName string
-	 * @throws CdbException
-	 */
-	public function __construct( $fileName ) {
-		$this->fileName = $fileName;
-		$this->handle = fopen( $fileName, 'rb' );
-		if ( !$this->handle ) {
-			throw new CdbException( 'Unable to open CDB file "' . $this->fileName . '".' );
-		}
-		$this->findStart();
-	}
-
-	public function close() {
-		if ( isset( $this->handle ) ) {
-			fclose( $this->handle );
-		}
-		unset( $this->handle );
-	}
-
-	/**
-	 * @param $key
-	 * @return bool|string
-	 */
-	public function get( $key ) {
-		// strval is required
-		if ( $this->find( strval( $key ) ) ) {
-			return $this->read( $this->dlen, $this->dpos );
-		} else {
-			return false;
-		}
-	}
-
-	/**
-	 * @param $key
-	 * @param $pos
-	 * @return bool
-	 */
-	protected function match( $key, $pos ) {
-		$buf = $this->read( strlen( $key ), $pos );
-
-		return $buf === $key;
-	}
-
-	protected function findStart() {
-		$this->loop = 0;
-	}
-
-	/**
-	 * @throws CdbException
-	 * @param $length
-	 * @param $pos
-	 * @return string
-	 */
-	protected function read( $length, $pos ) {
-		if ( fseek( $this->handle, $pos ) == -1 ) {
-			// This can easily happen if the internal pointers are incorrect
-			throw new CdbException(
-				'Seek failed, file "' . $this->fileName . '" may be corrupted.' );
-		}
-
-		if ( $length == 0 ) {
-			return '';
-		}
-
-		$buf = fread( $this->handle, $length );
-		if ( $buf === false || strlen( $buf ) !== $length ) {
-			throw new CdbException(
-				'Read from CDB file failed, file "' . $this->fileName . '" may be corrupted.' );
-		}
-
-		return $buf;
-	}
-
-	/**
-	 * Unpack an unsigned integer and throw an exception if it needs more than 31 bits
-	 * @param $s
-	 * @throws CdbException
-	 * @return mixed
-	 */
-	protected function unpack31( $s ) {
-		$data = unpack( 'V', $s );
-		if ( $data[1] > 0x7fffffff ) {
-			throw new CdbException(
-				'Error in CDB file "' . $this->fileName . '", integer too big.' );
-		}
-
-		return $data[1];
-	}
-
-	/**
-	 * Unpack a 32-bit signed integer
-	 * @param $s
-	 * @return int
-	 */
-	protected function unpackSigned( $s ) {
-		$data = unpack( 'va/vb', $s );
-
-		return $data['a'] | ( $data['b'] << 16 );
-	}
-
-	/**
-	 * @param $key
-	 * @return bool
-	 */
-	protected function findNext( $key ) {
-		if ( !$this->loop ) {
-			$u = CdbFunctions::hash( $key );
-			$buf = $this->read( 8, ( $u << 3 ) & 2047 );
-			$this->hslots = $this->unpack31( substr( $buf, 4 ) );
-			if ( !$this->hslots ) {
-				return false;
-			}
-			$this->hpos = $this->unpack31( substr( $buf, 0, 4 ) );
-			$this->khash = $u;
-			$u = CdbFunctions::unsignedShiftRight( $u, 8 );
-			$u = CdbFunctions::unsignedMod( $u, $this->hslots );
-			$u <<= 3;
-			$this->kpos = $this->hpos + $u;
-		}
-
-		while ( $this->loop < $this->hslots ) {
-			$buf = $this->read( 8, $this->kpos );
-			$pos = $this->unpack31( substr( $buf, 4 ) );
-			if ( !$pos ) {
-				return false;
-			}
-			$this->loop += 1;
-			$this->kpos += 8;
-			if ( $this->kpos == $this->hpos + ( $this->hslots << 3 ) ) {
-				$this->kpos = $this->hpos;
-			}
-			$u = $this->unpackSigned( substr( $buf, 0, 4 ) );
-			if ( $u === $this->khash ) {
-				$buf = $this->read( 8, $pos );
-				$keyLen = $this->unpack31( substr( $buf, 0, 4 ) );
-				if ( $keyLen == strlen( $key ) && $this->match( $key, $pos + 8 ) ) {
-					// Found
-					$this->dlen = $this->unpack31( substr( $buf, 4 ) );
-					$this->dpos = $pos + 8 + $keyLen;
-
-					return true;
-				}
-			}
-		}
-
-		return false;
-	}
-
-	/**
-	 * @param $key
-	 * @return bool
-	 */
-	protected function find( $key ) {
-		$this->findStart();
-
-		return $this->findNext( $key );
-	}
-}
-
-/**
  * CDB writer class
  */
 class CdbWriterPHP extends CdbWriter {
-	var $hplist;
-	var $numentries, $pos;
+	protected $hplist;
+
+	protected $numentries;
+
+	protected $pos;
 
 	/**
-	 * @param $fileName string
+	 * @param string $fileName
 	 */
 	public function __construct( $fileName ) {
 		$this->realFileName = $fileName;
@@ -344,7 +87,7 @@ class CdbWriterPHP extends CdbWriter {
 
 	/**
 	 * @throws CdbException
-	 * @param $buf
+	 * @param string $buf
 	 */
 	protected function write( $buf ) {
 		$len = fwrite( $this->handle, $buf );
@@ -355,7 +98,7 @@ class CdbWriterPHP extends CdbWriter {
 
 	/**
 	 * @throws CdbException
-	 * @param $len
+	 * @param int $len
 	 */
 	protected function posplus( $len ) {
 		$newpos = $this->pos + $len;
@@ -367,9 +110,9 @@ class CdbWriterPHP extends CdbWriter {
 	}
 
 	/**
-	 * @param $keylen
-	 * @param $datalen
-	 * @param $h
+	 * @param int $keylen
+	 * @param int $datalen
+	 * @param int $h
 	 */
 	protected function addend( $keylen, $datalen, $h ) {
 		$this->hplist[] = array(
@@ -385,8 +128,8 @@ class CdbWriterPHP extends CdbWriter {
 
 	/**
 	 * @throws CdbException
-	 * @param $keylen
-	 * @param $datalen
+	 * @param int $keylen
+	 * @param int $datalen
 	 */
 	protected function addbegin( $keylen, $datalen ) {
 		if ( $keylen > 0x7fffffff ) {
@@ -478,7 +221,7 @@ class CdbWriterPHP extends CdbWriter {
 	/**
 	 * Clean up the temp file and throw an exception
 	 *
-	 * @param $msg string
+	 * @param string $msg
 	 * @throws CdbException
 	 */
 	protected function throwException( $msg ) {
