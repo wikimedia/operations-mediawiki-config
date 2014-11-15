@@ -5,13 +5,22 @@
 
 # Non-logged profiling for debugging
 if ( isset( $_REQUEST['forceprofile'] ) ) {
-	$wgProfiler['class'] = 'ProfilerSimpleText';
-# Non-logged profiling for debugging
-} elseif ( isset( $_REQUEST['forcetrace'] ) ) {
-	$wgProfiler['class'] = 'ProfilerSimpleTrace';
+	if ( defined( 'HHVM_VERSION' ) ) {
+		$wgProfiler['class'] = 'ProfilerXhprof';
+		$wgProfiler['flags'] = XHPROF_FLAGS_NO_BUILTINS;
+		$wgProfiler['log'] = 'text';
+	} else {
+		$wgProfiler['class'] = 'ProfilerSimpleText';
+	}
 # Profiling hack for test2 wiki (not sampled, but shouldn't distort too much)
 } elseif ( isset( $_SERVER['HTTP_HOST'] ) && $_SERVER['HTTP_HOST'] === 'test2.wikipedia.org' ) {
-	$wgProfiler['class'] = 'ProfilerSimpleUDP';
+	if ( defined( 'HHVM_VERSION' ) ) {
+		$wgProfiler['class'] = 'ProfilerXhprof';
+		$wgProfiler['flags'] = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
+		$wgProfiler['log'] = 'udpprofile';
+	} else {
+		$wgProfiler['class'] = 'ProfilerSimpleUDP';
+	}
 	$wgProfiler['profileID'] = 'test2';
 # Normal case: randomly (or not) selected for logged profiling sample
 } elseif ( PHP_SAPI !== 'cli' && $wmfDatacenter == 'eqiad' && ( mt_rand() % 50 ) == 0 ) {
@@ -26,7 +35,13 @@ if ( isset( $_REQUEST['forceprofile'] ) ) {
 		$wgProfiler['profileID'] = $version;
 	}
 } elseif ( $wmfRealm === 'labs' ) {
-	$wgProfiler['class'] = 'ProfilerSimpleUDP';
+	if ( defined( 'HHVM_VERSION' ) ) {
+		$wgProfiler['class'] = 'ProfilerXhprof';
+		$wgProfiler['flags'] = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
+		$wgProfiler['log'] = 'udpprofile';
+	} else {
+		$wgProfiler['class'] = 'ProfilerSimpleUDP';
+	}
 	$coreGit = new GitInfo( $IP );
 	$wgProfiler['profileID'] = $coreGit->getHeadSHA1() ?: 'labs';
 }
