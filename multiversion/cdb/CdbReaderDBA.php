@@ -42,34 +42,3 @@ class CdbReaderDBA extends CdbReader {
 		return dba_fetch( $key, $this->handle );
 	}
 }
-
-/**
- * Writer class which uses the DBA extension
- */
-class CdbWriterDBA extends CdbWriter {
-	public function __construct( $fileName ) {
-		$this->realFileName = $fileName;
-		$this->tmpFileName = $fileName . '.tmp.' . mt_rand( 0, 0x7fffffff );
-		$this->handle = dba_open( $this->tmpFileName, 'n', 'cdb_make' );
-		if ( !$this->handle ) {
-			throw new CdbException( 'Unable to open CDB file for write "' . $fileName . '"' );
-		}
-	}
-
-	public function set( $key, $value ) {
-		return dba_insert( $key, $value, $this->handle );
-	}
-
-	public function close() {
-		if ( isset( $this->handle ) ) {
-			dba_close( $this->handle );
-		}
-		if ( $this->isWindows() ) {
-			unlink( $this->realFileName );
-		}
-		if ( !rename( $this->tmpFileName, $this->realFileName ) ) {
-			throw new CdbException( 'Unable to move the new CDB file into place.' );
-		}
-		unset( $this->handle );
-	}
-}
