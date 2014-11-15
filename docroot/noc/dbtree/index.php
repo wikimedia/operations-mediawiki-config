@@ -194,7 +194,7 @@ if ( ( time() - $ttl > filemtime( $gangcache ) ) || $_GET['recache'] == 'true' )
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.11.2.custom.min.js"></script>
 	<link rel="stylesheet" href="css/custom.min.css"/>
-	<script type="text/javascript" src="js/jquery.jOrgChart.js"></script>
+	<script type="text/javascript" src="js/jquery.jOrgChart.minjs"></script>
 	<script type="text/javascript" src="js/jquery.bt.min.js"></script>
 </head>
 <body>
