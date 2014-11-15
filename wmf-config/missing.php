@@ -215,7 +215,7 @@ function showMobileError() {
 </body>
 </html>
 
-<?
+<?php
 }
 
 /**
@@ -273,7 +273,7 @@ function showMissingSubdomainError( $project, $language ) {
 </body>
 </html>
 
-<?
+<?php
 }
 
 /**
@@ -309,7 +309,7 @@ function showGenericError() {
 </body>
 </html>
 
-<?
+<?php
 }
 
 /**
