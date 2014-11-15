@@ -2,7 +2,7 @@
 // get params
 $language = $_GET['language'];
 $search   = $_GET['search'];
-$fulltext = $_GET['fulltext'];
+$fulltext = isset( $_GET['fulltext'] ) ? $_GET['fulltext'] : false;
 $go       = $_GET['go'];
 
 if ( isset( $_GET['family'] ) ) {
@@ -11,7 +11,9 @@ if ( isset( $_GET['family'] ) ) {
 	$family = 'wikipedia';
 }
 
-if ( ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https' ) || ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] === 'on' ) ) {
+if ( ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https' )
+	|| ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] === 'on' )
+) {
 	$proto = 'https';
 } else {
 	$proto = 'http';
