@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_08372fad",
+        "filename": "wmf-config/StartProfiler.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-11-15T01:21:35Z",
+      "side": 1,
+      "message": "This is likely to change once I266ed820 merges.",
+      "revId": "7282015a81ad1d84fb4f63366dac2a2cda1201a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
