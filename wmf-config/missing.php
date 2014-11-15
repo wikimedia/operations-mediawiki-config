@@ -2,24 +2,26 @@
 
 /**
  * Missing wiki redirect / 404 page
- * 
+ *
  * This file redirects non-existing languages of Wikipedia, Wiktionary, Wikiquote,
  * Wikibooks and Wikinews to the Wikimedia Incubator. Non-existing languages of
  * Wikisource and Wikiversity show static 404 page.
- * 
+ *
  * There is a specific extension on Incubator used to make nice "welcome pages"
  * (adapted to each language, project and translatable).
- * 
+ *
  * These redirects allow the usage of interwiki links from existing language
  * subdomains to Incubator, e.g. [[xyz:Page]] on en.wikipedia links to
  * http://incubator.wikimedia.org/wiki/Wp/xyz/Page
- * 
+ *
  * @copyright Copyright © 2011-2013, Danny B., SPQRobin, Tim Starling
- * 
+ *
  * @license http://www.gnu.org/copyleft/gpl.html GNU General Public License 2.0 or later
  */
 
 // define( 'MISSING_PHP_TEST', 1 );
+
+require dirname( __DIR__ ) . '/multiversion/Cdb.php';
 
 /**
  * The main function
@@ -68,16 +70,20 @@ function handleMissingWiki() {
 
 	if( strpos( $page, ':' ) !== false && function_exists( 'dba_open' ) ) {
 		# Open the interwiki file to see if we have an interwiki prefix
-		$db = dba_open( __DIR__ . '/interwiki.cdb', 'r-', 'cdb' );
+		$db = null;
+		try {
+			$db = CdbReader::open( __DIR__ . '/interwiki.cdb' );
+		} catch ( CdbException $e ) {}
+
 		if ( $db ) {
 			$prefix = strtok( $page, ':' );
 
 			# Try looking for lateral links (w: q: voy: ...)
-			$row = dba_fetch( "{$language}wiki:$prefix", $db );
+			$row = $db->get( "{$language}wiki:$prefix" );
 			if( !$row ) {
 				# Also try interlanguage links
 				$projectForCdb = ( $project === 'wikipedia' ? 'wiki' : $project );
-				$row = dba_fetch( "_$projectForCdb:$prefix", $db );
+				$row = $db->get( "_$projectForCdb:$prefix" );
 			}
 
 			if( $row ) {
@@ -86,12 +92,10 @@ function handleMissingWiki() {
 					# Redirect to the appropriate WMF wiki
 					# strtok gives us the remainder of the page title after the interwiki prefix
 					showRedirect( $protocol . ':' . str_replace( '$1', strtok( '' ), $iw_url ) );
-					dba_close( $db );
 					return;
 				}
 			}
 			# We don't have an interwiki link, keep going and see what else we could have
-			dba_close( $db );
 		}
 	}
 
