@@ -978,7 +978,7 @@ $wgNoFollowLinks = true; // In case the MediaWiki default changed, bug 42594
 $wgExtensionFunctions[] = function() {
 	global $wmfUdp2logDest, $wgRequest;
 	if ( isset( $_SERVER['REQUEST_METHOD'] ) && $_SERVER['REQUEST_METHOD'] === 'POST' ) {
-		$uri = ( $_SERVER['HTTPS'] ? 'https://' : 'http://' ) .
+		$uri = ( ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] ) ? 'https://' : 'http://' ) .
 			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		$xff = isset( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : '';
 		wfErrorLog(
