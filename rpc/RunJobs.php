@@ -45,5 +45,5 @@ try {
 
 	$mediawiki->restInPeace();
 } catch ( Exception $e ) {
-	MWExceptionHandler::handle( $e );
+	MWExceptionHandler::handleException( $e );
 }
