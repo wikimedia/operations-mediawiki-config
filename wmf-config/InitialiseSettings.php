@@ -4139,6 +4139,7 @@ $wgConf->settings = array(
 		'thumbnail' => "udp://$wmfUdp2logDest/thumbnail",
 		'jobqueue' => "udp://$wmfUdp2logDest/jobqueue/web",
 		'slow-parse' => "udp://$wmfUdp2logDest/slow-parse",
+		'error' => "udp://$wmfUdp2logDest/error",
 		'exception' => "udp://$wmfUdp2logDest/exception",
 		'exception-json' => "udp://$wmfUdp2logDest/exception-json",
 		'session' => "udp://$wmfUdp2logDest/session",

@@ -18,7 +18,7 @@
 #
 # More modern PHP versions will send a 500 result code on fatal error,
 # at least sometimes, but what we're running will send a 200.
-if( PHP_SAPI != 'cli' ) {
+if ( PHP_SAPI != 'cli' ) {
 	header( "Cache-control: no-cache" );
 }
 
