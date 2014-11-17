@@ -1467,6 +1467,10 @@ if ( $wmgUseCentralNotice ) {
 		$wgCentralNoticeChooseBannerOnClient = true;
 	}
 
+	if ( $wgDBname === 'mediawikiwiki' ) {
+		$wgCentralNoticeChooseBannerOnClient = true;
+	}
+
 	// Allow only these domains to access CentralNotice data through the reporter
 	$wgNoticeReporterDomains = 'https://donate.wikimedia.org';
 
