@@ -2206,11 +2206,8 @@ if ( $wmgUseTranslate ) {
 	$wgGroupPermissions['user']['translate-messagereview'] = true;
 	$wgGroupPermissions['user']['translate-groupreview'] = true;
 
-	unset( $wgGroupPermissions['translate-proofr'] );
-	unset( $wgAddGroups['translate-proofr'] );
-
 	$wgTranslateDocumentationLanguageCode = 'qqq';
-	$wgExtraLanguageNames['qqq']       = 'Message documentation'; # No linguistic content. Used for documenting messages
+	$wgExtraLanguageNames['qqq'] = 'Message documentation'; # No linguistic content. Used for documenting messages
 
 	$wgTranslateTranslationServices = array();
 	if ( $wmgUseTranslationMemory ) {
