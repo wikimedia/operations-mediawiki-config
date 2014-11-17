@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6e936f18_914b672b",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2230,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2014-11-17T09:37:33Z",
+      "side": 1,
+      "message": "Not sure how to do that with Elastica.",
+      "parentUuid": "6e936f18_eef5394e",
+      "revId": "c732f94f94f57fcb15b8a149f69add43702f997d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e936f18_a9f742cf",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 1
