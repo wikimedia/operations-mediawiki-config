@@ -1452,11 +1452,15 @@ if ( $wmgUseCentralNotice ) {
 	if ( $wgDBname == 'testwiki' ) {
 		$wgCentralPagePath = "//test.wikipedia.org/w/index.php";
 		$wgCentralBannerDispatcher = "//test.wikipedia.org/wiki/Special:BannerRandom";
+		$wgCentralSelectedBannerDispatcher = "//test.wikipedia.org/wiki/Special:BannerLoader";
 		$wgCentralBannerRecorder = "//test.wikipedia.org/wiki/Special:RecordImpression";
+		$wgCentralNoticeChooseBannerOnClient = true;
 	} else {
 		$wgCentralPagePath = "//{$wmfHostnames['meta']}/w/index.php";
 		$wgCentralBannerDispatcher = "//{$wmfHostnames['meta']}/wiki/Special:BannerRandom";
+		$wgCentralSelectedBannerDispatcher = "//{$wmfHostnames['meta']}/wiki/Special:BannerLoader";
 		$wgCentralBannerRecorder = "//{$wmfHostnames['meta']}/wiki/Special:RecordImpression";
+		$wgCentralNoticeChooseBannerOnClient = false;
 	}
 
 	// Allow only these domains to access CentralNotice data through the reporter
