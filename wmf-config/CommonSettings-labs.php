@@ -105,6 +105,13 @@ if ( $wmgUseContentTranslation ) {
 
 if ( $wmgUseCentralNotice ) {
 	$wgCentralGeoScriptURL = false;
+
+	$wgCentralPagePath = "//meta.wikimedia.beta.wmflabs.org/w/index.php";
+	$wgCentralBannerDispatcher = "//meta.wikimedia.beta.wmflabs.org/wiki/Special:BannerRandom";
+	$wgCentralSelectedBannerDispatcher = "//meta.wikimedia.beta.wmflabs.org/wiki/Special:BannerLoader";
+	$wgCentralBannerRecorder = "//meta.wikimedia.beta.wmflabs.org/wiki/Special:RecordImpression";
+	$wgCentralNoticeChooseBannerOnClient = true;
+	$wgCentralDBname = 'metawiki';
 }
 
 require_once( "$IP/extensions/MobileApp/MobileApp.php" );
