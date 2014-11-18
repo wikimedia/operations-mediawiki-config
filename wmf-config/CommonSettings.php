@@ -2246,7 +2246,7 @@ if ( $wmgUseTranslate ) {
 		// Read only until renamed to 'TTMServer'
 		$wgTranslateTranslationServices['TTMServer-esmigration'] = array(
 			'type' => 'ttmserver',
-			'class' => 'ElasticsearchTTMServer',
+			'class' => 'ElasticSearchTTMServer',
 			'shards' => 1,
 			'replicas' => 1,
 			'index' => $wmgTranslateESIndex,
