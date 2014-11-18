@@ -12288,6 +12288,11 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'enwiki' => true, // prototype version is for en.wiki only
 ),
+'wmgMFUseWikibaseDescription' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
 
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
