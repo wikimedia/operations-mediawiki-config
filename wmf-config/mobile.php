@@ -108,10 +108,19 @@ if ( $wmgMobileFrontend ) {
 			// https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok/Claim_suggestions#Writer
 			'author' => array(
 				'type' => 'Simple',
-				'property' => 'P106',
-				'ifAll' => array( 'P31' => 'Q5', 'P106' => 'Q36180' ),
-				'ifNotAny' => array( 'P106' => 'Q482980' ),
-				'suggestions' => array( 'Q482980' ),
+				'property' => 'P106'/* occupation */, 
+				'ifAll' => array( 'P31'/* instance of */ => 'Q5'/* human */, 'P106'/* occupation */ => 'Q36180'/* writer */ ),
+				'ifNotAny' => array( 'P106'/* occupation */ => 'Q482980'/* author */ ),
+				'suggestions' => array( 'Q482980'/* author */ ),
+			),
+			// https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok/Claim_suggestions#Types_of_actors
+			// After production testing is complete, split this campaign into 2 separate
+			// campaigns which exclude items that already have the respective claims made.
+			'actor' => array(
+				'type' => 'Simple',
+				'property' => 'P106'/* occupation */,
+				'ifAll' => array( 'P31'/* instance of */ => 'Q5'/* human */, 'P106'/* occupation */ => 'Q33999'/* actor */ ),
+				'suggestions' => array( 'Q10798782'/* television actor */, 'Q10800557'/* film actor */ ),
 			),
 		);
 
