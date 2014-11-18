@@ -1034,11 +1034,6 @@ if ( $wmgUseSpecialNuke ) {
 	include( $IP . '/extensions/Nuke/Nuke.php' );
 }
 
-include( "$IP/extensions/AntiBot/AntiBot.php" );
-$wgAntiBotPayloads = array(
-	'default' => array( 'log', 'fail' ),
-);
-
 if ( $wmgUseTorBlock ) {
 	include( "$IP/extensions/TorBlock/TorBlock.php" );
 	$wgTorLoadNodes = false;
