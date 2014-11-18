@@ -2226,25 +2226,12 @@ if ( $wmgUseTranslate ) {
 
 	$wgTranslateTranslationServices = array();
 	if ( $wmgUseTranslationMemory ) {
-		$wgTranslateTranslationServices['TTMServer'] = array(
-			'type' => 'ttmserver',
-			'class' => 'SolrTTMServer',
-			'cutoff' => 0.60,
-			'config' => array(
-				'adapteroptions' => array(
-					'host' => 'zinc.eqiad.wmnet',
-					'timeout' => 10,
-				),
-				'adapter' => 'Solarium_Client_Adapter_Curl',
-			),
-		);
-
 		$servers = array_map(
 			function ( $v ) { return array( 'host' => $v ); },
 			$wgCirrusSearchServers
 		);
 		// Read only until renamed to 'TTMServer'
-		$wgTranslateTranslationServices['TTMServer-esmigration'] = array(
+		$wgTranslateTranslationServices['TTMServer'] = array(
 			'type' => 'ttmserver',
 			'class' => 'ElasticSearchTTMServer',
 			'shards' => 1,
