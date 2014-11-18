@@ -13060,6 +13060,10 @@ $wgConf->settings = array(
 	'default' => true,
 	'otrs_wikiwiki' => false, // bug 61297
 ),
+'wmgTranslateESIndex' => array(
+	'default' => 'ttmserver',
+	'testwiki' => 'ttmserver-test',
+),
 'wmgUseTranslationNotifications' => array(
 	'default' => false,
 	'testwiki' => true,
