@@ -47,3 +47,38 @@ if ( isset( $_REQUEST['forceprofile'] ) ) {
 	$coreGit = new GitInfo( $IP );
 	$wgProfiler['profileID'] = $coreGit->getHeadSHA1() ?: 'labs';
 }
+
+if ( defined( 'HHVM_VERSION' )
+	&& isset( $_SERVER['HTTP_FORCE_LOCAL_XHPROF'] )
+	&& isset( $_SERVER['REMOTE_ADDR'] )
+	&& $_SERVER['REMOTE_ADDR'] == '127.0.0.1'
+	&& is_writable( '/tmp/xhprof' ) )
+{
+	xhprof_enable();
+	register_shutdown_function( function() {
+		$prof = xhprof_disable();
+		$titleFormat = "%-75s %6s %13s %13s %13s\n";
+		$format = "%-75s %6d %13.3f %13.3f %13.3f%%\n";
+		$out = sprintf( $titleFormat, 'Name', 'Calls', 'Total', 'Each', '%' );
+		if ( empty( $prof['main()']['wt'] ) ) {
+			return;
+		}
+		$total = $prof['main()']['wt'];
+		uksort( $prof, function( $a, $b ) use ( $prof ) {
+			if ( $prof[$a]['wt'] < $prof[$b]['wt'] ) {
+				return 1;
+			} elseif ( $prof[$a]['wt'] > $prof[$b]['wt'] ) {
+				return -1;
+			} else {
+				return 0;
+			}
+		} );
+
+		foreach ( $prof as $name => $info ) {
+			$out .= sprintf( $format, $name, $info['ct'], $info['wt'] / 1000,
+				$info['wt'] / $info['ct'] / 1000,
+				$info['wt'] / $total * 100 );
+		}
+		file_put_contents( '/tmp/xhprof/' . date( 'Y-m-d\TH:i:s' ) . '.prof', $out );
+	} );
+}
