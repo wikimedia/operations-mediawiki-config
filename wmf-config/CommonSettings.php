@@ -2207,6 +2207,7 @@ if ( $wmgUseBounceHandler ) {
 	require_once "$IP/extensions/BounceHandler/BounceHandler.php";
 	// $wmgVERPsecret is set in PrivateSettings.php
 	$wgVERPsecret = $wmgVERPsecret;
+	$wgVERPdomainPart = 'wikimedia.org';
 	$wgBounceHandlerUnconfirmUsers = false;
 	$wgBounceHandlerCluster = 'extension1';
 	$wgBounceHandlerSharedDB = 'wikishared';
