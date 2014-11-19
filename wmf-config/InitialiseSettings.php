@@ -12213,10 +12213,13 @@ $wgConf->settings = array(
 'wmgMFCustomLogos' => array(
 	'default' => array(),
 	'enwiki' => array(
-		'copyright' => '{wgExtensionAssetsPath}/MobileFrontend/images/logo-copyright-en.png'
+		'copyright' => '/images/mobile/wikipedia-wordmark-en.png'
 	),
 	'testwiki' => array(
-		'copyright' => '{wgExtensionAssetsPath}/MobileFrontend/images/logo-copyright-en.png'
+		'copyright' => '/images/mobile/wikipedia-wordmark-en.png'
+	),
+	'test2wiki' => array(
+		'copyright' => '/images/mobile/wikipedia-wordmark-en.png'
 	),
 ),
 'wmgMFEnableDesktopResources' => array(
