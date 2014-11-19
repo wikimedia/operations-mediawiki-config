@@ -39,3 +39,7 @@ if ( isset( $projectsOkForInterwiki[ $wgDBname ] ) ) {
 	$wgCirrusSearchInterwikiSources = $interwikiSearchConf;
 	$wgCirrusSearchInterwikiCacheTime = 60;
 }
+
+if ( $wgDBname == 'enwiki' ) {
+	$wgCirrusSearchPoolCounterKey .= '_enwiki';
+}
