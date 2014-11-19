@@ -122,6 +122,13 @@ if ( $wmgMobileFrontend ) {
 				'ifAll' => array( 'P31'/* instance of */ => 'Q5'/* human */, 'P106'/* occupation */ => 'Q33999'/* actor */ ),
 				'suggestions' => array( 'Q10798782'/* television actor */, 'Q10800557'/* film actor */ ),
 			),
+			// https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok/Claim_suggestions#Album
+			'album' => array(
+				'type' => 'Simple',
+				'property' => 'P31'/* instance of */,
+				'ifAll' => array( 'P31'/* instance of */ => 'Q482994'/* album */ ),
+				'suggestions' => array( 'Q208569'/* studio album */, 'Q209939'/* live album */ ),
+			),
 		);
 
 		$wgMFWikiGrokAbTestStartDate = 1416272400; // Tue, 18 Nov 2014 01:00:00 GMT
