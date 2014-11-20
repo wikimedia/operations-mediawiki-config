@@ -803,6 +803,14 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 		'extensionListUrl' => 'https://gerrit.wikimedia.org/r/projects/?p=mediawiki/extensions/',
 	);
 
+	if ( defined( 'MW_ED_SUPPORTS_SKINS' ) ) {
+		// Temporarily disable Special:SkinDistributor since it's not ready yet
+		unset( $wgSpecialPages['SkinDistributor'] );
+		$wgExtDistAPIConfig['repoListUrl'] = 'https://gerrit.wikimedia.org/r/projects/?p=mediawiki/$TYPE/';
+		$wgExtDistAPIConfig['apiUrl'] = 'https://gerrit.wikimedia.org/r/projects/mediawiki%2F$TYPE%2F$EXT/branches';
+		$wgExtDistAPIConfig['tarballUrl'] = 'https://extdist.wmflabs.org/dist/$TYPE/$EXT-$REF-$SHA.tar.gz';
+	}
+
 	// When changing the Snapshot Refs please change the corresponding
 	// extension distributor messages for mediawiki.org in WikimediaMessages/i18n/wikimedia/*.json too
 	$wgExtDistSnapshotRefs = array(
