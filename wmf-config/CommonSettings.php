@@ -859,6 +859,7 @@ if ( $wmgUseSecurePoll ) {
 	$wgSecurePollCreateWikiGroups = array(
 		'securepollglobal' => 'securepoll-dblist-securepollglobal'
 	);
+	$wgSecurePollShowErrorDetail=true; //temporary bug 73626
 }
 
 // PoolCounter
