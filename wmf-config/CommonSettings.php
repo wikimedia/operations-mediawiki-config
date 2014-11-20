@@ -797,19 +797,11 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 	$wgExtDistListFile = 'https://gerrit.wikimedia.org/mediawiki-extensions.txt';
 	$wgExtDistAPIConfig = array(
 		'class' => 'GerritExtDistProvider',
-		'apiUrl' => 'https://gerrit.wikimedia.org/r/projects/mediawiki%2Fextensions%2F$EXT/branches',
-		'tarballUrl' => 'https://extdist.wmflabs.org/dist/$EXT-$REF-$SHA.tar.gz',
+		'apiUrl' => 'https://gerrit.wikimedia.org/r/projects/mediawiki%2F$TYPE%2F$EXT/branches',
+		'tarballUrl' => 'https://extdist.wmflabs.org/dist/$TYPE/$EXT-$REF-$SHA.tar.gz',
 		'tarballName' => '$EXT-$REF-$SHA.tar.gz',
-		'extensionListUrl' => 'https://gerrit.wikimedia.org/r/projects/?p=mediawiki/extensions/',
+		'repoListUrl' => 'https://gerrit.wikimedia.org/r/projects/?p=mediawiki/$TYPE/',
 	);
-
-	if ( defined( 'MW_ED_SUPPORTS_SKINS' ) ) {
-		// Temporarily disable Special:SkinDistributor since it's not ready yet
-		unset( $wgSpecialPages['SkinDistributor'] );
-		$wgExtDistAPIConfig['repoListUrl'] = 'https://gerrit.wikimedia.org/r/projects/?p=mediawiki/$TYPE/';
-		$wgExtDistAPIConfig['apiUrl'] = 'https://gerrit.wikimedia.org/r/projects/mediawiki%2F$TYPE%2F$EXT/branches';
-		$wgExtDistAPIConfig['tarballUrl'] = 'https://extdist.wmflabs.org/dist/$TYPE/$EXT-$REF-$SHA.tar.gz';
-	}
 
 	// When changing the Snapshot Refs please change the corresponding
 	// extension distributor messages for mediawiki.org in WikimediaMessages/i18n/wikimedia/*.json too
