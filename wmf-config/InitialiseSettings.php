@@ -11779,8 +11779,13 @@ $wgConf->settings = array(
 // -------------- VisualEditor start --------------
 
 'wmgUseVisualEditor' => array(
-	'default' => false,
-	'visualeditor' => true,
+	'default' => true,
+	'nonbetafeatures' => false,
+
+	'wikisource' => false,	# Paused until ProofreadPage integration is good to go
+	'wiktionary' => false,	# Paused until template editing is more tightly integrated
+	'frwikitionary' => true, # Per community request
+	'svwikitionary' => true, # Per community request
 ),
 
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
@@ -11792,6 +11797,7 @@ $wgConf->settings = array(
 	// Special wikis
 	'+commonswiki' => array( 100 /* Creator */, 106 /* Institution */ ), // Bug 65067
 	'+metawiki' => array( 200 /* Grants */, 202 /* Research */, 204 /* Participation */, 206, 208 /* Programs */ ),
+	'+wikidata' => array( NS_PROJECT ),
 	// Wikipedias
 	'+cawiki' => array( 100 /* Portal */, 102 /* Viquiprojecte */ ), // Bug 56000
 	'+enwiki' => array( 100 /* Portal */, 108 /* Book */, 118 /* Draft */ ), // Bug 56001
