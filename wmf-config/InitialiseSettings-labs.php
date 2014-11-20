@@ -461,6 +461,12 @@ return array(
 	'wgThumbnailMinimumBucketDistance' => array(
 		'default' => 32,
 	),
+
+	'wmgUseGlobalUserPage' => array(
+		'default' => true,
+		'private' => false,
+		'fishbowl' => false,
+	),
 );
 
 } # wmflLabsSettings()
