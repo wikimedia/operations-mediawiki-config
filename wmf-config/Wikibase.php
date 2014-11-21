@@ -82,7 +82,7 @@ if ( $wmgUseWikibaseRepo ) {
 	} else {
 		$wgWBRepoSettings['clientDbList'] = array_map(
 			'trim',
-			file( getRealmSpecificFilename( "$IP/../wikidataclient.dblist" ) )
+			file( getRealmSpecificFilename( "$IP/../dblists/wikidataclient.dblist" ) )
 		);
 	}
 
