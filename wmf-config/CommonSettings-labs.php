@@ -132,7 +132,7 @@ if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
 
 if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 	require_once "$IP/extensions/GlobalUserPage/GlobalUserPage.php";
-	$wgGlobalUserPageAPIUrl = 'https://meta.wikimedia.beta.wmflabs.org/w/api.php';
+	$wgGlobalUserPageAPIUrl = 'http://meta.wikimedia.beta.wmflabs.org/w/api.php';
 	$wgGlobalUserPageDBname = 'metawiki';
 }
 
