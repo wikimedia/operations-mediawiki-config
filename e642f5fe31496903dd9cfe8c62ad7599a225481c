@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_e6a1a291",
+        "filename": "wmf-config/logging-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-11-21T18:00:40Z",
+      "side": 1,
+      "message": "At least at first I don\u0027t want to send this flood to logstash. It will continue to go out as udp packets for udp2log however.",
+      "revId": "e642f5fe31496903dd9cfe8c62ad7599a225481c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
