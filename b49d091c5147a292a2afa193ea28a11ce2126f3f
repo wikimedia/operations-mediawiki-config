@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e936f18_fd2cd5f3",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11786,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2014-11-21T06:54:18Z",
+      "side": 1,
+      "message": "more ...what?\n\nAlso, frwiktionary and svwiktionary currently have VE enabled, so it seems as though they would lose it if this was merged.",
+      "revId": "b49d091c5147a292a2afa193ea28a11ce2126f3f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
