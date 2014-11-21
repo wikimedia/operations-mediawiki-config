@@ -198,7 +198,7 @@ if ( !$globals ) {
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small', 'medium',
 			'large', 'wikimania', 'wikidata', 'wikidataclient', 'mediaviewer', 'visualeditor',
 			'visualeditor-default', 'echowikis', 'commonsuploads', 'nonbetafeatures' ) as $tag ) {
-		$dblist = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../$tag.dblist" ) ) );
+		$dblist = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../dblists/$tag.dblist" ) ) );
 		if ( in_array( $wgDBname, $dblist ) ) {
 			$wikiTags[] = $tag;
 		}
@@ -575,9 +575,9 @@ include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 
 // Config for sitematrix
 $wgSiteMatrixFile = '/srv/mediawiki/langlist';
-$wgSiteMatrixClosedSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../closed.dblist" ) ) );
-$wgSiteMatrixPrivateSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../private.dblist" ) ) );
-$wgSiteMatrixFishbowlSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../fishbowl.dblist" ) ) );
+$wgSiteMatrixClosedSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../dblists/closed.dblist" ) ) );
+$wgSiteMatrixPrivateSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../dblists/private.dblist" ) ) );
+$wgSiteMatrixFishbowlSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../dblists/fishbowl.dblist" ) ) );
 
 include( $IP . '/extensions/CharInsert/CharInsert.php' );
 

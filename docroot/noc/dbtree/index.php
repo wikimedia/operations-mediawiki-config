@@ -84,7 +84,7 @@ function parse_ganglia_xml( $db ) {
  */
 function parse_db_conf() {
 	$confdir = '/srv/mediawiki/wmf-config/';
-	$s3file = '/srv/mediawiki/s3.dblist';
+	$s3file = '/srv/mediawiki/dblists/s3.dblist';
 	$confs = array( 'db-eqiad.php' );
 	$dbs = array();
 
