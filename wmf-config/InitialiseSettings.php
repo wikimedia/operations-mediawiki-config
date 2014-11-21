@@ -12213,10 +12213,14 @@ $wgConf->settings = array(
 'wmgMFCustomLogos' => array(
 	'default' => array(),
 	'enwiki' => array(
-		'copyright' => '/images/mobile/wikipedia-wordmark-en.png'
+		'copyright' => '/images/mobile/wikipedia-wordmark-en.png',
+		'copyright-width' => 100,
+		'copyright-height' => 15,
 	),
 	'testwiki' => array(
-		'copyright' => '/images/mobile/wikipedia-wordmark-en.png'
+		'copyright' => '/images/mobile/wikipedia-wordmark-en.png',
+		'copyright-width' => 100,
+		'copyright-height' => 15,
 	),
 ),
 'wmgMFEnableDesktopResources' => array(
@@ -14334,16 +14338,6 @@ $wgConf->settings = array(
 
 'wgUploadThumbnailRenderHttpCustomDomain' => array(
 	'default' => 'upload.svc.eqiad.wmnet',
-),
-
-// Thumbnail chaining
-'wgThumbnailBuckets' => array(
-	'default' => array( 128, 256, 512, 1024, 2048, 4096 ),
-	'commonswiki' => array(),
-),
-
-'wgThumbnailMinimumBucketDistance' => array(
-	'default' => 32,
 ),
 
 );
