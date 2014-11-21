@@ -10970,6 +10970,7 @@ $wgConf->settings = array(
 		'serg-klymenko.narod.ru',           // Ukraine interesting photography source - bug 73045
 		'ua.vlasenko.net',                  // Ukraine interesting photography source - bug 73045
 		'*.wikiportret.nl',                 // Wikiportret - bug 72953
+		'openfashion.momu.be',              // Open Fashion Antwerp Fashion Museum (MoMu)
 	),
 ),
 
