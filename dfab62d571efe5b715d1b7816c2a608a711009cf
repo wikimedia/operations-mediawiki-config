@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_7ff2eb04",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2014-11-22T12:37:21Z",
+      "side": 1,
+      "message": "Is this still accurate? I can\u0027t see this change in the unified diff.",
+      "revId": "dfab62d571efe5b715d1b7816c2a608a711009cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
