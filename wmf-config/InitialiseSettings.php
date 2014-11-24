@@ -1139,6 +1139,12 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 ),
 
+// Raise stash time limit on Commons for UploadWizard
+'wgUploadStashMaxAge' => array(
+	'default' => 6 * 60 * 60, // 6 hours
+	'commonswiki' => 48 * 60 * 60, // 48 hours
+),
+
 # wgUploadNavigationUrl @{
 'wgUploadNavigationUrl' => array(
 	// Projects
