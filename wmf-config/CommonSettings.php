@@ -405,6 +405,10 @@ $wgMaxAnimatedGifArea = 75e6; // 75MP
 
 $wgFileExtensions = array_merge( $wgFileExtensions, $wmgFileExtensions );
 
+if ( $wmgUploadStashMaxAge ) {
+	$wgUploadStashMaxAge = $wmgUploadStashMaxAge;
+}
+
 if ( $wmgPrivateWikiUploads ) {
 	# mav forced me to --midom
 	$wgFileExtensions[] = 'ppt';
