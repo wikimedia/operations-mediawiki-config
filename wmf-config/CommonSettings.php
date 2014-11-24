@@ -1457,22 +1457,14 @@ if ( $wmgUseCentralNotice ) {
 		$wgCentralBannerDispatcher = "//test.wikipedia.org/wiki/Special:BannerRandom";
 		$wgCentralSelectedBannerDispatcher = "//test.wikipedia.org/wiki/Special:BannerLoader";
 		$wgCentralBannerRecorder = "//test.wikipedia.org/wiki/Special:RecordImpression";
-		$wgCentralNoticeChooseBannerOnClient = true;
 	} else {
 		$wgCentralPagePath = "//{$wmfHostnames['meta']}/w/index.php";
 		$wgCentralBannerDispatcher = "//{$wmfHostnames['meta']}/wiki/Special:BannerRandom";
 		$wgCentralSelectedBannerDispatcher = "//{$wmfHostnames['meta']}/wiki/Special:BannerLoader";
 		$wgCentralBannerRecorder = "//{$wmfHostnames['meta']}/wiki/Special:RecordImpression";
-		$wgCentralNoticeChooseBannerOnClient = false;
 	}
 
-	if ( $lang === 'aa' && $site === 'wikibooks' ) {
-		$wgCentralNoticeChooseBannerOnClient = true;
-	}
-
-	if ( $wgDBname === 'mediawikiwiki' ) {
-		$wgCentralNoticeChooseBannerOnClient = true;
-	}
+	$wgCentralNoticeChooseBannerOnClient = true;
 
 	// Allow only these domains to access CentralNotice data through the reporter
 	$wgNoticeReporterDomains = 'https://donate.wikimedia.org';
