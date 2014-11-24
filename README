@@ -20,7 +20,7 @@ docroot/
  The Apache document root for several of our VirtualHosts.
 
 images/
- Shared pictures for the unified login system.
+ Shared pictures for the unified login system used by CentralAuth.
 
 w/
  The "w/" directory in the docroot of any MediaWiki-serving VirtualHost.
