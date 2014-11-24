@@ -11023,7 +11023,6 @@ $wgConf->settings = array(
 	'fiwikimedia' => true, // Bug 37778
 	'huwiki' => true, // Bug 22909 -- Andrew 2010-09-06
 	'mediawikiwiki' => true,
-	'officewiki' => true, // Erik requested, by mail.
 	'ptwikibooks' => true, // Bug 24143 -- Andrew 2010-08-16
 	'strategywiki' => true, // Philippe says it's cool -- Andrew 2009-10-13
 	'sewikimedia' => true, // Bug 24377 -- Andrew 2010-08-28
@@ -11038,6 +11037,12 @@ $wgConf->settings = array(
 	'strategywiki' => false,
 	'sewikimedia' => false, // Bug 46182
 	'ptwikibooks' => false, // Bug 48578
+),
+
+'wmgLiquidThreadsBackfill' => array(
+	// Preserve access to LQT namespaces after removing the extension
+	'default' => false,
+	'officewiki' => true, // replaced with Flow 2014-11-25
 ),
 
 'wmgLQTUserControlNamespaces' => array(
