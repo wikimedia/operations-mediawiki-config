@@ -13726,6 +13726,7 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
+	'officewiki' => true,
 ),
 
 'wmgUseUniversalLanguageSelector' => array(
