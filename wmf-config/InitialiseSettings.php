@@ -11258,6 +11258,7 @@ $wgConf->settings = array(
 		'visualeditor-enable-language',             // 2014-11-01 — VE language editor
 		'wikibase-otherprojects',                   // 2015-02-27 — Other projects sidebar (wikidata)
 		'HHVM',                                     // 2015-03-18 - HHVM opt-in
+		'betafeatures-vector-form-refresh',         // 2015-05-24 - Interface Refresh and Standardization
 	),
 ),
 
@@ -11285,6 +11286,11 @@ $wgConf->settings = array(
 
 'wmgVectorBetaPersonalBar' => array(
 	'default' => true,
+	'nonbetafeatures' => false,
+),
+
+'wmgVectorBetaFormRefresh' => array(
+	'default' => true, // T73477
 	'nonbetafeatures' => false,
 ),
 

@@ -1975,6 +1975,7 @@ if ( $wmgUsePopups ) {
 if ( $wmgUseVectorBeta ) {
 	require_once( "$IP/extensions/VectorBeta/VectorBeta.php" );
 	$wgVectorBetaPersonalBar = $wmgVectorBetaPersonalBar;
+	$wgVectorBetaFormRefresh = $wmgVectorBetaFormRefresh;
 }
 
 if ( $wmgUseParsoid ) {
