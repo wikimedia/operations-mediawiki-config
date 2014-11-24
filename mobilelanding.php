@@ -16,10 +16,13 @@ $message = HttpStatus::getMessage( $code );
 //$lastmod = gmdate( 'D, j M Y H:i:s', wfTimestamp( TS_UNIX, $wgArticle->getTouched() ) ) . ' GMT';
 //header( "Last-modified: $lastmod" );
 
-header( 'Cache-Control: s-maxage=3600, must-revalidate, max-age=0' );
+// note that the following will override any Cache-Control set earlier
+// in extension code called above
+header( 'Cache-Control: public, s-maxage=900, max-age=900' );
 header( "HTTP/1.1 $code $message" );
 if ( $redirect !== false ) {
 	header( 'Location: ' . $redirect );
 }
+// TODO: once ready to vary on Accept-Language, add Accept-Language here
 header( 'Vary: X-Forwarded-Proto,X-CS' );
 header( 'Content-Type: text/html; charset=utf-8' );
