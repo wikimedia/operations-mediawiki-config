@@ -1,0 +1,7 @@
+{
+	"name": "wikimedia/mediawiki-config",
+	"description": "MediaWiki configuration for the Wikimedia farm",
+	"require": {
+		"cdb/cdb": "1.0.0"
+	}
+}

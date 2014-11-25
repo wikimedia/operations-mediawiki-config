@@ -3,7 +3,10 @@ error_reporting( 0 );
 
 require_once( __DIR__ . '/defines.php' );
 require_once( __DIR__ . '/MWRealm.php' );
-require_once( __DIR__ . '/Cdb.php' );
+require_once( __DIR__ . '/vendor/autoload.php' );
+
+use Cdb\Exception as CdbException;
+use Cdb\Reader as CdbReader;
 
 /**
  * This script prints the MW version associated with a specified wikidb.

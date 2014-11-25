@@ -1,4 +1,7 @@
 <?php
+
+namespace Cdb;
+
 /**
  * This is a port of D.J. Bernstein's CDB to PHP. It's based on the copy that
  * appears in PHP 5.3. Changes are:
@@ -27,7 +30,7 @@
 /**
  * Common functions for readers and writers
  */
-class CdbFunctions {
+class Util {
 	/**
 	 * Take a modulo of a signed integer as if it were an unsigned integer.
 	 * $b must be less than 0x40000000 and greater than 0

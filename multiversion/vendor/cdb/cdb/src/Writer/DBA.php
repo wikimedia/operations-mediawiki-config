@@ -1,4 +1,9 @@
 <?php
+
+namespace Cdb\Writer;
+use Cdb\Exception;
+use Cdb\Writer;
+
 /**
  * DBA-based CDB reader/writer
  *
@@ -21,24 +26,38 @@
  */
 
 /**
- * Reader class which uses the DBA extension
+ * Writer class which uses the DBA extension
  */
-class CdbReaderDBA extends CdbReader {
+class DBA extends Writer {
+	/**
+	 * @throws Exception
+	 */
 	public function __construct( $fileName ) {
-		$this->handle = dba_open( $fileName, 'r-', 'cdb' );
+		$this->realFileName = $fileName;
+		$this->tmpFileName = $fileName . '.tmp.' . mt_rand( 0, 0x7fffffff );
+		$this->handle = dba_open( $this->tmpFileName, 'n', 'cdb_make' );
 		if ( !$this->handle ) {
-			throw new CdbException( 'Unable to open CDB file "' . $fileName . '"' );
+			throw new Exception( 'Unable to open CDB file for write "' . $fileName . '"' );
 		}
 	}
 
+	public function set( $key, $value ) {
+		return dba_insert( $key, $value, $this->handle );
+	}
+
+	/**
+	 * @throws Exception
+	 */
 	public function close() {
 		if ( isset( $this->handle ) ) {
 			dba_close( $this->handle );
 		}
+		if ( $this->isWindows() ) {
+			unlink( $this->realFileName );
+		}
+		if ( !rename( $this->tmpFileName, $this->realFileName ) ) {
+			throw new Exception( 'Unable to move the new CDB file into place.' );
+		}
 		unset( $this->handle );
-	}
-
-	public function get( $key ) {
-		return dba_fetch( $key, $this->handle );
 	}
 }
