@@ -374,7 +374,7 @@ $wgMWLoggerDefaultSpi = array(
 						$redis = new Redis();
 						// deployment-logstash1.eqiad.wmflabs
 						$redis->connect( '10.68.16.134', 6379, .25 );
-						$resis->auth( $wmgLogstashPassword );
+						$redis->auth( $wmgLogstashPassword );
 						return $redis;
 					},
 					'logstash'
