@@ -370,7 +370,7 @@ $wgMWLoggerDefaultSpi = array(
 			'logstash' => array(
 				'class' => '\\Monolog\\Handler\\RedisHandler',
 				'args' => array(
-					function() {
+					function() use ( $wmgLogstashPassword ) {
 						$redis = new Redis();
 						// deployment-logstash1.eqiad.wmflabs
 						$redis->connect( '10.68.16.134', 6379, .25 );
