@@ -23,6 +23,5 @@ header( "HTTP/1.1 $code $message" );
 if ( $redirect !== false ) {
 	header( 'Location: ' . $redirect );
 }
-// TODO: once ready to vary on Accept-Language, add Accept-Language here
-header( 'Vary: X-Forwarded-Proto,X-CS' );
+header( 'Vary: X-Forwarded-Proto,X-CS,Accept-Language' );
 header( 'Content-Type: text/html; charset=utf-8' );
