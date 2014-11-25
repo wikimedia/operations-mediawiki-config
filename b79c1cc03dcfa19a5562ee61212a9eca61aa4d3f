@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_cdd6eef6",
+        "filename": "wmf-config/logging-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 377,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-11-25T01:59:52Z",
+      "side": 1,
+      "message": "This password has already been added on deployment-bastion.",
+      "revId": "b79c1cc03dcfa19a5562ee61212a9eca61aa4d3f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
