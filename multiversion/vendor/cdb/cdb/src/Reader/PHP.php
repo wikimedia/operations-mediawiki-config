@@ -1,4 +1,10 @@
 <?php
+
+namespace Cdb\Reader;
+use Cdb\Exception;
+use Cdb\Reader;
+use Cdb\Util;
+
 /**
  * This is a port of D.J. Bernstein's CDB to PHP. It's based on the copy that
  * appears in PHP 5.3. Changes are:
@@ -27,7 +33,7 @@
 /**
  * CDB reader class
  */
-class CdbReaderPHP extends CdbReader {
+class PHP extends Reader {
 	/** The filename */
 	protected $fileName;
 
@@ -54,13 +60,13 @@ class CdbReaderPHP extends CdbReader {
 
 	/**
 	 * @param string $fileName
-	 * @throws CdbException
+	 * @throws Exception
 	 */
 	public function __construct( $fileName ) {
 		$this->fileName = $fileName;
 		$this->handle = fopen( $fileName, 'rb' );
 		if ( !$this->handle ) {
-			throw new CdbException( 'Unable to open CDB file "' . $this->fileName . '".' );
+			throw new Exception( 'Unable to open CDB file "' . $this->fileName . '".' );
 		}
 		$this->findStart();
 	}
@@ -80,9 +86,9 @@ class CdbReaderPHP extends CdbReader {
 		// strval is required
 		if ( $this->find( strval( $key ) ) ) {
 			return $this->read( $this->dlen, $this->dpos );
-		} else {
-			return false;
 		}
+
+		return false;
 	}
 
 	/**
@@ -101,7 +107,7 @@ class CdbReaderPHP extends CdbReader {
 	}
 
 	/**
-	 * @throws CdbException
+	 * @throws Exception
 	 * @param int $length
 	 * @param int $pos
 	 * @return string
@@ -109,7 +115,7 @@ class CdbReaderPHP extends CdbReader {
 	protected function read( $length, $pos ) {
 		if ( fseek( $this->handle, $pos ) == -1 ) {
 			// This can easily happen if the internal pointers are incorrect
-			throw new CdbException(
+			throw new Exception(
 				'Seek failed, file "' . $this->fileName . '" may be corrupted.' );
 		}
 
@@ -119,7 +125,7 @@ class CdbReaderPHP extends CdbReader {
 
 		$buf = fread( $this->handle, $length );
 		if ( $buf === false || strlen( $buf ) !== $length ) {
-			throw new CdbException(
+			throw new Exception(
 				'Read from CDB file failed, file "' . $this->fileName . '" may be corrupted.' );
 		}
 
@@ -129,13 +135,13 @@ class CdbReaderPHP extends CdbReader {
 	/**
 	 * Unpack an unsigned integer and throw an exception if it needs more than 31 bits
 	 * @param string $s
-	 * @throws CdbException
+	 * @throws Exception
 	 * @return mixed
 	 */
 	protected function unpack31( $s ) {
 		$data = unpack( 'V', $s );
 		if ( $data[1] > 0x7fffffff ) {
-			throw new CdbException(
+			throw new Exception(
 				'Error in CDB file "' . $this->fileName . '", integer too big.' );
 		}
 
@@ -159,7 +165,7 @@ class CdbReaderPHP extends CdbReader {
 	 */
 	protected function findNext( $key ) {
 		if ( !$this->loop ) {
-			$u = CdbFunctions::hash( $key );
+			$u = Util::hash( $key );
 			$buf = $this->read( 8, ( $u << 3 ) & 2047 );
 			$this->hslots = $this->unpack31( substr( $buf, 4 ) );
 			if ( !$this->hslots ) {
@@ -167,8 +173,8 @@ class CdbReaderPHP extends CdbReader {
 			}
 			$this->hpos = $this->unpack31( substr( $buf, 0, 4 ) );
 			$this->khash = $u;
-			$u = CdbFunctions::unsignedShiftRight( $u, 8 );
-			$u = CdbFunctions::unsignedMod( $u, $this->hslots );
+			$u = Util::unsignedShiftRight( $u, 8 );
+			$u = Util::unsignedMod( $u, $this->hslots );
 			$u <<= 3;
 			$this->kpos = $this->hpos + $u;
 		}

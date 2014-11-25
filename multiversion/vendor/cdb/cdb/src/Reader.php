@@ -1,4 +1,7 @@
 <?php
+
+namespace Cdb;
+
 /**
  * Native CDB file reader and writer.
  *
@@ -25,7 +28,7 @@
  * Native and pure PHP implementations are provided.
  * http://cr.yp.to/cdb.html
  */
-abstract class CdbReader {
+abstract class Reader {
 	/**
 	 * The file handle
 	 */
@@ -36,12 +39,12 @@ abstract class CdbReader {
 	 *
 	 * @param string $fileName
 	 *
-	 * @return CdbReader
+	 * @return Reader
 	 */
 	public static function open( $fileName ) {
 		return self::haveExtension() ?
-			new CdbReaderDBA( $fileName ) :
-			new CdbReaderPHP( $fileName );
+			new Reader\DBA( $fileName ) :
+			new Reader\PHP( $fileName );
 	}
 
 	/**

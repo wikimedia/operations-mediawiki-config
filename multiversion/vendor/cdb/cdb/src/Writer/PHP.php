@@ -1,4 +1,10 @@
 <?php
+
+namespace Cdb\Writer;
+use Cdb\Exception;
+use Cdb\Util;
+use Cdb\Writer;
+
 /**
  * This is a port of D.J. Bernstein's CDB to PHP. It's based on the copy that
  * appears in PHP 5.3. Changes are:
@@ -27,7 +33,7 @@
 /**
  * CDB writer class
  */
-class CdbWriterPHP extends CdbWriter {
+class PHP extends Writer {
 	protected $hplist;
 
 	protected $numentries;
@@ -65,11 +71,11 @@ class CdbWriterPHP extends CdbWriter {
 		$this->addbegin( strlen( $key ), strlen( $value ) );
 		$this->write( $key );
 		$this->write( $value );
-		$this->addend( strlen( $key ), strlen( $value ), CdbFunctions::hash( $key ) );
+		$this->addend( strlen( $key ), strlen( $value ), Util::hash( $key ) );
 	}
 
 	/**
-	 * @throws CdbException
+	 * @throws Exception
 	 */
 	public function close() {
 		$this->finish();
@@ -86,7 +92,7 @@ class CdbWriterPHP extends CdbWriter {
 	}
 
 	/**
-	 * @throws CdbException
+	 * @throws Exception
 	 * @param string $buf
 	 */
 	protected function write( $buf ) {
@@ -97,7 +103,7 @@ class CdbWriterPHP extends CdbWriter {
 	}
 
 	/**
-	 * @throws CdbException
+	 * @throws Exception
 	 * @param int $len
 	 */
 	protected function posplus( $len ) {
@@ -127,7 +133,7 @@ class CdbWriterPHP extends CdbWriter {
 	}
 
 	/**
-	 * @throws CdbException
+	 * @throws Exception
 	 * @param int $keylen
 	 * @param int $datalen
 	 */
@@ -143,7 +149,7 @@ class CdbWriterPHP extends CdbWriter {
 	}
 
 	/**
-	 * @throws CdbException
+	 * @throws Exception
 	 */
 	protected function finish() {
 		// Hack for DBA cross-check
@@ -189,8 +195,8 @@ class CdbWriterPHP extends CdbWriter {
 			// is taken.
 			for ( $u = 0; $u < $count; ++$u ) {
 				$hp = $packedTables[$starts[$i] + $u];
-				$where = CdbFunctions::unsignedMod(
-					CdbFunctions::unsignedShiftRight( $hp['h'], 8 ), $len );
+				$where = Util::unsignedMod(
+					Util::unsignedShiftRight( $hp['h'], 8 ), $len );
 				while ( $hashtable[$where]['p'] ) {
 					if ( ++$where == $len ) {
 						$where = 0;
@@ -203,7 +209,7 @@ class CdbWriterPHP extends CdbWriter {
 			for ( $u = 0; $u < $len; ++$u ) {
 				$buf = pack( 'vvV',
 					$hashtable[$u]['h'] & 0xffff,
-					CdbFunctions::unsignedShiftRight( $hashtable[$u]['h'], 16 ),
+					Util::unsignedShiftRight( $hashtable[$u]['h'], 16 ),
 					$hashtable[$u]['p'] );
 				$this->write( $buf );
 				$this->posplus( 8 );
@@ -222,13 +228,13 @@ class CdbWriterPHP extends CdbWriter {
 	 * Clean up the temp file and throw an exception
 	 *
 	 * @param string $msg
-	 * @throws CdbException
+	 * @throws Exception
 	 */
 	protected function throwException( $msg ) {
 		if ( $this->handle ) {
 			fclose( $this->handle );
 			unlink( $this->tmpFileName );
 		}
-		throw new CdbException( $msg );
+		throw new Exception( $msg );
 	}
 }

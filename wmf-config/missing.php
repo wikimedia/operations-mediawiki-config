@@ -21,7 +21,10 @@
 
 // define( 'MISSING_PHP_TEST', 1 );
 
-require dirname( __DIR__ ) . '/multiversion/Cdb.php';
+require_once dirname( __DIR__ ) . '/multiversion/vendor/autoload.php';
+
+use Cdb\Exception as CdbException;
+use Cdb\Reader as CdbReader;
 
 /**
  * The main function

@@ -1,4 +1,7 @@
 <?php
+
+namespace Cdb;
+
 /**
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,7 +23,6 @@
 
 /**
  * Exception for Cdb errors.
- * This explicitly doesn't subclass MWException to encourage reuse.
  */
-class CdbException extends Exception {
+class Exception extends \Exception {
 }
