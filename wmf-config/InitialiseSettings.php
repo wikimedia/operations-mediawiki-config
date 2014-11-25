@@ -13570,6 +13570,15 @@ $wgConf->settings = array(
 	),
 	'officewiki' => array( // per Loomio discussion
 		'Talk:Flow',
+		// converted from LQT
+		'User talk:BDavis (WMF)',
+		'Talk:Administrative Services Suggestion Box',
+		'User talk:Jdavis',
+		'Talk:Community engagement',
+		'Talk:LiquidThreads',
+		'User talk:Andrew Garrett (WMF)',
+		'Village pump',
+		'LQT TestZero',
 	),
 ),
 // Use separate database on extension1 cluster for all non-private wikis.
