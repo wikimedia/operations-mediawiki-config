@@ -93,6 +93,7 @@ mwconfig_files=(
 	wmf-config/extension-list-labs
 	wmf-config/extension-list-wikitech
 	wmf-config/interwiki.cdb
+	wmf-config/interwiki-labs.cdb
 	wmf-config/trusted-xff.cdb
 )
 
