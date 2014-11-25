@@ -1464,7 +1464,7 @@ if ( $wmgUseCentralNotice ) {
 		$wgCentralBannerRecorder = "//{$wmfHostnames['meta']}/wiki/Special:RecordImpression";
 	}
 
-	$wgCentralNoticeChooseBannerOnClient = true;
+	$wgCentralNoticeChooseBannerOnClient = false;
 
 	// Allow only these domains to access CentralNotice data through the reporter
 	$wgNoticeReporterDomains = 'https://donate.wikimedia.org';
