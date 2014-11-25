@@ -811,7 +811,7 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 	// extension distributor messages for mediawiki.org in WikimediaMessages/i18n/wikimedia/*.json too
 	$wgExtDistSnapshotRefs = array(
 		'master',
-		// 'REL1_24', // Remove 1.24 since it's confusing people by being the default
+		'REL1_24',
 		'REL1_23',
 		'REL1_22',
 		'REL1_21',
