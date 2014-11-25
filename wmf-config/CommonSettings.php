@@ -1193,9 +1193,11 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgExternalDiffEngine = 'wikidiff2';
 }
 
-if ( file_exists( "$wmfConfigDir/interwiki.cdb" ) ) {
-	$wgInterwikiCache = "$wmfConfigDir/interwiki.cdb";
+$iwCacheFile = getRealmSpecificFilename( "$wmfConfigDir/interwiki.cdb" );
+if ( file_exists( $iwCacheFile ) ) {
+	$wgInterwikiCache = $iwCacheFile;
 }
+unset( $iwCacheFile );
 
 $wgEnotifUseJobQ = true;
 
