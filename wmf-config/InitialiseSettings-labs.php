@@ -358,6 +358,10 @@ return array(
 		'default' => true,
 	),
 
+	'wmgContentTranslationCluster' => array(
+		'default' => 'extension1',
+	),
+
 	'wmgUseNavigationTiming' => array(
 	    'default' => true,
 	),
