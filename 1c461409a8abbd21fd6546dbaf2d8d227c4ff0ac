@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_6e0c663e",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2014-11-26T14:34:09Z",
+      "side": 1,
+      "message": "Wouldn\u0027t it make more sense to have the name of the cluster in this variable? Should make move to production easier when we can only set the variable then.",
+      "revId": "1c461409a8abbd21fd6546dbaf2d8d227c4ff0ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
