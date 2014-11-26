@@ -1611,7 +1611,7 @@ if ( $wmgUseCollection ) {
 	$wgEnableSidebarCache = false;
 
 	$wgCollectionFormats = array(
-		//'rdf2latex' => 'PDF', // temporarily disabled 26 Nov 2014
+		'rdf2latex' => 'PDF',
 		// The following formats used the old mwlib renderer
 		// which was shut down Oct 3, 2014.
 		// They may eventually be reinstated when new OCG backends
