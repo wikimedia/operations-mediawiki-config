@@ -11787,8 +11787,8 @@ $wgConf->settings = array(
 
 	'wikisource' => false,	# Paused until ProofreadPage integration is good to go
 	'wiktionary' => false,	# Paused until template editing is more tightly integrated
-	'frwikitionary' => true, # Per community request
-	'svwikitionary' => true, # Per community request
+	'frwiktionary' => true, # Per community request
+	'svwiktionary' => true, # Per community request
 ),
 
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
