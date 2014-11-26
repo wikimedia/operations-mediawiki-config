@@ -89,7 +89,7 @@ if ( $wmgUseFlow ) {
 }
 
 if ( $wmgUseContentTranslation ) {
-	require_once( "$IP/extensions/ContentTranslation/ContentTranslation.php" );
+	require_once "$IP/extensions/ContentTranslation/ContentTranslation.php";
 	$wgContentTranslationServerURL = 'https://cxserver-beta.wmflabs.org';
 	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org/page/$1/$2';
 	// Used for html2wikitext when publishing
@@ -101,6 +101,13 @@ if ( $wmgUseContentTranslation ) {
 
 	$wgContentTranslationEventLogging = $wmgContentTranslationEventLogging;
 
+
+	if ( $wmgUseContentTranslationCluster ) {
+		$wgContentTranslationCluster = 'extension1';
+		$wgContentTranslationCluster = $wmgContentTranslationCluster;
+	}
+
+	$wgContentTranslationDatabase = 'wikishared';
 }
 
 if ( $wmgUseCentralNotice ) {
