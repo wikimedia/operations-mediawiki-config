@@ -8976,7 +8976,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autoeditor' )
 	),
 	'+ruwikisource' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'autoeditor', 'rollbacker' ),
+		'bureaucrat' => array( 'autoeditor', 'rollbacker' ),
 		'sysop' => array( 'autoeditor', 'rollbacker', 'abusefilter', 'flood' ),
 	),
 	'+ruwikivoyage' => array(
