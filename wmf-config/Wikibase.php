@@ -57,8 +57,10 @@ if ( $wmgUseWikibaseRepo ) {
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['specialSiteLinkGroups'][] = 'testwikidata';
+		$wgWBRepoSettings['displayStatementsOnProperties'] = true;
 	} else {
 		$wgWBRepoSettings['specialSiteLinkGroups'][] = 'wikidata';
+		$wgWBRepoSettings['displayStatementsOnProperties'] = false;
 	}
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
