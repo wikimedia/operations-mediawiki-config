@@ -7579,6 +7579,7 @@ $wgConf->settings = array(
 			'upload' => true,
 			'reupload-own' => true,
 			'reupload' => true,
+			'move-subpages' => true, // T76131
 		),
 		'filemover' => array( // bug 30984
 			'movefile' => true,
@@ -7587,6 +7588,7 @@ $wgConf->settings = array(
 			'reupload-own' => true,
 			'reupload' => true,
 			'move-categorypages' => true, // bug 66871
+			'move-subpages' => true, // T76131
 		),
 		'suppressredirect' => array( // bug 38408, 66871
 			'suppressredirect' => true,
