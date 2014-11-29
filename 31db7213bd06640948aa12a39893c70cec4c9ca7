@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_dd3520f5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2014-11-29T12:10:01Z",
+      "side": 1,
+      "message": "Bug: T1254 and no space above Change-Id:",
+      "revId": "31db7213bd06640948aa12a39893c70cec4c9ca7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_7d5f2c45",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2014-11-29T12:10:01Z",
+      "side": 1,
+      "message": "Imho this if should be inside if ( $wmgUseContentTranslation ) { ... } without the require_once",
+      "revId": "31db7213bd06640948aa12a39893c70cec4c9ca7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_1d5ce84d",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2014-11-29T12:10:01Z",
+      "side": 1,
+      "message": "$wgContentTranslationCluster \u003d $wmgContentTranslationCluster;",
+      "revId": "31db7213bd06640948aa12a39893c70cec4c9ca7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea06b5a_3d59a45d",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2014-11-29T12:10:01Z",
+      "side": 1,
+      "message": "This can be outside of this if, but inside the above one.",
+      "revId": "31db7213bd06640948aa12a39893c70cec4c9ca7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
