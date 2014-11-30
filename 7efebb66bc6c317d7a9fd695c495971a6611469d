@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_916e9f29",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 13731,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2014-11-30T22:56:47Z",
+      "side": 1,
+      "message": "these could now be changed to \u0027wikidata\u0027 (which includes both wikidatawiki and testwikidatawiki).\n\nI think we initially enabled ota only on testwikidatawiki, so maybe that\u0027s why they are listed separately now.",
+      "revId": "7efebb66bc6c317d7a9fd695c495971a6611469d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
