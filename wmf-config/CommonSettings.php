@@ -2950,10 +2950,11 @@ if ( $wmgUseRC2UDP ) {
 
 	// RCStream / stream.wikimedia.org
 	if ( $wmfRealm === 'production' ) {
+		/* disabled since rcs1001 is down --legoktm 2014-11-30
 		$wgRCFeeds['rcs1001'] = array(
 			'uri'       => "redis://rcs1001.eqiad.wmnet:6379/rc.$wgDBname",
 			'formatter' => 'JSONRCFeedFormatter',
-		);
+		); */
 
 		$wgRCFeeds['rcs1002'] = array(
 			'uri'       => "redis://rcs1002.eqiad.wmnet:6379/rc.$wgDBname",
