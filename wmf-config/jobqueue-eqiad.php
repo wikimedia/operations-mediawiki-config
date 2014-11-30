@@ -7,8 +7,8 @@ $wgJobTypeConf['default'] = array(
 	'configByPartition'   => array(
 		'rdb1' => array(
 			'class'       => 'JobQueueRedis',
-			'redisServer' => '10.64.32.76', # rdb1001 (master)
-			#'redisServer' => '10.64.32.77', # rdb1002 (slave)
+			#'redisServer' => '10.64.32.76', # rdb1001 (master)
+			'redisServer' => '10.64.32.77', # rdb1002 (slave)
 			'redisConfig' => array(
 				'connectTimeout' => 2,
 				'password' => $wmgRedisPassword,
@@ -45,4 +45,3 @@ $wgJobQueueAggregator = array(
 		'password' => $wmgRedisPassword,
 	)
 );
-
