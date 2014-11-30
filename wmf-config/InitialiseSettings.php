@@ -13725,14 +13725,13 @@ $wgConf->settings = array(
 
 'wmgExtraLanguageNames' => array(
 	'default' => array(),
-	// Further languages for (test)wikidata not (yet) supported by MediaWiki (bug 59905)
-	'wikidatawiki' => array(
-		'rwr' => 'मारवाड़ी',
-		'ota' => 'Ottoman Turkish',
-	),
-	'testwikidatawiki' => array(
-		'rwr' => 'मारवाड़ी',
-		'ota' => 'Ottoman Turkish',
+
+	// Some languages aren't currently supported by MediaWiki
+	// but available to encode information on Wikidata.
+	'wikidata' => array(
+		'din' => 'dinka',           // T75563
+		'ota' => 'لسان توركى',      // T59342
+		'rwr' => 'मारवाड़ी',           // T61905
 	),
 ),
 
