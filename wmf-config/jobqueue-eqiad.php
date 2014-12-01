@@ -2,6 +2,11 @@
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
 // Note: on server failure, partition masters should be switched to the slave
+// Note: MediaWiki will fail-over to other shards when one is down. On master
+// failure, it is best to either do nothing or just disable the whole shard
+// until the master is fixed or full fail-over is done. Proper fail over
+// requires changing the slave to stop slaving the old master before updating
+// the MediaWiki config to direct traffic there.
 $wgJobTypeConf['default'] = array(
 	'class'               => 'JobQueueFederated',
 	'configByPartition'   => array(
