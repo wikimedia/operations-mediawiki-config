@@ -5407,6 +5407,8 @@ $wgConf->settings = array(
 		105 => 'Thesaurus_Diskussion',
 		106 => 'Reim', // Bug 43830
 		107 => 'Reim_Diskussion',
+		108 => 'Flexion', // Bug T76357
+		109 => 'Flexion_Diskussion',
 	),
 	'dvwiktionary' => array(
 		NS_PROJECT_TALK => 'ވިކިރަދީފު ޚިޔާ', // Bug 46846
