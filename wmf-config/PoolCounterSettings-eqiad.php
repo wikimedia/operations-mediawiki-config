@@ -29,7 +29,7 @@ $wgPoolCounterConf = array(
 		'class' => 'PoolCounter_Client',
 		'timeout' => 15,
 		'workers' => 432,
-		'maxqueue' => 600,
+		'maxqueue' => 400,
 	),
 	// Super common and mostly fast
 	'CirrusSearch-Prefix' => array(
