@@ -14364,7 +14364,6 @@ $wgConf->settings = array(
 // Thumbnail chaining
 'wgThumbnailBuckets' => array(
 	'default' => array( 128, 256, 512, 1024, 2048, 4096 ),
-	'commonswiki' => array(),
 ),
 
 'wgThumbnailMinimumBucketDistance' => array(
