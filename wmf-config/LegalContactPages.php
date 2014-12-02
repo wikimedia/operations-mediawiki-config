@@ -88,7 +88,7 @@ $wgContactConfig['requestlicense'] = array(
 );
 
 $wgContactConfig['licenseabuse'] = array(
-	'RecipientUser' => 'Trademarks (WMF)',
+	'RecipientUser' => 'WMF Trademark Abuse',
 	'SenderEmail' => $wmgNotificationSender, // TODO: Replace with details submitted on form
 	'SenderName' => 'Contact Page',
 	'RequireDetails' => true,
