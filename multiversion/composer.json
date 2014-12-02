@@ -3,5 +3,9 @@
 	"description": "MediaWiki configuration for the Wikimedia farm",
 	"require": {
 		"cdb/cdb": "1.0.0"
+	},
+	"config": {
+		"optimize-autoloader": true,
+		"prepend-autoloader": false
 	}
 }
