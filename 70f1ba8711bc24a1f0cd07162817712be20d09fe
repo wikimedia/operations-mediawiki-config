@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_99d47eee",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2014-12-02T07:50:28Z",
+      "side": 1,
+      "message": "This line does nothing given the second line.",
+      "revId": "70f1ba8711bc24a1f0cd07162817712be20d09fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
