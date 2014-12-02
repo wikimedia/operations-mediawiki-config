@@ -2676,12 +2676,6 @@ if ( $wmgUseEventLogging && $wmgUseNavigationTiming ) {
 	$wgPercentHHVM = 0;
 }
 
-// For deployment of fix for https://phabricator.wikimedia.org/T758 -- Ori, 01-12-2014
-$wgTidyInternal = false;
-if ( extension_loaded( 'tidy') && gethostname() === 'mw1114' ) {
-	$wgTidyInternal = true;
-}
-
 if ( $wmgUseUniversalLanguageSelector ) {
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
 	$wgULSGeoService = false;
