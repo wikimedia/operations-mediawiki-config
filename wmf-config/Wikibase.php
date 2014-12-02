@@ -63,6 +63,10 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['displayStatementsOnProperties'] = false;
 	}
 
+	if ( $wmfRealm === 'labs' ) {
+		$wgWBRepoSettings['displayStatementsOnProperties'] = true;
+	}
+
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['badgeItems'] = array(
 			'Q608' => 'wb-badge-goodarticle',
