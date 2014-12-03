@@ -167,6 +167,10 @@ class MWMultiVersion {
 			} elseif ( preg_match( '/^([a-z0-9]*)\.beta\.wmflabs\.org$/', $serverName, $matches ) ) {
 				// http://wikidata.beta.wmflabs.org/
 				$lang = $matches[1];
+			} elseif ( $serverName === 'beta.wmflabs.org' ) {
+				$lang = 'deployment';
+			} else {
+				self::error( "Invalid host name ($serverName).\n" );
 			}
 		} elseif ( preg_match( '/^(.*)\.([a-z]+)\.org$/', $serverName, $matches ) ) {
 			$lang = $matches[1];
