@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_e9336508",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2909,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-12-03T20:55:33Z",
+      "side": 1,
+      "message": "Is this supposed to be $$ ?\n\nWhy not just $versionUrl .\u003d \"/{$matches[2]}\"; ?",
+      "revId": "cb9c8ff353d59a69b80fe2ff265b23a94cf27190",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
