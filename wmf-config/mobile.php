@@ -101,6 +101,8 @@ if ( $wmgMobileFrontend ) {
 
 	$wgMFEnableBeta = true;
 
+	$wgMFUseWikibaseDescription = true; // Alpha experiment
+
 	if ( $wmgUseWikiGrok ) {
 		require_once( "$IP/extensions/WikiGrok/WikiGrok.php" );
 		
