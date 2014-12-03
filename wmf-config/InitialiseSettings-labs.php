@@ -249,6 +249,10 @@ return array(
 		'default' => false,
 		'enwiki' => true, // prototype version is for en.wiki only
 	),
+	'wmgMFEnableWikiGrokOnAllDevices' => array(
+		'default' => false,
+		'enwiki' => true,
+	),
 	'wmgWikiGrokDebug' => array(
 		'default' => false,
 		'enwiki' => true,
