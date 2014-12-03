@@ -245,10 +245,13 @@ return array(
 	'wmgMFEnableBetaDiff' => array(
 		'default' => true,
 	),
-	// Remove this after https://gerrit.wikimedia.org/r/#/c/158512 is deployed
 	'wmgMFEnableWikiGrok' => array(
 		'default' => false,
 		'enwiki' => true, // prototype version is for en.wiki only
+	),
+	'wmgWikiGrokDebug' => array(
+		'default' => false,
+		'enwiki' => true,
 	),
 
 	'wmgGeoDataDebug' => array(
