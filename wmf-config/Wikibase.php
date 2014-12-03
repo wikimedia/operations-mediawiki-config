@@ -143,6 +143,7 @@ if ( $wmgUseWikibaseClient ) {
 	);
 
 	$wgWBClientSettings['specialSiteLinkGroups'] = array( 'commons' );
+	$wgWBClientSettings['languageLinkSiteGroup'] = $wmgWikibaseSiteGroup;
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBClientSettings['specialSiteLinkGroups'][] = 'testwikidata';
