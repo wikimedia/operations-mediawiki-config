@@ -13527,6 +13527,10 @@ $wgConf->settings = array(
 	// Disable VE inside flow, leaving only the wikitext editor
 	'default' => array( 'none' ),
 ),
+'wmgFlowOccupyNamespaces' => array(
+	'default' => array(),
+	'officewiki' => array( NS_PROJECT_TALK ),
+),
 'wmgFlowOccupyPages' => array(
 	'default' => array(),
 	# Extension:Flow's browsertests use Talk:Flow_QA.
