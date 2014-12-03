@@ -57,16 +57,17 @@ if ( $wmgUseWikibaseRepo ) {
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['specialSiteLinkGroups'][] = 'testwikidata';
-	} else {
-		$wgWBRepoSettings['specialSiteLinkGroups'][] = 'wikidata';
-	}
 
-	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['badgeItems'] = array(
 			'Q608' => 'wb-badge-goodarticle',
 			'Q609' => 'wb-badge-featuredarticle'
 		);
+
+		// there is no cronjob dispatcher yet, this will do nothing
+		$wgWBRepoSettings['clientDbList'] = array( 'test2wiki' );
 	} else {
+		$wgWBRepoSettings['specialSiteLinkGroups'][] = 'wikidata';
+
 		$wgWBRepoSettings['badgeItems'] = array(
 			'Q17437798' => 'wb-badge-goodarticle',
 			'Q17437796' => 'wb-badge-featuredarticle',
@@ -74,12 +75,7 @@ if ( $wmgUseWikibaseRepo ) {
 			'Q17506997' => 'wb-badge-featuredlist', // bug 70332
 			'Q17580674' => 'wb-badge-featuredportal', // bug 73193
 		);
-	}
 
-	if ( $wgDBname === 'testwikidatawiki' ) {
-		// there is no cronjob dispatcher yet, this will do nothing
-		$wgWBRepoSettings['clientDbList'] = array( 'test2wiki' );
-	} else {
 		$wgWBRepoSettings['clientDbList'] = array_map(
 			'trim',
 			file( getRealmSpecificFilename( "$IP/../wikidataclient.dblist" ) )
