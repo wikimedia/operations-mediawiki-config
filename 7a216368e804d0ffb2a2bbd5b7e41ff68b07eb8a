@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_1744aebc",
+        "filename": "multiversion/MWMultiVersion.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2014-12-03T02:40:59Z",
+      "side": 1,
+      "message": "Use the static mappings above?\n\nThis feels dejavu somewhat. I\u0027m sure we had code for this before\n\nThe else below should probably stay though as we don\u0027t have any way of handling the other non matching stuff once it\u0027s got into the beta conditional",
+      "revId": "7a216368e804d0ffb2a2bbd5b7e41ff68b07eb8a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
