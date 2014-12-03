@@ -34,8 +34,9 @@ if ( $zeroRated ) {
 
 	$lastmod = gmdate( 'D, j M Y H:i:s', $stats['mtime'] ) . ' GMT';
 	header( "Last-modified: $lastmod" );
-	header( "Content-Length: " . filesize( $robotsfile ) );
 }
-fpassthru( $robots );
+$text = "#\n#\n#----------------------------------------------------------#\n#\n#\n#\n" . $text;
+header( "Content-Length: " . ( filesize( $robotsfile ) + strlen( $text ) ) );
 
-echo "#\n#\n#----------------------------------------------------------#\n#\n#\n#\n" . $text;
+fpassthru( $robots );
+echo $text;
