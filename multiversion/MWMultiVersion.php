@@ -145,6 +145,9 @@ class MWMultiVersion {
 			'www.wikidata.org' => 'wikidata',
 			'wikisource.org' => 'sources',
 			'wikitech.wikimedia.org' => 'labs',
+
+			// Labs
+			'beta.wmflabs.org' => 'deployment',
 		);
 
 		$site = "wikipedia";
@@ -167,6 +170,8 @@ class MWMultiVersion {
 			} elseif ( preg_match( '/^([a-z0-9]*)\.beta\.wmflabs\.org$/', $serverName, $matches ) ) {
 				// http://wikidata.beta.wmflabs.org/
 				$lang = $matches[1];
+			} else {
+				self::error( "Invalid host name ($serverName).\n" );
 			}
 		} elseif ( preg_match( '/^(.*)\.([a-z]+)\.org$/', $serverName, $matches ) ) {
 			$lang = $matches[1];
