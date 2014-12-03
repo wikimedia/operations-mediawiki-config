@@ -11,7 +11,8 @@ $wgJobTypeConf['default'] = array(
 	'redisConfig' => array(
 		'connectTimeout' => 1,
 		'password' => $wmgRedisPassword,
-	)
+	),
+	'daemonized' => true
 );
 
 $wgJobQueueAggregator = array(
@@ -20,7 +21,8 @@ $wgJobQueueAggregator = array(
 	'redisConfig' => array(
 		'connectTimeout' => 1,
 		'password' => $wmgRedisPassword,
-	)
+	),
+	'daemonized' => true
 );
 unset($jobRedisServer);
 
