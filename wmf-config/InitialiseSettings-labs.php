@@ -270,6 +270,9 @@ return array(
 	'wmgUseCommonsMetadata' => array(
 		'default' => true,
 	),
+	'wmgCommonsMetadataForceRecalculate' => array(
+		'default' => true,
+	),
 
 	'wmgUseGWToolset' => array(
 		'default' => false,
@@ -289,10 +292,6 @@ return array(
 	// Enable all Beta Features in Beta Labs, even if not in production whitelist
 	'wmgBetaFeaturesWhitelist' => array(
 		'default' => false,
-	),
-
-	'wmgUseCommonsMetadata' => array(
-		'default' => true,
 	),
 
 	'wmgUseMultimediaViewer' => array(
