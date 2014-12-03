@@ -1520,7 +1520,7 @@ if ( $wmgUseCentralNotice ) {
 	// 'close' duration is used for the banner X button
 	// 'donate' duration is used for cookie set on Thank You page
 	$wgNoticeCookieDurations = array(
-		'close' => 1209600, // 2 weeks
+		'close' => 604800, // 1 week
 		'donate' => 21600000, // 250 days
 	);
 
