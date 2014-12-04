@@ -10414,6 +10414,10 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgCentralAuthPreventUnattached' => array(
+	'default' => false,
+	'mediawikiwiki' => true,
+),
 // This is also guarded by $wmgUseCentralAuth
 'wmgUseGlobalCssJs' => array(
 	'default' => true,
