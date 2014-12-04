@@ -1,5 +1,5 @@
 <?php
-putenv( "MW_LANG=en" ); // notify MWMultiVersion
+putenv( 'MW_LANG=en' ); // notify MWMultiVersion
 
 include '/srv/mediawiki/w/MWVersion.php';
 include getMediaWiki( 'includes/WebStart.php' );

@@ -1,6 +1,7 @@
 <?php
-header("HTTP/1.x 500 Gone");
-?><html>
+header( 'HTTP/1.x 500 Gone' );
+?><!DOCTYPE html>
+<html>
 <head>
 <title>query.php is dead</title>
 </head>
@@ -13,7 +14,7 @@ as of 25 August, 2008 in favor of MediaWiki's
 are actively maintained..</p>
 
 <?php
-echo "<!-- filler for IE " . str_repeat( "*", 1024 ) . " -->";
+echo '<!-- filler for IE ' . str_repeat( '*', 1024 ) . ' -->';
 ?>
 </body>
 </html>
