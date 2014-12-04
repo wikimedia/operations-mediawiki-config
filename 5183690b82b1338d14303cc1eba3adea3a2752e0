@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea06b5a_ef6b62ec",
+        "filename": "wmf-config/StartProfiler.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 166
+      },
+      "writtenOn": "2014-12-04T07:02:08Z",
+      "side": 1,
+      "message": "This will trigger a PHP Notice in command-line scripts. There should be some check to prevent that.",
+      "revId": "5183690b82b1338d14303cc1eba3adea3a2752e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
