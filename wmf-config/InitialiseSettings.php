@@ -9513,9 +9513,10 @@ $wgConf->settings = array(
 'wmgEnableCaptcha' => array(
 	'default' => true,
 
-	// private wikis don't need it
+	// private/closed wikis don't need it
 	'private' => false,
 	'fishbowl' => false,
+	'closed' => false,
 
 	// testing
 	'testwiki' => false,
