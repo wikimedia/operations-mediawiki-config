@@ -456,3 +456,6 @@ Disallow: /wiki/Wikiquote_talk:Votes_for_deletion_archive/
 Disallow: /wiki/Wikiquote_talk%3AVotes_for_deletion_archive/
 
 Disallow: /wiki/Special:Maintenance
+# Do not show banner content or record hits
+Disallow: /wiki/Special:BannerLoader
+Disallow: /wiki/Special:RecordImpression
