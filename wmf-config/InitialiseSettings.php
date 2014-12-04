@@ -9518,7 +9518,7 @@ $wgConf->settings = array(
 	'fishbowl' => false,
 
 	// testing
-	'testwiki' => false,
+	'group0' => false,
 ),
 
 'wmgEmergencyCaptcha' => array(
