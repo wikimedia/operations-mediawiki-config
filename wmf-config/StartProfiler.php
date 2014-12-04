@@ -23,13 +23,15 @@ if ( isset( $_REQUEST['forceprofile'] ) ) {
 	$wgProfiler['output'] = 'udp';
 	$wgProfiler['profileID'] = 'test2';
 # Normal case: randomly (or not) selected for logged profiling sample
-} elseif ( PHP_SAPI !== 'cli' && $wmfDatacenter == 'eqiad' ) {
+} elseif ( $wmfDatacenter == 'eqiad' ) {
 	$wgProfiler['class'] = 'ProfilerStandard';
 	$wgProfiler['output'] = 'udp';
 	$wgProfiler['sampling'] = 50;
 	// $IP is something like '/srv/mediawiki/php-1.19'
 	$version = str_replace( 'php-', '', basename( $IP ) );
-	if ( strpos( $_SERVER['REQUEST_URI'], '/w/thumb.php' ) !== false ) {
+	if ( PHP_SAPI === 'cli' ) {
+		$wgProfiler['profileID'] = "cli-$version";
+	} elseif ( strpos( $_SERVER['REQUEST_URI'], '/w/thumb.php' ) !== false ) {
 		$wgProfiler['profileID'] = "thumb-$version";
 	} elseif ( strpos( $_SERVER['REQUEST_URI'], '/rpc/RunJobs.php' ) !== false ) {
 		$wgProfiler['profileID'] = "runjobs-$version";
