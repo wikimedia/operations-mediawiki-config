@@ -23,7 +23,7 @@ if ( isset( $_REQUEST['forceprofile'] ) ) {
 	$wgProfiler['output'] = 'udp';
 	$wgProfiler['profileID'] = 'test2';
 # Normal case: randomly (or not) selected for logged profiling sample
-} elseif ( PHP_SAPI !== 'cli' && $wmfDatacenter == 'eqiad' ) {
+} elseif ( $wmfDatacenter == 'eqiad' ) {
 	$wgProfiler['class'] = 'ProfilerStandard';
 	$wgProfiler['output'] = 'udp';
 	$wgProfiler['sampling'] = 50;
