@@ -209,4 +209,6 @@ if ( $wmgUseFundraisingTranslateWorkflow ) {
 // Experimental
 $wgGadgetsCaching = false;
 
+$wgAjaxEditStash = true;
+
 } # end safeguard
