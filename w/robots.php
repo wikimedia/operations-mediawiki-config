@@ -12,8 +12,10 @@ header( 'X-Site: ' . $site );
 header( 'Vary: X-Subdomain' );
 
 $robotsfile = '/srv/mediawiki/robots.txt';
+$robotsfilestats = fstat( $robots );
 $robots = fopen( $robotsfile, 'rb' );
-$text = '';
+$mtime = $stats['mtime'];
+$extratext = '';
 
 $zeroRated = isset( $_SERVER['HTTP_X_SUBDOMAIN'] ) && $_SERVER['HTTP_X_SUBDOMAIN'] === 'ZERO';
 
@@ -24,22 +26,17 @@ $dontIndex = "User-agent: *\nDisallow: /\n";
 if ( $zeroRated ) {
 	echo $dontIndex;
 } elseif ( $wgArticle->getID() != 0 ) {
-	$text =  $wgArticle->getContent( false );
-
-	// Send the greater of the on disk file and on wiki content modification
-	// time.
-	$filemod = filemtime( $robotsfile );
-	$wikimod = wfTimestamp( TS_UNIX,  $wgArticle->getTouched() );
-	$lastmod = gmdate( 'D, j M Y H:i:s', max( $filemod, $wikimod ) ) . ' GMT';
-	header( "Last-modified: $lastmod" );
+	$extratext = $wgArticle->getContent( false ) ;
+	// Take last modified timestamp of page into account
+	$mtime = max( $mtime, wfTimestamp( TS_UNIX,  $wgArticle->getTouched() ) );
 } elseif( $wmfRealm == 'labs' ) {
 	echo $dontIndex;
-} else {
-	$stats = fstat( $robots );
-
-	$lastmod = gmdate( 'D, j M Y H:i:s', $stats['mtime'] ) . ' GMT';
-	header( "Last-modified: $lastmod" );
 }
+
+$lastmod = gmdate( 'D, j M Y H:i:s', $stats['mtime'] ) . ' GMT';
+header( "Last-modified: $lastmod" );
+
 fpassthru( $robots );
 
-echo "#\n#\n#----------------------------------------------------------#\n#\n#\n#\n" . $text;
+echo "#\n#\n#----------------------------------------------------------#\n#\n#\n#\n";
+echo $extratext;
