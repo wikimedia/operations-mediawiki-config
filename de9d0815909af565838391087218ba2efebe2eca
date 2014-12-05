@@ -34,6 +34,24 @@
       "revId": "de9d0815909af565838391087218ba2efebe2eca",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_a48e28d4",
+        "filename": "search-redirect.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2014-12-05T00:51:59Z",
+      "side": 1,
+      "message": "your values are completely buried in syntax, i actually have to look at this code to see what the values are, whereas my example is obvious at a glance(to anyone who knows how php array addition works, which is such a trivial thing i know anyone smart enough to work here can figure it out).",
+      "parentUuid": "2e9df725_e4fd103a",
+      "revId": "de9d0815909af565838391087218ba2efebe2eca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
