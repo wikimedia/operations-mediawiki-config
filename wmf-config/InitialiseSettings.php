@@ -9520,7 +9520,7 @@ $wgConf->settings = array(
 	'closed' => false,
 
 	// testing
-	'group0' => false,
+	'testwiki' => false,
 ),
 
 'wmgEmergencyCaptcha' => array(
