@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_248778de",
+        "filename": "search-redirect.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2014-12-05T00:42:57Z",
+      "side": 1,
+      "message": "personally i\u0027m a fan of\n\n    $options \u003d $_GET + array(\n        \u0027language\u0027 \u003d\u003e \u0027\u0027,\n        \u0027search\u0027   \u003d\u003e \u0027\u0027,\n        \u0027fulltext\u0027 \u003d\u003e false,\n        \u0027go\u0027       \u003d\u003e false,\n        \u0027family\u0027   \u003d\u003e \u0027wikipedia\u0027,\n    );\n\nfor readability reasons, but this is fine too.",
+      "revId": "de9d0815909af565838391087218ba2efebe2eca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
