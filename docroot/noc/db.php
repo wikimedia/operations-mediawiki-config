@@ -16,7 +16,7 @@ ini_set( 'display_errors', 1 );
 $wgDBname = $wgDBuser = $wgDBpassword = null;
 define( 'DBO_DEFAULT', 'uniq' );
 
-require_once( '/usr/local/common/wmf-config/db.php' );
+require_once( '/usr/local/common/wmf-config/db-eqiad.php' );
 
 class wmfClusters {
 	private $clusters;
@@ -89,7 +89,7 @@ foreach ( $wmf->names() as $name ) {
 	print '</div>';
 }
 ?></div>
-<div id="footer">Automatically generated from <a href="//noc.wikimedia.org/conf/highlight.php?file=db.php">wmf-config/db.php</a></div>
+<div id="footer">Automatically generated from <a href="//noc.wikimedia.org/conf/highlight.php?file=db-eqiad.php">wmf-config/db-eqiad.php</a></div>
 <script>
 mw.loader.using('jquery.ui.tabs', function () {
 	$( '#tabs' ).tabs();
