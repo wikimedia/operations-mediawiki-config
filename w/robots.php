@@ -24,8 +24,13 @@ $dontIndex = "User-agent: *\nDisallow: /\n";
 if ( $zeroRated ) {
 	echo $dontIndex;
 } elseif ( $wgArticle->getID() != 0 ) {
-	$text =  $wgArticle->getContent( false ) ;
-	$lastmod = gmdate( 'D, j M Y H:i:s', wfTimestamp( TS_UNIX,  $wgArticle->getTouched() ) ) . ' GMT';
+	$text =  $wgArticle->getContent( false );
+
+	// Send the greater of the on disk file and on wiki content modification
+	// time.
+	$filemod = filemtime( $robotsfile );
+	$wikimod = wfTimestamp( TS_UNIX,  $wgArticle->getTouched() );
+	$lastmod = gmdate( 'D, j M Y H:i:s', max( $filemod, $wikimod ) ) . ' GMT';
 	header( "Last-modified: $lastmod" );
 } elseif( $wmfRealm == 'labs' ) {
 	echo $dontIndex;
