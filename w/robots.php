@@ -1,45 +1,61 @@
 <?php
+/**
+ * Generate robots.txt rules for the current wiki.
+ *
+ * The rules output will be:
+ * - a global exclusion (Zero, beta)
+ * - the local robots.txt file
+ * - the contents of the wiki's [[Mediawiki:robots.txt]] (possibly empty)
+ */
+
 require_once './MWVersion.php';
 require getMediaWiki( 'includes/WebStart.php' );
 
-$wgTitle = Title::newFromText( 'Mediawiki:robots.txt' );
-$wgArticle = new Article( $wgTitle, 0 );
+$robotsfile = '/srv/mediawiki/robots.txt';
+$dontIndex = "User-agent: *\nDisallow: /\n";
+$extraRules = '';
 
 header( 'Content-Type: text/plain; charset=utf-8' );
-header( 'X-Article-ID: ' . $wgArticle->getID() );
 header( 'X-Language: ' . $lang );
 header( 'X-Site: ' . $site );
 header( 'Vary: X-Subdomain' );
-
-$robotsfile = '/srv/mediawiki/robots.txt';
-$robots = fopen( $robotsfile, 'rb' );
-$text = '';
-
-$zeroRated = isset( $_SERVER['HTTP_X_SUBDOMAIN'] ) && $_SERVER['HTTP_X_SUBDOMAIN'] === 'ZERO';
-
 header( 'Cache-Control: s-maxage=3600, must-revalidate, max-age=0' );
 
-$dontIndex = "User-agent: *\nDisallow: /\n";
-
-if ( $zeroRated ) {
+if ( isset( $_SERVER['HTTP_X_SUBDOMAIN'] ) &&
+	$_SERVER['HTTP_X_SUBDOMAIN'] === 'ZERO'
+) {
+	// Zero rated domains are not indexable
 	echo $dontIndex;
-} elseif ( $wgArticle->getID() != 0 ) {
-	$text =  $wgArticle->getContent( false );
 
-	// Send the greater of the on disk file and on wiki content modification
-	// time.
-	$filemod = filemtime( $robotsfile );
-	$wikimod = wfTimestamp( TS_UNIX,  $wgArticle->getTouched() );
-	$lastmod = gmdate( 'D, j M Y H:i:s', max( $filemod, $wikimod ) ) . ' GMT';
-	header( "Last-modified: $lastmod" );
-} elseif( $wmfRealm == 'labs' ) {
+} elseif ( $wmfRealm == 'labs' ) {
+	// Beta should not be indexed
 	echo $dontIndex;
+
 } else {
-	$stats = fstat( $robots );
+	$lastmod = filemtime( $robotsfile );
 
-	$lastmod = gmdate( 'D, j M Y H:i:s', $stats['mtime'] ) . ' GMT';
-	header( "Last-modified: $lastmod" );
+	// Look for a special robots.txt page that can add new rules
+	$robotsTitle = Title::makeTitle( NS_MEDIAWIKI, 'robots.txt' );
+	$robotsRevision = Revision::newFromTitle( $robotsTitle );
+
+	if ( $robotsRevision !== null ) {
+		header( 'X-Article-ID: ' . $robotsTitle->getArticleID() );
+
+		$extraRules = $robotsRevision->getContent()->getNativeData();
+
+		// Change lastmod to the newer of file and wiki changes
+		$wikimod = wfTimestamp( TS_UNIX, $robotsRevision->getTimestamp() );
+		$lastmod = max( $lastmod, $wikimod );
+	}
+
+	// No one will ever understand why RFC 2616 was chosen for header dates
+	$httpDate = gmdate( 'D, j M Y H:i:s', $lastmod ) . ' GMT';
+	header( "Last-modified: {$httpDate}" );
 }
+
+// Output shared robots rules
+$robots = fopen( $robotsfile, 'rb' );
 fpassthru( $robots );
 
-echo "#\n#\n#----------------------------------------------------------#\n#\n#\n#\n" . $text;
+// Ouput wiki managed robots rules (possibly empty)
+echo "#\n#\n#----------------------------------------------------------#\n#\n#\n#\n" . $extraRules;
