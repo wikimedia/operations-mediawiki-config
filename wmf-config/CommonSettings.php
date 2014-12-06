@@ -2683,7 +2683,9 @@ if ( $wmgUseEventLogging && $wmgUseNavigationTiming ) {
 }
 
 // For deployment of fix for https://phabricator.wikimedia.org/T758 -- Ori, 01-12-2014
-$wgTidyInternal = false;
+if( $wmfRealm == 'production' ) {
+	$wgTidyInternal = false;
+}
 
 if ( $wmgUseUniversalLanguageSelector ) {
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
