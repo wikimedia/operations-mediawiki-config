@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_d3a8cf76",
+        "filename": "w/robots.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 166
+      },
+      "writtenOn": "2014-12-06T06:05:21Z",
+      "side": 1,
+      "message": "Or use the WikiPage::getContent() method mentioned in the docblock for Article::getContent().",
+      "revId": "a6240a10095fb99200bea6ad0e9e58390ee27830",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_73b1bbdb",
+        "filename": "w/robots.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 166
+      },
+      "writtenOn": "2014-12-06T06:05:21Z",
+      "side": 1,
+      "message": "If MediaWiki:robots.txt doesn\u0027t exist, the old code would add X-Article-ID: 0 rather than omitting the header, as that\u0027s what WikiPage::getId() returns.",
+      "revId": "a6240a10095fb99200bea6ad0e9e58390ee27830",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_339c935f",
+        "filename": "w/robots.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 166
+      },
+      "writtenOn": "2014-12-06T06:05:21Z",
+      "side": 1,
+      "message": "This is a change in behavior from the old code. WikiPage::getTouched() returns the value of page_touched, while Revision::getTimestamp() returns the value of rev_timestamp. page_touched is the one that is used in the Last-Modified header for normal page views.",
+      "revId": "a6240a10095fb99200bea6ad0e9e58390ee27830",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_f3bcebb3",
+        "filename": "w/robots.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 166
+      },
+      "writtenOn": "2014-12-06T06:05:21Z",
+      "side": 1,
+      "message": "The \"j\" in the existing format string should be \"d\"; see \u003chttps://tools.ietf.org/html/rfc7231#section-7.1.1.1\u003e. Consider using, as in OutputPage, wfTimestamp( TS_RFC2822, $lastmod ), which will add a leading zero before the day number if necessary and add the \" GMT\" part for you.",
+      "revId": "a6240a10095fb99200bea6ad0e9e58390ee27830",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_b3de6313",
+        "filename": "w/robots.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 166
+      },
+      "writtenOn": "2014-12-06T06:05:21Z",
+      "side": 1,
+      "message": "readfile( $robotsfile ) for short.",
+      "revId": "a6240a10095fb99200bea6ad0e9e58390ee27830",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
