@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e9df725_b30663d0",
+        "filename": "w/robots.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-12-06T01:18:50Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e9df725_b3d98385",
+      "revId": "51412b21875625f21aba554791c4a0ff5d1b2ae3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e9df725_d350cfdb",
         "filename": "w/robots.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2014-12-06T00:58:48Z",
       "side": 1,
       "message": "Technically moving this bit in the final else block will change the output for labs and zero wikis. The net effect should be the same I suppose for well-behaved bots.",
+      "revId": "51412b21875625f21aba554791c4a0ff5d1b2ae3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e9df725_530b5fd9",
+        "filename": "w/robots.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-12-06T01:18:50Z",
+      "side": 1,
+      "message": "Good point, and that violates my commit message. Fixed.",
+      "parentUuid": "2e9df725_d350cfdb",
       "revId": "51412b21875625f21aba554791c4a0ff5d1b2ae3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
