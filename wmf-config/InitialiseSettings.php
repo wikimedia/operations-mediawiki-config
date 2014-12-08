@@ -14385,6 +14385,12 @@ $wgConf->settings = array(
 	'default' => 32,
 ),
 
+// Disabled until API cluster is running HHVM.
+'wgAjaxEditStash' => array(
+	'default' => false,
+	'testwiki' => true,
+),
+
 );
 
 
