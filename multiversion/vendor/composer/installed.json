@@ -1,17 +1,17 @@
 [
     {
-        "name": "cdb/cdb",
-        "version": "1.0.0",
-        "version_normalized": "1.0.0.0",
+        "name": "wikimedia/cdb",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/wikimedia/cdb.git",
-            "reference": "918601ea3d31b8c37312e9c0e54446aa8bfb3425"
+            "reference": "3b7d5366c88eccf2517ebac57c59eb557c82f46c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/wikimedia/cdb/zipball/918601ea3d31b8c37312e9c0e54446aa8bfb3425",
-            "reference": "918601ea3d31b8c37312e9c0e54446aa8bfb3425",
+            "url": "https://api.github.com/repos/wikimedia/cdb/zipball/3b7d5366c88eccf2517ebac57c59eb557c82f46c",
+            "reference": "3b7d5366c88eccf2517ebac57c59eb557c82f46c",
             "shasum": ""
         },
         "require": {
@@ -20,7 +20,7 @@
         "require-dev": {
             "phpunit/phpunit": "*"
         },
-        "time": "2014-11-12 19:03:26",
+        "time": "2014-12-08 19:26:44",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -30,7 +30,7 @@
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "GPLv2"
+            "GPL-2.0"
         ],
         "authors": [
             {

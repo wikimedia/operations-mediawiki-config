@@ -6,12 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Cdb\\Exception' => $vendorDir . '/cdb/cdb/src/Exception.php',
-    'Cdb\\Reader' => $vendorDir . '/cdb/cdb/src/Reader.php',
-    'Cdb\\Reader\\DBA' => $vendorDir . '/cdb/cdb/src/Reader/DBA.php',
-    'Cdb\\Reader\\PHP' => $vendorDir . '/cdb/cdb/src/Reader/PHP.php',
-    'Cdb\\Util' => $vendorDir . '/cdb/cdb/src/Util.php',
-    'Cdb\\Writer' => $vendorDir . '/cdb/cdb/src/Writer.php',
-    'Cdb\\Writer\\DBA' => $vendorDir . '/cdb/cdb/src/Writer/DBA.php',
-    'Cdb\\Writer\\PHP' => $vendorDir . '/cdb/cdb/src/Writer/PHP.php',
+    'Cdb\\Exception' => $vendorDir . '/wikimedia/cdb/src/Exception.php',
+    'Cdb\\Reader' => $vendorDir . '/wikimedia/cdb/src/Reader.php',
+    'Cdb\\Reader\\DBA' => $vendorDir . '/wikimedia/cdb/src/Reader/DBA.php',
+    'Cdb\\Reader\\PHP' => $vendorDir . '/wikimedia/cdb/src/Reader/PHP.php',
+    'Cdb\\Util' => $vendorDir . '/wikimedia/cdb/src/Util.php',
+    'Cdb\\Writer' => $vendorDir . '/wikimedia/cdb/src/Writer.php',
+    'Cdb\\Writer\\DBA' => $vendorDir . '/wikimedia/cdb/src/Writer/DBA.php',
+    'Cdb\\Writer\\PHP' => $vendorDir . '/wikimedia/cdb/src/Writer/PHP.php',
 );
