@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_c105547e",
+        "filename": "w/robots.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2014-12-08T14:34:57Z",
+      "side": 1,
+      "message": "I wonder if there\u0027s a reason (e.g. some sort of race condition) the code below uses fstat instead of filemtime.",
+      "revId": "26439ea3fe9635909d48b81ce04eea582f9ac337",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
