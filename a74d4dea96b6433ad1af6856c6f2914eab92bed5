@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_6ea3fb3f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13563,
+      "author": {
+        "id": 401
+      },
+      "writtenOn": "2014-12-09T23:52:02Z",
+      "side": 1,
+      "message": "^ NS_MODULE_TALK will only be defined if extensions/Scribunto is loaded, so safer to use a number here too?",
+      "revId": "a74d4dea96b6433ad1af6856c6f2914eab92bed5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
