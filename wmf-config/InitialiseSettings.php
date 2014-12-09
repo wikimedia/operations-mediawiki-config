@@ -13542,7 +13542,12 @@ $wgConf->settings = array(
 ),
 'wmgFlowOccupyNamespaces' => array(
 	'default' => array(),
-	'officewiki' => array( NS_PROJECT_TALK ),
+	'officewiki' => array(
+		NS_PROJECT_TALK,
+		NS_MEDIAWIKI_TALK,
+		NS_TEMPLATE_TALK,
+		NS_HELP_TALK
+	),
 ),
 'wmgFlowOccupyPages' => array(
 	'default' => array(),
