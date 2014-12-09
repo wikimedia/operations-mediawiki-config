@@ -13620,7 +13620,7 @@ $wgConf->settings = array(
 		'Village pump',
 		'LQT TestZero',
 	),
-	'cawiki' => array(
+	'cawiki' => array( // per QGil and [[ca:Viquipèdia:La taverna/Propostes#Discussions_amb_format_Flow]]
 		'Viquipèdia Discussió:Flow',
 		'Viquipèdia Discussió:Flow/proves',
 		'Viquipèdia:La taverna/Tecnicismes',
