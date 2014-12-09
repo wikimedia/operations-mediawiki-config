@@ -13612,10 +13612,10 @@ $wgConf->settings = array(
 		'LQT TestZero',
 	),
 	'cawiki' => array(
-		'Viquipèdia_Discussió:Flow',
-		'Viquipèdia_Discussió:Flow/proves',
-		'Viquipèdia:La_taverna/Tecnicismes',
-		'Viquipèdia_Discussió:La_taverna/Tecnicismes',
+		'Viquipèdia Discussió:Flow',
+		'Viquipèdia Discussió:Flow/proves',
+		'Viquipèdia:La taverna/Tecnicismes',
+		'Viquipèdia Discussió:La taverna/Tecnicismes',
 	),
 ),
 // Use separate database on extension1 cluster for all non-private wikis.
