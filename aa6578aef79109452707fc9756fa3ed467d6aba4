@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_e0aac181",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 363,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2014-12-09T11:40:32Z",
+      "side": 1,
+      "message": "In CommonSettings-labs.php we have:\n\n    if ( $wmgUseContentTranslationCluster ) {\n        $wgContentTranslationCluster \u003d $wmgContentTranslationCluster;\n    }\n\nSo $wmgUse... is a feature flag I would expect to be true / false, so in CommonSettings-labs you probably want:\n\n \u0027wmgUseContentTranslationCluster\u0027 \u003d\u003e array(\n     \u0027default\u0027 \u003d\u003e false,\n )\n\nAnd:\n\n \u0027wmgContentTranslationCluster\u0027 \u003d\u003e array(\n     \u0027default\u0027 \u003d\u003e \u0027extension1\u0027, \n )\n\nThose bits can be copy pasted later on to the production CommonSettings.php.\n\n\nIn InitialiseSettings-labs.php:\n\n \u0027wmgUseContentTranslationCluster\u0027 \u003d array(\n     \u0027default \u003d\u003e true,\n )\n\nWhich would turn on the feature on beta.",
+      "revId": "aa6578aef79109452707fc9756fa3ed467d6aba4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
