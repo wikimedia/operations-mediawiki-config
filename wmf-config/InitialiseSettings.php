@@ -13547,7 +13547,8 @@ $wgConf->settings = array(
 		NS_PROJECT_TALK,
 		NS_MEDIAWIKI_TALK,
 		NS_TEMPLATE_TALK,
-		NS_HELP_TALK
+		NS_HELP_TALK,
+		NS_CATEGORY_TALK,
 	),
 ),
 'wmgFlowOccupyPages' => array(
