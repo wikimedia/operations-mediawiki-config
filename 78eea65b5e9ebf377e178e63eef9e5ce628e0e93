@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e9df725_4071350a",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2014-12-09T12:44:04Z",
+      "side": 1,
+      "message": "The line you removed masked a problem in this value. It should be $wgContentTranslationSiteTemplates[\u0027cx\u0027] \u003d \u0027https://cxserver-beta.wmflabs.org\u0027;",
+      "revId": "78eea65b5e9ebf377e178e63eef9e5ce628e0e93",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
