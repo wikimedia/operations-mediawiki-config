@@ -13535,6 +13535,7 @@ $wgConf->settings = array(
 	'frwiki' => true,
 	'hewiki' => true,
 	'officewiki' => true, // https://www.loomio.org/d/rTbveB9O/dogfood-flow-on-officewiki
+	'cawiki' => true,
 ),
 'wmgFlowEditorList' => array(
 	// Disable VE inside flow, leaving only the wikitext editor
@@ -13604,6 +13605,12 @@ $wgConf->settings = array(
 		'User talk:Andrew Garrett (WMF)',
 		'Village pump',
 		'LQT TestZero',
+	),
+	'cawiki' => array(
+		'Viquipèdia_Discussió:Flow',
+		'Viquipèdia_Discussió:Flow/proves',
+		'Viquipèdia:La_taverna/Tecnicismes',
+		'Viquipèdia_Discussió:La_taverna/Tecnicismes',
 	),
 ),
 // Use separate database on extension1 cluster for all non-private wikis.
