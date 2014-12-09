@@ -7000,7 +7000,11 @@ $wgConf->settings = array(
 		'researcher' => array( 'browsearchive' => true, 'deletedhistory' => true, 'apihighlimits' => true ),
 		'reviewer' => array( 'patrol' => true ),
 		'filemover' => array( 'movefile' => true ), // bug 27927
-		'bot' => array( 'ipblock-exempt' => true ), // bug 28914
+		'bot' => array(
+			'ipblock-exempt' => true , // bug 28914
+			'editontentmodel' => true, // bug T76785
+			'flow-create-board' => true, // bug T76785
+		),
 		'oversight' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ), // bug 28465
 		'checkuser' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ), // bug 28465
 		'bureaucrat' => array( 'move-subpages' => true, 'suppressredirect' => true, 'tboverride' => true, ),
