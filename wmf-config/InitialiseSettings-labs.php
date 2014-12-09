@@ -358,7 +358,7 @@ return array(
 		'default' => true,
 	),
 
-	'wmgContentTranslationCluster' => array(
+	'wmgUseContentTranslationCluster' => array(
 		'default' => 'extension1',
 	),
 
