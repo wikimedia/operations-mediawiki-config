@@ -101,8 +101,7 @@ if ( $wmgUseContentTranslation ) {
 
 	$wgContentTranslationEventLogging = $wmgContentTranslationEventLogging;
 
-
-	if ( $wmgUseContentTranslationCluster ) {
+	if ( $wmgContentTranslationCluster ) {
 		$wgContentTranslationCluster = $wmgContentTranslationCluster;
 	}
 
