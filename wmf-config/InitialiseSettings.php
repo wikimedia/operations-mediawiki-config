@@ -13557,6 +13557,12 @@ $wgConf->settings = array(
 		NS_TEMPLATE_TALK,
 		NS_HELP_TALK,
 		NS_CATEGORY_TALK,
+		101, // Report_talk
+		111, // Outreach_talk
+		113, // Archive_talk
+		NS_MODULE_TALK,
+		91, // Thread_talk from LQT
+		93, // Summary_talk from LQT
 	),
 ),
 'wmgFlowOccupyPages' => array(
