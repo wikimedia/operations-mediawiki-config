@@ -131,7 +131,6 @@ $wgLBFactoryConf = array(
 		'db1005' => 0,   # 1.4TB  64GB, snapshot, vslow, api, dump
 		'db1026' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
 		'db1021' => 400, # 1.4TB  64GB, traffic sampling
-		# reassign s6 'db1037' => 400, # 1.4TB  64GB
 		'db1045' => 400, # 1.4TB  64GB
 		'db1049' => 400, # 1.4TB  64GB
 		'db1071' => 500, # 2.8TB 160GB
@@ -143,6 +142,7 @@ $wgLBFactoryConf = array(
 		'db1010' => 400, # 1.4TB  64GB
 		# disk issue 'db1015' => 400, # 1.4TB  64GB
 		'db1006' => 400, # 1.4TB  64GB
+		'db1037' => 400, # 1.4TB  64GB
 	),
 	's7' => array(
 		'db1033' => 0,   # 1.4TB  64GB, 
