@@ -100,6 +100,14 @@ if ( $wmgUseContentTranslation ) {
 
 	$wgContentTranslationEventLogging = $wmgContentTranslationEventLogging;
 
+	'wmgUseContentTranslationCluster' => array(
+		'default' => false,
+	)
+
+	'wmgContentTranslationCluster' => array(
+		'default' => 'extension1',
+	)
+
 	if ( $wmgContentTranslationCluster ) {
 		$wgContentTranslationCluster = $wmgContentTranslationCluster;
 	}
