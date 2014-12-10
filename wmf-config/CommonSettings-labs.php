@@ -6,8 +6,8 @@
 # This file hold configuration statement overriding CommonSettings.php
 # Should not be loaded on production
 
-if( $wmfRealm == 'labs' ) {  # safe guard
-	include( "logging-labs.php" );
+if ( $wmfRealm == 'labs' ) {  # safe guard
+	include ( "logging-labs.php" );
 
 // test wiki
 if ( $wgDBname == 'testwiki' ) {
@@ -15,7 +15,7 @@ if ( $wgDBname == 'testwiki' ) {
 	$wgProfiler['class'] = 'ProfilerSimpleText';
 }
 
-if( file_exists( '/etc/wmflabs-instancename' ) ) {
+if ( file_exists( '/etc/wmflabs-instancename' ) ) {
 	$wgOverrideHostname = trim( file_get_contents( '/etc/wmflabs-instancename' ) );
 }
 
@@ -35,7 +35,7 @@ if ( $wmgUseEventLogging ) {
 }
 
 if ( $wmfUseArticleCreationWorkflow ) {
-	require_once( "$IP/extensions/ArticleCreationWorkflow/ArticleCreationWorkflow.php" );
+	require_once ( "$IP/extensions/ArticleCreationWorkflow/ArticleCreationWorkflow.php" );
 	$wgArticleCreationBucketConfig['buckets']['off'] = 0;
 }
 
@@ -64,12 +64,12 @@ if ( $wmgUseOAuth ) {
 }
 
 if ( $wmgUseMultimediaViewer ) {
-	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
+	require_once ( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
 	$wgNetworkPerformanceSamplingFactor = $wmgNetworkPerformanceSamplingFactor;
 }
 
 if ( $wmgUseVectorBeta ) {
-	require_once( "$IP/extensions/VectorBeta/VectorBeta.php" );
+	require_once ( "$IP/extensions/VectorBeta/VectorBeta.php" );
 	$wgVectorBetaPersonalBar = $wmgVectorBetaPersonalBar;
 	$wgVectorBetaWinter = $wmgVectorBetaWinter;
 }
@@ -118,7 +118,7 @@ if ( $wmgUseCentralNotice ) {
 	$wgCentralDBname = 'metawiki';
 }
 
-require_once( "$IP/extensions/MobileApp/MobileApp.php" );
+require_once ( "$IP/extensions/MobileApp/MobileApp.php" );
 
 if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthEnableGlobalRenameRequest = true;
@@ -168,7 +168,7 @@ if ( $wgDBname != 'commonswiki' ) {
 }
 
 # Backends:
-if( $wmgUseMath ) {
+if ( $wmgUseMath ) {
 	$wgMathFileBackend = false;
 	$wgMathDirectory   = '/data/project/upload7/math';
 	$wgMathMathMLUrl = 'http://deployment-mathoid.eqiad.wmflabs:10042';
@@ -197,7 +197,7 @@ if ( $wmgUseCollection ) {
 }
 
 if ( $wmgUsePageImages ) {
-	require_once( "$IP/extensions/PageImages/PageImages.php" );
+	require_once ( "$IP/extensions/PageImages/PageImages.php" );
 	$wgPageImagesExpandOpenSearchXml = $wmgPageImagesExpandOpenSearchXml;
 	$wgPageImagesBlacklist[] = array(
 		'type' => 'db',
@@ -207,7 +207,7 @@ if ( $wmgUsePageImages ) {
 }
 
 if ( $wmgUseFundraisingTranslateWorkflow ) {
-	include( "$IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php" );
+	include ( "$IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php" );
 }
 
 // Experimental
