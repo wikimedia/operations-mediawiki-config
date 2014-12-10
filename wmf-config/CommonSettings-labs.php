@@ -88,6 +88,14 @@ if ( $wmgUseFlow ) {
 	$wgFlowParsoidURL = $wmgParsoidURL; // Re-link now it's been set to a new value
 }
 
+'wmgUseContentTranslationCluster' => array(
+	'default' => false,
+)
+
+'wmgContentTranslationCluster' => array(
+	'default' => 'extension1',
+)
+
 if ( $wmgUseContentTranslation ) {
 	require_once "$IP/extensions/ContentTranslation/ContentTranslation.php";
 	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org';
