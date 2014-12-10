@@ -166,18 +166,12 @@ if ( $wmgUseWikibaseClient ) {
 		'Q17580674' => 'badge-featuredportal', // bug 73193
 	);
 
-	$wgHooks['SetupAfterCache'][] = 'wmfWBClientExcludeNS';
-
-	function wmfWBClientExcludeNS() {
-		global $wgWBClientSettings;
-
-		$wgWBClientSettings['excludeNamespaces'] = array_merge(
+	$wgWBClientSettings['excludeNamespaces'] = function() {
+		return array_merge(
 			MWNamespace::getTalkNamespaces(),
 			// 1198 => NS_TRANSLATE
 			array( NS_USER, NS_FILE, NS_MEDIAWIKI, 1198 )
 		);
-
-		return true;
 	};
 
 	$wgWBClientSettings['allowArbitraryDataAccess'] = false;
