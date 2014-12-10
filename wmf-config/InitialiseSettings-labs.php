@@ -162,7 +162,7 @@ return array(
 	'wgLogo' => array(
 		'commonswiki' => '$stdlogo',
 		'dewiki' => '$stdlogo',
-		'wikidatawiki' =>  '//upload.wikimedia.org/wikipedia/commons/thumb/4/43/Wikidata-logo-en-black.svg/135px-Wikidata-logo-en-black.svg.png',
+		'wikidatawiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/4/43/Wikidata-logo-en-black.svg/135px-Wikidata-logo-en-black.svg.png',
 	),
 
 	'wgFavicon' => array(
@@ -392,7 +392,7 @@ return array(
 	),
 
 	'wmgUseEventLogging' => array(
-	    'default' => true,
+		'default' => true,
 	),
 
 	'wmgContentTranslationCluster' => array(
@@ -400,7 +400,7 @@ return array(
 	),
 
 	'wmgUseNavigationTiming' => array(
-	    'default' => true,
+		'default' => true,
 	),
 
 	'wgSecureLogin' => array(
