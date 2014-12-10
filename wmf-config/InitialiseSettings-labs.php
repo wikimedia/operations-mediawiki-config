@@ -359,7 +359,7 @@ return array(
 	),
 
 	'wmgContentTranslationCluster' => array(
-		'default' => 'extension1',
+		'default' => false,
 	),
 
 	'wmgUseNavigationTiming' => array(
