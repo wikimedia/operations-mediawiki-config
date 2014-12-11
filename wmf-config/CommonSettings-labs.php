@@ -7,7 +7,6 @@
 # Should not be loaded on production
 
 if( $wmfRealm == 'labs' ) {  # safe guard
-	include( "logging-labs.php" );
 
 // test wiki
 if ( $wgDBname == 'testwiki' ) {
