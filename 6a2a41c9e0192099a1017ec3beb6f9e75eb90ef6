@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_2e22ff50",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-12-11T22:33:26Z",
+      "side": 1,
+      "message": "Production errors were caused by this handler not having a \u0027formatter\u0027 key. The NullHandler class does not need a formatter, but the factory in MWLoggerMonologSpi currently requires it.",
+      "revId": "6a2a41c9e0192099a1017ec3beb6f9e75eb90ef6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_4e273360",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-12-11T22:33:26Z",
+      "side": 1,
+      "message": "There were also production errors about $wmgLogstashPassword being undefined. I can however see it defined via eval.php on terbium. The require for PrivateSettings.php happens just before this file is required in CommonSettings.php.\n\nSync order was correct as well:\n\n    16:28 logmsgbot: marktraceur Synchronized private/PrivateSettings.php: [SWAT] [config] Add password for logstash (duration: 00m 10s)\n    16:43 logmsgbot: marktraceur Synchronized wmf-config/: [SWAT] [config] Configure logging to use MWLoggerMonologSpi (duration: 00m 07s)",
+      "revId": "6a2a41c9e0192099a1017ec3beb6f9e75eb90ef6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_0e193b27",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2014-12-11T22:33:26Z",
+      "side": 1,
+      "message": "Guard usage with a feature flag to minimize damage if there are additional unexpected errors when re-enabled.",
+      "revId": "6a2a41c9e0192099a1017ec3beb6f9e75eb90ef6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
