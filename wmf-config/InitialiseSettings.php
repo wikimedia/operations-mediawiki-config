@@ -12184,6 +12184,9 @@ $wgConf->settings = array(
 		'span.coordinates', 'span.geo-multi-punct', 'span.geo-nondefault', '#coordinates',
 	),
 ),
+'wmgExtractsExtendOpenSearchXml' => array(
+	'default' => true,
+),
 
 'wmgZeroBanner' => array(
 	'default' => false,
