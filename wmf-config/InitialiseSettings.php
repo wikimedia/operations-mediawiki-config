@@ -12165,6 +12165,7 @@ $wgConf->settings = array(
 'wmgMobileFrontend' => array(
 	'default' => true,
 	'labswiki' => false,
+	'wikidata' => false, // Disabled due to lack of mobile domain setup
 ),
 'wmgUseWikiGrok' => array(
 	'default' => false,
