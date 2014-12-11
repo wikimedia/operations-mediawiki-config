@@ -2168,6 +2168,7 @@ if ( $wgDBname === 'itwiki'
 if ( $wmgEnableTextExtracts ) {
 	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
 	$wgExtractsRemoveClasses = array_merge( $wgExtractsRemoveClasses, $wmgExtractsRemoveClasses );
+	$wgExtractsExtendOpenSearchXml = $wmgExtractsExtendOpenSearchXml;
 }
 
 if ( $wmgUseSubPageList3 ) {
