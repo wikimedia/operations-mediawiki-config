@@ -4157,7 +4157,7 @@ $wgConf->settings = array(
 		'poolcounter' => "udp://$wmfUdp2logDest/poolcounter",
 		'lc-recache' => "udp://$wmfUdp2logDest/lc-recache",
 		'generated-pp-node-count' => "udp://$wmfUdp2logDest/generated-pp-node-count",
-		'api' => "udp://$wmfUdp2logDest/api",
+		'api' => array( 'destination' => "udp://$wmfUdp2logDest/api", 'sample' => 1000 ),
 		'api-feature-usage' => "udp://$wmfUdp2logDest/api-feature-usage",
 		'SQLBagOStuff' => "udp://$wmfUdp2logDest/sql-bagostuff",
 		'FileOperation' => "udp://$wmfUdp2logDest/filebackend-ops",
