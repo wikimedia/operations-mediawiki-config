@@ -4206,6 +4206,7 @@ $wgConf->settings = array(
 		'GlobalTitleFail' => "udp://$wmfUdp2logDest/globaltitlefail", // chad hates $wgTitle
 		'FSFileBackend' => "udp://$wmfUdp2logDest/fsfilebackend", // - gilles for bug 73229
 		'OAuth' => "udp://$wmfUdp2logDest/oauth",
+		'xenon' => "udp://$wmfUdp2logDest/xenon",
 	),
 
 	'+enwiki' => array(

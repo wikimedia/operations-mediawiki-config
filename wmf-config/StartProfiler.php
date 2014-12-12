@@ -84,3 +84,12 @@ if ( defined( 'HHVM_VERSION' )
 		file_put_contents( '/tmp/xhprof/' . date( 'Y-m-d\TH:i:s' ) . '.prof', $out );
 	} );
 }
+
+if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
+	register_shutdown_function( function () {
+		$xenonData = HH\xenon_get_data();
+		if ( !empty( $xenonData ) {
+			wfDebugLog( 'xenon', json_encode( $xenonData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) );
+		}
+	} );
+}
