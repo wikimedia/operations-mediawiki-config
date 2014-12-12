@@ -95,8 +95,10 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 		if ( empty( $data ) ) {
 			return;
 		}
+
 		// Collate stack samples and fold into single lines.
 		// This is the format expected by FlameGraph.
+		$stacks = array();
 		foreach ( $data as $sample ) {
 			$stack = array();
 			foreach( $sample['phpStack'] as $frame ) {
@@ -113,12 +115,10 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 		$options = array( 'serializer' => 'none' );
 		$pool = RedisConnectionPool::singleton( $options );
 		$conn = $pool->getConnection( 'fluorine.eqiad.wmnet:6379' );
-		if ( !$conn ) {
-			return;
-		}
-
-		foreach ( $stacks as $stack => $count ) {
-			$conn->publish( 'xenon', "$stack $count" );
+		if ( $conn ) {
+			foreach ( $stacks as $stack => $count ) {
+				$conn->publish( 'xenon', "$stack $count" );
+			}
 		}
 	} );
 }
