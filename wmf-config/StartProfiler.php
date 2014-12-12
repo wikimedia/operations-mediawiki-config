@@ -87,9 +87,30 @@ if ( defined( 'HHVM_VERSION' )
 
 if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 	register_shutdown_function( function () {
-		$xenonData = HH\xenon_get_data();
-		if ( !empty( $xenonData ) ) {
-			wfDebugLog( 'xenon', json_encode( $xenonData, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) );
+		// Function names that should be excluded from the trace.
+		$omit = array( 'include', '{closure}' );
+
+		$data = HH\xenon_get_data();
+
+		// Collate stack samples and fold into single lines.
+		// This is the format expected by FlameGraph.
+		if ( !empty( $data ) ) {
+			foreach( $data as $sample ) {
+				$stack = array();
+				foreach( $sample['phpStack'] as $frame ) {
+					if ( !in_array( $frame['function'], $omit ) ) {
+						$stack[] = $frame['function'];
+					}
+				}
+				$stack = implode( ';', array_reverse( $stack ) );
+				$stacks[$stack] += 1;
+			}
+
+			foreach( $stacks as $stack => $count ) {
+				$message .= "$stack $count\n";
+			}
+
+			wfDebugLog( 'xenon', $message );
 		}
 	} );
 }
