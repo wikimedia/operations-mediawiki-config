@@ -4658,6 +4658,12 @@ $wgConf->settings = array(
 		100 => 'პორტალი',
 		101 => 'პორტალი_განხილვა',
 	),
+	'kabwiki' => array(
+		100 => 'Awwur',                // T77017 - Portal
+		101 => 'Amyannan_uwwur',
+		102 => 'Asenfaṛ',              // T77017 - Project
+		103 => 'Amyannan_usenfaṛ',
+	),
 	'kkwiki' => array(
 		100 => 'Портал', // Portal
 		101 => 'Портал_талқылауы',
