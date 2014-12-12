@@ -2258,6 +2258,7 @@ if ( $wmgUseTranslate ) {
 			'shards' => 1,
 			'replicas' => 1,
 			'index' => $wmgTranslateESIndex,
+			'cutoff' => 0.65,
 			'config' => array(
 				'servers' => $servers,
 			),
