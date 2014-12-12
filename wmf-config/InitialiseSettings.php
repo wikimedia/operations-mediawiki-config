@@ -12165,7 +12165,6 @@ $wgConf->settings = array(
 'wmgMobileFrontend' => array(
 	'default' => true,
 	'labswiki' => false,
-	'wikidata' => false, // Disabled due to lack of mobile domain setup
 ),
 'wmgUseWikiGrok' => array(
 	'default' => false,
@@ -12238,7 +12237,7 @@ $wgConf->settings = array(
 	'foundationwiki' => 'm.%h0.%h1',
 	'mediawikiwiki' => 'm.%h1.%h2',
 	'sourceswiki' => 'm.%h0.%h1', // bug 36002
-	'wikidata' => '',
+	'wikidatawiki' => 'm.%h0.%h1',
 ),
 
 'wmgMFCustomLogos' => array(
