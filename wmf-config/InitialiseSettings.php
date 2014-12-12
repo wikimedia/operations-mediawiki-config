@@ -14420,6 +14420,7 @@ $wgConf->settings = array(
 
 'wmgUseMonologLogger' => array(
 	'default' => false,
+	'testwiki' => true,
 ),
 
 );
