@@ -12308,6 +12308,7 @@ $wgConf->settings = array(
 'wmgMFCollapseSectionsByDefault' => array(
 	'default' => true,
 	'wiktionary' => false,
+	'wikidata' => true,
 ),
 'wmgMFRemovePageActions' => array(
 	'default' => array( 'upload' ),
