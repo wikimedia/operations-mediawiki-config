@@ -23,6 +23,7 @@ mwconfig_files_txt=(
 	jobqueue-eqiad.php
 	LegalContactPages.php
 	liquidthreads.php
+	logging.php
 	logging-labs.php
 	lucene-common.php
 	lucene-production.php

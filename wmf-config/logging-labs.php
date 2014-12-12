@@ -108,6 +108,9 @@ $wmgMonologConfig =  array(
 
 // Add logging channels defined in $wgDebugLogGroups
 foreach ( $wgDebugLogGroups as $group => $dest ) {
+	if ( is_array( $dest ) ) {
+		$dest = $dest['destination'];
+	}
 	$wmgMonologConfig['loggers'][$group] = array(
 		'handlers' => array( $group, 'logstash' ),
 		'processors' => array( 'wiki', 'psr', 'pid', 'uid', 'web' ),
