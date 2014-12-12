@@ -12237,7 +12237,7 @@ $wgConf->settings = array(
 	'foundationwiki' => 'm.%h0.%h1',
 	'mediawikiwiki' => 'm.%h1.%h2',
 	'sourceswiki' => 'm.%h0.%h1', // bug 36002
-	'wikidatawiki' => 'm.%h0.%h1',
+	'wikidatawiki' => 'm.%h1.%h2',
 ),
 
 'wmgMFCustomLogos' => array(
