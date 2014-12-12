@@ -236,6 +236,11 @@ extract( $globals );
 # Needs to be before db.php
 require( "$wmfConfigDir/PrivateSettings.php" );
 
+# Monolog logging configuration
+wfProfileIn( "$fname-logging" );
+require( getRealmSpecificFilename( "$wmfConfigDir/logging.php" ) );
+wfProfileOut( "$fname-logging" );
+
 # Cluster-dependent files for database and memcached
 require( getRealmSpecificFilename( "$wmfConfigDir/db.php" ) );
 $wgMemCachedServers = array();
