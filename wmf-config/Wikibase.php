@@ -102,13 +102,13 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgPropertySuggesterDeprecatedIds = array(
 		45, // (OBSOLETE) grandparent
 		70, // (OBSOLETE) order
-		71, // (OBSOLETE) family
-		74, // (OBSOLETE) genus
 		107, // (OBSOLETE) main type (GND)
+		132, // (Will be deleted) type of administrative territorial entity
 		143, // imported from
+		513, // birth name (Deprecated)
 		643, // Genloc Chr (deprecated, use P1057)
 		741, // (OBSOLETE) playing hand
-		1384, // deleted
+		766, // (DEPRECATED) event location
 	);
 }
 
