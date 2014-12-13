@@ -12,9 +12,9 @@ header( 'X-Site: ' . $site );
 header( 'Vary: X-Subdomain' );
 
 $robotsfile = '/srv/mediawiki/robots.txt';
-$robotsfilestats = fstat( $robots );
 $robots = fopen( $robotsfile, 'rb' );
-$mtime = $stats['mtime'];
+$robotsfilestats = fstat( $robots );
+$mtime = $robotsfilestats['mtime'];
 $extratext = '';
 
 $zeroRated = isset( $_SERVER['HTTP_X_SUBDOMAIN'] ) && $_SERVER['HTTP_X_SUBDOMAIN'] === 'ZERO';
