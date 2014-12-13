@@ -10716,6 +10716,7 @@ $wgConf->settings = array(
 	'dewikiversity' => true, // Bug 49449
 	'enwikinews' => true,
 	'fawiki' => true, // Bug 53981
+	'fawikivoyage' => true, // T76716
 	'guwiki' => true, // Bug 40872
 	'guwikisource' => true, // Bug 40872
 	'hiwiki' => true,
