@@ -4203,7 +4203,7 @@ $wgConf->settings = array(
 		'BounceHandler' => "udp://$wmfUdp2logDest/bouncehandler",
 		'Echo' => "udp://$wmfUdp2logDest/echo",
 		'collection' => "udp://$wmfUdp2logDest/collection", // -cscott for bug 71675
-		'GlobalTitleFail' => "udp://$wmfUdp2logDest/globaltitlefail", // chad hates $wgTitle
+		'GlobalTitleFail' => array( 'destination' => "udp://$wmfUdp2logDest/globaltitlefail", 'sample' => 10000 ), // chad hates $wgTitle
 		'FSFileBackend' => "udp://$wmfUdp2logDest/fsfilebackend", // - gilles for bug 73229
 		'OAuth' => "udp://$wmfUdp2logDest/oauth",
 		'xenon' => "udp://$wmfUdp2logDest/xenon",
