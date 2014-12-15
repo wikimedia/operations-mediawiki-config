@@ -14060,6 +14060,7 @@ $wgConf->settings = array(
 	'private' => false,
 	'fishbowl' => false,
 
+	'enwikisource' => true, // T78496
 	'metawiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
