@@ -2559,6 +2559,8 @@ if ( $wmgUseFlow ) {
 	$wgFlowCluster = $wmgFlowCluster;
 	$wgFlowExternalStore = $wgDefaultExternalStore;
 	$wgFlowMaintenanceMode = $wmgFlowMaintenanceMode;
+
+	$wgFlowEventLogging = true;
 }
 
 if ( $wmgUseDisambiguator ) {
