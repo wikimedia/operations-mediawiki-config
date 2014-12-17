@@ -987,21 +987,24 @@ $wgExtensionFunctions[] = function() {
 		$uri = ( ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] ) ? 'https://' : 'http://' ) .
 			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		$xff = isset( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : '';
-		wfErrorLog(
+		$logger = MWLogger::getInstance( 'xff' );
+		// TODO: it would be nice to log this as actual structured data
+		// instead of this ad-hoc tab delimited format
+		$logger->debug(
 			gmdate( 'r' ) . "\t" .
 			"$uri\t" .
 			"$xff, {$_SERVER['REMOTE_ADDR']}\t" .
 			( ( isset( $_REQUEST['wpSave'] ) && $_REQUEST['wpSave'] ) ? 'save' : '' )
-				. "\n",
-			"udp://$wmfUdp2logDest/xff"
 		);
 		if ( $wgRequest->getIP() === '127.0.0.1' ) {
-			wfErrorLog(
+			$logger = MWLogger::getInstance( 'localhost' );
+			// TODO: it would be nice to log this as actual structured data
+			// instead of this ad-hoc tab delimited format
+			$logger->debug(
 				gmdate( 'r' ) . "\t" .
 				wfHostname() .
 				"\t$xff, {$_SERVER['REMOTE_ADDR']}\t" .
-				WebRequest::detectProtocol(),
-				"udp://$wmfUdp2logDest/localhost"
+				WebRequest::detectProtocol()
 			);
 		}
 	}

@@ -4207,6 +4207,8 @@ $wgConf->settings = array(
 		'FSFileBackend' => "udp://$wmfUdp2logDest/fsfilebackend", // - gilles for bug 73229
 		'OAuth' => "udp://$wmfUdp2logDest/oauth",
 		'xenon' => "udp://$wmfUdp2logDest/xenon",
+		'xff' => "udp://$wmfUdp2logDest/xff",
+		'localhost' => "udp://$wmfUdp2logDest/localhost",
 	),
 
 	'+enwiki' => array(
