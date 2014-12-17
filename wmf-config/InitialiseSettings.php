@@ -863,7 +863,6 @@ $wgConf->settings = array(
 	'zhwikiquote' => '$stdlogo',
 
 	// Wikibooks
-	'angwikibooks' => '$stdlogo',
 	'arwikibooks' => '$stdlogo',
 	'azwikibooks' => '//upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Wikibooks-logo-az.svg/125px-Wikibooks-logo-az.svg.png', // bug 52019
 	'bgwikibooks' => '$stdlogo',
@@ -885,7 +884,6 @@ $wgConf->settings = array(
 	'hrwikibooks' => '$stdlogo',
 	'huwikibooks' => '$stdlogo',
 	'idwikibooks' => '//upload.wikimedia.org/wikibooks/id/3/34/Wikibooks-logo-id.png',
-	'iewikibooks' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Wikibooks-logo-ie.svg/135px-Wikibooks-logo-ie.svg.png', // bug 52019
 	'iswikibooks' => '$stdlogo',
 	'itwikibooks' => '$stdlogo',
 	'kawikibooks' => '$stdlogo',
