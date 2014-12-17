@@ -24,7 +24,12 @@ if ( isset( $_REQUEST['forceprofile'] ) ) {
 	$wgProfiler['profileID'] = 'test2';
 # Normal case: randomly (or not) selected for logged profiling sample
 } elseif ( $wmfDatacenter == 'eqiad' ) {
-	$wgProfiler['class'] = 'ProfilerStandard';
+	if ( defined( 'HHVM_VERSION' ) ) {
+		$wgProfiler['class'] = 'ProfilerXhprof';
+		$wgProfiler['flags'] = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
+	} else {
+		$wgProfiler['class'] = 'ProfilerStandard';
+	}
 	$wgProfiler['output'] = 'udp';
 	$wgProfiler['sampling'] = 50;
 	// $IP is something like '/srv/mediawiki/php-1.19'
