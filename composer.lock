@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "56b00614a2a6c02327bb0d7f1f1b674d",
+    "hash": "99c774fb23849c1620a28bb41a6e0a37",
     "packages": [
         {
             "name": "wikimedia/cdb",
