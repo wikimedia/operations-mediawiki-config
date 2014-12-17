@@ -44,3 +44,10 @@ $wgCirrusSearchWikimediaExtraPlugin = array(
 # We don't have enough nodes to support these settings in beta so just turn
 # them off.
 $wgCirrusSearchMaxShardsPerNode = array();
+
+# Use the safer query from the extra extension that is currently only deployed
+# in beta.
+$wgCirrusSearchWikimediaExtraPlugin[ 'safer' ] = array(
+	'phrase' => array(
+	)
+);
