@@ -472,6 +472,10 @@ return array(
 		'private' => false,
 		'fishbowl' => false,
 	),
+
+	'wmgUseApiFeatureUsage' => array(
+		'default' => true,
+	),
 );
 
 } # wmflLabsSettings()

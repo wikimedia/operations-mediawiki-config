@@ -139,6 +139,19 @@ if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 	$wgGlobalUserPageDBname = 'metawiki';
 }
 
+if ( $wmgUseApiFeatureUsage ) {
+	require_once "$IP/extensions/ApiFeatureUsage/ApiFeatureUsage.php";
+	$wgApiFeatureUsageQueryEngineConf = array(
+		'class' => 'ApiFeatureUsageQueryEngineElastica',
+		'serverList' => array(
+			'deployment-elastic05',
+			'deployment-elastic06',
+			'deployment-elastic07',
+			'deployment-elastic08',
+		),
+	);
+}
+
 // Labs override for BounceHandler
 if ( $wmgUseBounceHandler ) {
 	//$wgVERPsecret = ''; // This was set in PrivateSettings.php by Legoktm
