@@ -1,3 +1,4 @@
+$IP/extensions/ApiFeatureUsage/ApiFeatureUsage.php
 $IP/extensions/ContentTranslation/ContentTranslation.php
 $IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php
 $IP/extensions/GlobalCssJs/GlobalCssJs.php
