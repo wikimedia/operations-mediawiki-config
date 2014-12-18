@@ -23,7 +23,7 @@ if ( isset( $_REQUEST['forceprofile'] ) ) {
 	$wgProfiler['output'] = 'udp';
 	$wgProfiler['profileID'] = 'test2';
 # Normal case: randomly (or not) selected for logged profiling sample
-} elseif ( $wmfDatacenter == 'eqiad' ) {
+} elseif ( false && $wmfDatacenter == 'eqiad' ) {
 	if ( defined( 'HHVM_VERSION' ) ) {
 		$wgProfiler['class'] = 'ProfilerXhprof';
 		$wgProfiler['flags'] = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
