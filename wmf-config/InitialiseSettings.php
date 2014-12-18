@@ -13915,6 +13915,9 @@ $wgConf->settings = array(
 	'ilowiki' => array(
 		'sort' => 'alphabetic',
 	),
+	'itwiki' => array(
+		'otherProjectsLinksByDefault' => true, // T77012
+	),
 	'itwikisource' => array(
 		'otherProjectsLinksByDefault' => true,
 	),
