@@ -14410,15 +14410,6 @@ $wgConf->settings = array(
 	'default' => 'upload.svc.eqiad.wmnet',
 ),
 
-// Thumbnail chaining
-'wgThumbnailBuckets' => array(
-	'default' => array( 128, 256, 512, 1024, 2048, 4096 ),
-),
-
-'wgThumbnailMinimumBucketDistance' => array(
-	'default' => 32,
-),
-
 // Disabled until API cluster is running HHVM.
 'wgAjaxEditStash' => array(
 	'default' => true,
