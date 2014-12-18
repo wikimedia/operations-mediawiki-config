@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_e405d114",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 873
+      },
+      "writtenOn": "2014-12-18T15:00:56Z",
+      "side": 1,
+      "message": "Drop this too?  Drop it from Cirrus entirely?",
+      "revId": "11c4c6bda024d15051228c7b55d3c0f3a6f68ba1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
