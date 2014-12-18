@@ -1,20 +1,29 @@
 <?php
-# WARNING: This file is publically viewable on the web. Do not put private data here.
+// WARNING: This file is publically viewable on the web. Do not put private
+// data here.
 
-# NOTE: this file is loaded early on in WebStart.php, so be careful with globals.
+// NOTE: this file is loaded early on in WebStart.php, so be careful with
+// globals.
 
-# Non-logged profiling for debugging
+$wmgUseXhprofProfiler = defined( 'HHVM_VERSION' )
+	&& ini_get( 'hhvm.stats.enable_hot_profiler' );
+
 if ( isset( $_REQUEST['forceprofile'] ) ) {
-	if ( defined( 'HHVM_VERSION' ) ) {
+	// Non-logged profiling for debugging
+	if ( $wmgUseXhprofProfiler ) {
 		$wgProfiler['class'] = 'ProfilerXhprof';
 		$wgProfiler['flags'] = XHPROF_FLAGS_NO_BUILTINS;
 	} else {
 		$wgProfiler['class'] = 'ProfilerStandard';
 	}
 	$wgProfiler['output'] = 'text';
-# Profiling hack for test2 wiki (not sampled, but shouldn't distort too much)
-} elseif ( isset( $_SERVER['HTTP_HOST'] ) && $_SERVER['HTTP_HOST'] === 'test2.wikipedia.org' ) {
-	if ( defined( 'HHVM_VERSION' ) ) {
+
+} elseif ( isset( $_SERVER['HTTP_HOST'] )
+	&& $_SERVER['HTTP_HOST'] === 'test2.wikipedia.org' )
+{
+	// Profiling hack for test2 wiki (not sampled, but shouldn't distort too
+	// much)
+	if ( $wmgUseXhprofProfiler ) {
 		$wgProfiler['class'] = 'ProfilerXhprof';
 		$wgProfiler['flags'] = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
 	} else {
@@ -22,9 +31,10 @@ if ( isset( $_REQUEST['forceprofile'] ) ) {
 	}
 	$wgProfiler['output'] = 'udp';
 	$wgProfiler['profileID'] = 'test2';
-# Normal case: randomly (or not) selected for logged profiling sample
+
 } elseif ( false && $wmfDatacenter == 'eqiad' ) {
-	if ( defined( 'HHVM_VERSION' ) ) {
+	// Normal case: randomly (or not) selected for logged profiling sample
+	if ( $wmgUseXhprofProfiler ) {
 		$wgProfiler['class'] = 'ProfilerXhprof';
 		$wgProfiler['flags'] = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
 	} else {
@@ -43,8 +53,9 @@ if ( isset( $_REQUEST['forceprofile'] ) ) {
 	} else {
 		$wgProfiler['profileID'] = $version;
 	}
+
 } elseif ( $wmfRealm === 'labs' ) {
-	if ( defined( 'HHVM_VERSION' ) ) {
+	if ( $wmgUseXhprofProfiler ) {
 		$wgProfiler['class'] = 'ProfilerXhprof';
 		$wgProfiler['flags'] = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
 	} else {
@@ -55,7 +66,7 @@ if ( isset( $_REQUEST['forceprofile'] ) ) {
 	$wgProfiler['profileID'] = $coreGit->getHeadSHA1() ?: 'labs';
 }
 
-if ( defined( 'HHVM_VERSION' )
+if ( $wmgUseXhprofProfiler
 	&& isset( $_SERVER['HTTP_FORCE_LOCAL_XHPROF'] )
 	&& isset( $_SERVER['REMOTE_ADDR'] )
 	&& $_SERVER['REMOTE_ADDR'] == '127.0.0.1'
