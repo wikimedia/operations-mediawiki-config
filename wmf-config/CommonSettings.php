@@ -928,7 +928,8 @@ wfProfileOut( "$fname-misc2" );
 # :SEARCH:
 
 # Better make sure the global setting is enabled
-$wgUseLuceneSearch = $wmfRealm != 'labs';
+$wgUseLuceneSearch = $wmfRealm != 'labs' &&
+	in_array( $wgDBname, array( 'enwiki', 'nlwiki', 'ruwiki' ) );
 if ( $wgUseLuceneSearch ) {
 	wfProfileIn( "$fname-lucene" );
 	include( "$wmfConfigDir/lucene-common.php" );
