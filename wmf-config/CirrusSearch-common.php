@@ -13,15 +13,10 @@
 
 require_once( "$IP/extensions/Elastica/Elastica.php" );
 require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
-if ( $wmgUseCirrus ) {
-	$wgSearchType = 'CirrusSearch';
-	$wgSearchTypeAlternatives = array( 'LuceneSearch' );
-	$wgEnableLucenePrefixSearch = false;
-	$wgCirrusSearchShowNowUsing = true;
-} else {
-	$wgSearchTypeAlternatives = array( 'CirrusSearch' );
-	$wgCirrusSearchEnablePref = true;
-}
+$wgSearchType = 'CirrusSearch';
+$wgSearchTypeAlternatives = array( 'LuceneSearch' );
+$wgEnableLucenePrefixSearch = false;
+$wgCirrusSearchShowNowUsing = true;
 
 if ( $wmgUseClusterJobqueue ) {
 	# The secondary update job has a delay of a few seconds to make sure that Elasticsearch
