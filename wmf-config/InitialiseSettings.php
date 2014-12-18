@@ -4826,6 +4826,10 @@ $wgConf->settings = array(
 		106 => 'Арбитраж', // Bug 34527 - Arbcom
 		107 => 'Обсуждение_арбитража',
 	),
+	'sawiki' => array(
+		100 => 'प्रवेशद्वारम्',          // T78394 - Portal
+		101 => 'सहाय्यस्य_प्रवेशद्वारम्',
+	),
 	'scnwiki' => array(
 		100 => 'Purtali',
 		101 => 'Discussioni_purtali',
