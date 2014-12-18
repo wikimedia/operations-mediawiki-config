@@ -12327,7 +12327,8 @@ $wgConf->settings = array(
 'wmgMFEnableWikiGrok' => array(
 	'default' => false,
 	'testwiki' => true,
-	'enwiki' => true,
+	'test2wiki' => true,
+	'enwiki' => false,
 ),
 'wmgMFUseWikibaseDescription' => array(
 	'default' => false,
