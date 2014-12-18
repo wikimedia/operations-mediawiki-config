@@ -20,3 +20,4 @@ $wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
 $wgMFEnableWikiGrok = $wmgMFEnableWikiGrok;
 $wgMFEnableWikiGrokOnAllDevices = $wmgMFEnableWikiGrokOnAllDevices;
 $wgWikiGrokDebug = $wmgWikiGrokDebug;
+$wgMFSpecialCaseMainPage = $wmgMFSpecialCaseMainPage;

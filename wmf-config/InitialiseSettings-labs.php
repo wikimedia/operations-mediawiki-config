@@ -245,6 +245,10 @@ return array(
 	'wmgMFEnableBetaDiff' => array(
 		'default' => true,
 	),
+	'wmgMFSpecialCaseMainPage' => array(
+		'default' => true,
+		'enwiki' => false,
+	),
 	'wmgMFEnableWikiGrok' => array(
 		'default' => false,
 		'enwiki' => true, // prototype version is for en.wiki only
