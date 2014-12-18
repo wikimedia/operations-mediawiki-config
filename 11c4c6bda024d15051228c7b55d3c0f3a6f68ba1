@@ -16,6 +16,24 @@
       "revId": "11c4c6bda024d15051228c7b55d3c0f3a6f68ba1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_1f8cd231",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2014-12-18T17:41:11Z",
+      "side": 1,
+      "message": "Probably yes but that could be in another commit. We could simplify a bunch of code by dropping the logic in Cirrus for both this and the beta feature.",
+      "parentUuid": "0e6cb3ef_e405d114",
+      "revId": "11c4c6bda024d15051228c7b55d3c0f3a6f68ba1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
