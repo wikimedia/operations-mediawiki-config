@@ -14,7 +14,9 @@
 require_once( "$IP/extensions/Elastica/Elastica.php" );
 require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
 $wgSearchType = 'CirrusSearch';
-$wgSearchTypeAlternatives = array( 'LuceneSearch' );
+if ( in_array( $wgDBname, array( 'enwiki', 'nlwiki', 'ruwiki' ) ) ) {
+	$wgSearchTypeAlternatives = array( 'LuceneSearch' );
+}
 $wgEnableLucenePrefixSearch = false;
 $wgCirrusSearchShowNowUsing = true;
 
