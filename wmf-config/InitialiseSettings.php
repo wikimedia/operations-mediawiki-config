@@ -4209,6 +4209,7 @@ $wgConf->settings = array(
 		'xenon' => "udp://$wmfUdp2logDest/xenon",
 		'xff' => "udp://$wmfUdp2logDest/xff",
 		'localhost' => "udp://$wmfUdp2logDest/localhost",
+		'T84894' => "udp://$wmfUdp2logDest/T84894", // - bd808 for T84894
 	),
 
 	'+enwiki' => array(
