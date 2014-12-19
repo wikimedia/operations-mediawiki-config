@@ -8019,11 +8019,12 @@ $wgConf->settings = array(
 		'sysop' => array( 'ipblock-exempt' ),
 	),
 	'+testwiki' => array(
-		'bureaucrat' => array( 'researcher', 'centralnoticeadmin', 'translationadmin' ),
+		'bureaucrat' => array( 'researcher', 'centralnoticeadmin', 'translationadmin', 'flow-bot' ),
 		'sysop' => array( 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ),
 		# 'user' => array( 'editor', 'reviewer' ),
 	),
 	'+test2wiki' => array(
+		'bureaucrat' => array( 'flow-bot' ),
 		'qa_automation' => array( 'qa_automation' ), // For browser tests, bug 58375
 	),
 	// ******************************************************************
@@ -8130,7 +8131,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled' ),
 	),
 	'+enwiki' => array(
-		'bureaucrat' => array( 'accountcreator' ),
+		'bureaucrat' => array( 'accountcreator', 'flow-bot' ),
 		'sysop' => array( 'abusefilter', 'accountcreator', 'autoreviewer', 'confirmed', 'filemover', 'reviewer', 'rollbacker', 'templateeditor', 'massmessage-sender' ),
 	),
 	'+enwikibooks' => array(
@@ -8583,9 +8584,12 @@ $wgConf->settings = array(
 		'sysop' => array( 'ipblock-exempt' ),
 	),
 	'+testwiki' => array(
-		'bureaucrat' => array( 'sysop', 'researcher', 'translationadmin', 'centralnoticeadmin' ),
+		'bureaucrat' => array( 'sysop', 'researcher', 'translationadmin', 'centralnoticeadmin', 'flow-bot' ),
 		'sysop' => array( 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ),
 		# 'user' => array( 'editor', 'reviewer' ),
+	),
+	'+test2wiki' => array(
+		'bureaucrat' => array( 'flow-bot' ),
 	),
 	// ******************************************************************
 	'+arbcom_enwiki' => array(
@@ -8700,7 +8704,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled' ),
 	),
 	'+enwiki' => array(
-		'bureaucrat' => array( 'ipblock-exempt', 'accountcreator', 'sysop' ),
+		'bureaucrat' => array( 'ipblock-exempt', 'accountcreator', 'sysop', 'flow-bot' ),
 		'sysop' => array( 'rollbacker', 'accountcreator', 'abusefilter', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender' ),
 	),
 	'+enwikibooks' => array(
