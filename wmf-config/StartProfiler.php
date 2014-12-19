@@ -90,7 +90,7 @@ if ( defined( 'HHVM_VERSION' )
 	} );
 }
 
-if ( false && extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
+if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 	register_shutdown_function( function () {
 		// Function names that should be excluded from the trace.
 		$omit = array( 'include', '{closure}' );
