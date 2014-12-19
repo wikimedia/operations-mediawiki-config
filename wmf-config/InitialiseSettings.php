@@ -8019,11 +8019,12 @@ $wgConf->settings = array(
 		'sysop' => array( 'ipblock-exempt' ),
 	),
 	'+testwiki' => array(
-		'bureaucrat' => array( 'researcher', 'centralnoticeadmin', 'translationadmin' ),
+		'bureaucrat' => array( 'researcher', 'centralnoticeadmin', 'translationadmin', 'flow-bot' ),
 		'sysop' => array( 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ),
 		# 'user' => array( 'editor', 'reviewer' ),
 	),
 	'+test2wiki' => array(
+		'bureaucrat' => array( 'flow-bot' ),
 		'qa_automation' => array( 'qa_automation' ), // For browser tests, bug 58375
 	),
 	// ******************************************************************
@@ -8583,9 +8584,12 @@ $wgConf->settings = array(
 		'sysop' => array( 'ipblock-exempt' ),
 	),
 	'+testwiki' => array(
-		'bureaucrat' => array( 'sysop', 'researcher', 'translationadmin', 'centralnoticeadmin' ),
+		'bureaucrat' => array( 'sysop', 'researcher', 'translationadmin', 'centralnoticeadmin', 'flow-bot' ),
 		'sysop' => array( 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ),
 		# 'user' => array( 'editor', 'reviewer' ),
+	),
+	'+test2wiki' => array(
+		'bureaucrat' => array( 'flow-bot' ),
 	),
 	// ******************************************************************
 	'+arbcom_enwiki' => array(
