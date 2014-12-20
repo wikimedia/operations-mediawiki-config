@@ -108,11 +108,30 @@ $wmgMonologConfig =  array(
 
 // Add logging channels defined in $wgDebugLogGroups
 foreach ( $wgDebugLogGroups as $group => $dest ) {
+	$sample = false;
 	if ( is_array( $dest ) ) {
+		// NOTE: sampled logs are not guaranteed to store the same events in
+		// logstash and via udp2log since the two event handlers independently
+		// check the probability of emitting.
+		$sample = isset( $dest['sample'] ) ? $dest['sample'] : false;
 		$dest = $dest['destination'];
 	}
+	if ( $sample === false ) {
+		$handlers = array( $group, 'logstash' );
+	} else {
+		$wmgMonologConfig['handlers']["sampled-{$group}"] = array(
+			'class' => 'MWLoggerMonologSamplingHandler',
+			'args' => array(
+				function() {
+					return MWLogger::getProvider()->getHandler( 'logstash' );
+				},
+				$sample,
+			),
+		);
+		$handlers = array( $group, "sampled-{$group}" );
+	}
 	$wmgMonologConfig['loggers'][$group] = array(
-		'handlers' => array( $group, 'logstash' ),
+		'handlers' => $handlers,
 		'processors' => array( 'wiki', 'psr', 'pid', 'uid', 'web' ),
 	);
 	$wmgMonologConfig['handlers'][$group] = array(
