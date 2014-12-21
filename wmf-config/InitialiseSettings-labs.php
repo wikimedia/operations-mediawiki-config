@@ -513,6 +513,10 @@ return array(
 	'wmgUseBounceHandler' => array(
 		'default' => true,
 	),
+
+	'-wmgScorePath' => array(
+		'default' => "//upload.$variant.wmflabs.org/score",
+	),
 );
 
 } # wmflLabsSettings()
