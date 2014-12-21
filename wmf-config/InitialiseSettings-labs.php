@@ -472,6 +472,10 @@ return array(
 		'private' => false,
 		'fishbowl' => false,
 	),
+
+	'-wmgScorePath' => array(
+		'default' => "//upload.$variant.wmflabs.org/score",
+	),
 );
 
 } # wmflLabsSettings()

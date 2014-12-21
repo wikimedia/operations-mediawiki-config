@@ -173,6 +173,11 @@ if( $wmgUseMath ) {
 	$wgMathMathMLUrl = 'http://deployment-mathoid.eqiad.wmflabs:10042';
 }
 
+if ( $wmgUseScore ) {
+	$wgScoreFileBackend = false;
+	$wgScoreDirectory = '/data/project/upload7/score';
+}
+
 // CORS (cross-domain AJAX, bug 20814)
 // This lists the domains that are accepted as *origins* of CORS requests
 // DO NOT add domains here that aren't WMF wikis unless you really know what you're doing
