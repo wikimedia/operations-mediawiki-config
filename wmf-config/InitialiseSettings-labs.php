@@ -444,6 +444,13 @@ return array(
 		'metawiki' => true,
 	),
 
+	'wmgUseSentry' => array(
+		'default' => true,
+	),
+	'wmgSentryEndpoint' => array(
+		'default' => '//c357be0613e24340a96aeaa28dde08ad@sentry-beta.wmflabs.org/4',
+	),
+
 	// Already true in production for some wikis, bug 49193
 	'wgContentHandlerUseDB' => array(
 		'default' => false,
