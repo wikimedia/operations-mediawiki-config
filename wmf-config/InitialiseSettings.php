@@ -13706,6 +13706,29 @@ $wgConf->settings = array(
 	'wikivoyage' => true,
 ),
 
+'wmgUseContentTranslationEventLogging' => array(
+	'default' => true,
+),
+
+'wmgContentTranslationCluster' => array(
+	'default' => true,
+),
+
+'wmgUseContentTranslation' => array(
+	'default' => false,
+	'enwiki' => true,
+	'cawiki' => true,
+	'dawiki' => true,
+	'eowiki' => true,
+	'eswiki' => true,
+	'idwiki' => true,
+	'mswiki' => true,
+	'nbwiki' => true,
+	'nnwiki' => true,
+	'ptwiki' => true,
+	'svwiki' => true,
+),
+
 'wmgUseMapSources' => array(
 	'default' => false,
 	'wikivoyage' => true,
