@@ -97,13 +97,7 @@ if ( $wmgUseContentTranslation ) {
 		'prefix' => $wgDBname,
 	);
 
-	$wgContentTranslationEventLogging = $wmgContentTranslationEventLogging;
-
-	if ( $wmgContentTranslationCluster ) {
-		$wgContentTranslationCluster = $wmgContentTranslationCluster;
-	}
-
-	$wgContentTranslationDatabase = 'wikishared';
+	$wgContentTranslationTranslateInTarget = false;
 }
 
 if ( $wmgUseCentralNotice ) {

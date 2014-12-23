@@ -2737,6 +2737,27 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	}
 }
 
+if ( $wmgUseContentTranslation ) {
+	require_once "$IP/extensions/ContentTranslation/ContentTranslation.php";
+	$wgContentTranslationSiteTemplates['cx'] = 'http://cxserver.svc.eqiad.wmnet';
+	// Used for html2wikitext when publishing
+	$wgContentTranslationParsoid = array(
+		'url' => $wmgParsoidURL,
+		'timeout' => 10000,
+		'prefix' => $wgDBname,
+	);
+
+	$wgContentTranslationTranslateInTarget = true;
+
+	$wgContentTranslationEventLogging = $wmgContentTranslationEventLogging;
+
+	if ( $wmgContentTranslationCluster ) {
+		$wgContentTranslationCluster = $wmgContentTranslationCluster;
+	}
+
+	$wgContentTranslationDatabase = 'wikishared';
+}
+
 // @note getRealmSpecificFilename only works with filenames with .suffix
 // needs to be listed outside of use wikibase check below, as localisation cache
 // might be build as "aawikibooks" or something that does not have Wikibase.
