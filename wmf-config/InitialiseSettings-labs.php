@@ -257,6 +257,10 @@ return array(
 		'default' => false,
 		'enwiki' => true,
 	),
+	'wmgMFEnableWikiGrokInSidebar' => array(
+		'default' => false,
+		'enwiki' => true,
+	),
 	'wmgWikiGrokDebug' => array(
 		'default' => false,
 		'enwiki' => true,

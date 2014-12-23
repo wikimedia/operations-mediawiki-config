@@ -19,5 +19,6 @@ $wgMFForceSecureLogin = false;
 $wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
 $wgMFEnableWikiGrok = $wmgMFEnableWikiGrok;
 $wgMFEnableWikiGrokOnAllDevices = $wmgMFEnableWikiGrokOnAllDevices;
+$wgMFEnableWikiGrokInSidebar = $wmgMFEnableWikiGrokInSidebar;
 $wgWikiGrokDebug = $wmgWikiGrokDebug;
 $wgMFSpecialCaseMainPage = $wmgMFSpecialCaseMainPage;
