@@ -358,10 +358,6 @@ return array(
 	    'default' => true,
 	),
 
-	'wmgContentTranslationEventLogging' => array(
-		'default' => true,
-	),
-
 	'wmgContentTranslationCluster' => array(
 		'default' => false,
 	),
