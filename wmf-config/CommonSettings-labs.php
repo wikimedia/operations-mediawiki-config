@@ -96,14 +96,6 @@ if ( $wmgUseContentTranslation ) {
 		'timeout' => 10000,
 		'prefix' => $wgDBname,
 	);
-
-	$wgContentTranslationEventLogging = $wmgContentTranslationEventLogging;
-
-	if ( $wmgContentTranslationCluster ) {
-		$wgContentTranslationCluster = $wmgContentTranslationCluster;
-	}
-
-	$wgContentTranslationDatabase = 'wikishared';
 }
 
 if ( $wmgUseCentralNotice ) {
