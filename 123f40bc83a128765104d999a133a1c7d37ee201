@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_01e2132e",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2171,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2014-12-25T17:55:21Z",
+      "side": 1,
+      "message": "Why not set it to a wmg variable at mobile.php and then enable it at InitialiseSettings.php? This will make it easier when we want to enable it at other wikis and will make it consistent.",
+      "revId": "123f40bc83a128765104d999a133a1c7d37ee201",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
