@@ -16,6 +16,24 @@
       "revId": "123f40bc83a128765104d999a133a1c7d37ee201",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_61418f0d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2171,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2014-12-25T18:10:24Z",
+      "side": 1,
+      "message": "Because this is a \"no deploy\" week so I want to make as little changes as possible. But you\u0027re right, and it should be trivial to make it a wmg variable in a followup, or when other wikis need it.",
+      "parentUuid": "0e6cb3ef_01e2132e",
+      "revId": "123f40bc83a128765104d999a133a1c7d37ee201",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
