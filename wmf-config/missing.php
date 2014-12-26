@@ -147,7 +147,7 @@ function getProtocolAndHost() {
 function getStyleSheet( $logo ) {
 	return <<<CSS
 * {
-	font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+	font-family: 'Gill Sans MT', 'Gill Sans', sans-serif;
 	margin: 0;
 	padding: 0;
 }
