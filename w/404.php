@@ -37,7 +37,7 @@ $base_404=<<<END
 			<link rel="shortcut icon" href="/favicon.ico">
 			<style type="text/css">
 				* {
-					font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+					font-family: 'Gill Sans MT', 'Gill Sans', sans-serif;
 				}
 				a:link, a:visited {
 					color: #005b90;
