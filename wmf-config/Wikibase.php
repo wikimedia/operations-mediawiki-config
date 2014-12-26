@@ -17,6 +17,25 @@ if ( defined( 'HHVM_VERSION' ) ) {
 	$wgWBSharedCacheKey .= '-hhvm';
 }
 
+$wgWBSharedSettings = array();
+
+$wgWBSharedSettings['siteLinkGroups'] = array(
+	'wikipedia',
+	'wikinews',
+	'wikiquote',
+	'wikisource',
+	'wikivoyage',
+	'special'
+);
+
+$wgWBSharedSettings['specialSiteLinkGroups'] = array( 'commons' );
+if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki', 'testwikidatawiki' ) ) ) {
+	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'testwikidata';
+} else {
+	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'wikidata';
+}
+
+
 if ( $wmgUseWikibaseRepo ) {
 	$baseNs = 120;
 
@@ -35,6 +54,8 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgExtraNamespaces[WB_NS_QUERY] = 'Query';
 	$wgExtraNamespaces[WB_NS_QUERY_TALK] = 'Query_talk';
 
+	$wgWBRepoSettings = $wgWBSharedSettings + $wgWBRepoSettings;
+
 	// Assigning the correct content models to the namespaces
 	$wgWBRepoSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_ITEM] = NS_MAIN;
 	$wgWBRepoSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_PROPERTY] = WB_NS_PROPERTY;
@@ -44,20 +65,7 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['dataRightsText'] = 'Creative Commons CC0 License';
 	$wgWBRepoSettings['dataRightsUrl'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
 
-	$wgWBRepoSettings['siteLinkGroups'] = array(
-		'wikipedia',
-		'wikinews',
-		'wikiquote',
-		'wikisource',
-		'wikivoyage',
-		'special'
-	);
-
-	$wgWBRepoSettings['specialSiteLinkGroups'] = array( 'commons' );
-
 	if ( $wgDBname === 'testwikidatawiki' ) {
-		$wgWBRepoSettings['specialSiteLinkGroups'][] = 'testwikidata';
-
 		$wgWBRepoSettings['badgeItems'] = array(
 			'Q608' => 'wb-badge-goodarticle',
 			'Q609' => 'wb-badge-featuredarticle'
@@ -66,8 +74,6 @@ if ( $wmgUseWikibaseRepo ) {
 		// there is no cronjob dispatcher yet, this will do nothing
 		$wgWBRepoSettings['clientDbList'] = array( 'test2wiki' );
 	} else {
-		$wgWBRepoSettings['specialSiteLinkGroups'][] = 'wikidata';
-
 		$wgWBRepoSettings['badgeItems'] = array(
 			'Q17437798' => 'wb-badge-goodarticle',
 			'Q17437796' => 'wb-badge-featuredarticle',
@@ -114,6 +120,8 @@ if ( $wmgUseWikibaseRepo ) {
 
 if ( $wmgUseWikibaseClient ) {
 
+	$wgWBClientSettings = $wgWBSharedSettings + $wgWBClientSettings;
+
 	// to be safe, keeping this here although $wgDBname is default setting
 	$wgWBClientSettings['siteGlobalID'] = $wgDBname;
 
@@ -132,24 +140,7 @@ if ( $wmgUseWikibaseClient ) {
 		'wikibase-property' => 'Property'
 	);
 
-	// used by the sites module
-	$wgWBClientSettings['siteLinkGroups'] = array(
-		'wikipedia',
-		'wikinews',
-		'wikiquote',
-		'wikisource',
-		'wikivoyage',
-		'special'
-	);
-
-	$wgWBClientSettings['specialSiteLinkGroups'] = array( 'commons' );
 	$wgWBClientSettings['languageLinkSiteGroup'] = $wmgWikibaseSiteGroup;
-
-	if ( $wgDBname === 'testwikidatawiki' ) {
-		$wgWBClientSettings['specialSiteLinkGroups'][] = 'testwikidata';
-	} elseif ( $wgDBname === 'wikidatawiki' ) {
-		$wgWBClientSettings['specialSiteLinkGroups'][] = 'wikidata';
-	}
 
 	if ( $wgDBname === 'commonswiki' ) {
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
