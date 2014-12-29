@@ -1460,14 +1460,14 @@ if ( $wmgUseCentralNotice ) {
 	// for banner loading
 	if ( $wgDBname == 'testwiki' ) {
 		$wgCentralPagePath = "//test.wikipedia.org/w/index.php";
-		$wgCentralBannerDispatcher = "//test.wikipedia.org/wiki/Special:BannerRandom";
-		$wgCentralSelectedBannerDispatcher = "//test.wikipedia.org/wiki/Special:BannerLoader";
-		$wgCentralBannerRecorder = "//test.wikipedia.org/wiki/Special:RecordImpression";
+		$wgCentralBannerDispatcher = "//test.wikipedia.org/w/index.php?title=Special:BannerRandom";
+		$wgCentralSelectedBannerDispatcher = "//test.wikipedia.org/w/index.php?title=Special:BannerLoader";
+		$wgCentralBannerRecorder = "//test.wikipedia.org/w/index.php?title=Special:RecordImpression";
 	} else {
 		$wgCentralPagePath = "//{$wmfHostnames['meta']}/w/index.php";
-		$wgCentralBannerDispatcher = "//{$wmfHostnames['meta']}/wiki/Special:BannerRandom";
-		$wgCentralSelectedBannerDispatcher = "//{$wmfHostnames['meta']}/wiki/Special:BannerLoader";
-		$wgCentralBannerRecorder = "//{$wmfHostnames['meta']}/wiki/Special:RecordImpression";
+		$wgCentralBannerDispatcher = "//{$wmfHostnames['meta']}/w/index.php?title=Special:BannerRandom";
+		$wgCentralSelectedBannerDispatcher = "//{$wmfHostnames['meta']}/w/index.php?title=Special:BannerLoader";
+		$wgCentralBannerRecorder = "//{$wmfHostnames['meta']}/w/index.php?title=Special:RecordImpression";
 	}
 
 	$wgCentralNoticeChooseBannerOnClient = true;
