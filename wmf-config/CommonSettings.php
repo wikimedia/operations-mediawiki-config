@@ -1404,12 +1404,12 @@ if ( $wmgUseCentralNotice ) {
 	// for banner loading
 	if ( $wgDBname == 'testwiki' ) {
 		$wgCentralPagePath = "//test.wikipedia.org/w/index.php";
-		$wgCentralSelectedBannerDispatcher = "//test.wikipedia.org/wiki/Special:BannerLoader";
-		$wgCentralBannerRecorder = "//test.wikipedia.org/wiki/Special:RecordImpression";
+		$wgCentralSelectedBannerDispatcher = "//test.wikipedia.org/w/index.php?title=Special:BannerLoader";
+		$wgCentralBannerRecorder = "//test.wikipedia.org/w/index.php?title=Special:RecordImpression";
 	} else {
 		$wgCentralPagePath = "//{$wmfHostnames['meta']}/w/index.php";
-		$wgCentralSelectedBannerDispatcher = "//{$wmfHostnames['meta']}/wiki/Special:BannerLoader";
-		$wgCentralBannerRecorder = "//{$wmfHostnames['meta']}/wiki/Special:RecordImpression";
+		$wgCentralSelectedBannerDispatcher = "//{$wmfHostnames['meta']}/w/index.php?title=Special:BannerLoader";
+		$wgCentralBannerRecorder = "//{$wmfHostnames['meta']}/w/index.php?title=Special:RecordImpression";
 	}
 
 	// Allow only these domains to access CentralNotice data through the reporter
