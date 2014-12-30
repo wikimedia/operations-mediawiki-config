@@ -62,14 +62,8 @@ if ( $wmgMobileFrontend ) {
 	$wgMFNoMobileCategory = $wmgMFNoMobileCategory;
 	$wgMFNoMobilePages = $wmgMFNoMobilePages;
 
-	// Hack to work around https://bugzilla.wikimedia.org/show_bug.cgi?id=35215
 	$wgHooks['EnterMobileMode'][] = function() {
-		global $wgCentralHost, $wgCentralPagePath, $wgCentralBannerDispatcher, $wgCentralBannerRecorder, $wgCentralAuthCookieDomain;
-
-		$wgCentralHost = str_replace( 'meta.wikimedia.org', 'meta.m.wikimedia.org', $wgCentralHost );
-		$wgCentralPagePath = str_replace( 'meta.wikimedia.org', 'meta.m.wikimedia.org', $wgCentralPagePath );
-		$wgCentralBannerDispatcher = str_replace( 'meta.wikimedia.org', 'meta.m.wikimedia.org', $wgCentralBannerDispatcher );
-		$wgCentralBannerRecorder = str_replace( 'meta.wikimedia.org', 'meta.m.wikimedia.org', $wgCentralBannerRecorder );
+		global $wgCentralAuthCookieDomain;
 
 		// Hack for bug https://bugzilla.wikimedia.org/show_bug.cgi?id=47647
 		if ( $wgCentralAuthCookieDomain == 'commons.wikimedia.org' ) {
