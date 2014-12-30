@@ -12336,6 +12336,11 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 ),
 
+'wmgMFAnonymousEditing' => array(
+	'default' => false,
+	'itwiki' => true, // bug 72541, T85317
+),
+
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
 	'cswiki' => array(
