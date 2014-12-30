@@ -2152,10 +2152,6 @@ if ( $wmgMobileFrontend || $wmgUseFlow ) {
 
 require( getRealmSpecificFilename( "$wmfConfigDir/mobile.php" ) );
 
-if ( $wgDBname === 'itwiki' ) {
-	$wgMFAnonymousEditing = true; // bug 72541, T85317
-}
-
 # MUST be after MobileFrontend initialization
 if ( $wmgEnableTextExtracts ) {
 	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
