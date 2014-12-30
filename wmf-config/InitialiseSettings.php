@@ -7014,7 +7014,7 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 		'accountcreator' => array(
 			'override-antispoof' => true,
-			'tboverride' => true,
+			'tboverride-account' => true,
 			// also in some exemption lists'
 		),
 		'autoreviewer' => array( 'autopatrol' => true ),
