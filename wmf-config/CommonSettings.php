@@ -1647,11 +1647,6 @@ if ( $wmgUseCollection ) {
 	$wgCollectionPortletFormats = $wmgCollectionPortletFormats;
 }
 
-# OpenSearchXml was merged to core.
-if ( !is_callable( 'ApiOpenSearch::getOpenSearchTemplate' ) ) {
-	include( "$IP/extensions/OpenSearchXml/OpenSearchXml.php" );
-}
-
 # Various system to allow/prevent flooding
 # (including exemptions for scheduled outreach events)
 require( "$wmfConfigDir/throttle.php" );
