@@ -2824,6 +2824,10 @@ if ( $wmgZeroPortal ) {
 
 	$wgZeroPortalImpersonateUser = 'Impersonator';
 
+	// zerowiki needs to enable Common.css for restricted pages in order to
+	// override default login page styling on Special:UserLogin
+	$wgAllowSiteCSSOnRestrictedPages = true;
+
 	unset( $zpUserRights );
 
 	$wgUsersNotifiedOnAllChanges[] = 'ABaso(WMF)';
