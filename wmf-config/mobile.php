@@ -102,7 +102,7 @@ if ( $wmgMobileFrontend ) {
 	$wgMFEnableBeta = true;
 
 	// enable editing for unregistered users for special wikis
-	$wgMFAnonymousEditing = $wmgMFAnonymousEditing;
+	$wgMFEditorOptions = $wmgMFEditorOptions;
 
 	$wgMFUseWikibaseDescription = true; // Alpha experiment
 
