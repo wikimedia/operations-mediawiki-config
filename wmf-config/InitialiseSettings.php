@@ -5417,7 +5417,7 @@ $wgConf->settings = array(
 		109 => 'Flexion_Diskussion',
 	),
 	'dvwiktionary' => array(
-		NS_PROJECT_TALK => 'ވިކިރަދީފު ޚިޔާ', // Bug 46846
+		NS_PROJECT_TALK => 'ވިކިރަދީފު_ޚިޔާލު', // Bug 46846
 	),
 	'elwiktionary' => array(
 		100 => 'Παράρτημα',
