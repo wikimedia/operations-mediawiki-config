@@ -5560,6 +5560,12 @@ $wgConf->settings = array(
 		104 => 'सूची',
 		105 => 'सूची_चर्चा',
 	),
+	'ndswiktionary' => array( // T85122
+		100 => 'Anhang',
+		101 => 'Anhang_Diskuschoon',
+		114 => 'Zitaten',
+		115 => 'Zitaten_Diskuschoon',
+	),
 	'nowiktionary' => array(
 		100 => 'Tillegg',
 		101 => 'Tilleggdiskusjon',
