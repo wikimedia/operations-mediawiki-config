@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_c7996f72",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2015-01-03T18:57:56Z",
+      "side": 1,
+      "message": "see here",
+      "revId": "b88e3384ea68fd7c052915840312730512fef6a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_67a0a38d",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 58,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2015-01-03T18:57:56Z",
+      "side": 1,
+      "message": "here",
+      "revId": "b88e3384ea68fd7c052915840312730512fef6a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_879b7767",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2015-01-03T18:57:56Z",
+      "side": 1,
+      "message": "and here",
+      "revId": "b88e3384ea68fd7c052915840312730512fef6a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_a796bb40",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2015-01-03T18:57:56Z",
+      "side": 1,
+      "message": "appears this is one of those wikibase lib settings, meaning we set it also in $wgWBRepoSettings (see above).\n\nmaybe we don\u0027t need both, since we have client enabled everywhere now, or change it in some way that it is defined once (e.g. to some variable) and then used both for client and repo settings.",
+      "revId": "b88e3384ea68fd7c052915840312730512fef6a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
