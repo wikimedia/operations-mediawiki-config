@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_674423be",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2015-01-03T20:38:38Z",
+      "side": 1,
+      "message": "out of context now",
+      "revId": "71fb3aa58ff51e81f2776c14f82d7b6b2a04cd23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
