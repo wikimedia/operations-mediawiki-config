@@ -67,6 +67,24 @@
       "revId": "b88e3384ea68fd7c052915840312730512fef6a9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_47bc7fb1",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2015-01-03T19:16:32Z",
+      "side": 1,
+      "message": "it\u0027s a bit weird to have this different than the repo setting, although test2 and testwiki don\u0027t have repo enabled. would prefer them consistent or set just once, perhaps. (in which ever way is best)",
+      "parentUuid": "0e6cb3ef_a796bb40",
+      "revId": "b88e3384ea68fd7c052915840312730512fef6a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
