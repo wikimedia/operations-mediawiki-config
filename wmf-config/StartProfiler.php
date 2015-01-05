@@ -5,65 +5,14 @@
 // NOTE: this file is loaded early on in WebStart.php, so be careful with
 // globals.
 
-$wmgUseXhprofProfiler = defined( 'HHVM_VERSION' )
-	&& ini_get( 'hhvm.stats.enable_hot_profiler' );
+$wmgUseXhprofProfiler = ini_get( 'hhvm.stats.enable_hot_profiler' );
 
-if ( isset( $_REQUEST['forceprofile'] ) ) {
-	// Non-logged profiling for debugging
-	if ( $wmgUseXhprofProfiler ) {
-		$wgProfiler['class'] = 'ProfilerXhprof';
-		$wgProfiler['flags'] = XHPROF_FLAGS_NO_BUILTINS;
-	} else {
-		$wgProfiler['class'] = 'ProfilerStandard';
-	}
-	$wgProfiler['output'] = 'text';
-
-} elseif ( isset( $_SERVER['HTTP_HOST'] )
-	&& $_SERVER['HTTP_HOST'] === 'test2.wikipedia.org' )
-{
-	// Profiling hack for test2 wiki (not sampled, but shouldn't distort too
-	// much)
-	if ( $wmgUseXhprofProfiler ) {
-		$wgProfiler['class'] = 'ProfilerXhprof';
-		$wgProfiler['flags'] = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
-	} else {
-		$wgProfiler['class'] = 'ProfilerStandard';
-	}
-	$wgProfiler['output'] = 'udp';
-	$wgProfiler['profileID'] = 'test2';
-
-} elseif ( false && $wmfDatacenter == 'eqiad' ) {
-	// Normal case: randomly (or not) selected for logged profiling sample
-	if ( $wmgUseXhprofProfiler ) {
-		$wgProfiler['class'] = 'ProfilerXhprof';
-		$wgProfiler['flags'] = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
-	} else {
-		$wgProfiler['class'] = 'ProfilerStandard';
-	}
-	$wgProfiler['output'] = 'udp';
-	$wgProfiler['sampling'] = 50;
-	// $IP is something like '/srv/mediawiki/php-1.19'
-	$version = str_replace( 'php-', '', basename( $IP ) );
-	if ( PHP_SAPI === 'cli' ) {
-		$wgProfiler['profileID'] = "cli-$version";
-	} elseif ( strpos( $_SERVER['REQUEST_URI'], '/w/thumb.php' ) !== false ) {
-		$wgProfiler['profileID'] = "thumb-$version";
-	} elseif ( strpos( $_SERVER['REQUEST_URI'], '/rpc/RunJobs.php' ) !== false ) {
-		$wgProfiler['profileID'] = "runjobs-$version";
-	} else {
-		$wgProfiler['profileID'] = $version;
-	}
-
-} elseif ( $wmfRealm === 'labs' ) {
-	if ( $wmgUseXhprofProfiler ) {
-		$wgProfiler['class'] = 'ProfilerXhprof';
-		$wgProfiler['flags'] = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
-	} else {
-		$wgProfiler['class'] = 'ProfilerStandard';
-	}
-	$wgProfiler['output'] = 'udp';
-	$coreGit = new GitInfo( $IP );
-	$wgProfiler['profileID'] = $coreGit->getHeadSHA1() ?: 'labs';
+if ( isset( $_REQUEST['forceprofile'] ) && $wmgUseXhprofProfiler ) {
+	$wgProfiler = array(
+		'class'  => 'ProfilerXhprof',
+		'flags'  => XHPROF_FLAGS_NO_BUILTINS,
+		'output' => 'text',
+	);
 }
 
 if ( $wmgUseXhprofProfiler
