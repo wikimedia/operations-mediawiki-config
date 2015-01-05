@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_b91fbb5d",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-01-05T17:47:41Z",
+      "side": 1,
+      "message": "Missing use() clause for $logstashHandler. Fixed in PS5.",
+      "revId": "ffe5fb814561244d292d9bee9969694b4338b80c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
