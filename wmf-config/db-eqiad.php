@@ -91,9 +91,7 @@ $wgLBFactoryConf = array(
 		'db1052' => 0,   # 2.8TB  96GB
 		'db1051' => 0,   # 2.8TB  96GB, vslow, dump
 		'db1055' => 0,   # 2.8TB  96GB, watchlist, recentchangeslinked, contributions, logpager
-		'db1062' => 0,   # 2.8TB 128GB, watchlist, recentchangeslinked, contributions, logpager
 		'db1057' => 200, # 2.8TB  96GB
-		'db1061' => 400, # 2.8TB 128GB
 		'db1065' => 200, # 2.8TB 160GB, api
 		'db1066' => 200, # 2.8TB 160GB, api
 		'db1072' => 500, # 2.8TB 160GB
@@ -144,6 +142,7 @@ $wgLBFactoryConf = array(
 		'db1015' => 400, # 1.4TB  64GB
 		'db1006' => 400, # 1.4TB  64GB
 		'db1037' => 400, # 1.4TB  64GB
+		# rebuild 'db1061' => 400, # 2.8TB 128GB
 	),
 	's7' => array(
 		'db1033' => 0,   # 1.4TB  64GB, 
@@ -153,6 +152,7 @@ $wgLBFactoryConf = array(
 		'db1028' => 400, # 1.4TB  64GB
 		'db1034' => 400, # 1.4TB  64GB
 		'db1039' => 400, # 1.4TB  64GB
+		# rebuild 'db1062' => 0,   # 2.8TB 128GB
 	),
 	'virt1000' => array(
 		'virt1000' => 100,   # I have no idea if this is right
@@ -309,19 +309,15 @@ $wgLBFactoryConf = array(
 	'enwiki' => array(
 		'watchlist' => array(
 			'db1055' => 1,
-			'db1062' => 1,
 		),
 		'recentchangeslinked' => array(
 			'db1055' => 1,
-			'db1062' => 1,
 		),
 		'contributions' => array(
 			'db1055' => 1,
-			'db1062' => 1,
 		),
 		'logpager' => array(
 			'db1055' => 1,
-			'db1062' => 1,
 		),
 		'dump' => array(
 			'db1051' => 1,
