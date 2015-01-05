@@ -7333,7 +7333,23 @@ $wgConf->settings = array(
 		'editor' => array( 'rollback' => true ),
 	),
 	'kowiki' => array(
+		'autoconfirmed' => array( // T85621
+			'upload' => false,
+			'reupload' => false,
+		),
+		'confirmed' => array( // T85621
+			'upload' => false,
+			'reupload' => false,
+		),
 		'rollbacker' => array( 'rollback' => true ),
+		'uploader' => array( // T85621
+			'upload' => true,
+			'reupload' => true,
+			'reupload-own' => true,
+			'reupload-shared' => true,
+			'movefile' => true,
+		),
+		'user' => array( 'reupload-own' => false ), // T85621
 	),
 	'labswiki' => array(
 		'*' => array(
@@ -8302,7 +8318,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'trusted' ),
 	),
 	'+kowiki' => array(
-		'sysop' => array( 'rollbacker', 'confirmed' ),
+		'sysop' => array( 'rollbacker', 'confirmed', 'uploader' ), //T85621
 	),
 	'+labswiki' => array('shellmanagers' => array( 'shell')),
 	'+legalteamwiki' => array( // bug 61222
@@ -8879,7 +8895,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'trusted' ),
 	),
 	'+kowiki' => array(
-		'sysop' => array( 'rollbacker', 'confirmed' ),
+		'sysop' => array( 'rollbacker', 'confirmed', 'uploader' ), // T85621
 	),
 	'+legalteamwiki' => array( // bug 61222
 		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'bureaucrat', 'translationadmin' ),
