@@ -143,7 +143,7 @@ foreach ( $wgDebugLogGroups as $group => $dest ) {
 		$wmgMonologConfig['handlers']["sampled-{$group}"] = array(
 			'class' => 'MWLoggerMonologSamplingHandler',
 			'args' => array(
-				function() {
+				function() use ( $logstashHandler ) {
 					return MWLogger::getProvider()->getHandler(
 						$logstashHandler
 					);
