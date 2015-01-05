@@ -5,100 +5,52 @@
 // NOTE: this file is loaded early on in WebStart.php, so be careful with
 // globals.
 
-$wmgUseXhprofProfiler = defined( 'HHVM_VERSION' )
-	&& ini_get( 'hhvm.stats.enable_hot_profiler' );
-
-if ( isset( $_REQUEST['forceprofile'] ) ) {
-	// Non-logged profiling for debugging
-	if ( $wmgUseXhprofProfiler ) {
-		$wgProfiler['class'] = 'ProfilerXhprof';
-		$wgProfiler['flags'] = XHPROF_FLAGS_NO_BUILTINS;
-	} else {
-		$wgProfiler['class'] = 'ProfilerStandard';
-	}
-	$wgProfiler['output'] = 'text';
-
-} elseif ( isset( $_SERVER['HTTP_HOST'] )
-	&& $_SERVER['HTTP_HOST'] === 'test2.wikipedia.org' )
-{
-	// Profiling hack for test2 wiki (not sampled, but shouldn't distort too
-	// much)
-	if ( $wmgUseXhprofProfiler ) {
-		$wgProfiler['class'] = 'ProfilerXhprof';
-		$wgProfiler['flags'] = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
-	} else {
-		$wgProfiler['class'] = 'ProfilerStandard';
-	}
-	$wgProfiler['output'] = 'udp';
-	$wgProfiler['profileID'] = 'test2';
-
-} elseif ( false && $wmfDatacenter == 'eqiad' ) {
-	// Normal case: randomly (or not) selected for logged profiling sample
-	if ( $wmgUseXhprofProfiler ) {
-		$wgProfiler['class'] = 'ProfilerXhprof';
-		$wgProfiler['flags'] = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
-	} else {
-		$wgProfiler['class'] = 'ProfilerStandard';
-	}
-	$wgProfiler['output'] = 'udp';
-	$wgProfiler['sampling'] = 50;
-	// $IP is something like '/srv/mediawiki/php-1.19'
-	$version = str_replace( 'php-', '', basename( $IP ) );
-	if ( PHP_SAPI === 'cli' ) {
-		$wgProfiler['profileID'] = "cli-$version";
-	} elseif ( strpos( $_SERVER['REQUEST_URI'], '/w/thumb.php' ) !== false ) {
-		$wgProfiler['profileID'] = "thumb-$version";
-	} elseif ( strpos( $_SERVER['REQUEST_URI'], '/rpc/RunJobs.php' ) !== false ) {
-		$wgProfiler['profileID'] = "runjobs-$version";
-	} else {
-		$wgProfiler['profileID'] = $version;
+if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
+	// Single-request profiling, via 'forceprofile=1' (web) or '--profiler=text' (CLI).
+	if ( isset( $_REQUEST['forceprofile'] ) || PHP_SAPI === 'cli'  ) {
+		$wgProfiler = array(
+			'class'  => 'ProfilerXhprof',
+			'flags'  => XHPROF_FLAGS_NO_BUILTINS,
+			'output' => 'text',
+		);
 	}
 
-} elseif ( $wmfRealm === 'labs' ) {
-	if ( $wmgUseXhprofProfiler ) {
-		$wgProfiler['class'] = 'ProfilerXhprof';
-		$wgProfiler['flags'] = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
-	} else {
-		$wgProfiler['class'] = 'ProfilerStandard';
-	}
-	$wgProfiler['output'] = 'udp';
-	$coreGit = new GitInfo( $IP );
-	$wgProfiler['profileID'] = $coreGit->getHeadSHA1() ?: 'labs';
-}
-
-if ( $wmgUseXhprofProfiler
-	&& isset( $_SERVER['HTTP_FORCE_LOCAL_XHPROF'] )
-	&& isset( $_SERVER['REMOTE_ADDR'] )
-	&& $_SERVER['REMOTE_ADDR'] == '127.0.0.1'
-	&& is_writable( '/tmp/xhprof' ) )
-{
-	xhprof_enable();
-	register_shutdown_function( function() {
-		$prof = xhprof_disable();
-		$titleFormat = "%-75s %6s %13s %13s %13s\n";
-		$format = "%-75s %6d %13.3f %13.3f %13.3f%%\n";
-		$out = sprintf( $titleFormat, 'Name', 'Calls', 'Total', 'Each', '%' );
-		if ( empty( $prof['main()']['wt'] ) ) {
-			return;
-		}
-		$total = $prof['main()']['wt'];
-		uksort( $prof, function( $a, $b ) use ( $prof ) {
-			if ( $prof[$a]['wt'] < $prof[$b]['wt'] ) {
-				return 1;
-			} elseif ( $prof[$a]['wt'] > $prof[$b]['wt'] ) {
-				return -1;
-			} else {
-				return 0;
+	// If HTTP_FORCE_LOCAL_XHPROF is set in the shell environment,
+	// profile all requests from localhost.
+	if (
+		isset( $_SERVER['HTTP_FORCE_LOCAL_XHPROF'] )
+		&& isset( $_SERVER['REMOTE_ADDR'] )
+		&& $_SERVER['REMOTE_ADDR'] == '127.0.0.1'
+		&& is_writable( '/tmp/xhprof' )
+	) {
+		xhprof_enable();
+		register_shutdown_function( function() {
+			$prof = xhprof_disable();
+			$titleFormat = "%-75s %6s %13s %13s %13s\n";
+			$format = "%-75s %6d %13.3f %13.3f %13.3f%%\n";
+			$out = sprintf( $titleFormat, 'Name', 'Calls', 'Total', 'Each', '%' );
+			if ( empty( $prof['main()']['wt'] ) ) {
+				return;
 			}
-		} );
+			$total = $prof['main()']['wt'];
+			uksort( $prof, function( $a, $b ) use ( $prof ) {
+				if ( $prof[$a]['wt'] < $prof[$b]['wt'] ) {
+					return 1;
+				} elseif ( $prof[$a]['wt'] > $prof[$b]['wt'] ) {
+					return -1;
+				} else {
+					return 0;
+				}
+			} );
 
-		foreach ( $prof as $name => $info ) {
-			$out .= sprintf( $format, $name, $info['ct'], $info['wt'] / 1000,
-				$info['wt'] / $info['ct'] / 1000,
-				$info['wt'] / $total * 100 );
-		}
-		file_put_contents( '/tmp/xhprof/' . date( 'Y-m-d\TH:i:s' ) . '.prof', $out );
-	} );
+			foreach ( $prof as $name => $info ) {
+				$out .= sprintf( $format, $name, $info['ct'], $info['wt'] / 1000,
+					$info['wt'] / $info['ct'] / 1000,
+					$info['wt'] / $total * 100 );
+			}
+			file_put_contents( '/tmp/xhprof/' . date( 'Y-m-d\TH:i:s' ) . '.prof', $out );
+		} );
+	}
 }
 
 if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
