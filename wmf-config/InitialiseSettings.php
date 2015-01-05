@@ -6567,7 +6567,7 @@ $wgConf->settings = array(
 	'+lawikisource' => array( 102 => 1, 106 => 1 ),
 	'+labswiki' => array( 12 => 1, 112 => 1 ),
 	'+ltwiki' => array( 100 => 1 ),
-	'+mediawikiwiki' => array( 12 => 1, 100 => 1, 102 => 1 ),
+	'+mediawikiwiki' => array( 12 => 1, 100 => 1, 102 => 1, 104 => 1, 106 => 1 ), // Bug T85807
 	'+metawiki' => array( 12 => 1, 200 => 1, 202 => 1 ),
 	'+mlwikisource' => array( 100 => 1, 104 => 1 ),
 	'+nlwikisource' => array( 102 => 1 ),
