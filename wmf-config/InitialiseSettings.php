@@ -7571,6 +7571,9 @@ $wgConf->settings = array(
 	),
 	'+ruwiki' => array(
 		'*' => array( 'patrolmarks' => true, ),
+		'autoconfirmed' => array(
+			'collectionsaveascommunitypage' => false, // T85780
+		),
 		'rollbacker' => array( 'rollback' => true ),
 		'uploader' => array( // bug 12334
 			'upload' => true,
