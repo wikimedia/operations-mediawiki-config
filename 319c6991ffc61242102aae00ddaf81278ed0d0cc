@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_e2841cb8",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 2750,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2015-01-06T17:58:10Z",
+      "side": 1,
+      "message": "Now we also need to set this false in CommonSettings-labs to retain the current configuration there.",
+      "revId": "319c6991ffc61242102aae00ddaf81278ed0d0cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
