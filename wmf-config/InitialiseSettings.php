@@ -1211,7 +1211,7 @@ $wgConf->settings = array(
 	'ptwiki' => '/wiki/Wikipedia:Carregar_ficheiro',
 	'ptwikibooks' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pt',
 	'ptwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pt', // bug 42934
-	'rowiki' => '/wiki/Wikipedia:Trimite_fi%C5%9Fier',
+	'rowiki' => '/wiki/Wikipedia:Trimite_fi%C8%99ier', // T85665
 	'ruwiki' => false, // bug 12334
 	'ruwikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ru',
 	'sewikimedia' => false, // bug 61947
@@ -1219,6 +1219,7 @@ $wgConf->settings = array(
 	'svwikisource' => false,
 	'svwiktionary' => false,
 	'specieswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
+	'tawiki' => '/wiki/விக்கிப்பீடியா:File_Upload_Wizard', // T85697
 	'tewiki' => '/wiki/వికీపీడియా:ఫైల్_ఎక్కింపు_విజర్డు', // bug 57042
 	'thwiki' => '/wiki/%E0%B8%A7%E0%B8%B4%E0%B8%81%E0%B8%B4%E0%B8%9E%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2:%E0%B8%AD%E0%B8%B1%E0%B8%9B%E0%B9%82%E0%B8%AB%E0%B8%A5%E0%B8%94',
 	'zhwiki' => '/wiki/Project:%E4%B8%8A%E4%BC%A0',
