@@ -8675,7 +8675,7 @@ $wgConf->settings = array(
 		),
 	),
 	'+collabwiki' => array(
-		'bureaucrat' => array( 'translationadmin' ),
+		'bureaucrat' => array( 'translationadmin', 'sysop', 'bureaucrat' ),
 	),
 	'+commonswiki' => array(
 		'bureaucrat' => array( 'gwtoolset', 'ipblock-exempt', 'OTRS-member', 'translationadmin' ), // bug 48620, 63124
