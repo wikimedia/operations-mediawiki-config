@@ -6,8 +6,13 @@
 // globals.
 
 if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
-	// Single-request profiling, via 'forceprofile=1' (web) or '--profiler=text' (CLI).
-	if ( isset( $_REQUEST['forceprofile'] ) || PHP_SAPI === 'cli'  ) {
+	// One-off request profiling, via the 'forceprofile' URL parameter
+	// (for web requests) or '--profiler=text' arg (for CLI scripts).
+	if ( PHP_SAPI === 'cli' || (
+		isset( $_REQUEST['forceprofile'] )
+		&& isset( $wmgForceProfilePassword )
+		&& $_REQUEST['forceprofile'] === $wmgForceProfilePassword
+	) ) {
 		$wgProfiler = array(
 			'class'  => 'ProfilerXhprof',
 			'flags'  => XHPROF_FLAGS_NO_BUILTINS,
