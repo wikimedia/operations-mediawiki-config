@@ -4185,6 +4185,7 @@ $wgConf->settings = array(
 		'CentralAuth-Bug39996' => "udp://$wmfUdp2logDest/centralauth-bug39996", // -legoktm 2014-07-14 for bug 39996
 		'CentralAuthRename' => "udp://$wmfUdp2logDest/centralauthrename", // -legoktm 2014-07-14 for bug 67875
 		'CentralAuthUserMerge' => "udp://$wmfUdp2logDest/centralauthusermerge",
+		'Renameuser' => "udp://$wmfUdp2logDest/renameuser",
 		'GettingStarted' => "udp://$wmfUdp2logDest/gettingstarted",
 		'zero' => "udp://$wmfUdp2logDest/zero", // zero-rated debug log
 		'DBPerformance' => "udp://$wmfUdp2logDest/dbperformance",
