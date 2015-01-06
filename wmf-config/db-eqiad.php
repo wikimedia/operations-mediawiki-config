@@ -142,7 +142,7 @@ $wgLBFactoryConf = array(
 		'db1015' => 400, # 1.4TB  64GB
 		'db1006' => 400, # 1.4TB  64GB
 		'db1037' => 400, # 1.4TB  64GB
-		# rebuild 'db1061' => 400, # 2.8TB 128GB
+		'db1061' => 500, # 2.8TB 128GB
 	),
 	's7' => array(
 		'db1033' => 0,   # 1.4TB  64GB, 
@@ -152,7 +152,7 @@ $wgLBFactoryConf = array(
 		'db1028' => 400, # 1.4TB  64GB
 		'db1034' => 400, # 1.4TB  64GB
 		'db1039' => 400, # 1.4TB  64GB
-		# rebuild 'db1062' => 0,   # 2.8TB 128GB
+		'db1062' => 500, # 2.8TB 128GB
 	),
 	'virt1000' => array(
 		'virt1000' => 100,   # I have no idea if this is right
