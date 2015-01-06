@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e6cb3ef_27785d25",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 2742,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2015-01-06T08:34:12Z",
+      "side": 1,
+      "message": "This is yet to be created as far as I understand. Is that correct?\n\nI think we will not be using https but http with the internal instance.",
+      "revId": "814b248f013fb507e628a7ca0f3f9bbd1465a011",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e6cb3ef_c7896128",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 13722,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2015-01-06T08:34:12Z",
+      "side": 1,
+      "message": "Alphabetically this should be eo, then es.",
+      "revId": "814b248f013fb507e628a7ca0f3f9bbd1465a011",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
