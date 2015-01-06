@@ -25,8 +25,6 @@ mwconfig_files_txt=(
 	liquidthreads.php
 	logging.php
 	logging-labs.php
-	lucene-common.php
-	lucene-production.php
 	mc.php
 	mc-labs.php
 	missing.php
@@ -111,8 +109,6 @@ other_config_file=(
 	httpd/wikimedia.conf
 	httpd/wikimania.conf
 	httpd/wwwportals.conf
-
-	lucene/lsearch-global-2.1.conf
 )
 
 for i in ./*

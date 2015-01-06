@@ -74,7 +74,6 @@ $IP/extensions/MobileFrontend/MobileFrontend.php
 $IP/extensions/MoodBar/MoodBar.php
 $IP/extensions/MultimediaViewer/MultimediaViewer.php
 $IP/extensions/MwEmbedSupport/MwEmbedSupport.php
-$IP/extensions/MWSearch/MWSearch.php
 $IP/extensions/NavigationTiming/NavigationTiming.php
 $IP/extensions/NewUserMessage/NewUserMessage.php
 $IP/extensions/Nuke/SpecialNuke.php

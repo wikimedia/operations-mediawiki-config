@@ -20,7 +20,6 @@ $wgRCFeeds['redis'] = array(
 $wgDebugLogGroups['CentralAuthVerbose'] = "udp://$wmfUdp2logDest/centralauth";
 $wgDebugLogGroups['dnsblacklist'] = "udp://$wmfUdp2logDest/dnsblacklist";
 $wgDebugLogGroups['exception-json'] = "udp://$wmfUdp2logDest/exception-json";
-$wgDebugLogGroups['mwsearch'] = "udp://$wmfUdp2logDest/mwsearch";
 $wgDebugLogGroups['squid'] = "udp://$wmfUdp2logDest/squid";
 
 $wgUDPProfilerHost = 'deployment-fluoride.eqiad.wmflabs';  // OL, 2013-11-14
