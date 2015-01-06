@@ -927,15 +927,7 @@ wfProfileOut( "$fname-misc2" );
 
 # :SEARCH:
 
-# Better make sure the global setting is enabled
-$wgUseLuceneSearch = $wmfRealm != 'labs' &&
-	in_array( $wgDBname, array( 'enwiki', 'nlwiki', 'ruwiki' ) );
-if ( $wgUseLuceneSearch ) {
-	wfProfileIn( "$fname-lucene" );
-	include( "$wmfConfigDir/lucene-common.php" );
-	wfProfileOut( "$fname-lucene" );
-}
-# New wikis are special and get Cirrus :)
+# All wikis are special and get Cirrus :)
 if ( $wmgUseCirrus ) {
 	wfProfileIn( "$fname-CirrusSearch" );
 	# Cirrus uses SearchUpdate, turn it back on
@@ -944,9 +936,7 @@ if ( $wmgUseCirrus ) {
 }
 
 // Case-insensitive title prefix search extension
-// Load this _after_ Lucene so Lucene's prefix search can be used
-// when available (for OpenSearch suggestions and AJAX search mode)
-// But note we still need TitleKey for "go" exact matches and similar.
+//
 // CirrusSearch, on the other hand, has absorbed its functionality so
 // for CirrusSearch wikis it is no longer required.
 if ( $wmgUseTitleKey && !$wmgUseCirrus ) {

@@ -4178,7 +4178,6 @@ $wgConf->settings = array(
 		'EventLogging' => "udp://$wmfUdp2logDest/eventlogging",
 		'torblock' => "udp://$wmfUdp2logDest/torblock",
 		'mobile' => "udp://$wmfUdp2logDest/mobile",
-		'mwsearch' => "udp://$wmfUdp2logDest/mwsearch",
 		#'MessageCache' => "udp://$wmfUdp2logDest/messagecache", // spammy
 		'temp-debug' => "udp://$wmfUdp2logDest/temp-debug", // generic admin debug log
 		'CentralAuth' => "udp://$wmfUdp2logDest/centralauth", // -pgehres 2013/05/09, tmp for SUL finalization

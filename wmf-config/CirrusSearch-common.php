@@ -14,10 +14,6 @@
 require_once( "$IP/extensions/Elastica/Elastica.php" );
 require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
 $wgSearchType = 'CirrusSearch';
-if ( $wmfRealm != 'labs' && in_array( $wgDBname, array( 'enwiki', 'nlwiki', 'ruwiki' ) ) ) {
-	$wgSearchTypeAlternatives = array( 'LuceneSearch' );
-}
-$wgEnableLucenePrefixSearch = false;
 $wgCirrusSearchShowNowUsing = true;
 
 if ( $wmgUseClusterJobqueue ) {
