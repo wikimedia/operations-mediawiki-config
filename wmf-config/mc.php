@@ -3,7 +3,7 @@
 $wgMainCacheType = 'memcached-pecl';
 
 $wgMemCachedPersistent = false;
-$wgMemCachedTimeout = 0.25 * 1e6;  // 250kus (a quarter of a second).
+$wgMemCachedTimeout = 0.25 * 1e6;  // 250ms
 
 $wgObjectCaches['memcached-pecl'] = array(
 	'class'      => 'MemcachedPeclBagOStuff',
