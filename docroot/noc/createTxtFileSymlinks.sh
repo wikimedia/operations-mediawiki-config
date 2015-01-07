@@ -96,21 +96,6 @@ mwconfig_files=(
 	wmf-config/trusted-xff.cdb
 )
 
-# Create non-txt symlink from /home/wikipedia/conf
-other_config_file=(
-	httpd/all.conf
-	httpd/foundation.conf
-	httpd/main.conf
-	httpd/nonexistent.conf
-	httpd/redirects.conf
-	httpd/remnant.conf
-	httpd/search.wikimedia.conf
-	httpd/secure.wikimedia.conf
-	httpd/wikimedia.conf
-	httpd/wikimania.conf
-	httpd/wwwportals.conf
-)
-
 for i in ./*
 do
 	if [[ $i != "./index.php" && $i != "./highlight.php" && $i != "./images" && $i != "./activeMWVersions.php" ]]
@@ -127,9 +112,4 @@ done
 for i in "${mwconfig_files[@]}"
 do
 	ln -s ../../../$i "./$(basename $i)"
-done
-
-for i in "${other_config_file[@]}"
-do
-	ln -s /home/wikipedia/conf/$i "./$(basename $i)"
 done
