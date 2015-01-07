@@ -13944,6 +13944,9 @@ $wgConf->settings = array(
 	'fiu_vrowiki' => array(
 		'sort' => 'alphabetic_revised',
 	),
+	'frwiki' => array(
+		'otherProjectsLinksByDefault' => true,
+	),
 	'frwikisource' => array(
 		'otherProjectsLinksByDefault' => true,
 	),
