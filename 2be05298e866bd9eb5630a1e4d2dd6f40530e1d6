@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee703fc5_3696c850",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-01-08T15:07:57Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee703fc5_56e1fcf9",
+      "revId": "2be05298e866bd9eb5630a1e4d2dd6f40530e1d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee703fc5_965a34f8",
         "filename": "wmf-config/logging.php",
         "patchSetId": 6
@@ -30,6 +48,24 @@
       "writtenOn": "2015-01-08T15:00:39Z",
       "side": 1,
       "message": "What\u0027s this?",
+      "revId": "2be05298e866bd9eb5630a1e4d2dd6f40530e1d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_968c743c",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-01-08T15:07:57Z",
+      "side": 1,
+      "message": "Bad cut-n-paste from the beta logging config. Thanks for pointing it out.",
+      "parentUuid": "ee703fc5_965a34f8",
       "revId": "2be05298e866bd9eb5630a1e4d2dd6f40530e1d6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
