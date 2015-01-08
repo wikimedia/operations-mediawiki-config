@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_56e1fcf9",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-01-08T15:00:39Z",
+      "side": 1,
+      "message": "If you want to worry about whitespace, general usage in mediawiki/core seems to indicate that we put a space between \u0027function\u0027 and the open-paren.",
+      "revId": "2be05298e866bd9eb5630a1e4d2dd6f40530e1d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_965a34f8",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-01-08T15:00:39Z",
+      "side": 1,
+      "message": "What\u0027s this?",
+      "revId": "2be05298e866bd9eb5630a1e4d2dd6f40530e1d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
