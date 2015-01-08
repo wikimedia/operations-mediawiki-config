@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_a915929e",
+        "filename": "wmf-config/mc.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2015-01-08T23:34:12Z",
+      "side": 1,
+      "message": "needs to be an array",
+      "revId": "5062fe9dfdcfb0c7efde17b72d908c4e437ff6c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
