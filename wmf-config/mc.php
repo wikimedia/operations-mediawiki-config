@@ -2,6 +2,14 @@
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 $wgMainCacheType = 'memcached-pecl';
 
+# Use the unix socket instead of the TCP connection on selected hosts
+if (in_array(gethostname(), array('mw1230', 'mw1231'))) {
+    $_mcserver = '/var/run/nutcracker/nutcracker.sock:0';
+} else {
+    $_mcserver = '127.0.0.1:11212';
+}
+
+
 $wgMemCachedPersistent = false;
 $wgMemCachedTimeout = 0.25 * 1e6;  // 250kus (a quarter of a second).
 
@@ -9,7 +17,7 @@ $wgObjectCaches['memcached-pecl'] = array(
 	'class'      => 'MemcachedPeclBagOStuff',
 	'serializer' => 'php',
 	'persistent' => false,
-	'servers'    => array( '127.0.0.1:11212' ),
+	'servers'    => array( $_mcserver ),
 	'server_failure_limit' => 1e9,
 	'retry_timeout' => -1
 );
