@@ -101,7 +101,6 @@ $wgLBFactoryConf = array(
 		'db1024' => 0,   # 1.4TB  64GB
 		'db1018' => 0,   # 1.4TB  64GB, snapshot, dump, vslow
 		'db1036' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
-		'db1009' => 100, # 1.4TB  64GB, traffic sampling
 		'db1054' => 200, # 2.8TB  96GB, api
 		'db1060' => 200, # 2.8TB  96GB, api
 		'db1063' => 500, # 2.8TB 128GB
@@ -109,8 +108,8 @@ $wgLBFactoryConf = array(
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038' => 0,   # 1.4TB  64GB
-		'db1003' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
 		'db1019' => 0,   # 1.4TB  64GB, vslow, dump
+		'db1015' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
 		'db1027' => 400, # 1.4TB  64GB
 		'db1035' => 400, # 1.4TB  64GB
 		'db1044' => 400, # 1.4TB  64GB
@@ -127,10 +126,9 @@ $wgLBFactoryConf = array(
 	),
 	's5' => array(
 		'db1058' => 0,   # 2.8TB  96GB
-		'db1005' => 0,   # 1.4TB  64GB, snapshot, vslow, api, dump
+		'db1045' => 0,   # 1.4TB  64GB, vslow, api, dump
 		'db1026' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
 		'db1021' => 400, # 1.4TB  64GB, traffic sampling
-		'db1045' => 400, # 1.4TB  64GB
 		'db1049' => 400, # 1.4TB  64GB
 		'db1071' => 500, # 2.8TB 160GB
 	),
@@ -138,7 +136,7 @@ $wgLBFactoryConf = array(
 		'db1023' => 0,   # 1.4TB  64GB
 		'db1022' => 0,   # 1.4TB  64GB, snapshot, vslow, dump
 		'db1030' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
-		'db1006' => 400, # 1.4TB  64GB
+		'db1050' => 400, # 1.4TB  64GB
 		'db1037' => 400, # 1.4TB  64GB
 		'db1061' => 500, # 2.8TB 128GB
 	),
@@ -199,16 +197,16 @@ $wgLBFactoryConf = array(
 			'db1019' => 1,
 		),
 		'watchlist' => array(
-			'db1003' => 1,
+			'db1015' => 1,
 		),
 		'recentchangeslinked' => array(
-			'db1003' => 1,
+			'db1015' => 1,
 		),
 		'contributions' => array(
-			'db1003' => 1,
+			'db1015' => 1,
 		),
 		'logpager' => array(
-			'db1003' => 1,
+			'db1015' => 1,
 		),
 	),
 	's4' => array(
@@ -237,13 +235,13 @@ $wgLBFactoryConf = array(
 	),
 	's5' => array(
 		'vslow' => array(
-			'db1005' => 1,
+			'db1045' => 1,
 		),
 		'dump' => array(
-			'db1005' => 1,
+			'db1045' => 1,
 		),
 		'api' => array(
-			'db1005' => 1,
+			'db1045' => 1,
 		),
 		'watchlist' => array(
 			'db1026' => 1,
