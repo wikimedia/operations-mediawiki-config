@@ -9,8 +9,8 @@ $wgObjectCaches['memcached-pecl'] = array(
 	'class'      => 'MemcachedPeclBagOStuff',
 	'serializer' => 'php',
 	'persistent' => false,
-	'servers'    => in_array( gethostname(), array( 'mw1230', 'mw1231' ) )
-		? array( '/var/run/nutcracker/nutcracker.sock:0' )
+	'servers'    => substr( gethostname(), 0, 5 )  === 'mw123'
+		? array( 'localhost:11212' )
 		: array( '127.0.0.1:11212' ),
 	'server_failure_limit' => 1e9,
 	'retry_timeout' => -1
