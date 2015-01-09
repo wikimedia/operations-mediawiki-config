@@ -16,6 +16,24 @@
       "revId": "cf37be3b80b02ee5d51c813ad1c1978b96cc1165",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_7522ed51",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 2742,
+      "author": {
+        "id": 824
+      },
+      "writtenOn": "2015-01-09T11:25:39Z",
+      "side": 1,
+      "message": "So, the browser talks directly to the cxserver service. I was not aware of this. In fact, I thought the mediawiki servers did the talking to the service. It was the http://www.mediawiki.org/wiki/Content_translation/Technical_Architecture diagram that has led me to this conclusion (and I assume others along with me). This complicates things a bit...",
+      "parentUuid": "ee703fc5_ffe01c95",
+      "revId": "cf37be3b80b02ee5d51c813ad1c1978b96cc1165",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
