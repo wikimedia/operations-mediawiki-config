@@ -60,10 +60,6 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-'wgDisableCounters' => array(
-	'default' => true,
-),
-
 'wgInterwikiMagic' => array(
 	'default' => true,
 	'metawiki' => false,

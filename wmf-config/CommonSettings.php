@@ -921,8 +921,6 @@ if ( in_array( $wgLanguageCode, array( 'commons', 'meta', 'sources', 'species', 
 	$wgLanguageCode = 'en';
 }
 
-$wgDisableCounters     = true;
-
 wfProfileOut( "$fname-misc2" );
 
 # :SEARCH:
