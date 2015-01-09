@@ -6960,6 +6960,9 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ),
 		'autopatrolled' => array( 'autopatrol' => true, ),
 	),
+	'+dawiktionary' => array(
+		'autopatrolled' => array( 'autopatrol' => true, ), // T86062
+	),
 	'dewiki' => array(
 		'user' => array(
 			'move' => false, // Report by sansculotte on #mediawiki, TS 2004-10-15
@@ -8145,6 +8148,9 @@ $wgConf->settings = array(
 	'+dawiki' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
 	),
+	'+dawiktionary' => array(
+		'sysop' => array( 'autopatrolled' ), // T86062
+	),
 	'+dewiki' => array(
 		'bureaucrat' => array( 'noratelimit' ), // bug 57819
 	),
@@ -8713,6 +8719,9 @@ $wgConf->settings = array(
 	),
 	'+dawiki' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
+	),
+	'+dawiktionary' => array(
+		'sysop' => array( 'autopatrolled' ), // T86062
 	),
 	'+dewiki' => array(
 		'bureaucrat' => array( 'noratelimit' ), // bug 57819
