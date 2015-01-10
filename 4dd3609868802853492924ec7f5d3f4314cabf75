@@ -16,6 +16,24 @@
       "revId": "4dd3609868802853492924ec7f5d3f4314cabf75",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_7e2644cb",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 228
+      },
+      "writtenOn": "2015-01-10T11:20:12Z",
+      "side": 1,
+      "message": "thanks! done...",
+      "parentUuid": "ee703fc5_3e59ac5d",
+      "revId": "4dd3609868802853492924ec7f5d3f4314cabf75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
