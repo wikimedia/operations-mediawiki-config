@@ -158,7 +158,7 @@ $wgHooks['AbortChangePassword'][] = function ( $user, $password, $newpassword, &
 	try {
 		if ( $isGlobal ) {
 			$centralUser = CentralAuthUser::getInstance( $user );
-			if ( $centralUser->getPasswordObject()->equals( $newpassword ) ) {
+			if ( $centralUser->authenticate( $newpassword ) === 'ok' ) {
 				wfDebugLog( "Bug54847", "User attempted to reset with CentralAuth password: " . $user->getName() );
 				$errorMsg = 'password-recycled';
 				return false;
