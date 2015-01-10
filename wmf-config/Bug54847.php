@@ -74,61 +74,6 @@ function efUserIsAffected ( $user, &$loggedout = null, &$isGlobal = false ) {
 
 }
 
-// Abort existing open sessions for affected users. (But not
-// repeatedly, only once.)
-// Maybe we dont do this and just reset everyone's tokens instead?
-
-$wgHooks['UserLoadAfterLoadFromSession'][] = function ( $user ) {
-	if ( efUserIsAffected( $user ) ) {
-		$dbw = CentralAuthUser::getCentralDB();
-		$dbw->update(
-			'bug_54847_password_resets',
-			array( 'r_logged_out' => 1 ),
-			array( 'r_username' => $user->getName(),
-				'r_wiki' => wfWikiID()
-			),
-			__METHOD__
-		);
-		$user->logout();
-	}
-};
-
-
-$wgHooks['UserLoadFromSession'][] = function ( $user, &$result ) {
-
-	$loggedout = false;
-	$isGlobal = false;
-	if ( efUserIsAffected( $user, $loggedout, $isGlobal ) ) {
-		if ( $loggedout ) {
-			// Already logged them out
-			return true;
-		}
-
-		wfDebugLog( "Bug54847", "Logging out user " . $user->getName() );
-
-		$dbw = CentralAuthUser::getCentralDB();
-
-		$updateWikis = wfWikiID();
-		if ( $isGlobal ) {
-			$centralUser = CentralAuthUser::getInstance( $user );
-			$updateWikis = $centralUser->listAttached();
-		}
-		$dbw->update(
-			'bug_54847_password_resets',
-			array( 'r_logged_out' => 1 ),
-			array( 'r_username' => $user->getName(),
-				'r_wiki' => $updateWikis
-			),
-			__METHOD__
-		);
-
-		$user->logout();
-		$result = false;
-		return false;
-	}
-	return true;
-};
-
 $wgHooks[ 'AbortLogin' ][] = function ( User $user, $password, &$retval, &$msg ) {
 	global $wgOut, $egBug54847;
 	if ( empty( $egBug54847 ) && $user->checkPassword( $password ) && efUserIsAffected( $user ) ) {
