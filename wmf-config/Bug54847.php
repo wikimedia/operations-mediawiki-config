@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * @param User $user
+ * @param null $loggedout
+ * @param bool $isGlobal
+ * @return bool
+ * @throws CentralAuthReadOnlyError
+ */
 function efUserIsAffected ( $user, &$loggedout = null, &$isGlobal = false ) {
 	global $wgMemc;
 
@@ -74,10 +81,14 @@ function efUserIsAffected ( $user, &$loggedout = null, &$isGlobal = false ) {
 
 }
 
-// Abort existing open sessions for affected users. (But not
-// repeatedly, only once.)
-// Maybe we dont do this and just reset everyone's tokens instead?
-
+/**
+ * Abort existing open sessions for affected users. (But not
+ * repeatedly, only once.)
+ * Maybe we dont do this and just reset everyone's tokens instead?
+ *
+ * @param User $user
+ * @throws CentralAuthReadOnlyError
+ */
 $wgHooks['UserLoadAfterLoadFromSession'][] = function ( $user ) {
 	if ( efUserIsAffected( $user ) ) {
 		$dbw = CentralAuthUser::getCentralDB();
@@ -93,7 +104,12 @@ $wgHooks['UserLoadAfterLoadFromSession'][] = function ( $user ) {
 	}
 };
 
-
+/**
+ * @param User $user
+ * @param $result
+ * @return bool
+ * @throws CentralAuthReadOnlyError
+ */
 $wgHooks['UserLoadFromSession'][] = function ( $user, &$result ) {
 
 	$loggedout = false;
@@ -129,6 +145,14 @@ $wgHooks['UserLoadFromSession'][] = function ( $user, &$result ) {
 	return true;
 };
 
+/**
+ * @param User $user
+ * @param $password
+ * @param $retval
+ * @param $msg
+ * @return bool
+ * @throws MWException
+ */
 $wgHooks[ 'AbortLogin' ][] = function ( User $user, $password, &$retval, &$msg ) {
 	global $wgOut, $egBug54847;
 	if ( empty( $egBug54847 ) && $user->checkPassword( $password ) && efUserIsAffected( $user ) ) {
@@ -140,11 +164,20 @@ $wgHooks[ 'AbortLogin' ][] = function ( User $user, $password, &$retval, &$msg )
 	}
 };
 
-// Reject attempts to set an existing password as the new password.
+/**
+ * Reject attempts to set an existing password as the new password.
+ *
+ * @param User $user
+ * @param $password
+ * @param $newpassword
+ * @param $errorMsg
+ * @return bool
+ * @throws CentralAuthReadOnlyError
+ * @throws MWException
+ */
 $wgHooks['AbortChangePassword'][] = function ( $user, $password, $newpassword, &$errorMsg ) {
 	global $egBug54847;
 
-	$passwordOK = false;
 	$loggedout = false;
 	$isGlobal = false;
 
@@ -233,6 +266,13 @@ $wgHooks['AbortChangePassword'][] = function ( $user, $password, $newpassword, &
 	);
 };
 
+/**
+ * @param User $user
+ * @param $pass
+ * @param $msg
+ * @return bool
+ * @throws CentralAuthReadOnlyError
+ */
 $wgHooks['PrefsPasswordAudit'][] = function ( $user, $pass, $msg ) {
 	global $egBug54847, $wgMemc;
 
