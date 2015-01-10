@@ -9824,7 +9824,7 @@ $wgConf->settings = array(
 ),
 
 // Note that changing this for wikis with CirrusSearch will remove pages in the
-// the affected namespace from search results until a full reindex is completed.
+// affected namespace from search results until a full reindex is completed.
 'wgContentNamespaces' => array(
 	'default' => array( NS_MAIN ),
 	'+arwiki' => array( 104 ), // bug 20623
@@ -9859,7 +9859,7 @@ $wgConf->settings = array(
 	'+kowikisource' => array( 100 ),
 	'+labswiki' => array( 112 ),
 	'+lawikisource' => array( 102, 104, 106 ),
-	'+mediawikiwiki' => array( 100, 102 ), // Manuals & extensions
+	'+mediawikiwiki' => array( 100, 102, 104, 106 ), // Manuals, extensions, Api & skin - bug T86391
 	'+metawiki' => array( NS_HELP ), // Bug 43687
 	'+mlwikisource' => array( 100, 104, 106 ),
 	'+nlwikisource' => array( 102 ),
