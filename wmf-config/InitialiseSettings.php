@@ -4598,6 +4598,8 @@ $wgConf->settings = array(
 		101 => 'שיחת_פורטל',
 		108 => 'ספר', // Book
 		109 => 'שיחת_ספר', // Book talk
+		118 => 'טיוטה', // Draft - T86329
+		119 => 'שיחת_טיוטה',
 	),
 	'hiwiki' => array(
 		100 => 'प्रवेशद्वार',
@@ -9657,6 +9659,8 @@ $wgConf->settings = array(
 	),
 	'hewiki' => array(
 		NS_USER => 'noindex,follow', // bug 16247
+		118 => 'noindex,nofollow', // Draft - T86329
+		119 => 'noindex,nofollow',
 	),
 	'ruwiki' => array(
 		102 => 'noindex,follow',
@@ -9874,6 +9878,7 @@ $wgConf->settings = array(
 'wmgExemptFromUserRobotsControlExtra' => array(
 	'default' => array(),
 	'enwiki' => array( 118, 119 ), // draft and draft talk
+	'hewiki' => array( 118, 119 ), // draft and draft talk - T86329
 ),
 
 'wgRevisionCacheExpiry' => array(
