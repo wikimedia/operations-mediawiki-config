@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * @param User $user
+ * @param null $loggedout
+ * @param bool $isGlobal
+ * @return bool
+ * @throws CentralAuthReadOnlyError
+ */
 function efUserIsAffected ( $user, &$loggedout = null, &$isGlobal = false ) {
 	global $wgMemc;
 
@@ -74,6 +81,14 @@ function efUserIsAffected ( $user, &$loggedout = null, &$isGlobal = false ) {
 
 }
 
+/**
+ * @param User $user
+ * @param $password
+ * @param $retval
+ * @param $msg
+ * @return bool
+ * @throws MWException
+ */
 $wgHooks[ 'AbortLogin' ][] = function ( User $user, $password, &$retval, &$msg ) {
 	global $wgOut, $egBug54847;
 	if ( empty( $egBug54847 ) && $user->checkPassword( $password ) && efUserIsAffected( $user ) ) {
@@ -85,11 +100,20 @@ $wgHooks[ 'AbortLogin' ][] = function ( User $user, $password, &$retval, &$msg )
 	}
 };
 
-// Reject attempts to set an existing password as the new password.
+/**
+ * Reject attempts to set an existing password as the new password.
+ *
+ * @param User $user
+ * @param $password
+ * @param $newpassword
+ * @param $errorMsg
+ * @return bool
+ * @throws CentralAuthReadOnlyError
+ * @throws MWException
+ */
 $wgHooks['AbortChangePassword'][] = function ( $user, $password, $newpassword, &$errorMsg ) {
 	global $egBug54847;
 
-	$passwordOK = false;
 	$loggedout = false;
 	$isGlobal = false;
 
@@ -103,7 +127,9 @@ $wgHooks['AbortChangePassword'][] = function ( $user, $password, $newpassword, &
 	try {
 		if ( $isGlobal ) {
 			$centralUser = CentralAuthUser::getInstance( $user );
-			if ( $centralUser->authenticate( $newpassword ) === 'ok' ) {
+			list( $salt, $crypt ) = $centralUser->getPasswordHash();
+			//if ( $centralUser->matchHash( $newpassword, $salt, $crypt ) ) {
+			if ( User::comparePasswords( $crypt, $newpassword, $salt ) ) {
 				wfDebugLog( "Bug54847", "User attempted to reset with CentralAuth password: " . $user->getName() );
 				$errorMsg = 'password-recycled';
 				return false;
@@ -176,6 +202,13 @@ $wgHooks['AbortChangePassword'][] = function ( $user, $password, $newpassword, &
 	);
 };
 
+/**
+ * @param User $user
+ * @param $pass
+ * @param $msg
+ * @return bool
+ * @throws CentralAuthReadOnlyError
+ */
 $wgHooks['PrefsPasswordAudit'][] = function ( $user, $pass, $msg ) {
 	global $egBug54847, $wgMemc;
 
