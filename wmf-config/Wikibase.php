@@ -72,7 +72,7 @@ if ( $wmgUseWikibaseRepo ) {
 		);
 
 		// there is no cronjob dispatcher yet, this will do nothing
-		$wgWBRepoSettings['clientDbList'] = array( 'test2wiki' );
+		$wgWBRepoSettings['clientDbList'] = array( 'testwiki', 'test2wiki' );
 	} else {
 		$wgWBRepoSettings['badgeItems'] = array(
 			'Q17437798' => 'wb-badge-goodarticle',
