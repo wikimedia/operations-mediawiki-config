@@ -7149,6 +7149,11 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ), // bug 71760
 		'sysop' => array( 'importupload' => true ), // bug 71681
 	),
+	'+fawiktionary' => array(
+		'autopatrolled' => array( 'autopatrol' => true ), // T85381
+		'patroller' => array( 'patrol' => true ), // T85381
+		'rollbacker' => array( 'rollback' => true ), // T85381
+	),
 	'fiwiki' => array(
 		'patroller' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
@@ -8238,6 +8243,9 @@ $wgConf->settings = array(
 			'transwiki', // bug 71681
 		),
 	),
+	'+fawiktionary' => array(
+		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker' ), // T85381
+	),
 	'+fiwiki' => array(
 		'bureaucrat' => array( 'arbcom' ),
 		'sysop' => array( 'rollbacker' ),
@@ -8807,6 +8815,9 @@ $wgConf->settings = array(
 			'rollbacker', // bug 71760
 			'transwiki', // bug 71681
 		),
+	),
+	'+fawiktionary' => array(
+		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker' ), // T85381
 	),
 	'+fiwiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'arbcom' ),
