@@ -10773,6 +10773,7 @@ $wgConf->settings = array(
 	'arwikisource' => true,
 	'commonswiki' => true,
 	'enwikinews' => true,
+	'fawikivoyage' => true, // T76716
 	'guwiki' => true, // Bug 40872
 	'guwikisource' => true, // Bug 40872
 	'hiwiki' => true,
