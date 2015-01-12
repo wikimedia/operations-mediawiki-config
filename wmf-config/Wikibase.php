@@ -190,5 +190,5 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['sharedCacheKeyPrefix'] .= $wgWBSharedCacheKey;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
-	$wgWBClientSettings['useLegacyUsageIndex'] = true;
+	$wgWBClientSettings['useLegacyUsageIndex'] = $wmgWikibaseUseLegacyUsageIndex;
 }
