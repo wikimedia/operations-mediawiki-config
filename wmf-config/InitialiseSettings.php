@@ -13875,6 +13875,18 @@ $wgConf->settings = array(
 	'wikinews' => false,
 ),
 
+'wmgWikibaseEnableArbitraryAccess' => array(
+	'default' => false,
+	'testwiki' => true,
+	'wikidata' => true,
+),
+
+'wmgWikibaseUseLegacyUsageIndex' => array(
+	'default' => true,
+	'testwiki' => false,
+	'testwikidatawiki' => false,
+),
+
 'wmgUseWikibaseRepo' => array(
 	'default' => false,
 	'wikidata' => true,

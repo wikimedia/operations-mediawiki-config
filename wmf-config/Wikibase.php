@@ -165,11 +165,7 @@ if ( $wmgUseWikibaseClient ) {
 		);
 	};
 
-	$wgWBClientSettings['allowArbitraryDataAccess'] = false;
-
 	if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
-		$wgWBClientSettings['allowArbitraryDataAccess'] = true;
-
 		$wgWBClientSettings['namespaces'] = array(
 			NS_CATEGORY,
 			NS_PROJECT,
@@ -187,8 +183,9 @@ if ( $wmgUseWikibaseClient ) {
 	}
 
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
+	$wgWBClientSettings['allowArbitraryDataAccess'] = $wmgWikibaseEnableArbitraryAccess;
+	$wgWBClientSettings['useLegacyUsageIndex'] = $wmgWikibaseUseLegacyUsageIndex;
 
 	$wgWBClientSettings['sharedCacheKeyPrefix'] .= $wgWBSharedCacheKey;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
-	$wgWBClientSettings['useLegacyUsageIndex'] = true;
 }
