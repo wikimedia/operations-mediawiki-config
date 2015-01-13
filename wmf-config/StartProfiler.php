@@ -71,6 +71,10 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 		foreach ( $data as $sample ) {
 			$stack = array();
 
+			if ( empty( $sample['phpStack'] ) ) {
+				continue;
+			}
+
 			foreach( $sample['phpStack'] as $frame ) {
 				$func = $frame['function'];
 				if ( $func !== end( $stack ) && !in_array( $func, $omit ) ) {
