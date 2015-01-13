@@ -9784,6 +9784,7 @@ $wgConf->settings = array(
 	'cswiktionary' => false,
 	'donatewiki' => false,
 	'enwikibooks' => false,
+	'fawikinews' => false, // T85380
 	'foundationwiki' => false,
 	'rmwiki' => false,
 	'zhwiki' => false,
