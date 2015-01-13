@@ -16,6 +16,24 @@
       "revId": "a934fa0be2d484f433247703fcd18f34efed99ca",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee703fc5_65d77ff3",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 168
+      },
+      "writtenOn": "2015-01-13T15:04:51Z",
+      "side": 1,
+      "message": "See linked bug report. sillyshell does not exist at all, and everyone\u0027s loginShell is forced to LDAP by our ldap config. So that prevents us from setting it to anything else, causing the mwdeploy bug.\n\nSo no, there was a reason, but there isn\u0027t anymore.",
+      "parentUuid": "ee703fc5_05e9e3b2",
+      "revId": "a934fa0be2d484f433247703fcd18f34efed99ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
