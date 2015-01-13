@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee703fc5_05e9e3b2",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2015-01-13T15:03:45Z",
+      "side": 1,
+      "message": "I guess it defaults to sillyshell for a reason.  I imagine folks are converted to bash when they are granted shell access on labs.",
+      "revId": "a934fa0be2d484f433247703fcd18f34efed99ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
