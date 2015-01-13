@@ -96,7 +96,7 @@ if ( $wmgUseWikibaseRepo ) {
 	// Bug 51637 and 46953
 	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
 
-	$wgCacheEpoch = $wgDBname === 'testwikidatawiki' ? '20150108144008' : '20141216194200';
+	$wgCacheEpoch = '20150113190718';
 
 	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
 	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
