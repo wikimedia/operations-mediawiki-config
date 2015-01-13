@@ -104,7 +104,7 @@ $wgLBFactoryConf = array(
 		'db1054' => 200, # 2.8TB  96GB, api
 		'db1060' => 200, # 2.8TB  96GB, api
 		'db1063' => 500, # 2.8TB 128GB
-		'db1067' => 500, # 2.8TB 160GB
+		# upgrade 'db1067' => 500, # 2.8TB 160GB
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038' => 0,   # 1.4TB  64GB
