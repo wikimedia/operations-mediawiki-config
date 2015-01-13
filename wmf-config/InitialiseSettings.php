@@ -11882,6 +11882,7 @@ $wgConf->settings = array(
 	// Wikipedias
 	'+cawiki' => array( 100 /* Portal */, 102 /* Viquiprojecte */ ), // Bug 56000
 	'+enwiki' => array( 100 /* Portal */, 108 /* Book */, 118 /* Draft */ ), // Bug 56001
+	'+ruwiki' => array( 102 /* Draft / Incubator */ ), // Bug T86688
 	// Wiktionaries
 	'svwiktionary' => array( NS_USER ), // Bug 57356
 	// Wikiversities
