@@ -54,7 +54,7 @@ $wgOpenStackManagerLDAPProjectGroupBaseDN = "ou=groups,dc=wikimedia,dc=org";
 $wgOpenStackManagerLDAPInstanceBaseDN = 'ou=hosts,dc=wikimedia,dc=org';
 $wgOpenStackManagerLDAPServiceGroupBaseDN = 'ou=servicegroups,dc=wikimedia,dc=org';
 $wgOpenStackManagerLDAPDefaultGid = '500';
-$wgOpenStackManagerLDAPDefaultShell = '/usr/local/bin/sillyshell';
+$wgOpenStackManagerLDAPDefaultShell = '/bin/bash';
 $wgOpenStackManagerLDAPUseUidAsNamingAttribute = true;
 $wgOpenStackManagerDNSOptions = array(
 	'enabled' => true,
