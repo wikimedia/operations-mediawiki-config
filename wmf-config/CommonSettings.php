@@ -1926,6 +1926,14 @@ if ( $wmgUseBetaFeatures ) {
 	if ( $wmgBetaFeaturesWhitelist ) {
 		$wgBetaFeaturesWhitelist = $wmgBetaFeaturesWhitelist;
 	}
+
+	// Disable compact personal bar beta feature for wikidata - T86831 & T85541
+	if ( $wgDBname === 'wikidatawiki' ) {
+		$key = array_search( 'betafeatures-vector-compact-personal-bar', $wgBetaFeaturesWhitelist );
+		if ( $key !== false ) {
+			unset( $wgBetaFeaturesWhitelist[$key] );
+		}
+		unset( $key );
 }
 
 if ( $wmgUseCommonsMetadata ) {
