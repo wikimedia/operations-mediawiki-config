@@ -11,7 +11,6 @@ $wgObjectCaches['memcached-pecl'] = array(
 	'servers'              => defined( 'HHVM_VERSION' )
 		? array( '/var/run/nutcracker/nutcracker.sock:0' )
 		: array( '127.0.0.1:11212' ),
-	'servers'              => array( '/var/run/nutcracker/nutcracker.sock:0' ),
 	'server_failure_limit' => 1e9,
 	'retry_timeout'        => -1,
 );
