@@ -11,8 +11,6 @@ if ( $wmgMobileFrontend ) {
 	$wgMFPhotoUploadEndpoint = $wmgMFPhotoUploadEndpoint;
 	$wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
 	$wgMFEnableWikiGrok = $wmgMFEnableWikiGrok;
-	$wgMFEnableWikiGrokForAnons = $wmgMFEnableWikiGrokForAnons;
-	$wgWikiGrokDebug = $wmgWikiGrokDebug;
 	$wgMFPhotoUploadWiki = $wmgMFPhotoUploadWiki;
 	$wgMFContentNamespace = $wmgMFContentNamespace;
 	$wgMFPhotoUploadAppendToDesc = $wmgMFPhotoUploadAppendToDesc;
