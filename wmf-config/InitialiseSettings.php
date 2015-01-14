@@ -13798,6 +13798,7 @@ $wgConf->settings = array(
 	'nowiki' => true,
 	'ptwiki' => true,
 	'svwiki' => true,
+	'testwiki' => true,
 ),
 
 'wmgUseMapSources' => array(
