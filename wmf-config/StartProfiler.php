@@ -7,7 +7,10 @@
 
 if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	// Single-request profiling, via 'forceprofile=1' (web) or '--profiler=text' (CLI).
-	if ( isset( $_REQUEST['forceprofile'] ) || PHP_SAPI === 'cli'  ) {
+	if (
+		( isset( $_GET['forceprofile'] ) && isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) )
+		|| PHP_SAPI === 'cli'
+	) {
 		$wgProfiler = array(
 			'class'  => 'ProfilerXhprof',
 			'flags'  => XHPROF_FLAGS_NO_BUILTINS,
