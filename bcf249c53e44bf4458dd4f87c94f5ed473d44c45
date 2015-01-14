@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_170b94da",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2015-01-14T20:37:17Z",
+      "side": 0,
+      "message": "You should remove this too, otherwise it\u0027ll override all the variables; specifically the ones you\u0027re removing below as they\u0027re in production CommonSettings.php",
+      "revId": "bcf249c53e44bf4458dd4f87c94f5ed473d44c45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_f7f140db",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 14
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2015-01-14T20:37:17Z",
+      "side": 0,
+      "message": "Isn\u0027t this the same as production too?",
+      "revId": "bcf249c53e44bf4458dd4f87c94f5ed473d44c45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
