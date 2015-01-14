@@ -11338,6 +11338,7 @@ $wgConf->settings = array(
 		'betafeatures-vector-compact-personal-bar', // 2014-11-01 – Compact personal bar
 		'visualeditor-enable-language',             // 2014-11-01 — VE language editor
 		'wikibase-otherprojects',                   // 2015-02-27 — Other projects sidebar (wikidata)
+		'cx',                                       // 2015-01-13 _ Content translation
 	),
 ),
 
