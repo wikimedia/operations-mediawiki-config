@@ -1319,6 +1319,9 @@ if ( $wmgUseCentralAuth ) {
 	// Attempt to attach unattached accounts by password on login
 	// temp disabled 2014-12-16 by legoktm for T75462 / possible OOM
 	$wgCentralAuthAutoMigrate = false;
+
+	// Enables Special:GlobalRenameRequest
+	$wgCentralAuthEnableGlobalRenameRequest = true;
 }
 
 // Config for GlobalCssJs
