@@ -14531,7 +14531,6 @@ $wgConf->settings = array(
 
 'wmgUseMonologLogger' => array(
 	'default' => true,
-	'wiki' => false,
 ),
 
 );
