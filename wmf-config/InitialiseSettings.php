@@ -4205,6 +4205,7 @@ $wgConf->settings = array(
 		'xff' => "udp://$wmfUdp2logDest/xff",
 		'localhost' => "udp://$wmfUdp2logDest/localhost",
 		'T84894' => "udp://$wmfUdp2logDest/T84894", // - bd808 for T84894
+		'TitleBlacklist-cache' => "udp://$wmfUdp2logDest/TitleBlacklist-cache", // For T85428
 	),
 
 	'+enwiki' => array(
