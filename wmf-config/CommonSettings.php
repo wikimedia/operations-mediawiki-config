@@ -2719,7 +2719,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 if ( $wmgUseContentTranslation ) {
 	require_once "$IP/extensions/ContentTranslation/ContentTranslation.php";
 	// T76200: Public URL for cxserver instance
-	$wgContentTranslationSiteTemplates['cx'] = 'http://cxserver.wikimedia.org';
+	$wgContentTranslationSiteTemplates['cx'] = '//cxserver.wikimedia.org';
 	// Used for html2wikitext when publishing
 	$wgContentTranslationParsoid = array(
 		'url' => $wmgParsoidURL,
