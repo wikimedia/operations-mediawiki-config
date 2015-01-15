@@ -58,9 +58,6 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 
 if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 	register_shutdown_function( function () {
-		// Function names that should be excluded from the trace.
-		$omit = array( 'include', '{closure}' );
-
 		$data = HH\xenon_get_data();
 
 		if ( empty( $data ) ) {
@@ -80,7 +77,7 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 
 			foreach( $sample['phpStack'] as $frame ) {
 				$func = $frame['function'];
-				if ( $func !== end( $stack ) && !in_array( $func, $omit ) ) {
+				if ( $func !== end( $stack ) ) {
 					$stack[] = $func;
 				}
 			}
