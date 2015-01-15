@@ -13779,8 +13779,8 @@ $wgConf->settings = array(
 	'wikivoyage' => true,
 ),
 
-'wmgUseContentTranslationEventLogging' => array(
-	'default' => true,
+'wmgContentTranslationEventLogging' => array(
+	'default' => false,
 ),
 
 'wmgContentTranslationCluster' => array(
