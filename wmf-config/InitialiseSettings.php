@@ -11330,7 +11330,6 @@ $wgConf->settings = array(
 		'visualeditor-enable',                      // VisualEditor – on-going (special permission)
 		'uls-compact-links',                        // 2014-09-06 – Compact language links
 		'popups',                                   // 2014-09-18 – Hovercards
-		'betafeatures-vector-compact-personal-bar', // 2014-11-01 – Compact personal bar
 		'visualeditor-enable-language',             // 2014-11-01 — VE language editor
 		'wikibase-otherprojects',                   // 2015-02-27 — Other projects sidebar (wikidata)
 		'cx',                                       // 2015-07-14 _ Content translation
