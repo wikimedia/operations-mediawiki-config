@@ -10399,10 +10399,6 @@ $wgConf->settings = array(
 	'default' => 'udp',
 ),
 
-'wmgUseTitleKey' => array(
-	'default' => true, // enable/disable TitleKey prefix search case-insensitivity ext
-),
-
 'wgUseLocalMessageCache' => array(
 	'default' => true,
 ),

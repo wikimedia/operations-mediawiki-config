@@ -116,7 +116,6 @@ $IP/extensions/Thanks/Thanks.php
 $IP/extensions/TimedMediaHandler/TimedMediaHandler.php
 $IP/extensions/timeline/Timeline.php
 $IP/extensions/TitleBlacklist/TitleBlacklist.php
-$IP/extensions/TitleKey/TitleKey.php
 $IP/extensions/TocTree/TocTree.php
 $IP/extensions/TorBlock/TorBlock.php
 $IP/extensions/Translate/Translate.php

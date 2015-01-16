@@ -933,14 +933,6 @@ if ( $wmgUseCirrus ) {
 	wfProfileOut( "$fname-CirrusSearch" );
 }
 
-// Case-insensitive title prefix search extension
-//
-// CirrusSearch, on the other hand, has absorbed its functionality so
-// for CirrusSearch wikis it is no longer required.
-if ( $wmgUseTitleKey && !$wmgUseCirrus ) {
-	include "$IP/extensions/TitleKey/TitleKey.php";
-}
-
 wfProfileIn( "$fname-misc3" );
 
 // Various DB contention settings
