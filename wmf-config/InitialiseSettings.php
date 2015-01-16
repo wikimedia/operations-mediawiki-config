@@ -12032,6 +12032,7 @@ $wgConf->settings = array(
 	'iswiktionary' => 'identity', // bug 30722
 	'lvwiki' => 'uca-lv', // bug 65003
 	'plwiki' => 'uca-pl', // bug 42413
+	'plwikisource' => 'uca-pl', // T86821
 	'plwikivoyage' => 'uca-pl', // bug 45968
 	'plwiktionary' => 'uca-default', // bug 46081
 	'ptwiki' => 'uca-pt', // bug 45911
