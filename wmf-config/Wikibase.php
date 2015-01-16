@@ -72,7 +72,7 @@ if ( $wmgUseWikibaseRepo ) {
 		);
 
 		// there is no cronjob dispatcher yet, this will do nothing
-		$wgWBRepoSettings['clientDbList'] = array( 'testwiki', 'test2wiki' );
+		$wgWBRepoSettings['clientDbList'] = array( 'testwiki', 'test2wiki', 'testwikidatawiki' );
 	} else {
 		$wgWBRepoSettings['badgeItems'] = array(
 			'Q17437798' => 'wb-badge-goodarticle',
@@ -82,9 +82,12 @@ if ( $wmgUseWikibaseRepo ) {
 			'Q17580674' => 'wb-badge-featuredportal', // bug 73193
 		);
 
-		$wgWBRepoSettings['clientDbList'] = array_map(
-			'trim',
-			file( getRealmSpecificFilename( "$IP/../wikidataclient.dblist" ) )
+		$wgWBRepoSettings['clientDbList'] = array_diff(
+			array_map(
+				'trim',
+				file( getRealmSpecificFilename( "$IP/../wikidataclient.dblist" ) )
+			),
+			array( 'testwikidatawiki', 'testwiki', 'test2wiki' )
 		);
 	}
 
