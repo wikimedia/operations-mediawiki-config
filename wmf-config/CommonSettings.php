@@ -927,10 +927,7 @@ wfProfileOut( "$fname-misc2" );
 
 # All wikis are special and get Cirrus :)
 if ( $wmgUseCirrus ) {
-	wfProfileIn( "$fname-CirrusSearch" );
-	# Cirrus uses SearchUpdate, turn it back on
 	include( "$wmfConfigDir/CirrusSearch-common.php" );
-	wfProfileOut( "$fname-CirrusSearch" );
 }
 
 wfProfileIn( "$fname-misc3" );
