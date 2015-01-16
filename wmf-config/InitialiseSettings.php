@@ -4134,7 +4134,10 @@ $wgConf->settings = array(
 		'jobqueue' => "udp://$wmfUdp2logDest/jobqueue/web",
 		'slow-parse' => "udp://$wmfUdp2logDest/slow-parse",
 		// 'error' => "udp://$wmfUdp2logDest/error", // Logs warnings, notices and such
-		'exception' => "udp://$wmfUdp2logDest/exception",
+		'exception' => array(
+			'destination' => "udp://$wmfUdp2logDest/exception",
+			'logstash' => false, // duplicates exception-json
+		),
 		'exception-json' => "udp://$wmfUdp2logDest/exception-json",
 		'session' => "udp://$wmfUdp2logDest/session",
 		'logging' => "udp://$wmfUdp2logDest/logging",
@@ -4152,7 +4155,11 @@ $wgConf->settings = array(
 		'poolcounter' => "udp://$wmfUdp2logDest/poolcounter",
 		'lc-recache' => "udp://$wmfUdp2logDest/lc-recache",
 		'generated-pp-node-count' => "udp://$wmfUdp2logDest/generated-pp-node-count",
-		'api' => array( 'destination' => "udp://$wmfUdp2logDest/api", 'sample' => 1000 ),
+		'api' => array(
+			'destination' => "udp://$wmfUdp2logDest/api",
+			'sample' => 1000,
+			'logstash' => false,
+		),
 		'api-feature-usage' => "udp://$wmfUdp2logDest/api-feature-usage",
 		'SQLBagOStuff' => "udp://$wmfUdp2logDest/sql-bagostuff",
 		'FileOperation' => "udp://$wmfUdp2logDest/filebackend-ops",
@@ -4185,7 +4192,10 @@ $wgConf->settings = array(
 		'DBPerformance' => "udp://$wmfUdp2logDest/dbperformance",
 		'CirrusSearch' => "udp://$wmfUdp2logDest/CirrusSearch",
 		'CirrusSearchChangeFailed' => "udp://$wmfUdp2logDest/CirrusSearch-failed",
-		'CirrusSearchRequests' => "udp://$wmfUdp2logDest/CirrusSearch-all",
+		'CirrusSearchRequests' => array(
+			'destination' => "udp://$wmfUdp2logDest/CirrusSearch-all",
+			'logstash' => false,
+		),
 		'CirrusSearchSlowRequests' => "udp://$wmfUdp2logDest/CirrusSearch-slow",
 		'texvc' => "udp://$wmfUdp2logDest/texvc",
 		'Bug54847' => "udp://$wmfUdp2logDest/Bug54847",
@@ -4202,8 +4212,14 @@ $wgConf->settings = array(
 		'FSFileBackend' => "udp://$wmfUdp2logDest/fsfilebackend", // - gilles for bug 73229
 		'OAuth' => "udp://$wmfUdp2logDest/oauth",
 		'xenon' => "udp://$wmfUdp2logDest/xenon",
-		'xff' => "udp://$wmfUdp2logDest/xff",
-		'localhost' => "udp://$wmfUdp2logDest/localhost",
+		'xff' => array(
+			'destination' => "udp://$wmfUdp2logDest/xff",
+			'logstash' => false,
+		),
+		'localhost' => array(
+			'destination' => "udp://$wmfUdp2logDest/localhost",
+			'logstash' => false,
+		),
 		'T84894' => "udp://$wmfUdp2logDest/T84894", // - bd808 for T84894
 		'TitleBlacklist-cache' => "udp://$wmfUdp2logDest/TitleBlacklist-cache", // For T85428
 	),
