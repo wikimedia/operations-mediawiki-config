@@ -120,6 +120,7 @@ $wmgMonologConfig =  array(
 foreach ( $wgDebugLogGroups as $group => $dest ) {
 	$sample = false;
 	$level = false;
+	$sendToLogstash = true;
 	$logstashHandler = 'logstash';
 	if ( is_array( $dest ) ) {
 		// NOTE: sampled logs are not guaranteed to store the same events in
@@ -127,30 +128,35 @@ foreach ( $wgDebugLogGroups as $group => $dest ) {
 		// check the probability of emitting.
 		$sample = isset( $dest['sample'] ) ? $dest['sample'] : $sample;
 		$level = isset( $dest['level'] ) ? $dest['level'] : $level;
+		$sendToLogstash = isset( $dest['logstash'] ) ? $dest['logstash'] : $sendToLogstash;
 		$dest = $dest['destination'];
 	}
 
-	if ( $level !== false ) {
-		$logstashHandler = "filtered-{$group}";
-		$wmgMonologConfig['handlers'][$logstashHandler] =
-			wmMonologRedisConfigFactory( $level );
-	}
+	if ( $sendToLogstash ) {
+		if ( $level !== false ) {
+			$logstashHandler = "filtered-{$group}";
+			$wmgMonologConfig['handlers'][$logstashHandler] =
+				wmMonologRedisConfigFactory( $level );
+		}
 
-	if ( $sample === false ) {
-		$handlers = array( $group, $logstashHandler );
+		if ( $sample === false ) {
+			$handlers = array( $group, $logstashHandler );
+		} else {
+			$wmgMonologConfig['handlers']["sampled-{$group}"] = array(
+				'class' => 'MWLoggerMonologSamplingHandler',
+				'args' => array(
+					function() use ( $logstashHandler ) {
+						return MWLogger::getProvider()->getHandler(
+							$logstashHandler
+						);
+					},
+					$sample,
+				),
+			);
+			$handlers = array( $group, "sampled-{$group}" );
+		}
 	} else {
-		$wmgMonologConfig['handlers']["sampled-{$group}"] = array(
-			'class' => 'MWLoggerMonologSamplingHandler',
-			'args' => array(
-				function() use ( $logstashHandler ) {
-					return MWLogger::getProvider()->getHandler(
-						$logstashHandler
-					);
-				},
-				$sample,
-			),
-		);
-		$handlers = array( $group, "sampled-{$group}" );
+		$handlers = array( $group );
 	}
 
 	$wmgMonologConfig['loggers'][$group] = array(
