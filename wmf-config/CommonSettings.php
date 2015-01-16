@@ -2112,11 +2112,6 @@ if ( $wmgUseGuidedTour || $wmgUseGettingStarted ) {
 	require_once( "$IP/extensions/GuidedTour/GuidedTour.php" );
 }
 
-if ( $wmgUseMarkAsHelpful ) {
-	require_once( "$IP/extensions/MarkAsHelpful/MarkAsHelpful.php" );
-	$wgMarkAsHelpfulType = array( 'mbresponse' );
-}
-
 if ( $wmgUseMoodBar ) {
 	require_once( "$IP/extensions/MoodBar/MoodBar.php" );
 	$wgMoodBarCutoffTime = $wmgMoodBarCutoffTime;
