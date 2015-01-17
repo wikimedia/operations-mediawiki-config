@@ -77,6 +77,12 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 
 			foreach( $sample['phpStack'] as $frame ) {
 				$func = $frame['function'];
+
+				// Annotate file scope and anonymous functions with the file name.
+				if ( ( $func === 'include' || $func === '{closure}' ) && !empty( $frame['file'] ) ) {
+					$func .= ':' . $frame['file'];
+				}
+
 				if ( $func !== end( $stack ) ) {
 					$stack[] = $func;
 				}
