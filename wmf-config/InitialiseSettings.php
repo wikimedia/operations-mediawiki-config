@@ -13769,7 +13769,7 @@ $wgConf->settings = array(
 ),
 
 'wmgContentTranslationEventLogging' => array(
-	'default' => false,
+	'default' => true,
 ),
 
 'wmgContentTranslationCluster' => array(
