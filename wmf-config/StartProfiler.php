@@ -76,11 +76,15 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 			}
 
 			foreach( $sample['phpStack'] as $frame ) {
-				$func = $frame['function'];
-
-				// Annotate file scope and anonymous functions with the file name.
-				if ( ( $func === 'include' || $func === '{closure}' ) && !empty( $frame['file'] ) ) {
-					$func .= ':' . $frame['file'];
+				if ( $func === 'include' ) {
+					// For file scope, just use the path as the name.
+					$func = $frame['file'];
+				} elseif ( $func === '{closure}' && isset( $frame['line'] ) ) {
+					// Annotate anonymous functions with their location in the
+					// source code. Example: {closure:/path/to/file.php(123)}
+					$func = "{closure:{$frame['file']}({$frame['line']})}";
+				} else {
+					$func = $frame['function'];
 				}
 
 				if ( $func !== end( $stack ) ) {
