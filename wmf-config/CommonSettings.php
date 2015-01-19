@@ -2161,14 +2161,8 @@ if ( $wmgUseMath ) {
 	require_once( "$IP/extensions/Math/Math.php" );
 
 	$wgTexvc = '/usr/bin/texvc';
+	$wgMathTexvcCheckExecutable = '/usr/bin/texvccheck';
 
-	if ( file_exists( '/usr/bin/texvccheck' ) ) {
-		$wgMathTexvcCheckExecutable = '/usr/bin/texvccheck';
-	} elseif ( file_exists( '/usr/local/apache/uncommon/bin/texvccheck' ) ) {
-		$wgMathTexvcCheckExecutable = '/usr/local/apache/uncommon/bin/texvccheck';
-	} else {
-		$wgMathDisableTexFilter = true;
-	}
 	if ( $wgDBname === 'hewiki' ) {
 		$wgDefaultUserOptions['math'] = 0;
 	}
