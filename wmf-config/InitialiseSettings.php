@@ -4202,7 +4202,6 @@ $wgConf->settings = array(
 		'FSFileBackend' => "udp://$wmfUdp2logDest/fsfilebackend", // - gilles for bug 73229
 		'OAuth' => "udp://$wmfUdp2logDest/oauth",
 		'xenon' => "udp://$wmfUdp2logDest/xenon",
-		'xff' => array( 'destination' => "udp://$wmfUdp2logDest/xff", 'logstash' => false ),
 		'localhost' => array( 'destination' => "udp://$wmfUdp2logDest/localhost", 'logstash' => false ),
 		'T84894' => "udp://$wmfUdp2logDest/T84894", // - bd808 for T84894
 		'TitleBlacklist-cache' => "udp://$wmfUdp2logDest/TitleBlacklist-cache", // For T85428
