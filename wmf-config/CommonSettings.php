@@ -2164,8 +2164,6 @@ if ( $wmgUseMath ) {
 
 	if ( file_exists( '/usr/bin/texvccheck' ) ) {
 		$wgMathTexvcCheckExecutable = '/usr/bin/texvccheck';
-	} elseif ( file_exists( '/usr/local/apache/uncommon/bin/texvccheck' ) ) {
-		$wgMathTexvcCheckExecutable = '/usr/local/apache/uncommon/bin/texvccheck';
 	} else {
 		$wgMathDisableTexFilter = true;
 	}
