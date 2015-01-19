@@ -4173,7 +4173,7 @@ $wgConf->settings = array(
 		'EventLogging' => "udp://$wmfUdp2logDest/eventlogging",
 		'torblock' => "udp://$wmfUdp2logDest/torblock",
 		'mobile' => "udp://$wmfUdp2logDest/mobile",
-		#'MessageCache' => "udp://$wmfUdp2logDest/messagecache", // spammy
+		// 'MessageCache' => "udp://$wmfUdp2logDest/messagecache", // spammy
 		'temp-debug' => "udp://$wmfUdp2logDest/temp-debug", // generic admin debug log
 		'CentralAuth' => "udp://$wmfUdp2logDest/centralauth", // -pgehres 2013/05/09, tmp for SUL finalization
 		'CentralAuth-Bug39996' => "udp://$wmfUdp2logDest/centralauth-bug39996", // -legoktm 2014-07-14 for bug 39996
@@ -4201,7 +4201,7 @@ $wgConf->settings = array(
 		'FSFileBackend' => "udp://$wmfUdp2logDest/fsfilebackend", // - gilles for bug 73229
 		'OAuth' => "udp://$wmfUdp2logDest/oauth",
 		'xenon' => "udp://$wmfUdp2logDest/xenon",
-		'xff' => array( 'destination' => "udp://$wmfUdp2logDest/xff", 'logstash' => false ),
+		// 'xff' => array( 'destination' => "udp://$wmfUdp2logDest/xff", 'logstash' => false ), // Disabled as spammy. Not often needed
 		'localhost' => array( 'destination' => "udp://$wmfUdp2logDest/localhost", 'logstash' => false ),
 		'T84894' => "udp://$wmfUdp2logDest/T84894", // - bd808 for T84894
 		'TitleBlacklist-cache' => "udp://$wmfUdp2logDest/TitleBlacklist-cache", // For T85428
