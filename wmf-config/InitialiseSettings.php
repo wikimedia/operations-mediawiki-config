@@ -12373,13 +12373,13 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
-	'enwiki' => true,
+	'enwiki' => false,
 ),
 'wmgMFEnableWikiGrokForAnons' => array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
-	'enwiki' => true,
+	'enwiki' => false,
 ),
 'wmgWikiGrokDebug' => array(
 	'default' => false,
