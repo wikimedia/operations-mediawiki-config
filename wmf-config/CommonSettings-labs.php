@@ -83,6 +83,9 @@ if ( $wmgUseVisualEditor ) {
 	$wgVisualEditorParsoidReportProblemURL = 'http://10.4.0.33/_bugs/'; // parsoid-spof
 }
 
+// Citoid extension for VisualEditor pointing at the right URL
+$wgCitoidServiceUrl = 'http://10.68.16.14:1970/api'; // FIXME: Is this right?
+
 if ( $wmgUseFlow ) {
 	$wgFlowParsoidURL = $wmgParsoidURL; // Re-link now it's been set to a new value
 }
