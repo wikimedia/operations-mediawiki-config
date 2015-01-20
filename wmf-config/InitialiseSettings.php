@@ -7172,7 +7172,7 @@ $wgConf->settings = array(
 	),
 	'frwiki' => array(
 		'user' => array( 'move' => false ), // requested by hashar
-		'autopatrolled' => array( 'patrol' => true, 'autopatrol' => true ), // bug 8904,21078
+		'autopatrolled' => array( 'patrol' => true, 'autopatrol' => true, 'movefile' => true ), // bug 8904, 21078, T87145
 		'checkuser' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ), // bug 21044
 	),
 	'+frwikibooks' => array(
