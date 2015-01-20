@@ -13611,6 +13611,7 @@ $wgConf->settings = array(
 	'frwiki' => true,
 	'hewiki' => true,
 	'officewiki' => true, // https://www.loomio.org/d/rTbveB9O/dogfood-flow-on-officewiki
+	'ptwiki' => true, // T73757
 	'cawiki' => true,
 ),
 'wmgFlowEditorList' => array(
@@ -13696,6 +13697,10 @@ $wgConf->settings = array(
 		'User talk:Andrew Garrett (WMF)',
 		'Village pump',
 		'LQT TestZero',
+	),
+	'ptwiki' => array(
+		'Wikipédia Discussão:Flow', // T73757
+		'Wikipédia:Flow/Testes', // T73757
 	),
 	'cawiki' => array( // per QGil and [[ca:Viquipèdia:La taverna/Propostes#Discussions_amb_format_Flow]]
 		'Viquipèdia Discussió:Flow',
