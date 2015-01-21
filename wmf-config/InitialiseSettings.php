@@ -4188,7 +4188,6 @@ $wgConf->settings = array(
 		'CirrusSearchRequests' => array( 'destination' => "udp://$wmfUdp2logDest/CirrusSearch-all", 'logstash' => false ),
 		'CirrusSearchSlowRequests' => "udp://$wmfUdp2logDest/CirrusSearch-slow",
 		'texvc' => "udp://$wmfUdp2logDest/texvc",
-		'Bug54847' => "udp://$wmfUdp2logDest/Bug54847",
 		'recursion-guard' => "udp://$wmfUdp2logDest/recursion-guard",
 		'MassMessage' => "udp://$wmfUdp2logDest/MassMessage", // for bug 57464 -legoktm 2013/12/15
 		'Bug58676' => "udp://$wmfUdp2logDest/Bug58676", # Invalid message parameter
@@ -14457,11 +14456,6 @@ $wgConf->settings = array(
 	'+wiki' => array(
 		'CN', // China
 	),
-),
-
-'wmgBug54847' => array(
-	'default' => true,
-	'private' => false,
 ),
 
 'wmgUsePetition' => array(
