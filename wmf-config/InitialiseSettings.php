@@ -13353,11 +13353,12 @@ $wgConf->settings = array(
 	),
 	'enwiki' => array(
 		'copyedit' => 'Category:All articles needing copy edit',
-		'clarify' => 'Category:All Wikipedia articles needing clarification',
-		'addlinks' => 'Category:All articles with too few wikilinks',
 	),
 	'eswiki' => array(
 		'copyedit' => 'Categoría:Wikipedia:Copyedit',
+	),
+	'ptwiki' => array (
+		'copyedit' => 'Categoria:!Páginas a corrigir',
 	),
 	'simplewiki' => array(
 		'copyedit' => 'Category:Pages in need of copyedit',
@@ -13370,13 +13371,6 @@ $wgConf->settings = array(
 	),
 	'zhwiki' => array(
 		'copyedit' => 'Category:需要校對的頁面',
-	),
-	'fawiki' => array(
-		'clarify' => 'رده:همه مقاله‌های نیازمند شفاف‌سازی ویکی‌پدیا',
-		'addlinks' => 'رده:همه مقاله‌هایی که ویکی‌پیوند بسیار کمی دارند',
-	),
-	'ruwiki' => array(
-		'clarify' => 'Категория:Статьи, требующие внесения ясности',
 	),
 ),
 'wmgGettingStartedExcludedCategories' => array(
