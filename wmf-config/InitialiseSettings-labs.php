@@ -413,10 +413,6 @@ return array(
 		'default' => false,
 	),
 
-	'wmgBug54847' => array(
-		'default' => false,
-	),
-
 	'wmgUseGuidedTour' => array(
 		'wikidatawiki' => true,
 	),

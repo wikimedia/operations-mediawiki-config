@@ -2935,11 +2935,6 @@ if ( in_array( $wgDBname, array( 'wikidatawiki', 'testwikidatawiki' ) ) ) {
 	};
 }
 
-// Bug 54847
-if ( $wmgBug54847 && $wmgUseCentralAuth ) {
-	require( "$wmfConfigDir/Bug54847.php" );
-}
-
 $wgExemptFromUserRobotsControl = array_merge( $wgContentNamespaces, $wmgExemptFromUserRobotsControlExtra );
 
 // additional "language names", adding to Names.php data
