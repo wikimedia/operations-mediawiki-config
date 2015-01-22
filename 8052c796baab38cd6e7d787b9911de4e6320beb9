@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_d51c0b7f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13095,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2015-01-22T16:07:23Z",
+      "side": 1,
+      "message": "now redundant",
+      "revId": "8052c796baab38cd6e7d787b9911de4e6320beb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_f5210fad",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13096,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2015-01-22T16:07:23Z",
+      "side": 1,
+      "message": "now redundant",
+      "revId": "8052c796baab38cd6e7d787b9911de4e6320beb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_95169359",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13097,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2015-01-22T16:07:23Z",
+      "side": 1,
+      "message": "missing trailing comma",
+      "revId": "8052c796baab38cd6e7d787b9911de4e6320beb9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
