@@ -13164,8 +13164,7 @@ $wgConf->settings = array(
 
 'wmgUseBounceHandler' => array(
 	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true
+	'group0' => true,
 ),
 
 'wmgUseTranslate' => array(
