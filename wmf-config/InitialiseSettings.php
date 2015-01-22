@@ -2820,6 +2820,10 @@ $wgConf->settings = array(
 	),
 	'+fawikibooks' => array(
 		'وک' => NS_PROJECT,
+		'کتاب_آشپزی' => 102,
+		'بحث_کتاب_آشپزی' => 103,
+		'ویکی_کودک' => 110,
+		'بحث_ویکی_کودک' => 111,
 	),
 	'+fawikinews' => array(
 		'وخ' => NS_PROJECT,
@@ -5682,6 +5686,14 @@ $wgConf->settings = array(
 		//103 => 'Wikiversidad_Discusión',
 	),
 	*/
+	'fawikibooks' => array(
+		102 => 'کتاب‌آشپزی',
+		103 => 'بحث_کتاب‌آشپزی',
+		110 => 'ویکی‌کودک',
+		111 => 'بحث_ویکی‌کودک',
+		112 => 'موضوع',
+		113 => 'بحث_موضوع',
+	),
 	'frwikibooks' => array(
 		100 => 'Transwiki',
 		101 => 'Discussion_Transwiki',
