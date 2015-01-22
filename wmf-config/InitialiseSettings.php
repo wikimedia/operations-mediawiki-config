@@ -8228,7 +8228,12 @@ $wgConf->settings = array(
 			'templateeditor', // bug 72146
 			'abusefilter' // bug 72502
 		),
-		'sysop' => array( 'rollbacker', 'autopatrol', 'uploader' ), // bug 23233, 29007 and 69171
+		'sysop' => array(
+			'rollbacker', // bug 23233
+			'autopatrol', // bug 29007
+			'uploader', // bug 69171
+			'confirmed' // T87348
+		 ),
 		'botadmin' => array(
 			'patroller',
 			'Image-reviewer',
@@ -8236,7 +8241,8 @@ $wgConf->settings = array(
 			'autopatrol',
 			'uploader',
 			'templateeditor', // bug 72146
-			'abusefilter' // bug 72502
+			'abusefilter', // bug 72502
+			'confirmed' // T87348
 		 ), // bug 69411
 	),
 	'+fawikinews' => array(
@@ -8804,7 +8810,12 @@ $wgConf->settings = array(
 			'templateeditor', // bug 72146
 			'abusefilter' // bug 72502
 		),
-		'sysop' => array( 'rollbacker', 'autopatrol', 'uploader' ), // bug 23233, 29007 and 69171
+		'sysop' => array(
+			'rollbacker', // bug 23233
+			'autopatrol', // bug 29007
+			'uploader', // bug 69171
+			'confirmed' // T87348
+		),
 		'botadmin' => array(
 			'patroller',
 			'Image-reviewer',
@@ -8812,7 +8823,8 @@ $wgConf->settings = array(
 			'autopatrol',
 			'uploader',
 			'templateeditor', // bug 72146
-			'abusefilter' // bug 72502
+			'abusefilter', // bug 72502
+			'confirmed' // T87348
 		), // bug 69411
 	),
 	'+fawikinews' => array(
