@@ -7612,6 +7612,7 @@ $wgConf->settings = array(
 		'autoconfirmed' => array(
 			'collectionsaveascommunitypage' => false, // T85780
 		),
+		'bot' => array( 'move-categorypages' => true ), // T87230
 		'rollbacker' => array( 'rollback' => true ),
 		'uploader' => array( // bug 12334
 			'upload' => true,
