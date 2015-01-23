@@ -33,26 +33,22 @@ foreach ( $selectableFilepaths as $filePath ) {
 		break;
 	}
 }
-if ( PHP_SAPI !== 'cli' ) { // Don't run if executing unit tests
+// Don't run if executing unit tests
+if ( PHP_SAPI !== 'cli' ) {
 	ob_start( 'ob_gzhandler' );
 	header( 'Content-Type: text/html; charset=utf-8' );
 }
 
 if ( !$selectedFilePath ) {
 	if( $selectedFileName === null ){
-		// No parameter file given, e.g. if you go to this file directly, redirect to overview
-		if( isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ){
-			$protocol = "https";
-		} {
-			$protocol = "http";
-		}
-		header( "HTTP/1.1 302 Found" );
-		header( "Location: ". $protocol . "://" . $_SERVER[ 'SERVER_NAME'] ."/conf/index.php" );
-		echo $protocol . "://" . $_SERVER[ 'SERVER_NAME'] ."/conf/index.php";
+		// If no 'file' is given (e.g. accessing this file directly), redirect to overview
+		header( 'HTTP/1.1 302 Found' );
+		header( 'Location: ./index.php' );
+		echo '<a href="./index.php">Redirect</a>';
 		exit;
 	} else {
-		// Parameter file IS given, but for whatever reason no filename given or filename not existing in this directory
-		$hlHtml = "<pre>No valid, whitelisted filename in parameter \"file\" given.</pre>";
+		// Parameter file is given, but not existing in this directory
+		$hlHtml = '<pre>Invalid filename given.</pre>';
 	}
 } else {
 	// Follow symlink
