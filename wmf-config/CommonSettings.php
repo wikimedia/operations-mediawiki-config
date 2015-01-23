@@ -2707,8 +2707,7 @@ if ( $wmgUseContentTranslation ) {
 
 	$wgContentTranslationTranslateInTarget = true;
 
-	// Namespace to publish article
-	$wgContentTranslationTargetNamespace = 'User';
+	$wgContentTranslationTargetNamespace = $wmgContentTranslationTargentNamespace;
 
 	$wgContentTranslationEventLogging = $wmgContentTranslationEventLogging;
 
