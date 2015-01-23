@@ -13514,9 +13514,13 @@ $wgConf->settings = array(
 	'testwiki' => true,
 ),
 
+// Also controls Thanks
 'wmgUseEcho' => array(
-	'default' => false,
-	'echowikis' => true,
+	'default' => true,
+	'+legalteamwiki' => false,
+	'+loginwiki' => false,
+	'+votewiki' => false,
+	'+zerowiki' => false,
 ),
 'wmgEchoEnableEmailBatch' => array(
 	'default' => true,
@@ -13598,12 +13602,6 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
-),
-
-// Thanks should be enabled for wikis with Echo
-'wmgUseThanks' => array(
-	'default' => false,
-	'echowikis' => true,
 ),
 
 'wmgUseFlow' => array(
