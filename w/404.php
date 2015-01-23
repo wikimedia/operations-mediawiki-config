@@ -13,11 +13,7 @@ $encUrl = htmlspecialchars( $prot . $serv . $loc );
 header( "Cache-Control: s-maxage=2678400, max-age=2678400");
 header( "X-Wikimedia-Debug: prot=$prot serv=$serv loc=$loc");
 if( preg_match( "|(%2f)|i", $loc, $matches )
-	|| preg_match( "|^/upload/(.*)|i",$loc, $matches )
-	|| preg_match("|^/style/(.*)|i",$loc, $matches )
-	|| preg_match( "|^/wiki/(.*)|i",$loc, $matches )
-	|| preg_match("|^/w/(.*)|i",$loc, $matches )
-	|| preg_match( "|^/extensions/(.*)|i",$loc, $matches )
+	|| preg_match( "|^/(?:upload|style|wiki|w|extensions)/(.*)|i", $loc, $matches )
 ) {
 	$title = htmlspecialchars( $matches[1] );
 	$details = "<p style=\"font-weight: bold;\">To check for \"$title\" see: <a href=\"//$serv/wiki/$title\" title=\"$title\">$prot$serv/wiki/$title</a></p>";
