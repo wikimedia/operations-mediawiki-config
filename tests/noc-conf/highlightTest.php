@@ -88,7 +88,7 @@ class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
 	/**
 	 * @dataProvider provideInvalidCases
 	 */
-	public function testInvalidCases( $q, $expect = 'No valid, whitelisted filename' ) {
+	public function testInvalidCases( $q, $expect = 'Invalid filename given' ) {
 		$this->assertContains(
 			$expect,
 			$this->runHighlight( $q ),
@@ -102,7 +102,7 @@ class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
 			'file' => $q
 		);
 		ob_start();
-		require( $this->nocConfDir . '/highlight.php' );
+		require $this->nocConfDir . '/highlight.php';
 		$out = ob_get_clean();
 		return $out;
 	}
