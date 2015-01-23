@@ -261,6 +261,39 @@ return array(
 		'default' => false,
 		'enwiki' => true,
 	),
+	'wmgMFWikiDataEndpoint' => array(
+		'enwiki' => 'https://wikidata.beta.wmflabs.org',
+	),
+	'wmgWikiBasePropertyConfig' => array(
+		'enwiki' => array(
+			'instanceOf' => 'P694',
+			'bannerImage' => 'P964',
+		),
+	),
+	'wmgMFInfoboxConfig' => array(
+		'enwiki' => array(
+			// human
+			5 => array(
+				'rows' => array(
+						// Born
+						array( 'id' => 'P476' ),
+						// Birthplace
+						array( 'id' => 'P965' ),
+						// Place of death
+						array( 'id' => 'P994' ),
+						// Country of citizenship
+						array( 'id' => 'P27' ),
+						// Alma mater
+						array( 'id' => 'P998' ),
+				),
+			),
+			'default' => array(
+				'rows' => array(
+				),
+			),
+		),
+	),
+
 	'wmgWikiGrokDebug' => array(
 		'default' => false,
 		'enwiki' => true,

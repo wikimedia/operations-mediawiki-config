@@ -22,3 +22,7 @@ $wgMFEnableWikiGrokOnAllDevices = $wmgMFEnableWikiGrokOnAllDevices;
 $wgMFEnableWikiGrokInSidebar = $wmgMFEnableWikiGrokInSidebar;
 $wgWikiGrokDebug = $wmgWikiGrokDebug;
 $wgMFSpecialCaseMainPage = $wmgMFSpecialCaseMainPage;
+
+$wgMFWikiDataEndpoint = $wmgMFWikiDataEndpoint;
+$wgWikiBasePropertyConfig = $wmgWikiBasePropertyConfig;
+$wgMFInfoboxConfig = $wmgMFInfoboxConfig;
