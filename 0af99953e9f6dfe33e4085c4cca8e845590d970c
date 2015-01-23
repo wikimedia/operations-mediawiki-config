@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_85cc208e",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2710,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2015-01-23T19:01:33Z",
+      "side": 1,
+      "message": "Targent",
+      "revId": "0af99953e9f6dfe33e4085c4cca8e845590d970c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
