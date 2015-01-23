@@ -187,7 +187,7 @@ if ( !$globals ) {
 	$wikiTags = array();
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small', 'medium',
 			'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-default',
-			'echowikis', 'commonsuploads', 'nonbetafeatures' ) as $tag ) {
+			'commonsuploads', 'nonbetafeatures' ) as $tag ) {
 		$dblist = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../$tag.dblist" ) ) );
 		if ( in_array( $wgDBname, $dblist ) ) {
 			$wikiTags[] = $tag;
@@ -2437,6 +2437,7 @@ if ( $wmgEnableGeoData ) {
 
 if ( $wmgUseEcho ) {
 	require_once( "$IP/extensions/Echo/Echo.php" );
+	require_once( "$IP/extensions/Thanks/Thanks.php" );
 
 	$wgEchoDefaultNotificationTypes = array(
 		'all' => array(
@@ -2481,10 +2482,6 @@ if ( $wmgUseEcho ) {
 
 	// Whether to use job queue to process web and email notifications
 	$wgEchoUseJobQueue = $wmgEchoUseJobQueue;
-}
-
-if ( $wmgUseThanks ) {
-	require_once( "$IP/extensions/Thanks/Thanks.php" );
 }
 
 if ( $wmgUseFlow ) {
