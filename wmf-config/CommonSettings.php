@@ -476,7 +476,7 @@ if ( $wmgUseClusterSquid ) {
 
 if( $wmfRealm == 'production' ) {
 	$wgUDPProfilerHost = '10.64.0.18';  // tungsten
-	$wgUDPProfilerPort = defined( 'HHVM_VERSION' ) ? '3812' : '3811';
+	$wgUDPProfilerPort = '3811';
 	$wgAggregateStatsID = $wgVersion;
 }
 
