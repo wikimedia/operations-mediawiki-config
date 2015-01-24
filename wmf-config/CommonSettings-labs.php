@@ -11,7 +11,8 @@ if ( $wmfRealm == 'labs' ) {  # safe guard
 // test wiki
 if ( $wgDBname == 'testwiki' ) {
 	$wgDebugToolbar = true;
-	$wgProfiler['class'] = 'ProfilerSimpleText';
+	$wgProfiler['class'] = 'ProfilerXhprof';
+	$wgProfiler['output'] = array( 'text' );
 }
 
 if ( file_exists( '/etc/wmflabs-instancename' ) ) {
