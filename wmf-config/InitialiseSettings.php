@@ -11388,11 +11388,6 @@ $wgConf->settings = array(
 	'nonbetafeatures' => false,
 ),
 
-'wmgVectorBetaPersonalBar' => array(
-	'default' => true,
-	'nonbetafeatures' => false,
-),
-
 'wmgULSCompactLinks' => array(
 	'default' => true,
 	'nonbetafeatures' => false,
