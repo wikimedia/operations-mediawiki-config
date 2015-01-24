@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_eef7f4f0",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 264,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-01-24T21:33:40Z",
+      "side": 1,
+      "message": "Should have a default value for wikidb other than enwiki",
+      "revId": "e7093e32592dec59a59368b1d15da6b711ebf69c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_2eee4c20",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 267,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-01-24T21:33:40Z",
+      "side": 1,
+      "message": "Should have a default value for wikidb other than enwiki",
+      "revId": "e7093e32592dec59a59368b1d15da6b711ebf69c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae6ac7d6_4ef38007",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 273,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-01-24T21:33:40Z",
+      "side": 1,
+      "message": "Should have a default value for wikidb other than enwiki",
+      "revId": "e7093e32592dec59a59368b1d15da6b711ebf69c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
