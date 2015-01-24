@@ -6913,7 +6913,7 @@ $wgConf->settings = array(
 			'reupload-own' => true, // bug 52725
 			'movefile' => true,
 		), // bug 51232
-		'interface_editor' => array(
+		'interface-editor' => array(
 			'editinterface' => true, // bug 52866
 			'editusercss' => true, // bug 52866
 			'edituserjs' => true, // bug 52866
@@ -7012,7 +7012,7 @@ $wgConf->settings = array(
 		'flood' => array( 'bot' => true ),
 	),
 	'+elwiktionary' => array(
-		'interface_editor' => array( 'editinterface' => true ),
+		'interface-editor' => array( 'editinterface' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ), // bug 28612
 	),
 	'enwiki' => array(
@@ -7219,7 +7219,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'deleterevision' => true, 'abusefilter-modify-restricted' => true, ),
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'unwatchedpages' => true, 'rollback' => true, 'move-rootuserpages' => true,),
 		'autopatrolled' => array( 'autopatrol' => true, 'unwatchedpages' => true, ),
-		'editinterface' => array( 'abusefilter-hidden-log' => true, 'abusefilter-hide-log' => true, 'abusefilter-log' => true, 'abusefilter-log-detail' => true,
+		'interface-editor' => array( 'abusefilter-hidden-log' => true, 'abusefilter-hide-log' => true, 'abusefilter-log' => true, 'abusefilter-log-detail' => true,
 			'abusefilter-modify' => true, 'abusefilter-modify-restricted' => true, 'abusefilter-revert' => true, 'abusefilter-view' => true,
 			'abusefilter-view-private' => true, 'editinterface' => true, 'editusercssjs' => true, 'import' => true, 'tboverride' => true
 		),
@@ -7346,7 +7346,7 @@ $wgConf->settings = array(
 			'undelete' => true,
 			'unwatchedpages' => true,
 		),
-		'interface_editor' => array(
+		'interface-editor' => array(
 			'delete' => true,
 			'editinterface' => true,
 			'editprotected' => true,
@@ -7597,7 +7597,7 @@ $wgConf->settings = array(
 			'autopatrol' => true,
 			'autoreviewer' => true
 		),
-		'interface_editor' => array( // Bug 39905
+		'interface-editor' => array( // Bug 39905
 			'editinterface' => true,
 			'edituserjs' => true,
 			'editusercss' => true,
@@ -8134,7 +8134,7 @@ $wgConf->settings = array(
 			'botadmin', // Bug 52578
 			'import', // bug 52633
 			'transwiki', // bug 52633
-			'interface_editor', // bug 52866
+			'interface-editor', // bug 52866
 			'accountcreator', // bug 69394
 		),
 	),
@@ -8182,7 +8182,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'accountcreator' ), // bug 59997
 	),
 	'+elwiktionary' => array(
-		'bureaucrat' => array( 'interface_editors' ),
+		'bureaucrat' => array( 'interface-editor' ),
 		'sysop' => array( 'autopatrolled' ),
 	),
 	'+enwiki' => array(
@@ -8306,7 +8306,7 @@ $wgConf->settings = array(
 	),
 	'+hewiki' => array(
 		'sysop' => array( 'patroller', 'autopatrolled', 'accountcreator' ),
-		'bureaucrat' => array( 'editinterface' ),
+		'bureaucrat' => array( 'interface-editor' ),
 	),
 	'+hewikibooks' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
@@ -8355,7 +8355,7 @@ $wgConf->settings = array(
 	),
 	'+jawiki' => array(
 		'sysop' => array( 'abusefilter' ),
-		'bureaucrat' => array( 'rollbacker', 'eliminator', 'interface_editor' ),
+		'bureaucrat' => array( 'rollbacker', 'eliminator', 'interface-editor' ),
 	),
 	'+jawiktionary' => array(
 		'sysop' => array( 'autopatrolled' ), // bug 61366
@@ -8455,7 +8455,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'inactive' ),
 	),
 	'+ptwiki' => array(
-		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface_editor', 'accountcreator' ), // bug 39905, 63750
+		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface-editor', 'accountcreator' ), // bug 39905, 63750
 		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ), // bug 63750
 	),
 	'+ptwikivoyage' => array(
@@ -8716,7 +8716,7 @@ $wgConf->settings = array(
 			'botadmin', // bug 52578
 			'import', // bug 52633
 			'transwiki', // bug 52633
-			'interface_editor', // bug 52866
+			'interface-editor', // bug 52866
 			'accountcreator', // bug 69394
 		),
 	),
@@ -8763,7 +8763,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'accountcreator' ), // bug 59997
 	),
 	'+elwiktionary' => array(
-		'bureaucrat' => array( 'interface_editors' ),
+		'bureaucrat' => array( 'interface-editor' ),
 		'sysop' => array( 'autopatrolled' ),
 	),
 	'+enwiki' => array(
@@ -8891,7 +8891,7 @@ $wgConf->settings = array(
 	),
 	'+hewiki' => array(
 		'sysop' => array( 'patroller', 'autopatrolled', 'accountcreator' ),
-		'bureaucrat' => array( 'editinterface' ),
+		'bureaucrat' => array( 'interface-editor' ),
 	),
 	'+hewikibooks' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
@@ -8943,7 +8943,7 @@ $wgConf->settings = array(
 	),
 	'+jawiki' => array(
 		'sysop' => array( 'abusefilter' ),
-		'bureaucrat' => array( 'rollbacker', 'eliminator', 'interface_editor' ),
+		'bureaucrat' => array( 'rollbacker', 'eliminator', 'interface-editor' ),
 	),
 	'+jawiktionary' => array(
 		'sysop' => array( 'autopatrolled' ), // bug 61366
@@ -9038,7 +9038,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller' ), // bug 28479
 	),
 	'+ptwiki' => array(
-		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface_editor', 'accountcreator' ), // bug 39905, 63750
+		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface-editor', 'accountcreator' ), // bug 39905, 63750
 		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ), // bug 63750
 	),
 	'+ptwikinews' => array(
