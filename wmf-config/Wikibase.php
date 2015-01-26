@@ -119,6 +119,11 @@ if ( $wmgUseWikibaseRepo ) {
 		741, // (OBSOLETE) playing hand
 		766, // (DEPRECATED) event location
 	);
+
+	// Don't try to let users answer captchas if they try to add links
+	// on either Item or Property pages. Bug T86453
+	$wgCaptchaTriggersOnNamespace[NS_MAIN]['addurl'] = false;
+	$wgCaptchaTriggersOnNamespace[WB_NS_PROPERTY]['addurl'] = false;
 }
 
 if ( $wmgUseWikibaseClient ) {
