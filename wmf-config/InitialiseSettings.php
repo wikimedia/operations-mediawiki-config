@@ -6590,7 +6590,7 @@ $wgConf->settings = array(
 	'+dewikivoyage' => array( 6 => 1, 14 => 1, 100 => 1, 104 => 1, 106 => 1 ),
 	'+elwikisource' => array( 102 => 1 ),
 	'+enwikibooks' => array( 4 => 1, 112 => 1 ),
-	'+enwikinews' => array( 100 => 1, 101 => 0 ),
+	'+enwikinews' => array( 14 => 1, ), // T87522
 	'+enwikisource' => array( 102 => 1, 106 => 1, 114 => 1 ), // bug 50007
 	'+eswiki' => array( 100 => 1, 104 => 1 ),
 	'+eswikisource' => array( 104 => 1 ),
