@@ -10947,6 +10947,9 @@ $wgConf->settings = array(
 	'enwiki' => array(
 		'default' => 25,
 	),
+	'commonswiki' => array( // T87431
+		'default' => 25,
+	),
 ),
 'wmgAbuseFilterEmergencyDisableAge' => array(
 	'default' => array(
