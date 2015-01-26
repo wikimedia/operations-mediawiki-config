@@ -7176,6 +7176,14 @@ $wgConf->settings = array(
 		'OTRS-member' => array( 'read' => true ), // bug 54368
 		'templateeditor' => array( 'editprotected' => true, 'tboverride' => true, 'templateeditor' => true ), // bug 72146
 		'sysop' => array( 'templateeditor' => true ),  // bug 72146
+		'eliminator' => array(
+			'block' => true,
+			'delete' => true,
+			'deleterevision' => true,
+			'mergehistory' => true,
+			'protect' => true,
+			'suppressredirect'  => true
+		), // T87558
 	),
 	'+fawikinews' => array(
 		'rollbacker' => array( 'rollback' => true ),
@@ -8260,7 +8268,8 @@ $wgConf->settings = array(
 			'botadmin', // bug 69411
 			'OTRS-member', // bug 54368
 			'templateeditor', // bug 72146
-			'abusefilter' // bug 72502
+			'abusefilter', // bug 72502
+			'eliminator' // T87558
 		),
 		'sysop' => array(
 			'rollbacker', // bug 23233
@@ -8276,7 +8285,8 @@ $wgConf->settings = array(
 			'uploader',
 			'templateeditor', // bug 72146
 			'abusefilter', // bug 72502
-			'confirmed' // T87348
+			'confirmed', // T87348
+			'eliminator' // T87558
 		 ), // bug 69411
 	),
 	'+fawikinews' => array(
@@ -8845,7 +8855,8 @@ $wgConf->settings = array(
 			'botadmin', // bug 69411
 			'OTRS-member', // bug 54368
 			'templateeditor', // bug 72146
-			'abusefilter' // bug 72502
+			'abusefilter', // bug 72502
+			'eliminator' // T87558
 		),
 		'sysop' => array(
 			'rollbacker', // bug 23233
@@ -8861,7 +8872,8 @@ $wgConf->settings = array(
 			'uploader',
 			'templateeditor', // bug 72146
 			'abusefilter', // bug 72502
-			'confirmed' // T87348
+			'confirmed', // T87348
+			'eliminator' // T87558
 		), // bug 69411
 	),
 	'+fawikinews' => array(
