@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae6ac7d6_620a152b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1401,
+      "author": {
+        "id": 589
+      },
+      "writtenOn": "2015-01-26T18:52:52Z",
+      "side": 1,
+      "message": "needs wikimania2016wiki entry",
+      "revId": "f4deb385333580641b6493236e9ff2414508b058",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
