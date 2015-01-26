@@ -262,7 +262,7 @@ return array(
 		'enwiki' => true,
 	),
 	'wmgMFWikiDataEndpoint' => array(
-		'enwiki' => 'https://wikidata.beta.wmflabs.org',
+		'enwiki' => 'http://wikidata.beta.wmflabs.org/w/api.php',
 	),
 	'wmgWikiBasePropertyConfig' => array(
 		'enwiki' => array(
