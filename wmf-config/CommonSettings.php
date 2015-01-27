@@ -2763,6 +2763,8 @@ if ( $wmgUseSearchExtraNS ) {
 	$wgSearchExtraNamespaces = $wmgSearchExtraNamespaces;
 }
 
+$wgVectorUseSimpleSearch = $wmgVectorUseSimpleSearch;
+
 if ( $wmgUseGlobalAbuseFilters ) {
 	$wgAbuseFilterCentralDB = $wmgAbuseFilterCentralDB;
 	$wgAbuseFilterIsCentral = ( $wgDBname == $wgAbuseFilterCentralDB );
