@@ -15245,6 +15245,11 @@ $wgConf->settings = array(
 	'commonswiki' => array( NS_CATEGORY ),
 ),
 
+'wgVectorUseSimpleSearch' => array (
+	'default' => true,
+	'commonswiki' => false, // T19471
+),
+
 'wmgUseSecurePoll' => array(
 	'default' => true,
 	'labswiki' => false,
