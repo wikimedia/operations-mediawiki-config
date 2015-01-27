@@ -379,6 +379,10 @@ return array(
 	),
 	// ------------ BetaFeatures end -----------
 
+	'wmgUseCitoid' => array(
+		'default' => true,
+	),
+
 	'wmgUseRSSExtension' => array(
 		'dewiki' => true,
 	),
