@@ -505,6 +505,10 @@ return array(
 	'wmgUseApiFeatureUsage' => array(
 		'default' => true,
 	),
+
+	'wmgUseBounceHandler' => array(
+		'default' => true,
+	),
 );
 
 } # wmflLabsSettings()
