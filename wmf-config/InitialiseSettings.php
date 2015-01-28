@@ -4329,6 +4329,8 @@ $wgConf->settings = array(
 		105 => 'API_talk',
 		106 => 'Skin',
 		107 => 'Skin_talk',
+		108 => 'Dev', // for developer hub pages T369
+		108 => 'Dev_talk',
 	),
 	'nlwikimedia' => array(
 		100 => 'De_Wikiaan',
