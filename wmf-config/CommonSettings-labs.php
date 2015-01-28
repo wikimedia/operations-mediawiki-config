@@ -84,7 +84,6 @@ if ( $wmgUseVisualEditor ) {
 }
 
 if ( $wmgUseCitoid ) {
-	require_once "$IP/extensions/Citoid/Citoid.php";
 	// Citoid extension for VisualEditor pointing at the WMF Labs URL for now
 	$wgCitoidServiceUrl = 'http://citoid.wmflabs.org/api';
 }
