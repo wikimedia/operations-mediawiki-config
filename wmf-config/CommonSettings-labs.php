@@ -85,8 +85,8 @@ if ( $wmgUseVisualEditor ) {
 
 if ( $wmgUseCitoid ) {
 	require_once "$IP/extensions/Citoid/Citoid.php";
-	// Citoid extension for VisualEditor pointing at the right URL
-	$wgCitoidServiceUrl = 'http://10.68.16.145:1970/api'; // deployment-parsoidcache01.eqiad
+	// Citoid extension for VisualEditor pointing at the WMF Labs URL for now
+	$wgCitoidServiceUrl = 'http://citoid.wmflabs.org/api';
 }
 
 if ( $wmgUseFlow ) {
