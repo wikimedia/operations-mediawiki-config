@@ -12300,6 +12300,7 @@ $wgConf->settings = array(
 
 'wmgUseGraph' => array(
 	'default' => false,
+	'cawiki' => true,
 	'collabwiki' => true,
 	'labswiki' => true,
 	'mediawikiwiki' => true,
