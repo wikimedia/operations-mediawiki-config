@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e7fc396_d0f44453",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2069,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2015-01-28T18:23:20Z",
+      "side": 1,
+      "message": "This should probably use the internal service IP rather than going through the externally-facing proxy.",
+      "revId": "571623571053101f8f189b1506917ec343c7aa02",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
