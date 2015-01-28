@@ -2051,6 +2051,13 @@ require_once( "$IP/extensions/TemplateData/TemplateData.php" );
 // TemplateData GUI enabled for all wikis - 2014-11-06
 $wgTemplateDataUseGUI = true;
 
+
+if ( $wmgUseCitoid ) {
+	require_once "$IP/extensions/Citoid/Citoid.php";
+	$wgCitoidServiceUrl = 'http://citoid.wikimedia.org/api';
+}
+
+
 if ( $wmgUseGoogleNewsSitemap ) {
 	include( "$IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php" );
 	$wgGNSMfallbackCategory = $wmgGNSMfallbackCategory;
