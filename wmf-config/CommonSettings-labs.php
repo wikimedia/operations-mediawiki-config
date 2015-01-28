@@ -84,12 +84,6 @@ if ( $wmgUseVisualEditor ) {
 	$wgVisualEditorParsoidReportProblemURL = 'http://10.4.0.33/_bugs/'; // parsoid-spof
 }
 
-if ( $wmgUseCitoid ) {
-	require_once "$IP/extensions/Citoid/Citoid.php";
-	// Citoid extension for VisualEditor pointing at the WMF Labs URL for now
-	$wgCitoidServiceUrl = 'http://citoid.wmflabs.org/api';
-}
-
 if ( $wmgUseFlow ) {
 	$wgFlowParsoidURL = $wmgParsoidURL; // Re-link now it's been set to a new value
 }
