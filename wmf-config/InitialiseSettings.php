@@ -7557,6 +7557,7 @@ $wgConf->settings = array(
 
 	'+officewiki' => array(
 		'communityapps' => array( 'view-community-applications' => true ),
+		'flood' => array( 'bot' => true ), // bug T86237
 		'user' => array( 'massmessage' => true, ), // bug 64978
 	),
 	'+ombudsmenwiki' => array(
@@ -8460,7 +8461,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller' ),
 	),
 	'+officewiki' => array(
-		'bureaucrat' => array( 'import', 'transwiki', 'communityapps' ),
+		'bureaucrat' => array( 'import', 'transwiki', 'communityapps', 'flood' ),
 	),
 	'+ombudsmenwiki' => array(
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', ),
@@ -9051,7 +9052,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller' ),
 	),
 	'+officewiki' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'import', 'transwiki', 'communityapps' ),
+		'bureaucrat' => array( 'sysop', 'bureaucrat', 'import', 'transwiki', 'communityapps', 'flood' ),
 	),
 	'+ombudsmenwiki' => array(
 		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', 'bureaucrat', ),
