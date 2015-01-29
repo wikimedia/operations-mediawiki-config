@@ -10072,6 +10072,7 @@ $wgConf->settings = array(
 
 'wmgUseFloatedToc' => array(
 	'default' => true,
+	'dewikivoyage' => false, // T87534
 ),
 
 'wmgUseGWToolset' => array(
