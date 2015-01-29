@@ -271,7 +271,9 @@ $wgScript           = $wgScriptPath . '/index.php';
 $wgRedirectScript	= $wgScriptPath . '/redirect.php';
 $wgInternalServer = $wgCanonicalServer;
 
-if ( !in_array( $wgDBname, array( 'testwiki', 'labswiki' ) ) && isset( $_SERVER['SERVER_NAME'] ) && gethostname() !== 'osmium' ) {
+if ( gethostname() === 'osmium' ) {
+	$wgResourceLoaderStorageEnabled = false;
+} else if ( !in_array( $wgDBname, array( 'testwiki', 'labswiki' ) ) && isset( $_SERVER['SERVER_NAME'] ) ) {
 	// Make testing JS/skin changes easy by not running load.php through bits for testwiki
 	$wgLoadScript = "//{$wmfHostnames['bits']}/{$_SERVER['SERVER_NAME']}/load.php";
 }
