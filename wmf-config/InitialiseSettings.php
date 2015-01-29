@@ -11469,13 +11469,11 @@ $wgConf->settings = array(
 ),
 
 'wmgNetworkPerformanceSamplingFactor' => array(
-	'default' => 10, // beta feature users do not generate enough data with 1:1000
-	'mediaviewer' => 1000,
+	'default' => 1000,
 ),
 
 'wmgMediaViewerDurationLoggingSamplingFactor' => array(
-	'default' => 10,
-	'mediaviewer' => 1000,
+	'default' => 1000,
 ),
 
 'wmgMediaViewerAttributionLoggingSamplingFactor' => array(
@@ -11488,7 +11486,6 @@ $wgConf->settings = array(
 
 'wmgMediaViewerActionLoggingSamplingFactorMap' => array(
 	'default' => array( 'default' => 1 ),
-	'mediaviewer' => array( 'default' => 1 ),
 	'arwiki' => array(
 		'default' => 1,
 		'history-navigation' => 4,
