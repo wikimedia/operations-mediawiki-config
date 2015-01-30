@@ -136,4 +136,7 @@ if ( $wmgMobileFrontend ) {
 		$wgMFWikiGrokAbTestStartDate = 1416272400; // Tue, 18 Nov 2014 01:00:00 GMT
 		$wgMFWikiGrokAbTestEndDate = 1417482000; // Tue, 02 Dec 2014 01:00:00 GMT
 	}
+
+	// Turn on volunteer recruitment
+	$wgMFEnableJSConsoleRecruitment = true;
 }
