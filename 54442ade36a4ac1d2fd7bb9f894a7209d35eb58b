@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_955d641d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1972,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-01-30T17:40:52Z",
+      "side": 1,
+      "message": "This is now poisoning the $wg* namespace with values that aren\u0027t read by MW-core. My suggestion was to change ParsoidRESTService to have these variables, and then use them, not this way around…",
+      "revId": "54442ade36a4ac1d2fd7bb9f894a7209d35eb58b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
