@@ -1969,10 +1969,10 @@ if ( $wmgUseVectorBeta ) {
 if ( $wmgUseParsoid ) {
 	require_once( "$IP/extensions/Parsoid/Parsoid.php" );
 
-	$wmgParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
-
-	// The wiki prefix to use
-	$wgParsoidWikiPrefix = $wgDBname;
+	$wgParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
+	$wgParsoidPrefix = $wgDBname;
+	$wgParsoidTimeout = 100;
+	$wgParsoidForwardCookies = $wmgParsoidForwardCookies;
 
 	// List the parsoid cache servers to keep up to date.
 	//
@@ -1999,13 +1999,10 @@ if ( $wmgUseParsoid ) {
 if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
 
-	// Parsoid connection configuration
-	$wgVisualEditorParsoidURL = $wmgParsoidURL;
-	$wgVisualEditorParsoidPrefix = $wgParsoidWikiPrefix;
+	$wgVisualEditorParsoidURL = $wgParsoidURL;
+	$wgVisualEditorParsoidPrefix = $wgParsoidPrefix;
 	$wgVisualEditorParsoidProblemReportURL = 'http://parsoid.wmflabs.org/_bugs/';
-	if ( $wmgParsoidForwardCookies ) {
-		$wgVisualEditorParsoidForwardCookies = true;
-	}
+	$wgVisualEditorParsoidForwardCookies = $wgParsoidForwardCookies;
 
 	// Namespace configuration
 	if ( !$wmgVisualEditorInContentNamespaces ) {
@@ -2495,21 +2492,16 @@ if ( $wmgUseThanks ) {
 if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
 
-	// Flow Parsoid - same values as $wgVisualEditorParsoid*, but separated for
-	// those wikis where $wmgUseVisualEditor is false
-	$wgFlowParsoidURL = $wmgParsoidURL;
-	$wgFlowParsoidPrefix = $wgDBname;
-	$wgFlowParsoidTimeout = 100;
-	if ( $wmgParsoidForwardCookies ) {
-		$wgFlowParsoidForwardCookies = true;
-	}
+	$wgFlowParsoidURL = $wgParsoidURL;
+	$wgFlowParsoidPrefix = $wgParsoidPrefix;
+	$wgFlowParsoidTimeout = $wgParsoidTimeout;
+	$wgFlowParsoidForwardCookies = $wgParsoidForwardCookies;
 
 	$wgFlowEditorList = $wmgFlowEditorList;
 	$wgFlowOccupyNamespaces = $wmgFlowOccupyNamespaces;
 	$wgFlowOccupyPages = $wmgFlowOccupyPages;
 	// Requires that Parsoid is available for all wikis using Flow.
 	$wgFlowContentFormat = 'html';
-
 
 	$wgFlowDefaultWikiDb = $wmgFlowDefaultWikiDb;
 	$wgFlowCluster = $wmgFlowCluster;
@@ -2695,7 +2687,7 @@ if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationSiteTemplates['cx'] = '//cxserver.wikimedia.org';
 	// Used for html2wikitext when publishing
 	$wgContentTranslationParsoid = array(
-		'url' => $wmgParsoidURL,
+		'url' => $wgParsoidURL,
 		'timeout' => 10000,
 		'prefix' => $wgDBname,
 	);

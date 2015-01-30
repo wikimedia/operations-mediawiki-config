@@ -74,17 +74,17 @@ if ( $wmgUseVectorBeta ) {
 }
 
 if ( $wmgUseParsoid ) {
-	$wmgParsoidURL = 'http://10.68.16.145'; // deployment-parsoidcache01.eqiad
+	$wgParsoidURL = 'http://10.68.16.145'; // deployment-parsoidcache01.eqiad
 	$wgParsoidCacheServers = array ( 'http://10.68.16.145' ); // deployment-parsoidcache01.eqiad
 }
 
 if ( $wmgUseVisualEditor ) {
-	$wgVisualEditorParsoidURL = $wmgParsoidURL; // Re-link now it's been set to a new value
+	$wgVisualEditorParsoidURL = $wgParsoidURL; // Re-link now it's been set to a new value
 	$wgVisualEditorParsoidReportProblemURL = 'http://10.4.0.33/_bugs/'; // parsoid-spof
 }
 
 if ( $wmgUseFlow ) {
-	$wgFlowParsoidURL = $wmgParsoidURL; // Re-link now it's been set to a new value
+	$wgFlowParsoidURL = $wgParsoidURL; // Re-link now it's been set to a new value
 }
 
 if ( $wmgUseContentTranslation ) {
