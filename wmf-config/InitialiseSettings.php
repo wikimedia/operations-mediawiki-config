@@ -12284,6 +12284,12 @@ $wgConf->settings = array(
 	'default' => true,
 	'labswiki' => false,
 ),
+'wmgMFEnableJSConsoleRecruitment' => array(
+	'default' => false,
+	'test2wiki' => true,
+	'testwiki' => true,
+	'enwiki' => true,
+),
 'wmgUseWikiGrok' => array(
 	'default' => false,
 	'test2wiki' => true,
