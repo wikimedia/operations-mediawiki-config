@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_decc5969",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1244,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2015-01-30T22:34:47Z",
+      "side": 1,
+      "message": "think this needs to be wikidatawiki instead of enwikidata",
+      "revId": "362df7be4cb214dc48b633a3ac9de63d8d74ab8e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
