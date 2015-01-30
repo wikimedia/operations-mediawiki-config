@@ -13,6 +13,7 @@ $wgObjectCaches['memcached-pecl'] = array(
 		: array( '127.0.0.1:11212' ),
 	'server_failure_limit' => 1e9,
 	'retry_timeout'        => -1,
+	'loggroup'             => 'memcached',
 );
 
 $wgBloomFilterStores['main'] = array(

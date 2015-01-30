@@ -4167,7 +4167,7 @@ $wgConf->settings = array(
 		'SwiftBackend' => "udp://$wmfUdp2logDest/swift-backend", // -aaron 5/15/12
 		'updateTranstagOnNullRevisions' => "udp://$wmfUdp2logDest/updateTranstagOnNullRevisions",
 		'redis' => "udp://$wmfUdp2logDest/redis", // -asher 2012/10/12
-		'memcached-serious' => "udp://$wmfUdp2logDest/memcached-serious", // -aaron 2012/10/24
+		'memcached' => array( 'destination' => "udp://$wmfUdp2logDest/memcached-serious", 'level' => \Psr\Log\LogLevel::ERROR ), // -aaron 2012/10/24
 		'404' => "udp://$wmfUdp2logDest/four-oh-four",
 		'resourceloader' => "udp://$wmfUdp2logDest/resourceloader",
 		'wikibase-debug' => "udp://$wmfUdp2logDest/wikibase-debug",
