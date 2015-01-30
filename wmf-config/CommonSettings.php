@@ -354,8 +354,9 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 			'purgePeriod' => 0,
 			'tableName' => 'pc',
 			'shards' => 256,
+			'loggroup' => 'SQLBagOStuff',
 		),
-	)
+	),
 );
 
 if ( $wmgUseClusterSession ) {
@@ -365,6 +366,7 @@ if ( $wmgUseClusterSession ) {
 		'class' => 'RedisBagOStuff',
 		'servers' => $sessionRedis[$wmfDatacenter],
 		'password' => $wmgRedisPassword,
+		'loggroup' => 'redis',
 	);
 }
 
