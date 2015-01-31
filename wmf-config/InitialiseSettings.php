@@ -10101,6 +10101,7 @@ $wgConf->settings = array(
 	'wikiversity' => true,
 
 	// Individual wikis
+	'cawikibooks' => true, // T88208
 	'dewikibooks' => true,
 	'enwikibooks' => true,
 	'enwikinews' => true,
