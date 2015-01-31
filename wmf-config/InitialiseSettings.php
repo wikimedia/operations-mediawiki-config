@@ -11117,6 +11117,7 @@ $wgConf->settings = array(
 		'openfashion.momu.be',              // Open Fashion Antwerp Fashion Museum (MoMu)
 		'*.commonists.org',                 // Commonists - bug T75724
 		'*.bnf.fr',                         // Bibliothèque nationale de France - bug T86699
+		'www.doria.fi',                     // Doria - T87104
 	),
 ),
 
