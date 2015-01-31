@@ -2533,8 +2533,9 @@ if ( $wmgUseThanks ) {
 if ( $wmgUseFlow ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
 
-	// Flow Parsoid - same values as $wgVisualEditorParsoid*, but separated for
-	// those wikis where $wmgUseVisualEditor is false
+	// Flow Parsoid - These are now specified directly as Flow-specific
+	// configuration variables, though it currently uses the same Parsoid URL
+	// as VisualEditor does.
 	$wgFlowParsoidURL = $wmgParsoidURL;
 	$wgFlowParsoidPrefix = $wgDBname;
 	$wgFlowParsoidTimeout = 100;
