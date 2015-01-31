@@ -6908,6 +6908,13 @@ $wgConf->settings = array(
 		'sysop' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
 	),
+	'+cawikibooks' => array(
+		'interface-editor' => array( // T85713
+		'editinterface' => true,
+		'editusercss' => true,
+		'edituserjs' => true,
+		),
+	),
 	'+checkuserwiki' => array( // bug 28781
 		'autoconfirmed' => array(
 			'autoconfirmed' => false,
