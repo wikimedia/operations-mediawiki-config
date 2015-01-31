@@ -11208,6 +11208,17 @@ $wgConf->settings = array(
 	'labswiki' => false,
 ),
 
+// This is also guarded by $wmgUseCentralAuth.
+// Only enable on test* wikis for now
+'wmgUseGlobalUserPage' => array(
+	'default' => false,
+	'private' => false,
+	'fishbowl' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'testwikidatawiki' => true,
+),
+
 'wgDisabledVariants' => array(
 	'default' => array(),
 	'zhwiki' => array( 'zh-my' ),

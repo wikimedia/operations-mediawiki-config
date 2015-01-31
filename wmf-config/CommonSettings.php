@@ -1324,6 +1324,12 @@ if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
 	);
 }
 
+if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
+	require_once "$IP/extensions/GlobalUserPage/GlobalUserPage.php";
+	$wgGlobalUserPageAPIUrl = 'https://test.wikipedia.org/w/api.php';
+	$wgGlobalUserPageDBname = 'testwiki';
+}
+
 
 // taking it live 2006-12-15 brion
 if ( $wmgUseDismissableSiteNotice ) {

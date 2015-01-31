@@ -50,6 +50,7 @@ $IP/extensions/GettingStarted/GettingStarted.php
 $IP/extensions/GlobalBlocking/GlobalBlocking.php
 $IP/extensions/GlobalCssJs/GlobalCssJs.php
 $IP/extensions/GlobalUsage/GlobalUsage.php
+$IP/extensions/GlobalUserPage/GlobalUserPage.php
 $IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php
 $IP/extensions/Graph/Graph.php
 $IP/extensions/GuidedTour/GuidedTour.php
