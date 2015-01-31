@@ -501,12 +501,6 @@ return array(
 		'default' => 'deployment-cache-upload02.eqiad.wmflabs',
 	),
 
-	'wmgUseGlobalUserPage' => array(
-		'default' => true,
-		'private' => false,
-		'fishbowl' => false,
-	),
-
 	'wmgUseApiFeatureUsage' => array(
 		'default' => true,
 	),
