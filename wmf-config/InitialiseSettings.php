@@ -14590,6 +14590,10 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgUseXAnalytics' => array(
+	'default' => true,
+),
+
 );
 
 
