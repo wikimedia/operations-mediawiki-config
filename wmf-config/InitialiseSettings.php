@@ -13864,6 +13864,12 @@ $wgConf->settings = array(
 	'testwiki' => true,
 ),
 
+// Namespace to publish article
+'wmgContentTranslationTargetNamespace' => array(
+	'default' => 'User',
+	'cawiki' => 'Main',
+),
+
 'wmgUseMapSources' => array(
 	'default' => false,
 	'wikivoyage' => true,
