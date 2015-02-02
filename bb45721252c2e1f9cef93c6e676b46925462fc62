@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d28445a6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 13793,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-02-02T15:31:00Z",
+      "side": 1,
+      "message": "Unless the intention here is to support pseudo-namespaces too, why isn\u0027t this using integer constants like pretty much everything else does?",
+      "revId": "bb45721252c2e1f9cef93c6e676b46925462fc62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
