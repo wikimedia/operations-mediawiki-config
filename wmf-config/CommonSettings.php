@@ -2740,10 +2740,6 @@ if ( $wgDBname == 'labswiki' ) {
 // put this here to ensure it is available for localisation cache rebuild
 $wgWBClientSettings['repoSiteName'] = 'wikibase-repo-name';
 
-if ( $wmgUseTranslate && $wmgUseTranslationMemory ) {
-	require_once( "$IP/extensions/Solarium/Solarium.php" );
-}
-
 if ( $wmgUseTemplateSandbox ) {
 	require_once( "$IP/extensions/TemplateSandbox/TemplateSandbox.php" );
 	if( $wmgUseScribunto ) {
