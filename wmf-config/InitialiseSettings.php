@@ -14008,7 +14008,7 @@ $wgConf->settings = array(
 'wmgWikibaseUseLegacyUsageIndex' => array(
 	'default' => true,
 	'testwiki' => false,
-	'testwikidatawiki' => false,
+	'wikidata' => false,
 ),
 
 'wmgUseWikibaseRepo' => array(
