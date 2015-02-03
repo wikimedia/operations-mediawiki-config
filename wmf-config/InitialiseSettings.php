@@ -11119,6 +11119,7 @@ $wgConf->settings = array(
 		'*.commonists.org',                 // Commonists - bug T75724
 		'*.bnf.fr',                         // Bibliothèque nationale de France - bug T86699
 		'www.doria.fi',                     // Doria - T87104
+		'cdm16062.contentdm.oclc.org',      // North Carolina Digital Collections - T76867
 	),
 ),
 
