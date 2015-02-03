@@ -5,6 +5,7 @@
 		"wikimedia/cdb": "1.0.1"
 	},
 	"config": {
+		"classmap-authoritative": true,
 		"optimize-autoloader": true,
 		"prepend-autoloader": false,
 		"vendor-dir": "multiversion/vendor"
