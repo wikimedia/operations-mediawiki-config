@@ -4213,6 +4213,7 @@ $wgConf->settings = array(
 		'localhost' => array( 'destination' => "udp://$wmfUdp2logDest/localhost", 'logstash' => false ),
 		'T84894' => "udp://$wmfUdp2logDest/T84894", // - bd808 for T84894
 		'TitleBlacklist-cache' => "udp://$wmfUdp2logDest/TitleBlacklist-cache", // For T85428
+		'T87645' => "udp://$wmfUdp2logDest/T87645", // - Ori on behalf of Tim, for https://gerrit.wikimedia.org/r/#/c/188304/
 	),
 
 	'+enwiki' => array(
