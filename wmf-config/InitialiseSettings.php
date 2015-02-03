@@ -8215,7 +8215,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'accountcreator' ), // bug 59997
 	),
 	'+elwiktionary' => array(
-		'bureaucrat' => array( 'interface_editors' ),
+		'bureaucrat' => array( 'interface_editor' ),
 		'sysop' => array( 'autopatrolled' ),
 	),
 	'+enwiki' => array(
@@ -8804,7 +8804,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'accountcreator' ), // bug 59997
 	),
 	'+elwiktionary' => array(
-		'bureaucrat' => array( 'interface_editors' ),
+		'bureaucrat' => array( 'interface_editor' ),
 		'sysop' => array( 'autopatrolled' ),
 	),
 	'+enwiki' => array(
