@@ -452,9 +452,10 @@ if ( $wmgPrivateWikiUploads ) {
 	# Dia Diagrams files --fred.
 	$wgFileExtensions[] = 'dia';
 	// To allow OpenOffice doc formats we need to not blacklist zip files
+	// To allow dia-files (for flowcharts) we need to not blacklist x-gzip files
 	$wgMimeTypeBlacklist = array_diff(
 		$wgMimeTypeBlacklist,
-		array( 'application/zip' ) );
+		array( 'application/zip', 'application/x-gzip' ) );
 }
 
 # Hack for rsvg broken by security patch
