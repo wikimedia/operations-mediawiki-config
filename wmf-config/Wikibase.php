@@ -35,6 +35,7 @@ if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki', 'testwikidatawiki' ) )
 	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'wikidata';
 }
 
+$wgWBSharedSettings['useLegacyChangesSubscription'] = true;
 
 if ( $wmgUseWikibaseRepo ) {
 	$baseNs = 120;
