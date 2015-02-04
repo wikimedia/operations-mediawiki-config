@@ -16,6 +16,12 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 			'flags'  => XHPROF_FLAGS_NO_BUILTINS,
 			'output' => 'text',
 		);
+	} else {
+		$wgProfiler = array(
+			'class'    => 'ProfilerSectionOnly',
+			'output'   => 'udp',
+			'sampling' => 50
+		);
 	}
 
 	// If HTTP_FORCE_LOCAL_XHPROF is set in the shell environment,
