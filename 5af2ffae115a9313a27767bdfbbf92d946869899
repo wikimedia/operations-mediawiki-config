@@ -16,6 +16,24 @@
       "revId": "5af2ffae115a9313a27767bdfbbf92d946869899",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b6acfd85",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-02-05T18:10:33Z",
+      "side": 1,
+      "message": "I initially thought about doing that, but I thought it might be premature optimization (since so far we only have one use case).",
+      "parentUuid": "6e7c4fa4_b654fdca",
+      "revId": "5af2ffae115a9313a27767bdfbbf92d946869899",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
