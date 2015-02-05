@@ -11924,7 +11924,6 @@ $wgConf->settings = array(
 
 'wmgUseParsoid' => array(
 	'default' => true,
-	'labswiki' => false,
 ),
 
 // Should a users' Cookie: headers be forwarded to Parsoid (for private wikis)
