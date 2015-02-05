@@ -1,5 +1,5 @@
 <?php
-if ( $wmgUseMonologLogger ) {
+if ( false && $wmgUseMonologLogger ) {
 	/**
 	* Create a config array for a \Monolog\Handler\RedisHandler instance.
 	* @param int $level Minimum logging level at which this handler will be
