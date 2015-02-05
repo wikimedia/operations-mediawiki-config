@@ -472,7 +472,7 @@ if ( $wmgUseClusterSquid ) {
 }
 
 if( $wmfRealm == 'production' ) {
-	$wgUDPProfilerHost = '10.64.0.18';  // tungsten
+	$wgUDPProfilerHost = 'statsd.eqiad.wmnet';
 	$wgUDPProfilerPort = '3811';
 	$wgAggregateStatsID = $wgVersion;
 }
