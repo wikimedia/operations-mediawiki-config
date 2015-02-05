@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b654fdca",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 146,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-02-05T17:07:47Z",
+      "side": 1,
+      "message": "At first glance I thought this could be merged with the one above. Maybe worth ticketing up creating the or operator (at least)?",
+      "revId": "5af2ffae115a9313a27767bdfbbf92d946869899",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
