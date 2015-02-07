@@ -4,6 +4,16 @@
 	"require": {
 		"wikimedia/cdb": "1.0.1"
 	},
+	"require-dev": {
+		"jakub-onderka/php-parallel-lint": "0.8.*",
+		"phpunit/phpunit": "4.4.*"
+	},
+	"scripts": {
+		"test": [
+			"parallel-lint . --exclude multiversion/vendor --exclude wmf-config/PrivateSettings.php",
+			"phpunit $PHPUNIT_ARGS"
+		]
+	},
 	"config": {
 		"optimize-autoloader": true,
 		"prepend-autoloader": false,
