@@ -11958,7 +11958,7 @@ $wgConf->settings = array(
 	'+metawiki' => array( 200 /* Grants */, 202 /* Research */, 204 /* Participation */, 206, 208 /* Programs */ ),
 	'+wikidata' => array( NS_PROJECT ),
 	// Wikipedias
-	'+cawiki' => array( 100 /* Portal */, 102 /* Viquiprojecte */ ), // Bug 56000
+	'+cawiki' => array( NS_PROJECT, 100 /* Portal */, 102 /* Viquiprojecte */ ), // T58000 & T88896
 	'+enwiki' => array( 100 /* Portal */, 108 /* Book */, 118 /* Draft */ ), // Bug 56001
 	'+hewiki' => array( 118 /* Draft */ ), // T87027
 	'+ruwiki' => array( 102 /* Draft / Incubator */ ), // T86688
