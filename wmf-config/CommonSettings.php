@@ -2187,7 +2187,8 @@ if ( $wmgUseBounceHandler ) {
 	// $wmgVERPsecret is set in PrivateSettings.php
 	$wgVERPsecret = $wmgVERPsecret;
 	$wgVERPdomainPart = 'wikimedia.org';
-	$wgBounceHandlerUnconfirmUsers = false;
+	$wgBounceHandlerUnconfirmUsers = true;
+	$wgBounceRecordLimit = 5;
 	$wgBounceHandlerCluster = 'extension1';
 	$wgBounceHandlerSharedDB = 'wikishared';
 	$wgBounceHandlerInternalIPs = array( '208.80.154.90', '208.80.154.89', '2620:0:861:3:208:80:154:90', '2620:0:861:3:208:80:154:91', '2620:0:861:3:ca1f:66ff:febf:8dd6' ); # polonium and lead
