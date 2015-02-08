@@ -150,7 +150,8 @@ if ( $wmgUseBounceHandler ) {
 	$wgBounceHandlerCluster = false;
 	$wgBounceHandlerSharedDB = false;
 	$wgBounceHandlerInternalIPs = array( '127.0.0.1', '::1', '10.68.17.78' ); //deployment-mx.wmflabs.org
-	$wgBounceHandlerUnconfirmUsers = false;
+	$wgBounceHandlerUnconfirmUsers = true;
+	$wgBounceRecordLimit = 2;
 	$wgVERPdomainPart = 'beta.wmflabs.org';
 }
 
