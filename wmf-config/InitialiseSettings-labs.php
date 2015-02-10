@@ -263,16 +263,16 @@ return array(
 		'enwiki' => true,
 	),
 	'wmgMFWikiDataEndpoint' => array(
-		'enwiki' => 'http://wikidata.beta.wmflabs.org/w/api.php',
+		'default' => 'http://wikidata.beta.wmflabs.org/w/api.php',
 	),
 	'wmgWikiBasePropertyConfig' => array(
-		'enwiki' => array(
+		'default' => array(
 			'instanceOf' => 'P694',
 			'bannerImage' => 'P964',
 		),
 	),
 	'wmgMFInfoboxConfig' => array(
-		'enwiki' => array(
+		'default' => array(
 			// human
 			5 => array(
 				'rows' => array(
