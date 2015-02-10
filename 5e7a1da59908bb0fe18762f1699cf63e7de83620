@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b5fb73dd",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 2766,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-02-10T14:29:55Z",
+      "side": 1,
+      "message": "$wgVectorUseSimpleSearch \u003d $wmgVectorUseSimpleSearch;",
+      "revId": "5e7a1da59908bb0fe18762f1699cf63e7de83620",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
