@@ -8,7 +8,17 @@ $wgEmailConfirmToEdit = true;
 $wgUseTeX = false;
 $wgEnableCreativeCommonsRdf = true;
 
-$wgUseInstantCommons  = true;
+$wgForeignFileRepos[] = array(
+    'class' => 'ForeignAPIRepo',
+    'name' => 'wikimediacommons',
+    'apibase' => 'http://commons.wikimedia.org/w/api.php',
+    'hashLevels' => 2,
+    'fetchDescription' => true,
+    'descriptionCacheExpiry' => 43200,
+    'apiThumbCacheExpiry' => 86400 * 7, // cache for a whole week
+    'directory' => '/usr/local/apache/images',
+    'backend' => 'wikimediacommons-backend',
+);
 
 $wgCaptchaTriggers['addurl']        = false;
 
