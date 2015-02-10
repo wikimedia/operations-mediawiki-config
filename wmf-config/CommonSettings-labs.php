@@ -218,6 +218,10 @@ if ( $wmgUsePageImages ) {
 	);
 }
 
+if ( $wmgUseGather ) {
+	require_once "$IP/extensions/Gather/Gather.php";
+}
+
 if ( $wmgUseFundraisingTranslateWorkflow ) {
 	include "$IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php";
 }
