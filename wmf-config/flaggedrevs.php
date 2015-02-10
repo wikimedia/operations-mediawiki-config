@@ -237,17 +237,17 @@ elseif ( $wgDBname == 'enwiki' || $wgDBname == 'testwiki' ) {
 	$wgFlagRestrictions = array(
 		'status' => array( 'review' => 1, 'autoreview' => 1 ),
 	);
-	# Restriction levels for auto-review/review rights
-	$wgFlaggedRevsRestrictionLevels = array( '', 'autoconfirmed', 'review' );
+	# Restriction levels for PC1/PC2
+	$wgFlaggedRevsRestrictionLevels = array( '', 'autoconfirmed', 'autoreview' );
 	# Use flag "protection" levels
 	$wgFlaggedRevsProtection = true;
 	# Use current templates/files
 	$wgFlaggedRevsHandleIncludes = FR_INCLUDES_CURRENT;
-	# Group permissions for autoconfirmed
-	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
 
+	# Group permissions for rollbackers
+	$wgGroupPermissions['rollbacker']['autoreviewrestore'] = true;
 	# Group permissions for sysops
-	$wgGroupPermissions['sysop']['review']         = true;
+	$wgGroupPermissions['sysop']['review'] = true;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 	# Use 'reviewer' group
 	$wgAddGroups['sysop'][] = 'reviewer';
