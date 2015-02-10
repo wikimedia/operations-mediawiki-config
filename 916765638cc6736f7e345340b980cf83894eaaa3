@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ab946f8e",
+        "filename": "wmf-config/wikitech.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2015-02-10T20:32:53Z",
+      "side": 1,
+      "message": "\u0027backend\u0027 should be ommitted (that or define the backend in $wgFileBackends and omit \u0027directory\u0027).",
+      "revId": "916765638cc6736f7e345340b980cf83894eaaa3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
