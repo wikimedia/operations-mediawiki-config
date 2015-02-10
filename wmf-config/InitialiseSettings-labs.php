@@ -517,7 +517,7 @@ return array(
 	),
 
 	'-wmgScorePath' => array(
-		'default' => "//upload.$variant.wmflabs.org/score",
+		'default' => "//upload.beta.wmflabs.org/score",
 	),
 );
 
