@@ -1870,7 +1870,7 @@ $wgConf->settings = array(
 	 'execwiki' => '/mnt/upload7/private/execwiki',
 	 'transitionteamwiki' => '/mnt/upload7/private/transitionteamwiki',
 	 'iegcomwiki' => '/mnt/upload7/private/iegcomwiki',
-	 'labswiki' => '/usr/local/apache/images',
+	 'labswiki' => '/srv/org/wikimedia/controller/wikis/images',
 ),
 
 'wgImgAuthUrlPathMap' => array(
