@@ -69,7 +69,7 @@ $wgLBFactoryConf = array(
 	'rowiki' => 's7',
 	'kowiki' => 's7',
 
-	'labswiki' => 'virt1000',
+	'labswiki' => 'silver',
 ),
 
 # Load lists
@@ -148,8 +148,8 @@ $wgLBFactoryConf = array(
 		'db1039' => 400, # 1.4TB  64GB
 		'db1062' => 500, # 2.8TB 128GB
 	),
-	'virt1000' => array(
-		'virt1000' => 100,   # I have no idea if this is right
+	'silver' => array(
+		'silver' => 100,   # I have no idea if this is right
 	),
 ),
 
@@ -426,6 +426,7 @@ $wgLBFactoryConf = array(
 	'db1072' => '10.64.48.27', #do not remove or comment out
 	'db1073' => '10.64.48.28', #do not remove or comment out
 	'virt1000' => '208.80.154.18', #do not remove or comment out
+	'silver' => '208.80.154.136', #do not remove or comment out
 ),
 
 'externalLoads' => array(
