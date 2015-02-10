@@ -450,7 +450,10 @@ return array(
 	'-wmgFlowCluster' => array(
 		'default' => false,
 	),
-
+	'wmgUseGather' => array(
+		'default' => false,
+		'enwiki' => true,
+	),
 	'wmgUseGuidedTour' => array(
 		'wikidatawiki' => true,
 	),
