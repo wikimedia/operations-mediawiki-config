@@ -1774,10 +1774,6 @@ $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 $wgDefaultUserOptions['usenewrc'] = 0;
 $wgDefaultUserOptions['extendwatchlist'] = 0;
 
-if ( $wgDBname == 'strategywiki' ) {
-	require_once( "$IP/extensions/StrategyWiki/ActiveStrategy/ActiveStrategy.php" );
-}
-
 # # Hack to block emails from some idiot user who likes 'The Joker' --Andrew 2009-05-28
 $wgHooks['EmailUser'][] = function ( &$to, &$from, &$subject, &$text ) {
 	$blockedAddresses = array( 'the4joker@gmail.com', 'randomdude5555@gmail.com', 'siyang.li@yahoo.com', 'johnnywiki@gmail.com', 'wikifreedomfighter@googlemail.com' );
