@@ -1299,8 +1299,10 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthCreateOnView = true;
 
 	// Attempt to attach unattached accounts by password on login
-	// temp disabled 2014-12-16 by legoktm for T75462 / possible OOM
-	$wgCentralAuthAutoMigrate = false;
+	$wgCentralAuthAutoMigrate = true;
+
+	// Try to create global accounts if one doesn't exist and it's safe
+	$wgCentralAuthAutoMigrateNonGlobalAccounts = true;
 
 	// Enables Special:GlobalRenameRequest
 	$wgCentralAuthEnableGlobalRenameRequest = true;
