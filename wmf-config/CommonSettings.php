@@ -356,7 +356,6 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 			'purgePeriod' => 0,
 			'tableName' => 'pc',
 			'shards' => 256,
-			'loggroup' => 'SQLBagOStuff',
 		),
 	),
 );
