@@ -12588,7 +12588,6 @@ $wgConf->settings = array(
 ),
 'wmgMobileFrontend' => array(
 	'default' => true,
-	'labswiki' => false,
 ),
 'wmgUseWikiGrok' => array(
 	'default' => false,
