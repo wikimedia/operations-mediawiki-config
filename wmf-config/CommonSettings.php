@@ -2312,6 +2312,7 @@ if ( $wmgUseTranslationNotifications ) {
 	$wgNotificationUsername = 'Translation Notification Bot';
 	$wgNotificationUserPassword = $wmgTranslationNotificationUserPassword;
 
+	$wgTranslationNotificationsAlwaysHttpsInEmail = true;
 	$wgTranslationNotificationsContactMethods['talkpage-elsewhere'] = true;
 }
 
