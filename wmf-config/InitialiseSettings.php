@@ -12665,6 +12665,11 @@ $wgConf->settings = array(
 	'mediawikiwiki' => 'm.%h1.%h2',
 	'sourceswiki' => 'm.%h0.%h1', // bug 36002
 	'wikidatawiki' => 'm.%h1.%h2',
+	'labswiki' => '', // Not behind Varnish so no black magick
+),
+'wmgMFAutodetectMobileView' => array(
+	'default' => false,
+	'labswiki' => true, // Not behind Varnish
 ),
 
 'wmgMFCustomLogos' => array(
