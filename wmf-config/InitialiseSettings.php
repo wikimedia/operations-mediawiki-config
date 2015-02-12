@@ -2840,6 +2840,8 @@ $wgConf->settings = array(
 		'پدیدآورنده' => 102,
 		'گفتگو_پدیدآورنده' => 103,
 		'ون' => NS_PROJECT,
+		'گفتگوی_برگه' => 105,
+		'گفتگوی_فهرست' => 107,
 	),
 	'+fawikivoyage' => array(
 		'وس' => NS_PROJECT,
@@ -5100,11 +5102,11 @@ $wgConf->settings = array(
 		100 => 'درگاه', // Portal
 		101 => 'بحث_درگاه', // Portal talk
 		102 => 'پدیدآورنده', // Author
-		103 => 'گفتگو_پدیدآورنده', // Author talk
+		103 => 'بحث_پدیدآورنده', // Author talk
 		104 => 'برگه', // Page
-		105 => 'گفتگوی_برگه', // Page talk
+		105 => 'بحث_برگه', // Page talk
 		106 => 'فهرست', // Index
-		107 => 'گفتگوی_فهرست', // Index talk
+		107 => 'بحث_فهرست', // Index talk
 	),
 	'frwikisource' => array(
 		100 => 'Transwiki',
