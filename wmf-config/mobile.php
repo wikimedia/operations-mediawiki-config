@@ -33,6 +33,8 @@ if ( $wmgMobileFrontend ) {
 		$wgMobileUrlTemplate = $wmgMobileUrlTemplate;
 	}
 
+	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
+
 	if ( $wmgZeroBanner && !$wmgZeroPortal ) {
 		require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
 		require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
@@ -104,7 +106,7 @@ if ( $wmgMobileFrontend ) {
 
 	if ( $wmgUseWikiGrok ) {
 		require_once( "$IP/extensions/WikiGrok/WikiGrok.php" );
-		
+
 		$wgWikiGrokSlowCampaigns = array(
 			// https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok/Claim_suggestions#Writer
 			'author' => array(
