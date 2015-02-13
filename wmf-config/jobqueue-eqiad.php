@@ -7,6 +7,12 @@
 // until the master is fixed or full fail-over is done. Proper fail over
 // requires changing the slave to stop slaving the old master before updating
 // the MediaWiki config to direct traffic there.
+if ( $wgDBname === 'labswiki' ) {
+	// Don't set up the job queue for labswiki, which is misconfigured at the
+	// moment and spewing errors. -- Ori, 13-Feb-2015.
+	return;
+}
+
 $wgJobTypeConf['default'] = array(
 	'class'               => 'JobQueueFederated',
 	'configByPartition'   => array(
