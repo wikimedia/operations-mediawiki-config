@@ -4215,6 +4215,7 @@ $wgConf->settings = array(
 		'T84894' => "udp://$wmfUdp2logDest/T84894", // - bd808 for T84894
 		'TitleBlacklist-cache' => "udp://$wmfUdp2logDest/TitleBlacklist-cache", // For T85428
 		'T87645' => "udp://$wmfUdp2logDest/T87645", // - Ori on behalf of Tim, for https://gerrit.wikimedia.org/r/#/c/188304/
+		'T89258' => "udp://$wmfUdp2logDest/T89258", // - awight and AndyRussG
 	),
 
 	'+enwiki' => array(
