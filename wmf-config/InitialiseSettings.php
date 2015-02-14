@@ -13171,6 +13171,15 @@ $wgConf->settings = array(
 		'5' => 'Архайджытæ %code%-5',
 		'N' => 'Архайджытæ %code%-N',
 	),
+	'outreachwiki' => array( //T89484
+		'0' => false,
+		'1' => 'User %code%-1',
+                '2' => 'User %code%-2',
+                '3' => 'User %code%-3',
+                '4' => 'User %code%-4',
+                '5' => 'User %code%-5',
+                'N' => 'User %code%-N',
+	),
 	'plwiki' => array(
 		'0' => false,
 		'1' => 'User %code%-1',
@@ -13439,6 +13448,7 @@ $wgConf->settings = array(
 	'nowiki' => 'Bruker %code%',
 	'oswiki' => 'Архайджытæ %code%',
 	'otrs_wikiwiki' => 'User %code%',
+	'outreachwiki' => 'User %code%', // T89484
 	'plwiki' => 'User %code%',
 	'plwikisource' => 'User %code%', // Bug 39225
 	'ptwiki' => 'Usuários %code%',
