@@ -43,24 +43,19 @@ if ( $_SERVER['SCRIPT_NAME'] != "/w/index.php" ) {
 $wgDebugLogPrefix = $randomHash . ": ";
 
 /**
- * Create a config array for a \Monolog\Handler\RedisHandler instance.
+ * Create a config array for a MWLoggerMonologSyslogHandler instance.
  * @param int $level Minimum logging level at which this handler will be
  * triggered
  */
-function wmMonologRedisConfigFactory( $level ) {
-	global $wmgLogstashPassword;
+function wmMonologSyslogConfigFactory( $level ) {
 	return array(
-		'class' => '\\Monolog\\Handler\\RedisHandler',
+		'class' => 'MWLoggerMonologSyslogHandler',
 		'args' => array(
-			function() use ( $wmgLogstashPassword ) {
-				$redis = new Redis();
-				// deployment-logstash1.eqiad.wmflabs
-				$redis->connect( '10.68.16.134', 6379, .25 );
-				$redis->auth( $wmgLogstashPassword );
-				return $redis;
-			},
-			'logstash',
-			$level
+			'mediawiki',    // syslog appname
+			'10.68.16.134', // deployment-logstash1.eqiad.wmflabs
+			10514,          // logstash syslog listener port
+			LOG_USER,       // syslog facility
+			$level,         // minimum log level to pass to logstash
 		),
 		'formatter' => 'logstash',
 	);
@@ -102,7 +97,7 @@ $wmgMonologConfig =  array(
 			'args' => array( $wgDebugLogFile, true ),
 			'formatter' => 'legacy',
 		),
-		'logstash' => wmMonologRedisConfigFactory( \Monolog\Logger::DEBUG ),
+		'logstash' => wmMonologSyslogConfigFactory( \Monolog\Logger::DEBUG ),
 	),
 
 	'formatters' => array(
@@ -136,7 +131,7 @@ foreach ( $wgDebugLogGroups as $group => $dest ) {
 		if ( $level !== false ) {
 			$logstashHandler = "filtered-{$group}";
 			$wmgMonologConfig['handlers'][$logstashHandler] =
-				wmMonologRedisConfigFactory( $level );
+				wmMonologSyslogConfigFactory( $level );
 		}
 
 		if ( $sample === false ) {
