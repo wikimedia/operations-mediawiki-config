@@ -1279,7 +1279,11 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthLoginIcon = $wmgCentralAuthLoginIcon;
 	$wgCentralAuthAutoNew = true;
 
-	$wgHooks['CentralAuthWikiList'][] = function( &$list ) {
+	/**
+	 * This function is used for both the CentralAuthWikiList and
+	 * GlobalUserPageWikis hooks.
+	 */
+	function wmfCentralAuthWikiList( &$list ) {
 		global $wgLocalDatabases, $IP, $wgSiteMatrixPrivateSites,
 			$wgSiteMatrixFishbowlSites, $wgSiteMatrixClosedSites;
 
@@ -1290,7 +1294,9 @@ if ( $wmgUseCentralAuth ) {
 			$wgSiteMatrixClosedSites
 		);
 		return true;
-	};
+	}
+
+	$wgHooks['CentralAuthWikiList'][] = 'wmfCentralAuthWikiList';
 
 	// Let's give it another try
 	$wgCentralAuthCreateOnView = true;
@@ -1327,15 +1333,10 @@ if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
 
 if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 	require_once "$IP/extensions/GlobalUserPage/GlobalUserPage.php";
-	$wgGlobalUserPageAPIUrl = 'https://test.wikipedia.org/w/api.php';
-	$wgGlobalUserPageDBname = 'testwiki';
-	$wgHooks['GlobalUserPageWikis'][] = function( &$list ) {
-		$list = array( 'testwiki', 'test2wiki', 'testwikidatawiki' );
-		return false;
-	};
+	$wgGlobalUserPageAPIUrl = 'https://meta.wikimedia.org/w/api.php';
+	$wgGlobalUserPageDBname = 'metawiki';
+	$wgHooks['GlobalUserPageWikis'][] = 'wmfCentralAuthWikiList';
 }
-// temp hack to clear queues -- legoktm 2015-02-12
-$wgJobClasses['LocalGlobalUserPageCacheUpdateJob'] = 'NullJob';
 
 
 // taking it live 2006-12-15 brion
