@@ -1220,7 +1220,7 @@ if ( $wmgUseCentralAuth ) {
 
 	$wgDisableUnmergedEditing = $wmgDisableUnmergedEdits;
 	$wgCentralAuthUseEventLogging = $wmgCentralAuthUseEventLogging;
-	$wgCentralAuthPreventUnattached = $wmgCentralAuthPreventUnattached;
+	$wgCentralAuthPreventUnattached = true;
 
 	if( $wmfRealm == 'production' ) {
 		$wgCentralAuthRC[] = array(
