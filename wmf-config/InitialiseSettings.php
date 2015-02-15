@@ -11300,6 +11300,7 @@ $wgConf->settings = array(
 
 'wmgUseUploadWizard' => array(
 	'default' => false,
+	'idwiki' => true, // T88918
 	'rowiki' => true, // bug 59242
 	'testwiki' => true,
 	'test2wiki' => true,
