@@ -7465,6 +7465,9 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ), //Bug 70441
 		'patroller' => array( 'autopatrol' => true, 'patrol' => true ), //Bug 70441
 	),
+	'maiwiki' => array(
+		'autopatrolled' => array( 'autopatrol' => true ), //T89346
+	),
 	'mediawikiwiki' => array(
 		'user' => array( 'move' => false ),
 		// Kept 'autoreview' as substitute for 'autopatrolled' user group
@@ -8416,6 +8419,9 @@ $wgConf->settings = array(
 	'+lvwiki' => array(
 		'sysop' => array( 'autopatrolled', 'patroller' ), //Bug 70441
 	),
+	'+maiwiki' => array(
+		'sysop' => array( 'autopatrolled' ), //T89346
+	),
 	'+mediawikiwiki' => array(
 		'sysop' => array( 'autoreview' ),
 		'bureaucrat' => array( 'autoreview', 'transwiki', 'coder', 'import', 'svnadmins', 'translationadmin' ),
@@ -9010,6 +9016,9 @@ $wgConf->settings = array(
 	),
 	'+lvwiki' => array(
 		'sysop' => array( 'autopatrolled', 'patroller' ), //Bug 70441
+	),
+	'+maiwiki' => array(
+		'sysop' => array( 'autopatrolled' ), //T89346
 	),
 	'+mediawikiwiki' => array(
 		'sysop' => array( 'autoreview' ),
