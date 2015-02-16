@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f8d53648",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2015-02-16T08:23:17Z",
+      "side": 1,
+      "message": "Here.",
+      "revId": "f4c726c2cd5e7c08399b3ff73c81cebb88b84dc8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_18d91283",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2015-02-16T08:23:17Z",
+      "side": 1,
+      "message": "The $wmgParsoidURL defined above is accesible. The issues are that we want to pull articles from production, and the production $wmgParsoidURL currently in use is not accessible from labs.",
+      "revId": "f4c726c2cd5e7c08399b3ff73c81cebb88b84dc8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
