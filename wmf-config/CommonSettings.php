@@ -2235,10 +2235,9 @@ if ( $wmgUseTranslate ) {
 
 	$wgEnablePageTranslation = true;
 
+	// Deprecated language codes
 	$wgTranslateBlacklist = array(
 		'*' => array(
-			'en' => 'English is the source language.',
-
 			'gan-hans' => 'Translate in gan please.',
 			'gan-hant' => 'Translate in gan please.',
 
@@ -2272,6 +2271,12 @@ if ( $wmgUseTranslate ) {
 			'zh-sg' => 'Translate in zh please.',
 			'zh-tw' => 'Translate in zh please.',
 		),
+
+	// Can't translate to source language
+	// TODO: figure out what to do once T37489 is fixed
+	if ( $wgLanguageCode === 'en' ) {
+		$wgTranslateBlacklist['*']['en'] = 'English is the source language.';
+	}
 	);
 
 	$wgTranslateEC = array();
