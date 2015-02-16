@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_bb40185c",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 101,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2015-02-16T15:57:50Z",
+      "side": 1,
+      "message": "As far as I can see this is equivalent to https://github.com/wikimedia/operations-mediawiki-config/blob/master/wmf-config/CommonSettings.php#L1972 and thus does not change anything.\n\nTo avoidrepeating the other settings, you can do $wgContentTranslationParsoid[\u0027url\u0027] \u003d \u0027http://correct_address_here\u0027;",
+      "revId": "a59f0070e74b6b44b4fe656fc5554fb07124153a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
