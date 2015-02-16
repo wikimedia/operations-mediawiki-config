@@ -96,6 +96,13 @@ if ( $wmgUseFlow ) {
 
 if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org';
+	// $wmgParsoidURL from production is not accessible from Beta, use it directly.
+	$wgContentTranslationParsoid = array(
+		'url' => 'http://10.2.2.29',
+		'timeout' => 10000,
+		'prefix' => $wgDBname,
+	);
+
 	$wgContentTranslationTranslateInTarget = false;
 }
 
