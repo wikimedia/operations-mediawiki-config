@@ -96,6 +96,8 @@ if ( $wmgUseFlow ) {
 
 if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org';
+	// $wmgParsoidURL from production is not accessible from Beta.
+	$wgContentTranslationParsoid['url'] => 'http://parsoid-lb.eqiad.wikimedia.org';
 	$wgContentTranslationTranslateInTarget = false;
 }
 
