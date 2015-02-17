@@ -5,7 +5,7 @@
 // NOTE: this file is loaded early on in WebStart.php, so be careful with
 // globals.
 
-if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
+if ( gethostname() === 'mw1017' && ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	// Single-request profiling, via 'forceprofile=1' (web) or '--profiler=text' (CLI).
 	if (
 		( isset( $_GET['forceprofile'] ) && isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) )
