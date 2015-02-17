@@ -916,6 +916,12 @@ if ( in_array( $wgLanguageCode, array( 'commons', 'meta', 'sources', 'species', 
 	$wgLanguageCode = 'en';
 }
 
+if ( in_array( gethostname(), array( 'mw1115', 'mw1120', 'mw1020', 'mw1025' ) ) ) {
+	$wgHooks['MessageCache::get'][] = function ( $key ) {
+		wfDebugLog( 'message-usage', $key );
+	};
+}
+
 wfProfileOut( "$fname-misc2" );
 
 # :SEARCH:
