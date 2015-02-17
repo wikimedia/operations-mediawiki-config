@@ -20,6 +20,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 		$wgProfiler = array(
 			'class'    => 'ProfilerSectionOnly',
 			'output'   => 'udp',
+			'udpport'  => 3811,
 			'sampling' => 50
 		);
 	}
