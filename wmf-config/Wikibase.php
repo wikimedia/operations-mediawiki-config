@@ -106,19 +106,18 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] .= $wgWBSharedCacheKey;
 
-	$wgPropertySuggesterMinProbability = 0.071;
+	$wgPropertySuggesterMinProbability = 0.069;
 
 	// Bug 70346
 	$wgPropertySuggesterDeprecatedIds = array(
-		45, // (OBSOLETE) grandparent
-		70, // (OBSOLETE) order
 		107, // (OBSOLETE) main type (GND)
-		132, // (Will be deleted) type of administrative territorial entity
 		143, // imported from
+		357, // (OBSOLETE) title (use P1476)
+		392, // (OBSOLETE) subtitle (use P1680)
+		438, // (OBSOLETE) inscription (use P1684)
 		513, // birth name (Deprecated)
-		643, // Genloc Chr (deprecated, use P1057)
 		741, // (OBSOLETE) playing hand
-		766, // (DEPRECATED) event location
+		1134, // (OBSOLETE) located in place (use P276)
 	);
 
 	// Don't try to let users answer captchas if they try to add links
