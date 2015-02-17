@@ -14177,6 +14177,8 @@ $wgConf->settings = array(
 'wmgContentTranslationTargetNamespace' => array(
 	'default' => 'User',
 	'cawiki' => 'Main',
+	'idwiki' => 'Main', // T89450
+	'ptwiki' => 'Main', // T89450
 ),
 
 'wmgUseMapSources' => array(
