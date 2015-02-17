@@ -121,7 +121,7 @@ $wmfConfigDir = "$IP/../wmf-config";
 
 wfProfileOut( "$fname-host" );
 
-$wgStatsFormatString = "mw.%s:%s|m\n";
+$wgStatsFormatString = 'mw.%3$s:%2$s|m' . "\n";
 
 # Must be set before InitialiseSettings.php:
 switch( $wmfRealm ) {
