@@ -103,8 +103,8 @@ if ( $wmgUseCentralNotice ) {
 	$wgCentralGeoScriptURL = false;
 
 	$wgCentralPagePath = "//meta.wikimedia.beta.wmflabs.org/w/index.php";
-	$wgCentralSelectedBannerDispatcher = "//meta.wikimedia.beta.wmflabs.org/wiki/Special:BannerLoader";
-	$wgCentralBannerRecorder = "//meta.wikimedia.beta.wmflabs.org/wiki/Special:RecordImpression";
+	$wgCentralSelectedBannerDispatcher = "//meta.wikimedia.beta.wmflabs.org/w/index.php?title=Special:BannerLoader";
+	$wgCentralBannerRecorder = "//meta.wikimedia.beta.wmflabs.org/w/index.php?title=Special:RecordImpression";
 	$wgCentralDBname = 'metawiki';
 }
 
