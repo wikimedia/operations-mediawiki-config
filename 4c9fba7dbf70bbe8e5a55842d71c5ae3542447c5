@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_59b5432e",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 222,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-02-17T18:40:20Z",
+      "side": 1,
+      "message": "Should be in mobile-labs.php because of dependency on MF.",
+      "revId": "4c9fba7dbf70bbe8e5a55842d71c5ae3542447c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
