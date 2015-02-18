@@ -283,9 +283,6 @@ $day = $tmarray['wday'];
 
 $wgEmergencyContact = 'noc@wikipedia.org';
 
-$wgDBerrorLog = "udp://$wmfUdp2logDest/dberror";
-$wgDBerrorLogTZ = 'UTC';
-
 if ( !isset( $wgLocaltimezone ) ) {
 	$wgLocaltimezone = 'UTC';
 }
@@ -1107,12 +1104,6 @@ if ( $wmfRealm == 'labs' ) {
 }
 
 $wgProxyList = "$wmfConfigDir/mwblocker.log";
-
-if ( getenv( 'WIKIDEBUG' ) ) {
-	$wgDebugLogFile = '/tmp/wiki.log';
-	$wgDebugDumpSql = true;
-	$wgDebugLogGroups = array();
-}
 
 $wgBrowserBlackList[] = '/^Lynx/';
 
