@@ -146,6 +146,23 @@ return array(
 		'deploymentwiki' => 'meta',
 	),
 
+	'-wmgDefaultMonologHandler' => array(
+		'default' => 'wgDebugLogFile',
+	),
+
+	'-wmgLogstashServers' => array(
+		'default' => array(
+			'10.68.16.134', // deployment-logstash1.eqiad.wmflabs
+		),
+	),
+
+	// Additional log channels for beta cluster
+	'wmgMonologChannels' => array(
+		'CentralAuthVerbose' => 'debug',
+		'dnsblacklist' => 'debug',
+		'squid' => 'debug',
+	),
+
 	//'-wgDebugLogGroups' => array(),
 	'-wgRateLimitLog' => array(),
 	'-wgJobLogFile' => array(),

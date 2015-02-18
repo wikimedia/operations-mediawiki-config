@@ -4163,100 +4163,126 @@ $wgConf->settings = array(
 
 'wgDebugLogFile' => array(
 	'default' => '',
-	'testwiki' => "udp://$wmfUdp2logDest/testwiki",
-	'test2wiki' => "udp://$wmfUdp2logDest/test2wiki",
+	'testwiki' => "udp://{$wmfUdp2logDest}/testwiki",
+	'test2wiki' => "udp://{$wmfUdp2logDest}/test2wiki",
 ),
 
-# wgDebugLogGroups @{
-'wgDebugLogGroups' => array(
+// Statically configured Monolog handler to clone for log channels that are
+// not specifically configured in $wmgMonologChannels.
+// See $wmgMonologConfig['handlers'] in logging.php for valid values.
+'wmgDefaultMonologHandler' => array(
+	'default' => 'blackhole',
+	'testwiki' => 'wgDebugLogFile',
+	'test2wiki' => 'wgDebugLogFile',
+),
+
+// Logstash servers running syslog endpoint to collect log events.
+// Use false to disable all Logstash logging
+// FIXME: someday this will need to be datacenter aware
+'wmgLogstashServers' => array(
+	'default' => false,
+	'group0' => array(
+		'10.64.32.138', // logstash1001.eqiad.wmnet
+		'10.64.32.137', // logstash1002.eqiad.wmnet
+		'10.64.32.136', // logstash1003.eqiad.wmnet
+	),
+),
+
+# wmgMonologChannels @{
+// Configure Monolog logging to udp2log and Logstash
+//   channel => false  == ignore all log events on this channel
+//   channel => level  == record all events of this level or higher
+//   channel => array( 'level'=>level, 'logstash'=>level, 'sample'=>rate )
+// Defaults: array( 'level'=>'debug', 'logstash'=>'debug', 'sample'=>false )
+// Valid levels: 'debug', 'info', 'warning', 'error'
+// Note: sampled logs will not be sent to Logstash
+// Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}
+'wmgMonologChannels' => array(
 	'default' => array(
-		'cite' => "udp://$wmfUdp2logDest/cite", // to see how it's used;) -ævar
-		'thumbnail' => "udp://$wmfUdp2logDest/thumbnail",
-		'jobqueue' => "udp://$wmfUdp2logDest/jobqueue/web",
-		'slow-parse' => "udp://$wmfUdp2logDest/slow-parse",
-		// 'error' => "udp://$wmfUdp2logDest/error", // Logs warnings, notices and such
-		'exception' => array( 'destination' => "udp://$wmfUdp2logDest/exception", 'logstash' => false ), // duplicates exception-json
-		'exception-json' => "udp://$wmfUdp2logDest/exception-json",
-		'fatal' => "udp://$wmfUdp2logDest/fatal",
-		'session' => "udp://$wmfUdp2logDest/session",
-		'logging' => "udp://$wmfUdp2logDest/logging",
-		'SimpleAntiSpam' => "udp://$wmfUdp2logDest/spam",
-		'Bug40009' => "udp://$wmfUdp2logDest/Bug40009",
-		'SpamBlacklistHit' => "udp://$wmfUdp2logDest/spam",
-		'SpamRegex' => "udp://$wmfUdp2logDest/spam",
-		'StashEdit' => "udp://$wmfUdp2logDest/stashedit",
-		'OutputBuffer' => "udp://$wmfUdp2logDest/buffer",
-		'exec' => "udp://$wmfUdp2logDest/exec",
-		'ratelimit' => "udp://$wmfUdp2logDest/limiter",
-		'runJobs' => "udp://$wmfUdp2logDest/runJobs",
-		'JobQueueRedis' => "udp://$wmfUdp2logDest/redis-jobqueue",
-		'JobQueueFederated' => "udp://$wmfUdp2logDest/jobqueue-federated",
-		'es-hit' => "udp://$wmfUdp2logDest/es-hit",
-		'poolcounter' => "udp://$wmfUdp2logDest/poolcounter",
-		'lc-recache' => "udp://$wmfUdp2logDest/lc-recache",
-		'generated-pp-node-count' => "udp://$wmfUdp2logDest/generated-pp-node-count",
-		'api' => array( 'destination' => "udp://$wmfUdp2logDest/api", 'sample' => 1000, 'logstash' => false ),
-		'api-feature-usage' => "udp://$wmfUdp2logDest/api-feature-usage",
-		'SQLBagOStuff' => "udp://$wmfUdp2logDest/sql-bagostuff",
-		'FileOperation' => "udp://$wmfUdp2logDest/filebackend-ops",
-		'SwiftBackend' => "udp://$wmfUdp2logDest/swift-backend", // -aaron 5/15/12
-		'updateTranstagOnNullRevisions' => "udp://$wmfUdp2logDest/updateTranstagOnNullRevisions",
-		'redis' => "udp://$wmfUdp2logDest/redis", // -asher 2012/10/12
-		'memcached' => array( 'destination' => "udp://$wmfUdp2logDest/memcached-serious", 'level' => \Psr\Log\LogLevel::ERROR ), // -aaron 2012/10/24
-		'404' => "udp://$wmfUdp2logDest/four-oh-four",
-		'resourceloader' => "udp://$wmfUdp2logDest/resourceloader",
-		'wikibase-debug' => "udp://$wmfUdp2logDest/wikibase-debug",
-		'oai' => "udp://$wmfUdp2logDest/oai",
-		'captcha' => "udp://$wmfUdp2logDest/captcha",
-		'ExternalStoreDB' => "udp://$wmfUdp2logDest/external",
-		'query' => "udp://$wmfUdp2logDest/botquery",
-		'antispoof' => "udp://$wmfUdp2logDest/antispoof",
-		'badpass' => "udp://$wmfUdp2logDest/badpass",
-		'ts_badpass' => "udp://$wmfUdp2logDest/ts_badpass",
-		'EventLogging' => "udp://$wmfUdp2logDest/eventlogging",
-		'torblock' => "udp://$wmfUdp2logDest/torblock",
-		'mobile' => "udp://$wmfUdp2logDest/mobile",
-		// 'MessageCache' => "udp://$wmfUdp2logDest/messagecache", // spammy
-		'temp-debug' => "udp://$wmfUdp2logDest/temp-debug", // generic admin debug log
-		'CentralAuth' => "udp://$wmfUdp2logDest/centralauth", // -pgehres 2013/05/09, tmp for SUL finalization
-		'CentralAuth-Bug39996' => "udp://$wmfUdp2logDest/centralauth-bug39996", // -legoktm 2014-07-14 for Bug T41996
-		'CentralAuthRename' => "udp://$wmfUdp2logDest/centralauthrename", // -legoktm 2014-07-14 for Bug T69875
-		'CentralAuthUserMerge' => "udp://$wmfUdp2logDest/centralauthusermerge",
-		'Renameuser' => "udp://$wmfUdp2logDest/renameuser",
-		'GettingStarted' => "udp://$wmfUdp2logDest/gettingstarted",
-		'zero' => "udp://$wmfUdp2logDest/zero", // zero-rated debug log
-		'DBPerformance' => "udp://$wmfUdp2logDest/dbperformance",
-		'CirrusSearch' => "udp://$wmfUdp2logDest/CirrusSearch",
-		'CirrusSearchChangeFailed' => "udp://$wmfUdp2logDest/CirrusSearch-failed",
-		'CirrusSearchRequests' => array( 'destination' => "udp://$wmfUdp2logDest/CirrusSearch-all", 'logstash' => false ),
-		'CirrusSearchSlowRequests' => "udp://$wmfUdp2logDest/CirrusSearch-slow",
-		'texvc' => "udp://$wmfUdp2logDest/texvc",
-		'recursion-guard' => "udp://$wmfUdp2logDest/recursion-guard",
-		'MassMessage' => "udp://$wmfUdp2logDest/MassMessage", // for Bug T59464 -legoktm 2013/12/15
-		'Bug58676' => "udp://$wmfUdp2logDest/Bug58676", # Invalid message parameter
-		'Flow' => "udp://$wmfUdp2logDest/Flow", // -erikb 2014/03/08
-		'upload' => "udp://$wmfUdp2logDest/upload",
-		'UpdateRepo' => "udp://$wmfUdp2logDest/updaterepo",
-		'BounceHandler' => "udp://$wmfUdp2logDest/bouncehandler",
-		'Echo' => "udp://$wmfUdp2logDest/echo",
-		'collection' => "udp://$wmfUdp2logDest/collection", // -cscott for Bug T73675
-		'GlobalTitleFail' => array( 'destination' => "udp://$wmfUdp2logDest/globaltitlefail", 'sample' => 10000 ), // chad hates $wgTitle
-		'FSFileBackend' => "udp://$wmfUdp2logDest/fsfilebackend", // - gilles for Bug T75229
-		'OAuth' => "udp://$wmfUdp2logDest/oauth",
-		'xenon' => "udp://$wmfUdp2logDest/xenon",
-		// 'xff' => array( 'destination' => "udp://$wmfUdp2logDest/xff", 'logstash' => false ), // Disabled as spammy. Not often needed
-		'localhost' => array( 'destination' => "udp://$wmfUdp2logDest/localhost", 'logstash' => false ),
-		'T84894' => "udp://$wmfUdp2logDest/T84894", // - bd808 for T84894
-		'TitleBlacklist-cache' => "udp://$wmfUdp2logDest/TitleBlacklist-cache", // For T85428
-		'T87645' => "udp://$wmfUdp2logDest/T87645", // - Ori on behalf of Tim, for https://gerrit.wikimedia.org/r/#/c/188304/
-		'T89258' => "udp://$wmfUdp2logDest/T89258", // - awight and AndyRussG
-		'ResourceLoaderImage' => "udp://$wmfUdp2logDest/resourceloaderimage", // - demon, matmarex
-		'HttpError' => array( 'level'=>'error', 'destination' => "udp://$wmfUdp2logDest/httperror" ), // Only log http errors with a 500+ code T85795
-		'AdHocDebug' => "udp://$wmfUdp2logDest/AdHocDebug", // for temp live debugging
+		'cite' => 'debug',
+		'thumbnail' => 'debug',
+		'jobqueue' => 'debug',
+		'slow-parse' => 'debug',
+		'exception' => array( 'logstash' => false ),
+		'exception-json' => 'debug',
+		'session' => 'debug',
+		'logging' => 'debug',
+		'SimpleAntiSpam' => 'debug',
+		'Bug40009' => 'debug',
+		'SpamBlacklistHit' => 'debug',
+		'SpamRegex' => 'debug',
+		'StashEdit' => 'debug',
+		'OutputBuffer' => 'debug',
+		'exec' => 'debug',
+		'ratelimit' => 'debug',
+		'runJobs' => 'debug',
+		'JobQueueRedis' => 'debug',
+		'JobQueueFederated' => 'debug',
+		'es-hit' => 'debug',
+		'poolcounter' => 'debug',
+		'lc-recache' => 'debug',
+		'generated-pp-node-count' => 'debug',
+		'api' => array( 'sample' => 1000, 'logstash' => false ),
+		'api-feature-usage' => 'debug',
+		'SQLBagOStuff' => 'debug',
+		'FileOperation' => 'debug',
+		'SwiftBackend' => 'debug', // -aaron 5/15/12
+		'updateTranstagOnNullRevisions' => 'debug',
+		'redis' => 'debug', // -asher 2012/10/12
+		'memcached' => 'error', // -aaron 2012/10/24
+		'404' => 'debug',
+		'resourceloader' => 'debug',
+		'wikibase-debug' => 'debug',
+		'oai' => 'debug',
+		'captcha' => 'debug',
+		'ExternalStoreDB' => 'debug',
+		'query' => 'debug',
+		'antispoof' => 'debug',
+		'badpass' => 'debug',
+		'ts_badpass' => 'debug',
+		'EventLogging' => 'debug',
+		'torblock' => 'debug',
+		'mobile' => 'debug',
+		'temp-debug' => 'debug', // generic admin debug log
+		'CentralAuth' => 'debug', // -pgehres 2013/05/09, tmp for SUL finalization
+		'CentralAuth-Bug39996' => 'debug', // -legoktm 2014-07-14 for bug 39996
+		'CentralAuthRename' => 'debug', // -legoktm 2014-07-14 for bug 67875
+		'CentralAuthUserMerge' => 'debug',
+		'Renameuser' => 'debug',
+		'GettingStarted' => 'debug',
+		'zero' => 'debug', // zero-rated debug log
+		'DBPerformance' => 'debug',
+		'CirrusSearch' => 'debug',
+		'CirrusSearchChangeFailed' => 'debug',
+		'CirrusSearchRequests' => array( 'logstash' => false ),
+		'CirrusSearchSlowRequests' => 'debug',
+		'texvc' => 'debug',
+		'recursion-guard' => 'debug',
+		'MassMessage' => 'debug', // for bug 57464 -legoktm 2013/12/15
+		'Bug58676' => 'debug', # Invalid message parameter
+		'Flow' => 'debug', // -erikb 2014/03/08
+		'upload' => 'debug',
+		'UpdateRepo' => 'debug',
+		'BounceHandler' => 'debug',
+		'Echo' => 'debug',
+		'collection' => 'debug', // -cscott for bug 71675
+		'GlobalTitleFail' => array( 'sample' => 10000, 'logstash' => false ), // chad hates $wgTitle
+		'FSFileBackend' => 'debug', // - gilles for bug 73229
+		'OAuth' => 'debug',
+		'xenon' => 'debug',
+		'xff' => array( 'logstash' => false ),
+		'localhost' => array( 'logstash' => false ),
+		'TitleBlacklist-cache' => 'debug', // For T85428
+		'T87645' => 'debug', // - Ori on behalf of Tim, for https://gerrit.wikimedia.org/r/#/c/188304/
+		'T89258' => 'debug', // - awight and AndyRussG
+		'ResourceLoaderImage' => 'debug', // - demon, matmarex
+		'HttpError' => 'error', // Only log http errors with a 500+ code T85795
+		'AdHocDebug' => 'debug', // for temp live debugging
+		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 	),
 
 	'+enwiki' => array(
-		'bug46577' => "udp://$wmfUdp2logDest/bug46577", // Education Program debugging
+		'bug46577' => 'debug', // Education Program debugging
 	),
 
 	'+private' => array(
@@ -4265,11 +4291,11 @@ $wgConf->settings = array(
 
 	// To measure the # of articles on enwiki during the <million => >million transition
 	'+testwiki' => array(
-		'articles' => "udp://$wmfUdp2logDest/articles/testwiki",
-		'imagemove' => "udp://$wmfUdp2logDest/imagemove",
+		'articles' => 'debug',
+		'imagemove' => 'debug',
 	),
 ),
-# @} end of wgDebugLogGroup
+# @} end of wmgMonologChannels
 
 'wgOverrideSiteFeed' => array(
 	'testwiki' => array(
@@ -15142,9 +15168,10 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-// Disabled on suspicion of being implicated in 5-Feb-2015 outage. --Ori
+// Needs 1.26wmf1 or newer
 'wmgUseMonologLogger' => array(
 	'default' => false,
+	'group0'  => true,
 ),
 
 'wmgUseXAnalytics' => array(
