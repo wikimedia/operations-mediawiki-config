@@ -87,6 +87,24 @@
       "revId": "63c3fd517d8252ceee4eec45fa06845d1d113f5e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c23dd3db",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 866
+      },
+      "writtenOn": "2015-02-18T15:30:13Z",
+      "side": 1,
+      "message": "$wgContentTranslationParsoid[\u0027url\u0027] \u003d $wmgParsoidURL; should be fine then?",
+      "parentUuid": "6e7c4fa4_827d9bb2",
+      "revId": "63c3fd517d8252ceee4eec45fa06845d1d113f5e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
