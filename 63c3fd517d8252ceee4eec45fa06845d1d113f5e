@@ -51,6 +51,24 @@
       "revId": "63c3fd517d8252ceee4eec45fa06845d1d113f5e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_827d9bb2",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-02-18T15:26:15Z",
+      "side": 1,
+      "message": "The current value of $wgContentTranslationParsoid[\u0027url\u0027], being picked up from production CommonSettings.php, is not accessible, true.\n\nThat\u0027s why I specifically pointed out that $wmgParsoidURL is reset in this file with a value that is presumably accessible from Labs, considering that VE and Flow are both using it and they\u0027re not broken in Labs.",
+      "parentUuid": "6e7c4fa4_628abfc1",
+      "revId": "63c3fd517d8252ceee4eec45fa06845d1d113f5e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
