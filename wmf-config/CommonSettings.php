@@ -31,10 +31,6 @@ if ( isset( $_SERVER['SERVER_ADDR'] ) ) {
 	ini_set( 'error_append_string', ' (' . $_SERVER['SERVER_ADDR'] . ')' );
 }
 
-$fname = 'CommonSettings.php';
-wfProfileIn( $fname );
-wfProfileIn( "$fname-init" );
-
 # ----------------------------------------------------------------------
 # Initialisation
 
@@ -103,9 +99,6 @@ default:
 	break;
 }
 
-wfProfileOut( "$fname-init" );
-wfProfileIn( "$fname-host" );
-
 # This must be set *after* the DefaultSettings.php inclusion
 $wgDBname = $multiVersion->getDatabase();
 
@@ -114,8 +107,6 @@ $wgDBuser = 'wikiuser';
 
 # wmf-config directory (in common/)
 $wmfConfigDir = "$IP/../wmf-config";
-
-wfProfileOut( "$fname-host" );
 
 $wgStatsFormatString = 'mw.%3$s:%2$s|m' . "\n";
 
@@ -134,15 +125,11 @@ default:
 }
 
 # Initialise wgConf
-wfProfileIn( "$fname-wgConf" );
 require( "$wmfConfigDir/wgConf.php" );
 function wmfLoadInitialiseSettings( $conf ) {
 	global $wmfConfigDir;
 	require( "$wmfConfigDir/InitialiseSettings.php" );
 }
-wfProfileOut( "$fname-wgConf" );
-
-wfProfileIn( "$fname-confcache" );
 
 # Is this database listed in dblist?
 # Note: $wgLocalDatabases set in wgConf.php.
@@ -176,9 +163,8 @@ if ( @filemtime( $filename ) >= filemtime( "$wmfConfigDir/InitialiseSettings.php
 		$globals = unserialize( $cacheRecord );
 	}
 }
-wfProfileOut( "$fname-confcache" );
+
 if ( !$globals ) {
-	wfProfileIn( "$fname-recache-settings" );
 	# Get configuration from SiteConfiguration object
 	require( "$wmfConfigDir/InitialiseSettings.php" );
 
@@ -211,9 +197,7 @@ if ( !$globals ) {
 		@chmod( $file, 0666 );
 	}
 	umask( $oldUmask );
-	wfProfileOut( "$fname-recache-settings" );
 }
-wfProfileIn( "$fname-misc1" );
 
 extract( $globals );
 
@@ -225,9 +209,7 @@ extract( $globals );
 require( "$wmfConfigDir/PrivateSettings.php" );
 
 # Monolog logging configuration
-wfProfileIn( "$fname-logging" );
 require( getRealmSpecificFilename( "$wmfConfigDir/logging.php" ) );
-wfProfileOut( "$fname-logging" );
 
 # Cluster-dependent files for database and memcached
 require( getRealmSpecificFilename( "$wmfConfigDir/db.php" ) );
@@ -526,16 +508,10 @@ if ( $wmgUseCORS ) {
 	);
 }
 
-wfProfileOut( "$fname-misc1" );
-wfProfileIn( "$fname-skin-include1" );
-
 require_once "$IP/skins/Vector/Vector.php";
 require_once "$IP/skins/MonoBook/MonoBook.php";
 require_once "$IP/skins/Modern/Modern.php";
 require_once "$IP/skins/CologneBlue/CologneBlue.php";
-
-wfProfileOut( "$fname-skin-include1" );
-wfProfileIn( "$fname-ext-include1" );
 
 if ( $wmgUseTimeline ) {
 	include( $IP . '/extensions/timeline/Timeline.php' );
@@ -857,9 +833,6 @@ if ( $wmgUseScore ) {
 	$wgScorePath = $wmgScorePath;
 }
 
-wfProfileOut( "$fname-ext-include1" );
-wfProfileIn( "$fname-misc2" );
-
 $wgHiddenPrefs[] = 'realname';
 
 # Default address gets rejected by some mail hosts
@@ -912,16 +885,12 @@ if ( in_array( $wgLanguageCode, array( 'commons', 'meta', 'sources', 'species', 
 	$wgLanguageCode = 'en';
 }
 
-wfProfileOut( "$fname-misc2" );
-
 # :SEARCH:
 
 # All wikis are special and get Cirrus :)
 if ( $wmgUseCirrus ) {
 	include( "$wmfConfigDir/CirrusSearch-common.php" );
 }
-
-wfProfileIn( "$fname-misc3" );
 
 // Various DB contention settings
 if ( in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki', 'commonswiki' ) ) ) {
@@ -997,10 +966,6 @@ if ( $wmgUseFooterContactLink ) {
 // bug 33186: turn off incomplete feature action=imagerotate
 $wgAPIModules['imagerotate'] = 'ApiDisabled';
 
-
-wfProfileOut( "$fname-misc3" );
-wfProfileIn( "$fname-ext-include2" );
-
 if ( $wmgUseDPL ) {
 	include( $IP . '/extensions/intersection/DynamicPageList.php' );
 }
@@ -1033,9 +998,6 @@ if ( $wmgUseRSSExtension ) {
 	}
 	$wgRSSUrlWhitelist = $wmgRSSUrlWhitelist;
 }
-
-wfProfileOut( "$fname-ext-include2" );
-wfProfileIn( "$fname-misc4" );
 
 $wgActions['credits'] = false;
 
@@ -1116,9 +1078,6 @@ if ( getenv( 'WIKIDEBUG' ) ) {
 	$wgDebugDumpSql = true;
 	$wgDebugLogGroups = array();
 }
-
-wfProfileOut( "$fname-misc4" );
-wfProfileIn( "$fname-misc5" );
 
 $wgBrowserBlackList[] = '/^Lynx/';
 
@@ -3002,6 +2961,3 @@ if ( file_exists( "$wmfConfigDir/extension-list-$wmfVersionNumber" ) ) {
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
 
 require( "$wmfConfigDir/ExtensionMessages-$wmfVersionNumber.php" );
-
-wfProfileOut( "$fname-misc5" );
-wfProfileOut( $fname );
