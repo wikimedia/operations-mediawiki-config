@@ -14893,9 +14893,10 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-// Disabled on suspicion of being implicated in 5-Feb-2015 outage. --Ori
+// Needs 1.25wmf18 or newer
 'wmgUseMonologLogger' => array(
 	'default' => false,
+	'group0'  => true,
 ),
 
 'wmgUseXAnalytics' => array(
