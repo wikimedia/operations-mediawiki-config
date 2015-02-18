@@ -1329,6 +1329,10 @@ if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 	require_once "$IP/extensions/GlobalUserPage/GlobalUserPage.php";
 	$wgGlobalUserPageAPIUrl = 'https://test.wikipedia.org/w/api.php';
 	$wgGlobalUserPageDBname = 'testwiki';
+	$wgHooks['GlobalUserPageWikis'][] = function( &$list ) {
+		$list = array( 'testwiki', 'test2wiki', 'testwikidatawiki' );
+		return false;
+	};
 }
 // temp hack to clear queues -- legoktm 2015-02-12
 $wgJobClasses['LocalGlobalUserPageCacheUpdateJob'] = 'NullJob';
