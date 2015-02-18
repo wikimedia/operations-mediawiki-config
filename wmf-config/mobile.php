@@ -132,6 +132,24 @@ if ( $wmgMobileFrontend ) {
 				'ifAll' => array( 'P31'/* instance of */ => 'Q482994'/* album */ ),
 				'suggestions' => array( 'Q208569'/* studio album */, 'Q209939'/* live album */ ),
 			),
+			// https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok/Claim_suggestions#Original_language_of_this_work
+			'language1' => array(
+				'type' => 'Simple',
+				'property' => 'P364'/* original language of this work */,
+				'ifAll' => array( 'P495'/* country of origin */ => 'Q30'/* United States */ ),
+				'ifAny' => array( 'P31'/* instance of */ => 'Q571'/* book */, 'P31'/* instance of */ => 'Q11424'/* film */, 'P31'/* instance of */ => 'Q15416'/* television program */ ),
+				'ifNotAny' => array( 'P364'/* original language of this work */ => 'Q1860'/* English */ ),
+				'suggestions' => array( 'Q1860'/* English */ ),
+			),
+			// https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok/Claim_suggestions#Original_language_of_this_work
+			'language2' => array(
+				'type' => 'Simple',
+				'property' => 'P364'/* original language of this work */,
+				'ifAll' => array( 'P495'/* country of origin */ => 'Q145'/* United Kingdom */ ),
+				'ifAny' => array( 'P31'/* instance of */ => 'Q571'/* book */, 'P31'/* instance of */ => 'Q11424'/* film */, 'P31'/* instance of */ => 'Q15416'/* television program */ ),
+				'ifNotAny' => array( 'P364'/* original language of this work */ => 'Q1860'/* English */ ),
+				'suggestions' => array( 'Q1860'/* English */ ),
+			),
 		);
 
 		// These are deprecated. Remove after change I3ec0190a is fully deployed.
