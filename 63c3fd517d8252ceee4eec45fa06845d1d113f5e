@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_c2463380",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-02-18T15:29:27Z",
+      "side": 1,
+      "message": "Should probably be updated to say parsoidcache02, but the IP is the same.",
+      "parentUuid": "6e7c4fa4_c2e2b397",
+      "revId": "63c3fd517d8252ceee4eec45fa06845d1d113f5e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_e2e7afa5",
         "filename": "wmf-config/CommonSettings-labs.php",
         "patchSetId": 5
