@@ -1,32 +1,28 @@
 <?php
 if ( $wmgUseMonologLogger ) {
 	/**
-	* Create a config array for a \Monolog\Handler\RedisHandler instance.
+	* Create a config array for a MWLoggerMonologSyslogHandler instance.
 	* @param int $level Minimum logging level at which this handler will be
 	* triggered
 	* @return array
 	*/
-	function wmMonologRedisConfigFactory( $level ) {
-		global $wmgLogstashPassword;
-		return array(
-			'class' => '\\Monolog\\Handler\\RedisHandler',
-			'args' => array(
-				function () use ( $wmgLogstashPassword ) {
-					$servers = array(
-						'10.64.32.138', // logstash1001.eqiad.wmnet
-						'10.64.32.137', // logstash1002.eqiad.wmnet
-						'10.64.32.136', // logstash1003.eqiad.wmnet
-					);
-					// Connect to a random logstash host
-					$server = $servers[ mt_rand( 0, count($servers) - 1 ) ];
+	function wmMonologSyslogConfigFactory( $level ) {
+		static $servers = array(
+			'10.64.32.138', // logstash1001.eqiad.wmnet
+			'10.64.32.137', // logstash1002.eqiad.wmnet
+			'10.64.32.136', // logstash1003.eqiad.wmnet
+		);
 
-					$redis = new Redis();
-					$redis->connect( $server, 6379, .25 );
-					$redis->auth( $wmgLogstashPassword );
-					return $redis;
-				},
-				'logstash',
-				$level
+		return array(
+			'class' => 'MWLoggerMonologSyslogHandler',
+			'args' => array(
+				'mediawiki',    // syslog appname
+				function () use ( $servers ) {
+					return $servers[ mt_rand( 0, count( $servers ) - 1 ) ];
+				},              // randomly chose server
+				10514,          // logstash syslog listener port
+				LOG_USER,       // syslog facility
+				$level,         // minimum log level to pass to logstash
 			),
 			'formatter' => 'logstash',
 		);
@@ -64,9 +60,12 @@ if ( $wmgUseMonologLogger ) {
 		'handlers' => array(
 			'null' => array(
 				'class' => '\\Monolog\\Handler\\NullHandler',
-				'formatter' => 'line',
 			),
-			'logstash' => wmMonologRedisConfigFactory( \Monolog\Logger::DEBUG ),
+			'udp2log' => array(
+				'class' => 'MWLoggerMonologHandler',
+				'args' => array( "udp://{$wmfUdp2logDest}/{channel}", true ),
+				'formatter' => 'legacy',
+			),
 		),
 
 		'formatters' => array(
@@ -77,18 +76,14 @@ if ( $wmgUseMonologLogger ) {
 				'class' => '\\Monolog\\Formatter\\LogstashFormatter',
 				'args'  => array( 'mediawiki', php_uname( 'n' ), null, '', 1 ),
 			),
-			'line' => array(
-				'class' => '\\Monolog\\Formatter\\LineFormatter',
-			),
 		),
 	);
 
 	// Add logging channels defined in $wgDebugLogGroups
 	foreach ( $wgDebugLogGroups as $group => $dest ) {
 		$sample = false;
-		$level = false;
+		$level = 'debug';
 		$sendToLogstash = true;
-		$logstashHandler = 'logstash';
 		if ( is_array( $dest ) ) {
 			// NOTE: sampled logs are not guaranteed to store the same events
 			// in logstash and via udp2log since the two event handlers
@@ -100,40 +95,42 @@ if ( $wmgUseMonologLogger ) {
 		}
 
 		if ( $sendToLogstash ) {
-			if ( $level !== false ) {
-				$logstashHandler = "filtered-{$group}";
+			$logstashHandler = "logstash-{$level}";
+			if ( !isset( $wmgMonologConfig['handlers'][$logstashHandler] ) ) {
+				// Register handler that will only pass events of the given
+				// log level
 				$wmgMonologConfig['handlers'][$logstashHandler] =
-					wmMonologRedisConfigFactory( $level );
+					wmMonologSyslogConfigFactory( $level );
 			}
 
 			if ( $sample === false ) {
-				$handlers = array( $group, $logstashHandler );
+				$handlers = array( 'udp2log', $logstashHandler );
 			} else {
-				$wmgMonologConfig['handlers']["sampled-{$group}"] = array(
-					'class' => '\\Monolog\\Handler\\SamplingHandler',
-					'args' => array(
-						function () use ( $logstashHandler ) {
-							return MWLogger::getProvider()->getHandler(
-								$logstashHandler
-							);
-						},
-						$sample,
-					),
-				);
-				$handlers = array( $group, "sampled-{$group}" );
+				$sampledHandler = "{$logstashHandler}-sampled-{$sample}";
+				if ( !isset( $wmgMonologConfig['handlers'][$sampledHandler] ) ) {
+					// Register a handler that will sample the event stream and
+					// pass events on to $logstashHandler for storage
+					$wmgMonologConfig['handlers'][$sampledHandler] = array(
+						'class' => '\\Monolog\\Handler\\SamplingHandler',
+						'args' => array(
+							function () use ( $logstashHandler ) {
+								return MWLogger::getProvider()->getHandler(
+									$logstashHandler
+								);
+							},
+							$sample,
+						),
+					);
+				}
+				$handlers = array( 'udp2log', $sampledHandler );
 			}
 		} else {
-			$handlers = array( $group );
+			$handlers = array( 'udp2log' );
 		}
 
 		$wmgMonologConfig['loggers'][$group] = array(
 			'handlers' => $handlers,
 			'processors' => array( 'wiki', 'psr', 'pid', 'uid', 'web' ),
-		);
-		$wmgMonologConfig['handlers'][$group] = array(
-			'class' => 'MWLoggerMonologHandler',
-			'args' => array( $dest, true ),
-			'formatter' => 'legacy',
 		);
 	}
 
