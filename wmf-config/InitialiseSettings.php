@@ -10912,6 +10912,7 @@ $wgConf->settings = array(
 'wgGroupsAddToSelf' => array(
 	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 54732
 	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 37198
+	'mediawikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug T87797
 	'otrs_wikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // bug 61297
 	'cawikimedia' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 73394
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
@@ -10932,6 +10933,7 @@ $wgConf->settings = array(
 'wgGroupsRemoveFromSelf' => array(
 	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 54732
 	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 37198
+	'mediawikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug T87797
 	'otrs_wikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 61297
 	'cawikimedia' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 73394
 	'ckbwiki' => array(
