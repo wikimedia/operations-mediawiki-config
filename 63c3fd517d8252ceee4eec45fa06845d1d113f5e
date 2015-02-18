@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c2e2b397",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-02-18T15:18:17Z",
+      "side": 1,
+      "message": "(up here)",
+      "revId": "63c3fd517d8252ceee4eec45fa06845d1d113f5e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_e2e7afa5",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-02-18T15:18:17Z",
+      "side": 1,
+      "message": "Why not use the new value for $wmgParsoidURL defined for labs? Just like Flow and VE do.",
+      "revId": "63c3fd517d8252ceee4eec45fa06845d1d113f5e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
