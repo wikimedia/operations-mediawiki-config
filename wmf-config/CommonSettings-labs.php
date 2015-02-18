@@ -95,7 +95,7 @@ if ( $wmgUseFlow ) {
 }
 
 if ( $wmgUseContentTranslation ) {
-	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org';
+	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org/v1';
 	$wgContentTranslationTranslateInTarget = false;
 }
 
