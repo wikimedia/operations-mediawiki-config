@@ -1,32 +1,28 @@
 <?php
 if ( $wmgUseMonologLogger ) {
 	/**
-	* Create a config array for a \Monolog\Handler\RedisHandler instance.
+	* Create a config array for a MWLoggerMonologSyslogHandler instance.
 	* @param int $level Minimum logging level at which this handler will be
 	* triggered
 	* @return array
 	*/
-	function wmMonologRedisConfigFactory( $level ) {
-		global $wmgLogstashPassword;
-		return array(
-			'class' => '\\Monolog\\Handler\\RedisHandler',
-			'args' => array(
-				function () use ( $wmgLogstashPassword ) {
-					$servers = array(
-						'10.64.32.138', // logstash1001.eqiad.wmnet
-						'10.64.32.137', // logstash1002.eqiad.wmnet
-						'10.64.32.136', // logstash1003.eqiad.wmnet
-					);
-					// Connect to a random logstash host
-					$server = $servers[ mt_rand( 0, count($servers) - 1 ) ];
+	function wmMonologSyslogConfigFactory( $level ) {
+		static $servers = array(
+			'10.64.32.138', // logstash1001.eqiad.wmnet
+			'10.64.32.137', // logstash1002.eqiad.wmnet
+			'10.64.32.136', // logstash1003.eqiad.wmnet
+		);
 
-					$redis = new Redis();
-					$redis->connect( $server, 6379, .25 );
-					$redis->auth( $wmgLogstashPassword );
-					return $redis;
-				},
-				'logstash',
-				$level
+		return array(
+			'class' => 'MWLoggerMonologSyslogHandler',
+			'args' => array(
+				'mediawiki',    // syslog appname
+				function () use ( $servers ) {
+					return $servers[ mt_rand( 0, count( $servers ) - 1 ) ];
+				},              // randomly chose server
+				10514,          // logstash syslog listener port
+				LOG_USER,       // syslog facility
+				$level,         // minimum log level to pass to logstash
 			),
 			'formatter' => 'logstash',
 		);
@@ -66,7 +62,7 @@ if ( $wmgUseMonologLogger ) {
 				'class' => '\\Monolog\\Handler\\NullHandler',
 				'formatter' => 'line',
 			),
-			'logstash' => wmMonologRedisConfigFactory( \Monolog\Logger::DEBUG ),
+			'logstash' => wmMonologSyslogConfigFactory( 'debug' ),
 		),
 
 		'formatters' => array(
@@ -101,39 +97,56 @@ if ( $wmgUseMonologLogger ) {
 
 		if ( $sendToLogstash ) {
 			if ( $level !== false ) {
-				$logstashHandler = "filtered-{$group}";
-				$wmgMonologConfig['handlers'][$logstashHandler] =
-					wmMonologRedisConfigFactory( $level );
+				$logstashHandler = "filtered-{$level}";
+				if ( !isset(
+					$wmgMonologConfig['handlers'][$logstashHandler]
+				) ) {
+					// Register handler that will only pass events of the
+					// given log level
+					$wmgMonologConfig['handlers'][$logstashHandler] =
+						wmMonologSyslogConfigFactory( $level );
+				}
 			}
 
 			if ( $sample === false ) {
 				$handlers = array( $group, $logstashHandler );
 			} else {
-				$wmgMonologConfig['handlers']["sampled-{$group}"] = array(
-					'class' => '\\Monolog\\Handler\\SamplingHandler',
-					'args' => array(
-						function () use ( $logstashHandler ) {
-							return MWLogger::getProvider()->getHandler(
-								$logstashHandler
-							);
-						},
-						$sample,
-					),
-				);
-				$handlers = array( $group, "sampled-{$group}" );
+				$sampledHandler = "{$logstashHandler}-sampled-{$sample}";
+				if ( !isset(
+					$wmgMonologConfig['handlers'][$sampledHandler]
+				) ) {
+					// Register a handler that will sample the event stream
+					// and pass events on to $logstashHandler for storage
+					$wmgMonologConfig['handlers']["sampled-{$group}"] = array(
+						'class' => '\\Monolog\\Handler\\SamplingHandler',
+						'args' => array(
+							function () use ( $logstashHandler ) {
+								return MWLogger::getProvider()->getHandler(
+									$logstashHandler
+								);
+							},
+							$sample,
+						),
+					);
+				}
+				$handlers = array( $group, $sampledHandler );
 			}
 		} else {
 			$handlers = array( $group );
 		}
 
-		$wmgMonologConfig['loggers'][$group] = array(
-			'handlers' => $handlers,
-			'processors' => array( 'wiki', 'psr', 'pid', 'uid', 'web' ),
-		);
+		// Register a handler to send logs for this group via udp2log
 		$wmgMonologConfig['handlers'][$group] = array(
 			'class' => 'MWLoggerMonologHandler',
 			'args' => array( $dest, true ),
 			'formatter' => 'legacy',
+		);
+
+		// Enable emitting log events for this group to the handler(s) that
+		// have been chosen
+		$wmgMonologConfig['loggers'][$group] = array(
+			'handlers' => $handlers,
+			'processors' => array( 'wiki', 'psr', 'pid', 'uid', 'web' ),
 		);
 	}
 
