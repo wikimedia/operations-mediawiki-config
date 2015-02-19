@@ -200,7 +200,8 @@ $wgConf->settings = array(
 	'+commonswiki' => array( 'c' ),
 	'+foundationwiki' => array( 'wmf', 'wikimedia' ),
 	'mediawikiwiki' => array( 'mw', 'mediawikiwiki' ),
-	'+metawiki' => array( 'm', 'metawikipedia' ),
+	# 'm' temporarily removed by legoktm (2015-02-19) for T89916
+	'+metawiki' => array( 'metawikipedia' ),
 	'+outreachwiki' => array( 'outreachwiki' ),
 	'sourceswiki' => array( 'mul', 'oldwikisource' ),
 	'+wikidatawiki' => array( 'd' ),
