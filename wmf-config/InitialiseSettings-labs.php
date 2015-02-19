@@ -522,6 +522,10 @@ return array(
 	'-wmgScorePath' => array(
 		'default' => "//upload.beta.wmflabs.org/score",
 	),
+
+	'wgRateLimitsExcludedIPs' => array(
+		'default' => array( '198.73.209.0/24' ), // T87841 Office IP
+	),
 );
 
 } # wmflLabsSettings()
