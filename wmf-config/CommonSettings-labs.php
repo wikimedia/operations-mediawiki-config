@@ -75,7 +75,7 @@ if ( $wmgUseVectorBeta ) {
 }
 
 if ( $wmgUseParsoid ) {
-	$wmgParsoidURL = 'http://10.68.16.145'; // deployment-parsoidcache01.eqiad
+	$wmgParsoidURL = 'http://10.68.16.145'; // deployment-parsoidcache02.eqiad
 	$wgParsoidCacheServers = array ( 'http://10.68.16.145' ); // deployment-parsoidcache01.eqiad
 }
 
