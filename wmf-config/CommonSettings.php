@@ -1252,7 +1252,7 @@ if ( $wmgUseCentralAuth ) {
 			$wgSiteMatrixFishbowlSites,
 			$wgSiteMatrixClosedSites
 		);
-		return true;
+		return false;
 	}
 
 	$wgHooks['CentralAuthWikiList'][] = 'wmfCentralAuthWikiList';
