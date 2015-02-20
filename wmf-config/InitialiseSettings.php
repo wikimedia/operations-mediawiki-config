@@ -13476,6 +13476,7 @@ $wgConf->settings = array(
 'wmgUseBounceHandler' => array(
 	'default' => false,
 	'group0' => true,
+	'group1' => true,
 ),
 
 'wmgUseTranslate' => array(
