@@ -107,6 +107,8 @@ if ( $wmgMobileFrontend ) {
 	if ( $wmgUseWikiGrok ) {
 		require_once( "$IP/extensions/WikiGrok/WikiGrok.php" );
 
+		$wgWikiGrokRepoMode = $wmgWikiGrokRepoMode;
+
 		$wgWikiGrokSlowCampaigns = array(
 			// https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok/Claim_suggestions#Writer
 			'author' => array(

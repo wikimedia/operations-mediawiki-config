@@ -12590,6 +12590,11 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 	'testwiki' => true,
 	'enwiki' => true,
+	'wikidatawiki' => true,
+),
+'wmgWikiGrokRepoMode' => array(
+	'default' => false,
+	'wikidatawiki' => true,
 ),
 'wmgEnableTextExtracts' => array(
 	'default' => true,
