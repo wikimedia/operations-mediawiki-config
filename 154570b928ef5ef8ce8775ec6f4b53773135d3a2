@@ -16,6 +16,24 @@
       "revId": "154570b928ef5ef8ce8775ec6f4b53773135d3a2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_a182f595",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 354,
+      "author": {
+        "id": 876
+      },
+      "writtenOn": "2015-02-22T22:38:15Z",
+      "side": 1,
+      "message": "The duration? It is stated in the last comment by Green Zero. As to discussion it closed with duration \"1.5 - 3 hours\" so 2 hours mentioned fit in the interval.",
+      "parentUuid": "6e7c4fa4_81f1f967",
+      "revId": "154570b928ef5ef8ce8775ec6f4b53773135d3a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
