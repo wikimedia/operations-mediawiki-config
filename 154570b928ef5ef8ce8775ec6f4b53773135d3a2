@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_81f1f967",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 354,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2015-02-22T21:46:26Z",
+      "side": 1,
+      "message": "Not stated in the bug",
+      "revId": "154570b928ef5ef8ce8775ec6f4b53773135d3a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
