@@ -11297,10 +11297,11 @@ $wgConf->settings = array(
 
 'wgArticleCountMethod' => array(
 	'default' => 'link',
-	'cswikinews' => 'any',        // Bug 43525
-	'enwikibooks' => 'comma',     // Bug 27256
-	'ptwikibooks' => 'comma',     // Bug 27256
-	'guwikisource' => 'any',      // Bug 40173
+	'cswikinews' => 'any', // bug 43525
+	'enwikibooks' => 'comma', // bug 27256
+	'ptwikibooks' => 'comma', // bug 27256
+	'guwikisource' => 'any', // bug 40173
+	'zhwikinews' => 'any', // T53604
 ),
 
 'wgUseContributionTracking' => array(
