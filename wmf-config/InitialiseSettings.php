@@ -6444,6 +6444,7 @@ $wgConf->settings = array(
 	'sawikisource' => true, // bug 34769
 	'shwiki' => true, // bug 60818
 	'siwiki' => true,
+	'specieswiki' => true, // T89147
 	'srwiki' => true, // req by dungodung in #wikimedia-tech, 2008-02-25
 	'srwikisource' => true, // #25963
 	'viwiki' => true, // bug 5060
@@ -7779,6 +7780,13 @@ $wgConf->settings = array(
 	'+skwiki' => array(
 		'rollbacker' => array( 'rollback' => true ),
 	),
+	'specieswiki' => array( // T89147
+		'autopatrolled' => array( 'autopatrol' => true ),
+		'patroller' => array(
+			'patrol' => true,
+			'autopatrol' => true,
+			),
+	),
 	'srwiki' => array(
 		'user' => array( 'upload' => false ),
 		'autoconfirmed' => array( 'upload' => true ),
@@ -8561,6 +8569,9 @@ $wgConf->settings = array(
 	'+skwiki' => array(
 		'sysop' => array( 'rollbacker' ),
 	),
+	'+specieswiki' => array( // T89147
+		'sysop' => array( 'autopatrolled', 'patroller' ),
+	),
 	'+sqwiki' => array(
 		'bureaucrat' => array( 'editor' ),
 		'sysop' => array( 'reviewer' ),
@@ -9154,6 +9165,9 @@ $wgConf->settings = array(
 	),
 	'+skwiki' => array(
 		'sysop' => array( 'rollbacker' ),
+	),
+	'+specieswiki' => array( // T89147
+		'sysop' => array( 'autopatrolled', 'patroller' ),
 	),
 	'+stewardwiki' => array(
 		'bureaucrat' => array( 'bureaucrat', 'sysop', 'import', 'transwiki', 'user', 'ipblock-exempt' ),
