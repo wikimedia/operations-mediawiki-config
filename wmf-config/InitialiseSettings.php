@@ -13871,6 +13871,7 @@ $wgConf->settings = array(
 	'eswiki' => true, // bug 54826
 	'fawiki' => true,
 	'hewiki' => true, // bug 48848
+	'hewiktionary' => true, // bug T89393
 	'legalteamwiki' => true, // bug 62610
 	'mkwiki' => true,
 	'nlwiki' => true, // bug 50574
