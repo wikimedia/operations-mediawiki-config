@@ -14343,6 +14343,7 @@ $wgConf->settings = array(
 
 'wmgWikibaseEnableData' => array(
 	'default' => true,
+	'wikibooks' => false,
 	'wikinews' => false,
 ),
 
@@ -14375,6 +14376,7 @@ $wgConf->settings = array(
 
 'wmgWikibaseSiteGroup' => array(
 	'default' => 'wikipedia',
+	'wikibooks' => 'wikibooks',
 	'wikinews' => 'wikinews',
 	'wikiquote' => 'wikiquote',
 	'wikivoyage' => 'wikivoyage',

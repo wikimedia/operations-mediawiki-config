@@ -21,6 +21,7 @@ $wgWBSharedSettings = array();
 
 $wgWBSharedSettings['siteLinkGroups'] = array(
 	'wikipedia',
+	'wikibooks',
 	'wikinews',
 	'wikiquote',
 	'wikisource',
