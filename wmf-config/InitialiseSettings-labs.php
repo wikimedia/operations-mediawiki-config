@@ -274,7 +274,7 @@ return array(
 	'wmgMFInfoboxConfig' => array(
 		'default' => array(
 			// human
-			5 => array(
+			44076 => array(
 				'rows' => array(
 						// Born
 						array( 'id' => 'P476' ),
