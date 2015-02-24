@@ -1374,6 +1374,7 @@ $wgConf->settings = array(
 	'outreachwiki' => 'http://outreach.wikimedia.org',
 	'pa_uswikimedia' => 'http://pa-us.wikimedia.org',
 	'qualitywiki' => 'http://quality.wikimedia.org',
+	'ruwiki' => 'https://ru.wikipedia.org',
 	'ruwikinews' => 'https://ru.wikinews.org',
 	'searchcomwiki' => 'https://searchcom.wikimedia.org',
 	'sourceswiki' => 'http://wikisource.org',
