@@ -4158,7 +4158,7 @@ $wgConf->settings = array(
 		'OutputBuffer' => "udp://$wmfUdp2logDest/buffer",
 		'exec' => "udp://$wmfUdp2logDest/exec",
 		'ratelimit' => "udp://$wmfUdp2logDest/limiter",
-		'runJobs' => array( 'destination' => "udp://$wmfUdp2logDest/runJobs", 'level' => 'warning' ),
+		'runJobs' => "udp://$wmfUdp2logDest/runJobs",
 		'JobQueueRedis' => "udp://$wmfUdp2logDest/redis-jobqueue",
 		'es-hit' => "udp://$wmfUdp2logDest/es-hit",
 		'poolcounter' => "udp://$wmfUdp2logDest/poolcounter",
