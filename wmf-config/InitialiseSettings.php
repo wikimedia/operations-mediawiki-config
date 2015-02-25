@@ -12436,6 +12436,7 @@ $wgConf->settings = array(
 	'frwikibooks' => 'uca-fr', // bug 72513
 	'frwikinews' => 'uca-fr', // bug 66165
 	'frwikiversity' => 'uca-fr', // bug 69782
+	'hsbwiki' => 'uca-hsb', // T90689
 	'huwiki' => 'uca-hu', // bug 45596
 	'iswiki' => 'uca-is', // bug 56859
 	'iswiktionary' => 'identity', // bug 30722
