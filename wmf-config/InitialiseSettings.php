@@ -14200,11 +14200,13 @@ $wgConf->settings = array(
 	'eowiki' => true,
 	'eswiki' => true,
 	'idwiki' => true,
+	'minwiki' => true,
 	'mswiki' => true,
 	'nnwiki' => true,
 	'nowiki' => true,
 	'ptwiki' => true,
 	'svwiki' => true,
+	'uzwiki' => true,
 	'testwiki' => true,
 ),
 
@@ -14214,6 +14216,7 @@ $wgConf->settings = array(
 	'cawiki' => 'Main',
 	'idwiki' => 'Main', // T89450
 	'ptwiki' => 'Main', // T89450
+	'uzwiki' => 'Main',
 ),
 
 'wmgUseMapSources' => array(
