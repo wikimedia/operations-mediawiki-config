@@ -28,12 +28,12 @@ $wmgThrottlingExceptions[] = array( // T88203
 	'value'  => 25,
 );
 
-$wmgThrottlingExceptions[] = array( // T88791
-	'from'   => '2015-02-11T13:00 +1:00',
-	'to'     => '2015-02-11T15:00 +1:00',
-	'IP'  => array( '213.99.51.130' ),
-	'dbname' => array( 'cawiki' ),
-	'value'  => 25,
+$wmgThrottlingExceptions[] = array( // T90778
+	'from'   => '2015-03-13T17:00 +0:00',
+	'to'     => '2015-03-14T23:00 +0:00',
+	'IP'  => array( '186.67.30.194' ),
+	'dbname' => array( 'eswiki' ),
+	'value'  => 60,
 );
 
 ## Add throttling definitions above.
