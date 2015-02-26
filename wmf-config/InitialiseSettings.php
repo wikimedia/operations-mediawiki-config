@@ -13887,6 +13887,7 @@ $wgConf->settings = array(
 	'mkwiki' => true,
 	'nlwiki' => true, // bug 50574
 	'ptwiki' => true, // bug 52870
+	'ruwiki' => true, // T89588
 	'svwiki' => true, // bug 49009
 	'test2wiki' => true,
 	'ukwiki' => true, // bug 64143
