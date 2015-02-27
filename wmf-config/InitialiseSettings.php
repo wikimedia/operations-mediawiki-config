@@ -7543,8 +7543,9 @@ $wgConf->settings = array(
 			'undelete' => true, 'upload' => true, 'upload_by_url' => true, 'apihighlimits' => true, 'unwatchedpages' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true,
 		),
 	),
-	'newiki' => array( // T90888
+	'newiki' => array( // T90888, T89816
 		'rollbacker' => array( 'rollback' => true, ),
+		'autopatrolled' => array( 'autopatrol' => true, )
 	),
 	'nlwiki' => array(
 		'autoconfirmed' => array( 'patrol' => true ),
@@ -8475,8 +8476,8 @@ $wgConf->settings = array(
 	'+mlwiktionary' => array(
 		'bureaucrat' => array( 'botadmin' ),
 	),
-	'+newiki' => array( // T90888
-		'sysop' => array( 'rollbacker' ),
+	'+newiki' => array( // T90888, T89816
+		'sysop' => array( 'autopatrolled', 'rollbacker' ),
 	),
 	'+nlwiki' => array(
 		'bureaucrat' => array( 'abusefilter', 'arbcom', 'rollbacker' ),
@@ -9081,8 +9082,8 @@ $wgConf->settings = array(
 	'+mlwiktionary' => array(
 		'bureaucrat' => array( 'botadmin' ),
 	),
-	'+newiki' => array( // T90888
-		'bureaucrat' => array( 'rollbacker' ),
+	'+newiki' => array( // T90888, T89816
+		'bureaucrat' => array( 'autopatrolled', 'rollbacker' ),
 	),
 	'+nlwiki' => array(
 		'bureaucrat' => array( 'abusefilter', 'arbcom', 'rollbacker' ),
