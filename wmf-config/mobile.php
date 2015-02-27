@@ -10,10 +10,8 @@ if ( $wmgMobileFrontend ) {
 	$wgMFNearby = $wmgMFNearby && $wmgEnableGeoData;
 	$wgMFPhotoUploadEndpoint = $wmgMFPhotoUploadEndpoint;
 	$wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
-	$wgWikiGrokUIEnable = $wmgWikiGrokUIEnable;
-	$wgWikiGrokUIEnableForAnons = $wmgWikiGrokUIEnableForAnons;
-	$wgWikiGrokUIEnableOnAllDevices = $wmgWikiGrokUIEnableOnAllDevices;
-	$wgWikiGrokUIEnableInSidebar = $wmgWikiGrokUIEnableInSidebar;
+	$wgMFEnableWikiGrok = $wmgMFEnableWikiGrok;
+	$wgMFEnableWikiGrokForAnons = $wmgMFEnableWikiGrokForAnons;
 	$wgWikiGrokDebug = $wmgWikiGrokDebug;
 	$wgMFPhotoUploadWiki = $wmgMFPhotoUploadWiki;
 	$wgMFContentNamespace = $wmgMFContentNamespace;
@@ -155,6 +153,10 @@ if ( $wmgMobileFrontend ) {
 				'suggestions' => array( 'Q1860'/* English */ ),
 			),
 		);
+
+		// These are deprecated. Remove after change I3ec0190a is fully deployed.
+		$wgMFWikiGrokAbTestStartDate = 1416272400; // Tue, 18 Nov 2014 01:00:00 GMT
+		$wgMFWikiGrokAbTestEndDate = 1417482000; // Tue, 02 Dec 2014 01:00:00 GMT
 	}
 
 	// Turn on volunteer recruitment

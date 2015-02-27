@@ -21,6 +21,10 @@ if ( $wmgMobileFrontend ) {
 
 $wgMFForceSecureLogin = false;
 $wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
+$wgMFEnableWikiGrok = $wmgMFEnableWikiGrok;
+$wgMFEnableWikiGrokOnAllDevices = $wmgMFEnableWikiGrokOnAllDevices;
+$wgMFEnableWikiGrokInSidebar = $wmgMFEnableWikiGrokInSidebar;
+$wgWikiGrokDebug = $wmgWikiGrokDebug;
 $wgMFSpecialCaseMainPage = $wmgMFSpecialCaseMainPage;
 
 $wgMFWikiDataEndpoint = $wmgMFWikiDataEndpoint;
