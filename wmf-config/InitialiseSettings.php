@@ -12581,6 +12581,7 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 	'mkwiki' => true, // bug 31831
 	'mlwiki' => true, // bug 30500
+	'newiki' => true, // T89818
 	'nowiki' => true, // bug 30794
 	'officewiki' => true,
 	'orwiki' => true, // bug 31172
