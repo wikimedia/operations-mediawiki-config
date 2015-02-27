@@ -250,15 +250,15 @@ return array(
 		'default' => true,
 		'enwiki' => false,
 	),
-	'wmgMFEnableWikiGrok' => array(
+	'wmgWikiGrokUIEnable' => array(
 		'default' => false,
 		'enwiki' => true, // prototype version is for en.wiki only
 	),
-	'wmgMFEnableWikiGrokOnAllDevices' => array(
+	'wmgWikiGrokUIEnableOnAllDevices' => array(
 		'default' => false,
 		'enwiki' => true,
 	),
-	'wmgMFEnableWikiGrokInSidebar' => array(
+	'wmgWikiGrokUIEnableInSidebar' => array(
 		'default' => false,
 		'enwiki' => true,
 	),
@@ -296,8 +296,7 @@ return array(
 	),
 
 	'wmgWikiGrokDebug' => array(
-		'default' => false,
-		'enwiki' => true,
+		'default' => true,
 	),
 
 	'wmgGeoDataDebug' => array(
