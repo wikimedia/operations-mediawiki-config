@@ -12795,17 +12795,33 @@ $wgConf->settings = array(
 	'default' => 10,
 	'commonswiki' => 75, // bug 62598
 ),
+'wmgWikiGrokUIEnable' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
+'wmgWikiGrokUIEnableForAnons' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
+'wmgWikiGrokUIEnableOnAllDevices' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
+'wmgWikiGrokUIEnableInSidebar' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
+// Remove this when 1.25wmf18 is gone
 'wmgMFEnableWikiGrok' => array(
 	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'enwiki' => false,
 ),
+// Remove this when 1.25wmf18 is gone
 'wmgMFEnableWikiGrokForAnons' => array(
 	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'enwiki' => false,
 ),
 'wmgWikiGrokDebug' => array(
 	'default' => false,
