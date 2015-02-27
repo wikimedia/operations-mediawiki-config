@@ -454,7 +454,7 @@ if ( $wmgUseClusterSquid ) {
 
 if( $wmfRealm == 'production' ) {
 	$wgUDPProfilerHost = 'statsd.eqiad.wmnet';
-	$wgUDPProfilerPort = '8135';
+	$wgUDPProfilerPort = 8125;
 	$wgAggregateStatsID = $wgVersion;
 }
 
