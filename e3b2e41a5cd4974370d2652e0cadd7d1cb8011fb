@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0e8de484",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 353,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-02-28T03:57:28Z",
+      "side": 1,
+      "message": "not indented properly",
+      "revId": "e3b2e41a5cd4974370d2652e0cadd7d1cb8011fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
