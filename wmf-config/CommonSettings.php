@@ -108,7 +108,7 @@ $wgDBuser = 'wikiuser';
 # wmf-config directory (in common/)
 $wmfConfigDir = "$IP/../wmf-config";
 
-$wgStatsFormatString = 'mw.%3$s:%2$s|m' . "\n";
+$wgStatsFormatString = 'MediaWiki.%3$s:%2$s|m' . "\n";
 
 # Must be set before InitialiseSettings.php:
 switch( $wmfRealm ) {
