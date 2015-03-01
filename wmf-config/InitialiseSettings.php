@@ -9374,6 +9374,7 @@ $wgConf->settings = array(
 	'ruwikimedia' => array( 'meta', 'foundation', 'wikipedia:ru', ),
 	'sewikimedia' => array( 'wikipedia:sv', 'commons' ),
 	'trwikimedia' => array( 'wikipedia:tr', 'meta' ),
+	'uawikimedia' => array( 'wikipedia:uk', 'wikipedia', 'wikipedia:ru', 'meta', 'foundation', 'outreachwiki', 'mediawikiwiki', 'commons' ), // T91187
 	'ukwikimedia' => array( 'meta' ), // T19167
 
 	// content wikis
