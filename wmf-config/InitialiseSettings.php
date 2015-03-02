@@ -14239,6 +14239,7 @@ $wgConf->settings = array(
 	'eowiki' => true,
 	'eswiki' => true,
 	'idwiki' => true,
+	'kywiki' => true,
 	'minwiki' => true,
 	'mswiki' => true,
 	'nnwiki' => true,
@@ -14254,6 +14255,7 @@ $wgConf->settings = array(
 	'default' => 'User',
 	'cawiki' => 'Main',
 	'idwiki' => 'Main', // T89450
+	'kywiki' => 'Main',
 	'minwiki' => 'Main',
 	'ptwiki' => 'Main', // T89450
 ),
