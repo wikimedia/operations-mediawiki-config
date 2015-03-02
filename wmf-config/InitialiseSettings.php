@@ -14247,11 +14247,7 @@ $wgConf->settings = array(
 
 // Namespace to publish article
 'wmgContentTranslationTargetNamespace' => array(
-	'default' => 'User',
-	'cawiki' => 'Main',
-	'idwiki' => 'Main', // T89450
-	'minwiki' => 'Main',
-	'ptwiki' => 'Main', // T89450
+	'default' => 'Main',
 ),
 
 'wmgUseMapSources' => array(
