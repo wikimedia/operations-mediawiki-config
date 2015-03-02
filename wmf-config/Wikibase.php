@@ -68,22 +68,9 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['dataRightsUrl'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
-		$wgWBRepoSettings['badgeItems'] = array(
-			'Q608' => 'wb-badge-goodarticle',
-			'Q609' => 'wb-badge-featuredarticle'
-		);
-
 		// there is no cronjob dispatcher yet, this will do nothing
 		$wgWBRepoSettings['clientDbList'] = array( 'testwiki', 'test2wiki', 'testwikidatawiki' );
 	} else {
-		$wgWBRepoSettings['badgeItems'] = array(
-			'Q17437798' => 'wb-badge-goodarticle',
-			'Q17437796' => 'wb-badge-featuredarticle',
-			'Q17559452' => 'wb-badge-recommendedarticle', // bug 70268
-			'Q17506997' => 'wb-badge-featuredlist', // bug 70332
-			'Q17580674' => 'wb-badge-featuredportal', // bug 73193
-		);
-
 		$wgWBRepoSettings['clientDbList'] = array_diff(
 			array_map(
 				'trim',
@@ -128,7 +115,6 @@ if ( $wmgUseWikibaseRepo ) {
 }
 
 if ( $wmgUseWikibaseClient ) {
-
 	$wgWBClientSettings = $wgWBSharedSettings + $wgWBClientSettings;
 
 	// to be safe, keeping this here although $wgDBname is default setting
@@ -157,14 +143,6 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['siteGroup'] = $wmgWikibaseSiteGroup;
 	$wgWBClientSettings['otherProjectsLinksBeta'] = true;
-
-	$wgWBClientSettings['badgeClassNames'] = array(
-		'Q17437796' => 'badge-featuredarticle',
-		'Q17437798' => 'badge-goodarticle',
-		'Q17559452' => 'badge-recommendedarticle', // bug 70268
-		'Q17506997' => 'badge-featuredlist', // bug 70332
-		'Q17580674' => 'badge-featuredportal', // bug 73193
-	);
 
 	$wgWBClientSettings['excludeNamespaces'] = function() {
 		return array_merge(
@@ -198,3 +176,5 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['sharedCacheKeyPrefix'] .= $wgWBSharedCacheKey;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 }
+
+require( getRealmSpecificFilename( "$wmfConfigDir/Wikibase.php" ) );
