@@ -12737,7 +12737,7 @@ $wgConf->settings = array(
 ),
 'wmgMFAppPackageId' => array(
 	'default' => false,
-	'wiki' => 'org.wikipedia',
+	'wikipedia' => 'org.wikipedia',
 ),
 
 # trademark status
