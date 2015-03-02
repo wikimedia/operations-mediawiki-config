@@ -14249,15 +14249,6 @@ $wgConf->settings = array(
 	'testwiki' => true,
 ),
 
-// Namespace to publish article
-'wmgContentTranslationTargetNamespace' => array(
-	'default' => 'User',
-	'cawiki' => 'Main',
-	'idwiki' => 'Main', // T89450
-	'minwiki' => 'Main',
-	'ptwiki' => 'Main', // T89450
-),
-
 'wmgUseMapSources' => array(
 	'default' => false,
 	'wikivoyage' => true,
