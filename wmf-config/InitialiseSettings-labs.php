@@ -407,10 +407,6 @@ return array(
 		'default' => false,
 	),
 
-	'wmgContentTranslationTargetNamespace' => array(
-		'default' => 'Main',
-	),
-
 	'wmgContentTranslationCampaigns' => array(
 		'default' => array( 'newarticle' ),
 	),
