@@ -14243,6 +14243,7 @@ $wgConf->settings = array(
 	'mswiki' => true,
 	'nnwiki' => true,
 	'nowiki' => true,
+	'pawiki' => true,
 	'ptwiki' => true,
 	'svwiki' => true,
 	'uzwiki' => true,
@@ -14255,6 +14256,7 @@ $wgConf->settings = array(
 	'cawiki' => 'Main',
 	'idwiki' => 'Main', // T89450
 	'minwiki' => 'Main',
+	'pawiki' => 'Main',
 	'ptwiki' => 'Main', // T89450
 ),
 
