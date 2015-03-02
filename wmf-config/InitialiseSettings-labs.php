@@ -407,10 +407,6 @@ return array(
 		'default' => false,
 	),
 
-	'wmgContentTranslationTargetNamespace' => array(
-		'default' => 'Main',
-	),
-
 	'wmgUseNavigationTiming' => array(
 		'default' => true,
 	),
