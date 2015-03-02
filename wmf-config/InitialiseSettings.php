@@ -13883,6 +13883,7 @@ $wgConf->settings = array(
 	'hewiki' => true, // bug 48848
 	'hewiktionary' => true, // bug T89393
 	'legalteamwiki' => true, // bug 62610
+	'lvwiki' => true, // T89898
 	'mkwiki' => true,
 	'nlwiki' => true, // bug 50574
 	'ptwiki' => true, // bug 52870
@@ -13897,6 +13898,7 @@ $wgConf->settings = array(
 	'cswiki' => 'Moje kurzy - Víte že?', // bug 54223
 	'eswiki' => 'Mis cursos ¿sabías que?', // bug 54826
 	'fawiki' => 'نکته روز ویکی‌پدیا',
+	'lvwiki' => 'Mani kursi — Vai tu zināji?', // T89898
 	'ptwiki' => '!Você Sabia sobre cursos', // bug 52870
 ),
 
