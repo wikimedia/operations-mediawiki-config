@@ -3586,6 +3586,7 @@ $wgConf->settings = array(
 		'CAT' => NS_CATEGORY,
 		'H' => NS_HELP,
 		'P' => 100,
+		'草稿' => 118, //T91223
 	),
 	'+zhwikibooks' => array(
 		'维基教科书' => NS_PROJECT,
@@ -4944,7 +4945,12 @@ $wgConf->settings = array(
 		108 => 'Ìwé',
 		109 => 'Ọ̀rọ̀_ìwé',
 	),
-	'zhwiki' => array( 100 => 'Portal', 101 => 'Portal_talk' ),
+	'zhwiki' => array(
+		100 => 'Portal',
+		101 => 'Portal_talk',
+		118 => 'Draft', //T91223
+		119 => 'Draft_talk' //T91223
+	),
 	'zh_classicalwiki' => array( 100 => '門', 101 => '議' ),
 	'zh_min_nanwiki' => array( 100 => 'Portal', 101 => 'Portal_talk' ),
 	'zh_yuewiki' => array(
@@ -9877,6 +9883,10 @@ $wgConf->settings = array(
 		NS_HELP_TALK => 'noindex,follow',
 		NS_CATEGORY_TALK => 'noindex,follow',
 	),
+	'zhwiki' => array(
+		118 => 'noindex,nofollow', // T91223
+		119 => 'noindex,nofollow',
+	),
 ),
 # @} end of ROBOT
 
@@ -10025,6 +10035,7 @@ $wgConf->settings = array(
 	'default' => array(),
 	'enwiki' => array( 118, 119 ), // draft and draft talk
 	'hewiki' => array( 118, 119 ), // draft and draft talk - T86329
+	'zhwiki' => array( 118, 119 ), // draft and draft talk - T91223
 ),
 
 'wgRevisionCacheExpiry' => array(
@@ -12304,6 +12315,7 @@ $wgConf->settings = array(
 	'+enwiki' => array( 100 /* Portal */, 108 /* Book */, 118 /* Draft */ ), // Bug 56001
 	'+hewiki' => array( 118 /* Draft */ ), // T87027
 	'+ruwiki' => array( 102 /* Draft / Incubator */ ), // T86688
+	'+zhwiki' => array( 118 /* Draft */ ), // T91223
 	// Wiktionaries
 	'svwiktionary' => array( NS_USER ), // Bug 57356
 	// Wikiversities
