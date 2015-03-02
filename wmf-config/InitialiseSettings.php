@@ -4823,8 +4823,6 @@ $wgConf->settings = array(
 		NS_USER_TALK => 'Usuário(a)_Discussão',
 		100 => 'Portal',
 		101 => 'Portal_Discussão',
-		102 => 'Anexo',
-		103 => 'Anexo_Discussão',
 		104 => 'Livro',
 		105 => 'Livro_Discussão',
 	),
@@ -6637,7 +6635,6 @@ $wgConf->settings = array(
 	'+nowikisource' => array( 102 => 1, 106 => 1 ),
 	'+plwiktionary' => array( 100 => 1, 102 => 1 ),
 	'+plwikisource' => array( 102 => 1, 104 => 1 ),
-	'+ptwiki' => array( 102 => 1 ),
 	'+ptwikisource' => array( 102 => 1, 104 => 1 ),
 	'+rowikisource' => array( 102 => 1, 106 => 1 ), // bug 29190
 	'+ruwiki' => array( 104 => 0, 105 => 0, 106 => 0, 107 => 0 ),
@@ -9997,7 +9994,6 @@ $wgConf->settings = array(
 	'+nlwikisource' => array( 102 ),
 	'+nowikisource' => array( 102, 104, 106 ),
 	'+plwikisource' => array( 100, 102, 104 ),
-	'+ptwiki' => array( 102 ),
 	'+ptwikisource' => array( 102, 104, 106 ),
 	'+rowikisource' => array( 102, 104, 106 ), // Follow-up for bug 29190
 	'+ruwikisource' => array( 104, 106 ),
