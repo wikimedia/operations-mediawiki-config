@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c09494ed",
+        "filename": "wmf-config/Wikibase-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2015-03-02T15:54:09Z",
+      "side": 1,
+      "message": "these bug numbers are void here",
+      "revId": "e588218bca91b575f8cf0867d12519e9f70ce418",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
