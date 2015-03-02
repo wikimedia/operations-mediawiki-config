@@ -14243,6 +14243,7 @@ $wgConf->settings = array(
 	'mswiki' => true,
 	'nnwiki' => true,
 	'nowiki' => true,
+	'pawiki' => true,
 	'ptwiki' => true,
 	'svwiki' => true,
 	'uzwiki' => true,
