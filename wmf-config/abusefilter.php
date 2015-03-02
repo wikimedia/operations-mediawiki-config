@@ -345,10 +345,13 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true; // T89379
 		$wgAbuseFilterAvailableActions = array_diff(
 			$wgAbuseFilterAvailableActions,
 			array( 'blockautopromote' )
 		);
+                $wgAbuseFilterAvailableActions[] = 'block'; // T89379
+		$wgAbuseFilterBlockDuration = '2 hours';    // T89379
 		$wgAbuseFilterNotifications = false;
 		break;
 	case 'urwiki':
