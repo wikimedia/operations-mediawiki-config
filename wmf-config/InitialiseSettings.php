@@ -3728,6 +3728,7 @@ $wgConf->settings = array(
 	'+sewikimedia' => array( 0 => 1 ),
 	'+stewardwiki' => array( 0 => 1, 6 => 1, 14 => 1 ),
 	'+strategywiki' => array( 0 => 1 ),
+	'+uawikimedia' => array( 0 => 1 ), // T91185
 	'+ukwikimedia' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+usabilitywiki' => array( 0 => 1 ),
 	'+wikimaniateamwiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
