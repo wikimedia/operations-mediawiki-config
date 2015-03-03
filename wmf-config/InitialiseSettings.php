@@ -10351,7 +10351,7 @@ $wgConf->settings = array(
 'wgFavicon' => array(
 	# Projects
 	'default' => '//bits.wikimedia.org/favicon/wmf.ico', // bug 48479
-	'wiki' => '//bits.wikimedia.org/favicon/wikipedia.ico', // bug 48479
+	'wikipedia' => '//bits.wikimedia.org/favicon/wikipedia.ico', // bug 48479
 	'wikibooks' => '//bits.wikimedia.org/favicon/wikibooks.ico',
 	'wikimania' => '//bits.wikimedia.org/favicon/wikimania.ico',
 	'wikinews' => '//bits.wikimedia.org/favicon/wikinews.ico',
@@ -10516,7 +10516,7 @@ $wgConf->settings = array(
 	'mediawikiwiki' => '//bits.wikimedia.org/apple-touch/mediawiki.png',
 	'usabilitywiki' => '//bits.wikimedia.org/apple-touch/usability.png',
 	'wikinews' => '//bits.wikimedia.org/apple-touch/wikinews.png',
-	'wiki' => '//bits.wikimedia.org/apple-touch/wikipedia.png',
+	'wikipedia' => '//bits.wikimedia.org/apple-touch/wikipedia.png',
 	'wiktionary' => '//bits.wikimedia.org/apple-touch/wiktionary.png',
 	'wikidatawiki' => '//bits.wikimedia.org/apple-touch/wikidata.png', // bug 70996
 	'enwiktionary' => '//bits.wikimedia.org/apple-touch/wiktionary/en.png', // bug 46431
