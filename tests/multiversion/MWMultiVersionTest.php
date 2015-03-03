@@ -159,7 +159,7 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 	 * @expectedException PHPUnit_Framework_Error
 	 */
 	function testInvalidHostDumpAnErrorMessage() {
-		$this->expectOutputString( "Invalid host name (server: invalidhost, request: [none]).\n" );
+		$this->expectOutputString( "Invalid host name (server: invalidhost, request: , ip: , xff: ).\n" );
 		MWMultiversion::initializeForWiki( 'invalidhost' );
 	}
 }

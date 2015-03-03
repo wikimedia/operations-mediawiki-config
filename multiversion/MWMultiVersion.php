@@ -187,8 +187,10 @@ class MWMultiVersion {
 				$site = $matches[2];
 			}
 		} else {
-			$request = isset( $_SERVER['REQUEST_URI'] ) ? $_SERVER['REQUEST_URI'] : '[none]';
-			self::error( "Invalid host name (server: $serverName, request: $request).\n" );
+			$ip = @$_SERVER['REQUEST_ADDR'];
+			$xff = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+			$request = @$_SERVER['REQUEST_URI'];
+			self::error( "Invalid host name (server: $serverName, request: $request, ip: $ip, xff: $xff).\n" );
 		}
 		$this->loadDBFromSite( $site, $lang );
 	}
