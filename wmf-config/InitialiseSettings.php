@@ -10622,7 +10622,7 @@ $wgConf->settings = array(
 'wgFavicon' => array(
 	# Projects
 	'default' => '/static/favicon/wmf.ico', // T50479
-	'wiki' => '/static/favicon/wikipedia.ico', // T50479
+	'wikipedia' => '/static/favicon/wikipedia.ico', // T50479
 	'wikibooks' => '/static/favicon/wikibooks.ico',
 	'wikimania' => '/static/favicon/wikimania.ico',
 	'wikinews' => '/static/favicon/wikinews.ico',
@@ -10787,7 +10787,7 @@ $wgConf->settings = array(
 	'mediawikiwiki' => '/static/apple-touch/mediawiki.png',
 	'usabilitywiki' => '/static/apple-touch/usability.png',
 	'wikinews' => '/static/apple-touch/wikinews.png',
-	'wiki' => '/static/apple-touch/wikipedia.png',
+	'wikipedia' => '/static/apple-touch/wikipedia.png',
 	'wiktionary' => '/static/apple-touch/wiktionary.png',
 	'wikidata' => '/static/apple-touch/wikidata.png', // T72996
 	'enwiktionary' => '/static/apple-touch/wiktionary/en.png', // T48431
