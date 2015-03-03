@@ -10545,7 +10545,7 @@ $wgConf->settings = array(
 
 'wmgCentralAuthLoginIcon' => array(
 	'default' => false,
-	'wiki' => '/srv/mediawiki/images/sul/wikipedia.png',
+	'wikipedia' => '/srv/mediawiki/images/sul/wikipedia.png',
 	'wikibooks' => '/srv/mediawiki/images/sul/wikibooks.png',
 	'wikinews' => '/srv/mediawiki/images/sul/wikinews.png',
 	'wikiquote' => '/srv/mediawiki/images/sul/wikiquote.png',
