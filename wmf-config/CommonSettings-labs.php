@@ -169,8 +169,11 @@ if ( $wgDBname == "testwiki" ) {
 	$wgCaptchaDirectory = '/data/project/upload7/private/captcha';
 }
 
-// Use InstantCommons on all betawikis except commonswiki
-if ( $wgDBname != 'commonswiki' ) {
+// Enable Flickr uploads on commons beta T86120
+if ( $wgDBname == 'commonswiki' ) {
+	$wgGroupPermissions['user']['upload'] = true;
+    $wgGroupPermissions['user']['upload_by_url'] = true;
+} else { // Use InstantCommons on all betawikis except commonswiki
 	$wgUseInstantCommons = true;
 }
 
