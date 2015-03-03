@@ -3207,8 +3207,22 @@ $wgConf->settings = array(
 	'+nds_nlwiki' => array(
 		'Wikipedia' => NS_PROJECT,
 	),
-	'+newiki' => array(
-		'Wikipedia' => NS_PROJECT,
+	'+newiki' => array( // T89817
+		'वि' => NS_PROJECT,
+		'विवा' => NS_PROJECT_TALK,
+		'CT' => NS_CATEGORY_TALK,
+		'वि' => NS_PROJECT,
+		'WT' => NS_PROJECT_TALK,
+		'U' => NS_USER,
+		'UT' => NS_USER_TALK,
+		'प्र' => NS_USER,
+		'प्रवा' => NS_USER,
+		'ढाँ' => NS_TEMPLATE,
+		'ढाँवा' => NS_TEMPLATE_TALK,
+		'T' => NS_TEMPLATE,
+		'P' => NS_PORTAL,
+		'पो' => NS_PORTAL,
+		'पोवा' => NS_PORTAL_TALK,
 	),
 	'+nlwiki' => array(
 		'WP' => NS_PROJECT,
