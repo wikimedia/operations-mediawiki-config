@@ -3220,9 +3220,6 @@ $wgConf->settings = array(
 		'ढाँ' => NS_TEMPLATE,
 		'ढाँवा' => NS_TEMPLATE_TALK,
 		'T' => NS_TEMPLATE,
-		'P' => NS_PORTAL,
-		'पो' => NS_PORTAL,
-		'पोवा' => NS_PORTAL_TALK,
 	),
 	'+nlwiki' => array(
 		'WP' => NS_PROJECT,
