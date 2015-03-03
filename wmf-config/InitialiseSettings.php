@@ -12229,6 +12229,10 @@ $wgConf->settings = array(
 	'default' => 10,
 ),
 
+'wmgImageMetricsCorsSamplingFactor' => array(
+	'default' => false,
+),
+
 // -------------- Shared Parsoid start --------------
 
 'wmgUseParsoid' => array(

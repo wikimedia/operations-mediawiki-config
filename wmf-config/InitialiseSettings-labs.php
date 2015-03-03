@@ -358,6 +358,10 @@ return array(
 		'default' => 1,
 	),
 
+	'wmgImageMetricsCorsSamplingFactor' => array(
+		'default' => 1,
+	),
+
 	'wmgUseVectorBeta' => array(
 		'default' => true,
 	),
