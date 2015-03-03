@@ -12640,7 +12640,7 @@ $wgConf->settings = array(
 
 'wmgZeroBanner' => array(
 	'default' => false,
-	'wiki' => true,
+	'wikipedia' => true,
 	'wikidatawiki' => false, // safety
 	'metawiki' => false,
 	'zerowiki' => false,
@@ -12675,7 +12675,7 @@ $wgConf->settings = array(
 
 'wmgMobileFrontendLogo' => array(
 	'default' => '/images/mobile/wikimedia.png',
-	'wiki' => '/images/mobile/W.png',
+	'wikipedia' => '/images/mobile/W.png',
 	'wikinews' => '/images/mobile/wikinews.png',
 	'wiktionary' => '/images/mobile/wiktionary.png',
 	'wikibooks' => '/images/mobile/wikibooks.png',
@@ -13923,14 +13923,15 @@ $wgConf->settings = array(
 # disable its API modules in CommonSettings.php or below
 'wmgEnableGeoData' => array(
 	'default' => false,
-	'wiki' => true,
+	'commonswiki' => true,
+	'wikipedia' => true,
 	'wikivoyage' => true,
 	'wikidatawiki' => false,
 	'testwikidatawiki' => false,
 ),
 'wmgEnableGeoSearch' => array(
 	'default' => true,
-	'labswiki' => false,
+	'labswiki' => false, // FIXME: this does nothing in absence of GeoData
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
