@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_deb54230",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 415,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-03-04T14:09:45Z",
+      "side": 1,
+      "message": "Err, shouldn\u0027t this be something like\n\n \u0027wmgContentTranslationCampaigns\u0027 \u003d\u003e array(\n     \u0027default\u0027 \u003d\u003e array( \u0027newarticle\u0027 ),\n ),\n\n?",
+      "revId": "82df28405b803a4332c1ed8e5e8469dc22210fc5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
