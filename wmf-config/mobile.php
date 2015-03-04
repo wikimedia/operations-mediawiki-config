@@ -163,6 +163,20 @@ if ( $wmgMobileFrontend ) {
 					'Q2259451' /* stage actor */,
 				),
 			),
+
+			// https://trello.com/c/NO1Ss5tu
+			'filmDirector' => array(
+				'type' => 'Simple',
+				'property' => 'P106'/* occupation */,
+				'ifAll' => array(
+					'P31'/* instance of */ => 'Q5'/* human */,
+					'P106'/* occupation */ => 'Q2526255'/* film director */
+				),
+				'suggestions' => array(
+					'Q28389'/* screenwriter */,
+					'Q33999'/* actor */
+				),
+			),
 		);
 	}
 
