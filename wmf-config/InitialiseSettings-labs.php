@@ -411,6 +411,10 @@ return array(
 		'default' => 'Main',
 	),
 
+	'wmgContentTranslationCampaigns' => array(
+		'default' => array( 'newarticle' ),
+	),
+
 	'wmgUseNavigationTiming' => array(
 		'default' => true,
 	),
