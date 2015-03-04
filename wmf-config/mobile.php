@@ -177,6 +177,21 @@ if ( $wmgMobileFrontend ) {
 					'Q33999'/* actor */
 				),
 			),
+
+			// https://trello.com/c/Ephr8PNK
+			'screenwriter' => array(
+				'type' => 'Simple',
+				'property' => 'P106'/* occupation */,
+				'ifAll' => array(
+					'P31'/* instance of */ => 'Q5'/* human */,
+					'P106'/* occupation */ => 'Q28389'/* screenwriter */
+				),
+				'suggestions' => array(
+					'Q482980'/* author */,
+					'Q33999'/* actor */,
+					'Q3282637'/* film producer */
+				),
+			),
 		);
 	}
 
