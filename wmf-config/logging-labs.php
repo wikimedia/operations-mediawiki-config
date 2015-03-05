@@ -22,7 +22,7 @@ $wgDebugLogGroups['dnsblacklist'] = "udp://$wmfUdp2logDest/dnsblacklist";
 $wgDebugLogGroups['exception-json'] = "udp://$wmfUdp2logDest/exception-json";
 $wgDebugLogGroups['squid'] = "udp://$wmfUdp2logDest/squid";
 
-$wgUDPProfilerHost = 'deployment-fluoride.eqiad.wmflabs';  // OL, 2013-11-14
+$wgUDPProfilerHost = 'labmon1001.eqiad.wmnet';
 $wgAggregateStatsID = "$wgVersion-labs";
 
 // Ugly code to create a random hash and put it in logs
