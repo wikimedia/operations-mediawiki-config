@@ -40,7 +40,7 @@ function checkoutMediaWiki() {
 
 	if ( !file_exists( $destIP ) ) {
 		passthru( 'git clone -n ' .
-			'ssh://gerrit.wikimedia.org:29418/mediawiki/core.git ' .
+			'https://gerrit.wikimedia.org/r/p/mediawiki/core.git ' .
 			escapeshellarg( $destIP ),
 			$ret );
 		if ( $ret ) {
