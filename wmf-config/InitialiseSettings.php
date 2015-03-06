@@ -9612,6 +9612,7 @@ $wgConf->settings = array(
 	'szlwiki' => array( 'incubator' ),
 	'tawikisource' => array( 'oldwikisource', 'w', 'b' ),
 	'tewiki' => array( 'en', 'commons' ), // Bug 41880
+	'tewikiquote' => array( 'w', 'en' ), // T91635
 	'testwiki' => array( 'de', 'en', 'es', 'fr', 'ja', 'commons', 'meta', 'incubator', 'strategy' ),
 	'test2wiki' => array( 'en', 'cs' ),
 	'tetwiki' => array( 'en', 'de', 'pt' ),
