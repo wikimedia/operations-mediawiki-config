@@ -1125,7 +1125,7 @@ if ( $wmgEnableCaptcha ) {
 	$wgCaptchaClass = 'FancyCaptcha';
 	$wgCaptchaWhitelist =
 		'#^(https?:)?//([.a-z0-9-]+\\.)?((wikimedia|wikipedia|wiktionary|wikiquote|wikibooks|wikisource|wikispecies|mediawiki|wikimediafoundation|wikinews|wikiversity|wikivoyage|wikidata|wmflabs)\.org'
-		. '|dnsstuff\.com|completewhois\.com|wikimedia\.de|toolserver\.org)([?/\#]|$)#i';
+		. '|dnsstuff\.com|completewhois\.com|wikimedia\.de)([?/\#]|$)#i';
 
 	// 'XRumer' spambot
 	// adds non-real links
