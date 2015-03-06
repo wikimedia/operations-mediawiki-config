@@ -14076,19 +14076,7 @@ $wgConf->settings = array(
 
 'wmgUseFlow' => array(
 	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
-	'metawiki' => true,
-	'enwiki' => true,
-	'frwiki' => true,
-	'hewiki' => true,
-	'officewiki' => true, // https://www.loomio.org/d/rTbveB9O/dogfood-flow-on-officewiki
-	'ptwiki' => true, // T73757
-	'cawiki' => true,
-	'tewiki' => true, //T92544
-	'ruwiki' => true,
-	'pawiki' => true,
+	'flow' => true,
 ),
 'wmgFlowEditorList' => array(
 	// Disable VE inside flow, leaving only the wikitext editor
