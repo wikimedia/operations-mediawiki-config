@@ -32,6 +32,24 @@ $wgSquidServersNoPurge = array(
 	'10.64.48.0/22',	# private1-d-eqiad
 	'2620:0:861:107::/64',	# private1-d-eqiad
 
+    ## codfw
+	'208.80.153.0/27', # public1-a-codfw
+	'2620:0:860:1::/64', # public1-a-codfw
+	'208.80.153.32/27', # public1-b-codfw
+	'2620:0:860:2::/64', # public1-b-codfw
+	'208.80.153.64/27', # public1-c-codfw
+	'2620:0:860:3::/64', # public1-c-codfw
+	'208.80.153.96/27', # public1-d-codfw
+	'2620:0:860:4::/64', # public1-d-codfw
+	'10.192.0.0/22', # private1-a-codfw
+	'2620:0:860:101::/64', # private1-a-codfw
+	'10.192.16.0/22', # private1-b-codfw
+	'2620:0:860:102::/64', # private1-b-codfw
+	'10.192.32.0/22', # private1-c-codfw
+	'2620:0:860:103::/64', # private1-c-codfw
+	'10.192.48.0/22', # private1-d-codfw
+	'2620:0:860:104::/64', # private1-d-codfw
+
 	## esams
 	'91.198.174.0/25',	# public1-esams
 	'2620:0:862:1::/64',	# public1-esams
