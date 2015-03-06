@@ -1874,15 +1874,15 @@ $wgConf->settings = array(
 
 'wgUploadDirectory' => array(
 	# Using upload7 since Oct 2012
-	 'default' => '/mnt/upload7/$site/$lang',
-	 'private' => '/mnt/upload7/private/$lang',
+	'default' => '/mnt/upload7/$site/$lang',
+	'private' => '/mnt/upload7/private/$lang',
 
-	 'wikimania2005wiki' => '/mnt/upload7/wikipedia/wikimania', // back compat
-	 'otrs_wikiwiki' => '/mnt/upload7/private/otrs_wiki',
-	 'execwiki' => '/mnt/upload7/private/execwiki',
-	 'transitionteamwiki' => '/mnt/upload7/private/transitionteamwiki',
-	 'iegcomwiki' => '/mnt/upload7/private/iegcomwiki',
-	 'labswiki' => '/srv/org/wikimedia/controller/wikis/images',
+	'wikimania2005wiki' => '/mnt/upload7/wikipedia/wikimania', // back compat
+	'otrs_wikiwiki' => '/mnt/upload7/private/otrs_wiki',
+	'execwiki' => '/mnt/upload7/private/execwiki',
+	'transitionteamwiki' => '/mnt/upload7/private/transitionteamwiki',
+	'iegcomwiki' => '/mnt/upload7/private/iegcomwiki',
+	'labswiki' => '/srv/org/wikimedia/controller/wikis/images',
 ),
 
 'wgImgAuthUrlPathMap' => array(
@@ -8330,7 +8330,7 @@ $wgConf->settings = array(
 			'autopatrol', // bug 29007
 			'uploader', // bug 69171
 			'confirmed' // T87348
-		 ),
+		),
 		'botadmin' => array(
 			'patroller',
 			'Image-reviewer',
@@ -8341,7 +8341,7 @@ $wgConf->settings = array(
 			'abusefilter', // bug 72502
 			'confirmed', // T87348
 			'eliminator' // T87558
-		 ), // bug 69411
+		), // bug 69411
 	),
 	'+fawikinews' => array(
 		'sysop' => array( 'rollbacker', 'patroller' ),
@@ -8402,9 +8402,9 @@ $wgConf->settings = array(
 	'+hewikivoyage' => array(
 		'sysop' => array( 'autopatrolled' ), // bug 50377
 	),
-    '+hewiktionary' => array(
-        'sysop' => array( 'patroller', 'autopatrolled' ),
-    ),
+	'+hewiktionary' => array(
+		'sysop' => array( 'patroller', 'autopatrolled' ),
+	),
 	'+hiwiki' => array(
 		'sysop' => array( 'abusefilter', 'autopatrolled', 'reviewer', 'rollbacker', 'filemover' ),
 	),
@@ -14909,9 +14909,9 @@ $wgConf->settings = array(
 ),
 
 'wgRedirectSources' => array(
-    'default' => false,
-    'donatewiki' => '!^https?://donate\.wikimedia\.org/!',
-    'foundationwiki' => '!^https?://(www\.)?wikimediafoundation\.org/!',
+	'default' => false,
+	'donatewiki' => '!^https?://donate\.wikimedia\.org/!',
+	'foundationwiki' => '!^https?://(www\.)?wikimediafoundation\.org/!',
 ),
 
 'wmgHTTPSBlacklistCountries' => array(
@@ -14985,6 +14985,6 @@ $wgConf->settings = array(
 
 ### WMF Labs override #####
 if ( $wmfRealm == 'labs' ) {
-	require( "$wmfConfigDir/InitialiseSettings-labs.php" );
+	require ( "$wmfConfigDir/InitialiseSettings-labs.php" );
 	wmfLabsOverrideSettings();
 }
