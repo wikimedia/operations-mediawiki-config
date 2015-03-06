@@ -11147,6 +11147,7 @@ $wgConf->settings = array(
 		'*.bnf.fr',                         // Bibliothèque nationale de France - bug T86699
 		'www.doria.fi',                     // Doria - T87104
 		'cdm16062.contentdm.oclc.org',      // North Carolina Digital Collections - T76867
+		'mapserver.library.wur.nl',         // Wageningen University library map server - T91630
 	),
 ),
 
