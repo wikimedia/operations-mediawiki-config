@@ -13,10 +13,10 @@ $wgCirrusSearchConnectionAttempts = 3;
 
 $wgCirrusSearchBackup['backups'] = array(
 	'type' => 'swift',
-	'swift_url' => $wmfSwiftEqiadConfig['cirrusAuthUrl'],
+	'swift_url' => $wmfSwiftConfig[$wmfDatacenter]['cirrusAuthUrl'],
 	'swift_container' => 'global-data-elastic-backups',
-	'swift_username' => $wmfSwiftEqiadConfig['cirrusUser'],
-	'swift_password' => $wmfSwiftEqiadConfig['cirrusKey'],
+	'swift_username' => $wmfSwiftConfig[$wmfDatacenter]['cirrusUser'],
+	'swift_password' => $wmfSwiftConfig[$wmfDatacenter]['cirrusKey'],
 	'max_snapshot_bytes_per_sec' => '10mb',
 	'compress' => false,
 	'chunk_size' => '1g',
