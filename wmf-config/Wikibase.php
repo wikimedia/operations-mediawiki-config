@@ -78,6 +78,11 @@ if ( $wmgUseWikibaseRepo ) {
 			),
 			array( 'testwikidatawiki', 'testwiki', 'test2wiki' )
 		);
+		// Exclude closed wikis
+		$wgWBRepoSettings['clientDbList'] = array_diff(
+			$wgWBRepoSettings['clientDbList'],
+			file( getRealmSpecificFilename( "$IP/../closed.dblist" ) )
+		);
 	}
 
 	$wgWBRepoSettings['localClientDatabases'] = array_combine(
