@@ -825,7 +825,8 @@ if ( $wmgUseSecurePoll ) {
 
 // PoolCounter
 if ( $wmgUsePoolCounter ) {
-	include( getRealmSpecificFilename( "$wmfConfigDir/PoolCounterSettings.php" ) );
+	# Cluster-dependent files for poolcounter are included from the common file
+	include( "$wmfConfigDir/PoolCounterSettings-common.php" );
 }
 
 if ( $wmgUseScore ) {
@@ -843,8 +844,8 @@ $wgPasswordSender = 'wiki@wikimedia.org';
 $wgPasswordResetRoutes['email'] = true;
 
 if ( $wmgUseClusterFileBackend ) {
-	# Cluster-dependent files for file backend
-	require( getRealmSpecificFilename( "$wmfConfigDir/filebackend.php" ) );
+	# Cluster-dependent files for file backend are included from the common file
+	require( "$wmfConfigDir/filebackend-common.php" );
 }
 
 if ( $wmgUseClusterJobqueue ) {

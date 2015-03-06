@@ -7,25 +7,32 @@ mwconfig_files_txt=(
 	CommonSettings.php
 	InitialiseSettings-labs.php
 	InitialiseSettings.php
-	PoolCounterSettings-eqiad.php
+    PoolCounterSettings-codfw.php
+    PoolCounterSettings-common.php
+    PoolCounterSettings-eqiad.php
 	StartProfiler.php
 	abusefilter.php
 	CirrusSearch-common.php
 	CirrusSearch-labs.php
 	db-eqiad.php
+    db-codfw.php
 	db-labs.php
 	db-secondary.php
 	ext-labs.php
 	ext-production.php
-	filebackend-labs.php
-	filebackend.php
+    filebackend-codfw.php
+	filebackend-common.php
+    filebackend-eqiad.php
+    filebackend-labs.php
 	flaggedrevs.php
 	jobqueue-eqiad.php
+    jobqueue-codfw.php
 	LegalContactPages.php
 	liquidthreads.php
 	logging.php
 	logging-labs.php
 	mc.php
+    mc-codfw.php
 	mc-labs.php
 	missing.php
 	mobile-labs.php
