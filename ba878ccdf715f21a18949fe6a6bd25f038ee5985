@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3281f9a4",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 212,
+      "author": {
+        "id": 915
+      },
+      "writtenOn": "2015-03-06T13:58:40Z",
+      "side": 1,
+      "message": "Shall we have a tabs/spaces flame war?",
+      "revId": "ba878ccdf715f21a18949fe6a6bd25f038ee5985",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_92900df9",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 333,
+      "author": {
+        "id": 915
+      },
+      "writtenOn": "2015-03-06T13:58:40Z",
+      "side": 1,
+      "message": "Might be worth setting each section read-only for the first test run.",
+      "revId": "ba878ccdf715f21a18949fe6a6bd25f038ee5985",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
