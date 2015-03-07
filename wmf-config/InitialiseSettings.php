@@ -2835,6 +2835,7 @@ $wgConf->settings = array(
 		'بحث_كتاب' => 103,
 	),
 	'+fawikibooks' => array(
+		'ون' => NS_PROJECT,
 		'وک' => NS_PROJECT,
 		'ویکی‌نسک' => NS_PROJECT,
 		'کتاب_آشپزی' => 102,
