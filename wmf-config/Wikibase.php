@@ -81,7 +81,10 @@ if ( $wmgUseWikibaseRepo ) {
 		// Exclude closed wikis
 		$wgWBRepoSettings['clientDbList'] = array_diff(
 			$wgWBRepoSettings['clientDbList'],
-			file( getRealmSpecificFilename( "$IP/../closed.dblist" ) )
+			array_map(
+				'trim',
+				file( getRealmSpecificFilename( "$IP/../closed.dblist" ) )
+			)
 		);
 	}
 
