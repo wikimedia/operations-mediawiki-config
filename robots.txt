@@ -123,7 +123,7 @@ Disallow: /
 User-agent: WebReaper
 Disallow: /
 
-# Don't allow the wayback-maschine to index user-pages
+# Don't allow the Wayback Machine to index user-pages
 #User-agent: ia_archiver
 #Disallow: /wiki/User
 #Disallow: /wiki/Benutzer
