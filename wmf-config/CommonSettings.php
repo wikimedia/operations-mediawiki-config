@@ -1928,6 +1928,11 @@ if ( $wmgUseVectorBeta ) {
 	require_once( "$IP/extensions/VectorBeta/VectorBeta.php" );
 }
 
+if ( $wmgUseRestbaseUpdateJobs ) {
+	require_once( "$IP/extensions/RestBaseUpdateJobs/RestbaseUpdate.php" );
+	$wgRestbaseServer = "http://10.2.2.17:7231"; // restbase.svc.eqiad.wmnet
+}
+
 if ( $wmgUseParsoid ) {
 	require_once( "$IP/extensions/Parsoid/Parsoid.php" );
 

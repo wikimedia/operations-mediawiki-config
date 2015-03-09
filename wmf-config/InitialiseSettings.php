@@ -12245,6 +12245,17 @@ $wgConf->settings = array(
 	'default' => false,
 ),
 
+// -------------- RESTBase start --------------
+
+// whether to activate the extension sending page edit
+// updates to RESTBase
+'wmgUseRestbaseUpdateJobs' => array(
+	'default' => false,
+	'testwiki' => true
+),
+
+// -------------- RESTBase end --------------
+
 // -------------- Shared Parsoid start --------------
 
 'wmgUseParsoid' => array(
