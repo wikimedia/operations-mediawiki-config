@@ -188,15 +188,12 @@ if ( !$globals ) {
 		), $wikiTags );
 
 	# Save cache
-	$oldUmask = umask( 0 );
-	@mkdir( '/tmp/mw-cache-' . $wmfVersionNumber, 0777 );
+	@mkdir( '/tmp/mw-cache-' . $wmfVersionNumber );
 	$file = fopen( $filename, 'w' );
 	if ( $file ) {
 		fwrite( $file, serialize( $globals ) );
 		fclose( $file );
-		@chmod( $file, 0666 );
 	}
-	umask( $oldUmask );
 }
 
 extract( $globals );
