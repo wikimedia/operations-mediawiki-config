@@ -12242,7 +12242,7 @@ $wgConf->settings = array(
 ),
 
 'wmgImageMetricsCorsSamplingFactor' => array(
-	'default' => false,
+	'default' => 1000,
 ),
 
 // -------------- RESTBase start --------------
