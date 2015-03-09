@@ -1931,6 +1931,8 @@ if ( $wmgUseVectorBeta ) {
 if ( $wmgUseRestbaseUpdateJobs ) {
 	require_once( "$IP/extensions/RestBaseUpdateJobs/RestbaseUpdate.php" );
 	$wgRestbaseServer = "http://10.2.2.17:7231"; // restbase.svc.eqiad.wmnet
+	# Slow Restbase jobs
+	$wgJobTypesExcludedFromDefaultQueue[] = 'RestbaseUpdateJobOnDependencyChange';
 }
 
 if ( $wmgUseParsoid ) {
