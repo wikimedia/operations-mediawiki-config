@@ -12,11 +12,6 @@ if ( $wmgMobileFrontend ) {
 	$wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
 	$wgMFEnableWikiGrok = $wmgMFEnableWikiGrok; // Remove this when 1.25wmf18 is gone
 	$wgMFEnableWikiGrokForAnons = $wmgMFEnableWikiGrokForAnons; // Remove this when 1.25wmf18 is gone
-	$wgWikiGrokUIEnable = $wmgWikiGrokUIEnable;
-	$wgWikiGrokUIEnableForAnons = $wmgWikiGrokUIEnableForAnons;
-	$wgWikiGrokUIEnableOnAllDevices = $wmgWikiGrokUIEnableOnAllDevices;
-	$wgWikiGrokUIEnableInSidebar = $wmgWikiGrokUIEnableInSidebar;
-	$wgWikiGrokDebug = $wmgWikiGrokDebug;
 	$wgMFPhotoUploadWiki = $wmgMFPhotoUploadWiki;
 	$wgMFContentNamespace = $wmgMFContentNamespace;
 	$wgMFPhotoUploadAppendToDesc = $wmgMFPhotoUploadAppendToDesc;
@@ -112,6 +107,11 @@ if ( $wmgMobileFrontend ) {
 		require_once( "$IP/extensions/WikiGrok/WikiGrok.php" );
 
 		$wgWikiGrokRepoMode = $wmgWikiGrokRepoMode;
+		$wgWikiGrokUIEnable = $wmgWikiGrokUIEnable;
+		$wgWikiGrokUIEnableForAnons = $wmgWikiGrokUIEnableForAnons;
+		$wgWikiGrokUIEnableOnAllDevices = $wmgWikiGrokUIEnableOnAllDevices;
+		$wgWikiGrokUIEnableInSidebar = $wmgWikiGrokUIEnableInSidebar;
+		$wgWikiGrokDebug = $wmgWikiGrokDebug;
 
 		$wgWikiGrokSlowCampaigns = array(
 			// https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok/Claim_suggestions#Writer
