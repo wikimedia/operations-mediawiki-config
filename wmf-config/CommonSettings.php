@@ -630,11 +630,13 @@ if ( $wmgUseSpamBlacklist ) {
 include( $IP . '/extensions/TitleBlacklist/TitleBlacklist.php' );
 
 $wgTitleBlacklistSources = array(
-	array(
+	'meta' => array(
 		'type' => TBLSRC_URL,
 		'src'  => "//meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw&tb_ver=1",
 	),
 );
+
+$wgTitleBlacklistUsernameSources = array( 'meta' );
 
 if ( $wmgUseQuiz ) {
 	include( "$IP/extensions/Quiz/Quiz.php" );
