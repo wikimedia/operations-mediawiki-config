@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_eee5bf07",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2015-03-10T19:22:31Z",
+      "side": 1,
+      "message": "As far as I see also other local rules (that don\u0027t have \u003cnewaccountonly\u003e on them) wont affect user account creation after this, right?",
+      "revId": "c0a43a00c78b61b77a96db3a46df06319c36ba2d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
