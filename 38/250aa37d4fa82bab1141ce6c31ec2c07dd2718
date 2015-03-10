@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+2: Anomie <bjorsch@wikimedia.org>
+Code-Review+1: Jforrester <jforrester@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Tue, 10 Mar 2015 15:39:07 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/112590
+Project: operations/mediawiki-config
+Branch: refs/heads/master
