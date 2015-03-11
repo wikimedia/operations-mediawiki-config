@@ -94,12 +94,14 @@ $wgExtensionFunctions[] = function() {
 		}
 
 		# Finally) set up the throttle value
-		global $wgAccountCreationThrottle;
+		global $wgAccountCreationThrottle, $wgRateLimits;
 		if( isset( $options['value'] ) && is_numeric( $options['value'] ) ) {
 			$wgAccountCreationThrottle = $options['value'];
 		} else {
 			$wgAccountCreationThrottle = 50; // Provide some sane default
 		}
+		$wgRateLimits['badcaptcha']['ip'] = array( 1000, 86400 );
+		$wgRateLimits['badcaptcha']['newbie'] = array( 1000, 86400 );
 		return; # No point in proceeding to another entry
 	}
 };
