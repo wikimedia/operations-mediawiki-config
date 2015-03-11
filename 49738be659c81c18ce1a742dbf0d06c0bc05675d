@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2cbc1a1a",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-03-11T13:25:28Z",
+      "side": 1,
+      "message": "Just a fast overview: doesn\u0027t need $wgRateLimits to be set in global list? You need to use array(), right?",
+      "revId": "49738be659c81c18ce1a742dbf0d06c0bc05675d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
