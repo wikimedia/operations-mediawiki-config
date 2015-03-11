@@ -14177,6 +14177,13 @@ $wgConf->settings = array(
 		urldecode( '%E0%B0%B5%E0%B0%BF%E0%B0%95%E0%B1%80%E0%B0%AA%E0%B1%80%E0%B0%A1%E0%B0%BF%E0%B0%AF%E0%B0%BE+%E0%B0%9A%E0%B0%B0%E0%B1%8D%E0%B0%9A%3A%E0%B0%AB%E0%B1%8D%E0%B0%B2%E0%B1%8B+%E0%B0%AA%E0%B1%8D%E0%B0%B0%E0%B0%AF%E0%B1%8B%E0%B0%97%E0%B0%B6%E0%B0%BE%E0%B0%B2' ),
 	),
 ),
+// Enable editing other users posts by autoconfirmed
+'wmgFlowAllowAutoconfirmedEdit' => array(
+	'default' => false,
+	'mediawikiwiki' => true,
+	'enwiki' => true,
+	'ruwiki' => true,
+),
 // Use separate database on extension1 cluster for all non-private wikis.
 'wmgFlowDefaultWikiDb' => array(
 	'default' => 'flowdb',
