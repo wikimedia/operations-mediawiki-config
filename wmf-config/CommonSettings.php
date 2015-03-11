@@ -1930,6 +1930,25 @@ if ( $wmgUseRestbaseUpdateJobs ) {
 	$wgRestbaseServer = "http://10.2.2.17:7231"; // restbase.svc.eqiad.wmnet
 }
 
+if ( $wmgUseRestbaseVRS ) {
+	if( !isset( $wgVirtualRestConfig ) ) {
+		$wgVirtualRestConfig = array(
+			'modules' => array(),
+			'global' => array(
+				'timeout' => 360,
+				'forwardCookies' => false,
+				'HTTPProxy' => null
+			)
+		);
+	}
+	$wgVirtualRestConfig['modules']['restbase'] = array(
+		'url' => 'http://10.2.2.17:7231',  // restbase.svc.eqiad.wmnet
+		'domain' => $wgCanonicalServer,
+		'forwardCookies' => true,
+		'parsoidCompat' => false
+	);
+}
+
 if ( $wmgUseParsoid ) {
 	require_once( "$IP/extensions/Parsoid/Parsoid.php" );
 
