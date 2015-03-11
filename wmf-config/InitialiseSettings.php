@@ -6675,6 +6675,17 @@ $wgConf->settings = array(
 			'ip' => array( 8, 60 ),
 			'newbie' => array( 8, 60 ),
 		),
+		'badcaptcha' => array( // Bug T92376
+			// Mainly for account creation by unregistered spambots.
+			// A human probably gives up after a handful attempts to
+			// register, but ip/newbie editing needs to be considered too.
+			'ip' => array( 8, 60 ),
+			'newbie' => array( 8, 60 ),
+			// Mainly to catch linkspam bot edits. Account creations by users?
+			// Some wikis request tons of captchas to users under 50 edits:
+			// the limit needs to be higher than any human can conceivably do.
+			'user' => array( 20, 60 ),
+		),
 		'mailpassword' => array(
 			// 5 password reminders per hour per IP
 			'ip' => array( 5, 3600 ),
