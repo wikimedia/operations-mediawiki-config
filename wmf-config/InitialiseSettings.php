@@ -10998,6 +10998,9 @@ $wgConf->settings = array(
 	'default' => array(
 		'default' => 0.05,
 	),
+	'commonswiki' => array( // T87431
+		'default' => 0.30,
+	),
 ),
 'wmgAbuseFilterEmergencyDisableCount' => array(
 	'default' => array(
