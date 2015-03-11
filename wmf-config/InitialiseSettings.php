@@ -12236,6 +12236,13 @@ $wgConf->settings = array(
 	'testwiki' => true
 ),
 
+// whether to configure RESTBase as a Virtual REST Service
+// in MW Core
+'wmgUseRestbaseVRS' => array(
+	'default' => false,
+	'testwiki' => true
+),
+
 // -------------- RESTBase end --------------
 
 // -------------- Shared Parsoid start --------------
