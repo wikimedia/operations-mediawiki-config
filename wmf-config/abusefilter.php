@@ -59,7 +59,7 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterNotifications = false;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
-		$wgGroupPermissions['interface_editor']['abusefilter-modify'] = true;
+		$wgGroupPermissions['interface-editor']['abusefilter-modify'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
