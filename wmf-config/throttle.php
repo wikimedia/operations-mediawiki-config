@@ -100,6 +100,8 @@ $wgExtensionFunctions[] = function() {
 		} else {
 			$wgAccountCreationThrottle = 50; // Provide some sane default
 		}
+		$wgRateLimits['badcaptcha']['ip'] = ( 1000, 86400);
+		$wgRateLimits['badcaptcha']['newbie'] = ( 1000, 86400);
 		return; # No point in proceeding to another entry
 	}
 };
