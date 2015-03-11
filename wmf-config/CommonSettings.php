@@ -2506,6 +2506,10 @@ if ( $wmgUseFlow ) {
 	$wgFlowMaintenanceMode = $wmgFlowMaintenanceMode;
 
 	$wgFlowEventLogging = true;
+
+	if ( $wmgFlowAllowAutoconfirmedEdit ) {
+		$wgGroupPermissions['autoconfirmed']['flow-edit-post'] = true;
+	}
 }
 
 if ( $wmgUseDisambiguator ) {
