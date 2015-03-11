@@ -7827,6 +7827,9 @@ $wgConf->settings = array(
 		'autoconfirmed' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true, 'autopatrol' => true ),
 	),
+	'+swwiki' => array(
+		'*' => array( 'createpage' => false ), // T44894 FIXME recheck for need around September 15 2015
+	),
 	'+svwikisource' => array( // Bug 28614 & 36895
 		'autopatrolled' => array( 'autopatrol' => true, 'suppressredirect' => true, 'upload' => true, 'reupload' => true ),
 	),
