@@ -12236,14 +12236,18 @@ $wgConf->settings = array(
 // updates to RESTBase
 'wmgUseRestbaseUpdateJobs' => array(
 	'default' => false,
-	'testwiki' => true
+	'testwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true
 ),
 
 // whether to configure RESTBase as a Virtual REST Service
 // in MW Core
 'wmgUseRestbaseVRS' => array(
 	'default' => false,
-	'testwiki' => true
+	'testwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true
 ),
 
 // -------------- RESTBase end --------------
