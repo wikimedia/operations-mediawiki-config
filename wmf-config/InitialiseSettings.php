@@ -14063,6 +14063,7 @@ $wgConf->settings = array(
 	'officewiki' => true, // https://www.loomio.org/d/rTbveB9O/dogfood-flow-on-officewiki
 	'ptwiki' => true, // T73757
 	'cawiki' => true,
+	'tewiki' => true, //T92544
 ),
 'wmgFlowEditorList' => array(
 	// Disable VE inside flow, leaving only the wikitext editor
@@ -14157,6 +14158,10 @@ $wgConf->settings = array(
 		'Viquipèdia Discussió:Flow/proves',
 		'Viquipèdia:La taverna/Tecnicismes',
 		'Viquipèdia Discussió:La taverna/Tecnicismes',
+	),
+	'tewiki' => array(
+		'వికీపీడియా_చర్చ:ఫ్లో',
+		'వికీపీడియా_చర్చ:ఫ్లో_ప్రయోగశాల',
 	),
 ),
 // Use separate database on extension1 cluster for all non-private wikis.
