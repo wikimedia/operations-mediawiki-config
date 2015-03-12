@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_7f2ce88f",
+        "filename": "wmf-config/session.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 657
+      },
+      "writtenOn": "2015-03-12T18:16:29Z",
+      "side": 1,
+      "message": "whoa, whitespace!",
+      "revId": "6537c570290d3eb969b3eb2efdffc7787ccba927",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
