@@ -12236,13 +12236,7 @@ $wgConf->settings = array(
 // updates to RESTBase
 'wmgUseRestbaseUpdateJobs' => array(
 	'default' => true,
-	'enwiki' => false,
-	'dewiki' => false,
-	'frwiki' => false,
-	'ruwiki' => false,
-	'eswiki' => false,
-	'jawiki' => false,
-	'itwiki' => false
+	'enwiki' => false
 ),
 
 // whether to configure RESTBase as a Virtual REST Service
