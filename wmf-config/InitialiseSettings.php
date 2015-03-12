@@ -14983,6 +14983,11 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+// Virtual media views endpoint used by Media Viewer
+'wgMediaViewerRecordVirtualViewBeaconURI' => array(
+	'default' => '//bits.wikimedia.org/beacon/media',
+),
+
 );
 
 
