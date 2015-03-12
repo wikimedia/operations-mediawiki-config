@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+1: Gilles <gdubuc@wikimedia.org>
+Code-Review+2: Giuseppe Lavagetto <glavagetto@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Thu, 12 Mar 2015 10:28:41 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/196186
+Project: operations/mediawiki-config
+Branch: refs/heads/master
