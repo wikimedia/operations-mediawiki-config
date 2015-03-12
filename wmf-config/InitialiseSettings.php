@@ -12235,14 +12235,10 @@ $wgConf->settings = array(
 // whether to activate the extension sending page edit
 // updates to RESTBase
 'wmgUseRestbaseUpdateJobs' => array(
-	'default' => true,
-	'enwiki' => false,
-	'dewiki' => false,
-	'frwiki' => false,
-	'ruwiki' => false,
-	'eswiki' => false,
-	'jawiki' => false,
-	'itwiki' => false
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true
 ),
 
 // whether to configure RESTBase as a Virtual REST Service
