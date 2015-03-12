@@ -435,9 +435,13 @@ if ( $wmgPrivateWikiUploads ) {
 
 # Hack for rsvg broken by security patch
 $wgSVGConverters['rsvg-broken'] = '$path/rsvg-convert -w $width -h $height -o $output < $input';
-# This converter will only work when rsvg has a suitable security patch
-$wgSVGConverters['rsvg-secure'] = '$path/rsvg-convert --no-external-files -w $width -h $height -o $output $input';
-
+if ( defined( 'HHVM_VERSION' ) ) {
+	# Newer librsvg supports a sane security model by default and doesn't need our security patch
+	$wgSVGConverters['rsvg-secure'] = '$path/rsvg-convert -w $width -h $height -o $output $input';
+} else {
+	# This converter will only work when rsvg has a suitable security patch
+	$wgSVGConverters['rsvg-secure'] = '$path/rsvg-convert --no-external-files -w $width -h $height -o $output $input';
+}
 #######################################################################
 # Squid Configuration
 #######################################################################
