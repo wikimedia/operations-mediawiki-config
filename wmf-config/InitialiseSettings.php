@@ -4166,7 +4166,6 @@ $wgConf->settings = array(
 		'SimpleAntiSpam' => "udp://$wmfUdp2logDest/spam",
 		'Bug40009' => "udp://$wmfUdp2logDest/Bug40009",
 		'SpamBlacklistHit' => "udp://$wmfUdp2logDest/spam",
-		'SpamRegex' => "udp://$wmfUdp2logDest/spam",
 		'StashEdit' => "udp://$wmfUdp2logDest/stashedit",
 		'OutputBuffer' => "udp://$wmfUdp2logDest/buffer",
 		'exec' => "udp://$wmfUdp2logDest/exec",
@@ -9882,26 +9881,6 @@ $wgConf->settings = array(
 	'default' => true,
 	'enwiki' => false,
 ),
-
-'wgSpamRegex' => array(
-	'default' => array(
-		'/overflow\s*:\s*auto\s*;\s*height\s*:|<div[^>]*font-size[^>]*font-color:\s*transparent[^>]*>/i',
-		'/avril\.on\.nimp\.org/i', // http://en.wikipedia.org/wiki/Special:Contributions/Hochitup
-		'/\.on\.nimp\.org/i', // per MrZ-man 2008-11-02 -- brion
-		// bug 15063, these won't last:
-		'/<TR>(<TD BGCOLOR=["\']?#......["\']?>(\.|We|are|Anonymous|)+<\/TD>){20,}<\/TR>/i',
-		'/<table>.+?(<td bgcolor.+?){400,}.+?<\/table>/i',
-		// Weird thingy http://en.wikipedia.org/w/index.php?title=Hellboy:_Sword_of_Storms&oldid=245477898&diff=prev
-		'/<span onmouseover="_tipon/',
-		// Reported on id.wikipedia.org 2008-12-17 Tim
-		'/FIELD_MESSAGE_/',
-		// Plaintext link spam, bug 16597
-		'/[wｗ]{3}[\.．][aＡａ][nｎ][oｏ]ｎ[tＴ][aａ][lｌ][kｋ][\.．][cｃ][oｏ][mｍ]/ui',
-	),
-	# Multiple requests on IRC -- TS 2006-07-11
-	'commonswiki' => '/overflow\s*:\s*auto\s*;\s*height\s*:|kryptonazi|freizeit-diktator/i',
-),
-
 
 # DJVU @{
 'wgDjvuDump' => array(
