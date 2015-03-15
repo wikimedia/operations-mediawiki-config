@@ -14945,9 +14945,6 @@ $wgConf->settings = array(
 	'+incubatorwiki' => array(
 		'xml'
 	),
-	'+outreachwiki' => array(
-		'sla',
-	),
 ),
 
 'wgRedirectSources' => array(
