@@ -1795,6 +1795,8 @@ if ( $wmgUseMultimediaViewer ) {
 
 if ( $wmgUsePopups ) {
 	require_once( "$IP/extensions/Popups/Popups.php" );
+
+	$wgPopupsMode = $wmgPopupsMode;
 }
 
 if ( $wmgUseVectorBeta ) {
