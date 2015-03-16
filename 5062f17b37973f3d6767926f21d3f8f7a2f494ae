@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d1d15efd",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12295,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-03-16T06:12:41Z",
+      "side": 1,
+      "message": "Also add it here (copy the line for hewiki for ease) for consistency with other wikis\u0027 configuration.",
+      "revId": "5062f17b37973f3d6767926f21d3f8f7a2f494ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
