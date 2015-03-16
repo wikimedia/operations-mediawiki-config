@@ -1970,7 +1970,9 @@ if ( $wmgUseImageMetrics ) {
 if ( $wmgUsePopups || ( $wmgPopupsBetaFeature && $wmgUseBetaFeatures ) ) {
 	require_once( "$IP/extensions/Popups/Popups.php" );
 	$wgPopupsSurveyLink = 'https://wikimedia.qualtrics.com/SE/?SID=SV_d1irF0VbOxZREvr';
-	$wgPopupsBetaFeature = $wmgPopupsBetaFeature;
+
+	// Make sure we don't enable as a beta feature if we are set to be enabled by default.
+	$wgPopupsBetaFeature = $wmgPopupsBetaFeature && !$wmgUsePopups;
 }
 
 if ( $wmgUseVectorBeta ) {
