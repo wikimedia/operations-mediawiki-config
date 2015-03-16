@@ -4698,6 +4698,8 @@ $wgConf->settings = array(
 		101 => '포털토론', # T87528
 		102 => '위키프로젝트', # 27651
 		103 => '위키프로젝트토론', # 27651
+		118 => '초안', # T92798
+		119 => '초안토론', # T92798
 	),
 	'kuwiki' => array(
 		100 => 'Portal',
@@ -9809,6 +9811,10 @@ $wgConf->settings = array(
 		118 => 'noindex,nofollow', // Draft - T86329
 		119 => 'noindex,nofollow',
 	),
+	'kowiki' => array(
+		118 => 'noindex,nofollow', //Draft - T92798
+		119 => 'noindex,nofollow', //T92798
+	),
 	'ruwiki' => array(
 		102 => 'noindex,follow',
 		103 => 'noindex,follow',
@@ -10026,6 +10032,7 @@ $wgConf->settings = array(
 	'default' => array(),
 	'enwiki' => array( 118, 119 ), // draft and draft talk
 	'hewiki' => array( 118, 119 ), // draft and draft talk - T86329
+	'kowiki' => array( 118, 119 ), // draft and draft talk - T92798
 ),
 
 'wgRevisionCacheExpiry' => array(
@@ -12281,22 +12288,23 @@ $wgConf->settings = array(
 'wmgVisualEditorNamespaces' => array(
 	'default' => array( NS_USER, NS_FILE, NS_HELP, NS_CATEGORY ),
 	// Test wikis
-	'+mediawikiwiki' => array( NS_PROJECT, 100 /* Manual */, 102 /* Extension */, 104 /* API */, 106 /* Skin */ ), // Bug 48430
+	'+mediawikiwiki' => array( NS_PROJECT, 100 /* Manual */, 102 /* Extension */, 104 /* API */, 106 /* Skin */ ), // T50430
 	// Special wikis
-	'+commonswiki' => array( 100 /* Creator */, 106 /* Institution */ ), // Bug 65067
+	'+commonswiki' => array( 100 /* Creator */, 106 /* Institution */ ), // T67067
 	'+metawiki' => array( 200 /* Grants */, 202 /* Research */, 204 /* Participation */, 206, 208 /* Programs */ ),
 	'+wikidata' => array( NS_PROJECT ),
 	// Wikipedias
 	'+cawiki' => array( NS_PROJECT, 100 /* Portal */, 102 /* Viquiprojecte */ ), // T58000 & T88896
-	'+enwiki' => array( 100 /* Portal */, 108 /* Book */, 118 /* Draft */ ), // Bug 56001
+	'+enwiki' => array( 100 /* Portal */, 108 /* Book */, 118 /* Draft */ ), // T58001
 	'+hewiki' => array( 118 /* Draft */ ), // T87027
+	'+kowiki' => array( 118 /* Draft */ ), // T92798
 	'+ruwiki' => array( 102 /* Draft / Incubator */ ), // T86688
 	// Wiktionaries
-	'svwiktionary' => array( NS_USER ), // Bug 57356
+	'svwiktionary' => array( NS_USER ), // T59356
 	// Wikiversities
-	'+frwikiversity' => array( 104 ), // Bug 61874
+	'+frwikiversity' => array( 104 ), // T63874
 	// Wikimedia wikis
-	'+sewikimedia' => array( 100 /* Projekt */ ), // bug 60882
+	'+sewikimedia' => array( 100 /* Projekt */ ), // T62882
 	// Private wikis
 	'+officewiki' => array( 100 /* Report */ ),
 ),
@@ -12327,7 +12335,7 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 ),
 
-// Bug 50000 - Disable for logged-out users if wmgVisualEditorDefault is true
+// T52000 - Disable for logged-out users if wmgVisualEditorDefault is true
 // This is a temporary variable for roll-out, to be removed once complete.
 // If a wiki was previously enabled by default for all users but then disabled,
 // this will need to be set true for 30 days (anon cache epoch).
@@ -12344,8 +12352,8 @@ $wgConf->settings = array(
 'wmgVisualEditorSecondaryTabs' => array(
 	'default' => false,
 	'enwiki' => true,
-	'eswiki' => true, // bug 60188
-	'hewiki' => true, // bug 52552
+	'eswiki' => true, // T62188
+	'hewiki' => true, // T54552
 ),
 
 // Should VisualEditor's tab and section link have a "beta" superscript note?
