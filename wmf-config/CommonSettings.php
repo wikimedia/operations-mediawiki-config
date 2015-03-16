@@ -2054,7 +2054,7 @@ $wgTemplateDataUseGUI = true;
 
 if ( $wmgUseCitoid ) {
 	require_once "$IP/extensions/Citoid/Citoid.php";
-	$wgCitoidServiceUrl = 'http://citoid.wikimedia.org/api';
+	$wgCitoidServiceUrl = '//citoid.wikimedia.org/api';
 }
 
 if ( $wmgUseGoogleNewsSitemap ) {
