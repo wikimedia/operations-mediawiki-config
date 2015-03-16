@@ -12370,14 +12370,11 @@ $wgConf->settings = array(
 	'default' => false,
 ),
 
-// --------------- VisualEditor end ---------------
-
 'wmgUseCitoid' => array(
-	'default' => false,
-	'mediawikiwiki' => true,
-	'testwiki' => true,
-	'test2wiki' => true,
+	'visualeditor' => true,
 ),
+
+// --------------- VisualEditor end ---------------
 
 'wmgUseRSSExtension' => array(
 	'default' => false,
