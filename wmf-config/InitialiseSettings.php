@@ -10693,6 +10693,14 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
+'wmgPopupsMode' => array(
+	'default' => 'betafeature',
+	// T88164
+	'cawiki' => 'enabled',
+	'elwiki' => 'enabled',
+	'zhwiki' => 'enabled',
+),
+
 'wmgUseVectorBeta' => array(
 	'default' => true,
 	'loginwiki' => false,
