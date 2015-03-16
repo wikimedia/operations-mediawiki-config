@@ -4698,6 +4698,8 @@ $wgConf->settings = array(
 		101 => '포털토론', # T87528
 		102 => '위키프로젝트', # 27651
 		103 => '위키프로젝트토론', # 27651
+		118 => '초안', # T92798
+		119 => '초안토론', # T92798
 	),
 	'kuwiki' => array(
 		100 => 'Portal',
@@ -9809,6 +9811,10 @@ $wgConf->settings = array(
 		118 => 'noindex,nofollow', // Draft - T86329
 		119 => 'noindex,nofollow',
 	),
+	'kowiki' => array(
+		118 => 'noindex,nofollow', //Draft - T92798
+		119 => 'noindex,nofollow', //T92798
+	),
 	'ruwiki' => array(
 		102 => 'noindex,follow',
 		103 => 'noindex,follow',
@@ -10026,6 +10032,7 @@ $wgConf->settings = array(
 	'default' => array(),
 	'enwiki' => array( 118, 119 ), // draft and draft talk
 	'hewiki' => array( 118, 119 ), // draft and draft talk - T86329
+	'kowiki' => array( 118, 119 ), // draft and draft talk - T92798
 ),
 
 'wgRevisionCacheExpiry' => array(
