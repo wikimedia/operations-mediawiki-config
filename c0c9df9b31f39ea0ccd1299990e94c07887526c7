@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_40ac92eb",
+        "filename": "wmf-config/PoolCounterSettings-codfw.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2015-03-16T17:45:59Z",
+      "side": 1,
+      "message": "These should be DC-local.",
+      "revId": "c0c9df9b31f39ea0ccd1299990e94c07887526c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_20a956dc",
+        "filename": "wmf-config/PoolCounterSettings-codfw.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2015-03-16T17:45:59Z",
+      "side": 1,
+      "message": "This part doesn\u0027t actually need to vary by DC AFAIK.",
+      "revId": "c0c9df9b31f39ea0ccd1299990e94c07887526c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c0b74234",
+        "filename": "wmf-config/filebackend-codfw.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2015-03-16T17:45:59Z",
+      "side": 1,
+      "message": "The file repo config does not seem to vary by DC afaik (the filebackend ones might eventually if they use local proxies either for global clusters or an in-house replicated local swift cluster).\n\nAs long as \"local/shared-multiwrite\" is still used, those backends could just refer to local-swift-eqiad or local-codfw-eqiad in $wgFileBackends.",
+      "revId": "c0c9df9b31f39ea0ccd1299990e94c07887526c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_00dc5a76",
+        "filename": "wmf-config/jobqueue-codfw.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2015-03-16T17:45:59Z",
+      "side": 1,
+      "message": "This is fine being the eqiad config except I need to override the \u0027enqueue\u0027 type to be DC-local (with runners set up as needed).",
+      "revId": "c0c9df9b31f39ea0ccd1299990e94c07887526c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c0e50234",
+        "filename": "wmf-config/mc-codfw.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2015-03-16T17:45:59Z",
+      "side": 1,
+      "message": "file seems OK",
+      "revId": "c0c9df9b31f39ea0ccd1299990e94c07887526c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
