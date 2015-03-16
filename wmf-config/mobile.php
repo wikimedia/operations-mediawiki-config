@@ -221,6 +221,26 @@ if ( $wmgMobileFrontend ) {
 					'Q193391' /* diplomat */
 				),
 			),
+
+			// https://trello.com/c/uAHDkMOq
+			'writer' => array(
+				'type' => 'Simple',
+				'property' => 'P106'/* occupation */,
+				'ifAll' => array(
+					'P31'/* instance of */ => 'Q5'/* human */,
+					'P106'/* occupation */ => 'Q36180'/* writer */,
+				),
+				'suggestions' => array(
+					'Q482980' /* author */,
+					'Q1930187' /* journalist */,
+					'Q49757' /* poet */,
+					'Q28389' /* screenwriter */,
+					'Q3745071' /* science writer */,
+					'Q6625963' /* novelist */,
+					'Q864380' /* biographer */,
+					'Q753110' /* songwriter */
+				),
+			)
 		);
 	}
 
