@@ -11599,6 +11599,14 @@ $wgConf->settings = array(
 	'nonbetafeatures' => false,
 ),
 
+'wmgPopupsMode' => array(
+	'default' => 'betafeature',
+	// T88164
+	'cawiki' => 'enabled',
+	'elwiki' => 'enabled',
+	'zhwiki' => 'enabled',
+),
+
 'wmgUseVectorBeta' => array(
 	'default' => true,
 	'nonbetafeatures' => false,
