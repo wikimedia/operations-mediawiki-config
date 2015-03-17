@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_feb21a47",
+        "filename": "wmf-config/PoolCounterSettings-codfw.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2015-03-17T14:45:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_40ac92eb",
+      "revId": "c0c9df9b31f39ea0ccd1299990e94c07887526c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_20a956dc",
         "filename": "wmf-config/PoolCounterSettings-codfw.php",
         "patchSetId": 10
@@ -30,6 +48,41 @@
       "writtenOn": "2015-03-16T17:45:59Z",
       "side": 1,
       "message": "This part doesn\u0027t actually need to vary by DC AFAIK.",
+      "revId": "c0c9df9b31f39ea0ccd1299990e94c07887526c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_5eac6eeb",
+        "filename": "wmf-config/PoolCounterSettings-codfw.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2015-03-17T14:45:06Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_20a956dc",
+      "revId": "c0c9df9b31f39ea0ccd1299990e94c07887526c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1ec3568e",
+        "filename": "wmf-config/filebackend-codfw.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2015-03-17T14:45:06Z",
+      "side": 1,
+      "message": "On second thoughts: shouldn\u0027t we have a global lock here? Meaning it should be multi-dc?",
       "revId": "c0c9df9b31f39ea0ccd1299990e94c07887526c7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +106,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_fec77a98",
+        "filename": "wmf-config/filebackend-codfw.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2015-03-17T14:45:06Z",
+      "side": 1,
+      "message": "Ideally, i would like to write to eqiad and read from codfw as far as swift is concerned. how can we do that? Also, ideally we write originals to eqiad and thumbs locally. How can we do that? If not possible, I\u0027ll leave it like this.",
+      "parentUuid": "6e7c4fa4_c0b74234",
+      "revId": "c0c9df9b31f39ea0ccd1299990e94c07887526c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_00dc5a76",
         "filename": "wmf-config/jobqueue-codfw.php",
         "patchSetId": 10
@@ -64,6 +135,24 @@
       "writtenOn": "2015-03-16T17:45:59Z",
       "side": 1,
       "message": "This is fine being the eqiad config except I need to override the \u0027enqueue\u0027 type to be DC-local (with runners set up as needed).",
+      "revId": "c0c9df9b31f39ea0ccd1299990e94c07887526c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3e22d250",
+        "filename": "wmf-config/jobqueue-codfw.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2015-03-17T14:45:06Z",
+      "side": 1,
+      "message": "With the setup I created, I would expect the jobrunners in codfw to stay idle, right?\n\nI don\u0027t know the details of the config right now, but is this GTG for now?",
+      "parentUuid": "6e7c4fa4_00dc5a76",
       "revId": "c0c9df9b31f39ea0ccd1299990e94c07887526c7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
