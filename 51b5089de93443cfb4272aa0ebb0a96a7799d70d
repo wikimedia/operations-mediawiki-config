@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ea76cfd2",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-03-17T19:42:46Z",
+      "side": 1,
+      "message": "Keys in $wmfHostnames should be safe for use. This key is now unsafe when accessed from labs (creating fragile code paths). Either hardcode the test.wikidata.org value below or add some entry in the \u0027labs\u0027 case as well (e.g. pointing to \u0027wikidata.beta.wmflabs.org\u0027)",
+      "revId": "51b5089de93443cfb4272aa0ebb0a96a7799d70d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
