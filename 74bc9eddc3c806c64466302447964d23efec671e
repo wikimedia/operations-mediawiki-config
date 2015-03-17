@@ -16,6 +16,24 @@
       "revId": "74bc9eddc3c806c64466302447964d23efec671e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_817b86ea",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 2057,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-03-17T15:26:13Z",
+      "side": 1,
+      "message": "Yes, it was fixed in a follow-up.",
+      "parentUuid": "6e7c4fa4_c1f41e86",
+      "revId": "74bc9eddc3c806c64466302447964d23efec671e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
