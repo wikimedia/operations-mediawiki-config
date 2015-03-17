@@ -10524,7 +10524,7 @@ $wgConf->settings = array(
 	'wikinews' => '//bits.wikimedia.org/apple-touch/wikinews.png',
 	'wiki' => '//bits.wikimedia.org/apple-touch/wikipedia.png',
 	'wiktionary' => '//bits.wikimedia.org/apple-touch/wiktionary.png',
-	'wikidatawiki' => '//bits.wikimedia.org/apple-touch/wikidata.png', // bug 70996
+	'wikidata' => '//bits.wikimedia.org/apple-touch/wikidata.png', // bug 70996
 	'enwiktionary' => '//bits.wikimedia.org/apple-touch/wiktionary/en.png', // bug 46431
 	'labswiki' => '/Wikitech-apple-touch-icon.png',
 ),
