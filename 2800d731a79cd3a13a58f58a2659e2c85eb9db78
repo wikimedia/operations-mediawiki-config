@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_a757b228",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10354,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-03-17T18:22:51Z",
+      "side": 1,
+      "message": "Why? They will fall back on wmf.ico, which is the intended effect cause they are not wikipedias.",
+      "parentUuid": "6e7c4fa4_47d81e58",
+      "revId": "2800d731a79cd3a13a58f58a2659e2c85eb9db78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_07ad4680",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-03-17T18:05:34Z",
       "side": 1,
       "message": "same as above",
+      "revId": "2800d731a79cd3a13a58f58a2659e2c85eb9db78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_4736de01",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10519,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2015-03-17T18:22:51Z",
+      "side": 1,
+      "message": "Same as above.",
+      "parentUuid": "6e7c4fa4_07ad4680",
       "revId": "2800d731a79cd3a13a58f58a2659e2c85eb9db78",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
