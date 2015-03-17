@@ -192,6 +192,19 @@ if ( $wmgMobileFrontend ) {
 					'Q3282637'/* film producer */
 				),
 			),
+
+			// https://trello.com/c/9i0wUVdZ
+			'filmProducer' => array(
+				'type' => 'Simple',
+				'property' => 'P106' /* occupation */,
+				'ifAll' => array(
+					'P31' /* instance of */ => 'Q5' /* human */,
+					'P106' /* occupation */ => 'Q3282637' /* film producer */,
+				),
+				'suggestions' => array(
+					'Q2526255' /* film director */,
+				),
+			),
 		);
 	}
 
