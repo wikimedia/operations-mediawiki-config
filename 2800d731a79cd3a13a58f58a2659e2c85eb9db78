@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_47d81e58",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10354,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-03-17T18:05:34Z",
+      "side": 1,
+      "message": "need to add test2wiki, arbcom_dewiki, arbcom_enwiki, arbcom_fiwiki, arbcom_nlwiki, wg_enwiki (i.e., the special wikipedias which aren\u0027t part of \u0027wikipedia\u0027).",
+      "revId": "2800d731a79cd3a13a58f58a2659e2c85eb9db78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_07ad4680",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10519,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-03-17T18:05:34Z",
+      "side": 1,
+      "message": "same as above",
+      "revId": "2800d731a79cd3a13a58f58a2659e2c85eb9db78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
