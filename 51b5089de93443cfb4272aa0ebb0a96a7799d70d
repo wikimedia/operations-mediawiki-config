@@ -16,6 +16,24 @@
       "revId": "51b5089de93443cfb4272aa0ebb0a96a7799d70d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ea5d6f4c",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2015-03-17T19:46:13Z",
+      "side": 1,
+      "message": "concerned about this also.  hardcoding sounds best.",
+      "parentUuid": "6e7c4fa4_ea76cfd2",
+      "revId": "51b5089de93443cfb4272aa0ebb0a96a7799d70d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
