@@ -107,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_01e21600",
+        "filename": "wmf-config/filebackend.php",
+        "patchSetId": 12
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2015-03-17T15:23:38Z",
+      "side": 1,
+      "message": "Yeah, it\u0027ll /work/, but it seems wrong to have realm-specific code here and not in an -eqiad. Really shouldn\u0027t this file just be renamed to -eqiad now?",
+      "parentUuid": "6e7c4fa4_013e9687",
+      "revId": "05f7ca4233abd1a66febea91489d2cea460e9a85",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_813066e6",
         "filename": "wmf-config/mc-codfw.php",
         "patchSetId": 12
