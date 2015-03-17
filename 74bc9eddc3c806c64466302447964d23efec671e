@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_c1f41e86",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 2057,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-03-17T15:22:05Z",
+      "side": 1,
+      "message": "shouldn\u0027t this be protocol-relative?",
+      "revId": "74bc9eddc3c806c64466302447964d23efec671e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
