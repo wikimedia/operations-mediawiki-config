@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3ee172fb",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 834
+      },
+      "writtenOn": "2015-03-17T09:31:04Z",
+      "side": 1,
+      "message": "\"English, Russian\" is misleading. Please use \"English and Russian Wikipedias\" or \"enwiki, ruwiki\".",
+      "revId": "79c7ddca123dc72b7b7f8e4c5b7f5047d2baf7eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
