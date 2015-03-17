@@ -12252,7 +12252,6 @@ $wgConf->settings = array(
 // in MW Core
 'wmgUseRestbaseVRS' => array(
 	'default' => false,
-	'wikipedia' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
