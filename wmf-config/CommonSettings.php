@@ -559,7 +559,7 @@ if ( $wmgUseCite ) {
 }
 
 if ( $wmgUseCiteThisPage ) {
-	require( $IP . '/extensions/CiteThisPage/CiteThisPage.php' );
+	ExtensionRegistry::getInstance()->queue( "$IP/extensions/CiteThisPage/extension.json" );
 }
 
 if ( $wmgUseInputBox ) {
@@ -1601,7 +1601,7 @@ if ( $wmgUseNewUserMessage ) {
 }
 
 if ( $wmgUseCodeReview ) {
-	include "$IP/extensions/CodeReview/CodeReview.php";
+	ExtensionRegistry::getInstance()->queue( "$IP/extensions/CodeReview/extension.json" );
 
 	$wgGroupPermissions['user']['codereview-add-tag'] = false;
 	$wgGroupPermissions['user']['codereview-remove-tag'] = false;
@@ -2567,7 +2567,7 @@ if ( $wmgUseGeoCrumbs || $wmgUseInsider || $wmgUseRelatedArticles || $wmgUseRela
 }
 
 if ( $wmgUseCalendar ) {
-	require_once( "$IP/extensions/Calendar/Calendar.php" );
+	ExtensionRegistry::getInstance()->queue( "$IP/extensions/Calendar/extension.json" );
 }
 
 if ( $wmgUseMapSources ) {
