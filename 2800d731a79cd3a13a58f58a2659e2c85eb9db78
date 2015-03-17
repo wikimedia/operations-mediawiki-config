@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_8abddb18",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10354,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-03-17T18:42:01Z",
+      "side": 1,
+      "message": "Test wikis - IMO, these *should* be moved to wikimedia.org, but until then should keep their WP logos etc.\n\nFor the others - these were all subdomains of their respective wikipedias, and only aren\u0027t now because of the SSL cert issues. They are wikipedia-specific and should keep their wikipedia logos.",
+      "parentUuid": "6e7c4fa4_a757b228",
+      "revId": "2800d731a79cd3a13a58f58a2659e2c85eb9db78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_07ad4680",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
