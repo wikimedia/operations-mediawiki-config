@@ -1,0 +1,16 @@
+<?php
+
+# change all of these, and then keep them secret
+$wgDBuser           = 'wikiadmin';
+$wgDBpassword       = 'blaaaaahblaaaaaahballll';
+
+$wmgCaptchaSecret = 'boomboompow';
+
+$wmgRedisPassword = 'isitjustlove';
+
+$wmgZeroPortalApiUserName = 'zscript';
+$wmgZeroPortalApiPassword = 'zscript1';
+
+$wmgVERPsecret = 'tuttut';
+
+$wmgLogstashPassword = 'neenenee';
