@@ -856,7 +856,8 @@ if ( $wmgUseSecurePoll ) {
 
 // PoolCounter
 if ( $wmgUsePoolCounter ) {
-	include( getRealmSpecificFilename( "$wmfConfigDir/PoolCounterSettings.php" ) );
+	# Cluster-dependent files for poolcounter are included from the common file
+	include( "$wmfConfigDir/PoolCounterSettings-common.php" );
 }
 
 if ( $wmgUseScore ) {
