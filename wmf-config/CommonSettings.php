@@ -572,6 +572,34 @@ if ( $wmgUseImageMap ) {
 
 if ( $wmgUseGeSHi ) {
 	include( $IP . '/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php' );
+
+	// GeSHi supports 215 languages. The top 20 languages account for more than
+	// 80% of usage. The bottom 75 are not used at all. Since each supported
+	// language gets an entry in ResourceLoader's start-up module, it makes
+	// sense to be economical and drop support for those languages. (T93025)
+	$wgGeSHiSupportedLanguages = array(
+		"c", "cpp", "bash", "html4strict", "text", "java", "latex",
+		"javascript", "python", "xml", "csharp", "php", "css", "asm", "sql",
+		"pascal", "matlab", "html5", "haskell", "vb", "lisp", "ruby", "ada",
+		"oracle11", "dos", "rsplus", "fortran", "d", "bnf", "ocaml", "pcre",
+		"perl", "vhdl", "actionscript", "lua", "bibtex", "go", "bf", "cobol",
+		"ini", "delphi", "arm", "scheme", "objc", "prolog", "actionscript3",
+		"mysql", "qbasic", "asp", "algol68", "groovy", "erlang", "abap",
+		"email", "powershell", "ecmascript", "glsl", "sas", "apache", "yaml",
+		"java5", "vbnet", "reg", "cfm", "fsharp", "scala", "applescript",
+		"gwbasic", "clojure", "pli", "robots", "tsql", "whois", "freebasic",
+		"verilog", "llvm", "visualfoxpro", "sparql", "tcl", "plsql",
+		"coffeescript", "scilab", "dot", "autoit", "boo", "mirc", "lolcode",
+		"gnuplot", "eiffel", "j", "teraterm", "oorexx", "diff", "smalltalk",
+		"cmake", "avisynth", "perl6", "xpp", "typoscript", "basic4gl", "make",
+		"awk", "e", "gml", "jquery", "zxbasic", "systemverilog", "6502acme",
+		"properties", "oracle8", "q", "purebasic", "pic16", "ldif", "rexx",
+		"unicon", "urbi", "modula3", "mpasm", "locobasic", "progress",
+		"visualprolog", "vala", "octave", "winbatch", "oz", "autohotkey",
+		"cadlisp", "euphoria", "pycon", "oobas", "povray", "thinbasic",
+		"68000devpac", "mmix", "modula2", "cil", "mxml", "io", "blitzbasic",
+		"parigp", "oberon2",
+	);
 }
 
 if ( $wmgUseDoubleWiki ) {
