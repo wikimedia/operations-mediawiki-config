@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_b41cb519",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1110,
+      "author": {
+        "id": 640
+      },
+      "writtenOn": "2015-03-18T17:33:53Z",
+      "side": 1,
+      "message": "This assigns instead of comparing.\n\nI\u0027d prefer this, as this might grow by wikis that can not be selected by language:\n\nif ( in_array( $wgDBname, array( \u0027ruwiki\u0027, \u0027ruwikibooks\u0027, \u0027ruwikimedia\u0027, \u0027ruwikinews\u0027, \u0027ruwikiquote\u0027, \u0027ruwikisource\u0027, \u0027ruwikiversity\u0027, \u0027ruwikivoyage\u0027, \u0027ruwiktionary\u0027 ) ) ) {",
+      "revId": "062734574b10cdee4580640800ab64d4911e8f26",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
