@@ -362,6 +362,14 @@ return array(
 		'default' => 1,
 	),
 
+	'wmgUseRestbaseUpdateJobs' => array(
+		'default' => false,
+	),
+
+	'wmgUseRestbaseVRS' => array(
+		'default' => false,
+	),
+
 	'wmgUseVectorBeta' => array(
 		'default' => true,
 	),
