@@ -14274,6 +14274,13 @@ $wgConf->settings = array(
 	'testwiki' => true,
 ),
 
+// CX Campaigns
+'wmgContentTranslationCampaigns' => array(
+	'default' => array(),
+	'cawiki' => array( 'newarticle' ),
+	'eswiki' => array( 'newarticle' ),
+),
+
 // Namespace to publish article
 'wmgContentTranslationTargetNamespace' => array(
 	'default' => 'Main',
