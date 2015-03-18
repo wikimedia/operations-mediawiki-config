@@ -2745,6 +2745,8 @@ if ( $wmgUseContentTranslation ) {
 	}
 
 	$wgContentTranslationDatabase = 'wikishared';
+
+	$wgContentTranslationCampaigns = $wmgContentTranslationCampaigns;
 }
 
 // @note getRealmSpecificFilename only works with filenames with .suffix
