@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_be6494e2",
+        "filename": "multiversion/MWRealm.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 873
+      },
+      "writtenOn": "2015-03-18T15:29:36Z",
+      "side": 1,
+      "message": "Feels weird but ok.",
+      "revId": "b9fae057402bb25cc9573af879ead544f2feeec7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
