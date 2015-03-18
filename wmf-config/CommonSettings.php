@@ -2982,8 +2982,8 @@ $wgUseCombinedLoginLink = false;
 if ( $wmgUseRC2UDP ) {
 	if ( $wmgRC2UDPPrefix === false ) {
 		$matches = null;
-		if ( preg_match( '/^\/\/(.+).org$/', $wgServer, $matches ) && isset( $matches[1] ) ) {
-			$wmgRC2UDPPrefix = "#{$matches[1]}\t";
+		if ( preg_match( '/^(https?:)?\/\/(.+)\.org$/', $wgServer, $matches ) && isset( $matches[2] ) ) {
+			$wmgRC2UDPPrefix = "#{$matches[2]}\t";
 		}
 	}
 
