@@ -149,9 +149,9 @@ if ( $wmgMobileFrontend ) {
 			),
 
 			// https://trello.com/c/XA608tCb/5-1-new-actor-campaign
-			'actor2' => array(
+			'actor3' => array(
 				'type' => 'Simple',
-				'property' => 'P31' /* instance of */,
+				'property' => 'P106' /* occupation */,
 				'ifAll' => array(
 					'P31'/* instance of */ => 'Q5'/* human */,
 					'P106'/* occupation */ => 'Q33999'/* actor */,
