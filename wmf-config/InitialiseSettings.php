@@ -12300,6 +12300,7 @@ $wgConf->settings = array(
 	'+enwiki' => array( 100 /* Portal */, 108 /* Book */, 118 /* Draft */ ), // T58001
 	'+hewiki' => array( 118 /* Draft */ ), // T87027
 	'+kowiki' => array( 118 /* Draft */ ), // T92798
+	'+plwiki' => array( 102 /* Wikiprojekt */ ), // T92698
 	'+ruwiki' => array( 102 /* Draft / Incubator */ ), // T86688
 	// Wiktionaries
 	'svwiktionary' => array( NS_USER ), // T59356
