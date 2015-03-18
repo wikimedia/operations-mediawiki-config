@@ -12255,6 +12255,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
+	'enwiki' => true,
 	'frwiki' => true,
 	'itwiki' => true,
 	'plwiki' => true,
