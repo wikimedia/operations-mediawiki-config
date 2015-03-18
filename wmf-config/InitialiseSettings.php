@@ -4234,6 +4234,7 @@ $wgConf->settings = array(
 		'T87645' => "udp://$wmfUdp2logDest/T87645", // - Ori on behalf of Tim, for https://gerrit.wikimedia.org/r/#/c/188304/
 		'T89258' => "udp://$wmfUdp2logDest/T89258", // - awight and AndyRussG
 		'ResourceLoaderImage' => "udp://$wmfUdp2logDest/resourceloaderimage", // - demon, matmarex
+		'HttpError' => array( 'level'=>'error', 'destination' => "udp://$wmfUdp2logDest/httperror" ), // Only log http errors with a 500+ code T85795
 	),
 
 	'+enwiki' => array(
