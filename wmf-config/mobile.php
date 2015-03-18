@@ -205,6 +205,22 @@ if ( $wmgMobileFrontend ) {
 					'Q2526255' /* film director */,
 				),
 			),
+
+			// https://trello.com/c/hRFjMiEB
+			'politician' => array(
+				'type' => 'Simple',
+				'property' => 'P106'/* occupation */,
+				'ifAll' => array(
+					'P31'/* instance of */ => 'Q5'/* human */,
+					'P106'/* occupation */ => 'Q82955'/* politician */
+				),
+				'suggestions' => array(
+					'Q327591' /* independent politician */,
+					'Q36180' /* writer */,
+					'Q40348' /* lawyer */,
+					'Q193391' /* diplomat */
+				),
+			),
 		);
 	}
 
