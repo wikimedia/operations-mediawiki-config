@@ -34,6 +34,24 @@
       "revId": "062734574b10cdee4580640800ab64d4911e8f26",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_af6e9c91",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1110,
+      "author": {
+        "id": 640
+      },
+      "writtenOn": "2015-03-18T18:17:34Z",
+      "side": 1,
+      "message": "Either way the list will keep growing. I welcome something that is more manageable.",
+      "parentUuid": "6e7c4fa4_748ffdd1",
+      "revId": "062734574b10cdee4580640800ab64d4911e8f26",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
