@@ -2,16 +2,16 @@
 
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
-/* Eqiad Swift backend config */
+/* Codfw Swift backend config */
 $wgFileBackends[] = array( // backend config for wiki's local repo
 	'class'              => 'SwiftFileBackend',
 	'name'               => 'local-swift-eqiad',
 	'wikiId'             => "{$site}-{$lang}",
 	'lockManager'        => 'redisLockManager',
-	'swiftAuthUrl'       => $wmfSwiftEqiadConfig['authUrl'],
-	'swiftUser'          => $wmfSwiftEqiadConfig['user'],
-	'swiftKey'           => $wmfSwiftEqiadConfig['key'],
-	'swiftTempUrlKey'    => $wmfSwiftEqiadConfig['tempUrlKey'],
+	'swiftAuthUrl'       => $wmfSwiftCodfwConfig['authUrl'],
+	'swiftUser'          => $wmfSwiftCodfwConfig['user'],
+	'swiftKey'           => $wmfSwiftCodfwConfig['key'],
+	'swiftTempUrlKey'    => $wmfSwiftCodfwConfig['tempUrlKey'],
 	'shardViaHashLevels' => array(
 		'local-public'     => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
 		'local-thumb'      => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
@@ -27,10 +27,10 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared repo
 	'name'               => 'shared-swift-eqiad',
 	'wikiId'             => "wikipedia-commons",
 	'lockManager'        => 'redisLockManager',
-	'swiftAuthUrl'       => $wmfSwiftEqiadConfig['authUrl'],
-	'swiftUser'          => $wmfSwiftEqiadConfig['user'],
-	'swiftKey'           => $wmfSwiftEqiadConfig['key'],
-	'swiftTempUrlKey'    => $wmfSwiftEqiadConfig['tempUrlKey'],
+	'swiftAuthUrl'       => $wmfSwiftCodfwConfig['authUrl'],
+	'swiftUser'          => $wmfSwiftCodfwConfig['user'],
+	'swiftKey'           => $wmfSwiftCodfwConfig['key'],
+	'swiftTempUrlKey'    => $wmfSwiftCodfwConfig['tempUrlKey'],
 	'shardViaHashLevels' => array(
 		'local-public'     => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
 		'local-thumb'      => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
@@ -45,17 +45,17 @@ $wgFileBackends[] = array( // backend config for wiki's access to shared files
 	'name'               => 'global-swift-eqiad',
 	'wikiId'             => "global-data",
 	'lockManager'        => 'redisLockManager',
-	'swiftAuthUrl'       => $wmfSwiftEqiadConfig['authUrl'],
-	'swiftUser'          => $wmfSwiftEqiadConfig['user'],
-	'swiftKey'           => $wmfSwiftEqiadConfig['key'],
-	'swiftTempUrlKey'    => $wmfSwiftEqiadConfig['tempUrlKey'],
+	'swiftAuthUrl'       => $wmfSwiftCodfwConfig['authUrl'],
+	'swiftUser'          => $wmfSwiftCodfwConfig['user'],
+	'swiftKey'           => $wmfSwiftCodfwConfig['key'],
+	'swiftTempUrlKey'    => $wmfSwiftCodfwConfig['tempUrlKey'],
 	'shardViaHashLevels' => array(
 		'math-render'  => array( 'levels' => 2, 'base' => 16, 'repeat' => 0 ),
 	),
 	'parallelize'        => 'implicit',
 	'cacheAuthInfo'      => true
 );
-/* end Eqiad Swift backend config */
+/* end Codfw Swift backend config */
 
 /* Multiwrite backend config */
 $wgFileBackends[] = array(
@@ -68,7 +68,7 @@ $wgFileBackends[] = array(
 		array( 'template' => 'local-swift-eqiad', 'isMultiMaster' => true ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
-	'autoResync'  => 'conservative' // T41221
+	'autoResync'  => 'conservative' // bug 39221
 );
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
@@ -100,9 +100,9 @@ $wgLockManagers[] = array(
 	'name'         => 'redisLockManager',
 	'class'        => 'RedisLockManager',
 	'lockServers'  => array(
-		'rdb1' => '10.64.0.180',
-		'rdb2' => '10.64.0.181',
-		'rdb3' => '10.64.0.182'
+		'rdb1' => '10.192.0.35',
+		'rdb2' => '10.192.16.38',
+		'rdb3' => '10.192.32.20'
 	),
 	'srvsByBucket' => array(
 		0 => array( 'rdb1', 'rdb2', 'rdb3' )
