@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ed6a64b0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14279,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2015-03-18T12:19:12Z",
+      "side": 1,
+      "message": "I think empty array would be better.",
+      "revId": "924051b8809df488e2a150105ec2dbb9acb79164",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
