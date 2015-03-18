@@ -16,14 +16,12 @@ $wgObjectCaches['memcached-pecl'] = array(
 	'loggroup'             => 'memcached',
 );
 
+require( getRealmSpecificFilename( "$wmfConfigDir/bloomfilters.php" ) );
 /*
 $wgBloomFilterStores['main'] = array(
 	'cacheId'      => 'main-v1',
 	'class'        => 'BloomCacheRedis',
-	'redisServers' => array(
-		'10.64.0.162:6379', // rbf1001 - master
-		'10.64.0.163:6379', // rbf1002 - slave
-	),
+	'redisServers' => $wmgBloomFilterServers,
 	'redisConfig'  => array(
 		'password'       => $wmgRedisPassword,
 		'connectTimeout' => .25,
