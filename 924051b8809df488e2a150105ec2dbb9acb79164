@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e7c4fa4_ad80ecf9",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2015-03-18T13:13:24Z",
+      "side": 1,
+      "message": "campaign, or more specifically newarticle campaign",
+      "revId": "924051b8809df488e2a150105ec2dbb9acb79164",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_ed6a64b0",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
