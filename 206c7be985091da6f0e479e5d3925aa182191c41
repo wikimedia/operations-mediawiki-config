@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_0429ae35",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 840,
+      "author": {
+        "id": 640
+      },
+      "writtenOn": "2015-03-19T11:47:14Z",
+      "side": 1,
+      "message": "Missing \"g\" at the end.",
+      "revId": "206c7be985091da6f0e479e5d3925aa182191c41",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
