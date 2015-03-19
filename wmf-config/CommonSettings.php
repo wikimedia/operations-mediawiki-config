@@ -1690,7 +1690,7 @@ if ( $wmgUserDailyContribs ) {
 
 if ( $wmgUseLocalisationUpdate ) {
 	require_once( "$IP/extensions/LocalisationUpdate/LocalisationUpdate.php" );
-	$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/cache-$wmfVersionNumber";
+	$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/caches/cache-$wmfVersionNumber";
 	$wgLocalisationUpdateRepository = 'local';
 	$wgLocalisationUpdateRepositories['local'] = array(
 		'mediawiki' => '/var/lib/l10nupdate/mediawiki/core/%PATH%',
