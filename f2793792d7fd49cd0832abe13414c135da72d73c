@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_648ae2c1",
+        "filename": "wmf-config/mc-codfw.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2015-03-19T12:50:30Z",
+      "side": 1,
+      "message": "Can we split this into a -common like the others?",
+      "revId": "f2793792d7fd49cd0832abe13414c135da72d73c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
