@@ -9975,6 +9975,7 @@ $wgConf->settings = array(
 	'+cswikisource' => array( 100 ),
 	'+dawikisource' => array( 102, 104, 106 ),
 	'+dewikisource' => array( 102, 104 ),
+	'+dewikiversity' => array( 106 ), // T93071
 	'+elwikisource' => array( 100, 102 ),
 	'+enwikibooks' => array( 102, 110 ),
 	'+enwikisource' => array( 102, 104, 106, 114 ), // bug 50007
