@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_d8bb9adc",
+        "filename": "wmf-config/bloomfilters.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2015-03-19T14:10:51Z",
+      "side": 1,
+      "message": "not having a default named file in a getRealmSpecificFileName clause will cause mediawiki to fail to load if you are in a non-configured DC. I guess for fundamental features failing is ok, but nothing would be lost if the bloom filters don\u0027t work. Hence my choice.",
+      "parentUuid": "6e7c4fa4_98e68210",
+      "revId": "cb1d97af9bf5b082e7d76ffabf042528b16a63ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_58f0eac3",
         "filename": "wmf-config/mc.php",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2015-03-19T14:05:48Z",
       "side": 1,
       "message": "Should be $wmgBloomFilterServers. $wg* is MW, $wmg* is WMF.",
+      "revId": "cb1d97af9bf5b082e7d76ffabf042528b16a63ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_38cc0e8c",
+        "filename": "wmf-config/mc.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2015-03-19T14:10:51Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_58f0eac3",
       "revId": "cb1d97af9bf5b082e7d76ffabf042528b16a63ac",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
