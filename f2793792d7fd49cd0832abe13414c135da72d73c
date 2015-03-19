@@ -16,6 +16,24 @@
       "revId": "f2793792d7fd49cd0832abe13414c135da72d73c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_4485669e",
+        "filename": "wmf-config/mc-codfw.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2015-03-19T12:53:46Z",
+      "side": 1,
+      "message": "ok, will do in a few.",
+      "parentUuid": "6e7c4fa4_648ae2c1",
+      "revId": "f2793792d7fd49cd0832abe13414c135da72d73c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
