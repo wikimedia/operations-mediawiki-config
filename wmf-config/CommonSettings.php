@@ -2266,6 +2266,7 @@ if ( $wmgUseTranslate ) {
 	$wgTranslateUsePreSaveTransform = true; # bug 37304
 
 	$wgEnablePageTranslation = true;
+	$wgTranslateDelayedMessageIndexRebuild = true;
 
 	// Deprecated language codes
 	$wgTranslateBlacklist = array(
