@@ -14080,6 +14080,8 @@ $wgConf->settings = array(
 	'ptwiki' => true, // T73757
 	'cawiki' => true,
 	'tewiki' => true, //T92544
+	'ruwiki' => true,
+	'pawiki' => true,
 ),
 'wmgFlowEditorList' => array(
 	// Disable VE inside flow, leaving only the wikitext editor
