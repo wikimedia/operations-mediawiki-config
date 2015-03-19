@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_98e68210",
+        "filename": "wmf-config/bloomfilters.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2015-03-19T14:05:48Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this file be named eqiad? Or are you intentionally wanting it to fall back to this in case of other scenarios?",
+      "revId": "cb1d97af9bf5b082e7d76ffabf042528b16a63ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_58f0eac3",
+        "filename": "wmf-config/mc.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2015-03-19T14:05:48Z",
+      "side": 1,
+      "message": "Should be $wmgBloomFilterServers. $wg* is MW, $wmg* is WMF.",
+      "revId": "cb1d97af9bf5b082e7d76ffabf042528b16a63ac",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
