@@ -658,7 +658,7 @@ if ( $wmgUseSpamBlacklist ) {
 	$wgBlacklistSettings = array(
 		'spam' => array(
 			'files' => array(
-				'http://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1'
+				'//meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1'
 			),
 		),
 	);
