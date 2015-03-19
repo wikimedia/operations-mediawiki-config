@@ -362,11 +362,11 @@ return array(
 		'default' => 1,
 	),
 
-	'wmgUseRestbaseUpdateJobs' => array(
+	'-wmgUseRestbaseUpdateJobs' => array(
 		'default' => false,
 	),
 
-	'wmgUseRestbaseVRS' => array(
+	'-wmgUseRestbaseVRS' => array(
 		'default' => false,
 	),
 
