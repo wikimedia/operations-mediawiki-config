@@ -362,12 +362,12 @@ return array(
 		'default' => 1,
 	),
 
-	'-wmgUseRestbaseUpdateJobs' => array(
-		'default' => false,
+	'wmgRestbaseServer' => array(
+		'default' => "http://10.68.17.227:7231" // deployment-restbase01.eqiad.wmflabs
 	),
 
-	'-wmgUseRestbaseVRS' => array(
-		'default' => false,
+	'wmgUseRestbaseVRS' => array(
+		'default' => true,
 	),
 
 	'wmgUseVectorBeta' => array(
