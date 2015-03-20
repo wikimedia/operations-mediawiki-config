@@ -362,12 +362,12 @@ return array(
 		'default' => 1,
 	),
 
-	'-wmgUseRestbaseUpdateJobs' => array(
-		'default' => false,
+	'wmgUseRestbaseUpdateJobs' => array(
+		'default' => true,
 	),
 
-	'-wmgUseRestbaseVRS' => array(
-		'default' => false,
+	'wmgUseRestbaseVRS' => array(
+		'default' => true,
 	),
 
 	'wmgUseVectorBeta' => array(

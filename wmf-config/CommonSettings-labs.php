@@ -74,6 +74,30 @@ if ( $wmgUseVectorBeta ) {
 	$wgVectorBetaWinter = $wmgVectorBetaWinter;
 }
 
+if ( $wmgUseRestbaseUpdateJobs ) {
+	require_once( "$IP/extensions/RestBaseUpdateJobs/RestbaseUpdate.php" );
+	$wgRestbaseServer = "http://10.68.17.227:7231"; // deployment-restbase01.eqiad.wmflabs
+}
+
+if ( $wmgUseRestbaseVRS ) {
+	if( !isset( $wgVirtualRestConfig ) ) {
+		$wgVirtualRestConfig = array(
+			'modules' => array(),
+			'global' => array(
+				'timeout' => 360,
+				'forwardCookies' => false,
+				'HTTPProxy' => null
+			)
+		);
+	}
+	$wgVirtualRestConfig['modules']['restbase'] = array(
+		'url' => 'http://10.68.17.189:7231',  // deployment-restbase02.eqiad.wmflabs
+		'domain' => $wgCanonicalServer,
+		'forwardCookies' => false,
+		'parsoidCompat' => false
+	);
+}
+
 if ( $wmgUseParsoid ) {
 	$wmgParsoidURL = 'http://10.68.16.145'; // deployment-parsoidcache02.eqiad
 	$wgParsoidCacheServers = array ( 'http://10.68.16.145' ); // deployment-parsoidcache01.eqiad
