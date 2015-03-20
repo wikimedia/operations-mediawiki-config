@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_bfab17d3",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 164
+      },
+      "writtenOn": "2015-03-20T17:47:57Z",
+      "side": 1,
+      "message": "use $wmgRestbaseServer here as well?",
+      "revId": "592f2da7346edb478d4796121fe447e51504e7f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
