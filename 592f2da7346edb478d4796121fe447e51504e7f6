@@ -16,6 +16,24 @@
       "revId": "592f2da7346edb478d4796121fe447e51504e7f6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_ff8c2f8b",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 2177
+      },
+      "writtenOn": "2015-03-20T17:50:20Z",
+      "side": 1,
+      "message": "Poor man\u0027s LB :) We have 2 RB VMs, so the idea is to send updates to one and VRS requests to the other. Not strictly needed, but might come in handy.",
+      "parentUuid": "6e7c4fa4_bfab17d3",
+      "revId": "592f2da7346edb478d4796121fe447e51504e7f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
