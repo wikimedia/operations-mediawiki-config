@@ -12243,6 +12243,10 @@ $wgConf->settings = array(
 
 // -------------- RESTBase start --------------
 
+'wmgRestbaseServer' => array(
+	'default' => "http://10.2.2.17:7231" // restbase.svc.eqiad.wmnet
+),
+
 // whether to activate the extension sending page edit
 // updates to RESTBase
 'wmgUseRestbaseUpdateJobs' => array(
