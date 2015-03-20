@@ -74,6 +74,11 @@ if ( $wmgUseVectorBeta ) {
 	$wgVectorBetaWinter = $wmgVectorBetaWinter;
 }
 
+if ( $wmgUseRestbaseUpdateJobs ) {
+	// Send update jobs to restbase01 instead of $wmgRestBaseServer (restbase02)
+	$wgRestbaseServer = "http://10.68.17.227:7231"; // deployment-restbase01.eqiad.wmflabs
+}
+
 if ( $wmgUseParsoid ) {
 	$wmgParsoidURL = 'http://10.68.16.145'; // deployment-parsoidcache02.eqiad
 	$wgParsoidCacheServers = array ( 'http://10.68.16.145' ); // deployment-parsoidcache01.eqiad

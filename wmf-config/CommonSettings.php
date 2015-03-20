@@ -1972,7 +1972,7 @@ if ( $wmgUseVectorBeta ) {
 
 if ( $wmgUseRestbaseUpdateJobs ) {
 	require_once( "$IP/extensions/RestBaseUpdateJobs/RestbaseUpdate.php" );
-	$wgRestbaseServer = "http://10.2.2.17:7231"; // restbase.svc.eqiad.wmnet
+	$wgRestbaseServer = $wmgRestbaseServer;
 }
 
 if ( $wmgUseRestbaseVRS ) {
@@ -1987,7 +1987,7 @@ if ( $wmgUseRestbaseVRS ) {
 		);
 	}
 	$wgVirtualRestConfig['modules']['restbase'] = array(
-		'url' => 'http://10.2.2.17:7231',  // restbase.svc.eqiad.wmnet
+		'url' => $wmgRestbaseServer,
 		'domain' => $wgCanonicalServer,
 		'forwardCookies' => false,
 		'parsoidCompat' => false
