@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "6e7c4fa4_d487da64",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-03-20T15:54:45Z",
+      "side": 1,
+      "message": "Okay... I think we should set this up in InitialisetSettings.php, call it wmgRestbaseServer or something, override it in InitialiseSettings-labs.php, then use it in CommonSettings.php. Because right now this looks like a clone of the production config with just the IP changed.",
+      "revId": "031c1bf543a6c51aa841fd5cf9559b1be274fcf6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_34588e28",
         "filename": "wmf-config/InitialiseSettings-labs.php",
         "patchSetId": 1
