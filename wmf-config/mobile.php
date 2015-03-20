@@ -114,14 +114,6 @@ if ( $wmgMobileFrontend ) {
 		$wgWikiGrokDebug = $wmgWikiGrokDebug;
 
 		$wgWikiGrokSlowCampaigns = array(
-			// https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok/Claim_suggestions#Writer
-			'author' => array(
-				'type' => 'Simple',
-				'property' => 'P106'/* occupation */,
-				'ifAll' => array( 'P31'/* instance of */ => 'Q5'/* human */, 'P106'/* occupation */ => 'Q36180'/* writer */ ),
-				'ifNotAny' => array( 'P106'/* occupation */ => 'Q482980'/* author */ ),
-				'suggestions' => array( 'Q482980'/* author */ ),
-			),
 			// https://www.mediawiki.org/wiki/Extension:MobileFrontend/WikiGrok/Claim_suggestions#Album
 			'album' => array(
 				'type' => 'Simple',
