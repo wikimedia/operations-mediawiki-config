@@ -7246,6 +7246,17 @@ $wgConf->settings = array(
 	),
 	'frwikinews' => array(
 		'flood' => array( 'bot' => true ),
+		'trusteduser' => array( //T90979
+			'autoreview' => true,
+			'unreviewedpages' => true,
+		),
+		'facilitator' => array( //T90979
+			'autoreview' => true,
+			'review' => true,
+			'validate' => true,
+			'unreviewedpages' => true,
+			'import' => true,
+		),
 	),
 	'frwikisource' => array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ),
@@ -8367,6 +8378,9 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'abusefilter' ),
 		'sysop' => array( 'patroller' ),
 	),
+	'+frwikinews' => array(
+		'sysop' => array( 'trusteduser', 'facilitator' ), //T90979
+	),
 	'+frwikisource' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
 	),
@@ -8971,6 +8985,9 @@ $wgConf->settings = array(
 	'+frwikibooks' => array(
 		'bureaucrat' => array( 'abusefilter' ),
 		'sysop' => array( 'patroller' ),
+	),
+	'+frwikinews' => array(
+		'sysop' => array( 'trusteduser', 'facilitator' ), //T90979
 	),
 	'+frwikisource' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
