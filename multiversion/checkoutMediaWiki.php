@@ -65,10 +65,24 @@ function checkoutMediaWiki() {
 			print "Error checking out branch\n";
 			exit( 1 );
 		}
-		passthru( 'git submodule update --init --recursive', $ret );
-		if ( $ret ) {
-			print "Error updating submodules\n";
-			exit( 1 );
+
+		# If using master, we don't have submodules. But we want extensions
+		if ( $dstVersionNum == 'master' ) {
+			chdir( "$destIP/extensions" );
+			passthru( 'git init' );
+			passthru( 'git remote add origin https://gerrit.wikimedia.org/r/p/mediawiki/extensions' );
+			passthru( 'git fetch' );
+			passthru( 'git checkout -f -t origin/master' );
+			passthru( 'git pull' );
+			passthru( 'git submodule update --init --recursive' );
+			passthru( 'git clone https://gerrit.wikimedia.org/r/p/mediawiki/vendor vendor', $ret );
+			chdir( $destIP );
+		} else {
+			passthru( 'git submodule update --init --recursive', $ret );
+			if ( $ret ) {
+				print "Error updating submodules\n";
+				exit( 1 );
+			}
 		}
 
 		$submodules = array();
