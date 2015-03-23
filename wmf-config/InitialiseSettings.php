@@ -8242,6 +8242,7 @@ $wgConf->settings = array(
 	),
 	'+dawiki' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
+		'bureaucrat' => array( 'accountcreator' ), // T93260
 	),
 	'+dawiktionary' => array(
 		'sysop' => array( 'autopatrolled' ), // T86062
@@ -8843,6 +8844,7 @@ $wgConf->settings = array(
 	),
 	'+dawiki' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
+		'bureaucrat' => array( 'accountcreator' ), // T93260
 	),
 	'+dawiktionary' => array(
 		'sysop' => array( 'autopatrolled' ), // T86062
