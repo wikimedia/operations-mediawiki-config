@@ -221,6 +221,10 @@ if ( $wmgUseSentry ) {
 	$wgSentryDsn = $wmgSentryDsn;
 }
 
+if ( $wmgUseCapiunto ) {
+	require_once "$IP/extensions/Capiunto/Capiunto.php";
+}
+
 // Experimental
 $wgGadgetsCaching = false;
 
