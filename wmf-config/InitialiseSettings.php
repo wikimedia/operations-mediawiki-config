@@ -12850,6 +12850,7 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 ),
 
+// Formerly known as $wgMFAnonymousEditing
 'wmgMFEditorOptions' => array(
 	'default' => false,
 	'itwiki' => array(
