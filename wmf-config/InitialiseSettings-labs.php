@@ -531,6 +531,10 @@ return array(
 	'wgRateLimitsExcludedIPs' => array(
 		'default' => array( '198.73.209.0/24' ), // T87841 Office IP
 	),
+
+	'wmgUseCapiunto' => array(
+		'default' => true,
+	),
 );
 
 } # wmflLabsSettings()
