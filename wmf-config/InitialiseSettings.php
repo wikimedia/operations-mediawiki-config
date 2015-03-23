@@ -7136,6 +7136,11 @@ $wgConf->settings = array(
 		'*' => array( 'createpage' => false, 'createtalk' => false, ),
 		'flood' => array( 'bot' => true ),
 		'rollbacker' => array( 'rollback' => true ),
+		'autopatrolled' => array( 'autopatrol' => true ), //T93371
+		'patroller' => array(
+			'patrol' => true,
+			'autopatrol' => true,
+		), //T93371
 	),
 	'eswikinews' => array(
 		'bot' => array( 'editprotected' => true ),
@@ -8282,8 +8287,8 @@ $wgConf->settings = array(
 		'sysop' => array( 'rollbacker', 'autopatrolled', 'patroller' ),
 	),
 	'+eswikibooks' => array(
-		'bureaucrat' => array( 'flood' ),
-		'sysop' => array( 'flood', 'rollbacker' ),
+		'bureaucrat' => array( 'flood', 'confirmed' ),
+		'sysop' => array( 'flood', 'rollbacker', 'patroller', 'autopatrolled' ),
 	),
 	'+eswikinews' => array(
 		'bureaucrat' => array( 'editprotected', 'flood', ),
@@ -8887,8 +8892,8 @@ $wgConf->settings = array(
 		'sysop' => array( 'rollbacker', 'autopatrolled', 'patroller' ),
 	),
 	'+eswikibooks' => array(
-		'bureaucrat' => array( 'flood' ),
-		'sysop' => array( 'flood', 'rollbacker' ),
+		'bureaucrat' => array( 'flood', 'confirmed' ),
+		'sysop' => array( 'flood', 'rollbacker', 'patroller', 'autopatrolled' ),
 	),
 	'+eswikinews' => array(
 		'bureaucrat' => array( 'editprotected', 'flood', ),
