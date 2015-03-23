@@ -9392,7 +9392,7 @@ $wgConf->settings = array(
 	'bnwiki' => array( 'en' ), # Bug 34791
 	'bnwikisource' => array( 'OldWikisource', 'w', 'en' ),
 	'cawikibooks' => array( 'w', 's', ),
-	'cawikinews' => array( 'w', 'wikt', 'q', 'b', 's', 'v', 'fr', 'en', 'de', 'es', 'pt', 'it', 'commons', 'meta', 'eo' ),
+	'cawikinews' => array( 'w', 'wikt', 'q', 'b', 's', 'v', 'fr', 'en', 'de', 'es', 'pt', 'it', 'commons', 'meta', 'eo', 'pl', 'ja', 'ru', 'sr', 'tr', 'uk', 'zh' ), //T93203
 	'cawikiquote' => array( 'w' ),
 	'cawikisource' => array( 'w', 'b', ),
 	'cawiktionary' => array( 'w', ),
@@ -9644,6 +9644,7 @@ $wgConf->settings = array(
 
 'wgImportTargetNamespace' => array(
 	'default' => null,
+	'cawikinews' => 100, //Transwiki T93203
 	'enwiktionary' => 108,
 	'enwikibooks' => 108,
 	'frwiktionary' => 102,
