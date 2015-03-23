@@ -99,6 +99,7 @@ $IP/extensions/RandomRootPage/Randomrootpage.php
 $IP/extensions/RelatedArticles/RelatedArticles.php
 $IP/extensions/RelatedSites/RelatedSites.php
 $IP/extensions/Renameuser/Renameuser.php
+$IP/extensions/RestBaseUpdateJobs/RestbaseUpdate.php
 $IP/extensions/RSS/RSS.php
 $IP/extensions/Score/Score.php
 $IP/extensions/Scribunto/Scribunto.php
@@ -125,6 +126,7 @@ $IP/extensions/TrustedXFF/TrustedXFF.php
 $IP/extensions/UnicodeConverter/UnicodeConverter.php
 $IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php
 $IP/extensions/UploadWizard/UploadWizard.php
+$IP/extensions/UserDailyContribs/UserDailyContribs.php
 $IP/extensions/UserMerge/UserMerge.php
 $IP/extensions/VectorBeta/VectorBeta.php
 $IP/extensions/VipsScaler/VipsScaler.php
