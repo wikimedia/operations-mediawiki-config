@@ -59,11 +59,26 @@ function checkoutMediaWiki() {
 			print "Error running setting autosetuprebase\n";
 		}
 
-		passthru( 'git checkout ' . escapeshellarg( "wmf/$gitVersion" ), $ret );
+		$checkoutVersion = $gitVersion == 'master' ? $gitVersion : "wmf/$gitVersion";
+		passthru( 'git checkout ' . escapeshellarg( $checkoutVersion ), $ret );
 		if ( $ret ) {
 			print "Error checking out branch\n";
 			exit( 1 );
 		}
+
+		# If using master, we don't have submodules. But we want them
+		if ( $dstVersionNum == 'master' ) {
+			foreach( file( MEDIAWIKI_DEPLOYMENT_DIR . '/wmf-config/extension-list' ) as $ext ) {
+				list( , $loc, $extension ) = explode( '/', $ext );
+				passthru( 'git clone ' .
+					escapeshellarg( "https://gerrit.wikimedia.org/r/p/mediawiki/extensions/$extension" ) .
+					' ' .
+					escapeshellarg( "$loc/$extension" ),
+					$ret );
+			}
+			passthru( 'git clone https://gerrit.wikimedia.org/r/p/mediawiki/vendor vendor' $ret );
+		}
+
 		passthru( 'git submodule update --init --recursive', $ret );
 		if ( $ret ) {
 			print "Error updating submodules\n";
