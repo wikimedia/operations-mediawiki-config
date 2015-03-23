@@ -2171,6 +2171,11 @@ if ( $wmgEnableTextExtracts ) {
 	$wgExtractsExtendOpenSearchXml = $wmgExtractsExtendOpenSearchXml;
 }
 
+# MUST be after mobile.php to override $wmgMFEditorOptions
+if ( $wgVersion > 'MediaWiki 1.25wmf22' ) {
+    $wgMFEditorOptions['anonymousEditing'] = true; // Bug T93210
+}
+
 if ( $wmgUseSubPageList3 ) {
 	include( "$IP/extensions/SubPageList3/SubPageList3.php" );
 }
