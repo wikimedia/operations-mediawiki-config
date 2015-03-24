@@ -254,7 +254,7 @@ $wgInternalServer = $wgCanonicalServer;
 
 if ( gethostname() === 'osmium' ) {
 	$wgResourceLoaderStorageEnabled = false;
-} else if ( !in_array( $wgDBname, array( 'testwiki', 'testwikidatawiki', 'labswiki' ) ) && isset( $_SERVER['SERVER_NAME'] ) ) {
+} elseif ( !in_array( $wgDBname, array( 'testwiki', 'testwikidatawiki', 'labswiki' ) ) && isset( $_SERVER['SERVER_NAME'] ) ) {
 	// Make testing JS/skin changes easy by not running load.php through bits for testwiki
 	$wgLoadScript = "//{$wmfHostnames['bits']}/{$_SERVER['SERVER_NAME']}/load.php";
 }
