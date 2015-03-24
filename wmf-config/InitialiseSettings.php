@@ -9570,7 +9570,7 @@ $wgConf->settings = array(
 	'plwiktionary' => array( 'w' ), // T12374
 	'pntwiki' => array( 'en', 'el', 'elwikiversity', 'incubator' ),
 	'ptwikibooks' => array( 'w', 'wikt', 's', 'q', 'n', 'v', 'en', 'es', 'fr', 'it', 'de', 'ru', 'w:en' ), // T22552
-	'ptwikinews' => array( 'w', 'wikt', 's', 'v', 'b', 'q', 'meta', 'commons', 'it', 'fr', 'ca', 'en', 'es', 'de', ),
+	'ptwikinews' => array( 'w', 'wikt', 's', 'v', 'b', 'q', 'meta', 'commons', 'ca', 'de', 'en', 'eo', 'es', 'fr', 'it', 'ja', 'pl', 'ru', 'sr', 'tr', 'uk', 'zh' ), // T93218
 	'ptwikiversity' => array( 'incubator', 'w', 'b', ), // T16516
 	'rowikibooks' => array( 'w', 's' ),
 	'ruwikibooks' => array( 'w', 's', ),
@@ -9653,6 +9653,7 @@ $wgConf->settings = array(
 	'frwikinews' => 102, // Transwiki
 	'frwikiversity' => 110, // Transwiki
 	'frwikiquote' => 108, // transwiki
+	'ptwikinews' => 104, // Transwiki - T93218
 	// Added zh wikis per bug 40474
 	'zhwiktionary' => 102, // Transwiki
 	'zhwikibooks' => 100, // Transwiki
