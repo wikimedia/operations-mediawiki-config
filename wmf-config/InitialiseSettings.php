@@ -8633,6 +8633,9 @@ $wgConf->settings = array(
 	'+tawiki' => array(
 		'bureaucrat' => array( 'nocreate' ),
 	),
+	'+testwiki' => array(
+		'sysop' => array( 'abusefilter' ),
+	),
 	'+trwiki' => array(
 		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, Bug 38690
 		'bureaucrat' => array( 'technician' ), // Bug 39690
@@ -9241,6 +9244,9 @@ $wgConf->settings = array(
 	),
 	'+tawiki' => array(
 		'bureaucrat' => array( 'nocreate' ),
+	),
+	'+testwiki' => array(
+		'sysop' => array( 'abusefilter' ),
 	),
 	'+trwiki' => array(
 		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, Bug 38690

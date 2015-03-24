@@ -331,6 +331,10 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // bug 42012
 		break;
+	case 'testwiki':
+		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-log-detail'] = true;
+		break;
 	case 'thwiki':
 		// bug 28502
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
