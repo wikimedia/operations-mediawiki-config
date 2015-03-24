@@ -252,10 +252,12 @@ elseif ( $wgDBname == 'enwiki' || $wgDBname == 'testwiki' ) {
 	# Use 'reviewer' group
 	$wgAddGroups['sysop'][] = 'reviewer';
 	$wgRemoveGroups['sysop'][] = 'reviewer';
-	# Remove 'editor' group
-	unset( $wgGroupPermissions['editor'] );
-	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'editor' ) );
-	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'editor' ) );
+	# Reviewers can patrol (T93798)
+	$wgGroupPermissions['reviewer']['patrol'] = true;
+	# Remove editor and autoreview (T91934) user groups
+	unset( $wgGroupPermissions['editor'], $wgGroupPermissions['autoreview'] );
+	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'editor', 'autoreview' ) );
+	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'editor', 'autoreview' ) );
 }
 
 elseif ( $wgDBname == 'enwikibooks' ) {
