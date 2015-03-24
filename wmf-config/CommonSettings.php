@@ -1343,7 +1343,7 @@ if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 // taking it live 2006-12-15 brion
 if ( $wmgUseDismissableSiteNotice ) {
 	require( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
-	$wgDismissableSiteNoticeForAnon = true; // Bug 57732
+	$wgDismissableSiteNoticeForAnons = true; // Bug 57732
 }
 $wgMajorSiteNoticeID = '2';
 
