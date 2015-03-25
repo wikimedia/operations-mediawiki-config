@@ -553,7 +553,7 @@ $wgSiteMatrixClosedSites = array_map( 'trim', file( getRealmSpecificFilename( "$
 $wgSiteMatrixPrivateSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../private.dblist" ) ) );
 $wgSiteMatrixFishbowlSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../fishbowl.dblist" ) ) );
 
-include( $IP . '/extensions/CharInsert/CharInsert.php' );
+ExtensionRegistry::getInstance()->queue( "$IP/extensions/CharInsert/extension.json" );
 
 include( $IP . '/extensions/ParserFunctions/ParserFunctions.php' );
 $wgExpensiveParserFunctionLimit = 500;
@@ -1910,7 +1910,7 @@ if ( $wmgUseUploadWizard ) {
 }
 
 if ( $wmgUseBetaFeatures ) {
-	require_once( "$IP/extensions/BetaFeatures/BetaFeatures.php" );
+	ExtensionRegistry::getInstance()->queue( "$IP/extensions/BetaFeatures/extension.json" );
 	if ( $wmgBetaFeaturesWhitelist ) {
 		$wgBetaFeaturesWhitelist = $wmgBetaFeaturesWhitelist;
 	}
@@ -2381,7 +2381,7 @@ if ( $wmgUseVips ) {
 }
 
 if ( $wmgUseApiSandbox ) {
-	require_once( "$IP/extensions/ApiSandbox/ApiSandbox.php" );
+	ExtensionRegistry::getInstance()->queue( "$IP/extensions/ApiSandbox/extension.json" );
 }
 
 if ( $wmgUseShortUrl ) {
@@ -2894,7 +2894,7 @@ if ( $wmgUseGraph ) {
 
 
 if ( $wmgUseAccountAudit ) {
-	require_once( "$IP/extensions/AccountAudit/AccountAudit.php" );
+	ExtensionRegistry::getInstance()->queue( "$IP/extensions/AccountAudit/extension.json" );
 }
 
 if ( $wmgUseOAuth ) {
