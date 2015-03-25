@@ -14263,21 +14263,7 @@ $wgConf->settings = array(
 
 'wmgUseContentTranslation' => array(
 	'default' => false,
-	'cawiki' => true,
-	'dawiki' => true,
-	'eowiki' => true,
-	'eswiki' => true,
-	'idwiki' => true,
-	'kywiki' => true,
-	'minwiki' => true,
-	'mswiki' => true,
-	'nnwiki' => true,
-	'nowiki' => true,
-	'pawiki' => true,
-	'ptwiki' => true,
-	'svwiki' => true,
-	'uzwiki' => true,
-	'testwiki' => true,
+	'contenttranslation' => true,
 ),
 
 // Namespace to publish article
