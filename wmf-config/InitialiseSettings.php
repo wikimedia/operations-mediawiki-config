@@ -6413,6 +6413,7 @@ $wgConf->settings = array(
 	'eswiktionary' => true, // bug 7953
 	'fawiki' => true, // bug 54596
 	'fawikinews' => true,
+	'fawiktionary' => true, // T85381
 	'frwiki' => true, // bug 7269
 	'frwikibooks' => true, // bug 21517
 	'frwikisource' => true, // yannf asked in irc, 2006-07-25
