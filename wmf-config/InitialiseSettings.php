@@ -11147,6 +11147,7 @@ $wgConf->settings = array(
 		'cdm16062.contentdm.oclc.org',      // North Carolina Digital Collections - T76867
 		'pool.publicdomainproject.org',     // Public Domain Project - T91927
 		'*.nordiskamuseet.se',              // Nordiska museet - T93104
+		'mapserver.library.wur.nl',         // Wageningen University library map server - T91630
 	),
 ),
 
