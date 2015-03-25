@@ -101,7 +101,7 @@ $wgConf->settings = array(
 	'bdwikimedia' => 'bn',
 	'bewikimedia' => 'en',
 	'brwikimedia' => 'pt-br',
-	'cawikimedia' => 'en', // Bug T88843#1098439
+	'cawikimedia' => 'en', // T88843#1098439
 	'cowikimedia' => 'es',
 	'dkwikimedia' => 'da',
 	'ilwikimedia' => 'he',
@@ -548,7 +548,7 @@ $wgConf->settings = array(
 	'kbdwiki' => '//upload.wikimedia.org/wikipedia/commons/b/b0/Wikipedia-logo-v2-kbd.png',
 	'kiwiki' => '//upload.wikimedia.org/wikipedia/commons/1/1a/Wikipedia-logo-v2-ki.png', // bug 48397
 	'kkwiki' => '$stdlogo',
-	'klwiki' => '//upload.wikimedia.org/wikipedia/commons/c/c9/Wikipedia-logo-kl.png', // bug T86313
+	'klwiki' => '//upload.wikimedia.org/wikipedia/commons/c/c9/Wikipedia-logo-kl.png', // T86313
 	'kmwiki' => '$stdlogo',
 	'knwiki' => '//upload.wikimedia.org/wikipedia/commons/b/bf/Wikipedia-logo-v2-kn.png', // bug 46589, bug 27657
 	'kowiki' => '$stdlogo',
@@ -5446,7 +5446,7 @@ $wgConf->settings = array(
 		105 => 'Thesaurus_Diskussion',
 		106 => 'Reim', // Bug 43830
 		107 => 'Reim_Diskussion',
-		108 => 'Flexion', // Bug T76357
+		108 => 'Flexion', // T76357
 		109 => 'Flexion_Diskussion',
 	),
 	'dvwiktionary' => array(
@@ -6631,7 +6631,7 @@ $wgConf->settings = array(
 	'+lawikisource' => array( 102 => 1, 106 => 1 ),
 	'+labswiki' => array( 12 => 1, 112 => 1, 498 => 1 ),
 	'+ltwiki' => array( 100 => 1 ),
-	'+mediawikiwiki' => array( 12 => 1, 100 => 1, 102 => 1, 104 => 1, 106 => 1 ), // Bug T85807
+	'+mediawikiwiki' => array( 12 => 1, 100 => 1, 102 => 1, 104 => 1, 106 => 1 ), // T85807
 	'+metawiki' => array( 12 => 1, 200 => 1, 202 => 1 ),
 	'+mlwikisource' => array( 100 => 1, 104 => 1 ),
 	'+nlwikisource' => array( 102 => 1 ),
@@ -7593,7 +7593,7 @@ $wgConf->settings = array(
 
 	'+officewiki' => array(
 		'communityapps' => array( 'view-community-applications' => true ),
-		'flood' => array( 'bot' => true ), // bug T86237
+		'flood' => array( 'bot' => true ), // T86237
 		'user' => array( 'massmessage' => true, ), // bug 64978
 	),
 	'+ombudsmenwiki' => array(
@@ -10008,7 +10008,7 @@ $wgConf->settings = array(
 	'+kowikisource' => array( 100 ),
 	'+labswiki' => array( 112 ),
 	'+lawikisource' => array( 102, 104, 106 ),
-	'+mediawikiwiki' => array( 100, 102, 104, 106 ), // Manuals, extensions, Api & skin - bug T86391
+	'+mediawikiwiki' => array( 100, 102, 104, 106 ), // Manuals, extensions, Api & skin - T86391
 	'+metawiki' => array( NS_HELP ), // Bug 43687
 	'+mlwikisource' => array( 100, 104, 106 ),
 	'+nlwikisource' => array( 102 ),
@@ -10946,7 +10946,7 @@ $wgConf->settings = array(
 'wgGroupsAddToSelf' => array(
 	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 54732
 	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 37198
-	'mediawikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug T87797
+	'mediawikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // T87797
 	'otrs_wikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // bug 61297
 	'cawikimedia' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 73394
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
@@ -10967,7 +10967,7 @@ $wgConf->settings = array(
 'wgGroupsRemoveFromSelf' => array(
 	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 54732
 	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 37198
-	'mediawikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug T87797
+	'mediawikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // T87797
 	'otrs_wikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 61297
 	'cawikimedia' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 73394
 	'ckbwiki' => array(
@@ -11151,8 +11151,8 @@ $wgConf->settings = array(
 		'ua.vlasenko.net',                  // Ukraine interesting photography source - bug 73045
 		'*.wikiportret.nl',                 // Wikiportret - bug 72953
 		'openfashion.momu.be',              // Open Fashion Antwerp Fashion Museum (MoMu)
-		'*.commonists.org',                 // Commonists - bug T75724
-		'*.bnf.fr',                         // Bibliothèque nationale de France - bug T86699
+		'*.commonists.org',                 // Commonists - T75724
+		'*.bnf.fr',                         // Bibliothèque nationale de France - T86699
 		'www.doria.fi',                     // Doria - T87104
 		'cdm16062.contentdm.oclc.org',      // North Carolina Digital Collections - T76867
 		'pool.publicdomainproject.org',     // Public Domain Project - T91927
@@ -13937,7 +13937,7 @@ $wgConf->settings = array(
 	'eswiki' => true, // bug 54826
 	'fawiki' => true,
 	'hewiki' => true, // bug 48848
-	'hewiktionary' => true, // bug T89393
+	'hewiktionary' => true, // T89393
 	'legalteamwiki' => true, // bug 62610
 	'lvwiki' => true, // T89898
 	'mkwiki' => true,

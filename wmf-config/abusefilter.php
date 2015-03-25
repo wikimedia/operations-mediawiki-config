@@ -176,7 +176,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgAbuseFilterAvailableActions =  array( 'flag', 'throttle', 'warn', 'disallow', 'blockautopromote', 'block', 'degroup', 'tag', 'rangeblock' );
-		$wgAbuseFilterAnonBlockDuration = '7 days'; // bug T87317
+		$wgAbuseFilterAnonBlockDuration = '7 days'; // T87317
 		$wgAbuseFilterBlockDuration = 'indefinite';
 		$wgAbuseFilterNotifications = false;
 		break;
