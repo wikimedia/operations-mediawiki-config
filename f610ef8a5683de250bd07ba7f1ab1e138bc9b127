@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_dd6d9102",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 4
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 834
+      },
+      "writtenOn": "2015-03-25T17:59:30Z",
+      "side": 1,
+      "message": "\"mediawikiwiki\"",
+      "revId": "f610ef8a5683de250bd07ba7f1ab1e138bc9b127",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
