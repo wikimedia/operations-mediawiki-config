@@ -168,9 +168,11 @@ if ( !$globals ) {
 	require( "$wmfConfigDir/InitialiseSettings.php" );
 
 	$wikiTags = array();
-	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small', 'medium',
-			'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-default',
-			'echowikis', 'flow', 'commonsuploads', 'nonbetafeatures', 'group0', 'wikipedia' ) as $tag ) {
+	foreach ( array( 'private', 'fishbowl', 'special', 'closed',
+			'flaggedrevs', 'small', 'medium', 'large', 'wikimania',
+			'wikidata', 'wikidataclient', 'visualeditor-default',
+			'echowikis', 'flow', 'commonsuploads', 'nonbetafeatures',
+			'group0', 'wikipedia', 'contenttranslation' ) as $tag ) {
 		$dblist = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../$tag.dblist" ) ) );
 		if ( in_array( $wgDBname, $dblist ) ) {
 			$wikiTags[] = $tag;
