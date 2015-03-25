@@ -47,7 +47,7 @@ elseif ( $wgDBname == 'bewiki' ) {
 	$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 }
-elseif ( $wgDBname == 'bnwiki' ) { // http://bugzilla.wikimedia.org/show_bug.cgi?id=28717
+elseif ( $wgDBname == 'bnwiki' ) { // T30717
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_PROJECT );
 	# Show only on a per-page basis
 	$wgFlaggedRevsOverride = false;
@@ -304,12 +304,12 @@ elseif ( $wgDBname == 'elwikinews' ) {
 }
 
 elseif ( $wgDBname == 'enwikinews' ) {
-	$wgFlaggedRevsAutoReviewNew = false; // https://bugzilla.wikimedia.org/show_bug.cgi?id=15639
+	$wgFlaggedRevsAutoReviewNew = false; // T17639
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_CATEGORY, 100 ) );
-	$wgGroupPermissions['editor']['rollback'] = true; // https://bugzilla.wikimedia.org/show_bug.cgi?id=19815
-	$wgGroupPermissions['editor']['autoreview'] = false; // https://bugzilla.wikimedia.org/show_bug.cgi?id=23948
+	$wgGroupPermissions['editor']['rollback'] = true; // T21815
+	$wgGroupPermissions['editor']['autoreview'] = false; // T25948
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
-	$wgGroupPermissions['sysop']['autoreview'] = false; // https://bugzilla.wikimedia.org/show_bug.cgi?id=23948
+	$wgGroupPermissions['sysop']['autoreview'] = false; // T25948
 
 
 	$wgFeedbackNamespaces = array( NS_MAIN ); // per Aaron 2008-10-06
@@ -617,7 +617,7 @@ elseif ( $wgDBname == 'ruwiki' ) {
 	$wgFlaggedRevTags['accuracy']['levels'] = 3; // Is this needed?
 	$wgFlaggedRevsOverride = false;
 
-	// https://bugzilla.wikimedia.org/show_bug.cgi?id=15478
+	// T17478
 	$wgGroupPermissions['autoeditor']['autoreview'] = true;
 	$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
 
@@ -648,8 +648,7 @@ elseif ( $wgDBname == 'ruwikisource' ) {
 }
 
 elseif ( $wgDBname == 'sqwiki' ) {
-	// Bug 42782
-	// @link https://bugzilla.wikimedia.org/show_bug.cgi?id=42782
+	// T44782
 	//
 	// - Auto-promotion for registered users. When they reach 300 edits in 10 or more
 	// unique articles with a maximum of 5% reverted edits in 60 days or more since
@@ -730,7 +729,7 @@ elseif ( $wgDBname == 'vecwiki' ) {
         $wgFlaggedRevTags['accuracy']['levels'] = 3; // Is this needed?
         $wgFlaggedRevsOverride = false;
 
-        // https://bugzilla.wikimedia.org/show_bug.cgi?id=15478
+        // T17478
         $wgGroupPermissions['autoeditor']['autoreview'] = true;
         $wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
 

@@ -68,7 +68,7 @@ if ( $wmgMobileFrontend ) {
 	$wgHooks['EnterMobileMode'][] = function() {
 		global $wgCentralAuthCookieDomain;
 
-		// Hack for bug https://bugzilla.wikimedia.org/show_bug.cgi?id=47647
+		// Hack for T49647
 		if ( $wgCentralAuthCookieDomain == 'commons.wikimedia.org' ) {
 			$wgCentralAuthCookieDomain = 'commons.m.wikimedia.org';
 		} elseif ( $wgCentralAuthCookieDomain == 'meta.wikimedia.org' ) {
@@ -89,10 +89,10 @@ if ( $wmgMobileFrontend ) {
 
 	$wgMFPageActions = array_diff( $wgMFPageActions, $wmgMFRemovePageActions );
 
-	// restrict access to mobile Uploads to users with minimum editcount https://bugzilla.wikimedia.org/show_bug.cgi?id=62598
+	// restrict access to mobile Uploads to users with minimum editcount T64598
 	$wgMFUploadMinEdits = $wmgMFUploadMinEdits;
 
-	// Disable mobile uploads per https://bugzilla.wikimedia.org/62598
+	// Disable mobile uploads per T64598
 	$wgGroupPermissions['autoconfirmed']['mf-uploadbutton'] = false;
 	$wgGroupPermissions['sysop']['mf-uploadbutton'] = false;
 

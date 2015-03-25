@@ -719,7 +719,7 @@ if ( $wmgUseTimedMediaHandler ) {
 	// the popup player expects, so we pick the right WebM size in most
 	// cases.
 	//
-	// See https://bugzilla.wikimedia.org/61760
+	// See T63760
 	//
 	array_unshift( $wgEnabledTranscodeSet, WebVideoTranscode::ENC_OGV_360P );
 	array_unshift( $wgEnabledTranscodeSet, WebVideoTranscode::ENC_OGV_160P );
@@ -2985,7 +2985,7 @@ if ( file_exists( "$wmfConfigDir/ext-$wmfRealm.php" ) ) {
 	require( "$wmfConfigDir/ext-$wmfRealm.php" );
 }
 
-// https://bugzilla.wikimedia.org/show_bug.cgi?id=37211
+// T39211
 $wgUseCombinedLoginLink = false;
 
 if ( $wmgUseRC2UDP ) {
