@@ -14275,6 +14275,7 @@ $wgConf->settings = array(
 	'eowiki' => true,
 	'eswiki' => true,
 	'idwiki' => true,
+	'knwiki' => true,
 	'kywiki' => true,
 	'minwiki' => true,
 	'mswiki' => true,
