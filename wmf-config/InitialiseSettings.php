@@ -10813,11 +10813,6 @@ $wgConf->settings = array(
 	'+metawiki' => array( 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215 ), // bug 72493
 ),
 
-'wmgCollectionHierarchyDelimiter' => array(
-	'default' => false, // false == don't overwrite the extension's default settings
-	'wikibooks' => '/',
-),
-
 'wmgCollectionPortletFormats' => array(
 	'default' => array( 'rdf2latex' ),
 	// The old PDF renderer choked on Indic languages.  The
