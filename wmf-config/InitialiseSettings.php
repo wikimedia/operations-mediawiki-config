@@ -14299,6 +14299,7 @@ $wgConf->settings = array(
 'wmgEnableGeoData' => array(
 	'default' => false,
 	'wikipedia' => true,
+	'cawikibooks' => true, // T93637
 	'wikivoyage' => true,
 	'commonswiki' => true,
 	'testwiki' => true,
