@@ -238,4 +238,8 @@ if ( $wmgMobileFrontend ) {
 
 	// Turn on volunteer recruitment
 	$wgMFEnableJSConsoleRecruitment = true;
+
+	if ( $wmgUseGather ) {
+		require_once "$IP/extensions/Gather/Gather.php";
+	}
 }

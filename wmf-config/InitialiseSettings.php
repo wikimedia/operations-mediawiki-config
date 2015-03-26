@@ -12672,6 +12672,9 @@ $wgConf->settings = array(
 	'wikidatawiki' => true,
 	'testwikidatawiki' => true,
 ),
+'wmgUseGather' => array(
+	'default' => false,
+),
 'wmgEnableTextExtracts' => array(
 	'default' => true,
 ),

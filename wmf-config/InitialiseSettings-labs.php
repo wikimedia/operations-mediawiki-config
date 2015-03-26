@@ -462,8 +462,7 @@ return array(
 		'default' => false,
 	),
 	'wmgUseGather' => array(
-		'default' => false,
-		'enwiki' => true,
+		'default' => true,
 	),
 	'wmgUseGuidedTour' => array(
 		'wikidatawiki' => true,
