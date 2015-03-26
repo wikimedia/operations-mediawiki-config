@@ -5679,8 +5679,10 @@ $wgConf->settings = array(
 		103 => 'বিষয়_আলাপ',
 	),
 	'cawikibooks' => array(
+		100 => 'Portal', // T93811
+		101 => 'Portal_Discussió', // T93811
 		102 => 'Viquiprojecte',
-		103 => 'Viquiprojecte_Discussió'
+		103 => 'Viquiprojecte_Discussió',
 	),
 	'cywikibooks' => array(
 		102 => 'Silff_lyfrau',
