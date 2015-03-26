@@ -12674,6 +12674,8 @@ $wgConf->settings = array(
 ),
 'wmgUseGather' => array(
 	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
 ),
 'wmgEnableTextExtracts' => array(
 	'default' => true,
