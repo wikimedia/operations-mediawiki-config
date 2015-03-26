@@ -1573,6 +1573,7 @@ if ( $wmgUseCollection ) {
 
 	$wgCollectionFormats = array(
 		'rdf2latex' => 'PDF',
+		'rdf2text' => 'TXT',
 		// The following formats used the old mwlib renderer
 		// which was shut down Oct 3, 2014.
 		// They may eventually be reinstated when new OCG backends
