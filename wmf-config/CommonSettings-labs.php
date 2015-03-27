@@ -82,6 +82,11 @@ if ( $wmgUseParsoid ) {
 if ( $wmgUseVisualEditor ) {
 	$wgVisualEditorParsoidURL = $wmgParsoidURL; // Re-link now it's been set to a new value
 	$wgVisualEditorParsoidReportProblemURL = 'http://10.4.0.33/_bugs/'; // parsoid-spof
+
+	// RESTbase connection configuration
+	if ( $wmgVisualEditorAccessRESTbaseDirectly ) {
+		$wgVisualEditorRestbaseURL = "https://restbase-beta.wmflabs.org/$wgServerName/v1/page/html/";
+	}
 }
 
 if ( $wmgUseFlow ) {

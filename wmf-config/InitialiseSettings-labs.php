@@ -389,6 +389,9 @@ return array(
 	'wmgVisualEditorEnableTocWidget' => array(
 		'enwiki' => true,
 	),
+	'wmgVisualEditorAccessRESTbaseDirectly' => array(
+		'default' => true,
+	),
 	// ------------ BetaFeatures end -----------
 
 	'wmgUseRSSExtension' => array(
