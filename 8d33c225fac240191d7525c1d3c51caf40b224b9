@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d9c58e91",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2034,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2015-03-27T17:44:32Z",
+      "side": 1,
+      "message": "Use tabs instead of spaces",
+      "revId": "8d33c225fac240191d7525c1d3c51caf40b224b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
