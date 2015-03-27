@@ -2007,14 +2007,12 @@ if ( $wmgUseVisualEditor ) {
 	}
 
 	// RESTbase connection configuration
-	if ( $wmgVisualEditorAccessRESTbaseDirectly ) {
-		// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
-		// so use a hook
-		$wgExtensionFunctions[] = function () {
-			global $wgServerName, $wgVisualEditorRestbaseURL;
-			$wgVisualEditorRestbaseURL = "https://$wgServerName/api/rest_v1/page/html/";
-		};
-	}
+	// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
+	// so use a hook
+	$wgExtensionFunctions[] = function () {
+		global $wgServerName, $wgVisualEditorRestbaseURL;
+		$wgVisualEditorRestbaseURL = "https://$wgServerName/api/rest_v1/page/html/";
+	};
 
 	// Namespace configuration
 	if ( !$wmgVisualEditorInContentNamespaces ) {

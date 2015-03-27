@@ -935,9 +935,6 @@ function wmfLabsSettings() {
 		'wmgVisualEditorEnableTocWidget' => array(
 			'default' => false,
 		),
-		'wmgVisualEditorAccessRESTbaseDirectly' => array(
-			'default' => true,
-		),
 		// ------------ BetaFeatures end -----------
 
 		'wmgUseRSSExtension' => array(

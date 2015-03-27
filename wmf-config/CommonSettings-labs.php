@@ -99,14 +99,12 @@ if ( $wmgUseVisualEditor ) {
 	$wgVisualEditorParsoidReportProblemURL = 'http://10.4.0.33/_bugs/'; // parsoid-spof
 
 	// RESTbase connection configuration
-	if ( $wmgVisualEditorAccessRESTbaseDirectly ) {
-		// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
-		// so use a hook
-		$wgExtensionFunctions[] = function () {
-			global $wgServerName, $wgVisualEditorRestbaseURL;
-			$wgVisualEditorRestbaseURL = "http://$wgServerName/api/rest_v1/page/html/";
-		};
-	}
+	// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
+	// so use a hook
+	$wgExtensionFunctions[] = function () {
+		global $wgServerName, $wgVisualEditorRestbaseURL;
+		$wgVisualEditorRestbaseURL = "http://$wgServerName/api/rest_v1/page/html/";
+	};
 }
 
 if ( $wmgUseFlow ) {
