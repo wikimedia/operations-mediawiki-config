@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f61ad96d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2175,
+      "author": {
+        "id": 680
+      },
+      "writtenOn": "2015-03-27T15:50:18Z",
+      "side": 1,
+      "message": "Please update to be wmf23 before merging :)\n\n(If it is merged now, it\u0027d go everywhere all at once.)",
+      "revId": "b9570d71a94cf0f8e3af51d888d7e0d4e69527e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
