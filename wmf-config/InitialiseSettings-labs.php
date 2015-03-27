@@ -389,6 +389,9 @@ return array(
 	'wmgVisualEditorEnableTocWidget' => array(
 		'enwiki' => true,
 	),
+	'wmgVisualEditorNamespaces' => array(
+		'default' => array( NS_USER, NS_FILE, NS_HELP, NS_CATEGORY, NS_TOPIC, NS_TALK ), // T94282
+	),
 	'wmgVisualEditorAccessRESTbaseDirectly' => array(
 		'default' => true,
 	),
@@ -463,6 +466,9 @@ return array(
 	),
 	'-wmgFlowCluster' => array(
 		'default' => false,
+	),
+	'-wmgFlowEditorList' => array(
+		'default' => array( 'visualeditor', 'none' ),
 	),
 	'wmgUseGather' => array(
 		'default' => true,
