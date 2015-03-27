@@ -88,7 +88,7 @@ if ( $wmgUseVisualEditor ) {
 		// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
 		// so use a hook
 		$wgExtensionFunctions[] = function () {
-			global $wgServerName;
+			global $wgServerName, $wgVisualEditorRestbaseURL;
 			$wgVisualEditorRestbaseURL = "https://restbase-beta.wmflabs.org/$wgServerName/v1/page/html/";
 		};
 	}
