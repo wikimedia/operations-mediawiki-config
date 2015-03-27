@@ -12306,6 +12306,17 @@ $wgConf->settings = array(
 	'svwiktionary' => true, # Per community request
 ),
 
+// OMG the hack; this really should be wmgVisualEditorAccessRESTbaseDirectly or whatever
+'wgVisualEditorRestbaseURL' => array(
+	'default' => '',
+	'dewiki' => 'https://rest.wikimedia.org/de.wikipedia.org/v1/page/html/',
+	'enwiki' => 'https://rest.wikimedia.org/en.wikipedia.org/v1/page/html/',
+	'eswiki' => 'https://rest.wikimedia.org/es.wikipedia.org/v1/page/html/',
+	'frwiki' => 'https://rest.wikimedia.org/fr.wikipedia.org/v1/page/html/',
+	'itwiki' => 'https://rest.wikimedia.org/it.wikipedia.org/v1/page/html/',
+	'ptwiki' => 'https://rest.wikimedia.org/pt.wikipedia.org/v1/page/html/',
+),
+
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
 // NS_VISUALEDITOR is added in CommonSettings.php if wmgUseVisualEditorNamespace is true
 'wmgVisualEditorNamespaces' => array(
