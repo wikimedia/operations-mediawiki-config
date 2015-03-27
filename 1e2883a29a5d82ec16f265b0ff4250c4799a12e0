@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_9ce38931",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12309,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-03-27T05:09:48Z",
+      "side": 1,
+      "message": "Gosh, that\u0027s very helpful, isn\u0027t it.",
+      "parentUuid": "6e7c4fa4_1ca219fa",
+      "revId": "1e2883a29a5d82ec16f265b0ff4250c4799a12e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_9c6629e9",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "6e7c4fa4_bcde856e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12310,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-03-27T05:09:48Z",
+      "side": 1,
+      "message": "Yes, hence [WIP]. :-)",
+      "parentUuid": "6e7c4fa4_9c6629e9",
+      "revId": "1e2883a29a5d82ec16f265b0ff4250c4799a12e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_bc61a5d1",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2015-03-27T04:55:51Z",
       "side": 1,
       "message": "The documentation says to use false to disable, not empty string (although empty string will work)",
+      "revId": "1e2883a29a5d82ec16f265b0ff4250c4799a12e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_5ce9710e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12311,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-03-27T05:09:48Z",
+      "side": 1,
+      "message": "Sure. Fixed anyway.",
+      "parentUuid": "6e7c4fa4_bc61a5d1",
       "revId": "1e2883a29a5d82ec16f265b0ff4250c4799a12e0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
