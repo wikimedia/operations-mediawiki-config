@@ -97,7 +97,11 @@ $wmgMonologConfig =  array(
 			'args' => array( $wgDebugLogFile, true ),
 			'formatter' => 'legacy',
 		),
-		'logstash' => wmMonologSyslogConfigFactory( \Monolog\Logger::DEBUG ),
+		'udp2log' => array(
+			'class' => 'MWLoggerMonologHandler',
+			'args' => array( "udp://{$wmfUdp2logDest}/{channel}", true ),
+			'formatter' => 'legacy',
+		),
 	),
 
 	'formatters' => array(
@@ -114,9 +118,8 @@ $wmgMonologConfig =  array(
 // Add logging channels defined in $wgDebugLogGroups
 foreach ( $wgDebugLogGroups as $group => $dest ) {
 	$sample = false;
-	$level = false;
+	$level = 'debug';
 	$sendToLogstash = true;
-	$logstashHandler = 'logstash';
 	if ( is_array( $dest ) ) {
 		// NOTE: sampled logs are not guaranteed to store the same events in
 		// logstash and via udp2log since the two event handlers independently
@@ -128,40 +131,42 @@ foreach ( $wgDebugLogGroups as $group => $dest ) {
 	}
 
 	if ( $sendToLogstash ) {
-		if ( $level !== false ) {
-			$logstashHandler = "filtered-{$group}";
+		$logstashHandler = "logstash-{$level}";
+		if ( !isset( $wmgMonologConfig['handlers'][$logstashHandler] ) ) {
+			// Register handler that will only pass events of the given
+			// log level
 			$wmgMonologConfig['handlers'][$logstashHandler] =
 				wmMonologSyslogConfigFactory( $level );
 		}
 
 		if ( $sample === false ) {
-			$handlers = array( $group, $logstashHandler );
+			$handlers = array( 'udp2log', $logstashHandler );
 		} else {
-			$wmgMonologConfig['handlers']["sampled-{$group}"] = array(
-				'class' => 'MWLoggerMonologSamplingHandler',
-				'args' => array(
-					function() use ( $logstashHandler ) {
-						return MWLogger::getProvider()->getHandler(
-							$logstashHandler
-						);
-					},
-					$sample,
-				),
-			);
-			$handlers = array( $group, "sampled-{$group}" );
+			$sampledHandler = "{$logstashHandler}-sampled-{$sample}";
+			if ( !isset( $wmgMonologConfig['handlers'][$sampledHandler] ) ) {
+				// Register a handler that will sample the event stream and
+				// pass events on to $logstashHandler for storage
+				$wmgMonologConfig['handlers'][$sampledHandler] = array(
+					'class' => '\\Monolog\\Handler\\SamplingHandler',
+					'args' => array(
+						function () use ( $logstashHandler ) {
+							return MWLogger::getProvider()->getHandler(
+								$logstashHandler
+							);
+						},
+						$sample,
+					),
+				);
+			}
+			$handlers = array( 'udp2log', $sampledHandler );
 		}
 	} else {
-		$handlers = array( $group );
+		$handlers = array( 'udp2log' );
 	}
 
 	$wmgMonologConfig['loggers'][$group] = array(
 		'handlers' => $handlers,
 		'processors' => array( 'wiki', 'psr', 'pid', 'uid', 'web' ),
-	);
-	$wmgMonologConfig['handlers'][$group] = array(
-		'class' => 'MWLoggerMonologHandler',
-		'args' => array( $dest, true ),
-		'formatter' => 'legacy',
 	);
 }
 
