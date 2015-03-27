@@ -12312,6 +12312,7 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
+	'enwiki' => true,
 ),
 
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
