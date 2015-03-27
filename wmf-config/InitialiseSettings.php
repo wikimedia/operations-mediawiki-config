@@ -12310,6 +12310,7 @@ $wgConf->settings = array(
 'wmgVisualEditorAccessRESTbaseDirectly' => array(
 	'default' => false,
 	'group0' => true,
+	'enwiki' => true,
 ),
 
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
