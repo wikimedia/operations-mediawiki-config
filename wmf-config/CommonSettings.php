@@ -2031,9 +2031,7 @@ if ( $wmgUseVisualEditor ) {
 	}
 
 	// RESTbase connection configuration
-    if ( $wmgVisualEditorAccessRESTbaseDirectly ) {
-        $wgVisualEditorRestbaseURL = "https://rest.wikimedia.org/$wgServerName/v1/page/html/";
-    }
+    $wgVisualEditorRestbaseURL = "https://rest.wikimedia.org/$wgServerName/v1/page/html/";
 
 	// Namespace configuration
 	if ( !$wmgVisualEditorInContentNamespaces ) {

@@ -12306,13 +12306,6 @@ $wgConf->settings = array(
 	'svwiktionary' => true, # Per community request
 ),
 
-// Whether VisualEditor should bypass the MediaWiki layer and contact RESTbase directly for speed
-'wmgVisualEditorAccessRESTbaseDirectly' => array(
-	'default' => false,
-	'group0' => true,
-	'wikipedia' => true,
-),
-
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
 // NS_VISUALEDITOR is added in CommonSettings.php if wmgUseVisualEditorNamespace is true
 'wmgVisualEditorNamespaces' => array(
