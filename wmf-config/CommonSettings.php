@@ -2030,6 +2030,11 @@ if ( $wmgUseVisualEditor ) {
 		$wgVisualEditorParsoidForwardCookies = true;
 	}
 
+	// RESTbase connection configuration
+	if ( $wmgVisualEditorAccessRESTbaseDirectly ) {
+		$wgVisualEditorRestbaseURL = "https://rest.wikimedia.org/$wgServerName/v1/page/html/";
+	}
+
 	// Namespace configuration
 	if ( !$wmgVisualEditorInContentNamespaces ) {
 		$wgVisualEditorNamespaces = array(); // Wipe out default set by VisualEditor.php
