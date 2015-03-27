@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1ca219fa",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12309,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2015-03-27T04:55:51Z",
+      "side": 1,
+      "message": "I\u0027d recommend something like:\n\n    if ( $wmgVisualEditorAccessRESTbaseDirectly ) {\n        $wgVisualEditorRestbaseURL \u003d \"https://rest.wikimedia.org/$wgServerName/v1/page/html/\";\n    }\n\n(I didn\u0027t know about $wgServerName, I happened to find it in DefaultSettings.php just now when looking for something to use here.)",
+      "revId": "1e2883a29a5d82ec16f265b0ff4250c4799a12e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_9c6629e9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12310,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2015-03-27T04:55:51Z",
+      "side": 1,
+      "message": "Setting wg vars directly doesn\u0027t work, does it? They get set early on and then overridden when require_once( VisualEditor.php ) occurs in response to $wmgUseVisualEditor being true, that\u0027s why we use $wmg variables for everything. Or is this issue fixed now with extensions.json?",
+      "revId": "1e2883a29a5d82ec16f265b0ff4250c4799a12e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_bc61a5d1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12311,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2015-03-27T04:55:51Z",
+      "side": 1,
+      "message": "The documentation says to use false to disable, not empty string (although empty string will work)",
+      "revId": "1e2883a29a5d82ec16f265b0ff4250c4799a12e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
