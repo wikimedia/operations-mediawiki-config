@@ -85,7 +85,12 @@ if ( $wmgUseVisualEditor ) {
 
 	// RESTbase connection configuration
 	if ( $wmgVisualEditorAccessRESTbaseDirectly ) {
-		$wgVisualEditorRestbaseURL = "https://restbase-beta.wmflabs.org/$wgServerName/v1/page/html/";
+		// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
+		// so use a hook
+		$wgHooks['SetupAfterCache'][] = function () {
+			global $wgServerName;
+			$wgVisualEditorRestbaseURL = "https://restbase-beta.wmflabs.org/$wgServerName/v1/page/html/";
+		};
 	}
 }
 
