@@ -51,6 +51,24 @@
       "revId": "b9570d71a94cf0f8e3af51d888d7e0d4e69527e6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_9b5706f9",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2175,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2015-03-28T21:28:17Z",
+      "side": 1,
+      "message": "In quick testing, this will work (PHP can figure out and appropriately resolve the comparison). But I agree that wfUseMW is at least worth investigating.",
+      "parentUuid": "6e7c4fa4_405dfbee",
+      "revId": "b9570d71a94cf0f8e3af51d888d7e0d4e69527e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
