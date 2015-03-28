@@ -110,7 +110,7 @@ if ( $wmgUseMonologLogger ) {
 				$handlers = array( $group, $logstashHandler );
 			} else {
 				$wmgMonologConfig['handlers']["sampled-{$group}"] = array(
-					'class' => 'MWLoggerMonologSamplingHandler',
+					'class' => '\\Monolog\\Handler\\SamplingHandler',
 					'args' => array(
 						function () use ( $logstashHandler ) {
 							return MWLogger::getProvider()->getHandler(
