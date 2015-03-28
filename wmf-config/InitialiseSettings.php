@@ -11159,6 +11159,8 @@ $wgConf->settings = array(
 		'pool.publicdomainproject.org',     // Public Domain Project - T91927
 		'*.nordiskamuseet.se',              // Nordiska museet - T93104
 		'mapserver.library.wur.nl',         // Wageningen University library map server - T91630
+		'*.loc.gov',                        // Library of Congress - T94017
+		'socrates.leidenuniv.nl',           // Leiden University - T93757
 	),
 ),
 
@@ -12870,6 +12872,7 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 ),
 
+// Formerly known as $wgMFAnonymousEditing
 'wmgMFEditorOptions' => array(
 	'default' => false,
 	'itwiki' => array(
@@ -13582,7 +13585,6 @@ $wgConf->settings = array(
 
 'wmgUseBounceHandler' => array(
 	'default' => true,
-	'wikipedia' => false,
 ),
 
 'wmgUseTranslate' => array(
