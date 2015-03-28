@@ -11160,6 +11160,7 @@ $wgConf->settings = array(
 		'*.nordiskamuseet.se',              // Nordiska museet - T93104
 		'mapserver.library.wur.nl',         // Wageningen University library map server - T91630
 		'*.loc.gov',                        // Library of Congress - T94017
+		'socrates.leidenuniv.nl',           // Leiden University - T93757
 	),
 ),
 
