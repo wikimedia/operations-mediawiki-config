@@ -16,6 +16,23 @@
       "revId": "b9570d71a94cf0f8e3af51d888d7e0d4e69527e6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_804f9338",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2175,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-03-28T08:41:14Z",
+      "side": 1,
+      "message": "Actually, thinking about this a bit more, I doubt this would work as expected because it\u0027s doing a weird comparsion on strings.",
+      "revId": "b9570d71a94cf0f8e3af51d888d7e0d4e69527e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
