@@ -87,6 +87,24 @@
       "revId": "b9570d71a94cf0f8e3af51d888d7e0d4e69527e6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_fbaaba67",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2175,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-03-29T03:49:42Z",
+      "side": 1,
+      "message": "I think the cleanest and easiest way would be to do what we always do; doing it through tags in InitialiseSettings.php and update it when required.",
+      "parentUuid": "6e7c4fa4_5ba5eefe",
+      "revId": "b9570d71a94cf0f8e3af51d888d7e0d4e69527e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
