@@ -14199,10 +14199,7 @@ $wgConf->settings = array(
 ),
 // Enable editing other users posts by autoconfirmed
 'wmgFlowAllowAutoconfirmedEdit' => array(
-	'default' => false,
-	'mediawikiwiki' => true,
-	'enwiki' => true,
-	'ruwiki' => true,
+	'default' => true,
 ),
 // Use separate database on extension1 cluster for all non-private wikis.
 'wmgFlowDefaultWikiDb' => array(
