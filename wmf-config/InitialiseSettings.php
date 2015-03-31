@@ -1073,6 +1073,16 @@ $wgConf->settings = array(
 ),
 # @} end of wgLogo
 
+# wgLogoHD @{
+// Alternate logos for high-resolution displays.
+'wgLogoHD' => array(
+	'enwiki' => array(
+		'1.5x' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/204px-Wikipedia-logo-v2-en.svg.png',
+		'2x' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/270px-Wikipedia-logo-v2-en.svg.png',
+	),
+),
+# @} end of wgLogoHD
+
 # wgEnableUploads @{
 // Wikis which have uploading disabled
 // If you list a wiki as false here, make sure to make an entry for $wgUploadNavigationUrl as well
