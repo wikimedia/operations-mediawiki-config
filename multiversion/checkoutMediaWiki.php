@@ -82,12 +82,6 @@ function checkoutMediaWiki() {
 				}
 			}
 		}
-
-		passthru( 'git config alias.up "pull --ff-only"', $ret );
-		if( $ret ) {
-			# Don't exit, no big deal
-			print "Error configuring 'up' alias\n";
-		}
 	} else {
 		echo "MediaWiki already checked out at $destIP\n";
 	}
