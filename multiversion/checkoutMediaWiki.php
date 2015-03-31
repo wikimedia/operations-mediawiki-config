@@ -59,7 +59,8 @@ function checkoutMediaWiki() {
 			print "Error running setting autosetuprebase\n";
 		}
 
-		passthru( 'git checkout ' . escapeshellarg( "wmf/$gitVersion" ), $ret );
+		$checkoutVersion = $gitVersion == 'master' ? $gitVersion : "wmf/$gitVersion";
+		passthru( 'git checkout ' . escapeshellarg( $checkoutVersion ), $ret );
 		if ( $ret ) {
 			print "Error checking out branch\n";
 			exit( 1 );
