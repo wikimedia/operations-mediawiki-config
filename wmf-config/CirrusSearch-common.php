@@ -14,7 +14,6 @@
 require_once( "$IP/extensions/Elastica/Elastica.php" );
 require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
 $wgSearchType = 'CirrusSearch';
-$wgCirrusSearchShowNowUsing = true;
 
 if ( $wmgUseClusterJobqueue ) {
 	# The secondary update job has a delay of a few seconds to make sure that Elasticsearch
