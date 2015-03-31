@@ -4058,6 +4058,7 @@ $wgConf->settings = array(
 	'enwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // bug 55432
 	'hewiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), //bug 58207
 	'huwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // bug 72055
+	'lvwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), // T92645
 	'plwiki' => array( '', 'autoconfirmed', 'editor', 'sysop', 'superprotect' ), // bug 46990
 	'ptwiki' => array( '', 'autoconfirmed', 'autoreviewer', 'sysop', 'superprotect' ), // bug 39652
 	'rowiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // bug 61172
