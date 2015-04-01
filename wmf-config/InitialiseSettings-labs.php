@@ -501,12 +501,6 @@ return array(
 		'default' => '//c357be0613e24340a96aeaa28dde08ad@sentry-beta.wmflabs.org/4',
 	),
 
-	// Already true in production for some wikis, bug 49193
-	'wgContentHandlerUseDB' => array(
-		'default' => false,
-		'enwiki' => true,
-	),
-
 	// Thumbnail prerendering at upload time
 	'wgUploadThumbnailRenderMap' => array(
 		'default' => array( 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ),
