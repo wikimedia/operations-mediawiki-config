@@ -64,7 +64,7 @@ $wgOpenStackManagerDNSOptions = array(
 $wgOpenStackManagerPuppetOptions = array(
 	'enabled' => true,
 	'defaultclasses' => array( 'base', 'role::labs::instance' ),
-	'defaultvariables' => array( 'realm' => 'labs' ),
+	'defaultvariables' => array( 'realm' => 'labs', 'use_dnsmasq' => 'true' ),
 );
 $wgOpenStackManagerInstanceUserData = array(
 	'cloud-config' => array(
