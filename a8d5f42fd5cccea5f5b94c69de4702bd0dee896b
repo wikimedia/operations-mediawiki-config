@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_62cfbab4",
+        "filename": "multiversion/checkoutMediaWiki.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-04-01T22:18:29Z",
+      "side": 1,
+      "message": "Should this be after the chdir back to destIP? It looks like vendor would end up in mediawiki/extensions/.",
+      "revId": "a8d5f42fd5cccea5f5b94c69de4702bd0dee896b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
