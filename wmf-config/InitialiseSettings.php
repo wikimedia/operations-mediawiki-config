@@ -12311,7 +12311,9 @@ $wgConf->settings = array(
 'wmgVisualEditorNamespaces' => array(
 	'default' => array( NS_USER, NS_FILE, NS_HELP, NS_CATEGORY ),
 	// Test wikis
-	'+mediawikiwiki' => array( NS_PROJECT, 100 /* Manual */, 102 /* Extension */, 104 /* API */, 106 /* Skin */ ), // T50430
+	'+mediawikiwiki' => array( NS_PROJECT, 100 /* Manual */, 102 /* Extension */, 104 /* API */, 106 /* Skin */, NS_TALK ), // T50430; see T94282
+	'+testwiki' => array( NS_TALK ), // For Flow; see T94282
+	'+test2wiki' => array( NS_TALK ), // For Flow; see T94282
 	// Special wikis
 	'+commonswiki' => array( 100 /* Creator */, 106 /* Institution */ ), // T67067
 	'+metawiki' => array( 200 /* Grants */, 202 /* Research */, 204 /* Participation */, 206, 208 /* Programs */ ),
