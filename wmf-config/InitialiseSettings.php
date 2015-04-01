@@ -14117,6 +14117,7 @@ $wgConf->settings = array(
 'wmgFlowEditorList' => array(
 	// Disable VE inside flow, leaving only the wikitext editor
 	'default' => array( 'none' ),
+	'testwiki' => array( 'visualeditor', 'none' ),
 ),
 'wmgFlowOccupyNamespaces' => array(
 	'default' => array(),
