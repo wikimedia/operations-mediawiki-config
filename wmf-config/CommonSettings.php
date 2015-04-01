@@ -3028,6 +3028,9 @@ $wgGroupPermissions['confirmed']['skipcaptcha'] = true;
 
 $wgImgAuthDetails = true;
 
+// Enable gather-hidelist for global user groups - JRA 4-1-2015 T94652
+$wgAvailableRights[] = 'gather-hidelist';
+
 if ( file_exists( "$wmfConfigDir/extension-list-$wmfVersionNumber" ) ) {
 	// Version specific extension-list files
 	//
