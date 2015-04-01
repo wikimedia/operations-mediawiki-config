@@ -16,6 +16,24 @@
       "revId": "a8d5f42fd5cccea5f5b94c69de4702bd0dee896b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_22c54290",
+        "filename": "multiversion/checkoutMediaWiki.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2015-04-01T22:19:02Z",
+      "side": 1,
+      "message": "Yes, you\u0027re right. This is all still very crappy.",
+      "parentUuid": "6e7c4fa4_62cfbab4",
+      "revId": "a8d5f42fd5cccea5f5b94c69de4702bd0dee896b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
