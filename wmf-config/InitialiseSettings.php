@@ -12900,10 +12900,8 @@ $wgConf->settings = array(
 
 // Formerly known as $wgMFAnonymousEditing
 'wmgMFEditorOptions' => array(
-	'default' => false,
-	'itwiki' => array(
-		'anonymousEditing' => true, // bug 72541, T85317
-	),
+	'default' => array( 'anonymousEditing' => true, ) // T93210
+	'kowiki' => false, // T94388
 ),
 
 'wgExtraGenderNamespaces' => array(
