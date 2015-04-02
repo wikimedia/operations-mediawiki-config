@@ -2176,11 +2176,6 @@ if ( $wmgEnableTextExtracts ) {
 	$wgExtractsExtendOpenSearchXml = $wmgExtractsExtendOpenSearchXml;
 }
 
-# MUST be after mobile.php to override $wmgMFEditorOptions
-if ( $wgVersion >= '1.25wmf23' ) {
-    $wgMFEditorOptions['anonymousEditing'] = true; // T93210
-}
-
 if ( $wmgUseSubPageList3 ) {
 	include( "$IP/extensions/SubPageList3/SubPageList3.php" );
 }
