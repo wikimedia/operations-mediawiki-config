@@ -23,7 +23,6 @@ if ( $wgDBname == 'enwiki' ) {
 	);
 }
 
-$wgCirrusSearchAllFields = array( 'build' => true, 'use' => true );
 $wgCirrusSearchWikimediaExtraPlugin = array(
 	'regex' => array(
 		'build',
