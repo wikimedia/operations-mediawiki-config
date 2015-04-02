@@ -6625,6 +6625,7 @@ $wgConf->settings = array(
 	'+frrwiki' => array( 102 => 1, 104 => 1, 106 => 1 ), // bug 38023
 	'+frwikisource' => array( 102 => 1, 112 => 1 ),
 	'+frwikiversity' => array( 104 => 1, 106 => 1, 108 => 1 ),
+	'+frwiktionary' => array( 100 => 1, 106 => 1, ), // T94698
 	'+hewikisource' => array( 108 => 1, 112 => 1 ),
 	'+hewiktionary' => array( 14 => 1 ),
 	'+hrwikisource' => array( 100 => 1, 104 => 1 ),
