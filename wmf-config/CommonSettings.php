@@ -1959,6 +1959,7 @@ if ( $wmgUseImageMetrics ) {
 
 if ( $wmgUsePopups ) {
 	require_once( "$IP/extensions/Popups/Popups.php" );
+	$wgPopupsSurveyLink = 'https://wikimedia.qualtrics.com/SE/?SID=SV_d1irF0VbOxZREvr';
 }
 
 if ( $wmgUseVectorBeta ) {
