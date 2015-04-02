@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_2baaf668",
+        "filename": "wmf-config/PoolCounterSettings-common.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2015-04-02T20:09:57Z",
+      "side": 1,
+      "message": "What happens on timeout? Can it use older cache versions?",
+      "revId": "6eb419720a5fabb699354ccbd8f1f524437b5980",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
