@@ -9966,6 +9966,7 @@ $wgConf->settings = array(
 	'bnwikibooks' => false,
 	'bdwikimedia' => false,
 	'bpywiki' => false,
+	'cawikimedia' => false, // T94346
 	'cswiktionary' => false,
 	'donatewiki' => false,
 	'enwikibooks' => false,
