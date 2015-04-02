@@ -12,15 +12,6 @@ $wgCirrusSearchServers = array(
 	'deployment-elastic08',
 );
 
-$wgCirrusSearchBackup['backups'] = array(
-	'type' => 'swift',
-	'swift_url' => 'http://deployment-saio:8080/auth/v1.0',
-	'swift_container' => 'global-data-elastic-backups',
-	'swift_username' => 'test:tester',
-	'swift_password' => 'testing',
-	'max_snapshot_bytes_per_sec' => '10mb',
-);
-
 if ( $wgDBname == 'enwiki' ) {
 	$wgCirrusSearchInterwikiSources = array(
 		'wiktionary' => 'enwiktionary',
