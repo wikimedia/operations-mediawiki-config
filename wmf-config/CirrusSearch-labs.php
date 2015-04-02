@@ -23,13 +23,6 @@ if ( $wgDBname == 'enwiki' ) {
 	);
 }
 
-$wgCirrusSearchWikimediaExtraPlugin = array(
-	'regex' => array(
-		'build',
-		'use',
-	),
-);
-
 # We don't have enough nodes to support these settings in beta so just turn
 # them off.
 $wgCirrusSearchMaxShardsPerNode = array();
