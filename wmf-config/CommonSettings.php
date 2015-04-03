@@ -456,7 +456,8 @@ if ( $wmgUseClusterSquid ) {
 	require( getRealmSpecificFilename( "$wmfConfigDir/squid.php" ) );
 }
 
-if( $wmfRealm == 'production' ) {
+if ( $wmfRealm === 'production' ) {
+	$wgStatsdServer = 'statsd.eqiad.wmnet:9999';
 	$wgUDPProfilerHost = 'statsd.eqiad.wmnet';
 	$wgUDPProfilerPort = 8125;
 	$wgAggregateStatsID = $wgVersion;
