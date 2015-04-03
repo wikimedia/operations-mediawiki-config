@@ -14318,8 +14318,9 @@ $wgConf->settings = array(
 	'dawiki' => true,
 	'eowiki' => true,
 	'eswiki' => true,
-	'idwiki' => true,
 	'frwiki' => true,
+	'guwiki' => true,
+	'idwiki' => true,
 	'knwiki' => true,
 	'kywiki' => true,
 	'minwiki' => true,
@@ -14334,6 +14335,7 @@ $wgConf->settings = array(
 	'svwiki' => true,
 	'ukwiki' => true,
 	'uzwiki' => true,
+	'viwiki' => true,
 	'testwiki' => true,
 ),
 
