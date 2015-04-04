@@ -268,7 +268,7 @@ $wmgAddWikiNotify = "newprojects@lists.wikimedia.org";
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
-// Bug 27320: skip MessageBlobStore::clear(); handle via refreshMessageBlobs.php instead
+// Bug T29320: skip MessageBlobStore::clear(); handle via refreshMessageBlobs.php instead
 $wgHooks['LocalisationCacheRecache'][] = function( $cache, $code, &$allData, &$purgeBlobs = true ) {
 	$purgeBlobs = false;
 	return true;
@@ -1338,7 +1338,7 @@ if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 // taking it live 2006-12-15 brion
 if ( $wmgUseDismissableSiteNotice ) {
 	require( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
-	$wgDismissableSiteNoticeForAnons = true; // Bug 57732
+	$wgDismissableSiteNoticeForAnons = true; // Bug T59732
 }
 $wgMajorSiteNoticeID = '2';
 
@@ -1495,7 +1495,7 @@ if ( $wmgUseCentralNotice ) {
 	// Enable the CentralNotice/Translate integration
 	$wgNoticeUseTranslateExtension = true;
 
-	// Bug 49905
+	// Bug T51905
 	$wgNoticeUseLanguageConversion = true;
 
 	// *** Hide Cookies ***
@@ -1513,7 +1513,7 @@ if ( $wmgUseCentralNotice ) {
 		'donate' => 21600000, // 250 days
 	);
 
-	// Bug 16821
+	// Bug T18821
 	// Updates made here also need to be reflected in
 	// wikimediafoundation.org/wiki/Template:HideBanners
 	$wgNoticeHideUrls = array(
@@ -1553,7 +1553,7 @@ if ( $wgDBname == 'enwiki' ) {
 		return true;
 	};
 
-	// Bug 57569
+	// Bug T59569
 	//
 	// If it's an anonymous user creating a page in the English Wikipedia Draft
 	// namespace, tell TitleQuickPermissions to abort the normal checkQuickPermissions
@@ -2058,12 +2058,12 @@ if ( $wmgUseVisualEditor ) {
 	// User access configuration
 	if ( $wmgVisualEditorDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
-		$wgHiddenPrefs[] = 'visualeditor-enable'; // Bug 48666
+		$wgHiddenPrefs[] = 'visualeditor-enable'; // Bug T50666
 	} else {
 		// Only show the beta-disable preference if the wiki is in 'beta'.
 		$wgHiddenPrefs[] = 'visualeditor-betatempdisable';
 	}
-	// Bug 50000 - to remove once roll-out is complete.
+	// Bug T52000 - to remove once roll-out is complete.
 	if ( $wmgVisualEditorDisableForAnons ) {
 		$wgVisualEditorDisableForAnons = true;
 	}
@@ -2678,7 +2678,7 @@ if ( $wmgUseEventLogging ) {
 		$wgEventLoggingSchemaApiUri = 'http://meta.wikimedia.org/w/api.php';
 	}
 	if ( $wgEventLoggingDBname === $wgDBname ) {
-		// Bug 45031
+		// Bug T47031
 		$wgExtraNamespaces[470] = 'Schema';
 		$wgExtraNamespaces[471] = 'Schema_talk';
 

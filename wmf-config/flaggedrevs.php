@@ -82,7 +82,7 @@ elseif ( $wgDBname == 'bnwiki' ) { // T30717
 
 elseif ( $wgDBname == 'cewiki' ) { // based on ruwiki settings
 
-	// Bug 56408
+	// Bug T58408
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 );
 
 	$wgFlaggedRevTags['accuracy']['levels'] = 3; // Is this needed?
@@ -166,8 +166,8 @@ elseif ( $wgDBname == 'test2wiki' ) {
 }
 
 elseif ( $wgDBname == 'cawikinews' ) {
-	$wgGroupPermissions['sysop']['stablesettings'] = true; // Bug 34135
-	$wgFlaggedRevsNamespaces[] = 102; // Bug 34135
+	$wgGroupPermissions['sysop']['stablesettings'] = true; // Bug T36135
+	$wgFlaggedRevsNamespaces[] = 102; // Bug T36135
 }
 
 // New deployment 2008-05-03
@@ -208,7 +208,7 @@ elseif ( $wgDBname == 'dewiktionary' ) {
 	$wgFlaggedRevTags['accuracy']['levels'] = 1;
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 102, 104, 106, 108 ) ); // T67316 and T76657
 
-	$wgFlaggedRevsAutoconfirm = array( // Bug 44103
+	$wgFlaggedRevsAutoconfirm = array( // Bug T46103
 		'days'                => 60,
 		'totalContentEdits'   => 250,
 		'totalCheckedEdits'   => 50,
@@ -687,15 +687,15 @@ elseif ( $wgDBname == 'sqwiki' ) {
 }
 
 elseif ( $wgDBname == 'trwiki' ) {
-	unset( $wgGroupPermissions['reviewer'] ); // Bug 38690
-	$wgAddGroups['bureaucrat'] = array_diff( $wgAddGroups['bureaucrat'], array( 'reviewer' ) ); // Bug 38690
-	$wgRemoveGroups['bureaucrat'] = array_diff( $wgRemoveGroups['bureaucrat'], array( 'reviewer' ) ); // Bug 38690
+	unset( $wgGroupPermissions['reviewer'] ); // Bug T40690
+	$wgAddGroups['bureaucrat'] = array_diff( $wgAddGroups['bureaucrat'], array( 'reviewer' ) ); // Bug T40690
+	$wgRemoveGroups['bureaucrat'] = array_diff( $wgRemoveGroups['bureaucrat'], array( 'reviewer' ) ); // Bug T40690
 
-	unset( $wgGroupPermissions['editor'] ); // Bug 38690
-	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'editor' ) ); // Bug 38690
-	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'editor' ) ); // Bug 38690
+	unset( $wgGroupPermissions['editor'] ); // Bug T40690
+	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'editor' ) ); // Bug T40690
+	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'editor' ) ); // Bug T40690
 
-	// Bug 44587:
+	// Bug T46587:
 	$wgFlaggedRevsNamespaces[] = 100 /* NS_PORTAL */;
 	$wgFlaggedRevsNamespaces[] = NS_HELP;
 }

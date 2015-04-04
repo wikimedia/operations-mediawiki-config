@@ -213,7 +213,7 @@ return array(
 		'default' => true,
 	),
 
-	# Bug 37852
+	# Bug T39852
 	'wmgUseWikimediaShopLink' => array(
 		'default'    => false,
 		'enwiki'     => true,

@@ -13,7 +13,7 @@ require_once( "$IP/extensions/Wikidata/Wikidata.php" );
 $wgWBSharedCacheKey = '-' . $wmgWikibaseCachePrefix;
 
 if ( defined( 'HHVM_VERSION' ) ) {
-	// Split the cache up for hhvm. Bug 71461
+	// Split the cache up for hhvm. Bug T73461
 	$wgWBSharedCacheKey .= '-hhvm';
 }
 
@@ -93,7 +93,7 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['clientDbList']
 	);
 
-	// Bug 51637 and 46953
+	// Bug T53637 and 46953
 	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
 
 	$wgCacheEpoch = '20150224222223';
@@ -104,7 +104,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgPropertySuggesterMinProbability = 0.069;
 
-	// Bug 70346
+	// Bug T72346
 	$wgPropertySuggesterDeprecatedIds = array(
 		107, // (OBSOLETE) main type (GND)
 		143, // imported from

@@ -234,8 +234,8 @@ $wgConf->settings = array(
 	'cawikiquote' => 'Europe/Berlin',
 	'cawikisource' => 'Europe/Berlin',
 	'cawikinews' => 'Europe/Berlin',
-	'cswiki' => 'Europe/Prague', // Bug 71902
-	'cswikinews' => 'Europe/Prague', // Bug 71902
+	'cswiki' => 'Europe/Prague', // Bug T73902
+	'cswikinews' => 'Europe/Prague', // Bug T73902
 	'csbwiki' => 'Europe/Warsaw',
 	'csbwiktionary' => 'Europe/Warsaw',
 	'dawiki' => 'Europe/Berlin',
@@ -704,122 +704,122 @@ $wgConf->settings = array(
 
 	// Wiktionary
 	'afwiktionary' => '$stdlogo',
-	'amwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/01/Wiktionary-logo-am.svg/128px-Wiktionary-logo-am.svg.png', // Bug 43240
+	'amwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/01/Wiktionary-logo-am.svg/128px-Wiktionary-logo-am.svg.png', // Bug T45240
 	'anwiktionary' => '$stdlogo',
 	'angwiktionary' => '$stdlogo',
 	'arwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/be/WiktionaryAr.svg/128px-WiktionaryAr.svg.png',
 	'astwiktionary' => '$stdlogo',
-	'azwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/1/15/Wiktionary-logo-az.svg/128px-Wiktionary-logo-az.svg.png', // Bug 43240
-	'bewiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Wiktionary-logo-be.svg/128px-Wiktionary-logo-be.svg.png', // Bug 43240
+	'azwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/1/15/Wiktionary-logo-az.svg/128px-Wiktionary-logo-az.svg.png', // Bug T45240
+	'bewiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Wiktionary-logo-be.svg/128px-Wiktionary-logo-be.svg.png', // Bug T45240
 	'bgwiktionary' => '$stdlogo',
-	'bnwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Wiktionary-logo-bn.svg/128px-Wiktionary-logo-bn.svg.png', // Bug 43240
+	'bnwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Wiktionary-logo-bn.svg/128px-Wiktionary-logo-bn.svg.png', // Bug T45240
 	'brwiktionary' => '$stdlogo',
-	'bswiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Wiktionary-logo-bs.svg/128px-Wiktionary-logo-bs.svg.png', // Bug 43240
+	'bswiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Wiktionary-logo-bs.svg/128px-Wiktionary-logo-bs.svg.png', // Bug T45240
 	'cawiktionary' => '$stdlogo',
-	'cowiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Wiktionary-logo-co.svg/128px-Wiktionary-logo-co.svg.png', // Bug 43240
+	'cowiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Wiktionary-logo-co.svg/128px-Wiktionary-logo-co.svg.png', // Bug T45240
 	'cswiktionary' => '$stdlogo',
-	'csbwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/3/37/Wiktionary-logo-csb.svg/128px-Wiktionary-logo-csb.svg.png', // Bug 43240
+	'csbwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/3/37/Wiktionary-logo-csb.svg/128px-Wiktionary-logo-csb.svg.png', // Bug T45240
 	'cywiktionary' => '$stdlogo',
-	'dawiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/6/69/Wiktionary-logo-da.svg/128px-Wiktionary-logo-da.svg.png', // Bug 43240
+	'dawiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/6/69/Wiktionary-logo-da.svg/128px-Wiktionary-logo-da.svg.png', // Bug T45240
 	'dewiktionary' => '$stdlogo',
-	'diqwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/82/Wiktionary-logo-diq.svg/128px-Wiktionary-logo-diq.svg.png', // Bug 43240
+	'diqwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/82/Wiktionary-logo-diq.svg/128px-Wiktionary-logo-diq.svg.png', // Bug T45240
 	'elwiktionary' => '$stdlogo',
 	'enwiktionary' => '$stdlogo',
-	'eowiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/01/Wiktionary-logo-eo.svg/128px-Wiktionary-logo-eo.svg.png', // Bug 43240
+	'eowiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/01/Wiktionary-logo-eo.svg/128px-Wiktionary-logo-eo.svg.png', // Bug T45240
 	'eswiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/c3/WiktionaryEs.svg/128px-WiktionaryEs.svg.png',
-	'etwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Wiktionary-logo-et.svg/128px-Wiktionary-logo-et.svg.png', // Bug 43240
+	'etwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Wiktionary-logo-et.svg/128px-Wiktionary-logo-et.svg.png', // Bug T45240
 	'euwiktionary' => '$stdlogo',
 	'fawiktionary' => '$stdlogo',
-	'fiwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/97/Wiktionary-logo-fi.svg/128px-Wiktionary-logo-fi.svg.png', // Bug 43240
-	'fowiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Wiktionary-logo-fo.svg/128px-Wiktionary-logo-fo.svg.png', // Bug 43240
+	'fiwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/97/Wiktionary-logo-fi.svg/128px-Wiktionary-logo-fi.svg.png', // Bug T45240
+	'fowiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Wiktionary-logo-fo.svg/128px-Wiktionary-logo-fo.svg.png', // Bug T45240
 	'frwiktionary' => '$stdlogo',
-	'fywiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Wiktionary-logo-fy.svg/128px-Wiktionary-logo-fy.svg.png', // Bug 43240
+	'fywiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Wiktionary-logo-fy.svg/128px-Wiktionary-logo-fy.svg.png', // Bug T45240
 	'gawiktionary' => '$stdlogo',
-	'gdwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Wiktionary-logo-gd.svg/128px-Wiktionary-logo-gd.svg.png', // Bug 43240
+	'gdwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Wiktionary-logo-gd.svg/128px-Wiktionary-logo-gd.svg.png', // Bug T45240
 	'glwiktionary' => '$stdlogo',
-	'guwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Wiktionary-logo-gu.svg/128px-Wiktionary-logo-gu.svg.png', // Bug 43240
-	'gvwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Wiktionary-logo-gv.svg/128px-Wiktionary-logo-gv.svg.png', // Bug 43240
+	'guwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Wiktionary-logo-gu.svg/128px-Wiktionary-logo-gu.svg.png', // Bug T45240
+	'gvwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Wiktionary-logo-gv.svg/128px-Wiktionary-logo-gv.svg.png', // Bug T45240
 	'hewiktionary' => '$stdlogo',
-	'hiwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/58/Wiktionary-logo-hi.svg/128px-Wiktionary-logo-hi.svg.png', // Bug 43240
-	'hsbwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/3/30/Wiktionary-logo-hsb.svg/128px-Wiktionary-logo-hsb.svg.png', // Bug 43240
+	'hiwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/58/Wiktionary-logo-hi.svg/128px-Wiktionary-logo-hi.svg.png', // Bug T45240
+	'hsbwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/3/30/Wiktionary-logo-hsb.svg/128px-Wiktionary-logo-hsb.svg.png', // Bug T45240
 	'huwiktionary' => '$stdlogo',
-	'hywiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Wiktionary-logo-hy.svg/128px-Wiktionary-logo-hy.svg.png', // Bug 43240
-	'iawiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Wiktionary-logo-ia.svg/128px-Wiktionary-logo-ia.svg.png', // Bug 43240
+	'hywiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Wiktionary-logo-hy.svg/128px-Wiktionary-logo-hy.svg.png', // Bug T45240
+	'iawiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Wiktionary-logo-ia.svg/128px-Wiktionary-logo-ia.svg.png', // Bug T45240
 	'idwiktionary' => '$stdlogo',
-	'iewiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/2/20/Wiktionary-logo-ie.svg/128px-Wiktionary-logo-ie.svg.png', // Bug 43240
-	'ikwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Wiktionary-logo-ik.svg/128px-Wiktionary-logo-ik.svg.png', // Bug 43240
+	'iewiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/2/20/Wiktionary-logo-ie.svg/128px-Wiktionary-logo-ie.svg.png', // Bug T45240
+	'ikwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Wiktionary-logo-ik.svg/128px-Wiktionary-logo-ik.svg.png', // Bug T45240
 	'iowiktionary' => '$stdlogo',
 	'iswiktionary' => '$stdlogo',
 	'itwiktionary' => '$stdlogo',
-	'jbowiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Wiktionary-logo-jbo.svg/128px-Wiktionary-logo-jbo.svg.png', // Bug 43240
-	'jvwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Wiktionary-logo-jv.svg/128px-Wiktionary-logo-jv.svg.png', // Bug 43240
+	'jbowiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Wiktionary-logo-jbo.svg/128px-Wiktionary-logo-jbo.svg.png', // Bug T45240
+	'jvwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Wiktionary-logo-jv.svg/128px-Wiktionary-logo-jv.svg.png', // Bug T45240
 	'kawiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Wiktionary-logo-ka_copy.png/135px-Wiktionary-logo-ka_copy.png',
 	'kkwiktionary' => '//upload.wikimedia.org/wiktionary/kk/b/bc/Wiki.png',
 	'kmwiktionary' => '$stdlogo',
 	'knwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/7/71/Wiktionary-logo-kn.svg/135px-Wiktionary-logo-kn.svg.png', // bug 29380
 	'kowiktionary' => '$stdlogo',
 	'kuwiktionary' => '$stdlogo',
-	'kwwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Wiktionary-logo-kw.svg/128px-Wiktionary-logo-kw.svg.png', // Bug 43240
-	'kywiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/6/64/Wiktionary-logo-ky.svg/128px-Wiktionary-logo-ky.svg.png', // Bug 43240
+	'kwwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Wiktionary-logo-kw.svg/128px-Wiktionary-logo-kw.svg.png', // Bug T45240
+	'kywiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/6/64/Wiktionary-logo-ky.svg/128px-Wiktionary-logo-ky.svg.png', // Bug T45240
 	'lawiktionary' => '$stdlogo',
 	'lbwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Wiktionary-logo-lb.png/135px-Wiktionary-logo-lb.png',
-	'liwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/2/25/Wiktionary-logo-li.svg/128px-Wiktionary-logo-li.svg.png', // Bug 43240
+	'liwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/2/25/Wiktionary-logo-li.svg/128px-Wiktionary-logo-li.svg.png', // Bug T45240
 	'ltwiktionary' => '$stdlogo',
-	'lvwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Wiktionary-logo-lv.svg/128px-Wiktionary-logo-lv.svg.png', // Bug 43240
+	'lvwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/4/45/Wiktionary-logo-lv.svg/128px-Wiktionary-logo-lv.svg.png', // Bug T45240
 	'mgwiktionary' => '$stdlogo',
-	'miwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/88/Wiktionary-logo-mi.svg/128px-Wiktionary-logo-mi.svg.png', // Bug 43240
+	'miwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/88/Wiktionary-logo-mi.svg/128px-Wiktionary-logo-mi.svg.png', // Bug T45240
 	'mlwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Wiktionary-logo-ml.svg/128px-Wiktionary-logo-ml.svg.png', // bug 41785
-	'mnwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Wiktionary-logo-mn.svg/128px-Wiktionary-logo-mn.svg.png', // Bug 43240
-	'mrwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Wiktionary-logo-mr.svg/128px-Wiktionary-logo-mr.svg.png', // Bug 43240
-	'mswiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Wiktionary-logo-ms.svg/128px-Wiktionary-logo-ms.svg.png', // Bug 43240
-	'mtwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiktionary-logo-mt.svg/128px-Wiktionary-logo-mt.svg.png', // Bug 43240
-	'mywiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/96/Wiktionary-logo-my.svg/128px-Wiktionary-logo-my.svg.png', // Bug 43240
+	'mnwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Wiktionary-logo-mn.svg/128px-Wiktionary-logo-mn.svg.png', // Bug T45240
+	'mrwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Wiktionary-logo-mr.svg/128px-Wiktionary-logo-mr.svg.png', // Bug T45240
+	'mswiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Wiktionary-logo-ms.svg/128px-Wiktionary-logo-ms.svg.png', // Bug T45240
+	'mtwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Wiktionary-logo-mt.svg/128px-Wiktionary-logo-mt.svg.png', // Bug T45240
+	'mywiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/96/Wiktionary-logo-my.svg/128px-Wiktionary-logo-my.svg.png', // Bug T45240
 	'ndswiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/6/65/WiktionaryNds.svg/128px-WiktionaryNds.svg.png',
-	'newiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/02/Wiktionary-logo-ne.svg/128px-Wiktionary-logo-ne.svg.png', // Bug 43240
+	'newiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/02/Wiktionary-logo-ne.svg/128px-Wiktionary-logo-ne.svg.png', // Bug T45240
 	'nlwiktionary' => '//upload.wikimedia.org/wiktionary/nl/2/26/WiktNL1.png',
-	'nnwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Wiktionary-logo-nn.svg/128px-Wiktionary-logo-nn.svg.png', // Bug 43240
+	'nnwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/51/Wiktionary-logo-nn.svg/128px-Wiktionary-logo-nn.svg.png', // Bug T45240
 	'nowiktionary' => '$stdlogo',
 	'ocwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Wiktionary-logo-oc.svg/128px-Wiktionary-logo-oc.svg.png', // bug 52019
 	'orwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/1/14/Wiktionary-logo-or.svg/128px-Wiktionary-logo-or.svg.png',
-	'pawiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Wiktionary-logo-pa.svg/128px-Wiktionary-logo-pa.svg.png', // Bug 43240
+	'pawiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/98/Wiktionary-logo-pa.svg/128px-Wiktionary-logo-pa.svg.png', // Bug T45240
 	'plwiktionary' => '$stdlogo',
 	'pnbwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Wiktionary-logo.svg/128px-Wiktionary-logo.svg.png',
-	'pswiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Wiktionary-logo-ps.svg/128px-Wiktionary-logo-ps.svg.png', // Bug 43240
+	'pswiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Wiktionary-logo-ps.svg/128px-Wiktionary-logo-ps.svg.png', // Bug T45240
 	'ptwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/cc/WiktionaryPt.svg/128px-WiktionaryPt.svg.png', // bug 53685
 	'quwiktionary' => '$stdlogo',
-	'roa_rupwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Wiktionary-logo-roa-rup.svg/128px-Wiktionary-logo-roa-rup.svg.png', // Bug 43240
+	'roa_rupwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Wiktionary-logo-roa-rup.svg/128px-Wiktionary-logo-roa-rup.svg.png', // Bug T45240
 	'rowiktionary' => '$stdlogo',
 	'ruwiktionary' => '$stdlogo',
-	'sawiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Wiktionary-logo-sa.svg/128px-Wiktionary-logo-sa.svg.png', // Bug 43240
-	'scnwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/86/Wiktionary-logo-scn.svg/128px-Wiktionary-logo-scn.svg.png', // Bug 43240
-	'sdwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Wiktionary-logo-sd.svg/128px-Wiktionary-logo-sd.svg.png', // Bug 43240
+	'sawiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Wiktionary-logo-sa.svg/128px-Wiktionary-logo-sa.svg.png', // Bug T45240
+	'scnwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/86/Wiktionary-logo-scn.svg/128px-Wiktionary-logo-scn.svg.png', // Bug T45240
+	'sdwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Wiktionary-logo-sd.svg/128px-Wiktionary-logo-sd.svg.png', // Bug T45240
 	'sgwiktionary' => '//upload.wikimedia.org/wiktionary/sg/b/bc/Wiki.png',
 	'shwiktionary' => '$stdlogo',
 	'simplewiktionary' => '$stdlogo',
 	'siwiktionary' => '//upload.wikimedia.org/wikipedia/commons/f/ff/WiktionarySi.png',
-	'skwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Wiktionary-logo-sk.svg/128px-Wiktionary-logo-sk.svg.png', // Bug 43240
-	'slwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Wiktionary-logo-sl.svg/128px-Wiktionary-logo-sl.svg.png', // Bug 43240
+	'skwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Wiktionary-logo-sk.svg/128px-Wiktionary-logo-sk.svg.png', // Bug T45240
+	'slwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Wiktionary-logo-sl.svg/128px-Wiktionary-logo-sl.svg.png', // Bug T45240
 	'sqwiktionary' => '$stdlogo',
 	'srwiktionary' => '$stdlogo',
-	'suwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Wiktionary-logo-su.svg/128px-Wiktionary-logo-su.svg.png', // Bug 43240
+	'suwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Wiktionary-logo-su.svg/128px-Wiktionary-logo-su.svg.png', // Bug T45240
 	'svwiktionary' => '//upload.wikimedia.org/wiktionary/sv/b/bc/Wiki.png',
-	'swwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Wiktionary-logo-sw.svg/128px-Wiktionary-logo-sw.svg.png', // Bug 43240
+	'swwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Wiktionary-logo-sw.svg/128px-Wiktionary-logo-sw.svg.png', // Bug T45240
 	'tawiktionary' => '$stdlogo',
-	'tewiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Wiktionary-logo-te.svg/128px-Wiktionary-logo-te.svg.png', // Bug 43240
+	'tewiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Wiktionary-logo-te.svg/128px-Wiktionary-logo-te.svg.png', // Bug T45240
 	'thwiktionary' => '//upload.wikimedia.org/wikipedia/commons/8/84/Wiktionary-logo-th.png',
-	'tkwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Wiktionary-logo-tk.svg/128px-Wiktionary-logo-tk.svg.png', // Bug 43240
+	'tkwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Wiktionary-logo-tk.svg/128px-Wiktionary-logo-tk.svg.png', // Bug T45240
 	'trwiktionary' => '$stdlogo',
-	'ttwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Wiktionary-logo-tt.svg/128px-Wiktionary-logo-tt.svg.png', // Bug 43240
-	'ugwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Wiktionary-logo-ug.svg/128px-Wiktionary-logo-ug.svg.png', // Bug 43240
+	'ttwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/6/65/Wiktionary-logo-tt.svg/128px-Wiktionary-logo-tt.svg.png', // Bug T45240
+	'ugwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Wiktionary-logo-ug.svg/128px-Wiktionary-logo-ug.svg.png', // Bug T45240
 	'ukwiktionary' => '$stdlogo',
-	'urwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Wiktionary-logo-ur.svg/128px-Wiktionary-logo-ur.svg.png', // Bug 43240
-	'uzwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Wiktionary-logo-uz.svg/128px-Wiktionary-logo-uz.svg.png', // Bug 43240
-	'viwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/7/74/Wiktionary-logo-vi.svg/128px-Wiktionary-logo-vi.svg.png', // Bug 43240
+	'urwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Wiktionary-logo-ur.svg/128px-Wiktionary-logo-ur.svg.png', // Bug T45240
+	'uzwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Wiktionary-logo-uz.svg/128px-Wiktionary-logo-uz.svg.png', // Bug T45240
+	'viwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/7/74/Wiktionary-logo-vi.svg/128px-Wiktionary-logo-vi.svg.png', // Bug T45240
 	'vowiktionary' => '$stdlogo',
-	'wawiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wiktionary-logo-wa.svg/128px-Wiktionary-logo-wa.svg.png', // Bug 43240
+	'wawiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Wiktionary-logo-wa.svg/128px-Wiktionary-logo-wa.svg.png', // Bug T45240
 	'wowiktionary' => '$stdlogo',
 	'yiwiktionary' => '$stdlogo',
-	'zh_min_nanwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Wiktionary-logo-zh-min-nan.svg/128px-Wiktionary-logo-zh-min-nan.svg.png', // Bug 43240
+	'zh_min_nanwiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Wiktionary-logo-zh-min-nan.svg/128px-Wiktionary-logo-zh-min-nan.svg.png', // Bug T45240
 	'zhwiktionary' => '$stdlogo',
 
 	// Wikiquote
@@ -1197,7 +1197,7 @@ $wgConf->settings = array(
 	'incubatorwiki' => '/wiki/Special:MyLanguage/Incubator:Upload',
 	'iswiktionary' => '/wiki/Wikior%C3%B0ab%C3%B3k:Hla%C3%B0a_inn_skr%C3%A1', // bug 11187
 	'itwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
-	'itwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=it', // Bug 73439
+	'itwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=it', // Bug T75439
 	'jawiki' => '/wiki/Wikipedia:%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89',
 	'jawikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja',
 	'kowiki' => '/wiki/위키백과:파일_올리기', // bug 52076
@@ -2526,11 +2526,11 @@ $wgConf->settings = array(
 		'Portal_talk' => 101,
 	),
 	'+bawiki' => array(
-		'Wikipedia' => NS_PROJECT, // Bug 41167
+		'Wikipedia' => NS_PROJECT, // Bug T43167
 		'Wikipedia_буйынса_фекерләшеү' => NS_PROJECT_TALK,
 	),
 	'+barwiki' => array(
-		'Portal_Diskussion' => 101, // Bug 41962 - now "Portal Dischkrian"
+		'Portal_Diskussion' => 101, // Bug T43962 - now "Portal Dischkrian"
 	),
 	'+betawikiversity' => array(
 		'Aptarimas' => NS_TALK,
@@ -2547,7 +2547,7 @@ $wgConf->settings = array(
 		'Pagalbos_aptarimas' => NS_HELP_TALK,
 		'Kategorija' => NS_CATEGORY,
 		'Kategorijos_aptarimas' => NS_CATEGORY_TALK,
-	), // Bug 64080
+	), // Bug T66080
 	'+bewiki' => array(
 		'Portal' => 100,
 		'Portal_talk' => 101,
@@ -2557,8 +2557,8 @@ $wgConf->settings = array(
 		'ВП' => NS_PROJECT,
 	),
 	'+bewikisource' => array(
-		'ВК' => NS_PROJECT, // Bug 41322
-		'Author' => 102, // Bug 41322
+		'ВК' => NS_PROJECT, // Bug T43322
+		'Author' => 102, // Bug T43322
 		'Author_talk' => 103,
 	),
 	'+bgwikisource' => array(
@@ -2612,13 +2612,13 @@ $wgConf->settings = array(
 		'Usuària_discussió' => NS_USER_TALK,
 	),
 	'+bswiki' => array(
-		'Portal_talk' => 101, // Bug 37226
+		'Portal_talk' => 101, // Bug T39226
 	),
 	'+cawikisource' => array(
 		'Author' => 106,
 		'Author_talk' => 107,
 	),
-	'+cewiki' => array( // Bug 47574
+	'+cewiki' => array( // Bug T49574
 		'Википедийа' => NS_PROJECT,
 		'Википедийа_дийцаре' => NS_PROJECT_TALK,
 	),
@@ -2777,7 +2777,7 @@ $wgConf->settings = array(
 		'Portal_talk' => 101,
 	),
 	'+dvwiktionary' => array(
-		'Wiktionary_talk' => NS_PROJECT_TALK, // Bug 46846
+		'Wiktionary_talk' => NS_PROJECT_TALK, // Bug T48846
 	),
 	'+enwiki' => array( // bug 6313
 		'WP' => NS_PROJECT,
@@ -2898,10 +2898,10 @@ $wgConf->settings = array(
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	),
 	'+glwiki' => array(
-		'Portal_talk' => 101, // Bug 41213 (old namespace name)
+		'Portal_talk' => 101, // Bug T43213 (old namespace name)
 	),
 	'+guwiktionary' => array(
-		'વિક્શનરી' => NS_PROJECT // Bug 40776 (old namespace name)
+		'વિક્શનરી' => NS_PROJECT // Bug T42776 (old namespace name)
 	),
 	'+hewikisource' => array(
 		'Author' => 108,
@@ -2954,7 +2954,7 @@ $wgConf->settings = array(
 		'Author_talk' => 101,
 	),
 	'+huwiktionary' => array(
-		'Függelék_vita' => 101, // Bug 42505
+		'Függelék_vita' => 101, // Bug T44505
 		'Index_vita' => 103,
 	),
 	'+hywikibooks' => array( // bug 53162
@@ -2986,10 +2986,10 @@ $wgConf->settings = array(
 		'I' => NS_PROJECT,
 	),
 	'+iswikisource' => array(
-		'Portal' => 100, // Bug 44164
-		'Portal_talk' => 101, // Bug 44164
-		'Author' => 102, // Bug 44164
-		'Author_talk' => 103, // Bug 44164
+		'Portal' => 100, // Bug T46164
+		'Portal_talk' => 101, // Bug T46164
+		'Author' => 102, // Bug T46164
+		'Author_talk' => 103, // Bug T46164
 	),
 	'+iswiktionary' => array(
 		'Wikiorðabókspjall' => NS_PROJECT_TALK, // bug 7754
@@ -3033,7 +3033,7 @@ $wgConf->settings = array(
 		'Portal‐ノート' => 101,
 		'Portal・トーク' => 101,
 		'プロジェクト・トーク' => 103,
-		'モジュール・トーク' => 829, // Bug 47933
+		'モジュール・トーク' => 829, // Bug T49933
 	),
 	'+jawikinews' => array(
 		"ポータル‐ノート" => 101,
@@ -3054,7 +3054,7 @@ $wgConf->settings = array(
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	),
-	'+knwikisource' => array( // Bug 37676
+	'+knwikisource' => array( // Bug T39676
 		'Portal' => 100,
 		'Portal_talk' => 101,
 		'Author' => 102,
@@ -3085,11 +3085,11 @@ $wgConf->settings = array(
 		'글쓴이토론' => 101,
 		'Author' => 100,
 		'Author_talk' => 101,
-		'Portal' => 102, // Bug 69522
+		'Portal' => 102, // Bug T71522
 		'Portal_talk' => 103,
 	),
 	'+kowikiversity' => array(
-		'Wikiversity토론' => NS_PROJECT_TALK, // Bug 44899
+		'Wikiversity토론' => NS_PROJECT_TALK, // Bug T46899
 	),
 	'+kowiktionary' => array(
 		'Wikisaurus' => 110,
@@ -3097,13 +3097,13 @@ $wgConf->settings = array(
 		'낱' => NS_PROJECT, // bug 56761
 	),
 	'+kuwiktionary' => array(
-		'Wîkîferheng_gotûbêj' => NS_PROJECT_TALK, // Bug 37524 (old namespace name)
-		'Pêvek_nîqas' => 101, // Bug 37524 (old namespace name)
-		'Nimînok_nîqas' => 103, // Bug 37524 (old namespace name)
-		'Portal_nîqas' => 105, // Bug 37524 (old namespace name)
+		'Wîkîferheng_gotûbêj' => NS_PROJECT_TALK, // Bug T39524 (old namespace name)
+		'Pêvek_nîqas' => 101, // Bug T39524 (old namespace name)
+		'Nimînok_nîqas' => 103, // Bug T39524 (old namespace name)
+		'Portal_nîqas' => 105, // Bug T39524 (old namespace name)
 	),
 	'+kuwiki' => array(
-		'Portal_nîqaş' => 101, // Bug 37521
+		'Portal_nîqaş' => 101, // Bug T39521
 	),
 	'+kvwiki' => array(
 		'Wikipedia' => NS_PROJECT,
@@ -3328,25 +3328,25 @@ $wgConf->settings = array(
 		'Author_talk' => 103,
 	),
 	'+ruwiki' => array(
-		'У' => NS_USER,           // Bug 42511
-		'U' => NS_USER,           // Bug 67844
-		'ОУ' => NS_USER_TALK,     // Bug 67844
-		'UT' => NS_USER_TALK,     // Bug 67844
-		'Ш' => NS_TEMPLATE,       // Bug 42511
-		'T' => NS_TEMPLATE,       // Bug 42511
-		'К' => NS_CATEGORY,       // Bug 42511
-		'ВП' => NS_PROJECT,       // Bug 12320
+		'У' => NS_USER,           // Bug T44511
+		'U' => NS_USER,           // Bug T69844
+		'ОУ' => NS_USER_TALK,     // Bug T69844
+		'UT' => NS_USER_TALK,     // Bug T69844
+		'Ш' => NS_TEMPLATE,       // Bug T44511
+		'T' => NS_TEMPLATE,       // Bug T44511
+		'К' => NS_CATEGORY,       // Bug T44511
+		'ВП' => NS_PROJECT,       // Bug T14320
 		'И' => 102,
-		'ПРО' => 104,             // Bug 34124
-		'АК' => 106,              // Bug 34527
+		'ПРО' => 104,             // Bug T36124
+		'АК' => 106,              // Bug T36527
 
-		'Участница' => NS_USER,                    // Bug 12320
+		'Участница' => NS_USER,                    // Bug T14320
 		'Обсуждение_участницы' => NS_USER_TALK,
 		'Incubator' => 102,
 		'Incubator_talk' => 103,
-		'Wikiproject' => 104,                      // Bug 34124
+		'Wikiproject' => 104,                      // Bug T36124
 		'Wikiproject_talk' => 105,
-		'Arbcom' => 106,                           // Bug 34527
+		'Arbcom' => 106,                           // Bug T36527
 	),
 	'+ruwikibooks' => array(
 		'ВУ' => NS_PROJECT,
@@ -3457,7 +3457,7 @@ $wgConf->settings = array(
 		'Wikipedia' => NS_PROJECT,
 		'WP' => NS_PROJECT,
 		'H' => NS_HELP,
-	), // Bug 68108
+	), // Bug T70108
 	'+thwikibooks' => array(
 		'คุยเรื่องWikibooks' => NS_PROJECT_TALK,
 		'Subject' => 102, // bug 46153
@@ -3611,13 +3611,13 @@ $wgConf->settings = array(
 		'维基教科书' => NS_PROJECT,
 		'維基教科書' => NS_PROJECT,
 		'WB' => NS_PROJECT,
-		'CAT' => NS_CATEGORY, // Bug 44308
-		'維基兒童' => 110, // Bug 44308
-		'维基儿童' => 110, // Bug 44308
-		'WJ' => 110, // Bug 44308, Wikijunior
-		'書架' => 112, // Bug 44308
-		'书架' => 112, // Bug 44308
-		'SB' => 112, // Bug 44308, Subject
+		'CAT' => NS_CATEGORY, // Bug T46308
+		'維基兒童' => 110, // Bug T46308
+		'维基儿童' => 110, // Bug T46308
+		'WJ' => 110, // Bug T46308, Wikijunior
+		'書架' => 112, // Bug T46308
+		'书架' => 112, // Bug T46308
+		'SB' => 112, // Bug T46308, Subject
 	),
 	'+zhwikisource' => array(
 		'作者' => 102, // Author
@@ -3840,7 +3840,7 @@ $wgConf->settings = array(
 		'page' => 104,
 		'index' => 106,
 	),
-	'aswikisource' => array( // Bug 43129
+	'aswikisource' => array( // Bug T45129
 		'page' => 104,
 		'index' => 106,
 	),
@@ -4032,25 +4032,25 @@ $wgConf->settings = array(
 
 'wgAutoConfirmCount' => array(
 	'default' => 0,
-	'arwiki' => 50, // Bug 12123
-	'ckbwiki' => 10, // Bug 51537
-	'enwiki' => 10, // Bug 14191
-	'eswiki' => 50, // Bug 13261
+	'arwiki' => 50, // Bug T14123
+	'ckbwiki' => 10, // Bug T53537
+	'enwiki' => 10, // Bug T16191
+	'eswiki' => 50, // Bug T15261
 	'eswikivoyage' => 25, // bug 44285
-	'fawiki' => 10, // Bug 43630
-	'fawikivoyage' => 10, // Bug 71709
-	'itwiki' => 10, //Bug 70128
-	'itwiktionary' => 10, // Bug 22274
-	'jawiki' => 10, // Bug 40270
-	'kowiki' => 10,// Bug 44894
+	'fawiki' => 10, // Bug T45630
+	'fawikivoyage' => 10, // Bug T73709
+	'itwiki' => 10, //Bug T72128
+	'itwiktionary' => 10, // Bug T24274
+	'jawiki' => 10, // Bug T42270
+	'kowiki' => 10,// Bug T46894
 	'nowiki' => 20, // bug 69302
 	'plwiki' => 10,
-	'ptwiki' => 10, // Bug 27954
-	'ruwiki' => 15, // Bug 41831
+	'ptwiki' => 10, // Bug T29954
+	'ruwiki' => 15, // Bug T43831
 	'simplewiki' => 10,
-	'wikidata' => 50, // Bug 46461
-	'zhwiki' => 50, // Bug 14624
-	'zh_yuewiki' => 10, // Bug 30538
+	'wikidata' => 50, // Bug T48461
+	'zhwiki' => 50, // Bug T16624
+	'zh_yuewiki' => 10, // Bug T32538
 ),
 
 # wgRestrictionLevels @{
@@ -4078,7 +4078,7 @@ $wgConf->settings = array(
 
 'wgCascadingRestrictionLevels' => array(
 	'default' => array( 'sysop' ),
-	'plwiki' => array( 'editor', 'sysop' ), // Bug 48374
+	'plwiki' => array( 'editor', 'sysop' ), // Bug T50374
 ),
 
 'wgSiteNotice' => array(
@@ -4293,13 +4293,13 @@ $wgConf->settings = array(
 'wgExtraNamespaces' => array(
 	// Meta wiki @{
 	'metawiki' => array(
-		200 => 'Grants', // Bug 22810
+		200 => 'Grants', // Bug T24810
 		201 => 'Grants_talk',
-		202 => 'Research', // Bug 28742
+		202 => 'Research', // Bug T30742
 		203 => 'Research_talk',
 		204 => 'Participation',
 		205 => 'Participation_talk',
-		206 => 'Iberocoop', // Bug 38398
+		206 => 'Iberocoop', // Bug T40398
 		207 => 'Iberocoop_talk',
 		208 => 'Programs', // bug 49312
 		209 => 'Programs_talk',
@@ -4464,23 +4464,23 @@ $wgConf->settings = array(
 		101 => 'Portal_müzakirəsi',
 	),
 	'bawiki' => array(
-		100 => 'Портал', // Bug 42077 - Portal
+		100 => 'Портал', // Bug T44077 - Portal
 		101 => 'Портал_буйынса_фекерләшеү',
-		102 => 'Проект', // Bug 42077 - Project
+		102 => 'Проект', // Bug T44077 - Project
 		103 => 'Проект_буйынса_фекерләшеү',
 	),
 	'barwiki' => array(
 		100 => 'Portal',
-		101 => 'Portal_Dischkrian',     // Bug 41962 comment #7
-		102 => 'Buach',                 // Bug 41962 - Wikibooks alt.
+		101 => 'Portal_Dischkrian',     // Bug T43962 comment #7
+		102 => 'Buach',                 // Bug T43962 - Wikibooks alt.
 		103 => 'Buach_Dischkrian',
-		104 => 'Woat',                  // Bug 41962 - Wiktionary alt.
+		104 => 'Woat',                  // Bug T43962 - Wiktionary alt.
 		105 => 'Woat_Dischkrian',
-		106 => 'Text',                  // Bug 41962 - Wikisource alt.
+		106 => 'Text',                  // Bug T43962 - Wikisource alt.
 		107 => 'Text_Dischkrian',
-		108 => 'Spruch',                // Bug 41962 - Wikiquote alt.
+		108 => 'Spruch',                // Bug T43962 - Wikiquote alt.
 		109 => 'Spruch_Dischkrian',
-		110 => 'Nochricht',             // Bug 41962 - Wikinews alt.
+		110 => 'Nochricht',             // Bug T43962 - Wikinews alt.
 		111 => 'Nochricht_Dischkrian',
 	),
 	'bewiki' => array(
@@ -4504,15 +4504,15 @@ $wgConf->settings = array(
 		101 => 'হমিলদুৱার_য়্যারী', // Portal_talk
 	),
 	'bswiki' => array(
-		100 => 'Portal', // Bug 37226
-		101 => 'Razgovor_o_portalu', // Bug 37226
+		100 => 'Portal', // Bug T39226
+		101 => 'Razgovor_o_portalu', // Bug T39226
 	),
 	'cawiki' => array(
 		100 => 'Portal', 101 => 'Portal_Discussió',
 		102 => 'Viquiprojecte', 103 => 'Viquiprojecte_Discussió',
 	),
 	'cewiki' => array(
-		NS_PROJECT_TALK => 'Википедин_дийцаре', // Bug 47574
+		NS_PROJECT_TALK => 'Википедин_дийцаре', // Bug T49574
 		100 => 'Ков',
 		101 => 'Ков_дийцаре',
 	),
@@ -4622,7 +4622,7 @@ $wgConf->settings = array(
 	),
 	'glwiki' => array(
 		100 => 'Portal',
-		101 => 'Conversa_portal', // Bug 41213
+		101 => 'Conversa_portal', // Bug T43213
 		102 => 'Libro',
 		103 => 'Conversa_libro',
 	),
@@ -4688,7 +4688,7 @@ $wgConf->settings = array(
 		101 => 'Portal‐ノート',
 		102 => 'プロジェクト',
 		103 => 'プロジェクト‐ノート',
-		829 => 'モジュール‐ノート', // Bug 47933
+		829 => 'モジュール‐ノート', // Bug T49933
 	),
 	'kawiki' => array(
 		100 => 'პორტალი',
@@ -4703,7 +4703,7 @@ $wgConf->settings = array(
 	'kkwiki' => array(
 		100 => 'Портал', // Portal
 		101 => 'Портал_талқылауы',
-		102 => 'Жоба', // Bug 40794 - WikiProject
+		102 => 'Жоба', // Bug T42794 - WikiProject
 		103 => 'Жоба_талқылауы',
 	),
 	'kowiki' => array(
@@ -4716,8 +4716,8 @@ $wgConf->settings = array(
 	),
 	'kuwiki' => array(
 		100 => 'Portal',
-		101 => 'Gotûbêja_portalê', // Bug 37521
-		NS_PROJECT_TALK => 'Gotûbêja_Wîkîpediyayê', // Bug 37521
+		101 => 'Gotûbêja_portalê', // Bug T39521
+		NS_PROJECT_TALK => 'Gotûbêja_Wîkîpediyayê', // Bug T39521
 	),
 	'kwwiki' => array(
 		100 => 'Porth',
@@ -4811,7 +4811,7 @@ $wgConf->settings = array(
 		101 => 'ପୋର୍ଟାଲ_ଆଲୋଚନା',
 	),
 	'pflwiki' => array(
-		100 => 'Portal', // Bug 42990
+		100 => 'Portal', // Bug T44990
 		101 => 'Portal_Diskussion',
 		102 => 'Buch', // 102-111: bug 52671
 		103 => 'Buch_Dischbediere',
@@ -4851,7 +4851,7 @@ $wgConf->settings = array(
 		101 => 'Discuție_Portal',
 		102 => 'Proiect',
 		103 => 'Discuție_Proiect',
-		108 => 'Cod', // Bug 42690 - Code
+		108 => 'Cod', // Bug T44690 - Code
 		109 => 'Discuție_Cod',
 		110 => 'Carte', // bug 66530
 		111 => 'Discuție_Carte',
@@ -4861,9 +4861,9 @@ $wgConf->settings = array(
 		101 => 'Обсуждение_портала',
 		102 => 'Инкубатор', // Incubator
 		103 => 'Обсуждение_Инкубатора', // Incubator talk
-		104 => 'Проект', // Bug 34124 - Project
-		105 => 'Обсуждение_проекта', // Bug 34124 - Project talk
-		106 => 'Арбитраж', // Bug 34527 - Arbcom
+		104 => 'Проект', // Bug T36124 - Project
+		105 => 'Обсуждение_проекта', // Bug T36124 - Project talk
+		106 => 'Арбитраж', // Bug T36527 - Arbcom
 		107 => 'Обсуждение_арбитража',
 	),
 	'sawiki' => array(
@@ -4877,12 +4877,12 @@ $wgConf->settings = array(
 		103 => 'Discussioni_pruggettu',
 	),
 	'scowiki' => array(
-		100 => 'Portal', // Bug 66107
+		100 => 'Portal', // Bug T68107
 		101 => 'Portal_talk',
 	),
 	'sewiki' => array(
-		100 => 'Portála', // Bug 39206
-		101 => 'Portálaságastallan', // Bug 39206
+		100 => 'Portála', // Bug T41206
+		101 => 'Portálaságastallan', // Bug T41206
 	),
 	'shwiki' => array( 100 => 'Portal', 101 => 'Razgovor_o_portalu' ), # bug 30928
 	'siwiki' => array( 100 => 'ද්වාරය', 101 => 'ද්වාරය_සාකච්ඡාව' ), # bug 6435, 24936
@@ -4923,7 +4923,7 @@ $wgConf->settings = array(
 		101 => 'Портал_бәхәсе',
 	),
 	'udmwiki' => array(
-		NS_PROJECT_TALK => 'Википедия_сярысь_вераськон', // Bug 47820
+		NS_PROJECT_TALK => 'Википедия_сярысь_вераськон', // Bug T49820
 	),
 	'ukwiki' => array( 100 => 'Портал', 101 => 'Обговорення_порталу' ),
 	'urwiki' => array(
@@ -4931,10 +4931,10 @@ $wgConf->settings = array(
 		101 => 'تبادلۂ_خیال_باب', // Portal talk - bug 19569
 	),
 	'uzwiki' => array (
-		100 => 'Portal',                     //Bug 38840 (Portal)
-		101 => 'Portal_munozarasi',          //Bug 38840
-		102 => 'Loyiha',                     //Bug 38840 (Project)
-		103 => 'Loyiha_munozarasi',          //Bug 38840
+		100 => 'Portal',                     //Bug T40840 (Portal)
+		101 => 'Portal_munozarasi',          //Bug T40840
+		102 => 'Loyiha',                     //Bug T40840 (Project)
+		103 => 'Loyiha_munozarasi',          //Bug T40840
 	),
 	'vecwiki' => array(
 		100 => 'Portałe',
@@ -5016,11 +5016,11 @@ $wgConf->settings = array(
 		107 => 'نقاش_الفهرس',
 	),
 	'aswikisource' => array(
-		102 => 'লেখক', // Bug 70464 - Author
+		102 => 'লেখক', // Bug T72464 - Author
 		103 => 'লেখক_আলোচনা',
-		104 => 'পৃষ্ঠা', // Bug 43129 - Page
+		104 => 'পৃষ্ঠা', // Bug T45129 - Page
 		105 => 'পৃষ্ঠা_আলোচনা',
-		106 => 'সূচী', // Bug 43129 - Index
+		106 => 'সূচী', // Bug T45129 - Index
 		107 => 'সূচী_আলোচনা',
 	),
 	'bewikisource' => array(
@@ -5067,10 +5067,10 @@ $wgConf->settings = array(
 		101 => 'Diskuse_k_autorovi',
 	),
 	'cywikisource' => array(
-		104 => 'Tudalen',          //Bug 39264 (Page)
-		105 => 'Sgwrs_Tudalen',    //Bug 39264
-		106 => 'Indecs',           //Bug 39264 (Index)
-		107 => 'Sgwrs_Indecs',     //Bug 39264
+		104 => 'Tudalen',          //Bug T41264 (Page)
+		105 => 'Sgwrs_Tudalen',    //Bug T41264
+		106 => 'Indecs',           //Bug T41264 (Index)
+		107 => 'Sgwrs_Indecs',     //Bug T41264
 	),
 	'dawikisource' => array(
 		102 => 'Forfatter', // bug 7796
@@ -5211,10 +5211,10 @@ $wgConf->settings = array(
 		107 => 'Pembicaraan_Portal',
 	),
 	'iswikisource' => array(
-		100 => 'Gátt', // Bug 44164
-		101 => 'Gáttarspjall', // Bug 44164
-		102 => 'Höfundur', // Bug 44164
-		103 => 'Höfundarspjall', // Bug 44164
+		100 => 'Gátt', // Bug T46164
+		101 => 'Gáttarspjall', // Bug T46164
+		102 => 'Höfundur', // Bug T46164
+		103 => 'Höfundarspjall', // Bug T46164
 	),
 	'itwikisource' => array(
 		102 => 'Autore',
@@ -5228,7 +5228,7 @@ $wgConf->settings = array(
 		110 => 'Indice',
 		111 => 'Discussioni_indice',
 	),
-	'knwikisource' => array( // Bug 37676
+	'knwikisource' => array( // Bug T39676
 		100 => 'ಸಂಪುಟ',         // Portal
 		101 => 'ಸಂಪುಟ_ಚರ್ಚೆ',
 		102 => 'ಕರ್ತೃ',         // Author
@@ -5241,7 +5241,7 @@ $wgConf->settings = array(
 	'kowikisource' => array(
 		100 => '저자',
 		101 => '저자토론',
-		102 => '포털', // Bug 69522
+		102 => '포털', // Bug T71522
 		103 => '포털토론',
 	),
 	'lawikisource' => array(
@@ -5281,10 +5281,10 @@ $wgConf->settings = array(
 		101 => 'Overleg_hoofdportaal',
 		102 => 'Auteur',
 		103 => 'Overleg_auteur',
-		104 => 'Pagina',         // Bug 37482
-		105 => 'Overleg_pagina', // Bug 37482
-		106 => 'Index',          // Bug 37482
-		107 => 'Overleg_index',  // Bug 37482
+		104 => 'Pagina',         // Bug T39482
+		105 => 'Overleg_pagina', // Bug T39482
+		106 => 'Index',          // Bug T39482
+		107 => 'Overleg_index',  // Bug T39482
 	),
 	'nowikisource' => array(
 		102 => 'Forfatter',
@@ -5348,8 +5348,8 @@ $wgConf->settings = array(
 	'srwikisource' => array(
 		100 => 'Аутор',
 		101 => 'Разговор_о_аутору',
-		102 => 'Додатак', // Bug 37742
-		103 => 'Разговор_о_додатку', // Bug 37742
+		102 => 'Додатак', // Bug T39742
+		103 => 'Разговор_о_додатку', // Bug T39742
 	),
 	'svwikisource' => array(
 		104 => 'Sida',
@@ -5405,7 +5405,7 @@ $wgConf->settings = array(
 		105 => 'Page_talk',
 		106 => 'Index',
 		107 => 'Index_talk',
-		108 => 'Transwiki', # Bug 40474
+		108 => 'Transwiki', # Bug T42474
 		109 => 'Transwiki_talk',
 		114 => 'Translation', // bug 64127
 		115 => 'Translation_talk', // bug 64127
@@ -5413,7 +5413,7 @@ $wgConf->settings = array(
 	# @} end of wikisource wikis
 
 	// Wikivoyage @{
-	'fawikivoyage' => array( // Bug 71382
+	'fawikivoyage' => array( // Bug T73382
 		106 => 'عبارت‌نامه', // Phrasebook
 		107 => 'بحث_عبارت‌نامه', // Phrasebook talk
 	),
@@ -5461,13 +5461,13 @@ $wgConf->settings = array(
 		103 => 'Verzeichnis_Diskussion',
 		104 => 'Thesaurus',
 		105 => 'Thesaurus_Diskussion',
-		106 => 'Reim', // Bug 43830
+		106 => 'Reim', // Bug T45830
 		107 => 'Reim_Diskussion',
 		108 => 'Flexion', // T76357
 		109 => 'Flexion_Diskussion',
 	),
 	'dvwiktionary' => array(
-		NS_PROJECT_TALK => 'ވިކިރަދީފު_ޚިޔާލު', // Bug 46846
+		NS_PROJECT_TALK => 'ވިކިރަދީފު_ޚިޔާލު', // Bug T48846
 	),
 	'elwiktionary' => array(
 		100 => 'Παράρτημα',
@@ -5534,9 +5534,9 @@ $wgConf->settings = array(
 		101 => 'שיחת_נספח'
 	),
 	'huwiktionary' => array(
-		100 => 'Függelék',       // Bug 42505 - Appendix
+		100 => 'Függelék',       // Bug T44505 - Appendix
 		101 => 'Függelékvita',
-		102 => 'Index',          // Bug 42505
+		102 => 'Index',          // Bug T44505
 		103 => 'Indexvita',
 	),
 	'iawiktionary' => array(
@@ -5568,13 +5568,13 @@ $wgConf->settings = array(
 		111 => '미주알고주알_토론',
 	),
 	'kuwiktionary' => array(
-		NS_PROJECT_TALK => 'Gotûbêja_Wîkîferhengê', // Bug 37524
-		100 => 'Pêvek', // Bug 28398
-		101 => 'Gotûbêja_pêvekê', // Bug 37524
-		102 => 'Nimînok', // Bug 28398
-		103 => 'Gotûbêja_nimînokê', // Bug 37524
-		104 => 'Portal', //Bug 28398
-		105 => 'Gotûbêja_portalê', // Bug 37524
+		NS_PROJECT_TALK => 'Gotûbêja_Wîkîferhengê', // Bug T39524
+		100 => 'Pêvek', // Bug T30398
+		101 => 'Gotûbêja_pêvekê', // Bug T39524
+		102 => 'Nimînok', // Bug T30398
+		103 => 'Gotûbêja_nimînokê', // Bug T39524
+		104 => 'Portal', //Bug T30398
+		105 => 'Gotûbêja_portalê', // Bug T39524
 	),
 	'lbwiktionary' => array(
 		100 => 'Annexen',
@@ -5677,7 +5677,7 @@ $wgConf->settings = array(
 	'zhwiktionary' => array(
 		100 => '附录', // bug 29641 - appendix
 		101 => '附录讨论', // bug 29641 - appendix talk
-		102 => 'Transwiki', # Bug 40474
+		102 => 'Transwiki', # Bug T42474
 		103 => 'Transwiki_talk',
 	),
 	// @} end of Wiktionary
@@ -5719,7 +5719,7 @@ $wgConf->settings = array(
 	),
 	/*
 	'eswikibooks' => array(
-		//102 => 'Wikiversidad',            // Bug 40838 (ns removed)
+		//102 => 'Wikiversidad',            // Bug T42838 (ns removed)
 		//103 => 'Wikiversidad_Discusión',
 	),
 	*/
@@ -5774,7 +5774,7 @@ $wgConf->settings = array(
 		105 => 'თარო_განხილვა', # bookshelf talk
 	),
 	'kuwikibooks' => array(
-		NS_PROJECT_TALK => 'Gotûbêja_Wîkîpirtûkê', // Bug 37522
+		NS_PROJECT_TALK => 'Gotûbêja_Wîkîpirtûkê', // Bug T39522
 	),
 	'mlwikibooks' => array(
 		100 => 'പാചകപുസ്തകം', // Cookbook
@@ -5828,8 +5828,8 @@ $wgConf->settings = array(
 		103 => 'Разговор_о_кувару'
 	),
 	'thwikibooks' => array(
-		102 => 'หัวเรื่อง', // Bug 46153
-		103 => 'คุยเรื่องหัวเรื่อง', // Bug 46153
+		102 => 'หัวเรื่อง', // Bug T48153
+		103 => 'คุยเรื่องหัวเรื่อง', // Bug T48153
 	),
 	'tlwikibooks' => array(
 		100 => 'Pagluluto',
@@ -5858,12 +5858,12 @@ $wgConf->settings = array(
 		107 => 'Thảo_luận_Nấu_ăn', // Cookbook talk
 	),
 	'zhwikibooks' => array(
-		100 => 'Transwiki', // Bug 40474
-		101 => 'Transwiki_talk', // Bug 40474
-		110 => 'Wikijunior', // Bug 44308
-		111 => 'Wikijunior_talk', // Bug 44308
-		112 => 'Subject', // Bug 44308
-		113 => 'Subject_talk', // Bug 44308
+		100 => 'Transwiki', // Bug T42474
+		101 => 'Transwiki_talk', // Bug T42474
+		110 => 'Wikijunior', // Bug T46308
+		111 => 'Wikijunior_talk', // Bug T46308
+		112 => 'Subject', // Bug T46308
+		113 => 'Subject_talk', // Bug T46308
 	),
 	// @} end of Wikibooks
 
@@ -5992,9 +5992,9 @@ $wgConf->settings = array(
 		107 => 'Yorum_tartışma',
 	),
 	'ukwikinews' => array(
-		102 => 'Коментарі',                // Bug 45333 - Comments
+		102 => 'Коментарі',                // Bug T47333 - Comments
 		103 => 'Обговорення_коментарів',
-		104 => 'Інкубатор',                // Bug 45333 - Incubator
+		104 => 'Інкубатор',                // Bug T47333 - Incubator
 		105 => 'Обговорення_інкубатора',
 	),
 	'zhwikinews' => array(
@@ -6027,7 +6027,7 @@ $wgConf->settings = array(
 		101 => 'שיחת_פורטל'
 	),
 	'kuwikiquote' => array(
-		NS_PROJECT_TALK => 'Gotûbêja_Wîkîgotinê', // Bug 37523
+		NS_PROJECT_TALK => 'Gotûbêja_Wîkîgotinê', // Bug T39523
 	),
 	'liwikiquote' => array( // bug 12240
 		100 => 'Portaol',
@@ -6037,7 +6037,7 @@ $wgConf->settings = array(
 		NS_PROJECT_TALK => 'Dyskusja_Wikicytatów',
 	),
 	'skwikiquote' => array(
-		100 => 'Deň', // Bug 44052
+		100 => 'Deň', // Bug T46052
 		101 => 'Diskusia_ku_dňu',
 	),
 	'zhwikiquote' => array( // bug 40474
@@ -6116,9 +6116,9 @@ $wgConf->settings = array(
 		111 => 'Transwiki‐ノート',
 	),
 	'kowikiversity' => array(
-		NS_PROJECT_TALK => '위키배움터토론', // Bug 44899
-		102 => '포털', // Bug 44899
-		103 => '포털토론', // Bug 44899
+		NS_PROJECT_TALK => '위키배움터토론', // Bug T46899
+		102 => '포털', // Bug T46899
+		103 => '포털토론', // Bug T46899
 	),
 	'svwikiversity' => array (
 		100 => 'Portal',
@@ -6438,7 +6438,7 @@ $wgConf->settings = array(
 	'frwiktionary' => true, // bug 21517
 	'fywiki' => true, // bug 10584
 	'hewiki' => true, // bug 5232
-	'hewikibooks' => true, // Bug 27918
+	'hewikibooks' => true, // Bug T29918
 	'hewikiquote' => true,
 	'hewiktionary' => true, // bug 73197
 	'hiwiki' => true,
@@ -6452,7 +6452,7 @@ $wgConf->settings = array(
 	'itwiktionary' => true, // bug 11424
 	'jawiktionary' => true, // bug 61366
 	'kshwiki' => true, // bug 8798
-	'lvwiki' => true, //Bug 70441
+	'lvwiki' => true, //Bug T72441
 	'mediawikiwiki' => true, // bug 56104
 	'metawiki' => true, // bug 4747
 	'mlwiki' => true,
@@ -6643,7 +6643,7 @@ $wgConf->settings = array(
 	'+hywikisource' => array( 100 => 1, 106 => 1 ),
 	'+idwikibooks' => array( 100 => 1, 102 => 1 ),
 	'+idwikisource' => array( 100 => 1, 102 => 1 ),
-	'+iswikisource' => array( 100 => 1, 102 => 1 ), // Bug 44164
+	'+iswikisource' => array( 100 => 1, 102 => 1 ), // Bug T46164
 	'+itwikisource' => array( 102 => 1, 110 => 1 ),
 	'+itwikivoyage' => array( 100 => 1, 104 => 1, 106 => 1 ),
 	'+kowikisource' => array( 100 => 1 ),
@@ -6992,7 +6992,7 @@ $wgConf->settings = array(
 	),
 	'+cswiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true, ),
-		'bot' => array( 'ipblock-exempt' => true, ), // Bug 42720
+		'bot' => array( 'ipblock-exempt' => true, ), // Bug T44720
 		'arbcom' => array( // bug 61418
 			'browsearchive' => true,
 			'deletedhistory' => true,
@@ -7062,7 +7062,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'patrol' => true, ),
 	),
 	'+dewikivoyage' => array(
-		'autopatrolled' => array( 'autopatrol' => true, ), // Bug 65495
+		'autopatrolled' => array( 'autopatrol' => true, ), // Bug T67495
 	),
 	'+dewiktionary' => array(
 		'sysop' => array( 'importupload' => true, ),
@@ -7079,7 +7079,7 @@ $wgConf->settings = array(
 		'*' => array( 'createpage' => false ),
 		'user' => array(
 			'move' => false, // autoconfirmed only
-			'collectionsaveasuserpage' => true, // Bug 46944
+			'collectionsaveasuserpage' => true, // Bug T48944
 		),
 		'autoconfirmed' => array( 'patrol' => true ), // bug 12007
 		'founder' => array( 'userrights' => true ),
@@ -7117,7 +7117,7 @@ $wgConf->settings = array(
 	),
 	'enwikisource' => array(
 		'autoconfirmed' => array( 'patrol' => true ), // bug 12355
-		'autopatrolled' => array( 'autopatrol' => true ), # Bug 18307
+		'autopatrolled' => array( 'autopatrol' => true ), # Bug T20307
 		'flood' => array( 'bot' => true ), // bug 36863
 	),
 	'enwikiversity' => array(
@@ -7140,16 +7140,16 @@ $wgConf->settings = array(
 	'eswiki' => array(
 		'rollbacker' => array(
 			'rollback' => true,
-			'abusefilter-log-detail' => true, // Bug 68319
+			'abusefilter-log-detail' => true, // Bug T70319
 		),
 		'*' => array( 'patrolmarks' => true ),
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'patroller' => array(
 			'patrol' => true,
 			'autopatrol' => true,
-			'abusefilter-log-detail' => true, // Bug 68319
+			'abusefilter-log-detail' => true, // Bug T70319
 		),
-		'flood' => array( 'bot' => true ), // Bug 48682
+		'flood' => array( 'bot' => true ), // Bug T50682
 	),
 	'eswikibooks' => array(
 		'*' => array( 'createpage' => false, 'createtalk' => false, ),
@@ -7183,12 +7183,12 @@ $wgConf->settings = array(
 	),
 	'eswikivoyage' => array(
 		'rollbacker' => array(
-			'rollback' => true, // Bug 44285
-			'autopatrol' => true, // Bug 47325
+			'rollback' => true, // Bug T46285
+			'autopatrol' => true, // Bug T49325
 		),
 		'patroller' => array(
-			'patrol' => true, // Bug 44285
-			'autopatrol' => true, // Bug 47325
+			'patrol' => true, // Bug T46285
+			'autopatrol' => true, // Bug T49325
 		),
 		'autopatrolled' => array(
 			'autopatrol' => true, // bug 55665
@@ -7414,10 +7414,10 @@ $wgConf->settings = array(
 			'delete' => true,
 			'deletedhistory' => true,
 			'deletedtext' => true,
-			'deletelogentry' => true, // Bug 40521
+			'deletelogentry' => true, // Bug T42521
 			'deleterevision' => true,
 			'ipblock-exempt' => true,
-			'movefile' => true, // Bug 70007
+			'movefile' => true, // Bug T72007
 			'noratelimit' => true,
 			'nuke' => true,
 			'suppressredirect' => true,
@@ -7507,8 +7507,8 @@ $wgConf->settings = array(
 		'sysop' => array( 'createaccount' => false ),
 	),
 	'lvwiki' => array(
-		'autopatrolled' => array( 'autopatrol' => true ), //Bug 70441
-		'patroller' => array( 'autopatrol' => true, 'patrol' => true ), //Bug 70441
+		'autopatrolled' => array( 'autopatrol' => true ), //Bug T72441
+		'patroller' => array( 'autopatrol' => true, 'patrol' => true ), //Bug T72441
 	),
 	'maiwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ), //T89346
@@ -7647,7 +7647,7 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, ), // bug 28479
 	),
 	'plwikisource' => array(
-		'editor' => array( 'autopatrol' => true, 'patrol' => true ), //Bug 70459
+		'editor' => array( 'autopatrol' => true, 'patrol' => true ), //Bug T72459
 	),
 	'plwiktionary' => array(
 		'editor' => array( 'patrolmarks' => true ),
@@ -7683,7 +7683,7 @@ $wgConf->settings = array(
 			'autopatrol' => true,
 			'autoreviewer' => true
 		),
-		'interface-editor' => array( // Bug 39905
+		'interface-editor' => array( // Bug T41905
 			'editinterface' => true,
 			'edituserjs' => true,
 			'editusercss' => true,
@@ -7779,7 +7779,7 @@ $wgConf->settings = array(
 			'editallpages' => false,
 		),
 		'user' => array(
-			'editallpages' => true, // Bug 39671
+			'editallpages' => true, // Bug T41671
 		),
 		'sysop' => array( // bug 61947
 			'editallpages' => true,
@@ -7858,7 +7858,7 @@ $wgConf->settings = array(
 	'+swwiki' => array(
 		'*' => array( 'createpage' => false ), // T44894 FIXME recheck for need around September 15 2015
 	),
-	'+svwikisource' => array( // Bug 28614 & 36895
+	'+svwikisource' => array( // Bug T30614 & 36895
 		'autopatrolled' => array( 'autopatrol' => true, 'suppressredirect' => true, 'upload' => true, 'reupload' => true ),
 	),
 	'tawiki' => array(
@@ -7897,46 +7897,46 @@ $wgConf->settings = array(
 	),
 	'thwiki' => array(
 		'autoconfirmed' => array(
-			'patrol' => true, // Bug 46154
+			'patrol' => true, // Bug T48154
 		),
 	),
 	'trwiki' => array(
 		'autoreview' => array(
-			'autopatrol' => true, // Bug 38690
+			'autopatrol' => true, // Bug T40690
 		),
 		'checkuser' => array(
-			'browsearchive' => true, // Bug 38690
-			'deletedhistory' => true, // Bug 38690
-			'deletedtext' => true, // Bug 38690
+			'browsearchive' => true, // Bug T40690
+			'deletedhistory' => true, // Bug T40690
+			'deletedtext' => true, // Bug T40690
 		),
 		'oversight' => array(
-			'browsearchive' => true, // Bug 38690
-			'deletedhistory' => true, // Bug 38690
-			'deletedtext' => true, // Bug 38690
+			'browsearchive' => true, // Bug T40690
+			'deletedhistory' => true, // Bug T40690
+			'deletedtext' => true, // Bug T40690
 		),
 		'patroller' => array(
-			'autoconfirmed' => true, // Bug 38690
+			'autoconfirmed' => true, // Bug T40690
 			'editsemiprotected' => true,
-			'autopatrol' => true, // Bug 38690
-			'autoreview' => true, // Bug 38690
+			'autopatrol' => true, // Bug T40690
+			'autoreview' => true, // Bug T40690
 			'patrol' => true,
-			'review' => true, // Bug 38690
-			'rollback' => true, // Bug 38690
-			'unreviewedpages' => true, // Bug 38690
-			'movefile' => true, // Bug 44587
+			'review' => true, // Bug T40690
+			'rollback' => true, // Bug T40690
+			'unreviewedpages' => true, // Bug T40690
+			'movefile' => true, // Bug T46587
 		),
 		'sysop' => array(
-			'review' => true, // Bug 38690
-			'unreviewedpages' => true, // Bug 38690
+			'review' => true, // Bug T40690
+			'unreviewedpages' => true, // Bug T40690
 		),
 		'technician' => array(
-			'abusefilter-log-detail' => true, // Bug 38690
-			'abusefilter-modify' => true, // Bug 38690
-			'apihighlimits' => true, // Bug 38690
-			'editinterface' => true, // Bug 38690
-			'editusercss' => true, // Bug 38690
-			'edituserjs' => true, // Bug 38690
-			'noratelimit' => true, // Bug 38690
+			'abusefilter-log-detail' => true, // Bug T40690
+			'abusefilter-modify' => true, // Bug T40690
+			'apihighlimits' => true, // Bug T40690
+			'editinterface' => true, // Bug T40690
+			'editusercss' => true, // Bug T40690
+			'edituserjs' => true, // Bug T40690
+			'noratelimit' => true, // Bug T40690
 		),
 	),
 	'ukwiki' => array(
@@ -8213,7 +8213,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'rollbacker', 'autopatrolled', 'abusefilter', 'accountcreator' ), // bug 56570
 	),
 	'+cawikimedia' => array(
-		'bureaucrat' => array ( 'translationadmin' ), // Bug 73394
+		'bureaucrat' => array ( 'translationadmin' ), // Bug T75394
 	),
 	'+checkuserwiki' => array(
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', ),
@@ -8228,7 +8228,7 @@ $wgConf->settings = array(
 			'suppressredirect', // bug 67278
 		),
 		'bureaucrat' => array(
-			'botadmin', // Bug 52578
+			'botadmin', // Bug T54578
 			'import', // bug 52633
 			'transwiki', // bug 52633
 			'interface-editor', // bug 52866
@@ -8273,7 +8273,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'noratelimit' ), // bug 57819
 	),
 	'+dewikivoyage' => array(
-		'sysop' => array( 'autopatrolled' ), // Bug 65495
+		'sysop' => array( 'autopatrolled' ), // Bug T67495
 	),
 	'+donatewiki' => array(
 		'sysop' => array( 'inactive', 'flood' ),
@@ -8320,8 +8320,8 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled' ), // bug 67557
 	),
 	'+eswikivoyage' => array(
-		'bureaucrat' => array( 'confirmed', ), // Bug 47325
-		'sysop' => array( 'rollbacker', 'patroller', 'autopatrolled', ), // Bug 44285, 55665
+		'bureaucrat' => array( 'confirmed', ), // Bug T49325
+		'sysop' => array( 'rollbacker', 'patroller', 'autopatrolled', ), // Bug T46285, 55665
 	),
 	'+eswiktionary' => array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller', 'rollbacker' ),
@@ -8451,7 +8451,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled' ), // bug 62200
 	),
 	'+itwikivoyage' => array(
-		'sysop' => array( 'autopatrolled', 'patroller' ), // Bug 43327 and 45638
+		'sysop' => array( 'autopatrolled', 'patroller' ), // Bug T45327 and 45638
 	),
 	'+itwiktionary' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
@@ -8480,7 +8480,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'abusefilter' ),
 	),
 	'+lvwiki' => array(
-		'sysop' => array( 'autopatrolled', 'patroller' ), //Bug 70441
+		'sysop' => array( 'autopatrolled', 'patroller' ), //Bug T72441
 	),
 	'+maiwiki' => array(
 		'sysop' => array( 'autopatrolled' ), //T89346
@@ -8568,7 +8568,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ), // bug 63750
 	),
 	'+ptwikivoyage' => array(
-		'sysop' => array( 'bot' ), // Bug 45233
+		'sysop' => array( 'bot' ), // Bug T47233
 	),
 	'+quwiki' => array(
 		'sysop' => array( 'rollbacker' ),
@@ -8659,8 +8659,8 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'nocreate' ),
 	),
 	'+trwiki' => array(
-		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, Bug 38690
-		'bureaucrat' => array( 'technician' ), // Bug 39690
+		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, Bug T40690
+		'bureaucrat' => array( 'technician' ), // Bug T41690
 	),
 	'+ukwiki' => array(
 		'sysop' => array( 'patroller', 'rollbacker' ),
@@ -8673,8 +8673,8 @@ $wgConf->settings = array(
 		'sysop' => array( 'autoeditor' ),
 	),
 	'+urwiki' => array(
-		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker' ), // Bug 42737 and 45643
-		'sysop' => array( 'confirmed', 'abusefilter', 'rollbacker' ), // Bug 42737 and 45643
+		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker' ), // Bug T44737 and 45643
+		'sysop' => array( 'confirmed', 'abusefilter', 'rollbacker' ), // Bug T44737 and 45643
 	),
 	'+viwiki' => array(
 		'sysop' => array(
@@ -8816,7 +8816,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'rollbacker', 'autopatrolled', 'abusefilter', 'accountcreator' ), // bug 56570
 	),
 	'+cawikimedia' => array(
-		'bureaucrat' => array( 'translationadmin' ), // Bug 73394
+		'bureaucrat' => array( 'translationadmin' ), // Bug T75394
 	),
 	'+checkuserwiki' => array(
 		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', 'bureaucrat', ),
@@ -8875,7 +8875,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'noratelimit' ), // bug 57819
 	),
 	'+dewikivoyage' => array(
-		'sysop' => array( 'autopatrolled' ), // Bug 65495
+		'sysop' => array( 'autopatrolled' ), // Bug T67495
 	),
 	'+donatewiki' => array(
 		'sysop' => array( 'inactive', 'confirmed', 'flood' ),
@@ -8926,8 +8926,8 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled' ), // bug 67557
 	),
 	'+eswikivoyage' => array(
-		'bureaucrat' => array( 'confirmed', ), // Bug 47325
-		'sysop' => array( 'rollbacker', 'patroller', 'autopatrolled', ), // Bug 44285, 55665
+		'bureaucrat' => array( 'confirmed', ), // Bug T49325
+		'sysop' => array( 'rollbacker', 'patroller', 'autopatrolled', ), // Bug T46285, 55665
 	),
 	'+eswiktionary' => array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller', 'rollbacker' ),
@@ -9057,10 +9057,10 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autopatrolled' ), // bug 62200
 	),
 	'+itwikisource' => array(
-		'bureaucrat' => array( 'flood' ), // Bug 36600
+		'bureaucrat' => array( 'flood' ), // Bug T38600
 	),
 	'+itwikivoyage' => array(
-		'sysop' => array ( 'autopatrolled', 'patroller' ), // Bug 43327 and 45638
+		'sysop' => array ( 'autopatrolled', 'patroller' ), // Bug T45327 and 45638
 	),
 	'+itwiktionary' => array(
 		'sysop' => array( 'patroller', 'autopatrolled', 'flood' ), // Flood added per bug 39306
@@ -9088,7 +9088,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'abusefilter' ),
 	),
 	'+lvwiki' => array(
-		'sysop' => array( 'autopatrolled', 'patroller' ), //Bug 70441
+		'sysop' => array( 'autopatrolled', 'patroller' ), //Bug T72441
 	),
 	'+maiwiki' => array(
 		'sysop' => array( 'autopatrolled' ), //T89346
@@ -9175,7 +9175,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'reviewer' ),
 	),
 	'+ptwikivoyage' => array(
-		'sysop' => array( 'bot' ), // Bug 45233
+		'sysop' => array( 'bot' ), // Bug T47233
 	),
 	'+quwiki' => array(
 		'sysop' => array( 'rollbacker' ),
@@ -9269,8 +9269,8 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'nocreate' ),
 	),
 	'+trwiki' => array(
-		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, Bug 38690
-		'bureaucrat' => array( 'technician' ), // Bug 39690
+		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, Bug T40690
+		'bureaucrat' => array( 'technician' ), // Bug T41690
 	),
 	'+ukwiki' => array(
 		'sysop' => array( 'patroller', 'rollbacker' ),
@@ -9286,8 +9286,8 @@ $wgConf->settings = array(
 		'sysop' => array( 'autoeditor' ),
 	),
 	'+urwiki' => array(
-		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker' ), // Bug 42737 and 45643
-		'sysop' => array( 'confirmed' ), // Bug 42737
+		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker' ), // Bug T44737 and 45643
+		'sysop' => array( 'confirmed' ), // Bug T44737
 	),
 	'+viwiki' => array(
 		'sysop' => array(
@@ -9416,7 +9416,7 @@ $wgConf->settings = array(
 	'arzwiki' => array( 'incubator', 'en', 'ar', 'es', 'fr', ),
 	'betawikiversity' => array( 'meta', 'b', 'en', 'incubator', 'de', 'wikipedia:lt' ),
 	'bhwiki' => array( 'commons', 'meta', 'species', 'de', 'en', 'wikibooks:en', 'wikiquote:en', 'wikinews:en', 'wikisource:en', 'wikiversity:en', 'es', 'fa', 'fr', 'hi', 'ml', 'ne', 'nl', 'ro', 'ru', 'pl', 'pt', 'simple', 'ta', 'ur' ), // T70616
-	'bnwiki' => array( 'en' ), # Bug 34791
+	'bnwiki' => array( 'en' ), # Bug T36791
 	'bnwikisource' => array( 'OldWikisource', 'w', 'en' ),
 	'cawikibooks' => array( 'w', 's', ),
 	'cawikinews' => array( 'w', 'wikt', 'q', 'b', 's', 'v', 'fr', 'en', 'de', 'es', 'pt', 'it', 'commons', 'meta', 'eo', 'pl', 'ja', 'ru', 'sr', 'tr', 'uk', 'zh' ), //T93203
@@ -9462,19 +9462,19 @@ $wgConf->settings = array(
 	'enwikibooks' => array( 'w', 's', 'q', 'v', 'wikt', 'n', 'meta', 'simple', 'species' ), // T13226, T14665
 	'enwikiversity' => array( 'betawikiversity', 'w', 'b', 'q', 's' ),
 	'enwikivoyage' => array( 'b', 'meta', 'w' ), // T44450, T65095
-	'eowikisource' => array( 'meta', 'commons', 'b:eo' ), // Bug 43659
+	'eowikisource' => array( 'meta', 'commons', 'b:eo' ), // Bug T45659
 	'eswiki' => array( 'b', 'q', 'v', 'wikt', 'n', 's', 'en' ),
 	'eswikibooks' => array( 'w', 'w:en', 'en', 'meta' ), // T20612, T43011
-	'eswikinews' => array( 'w' ), // Bug 70414
+	'eswikinews' => array( 'w' ), // Bug T72414
 	'eswikiquote' => array( 'en', 'b', 'm', 'mw', 'n', 's', 'v', 'voy', 'w', 'wikt' ), // bug 62912
 	'eswikiversity' => array( 'w:es', 'b', 'meta' ), // T9513, T36715
-	'eswikivoyage' => array( 'w', 'meta', 'commons', 'en', 'de', 'fr', 'it', 'nl', 'pt', 'ru', 'sv' ), // Bug 43863
-	'eswiktionary' => array( 'w', 'w:en', 'w:fr', 'w:de', 'en', 'fr', 'de', ), # Bug 8202
+	'eswikivoyage' => array( 'w', 'meta', 'commons', 'en', 'de', 'fr', 'it', 'nl', 'pt', 'ru', 'sv' ), // Bug T45863
+	'eswiktionary' => array( 'w', 'w:en', 'w:fr', 'w:de', 'en', 'fr', 'de', ), # Bug T10202
 	'etwiki' => array( 'b', 'q', 's', 'wikt' ), // T35960
 	'etwikisource' => array( 'w' ), // T35960
 	'etwiktionary' => array( 'w' ), // T35960
 	'extwiki' => array( 'incubator' ),
-	'fawikivoyage' => array( 'w', 'w:en', 'en' ), // Bug 71681
+	'fawikivoyage' => array( 'w', 'w:en', 'en' ), // Bug T73681
 	'fdcwiki' => array( 'meta' ),
 	'fiwikisource' => array( 'OldWikisource', 'w', 'b' ),
 	'fiwikiversity' => array( 'b', 'q', 'n', 's', 'wikt', 'w', 'betawikiversity' ),
@@ -9489,12 +9489,12 @@ $wgConf->settings = array(
 		'meta', 'commons', 'species', 'q', 'b', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy', 'hi',
 		'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk', 'sl', 'sq',
 		'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'wikt', 'v',
-	), # Bug 28024 and bug 22663 --pdhanda
+	), # Bug T30024 and bug 22663 --pdhanda
 	'frwikibooks' => array(
 		'meta', 'commons', 'species', 'q', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu',
 		'hy', 'hi', 'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple',
 		'sk', 'sl', 'sq', 'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'wikt', 'v',
-	), # Bug 28024 and bug 22663 --pdhanda
+	), # Bug T30024 and bug 22663 --pdhanda
 	'frwikinews' => array( 'w', 'en', 'de', 'es', 'it', 'b', 'wikt', 'v', 's', 'q', 'ca', 'pt', 'species', 'commons', 'meta', 'w:pl', 'pl' ), // T11135
 	'frwikiquote' => array( 'w', 'wikt', 's', 'b', 'n', 'v', 'meta', 'en' ),
 	'frwikiversity' => array(
@@ -9507,7 +9507,7 @@ $wgConf->settings = array(
 		'meta', 'commons', 'species', 'q', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy', 'hi',
 		'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk', 'sl', 'sq',
 		'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'b', 'v',
-	), # Bug 28024 and bug 22663 --pdhanda
+	), # Bug T30024 and bug 22663 --pdhanda
 	'ganwiki' => array( 'incubator' ),
 	'gdwiki' => array( 'en', 'de', 'ga', 'gv' ), // T14675, T15817
 	'glwiktionary' => array( 'w', 's', 'q', 'b' ),
@@ -9515,7 +9515,7 @@ $wgConf->settings = array(
 	'glwikisource' => array( 'w', 'wikt', 'q', 'b' ),
 	'glwikiquote' => array( 'w', 'wikt', 's', 'b' ),
 	'glwiki' => array( 'wikt', 's', 'q', 'b' ),
-	'guwiki' => array( 'en' ), // Bug 37511
+	'guwiki' => array( 'en' ), // Bug T39511
 	'hakwiki' => array( 'incubator' ),
 	'hewiki' => array( 'wikt', 'q', 'b', 's', 'n', 'commons' ),
 	'hewikibooks' => array( 'w', 'wikt', 'q', 's', 'n' ),
@@ -9547,7 +9547,7 @@ $wgConf->settings = array(
 		'w:de', 'w:en', 'w:es', 'w:fr', 'w:he', 'w:hu',
 		'w:nl', 'w:pl', 'w:pt', 'w:ru', 's:fr', 'n:en',
 		'wikt:en', 'de', 'en', 'es', 'fr', 'nl', 'ru', 'sv', 'el'
-	), // Bug 43310
+	), // Bug T45310
 	'itwiktionary' => array( 'w', 'b', 's', 'q', 'n', 'v', 'en', 'fr', 'sc' ), // T12197, T12629
 	'jawikibooks' => array( 'w', 'wikt', 'q', 's', 'v', 'en' ),
 	'jawikiversity' => array( 'betawikiversity', 'w', 'wikt', 'en', 'b', 'q', 's', 'n' ),
@@ -9609,7 +9609,7 @@ $wgConf->settings = array(
 	'scnwiki' => array( 'it', 'en', 'fr' ), // T15155
 	'scnwiktionary' => array( 'w', 'it', 'en', 'fr' ), // T15155
 	'scowiki' => array( 'en', 'simple' ), // T31913
-	'sewiki' => array( 'en', 'fi', 'no', 'nn', 'sv' ), // Bug 43411
+	'sewiki' => array( 'en', 'fi', 'no', 'nn', 'sv' ), // Bug T45411
 	'simplewiki' => array( 'en', 'wikt', 'b', 'q' ),
 	'simplewiktionary' => array( 'en', 'w', 'b', 'q' ),
 	'simplewikiquote' => array( 'en', 'w', 'wikt', 'b' ),
@@ -9637,7 +9637,7 @@ $wgConf->settings = array(
 	'svwiktionary' => array( 'w', 'meta' ),
 	'szlwiki' => array( 'incubator' ),
 	'tawikisource' => array( 'oldwikisource', 'w', 'b' ),
-	'tewiki' => array( 'en', 'commons' ), // Bug 41880
+	'tewiki' => array( 'en', 'commons' ), // Bug T43880
 	'tewikiquote' => array( 'w', 'en' ), // T91635
 	'testwiki' => array( 'de', 'en', 'es', 'fr', 'ja', 'commons', 'meta', 'incubator', 'strategy' ),
 	'test2wiki' => array( 'en', 'cs' ),
@@ -9812,7 +9812,7 @@ $wgConf->settings = array(
 	), // bug 71663
 	'dewiki' => array(
 		NS_TALK => 'noindex,follow',
-		NS_USER => 'noindex,follow', // Bug 36181
+		NS_USER => 'noindex,follow', // Bug T38181
 		NS_USER_TALK => 'noindex,follow',
 		NS_PROJECT_TALK => 'noindex,follow',
 		NS_IMAGE_TALK => 'noindex,follow',
@@ -10001,7 +10001,7 @@ $wgConf->settings = array(
 	'default' => array( NS_MAIN ),
 	'+arwiki' => array( 104 ), // bug 20623
 	'+arwikisource' => array( 102, 104 ),
-	'+aswikisource' => array( 102, 104, 106 ), // Bug 43129, 70464
+	'+aswikisource' => array( 102, 104, 106 ), // Bug T45129, 70464
 	'+bgwikisource' => array( 100 ),
 	'+bnwikisource' => array( 100 ),
 	'+brwikisource' => array( 100, 102, 104 ),
@@ -10014,18 +10014,18 @@ $wgConf->settings = array(
 	'+elwikisource' => array( 100, 102 ),
 	'+enwikibooks' => array( 102, 110 ),
 	'+enwikisource' => array( 102, 104, 106, 114 ), // bug 50007
-	'+eswiki' => array( 104 ), // Bug 39866
+	'+eswiki' => array( 104 ), // Bug T41866
 	'+eswikisource' => array( 102, 104 ),
 	'+etwikisource' => array( 102, 104, 106 ),
 	'+fawikisource' => array( 102, 104 ),
 	'+frrwiki' => array( 102, 104, 106 ), // bug 38023
 	'+frwikisource' => array( 102, 104, 112 ),
 	'+hewikisource' => array( 104, 108, 112 ),
-	'+hrwiki' => array( 102 ), // Bug 40732
+	'+hrwiki' => array( 102 ), // Bug T42732
 	'+hrwikisource' => array( 100, 102, 104 ),
 	'+huwikisource' => array( 100, 104, 106 ),
 	'+hywikisource' => array( 100, 104, 106 ),
-	'+idwikibooks' => array( 100, 102 ), // Bug 2282
+	'+idwikibooks' => array( 100, 102 ), // Bug T4282
 	'+idwikisource' => array( 100, 102, 104 ),
 	'+itwikisource' => array( 102, 108, 110 ),
 	'+itwikivoyage' => array( 100, 104 ), // bug 55620
@@ -10033,7 +10033,7 @@ $wgConf->settings = array(
 	'+labswiki' => array( 112 ),
 	'+lawikisource' => array( 102, 104, 106 ),
 	'+mediawikiwiki' => array( 100, 102, 104, 106 ), // Manuals, extensions, Api & skin - T86391
-	'+metawiki' => array( NS_HELP ), // Bug 43687
+	'+metawiki' => array( NS_HELP ), // Bug T45687
 	'+mlwikisource' => array( 100, 104, 106 ),
 	'+nlwikisource' => array( 102 ),
 	'+nowikisource' => array( 102, 104, 106 ),
@@ -10043,7 +10043,7 @@ $wgConf->settings = array(
 	'+ruwikisource' => array( 104, 106 ),
 	'+slwikisource' => array( 100, 104 ),
 	'+sourceswiki' => array( 104, 106 ),
-	'+srwikibooks' => array( 102, ), // Bug 15282
+	'+srwikibooks' => array( 102, ), // Bug T17282
 	'+srwikisource' => array( 100 ),
 	'+svwikisource' => array( 104, 106, 108 ),
 	'+tewikisource' => array( 102, 104, 106 ),
@@ -10166,7 +10166,7 @@ $wgConf->settings = array(
 	'metawiki' => true,
 	'ptwiki' => true, # bug 35308
 	'otrs_wikiwiki' => true,
-	'outreachwiki' => true, // Bug 56245
+	'outreachwiki' => true, // Bug T58245
 	'srwiki' => true,
 	'srwiktionary' => true, // bug 68346
 	'strategywiki' => true,
@@ -10328,7 +10328,7 @@ $wgConf->settings = array(
 	'+eswiki' => array(
 		NS_IMAGE => array( 'editinterface' ),
 		NS_IMAGE_TALK => array( 'editinterface' ),
-		828 => array( 'autoconfirmed' ), // Bug 53558 - Module:
+		828 => array( 'autoconfirmed' ), // Bug T55558 - Module:
 	),
 	'+ptwiki' => array(
 		NS_IMAGE => array( 'autoconfirmed' ),
@@ -10485,7 +10485,7 @@ $wgConf->settings = array(
 			'&',
 			array( APCOND_EDITCOUNT, 200 ),
 		),
-	), // Bug 65495
+	), // Bug T67495
 	'trwiki' => array(
 		'autoreview' => array(
 			'&', // AND
@@ -10867,17 +10867,17 @@ $wgConf->settings = array(
 	'default' => false,
 	'arwiki' => true,
 	'arwikisource' => true,
-	'ckbwiki' => true, // Bug 52678
+	'ckbwiki' => true, // Bug T54678
 	'commonswiki' => true,
-	'dewikiversity' => true, // Bug 49449
+	'dewikiversity' => true, // Bug T51449
 	'enwikinews' => true,
-	'fawiki' => true, // Bug 53981
+	'fawiki' => true, // Bug T55981
 	'fawikibooks' => true, // T91861
 	'fawikinews' => true,
 	'fawikivoyage' => true, // T76716
 	'fawiktionary' => true, // T90831
-	'guwiki' => true, // Bug 40872
-	'guwikisource' => true, // Bug 40872
+	'guwiki' => true, // Bug T42872
+	'guwikisource' => true, // Bug T42872
 	'hiwiki' => true,
 	'incubatorwiki' => true,
 	'kowiki' => true,
@@ -10914,8 +10914,8 @@ $wgConf->settings = array(
 	'fawikinews' => true,
 	'fawikivoyage' => true, // T76716
 	'fawiktionary' => true, // T90831
-	'guwiki' => true, // Bug 40872
-	'guwikisource' => true, // Bug 40872
+	'guwiki' => true, // Bug T42872
+	'guwikisource' => true, // Bug T42872
 	'hiwiki' => true,
 	'incubatorwiki' => true,
 	'lvwiki' => true,
@@ -10969,53 +10969,53 @@ $wgConf->settings = array(
 ),
 
 'wgGroupsAddToSelf' => array(
-	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 54732
-	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 37198
+	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug T56732
+	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug T39198
 	'mediawikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // T87797
 	'otrs_wikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // bug 61297
-	'cawikimedia' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 73394
+	'cawikimedia' => array( 'sysop' => array( 'translationadmin' ) ), // Bug T75394
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
-	'enwikisource' => array( 'sysop' => array( 'flood' ) ), //Bug 36863
-	'eswiki' => array( 'sysop' => array( 'flood' ) ), // Bug 48682
+	'enwikisource' => array( 'sysop' => array( 'flood' ) ), //Bug T38863
+	'eswiki' => array( 'sysop' => array( 'flood' ) ), // Bug T50682
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
-	'itwikibooks' => array( 'sysop' => array( 'flooder' ) ), // Bug 39569
-	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // Bug 36600
-	'itwiktionary' => array( 'sysop' => array( 'flood' ) ), // Bug 39306
+	'itwikibooks' => array( 'sysop' => array( 'flooder' ) ), // Bug T41569
+	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // Bug T38600
+	'itwiktionary' => array( 'sysop' => array( 'flood' ) ), // Bug T41306
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
-	'plwiki' => array( 'sysop' => array( 'flood' ) ), // Bug 20155
+	'plwiki' => array( 'sysop' => array( 'flood' ) ), // Bug T22155
 	'strategywiki' => array( 'sysop' => array( 'flood' ) ),
-	'wikidata' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 48013, Bug 46856
+	'wikidata' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug T50013, Bug 46856
 	'zhwiki' => array( 'sysop' => array( 'flood' ) ),
 ),
 'wgGroupsRemoveFromSelf' => array(
-	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 54732
-	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug 37198
+	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug T56732
+	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // Bug T39198
 	'mediawikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // T87797
-	'otrs_wikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 61297
-	'cawikimedia' => array( 'sysop' => array( 'translationadmin' ) ), // Bug 73394
+	'otrs_wikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // Bug T63297
+	'cawikimedia' => array( 'sysop' => array( 'translationadmin' ) ), // Bug T75394
 	'ckbwiki' => array(
-		'flood' => array( 'flood' ), // Bug 51803
-		'botadmin' => array( 'botadmin' ), // Bug 51803
+		'flood' => array( 'flood' ), // Bug T53803
+		'botadmin' => array( 'botadmin' ), // Bug T53803
 	),
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
-	'enwikisource' => array( 'sysop' => array( 'flood' ) ), // Bug 36863
-	'eswiki' => array( 'sysop' => array( 'flood' ) ), // Bug 48682
+	'enwikisource' => array( 'sysop' => array( 'flood' ) ), // Bug T38863
+	'eswiki' => array( 'sysop' => array( 'flood' ) ), // Bug T50682
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'frwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
-	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // Bug 36600
+	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // Bug T38600
 	'mlwiki' => array( 'botadmin' => array( 'botadmin' ) ),
-	'mlwikisource' => array( 'botadmin' => array( 'botadmin' ) ), // Bug 44335
+	'mlwikisource' => array( 'botadmin' => array( 'botadmin' ) ), // Bug T46335
 	'mlwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
-	'plwiki' => array( 'flood' => array( 'flood' ) ), // Bug 20155 , bug 21238
+	'plwiki' => array( 'flood' => array( 'flood' ) ), // Bug T22155 , bug 21238
 	'strategywiki' => array( 'sysop' => array( 'flood' ) ),
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
 	'wikidata' => array(
-		'sysop' => array( 'flood', 'translationadmin' ), // Bug 48013, Bug 46856
-		'flood' => array( 'flood' ), // Bug 48013
+		'sysop' => array( 'flood', 'translationadmin' ), // Bug T50013, Bug 46856
+		'flood' => array( 'flood' ), // Bug T50013
 	),
 	'zhwiki' => array( 'sysop' => array( 'flood' ) ),
 	'zhwikinews' => array( 'flood' => array( 'flood' ) ), // bug 52546
@@ -11207,7 +11207,7 @@ $wgConf->settings = array(
 'wmgUseFooterContactLink' => array(
 	// Make sure 'MediaWiki:Contact' and 'MediaWiki:Contact-url' are defined.
 	'default' => false,
-	'enwiki' => true,  // Bug 46392
+	'enwiki' => true,  // Bug T48392
 ),
 
 'wmgUserDailyContribs' => array(
@@ -11234,14 +11234,14 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true, // Expanding out to testwiki -- Andrew 2009-10-13
 	'enwikinews' => true, // Per bug 21956 -- Andrew 2009-02-09
-	'enwiktionary' => true, // Bug 23417 -- ariel 2010-16-05
-	'fiwikimedia' => true, // Bug 37778
-	'huwiki' => true, // Bug 22909 -- Andrew 2010-09-06
+	'enwiktionary' => true, // Bug T25417 -- ariel 2010-16-05
+	'fiwikimedia' => true, // Bug T39778
+	'huwiki' => true, // Bug T24909 -- Andrew 2010-09-06
 	'mediawikiwiki' => true,
-	'ptwikibooks' => true, // Bug 24143 -- Andrew 2010-08-16
+	'ptwikibooks' => true, // Bug T26143 -- Andrew 2010-08-16
 	'strategywiki' => true, // Philippe says it's cool -- Andrew 2009-10-13
-	'sewikimedia' => true, // Bug 24377 -- Andrew 2010-08-28
-	'svwikisource' => true, // Bug 23220 -- Andrew 2010-08-28
+	'sewikimedia' => true, // Bug T26377 -- Andrew 2010-08-28
+	'svwikisource' => true, // Bug T25220 -- Andrew 2010-08-28
 	'test2wiki' => true,
 	'wikimania2010wiki' => true, // Erik requested, by mail
 ),
@@ -11250,8 +11250,8 @@ $wgConf->settings = array(
 	'default' => true, // New wikis by default are opt-in per-page LiquidThreads
 	// ---------
 	'strategywiki' => false,
-	'sewikimedia' => false, // Bug 46182
-	'ptwikibooks' => false, // Bug 48578
+	'sewikimedia' => false, // Bug T48182
+	'ptwikibooks' => false, // Bug T50578
 ),
 
 'wmgLiquidThreadsBackfill' => array(
@@ -11372,7 +11372,7 @@ $wgConf->settings = array(
 
 'wmgApiFrameOptions' => array(
 	'default' => 'DENY',
-	'enwiki' => 'SAMEORIGIN', // Bug 39877
+	'enwiki' => 'SAMEORIGIN', // Bug T41877
 ),
 
 'wmgAltUploadForm' => array( // bug 33513
@@ -12630,7 +12630,7 @@ $wgConf->settings = array(
 	'hiwiki' => true,
 	'huwiki' => true, // bug 30417
 	'incubatorwiki' => true, // bug 31209
-	'iswiki' => true, // Bug 43760
+	'iswiki' => true, // Bug T45760
 	'itwikiquote' => true, // bug 40628
 	'itwikivoyage' => true, // bug 43274
 	'jawiki' => true, // bug 32312
@@ -13117,7 +13117,7 @@ $wgConf->settings = array(
 		'4' => 'Brúkari %code%-4',
 		'5' => 'Brúkari %code%-5',
 		'N' => 'Brúkari %code%-N',
-	), // Bug 37401
+	), // Bug T39401
 	'frwiki' => array(
 		'0' => 'Utilisateur %code%-0',
 		'1' => 'Utilisateur %code%-1',
@@ -13127,7 +13127,7 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'Utilisateur %code%-M',
 	),
-	'frwikiquote' => array( // Bug 39472
+	'frwikiquote' => array( // Bug T41472
 		'0' => 'Utilisateur %code%-0',
 		'1' => 'Utilisateur %code%-1',
 		'2' => 'Utilisateur %code%-2',
@@ -13154,7 +13154,7 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'Utilisateurs %code%-M',
 	),
-	'ilowiki' => array( // Bug 37981
+	'ilowiki' => array( // Bug T39981
 		'0' => false,
 		'1' => 'Agar-aramat %code%-1',
 		'2' => 'Agar-aramat %code%-2',
@@ -13325,7 +13325,7 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'User %code%-N',
 	),
-	'plwikisource' => array( // Bug 39225
+	'plwikisource' => array( // Bug T41225
 		'0' => false,
 		'1' => 'User %code%-1',
 		'2' => 'User %code%-2',
@@ -13361,7 +13361,7 @@ $wgConf->settings = array(
 		'5' => 'User %code%-5',
 		'N' => 'User %code%-N',
 	),
-	'ruwikinews' => array( // Bug 52679
+	'ruwikinews' => array( // Bug T54679
 		'0' => 'User %code%-0',
 		'1' => 'User %code%-1',
 		'2' => 'User %code%-2',
@@ -13397,7 +13397,7 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'Användare %code%-N',
 	),
-	'svwiktionary' => array( // Bug 42288
+	'svwiktionary' => array( // Bug T44288
 		'0' => 'Wiktionary:Användare %code%-0',
 		'1' => 'Wiktionary:Användare %code%-1',
 		'2' => 'Wiktionary:Användare %code%-2',
@@ -13406,7 +13406,7 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'Wiktionary:Användare %code%-N',
 	),
-	'thwiki' => array( // Bug 47418
+	'thwiki' => array( // Bug T49418
 		'0' => 'User %code%-0',
 		'1' => 'User %code%-1',
 		'2' => 'User %code%-2',
@@ -13547,7 +13547,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'betawikiversity' => 'User %code%', // bug 64168
 	'cawiki' => 'Usuaris %code%',
-	'cawiktionary' => 'Usuaris %code%', // Bug 47287
+	'cawiktionary' => 'Usuaris %code%', // Bug T49287
 	'checkuserwiki' => 'User %code%',
 	'commonswiki' => 'User %code%',
 	'enwiki' => 'User %code%',
@@ -13561,12 +13561,12 @@ $wgConf->settings = array(
 	'eswiki' => 'Wikipedia:Wikipedistas con conocimientos de %wikiname%',
 	'eswikinews' => 'Usuario %code%',
 	'fiwiki' => 'User %code%',
-	'fowiki' => 'Brúkari %code%', // Bug 37401
+	'fowiki' => 'Brúkari %code%', // Bug T39401
 	'frwiki' => 'Utilisateur %code%',
-	'frwikiquote' => 'Utilisateur %code%', // Bug 39472
+	'frwikiquote' => 'Utilisateur %code%', // Bug T41472
 	'frwikisource' => 'Utilisateurs %code%',
 	'frwiktionary' => 'Utilisateurs %code%',
-	'ilowiki' => 'Agar-aramat %code%', // Bug 37981
+	'ilowiki' => 'Agar-aramat %code%', // Bug T39981
 	'incubatorwiki' => 'Users:By language:%code%',
 	'iswiki' => 'Notandi %code%',
 	'itwiki' => 'Utenti %code%',
@@ -13586,19 +13586,19 @@ $wgConf->settings = array(
 	'otrs_wikiwiki' => 'User %code%',
 	'outreachwiki' => 'User %code%', // T89484
 	'plwiki' => 'User %code%',
-	'plwikisource' => 'User %code%', // Bug 39225
+	'plwikisource' => 'User %code%', // Bug T41225
 	'ptwiki' => 'Usuários %code%',
 	'ruwiki' => 'User %code%',
-	'ruwikinews' => 'User %code%', // Bug 52679
+	'ruwikinews' => 'User %code%', // Bug T54679
 	'simplewiktionary' => 'User %code%',
 	'specieswiki' => 'User %code%',
 	'svwiki' => 'Användare %code%',
-	'svwiktionary' => 'Wiktionary:Användare %code%', // Bug 42288
-	'thwiki' => 'User %code%', // Bug 47418
+	'svwiktionary' => 'Wiktionary:Användare %code%', // Bug T44288
+	'thwiki' => 'User %code%', // Bug T49418
 	'tlwiki' => 'User %code%',
-	'udmwiki' => 'User %code%', // Bug 47749
+	'udmwiki' => 'User %code%', // Bug T49749
 	'ukwiki' => 'User %code%',
-	'ukwikinews' => 'User %code%', // Bug 46489
+	'ukwikinews' => 'User %code%', // Bug T48489
 	'ukwikisource' => 'Користувачі %code%', // bug 51608
 	'wikidata' => 'User %code%',
 	'zhwiktionary' => '%wikiname%使用者',
@@ -13627,7 +13627,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'bewikimedia' => true, // bug 37391
 	'brwikimedia' => true, // bug 44054
-	'cawikimedia' => true, // Bug 73394
+	'cawikimedia' => true, // Bug T75394
 	'collabwiki' => true,
 	'commonswiki' => true, // bug 48620
 	'incubatorwiki' => true, // bug 34213
@@ -13704,8 +13704,8 @@ $wgConf->settings = array(
 'wmgUseTranslationNotifications' => array(
 	'default' => false,
 	'testwiki' => true,
-	'brwikimedia' => true, // Bug 44054
-	'cawikimedia' => true, // Bug 73394
+	'brwikimedia' => true, // Bug T46054
+	'cawikimedia' => true, // Bug T75394
 	'incubatorwiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
@@ -13758,7 +13758,7 @@ $wgConf->settings = array(
 		'limit' => 10,
 		'inUserLanguage' => false,
 	),
-	'frwikisource' => array( // Bug 39919
+	'frwikisource' => array( // Bug T41919
 		'limit' => 70,
 		'inUserLanguage' => false,
 	),
@@ -13773,7 +13773,7 @@ $wgConf->settings = array(
 ),
 'wmgFeaturedFeedsOverrides' => array(
 	'default' => array(),
-	'fawiki' => array ( // Bug 55884
+	'fawiki' => array ( // Bug T57884
 		'dyk' => array(
 			'frequency' => 'weekly',
 		),
@@ -13781,7 +13781,7 @@ $wgConf->settings = array(
 			'frequency' => 'weekly',
 		),
 	),
-	'frwikisource' => array( // Bug 39919
+	'frwikisource' => array( // Bug T41919
 		'featuredtexts' => array(
 			'frequency' => 'weekly',
 		),
@@ -14195,7 +14195,7 @@ $wgConf->settings = array(
 		'Talk:HHVM/About',
 		'Talk:MediaWiki UI',
 	),
-	'enwiki' => array( // Bug 60178
+	'enwiki' => array( // Bug T62178
 		'Wikipedia talk:WikiProject Breakfast',
 		'Wikipedia talk:WikiProject Hampshire',
 		'Wikipedia talk:Flow/Developer test page',
@@ -14272,12 +14272,12 @@ $wgConf->settings = array(
 ),
 'wmgSubpageSortkeyByNamespace' => array(
 	'default' => array(),
-	'enwikibooks' => array( // Bug 22911
+	'enwikibooks' => array( // Bug T24911
 		NS_MAIN => '1..',
 		102 => '1..', // Cookbook
 		110 => '1..', // Wikijunior
 	),
-	'ptwikibooks' => array( // Bug 22911
+	'ptwikibooks' => array( // Bug T24911
 		NS_MAIN => '1..',
 	),
 ),
