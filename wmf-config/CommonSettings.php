@@ -101,7 +101,7 @@ default:
 # This must be set *after* the DefaultSettings.php inclusion
 $wgDBname = $multiVersion->getDatabase();
 
-# Better have the proper username (bug 44251)
+# Better have the proper username (Bug T46251)
 $wgDBuser = 'wikiuser';
 
 # wmf-config directory (in common/)
@@ -268,7 +268,7 @@ $wmgAddWikiNotify = "newprojects@lists.wikimedia.org";
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
-// Bug 27320: skip MessageBlobStore::clear(); handle via refreshMessageBlobs.php instead
+// Bug T29320: skip MessageBlobStore::clear(); handle via refreshMessageBlobs.php instead
 $wgHooks['LocalisationCacheRecache'][] = function( $cache, $code, &$allData, &$purgeBlobs = true ) {
 	$purgeBlobs = false;
 	return true;
@@ -354,7 +354,7 @@ $wgSessionCacheType = 'sessions';
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
 
-// Use PBKDF2 for password hashing (bug 68766)
+// Use PBKDF2 for password hashing (Bug T70766)
 $wgPasswordDefault = 'pbkdf2';
 // This needs to be increased as allowable by server performance
 $wgPasswordConfig['pbkdf2']['cost'] = '64000';
@@ -369,7 +369,7 @@ if ( PHP_SAPI != 'cli' ) {
 $wgUseImageResize               = true;
 $wgUseImageMagick               = true;
 $wgImageMagickConvertCommand    = '/usr/bin/convert';
-$wgSharpenParameter = '0x0.8'; # for IM>6.5, bug 24857
+$wgSharpenParameter = '0x0.8'; # for IM>6.5, Bug T26857
 
 $wgFileBlacklist[] = 'txt';
 $wgFileBlacklist[] = 'mht';
@@ -462,7 +462,7 @@ if( $wmfRealm == 'production' ) {
 	$wgAggregateStatsID = $wgVersion;
 }
 
-// CORS (cross-domain AJAX, bug 20814)
+// CORS (cross-domain AJAX, Bug T22814)
 // This lists the domains that are accepted as *origins* of CORS requests
 // DO NOT add domains here that aren't WMF wikis unless you really know what you're doing
 if ( $wmgUseCORS ) {
@@ -880,7 +880,7 @@ $wgHiddenPrefs[] = 'realname';
 # Default address gets rejected by some mail hosts
 $wgPasswordSender = 'wiki@wikimedia.org';
 
-# e-mailing password based on e-mail address (bug 34386)
+# e-mailing password based on e-mail address (Bug T36386)
 $wgPasswordResetRoutes['email'] = true;
 
 if ( $wmgUseClusterFileBackend ) {
@@ -958,7 +958,7 @@ $oaiAuditDatabase = 'oai';
 $oaiChunkSize = 40;
 
 $wgEnableUserEmail = true;
-$wgNoFollowLinks = true; // In case the MediaWiki default changed, bug 42594
+$wgNoFollowLinks = true; // In case the MediaWiki default changed, Bug T44594
 
 # XFF log for vandal tracking
 $wgExtensionFunctions[] = function() {
@@ -990,7 +990,7 @@ $wgExtensionFunctions[] = function() {
 	}
 };
 
-// bug 24313, turn off minordefault on enwiki
+// Bug T26313, turn off minordefault on enwiki
 if ( $wgDBname == 'enwiki' ) {
 	$wgHiddenPrefs[] = 'minordefault';
 }
@@ -1005,7 +1005,7 @@ if ( $wmgUseFooterContactLink ) {
 	};
 }
 
-// bug 33186: turn off incomplete feature action=imagerotate
+// Bug T35186: turn off incomplete feature action=imagerotate
 $wgAPIModules['imagerotate'] = 'ApiDisabled';
 
 if ( $wmgUseDPL ) {
@@ -1125,7 +1125,7 @@ $wgBrowserBlackList[] = '/^Lynx/';
 
 if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
 	// New HTTPS service on regular URLs
-	$wgInternalServer = $wgServer; // Keep this as HTTP for IRC notifications (bug 29925)
+	$wgInternalServer = $wgServer; // Keep this as HTTP for IRC notifications (Bug T31925)
 	$wgServer = preg_replace( '/^http:/', 'https:', $wgServer );
 }
 
@@ -1345,7 +1345,7 @@ if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 // taking it live 2006-12-15 brion
 if ( $wmgUseDismissableSiteNotice ) {
 	require( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
-	$wgDismissableSiteNoticeForAnons = true; // Bug 57732
+	$wgDismissableSiteNoticeForAnons = true; // Bug T59732
 }
 $wgMajorSiteNoticeID = '2';
 
@@ -1502,7 +1502,7 @@ if ( $wmgUseCentralNotice ) {
 	// Enable the CentralNotice/Translate integration
 	$wgNoticeUseTranslateExtension = true;
 
-	// Bug 49905
+	// Bug T51905
 	$wgNoticeUseLanguageConversion = true;
 
 	// *** Hide Cookies ***
@@ -1520,7 +1520,7 @@ if ( $wmgUseCentralNotice ) {
 		'donate' => 21600000, // 250 days
 	);
 
-	// Bug 16821
+	// Bug T18821
 	// Updates made here also need to be reflected in
 	// wikimediafoundation.org/wiki/Template:HideBanners
 	$wgNoticeHideUrls = array(
@@ -1560,7 +1560,7 @@ if ( $wgDBname == 'enwiki' ) {
 		return true;
 	};
 
-	// Bug 57569
+	// Bug T59569
 	//
 	// If it's an anonymous user creating a page in the English Wikipedia Draft
 	// namespace, tell TitleQuickPermissions to abort the normal checkQuickPermissions
@@ -1576,7 +1576,7 @@ if ( $wgDBname == 'enwiki' ) {
 	};
 }
 
-// Enable a "viewdeletedfile" userright for [[m:Global deleted image review]] (bug 14801)
+// Enable a "viewdeletedfile" userright for [[m:Global deleted image review]] (Bug T16801)
 $wgAvailableRights[] = 'viewdeletedfile';
 $wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
 	return ( !in_array( $action, array( 'deletedhistory', 'deletedtext' ) ) || !$title->inNamespaces( NS_FILE, NS_FILE_TALK ) || !$user->isAllowed( 'viewdeletedfile' ) );
@@ -1586,7 +1586,7 @@ if ( $wmgUseCollection ) {
 	// PediaPress / PDF generation
 	include "$IP/extensions/Collection/Collection.php";
 	$wgCollectionMWServeURL = 'http://ocg.svc.eqiad.wmnet:8000';
-	// Use pediapress server for POD function (bug 71675)
+	// Use pediapress server for POD function (Bug T73675)
 	$wgCollectionCommandToServeURL = array(
 		'zip_post' => 'http://url-downloader.wikimedia.org:8080|https://pediapress.com/wmfup/',
 	);
@@ -1768,7 +1768,7 @@ if( $wgDBname == 'commonswiki' ) {
 }
 
 // Temporary override: WMF is not hardcore enough to enable this.
-// See bug 35785, 36316, 45022 about it.
+// See Bug T37785, 36316, 45022 about it.
 $wgDefaultUserOptions['watchdefault'] = 0;
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 $wgDefaultUserOptions['usenewrc'] = 0;
@@ -1883,7 +1883,7 @@ if ( $wmgUseUploadWizard ) {
 	);
 
 	$wgUploadWizardConfig['enableChunked'] = 'opt-in';
-	$wgUploadWizardConfig['altUploadForm'] = $wmgAltUploadForm; // bug 33513
+	$wgUploadWizardConfig['altUploadForm'] = $wmgAltUploadForm; // Bug T35513
 
 	if ( $wgDBname == 'testwiki' ) {
 		$wgUploadWizardConfig['feedbackPage'] = 'Prototype_upload_wizard_feedback';
@@ -1900,7 +1900,7 @@ if ( $wmgUseUploadWizard ) {
 		$wgUploadWizardConfig['blacklistIssuesPage'] = 'Wikipedia:Upload_Wizard_blacklist_issues'; # Set by neilk, 2011-11-01, per erik
 	}
 
-	// Needed to make UploadWizard work in IE, see bug 39877
+	// Needed to make UploadWizard work in IE, see Bug T41877
 	$wgApiFrameOptions = 'SAMEORIGIN';
 } else {
 	// If XFO wasn't specified due to UploadWizard, set it here
@@ -2062,12 +2062,12 @@ if ( $wmgUseVisualEditor ) {
 	// User access configuration
 	if ( $wmgVisualEditorDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
-		$wgHiddenPrefs[] = 'visualeditor-enable'; // Bug 48666
+		$wgHiddenPrefs[] = 'visualeditor-enable'; // Bug T50666
 	} else {
 		// Only show the beta-disable preference if the wiki is in 'beta'.
 		$wgHiddenPrefs[] = 'visualeditor-betatempdisable';
 	}
-	// Bug 50000 - to remove once roll-out is complete.
+	// Bug T52000 - to remove once roll-out is complete.
 	if ( $wmgVisualEditorDisableForAnons ) {
 		$wgVisualEditorDisableForAnons = true;
 	}
@@ -2238,7 +2238,7 @@ if ( $wmgUseTranslate ) {
 	$wgGroupPermissions['*']['translate'] = true;
 	$wgGroupPermissions['translationadmin']['pagetranslation'] = true;
 	$wgGroupPermissions['translationadmin']['translate-manage'] = true;
-	$wgGroupPermissions['translationadmin']['translate-import'] = true; // bug 40341
+	$wgGroupPermissions['translationadmin']['translate-import'] = true; // Bug T42341
 	$wgGroupPermissions['user']['translate-messagereview'] = true;
 	$wgGroupPermissions['user']['translate-groupreview'] = true;
 
@@ -2272,7 +2272,7 @@ if ( $wmgUseTranslate ) {
 	unset( $wgTranslateTasks['optional'] );
 	unset( $wgTranslateTasks['suggestions'] );
 
-	$wgTranslateUsePreSaveTransform = true; # bug 37304
+	$wgTranslateUsePreSaveTransform = true; # Bug T39304
 
 	$wgEnablePageTranslation = true;
 	$wgTranslateDelayedMessageIndexRebuild = true;
@@ -2660,7 +2660,7 @@ if ( $wmgUseRelatedSites ) {
 
 if ( $wmgUseUserMerge ) {
 	require_once( "$IP/extensions/UserMerge/UserMerge.php" );
-	// Don't let users get deleted outright (bug 67789)
+	// Don't let users get deleted outright (Bug T69789)
 	$wgUserMergeEnableDelete = false;
 }
 
@@ -2680,7 +2680,7 @@ if ( $wmgUseEventLogging ) {
 		$wgEventLoggingSchemaApiUri = 'http://meta.wikimedia.org/w/api.php';
 	}
 	if ( $wgEventLoggingDBname === $wgDBname ) {
-		// Bug 45031
+		// Bug T47031
 		$wgExtraNamespaces[470] = 'Schema';
 		$wgExtraNamespaces[471] = 'Schema_talk';
 
@@ -2973,7 +2973,7 @@ $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
 	return true;
 };
 
-// bug 44617
+// Bug T46617
 if ( in_array( $wgDBname, array( 'wikidatawiki', 'testwikidatawiki' ) ) ) {
 	$wgHooks['SkinCopyrightFooter'][] = function( $title, $type, &$msg, &$link, &$forContent ) {
 		if ( $title->getNamespace() === NS_MAIN ) {
