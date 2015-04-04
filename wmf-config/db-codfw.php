@@ -271,7 +271,7 @@ $wgLBFactoryConf = array(
 	'cluster20' => $wmgOldExtTemplate,
 	'cluster21' => $wmgOldExtTemplate,
 
-	# Clusters required for bug 22624
+	# Clusters required for Bug T24624
 	'cluster1' => $wmgOldExtTemplate,
 	'cluster2' => $wmgOldExtTemplate,
 
