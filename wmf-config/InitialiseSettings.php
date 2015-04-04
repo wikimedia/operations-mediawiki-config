@@ -1465,7 +1465,6 @@ $wgConf->settings = array(
 	'arwikiversity' => 'ويكي الجامعة',
 	'arwiktionary' => 'ويكاموس',
 	'arzwiki' => 'ويكيبيديا',
-	'astwiki' => 'Uiquipedia',
 	'astwiktionary' => 'Uiccionariu',
 	'aswiki' => 'অসমীয়া ৱিকিপিডিয়া',
 	'aswikisource' => 'ৱিকিউৎস', // bug 43129
@@ -1932,7 +1931,6 @@ $wgConf->settings = array(
 	'arwikiversity' => 'ويكي_الجامعة',
 	'arwiktionary' => 'ويكاموس',
 	'arzwiki' => 'ويكيبيديا',
-	'astwiki' => 'Uiquipedia',
 	'astwiktionary' => 'Uiccionariu',
 	'aswiki' => 'ৱিকিপিডিয়া',
 	'aswikisource' => 'ৱিকিউৎস', // bug 43129
@@ -2513,6 +2511,10 @@ $wgConf->settings = array(
 		'Author_talk' => 103, // bug 70464
 		'লিখক' => 102, // bug 70464
 		'লিখক_আলোচনা' => 103, // bug 70464
+	),
+	'+astwiki'=> array(
+		'Uiquipedia' => NS_PROJECT, // T94341
+		'Uiquipedia_alderique' => NS_PROJECT_TALK, // T94341
 	),
 	'+azwikibooks' => array(
 		'Wikibooks_müzakirəsi' => NS_PROJECT_TALK, // bug 31068
