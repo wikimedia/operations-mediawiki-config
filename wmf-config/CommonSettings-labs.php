@@ -23,7 +23,7 @@ $wgDebugTimestamps = true;
 
 $wmgAddWikiNotify = false;
 
-# see r110254 and bug 33746
+# see r110254 and Bug T35746
 $wgPreloadJavaScriptMwUtil = true;
 
 // Cache ResourceLoader modules in localStorage
@@ -57,9 +57,9 @@ if ( $wmgUseGWToolset ) {
 }
 
 if ( $wmgUseOAuth ) {
-	$wgMWOAuthCentralWiki = 'deploymentwiki';  # bug 57403
+	$wgMWOAuthCentralWiki = 'deploymentwiki';  # Bug T59403
 
-	// Bug 59141 - Return this to true and reset secrets once SSL works in labs
+	// Bug T61141 - Return this to true and reset secrets once SSL works in labs
 	$wgMWOAuthSecureTokenTransfer = false;
 }
 
@@ -193,7 +193,7 @@ if ( $wmgUseScore ) {
 	$wgScoreDirectory = '/data/project/upload7/score';
 }
 
-// CORS (cross-domain AJAX, bug 20814)
+// CORS (cross-domain AJAX, Bug T22814)
 // This lists the domains that are accepted as *origins* of CORS requests
 // DO NOT add domains here that aren't WMF wikis unless you really know what you're doing
 if ( $wmgUseCORS ) {

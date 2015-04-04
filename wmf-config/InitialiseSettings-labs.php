@@ -150,7 +150,7 @@ return array(
 	'-wgRateLimitLog' => array(),
 	'-wgJobLogFile' => array(),
 
-	// bug 60013, 56758
+	// Bug T62013, 56758
 	'-wmgRC2UDPPrefix' => array(
 		'default' => false,
 	),
@@ -179,7 +179,7 @@ return array(
 	),
 
 	'-wmgUsePoolCounter' => array(
-		'default' => false, # bug 36891
+		'default' => false, # Bug T38891
 	),
 	'-wmgUseAPIRequestLog' => array(
 		'default' => false,
@@ -213,7 +213,7 @@ return array(
 		'default' => true,
 	),
 
-	# Bug 37852
+	# Bug T39852
 	'wmgUseWikimediaShopLink' => array(
 		'default'    => false,
 		'enwiki'     => true,
@@ -309,7 +309,7 @@ return array(
 		'deploymentwiki' => 'personal',
 	),
 
-	// (bug 39653) The plan is to enable it for testing on labs first, so add
+	// (Bug T41653) The plan is to enable it for testing on labs first, so add
 	// the config hook to be able to do that.
 	'wmgUseCodeEditorForCore' => array(
 		'default' => true,
@@ -427,7 +427,7 @@ return array(
 
 	'wgSecureLogin' => array(
 		// Setting false throughout Labs for now due to untrusted SSL certificate
-		// bug 48501
+		// Bug T50501
 		'default' => false,
 		'loginwiki' => false,
 	),

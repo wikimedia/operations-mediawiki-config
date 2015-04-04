@@ -17,7 +17,7 @@ $wgFlaggedRevTags = array(
 $wgFlagRestrictions = array(
 	'accuracy' => array( 'review' => 1, 'autoreview' => 1 ),
 );
-$wgGroupPermissions['autoconfirmed']['movestable'] = true; // bug 14166
+$wgGroupPermissions['autoconfirmed']['movestable'] = true; // Bug T16166
 
 $wmfStandardAutoPromote = $wgFlaggedRevsAutopromote; // flaggedrevs defaults
 $wgFlaggedRevsAutopromote = false;
@@ -36,7 +36,7 @@ if ( $wgDBname == 'alswiki' ) {
 
 elseif ( $wgDBname == 'arwiki' ) {
 	$wgFlaggedRevsWhitelist = array( 'الص�?حة_الرئيسية' );
-	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 100, 104 ) ); // bug 19332
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 100, 104 ) ); // Bug T21332
 }
 
 elseif ( $wgDBname == 'bewiki' ) {
@@ -82,7 +82,7 @@ elseif ( $wgDBname == 'bnwiki' ) { // T30717
 
 elseif ( $wgDBname == 'cewiki' ) { // based on ruwiki settings
 
-	// Bug 56408
+	// Bug T58408
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 );
 
 	$wgFlaggedRevTags['accuracy']['levels'] = 3; // Is this needed?
@@ -166,8 +166,8 @@ elseif ( $wgDBname == 'test2wiki' ) {
 }
 
 elseif ( $wgDBname == 'cawikinews' ) {
-	$wgGroupPermissions['sysop']['stablesettings'] = true; // Bug 34135
-	$wgFlaggedRevsNamespaces[] = 102; // Bug 34135
+	$wgGroupPermissions['sysop']['stablesettings'] = true; // Bug T36135
+	$wgFlaggedRevsNamespaces[] = 102; // Bug T36135
 }
 
 // New deployment 2008-05-03
@@ -208,7 +208,7 @@ elseif ( $wgDBname == 'dewiktionary' ) {
 	$wgFlaggedRevTags['accuracy']['levels'] = 1;
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 102, 104, 106, 108 ) ); // T67316 and T76657
 
-	$wgFlaggedRevsAutoconfirm = array( // Bug 44103
+	$wgFlaggedRevsAutoconfirm = array( // Bug T46103
 		'days'                => 60,
 		'totalContentEdits'   => 250,
 		'totalCheckedEdits'   => 50,
@@ -409,7 +409,7 @@ elseif ( $wgDBname == 'hewikisource' ) {
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 }
-# bug 29911
+# Bug T31911
 elseif ( $wgDBname == 'hiwiki' ) {
 	// # namespaces
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_PROJECT, NS_CATEGORY, 100 ) ); # 100 = Portal
@@ -482,7 +482,7 @@ elseif ( $wgDBname == 'huwiki' ) {
 	if ( is_array( $wgRemoveGroups['sysop'] ) )
 		unset( $wgRemoveGroups['sysop'][ array_search( 'editor', $wgRemoveGroups['sysop'] ) ] );
 
-	// # Remove 'autoreview' user group; bug 72055
+	// # Remove 'autoreview' user group; Bug T74055
 	unset( $wgGroupPermissions['autoreview'] );
 	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'autoreview' ) );
 	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'autoreview' ) );
@@ -521,10 +521,10 @@ elseif ( $wgDBname == 'plwiki' ) {
 }
 
 elseif ( $wgDBname == 'plwiktionary' ) {
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 100, 102, 828 ); // bug 53373
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 100, 102, 828 ); // Bug T55373
 }
 
-elseif ( $wgDBname == 'ptwiki' ) { // bug 54828
+elseif ( $wgDBname == 'ptwiki' ) { // Bug T56828
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_TEMPLATE, 102, 828 );
 	# Show only on a per-page basis
 	$wgFlaggedRevsOverride = false;
@@ -687,15 +687,15 @@ elseif ( $wgDBname == 'sqwiki' ) {
 }
 
 elseif ( $wgDBname == 'trwiki' ) {
-	unset( $wgGroupPermissions['reviewer'] ); // Bug 38690
-	$wgAddGroups['bureaucrat'] = array_diff( $wgAddGroups['bureaucrat'], array( 'reviewer' ) ); // Bug 38690
-	$wgRemoveGroups['bureaucrat'] = array_diff( $wgRemoveGroups['bureaucrat'], array( 'reviewer' ) ); // Bug 38690
+	unset( $wgGroupPermissions['reviewer'] ); // Bug T40690
+	$wgAddGroups['bureaucrat'] = array_diff( $wgAddGroups['bureaucrat'], array( 'reviewer' ) ); // Bug T40690
+	$wgRemoveGroups['bureaucrat'] = array_diff( $wgRemoveGroups['bureaucrat'], array( 'reviewer' ) ); // Bug T40690
 
-	unset( $wgGroupPermissions['editor'] ); // Bug 38690
-	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'editor' ) ); // Bug 38690
-	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'editor' ) ); // Bug 38690
+	unset( $wgGroupPermissions['editor'] ); // Bug T40690
+	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'editor' ) ); // Bug T40690
+	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'editor' ) ); // Bug T40690
 
-	// Bug 44587:
+	// Bug T46587:
 	$wgFlaggedRevsNamespaces[] = 100 /* NS_PORTAL */;
 	$wgFlaggedRevsNamespaces[] = NS_HELP;
 }

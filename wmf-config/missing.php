@@ -197,7 +197,7 @@ function showMobileError() {
 	header( 'HTTP/1.x 403 Forbidden' );
 	header( 'Content-Type: text/html; charset=utf-8' );
 
-	// Disable caching, due to the suspicion that bug 47807 is caused by cache poisoning.
+	// Disable caching, due to the suspicion that Bug T49807 is caused by cache poisoning.
 	header( 'Cache-Control: no-cache' );
 
 ?>
