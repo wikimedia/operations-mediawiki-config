@@ -7235,6 +7235,7 @@ $wgConf->settings = array(
 		), // T87558
 	),
 	'+fawikinews' => array(
+		'autopatrolled' => array( 'autopatrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
 		'patroller' => array( 'patrol' => true ),
 	),
@@ -8362,7 +8363,7 @@ $wgConf->settings = array(
 		), // bug 69411
 	),
 	'+fawikinews' => array(
-		'sysop' => array( 'rollbacker', 'patroller' ),
+		'sysop' => array( 'autopatrolled', 'rollbacker', 'patroller' ),
 	),
 	'+fawikivoyage' => array(
 		'sysop' => array(
@@ -8965,7 +8966,7 @@ $wgConf->settings = array(
 		), // bug 69411
 	),
 	'+fawikinews' => array(
-		'sysop' => array( 'rollbacker', 'patroller', ),
+		'sysop' => array( 'autopatrolled', 'rollbacker', 'patroller', ),
 	),
 	'+fawikivoyage' => array(
 		'sysop' => array(
