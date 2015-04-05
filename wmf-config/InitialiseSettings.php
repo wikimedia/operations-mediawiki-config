@@ -4066,6 +4066,7 @@ $wgConf->settings = array(
 	),
 	'arwiki' => array( '', 'autoconfirmed', 'autoreview', 'sysop', 'superprotect' ), // bug 52109
 	'ckbwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), // bug 52533
+	'dewiki' => array( '', 'autoconfirmed', 'editeditorprotected', 'sysop', 'superprotect' ), // T94368
 	'enwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // bug 55432
 	'hewiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), //bug 58207
 	'huwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // bug 72055
@@ -7045,12 +7046,19 @@ $wgConf->settings = array(
 		'autoconfirmed' => array(
 			'upload' => true, // bug 12391
 		),
+		'bot' => array(
+			'editeditorprotected' => true, // T94368
+		),
 		'editor' => array(
 			'rollback' => true, // per DaBPunkt's request, 2008-05-07
+			'editeditorprotected' => true, // T94368
 		),
 		'noratelimit' => array( // bug 57819
 			'autoreview' => true,
 			'noratelimit' => true,
+		),
+		'sysop' => array(
+			'editeditorprotected' => true, // T94368
 		),
 	),
 	'dewikibooks' => array(
