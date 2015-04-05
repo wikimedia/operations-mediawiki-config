@@ -2663,7 +2663,10 @@ if ( $wmgUseUserMerge ) {
 if ( $wmgUseEventLogging ) {
 	require_once( "$IP/extensions/EventLogging/EventLogging.php" );
 	if ( $wgDBname === 'labswiki' ) {
-		// Defaults!
+		$wgEventLoggingDBname = 'labswiki';
+		$wgEventLoggingSchemaApiUri = 'http://wikitech.wikimedia.org/w/api.php';
+		$wgEventLoggingBaseUri = "//{$wmfHostnames['bits']}/dummy.gif";
+		$wgEventLoggingFile = "udp://$wmfUdp2logDest/EventLogging-$wgDBname";
 	} elseif ( $wgDBname === 'test2wiki' ) {
 		// test2wiki has its own Schema: NS.
 		$wgEventLoggingDBname = 'test2wiki';
