@@ -1195,6 +1195,7 @@ $wgConf->settings = array(
 	'huwikibooks' => false, // bug 72231
 	'huwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=hu',
 	'incubatorwiki' => '/wiki/Special:MyLanguage/Incubator:Upload',
+	'iswiki' => '/wiki/Wikipedia:Hlaða_inn_skrá', // T95089
 	'iswiktionary' => '/wiki/Wikior%C3%B0ab%C3%B3k:Hla%C3%B0a_inn_skr%C3%A1', // bug 11187
 	'itwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'itwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=it', // Bug 73439
