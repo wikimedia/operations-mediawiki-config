@@ -16,6 +16,24 @@
       "revId": "6eb419720a5fabb699354ccbd8f1f524437b5980",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_8a03f778",
+        "filename": "wmf-config/PoolCounterSettings-common.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2015-04-05T15:11:47Z",
+      "side": 1,
+      "message": "Currently is just displays a warning.\n\nWhat do you mean with older versions? Does poolcounter do it\u0027s own caching? I use the cached data (if present) which expires in 3600 seconds.",
+      "parentUuid": "6e7c4fa4_2baaf668",
+      "revId": "6eb419720a5fabb699354ccbd8f1f524437b5980",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
