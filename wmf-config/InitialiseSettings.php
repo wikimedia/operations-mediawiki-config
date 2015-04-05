@@ -1076,9 +1076,82 @@ $wgConf->settings = array(
 # wgLogoHD @{
 // Alternate logos for high-resolution displays.
 'wgLogoHD' => array(
+    # Wikipedia
+	'bnwiki' => array(
+		'1.5x' => '//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Wikipedia-logo-v2-bn.svg/204px-Wikipedia-logo-v2-bn.svg.png',
+		'2x' => '//upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Wikipedia-logo-v2-bn.svg/270px-Wikipedia-logo-v2-bn.svg.png',
+	),
 	'enwiki' => array(
 		'1.5x' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/204px-Wikipedia-logo-v2-en.svg.png',
 		'2x' => '//upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/270px-Wikipedia-logo-v2-en.svg.png',
+	),
+	'fawiki' => array(
+		'1.5x' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Wikipedia-logo-v2-fa.svg/204px-Wikipedia-logo-v2-fa.svg.png',
+		'2x' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Wikipedia-logo-v2-fa.svg/270px-Wikipedia-logo-v2-fa.svg.png',
+	),
+	'frwiki' => array(
+		'1.5x' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Wikipedia-logo-v2-fr.svg/204px-Wikipedia-logo-v2-fr.svg.png',
+		'2x' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Wikipedia-logo-v2-fr.svg/270px-Wikipedia-logo-v2-fr.svg.png',
+	),
+	'ilowiki' => array(
+		'1.5x' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Wikipedia-logo-v2-ilo.svg/204px-Wikipedia-logo-v2-ilo.svg.png',
+		'2x' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Wikipedia-logo-v2-ilo.svg/270px-Wikipedia-logo-v2-ilo.svg.png',
+	),
+	'itwiki' => array(
+		'1.5x' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/90/Wikipedia-logo-v2-it.svg/204px-Wikipedia-logo-v2-it.svg.png',
+		'2x' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/90/Wikipedia-logo-v2-it.svg/270px-Wikipedia-logo-v2-it.svg.png',
+	),
+	'lawiki' => array(
+		'1.5x' => '//upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wikipedia-logo-v2-la.svg/204px-Wikipedia-logo-v2-la.svg.png',
+		'2x' => '//upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Wikipedia-logo-v2-la.svg/270px-Wikipedia-logo-v2-la.svg.png',
+	),
+	'nlwiki' => array(
+		'1.5x' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Wikipedia-logo-v2-nl.svg/204px-Wikipedia-logo-v2-nl.svg.png',
+		'2x' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Wikipedia-logo-v2-nl.svg/270px-Wikipedia-logo-v2-nl.svg.png',
+	),
+	'tawiki' => array(
+		'1.5x' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2-ta.svg/204px-Wikipedia-logo-v2-ta.svg.png',
+		'2x' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/80/Wikipedia-logo-v2-ta.svg/270px-Wikipedia-logo-v2-ta.svg.png',
+	),
+	'viwiki' => array(
+		'1.5x' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Wikipedia-logo-v2-vi.svg/204px-Wikipedia-logo-v2-vi.svg.png',
+		'2x' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Wikipedia-logo-v2-vi.svg/270px-Wikipedia-logo-v2-vi.svg.png',
+	),
+    
+    # Wiktionary
+	'viwiktionary' => array(
+		'1.5x' => '//upload.wikimedia.org/wikipedia/commons/thumb/7/74/Wiktionary-logo-vi.svg/192px-Wiktionary-logo-vi.svg.png',
+		'2x' => '//upload.wikimedia.org/wikipedia/commons/thumb/7/74/Wiktionary-logo-vi.svg/256px-Wiktionary-logo-vi.svg.png',
+	),
+    
+    # Wikiquote
+	'viwikiquote' => array(
+		'1.5x' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Wikiquote-logo-en.svg/225px-Wikiquote-logo-en.svg.png',
+		'2x' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Wikiquote-logo-en.svg/300px-Wikiquote-logo-en.svg.png',
+	),
+    
+    # Wikibooks
+	'viwikibooks' => array(
+		'1.5x' => '//upload.wikimedia.org/wikibooks/vi/thumb/f/f0/Wiki.svg/204px-Wiki.svg.png',
+		'2x' => '//upload.wikimedia.org/wikibooks/vi/thumb/f/f0/Wiki.svg/270px-Wiki.svg.png',
+	),
+    
+    # Wikisource
+	'viwikisource' => array(
+		'1.5x' => '//upload.wikimedia.org/wikisource/vi/thumb/f/f0/Wiki.svg/185px-Wiki.svg.png',
+		'2x' => '//upload.wikimedia.org/wikisource/vi/thumb/f/f0/Wiki.svg/246px-Wiki.svg.png',
+	),
+    
+    # Wikivoyage
+	'viwikivoyage' => array(
+		'1.5x' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Wikivoyage-Logo-v3-en.svg/228px-Wikivoyage-Logo-v3-en.svg.png',
+		'2x' => '//upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Wikivoyage-Logo-v3-en.svg/304px-Wikivoyage-Logo-v3-en.svg.png',
+	),
+    
+    # Special wikis
+	'metawiki' => array(
+		'1.5x' => '//upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Wikimedia-logo-meta.svg/204px-Wikimedia-logo-meta.svg.png',
+		'2x' => '//upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Wikimedia-logo-meta.svg/270px-Wikimedia-logo-meta.svg.png',
 	),
 ),
 # @} end of wgLogoHD
