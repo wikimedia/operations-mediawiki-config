@@ -2662,9 +2662,7 @@ if ( $wmgUseUserMerge ) {
 
 if ( $wmgUseEventLogging ) {
 	require_once( "$IP/extensions/EventLogging/EventLogging.php" );
-	if ( $wgDBname === 'labswiki' ) {
-		// Defaults!
-	} elseif ( $wgDBname === 'test2wiki' ) {
+	if ( $wgDBname === 'test2wiki' ) {
 		// test2wiki has its own Schema: NS.
 		$wgEventLoggingDBname = 'test2wiki';
 		$wgEventLoggingSchemaApiUri = 'http://test2.wikipedia.org/w/api.php';
