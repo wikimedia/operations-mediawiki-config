@@ -1,7 +1,9 @@
 <?php
+/**
+ * Beta cluster logging additions
+ */
 
-// tweak to logs
-//
+use MediaWiki\Logger\LoggerFactory;
 
 if ( $wgCommandLineMode || PHP_SAPI == 'cli' ) {
 	$wgDebugLogFile = "udp://$wmfUdp2logDest/cli";
@@ -43,13 +45,13 @@ if ( $_SERVER['SCRIPT_NAME'] != "/w/index.php" ) {
 $wgDebugLogPrefix = $randomHash . ": ";
 
 /**
- * Create a config array for a MWLoggerMonologSyslogHandler instance.
- * @param int $level Minimum logging level at which this handler will be
- * triggered
+ * Configure a MediaWiki\Logger\Monolog\SyslogHandler instance.
+ * @param int $level Minimum logging level that will trigger this handler
+ * @return array \MediaWiki\Logger\MonologSpi handler configuration
  */
 function wmMonologSyslogConfigFactory( $level ) {
 	return array(
-		'class' => 'MWLoggerMonologSyslogHandler',
+		'class' => '\\MediaWiki\\Logger\\Monolog\\SyslogHandler',
 		'args' => array(
 			'mediawiki',    // syslog appname
 			'10.68.16.134', // deployment-logstash1.eqiad.wmflabs
@@ -75,7 +77,7 @@ $wmgMonologConfig =  array(
 
 	'processors' => array(
 		'wiki' => array(
-			'class' => 'MWLoggerMonologProcessor',
+			'class' => '\\MediaWiki\\Logger\\Monolog\\WikiProcessor',
 		),
 		'psr' => array(
 			'class' => '\\Monolog\\Processor\\PsrLogMessageProcessor',
@@ -93,12 +95,12 @@ $wmgMonologConfig =  array(
 
 	'handlers' => array(
 		'wgDebugLogFile' => array(
-			'class' => 'MWLoggerMonologHandler',
+			'class' => '\\MediaWiki\\Logger\\Monolog\\LegacyHandler',
 			'args' => array( $wgDebugLogFile, true ),
 			'formatter' => 'legacy',
 		),
 		'udp2log' => array(
-			'class' => 'MWLoggerMonologHandler',
+			'class' => '\\MediaWiki\\Logger\\Monolog\\LegacyHandler',
 			'args' => array( "udp://{$wmfUdp2logDest}/{channel}", true ),
 			'formatter' => 'legacy',
 		),
@@ -106,7 +108,7 @@ $wmgMonologConfig =  array(
 
 	'formatters' => array(
 		'legacy' => array(
-			'class' => 'MWLoggerMonologLegacyFormatter',
+			'class' => '\\MediaWiki\\Logger\\Monolog\\LegacyFormatter',
 		),
 		'logstash' => array(
 			'class' => '\\Monolog\\Formatter\\LogstashFormatter',
@@ -150,7 +152,7 @@ foreach ( $wgDebugLogGroups as $group => $dest ) {
 					'class' => '\\Monolog\\Handler\\SamplingHandler',
 					'args' => array(
 						function () use ( $logstashHandler ) {
-							return MWLogger::getProvider()->getHandler(
+							return LoggerFactory::getProvider()->getHandler(
 								$logstashHandler
 							);
 						},
@@ -171,6 +173,6 @@ foreach ( $wgDebugLogGroups as $group => $dest ) {
 }
 
 $wgMWLoggerDefaultSpi = array(
-	'class' => 'MWLoggerMonologSpi',
+	'class' => '\\MediaWiki\\Logger\\MonologSpi',
 	'args' => array( $wmgMonologConfig ),
 );
