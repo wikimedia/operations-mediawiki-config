@@ -10,6 +10,7 @@
 # into this file a little way down).
 #######################################################################
 
+use MediaWiki\Logger\LoggerFactory;
 
 # Godforsaken hack to work around problems with the Squid caching changes...
 #
@@ -960,20 +961,20 @@ $wgExtensionFunctions[] = function() {
 		$uri = ( ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] ) ? 'https://' : 'http://' ) .
 			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		$xff = isset( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : '';
-		$logger = MWLogger::getInstance( 'xff' );
+		$logger = LoggerFactory::getInstance( 'xff' );
 		// TODO: it would be nice to log this as actual structured data
 		// instead of this ad-hoc tab delimited format
-		$logger->debug(
+		$logger->info(
 			gmdate( 'r' ) . "\t" .
 			"$uri\t" .
 			"$xff, {$_SERVER['REMOTE_ADDR']}\t" .
 			( ( isset( $_REQUEST['wpSave'] ) && $_REQUEST['wpSave'] ) ? 'save' : '' )
 		);
 		if ( $wgRequest->getIP() === '127.0.0.1' ) {
-			$logger = MWLogger::getInstance( 'localhost' );
+			$logger = LoggerFactory::getInstance( 'localhost' );
 			// TODO: it would be nice to log this as actual structured data
 			// instead of this ad-hoc tab delimited format
-			$logger->debug(
+			$logger->info(
 				gmdate( 'r' ) . "\t" .
 				wfHostname() .
 				"\t$xff, {$_SERVER['REMOTE_ADDR']}\t" .
@@ -1359,13 +1360,13 @@ $wgHooks['LoginAuthenticateAudit'][] = function( $user, $pass, $retval ) {
 			$bit = '???';
 		}
 
-		wfDebugLog( 'badpass', "$bit for sysop '" .
+		$logger = LoggerFactory::getInstance( 'badpass' );
+		$logger->info( "$bit for sysop '" .
 			$user->getName() . "' from " . $wgRequest->getIP() .
 			# " - " . serialize( apache_request_headers() )
 			" - " . @$headers['X-Forwarded-For'] .
-			' - ' . @$headers['User-Agent'] .
-			''
-			 );
+			' - ' . @$headers['User-Agent']
+		);
 	}
 	return true;
 };
@@ -1375,14 +1376,15 @@ $wgHooks['PrefsEmailAudit'][] = function( $user, $old, $new ) {
 		global $wgRequest;
 		$headers = apache_request_headers();
 
-		wfDebugLog( 'badpass', "Email changed in prefs for sysop '" .
+		$logger = LoggerFactory::getInstance( 'badpass' );
+		$logger->info( "Email changed in prefs for sysop '" .
 			$user->getName() .
 			"' from '$old' to '$new'" .
 			" - " . $wgRequest->getIP() .
 			# " - " . serialize( apache_request_headers() )
 			" - " . @$headers['X-Forwarded-For'] .
-			' - ' . @$headers['User-Agent'] .
-			'' );
+			' - ' . @$headers['User-Agent']
+		);
 	}
 	return true;
 };
@@ -1392,14 +1394,15 @@ $wgHooks['PrefsPasswordAudit'][] = function( $user, $pass, $status ) {
 		global $wgRequest;
 		$headers = apache_request_headers();
 
-		wfDebugLog( 'badpass', "Password change in prefs for sysop '" .
+		$logger = LoggerFactory::getInstance( 'badpass' );
+		$logger->info( "Password change in prefs for sysop '" .
 			$user->getName() .
 			"': $status" .
 			" - " . $wgRequest->getIP() .
 			# " - " . serialize( apache_request_headers() )
 			" - " . @$headers['X-Forwarded-For'] .
-			' - ' . @$headers['User-Agent'] .
-			'' );
+			' - ' . @$headers['User-Agent']
+		);
 	}
 	return true;
 };
