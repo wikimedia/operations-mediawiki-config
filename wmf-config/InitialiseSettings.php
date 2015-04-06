@@ -7863,6 +7863,9 @@ $wgConf->settings = array(
 	),
 	'tawiki' => array(
 		'nocreate' => array( 'createpage' => false, ),
+		'autopatrolled' => array( 'autopatrol' => true ), //T95180
+		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'abusefilter-log-detail' => true ), //T95180
+		'rollbacker' => array( 'rollback' => true ), //T95180
 	),
 	'testwiki' => array(
 		'accountcreator' => array( 'override-antispoof' => true, 'tboverride' => true ),
@@ -8657,6 +8660,7 @@ $wgConf->settings = array(
 	),
 	'+tawiki' => array(
 		'bureaucrat' => array( 'nocreate' ),
+		'sysop' => array( 'patroller', 'rollbacker', 'autopatrolled' ), //T95180
 	),
 	'+trwiki' => array(
 		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, Bug 38690
@@ -9267,6 +9271,7 @@ $wgConf->settings = array(
 	),
 	'+tawiki' => array(
 		'bureaucrat' => array( 'nocreate' ),
+		'sysop' => array( 'patroller', 'rollbacker', 'autopatrolled' ), //T95180
 	),
 	'+trwiki' => array(
 		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, Bug 38690
