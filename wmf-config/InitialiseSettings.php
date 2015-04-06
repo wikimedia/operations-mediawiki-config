@@ -14350,8 +14350,7 @@ $wgConf->settings = array(
 
 // CX Campaigns
 'wmgContentTranslationCampaigns' => array(
-	'default' => array(),
-	'cawiki' => array( 'newarticle' ),
+	'default' => array( 'newarticle' ),
 ),
 
 // Namespace to publish article
