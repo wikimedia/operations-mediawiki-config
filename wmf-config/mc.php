@@ -16,17 +16,4 @@ $wgObjectCaches['memcached-pecl'] = array(
 	'loggroup'             => 'memcached',
 );
 
-require( getRealmSpecificFilename( "$wmfConfigDir/bloomfilters.php" ) );
-/*
-$wgBloomFilterStores['main'] = array(
-	'cacheId'      => 'main-v1',
-	'class'        => 'BloomCacheRedis',
-	'redisServers' => $wmgBloomFilterServers,
-	'redisConfig'  => array(
-		'password'       => $wmgRedisPassword,
-		'connectTimeout' => .25,
-	),
-);
- */
-
 # vim: set sts=4 sw=4 et :

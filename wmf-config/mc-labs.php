@@ -28,16 +28,4 @@ $wgObjectCaches['memcached-pecl'] = array(
 	'loggroup' => 'memcached',
 );
 
-$wgBloomFilterStores['main'] = array(
-	'cacheId'      => 'main-v1',
-	'class'        => 'BloomCacheRedis',
-	'redisServers' => array(
-		'10.68.16.177:6379', // master; deployment-redis01
-	),
-	'redisConfig'  => array(
-		'password' => $wmgRedisPassword,
-		'connectTimeout' => .25
-	)
-);
-
 } # end safe guard
