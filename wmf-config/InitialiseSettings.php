@@ -4247,6 +4247,7 @@ $wgConf->settings = array(
 		'T89258' => "udp://$wmfUdp2logDest/T89258", // - awight and AndyRussG
 		'ResourceLoaderImage' => "udp://$wmfUdp2logDest/resourceloaderimage", // - demon, matmarex
 		'HttpError' => array( 'level'=>'error', 'destination' => "udp://$wmfUdp2logDest/httperror" ), // Only log http errors with a 500+ code T85795
+		'AdHocDebug' => "udp://$wmfUdp2logDest/AdHocDebug", // for temp live debugging
 	),
 
 	'+enwiki' => array(
