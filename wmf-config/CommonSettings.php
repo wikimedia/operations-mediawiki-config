@@ -810,6 +810,7 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 	// extension distributor messages for mediawiki.org in WikimediaMessages/i18n/wikimedia/*.json too
 	$wgExtDistSnapshotRefs = array(
 		'master',
+		'REL1_25',
 		'REL1_24',
 		'REL1_23',
 		'REL1_22',
