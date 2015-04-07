@@ -141,7 +141,7 @@ $wgLBFactoryConf = array(
 		'db1061' => 500, # 2.8TB 128GB
 	),
 	's7' => array(
-		'db1033' => 0,   # 1.4TB  64GB, 
+		'db1033' => 0,   # 1.4TB  64GB,
 		'db1028' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1041' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
 		'db1034' => 400, # 1.4TB  64GB
@@ -514,7 +514,6 @@ $wgDefaultExternalStore = array(
 	'DB://cluster24',
 	'DB://cluster25',
 );
-$wgDBAvgStatusPoll = 30000;
 
 # $wgLBFactoryConf['readOnlyBySection']['s2'] =
 # $wgLBFactoryConf['readOnlyBySection']['s2a'] =
