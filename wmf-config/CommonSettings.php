@@ -806,10 +806,14 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 		'repoListUrl' => 'https://gerrit.wikimedia.org/r/projects/?p=mediawiki/$TYPE/',
 	);
 
+	// Current stable release
+	$wgExtDistDefaultSnapshot = 'REL1_24';
+
 	// When changing the Snapshot Refs please change the corresponding
 	// extension distributor messages for mediawiki.org in WikimediaMessages/i18n/wikimedia/*.json too
 	$wgExtDistSnapshotRefs = array(
 		'master',
+		'REL1_25',
 		'REL1_24',
 		'REL1_23',
 		'REL1_22',
