@@ -141,7 +141,7 @@ $wgLBFactoryConf = array(
 		'db1061' => 500, # 2.8TB 128GB
 	),
 	's7' => array(
-		'db1033' => 0,   # 1.4TB  64GB, 
+		'db1033' => 0,   # 1.4TB  64GB,
 		'db1028' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1041' => 0,   # 1.4TB  64GB, watchlist, recentchangeslinked, contributions, logpager
 		'db1034' => 400, # 1.4TB  64GB
@@ -159,8 +159,7 @@ $wgLBFactoryConf = array(
 	'password'	  => $wgDBpassword,
 	'type'		  => 'mysql',
 	'flags'		  => DBO_DEFAULT,
-	'max lag'	  => 30,
-	# 'max threads' => 350, -- disabled TS
+	'max lag'	  => 20
 ),
 
 'groupLoadsBySection' => array(
