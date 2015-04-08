@@ -4383,6 +4383,12 @@ $wgConf->settings = array(
 		100 => 'Response',
 		101 => 'Response_talk'
 	),
+	'ruwikimedia' => array(
+		100 => 'Пресс-релизы',             // T95110 (press releases)
+		101 => 'Обсуждение_пресс-релизов',
+		102 => 'Отчёты',                   // T95110 (reports)
+		103 => 'Обсуждение_отчётов',
+	),
 	'sewikimedia' => array(
 		100 => 'Projekt',
 		101 => 'Projektdiskussion',
