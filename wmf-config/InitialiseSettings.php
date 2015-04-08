@@ -12806,12 +12806,12 @@ $wgConf->settings = array(
 	'default' => array(),
 	'enwiki' => array(
 		'copyright' => '/images/mobile/wikipedia-wordmark-en.png',
-		'copyright-width' => 100,
+		'copyright-width' => 97,
 		'copyright-height' => 15,
 	),
 	'testwiki' => array(
 		'copyright' => '/images/mobile/wikipedia-wordmark-en.png',
-		'copyright-width' => 100,
+		'copyright-width' => 97,
 		'copyright-height' => 15,
 	),
 ),
