@@ -342,7 +342,6 @@ $wgDefaultExternalStore = array(
 	'DB://cluster24',
 	'DB://cluster25',
 );
-$wgDBAvgStatusPoll = 30000;
 
 # $wgLBFactoryConf['readOnlyBySection']['s2'] =
 # $wgLBFactoryConf['readOnlyBySection']['s2a'] =
