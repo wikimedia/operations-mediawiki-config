@@ -11196,6 +11196,7 @@ $wgConf->settings = array(
 		'*.loc.gov',                        // Library of Congress - T94017
 		'socrates.leidenuniv.nl',           // Leiden University - T93757
 		'media.padil.gov.au',               // PaDIL - T95328
+		'ymt.adlibhosting.com',             // York Museums Trust - T95418
 	),
 ),
 
