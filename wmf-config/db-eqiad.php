@@ -303,6 +303,9 @@ $wgLBFactoryConf = array(
 		'watchlist' => array(
 			'db1055' => 1,
 		),
+		'recentchanges' => array(
+			'db1055' => 1,
+		),
 		'recentchangeslinked' => array(
 			'db1055' => 1,
 		),
