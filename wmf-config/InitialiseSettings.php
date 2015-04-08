@@ -4174,6 +4174,7 @@ $wgConf->settings = array(
 		// 'error' => "udp://$wmfUdp2logDest/error", // Logs warnings, notices and such
 		'exception' => array( 'destination' => "udp://$wmfUdp2logDest/exception", 'logstash' => false ), // duplicates exception-json
 		'exception-json' => "udp://$wmfUdp2logDest/exception-json",
+		'fatal' => "udp://$wmfUdp2logDest/fatal",
 		'session' => "udp://$wmfUdp2logDest/session",
 		'logging' => "udp://$wmfUdp2logDest/logging",
 		'SimpleAntiSpam' => "udp://$wmfUdp2logDest/spam",
