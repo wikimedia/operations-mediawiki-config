@@ -3126,6 +3126,8 @@ $wgConf->settings = array(
 	),
 	'+lvwiki' => array(
 		'Wikipedia' => NS_PROJECT,
+		'WP' => NS_PROJECT, //T95106
+		'VP' => NS_PROJECT, //T95106
 	),
 	'+metawiki' => array( // bug 29129
 		'R' => 202,
