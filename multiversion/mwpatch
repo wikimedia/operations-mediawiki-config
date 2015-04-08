@@ -1,0 +1,146 @@
+#!/usr/bin/env php
+<?php
+require_once "mwcli.php";
+
+class MWPatch extends MwCli {
+    function __construct() {
+        parent::__construct();
+        $base = '/srv/patches';
+        $this->base_dir = $base;
+        $this->hash_dir = "$base/.hash";
+        $this->seq_file = "$base/.seq";
+    }
+    static function find_task($file) {
+        foreach ($file as $line) {
+            $line = trim($line);
+            $pos = strpos($line,'Bug: T');
+            if ($pos > -1) {
+                return trim(substr($line, $pos+5));
+            }
+        }
+        return "T0";
+    }
+
+    public function cmd_getsequence() {
+        $seq = $this->get_sequence(false);
+        return $this->white("Current sequence #")->light_blue($seq)->nl();
+    }
+
+    function get_sequence($increment=true) {
+        $seq = intval(file_get_contents($this->seq_file));
+        if ($increment) {
+            $seq = intval($seq)+1;
+            file_put_contents($this->seq_file, $seq);
+        }
+        return str_pad($seq, 4, "0", STR_PAD_LEFT);
+    }
+
+    public function cmd_list() {
+        passthru('ls /srv/patches');
+    }
+
+    public function cmd_add($file, $submodule_path) {
+        $content = file_get_contents($file);
+        $lines = explode("\n", $content);
+        $hash = hash('sha256', $content);
+
+        if (file_exists("$this->hash_dir/$hash")) {
+            $name = file_get_contents("$this->hash_dir/$hash");
+            return $this->error("Patch already added: ".$name);
+        }
+        $task = self::find_task($lines);
+        $module = $submodule_path;
+        $seq = self::get_sequence();
+        $rec = array('+', $seq, $task, $module, $file);
+        $this->green()->record($rec)->endColor()->nl();
+        $basename = basename($file);
+        $file = escapeshellarg($file);
+        $submod = str_replace('/','_', $submodule_path);
+        $name = "$seq-$hash-$task-$submod-$basename";
+        file_put_contents("$this->hash_dir/$hash", $name);
+        passthru("cp $file $this->base_dir/$name");
+    }
+
+    function find_file($pattern) {
+        $match = explode("\n",trim(shell_exec("ls $pattern"."*")));
+        return count($match) == 1 ? $match[0] : false;
+    }
+
+    function find_patch($pattern) {
+        if ($match = self::find_file("$this->hash_dir/$pattern")) {
+            return array(
+                'hash' => basename($match),
+                'file' => file_get_contents($match)
+            );
+        }
+        if ($match = self::find_patch("$this->base_dir/$pattern")) {
+            return array(
+                'hash' => hash('sha256',file_get_contents($match)),
+                'file' => basename($match)
+            );
+        }
+        return false;
+    }
+
+    public function cat($pattern) {
+        if ($patch = $this->find_patch($pattern)) {
+            echo file_get_contents($this->base_dir.'/'.$patch['file']);
+        } else {
+
+        }
+    }
+
+    public function cmd_remove($pattern) {
+        if ($patch = $this->find_patch($pattern)) {
+
+            $this->yellow("Removing $file");
+            $hash_file = $this->hash_dir.'/'.$patch['hash'];
+            $patch_file = $this->base_dir.'/'.$patch['file'];
+
+            if (!unlink($hash_file)){
+                return $this->error("Unable to remove $hash_file");
+            }
+            if (!unlink($patch_file)) {
+                return $this->error("Unable to remove $patch_file");
+            }
+            return $this->nl();
+        } else {
+            return err_nomatch($pattern);
+        }
+    }
+
+    function err_nomatch($pattern) {
+        return $this->error("There isn't a patch matching ")->yellow("$pattern")->nl();
+    }
+
+    public function cmd_apply($pattern="all") {
+        if ($pattern == 'all') {
+            $cmd = "ls $this->base_dir -1";
+            $files = explode("\n",trim(shell_exec($cmd)));
+        } else {
+            if ($patch = $this->find_patch($pattern)) {
+                $files = array($patch['file']);
+            }
+        }
+
+        if (!$files || !count($files)) {
+            return err_nomatch($pattern);
+        }
+        foreach ($files as $file ) {
+            $apply_command = "git am -3 -k -q < $this->base_dir/$file";
+            $this->green("Applying $file")->nl()
+            ->light_gray($apply_command)
+            ->nl()->light_blue()->output();
+            passthru($apply_command, $err);
+            $this->endColor();
+            if ($err) {
+                return $this->error('Error applying patch ')->yellow($file);
+            }
+        }
+        return $this;
+    }
+}
+
+$cli = new MWPatch();
+$cli->cmd($argv)->output();
+
