@@ -43,3 +43,5 @@ if ( isset( $projectsOkForInterwiki[ $wgDBname ] ) ) {
 if ( $wgDBname == 'enwiki' ) {
 	$wgCirrusSearchPoolCounterKey .= '_enwiki';
 }
+
+$wgCirrusSearchEnableSearchLogging = true;
