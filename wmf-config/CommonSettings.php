@@ -1799,6 +1799,10 @@ if ( $wmgUseMassMessage ) {
 	$wgAllowGlobalMessaging = $wmgAllowGlobalMessaging;
 }
 
+if ( $wmgUseSandboxLink ) {
+	require_once "$IP/extensions/SandboxLink/SandboxLink.php";
+}
+
 if ( $wmgUseUploadWizard ) {
 	require_once( "$IP/extensions/UploadWizard/UploadWizard.php" );
 	# Do not change $wgUploadStashScalerBaseUrl to a protocol-relative URL. This is how UploadStash fetches previews from our scaler, behind
