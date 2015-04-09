@@ -12351,7 +12351,6 @@ $wgConf->settings = array(
 	'test2wiki' => true,
 	'testwikidatawiki' => true,
 	'enwiki' => true,
-	'wikipedia' => true,
 ),
 
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
