@@ -1624,11 +1624,6 @@ if ( $wmgUseCollection ) {
 
 	$wgCollectionPortletForLoggedInUsersOnly = $wmgCollectionPortletForLoggedInUsersOnly;
 	$wgCollectionArticleNamespaces = $wmgCollectionArticleNamespaces;
-
-	if ( $wmgCollectionHierarchyDelimiter ) {
-		$wgCollectionHierarchyDelimiter = $wmgCollectionHierarchyDelimiter;
-	}
-
 	$wgCollectionPortletFormats = $wmgCollectionPortletFormats;
 }
 
