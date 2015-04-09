@@ -33,3 +33,5 @@ $wgCirrusSearchWikimediaExtraPlugin[ 'safer' ] = array(
 	'phrase' => array(
 	)
 );
+
+$wgCirrusSearchEnableSearchLogging = true;
