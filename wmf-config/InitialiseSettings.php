@@ -11375,6 +11375,9 @@ $wgConf->settings = array(
 
 'wmgUseSandboxLink' => array(
 	'default' => false,
+	'enwiki' => true,
+	'enwikibooks' => true,
+	'enwikiversity' => true,
 	'testwiki' => true,
 ),
 
