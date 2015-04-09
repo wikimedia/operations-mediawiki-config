@@ -52,6 +52,13 @@ $wgPoolCounterConf = array(
 		'slots' => 8,
 		'maxqueue' => 100
 	),
+	'TranslateFetchTranslators' => array(
+		'class' => 'PoolCounter_Client',
+		'timeout' => 8,
+		'workers' => 1,
+		'slots' => 16,
+		'maxqueue' => 20,
+	),
 );
 
 require( getRealmSpecificFilename( "$wmfConfigDir/PoolCounterSettings.php" ) );
