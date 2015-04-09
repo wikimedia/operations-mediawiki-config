@@ -11373,6 +11373,11 @@ $wgConf->settings = array(
 	'metawiki' => true,
 ),
 
+'wmgUseSandboxLink' => array(
+	'default' => false,
+	'testwiki' => true,
+),
+
 'wmgUseUploadWizard' => array(
 	'default' => false,
 	'rowiki' => true, // bug 59242
