@@ -252,6 +252,8 @@ elseif ( $wgDBname == 'enwiki' || $wgDBname == 'testwiki' ) {
 	# Use 'reviewer' group
 	$wgAddGroups['sysop'][] = 'reviewer';
 	$wgRemoveGroups['sysop'][] = 'reviewer';
+	# Reviewers can patrol (T93798)
+	$wgGroupPermissions['reviewer']['patrol'] = true;
 	# Remove 'editor' group
 	unset( $wgGroupPermissions['editor'] );
 	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'editor' ) );
