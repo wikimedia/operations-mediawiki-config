@@ -166,8 +166,21 @@ elseif ( $wgDBname == 'test2wiki' ) {
 }
 
 elseif ( $wgDBname == 'cawikinews' ) {
-	$wgGroupPermissions['sysop']['stablesettings'] = true; // Bug T36135
 	$wgFlaggedRevsNamespaces[] = 102; // Bug T36135
+
+	$wgGroupPermissions['editor']['autopatrol'] = true; // T95085
+
+	$wgGroupPermissions['reviewer'] += array(
+		'autopatrol' => true,		// T95085
+		'patrol' => true,		// T95085
+	);
+
+	$wgGroupPermissions['sysop'] += array(
+		'stablesettings' => true,	// T36135
+		'review' => true,		// T95085
+		'validate' => true,		// T95085
+		'unreviewedpages' => true,	// T95085
+	);
 }
 
 // New deployment 2008-05-03
