@@ -7589,6 +7589,7 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ),      // T89816
 		'rollbacker' => array( 'rollback' => true ),           // T90888
 		'reviewer' => array ( 'patrol' => true ),              // T95101
+		'filemover' => array ( 'movefile' => true),            // T95103
 	),
 	'nlwiki' => array(
 		'autoconfirmed' => array( 'patrol' => true ),
@@ -8532,6 +8533,7 @@ $wgConf->settings = array(
 			'rollbacker',           // T90888
 			'reviewer',             // T95101
 			'abusefilter',          // T95102
+			'filemover',            // T95103
 		),
 	),
 	'+nlwiki' => array(
@@ -9145,6 +9147,7 @@ $wgConf->settings = array(
 			'rollbacker',           // T90888
 			'reviewer',             // T95101
 			'abusefilter',          // T95102
+			'filemover',            // T95103
 		),
 	),
 	'+nlwiki' => array(
