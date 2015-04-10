@@ -1312,6 +1312,9 @@ if ( $wmgUseCentralAuth ) {
 
 	// Enables Special:GlobalRenameRequest
 	$wgCentralAuthEnableGlobalRenameRequest = true;
+
+	// Enables login using pre-SULF username and notification
+	$wgCentralAuthCheckSULMigration = true
 }
 
 // Config for GlobalCssJs
