@@ -8531,6 +8531,7 @@ $wgConf->settings = array(
 			'autopatrolled',        // T89816
 			'rollbacker',           // T90888
 			'reviewer',             // T95101
+			'abusefilter',          // T95102
 		),
 	),
 	'+nlwiki' => array(
@@ -9143,6 +9144,7 @@ $wgConf->settings = array(
 			'autopatrolled',        // T89816
 			'rollbacker',           // T90888
 			'reviewer',             // T95101
+			'abusefilter',          // T95102
 		),
 	),
 	'+nlwiki' => array(
