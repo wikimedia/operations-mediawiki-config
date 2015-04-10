@@ -283,6 +283,10 @@ switch ( $wgDBname ) {
 	case 'mrwiki':
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true; // Bug T42611
 		break;
+	case 'newiki':
+		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true; // T95102
+		$wgGroupPermissions['abusefilter']['abusefilter-revert'] = true; // T95102
+		break;
 	case 'nlwiki':
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
 		$wgGroupPermissions['*']['abusefilter-log'] = false;
