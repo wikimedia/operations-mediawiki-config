@@ -247,7 +247,7 @@ elseif ( $wgDBname == 'enwiki' || $wgDBname == 'testwiki' ) {
 	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
 
 	# Group permissions for sysops
-	$wgGroupPermissions['sysop']['review']         = true;
+	$wgGroupPermissions['sysop']['review'] = true;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 	# Use 'reviewer' group
 	$wgAddGroups['sysop'][] = 'reviewer';
@@ -256,6 +256,10 @@ elseif ( $wgDBname == 'enwiki' || $wgDBname == 'testwiki' ) {
 	unset( $wgGroupPermissions['editor'] );
 	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'editor' ) );
 	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'editor' ) );
+	# Reviewers can patrol on testwiki (T93798)
+	if ( $wgDBname == 'testwiki' ) {
+		$wgGroupPermissions['reviewer']['patrol'] = true;
+	}
 }
 
 elseif ( $wgDBname == 'enwikibooks' ) {
