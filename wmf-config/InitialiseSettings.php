@@ -11394,6 +11394,7 @@ $wgConf->settings = array(
 	'eowiki' => true,
 	'eswiki' => true,
 	'fawiki' => true,
+	'frwiki' => true, // T95604
 	'hewiki' => true,
 	'hewikibooks' => true,
 	'hewikinews' => true,
