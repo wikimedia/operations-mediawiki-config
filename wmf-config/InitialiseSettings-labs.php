@@ -562,5 +562,10 @@ function wmfLabsSettings() {
 		'wmgUsePopups' => array(
 			'default' => true,
 		),
+
+		'wmgUseJosa' => array(
+			'default' => false,
+			'kowiki' => true, // T15712
+		);
 	);
 } # wmflLabsSettings()
