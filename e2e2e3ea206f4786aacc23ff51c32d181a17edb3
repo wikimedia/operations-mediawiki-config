@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_f5b57979",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 286,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-11T00:32:14Z",
+      "side": 0,
+      "message": "Replaced by $wmgMonologChannels[\u0027wfLogDBError\u0027]",
+      "revId": "e2e2e3ea206f4786aacc23ff51c32d181a17edb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_1566f526",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 1122,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-11T00:32:14Z",
+      "side": 0,
+      "message": "Moved to logging.php",
+      "revId": "e2e2e3ea206f4786aacc23ff51c32d181a17edb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_7580898e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 15146,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-11T00:32:14Z",
+      "side": 0,
+      "message": "This is junk now. Will remove.",
+      "revId": "e2e2e3ea206f4786aacc23ff51c32d181a17edb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_154d959e",
+        "filename": "wmf-config/logging-labs.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-11T00:32:14Z",
+      "side": 0,
+      "message": "Moved to CommonSettings-labs.php",
+      "revId": "e2e2e3ea206f4786aacc23ff51c32d181a17edb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_35521140",
+        "filename": "wmf-config/logging-labs.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-11T00:32:14Z",
+      "side": 0,
+      "message": "Moved to CommonSettings-labs.php",
+      "revId": "e2e2e3ea206f4786aacc23ff51c32d181a17edb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_9560c5fe",
+        "filename": "wmf-config/logging-labs.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-11T00:32:14Z",
+      "side": 0,
+      "message": "Moved to InitialiseSettings-labs.php",
+      "revId": "e2e2e3ea206f4786aacc23ff51c32d181a17edb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_d5463d80",
+        "filename": "wmf-config/logging-labs.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-11T00:32:14Z",
+      "side": 0,
+      "message": "Moved to CommonSettings-labs.php",
+      "revId": "e2e2e3ea206f4786aacc23ff51c32d181a17edb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3520d1a7",
+        "filename": "wmf-config/logging-labs.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-11T00:32:14Z",
+      "side": 0,
+      "message": "Removed with no replacement. Logstash will have \u0027uid\u0027 to stitch log events together.",
+      "revId": "e2e2e3ea206f4786aacc23ff51c32d181a17edb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_950e853e",
+        "filename": "wmf-config/logging-labs.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-11T00:32:14Z",
+      "side": 0,
+      "message": "Everything from here to the end is replaced by the shared code in logging.php and settings in CommonSettings-labs.php and CommonSettings.php",
+      "revId": "e2e2e3ea206f4786aacc23ff51c32d181a17edb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
