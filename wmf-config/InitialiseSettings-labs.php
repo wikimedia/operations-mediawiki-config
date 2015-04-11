@@ -537,6 +537,11 @@ return array(
 	'wmgUseCapiunto' => array(
 		'default' => true,
 	),
+
+	'wmgUseJosa' => array(
+		'default' => false,
+		'kowiki' => true,
+	),
 );
 
 } # wmflLabsSettings()

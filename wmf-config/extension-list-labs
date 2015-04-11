@@ -1,4 +1,5 @@
 $IP/extensions/ApiFeatureUsage/ApiFeatureUsage.php
 $IP/extensions/Capiunto/Capiunto.php
 $IP/extensions/GlobalUserPage/GlobalUserPage.php
+$IP/extensions/Josa/Josa.php
 $IP/extensions/Sentry/Sentry.php

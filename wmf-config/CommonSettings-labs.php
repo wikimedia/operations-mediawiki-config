@@ -234,6 +234,10 @@ if ( $wmgUseCapiunto ) {
 	require_once "$IP/extensions/Capiunto/Capiunto.php";
 }
 
+if ( $wmgUseJosa ) {
+	require_once( "$IP/extensions/Josa/Josa.php" );
+}
+
 // Experimental
 $wgGadgetsCaching = false;
 
