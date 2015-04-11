@@ -14990,6 +14990,22 @@ $wgConf->settings = array(
 	'fishbowl' => true,
 ),
 
+// T15712
+'wmgUseJosa' => array(
+	'default' => false,
+	'testwiki' => true,
+	'labswiki' => true,
+	/*
+	'kowiki' => true,
+	'kowikinews' => true,
+	'kowikibooks' => true,
+	'kowikiquote' => true,
+	'kowikisource' => true,
+	'kowikiversity' => true,
+	'kowiktionary' => true,
+	*/
+),
+
 ### End (roughly) of general extensions ########################
 
 // Apply blocks to IPs in XFF (Bug T25343)

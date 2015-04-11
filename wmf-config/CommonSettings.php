@@ -2911,6 +2911,11 @@ if ( $wmgUseAccountAudit ) {
 	ExtensionRegistry::getInstance()->queue( "$IP/extensions/AccountAudit/extension.json" );
 }
 
+// T15712
+if ( $wmgUseJosa ) {
+	require_once( "$IP/extensions/Josa/Josa.php" );
+}
+
 if ( $wmgUseOAuth ) {
 	require_once( "$IP/extensions/OAuth/OAuth.php" );
 	$wgMWOAuthCentralWiki = 'mediawikiwiki';

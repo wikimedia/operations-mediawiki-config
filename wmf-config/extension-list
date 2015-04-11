@@ -63,6 +63,7 @@ $IP/extensions/InputBox/InputBox.php
 $IP/extensions/Insider/Insider.php
 $IP/extensions/intersection/DynamicPageList.php
 $IP/extensions/Interwiki/Interwiki.php
+$IP/extensions/Josa/Josa.php
 $IP/extensions/JsonConfig/JsonConfig.php
 $IP/extensions/LabeledSectionTransclusion/lst.php
 $IP/extensions/LandingCheck/LandingCheck.php
