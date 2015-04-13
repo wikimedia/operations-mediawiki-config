@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_3c28b095",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1771,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-04-13T17:25:05Z",
+      "side": 0,
+      "message": "perhaps remove all \"Bug\"s as well?",
+      "revId": "c218cef880df393c536e1d83b3a42fb230ca7407",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
