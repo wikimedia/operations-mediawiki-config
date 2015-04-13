@@ -93,7 +93,7 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['clientDbList']
 	);
 
-	// Bug T53637 and 46953
+	// Bug T53637 and T48953
 	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
 
 	$wgCacheEpoch = '20150224222223';

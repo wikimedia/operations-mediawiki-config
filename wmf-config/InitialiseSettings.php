@@ -550,7 +550,7 @@ $wgConf->settings = array(
 	'kkwiki' => '$stdlogo',
 	'klwiki' => '//upload.wikimedia.org/wikipedia/commons/c/c9/Wikipedia-logo-kl.png', // T86313
 	'kmwiki' => '$stdlogo',
-	'knwiki' => '//upload.wikimedia.org/wikipedia/commons/b/bf/Wikipedia-logo-v2-kn.png', // Bug T48589, bug 27657
+	'knwiki' => '//upload.wikimedia.org/wikipedia/commons/b/bf/Wikipedia-logo-v2-kn.png', // Bug T48589, bug T29657
 	'kowiki' => '$stdlogo',
 	'koiwiki' => '//upload.wikimedia.org/wikipedia/commons/b/b4/Wikipedia-logo-v2-koi.png',
 	'krcwiki' => '$stdlogo',
@@ -2424,7 +2424,7 @@ $wgConf->settings = array(
 	'+abwiki' => array(
 		'Wikipedia' => NS_PROJECT,
 	),
-	'+angwiki' => array( // Bug T58634, 58711
+	'+angwiki' => array( // Bug T58634, T60711
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 		'Wikipaedia' => NS_PROJECT,
@@ -2450,7 +2450,7 @@ $wgConf->settings = array(
 		'Ƿicipædiamotung' => NS_PROJECT_TALK,
 		'Ƿicipaediamotung' => NS_PROJECT_TALK,
 	),
-	'+angwiktionary' => array( // Bug T58634, 58711
+	'+angwiktionary' => array( // Bug T58634, T60711
 		'Wiktionary' => NS_PROJECT,
 		'Wiktionary_talk' => NS_PROJECT_TALK,
 		'Wikiwordboc' => NS_PROJECT,
@@ -4891,7 +4891,7 @@ $wgConf->settings = array(
 		101 => 'Portálaságastallan', // Bug T41206
 	),
 	'shwiki' => array( 100 => 'Portal', 101 => 'Razgovor_o_portalu' ), # Bug T32928
-	'siwiki' => array( 100 => 'ද්වාරය', 101 => 'ද්වාරය_සාකච්ඡාව' ), # Bug T8435, 24936
+	'siwiki' => array( 100 => 'ද්වාරය', 101 => 'ද්වාරය_සාකච්ඡාව' ), # Bug T8435, T26936
 	'skwiki' => array( 100 => 'Portál', 101 => 'Diskusia_k_portálu' ),
 	'slwiki' => array( 100 => 'Portal', 101 => 'Pogovor_o_portalu' ),
 	'sowiki' => array( 100 => 'Portal', 101 => 'Portal_talk' ), // Bug T51600
@@ -6681,7 +6681,7 @@ $wgConf->settings = array(
 	'+tlwikibooks' => array( 100 => 1, 101 => 0 ),
 	'+trwikisource' => array( 100 => 1 ),
 	'+ukwikinews' => array( 14 => 1 ), // Bug T51335
-	'+ukwikisource' => array( 102 => 1, 114 => 1, 252 => 1 ), // Bug T52561, 51684
+	'+ukwikisource' => array( 102 => 1, 114 => 1, 252 => 1 ), // Bug T52561, T53684
 	'+vecwikisource' => array( 100 => 1, 104 => 1 ),
 	'+viwikibooks' => array( 102 => 1, 104 => 1, 106 => 1 ),
 	'+viwikisource' => array( 102 => 1, 106 => 1 ),
@@ -7220,8 +7220,8 @@ $wgConf->settings = array(
 		'bot' => array( 'move-categorypages' => true ), //Bug T67728
 		'patroller' => array( 'patrol' => true, 'move-categorypages' => true ), // Bug T67728
 		'rollbacker' => array( 'rollback' => true ), // Bug T25233
-		'autopatrol' => array( 'autopatrol' => true, 'move-categorypages' => true ), // Bug T31007 and 65728
-		'Image-reviewer' => array( 'movefile' => true, 'delete' => true ), // Bug T66532 and 71229
+		'autopatrol' => array( 'autopatrol' => true, 'move-categorypages' => true ), // Bug T31007 and T67728
+		'Image-reviewer' => array( 'movefile' => true, 'delete' => true ), // Bug T66532 and T73229
 		'uploader' => array( 'upload' => true, 'reupload' => true, 'reupload-own' => true ), // Bug T71171
 		'botadmin' => array(
 			'block' => true,
@@ -7277,7 +7277,7 @@ $wgConf->settings = array(
 	),
 	'frwiki' => array(
 		'user' => array( 'move' => false ), // requested by hashar
-		'autopatrolled' => array( 'patrol' => true, 'autopatrol' => true, 'movefile' => true ), // Bug T10904, 21078, T87145
+		'autopatrolled' => array( 'patrol' => true, 'autopatrol' => true, 'movefile' => true ), // Bug T10904, T23078, T87145
 		'checkuser' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ), // Bug T23044
 	),
 	'+frwikibooks' => array(
@@ -7402,7 +7402,7 @@ $wgConf->settings = array(
 	),
 	'+itwikivoyage' => array(
 		'autopatrolled' => array(
-			'autopatrol' => true, // Bug T45327, 43524
+			'autopatrol' => true, // Bug T45327, T45524
 		),
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true ), // Bug T47638
 	),
@@ -7653,7 +7653,7 @@ $wgConf->settings = array(
 	'plwiki' => array(
 		'user' => array( 'upload' => false ),
 		'autoconfirmed' => array( 'upload' => true ),
-		'editor' => array( 'rollback' => true, 'patrolmarks' => true, 'editor' => true ), // Bug T22154 and 46990
+		'editor' => array( 'rollback' => true, 'patrolmarks' => true, 'editor' => true ), // Bug T22154 and T48990
 		'flood' => array( 'bot' => true ), // Bug T22155
 		'sysop' => array( 'deleterevision' => true, 'editor' => true ), // Bug T48990
 		'bot' => array( 'editor' => true ), // Bug T48990
@@ -7667,7 +7667,7 @@ $wgConf->settings = array(
 	'plwiktionary' => array(
 		'editor' => array( 'patrolmarks' => true ),
 	),
-	// Bug T11024, 10362
+	// Bug T11024, T12362
 	'ptwiki' => array(
 		'autoconfirmed' => array( 'patrol' => true, 'abusefilter-log-detail' => true ),
 		'bot' => array( 'autoreviewer' => true, ),
@@ -7753,7 +7753,7 @@ $wgConf->settings = array(
 			'move-categorypages' => true, // Bug T68871
 			'move-subpages' => true, // T76131
 		),
-		'suppressredirect' => array( // Bug T40408, 66871
+		'suppressredirect' => array( // Bug T40408, T68871
 			'suppressredirect' => true,
 			'move-categorypages' => true,
 		),
@@ -8221,7 +8221,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'import' ),
 	),
 	'+brwikimedia' => array(
-		'sysop' => array( 'translationadmin', 'autopatrolled', 'confirmed' ), // Bug T60123, 63345
+		'sysop' => array( 'translationadmin', 'autopatrolled', 'confirmed' ), // Bug T60123, T65345
 	),
 	'+bswiki' => array(
 		'sysop' => array( 'flood' ), // Bug T52425
@@ -8339,7 +8339,7 @@ $wgConf->settings = array(
 	),
 	'+eswikivoyage' => array(
 		'bureaucrat' => array( 'confirmed', ), // Bug T49325
-		'sysop' => array( 'rollbacker', 'patroller', 'autopatrolled', ), // Bug T46285, 55665
+		'sysop' => array( 'rollbacker', 'patroller', 'autopatrolled', ), // Bug T46285, T57665
 	),
 	'+eswiktionary' => array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller', 'rollbacker' ),
@@ -8460,7 +8460,7 @@ $wgConf->settings = array(
 	),
 	'+itwiki' => array(
 		'bureaucrat' => array( 'rollbacker' ),
-		'sysop' => array( 'accountcreator', 'autopatrolled', 'flood', 'filemover' ), // Bug T55913, 61109
+		'sysop' => array( 'accountcreator', 'autopatrolled', 'flood', 'filemover' ), // Bug T55913, T63109
 	),
 	'+itwikibooks' => array(
 		'sysop' => array( 'autopatrolled', 'patroller' ),
@@ -8469,7 +8469,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled' ), // Bug T64200
 	),
 	'+itwikivoyage' => array(
-		'sysop' => array( 'autopatrolled', 'patroller' ), // Bug T45327 and 45638
+		'sysop' => array( 'autopatrolled', 'patroller' ), // Bug T45327 and T47638
 	),
 	'+itwiktionary' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
@@ -8582,7 +8582,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'inactive' ),
 	),
 	'+ptwiki' => array(
-		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface-editor', 'accountcreator' ), // Bug T41905, 63750
+		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface-editor', 'accountcreator' ), // Bug T41905, T65750
 		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ), // Bug T65750
 	),
 	'+ptwikivoyage' => array(
@@ -8692,8 +8692,8 @@ $wgConf->settings = array(
 		'sysop' => array( 'autoeditor' ),
 	),
 	'+urwiki' => array(
-		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker' ), // Bug T44737 and 45643
-		'sysop' => array( 'confirmed', 'abusefilter', 'rollbacker' ), // Bug T44737 and 45643
+		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker' ), // Bug T44737 and T47643
+		'sysop' => array( 'confirmed', 'abusefilter', 'rollbacker' ), // Bug T44737 and T47643
 	),
 	'+viwiki' => array(
 		'sysop' => array(
@@ -8765,7 +8765,7 @@ $wgConf->settings = array(
 		),
 	),
 	'+zhwikivoyage' => array(
-		'sysop' => array( 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ), // Bug T62085, 60328
+		'sysop' => array( 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ), // Bug T62085, T62328
 	),
 	'+zh_yuewiki' => array(
 		'sysop' => array( 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ),
@@ -8824,7 +8824,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'import' ),
 	),
 	'+brwikimedia' => array(
-		'sysop' => array( 'translationadmin', 'autopatrolled', 'confirmed' ), // Bug T7812, 63345
+		'sysop' => array( 'translationadmin', 'autopatrolled', 'confirmed' ), // Bug T7812, T65345
 		'bureaucrat' => array( 'sysop', 'bureaucrat' ), // Bug T65345
 	),
 	'+bswiki' => array(
@@ -8946,7 +8946,7 @@ $wgConf->settings = array(
 	),
 	'+eswikivoyage' => array(
 		'bureaucrat' => array( 'confirmed', ), // Bug T49325
-		'sysop' => array( 'rollbacker', 'patroller', 'autopatrolled', ), // Bug T46285, 55665
+		'sysop' => array( 'rollbacker', 'patroller', 'autopatrolled', ), // Bug T46285, T57665
 	),
 	'+eswiktionary' => array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller', 'rollbacker' ),
@@ -9079,7 +9079,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'flood' ), // Bug T38600
 	),
 	'+itwikivoyage' => array(
-		'sysop' => array ( 'autopatrolled', 'patroller' ), // Bug T45327 and 45638
+		'sysop' => array ( 'autopatrolled', 'patroller' ), // Bug T45327 and T47638
 	),
 	'+itwiktionary' => array(
 		'sysop' => array( 'patroller', 'autopatrolled', 'flood' ), // Flood added per Bug T41306
@@ -9117,7 +9117,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autoreview', 'transwiki', 'import', 'coder', 'svnadmins', 'translationadmin' ),
 	),
 	'+metawiki' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'ipblock-exempt', 'flood', 'translationadmin', 'centralnoticeadmin', 'uploader' ), // Bug T39198, 50287
+		'bureaucrat' => array( 'sysop', 'bureaucrat', 'ipblock-exempt', 'flood', 'translationadmin', 'centralnoticeadmin', 'uploader' ), // Bug T39198, T52287
 		'checkuser' => array( 'ipblock-exempt' ),
 		'sysop' => array( 'autopatrolled', 'massmessage-sender' ), // Bug T59611
 	),
@@ -9187,7 +9187,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller' ), // Bug T30479
 	),
 	'+ptwiki' => array(
-		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface-editor', 'accountcreator' ), // Bug T41905, 63750
+		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface-editor', 'accountcreator' ), // Bug T41905, T65750
 		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ), // Bug T65750
 	),
 	'+ptwikinews' => array(
@@ -9306,7 +9306,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autoeditor' ),
 	),
 	'+urwiki' => array(
-		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker' ), // Bug T44737 and 45643
+		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker' ), // Bug T44737 and T47643
 		'sysop' => array( 'confirmed' ), // Bug T44737
 	),
 	'+viwiki' => array(
@@ -9383,7 +9383,7 @@ $wgConf->settings = array(
 		),
 	),
 	'+zhwikivoyage' => array(
-		'sysop' => array( 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ), // Bug T62085, 60328
+		'sysop' => array( 'autopatrolled', 'confirmed', 'patroller', 'transwiki' ), // Bug T62085, T62328
 	),
 	'+zh_yuewiki' => array(
 		'sysop' => array( 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ),
@@ -9543,7 +9543,7 @@ $wgConf->settings = array(
 	'hewikiquote' => array( 'w', 'wikt', 'b', 's', 'n' ),
 	'hewiktionary' => array( 'w', 'q', 'b', 's', 'n' ),
 	'hewikisource' => array( 'w', 'wikt', 'q', 'b', 'n' ),
-	'hewikivoyage' => array( 'w', 'wikt', 'b', 'n', 'q', 's', 'commons', 'en', 'de', 'el', 'fr', 'it', 'nl', 'pl', 'pt', 'ro', 'ru', 'sv', 'uk', 'vi' ), // Bug T60527, 59601
+	'hewikivoyage' => array( 'w', 'wikt', 'b', 'n', 'q', 's', 'commons', 'en', 'de', 'el', 'fr', 'it', 'nl', 'pl', 'pt', 'ro', 'ru', 'sv', 'uk', 'vi' ), // Bug T60527, T61601
 	'hiwiki' => array( 'wikt', 'commons', 'meta', 'species', 'de', 'en', 'en:b', 'en:q', 'en:n', 'en:s', 'en:v', 'es', 'fr', 'ml', 'ne', 'nl', 'ro', 'ru', 'pl', 'pt', 'simple', 'ta' ), // Bug T43757
 	'hifwiki' => array( 'incubator' ),
 	'hsbwiktionary' => array( 'incubator', 'w' ),
@@ -10021,7 +10021,7 @@ $wgConf->settings = array(
 	'default' => array( NS_MAIN ),
 	'+arwiki' => array( 104 ), // Bug T22623
 	'+arwikisource' => array( 102, 104 ),
-	'+aswikisource' => array( 102, 104, 106 ), // Bug T45129, 70464
+	'+aswikisource' => array( 102, 104, 106 ), // Bug T45129, T72464
 	'+bgwikisource' => array( 100 ),
 	'+bnwikisource' => array( 100 ),
 	'+brwikisource' => array( 100, 102, 104 ),
@@ -10069,7 +10069,7 @@ $wgConf->settings = array(
 	'+tewikisource' => array( 102, 104, 106 ),
 	'+trwikibooks' => array( 100, 110, ),
 	'+trwikisource' => array( 100 ),
-	'+ukwikisource' => array( 102, 114, 250, 252 ), // Bug T52561, 51684
+	'+ukwikisource' => array( 102, 114, 250, 252 ), // Bug T52561, T53684
 	'+vecwikisource' => array( 100, 102, 104 ),
 	'+viwikibooks' => array( 104, 106 ),
 	'+viwikisource' => array( 102, 104, 106 ),
@@ -10863,7 +10863,7 @@ $wgConf->settings = array(
 	// new renderer should render these fine (and the ODF
 	// renderer is in a data center which is being shut down).
 	// This array used to contain overrides for
-	// ta/gu/ml/ne/ur (Bug T39154, 37384, 37672, 37374, 41714).
+	// ta/gu/ml/ne/ur (Bug T39154, T39384, T39672, T39374, T43714).
 ),
 
 'wmgUseSpamBlacklist' => array(

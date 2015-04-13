@@ -150,7 +150,7 @@ return array(
 	'-wgRateLimitLog' => array(),
 	'-wgJobLogFile' => array(),
 
-	// Bug T62013, 56758
+	// Bug T62013, T58758
 	'-wmgRC2UDPPrefix' => array(
 		'default' => false,
 	),

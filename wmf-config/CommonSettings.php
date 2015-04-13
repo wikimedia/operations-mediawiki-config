@@ -1768,7 +1768,7 @@ if( $wgDBname == 'commonswiki' ) {
 }
 
 // Temporary override: WMF is not hardcore enough to enable this.
-// See Bug T37785, 36316, 45022 about it.
+// See Bug T37785, T38316, T47022 about it.
 $wgDefaultUserOptions['watchdefault'] = 0;
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 $wgDefaultUserOptions['usenewrc'] = 0;
