@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_6699b76e",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-04-13T13:14:20Z",
+      "side": 1,
+      "message": "Why tabs before the comments?",
+      "revId": "19d9aafcb845955c57be7868a39462636e09fb2d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
