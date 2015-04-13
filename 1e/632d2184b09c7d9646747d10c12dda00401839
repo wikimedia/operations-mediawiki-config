@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+1: Dereckson <dereckson@espace-win.org>
+Code-Review+2: Thcipriani <tcipriani@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Mon, 13 Apr 2015 15:01:21 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/199923
+Project: operations/mediawiki-config
+Branch: refs/heads/master
