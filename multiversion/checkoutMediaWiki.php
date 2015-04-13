@@ -65,6 +65,69 @@ function checkoutMediaWiki() {
 			print "Error checking out branch\n";
 			exit( 1 );
 		}
+
+		# master has no extensions, vendor, or skins in submodules
+		if ( $checkoutVersion === 'master' ) {
+			$gerrit = 'https://gerrit.wikimedia.org';
+
+			$repos = array(
+				'extensions' => 'r/p/mediawiki/extensions',
+				'vendor'     => 'r/mediawiki/vendor',
+				'skins'      => 'r/p/mediawiki/skins',
+			);
+
+			foreach ( $repos as $dir => $upstream ) {
+				# un-escapshellarg'd path needed for chdir, file_exists, etc.
+				$rawPath = "${destIP}/${dir}";
+
+				list( $path, $upstream ) = array_map(
+					'escapeshellarg',
+					array(
+						$rawPath,
+						"${gerrit}/${upstream}",
+					)
+				);
+
+				# if the directory exists, checkout upstream into it
+				if ( file_exists( $rawPath ) ) {
+					chdir( $rawPath );
+
+					$cmds = array(
+						'git init',
+						"git remote add origin ${upstream}",
+						'git fetch',
+						'git checkout -f -t origin/master',
+					);
+
+				# otherwise, clone the repository
+				} else {
+					$cmds = array(
+						"git clone ${upstream} ${path}",
+					);
+				}
+
+				foreach ( $cmds as $cmd ) {
+					passthru( $cmd, $ret );
+
+					if ( $ret ) {
+						print "'${cmd}' failed in ${path}\n";
+						exit( 1 );
+					}
+				}
+
+				chdir( $rawPath );
+
+				# Update submodules for checked out repos
+				passthru( 'git submodule update --init --recursive' , $ret );
+
+				if ( $ret ) {
+					print "Submodule update failed in ${dir}\n";
+					exit( 1 );
+				}
+				chdir( $destIP );
+			}
+		}
+
 		passthru( 'git submodule update --init --recursive', $ret );
 		if ( $ret ) {
 			print "Error updating submodules\n";
