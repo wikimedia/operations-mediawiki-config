@@ -11137,7 +11137,6 @@ $wgConf->settings = array(
 	'default' => array( '*.flickr.com', '*.staticflickr.com', ), // For Flickr uploads via UploadWizard - 2012-11-20
 	'+testwiki' => array( 'upload.wikimedia.org' ),
 	'+commonswiki' => array(
-		'am.adlibhosting.com',              // Amsterdam Museum
 		'*.collectie.legermuseum.nl',       // Legermuseum
 		'*.europeana1914-1918.eu',          // Europeana 1914-1918
 		'*.gahetna.nl',                     // Nationaal Archief Nederland
@@ -11204,6 +11203,7 @@ $wgConf->settings = array(
 		'*.loc.gov',                        // Library of Congress - T94017
 		'socrates.leidenuniv.nl',           // Leiden University - T93757
 		'media.padil.gov.au',               // PaDIL - T95328
+		'*.adlibhosting.com',               // Amsterdam Museum, York Museums Trust, etc. - T95418
 	),
 ),
 
