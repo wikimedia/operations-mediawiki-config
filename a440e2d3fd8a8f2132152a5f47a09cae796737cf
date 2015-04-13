@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_49636cda",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-04-13T14:29:19Z",
+      "side": 1,
+      "message": "Better, although even better would be to avoid vertical alignment entirely. See https://www.mediawiki.org/wiki/Manual:Coding_conventions#Vertical_alignment",
+      "revId": "a440e2d3fd8a8f2132152a5f47a09cae796737cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
