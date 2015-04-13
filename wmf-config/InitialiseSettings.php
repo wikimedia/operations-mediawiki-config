@@ -2194,6 +2194,7 @@ $wgConf->settings = array(
 	'ombudsmenwiki' => 'Project',
 	'orwiki' => 'ଉଇକିପିଡ଼ିଆ',
 	'orwikisource' => 'ଉଇକିପାଠାଗାର', // Bug T73875
+	'orwiktionary' => 'ଉଇକଅଭଧାନ', // T94142
 	'oswiki' => 'Википеди',
 	'otrs_wikiwiki' => 'Project',
 	'outreachwiki' => 'Wikimedia',
