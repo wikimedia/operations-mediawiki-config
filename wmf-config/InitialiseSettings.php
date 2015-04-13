@@ -13235,6 +13235,15 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'Utilisateurs %code%-M',
 	),
+	'huwikiquote' => array( //T94842
+		'0' => 'User %code%-0',
+		'1' => 'User %code%-1',
+		'2' => 'User %code%-2',
+		'3' => 'User %code%-3',
+		'4' => 'User %code%-4',
+		'5' => 'User %code%-5',
+		'N' => 'User %code%-N',
+	),
 	'ilowiki' => array( // Bug T39981
 		'0' => false,
 		'1' => 'Agar-aramat %code%-1',
@@ -13647,6 +13656,7 @@ $wgConf->settings = array(
 	'frwikiquote' => 'Utilisateur %code%', // Bug T41472
 	'frwikisource' => 'Utilisateurs %code%',
 	'frwiktionary' => 'Utilisateurs %code%',
+	'huwikiquote' => 'User %code%', // T94842
 	'ilowiki' => 'Agar-aramat %code%', // Bug T39981
 	'incubatorwiki' => 'Users:By language:%code%',
 	'iswiki' => 'Notandi %code%',
