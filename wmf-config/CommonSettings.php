@@ -845,6 +845,7 @@ if ( $wmgUseContactPage ) {
 
 	if ( $wgDBname === 'metawiki' ) {
 		include( "$wmfConfigDir/LegalContactPages.php" );
+		include( "$wmfConfigDir/AffComContactPages.php" );
 	}
 }
 
