@@ -3010,6 +3010,8 @@ $wgConf->settings = array(
 	'+itwikisource' => array(
 		'Author' => 102,
 		'Author_talk' => 103,
+		'Work' => 112,          // T93870
+		'Work_talk' => 113,
 	),
 	'+itwiktionary' => array(
 		'WZ' => NS_PROJECT,
@@ -5240,6 +5242,8 @@ $wgConf->settings = array(
 		109 => 'Discussioni_pagina',
 		110 => 'Indice',
 		111 => 'Discussioni_indice',
+		112 => 'Opera',                     // T93870
+		113 => 'Discussioni_opera',
 	),
 	'knwikisource' => array( // Bug T39676
 		100 => 'ಸಂಪುಟ',         // Portal
