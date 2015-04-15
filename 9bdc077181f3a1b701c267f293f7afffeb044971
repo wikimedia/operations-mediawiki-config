@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_375e7d19",
+        "filename": "multiversion/checkoutMediaWiki.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2015-04-15T00:28:40Z",
+      "side": 1,
+      "message": ".git is superfluous.",
+      "revId": "9bdc077181f3a1b701c267f293f7afffeb044971",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_5769b9ba",
+        "filename": "multiversion/checkoutMediaWiki.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2015-04-15T00:28:40Z",
+      "side": 1,
+      "message": "`git submodule init` will turn clones into submodules?",
+      "revId": "9bdc077181f3a1b701c267f293f7afffeb044971",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
