@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_47333ec0",
+        "filename": "multiversion/checkoutMediaWiki.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-04-16T01:51:41Z",
+      "side": 1,
+      "message": "Not r/p?",
+      "revId": "57a27103181b1bbb88d42a1eca64163f26febf2f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
