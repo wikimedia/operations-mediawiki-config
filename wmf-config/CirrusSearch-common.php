@@ -82,8 +82,9 @@ $wgCirrusSearchMainPageCacheWarmer = ( $wgCirrusSearchShardCount['content'] > 1 
 if ( $wgDBname == 'commonswiki' ) {
 	$wgCirrusSearchNamespaceMappings[ NS_FILE ] = 'file';
 	$wgCirrusSearchReplicaCount['file'] = 2;
-// So is everyone else, for using commons
-} else {
+} elseif ( $wgDBname == 'officewiki' ) {
+	// T94856 - makes searching difficult for locally uploaded files
+} else { // So is everyone else, for using commons
 	$wgCirrusSearchExtraIndexes[ NS_FILE ] = array( 'commonswiki_file' );
 }
 
