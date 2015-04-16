@@ -151,7 +151,7 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterAvailableActions[] = 'block';
 		$wgAbuseFilterBlockDuration = '24 hours';
 		break;
-	case 'fawiki': // Bug T71073 and 72502
+	case 'fawiki': // Bug T71073 and T74502
 		$wgGroupPermissions['*']['abusefilter-log'] = false;
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false;
