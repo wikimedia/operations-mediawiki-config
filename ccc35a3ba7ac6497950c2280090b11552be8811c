@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e7c4fa4_9bcbef74",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7249,
+      "author": {
+        "id": 2100
+      },
+      "writtenOn": "2015-04-16T15:23:16Z",
+      "side": 1,
+      "message": "Put bug number in front of each member, it might get changed in the future by others.",
+      "revId": "ccc35a3ba7ac6497950c2280090b11552be8811c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_bbc6eb69",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8990,
+      "author": {
+        "id": 2100
+      },
+      "writtenOn": "2015-04-16T15:23:16Z",
+      "side": 1,
+      "message": "Break the array.",
+      "revId": "ccc35a3ba7ac6497950c2280090b11552be8811c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
