@@ -1859,7 +1859,7 @@ $wgConf->settings = array(
 # @} end of wgSitename
 
 'wgMaxNameChars' => array(
-	'default' => 64,
+	'default' => 85,
 ),
 
 'wgSiteSupportPage' => array(
