@@ -16,6 +16,23 @@
       "revId": "6f22d33eacb45bbfe043e7406bd24898184fa710",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e7c4fa4_70c15257",
+        "filename": "wmf-config/AffComContactPages.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-04-16T13:18:13Z",
+      "side": 1,
+      "message": "Good luck :)",
+      "revId": "6f22d33eacb45bbfe043e7406bd24898184fa710",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
