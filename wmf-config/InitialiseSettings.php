@@ -11217,6 +11217,7 @@ $wgConf->settings = array(
 		'socrates.leidenuniv.nl',           // Leiden University - T93757
 		'media.padil.gov.au',               // PaDIL - T95328
 		'*.adlibhosting.com',               // Amsterdam Museum, York Museums Trust, etc. - T95418
+		'*.dropbox.com',                    // Dropbox
 	),
 ),
 
