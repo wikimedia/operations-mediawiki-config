@@ -11622,10 +11622,12 @@ $wgConf->settings = array(
 	'default' => false,
 ),
 
-// NOTE: Extension:Popups has a hard dependency on TextExtracts and PageImages.
-// @todo The pattern "everywhere but loginwiki and votewiki" repeats 32 times in this file.
 'wmgUsePopups' => array(
-	'default' => true,
+	'default' => false,
+),
+
+'wmgPopupsBetaFeature' => array(
+	'default' => false,
 	'nonbetafeatures' => false,
 ),
 

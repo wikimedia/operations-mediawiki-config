@@ -537,6 +537,10 @@ return array(
 	'wmgUseCapiunto' => array(
 		'default' => true,
 	),
+
+	'wmgUsePopups' => array(
+		'default' => true,
+	),
 );
 
 } # wmflLabsSettings()
