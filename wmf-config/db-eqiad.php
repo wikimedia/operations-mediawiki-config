@@ -163,7 +163,33 @@ $wgLBFactoryConf = array(
 ),
 
 'groupLoadsBySection' => array(
-	// s1 => groupLoadsByDB
+	's1' => array(
+		'watchlist' => array(
+			'db1055' => 1,
+		),
+		'recentchanges' => array(
+			'db1055' => 1,
+		),
+		'recentchangeslinked' => array(
+			'db1055' => 1,
+		),
+		'contributions' => array(
+			'db1055' => 1,
+		),
+		'logpager' => array(
+			'db1055' => 1,
+		),
+		'dump' => array(
+			'db1051' => 1,
+		),
+		'vslow' => array(
+			'db1051' => 1,
+		),
+		'api' => array(
+			'db1065' => 1,
+			'db1066' => 1,
+		),
+	),
 	's2' => array(
 		'vslow' => array(
 			'db1018' => 1,
@@ -298,35 +324,7 @@ $wgLBFactoryConf = array(
 ),
 
 
-'groupLoadsByDB' => array(
-	'enwiki' => array(
-		'watchlist' => array(
-			'db1055' => 1,
-		),
-		'recentchanges' => array(
-			'db1055' => 1,
-		),
-		'recentchangeslinked' => array(
-			'db1055' => 1,
-		),
-		'contributions' => array(
-			'db1055' => 1,
-		),
-		'logpager' => array(
-			'db1055' => 1,
-		),
-		'dump' => array(
-			'db1051' => 1,
-		),
-		'vslow' => array(
-			'db1051' => 1,
-		),
-		'api' => array(
-			'db1065' => 1,
-			'db1066' => 1,
-		),
-	),
-),
+'groupLoadsByDB' => array(),
 
 # Hosts settings
 # Do not remove servers from this list ever
