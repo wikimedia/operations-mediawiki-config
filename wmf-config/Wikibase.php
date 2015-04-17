@@ -93,6 +93,8 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['clientDbList']
 	);
 
+	$wgWBRepoSettings['subscriptionLookupMode'] = 'sitelinks';
+
 	// Bug T53637 and T48953
 	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
 
