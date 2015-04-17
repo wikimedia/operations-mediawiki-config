@@ -204,6 +204,9 @@ $wgLBFactoryConf = array(
 		'watchlist' => array(
 			'db1036' => 1,
 		),
+		'recentchanges' => array(
+			'db1036' => 1,
+		),
 		'recentchangeslinked' => array(
 			'db1036' => 1,
 		),
@@ -222,6 +225,9 @@ $wgLBFactoryConf = array(
 			'db1019' => 1,
 		),
 		'watchlist' => array(
+			'db1015' => 1,
+		),
+		'recentchanges' => array(
 			'db1015' => 1,
 		),
 		'recentchangeslinked' => array(
@@ -248,6 +254,9 @@ $wgLBFactoryConf = array(
 		'watchlist' => array(
 			'db1053' => 1,
 		),
+		'recentchanges' => array(
+			'db1053' => 1,
+		),
 		'recentchangeslinked' => array(
 			'db1053' => 1,
 		),
@@ -271,6 +280,9 @@ $wgLBFactoryConf = array(
 		'watchlist' => array(
 			'db1026' => 1,
 		),
+		'recentchanges' => array(
+			'db1026' => 1,
+		),
 		'recentchangeslinked' => array(
 			'db1026' => 1,
 		),
@@ -291,6 +303,9 @@ $wgLBFactoryConf = array(
 		'watchlist' => array(
 			'db1030' => 1,
 		),
+		'recentchanges' => array(
+			'db1030' => 1,
+		),
 		'recentchangeslinked' => array(
 			'db1030' => 1,
 		),
@@ -309,6 +324,9 @@ $wgLBFactoryConf = array(
 			'db1028' => 1,
 		),
 		'watchlist' => array(
+			'db1041' => 1,
+		),
+		'recentchanges' => array(
 			'db1041' => 1,
 		),
 		'recentchangeslinked' => array(
