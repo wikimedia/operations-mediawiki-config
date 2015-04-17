@@ -11627,7 +11627,7 @@ $wgConf->settings = array(
 ),
 
 'wmgPopupsBetaFeature' => array(
-	'default' => false,
+	'default' => true,
 	'nonbetafeatures' => false,
 ),
 
