@@ -134,7 +134,7 @@ $wgLBFactoryConf = array(
 	'password'	  => $wgDBpassword,
 	'type'		  => 'mysql',
 	'flags'		  => DBO_DEFAULT,
-	'max lag'	  => 15
+	'max lag'	  => 10
 ),
 
 'groupLoadsBySection' => array(),
