@@ -2996,6 +2996,15 @@ if ( in_array( $wgDBname, array( 'wikidatawiki', 'testwikidatawiki' ) ) ) {
 	};
 }
 
+// Hack waiting for T72209
+if ( $wgDBname === 'itwiki' ) {
+	$wgHooks['SkinAfterContent'][] = function ( &$data ) {
+		global $wgParser;
+		$data .= $wgParser->recursiveTagParse( '{{Categorie qualità}}' );
+		return true;
+	};
+}
+
 $wgExemptFromUserRobotsControl = array_merge( $wgContentNamespaces, $wmgExemptFromUserRobotsControlExtra );
 
 // additional "language names", adding to Names.php data
