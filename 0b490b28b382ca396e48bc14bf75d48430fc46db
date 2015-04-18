@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_1b22e750",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 96,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2015-04-18T01:57:55Z",
+      "side": 1,
+      "message": "missing space after \u003d",
+      "revId": "0b490b28b382ca396e48bc14bf75d48430fc46db",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
