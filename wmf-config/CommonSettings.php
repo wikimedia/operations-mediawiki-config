@@ -2996,6 +2996,22 @@ if ( in_array( $wgDBname, array( 'wikidatawiki', 'testwikidatawiki' ) ) ) {
 	};
 }
 
+// Hack waiting for T72209
+if ( $wgDBname === 'itwiki' ) {
+	$wgHooks['ContentAlterParserOutput'][] = function ( $content, $title, $output ) {
+		$model = $content->getModel();
+		if ( $model !== CONTENT_MODEL_WIKITEXT ) {
+			return true;
+		}
+		if ( !$title->inNamespace( 0 ) ) {
+			return true;
+		}
+		global $wgParser;
+		$output->mText .= $wgParser->recursiveTagParse( '{{Categorie qualità}}' );
+		return true;
+	};
+}
+
 $wgExemptFromUserRobotsControl = array_merge( $wgContentNamespaces, $wmgExemptFromUserRobotsControlExtra );
 
 // additional "language names", adding to Names.php data
