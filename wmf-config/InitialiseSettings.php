@@ -14729,6 +14729,9 @@ $wgConf->settings = array(
 	'svwiki' => array(
 		'sort' => 'alphabetic',
 	),
+	'svwikivoyage' => array(
+		'otherProjectsLinksByDefault' => true, // T96502
+	),
 	'tewiki' => array(
 		'sortPrepend' => array( 'en', 'hi', 'kn', 'ta', 'ml' ),
 	),
