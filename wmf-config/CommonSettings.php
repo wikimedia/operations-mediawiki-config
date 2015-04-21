@@ -2105,6 +2105,11 @@ if ( $wmgUseVisualEditor ) {
 		$wgVisualEditorEnableTocWidget = true;
 	}
 
+	// A/B test configuration
+	if ( $wmgVisualEditorEnableSplitTest ) {
+		$wgVisualEditorEnableSplitTest = true;
+	}
+
 	// Citoid
 	require_once "$IP/extensions/Citoid/Citoid.php";
 	$wgCitoidServiceUrl = '//citoid.wikimedia.org/api';
