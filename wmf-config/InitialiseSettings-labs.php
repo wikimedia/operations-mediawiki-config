@@ -397,6 +397,9 @@ function wmfLabsSettings() {
 		'wmgUseVectorBeta' => array(
 			'default' => true,
 		),
+		'wmgVectorBetaFormRefresh' => array(
+			'default' => true,
+		),
 
 		'wmgVectorBetaPersonalBar' => array(
 			'default' => true,
