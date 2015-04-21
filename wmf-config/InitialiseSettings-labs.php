@@ -236,7 +236,6 @@ return array(
 		'mediawikiwiki' => '',//'m.%h1.%h2',
 		'wikidatawiki' => 'm.%h0.%h1.%h2.%h3', // T87440
 	),
-
 	'wmgMFPhotoUploadEndpoint' => array(
 		'default' => '//commons.wikimedia.$variant.wmflabs.org/w/api.php',
 	),
@@ -371,6 +370,9 @@ return array(
 	),
 
 	'wmgUseVectorBeta' => array(
+		'default' => true,
+	),
+	'wmgVectorBetaFormRefresh' => array(
 		'default' => true,
 	),
 
