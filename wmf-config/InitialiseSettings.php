@@ -12682,6 +12682,12 @@ $wgConf->settings = array(
 	'default' => false,
 ),
 
+// Should 50% of new accounts be opted in to VisualEditor (A/B test)
+'wmgVisualEditorEnableSplitTest' => array(
+	'default' => false,
+	'enwiki' => true,
+),
+
 // --------------- VisualEditor end ---------------
 
 'wmgUseRSSExtension' => array(
