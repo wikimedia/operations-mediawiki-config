@@ -29,6 +29,14 @@
 	"testwiki": "php-master",
 	"ukwiki": "php-master",
 	"wikidatawiki": "php-master",
+	"dawiki": "php-master",
+	"idwiki": "php-master",
+	"minwiki": "php-master",
+	"mswiki": "php-master",
+	"nnwiki": "php-master",
+	"nowiki": "php-master",
+	"svwiki": "php-master",
+	"uzwiki": "php-master",
 	"zerowiki": "php-master",
 	"zhwiki": "php-master"
 }
