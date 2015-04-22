@@ -827,8 +827,6 @@
 		$sock = socket_create( AF_INET, SOCK_DGRAM, SOL_UDP );
 		$stat = 'MediaWiki.errors.fatal:1|c';
 		socket_sendto( $sock, $stat, strlen( $stat ), 0, 'statsd.eqiad.wmnet', 8125 );
-		$backtrace = 'hhvm-fatal-error ' . json_encode( debug_backtrace(), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . "\n";
-		socket_sendto( $sock, $backtrace, strlen( $backtrace ), 0, 'fluorine.eqiad.wmnet', 8420 );
 
         ?>: <br/>
         <?php echo htmlspecialchars( $message ); ?>
