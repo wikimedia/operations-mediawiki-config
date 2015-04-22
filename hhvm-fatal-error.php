@@ -822,6 +822,12 @@
 		$parts = explode( "\n", $message );
 		$message = $parts[0];
 		$message = preg_replace( "/^.*?exception '.*?' with message '(.*?)'.*$/im", '\1', $message );
+
+		// Increment a counter.
+		$sock = socket_create( AF_INET, SOCK_DGRAM, SOL_UDP );
+		$stat = 'MediaWiki.errors.fatal:1|c';
+		socket_sendto( $sock, $stat, strlen( $stat ), 0, 'statsd.eqiad.wmnet', 8125 );
+
         ?>: <br/>
         <?php echo htmlspecialchars( $message ); ?>
     </bdo>
