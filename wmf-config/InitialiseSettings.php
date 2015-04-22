@@ -7892,6 +7892,7 @@ $wgConf->settings = array(
 			'deleterevision' => true,
 			'templateeditor' => true,
 			'securepoll-create-poll' => true,
+			'editcontentmodel' => true,
 		),
 		'reviewer' => array(
 			'stablesettings' => true,
