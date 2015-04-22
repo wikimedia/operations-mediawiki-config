@@ -675,7 +675,9 @@ $wgTitleBlacklistSources = array(
 	),
 );
 
-$wgTitleBlacklistUsernameSources = array( 'meta' );
+if ( $wgDBname !== 'labswiki' ) {
+	$wgTitleBlacklistUsernameSources = array( 'meta' );
+}
 
 if ( $wmgUseQuiz ) {
 	include( "$IP/extensions/Quiz/Quiz.php" );
