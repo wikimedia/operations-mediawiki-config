@@ -54,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_04225bb1",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 164,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-23T16:32:12Z",
+      "side": 1,
+      "message": "Yes it should. Good catch.",
+      "parentUuid": "0ed113e2_6429e799",
+      "revId": "b0f29bd5935166af5ba3066967ece0d1497db6f4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_5508ed2f",
         "filename": "wmf-config/logging.php",
         "patchSetId": 7

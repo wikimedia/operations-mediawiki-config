@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_44070320",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 15146,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-23T16:32:12Z",
+      "side": 0,
+      "message": "Done",
+      "parentUuid": "6e7c4fa4_7580898e",
+      "revId": "e2e2e3ea206f4786aacc23ff51c32d181a17edb3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e7c4fa4_154d959e",
         "filename": "wmf-config/logging-labs.php",
         "patchSetId": 7
