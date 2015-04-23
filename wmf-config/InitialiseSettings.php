@@ -515,6 +515,7 @@ $wgConf->settings = array(
 	'glwiki' => '//upload.wikimedia.org/wikipedia/gl/b/bc/Wiki.png',
 	'glkwiki' => '//upload.wikimedia.org/wikipedia/commons/6/6a/Wikipedia-logo-v2-glk.png', // Bug T50397
 	'gnwiki' => '//upload.wikimedia.org/wikipedia/commons/6/6d/Wikipedia-logo-v2-gn.png', // Bug T51125
+	'gomwiki' => '//upload.wikimedia.org/wikipedia/commons/0/0d/Wikipedia-logo-v2-gom.png', // Bug T96468
 	'gotwiki' => '$stdlogo',
 	'guwiki' => '$stdlogo',
 	'gvwiki' => '//upload.wikimedia.org/wikipedia/commons/c/ca/Wikipedia-logo-v2-gv.png', // Bug T48589
