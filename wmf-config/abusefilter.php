@@ -227,6 +227,8 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 		break;
+	case 'idwiki':
+		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true; // T96542
 	case 'itwiki':
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
 		$wgGroupPermissions['*']['abusefilter-log'] = false;
