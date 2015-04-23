@@ -2360,9 +2360,6 @@ if ( $wmgUseTranslate ) {
 	unset( $wgSpecialPages['FirstSteps'] );
 	unset( $wgSpecialPages['ManageMessageGroups'] );
 	unset( $wgSpecialPages['TranslationStats'] );
-
-	// Caused apache overload 2013-08-11 TS
-	unset( $wgSpecialPages['SupportedLanguages'] );
 }
 
 if ( $wmgUseTranslationNotifications ) {
