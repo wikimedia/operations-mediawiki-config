@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_3af21ace",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-23T19:35:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_7ff2d4e0",
+      "revId": "d9cdcd150111d71df490aba333c46387b5034c50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_5f1cb018",
         "filename": "wmf-config/logging.php",
         "patchSetId": 9
@@ -30,6 +48,24 @@
       "writtenOn": "2015-04-23T17:24:11Z",
       "side": 1,
       "message": "I know that this env var predates this patch, but while you\u0027re here, could you make it consistent with MW_INSTALL_PATH, MW_LANG, MW_SECURE_HOST et al by renaming it to MW_DEBUG_LOG or something?",
+      "revId": "d9cdcd150111d71df490aba333c46387b5034c50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_fac3325f",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-23T19:35:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_5f1cb018",
       "revId": "d9cdcd150111d71df490aba333c46387b5034c50",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_9ab8e6e3",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-23T19:35:19Z",
+      "side": 1,
+      "message": "Good idea. {{done}}",
+      "parentUuid": "0ed113e2_7f197426",
+      "revId": "d9cdcd150111d71df490aba333c46387b5034c50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_3f13ec06",
         "filename": "wmf-config/logging.php",
         "patchSetId": 9
@@ -64,6 +118,24 @@
       "writtenOn": "2015-04-23T17:24:11Z",
       "side": 1,
       "message": "Should this handler be defined in core, perhaps?",
+      "revId": "d9cdcd150111d71df490aba333c46387b5034c50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_1accf68b",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-23T19:35:19Z",
+      "side": 1,
+      "message": "How so? Meaning that there should always be a blackhole/null handler added magically by the Monolog SPI?",
+      "parentUuid": "0ed113e2_3f13ec06",
       "revId": "d9cdcd150111d71df490aba333c46387b5034c50",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -87,6 +159,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_1aa396a9",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-23T19:35:19Z",
+      "side": 1,
+      "message": "Old skool habit. gethostname() is PHP \u003e\u003d 5.3.0 and does exactly the same thing as php_uname(\u0027n\u0027) which has been around since PHP 4.x.",
+      "parentUuid": "0ed113e2_dfd74027",
+      "revId": "d9cdcd150111d71df490aba333c46387b5034c50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_7fe894dd",
         "filename": "wmf-config/logging.php",
         "patchSetId": 9
@@ -104,6 +194,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_3aa0da99",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-23T19:35:19Z",
+      "side": 1,
+      "message": "Nope. good catch {{done}}",
+      "parentUuid": "0ed113e2_7fe894dd",
+      "revId": "d9cdcd150111d71df490aba333c46387b5034c50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_1ff5c8b5",
         "filename": "wmf-config/logging.php",
         "patchSetId": 9
@@ -115,6 +223,24 @@
       "writtenOn": "2015-04-23T17:24:11Z",
       "side": 1,
       "message": "array_keys( $wmgMonologProcessors )",
+      "revId": "d9cdcd150111d71df490aba333c46387b5034c50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_fa91f252",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-23T19:35:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ed113e2_1ff5c8b5",
       "revId": "d9cdcd150111d71df490aba333c46387b5034c50",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
