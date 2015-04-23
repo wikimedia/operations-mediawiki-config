@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_b8a05a3f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 6677,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2015-04-23T00:33:14Z",
+      "side": 0,
+      "message": "I would be more comfortable at 12-20 than 8 for IP and newbie. That would allow to retry a captcha every 3-5 seconds. For example, I\u0027ve a mild astigmatism and generally need five to ten captcha retries to perform an action like register an account.",
+      "revId": "9b5569342b399667608ee219ce0934eeacc22025",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_78d432bf",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2015-04-23T00:33:14Z",
+      "side": 0,
+      "message": "https://www.mediawiki.org/wiki/Manual:$wgRateLimits doesn\u0027t document badcpatcha by the way.",
+      "revId": "9b5569342b399667608ee219ce0934eeacc22025",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
