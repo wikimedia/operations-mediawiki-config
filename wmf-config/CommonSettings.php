@@ -2574,7 +2574,7 @@ if ( $wmgUseFlow ) {
 		$wgGroupPermissions['autoconfirmed']['flow-edit-post'] = true;
 	}
 
-	$wgFlowCacheVersion = '4.6';
+	$wgFlowCacheVersion = '4.7';
 }
 
 if ( $wmgUseDisambiguator ) {
