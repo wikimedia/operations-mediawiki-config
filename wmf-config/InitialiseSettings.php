@@ -8648,6 +8648,7 @@ $wgConf->settings = array(
 			'abusefilter',          // T95102
 			'filemover',            // T95103
 		),
+		'bureaucrat' => array( 'accountcreator' ), // T96824
 	),
 	'+nlwiki' => array(
 		'bureaucrat' => array( 'abusefilter', 'arbcom', 'rollbacker' ),
@@ -9265,6 +9266,7 @@ $wgConf->settings = array(
 			'abusefilter',          // T95102
 			'filemover',            // T95103
 		),
+		'bureaucrat' => array( 'accountcreator' ), // T96824
 	),
 	'+nlwiki' => array(
 		'bureaucrat' => array( 'abusefilter', 'arbcom', 'rollbacker' ),
