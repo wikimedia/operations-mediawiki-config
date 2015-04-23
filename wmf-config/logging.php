@@ -167,7 +167,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		$opts['logstash'] &&
 		$wmgLogstashServers
 	) {
-		$level = $opts['logstash']['level'];
+		$level = $opts['logstash'];
 		$logstashHandler = "logstash-{$level}";
 		if ( !isset( $wmgMonologConfig['handlers'][$logstashHandler] ) ) {
 			// Register handler that will only pass events of the given
