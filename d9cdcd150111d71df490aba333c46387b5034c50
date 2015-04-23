@@ -1,0 +1,123 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_7ff2d4e0",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2015-04-23T17:24:11Z",
+      "side": 1,
+      "message": "\u003d\u003d\u003d plz",
+      "revId": "d9cdcd150111d71df490aba333c46387b5034c50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_5f1cb018",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2015-04-23T17:24:11Z",
+      "side": 1,
+      "message": "I know that this env var predates this patch, but while you\u0027re here, could you make it consistent with MW_INSTALL_PATH, MW_LANG, MW_SECURE_HOST et al by renaming it to MW_DEBUG_LOG or something?",
+      "revId": "d9cdcd150111d71df490aba333c46387b5034c50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_7f197426",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2015-04-23T17:24:11Z",
+      "side": 1,
+      "message": "Can you instantiate this array as a variable above line 33 and then make line 38 array_keys( $wmgMonologProcessors ) ?",
+      "revId": "d9cdcd150111d71df490aba333c46387b5034c50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_3f13ec06",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2015-04-23T17:24:11Z",
+      "side": 1,
+      "message": "Should this handler be defined in core, perhaps?",
+      "revId": "d9cdcd150111d71df490aba333c46387b5034c50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_dfd74027",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2015-04-23T17:24:11Z",
+      "side": 1,
+      "message": "Hm! I didn\u0027t know about php_uname( \u0027n\u0027 ). What is the advantage over gethostname()?",
+      "revId": "d9cdcd150111d71df490aba333c46387b5034c50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_7fe894dd",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 148,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2015-04-23T17:24:11Z",
+      "side": 1,
+      "message": "is the $$ deliberate?",
+      "revId": "d9cdcd150111d71df490aba333c46387b5034c50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_1ff5c8b5",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 177,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2015-04-23T17:24:11Z",
+      "side": 1,
+      "message": "array_keys( $wmgMonologProcessors )",
+      "revId": "d9cdcd150111d71df490aba333c46387b5034c50",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
