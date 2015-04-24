@@ -134,7 +134,10 @@ $wgLBFactoryConf = array(
 	'password'	  => $wgDBpassword,
 	'type'		  => 'mysql',
 	'flags'		  => DBO_DEFAULT,
-	'max lag'	  => 10
+	'max lag'	  => 10,
+	'variables'   => array(
+		'innodb_lock_wait_timeout' => 30
+	)
 ),
 
 'groupLoadsBySection' => array(),
