@@ -300,8 +300,6 @@ $wgLBFactoryConf = array(
 ),
 
 'masterTemplateOverrides' => array(
-	# The master generally has more threads running than the others
-	'max threads' => 400,
 ),
 
 'externalTemplateOverrides' => array(
@@ -345,7 +343,3 @@ $wgDefaultExternalStore = array(
 # $wgLBFactoryConf['readOnlyBySection']['s2'] =
 # $wgLBFactoryConf['readOnlyBySection']['s2a'] =
 # 'Emergency maintenance, need more servers up, new estimate ~18:30 UTC';
-
-if ( $wgDBname === 'testwiki' ) {
-	$wgLBFactoryConf['serverTemplate']['max threads'] = 300;
-}
