@@ -1,5 +1,5 @@
 <?php
-# WARNING: This file is publically viewable on the web. Do not put private data here.
+# WARNING: This file is publicly viewable on the web. Do not put private data here.
 
 // Note: on server failure, partition masters should be switched to the slave
 // Note: MediaWiki will fail-over to other shards when one is down. On master
@@ -50,3 +50,5 @@ $wgJobQueueAggregator = array(
 		'password' => $wmgRedisPassword,
 	)
 );
+
+$wgJobSerialCommitThreshold = .100; // 100 ms
