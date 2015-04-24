@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_51dd7c46",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-04-24T18:36:46Z",
+      "side": 1,
+      "message": "Only valuable non-whitespace chage",
+      "revId": "08036b2817bd89e899bb2d7415b96af8e3edc0da",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
