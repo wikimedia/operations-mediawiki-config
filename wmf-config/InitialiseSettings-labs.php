@@ -146,6 +146,10 @@ return array(
 		'deploymentwiki' => 'meta',
 	),
 
+	'-wgDebugLogFile' => array(
+		'default' => "udp://{$wmfUdp2logDest}/wfDebug",
+	),
+
 	'-wmgDefaultMonologHandler' => array(
 		'default' => 'wgDebugLogFile',
 	),

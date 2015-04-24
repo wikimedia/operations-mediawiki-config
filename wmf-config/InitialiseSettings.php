@@ -4251,7 +4251,7 @@ $wgConf->settings = array(
 # @} end of wgTranslateNumerals
 
 'wgDebugLogFile' => array(
-	'default' => '',
+	'default' => '/dev/null',
 	'testwiki' => "udp://{$wmfUdp2logDest}/testwiki",
 	'test2wiki' => "udp://{$wmfUdp2logDest}/test2wiki",
 ),

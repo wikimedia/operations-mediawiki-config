@@ -19,12 +19,6 @@ if ( file_exists( '/etc/wmflabs-instancename' ) ) {
 	$wgOverrideHostname = trim( file_get_contents( '/etc/wmflabs-instancename' ) );
 }
 
-if ( $wgCommandLineMode || PHP_SAPI === 'cli' ) {
-	$wgDebugLogFile = "udp://$wmfUdp2logDest/cli";
-} else {
-	$wgDebugLogFile = "udp://$wmfUdp2logDest/web";
-}
-
 // stream recent changes to redis
 $wgRCFeeds['redis'] = array(
 	'formatter' => 'JSONRCFeedFormatter',
