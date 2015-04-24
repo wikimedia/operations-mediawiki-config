@@ -26,3 +26,15 @@ $wgMFSpecialCaseMainPage = $wmgMFSpecialCaseMainPage;
 $wgMFWikiDataEndpoint = $wmgMFWikiDataEndpoint;
 $wgWikiBasePropertyConfig = $wmgWikiBasePropertyConfig;
 $wgMFInfoboxConfig = $wmgMFInfoboxConfig;
+
+$wgMFIsBrowseEnabled = true;
+$wgMFBrowseTags = array(
+	"Category:National_Basketball_Association_All-Stars" => "NBA All Stars",
+	"Category:20th-century_American_politicians" => "American Politicians",
+	"Category:Object-oriented_programming_languages" => "Object-Oriented Programming Languages",
+	"Category:Western_Europe" => "European States",
+	"Category:American_female_pop_singers" => "American Female Pop Singers",
+	"Category:American_drama_television_series" => "American drama TV series",
+	"Category:Modern_painters" => "Modern Painters",
+	"Category:Landmarks_in_San_Francisco,_California" => "Landmarks in San Francisco, California",
+);
