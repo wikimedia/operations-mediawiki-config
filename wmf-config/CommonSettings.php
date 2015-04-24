@@ -2046,7 +2046,7 @@ if ( $wmgUseVisualEditor ) {
 		// so use a hook
 		$wgExtensionFunctions[] = function () {
 			global $wgServerName, $wgVisualEditorRestbaseURL;
-			$wgVisualEditorRestbaseURL = "https://rest.wikimedia.org/$wgServerName/v1/page/html/";
+			$wgVisualEditorRestbaseURL = "https://$wgServerName/api/rest_v1/page/html/";
 		};
 	}
 
