@@ -14061,8 +14061,7 @@ $wgConf->settings = array(
 ),
 
 'wmgEnableRandomRootPage' => array(
-	'default' => true,
-	'wikipedia' => false,
+	'default' => true, // T18655
 ),
 'wmgUseGettingStarted' => array(
 	'default' => false,
