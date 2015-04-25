@@ -1,4 +1,4 @@
-<?php
+f<?php
 /* vim: set sw=4 ts=4 noet foldmarker=@{,@} foldmethod=marker: */
 
 # WARNING: This file is publically viewable on the web. Do not put private data here.
@@ -13717,6 +13717,11 @@ $wgConf->settings = array(
 	'default' => false,
 	'hiwiki' => true,
 	'orwiki' => true,
+	'sawiki' => true, //T94660
+	'sawikibooks' => true, //T94660
+	'sawikiquote' => true, //T94660
+	'sawikisource' => true, //T94660
+	'sawiktionary' => true, //T94660
 	'tawiki' => true,
 	'tawikibooks' => true,
 	'tawikinews' => true,
