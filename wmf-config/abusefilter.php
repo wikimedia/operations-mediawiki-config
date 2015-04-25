@@ -135,7 +135,8 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
 		$wgAbuseFilterAvailableActions[] = 'block';
-		$wgAbuseFilterBlockDuration = '24 hours';
+		$wgAbuseFilterBlockDuration = 'infinite';
+		$wgAbuseFilterAnonBlockDuration = '31 hours';
 		$wgAbuseFilterNotifications = false;
 		break;
 	case 'eswiktionary':
