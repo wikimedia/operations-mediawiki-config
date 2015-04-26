@@ -21,6 +21,7 @@ use MediaWiki\Logger\LoggerFactory;
 # at least sometimes, but what we're running will send a 200.
 if ( PHP_SAPI != 'cli' ) {
 	header( "Cache-control: no-cache" );
+	ini_set( 'max_execution_time', 290 );
 }
 
 if ( PHP_SAPI == 'cli' ) {
