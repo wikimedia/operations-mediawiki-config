@@ -9765,6 +9765,7 @@ $wgConf->settings = array(
 	'mlwikibooks' => array( 'w', 'en' ), // Bug T52156
 	'mlwikisource' => array( 'w', 'en', 'w:en', ),
 	'mlwikiquote' => array( 'en', 'w:en', 'w' ),
+	'mrwiki' => array( 'meta', 'commons', 'en', 'hi' ), // T96807
 	'mswiki' => array( 'id' ), # Bug T18033
 	'mswiktionary' => array( 'w' ),
 	'myvwiki' => array( 'incubator' ),
