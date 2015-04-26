@@ -11038,6 +11038,7 @@ $wgConf->settings = array(
 	'mrwiki' => true,
 	'mrwikisource' => true,
 	'ndswiki' => true,
+	'newiki' => true, // T96823
 	'ptwiktionary' => true, // Bug T46412
 	'rowiki' => true,
 	'rowikinews' => true,
