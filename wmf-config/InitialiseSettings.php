@@ -9938,6 +9938,7 @@ $wgConf->settings = array(
 	'metawiki' => true, // Bug T53108
 	'ptwikibooks' => true,
 	'sourceswiki' => true,
+	'wikimania2016' => true, // T96564
 ),
 
 'wgJobRunRate' => array(
