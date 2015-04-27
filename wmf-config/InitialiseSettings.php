@@ -4327,7 +4327,7 @@ $wgConf->settings = array(
 		'poolcounter' => 'debug',
 		'lc-recache' => 'debug',
 		'generated-pp-node-count' => 'debug',
-		'api' => array( 'sample' => 1000, 'logstash' => false ),
+		'api' => array( 'logstash' => false ),
 		'api-feature-usage' => 'debug',
 		'SQLBagOStuff' => 'debug',
 		'FileOperation' => 'debug',
