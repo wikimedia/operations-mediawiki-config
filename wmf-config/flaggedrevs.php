@@ -413,6 +413,7 @@ elseif ( $wgDBname == 'frwikinews' ) {
 
 	// Removed legacy groups, per T90979
 	unset(
+		$wgGroupPermissions['autoreview'],
 		$wgGroupPermissions['editor'],
 		$wgGroupPermissions['reviewer']
 	);
