@@ -33,6 +33,24 @@
       "revId": "9b5569342b399667608ee219ce0934eeacc22025",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_6878caed",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-04-27T06:21:21Z",
+      "side": 0,
+      "message": "badcaptcha is provided by confirmedit, so it shouldn\u0027t be documented there, but on the extension page :)",
+      "parentUuid": "0ed113e2_78d432bf",
+      "revId": "9b5569342b399667608ee219ce0934eeacc22025",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
