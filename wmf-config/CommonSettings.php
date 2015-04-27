@@ -1152,6 +1152,8 @@ if ( file_exists( "$wmfConfigDir/interwiki.cdb" ) ) {
 }
 
 $wgEnotifUseJobQ = true;
+// Avoid updates on page views for "updated since my last visit" notices
+$wgActivityUpdatesUseJobQueue = true;
 
 // Username spoofing / mixed-script / similarity check detection
 include $IP . '/extensions/AntiSpoof/AntiSpoof.php';
