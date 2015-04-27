@@ -2926,6 +2926,20 @@ $wgConf->settings = array(
 		'Book_talk' => 103,
 		'كتاب' => 102,
 		'بحث_كتاب' => 103,
+		'پیشنویس' => 118, // T92760
+		'بحث_پیشنویس' => 119, // T92760
+		'پيشنويس' => 118, // T92760
+		'بحث_پيشنويس' => 119, // T92760
+		'پیش_نویس' => 118, // T92760
+		'بحث_پیش_نویس' => 119, // T92760
+		'پیش_نویس' => 118, // T92760
+		'بحث_پیش_نویس' => 119, // T92760
+		'پيش_نويس' => 118, // T92760
+		'بحث_پيش_نويس' => 119, // T92760
+		'پيش‌نويس' => 118, // T92760
+		'بحث_پيش‌نويس' => 119, // T92760
+		'Draft' => 118, // T92760
+		'Draft_talk' => 119, // T92760
 	),
 	'+fawikibooks' => array(
 		'وک' => NS_PROJECT,
@@ -4723,6 +4737,8 @@ $wgConf->settings = array(
 		101 => 'بحث_درگاه',
 		102 => 'کتاب',
 		103 => 'بحث_کتاب',
+		118 => 'پیش‌نویس', // T92760
+		119 => 'بحث_پیش‌نویس', // T92760
 	),
 	'fiwiki' => array(
 		100 => 'Teemasivu',
@@ -10008,6 +10024,10 @@ $wgConf->settings = array(
 		NS_USER_TALK => 'noindex,follow',
 		118 => 'noindex,nofollow', // draft
 		119 => 'noindex,nofollow', // draft talk
+	),
+	'fawiki' => array(
+		118 => 'noindex,nofollow', // draft, T92760
+		119 => 'noindex,nofollow', // draft talk, T92760
 	),
 	'frwiki' => array(
 		NS_USER => 'noindex,follow',
