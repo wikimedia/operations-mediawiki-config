@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_bef10900",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4331,
+      "author": {
+        "id": 1629
+      },
+      "writtenOn": "2015-04-27T19:17:08Z",
+      "side": 1,
+      "message": "let\u0027s stagger this a bit, 500 perhaps and no sampling in a week?",
+      "revId": "05fd893b104739886edf343af5c7c98cc1f5a6a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
