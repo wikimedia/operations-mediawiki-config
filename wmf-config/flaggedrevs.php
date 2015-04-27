@@ -407,6 +407,12 @@ elseif ( $wgDBname == 'frwikinews' ) {
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 104, 106 ) );
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
+
+	// Removed legacy groups, per T90979
+	unset(
+		$wgGroupPermissions['editor'],
+		$wgGroupPermissions['reviewer']
+	);
 }
 
 elseif ( $wgDBname == 'hewikisource' ) {
