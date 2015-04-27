@@ -14039,7 +14039,11 @@ $wgConf->settings = array(
 'wmgUseShortUrl' => array(
 	'default' => false,
 	'hiwiki' => true,
+<<<<<<< HEAD
 	'knwiki' => true, // T97218
+=======
+	'newiki' => true, // T92820
+>>>>>>> Enable ShortUrl on ne.wikipedia
 	'orwiki' => true,
 	'tawiki' => true,
 	'tawikibooks' => true,
