@@ -11341,6 +11341,7 @@ $wgConf->settings = array(
 		'*.adlibhosting.com',               // Amsterdam Museum, York Museums Trust, etc. - T95418
 		'hooserv.net',                      // hoo's personal web server, used for WMDE uploads et al
 		'unitedarchives.noip.me',           // United Archives' personal NAS server - T96664
+		'*.llgc.org.uk',                    // National Library of Wales - T97281
 	),
 ),
 
