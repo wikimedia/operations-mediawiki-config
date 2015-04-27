@@ -1197,6 +1197,7 @@ if ( file_exists( "$wmfConfigDir/interwiki.cdb" ) ) {
 }
 
 $wgEnotifUseJobQ = true;
+$wgActivityUpdatesUseJobQueue = true;
 
 // Username spoofing / mixed-script / similarity check detection
 include $IP . '/extensions/AntiSpoof/AntiSpoof.php';
