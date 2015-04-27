@@ -12976,6 +12976,9 @@ $wgConf->settings = array(
 	'metawiki' => true,
 	'outreachwiki' => true,
 	'zerowiki' => true,
+
+	// Chapters
+	'svwikimedia' => true, // T97027
 ),
 
 'wmgUseGraphWithNamespace' => array(
