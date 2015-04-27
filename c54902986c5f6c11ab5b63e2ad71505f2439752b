@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_cad76bf1",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2911,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2015-04-27T11:32:18Z",
+      "side": 1,
+      "message": "I will have to double check, but is this needed at all? I am not sure the  $wgJsonConfigModels[] and others needs to be modified.",
+      "revId": "c54902986c5f6c11ab5b63e2ad71505f2439752b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
