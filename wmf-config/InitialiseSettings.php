@@ -13960,6 +13960,7 @@ $wgConf->settings = array(
 
 'wmgUseShortUrl' => array(
 	'default' => false,
+	'eswikibooks' => true, // T96668
 	'hiwiki' => true,
 	'newiki' => true, // T92820
 	'orwiki' => true,
