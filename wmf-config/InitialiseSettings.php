@@ -11361,6 +11361,7 @@ $wgConf->settings = array(
 		'media.padil.gov.au',               // PaDIL - T95328
 		'*.adlibhosting.com',               // Amsterdam Museum, York Museums Trust, etc. - T95418
 		'hooserv.net',                      // hoo's personal web server, used for WMDE uploads et al
+		'unitedarchives.noip.me',           // United Archives' personal NAS server - T96664
 	),
 ),
 
