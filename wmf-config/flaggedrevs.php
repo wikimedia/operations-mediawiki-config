@@ -69,7 +69,7 @@ elseif ( $wgDBname == 'bnwiki' ) { // T30717
 	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
 
 	# Group permissions for sysops
-	$wgGroupPermissions['sysop']['review']         = true;
+	$wgGroupPermissions['sysop']['review'] = true;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 	# Use 'reviewer' group
 	$wgAddGroups['sysop'][] = 'reviewer';
@@ -139,30 +139,30 @@ elseif ( $wgDBname == 'testwiki' && false ) {
 }
 
 elseif ( $wgDBname == 'test2wiki' ) {
-    $wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-    $wgFlaggedRevTags['accuracy']['levels'] = 1;
+	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
+	$wgFlaggedRevTags['accuracy']['levels'] = 1;
 
-    $wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
-    $wgFlaggedRevsAutopromote['edits'] = 300;
-    $wgFlaggedRevsAutopromote['recentContentEdits'] = 5;
-    $wgFlaggedRevsAutopromote['editComments'] = 30;
+	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+	$wgFlaggedRevsAutopromote['edits'] = 300;
+	$wgFlaggedRevsAutopromote['recentContentEdits'] = 5;
+	$wgFlaggedRevsAutopromote['editComments'] = 30;
 
-    $wgFlaggedRevsAutoconfirm = array(
-        'days'                => 30, # days since registration
-        'edits'               => 50, # total edit count
-        'spacing'             => 3, # spacing of edit intervals
-        'benchmarks'          => 7, # how many edit intervals are needed?
-        'excludeLastDays'     => 2, # exclude the last X days of edits from edit counts
-        // Either totalContentEdits reqs OR totalCheckedEdits requirements needed
-        'totalContentEdits'   => 150, # $wgContentNamespaces edits OR...
-        'totalCheckedEdits'   => 50, # ...Edits before the stable version of pages
-        'uniqueContentPages'  => 8, # $wgContentNamespaces unique pages edited
-        'editComments'        => 20, # how many edit comments used?
-        'email'               => false, # user must be emailconfirmed?
-        'neverBlocked'        => true, # Can users that were blocked be promoted?
-    );
+	$wgFlaggedRevsAutoconfirm = array(
+		'days'                => 30, # days since registration
+		'edits'               => 50, # total edit count
+		'spacing'             => 3, # spacing of edit intervals
+		'benchmarks'          => 7, # how many edit intervals are needed?
+		'excludeLastDays'     => 2, # exclude the last X days of edits from edit counts
+		// Either totalContentEdits reqs OR totalCheckedEdits requirements needed
+		'totalContentEdits'   => 150, # $wgContentNamespaces edits OR...
+		'totalCheckedEdits'   => 50, # ...Edits before the stable version of pages
+		'uniqueContentPages'  => 8, # $wgContentNamespaces unique pages edited
+		'editComments'        => 20, # how many edit comments used?
+		'email'               => false, # user must be emailconfirmed?
+		'neverBlocked'        => true, # Can users that were blocked be promoted?
+	);
 
-    $wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
+	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 }
 
 elseif ( $wgDBname == 'cawikinews' ) {
@@ -260,7 +260,7 @@ elseif ( $wgDBname == 'enwiki' || $wgDBname == 'testwiki' ) {
 	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
 
 	# Group permissions for sysops
-	$wgGroupPermissions['sysop']['review']         = true;
+	$wgGroupPermissions['sysop']['review'] = true;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 	# Use 'reviewer' group
 	$wgAddGroups['sysop'][] = 'reviewer';
@@ -282,14 +282,14 @@ elseif ( $wgDBname == 'enwikibooks' ) {
 	$wgSimpleFlaggedRevsUI = false;
 
 	$wgFlaggedRevsAutopromote = array(
-		  'days' => 30,
-		  'edits' => 100,
-		  'spacing' => 2,
-		  'benchmarks' => 8,
-		  'recentContentEdits' => 5,
-		  'totalContentEdits' => 50,
-		  'uniqueContentPages' => 10,
-		  'editComments' => 50,
+		'days' => 30,
+		'edits' => 100,
+		'spacing' => 2,
+		'benchmarks' => 8,
+		'recentContentEdits' => 5,
+		'totalContentEdits' => 50,
+		'uniqueContentPages' => 10,
+		'editComments' => 50,
 	) + $wmfStandardAutoPromote;
 
 	$wgGroupPermissions['editor']['rollback'] = true;
@@ -303,17 +303,16 @@ elseif ( $wgDBname == 'enwikibooks' ) {
 	$wgFeedbackSizeThreshhold = 5;
 }
 elseif ( $wgDBname == 'elwikinews' ) {
-    $wgFlaggedRevsAutoReviewNew = false;
-    $wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_CATEGORY, 100 ) );
-    $wgGroupPermissions['editor']['rollback'] = true;
-    $wgGroupPermissions['editor']['autoreview'] = false;
-    $wgGroupPermissions['sysop']['stablesettings'] = true;
-    $wgGroupPermissions['sysop']['autoreview'] = false;
+	$wgFlaggedRevsAutoReviewNew = false;
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_CATEGORY, 100 ) );
+	$wgGroupPermissions['editor']['rollback'] = true;
+	$wgGroupPermissions['editor']['autoreview'] = false;
+	$wgGroupPermissions['sysop']['stablesettings'] = true;
+	$wgGroupPermissions['sysop']['autoreview'] = false;
 
+	$wgFeedbackNamespaces = array( NS_MAIN );
 
-    $wgFeedbackNamespaces = array( NS_MAIN );
-
-    unset( $wgGroupPermissions['reviewer'] );
+	unset( $wgGroupPermissions['reviewer'] );
 }
 
 elseif ( $wgDBname == 'enwikinews' ) {
@@ -452,7 +451,7 @@ elseif ( $wgDBname == 'hiwiki' ) {
 	$wgGroupPermissions['autoconfirmed']['autoreview'] = true;
 
 	# Group permissions for sysops
-	$wgGroupPermissions['sysop']['review']       = true;
+	$wgGroupPermissions['sysop']['review'] = true;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 
 	# Group permissions for non-reviewers
@@ -479,7 +478,7 @@ elseif ( $wgDBname == 'huwiki' ) {
 	$wgGroupPermissions['sysop']['validate'] = true;
 	$wgGroupPermissions['sysop']['review'] = true;
 	$wgGroupPermissions['sysop']['unreviewedpages'] = true;
-	$wgGroupPermissions['sysop']['patrolmarks']     = true;
+	$wgGroupPermissions['sysop']['patrolmarks'] = true;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 	unset( $wgGroupPermissions['reviewer'] );
 
@@ -600,7 +599,7 @@ elseif ( $wgDBname == 'ptwikibooks' ) {
 		'spacing' => 2, # spacing of edit intervals
 		'benchmarks' => 8, # how many edit intervals are needed?
 		'recentContentEdits' => 5, # $wgContentNamespaces edits in recent changes
-		'totalContentEdits' => 50,  # $wgContentNamespaces edits
+		'totalContentEdits' => 50, # $wgContentNamespaces edits
 		'uniqueContentPages' => 10, # $wgContentNamespaces unique pages edited
 		'editComments' => 50, # how many edit comments used?
 		'email' => true, # user must be emailconfirmed?
@@ -744,15 +743,15 @@ elseif ( $wgDBname == 'plwikisource' ) {
 	$wgGroupPermissions['editor']['rollback'] = true;
 }
 elseif ( $wgDBname == 'vecwiki' ) {
-        $wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-        $wgFlaggedRevTags['accuracy']['levels'] = 3; // Is this needed?
-        $wgFlaggedRevsOverride = false;
+	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
+	$wgFlaggedRevTags['accuracy']['levels'] = 3; // Is this needed?
+	$wgFlaggedRevsOverride = false;
 
-        // T17478
-        $wgGroupPermissions['autoeditor']['autoreview'] = true;
-        $wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
+	// T17478
+	$wgGroupPermissions['autoeditor']['autoreview'] = true;
+	$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
 
-        $wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
+	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 }
 
 elseif ( $wgDBname == 'zh_classicalwiki' ) {}
