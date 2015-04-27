@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_2891624a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 519,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2015-04-27T01:19:53Z",
+      "side": 1,
+      "message": "Logo has now been protected on Commons.",
+      "revId": "818e93bba7ba9b1a0fe4dd3329db521658cb6d10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
