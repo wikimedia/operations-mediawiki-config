@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_be26e9b3",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12988,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-04-27T19:03:00Z",
+      "side": 1,
+      "message": "no pages in namespaces 484 or 486",
+      "revId": "3819dfdb89220c9fb1d8c549db223860d867cb75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_de196d7f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12990,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-04-27T19:03:00Z",
+      "side": 1,
+      "message": "no pages in namespace 484",
+      "revId": "3819dfdb89220c9fb1d8c549db223860d867cb75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_fe147146",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12991,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-04-27T19:03:00Z",
+      "side": 1,
+      "message": "no pages in namespaces 484 or 486",
+      "revId": "3819dfdb89220c9fb1d8c549db223860d867cb75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
