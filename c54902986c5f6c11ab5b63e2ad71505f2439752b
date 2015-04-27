@@ -16,6 +16,24 @@
       "revId": "c54902986c5f6c11ab5b63e2ad71505f2439752b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_6afe7f68",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2911,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2015-04-27T11:36:24Z",
+      "side": 1,
+      "message": "If Graph works out of the box without any configuration, without populating a namespace, we can indeed remove the } else { ... } block.",
+      "parentUuid": "0ed113e2_cad76bf1",
+      "revId": "c54902986c5f6c11ab5b63e2ad71505f2439752b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
