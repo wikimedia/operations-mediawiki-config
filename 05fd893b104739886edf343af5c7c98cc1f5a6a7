@@ -16,6 +16,24 @@
       "revId": "05fd893b104739886edf343af5c7c98cc1f5a6a7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_de516dde",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4331,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-04-27T19:44:44Z",
+      "side": 1,
+      "message": "If you want to stagger it for a week then go ahead, as long as it either happens in a week or has an actionable blocker that is actually being actioned.\n\nI\u0027m just sick of needing to check something in api.log and having to curse T88393 all over again while no one else wants to do anything about it.",
+      "parentUuid": "0ed113e2_bef10900",
+      "revId": "05fd893b104739886edf343af5c7c98cc1f5a6a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
