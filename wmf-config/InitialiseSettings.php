@@ -7680,6 +7680,7 @@ $wgConf->settings = array(
 	),
 	'maiwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ), //T89346
+		'sysop' => array( 'upload' => true ), // T97397
 	),
 	'mediawikiwiki' => array(
 		'user' => array( 'move' => false ),
