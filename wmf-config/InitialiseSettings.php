@@ -11367,6 +11367,7 @@ $wgConf->settings = array(
 		'hooserv.net',                      // hoo's personal web server, used for WMDE uploads et al
 		'unitedarchives.noip.me',           // United Archives' personal NAS server - T96664
 		'*.llgc.org.uk',                    // National Library of Wales - T97281
+		'*.nasqueron.org',                  // Projects of Wikimedia Commons trusted users - T97448
 	),
 ),
 
