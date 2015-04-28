@@ -1203,7 +1203,6 @@ $wgConf->settings = array(
 	'jawikisource' => false, // Bug T5572
 	'jawiktionary' => false, // Bug T13775
 	'loginwiki' => false,
-	'maiwiki' => false, // Bug T74346
 	'mswiktionary' => false, // Bug T69152
 	'nlwikisource' => false, // Bug T73403
 	'nlwikivoyage' => false, // Bug T73403
