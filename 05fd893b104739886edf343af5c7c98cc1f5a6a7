@@ -34,6 +34,24 @@
       "revId": "05fd893b104739886edf343af5c7c98cc1f5a6a7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_4a5e104a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4331,
+      "author": {
+        "id": 1629
+      },
+      "writtenOn": "2015-04-28T16:37:03Z",
+      "side": 1,
+      "message": "alright, let\u0027s go with unsampled and see what happens",
+      "parentUuid": "0ed113e2_de516dde",
+      "revId": "05fd893b104739886edf343af5c7c98cc1f5a6a7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
