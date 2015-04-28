@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_9f4f5f97",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 107,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-04-28T00:32:29Z",
+      "side": 1,
+      "message": "FIXME: https:// doesn\u0027t work in Beta Cluster.",
+      "revId": "eca42790df7c26dcda4f867d6c36dccec0affb10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
