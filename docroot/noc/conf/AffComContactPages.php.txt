@@ -1,1 +1,1 @@
-../../wmf-config/AffComContactPages.php
+../../../wmf-config/AffComContactPages.php
