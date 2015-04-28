@@ -130,15 +130,10 @@ if ( $wmgUseWikibaseClient ) {
 	// to be safe, keeping this here although $wgDBname is default setting
 	$wgWBClientSettings['siteGlobalID'] = $wgDBname;
 
-	if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki', 'testwikidatawiki' ) ) ) {
-		$wgWBClientSettings['changesDatabase'] = 'testwikidatawiki';
-		$wgWBClientSettings['repoDatabase'] = 'testwikidatawiki';
-		$wgWBClientSettings['repoUrl'] = "//test.wikidata.org";
-	} else {
-		$wgWBClientSettings['changesDatabase'] = 'wikidatawiki';
-		$wgWBClientSettings['repoDatabase'] = 'wikidatawiki';
-		$wgWBClientSettings['repoUrl'] = "//{$wmfHostnames['wikidata']}";
-	}
+	// Note: Wikibase-production.php overrides this for the test wikis
+	$wgWBClientSettings['changesDatabase'] = 'wikidatawiki';
+	$wgWBClientSettings['repoDatabase'] = 'wikidatawiki';
+	$wgWBClientSettings['repoUrl'] = "//{$wmfHostnames['wikidata']}";
 
 	$wgWBClientSettings['repoNamespaces'] = array(
 		'wikibase-item' => '',

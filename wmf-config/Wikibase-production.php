@@ -18,6 +18,13 @@ if ( $wmgUseWikibaseRepo ) {
 }
 
 if ( $wmgUseWikibaseClient ) {
+
+	if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki', 'testwikidatawiki' ) ) ) {
+		$wgWBClientSettings['changesDatabase'] = 'testwikidatawiki';
+		$wgWBClientSettings['repoDatabase'] = 'testwikidatawiki';
+		$wgWBClientSettings['repoUrl'] = "//test.wikidata.org";
+	}
+
 	$wgWBClientSettings['badgeClassNames'] = array(
 		'Q17437796' => 'badge-featuredarticle',
 		'Q17437798' => 'badge-goodarticle',
