@@ -9769,6 +9769,7 @@ $wgConf->settings = array(
 	'mswiktionary' => array( 'w' ),
 	'myvwiki' => array( 'incubator' ),
 	'ndswiki' => array( 'en', 'de', 'nl', 'nds-nl', 'wikt' ),
+	'newiki' => array( 'en', 'commons' ), // T97396
 	'nlwikibooks' => array( 'w' ),
 	'nlwikisource' => array( 'w', 'wikt', 'q', 'b', 'n', 'nl', 'de', 'en' ),
 	'nlwiktionary' => array( 'w', 'en', 'fr' ), // T12856
