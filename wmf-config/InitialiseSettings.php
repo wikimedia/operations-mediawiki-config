@@ -681,6 +681,7 @@ $wgConf->settings = array(
 	'ugwiki' => '//upload.wikimedia.org/wikipedia/commons/7/7f/Wikipedia-logo-v2-ug.png', // Bug T50397
 	'ukwiki' => '//upload.wikimedia.org/wikipedia/commons/a/a6/Wikipedia-logo-v2-uk.png',
 	'urwiki' => '//upload.wikimedia.org/wikipedia/commons/3/3d/Wikipedia-logo-v2-ur.png', // Bug T48589
+	'urwikiquote' => '$stdlogo', // T97510
 	'uzwiki' => '//upload.wikimedia.org/wikipedia/commons/0/04/Wikipedia-logo-v2-uz.png', // Bug T39699
 	'vecwiki' => '$stdlogo',
 	'vepwiki' => '//upload.wikimedia.org/wikipedia/commons/f/f7/Wikipedia-logo-v2-vep.png',
