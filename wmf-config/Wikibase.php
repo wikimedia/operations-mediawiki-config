@@ -36,8 +36,6 @@ if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki', 'testwikidatawiki' ) )
 	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'wikidata';
 }
 
-$wgWBSharedSettings['useLegacyChangesSubscription'] = true;
-
 if ( $wmgUseWikibaseRepo ) {
 	$baseNs = 120;
 
@@ -93,7 +91,7 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['clientDbList']
 	);
 
-	$wgWBRepoSettings['subscriptionLookupMode'] = 'sitelinks';
+	$wgWBRepoSettings['subscriptionLookupMode'] = 'subscriptions+sitelinks';
 
 	// Bug T53637 and T48953
 	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
