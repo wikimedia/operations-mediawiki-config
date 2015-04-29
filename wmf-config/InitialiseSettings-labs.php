@@ -417,7 +417,9 @@ function wmfLabsSettings() {
 			'enwiki' => true,
 		),
 		'wmgVisualEditorAccessRESTbaseDirectly' => array(
-			'default' => true,
+			// Should be enabled, but disabled for now because RESTbase 502s in labs right now
+			//'default' => true,
+			'default' => false,
 		),
 		// ------------ BetaFeatures end -----------
 
