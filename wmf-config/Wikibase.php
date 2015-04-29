@@ -34,9 +34,8 @@ if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki', 'testwikidatawiki' ) )
 	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'testwikidata';
 } else {
 	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'wikidata';
+	$wgWBSharedSettings['useLegacyChangesSubscription'] = true;
 }
-
-$wgWBSharedSettings['useLegacyChangesSubscription'] = true;
 
 if ( $wmgUseWikibaseRepo ) {
 	$baseNs = 120;
@@ -70,6 +69,7 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		// there is no cronjob dispatcher yet, this will do nothing
 		$wgWBRepoSettings['clientDbList'] = array( 'testwiki', 'test2wiki', 'testwikidatawiki' );
+		$wgWBRepoSettings['subscriptionLookupMode'] = 'subscriptions+sitelinks';
 	} else {
 		$wgWBRepoSettings['clientDbList'] = array_diff(
 			array_map(
@@ -86,14 +86,14 @@ if ( $wmgUseWikibaseRepo ) {
 				file( getRealmSpecificFilename( "$IP/../closed.dblist" ) )
 			)
 		);
+
+		$wgWBRepoSettings['subscriptionLookupMode'] = 'sitelinks';
 	}
 
 	$wgWBRepoSettings['localClientDatabases'] = array_combine(
 		$wgWBRepoSettings['clientDbList'],
 		$wgWBRepoSettings['clientDbList']
 	);
-
-	$wgWBRepoSettings['subscriptionLookupMode'] = 'sitelinks';
 
 	// Bug T53637 and T48953
 	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
