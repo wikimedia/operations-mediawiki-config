@@ -16,6 +16,125 @@
       "revId": "fbb0036347a00888371beabccb3f73ab2bf0c5be",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_22c40594",
+        "filename": "wmf-config/AffComContactPages.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-04-29T19:43:16Z",
+      "side": 1,
+      "message": "It would be much cleaner to just add an accessor to HTMLForm so you can test the prefix directly.\n\nBut we can ignore that since the hook shouldn\u0027t even be needed, see below.",
+      "revId": "fbb0036347a00888371beabccb3f73ab2bf0c5be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_62e52d06",
+        "filename": "wmf-config/AffComContactPages.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-04-29T19:43:16Z",
+      "side": 1,
+      "message": "Really ContactPage should use \"contactpage-legend-{$this-\u003eformType}\" when it sets the legend, falling back to \"contactpage-legend\" if that message doesn\u0027t exist. It shouldn\u0027t be necessary to set it here at all.",
+      "revId": "fbb0036347a00888371beabccb3f73ab2bf0c5be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_22e7250f",
+        "filename": "wmf-config/AffComContactPages.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-04-29T19:43:16Z",
+      "side": 1,
+      "message": "I\u0027m guessing you\u0027re planning to target this with CSS of some sort. Again, ideally ContactPage would just set an appropriate id, or you could use \"body.page-Special_Contact_affcomusergroup\" that MediaWiki already adds.",
+      "revId": "fbb0036347a00888371beabccb3f73ab2bf0c5be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_e2bd9dfe",
+        "filename": "wmf-config/AffComContactPages.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-04-29T19:43:16Z",
+      "side": 1,
+      "message": "Eeew.",
+      "revId": "fbb0036347a00888371beabccb3f73ab2bf0c5be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_a23795aa",
+        "filename": "wmf-config/AffComContactPages.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-04-29T19:43:16Z",
+      "side": 1,
+      "message": "Why not use the  \u0027ContactForm\u0027 hook for this? You even get the \"$par\" value passed in to you for free to check against.",
+      "revId": "fbb0036347a00888371beabccb3f73ab2bf0c5be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_e2fa7db5",
+        "filename": "wmf-config/AffComContactPages.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-04-29T19:43:16Z",
+      "side": 1,
+      "message": "Personally, I find it looks sillier to have this checkbox not aligned with the \"Email me a copy of my message\" checkbox just below it.",
+      "revId": "fbb0036347a00888371beabccb3f73ab2bf0c5be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_22f165da",
+        "filename": "wmf-config/AffComContactPages.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-04-29T19:43:16Z",
+      "side": 1,
+      "message": "No i18n on these? (use \u0027options-messages\u0027 instead of \u0027options\u0027)",
+      "revId": "fbb0036347a00888371beabccb3f73ab2bf0c5be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
