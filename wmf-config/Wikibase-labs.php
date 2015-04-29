@@ -8,6 +8,9 @@ if ( $wmgUseWikibaseRepo ) {
 		'Q49449' => 'wb-badge-featuredlist', // Bug T72332
 		'Q49450' => 'wb-badge-featuredportal', // Bug T75193
 	);
+
+	$wgWBRepoSettings['subscriptionLookupMode'] = 'subscriptions+sitelinks';
+	$wgWBRepoSettings['useLegacyChangesSubscription'] = false;
 }
 
 if ( $wmgUseWikibaseClient ) {
@@ -18,4 +21,6 @@ if ( $wmgUseWikibaseClient ) {
 		'Q49449' => 'badge-featuredlist', // Bug T72332
 		'Q49450' => 'badge-featuredportal', // Bug T75193
 	);
+
+	$wgWBClientSettings['useLegacyChangesSubscription'] = false;
 }
