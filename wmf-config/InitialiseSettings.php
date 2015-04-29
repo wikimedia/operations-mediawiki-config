@@ -13011,6 +13011,18 @@ $wgConf->settings = array(
 	'zerowiki' => true,
 ),
 
+'wmgUseGraphWithNamespace' => array(
+	'default' => false,
+
+	// Legacy Graph deployments, with a Graph: namespace.
+	// Yurik would like new wikis only use <graph>...</graph>.
+	// See T97027 discussion for context.
+	'collabwiki' => true,
+	'mediawikiwiki' => true,
+	'metawiki' => true,
+	'zerowiki' => true,
+),
+
 'wmgUseSubPageList3' => array(
 	'default' => false,
 	'testwiki' => true,

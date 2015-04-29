@@ -2892,22 +2892,23 @@ if ( $wmgUseGraph ) {
 			'wikivoyage.org',
 			'wiktionary.org',
 		);
-	$wgJsonConfigModels['Graph.JsonConfig'] = 'Graph\Content';
-	$wgJsonConfigs['Graph.JsonConfig'] = array(
+	if ( $wmgUseGraphWithNamespace ) {
+		$wgJsonConfigModels['Graph.JsonConfig'] = 'Graph\Content';
+		$wgJsonConfigs['Graph.JsonConfig'] = array(
 			'namespace' => 484,
 			'nsName' => 'Graph',
 			'isLocal' => true,
 		);
-	$wgJsonConfigModels['Json.JsonConfig'] = null;
-	$wgJsonConfigs['Json.JsonConfig'] = array(
+		$wgJsonConfigModels['Json.JsonConfig'] = null;
+		$wgJsonConfigs['Json.JsonConfig'] = array(
 			'namespace' => 486,
 			'nsName' => 'Data',
 			'isLocal' => true,
 			'name' => 'Json',
 			'isSubspace' => true,
 		);
+	}
 }
-
 
 if ( $wmgUseAccountAudit ) {
 	ExtensionRegistry::getInstance()->queue( "$IP/extensions/AccountAudit/extension.json" );
