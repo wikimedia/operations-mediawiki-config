@@ -99,7 +99,7 @@ if ( $wmgUseVisualEditor ) {
 		// so use a hook
 		$wgExtensionFunctions[] = function () {
 			global $wgServerName, $wgVisualEditorRestbaseURL;
-			$wgVisualEditorRestbaseURL = "http://$wgServerName/api/rest_v1/page/html/";
+			$wgVisualEditorRestbaseURL = "https://restbase-beta.wmflabs.org/$wgServerName/v1/page/html/";
 		};
 	}
 }
