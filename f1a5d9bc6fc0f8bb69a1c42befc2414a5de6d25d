@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_f2257205",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 231,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-04-29T15:09:37Z",
+      "side": 1,
+      "message": "You need a \"break\" here.",
+      "revId": "f1a5d9bc6fc0f8bb69a1c42befc2414a5de6d25d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
