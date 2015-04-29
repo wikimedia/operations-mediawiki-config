@@ -14780,6 +14780,7 @@ $wgConf->settings = array(
 
 'wmgWikibaseUseLegacyUsageIndex' => array(
 	'default' => true,
+	'frwikisource' => false,
 	'testwiki' => false,
 	'wikidata' => false,
 ),
