@@ -7677,7 +7677,7 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ), //Bug T72441
 		'patroller' => array( 'autopatrol' => true, 'patrol' => true ), //Bug T72441
 	),
-	'maiwiki' => array(
+	'+maiwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ), //T89346
 	),
 	'mediawikiwiki' => array(
