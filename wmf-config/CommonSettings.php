@@ -224,24 +224,16 @@ setlocale( LC_ALL, 'en_US.UTF-8' );
 unset( $wgStylePath );
 unset( $wgStyleSheetPath );
 
-// New URL scheme
-if ( $wgDBname == 'testwiki' ) {
-	// Make testing skin/JS changes easier
-	$wgExtensionAssetsPath = "//{$wmfHostnames['test']}/w/static-$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "//{$wmfHostnames['test']}/w/static-$wmfVersionNumber/skins";
-	$wgResourceBasePath = "//{$wmfHostnames['test']}/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
-} elseif ( $wgDBname == 'testwikidatawiki' && $wmfRealm === 'production' ) {
-	$wgExtensionAssetsPath = "//test.wikidata.org/w/static-$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "//test.wikidata.org/w/static-$wmfVersionNumber/skins";
-	$wgResourceBasePath = "//test.wikidata.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
-} elseif ( $wgDBname == 'labswiki' ) {
-	$wgExtensionAssetsPath = "//wikitech.wikimedia.org/w/static-$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "//wikitech.wikimedia.org/w/static-$wmfVersionNumber/skins";
-	$wgResourceBasePath = "//wikitech.wikimedia.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
-} else {
+if ( $wmgUseBits || !isset( $_SERVER['SERVER_NAME'] ) ) {
+	$wgLoadScript = "//{$wmfHostnames['bits']}/{$_SERVER['SERVER_NAME']}/load.php";
 	$wgExtensionAssetsPath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber/extensions";
 	$wgStyleSheetPath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber/skins";
-	$wgResourceBasePath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber"; // This means resources will be requested from /static-VERSION/resources
+	$wgResourceBasePath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber";
+} else {
+	$wgLoadScript = "//{$_SERVER['SERVER_NAME']}/w/load.php";
+	$wgExtensionAssetsPath = "//{$_SERVER['SERVER_NAME']}/w/static-$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "//{$_SERVER['SERVER_NAME']}/w/static-$wmfVersionNumber/skins";
+	$wgResourceBasePath = "//{$_SERVER['SERVER_NAME']}/w/static-$wmfVersionNumber";
 }
 
 $wgStylePath = $wgStyleSheetPath;
@@ -255,9 +247,6 @@ $wgInternalServer = $wgCanonicalServer;
 
 if ( gethostname() === 'osmium' ) {
 	$wgResourceLoaderStorageEnabled = false;
-} elseif ( !in_array( $wgDBname, array( 'testwiki', 'testwikidatawiki', 'labswiki' ) ) && isset( $_SERVER['SERVER_NAME'] ) ) {
-	// Make testing JS/skin changes easy by not running load.php through bits for testwiki
-	$wgLoadScript = "//{$wmfHostnames['bits']}/{$_SERVER['SERVER_NAME']}/load.php";
 }
 
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmfVersionNumber;
