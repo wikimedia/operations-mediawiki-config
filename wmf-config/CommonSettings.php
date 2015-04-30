@@ -227,13 +227,16 @@ unset( $wgStyleSheetPath );
 if ( $wmgUseBits ) {
 	$wgAssetsHost = $wmfHostnames['bits'];
 	$wgLoadScript = "//{$wgAssetsHost}/{$_SERVER['SERVER_NAME']}/load.php";
+	$wgExtensionAssetsPath = "//{$wgAssetsHost}/static-$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "//{$wgAssetsHost}/static-$wmfVersionNumber/skins";
+	$wgResourceBasePath = "//{$wgAssetsHost}/static-$wmfVersionNumber";
 } else {
 	$wgAssetsHost = $_SERVER['SERVER_NAME'];
 	$wgLoadScript = "//{$wgAssetsHost}/w/load.php";
+	$wgExtensionAssetsPath = "//{$wgAssetsHost}/w/static-$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "//{$wgAssetsHost}/w/static-$wmfVersionNumber/skins";
+	$wgResourceBasePath = "//{$wgAssetsHost}/w/static-$wmfVersionNumber";
 }
-$wgExtensionAssetsPath = "//{$wgAssetsHost}/static-${wmfVersionNumber}/extensions";
-$wgStyleSheetPath = "//{$wgAssetsHost}/static-${wmfVersionNumber}/skins";
-$wgResourceBasePath = "//{$wgAssetsHost}/static-${wmfVersionNumber}";
 
 $wgStylePath = $wgStyleSheetPath;
 $wgArticlePath = "/wiki/$1";
