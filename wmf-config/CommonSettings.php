@@ -2728,8 +2728,8 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	// Fetch fonts from stable URLs so that they're cached longer. This is to avoid
 	// re-downloading of fonts for each new branch. But that only works for production,
 	// not labs. If this variable is not set, $wgExtensionAssetsPath is used.
-	if ( $wmfRealm === 'production' ) {
-		$wgULSFontRepositoryBasePath = ( "//{$wgAssetsHost}/static-current"
+	if ( $wmfRealm === 'production' && $wmgUseBits ) {
+		$wgULSFontRepositoryBasePath = ( "//{$wmfHostnames['bits']}/static-current"
 			. '/extensions/UniversalLanguageSelector/data/fontrepo/fonts/' );
 	}
 
