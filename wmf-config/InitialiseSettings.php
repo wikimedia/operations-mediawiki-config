@@ -15415,6 +15415,7 @@ $wgConf->settings = array(
 	'testwiki' => false,
 	'labswiki' => false,
 	'sewikibooks' => false,
+	'mediawikiwiki' => false,
 ),
 
 );
