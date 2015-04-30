@@ -224,17 +224,16 @@ setlocale( LC_ALL, 'en_US.UTF-8' );
 unset( $wgStylePath );
 unset( $wgStyleSheetPath );
 
-if ( $wmgUseBits || !isset( $_SERVER['SERVER_NAME'] ) ) {
-	$wgLoadScript = "//{$wmfHostnames['bits']}/{$_SERVER['SERVER_NAME']}/load.php";
-	$wgExtensionAssetsPath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber/skins";
-	$wgResourceBasePath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber";
+if ( $wmgUseBits ) {
+	$wgAssetsHost = $wmfHostnames['bits'];
+	$wgLoadScript = "//{$wgAssetsHost}/{$_SERVER['SERVER_NAME']}/load.php";
 } else {
-	$wgLoadScript = "//{$_SERVER['SERVER_NAME']}/w/load.php";
-	$wgExtensionAssetsPath = "//{$_SERVER['SERVER_NAME']}/w/static-$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "//{$_SERVER['SERVER_NAME']}/w/static-$wmfVersionNumber/skins";
-	$wgResourceBasePath = "//{$_SERVER['SERVER_NAME']}/w/static-$wmfVersionNumber";
+	$wgAssetsHost = $_SERVER['SERVER_NAME'];
+	$wgLoadScript = "//{$wgAssetsHost}/w/load.php";
 }
+$wgExtensionAssetsPath = "//{$wgAssetsHost}/static-${wmfVersionNumber}/extensions";
+$wgStyleSheetPath = "//{$wgAssetsHost}/static-${wmfVersionNumber}/skins";
+$wgResourceBasePath = "//{$wgAssetsHost}/static-${wmfVersionNumber}";
 
 $wgStylePath = $wgStyleSheetPath;
 $wgArticlePath = "/wiki/$1";
@@ -902,10 +901,10 @@ if ( $wgDBname == 'nostalgiawiki' ) {
 }
 
 $wgCopyrightIcon = '<a href="//wikimediafoundation.org/">' .
-	'<img src="//' . $wmfHostnames['bits'] . '/images/wikimedia-button.png" ' .
+	'<img src="//' . $wgAssetsHost . '/images/wikimedia-button.png" ' .
 		'srcset="' .
-			'//' . $wmfHostnames['bits'] . '/images/wikimedia-button-1.5x.png 1.5x, ' .
-			'//' . $wmfHostnames['bits'] . '/images/wikimedia-button-2x.png 2x' .
+			'//' . $wgAssetsHost . '/images/wikimedia-button-1.5x.png 1.5x, ' .
+			'//' . $wgAssetsHost . '/images/wikimedia-button-2x.png 2x' .
 		'" ' .
 		'width="88" height="31" alt="Wikimedia Foundation"/></a>';
 
@@ -2727,7 +2726,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	// re-downloading of fonts for each new branch. But that only works for production,
 	// not labs. If this variable is not set, $wgExtensionAssetsPath is used.
 	if ( $wmfRealm === 'production' ) {
-		$wgULSFontRepositoryBasePath = ( "//{$wmfHostnames['bits']}/static-current"
+		$wgULSFontRepositoryBasePath = ( "//{$wgAssetsHost}/static-current"
 			. '/extensions/UniversalLanguageSelector/data/fontrepo/fonts/' );
 	}
 
