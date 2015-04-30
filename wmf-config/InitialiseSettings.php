@@ -12885,6 +12885,7 @@ $wgConf->settings = array(
 	'hewiki' => true,
 	'hiwiki' => true,
 	'huwiki' => true, // Bug T32417
+	'hywiki' => true, // T97563
 	'incubatorwiki' => true, // Bug T33209
 	'iswiki' => true, // Bug T45760
 	'itwikiquote' => true, // Bug T42628
