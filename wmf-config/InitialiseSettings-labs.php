@@ -414,7 +414,7 @@ function wmfLabsSettings() {
 		),
 
 		'wmgVisualEditorEnableTocWidget' => array(
-			'enwiki' => true,
+			'default' => false,
 		),
 		'wmgVisualEditorAccessRESTbaseDirectly' => array(
 			'default' => true,
