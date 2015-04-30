@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "0ed113e2_150a5224",
+        "filename": "wikidataclient.dblist",
+        "patchSetId": 7
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-04-30T19:29:36Z",
+      "side": 1,
+      "message": "OK, we just need to do https://wikitech.wikimedia.org/wiki/Add_a_wiki#sites_table for this.",
+      "parentUuid": "0ed113e2_face9d30",
+      "revId": "818e93bba7ba9b1a0fe4dd3329db521658cb6d10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_2891624a",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 7
