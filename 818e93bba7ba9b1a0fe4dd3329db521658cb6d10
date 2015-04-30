@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "0ed113e2_ba59f591",
+        "filename": "echowikis.dblist",
+        "patchSetId": 7
+      },
+      "lineNbr": 285,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-04-30T19:20:01Z",
+      "side": 1,
+      "message": "I don\u0027t think this is correct. addWiki.php does not handle Echo\u0027s SQL...",
+      "revId": "818e93bba7ba9b1a0fe4dd3329db521658cb6d10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_face9d30",
+        "filename": "wikidataclient.dblist",
+        "patchSetId": 7
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-04-30T19:20:01Z",
+      "side": 1,
+      "message": "Same here...",
+      "revId": "818e93bba7ba9b1a0fe4dd3329db521658cb6d10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ed113e2_2891624a",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 7
