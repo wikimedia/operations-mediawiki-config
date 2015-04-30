@@ -2103,7 +2103,7 @@ if ( $wmgUseDisableAccount ) {
 
 if ( $wmgUseIncubator ) {
 	require_once( "$IP/extensions/WikimediaIncubator/WikimediaIncubator.php" );
-	$wmincClosedWikis = $wgSiteMatrixClosedSites;
+	$wgwmincClosedWikis = $wgSiteMatrixClosedSites;
 }
 
 if ( $wmgUseWikiLove ) {
