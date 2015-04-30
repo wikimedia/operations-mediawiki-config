@@ -26,3 +26,6 @@ $wgMFSpecialCaseMainPage = $wmgMFSpecialCaseMainPage;
 $wgMFWikiDataEndpoint = $wmgMFWikiDataEndpoint;
 $wgWikiBasePropertyConfig = $wmgWikiBasePropertyConfig;
 $wgMFInfoboxConfig = $wmgMFInfoboxConfig;
+
+$wgMFIsBrowseEnabled = $wmgMFIsBrowseEnabled;
+$wgMFBrowseTags = $wmgMFBrowseTags;
