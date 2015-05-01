@@ -7,6 +7,7 @@
  * @copyright Copyright © 2012, Antoine Musso <hashar at free dot fr>
  * @file
  */
+require_once( __DIR__ . '/../multiversion/MWWikiversions.php' );
 
 class DBList {
 	# List of project names. This array is used to verify that the various
@@ -32,7 +33,7 @@ class DBList {
 			if( substr( $filename, -7, 7 ) == '.dblist' ) {
 				$projectname = substr( $filename, 0, -7 );
 				# Happilly prefetch the files content
-				$list[$projectname] = file( $filename, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
+				$list[$projectname] = MWWikiversions::readDbListFile( $filename );
 			}
 		}
 
