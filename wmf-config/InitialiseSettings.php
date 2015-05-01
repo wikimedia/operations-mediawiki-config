@@ -8276,9 +8276,11 @@ $wgConf->settings = array(
 			'noratelimit' => true,
 			'deleterevision' => true,
 			'deletelogentry' => true,
+			'changetags' => true, // T97013
 		),
 		'bot' => array(
 			'noratelimit' => true,
+			'changetags' => true, // T97013
 		),
 		'accountcreator' => array(
 			'noratelimit' => true,
@@ -8300,6 +8302,7 @@ $wgConf->settings = array(
 			'move' => false, // Bug T14071
 			'move-subpages' => false, // for now...
 			'movefile' => false, // r93871 CR
+			'changetags' => false, // T97013
 		),
 		'autoconfirmed' => array(
 			'reupload' => true,
