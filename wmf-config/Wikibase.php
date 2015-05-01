@@ -72,19 +72,13 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['subscriptionLookupMode'] = 'subscriptions+sitelinks';
 	} else {
 		$wgWBRepoSettings['clientDbList'] = array_diff(
-			array_map(
-				'trim',
-				file( getRealmSpecificFilename( "$IP/../wikidataclient.dblist" ) )
-			),
+			MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../wikidataclient.dblist" ) ),
 			array( 'testwikidatawiki', 'testwiki', 'test2wiki' )
 		);
 		// Exclude closed wikis
 		$wgWBRepoSettings['clientDbList'] = array_diff(
 			$wgWBRepoSettings['clientDbList'],
-			array_map(
-				'trim',
-				file( getRealmSpecificFilename( "$IP/../closed.dblist" ) )
-			)
+			MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../closed.dblist" ) )
 		);
 
 		$wgWBRepoSettings['subscriptionLookupMode'] = 'sitelinks';

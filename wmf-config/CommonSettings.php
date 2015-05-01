@@ -145,7 +145,7 @@ if ( !$globals ) {
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small', 'medium',
 			'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-default',
 			'echowikis', 'flow', 'commonsuploads', 'nonbetafeatures', 'group0', 'wikipedia' ) as $tag ) {
-		$dblist = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../$tag.dblist" ) ) );
+		$dblist = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../$tag.dblist" ) );
 		if ( in_array( $wgDBname, $dblist ) ) {
 			$wikiTags[] = $tag;
 		}
@@ -510,9 +510,9 @@ include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 
 // Config for sitematrix
 $wgSiteMatrixFile = '/srv/mediawiki/langlist';
-$wgSiteMatrixClosedSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../closed.dblist" ) ) );
-$wgSiteMatrixPrivateSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../private.dblist" ) ) );
-$wgSiteMatrixFishbowlSites = array_map( 'trim', file( getRealmSpecificFilename( "$IP/../fishbowl.dblist" ) ) );
+$wgSiteMatrixClosedSites = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../closed.dblist" ) );
+$wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../private.dblist" ) );
+$wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../fishbowl.dblist" ) );
 
 ExtensionRegistry::getInstance()->queue( "$IP/extensions/CharInsert/extension.json" );
 
