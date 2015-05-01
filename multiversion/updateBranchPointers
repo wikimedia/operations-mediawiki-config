@@ -49,7 +49,7 @@ function updateBranchPointers( $dryRun = false ) {
 	foreach( $branches as $branch => $target ) {
 		echo "Updating $branch branch pointer...\n";
 
-		$parent = MEDIAWIKI_STAGING_DIR . "/docroot/bits/static-$branch";
+		$parent = MEDIAWIKI_STAGING_DIR . "/docroot/bits/static/$branch";
 
 		if ( !$dryRun && !file_exists( $parent ) && !mkdir( $parent, 0775 ) ) {
 			fwrite( STDERR, __FUNCTION__ . ": $parent does not exist and could not be created.\n" );

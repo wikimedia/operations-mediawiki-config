@@ -172,38 +172,38 @@ PHP;
 	createSymlink( $path, $link, "Created StartProfiler.php symlink." );
 
 	# Create static- symlinks for bits.wikimedia.org...
-	$bitsStaticDir = MEDIAWIKI_STAGING_DIR . "/docroot/bits/static-$dstVersionNum";
+	$bitsStaticDir = MEDIAWIKI_STAGING_DIR . "/docroot/bits/static/$dstVersionNum";
 	if ( !file_exists( $bitsStaticDir ) ) {
 		mkdir( $bitsStaticDir, 0775 );
 	}
-	$path = MEDIAWIKI_STAGING_DIR . "/docroot/bits/static-$dstVersionNum/skins";
+	$path = MEDIAWIKI_STAGING_DIR . "/docroot/bits/static/$dstVersionNum/skins";
 	$link = MEDIAWIKI_DEPLOYMENT_DIR . "/php-$dstVersionNum/skins/";
-	createSymlink( $path, $link, "Created bits/static-$dstVersionNum/skins symlink." );
+	createSymlink( $path, $link, "Created bits/static/$dstVersionNum/skins symlink." );
 
-	$path = MEDIAWIKI_STAGING_DIR . "/docroot/bits/static-$dstVersionNum/extensions";
+	$path = MEDIAWIKI_STAGING_DIR . "/docroot/bits/static/$dstVersionNum/extensions";
 	$link = MEDIAWIKI_DEPLOYMENT_DIR . "/php-$dstVersionNum/extensions";
-	createSymlink( $path, $link, "Created bits/static-$dstVersionNum/extensions symlink." );
+	createSymlink( $path, $link, "Created bits/static/$dstVersionNum/extensions symlink." );
 
-	$path = MEDIAWIKI_STAGING_DIR . "/docroot/bits/static-$dstVersionNum/resources";
+	$path = MEDIAWIKI_STAGING_DIR . "/docroot/bits/static/$dstVersionNum/resources";
 	$link = MEDIAWIKI_DEPLOYMENT_DIR . "/php-$dstVersionNum/resources";
-	createSymlink( $path, $link, "Created bits/static-$dstVersionNum/resources symlink." );
+	createSymlink( $path, $link, "Created bits/static/$dstVersionNum/resources symlink." );
 
 	# Create static- symlinks for /w...
-	$liveStaticDir = MEDIAWIKI_STAGING_DIR . "/w/static-$dstVersionNum";
+	$liveStaticDir = MEDIAWIKI_STAGING_DIR . "/w/static/$dstVersionNum";
 	if ( !file_exists( $liveStaticDir ) ) {
 		mkdir( $liveStaticDir, 0775 );
 	}
-	$path = MEDIAWIKI_STAGING_DIR . "/w/static-$dstVersionNum/skins";
+	$path = MEDIAWIKI_STAGING_DIR . "/w/static/$dstVersionNum/skins";
 	$link = MEDIAWIKI_DEPLOYMENT_DIR . "/php-$dstVersionNum/skins";
-	createSymlink( $path, $link, "Created /w/static-$dstVersionNum/skins symlink." );
+	createSymlink( $path, $link, "Created /w/static/$dstVersionNum/skins symlink." );
 
-	$path = MEDIAWIKI_STAGING_DIR . "/w/static-$dstVersionNum/extensions";
+	$path = MEDIAWIKI_STAGING_DIR . "/w/static/$dstVersionNum/extensions";
 	$link = MEDIAWIKI_DEPLOYMENT_DIR . "/php-$dstVersionNum/extensions";
-	createSymlink( $path, $link, "Created /w/static-$dstVersionNum/extensions symlink." );
+	createSymlink( $path, $link, "Created /w/static/$dstVersionNum/extensions symlink." );
 
-	$path = MEDIAWIKI_STAGING_DIR . "/w/static-$dstVersionNum/resources";
+	$path = MEDIAWIKI_STAGING_DIR . "/w/static/$dstVersionNum/resources";
 	$link = MEDIAWIKI_DEPLOYMENT_DIR . "/php-$dstVersionNum/resources";
-	createSymlink( $path, $link, "Created /w/static-$dstVersionNum/resources symlink." );
+	createSymlink( $path, $link, "Created /w/static/$dstVersionNum/resources symlink." );
 
 	# Create l10n cache dir
 	$l10nDir = "$destIP/cache/l10n";

@@ -199,22 +199,22 @@ unset( $wgStyleSheetPath );
 if ( $wmgUseBits ) {
 	$wgAssetsHost = $wmfHostnames['bits'];
 	$wgLoadScript = "//{$wgAssetsHost}/{$_SERVER['SERVER_NAME']}/load.php";
-	$wgExtensionAssetsPath = "//{$wgAssetsHost}/static-$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "//{$wgAssetsHost}/static-$wmfVersionNumber/skins";
-	$wgResourceBasePath = "//{$wgAssetsHost}/static-$wmfVersionNumber";
+	$wgExtensionAssetsPath = "//{$wgAssetsHost}/static/$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "//{$wgAssetsHost}/static/$wmfVersionNumber/skins";
+	$wgResourceBasePath = "//{$wgAssetsHost}/static/$wmfVersionNumber";
 } else {
 	$wgAssetsHost = $_SERVER['SERVER_NAME'];
 	$wgLoadScript = "//{$wgAssetsHost}/w/load.php";
-	$wgExtensionAssetsPath = "//{$wgAssetsHost}/w/static-$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "//{$wgAssetsHost}/w/static-$wmfVersionNumber/skins";
-	$wgResourceBasePath = "//{$wgAssetsHost}/w/static-$wmfVersionNumber";
+	$wgExtensionAssetsPath = "//{$wgAssetsHost}/w/static/$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "//{$wgAssetsHost}/w/static/$wmfVersionNumber/skins";
+	$wgResourceBasePath = "//{$wgAssetsHost}/w/static/$wmfVersionNumber";
 }
 
 $wgStylePath = $wgStyleSheetPath;
 $wgArticlePath = "/wiki/$1";
 
 $wgScriptPath  = '/w';
-$wgLocalStylePath = "$wgScriptPath/static-$wmfVersionNumber/skins";
+$wgLocalStylePath = "$wgScriptPath/static/$wmfVersionNumber/skins";
 $wgScript           = $wgScriptPath . '/index.php';
 $wgRedirectScript	= $wgScriptPath . '/redirect.php';
 $wgInternalServer = $wgCanonicalServer;
@@ -2701,7 +2701,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	// re-downloading of fonts for each new branch. But that only works for production,
 	// not labs. If this variable is not set, $wgExtensionAssetsPath is used.
 	if ( $wmfRealm === 'production' && $wmgUseBits ) {
-		$wgULSFontRepositoryBasePath = ( "//{$wmfHostnames['bits']}/static-current"
+		$wgULSFontRepositoryBasePath = ( "//{$wmfHostnames['bits']}/static/current"
 			. '/extensions/UniversalLanguageSelector/data/fontrepo/fonts/' );
 	}
 
