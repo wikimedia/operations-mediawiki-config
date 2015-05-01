@@ -38,6 +38,35 @@ class MWWikiversions {
 	}
 
 	/**
+	 * Evaluate a dblist expression.
+	 *
+	 * A dblist expression contains one or more dblist file names separated by '+' and '-'.
+	 *
+	 * @par Example:
+	 * @code
+	 *  %% all.dblist - wikipedia.dblist
+	 * @endcode
+	 *
+	 * @param $expr string
+	 * @return Array
+	 */
+	public static function evalDbListExpression( $expr ) {
+		$expr = trim( strtok( $expr, "#\n" ), "% " );
+		$tokens = preg_split( '/ *([-+]) */m', $expr, 0, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY );
+		$result = self::readDbListFile( $tokens[0] );
+		while ( ( $op = next( $tokens ) ) && ( $term = next( $tokens ) ) ) {
+			$dbs = self::readDbListFile( $term );
+			if ( $op === '+' ) {
+				$result = array_unique( array_merge( $result, $dbs ) );
+			} else if ( $op === '-' ) {
+				$result = array_diff( $result, $dbs );
+			}
+		}
+		sort( $result );
+		return $result;
+	}
+
+	/**
 	 * Get an array of DB names from a .dblist file.
 	 *
 	 * @param $srcPath string
@@ -47,7 +76,10 @@ class MWWikiversions {
 		$data = file_get_contents( $srcPath );
 		if ( $data === false ) {
 			throw new Exception( "Unable to read $srcPath.\n" );
+		} else if ( substr( $data, 0, 2 ) === '%%' ) {
+			return self::evalDbListExpression( $data );
+		} else {
+			return array_filter( explode( "\n", $data ) );
 		}
-		return array_filter( explode( "\n", $data ) );
 	}
 }
