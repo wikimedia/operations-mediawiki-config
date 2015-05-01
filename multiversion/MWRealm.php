@@ -1,4 +1,6 @@
 <?php
+require_once( __DIR__ . '/MWWikiversions.php' );
+
 // Determine realm and datacenter we are on
 // $wmfRealm and $wmfDatacenter are used to vary configuration based on server
 // location. They should be provisioned by puppet in /etc/wikimedia-site and
