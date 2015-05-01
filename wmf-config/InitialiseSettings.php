@@ -10737,14 +10737,14 @@ $wgConf->settings = array(
 'wgAppleTouchIcon' => array(
 	'default' => false, // iOS searches for icons in docroot by default
 
-	'commonswiki' => '//bits.wikimedia.org/apple-touch/commons.png',
-	'mediawikiwiki' => '//bits.wikimedia.org/apple-touch/mediawiki.png',
-	'usabilitywiki' => '//bits.wikimedia.org/apple-touch/usability.png',
-	'wikinews' => '//bits.wikimedia.org/apple-touch/wikinews.png',
-	'wiki' => '//bits.wikimedia.org/apple-touch/wikipedia.png',
-	'wiktionary' => '//bits.wikimedia.org/apple-touch/wiktionary.png',
-	'wikidata' => '//bits.wikimedia.org/apple-touch/wikidata.png', // Bug T72996
-	'enwiktionary' => '//bits.wikimedia.org/apple-touch/wiktionary/en.png', // Bug T48431
+	'commonswiki' => '/static/apple-touch/commons.png',
+	'mediawikiwiki' => '/static/apple-touch/mediawiki.png',
+	'usabilitywiki' => '/static/apple-touch/usability.png',
+	'wikinews' => '/static/apple-touch/wikinews.png',
+	'wiki' => '/static/apple-touch/wikipedia.png',
+	'wiktionary' => '/static/apple-touch/wiktionary.png',
+	'wikidata' => '/static/apple-touch/wikidata.png', // Bug T72996
+	'enwiktionary' => '/static/apple-touch/wiktionary/en.png', // Bug T48431
 	'labswiki' => '/Wikitech-apple-touch-icon.png',
 ),
 
