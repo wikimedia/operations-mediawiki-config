@@ -1286,7 +1286,7 @@ if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
 	// Setup metawiki as central wiki
 	$wgResourceLoaderSources['metawiki'] = array(
 		'apiScript' => '//meta.wikimedia.org/w/api.php',
-		'loadScript' => '//bits.wikimedia.org/meta.wikimedia.org/load.php',
+		'loadScript' => '//meta.wikimedia.org/w/load.php',
 	);
 
 	$wgGlobalCssJsConfig = array(
