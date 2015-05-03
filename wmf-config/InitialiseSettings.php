@@ -7696,7 +7696,8 @@ $wgConf->settings = array(
 			'editinterface' => true,
 		),
 		'flood' => array( 'bot' => true ),
-		'global-renamer' => array( 'centralauth-rename' => true ), // Bug T71651
+		// Disabled due to job queue fall out - hoo
+		'global-renamer' => array( 'centralauth-rename' => false ), // Bug T71651
 		'massmessage-sender' => array( 'massmessage' => true ), // Bug T59611
 		'steward' => array( 'userrights-interwiki' => true ), // new steward stuff, yay 2007-12-27
 		'uploader' => array( // Bug T52287
