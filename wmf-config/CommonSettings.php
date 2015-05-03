@@ -1172,7 +1172,7 @@ if ( $wmgUseCentralAuth ) {
 	include "$IP/extensions/CentralAuth/CentralAuth.php";
 
 	$wgCentralAuthDryRun = false;
-#	$wgGroupPermissions['steward']['centralauth-rename'] = true;
+	$wgGroupPermissions['steward']['centralauth-rename'] = true;
 	$wgCentralAuthCookies = true;
 
 	$wgDisableUnmergedEditing = $wmgDisableUnmergedEdits;
