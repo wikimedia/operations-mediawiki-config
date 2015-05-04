@@ -28,7 +28,9 @@ class MWWikiversions {
 	 * @param array $wikis Array of wikis array( dbname => version )
 	 */
 	public static function writeWikiVersionsFile( $path, $wikis ) {
-		$json = json_encode( $wikis, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
+		// 448 == JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE,
+		// but doesn't break on PHP 5.3, which does not have these defined.
+		$json = json_encode( $wikis, 448 );
 		if ( !file_put_contents( $path, $json, LOCK_EX ) ) {
 			print "Unable to write to $path.\n";
 			exit( 1 );
