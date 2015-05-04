@@ -16,6 +16,24 @@
       "revId": "0a8cd64f84e80e2a800bc2002f15216a67e45fb6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_a5845810",
+        "filename": "multiversion/MWWikiversions.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-05-04T21:28:06Z",
+      "side": 1,
+      "message": "yup. \"5.4.0 JSON_PRETTY_PRINT, JSON_UNESCAPED_SLASHES, and JSON_UNESCAPED_UNICODE options were added.\" -- https://php.net/json_encode",
+      "parentUuid": "0ed113e2_651e7013",
+      "revId": "0a8cd64f84e80e2a800bc2002f15216a67e45fb6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
