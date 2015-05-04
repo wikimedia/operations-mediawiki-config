@@ -1,6 +1,5 @@
 <?php
 require_once( __DIR__ . '/defines.php' );
-require_once( __DIR__ . '/FormatJson.php' );
 
 /**
  * Helper class for reading the wikiversions.json file
@@ -16,7 +15,7 @@ class MWWikiversions {
 			throw new Exception( "Unable to read $srcPath.\n" );
 		}
 		// Read the lines of the json file into an array...
-		$verList = FormatJson::decode( $data, true );
+		$verList = json_decode( $data, true );
 		if ( !is_array( $verList ) || array_values( $verList ) === $verList ) {
 			throw new Exception( "$srcPath did not decode to an associative array.\n" );
 		}
@@ -29,8 +28,7 @@ class MWWikiversions {
 	 * @param array $wikis Array of wikis array( dbname => version )
 	 */
 	public static function writeWikiVersionsFile( $path, $wikis ) {
-		$json = FormatJson::encode( $wikis, true );
-
+		$json = json_encode( $wikis, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
 		if ( !file_put_contents( $path, $json, LOCK_EX ) ) {
 			print "Unable to write to $path.\n";
 			exit( 1 );
