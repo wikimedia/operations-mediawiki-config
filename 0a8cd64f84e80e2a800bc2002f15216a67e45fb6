@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_651e7013",
+        "filename": "multiversion/MWWikiversions.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 166
+      },
+      "writtenOn": "2015-05-04T21:21:07Z",
+      "side": 1,
+      "message": "Wasn\u0027t the reason for using FormatJson here specifically that PHP 5.3 doesn\u0027t support any of these options?",
+      "revId": "0a8cd64f84e80e2a800bc2002f15216a67e45fb6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
