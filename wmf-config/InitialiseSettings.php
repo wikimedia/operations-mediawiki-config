@@ -13009,6 +13009,7 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 	'metawiki' => true,
 	'outreachwiki' => true,
+	'testwikidatawiki' => true,
 	'zerowiki' => true,
 
 	// Chapters
