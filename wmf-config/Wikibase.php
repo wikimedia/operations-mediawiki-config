@@ -32,6 +32,8 @@ $wgWBSharedSettings['siteLinkGroups'] = array(
 $wgWBSharedSettings['specialSiteLinkGroups'] = array( 'commons' );
 if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki', 'testwikidatawiki' ) ) ) {
 	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'testwikidata';
+	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'testwiki';
+	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'test2wiki';
 } else {
 	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'wikidata';
 	$wgWBSharedSettings['useLegacyChangesSubscription'] = true;

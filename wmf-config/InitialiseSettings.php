@@ -14820,13 +14820,6 @@ $wgConf->settings = array(
 	// here does not work the same way. Instead, put defaults in CommonSettings.php
 	'default' => array(
 	),
-	'testwiki' => array(
-		'siteGlobalID' => 'enwiki',
-		'propagateChangesToRepo' => false,
-	),
-	'test2wiki' => array(
-		'siteGlobalID' => 'enwiki'
-	),
 	'be_x_oldwiki' => array(
 		'sort' => 'alphabetic',
 	),
