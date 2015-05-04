@@ -69,7 +69,6 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		// there is no cronjob dispatcher yet, this will do nothing
 		$wgWBRepoSettings['clientDbList'] = array( 'testwiki', 'test2wiki', 'testwikidatawiki' );
-		$wgWBRepoSettings['subscriptionLookupMode'] = 'subscriptions+sitelinks';
 	} else {
 		$wgWBRepoSettings['clientDbList'] = array_diff(
 			array_map(
@@ -86,9 +85,9 @@ if ( $wmgUseWikibaseRepo ) {
 				file( getRealmSpecificFilename( "$IP/../closed.dblist" ) )
 			)
 		);
-
-		$wgWBRepoSettings['subscriptionLookupMode'] = 'sitelinks';
 	}
+
+	$wgWBRepoSettings['subscriptionLookupMode'] = 'subscriptions+sitelinks';
 
 	$wgWBRepoSettings['localClientDatabases'] = array_combine(
 		$wgWBRepoSettings['clientDbList'],
