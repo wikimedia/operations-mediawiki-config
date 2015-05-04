@@ -12973,6 +12973,8 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'test2wiki' => true,
 	'enwiki' => true,
+	// T97488
+	'enwikivoyage' => true,
 ),
 'wmgEnableTextExtracts' => array(
 	'default' => true,
