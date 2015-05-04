@@ -16229,13 +16229,6 @@ $wgConf->settings = [
 	// here does not work the same way. Instead, put defaults in CommonSettings.php
 	'default' => [
 	],
-	'testwiki' => [
-		'siteGlobalID' => 'enwiki',
-		'propagateChangesToRepo' => false,
-	],
-	'test2wiki' => [
-		'siteGlobalID' => 'enwiki'
-	],
 	'be_x_oldwiki' => [
 		'sort' => 'alphabetic',
 	],
