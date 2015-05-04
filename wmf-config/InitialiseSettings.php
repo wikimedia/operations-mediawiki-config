@@ -15418,6 +15418,8 @@ $wgConf->settings = array(
 	'sewikibooks' => false,
 	'mediawikiwiki' => false,
 	'itwiki' => false,
+	'dewiki' => false,
+	'nlwiki' => false,
 ),
 
 );
