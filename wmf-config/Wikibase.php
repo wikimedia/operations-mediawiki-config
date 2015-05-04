@@ -34,7 +34,6 @@ if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki', 'testwikidatawiki' ) )
 	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'testwikidata';
 } else {
 	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'wikidata';
-	$wgWBSharedSettings['useLegacyChangesSubscription'] = true;
 }
 
 if ( $wmgUseWikibaseRepo ) {
@@ -69,7 +68,6 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		// there is no cronjob dispatcher yet, this will do nothing
 		$wgWBRepoSettings['clientDbList'] = array( 'testwiki', 'test2wiki', 'testwikidatawiki' );
-		$wgWBRepoSettings['subscriptionLookupMode'] = 'subscriptions+sitelinks';
 	} else {
 		$wgWBRepoSettings['clientDbList'] = array_diff(
 			array_map(
@@ -86,9 +84,9 @@ if ( $wmgUseWikibaseRepo ) {
 				file( getRealmSpecificFilename( "$IP/../closed.dblist" ) )
 			)
 		);
-
-		$wgWBRepoSettings['subscriptionLookupMode'] = 'sitelinks';
 	}
+
+	$wgWBRepoSettings['subscriptionLookupMode'] = 'subscriptions+sitelinks';
 
 	$wgWBRepoSettings['localClientDatabases'] = array_combine(
 		$wgWBRepoSettings['clientDbList'],
@@ -177,6 +175,9 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
 	$wgWBClientSettings['allowArbitraryDataAccess'] = $wmgWikibaseEnableArbitraryAccess;
 	$wgWBClientSettings['useLegacyUsageIndex'] = $wmgWikibaseUseLegacyUsageIndex;
+
+	// enable this in batches, like and in sync with usage tracking
+	$wgWBClientSettings['useLegacyChangesSubscription'] = $wmgWikibaseUseLegacyUsageIndex;
 
 	$wgWBClientSettings['sharedCacheKeyPrefix'] .= $wgWBSharedCacheKey;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
