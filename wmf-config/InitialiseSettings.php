@@ -17239,13 +17239,6 @@ $wgConf->settings = [
 	// here does not work the same way. Instead, put defaults in Wikibase.php
 	'default' => [
 	],
-	'testwiki' => [
-		'siteGlobalID' => 'enwiki',
-		'propagateChangesToRepo' => false,
-	],
-	'test2wiki' => [
-		'siteGlobalID' => 'enwiki'
-	],
 ],
 
 'wmgUseWikibaseQuality' => [
