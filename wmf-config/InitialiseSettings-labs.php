@@ -583,5 +583,8 @@ function wmfLabsSettings() {
 			'default' => false,
 			'kowiki' => true, // T15712
 		),
+		'wmgUseGraph' => array(
+			'default' => true,
+		),
 	);
 } # wmflLabsSettings()
