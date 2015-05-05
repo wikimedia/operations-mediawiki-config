@@ -587,8 +587,5 @@ function wmfLabsSettings() {
 			'default' => true,
 		),
 
-		'wmgUseBits' => array(
-			'default' => false,
-		),
 	);
 } # wmflLabsSettings()
