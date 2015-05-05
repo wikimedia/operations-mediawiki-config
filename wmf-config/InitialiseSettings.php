@@ -11044,6 +11044,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'arwiki' => true,
 	'arwikisource' => true,
+	'bhwiki' => true, // T97920
 	'ckbwiki' => true, // Bug T54678
 	'commonswiki' => true,
 	'dewikiversity' => true, // Bug T51449
