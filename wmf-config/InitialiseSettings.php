@@ -15412,17 +15412,7 @@ $wgConf->settings = array(
 
 // Whether or not to use bits.wikimedia.org for static assets. -- T95448
 'wmgUseBits' => array(
-	'default' => true,
-	'testwikidatawiki' => false,
-	'testwiki' => false,
-	'labswiki' => false,
-	'sewikibooks' => false,
-	'mediawikiwiki' => false,
-	'itwiki' => false,
-	'dewiki' => false,
-	'nlwiki' => false,
-	'ruwiki' => false,
-	'eswiki' => false,
+	'default' => false,
 ),
 
 );
