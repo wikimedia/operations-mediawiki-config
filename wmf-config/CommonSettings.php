@@ -197,17 +197,17 @@ unset( $wgStylePath );
 unset( $wgStyleSheetPath );
 
 if ( $wmgUseBits ) {
-	$wgAssetsHost = $wmfHostnames['bits'];
-	$wgLoadScript = "//{$wgAssetsHost}/{$_SERVER['SERVER_NAME']}/load.php";
-	$wgExtensionAssetsPath = "//{$wgAssetsHost}/static/$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "//{$wgAssetsHost}/static/$wmfVersionNumber/skins";
-	$wgResourceBasePath = "//{$wgAssetsHost}/static/$wmfVersionNumber";
+	$wmgAssetsHost = $wmfHostnames['bits'];
+	$wgLoadScript = "//{$wmgAssetsHost}/{$_SERVER['SERVER_NAME']}/load.php";
+	$wgExtensionAssetsPath = "//{$wmgAssetsHost}/static/$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "//{$wmgAssetsHost}/static/$wmfVersionNumber/skins";
+	$wgResourceBasePath = "//{$wmgAssetsHost}/static/$wmfVersionNumber";
 } else {
-	$wgAssetsHost = $_SERVER['SERVER_NAME'];
-	$wgLoadScript = "//{$wgAssetsHost}/w/load.php";
-	$wgExtensionAssetsPath = "//{$wgAssetsHost}/w/static/$wmfVersionNumber/extensions";
-	$wgStyleSheetPath = "//{$wgAssetsHost}/w/static/$wmfVersionNumber/skins";
-	$wgResourceBasePath = "//{$wgAssetsHost}/w/static/$wmfVersionNumber";
+	$wmgAssetsHost = $_SERVER['SERVER_NAME'];
+	$wgLoadScript = "//{$wmgAssetsHost}/w/load.php";
+	$wgExtensionAssetsPath = "//{$wmgAssetsHost}/w/static/$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "//{$wmgAssetsHost}/w/static/$wmfVersionNumber/skins";
+	$wgResourceBasePath = "//{$wmgAssetsHost}/w/static/$wmfVersionNumber";
 }
 
 $wgStylePath = $wgStyleSheetPath;
@@ -876,10 +876,10 @@ if ( $wgDBname == 'nostalgiawiki' ) {
 }
 
 $wgCopyrightIcon = '<a href="//wikimediafoundation.org/">' .
-	'<img src="//' . $wgAssetsHost . '/images/wikimedia-button.png" ' .
+	'<img src="//' . $wmgAssetsHost . '/images/wikimedia-button.png" ' .
 		'srcset="' .
-			'//' . $wgAssetsHost . '/images/wikimedia-button-1.5x.png 1.5x, ' .
-			'//' . $wgAssetsHost . '/images/wikimedia-button-2x.png 2x' .
+			'//' . $wmgAssetsHost . '/images/wikimedia-button-1.5x.png 1.5x, ' .
+			'//' . $wmgAssetsHost . '/images/wikimedia-button-2x.png 2x' .
 		'" ' .
 		'width="88" height="31" alt="Wikimedia Foundation"/></a>';
 
