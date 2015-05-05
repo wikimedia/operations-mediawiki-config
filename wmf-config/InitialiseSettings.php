@@ -13004,16 +13004,8 @@ $wgConf->settings = array(
 ),
 
 'wmgUseGraph' => array(
-	'default' => false,
-	'collabwiki' => true,
-	'labswiki' => true,
-	'mediawikiwiki' => true,
-	'metawiki' => true,
-	'outreachwiki' => true,
-	'zerowiki' => true,
-
-	// Chapters
-	'sewikimedia' => true, // T97027
+	'default' => true,
+	'wikidatawiki' => false, // safety - need to test wikidata separatelly
 ),
 
 'wmgUseGraphWithNamespace' => array(
