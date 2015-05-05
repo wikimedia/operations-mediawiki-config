@@ -15405,7 +15405,6 @@ $wgConf->settings = array(
 // Whether or not to use bits.wikimedia.org for static assets. -- T95448
 'wmgUseBits' => array(
 	'default' => false,
-	'enwiki' => true,
 ),
 
 );
