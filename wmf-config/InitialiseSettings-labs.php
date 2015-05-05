@@ -586,5 +586,9 @@ function wmfLabsSettings() {
 		'wmgUseGraph' => array(
 			'default' => true,
 		),
+
+		'wmgUseBits' => array(
+			'default' => false,
+		),
 	);
 } # wmflLabsSettings()
