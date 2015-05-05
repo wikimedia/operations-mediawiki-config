@@ -2521,6 +2521,8 @@ if ( $wmgUseFlow ) {
 	}
 
 	$wgFlowEditorList = $wmgFlowEditorList;
+	$wgDefaultUserOptions['flow-editor'] = 'visualeditor';
+
 	$wgFlowOccupyNamespaces = $wmgFlowOccupyNamespaces;
 	$wgFlowOccupyPages = $wmgFlowOccupyPages;
 	// Requires that Parsoid is available for all wikis using Flow.
