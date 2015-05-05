@@ -1067,7 +1067,7 @@ $wgConf->settings = array(
 	'wikimania2012wiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Wikimania_2012_logo.svg/135px-Wikimania_2012_logo.svg.png', // Bug T50382
 	'wikimania2013wiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/52/Wikimania_2013_logo.svg/135px-Wikimania_2013_logo.svg.png', // Bug T50382
 	'wikimania2014wiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/06/Wikimania_2014_Shard_logo_v3_with_logotype_and_date_%28small%29.svg/135px-Wikimania_2014_Shard_logo_v3_with_logotype_and_date_%28small%29.svg.png', // Bug T58398
-	'wikimania2015wiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Wikimania_2015_logo.svg/135px-Wikimania_2015_logo.svg.png', // Bug T50382
+	'wikimania2015wiki' => '//upload.wikimedia.org/wikipedia/wikimania2015/f/f0/Wiki.svg', // Bug T50382
 	'wikimania2016wiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Wikimania_2016_logo.svg/135px-Wikimania_2016_logo.svg.png', // T85374
 	'wikimaniateamwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/07/Wikimania_team_logo.svg/135px-Wikimania_team_logo.svg.png', // Bug T50376
 ),
