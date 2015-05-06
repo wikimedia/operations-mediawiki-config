@@ -70,13 +70,13 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['clientDbList'] = array( 'testwiki', 'test2wiki', 'testwikidatawiki' );
 	} else {
 		$wgWBRepoSettings['clientDbList'] = array_diff(
-			MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../wikidataclient.dblist" ) ),
+			MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../dblists/wikidataclient.dblist" ) ),
 			array( 'testwikidatawiki', 'testwiki', 'test2wiki' )
 		);
 		// Exclude closed wikis
 		$wgWBRepoSettings['clientDbList'] = array_diff(
 			$wgWBRepoSettings['clientDbList'],
-			MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../closed.dblist" ) )
+			MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../dblists/closed.dblist" ) )
 		);
 	}
 
