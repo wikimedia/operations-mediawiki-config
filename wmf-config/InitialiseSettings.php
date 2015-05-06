@@ -14811,7 +14811,10 @@ $wgConf->settings = array(
 
 'wmgWikibaseUseLegacyUsageIndex' => array(
 	'default' => true,
+	'enwikivoyage' => false, // Bug T98237
+	'fawiki' => false, // Bug T98237
 	'frwikisource' => false, // Bug T96683
+	'hewiki' => false, // Bug T98237
 	'nlwiki' => false, // Bug T96683
 	'testwiki' => false,
 	'wikidata' => false,
