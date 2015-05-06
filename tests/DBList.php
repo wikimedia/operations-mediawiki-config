@@ -24,16 +24,16 @@ class DBList {
 
 	public static function getall() {
 		static $list = null;
-		if( $list ) {
+		if ( $list ) {
 			return $list;
 		}
 
-		$objects = scandir(  dirname( __FILE__ ) . '/..'  );
-		foreach( $objects as $filename ) {
-			if( substr( $filename, -7, 7 ) == '.dblist' ) {
+		$objects = scandir(  __DIR__ . '/../dblists'  );
+		foreach ( $objects as $filename ) {
+			if ( substr( $filename, -7, 7 ) == '.dblist' ) {
 				$projectname = substr( $filename, 0, -7 );
 				# Happilly prefetch the files content
-				$list[$projectname] = MWWikiversions::readDbListFile( $filename );
+				$list[$projectname] = MWWikiversions::readDbListFile( __DIR__ . '/../dblists/' . $filename );
 			}
 		}
 

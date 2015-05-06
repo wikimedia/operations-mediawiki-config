@@ -30,7 +30,7 @@ function updateWikiversions() {
 	}
 
 	$dbListName = basename( $argv[1], '.dblist' );
-	$dbList = MWWikiversions::readDbListFile( "$common/$dbListName.dblist" );
+	$dbList = MWWikiversions::readDbListFile( "$common/dblists/$dbListName.dblist" );
 
 	$newVersion = $argv[2];
 	if ( !preg_match( '/^php-(\d+\.\d+wmf\d+|master)$/', $newVersion ) || !is_dir( "$common/$newVersion" ) ) {

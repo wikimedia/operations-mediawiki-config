@@ -37,7 +37,7 @@ function refreshWikiversionsCDB() {
 		}
 	}
 
-	$dbNames = MWWikiversions::readDbListFile( getRealmSpecificFilename( MEDIAWIKI_STAGING_DIR . '/all.dblist' ) );
+	$dbNames = MWWikiversions::readDbListFile( getRealmSpecificFilename( MEDIAWIKI_STAGING_DIR . '/dblists/all.dblist' ) );
 	$diff = array_diff( $dbNames, array_keys( $rows ) );
 	if ( count( $diff ) ) {
 		print_r( $diff );
