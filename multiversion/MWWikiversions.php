@@ -73,17 +73,28 @@ class MWWikiversions {
 	 * @return Array
 	 */
 	public static function readDbListFile( $srcPath ) {
-		$data = file_get_contents( $srcPath );
-		if ( $data === false ) {
+		$lines = @file( $srcPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
+		if ( !$lines ) {
 			throw new Exception( "Unable to read $srcPath.\n" );
-		} else if ( substr( $data, 0, 2 ) === '%%' ) {
-			$dir = getcwd();
-			chdir( dirname( $srcPath ) );
-			$dbs = self::evalDbListExpression( $data );
-			chdir( $dir );
-			return $dbs;
-		} else {
-			return array_filter( explode( "\n", $data ) );
 		}
+
+		$dbs = array();
+		foreach ( $lines as $line ) {
+			// Strip comments ('//' or '#' to end-of-line) and trim whitespace.
+			$line = trim( preg_replace( '/(#|\/\/).*/', '', $line ) );
+			if ( substr( $line, 0, 2 ) === '%%' ) {
+				if ( !empty( $dbs ) ) {
+					throw new Exception( "{$srcPath}: Encountered dblist expression inside a dblist list file.\n" );
+				}
+				$dir = getcwd();
+				chdir( dirname( $srcPath ) );
+				$dbs = self::evalDbListExpression( $line );
+				chdir( $dir );
+				break;
+			} else if ( $line !== '' ) {
+				$dbs[] = $line;
+			}
+		}
+		return $dbs;
 	}
 }
