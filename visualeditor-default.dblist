@@ -1,5 +1,7 @@
+# Group 0 wikis
 test2wiki
 mediawikiwiki
+# Wikipedias
 aawiki
 abwiki
 acewiki
@@ -214,15 +216,25 @@ yiwiki
 yowiki
 zeawiki
 zuwiki
-cawikiquote
+# Wiktionaries
 frwiktionary
+# Wikiquotes
+cawikiquote
+# Wikibookses
 frwikibooks
 ptwikibooks
+# Wikisources
+# Wikinewses
+# Wikiversities
 frwikiversity
 ptwikiversity
+# Wikivoyages
+# Wikimanias
 wikimania2014wiki
 wikimania2015wiki
 wikimania2016wiki
+# Other wikis (e.g. Commons, Meta, Wikimedias)
+# Private wikis
 boardwiki
 collabwiki
 legalteamwiki
