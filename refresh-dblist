@@ -39,11 +39,11 @@ $defaultCluster = 's3';
 $clusterOverrides = loadClusterList(getRealmSpecificFilename("$base/wmf-config/db.php"));
 $clusterAssignments = array();
 
-$all = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$base/all.dblist" ) );
+$all = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$base/dblists/all.dblist" ) );
 listOut('all', $all, false);
-printf("%d wikis listed in " . basename(getRealmSpecificFilename("$base/all.dblist")) . "...\n", count($all));
+printf("%d wikis listed in " . basename(getRealmSpecificFilename("$base/dblists/all.dblist")) . "...\n", count($all));
 
-$special = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$base/special.dblist" ) );
+$special = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$base/dblists/special.dblist" ) );
 listOut('special', $special, false);
 printf("%d special wikis to be exempted from wikipedia group...\n", count($special));
 
