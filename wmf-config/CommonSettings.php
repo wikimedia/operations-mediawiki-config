@@ -2632,11 +2632,11 @@ if ( $wmgUseEventLogging ) {
 		// test2wiki has its own Schema: NS.
 		$wgEventLoggingDBname = 'test2wiki';
 		$wgEventLoggingSchemaApiUri = 'http://test2.wikipedia.org/w/api.php';
-		$wgEventLoggingBaseUri = "//{$wmfHostnames['bits']}/dummy.gif";
+		$wgEventLoggingBaseUri = "//{$wmgAssetsHost}/beacon/dummy";
 		$wgEventLoggingFile = "udp://$wmfUdp2logDest/EventLogging-$wgDBname";
 	} else {
 		// All other wikis reference metawiki.
-		$wgEventLoggingBaseUri = "//{$wmfHostnames['bits']}/event.gif";
+		$wgEventLoggingBaseUri = "//{$wmgAssetsHost}/beacon/event";
 		$wgEventLoggingDBname = 'metawiki';
 		$wgEventLoggingFile = 'udp://10.64.32.167:8421/EventLogging';  // eventlog1001.eqiad.wmnet
 		$wgEventLoggingSchemaApiUri = 'http://meta.wikimedia.org/w/api.php';
