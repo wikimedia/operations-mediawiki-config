@@ -101,9 +101,9 @@ $wgLBFactoryConf = array(
 		'db1024' => 0,   # 1.4TB  64GB
 		'db1018' => 0,   # 1.4TB  64GB, snapshot, dump, vslow
 		'db1036' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-		# T89801 mce errors 'db1054' => 200, # 2.8TB  96GB, api
+		'db1021' => 100, # 1.4TB  64GB, api
 		'db1060' => 200, # 2.8TB  96GB, api
-		'db1063' => 500, # 2.8TB 128GB
+		'db1063' => 400, # 2.8TB 128GB
 		'db1067' => 500, # 2.8TB 160GB
 	),
 	/* s3 */ 'DEFAULT' => array(
@@ -127,7 +127,6 @@ $wgLBFactoryConf = array(
 		'db1058' => 0,   # 2.8TB  96GB
 		'db1045' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1026' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-		# upgrade 'db1021' => 400, # 1.4TB  64GB, traffic sampling
 		'db1049' => 0,   # 1.4TB  64GB, api
 		'db1070' => 500, # 2.8TB 160GB
 		'db1071' => 500, # 2.8TB 160GB
@@ -201,7 +200,7 @@ $wgLBFactoryConf = array(
 			'db1018' => 1,
 		),
 		'api' => array(
-			# T89801 mce errors 'db1054' => 1,
+			'db1021' => 1,
 			'db1060' => 1,
 		),
 		'watchlist' => array(
