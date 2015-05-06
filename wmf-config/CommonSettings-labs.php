@@ -135,7 +135,7 @@ if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
 	// Load from betalabs metawiki
 	$wgResourceLoaderSources['metawiki'] = array(
 		'apiScript' => '//meta.wikimedia.beta.wmflabs.org/w/api.php',
-		'loadScript' => '//bits.beta.wmflabs.org/meta.wikimedia.beta.wmflabs.org/load.php',
+		'loadScript' => '//meta.wikimedia.beta.wmflabs.org/w/load.php',
 	);
 }
 
