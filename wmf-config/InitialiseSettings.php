@@ -14032,6 +14032,7 @@ $wgConf->settings = array(
 'wmgUseShortUrl' => array(
 	'default' => false,
 	'hiwiki' => true,
+	'knwiki' => true, // T97218
 	'orwiki' => true,
 	'tawiki' => true,
 	'tawikibooks' => true,
