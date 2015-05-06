@@ -8030,6 +8030,11 @@ $wgConf->settings = array(
 	'+svwikisource' => array( // Bug T30614 & 36895
 		'autopatrolled' => array( 'autopatrol' => true, 'suppressredirect' => true, 'upload' => true, 'reupload' => true ),
 	),
+	'+svwikivoyage' => array(
+		'autopatrolled' => array( 'autopatrol' => true ), // T93339
+		'patroller' => array( 'patrol' => true ), // T93339
+		'rollbacker' => array( 'rollback' => true ), // T93339
+	),
 	'tawiki' => array(
 		'nocreate' => array( 'createpage' => false, ),
 		'autopatrolled' => array( 'autopatrol' => true ), //T95180
@@ -8837,6 +8842,13 @@ $wgConf->settings = array(
 	'+svwikisource' => array(
 		'sysop' => array( 'autopatrolled', ),
 	),
+	'+svwikivoyage' => array(
+		'sysop' => array(
+			'autopatrolled', // T93339
+			'patroller', // T93339
+			'rollbacker', // T93339
+		),
+	),
 	'+tawiki' => array(
 		'bureaucrat' => array( 'nocreate' ),
 		'sysop' => array( 'patroller', 'rollbacker', 'autopatrolled' ), //T95180
@@ -9457,6 +9469,13 @@ $wgConf->settings = array(
 	),
 	'+svwikisource' => array(
 		'sysop' => array( 'autopatrolled', ),
+	),
+	'+svwikivoyage' => array(
+		'sysop' => array(
+			'autopatrolled', // T93339
+			'patroller', // T93339
+			'rollbacker', // T93339
+		),
 	),
 	'+tawiki' => array(
 		'bureaucrat' => array( 'nocreate' ),
