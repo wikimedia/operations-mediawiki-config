@@ -49,47 +49,10 @@ mwconfig_files_txt=(
 # raw views should use txt for consistent behaviour in browsers
 # (not triggering a download instead of a view, and rendering as plain text).
 mwconfig_files=(
-	all.dblist
-	all-labs.dblist
-	nonbetafeatures.dblist
-	closed.dblist
-	commonsuploads.dblist
-	deleted.dblist
-	echowikis.dblist
 	fc-list
-	fishbowl.dblist
-	flaggedrevs.dblist
-	group0.dblist
 	langlist
-	large.dblist
-	mediaviewer.dblist
-	medium.dblist
-	private.dblist
-	s1.dblist
-	s2.dblist
-	s3.dblist
-	s4.dblist
-	s5.dblist
-	s6.dblist
-	s7.dblist
-	small.dblist
-	special.dblist
-	visualeditor.dblist
-	visualeditor-default.dblist
-	wikibooks.dblist
-	wikidata.dblist
-	wikidataclient.dblist
-	wikimania.dblist
-	wikimedia.dblist
-	wikinews.dblist
-	wikipedia.dblist
-	wikiquote.dblist
-	wikisource.dblist
 	wikiversions.json
 	wikiversions-labs.json
-	wikiversity.dblist
-	wikivoyage.dblist
-	wiktionary.dblist
 	wmf-config/extension-list
 	wmf-config/extension-list-labs
 	wmf-config/extension-list-wikitech
@@ -113,4 +76,9 @@ done
 for i in "${mwconfig_files[@]}"
 do
 	ln -s ../../../$i "./$(basename $i)"
+done
+
+for i in ../../../dblists/*.dblist
+do
+	ln -s "$i" "./$(basename $i)"
 done

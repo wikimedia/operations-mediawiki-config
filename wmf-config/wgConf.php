@@ -22,7 +22,7 @@ $wgConf->suffixes = array(
 
 $wgConf->localVHosts = require( getRealmSpecificFilename( "$wmfConfigDir/wgConfVHosts.php" ) );
 
-$wgConf->wikis = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../all.dblist" ) );
+$wgConf->wikis = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../dblists/all.dblist" ) );
 
 $wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
 
