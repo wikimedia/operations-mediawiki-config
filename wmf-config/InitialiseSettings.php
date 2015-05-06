@@ -4284,12 +4284,12 @@ $wgConf->settings = array(
 // Use false to disable all Logstash logging
 // FIXME: someday this will need to be datacenter aware
 'wmgLogstashServers' => array(
-	'default' => false,
-	'group0' => array(
+	'default' => array(
 		'10.64.32.138', // logstash1001.eqiad.wmnet
 		'10.64.32.137', // logstash1002.eqiad.wmnet
 		'10.64.32.136', // logstash1003.eqiad.wmnet
 	),
+	'wikipedia' => false,
 ),
 
 # wmgMonologChannels @{
