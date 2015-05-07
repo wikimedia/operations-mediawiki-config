@@ -14040,6 +14040,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'hiwiki' => true,
 	'knwiki' => true, // T97218
+	'newiki' => true, // T92820
 	'orwiki' => true,
 	'tawiki' => true,
 	'tawikibooks' => true,
