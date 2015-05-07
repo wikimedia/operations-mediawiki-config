@@ -869,10 +869,10 @@ if ( $wgDBname == 'nostalgiawiki' ) {
 }
 
 $wgCopyrightIcon = '<a href="//wikimediafoundation.org/">' .
-	'<img src="//' . $wmgAssetsHost . '/images/wikimedia-button.png" ' .
+	'<img src="/static/images/wikimedia-button.png" ' .
 		'srcset="' .
-			'//' . $wmgAssetsHost . '/images/wikimedia-button-1.5x.png 1.5x, ' .
-			'//' . $wmgAssetsHost . '/images/wikimedia-button-2x.png 2x' .
+			'/static/images/wikimedia-button-1.5x.png 1.5x, ' .
+			'/static/images/wikimedia-button-2x.png 2x' .
 		'" ' .
 		'width="88" height="31" alt="Wikimedia Foundation"/></a>';
 
