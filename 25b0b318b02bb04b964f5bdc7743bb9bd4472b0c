@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_21e59f06",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2015-05-07T22:19:56Z",
+      "side": 1,
+      "message": "I think you need to get rid of this default array and move all the ones inside it up a level, right?",
+      "revId": "25b0b318b02bb04b964f5bdc7743bb9bd4472b0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
