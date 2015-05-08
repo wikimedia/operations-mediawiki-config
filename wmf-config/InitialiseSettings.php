@@ -12976,6 +12976,13 @@ $wgConf->settings = array(
 	'wikidatawiki' => false, // safety - need to test wikidata separatelly
 ),
 
+// All graph data requests should be trusted on any private wikis
+'wmgGraphIsTrusted' => array(
+	'default' => false,
+	'private' => true,
+	'zerowiki' => true,
+),
+
 'wmgUseGraphWithNamespace' => array(
 	'default' => false,
 
