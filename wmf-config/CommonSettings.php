@@ -2888,8 +2888,10 @@ if ( $wmgUseAccountAudit ) {
 
 if ( $wmgUseOAuth ) {
 	require_once( "$IP/extensions/OAuth/OAuth.php" );
-	$wgMWOAuthCentralWiki = 'mediawikiwiki';
-	$wgMWOAuthSharedUserSource = 'CentralAuth';
+	if ( $wgDBname !== "labswiki" ) {
+		$wgMWOAuthCentralWiki = 'mediawikiwiki';
+		$wgMWOAuthSharedUserSource = 'CentralAuth';
+	}
 	$wgMWOAuthSecureTokenTransfer = true;
 
 	$wgGroupPermissions['autoconfirmed']['mwoauthproposeconsumer'] = true;
