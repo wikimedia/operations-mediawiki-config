@@ -109,10 +109,6 @@ function wmfLabsSettings() {
 			'default' => ''
 		),
 
-		'wmgUseLiquidThreads' => array(
-			'testwiki' => true,
-		),
-
 		'-wgUploadDirectory' => array(
 			'default'      => '/data/project/upload7/$site/$lang',
 			'private'      => '/data/project/upload7/private/$lang',
