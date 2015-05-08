@@ -61,4 +61,15 @@ $wgPoolCounterConf = array(
 	),
 );
 
+// temporarily group0 for testing. Will promote to all wikis soon
+$dblist = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../group0.dblist" ) );
+if ( in_array( $wgDBname, $dblist ) ) {
+	$wgPoolCounterConf['CirrusSearch-PerUser'] = array(
+		'class' => 'PoolCounter_Client',
+		'timeout' => 0,
+		'workers' => 5,
+		'maxqueue' => 5,
+	);
+}
+
 require( getRealmSpecificFilename( "$wmfConfigDir/PoolCounterSettings.php" ) );
