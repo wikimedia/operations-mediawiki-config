@@ -16,6 +16,24 @@
       "revId": "25b0b318b02bb04b964f5bdc7743bb9bd4472b0c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_0182d801",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 330,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-05-08T13:14:21Z",
+      "side": 1,
+      "message": "I thought the `default` entry meant \"default value\". I\u0027m not quite sure I understand what you\u0027re saying.",
+      "parentUuid": "0ed113e2_21e59f06",
+      "revId": "25b0b318b02bb04b964f5bdc7743bb9bd4472b0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
