@@ -196,22 +196,10 @@ setlocale( LC_ALL, 'en_US.UTF-8' );
 unset( $wgStylePath );
 unset( $wgStyleSheetPath );
 
-$wmgAssetsHost = $_SERVER['SERVER_NAME'];
-$wgLoadScript = "//{$wmgAssetsHost}/w/load.php";
-$wgExtensionAssetsPath = "//{$wmgAssetsHost}/static/$wmfVersionNumber/extensions";
-$wgStyleSheetPath = "//{$wmgAssetsHost}/static/$wmfVersionNumber/skins";
-
-// New URL scheme
-if ( $wgDBname == 'testwiki' ) {
-	// Make testing skin/JS changes easier
-	$wgResourceBasePath = "//{$wmfHostnames['test']}/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
-} elseif ( $wgDBname == 'testwikidatawiki' && $wmfRealm === 'production' ) {
-	$wgResourceBasePath = "//test.wikidata.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
-} elseif ( $wgDBname == 'labswiki' ) {
-	$wgResourceBasePath = "//wikitech.wikimedia.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
-} else {
-	$wgResourceBasePath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber"; // This means resources will be requested from /static-VERSION/resources
-}
+$wgLoadScript = "{$wgServer}/w/load.php";
+$wgExtensionAssetsPath = "{$wgServer}/static/{$wmfVersionNumber}/extensions";
+$wgStyleSheetPath = "{$wgServer}/static/{$wmfVersionNumber}/skins";
+$wgResourceBasePath = "{$wgServer}/static/{$wmfVersionNumber}";
 
 $wgStylePath = $wgStyleSheetPath;
 $wgArticlePath = "/wiki/$1";
@@ -2643,11 +2631,11 @@ if ( $wmgUseEventLogging ) {
 		// test2wiki has its own Schema: NS.
 		$wgEventLoggingDBname = 'test2wiki';
 		$wgEventLoggingSchemaApiUri = 'http://test2.wikipedia.org/w/api.php';
-		$wgEventLoggingBaseUri = "//{$wmgAssetsHost}/beacon/dummy";
+		$wgEventLoggingBaseUri = "{$wgServer}/beacon/dummy";
 		$wgEventLoggingFile = "udp://$wmfUdp2logDest/EventLogging-$wgDBname";
 	} else {
 		// All other wikis reference metawiki.
-		$wgEventLoggingBaseUri = "//{$wmgAssetsHost}/beacon/event";
+		$wgEventLoggingBaseUri = "{$wgServer}/beacon/event";
 		$wgEventLoggingDBname = 'metawiki';
 		$wgEventLoggingFile = 'udp://10.64.32.167:8421/EventLogging';  // eventlog1001.eqiad.wmnet
 		$wgEventLoggingSchemaApiUri = 'http://meta.wikimedia.org/w/api.php';
@@ -2705,7 +2693,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	// re-downloading of fonts for each new branch. But that only works for production,
 	// not labs. If this variable is not set, $wgExtensionAssetsPath is used.
 	if ( $wmfRealm === 'production' ) {
-		$wgULSFontRepositoryBasePath = ( '//' . $wmgAssetsHost . '/static/current'
+		$wgULSFontRepositoryBasePath = ( $wgServer . '/static/current'
 			. '/extensions/UniversalLanguageSelector/data/fontrepo/fonts/' );
 	}
 
