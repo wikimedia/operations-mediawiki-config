@@ -196,11 +196,19 @@ setlocale( LC_ALL, 'en_US.UTF-8' );
 unset( $wgStylePath );
 unset( $wgStyleSheetPath );
 
-$wmgAssetsHost = $_SERVER['SERVER_NAME'];
-$wgLoadScript = "//{$wmgAssetsHost}/w/load.php";
-$wgExtensionAssetsPath = "//{$wmgAssetsHost}/static/$wmfVersionNumber/extensions";
-$wgStyleSheetPath = "//{$wmgAssetsHost}/static/$wmfVersionNumber/skins";
-$wgResourceBasePath = "//{$wmgAssetsHost}/static/$wmfVersionNumber";
+if ( $wmgUseBits ) {
+	$wmgAssetsHost = $wmfHostnames['bits'];
+	$wgLoadScript = "//{$wmgAssetsHost}/{$_SERVER['SERVER_NAME']}/load.php";
+	$wgExtensionAssetsPath = "//{$wmgAssetsHost}/static/$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "//{$wmgAssetsHost}/static/$wmfVersionNumber/skins";
+	$wgResourceBasePath = "//{$wmgAssetsHost}/static/$wmfVersionNumber";
+} else {
+	$wmgAssetsHost = $_SERVER['SERVER_NAME'];
+	$wgLoadScript = "//{$wmgAssetsHost}/w/load.php";
+	$wgExtensionAssetsPath = "//{$wmgAssetsHost}/w/static/$wmfVersionNumber/extensions";
+	$wgStyleSheetPath = "//{$wmgAssetsHost}/w/static/$wmfVersionNumber/skins";
+	$wgResourceBasePath = "//{$wmgAssetsHost}/w/static/$wmfVersionNumber";
+}
 
 $wgStylePath = $wgStyleSheetPath;
 $wgArticlePath = "/wiki/$1";
