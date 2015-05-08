@@ -10803,6 +10803,7 @@ $wgConf->settings = array(
 
 'wmgUseOAuth' => array(
 	'default' => true,
+	'labswiki' => true,
 	'private' => false,
 	'fishbowl' => false,
 ),
