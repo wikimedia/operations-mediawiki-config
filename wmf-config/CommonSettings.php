@@ -200,7 +200,18 @@ $wmgAssetsHost = $_SERVER['SERVER_NAME'];
 $wgLoadScript = "//{$wmgAssetsHost}/w/load.php";
 $wgExtensionAssetsPath = "//{$wmgAssetsHost}/static/$wmfVersionNumber/extensions";
 $wgStyleSheetPath = "//{$wmgAssetsHost}/static/$wmfVersionNumber/skins";
-$wgResourceBasePath = "//{$wmgAssetsHost}/static/$wmfVersionNumber";
+
+// New URL scheme
+if ( $wgDBname == 'testwiki' ) {
+	// Make testing skin/JS changes easier
+	$wgResourceBasePath = "//{$wmfHostnames['test']}/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
+} elseif ( $wgDBname == 'testwikidatawiki' && $wmfRealm === 'production' ) {
+	$wgResourceBasePath = "//test.wikidata.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
+} elseif ( $wgDBname == 'labswiki' ) {
+	$wgResourceBasePath = "//wikitech.wikimedia.org/w/static-$wmfVersionNumber"; // This means resources will be requested from /w/static-VERSION/resources
+} else {
+	$wgResourceBasePath = "//{$wmfHostnames['bits']}/static-$wmfVersionNumber"; // This means resources will be requested from /static-VERSION/resources
+}
 
 $wgStylePath = $wgStyleSheetPath;
 $wgArticlePath = "/wiki/$1";
