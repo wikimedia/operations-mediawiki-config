@@ -16,6 +16,24 @@
       "revId": "f68566ad41bd66ce4c6861e99acb3b92302aec93",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_18aec92b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-05-08T23:39:30Z",
+      "side": 1,
+      "message": "... no? this is about re-enabling it...",
+      "parentUuid": "0ed113e2_f88985cb",
+      "revId": "f68566ad41bd66ce4c6861e99acb3b92302aec93",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
