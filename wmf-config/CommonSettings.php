@@ -90,8 +90,8 @@ case 'production':
 	$wmfUdp2logDest = '10.64.0.21:8420';
 	break;
 case 'labs':
-	# deployment-bastion.eqiad.wmflabs
-	$wmfUdp2logDest = '10.68.16.58:8420';
+	# deployment-fluorine.eqiad.wmflabs
+	$wmfUdp2logDest = '10.68.16.198:8420';
 	break;
 default:
 	$wmfUdp2logDest = '127.0.0.1:8420';
