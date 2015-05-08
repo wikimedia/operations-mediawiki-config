@@ -34,6 +34,24 @@
       "revId": "f68566ad41bd66ce4c6861e99acb3b92302aec93",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_f8a0a533",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-05-08T23:41:18Z",
+      "side": 1,
+      "message": "In that case, the line below is wrong instead, surely?",
+      "parentUuid": "0ed113e2_18aec92b",
+      "revId": "f68566ad41bd66ce4c6861e99acb3b92302aec93",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
