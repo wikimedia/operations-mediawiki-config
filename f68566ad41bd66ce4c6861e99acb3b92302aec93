@@ -70,6 +70,24 @@
       "revId": "f68566ad41bd66ce4c6861e99acb3b92302aec93",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_d32d828d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-05-09T00:29:10Z",
+      "side": 1,
+      "message": "Oooooooh. OK, now I\u0027ve re-parsed your comment it sort-of makes sense. Will tweak.",
+      "parentUuid": "0ed113e2_586f71f9",
+      "revId": "f68566ad41bd66ce4c6861e99acb3b92302aec93",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
