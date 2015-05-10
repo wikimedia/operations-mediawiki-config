@@ -11243,7 +11243,7 @@ $wgConf->settings = array(
 	'default' => array(),
 	// Bug T17624
 	'nlwiki' => array(
-		'RecipientUser' => 'WikiAdmin',
+		'RecipientUser' => 'WikiAdmin~nlwiki',
 		'SenderName' => 'Contactformulier op nl-Wikipedia',
 		'IncludeIP' => true,
 	),
