@@ -22,13 +22,14 @@ function wmfLabsOverrideSettings() {
 	// but not in production.
 	$betaSettings = wmfLabsSettings();
 
-	// Set configuration string placeholder 'variant' to 'beta-hhvm'
-	// or 'beta' depending on the the runtime executing the code.
-	// This is to ensure that *.beta-hhvm.wmflabs.org wikis use
-	// loginwiki.wikimedia.beta-hhvm.wmflabs.org as their loginwiki.
+	// Set configuration string placeholder 'variant' to 'beta'.
+	// Add a wikitag of 'beta' that can be used to merge beta specific and
+	// default settings by using `'+beta' => array(...),`
 	$wgConf->siteParamsCallback = function( $conf, $wiki ) {
-		$variant = 'beta';
-		return array( 'params' => array( 'variant' => $variant ) );
+		return array(
+			'params' => array( 'variant' => 'beta' ),
+			'tags' => array( 'beta' ),
+		);
 	};
 
 	foreach ( $betaSettings as $key => $value ) {
@@ -159,7 +160,7 @@ function wmfLabsSettings() {
 
 		// Additional log channels for beta cluster
 		'wmgMonologChannels' => array(
-			'default' => array(
+			'+beta' => array(
 				'CentralAuthVerbose' => 'debug',
 				'dnsblacklist' => 'debug',
 				'squid' => 'debug',
