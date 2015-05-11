@@ -61,4 +61,14 @@ $wgPoolCounterConf = array(
 	),
 );
 
+// temporarily group0 for testing. Will promote to all wikis soon
+if ( $wmgCirrusPerUserPoolCounter ) {
+	$wgPoolCounterConf['CirrusSearch-PerUser'] = array(
+		'class' => 'PoolCounter_Client',
+		'timeout' => 0,
+		'workers' => 5,
+		'maxqueue' => 5,
+	);
+}
+
 require( getRealmSpecificFilename( "$wmfConfigDir/PoolCounterSettings.php" ) );
