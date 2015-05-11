@@ -575,10 +575,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		),
 
-		'wmgUseJosa' => array(
-			'default' => false,
-			'kowiki' => true, // T15712
-		),
 		'wmgUseGraph' => array(
 			'default' => true,
 		),
