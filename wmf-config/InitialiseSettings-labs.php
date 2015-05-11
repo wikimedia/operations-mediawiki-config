@@ -581,6 +581,7 @@ function wmfLabsSettings() {
 		),
 		'wmgUseGraph' => array(
 			'default' => true,
+			'wikidatawiki' => true,
 		),
 
 	);
