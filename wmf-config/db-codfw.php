@@ -92,36 +92,50 @@ $wgLBFactoryConf = array(
 		'db1052' => 0,   # 2.8TB  96GB
 		'db2016' => 100,
 		'db2034' => 100,
+		'db2042' => 100,
+		'db2048' => 100,
 	),
 	's2' => array(
 		'db1024' => 0,   # 1.4TB  64GB
 		'db2017' => 100,
 		'db2035' => 100,
+		'db2041' => 100,
+		'db2049' => 100,
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038' => 0,   # 1.4TB  64GB
 		'db2018' => 100,
 		'db2036' => 100,
+		'db2043' => 100,
+		'db2050' => 100,
 	),
 	's4' => array(
 		'db1040' => 0,   # 1.4TB  64GB
 		'db2019' => 100,
 		'db2037' => 100,
+		'db2044' => 100,
+		'db2051' => 100,
 	),
 	's5' => array(
 		'db1058' => 0,   # 2.8TB  96GB
 		'db2023' => 100,
 		'db2038' => 100,
+		'db2045' => 100,
+		'db2052' => 100,
 	),
 	's6' => array(
 		'db1023' => 0,   # 1.4TB  64GB
 		'db2028' => 100,
 		'db2039' => 100,
+		'db2046' => 100,
+		'db2053' => 100,
 	),
 	's7' => array(
 		'db1033' => 0,   # 1.4TB  64GB,
 		'db2029' => 100,
 		'db2040' => 100,
+		'db2047' => 100,
+		'db2054' => 100,
 	),
 	'silver' => array(
 		'silver' => 100,   # I have no idea if this is right
@@ -253,6 +267,18 @@ $wgLBFactoryConf = array(
 	'db2040' => '10.192.32.11', # do not remove or comment out
 	'db2041' => '10.192.32.12', # do not remove or comment out
 	'db2042' => '10.192.32.13', # do not remove or comment out
+	'db2043' => '10.192.32.103', # do not remove or comment out
+	'db2044' => '10.192.32.104', # do not remove or comment out
+	'db2045' => '10.192.32.105', # do not remove or comment out
+	'db2046' => '10.192.32.106', # do not remove or comment out
+	'db2047' => '10.192.32.107', # do not remove or comment out
+	'db2048' => '10.192.32.108', # do not remove or comment out
+	'db2049' => '10.192.32.109', # do not remove or comment out
+	'db2050' => '10.192.32.110', # do not remove or comment out
+	'db2051' => '10.192.32.111', # do not remove or comment out
+	'db2052' => '10.192.48.4', # do not remove or comment out
+	'db2053' => '10.192.48.5', # do not remove or comment out
+	'db2054' => '10.192.48.6', # do not remove or comment out
 	'virt1000' => '208.80.154.18', #do not remove or comment out
 	'silver' => '208.80.154.136', #do not remove or comment out
 ),
