@@ -225,13 +225,6 @@ if ( $wmgUseCollection ) {
 	$wgCollectionCommandToServeURL[ 'zip_post' ] = 'https://pediapress.com/wmfup/';
 }
 
-if ( $wmgUseGraph ) {
-	// Asseme CommonSettings.php is already loaded and loads these two extensions
-	// require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
-	// require_once( "$IP/extensions/Graph/Graph.php" );
-	$wgGraphImgServiceUrl = "//graphoid-beta.wmflabs.org/%1\$s/v1/png/%2\$s/%3\$s/%4\$s.png";
-}
-
 if ( $wmgUsePageImages ) {
 	require_once "$IP/extensions/PageImages/PageImages.php";
 	$wgPageImagesExpandOpenSearchXml = $wmgPageImagesExpandOpenSearchXml;

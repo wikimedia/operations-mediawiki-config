@@ -583,8 +583,14 @@ function wmfLabsSettings() {
 			'default' => true,
 			'wikidatawiki' => true,
 		),
+
 		'wmgGraphImgServiceAlways' => array(
 			'default' => true,
+		),
+
+		'wmgGraphImgServiceUrl' => array(
+			'default' => "//graphoid-beta.wmflabs.org/%1\$s/v1/png/%2\$s/%3\$s/%4\$s.png",
+			'private' => false,
 		),
 	);
 } # wmflLabsSettings()
