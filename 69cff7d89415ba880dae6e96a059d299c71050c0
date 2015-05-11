@@ -16,6 +16,24 @@
       "revId": "69cff7d89415ba880dae6e96a059d299c71050c0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ed113e2_6a35b0a2",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2015-05-11T15:48:44Z",
+      "side": 1,
+      "message": "No, I guess (haven\u0027t checked) this is false in the production InitialiseSettings, thus this needs to be flipped explicitly.",
+      "parentUuid": "0ed113e2_cae5bc33",
+      "revId": "69cff7d89415ba880dae6e96a059d299c71050c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
