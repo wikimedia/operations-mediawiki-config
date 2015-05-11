@@ -14804,6 +14804,8 @@ $wgConf->settings = array(
 
 'wmgWikibaseEnableArbitraryAccess' => array(
 	'default' => false,
+	'frwikisource' => true,
+	'nlwiki' => true,
 	'testwiki' => true,
 	'wikidata' => true,
 ),
