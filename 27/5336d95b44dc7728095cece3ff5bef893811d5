@@ -1,0 +1,9 @@
+Verified+2: jenkins-bot
+Code-Review+1: Ori.livneh <ori@wikimedia.org>
+Code-Review+1: Legoktm <legoktm.wikipedia@gmail.com>
+Code-Review+2: BryanDavis <bdavis@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Mon, 11 May 2015 22:00:31 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/210203
+Project: operations/mediawiki-config
+Branch: refs/heads/master
