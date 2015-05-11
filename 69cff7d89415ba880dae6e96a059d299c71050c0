@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_cae5bc33",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 584,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-05-11T15:46:21Z",
+      "side": 1,
+      "message": "redundant?",
+      "revId": "69cff7d89415ba880dae6e96a059d299c71050c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
