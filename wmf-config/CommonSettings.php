@@ -2920,6 +2920,11 @@ if ( $wmgUsePetition ) {
 	require_once( "$IP/extensions/Petition/Petition.php" );
 }
 
+// T15712
+if ( $wmgUseJosa ) {
+	require_once( "$IP/extensions/Josa/Josa.php" );
+}
+
 ### End (roughly) of general extensions ########################
 
 $wgApplyIpBlocksToXff = $wmgUseXFFBlocks;

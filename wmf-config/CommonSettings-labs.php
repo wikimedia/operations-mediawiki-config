@@ -244,11 +244,6 @@ if ( $wmgUseCapiunto ) {
 	require_once "$IP/extensions/Capiunto/Capiunto.php";
 }
 
-// T15712
-if ( $wmgUseJosa ) {
-	require_once( "$IP/extensions/Josa/Josa.php" );
-}
-
 // Experimental
 $wgGadgetsCaching = false;
 
