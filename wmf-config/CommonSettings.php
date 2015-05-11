@@ -2388,7 +2388,7 @@ $wgJobBackoffThrottling = array(
 	# Avoid excessive CPU due to cache misses from rapid invalidations
 	'htmlCacheUpdate' => 20, // pages/sec per runner
 	# Avoid excessive DB usage for backlink tables
-	'refreshLinks'    => 20, // pages/sec per runner
+	'refreshLinks'    => 30, // pages/sec per runner
 ) + $wgJobBackoffThrottling;
 
 # If a job runner takes too long to finish a job, assume it died and re-assign the job
