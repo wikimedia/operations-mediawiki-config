@@ -4269,7 +4269,7 @@ $wgConf->settings = array(
 		'OutputBuffer' => 'debug',
 		'exec' => 'debug',
 		'ratelimit' => 'debug',
-		'runJobs' => 'debug',
+		'runJobs' => array( 'level' => 'debug', 'logstash' => 'info' ),
 		'JobQueueRedis' => 'debug',
 		'JobQueueFederated' => 'debug',
 		'es-hit' => 'debug',
