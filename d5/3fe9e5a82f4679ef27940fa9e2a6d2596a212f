@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+2: Mattflaschen <mflaschen@wikimedia.org>
+Code-Review+1: Manybubbles <neverett@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Mon, 11 May 2015 23:44:31 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/209802
+Project: operations/mediawiki-config
+Branch: refs/heads/master
