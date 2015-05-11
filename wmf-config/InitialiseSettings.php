@@ -12981,6 +12981,10 @@ $wgConf->settings = array(
 	'zerowiki' => true,
 ),
 
+'wmgGraphImgServiceAlways' => array(
+	'default' => false,
+),
+
 'wmgUseGraphWithNamespace' => array(
 	'default' => false,
 

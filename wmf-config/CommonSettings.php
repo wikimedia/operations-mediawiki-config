@@ -2832,9 +2832,9 @@ if ( $wmgZeroPortal ) {
 if ( $wmgUseGraph ) {
 	require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
 	require_once( "$IP/extensions/Graph/Graph.php" );
-	$wgEnableGraphParserTag = true;
 
 	$wgGraphIsTrusted = $wmgGraphIsTrusted;
+	$wgGraphImgServiceAlways = $wmgGraphImgServiceAlways;
 
 	// /{domain}/v1/png/{title}/{revid}/{hash}.png
 	//graphoid.wikimedia.org/mediawiki.org/v1/png/Extension:Graph/0/be66c7016b9de3188ef6a585950f10dc83239837.png

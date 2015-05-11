@@ -583,6 +583,8 @@ function wmfLabsSettings() {
 			'default' => true,
 			'wikidatawiki' => true,
 		),
-
+		'wmgGraphImgServiceAlways' => array(
+			'default' => true,
+		),
 	);
 } # wmflLabsSettings()
