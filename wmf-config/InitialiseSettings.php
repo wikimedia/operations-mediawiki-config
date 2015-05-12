@@ -13114,7 +13114,8 @@ $wgConf->settings = array(
 
 # trademark status
 'wmgMFTrademarkSitename' => array(
-	'default' => true,
+	'default' => 'registered',
+	'wikidatawiki' => 'unregistered',
 	'metawiki' => false, // Bug T43141
 ),
 'wmgMFNoMobileCategory' => array(
