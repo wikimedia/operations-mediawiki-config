@@ -23,6 +23,9 @@ if ( $wmgUseClusterJobqueue ) {
 		$wgJobTypeConf['default'];
 }
 
+# Turn off leading wildcard matches, they are a very slow and inefficient query
+$wgCirrusSearchAllowLeadingWildcard = false;
+
 # Turn off the more accurate but slower search mode.  It is most helpful when you
 # have many small shards.  We don't do that in production and we could use the speed.
 $wgCirrusSearchMoreAccurateScoringMode = false;
