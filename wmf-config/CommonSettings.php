@@ -2660,7 +2660,7 @@ if ( $wmgUseEventLogging ) {
 	}
 
 	include_once( "$IP/extensions/WikimediaEvents/WikimediaEvents.php" );
-	$wgWMEStatsdBaseUri = '//bits.wikimedia.org/statsv';
+	$wgWMEStatsdBaseUri = '/beacon/statsv';
 }
 
 if ( $wmgUseEventLogging && $wmgUseNavigationTiming ) {
