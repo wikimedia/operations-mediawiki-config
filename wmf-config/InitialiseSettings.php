@@ -11357,6 +11357,7 @@ $wgConf->settings = array(
 		'*.nasqueron.org',                  // Projects of Wikimedia Commons trusted users - T97448
 		'medialib.naturalis.nl',            // Naturalis Biodiversity Center - T97995
 		'www.jacar.go.jp',                  // Japan Center for Asian Historical Records - T98733
+		'*.sl.nsw.gov.au',                  // New South Wales State Library - T98744
 	),
 ),
 
