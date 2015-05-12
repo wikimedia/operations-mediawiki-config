@@ -5708,6 +5708,12 @@ $wgConf->settings = array(
 		100 => 'Annèxa',
 		101 => 'Discussion_Annèxa',
 	),
+	'orwiktionary' => array(
+		102 => 'ସୂଚୀ', // T98584 - Index
+		103 => 'ସୂଚୀ ଆଲୋଚନା',
+		114 => 'ଆଧାର', // T98584 - Citations
+		115 => 'ଆଧାର ଆଲୋଚନା',
+	),
 	'plwiktionary' => array(
 		NS_PROJECT_TALK => 'Wikidyskusja',
 		NS_USER => 'Wikipedysta',
