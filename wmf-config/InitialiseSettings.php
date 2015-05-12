@@ -11348,6 +11348,7 @@ $wgConf->settings = array(
 		'*.llgc.org.uk',                    // National Library of Wales - T97281
 		'*.nasqueron.org',                  // Projects of Wikimedia Commons trusted users - T97448
 		'medialib.naturalis.nl',            // Naturalis Biodiversity Center - T97995
+		'www.jacar.go.jp',                  // Japan Center for Asian Historical Records - T98733
 	),
 ),
 
