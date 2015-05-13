@@ -469,6 +469,9 @@ require_once "$IP/skins/Vector/Vector.php";
 require_once "$IP/skins/MonoBook/MonoBook.php";
 require_once "$IP/skins/Modern/Modern.php";
 require_once "$IP/skins/CologneBlue/CologneBlue.php";
+if ( $wgDBname == 'nostalgiawiki' ) {
+	require_once "$IP/skins/Nostalgia/Nostalgia.php";
+}
 
 if ( $wmgUseTimeline ) {
 	include( $IP . '/extensions/timeline/Timeline.php' );
@@ -863,9 +866,6 @@ if ( $wgDBname == 'nostalgiawiki' ) {
 	} else {
 		$wgSiteNotice = "[//en.wikipedia.org/ See current Wikipedia]";
 	}
-
-	// Nostalgia skin
-	require_once "$IP/skins/Nostalgia/Nostalgia.php";
 }
 
 $wgCopyrightIcon = '<a href="//wikimediafoundation.org/">' .
