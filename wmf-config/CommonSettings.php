@@ -1771,6 +1771,8 @@ if ( $wmgUseUploadWizard ) {
 				'Uploaded with UploadWizard',
 			),
 		),
+		// FIXME: Temp fix for T98933 - legoktm 2015-05-12
+		'maxPhpUploadSize' => 104857600,
 		// Normally we don't include API keys in CommonSettings, but this key
 		// isn't private since it's used on the client-side, i.e. anyone can see
 		// it in the outgoing AJAX requests to Flickr.
