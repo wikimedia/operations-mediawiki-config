@@ -249,4 +249,6 @@ $wgGadgetsCaching = false;
 
 $wgAjaxEditStash = true;
 
+$wgMessageCacheType = CACHE_ACCEL;
+
 } # end safeguard
