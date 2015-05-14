@@ -16,11 +16,9 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 			'flags'  => XHPROF_FLAGS_NO_BUILTINS,
 			'output' => 'text',
 		);
-	}
-
 	// If HTTP_FORCE_LOCAL_XHPROF is set in the shell environment,
 	// profile all requests from localhost.
-	if (
+	} else if (
 		isset( $_SERVER['HTTP_FORCE_LOCAL_XHPROF'] )
 		&& isset( $_SERVER['REMOTE_ADDR'] )
 		&& $_SERVER['REMOTE_ADDR'] == '127.0.0.1'
@@ -53,6 +51,14 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 			}
 			file_put_contents( '/tmp/xhprof/' . date( 'Y-m-d\TH:i:s' ) . '.prof', $out );
 		} );
+	} else {
+		// 1:100 request profiling
+		$wgProfiler = array(
+			'class'    => 'ProfilerXhprof',
+			'flags'    => XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS,
+			'output'   => 'stats',
+			'sampling' => 100,
+		);
 	}
 }
 
