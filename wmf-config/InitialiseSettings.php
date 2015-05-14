@@ -858,7 +858,6 @@ $wgConf->settings = array(
 	'thwikiquote' => '/static/images/project-logos/thwikiquote.png',
 	'trwikiquote' => '/static/images/project-logos/trwikiquote.png',
 	'ukwikiquote' => '/static/images/project-logos/ukwikiquote.png',
-	'urwikiquote' => '/static/images/project-logos/urwikiquote.png',  // T97510
 	'viwikiquote' => '/static/images/project-logos/viwikiquote.png',
 	'zhwikiquote' => '/static/images/project-logos/zhwikiquote.png',
 
