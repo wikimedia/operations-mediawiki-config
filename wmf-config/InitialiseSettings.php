@@ -14690,14 +14690,6 @@ $wgConf->settings = array(
 'wmgContentTranslationCampaigns' => array(
 	'default' => array( 'newarticle' ),
 	'bawiki' => array(),
-	'cvwiki' => array(),
-	'koiwiki' => array(),
-	'kvwiki' => array(),
-	'lezwiki' => array(),
-	'sahwiki' => array(),
-	'ttwiki' => array(),
-	'tyvwiki' => array(),
-	'udmwiki' => array(),
 ),
 
 // Namespace to publish article
