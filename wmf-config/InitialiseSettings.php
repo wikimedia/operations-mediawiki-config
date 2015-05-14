@@ -15459,6 +15459,14 @@ $wgConf->settings = array(
 	'default' => '//bits.wikimedia.org/beacon/media',
 ),
 
+// open external/specific links on voteWiki in new tab or window 
+// Partially for T98013 and in general help SecurePoll fail less often
+'wgExternalLinkTarget' => array(
+	'default' => false,
+	'votewiki' => '_blank',
+),
+
+
 );
 
 
