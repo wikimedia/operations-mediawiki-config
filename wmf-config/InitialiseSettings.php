@@ -14689,8 +14689,7 @@ $wgConf->settings = array(
 
 // CX Campaigns
 'wmgContentTranslationCampaigns' => array(
-	'default' => array( 'newarticle' ),
-	'bawiki' => array(),
+	'default' => array( 'newarticle', 'cxstats' ),
 ),
 
 // Namespace to publish article
