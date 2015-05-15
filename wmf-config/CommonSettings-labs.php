@@ -72,6 +72,11 @@ if ( $wmgUseOAuth ) {
 	$wgMWOAuthSecureTokenTransfer = false;
 }
 
+if ( $wmgEnableInterwiki ) {
+	require_once "$IP/extensions/Interwiki/Interwiki.php";
+	$wgInterwikiViewOnly = true;
+}
+
 if ( $wmgUseMultimediaViewer ) {
 	require_once "$IP/extensions/MultimediaViewer/MultimediaViewer.php";
 	$wgNetworkPerformanceSamplingFactor = $wmgNetworkPerformanceSamplingFactor;
