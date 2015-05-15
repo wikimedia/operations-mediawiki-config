@@ -116,6 +116,9 @@ $wgConf->settings = array(
 	'uawikimedia' => 'uk',
 	'ukwikimedia' => 'en-gb',
 
+	# Local user group wikis (xxwikimedia)
+	'cnwikimedia' => 'zh', // T98676
+
 	# Special wikis
 	'special' => 'en', # default - overridden below by some wikis
 	'advisorywiki' => 'en',
@@ -234,6 +237,7 @@ $wgConf->settings = array(
 	'cawikiquote' => 'Europe/Berlin',
 	'cawikisource' => 'Europe/Berlin',
 	'cawikinews' => 'Europe/Berlin',
+	'cnwikimedia' => 'Asia/Shanghai', // T98676
 	'cswiki' => 'Europe/Prague', // Bug T73902
 	'cswikinews' => 'Europe/Prague', // Bug T73902
 	'csbwiki' => 'Europe/Warsaw',
@@ -1017,6 +1021,9 @@ $wgConf->settings = array(
 	'uawikimedia' => '/static/images/project-logos/uawikimedia.png',
 	'ukwikimedia' => '/static/images/project-logos/ukwikimedia.png',
 
+	// Local user group wikis
+	'cnwikimedia' => '/static/images/project-logos/cnwikimedia.png', // T98676
+
 	// Special wikis
 	'advisorywiki' => '/static/images/project-logos/advisorywiki.png',
 	'arbcom_dewiki' => '/static/images/project-logos/arbcom_dewiki.png',
@@ -1387,6 +1394,7 @@ $wgConf->settings = array(
 	'chairwiki' => 'https://chair.wikimedia.org',
 	'chapcomwiki' => 'https://chapcom.wikimedia.org',
 	'checkuserwiki' => 'https://checkuser.wikimedia.org',
+	'cnwikimedia' => 'https://cn.wikimedia.org', // T98676
 	'collabwiki' => 'https://collab.wikimedia.org',
 	'commonswiki' => 'http://commons.wikimedia.org',
 	'donatewiki' => 'https://donate.wikimedia.org',
@@ -1545,6 +1553,7 @@ $wgConf->settings = array(
 	'chapcomwiki' => 'Chapcom',
 	'checkuserwiki' => 'CheckUser Wiki',
 	'chywiki' => 'Tsétsêhéstâhese Wikipedia',
+	'cnwikimedia' => '中国维基媒体用户组', // T98676
 	'collabwiki' => 'Collab',
 	'commonswiki' => 'Wikimedia Commons',
 	'cowikimedia' => 'Wikimedia Colombia',
@@ -10853,6 +10862,7 @@ $wgConf->settings = array(
 	'cawikimedia' => true,
 	'checkuserwiki' => true,
 	'ckbwiki' => true,
+	'cnwikimedia' => true, // T98676
 	'cswikinews' => true,
 	'cswikiversity' => true,
 	'cowikimedia' => true,
