@@ -2545,7 +2545,7 @@ $wgConf->settings = array(
 		'লিখক' => 102, // Bug T72464
 		'লিখক_আলোচনা' => 103, // Bug T72464
 	),
-	'+astwiki'=> array(
+	'+astwiki' => array(
 		'Uiquipedia' => NS_PROJECT, // T94341
 		'Uiquipedia_alderique' => NS_PROJECT_TALK, // T94341
 	),
