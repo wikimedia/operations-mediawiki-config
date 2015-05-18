@@ -14831,7 +14831,10 @@ $wgConf->settings = array(
 
 'wmgWikibaseEnableArbitraryAccess' => array(
 	'default' => false,
+	'enwikivoyage' => true,
+	'fawiki' => true,
 	'frwikisource' => true,
+	'hewiki' => true,
 	'nlwiki' => true,
 	'testwiki' => true,
 	'wikidata' => true,
@@ -15452,7 +15455,7 @@ $wgConf->settings = array(
 	'default' => '//bits.wikimedia.org/beacon/media',
 ),
 
-// open external/specific links on voteWiki in new tab or window 
+// open external/specific links on voteWiki in new tab or window
 // Partially for T98013 and in general help SecurePoll fail less often
 'wgExternalLinkTarget' => array(
 	'default' => false,
