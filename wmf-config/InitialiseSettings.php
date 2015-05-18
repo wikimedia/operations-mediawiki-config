@@ -7982,9 +7982,6 @@ $wgConf->settings = array(
 		'autoconfirmed' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true, 'autopatrol' => true ),
 	),
-	'+swwiki' => array(
-		'*' => array( 'createpage' => false ), // T44894 FIXME recheck for need around September 15 2015
-	),
 	'+svwikisource' => array( // Bug T30614 & 36895
 		'autopatrolled' => array( 'autopatrol' => true, 'suppressredirect' => true, 'upload' => true, 'reupload' => true ),
 	),
@@ -7992,6 +7989,9 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ), // T93339
 		'patroller' => array( 'patrol' => true ), // T93339
 		'rollbacker' => array( 'rollback' => true ), // T93339
+	),
+	'+swwiki' => array(
+		'*' => array( 'createpage' => false ), // T44894 FIXME recheck for need around September 15 2015
 	),
 	'tawiki' => array(
 		'nocreate' => array( 'createpage' => false, ),
