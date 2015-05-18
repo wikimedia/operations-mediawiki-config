@@ -12996,7 +12996,6 @@ $wgConf->settings = array(
 
 'wmgUseGraph' => array(
 	'default' => true,
-	'wikidatawiki' => false, // safety - need to test wikidata separatelly
 ),
 
 // All graph data requests should be trusted on these wikis

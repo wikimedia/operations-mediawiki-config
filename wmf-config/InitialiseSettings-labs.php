@@ -1082,11 +1082,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		),
 
-		'wmgUseGraph' => array(
-			'default' => true,
-			'wikidatawiki' => true,
-		),
-
 		'wmgGraphImgServiceAlways' => array(
 			'default' => true,
 		),
