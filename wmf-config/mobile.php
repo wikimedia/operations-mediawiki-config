@@ -10,8 +10,6 @@ if ( $wmgMobileFrontend ) {
 	$wgMFNearby = $wmgMFNearby && $wmgEnableGeoData;
 	$wgMFPhotoUploadEndpoint = $wmgMFPhotoUploadEndpoint;
 	$wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
-	$wgMFEnableWikiGrok = $wmgMFEnableWikiGrok; // Remove this when 1.25wmf18 is gone
-	$wgMFEnableWikiGrokForAnons = $wmgMFEnableWikiGrokForAnons; // Remove this when 1.25wmf18 is gone
 	$wgMFPhotoUploadWiki = $wmgMFPhotoUploadWiki;
 	$wgMFContentNamespace = $wmgMFContentNamespace;
 	$wgMFPhotoUploadAppendToDesc = $wmgMFPhotoUploadAppendToDesc;
