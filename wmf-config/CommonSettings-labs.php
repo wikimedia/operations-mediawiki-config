@@ -151,15 +151,12 @@ if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 }
 
 if ( $wmgUseApiFeatureUsage ) {
-	require_once "$IP/extensions/ApiFeatureUsage/ApiFeatureUsage.php";
-	$wgApiFeatureUsageQueryEngineConf = array(
-		'class' => 'ApiFeatureUsageQueryEngineElastica',
-		'serverList' => array(
-			'deployment-elastic05',
-			'deployment-elastic06',
-			'deployment-elastic07',
-			'deployment-elastic08',
-		),
+	// Override server list for Labs
+	$wgApiFeatureUsageQueryEngineConf['serverList'] = array(
+		'deployment-elastic05',
+		'deployment-elastic06',
+		'deployment-elastic07',
+		'deployment-elastic08',
 	);
 }
 
