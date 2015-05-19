@@ -6,7 +6,6 @@
 if ( $wmgMobileFrontend ) {
 	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
 	$wgMFMobileHeader = 'X-Subdomain';
-	$wgMFNoindexPages = false;
 	$wgMFNearby = $wmgMFNearby && $wmgEnableGeoData;
 	$wgMFPhotoUploadEndpoint = $wmgMFPhotoUploadEndpoint;
 	$wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
