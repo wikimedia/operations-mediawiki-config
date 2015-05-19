@@ -13903,7 +13903,10 @@ $wgConf->settings = array(
 	'incubatorwiki' => true,
 	'wikidata' => true,
 ),
-
+'wmgUseApiFeatureUsage' => array(
+	'default' => false,
+	'group0' => true,
+),
 'wmgUseBounceHandler' => array(
 	'default' => true,
 ),

@@ -1295,6 +1295,16 @@ if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 	$wgHooks['GlobalUserPageWikis'][] = 'wmfCentralAuthWikiList';
 }
 
+if ( $wmgUseApiFeatureUsage ) {
+	require_once "$IP/extensions/Elastica/Elastica.php";
+	require_once "$IP/extensions/ApiFeatureUsage/ApiFeatureUsage.php";
+	$wgApiFeatureUsageQueryEngineConf = array(
+		'class' => 'ApiFeatureUsageQueryEngineElastica',
+		'serverList' => array(
+			'10.2.2.30', # search.svc.eqiad.wmnet
+		),
+	);
+}
 
 // taking it live 2006-12-15 brion
 if ( $wmgUseDismissableSiteNotice ) {
