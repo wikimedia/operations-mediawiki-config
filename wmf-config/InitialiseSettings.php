@@ -12956,7 +12956,6 @@ $wgConf->settings = array(
 	'default' => false,
 	'test2wiki' => true,
 	'testwiki' => true,
-	'enwiki' => true,
 	'wikidatawiki' => true,
 	'testwikidatawiki' => true,
 ),
@@ -13156,13 +13155,11 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
-	'enwiki' => true,
 ),
 'wmgWikiGrokUIEnableForAnons' => array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
-	'enwiki' => true,
 ),
 'wmgWikiGrokUIEnableOnAllDevices' => array(
 	'default' => false,
@@ -13174,19 +13171,10 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'test2wiki' => true,
 ),
-// Remove this when 1.25wmf18 is gone
-'wmgMFEnableWikiGrok' => array(
-	'default' => false,
-),
-// Remove this when 1.25wmf18 is gone
-'wmgMFEnableWikiGrokForAnons' => array(
-	'default' => false,
-),
 'wmgWikiGrokDebug' => array(
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
-	'enwiki' => true,
 ),
 'wmgMFUseWikibaseDescription' => array(
 	'default' => false,
