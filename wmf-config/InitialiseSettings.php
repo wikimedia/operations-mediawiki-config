@@ -6066,6 +6066,10 @@ $wgConf->settings = array(
 		100 => 'Portal',
 		101 => 'Dyskusja_portalu'
 	),
+	'ptwikinews' => array(
+		110 => 'Colaboração', // T94894
+		111 => 'Colaboração_Discussão',
+	),
 	'ruwikinews' => array(
 		100 => 'Портал',
 		101 => 'Обсуждение_портала',
