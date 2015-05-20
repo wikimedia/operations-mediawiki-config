@@ -14925,11 +14925,11 @@ $wgConf->settings = array(
 	'default' => true,
 	'fawiki' => false, // Bug T98237
 	'hewiki' => false, // Bug T98237
-	'itwiki' => false,
+	'itwiki' => false, // Bug T98303
 	'nlwiki' => false, // Bug T96683
 	'testwiki' => false,
 	'wikidata' => false,
-	'wikiquote' => false,
+	'wikiquote' => false, // Bug T98247
 	'wikisource' => false, // Bug T96683 and T98240
 	'wikivoyage' => false,
 ),
