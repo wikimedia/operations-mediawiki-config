@@ -20,12 +20,11 @@ $wmgThrottlingExceptions = array();
 #             (default: any project)
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = array( // T96696
-	'from'   => '2015-04-22T04:00 +0:00',
-	'to'     => '2015-04-22T17:00 +0:00',
-	'IP'     => '190.96.91.202',
-	'dbname' => array( 'eswiki', 'enwiki' ),
-	'value'  => 40, // 20 participants expected, allow for more
+$wmgThrottlingExceptions[] = array( // T99772
+	'from'   => '2015-06-26T13:00 +0:00',
+	'to'     => '2015-06-27T23:59 +0:00',
+	'dbname' => array( 'itwikivoyage' ),
+	'value'  => 100, // 50 participants expected, but 50K flyers printed
 );
 
 ## Add throttling definitions above.
