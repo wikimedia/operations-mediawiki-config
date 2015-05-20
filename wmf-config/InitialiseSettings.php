@@ -15083,6 +15083,13 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgCirrusPerUserPoolCounter' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
+),
+
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
 	'default' => 0,
 	'wikinews' => .6,
