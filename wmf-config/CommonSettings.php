@@ -1144,6 +1144,7 @@ if ( $wgDBname === 'enwiki' ) {
 
 if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgExternalDiffEngine = 'wikidiff2';
+	$wgDiff = false;
 }
 
 if ( file_exists( "$wmfConfigDir/interwiki.cdb" ) ) {
