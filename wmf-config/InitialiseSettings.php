@@ -3800,7 +3800,7 @@ $wgConf->settings = array(
 	'+nlwikimedia' => array( 0 => 1 ),
 	'+nostalgiawiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+nowikimedia' => array( 0 => 1 ),
-	'+officewiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0, 113 => 1 ),
+	'+officewiki' => array( 0 => 1, 6 => 0, 8 => 0, 113 => 1 ), // T99860 et al.
 	'+ombudsmenwiki' => array( 0 => 1 ),
 	'+otrs_wikiwiki' => array( 0 => 1 ),
 	'+outreachwiki' => array( 0 => 1 ),
