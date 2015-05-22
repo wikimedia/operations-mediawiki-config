@@ -53,14 +53,14 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 		} );
 	} else {
 		// 1:1000 request profiling
-		/* Disabled 15-May-2015 because it creates too many metrics
 		$wgProfiler = array(
 			'class'    => 'ProfilerXhprof',
-			'flags'    => XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS,
+			'exclude'  => array( 'section.*' ),
+			'flags'    => ( XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS ),
 			'output'   => 'stats',
+			'prefix'   => 'xhprof',
 			'sampling' => 1000,
 		);
-		 */
 	}
 }
 
