@@ -55,7 +55,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 		// 1:1000 request profiling
 		$wgProfiler = array(
 			'class'    => 'ProfilerXhprof',
-			'exclude'  => array( 'section.*' ),
+			'exclude'  => array( 'section.*', 'xhprof.run_init.*' ),
 			'flags'    => ( XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS ),
 			'output'   => 'stats',
 			'prefix'   => 'xhprof',
