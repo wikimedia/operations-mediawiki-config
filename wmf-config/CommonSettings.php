@@ -410,7 +410,7 @@ if ( $wmgUseClusterSquid ) {
 }
 
 if ( $wmfRealm === 'production' ) {
-	$wgStatsdServer = 'statsd.eqiad.wmnet:9129';
+	$wgStatsdServer = 'statsd.eqiad.wmnet';
 }
 
 // CORS (cross-domain AJAX, Bug T22814)
