@@ -1,6 +1,7 @@
 <?php
 
 require_once( __DIR__ . '/../../multiversion/MWMultiVersion.php' );
+require_once( __DIR__ . '/../../multiversion/MWWikiversions.php' );
 
 class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 
@@ -16,6 +17,42 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 		$version = MWMultiversion::initializeForWiki( $serverName );
 
 		$this->assertEquals( $expectedDB, $version->getDatabase() );
+	}
+
+	function provideSymlinkPathAndTarget() {
+		$stage_dir = __DIR__ . '/../..';
+		$paths = array();
+		$jsonPath = getRealmSpecificFilename( "$stage_dir/wikiversions.json");
+		$versionRows = MWWikiversions::readWikiVersionsFile( $jsonPath );
+		$activeVersions = array();
+		$versions = array();
+		foreach ( $versionRows as $dbName => $version ) {
+			if ( !isset( $activeVersions[$version] ) ) { // already listed?
+				$activeVersions[$version] = 1;
+				$version = substr( $version, 4 ); // remove 'php-'
+				$versions[] = $version;
+			}
+
+		}
+
+		foreach ($versions as $version) {
+			foreach(array('extensions', 'skins','resources') as $link) {
+				$path = "$stage_dir/w/static/$version/$link";
+				$target = MEDIAWIKI_DEPLOYMENT_DIR . "/php-$version/$link";
+				$paths[]=array($path, $target);
+			}
+		}
+
+		return $paths;
+	}
+
+	/**
+	 * Test to ensure branch symlinks exist
+	 * @dataProvider provideSymlinkPathAndTarget
+	 */
+	function testBranchSymlinksExist($path, $target) {
+		$is_link = is_link($path);
+		$this->assertTrue($is_link, "symlink should exist at $path");
 	}
 
 	function provideServerNameAndDocRoot() {
