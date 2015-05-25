@@ -1087,7 +1087,7 @@ function wmfLabsSettings() {
 		),
 
 		'wmgGraphImgServiceUrl' => array(
-			'default' => "//graphoid-beta.wmflabs.org/%1\$s/v1/png/%2\$s/%3\$s/%4\$s.png",
+			'default' => "/api/rest_v1/page/graph/png/%2\$s/%3\$s/%4\$s.png",
 			'private' => false,
 		),
 	);
