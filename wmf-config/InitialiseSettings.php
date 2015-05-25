@@ -9750,6 +9750,7 @@ $wgConf->settings = array(
 	'legalteamwiki' => array( 'meta' ), // T66070
 	'liwikinews' => array( 'incubator' ),
 	'lmowiki' => array( 'ca', 'en', 'fr' ), # Bug T10319
+	'maiwiki' => array( 'commons', 'en', 'hi', 'ne' ), // T99490
 	'mdfwiki' => array( 'incubator' ),
 	'mediawikiwiki' => array( 'meta', 'w:en', 'usability' ), // T28580
 	'metawiki' => array( 'commons', 'foundation', 'w', 'cs', 'fr', 'strategy' ),
