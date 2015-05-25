@@ -762,7 +762,7 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 	);
 
 	// Current stable release
-	$wgExtDistDefaultSnapshot = 'REL1_24';
+	$wgExtDistDefaultSnapshot = 'REL1_25';
 
 	// When changing the Snapshot Refs please change the corresponding
 	// extension distributor messages for mediawiki.org in WikimediaMessages/i18n/wikimedia/*.json too
