@@ -179,8 +179,8 @@ class MWMultiVersion {
 				|| ( $matches[2] === 'wikimedia' && in_array(
 					$lang,
 					array(
-						'ar', 'bd', 'be', 'br', 'ca', 'co', 'dk', 'et', 'fi', 'il', 'mk', 'mx', 'nl', 'noboard-chapters',
-						'no', 'nyc', 'nz', 'pa-us', 'pl', 'rs', 'ru', 'se', 'tr', 'ua', 'uk', 've'
+						'ar', 'bd', 'be', 'br', 'ca', 'cn', 'co', 'dk', 'et', 'fi', 'il', 'mk', 'mx', 'nl',
+						'noboard-chapters', 'no', 'nyc', 'nz', 'pa-us', 'pl', 'rs', 'ru', 'se', 'tr', 'ua', 'uk', 've'
 					)
 			) ) ) {
 				// wikimedia (non chapters) sites stay as wiki
