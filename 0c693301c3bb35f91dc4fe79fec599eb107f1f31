@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_7199b6c7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 1558,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-05-26T11:28:17Z",
+      "side": 1,
+      "message": "Since $wgMetaNamespace is not set, this is used as meta namespace as well, so project talk would be \u0027中国维基媒体用户组_talk\u0027. I don\u0027t think that\u0027s what we want, right? Should we ask to provide what to use for project and project talk?",
+      "revId": "0c693301c3bb35f91dc4fe79fec599eb107f1f31",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
