@@ -105,7 +105,7 @@ $wgLBFactoryConf = array(
 		'db1018' => 200, # 1.4TB  64GB (perf schema testing)
 		'db1054' => 200, # 2.8TB  96GB, api
 		'db1060' => 200, # 2.8TB  96GB, api
-#		'db1063' => 400, # 2.8TB 128GB depool for reboot
+		'db1063' => 400, # 2.8TB 128GB
 		'db1067' => 500, # 2.8TB 160GB
 	),
 	/* s3 */ 'DEFAULT' => array(
