@@ -22,7 +22,7 @@ function isMain() {
 	return basename( __FILE__ ) === basename( $_SERVER['SCRIPT_FILENAME'] );
 }
 
-function updateBranchPointers( $dryRun = false ) {
+function updateBranchPointers( $dryRun = false, $all = false ) {
 	$branchDirs = glob( MEDIAWIKI_DEPLOYMENT_DIR . '/php-*', GLOB_ONLYDIR );
 
 	if ( !is_array( $branchDirs ) || count( $branchDirs ) < 1 ) {
@@ -34,8 +34,18 @@ function updateBranchPointers( $dryRun = false ) {
 	// The native sort is lexographical which gives the wrong result for
 	// collections such as [1.23wmf9, 1.23wmf10].
 	usort( $branchDirs, 'version_compare' );
+	$branches = array();
 
-	$branches = array( 'current' => array_pop( $branchDirs ) );
+	if ($all){
+
+		foreach ($branchDirs as $target) {
+			$dir = explode('-', basename($target));
+			$dir = array_pop($dir);
+			$branches[$dir]=$target;
+		}
+	}
+
+	$branches['current'] = array_pop($branchDirs);
 
 	// Symlink common/php to the current branch using a relative path so that
 	// the symlink works from both MEDIAWIKI_STAGING_DIR and
@@ -47,9 +57,17 @@ function updateBranchPointers( $dryRun = false ) {
 	updateSymlink( MEDIAWIKI_STAGING_DIR . '/php', $phpLinkTarget, $dryRun );
 
 	foreach( $branches as $branch => $target ) {
+		updateBranch($dryRun, '/w/static',$branch, $target);
+		if ($branch != 'current'){
+			updateBranch($dryRun, '/docroot/bits/static',$branch, $target);
+		}
+	}
+}
+
+function updateBranch($dryRun, $prefix, $branch, $target) {
 		echo "Updating $branch branch pointer...\n";
 
-		$parent = MEDIAWIKI_STAGING_DIR . "/w/static/$branch";
+		$parent = MEDIAWIKI_STAGING_DIR . "$prefix/$branch";
 
 		if ( !$dryRun && !file_exists( $parent ) && !mkdir( $parent, 0775 ) ) {
 			fwrite( STDERR, __FUNCTION__ . ": $parent does not exist and could not be created.\n" );
@@ -62,7 +80,6 @@ function updateBranchPointers( $dryRun = false ) {
 			updateSymlink( $link, $dest, $dryRun );
 		}
 		echo "\n";
-	}
 }
 
 /**
@@ -105,5 +122,6 @@ function updateSymlink( $link, $dest, $dryRun ) {
 
 if ( isMain() ) {
 	$dryRun = in_array( '--dry-run', $argv, true );
-	updateBranchPointers( $dryRun );
+	$all = in_array('--all', $argv);
+	updateBranchPointers( $dryRun, $all );
 }
