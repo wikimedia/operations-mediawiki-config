@@ -11569,6 +11569,7 @@ $wgConf->settings = array(
 	'cawiki' => true,
 	'cawikibooks' => true,
 	'ckbwiki' => true,
+	'cswiki' => true,
 	'dawiki' => true,
 	'elwiki' => true,
 	'elwikivoyage' => true,
