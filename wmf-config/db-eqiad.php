@@ -10,7 +10,7 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 $wmgParserCacheDBs = array(
 	'10.64.16.156',  # pc1001
 	'10.64.16.157',  # pc1002
-#	'10.64.16.158',  # pc1003 (down for maintenance)
+	'10.64.16.158',  # pc1003
 );
 
 $wmgOldExtTemplate = array(
