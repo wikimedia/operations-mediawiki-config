@@ -41,7 +41,7 @@ try {
 		'maxTime'  => isset( $_GET['maxtime'] ) ? $_GET['maxtime'] : 30
 	) );
 
-	print json_encode( $wikis, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
+	print json_encode( $response, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
 
 	$mediawiki->restInPeace();
 } catch ( Exception $e ) {
