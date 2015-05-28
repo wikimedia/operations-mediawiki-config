@@ -10120,6 +10120,9 @@ $wgConf->settings = array(
 		NS_HELP_TALK => 'noindex,follow',
 		NS_CATEGORY_TALK => 'noindex,follow',
 	),
+	'ukwiki' => array(
+		NS_USER => 'noindex,follow', // T98926
+	),
 	'zhwiki' => array(
 		118 => 'noindex,nofollow', // T91223
 		119 => 'noindex,nofollow',
