@@ -143,6 +143,7 @@ Disallow: /
 #
 User-agent: *
 Allow: /w/api.php?action=mobileview&
+Allow: /w/load.php?
 Disallow: /w/
 Disallow: /trap/
 Disallow: /wiki/Especial:Search
