@@ -23,7 +23,7 @@ $wmgThrottlingExceptions = array();
 $wmgThrottlingExceptions[] = array( // T100051
 	'from'   => '2015-05-31T05:00 +0:00',
 	'to'     => '2015-05-31T18:00 +0:00',
-	'ip'     => array( '186.67.125.3', '200.72.159.9' ),
+	'ip'     => array( '186.67.125.3', '200.72.159.9', '163.247.67.20' ),
 	'dbname' => array( 'eswiki', 'commonswiki' ),
 	'value'  => 50, // 30 participants expected
 );
