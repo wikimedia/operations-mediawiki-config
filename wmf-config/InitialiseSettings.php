@@ -8643,7 +8643,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller' ), //Bug T72441
 	),
 	'+maiwiki' => array(
-		'sysop' => array( 'autopatrolled' ), //T89346
+		'sysop' => array( 'autopatrolled', 'import' ), // T89346, T99491
 	),
 	'+mediawikiwiki' => array(
 		'sysop' => array( 'autoreview' ),
@@ -9272,7 +9272,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller' ), //Bug T72441
 	),
 	'+maiwiki' => array(
-		'sysop' => array( 'autopatrolled' ), //T89346
+		'sysop' => array( 'autopatrolled', 'import' ), // T89346, T99491
 	),
 	'+mediawikiwiki' => array(
 		'sysop' => array( 'autoreview' ),
