@@ -12615,12 +12615,8 @@ $wgConf->settings = array(
 
 // Whether VisualEditor should bypass the MediaWiki layer and contact RESTbase directly for speed
 'wmgVisualEditorAccessRESTbaseDirectly' => array(
-	'default' => false,
-	'mediawikiwiki' => true,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'testwikidatawiki' => true,
-	'wikipedia' => true,
+	'default' => true,		# T100026
+	'private' => false,		# Private wikis aren't yet supported by RESTbase
 ),
 
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
