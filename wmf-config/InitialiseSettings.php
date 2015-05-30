@@ -15535,7 +15535,7 @@ $wgConf->settings = array(
 
 // Virtual media views endpoint used by Media Viewer
 'wgMediaViewerRecordVirtualViewBeaconURI' => array(
-	'default' => '//bits.wikimedia.org/beacon/media',
+	'default' => '/beacon/media',
 ),
 
 // open external/specific links on voteWiki in new tab or window
