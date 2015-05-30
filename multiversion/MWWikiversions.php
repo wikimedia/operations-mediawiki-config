@@ -80,8 +80,8 @@ class MWWikiversions {
 
 		$dbs = array();
 		foreach ( $lines as $line ) {
-			// Strip comments ('//' or '#' to end-of-line) and trim whitespace.
-			$line = trim( preg_replace( '/(#|\/\/).*/', '', $line ) );
+			// Strip comments ('#' to end-of-line) and trim whitespace.
+			$line = trim( substr( $line, 0, strcspn( $line, '#' ) ) );
 			if ( substr( $line, 0, 2 ) === '%%' ) {
 				if ( !empty( $dbs ) ) {
 					throw new Exception( "{$srcPath}: Encountered dblist expression inside a dblist list file.\n" );
