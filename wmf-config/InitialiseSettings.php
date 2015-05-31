@@ -8809,7 +8809,10 @@ $wgConf->settings = array(
 	'+kowiki' => array(
 		'sysop' => array( 'rollbacker', 'confirmed', 'uploader' ), // T85621
 	),
-	'+labswiki' => array('shellmanagers' => array( 'shell')),
+	'+labswiki' => array(
+		'shellmanagers' => array( 'shell' ),
+		'sysop' => array( 'translationadmin' ),
+	),
 	'+legalteamwiki' => array( // T63222
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'translationadmin' ),
 	),
@@ -9460,6 +9463,9 @@ $wgConf->settings = array(
 	),
 	'+kowiki' => array(
 		'sysop' => array( 'rollbacker', 'confirmed', 'uploader' ), // T85621
+	),
+	'+labswiki' => array(
+		'sysop' => array( 'translationadmin' ),
 	),
 	'+legalteamwiki' => array( // T63222
 		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'bureaucrat', 'translationadmin' ),
@@ -11297,6 +11303,7 @@ $wgConf->settings = array(
 	'itwikibooks' => array( 'sysop' => array( 'flooder' ) ), // T41569
 	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // T38600
 	'itwiktionary' => array( 'sysop' => array( 'flood' ) ), // T41306
+	'labswiki' => array( 'sysop' => array( 'translationadmin' ) ),
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
 	'plwiki' => array( 'sysop' => array( 'flood' ) ), // T22155
@@ -11322,6 +11329,7 @@ $wgConf->settings = array(
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'frwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
 	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // T38600
+	'labswiki' => array( 'sysop' => array( 'translationadmin' ) ),
 	'mlwiki' => array( 'botadmin' => array( 'botadmin' ) ),
 	'mlwikisource' => array( 'botadmin' => array( 'botadmin' ) ), // T46335
 	'mlwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
@@ -14144,6 +14152,7 @@ $wgConf->settings = array(
 	'collabwiki' => true,
 	'commonswiki' => true, // T50620
 	'incubatorwiki' => true, // T36213
+	'labswiki' => true, // T100313
 	'legalteamwiki' => true, // T64610
 	'mediawikiwiki' => true,
 	'metawiki' => true,
@@ -14160,6 +14169,16 @@ $wgConf->settings = array(
 'wmgTranslateWorkflowStates' => array(
 	'default' => false,
 	'commonswiki' => array( // T50620
+		'progress' => array( 'color' => 'E00' ),
+		'proofreading' => array( 'color' => 'FFBF00' ),
+		'ready' => array( 'color' => 'FF0' ),
+		'state conditions' => array(
+			array( 'ready', array( 'PROOFREAD' => 'MAX' ) ),
+			array( 'proofreading', array( 'TRANSLATED' => 'MAX' ) ),
+			array( 'progress', array( 'UNTRANSLATED' => 'NONZERO' ) ),
+		),
+	),
+	'labswiki' => array(
 		'progress' => array( 'color' => 'E00' ),
 		'proofreading' => array( 'color' => 'FFBF00' ),
 		'ready' => array( 'color' => 'FF0' ),
