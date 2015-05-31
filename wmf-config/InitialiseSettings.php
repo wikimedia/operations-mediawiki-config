@@ -15032,6 +15032,9 @@ $wgConf->settings = array(
 	'plwiki' => array(
 		'sort' => 'alphabetic',
 	),
+	'ptwiki' => array(
+		'otherProjectsLinksByDefault' => true, // T99901
+	),
 	'ruwiki' => array(
 		'otherProjectsLinksByDefault' => true,
 	),
