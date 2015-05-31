@@ -8909,7 +8909,10 @@ $wgConf->settings = array(
 	'+kowiki' => array(
 		'sysop' => array( 'rollbacker', 'confirmed', 'uploader' ), // T85621
 	),
-	'+labswiki' => array('shellmanagers' => array( 'shell')),
+	'+labswiki' => array(
+		'shellmanagers' => array( 'shell' ),
+		'sysop' => array( 'translationadmin' ),
+	),
 	'+legalteamwiki' => array( // T63222
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'translationadmin' ),
 	),
@@ -9568,6 +9571,9 @@ $wgConf->settings = array(
 	),
 	'+kowiki' => array(
 		'sysop' => array( 'rollbacker', 'confirmed', 'uploader' ), // T85621
+	),
+	'+labswiki' => array(
+		'sysop' => array( 'translationadmin' ),
 	),
 	'+legalteamwiki' => array( // T63222
 		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'bureaucrat', 'translationadmin' ),
@@ -14386,6 +14392,7 @@ $wgConf->settings = array(
 	'collabwiki' => true,
 	'commonswiki' => true, // T50620
 	'incubatorwiki' => true, // T36213
+	'labswiki' => true, // T100313
 	'legalteamwiki' => true, // T64610
 	'mediawikiwiki' => true,
 	'metawiki' => true,
@@ -14402,6 +14409,16 @@ $wgConf->settings = array(
 'wmgTranslateWorkflowStates' => array(
 	'default' => false,
 	'commonswiki' => array( // T50620
+		'progress' => array( 'color' => 'E00' ),
+		'proofreading' => array( 'color' => 'FFBF00' ),
+		'ready' => array( 'color' => 'FF0' ),
+		'state conditions' => array(
+			array( 'ready', array( 'PROOFREAD' => 'MAX' ) ),
+			array( 'proofreading', array( 'TRANSLATED' => 'MAX' ) ),
+			array( 'progress', array( 'UNTRANSLATED' => 'NONZERO' ) ),
+		),
+	),
+	'labswiki' => array(
 		'progress' => array( 'color' => 'E00' ),
 		'proofreading' => array( 'color' => 'FFBF00' ),
 		'ready' => array( 'color' => 'FF0' ),
