@@ -8739,7 +8739,10 @@ $wgConf->settings = array(
 	'+kowiki' => array(
 		'sysop' => array( 'rollbacker', 'confirmed', 'uploader' ), //T85621
 	),
-	'+labswiki' => array('shellmanagers' => array( 'shell')),
+	'+labswiki' => array(
+		'shellmanagers' => array( 'shell' ),
+		'sysop' => array( 'translationadmin' ),
+	),
 	'+legalteamwiki' => array( // T63222
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'translationadmin' ),
 	),
@@ -9376,7 +9379,14 @@ $wgConf->settings = array(
 	'+kowiki' => array(
 		'sysop' => array( 'rollbacker', 'confirmed', 'uploader' ), // T85621
 	),
+<<<<<<< HEAD
 	'+legalteamwiki' => array( // T63222
+=======
+	'+labswiki' => array(
+		'sysop' => array( 'translationadmin' ),
+	),
+	'+legalteamwiki' => array( // Bug T63222
+>>>>>>> a166731... Install Extension:Translate on labswiki
 		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'bureaucrat', 'translationadmin' ),
 	),
 	'+ltwiki' => array(
@@ -11212,9 +11222,16 @@ $wgConf->settings = array(
 	'enwikisource' => array( 'sysop' => array( 'flood' ) ), // T38863
 	'eswiki' => array( 'sysop' => array( 'flood' ) ), // T50682
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
+<<<<<<< HEAD
 	'itwikibooks' => array( 'sysop' => array( 'flooder' ) ), // T41569
 	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // T38600
 	'itwiktionary' => array( 'sysop' => array( 'flood' ) ), // T41306
+=======
+	'itwikibooks' => array( 'sysop' => array( 'flooder' ) ), // Bug T41569
+	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // Bug T38600
+	'itwiktionary' => array( 'sysop' => array( 'flood' ) ), // Bug T41306
+	'labswiki' => array( 'sysop' => array( 'translationadmin' ) ),
+>>>>>>> a166731... Install Extension:Translate on labswiki
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
 	'plwiki' => array( 'sysop' => array( 'flood' ) ), // T22155
@@ -11238,7 +11255,12 @@ $wgConf->settings = array(
 	'eswiki' => array( 'sysop' => array( 'flood' ) ), // T50682
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'frwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
+<<<<<<< HEAD
 	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // T38600
+=======
+	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // Bug T38600
+	'labswiki' => array( 'sysop' => array( 'translationadmin' ) ),
+>>>>>>> a166731... Install Extension:Translate on labswiki
 	'mlwiki' => array( 'botadmin' => array( 'botadmin' ) ),
 	'mlwikisource' => array( 'botadmin' => array( 'botadmin' ) ), // T46335
 	'mlwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
@@ -14038,9 +14060,16 @@ $wgConf->settings = array(
 	'brwikimedia' => true, // T46054
 	'cawikimedia' => true, // T75394
 	'collabwiki' => true,
+<<<<<<< HEAD
 	'commonswiki' => true, // T50620
 	'incubatorwiki' => true, // T36213
 	'legalteamwiki' => true, // T64610
+=======
+	'commonswiki' => true, // Bug T50620
+	'incubatorwiki' => true, // Bug T36213
+	'labswiki' => true, // Bug T100313
+	'legalteamwiki' => true, // Bug T64610
+>>>>>>> a166731... Install Extension:Translate on labswiki
 	'mediawikiwiki' => true,
 	'metawiki' => true,
 	'otrs_wikiwiki' => true, // T63297
@@ -14056,6 +14085,16 @@ $wgConf->settings = array(
 'wmgTranslateWorkflowStates' => array(
 	'default' => false,
 	'commonswiki' => array( // T50620
+		'progress' => array( 'color' => 'E00' ),
+		'proofreading' => array( 'color' => 'FFBF00' ),
+		'ready' => array( 'color' => 'FF0' ),
+		'state conditions' => array(
+			array( 'ready', array( 'PROOFREAD' => 'MAX' ) ),
+			array( 'proofreading', array( 'TRANSLATED' => 'MAX' ) ),
+			array( 'progress', array( 'UNTRANSLATED' => 'NONZERO' ) ),
+		),
+	),
+	'labswiki' => array(
 		'progress' => array( 'color' => 'E00' ),
 		'proofreading' => array( 'color' => 'FFBF00' ),
 		'ready' => array( 'color' => 'FF0' ),
