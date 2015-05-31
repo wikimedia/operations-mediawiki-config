@@ -8676,6 +8676,7 @@ $wgConf->settings = array(
 			'reviewer',             // T95101
 			'abusefilter',          // T95102
 			'filemover',            // T95103
+			'import',		// T100925
 		),
 		'bureaucrat' => array( 'accountcreator' ), // T96824
 	),
@@ -9305,6 +9306,7 @@ $wgConf->settings = array(
 			'abusefilter',          // T95102
 			'filemover',            // T95103
 			'accountcreator',       // T96824
+			'import',		// T100925
 		),
 	),
 	'+nlwiki' => array(
