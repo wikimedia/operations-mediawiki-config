@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_7e1f215f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-05-31T11:59:32Z",
+      "side": 1,
+      "message": "Also T59375",
+      "revId": "2c7530a1394a34568e0264a8d1a834fe3914e934",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
