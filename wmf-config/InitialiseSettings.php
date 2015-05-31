@@ -13948,6 +13948,7 @@ $wgConf->settings = array(
 	'collabwiki' => true,
 	'commonswiki' => true, // Bug T50620
 	'incubatorwiki' => true, // Bug T36213
+	'labswiki' => true, // Bug T100313
 	'legalteamwiki' => true, // Bug T64610
 	'mediawikiwiki' => true,
 	'metawiki' => true,
@@ -13967,6 +13968,18 @@ $wgConf->settings = array(
 		'progress' => array( 'color' => 'E00' ),
 		'proofreading' => array( 'color' => 'FFBF00' ),
 		'ready' => array( 'color' => 'FF0' ),
+		'state conditions' => array(
+			array( 'ready', array( 'PROOFREAD' => 'MAX' ) ),
+			array( 'proofreading', array( 'TRANSLATED' => 'MAX' ) ),
+			array( 'progress', array( 'UNTRANSLATED' => 'NONZERO' ) ),
+		),
+	),
+	'labswiki' => array(
+		'progress' => array( 'color' => 'E00' ),
+		'needs-updating' => array( 'color' => 'FFBF00' ),
+		'proofreading' => array( 'color' => 'FFBF00' ),
+		'ready' => array( 'color' => 'FF0' ),
+		'published' => array( 'color' => 'AEA' ),
 		'state conditions' => array(
 			array( 'ready', array( 'PROOFREAD' => 'MAX' ) ),
 			array( 'proofreading', array( 'TRANSLATED' => 'MAX' ) ),
@@ -14024,6 +14037,7 @@ $wgConf->settings = array(
 	'brwikimedia' => true, // Bug T46054
 	'cawikimedia' => true, // Bug T75394
 	'incubatorwiki' => true,
+	'labswiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
 	'wikidata' => true, // Bug T43585
