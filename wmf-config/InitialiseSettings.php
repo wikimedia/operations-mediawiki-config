@@ -496,6 +496,7 @@ $wgConf->settings = array(
 	'dzwiki' => '/static/images/project-logos/dzwiki.png',  // T50397
 	'eewiki' => '/static/images/project-logos/eewiki.png',  // T50397
 	'elwiki' => '/static/images/project-logos/elwiki.png',
+	'emlwiki' => '/static/images/project-logos/emlwiki.png', // T100953
 	'enwiki' => '/static/images/project-logos/enwiki.png',
 	'eowiki' => '/static/images/project-logos/eowiki.png',
 	'eswiki' => '/static/images/project-logos/eswiki.png',
