@@ -14915,11 +14915,11 @@ $wgConf->settings = array(
 	'enwikivoyage' => true,
 	'fawiki' => true,
 	'hewiki' => true,
-	'itwiki' => true,
+	'itwiki' => true, // Bug T98303
 	'nlwiki' => true,
 	'testwiki' => true,
 	'wikidata' => true,
-	'wikisource' => true,
+	'wikisource' => true, // Bug T98756
 ),
 
 'wmgWikibaseUseLegacyUsageIndex' => array(
