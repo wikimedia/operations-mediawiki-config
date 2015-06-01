@@ -12990,7 +12990,6 @@ $wgConf->settings = array(
 	'default' => false,
 	'test2wiki' => true,
 	'testwiki' => true,
-	'wikidatawiki' => true,
 	'testwikidatawiki' => true,
 ),
 'wmgWikiGrokRepoMode' => array(
