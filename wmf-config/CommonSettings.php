@@ -994,7 +994,9 @@ if ( $wmgUseRSSExtension ) {
 	$wgRSSUrlWhitelist = $wmgRSSUrlWhitelist;
 }
 
-$wgActions['credits'] = false;
+if ( $wgMaxCredits === 0 ) {
+	$wgActions['credits'] = false;
+}
 
 # Process group overrides
 
