@@ -13082,6 +13082,7 @@ $wgConf->settings = array(
 
 'wmgMobileFrontendLogo' => array(
 	'default' => '/images/mobile/wikimedia.png',
+	'mediawiki' => '/static/images/project-logos/mediawikiwiki.png',
 	'wikipedia' => '/images/mobile/W.png',
 	'wikinews' => '/images/mobile/wikinews.png',
 	'wiktionary' => '/images/mobile/wiktionary.png',
