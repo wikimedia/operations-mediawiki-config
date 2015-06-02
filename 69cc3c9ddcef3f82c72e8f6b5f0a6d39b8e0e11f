@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ed113e2_4d9fffb9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13085,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-02T17:15:48Z",
+      "side": 1,
+      "message": "I was wondering if we should move the file over to the /images/mobile folder similar to the other images.",
+      "revId": "69cc3c9ddcef3f82c72e8f6b5f0a6d39b8e0e11f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
