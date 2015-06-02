@@ -14797,7 +14797,6 @@ $wgConf->settings = array(
 
 'wgMaxCredits' => array(
 	'default' => 0,
-	'wikivoyage' => 10,
 ),
 
 'wmgUseListings' => array(
