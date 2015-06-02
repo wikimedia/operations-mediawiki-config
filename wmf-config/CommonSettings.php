@@ -776,6 +776,9 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 		'REL1_20',
 		'REL1_19',
 	);
+
+	// track downloads
+	$wgExtDistUseEventLogging = true;
 }
 
 if ( $wmgUseGlobalBlocking ) {
