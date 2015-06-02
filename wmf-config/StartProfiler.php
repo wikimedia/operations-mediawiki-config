@@ -59,7 +59,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 			'flags'    => ( XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS ),
 			'output'   => 'stats',
 			'prefix'   => 'xhprof',
-			'sampling' => 1000,
+			'sampling' => 10000,
 		);
 	}
 }
