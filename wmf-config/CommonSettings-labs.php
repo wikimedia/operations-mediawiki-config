@@ -240,6 +240,7 @@ if ( $wmgUsePageImages ) {
 if ( $wmgUseSentry ) {
 	require_once( "$IP/extensions/Sentry/Sentry.php" );
 	$wgSentryDsn = $wmgSentryDsn;
+	$wgSentryLogPhpErrors = false;
 }
 
 if ( $wmgUseCapiunto ) {
