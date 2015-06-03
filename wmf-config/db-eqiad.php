@@ -95,7 +95,7 @@ $wgLBFactoryConf = array(
 		'db1057' => 200, # 2.8TB  96GB
 		'db1065' => 100, # 2.8TB 160GB, api
 		'db1066' => 100, # 2.8TB 160GB, api
-		'db1072' => 500, # 2.8TB 160GB
+		# maintenance 'db1072' => 500, # 2.8TB 160GB
 		'db1073' => 500, # 2.8TB 160GB
 	),
 	's2' => array(
