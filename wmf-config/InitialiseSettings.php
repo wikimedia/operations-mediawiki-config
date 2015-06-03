@@ -14925,6 +14925,8 @@ $wgConf->settings = array(
 
 'wmgWikibaseUseLegacyUsageIndex' => array(
 	'default' => true,
+	'arwiki' => false,
+	'cawiki' => false,
 	'fawiki' => false, // Bug T98237
 	'hewiki' => false, // Bug T98237
 	'itwiki' => false, // Bug T98303
