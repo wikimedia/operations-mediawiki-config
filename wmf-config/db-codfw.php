@@ -317,9 +317,9 @@ $wgLBFactoryConf = array(
 	# es3
 	'cluster25' => array(
 		'10.64.32.19' => 1, # es1009, master
-		'10.192.16.29' => 1, #es2008
-		'10.192.16.30' => 3, # es2009
-		'10.192.16.31' => 3, # es2010
+#		'10.192.16.29' => 1, # es2008 (down for maintenance)
+#		'10.192.16.30' => 3, # es2009 (depooled as a slave)
+#		'10.192.16.31' => 3, # es2010 (depooled as a slave)
 	),
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => array(
