@@ -1084,7 +1084,7 @@ $wgConf->settings = array(
 # wgLogoHD @{
 // Alternate logos for high-resolution displays.
 'wgLogoHD' => array(
-    # Wikipedia
+	# Wikipedia
 	'bnwiki' => array( '1.5x' => '/static/images/project-logos/bnwiki-1.5x.png', '2x' => '/static/images/project-logos/bnwiki-2x.png' ),
 	'enwiki' => array( '1.5x' => '/static/images/project-logos/enwiki-1.5x.png', '2x' => '/static/images/project-logos/enwiki-2x.png' ),
 	'fawiki' => array( '1.5x' => '/static/images/project-logos/fawiki-1.5x.png', '2x' => '/static/images/project-logos/fawiki-2x.png' ),
@@ -1098,22 +1098,22 @@ $wgConf->settings = array(
 	'tawiki' => array( '1.5x' => '/static/images/project-logos/tawiki-1.5x.png', '2x' => '/static/images/project-logos/tawiki-2x.png' ),
 	'viwiki' => array( '1.5x' => '/static/images/project-logos/viwiki-1.5x.png', '2x' => '/static/images/project-logos/viwiki-2x.png' ),
 
-    # Wiktionary
+	# Wiktionary
 	'viwiktionary' => array( '1.5x' => '/static/images/project-logos/viwiktionary-1.5x.png', '2x' => '/static/images/project-logos/viwiktionary-2x.png' ),
 
-    # Wikiquote
+	# Wikiquote
 	'viwikiquote' => array( '1.5x' => '/static/images/project-logos/viwikiquote-1.5x.png', '2x' => '/static/images/project-logos/viwikiquote-2x.png' ),
 
-    # Wikibooks
+	# Wikibooks
 	'viwikibooks' => array( '1.5x' => '/static/images/project-logos/viwikibooks-1.5x.png', '2x' => '/static/images/project-logos/viwikibooks-2x.png' ),
 
-    # Wikisource
+	# Wikisource
 	'viwikisource' => array( '1.5x' => '/static/images/project-logos/viwikisource-1.5x.png', '2x' => '/static/images/project-logos/viwikisource-2x.png' ),
 
-    # Wikivoyage
+	# Wikivoyage
 	'viwikivoyage' => array( '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ),
 
-    # Special wikis
+	# Special wikis
 	'metawiki' => array( '1.5x' => '/static/images/project-logos/metawiki-1.5x.png', '2x' => '/static/images/project-logos/metawiki-2x.png' ),
 	'test2wiki' => array( '1.5x' => '/static/images/project-logos/test2wiki-1.5x.png', '2x' => '/static/images/project-logos/test2wiki-2x.png' ),
 ),
@@ -7439,7 +7439,7 @@ $wgConf->settings = array(
 	'hewiki' => array(
 		'user' => array( 'move' => false, 'upload' => true, 'move-rootuserpages' => false, ),
 		'sysop' => array( 'deleterevision' => true, 'abusefilter-modify-restricted' => true, ),
-		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'unwatchedpages' => true, 'rollback' => true, 'move-rootuserpages' => true,),
+		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'unwatchedpages' => true, 'rollback' => true, 'move-rootuserpages' => true, ),
 		'autopatrolled' => array( 'autopatrol' => true, 'unwatchedpages' => true, ),
 		'interface-editor' => array( 'abusefilter-hidden-log' => true, 'abusefilter-hide-log' => true, 'abusefilter-log' => true, 'abusefilter-log-detail' => true,
 			'abusefilter-modify' => true, 'abusefilter-modify-restricted' => true, 'abusefilter-revert' => true, 'abusefilter-view' => true,
@@ -7465,7 +7465,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'importupload' => true ), // Bug T61601
 	),
 	'hewiktionary' => array(
-		'patroller'     => array( 'patrol' => true, 'autopatrol' => true, 'unwatchedpages' => true, 'rollback' => true,), // Bug T75197
+		'patroller'     => array( 'patrol' => true, 'autopatrol' => true, 'unwatchedpages' => true, 'rollback' => true, ), // Bug T75197
 		'autopatrolled' => array( 'autopatrol' => true, 'unwatchedpages' => true, ), // Bug T75197
 	),
 	'hiwiki' => array(
@@ -7633,7 +7633,7 @@ $wgConf->settings = array(
 			'deletedtext' => true,
 			'autoconfirmed' => true,
 		),
-		'bots' => array('skipcaptcha' => true ),
+		'bots' => array( 'skipcaptcha' => true ),
 		'cloudadmin' => array(
 			'listall' => true,
 			'manageproject' => true,
@@ -7642,8 +7642,8 @@ $wgConf->settings = array(
 			'manageglobalpuppet' => true,
 			'accessrestrictedregions' => true,
 		),
-		'shell' => array('loginviashell' => true ),
-		'shellmanagers' => array('userrights' => false ),
+		'shell' => array( 'loginviashell' => true ),
+		'shellmanagers' => array( 'userrights' => false ),
 	),
 	'+legalteamwiki' => array( // Bug T63222
 		'accountcreator' => array( 'noratelimit' => false ),
@@ -7720,7 +7720,7 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ),      // T89816
 		'rollbacker' => array( 'rollback' => true ),           // T90888
 		'reviewer' => array ( 'patrol' => true ),              // T95101
-		'filemover' => array ( 'movefile' => true),            // T95103
+		'filemover' => array ( 'movefile' => true ),           // T95103
 	),
 	'nlwiki' => array(
 		'autoconfirmed' => array( 'patrol' => true ),
@@ -8629,7 +8629,7 @@ $wgConf->settings = array(
 	'+kowiki' => array(
 		'sysop' => array( 'rollbacker', 'confirmed', 'uploader' ), //T85621
 	),
-	'+labswiki' => array('shellmanagers' => array( 'shell')),
+	'+labswiki' => array( 'shellmanagers' => array( 'shell' ) ),
 	'+legalteamwiki' => array( // Bug T63222
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'translationadmin' ),
 	),
@@ -9623,7 +9623,7 @@ $wgConf->settings = array(
 	'cawiktionary' => array( 'w', ),
 	'chywiki' => array( 'en', 'fr', ), // T37983
 	'ckbwiki' => array( 'fa', 'ar', 'ku', 'en', 'de', 'fr', 'it', 'es', 'ru', 'pt', ), // Bug T54633
-	'commonswiki' => array( 'meta', 'w:en', 'w:de', 'w:fr', 'w:pl', 'w:ja', 'w:es', 'w:nl', 'w:ru', 'w:sv', 'w:ja', 'w:it', 'w:pt', 'w:zh', 'wikibooks:en', 'mediawikiwiki', 'foundation', 'wikidata'), // T13126, T56001
+	'commonswiki' => array( 'meta', 'w:en', 'w:de', 'w:fr', 'w:pl', 'w:ja', 'w:es', 'w:nl', 'w:ru', 'w:sv', 'w:ja', 'w:it', 'w:pt', 'w:zh', 'wikibooks:en', 'mediawikiwiki', 'foundation', 'wikidata' ), // T13126, T56001
 	'crhwiki' => array( 'incubator' ),
 	'crwiki' => array( 'en', 'fr' ), // T24089
 	'cswiki' => array( 'b', 'meta', 'n', 'q', 's', 'v', 'wikt' ), // T18688
@@ -12713,7 +12713,7 @@ $wgConf->settings = array(
 // Should 50% of new accounts be opted in to VisualEditor (A/B test)
 'wmgVisualEditorEnableSplitTest' => array(
 	'default' => false,
-        'enwiki' => true,
+	'enwiki' => true,
 ),
 
 // --------------- VisualEditor end ---------------
@@ -15254,7 +15254,7 @@ $wgConf->settings = array(
 	'ptwiki' => array( 'content' => 7, 'general' => 5 ),
 	'rowiki' => array( 'content' => 3, 'general' => 2 ),
 	'ruwiki' => array( 'content' => 7, 'general' => 10 ),
-	'ruwikisource' => array( 'content' => 4, 'general' => 1),
+	'ruwikisource' => array( 'content' => 4, 'general' => 1 ),
 	'ruwiktionary' => array( 'content' => 3, 'general' => 1 ),
 	'shwiki' => array( 'content' => 4, 'general' => 1 ),
 	'srwiki' => array( 'content' => 3, 'general' => 1 ),
