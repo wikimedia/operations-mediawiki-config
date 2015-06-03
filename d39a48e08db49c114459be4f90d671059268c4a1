@@ -1,0 +1,157 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceda9b01_3063483d",
+        "filename": "multiversion/mwcli.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-06-03T21:52:07Z",
+      "side": 1,
+      "message": "phpdoc needed desperately including copyright block",
+      "revId": "d39a48e08db49c114459be4f90d671059268c4a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceda9b01_907a34e6",
+        "filename": "multiversion/mwcli.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-06-03T21:52:07Z",
+      "side": 1,
+      "message": "random newline",
+      "revId": "d39a48e08db49c114459be4f90d671059268c4a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceda9b01_d0d67cc8",
+        "filename": "multiversion/mwpatch",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-06-03T21:52:07Z",
+      "side": 1,
+      "message": "Needs copyright phpdoc",
+      "revId": "d39a48e08db49c114459be4f90d671059268c4a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceda9b01_b0f41852",
+        "filename": "multiversion/mwpatch",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-06-03T21:52:07Z",
+      "side": 1,
+      "message": "require should be fully qualified using __DIR__ or dirname( __FILE__ ) rather than assuming cwd and search path.",
+      "revId": "d39a48e08db49c114459be4f90d671059268c4a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceda9b01_107164dd",
+        "filename": "multiversion/mwpatch",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-06-03T21:52:07Z",
+      "side": 1,
+      "message": "phpdoc explaining usage",
+      "revId": "d39a48e08db49c114459be4f90d671059268c4a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceda9b01_1048848b",
+        "filename": "multiversion/mwpatch",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-06-03T21:52:07Z",
+      "side": 1,
+      "message": "Should this be configurable in some way? At least with a cli argument?",
+      "revId": "d39a48e08db49c114459be4f90d671059268c4a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceda9b01_b0817894",
+        "filename": "multiversion/mwpatch",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-06-03T21:52:07Z",
+      "side": 1,
+      "message": "Should use $this-\u003ebase_dir",
+      "revId": "d39a48e08db49c114459be4f90d671059268c4a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceda9b01_f025c0bd",
+        "filename": "multiversion/mwpatch",
+        "patchSetId": 1
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-06-03T21:52:07Z",
+      "side": 1,
+      "message": "\"{$this-\u003ehash_dir}/{$hash}\"",
+      "revId": "d39a48e08db49c114459be4f90d671059268c4a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceda9b01_b02f389c",
+        "filename": "multiversion/mwpatch",
+        "patchSetId": 1
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-06-03T21:52:07Z",
+      "side": 1,
+      "message": "\"Patch already added: {$name}\"",
+      "revId": "d39a48e08db49c114459be4f90d671059268c4a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
