@@ -14927,6 +14927,7 @@ $wgConf->settings = array(
 	'default' => true,
 	'arwiki' => false,
 	'cawiki' => false,
+	'eswiki' => false,
 	'fawiki' => false, // Bug T98237
 	'hewiki' => false, // Bug T98237
 	'itwiki' => false, // Bug T98303
