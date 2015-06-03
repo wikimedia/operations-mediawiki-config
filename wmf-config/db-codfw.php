@@ -319,7 +319,7 @@ $wgLBFactoryConf = array(
 		'10.64.32.19' => 1, # es1009, master
 		'10.192.16.29' => 1, #es2008
 		'10.192.16.30' => 3, # es2009
-#		'10.192.16.31' => 3, # es2010 (downtime for maintenance)
+		'10.192.16.31' => 3, # es2010
 	),
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => array(
