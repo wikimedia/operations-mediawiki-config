@@ -3061,7 +3061,11 @@ $wgConf->settings = array(
 		'Thesaurus_talk' => 111,
 	),
 	'+itwiki' => array(
-		'WP' => NS_PROJECT, // 15116
+		'WP' => NS_PROJECT, // T17116
+		'CAT' => NS_CATEGORY, // T101274
+		'DP' => 103, // T101274
+		'DW' => NS_PROJECT_TALK, // T101274
+		'T' => NS_TEMPLATE, // T101274
 	),
 	'+itwikibooks' => array(
 		'Portale' => 100,
