@@ -180,10 +180,18 @@ function wmfLabsSettings() {
 			'mywiki' => true,
 		),
 
-		'wgLogo' => array(
-			'commonswiki' => '$stdlogo',
-			'dewiki' => '$stdlogo',
-			'wikidatawiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/4/43/Wikidata-logo-en-black.svg/135px-Wikidata-logo-en-black.svg.png',
+		'-wgLogo' => array(
+			'default' => '/static/images/project-logos/betawiki.png',
+			'commonswiki' => '/static/images/project-logos/betacommons.png',
+			'wikibooks' => '/static/images/project-logos/betacommons.png',
+			'wikidata' => '/static/images/project-logos/betacommons.png',
+			'wikidata' => '/static/images/project-logos/betawikidata.png',
+			'wikinews' => '/static/images/project-logos/betacommons.png',
+			'wikiquote' => '/static/images/project-logos/betacommons.png',
+			'wikisource' => '/static/images/project-logos/betacommons.png',
+			'wikiversity' => '/static/images/project-logos/betawikiversity.png',
+			'wikivoyage' => '/static/images/project-logos/betacommons.png',
+			'wiktionary' => '/static/images/project-logos/betacommons.png',
 		),
 
 		'wgFavicon' => array(
