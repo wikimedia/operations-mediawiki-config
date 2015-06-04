@@ -34,6 +34,23 @@
       "revId": "a668ab7478e75ca23d6da8f24cd1c2c7935267f2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aedf27f1_38ffad64",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14787,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-06-04T13:33:40Z",
+      "side": 1,
+      "message": "The rest of the entries here (except testwiki) are in alphabetical order. Any reason not to do that with the new additions?",
+      "revId": "a668ab7478e75ca23d6da8f24cd1c2c7935267f2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
