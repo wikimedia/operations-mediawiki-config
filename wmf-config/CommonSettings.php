@@ -2964,11 +2964,6 @@ if ( in_array( $wgDBname, array( 'wikidatawiki', 'testwikidatawiki' ) ) ) {
 	};
 }
 
-// Bug T97469. Should be safe to remove after 2015-05-29T22:00:00Z
-$wgHooks['ValidateExtendedMetadataCache'][] = function ( $timestamp, $file ) {
-	return $timestamp > '20150429220000';
-};
-
 $wgExemptFromUserRobotsControl = array_merge( $wgContentNamespaces, $wmgExemptFromUserRobotsControlExtra );
 
 // additional "language names", adding to Names.php data
