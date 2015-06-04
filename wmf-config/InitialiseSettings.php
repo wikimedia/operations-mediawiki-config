@@ -14783,7 +14783,7 @@ $wgConf->settings = array(
 
 // CX Campaigns
 'wmgContentTranslationCampaigns' => array(
-	'default' => array( 'newarticle', 'cxstats' ),
+	'default' => array( 'newarticle', 'cxstats', 'staff-recommender' ),
 ),
 
 // Namespace to publish article
