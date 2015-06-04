@@ -13935,8 +13935,7 @@ $wgConf->settings = array(
 	'wikidata' => true,
 ),
 'wmgUseApiFeatureUsage' => array(
-	'default' => false,
-	'group0' => true,
+	'default' => true,
 ),
 'wmgUseBounceHandler' => array(
 	'default' => true,
