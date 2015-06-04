@@ -11790,8 +11790,6 @@ $wgConf->settings = array(
 
 'wmgUsePopups' => array(
 	'default' => false,
-	'cawiki' => true,  // T88164
-	'elwiki' => true,  // T88164
 ),
 
 'wmgPopupsBetaFeature' => array(
