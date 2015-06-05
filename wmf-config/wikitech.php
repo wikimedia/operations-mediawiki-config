@@ -47,7 +47,7 @@ $wgLDAPLowerCaseUsername = array( 'labs' => false, 'invaliddomain' => false );
 
 require_once( "$IP/extensions/OpenStackManager/OpenStackManager.php" );
 $wgOpenStackManagerNovaKeypairStorage = 'ldap';
-$wgOpenStackManagerNovaIdentityURI = 'http://virt1000.wikimedia.org:35357/v2.0';
+$wgOpenStackManagerNovaIdentityURI = 'http://labcontrol1001.wikimedia.org:35357/v2.0';
 $wgOpenStackManagerLDAPDomain = 'labs';
 $wgOpenStackManagerLDAPProjectBaseDN = 'ou=projects,dc=wikimedia,dc=org';
 $wgOpenStackManagerLDAPProjectGroupBaseDN = "ou=groups,dc=wikimedia,dc=org";
@@ -58,7 +58,7 @@ $wgOpenStackManagerLDAPDefaultShell = '/bin/bash';
 $wgOpenStackManagerLDAPUseUidAsNamingAttribute = true;
 $wgOpenStackManagerDNSOptions = array(
 	'enabled' => true,
-	'servers' => array( 'primary' => 'virt1000.wikimedia.org' ),
+	'servers' => array( 'primary' => 'labcontrol1001.wikimedia.org' ),
 	'soa'     => array( 'hostmaster' => 'hostmaster.wikimedia.org', 'refresh' => '1800', 'retry' => '3600', 'expiry' => '86400', 'minimum' => '7200' ),
 );
 $wgOpenStackManagerPuppetOptions = array(

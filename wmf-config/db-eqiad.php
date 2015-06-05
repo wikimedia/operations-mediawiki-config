@@ -451,7 +451,7 @@ $wgLBFactoryConf = array(
 	'db1071' => '10.64.48.26', #do not remove or comment out
 	'db1072' => '10.64.48.27', #do not remove or comment out
 	'db1073' => '10.64.48.28', #do not remove or comment out
-	'virt1000' => '208.80.154.18', #do not remove or comment out
+	'labcontrol1001' => '208.80.154.92', #do not remove or comment out
 	'silver' => '208.80.154.136', #do not remove or comment out
 ),
 
