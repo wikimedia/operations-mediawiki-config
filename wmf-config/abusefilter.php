@@ -312,6 +312,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true; // T101604
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // Bug T44012
 		break;
 	case 'ptwiktionary':
