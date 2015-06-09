@@ -54,6 +54,9 @@ $wgCirrusSearchWikimediaExtraPlugin = array(
 		'build',
 		'use',
 	),
+	'super_detect_noop' => true,
+	'field_value_factor_with_default' => true,
+	'id_hash_mod_filter' => true,
 );
 
 # Enable the "experimental" highlighter on all wikis
