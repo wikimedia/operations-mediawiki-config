@@ -14291,6 +14291,7 @@ $wgConf->settings = array(
 	'sewikimedia' => true, // Bug T63192
 	'svwiki' => true,
 	'tewiki' => true,
+	'thwiki' => true, // T100079
 	'ukwiki' => true,
 	'viwiki' => true,
 	'wikidatawiki' => true,
