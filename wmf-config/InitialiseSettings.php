@@ -576,6 +576,7 @@ $wgConf->settings = array(
 	'lmowiki' => '/static/images/project-logos/lmowiki.png',  // T42285
 	'lnwiki' => '/static/images/project-logos/lnwiki.png',  // T48589
 	'lowiki' => '/static/images/project-logos/lowiki.png',  // T50397
+	'lrcwiki' => '/static/images/project-logos/lrcwiki.png',  // T102026
 	'ltwiki' => '/static/images/project-logos/ltwiki.png',  // T48589
 	'ltgwiki' => '/static/images/project-logos/ltgwiki.png',
 	'lvwiki' => '/static/images/project-logos/lvwiki.png',
@@ -1154,6 +1155,7 @@ $wgConf->settings = array(
 	'jawikisource' => false, // Bug T5572
 	'jawiktionary' => false, // Bug T13775
 	'loginwiki' => false,
+	'lrcwiki' => false, // Bug T102026
 	'mswiktionary' => false, // Bug T69152
 	'nlwikisource' => false, // Bug T73403
 	'nlwikivoyage' => false, // Bug T73403
@@ -1238,6 +1240,7 @@ $wgConf->settings = array(
 	'jawikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja',
 	'kowiki' => '/wiki/위키백과:파일_올리기', // Bug T54076
 	'lawiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=la', // Bug T15190
+	'lrcwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=lrc', // Bug T102026
 	'maiwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=mai', // Bug T74346
 	'metawiki' => false, // Bug T52287
 	'mlwiki' => '/wiki/വിക്കിപീഡിയ:അപ്‌ലോഡ്',
@@ -1771,6 +1774,7 @@ $wgConf->settings = array(
 	'liwikisource' => 'Wikibrónne',
 	'loginwiki' => 'Wikimedia Login Wiki',
 	'lowiki' => 'ວິກິພີເດຍ',
+	'lrcwiki' => 'ڤیکیپئدیا', // Bug T102026
 	'ltgwiki' => 'Vikipedeja',
 	'ltwiki' => 'Vikipedija',
 	'ltwikisource' => 'Vikišaltiniai',
@@ -2237,6 +2241,7 @@ $wgConf->settings = array(
 	'liwikisource' => 'Wikibrónne',
 	'loginwiki' => 'Project',
 	'lowiki' => 'ວິກິພີເດຍ',
+	'lrcwiki' => 'ڤیکیپئدیا', // Bug T102026
 	'ltgwiki' => 'Vikipedeja',
 	'ltwiki' => 'Vikipedija',
 	'ltwikisource' => 'Vikišaltiniai',
@@ -2448,6 +2453,7 @@ $wgConf->settings = array(
 	'lezwiki' => 'Википедия_веревирд_авун',
 	'liwikibooks' => 'Euverlèk_Wikibeuk',
 	'lowiki' => 'ສົນທະນາກ່ຽວກັບວິກິພີເດຍ',
+	'lrcwiki' => 'چأک_چئنە_ڤیکیپئدیا', // Bug T102026
 	'ltgwiki' => 'Vikipedejis_sprīža',
 	'ltwiki' => 'Vikipedijos_aptarimas',
 	'ltwiktionary' => 'Vikižodyno_aptarimas',
@@ -4894,6 +4900,10 @@ $wgConf->settings = array(
 		101 => 'Descüssiú_Portal',
 		102 => 'Purtaal',
 		103 => 'Descüssiun_Purtaal',
+	),
+	'lrcwiki' => array(
+		100 => 'پورتال', // Bug T102026
+		101 => 'چأک_چئنە_پورتال', // Bug T102026
 	),
 	'ltwiki' => array(
 		100 => 'Vikisritis',
