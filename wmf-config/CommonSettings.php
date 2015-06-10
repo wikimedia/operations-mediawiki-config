@@ -312,6 +312,12 @@ $wgPasswordDefault = 'pbkdf2';
 // This needs to be increased as allowable by server performance
 $wgPasswordConfig['pbkdf2']['cost'] = '64000';
 
+// Temporarily set the policy for these roles to the previous WMF setting until
+// we communicate the change to affected communities.
+$wgPasswordPolicy['policies']['bureaucrat']['MinimalPasswordLength'] = 1;
+$wgPasswordPolicy['policies']['sysop']['MinimalPasswordLength'] = 1;
+$wgPasswordPolicy['policies']['bot']['MinimalPasswordLength'] = 1;
+
 # Not CLI, see http://bugs.php.net/bug.php?id=47540
 if ( PHP_SAPI != 'cli' ) {
 	ignore_user_abort( true );
