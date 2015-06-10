@@ -11395,6 +11395,7 @@ $wgConf->settings = array(
 		'www.jacar.go.jp',                  // Japan Center for Asian Historical Records - T98733
 		'*.sl.nsw.gov.au',                  // New South Wales State Library - T98744
 		'*.bl.uk',                          // British Library - T98734
+		'www.limis.lt',                     // Lithuanian Art Museum - T101513
 	),
 ),
 
