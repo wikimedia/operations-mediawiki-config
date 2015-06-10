@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_ac61fbd1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 6343,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-06-10T16:42:21Z",
+      "side": 1,
+      "message": "does not exist: https://gu.wikipedia.org/wiki/%E0%AA%AE%E0%AB%80%E0%AA%A1%E0%AA%BF%E0%AA%AF%E0%AA%BE%E0%AA%B5%E0%AA%BF%E0%AA%95%E0%AA%BF:Village_pump-url",
+      "revId": "687434688cb786a6384eaacbf9ccd8f6e6810927",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
