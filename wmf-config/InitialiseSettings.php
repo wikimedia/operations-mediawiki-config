@@ -6339,6 +6339,9 @@ $wgConf->settings = array(
 		'licenses',
 		'uploadtext',
 	),
+	'guwiki' => array(
+		'village pump-url',
+	),
 	'incubatorwiki' => array(
 		'sidebar-mainpage-url',
 		'sidebar-help-url',
