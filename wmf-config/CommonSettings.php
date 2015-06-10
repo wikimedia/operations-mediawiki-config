@@ -1971,33 +1971,10 @@ if ( $wmgUseRestbaseVRS ) {
 }
 
 if ( $wmgUseParsoid ) {
-	require_once( "$IP/extensions/Parsoid/Parsoid.php" );
-
 	$wmgParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
 
 	// The wiki prefix to use
 	$wgParsoidWikiPrefix = $wgDBname;
-
-	// List the parsoid cache servers to keep up to date.
-	//
-	// We target the load balancer in front of the front-end caches, which
-	// will then pick one front-end. This works as we disabled caching in the
-	// front-ends. The main reason for doing it this way is that request
-	// coalescing in the backends does not work with req.hash_always_miss =
-	// true.
-	$wgParsoidCacheServers = array(
-		'http://10.2.2.29', // parsoidcache.svc.eqiad.wmnet
-	);
-
-	// Load shedding knob, affects whether new Parsoid jobs are enqueued.
-	// Set to something between 0 (process all updates) and 1 (skip all updates).
-	$wgParsoidSkipRatio = 0;
-
-	// Throttle rate of template updates by setting the number of tests per
-	// job to something lowish, and limiting the maximum number of updates to
-	// process per template edit
-	$wgParsoidCacheUpdateTitlesPerJob = 12;
-	$wgParsoidMaxBacklinksInvalidate = 500000;
 }
 
 if ( $wmgUseVisualEditor ) {
