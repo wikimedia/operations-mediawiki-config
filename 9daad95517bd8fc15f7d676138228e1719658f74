@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_61eb1ca1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3064,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-06-10T15:13:57Z",
+      "side": 1,
+      "message": "Can  you add a \u0027T\u0027 in front of this comment while you\u0027re here please?",
+      "revId": "9daad95517bd8fc15f7d676138228e1719658f74",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
