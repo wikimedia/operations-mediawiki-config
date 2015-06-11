@@ -14939,14 +14939,15 @@ $wgConf->settings = array(
 
 'wmgWikibaseEnableArbitraryAccess' => array(
 	'default' => false,
-	'enwikivoyage' => true,
 	'fawiki' => true,
 	'hewiki' => true,
 	'itwiki' => true, // Bug T98303
 	'nlwiki' => true,
 	'testwiki' => true,
 	'wikidata' => true,
+	'wikiquote' => true,
 	'wikisource' => true, // Bug T98756
+	'wikivoyage' => true,
 ),
 
 'wmgWikibaseUseLegacyUsageIndex' => array(
