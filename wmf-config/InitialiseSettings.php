@@ -12614,6 +12614,8 @@ $wgConf->settings = array(
 	'wiktionary' => false,	# Paused until template editing is more tightly integrated
 	'frwiktionary' => true, # Per community request
 	'svwiktionary' => true, # Per community request
+
+	'wikitech' => false,	# Paused until wikitech is in RESTbase
 ),
 
 // Whether VisualEditor should bypass the MediaWiki layer and contact RESTbase directly for speed
