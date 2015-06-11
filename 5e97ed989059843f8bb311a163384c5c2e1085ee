@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_be427a11",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1158,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-06-11T16:53:19Z",
+      "side": 1,
+      "message": "bug number",
+      "revId": "5e97ed989059843f8bb311a163384c5c2e1085ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_5e47d622",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1243,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-06-11T16:53:19Z",
+      "side": 1,
+      "message": "bug number",
+      "revId": "5e97ed989059843f8bb311a163384c5c2e1085ee",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
