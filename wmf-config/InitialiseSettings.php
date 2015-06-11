@@ -12581,11 +12581,9 @@ $wgConf->settings = array(
 // whether to configure RESTBase as a Virtual REST Service
 // in MW Core
 'wmgUseRestbaseVRS' => array(
-	'default' => false,
-	'wikipedia' => true,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
+	'default' => true,
+	'labswiki' => false, # T102178
+	'private' => false,
 ),
 
 // -------------- RESTBase end --------------
