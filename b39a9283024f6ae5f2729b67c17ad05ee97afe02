@@ -16,6 +16,23 @@
       "revId": "b39a9283024f6ae5f2729b67c17ad05ee97afe02",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_1e194e7e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 2100
+      },
+      "writtenOn": "2015-06-11T16:31:18Z",
+      "side": 1,
+      "message": "so, where do you define \"// T102026\" then?, where it says it was requested on the ticket.",
+      "revId": "b39a9283024f6ae5f2729b67c17ad05ee97afe02",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
