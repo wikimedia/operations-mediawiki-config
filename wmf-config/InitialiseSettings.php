@@ -14963,25 +14963,7 @@ $wgConf->settings = array(
 
 'wmgWikibaseUseLegacyUsageIndex' => array(
 	'default' => true,
-	'arwiki' => false,
-	'cawiki' => false,
-	'eswiki' => false,
-	'fawiki' => false, // Bug T98237
-	'frwiki' => false,
-	'hewiki' => false, // Bug T98237
-	'huwiki' => false,
-	'itwiki' => false, // Bug T98303
-	'jawiki' => false,
-	'kowiki' => false,
-	'nlwiki' => false, // Bug T96683
-	'rowiki' => false,
-	'testwiki' => false,
-	'ukwiki' => false,
-	'viwiki' => false,
-	'wikidata' => false,
-	'wikiquote' => false, // Bug T98247
-	'wikisource' => false, // Bug T96683 and T98240
-	'wikivoyage' => false,
+	'usagetracking' => true,
 ),
 
 'wmgUseWikibaseRepo' => array(
