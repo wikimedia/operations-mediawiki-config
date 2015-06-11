@@ -12619,6 +12619,7 @@ $wgConf->settings = array(
 // Whether VisualEditor should bypass the MediaWiki layer and contact RESTbase directly for speed
 'wmgVisualEditorAccessRESTbaseDirectly' => array(
 	'default' => true,		# T100026
+	'+labswiki' => false,	# Wikitech doesn't properly work yet in RESTbase
 	'private' => false,		# Private wikis aren't yet supported by RESTbase
 ),
 
