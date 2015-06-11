@@ -14960,6 +14960,7 @@ $wgConf->settings = array(
 	'hewiki' => false, // Bug T98237
 	'huwiki' => false,
 	'itwiki' => false, // Bug T98303
+	'jawiki' => false,
 	'kowiki' => false,
 	'nlwiki' => false, // Bug T96683
 	'rowiki' => false,
