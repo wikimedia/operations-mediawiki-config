@@ -33,6 +33,24 @@
       "revId": "b39a9283024f6ae5f2729b67c17ad05ee97afe02",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_5e3d96b7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 322,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-06-11T16:33:33Z",
+      "side": 1,
+      "message": "We don\u0027t specifically add a separate one just to add // TXXXX when it\u0027s the default.",
+      "parentUuid": "8ec42329_1e194e7e",
+      "revId": "b39a9283024f6ae5f2729b67c17ad05ee97afe02",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
