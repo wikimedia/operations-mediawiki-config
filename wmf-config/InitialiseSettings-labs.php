@@ -1016,7 +1016,7 @@ function wmfLabsSettings() {
 			'en_rtlwiki' => array( 'Talk:Flow' ),
 		),
 		'wmgFlowOccupyNamespaces' => array(
-			'cawiki' => 191, // Flow_test_talk:
+			'cawiki' => array( 191 ), // Flow_test_talk:
 		),
 		# No separate Flow DB or cluster (yet) for labs.
 		'-wmgFlowDefaultWikiDb' => array(
