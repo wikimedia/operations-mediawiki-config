@@ -226,6 +226,11 @@ $wmgAddWikiNotify = "newprojects@lists.wikimedia.org";
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
+// T99740: Test LCStoreStaticArray on test2wiki -- Ori 2015-06-11
+if ( $wgDBname === 'test2wiki' ) {
+	$wgLocalisationCacheConf['store'] = 'array';
+}
+
 // Bug T29320: skip MessageBlobStore::clear(); handle via refreshMessageBlobs.php instead
 $wgHooks['LocalisationCacheRecache'][] = function( $cache, $code, &$allData, &$purgeBlobs = true ) {
 	$purgeBlobs = false;
