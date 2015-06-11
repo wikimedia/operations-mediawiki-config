@@ -1985,7 +1985,6 @@ if ( $wmgUseVisualEditor ) {
 	// Parsoid connection configuration
 	$wgVisualEditorParsoidURL = $wmgParsoidURL;
 	$wgVisualEditorParsoidPrefix = $wgParsoidWikiPrefix;
-	$wgVisualEditorParsoidProblemReportURL = 'http://parsoid.wmflabs.org/_bugs/';
 	if ( $wmgParsoidForwardCookies ) {
 		$wgVisualEditorParsoidForwardCookies = true;
 	}
@@ -2396,9 +2395,6 @@ $wgJobTypeConf['webVideoTranscode'] = array( 'claimTTL' => 86400 ) + $wgJobTypeC
 $wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMetadataJob';
 $wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMediafileJob';
 $wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetGWTFileBackendCleanupJob';
-
-# Slow Parsoid jobs
-$wgJobTypesExcludedFromDefaultQueue[] = 'ParsoidCacheUpdateJobOnDependencyChange';
 
 if ( $wmgUseEducationProgram ) {
 	require_once( "$IP/extensions/EducationProgram/EducationProgram.php" );
