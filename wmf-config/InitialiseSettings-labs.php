@@ -106,6 +106,10 @@ function wmfLabsSettings() {
 			'wikidatawiki'  => 'http://wikidata.$variant.wmflabs.org',
 		),
 
+		'+wgExtraNamespaces' => array(
+			'cawiki' => array( 190 => 'Flow_test', 191 => 'Flow_test_talk' ),
+		),
+
 		'wmgUsabilityPrefSwitch' => array(
 			'default' => ''
 		),
@@ -1010,6 +1014,9 @@ function wmfLabsSettings() {
 		'wmgFlowOccupyPages' => array(
 			'enwiki' => array( 'Talk:Flow QA', 'Talk:Flow' ),
 			'en_rtlwiki' => array( 'Talk:Flow' ),
+		),
+		'wmgFlowOccupyNamespaces' => array(
+			'cawiki' => 191, // Flow_test_talk:
 		),
 		# No separate Flow DB or cluster (yet) for labs.
 		'-wmgFlowDefaultWikiDb' => array(
