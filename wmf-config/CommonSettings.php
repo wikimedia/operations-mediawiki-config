@@ -1083,25 +1083,6 @@ if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_P
 	$wgServer = preg_replace( '/^http:/', 'https:', $wgServer );
 }
 
-// Disable redirects to HTTPS for clients in some countries
-$wgHooks['CanIPUseHTTPS'][] = function( $ip, &$canDo ) {
-	global $wmgHTTPSBlacklistCountries;
-
-	if ( !function_exists( 'geoip_country_code_by_name' ) ) {
-		return true;
-	}
-	// geoip_country_code_by_name() gives a warning for IPv6 addresses, possibly does DNS resolution
-	if ( !IP::isIPv4( $ip ) ) {
-		return true;
-	}
-
-	$country = geoip_country_code_by_name( $ip );
-	if ( in_array( $country, $wmgHTTPSBlacklistCountries ) ) {
-		$canDo = false;
-	}
-	return true;
-};
-
 $wgHiddenPrefs[] = 'prefershttps'; // T91352, T102245
 
 if ( isset( $_REQUEST['captchabypass'] ) && $_REQUEST['captchabypass'] == $wmgCaptchaPassword ) {

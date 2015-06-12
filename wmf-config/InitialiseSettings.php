@@ -15500,15 +15500,6 @@ $wgConf->settings = array(
 	'foundationwiki' => '!^https?://(www\.)?wikimediafoundation\.org/!',
 ),
 
-'wmgHTTPSBlacklistCountries' => array(
-	'default' => array(
-		'IR', // Iran
-	),
-	'+wiki' => array(
-		'CN', // China
-	),
-),
-
 'wmgUsePetition' => array(
 	'default' => false,
 	'testwiki' => true,
