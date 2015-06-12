@@ -110,7 +110,7 @@ function wmfLabsSettings() {
 			'cawiki' => array( 190 => 'Flow_test', 191 => 'Flow_test_talk' ),
 		),
 
-		'+wgNamespaceWithSubpages' => array(
+		'+wgNamespacesWithSubpages' => array(
 			'cawiki' => array( 190, 191 ),
 		),
 
