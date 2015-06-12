@@ -1077,12 +1077,6 @@ $wgProxyList = "$wmfConfigDir/mwblocker.log";
 
 $wgBrowserBlackList[] = '/^Lynx/';
 
-if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
-	// New HTTPS service on regular URLs
-	$wgInternalServer = $wgServer; // Keep this as HTTP for IRC notifications (Bug T31925)
-	$wgServer = preg_replace( '/^http:/', 'https:', $wgServer );
-}
-
 // Disable redirects to HTTPS for clients in some countries
 $wgHooks['CanIPUseHTTPS'][] = function( $ip, &$canDo ) {
 	global $wmgHTTPSBlacklistCountries;
