@@ -63,7 +63,7 @@ if( isset( $_GET['limit'] ) ) {
 $urlSearch = urlencode( $search );
 
 # OpenSearch JSON suggest API
-$url = "http://$lang.$site.org/w/api.php?action=opensearch&search=$urlSearch&limit=$limit";
+$url = "https://$lang.$site.org/w/api.php?action=opensearch&search=$urlSearch&limit=$limit";
 $c = curl_init( $url );
 curl_setopt_array( $c, array(
 	CURLOPT_RETURNTRANSFER => true,
