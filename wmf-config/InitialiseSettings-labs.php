@@ -111,7 +111,7 @@ function wmfLabsSettings() {
 		),
 
 		'+wgNamespacesWithSubpages' => array(
-			'cawiki' => array( 190, 191 ),
+			'cawiki' => array( 190 => true, 191 => true ),
 		),
 
 		'wmgUsabilityPrefSwitch' => array(
