@@ -1102,10 +1102,7 @@ $wgHooks['CanIPUseHTTPS'][] = function( $ip, &$canDo ) {
 	return true;
 };
 
-// HSTS domains allow no option. TODO: a smarter switch for configuration.
-if ( $wgLanguageCode == 'ru' ) {
-	$wgHiddenPrefs[] = 'prefershttps'; // T91352
-}
+$wgHiddenPrefs[] = 'prefershttps'; // T91352, T102245
 
 if ( isset( $_REQUEST['captchabypass'] ) && $_REQUEST['captchabypass'] == $wmgCaptchaPassword ) {
 	$wmgEnableCaptcha = false;
