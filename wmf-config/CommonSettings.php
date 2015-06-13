@@ -258,7 +258,7 @@ $wgShowIPinHeader = false;
 $wgUseGzip = true;
 $wgRCMaxAge = 30 * 86400;
 
-$wgUseTeX = true;
+$wgUseTeX = $wgDBname !== 'labswiki';
 $wgTmpDirectory     = '/tmp';
 
 $wgSQLMode = null;
@@ -844,6 +844,8 @@ $wgPasswordResetRoutes['email'] = true;
 if ( $wmgUseClusterFileBackend ) {
 	# Cluster-dependent files for file backend
 	require( getRealmSpecificFilename( "$wmfConfigDir/filebackend.php" ) );
+} else {
+	$wgUseInstantCommons = true;
 }
 
 if ( $wmgUseClusterJobqueue ) {
