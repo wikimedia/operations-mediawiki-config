@@ -16,6 +16,24 @@
       "revId": "77ead06eab4c2bfa68296ff92d6d705f8c065b59",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_09590590",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-06-13T23:09:19Z",
+      "side": 1,
+      "message": "See PS2. Also:\nkrenair@silver:~$ texvc --help\nThe program \u0027texvc\u0027 is currently not installed. To run \u0027texvc\u0027 please ask your administrator to install the package \u0027mediawiki-math-texvc\u0027",
+      "parentUuid": "8ec42329_89309554",
+      "revId": "77ead06eab4c2bfa68296ff92d6d705f8c065b59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
