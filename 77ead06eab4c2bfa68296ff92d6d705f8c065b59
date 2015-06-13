@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_89309554",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 261,
+      "author": {
+        "id": 216
+      },
+      "writtenOn": "2015-06-13T22:46:33Z",
+      "side": 1,
+      "message": "Why is this different on Labs anyway?  I assume previously it was a PITA to set up \u003cmath\u003e on the separate wikitech server, but now it should be the same effort everywhere?  (Also, https://www.mediawiki.org/wiki/Extension:Math says: \"Backward compatibility global; no longer does anything.\")",
+      "revId": "77ead06eab4c2bfa68296ff92d6d705f8c065b59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
