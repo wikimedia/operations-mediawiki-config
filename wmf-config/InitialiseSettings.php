@@ -9989,6 +9989,7 @@ $wgConf->settings = array(
 ),
 
 'wgGenerateThumbnailOnParse' => array(
+	'labswiki' => true,
 	'default' => false,
 ),
 
