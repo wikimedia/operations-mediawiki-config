@@ -14557,6 +14557,7 @@ $wgConf->settings = array(
 	'frwiki' => array(
 		'Wikipédia:Forum des nouveaux/Flow',
 		'Discussion Wikipédia:Flow',
+		'Projet:Astronomie/Porte des étoiles', // T102785
 	),
 	'hewiki' => array(
 		'שיחת ויקיפדיה:זרימה',
