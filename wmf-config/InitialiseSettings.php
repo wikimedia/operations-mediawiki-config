@@ -7690,6 +7690,7 @@ $wgConf->settings = array(
 			'managednsdomain' => true,
 			'manageglobalpuppet' => true,
 			'accessrestrictedregions' => true,
+			'editallhiera' => true,
 		),
 		'shell' => array('loginviashell' => true ),
 		'shellmanagers' => array('userrights' => false ),
