@@ -4188,7 +4188,7 @@ $wgConf->settings = array(
 	'ckbwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), // Bug T54533
 	'dewiki' => array( '', 'autoconfirmed', 'editeditorprotected', 'sysop', 'superprotect' ), // T94368
 	'enwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // Bug T57432
-	'hewiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), //Bug T60207
+	'hewiki' => array( '', 'autoconfirmed', 'autopatrol', 'templateeditor' /* Bug T102466 */, 'sysop', 'superprotect' ), //Bug T60207
 	'huwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // Bug T74055
 	'lvwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), // T92645
 	'plwiki' => array( '', 'autoconfirmed', 'editor', 'sysop', 'superprotect' ), // Bug T48990
@@ -7487,12 +7487,28 @@ $wgConf->settings = array(
 	),
 	'hewiki' => array(
 		'user' => array( 'move' => false, 'upload' => true, 'move-rootuserpages' => false, ),
-		'sysop' => array( 'deleterevision' => true, 'abusefilter-modify-restricted' => true, ),
+		'sysop' => array(
+			'deleterevision' => true,
+			'abusefilter-modify-restricted' => true,
+			'templateeditor' => true, // Bug T102466
+		),
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'unwatchedpages' => true, 'rollback' => true, 'move-rootuserpages' => true,),
 		'autopatrolled' => array( 'autopatrol' => true, 'unwatchedpages' => true, ),
-		'interface-editor' => array( 'abusefilter-hidden-log' => true, 'abusefilter-hide-log' => true, 'abusefilter-log' => true, 'abusefilter-log-detail' => true,
-			'abusefilter-modify' => true, 'abusefilter-modify-restricted' => true, 'abusefilter-revert' => true, 'abusefilter-view' => true,
-			'abusefilter-view-private' => true, 'editinterface' => true, 'editusercssjs' => true, 'import' => true, 'tboverride' => true
+		'interface-editor' => array(
+			'abusefilter-hidden-log' => true,
+			'abusefilter-hide-log' => true,
+			'abusefilter-log' => true,
+			'abusefilter-log-detail' => true,
+			'abusefilter-modify' => true,
+			'abusefilter-modify-restricted' => true,
+			'abusefilter-revert' => true,
+			'abusefilter-view' => true,
+			'abusefilter-view-private' => true,
+			'editinterface' => true,
+			'editusercssjs' => true,
+			'import' => true,
+			'tboverride' => true,
+			'templateeditor' => true, // Bug T102466
 		),
 		'checkuser' => array( 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true ),
 	),
