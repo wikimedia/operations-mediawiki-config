@@ -811,7 +811,10 @@
    <div class="TechnicalStuff">
     <bdo dir="ltr">
         PHP fatal error<?php
-        header( 'HTTP/1.1 500 Internal Server Error' );
+		// Guard against "Cannot modify header information - headers already sent" warning
+		if ( !headers_sent() ) {
+			header( 'HTTP/1.1 500 Internal Server Error' );
+		}
         $err = error_get_last();
         $message = $err['message'];
         # error_get_last() doesn't return a fully populated array in HHVM,
