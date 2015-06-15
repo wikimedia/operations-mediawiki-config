@@ -7331,6 +7331,7 @@ $wgConf->settings = array(
 		'user' => array(
 			'move' => false, // autoconfirmed only
 			'collectionsaveasuserpage' => true, // T48944
+			'changetags' => false, // T97013
 		),
 		'autoconfirmed' => array( 'patrol' => true ), // T14007
 		'founder' => array( 'userrights' => true ),
@@ -7344,12 +7345,18 @@ $wgConf->settings = array(
 		'researcher' => array( 'browsearchive' => true, 'deletedhistory' => true, 'apihighlimits' => true ),
 		'reviewer' => array( 'patrol' => true ),
 		'filemover' => array( 'movefile' => true ), // T29927
-		'bot' => array( 'ipblock-exempt' => true ), // T30914
+		'bot' => array(
+			'ipblock-exempt' => true, // T30914
+			'changetags' => true, // T97013
+		),
 		'oversight' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ), // T30465
 		'checkuser' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ), // T30465
 		'bureaucrat' => array( 'move-subpages' => true, 'suppressredirect' => true, 'tboverride' => true, ),
 		'templateeditor' => array( 'templateeditor' => true, 'tboverride' => true, ), // T57432
-		'sysop' => array( 'templateeditor' => true ), // T57432
+		'sysop' => array(
+			'templateeditor' => true, // T57432
+			'changetags' => true, // T97013
+		),
 		'massmessage-sender' => array( // T60962
 			'massmessage' => true,
 		),
