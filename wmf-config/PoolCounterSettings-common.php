@@ -15,16 +15,16 @@ $wgPoolCounterConf = array(
 		'class' => 'PoolCounter_Client',
 		'timeout' => 15,
 		'workers' => 432,
-		'maxqueue' => 1,
-		'slots' => 1,
+		'maxqueue' => 600,
+		'slots' => 100,
 	),
 	// Super common and mostly fast
 	'CirrusSearch-Prefix' => array(
 		'class' => 'PoolCounter_Client',
 		'timeout' => 15,
 		'workers' => 432,
-		'maxqueue' => 1,
-		'slots' => 1,
+		'maxqueue' => 600,
+		'slots' => 100,
 	),
 	// Regex searches are much heavier then regular searches so we limit the
 	// concurrent number.
@@ -32,16 +32,16 @@ $wgPoolCounterConf = array(
 		'class' => 'PoolCounter_Client',
 		'timeout' => 60,
 		'workers' => 10,
-		'maxqueue' => 1,
-		'slots' => 1,
+		'maxqueue' => 20,
+		'slots' => 10,
 	),
 	// These should be very very fast and reasonably rare
 	'CirrusSearch-NamespaceLookup' => array(
 		'class' => 'PoolCounter_Client',
 		'timeout' => 5,
 		'workers' => 50,
-		'maxqueue' => 1,
-		'slots' => 1,
+		'maxqueue' => 200,
+		'slots' => 100,
 	),
 	'FileRender' => array(
 		'class' => 'PoolCounter_Client',
