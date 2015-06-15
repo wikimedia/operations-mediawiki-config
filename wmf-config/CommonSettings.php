@@ -616,7 +616,7 @@ if ( $wmgUseSpamBlacklist ) {
 	$wgBlacklistSettings = array(
 		'spam' => array(
 			'files' => array(
-				'http://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1'
+				'https://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1'
 			),
 		),
 	);
@@ -628,7 +628,7 @@ include( $IP . '/extensions/TitleBlacklist/TitleBlacklist.php' );
 $wgTitleBlacklistSources = array(
 	'meta' => array(
 		'type' => TBLSRC_URL,
-		'src'  => "//meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw&tb_ver=1",
+		'src'  => "https://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw&tb_ver=1",
 	),
 );
 
