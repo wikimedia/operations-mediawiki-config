@@ -63,7 +63,7 @@ function wmfLabsSettings() {
 			'wikivoyage'    => 'Wikivoyage',
 		),
 
-		'wgServer' => array(
+		'-wgServer' => array(
 			'default'     => '//$lang.wikipedia.$variant.wmflabs.org',
 			'wiktionary'	=> '//$lang.wiktionary.$variant.wmflabs.org',
 			'wikipedia'     => '//$lang.wikipedia.$variant.wmflabs.org',
@@ -85,7 +85,7 @@ function wmfLabsSettings() {
 			'wikidatawiki'  => '//wikidata.$variant.wmflabs.org',
 		),
 
-		'wgCanonicalServer' => array(
+		'-wgCanonicalServer' => array(
 			'default'     => 'http://$lang.wikipedia.$variant.wmflabs.org',
 			'wikipedia'     => 'http://$lang.wikipedia.$variant.wmflabs.org',
 			'wikibooks'     => 'http://$lang.wikibooks.$variant.wmflabs.org',
