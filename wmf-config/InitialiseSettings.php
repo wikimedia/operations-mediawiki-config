@@ -4188,7 +4188,7 @@ $wgConf->settings = array(
 	'ckbwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), // Bug T54533
 	'dewiki' => array( '', 'autoconfirmed', 'editeditorprotected', 'sysop', 'superprotect' ), // T94368
 	'enwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // Bug T57432
-	'hewiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), //Bug T60207
+	'hewiki' => array( '', 'autoconfirmed', 'autopatrol',  'templateeditor' /*Bug T102466 */, 'sysop', 'superprotect' ), //Bug T60207
 	'huwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // Bug T74055
 	'lvwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), // T92645
 	'plwiki' => array( '', 'autoconfirmed', 'editor', 'sysop', 'superprotect' ), // Bug T48990
@@ -7486,15 +7486,48 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 	),
 	'hewiki' => array(
-		'user' => array( 'move' => false, 'upload' => true, 'move-rootuserpages' => false, ),
-		'sysop' => array( 'deleterevision' => true, 'abusefilter-modify-restricted' => true, ),
-		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'unwatchedpages' => true, 'rollback' => true, 'move-rootuserpages' => true,),
-		'autopatrolled' => array( 'autopatrol' => true, 'unwatchedpages' => true, ),
-		'interface-editor' => array( 'abusefilter-hidden-log' => true, 'abusefilter-hide-log' => true, 'abusefilter-log' => true, 'abusefilter-log-detail' => true,
-			'abusefilter-modify' => true, 'abusefilter-modify-restricted' => true, 'abusefilter-revert' => true, 'abusefilter-view' => true,
-			'abusefilter-view-private' => true, 'editinterface' => true, 'editusercssjs' => true, 'import' => true, 'tboverride' => true
+		'user' => array( 
+			'move' => false,
+			'upload' => true,
+			'move-rootuserpages' => false,
 		),
-		'checkuser' => array( 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true ),
+		'sysop' => array(
+			'deleterevision' => true,
+			'abusefilter-modify-restricted' => true,
+			'templateeditor' => true, // Bug T102466
+		),
+		'patroller' => array(
+			'patrol' => true,
+			'autopatrol' => true,
+			'unwatchedpages' => true,
+			'rollback' => true,
+			'move-rootuserpages' => true,
+		),
+		'autopatrolled' => array(
+			'autopatrol' => true,
+			'unwatchedpages' => true,
+		),
+		'interface-editor' => array(
+			'abusefilter-hidden-log' => true,
+			'abusefilter-hide-log' => true,
+			'abusefilter-log' => true,
+			'abusefilter-log-detail' => true,
+			'abusefilter-modify' => true,
+			'abusefilter-modify-restricted' => true,
+			'abusefilter-revert' => true,
+			'abusefilter-view' => true,
+			'abusefilter-view-private' => true,
+			'editinterface' => true,
+			'editusercssjs' => true,
+			'import' => true,
+			'tboverride' => true,
+			'templateeditor' => true, // Bug T102466
+		),
+		'checkuser' => array(
+			'deletedhistory' => true,
+			'deletedtext' => true,
+			'abusefilter-log-detail' => true,
+		),
 	),
 	'hewikibooks' => array(
 		'patroller' => array(
@@ -8297,7 +8330,7 @@ $wgConf->settings = array(
 ),
 # @} end of groupOverrides
 
-# groupOverrides2 @{
+# groupO verrides2 @{
 'groupOverrides2' => array(
 	// IMPORTANT: don't forget to use a '+' sign in front of any group name
 	// after 'default' or it will replace the defaults completely.
