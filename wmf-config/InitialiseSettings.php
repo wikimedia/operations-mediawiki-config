@@ -4188,7 +4188,7 @@ $wgConf->settings = array(
 	'ckbwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), // Bug T54533
 	'dewiki' => array( '', 'autoconfirmed', 'editeditorprotected', 'sysop', 'superprotect' ), // T94368
 	'enwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // Bug T57432
-	'hewiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), //Bug T60207
+	'hewiki' => array( '', 'autoconfirmed', 'autopatrol', 'templateeditor', 'sysop', 'superprotect' ), //Bug T60207
 	'huwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // Bug T74055
 	'lvwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), // T92645
 	'plwiki' => array( '', 'autoconfirmed', 'editor', 'sysop', 'superprotect' ), // Bug T48990
@@ -7495,6 +7495,7 @@ $wgConf->settings = array(
 			'abusefilter-view-private' => true, 'editinterface' => true, 'editusercssjs' => true, 'import' => true, 'tboverride' => true
 		),
 		'checkuser' => array( 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-log-detail' => true ),
+		'templateeditor' => array( 'templateeditor' => true, 'tboverride' => true, ),
 	),
 	'hewikibooks' => array(
 		'patroller' => array(
@@ -8297,7 +8298,7 @@ $wgConf->settings = array(
 ),
 # @} end of groupOverrides
 
-# groupOverrides2 @{
+# groupO verrides2 @{
 'groupOverrides2' => array(
 	// IMPORTANT: don't forget to use a '+' sign in front of any group name
 	// after 'default' or it will replace the defaults completely.
@@ -8619,7 +8620,7 @@ $wgConf->settings = array(
 	),
 	'+hewiki' => array(
 		'sysop' => array( 'patroller', 'autopatrolled', 'accountcreator' ),
-		'bureaucrat' => array( 'interface-editor' ),
+		'bureaucrat' => array( 'interface-editor', 'templateeditor' ),
 	),
 	'+hewikibooks' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
