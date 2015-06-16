@@ -1152,7 +1152,7 @@ $wgConf->settings = array(
 	'eswikiquote' => false, // Bug T11728
 	'eswikivoyage' => false, // Bug T44933
 	'euwiki' => false, // Bug T30609
-	'fawikivoyage' => false, // Bug T73382
+	'fawikivoyage' => true, // Bug T73382 T102714
 	'gomwiki' => false, // T96468
 	'itwikiquote' => false, // Bug T14012
 	'jawikisource' => false, // Bug T5572
@@ -1226,7 +1226,7 @@ $wgConf->settings = array(
 	'eswiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es', // Bug T9152
 	'euwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=eu',
 	'fawiki' => '/wiki/ویکی‌پدیا:بارگذاری',
-	'fawikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=fa', // Bug T73382
+	'fawikivoyage' => '/wiki/%D9%88%DB%8C%DA%A9%DB%8C%E2%80%8C%D8%B3%D9%81%D8%B1:%D8%A8%D8%A7%D8%B1%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C', // Bug T73382 T102714
 	'frwiki' => '/wiki/Aide:Importer_un_fichier',
 	'gomwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=gom', // T96468
 	'guwiki' => false,
