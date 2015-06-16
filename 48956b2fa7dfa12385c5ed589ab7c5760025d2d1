@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_fd6c6533",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 13990,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2015-06-16T06:37:11Z",
+      "side": 1,
+      "message": "only CN uses published state. I think you should use the simpler set of states like commons.",
+      "revId": "48956b2fa7dfa12385c5ed589ab7c5760025d2d1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_9d7be1ea",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 14048,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2015-06-16T06:37:11Z",
+      "side": 1,
+      "message": "I think this is not useful. If I remember correctly the database for translators is per wiki.",
+      "revId": "48956b2fa7dfa12385c5ed589ab7c5760025d2d1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
