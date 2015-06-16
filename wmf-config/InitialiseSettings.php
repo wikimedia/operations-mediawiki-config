@@ -15626,12 +15626,15 @@ $wgConf->settings = array(
 	'votewiki' => '_blank',
 ),
 
-
+// Enable the "Give us feedback" link after search results on enwiki
+'wgCirrusSearchFeedbackLink' => array(
+	'default' => false,
+	'enwiki' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eLmmEQA9600f8zP'
 );
-
 
 ### WMF Labs override #####
 if ( $wmfRealm == 'labs' ) {
 	require ( "$wmfConfigDir/InitialiseSettings-labs.php" );
 	wmfLabsOverrideSettings();
 }
+
