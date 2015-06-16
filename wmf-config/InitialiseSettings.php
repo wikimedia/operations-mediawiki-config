@@ -7443,7 +7443,7 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 	),
 	'hewiki' => array(
-		'user' => array( 
+		'user' => array(
 			'move' => false,
 			'upload' => true,
 			'move-rootuserpages' => false,
@@ -15018,7 +15018,7 @@ $wgConf->settings = array(
 
 'wmgWikibaseUseLegacyUsageIndex' => array(
 	'default' => true,
-	'usagetracking' => true,
+	'usagetracking' => false,
 ),
 
 'wmgUseWikibaseRepo' => array(
