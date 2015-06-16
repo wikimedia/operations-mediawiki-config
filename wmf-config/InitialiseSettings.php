@@ -4172,6 +4172,7 @@ $wgConf->settings = array(
 	'default' => true,
 	'advisorywiki' => false, // Per Bug # 25519
 	'fishbowl' => false, // Per Bug T19718 Disable CentralNotice on private/fishbowl wikis
+	'nonglobal' => false,
 	'fiwikimedia' => false, // Bug T19718
 	'private' => false, // :D
 	'qualitywiki' => false,
@@ -6971,8 +6972,8 @@ $wgConf->settings = array(
 			'skipcaptcha' => true,
 			'collectionsaveascommunitypage' => true,
 			'collectionsaveasuserpage' => true,
-	),
-	'inactive' => array(
+		),
+		'inactive' => array(
 			// for show only
 		),
 	),
@@ -10815,6 +10816,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'private' => false,
 	'fishbowl' => false,
+	'nonglobal' => false,
 ),
 
 'wmgCentralAuthLoginIcon' => array(
@@ -10879,12 +10881,14 @@ $wgConf->settings = array(
 	'loginwiki' => false,
 	'private' => false,
 	'fishbowl' => false,
+	'nonglobal' => false,
 ),
 
 'wmgUseOAuth' => array(
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
+	'nonglobal' => false,
 ),
 
 # @}
@@ -11533,6 +11537,7 @@ $wgConf->settings = array(
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
+	'nonglobal' => false,
 ),
 
 'wgDisabledVariants' => array(
@@ -14929,6 +14934,7 @@ $wgConf->settings = array(
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
+	'nonglobal' => false,
 ),
 
 'wmgUseEventLogging' => array(
@@ -15453,6 +15459,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'private' => true,
 	'fishbowl' => true,
+	'nonglobal' => true,
 ),
 
 // T15712

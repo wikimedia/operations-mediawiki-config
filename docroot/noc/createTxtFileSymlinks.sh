@@ -64,6 +64,7 @@ mwconfig_files=(
 	large.dblist
 	mediaviewer.dblist
 	medium.dblist
+	nonglobal.dblist
 	private.dblist
 	s1.dblist
 	s2.dblist
