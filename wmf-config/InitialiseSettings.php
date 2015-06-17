@@ -7557,8 +7557,11 @@ $wgConf->settings = array(
 		'flood' => array( 'bot' => true, ),
 		'rollbacker' => array( 'rollback' => true, 'autopatrol' => true, ),
 		'autopatrolled' => array( 'autopatrol' => true ),
-		'filemover' => array( 'movefile' => true ), // Bug T55913
-	),
+		'mover' => array( // T102770
+			'movefile' => true,
+			'move-subpages' => true,
+			'suppressredirect' => true
+		),
 	'+itwikisource' => array(
 		'flood' => array( 'bot' => true ), // Bug T38600
 	),
@@ -8650,7 +8653,7 @@ $wgConf->settings = array(
 	),
 	'+itwiki' => array(
 		'bureaucrat' => array( 'rollbacker' ),
-		'sysop' => array( 'accountcreator', 'autopatrolled', 'flood', 'filemover' ), // Bug T55913, T63109
+		'sysop' => array( 'accountcreator', 'autopatrolled', 'flood', 'mover' ), // T55913, T63109, T102770 
 	),
 	'+itwikibooks' => array(
 		'sysop' => array( 'autopatrolled', 'patroller' ),
@@ -9277,7 +9280,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'test-sysop', 'translator', 'import', 'translationadmin' ),
 	),
 	'+itwiki' => array(
-		'bureaucrat' => array( 'rollbacker', 'autopatrolled', 'filemover' ), // Bug T55913
+		'bureaucrat' => array( 'rollbacker', 'autopatrolled', 'mover' ), // T55913, T102770
 		'sysop' => array( 'accountcreator', 'flood', ), // Bug T63109
 	),
 	'+itwikibooks' => array(
