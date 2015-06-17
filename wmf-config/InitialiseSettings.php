@@ -1100,6 +1100,7 @@ $wgConf->settings = array(
 	'ruwiki' => array( '1.5x' => '/static/images/project-logos/ruwiki-1.5x.png', '2x' => '/static/images/project-logos/ruwiki-2x.png' ),
 	'tawiki' => array( '1.5x' => '/static/images/project-logos/tawiki-1.5x.png', '2x' => '/static/images/project-logos/tawiki-2x.png' ),
 	'viwiki' => array( '1.5x' => '/static/images/project-logos/viwiki-1.5x.png', '2x' => '/static/images/project-logos/viwiki-2x.png' ),
+	'zhwiki' => array( '1.5x' => '/static/images/project-logos/zhwiki-1.5x.png', '2x' => '/static/images/project-logos/zhwiki-2x.png' ),
 
     # Wiktionary
 	'viwiktionary' => array( '1.5x' => '/static/images/project-logos/viwiktionary-1.5x.png', '2x' => '/static/images/project-logos/viwiktionary-2x.png' ),
