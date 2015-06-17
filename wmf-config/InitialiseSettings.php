@@ -9983,6 +9983,9 @@ $wgConf->settings = array(
 
 	// testing
 	'testwiki' => false,
+
+	// 'global-multiwrite' backend isn't available, so disable for now
+	'labswiki' => false,
 ),
 
 'wmgEmergencyCaptcha' => array(
