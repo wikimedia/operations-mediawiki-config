@@ -7172,6 +7172,9 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true, ), // T88591
 	),
 	'dewiki' => array(
+		'*' => array(
+			'patrolmarks' => true, // T100682
+		),
 		'user' => array(
 			'move' => false, // Report by sansculotte on #mediawiki, TS 2004-10-15
 			'upload' => false, // Bug T14391
