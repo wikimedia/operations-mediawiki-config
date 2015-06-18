@@ -15420,7 +15420,7 @@ $wgConf->settings = array(
 ),
 
 // Enable the "Give us feedback" link after search results on enwiki
-'wgCirrusSearchFeedbackLink' => array(
+'wmgCirrusSearchFeedbackLink' => array(
 	'default' => false,
 	'enwiki' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eLmmEQA9600f8zP'
 ),

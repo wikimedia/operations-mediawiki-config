@@ -23,6 +23,7 @@ if ( $wmgUseClusterJobqueue ) {
 		$wgJobTypeConf['default'];
 }
 
+
 # Turn off leading wildcard matches, they are a very slow and inefficient query
 $wgCirrusSearchAllowLeadingWildcard = false;
 
@@ -62,6 +63,9 @@ $wgCirrusSearchWikimediaExtraPlugin = array(
 # Enable the "experimental" highlighter on all wikis
 $wgCirrusSearchUseExperimentalHighlighter = true;
 $wgCirrusSearchOptimizeIndexForExperimentalHighlighter = true;
+
+# Setup the feedback link on Special:Search if enabled
+$wgCirrusSearchFeedbackLink = $wmgCirrusSearchFeedbackLink;
 
 # Settings customized per index.
 $wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
