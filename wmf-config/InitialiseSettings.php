@@ -15552,7 +15552,7 @@ $wgConf->settings = array(
 ),
 
 'wgSecureLogin' => array(
-	'default' => true,
+	'default' => false,
 ),
 
 'wgRightsUrl' => array(
