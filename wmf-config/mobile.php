@@ -240,4 +240,7 @@ if ( $wmgMobileFrontend ) {
 	if ( $wmgUseGather ) {
 		require_once "$IP/extensions/Gather/Gather.php";
 	}
+
+	// Enable browse experiment (T101155)
+	$wgMFIsBrowseEnabled = $wmgMFIsBrowseEnabled;
 }
