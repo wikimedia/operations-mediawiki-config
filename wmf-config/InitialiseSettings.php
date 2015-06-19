@@ -13272,6 +13272,14 @@ $wgConf->settings = array(
 	'kowiki' => false, // T94388
 ),
 
+// Enable browse prototype T101155
+'wmgMFIsBrowseEnabled' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'enwiki' => true,
+),
+
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
 	'cswiki' => array(
