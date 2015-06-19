@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_8906181f",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-06-19T20:40:45Z",
+      "side": 1,
+      "message": "$wgMFBrowseTags \u003d $wmgMFBrowseTags; too?",
+      "revId": "e51664868e5796e1f14f6f6d1d178658e4bc1674",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
