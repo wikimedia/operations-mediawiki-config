@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_5ecf855b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 13276,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-06-20T04:36:31Z",
+      "side": 1,
+      "message": "Needs a a default. The mobile.php file unconditionally the default set in the extension, so it must be declared here.",
+      "revId": "287ed073d160227c77e682210417bf3a2c3b4cc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_7eccc165",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 13278,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-06-20T04:36:31Z",
+      "side": 1,
+      "message": "Needs a a default.",
+      "revId": "287ed073d160227c77e682210417bf3a2c3b4cc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_7ec5a13f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 13332,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-06-20T04:36:31Z",
+      "side": 1,
+      "message": "s/western/Western/",
+      "revId": "287ed073d160227c77e682210417bf3a2c3b4cc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_1ebeddab",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 13434,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-06-20T04:36:31Z",
+      "side": 1,
+      "message": "\"Modern painters\"",
+      "revId": "287ed073d160227c77e682210417bf3a2c3b4cc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_fee0b1c9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 13495,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-06-20T04:36:31Z",
+      "side": 1,
+      "message": "\"Object-oriented programming languages\"",
+      "revId": "287ed073d160227c77e682210417bf3a2c3b4cc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
