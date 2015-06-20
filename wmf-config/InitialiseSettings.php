@@ -11451,6 +11451,7 @@ $wgConf->settings = array(
 		'*.sl.nsw.gov.au',                  // New South Wales State Library - T98744
 		'*.bl.uk',                          // British Library - T98734
 		'www.limis.lt',                     // Lithuanian Art Museum - T101513
+		'*.dvidshub.net',                   // Defense Video and Imagery Distribution System - T103062
 	),
 ),
 
