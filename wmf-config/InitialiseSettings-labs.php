@@ -1109,5 +1109,10 @@ function wmfLabsSettings() {
 			'default' => "/api/rest_v1/page/graph/png/%2\$s/%3\$s/%4\$s.png",
 			'private' => false,
 		),
+
+		'wmgUseWikibaseQuality' => array(
+			'default' => true,
+		),
+
 	);
 } # wmflLabsSettings()
