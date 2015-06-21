@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_f28ea032",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1114,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-06-21T17:43:42Z",
+      "side": 1,
+      "message": "Is this defined anywhere? It will only work as expected if it\u0027s in Wikibase.php or CommonSettings etc.",
+      "revId": "11b97114f1f8b49e737d4b72fa8b0ef4e633cc20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
