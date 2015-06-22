@@ -15664,6 +15664,10 @@ $wgConf->settings = array(
 	'votewiki' => '_blank',
 ),
 
+'wgUseTinyRGBForJPGThumbnails' => array(
+	'default' => false,
+	'testwiki' => true,
+),
 
 );
 
