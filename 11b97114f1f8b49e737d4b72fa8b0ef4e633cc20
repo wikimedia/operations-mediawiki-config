@@ -16,6 +16,24 @@
       "revId": "11b97114f1f8b49e737d4b72fa8b0ef4e633cc20",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_2585bdd4",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1114,
+      "author": {
+        "id": 640
+      },
+      "writtenOn": "2015-06-22T12:50:46Z",
+      "side": 1,
+      "message": "Yes here: https://phabricator.wikimedia.org/diffusion/EWDA/browse/master/Wikidata.php;051b91e8cfc028aca48093b57f33ce923103166b$34",
+      "parentUuid": "8ec42329_f28ea032",
+      "revId": "11b97114f1f8b49e737d4b72fa8b0ef4e633cc20",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
