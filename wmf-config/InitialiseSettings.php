@@ -14904,6 +14904,7 @@ $wgConf->settings = array(
 'wmgContentTranslationCampaigns' => array(
 	'default' => array( 'newarticle', 'cxstats', 'staff-recommender' ),
 	'dewiki' => array( 'cxstats', 'staff-recommender' ),
+	'frwiki' => array( 'newarticle', 'cxstats', 'staff-recommender', 'frwiki-recommender' ),
 ),
 
 // Namespace to publish article
