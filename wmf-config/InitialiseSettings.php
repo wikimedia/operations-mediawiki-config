@@ -14679,7 +14679,8 @@ $wgConf->settings = array(
 ),
 
 'wmgUseContentTranslation' => array(
-	'default' => true,
+	'default' => false,
+	'wikipedia' => true,
 	'arwiki' => false,
 	'bowiki' => false,
 	'cewiki' => false,
