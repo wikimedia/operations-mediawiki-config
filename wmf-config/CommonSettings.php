@@ -1970,6 +1970,7 @@ if ( $wmgUseVisualEditor ) {
 	// Parsoid connection configuration
 	$wgVisualEditorParsoidURL = $wmgParsoidURL;
 	$wgVisualEditorParsoidPrefix = $wgParsoidWikiPrefix;
+	$wgVisualEditorParsoidDomain = $wgCanonicalServer;
 	$wgVisualEditorParsoidProblemReportURL = 'http://parsoid.wmflabs.org/_bugs/';
 	if ( $wmgParsoidForwardCookies ) {
 		$wgVisualEditorParsoidForwardCookies = true;
