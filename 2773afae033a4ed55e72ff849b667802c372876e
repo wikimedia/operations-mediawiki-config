@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_6bfa9ddb",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-06-24T16:08:30Z",
+      "side": 1,
+      "message": "This line appears to be triggering a notice as $wmgMFIsBrowseEnabled isn\u0027t defined. Note that I tested this on testwiki and everything was OK though I can\u0027t be sure there were no notices there.",
+      "revId": "2773afae033a4ed55e72ff849b667802c372876e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
