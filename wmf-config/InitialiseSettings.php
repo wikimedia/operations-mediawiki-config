@@ -11658,6 +11658,7 @@ $wgConf->settings = array(
 	'hywiki' => true,
 	'ilowiki' => true,
 	'iswiki' => true,
+	'itwiki' => true, // T103643
 	'jawiki' => true,
 	'kkwiki' => true,
 	'knwiki' => true,
