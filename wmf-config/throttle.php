@@ -35,6 +35,13 @@ $wmgThrottlingExceptions[] = array( // T99772
 	'value'  => 100, // 50 participants expected, but 50K flyers printed
 );
 
+$wmgThrottlingExceptions[] = array( // T103764
+	'from'   => '2015-06-26T00:00 +0:00',
+	'to'     => '2015-06-27T23:59 +0:00',
+	'dbname' => array( 'enwiki', 'enwikisource' ),
+	'value'  => 50, // 50 expected max
+);
+
 ## Add throttling definitions above.
 
 /**
