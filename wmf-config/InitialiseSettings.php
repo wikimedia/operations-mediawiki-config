@@ -15490,8 +15490,7 @@ $wgConf->settings = array(
 ),
 
 'wgUseTinyRGBForJPGThumbnails' => array(
-	'default' => false,
-	'testwiki' => true,
+	'default' => true,
 ),
 
 );
