@@ -1271,6 +1271,9 @@ if ( $wmgUseCentralAuth ) {
 	if ( $wgDBname === 'metawiki' ) {
 		$wgCentralAuthEnableUserMerge = false;
 	}
+
+	// Create some local accounts as soon as the global registration happens
+	$wgCentralAuthAutoCreateWikis = array( 'loginwiki', 'metawiki', 'mediawikiwiki' );
 }
 
 // Config for GlobalCssJs
