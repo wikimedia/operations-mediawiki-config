@@ -200,3 +200,8 @@ $wgMWLoggerDefaultSpi = array(
 	'class' => '\\MediaWiki\\Logger\\MonologSpi',
 	'args' => array( $wmgMonologConfig ),
 );
+
+// Bug: T99581 - force logger timezone to UTC; requires Monolog >= 1.14.0
+if ( method_exists( '\\Monolog\\Logger', 'setTimezone' ) ) {
+	\Monolog\Logger::setTimezone( new DateTimeZone( 'UTC' ) );
+}
