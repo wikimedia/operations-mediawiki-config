@@ -12,6 +12,10 @@ require_once( "$IP/extensions/SemanticForms/SemanticForms.php" );
 require_once( "$IP/extensions/SemanticResultFormats/SemanticResultFormats.php" );
 enableSemantics( 'wikitech' );
 
+$smwgNamespacesWithSemanticLinks[112] = true;
+$smwgNamespacesWithSemanticLinks[NS_NOVA_RESOURCE] = true;
+#$wgNamespacesToBeSearchedDefault[NS_NOVA_RESOURCE] = true;
+
 require_once( "$IP/extensions/LdapAuthentication/LdapAuthentication.php" );
 $wgAuth = new LdapAuthenticationPlugin();
 $wgLDAPDomainNames = array( 'labs');
@@ -115,15 +119,11 @@ $wgOpenStackManagerInstanceBannedInstanceTypes = array(
 # Enable doc links on the 'configure instance' page
 $wgOpenStackManagerPuppetDocBase = 'http://doc.wikimedia.org/puppet/classes/__site__/';
 
-$wgOpenStackManagerProxyGateways = array('pmtpa' => '208.80.153.214', 'eqiad' => '208.80.155.156');
+$wgOpenStackManagerProxyGateways = array( 'eqiad' => '208.80.155.156' );
 
 # Restrict eqiad to a group
 $wgOpenStackManagerRestrictedRegions = array();
 $wgOpenStackManagerReadOnlyRegions = array();
-
-$smwgNamespacesWithSemanticLinks[112] = true;
-$smwgNamespacesWithSemanticLinks[NS_NOVA_RESOURCE] = true;
-#$wgNamespacesToBeSearchedDefault[NS_NOVA_RESOURCE] = true;
 
 # TODO:  Re-enable OpenID
 #require_once("$IP/extensions/OpenID/OpenID.php");
