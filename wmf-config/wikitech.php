@@ -2,15 +2,26 @@
 # WARNING: This file is publically viewable on the web.
 #          Do not put private data here.
 
+/* From Settings.php on old wikitech */
+
 $wgEmailConfirmToEdit = true;
+$wgUseTeX = false;
 $wgEnableCreativeCommonsRdf = true;
+
+$wgUseInstantCommons  = true;
+
 $wgCaptchaTriggers['addurl']        = false;
+
+/* from Local.php on old Wikitech */
+$wgPasswordSenderName = "Wikitech Mail";
+
+$wgCookieDomain       = "wikitech.wikimedia.org";
 
 require_once( "$IP/extensions/Validator/Validator.php" );
 require_once( "$IP/extensions/SemanticMediaWiki/SemanticMediaWiki.php" );
 require_once( "$IP/extensions/SemanticForms/SemanticForms.php" );
 require_once( "$IP/extensions/SemanticResultFormats/SemanticResultFormats.php" );
-enableSemantics( 'wikitech' );
+enableSemantics('wikitech');
 
 require_once( "$IP/extensions/LdapAuthentication/LdapAuthentication.php" );
 $wgAuth = new LdapAuthenticationPlugin();
@@ -135,7 +146,10 @@ $smwgNamespacesWithSemanticLinks[NS_NOVA_RESOURCE] = true;
 require_once( "$IP/extensions/OATHAuth/OATHAuth.php" );
 require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
 
+$wgMainCacheType = 'memcached-pecl';
 $wgMessageCacheType = 'memcached-pecl';
+
+$wgSessionsInObjectCache = true;
 $wgSessionCacheType = 'memcached-pecl';
 
 // No cluster for us!
@@ -145,5 +159,6 @@ require_once( '/srv/mediawiki/private/WikitechPrivateLdapSettings.php' );
 
 #$wgPasswordReminderResendTime = 0;
 #$wgPasswordAttemptThrottle = false;
+#$wgShowExceptionDetails = true;
 #$wgLDAPDebug = 5;
 #$wgDebugLogGroups["ldap"] = "/tmp/ldap-s-1-debug.log";
