@@ -1255,6 +1255,9 @@ if ( $wmgUseCentralAuth ) {
 
 	// Enables login using pre-SULF username and notification
 	$wgCentralAuthCheckSULMigration = true;
+
+	// Create some local accounts as soon as the global registration happens
+	$wgCentralAuthAutoCreateWikis = array( 'loginwiki', 'metawiki', 'mediawikiwiki' );
 }
 
 // Config for GlobalCssJs
