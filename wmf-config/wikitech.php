@@ -137,6 +137,7 @@ require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
 
 $wgMessageCacheType = 'memcached-pecl';
 $wgSessionCacheType = 'memcached-pecl';
+$wgCookieDomain = "wikitech.wikimedia.org";
 
 // No cluster for us!
 $wgDefaultExternalStore = false;
