@@ -426,13 +426,14 @@ $wgConf->settings = array(
 	// Projects
 	'default' => '/static/images/project-logos/default.png',
 	'wikibooks' => '/static/images/project-logos/wikibooks.png',
-	'wikidata' => '/static/images/project-logos/wikidata.png',
 	'wikinews' => '$stdlogo',
 	'wikiquote' => '/static/images/project-logos/wikiquote.png',
 	'wikisource' => '/static/images/project-logos/wikisource.png',
 	'wikiversity' => '$stdlogo',
 	'wiktionary' => '/static/images/project-logos/wiktionary.png',
 	'wikivoyage' => '/static/images/project-logos/wikivoyage.png',  // T55653
+
+	'wikidatawiki' => '/static/images/project-logos/wikidatawiki.png',
 
 	// NOTE: This list is ordered by *project family* for ease of maintenance.
 	// The order is: Wikipedia, Wiktionary, Wikiquote, Wikibooks, Wikinews, Wikisource,
