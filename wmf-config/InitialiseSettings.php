@@ -426,7 +426,6 @@ $wgConf->settings = array(
 	// Projects
 	'default' => '/static/images/project-logos/default.png',
 	'wikibooks' => '/static/images/project-logos/wikibooks.png',
-	'wikidata' => '/static/images/project-logos/wikidata.png',
 	'wikinews' => '$stdlogo',
 	'wikiquote' => '/static/images/project-logos/wikiquote.png',
 	'wikisource' => '/static/images/project-logos/wikisource.png',
@@ -1068,6 +1067,7 @@ $wgConf->settings = array(
 	'usabilitywiki' => '/static/images/project-logos/usabilitywiki.png',
 	'votewiki' => '/static/images/project-logos/votewiki.png',
 	'wg_enwiki' => '/static/images/project-logos/wg_enwiki.png',
+	'wikidatawiki' => '/static/images/project-logos/wikidatawiki.png',
 	'wikimania2005wiki' => '/static/images/project-logos/wikimania2005wiki.png',  // T50382
 	'wikimania2006wiki' => '/static/images/project-logos/wikimania2006wiki.png',  // T50382
 	'wikimania2007wiki' => '/static/images/project-logos/wikimania2007wiki.png',  // T50382
