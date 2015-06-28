@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_5d3ae494",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 436,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-06-28T09:52:16Z",
+      "side": 1,
+      "message": "Better if it\u0027s in the \"// Special wikis\" group below.",
+      "revId": "8c1f4631ce0b2e6d1785ff4f024f4067a23b3867",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
