@@ -16,6 +16,24 @@
       "revId": "586a8bad295b50bdeb581a9461e9c443d3e1501a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_5dcae41e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14388,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2015-06-28T17:17:47Z",
+      "side": 0,
+      "message": "The whole block should probably be (when it\u0027s confirmed stable at least), as it\u0027s the same as the default in MW core",
+      "parentUuid": "8ec42329_3d8118c9",
+      "revId": "586a8bad295b50bdeb581a9461e9c443d3e1501a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
