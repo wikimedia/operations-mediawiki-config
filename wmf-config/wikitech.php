@@ -2,10 +2,6 @@
 # WARNING: This file is publically viewable on the web.
 #          Do not put private data here.
 
-$wgEmailConfirmToEdit = true;
-$wgEnableCreativeCommonsRdf = true;
-$wgCaptchaTriggers['addurl']        = false;
-
 require_once( "$IP/extensions/Validator/Validator.php" );
 require_once( "$IP/extensions/SemanticMediaWiki/SemanticMediaWiki.php" );
 require_once( "$IP/extensions/SemanticForms/SemanticForms.php" );
@@ -37,6 +33,10 @@ $wgLDAPLowerCaseUsernameScheme = array( 'labs' => false, 'invaliddomain' => fals
 $wgLDAPLowerCaseUsername = array( 'labs' => false, 'invaliddomain' => false );
 // Only enable UseLocal if you need to promote an LDAP user
 #$wgLDAPUseLocal = true;
+
+require_once( '/srv/mediawiki/private/WikitechPrivateLdapSettings.php' );
+#$wgLDAPDebug = 5;
+#$wgDebugLogGroups["ldap"] = "/tmp/ldap-s-1-debug.log";
 
 require_once( "$IP/extensions/OpenStackManager/OpenStackManager.php" );
 $wgOpenStackManagerNovaKeypairStorage = 'ldap';
@@ -121,12 +121,8 @@ $wgOpenStackManagerPuppetDocBase = 'http://doc.wikimedia.org/puppet/classes/__si
 
 $wgOpenStackManagerProxyGateways = array( 'eqiad' => '208.80.155.156' );
 
-# Restrict eqiad to a group
-$wgOpenStackManagerRestrictedRegions = array();
-$wgOpenStackManagerReadOnlyRegions = array();
-
 # TODO:  Re-enable OpenID
-#require_once("$IP/extensions/OpenID/OpenID.php");
+#require_once( "$IP/extensions/OpenID/OpenID.php" );
 #$wgOpenIDClientOnly = false;
 #$wgHideOpenIDLoginLink = true;
 #$wgOpenIDConsumerAllow = '';
@@ -134,17 +130,3 @@ $wgOpenStackManagerReadOnlyRegions = array();
 
 require_once( "$IP/extensions/OATHAuth/OATHAuth.php" );
 require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
-
-$wgMessageCacheType = 'memcached-pecl';
-$wgSessionCacheType = 'memcached-pecl';
-$wgCookieDomain = "wikitech.wikimedia.org";
-
-// No cluster for us!
-$wgDefaultExternalStore = false;
-
-require_once( '/srv/mediawiki/private/WikitechPrivateLdapSettings.php' );
-
-#$wgPasswordReminderResendTime = 0;
-#$wgPasswordAttemptThrottle = false;
-#$wgLDAPDebug = 5;
-#$wgDebugLogGroups["ldap"] = "/tmp/ldap-s-1-debug.log";
