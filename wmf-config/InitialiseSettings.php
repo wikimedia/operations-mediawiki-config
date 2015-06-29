@@ -14725,6 +14725,7 @@ $wgConf->settings = array(
 	'dewiki' => array( 'cxstats', 'staff-recommender' ),
 	'emlwiki' => array( 'cxstats', 'staff-recommender' ),
 	'fawiki' => array( 'cxstats', 'staff-recommender' ),
+	'eswiki' => array( 'newarticle', 'cxstats', 'staff-recommender', 'eswiki-recommender' ),
 	'frwiki' => array( 'newarticle', 'cxstats', 'staff-recommender', 'frwiki-recommender' ),
 	'furwiki' => array( 'cxstats', 'staff-recommender' ),
 	'hewiki' => array( 'cxstats', 'staff-recommender' ),
