@@ -304,7 +304,13 @@ if ( $wmgUseClusterSession ) {
 }
 
 // Use the cache setup above and configure sessions caching
-$wgSessionCacheType = 'sessions';
+if ( $wgDBname === 'labswiki' ) {
+	$wgSessionCacheType = 'memcached-pecl';
+	$wgMessageCacheType = 'memcached-pecl';
+	$wgCookieDomain = "wikitech.wikimedia.org";
+} else {
+	$wgSessionCacheType = 'sessions';
+}
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
 
@@ -1123,6 +1129,10 @@ if ( $wmgEnableCaptcha ) {
 	if ( $wmgEmergencyCaptcha ) {
 		$wgCaptchaTriggers['edit'] = true;
 		$wgCaptchaTriggers['create'] = true;
+	}
+
+	if ( $wgDBname === 'labswiki' ) {
+		$wgCaptchaTriggers['addurl'] = false;
 	}
 }
 
@@ -2722,7 +2732,13 @@ if ( $wmfRealm != 'labs' ) {
 }
 
 if ( $wgDBname == 'labswiki' ) {
-	// A zillion wikitech-specific settings
+	$wgEmailConfirmToEdit = true;
+	$wgEnableCreativeCommonsRdf = true;
+
+	// Don't depend on other DB servers
+	$wgDefaultExternalStore = false;
+
+	// Some settings specific to wikitech's extensions
 	include( "$wmfConfigDir/wikitech.php" );
 }
 
