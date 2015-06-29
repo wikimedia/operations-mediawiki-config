@@ -11464,6 +11464,8 @@ $wgConf->settings = array(
 		'*.bl.uk',                          // British Library - T98734
 		'www.limis.lt',                     // Lithuanian Art Museum - T101513
 		'*.dvidshub.net',                   // Defense Video and Imagery Distribution System - T103062
+		'*.ub.unibas.ch',                   // Universität Basel - T104178
+		'*.unibas.ch',                      // Universität Basel - T104178
 	),
 ),
 
