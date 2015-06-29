@@ -334,6 +334,11 @@ function wmfLabsSettings() {
 			),
 		),
 
+		// T97704
+		'wgGatherAutohideFlagLimit' => array(
+			'default' => 3,
+		),
+
 		'wmgWikiGrokDebug' => array(
 			'default' => true,
 		),
