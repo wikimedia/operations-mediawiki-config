@@ -8892,7 +8892,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'technician' ), // Bug T41690
 	),
 	'+ukwiki' => array(
-		'sysop' => array( 'patroller', 'rollbacker' ),
+		'sysop' => array( 'patroller', 'rollbacker', 'accountcreator' ), // T104034
 	),
 	'+ukwikivoyage' => array(
 		'sysop' => array( 'rollbacker', 'uploader', 'autopatrolled' ), // Bug T56229
@@ -9524,7 +9524,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'technician' ), // Bug T41690
 	),
 	'+ukwiki' => array(
-		'sysop' => array( 'patroller', 'rollbacker' ),
+		'sysop' => array( 'patroller', 'rollbacker', 'accountcreator' ), // T104034
 	),
 	'+ukwikimedia' => array(
 		'bureaucrat' => array( 'sysop' ),
