@@ -8,10 +8,6 @@ require_once( "$IP/extensions/SemanticForms/SemanticForms.php" );
 require_once( "$IP/extensions/SemanticResultFormats/SemanticResultFormats.php" );
 enableSemantics( 'wikitech' );
 
-$smwgNamespacesWithSemanticLinks[112] = true;
-$smwgNamespacesWithSemanticLinks[NS_NOVA_RESOURCE] = true;
-#$wgNamespacesToBeSearchedDefault[NS_NOVA_RESOURCE] = true;
-
 require_once( "$IP/extensions/LdapAuthentication/LdapAuthentication.php" );
 $wgAuth = new LdapAuthenticationPlugin();
 $wgLDAPDomainNames = array( 'labs');
@@ -122,6 +118,9 @@ $wgOpenStackManagerProxyGateways = array( 'eqiad' => '208.80.155.156' );
 
 # This must be loaded AFTER OSM, to overwrite it's defaults
 require_once( '/srv/mediawiki/private/WikitechPrivateLdapSettings.php' );
+
+$smwgNamespacesWithSemanticLinks[112 /* Ops */] = true;
+$smwgNamespacesWithSemanticLinks[NS_NOVA_RESOURCE] = true;
 
 # TODO:  Re-enable OpenID
 #require_once( "$IP/extensions/OpenID/OpenID.php" );
