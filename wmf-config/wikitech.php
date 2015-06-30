@@ -34,7 +34,6 @@ $wgLDAPLowerCaseUsername = array( 'labs' => false, 'invaliddomain' => false );
 // Only enable UseLocal if you need to promote an LDAP user
 #$wgLDAPUseLocal = true;
 
-require_once( '/srv/mediawiki/private/WikitechPrivateLdapSettings.php' );
 #$wgLDAPDebug = 5;
 #$wgDebugLogGroups["ldap"] = "/tmp/ldap-s-1-debug.log";
 
@@ -120,6 +119,9 @@ $wgOpenStackManagerInstanceBannedInstanceTypes = array(
 $wgOpenStackManagerPuppetDocBase = 'http://doc.wikimedia.org/puppet/classes/__site__/';
 
 $wgOpenStackManagerProxyGateways = array( 'eqiad' => '208.80.155.156' );
+
+# This must be loaded AFTER OSM, to overwrite it's defaults
+require_once( '/srv/mediawiki/private/WikitechPrivateLdapSettings.php' );
 
 # TODO:  Re-enable OpenID
 #require_once( "$IP/extensions/OpenID/OpenID.php" );
