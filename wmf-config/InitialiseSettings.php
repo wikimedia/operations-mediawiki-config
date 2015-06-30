@@ -8274,7 +8274,7 @@ $wgConf->settings = array(
 	// due to mass vandalism complaint, 2006-04-11
 	'zhwiki' => array(
 		// '*' => array( 'createpage' => false ),  # re-enabled createpage priv according to Bug T27142, then redisabled *sigh*, then reenabled \o/
-		'rollbacker' => array( 'rollback' => true, 'abusefilter-log-private' => true ), # Bugs 16988 & 37679
+		'rollbacker' => array( 'rollback' => true, 'abusefilter-log-private' => true ), // T18988 & T39679
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
 		'autoreviewer' => array( 'autopatrol' => true ),
 		'flood' => array( 'bot' => true ),
@@ -9752,13 +9752,13 @@ $wgConf->settings = array(
 		'meta', 'commons', 'species', 'q', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy',
 		'hi', 'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk',
 		'sl', 'sq', 'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'wikt', 'b',
-	), // Bugs 7824, 22663, 28024
+	), // T9824, T24663, T30024
 	'frwikivoyage' => array( 'w', 'meta', 'de', 'el', 'en', 'es', 'he', 'it', 'nl', 'pl', 'pt', 'ro', 'ru', 'sv', 'uk', 'vi' ), // T44103, T57745
 	'frwiktionary' => array(
 		'meta', 'commons', 'species', 'q', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy', 'hi',
 		'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk', 'sl', 'sq',
 		'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'b', 'v',
-	), // T30024 and Bug T24663 --pdhanda
+	), // T30024 and T24663 --pdhanda
 	'ganwiki' => array( 'incubator' ),
 	'gdwiki' => array( 'en', 'de', 'ga', 'gv' ), // T14675, T15817
 	'glwiktionary' => array( 'w', 's', 'q', 'b' ),
@@ -10398,7 +10398,7 @@ $wgConf->settings = array(
 	'wikimania' => true,
 	'wikinews' => true,
 	'wikiquote' => true,
-	'wikisource' => true, // Bugs 8563 and 12423
+	'wikisource' => true, // T10563 and T14423
 	'wikiversity' => true,
 
 	'bswiki' => true, # 8240
@@ -15482,15 +15482,6 @@ $wgConf->settings = array(
 
 'wgUploadThumbnailRenderHttpCustomDomain' => array(
 	'default' => 'upload.svc.eqiad.wmnet',
-),
-
-// Disabled until API cluster is running HHVM.
-'wgAjaxEditStash' => array(
-	'default' => true,
-),
-
-'wmgUseXAnalytics' => array(
-	'default' => true,
 ),
 
 // Virtual media views endpoint used by Media Viewer

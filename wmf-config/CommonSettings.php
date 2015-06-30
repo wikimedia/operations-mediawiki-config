@@ -2650,9 +2650,7 @@ if ( $wmgUseEventLogging && $wmgUseNavigationTiming ) {
 	$wgPercentHHVM = 0;
 }
 
-if ( $wmgUseXAnalytics ) {
-	include_once( "$IP/extensions/XAnalytics/XAnalytics.php" );
-}
+include_once( "$IP/extensions/XAnalytics/XAnalytics.php" );
 
 if ( $wmgUseUniversalLanguageSelector ) {
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
