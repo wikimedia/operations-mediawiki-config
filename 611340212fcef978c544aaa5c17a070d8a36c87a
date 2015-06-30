@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_5f4726bf",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1344,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-06-30T23:15:13Z",
+      "side": 1,
+      "message": "affected",
+      "revId": "611340212fcef978c544aaa5c17a070d8a36c87a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_1f843ed7",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1353,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-06-30T23:15:13Z",
+      "side": 1,
+      "message": "wat? isn\u0027t one of these supposed to be getting local groups?",
+      "revId": "611340212fcef978c544aaa5c17a070d8a36c87a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_df89d6ef",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1362,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-06-30T23:15:13Z",
+      "side": 1,
+      "message": "see above",
+      "revId": "611340212fcef978c544aaa5c17a070d8a36c87a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
