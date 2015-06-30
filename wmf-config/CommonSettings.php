@@ -1341,6 +1341,46 @@ $wgHooks['LoginAuthenticateAudit'][] = function( $user, $pass, $retval ) {
 	return true;
 };
 
+// Estimate users affected if we increase the minimum
+// password length to 8 for privileged groups.
+$wgHooks['LoginAuthenticateAudit'][] = function( $user, $pass, $retval ) {
+	if ( $retval == LoginForm::SUCCESS
+		&& strlen( $pass ) < 8
+	) {
+		if ( strlen( $pass ) >= 4 ) {
+			$bucket = '4-7';
+		} else {
+			$bucket = '< 4';
+		}
+
+		if ( $wmgUseCentralAuth ) {
+			$central = CentralAuthUser::getInstance( $user );
+			if ( $central->exists() && array_intersect(
+				array( 'staff', 'steward', 'ombudsman', 'checkuser', 'sysop' ),
+				array_merge(
+					$central->getLocalGroups(),
+					$central->getGlobalGroups()
+				)
+			) ) {
+				$groups = implode( ', ', array_intersect(
+					array( 'staff', 'steward', 'ombudsman', 'checkuser', 'sysop' ),
+					array_merge(
+						$central->getLocalGroups(),
+						$central->getGlobalGroups()
+					)
+				) );
+
+				$logger = LoggerFactory::getInstance( 'badpass' );
+				$logger->info( "Login by user in $groups with password length: $bucket" );
+			}
+		} elseif ( $user->isAllowedAny( 'editinterface', 'checkuser' ) ) {
+			$logger = LoggerFactory::getInstance( 'badpass' );
+			$logger->info( "Login by privileged user with password length: $bucket" );
+		}
+	}
+	return true;
+};
+
 $wgHooks['PrefsEmailAudit'][] = function( $user, $old, $new ) {
 	if ( $user->isAllowed( 'delete' ) ) {
 		global $wgRequest;
