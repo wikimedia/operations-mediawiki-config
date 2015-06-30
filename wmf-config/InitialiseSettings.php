@@ -77,7 +77,7 @@ $wgConf->settings = array(
 	'simplewiktionary' => 'en',
 
 	# Wikis at the wrong domain
-	# FIXME: rename these wikis (Bug T21986)
+	# FIXME: rename these wikis (T21986)
 	'alswiki' => 'gsw',
 	'alswiktionary' => 'gsw',
 	'alswikibooks' => 'gsw',
@@ -167,7 +167,7 @@ $wgConf->settings = array(
 	'+zhwikivoyage' => array( 'zh-cn', 'zh-tw' ),
 	'+zhwiktionary' => array( 'zh-cn', 'zh-tw' ),
 
-	# Danish and Norwegian aliases (Bug T6591)
+	# Danish and Norwegian aliases (T6591)
 	'+dawiki' => array( 'dk' ),
 	'+dawikibooks' => array( 'dk' ),
 	'+dawikiquote' => array( 'dk' ),
@@ -3774,7 +3774,7 @@ $wgConf->settings = array(
 	'+cswiki' => array( 6 => 0, 14 => 1 ),
 	'+dewiki' => array( 6 => 0, 8 => 0, 10 => 0 ),
 	'+enwiki' => array( 6 => 0, 8 => 0 ),
-	'+eowiki' => array( 6 => 0, 8 => 0 ), // 0 => 1 removed per Bug T57563
+	'+eowiki' => array( 6 => 0, 8 => 0 ), // 0 => 1 removed per T57563
 	'+eswiki' => array( 6 => 0, 8 => 0 ),
 	'+frwiki' => array( 6 => 0, 8 => 0 ),
 	'+guwiki' => array( 6 => 0, 8 => 0, 14 => 1 ),
@@ -4133,7 +4133,7 @@ $wgConf->settings = array(
 
 # wgRestrictionLevels @{
 // Don't use '+foowiki' syntax, as that results in bad ordering in the
-// protection form (Bug T71640).
+// protection form (T71640).
 'wgRestrictionLevels' => array(
 	'default' => array(
 		'',
@@ -4145,7 +4145,7 @@ $wgConf->settings = array(
 	'ckbwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), // T54533
 	'dewiki' => array( '', 'autoconfirmed', 'editeditorprotected', 'sysop', 'superprotect' ), // T94368
 	'enwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // T57432
-	'hewiki' => array( '', 'autoconfirmed', 'autopatrol',  'templateeditor' /*Bug T102466 */, 'sysop', 'superprotect' ), // T60207
+	'hewiki' => array( '', 'autoconfirmed', 'autopatrol',  'templateeditor' /* T102466 */, 'sysop', 'superprotect' ), // T60207
 	'huwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // T74055
 	'lvwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), // T92645
 	'plwiki' => array( '', 'autoconfirmed', 'editor', 'sysop', 'superprotect' ), // T48990
@@ -4175,13 +4175,13 @@ $wgConf->settings = array(
 
 'wmgUseCentralNotice' => array(
 	'default' => true,
-	'advisorywiki' => false, // Per Bug # 25519
-	'fishbowl' => false, // Per Bug T19718 Disable CentralNotice on private/fishbowl wikis
+	'advisorywiki' => false, // Per T27519
+	'fishbowl' => false, // Per T19718 Disable CentralNotice on private/fishbowl wikis
 	'nonglobal' => false,
 	'fiwikimedia' => false, // T19718
 	'private' => false, // :D
 	'qualitywiki' => false,
-	'ukwikimedia' => false, // Per Bug T19718 Disable CentralNotice on private/fishbowl wikis
+	'ukwikimedia' => false, // T19718 Disable CentralNotice on private/fishbowl wikis
 ),
 
 'wmgCentralNoticeLoader' => array(
@@ -4321,8 +4321,8 @@ $wgConf->settings = array(
 		'mobile' => 'debug',
 		'temp-debug' => 'debug', // generic admin debug log
 		'CentralAuth' => 'debug', // -pgehres 2013/05/09, tmp for SUL finalization
-		'CentralAuth-Bug39996' => 'debug', // -legoktm 2014-07-14 for bug 39996
-		'CentralAuthRename' => 'debug', // -legoktm 2014-07-14 for bug 67875
+		'CentralAuth-Bug39996' => 'debug', // -legoktm 2014-07-14 for T41996
+		'CentralAuthRename' => 'debug', // -legoktm 2014-07-14 for T69875
 		'CentralAuthUserMerge' => 'debug',
 		'Renameuser' => 'debug',
 		'GettingStarted' => 'debug',
@@ -4334,16 +4334,16 @@ $wgConf->settings = array(
 		'CirrusSearchSlowRequests' => 'debug',
 		'texvc' => 'debug',
 		'recursion-guard' => 'debug',
-		'MassMessage' => 'debug', // for bug 57464 -legoktm 2013/12/15
+		'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
 		'Bug58676' => 'debug', # Invalid message parameter
 		'Flow' => 'debug', // -erikb 2014/03/08
 		'upload' => 'debug',
 		'UpdateRepo' => 'debug',
 		'BounceHandler' => 'debug',
 		'Echo' => 'debug',
-		'collection' => 'debug', // -cscott for bug 71675
+		'collection' => 'debug', // -cscott for T73675
 		'GlobalTitleFail' => array( 'sample' => 10000, 'logstash' => false ), // chad hates $wgTitle
-		'FSFileBackend' => 'debug', // - gilles for bug 73229
+		'FSFileBackend' => 'debug', // - gilles for T75229
 		'OAuth' => 'debug',
 		'xenon' => 'debug',
 		'xff' => array( 'logstash' => false ),
@@ -4721,7 +4721,7 @@ $wgConf->settings = array(
 		104 => 'Kirja',
 		105 => 'Keskustelu_kirjasta',
 	),
-	'frrwiki' => array( // Per Bug T40023
+	'frrwiki' => array( // Per T40023
 		102 => 'Seite',
 		103 => 'Seite_Diskussion',
 		104 => 'Index',
@@ -4934,7 +4934,7 @@ $wgConf->settings = array(
 	'pflwiki' => array(
 		100 => 'Portal', // T44990
 		101 => 'Portal_Diskussion',
-		102 => 'Buch', // 102-111: Bug T54671
+		102 => 'Buch', // 102-111: T54671
 		103 => 'Buch_Dischbediere',
 		104 => 'Wort',
 		105 => 'Wort_Dischbediere',
@@ -4948,7 +4948,7 @@ $wgConf->settings = array(
 	'plwiki' => array(
 		NS_PROJECT_TALK => 'Dyskusja_Wikipedii',
 		NS_USER => 'Wikipedysta',
-		# Lower case w in wikipedysty as per bug #10064
+		# Lower case w in wikipedysty as per T12064
 		NS_USER_TALK => 'Dyskusja_wikipedysty',
 		100 => 'Portal',
 		101 => 'Dyskusja_portalu',
@@ -5048,8 +5048,8 @@ $wgConf->settings = array(
 	),
 	'ukwiki' => array( 100 => 'Портал', 101 => 'Обговорення_порталу' ),
 	'urwiki' => array(
-		100 => 'باب', // Portal - Bug T21569
-		101 => 'تبادلۂ_خیال_باب', // Portal talk - Bug T21569
+		100 => 'باب', // Portal - T21569
+		101 => 'تبادلۂ_خیال_باب', // Portal talk - T21569
 	),
 	'uzwiki' => array (
 		100 => 'Portal',                     // T40840 (Portal)
@@ -5521,7 +5521,7 @@ $wgConf->settings = array(
 		106 => 'Mục_lục',
 		107 => 'Thảo_luận_Mục_lục'
 	),
-	'zhwikisource' => array( // Added on 2009-03-19 per Bug T17722
+	'zhwikisource' => array( // Added on 2009-03-19 per T17722
 		102 => 'Author',
 		103 => 'Author_talk',
 		104 => 'Page',
@@ -5815,7 +5815,7 @@ $wgConf->settings = array(
 	'azwikibooks' => array(
 		102 => 'Resept', // Recipe
 		103 => 'Resept_müzakirəsi', // Recipe talk
-		110 => 'Vikiuşaq', // Wikijunior, Bug T33067
+		110 => 'Vikiuşaq', // Wikijunior, T33067
 		111 => 'Vikiuşaq_müzakirəsi',
 	),
 	'bnwikibooks' => array(
@@ -5892,7 +5892,7 @@ $wgConf->settings = array(
 		101 => 'Discussioni_progetto', // T13938
 		102 => 'Ripiano', // T13937
 		103 => 'Discussioni_ripiano',
-		# Wikiversità deleted, Bug T12287
+		# Wikiversità deleted, T12287
 		# 102 => 'Wikiversità', // T9354
 		# 103 => 'Discussioni_Wikiversità',
 	),
@@ -6279,10 +6279,10 @@ $wgConf->settings = array(
 	'itwikivoyage' => array(
 		100 => 'Portale',
 		101 => 'Discussioni_portale',
-		//102 and 103 (Elezione) deleted per Bug T47636
+		//102 and 103 (Elezione) deleted per T47636
 		104 => 'Tematica',
 		105 => 'Discussioni_tematica',
-		//106 and 107 (Notizie) deleted per Bug T47636
+		//106 and 107 (Notizie) deleted per T47636
 	),
 	'plwikivoyage' => array(
 		NS_PROJECT_TALK => 'Dyskusja_Wikipodróży',
@@ -6631,7 +6631,7 @@ $wgConf->settings = array(
 # wgNoFollow... @{
 'wgNoFollowLinks' => array(
 	'default' => true,
-	'fishbowl' => false, // not a spam measure here... Bug T16105
+	'fishbowl' => false, // not a spam measure here... T16105
 ),
 
 'wgNoFollowNsExceptions' => array(
@@ -6640,7 +6640,7 @@ $wgConf->settings = array(
 
 'wgNoFollowDomainExceptions' => array(
 	'default' => array(
-		# Original list 20111110 - Bug T34309
+		# Original list 20111110 - T34309
 		'mediawiki.org',
 		'wikibooks.org',
 		'wikimediafoundation.org',
@@ -6892,7 +6892,7 @@ $wgConf->settings = array(
 
 'wgBlockAllowsUTEdit' => array(
 	'default' => true, // T30288
-	'itwiki' => false, // requested by Brownout on #wikimedia-tech and Bug T11073
+	'itwiki' => false, // requested by Brownout on #wikimedia-tech and T11073
 ),
 
 'wgBlockDisablesLogin' => array(
@@ -7153,7 +7153,7 @@ $wgConf->settings = array(
 	'commonswiki' => array(
 		'user' => array(
 			'move' => false, // requested by Bdka on #wikimedia-tech, 2006-05-04
-			'upload' => true, // exception for Bug T14556
+			'upload' => true, // exception for T14556
 		),
 		'rollbacker' => array( 'rollback' => true ),
 		'patroller' => array( 'autopatrol' => true, 'patrol' => true, 'abusefilter-log-detail' => true ),
@@ -8076,7 +8076,7 @@ $wgConf->settings = array(
 		'filemover' => array( 'movefile' => true ), // T32121
 		'user' => array(
 			'upload_by_url' => true, // For wider testing
-			'upload' => true, // Exception to Bug T14556, used for testing of upload tools
+			'upload' => true, // Exception to T14556, used for testing of upload tools
 		),
 		'templateeditor' => array( 'templateeditor' => true, 'tboverride' => true, ), // T61084
 		'sysop' => array(
@@ -8096,7 +8096,7 @@ $wgConf->settings = array(
 			'upload_by_url' => true, // For testing of Flickr uploading via UploadWizard
 			'upload' => true,
 		),
-		'qa_automation' => array( // For browser tests, Bug T60375 and bug 61799
+		'qa_automation' => array( // For browser tests, T60375 and T63799
 			'block' => true,
 			'flow-delete' => true,
 			'flow-suppress' => true,
@@ -8273,7 +8273,7 @@ $wgConf->settings = array(
 	),
 	// due to mass vandalism complaint, 2006-04-11
 	'zhwiki' => array(
-		// '*' => array( 'createpage' => false ),  # re-enabled createpage priv according to Bug T27142, then redisabled *sigh*, then reenabled \o/
+		// '*' => array( 'createpage' => false ),  # re-enabled createpage priv according to T27142, then redisabled *sigh*, then reenabled \o/
 		'rollbacker' => array( 'rollback' => true, 'abusefilter-log-private' => true ), // T18988 & T39679
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
 		'autoreviewer' => array( 'autopatrol' => true ),
@@ -8382,7 +8382,7 @@ $wgConf->settings = array(
 	),
 	'+test2wiki' => array(
 		'bureaucrat' => array( 'flow-bot' ),
-		'qa_automation' => array( 'qa_automation' ), // For browser tests, Bug T60375
+		'qa_automation' => array( 'qa_automation' ), // For browser tests, T60375
 	),
 	// ******************************************************************
 	'+arwiki' => array(
@@ -8888,7 +8888,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller', 'rollbacker', 'autopatrolled' ), //T95180
 	),
 	'+trwiki' => array(
-		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, Bug T40690
+		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, T40690
 		'bureaucrat' => array( 'technician' ), // T41690
 	),
 	'+ukwiki' => array(
@@ -9165,7 +9165,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autopatrolled', 'patroller', 'rollbacker' ),
 	),
 	'+enwiktionary' => array(
-		'bureaucrat' => array( 'sysop' ), // bureaucrat removed per Bug T44113
+		'bureaucrat' => array( 'sysop' ), // bureaucrat removed per T44113
 		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker', 'flood' ),
 	),
 	'+fawiki' => array(
@@ -9286,7 +9286,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'accountcreator', 'flood', ), // T63109
 	),
 	'+itwikibooks' => array(
-		'sysop' => array( 'autopatrolled', 'patroller', 'flooder' ), // Flooder added per Bug T41569
+		'sysop' => array( 'autopatrolled', 'patroller', 'flooder' ), // Flooder added per T41569
 	),
 	'+itwikiquote' => array(
 		'bureaucrat' => array( 'autopatrolled' ), // T64200
@@ -9298,7 +9298,7 @@ $wgConf->settings = array(
 		'sysop' => array ( 'autopatrolled', 'patroller' ), // T45327 and T47638
 	),
 	'+itwiktionary' => array(
-		'sysop' => array( 'patroller', 'autopatrolled', 'flood' ), // Flood added per Bug T41306
+		'sysop' => array( 'patroller', 'autopatrolled', 'flood' ), // Flood added per T41306
 	),
 	'+jawiki' => array(
 		'sysop' => array( 'abusefilter' ),
@@ -9520,7 +9520,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller', 'rollbacker', 'autopatrolled' ), //T95180
 	),
 	'+trwiki' => array(
-		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, Bug T40690
+		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, T40690
 		'bureaucrat' => array( 'technician' ), // T41690
 	),
 	'+ukwiki' => array(
@@ -9730,7 +9730,7 @@ $wgConf->settings = array(
 	'fiwikisource' => array( 'OldWikisource', 'w', 'b' ),
 	'fiwikiversity' => array( 'b', 'q', 'n', 's', 'wikt', 'w', 'betawikiversity' ),
 	'foundationwiki' => array( 'meta' ),
-	'frrwiki' => array( 'en', 'de', 'nds', 's:de', 'oldwikisource' ), # s:de and oldwikisource per Bug T40023
+	'frrwiki' => array( 'en', 'de', 'nds', 's:de', 'oldwikisource' ), # s:de and oldwikisource per T40023
 	'frwiki' => array(
 		'meta', 'commons', 'species', 'q', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy',
 		'hi', 'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk',
@@ -9740,12 +9740,12 @@ $wgConf->settings = array(
 		'meta', 'commons', 'species', 'q', 'b', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu', 'hy', 'hi',
 		'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple', 'sk', 'sl', 'sq',
 		'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'wikt', 'v',
-	), // T30024 and Bug T24663 --pdhanda
+	), // T30024 and T24663 --pdhanda
 	'frwikibooks' => array(
 		'meta', 'commons', 'species', 'q', 'af', 'ak', 'ar', 'ang', 'ast', 'gn', 'id', 'zhminnan', 'bg', 'br', 'ca', 'cs', 'co', 'da', 'de', 'et', 'el', 'en', 'es', 'eo', 'fa', 'fy', 'ga', 'gl', 'gu',
 		'hy', 'hi', 'he', 'hsb', 'hr', 'io', 'ia', 'ie', 'is', 'it', 'kk', 'csb', 'sw', 'ko', 'ku', 'la', 'lt', 'li', 'lo', 'hu', 'ml', 'nl', 'ja', 'no', 'oc', 'nds', 'pl', 'pt', 'ro', 'ru', 'scn', 'simple',
 		'sk', 'sl', 'sq', 'st', 'sr', 'fi', 'sv', 'ta', 'te', 'vi', 'th', 'tt', 'tr', 'uk', 'ur', 'vo', 'zh', 'w', 'n', 's', 'wikt', 'v',
-	), // T30024 and Bug T24663 --pdhanda
+	), // T30024 and T24663 --pdhanda
 	'frwikinews' => array( 'w', 'en', 'de', 'es', 'it', 'b', 'wikt', 'v', 's', 'q', 'ca', 'pt', 'species', 'commons', 'meta', 'w:pl', 'pl' ), // T11135
 	'frwikiquote' => array( 'w', 'wikt', 's', 'b', 'n', 'v', 'meta', 'en' ),
 	'frwikiversity' => array(
@@ -9937,7 +9937,7 @@ $wgConf->settings = array(
 	'frwikiversity' => 110, // Transwiki
 	'frwikiquote' => 108, // transwiki
 	'ptwikinews' => 104, // Transwiki - T93218
-	// Added zh wikis per Bug T42474
+	// Added zh wikis per T42474
 	'zhwiktionary' => 102, // Transwiki
 	'zhwikibooks' => 100, // Transwiki
 	'zhwikiquote' => 100, // Transwiki
@@ -10238,7 +10238,7 @@ $wgConf->settings = array(
 	'private' => true,
 	'donatewiki' => true, // whee restricted site
 	'foundationwiki' => true, // whee restricted site
-	'sewikimedia' => true, // chapter site, only sysops can upload, Bug T63947
+	'sewikimedia' => true, // chapter site, only sysops can upload, T63947
 ),
 
 // Note that changing this for wikis with CirrusSearch will remove pages in the
@@ -10286,7 +10286,7 @@ $wgConf->settings = array(
 	'+nowikisource' => array( 102, 104, 106 ),
 	'+plwikisource' => array( 100, 102, 104 ),
 	'+ptwikisource' => array( 102, 104, 106 ),
-	'+rowikisource' => array( 102, 104, 106 ), // Follow-up for Bug T31190
+	'+rowikisource' => array( 102, 104, 106 ), // Follow-up for T31190
 	'+ruwikisource' => array( 104, 106 ),
 	'+slwikisource' => array( 100, 104 ),
 	'+sourceswiki' => array( 104, 106 ),
@@ -10623,7 +10623,7 @@ $wgConf->settings = array(
 		829 => array( 'editallpages' ),
 	),
 	'+wikidatawiki' => array(
-		122 => array( 'query-update' ),  // Query namespace per Bug T51001
+		122 => array( 'query-update' ),  // Query namespace per T51001
 	),
 ),
 # @} end of wgNamespaceProtection
@@ -11094,7 +11094,7 @@ $wgConf->settings = array(
 	// new renderer should render these fine (and the ODF
 	// renderer is in a data center which is being shut down).
 	// This array used to contain overrides for
-	// ta/gu/ml/ne/ur (Bug T39154, T39384, T39672, T39374, T43714).
+	// ta/gu/ml/ne/ur (T39154, T39384, T39672, T39374, T43714).
 ),
 
 'wmgUseSpamBlacklist' => array(
@@ -11245,7 +11245,7 @@ $wgConf->settings = array(
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
 	'plwiki' => array( 'sysop' => array( 'flood' ) ), // T22155
 	'strategywiki' => array( 'sysop' => array( 'flood' ) ),
-	'wikidata' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // T50013, Bug T48856
+	'wikidata' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // T50013, T48856
 	'zhwiki' => array( 'sysop' => array( 'flood' ) ),
 ),
 'wgGroupsRemoveFromSelf' => array(
@@ -11269,11 +11269,11 @@ $wgConf->settings = array(
 	'mlwikisource' => array( 'botadmin' => array( 'botadmin' ) ), // T46335
 	'mlwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
-	'plwiki' => array( 'flood' => array( 'flood' ) ), // T22155 , Bug T23238
+	'plwiki' => array( 'flood' => array( 'flood' ) ), // T22155 , T23238
 	'strategywiki' => array( 'sysop' => array( 'flood' ) ),
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
 	'wikidata' => array(
-		'sysop' => array( 'flood', 'translationadmin' ), // T50013, Bug T48856
+		'sysop' => array( 'flood', 'translationadmin' ), // T50013, T48856
 		'flood' => array( 'flood' ), // T50013
 	),
 	'zhwiki' => array( 'sysop' => array( 'flood' ) ),
@@ -11394,48 +11394,48 @@ $wgConf->settings = array(
 		'*.rbge.org.uk',                    // Royal Botanic Garden Edinburgh
 		'*.rijksmuseum.nl',                 // Rijksmuseum
 		'*.llgc.org.uk',                    // National Library of Wales
-		'*.tounoki.org',                    // Musées de la Haute-Saône (test) - Bug T65449
-		'musees.cg70.fr',                   // Musées de la Haute-Saône (prod) - Bug T65449
-		'*.musees.cg70.fr',                 // Musées de la Haute-Saône (prod) - Bug T65449
+		'*.tounoki.org',                    // Musées de la Haute-Saône (test) - T65449
+		'musees.cg70.fr',                   // Musées de la Haute-Saône (prod) - T65449
+		'*.musees.cg70.fr',                 // Musées de la Haute-Saône (prod) - T65449
 		'*.wikimedia.ch',                   // Wikimedia CH
 		'link.nypl.org',                    // New York Public Library
-		'*.peacepalacelibrary.nl',          // Peace Palace Library, The Hague - Bug T66372
+		'*.peacepalacelibrary.nl',          // Peace Palace Library, The Hague - T66372
 		'lcweb2.loc.gov',                   // Library of Congress
 		'deriv.nls.uk',                     // National Library of Scotland
 		'*.nb.admin.ch',                    // Swiss National Library
 		'*.bar.admin.ch',                   // Swiss Federal Archives
 		'*.unine.ch',                       // University of Neuchâtel
 		'*.mindat.org',                     // Mineral and locality database
-		'*.culture.gouv.fr',                // French Ministry for Culture - Bug T67905
-		'memory.loc.gov',                   // Library of Congress - Bug T68945
-		'*.ihs.nl',                         // IHS at Erasmus University - Bug T69120
-		'*.eur.nl',                         // Erasmus University Rotterdam - Bug T69355
-		'mochila_images.s3.amazonaws.com',  // temporary for GWT upload - Bug T69344
-		'mochila_images2.s3.amazonaws.com', // temporary for GWT upload - Bug T69344
+		'*.culture.gouv.fr',                // French Ministry for Culture - T67905
+		'memory.loc.gov',                   // Library of Congress - T68945
+		'*.ihs.nl',                         // IHS at Erasmus University - T69120
+		'*.eur.nl',                         // Erasmus University Rotterdam - T69355
+		'mochila_images.s3.amazonaws.com',  // temporary for GWT upload - T69344
+		'mochila_images2.s3.amazonaws.com', // temporary for GWT upload - T69344
 		'*.universiteitsmuseum.nl',         // Universiteits Museum Utrecht
-		'data.kb.se',                       // National Library of Sweden Open Data - Bug T71439
-		'www.veikkos-archiv.com',           // Veikkos-archiv - Bug T71777
-		'*.scienceimage.csiro.au',          // CSIRO - Bug T72771
-		'*.beeldbank.cultureelerfgoed.nl',  // Cultureel Erfgoed - Bug T72840
-		'*.metilli.com',                    // Mart Museum - Bug T73460
-		'*.nijmegen.nl',                    // Nijmegen - Bug T73191
-		'edh-www.adw.uni-heidelberg.de',    // Heidelberg Academy of Sciences and Humanities, Epigraphic Database - Bug T73990
-		'*.eyefilm.nl',                     // EYE Film Institute Netherlands - Bug T73883
-		'digitaltmuseum.no',                // Digitalt Museum - Bug T73195
-		'*.dimu.no',                        // Digitalt Museum - Bug T73195
-		'*.byarkivet.oslo.kommune.no',      // Byarkivet - Oslo kommune - Bug T73195
-		'*.nb.no',                          // Nasjonalbiblioteket - Bug T73195
-		'*.kartverket.no',                  // Kartverket - Bug T73195
-		'*.arkivverket.no',                 // The National Archives of Norway - Bug T73195
-		'tools.wikimedia.pl',               // Facilities server for Wikimedia users - Bug T74897
+		'data.kb.se',                       // National Library of Sweden Open Data - T71439
+		'www.veikkos-archiv.com',           // Veikkos-archiv - T71777
+		'*.scienceimage.csiro.au',          // CSIRO - T72771
+		'*.beeldbank.cultureelerfgoed.nl',  // Cultureel Erfgoed - T72840
+		'*.metilli.com',                    // Mart Museum - T73460
+		'*.nijmegen.nl',                    // Nijmegen - T73191
+		'edh-www.adw.uni-heidelberg.de',    // Heidelberg Academy of Sciences and Humanities, Epigraphic Database - T73990
+		'*.eyefilm.nl',                     // EYE Film Institute Netherlands - T73883
+		'digitaltmuseum.no',                // Digitalt Museum - T73195
+		'*.dimu.no',                        // Digitalt Museum - T73195
+		'*.byarkivet.oslo.kommune.no',      // Byarkivet - Oslo kommune - T73195
+		'*.nb.no',                          // Nasjonalbiblioteket - T73195
+		'*.kartverket.no',                  // Kartverket - T73195
+		'*.arkivverket.no',                 // The National Archives of Norway - T73195
+		'tools.wikimedia.pl',               // Facilities server for Wikimedia users - T74897
 		'*.nasa.gov',                       // NASA
-		'photos.wikimapia.org',             // WikiMapia - Bug T75045
-		'pslava.info',                      // Ukraine interesting photography source - Bug T75045
-		'ukrainaincognita.com',             // Ukraine interesting photography source - Bug T75045
-		'klymenko.data-tec.net',            // Ukraine interesting photography source - Bug T75045
-		'serg-klymenko.narod.ru',           // Ukraine interesting photography source - Bug T75045
-		'ua.vlasenko.net',                  // Ukraine interesting photography source - Bug T75045
-		'*.wikiportret.nl',                 // Wikiportret - Bug T74953
+		'photos.wikimapia.org',             // WikiMapia - T75045
+		'pslava.info',                      // Ukraine interesting photography source - T75045
+		'ukrainaincognita.com',             // Ukraine interesting photography source - T75045
+		'klymenko.data-tec.net',            // Ukraine interesting photography source - T75045
+		'serg-klymenko.narod.ru',           // Ukraine interesting photography source - T75045
+		'ua.vlasenko.net',                  // Ukraine interesting photography source - T75045
+		'*.wikiportret.nl',                 // Wikiportret - T74953
 		'openfashion.momu.be',              // Open Fashion Antwerp Fashion Museum (MoMu)
 		'*.commonists.org',                 // Commonists - T75724
 		'*.bnf.fr',                         // Bibliothèque nationale de France - T86699
@@ -11465,7 +11465,7 @@ $wgConf->settings = array(
 	// Affects URL uploads and chunked uploads (experimental).
 	// Limit on other web uploads is enforced by PHP.
 	'default' => 1024 * 1024 * 1000, // 1000 MB
-	'ptwiki' => 1024 * 500, // 500 KB - Bug T25186
+	'ptwiki' => 1024 * 500, // 500 KB - T25186
 ),
 
 'wmgUsePdfHandler' => array (
@@ -11503,7 +11503,7 @@ $wgConf->settings = array(
 //
 	'default' => false,
 	'testwiki' => true, // Expanding out to testwiki -- Andrew 2009-10-13
-	'enwikinews' => true, // Per Bug T23956 -- Andrew 2009-02-09
+	'enwikinews' => true, // Per T23956 -- Andrew 2009-02-09
 	'enwiktionary' => true, // T25417 -- ariel 2010-16-05
 	'fiwikimedia' => true, // T39778
 	'huwiki' => true, // T24909 -- Andrew 2010-09-06
@@ -13019,7 +13019,7 @@ $wgConf->settings = array(
 	'incubatorwiki' => true, // T34417
 	'nlwiki' => true, // T34202
 	'sewikimedia' => true, // T34757
-//	'tawiki' => true, // T36560 // Disable due to bug 34615
+//	'tawiki' => true, // T36560 // Disable due to T36615
 ),
 'wmgMoodBarInfoUrl' => array(
 	'default' => '//www.mediawiki.org/wiki/MoodBar',
@@ -15348,7 +15348,7 @@ $wgConf->settings = array(
 
 ### End (roughly) of general extensions ########################
 
-// Apply blocks to IPs in XFF (Bug T25343)
+// Apply blocks to IPs in XFF (T25343)
 'wmgUseXFFBlocks' => array(
 	'default' => true,
 ),

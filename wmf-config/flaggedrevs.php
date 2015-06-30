@@ -505,7 +505,7 @@ elseif ( $wgDBname == 'huwiki' ) {
 	if ( is_array( $wgRemoveGroups['sysop'] ) )
 		unset( $wgRemoveGroups['sysop'][ array_search( 'editor', $wgRemoveGroups['sysop'] ) ] );
 
-	// # Remove 'autoreview' user group; Bug T74055
+	// # Remove 'autoreview' user group; T74055
 	unset( $wgGroupPermissions['autoreview'] );
 	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'autoreview' ) );
 	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'autoreview' ) );

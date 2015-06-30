@@ -13,7 +13,7 @@ require_once( "$IP/extensions/Wikidata/Wikidata.php" );
 $wgWBSharedCacheKey = '-' . $wmgWikibaseCachePrefix;
 
 if ( defined( 'HHVM_VERSION' ) ) {
-	// Split the cache up for hhvm. Bug T73461
+	// Split the cache up for hhvm. T73461
 	$wgWBSharedCacheKey .= '-hhvm';
 }
 

@@ -186,7 +186,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		break;
 	case 'frwiki':
-	case 'frwikibooks': // wikibooks by Bug T28142
+	case 'frwikibooks': // wikibooks by T28142
 		// !!! Please be careful if you edit these rules, they are shared
 		// by two wikis. Create two sections, one per wiki, if needed. !!!
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
@@ -327,7 +327,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
 		break;
 	case 'ruwiki':
-		## Scaled back from sysop to autoconfirmed -- Bug T19998 -- Andrew 2009-03-16
+		## Scaled back from sysop to autoconfirmed -- T19998 -- Andrew 2009-03-16
 		## Taken back to * per the same bug reopened -- Andrew 2009-04-24
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 		break;
