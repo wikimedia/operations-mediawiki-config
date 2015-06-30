@@ -30,8 +30,26 @@ $wgLDAPLowerCaseUsername = array( 'labs' => false, 'invaliddomain' => false );
 // Only enable UseLocal if you need to promote an LDAP user
 #$wgLDAPUseLocal = true;
 
-#$wgLDAPDebug = 5;
-#$wgDebugLogGroups["ldap"] = "/tmp/ldap-s-1-debug.log";
+// Local debug logging for troubleshooting LDAP issues
+if ( false ) {
+	$wgLDAPDebug = 5;
+	$monolog = \Mediawiki\Logger\LoggerFactory::getProvider();
+	$monolog->mergeConfig( array(
+		'loggers' => array(
+			'ldap' => array(
+				'handlers' => array( 'wikitech-ldap' ),
+				'processors' => array_keys( $wmgMonologProcessors ),
+			),
+		),
+		'handlers' => array(
+			'wikitech-ldap' => array(
+				'class' => '\\Monolog\\Handler\\StreamHandler',
+				'args' => array( '/tmp/ldap-s-1-debug.log' ),
+				'formatter' => 'line',
+			),
+		),
+	) );
+}
 
 require_once( "$IP/extensions/OpenStackManager/OpenStackManager.php" );
 $wgOpenStackManagerNovaKeypairStorage = 'ldap';
