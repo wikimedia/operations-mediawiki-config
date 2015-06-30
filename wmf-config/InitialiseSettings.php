@@ -15012,6 +15012,11 @@ $wgConf->settings = array(
 	)
 ),
 
+'wmgUseWikibaseQuality' => array(
+	'default' => false,
+	'testwikidatawiki' => true,
+),
+
 'wmgUseTemplateSandbox' => array(
 	'default' => true,
 	'loginwiki' => false,
