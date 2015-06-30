@@ -14541,6 +14541,9 @@ $wgConf->settings = array(
 		113, // Archive_talk
 		829, // Module_talk from Scribunto
 	),
+	'cawiki' => array(
+		NS_PROJECT_TALK, // T99117
+	),
 ),
 'wmgFlowOccupyPages' => array(
 	'default' => array(),
