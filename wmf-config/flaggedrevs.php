@@ -17,7 +17,7 @@ $wgFlaggedRevTags = array(
 $wgFlagRestrictions = array(
 	'accuracy' => array( 'review' => 1, 'autoreview' => 1 ),
 );
-$wgGroupPermissions['autoconfirmed']['movestable'] = true; // Bug T16166
+$wgGroupPermissions['autoconfirmed']['movestable'] = true; // T16166
 
 $wmfStandardAutoPromote = $wgFlaggedRevsAutopromote; // flaggedrevs defaults
 $wgFlaggedRevsAutopromote = false;
@@ -36,7 +36,7 @@ if ( $wgDBname == 'alswiki' ) {
 
 elseif ( $wgDBname == 'arwiki' ) {
 	$wgFlaggedRevsWhitelist = array( 'الص�?حة_الرئيسية' );
-	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 100, 104 ) ); // Bug T21332
+	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 100, 104 ) ); // T21332
 }
 
 elseif ( $wgDBname == 'bewiki' ) {
@@ -82,7 +82,7 @@ elseif ( $wgDBname == 'bnwiki' ) { // T30717
 
 elseif ( $wgDBname == 'cewiki' ) { // based on ruwiki settings
 
-	// Bug T58408
+	// T58408
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 );
 
 	$wgFlaggedRevTags['accuracy']['levels'] = 3; // Is this needed?
@@ -166,7 +166,7 @@ elseif ( $wgDBname == 'test2wiki' ) {
 }
 
 elseif ( $wgDBname == 'cawikinews' ) {
-	$wgFlaggedRevsNamespaces[] = 102; // Bug T36135
+	$wgFlaggedRevsNamespaces[] = 102; // T36135
 
 	$wgGroupPermissions['editor']['autopatrol'] = true; // T95085
 
@@ -221,7 +221,7 @@ elseif ( $wgDBname == 'dewiktionary' ) {
 	$wgFlaggedRevTags['accuracy']['levels'] = 1;
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 102, 104, 106, 108 ) ); // T67316 and T76657
 
-	$wgFlaggedRevsAutoconfirm = array( // Bug T46103
+	$wgFlaggedRevsAutoconfirm = array( // T46103
 		'days'                => 60,
 		'totalContentEdits'   => 250,
 		'totalCheckedEdits'   => 50,
@@ -432,7 +432,7 @@ elseif ( $wgDBname == 'hewikisource' ) {
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 }
-# Bug T31911
+// T31911
 elseif ( $wgDBname == 'hiwiki' ) {
 	// # namespaces
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_PROJECT, NS_CATEGORY, 100 ) ); # 100 = Portal
@@ -544,10 +544,10 @@ elseif ( $wgDBname == 'plwiki' ) {
 }
 
 elseif ( $wgDBname == 'plwiktionary' ) {
-	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 100, 102, 828 ); // Bug T55373
+	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_IMAGE, NS_TEMPLATE, 100, 102, 828 ); // T55373
 }
 
-elseif ( $wgDBname == 'ptwiki' ) { // Bug T56828
+elseif ( $wgDBname == 'ptwiki' ) { // T56828
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_TEMPLATE, 102, 828 );
 	# Show only on a per-page basis
 	$wgFlaggedRevsOverride = false;
@@ -710,15 +710,15 @@ elseif ( $wgDBname == 'sqwiki' ) {
 }
 
 elseif ( $wgDBname == 'trwiki' ) {
-	unset( $wgGroupPermissions['reviewer'] ); // Bug T40690
-	$wgAddGroups['bureaucrat'] = array_diff( $wgAddGroups['bureaucrat'], array( 'reviewer' ) ); // Bug T40690
-	$wgRemoveGroups['bureaucrat'] = array_diff( $wgRemoveGroups['bureaucrat'], array( 'reviewer' ) ); // Bug T40690
+	unset( $wgGroupPermissions['reviewer'] ); // T40690
+	$wgAddGroups['bureaucrat'] = array_diff( $wgAddGroups['bureaucrat'], array( 'reviewer' ) ); // T40690
+	$wgRemoveGroups['bureaucrat'] = array_diff( $wgRemoveGroups['bureaucrat'], array( 'reviewer' ) ); // T40690
 
-	unset( $wgGroupPermissions['editor'] ); // Bug T40690
-	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'editor' ) ); // Bug T40690
-	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'editor' ) ); // Bug T40690
+	unset( $wgGroupPermissions['editor'] ); // T40690
+	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], array( 'editor' ) ); // T40690
+	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], array( 'editor' ) ); // T40690
 
-	// Bug T46587:
+	// T46587:
 	$wgFlaggedRevsNamespaces[] = 100 /* NS_PORTAL */;
 	$wgFlaggedRevsNamespaces[] = NS_HELP;
 }

@@ -226,7 +226,7 @@ $wmgAddWikiNotify = "newprojects@lists.wikimedia.org";
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
-// Bug T29320: skip MessageBlobStore::clear(); handle via refreshMessageBlobs.php instead
+// T29320: skip MessageBlobStore::clear(); handle via refreshMessageBlobs.php instead
 $wgHooks['LocalisationCacheRecache'][] = function( $cache, $code, &$allData, &$purgeBlobs = true ) {
 	$purgeBlobs = false;
 	return true;
@@ -961,7 +961,7 @@ $wgExtensionFunctions[] = function() {
 	}
 };
 
-// Bug T26313, turn off minordefault on enwiki
+// T26313, turn off minordefault on enwiki
 if ( $wgDBname == 'enwiki' ) {
 	$wgHiddenPrefs[] = 'minordefault';
 }
@@ -976,7 +976,7 @@ if ( $wmgUseFooterContactLink ) {
 	};
 }
 
-// Bug T35186: turn off incomplete feature action=imagerotate
+// T35186: turn off incomplete feature action=imagerotate
 $wgAPIModules['imagerotate'] = 'ApiDisabled';
 
 if ( $wmgUseDPL ) {
@@ -1309,7 +1309,7 @@ if ( $wmgUseApiFeatureUsage ) {
 // taking it live 2006-12-15 brion
 if ( $wmgUseDismissableSiteNotice ) {
 	require( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
-	$wgDismissableSiteNoticeForAnons = true; // Bug T59732
+	$wgDismissableSiteNoticeForAnons = true; // T59732
 }
 $wgMajorSiteNoticeID = '2';
 
@@ -1468,7 +1468,7 @@ if ( $wmgUseCentralNotice ) {
 	// Enable the CentralNotice/Translate integration
 	$wgNoticeUseTranslateExtension = true;
 
-	// Bug T51905
+	// T51905
 	$wgNoticeUseLanguageConversion = true;
 
 	// *** Hide Cookies ***
@@ -1486,7 +1486,7 @@ if ( $wmgUseCentralNotice ) {
 		'donate' => 21600000, // 250 days
 	);
 
-	// Bug T18821
+	// T18821
 	// Updates made here also need to be reflected in
 	// wikimediafoundation.org/wiki/Template:HideBanners
 	$wgNoticeHideUrls = array(
@@ -1526,7 +1526,7 @@ if ( $wgDBname == 'enwiki' ) {
 		return true;
 	};
 
-	// Bug T59569
+	// T59569
 	//
 	// If it's an anonymous user creating a page in the English Wikipedia Draft
 	// namespace, tell TitleQuickPermissions to abort the normal checkQuickPermissions
@@ -1855,7 +1855,7 @@ if ( $wmgUseUploadWizard ) {
 	);
 
 	$wgUploadWizardConfig['enableChunked'] = 'opt-in';
-	$wgUploadWizardConfig['altUploadForm'] = $wmgAltUploadForm; // Bug T35513
+	$wgUploadWizardConfig['altUploadForm'] = $wmgAltUploadForm; // T35513
 
 	if ( $wgDBname == 'testwiki' ) {
 		$wgUploadWizardConfig['feedbackPage'] = 'Prototype_upload_wizard_feedback';
@@ -2012,12 +2012,12 @@ if ( $wmgUseVisualEditor ) {
 	// User access configuration
 	if ( $wmgVisualEditorDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
-		$wgHiddenPrefs[] = 'visualeditor-enable'; // Bug T50666
+		$wgHiddenPrefs[] = 'visualeditor-enable'; // T50666
 	} else {
 		// Only show the beta-disable preference if the wiki is in 'beta'.
 		$wgHiddenPrefs[] = 'visualeditor-betatempdisable';
 	}
-	// Bug T52000 - to remove once roll-out is complete.
+	// T52000 - to remove once roll-out is complete.
 	if ( $wmgVisualEditorDisableForAnons ) {
 		$wgVisualEditorDisableForAnons = true;
 	}
@@ -2188,7 +2188,7 @@ if ( $wmgUseTranslate ) {
 	$wgGroupPermissions['*']['translate'] = true;
 	$wgGroupPermissions['translationadmin']['pagetranslation'] = true;
 	$wgGroupPermissions['translationadmin']['translate-manage'] = true;
-	$wgGroupPermissions['translationadmin']['translate-import'] = true; // Bug T42341
+	$wgGroupPermissions['translationadmin']['translate-import'] = true; // T42341
 	$wgGroupPermissions['user']['translate-messagereview'] = true;
 	$wgGroupPermissions['user']['translate-groupreview'] = true;
 
@@ -2222,7 +2222,7 @@ if ( $wmgUseTranslate ) {
 	unset( $wgTranslateTasks['optional'] );
 	unset( $wgTranslateTasks['suggestions'] );
 
-	$wgTranslateUsePreSaveTransform = true; # Bug T39304
+	$wgTranslateUsePreSaveTransform = true; // T39304
 
 	$wgEnablePageTranslation = true;
 	$wgTranslateDelayedMessageIndexRebuild = true;
@@ -2620,7 +2620,7 @@ if ( $wmgUseEventLogging ) {
 		$wgEventLoggingSchemaApiUri = 'http://meta.wikimedia.org/w/api.php';
 	}
 	if ( $wgEventLoggingDBname === $wgDBname ) {
-		// Bug T47031
+		// T47031
 		$wgExtraNamespaces[470] = 'Schema';
 		$wgExtraNamespaces[471] = 'Schema_talk';
 
@@ -2931,7 +2931,7 @@ $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
 	return true;
 };
 
-// Bug T46617
+// T46617
 if ( in_array( $wgDBname, array( 'wikidatawiki', 'testwikidatawiki' ) ) ) {
 	$wgHooks['SkinCopyrightFooter'][] = function( $title, $type, &$msg, &$link, &$forContent ) {
 		if ( $title->getNamespace() === NS_MAIN ) {
