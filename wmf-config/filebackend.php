@@ -81,7 +81,7 @@ $wgFileBackends[] = array(
 		array( 'template' => 'local-swift-eqiad', 'isMultiMaster' => true ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
-	'autoResync'  => 'conservative' // Bug T41221
+	'autoResync'  => 'conservative' // T41221
 );
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
@@ -93,7 +93,7 @@ $wgFileBackends[] = array(
 		array( 'template' => 'shared-swift-eqiad', 'isMultiMaster' => true ),
 	),
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
-	'autoResync'  => 'conservative' // Bug T41221
+	'autoResync'  => 'conservative' // T41221
 );
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',

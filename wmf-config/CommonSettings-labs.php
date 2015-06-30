@@ -66,9 +66,9 @@ if ( $wmgUseGWToolset ) {
 }
 
 if ( $wmgUseOAuth ) {
-	$wgMWOAuthCentralWiki = 'deploymentwiki';  # Bug T59403
+	$wgMWOAuthCentralWiki = 'deploymentwiki';  // T59403
 
-	// Bug T61141 - Return this to true and reset secrets once SSL works in labs
+	// T61141 - Return this to true and reset secrets once SSL works in labs
 	$wgMWOAuthSecureTokenTransfer = false;
 }
 
