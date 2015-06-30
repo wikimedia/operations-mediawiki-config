@@ -66,7 +66,7 @@ if ( $wmgUseGWToolset ) {
 }
 
 if ( $wmgUseOAuth ) {
-	$wgMWOAuthCentralWiki = 'deploymentwiki';  // T59403
+	$wgMWOAuthCentralWiki = 'deploymentwiki'; // T59403
 
 	// T61141 - Return this to true and reset secrets once SSL works in labs
 	$wgMWOAuthSecureTokenTransfer = false;
@@ -247,8 +247,6 @@ if ( $wmgUseCapiunto ) {
 
 // Experimental
 $wgGadgetsCaching = false;
-
-$wgAjaxEditStash = true;
 
 $wgMessageCacheType = CACHE_ACCEL;
 

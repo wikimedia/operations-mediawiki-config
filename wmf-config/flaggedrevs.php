@@ -527,7 +527,7 @@ elseif ( $wgDBname == 'kawiki' ) {
 }
 
 elseif ( $wgDBname == 'plwiki' ) {
-	// Bugs 43617, 48043 
+	// T45617, T50043
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_TEMPLATE, NS_CATEGORY, NS_HELP, 100, 828 );
 	$wgFlaggedRevTags['accuracy']['levels'] = 1;
 
@@ -634,7 +634,7 @@ elseif ( $wgDBname == 'ptwikisource' ) {
 
 elseif ( $wgDBname == 'ruwiki' ) {
 
-	// Bugs 37675, 47337
+	// T39675, T49337
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 );
 
 	$wgFlaggedRevTags['accuracy']['levels'] = 3; // Is this needed?
