@@ -301,18 +301,20 @@ if ( $wmgUseClusterSession ) {
 		'password' => $wmgRedisPassword,
 		'loggroup' => 'redis',
 	);
-}
-
-// Use the cache setup above and configure sessions caching
-if ( $wgDBname === 'labswiki' ) {
-	$wgSessionCacheType = 'memcached-pecl';
-	$wgMessageCacheType = 'memcached-pecl';
-	$wgCookieDomain = "wikitech.wikimedia.org";
-} else {
+	// Use the cache setup above and configure sessions caching
 	$wgSessionCacheType = 'sessions';
+	$wgMainStash = 'sessions'; // mostly for tokens and user states (T88493)
+} else {
+	$wgSessionCacheType = 'memcached-pecl';
+	$wgMainStash = 'memcached-pecl';
 }
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
+
+if ( $wgDBname === 'labswiki' ) {
+	$wgMessageCacheType = 'memcached-pecl';
+	$wgCookieDomain = "wikitech.wikimedia.org"; // TODO: Is this really necessary?
+}
 
 // Use PBKDF2 for password hashing (Bug T70766)
 $wgPasswordDefault = 'pbkdf2';
