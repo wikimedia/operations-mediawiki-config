@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_de031f78",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11461,
+      "author": {
+        "id": 826
+      },
+      "writtenOn": "2015-06-30T12:34:27Z",
+      "side": 1,
+      "message": "without \"»\" after url\n WRONG:\n»       »       \u0027*.ub.unibas.ch\u0027,»       »       »       »       »       // unibas.ch - T104178",
+      "revId": "883c437e61a25bc0fa401cd93ec12d6661d01052",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
