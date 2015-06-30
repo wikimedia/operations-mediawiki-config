@@ -965,6 +965,7 @@ $wgConf->settings = array(
 	'ltwikisource' => '/static/images/project-logos/ltwikisource.png',  // T54019
 	'mkwikisource' => '/static/images/project-logos/mkwikisource.png',  // T54019
 	'mlwikisource' => '/static/images/project-logos/mlwikisource.png',
+	'mrwikisource' => '/static/images/project-logos/mrwikisource.png',  // T103655
 	'orwikisource' => '/static/images/project-logos/orwikisource.png',  // T73875
 	'plwikisource' => '/static/images/project-logos/plwikisource.png',
 	'ruwikisource' => '/static/images/project-logos/ruwikisource.png',
