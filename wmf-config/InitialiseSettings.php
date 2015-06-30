@@ -4356,6 +4356,7 @@ $wgConf->settings = array(
 		'HttpError' => 'error', // Only log http errors with a 500+ code T85795
 		'AdHocDebug' => 'debug', // for temp live debugging
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
+		'wbq_evaluation' => 'debug', // WikibaseQualityConstraints evaluation logs
 	),
 
 	'+enwiki' => array(
