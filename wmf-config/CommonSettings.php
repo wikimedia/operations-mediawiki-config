@@ -307,9 +307,12 @@ if ( $wmgUseClusterSession ) {
 if ( $wgDBname === 'labswiki' ) {
 	$wgSessionCacheType = 'memcached-pecl';
 	$wgMessageCacheType = 'memcached-pecl';
+	$wgMainStash = 'memcached-pecl';
+
 	$wgCookieDomain = "wikitech.wikimedia.org";
 } else {
 	$wgSessionCacheType = 'sessions';
+	$wgMainStash = 'sessions'; // mostly for tokens and user states (T88493)
 }
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
