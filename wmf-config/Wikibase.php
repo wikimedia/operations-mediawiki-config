@@ -87,7 +87,7 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgWBRepoSettings['clientDbList']
 	);
 
-	// Bug T53637 and T48953
+	// T53637 and T48953
 	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
 
 	$wgCacheEpoch = '20150602190200';
@@ -98,7 +98,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgPropertySuggesterMinProbability = 0.069;
 
-	// Bug T72346
+	// T72346
 	$wgPropertySuggesterDeprecatedIds = array(
 		107, // (OBSOLETE) main type (GND)
 		143, // imported from

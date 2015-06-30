@@ -181,7 +181,7 @@ function wmfLabsSettings() {
 		'-wgRateLimitLog' => array(),
 		'-wgJobLogFile' => array(),
 
-		// Bug T62013, T58758
+		// T62013, T58758
 		'-wmgRC2UDPPrefix' => array(
 			'default' => false,
 		),
@@ -218,7 +218,7 @@ function wmfLabsSettings() {
 		),
 
 		'-wmgUsePoolCounter' => array(
-			'default' => false, # Bug T38891
+			'default' => false, // T38891
 		),
 		'-wmgUseAPIRequestLog' => array(
 			'default' => false,
@@ -252,7 +252,7 @@ function wmfLabsSettings() {
 			'default' => true,
 		),
 
-		# Bug T39852
+		// T39852
 		'wmgUseWikimediaShopLink' => array(
 			'default'    => false,
 			'enwiki'     => true,
@@ -988,7 +988,7 @@ function wmfLabsSettings() {
 
 		'wgSecureLogin' => array(
 			// Setting false throughout Labs for now due to untrusted SSL certificate
-			// Bug T50501
+			// T50501
 			'default' => false,
 			'loginwiki' => false,
 		),
