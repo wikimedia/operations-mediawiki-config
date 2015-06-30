@@ -75,7 +75,7 @@ default:
 # This must be set *after* the DefaultSettings.php inclusion
 $wgDBname = $multiVersion->getDatabase();
 
-# Better have the proper username (Bug T46251)
+# Better have the proper username (T46251)
 $wgDBuser = 'wikiuser';
 
 # wmf-config directory (in common/)
@@ -314,7 +314,7 @@ if ( $wgDBname === 'labswiki' ) {
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
 
-// Use PBKDF2 for password hashing (Bug T70766)
+// Use PBKDF2 for password hashing (T70766)
 $wgPasswordDefault = 'pbkdf2';
 // This needs to be increased as allowable by server performance
 $wgPasswordConfig['pbkdf2']['cost'] = '64000';
@@ -335,7 +335,7 @@ if ( PHP_SAPI != 'cli' ) {
 $wgUseImageResize               = true;
 $wgUseImageMagick               = true;
 $wgImageMagickConvertCommand    = '/usr/bin/convert';
-$wgSharpenParameter = '0x0.8'; # for IM>6.5, Bug T26857
+$wgSharpenParameter = '0x0.8'; # for IM>6.5, T26857
 
 $wgFileBlacklist[] = 'txt';
 $wgFileBlacklist[] = 'mht';
@@ -426,7 +426,7 @@ if ( $wmfRealm === 'production' ) {
 	$wgStatsdServer = 'statsd.eqiad.wmnet';
 }
 
-// CORS (cross-domain AJAX, Bug T22814)
+// CORS (cross-domain AJAX, T22814)
 // This lists the domains that are accepted as *origins* of CORS requests
 // DO NOT add domains here that aren't WMF wikis unless you really know what you're doing
 if ( $wmgUseCORS ) {
@@ -849,7 +849,7 @@ $wgHiddenPrefs[] = 'realname';
 # Default address gets rejected by some mail hosts
 $wgPasswordSender = 'wiki@wikimedia.org';
 
-# e-mailing password based on e-mail address (Bug T36386)
+# e-mailing password based on e-mail address (T36386)
 $wgPasswordResetRoutes['email'] = true;
 
 if ( $wmgUseClusterFileBackend ) {
@@ -929,7 +929,7 @@ $oaiAuditDatabase = 'oai';
 $oaiChunkSize = 40;
 
 $wgEnableUserEmail = true;
-$wgNoFollowLinks = true; // In case the MediaWiki default changed, Bug T44594
+$wgNoFollowLinks = true; // In case the MediaWiki default changed, T44594
 
 # XFF log for vandal tracking
 $wgExtensionFunctions[] = function() {
@@ -1092,7 +1092,7 @@ $wgBrowserBlackList[] = '/^Lynx/';
 
 if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
 	// New HTTPS service on regular URLs
-	$wgInternalServer = $wgServer; // Keep this as HTTP for IRC notifications (Bug T31925)
+	$wgInternalServer = $wgServer; // Keep this as HTTP for IRC notifications (T31925)
 	$wgServer = preg_replace( '/^http:/', 'https:', $wgServer );
 }
 
@@ -1554,7 +1554,7 @@ if ( $wgDBname == 'enwiki' ) {
 	};
 }
 
-// Enable a "viewdeletedfile" userright for [[m:Global deleted image review]] (Bug T16801)
+// Enable a "viewdeletedfile" userright for [[m:Global deleted image review]] (T16801)
 $wgAvailableRights[] = 'viewdeletedfile';
 $wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
 	return ( !in_array( $action, array( 'deletedhistory', 'deletedtext' ) ) || !$title->inNamespaces( NS_FILE, NS_FILE_TALK ) || !$user->isAllowed( 'viewdeletedfile' ) );
@@ -1564,7 +1564,7 @@ if ( $wmgUseCollection ) {
 	// PediaPress / PDF generation
 	include "$IP/extensions/Collection/Collection.php";
 	$wgCollectionMWServeURL = 'http://ocg.svc.eqiad.wmnet:8000';
-	// Use pediapress server for POD function (Bug T73675)
+	// Use pediapress server for POD function (T73675)
 	$wgCollectionCommandToServeURL = array(
 		'zip_post' => 'http://url-downloader.wikimedia.org:8080|https://pediapress.com/wmfup/',
 	);
@@ -1746,7 +1746,7 @@ if( $wgDBname == 'commonswiki' ) {
 }
 
 // Temporary override: WMF is not hardcore enough to enable this.
-// See Bug T37785, T38316, T47022 about it.
+// See T37785, T38316, T47022 about it.
 $wgDefaultUserOptions['watchdefault'] = 0;
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 $wgDefaultUserOptions['usenewrc'] = 0;
@@ -1884,7 +1884,7 @@ if ( $wmgUseUploadWizard ) {
 		$wgUploadWizardConfig['blacklistIssuesPage'] = 'Wikipedia:Upload_Wizard_blacklist_issues'; # Set by neilk, 2011-11-01, per erik
 	}
 
-	// Needed to make UploadWizard work in IE, see Bug T41877
+	// Needed to make UploadWizard work in IE, see T41877
 	$wgApiFrameOptions = 'SAMEORIGIN';
 } else {
 	// If XFO wasn't specified due to UploadWizard, set it here
@@ -2612,7 +2612,7 @@ if ( $wmgUseRelatedSites ) {
 
 if ( $wmgUseUserMerge ) {
 	require_once( "$IP/extensions/UserMerge/UserMerge.php" );
-	// Don't let users get deleted outright (Bug T69789)
+	// Don't let users get deleted outright (T69789)
 	$wgUserMergeEnableDelete = false;
 }
 

@@ -875,7 +875,7 @@ function wmfLabsSettings() {
 			'deploymentwiki' => 'personal',
 		),
 
-		// (Bug T41653) The plan is to enable it for testing on labs first, so add
+		// (T41653) The plan is to enable it for testing on labs first, so add
 		// the config hook to be able to do that.
 		'wmgUseCodeEditorForCore' => array(
 			'default' => true,

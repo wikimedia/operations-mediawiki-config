@@ -32,7 +32,7 @@ $wgDebugTimestamps = true;
 
 $wmgAddWikiNotify = false;
 
-# see r110254 and Bug T35746
+# see r110254 and T35746
 $wgPreloadJavaScriptMwUtil = true;
 
 // Cache ResourceLoader modules in localStorage
@@ -203,7 +203,7 @@ if ( $wmgUseScore ) {
 	$wgScoreDirectory = '/data/project/upload7/score';
 }
 
-// CORS (cross-domain AJAX, Bug T22814)
+// CORS (cross-domain AJAX, T22814)
 // This lists the domains that are accepted as *origins* of CORS requests
 // DO NOT add domains here that aren't WMF wikis unless you really know what you're doing
 if ( $wmgUseCORS ) {
