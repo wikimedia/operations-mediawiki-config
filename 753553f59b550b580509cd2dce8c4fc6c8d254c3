@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_bab5f5cc",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 338,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-07-01T14:13:38Z",
+      "side": 1,
+      "message": "Should this be wmgGatherAutohideFlagLimit?",
+      "revId": "753553f59b550b580509cd2dce8c4fc6c8d254c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
