@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_faa2a0f8",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1376,
+      "author": {
+        "id": 204
+      },
+      "writtenOn": "2015-07-01T00:13:38Z",
+      "side": 1,
+      "message": "Talked with Krenair about setting this for non SUL wikis. I\u0027m not entirely sure we need to log these.",
+      "revId": "f6f714b049caead3cf081b0475b8499721e20f5f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
