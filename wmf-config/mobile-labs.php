@@ -27,5 +27,6 @@ $wgMFWikiDataEndpoint = $wmgMFWikiDataEndpoint;
 $wgWikiBasePropertyConfig = $wmgWikiBasePropertyConfig;
 $wgMFInfoboxConfig = $wmgMFInfoboxConfig;
 
+$wgGatherAutohideFlagLimit = $wmgGatherAutohideFlagLimit;
 $wgMFIsBrowseEnabled = $wmgMFIsBrowseEnabled;
 $wgMFBrowseTags = $wmgMFBrowseTags;
