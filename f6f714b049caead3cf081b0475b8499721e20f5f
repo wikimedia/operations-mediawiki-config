@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "8ec42329_75b6c13d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1359,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-07-01T05:31:59Z",
+      "side": 1,
+      "message": "Are oversighters not considered as \"privileged users\"?",
+      "revId": "f6f714b049caead3cf081b0475b8499721e20f5f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_1a3a0c94",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
