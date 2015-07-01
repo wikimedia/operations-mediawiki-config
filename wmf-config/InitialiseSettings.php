@@ -8759,7 +8759,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller' ),
 	),
 	'+officewiki' => array(
-		'bureaucrat' => array( 'import', 'transwiki', 'communityapps', 'flood' ),
+		'bureaucrat' => array( 'import', 'transwiki', 'communityapps', 'flood', 'flow-bot' ),
 	),
 	'+ombudsmenwiki' => array(
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', ),
@@ -9388,7 +9388,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller' ),
 	),
 	'+officewiki' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'import', 'transwiki', 'communityapps', 'flood' ),
+		'bureaucrat' => array( 'sysop', 'bureaucrat', 'import', 'transwiki', 'communityapps', 'flood', 'flow-bot' ),
 	),
 	'+ombudsmenwiki' => array(
 		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', 'bureaucrat', ),
