@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "8ec42329_ba7f3862",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1374,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-07-01T00:23:53Z",
+      "side": 1,
+      "message": "these would be easier to mine from logstash if you used a context to pass the groups and length.\n\n  $logger-\u003einfo( \"Login by user in {groups} with password length: {bucket}\", array(\n      \u0027groups\u0027 \u003d\u003e $groups,\n      \u0027bucket\u0027 \u003d\u003e $bucket,\n   ) );\n\nThis would log to fluorine as something like:\n\n  2015-06-30 08:21:32 mw1201 itwiki badpass INFO: Login by user in [\u0027staff\u0027,\u0027sysop\u0027] with password length: \u003c 4\n\nIn logstash the event would have the groups as an array that could be searched/filtered and the bucket as another field that could also be used for searching or graphing.",
+      "revId": "f6f714b049caead3cf081b0475b8499721e20f5f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_faa2a0f8",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
