@@ -7814,6 +7814,7 @@ $wgConf->settings = array(
 		'communityapps' => array( 'view-community-applications' => true ),
 		'flood' => array( 'bot' => true ), // T86237
 		'user' => array( 'massmessage' => true, ), // T66978
+		'sysop' => array( 'flow-create-board' => true ), // T101663
 	),
 	'+ombudsmenwiki' => array(
 		'autoconfirmed' => array(
