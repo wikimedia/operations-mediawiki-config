@@ -326,6 +326,14 @@ if ( $wgDBname === 'labswiki' ) {
 	$wgPasswordPolicy['policies']['bot']['MinimalPasswordLength'] = 1;
 }
 
+// Require 8-byte password for staff. Set MinimumPasswordLengthToLogin
+// to 8 also, once staff have time to update.
+$wgPasswordPolicy['policies']['staff'] = array(
+	'MinimalPasswordLength' => 8,
+	'MinimumPasswordLengthToLogin' => 1,
+	'PasswordCannotMatchUsername' => true,
+);
+
 if ( PHP_SAPI === 'cli' ) {
 	$wgShowExceptionDetails = true;
 }
