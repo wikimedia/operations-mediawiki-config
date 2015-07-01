@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_d5f9b5e5",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1359,
+      "author": {
+        "id": 204
+      },
+      "writtenOn": "2015-07-01T06:02:01Z",
+      "side": 1,
+      "message": "For now, I\u0027m mostly concerned about users with access to checkuser data, or who can add javascript. So I\u0027m going to limit myself to working on them.  I hope groups like oversighters will want a stricter policy, and it will be trivial to add them if there\u0027s consensus on what they think is appropriated.",
+      "parentUuid": "8ec42329_75b6c13d",
+      "revId": "f6f714b049caead3cf081b0475b8499721e20f5f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_1a3a0c94",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
