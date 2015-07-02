@@ -25,7 +25,7 @@ function streamFavicon() {
 		return;
 	}
 
-	$url = wfExpandUrl( $wgFavicon, PROTO_INTERNAL );
+	$url = wfExpandUrl( $wgFavicon, PROTO_CANONICAL );
 	$client = MWHttpRequest::factory( $url );
 	$client->setHeader( 'X-Favicon-Loop', '1' );
 

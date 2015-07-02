@@ -25,7 +25,7 @@ function streamAppleTouch() {
 		return;
 	}
 
-	$url = wfExpandUrl( $wgAppleTouchIcon, PROTO_INTERNAL );
+	$url = wfExpandUrl( $wgAppleTouchIcon, PROTO_CANONICAL );
 	$client = MWHttpRequest::factory( $url );
 	$client->setHeader( 'X-Favicon-Loop', '1' );
 
