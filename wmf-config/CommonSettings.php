@@ -1268,7 +1268,9 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthCheckSULMigration = true;
 
 	// temporary for testing -- legoktm 2015-07-02
-	$wgCentralAuthEnableUserMerge = true;
+	if ( $wgDBname === 'metawiki' ) {
+		$wgCentralAuthEnableUserMerge = true;
+	}
 }
 
 // Config for GlobalCssJs

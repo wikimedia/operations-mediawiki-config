@@ -7730,7 +7730,10 @@ $wgConf->settings = array(
 		'flood' => array( 'bot' => true ),
 		'global-renamer' => array( 'centralauth-rename' => true ), // T71651
 		'massmessage-sender' => array( 'massmessage' => true ), // T59611
-		'steward' => array( 'userrights-interwiki' => true ), // new steward stuff, yay 2007-12-27
+		'steward' => array(
+			'userrights-interwiki' => true,  // new steward stuff, yay 2007-12-27
+			'centralauth-usermerge' => true,
+		),
 		'uploader' => array( // T52287
 			'upload' => true,
 			'reupload' => true,
