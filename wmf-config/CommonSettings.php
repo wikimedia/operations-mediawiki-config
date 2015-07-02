@@ -1269,7 +1269,7 @@ if ( $wmgUseCentralAuth ) {
 
 	// temporary for testing -- legoktm 2015-07-02
 	if ( $wgDBname === 'metawiki' ) {
-		$wgCentralAuthEnableUserMerge = true;
+		$wgCentralAuthEnableUserMerge = false;
 	}
 }
 
