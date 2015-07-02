@@ -14,7 +14,6 @@ mwconfig_files_txt=(
 	CirrusSearch-labs.php
 	db-eqiad.php
 	db-labs.php
-	db-secondary.php
 	ext-labs.php
 	ext-production.php
 	filebackend-labs.php
