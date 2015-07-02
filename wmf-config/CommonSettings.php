@@ -1266,6 +1266,9 @@ if ( $wmgUseCentralAuth ) {
 
 	// Enables login using pre-SULF username and notification
 	$wgCentralAuthCheckSULMigration = true;
+
+	// temporary for testing -- legoktm 2015-07-02
+	$wgCentralAuthEnableUserMerge = true;
 }
 
 // Config for GlobalCssJs
