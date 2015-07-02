@@ -1118,6 +1118,7 @@ $wgConf->settings = array(
 	'viwikivoyage' => array( '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ),
 
     # Special wikis
+	'foundationwiki' => array( '1.5x' => '/static/images/project-logos/foundationwiki-1.5x.png', '2x' => '/static/images/project-logos/foundationwiki-2x.png' ),
 	'metawiki' => array( '1.5x' => '/static/images/project-logos/metawiki-1.5x.png', '2x' => '/static/images/project-logos/metawiki-2x.png' ),
 	'test2wiki' => array( '1.5x' => '/static/images/project-logos/test2wiki-1.5x.png', '2x' => '/static/images/project-logos/test2wiki-2x.png' ),
 ),
