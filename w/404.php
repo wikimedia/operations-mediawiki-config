@@ -1,4 +1,5 @@
 <?php
+header( 'Transfer-Encoding: chunked' );
 header( 'Content-Type: text/html; charset=utf-8' );
 
 $prot = ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' )
