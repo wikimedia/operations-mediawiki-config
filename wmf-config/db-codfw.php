@@ -134,7 +134,7 @@ $wgLBFactoryConf = array(
 		'db1033' => 0,   # 1.4TB  64GB,
 #		'db2029' => 100, down for maintenance
 		'db2040' => 100,
-#		'db2047' => 100, down for maintenance
+		'db2047' => 100,
 		'db2054' => 100,
 	),
 	'silver' => array(
