@@ -12794,9 +12794,13 @@ $wgConf->settings = array(
 		'http://blog.wikimedia.org/feed/',
 		'http://blog.wikimedia.org/c/our-wikis/wikimediacommons/feed/',
 		'http://blog.wikimedia.org/c/communications/picture-of-the-day/feed/',
+		'https://blog.wikimedia.org/feed/',
+		'https://blog.wikimedia.org/c/our-wikis/wikimediacommons/feed/',
+		'https://blog.wikimedia.org/c/communications/picture-of-the-day/feed/',
 	),
 	'mediawikiwiki' => array(
 		'http://blog.wikimedia.org/feed/',
+		'https://blog.wikimedia.org/feed/',
 		'https://git.wikimedia.org/feed/mediawiki/extensions/Translate.git',
 		'https://mingle.corp.wikimedia.org/projects/analytics/feeds/8z8k6vUfniLmWc2qGe6GMQsxBujvKRKuybLd8mdTbMFHwGfLH3oxK*MU0E8zM6go.atom',
 		'https://bugzilla.wikimedia.org/buglist.cgi?bug_status=UNCONFIRMED&bug_status=NEW&bug_status=ASSIGNED&bug_status=PATCH_TO_REVIEW'
