@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "8ec42329_dd5785f7",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1359,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-07-03T21:39:27Z",
+      "side": 1,
+      "message": "Maybe use getRights() instead? Almost everywhere (e.g. abuse filters, recent changes, gadget exposure etc.) it is generally discouraged to do anything based on groups because you\u0027re bound to miss something or get out of sync with reality sooner or later.\n\nCan use a similar array check but looking for e.g \u0027editinterface\u0027 and \u0027checkuser\u0027.\n\nMaybe \u0027edituserjs\u0027 and/or \u0027checkuser-log\u0027 as well.",
+      "parentUuid": "8ec42329_d5f9b5e5",
+      "revId": "f6f714b049caead3cf081b0475b8499721e20f5f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_1a3a0c94",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
