@@ -12705,6 +12705,7 @@ $wgConf->settings = array(
 	'+cawiki' => array( NS_PROJECT, 100 /* Portal */, 102 /* Viquiprojecte */ ), // T58000 & T88896
 	'+enwiki' => array( 100 /* Portal */, 108 /* Book */, 118 /* Draft */ ), // T58001
 	'+hewiki' => array( 118 /* Draft */ ), // T87027
+	'+jawiki' => array( 100 /* Portal */), // T97313
 	'+kowiki' => array( 118 /* Draft */ ), // T92798
 	'+plwiki' => array( 102 /* Wikiprojekt */ ), // T92698
 	'+ruwiki' => array( 102 /* Draft / Incubator */ ), // T86688
