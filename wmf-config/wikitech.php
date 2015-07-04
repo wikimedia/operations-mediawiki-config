@@ -119,7 +119,6 @@ $wgOpenStackManagerProxyGateways = array( 'eqiad' => '208.80.155.156' );
 # This must be loaded AFTER OSM, to overwrite it's defaults
 require_once( '/srv/mediawiki/private/WikitechPrivateLdapSettings.php' );
 
-$smwgNamespacesWithSemanticLinks[112 /* Ops */] = true;
 $smwgNamespacesWithSemanticLinks[NS_NOVA_RESOURCE] = true;
 
 # TODO:  Re-enable OpenID
