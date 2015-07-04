@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "8ec42329_32527316",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 315,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-07-04T09:41:10Z",
+      "side": 1,
+      "message": "Hm.. looks like there is a logic error. The key \u0027sessions\u0027 is conditionally defined based on $wmgUseClusterSession. But accessed here under a different condition.\n\nNot new in this commit, but this should probably be under \u0027else if ($wmgUseClusterSession)\u0027 and/or merged with the if-statement so that $wmgUseClusterSession is false for labswiki (if that makes sense).",
+      "revId": "8dfb8eadc53d486a8485c138872727d6152356f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ec42329_aec4de44",
         "filename": "wmf-config/mc.php",
         "patchSetId": 1
