@@ -3809,7 +3809,7 @@ $wgConf->settings = array(
 	'+grantswiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+incubatorwiki' => array( 0 => 1, 6 => 0, 14 => 1 ),
 	'+internalwiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+labswiki' => array( 0 => 1, 110 => 1, 112 => 1, 113 => 1, 498 => 1 ),
+	'+labswiki' => array( 0 => 1, 110 => 1, 498 => 1 ),
 	'+legalteamwiki' => array( 0 => 1 ),
 	'+mediawikiwiki' => array( 0 => 1, 6 => 0, 8 => 0, 14 => 1 ),
 	'+metawiki' => array( 0 => 1, 6 => 0, 8 => 0, 200 => 1, 201 => 1, 202 => 1, 203 => 1, 208 => 1, 209 => 1 ),
@@ -4461,9 +4461,7 @@ $wgConf->settings = array(
 	),
 	'labswiki' => array(
 		110 => 'Obsolete',
-		111 => 'Obsolete_talk',
-		112 => 'Ops',
-		113 => 'Ops_talk',
+		111 => 'Obsolete_talk'
 	),
 	'mediawikiwiki' => array(
 		100 => 'Manual',
@@ -6785,7 +6783,7 @@ $wgConf->settings = array(
 	'+itwikivoyage' => array( 100 => 1, 104 => 1, 106 => 1 ),
 	'+kowikisource' => array( 100 => 1 ),
 	'+lawikisource' => array( 102 => 1, 106 => 1 ),
-	'+labswiki' => array( 12 => 1, 112 => 1, 498 => 1 ),
+	'+labswiki' => array( 12 => 1, 498 => 1 ),
 	'+ltwiki' => array( 100 => 1 ),
 	'+mediawikiwiki' => array( 12 => 1, 100 => 1, 102 => 1, 104 => 1, 106 => 1 ), // T85807
 	'+metawiki' => array( 12 => 1, 200 => 1, 202 => 1 ),
@@ -10262,7 +10260,6 @@ $wgConf->settings = array(
 	'+itwikisource' => array( 102, 108, 110 ),
 	'+itwikivoyage' => array( 100, 104 ), // T57620
 	'+kowikisource' => array( 100 ),
-	'+labswiki' => array( 112 ),
 	'+lawikisource' => array( 102, 104, 106 ),
 	'+mediawikiwiki' => array( 100, 102, 104, 106 ), // Manuals, extensions, Api & skin - T86391
 	'+metawiki' => array( NS_HELP ), // T45687
