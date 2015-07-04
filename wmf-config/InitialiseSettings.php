@@ -7661,31 +7661,10 @@ $wgConf->settings = array(
 		),
 		'user' => array( 'reupload-own' => false ), // T85621
 	),
-	'labswiki' => array(
+	'labswiki' => array( // contentadmin is handled in CommonSettings, not here
 		'*' => array(
 			'edit' => false,
 			'createaccount' => true,
-		),
-		'contentadmin' => array(
-			'protect' => true,
-			'editprotected' => true,
-			'bigdelete' => true,
-			'delete' => true,
-			'undelete' => true,
-			'block' => true,
-			'blockemail' => true,
-			'patrol' => true,
-			'autopatrol' => true,
-			'import' => true,
-			'importupload' => true,
-			'upload_by_url' => true,
-			'movefile' => true,
-			'suppressredirect' => true,
-			'rollback' => true,
-			'browsearchive' => true,
-			'deletedhistory' => true,
-			'deletedtext' => true,
-			'autoconfirmed' => true,
 		),
 		'bots' => array('skipcaptcha' => true ),
 		'cloudadmin' => array(
