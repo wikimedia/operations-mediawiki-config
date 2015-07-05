@@ -63,12 +63,12 @@ Falling back to the filename given as argument.
 Example, per datacenter:
 
  Given the files:
-  - mc-pmtpa.php
+  - mc-codfw.php
   - mc.php
 
  The call to getRealmSpecificFilename( 'mc.php' ) will return:
 
-  - on pmtpa: mc-pmtpa.php
+  - on codfw: mc-codfw.php
   - on any other datacenter (e.g. eqiad): mc.php
 
 
@@ -93,8 +93,8 @@ A more complicated example:
  The call to getRealmSpecificFilename( 'log.php' ) will return:
 
   - in labs eqiad: 'log-eqiad.php'
-  - in labs pmtpa: 'log.php'
-  - in production pmtpa: 'log-production.php'
+  - in a non-existent labs DC that's not eqiad: 'log.php'
+  - in production codfw: 'log-production.php'
   - in production eqiad: 'log-production.php'
 
  The last case is because the realm takes precedence over the datacenter.
