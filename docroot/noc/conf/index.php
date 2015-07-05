@@ -1,7 +1,7 @@
 <?php
 require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
 
-	function outputFiles( $viewFilenames, $highlight = true ) {
+	function outputFiles( $viewFilenames ) {
 		$viewFilenames = array_map( 'basename', $viewFilenames );
 		natsort( $viewFilenames );
 		foreach ( $viewFilenames as $viewFilename ) {
@@ -10,14 +10,8 @@ require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
 				: $viewFilename;
 			echo "\n<li>";
 
-			if ( $highlight ) {
-				echo  '<a href="./highlight.php?file=' . htmlspecialchars( urlencode( $srcFilename ) ) . '">'
-					. htmlspecialchars( $srcFilename );
-				echo '</a> (<a href="./' . htmlspecialchars( urlencode( $viewFilename ) ) . '">raw text</a>)';
-			} else {
-				echo '<a href="./' . htmlspecialchars( urlencode( $viewFilename ) ) . '">'
-					. htmlspecialchars( $srcFilename ) . '</a>';
-			}
+			echo '<a href="./' . htmlspecialchars( urlencode( $viewFilename ) ) . '">'
+				. htmlspecialchars( $srcFilename ) . '</a>';
 			echo '</li>';
 		}
 	}
@@ -33,8 +27,8 @@ require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
 <body>
 
 <p>Below is a selection of Wikimedia configuration files available for easy viewing.
-	The files are dynamically generated and are perfectly up-to-date.
-	Each of these files is also available in public version control in one of the following repositories:
+	The files are dynamically generated and are up-to-date with the current versions on our servers.
+	Most other important configuration files are available in public version control in one of the following repositories:
 </p>
 <ul>
 	<li><a href="https://git.wikimedia.org/tree/operations%2Fmediawiki-config.git">operations/mediawiki-config.git</a></li>
@@ -45,32 +39,12 @@ require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
 <p>Currently active MediaWiki versions: <?php echo implode( ', ', getActiveWikiVersions() ); ?></p>
 <hr>
 
-<h2><img src="./images/source_php.png" alt=""> MediaWiki configuration</h2>
-<ul>
-<?php
-	$viewFilenames = array_merge(
-		glob( __DIR__ . '/*.php.txt' ),
-		glob( __DIR__ . '/{fc-list,langlist,wikiversions*.json,extension-list*}', GLOB_BRACE ),
-		glob( __DIR__ . '/*.yaml.txt' )
-	);
-	outputFiles( $viewFilenames );
-?>
-</ul>
-
-<h3><img src="./images/document.png" alt=""> Database lists</h3>
-<ul>
-<?php
-	outputFiles( glob( __DIR__ . '/*.dblist' ) );
-?>
-</ul>
-
-<h3><img src="./images/document.png" alt=""> CDB files</h3>
+<h3><img src="./document.png" alt=""> CDB files</h3>
 <ul>
 <?php
 	outputFiles( glob( __DIR__ . '/*.cdb' ), false );
 ?>
 </ul>
 
-<hr>
 </body>
 </html>
