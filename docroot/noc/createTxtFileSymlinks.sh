@@ -62,7 +62,6 @@ mwconfig_files=(
 	group0.dblist
 	langlist
 	large.dblist
-	mediaviewer.dblist
 	medium.dblist
 	nonglobal.dblist
 	private.dblist
@@ -75,7 +74,6 @@ mwconfig_files=(
 	s7.dblist
 	small.dblist
 	special.dblist
-	visualeditor.dblist
 	visualeditor-default.dblist
 	wikibooks.dblist
 	wikidata.dblist
