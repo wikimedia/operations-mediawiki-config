@@ -164,7 +164,7 @@ function wmfLabsSettings() {
 
 		'-wmgLogstashServers' => array(
 			'default' => array(
-				'10.68.16.134', // deployment-logstash1.eqiad.wmflabs
+				'10.68.16.147', // deployment-logstash2.deployment-prep.eqiad.wmflabs
 			),
 		),
 
