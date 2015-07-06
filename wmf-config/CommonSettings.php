@@ -1382,6 +1382,7 @@ if ( file_exists( '/etc/wikimedia-image-scaler' ) ) {
 	$wgMaxShellFileSize = 512 * 1024;
 	if ( defined( 'HHVM_VERSION' ) ) {
 		$wgMaxShellMemory *= 2;
+		$wgDisableOutputCompression = true;
 	}
 }
 $wgMaxShellTime = 50; // so it times out before PHP and curl and squid
