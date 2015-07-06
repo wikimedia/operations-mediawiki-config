@@ -12720,12 +12720,6 @@ $wgConf->settings = array(
 	'+officewiki' => array( 100 /* Report */ ),
 ),
 
-// Whether to add $wgContentNamespaces to $wmgVisualEditorNamespaces above
-'wmgVisualEditorInContentNamespaces' => array(
-	'default' => true,
-	'svwiktionary' => false,
-),
-
 // Should a namespace in which VisualEditor is enabled by default for all users (including anons)
 'wmgUseVisualEditorNamespace' => array(
 	'default' => false,
