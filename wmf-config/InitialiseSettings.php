@@ -15025,7 +15025,7 @@ $wgConf->settings = array(
 
 'wmgUseWikibaseQuality' => array(
 	'default' => false,
-	'testwikidatawiki' => true,
+	'wikidata' => true,
 ),
 
 'wmgUseTemplateSandbox' => array(

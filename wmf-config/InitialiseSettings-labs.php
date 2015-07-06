@@ -1118,9 +1118,5 @@ function wmfLabsSettings() {
 			'private' => false,
 		),
 
-		'wmgUseWikibaseQuality' => array(
-			'default' => true,
-		),
-
 	);
 } # wmflLabsSettings()
