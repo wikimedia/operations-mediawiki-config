@@ -132,7 +132,7 @@ $wgLBFactoryConf = array(
 	),
 	's7' => array(
 		'db1033' => 0,   # 1.4TB  64GB,
-#		'db2029' => 100, down for maintenance
+		'db2029' => 10,  # in test mode
 		'db2040' => 100,
 		'db2047' => 100,
 		'db2054' => 100,
