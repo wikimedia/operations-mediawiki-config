@@ -383,3 +383,12 @@ switch ( $wgDBname ) {
 		break;
 // Please add new wikis in their correct place in alphabetical order!
 }
+
+if ( $wmfRealm === 'labs' ) {
+	// T103060
+	if ( !in_array( 'block', $wgAbuseFilterAvailableActions ) ) {
+		$wgAbuseFilterAvailableActions[] = 'block';
+	}
+	$wgAbuseFilterBlockDuration = 'indefinite';
+	$wgAbuseFilterAnonBlockDuration = '48 hours';
+}
