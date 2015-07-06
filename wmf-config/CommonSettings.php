@@ -2008,6 +2008,10 @@ if ( $wmgUseVisualEditor ) {
 		$wgVisualEditorNamespaces = array(); // Wipe out default set by VisualEditor.php
 	}
 
+	if ( !$wmgVisualEditorNamespaces ) {
+		$wmgVisualEditorNamespaces = array(); // Set null to be an empty array to avoid fatals
+	}
+
 	$wgVisualEditorNamespaces = array_merge( $wgVisualEditorNamespaces, $wmgVisualEditorNamespaces );
 
 	if ( $wmgUseVisualEditorNamespace ) {
