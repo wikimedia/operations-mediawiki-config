@@ -14708,13 +14708,13 @@ $wgConf->settings = array(
 	'default' => false,
 	'wikipedia' => true,
 	'testwiki' => true,
-	'enwiki' => false,
 ),
 
 // CX Campaigns
 'wmgContentTranslationCampaigns' => array(
 	'default' => array( 'newarticle', 'cxstats', 'staff-recommender' ),
 	'dewiki' => array( 'cxstats', 'staff-recommender' ),
+	'enwiki' => array( 'cxstats', 'staff-recommender' ),
 	'eswiki' => array( 'newarticle', 'cxstats', 'staff-recommender', 'eswiki-recommender' ),
 	'frwiki' => array( 'newarticle', 'cxstats', 'staff-recommender', 'frwiki-recommender' ),
 	'itwiki' => array( 'cxstats', 'staff-recommender' ),
