@@ -106,16 +106,6 @@ function wmfLabsSettings() {
 			'wikidatawiki'  => 'http://wikidata.$variant.wmflabs.org',
 		),
 
-		'+wgExtraNamespaces' => array(
-			'cawiki' => array( 190 => 'Flow_test', 191 => 'Flow_test_talk' ),
-			'enwiki' => array( 190 => 'Flow_test', 191 => 'Flow_test_talk' ),
-		),
-
-		'+wgNamespacesWithSubpages' => array(
-			'cawiki' => array( 190 => true, 191 => true ),
-			'enwiki' => array( 190 => true, 191 => true ),
-		),
-
 		'wmgUsabilityPrefSwitch' => array(
 			'default' => ''
 		),
