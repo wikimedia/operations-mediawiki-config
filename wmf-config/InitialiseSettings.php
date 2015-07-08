@@ -11467,6 +11467,8 @@ $wgConf->settings = array(
 		'*.dvidshub.net',                   // Defense Video and Imagery Distribution System - T103062
 		'*.ub.unibas.ch',                   // Universität Basel - T104178
 		'*.unibas.ch',                      // Universität Basel - T104178
+		'soundcloud.com',                   // soundcloud - T105052
+		'cf-media.sndcdn.com'               // soundcloud cdn - T105052
 	),
 ),
 
