@@ -1537,13 +1537,15 @@ if ( $wgDBname == 'enwiki' ) {
 		}
 		return true;
 	};
+}
 
-	// T59569
+if ( $wgDBname == 'enwiki' || $wgDBname == 'fawiki' ) {
+	// T59569, T105118
 	//
-	// If it's an anonymous user creating a page in the English Wikipedia Draft
-	// namespace, tell TitleQuickPermissions to abort the normal checkQuickPermissions
-	// checks.  This lets anonymous users create a page in this namespace, even though
-	// they don't have the general 'createpage' right.
+	// If it's an anonymous user creating a page in the English and Persian Wikipedia
+	// Draft namespace, tell TitleQuickPermissions to abort the normal
+	// checkQuickPermissions checks.  This lets anonymous users create a page in this
+	// namespace, even though they don't have the general 'createpage' right.
 	//
 	// It does not affect other checks from getUserPermissionsErrorsInternal
 	// (e.g. protection and blocking).
