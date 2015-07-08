@@ -1537,8 +1537,10 @@ if ( $wgDBname == 'enwiki' ) {
 		}
 		return true;
 	};
+}
 
-	// T59569
+if ( $wgDBname == 'enwiki' || $wgDBname == 'fawiki' ) {
+	// T59569, T105118
 	//
 	// If it's an anonymous user creating a page in the English Wikipedia Draft
 	// namespace, tell TitleQuickPermissions to abort the normal checkQuickPermissions
