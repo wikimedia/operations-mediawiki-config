@@ -3024,6 +3024,30 @@ if ( file_exists( "$wmfConfigDir/extension-list-$wmfVersionNumber" ) ) {
 	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-$wmfVersionNumber";
 }
 
+// Prevent WMF account creation by non-WMF users.
+$wgHooks['AbortNewAccount'][] = function ( $newUser, &$message ) {
+	global $wgUser;
+	if ( $wmfRealm !== 'labs' || !$wmgUseCentralAuth ) {
+		// Only in labs first of all, and never on private/fishbowl wikis
+		// (or labswiki where WMF accounts simply aren't allowed anyway)
+		return true;
+	}
+	if (
+		(
+			substr( $newUser->getName(), -strlen( ' (WMF)' ) ) === ' (WMF)' ||
+			substr( $newUser->getName(), -strlen( '-WMF' ) ) === '-WMF'
+		) &&
+		!(
+			substr( $wgUser->getName(), -strlen( ' (WMF)' ) ) === ' (WMF)' ||
+			substr( $wgUser->getName(), -strlen( '-WMF' ) ) === '-WMF'
+		) &&
+		!CentralAuthUser::getInstance( $newUser )->exists()
+	) {
+		$message = 'wikimedia-accountcreationdenied-wmf';
+		return false;
+	}
+};
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
