@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_32ea4fd8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14737,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2015-07-09T08:10:34Z",
+      "side": 1,
+      "message": "Set \u0027newarticle\u0027 \u003d\u003e false instead of omitting it.",
+      "revId": "e2d273b58eef9fc663e5732191aac45f30fd9216",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
