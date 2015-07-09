@@ -2,7 +2,6 @@
 
 $wgPoolCountClientConf = array(
 	'servers' => array(
-		'10.64.16.134',
 		'10.64.0.179',
 		'10.64.16.152'
 	),
