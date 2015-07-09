@@ -637,6 +637,8 @@ $wgTitleBlacklistSources = array(
 	),
 );
 
+$wgTitleBlacklistBlockAutoAccountCreation = false;
+
 if ( $wgDBname !== 'labswiki' ) {
 	$wgTitleBlacklistUsernameSources = array( 'meta' );
 }
