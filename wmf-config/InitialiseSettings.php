@@ -14708,12 +14708,38 @@ $wgConf->settings = array(
 
 // CX Campaigns
 'wmgContentTranslationCampaigns' => array(
-	'default' => array( 'newarticle', 'cxstats', 'staff-recommender' ),
-	'dewiki' => array( 'cxstats', 'staff-recommender' ),
-	'enwiki' => array( 'cxstats', 'staff-recommender' ),
-	'eswiki' => array( 'newarticle', 'cxstats', 'staff-recommender', 'eswiki-recommender' ),
-	'frwiki' => array( 'newarticle', 'cxstats', 'staff-recommender', 'frwiki-recommender' ),
-	'itwiki' => array( 'cxstats', 'staff-recommender' ),
+	'default' => array(
+		'newarticle' => true,
+		'cxstats' => true,
+		'staff-recommender' => true
+	),
+	'dewiki' => array(
+		'cxstats' => true,
+		'newarticle' => false,
+		'staff-recommender' => true
+	),
+	'enwiki' => array(
+		'cxstats' => true,
+		'newarticle' => false,
+		'staff-recommender' => true
+	),
+	'eswiki' => array(
+		'newarticle' => true,
+		'cxstats' => true,
+		'staff-recommender' => true,
+		'eswiki-recommender' => true
+	),
+	'frwiki' => array(
+		'newarticle' => true,
+		'cxstats' => true,
+		'staff-recommender' => true,
+		'frwiki-recommender' => true
+	),
+	'itwiki' => array(
+		'cxstats' => true,
+		'newarticle' => false,
+		'staff-recommender' => true
+	),
 ),
 
 // Namespace to publish article
