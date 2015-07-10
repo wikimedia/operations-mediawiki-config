@@ -34,6 +34,24 @@
       "revId": "7a5f6461b7738a652fed378285409cf10c021c18",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_e36f09c2",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-07-10T21:17:12Z",
+      "side": 1,
+      "message": "We actually looked at the HHVM implementation and it looks like they implemented the old buggy code whereby they open with \u0027wb\u0027 and then lock (after the file was truncated): \u003chttps://github.com/facebook/hhvm/blob/f4f799a566d8890efb2818f9b81b9562420088eb/hphp/runtime/ext/std/ext_std_file.cpp#L587-L616\u003e\n\nThe real problem wasn\u0027t with writes however, it was with concurrency of reads during a write and the small window for a truncation to happen during a read cycle. Locking for read would be unwanted so atomic replace is a better option.",
+      "parentUuid": "8ec42329_52702d07",
+      "revId": "7a5f6461b7738a652fed378285409cf10c021c18",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
