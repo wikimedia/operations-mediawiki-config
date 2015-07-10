@@ -164,9 +164,12 @@ if ( !$globals ) {
 
 	# Save cache
 	@mkdir( '/tmp/mw-cache-' . $wmfVersionNumber );
-	$file = fopen( $filename, 'w' );
-	if ( $file ) {
+	$file = fopen( $filename, 'c' );
+	if ( $file && flock( $file, LOCK_EX ) ) {
+		ftruncate( $file, 0 );
 		fwrite( $file, serialize( $globals ) );
+		fflush( $file );
+		flock( $file, LOCK_UN );
 		fclose( $file );
 	}
 }
