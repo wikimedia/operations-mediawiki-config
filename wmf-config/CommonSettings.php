@@ -164,10 +164,9 @@ if ( !$globals ) {
 
 	# Save cache
 	@mkdir( '/tmp/mw-cache-' . $wmfVersionNumber );
-	$file = fopen( $filename, 'w' );
-	if ( $file ) {
-		fwrite( $file, serialize( $globals ) );
-		fclose( $file );
+	$tmpFile = tempnam( '/tmp/', "conf-$wmfVersionNumber-$wgDBname" );
+	if ( $tmpFile && file_put_contents( $tmpFile, serialize( $globals ) ) ) {
+		rename( $tmpFile, $filename );
 	}
 }
 
