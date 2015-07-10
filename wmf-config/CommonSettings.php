@@ -186,7 +186,11 @@ require( getRealmSpecificFilename( "$wmfConfigDir/logging.php" ) );
 # Cluster-dependent files for database and memcached
 require( getRealmSpecificFilename( "$wmfConfigDir/db.php" ) );
 $wgMemCachedServers = array();
-require( getRealmSpecificFilename( "$wmfConfigDir/mc.php" ) );
+if ( $wmgUseNutcracker ) {
+	require( getRealmSpecificFilename( "$wmfConfigDir/mc.php" ) );
+} else {
+	require( getRealmSpecificFilename( "$wmfConfigDir/mc-without-nutcracker.php" ) );
+}
 
 ini_set( 'memory_limit', $wmgMemoryLimit );
 
