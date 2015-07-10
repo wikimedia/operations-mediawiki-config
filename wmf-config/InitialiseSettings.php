@@ -15449,6 +15449,11 @@ $wgConf->settings = array(
 	'foundationwiki' => true,
 ),
 
+'wmgUseNutcracker' => array(
+	'default'  => true,
+	'labswiki' => false,
+),
+
 'wmgUseClusterSession' => array(
 	'default'  => true,
 	'labswiki' => false,
