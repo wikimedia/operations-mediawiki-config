@@ -14706,6 +14706,11 @@ $wgConf->settings = array(
 	'testwiki' => true,
 ),
 
+'wmgContentTranslationDefaultSourceLanguage' => array(
+	'default' => 'en',
+	'enwiki' => 'es',
+),
+
 // CX Campaigns
 'wmgContentTranslationCampaigns' => array(
 	'default' => array(
