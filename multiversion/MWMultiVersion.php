@@ -148,6 +148,7 @@ class MWMultiVersion {
 
 			// Labs
 			'beta.wmflabs.org' => 'deployment',
+			'wikidata.beta.wmflabs.org' => 'wikidata',
 		);
 
 		$site = "wikipedia";
@@ -156,24 +157,7 @@ class MWMultiVersion {
 			$lang = getenv( 'MW_LANG' );
 		} elseif ( isset( $staticMappings[$serverName] ) ) {
 			$lang = $staticMappings[$serverName];
-		} elseif ( strpos( $serverName, 'wmflabs' ) !== false ) {
-			if ( preg_match( '/^([^.]+)\.([^.]+)\.beta\.wmflabs\.org$/', $serverName, $matches ) ) {
-				// http://en.wikipedia.beta.wmflabs.org/
-				$lang = $matches[1];
-				if ( $matches[2] === 'wikimedia' ) {
-					# Beta uses 'wiki' as a DB suffix for WikiMedia databases
-					# Eg 'login.wikimedia.beta.wmflabs.org' => 'loginwiki'
-					$site = 'wikipedia';
-				} else {
-					$site = $matches[2];
-				}
-			} elseif ( preg_match( '/^([a-z0-9]*)\.beta\.wmflabs\.org$/', $serverName, $matches ) ) {
-				// http://wikidata.beta.wmflabs.org/
-				$lang = $matches[1];
-			} else {
-				self::error( "Invalid host name ($serverName).\n" );
-			}
-		} elseif ( preg_match( '/^(.*)\.([a-z]+)\.org$/', $serverName, $matches ) ) {
+		} elseif ( preg_match( '/^(.*)\.([a-z]+)(\.beta\.wmflabs)?\.org$/', $serverName, $matches ) ) {
 			$lang = $matches[1];
 			if ( $matches[2] !== 'wikimedia'
 				|| ( $matches[2] === 'wikimedia' && in_array(
