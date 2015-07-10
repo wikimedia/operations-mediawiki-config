@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_52702d07",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 168,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2015-07-10T17:46:35Z",
+      "side": 1,
+      "message": "I wonder if LOCK_EX would have worked in file_put_contents() instead (given that https://bugs.php.net/bug.php?id\u003d43182 was closed way back).",
+      "revId": "7a5f6461b7738a652fed378285409cf10c021c18",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
