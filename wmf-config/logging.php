@@ -57,23 +57,7 @@ $wmgMonologConfig =  array(
 		),
 	),
 
-	'processors' => array(
-		'wiki' => array(
-			'class' => '\\MediaWiki\\Logger\\Monolog\\WikiProcessor',
-		),
-		'psr' => array(
-			'class' => '\\Monolog\\Processor\\PsrLogMessageProcessor',
-		),
-		'pid' => array(
-			'class' => '\\Monolog\\Processor\\ProcessIdProcessor',
-		),
-		'uid' => array(
-			'class' => '\\Monolog\\Processor\\UidProcessor',
-		),
-		'web' => array(
-			'class' => '\\Monolog\\Processor\\WebProcessor',
-		),
-	),
+	'processors' => $wmgMonologProcessors,
 
 	'handlers' => array(
 		'blackhole' => array(
