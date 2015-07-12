@@ -83,7 +83,6 @@ $IP/extensions/NewUserMessage/NewUserMessage.php
 $IP/extensions/Nuke/SpecialNuke.php
 $IP/extensions/OAI/OAIRepo.php
 $IP/extensions/OAuth/OAuth.php
-$IP/extensions/Oversight/HideRevision.php
 $IP/extensions/PagedTiffHandler/PagedTiffHandler.php
 $IP/extensions/PageImages/PageImages.php
 $IP/extensions/PageTriage/PageTriage.php
