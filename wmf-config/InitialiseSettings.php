@@ -4326,7 +4326,6 @@ $wgConf->settings = array(
 		'CentralAuth-Bug39996' => 'debug', // -legoktm 2014-07-14 for T41996
 		'CentralAuthRename' => 'debug', // -legoktm 2014-07-14 for T69875
 		'CentralAuthUserMerge' => 'debug',
-		'AuthPluginStrict' => 'debug',
 		'Renameuser' => 'debug',
 		'GettingStarted' => 'debug',
 		'zero' => 'debug', // zero-rated debug log
