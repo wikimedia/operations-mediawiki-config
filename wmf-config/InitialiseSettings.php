@@ -9773,6 +9773,7 @@ $wgConf->settings = array(
 	'glwikisource' => array( 'w', 'wikt', 'q', 'b' ),
 	'glwikiquote' => array( 'w', 'wikt', 's', 'b' ),
 	'glwiki' => array( 'wikt', 's', 'q', 'b' ),
+	'gomwiki' => array( 'commons', 'meta', 'species', 'en', 'en:b', 'en:q', 'en:n', 'en:s', 'en:v', 'hi', 'mr', 'incubator' ), // T104563
 	'guwiki' => array( 'en' ), // T39511
 	'hakwiki' => array( 'incubator' ),
 	'hewiki' => array( 'wikt', 'q', 'b', 's', 'n', 'commons' ),
