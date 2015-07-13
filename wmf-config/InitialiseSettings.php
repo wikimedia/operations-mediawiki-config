@@ -11487,6 +11487,7 @@ $wgConf->settings = array(
 	// Make sure 'MediaWiki:Contact' and 'MediaWiki:Contact-url' are defined.
 	'default' => false,
 	'enwiki' => true,  // T48392
+	'ukwiki' => true, // T104924
 ),
 
 'wmgUserDailyContribs' => array(
