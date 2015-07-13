@@ -15468,6 +15468,16 @@ $wgConf->settings = array(
 	'labswiki' => false,
 ),
 
+// Thumbnail chaining
+
+'wgThumbnailBuckets' => array(
+	'default' => array( 2880 ),
+),
+
+'wgThumbnailMinimumBucketDistance' => array(
+	'default' => 100,
+),
+
 // Thumbnail prerendering at upload time
 'wgUploadThumbnailRenderMap' => array(
 	'default' => array( 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ),

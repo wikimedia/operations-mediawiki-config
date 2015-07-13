@@ -1068,6 +1068,16 @@ function wmfLabsSettings() {
 			'default' => 'http://c357be0613e24340a96aeaa28dde08ad@sentry-beta.wmflabs.org/4',
 		),
 
+		// Thumbnail chaining
+
+		'wgThumbnailBuckets' => array(
+			'default' => array( 2880 ),
+		),
+
+		'wgThumbnailMinimumBucketDistance' => array(
+			'default' => 100,
+		),
+
 		// Thumbnail prerendering at upload time
 		'wgUploadThumbnailRenderMap' => array(
 			'default' => array( 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ),
