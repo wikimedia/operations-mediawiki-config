@@ -229,6 +229,20 @@ $wmgAddWikiNotify = "newprojects@lists.wikimedia.org";
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
+// Temporary hack to facilitate migration of l10n cache implementations.
+// Use LCStoreStaticArray if a magic file is present and if one or more
+// of the following is also true:
+// - The cache of PHP files appears to be populated.
+// - The SAPI is CLI (to allow rebuildLocalisationCache to run).
+//
+// -- Ori, 2015-07-13
+if (
+	file_exists( '/etc/lcstore' )
+	&& ( PHP_SAPI === 'cli' || file_exists( "$IP/cache/l10n/zu.l10n.php" ) )
+) {
+	$wgLocalisationCacheConf['storeClass'] = 'LCStoreStaticArray';
+}
+
 // T29320: skip MessageBlobStore::clear(); handle via refreshMessageBlobs.php instead
 $wgHooks['LocalisationCacheRecache'][] = function( $cache, $code, &$allData, &$purgeBlobs = true ) {
 	$purgeBlobs = false;
