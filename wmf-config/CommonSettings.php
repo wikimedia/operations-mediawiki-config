@@ -225,16 +225,11 @@ $wgGitInfoCacheDirectory = "$IP/cache/gitinfo";
 // @var string|bool: E-mail address to send notifications to, or false to disable notifications.
 $wmgAddWikiNotify = "newprojects@lists.wikimedia.org";
 
-// Comment out the following lines to get the old-style l10n caching -- TS 2011-02-22
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
-// Temporary hack to facilitate migration of l10n cache implementations.
-// Use LCStoreStaticArray if a magic file is present and if the l10n cache
-// appears to be populated. -- Ori, 2015-07-13
-if ( file_exists( '/etc/lcstore' ) && file_exists( "$IP/cache/l10n/zu.l10n.php" ) ) {
-	$wgLocalisationCacheConf['storeClass'] = 'LCStoreStaticArray';
-}
+// Comment out the following line to get the old-style l10n caching -- OL 2015-07-13
+$wgLocalisationCacheConf['storeClass'] = 'LCStoreStaticArray';
 
 // T29320: skip MessageBlobStore::clear(); handle via refreshMessageBlobs.php instead
 $wgHooks['LocalisationCacheRecache'][] = function( $cache, $code, &$allData, &$purgeBlobs = true ) {
