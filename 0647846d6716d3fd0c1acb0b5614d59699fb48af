@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_c33671af",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-07-15T23:04:41Z",
+      "side": 1,
+      "message": "$wgFileExtensions \u003d array_diff( $wgFileExtensions, array( \u0027webp\u0027 ) ); ?",
+      "revId": "0647846d6716d3fd0c1acb0b5614d59699fb48af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
