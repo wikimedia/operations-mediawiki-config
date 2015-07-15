@@ -7006,9 +7006,6 @@ $wgConf->settings = array(
 			// for show only
 		),
 	),
-	'wikimania2014wiki' => array(
-		'*' => array( 'createpage' => false ),
-	),
 	'wikimania2015wiki' => array(
 		'*' => array( 'createpage' => false ),
 	),
@@ -9005,10 +9002,6 @@ $wgConf->settings = array(
 	'+wikimania2013wiki' => array(
 		'bureaucrat' => array( 'translationadmin' ),
 	),
-	'+wikimania2014wiki' => array(
-		'bureaucrat' => array( 'translationadmin', 'confirmed' ),
-		'sysop' => array( 'confirmed' ),
-	),
 	'+wikimania2015wiki' => array(
 		'bureaucrat' => array( 'translationadmin' ),
 	),
@@ -9651,9 +9644,6 @@ $wgConf->settings = array(
 	),
 	'+wikimania2013wiki' => array(
 		'bureaucrat' => array( 'translationadmin' )
-	),
-	'+wikimania2014wiki' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'translationadmin' ), // T57480
 	),
 	'+wikimania2015wiki' => array(
 		'bureaucrat' => array( 'translationadmin' ),
