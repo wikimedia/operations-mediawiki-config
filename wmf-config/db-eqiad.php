@@ -134,9 +134,9 @@ $wgLBFactoryConf = array(
 	),
 	's6' => array(
 		'db1023' => 0,   # 1.4TB  64GB
-		'db1022' => 0,   # 1.4TB  64GB, vslow, dump
+		# T105879 'db1022' => 0,   # 1.4TB  64GB, vslow, dump
 		# upgrade 'db1030' => 0,   # 1.4TB  64GB
-		'db1037' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
+		'db1037' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager, vslow, dump
 		'db1050' => 400, # 1.4TB  64GB
 		'db1061' => 500, # 2.8TB 128GB
 	),
@@ -298,10 +298,10 @@ $wgLBFactoryConf = array(
 	),
 	's6' => array(
 		'vslow' => array(
-			'db1022' => 1,
+			'db1037' => 1,
 		),
 		'dump' => array(
-			'db1022' => 1,
+			'db1037' => 1,
 		),
 		'watchlist' => array(
 			'db1037' => 1,
