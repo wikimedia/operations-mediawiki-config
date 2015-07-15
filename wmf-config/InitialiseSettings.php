@@ -7718,7 +7718,6 @@ $wgConf->settings = array(
 		// because previously MediaWiki.org did not have one and it would be
 		// tedious to rename everyone's userrights.
 		'autoreview' => array( 'autopatrol' => true ),
-		'coder' => array( 'autopatrol' => true ),
 	),
 
 	'+metawiki' => array(
@@ -8706,8 +8705,7 @@ $wgConf->settings = array(
 	),
 	'+mediawikiwiki' => array(
 		'sysop' => array( 'autoreview' ),
-		'bureaucrat' => array( 'autoreview', 'transwiki', 'coder', 'import', 'svnadmins', 'translationadmin' ),
-		'coder' => array( 'coder' ),
+		'bureaucrat' => array( 'autoreview', 'transwiki', 'import', 'translationadmin' ),
 	),
 	'+metawiki' => array(
 		'bureaucrat' => array( 'ipblock-exempt', 'centralnoticeadmin', 'flood', 'uploader', 'translationadmin' ), // T48639
@@ -9336,7 +9334,7 @@ $wgConf->settings = array(
 	),
 	'+mediawikiwiki' => array(
 		'sysop' => array( 'autoreview' ),
-		'bureaucrat' => array( 'autoreview', 'transwiki', 'import', 'coder', 'svnadmins', 'translationadmin' ),
+		'bureaucrat' => array( 'autoreview', 'transwiki', 'import', 'translationadmin' ),
 	),
 	'+metawiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'ipblock-exempt', 'flood', 'translationadmin', 'centralnoticeadmin', 'uploader' ), // T39198, T52287
