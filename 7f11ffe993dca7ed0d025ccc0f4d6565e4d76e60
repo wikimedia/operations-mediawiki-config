@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_ef4cb9cd",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2015-07-15T13:34:18Z",
+      "side": 1,
+      "message": "Should be in imperative, and have no full stop at the end – \"Close wikimania2014\".",
+      "revId": "7f11ffe993dca7ed0d025ccc0f4d6565e4d76e60",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
