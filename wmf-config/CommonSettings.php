@@ -551,9 +551,7 @@ if ( $wmgUseGeSHi ) {
 	include( $IP . '/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php' );
 
 	// GeSHi supports 215 languages. The top 20 languages account for more than
-	// 80% of usage. The bottom 75 are not used at all. Since each supported
-	// language gets an entry in ResourceLoader's start-up module, it makes
-	// sense to be economical and drop support for those languages. (T93025)
+	// 80% of usage. The bottom 75 are not used at all. (T93025)
 	$wgGeSHiSupportedLanguages = array(
 		"c", "cpp", "bash", "html4strict", "text", "java", "latex",
 		"javascript", "python", "xml", "csharp", "php", "css", "asm", "sql",
