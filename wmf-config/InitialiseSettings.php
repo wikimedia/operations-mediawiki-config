@@ -14846,6 +14846,7 @@ $wgConf->settings = array(
 	'special' => 'personal',
 	'wikimedia' => 'personal',
 	'betawikiversity' => 'personal',
+	'gomwiki' => 'personal', // T105124
 ),
 
 // Whether ime is enabled *by default*
