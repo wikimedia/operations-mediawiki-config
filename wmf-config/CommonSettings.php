@@ -232,9 +232,9 @@ $wgLocalisationCacheConf['manualRecache'] = true;
 // Temporary hack to facilitate migration of l10n cache implementations.
 // Use LCStoreStaticArray if a magic file is present and if the l10n cache
 // appears to be populated. -- Ori, 2015-07-13
-if ( file_exists( '/etc/lcstore' ) && file_exists( "$IP/cache/l10n/zu.l10n.php" ) ) {
-	$wgLocalisationCacheConf['storeClass'] = 'LCStoreStaticArray';
-}
+//if ( file_exists( '/etc/lcstore' ) && file_exists( "$IP/cache/l10n/zu.l10n.php" ) ) {
+//	$wgLocalisationCacheConf['storeClass'] = 'LCStoreStaticArray';
+//}
 
 // T29320: skip MessageBlobStore::clear(); handle via refreshMessageBlobs.php instead
 $wgHooks['LocalisationCacheRecache'][] = function( $cache, $code, &$allData, &$purgeBlobs = true ) {
