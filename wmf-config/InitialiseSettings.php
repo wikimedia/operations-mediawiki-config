@@ -9064,9 +9064,6 @@ $wgConf->settings = array(
 			'wikidata-staff', // T74459
 		),
 	),
-	'+wikimania2013wiki' => array(
-		'bureaucrat' => array( 'translationadmin' ),
-	),
 	'+wikimania2014wiki' => array(
 		'bureaucrat' => array( 'translationadmin', 'confirmed' ),
 		'sysop' => array( 'confirmed' ),
@@ -9729,9 +9726,6 @@ $wgConf->settings = array(
 		'wikidata-staff' => array(
 			'wikidata-staff', // T74459
 		),
-	),
-	'+wikimania2013wiki' => array(
-		'bureaucrat' => array( 'translationadmin' )
 	),
 	'+wikimania2014wiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'translationadmin' ), // T57480
