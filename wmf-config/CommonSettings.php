@@ -1291,6 +1291,9 @@ if ( $wmgUseCentralAuth ) {
 		$wgCentralAuthEnableUserMerge = false;
 	}
 
+	// Only allow users with global accounts to login
+	$wgCentralAuthStrict = true;
+
 	// Create some local accounts as soon as the global registration happens
 	$wgCentralAuthAutoCreateWikis = array( 'loginwiki', 'metawiki', 'mediawikiwiki' );
 }
