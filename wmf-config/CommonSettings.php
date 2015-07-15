@@ -2862,10 +2862,6 @@ if ( $wmgUseGraph ) {
 	}
 }
 
-if ( $wmgUseAccountAudit ) {
-	ExtensionRegistry::getInstance()->queue( "$IP/extensions/AccountAudit/extension.json" );
-}
-
 if ( $wmgUseOAuth ) {
 	require_once( "$IP/extensions/OAuth/OAuth.php" );
 	if ( $wgDBname !== "labswiki" ) {

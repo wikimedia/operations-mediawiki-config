@@ -15243,11 +15243,6 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-'wmgUseAccountAudit' => array(
-	'default' => true,
-	'labswiki' => false,
-),
-
 'wgAllowUserJs' => array(
 	'default' => true,
 	'loginwiki' => false,
