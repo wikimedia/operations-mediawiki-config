@@ -1053,7 +1053,7 @@ function wmfLabsSettings() {
 		),
 		'wmgUseContentTranslation' => array(
 			'default' => false,
-			'wiki' => true,
+			'wikipedia' => true,
 		),
 
 		'wmgUsePetition' => array(
