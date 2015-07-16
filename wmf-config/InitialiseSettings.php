@@ -14251,6 +14251,7 @@ $wgConf->settings = array(
 	'enwikinews' => true, // T55984
 	'eswiki' => true, // T56826
 	'fawiki' => true,
+	'frwikisource' => true, // T105853
 	'hewiki' => true, // T50848
 	'hewiktionary' => true, // T89393
 	'legalteamwiki' => true, // T64610
