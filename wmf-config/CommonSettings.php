@@ -798,6 +798,12 @@ if ( $wmgUseContactPage ) {
 	if ( $wgDBname === 'metawiki' ) {
 		include( "$wmfConfigDir/LegalContactPages.php" );
 		include( "$wmfConfigDir/AffComContactPages.php" );
+		$wgContactConfig['stewards'] = array(
+			'RecipientUser' => 'Wikimedia Stewards',
+			'SenderEmail' => $wmgNotificationSender,
+			'RequireDetails' => true,
+			'IncludeIP' => true
+		);
 	}
 }
 
