@@ -208,6 +208,10 @@ function wmfLabsSettings() {
 			'dewiki' => 'http://upload.wikimedia.org/wikipedia/commons/1/14/Favicon-beta-wikipedia.png',
 		),
 
+		'wgVectorResponsive' => array(
+			'default' => true,
+		),
+
 		// Editor Engagement stuff
 		'-wmfUseArticleCreationWorkflow' => array(
 			'default' => false,
