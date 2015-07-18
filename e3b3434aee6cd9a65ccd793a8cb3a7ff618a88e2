@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_ca743233",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 807,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-07-18T08:43:31Z",
+      "side": 1,
+      "message": "add task # too; I hate sloww blame.",
+      "revId": "e3b3434aee6cd9a65ccd793a8cb3a7ff618a88e2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
