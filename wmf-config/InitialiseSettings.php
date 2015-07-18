@@ -12565,7 +12565,6 @@ $wgConf->settings = array(
 ),
 
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
-// NS_VISUALEDITOR is added in CommonSettings.php if wmgUseVisualEditorNamespace is true
 'wmgVisualEditorNamespaces' => array(
 	'default' => array( NS_USER, NS_FILE, NS_HELP, NS_CATEGORY ),
 	// Test wikis
@@ -12591,13 +12590,6 @@ $wgConf->settings = array(
 	'+sewikimedia' => array( 100 /* Projekt */ ), // T62882
 	// Private wikis
 	'+officewiki' => array( 100 /* Report */ ),
-),
-
-// Should a namespace in which VisualEditor is enabled by default for all users (including anons)
-'wmgUseVisualEditorNamespace' => array(
-	'default' => false,
-	'testwiki' => true,
-	'mediawikiwiki' => true,
 ),
 
 // Should VisualEditor be enabled for all users by default ('beta' mode)

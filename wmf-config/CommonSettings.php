@@ -2003,14 +2003,6 @@ if ( $wmgUseVisualEditor ) {
 
 	$wgVisualEditorNamespaces = array_merge( $wgVisualEditorNamespaces, $wmgVisualEditorNamespaces );
 
-	if ( $wmgUseVisualEditorNamespace ) {
-		define( 'NS_VISUALEDITOR', 2500 );
-		define( 'NS_VISUALEDITOR_TALK', 2501 );
-		$wgExtraNamespaces[NS_VISUALEDITOR] = 'VisualEditor';
-		$wgExtraNamespaces[NS_VISUALEDITOR_TALK] = 'VisualEditor_talk';
-		$wgVisualEditorNamespaces[] = NS_VISUALEDITOR;
-	}
-
 	// User access configuration
 	if ( $wmgVisualEditorDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
