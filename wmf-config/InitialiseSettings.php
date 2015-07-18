@@ -6314,6 +6314,11 @@ $wgConf->settings = array(
 	'nostalgiawiki' => 'nostalgia',
 ),
 
+'wgVectorResponsive' => array(
+	'default' => false,
+	'testwiki' => true,
+),
+
 # wgForceUIMsgAsContentMsg @{
 'wgForceUIMsgAsContentMsg' => array(
 	'default' => array(),
