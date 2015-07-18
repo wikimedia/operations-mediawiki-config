@@ -2078,6 +2078,7 @@ $wgConf->settings = array(
 	'fawikisource' => 'ویکی‌نبشته',
 	'fawikivoyage' => 'ویکی‌سفر', // T73382
 	'fawiktionary' => 'ویکی‌واژه',
+	'fdcwiki' => 'Project',
 	'fiwikibooks' => 'Wikikirjasto',
 	'fiwikinews' => 'Wikiuutiset',
 	'fiwikiquote' => 'Wikisitaatit',
