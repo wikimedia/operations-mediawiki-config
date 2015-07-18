@@ -7047,6 +7047,11 @@ $wgConf->settings = array(
 	'+arwikisource' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'patroller' => array( 'patrol' => true ),
+		'rollbacker' => array( 'rollback' => true ),
+	),
+	'+arwiktionary' => array(
+		'autopatrolled' => array( 'autopatrol' => true ),
+		'rollbacker' => array( 'rollback' => true ),
 	),
 	'bnwiki' => array(
 		'user' => array( 'patrol' => false ),
@@ -8373,7 +8378,10 @@ $wgConf->settings = array(
 		'sysop' => array( 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', ),
 	),
 	'+arwikisource' => array(
-		'sysop' => array( 'patroller', 'autopatrolled', ),
+		'sysop' => array( 'patroller', 'autopatrolled', 'rollbacker' ),
+	),
+	'+arwiktionary' => array(
+		'sysop' => array( 'autopatrolled', 'rollbacker' ),
 	),
 	'+bewiki' => array(
 		'sysop' => array( 'autoeditor' ),
@@ -8993,7 +9001,10 @@ $wgConf->settings = array(
 		'sysop' => array( 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', 'patroller', 'autopatrolled', ),
 	),
 	'+arwikisource' => array(
-		'sysop' => array( 'patroller', 'autopatrolled', ),
+		'sysop' => array( 'patroller', 'autopatrolled', 'rollbacker' ),
+	),
+	'+arwiktionary' => array(
+		'sysop' => array( 'autopatrolled', 'rollbacker' ),
 	),
 	'+bawiki' => array(
 		'bureaucrat' => array( 'sysop' ),
