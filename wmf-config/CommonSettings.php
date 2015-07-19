@@ -1958,10 +1958,6 @@ if ( $wmgUsePopups || ( $wmgPopupsBetaFeature && $wmgUseBetaFeatures ) ) {
 	$wgPopupsBetaFeature = $wmgPopupsBetaFeature && !$wmgUsePopups;
 }
 
-if ( $wmgUseVectorBeta ) {
-	require_once( "$IP/extensions/VectorBeta/VectorBeta.php" );
-}
-
 if ( $wmgUseRestbaseUpdateJobs ) {
 	require_once( "$IP/extensions/RestBaseUpdateJobs/RestbaseUpdate.php" );
 	$wgRestbaseServer = $wmgRestbaseServer;
