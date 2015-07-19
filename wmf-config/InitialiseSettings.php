@@ -454,6 +454,7 @@ $wgConf->settings = array(
 	'avwiki' => '/static/images/project-logos/avwiki.png',  // T48589
 	'aywiki' => '/static/images/project-logos/aywiki.png',
 	'azwiki' => '/static/images/project-logos/azwiki.png',  // T50397
+	'azbwiki' => '/static/images/project-logos/azbwiki.png',  // T106305
 	'bawiki' => '/static/images/project-logos/bawiki.png',
 	'barwiki' => '/static/images/project-logos/barwiki.png',  // T42285
 	'bat_smgwiki' => '/static/images/project-logos/bat_smgwiki.png',  // T48589
@@ -1151,6 +1152,7 @@ $wgConf->settings = array(
 	'trwikinews' => true, // T22215
 
 	// Other individual wikis
+	'azbwiki' => false, // T106305
 	'enwikiquote' => false, // http://en.wikiquote.org/wiki/Wikiquote_talk:Image_use_policy
 	'eswiki' => false, // T8408
 	'eswikibooks' => false, // T20865
@@ -1206,6 +1208,7 @@ $wgConf->settings = array(
 	// Individual wikis
 	// NOTE: Use relative paths for same-wiki links so the SSL converter can tweak them correctly
 	'aswiki' => '/wiki/ৱিকিপিডিয়া:ফাইল_আপল’ড_বিশেষজ্ঞ',
+	'azbwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=azb', // T106305
 	'bgwiki' => '/wiki/MediaWiki:Uploadtext', // T16836
 	'bnwiki' => '/wiki/উইকিপিডিয়া:আপলোড',
 	'bswiki' => '/wiki/Wikipedia:Upload', // T14044
@@ -1512,6 +1515,7 @@ $wgConf->settings = array(
 	'azwikibooks' => 'Vikikitab', // T33068
 	'azwikiquote' => 'Vikisitat',
 	'azwikisource' => 'VikiMənbə',
+	'azbwiki' => 'ویکی‌پدیا', // T106305
 	'bawiki' => 'Википедия', // T43167
 	'bdwikimedia' => 'উইকিমিডিয়া বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
@@ -1984,6 +1988,7 @@ $wgConf->settings = array(
 	'azwikibooks' => 'Vikikitab', // T33068
 	'azwikisource' => 'VikiMənbə',
 	'azwikiquote' => 'Vikisitat',
+	'azbwiki' => 'ویکی‌پدیا', // T106305
 	'bawiki' => 'Википедия', // T43167
 	'bat_smgwiki' => 'Vikipedėjė',
 	'bdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ',
@@ -2374,6 +2379,7 @@ $wgConf->settings = array(
 	'aswiki' => 'ৱিকিপিডিয়া_বাৰ্তা',
 	'aswikisource' => 'ৱিকিউ স_বাৰ্তা', // T45129
 	'aywiki' => 'Wikipidiyan_Aruskipäwi',
+	'azbwiki' => 'ویکی‌پدیا_دانیشیغی', // T106305
 	'bat_smgwiki' => 'Vikipedėjės_aptarėms',
 	'bbdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ_আলোচনা',
 	'bewikisource' => 'Размовы_пра_Вікікрыніцы',
@@ -4579,6 +4585,10 @@ $wgConf->settings = array(
 	'azwiki' => array(
 		100 => 'Portal',
 		101 => 'Portal_müzakirəsi',
+	),
+	'azbwiki' => array(
+		100 => 'پوْرتال', // T106305
+		101 => 'پوْرتال_دانیشیغی', // T106305
 	),
 	'bawiki' => array(
 		100 => 'Портал', // T44077 - Portal
