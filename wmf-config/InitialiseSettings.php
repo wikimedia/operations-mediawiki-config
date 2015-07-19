@@ -1031,6 +1031,7 @@ $wgConf->settings = array(
 
 	// Special wikis
 	'advisorywiki' => '/static/images/project-logos/advisorywiki.png',
+	'arbcom_enwiki' => '/static/images/project-logos/arbcom_enwiki.png',
 	'arbcom_dewiki' => '/static/images/project-logos/arbcom_dewiki.png',
 	'arbcom_nlwiki' => '/static/images/project-logos/arbcom_nlwiki.png',
 	'boardwiki' => '/static/images/project-logos/boardwiki.png',
