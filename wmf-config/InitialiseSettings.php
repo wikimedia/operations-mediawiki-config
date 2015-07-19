@@ -11744,11 +11744,6 @@ $wgConf->settings = array(
 	'nonbetafeatures' => false,
 ),
 
-'wmgUseVectorBeta' => array(
-	'default' => true,
-	'nonbetafeatures' => false,
-),
-
 'wmgULSCompactLinks' => array(
 	'default' => true,
 	'nonbetafeatures' => false,

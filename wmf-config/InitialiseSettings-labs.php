@@ -940,21 +940,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		),
 
-		'wmgUseVectorBeta' => array(
-			'default' => true,
-		),
-		'wmgVectorBetaFormRefresh' => array(
-			'default' => true,
-		),
-
-		'wmgVectorBetaPersonalBar' => array(
-			'default' => true,
-		),
-
-		'wmgVectorBetaWinter' => array(
-			'default' => true,
-		),
-
 		'wmgVisualEditorExperimental' => array(
 			'default' => true,
 		),

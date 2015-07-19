@@ -82,13 +82,6 @@ if ( $wmgUseMultimediaViewer ) {
 	$wgNetworkPerformanceSamplingFactor = $wmgNetworkPerformanceSamplingFactor;
 }
 
-if ( $wmgUseVectorBeta ) {
-	require_once "$IP/extensions/VectorBeta/VectorBeta.php";
-	$wgVectorBetaPersonalBar = $wmgVectorBetaPersonalBar;
-	$wgVectorBetaWinter = $wmgVectorBetaWinter;
-	$wgVectorBetaFormRefresh = $wmgVectorBetaFormRefresh;
-}
-
 if ( $wmgUseParsoid ) {
 	$wmgParsoidURL = 'http://10.68.16.145'; // deployment-parsoidcache02.eqiad
 }
