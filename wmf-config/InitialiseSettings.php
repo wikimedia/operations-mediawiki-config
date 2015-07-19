@@ -11339,7 +11339,7 @@ $wgConf->settings = array(
 		'*.ub.unibas.ch',                   // Universität Basel - T104178
 		'*.unibas.ch',                      // Universität Basel - T104178
 		'www.workwithsounds.eu',            // Work With Sounds - T105143
-		'*.archive.org',                    // Internet Archive - T106293
+		'*.archive.org', 'archive.org',     // Internet Archive - T106293
 	),
 ),
 
