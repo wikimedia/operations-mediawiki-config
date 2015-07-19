@@ -9316,7 +9316,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autoreview', 'transwiki', 'import', 'translationadmin' ),
 	),
 	'+metawiki' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'ipblock-exempt', 'flood', 'translationadmin', 'centralnoticeadmin', 'uploader' ), // T39198, T52287
+		'bureaucrat' => array( 'ipblock-exempt', 'flood', 'translationadmin', 'centralnoticeadmin', 'uploader' ), // T39198, T52287
 		'checkuser' => array( 'ipblock-exempt' ),
 		'sysop' => array( 'autopatrolled', 'massmessage-sender' ), // T59611
 	),
