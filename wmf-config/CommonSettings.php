@@ -352,7 +352,9 @@ $wgSharpenParameter = '0x0.8'; # for IM>6.5, T26857
 $wgFileBlacklist[] = 'txt';
 $wgFileBlacklist[] = 'mht';
 
-include( $IP . '/extensions/PagedTiffHandler/PagedTiffHandler.php' );
+if ( $wmgUsePagedTiffHandler ) {
+	include( $IP . '/extensions/PagedTiffHandler/PagedTiffHandler.php' );
+}
 $wgTiffUseTiffinfo = true;
 $wgTiffMaxMetaSize = 1048576;
 
@@ -530,7 +532,9 @@ $wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( getRealmSpecificFil
 
 ExtensionRegistry::getInstance()->queue( "$IP/extensions/CharInsert/extension.json" );
 
-include( $IP . '/extensions/ParserFunctions/ParserFunctions.php' );
+if ( $wmgUseParserFunctions ) {
+	include( $IP . '/extensions/ParserFunctions/ParserFunctions.php' );
+}
 $wgExpensiveParserFunctionLimit = 500;
 
 if ( $wmgUseCite ) {
@@ -2055,10 +2059,12 @@ if ( $wmgUseVisualEditor ) {
 	$wgCitoidServiceUrl = '//citoid.wikimedia.org/api';
 }
 
-// TemplateData enabled for all wikis - 2014-09-29
-require_once( "$IP/extensions/TemplateData/TemplateData.php" );
-// TemplateData GUI enabled for all wikis - 2014-11-06
-$wgTemplateDataUseGUI = true;
+if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
+	// TemplateData enabled for all wikis - 2014-09-29
+	require_once( "$IP/extensions/TemplateData/TemplateData.php" );
+	// TemplateData GUI enabled for all wikis - 2014-11-06
+	$wgTemplateDataUseGUI = true;
+}
 
 if ( $wmgUseGoogleNewsSitemap ) {
 	include( "$IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php" );
