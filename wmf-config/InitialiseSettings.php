@@ -4186,6 +4186,8 @@ $wgConf->settings = array(
 	'private' => false, // :D
 	'qualitywiki' => false,
 	'ukwikimedia' => false, // T19718 Disable CentralNotice on private/fishbowl wikis
+	'loginwiki' => false, // T61702
+	'votewiki' => false,
 ),
 
 'wmgCentralNoticeLoader' => array(
@@ -12532,6 +12534,8 @@ $wgConf->settings = array(
 
 'wmgUseParsoid' => array(
 	'default' => true,
+	'loginwiki' => false, // T61702
+	'votewiki' => false,
 ),
 
 // Should a users' Cookie: headers be forwarded to Parsoid (for private wikis)
@@ -12883,6 +12887,7 @@ $wgConf->settings = array(
 'wmgUseMath' => array(
 	'default' => true, // moved from MW core
 	'loginwiki' => false,
+	'votewiki' => false,
 	'labswiki' => false,
 ),
 
@@ -14519,6 +14524,8 @@ $wgConf->settings = array(
 ),
 'wmgUseDisambiguator' => array(
 	'default' => true,
+	'loginwiki' => false, // T61702
+	'votewiki' => false,
 ),
 
 'wmgUseCodeEditorForCore' => array(
@@ -14715,6 +14722,8 @@ $wgConf->settings = array(
 
 'wmgUseUniversalLanguageSelector' => array(
 	'default' => true,
+	'loginwiki' => false, // T61702
+	'votewiki' => false,
 ),
 
 'wmgULSPosition' => array(
@@ -15224,6 +15233,23 @@ $wgConf->settings = array(
 	'kowikiversity' => true,
 ),
 
+'wmgUsePagedTiffHandler' => array(
+	'default' => true,
+	'loginwiki' => false, // T61702
+	'votewiki' => false,
+),
+
+'wmgUseParserFunctions' => array(
+	'default' => true,
+	'loginwiki' => false, // T61702
+	'votewiki' => false,
+),
+
+'wmgUseTemplateData' => array(
+	'default' => true,
+	'loginwiki' => false, // T61702
+	'votewiki' => false,
+),
 ### End (roughly) of general extensions ########################
 
 // Apply blocks to IPs in XFF (T25343)
