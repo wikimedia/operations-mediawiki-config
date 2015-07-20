@@ -4360,6 +4360,7 @@ $wgConf->settings = array(
 		'AdHocDebug' => 'debug', // for temp live debugging
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 		'wbq_evaluation' => 'debug', // WikibaseQualityConstraints evaluation logs
+		'thumbnailaccess' => 'debug', // T106323
 	),
 
 	'+enwiki' => array(
