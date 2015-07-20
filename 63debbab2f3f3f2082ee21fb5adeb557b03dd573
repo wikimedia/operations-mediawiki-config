@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_e43efa23",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-07-20T08:45:24Z",
+      "side": 1,
+      "message": "$wgTiff vars just below should be within this?",
+      "revId": "63debbab2f3f3f2082ee21fb5adeb557b03dd573",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
