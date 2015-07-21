@@ -14681,6 +14681,11 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgWMETrackGeoFeatures' => array(
+	'default' => false,
+	'enwiki' => true,
+),
+
 'wmgUseNavigationTiming' => array(
 	'default' => true,
 	'labswiki' => false,
