@@ -1998,8 +1998,12 @@ if ( $wmgUseVisualEditor ) {
 	if ( !isset( $wgVisualEditorNamespaces ) ) {
 		$wgVisualEditorNamespaces = array(); // Set null to be an empty array to avoid fatals
 	}
+	if ( !isset( $wgVisualEditorAvailableNamespaces ) ) {
+		$wgVisualEditorAvailableNamespaces = array(); // Set null to be an empty array to avoid fatals
+	}
 
-	$wgVisualEditorNamespaces = array_merge( $wgVisualEditorNamespaces, $wmgVisualEditorNamespaces );
+	$wgVisualEditorAvailableNamespaces = array_merge( $wgVisualEditorAvailableNamespaces, array_fill_keys( $wmgVisualEditorNamespaces, true ) );
+	$wgVisualEditorNamespaces = array_keys( array_filter( $wgVisualEditorAvailableNamespaces ) );
 
 	if ( $wmgUseVisualEditorNamespace ) {
 		define( 'NS_VISUALEDITOR', 2500 );
@@ -2007,6 +2011,7 @@ if ( $wmgUseVisualEditor ) {
 		$wgExtraNamespaces[NS_VISUALEDITOR] = 'VisualEditor';
 		$wgExtraNamespaces[NS_VISUALEDITOR_TALK] = 'VisualEditor_talk';
 		$wgVisualEditorNamespaces[] = NS_VISUALEDITOR;
+		$wgVisualEditorAvailableNamespaces[NS_VISUALEDITOR] = true;
 	}
 
 	// User access configuration
