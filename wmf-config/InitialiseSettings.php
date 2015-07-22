@@ -12645,6 +12645,7 @@ $wgConf->settings = array(
 // wiki where it's not already on by default.
 '$wmgVisualEditorAutoAccountEnable' => array(
 	'default' => false,
+	'enwiki' => true,
 ),
 
 // Should VisualEditor's "beta welcome" be shown
