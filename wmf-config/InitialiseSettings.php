@@ -12659,6 +12659,19 @@ $wgConf->settings = array(
 	'default' => false,
 ),
 
+// Whether VisualEditor should be enabled for a proportion of new accounts on a
+// wiki where it's not already on by default.
+// 1 => 100% of new accounts; 2 => 50%; 10 => 10%; 20 => 5%; etc.
+'wmgVisualEditorNewAccountEnableProportion' => array(
+	'default' => false,
+),
+
+// Whether VisualEditor should be enabled for new auto-created accounts on a
+// wiki where it's not already on by default.
+'$wmgVisualEditorAutoAccountEnable' => array(
+	'default' => false,
+),
+
 // Should VisualEditor's "beta welcome" be shown
 'wmgVisualEditorShowBetaWelcome' => array(
 	'default' => true,
