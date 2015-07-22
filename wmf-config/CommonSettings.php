@@ -2045,9 +2045,14 @@ if ( $wmgUseVisualEditor ) {
 		$wgVisualEditorEnableTocWidget = true;
 	}
 
-	// A/B test configuration
-	if ( $wmgVisualEditorEnableSplitTest ) {
-		$wgVisualEditorEnableSplitTest = true;
+	// Enable for auto-created accounts
+	if ( $wmgVisualEditorAutoAccountEnable ) {
+		$wgVisualEditorAutoAccountEnable = true;
+	}
+
+	// Enable for a proportion of new accounts
+	if ( $wmgVisualEditorNewAccountEnableProportion ) {
+		$wgVisualEditorNewAccountEnableProportion = $wmgVisualEditorNewAccountEnableProportion;
 	}
 
 	// Citoid
