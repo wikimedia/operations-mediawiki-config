@@ -665,6 +665,9 @@ if ( $wmgUseTimedMediaHandler ) {
 	// Minimum size for an embed video player
 	$wgMinimumVideoPlayerSize = $wmgMinimumVideoPlayerSize;
 
+	// Enable low-bandwidth 240p WebM transcode for mobiles on ~3G
+	array_unshift( $wgEnabledTranscodeSet, WebVideoTranscode::ENC_WEBM_240P );
+
 	// Enable low-res Theora transcodes for fallback players on slow machines
 	// Put them at the beginning of the array to keep ordering the way
 	// the popup player expects, so we pick the right WebM size in most
@@ -673,6 +676,7 @@ if ( $wmgUseTimedMediaHandler ) {
 	// See T63760
 	//
 	array_unshift( $wgEnabledTranscodeSet, WebVideoTranscode::ENC_OGV_360P );
+	array_unshift( $wgEnabledTranscodeSet, WebVideoTranscode::ENC_OGV_240P );
 	array_unshift( $wgEnabledTranscodeSet, WebVideoTranscode::ENC_OGV_160P );
 }
 
