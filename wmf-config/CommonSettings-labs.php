@@ -116,7 +116,7 @@ if ( $wmgUseCentralNotice ) {
 
 	$wgCentralPagePath = "//meta.wikimedia.beta.wmflabs.org/w/index.php";
 	$wgCentralSelectedBannerDispatcher = "//meta.wikimedia.beta.wmflabs.org/w/index.php?title=Special:BannerLoader";
-	$wgCentralBannerRecorder = "//meta.wikimedia.beta.wmflabs.org/w/index.php?title=Special:RecordImpression";
+	$wgCentralBannerRecorder = "//meta.wikimedia.beta.wmflabs.org/beacon/Special:RecordImpression";
 	$wgCentralDBname = 'metawiki';
 }
 
