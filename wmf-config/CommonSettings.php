@@ -1994,8 +1994,12 @@ if ( $wmgUseVisualEditor ) {
 	if ( !isset( $wgVisualEditorNamespaces ) ) {
 		$wgVisualEditorNamespaces = array(); // Set null to be an empty array to avoid fatals
 	}
+	if ( !isset( $wgVisualEditorAvailableNamespaces ) ) {
+		$wgVisualEditorAvailableNamespaces = array(); // Set null to be an empty array to avoid fatals
+	}
 
 	$wgVisualEditorNamespaces = array_merge( $wgVisualEditorNamespaces, $wmgVisualEditorNamespaces );
+	$wgVisualEditorAvailableNamespaces = array_merge( $wgVisualEditorAvailableNamespaces, array_fill_keys( $wmgVisualEditorNamespaces, true ) );
 
 	// User access configuration
 	if ( $wmgVisualEditorDefault ) {
