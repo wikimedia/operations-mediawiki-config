@@ -3475,8 +3475,8 @@ $wgConf->settings = array(
 		'Razgovor_Wikipedija' => NS_PROJECT_TALK,
 		'Razgovor_o_Wikipediji' => NS_PROJECT_TALK,
 		'Разговор_о_Википедији' => NS_PROJECT_TALK,
-		'Портал' =>  NS_PORTAL,
-		'Разговор_о_порталу' =>  NS_PORTAL_TALK,
+		'Портал' => 100, // NS_PORTAL
+		'Разговор_о_порталу' => 101, // NS_PORTAL_TALK
 	),
 	'+simplewiki' => array(
 		'WP' => NS_PROJECT,
