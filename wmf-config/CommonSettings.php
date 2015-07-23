@@ -1418,7 +1418,7 @@ if ( $wmgUseCentralNotice ) {
 	} else {
 		$wgCentralPagePath = "//{$wmfHostnames['meta']}/w/index.php";
 		$wgCentralSelectedBannerDispatcher = "//{$wmfHostnames['meta']}/w/index.php?title=Special:BannerLoader";
-		$wgCentralBannerRecorder = "//{$wmfHostnames['meta']}/w/index.php?title=Special:RecordImpression";
+		$wgCentralBannerRecorder = "//{$wmfHostnames['meta']}/beacon/impression";
 	}
 
 	// Allow only these domains to access CentralNotice data through the reporter
