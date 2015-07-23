@@ -64,11 +64,9 @@ function wmfLabsSettings() {
 		),
 
 		'-wgServer' => array(
-			'default'     => 'http://$lang.wikipedia.$variant.wmflabs.org',
 			'wiktionary'	=> 'http://$lang.wiktionary.$variant.wmflabs.org',
 			'wikipedia'     => 'http://$lang.wikipedia.$variant.wmflabs.org',
 			'wikiversity'	=> 'http://$lang.wikiversity.$variant.wmflabs.org',
-			'wikispecies'	=> 'http://$lang.wikispecies.$variant.wmflabs.org',
 			'wikisource'	=> 'http://$lang.wikisource.$variant.wmflabs.org',
 			'wikiquote'	=> 'http://$lang.wikiquote.$variant.wmflabs.org',
 			'wikinews'	=> 'http://$lang.wikinews.$variant.wmflabs.org',
@@ -83,10 +81,10 @@ function wmfLabsSettings() {
 			'testwiki'      => 'http://test.wikimedia.$variant.wmflabs.org',
 			'zerowiki'      => 'http://zero.wikimedia.$variant.wmflabs.org',
 			'wikidatawiki'  => 'http://wikidata.$variant.wmflabs.org',
+			'en_rtlwiki' => 'http://en-rtl.wikipedia.$variant.wmflabs.org',
 		),
 
 		'-wgCanonicalServer' => array(
-			'default'     => 'http://$lang.wikipedia.$variant.wmflabs.org',
 			'wikipedia'     => 'http://$lang.wikipedia.$variant.wmflabs.org',
 			'wikibooks'     => 'http://$lang.wikibooks.$variant.wmflabs.org',
 			'wikiquote'	=> 'http://$lang.wikiquote.$variant.wmflabs.org',
@@ -94,7 +92,6 @@ function wmfLabsSettings() {
 			'wikisource'	=> 'http://$lang.wikisource.$variant.wmflabs.org',
 			'wikiversity'     => 'http://$lang.wikiversity.$variant.wmflabs.org',
 			'wiktionary'     => 'http://$lang.wiktionary.$variant.wmflabs.org',
-			'wikispecies'     => 'http://$lang.wikispecies.$variant.wmflabs.org',
 			'wikivoyage'    => 'http://$lang.wikivoyage.$variant.wmflabs.org',
 
 			'metawiki'      => 'http://meta.wikimedia.$variant.wmflabs.org',
@@ -103,7 +100,9 @@ function wmfLabsSettings() {
 			'deploymentwiki'      => 'http://deployment.wikimedia.$variant.wmflabs.org',
 			'loginwiki'     => 'http://login.wikimedia.$variant.wmflabs.org',
 			'testwiki'      => 'http://test.wikimedia.$variant.wmflabs.org',
+			'zerowiki'      => 'http://zero.wikimedia.$variant.wmflabs.org',
 			'wikidatawiki'  => 'http://wikidata.$variant.wmflabs.org',
+			'en_rtlwiki' => 'http://en-rtl.wikipedia.$variant.wmflabs.org',
 		),
 
 		'+wgExtraNamespaces' => array(
