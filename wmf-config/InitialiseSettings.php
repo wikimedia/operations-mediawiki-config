@@ -1008,12 +1008,10 @@ $wgConf->settings = array(
 	'dkwikimedia' => '/static/images/project-logos/dkwikimedia.png',
 	'etwikimedia' => '/static/images/project-logos/etwikimedia.png',
 	'fiwikimedia' => '/static/images/project-logos/fiwikimedia.png',
-	'ilwikimedia' => '/static/images/project-logos/ilwikimedia.png',
 	'mkwikimedia' => '/static/images/project-logos/mkwikimedia.png',
 	'mxwikimedia' => '/static/images/project-logos/mxwikimedia.png',
 	'nlwikimedia' => '/static/images/project-logos/nlwikimedia.png',
 	'nowikimedia' => '/static/images/project-logos/nowikimedia.png',
-	'noboard_chapterswikimedia' => '/static/images/project-logos/noboard_chapterswikimedia.png',
 	'nycwikimedia' => '/static/images/project-logos/nycwikimedia.png',
 	'nzwikimedia' => '/static/images/project-logos/nzwikimedia.png',
 	'pa_uswikimedia' => '/static/images/project-logos/pa_uswikimedia.png',
@@ -1030,7 +1028,6 @@ $wgConf->settings = array(
 
 	// Special wikis
 	'advisorywiki' => '/static/images/project-logos/advisorywiki.png',
-	'arbcom_dewiki' => '/static/images/project-logos/arbcom_dewiki.png',
 	'arbcom_enwiki' => '/static/images/project-logos/arbcom_enwiki.png',
 	'arbcom_fiwiki' => '/static/images/project-logos/arbcom_fiwiki.png',
 	'arbcom_nlwiki' => '/static/images/project-logos/arbcom_nlwiki.png',
