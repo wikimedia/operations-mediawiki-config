@@ -12660,7 +12660,7 @@ $wgConf->settings = array(
 
 // Whether VisualEditor should be enabled for new auto-created accounts on a
 // wiki where it's not already on by default.
-'$wmgVisualEditorAutoAccountEnable' => array(
+'wmgVisualEditorAutoAccountEnable' => array(
 	'default' => false,
 ),
 
