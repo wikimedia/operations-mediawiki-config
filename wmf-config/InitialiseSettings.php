@@ -641,7 +641,6 @@ $wgConf->settings = array(
 	'roa_tarawiki' => '/static/images/project-logos/roa_tarawiki.png',
 	'rowiki' => '/static/images/project-logos/rowiki.png',
 	'ruwiki' => '/static/images/project-logos/ruwiki.png',
-	'ru_sibwiki' => '/static/images/project-logos/ru_sibwiki.png',
 	'ruewiki' => '/static/images/project-logos/ruewiki.png',
 	'sahwiki' => '/static/images/project-logos/sahwiki.png',
 	'sawiki' => '/static/images/project-logos/sawiki.png',  // T50397
