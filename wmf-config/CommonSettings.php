@@ -1414,7 +1414,7 @@ if ( $wmgUseCentralNotice ) {
 	if ( $wgDBname == 'testwiki' ) {
 		$wgCentralPagePath = "//test.wikipedia.org/w/index.php";
 		$wgCentralSelectedBannerDispatcher = "//test.wikipedia.org/w/index.php?title=Special:BannerLoader";
-		$wgCentralBannerRecorder = "//test.wikipedia.org/w/index.php?title=Special:RecordImpression";
+		$wgCentralBannerRecorder = "{$wgServer}/beacon/impression";
 	} else {
 		$wgCentralPagePath = "//{$wmfHostnames['meta']}/w/index.php";
 		$wgCentralSelectedBannerDispatcher = "//{$wmfHostnames['meta']}/w/index.php?title=Special:BannerLoader";
