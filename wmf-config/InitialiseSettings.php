@@ -14274,6 +14274,7 @@ $wgConf->settings = array(
 	'huwiki' => true,
 	'itwiki' => true,
 	'jawiki' => true,
+	'knwiki' => true, // T103659
 	'kowiki' => true,
 	'mediawikiwiki' => true,
 	'mkwiki' => true,
