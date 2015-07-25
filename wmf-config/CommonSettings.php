@@ -144,7 +144,7 @@ if ( !$globals ) {
 	$wikiTags = array();
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small', 'medium',
 			'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-default',
-			'flow', 'commonsuploads', 'nonbetafeatures', 'group0', 'wikipedia',
+			'commonsuploads', 'nonbetafeatures', 'group0', 'wikipedia',
 			'arbitraryaccess', 'usagetracking', 'nonglobal',
 		) as $tag ) {
 		$dblist = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../$tag.dblist" ) );
@@ -2481,7 +2481,7 @@ if ( $wmgUseThanks ) {
 	require_once( "$IP/extensions/Thanks/Thanks.php" );
 }
 
-if ( $wmgUseFlow ) {
+if ( $wmgUseFlow && $wmgUseParsoid ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
 
 	// Flow Parsoid - These are now specified directly as Flow-specific
@@ -2494,8 +2494,10 @@ if ( $wmgUseFlow ) {
 		$wgFlowParsoidForwardCookies = true;
 	}
 
-	$wgFlowEditorList = $wmgFlowEditorList;
-	$wgDefaultUserOptions['flow-editor'] = 'visualeditor';
+	if ( $wmgUseVisualEditor ) {
+		$wgFlowEditorList = array( 'visualeditor', 'none' );
+		$wgDefaultUserOptions['flow-editor'] = 'visualeditor';
+	}
 
 	$wgFlowOccupyNamespaces = $wmgFlowOccupyNamespaces;
 	$wgFlowOccupyPages = $wmgFlowOccupyPages;
