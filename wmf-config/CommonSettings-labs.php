@@ -43,6 +43,19 @@ if ( $wmgUseEventLogging ) {
 	$wgEventLoggingFile = 'udp://deployment-eventlogging02.eqiad.wmflabs:8421/EventLogging';
 }
 
+$wgLocalVirtualHosts = array(
+	'wikipedia.beta.wmflabs.org',
+	'wiktionary.beta.wmflabs.org',
+	'wikibooks.beta.wmflabs.org',
+	'wikiquote.beta.wmflabs.org',
+	'wikinews.beta.wmflabs.org',
+	'wikisource.beta.wmflabs.org',
+	'wikiversity.beta.wmflabs.org',
+	'wikivoyage.beta.wmflabs.org',
+	'meta.wikimedia.beta.wmflabs.org',
+	'commons.wikimedia.beta.wmflabs.org',
+);
+
 if ( $wmfUseArticleCreationWorkflow ) {
 	require_once "$IP/extensions/ArticleCreationWorkflow/ArticleCreationWorkflow.php";
 	$wgArticleCreationBucketConfig['buckets']['off'] = 0;

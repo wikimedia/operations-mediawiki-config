@@ -33,8 +33,6 @@ mwconfig_files_txt=(
 	proofreadpage.php
 	throttle.php
 	wgConf.php
-	wgConfVHosts.php
-	wgConfVHosts-labs.php
 	squid.php
 	squid-labs.php
 	session.php

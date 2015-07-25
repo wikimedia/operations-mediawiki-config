@@ -20,8 +20,6 @@ $wgConf->suffixes = array(
 	'wikivoyage',
 );
 
-$wgConf->localVHosts = require( getRealmSpecificFilename( "$wmfConfigDir/wgConfVHosts.php" ) );
-
 $wgConf->wikis = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../all.dblist" ) );
 
 $wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
