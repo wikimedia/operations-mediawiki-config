@@ -11099,6 +11099,7 @@ $wgConf->settings = array(
 	'fawikinews' => true,
 	'fawikivoyage' => true, // T76716
 	'fawiktionary' => true, // T90831
+	'gomwiki' => true, // T106169
 	'guwiki' => true, // T42872
 	'guwikisource' => true, // T42872
 	'hiwiki' => true,
