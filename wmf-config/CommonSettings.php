@@ -2606,7 +2606,7 @@ if ( $wmgUseEventLogging ) {
 	if ( $wgDBname === 'test2wiki' ) {
 		// test2wiki has its own Schema: NS.
 		$wgEventLoggingDBname = 'test2wiki';
-		$wgEventLoggingSchemaApiUri = 'http://test2.wikipedia.org/w/api.php';
+		$wgEventLoggingSchemaApiUri = 'https://test2.wikipedia.org/w/api.php';
 		$wgEventLoggingBaseUri = "{$wgServer}/beacon/dummy";
 		$wgEventLoggingFile = "udp://$wmfUdp2logDest/EventLogging-$wgDBname";
 	} else {
@@ -2614,7 +2614,7 @@ if ( $wmgUseEventLogging ) {
 		$wgEventLoggingBaseUri = "{$wgServer}/beacon/event";
 		$wgEventLoggingDBname = 'metawiki';
 		$wgEventLoggingFile = 'udp://10.64.32.167:8421/EventLogging';  // eventlog1001.eqiad.wmnet
-		$wgEventLoggingSchemaApiUri = 'http://meta.wikimedia.org/w/api.php';
+		$wgEventLoggingSchemaApiUri = 'https://meta.wikimedia.org/w/api.php';
 	}
 	if ( $wgEventLoggingDBname === $wgDBname ) {
 		// T47031
