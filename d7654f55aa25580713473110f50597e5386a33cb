@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_475c7bf4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 15245,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2015-07-27T20:18:45Z",
+      "side": 1,
+      "message": "This will break templates such as [[votewiki:Template:Dir]], [[votewiki:Template:Board candidate links]], and [[votewiki:Template:Nmbox]].\n\nloginwiki looks to be safe, at least for the moment.",
+      "revId": "d7654f55aa25580713473110f50597e5386a33cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
