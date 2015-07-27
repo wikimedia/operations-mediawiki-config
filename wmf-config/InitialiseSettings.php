@@ -12751,6 +12751,7 @@ $wgConf->settings = array(
 	'bewikisource' => 'uca-be', // T48004
 	'ckbwiki' => 'xx-uca-ckb', // T57630
 	'cswiki' => 'uca-cs', // T66885
+	'cswiktionary' => 'uca-default', // T106337
 	'cywiki' => 'uca-cy', // T61800
 	'cywikibooks' => 'uca-cy', // T61800
 	'cywikiquote' => 'uca-cy', // T61800
