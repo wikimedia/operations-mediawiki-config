@@ -4293,9 +4293,9 @@ $wgConf->settings = array(
 // FIXME: someday this will need to be datacenter aware
 'wmgLogstashServers' => array(
 	'default' => array(
-		'10.64.32.138', // logstash1001.eqiad.wmnet
+		'10.64.0.122', // logstash1001.eqiad.wmnet
 		'10.64.32.137', // logstash1002.eqiad.wmnet
-		'10.64.32.136', // logstash1003.eqiad.wmnet
+		'10.64.48.113', // logstash1003.eqiad.wmnet
 	),
 ),
 
