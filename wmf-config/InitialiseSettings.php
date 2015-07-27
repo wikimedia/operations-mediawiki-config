@@ -1904,7 +1904,7 @@ $wgConf->settings = array(
 	'yiwikisource' => 'װיקיביבליאָטעק',
 	'yiwiktionary' => 'װיקיװערטערבוך',
 	'zerowiki' => 'Wikipedia',
-	'zh-min-nanwikisource' => 'Wiki Tô·-su-kóan',
+	'zh_min_nanwikisource' => 'Wiki Tô·-su-kóan',
 	'zh_classicalwiki' => '維基大典',
 	'zhwikivoyage' => '维基导游', // T61077
 	'zh_yuewiki' => '維基百科',
@@ -2385,7 +2385,7 @@ $wgConf->settings = array(
 	'yiwikisource' => 'װיקיביבליאָטעק',
 	'yiwiktionary' => 'װיקיװערטערבוך',
 	'zerowiki' => 'Project',
-	'zh-min-nanwikisource' => 'Wiki_Tô·-su-kóan',
+	'zh_min_nanwikisource' => 'Wiki_Tô·-su-kóan',
 	'zh_classicalwiki' => '維基大典',
 ),
 # @} end of wgMetaNamespace
