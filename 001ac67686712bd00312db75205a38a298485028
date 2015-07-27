@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_c22b79d9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 4241,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-07-27T22:00:20Z",
+      "side": 0,
+      "message": "actually, this needs to remain. otherwise we\u0027ll default to \u0027wikipedia\u0027 (the value of $site for this)",
+      "revId": "001ac67686712bd00312db75205a38a298485028",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
