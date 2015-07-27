@@ -10489,6 +10489,7 @@ $wgConf->settings = array(
 	'dewikibooks' => true,
 	'enwikibooks' => true,
 	'enwikinews' => true,
+	'frwikibooks' => true, // T103263
 	'frwiktionary' => true,
 	'hiwiki' => true,
 	'iswikibooks' => true,
