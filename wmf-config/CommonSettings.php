@@ -302,20 +302,12 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 	),
 );
 
-// Testing Redis-on-Nutcracker -- OL, 28-Jul-2015
-$wgObjectCaches['nutcracker-redis'] = array(
-	'class' => 'RedisBagOStuff',
-	'servers' => array( '127.0.0.1:6380' ),
-	'password' => $wmgRedisPassword,
-	'loggroup' => 'redis',
-);
-
 if ( $wmgUseClusterSession ) {
 	require( getRealmSpecificFilename( "$wmfConfigDir/session.php" ) );
 
 	$wgObjectCaches['sessions'] = array(
 		'class' => 'RedisBagOStuff',
-		'servers' => $sessionRedis[$wmfDatacenter],
+		'servers' => array( '127.0.0.1:6380' ),
 		'password' => $wmgRedisPassword,
 		'loggroup' => 'redis',
 	);
