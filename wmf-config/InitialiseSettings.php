@@ -1384,7 +1384,6 @@ $wgConf->settings = array(
 // This is the same as wgServer but with a protocol, so if wgServer is //foo.com this must be http://foo.com
 # wgCanonicalServer @{
 'wgCanonicalServer' => array(
-	'default' => 'https://$lang.wikipedia.org', // TODO: Get rid of this, see T104088 and T106963
 	// Projects
 	'wikipedia' => 'https://$lang.wikipedia.org',
 	'wikibooks' => 'https://$lang.wikibooks.org',
@@ -1475,7 +1474,6 @@ $wgConf->settings = array(
 
 # wgSitename @{
 'wgSitename' => array(
-	'default' => 'Wikipedia', // TODO: Get rid of this, see T104088 and T106963
 	// Projects
 	'wikipedia' => 'Wikipedia',
 	'wikibooks' => 'Wikibooks',
