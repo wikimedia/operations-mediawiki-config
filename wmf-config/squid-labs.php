@@ -10,10 +10,10 @@
 # on UDP port 4827.
 
 $wgSquidServersNoPurge = array( '127.0.0.1',
-	'10.68.16.16',  # deployment-cache-text02
-	'10.68.17.51',  # deployment-cache-upload02
-	'10.68.16.12',  # deployment-cache-bits01
-	'10.68.16.13',  # deployment-cache-mobile03
+	'10.68.18.103',  # deployment-cache-text04
+	'10.68.18.109',  # deployment-cache-upload04
+	'10.68.18.64',  # deployment-cache-bits04
+	'10.68.18.110',  # deployment-cache-mobile04
 );
 $wgHTCPRouting = array(
 	'|^https?://upload\.beta\.wmflabs\.org|' => array(
@@ -24,11 +24,11 @@ $wgHTCPRouting = array(
 	# Fallback  (text+mobile)
 	'' => array(
 		array(
-			'host' => '10.68.16.16',  # deployment-cache-text02
+			'host' => '10.68.18.103',  # deployment-cache-text04
 			'port' => 4827,
 		),
 		array(
-			'host' => '10.68.16.13',  # deployment-cache-mobile03
+			'host' => '10.68.18.110',  # deployment-cache-mobile04
 			'port' => 4827,
 		),
 	),
