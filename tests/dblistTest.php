@@ -31,13 +31,6 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 			: $projectname
 		;
 
-		# Sadly, we end up with an exception because hysterical raisins
-		# sourceswiki is the original Wikisource and is still active
-		if ( $database === 'sourceswiki' ) {
-			$this->assertEquals( $projectname, 'wikisource' );
-			return;
-		}
-
 		# Verifiy the databasename suffix
 		$this->assertStringEndsWith( $dbsuffix, $database,
 			"Database name $database lacks db suffix $dbsuffix of $projectname"
