@@ -103,6 +103,16 @@ $wmgMonologConfig =  array(
 	),
 );
 
+if ( $wmgLogAuthmanagerMetrics ) {
+	$wmgMonologConfig['loggers']['authmanager'] = array(
+		'handlers' => array( 'authmanager-statsd' ),
+	);
+	$wmgMonologConfig['handlers']['authmanager-statsd'] = array(
+		// defined in WikimediaEvents
+		'class' => 'AuthManagerStatsdHandler',
+	);
+}
+
 // Add logging channels defined in $wmgMonologChannels
 foreach ( $wmgMonologChannels as $channel => $opts ) {
 	if ( $opts === false ) {
