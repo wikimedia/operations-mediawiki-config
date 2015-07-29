@@ -15338,6 +15338,10 @@ $wgConf->settings = array(
 	'test2wiki' => false, // T67011
 ),
 
+'wgSecureLogin' => array(
+	'default' => true,
+),
+
 'wgRightsUrl' => array(
 	'default' => '//creativecommons.org/licenses/by-sa/3.0/',
 	'huwikinews' => '//creativecommons.org/licenses/by/3.0/',
