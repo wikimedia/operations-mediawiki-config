@@ -7743,6 +7743,12 @@ $wgConf->settings = array(
 			'reupload' => true,
 			'reupload-own' => true,
 		),
+		'wmf-officeit' => array( // T106724
+			'centralauth-lock' => true,
+			'createaccount' => true,
+			'noratelimit' => true,
+			'tboverride' => true,
+		),
 	),
 	'mkwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
