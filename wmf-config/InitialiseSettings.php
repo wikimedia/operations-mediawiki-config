@@ -4192,11 +4192,13 @@ $wgConf->settings = array(
 	'default' => true,
 	'advisorywiki' => false, // Per T27519
 	'fishbowl' => false, // Per T19718 Disable CentralNotice on private/fishbowl wikis
+	'loginwiki' => false, // T61702
 	'nonglobal' => false,
 	'fiwikimedia' => false, // T19718
 	'private' => false, // :D
 	'qualitywiki' => false,
 	'ukwikimedia' => false, // T19718 Disable CentralNotice on private/fishbowl wikis
+	'votewiki' => false, // T61702
 ),
 
 'wmgCentralNoticeLoader' => array(
@@ -12572,6 +12574,8 @@ $wgConf->settings = array(
 
 'wmgUseParsoid' => array(
 	'default' => true,
+	'loginwiki' => false, // T61702
+	'votewiki' => false, // T61702
 ),
 
 // Should a users' Cookie: headers be forwarded to Parsoid (for private wikis)
@@ -12934,8 +12938,9 @@ $wgConf->settings = array(
 
 'wmgUseMath' => array(
 	'default' => true, // moved from MW core
-	'loginwiki' => false,
 	'labswiki' => false,
+	'loginwiki' => false,
+	'votewiki' => false, // T61702
 ),
 
 'wmgUseMoodBar' => array(
@@ -14578,6 +14583,8 @@ $wgConf->settings = array(
 ),
 'wmgUseDisambiguator' => array(
 	'default' => true,
+	'loginwiki' => false, // T61702
+	'votewiki' => false, // T61702
 ),
 
 'wmgUseCodeEditorForCore' => array(
@@ -14789,6 +14796,8 @@ $wgConf->settings = array(
 
 'wmgUseUniversalLanguageSelector' => array(
 	'default' => true,
+	'loginwiki' => false, // T61702
+	'votewiki' => false, // T61702
 ),
 
 'wmgULSPosition' => array(
@@ -15297,6 +15306,26 @@ $wgConf->settings = array(
 	'kowikiversity' => true,
 ),
 
+'wmgUsePagedTiffHandler' => array(
+	'default' => true,
+	'loginwiki' => false, // T61702
+	'votewiki' => false, // T61702
+),
+
+'wmgUseParserFunctions' => array(
+	'default' => true,
+	'loginwiki' => false, // T61702
+),
+
+'wmgUseTemplateData' => array(
+	'default' => true,
+	'loginwiki' => false, // T61702
+	'votewiki' => false, // T61702
+),
+'wmgUseCharInsert' => array(
+	'default' => true,
+	'loginwiki' => false, // T61702
+),
 ### End (roughly) of general extensions ########################
 
 // Apply blocks to IPs in XFF (T25343)
