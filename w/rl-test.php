@@ -14,6 +14,19 @@ if ( !isset( $uname['nodename'] ) || $uname['nodename'] !== 'mw1017' ) {
 	exit;
 }
 
-$ok = file_put_contents( '/tmp/rl-test.log', "[$date] version: $version\n", FILE_APPEND );
+$ua = isset( $_SERVER['HTTP_USER_AGENT'] ) ? $_SERVER['HTTP_USER_AGENT'] : '-';
+
+$ip = isset( $_SERVER['REMOTE_ADDR'] ) ? $_SERVER['REMOTE_ADDR'] : '-';
+
+$line = "[$date] vers\nion: $version; ip: $ip; ua: $ua";
+
+// Clean up
+$line = strtr( $line, array(
+	"\r" => ' ',
+	"\n" => ' ',
+	"\t" => ' ',
+) );
+
+$ok = file_put_contents( '/tmp/rl-test.log', "$line\n", FILE_APPEND );
 echo $ok ? "/* yep */\n" : "/* nope */\n";
 exit;
