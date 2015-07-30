@@ -33,7 +33,7 @@ function updateWikiversions() {
 	$dbList = MWWikiversions::readDbListFile( "$common/$dbListName.dblist" );
 
 	$newVersion = $argv[2];
-	if ( !preg_match( '/^php-(\d+\.\d+wmf\d+|master)$/', $newVersion ) || !is_dir( "$common/$newVersion" ) ) {
+	if ( !preg_match( MEDIAWIKI_DIRECTORY_REGEX, $newVersion ) || !is_dir( "$common/$newVersion" ) ) {
 		print "Invalid version specifier: $newVersion\n";
 		exit( 1 );
 	}

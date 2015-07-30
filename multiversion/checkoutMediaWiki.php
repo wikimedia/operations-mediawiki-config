@@ -24,7 +24,7 @@ function checkoutMediaWiki() {
 	if ( count( $argv ) >= 3 ) {
 		$gitVersion = $argv[1]; // e.g. "X.XXwmfX"
 		$dstVersion = $argv[2]; // e.g. "php-X.XXwmfX"
-		if ( preg_match( '/^php-(\d+\.\d+wmf\d+|master)$/', $dstVersion, $m ) ) {
+		if ( preg_match( MEDIAWIKI_DIRECTORY_REGEX, $dstVersion, $m ) ) {
 			$dstVersionNum = $m[1]; // everything after 'php-'
 			$argsValid = true;
 		}
