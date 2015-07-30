@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_f0766339",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-07-30T19:58:35Z",
+      "side": 1,
+      "message": "$wgStyleSheetPath is deprecated and almost un-used. $wgStylePath is the one you want.\n\nRight now en.m.wikipedia.org startup returns:\n\n .. stylepath\":\"https://en.wikipedia.org/static/1.26wmf16/skins\" ..",
+      "revId": "0dc9d41814ec81803ebb4583688f716772ae7941",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
