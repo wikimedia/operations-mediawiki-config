@@ -12702,6 +12702,7 @@ $wgConf->settings = array(
 		106 /* Institution */ => true // T67067
 	),
 	'+metawiki' => array(
+		NS_PROJECT => true, // T107003
 		200 /* Grants */ => true, // T67067
 		202 /* Research */ => true, // T67067
 		204 /* Participation */ => true, // T67067
