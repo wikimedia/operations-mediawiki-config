@@ -201,10 +201,10 @@ setlocale( LC_ALL, 'en_US.UTF-8' );
 unset( $wgStylePath );
 unset( $wgStyleSheetPath );
 
-$wgLoadScript = "{$wgServer}/w/load.php";
-$wgExtensionAssetsPath = "{$wgServer}/static/{$wmfVersionNumber}/extensions";
-$wgStyleSheetPath = "{$wgServer}/static/{$wmfVersionNumber}/skins";
-$wgResourceBasePath = "{$wgServer}/static/{$wmfVersionNumber}";
+$wgLoadScript = "/w/load.php";
+$wgExtensionAssetsPath = "/static/{$wmfVersionNumber}/extensions";
+$wgStyleSheetPath = "/static/{$wmfVersionNumber}/skins";
+$wgResourceBasePath = "/static/{$wmfVersionNumber}";
 
 $wgStylePath = $wgStyleSheetPath;
 $wgArticlePath = "/wiki/$1";
