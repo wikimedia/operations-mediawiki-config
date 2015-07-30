@@ -307,7 +307,7 @@ if ( $wmgUseClusterSession ) {
 
 	$wgObjectCaches['sessions'] = array(
 		'class' => 'RedisBagOStuff',
-		'servers' => array( '127.0.0.1:6380' ),
+		'servers' => $sessionRedis[$wmfDatacenter],
 		'password' => $wmgRedisPassword,
 		'loggroup' => 'redis',
 	);
