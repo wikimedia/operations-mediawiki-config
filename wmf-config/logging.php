@@ -95,6 +95,9 @@ $wmgMonologConfig =  array(
 				true, // allowInlineLineBreaks
 				true, // ignoreEmptyContextAndExtra
 			),
+			'calls' => array(
+				'includeStacktraces' => array( true ),
+			),
 		),
 		'logstash' => array(
 			'class' => '\\Monolog\\Formatter\\LogstashFormatter',
