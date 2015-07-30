@@ -9848,6 +9848,7 @@ $wgConf->settings = array(
 	'mlwikisource' => array( 'w', 'en', 'w:en', ),
 	'mlwikiquote' => array( 'en', 'w:en', 'w' ),
 	'mrwiki' => array( 'meta', 'commons', 'en', 'hi' ), // T96807
+	'mrwikisource' => array( 'w', 'b', 'en', 'sa' ), // T105116
 	'mswiki' => array( 'id' ), // T18033
 	'mswiktionary' => array( 'w' ),
 	'myvwiki' => array( 'incubator' ),
