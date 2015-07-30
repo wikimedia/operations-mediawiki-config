@@ -4353,6 +4353,7 @@ $wgConf->settings = array(
 		'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
 		'Bug58676' => 'debug', # Invalid message parameter
 		'Flow' => 'debug', // -erikb 2014/03/08
+		'T102199' => 'debug', // OL, 30-Jul-2015
 		'upload' => 'debug',
 		'UpdateRepo' => 'debug',
 		'BounceHandler' => 'debug',
