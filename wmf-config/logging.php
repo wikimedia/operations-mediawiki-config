@@ -88,12 +88,13 @@ $wmgMonologConfig =  array(
 
 	'formatters' => array(
 		'line' => array(
-			'class' => '\\Monolog\\Formatter\\LineFormatter',
+			'class' => '\\MediaWiki\\Logger\\Monolog\\LineFormatter',
 			'args' => array(
 				"%datetime% %extra.host% %extra.wiki% %channel% %level_name%: %message% %context%\n",
 				'Y-m-d H:i:s',
 				true, // allowInlineLineBreaks
 				true, // ignoreEmptyContextAndExtra
+				true, // includeStacktraces
 			),
 		),
 		'logstash' => array(
