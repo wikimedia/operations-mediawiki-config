@@ -12607,31 +12607,88 @@ $wgConf->settings = array(
 ),
 
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
-'wmgVisualEditorNamespaces' => array(
-	'default' => array( NS_USER, NS_FILE, NS_HELP, NS_CATEGORY ),
+'wmgVisualEditorAvailableNamespaces' => array(
+	'default' => array(
+		NS_USER => true,
+		NS_FILE => true,
+		NS_HELP => true,
+		NS_CATEGORY => true
+	),
+
 	// Test wikis
-	'+mediawikiwiki' => array( NS_PROJECT, 100 /* Manual */, 102 /* Extension */, 104 /* API */, 106 /* Skin */ ), // T50430
+	'+mediawikiwiki' => array(
+		NS_PROJECT => true,  // T50430
+		100  /* Manual */ => true, // T50430
+		102  /* Extension */ => true, // T50430
+		104  /* API */ => true, // T50430
+		106  /* Skin */ => true // T50430
+	),
+
 	// Special wikis
-	'+commonswiki' => array( 100 /* Creator */, 106 /* Institution */ ), // T67067
-	'+metawiki' => array( 200 /* Grants */, 202 /* Research */, 204 /* Participation */, 206, 208 /* Programs */ ),
-	'+wikidata' => array( NS_PROJECT ),
+	'+commonswiki' => array(
+		100 /* Creator */ => true, // T67067
+		106 /* Institution */ => true // T67067
+	),
+	'+metawiki' => array(
+		200 /* Grants */ => true, // T67067
+		202 /* Research */ => true, // T67067
+		204 /* Participation */ => true, // T67067
+		206 /* Iberocoop */ => true, // T67067
+		208 /* Programs */ => true // T67067
+	),
+	'+wikidata' => array(
+		NS_PROJECT => true
+	),
+
 	// Wikipedias
-	'+cawiki' => array( NS_PROJECT, 100 /* Portal */, 102 /* Viquiprojecte */ ), // T58000 & T88896
-	'+enwiki' => array( 100 /* Portal */, 108 /* Book */, 118 /* Draft */ ), // T58001
-	'+hewiki' => array( 118 /* Draft */ ), // T87027
-	'+jawiki' => array( 100 /* Portal */), // T97313
-	'+kowiki' => array( 118 /* Draft */ ), // T92798
-	'+plwiki' => array( 102 /* Wikiprojekt */ ), // T92698
-	'+ruwiki' => array( 102 /* Draft / Incubator */ ), // T86688
-	'+zhwiki' => array( 118 /* Draft */ ), // T91223
+	'+cawiki' => array(
+		NS_PROJECT => true, // T88896
+		100 /* Portal */ => true, // T58000
+		102 /* Viquiprojecte */ => true // T58000
+	),
+	'+enwiki' => array(
+		100 /* Portal */ => true, // T58001
+		108 /* Book */ => true, // T58001
+		118 /* Draft */ => true
+	),
+	'+hewiki' => array(
+		118 /* Draft */ => true // T87027
+	),
+	'+jawiki' => array(
+		100 /* Portal */ => true // T97313
+	),
+	'+kowiki' => array(
+		118 /* Draft */ => true // T92798
+	),
+	'+plwiki' => array(
+		102 /* Wikiprojekt */ => true // T92698
+	),
+	'+ruwiki' => array(
+		102 /* Draft / Incubator */ => true // T86688
+	),
+	'+zhwiki' => array(
+		118 /* Draft */ => true // T91223
+	),
+
 	// Wiktionaries
-	'svwiktionary' => array( NS_USER ), // T59356
+	'svwiktionary' => array(
+		NS_USER => true // T59356
+	),
+
 	// Wikiversities
-	'+frwikiversity' => array( 104 ), // T63874
+	'+frwikiversity' => array(
+		104 /* Recherche */ => true // T63874
+	),
+
 	// Wikimedia wikis
-	'+sewikimedia' => array( 100 /* Projekt */ ), // T62882
+	'+sewikimedia' => array(
+		100 /* Projekt */ => true // T62882
+	),
+
 	// Private wikis
-	'+officewiki' => array( 100 /* Report */ ),
+	'+officewiki' => array(
+		100 /* Report */  => true // T60547
+	),
 ),
 
 // Should VisualEditor be enabled for all users by default ('beta' mode)
