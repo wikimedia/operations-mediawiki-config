@@ -65,13 +65,14 @@ if ( $wmgMobileFrontend ) {
 
 	$wgHooks['EnterMobileMode'][] = function() {
 		global $wgCentralAuthCookieDomain, $wgExtensionAssetsPath,
-			$wgLoadScript, $wgResourceBasePath, $wgStyleSheetPath;
+			$wgLoadScript, $wgResourceBasePath, $wgStylePath, $wgStyleSheetPath;
 
 		$mobileContext = MobileContext::singleton();
 		$wgExtensionAssetsPath = $mobileContext->getMobileUrl( $wgExtensionAssetsPath );
 		$wgLoadScript = $mobileContext->getMobileUrl( $wgLoadScript );
 		$wgResourceBasePath = $mobileContext->getMobileUrl( $wgResourceBasePath );
 		$wgStyleSheetPath = $mobileContext->getMobileUrl( $wgStyleSheetPath );
+		$wgStylePath = $wgStyleSheetPath;
 
 		// Hack for T49647
 		if ( $wgCentralAuthCookieDomain == 'commons.wikimedia.org' ) {
