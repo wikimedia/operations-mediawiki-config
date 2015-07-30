@@ -12617,11 +12617,11 @@ $wgConf->settings = array(
 
 	// Test wikis
 	'+mediawikiwiki' => array(
-		NS_PROJECT => true,  // T50430
-		100  /* Manual */ => true, // T50430
-		102  /* Extension */ => true, // T50430
-		104  /* API */ => true, // T50430
-		106  /* Skin */ => true // T50430
+		NS_PROJECT => true, // T50430
+		100 /* Manual */ => true, // T50430
+		102 /* Extension */ => true, // T50430
+		104 /* API */ => true, // T50430
+		106 /* Skin */ => true // T50430
 	),
 
 	// Special wikis
@@ -12630,6 +12630,7 @@ $wgConf->settings = array(
 		106 /* Institution */ => true // T67067
 	),
 	'+metawiki' => array(
+		NS_PROJECT => true, // T107003
 		200 /* Grants */ => true, // T67067
 		202 /* Research */ => true, // T67067
 		204 /* Participation */ => true, // T67067
@@ -12687,7 +12688,7 @@ $wgConf->settings = array(
 
 	// Private wikis
 	'+officewiki' => array(
-		100 /* Report */  => true // T60547
+		100 /* Report */ => true // T60547
 	),
 ),
 
