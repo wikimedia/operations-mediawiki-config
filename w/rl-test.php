@@ -1,6 +1,10 @@
 <?php
+require '/srv/mediawiki/w/MWVersion.php';
+require getMediaWiki( 'includes/WebStart.php' );
+#require_once __DIR__ . '/includes/WebStart.php';
 
-date_default_timezone_set( 'UTC' );
+global $wgRequest;
+
 header( 'Access-Control-Allow-Origin: *' );
 header( 'Content-Type: text/plain; charset=utf-8' );
 
@@ -15,10 +19,9 @@ if ( !isset( $uname['nodename'] ) || $uname['nodename'] !== 'mw1017' ) {
 }
 
 $ua = isset( $_SERVER['HTTP_USER_AGENT'] ) ? $_SERVER['HTTP_USER_AGENT'] : '-';
+$ip = $wgRequest->getIP();
 
-$ip = isset( $_SERVER['REMOTE_ADDR'] ) ? $_SERVER['REMOTE_ADDR'] : '-';
-
-$line = "[$date] vers\nion: $version; ip: $ip; ua: $ua";
+$line = "[$date] version: $version; ip: $ip; ua: $ua";
 
 // Clean up
 $line = strtr( $line, array(
