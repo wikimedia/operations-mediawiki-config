@@ -14,6 +14,7 @@ $allowed_templates = array(
 	'Www.wikiversity.org_template',
 	'Www.wikibooks.org_template',
 	'Www.wikivoyage.org_template',
+	'API_listing_template',
 );
 
 $template = $wgRequest->getText( 'template', 'Www.wikipedia.org_template' );
