@@ -302,6 +302,8 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 	),
 );
 
+$wgAjaxEditStash = false;  // On suspicion it is implicated in T102199
+
 if ( $wmgUseClusterSession ) {
 	require( getRealmSpecificFilename( "$wmfConfigDir/session.php" ) );
 
