@@ -18,10 +18,10 @@ if ( !isset( $uname['nodename'] ) || $uname['nodename'] !== 'mw1017' ) {
 	exit;
 }
 
-$ua = isset( $_SERVER['HTTP_USER_AGENT'] ) ? $_SERVER['HTTP_USER_AGENT'] : '-';
-$ip = $wgRequest->getIP();
+$ua = @$_SERVER['HTTP_USER_AGENT'] ?: '-';
+$xff = @$_SERVER['HTTP_X_FORWARDED_FOR'] ?: '-';
 
-$line = "[$date] version: $version; ip: $ip; ua: $ua";
+$line = "[$date] version: $version; xff: $xff; ua: $ua";
 
 // Clean up
 $line = strtr( $line, array(
