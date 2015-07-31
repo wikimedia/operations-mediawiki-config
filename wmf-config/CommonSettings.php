@@ -2005,7 +2005,7 @@ if ( $wmgUseVisualEditor ) {
 	}
 
 	$wgVisualEditorNamespaces = array_merge( $wgVisualEditorNamespaces, $wmgVisualEditorNamespaces );
-	$wgVisualEditorAvailableNamespaces = array_merge( $wgVisualEditorAvailableNamespaces, array_fill_keys( $wmgVisualEditorNamespaces, true ) );
+	$wgVisualEditorAvailableNamespaces = array_fill_keys( $wmgVisualEditorNamespaces, true ) + $wgVisualEditorAvailableNamespaces;
 
 	// User access configuration
 	if ( $wmgVisualEditorDefault ) {
