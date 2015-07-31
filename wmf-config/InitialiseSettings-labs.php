@@ -1009,11 +1009,6 @@ function wmfLabsSettings() {
 			'enwiki' => true,
 			'en_rtlwiki' => true,
 		),
-		# Extension:Flow's browsertests use Talk:Flow_QA.
-		'wmgFlowOccupyPages' => array(
-			'enwiki' => array( 'Talk:Flow QA', 'Talk:Flow' ),
-			'en_rtlwiki' => array( 'Talk:Flow' ),
-		),
 		'wmgFlowOccupyNamespaces' => array(
 			'cawiki' => array( 191 ), // Flow_test_talk:
 			'enwiki' => array( 191 ), // Flow_test_talk:
