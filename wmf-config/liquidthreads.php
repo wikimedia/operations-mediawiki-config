@@ -7,10 +7,19 @@ $extName = 'LiquidThreads';
 $wgLiquidThreadsExtensionName = $extName;
 $wgLiquidThreadsExtensionPath = "{$wgExtensionAssetsPath}/{$extName}";
 
-if ( $wmgLiquidThreadsOptIn ) {
+if ( $wmgLiquidThreadsFrozen ) {
+	// Preserve access to LQT edits and logs after converting all LQT, but prevent
+	// LQT pages from being created.
 	$wgLqtTalkPages = false;
-}
+	$wgLiquidThreadsAllowUserControl = false;
+	$wgLiquidThreadsAllowUserControlNamespaces = array();
+	$wgLiquidThreadsAllowEmbedding = false;
+} else {
+	if ( $wmgLiquidThreadsOptIn ) {
+		$wgLqtTalkPages = false;
+	}
 
-if ( isset( $wmgLQTUserControlNamespaces ) ) {
-	$wgLiquidThreadsAllowUserControlNamespaces = $wmgLQTUserControlNamespaces;
+	if ( isset( $wmgLQTUserControlNamespaces ) ) {
+		$wgLiquidThreadsAllowUserControlNamespaces = $wmgLQTUserControlNamespaces;
+	}
 }
