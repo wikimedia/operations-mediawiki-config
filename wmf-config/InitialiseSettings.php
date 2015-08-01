@@ -898,6 +898,7 @@ $wgConf->settings = array(
 	'ltwikibooks' => '/static/images/project-logos/ltwikibooks.png',
 	'mkwikibooks' => '/static/images/project-logos/mkwikibooks.png',  // T54019
 	'mlwikibooks' => '/static/images/project-logos/mlwikibooks.png',  // T45111
+	'mrwikibooks' => '/static/images/project-logos/mrwikibooks.png',  // T104132
 	'mswikibooks' => '/static/images/project-logos/mswikibooks.png',
 	'nowikibooks' => '/static/images/project-logos/nowikibooks.png',
 	'ocwikibooks' => '/static/images/project-logos/ocwikibooks.png',  // T54019
