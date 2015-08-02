@@ -427,6 +427,7 @@ $wgConf->settings = array(
 	'default' => '/static/images/project-logos/default.png',
 	'wikibooks' => '/static/images/project-logos/wikibooks.png',
 	'wikinews' => '$stdlogo',
+	'wikipedia' => '/static/images/project-logos/enwiki.png',
 	'wikiquote' => '/static/images/project-logos/wikiquote.png',
 	'wikisource' => '/static/images/project-logos/wikisource.png',
 	'wikiversity' => '$stdlogo',
