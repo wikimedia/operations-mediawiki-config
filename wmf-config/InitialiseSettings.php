@@ -139,6 +139,7 @@ $wgConf->settings = array(
 	'iegcomwiki' => 'en',
 	'incubatorwiki' => 'en', # mixed
 	'legalteamwiki' => 'en',
+	'metawiki' => 'en',
 	'officewiki' => 'en',
 	'ombudsmenwiki' => 'en',
 	'otrs_wikiwiki' => 'en',
