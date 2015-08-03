@@ -4370,6 +4370,7 @@ $wgConf->settings = array(
 		'T87645' => 'debug', // - Ori on behalf of Tim, for https://gerrit.wikimedia.org/r/#/c/188304/
 		'T89258' => 'debug', // - awight and AndyRussG
 		'T76305' => 'debug', // - Krinkle and Krenair, for https://gerrit.wikimedia.org/r/188987
+		'T107711' => 'debug', //- aude, hoo and addshore, for Wikidata
 		'ResourceLoaderImage' => 'debug', // - demon, matmarex
 		'HttpError' => 'error', // Only log http errors with a 500+ code T85795
 		'AdHocDebug' => 'debug', // for temp live debugging
