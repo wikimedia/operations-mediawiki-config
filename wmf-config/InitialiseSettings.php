@@ -14476,11 +14476,12 @@ $wgConf->settings = array(
 ),
 
 'wmgUseFlow' => array(
-	'default' => false,
-	'flow' => true,
-),
-'wmgFlowEditorList' => array(
-	'default' => array( 'visualeditor', 'none' ),
+	// Explicit wiki settings override tags
+	'default' => true,
+	'private' => false,
+	'officewiki' => true,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 'wmgFlowOccupyNamespaces' => array(
 	'default' => array(),
