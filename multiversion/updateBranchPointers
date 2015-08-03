@@ -3,9 +3,9 @@
 /**
  * Create/update various symlinks used in production.
  *
- * docroot/bits/static-current links to the latest production branch, respectively.
- * This provides a stable URL to large static assets that are served by extensions
- * and which do not change frequently.
+ * w/static/current links to the latest production branch, respectively.
+ * This provides a stable URL to large static assets that are served by
+ * extensions and which do not change frequently.
  *
  * php links to the current primary deployed version of MediaWiki.
  *
@@ -58,9 +58,6 @@ function updateBranchPointers( $dryRun = false, $all = false ) {
 
 	foreach( $branches as $branch => $target ) {
 		updateBranch($dryRun, '/w/static',$branch, $target);
-		if ($branch != 'current'){
-			updateBranch($dryRun, '/docroot/bits/static',$branch, $target);
-		}
 	}
 }
 
