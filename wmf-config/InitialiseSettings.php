@@ -14479,6 +14479,7 @@ $wgConf->settings = array(
 	// Explicit wiki settings override tags
 	'default' => true,
 	'enwikiversity' => false, # T107846
+	'jawikiversity' => false,
 	'private' => false,
 	'officewiki' => true,
 	'loginwiki' => false,
