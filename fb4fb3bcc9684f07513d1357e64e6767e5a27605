@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_70e32f32",
+        "filename": "wmf-config/Wikibase-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2015-08-04T12:07:45Z",
+      "side": 1,
+      "message": "I think the \"wb-\" is a copy-paste mistake.",
+      "revId": "fb4fb3bcc9684f07513d1357e64e6767e5a27605",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
