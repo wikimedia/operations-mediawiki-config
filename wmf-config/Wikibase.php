@@ -145,7 +145,8 @@ if ( $wmgUseWikibaseClient ) {
 		return array_merge(
 			MWNamespace::getTalkNamespaces(),
 			// 1198 => NS_TRANSLATE
-			array( NS_USER, NS_FILE, NS_MEDIAWIKI, 1198 )
+			// 2600 => Flow topic
+			array( NS_USER, NS_FILE, NS_MEDIAWIKI, 1198, 2600 )
 		);
 	};
 
