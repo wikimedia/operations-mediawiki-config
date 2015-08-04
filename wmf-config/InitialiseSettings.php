@@ -14478,6 +14478,7 @@ $wgConf->settings = array(
 'wmgUseFlow' => array(
 	// Explicit wiki settings override tags
 	'default' => true,
+	'enwikiversity' => false, # T107846
 	'private' => false,
 	'officewiki' => true,
 	'loginwiki' => false,
