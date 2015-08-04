@@ -1116,5 +1116,8 @@ function wmfLabsSettings() {
 			'private' => false,
 		),
 
+		'wmgLogAuthmanagerMetrics' => array(
+			'default' => true,
+		),
 	);
 } # wmflLabsSettings()

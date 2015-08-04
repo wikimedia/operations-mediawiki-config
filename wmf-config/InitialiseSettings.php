@@ -15508,6 +15508,10 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgLogAuthmanagerMetrics' => array(
+	'default' => false,
+),
+
 );
 
 
