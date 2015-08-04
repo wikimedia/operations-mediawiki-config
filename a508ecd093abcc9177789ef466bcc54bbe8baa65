@@ -16,6 +16,24 @@
       "revId": "a508ecd093abcc9177789ef466bcc54bbe8baa65",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_7f66a2eb",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15468,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2015-08-04T00:29:21Z",
+      "side": 1,
+      "message": "Uhh. Pretty sure I wanted to set this to false initially.",
+      "parentUuid": "8ec42329_ae7dbe18",
+      "revId": "a508ecd093abcc9177789ef466bcc54bbe8baa65",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
