@@ -34,6 +34,24 @@
       "revId": "41544e4e48178cd9175b2e14bb654fed5f8fd6a3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_88a1c1f6",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 443,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2015-08-05T22:54:41Z",
+      "side": 1,
+      "message": "I don\u0027t think it would, see https://github.com/wikimedia/mediawiki/blob/master/includes/context/RequestContext.php#L134-L136\n\nMaybe use a BetaMediaWiki prefix? That\u0027s distinctive enough and doesn\u0027t force you to read through a list of several hundred project names. I imagine this would what developers looking at graphite on labmon1001 would most frequently be after, and beta-cluster is not easily guessable (it could be under deployment-prep, or mediawiki, or who knows what) and forces you to read through the list while anything that starts with a capital letter gets to the top of the list and stands out.",
+      "parentUuid": "8ec42329_666fe7f9",
+      "revId": "41544e4e48178cd9175b2e14bb654fed5f8fd6a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
