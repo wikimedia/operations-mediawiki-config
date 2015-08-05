@@ -14479,7 +14479,9 @@ $wgConf->settings = array(
 	// Explicit wiki settings override tags
 	'default' => true,
 	'betawikiversity' => false, # T107904
+	'dewikivoyage' => false, # T107846
 	'enwikiversity' => false, # T107846
+	'fawikibooks' => false, # T107846
 	'jawikiversity' => false,
 	'ptwikibooks' => false, # T107879
 	'private' => false,
