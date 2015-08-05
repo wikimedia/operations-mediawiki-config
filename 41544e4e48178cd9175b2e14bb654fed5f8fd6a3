@@ -16,6 +16,24 @@
       "revId": "41544e4e48178cd9175b2e14bb654fed5f8fd6a3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_666fe7f9",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 443,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-08-05T22:33:25Z",
+      "side": 1,
+      "message": "The MediaWiki prefix would still exist. This would just keep our stuff separate from any other MW install that happened to point at labmon1001.eqiad.wmnet. Stats would become beta-cluster.MediaWiki.foo.bar.baz. If we don\u0027t do that then the data *might* get pollution from other traffic sources that can hit that server (all of Labs)",
+      "parentUuid": "8ec42329_cb6ca607",
+      "revId": "41544e4e48178cd9175b2e14bb654fed5f8fd6a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
