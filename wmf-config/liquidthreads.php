@@ -14,6 +14,7 @@ if ( $wmgLiquidThreadsFrozen ) {
 	$wgLiquidThreadsAllowUserControl = false;
 	$wgLiquidThreadsAllowUserControlNamespaces = array();
 	$wgLiquidThreadsAllowEmbedding = false;
+	$wgLiquidThreadsEnableNewMessages = false;
 } else {
 	if ( $wmgLiquidThreadsOptIn ) {
 		$wgLqtTalkPages = false;
