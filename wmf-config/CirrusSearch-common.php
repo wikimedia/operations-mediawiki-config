@@ -24,6 +24,9 @@ if ( $wmgUseClusterJobqueue ) {
 }
 
 
+# Enable user testing
+$wgCirrusSearchUserTesting = $wmgCirrusSearchUserTesting;
+
 # Turn off leading wildcard matches, they are a very slow and inefficient query
 $wgCirrusSearchAllowLeadingWildcard = false;
 
