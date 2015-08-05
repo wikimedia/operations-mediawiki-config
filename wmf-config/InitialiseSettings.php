@@ -4368,6 +4368,7 @@ $wgConf->settings = array(
 		'CirrusSearchChangeFailed' => 'debug',
 		'CirrusSearchRequests' => array( 'logstash' => false ),
 		'CirrusSearchSlowRequests' => 'debug',
+		'CirrusSearchUserTesting' => array( 'logstash' => false ),
 		'texvc' => 'debug',
 		'recursion-guard' => 'debug',
 		'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
