@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_cb6ca607",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 443,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2015-08-05T21:06:24Z",
+      "side": 1,
+      "message": "Why not keep the default \u0027MediaWiki\u0027 prefix? Nothing else seems to use it, and it would make the metrics easier to find (uppercase means top of the list) instead of going through a sea of ganglia stats.",
+      "revId": "41544e4e48178cd9175b2e14bb654fed5f8fd6a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
