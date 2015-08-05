@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ec42329_af3e0d84",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 150,
+      "author": {
+        "id": 2387
+      },
+      "writtenOn": "2015-08-05T08:37:25Z",
+      "side": 1,
+      "message": "These should also be excluded: 250/252 (Page/Index), 90/92 (Thread/Summary)",
+      "revId": "f4bef18a480320fecccad9f69b1c3901081a9896",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ec42329_2f4a1d28",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 2387
+      },
+      "writtenOn": "2015-08-05T08:37:25Z",
+      "side": 1,
+      "message": "By the way 828 (Module) should be accepted",
+      "revId": "f4bef18a480320fecccad9f69b1c3901081a9896",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
