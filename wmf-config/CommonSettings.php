@@ -438,6 +438,9 @@ if ( $wmgUseClusterSquid ) {
 
 if ( $wmfRealm === 'production' ) {
 	$wgStatsdServer = 'statsd.eqiad.wmnet';
+} elseif ( $wmfRealm === 'labs' ) {
+	$wgStatsdServer = 'labmon1001.eqiad.wmnet';
+	$wgStatsdMetricPrefix = 'BetaMediaWiki';
 }
 
 // CORS (cross-domain AJAX, T22814)
