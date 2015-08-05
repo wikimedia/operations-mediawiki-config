@@ -4368,6 +4368,7 @@ $wgConf->settings = array(
 		'CirrusSearchChangeFailed' => 'debug',
 		'CirrusSearchRequests' => array( 'logstash' => false ),
 		'CirrusSearchSlowRequests' => 'debug',
+		'CirrusSearchUserTesting' => array( 'logstash' => false ),
 		'texvc' => 'debug',
 		'recursion-guard' => 'debug',
 		'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
@@ -15222,6 +15223,36 @@ $wgConf->settings = array(
 // Enable the "Give us feedback" link after search results on enwiki
 'wmgCirrusSearchFeedbackLink' => array(
 	'default' => false,
+),
+
+'wmfCirrusSearchUserTesting' => array(
+	'default' => array(
+		'suggest-confidence' => array(
+			'sampleRate' => 10,
+			'buckets' => array(
+				// control bucket, retain defaults
+				'a' => array(),
+				// test bucket, alternative suggestions
+				'b' => array(
+					'wgCirrusSearchPhraseSuggestSettings' => array(
+				        'mode' => 'always',
+				        'confidence' => 1.0,
+				        'max_errors' => 2,
+				        'real_word_error_likelihood' => 0.95,
+				        'max_term_freq' => 0.5,
+				        'min_doc_freq' => 0.0,
+				        'collate' => false,
+				        'collate_minimum_should_match' => '3<66%',
+				        'smoothing_model' => array(
+				            'laplace' => array(
+				                'alpha' => 0.3,
+				            ),
+				        ),
+					),
+				),
+			),
+		),
+	),
 ),
 
 'wmgUseCite' => array(
