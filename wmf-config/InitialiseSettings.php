@@ -15267,6 +15267,7 @@ $wgConf->settings = array(
 				        'min_doc_freq' => 0.0,
 				        'collate' => false,
 				        'collate_minimum_should_match' => '3<66%',
+						'prefix_length' => 2,
 				        'smoothing_model' => array(
 				            'laplace' => array(
 				                'alpha' => 0.3,
