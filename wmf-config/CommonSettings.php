@@ -1194,7 +1194,6 @@ if ( $wmgUseCentralAuth ) {
 			'test.wikimedia.beta.wmflabs.org' => 'testwiki',
 			'commons.wikimedia.beta.wmflabs.org' => 'commonswiki',
 			$wmfHostnames['wikidata'] => 'wikidatawiki',
-			'ee-prototype.wikipedia.beta.wmflabs.org' => 'ee_prototypewiki',
 		);
 		$wgCentralAuthLoginWiki = 'loginwiki';
 		break;
