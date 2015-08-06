@@ -59,7 +59,6 @@ function wmfLabsSettings() {
 
 		'wgSitename' => array(
 			'deploymentwiki' => 'Deployment',
-			'ee_prototypewiki' => 'Editor Engagement Prototype',
 			'wikivoyage'    => 'Wikivoyage',
 		),
 
@@ -75,7 +74,6 @@ function wmfLabsSettings() {
 
 			'commonswiki'   => 'http://commons.wikimedia.$variant.wmflabs.org',
 			'deploymentwiki'      => 'http://deployment.wikimedia.$variant.wmflabs.org',
-			'ee_prototypewiki' => 'http://ee-prototype.wikipedia.$variant.wmflabs.org',
 			'loginwiki'     => 'http://login.wikimedia.$variant.wmflabs.org',
 			'metawiki'      => 'http://meta.wikimedia.$variant.wmflabs.org',
 			'testwiki'      => 'http://test.wikimedia.$variant.wmflabs.org',
@@ -95,7 +93,6 @@ function wmfLabsSettings() {
 			'wikivoyage'    => 'http://$lang.wikivoyage.$variant.wmflabs.org',
 
 			'metawiki'      => 'http://meta.wikimedia.$variant.wmflabs.org',
-			'ee_prototypewiki' => 'http://ee-prototype.wikipedia.$variant.wmflabs.org',
 			'commonswiki'	=> 'http://commons.wikimedia.$variant.wmflabs.org',
 			'deploymentwiki'      => 'http://deployment.wikimedia.$variant.wmflabs.org',
 			'loginwiki'     => 'http://login.wikimedia.$variant.wmflabs.org',
@@ -874,7 +871,6 @@ function wmfLabsSettings() {
 
 		'wmgULSPosition' => array(
 			# Beta-specific
-			'ee-prototype' => 'personal',
 			'deploymentwiki' => 'personal',
 		),
 
