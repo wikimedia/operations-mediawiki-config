@@ -15545,6 +15545,7 @@ $wgConf->settings = array(
 
 'wmgLogAuthmanagerMetrics' => array(
 	'default' => false,
+	'group0' => true,
 ),
 
 );
