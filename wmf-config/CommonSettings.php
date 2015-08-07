@@ -1268,7 +1268,10 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthStrict = true;
 
 	// Create some local accounts as soon as the global registration happens
-	$wgCentralAuthAutoCreateWikis = array( 'loginwiki', 'metawiki', 'mediawikiwiki' );
+	$wgCentralAuthAutoCreateWikis = array( 'loginwiki', 'metawiki' );
+	if ( $wmfRealm === 'production' ) {
+		$wgCentralAuthAutoCreateWikis[] = 'mediawikiwiki';
+	}
 }
 
 // Config for GlobalCssJs
