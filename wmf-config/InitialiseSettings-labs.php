@@ -1028,6 +1028,13 @@ function wmfLabsSettings() {
 		'wmgUseGather' => array(
 			'default' => true,
 		),
+		'wmgUseWPB' => array(
+			'default' => false,
+			'enwiki' => true,
+		),
+		'wmgWPBBannerProperty' => array(
+			'default' => 'P751',
+		),
 		'wmgUseGuidedTour' => array(
 			'wikidatawiki' => true,
 		),
