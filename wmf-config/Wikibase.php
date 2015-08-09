@@ -96,6 +96,8 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
 	$wgWBRepoSettings['sharedCacheKeyPrefix'] .= $wgWBSharedCacheKey;
 
+	$wgWBRepoSettings['dispatchBatchChunkFactor'] = 10; // Temp to reduce the dispatch lag - Hoo
+
 	$wgPropertySuggesterMinProbability = 0.069;
 
 	// T72346
