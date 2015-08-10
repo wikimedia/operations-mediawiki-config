@@ -290,7 +290,7 @@ class MWMultiVersion {
 			self::error( "Unable to open $phpFilename.\n" );
 		}
 
-		$version = isset( $wikiversions[$dbName] ) ? $wikiversions[$dbName] : false;
+		$version = isset( $wikiversions[$this->db] ) ? $wikiversions[$this->db] : false;
 
 		if ( $version && strpos( $version, 'php-' ) !== 0 ) {
 			self::error( "$phpFilename version entry does not start with `php-` (got `$version`).\n" );
