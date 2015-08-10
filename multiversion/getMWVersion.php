@@ -5,9 +5,6 @@ require_once( __DIR__ . '/defines.php' );
 require_once( __DIR__ . '/MWRealm.php' );
 require_once( __DIR__ . '/vendor/autoload.php' );
 
-use Cdb\Exception as CdbException;
-use Cdb\Reader as CdbReader;
-
 /**
  * This script prints the MW version associated with a specified wikidb.
  */
@@ -21,22 +18,17 @@ if ( count( $argv ) < 2 ) {
  * @return string MW code version (e.g. "php-x.xx" or "php-trunk")
  */
 function getWikiVersion( $dbName ) {
-	$cdbFilename = getRealmSpecificFilename(
-		MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.cdb'
+	$phpFilename = getRealmSpecificFilename(
+		MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.php'
 	);
-	try {
-		$db = CdbReader::open( $cdbFilename );
-	} catch ( CdbException $e ) {}
-
-	if ( $db ) {
-		$version = $db->get( "ver:$dbName" );
-		$db->close();
-		if ( $version !== false ) {
-			return $version; // found version entry
-		}
+	$wikiversions = include( $phpFilename );
+	if ( !is_array( $wikiversions ) ) {
+		print "Unable to open $phpFilename.\n";
+		exit( 1 );
+	}
+	if ( empty( $wikiversions[$dbName] ) ) {
 		print "$cdbFilename has no version entry for `$dbName`.\n";
 		exit( 1 );
 	}
-	print "Unable to open $cdbFilename.\n";
-	exit( 1 );
+	return $wikiversions[$dbName];
 }

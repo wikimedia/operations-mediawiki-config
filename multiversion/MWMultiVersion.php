@@ -3,9 +3,6 @@ require_once( __DIR__ . '/defines.php' );
 require_once( __DIR__ . '/MWRealm.php' );
 require_once( __DIR__ . '/vendor/autoload.php' );
 
-use Cdb\Exception as CdbException;
-use Cdb\Reader as CdbReader;
-
 /**
  * Class to handle basic information related to what
  * version of MediaWiki is running on a wiki installation.
@@ -284,22 +281,19 @@ class MWMultiVersion {
 		}
 		$this->versionLoaded = true;
 
-		$cdbFilename = getRealmSpecificFilename(
-			MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.cdb'
+		$phpFilename = getRealmSpecificFilename(
+			MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.php'
 		);
+		$wikiversions = include( $phpFilename );
 
-		try {
-			$db = CdbReader::open( $cdbFilename );
-		} catch( CdbException $e ) {}
+		if ( !is_array( $wikiversions ) ) {
+			self::error( "Unable to open $phpFilename.\n" );
+		}
 
-		if ( $db ) {
-			$version = $db->get( "ver:{$this->db}" );
-			if ( $version !== false && strpos( $version, 'php-' ) !== 0 ) {
-				self::error( "$cdbFilename version entry does not start with `php-` (got `$version`).\n" );
-			}
-			$db->close();
-		} else {
-			self::error( "Unable to open $cdbFilename.\n" );
+		$version = isset( $wikiversions[$dbName] ) ? $wikiversions[$dbName] : false;
+
+		if ( $version && strpos( $version, 'php-' ) !== 0 ) {
+			self::error( "$phpFilename version entry does not start with `php-` (got `$version`).\n" );
 		}
 
 		$this->version = $version;
@@ -310,17 +304,17 @@ class MWMultiVersion {
 	 * @return bool
 	 */
 	private function assertNotMissing() {
-		$cdbFilename = getRealmSpecificFilename(
-			MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.cdb'
+		$phpFilename = getRealmSpecificFilename(
+			MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.php'
 		);
 		if ( $this->isMissing() ) {
-			self::error( "$cdbFilename has no version entry for `{$this->db}`.\n" );
+			self::error( "$phpFilename has no version entry for `{$this->db}`.\n" );
 		}
 	}
 
 	/**
-	 * Check if this wiki is *not* specified in a cdb file
-	 * located at /srv/mediawiki/wikiversions.cdb.
+	 * Check if this wiki is *not* specified in a php file
+	 * located at /srv/mediawiki/wikiversions.php.
 	 * @return bool
 	 */
 	public function isMissing() {
@@ -329,8 +323,8 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Get the version as specified in a cdb file located
-	 * at /srv/mediawiki/wikiversions.cdb.
+	 * Get the version as specified in a php file located
+	 * at /srv/mediawiki/wikiversions.php.
 	 * Result is of the form "php-X.XX" or "php-trunk".
 	 * @return String the version directory for this wiki
 	 */
@@ -341,8 +335,8 @@ class MWMultiVersion {
 	}
 
 	/**
-	 * Get the version number as specified in a cdb file located
-	 * at /srv/mediawiki/wikiversions.cdb. Do not use this
+	 * Get the version number as specified in a php file located
+	 * at /srv/mediawiki/wikiversions.php. Do not use this
 	 * to determine the path to cache or binary files, only the core MW code.
 	 * @return String the version number for this wiki (e.g. "x.xx" or "trunk")
 	 */
