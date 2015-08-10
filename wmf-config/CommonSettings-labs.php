@@ -243,6 +243,10 @@ if ( $wmgUseCapiunto ) {
 	require_once "$IP/extensions/Capiunto/Capiunto.php";
 }
 
+if ( $wmgUseParsoidBatchAPI ) {
+	wfLoadExtension( 'ParsoidBatchAPI' );
+}
+
 // Experimental
 $wgGadgetsCaching = false;
 
