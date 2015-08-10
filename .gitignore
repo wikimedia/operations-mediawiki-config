@@ -13,7 +13,9 @@ mwblocker.log
 wmf-config/ExtensionMessages-*.php
 php-*/
 wikiversions.cdb
+wikiversions.php
 wikiversions-labs.cdb
+wikiversions-labs.php
 wmf-config/*-setup.php
 wmf-config/checkers.php
 wmf-config/interwiki.cdb
