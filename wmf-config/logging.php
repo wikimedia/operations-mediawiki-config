@@ -11,7 +11,7 @@
  *   - channel => false  == ignore all log events on this channel
  *   - channel => level  == record all events of this level or higher
  *   - channel => array( 'level'=>level, 'logstash'=>level, 'sample'=>rate )
- *   Defaults: array( 'level'=>'debug', 'logstash'=>'debug', 'sample'=>false )
+ *   Defaults: array( 'level'=>'debug', 'logstash'=>'info', 'sample'=>false )
  *   Valid levels: 'debug', 'info', 'warning', 'error'
  *   Note: sampled logs will not be sent to Logstash
  *   Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}
@@ -112,7 +112,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	$opts = array_merge(
 		array(
 			'level' => 'debug',
-			'logstash' => isset( $opts['level'] ) ?  $opts['level'] : 'debug',
+			'logstash' => ( isset( $opts['level'] ) && $opts['level'] !== 'debug' ) ? $opts['level'] : 'info',
 			'sample' => false,
 		),
 		$opts

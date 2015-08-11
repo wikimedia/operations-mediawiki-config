@@ -4286,7 +4286,7 @@ $wgConf->settings = array(
 //   channel => false  == ignore all log events on this channel
 //   channel => level  == record all events of this level or higher
 //   channel => array( 'level'=>level, 'logstash'=>level, 'sample'=>rate )
-// Defaults: array( 'level'=>'debug', 'logstash'=>'debug', 'sample'=>false )
+// Defaults: array( 'level'=>'debug', 'logstash'=>'info', 'sample'=>false )
 // Valid levels: 'debug', 'info', 'warning', 'error'
 // Note: sampled logs will not be sent to Logstash
 // Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}
@@ -4309,7 +4309,7 @@ $wgConf->settings = array(
 		'OutputBuffer' => 'debug',
 		'exec' => 'debug',
 		'ratelimit' => 'debug',
-		'runJobs' => array( 'level' => 'debug', 'logstash' => 'info' ),
+		'runJobs' => 'debug',
 		'JobQueueRedis' => 'debug',
 		'JobQueueFederated' => 'debug',
 		'es-hit' => 'debug',
@@ -4361,7 +4361,7 @@ $wgConf->settings = array(
 		'BounceHandler' => 'debug',
 		'Echo' => 'debug',
 		'collection' => 'debug', // -cscott for T73675
-		'GlobalTitleFail' => array( 'sample' => 10000, 'logstash' => false ), // chad hates $wgTitle
+		'GlobalTitleFail' => array( 'sample' => 10000 ), // chad hates $wgTitle
 		'FSFileBackend' => 'debug', // - gilles for T75229
 		'OAuth' => 'debug',
 		'xenon' => 'debug',
