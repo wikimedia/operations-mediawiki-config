@@ -9449,7 +9449,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller' ), // T30479
 	),
 	'+ptwiki' => array(
-		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface-editor', 'accountcreator' ), // T41905, T65750
+		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface-editor', 'accountcreator', 'bureaucrat', 'sysop' ), // T41905, T65750, T107661
 		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ), // T65750
 	),
 	'+ptwikinews' => array(
