@@ -15332,20 +15332,20 @@ $wgConf->settings = array(
 				// test bucket, alternative suggestions
 				'b' => array(
 					'wgCirrusSearchPhraseSuggestSettings' => array(
-				        'mode' => 'always',
-				        'confidence' => 1.0,
-				        'max_errors' => 2,
-				        'real_word_error_likelihood' => 0.95,
-				        'max_term_freq' => 0.5,
-				        'min_doc_freq' => 0.0,
-				        'collate' => false,
-				        'collate_minimum_should_match' => '3<66%',
+						'mode' => 'always',
+						'confidence' => 1.0,
+						'max_errors' => 2,
+						'real_word_error_likelihood' => 0.95,
+						'max_term_freq' => 0.5,
+						'min_doc_freq' => 0.0,
+						'collate' => false,
+						'collate_minimum_should_match' => '3<66%',
 						'prefix_length' => 2,
-				        'smoothing_model' => array(
-				            'laplace' => array(
-				                'alpha' => 0.3,
-				            ),
-				        ),
+						'smoothing_model' => array(
+							'laplace' => array(
+								'alpha' => 0.3,
+							),
+						),
 					),
 				),
 			),
