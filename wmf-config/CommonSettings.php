@@ -2929,6 +2929,11 @@ if ( $wmgUseJosa ) {
 	require_once( "$IP/extensions/Josa/Josa.php" );
 }
 
+if ( $wmgUseParsoidBatchAPI ) {
+	wfLoadExtension( 'ParsoidBatchAPI' );
+}
+
+
 ### End (roughly) of general extensions ########################
 
 $wgApplyIpBlocksToXff = $wmgUseXFFBlocks;

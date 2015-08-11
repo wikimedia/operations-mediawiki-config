@@ -1119,9 +1119,5 @@ function wmfLabsSettings() {
 		'wmgLogAuthmanagerMetrics' => array(
 			'default' => true,
 		),
-
-		'wmgUseParsoidBatchAPI' => array(
-			'default' => true,
-		),
 	);
 } # wmflLabsSettings()

@@ -15549,6 +15549,10 @@ $wgConf->settings = array(
 	'group0' => true,
 ),
 
+'wmgUseParsoidBatchAPI' => array(
+	'default' => true,
+),
+
 );
 
 
