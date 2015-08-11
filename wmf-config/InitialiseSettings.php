@@ -10144,6 +10144,9 @@ $wgConf->settings = array(
 		118 => 'noindex,nofollow', // Draft - T86329
 		119 => 'noindex,nofollow',
 	),
+	'itwiki' => array(
+		NS_USER => 'noindex,follow', // T107992
+	),
 	'kowiki' => array(
 		118 => 'noindex,nofollow', //Draft - T92798
 		119 => 'noindex,nofollow', //T92798
