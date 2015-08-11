@@ -15558,6 +15558,11 @@ $wgConf->settings = array(
 	'default' => false,
 	'enwikivoyage' => 'P948',
 ),
+
+'wmgUseParsoidBatchAPI' => array(
+	'default' => true,
+),
+
 );
 
 

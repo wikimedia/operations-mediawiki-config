@@ -87,6 +87,7 @@ $IP/extensions/PagedTiffHandler/PagedTiffHandler.php
 $IP/extensions/PageImages/PageImages.php
 $IP/extensions/PageTriage/PageTriage.php
 $IP/extensions/ParserFunctions/ParserFunctions.php
+$IP/extensions/ParsoidBatchAPI/extension.json
 $IP/extensions/PdfHandler/PdfHandler.php
 $IP/extensions/Petition/Petition.php
 $IP/extensions/Poem/Poem.php
