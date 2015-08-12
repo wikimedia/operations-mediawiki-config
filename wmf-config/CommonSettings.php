@@ -2393,6 +2393,7 @@ if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_P
 $wgVaryOnXFPForAPI = $wgVaryOnXFP = true;
 
 $wgCookieExpiration = 30 * 86400;
+$wgExtendedLoginCookieExpiration = 365 * 86400;
 
 if ( $wmgUseMath ) {
 	wfLoadExtension ( "Math" );
