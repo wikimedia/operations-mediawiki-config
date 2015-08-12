@@ -9986,6 +9986,10 @@ $wgConf->settings = array(
 # SVG related @{
 'wgSVGConverter' => array(
 	'default' => 'rsvg-secure',
+
+	// silver runs PHP 5.5 (not HHVM) on trusty, and therefore has the security
+	// patch by default (and no --no-external-files) so rsvg-secure is broken
+	'labswiki' => 'rsvg-wikitech',
 ),
 'wgSVGConverterPath' => array(
 	'default' => '/usr/bin',
