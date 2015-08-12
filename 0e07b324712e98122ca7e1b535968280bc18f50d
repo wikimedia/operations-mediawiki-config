@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6ec1af18_2ba5f100",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1198,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2015-08-12T21:40:11Z",
+      "side": 1,
+      "message": "The interwiki map uses \"chapter\", so that is what we have to use here. See the comment near the top of this function.",
+      "parentUuid": "6ec1af18_31bd6c17",
+      "revId": "0e07b324712e98122ca7e1b535968280bc18f50d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6ec1af18_71477423",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2015-08-12T14:05:06Z",
       "side": 1,
       "message": "What?",
+      "revId": "0e07b324712e98122ca7e1b535968280bc18f50d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_4bbddd15",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1203,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2015-08-12T21:40:11Z",
+      "side": 1,
+      "message": "The comment\u0027s a little bit misleading. Sites like meta, commons, etc identify as \"wikipedia\" even though they are not. We only want to put real Wikipedias under \"wikipedia\". Other sites are listed manually, with the appropriate interwiki prefix. (Given how unpredictable interwiki prefixes are, this is mostly unavoidable.)\n\nI\u0027ll change the comment to \"Remove fake Wikipedias\" or something like that.",
+      "parentUuid": "6ec1af18_71477423",
       "revId": "0e07b324712e98122ca7e1b535968280bc18f50d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
