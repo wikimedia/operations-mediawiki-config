@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_fa00196f",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3016,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-08-12T18:56:55Z",
+      "side": 1,
+      "message": "use wfLoadExtension() directly",
+      "revId": "153a7c6a4fb7b3386c2dd770859e64be4b7fee03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_1a06458a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15630,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-08-12T18:56:55Z",
+      "side": 1,
+      "message": "This can just be \u0027wgWPBBannerProperty\u0027, with extension registration you don\u0027t need the silly $wg \u003d $wmg hack anymore.",
+      "revId": "153a7c6a4fb7b3386c2dd770859e64be4b7fee03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_daff5d61",
+        "filename": "wmf-config/extension-list",
+        "patchSetId": 1
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-08-12T18:56:55Z",
+      "side": 1,
+      "message": "extension.json here",
+      "revId": "153a7c6a4fb7b3386c2dd770859e64be4b7fee03",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
