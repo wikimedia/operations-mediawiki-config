@@ -1736,6 +1736,7 @@ $wgConf->settings = array(
 	'mnwiki' => 'Википедиа',
 	'mrjwiki' => 'Википеди',
 	'mrwiki' => 'विकिपीडिया',
+	'mrwikibooks' => 'विकिबुक्स', // T104132
 	'mrwikisource' => 'विकिस्रोत',
 	'mtwiki' => 'Wikipedija',
 	'mtwiktionary' => 'Wikizzjunarju',
