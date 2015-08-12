@@ -120,11 +120,11 @@ if ( array_search( $wgDBname, $wgLocalDatabases ) === false ) {
 # Determine domain and language and the directories for this instance
 list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 
-$wmfVersionNumber = $multiVersion->getVersionNumber();
+$wmgVersionNumber = $multiVersion->getVersionNumber();
 
 # Try configuration cache
 
-$filename = "/tmp/mw-cache-$wmfVersionNumber/conf-$wgDBname";
+$filename = "/tmp/mw-cache-$wmgVersionNumber/conf-$wgDBname";
 if ( defined( 'HHVM_VERSION' ) ) {
 	$filename .= '-hhvm';
 }
@@ -163,8 +163,8 @@ if ( !$globals ) {
 		), $wikiTags );
 
 	# Save cache
-	@mkdir( '/tmp/mw-cache-' . $wmfVersionNumber );
-	$tmpFile = tempnam( '/tmp/', "conf-$wmfVersionNumber-$wgDBname" );
+	@mkdir( '/tmp/mw-cache-' . $wmgVersionNumber );
+	$tmpFile = tempnam( '/tmp/', "conf-$wmgVersionNumber-$wgDBname" );
 	if ( $tmpFile && file_put_contents( $tmpFile, serialize( $globals ) ) ) {
 		rename( $tmpFile, $filename );
 	}
@@ -202,15 +202,15 @@ unset( $wgStylePath );
 unset( $wgStyleSheetPath );
 
 $wgLoadScript = "{$wgCanonicalServer}/w/load.php";
-$wgExtensionAssetsPath = "{$wgCanonicalServer}/static/{$wmfVersionNumber}/extensions";
-$wgStyleSheetPath = "{$wgCanonicalServer}/static/{$wmfVersionNumber}/skins";
-$wgResourceBasePath = "{$wgCanonicalServer}/static/{$wmfVersionNumber}";
+$wgExtensionAssetsPath = "{$wgCanonicalServer}/static/{$wmgVersionNumber}/extensions";
+$wgStyleSheetPath = "{$wgCanonicalServer}/static/{$wmgVersionNumber}/skins";
+$wgResourceBasePath = "{$wgCanonicalServer}/static/{$wmgVersionNumber}";
 
 $wgStylePath = $wgStyleSheetPath;
 $wgArticlePath = "/wiki/$1";
 
 $wgScriptPath  = '/w';
-$wgLocalStylePath = "$wgScriptPath/static/$wmfVersionNumber/skins";
+$wgLocalStylePath = "$wgScriptPath/static/$wmgVersionNumber/skins";
 $wgScript           = $wgScriptPath . '/index.php';
 $wgRedirectScript	= $wgScriptPath . '/redirect.php';
 $wgInternalServer = $wgCanonicalServer;
@@ -219,7 +219,7 @@ if ( gethostname() === 'osmium' ) {
 	$wgResourceLoaderStorageEnabled = false;
 }
 
-$wgCacheDirectory = '/tmp/mw-cache-' . $wmfVersionNumber;
+$wgCacheDirectory = '/tmp/mw-cache-' . $wmgVersionNumber;
 $wgGitInfoCacheDirectory = "$IP/cache/gitinfo";
 
 // @var string|bool: E-mail address to send notifications to, or false to disable notifications.
@@ -1664,7 +1664,7 @@ if ( $wmgUserDailyContribs ) {
 
 if ( $wmgUseLocalisationUpdate ) {
 	require_once( "$IP/extensions/LocalisationUpdate/LocalisationUpdate.php" );
-	$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/caches/cache-$wmfVersionNumber";
+	$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/caches/cache-$wmgVersionNumber";
 	$wgLocalisationUpdateRepository = 'local';
 	$wgLocalisationUpdateRepositories['local'] = array(
 		'mediawiki' => '/var/lib/l10nupdate/mediawiki/core/%PATH%',
@@ -3012,7 +3012,7 @@ $wgImgAuthDetails = true;
 // Enable gather-hidelist for global user groups - JRA 4-1-2015 T94652
 $wgAvailableRights[] = 'gather-hidelist';
 
-if ( file_exists( "$wmfConfigDir/extension-list-$wmfVersionNumber" ) ) {
+if ( file_exists( "$wmfConfigDir/extension-list-$wmgVersionNumber" ) ) {
 	// Version specific extension-list files
 	//
 	// If a new extension is added only in one MediaWiki version,
@@ -3025,11 +3025,11 @@ if ( file_exists( "$wmfConfigDir/extension-list-$wmfVersionNumber" ) ) {
 	// be created if it needs to cover multiple versions.
 	// This file can then be deleted once this version of MediaWiki isn't in
 	// production usage.
-	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-$wmfVersionNumber";
+	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-$wmgVersionNumber";
 }
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
 
-require( "$wmfConfigDir/ExtensionMessages-$wmfVersionNumber.php" );
+require( "$wmfConfigDir/ExtensionMessages-$wmgVersionNumber.php" );
