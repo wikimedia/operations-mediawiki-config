@@ -132,6 +132,7 @@ $IP/extensions/UserMerge/UserMerge.php
 $IP/extensions/VipsScaler/VipsScaler.php
 $IP/extensions/VipsScaler/VipsTest.php
 $IP/extensions/VisualEditor/VisualEditor.php
+$IP/extensions/WikidataPageBanner/WikidataPageBanner.php
 $IP/extensions/WikiEditor/WikiEditor.php
 $IP/extensions/WikiGrok/WikiGrok.php
 $IP/extensions/wikihiero/wikihiero.php
