@@ -3017,7 +3017,12 @@ $wgImgAuthDetails = true;
 // Enable gather-hidelist for global user groups - JRA 4-1-2015 T94652
 $wgAvailableRights[] = 'gather-hidelist';
 
+if ( $wmgUseWPB ) {
+	wfLoadExtension( 'WikidataPageBanner', "$IP/extensions/WikidataPageBanner/extension.json" );
+}
+
 if ( file_exists( "$wmfConfigDir/extension-list-$wmgVersionNumber" ) ) {
+
 	// Version specific extension-list files
 	//
 	// If a new extension is added only in one MediaWiki version,
