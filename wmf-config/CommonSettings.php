@@ -424,6 +424,10 @@ if ( defined( 'HHVM_VERSION' ) ) {
 } else {
 	# This converter will only work when rsvg has a suitable security patch
 	$wgSVGConverters['rsvg-secure'] = '$path/rsvg-convert --no-external-files -w $width -h $height -o $output $input';
+
+	// Special config for wikitech which runs trusty (and therefore the new librsvg2-bin package),
+	// but on PHP 5.5 (not HHVM)
+	$wgSVGConverters['rsvg-wikitech'] = '$path/rsvg-convert -w $width -h $height -o $output $input';
 }
 #######################################################################
 # Squid Configuration
