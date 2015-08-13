@@ -289,38 +289,6 @@ function wmfLabsSettings() {
 			'default' => true,
 			'enwiki' => false,
 		),
-		'wmgMFWikiDataEndpoint' => array(
-			'default' => 'http://wikidata.beta.wmflabs.org/w/api.php',
-		),
-		'wmgWikiBasePropertyConfig' => array(
-			'default' => array(
-				'instanceOf' => 'P694',
-				'bannerImage' => 'P964',
-			),
-		),
-		'wmgMFInfoboxConfig' => array(
-			'default' => array(
-				// human
-				44076 => array(
-					'rows' => array(
-							// Born
-							array( 'id' => 'P476' ),
-							// Birthplace
-							array( 'id' => 'P965' ),
-							// Place of death
-							array( 'id' => 'P994' ),
-							// Country of citizenship
-							array( 'id' => 'P27' ),
-							// Alma mater
-							array( 'id' => 'P998' ),
-					),
-				),
-				'default' => array(
-					'rows' => array(
-					),
-				),
-			),
-		),
 
 		// T97704
 		'wmgGatherAutohideFlagLimit' => array(
