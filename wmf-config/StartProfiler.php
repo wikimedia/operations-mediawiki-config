@@ -72,6 +72,9 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 			return;
 		}
 
+
+		$entryPoint = basename( $_SERVER['SCRIPT_NAME'] );
+
 		// Collate stack samples and fold into single lines.
 		// This is the format expected by FlameGraph.
 		$stacks = array();
@@ -101,6 +104,15 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 			}
 
 			if ( count( $stack ) ) {
+				// The last element is usually (but not always) the full file
+				// path of the script name. We want things nice and consistent,
+				// so we pop off the path if it is there, and push the basename
+				// instead.
+				if ( strpos( end( $stack ), $entryPoint ) !== false ) {
+					array_pop( $stack );
+				}
+				$stack[] = $entryPoint;
+
 				$strStack = implode( ';', array_reverse( $stack ) );
 				if ( !isset( $stacks[$strStack] ) ) {
 					$stacks[$strStack] = 0;
