@@ -13067,17 +13067,6 @@ $wgConf->settings = array(
 'wmgMobileFrontend' => array(
 	'default' => true,
 ),
-'wmgUseWikiGrok' => array(
-	'default' => false,
-	'test2wiki' => true,
-	'testwiki' => true,
-	'testwikidatawiki' => true,
-),
-'wmgWikiGrokRepoMode' => array(
-	'default' => false,
-	'wikidatawiki' => true,
-	'testwikidatawiki' => true,
-),
 'wmgUseGather' => array(
 	'default' => false,
 	'testwiki' => true,
@@ -13265,31 +13254,6 @@ $wgConf->settings = array(
 'wmgMFUploadMinEdits' => array(
 	'default' => 10,
 	'commonswiki' => 75, // T64598
-),
-'wmgWikiGrokUIEnable' => array(
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-),
-'wmgWikiGrokUIEnableForAnons' => array(
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-),
-'wmgWikiGrokUIEnableOnAllDevices' => array(
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-),
-'wmgWikiGrokUIEnableInSidebar' => array(
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-),
-'wmgWikiGrokDebug' => array(
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
 ),
 'wmgMFUseWikibaseDescription' => array(
 	'default' => false,

@@ -289,18 +289,6 @@ function wmfLabsSettings() {
 			'default' => true,
 			'enwiki' => false,
 		),
-		'wmgWikiGrokUIEnable' => array(
-			'default' => false,
-			'enwiki' => true, // prototype version is for en.wiki only
-		),
-		'wmgWikiGrokUIEnableOnAllDevices' => array(
-			'default' => false,
-			'enwiki' => true,
-		),
-		'wmgWikiGrokUIEnableInSidebar' => array(
-			'default' => false,
-			'enwiki' => true,
-		),
 		'wmgMFWikiDataEndpoint' => array(
 			'default' => 'http://wikidata.beta.wmflabs.org/w/api.php',
 		),
@@ -337,10 +325,6 @@ function wmfLabsSettings() {
 		// T97704
 		'wmgGatherAutohideFlagLimit' => array(
 			'default' => 3,
-		),
-
-		'wmgWikiGrokDebug' => array(
-			'default' => true,
 		),
 
 		'wmgMFIsBrowseEnabled' => array(
