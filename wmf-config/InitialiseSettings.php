@@ -15590,6 +15590,14 @@ $wgConf->settings = array(
 	'group0' => true,
 ),
 
+// Wikivoyage banners extension (T98029)
+'wmgUseWPB' => array(
+	'default' => false,
+	'enwikivoyage' => true,
+),
+'wgWPBBannerProperty' => array(
+	'default' => false,
+),
 );
 
 
