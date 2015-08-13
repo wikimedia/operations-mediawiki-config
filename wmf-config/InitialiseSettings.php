@@ -12754,7 +12754,7 @@ $wgConf->settings = array(
 // 1 => 100% of new accounts; 2 => 50%; 10 => 10%; 20 => 5%; etc.
 'wmgVisualEditorNewAccountEnableProportion' => array(
 	'default' => false,
-	'enwiki' => 2,
+	'enwiki' => 1,
 ),
 
 // Whether VisualEditor should be enabled for new auto-created accounts on a
