@@ -304,12 +304,6 @@ function wmfLabsSettings() {
 		'wmgMFWikiDataEndpoint' => array(
 			'default' => 'http://wikidata.beta.wmflabs.org/w/api.php',
 		),
-		'wmgWikiBasePropertyConfig' => array(
-			'default' => array(
-				'instanceOf' => 'P694',
-				'bannerImage' => 'P964',
-			),
-		),
 		'wmgMFInfoboxConfig' => array(
 			'default' => array(
 				// human
