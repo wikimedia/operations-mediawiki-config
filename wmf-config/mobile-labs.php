@@ -23,10 +23,6 @@ $wgMFForceSecureLogin = false;
 $wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
 $wgMFSpecialCaseMainPage = $wmgMFSpecialCaseMainPage;
 
-$wgMFWikiDataEndpoint = $wmgMFWikiDataEndpoint;
-$wgWikiBasePropertyConfig = $wmgWikiBasePropertyConfig;
-$wgMFInfoboxConfig = $wmgMFInfoboxConfig;
-
 $wgGatherAutohideFlagLimit = $wmgGatherAutohideFlagLimit;
 $wgMFIsBrowseEnabled = $wmgMFIsBrowseEnabled;
 $wgMFBrowseTags = $wmgMFBrowseTags;
