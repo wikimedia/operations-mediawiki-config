@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_8ef2eedd",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3021,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-08-13T16:27:54Z",
+      "side": 1,
+      "message": "The second argument isn\u0027t needed, just a plain `wfLoadExtension( \u0027WikidataPageBanner\u0027 )` is fine.",
+      "revId": "6a9849bce9084165d6c4078beb2814ec453657d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
