@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_cbe1b198",
+        "filename": "multiversion/MWMultiVersion.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 227,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2015-08-17T04:29:22Z",
+      "side": 1,
+      "message": "It\u0027d be even clearer with an example",
+      "revId": "e1d635c43f282d3951d1c84f05a844b129bfcd57",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
