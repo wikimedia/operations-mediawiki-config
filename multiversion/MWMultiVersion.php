@@ -220,10 +220,11 @@ class MWMultiVersion {
 			$dbname = substr( $argv[1], 7 ); // "script.php --wiki=dbname"
 		} elseif ( isset( $argv[1] ) && substr( $argv[1], 0, 2 ) !== '--' ) {
 			$dbname = $argv[1]; // "script.php dbname"
+			$argv[1] = '--wiki=' . $dbname;
 		}
 
 		if ( $dbname === '' ) {
-			self::error( "--wiki must be the first parameter.\n" );
+			self::error( "--wiki must be the second parameter.\n" );
 		}
 
 		$this->db = $dbname;
