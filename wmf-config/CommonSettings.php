@@ -1696,21 +1696,8 @@ if ( $wmgEnableFundraiserLandingPage ) {
 	require_once( "$IP/extensions/FundraiserLandingPage/FundraiserLandingPage.php" );
 }
 
-if ( $wmgUseLiquidThreads ) {
+if ( $wmgUseLiquidThreads || $wmgLiquidThreadsFrozen ) {
 	require_once( "$wmfConfigDir/liquidthreads.php" );
-} elseif ( $wmgLiquidThreadsBackfill ) {
-	// Preserve access to LQT edits after removing the extension
-	define( 'NS_LQT_THREAD', 90 );
-	define( 'NS_LQT_THREAD_TALK', 91 );
-	define( 'NS_LQT_SUMMARY', 92 );
-	define( 'NS_LQT_SUMMARY_TALK', 93 );
-	$wgExtensionMessagesFiles['LiquidThreadsNamespaces'] = __DIR__ . '/liquidthreads.namespaces.php';
-	$wgHooks['CanonicalNamespaces'][] = function ( &$list ) {
-		$list[NS_LQT_THREAD] = "Thread";
-		$list[NS_LQT_THREAD_TALK] = "Thread_talk";
-		$list[NS_LQT_SUMMARY] = "Summary";
-		$list[NS_LQT_SUMMARY_TALK] = "Summary_talk";
-	};
 }
 
 if ( $wmgDonationInterface ) {

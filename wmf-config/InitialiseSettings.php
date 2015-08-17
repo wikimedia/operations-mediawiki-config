@@ -11447,8 +11447,7 @@ $wgConf->settings = array(
 'wmgUseLiquidThreads' => array(
 //
 //  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//  Needs schema changes before it can be enabled. Ask Andrew for details
-//  Better, don't add wikis here unless you are Andrew or he knows what you are doing.
+//  Do not enable this on new wikis.
 //  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //
 	'default' => false,
@@ -11457,7 +11456,6 @@ $wgConf->settings = array(
 	'enwiktionary' => true, // T25417 -- ariel 2010-16-05
 	'fiwikimedia' => true, // T39778
 	'huwiki' => true, // T24909 -- Andrew 2010-09-06
-	'mediawikiwiki' => true,
 	'ptwikibooks' => true, // T26143 -- Andrew 2010-08-16
 	'strategywiki' => true, // Philippe says it's cool -- Andrew 2009-10-13
 	'sewikimedia' => true, // T26377 -- Andrew 2010-08-28
@@ -11474,9 +11472,10 @@ $wgConf->settings = array(
 	'ptwikibooks' => false, // T50578
 ),
 
-'wmgLiquidThreadsBackfill' => array(
+'wmgLiquidThreadsFrozen' => array(
 	// Preserve access to LQT namespaces after removing the extension
 	'default' => false,
+	'mediawikiwiki' => true,
 	'officewiki' => true, // replaced with Flow 2014-11-25
 ),
 
