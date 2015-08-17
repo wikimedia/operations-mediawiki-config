@@ -15321,28 +15321,20 @@ $wgConf->settings = array(
 
 'wmgCirrusSearchUserTesting' => array(
 	'default' => array(
-		'suggest-confidence' => array(
-			'sampleRate' => 10,
+		'phrase-slop' => array(
+			'sampleRate' => 33,
 			'buckets' => array(
-				// control bucket, retain defaults
-				'a' => array(),
-				// test bucket, alternative suggestions
+				'a' => array(
+					// control bucket, retain defaults
+				),
 				'b' => array(
-					'wgCirrusSearchPhraseSuggestSettings' => array(
-						'mode' => 'always',
-						'confidence' => 1.0,
-						'max_errors' => 2,
-						'real_word_error_likelihood' => 0.95,
-						'max_term_freq' => 0.5,
-						'min_doc_freq' => 0.0,
-						'collate' => false,
-						'collate_minimum_should_match' => '3<66%',
-						'prefix_length' => 2,
-						'smoothing_model' => array(
-							'laplace' => array(
-								'alpha' => 0.3,
-							),
-						),
+					'wgCirrusSearchPhraseSlop' => array(
+						'precise' => 1, 'default' => 1, 'boost' => 1
+					),
+				),
+				'c' => array(
+					'wgCirrusSearchPhraseSlop' => array(
+						'precise' => 2, 'default' => 2, 'boost' => 2
 					),
 				),
 			),
