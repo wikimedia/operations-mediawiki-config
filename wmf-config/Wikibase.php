@@ -68,6 +68,7 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		// there is no cronjob dispatcher yet, this will do nothing
 		$wgWBRepoSettings['clientDbList'] = array( 'testwiki', 'test2wiki', 'testwikidatawiki' );
+		$wgPropertySuggesterClassifyingPropertyIds = array( 7 );
 	} else {
 		$wgWBRepoSettings['clientDbList'] = array_diff(
 			MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../wikidataclient.dblist" ) ),
