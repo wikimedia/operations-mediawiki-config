@@ -7579,6 +7579,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'templateeditor' => true ), // T74055
 		'user' => array( 'upload' => true ), // T30576
 		'templateeditor' => array( 'templateeditor' => true ), // T74055
+		'interface-editor' => array( 'editinterface' => true, 'editusercss' => true, 'edituserjs' => true ), // T109408
 	),
 	'idwiki' => array(
 		'*' => array( 'createpage' => false ),
@@ -8682,7 +8683,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
 	),
 	'+huwiki' => array(
-		'bureaucrat' => array( 'templateeditor' ), // T74055
+		'bureaucrat' => array( 'templateeditor', 'interface-editor' ), // T74055, T109408
 	),
 	'+idwiki' => array(
 		'sysop' => array( 'rollbacker' ),
@@ -9312,7 +9313,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
 	),
 	'+huwiki' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'templateeditor' ), // T74055
+		'bureaucrat' => array( 'sysop', 'bureaucrat', 'templateeditor', 'interface-editor' ), // T74055, T109408
 	),
 	'+idwiki' => array(
 		'sysop' => array( 'rollbacker' ),
