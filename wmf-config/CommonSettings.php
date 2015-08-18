@@ -678,16 +678,6 @@ if ( $wmgUseTimedMediaHandler ) {
 
 	// Minimum size for an embed video player
 	$wgMinimumVideoPlayerSize = $wmgMinimumVideoPlayerSize;
-
-	// Enable low-res Theora transcodes for fallback players on slow machines
-	// Put them at the beginning of the array to keep ordering the way
-	// the popup player expects, so we pick the right WebM size in most
-	// cases.
-	//
-	// See T63760
-	//
-	array_unshift( $wgEnabledTranscodeSet, WebVideoTranscode::ENC_OGV_360P );
-	array_unshift( $wgEnabledTranscodeSet, WebVideoTranscode::ENC_OGV_160P );
 }
 
 if ( $wgDBname == 'foundationwiki' ) {
