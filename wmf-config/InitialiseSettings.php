@@ -11398,7 +11398,7 @@ $wgConf->settings = array(
 		'unitedarchives.noip.me',           // United Archives' personal NAS server - T96664
 		'*.llgc.org.uk',                    // National Library of Wales - T97281
 		'*.nasqueron.org',                  // Projects of Wikimedia Commons trusted users - T97448
-		'medialib.naturalis.nl',            // Naturalis Biodiversity Center - T97995
+		'*.naturalis.nl',                   // Naturalis Biodiversity Center - T97995, T109429
 		'www.jacar.go.jp',                  // Japan Center for Asian Historical Records - T98733
 		'*.sl.nsw.gov.au',                  // New South Wales State Library - T98744
 		'*.bl.uk',                          // British Library - T98734
