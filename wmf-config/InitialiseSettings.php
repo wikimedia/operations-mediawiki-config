@@ -8836,6 +8836,10 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'templateeditor' ), // T63172
 		'bureaucrat' => array( 'abusefilter', 'patroller' ), // T28634
 	),
+	'+rswikimedia' => array( // T109613
+		'sysop' => array( 'import' ),
+		'bureaucrat' => array( 'import' ),
+	),
 	'+ruwiki' => array(
 		'sysop' => array( 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ),
 		'bureaucrat' => array( 'arbcom' ), // T51334
@@ -9467,6 +9471,9 @@ $wgConf->settings = array(
 	'+rowiki' => array(
 		'bureaucrat' => array( 'abusefilter', 'patroller' ), // T28634
 		'sysop' => array( 'autopatrolled', 'templateeditor' ), // T63172
+	),
+	'+rswikimedia' => array( // T109613
+		'bureaucrat' => array( 'import' ),
 	),
 	'+ruwiki' => array(
 		'bureaucrat' => array( 'sysop', 'arbcom' ), // T51334
