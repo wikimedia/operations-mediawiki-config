@@ -16,6 +16,24 @@
       "revId": "17bb6c0054039ade3b545b2b5223f97d50effc17",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_07aa3cd1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 11404,
+      "author": {
+        "id": 755
+      },
+      "writtenOn": "2015-08-19T09:37:03Z",
+      "side": 1,
+      "message": "Done (had followed after the archive.org a couple of lines below)",
+      "parentUuid": "6ec1af18_674d4075",
+      "revId": "17bb6c0054039ade3b545b2b5223f97d50effc17",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
