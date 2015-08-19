@@ -10870,7 +10870,6 @@ $wgConf->settings = array(
 	'wiktionary' => '/static/apple-touch/wiktionary.png',
 	'wikidata' => '/static/apple-touch/wikidata.png', // T72996
 	'enwiktionary' => '/static/apple-touch/wiktionary/en.png', // T48431
-	'labswiki' => '/Wikitech-apple-touch-icon.png',
 ),
 
 'wgUserEmailUseReplyTo' => array(
