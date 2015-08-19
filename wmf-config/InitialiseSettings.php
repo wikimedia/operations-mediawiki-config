@@ -9472,8 +9472,12 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'abusefilter', 'patroller' ), // T28634
 		'sysop' => array( 'autopatrolled', 'templateeditor' ), // T63172
 	),
-	'+rswikimedia' => array( // T109613
-		'bureaucrat' => array( 'import' ),
+	'+rswikimedia' => array(
+		'bureaucrat' => array(
+			'import', // T109613
+			'sysop', // T109621
+			'bureaucrat', // T109621
+		),
 	),
 	'+ruwiki' => array(
 		'bureaucrat' => array( 'sysop', 'arbcom' ), // T51334
