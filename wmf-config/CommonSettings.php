@@ -2493,6 +2493,9 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 	}
 
 	$wgFlowCacheVersion = '4.7';
+
+	// Temporary as part of T107204
+	$wgFlowMigrateReferenceWiki = true;
 }
 
 if ( $wmgUseDisambiguator ) {
