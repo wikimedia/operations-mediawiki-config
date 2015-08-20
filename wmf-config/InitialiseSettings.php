@@ -15599,6 +15599,7 @@ $wgConf->settings = array(
 ),
 'wgWPBBannerProperty' => array(
 	'default' => false,
+	'enwikivoyage' => 'P948',
 ),
 );
 
