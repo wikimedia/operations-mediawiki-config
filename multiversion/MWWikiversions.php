@@ -52,7 +52,7 @@ class MWWikiversions {
 	 */
 	public static function evalDbListExpression( $expr ) {
 		$expr = trim( strtok( $expr, "#\n" ), "% " );
-		$tokens = preg_split( '/ *([-+]) */m', $expr, 0, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY );
+		$tokens = preg_split( '/ +([-+]) +/m', $expr, 0, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY );
 		$result = self::readDbListFile( $tokens[0] );
 		while ( ( $op = next( $tokens ) ) && ( $term = next( $tokens ) ) ) {
 			$dbs = self::readDbListFile( $term );
