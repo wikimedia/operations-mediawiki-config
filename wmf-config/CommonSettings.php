@@ -2348,9 +2348,7 @@ if ( $wmgEnableInterwiki ) {
 	$wgInterwikiViewOnly = true;
 }
 
-if ( $wmgEnableRandomRootPage ) {
-	require_once( "$IP/extensions/RandomRootPage/Randomrootpage.php" );
-}
+require_once( "$IP/extensions/RandomRootPage/Randomrootpage.php" );
 
 # Avoid excessive CPU due to cache misses from rapid invalidations
 $wgJobBackoffThrottling['htmlCacheUpdate'] = 20; // pages/sec per runner
