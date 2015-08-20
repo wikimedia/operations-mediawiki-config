@@ -14568,6 +14568,8 @@ $wgConf->settings = array(
 		NS_PROJECT_TALK, // T99117
 	),
 ),
+
+// Do not add new pages to wmgFlowOccupyPages
 'wmgFlowOccupyPages' => array(
 	'default' => array(),
 	# Extension:Flow's browsertests use Talk:Flow_QA.
