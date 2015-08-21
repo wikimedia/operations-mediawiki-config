@@ -5076,6 +5076,8 @@ $wgConf->settings = array(
 	'urwiki' => array(
 		100 => 'باب', // Portal - T21569
 		101 => 'تبادلۂ_خیال_باب', // Portal talk - T21569
+		102 => 'کتاب', // Book - T109505
+		103 => 'تبادلۂ_خیال_کتاب', // Book talk - T109505
 	),
 	'uzwiki' => array (
 		100 => 'Portal',                     // T40840 (Portal)
