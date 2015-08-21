@@ -498,10 +498,7 @@ if ( $wmgUseCORS ) {
 	);
 }
 
-require_once "$IP/skins/Vector/Vector.php";
-require_once "$IP/skins/MonoBook/MonoBook.php";
-require_once "$IP/skins/Modern/Modern.php";
-require_once "$IP/skins/CologneBlue/CologneBlue.php";
+wfLoadSkins( array( 'Vector', 'MonoBook', 'Modern', 'CologneBlue' ) );
 
 if ( $wmgUseTimeline ) {
 	include( $IP . '/extensions/timeline/Timeline.php' );
@@ -868,7 +865,7 @@ if ( $wgDBname == 'nostalgiawiki' ) {
 	}
 
 	// Nostalgia skin
-	require_once "$IP/skins/Nostalgia/Nostalgia.php";
+	wfLoadSkin( 'Nostalgia' );
 }
 
 $wgCopyrightIcon = '<a href="//wikimediafoundation.org/">' .

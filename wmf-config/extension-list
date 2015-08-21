@@ -142,8 +142,8 @@ $IP/extensions/WikimediaMessages/WikimediaMessages.php
 $IP/extensions/XAnalytics/XAnalytics.php
 $IP/extensions/ZeroBanner/ZeroBanner.php
 $IP/extensions/ZeroPortal/ZeroPortal.php
-$IP/skins/CologneBlue/CologneBlue.php
-$IP/skins/Modern/Modern.php
-$IP/skins/MonoBook/MonoBook.php
-$IP/skins/Nostalgia/Nostalgia.php
-$IP/skins/Vector/Vector.php
+$IP/skins/CologneBlue/skin.json
+$IP/skins/Modern/skin.json
+$IP/skins/MonoBook/skin.json
+$IP/skins/Nostalgia/skin.json
+$IP/skins/Vector/skin.json
