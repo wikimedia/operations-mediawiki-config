@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Wikimedia databases configuration</title>
-	<script src="//bits.wikimedia.org/www.mediawiki.org/load.php?modules=startup&only=scripts"></script>
+	<script src="https://www.mediawiki.org/w/load.php?modules=startup&only=scripts"></script>
 	<style>body { font-family: sans-serif; }</style>
 </head>
 <body>
@@ -91,9 +91,12 @@ foreach ( $wmf->names() as $name ) {
 ?></div>
 <div id="footer">Automatically generated from <a href="//noc.wikimedia.org/conf/highlight.php?file=db-eqiad.php">wmf-config/db-eqiad.php</a></div>
 <script>
-mw.loader.using('jquery.ui.tabs', function () {
-	$( '#tabs' ).tabs();
-});
+window.RLQ = window.RLQ || [];
+window.RLQ.push( function () {
+	mw.loader.using( 'jquery.ui.tabs', function () {
+		$( '#tabs' ).tabs();
+	} );
+} );
 </script>
 </body>
 </html>
