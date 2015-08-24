@@ -84,20 +84,8 @@ if ( $wmgUseMultimediaViewer ) {
 
 if ( $wmgUseParsoid ) {
 	$wmgParsoidURL = 'http://10.68.16.145'; // deployment-parsoidcache02.eqiad
-}
-
-if ( $wmgUseVisualEditor ) {
-	$wgVisualEditorParsoidURL = $wmgParsoidURL; // Re-link now it's been set to a new value
-
-	// RESTbase connection configuration
-	if ( $wmgVisualEditorAccessRESTbaseDirectly ) {
-		// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
-		// so use a hook
-		$wgExtensionFunctions[] = function () {
-			global $wgServerName, $wgVisualEditorRestbaseURL;
-			$wgVisualEditorRestbaseURL = "http://$wgServerName/api/rest_v1/page/html/";
-		};
-	}
+	// Re-link now it's been set to a new value
+	$wgVirtualRestConfig['modules']['parsoid']['url'] = $wmgParsoidURL;
 }
 
 if ( $wmgUseFlow ) {
