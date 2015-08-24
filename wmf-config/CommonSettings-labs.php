@@ -66,8 +66,7 @@ if ( $wmgUseGWToolset ) {
 }
 
 if ( $wmgUseOAuth ) {
-	$wgMWOAuthReadOnly = true;
-	$wgMWOAuthCentralWiki = 'deploymentwiki'; // T59403
+	$wgMWOAuthCentralWiki = 'metawiki';
 
 	// T61141 - Return this to true and reset secrets once SSL works in labs
 	$wgMWOAuthSecureTokenTransfer = false;
