@@ -2852,6 +2852,7 @@ if ( $wmgUseGraph ) {
 if ( $wmgUseOAuth ) {
 	require_once( "$IP/extensions/OAuth/OAuth.php" );
 	if ( $wgDBname !== "labswiki" ) {
+		$wgMWOAuthReadOnly = true;
 		$wgMWOAuthCentralWiki = 'mediawikiwiki';
 		$wgMWOAuthSharedUserSource = 'CentralAuth';
 	}
