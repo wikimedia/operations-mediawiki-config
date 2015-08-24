@@ -1691,6 +1691,7 @@ $wgConf->settings = array(
 	'kkwiktionary' => 'Уикисөздік',
 	'kmwiki' => 'វិគីភីឌា',
 	'knwiki' => 'ವಿಕಿಪೀಡಿಯ',
+	'knwikiquote' => 'ವಿಕಿಕೋಟ್',
 	'knwiktionary' => 'ವಿಕ್ಷನರಿ',
 	'koiwiki' => 'Википедия',
 	'kowiki' => '위키백과',
