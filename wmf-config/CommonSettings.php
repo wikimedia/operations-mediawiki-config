@@ -539,7 +539,7 @@ $wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( getRealmSpecificFile
 $wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../fishbowl.dblist" ) );
 
 if ( $wmgUseCharInsert ) {
-	ExtensionRegistry::getInstance()->queue( "$IP/extensions/CharInsert/extension.json" );
+	wfLoadExtension( 'CharInsert' );
 }
 
 if ( $wmgUseParserFunctions ) {
@@ -552,7 +552,7 @@ if ( $wmgUseCite ) {
 }
 
 if ( $wmgUseCiteThisPage ) {
-	ExtensionRegistry::getInstance()->queue( "$IP/extensions/CiteThisPage/extension.json" );
+	wfLoadExtension( 'CiteThisPage' );
 }
 
 if ( $wmgUseInputBox ) {
@@ -1605,7 +1605,7 @@ if ( $wmgUseNewUserMessage ) {
 }
 
 if ( $wmgUseCodeReview ) {
-	ExtensionRegistry::getInstance()->queue( "$IP/extensions/CodeReview/extension.json" );
+	wfLoadExtension( 'CodeReview' );
 
 	$wgGroupPermissions['user']['codereview-add-tag'] = false;
 	$wgGroupPermissions['user']['codereview-remove-tag'] = false;
@@ -1867,7 +1867,7 @@ if ( $wmgUseUploadWizard ) {
 }
 
 if ( $wmgUseBetaFeatures ) {
-	ExtensionRegistry::getInstance()->queue( "$IP/extensions/BetaFeatures/extension.json" );
+	wfLoadExtension( 'BetaFeatures' );
 	if ( $wmgBetaFeaturesWhitelist ) {
 		$wgBetaFeaturesWhitelist = $wmgBetaFeaturesWhitelist;
 	}
@@ -2319,7 +2319,7 @@ if ( $wmgUseVips ) {
 }
 
 if ( $wmgUseApiSandbox ) {
-	ExtensionRegistry::getInstance()->queue( "$IP/extensions/ApiSandbox/extension.json" );
+	wfLoadExtension( 'ApiSandbox' );
 }
 
 if ( $wmgUseShortUrl ) {
@@ -2547,7 +2547,7 @@ if ( $wmgUseGeoCrumbs || $wmgUseInsider || $wmgUseRelatedArticles || $wmgUseRela
 }
 
 if ( $wmgUseCalendar ) {
-	ExtensionRegistry::getInstance()->queue( "$IP/extensions/Calendar/extension.json" );
+	wfLoadExtension( 'Calendar' );
 }
 
 if ( $wmgUseMapSources ) {
