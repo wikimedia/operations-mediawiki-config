@@ -6924,7 +6924,9 @@ $wgConf->settings = array(
 	// see also wmf-config/throttle.php
 	// exemptions for outreach events should go in that file
 	// note that account creation is not the only bottleneck
-	'default' => array(),
+	'default' => array(
+		'198.89.127.88', // Wiki Education Foundation dashboard T110235
+	),
 ),
 
 'wgEmailAuthentication' => array(
