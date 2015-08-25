@@ -3092,6 +3092,10 @@ $wgConf->settings = array(
 		'Work' => 112,          // T93870
 		'Work_talk' => 113,
 	),
+	'+itwikiversity' => array(
+		'Facoltà' => 100,
+		'Discussioni_facoltà' => 101
+	),
 	'+itwiktionary' => array(
 		'WZ' => NS_PROJECT,
 	),
@@ -6258,8 +6262,8 @@ $wgConf->settings = array(
 		111 => 'Discussion_Transwiki',
 	),
 	'itwikiversity' => array(
-		100 => 'Facoltà',
-		101 => 'Discussioni_facoltà',
+		100 => 'Area',
+		101 => 'Discussioni_area',
 		102 => 'Corso',
 		103 => 'Discussioni_corso',
 		104 => 'Materia',
