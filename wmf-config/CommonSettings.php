@@ -2505,6 +2505,16 @@ if ( $wmgUseDisambiguator ) {
 if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgZeroPortal ) {
 	include_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
 	$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore;
+	if ( $wgDBname === 'metawiki' ) {
+		$wgHooks['CodeEditorGetPageLanguage'][] = function ( Title $title, &$lang ) {
+			if ( preg_match(
+				'/(API listing|Www\.wik(imedia|ipedia|inews|tionary|iquote|iversity|ibooks|ivoyage)\.org) template(\/temp)?/',
+				$title->getPrefixedText()
+			) ) {
+				$lang = 'html';
+			}
+		};
+	}
 }
 
 if ( $wmgUseScribunto ) {
