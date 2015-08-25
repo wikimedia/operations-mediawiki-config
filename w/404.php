@@ -20,9 +20,7 @@ if( preg_match( "/(%2f)/i", $loc, $matches )
 } else {
 	$target = $prot . $serv . "/wiki" . $loc;
 	$encTarget = htmlspecialchars( $target );
-	header( "Refresh: 5; url=$encTarget" );
-	$details="<p><b>Did you mean to type <a href=$encTarget>$encTarget</a>?</b>
-			  You will be automatically redirected there in five seconds.</p>";
+	$details="<p><b>Did you mean to type <a href=$encTarget>$encTarget</a>?</b></p>";
 }
 $base_404=<<<END
 <!DOCTYPE html>
