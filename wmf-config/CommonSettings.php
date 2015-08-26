@@ -1434,18 +1434,6 @@ if ( $wmgUseCentralNotice ) {
 
 	$wgCentralNoticeLoader = $wmgCentralNoticeLoader;
 
-	# Wed evening -- all on!
-	$wgNoticeTimeout = 3600;
-	switch( $wmfRealm ) {
-	case 'production':
-		$wgNoticeServerTimeout = 3600; // to let the counter update
-		$wgNoticeCounterSource = '//wikimediafoundation.org/wiki/Special:ContributionTotal' .
-			'?action=raw' .
-			'&start=20101112000000' . // FY 10-11
-			'&fudgefactor=660000';   // fudge for pledged donations not in CRM
-		break;
-	}
-
 	$wgNoticeInfrastructure = false;
 	if ( $wgDBname == 'metawiki' ) {
 		$wgNoticeInfrastructure = true;
