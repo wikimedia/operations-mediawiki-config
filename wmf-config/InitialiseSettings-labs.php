@@ -271,8 +271,6 @@ function wmfLabsSettings() {
 		),
 		'wmgMobileUrlTemplate' => array(
 			'default' => '%h0.m.%h1.%h2.%h3.%h4',
-			'commonswiki' => '',
-			'mediawikiwiki' => '',//'m.%h1.%h2',
 			'wikidatawiki' => 'm.%h0.%h1.%h2.%h3', // T87440
 		),
 
