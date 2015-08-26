@@ -973,6 +973,9 @@ function wmfLabsSettings() {
 			'default' => false,
 			'enwiki' => true,
 		),
+		"wgWPBNamespaces" => array(
+			'default' => array( NS_MAIN, NS_USER ),
+		),
 		'wmgWPBBannerProperty' => array(
 			'default' => 'P751',
 		),
