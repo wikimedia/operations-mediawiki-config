@@ -15555,6 +15555,9 @@ $wgConf->settings = array(
 	'default' => false,
 	'enwikivoyage' => true,
 ),
+"wgWPBNamespaces" => array(
+	'default' => array( NS_MAIN, NS_USER ),
+),
 'wgWPBBannerProperty' => array(
 	'default' => false,
 	'enwikivoyage' => 'P948',
