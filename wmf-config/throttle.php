@@ -20,35 +20,12 @@ $wmgThrottlingExceptions = array();
 #             (default: any project)
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = array( // T102045
-	'from'   => '2015-06-19T00:00 +0:00',
-	'to'     => '2015-06-20T23:59 +0:00',
-	'ip'     => array( '85.207.0.16' ),
-	'dbname' => array( 'cswiki', 'commonswiki' ),
-	'value'  => 200,
-);
-
-$wmgThrottlingExceptions[] = array( // T99772
-	'from'   => '2015-06-26T13:00 +0:00',
-	'to'     => '2015-06-27T23:59 +0:00',
-	'dbname' => array( 'itwikivoyage' ),
-	'value'  => 100, // 50 participants expected, but 50K flyers printed
-);
-
-$wmgThrottlingExceptions[] = array( // T103764
-	'from'   => '2015-06-26T00:00 +0:00',
-	'to'     => '2015-06-27T23:59 +0:00',
-	'ip'     => array( '198.73.209.5' ),
-	'dbname' => array( 'enwiki', 'enwikisource' ),
-	'value'  => 50, // 50 expected max
-);
-
-$wmgThrottlingExceptions[] = array(
-	'from'   => '2015-07-15T00:00 +0:00',
-	'to'     => '2015-07-21T00:00 +0:00',
-	'ip'     => array( '201.149.6.36' ),
-	'dbname' => array( 'labswiki' ),
-	'value'  => 500
+$wmgThrottlingExceptions[] = array( // T110352
+	'from'   => '2015-08-29T00:00 +0:00',
+	'to'     => '2016-02-28T00:00 +0:00',
+	'ip'     => array( '218.248.16.20' ),
+	'dbname' => array( 'tawiki' ),
+	'value'  => 50
 );
 
 ## Add throttling definitions above.
