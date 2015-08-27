@@ -14716,7 +14716,7 @@ $wgConf->settings = array(
 	),
 	'itwiki' => array(
 		'cxstats' => true,
-		'newarticle' => false,
+		'newarticle' => true,
 		'staff-recommender' => true,
 		'article-recommender-1' => true
 	),
