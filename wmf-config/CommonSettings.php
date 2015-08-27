@@ -1929,17 +1929,19 @@ if ( $wmgUseRestbaseUpdateJobs ) {
 	$wgRestbaseServer = $wmgRestbaseServer;
 }
 
+if ( !isset( $wgVirtualRestConfig ) && ( $wmgUseRestbaseVRS || $wmgUseParsoid ) ) {
+	$wgVirtualRestConfig = array(
+		'modules' => array(),
+		'global' => array(
+			'domain' => $wgCanonicalServer,
+			'timeout' => 360,
+			'forwardCookies' => false,
+			'HTTPProxy' => null,
+		)
+	);
+}
+
 if ( $wmgUseRestbaseVRS ) {
-	if( !isset( $wgVirtualRestConfig ) ) {
-		$wgVirtualRestConfig = array(
-			'modules' => array(),
-			'global' => array(
-				'timeout' => 360,
-				'forwardCookies' => false,
-				'HTTPProxy' => null
-			)
-		);
-	}
 	$wgVirtualRestConfig['modules']['restbase'] = array(
 		'url' => $wmgRestbaseServer,
 		'domain' => $wgCanonicalServer,
@@ -1952,18 +1954,22 @@ if ( $wmgUseParsoid ) {
 	$wmgParsoidURL = 'http://10.2.2.29'; // parsoidcache.svc.eqiad.wmnet
 
 	// The wiki prefix to use
-	$wgParsoidWikiPrefix = $wgDBname;
+	$wgParsoidWikiPrefix = $wgDBname; // deprecated
+	$wgVirtualRestConfig['modules']['parsoid'] = array(
+		'url' => $wmgParsoidURL,
+		'prefix' => $wgDBname, // deprecated
+		'domain' => $wgCanonicalServer,
+		'forwardCookies' => $wmgParsoidForwardCookies,
+		'restbaseCompat' => false
+	);
 }
 
 if ( $wmgUseVisualEditor ) {
 	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
 
-	// Parsoid connection configuration
-	$wgVisualEditorParsoidURL = $wmgParsoidURL;
-	$wgVisualEditorParsoidPrefix = $wgParsoidWikiPrefix;
-	if ( $wmgParsoidForwardCookies ) {
-		$wgVisualEditorParsoidForwardCookies = true;
-	}
+	// RESTBase connection configuration is done by $wmfUseRestbaseVRS above.
+	// Parsoid connection configuration is done by $wmgUseParsoid above.
+	// At least one of these should be set if you want to use Visual Editor.
 
 	// RESTbase connection configuration
 	if ( $wmgVisualEditorAccessRESTbaseDirectly ) {
