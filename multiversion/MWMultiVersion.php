@@ -142,6 +142,7 @@ class MWMultiVersion {
 			'www.wikidata.org' => 'wikidata',
 			'wikisource.org' => 'sources',
 			'wikitech.wikimedia.org' => 'labs',
+			'affcom.wikimedia.org' => 'chapcom',
 
 			// Labs
 			'beta.wmflabs.org' => 'deployment',
