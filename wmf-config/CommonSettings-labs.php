@@ -102,6 +102,9 @@ if ( $wmgUseVisualEditor ) {
 
 if ( $wmgUseFlow ) {
 	$wgFlowParsoidURL = $wmgParsoidURL; // Re-link now it's been set to a new value
+
+	// Unlike production, this is done on the Beta Cluster.
+	$wgFlowMigrateReferenceWiki = false;
 }
 
 if ( $wmgUseContentTranslation ) {
