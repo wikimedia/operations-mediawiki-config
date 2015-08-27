@@ -13284,6 +13284,10 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'test2wiki' => true,
 ),
+'wmgMFMobileFormatterHeadings' => array(
+	'default' => array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ),
+	'enwikivoyage' => array( 'h2', 'h3', 'h4', 'h5', 'h6' ), // T110436
+),
 
 // Formerly known as $wgMFAnonymousEditing
 'wmgMFEditorOptions' => array(
