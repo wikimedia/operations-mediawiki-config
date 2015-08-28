@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_ca162b4e",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 98,
+      "author": {
+        "id": 664
+      },
+      "writtenOn": "2015-08-28T13:51:34Z",
+      "side": 0,
+      "message": "I missed the fact that this was \u0027http\u0027 and the other way \u0027https\u0027.  :(\n\nKrenair saved my bacon, follow up in Icf349d9a01c8784c6219be1aafe60a82b13ef3f5",
+      "revId": "20e51990e4775c1fffa0380aab5b94b2ba1c109e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
