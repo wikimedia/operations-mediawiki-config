@@ -8751,8 +8751,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autoreview', 'transwiki', 'import', 'translationadmin' ),
 	),
 	'+metawiki' => array(
-		'bureaucrat' => array( 'ipblock-exempt', 'centralnoticeadmin', 'flood', 'uploader', 'translationadmin' ), // T48639
-		'checkuser' => array( 'ipblock-exempt' ),
+		'bureaucrat' => array( 'centralnoticeadmin', 'flood', 'uploader', 'translationadmin' ), // T48639, T110674
 		'sysop' => array( 'autopatrolled', 'massmessage-sender' ), // T59611
 	),
 	'+mkwiki' => array(
@@ -9387,8 +9386,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autoreview', 'transwiki', 'import', 'translationadmin' ),
 	),
 	'+metawiki' => array(
-		'bureaucrat' => array( 'ipblock-exempt', 'flood', 'translationadmin', 'centralnoticeadmin', 'uploader' ), // T39198, T52287
-		'checkuser' => array( 'ipblock-exempt' ),
+		'bureaucrat' => array( 'flood', 'translationadmin', 'centralnoticeadmin', 'uploader' ), // T39198, T52287, T110674
 		'sysop' => array( 'autopatrolled', 'massmessage-sender' ), // T59611
 	),
 	'+mkwiki' => array(
