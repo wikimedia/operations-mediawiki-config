@@ -156,6 +156,7 @@ if ( $wmgUseTimedMediaHandler ) {
 		'url' => '//commons.wikimedia.beta.wmflabs.org/w/api.php'
 	));
 	$wgEnableTranscode = true; //enable transcoding on labs
+	$wgFFmpegLocation = '/usr/bin/ffmpeg'; // use new ffmpeg build w/ VP9 & Opus support
 }
 
 if ( $wgDBname == "testwiki" ) {
