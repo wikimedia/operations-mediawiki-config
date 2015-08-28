@@ -2022,7 +2022,7 @@ $wgConf->settings = array(
 	'cawiktionary' => 'Viccionari',
 	'cewiki' => 'Википеди', // T49574
 	'chairwiki' => 'Project',
-	'chapcomwiki' => 'Chapcom',
+	'chapcomwiki' => 'Affcom', // T41482
 	'checkuserwiki' => 'Project', // T30781
 	'ckbwiki' => 'ویکیپیدیا',
 	'collabwiki' => 'Project',
@@ -2772,6 +2772,9 @@ $wgConf->settings = array(
 		'Wiktionary_diskuse' => NS_PROJECT_TALK,
 		'Wiktionary_talk' => NS_PROJECT_TALK,
 		'Příloha_diskuse' => 101,
+	),
+	'+chapcomwiki' => array(
+		'Chapcom' => NS_PROJECT // T41482
 	),
 	'+cuwiki' => array(
 		'Шаблон' => NS_TEMPLATE,
@@ -10729,7 +10732,7 @@ $wgConf->settings = array(
 
 	# Special wikis
 	'advisorywiki' => '/static/favicon/wmf.ico',
-	'chapcomwiki' => '/static/favicon/chapcom.ico',
+	'chapcomwiki' => '/static/favicon/wmf.ico', // T41482
 	'checkuserwiki' => '/static/favicon/community.ico',
 	'commonswiki' => '/static/favicon/commons.ico',
 	'donatewiki' => '/static/favicon/wmf.ico',
