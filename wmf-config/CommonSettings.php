@@ -1976,8 +1976,12 @@ if ( $wmgUseVisualEditor ) {
 		// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
 		// so use a hook
 		$wgExtensionFunctions[] = function () {
-			global $wgServerName, $wgVisualEditorRestbaseURL;
-			$wgVisualEditorRestbaseURL = "https://$wgServerName/api/rest_v1/page/html/";
+			global $wgServerName, $wgVisualEditorRestbaseURL, $wmfRealm;
+			if ( $wmfRealm === 'production' ) {
+				$wgVisualEditorRestbaseURL = "https://$wgServerName/api/rest_v1/page/html/";
+			} elseif ( $wmfRealm === 'labs' ) {
+				$wgVisualEditorRestbaseURL = "http://$wgServerName/api/rest_v1/page/html/";
+			}
 		};
 	}
 
