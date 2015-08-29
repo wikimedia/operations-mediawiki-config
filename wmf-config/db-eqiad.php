@@ -14,10 +14,11 @@ $wmgParserCacheDBs = array(
 );
 
 $wmgOldExtTemplate = array(
-#	'10.64.0.25'  => 1, # es1001 (down for cloning)
+	'10.64.0.25'  => 1, # es1001
 	'10.64.16.40' => 1, # es1002
 	'10.64.16.41' => 1, # es1003
 	'10.64.16.42' => 1, # es1004
+	'10.64.0.7'   => 1, # es1012
 );
 
 $wgLBFactoryConf = array(
@@ -142,8 +143,8 @@ $wgLBFactoryConf = array(
 	),
 	's7' => array(
 		'db1033' => 0,   # 1.4TB  64GB,
-		'db1028' => 0,   # 1.4TB  64GB, vslow, dump
-		'db1034' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
+#		'db1028' => 0,   # 1.4TB  64GB, vslow, dump (depool for maintenance)
+		'db1034' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager (tmp. vslow, dump)
 		'db1041' => 300, # 1.4TB  64GB
 		'db1039' => 300, # 1.4TB  64GB
 		'db1062' => 500, # 2.8TB 128GB
@@ -321,10 +322,10 @@ $wgLBFactoryConf = array(
 	),
 	's7' => array(
 		'vslow' => array(
-			'db1028' => 1,
+			'db1034' => 1,
 		),
 		'dump' => array(
-			'db1028' => 1,
+			'db1034' => 1,
 		),
 		'watchlist' => array(
 			'db1034' => 1,
@@ -477,16 +478,16 @@ $wgLBFactoryConf = array(
 	# es2
 	'cluster24' => array(
 		'10.64.16.154' => 1, # es1006, master
-#		'10.64.16.153' => 3, # es1005 (downtime for maint)
+		'10.64.16.153' => 3, # es1005
 		'10.64.32.17'  => 3, # es1007
 		'10.64.0.6'    => 3, # es1011
 	),
 	# es3
 	'cluster25' => array(
 		'10.64.32.19'  => 1, # es1009, master
-#		'10.64.32.18'  => 3, # es1008 (downtime for maint)
+		'10.64.32.18'  => 3, # es1008
 		'10.64.32.20'  => 3, # es1010
-		'10.64.16.187' => 1, # es1014 (new server)
+		'10.64.16.187' => 3, # es1014
 	),
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => array(
