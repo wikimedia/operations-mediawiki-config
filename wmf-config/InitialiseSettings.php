@@ -6595,6 +6595,7 @@ $wgConf->settings = array(
 	// Individual wikis
 	'alswiki' => true, // T6543
 	'arwikisource' => true,
+	'azbwiki' => true, // T109755
 	'bgwiki' => true,
 	'bnwiki' => true, // T13042
 	'brwikimedia' => true, // T65345
@@ -7112,6 +7113,35 @@ $wgConf->settings = array(
 	'+arwiktionary' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
 		'rollbacker' => array( 'rollback' => true ),
+	),
+	'+azbwiki' => array(
+		'abusefilter' => array( // T109755
+			'abusefilter-log' => true, // T109755
+			'abusefilter-log-detail' => true, // T109755
+			'abusefilter-modify' => true, // T109755
+			'abusefilter-modify-restricted' => true, // T109755
+			'abusefilter-revert' => true, // T109755
+			'abusefilter-view' => true, // T109755
+			'abusefilter-view-private' => true, // T109755
+		),
+		'autopatrolled' => array( // T109755
+			'autopatrol' => true, // T109755
+		),
+		'interface-editor' => array( // T109755
+			'editinterface' => true, // T109755
+			'editusercssjs' => true, // T109755
+			'tboverride' => true, // T109755
+		),
+		'patroller' => array( // T109755
+			'patrol' => true, // T109755
+		),
+		'rollbacker' => array( // T109755
+			'rollback' => true, // T109755
+		),
+		'transwiki' => array( // T109755
+			'import' => true, // T109755
+			'importupload' => true, // T109755
+		),
 	),
 	'bnwiki' => array(
 		'user' => array( 'patrol' => false ),
@@ -8449,6 +8479,18 @@ $wgConf->settings = array(
 	'+arwiktionary' => array(
 		'sysop' => array( 'autopatrolled', 'rollbacker' ),
 	),
+	'+azbwiki' => array(
+		'bureaucrat' => array(
+			'interface-editor', // T109755
+		),
+		'sysop' => array(
+			'abusefilter', // T109755
+			'autopatrolled', // T109755
+			'patroller', // T109755
+			'rollbacker', // T109755
+			'transwiki', // T109755
+		),
+	),
 	'+bewiki' => array(
 		'sysop' => array( 'autoeditor' ),
 	),
@@ -9075,6 +9117,18 @@ $wgConf->settings = array(
 	),
 	'+arwiktionary' => array(
 		'sysop' => array( 'autopatrolled', 'rollbacker' ),
+	),
+	'+azbwiki' => array(
+		'bureaucrat' => array(
+			'interface-editor', // T109755
+		),
+		'sysop' => array(
+			'abusefilter', // T109755
+			'autopatrolled', // T109755
+			'patroller', // T109755
+			'rollbacker', // T109755
+			'transwiki', // T109755
+		),
 	),
 	'+bawiki' => array(
 		'bureaucrat' => array( 'sysop' ),
@@ -9735,6 +9789,7 @@ $wgConf->settings = array(
 	'arwikisource' => array( 'w' ),
 	'arwikiversity' => array( 'w', 'b', 'n', 'q', 's', 'wikt' ),
 	'arzwiki' => array( 'incubator', 'en', 'ar', 'es', 'fr', ),
+	'azbwiki' => array( 'az', 'en', 'fa', 'incubator' ), // T109755
 	'betawikiversity' => array( 'meta', 'b', 'en', 'incubator', 'de', 'wikipedia:lt' ),
 	'bhwiki' => array( 'commons', 'meta', 'species', 'de', 'en', 'wikibooks:en', 'wikiquote:en', 'wikinews:en', 'wikisource:en', 'wikiversity:en', 'es', 'fa', 'fr', 'hi', 'ml', 'ne', 'nl', 'ro', 'ru', 'pl', 'pt', 'simple', 'ta', 'ur' ), // T70616
 	'bnwiki' => array( 'en' ), // T36791
