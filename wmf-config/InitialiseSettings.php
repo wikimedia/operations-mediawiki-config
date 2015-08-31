@@ -15173,11 +15173,11 @@ $wgConf->settings = array(
 	// very very common.
 	'commonswiki' => array( 'content' => 1, 'general' => 10, 'file' => 7 ),
 	'dawiki' => array( 'content' => 2, 'general' => 1 ),
-	'dewiki' => array( 'content' => 7, 'general' => 10 ),
+	'dewiki' => array( 'content' => 7, 'general' => 10, 'titlesuggest' => 4 ),
 	'dewikisource' => array( 'content' => 3, 'general' => 1 ),
 	'elwiki' => array( 'content' => 2, 'general' => 1 ),
 	// These shards are also significantly larger than the target 2GB.
-	'enwiki' => array( 'content' => 7, 'general' => 10 ),
+	'enwiki' => array( 'content' => 7, 'general' => 10, 'titlesuggest' => 4 ),
 	'enwikinews' => array( 'content' => 1, 'general' => 4 ),
 	'enwikisource' => array( 'content' => 7, 'general' => 1 ),
 	'enwiktionary' => array( 'content' => 5, 'general' => 2 ),
@@ -15228,7 +15228,7 @@ $wgConf->settings = array(
 // Most wikis are fine with 0-2 replicas for all indexes
 // some of the larger ones will want more replicas for content indexes
 'wmgCirrusSearchReplicas' => array(
-	'default' => array( 'content' => '0-2', 'general' => '0-2' ),
+	'default' => array( 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2' ),
 	'+commonswiki' => array( 'file' => '0-3' ),
 	'+dewiki' => array( 'content' => '0-3' ),
 	'+enwiki' => array( 'content' => '0-3' ),
