@@ -15542,6 +15542,7 @@ $wgConf->settings = array(
 'wmgUseWPB' => array(
 	'default' => false,
 	'enwikivoyage' => true,
+	'ruwikivoyage' => true, // T110837
 ),
 "wgWPBNamespaces" => array(
 	'default' => array( NS_MAIN, NS_USER ),
@@ -15549,6 +15550,7 @@ $wgConf->settings = array(
 'wgWPBBannerProperty' => array(
 	'default' => false,
 	'enwikivoyage' => 'P948',
+	'ruwikivoyage' => 'P948',
 ),
 
 'wmgUseParsoidBatchAPI' => array(
