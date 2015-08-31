@@ -11810,6 +11810,15 @@ $wgConf->settings = array(
 		'wikibase-otherprojects',                   // 2015-02-27 - Other projects sidebar (Wikidata)
 		'cx',                                       // 2015-07-14 - Content translation
 	),
+	'+cawiki' => array(
+		'beta-feature-flow-user-talk-page',         // https://phabricator.wikimedia.org/T98270
+	),
+	'+frwiki' => array(
+		'beta-feature-flow-user-talk-page',         // https://phabricator.wikimedia.org/T98270
+	),
+	'+hewiki' => array(
+		'beta-feature-flow-user-talk-page',         // https://phabricator.wikimedia.org/T98270
+	),
 ),
 
 'wmgUseCommonsMetadata' => array(
