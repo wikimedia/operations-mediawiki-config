@@ -973,7 +973,7 @@ function wmfLabsSettings() {
 			'default' => false,
 			'enwiki' => true,
 		),
-		'wmgWPBBannerProperty' => array(
+		'wgWPBBannerProperty' => array(
 			'default' => 'P751',
 		),
 		'wmgUseGuidedTour' => array(

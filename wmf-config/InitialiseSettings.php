@@ -15538,19 +15538,17 @@ $wgConf->settings = array(
 	'group0' => true,
 ),
 
-// Wikivoyage banners extension (T98029)
+// WikidataPageBanner extension (T98029)
 'wmgUseWPB' => array(
 	'default' => false,
 	'enwikivoyage' => true,
 	'ruwikivoyage' => true, // T110837
 ),
-"wgWPBNamespaces" => array(
+'wgWPBNamespaces' => array(
 	'default' => array( NS_MAIN, NS_USER ),
 ),
 'wgWPBBannerProperty' => array(
-	'default' => false,
-	'enwikivoyage' => 'P948',
-	'ruwikivoyage' => 'P948',
+	'default' => 'P948',
 ),
 
 'wmgUseParsoidBatchAPI' => array(
