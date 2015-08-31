@@ -2,4 +2,3 @@ $IP/extensions/Capiunto/Capiunto.php
 $IP/extensions/GlobalUserPage/GlobalUserPage.php
 $IP/extensions/ParsoidBatchAPI/extension.json
 $IP/extensions/Sentry/Sentry.php
-$IP/extensions/WikidataPageBanner/WikidataPageBanner.php

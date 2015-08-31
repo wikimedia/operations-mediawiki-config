@@ -222,11 +222,6 @@ if ( $wmgUseSentry ) {
 	$wgSentryLogPhpErrors = false;
 }
 
-if ( $wmgUseWPB ) {
-	require_once( "$IP/extensions/WikidataPageBanner/WikidataPageBanner.php" );
-	$wgWPBBannerProperty = $wmgWPBBannerProperty;
-}
-
 if ( $wmgUseCapiunto ) {
 	require_once "$IP/extensions/Capiunto/Capiunto.php";
 }
