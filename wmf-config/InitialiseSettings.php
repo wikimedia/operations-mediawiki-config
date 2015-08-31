@@ -11431,6 +11431,7 @@ $wgConf->settings = array(
 		'*.unibas.ch',                      // Universität Basel - T104178
 		'www.workwithsounds.eu',            // Work With Sounds - T105143
 		'*.archive.org', 'archive.org',     // Internet Archive - T106293
+		'*.ggpht.com',                      // Google Cloud Storage - Temporary domain add for Rijksmuseum - T110869
 	),
 ),
 
