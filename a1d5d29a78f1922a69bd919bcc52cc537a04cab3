@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_384cdb42",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15569,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-08-31T15:57:41Z",
+      "side": 1,
+      "message": "We could probably set default to P948 now.",
+      "revId": "a1d5d29a78f1922a69bd919bcc52cc537a04cab3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
