@@ -94,6 +94,9 @@ $wgCirrusSearchNamespaceWeights = array_merge( $wgCirrusSearchNamespaceWeights,
 // to all kinds of caches: the linux disk cache, Elasticsearch's filter cache, whatever.
 $wgCirrusSearchMainPageCacheWarmer = ( $wgCirrusSearchShardCount['content'] > 1 );
 
+// Enable concurrent search limits for specified abusive networks
+$wgCirrusSearchForcePerUserPoolCounter = $wmgCirrusSearchForcePerUserPoolCounter;
+
 // Commons is special
 if ( $wgDBname == 'commonswiki' ) {
 	$wgCirrusSearchNamespaceMappings[ NS_FILE ] = 'file';
