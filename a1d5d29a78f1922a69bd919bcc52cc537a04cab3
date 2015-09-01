@@ -16,6 +16,24 @@
       "revId": "a1d5d29a78f1922a69bd919bcc52cc537a04cab3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_fb2de88c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15569,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-09-01T05:15:43Z",
+      "side": 1,
+      "message": "Did that in Idfd0fdefea77b5888a36e792",
+      "parentUuid": "6ec1af18_384cdb42",
+      "revId": "a1d5d29a78f1922a69bd919bcc52cc537a04cab3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
