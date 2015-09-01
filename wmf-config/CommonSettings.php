@@ -2440,7 +2440,9 @@ if ( $wmgUseEcho ) {
 
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
-	$wgEchoBundleEmailInterval = $wmgEchoBundleEmailInterval;
+	if ( $wmgUseClusterJobqueue ) {
+		$wgEchoBundleEmailInterval = $wmgEchoBundleEmailInterval;
+	}
 	$wgEchoHelpPage = $wmgEchoHelpPage;
 	$wgEchoNotificationIcons['site']['url'] = $wmgEchoSiteNotificationIconUrl;
 
