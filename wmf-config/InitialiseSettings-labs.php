@@ -1067,5 +1067,9 @@ function wmfLabsSettings() {
 		'wmgLogAuthmanagerMetrics' => array(
 			'default' => true,
 		),
+
+		'wmgMediaViewerUseThumbnailGuessing' => array(
+			'default' => false, # T69651
+		),
 	);
 } # wmflLabsSettings()
