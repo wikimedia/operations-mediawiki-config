@@ -15180,6 +15180,11 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 ),
 
+'wmgCirrusSearchForcePerUserPoolCounter = array(
+	'default' => array('23.92.71.118/32'),
+),
+
+
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => array(
 	'default' => 0,
 	'wikinews' => .6,
