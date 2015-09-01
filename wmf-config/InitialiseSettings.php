@@ -15265,26 +15265,7 @@ $wgConf->settings = array(
 ),
 
 'wmgCirrusSearchUserTesting' => array(
-	'default' => array(
-		'phrase-slop' => array(
-			'sampleRate' => 33,
-			'buckets' => array(
-				'a' => array(
-					// control bucket, retain defaults
-				),
-				'b' => array(
-					'wgCirrusSearchPhraseSlop' => array(
-						'precise' => 1, 'default' => 1, 'boost' => 1
-					),
-				),
-				'c' => array(
-					'wgCirrusSearchPhraseSlop' => array(
-						'precise' => 2, 'default' => 2, 'boost' => 2
-					),
-				),
-			),
-		),
-	),
+	'default' => array(),
 ),
 
 'wmgUseCite' => array(
