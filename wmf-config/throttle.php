@@ -23,8 +23,25 @@ $wmgThrottlingExceptions = array();
 $wmgThrottlingExceptions[] = array( // T110352
 	'from'   => '2015-08-29T00:00 +0:00',
 	'to'     => '2016-02-28T00:00 +0:00',
-	'ip'     => array( '218.248.16.20' ),
-	'dbname' => array( 'tawiki' ),
+	'ip'     => '218.248.16.20',
+	'dbname' => 'tawiki',
+	'value'  => 50
+);
+
+$wmgThrottlingExceptions[] = array( // T110352
+	'from'   => '2015-09-04T16:00 +0:00',
+	'to'     => '2015-09-05T19:00 +0:00',
+	'ip'     => array(
+		'181.118.160.216',
+		'181.118.160.217',
+		'181.118.160.218',
+		'181.118.160.219',
+		'181.118.160.220',
+		'181.118.160.221',
+		'181.118.160.222',
+		'181.118.160.223'
+	),
+	'dbname' => 'eswiki',
 	'value'  => 50
 );
 
@@ -41,45 +58,30 @@ $wgExtensionFunctions[] = function() {
 
 		# 1) skip when it does not apply to our database name
 
-		if( isset( $options['dbname'] ) ) {
-			if ( is_array( $options['dbname'] ) ) {
-				if ( !in_array( $wgDBname, $options['dbname'] ) ) {
-					continue;
-				}
-			} elseif ( $wgDBname != $options['dbname'] ) {
-				continue;
-			}
+		if ( isset( $options['dbname'] ) && !in_array( $wgDBname, (array) $options['dbname'] ) ) {
+			continue;
 		}
 
 		# 2) skip expired entries
 		$inTimeWindow = time() >= strtotime( $options['from'] )
 				&& time() <= strtotime( $options['to'] );
 
-		if( !$inTimeWindow ) {
+		if ( !$inTimeWindow ) {
 			continue;
 		}
 
 		# 3) skip when throttle does not apply to the client IP
 		$ip = $wgRequest->getIP();
-		if ( isset( $options['IP'] ) ) {
-			if ( is_array( $options['IP'] ) && !in_array( $ip, $options['IP'] ) ) {
-				continue;
-			} elseif ( $ip != $options['IP'] ) {
-				continue;
-			}
+		if ( isset( $options['IP'] ) && !in_array( $ip, (array) $options['IP'] ) ) {
+			continue;
 		}
-		if ( isset ( $options['range'] ) ) {
-			//Checks if the IP is in range
-			if ( is_array( $options['range'] ) && !IP::isInRanges( $ip, $options['range'] ) ) {
-				continue;
-			} elseif ( !IP::isInRange( $ip, $options['range'] ) ) {
-				continue;
-			}
+		if ( isset ( $options['range'] ) && !IP::isInRanges( $ip, (array) $options['range'] ) ) {
+			continue;
 		}
 
 		# Finally) set up the throttle value
 		global $wgAccountCreationThrottle, $wgRateLimits;
-		if( isset( $options['value'] ) && is_numeric( $options['value'] ) ) {
+		if ( isset( $options['value'] ) && is_numeric( $options['value'] ) ) {
 			$wgAccountCreationThrottle = $options['value'];
 		} else {
 			$wgAccountCreationThrottle = 50; // Provide some sane default
