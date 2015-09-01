@@ -12,7 +12,6 @@
 $wgSquidServersNoPurge = array( '127.0.0.1',
 	'10.68.18.103',  # deployment-cache-text04
 	'10.68.18.109',  # deployment-cache-upload04
-	'10.68.18.64',  # deployment-cache-bits04
 	'10.68.18.110',  # deployment-cache-mobile04
 );
 $wgHTCPRouting = array(
