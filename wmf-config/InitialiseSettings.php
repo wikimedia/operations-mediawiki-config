@@ -14598,6 +14598,9 @@ $wgConf->settings = array(
 'wmgFlowMaintenanceMode' => array(
 	'default' => false,
 ),
+'wmgFlowEnableOptInBetaFeature' => array(
+	'default' => false,
+),
 'wmgUseDisambiguator' => array(
 	'default' => true,
 	'loginwiki' => false, // T61702
