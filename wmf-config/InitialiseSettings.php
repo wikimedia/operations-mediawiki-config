@@ -13290,7 +13290,7 @@ $wgConf->settings = array(
 ),
 'wmgMFMobileFormatterHeadings' => array(
 	'default' => array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ),
-	'enwikivoyage' => array( 'h2', 'h3', 'h4', 'h5', 'h6' ), // T110436
+	'wikivoyage' => array( 'h2', 'h3', 'h4', 'h5', 'h6' ), // T110436, T110837
 ),
 
 // Formerly known as $wgMFAnonymousEditing
