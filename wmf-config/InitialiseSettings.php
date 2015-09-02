@@ -6781,6 +6781,14 @@ $wgConf->settings = array(
 ),
 
 # wgNamespacesToBeSearchedDefault @{
+'wgRCWatchCategoryMembership' => array(
+	'default' => true,
+	'commonswiki' => false, // T109707
+	'wikisource' => false, // T109707
+),
+# @} end of wgNamespacesToBeSearchedDefault
+
+# wgNamespacesToBeSearchedDefault @{
 'wgNamespacesToBeSearchedDefault' => array(
 	'default' => array( 0 => 1, 1 => 0, 2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0, 7 => 0, 8 => 0, 9 => 0, 10 => 0, 11 => 0, 12 => 0, 13 => 0 ),
 	'+arwikisource' => array( 102 => 1 ),
