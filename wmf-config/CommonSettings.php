@@ -2648,6 +2648,7 @@ if ( $wmgUseEventLogging ) {
 	include_once( "$IP/extensions/WikimediaEvents/WikimediaEvents.php" );
 	$wgWMEStatsdBaseUri = '/beacon/statsv';
 	$wgWMETrackGeoFeatures = $wmgWMETrackGeoFeatures;
+	$wgWMEEnableCompletionExperiment = $wmgWMEEnableCompletionExperiment;
 }
 
 if ( $wmgUseEventLogging && $wmgUseNavigationTiming ) {
