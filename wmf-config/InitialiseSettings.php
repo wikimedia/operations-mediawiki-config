@@ -71,6 +71,7 @@ $wgConf->settings = array(
 	'default' => '$lang',
 
 	# Non-ISO language codes
+	'be_x_oldwiki' => 'be-tarask',
 	'crhwiki' => 'crh-latn',
 	'nowiki' => 'nb',
 	'simplewiki' => 'en',
@@ -83,7 +84,6 @@ $wgConf->settings = array(
 	'alswikibooks' => 'gsw',
 	'alswikiquote' => 'gsw',
 	'bat_smgwiki' => 'sgs',
-	'be_x_oldwiki' => 'be-tarask',
 	'bhwiki' => 'bho',
 	'bhwiktionary' => 'bho',
 	'fiu_vrowiki' => 'vro',
