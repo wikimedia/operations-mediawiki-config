@@ -1001,6 +1001,7 @@ $wgConf->settings = array(
 	'fawikivoyage' => '/static/images/project-logos/fawikivoyage.png',  // T73382
 	'hewikivoyage' => '/static/images/project-logos/hewikivoyage.png',
 	'plwikivoyage' => '/static/images/project-logos/plwikivoyage.png',
+	'ukwikivoyage' => '/static/images/project-logos/ukwikivoyage.png',  // T110370
 	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage.png',  // T61077
 
 	// Chapter wikis
