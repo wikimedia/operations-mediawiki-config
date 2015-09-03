@@ -12678,7 +12678,6 @@ $wgConf->settings = array(
 		102 /* Viquiprojecte */ => true // T58000
 	),
 	'+enwiki' => array(
-		NS_PROJECT => true, // T100067
 		100 /* Portal */ => true, // T58001
 		108 /* Book */ => true, // T58001
 		118 /* Draft */ => true
