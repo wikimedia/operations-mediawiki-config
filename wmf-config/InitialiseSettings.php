@@ -7344,7 +7344,7 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true ),
 		'rollbacker' => array( 'rollback' => true )
 	),
-	'eswiki' => array(
+	'+eswiki' => array(
 		'rollbacker' => array(
 			'rollback' => true,
 			'abusefilter-log-detail' => true, // T70319
