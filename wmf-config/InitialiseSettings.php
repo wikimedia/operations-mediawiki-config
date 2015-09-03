@@ -8569,7 +8569,7 @@ $wgConf->settings = array(
 	),
 	'+eswikibooks' => array(
 		'bureaucrat' => array( 'flood', 'confirmed' ), // T93371
-		'sysop' => array( 'flood', 'rollbacker', 'patroller', 'autopatrolled' ), // T93371
+		'sysop' => array( 'rollbacker', 'patroller', 'autopatrolled' ), // T93371, T111455
 	),
 	'+eswikinews' => array(
 		'bureaucrat' => array( 'editprotected', 'flood', ),
@@ -9203,7 +9203,7 @@ $wgConf->settings = array(
 	),
 	'+eswikibooks' => array(
 		'bureaucrat' => array( 'flood', 'confirmed' ),
-		'sysop' => array( 'flood', 'rollbacker', 'patroller', 'autopatrolled' ),
+		'sysop' => array( 'rollbacker', 'patroller', 'autopatrolled' ), // T111455
 	),
 	'+eswikinews' => array(
 		'bureaucrat' => array( 'editprotected', 'flood', ),
@@ -11202,6 +11202,7 @@ $wgConf->settings = array(
 	'otrs_wikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // T63297
 	'cawikimedia' => array( 'sysop' => array( 'translationadmin' ) ), // T75394
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
+	'eswikibooks' => array( 'sysop' => array( 'flood' ) ), // T111455
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'enwikisource' => array( 'sysop' => array( 'flood' ) ), // T38863
 	'eswiki' => array( 'sysop' => array( 'flood' ) ), // T50682
@@ -11230,6 +11231,7 @@ $wgConf->settings = array(
 	'enwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'enwikisource' => array( 'sysop' => array( 'flood' ) ), // T38863
 	'eswiki' => array( 'sysop' => array( 'flood' ) ), // T50682
+	'eswikibooks' => array( 'sysop' => array( 'flood' ) ), // T111455
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'frwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
 	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // T38600
