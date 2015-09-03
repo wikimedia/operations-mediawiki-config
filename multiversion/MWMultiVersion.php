@@ -143,6 +143,7 @@ class MWMultiVersion {
 			'wikisource.org' => 'sources',
 			'wikitech.wikimedia.org' => 'labs',
 			'affcom.wikimedia.org' => 'chapcom',
+			'be-tarask.wikipedia.org' => 'be_x_old',
 
 			// Labs
 			'beta.wmflabs.org' => 'deployment',
