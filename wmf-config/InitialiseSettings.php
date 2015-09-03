@@ -11809,6 +11809,7 @@ $wgConf->settings = array(
 		'popups',                                   // 2014-09-18 – Hovercards
 		'wikibase-otherprojects',                   // 2015-02-27 - Other projects sidebar (Wikidata)
 		'cx',                                       // 2015-07-14 - Content translation
+		'beta-feature-flow-user-talk-page',         // 2015-09-02 - Flow opt-in
 	),
 ),
 
@@ -14596,6 +14597,9 @@ $wgConf->settings = array(
 	'private' => false,
 ),
 'wmgFlowMaintenanceMode' => array(
+	'default' => false,
+),
+'wmgFlowEnableOptInBetaFeature' => array(
 	'default' => false,
 ),
 'wmgUseDisambiguator' => array(

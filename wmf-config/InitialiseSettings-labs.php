@@ -966,6 +966,9 @@ function wmfLabsSettings() {
 		'-wmgFlowCluster' => array(
 			'default' => false,
 		),
+		'wmgFlowEnableOptInBetaFeature' => array(
+			'enwiki' => true,
+		),
 		'wmgUseGather' => array(
 			'default' => true,
 		),
