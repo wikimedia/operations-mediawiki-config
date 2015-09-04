@@ -7540,8 +7540,7 @@ $wgConf->settings = array(
 			'unwatchedpages' => true,
 		),
 		'interface-editor' => array(
-			'abusefilter-hidden-log' => true,
-			'abusefilter-hide-log' => true,
+			// Some rights removed per T111439
 			'abusefilter-log' => true,
 			'abusefilter-log-detail' => true,
 			'abusefilter-modify' => true,
