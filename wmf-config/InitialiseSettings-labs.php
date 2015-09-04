@@ -102,16 +102,6 @@ function wmfLabsSettings() {
 			'en_rtlwiki' => 'http://en-rtl.wikipedia.$variant.wmflabs.org',
 		),
 
-		'+wgExtraNamespaces' => array(
-			'cawiki' => array( 190 => 'Flow_test', 191 => 'Flow_test_talk' ),
-			'enwiki' => array( 190 => 'Flow_test', 191 => 'Flow_test_talk' ),
-		),
-
-		'+wgNamespacesWithSubpages' => array(
-			'cawiki' => array( 190 => true, 191 => true ),
-			'enwiki' => array( 190 => true, 191 => true ),
-		),
-
 		'wmgUsabilityPrefSwitch' => array(
 			'default' => ''
 		),
@@ -954,10 +944,6 @@ function wmfLabsSettings() {
 		'wmgUseFlow' => array(
 			'enwiki' => true,
 			'en_rtlwiki' => true,
-		),
-		'wmgFlowOccupyNamespaces' => array(
-			'cawiki' => array( 191 ), // Flow_test_talk:
-			'enwiki' => array( 191 ), // Flow_test_talk:
 		),
 		# No separate Flow DB or cluster (yet) for labs.
 		'-wmgFlowDefaultWikiDb' => array(

@@ -92,6 +92,20 @@ if ( $wmgUseFlow ) {
 	$wgFlowParsoidURL = $wmgParsoidURL; // Re-link now it's been set to a new value
 }
 
+if ( $wgDBname === 'enwiki' || $wgDBname === 'cawiki' ) {
+	$wgExtraNamespaces += array(
+		190 => 'Flow_test',
+		191 => 'Flow_test_talk',
+	);
+
+	$wgNamespacesWithSubpages += array(
+		190 => true,
+		191 => true,
+	);
+
+	$wgFlowOccupyNamespaces[] = 191; // Flow_test_talk:
+}
+
 if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org/v1';
 	// $wmgParsoidURL from production is not accessible from Beta, so use public URL
