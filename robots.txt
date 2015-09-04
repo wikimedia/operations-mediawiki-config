@@ -141,10 +141,15 @@ Disallow: /
 # These views aren't HTTP-cached but use parser cache aggressively
 # and don't expose special: pages etc.
 #
+# Another exception is for REST API documentation, located at
+# /api/rest_v1/?doc.
+#
 User-agent: *
 Allow: /w/api.php?action=mobileview&
 Allow: /w/load.php?
+Allow: /api/rest_v1/?doc
 Disallow: /w/
+Disallow: /api/
 Disallow: /trap/
 Disallow: /wiki/Especial:Search
 Disallow: /wiki/Especial%3ASearch
