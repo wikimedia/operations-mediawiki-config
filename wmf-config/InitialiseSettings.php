@@ -8116,8 +8116,8 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true ), // T93339
 		'rollbacker' => array( 'rollback' => true ), // T93339
 	),
-	'+swwiki' => array(
-		'*' => array( 'createpage' => false ), // T44894 FIXME recheck for need around September 15 2015
+	'+svwikisource' => array( // Bug 28614 & 36895
+		'autopatrolled' => array( 'autopatrol' => true, 'suppressredirect' => true, 'upload' => true, 'reupload' => true ),
 	),
 	'tawiki' => array(
 		'nocreate' => array( 'createpage' => false, ),
