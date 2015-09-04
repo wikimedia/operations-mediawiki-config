@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_391fd30e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 15185,
+      "author": {
+        "id": 27
+      },
+      "writtenOn": "2015-09-04T21:38:18Z",
+      "side": 1,
+      "message": "You should add a comment explaining *why* it needs PerUserPoolComment. Is it a known proxy? Who operates it?",
+      "revId": "43839309c32818cb25c066365011f0aa8ae4cde8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
