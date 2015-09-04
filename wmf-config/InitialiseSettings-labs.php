@@ -103,8 +103,27 @@ function wmfLabsSettings() {
 		),
 
 		'+wgExtraNamespaces' => array(
-			'cawiki' => array( 190 => 'Flow_test', 191 => 'Flow_test_talk' ),
-			'enwiki' => array( 190 => 'Flow_test', 191 => 'Flow_test_talk' ),
+			// It doesn't seem to be possible to merge the individual entries
+			// with their standard extra namespaces inherited from
+			// InitialiseSettings.php, but I could be wrong.  So these are
+			// copied from InitialiseSettings.php.
+			'cawiki' => array(
+				100 => 'Portal', 101 => 'Portal_Discussió',
+				102 => 'Viquiprojecte', 103 => 'Viquiprojecte_Discussió',
+				190 => 'Flow_test', 191 => 'Flow_test_talk',
+			),
+			'enwiki' => array(
+				100 => 'Portal',
+				101 => 'Portal_talk',
+				# 106 => 'Table',
+				# 107 => 'Table_talk',
+				108 => 'Book',
+				109 => 'Book_talk',
+				118 => 'Draft', // T59569
+				119 => 'Draft_talk',
+				190 => 'Flow_test',
+				191 => 'Flow_test_talk',
+			),
 		),
 
 		'+wgNamespacesWithSubpages' => array(
