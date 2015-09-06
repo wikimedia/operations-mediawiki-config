@@ -14500,6 +14500,7 @@ $wgConf->settings = array(
 	'elwiki' => true, // T58771
 	'enwiki' => true,
 	'enwikinews' => true, // T55984
+	'enwikiversity' => true, // T111630
 	'eswiki' => true, // T56826
 	'fawiki' => true,
 	'frwikisource' => true, // T105853
