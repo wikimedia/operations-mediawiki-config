@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_69800ec5",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 237,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2015-09-08T23:26:47Z",
+      "side": 1,
+      "message": "Please use single quotes instead of double quotes",
+      "revId": "ab55bdab8abcffd694ef9b8139b839b5edb7dab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_c91d82c2",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 243,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2015-09-08T23:26:47Z",
+      "side": 1,
+      "message": "Space before \u003d\u003e",
+      "revId": "ab55bdab8abcffd694ef9b8139b839b5edb7dab2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
