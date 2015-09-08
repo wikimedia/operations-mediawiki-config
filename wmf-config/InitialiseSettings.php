@@ -3222,8 +3222,8 @@ $wgConf->settings = array(
 	),
 	'+lvwiki' => array(
 		'Wikipedia' => NS_PROJECT,
-		'WP' => NS_PROJECT, //T95106
-		'VP' => NS_PROJECT, //T95106
+		'WP' => NS_PROJECT, // T95106
+		'VP' => NS_PROJECT, // T95106
 	),
 	'+metawiki' => array( // T31129
 		'R' => 202,
@@ -3717,7 +3717,7 @@ $wgConf->settings = array(
 		'CAT' => NS_CATEGORY,
 		'H' => NS_HELP,
 		'P' => 100,
-		'草稿' => 118, //T91223
+		'草稿' => 118, // T91223
 	),
 	'+zhwikibooks' => array(
 		'维基教科书' => NS_PROJECT,
@@ -4435,9 +4435,9 @@ $wgConf->settings = array(
 
 # wgExtraNamespaces @{
 	// Recommended namespace numbers:
-	//    100 Portal
-	//    102 WikiProject
-	//    104 Reference
+	// * 100 - Portal
+	// * 102 - WikiProject
+	// * 104 - Reference
 	// Wikis are sorted by family (type), and then alphabetically
 
 'wgExtraNamespaces' => array(
@@ -5124,8 +5124,8 @@ $wgConf->settings = array(
 	'zhwiki' => array(
 		100 => 'Portal',
 		101 => 'Portal_talk',
-		118 => 'Draft', //T91223
-		119 => 'Draft_talk' //T91223
+		118 => 'Draft', // T91223
+		119 => 'Draft_talk' // T91223
 	),
 	'zh_classicalwiki' => array( 100 => '門', 101 => '議' ),
 	'zh_min_nanwiki' => array( 100 => 'Portal', 101 => 'Portal_talk' ),
@@ -7401,11 +7401,11 @@ $wgConf->settings = array(
 		'*' => array( 'createpage' => false, 'createtalk' => false, ),
 		'flood' => array( 'bot' => true ),
 		'rollbacker' => array( 'rollback' => true ),
-		'autopatrolled' => array( 'autopatrol' => true ), //T93371
+		'autopatrolled' => array( 'autopatrol' => true ), // T93371
 		'patroller' => array(
 			'patrol' => true,
 			'autopatrol' => true,
-		), //T93371
+		), // T93371
 	),
 	'eswikinews' => array(
 		'bot' => array( 'editprotected' => true ),
@@ -7521,11 +7521,11 @@ $wgConf->settings = array(
 	),
 	'frwikinews' => array(
 		'flood' => array( 'bot' => true ),
-		'trusteduser' => array( //T90979
+		'trusteduser' => array( // T90979
 			'autoreview' => true,
 			'unreviewedpages' => true,
 		),
-		'facilitator' => array( //T90979
+		'facilitator' => array( // T90979
 			'autoreview' => true,
 			'review' => true,
 			'validate' => true,
@@ -7790,7 +7790,7 @@ $wgConf->settings = array(
 		'patroller' => array( 'autopatrol' => true, 'patrol' => true ), // T72441
 	),
 	'+maiwiki' => array(
-		'autopatrolled' => array( 'autopatrol' => true ), //T89346
+		'autopatrolled' => array( 'autopatrol' => true ), // T89346
 	),
 	'mediawikiwiki' => array(
 		'user' => array( 'move' => false ),
@@ -8158,9 +8158,9 @@ $wgConf->settings = array(
 	),
 	'tawiki' => array(
 		'nocreate' => array( 'createpage' => false, ),
-		'autopatrolled' => array( 'autopatrol' => true ), //T95180
-		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'abusefilter-log-detail' => true ), //T95180
-		'rollbacker' => array( 'rollback' => true ), //T95180
+		'autopatrolled' => array( 'autopatrol' => true ), // T95180
+		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'abusefilter-log-detail' => true ), // T95180
+		'rollbacker' => array( 'rollback' => true ), // T95180
 	),
 	'testwiki' => array(
 		'accountcreator' => array( 'override-antispoof' => true, 'tboverride' => true ),
@@ -8716,7 +8716,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller' ),
 	),
 	'+frwikinews' => array(
-		'sysop' => array( 'trusteduser', 'facilitator' ), //T90979
+		'sysop' => array( 'trusteduser', 'facilitator' ), // T90979
 	),
 	'+frwikisource' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
@@ -8793,7 +8793,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'trusted' ),
 	),
 	'+kowiki' => array(
-		'sysop' => array( 'rollbacker', 'confirmed', 'uploader' ), //T85621
+		'sysop' => array( 'rollbacker', 'confirmed', 'uploader' ), // T85621
 	),
 	'+labswiki' => array('shellmanagers' => array( 'shell')),
 	'+legalteamwiki' => array( // T63222
@@ -9001,7 +9001,7 @@ $wgConf->settings = array(
 	),
 	'+tawiki' => array(
 		'bureaucrat' => array( 'nocreate' ),
-		'sysop' => array( 'patroller', 'rollbacker', 'autopatrolled' ), //T95180
+		'sysop' => array( 'patroller', 'rollbacker', 'autopatrolled' ), // T95180
 	),
 	'+trwiki' => array(
 		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, T40690
@@ -9369,7 +9369,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller' ),
 	),
 	'+frwikinews' => array(
-		'sysop' => array( 'trusteduser', 'facilitator' ), //T90979
+		'sysop' => array( 'trusteduser', 'facilitator' ), // T90979
 	),
 	'+frwikisource' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
@@ -9662,7 +9662,7 @@ $wgConf->settings = array(
 	),
 	'+tawiki' => array(
 		'bureaucrat' => array( 'nocreate' ),
-		'sysop' => array( 'patroller', 'rollbacker', 'autopatrolled' ), //T95180
+		'sysop' => array( 'patroller', 'rollbacker', 'autopatrolled' ), // T95180
 	),
 	'+trwiki' => array(
 		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, T40690
@@ -9830,7 +9830,7 @@ $wgConf->settings = array(
 	'cswikinews' => array( 'b', 'q', 's', 'v', 'w', 'wikt', 'incubator' ), // T18688
 	'cswikiquote' => array( 'b', 'n', 's', 'v', 'w', 'wikt' ), // T18688
 	'cswikisource' => array( 'b', 'n', 'q', 'v', 'w', 'wikt', 'oldwikisource' ), // T18688
-	'cswikiversity' => array( 'b', 'n', 'q', 's', 'w', 'wikt', 'betawikiversity' ), //T18688
+	'cswikiversity' => array( 'b', 'n', 'q', 's', 'w', 'wikt', 'betawikiversity' ), // T18688
 	'cswiktionary' => array( 'b', 'n', 'q', 's', 'v', 'w' ), // T18688
 	'donatewiki' => array( 'meta', 'foundation' ),
 	'dewiki' => array( 'w', 'wikt', 'da', 'el', 'en', 'es', 'fr', 'hu', 'it', 'ja', 'nl', 'no', 'pl', 'pt', 'ru', 'sv', 'tr', 'uk', 'zh' ), // T16303
@@ -10073,7 +10073,7 @@ $wgConf->settings = array(
 
 'wgImportTargetNamespace' => array(
 	'default' => null,
-	'cawikinews' => 100, //Transwiki T93203
+	'cawikinews' => 100, // Transwiki T93203
 	'enwiktionary' => 108,
 	'enwikibooks' => 108,
 	'frwiktionary' => 102,
@@ -10261,7 +10261,7 @@ $wgConf->settings = array(
 	),
 	'kowiki' => array(
 		118 => 'noindex,nofollow', //Draft - T92798
-		119 => 'noindex,nofollow', //T92798
+		119 => 'noindex,nofollow', // T92798
 	),
 	'ruwiki' => array(
 		102 => 'noindex,follow',
@@ -11553,9 +11553,9 @@ $wgConf->settings = array(
 
 'wmgUseLiquidThreads' => array(
 //
-//  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//  Do not enable this on new wikis.
-//  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// Do not enable this on new wikis.
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 //
 	'default' => false,
 	'testwiki' => true, // Expanding out to testwiki -- Andrew 2009-10-13
@@ -11867,7 +11867,7 @@ $wgConf->settings = array(
 
 'wgAllowMicrodataAttributes' => array(
 	'default' => false,
-	'hewikisource' => true, //T89655
+	'hewikisource' => true, // T89655
 ),
 
 // ----------- BetaFeatures start ----------
@@ -13637,7 +13637,7 @@ $wgConf->settings = array(
 		'5' => 'User %code%-5',
 		'N' => 'User %code%-N',
 	),
-	'huwikiquote' => array( //T94842
+	'huwikiquote' => array( // T94842
 		'0' => 'User %code%-0',
 		'1' => 'User %code%-1',
 		'2' => 'User %code%-2',
