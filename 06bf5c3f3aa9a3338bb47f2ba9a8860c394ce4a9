@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_27d55cba",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4437,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-09-08T01:57:44Z",
+      "side": 1,
+      "message": "These probably shouldn\u0027t be tabs. We could reduce amount of spacing though.",
+      "revId": "06bf5c3f3aa9a3338bb47f2ba9a8860c394ce4a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
