@@ -40,7 +40,7 @@ $wgPreloadJavaScriptMwUtil = true;
 $wgResourceLoaderStorageEnabled = true;
 
 if ( $wmgUseEventLogging ) {
-	$wgEventLoggingFile = 'udp://deployment-eventlogging02.eqiad.wmflabs:8421/EventLogging';
+	$wgEventLoggingFile = 'udp://deployment-eventlogging03.eqiad.wmflabs:8421/EventLogging';
 }
 
 if ( $wmfUseArticleCreationWorkflow ) {
