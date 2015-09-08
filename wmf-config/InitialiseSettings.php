@@ -6612,6 +6612,7 @@ $wgConf->settings = array(
 	'enwiktionary' => true, // T9248
 	'eswiktionary' => true, // T9953
 	'fawiki' => true, // T56596
+	'fawikibooks' => true, // T111024
 	'fawikinews' => true,
 	'fawiktionary' => true, // T85381
 	'frwiki' => true, // T9269
@@ -7477,6 +7478,11 @@ $wgConf->settings = array(
 			'protect' => true,
 			'suppressredirect'  => true
 		), // T87558
+	),
+	'+fawikibooks' => array(
+		'autopatrolled' => array( 'autopatrol' => true ), // T111024
+		'patroller' => array( 'patrol' => true ), // T111024
+		'rollbacker' => array( 'rollback' => true ), // T111024
 	),
 	'+fawikinews' => array(
 		'rollbacker' => array( 'rollback' => true ),
@@ -8670,6 +8676,13 @@ $wgConf->settings = array(
 			'eliminator' // T87558
 		), // T71411
 	),
+	'+fawikibooks' => array(
+		'sysop' => array(
+			'autopatrolled', // T111024
+			'patroller', // T111024
+			'rollbacker', // T111024
+		),
+	),
 	'+fawikinews' => array(
 		'sysop' => array( 'rollbacker', 'patroller' ),
 	),
@@ -9312,6 +9325,13 @@ $wgConf->settings = array(
 			'confirmed', // T87348
 			'eliminator' // T87558
 		), // T71411
+	),
+	'+fawikibooks' => array(
+		'sysop' => array(
+			'autopatrolled', // T111024
+			'patroller', // T111024
+			'rollbacker', // T111024
+		),
 	),
 	'+fawikinews' => array(
 		'sysop' => array( 'rollbacker', 'patroller', ),
