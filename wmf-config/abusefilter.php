@@ -38,7 +38,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 		break;
-	case 'be_x_oldwiki':
+	case 'be_taraskwiki':
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
 		$wgGroupPermissions['abusefilter']['abusefilter-log-detail'] = true;

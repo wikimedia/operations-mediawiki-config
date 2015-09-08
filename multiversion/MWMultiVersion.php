@@ -28,6 +28,11 @@ class MWMultiVersion {
 	 */
 	private $versionLoaded = false;
 
+	private static $dbRenameMap = array(
+		# new => actual DB name
+		'be_taraskwiki' => 'be_x_oldwiki'
+	);
+
 	/**
 	 * To get an instance of this class, use the static helper methods.
 	 * @see getInstanceForWiki
@@ -44,6 +49,9 @@ class MWMultiVersion {
 	public static function newFromDBName( $dbName ) {
 		$m = new self();
 		$m->db = $dbName;
+		if ( isset( self::$dbRenameMap[$m->db] ) ) {
+			$m->db = self::$dbRenameMap[$m->db];
+		}
 		return $m;
 	}
 
@@ -103,6 +111,9 @@ class MWMultiVersion {
 	public static function initializeFromDBName( $dbName ) {
 		$instance = self::createInstance();
 		$instance->db = $dbName;
+		if ( isset( self::$dbRenameMap[$instance->db] ) ) {
+			$instance->db = self::$dbRenameMap[$instance->db];
+		}
 		return $instance;
 	}
 
@@ -143,7 +154,6 @@ class MWMultiVersion {
 			'wikisource.org' => 'sources',
 			'wikitech.wikimedia.org' => 'labs',
 			'affcom.wikimedia.org' => 'chapcom',
-			'be-tarask.wikipedia.org' => 'be_x_old',
 			'ee.wikimedia.org' => 'et',
 
 			// Labs
@@ -234,6 +244,9 @@ class MWMultiVersion {
 		}
 
 		$this->db = $dbname;
+		if ( isset( self::$dbRenameMap[$this->db] ) ) {
+			$this->db = self::$dbRenameMap[$this->db];
+		}
 	}
 
 	/**
@@ -248,6 +261,10 @@ class MWMultiVersion {
 			$dbSuffix = $site;
 		}
 		$this->db = str_replace( "-", "_", $lang . $dbSuffix );
+
+		if ( isset( self::$dbRenameMap[$this->db] ) ) {
+			$this->db = self::$dbRenameMap[$this->db];
+		}
 	}
 
 	/**

@@ -71,7 +71,6 @@ $wgConf->settings = array(
 	'default' => '$lang',
 
 	# Non-ISO language codes
-	'be_x_oldwiki' => 'be-tarask',
 	'crhwiki' => 'crh-latn',
 	'nowiki' => 'nb',
 	'simplewiki' => 'en',
@@ -226,7 +225,7 @@ $wgConf->settings = array(
 	'aswikisource' => 'Asia/Kolkata', // T45129
 	'barwiki' => 'Europe/Berlin',
 	'bat_smgwiki' => 'Europe/Vilnius',
-	'be_x_oldwiki' => 'Europe/Minsk',
+	'be_taraskwiki' => 'Europe/Minsk',
 	'bewiki' => 'Europe/Minsk',
 	'bewikisource' => 'Europe/Minsk',
 	'bjnwiki' => 'Asia/Bangkok',
@@ -463,7 +462,7 @@ $wgConf->settings = array(
 	'bat_smgwiki' => '/static/images/project-logos/bat_smgwiki.png',  // T48589
 	'bclwiki' => '/static/images/project-logos/bclwiki.png',
 	'bewiki' => '/static/images/project-logos/bewiki.png',
-	'be_x_oldwiki' => '/static/images/project-logos/be_x_oldwiki.png',
+	'be_taraskwiki' => '/static/images/project-logos/be_taraskwiki.png',
 	'bgwiki' => '/static/images/project-logos/bgwiki.png',
 	'bhwiki' => '/static/images/project-logos/bhwiki.png',  // T50397
 	'biwiki' => '/static/images/project-logos/biwiki.png',  // T51125
@@ -1317,7 +1316,6 @@ $wgConf->settings = array(
 	'advisorywiki' => '//advisory.wikimedia.org',
 	'arwikimedia' => '//ar.wikimedia.org',
 	'auditcomwiki' => '//auditcom.wikimedia.org',
-	'be_x_oldwiki' => '//be-tarask.wikipedia.org',
 	'boardgovcomwiki' => '//boardgovcom.wikimedia.org',
 	'boardwiki' => '//board.wikimedia.org',
 	'brwikimedia' => '//br.wikimedia.org',
@@ -1399,7 +1397,6 @@ $wgConf->settings = array(
 	'advisorywiki' => 'https://advisory.wikimedia.org',
 	'arwikimedia' => 'https://ar.wikimedia.org',
 	'auditcomwiki' => 'https://auditcom.wikimedia.org',
-	'be_x_oldwiki' => 'https://be-tarask.wikipedia.org',
 	'boardgovcomwiki' => 'https://boardgovcom.wikimedia.org',
 	'boardwiki' => 'https://board.wikimedia.org',
 	'brwikimedia' => 'https://br.wikimedia.org',
@@ -1514,7 +1511,7 @@ $wgConf->settings = array(
 	'azbwiki' => 'ویکی‌پدیا', // T106305
 	'bawiki' => 'Википедия', // T43167
 	'bdwikimedia' => 'উইকিমিডিয়া বাংলাদেশ',
-	'be_x_oldwiki' => 'Вікіпэдыя',
+	'be_taraskwiki' => 'Вікіпэдыя',
 	'bewiki' => 'Вікіпедыя',
 	'bewikimedia' => 'Wikimedia Belgium',
 	'bewikisource' => 'Вікікрыніцы',
@@ -1995,7 +1992,7 @@ $wgConf->settings = array(
 	'bawiki' => 'Википедия', // T43167
 	'bat_smgwiki' => 'Vikipedėjė',
 	'bdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ',
-	'be_x_oldwiki' => 'Вікіпэдыя',
+	'be_taraskwiki' => 'Вікіпэдыя',
 	'bewiki' => 'Вікіпедыя',
 	'bewikisource' => 'Вікікрыніцы',
 	'bgwiki' => 'Уикипедия',
@@ -2633,7 +2630,7 @@ $wgConf->settings = array(
 		'Portal_talk' => 101,
 		'ВП' => NS_PROJECT,
 	),
-	'+be_x_oldwiki' => array(
+	'+be_taraskwiki' => array(
 		'ВП' => NS_PROJECT,
 	),
 	'+bewikisource' => array(
@@ -4695,7 +4692,7 @@ $wgConf->settings = array(
 		100 => 'Партал', // Portal
 		101 => 'Размовы_пра_партал', // Portal talk
 	),
-	'be_x_oldwiki' => array(
+	'be_taraskwiki' => array(
 		100 => 'Партал',
 		101 => 'Абмеркаваньне_парталу',
 	),
@@ -8634,7 +8631,7 @@ $wgConf->settings = array(
 	'+bewikimedia' => array(
 		'bureaucrat' => array( 'translationadmin' ),
 	),
-	'+be_x_oldwiki' => array(
+	'+be_taraskwiki' => array(
 		'sysop' => array( 'abusefilter' ),
 	),
 	'+bgwiki' => array(
@@ -9290,7 +9287,7 @@ $wgConf->settings = array(
 	'+bewikimedia' => array(
 		'bureaucrat' => array( 'translationadmin' ),
 	),
-	'+be_x_oldwiki' => array(
+	'+be_taraskwiki' => array(
 		'sysop' => array( 'abusefilter' ),
 	),
 	'+bgwiki' => array(
@@ -13144,7 +13141,7 @@ $wgConf->settings = array(
 	// Multilingual wikis
 	'mediawikiwiki' => 'uca-default',
 	// Single-language wikis
-	'be_x_oldwiki' => 'uca-be-tarask', // T48005
+	'be_taraskwiki' => 'uca-be-tarask', // T48005
 	'bewiki' => 'uca-be', // T48004
 	'bewikisource' => 'uca-be', // T48004
 	'bswiki' => 'uca-bs', // T116527
@@ -14651,7 +14648,7 @@ $wgConf->settings = array(
 	'testwikidatawiki' => true,
 	'arwiki' => true,
 	'astwiki' => true,
-	'be_x_oldwiki' => true,
+	'be_taraskwiki' => true,
 	'bewiki' => true,
 	'bnwiki' => true,
 	'bswiki' => true,
@@ -15285,7 +15282,7 @@ $wgConf->settings = array(
 	'test2wiki' => array(
 		'siteGlobalID' => 'enwiki'
 	),
-	'be_x_oldwiki' => array(
+	'be_taraskwiki' => array(
 		'sort' => 'alphabetic',
 	),
 	// T55993
