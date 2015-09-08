@@ -1,26 +1,28 @@
 [
     {
         "name": "wikimedia/cdb",
-        "version": "1.0.1",
-        "version_normalized": "1.0.1.0",
+        "version": "1.2.0",
+        "version_normalized": "1.2.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/wikimedia/cdb.git",
-            "reference": "3b7d5366c88eccf2517ebac57c59eb557c82f46c"
+            "reference": "7c536c4be5e9e836eb667dc1e2f8c5482b7a42a0"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/wikimedia/cdb/zipball/3b7d5366c88eccf2517ebac57c59eb557c82f46c",
-            "reference": "3b7d5366c88eccf2517ebac57c59eb557c82f46c",
+            "url": "https://api.github.com/repos/wikimedia/cdb/zipball/7c536c4be5e9e836eb667dc1e2f8c5482b7a42a0",
+            "reference": "7c536c4be5e9e836eb667dc1e2f8c5482b7a42a0",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.2"
         },
         "require-dev": {
-            "phpunit/phpunit": "*"
+            "jakub-onderka/php-parallel-lint": "0.9",
+            "mediawiki/mediawiki-codesniffer": "0.3.0",
+            "phpunit/phpunit": "4.6.*"
         },
-        "time": "2014-12-08 19:26:44",
+        "time": "2015-09-08 15:26:14",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -30,7 +32,7 @@
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "GPL-2.0"
+            "GPL-2.0+"
         ],
         "authors": [
             {
@@ -40,6 +42,10 @@
             {
                 "name": "Chad Horohoe",
                 "email": "chad@wikimedia.org"
+            },
+            {
+                "name": "Ori Livneh",
+                "email": "ori@wikimedia.org"
             }
         ],
         "description": "Constant Database (CDB) wrapper library for PHP. Provides pure-PHP fallback when dba_* functions are absent.",

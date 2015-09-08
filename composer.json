@@ -2,7 +2,7 @@
 	"name": "wikimedia/mediawiki-config",
 	"description": "MediaWiki configuration for the Wikimedia farm",
 	"require": {
-		"wikimedia/cdb": "1.0.1"
+		"wikimedia/cdb": "1.2.0"
 	},
 	"config": {
 		"classmap-authoritative": true,

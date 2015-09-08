@@ -1,16 +1,14 @@
 <?php
 
 namespace Cdb\Reader;
+
 use Cdb\Exception;
 use Cdb\Reader;
 use Cdb\Util;
 
 /**
  * This is a port of D.J. Bernstein's CDB to PHP. It's based on the copy that
- * appears in PHP 5.3. Changes are:
- *    * Error returns replaced with exceptions
- *    * Exception thrown if sizes or offsets are between 2GB and 4GB
- *    * Some variables renamed
+ * appears in PHP 5.3.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -34,29 +32,21 @@ use Cdb\Util;
  * CDB reader class
  */
 class PHP extends Reader {
+
 	/** The filename */
 	protected $fileName;
 
-	/* number of hash slots searched under this key */
-	protected $loop;
+	/** The CDB file's lookup table **/
+	protected $hashTable;
 
-	/* initialized if loop is nonzero */
-	protected $khash;
+	/* initialized if find() returns true */
+	protected $dataPos;
 
-	/* initialized if loop is nonzero */
-	protected $kpos;
+	/* initialized if find() returns true */
+	protected $dataLen;
 
-	/* initialized if loop is nonzero */
-	protected $hpos;
-
-	/* initialized if loop is nonzero */
-	protected $hslots;
-
-	/* initialized if findNext() returns true */
-	protected $dpos;
-
-	/* initialized if cdb_findnext() returns 1 */
-	protected $dlen;
+	/* reset by firstkey() */
+	protected $pos = 2048;
 
 	/**
 	 * @param string $fileName
@@ -68,7 +58,10 @@ class PHP extends Reader {
 		if ( !$this->handle ) {
 			throw new Exception( 'Unable to open CDB file "' . $this->fileName . '".' );
 		}
-		$this->findStart();
+		$this->hashTable = fread( $this->handle, 2048 );
+		if ( strlen( $this->hashTable ) !== 2048 ) {
+			throw new Exception( 'CDB file contains fewer than 2048 bytes of data.' );
+		}
 	}
 
 	public function close() {
@@ -85,121 +78,146 @@ class PHP extends Reader {
 	public function get( $key ) {
 		// strval is required
 		if ( $this->find( strval( $key ) ) ) {
-			return $this->read( $this->dlen, $this->dpos );
+			return $this->read( $this->dataPos, $this->dataLen );
 		}
 
 		return false;
 	}
 
 	/**
-	 * @param string $key
-	 * @param int $pos
-	 * @return bool
-	 */
-	protected function match( $key, $pos ) {
-		$buf = $this->read( strlen( $key ), $pos );
-
-		return $buf === $key;
-	}
-
-	protected function findStart() {
-		$this->loop = 0;
-	}
-
-	/**
 	 * @throws Exception
-	 * @param int $length
-	 * @param int $pos
+	 * @param int $start
+	 * @param int $len
 	 * @return string
 	 */
-	protected function read( $length, $pos ) {
-		if ( fseek( $this->handle, $pos ) == -1 ) {
-			// This can easily happen if the internal pointers are incorrect
-			throw new Exception(
-				'Seek failed, file "' . $this->fileName . '" may be corrupted.' );
+	protected function read( $start, $len ) {
+		static $buf, $bufStart, $pos = 2048;
+
+		$end = $start + $len;
+
+		// The first 2048 bytes are the lookup table, which is read into
+		// memory on initialization.
+		if ( $end <= 2048 ) {
+			return substr( $this->hashTable, $start, $len );
 		}
 
-		if ( $length == 0 ) {
-			return '';
+		// Read data from the internal buffer first.
+		$bytes = '';
+		if ( $buf && $start >= $bufStart ) {
+			$bytes .= substr( $buf, $start - $bufStart, $len );
+			$bytesRead = strlen( $bytes );
+			$len -= $bytesRead;
+			$start += $bytesRead;
+		} else {
+			$bytesRead = 0;
 		}
 
-		$buf = fread( $this->handle, $length );
-		if ( $buf === false || strlen( $buf ) !== $length ) {
+		if ( !$len ) {
+			return $bytes;
+		}
+
+		// Many reads are sequential, so the file position indicator may
+		// already be in the right place, in which case we can avoid the
+		// call to fseek().
+		if ( $start !== $pos ) {
+			if ( fseek( $this->handle, $start ) === -1 ) {
+				// This can easily happen if the internal pointers are incorrect
+				throw new Exception(
+					'Seek failed, file "' . $this->fileName . '" may be corrupted.' );
+			}
+		}
+
+		$buf = fread( $this->handle, max( $len, 1024 ) );
+		if ( $buf === false ) {
+			$buf = '';
+		}
+
+		$bufStart = $start;
+		$pos = $end;
+		$bytes .= substr( $buf, 0, $len );
+		if ( strlen( $bytes ) !== $len + $bytesRead ) {
 			throw new Exception(
 				'Read from CDB file failed, file "' . $this->fileName . '" may be corrupted.' );
 		}
 
-		return $buf;
+		return $bytes;
 	}
 
 	/**
-	 * Unpack an unsigned integer and throw an exception if it needs more than 31 bits
-	 * @param string $s
+	 * Unpack an unsigned integer and throw an exception if it needs more than 31 bits.
+	 *
+	 * @param int $pos
 	 * @throws Exception
-	 * @return mixed
+	 * @return int
 	 */
-	protected function unpack31( $s ) {
-		$data = unpack( 'V', $s );
-		if ( $data[1] > 0x7fffffff ) {
+	protected function readInt31( $pos = 0 ) {
+		$uint31 = $this->readInt32( $pos );
+		if ( $uint31 > 0x7fffffff ) {
 			throw new Exception(
 				'Error in CDB file "' . $this->fileName . '", integer too big.' );
 		}
 
-		return $data[1];
+		return $uint31;
 	}
 
 	/**
-	 * Unpack a 32-bit signed integer
-	 * @param string $s
+	 * Unpack a 32-bit integer
+	 *
+	 * @param int $pos
 	 * @return int
 	 */
-	protected function unpackSigned( $s ) {
-		$data = unpack( 'va/vb', $s );
-
-		return $data['a'] | ( $data['b'] << 16 );
+	protected function readInt32( $pos = 0 ) {
+		$buf = $this->read( $pos, 4 );
+		return (
+			  ord( $buf[ 0 ] )         |
+			( ord( $buf[ 1 ] ) <<  8 ) |
+			( ord( $buf[ 2 ] ) << 16 ) |
+			( ord( $buf[ 3 ] ) << 24 )
+		);
 	}
 
 	/**
 	 * @param string $key
 	 * @return bool
 	 */
-	protected function findNext( $key ) {
-		if ( !$this->loop ) {
-			$u = Util::hash( $key );
-			$buf = $this->read( 8, ( $u << 3 ) & 2047 );
-			$this->hslots = $this->unpack31( substr( $buf, 4 ) );
-			if ( !$this->hslots ) {
-				return false;
-			}
-			$this->hpos = $this->unpack31( substr( $buf, 0, 4 ) );
-			$this->khash = $u;
-			$u = Util::unsignedShiftRight( $u, 8 );
-			$u = Util::unsignedMod( $u, $this->hslots );
-			$u <<= 3;
-			$this->kpos = $this->hpos + $u;
-		}
+	protected function find( $key ) {
+		$keyLen = strlen( $key );
 
-		while ( $this->loop < $this->hslots ) {
-			$buf = $this->read( 8, $this->kpos );
-			$pos = $this->unpack31( substr( $buf, 4 ) );
+		$u = Util::hash( $key );
+		$upos = ( $u << 3 ) & 2047;
+		$hashSlots = $this->readInt31( $upos + 4 );
+		if ( !$hashSlots ) {
+			return false;
+		}
+		$hashPos = $this->readInt31( $upos );
+		$keyHash = $u;
+		$u = Util::unsignedShiftRight( $u, 8 );
+		$u = Util::unsignedMod( $u, $hashSlots );
+		$u <<= 3;
+		$keyPos = $hashPos + $u;
+
+		for ( $i = 0; $i < $hashSlots; $i++ ) {
+			$hash = $this->readInt32( $keyPos );
+			$pos = $this->readInt31( $keyPos + 4 );
 			if ( !$pos ) {
 				return false;
 			}
-			$this->loop += 1;
-			$this->kpos += 8;
-			if ( $this->kpos == $this->hpos + ( $this->hslots << 3 ) ) {
-				$this->kpos = $this->hpos;
+			$keyPos += 8;
+			if ( $keyPos == $hashPos + ( $hashSlots << 3 ) ) {
+				$keyPos = $hashPos;
 			}
-			$u = $this->unpackSigned( substr( $buf, 0, 4 ) );
-			if ( $u === $this->khash ) {
-				$buf = $this->read( 8, $pos );
-				$keyLen = $this->unpack31( substr( $buf, 0, 4 ) );
-				if ( $keyLen == strlen( $key ) && $this->match( $key, $pos + 8 ) ) {
-					// Found
-					$this->dlen = $this->unpack31( substr( $buf, 4 ) );
-					$this->dpos = $pos + 8 + $keyLen;
+			if ( $hash === $keyHash ) {
+				if ( $keyLen === $this->readInt31( $pos ) ) {
+					$dataLen = $this->readInt31( $pos + 4 );
+					$dataPos = $pos + 8 + $keyLen;
+					$foundKey = $this->read( $pos + 8, $keyLen );
+					if ( $foundKey === $key ) {
+						// Found
+						$this->dataLen = $dataLen;
+						$this->dataPos = $dataPos;
 
-					return true;
+						return true;
+					}
 				}
 			}
 		}
@@ -207,14 +225,21 @@ class PHP extends Reader {
 		return false;
 	}
 
-	/**
-	 * @param mixed $key
-	 * @return bool
-	 */
-	protected function find( $key ) {
-		$this->findStart();
+	public function exists( $key ) {
+		return $this->find( strval( $key ) );
+	}
 
-		return $this->findNext( $key );
+	public function firstkey() {
+		$this->pos = 2048;
+		return $this->nextkey();
+	}
+
+	public function nextkey() {
+		$keyLen = $this->readInt31( $this->pos );
+		$dataLen = $this->readInt31( $this->pos + 4 );
+		$key = $this->read( $this->pos + 8, $keyLen );
+		$this->pos += 8 + $keyLen + $dataLen;
+
+		return $key;
 	}
 }
-
