@@ -74,7 +74,7 @@ $wmgMonologConfig =  array(
 		'line' => array(
 			'class' => '\\MediaWiki\\Logger\\Monolog\\LineFormatter',
 			'args' => array(
-				"%datetime% %extra.host% %extra.wiki% %channel% %level_name%: %message% %context%\n",
+				"%datetime% %extra.host% %extra.wiki% %channel% %level_name%: %message% %context% %exception%\n",
 				'Y-m-d H:i:s',
 				true, // allowInlineLineBreaks
 				true, // ignoreEmptyContextAndExtra
