@@ -986,6 +986,10 @@ function wmfLabsSettings() {
 			'metawiki' => true,
 		),
 
+		'wmgUseQuickSurveys' => array(
+			'default' => true,
+		),
+
 		'wmgUseSentry' => array(
 			'default' => true,
 		),
