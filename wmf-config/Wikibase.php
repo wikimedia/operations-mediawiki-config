@@ -169,10 +169,6 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
 	$wgWBClientSettings['allowArbitraryDataAccess'] = $wmgWikibaseEnableArbitraryAccess;
-	$wgWBClientSettings['useLegacyUsageIndex'] = $wmgWikibaseUseLegacyUsageIndex;
-
-	// enable this in batches, like and in sync with usage tracking
-	$wgWBClientSettings['useLegacyChangesSubscription'] = $wmgWikibaseUseLegacyUsageIndex;
 
 	$wgWBClientSettings['sharedCacheKeyPrefix'] .= $wgWBSharedCacheKey;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
