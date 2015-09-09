@@ -8061,6 +8061,7 @@ $wgConf->settings = array(
 	'+scowiki' => array(
 		'rollbacker' => array( 'rollback' => true ),
 		'autopatrolled' => array( 'autopatrol' => true, ),
+		'flood' => array( 'bot' => true, ), // T111753
 	),
 	'+sewikimedia' => array(
 		'*' => array(
