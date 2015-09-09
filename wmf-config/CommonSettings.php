@@ -145,7 +145,7 @@ if ( !$globals ) {
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small', 'medium',
 			'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-default',
 			'commonsuploads', 'nonbetafeatures', 'group0', 'wikipedia',
-			'arbitraryaccess', 'usagetracking', 'nonglobal',
+			'arbitraryaccess', 'nonglobal',
 		) as $tag ) {
 		$dblist = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../$tag.dblist" ) );
 		if ( in_array( $wgDBname, $dblist ) ) {

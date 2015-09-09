@@ -14967,11 +14967,6 @@ $wgConf->settings = array(
 	'arbitraryaccess' => true,
 ),
 
-'wmgWikibaseUseLegacyUsageIndex' => array(
-	'default' => true,
-	'usagetracking' => false,
-),
-
 'wmgUseWikibaseRepo' => array(
 	'default' => false,
 	'wikidata' => true,
