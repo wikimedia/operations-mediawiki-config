@@ -5,11 +5,15 @@
 # to the 'labs' realm which in most of the cases means the beta cluster.
 # It should be loaded AFTER CirrusSearch-common.php
 
-$wgCirrusSearchServers = array(
-	'deployment-elastic05',
-	'deployment-elastic06',
-	'deployment-elastic07',
-	'deployment-elastic08',
+$wgCirrusSearchDefaultCluster = 'eqiad';
+
+$wgCirrusSearchClusters = array(
+	'eqiad' => array(
+		'deployment-elastic05',
+		'deployment-elastic06',
+		'deployment-elastic07',
+		'deployment-elastic08',
+	),
 );
 
 if ( $wgDBname == 'enwiki' ) {
