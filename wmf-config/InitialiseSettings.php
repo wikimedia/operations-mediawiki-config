@@ -4394,6 +4394,7 @@ $wgConf->settings = array(
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 		'wikibase-debug' => 'debug',
 		'xenon' => 'debug',
+		'XMP' => 'warning', // T89532
 		'xff' => array( 'logstash' => false ),
 		'zero' => 'debug', // zero-rated debug log
 	),
