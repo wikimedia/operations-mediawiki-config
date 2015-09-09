@@ -7512,8 +7512,9 @@ $wgConf->settings = array(
 		'flood' => array( 'bot' => true ),
 	),
 	'frwiki' => array(
-		'user' => array( 'move' => false ), // requested by hashar
-		'autopatrolled' => array( 'patrol' => true, 'autopatrol' => true, 'movefile' => true ), // T10904, T23078, T87145
+		'user' => array( 'move' => false, 'changetags' => false ), // requested by hashar, T98629
+		'bot' => array ( 'changetags' => true ), // T98629
+		'autopatrolled' => array( 'patrol' => true, 'autopatrol' => true, 'movefile' => true, 'changetags' => true ), // T10904, T23078, T87145, T98629
 		'checkuser' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ), // T23044
 	),
 	'+frwikibooks' => array(
