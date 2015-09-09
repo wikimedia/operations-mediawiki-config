@@ -20,6 +20,7 @@ anwiki
 arcwiki
 arwiki
 arwikibooks
+arwikinews
 arwikiquote
 arwikisource
 arzwiki
@@ -49,6 +50,7 @@ bewikiquote
 bewikisource
 bgwiki
 bgwikibooks
+bgwikinews
 bgwikiquote
 bgwikisource
 bhwiki
@@ -69,12 +71,14 @@ brwikiquote
 brwikisource
 bswiki
 bswikibooks
+bswikinews
 bswikiquote
 bswikisource
 bugwiki
 bxrwiki
 cawiki
 cawikibooks
+cawikinews
 cawikiquote
 cawikisource
 cbk_zamwiki
@@ -96,6 +100,7 @@ crwikiquote
 csbwiki
 cswiki
 cswikibooks
+cswikinews
 cswikiquote
 cswikisource
 cuwiki
@@ -111,6 +116,7 @@ dawikiquote
 dawikisource
 dewiki
 dewikibooks
+dewikinews
 dewikiquote
 dewikisource
 dewikivoyage
@@ -121,21 +127,25 @@ dzwiki
 eewiki
 elwiki
 elwikibooks
+elwikinews
 elwikiquote
 elwikisource
 elwikivoyage
 emlwiki
 enwiki
 enwikibooks
+enwikinews
 enwikiquote
 enwikisource
 enwikivoyage
 eowiki
 eowikibooks
+eowikinews
 eowikiquote
 eowikisource
 eswiki
 eswikibooks
+eswikinews
 eswikiquote
 eswikisource
 eswikivoyage
@@ -149,6 +159,7 @@ euwikiquote
 extwiki
 fawiki
 fawikibooks
+fawikinews
 fawikiquote
 fawikisource
 fawikivoyage
@@ -156,6 +167,7 @@ ffwiki
 fiu_vrowiki
 fiwiki
 fiwikibooks
+fiwikinews
 fiwikiquote
 fiwikisource
 fjwiki
@@ -165,6 +177,7 @@ frpwiki
 frrwiki
 frwiki
 frwikibooks
+frwikinews
 frwikiquote
 frwikisource
 frwikivoyage
@@ -197,6 +210,7 @@ hawiki
 hawwiki
 hewiki
 hewikibooks
+hewikinews
 hewikiquote
 hewikisource
 hewikivoyage
@@ -214,6 +228,7 @@ htwiki
 htwikisource
 huwiki
 huwikibooks
+huwikinews
 huwikiquote
 huwikisource
 hywiki
@@ -240,12 +255,14 @@ iswikiquote
 iswikisource
 itwiki
 itwikibooks
+itwikinews
 itwikiquote
 itwikisource
 itwikivoyage
 iuwiki
 jawiki
 jawikibooks
+jawikinews
 jawikiquote
 jawikisource
 jbowiki
@@ -272,6 +289,7 @@ knwikisource
 koiwiki
 kowiki
 kowikibooks
+kowikinews
 kowikiquote
 kowikisource
 krcwiki
@@ -368,6 +386,7 @@ newwiki
 ngwiki
 nlwiki
 nlwikibooks
+nlwikinews
 nlwikiquote
 nlwikisource
 nlwikivoyage
@@ -376,6 +395,7 @@ nnwikiquote
 novwiki
 nowiki
 nowikibooks
+nowikinews
 nowikiquote
 nowikisource
 nrmwiki
@@ -400,6 +420,7 @@ pihwiki
 piwiki
 plwiki
 plwikibooks
+plwikinews
 plwikiquote
 plwikisource
 plwikivoyage
@@ -410,6 +431,7 @@ pswiki
 pswikibooks
 ptwiki
 ptwikibooks
+ptwikinews
 ptwikiquote
 ptwikisource
 ptwikivoyage
@@ -424,12 +446,14 @@ roa_rupwiki
 roa_tarawiki
 rowiki
 rowikibooks
+rowikinews
 rowikiquote
 rowikisource
 rowikivoyage
 ruewiki
 ruwiki
 ruwikibooks
+ruwikinews
 ruwikiquote
 ruwikisource
 ruwikivoyage
@@ -444,6 +468,7 @@ scnwiki
 scowiki
 scwiki
 sdwiki
+sdwikinews
 sewiki
 sewikibooks
 sgwiki
@@ -466,10 +491,12 @@ snwiki
 sowiki
 sqwiki
 sqwikibooks
+sqwikinews
 sqwikiquote
 srnwiki
 srwiki
 srwikibooks
+srwikinews
 srwikiquote
 srwikisource
 sswiki
@@ -480,6 +507,7 @@ suwikibooks
 suwikiquote
 svwiki
 svwikibooks
+svwikinews
 svwikiquote
 svwikisource
 svwikivoyage
@@ -488,6 +516,7 @@ swwikibooks
 szlwiki
 tawiki
 tawikibooks
+tawikinews
 tawikiquote
 tawikisource
 testwiki
@@ -501,6 +530,7 @@ tgwiki
 tgwikibooks
 thwiki
 thwikibooks
+thwikinews
 thwikiquote
 thwikisource
 tiwiki
@@ -514,6 +544,7 @@ towiki
 tpiwiki
 trwiki
 trwikibooks
+trwikinews
 trwikiquote
 trwikisource
 tswiki
@@ -530,6 +561,7 @@ ugwikibooks
 ugwikiquote
 ukwiki
 ukwikibooks
+ukwikinews
 ukwikiquote
 ukwikisource
 ukwikivoyage
@@ -579,6 +611,7 @@ zh_min_nanwikisource
 zh_yuewiki
 zhwiki
 zhwikibooks
+zhwikinews
 zhwikiquote
 zhwikisource
 zhwikivoyage
