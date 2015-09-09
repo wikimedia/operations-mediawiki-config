@@ -5,8 +5,12 @@
 # to the 'production' realm.
 # It should be loaded AFTER CirrusSearch-common.php
 
-$wgCirrusSearchServers = array(
-	'10.2.2.30', # search.svc.eqiad.wmnet
+$wgCirrusSearchDefaultCluster = 'eqiad';
+
+$wgCirrusSearchClusters = array(
+	'eqiad' => array(
+		'10.2.2.30', # search.svc.eqiad.wmnet
+	),
 );
 
 $wgCirrusSearchConnectionAttempts = 3;
