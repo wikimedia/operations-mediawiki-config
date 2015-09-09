@@ -13752,6 +13752,15 @@ $wgConf->settings = array(
 		'5' => false,
 		'N' => 'Usores %code%-N',
 	),
+	'ladwiki' => array(
+		'0' => false,
+		'1' => 'User %code%-1',
+		'2' => 'User %code%-2',
+		'3' => 'User %code%-3',
+		'4' => 'User %code%-4',
+		'5' => 'User %code%-5',
+		'N' => 'User %code%-N',
+	),
 	'minwiki' => array(
 		'0' => 'Pengguna %code%-0',
 		'1' => 'Pengguna %code%-1',
