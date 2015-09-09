@@ -242,7 +242,7 @@ if ( $wmgUseQuickSurveys ) {
 			'neutral' => 'ext-quicksurveys-example-internal-survey-answer-neutral',
 			'negative' => 'ext-quicksurveys-example-internal-survey-answer-negative',
 		),
-		'schema' => 'QuickSurveysResponses',
+		'schema' => 'QuickSurveysResponse',
 		'enabled' => true,
 		'coverage' => .5,
 		'description' => 'ext-quicksurveys-example-internal-survey-description',
