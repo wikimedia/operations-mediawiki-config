@@ -8061,6 +8061,7 @@ $wgConf->settings = array(
 	'+scowiki' => array(
 		'rollbacker' => array( 'rollback' => true ),
 		'autopatrolled' => array( 'autopatrol' => true, ),
+		'flood' => array( 'bot' => true, ), // T111753
 	),
 	'+sewikimedia' => array(
 		'*' => array(
@@ -8934,7 +8935,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled' ),
 	),
 	'+scowiki' => array(
-		'sysop' => array( 'rollbacker', 'autopatrolled', )
+		'sysop' => array( 'rollbacker', 'autopatrolled', 'flood', )
 	),
 	'+sewikimedia' => array(
 		'bureaucrat' => array( 'medlem' ),
@@ -9592,7 +9593,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled' ),
 	),
 	'+scowiki' => array(
-		'sysop' => array( 'rollbacker', 'autopatrolled', )
+		'sysop' => array( 'rollbacker', 'autopatrolled', 'flood', )
 	),
 	'+sewikimedia' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'medlem' ),
