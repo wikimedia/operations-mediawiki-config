@@ -11634,6 +11634,10 @@ $wgConf->settings = array(
 	'default' => 10800,
 ),
 
+'wgSearchRunSuggestedQueryPercent' => array(
+	'default' => 1,
+),
+
 'wgDisableHardRedirects' => array(
 	'default' => true,
 	'donatewiki' => false,
