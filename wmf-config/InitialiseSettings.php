@@ -14967,6 +14967,11 @@ $wgConf->settings = array(
 	'arbitraryaccess' => true,
 ),
 
+'wmgWikibaseEntityAccessLimit' => array(
+	'default' => 400,
+	'wikidatawiki' => 500,
+),
+
 'wmgUseWikibaseRepo' => array(
 	'default' => false,
 	'wikidata' => true,

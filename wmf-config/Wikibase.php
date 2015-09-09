@@ -169,6 +169,7 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
 	$wgWBClientSettings['allowArbitraryDataAccess'] = $wmgWikibaseEnableArbitraryAccess;
+	$wgWBClientSettings['entityAccessLimit'] = $wmgWikibaseEntityAccessLimit;
 
 	$wgWBClientSettings['sharedCacheKeyPrefix'] .= $wgWBSharedCacheKey;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
