@@ -10417,6 +10417,7 @@ $wgConf->settings = array(
 	'+eswiki' => array( 104 ), // T41866
 	'+eswikisource' => array( 102, 104 ),
 	'+etwikisource' => array( 102, 104, 106 ),
+	'+fawikibooks' => array( 102, 110 ), // T76663
 	'+fawikisource' => array( 102, 104 ),
 	'+frrwiki' => array( 102, 104, 106 ), // T40023
 	'+frwikisource' => array( 102, 104, 112 ),
