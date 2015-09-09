@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_131bb474",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 245,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2015-09-09T17:44:09Z",
+      "side": 0,
+      "message": "https://meta.wikimedia.org/wiki/Schema:QuickSurveysResponses is correct...",
+      "revId": "88a9726be933dad6f6cef134b546f39b1e7267fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
