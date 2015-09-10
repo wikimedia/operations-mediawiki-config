@@ -17,7 +17,6 @@ wikiversions-labs.cdb
 wmf-config/*-setup.php
 wmf-config/checkers.php
 wmf-config/interwiki.cdb
-wmf-config/interwiki-labs.cdb
 lib
 cgi-bin
 boardvote.gpg
