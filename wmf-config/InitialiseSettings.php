@@ -14844,6 +14844,12 @@ $wgConf->settings = array(
 	'default' => 'Main',
 ),
 
+// Suggestions
+'wgContentTranslationEnableSuggestions' => array(
+	'default' => false,
+	'ptwiki' => true,
+),
+
 'wmgUseMapSources' => array(
 	'default' => false,
 	'wikivoyage' => true,
