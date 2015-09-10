@@ -911,6 +911,10 @@ function wmfLabsSettings() {
 			'default' => array( 'newarticle' ),
 		),
 
+		'wmgContentTranslationEnableSuggestions' => array(
+			'default' => true,
+		),
+
 		'wmgUseNavigationTiming' => array(
 			'default' => true,
 		),
