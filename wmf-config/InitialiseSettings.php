@@ -14468,6 +14468,7 @@ $wgConf->settings = array(
 	'ptwikibooks' => true, // T50778
 	'ruwiki' => true,
 	'sewikimedia' => true, // T63192
+	'srwiki' => true, // T107862
 	'svwiki' => true,
 	'tewiki' => true,
 	'thwiki' => true, // T100079
