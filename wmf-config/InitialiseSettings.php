@@ -10240,6 +10240,7 @@ $wgConf->settings = array(
 	),
 	'enwiki' => array(
 		NS_USER_TALK => 'noindex,follow',
+		NS_USER => 'noindex', //User, per T104797
 		118 => 'noindex,nofollow', // draft
 		119 => 'noindex,nofollow', // draft talk
 	),
