@@ -148,7 +148,7 @@ if ( !$globals ) {
 			'arbitraryaccess', 'nonglobal',
 		) as $tag ) {
 		$dblist = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../$tag.dblist" ) );
-		if ( in_array( $wgDBname, $dblist ) ) {
+		if ( in_array( $wDBname, $dblist ) ) {
 			$wikiTags[] = $tag;
 		}
 	}
@@ -2721,6 +2721,11 @@ if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationCampaigns = $wmgContentTranslationCampaigns;
 
 	$wgContentTranslationDefaultSourceLanguage = $wmgContentTranslationDefaultSourceLanguage;
+
+	if ( $wgDBname == 'ptwiki' ) {
+		// Enable suggestions
+		$wgContentTranslationEnableSuggestions = true;
+	}
 }
 
 // @note getRealmSpecificFilename only works with filenames with .suffix
