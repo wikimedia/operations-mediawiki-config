@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_621b3c86",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2725,
+      "author": {
+        "id": 110
+      },
+      "writtenOn": "2015-09-10T06:13:01Z",
+      "side": 1,
+      "message": "Don\u0027t we usually set this in InitialiseSettings.php?",
+      "revId": "cbf883763c62cf2ed61ad362b1d73b0dd9e450a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
