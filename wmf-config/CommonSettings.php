@@ -1748,9 +1748,7 @@ if ( $wgUseContributionTracking ) {
 }
 
 if ( $wmgUseMassMessage ) {
-	require_once( "$IP/extensions/MassMessage/MassMessage.php" );
-	$wgNamespacesToPostIn = $wmgNamespacesToPostIn;
-	$wgAllowGlobalMessaging = $wmgAllowGlobalMessaging;
+	wfLoadExtension( 'MassMessage' );
 }
 
 if ( $wmgUseSandboxLink ) {

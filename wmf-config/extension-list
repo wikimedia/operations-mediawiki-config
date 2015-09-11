@@ -71,7 +71,7 @@ $IP/extensions/LiquidThreads/LiquidThreads.php
 $IP/extensions/Listings/Listings.php
 $IP/extensions/LocalisationUpdate/LocalisationUpdate.php
 $IP/extensions/MapSources/MapSources.php
-$IP/extensions/MassMessage/MassMessage.php
+$IP/extensions/MassMessage/extension.json
 $IP/extensions/Math/Math.php
 $IP/extensions/MobileApp/MobileApp.php
 $IP/extensions/MobileFrontend/MobileFrontend.php
