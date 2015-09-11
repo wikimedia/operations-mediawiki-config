@@ -11683,6 +11683,13 @@ $wgConf->settings = array(
 	'metawiki' => true,
 ),
 
+'wgMassMessageWikiAliases' => array(
+	'default' => array(
+		'chapcom.wikimedia.org' => 'chapcomwiki',
+		'be-x-old.wikipedia.org' => 'be_x_oldwiki',
+	),
+),
+
 'wmgUseSandboxLink' => array(
 	'default' => false,
 	'testwiki' => true,
