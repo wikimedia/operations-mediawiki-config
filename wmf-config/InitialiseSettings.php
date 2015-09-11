@@ -12710,13 +12710,13 @@ $wgConf->settings = [
 	'votewiki' => false,
 ],
 
-'wmgNamespacesToPostIn' => [
+'wgNamespacesToPostIn' => [
 	# Implicitly true for odd-numbered namespaces
 	'default' => [ NS_PROJECT ],
 	'+metawiki' => [ NS_MAIN ]
 ],
 
-'wmgAllowGlobalMessaging' => [
+'wgAllowGlobalMessaging' => [
 	'default' => false,
 	'metawiki' => true,
 ],

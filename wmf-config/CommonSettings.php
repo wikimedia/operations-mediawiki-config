@@ -1944,8 +1944,6 @@ if ( $wgUseContributionTracking ) {
 
 if ( $wmgUseMassMessage ) {
 	wfLoadExtension( 'MassMessage' );
-	$wgNamespacesToPostIn = $wmgNamespacesToPostIn;
-	$wgAllowGlobalMessaging = $wmgAllowGlobalMessaging;
 }
 
 if ( $wmgUseSandboxLink ) {
