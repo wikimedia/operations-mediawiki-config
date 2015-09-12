@@ -7327,7 +7327,7 @@ $wgConf->settings = array(
 		'autopatrolled' => array( 'autopatrol' => true ), // T30612
 	),
 	'enwiki' => array(
-		'*' => array( 'createpage' => false ),
+		'*' => array( 'createpage' => false ), // See P2059
 		'user' => array(
 			'move' => false, // autoconfirmed only
 			'collectionsaveasuserpage' => true, // T48944
