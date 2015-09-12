@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_33fd7539",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7328,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2015-09-12T18:57:37Z",
+      "side": 1,
+      "message": "This comment is potentially misleading. In 2005 he only \"asked\" an expertiment. I\u0027m pretty sure there are other places where it was reiterated that this would only be a trial etc.",
+      "revId": "116f372a46ce0f6bf70b55cbab87e4b84dda548b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
