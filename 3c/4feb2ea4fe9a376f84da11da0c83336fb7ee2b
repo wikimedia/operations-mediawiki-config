@@ -1,0 +1,10 @@
+Verified+2: jenkins-bot
+Code-Review+2: Alex Monk <krenair@gmail.com>
+Code-Review+1: Brian Wolff <bawolff+wn@gmail.com>
+Code-Review+1: Jean-Frédéric <jeanfrederic.wiki@gmail.com>
+Code-Review+1: Steinsplitter <steinsplitter@wikipedia.de>
+Submitted-by: jenkins-bot
+Submitted-at: Mon, 14 Sep 2015 15:01:02 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/234980
+Project: operations/mediawiki-config
+Branch: refs/heads/master
