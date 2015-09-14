@@ -10145,9 +10145,6 @@ $wgConf->settings = array(
 	'fishbowl' => false,
 	'closed' => false,
 
-	// testing
-	'testwiki' => false,
-
 	// 'global-multiwrite' backend isn't available, so disable for now
 	'labswiki' => false,
 ),
