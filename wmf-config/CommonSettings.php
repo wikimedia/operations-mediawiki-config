@@ -2955,17 +2955,6 @@ $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
 	return true;
 };
 
-// T46617
-if ( in_array( $wgDBname, array( 'wikidatawiki', 'testwikidatawiki' ) ) ) {
-	$wgHooks['SkinCopyrightFooter'][] = function( $title, $type, &$msg, &$link, &$forContent ) {
-		if ( $title->getNamespace() === NS_MAIN ) {
-			$msg = 'Creative Commons Public Domain 1.0';
-			$link = '//creativecommons.org/publicdomain/zero/1.0/';
-		}
-		return true;
-	};
-}
-
 $wgExemptFromUserRobotsControl = array_merge( $wgContentNamespaces, $wmgExemptFromUserRobotsControlExtra );
 
 // additional "language names", adding to Names.php data
