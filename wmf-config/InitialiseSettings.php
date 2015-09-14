@@ -14848,6 +14848,7 @@ $wgConf->settings = array(
 'wmgContentTranslationEnableSuggestions' => array(
 	'default' => false,
 	'testwiki' => true,
+	'ptwiki' => true,
 ),
 
 'wmgUseMapSources' => array(
