@@ -6,5 +6,6 @@ $wgPoolCountClientConf = array(
 		'10.64.0.179',
 		'10.64.16.152'
 	),
-	'timeout' => 0.5
+	'timeout' => 0.5,
+	'connect_timeout' => 0.01,
 );
