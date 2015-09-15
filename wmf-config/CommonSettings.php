@@ -2719,6 +2719,8 @@ if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationCampaigns = $wmgContentTranslationCampaigns;
 
 	$wgContentTranslationDefaultSourceLanguage = $wmgContentTranslationDefaultSourceLanguage;
+
+	$wgContentTranslationEnableSuggestions = $wmgContentTranslationEnableSuggestions;
 }
 
 // @note getRealmSpecificFilename only works with filenames with .suffix
