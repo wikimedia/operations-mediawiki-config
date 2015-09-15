@@ -72,8 +72,10 @@ if ( $wmgMobileFrontend ) {
 		$wgExtensionAssetsPath = $mobileContext->getMobileUrl( $wgExtensionAssetsPath );
 		$wgLoadScript = $mobileContext->getMobileUrl( $wgLoadScript );
 		$wgResourceBasePath = $mobileContext->getMobileUrl( $wgResourceBasePath );
-		$wgStyleSheetPath = $mobileContext->getMobileUrl( $wgStyleSheetPath );
-		$wgStylePath = $wgStyleSheetPath;
+		$wgStylePath = $mobileContext->getMobileUrl( $wgStylePath );
+
+		// Deprecated
+		$wgStyleSheetPath = $wgStylePath;
 
 		// Hack for T49647
 		if ( $wgCentralAuthCookieDomain == 'commons.wikimedia.org' ) {
