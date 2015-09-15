@@ -2201,6 +2201,7 @@ if ( $wmgUseTranslate ) {
 			'cutoff' => 0.65,
 			'config' => array(
 				'servers' => $servers,
+				'use_wikimedia_extra' => true
 			),
 		);
 	}
