@@ -201,19 +201,18 @@ setlocale( LC_ALL, 'en_US.UTF-8' );
 unset( $wgStylePath );
 unset( $wgStyleSheetPath );
 
-$wgInternalServer = $wgCanonicalServer;
-$wgArticlePath = '/wiki/$1';
-
-$wgScriptPath  = '/w';
-$wgScript = "{$wgScriptPath}/index.php";
-$wgRedirectScript = "{$wgScriptPath}/redirect.php";
-$wgLoadScript = "{$wgScriptPath}/load.php";
-$wgLocalStylePath = "{$wgScriptPath}/static/$wmgVersionNumber/skins";
-
-// Don't include a hostname in these urls (T106966, T112646)
-$wgResourceBasePath = "/static/{$wmgVersionNumber}";
+$wgLoadScript = "{$wgCanonicalServer}/w/load.php";
+$wgResourceBasePath = "{$wgCanonicalServer}/static/{$wmgVersionNumber}";
 $wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
 $wgStylePath = "{$wgResourceBasePath}/skins";
+
+$wgArticlePath = "/wiki/$1";
+
+$wgScriptPath  = '/w';
+$wgLocalStylePath = "$wgScriptPath/static/$wmgVersionNumber/skins";
+$wgScript = $wgScriptPath . '/index.php';
+$wgRedirectScript = $wgScriptPath . '/redirect.php';
+$wgInternalServer = $wgCanonicalServer;
 
 // Deprecated
 $wgStyleSheetPath = $wgStylePath;
