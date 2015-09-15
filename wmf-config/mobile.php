@@ -65,7 +65,17 @@ if ( $wmgMobileFrontend ) {
 	$wgMFNoMobilePages = $wmgMFNoMobilePages;
 
 	$wgHooks['EnterMobileMode'][] = function() {
-		global $wgCentralAuthCookieDomain;
+		global $wgCentralAuthCookieDomain, $wgExtensionAssetsPath,
+			$wgLoadScript, $wgResourceBasePath, $wgStylePath, $wgStyleSheetPath;
+
+		$mobileContext = MobileContext::singleton();
+		$wgLoadScript = $mobileContext->getMobileUrl( $wgLoadScript );
+		$wgResourceBasePath = $mobileContext->getMobileUrl( $wgResourceBasePath );
+		$wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
+		$wgStylePath = "{$wgResourceBasePath}/skins";
+
+		// Deprecated
+		$wgStyleSheetPath = $wgStylePath;
 
 		// Hack for T49647
 		if ( $wgCentralAuthCookieDomain == 'commons.wikimedia.org' ) {
