@@ -203,17 +203,19 @@ unset( $wgStyleSheetPath );
 
 $wgLoadScript = "{$wgCanonicalServer}/w/load.php";
 $wgExtensionAssetsPath = "{$wgCanonicalServer}/static/{$wmgVersionNumber}/extensions";
-$wgStyleSheetPath = "{$wgCanonicalServer}/static/{$wmgVersionNumber}/skins";
+$wgStylePath = "{$wgCanonicalServer}/static/{$wmgVersionNumber}/skins";
 $wgResourceBasePath = "{$wgCanonicalServer}/static/{$wmgVersionNumber}";
 
-$wgStylePath = $wgStyleSheetPath;
 $wgArticlePath = "/wiki/$1";
 
 $wgScriptPath  = '/w';
 $wgLocalStylePath = "$wgScriptPath/static/$wmgVersionNumber/skins";
-$wgScript           = $wgScriptPath . '/index.php';
-$wgRedirectScript	= $wgScriptPath . '/redirect.php';
+$wgScript = $wgScriptPath . '/index.php';
+$wgRedirectScript = $wgScriptPath . '/redirect.php';
 $wgInternalServer = $wgCanonicalServer;
+
+// Deprecated
+$wgStyleSheetPath = $wgStylePath;
 
 if ( gethostname() === 'osmium' ) {
 	$wgResourceLoaderStorageEnabled = false;
