@@ -69,10 +69,10 @@ if ( $wmgMobileFrontend ) {
 			$wgLoadScript, $wgResourceBasePath, $wgStylePath, $wgStyleSheetPath;
 
 		$mobileContext = MobileContext::singleton();
-		$wgExtensionAssetsPath = $mobileContext->getMobileUrl( $wgExtensionAssetsPath );
 		$wgLoadScript = $mobileContext->getMobileUrl( $wgLoadScript );
 		$wgResourceBasePath = $mobileContext->getMobileUrl( $wgResourceBasePath );
-		$wgStylePath = $mobileContext->getMobileUrl( $wgStylePath );
+		$wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
+		$wgStylePath = "{$wgResourceBasePath}/skins";
 
 		// Deprecated
 		$wgStyleSheetPath = $wgStylePath;

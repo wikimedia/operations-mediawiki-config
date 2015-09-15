@@ -202,9 +202,9 @@ unset( $wgStylePath );
 unset( $wgStyleSheetPath );
 
 $wgLoadScript = "{$wgCanonicalServer}/w/load.php";
-$wgExtensionAssetsPath = "{$wgCanonicalServer}/static/{$wmgVersionNumber}/extensions";
-$wgStylePath = "{$wgCanonicalServer}/static/{$wmgVersionNumber}/skins";
 $wgResourceBasePath = "{$wgCanonicalServer}/static/{$wmgVersionNumber}";
+$wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
+$wgStylePath = "{$wgResourceBasePath}/skins";
 
 $wgArticlePath = "/wiki/$1";
 
