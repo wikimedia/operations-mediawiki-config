@@ -11031,7 +11031,6 @@ $wgConf->settings = array(
 	'+ptwikisource' => array( 'br.wikimedia.org' => 'brwikimedia' ),
 	'+ptwikiversity' => array( 'br.wikimedia.org' => 'brwikimedia' ),
 	'+ptwikivoyage' => array( 'br.wikimedia.org' => 'brwikimedia' ),
-
 ),
 
 'wmgCentralAuthLoginWiki' => array(
