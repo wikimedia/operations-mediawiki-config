@@ -31,10 +31,11 @@ barwiki
 bat_smgwiki
 bawiki
 bclwiki
+be_x_oldwiki
 bewiki
 bewikiquote
 bewikisource
-be_x_oldwiki
+bgwiki
 bgwikiquote
 bgwikisource
 bhwiki
@@ -73,6 +74,7 @@ crwiki
 crwikiquote
 csbwiki
 cswiki
+cswiki
 cswikiquote
 cswikisource
 cuwiki
@@ -97,9 +99,11 @@ elwikiquote
 elwikisource
 elwikivoyage
 emlwiki
+enwiki
 enwikiquote
 enwikisource
 enwikivoyage
+eowiki
 eowikiquote
 eowikisource
 eswiki
@@ -118,6 +122,7 @@ fawikisource
 fawikivoyage
 ffwiki
 fiu_vrowiki
+fiwiki
 fiwikiquote
 fiwikisource
 fjwiki
@@ -172,6 +177,7 @@ hywikiquote
 hywikisource
 hzwiki
 iawiki
+idwiki
 idwikiquote
 idwikisource
 iewiki
@@ -183,6 +189,7 @@ iowiki
 iswiki
 iswikiquote
 iswikisource
+itwiki
 itwiki
 itwikiquote
 itwikisource
@@ -284,12 +291,14 @@ newiki
 newwiki
 ngwiki
 nlwiki
+nlwiki
 nlwikiquote
 nlwikisource
 nlwikivoyage
 nnwiki
 nnwikiquote
 novwiki
+nowiki
 nowikiquote
 nowikisource
 nrmwiki
@@ -310,6 +319,7 @@ pdcwiki
 pflwiki
 pihwiki
 piwiki
+plwiki
 plwikiquote
 plwikisource
 plwikivoyage
@@ -317,6 +327,7 @@ pmswiki
 pnbwiki
 pntwiki
 pswiki
+ptwiki
 ptwikiquote
 ptwikisource
 ptwikivoyage
@@ -372,6 +383,7 @@ stqwiki
 stwiki
 suwiki
 suwikiquote
+svwiki
 svwikiquote
 svwikisource
 svwikivoyage
@@ -387,6 +399,7 @@ tewiki
 tewikiquote
 tewikisource
 tgwiki
+thwiki
 thwikiquote
 thwikisource
 tiwiki
@@ -396,6 +409,7 @@ tlwiki
 tnwiki
 towiki
 tpiwiki
+trwiki
 trwikiquote
 trwikisource
 tswiki
@@ -446,8 +460,9 @@ zh_classicalwiki
 zh_min_nanwiki
 zh_min_nanwikiquote
 zh_min_nanwikisource
+zh_yuewiki
+zhwiki
 zhwikiquote
 zhwikisource
 zhwikivoyage
-zh_yuewiki
 zuwiki
