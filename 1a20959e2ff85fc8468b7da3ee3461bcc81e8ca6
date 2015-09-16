@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_68bf6ca8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 11034,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2015-09-16T10:55:24Z",
+      "side": 0,
+      "message": "not nice because we want to avoid having to sync this file for no good reason.",
+      "revId": "1a20959e2ff85fc8468b7da3ee3461bcc81e8ca6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
