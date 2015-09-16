@@ -15655,8 +15655,7 @@ $wgConf->settings = array(
 ),
 
 'wmgLogAuthmanagerMetrics' => array(
-	'default' => false,
-	'group0' => true,
+	'default' => true,
 ),
 
 // WikidataPageBanner extension (T98029)
