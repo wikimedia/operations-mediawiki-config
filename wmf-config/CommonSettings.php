@@ -682,6 +682,9 @@ if ( $wmgUseTimedMediaHandler ) {
 
 	// Minimum size for an embed video player
 	$wgMinimumVideoPlayerSize = $wmgMinimumVideoPlayerSize;
+
+	// use new ffmpeg build w/ VP9 & Opus support
+	$wgFFmpegLocation = '/usr/bin/ffmpeg';
 }
 
 if ( $wgDBname == 'foundationwiki' ) {
