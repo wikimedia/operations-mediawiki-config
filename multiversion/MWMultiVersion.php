@@ -157,6 +157,9 @@ class MWMultiVersion {
 			$lang = getenv( 'MW_LANG' );
 		} elseif ( isset( $staticMappings[$serverName] ) ) {
 			$lang = $staticMappings[$serverName];
+			if ( $serverName === 'ee.wikimedia.org' ) {
+				$site = "wikimedia";
+			}
 		} elseif ( strpos( $serverName, 'wmflabs' ) !== false ) {
 			if ( preg_match( '/^([^.]+)\.([^.]+)\.beta\.wmflabs\.org$/', $serverName, $matches ) ) {
 				// http://en.wikipedia.beta.wmflabs.org/
