@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_6e252b56",
+        "filename": "wmf-config/Wikibase-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2015-09-17T09:58:32Z",
+      "side": 1,
+      "message": "doubt this works as anything that resolves to something, but ok :/",
+      "revId": "3ffcdaf6e30c7a79f0f55eb8667012aa73095f06",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_ae2b132d",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2015-09-17T09:58:32Z",
+      "side": 1,
+      "message": "this is not configured to actually resolve to anything but suppose it\u0027s theoreticaly correct and ok",
+      "revId": "3ffcdaf6e30c7a79f0f55eb8667012aa73095f06",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
