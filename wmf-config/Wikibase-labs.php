@@ -31,4 +31,5 @@ if ( $wmgUseWikibaseClient ) {
 	);
 
 	$wgWBClientSettings['useLegacyChangesSubscription'] = false;
+	$wgWBClientSettings['repoConceptBaseUri'] = 'http://wikidata.beta.wmflabs.org/entity/';
 }

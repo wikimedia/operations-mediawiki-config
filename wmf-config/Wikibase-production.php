@@ -23,10 +23,13 @@ if ( $wmgUseWikibaseRepo ) {
 
 if ( $wmgUseWikibaseClient ) {
 
+	$wgWBClientSettings['repoConceptBaseUri'] = 'http://www.wikidata.org/entity/';
+
 	if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki', 'testwikidatawiki' ) ) ) {
 		$wgWBClientSettings['changesDatabase'] = 'testwikidatawiki';
 		$wgWBClientSettings['repoDatabase'] = 'testwikidatawiki';
 		$wgWBClientSettings['repoUrl'] = "//test.wikidata.org";
+		$wgWBClientSettings['repoConceptBaseUri'] = 'http://test.wikidata.org/entity/';
 	}
 
 	$wgWBClientSettings['badgeClassNames'] = array(
