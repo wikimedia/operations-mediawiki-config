@@ -124,6 +124,8 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['user']['abusefilter-log'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
+		$wgAbuseFilterAvailableActions[] = 'block'; // T113096
+		$wgAbuseFilterAnonBlockDuration = '2 months';
 		break;
 	case 'eswikibooks':
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
