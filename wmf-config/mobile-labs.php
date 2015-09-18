@@ -26,3 +26,4 @@ $wgMFSpecialCaseMainPage = $wmgMFSpecialCaseMainPage;
 $wgGatherAutohideFlagLimit = $wmgGatherAutohideFlagLimit;
 $wgMFIsBrowseEnabled = $wmgMFIsBrowseEnabled;
 $wgMFBrowseTags = $wmgMFBrowseTags;
+$wgMFMobileFormatterHeadings = $wmgMFMobileFormatterHeadings;

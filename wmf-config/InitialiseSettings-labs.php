@@ -264,6 +264,10 @@ function wmfLabsSettings() {
 			'wikidatawiki' => 'm.%h0.%h1.%h2.%h3', // T87440
 		),
 
+		'wmgMFMobileFormatterHeadings' => array(
+			'default' => array( 'h2', 'h3', 'h4', 'h5', 'h6' ), // T110436, T110837
+		),
+
 		'wmgMFPhotoUploadEndpoint' => array(
 			'default' => 'http://commons.wikimedia.$variant.wmflabs.org/w/api.php',
 		),
