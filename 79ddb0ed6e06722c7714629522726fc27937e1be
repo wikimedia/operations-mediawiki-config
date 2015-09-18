@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_b3d7f327",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 10243,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-09-18T12:12:48Z",
+      "side": 1,
+      "message": "We usually use the defined constants rather than the ns numbers. You should also just simply use \"// T104797\" as per conventions on wmf-config files. Not sure about this but you should probably explicitly have follow as well otherwise some engines may start to behave differently.",
+      "revId": "79ddb0ed6e06722c7714629522726fc27937e1be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
