@@ -13123,6 +13123,7 @@ $wgConf->settings = array(
 	'newiki' => true, // T89818
 	'nowiki' => true, // T32794
 	'officewiki' => true,
+	'outreachwiki' => true, // T106264
 	'orwiki' => true, // T33172
 	'ptwiki' => true, // T33178
 	'sewikimedia' => true, // T32491
