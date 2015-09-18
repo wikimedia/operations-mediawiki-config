@@ -10463,6 +10463,7 @@ $wgConf->settings = array(
 	'default' => array( NS_PROJECT, NS_HELP ),
 	'+wikimedia' => array( NS_MAIN ),
 	'+special' => array( NS_MAIN ),
+	'+itwiki' => array( 102 ),
 ),
 
 'wmgExemptFromUserRobotsControlExtra' => array(
