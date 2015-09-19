@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_520ebfe9",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2015-09-19T22:50:31Z",
+      "side": 1,
+      "message": "You should verify too that you are happy with $wgAbuseFilterBlockDuration \u003d indefinite or you prefer a different duration for blocks on registered users.",
+      "revId": "ad156698e3623c45e1edff5903e080ba30d357b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
