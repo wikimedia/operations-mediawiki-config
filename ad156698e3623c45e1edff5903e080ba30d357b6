@@ -16,6 +16,24 @@
       "revId": "ad156698e3623c45e1edff5903e080ba30d357b6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ec1af18_2be37ad5",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 128,
+      "author": {
+        "id": 27
+      },
+      "writtenOn": "2015-09-20T23:21:42Z",
+      "side": 1,
+      "message": "Not really an issue for Filter 90, though.",
+      "parentUuid": "6ec1af18_520ebfe9",
+      "revId": "ad156698e3623c45e1edff5903e080ba30d357b6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
