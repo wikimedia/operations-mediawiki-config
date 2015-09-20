@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ec1af18_2bf7faf3",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2959,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-20T20:53:35Z",
+      "side": 1,
+      "message": "Like I wrote in I79a225d69b818, I\u0027m not sure, if this format for the mediawiki.org release notes page is the one we want to use, so this maybe needs to be adjusted in a later patchset :)",
+      "revId": "865260e3c83b8e3ec8c8ba4af1b9a2d532f8e5d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
