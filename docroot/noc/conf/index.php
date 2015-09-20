@@ -50,7 +50,7 @@ require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
 <?php
 	$viewFilenames = array_merge(
 		glob( __DIR__ . '/*.php.txt' ),
-		glob( __DIR__ . '/{fc-list,langlist,wikiversions*.json,extension-list*}', GLOB_BRACE ),
+		glob( __DIR__ . '/{fc-list,langlist*,wikiversions*.json,extension-list*}', GLOB_BRACE ),
 		glob( __DIR__ . '/*.yaml.txt' )
 	);
 	outputFiles( $viewFilenames );

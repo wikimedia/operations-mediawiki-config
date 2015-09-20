@@ -538,7 +538,7 @@ if ( $wmgUseWikiHiero ) {
 include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 
 // Config for sitematrix
-$wgSiteMatrixFile = '/srv/mediawiki/langlist';
+$wgSiteMatrixFile = getRealmSpecificFilename( "$IP/../langlist" );
 $wgSiteMatrixClosedSites = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../closed.dblist" ) );
 $wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../private.dblist" ) );
 $wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../fishbowl.dblist" ) );
