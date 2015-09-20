@@ -26,6 +26,8 @@ class MWRealmTests extends PHPUnit_Framework_TestCase {
 			'mc-eqiad.php',
 			'mc-production.php',
 			'mc.php',
+			'langlist',
+			'langlist-labs',
 		);
 		foreach( $filenames as $filename ) {
 			$fullname = self::$fixturesDir . "/$filename";
@@ -116,13 +118,15 @@ class MWRealmTests extends PHPUnit_Framework_TestCase {
 
 			# datacenter takes precedence over realm
 			array( 'mc-eqiad.php', 'mc.php', 'labs', 'eqiad' ),
-			array( 'mc.php', 'mc.php', 'labs', 'UNKONW_DC' ),
+			array( 'mc.php', 'mc.php', 'labs', 'UNKNOWN_DC' ),
 
 			array( 'mc-eqiad.php', 'mc.php', 'UNKNOWN_REALM', 'eqiad' ),
 
 			array( 'mc-production.php', 'mc.php', 'production', 'UNKNOWN_DC' ),
 			array( 'mc-production.php', 'mc.php', 'production', 'eqiad' ),
 
+			array( 'langlist-labs', 'langlist', 'labs', 'eqiad' ),
+			array( 'langlist', 'langlist', 'production', 'eqiad' ),
 		);
 	}
 
