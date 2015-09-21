@@ -8822,7 +8822,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller' ), // T72441
 	),
 	'+maiwiki' => array(
-		'sysop' => array( 'autopatrolled', 'import' ), // T89346, T99491
+		'sysop' => array( 'autopatrolled', 'import', 'bot' ), // T89346, T99491, T111898
 	),
 	'+mediawikiwiki' => array(
 		'sysop' => array( 'autoreview' ),
