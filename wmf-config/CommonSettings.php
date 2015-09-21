@@ -303,6 +303,7 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 			'shards' => 256,
 		),
 	),
+	'replication' => ( $wgDBname === 'testwiki' ) ? 'async' : 'sync'
 );
 
 if ( $wmgUseClusterSession ) {
