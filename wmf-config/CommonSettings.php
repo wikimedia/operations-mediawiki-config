@@ -300,6 +300,7 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 			'shards' => 256,
 		),
 	),
+	'replication' => 'async'
 );
 
 if ( $wmgUseClusterSession ) {
