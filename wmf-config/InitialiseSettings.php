@@ -10701,6 +10701,7 @@ $wgConf->settings = array(
 'wgNamespaceProtection' => array(
 	'default' => array(
 		NS_MEDIAWIKI => array( 'editinterface' ),
+		NS_EP => array ( 'ep-course' ), // T112806 [security]
 	),
 	'+cswiki' => array(
 		NS_FILE      => array( 'editinterface' ),
