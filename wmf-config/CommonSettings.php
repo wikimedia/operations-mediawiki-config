@@ -2515,9 +2515,6 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 	$wgFlowCacheVersion = '4.7';
 
 	$wgFlowEnableOptInBetaFeature = $wmgFlowEnableOptInBetaFeature;
-
-	// Temporary as part of T107204
-	$wgFlowMigrateReferenceWiki = true;
 }
 
 if ( $wmgUseDisambiguator ) {
