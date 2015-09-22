@@ -77,19 +77,6 @@ switch ( $wgDBname ) {
 	case 'cswikisource':
 		$wgAbuseFilterNotificationsPrivate = true;
 		break;
-	case 'eewiki':
-		$wgGroupPermissions['*']['abusefilter-view'] = false;
-		$wgGroupPermissions['*']['abusefilter-log'] = false;
-		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
-		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
-		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
-		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
-		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
-		$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
-		$wgAbuseFilterAvailableActions[] = 'block';
-		$wgAbuseFilterBlockDuration = 'infinite';
-		$wgAbuseFilterNotifications = false;
-		break;
 	case 'elwiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
