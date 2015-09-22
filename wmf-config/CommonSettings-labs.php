@@ -106,7 +106,7 @@ if ( $wgDBname === 'enwiki' || $wgDBname === 'cawiki' ) {
 		191 => true,
 	);
 
-	$wgFlowOccupyNamespaces[] = 191; // Flow_test_talk:
+	$wgNamespaceContentModels[ 191 ] = CONTENT_MODEL_FLOW_BOARD;
 }
 
 if ( $wmgUseContentTranslation ) {
