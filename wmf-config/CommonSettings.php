@@ -2432,6 +2432,10 @@ if ( $wmgUseEcho ) {
 			'web' => true,
 			'email' => true,
 		),
+		'emailuser' => array(
+			'web' => true,
+			'email' => false
+		),
 	);
 
 	if ( $wmgUseClusterJobqueue ) {
