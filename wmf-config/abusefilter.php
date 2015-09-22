@@ -28,6 +28,9 @@ $wgAvailableRights = array_diff( $wgAvailableRights, array( 'abusefilter-private
 // T66255 - Enable logging to irc.wikimedia.org by default
 $wgAbuseFilterNotifications = "udp";
 
+// T113164 Change default AbuseFilter IP block duration to not indefinite
+$wgAbuseFilterAnonBlockDuration = '1 week';
+
 // Custom permissions
 switch ( $wgDBname ) {
 	case 'arwiki':
