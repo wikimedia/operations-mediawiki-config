@@ -8,7 +8,7 @@
  * @file
  */
 
-require __DIR__ . '/../multiversion/MWRealm.php';
+require_once __DIR__ . '/../multiversion/MWRealm.php';
 
 class dbconfigTests extends PHPUnit_Framework_TestCase {
 
