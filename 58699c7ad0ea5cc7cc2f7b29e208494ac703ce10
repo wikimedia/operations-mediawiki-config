@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_d7a2ef3a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11689,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2015-09-23T10:50:08Z",
+      "side": 1,
+      "message": "be-x-oldwiki have been renamed to be-tarask.",
+      "revId": "58699c7ad0ea5cc7cc2f7b29e208494ac703ce10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
