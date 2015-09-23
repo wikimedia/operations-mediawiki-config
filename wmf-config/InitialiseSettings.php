@@ -4339,7 +4339,7 @@ $wgConf->settings = array(
 		'404' => 'debug',
 		'AdHocDebug' => 'debug', // for temp live debugging
 		'antispoof' => 'debug',
-		'api' => array( 'logstash' => false ),
+		'api' => array( 'logstash' => false, 'udp2log-formatter' => 'line-no-context' ),
 		'api-feature-usage' => 'debug',
 		'badpass' => 'debug',
 		'BounceHandler' => 'debug',

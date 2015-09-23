@@ -84,6 +84,16 @@ $wmgMonologConfig =  array(
 				true, // includeStacktraces
 			),
 		),
+		'line-no-context' => array(
+			'class' => '\\MediaWiki\\Logger\\Monolog\\LineFormatter',
+			'args' => array(
+				"%datetime% %extra.host% %extra.wiki% %channel% %level_name%: %message% %exception%\n",
+				'Y-m-d H:i:s',
+				true, // allowInlineLineBreaks
+				true, // ignoreEmptyContextAndExtra
+				true, // includeStacktraces
+			),
+		},
 		'logstash' => array(
 			'class' => '\\Monolog\\Formatter\\LogstashFormatter',
 			'args'  => array( 'mediawiki', php_uname( 'n' ), null, '', 1 ),
@@ -119,6 +129,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	$opts = array_merge(
 		array(
 			'udp2log' => 'debug',
+			'udp2log-formatter' => 'line',
 			'logstash' => ( isset( $opts['udp2log'] ) && $opts['udp2log'] !== 'debug' ) ? $opts['udp2log'] : 'info',
 			'kafka' => false,
 			'sample' => false,
@@ -139,7 +150,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 				'args' => array(
 					"udp://{$wmfUdp2logDest}/{channel}", false, $opts['udp2log']
 				),
-				'formatter' => 'line',
+				'formatter' => $opts['udp2log-formatter'],
 			);
 		}
 		$handlers[] = $udp2logHandler;
