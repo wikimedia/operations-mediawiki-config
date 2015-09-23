@@ -147,7 +147,7 @@ if ( !$globals ) {
 			'commonsuploads', 'nonbetafeatures', 'group0', 'wikipedia',
 			'arbitraryaccess', 'nonglobal',
 		) as $tag ) {
-		$dblist = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../$tag.dblist" ) );
+		$dblist = MWWikiversions::readDbListFile( getRealmSpecificFilename( "/srv/mediawiki/$tag.dblist" ) );
 		if ( in_array( $wgDBname, $dblist ) ) {
 			$wikiTags[] = $tag;
 		}
@@ -538,10 +538,10 @@ if ( $wmgUseWikiHiero ) {
 include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 
 // Config for sitematrix
-$wgSiteMatrixFile = getRealmSpecificFilename( "$IP/../langlist" );
-$wgSiteMatrixClosedSites = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../closed.dblist" ) );
-$wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../private.dblist" ) );
-$wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../fishbowl.dblist" ) );
+$wgSiteMatrixFile = getRealmSpecificFilename( "/srv/mediawiki/langlist" );
+$wgSiteMatrixClosedSites = MWWikiversions::readDbListFile( getRealmSpecificFilename( "/srv/mediawiki/closed.dblist" ) );
+$wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( getRealmSpecificFilename( "/srv/mediawiki/private.dblist" ) );
+$wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( getRealmSpecificFilename( "/srv/mediawiki/fishbowl.dblist" ) );
 
 if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
@@ -1231,7 +1231,7 @@ if ( $wmgUseCentralAuth ) {
 			$wgSiteMatrixPrivateSites,
 			$wgSiteMatrixFishbowlSites,
 			$wgSiteMatrixClosedSites,
-			MWWikiversions::readDbListFile( getRealmSpecificFilename( "$IP/../nonglobal.dblist" ) )
+			MWWikiversions::readDbListFile( getRealmSpecificFilename( "/srv/mediawiki/nonglobal.dblist" ) )
 		);
 		return false;
 	}
