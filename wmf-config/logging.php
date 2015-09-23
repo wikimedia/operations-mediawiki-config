@@ -7,12 +7,15 @@
  * - $wmgDefaultMonologHandler : default handler for log channels not
  *   explicitly configured in $wmgMonologChannels
  * - $wmgLogstashServers : Logstash syslog servers
+ * - $wmgKafkaServers : Kafka logging servers
+ * - $wmgMonologAvroSchemas: Map from monolog channel name to json
+ *   string containing avro schema
  * - $wmgMonologChannels : per-channel logging config
  *   - channel => false  == ignore all log events on this channel
- *   - channel => level  == record all events of this level or higher
- *   - channel => array( 'level'=>level, 'logstash'=>level, 'sample'=>rate )
- *   Defaults: array( 'level'=>'debug', 'logstash'=>'info', 'sample'=>false )
- *   Valid levels: 'debug', 'info', 'warning', 'error'
+ *   - channel => level  == record all events of this level or higher to udp2log and logstash
+ *   - channel => array( 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate )
+ *   Defaults: array( 'udp2log'=>'debug', 'logstash'=>'info', 'kafka'=>false, 'sample'=>false )
+ *   Valid levels: 'debug', 'info', 'warning', 'error', false
  *   Note: sampled logs will not be sent to Logstash
  *   Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}
  * - $wmfUdp2logDest : udp2log host:port
@@ -85,6 +88,10 @@ $wmgMonologConfig =  array(
 			'class' => '\\Monolog\\Formatter\\LogstashFormatter',
 			'args'  => array( 'mediawiki', php_uname( 'n' ), null, '', 1 ),
 		),
+		'avro' => array(
+			'class' => '\\MediaWiki\\Logger\\Monolog\\AvroFormatter',
+			'args' => array( $wmgMonologAvroSchemas ),
+		),
 	),
 );
 
@@ -108,11 +115,12 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		continue;
 	}
 
-	$opts = is_array( $opts ) ? $opts : array( 'level' => $opts );
+	$opts = is_array( $opts ) ? $opts : array( 'udp2log' => $opts );
 	$opts = array_merge(
 		array(
-			'level' => 'debug',
-			'logstash' => ( isset( $opts['level'] ) && $opts['level'] !== 'debug' ) ? $opts['level'] : 'info',
+			'udp2log' => 'debug',
+			'logstash' => ( isset( $opts['udp2log'] ) && $opts['udp2log'] !== 'debug' ) ? $opts['udp2log'] : 'info',
+			'kafka' => false,
 			'sample' => false,
 		),
 		$opts
@@ -120,42 +128,64 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 
 	$handlers = array();
 
-	// Configure udp2log handler
-	$udp2logHandler = "udp2log-{$opts['level']}";
-	if ( !isset( $wmgMonologConfig['handlers'][$udp2logHandler] ) ) {
-		// Register handler that will only pass events of the given
-		// log level
-		$wmgMonologConfig['handlers'][$udp2logHandler] = array(
-			'class' => '\\MediaWiki\\Logger\\Monolog\\LegacyHandler',
-			'args' => array(
-				"udp://{$wmfUdp2logDest}/{channel}", false, $opts['level']
-			),
-			'formatter' => 'line',
-		);
-	}
-	if ( $opts['sample'] ) {
-		$sample = $opts['sample'];
-		$sampledHandler = "{$udp2logHandler}-sampled-{$sample}";
-		if ( !isset( $wmgMonologConfig['handlers'][$sampledHandler] ) ) {
-			// Register a handler that will sample the event stream and
-			// pass events on to $udp2logHandler for storage
-			$wmgMonologConfig['handlers'][$sampledHandler] = array(
-				'class' => '\\Monolog\\Handler\\SamplingHandler',
+	if ( $opts['udp2log'] ) {
+		// Configure udp2log handler
+		$udp2logHandler = "udp2log-{$opts['udp2log']}";
+		if ( !isset( $wmgMonologConfig['handlers'][$udp2logHandler] ) ) {
+			// Register handler that will only pass events of the given
+			// log level
+			$wmgMonologConfig['handlers'][$udp2logHandler] = array(
+				'class' => '\\MediaWiki\\Logger\\Monolog\\LegacyHandler',
 				'args' => array(
-					function () use ( $udp2logHandler ) {
-						return LoggerFactory::getProvider()->getHandler(
-							$udp2logHandler
-						);
-					},
-					$sample,
+					"udp://{$wmfUdp2logDest}/{channel}", false, $opts['udp2log']
 				),
+				'formatter' => 'line',
 			);
 		}
-		$handlers[] = $sampledHandler;
-	} else {
 		$handlers[] = $udp2logHandler;
 	}
 
+	if ( $opts['kafka'] && $wmgKafkaServers ) {
+		$kafkaHandler = "kafka-{$opts['kafka']}";
+		if ( !isset( $wmgMonologConfig['handlers'][$kafkaHandler] ) ) {
+			$wmgMonologConfig['handlers'][$kafkaHandler] = array(
+				'factory' => '\\MediaWiki\\Logger\\Monolog\\KafkaHandler::factory',
+				'args' => array(
+					$wmgKafkaServers,
+					array(
+						'alias' => array(),
+						'swallowExceptions' => true,
+						'logExceptions' => 'wfDebugLogFile',
+					)
+				)
+			);
+		}
+		$wmgMonologConfig['handlers'][$kafkaHandler]['args'][1]['alias'][$channel] = "mediawiki_$channel";
+		$handlers[] = $kafkaHandler;
+	}
+
+	if ( $opts['sample'] ) {
+		$sample = $opts['sample'];
+		foreach ( $handlers as $idx => $handlerName ) {
+			$sampledHandler = "{$handlerName}-sampled-{$sample}";
+			if ( !isset( $wmgMonologConfig['handlers'][$sampledHandler] ) ) {
+				// Register a handler that will sample the event stream and
+				// pass events on to $udp2logHandler for storage
+				$wmgMonologConfig['handlers'][$sampledHandler] = array(
+					'class' => '\\Monolog\\Handler\\SamplingHandler',
+					'args' => array(
+						function () use ( $handlerName ) {
+							return LoggerFactory::getProvider()->getHandler(
+								$handlerName
+							);
+						},
+						$sample,
+					),
+				);
+			}
+			$handlers[$idx] = $sampledHandler;
+		}
+	}
 	// Configure Logstash handler
 	// Note: sampled logs are never passed to logstash
 	if ( $opts['sample'] === false &&
@@ -183,6 +213,27 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			);
 		}
 		$handlers[] = $logstashHandler;
+	}
+
+	if ( $opts['buffer'] ) {
+		foreach ( $handlers as $idx => $handlerName ) {
+			$bufferedHandler = "$handlerName-buffered";
+			if ( !isset( $wmgMonologConfig['handlers'][$bufferedHandler] ) ) {
+				// Register a handler that will buffer the event stream and
+				// pass events to the nested handler after closing the request
+				$wmgMonologConfig['handlers'][$bufferedHandler] = array(
+					'class' => '\\MediaWiki\\Logger\\Monolog\\BufferHandler',
+					'args' => array(
+						function () use ( $handlerName ) {
+							return LoggerFactory::getProvider()->getHandler(
+								$handlerName
+							);
+						},
+					),
+				);
+			}
+			$handlers[$idx] = $bufferedHandler;
+		}
 	}
 
 	$wmgMonologConfig['loggers'][$channel] = array(
