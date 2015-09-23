@@ -72,14 +72,12 @@ function listAllRealmsAndDatacenters() {
 function getRealmSpecificFilename( $filename ) {
 	global $wmfRealm, $wmfDatacenter;
 
-	$dotPos = strrpos( $filename, '.' );
-	if ( $dotPos === false ) {
-		$base = $filename;
-		$ext = "";
-	} else {
-		$base = substr( $filename, 0, $dotPos );
-		$ext = substr( $filename, $dotPos );
+	$pathinfo = pathinfo( $filename );
+	$ext = '';
+	if ( isset( $pathinfo['extension'] ) ) {
+		$ext = '.' . $pathinfo['extension'];
 	}
+	$base = $pathinfo['dirname'] . DIRECTORY_SEPARATOR . $pathinfo['filename'];
 
 	// Test existence of the following file suffix and return
 	// immediately whenever found:
