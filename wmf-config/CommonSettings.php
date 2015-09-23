@@ -2954,11 +2954,11 @@ $wgApplyIpBlocksToXff = $wmgUseXFFBlocks;
 // On Special:Version, link to useful release notes
 $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
 	$matches = array();
-	preg_match( "/^(\d+\.\d+)(wmf\d+)?$/", $wgVersion, $matches );
+	preg_match( "/^(\d+\.\d+)(?:\.0-)?wmf\.?(\d+)?$/", $wgVersion, $matches );
 	if ( $matches ) {
 		$versionUrl = "//www.mediawiki.org/wiki/MediaWiki_{$matches[1]}";
 		if ( isset( $matches[2] ) ) {
-			$versionUrl .= "/{$matches[2]}";
+			$versionUrl .= "/wmf{$matches[2]}";
 		}
 		return false;
 	}
