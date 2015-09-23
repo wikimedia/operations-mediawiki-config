@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_032114f6",
+        "filename": "multiversion/defines.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-09-23T19:57:55Z",
+      "side": 1,
+      "message": "I\u0027m not sure, if the coding conventions apply here, too, but if so, I suggest to add spaces before and after the points :)",
+      "revId": "05ea9fe4af43c5f5ab9fed36bc54f66014927b70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
