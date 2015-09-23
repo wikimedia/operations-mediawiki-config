@@ -28,29 +28,17 @@ $wmgThrottlingExceptions[] = array( // T110352
 	'value'  => 50
 );
 
-$wmgThrottlingExceptions[] = array( // T110352
-	'from'   => '2015-09-04T16:00 +0:00',
-	'to'     => '2015-09-05T19:00 +0:00',
+$wmgThrottlingExceptions[] = array( // T113519
+	'from'   => '2015-09-24T13:00 +0:00',
+	'to'     => '2015-09-24T23:00 +0:00',
 	'ip'     => array(
-		'181.118.160.216',
-		'181.118.160.217',
-		'181.118.160.218',
-		'181.118.160.219',
-		'181.118.160.220',
-		'181.118.160.221',
-		'181.118.160.222',
-		'181.118.160.223'
+		'132.247.150.251',
+		'132.247.150.252',
+		'132.247.150.253',
+		'132.247.150.254'
 	),
-	'dbname' => 'eswiki',
-	'value'  => 50
-);
-
-$wmgThrottlingExceptions[] = array( // T111332
-	'from'   => '2015-09-07T10:00 +1:00',
-	'to'     => '2015-09-07T16:00 +1:00',
-	'ip'     => '91.194.46.122',
-	'dbname' => 'enwiki',
-	'value'  => 50
+	'dbname' => array( 'eswiki', 'eswikisource', 'enwiki', 'commonswiki' ),
+	'value'  => 200
 );
 
 ## Add throttling definitions above.
