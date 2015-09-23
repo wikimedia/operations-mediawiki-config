@@ -62,10 +62,11 @@ function listAllRealmsAndDatacenters() {
  *   base-realm.ext
  *   base-datacenter.ext
  *   base.ext
+ * ext is optional.
  *
  * @note The full path to the file is returned, not just the filename
  *
- * @param string $filename Full path to file. Must contain an extension
+ * @param string $filename Full path to file
  * @return string Full path to file to be used
  */
 function getRealmSpecificFilename( $filename ) {
@@ -73,10 +74,12 @@ function getRealmSpecificFilename( $filename ) {
 
 	$dotPos = strrpos( $filename, '.' );
 	if ( $dotPos === false ) {
-		return $filename;
+		$base = $filename;
+		$ext = "";
+	} else {
+		$base = substr( $filename, 0, $dotPos );
+		$ext = substr( $filename, $dotPos );
 	}
-	$base = substr( $filename, 0, $dotPos );
-	$ext = substr( $filename, $dotPos );
 
 	// Test existence of the following file suffix and return
 	// immediately whenever found:
