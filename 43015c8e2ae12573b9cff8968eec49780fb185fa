@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_ac6cad06",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 11306,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-09-23T23:04:43Z",
+      "side": 1,
+      "message": "I don\u0027t think this line is necessary.",
+      "revId": "43015c8e2ae12573b9cff8968eec49780fb185fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_4c7189dc",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 11332,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-09-23T23:04:43Z",
+      "side": 1,
+      "message": "same here",
+      "revId": "43015c8e2ae12573b9cff8968eec49780fb185fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
