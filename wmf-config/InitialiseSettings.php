@@ -4304,13 +4304,38 @@ $wgConf->settings = array(
 	),
 ),
 
+# wmgKafkaServers @{
+// Kafka servers. Use false to disable all kafka logging.
+'wmgKafkaServers' => array(
+	'default' => array(
+	    '10.64.5.12',   // kafka1012.eqiad.wmnet
+	    '10.64.5.13',   // kafka1013.eqiad.wmnet
+	    '10.64.36.114', // kafka1014.eqiad.wmnet
+	    '10.64.53.10',  // kafka1018.eqiad.wmnet
+	    '10.64.53.12',  // kafka1020.eqiad.wmnet
+	    '10.64.36.122', // kafka1022.eqiad.wmnet
+	),
+),
+# @} end of wmgKafkaServers
+
+# wmgMonologAvroSchemas @{
+// Configure schemas used for avro serialization. This is temporary,
+// something will be built up around the EventLogging schema model
+// to store these in a wiki and cache them locally.
+'wmgMonologAvroSchemas' => array(
+	'default' => array(
+		'CirrusSearchRequestSet' => file_get_contents( __DIR__ . '/avro/CirrusSearchRequestSet.json' ),
+	),
+),
+# @} end of wmgAvroSchemas
+
 # wmgMonologChannels @{
-// Configure Monolog logging to udp2log and Logstash
+// Configure Monolog logging to udp2log, Logstash and/or kafka
 //   channel => false  == ignore all log events on this channel
 //   channel => level  == record all events of this level or higher
-//   channel => array( 'level'=>level, 'logstash'=>level, 'sample'=>rate )
-// Defaults: array( 'level'=>'debug', 'logstash'=>'info', 'sample'=>false )
-// Valid levels: 'debug', 'info', 'warning', 'error'
+//   channel => array( 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate )
+// Defaults: array( 'udp2log'=>'debug', 'logstash'=>'info', 'kafka'=>false, 'sample'=>false )
+// Valid levels: 'debug', 'info', 'warning', 'error', false
 // Note: sampled logs will not be sent to Logstash
 // Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}
 'wmgMonologChannels' => array(
@@ -4328,9 +4353,16 @@ $wgConf->settings = array(
 		'CentralAuth' => 'debug',
 		'CentralAuthRename' => 'debug', // -legoktm 2014-07-14 for T69875
 		'CentralAuthUserMerge' => 'debug',
-		'CirrusSearchChangeFailed' => 'debug',
 		'CirrusSearch' => 'debug',
+		'CirrusSearchChangeFailed' => 'debug',
 		'CirrusSearchRequests' => array( 'logstash' => false ),
+		'CirrusSearchRequestSet' => array(
+			'kafka' => 'debug',
+			'udp2log' => false,
+			'logstash' => false,
+			'sample' => 1000,
+			'buffer' => true
+		),
 		'CirrusSearchSlowRequests' => 'debug',
 		'CirrusSearchUserTesting' => array( 'logstash' => false ),
 		'cite' => 'debug',
