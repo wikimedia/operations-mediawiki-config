@@ -2,5 +2,6 @@
 
 // Load the shared utilities classes from here!
 
-require_once( dirname( __FILE__ ) . "/DBList.php" );
-require_once( dirname( __FILE__ ) . "/Provide.php" );
+require_once __DIR__ . "/DBList.php";
+require_once __DIR__ . "/Provide.php";
+require_once __DIR__ . "/Defines.php";
