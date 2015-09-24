@@ -41,6 +41,13 @@ $wmgThrottlingExceptions[] = array( // T113519
 	'value'  => 200
 );
 
+$wmgThrottlingExceptions[] = array( // T113654
+	'from'   => '2015-09-26T11:00 -7:00',
+	'to'     => '2015-09-26T14:00 -7:00',
+	'range'  => '192.31.105.0/24',
+	'value'  => 50
+);
+
 ## Add throttling definitions above.
 
 /**
