@@ -52,6 +52,24 @@
       "revId": "58699c7ad0ea5cc7cc2f7b29e208494ac703ce10",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_f82fc1f1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11689,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-09-24T21:41:40Z",
+      "side": 1,
+      "message": "No, I don\u0027t think that\u0027s how it\u0027s supposed to work.",
+      "parentUuid": "2ecb373e_78cd1162",
+      "revId": "58699c7ad0ea5cc7cc2f7b29e208494ac703ce10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
