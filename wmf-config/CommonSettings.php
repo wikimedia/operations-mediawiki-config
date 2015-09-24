@@ -340,10 +340,7 @@ $wgPasswordPolicy['policies']['bureaucrat']['MinimalPasswordLength'] = 1;
 $wgPasswordPolicy['policies']['sysop']['MinimalPasswordLength'] = 1;
 $wgPasswordPolicy['policies']['bot']['MinimalPasswordLength'] = 1;
 
-# Not CLI, see http://bugs.php.net/bug.php?id=47540
-if ( PHP_SAPI != 'cli' ) {
-	ignore_user_abort( true );
-} else {
+if ( PHP_SAPI === 'cli' ) {
 	$wgShowExceptionDetails = true;
 }
 
