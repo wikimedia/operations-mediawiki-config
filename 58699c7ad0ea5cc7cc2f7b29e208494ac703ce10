@@ -34,6 +34,24 @@
       "revId": "58699c7ad0ea5cc7cc2f7b29e208494ac703ce10",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_78cd1162",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11689,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2015-09-24T21:36:42Z",
+      "side": 1,
+      "message": "I don\u0027t see it redirects to be-tarask. I saw elsewhere that be_x_old is an alias for be-tarask though. If that\u0027s the case, please confirm. Also etwikimedia now renamed to eewikimedia.",
+      "parentUuid": "2ecb373e_0a6b6e83",
+      "revId": "58699c7ad0ea5cc7cc2f7b29e208494ac703ce10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
