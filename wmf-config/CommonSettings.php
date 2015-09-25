@@ -2207,9 +2207,9 @@ if ( $wmgUseTranslate ) {
 			'replicas' => 1,
 			'index' => $wmgTranslateESIndex,
 			'cutoff' => 0.65,
+			'use_wikimedia_extra' => true,
 			'config' => array(
 				'servers' => $servers,
-				'use_wikimedia_extra' => true
 			),
 		);
 	}
