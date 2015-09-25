@@ -2958,7 +2958,7 @@ $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
 	if ( $matches ) {
 		$versionUrl = "//www.mediawiki.org/wiki/MediaWiki_{$matches[1]}";
 		if ( isset( $matches[2] ) ) {
-			$versionUrl .= "/wmf{$matches[2]}";
+			$versionUrl .= "/wmf.{$matches[2]}";
 		}
 		return false;
 	}
