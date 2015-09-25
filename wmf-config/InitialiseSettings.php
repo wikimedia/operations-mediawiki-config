@@ -15402,7 +15402,39 @@ $wgConf->settings = array(
 ),
 
 'wmgCirrusSearchUserTesting' => array(
-	'default' => array(),
+	'default' => array(
+		// Multiple languages search test. Languages supported: en, es, de, pt, zh, ar, ru
+		'multilang' => array(
+			'sampleRate' => 10,
+			'buckets' => array(
+				// control bucket, retain defaults
+				'a' => array(),
+				// test bucket, alternative suggestions
+				'b' => array(
+					'wgCirrusSearchEnableAltLanguage' => true,
+					'wgCirrusSearchLanguageToWikiMap' => array(
+						'en' => 'en',
+						'es' => 'es',
+						'de' => 'de',
+						'pt' => 'pt',
+						'zh-cn' => 'zh',
+						'zh-tw' => 'zh',
+						'ar' => 'ar',
+						'ru' => 'ru',
+					),
+					'wgCirrusSearchWikiToNameMap' => array(
+						'ar' => 'arwiki',
+						'de' => 'dewiki',
+						'en' => 'enwiki',
+						'es' => 'eswiki',
+						'pt' => 'ptwiki',
+						'ru' => 'ruwiki',
+						'zh' => 'zhwiki',
+					),
+				),
+			),
+		),
+	),
 ),
 
 'wmgWMEEnableCompletionExperiment' => array(
