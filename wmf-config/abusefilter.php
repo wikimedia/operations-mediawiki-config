@@ -55,6 +55,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['user']['abusefilter-view'] = true;
 		$wgAbuseFilterAvailableActions[] = 'block';
 		$wgAbuseFilterBlockDuration = '2 hours';
+		$wgAbuseFilterAnonBlockDuration = '2 hours';
 		break;
 	case 'ckbwiki':
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
@@ -137,11 +138,13 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgAbuseFilterAvailableActions = array( 'flag', 'throttle', 'warn', 'disallow', 'tag', 'block' );
 		$wgAbuseFilterBlockDuration = '2 days';
+		$wgAbuseFilterAnonBlockDuration = '2 days';
 		break;
 	case 'eswikivoyage': // T64321
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgAbuseFilterAvailableActions[] = 'block';
 		$wgAbuseFilterBlockDuration = '24 hours';
+		$wgAbuseFilterAnonBlockDuration = '24 hours';
 		break;
 	case 'fawiki': // T71073 and T74502
 		$wgGroupPermissions['*']['abusefilter-log'] = false;
@@ -235,11 +238,13 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['autoconfirmed']['abusefilter-view'] = true;
 		$wgAbuseFilterAvailableActions[] = 'block';
 		$wgAbuseFilterBlockDuration = '4 hours';
+		$wgAbuseFilterAnonBlockDuration = '4 hours';
 		$wgAbuseFilterNotifications = false;
 		break;
 	case 'itwikinews':
 		$wgAbuseFilterAvailableActions[] = 'block';
 		$wgAbuseFilterBlockDuration = '24 hours';
+		$wgAbuseFilterAnonBlockDuration = '24 hours';
 		break;
 	case 'itwikiquote':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
@@ -351,6 +356,7 @@ switch ( $wgDBname ) {
 		);
                 $wgAbuseFilterAvailableActions[] = 'block'; // T89379
 		$wgAbuseFilterBlockDuration = '2 hours';    // T89379
+		$wgAbuseFilterAnonBlockDuration = '2 hours';
 		$wgAbuseFilterNotifications = false;
 		break;
 	case 'urwiki':
