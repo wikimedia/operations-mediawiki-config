@@ -15179,6 +15179,10 @@ $wgConf->settings = array(
 	'wikidata' => true,
 ),
 
+'wmgUseWikibaseQualityExternalValidation' => array(
+	'default' => false,
+),
+
 'wmgUseTemplateSandbox' => array(
 	'default' => true,
 	'loginwiki' => false,
