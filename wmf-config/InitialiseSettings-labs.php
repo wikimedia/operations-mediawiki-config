@@ -890,7 +890,6 @@ function wmfLabsSettings() {
 		),
 		'wmgVisualEditorTransitionDefault' => array(
 			'default' => false,
-			'enwiki' => true,
 		),
 		// ------------ BetaFeatures end -----------
 
