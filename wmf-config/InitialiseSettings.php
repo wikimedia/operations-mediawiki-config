@@ -1509,7 +1509,7 @@ $wgConf->settings = array(
 	'azwiki' => 'Vikipediya',
 	'azwikibooks' => 'Vikikitab', // T33068
 	'azwikiquote' => 'Vikisitat',
-	'azwikisource' => 'VikiMənbə',
+	'azwikisource' => 'Vikimənbə', // T114002
 	'azbwiki' => 'ویکی‌پدیا', // T106305
 	'bawiki' => 'Википедия', // T43167
 	'bdwikimedia' => 'উইকিমিডিয়া বাংলাদেশ',
@@ -1988,7 +1988,7 @@ $wgConf->settings = array(
 	'aywiki' => 'Wikipidiya',
 	'azwiki' => 'Vikipediya',
 	'azwikibooks' => 'Vikikitab', // T33068
-	'azwikisource' => 'VikiMənbə',
+	'azwikisource' => 'Vikimənbə',
 	'azwikiquote' => 'Vikisitat',
 	'azbwiki' => 'ویکی‌پدیا', // T106305
 	'bawiki' => 'Википедия', // T43167
@@ -2597,6 +2597,8 @@ $wgConf->settings = array(
 		'Wikiquote_talk' => NS_PROJECT_TALK,
 	),
 	'+azwikisource' => array(
+		'VikiMənbə' => NS_PROJECT, // T114002
+		'VikiMənbə_müzakirəsi' => NS_PROJECT_TALK, // T114002
 		'Portal' => 100,
 		'Portal_talk' => 101,
 	),
