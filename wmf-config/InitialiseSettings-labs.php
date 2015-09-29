@@ -888,7 +888,7 @@ function wmfLabsSettings() {
 		'wmgVisualEditorAccessRESTbaseDirectly' => array(
 			'default' => true,
 		),
-		'$wmgVisualEditorTransitionDefault' => array(
+		'wmgVisualEditorTransitionDefault' => array(
 			'default' => false,
 			'enwiki' => true,
 		),
