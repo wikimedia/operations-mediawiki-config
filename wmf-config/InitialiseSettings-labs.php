@@ -882,12 +882,15 @@ function wmfLabsSettings() {
 		'wmgVisualEditorExperimental' => array(
 			'default' => true,
 		),
-
 		'wmgVisualEditorEnableTocWidget' => array(
 			'default' => false,
 		),
 		'wmgVisualEditorAccessRESTbaseDirectly' => array(
 			'default' => true,
+		),
+		'$wmgVisualEditorTransitionDefault' => array(
+			'default' => false,
+			'enwiki' => true,
 		),
 		// ------------ BetaFeatures end -----------
 

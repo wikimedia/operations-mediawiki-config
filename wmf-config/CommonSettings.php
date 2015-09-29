@@ -2004,6 +2004,9 @@ if ( $wmgUseVisualEditor ) {
 		// Only show the beta-disable preference if the wiki is in 'beta'.
 		$wgHiddenPrefs[] = 'visualeditor-betatempdisable';
 	}
+	if ( $wmgVisualEditorTransitionDefault ) {
+		$wgVisualEditorTransitionDefault = true;
+	}
 	// T52000 - to remove once roll-out is complete.
 	if ( $wmgVisualEditorDisableForAnons ) {
 		$wgVisualEditorDisableForAnons = true;

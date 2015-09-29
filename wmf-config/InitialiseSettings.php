@@ -12879,6 +12879,13 @@ $wgConf->settings = array(
 	'enwiki' => true,
 ),
 
+// Whether VisualEditor should pay attention to the -autodisable user preference
+// to augment the -betatempdisable one (for wikis transitioning from opt-in to
+// opt-out).
+'wmgVisualEditorTransitionDefault' => array(
+	'default' => false,
+),
+
 // Should VisualEditor's "beta welcome" be shown
 'wmgVisualEditorShowBetaWelcome' => array(
 	'default' => true,
