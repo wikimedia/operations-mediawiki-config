@@ -12862,6 +12862,7 @@ $wgConf->settings = array(
 // this will need to be set true for 30 days (anon cache epoch).
 'wmgVisualEditorDisableForAnons' => array(
 	'default' => false,
+	'enwiki' => true,
 ),
 
 // Whether VisualEditor should be enabled for a proportion of new accounts on a
