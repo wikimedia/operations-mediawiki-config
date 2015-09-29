@@ -12884,6 +12884,7 @@ $wgConf->settings = array(
 // opt-out).
 'wmgVisualEditorTransitionDefault' => array(
 	'default' => false,
+	'enwiki' => true,
 ),
 
 // Should VisualEditor's "beta welcome" be shown
