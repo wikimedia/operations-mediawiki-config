@@ -14712,6 +14712,7 @@ $wgConf->settings = array(
 'wmgFlowEnableOptInBetaFeature' => array(
 	'default' => false,
 	'testwiki' => true,
+	'mediawikiwiki' => true,
 ),
 'wmgUseDisambiguator' => array(
 	'default' => true,
