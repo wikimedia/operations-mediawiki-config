@@ -11583,7 +11583,6 @@ $wgConf->settings = array(
 	'default' => true, // New wikis by default are opt-in per-page LiquidThreads
 	// ---------
 	'strategywiki' => false,
-	'sewikimedia' => false, // T48182
 	'ptwikibooks' => false, // T50578
 ),
 
@@ -11592,6 +11591,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'mediawikiwiki' => true,
 	'officewiki' => true, // replaced with Flow 2014-11-25
+	'sewikimedia' => true, // T106302, T114277
 ),
 
 'wmgLQTUserControlNamespaces' => array(
