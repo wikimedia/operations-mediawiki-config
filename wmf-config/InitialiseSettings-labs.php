@@ -921,6 +921,10 @@ function wmfLabsSettings() {
 			'default' => true,
 		),
 
+		'wmgUseRelatedArticles' => array(
+			'default' => true,
+		),
+
 		'wmgUseNavigationTiming' => array(
 			'default' => true,
 		),
