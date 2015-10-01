@@ -15704,9 +15704,12 @@ $wgConf->settings = array(
 	'default' => false,
 	'enwikivoyage' => true,
 	'ruwikivoyage' => true, // T110837
+	'zhwikivoyage' => true, // T114334
+	'cawiki' => true, // T114392
 ),
 'wgWPBNamespaces' => array(
 	'default' => array( NS_MAIN, NS_USER ),
+	'cawiki' => array( 102, NS_USER ), // T114392
 ),
 'wgWPBBannerProperty' => array(
 	'default' => 'P948',
