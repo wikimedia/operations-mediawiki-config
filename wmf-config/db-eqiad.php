@@ -161,7 +161,8 @@ $wgLBFactoryConf = array(
 	'max lag'	  => 10,
 	'variables'   => array(
 		'innodb_lock_wait_timeout' => 15
-	)
+	),
+	'lagDetectionMethod' => 'pt-heartbeat'
 ),
 
 'groupLoadsBySection' => array(
