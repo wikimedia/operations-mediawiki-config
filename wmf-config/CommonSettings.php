@@ -305,6 +305,15 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 	'replication' => 'async'
 );
 
+$wgObjectCaches['resourceloader'] = array(
+	'class' => 'MultiWriteBagOStuff',
+	'caches' => array(
+		0 => $wgObjectCaches['apc'],
+		1 => $wgObjectCaches['memcached-pecl'],
+	),
+	'replication' => 'async',
+);
+
 if ( $wmgUseClusterSession ) {
 	require( getRealmSpecificFilename( "$wmfConfigDir/session.php" ) );
 
