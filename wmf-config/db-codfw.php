@@ -170,6 +170,48 @@ $wgLBFactoryConf = [
 	]
 ],
 
+'templateOverridesBySection' => [
+	/*
+	's1' => [
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => [
+			'conds' => [ 'shard' => 's1', 'datacenter' => $wmfMasterDatacenter ] ],
+	],
+	's2' => [
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => [
+			'conds' => [ 'shard' => 's2', 'datacenter' => $wmfMasterDatacenter ] ],
+	],
+	'DEFAULT' => [
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => [
+			'conds' => [ 'shard' => 's3', 'datacenter' => $wmfMasterDatacenter ] ],
+	],
+	's4' => [
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => [
+			'conds' => [ 'shard' => 's4', 'datacenter' => $wmfMasterDatacenter ] ],
+	),
+	's5' => [
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => [
+			'conds' => [ 'shard' => 's5', 'datacenter' => $wmfMasterDatacenter ] ],
+	],
+	*/
+	's6' => [
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => [
+			'conds' => [ 'shard' => 's6', 'datacenter' => $wmfMasterDatacenter ] ],
+	],
+	/*
+	's7' => [
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => [
+			'conds' => [ 'shard' => 's7', 'datacenter' => $wmfMasterDatacenter ] ],
+	],
+	*/
+],
+
 'groupLoadsBySection' => [
 	's1' => [
 		'watchlist' => [
