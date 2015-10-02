@@ -167,7 +167,42 @@ $wgLBFactoryConf = array(
 	'max lag'	  => 10, // should be safely less than $wgCdnReboundPurgeDelay
 	'variables'   => array(
 		'innodb_lock_wait_timeout' => 15
-	)
+	),
+),
+
+'templateOverridesBySection' => array(
+	/*
+	's1' => array(
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => array( 'channel' => 's1', 'channelColumn' => 'shard' ),
+	),
+	's2' => array(
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => array( 'channel' => 's2', 'channelColumn' => 'shard' ),
+	),
+	's3' => array(
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => array( 'channel' => 's3', 'channelColumn' => 'shard' ),
+	),
+	's4' => array(
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => array( 'channel' => 's4', 'channelColumn' => 'shard' ),
+	),
+	's5' => array(
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => array( 'channel' => 's5', 'channelColumn' => 'shard' ),
+	),
+	*/
+	's6' => array(
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => array( 'channel' => 's6', 'channelColumn' => 'shard' ),
+	),
+	/*
+	's7' => array(
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => array( 'channel' => 's7', 'channelColumn' => 'shard' ),
+	),
+	*/
 ),
 
 'groupLoadsBySection' => array(
