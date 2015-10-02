@@ -170,6 +170,41 @@ $wgLBFactoryConf = array(
 	)
 ),
 
+'templateOverridesBySection' => array(
+	/*
+	's1' => array(
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => [ 'conds' => [ 'shard' => 's1' ] ],
+	),
+	's2' => array(
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => [ 'conds' => [ 'shard' => 's2' ] ],
+	),
+	'DEFAULT' => array(
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => [ 'conds' => [ 'shard' => 's3' ] ],
+	),
+	's4' => array(
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => [ 'conds' => [ 'shard' => 's4' ] ],
+	),
+	's5' => array(
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => [ 'conds' => [ 'shard' => 's5' ] ],
+	),
+	*/
+	's6' => array(
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => [ 'conds' => [ 'shard' => 's5' ] ],
+	),
+	/*
+	's7' => array(
+		'lagDetectionMethod' => 'pt-heartbeat',
+		'lagDetectionOptions' => [ 'conds' => [ 'shard' => 's7' ] ],
+	),
+	*/
+),
+
 'groupLoadsBySection' => array(
 	's1' => array(
 		'watchlist' => array(
