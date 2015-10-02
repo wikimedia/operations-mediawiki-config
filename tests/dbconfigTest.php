@@ -14,17 +14,21 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 
 	public static function provideRealmDatacenter() {
 		return array(
-			array( 'production', 'eqiad' ),
-			array( 'production', 'codfw' ),
-			array( 'labs', 'eqiad' ),
+			array( 'production', 'eqiad', 'eqiad' ),
+			array( 'production', 'eqiad', 'codfw' ),
+			array( 'production', 'codfw', 'eqiad' ),
+			array( 'production', 'codfw', 'codfw' ),
+			array( 'labs', 'eqiad', 'eqiad' ),
 		);
 	}
 
-	function loadDbFile( $realm, $datacenter ) {
-		global $wmfRealm, $wmfDatacenter;
+	function loadDbFile( $realm, $datacenter, $masterdatacenter ) {
+		global $wmfRealm, $wmfDatacenter, $wmfMasterDatacenter;
 
-		list( $oldRealm, $oldDatacenter ) = array( $wmfRealm, $wmfDatacenter );
-		list( $wmfRealm, $wmfDatacenter ) = array( $realm, $datacenter );
+		list( $oldRealm, $oldDatacenter, $oldMasterDatacenter ) =
+			array( $wmfRealm, $wmfDatacenter, $wmfMasterDatacenter );
+		list( $wmfRealm, $wmfDatacenter, $wmfMasterDatacenter ) =
+			array( $realm, $datacenter, $masterdatacenter );
 
 		# "properly" load db.php in local context:
 		$wgDBname     = 'testwiki';
@@ -36,7 +40,8 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 
 		include( getRealmSpecificFilename( __DIR__ . '/../wmf-config/db.php' ) );
 
-		list( $wmfRealm, $wmfDatacenter ) = array( $oldRealm, $oldDatacenter );
+		list( $wmfRealm, $wmfDatacenter, $wmfMasterDatacenter ) =
+			array( $oldRealm, $oldDatacenter, $oldMasterDatacenter );
 
 		return $wgLBFactoryConf;
 	}
@@ -46,9 +51,9 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 	 *
 	 * @dataProvider provideRealmDatacenter
 	 */
-	function testSectionLoadsInHostsbyname( $realm, $datacenter ) {
+	function testSectionLoadsInHostsbyname( $realm, $datacenter, $masterdatacenter ) {
 		$ok = true;
-		$lb = $this->loadDbFile( $realm, $datacenter );
+		$lb = $this->loadDbFile( $realm, $datacenter, $masterdatacenter );
 		foreach ( $lb['sectionLoads'] as $clusterName => $cluster ) {
 			foreach ( $cluster as $host => $weight ) {
 				if ( !array_key_exists( $host, $lb['hostsByName'] ) ) {
@@ -69,9 +74,9 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 	 *
 	 * @dataProvider provideRealmDatacenter
 	 */
-	function testDbAssignedToAnExistingCluster( $realm, $datacenter ) {
+	function testDbAssignedToAnExistingCluster( $realm, $datacenter, $masterdatacenter ) {
 		$ok = true;
-		$lb = $this->loadDbFile( $realm, $datacenter );
+		$lb = $this->loadDbFile( $realm, $datacenter, $masterdatacenter );
 		foreach ( $lb['sectionsByDB'] as $dbname => $cluster) {
 			if ( !array_key_exists( $cluster, $lb['sectionLoads'] ) ) {
 				$ok = false;
