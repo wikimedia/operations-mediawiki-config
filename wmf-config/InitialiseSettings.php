@@ -6915,6 +6915,11 @@ $wgConf->settings = array(
 			// practicality has won out over paranoia on enwiki, raising from 20 to 100 -- TS 2008-05-21
 			'rollbacker' => array( 100, 60 ),
 		),
+		'purge' => array(
+			// 30 backlink purges per minute
+			'ip' => array( 30, 60 ),
+			'user' => array( 30, 60 ),
+		),
 		'linkpurge' => array(
 			// 30 backlink purges per minute
 			'ip' => array( 30, 60 ),
