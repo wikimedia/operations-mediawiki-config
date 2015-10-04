@@ -17,6 +17,7 @@ aswiki
 azwiki
 azwikisource
 azwiktionary
+azbwiki
 barwiki
 bat_smgwiki
 bawiki
@@ -46,6 +47,7 @@ ckbwiki
 cowiki
 crhwiki
 cswiki
+cswikiquote
 cswikisource
 cswiktionary
 cvwiki
@@ -77,18 +79,20 @@ eswikibooks
 eswikinews
 eswikiquote
 eswikisource
+eswikiversity
 eswiktionary
 etwiki
 etwikisource
 etwiktionary
 euwiki
 euwiktionary
+fawikibooks
 fawikinews
 fawikiquote
 fawikisource
 fawikivoyage
 fawiktionary
-fiwiki
+fiwikibooks
 fiwikisource
 fiwiktionary
 fjwiktionary
@@ -109,7 +113,9 @@ glkwiki
 glwiki
 glwiktionary
 guwiki
+guwikisource
 gvwiki
+hakwiki
 hewiki
 hewikibooks
 hewikisource
@@ -123,7 +129,6 @@ hrwikisource
 hrwiktionary
 hsbwiki
 htwiki
-huwiki
 huwikibooks
 huwikisource
 huwiktionary
@@ -166,6 +171,7 @@ kuwiktionary
 kvwiki
 kywiki
 kywiktionary
+labswiki
 ladwiki
 lawiki
 lawikisource
@@ -187,6 +193,7 @@ mgwiki
 mhrwiki
 minwiki
 miwiki
+mkwiki
 mlwiki
 mlwikisource
 mlwiktionary
@@ -249,7 +256,7 @@ ruwikinews
 ruwikiquote
 ruwikisource
 ruwikiversity
-ruwiktionary
+ruwikivoyage
 sahwiki
 sawiki
 sawikisource
@@ -277,6 +284,7 @@ srwiktionary
 strategywiki
 suwiki
 svwikisource
+svwikivoyage
 svwiktionary
 swwiki
 swwiktionary
@@ -290,6 +298,7 @@ tewiki
 tewikisource
 tewiktionary
 tgwiki
+tgwiktionary
 thwiki
 thwikisource
 thwiktionary
@@ -308,6 +317,7 @@ urwiktionary
 uzwiki
 uzwiktionary
 vecwiki
+vepwiki
 viwikisource
 viwiktionary
 vlswiki
@@ -315,6 +325,8 @@ vowiki
 vowiktionary
 wawiki
 wawiktionary
+wikimania2014wiki
+wikimania2015wiki
 wuuwiki
 xmfwiki
 yiwiki
