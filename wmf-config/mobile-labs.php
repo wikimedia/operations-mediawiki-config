@@ -19,6 +19,9 @@ if ( $wmgMobileFrontend ) {
 	}
 }
 
+// T114552
+$wgMobileFrontendLogo = '/static/images/project-logos/betawiki.png';
+
 $wgMFForceSecureLogin = false;
 $wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
 $wgMFSpecialCaseMainPage = $wmgMFSpecialCaseMainPage;
