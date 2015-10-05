@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_8700393a",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 228,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-10-05T22:42:10Z",
+      "side": 1,
+      "message": "Nit: \"{$handlerName}-buffered\" for consistency of interpolated string style.",
+      "revId": "61d15f20e303d0d78f7b693444037bd8c44ae53b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
