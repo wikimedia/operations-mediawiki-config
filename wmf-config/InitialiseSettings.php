@@ -15731,6 +15731,8 @@ $wgConf->settings = array(
 ),
 'wgWPBNamespaces' => array(
 	'default' => array( NS_MAIN, NS_USER ),
+	'ruwikivoyage' => array( 0, 1, 10, 11, 12, 13, 14, 15, 2,
+		2300, 2301, 2302, 2303, 2600, 3, 4, 5, 6, 7, 8, 828, 829, 9 ), // T114566, T114723
 	'cawiki' => array( 102, NS_USER ), // T114392
 ),
 'wgWPBBannerProperty' => array(
