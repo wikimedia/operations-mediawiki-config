@@ -60,14 +60,25 @@ $wgCirrusSearchShardCount = array(
 	'labsearch' => array_map( function() { return 1; }, $wgCirrusSearchShardCount ),
 );
 
+// Disable replicas for the labsearch cluster, it's only a single machine
 $wgCirrusSearchReplicas = array(
 	'eqiad' => $wgCirrusSearchReplicas,
 	'codfw' => $wgCirrusSearchReplicas,
 	'labsearch' => array_map( function() { return 'false'; }, $wgCirrusSearchReplicas ),
 );
 
+// 5 second timeout for local cluster, 10 seconds for remote. 2 second timeout
+// for the labsearch cluster.
 $wgCirrusSearchClientSideConnectTimeout = array(
 	'eqiad' => $wmfDatacenter === 'eqiad' ? 5 : 10,
 	'codfw' => $wmfDatacenter === 'codfw' ? 5 : 10,
 	'labsearch' => 2,
+);
+
+// Drop delayed jobs for the labsearch cluster after only 10 minutes to keep them
+// from filling up the job queue.
+$wgCirrusSearchDropDelayedJobsAfter = array(
+	'eqiad' => $wgCirrusSearchDropDelayedJobsAfter,
+	'codfw' => $wgCirrusSearchDropDelayedJobsAfter,
+	'labsearch' => 10 * 60, // ten minutes
 );
