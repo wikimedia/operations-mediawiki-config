@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_84f7d7cf",
+        "filename": "wmf-config/mobile-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2015-10-05T20:05:07Z",
+      "side": 1,
+      "message": "That image is 135 x 155 pixels\n\nhttp://en.wikipedia.beta.wmflabs.org/static//images/project-logos/betawiki.png\n\nMaybe that will work just fine for the mobile version. Else we would need to scale it down (which imagemagick should do just fine):\n\n $ wget \u0027http://en.wikipedia.beta.wmflabs.org/static//images/project-logos/betawiki.png\u0027\n $ convert -scale 64 betawiki.png temp.png\n $ pngcrush temp.png betawiki-mobile.png \u0026\u0026 rm temp.png\n $ file beta-mobile.png\n betawiki-mobile.png: PNG image data, 64 x 73, 8-bit/color RGBA, non-interlaced\n $",
+      "revId": "6d6ea9846e2dab3aed688d3adc1361536bcf4160",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
