@@ -897,6 +897,8 @@ if ( in_array( $wgLanguageCode, array( 'commons', 'meta', 'sources', 'species', 
 
 # All wikis are special and get Cirrus :)
 if ( $wmgUseCirrus ) {
+	require_once( "$IP/extensions/Elastica/Elastica.php" );
+	require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
 	include( "$wmfConfigDir/CirrusSearch-common.php" );
 }
 
@@ -2198,7 +2200,7 @@ if ( $wmgUseTranslate ) {
 	if ( $wmgUseTranslationMemory ) {
 		$servers = array_map(
 			function ( $v ) { return array( 'host' => $v ); },
-			$wgCirrusSearchServers
+			isset( $wgCirrusSearchServers ) ? $wgCirrusSearchServers : $wgCirrusSearchCluster[$wgCirrusSearchDefaultCluster]
 		);
 		// Read only until renamed to 'TTMServer'
 		$wgTranslateTranslationServices['TTMServer'] = array(
