@@ -1205,8 +1205,21 @@ $wgConf->settings = array(
 'wgUploadNavigationUrl' => array(
 	// Projects
 	'default' => false,
-	'commonsuploads' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
+	'commonsuploads' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=$lang',
 	'wikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
+
+	// These are commonsuploads wikis (not specified below) where $lang does not work
+	'betawikiversity' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
+	'simplewiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
+	'simplewiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
+	'bhwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=bho',
+	'crhwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=crh-latn',
+	'fiu_vrowiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=vro',
+	'roa_rupwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=rup',
+	'roa_rupwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=rup',
+	'zh_classicalwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=lzh',
+	'zh_min_nanwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nan',
+	'zh_min_nanwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nan',
 
 	// Individual wikis
 	// NOTE: Use relative paths for same-wiki links so the SSL converter can tweak them correctly
