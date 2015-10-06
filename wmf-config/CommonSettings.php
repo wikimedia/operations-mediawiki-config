@@ -863,14 +863,6 @@ $wgCopyrightIcon = '<a href="//wikimediafoundation.org/">' .
 		'" ' .
 		'width="88" height="31" alt="Wikimedia Foundation"/></a>';
 
-# For Special:Cite, we only want it on wikipedia (but can't count on $site),
-# not on these fakers.
-$wgLanguageCodeReal = $wgLanguageCode;
-# Fake it up
-if ( in_array( $wgLanguageCode, array( 'commons', 'meta', 'sources', 'species', 'foundation', 'nostalgia', 'mediawiki', 'login' ) ) ) {
-	$wgLanguageCode = 'en';
-}
-
 # :SEARCH:
 
 # All wikis are special and get Cirrus :)
