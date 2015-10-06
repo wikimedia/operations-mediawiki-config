@@ -955,6 +955,21 @@ function wmfLabsSettings() {
 			'zhwiki' => true,
 		),
 
+		'-wmgCirrusSearchServers' => array(
+			'default' => null,
+		),
+
+		'-wmgCirrusSearchClusters' => array(
+			'default' => array(
+				'eqiad' => array(
+					'deployment-elastic05',
+					'deployment-elastic06',
+					'deployment-elastic07',
+					'deployment-elastic08',
+				),
+			),
+		),
+
 		'wmgUseFlow' => array(
 			'enwiki' => true,
 			'en_rtlwiki' => true,
