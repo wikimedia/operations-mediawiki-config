@@ -897,8 +897,6 @@ if ( in_array( $wgLanguageCode, array( 'commons', 'meta', 'sources', 'species', 
 
 # All wikis are special and get Cirrus :)
 if ( $wmgUseCirrus ) {
-	require_once( "$IP/extensions/Elastica/Elastica.php" );
-	require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
 	include( "$wmfConfigDir/CirrusSearch-common.php" );
 }
 
