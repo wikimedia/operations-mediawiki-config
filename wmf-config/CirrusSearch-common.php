@@ -11,8 +11,6 @@
 #
 # Contact Wikimedia operations or platform engineering for more details.
 
-require_once( "$IP/extensions/Elastica/Elastica.php" );
-require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
 $wgSearchType = 'CirrusSearch';
 
 if ( $wmgUseClusterJobqueue ) {
@@ -23,6 +21,11 @@ if ( $wmgUseClusterJobqueue ) {
 		$wgJobTypeConf['default'];
 }
 
+if ( isset( $wmgCirrusSearchServers ) ) {
+	$wgCirrusSearchServers = $wmgCirrusSearchServers;
+}
+$wgCirrusSearchClusters = $wmgCirrusSearchClusters;
+$wgCirrusSearchDefaultCluster = $wmgCirrusSearchDefaultCluster;
 
 # Enable user testing
 $wgCirrusSearchUserTesting = $wmgCirrusSearchUserTesting;
