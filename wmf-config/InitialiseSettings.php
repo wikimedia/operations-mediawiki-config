@@ -15281,6 +15281,25 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgCirrusSearchServers' => array(
+	'default' => array( '10.2.2.30' ), // search.svc.eqiad.wmnet
+	'testwiki' => null,
+),
+
+'wmgCirrusSearchDefaultCluster' => array(
+	'default' => 'eqiad',
+),
+
+'wmgCirrusSearchClusters' => array(
+	'default' => array(
+		'eqiad' => array( '10.2.2.30' ), // search.svc.eqiad.wmnet
+	),
+	'testwiki' => array(
+		'eqiad' => array( '10.2.2.30' ), // search.svc.eqiad.wmnet
+		'labsearch' => array( 'nobelium' ),
+	),
+),
+
 'wmgCirrusPerUserPoolCounter' => array(
 	'default' => false,
 	'testwiki' => true,
