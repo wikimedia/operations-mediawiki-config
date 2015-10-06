@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ecb373e_16fb10df",
+        "filename": "tests/loggingTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2015-10-06T21:10:40Z",
+      "side": 1,
+      "message": "Nit: I am not the author :-)",
+      "revId": "2071ad3eb220ae05224d92c92101dc6e327694bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_1658f0fb",
+        "filename": "tests/loggingTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2015-10-06T21:10:40Z",
+      "side": 1,
+      "message": "Needed because /phpunit.xml has backupGlobals\u003d\"false\"  . That is a copy paste from MediaWiki core.\n\nIn theory we can enable it for a given test function with a comment such as:\n\n /**\n  * @backupGlobals enabled\n  */\n\nPHPUnit saves $GLOBAL for us.   Maybe we can remove it in a later patch or introduce a parent patch that enables backupGlobals in phpunit.xml.",
+      "revId": "2071ad3eb220ae05224d92c92101dc6e327694bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_1641d00d",
+        "filename": "tests/loggingTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2015-10-06T21:10:40Z",
+      "side": 1,
+      "message": "In Mediawiki core we usually prefix them with \u0027provides\u0027.\n\nShould be static:\n\n public static function provideHandlerSetupProvider() {",
+      "revId": "2071ad3eb220ae05224d92c92101dc6e327694bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_563bd897",
+        "filename": "tests/loggingTest.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2015-10-06T21:10:40Z",
+      "side": 1,
+      "message": "Something I discovered recently is that PHPUnit (even 3.7) supports naming the test cases using something like:\n\n return array\n   \u0027my super test\u0027 \u003d\u003e array( 1, 2 , 3),\n   \u0027another log test\u0027 \u003d\u003e array( 1, 2, 3),\n );\n\nThis way you get the test run showing the names instead of \"with data #1\" \"with data #2\".",
+      "revId": "2071ad3eb220ae05224d92c92101dc6e327694bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_96faa0b4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 4326,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2015-10-06T21:10:40Z",
+      "side": 1,
+      "message": "You most probably want a test to validate it is proper json.",
+      "revId": "2071ad3eb220ae05224d92c92101dc6e327694bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ecb373e_f620c448",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 4357,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2015-10-06T21:10:40Z",
+      "side": 1,
+      "message": "I would expand that array to have each element on its own line.",
+      "revId": "2071ad3eb220ae05224d92c92101dc6e327694bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
