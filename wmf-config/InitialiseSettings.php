@@ -12916,6 +12916,13 @@ $wgConf->settings = array(
 	'default' => false,
 ),
 
+// Whether to upload files to Commons ('shared') or locally
+'wmgRemoteUploadTarget' => array(
+	'default' => 'shared',
+	'commonswiki' => 'local',
+	'private' => 'local'
+),
+
 // --------------- VisualEditor end ---------------
 
 'wmgUseRSSExtension' => array(
