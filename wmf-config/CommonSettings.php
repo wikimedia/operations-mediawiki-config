@@ -628,19 +628,21 @@ if ( $wmgUseSpamBlacklist ) {
 	$wgLogSpamBlacklistHits = true;
 }
 
-include( $IP . '/extensions/TitleBlacklist/TitleBlacklist.php' );
+if ( $wmgUseTitleBlacklist ) {
+	include( $IP . '/extensions/TitleBlacklist/TitleBlacklist.php' );
 
-$wgTitleBlacklistSources = array(
-	'meta' => array(
-		'type' => TBLSRC_URL,
-		'src'  => "https://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw&tb_ver=1",
-	),
-);
+	$wgTitleBlacklistSources = array(
+		'meta' => array(
+			'type' => TBLSRC_URL,
+			'src'  => "https://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw&tb_ver=1",
+		),
+	);
 
-$wgTitleBlacklistBlockAutoAccountCreation = false;
+	$wgTitleBlacklistBlockAutoAccountCreation = false;
 
-if ( $wgDBname !== 'labswiki' ) {
-	$wgTitleBlacklistUsernameSources = array( 'meta' );
+	if ( $wgDBname !== 'labswiki' ) {
+		$wgTitleBlacklistUsernameSources = array( 'meta' );
+	}
 }
 
 if ( $wmgUseQuiz ) {
