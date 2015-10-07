@@ -630,17 +630,17 @@ if ( $wmgUseSpamBlacklist ) {
 
 include( $IP . '/extensions/TitleBlacklist/TitleBlacklist.php' );
 
-$wgTitleBlacklistSources = array(
-	'meta' => array(
-		'type' => TBLSRC_URL,
-		'src'  => "https://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw&tb_ver=1",
-	),
-);
-
 $wgTitleBlacklistBlockAutoAccountCreation = false;
 
-if ( $wgDBname !== 'labswiki' ) {
-	$wgTitleBlacklistUsernameSources = array( 'meta' );
+if ( $wmgUseGlobalTitleBlacklist ) {
+	$wgTitleBlacklistSources = array(
+		'meta' => array(
+			'type' => TBLSRC_URL,
+			'src'  => "https://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw&tb_ver=1",
+		),
+	);
+
+	$wgTitleBlacklistUsernameSources = $wmgTitleBlacklistUsernameSources;
 }
 
 if ( $wmgUseQuiz ) {
