@@ -6,6 +6,21 @@ if ( $wmgUseWikibaseRepo ) {
 			'Q608' => 'wb-badge-goodarticle',
 			'Q609' => 'wb-badge-featuredarticle'
 		);
+		$wgWBRepoSettings['preferredGeoDataProperties'] = array(
+			'P125',
+			'P10',
+		);
+		$wgWBRepoSettings['preferredPageImagesProperties'] = array(
+			'P6',
+			'P47',
+			'P50',
+			'P98',
+			'P106',
+			'P118',
+			'P152',
+			'P153',
+			'P185',
+		);
 	} else {
 		$wgWBRepoSettings['badgeItems'] = array(
 			'Q17437798' => 'wb-badge-goodarticle',
@@ -18,11 +33,43 @@ if ( $wmgUseWikibaseRepo ) {
 			'Q20748092' => 'wb-badge-proofread',
 			'Q20748093' => 'wb-badge-validated'
 		);
+		$wgWBRepoSettings['preferredGeoDataProperties'] = array(
+			'P625',
+		);
+		$wgWBRepoSettings['preferredPageImagesProperties'] = array(
+			// Photos
+			'P18',
+			// Complex graphics
+			'P41',
+			'P94',
+			'P154',
+			'P1766',
+			// Simple graphics
+			'P14',
+			'P158',
+			'P1543',
+			'P109',
+			'P367',
+			// Multi page content
+			'P996',
+			// Maps
+			'P1621',
+			'P15',
+			'P1846',
+			'P181',
+			'P242',
+			'P1944',
+			'P1943',
+			// Diagrams
+			'P207',
+			'P117',
+			'P692',
+			'P491',
+		);
 	}
 }
 
 if ( $wmgUseWikibaseClient ) {
-
 	$wgWBClientSettings['repoConceptBaseUri'] = 'http://www.wikidata.org/entity/';
 
 	if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki', 'testwikidatawiki' ) ) ) {
