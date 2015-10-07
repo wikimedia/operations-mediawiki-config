@@ -3,7 +3,41 @@
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require_once __DIR__ . '/SiteConfiguration.php';
 
+/**
+ * @backupGlobals enabled
+ */
 class cirrusTests extends PHPUnit_Framework_TestCase {
+	public static function provideShardCount() {
+		return array(
+			array( 'eqiad', 'itwiki', array(
+				'content' => 7,
+				'general' => 9,
+			) ),
+			array( 'codfw', 'itwiki', array(
+				'content' => 7,
+				'general' => 7,
+			) ),
+			array( 'eqiad', 'enwiki', array(
+				'content' => 7,
+				'general' => 10,
+				'titlesuggest' => 4,
+			) ),
+			array( 'codfw', 'enwiki', array(
+				'content' => 7,
+				'general' => 7,
+				'titlesuggest' => 4,
+			) ),
+		);
+	}
+
+	/**
+	 * @dataProvider provideShardCount
+	 */
+	public function testPerClusterShardCountIsRespected( $cluster, $wiki, $expect ) {
+		$config = $this->loadCirrusConfig( 'production', $wiki, 'wiki', 'en', 'wikipedia', $cluster );
+		$this->assertEquals( $expect, $config['wgCirrusSearchShardCount'] );
+	}
+
 	public function testClusterConfigurationForProdTestwiki() {
 		$config = $this->loadCirrusConfig( 'production', 'testwiki', 'wiki', 'en', 'wikipedia' );
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
@@ -27,7 +61,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		);
 	}
 
-	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix, $lang, $site ) {
+	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix, $lang, $site, $dataCenter = 'eqiad' ) {
 		// Variables rqeuired for wgConf.php
 		$wmfConfigDir = __DIR__ . "/../wmf-config";
 		$IP = __DIR__ .'/../php/';
@@ -36,7 +70,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 
 		// InitialiseSettings.php explicitly declares these as global, so we must too
 		$GLOBALS['wmfUdp2logDest'] = 'localhost';
-		$GLOBALS['wmfDatacenter'] = 'unittest';
+		$GLOBALS['wmfDatacenter'] = $dataCenter;
 		$GLOBALS['wmfRealm'] = $wmfRealm;
 		$GLOBALS['wmfConfigDir'] = $wmfConfigDir;
 		$GLOBALS['wgConf'] = $wgConf;
@@ -67,6 +101,6 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 
 		require "{$wmfConfigDir}/CirrusSearch-common.php";
 
-		return compact( array_keys( get_defined_vars() ) );
+		return get_defined_vars();
 	}
 }

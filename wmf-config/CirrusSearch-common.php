@@ -77,8 +77,22 @@ $wgCirrusSearchOptimizeIndexForExperimentalHighlighter = true;
 $wgCirrusSearchFeedbackLink = $wmgCirrusSearchFeedbackLink;
 
 # Settings customized per index.
-$wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
-$wgCirrusSearchReplicas = $wmgCirrusSearchReplicas;
+$wgCirrusSearchShardCount = $wmgCirrusSearchShardCount['all'];
+if ( isset( $wmgCirrusSearchShardCount[$wmfDatacenter] ) ) {
+	$wgCirrusSearchShardCount = array_merge(
+		$wgCirrusSearchShardCount,
+		$wmgCirrusSearchShardCount[$wmfDatacenter]
+	);
+}
+
+$wgCirrusSearchReplicas = $wmgCirrusSearchReplicas['all'];
+if ( isset( $wmgCirrusSearchReplicas[$wmfDatacenter] ) ) {
+	$wgCirrusSearchReplicas = array_merge(
+		$wgCirrusSearchReplicas,
+		$wmgCirrusSearchReplicas[$wmfDatacenter]
+	);
+}
+
 $wgCirrusSearchMaxShardsPerNode = $wmgCirrusSearchMaxShardsPerNode;
 $wgCirrusSearchPreferRecentDefaultDecayPortion = $wmgCirrusSearchPreferRecentDefaultDecayPortion;
 $wgCirrusSearchBoostLinks = $wmgCirrusSearchBoostLinks;
