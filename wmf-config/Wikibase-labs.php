@@ -12,6 +12,13 @@ if ( $wmgUseWikibaseRepo ) {
 		'Q98658' => 'wb-badge-proofread',
 		'Q98651' => 'wb-badge-validated'
 	);
+	$wgWBRepoSettings['pageImagesProperties'] = array(
+		'P448',
+		'P715',
+		'P723',
+		'P733',
+		'P964',
+	);
 
 	$wgWBRepoSettings['subscriptionLookupMode'] = 'subscriptions+sitelinks';
 	$wgWBRepoSettings['useLegacyChangesSubscription'] = false;
