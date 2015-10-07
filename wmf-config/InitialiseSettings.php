@@ -4145,7 +4145,6 @@ $wgConf->settings = array(
 		'session' => "udp://$wmfUdp2logDest/session",
 		'logging' => "udp://$wmfUdp2logDest/logging",
 		'SimpleAntiSpam' => "udp://$wmfUdp2logDest/spam",
-		'Bug40009' => "udp://$wmfUdp2logDest/Bug40009",
 		'AntiBot' => "udp://$wmfUdp2logDest/spam",
 		'SpamBlacklistHit' => "udp://$wmfUdp2logDest/spam",
 		'SpamRegex' => "udp://$wmfUdp2logDest/spam",
