@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+2: Alex Monk <krenair@gmail.com>
+Code-Review+1: Billinghurst <billinghurst@gmail.com>
+Submitted-by: jenkins-bot
+Submitted-at: Wed, 07 Oct 2015 23:16:00 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/244176
+Project: operations/mediawiki-config
+Branch: refs/heads/master
