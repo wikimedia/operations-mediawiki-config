@@ -891,6 +891,12 @@ function wmfLabsSettings() {
 		'wmgVisualEditorTransitionDefault' => array(
 			'default' => false,
 		),
+
+		'wmgRemoteUploadTarget' => array(
+			'default' => 'commons.wikimedia.beta.wmflabs.org',
+			'commonswiki' => 'local',
+			'private' => 'local'
+		),
 		// ------------ BetaFeatures end -----------
 
 		'wmgUseRSSExtension' => array(
