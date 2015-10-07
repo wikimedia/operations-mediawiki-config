@@ -15625,6 +15625,14 @@ $wgConf->settings = array(
 'wgRightsIcon' => array(
 	'default' => '//creativecommons.org/images/public/somerights20.png',
 ),
+'wgSessionCacheType' => array(
+	'default' => 'redis_local',  // declared in redis.php
+	'labswiki' => 'memcached-pecl',
+),
+'wgMainStash' => array(
+	'default' => 'redis_local',  // declared in redis.php
+	'labswiki' => 'memcached-pecl',
+),
 
 'wmgFileExtensions' => array(
 	'default' => array(
@@ -15655,11 +15663,6 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'foundationwiki' => true,
-),
-
-'wmgUseClusterSession' => array(
-	'default'  => true,
-	'labswiki' => false,
 ),
 
 'wmgUseClusterSquid' => array(
