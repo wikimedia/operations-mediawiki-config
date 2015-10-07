@@ -2054,7 +2054,7 @@ if ( $wmgUseVisualEditor ) {
 	$wgCitoidServiceUrl = '//citoid.wikimedia.org/api';
 }
 
-if ( $wmgForeignUploadTargets ) {
+if ( isset( $wmgForeignUploadTargets ) ) {
 	$wgForeignUploadTargets = $wmgForeignUploadTargets;
 }
 
