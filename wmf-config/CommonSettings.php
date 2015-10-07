@@ -178,13 +178,11 @@ extract( $globals );
 # Needs to be before db.php
 require( "$wmfConfigDir/PrivateSettings.php" );
 
-# Monolog logging configuration
-require( getRealmSpecificFilename( "$wmfConfigDir/logging.php" ) );
-
-# Cluster-dependent files for database and memcached
-require( getRealmSpecificFilename( "$wmfConfigDir/db.php" ) );
 $wgMemCachedServers = array();
-require( getRealmSpecificFilename( "$wmfConfigDir/mc.php" ) );
+
+foreach ( array( 'logging', 'db', 'mc', 'redis' ) as $cfg ) {
+	require( getRealmSpecificFilename( "{$wmfConfigDir}/{$cfg}.php" ) );
+}
 
 ini_set( 'memory_limit', $wmgMemoryLimit );
 
@@ -303,22 +301,6 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 
 $wgObjectCaches['resourceloader'] = $wgObjectCaches['apc'];
 
-if ( $wmgUseClusterSession ) {
-	require( getRealmSpecificFilename( "$wmfConfigDir/session.php" ) );
-
-	$wgObjectCaches['sessions'] = array(
-		'class' => 'RedisBagOStuff',
-		'servers' => $sessionRedis[$wmfDatacenter],
-		'password' => $wmgRedisPassword,
-		'loggroup' => 'redis',
-	);
-	// Use the cache setup above and configure sessions caching
-	$wgSessionCacheType = 'sessions';
-	$wgMainStash = 'sessions'; // mostly for tokens and user states (T88493)
-} else {
-	$wgSessionCacheType = 'memcached-pecl';
-	$wgMainStash = 'memcached-pecl';
-}
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
 
