@@ -894,7 +894,7 @@ function wmfLabsSettings() {
 		// ------------ BetaFeatures end -----------
 
 		'wmgForeignUploadTargets' => array(
-			'default' => array( 'shared' => true ),
+			'default' => array( 'shared' ),
 			'commonswiki' => array(),
 		),
 
