@@ -11156,6 +11156,12 @@ $wgConf->settings = array(
 	'fishbowl' => false, // not needed, private editing...
 ),
 
+'wmgUseGlobalTitleBlacklist' => array(
+	'default' => true,
+	'private' => false,
+	'fishbowl' => false, // not needed, private editing...
+),
+
 'wgAllowImageMoving' => array(
 	'default' => true, // brion 2009-09-21
 	'testwiki' => true,
