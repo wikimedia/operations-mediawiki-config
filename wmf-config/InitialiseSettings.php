@@ -4322,7 +4322,6 @@ $wgConf->settings = array(
 		'api-feature-usage' => 'debug',
 		'badpass' => 'debug',
 		'BounceHandler' => 'debug',
-		'Bug40009' => 'debug',
 		'Bug58676' => 'debug', # Invalid message parameter
 		'captcha' => 'debug',
 		'CentralAuth' => 'debug',
