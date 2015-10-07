@@ -4443,6 +4443,7 @@ $wgConf->settings = array(
 	// * 100 - Portal
 	// * 102 - WikiProject
 	// * 104 - Reference
+	// * 114 - Translation
 	// Wikis are sorted by family (type), and then alphabetically
 
 'wgExtraNamespaces' => array(
