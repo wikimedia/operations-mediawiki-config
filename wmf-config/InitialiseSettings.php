@@ -6323,6 +6323,10 @@ $wgConf->settings = array(
 		106 => 'Nachrichten',
 		107 => 'Nachrichten_Diskussion',
 	),
+	'fawikivoyage' => array( // T113593
+		100 => 'درگاه', // Portal
+		101 => 'بحث_درگاه', // Portal talk
+	),
 	'hewikivoyage' => array(
 		108 => 'ספר', // Book
 		109 => 'שיחת_ספר', // Book talk
