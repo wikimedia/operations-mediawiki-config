@@ -168,23 +168,23 @@ $wgLBFactoryConf = array(
 	's1' => array(
 		'watchlist' => array(
 			'db1051' => 1,
-			'db1055' => 10,
+			'db1055' => 1,
 		),
 		'recentchanges' => array(
 			'db1051' => 1,
-			'db1055' => 10,
+			'db1055' => 1,
 		),
 		'recentchangeslinked' => array(
 			'db1051' => 1,
-			'db1055' => 10,
+			'db1055' => 1,
 		),
 		'contributions' => array(
 			'db1051' => 1,
-			'db1055' => 10,
+			'db1055' => 1,
 		),
 		'logpager' => array(
 			'db1051' => 1,
-			'db1055' => 10,
+			'db1055' => 1,
 		),
 		'dump' => array(
 			'db1053' => 1,
