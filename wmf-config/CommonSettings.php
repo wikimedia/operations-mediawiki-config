@@ -2547,10 +2547,8 @@ if ( $wmgUseSubpageSortkey ) {
 
 if ( $wmgUseGettingStarted ) {
 	require_once( "$IP/extensions/GettingStarted/GettingStarted.php" );
-	if ( !empty( $sessionRedis[$wmfDatacenter] ) ) {
-		$wgGettingStartedRedis = $sessionRedis[$wmfDatacenter][0];
-		$wgGettingStartedRedisOptions['password'] = $wmgRedisPassword;
-	}
+	$wgGettingStartedRedis = '/var/run/nutcracker/redis_eqiad.sock';
+	$wgGettingStartedRedisOptions['password'] = $wmgRedisPassword;
 	$wgGettingStartedCategoriesForTaskTypes = $wmgGettingStartedCategoriesForTaskTypes;
 	$wgGettingStartedExcludedCategories = $wmgGettingStartedExcludedCategories;
 
