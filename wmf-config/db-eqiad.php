@@ -89,8 +89,8 @@ $wgLBFactoryConf = array(
 	's1' => array(
 		'db1052' => 0,   # 2.8TB  96GB
 		'db1053' => 0,   # 2.8TB  96GB, vslow, dump
-		'db1051' => 0,   # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
-		'db1055' => 0,   # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
+		'db1051' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
+		'db1055' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1057' => 200, # 2.8TB  96GB
 		'db1065' => 100, # 2.8TB 160GB, api
 		'db1066' => 100, # 2.8TB 160GB, api
@@ -167,23 +167,23 @@ $wgLBFactoryConf = array(
 'groupLoadsBySection' => array(
 	's1' => array(
 		'watchlist' => array(
-			'db1051' => 10,
+			'db1051' => 1,
 			'db1055' => 1,
 		),
 		'recentchanges' => array(
-			'db1051' => 10,
+			'db1051' => 1,
 			'db1055' => 1,
 		),
 		'recentchangeslinked' => array(
-			'db1051' => 10,
+			'db1051' => 1,
 			'db1055' => 1,
 		),
 		'contributions' => array(
-			'db1051' => 10,
+			'db1051' => 1,
 			'db1055' => 1,
 		),
 		'logpager' => array(
-			'db1051' => 10,
+			'db1051' => 1,
 			'db1055' => 1,
 		),
 		'dump' => array(
