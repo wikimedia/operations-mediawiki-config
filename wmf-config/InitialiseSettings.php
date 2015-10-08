@@ -5586,13 +5586,6 @@ $wgConf->settings = array(
 	),
 	# @} end of wikisource wikis
 
-	// Wikivoyage @{
-	'fawikivoyage' => array( // T73382
-		106 => 'عبارت‌نامه', // Phrasebook
-		107 => 'بحث_عبارت‌نامه', // Phrasebook talk
-	),
-	// @} end of wikivoyage wikis
-
 	// Wiktionary @{
 	'angwiktionary' => array( // T58634
 		100 => 'Ætēaca',
@@ -6322,6 +6315,12 @@ $wgConf->settings = array(
 		105 => 'Thema_Diskussion',
 		106 => 'Nachrichten',
 		107 => 'Nachrichten_Diskussion',
+	),
+	'fawikivoyage' => array(
+		100 => 'درگاه', // Portal - T113593
+		101 => 'بحث_درگاه', // Portal talk - T113593
+		106 => 'عبارت‌نامه', // Phrasebook - T73382
+		107 => 'بحث_عبارت‌نامه', // Phrasebook talk - T73382
 	),
 	'hewikivoyage' => array(
 		108 => 'ספר', // Book
