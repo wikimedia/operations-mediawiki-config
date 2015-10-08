@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_cae00328",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1208,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-10-08T01:19:32Z",
+      "side": 1,
+      "message": "Think this needs to use double quotes.",
+      "revId": "3b4ae92d299fff55ba3f2735a3f3bab8b3a0a2f0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
