@@ -30,7 +30,7 @@ function updateWikiversions() {
 	}
 
 	$dbListName = basename( $argv[1], '.dblist' );
-	$dbList = MWWikiversions::readDbListFile( "$common/$dbListName.dblist" );
+	$dbList = MWWikiversions::readDbListFile( MEDIAWIKI_DBLIST_DIR . "/$dbListName.dblist" );
 
 	$newVersion = $argv[2];
 	if ( !preg_match( MEDIAWIKI_DIRECTORY_REGEX, $newVersion ) || !is_dir( "$common/$newVersion" ) ) {

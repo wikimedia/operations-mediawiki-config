@@ -91,12 +91,18 @@ class MWWikiversions {
 	 */
 	public static function readDbListFile( $srcPath ) {
 		$flags = FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES;
-		$lines = @file( $srcPath, $flags );
 
 		// Provide a means of migrating dblist files to `dblists/`
 		// by checking both `/foo/bar.dblist` and `/foo/dblists/bar.dblist`.
-		if ( !$lines ) {
-			$lines = @file( self::getAlternatePath( $srcPath ), $flags );
+		foreach ( array(
+			$srcPath,
+			MEDIAWIKI_DBLIST_DIR . '/' . basename( $srcPath ),
+			self::getAlternatePath( $srcPath ),
+		) as $path ) {
+			$lines = @file( $srcPath, $flags );
+			if ( $lines ) {
+				break;
+			}
 		}
 
 		if ( !$lines ) {
