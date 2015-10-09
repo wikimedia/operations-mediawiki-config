@@ -73,9 +73,22 @@ class MWWikiversions {
 	 * @return Array
 	 */
 	public static function readDbListFile( $srcPath ) {
+		$origPath = $srcPath;
 		$lines = @file( $srcPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
+
+		// Provide a means of migrating dblist files to `dblists/`
+		// by checking both `/foo/bar.dblist` and `/foo/dblists/bar.dblist`.
 		if ( !$lines ) {
-			throw new Exception( "Unable to read $srcPath.\n" );
+			$dirName = dirname( $srcPath );
+			if ( basename( $dirName ) !== 'dblists' ) {
+				$srcPath = $dirName . '/dblists/' . basename( $srcPath );
+			} else {
+				$srcPath = dirname( $dirName ) . '/' . basename( $srcPath );
+			}
+			$lines = @file( $srcPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
+		}
+		if ( !$lines ) {
+			throw new Exception( "Unable to read $origPath.\n" );
 		}
 
 		$dbs = array();
