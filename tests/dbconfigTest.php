@@ -43,17 +43,21 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 	 * @dataProvider provideRealmDatacenter
 	 */
 	function testSectionLoadsInHostsbyname( $realm, $datacenter ) {
+		$ok = true;
 		$lb = $this->loadDbFile( $realm, $datacenter );
-		foreach( $lb['sectionLoads'] as $clusterName => $cluster ) {
-			foreach( $cluster as $host => $weight ) {
-				$this->assertArrayHasKey(
-					$host,
-					$lb['hostsByName'],
-					"$host is listed in sectionLoads as a server in the $clusterName cluster, but it is not listed in 'hostsByName'. " .
-						" All hosts must be listed with their IP address in 'hostsByName'."
-				);
+		foreach ( $lb['sectionLoads'] as $clusterName => $cluster ) {
+			foreach ( $cluster as $host => $weight ) {
+				if ( !array_key_exists( $host, $lb['hostsByName'] ) ) {
+					$ok = false;
+					$this->fail(
+						"$host is listed in sectionLoads as a server in the $clusterName cluster," .
+						" but it is not listed in 'hostsByName'. All hosts must be listed with" .
+						" their IP address in 'hostsByName'."
+					);
+				}
 			}
 		}
+		$this->assertTrue( $ok );
 	}
 
 	/**
@@ -62,14 +66,18 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 	 * @dataProvider provideRealmDatacenter
 	 */
 	function testDbAssignedToAnExistingCluster( $realm, $datacenter ) {
+		$ok = true;
 		$lb = $this->loadDbFile( $realm, $datacenter );
-		foreach( $lb['sectionsByDB'] as $dbname => $cluster) {
-			$this->assertArrayHasKey(
-				$cluster,
-				$lb['sectionLoads'],
-				"In sectionsByDB, Database $dbname must points to an existing cluster. Unfortunately, cluster '$cluster' is not defined in 'sectionLoads'."
-			);
+		foreach ( $lb['sectionsByDB'] as $dbname => $cluster) {
+			if ( !array_key_exists( $cluster, $lb['sectionLoads'] ) ) {
+				$ok = false;
+				$this->fail(
+					"In sectionsByDB, Database $dbname must points to an existing cluster. " .
+					"Unfortunately, cluster '$cluster' is not defined in 'sectionLoads'."
+				);
+			}
 		}
+		$this->assertTrue( $ok );
 	}
 
 }
