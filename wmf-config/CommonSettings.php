@@ -484,8 +484,8 @@ if ( $wmgUseCORS ) {
 
 wfLoadSkins( array( 'Vector', 'MonoBook', 'Modern', 'CologneBlue' ) );
 
-if ( $wmgUseTimeline ) {
-	include( $IP . '/extensions/timeline/Timeline.php' );
+if ( $wmgUseEasyTimeline ) {
+	include( $IP . '/extensions/timeline/EasyTimeline.php' );
 	if ( $wgDBname == 'testwiki' || $wgDBname == 'mlwiki' ) {
 		// FreeSansWMF has been generated from FreeSans and FreeSerif by using this script with fontforge:
 		// Open("FreeSans.ttf");
