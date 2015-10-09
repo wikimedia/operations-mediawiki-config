@@ -96,6 +96,9 @@ class MWWikiversions {
 		// Provide a means of migrating dblist files to `dblists/`
 		// by checking both `/foo/bar.dblist` and `/foo/dblists/bar.dblist`.
 		if ( !$lines ) {
+			if ( basename( $srcPath ) === $srcPath ) {
+				$srcPath = MEDIAWIKI_DBLIST_DIR . '/' . $srcPath;
+			}
 			$lines = @file( self::getAlternatePath( $srcPath ), $flags );
 		}
 

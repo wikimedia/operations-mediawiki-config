@@ -36,14 +36,14 @@ require_once( __DIR__ . '/multiversion/defines.php' );
 $base = MEDIAWIKI_STAGING_DIR;
 
 $defaultCluster = 's3';
-$clusterOverrides = loadClusterList(getRealmSpecificFilename("$base/wmf-config/db.php"));
+$clusterOverrides = loadClusterList(getRealmSpecificFilename( MEDIAWIKI_STAGING_DIR . '/wmf-config/db.php'));
 $clusterAssignments = array();
 
-$all = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$base/all.dblist" ) );
+$all = MWWikiversions::readDbListFile( getRealmSpecificFilename( MEDIAWIKI_DBLIST_DIR . "/all.dblist" ) );
 listOut('all', $all, false);
-printf("%d wikis listed in " . basename(getRealmSpecificFilename("$base/all.dblist")) . "...\n", count($all));
+printf("%d wikis listed in " . basename(getRealmSpecificFilename(MEDIAWIKI_DBLIST_DIR . "/all.dblist")) . "...\n", count($all));
 
-$special = MWWikiversions::readDbListFile( getRealmSpecificFilename( "$base/special.dblist" ) );
+$special = MWWikiversions::readDbListFile( getRealmSpecificFilename( MEDIAWIKI_DBLIST_DIR . "/special.dblist" ) );
 listOut('special', $special, false);
 printf("%d special wikis to be exempted from wikipedia group...\n", count($special));
 
@@ -109,7 +109,7 @@ function loadClusterList($file) {
 function listOut($group, $list, $print = true) {
 	global $base;
 
-	$filename = getRealmSpecificFilename("$base/$group.dblist");
+	$filename = getRealmSpecificFilename(MEDIAWIKI_DBLIST_DIR . "/$group.dblist");
 	if ( $print ) {
 		printf("Listing %d wikis in %s...\n", count($list), $filename);
 	}
