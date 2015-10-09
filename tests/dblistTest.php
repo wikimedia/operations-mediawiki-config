@@ -85,9 +85,9 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 	 * @covers MWWikiversions::evalDbListExpression
 	 */
 	function testEvalDbListExpression() {
-		$allDbs = MWWikiversions::readDbListFile( 'all.dblist' );
-		$allLabsDbs = MWWikiversions::readDbListFile( 'all-labs.dblist' );
-		$exprDbs = MWWikiversions::evalDbListExpression( 'all.dblist - all-labs.dblist' );
+		$allDbs = MWWikiversions::readDbListFile( 'dblist/all.dblist' );
+		$allLabsDbs = MWWikiversions::readDbListFile( 'dblist/all-labs.dblist' );
+		$exprDbs = MWWikiversions::evalDbListExpression( 'dblist/all.dblist - dblist/all-labs.dblist' );
 		$expectedDbs = array_diff( $allDbs, $allLabsDbs );
 		sort( $exprDbs );
 		sort( $expectedDbs );
