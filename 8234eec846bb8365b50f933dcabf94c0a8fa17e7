@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_bbfe38aa",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14888,
+      "author": {
+        "id": 54
+      },
+      "writtenOn": "2015-10-09T19:21:13Z",
+      "side": 1,
+      "message": "Bzzzzzzt, this was probably supposed to be nowiki.",
+      "revId": "8234eec846bb8365b50f933dcabf94c0a8fa17e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
