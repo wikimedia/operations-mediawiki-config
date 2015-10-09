@@ -240,6 +240,7 @@ $wgConf->settings = array(
 	'cnwikimedia' => 'Asia/Shanghai', // T98676
 	'cswiki' => 'Europe/Prague', // T73902
 	'cswikinews' => 'Europe/Prague', // T73902
+	'cswiktionary' => 'Europe/Prague', //T115048
 	'csbwiki' => 'Europe/Warsaw',
 	'csbwiktionary' => 'Europe/Warsaw',
 	'dawiki' => 'Europe/Berlin',
