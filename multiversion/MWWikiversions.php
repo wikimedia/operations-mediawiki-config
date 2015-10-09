@@ -67,13 +67,38 @@ class MWWikiversions {
 	}
 
 	/**
+	 * Get an alternate file path for dblist file represented by $path.
+	 *
+	 * Map '/foo/bar.dblist' to '/foo/dblists/bar.dblist' and vice versa.
+	 *
+	 * @param $path string
+	 * @return string
+	 */
+	public static function getAlternatePath( $path ) {
+		$dirName = dirname( $path );
+		if ( basename( $dirName ) !== 'dblists' ) {
+			return $dirName . '/dblists/' . basename( $path );
+		} else {
+			return dirname( $dirName ) . '/' . basename( $path );
+		}
+	}
+
+	/**
 	 * Get an array of DB names from a .dblist file.
 	 *
 	 * @param $srcPath string
 	 * @return Array
 	 */
 	public static function readDbListFile( $srcPath ) {
-		$lines = @file( $srcPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES );
+		$flags = FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES;
+		$lines = @file( $srcPath, $flags );
+
+		// Provide a means of migrating dblist files to `dblists/`
+		// by checking both `/foo/bar.dblist` and `/foo/dblists/bar.dblist`.
+		if ( !$lines ) {
+			$lines = @file( self::getAlternatePath( $srcPath ), $flags );
+		}
+
 		if ( !$lines ) {
 			throw new Exception( "Unable to read $srcPath.\n" );
 		}
