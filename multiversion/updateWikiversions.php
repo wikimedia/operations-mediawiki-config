@@ -12,9 +12,9 @@ require_once( __DIR__ . '/MWRealm.php' );
  * and wikiversions.cdb files on tin, they will still need to be synced to push
  * the upgrade/downgrade to the apaches.
  *
- * The first argument is the old version, typically of the format "php-X.XXwmfX".
+ * The first argument is the old version, typically of the format "php-X.XX-wmf.X".
  * If "all" is given, then all wikis will be switched over.
- * The second argument is the new version, typically of the format "php-X.XXwmfX".
+ * The second argument is the new version, typically of the format "php-X.XX-wmf.X".
  * The third argument is the name of a .dblist file under the common/ dir.
  *
  * @return void
@@ -25,7 +25,7 @@ function updateWikiversions() {
 	$jsonPath = getRealmSpecificFilename( MEDIAWIKI_STAGING_DIR . '/wikiversions.json' );
 
 	if ( count( $argv ) !== 3 ) {
-		print "Usage: updateWikiversions <name>.dblist php-X.XXwmfX\n";
+		print "Usage: updateWikiversions <name>.dblist php-X.XX-wmf.X\n";
 		exit( 1 );
 	}
 

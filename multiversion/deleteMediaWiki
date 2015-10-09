@@ -19,7 +19,7 @@ function deleteMediaWiki() {
 
 	$argsValid = false;
 	if ( count( $argv ) >= 2 ) {
-		$dstVersion = $argv[1]; // e.g. "php-X.XXwmfX"
+		$dstVersion = $argv[1]; // e.g. "php-X.XX-wmf.X"
 		if ( preg_match( MEDIAWIKI_DIRECTORY_REGEX, $dstVersion, $m ) ) {
 			$dstVersionNum = $m[1]; // everything after 'php-'
 			$argsValid = true;
@@ -27,7 +27,7 @@ function deleteMediaWiki() {
 	}
 
 	if ( !$argsValid ) {
-		print "Usage: deleteMediaWiki php-X.XXwmfX\n";
+		print "Usage: deleteMediaWiki php-X.XX-wmf.X\n";
 		exit( 1 );
 	}
 
