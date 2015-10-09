@@ -8,7 +8,7 @@ require_once( __DIR__ . '/defines.php' );
  * symlinks will also be created.
  *
  * The first argument is the git branch (relative to wmf).
- * This is typically a version of the format "X.XXwmfX" ("e.g. 1.17wmf1").
+ * This is typically a version of the format "X.XX-wmf.X" ("e.g. 1.27-wmf.1").
  * The second argument is the target path (relative to MEDIAWIKI_STAGING_DIR)
  * to store local copy of the git checkout. This is typically of the format "php-X.XX".
  *
@@ -22,8 +22,8 @@ function checkoutMediaWiki() {
 
 	$argsValid = false;
 	if ( count( $argv ) >= 3 ) {
-		$gitVersion = $argv[1]; // e.g. "X.XXwmfX"
-		$dstVersion = $argv[2]; // e.g. "php-X.XXwmfX"
+		$gitVersion = $argv[1]; // e.g. "X.XX-wmf.X"
+		$dstVersion = $argv[2]; // e.g. "php-X.XX-wmf.X"
 		if ( preg_match( MEDIAWIKI_DIRECTORY_REGEX, $dstVersion, $m ) ) {
 			$dstVersionNum = $m[1]; // everything after 'php-'
 			$argsValid = true;
@@ -31,7 +31,7 @@ function checkoutMediaWiki() {
 	}
 
 	if ( !$argsValid ) {
-		print "Usage: checkoutMediaWiki X.XXwmfX php-X.XXwmfX\n";
+		print "Usage: checkoutMediaWiki X.XX-wmf.X php-X.XX-wmf.X\n";
 		exit( 1 );
 	}
 
