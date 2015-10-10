@@ -4395,6 +4395,7 @@ $wgConf->settings = array(
 		'UpdateRepo' => 'debug',
 		'updateTranstagOnNullRevisions' => 'debug',
 		'upload' => 'debug',
+		'warning' => 'debug',
 		'wbq_evaluation' => 'debug', // WikibaseQualityConstraints evaluation logs
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 		'wikibase-debug' => 'debug',
