@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_ac535942",
+        "filename": "wmf-config/mobile-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 24,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-10-10T22:38:12Z",
+      "side": 1,
+      "message": "Shouldn\u0027t it just use $wgLogo? wmf-config/InitialiseSettings-labs.php tries to setup the proper beta logos for each wiki family.",
+      "revId": "f94081f9e81ca6aca7794f92ea98ed06e8a4612b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
