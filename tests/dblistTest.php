@@ -93,24 +93,5 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 		sort( $expectedDbs );
 		$this->assertEquals( $exprDbs, $expectedDbs );
 	}
-
-	/**
-	 * @covers MWWikiversions::getAlternatePath
-	 */
-	function testGetAlternatePath() {
-		$variants = array(
-			'/foo/bar/baz.dblist',
-			'/foo/bar/dblists/baz.dblist',
-		);
-		$this->assertEquals(
-			$variants[0],
-			MWWikiversions::getAlternatePath( $variants[1] )
-		);
-		$this->assertEquals(
-			$variants[1],
-			MWWikiversions::getAlternatePath( $variants[0] )
-		);
-	}
-
 }
 

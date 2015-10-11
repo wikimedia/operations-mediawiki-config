@@ -67,46 +67,16 @@ class MWWikiversions {
 	}
 
 	/**
-	 * Get an alternate file path for dblist file represented by $path.
-	 *
-	 * Map '/foo/bar.dblist' to '/foo/dblists/bar.dblist' and vice versa.
-	 *
-	 * @param $path string
-	 * @return string
-	 */
-	public static function getAlternatePath( $path ) {
-		$dirName = dirname( $path );
-		if ( basename( $dirName ) !== 'dblists' ) {
-			return $dirName . '/dblists/' . basename( $path );
-		} else {
-			return dirname( $dirName ) . '/' . basename( $path );
-		}
-	}
-
-	/**
 	 * Get an array of DB names from a .dblist file.
 	 *
 	 * @param $srcPath string
 	 * @return Array
 	 */
-	public static function readDbListFile( $srcPath ) {
-		$flags = FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES;
-
-		// Provide a means of migrating dblist files to `dblists/`
-		// by checking both `/foo/bar.dblist` and `/foo/dblists/bar.dblist`.
-		foreach ( array(
-			$srcPath,
-			MEDIAWIKI_DBLIST_DIR . '/' . basename( $srcPath ),
-			self::getAlternatePath( $srcPath ),
-		) as $path ) {
-			$lines = @file( $srcPath, $flags );
-			if ( $lines ) {
-				break;
-			}
-		}
-
+	public static function readDbListFile( $dblist ) {
+		$fileName = dirname( __DIR__ ) . '/' . basename( $dblist, '.dblist' ) . '.dblist';
+		$lines = @file( $fileName, FILE_IGNORE_NEW_LINES );
 		if ( !$lines ) {
-			throw new Exception( "Unable to read $srcPath.\n" );
+			throw new Exception( __METHOD__ . "(): unable to read $dblist.\n" );
 		}
 
 		$dbs = array();
@@ -115,12 +85,9 @@ class MWWikiversions {
 			$line = trim( substr( $line, 0, strcspn( $line, '#' ) ) );
 			if ( substr( $line, 0, 2 ) === '%%' ) {
 				if ( !empty( $dbs ) ) {
-					throw new Exception( "{$srcPath}: Encountered dblist expression inside a dblist list file.\n" );
+					throw new Exception( __METHOD__ ."(): Encountered dblist expression inside dblist list file.\n" );
 				}
-				$dir = getcwd();
-				chdir( dirname( $srcPath ) );
 				$dbs = self::evalDbListExpression( $line );
-				chdir( $dir );
 				break;
 			} else if ( $line !== '' ) {
 				$dbs[] = $line;
