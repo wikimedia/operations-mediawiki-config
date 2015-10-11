@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_3810005b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 8808,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2015-10-11T22:26:45Z",
+      "side": 1,
+      "message": "Missing whitespace between // and T114930? Otherwise looks fine to  me.",
+      "revId": "25fe00ba02949441cbdd8fae6afa3c36710c935e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
