@@ -22,7 +22,8 @@ $wgConf->suffixes = array(
 
 $wgConf->localVHosts = require( getRealmSpecificFilename( "$wmfConfigDir/wgConfVHosts.php" ) );
 
-$wgConf->wikis = MWWikiversions::readDbListFile( getRealmSpecificFilename( MEDIAWIKI_DBLIST_DIR . '/all.dblist' ) );
+$dbList = $wmfRealm === 'labs' ? 'all-labs' : 'all';
+$wgConf->wikis = MWWikiversions::readDbListFile( $dbList );
 
 $wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
 

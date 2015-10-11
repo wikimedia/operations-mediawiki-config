@@ -146,7 +146,7 @@ if ( !$globals ) {
 			'commonsuploads', 'nonbetafeatures', 'group0', 'wikipedia',
 			'arbitraryaccess', 'nonglobal',
 		) as $tag ) {
-		$dblist = MWWikiversions::readDbListFile( getRealmSpecificFilename( MEDIAWIKI_DBLIST_DIR . "/$tag.dblist" ) );
+		$dblist = MWWikiversions::readDbListFile( $tag );
 		if ( in_array( $wgDBname, $dblist ) ) {
 			$wikiTags[] = $tag;
 		}
@@ -515,9 +515,9 @@ include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 
 // Config for sitematrix
 $wgSiteMatrixFile = getRealmSpecificFilename( "$IP/../langlist" );
-$wgSiteMatrixClosedSites = MWWikiversions::readDbListFile( getRealmSpecificFilename( MEDIAWIKI_DBLIST_DIR . '/closed.dblist' ) );
-$wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( getRealmSpecificFilename( MEDIAWIKI_DBLIST_DIR . '/private.dblist' ) );
-$wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( getRealmSpecificFilename( MEDIAWIKI_DBLIST_DIR . '/fishbowl.dblist' ) );
+$wgSiteMatrixClosedSites = MWWikiversions::readDbListFile( 'closed' );
+$wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( 'private' );
+$wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( 'fishbowl' );
 
 if ( $wmgUseCharInsert ) {
 	wfLoadExtension( 'CharInsert' );
@@ -1209,7 +1209,7 @@ if ( $wmgUseCentralAuth ) {
 			$wgSiteMatrixPrivateSites,
 			$wgSiteMatrixFishbowlSites,
 			$wgSiteMatrixClosedSites,
-			MWWikiversions::readDbListFile( getRealmSpecificFilename( MEDIAWIKI_DBLIST_DIR . '/nonglobal.dblist' ) )
+			MWWikiversions::readDbListFile( 'nonglobal' )
 		);
 		return false;
 	}

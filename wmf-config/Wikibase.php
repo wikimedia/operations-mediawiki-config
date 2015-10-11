@@ -71,13 +71,13 @@ if ( $wmgUseWikibaseRepo ) {
 		$wgPropertySuggesterClassifyingPropertyIds = array( 7 );
 	} else {
 		$wgWBRepoSettings['clientDbList'] = array_diff(
-			MWWikiversions::readDbListFile( getRealmSpecificFilename( MEDIAWIKI_DBLIST_DIR . '/wikidataclient.dblist' ) ),
+			MWWikiversions::readDbListFile( 'wikidataclient' ),
 			array( 'testwikidatawiki', 'testwiki', 'test2wiki' )
 		);
 		// Exclude closed wikis
 		$wgWBRepoSettings['clientDbList'] = array_diff(
 			$wgWBRepoSettings['clientDbList'],
-			MWWikiversions::readDbListFile( getRealmSpecificFilename( MEDIAWIKI_DBLIST_DIR . '/closed.dblist' ) )
+			MWWikiversions::readDbListFile( 'closed' )
 		);
 	}
 
