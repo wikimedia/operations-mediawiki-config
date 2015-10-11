@@ -73,7 +73,7 @@ class MWWikiversions {
 	 * @return Array
 	 */
 	public static function readDbListFile( $dblist ) {
-		$fileName = dirname( __DIR__ ) . '/' . basename( $dblist, '.dblist' ) . '.dblist';
+		$fileName = dirname( __DIR__ ) . '/dblists/' . basename( $dblist, '.dblist' ) . '.dblist';
 		$lines = @file( $fileName, FILE_IGNORE_NEW_LINES );
 		if ( !$lines ) {
 			throw new Exception( __METHOD__ . "(): unable to read $dblist.\n" );

@@ -53,7 +53,7 @@ if ( !$selectedFilePath ) {
 } else {
 	// Follow symlink
 	if ( !file_exists( $selectedFilePath ) ) {
-		$hlHtml = 'Whitelist contains nonexistent entry. :(';
+		$hlHtml = "Whitelist contains nonexistent entry: $selectedFilePath :(";
 		$selectedFilePath = false;
 	} elseif ( !is_link( $selectedFilePath ) ) {
 		$hlHtml = 'Whitelist must only contain symlinks.';
