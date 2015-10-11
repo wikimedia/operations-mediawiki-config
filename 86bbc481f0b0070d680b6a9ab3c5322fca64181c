@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_67425a15",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 7693,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2015-10-11T06:50:43Z",
+      "side": 1,
+      "message": "There should be some standardization. The same permission is called flood on some wikis, and flooder on others. I suggest we use \u0027flood\u0027 here.",
+      "revId": "86bbc481f0b0070d680b6a9ab3c5322fca64181c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_0747de23",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 8808,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2015-10-11T06:50:43Z",
+      "side": 1,
+      "message": "Same as above.",
+      "revId": "86bbc481f0b0070d680b6a9ab3c5322fca64181c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_2744621c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 9463,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2015-10-11T06:50:43Z",
+      "side": 1,
+      "message": "Same as above.",
+      "revId": "86bbc481f0b0070d680b6a9ab3c5322fca64181c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
