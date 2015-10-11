@@ -7692,7 +7692,7 @@ $wgConf->settings = array(
 		'autoconfirmed' => array( 'move' => true, 'patrol' => true ),
 		'autopatrolled' => array( 'autopatrol' => true, ),
 		'patroller' => array( 'autopatrol' => true, 'rollback' => true, ),
-		'flooder' => array( 'bot' => true, ), // T41569
+		'flood' => array( 'bot' => true, ), // T41569
 	),
 	'+itwikinews' => array( 'autoconfirmed' => array( 'patrol' => true ) ),
 	'itwikiquote' => array(
@@ -9437,7 +9437,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'accountcreator', 'flood', ), // T63109
 	),
 	'+itwikibooks' => array(
-		'sysop' => array( 'autopatrolled', 'patroller', 'flooder' ), // Flooder added per T41569
+		'sysop' => array( 'autopatrolled', 'patroller', 'flood' ), // flood added per T41569
 	),
 	'+itwikiquote' => array(
 		'bureaucrat' => array( 'autopatrolled' ), // T64200
@@ -11297,7 +11297,7 @@ $wgConf->settings = array(
 	'enwikisource' => array( 'sysop' => array( 'flood' ) ), // T38863
 	'eswiki' => array( 'sysop' => array( 'flood' ) ), // T50682
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
-	'itwikibooks' => array( 'sysop' => array( 'flooder' ) ), // T41569
+	'itwikibooks' => array( 'sysop' => array( 'flood' ) ), // T41569
 	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // T38600
 	'itwiktionary' => array( 'sysop' => array( 'flood' ) ), // T41306
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
