@@ -7686,7 +7686,12 @@ $wgConf->settings = array(
 	'+itwikisource' => array(
 		'flood' => array( 'bot' => true ), // T38600
 	),
-	'+itwikiversity' => array( 'autoconfirmed' => array( 'patrol' => true ) ),
+	'+itwikiversity' => array(
+		'autoconfirmed' => array( 'patrol' => true ),
+		'autopatrolled' => array( 'autopatrol' => true ), // T114930
+		'patroller' => array( 'autopatrol' => true, 'rollback' => true, ), // T114930
+		'flood' => array( 'bot' => true, ), // T114930
+	),
 	'itwikibooks' => array(
 		'user' => array( 'patrol' => false, 'move' => false ),
 		'autoconfirmed' => array( 'move' => true, 'patrol' => true ),
@@ -8799,6 +8804,9 @@ $wgConf->settings = array(
 	'+itwiktionary' => array(
 		'sysop' => array( 'patroller', 'autopatrolled' ),
 	),
+	'+itwikiversity' => array(
+		'sysop' => array( 'autopatrolled', 'patroller', 'flood' ), //T114930
+	),
 	'+jawiki' => array(
 		'sysop' => array( 'abusefilter' ),
 		'bureaucrat' => array( 'rollbacker', 'eliminator', 'interface-editor' ),
@@ -9450,6 +9458,9 @@ $wgConf->settings = array(
 	),
 	'+itwiktionary' => array(
 		'sysop' => array( 'patroller', 'autopatrolled', 'flood' ), // Flood added per T41306
+	),
+	'+itwikiversity' => array(
+		'sysop' => array( 'autopatrolled', 'patroller', 'flood' ), // T114930
 	),
 	'+jawiki' => array(
 		'sysop' => array( 'abusefilter' ),
