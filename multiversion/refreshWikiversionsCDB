@@ -40,7 +40,8 @@ function refreshWikiversionsCDB() {
 		}
 	}
 
-	$dbNames = MWWikiversions::readDbListFile( getRealmSpecificFilename( MEDIAWIKI_DBLIST_DIR . '/all.dblist' ) );
+	$dbList = $wmfRealm === 'labs' ? 'all-labs' : 'all';
+	$dbNames = MWWikiversions::readDbListFile( $dbList );
 	$diff = array_diff( $dbNames, array_keys( $rows ) );
 	if ( count( $diff ) ) {
 		print_r( $diff );
