@@ -16,6 +16,24 @@
       "revId": "25fe00ba02949441cbdd8fae6afa3c36710c935e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_15929a57",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 8808,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2015-10-12T14:45:26Z",
+      "side": 1,
+      "message": "Do we need a whitespace there? I think that doesn\u0027t matter, does it?",
+      "parentUuid": "0ebaf39b_3810005b",
+      "revId": "25fe00ba02949441cbdd8fae6afa3c36710c935e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
