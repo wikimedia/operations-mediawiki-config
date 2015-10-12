@@ -34,6 +34,24 @@
       "revId": "25fe00ba02949441cbdd8fae6afa3c36710c935e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_905455cb",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 8808,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-10-12T23:18:52Z",
+      "side": 1,
+      "message": "All of the other comments have whitespaces there. Please try to keep consistency with existing styles you see in code files.",
+      "parentUuid": "0ebaf39b_15929a57",
+      "revId": "25fe00ba02949441cbdd8fae6afa3c36710c935e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
