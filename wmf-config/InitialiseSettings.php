@@ -14713,6 +14713,20 @@ $wgConf->settings = array(
 	'cawiki' => array(
 		NS_PROJECT_TALK, // T99117
 	),
+	'sewikimedia' => array(
+		NS_TALK,
+		NS_USER_TALK,
+		NS_PROJECT_TALK,
+		NS_FILE_TALK,
+		NS_MEDIAWIKI_TALK,
+		NS_TEMPLATE_TALK,
+		NS_HELP_TALK,
+		NS_CATEGORY_TALK,
+		91, // Thread_talk from LQT
+		93, // Summary_talk from LQT
+		101, // Projektdiskussion
+		829, // Module_talk from Scribunto
+	),
 ),
 
 // Do not add new pages to wmgFlowOccupyPages
