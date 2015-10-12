@@ -14703,6 +14703,8 @@ $wgConf->settings = array(
 		111, // Outreach_talk
 		113, // Archive_talk
 		829, // Module_talk from Scribunto
+		2301, // Gadget_talk from Gadgets
+		2303, // Gadget_definition_talk from Gadgets
 	),
 	'cawiki' => array(
 		NS_PROJECT_TALK, // T99117
@@ -14720,6 +14722,8 @@ $wgConf->settings = array(
 		93, // Summary_talk from LQT
 		101, // Projektdiskussion
 		829, // Module_talk from Scribunto
+		2301, // Gadget_talk from Gadgets
+		2303, // Gadget_definition_talk from Gadgets
 	),
 ),
 
