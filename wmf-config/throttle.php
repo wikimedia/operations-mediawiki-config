@@ -28,24 +28,14 @@ $wmgThrottlingExceptions[] = array( // T110352
 	'value'  => 50
 );
 
-$wmgThrottlingExceptions[] = array( // T113519
-	'from'   => '2015-09-24T13:00 +0:00',
-	'to'     => '2015-09-24T23:00 +0:00',
-	'ip'     => array(
-		'132.247.150.251',
-		'132.247.150.252',
-		'132.247.150.253',
-		'132.247.150.254'
+$wmgThrottlingExceptions[] = array( // T115245
+	'from'   => '2015-10-13T12:00 +1:00',
+	'to'     => '2015-10-13T18:00 +1:00',
+	'range'     => array(
+		'129.215.133.0/24'
 	),
-	'dbname' => array( 'eswiki', 'eswikisource', 'enwiki', 'commonswiki' ),
-	'value'  => 200
-);
-
-$wmgThrottlingExceptions[] = array( // T113654
-	'from'   => '2015-09-26T11:00 -7:00',
-	'to'     => '2015-09-26T14:00 -7:00',
-	'range'  => '192.31.105.0/24',
-	'value'  => 50
+	'dbname' => array( 'enwiki', 'commonswiki' ),
+	'value'  => 30 // 20 participants expected
 );
 
 ## Add throttling definitions above.
