@@ -2413,17 +2413,6 @@ if ( $wmgEnableGeoData ) {
 if ( $wmgUseEcho ) {
 	require_once( "$IP/extensions/Echo/Echo.php" );
 
-	$wgEchoDefaultNotificationTypes = array(
-		'all' => array(
-			'web' => true,
-			'email' => true,
-		),
-		'emailuser' => array(
-			'web' => true,
-			'email' => false
-		),
-	);
-
 	if ( $wmgUseClusterJobqueue ) {
 		$wgJobTypeConf['MWEchoNotificationEmailBundleJob'] = array( 'checkDelay' => true ) + $wgJobTypeConf['default'];
 	}
