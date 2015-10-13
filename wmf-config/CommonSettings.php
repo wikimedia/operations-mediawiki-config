@@ -2154,7 +2154,12 @@ if ( $wmgUseBounceHandler ) {
 	$wgBounceRecordLimit = 5;
 	$wgBounceHandlerCluster = 'extension1';
 	$wgBounceHandlerSharedDB = 'wikishared';
-	$wgBounceHandlerInternalIPs = array( '208.80.154.90', '208.80.154.89', '2620:0:861:3:208:80:154:90', '2620:0:861:3:208:80:154:91', '2620:0:861:3:ca1f:66ff:febf:8dd6' ); # polonium and lead
+	$wgBounceHandlerInternalIPs = array(
+		'208.80.154.76',              # mx1001
+		'2620:0:861:3:208:80:154:76', # mx1001
+		'208.80.153.45',              # mx2001
+		'2620:0:860:2:208:80:153:45', # mx2001
+	);
 }
 
 if ( $wmgUseTranslate ) {
