@@ -1206,21 +1206,8 @@ $wgConf->settings = array(
 'wgUploadNavigationUrl' => array(
 	// Projects
 	'default' => false,
-	'commonsuploads' => "//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=$lang",
+	'commonsuploads' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'wikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
-
-	// These are commonsuploads wikis (not specified below) where $lang does not work
-	'betawikiversity' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
-	'simplewiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
-	'simplewiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
-	'bhwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=bho',
-	'crhwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=crh-latn',
-	'fiu_vrowiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=vro',
-	'roa_rupwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=rup',
-	'roa_rupwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=rup',
-	'zh_classicalwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=lzh',
-	'zh_min_nanwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nan',
-	'zh_min_nanwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nan',
 
 	// Individual wikis
 	// NOTE: Use relative paths for same-wiki links so the SSL converter can tweak them correctly
@@ -1229,6 +1216,14 @@ $wgConf->settings = array(
 	'bgwiki' => '/wiki/MediaWiki:Uploadtext', // T16836
 	'bnwiki' => '/wiki/উইকিপিডিয়া:আপলোড',
 	'bswiki' => '/wiki/Wikipedia:Upload', // T14044
+	'ckbwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ckb',
+	'cswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
+	'cswikibooks' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
+	'cswikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
+	'cswikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
+	'cswikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
+	'cswikiversity' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
+	'cswiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=cs',
 	'dawiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=da&campaign=dk', // T39662
 	'dewikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=de',
 	'enwiki' => '/wiki/Wikipedia:File_Upload_Wizard', // T44263
@@ -1239,6 +1234,7 @@ $wgConf->settings = array(
 	'eswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es',
 	'eswikibooks' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es',
 	'eswikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es', // T44933
+	'eswiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es', // T9152
 	'euwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=eu',
 	'fawiki' => '/wiki/ویکی‌پدیا:بارگذاری',
 	'fawikivoyage' => '/wiki/%D9%88%DB%8C%DA%A9%DB%8C%E2%80%8C%D8%B3%D9%81%D8%B1:%D8%A8%D8%A7%D8%B1%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C', // T102714
@@ -1249,19 +1245,25 @@ $wgConf->settings = array(
 	'hiwiki' => '/wiki/विकिपीडिया:अपलोड',
 	'hrwiki' => '/wiki/Wikipedija:Upload',
 	'huwikibooks' => false, // T74231
+	'huwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=hu',
 	'incubatorwiki' => '/wiki/Special:MyLanguage/Incubator:Upload',
 	'iswiki' => '/wiki/Wikipedia:Hlaða_inn_skrá', // T95089
 	'iswiktionary' => '/wiki/Wikior%C3%B0ab%C3%B3k:Hla%C3%B0a_inn_skr%C3%A1', // T13187
 	'itwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
+	'itwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=it', // T75439
 	'jawiki' => '/wiki/Wikipedia:%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89',
 	'jawikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja',
 	'kowiki' => '/wiki/위키백과:파일_올리기', // T54076
+	'lawiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=la', // T15190
 	'lrcwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=lrc', // T102026
+	'maiwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=mai', // T74346
 	'metawiki' => false, // T52287
 	'mlwiki' => '/wiki/വിക്കിപീഡിയ:അപ്‌ലോഡ്',
+	'mswiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ms', // T69152
 	'ndswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nds',
 	'nlwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
 	'nlwikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
+	'nlwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
 	'nlwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl', // T73403
 	'nlwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
 	'plwiki' => '//pl.wikipedia.org/wiki/Wikipedia:Prześlij_plik', // T44579
@@ -1269,11 +1271,13 @@ $wgConf->settings = array(
 	'plwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pl',
 	'plwikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pl', // T70191
 	'ptwiki' => '/wiki/Wikipedia:Carregar_ficheiro',
+	'ptwikibooks' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pt',
 	'ptwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pt', // T44934
 	'rowiki' => '/wiki/Wikipedia:Trimite_fi%C8%99ier', // T85665
 	'ruwiki' => false, // T14334
 	'ruwikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ru',
 	'sewikimedia' => false, // T63947
+	'skwikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=sk',
 	'svwikisource' => false,
 	'svwiktionary' => false,
 	'specieswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
