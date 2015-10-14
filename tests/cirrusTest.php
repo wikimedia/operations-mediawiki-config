@@ -14,17 +14,21 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 
 	public function testClusterConfigurationForProdEnwiki() {
 		$config = $this->loadCirrusConfig( 'production', 'enwiki', 'wiki', 'en', 'wikipedia' );
-		$this->assertArrayHasKey( 'wgCirrusSearchServers', $config );
+		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
-		$this->assertCount( 1, $config['wgCirrusSearchClusters'] );
-		$this->assertEquals(
-			$config['wgCirrusSearchServers'],
-			reset( $config['wgCirrusSearchClusters'] )
-		);
-		$clusters = array_keys( $config['wgCirrusSearchClusters'] );
-		$this->assertEquals(
+		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
+		$this->assertCount( 3, $config['wgCirrusSearchClusters'] );
+
+		// Only eqiad for now
+		$this->assertCount( 1, $config['wgCirrusSearchWriteClusters'] );
+		$this->assertArrayHasKey(
 			$config['wgCirrusSearchDefaultCluster'],
-			reset( $clusters )
+			$config['wgCirrusSearchClusters']
+		);
+
+		$this->assertArrayHasKey(
+			reset( $config['wgCirrusSearchWriteClusters'] ),
+			$config['wgCirrusSearchClusters']
 		);
 	}
 
