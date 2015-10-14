@@ -244,7 +244,7 @@ $wgHooks['RejectParserCacheValue'][] = function( ParserOutput $parserOutput, $pa
 	$text = trim( $parserOutput->getText() );
 	$title = $page->getTitle();
 	$pos = strpos( $text, 'NewPP' );
-	if ( !in_array( $title->getNamespace(), array( NS_CATEGORY, NS_TIMEDTEXT ) ) && $pos !== false && $pos < 10 ) {
+	if ( $title->getNamespace() == NS_CATEGORY && $pos !== false && $pos < 10 ) {
 		LoggerFactory::getInstance( 'T115505' )->info(
 			'Purging empty content page: ' . $title->getPrefixedDBkey()
 		);
