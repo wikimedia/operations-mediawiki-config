@@ -238,6 +238,18 @@ $wgHooks['LocalisationCacheRecache'][] = function( $cache, $code, &$allData, &$p
 	return true;
 };
 
+// Temporary hack to purge squid for pages with empty page content. Follow-up
+// from site outage. -- Chad, 2015-10-14
+$wgHooks['RejectParserCacheValue'][] = function( ParserOutput $parserOutput, $page, ParserOptions $popts ) {
+	$text = $parserOutput->getText();
+	$str = "<!-- \nNewPP limit report";
+	if ( strpos( $text, $str ) === 0 || strpos( "\n$text", $str ) === 0 ) {
+		$page->getTitle()->purgeSquid();
+		return false;
+	}
+	return true;
+};
+
 $wgFileStore['deleted']['directory'] = "/mnt/upload7/private/archive/$site/$lang";
 
 # used for mysql/search settings
