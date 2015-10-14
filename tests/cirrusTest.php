@@ -5,11 +5,7 @@ require_once __DIR__ . '/SiteConfiguration.php';
 
 class cirrusTests extends PHPUnit_Framework_TestCase {
 	public function testClusterConfigurationForProdTestwiki() {
-		try {
-			$config = $this->loadCirrusConfig( 'production', 'testwiki', 'wiki', 'en', 'wikipedia' );
-		} catch ( Exception $e ) {
-			$this->markTestSkipped( "Unable to load configuration: {$e}" );
-		}
+		$config = $this->loadCirrusConfig( 'production', 'testwiki', 'wiki', 'en', 'wikipedia' );
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
@@ -25,20 +21,17 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 			$config['wgCirrusSearchServers'],
 			reset( $config['wgCirrusSearchClusters'] )
 		);
+		$clusters = array_keys( $config['wgCirrusSearchClusters'] );
 		$this->assertEquals(
 			$config['wgCirrusSearchDefaultCluster'],
-			reset( array_keys( $config['wgCirrusSearchClusters'] ) )
+			reset( $clusters )
 		);
 	}
 
 	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix, $lang, $site ) {
 		// Variables rqeuired for wgConf.php
 		$wmfConfigDir = __DIR__ . "/../wmf-config";
-		$IP = realpath( __DIR__ .'/../php/' );
 
-		if ( !$IP || !file_exists( $IP ) ) {
-			$this->markTestSkipped( 'Full MediaWiki installation not available.' );
-		}
 		require "{$wmfConfigDir}/wgConf.php";
 
 		// InitialiseSettings.php explicitly declares these as global, so we must too
