@@ -529,7 +529,7 @@ if ( $wmgUseParserFunctions ) {
 $wgExpensiveParserFunctionLimit = 500;
 
 if ( $wmgUseCite ) {
-	wfLoadExtension( 'Cite' );
+	require( $IP . '/extensions/Cite/Cite.php' );
 }
 
 if ( $wmgUseCiteThisPage ) {
@@ -1278,7 +1278,7 @@ if ( $wmgUseApiFeatureUsage ) {
 
 // taking it live 2006-12-15 brion
 if ( $wmgUseDismissableSiteNotice ) {
-	wfLoadExtension( 'DismissableSiteNotice' );
+	require( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
 	$wgDismissableSiteNoticeForAnons = true; // T59732
 }
 $wgMajorSiteNoticeID = '2';
@@ -1851,7 +1851,7 @@ if ( $wmgUseBetaFeatures ) {
 }
 
 if ( $wmgUseCommonsMetadata ) {
-	wfLoadExtension( 'CommonsMetadata' );
+	require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
 	$wgCommonsMetadataSetTrackingCategories = $wmgCommonsMetadataSetTrackingCategories;
 	$wgCommonsMetadataForceRecalculate = $wmgCommonsMetadataForceRecalculate;
 }
@@ -2020,7 +2020,7 @@ if ( $wmgUseVisualEditor ) {
 	}
 
 	// Citoid
-	wfLoadExtension( 'Citoid' );
+	require_once "$IP/extensions/Citoid/Citoid.php";
 	$wgCitoidServiceUrl = '//citoid.wikimedia.org/api';
 }
 
@@ -2146,7 +2146,7 @@ if ( $wmgUseBabel ) {
 }
 
 if ( $wmgUseBounceHandler ) {
-	wfLoadExtension( 'BounceHandler' );
+	require_once "$IP/extensions/BounceHandler/BounceHandler.php";
 	// $wmgVERPsecret is set in PrivateSettings.php
 	$wgVERPsecret = $wmgVERPsecret;
 	$wgVERPdomainPart = 'wikimedia.org';
@@ -2494,12 +2494,11 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 }
 
 if ( $wmgUseDisambiguator ) {
-	wfLoadExtension( 'Disambiguator' );
 	require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
 }
 
 if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgZeroPortal ) {
-	wfLoadExtension( 'CodeEditor' );
+	include_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
 	$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore;
 	if ( $wgDBname === 'metawiki' ) {
 		$wgHooks['CodeEditorGetPageLanguage'][] = function ( Title $title, &$lang ) {
@@ -2563,7 +2562,7 @@ if ( $wmgUseSlippyMap ) {
 }
 
 if ( $wmgUseCreditsSource ) {
-	wfLoadExtension( 'CreditsSource' );
+	require_once( "$IP/extensions/CreditsSource/CreditsSource.php" );
 }
 
 if ( $wmgUseListings ) {
@@ -2675,7 +2674,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 }
 
 if ( $wmgUseContentTranslation ) {
-	wfLoadExtension( 'ContentTranslation' );
+	require_once "$IP/extensions/ContentTranslation/ContentTranslation.php";
 	// T76200: Public URL for cxserver instance
 	$wgContentTranslationSiteTemplates['cx'] = '//cxserver.wikimedia.org/v1';
 	// Used for html2wikitext when publishing
