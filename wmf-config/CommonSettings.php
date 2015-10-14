@@ -242,7 +242,8 @@ $wgHooks['LocalisationCacheRecache'][] = function( $cache, $code, &$allData, &$p
 // from site outage. -- Chad, 2015-10-14
 $wgHooks['RejectParserCacheValue'][] = function( ParserOutput $parserOutput, $page, ParserOptions $popts ) {
 	$text = trim( $parserOutput->getText() );
-	if ( strpos( "<!-- \nNewPP limit report", $text ) === 0 ) {
+	$pos = strpos( $text, 'NewPP' );
+	if ( $pos !== false && $pos < 50 ) {
 		$title = $page->getTitle();
 		LoggerFactory::getInstance( 'T115505' )->info(
 			'Purging empty content page: ' . $title->getPrefixedDBkey()
