@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_156fde90",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2452,
+      "author": {
+        "id": 228
+      },
+      "writtenOn": "2015-10-14T17:42:04Z",
+      "side": 1,
+      "message": "This way of concat is on the one hand elegant, but on the second hand it isn\u0027t visible to mwgrep (when Flow will rename/change notification configuration). If flow developers are aware to this and will know to find it - this should be fine.",
+      "revId": "19c3a76afe17298e5ae33073d7819d5249d3f151",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
