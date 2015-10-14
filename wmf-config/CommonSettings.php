@@ -2445,6 +2445,14 @@ if ( $wmgUseEcho ) {
 
 	// Whether to use job queue to process web and email notifications
 	$wgEchoUseJobQueue = $wmgEchoUseJobQueue;
+
+	// Default user options: subscriptions
+	foreach ( $wmgEchoDefaultUserSubscriptions as $where => $notifications ) {
+		foreach ( $notifications as $notification => $value ) {
+			$option = 'echo-subscriptions-' . $where . '-' . $notification;
+			$wgDefaultUserOptions[$option] = $value;
+		}
+	}
 }
 
 if ( $wmgUseThanks ) {

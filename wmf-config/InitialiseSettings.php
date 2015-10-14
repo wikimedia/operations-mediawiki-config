@@ -14671,6 +14671,16 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 ),
 
+// Default user options for Echo notifications
+'wmgEchoDefaultUserSubscriptions' => array(
+	'default' => array(),
+	'hewiki' => array(
+		'web' => array(
+			'emailuser' => true, // T114982
+		),
+	),
+),
+
 // Thanks should be enabled for wikis with Echo
 'wmgUseThanks' => array(
 	'default' => true,
