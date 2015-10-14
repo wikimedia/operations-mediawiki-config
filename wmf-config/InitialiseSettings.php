@@ -15776,6 +15776,7 @@ $wgConf->settings = array(
 'wmgUseWPB' => array(
 	'default' => false,
 	'enwikivoyage' => true,
+	'frwikivoyage' => true, // T115023
 	'ruwikivoyage' => true, // T110837
 	'zhwikivoyage' => true, // T114334
 	'cawiki' => true, // T114392
