@@ -240,11 +240,15 @@ $wgHooks['LocalisationCacheRecache'][] = function( $cache, $code, &$allData, &$p
 
 // Temporary hack to purge squid for pages with empty page content. Follow-up
 // from site outage. -- Chad, 2015-10-14
-$wgHooks['RejectParserCacheValue'][] = function( ParserOutput $parserOutput, $page, ParserOptions $popts ) {
+$wgHooks['RejectParserCacheValue'][] = function( ParserOutput $parserOutput, $page, ParserOptions $popts ) use ( $wgDBname ) {
 	$text = trim( $parserOutput->getText() );
 	$title = $page->getTitle();
+	$badNs = array( NS_CATEGORY );
+	if ( $wgDBname == 'commonswiki' ) {
+		$badNs[] = '102';
+	}
 	$pos = strpos( $text, 'NewPP' );
-	if ( !in_array( $title->getNamespace(), array( NS_CATEGORY, NS_TIMEDTEXT ) ) && $pos !== false && $pos < 10 ) {
+	if ( !in_array( $title->getNamespace(), $badNs ) && $pos !== false && $pos < 10 ) {
 		LoggerFactory::getInstance( 'T115505' )->info(
 			'Purging empty content page: ' . $title->getPrefixedDBkey()
 		);
