@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_f54d6ac8",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2497,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-10-14T18:18:30Z",
+      "side": 0,
+      "message": "This line should have been removed.",
+      "revId": "753d5edd6c0c05a70dc7e8cde0c242077207a144",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
