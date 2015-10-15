@@ -127,7 +127,6 @@ $IP/extensions/TrustedXFF/TrustedXFF.php
 $IP/extensions/UnicodeConverter/UnicodeConverter.php
 $IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php
 $IP/extensions/UploadWizard/UploadWizard.php
-$IP/extensions/UserDailyContribs/UserDailyContribs.php
 $IP/extensions/UserMerge/UserMerge.php
 $IP/extensions/VipsScaler/VipsScaler.php
 $IP/extensions/VipsScaler/VipsTest.php

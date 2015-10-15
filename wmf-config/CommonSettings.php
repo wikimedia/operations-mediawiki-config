@@ -1623,11 +1623,6 @@ $wgHiddenPrefs[] = 'wikieditor-publish';
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 
-if ( $wmgUserDailyContribs ) {
-	require "$IP/extensions/UserDailyContribs/UserDailyContribs.php";
-}
-
-
 if ( $wmgUseLocalisationUpdate ) {
 	require_once( "$IP/extensions/LocalisationUpdate/LocalisationUpdate.php" );
 	$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/caches/cache-$wmgVersionNumber";

@@ -11556,12 +11556,6 @@ $wgConf->settings = array(
 	'ukwiki' => true, // T104924
 ),
 
-'wmgUserDailyContribs' => array(
-	// Actively used by researchers and analysts.
-	// Contact person: Dario Taraborelli <dtaraborelli@wikimedia.org>
-	'default' => true,
-),
-
 'wgMaxMsgCacheEntrySize' => array(
 	'default' => 1024,
 ),
