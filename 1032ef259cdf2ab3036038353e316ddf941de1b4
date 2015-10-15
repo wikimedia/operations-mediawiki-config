@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_d2bcf169",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2015-10-15T17:22:55Z",
+      "side": 1,
+      "message": "I\u0027m not sure that Cirrus jobs will be happy to have a default cluster that is not writeable.\nI mean if a write occurs in codfw what will happen?",
+      "revId": "1032ef259cdf2ab3036038353e316ddf941de1b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
