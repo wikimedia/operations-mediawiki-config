@@ -177,6 +177,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_5e96ca98",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 4326,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2015-10-15T22:57:33Z",
+      "side": 1,
+      "message": "After talking with analytics decided to punt on the schema repository and wait for the larger project handling schemas, validation, etc that services is working on. I\u0027ve added a unit test that validates these as valid json, and moved it from here to an independent file so it can be pretty printed and easy to read.",
+      "parentUuid": "0ebaf39b_6a1b17d5",
+      "revId": "2071ad3eb220ae05224d92c92101dc6e327694bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ecb373e_f620c448",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 8
