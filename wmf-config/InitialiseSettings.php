@@ -4322,7 +4322,6 @@ $wgConf->settings = array(
 		'badpass' => 'debug',
 		'BounceHandler' => 'debug',
 		'Bug58676' => 'debug', # Invalid message parameter
-		'T115505' => 'debug',
 		'captcha' => 'debug',
 		'CentralAuth' => 'debug',
 		'CentralAuthRename' => 'debug', // -legoktm 2014-07-14 for T69875
