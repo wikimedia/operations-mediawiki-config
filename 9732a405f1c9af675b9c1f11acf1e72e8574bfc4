@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_e91ca31a",
+        "filename": "wmf-config/avro/CirrusSearchRequestSet.avsc",
+        "patchSetId": 12
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2015-10-16T17:47:50Z",
+      "side": 1,
+      "message": "nice schema :)",
+      "revId": "9732a405f1c9af675b9c1f11acf1e72e8574bfc4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
