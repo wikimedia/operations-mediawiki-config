@@ -3585,6 +3585,10 @@ $wgConf->settings = array(
 	),
 	'+thwiktionary' => array(
 		'คุยเรื่องWiktionary' => NS_PROJECT_TALK,
+		'ดัชนี' => 100, // T114458
+		'คุยเรื่องดัชนี' => 101, // T114458
+		'ภาคผนวก' => 102, // T114458
+		'คุยเรื่องภาคผนวก' => 103, // T114458
 	),
 	'+trwikibooks' => array(
 		'VK' => NS_PROJECT,
