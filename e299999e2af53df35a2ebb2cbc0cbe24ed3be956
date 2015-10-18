@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_a052353d",
+        "filename": "robots.txt",
+        "patchSetId": 2
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-10-18T16:25:26Z",
+      "side": 1,
+      "message": "Looks like you were working on an old branch.. and something got messed up because these entries were removed recently.",
+      "revId": "e299999e2af53df35a2ebb2cbc0cbe24ed3be956",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
