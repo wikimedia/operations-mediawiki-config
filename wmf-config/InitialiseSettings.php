@@ -2687,6 +2687,8 @@ $wgConf->settings = array(
 	),
 	'+bswiki' => array(
 		'Portal_talk' => 101, // T39226
+		'Razgovor s Wikipedijom' => NS_PROJECT_TALK, // T115812
+		'Razgovor s korisnikom' => NS_USER_TALK, // T115812
 	),
 	'+cawikisource' => array(
 		'Author' => 106,
