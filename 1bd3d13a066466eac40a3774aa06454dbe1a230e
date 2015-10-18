@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_dbfabeb5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 5838,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2015-10-18T19:38:04Z",
+      "side": 1,
+      "message": "Should be \n\n 100 \u003d\u003e \u0027name of NS\u0027,\n\nAlso, please add comments in English stating the names of the namespaces in English (see e.g. orwiktionary). I know it hasn\u0027t been consistently done in this file, but it can be very helpful.",
+      "revId": "1bd3d13a066466eac40a3774aa06454dbe1a230e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
