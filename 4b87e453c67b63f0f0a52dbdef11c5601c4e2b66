@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_002b01dc",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2690,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-10-18T15:28:07Z",
+      "side": 1,
+      "message": "underscores instead of spaces.",
+      "revId": "4b87e453c67b63f0f0a52dbdef11c5601c4e2b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_20264512",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2691,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-10-18T15:28:07Z",
+      "side": 1,
+      "message": "NS_USER_TALK should generally be in core, not wmf-config but this probably requires clarification on the task.",
+      "revId": "4b87e453c67b63f0f0a52dbdef11c5601c4e2b66",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
