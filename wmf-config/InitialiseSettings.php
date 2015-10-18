@@ -2391,6 +2391,7 @@ $wgConf->settings = array(
 	'bat_smgwiki' => 'Vikipedėjės_aptarėms',
 	'bdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ_আলোচনা',
 	'bewikisource' => 'Размовы_пра_Вікікрыніцы',
+	'bswiki' =>	'Razgovor_s_Wikipedijom', // T115812
 	'cuwiki' => 'Википєдїѩ_бєсѣ́да',
 	'elwikinews' => 'Βικινέα_συζήτηση',
 	'elwikiversity' => 'Συζήτηση_Βικιεπιστημίου',
@@ -2681,12 +2682,13 @@ $wgConf->settings = array(
 	'+brwiktionary' => array(
 		'Wiktionary_talk' => NS_PROJECT_TALK,
 	),
+	'+bswiki' => array(
+		'Portal_talk' => 101, // T39226
+		'Razgovor s korisnikom' => NS_USER_TALK, // T115812
+	),
 	'+cawiki' => array(
 		'Usuària' => NS_USER,
 		'Usuària_discussió' => NS_USER_TALK,
-	),
-	'+bswiki' => array(
-		'Portal_talk' => 101, // T39226
 	),
 	'+cawikisource' => array(
 		'Author' => 106,
