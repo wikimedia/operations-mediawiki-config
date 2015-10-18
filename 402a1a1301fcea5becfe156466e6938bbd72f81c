@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_c07ba9e9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3589,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2015-10-18T15:40:11Z",
+      "side": 1,
+      "message": "No need to duplicate task number for the talk ns entry, imo. Also it might be helpful if you add the equivalent in English in the comment.",
+      "revId": "402a1a1301fcea5becfe156466e6938bbd72f81c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
