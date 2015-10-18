@@ -5834,6 +5834,12 @@ $wgConf->settings = array(
 		106 => 'Transwiki',
 		107 => 'Transwikidiskussion',
 	),
+	'thwiktionary' => array(
+		'ดัชนี' => 100, // Namespace Index - T114458
+		'คุยเรื่องดัชนี' => 101, // Index Talk
+		'ภาคผนวก' => 102, // Appendix - T114458
+		'คุยเรื่องภาคผนวก' => 103, // Appendix talk
+	),
 	'trwiktionary' => array(
 		100 => 'Portal',
 		101 => 'Portal_tartışma',
