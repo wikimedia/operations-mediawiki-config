@@ -5,6 +5,15 @@
 # to the 'labs' realm which in most of the cases means the beta cluster.
 # It should be loaded AFTER CirrusSearch-common.php
 
+$wgCirrusSearchClusters = array(
+	'eqiad' => array(
+		'deployment-elastic05',
+		'deployment-elastic06',
+		'deployment-elastic07',
+		'deployment-elastic08',
+	),
+);
+
 if ( $wgDBname == 'enwiki' ) {
 	$wgCirrusSearchInterwikiSources = array(
 		'wiktionary' => 'enwiktionary',
@@ -26,6 +35,9 @@ $wgCirrusSearchWikimediaExtraPlugin[ 'safer' ] = array(
 	'phrase' => array(
 	)
 );
+
+# write to all configured clusters, there should only be one in labs
+$wgCirrusSearchWriteClusters = null;
 
 $wgCirrusSearchEnableSearchLogging = true;
 
