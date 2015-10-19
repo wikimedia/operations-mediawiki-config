@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_2c54fe00",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 163,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2015-10-19T10:20:39Z",
+      "side": 1,
+      "message": "Kafka client does not support an array of hosts without port.\nPort is mandatory but not specified in $wmgKafkaServers",
+      "revId": "ce7302918ab37d28725e14f6cae5fb464e460437",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_aceb0e08",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2015-10-19T10:20:39Z",
+      "side": 1,
+      "message": "missing avro formatter",
+      "revId": "ce7302918ab37d28725e14f6cae5fb464e460437",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
