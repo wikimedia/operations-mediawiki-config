@@ -1055,7 +1055,7 @@ function wmfLabsSettings() {
 		),
 
 		'wgUploadThumbnailRenderHttpCustomDomain' => array(
-			'default' => 'deployment-cache-upload02.eqiad.wmflabs',
+			'default' => 'deployment-cache-upload04.eqiad.wmflabs',
 		),
 
 		'wmgUseApiFeatureUsage' => array(
