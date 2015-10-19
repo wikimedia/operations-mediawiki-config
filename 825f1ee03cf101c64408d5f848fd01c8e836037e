@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_a22c7290",
+        "filename": "wmf-config/redis.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-10-19T19:22:12Z",
+      "side": 1,
+      "message": "How does MultiWriteBagOStuff behave if 0 and 1 are the same (e.g. for requests to the master DC).",
+      "revId": "825f1ee03cf101c64408d5f848fd01c8e836037e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
