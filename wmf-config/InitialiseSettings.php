@@ -15664,11 +15664,11 @@ $wgConf->settings = array(
 	'default' => '//creativecommons.org/images/public/somerights20.png',
 ),
 'wgSessionCacheType' => array(
-	'default' => 'redis_local',  // declared in redis.php
+	'default' => 'redis-replicated',  // declared in redis.php
 	'labswiki' => 'memcached-pecl',
 ),
 'wgMainStash' => array(
-	'default' => 'redis_local',  // declared in redis.php
+	'default' => 'redis-replicated',  // declared in redis.php
 	'labswiki' => 'memcached-pecl',
 ),
 
