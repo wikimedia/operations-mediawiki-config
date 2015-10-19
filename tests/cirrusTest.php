@@ -10,50 +10,21 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
 		$this->assertEquals( 'eqiad', $config['wgCirrusSearchDefaultCluster'] );
-		$this->assertCount( 3, $config['wgCirrusSearchClusters'] );
-
-		// testwiki writes to eqiad and the lab replica
-		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
-
-		$this->assertArrayHasKey(
-			$config['wgCirrusSearchDefaultCluster'],
-			$config['wgCirrusSearchClusters']
-		);
-
-		foreach ( $config['wgCirrusSearchWriteClusters'] as $writeCluster ) {
-			$this->assertArrayHasKey(
-				$writeCluster,
-				$config['wgCirrusSearchClusters']
-			);
-		}
 	}
 
 	public function testClusterConfigurationForProdEnwiki() {
 		$config = $this->loadCirrusConfig( 'production', 'enwiki', 'wiki', 'en', 'wikipedia' );
-		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
+		$this->assertArrayHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
-		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
-		$this->assertCount( 3, $config['wgCirrusSearchClusters'] );
-		$this->assertCount( 3, $config['wgCirrusSearchShardCount'] );
-		$this->assertCount( 3, $config['wgCirrusSearchReplicas'] );
-		$this->assertCount( 3, $config['wgCirrusSearchClientSideConnectTimeout'] );
-
-		foreach ( array_keys ( $config['wgCirrusSearchClusters'] ) as $cluster ) {
-			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchShardCount'] );
-			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchReplicas'] );
-			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchClientSideConnectTimeout'] );
-		}
-
-		// Only eqiad for now
-		$this->assertCount( 1, $config['wgCirrusSearchWriteClusters'] );
-		$this->assertArrayHasKey(
-			$config['wgCirrusSearchDefaultCluster'],
-			$config['wgCirrusSearchClusters']
+		$this->assertCount( 1, $config['wgCirrusSearchClusters'] );
+		$this->assertEquals(
+			$config['wgCirrusSearchServers'],
+			reset( $config['wgCirrusSearchClusters'] )
 		);
-
-		$this->assertArrayHasKey(
-			reset( $config['wgCirrusSearchWriteClusters'] ),
-			$config['wgCirrusSearchClusters']
+		$clusters = array_keys( $config['wgCirrusSearchClusters'] );
+		$this->assertEquals(
+			$config['wgCirrusSearchDefaultCluster'],
+			reset( $clusters )
 		);
 	}
 
