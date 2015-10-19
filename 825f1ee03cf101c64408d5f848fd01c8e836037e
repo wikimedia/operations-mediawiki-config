@@ -16,6 +16,24 @@
       "revId": "825f1ee03cf101c64408d5f848fd01c8e836037e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_228ba221",
+        "filename": "wmf-config/redis.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2015-10-19T20:00:21Z",
+      "side": 1,
+      "message": "Actually the code here is wrong; 1 should always be the remote ones.",
+      "parentUuid": "0ebaf39b_a22c7290",
+      "revId": "825f1ee03cf101c64408d5f848fd01c8e836037e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
