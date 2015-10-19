@@ -11,7 +11,7 @@ include( "$IP/extensions/FlaggedRevs/FlaggedRevs.php" );
 // Common configuration
 // DO NOT CHANGE without hard-coding these values into the relevant wikis first.
 $wgFlaggedRevsNamespaces[] = 828; // NS_MODULE
-$wgFlaggedRevTags = array(
+$wgFlaggedRevsTags = array(
 	'accuracy' => array( 'levels' => 2, 'quality' => 2, 'pristine' => 4 ),
 );
 $wgFlagRestrictions = array(
@@ -42,7 +42,7 @@ elseif ( $wgDBname == 'arwiki' ) {
 elseif ( $wgDBname == 'bewiki' ) {
 	$wgFlaggedRevsOverride = false;
 	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-	$wgFlaggedRevTags['accuracy']['levels'] = 1;
+	$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	$wgGroupPermissions['autoeditor']['autoreview'] = true;
 	$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
@@ -52,7 +52,7 @@ elseif ( $wgDBname == 'bnwiki' ) { // T30717
 	# Show only on a per-page basis
 	$wgFlaggedRevsOverride = false;
 	# We have only one tag with one level
-	$wgFlaggedRevTags = array(
+	$wgFlaggedRevsTags = array(
 		'status' => array( 'levels' => 1, 'quality' => 2, 'pristine' => 3 ),
 	);
 	# Restrict autoconfirmed to flagging semi-protected
@@ -85,7 +85,7 @@ elseif ( $wgDBname == 'cewiki' ) { // based on ruwiki settings
 	// T58408
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 );
 
-	$wgFlaggedRevTags['accuracy']['levels'] = 3; // Is this needed?
+	$wgFlaggedRevsTags['accuracy']['levels'] = 3; // Is this needed?
 	$wgFlaggedRevsOverride = false;
 
 	$wgGroupPermissions['autoeditor']['autoreview'] = true;
@@ -100,7 +100,7 @@ elseif ( $wgDBname == 'ckbwiki') {
 	# Show only on a per-page basis
 	$wgFlaggedRevsOverride = false;
 	# We have only one tag with one level
-	$wgFlaggedRevTags = array(
+	$wgFlaggedRevsTags = array(
 		'status' => array( 'levels' => 1, 'quality' => 2, 'pristine' => 3 ),
 	);
 	# Restrict autoconfirmed to flagging semi-protected
@@ -140,7 +140,7 @@ elseif ( $wgDBname == 'testwiki' && false ) {
 
 elseif ( $wgDBname == 'test2wiki' ) {
 	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-	$wgFlaggedRevTags['accuracy']['levels'] = 1;
+	$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 	$wgFlaggedRevsAutopromote['edits'] = 300;
@@ -187,7 +187,7 @@ elseif ( $wgDBname == 'cawikinews' ) {
 // --brion
 elseif ( $wgDBname == 'dewiki' ) {
 	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-	$wgFlaggedRevTags['accuracy']['levels'] = 1;
+	$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 	$wgFlaggedRevsAutopromote['edits'] = 300;
@@ -218,7 +218,7 @@ elseif ( $wgDBname == 'dewikiquote' ) {
 
 elseif ( $wgDBname == 'dewiktionary' ) {
 	$wgFlaggedRevsOverride = false;
-	$wgFlaggedRevTags['accuracy']['levels'] = 1;
+	$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 102, 104, 106, 108 ) ); // T67316 and T76657
 
 	$wgFlaggedRevsAutoconfirm = array( // T46103
@@ -243,7 +243,7 @@ elseif ( $wgDBname == 'enwiki' || $wgDBname == 'testwiki' ) {
 	# Show only on a per-page basis
 	$wgFlaggedRevsOverride = false;
 	# We have only one tag with one level
-	$wgFlaggedRevTags = array(
+	$wgFlaggedRevsTags = array(
 		'status' => array( 'levels' => 1, 'quality' => 2, 'pristine' => 3 ),
 	);
 	# Restrict autoconfirmed to flagging semi-protected
@@ -279,7 +279,7 @@ elseif ( $wgDBname == 'enwikibooks' ) {
 	$wgFlaggedRevsOverride = false;
 	// Cookbook, WikiJunior
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 102, 110 ) );
-	$wgFlaggedRevTags = array(
+	$wgFlaggedRevsTags = array(
 		'value' => array( 'levels' => 3, 'quality' => 2, 'pristine' => 3 )
 	);
 
@@ -335,7 +335,7 @@ elseif ( $wgDBname == 'enwikinews' ) {
 
 elseif ( $wgDBname == 'eowiki' ) {
 	$wgFlaggedRevsOverride = false;
-	$wgFlaggedRevTags['accuracy']['levels'] = 1;
+	$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 }
 
@@ -345,7 +345,7 @@ elseif ( $wgDBname == 'fawiki') {
 	# Show only on a per-page basis
 	$wgFlaggedRevsOverride = false;
 	# We have only one tag with one level
-	$wgFlaggedRevTags = array(
+	$wgFlaggedRevsTags = array(
 		'status' => array( 'levels' => 1, 'quality' => 2, 'pristine' => 3 ),
 	);
 	# Restrict autoconfirmed to flagging semi-protected
@@ -389,7 +389,7 @@ elseif ( $wgDBname == 'fawikinews' ) {
 }
 
 elseif ( $wgDBname == 'fiwiki' ) {
-	//$wgFlaggedRevTags = array( 'accuracy'=>2 );
+	//$wgFlaggedRevsTags = array( 'accuracy'=>2 );
 	$wgFlaggedRevsAutoReview = true;
 	$wgFlaggedRevsAutoReviewNew = true;
 	$wgFlaggedRevsOverride = false;
@@ -398,7 +398,7 @@ elseif ( $wgDBname == 'fiwiki' ) {
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 	$wgGroupPermissions['sysop']['unreviewedpages'] = true;
 
-	$wgFlaggedRevTags = array(
+	$wgFlaggedRevsTags = array(
 		'accuracy' => array( 'levels' => 3, 'quality' => 3, 'pristine' => 4 ),
 	);
 	$wgFlagRestrictions = array(
@@ -421,7 +421,7 @@ elseif ( $wgDBname == 'frwikinews' ) {
 
 elseif ( $wgDBname == 'hewikisource' ) {
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 100, 104, 106, 108, 110, 112 ) );
-	$wgFlaggedRevTags = array( 'completeness' => 3, 'accuracy' => 3, 'formatting' => 3 );
+	$wgFlaggedRevsTags = array( 'completeness' => 3, 'accuracy' => 3, 'formatting' => 3 );
 	$wgFlaggedRevValues = 4;
 	$wgFlaggedRevsAutoReviewNew = false;
 	$wgFlagRestrictions = array(
@@ -439,7 +439,7 @@ elseif ( $wgDBname == 'hiwiki' ) {
 	# Show only on a per-page basis
 	$wgFlaggedRevsOverride = false;
 	# We have only one tag with one level
-	$wgFlaggedRevTags = array(
+	$wgFlaggedRevsTags = array(
 		'status' => array( 'levels' => 1, 'quality' => 2, 'pristine' => 3 ),
 	);
 	# Restrict autoconfirmed to flagging semi-protected
@@ -513,7 +513,7 @@ elseif ( $wgDBname == 'huwiki' ) {
 
 elseif ( $wgDBname == 'iawiki' ) {
 	$wgFlaggedRevsOverride = false;
-	$wgFlaggedRevTags['accuracy']['levels'] = 1;
+	$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 }
 
 elseif ( $wgDBname == 'iswiktionary' ) {
@@ -522,14 +522,14 @@ elseif ( $wgDBname == 'iswiktionary' ) {
 
 elseif ( $wgDBname == 'kawiki' ) {
 	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-	$wgFlaggedRevTags['accuracy']['levels'] = 1;
+	$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	$wgGroupPermissions['trusted']['autoreview'] = true;
 }
 
 elseif ( $wgDBname == 'plwiki' ) {
 	// T45617, T50043
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_TEMPLATE, NS_CATEGORY, NS_HELP, 100, 828 );
-	$wgFlaggedRevTags['accuracy']['levels'] = 1;
+	$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 	$wgFlaggedRevsAutopromote['days'] = 90;
@@ -552,7 +552,7 @@ elseif ( $wgDBname == 'ptwiki' ) { // T56828
 	# Show only on a per-page basis
 	$wgFlaggedRevsOverride = false;
 	# We have only one tag with one level
-	$wgFlaggedRevTags = array(
+	$wgFlaggedRevsTags = array(
 		'status' => array( 'levels' => 1, 'quality' => 2, 'pristine' => 3 ),
 	);
 	# Restrict autoconfirmed to flagging semi-protected
@@ -628,7 +628,7 @@ elseif ( $wgDBname == 'ptwikinews' ) {
 elseif ( $wgDBname == 'ptwikisource' ) {
 	$wgFlaggedRevsLowProfile = false;
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( 102, 104, 106, 108, 110 ) );
-	$wgFlaggedRevTags['accuracy']['levels'] = 1;
+	$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 }
 
@@ -637,7 +637,7 @@ elseif ( $wgDBname == 'ruwiki' ) {
 	// T39675, T49337
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 );
 
-	$wgFlaggedRevTags['accuracy']['levels'] = 3; // Is this needed?
+	$wgFlaggedRevsTags['accuracy']['levels'] = 3; // Is this needed?
 	$wgFlaggedRevsOverride = false;
 
 	// T17478
@@ -730,7 +730,7 @@ elseif ( $wgDBname == 'trwikiquote' ) {
 elseif( $wgDBname == 'ukwiki' ) {
 	$wgFlaggedRevValues = 1;
 	$wgFlaggedRevsNamespaces = array( NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 828 );
-	$wgFlaggedRevTags['accuracy']['levels'] = 3;
+	$wgFlaggedRevsTags['accuracy']['levels'] = 3;
 	$wgFlaggedRevsOverride = false;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 }
@@ -749,7 +749,7 @@ elseif ( $wgDBname == 'plwikisource' ) {
 }
 elseif ( $wgDBname == 'vecwiki' ) {
 	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
-	$wgFlaggedRevTags['accuracy']['levels'] = 3; // Is this needed?
+	$wgFlaggedRevsTags['accuracy']['levels'] = 3; // Is this needed?
 	$wgFlaggedRevsOverride = false;
 
 	// T17478
