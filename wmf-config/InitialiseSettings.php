@@ -15502,8 +15502,6 @@ $wgConf->settings = array(
 
 'wmgWMEEnableCompletionExperiment' => array(
 	'default' => false,
-	'enwiki' => true,
-	'dewiki' => true,
 ),
 
 'wmgUseCite' => array(
