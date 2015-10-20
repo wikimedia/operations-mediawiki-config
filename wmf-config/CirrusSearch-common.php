@@ -21,10 +21,11 @@ if ( $wmgUseClusterJobqueue ) {
 		$wgJobTypeConf['default'];
 }
 
-# Set up the the default cluster to send queries to,
-# and the list of clusters to write to.
+if ( isset( $wmgCirrusSearchServers ) ) {
+	$wgCirrusSearchServers = $wmgCirrusSearchServers;
+}
+$wgCirrusSearchClusters = $wmgCirrusSearchClusters;
 $wgCirrusSearchDefaultCluster = $wmgCirrusSearchDefaultCluster;
-$wgCirrusSearchWriteClusters = $wmgCirrusSearchWriteClusters;
 
 # Enable user testing
 $wgCirrusSearchUserTesting = $wmgCirrusSearchUserTesting;
