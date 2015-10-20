@@ -13258,15 +13258,14 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-// format: /{domain}/v1/png/{title}/{revid}/{hash}.png
-// e.g. //graphoid.wikimedia.org/mediawiki.org/v1/png/Extension:Graph/0/be66c7016b9de3188ef6a585950f10dc83239837.png
+// direct format: //graphoid.wikimedia.org/{domain}/v1/png/{title}/{revid}/{hash}.png
+// restbase format: /api/rest_v1/page/graph/png/{title}/{revid}/{hash}.png
 // %1\$s = domain
 // %2\$s = title
 // %3\$s = revid
 // %4\$s = hash
 'wmgGraphImgServiceUrl' => array(
-	'default' => "//graphoid.wikimedia.org/%1\$s/v1/png/%2\$s/%3\$s/%4\$s.png",
-	'testwiki' => "/api/rest_v1/page/graph/png/%2\$s/%3\$s/%4\$s.png",
+	'default' => "/api/rest_v1/page/graph/png/%2\$s/%3\$s/%4\$s.png",
 	'private' => false,
 ),
 
