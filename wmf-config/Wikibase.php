@@ -94,7 +94,7 @@ if ( $wmgUseWikibaseRepo ) {
 	// Per T115994, until T115892 is fixed...
 	$wgGroupPermissions['*']['item-merge'] = false;
 
-	$wgCacheEpoch = '20150807193747';
+	$wgCacheEpoch = '20151020155928';
 
 	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
 	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
