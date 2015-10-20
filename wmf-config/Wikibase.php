@@ -91,9 +91,6 @@ if ( $wmgUseWikibaseRepo ) {
 	// T53637 and T48953
 	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
 
-	// Per T115994, until T115892 is fixed...
-	$wgGroupPermissions['*']['item-merge'] = false;
-
 	$wgCacheEpoch = '20151020232024';
 
 	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
