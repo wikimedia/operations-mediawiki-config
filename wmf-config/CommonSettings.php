@@ -2019,10 +2019,6 @@ if ( $wmgUseVisualEditor ) {
 	$wgCitoidServiceUrl = '//citoid.wikimedia.org/api';
 }
 
-if ( isset( $wmgForeignUploadTargets ) ) {
-	$wgForeignUploadTargets = $wmgForeignUploadTargets;
-}
-
 if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
 	// TemplateData enabled for all wikis - 2014-09-29
 	require_once( "$IP/extensions/TemplateData/TemplateData.php" );

@@ -893,11 +893,6 @@ function wmfLabsSettings() {
 		),
 		// ------------ BetaFeatures end -----------
 
-		'wmgForeignUploadTargets' => array(
-			'default' => array( 'shared' ),
-			'commonswiki' => array(),
-		),
-
 		'wmgUseRSSExtension' => array(
 			'dewiki' => true,
 		),

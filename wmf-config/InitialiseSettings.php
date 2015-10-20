@@ -11854,6 +11854,11 @@ $wgConf->settings = array(
 	),
 ),
 
+'wgForeignUploadTargets' => array(
+	'default' => array( 'shared' ),
+	'commonswiki' => array(),
+),
+
 'wmgUseMwEmbedSupport' => array(
 	'default' => true,
 	'labswiki' => false,
