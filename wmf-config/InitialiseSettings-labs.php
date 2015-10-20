@@ -942,6 +942,32 @@ function wmfLabsSettings() {
 
 		'wmgUseCirrus' => array(
 			'default' => true,
+			'commonswiki' => true,
+			'dewiki' => true,
+			'enwiki' => true,
+			'eswiki' => true,
+			'frwiki' => true,
+			'jawiki' => true,
+			'nlwiki' => true,
+			'plwiki' => true,
+			'ruwiki' => true,
+			'svwiki' => true,
+			'zhwiki' => true,
+		),
+
+		'-wmgCirrusSearchServers' => array(
+			'default' => null,
+		),
+
+		'-wmgCirrusSearchClusters' => array(
+			'default' => array(
+				'eqiad' => array(
+					'deployment-elastic05',
+					'deployment-elastic06',
+					'deployment-elastic07',
+					'deployment-elastic08',
+				),
+			),
 		),
 
 		'wmgUseFlow' => array(

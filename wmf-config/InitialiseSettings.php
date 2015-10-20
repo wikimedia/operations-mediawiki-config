@@ -15302,13 +15302,23 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgCirrusSearchServers' => array(
+	'default' => array( '10.2.2.30' ), // search.svc.eqiad.wmnet
+	'testwiki' => null,
+),
+
 'wmgCirrusSearchDefaultCluster' => array(
 	'default' => 'eqiad',
 ),
 
-'wmgCirrusSearchWriteClusters' => array(
-	'default' => array( 'eqiad' ),
-	'testwiki' => array( 'eqiad', 'labsearch' )
+'wmgCirrusSearchClusters' => array(
+	'default' => array(
+		'eqiad' => array( '10.2.2.30' ), // search.svc.eqiad.wmnet
+	),
+	'testwiki' => array(
+		'eqiad' => array( '10.2.2.30' ), // search.svc.eqiad.wmnet
+		'labsearch' => array( 'nobelium.eqiad.wmnet' ),
+	),
 ),
 
 'wmgCirrusPerUserPoolCounter' => array(
