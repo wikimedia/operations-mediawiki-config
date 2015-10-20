@@ -31,15 +31,13 @@ $wgWBSharedSettings['siteLinkGroups'] = array(
 
 $wgWBSharedSettings['specialSiteLinkGroups'] = array(
 	'commons',
+	'mediawiki',
+	'meta',
+	'species'
 );
 
 if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki', 'testwikidatawiki' ) ) ) {
 	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'testwikidata';
-
-	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'mediawiki';
-	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'meta';
-	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'species';
-
 } else {
 	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'wikidata';
 }
