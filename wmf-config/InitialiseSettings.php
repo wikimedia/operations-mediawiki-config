@@ -14600,7 +14600,6 @@ $wgConf->settings = array(
 	'default' => true,
 	'labswiki' => false, // FIXME: this does nothing in absence of GeoData
 	'loginwiki' => false,
-	'testwikidatawiki' => false,
 	'votewiki' => false,
 ),
 'wmgMaxGeoSearchRadius' => array(
