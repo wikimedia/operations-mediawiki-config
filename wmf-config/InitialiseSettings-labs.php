@@ -809,6 +809,10 @@ function wmfLabsSettings() {
 			),
 		),
 
+		'wmgEnableGeoData' => array(
+			'wikidatawiki' => true,
+		),
+
 		'wmgGeoDataDebug' => array(
 			'default' => true,
 		),
