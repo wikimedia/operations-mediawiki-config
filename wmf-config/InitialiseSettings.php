@@ -14578,6 +14578,7 @@ $wgConf->settings = array(
 	'arbcom_fiwiki' => false,
 	'arbcom_nlwiki' => false,
 	'testwiki' => true,
+	'testwikidatawiki' => true,
 	'test2wiki' => true,
 	'wg_enwiki' => false,
 	'incubatorwiki' => true,
@@ -14586,6 +14587,7 @@ $wgConf->settings = array(
 	'default' => true,
 	'labswiki' => false, // FIXME: this does nothing in absence of GeoData
 	'loginwiki' => false,
+	'testwikidatawiki' => false,
 	'votewiki' => false,
 ),
 'wmgMaxGeoSearchRadius' => array(
