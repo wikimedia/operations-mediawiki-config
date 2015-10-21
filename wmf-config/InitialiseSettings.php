@@ -15050,6 +15050,9 @@ $wgConf->settings = array(
 'wmgWikibaseEnableData' => array(
 	'default' => true,
 	'wikinews' => false,
+	'mediawikiwiki' => false,
+	'metawiki' => false,
+	'specieswiki' => false
 ),
 
 'wmgWikibaseEnableArbitraryAccess' => array(
@@ -15085,6 +15088,9 @@ $wgConf->settings = array(
 	'wikivoyage' => 'wikivoyage',
 	'wikisource' => 'wikisource',
 	'commonswiki' => 'commons',
+	'mediawikiwiki' => 'mediawiki',
+	'metawiki' => 'meta',
+	'specieswiki' => 'species',
 	'wikidatawiki' => 'wikidata',
 	'testwikidatawiki' => 'testwikidata',
 ),
