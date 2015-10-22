@@ -95,8 +95,8 @@ $selectedFileViewRawUrlEsc = htmlspecialchars( $selectedFileViewRawUrl );
 if ( $selectedFilePath !== false ) :
 ?>
 <p>(
-<a href="https://phabricator.wikimedia.org/diffusion/OMWC/history/master/<?php echo urlencode( $selectedFileRepoPathEsc ); ?>">version control</a> &bull;
-<a href="https://phabricator.wikimedia.org/diffusion/OMWC/browse/master/<?php echo urlencode( $selectedFileRepoPathEsc ); ?>?blame=1">blame</a> &bull;
+<a href="https://phabricator.wikimedia.org/diffusion/OMWC/history/master/<?php echo $selectedFileRepoPathEsc; ?>">version control</a> &bull;
+<a href="https://phabricator.wikimedia.org/diffusion/OMWC/browse/master/<?php echo $selectedFileRepoPathEsc; ?>?blame=1">blame</a> &bull;
 <a href="<?php echo $selectedFileViewRawUrlEsc; ?>">raw text</a>
 )</p>
 <?php
