@@ -37,8 +37,8 @@ require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
 	Each of these files is also available in public version control in one of the following repositories:
 </p>
 <ul>
-	<li><a href="https://git.wikimedia.org/tree/operations%2Fmediawiki-config.git">operations/mediawiki-config.git</a></li>
-	<li><a href="https://git.wikimedia.org/tree/operations%2Fpuppet.git">operations/puppet.git</a></li>
+	<li><a href="https://phabricator.wikimedia.org/diffusion/OMWC/">operations/mediawiki-config.git</a></li>
+	<li><a href="https://phabricator.wikimedia.org/diffusion/OPUP/">operations/puppet.git</a></li>
 </ul>
 
 <hr>
