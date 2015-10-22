@@ -2114,6 +2114,7 @@ if ( $wmgUseMath ) {
 
 	$wgTexvc = '/usr/bin/texvc';
 	$wgMathTexvcCheckExecutable = '/usr/bin/texvccheck';
+	$wgMathCheckFiles = false;
 
 	if ( $wgDBname === 'hewiki' ) {
 		$wgDefaultUserOptions['math'] = 0;
