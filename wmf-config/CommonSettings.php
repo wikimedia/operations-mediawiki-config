@@ -1675,10 +1675,6 @@ if ( $wmgUseGlobalUsage ) {
 	$wgGlobalUsagePurgeBacklinks = true;
 }
 
-if ( $wmgUseAPIRequestLog ) {
-	$wgAPIRequestLog = "udp://locke.wikimedia.org:9000/$wgDBname";
-}
-
 if ( $wmgUseLivePreview ) {
 	$wgDefaultUserOptions['uselivepreview'] = 1;
 }

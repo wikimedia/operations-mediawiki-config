@@ -210,9 +210,6 @@ function wmfLabsSettings() {
 		'-wmgUsePoolCounter' => array(
 			'default' => false, // T38891
 		),
-		'-wmgUseAPIRequestLog' => array(
-			'default' => false,
-		),
 		'-wmgEnableCaptcha' => array(
 			'default' => true,
 		),
