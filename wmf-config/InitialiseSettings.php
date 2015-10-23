@@ -6835,6 +6835,7 @@ $wgConf->settings = array(
 	'+idwikisource' => array( 100 => 1, 102 => 1 ),
 	'+iswikisource' => array( 100 => 1, 102 => 1 ), // T46164
 	'+itwikisource' => array( 102 => 1, 110 => 1 ),
+	'+itwikiversity' => array( 100 => 1, 102 => 1, 104 => 1 ), // T114932
 	'+itwikivoyage' => array( 100 => 1, 104 => 1, 106 => 1 ),
 	'+kowikisource' => array( 100 => 1 ),
 	'+lawikisource' => array( 102 => 1, 106 => 1 ),
