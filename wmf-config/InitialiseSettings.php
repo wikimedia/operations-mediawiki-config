@@ -11659,10 +11659,6 @@ $wgConf->settings = array(
 	'commonswiki' => true,
 ),
 
-'wmgUseAPIRequestLog' => array(
-	'default' => false,
-),
-
 'wgSearchSuggestCacheExpiry' => array(
 	'default' => 10800,
 ),
