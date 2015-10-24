@@ -1154,6 +1154,7 @@ if ( $wmgUseCentralAuth ) {
 			'.wikiquote.beta.wmflabs.org' => 'enwikiquote',
 			'.wikinews.beta.wmflabs.org' => 'enwikinews',
 			'.wiktionary.beta.wmflabs.org' => 'enwiktionary',
+			'.wikivoyage.beta.wmflabs.org' => 'enwikivoyage',
 			'meta.wikimedia.beta.wmflabs.org' => 'metawiki',
 			'deployment.wikimedia.beta.wmflabs.org' => 'deploymentwiki',
 			'test.wikimedia.beta.wmflabs.org' => 'testwiki',
