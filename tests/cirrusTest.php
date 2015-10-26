@@ -12,8 +12,8 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$this->assertEquals( 'eqiad', $config['wgCirrusSearchDefaultCluster'] );
 		$this->assertCount( 3, $config['wgCirrusSearchClusters'] );
 
-		// testwiki writes to eqiad and the lab replica
-		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
+		// testwiki writes to eqiad, codfw and the lab replica
+		$this->assertCount( 3, $config['wgCirrusSearchWriteClusters'] );
 
 		$this->assertArrayHasKey(
 			$config['wgCirrusSearchDefaultCluster'],
@@ -44,17 +44,14 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchClientSideConnectTimeout'] );
 		}
 
-		// Only eqiad for now
-		$this->assertCount( 1, $config['wgCirrusSearchWriteClusters'] );
-		$this->assertArrayHasKey(
-			$config['wgCirrusSearchDefaultCluster'],
-			$config['wgCirrusSearchClusters']
-		);
-
-		$this->assertArrayHasKey(
-			reset( $config['wgCirrusSearchWriteClusters'] ),
-			$config['wgCirrusSearchClusters']
-		);
+		// Only eqiad and codfw for now
+		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
+		foreach ( $config['wgCirrusSearchWriteClusters'] as $cluster ) {
+			$this->assertArrayHasKey(
+				$cluster,
+				$config['wgCirrusSearchClusters']
+			);
+		}
 	}
 
 	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix, $lang, $site ) {
