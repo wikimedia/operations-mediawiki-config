@@ -15315,8 +15315,8 @@ $wgConf->settings = array(
 ),
 
 'wmgCirrusSearchWriteClusters' => array(
-	'default' => array( 'eqiad' ),
-	'testwiki' => array( 'eqiad', 'labsearch' )
+	'default' => array( 'eqiad', 'codfw' ),
+	'testwiki' => array( 'eqiad', 'codfw', 'labsearch' )
 ),
 
 'wmgCirrusPerUserPoolCounter' => array(
