@@ -14591,9 +14591,9 @@ $wgConf->settings = array(
 	'arbcom_fiwiki' => false,
 	'arbcom_nlwiki' => false,
 	'testwiki' => true,
-	'testwikidatawiki' => true,
 	'test2wiki' => true,
 	'wg_enwiki' => false,
+	'wikidata' => true,
 	'incubatorwiki' => true,
 ),
 'wmgEnableGeoSearch' => array(
