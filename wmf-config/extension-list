@@ -25,7 +25,7 @@ $IP/extensions/CommonsMetadata/CommonsMetadata.php
 $IP/extensions/ConfirmEdit/ConfirmEdit.php
 $IP/extensions/ConfirmEdit/FancyCaptcha.php
 $IP/extensions/ContactPage/ContactPage.php
-$IP/extensions/ContentTranslation/ContentTranslation.php
+$IP/extensions/ContentTranslation/extension.json
 $IP/extensions/ContributionTracking/ContributionTracking.php
 $IP/extensions/CreditsSource/CreditsSource.php
 $IP/extensions/CustomData/CustomData.php
