@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_79311a00",
+        "filename": "wmf-config/redis.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 1357
+      },
+      "writtenOn": "2015-10-27T09:28:05Z",
+      "side": 1,
+      "message": "Does that do anything at the moment? Line 97 of MultiWriteBagOStuff.php suggests that an asyncHandler parameter is needed for that option to kick in.",
+      "revId": "04aafd8cedab5136e70b986c6ae941215cefd14f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
