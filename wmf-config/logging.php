@@ -264,6 +264,10 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	$wmgMonologConfig['loggers'][$channel] = array(
 		'handlers' => $handlers,
 		'processors' => array_keys( $wmgMonologProcessors ),
+		'calls' => array(
+			// T116550 - Requires Monolog > 1.17.2
+			'useMicrosecondTimestamps' => array( false ),
+		),
 	);
 }
 
@@ -272,7 +276,5 @@ $wgMWLoggerDefaultSpi = array(
 	'args' => array( $wmgMonologConfig ),
 );
 
-// Bug: T99581 - force logger timezone to UTC; requires Monolog >= 1.14.0
-if ( method_exists( '\\Monolog\\Logger', 'setTimezone' ) ) {
-	\Monolog\Logger::setTimezone( new DateTimeZone( 'UTC' ) );
-}
+// Bug: T99581 - force logger timezone to UTC
+\Monolog\Logger::setTimezone( new DateTimeZone( 'UTC' ) );
