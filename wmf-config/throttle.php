@@ -20,6 +20,18 @@ $wmgThrottlingExceptions = array();
 #             (default: any project)
 ## Add throttling definitions below.
 
+$wmgThrottlingExceptions[] = array( // T116745
+	'from' => '2015-10-27T12:00 +0:00',
+	'to' => '2015-10-27T20:00 +0:00',
+	'ip' => '213.219.164.166',
+	'dbname' => array(
+		'frwikisource',
+		'frwiki',
+		'commonswiki'
+	),
+	'value' => 50 //45 participants
+);
+
 $wmgThrottlingExceptions[] = array( // T110352
 	'from'   => '2015-08-29T00:00 +0:00',
 	'to'     => '2016-02-28T00:00 +0:00',
