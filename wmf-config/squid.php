@@ -1,10 +1,14 @@
 <?php
 # HTCP multicast squid purging
 $wgHTCPRouting = array(
+	'|^https?://upload\.wikimedia\.org|' => array(
+		'host' => '239.128.0.113',
+		'port' => 4827
+	),
 	'' => array(
 		'host' => '239.128.0.112',
 		'port' => 4827
-	)
+	),
 );
 $wgHTCPMulticastTTL = 8;
 
