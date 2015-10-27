@@ -239,6 +239,10 @@ function wmfLabsSettings() {
 			'default' => true,
 		),
 
+		'wgRCWatchCategoryMembership' => array(
+			'default' => true,
+		),
+
 		// T39852
 		'wmgUseWikimediaShopLink' => array(
 			'default'    => false,
