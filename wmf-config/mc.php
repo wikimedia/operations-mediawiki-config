@@ -14,6 +14,7 @@ $wgObjectCaches['memcached-pecl'] = array(
 	'server_failure_limit' => 1e9,
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
+	'timeout'              => $wgMemCachedTimeout
 );
 
 # vim: set sts=4 sw=4 et :
