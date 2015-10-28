@@ -75,6 +75,12 @@ if ( $wmgUseWikibaseRepo ) {
 		// there is no cronjob dispatcher yet, this will do nothing
 		$wgWBRepoSettings['clientDbList'] = array( 'testwiki', 'test2wiki', 'testwikidatawiki' );
 		$wgPropertySuggesterClassifyingPropertyIds = array( 7 );
+
+		if ( !in_array( 'pageterms', $wgMFQueryPropModules ) ) {
+			$wgMFQueryPropModules[] = 'pageterms';
+		}
+
+		$wgMFSearchAPIParams['wbptterms'] = array( 'label' );
 	} else {
 		$wgWBRepoSettings['clientDbList'] = array_diff(
 			MWWikiversions::readDbListFile( 'wikidataclient' ),
