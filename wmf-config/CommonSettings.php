@@ -2478,6 +2478,7 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 	}
 
 	$wgFlowCacheVersion = '4.7';
+	$wgFlowCacheTime = 60 * 60 * 24; // caches expire after 1 day (T94029)
 
 	$wgFlowEnableOptInBetaFeature = $wmgFlowEnableOptInBetaFeature;
 }
