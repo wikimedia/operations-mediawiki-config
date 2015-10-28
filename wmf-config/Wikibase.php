@@ -117,14 +117,6 @@ if ( $wmgUseWikibaseRepo ) {
 		1134, // (OBSOLETE) located in place (use P276)
 	);
 
-	if ( $wgDBname = 'testwikidatawiki' ) {
-		// for displaying labels in places like mobile search suggestions
-		// instead of page titles. (e.g. 'Q64')
-		$wgMFQueryPropModules[] = 'pageterms';
-		$wgMFSearchAPIParams[] = 'label';
-		$wgMFSearchAPIParams[] = 'description';
-	}
-
 	// Don't try to let users answer captchas if they try to add links
 	// on either Item or Property pages. T86453
 	$wgCaptchaTriggersOnNamespace[NS_MAIN]['addurl'] = false;
