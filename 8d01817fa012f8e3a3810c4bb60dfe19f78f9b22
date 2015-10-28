@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_472bfa92",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-28T23:11:12Z",
+      "side": 1,
+      "message": "Coooooooooooooooool\n:P",
+      "revId": "8d01817fa012f8e3a3810c4bb60dfe19f78f9b22",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_87149252",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-10-28T23:11:12Z",
+      "side": 1,
+      "message": "I wonder if we had a reason doing this all? We yould set wgMFDisplayWikibaseDescription directly in InitialiseSeetings without setting a g helper variable.",
+      "revId": "8d01817fa012f8e3a3810c4bb60dfe19f78f9b22",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
