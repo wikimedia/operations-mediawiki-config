@@ -133,7 +133,7 @@ $wgLBFactoryConf = array(
 	),
 	's6' => array(
 		'db1023' => 0,   # 1.4TB  64GB
-		# T105879 'db1022' => 0,   # 1.4TB  64GB
+		'db1022' => 100, # 1.4TB  64GB
 		'db1030' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1037' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1050' => 400, # 2.8TB  64GB
