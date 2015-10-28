@@ -13413,6 +13413,9 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'test2wiki' => true,
 ),
+'wmgMFDisplayWikibaseDescription' => array(
+	'default' => true,
+),
 'wmgMFMobileFormatterHeadings' => array(
 	'default' => array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ),
 	'wikivoyage' => array( 'h2', 'h3', 'h4', 'h5', 'h6' ), // T110436, T110837
