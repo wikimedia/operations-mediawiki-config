@@ -13409,6 +13409,7 @@ $wgConf->settings = array(
 ),
 'wmgMFUseWikibaseDescription' => array(
 	'default' => false,
+	'testwikidatawiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
 ),
