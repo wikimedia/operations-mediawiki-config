@@ -289,7 +289,10 @@ foreach ( $wmgParserCacheDBs as $host ) {
 $wgObjectCaches['mysql-multiwrite'] = array(
 	'class' => 'MultiWriteBagOStuff',
 	'caches' => array(
-		0 => $wgObjectCaches['memcached-pecl'],
+		0 => array(
+			'factory' => array( 'ObjectCache', 'getInstance' ),
+			'args' => array( 'memcached-pecl' )
+		),
 		1 => array(
 			'class' => 'SqlBagOStuff',
 			'servers' => $pcServers,
