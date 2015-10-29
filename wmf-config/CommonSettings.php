@@ -1948,9 +1948,12 @@ if ( $wmgUseVisualEditor ) {
 		// so use a hook
 		$wgExtensionFunctions[] = function () {
 			global $wgServerName, $wgVisualEditorRestbaseURL, $wmfRealm;
-			if ( $wmfRealm === 'production' ) {
+			if (
+				$wmfRealm === 'production' ||
+				( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' )
+			) {
 				$wgVisualEditorRestbaseURL = "https://$wgServerName/api/rest_v1/page/html/";
-			} elseif ( $wmfRealm === 'labs' ) {
+			} else {
 				$wgVisualEditorRestbaseURL = "http://$wgServerName/api/rest_v1/page/html/";
 			}
 		};
