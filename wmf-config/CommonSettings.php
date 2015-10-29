@@ -2505,6 +2505,7 @@ if ( $wmgUseScribunto ) {
 	include( "$IP/extensions/Scribunto/Scribunto.php" );
 	$wgScribuntoUseGeSHi = true;
 	$wgScribuntoUseCodeEditor = true;
+	$wgScribuntoGatherFunctionStats = true;  // ori, 29-Oct-2015
 
 	$wgScribuntoDefaultEngine = 'luasandbox';
 	$wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
