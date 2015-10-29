@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_84b5657a",
+        "filename": "multiversion/MWScript.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-10-29T22:34:43Z",
+      "side": 1,
+      "message": "I don\u0027t think this is true anymore. Isn\u0027t it just deployment+restricted users now?",
+      "revId": "5c6f12e5f1649ced990d4e0d8b8062ae0b067133",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
