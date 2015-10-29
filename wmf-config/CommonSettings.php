@@ -1951,7 +1951,7 @@ if ( $wmgUseVisualEditor ) {
 			if ( $wmfRealm === 'production' ) {
 				$wgVisualEditorRestbaseURL = "https://$wgServerName/api/rest_v1/page/html/";
 			} elseif ( $wmfRealm === 'labs' ) {
-				$wgVisualEditorRestbaseURL = "http://$wgServerName/api/rest_v1/page/html/";
+				$wgVisualEditorRestbaseURL = "//$wgServerName/api/rest_v1/page/html/";
 			}
 		};
 	}
