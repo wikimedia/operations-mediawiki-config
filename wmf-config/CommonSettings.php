@@ -1547,9 +1547,6 @@ if ( $wmgUseCollection ) {
 	// Allow collecting Help pages
 	$wgCollectionArticleNamespaces[] = NS_HELP;
 
-	// Sidebar cache doesn't play nice with this
-	$wgEnableSidebarCache = false;
-
 	$wgCollectionFormats = array(
 		'rdf2latex' => 'PDF',
 		'rdf2text' => 'TXT',
