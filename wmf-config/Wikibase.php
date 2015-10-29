@@ -75,12 +75,6 @@ if ( $wmgUseWikibaseRepo ) {
 		// there is no cronjob dispatcher yet, this will do nothing
 		$wgWBRepoSettings['clientDbList'] = array( 'testwiki', 'test2wiki', 'testwikidatawiki' );
 		$wgPropertySuggesterClassifyingPropertyIds = array( 7 );
-
-		if ( !in_array( 'pageterms', $wgMFQueryPropModules ) ) {
-			$wgMFQueryPropModules[] = 'pageterms';
-		}
-
-		$wgMFSearchAPIParams['wbptterms'] = array( 'label' );
 	} else {
 		$wgWBRepoSettings['clientDbList'] = array_diff(
 			MWWikiversions::readDbListFile( 'wikidataclient' ),
@@ -122,6 +116,12 @@ if ( $wmgUseWikibaseRepo ) {
 		741, // (OBSOLETE) playing hand
 		1134, // (OBSOLETE) located in place (use P276)
 	);
+
+	if ( !in_array( 'pageterms', $wgMFQueryPropModules ) ) {
+		$wgMFQueryPropModules[] = 'pageterms';
+	}
+
+	$wgMFSearchAPIParams['wbptterms'] = array( 'label' );
 
 	// Don't try to let users answer captchas if they try to add links
 	// on either Item or Property pages. T86453
