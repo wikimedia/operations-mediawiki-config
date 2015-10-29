@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+for file in ./**/503.html ; do
+    cd "$(dirname $file)"
+    unlink 503.html
+    ln -sf ../../errorpages/503.html 503.html
+    cd ..
+done
