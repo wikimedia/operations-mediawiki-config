@@ -37,7 +37,7 @@ try {
 	$runner = new JobRunner();
 	$response = $runner->run( array(
 		'type'     => isset( $_GET['type'] ) ? $_GET['type'] : false,
-		'maxJobs'  => isset( $_GET['maxjobs'] ) ? $_GET['maxjobs'] : 1,
+		'maxJobs'  => isset( $_GET['maxjobs'] ) ? $_GET['maxjobs'] : false,
 		'maxTime'  => isset( $_GET['maxtime'] ) ? $_GET['maxtime'] : 30
 	) );
 
