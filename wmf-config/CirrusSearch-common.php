@@ -110,6 +110,31 @@ if ( $wgDBname == 'commonswiki' ) {
 	$wgCirrusSearchExtraIndexes[ NS_FILE ] = array( 'commonswiki_file' );
 }
 
+// Configuration for initial test deployment of inline interwiki search via
+// language detection on the search terms. With EnableAltLanguage set to false
+// this is only available with a special query string (cirrusAltLanguage=yes)
+$wgCirrusSearchEnableAltLanguage = false;
+$wgCirrusSearchInterwikiProv = 'iwsw1';
+$wgCirrusSearchLanguageToWikiMap = array(
+	'en' => 'en',
+	'es' => 'es',
+	'de' => 'de',
+	'pt' => 'pt',
+	'zh-cn' => 'zh',
+	'zh-tw' => 'zh',
+	'ar' => 'ar',
+	'ru' => 'ru',
+);
+
+$wgCirrusSearchWikiToNameMap = array(
+	'ar' => 'arwiki',
+	'de' => 'dewiki',
+	'en' => 'enwiki',
+	'es' => 'eswiki',
+	'pt' => 'ptwiki',
+	'ru' => 'ruwiki',
+	'zh' => 'zhwiki',
+);
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
