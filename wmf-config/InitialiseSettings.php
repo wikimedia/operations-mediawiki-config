@@ -8078,6 +8078,7 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
 	),
 	'ruwikivoyage' => array(
+		'autoconfirmed' => array ( 'reupload-shared' => true ), // T116575
 		'autopatrolled' => array( 'autopatrol' => true ), // T48915
 		'rollbacker' => array( 'rollback' => true ), // T116143
 		'patroller' => array( 'patrol' => true ), // T116143
