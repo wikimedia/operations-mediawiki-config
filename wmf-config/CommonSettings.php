@@ -2689,6 +2689,9 @@ if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationDefaultSourceLanguage = $wmgContentTranslationDefaultSourceLanguage;
 
 	$wgContentTranslationEnableSuggestions = $wmgContentTranslationEnableSuggestions;
+
+	//This is set in PrivateSettings.php
+	$wgContentTranslationCXServerAuth = $wmgContentTranslationCXServerAuth;
 }
 
 // @note getRealmSpecificFilename only works with filenames with .suffix
