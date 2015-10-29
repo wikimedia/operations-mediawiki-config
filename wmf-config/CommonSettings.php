@@ -2691,8 +2691,12 @@ if ( $wmgUseContentTranslation ) {
 
 	$wgContentTranslationEnableSuggestions = $wmgContentTranslationEnableSuggestions;
 
-	//This is set in PrivateSettings.php
-	$wgContentTranslationCXServerAuth = $wmgContentTranslationCXServerAuth;
+	$wgContentTranslationCXServerAuth = array(
+		'algorithm' = 'HS256',
+		//This is set in PrivateSettings.php
+		'key' = $wmgContentTranslationCXServerAuthKey,
+		'age' = '3600',
+	);
 }
 
 // @note getRealmSpecificFilename only works with filenames with .suffix
