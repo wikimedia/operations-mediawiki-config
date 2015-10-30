@@ -9,11 +9,11 @@ cluster configuration. Omitted files include passwords and security measures.
 as a suffix before the extension, separated with a dash. Example:
 	"all-labs.dblist".
 
-wikiversions.json, wikiversions.cdb
-wikiversions-labs.json, wikiversions-labs.cdb
+wikiversions.json, wikiversions.php
+wikiversions-labs.json, wikiversions-labs.php
  Let us associate a database with a specific copy of MediaWiki (generally a
 branch). The .cdb file is updated by editing wikiversions.json first and then
-running multiversion/refreshWikiversionsCDB. To vary by realm, add a suffix
+running multiversion/refreshWikiversions. To vary by realm, add a suffix
 before the extension, e.g. "wikiversions-labs.json".
 
 docroot/
