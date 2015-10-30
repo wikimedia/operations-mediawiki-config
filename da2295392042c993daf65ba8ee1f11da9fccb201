@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_76234000",
+        "filename": "multiversion/MWScript.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-10-30T22:33:55Z",
+      "side": 1,
+      "message": "Is mwdeploy the new user group where all deployers are in? I thought that\u0027s still called wikidev.",
+      "revId": "da2295392042c993daf65ba8ee1f11da9fccb201",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
