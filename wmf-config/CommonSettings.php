@@ -2468,8 +2468,6 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 		$wgGroupPermissions['autoconfirmed']['flow-edit-post'] = true;
 	}
 
-	$wgFlowCacheVersion = '4.7';
-
 	$wgFlowEnableOptInBetaFeature = $wmgFlowEnableOptInBetaFeature;
 }
 
