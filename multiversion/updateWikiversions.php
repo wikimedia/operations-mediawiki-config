@@ -9,7 +9,7 @@ require_once( __DIR__ . '/MWRealm.php' );
 /*
  * This script switches all wikis in a .dblist file running one MediaWiki
  * version to another MediaWiki version. Since this only changes the wikiversions.json
- * and wikiversions.cdb files on tin, they will still need to be synced to push
+ * and wikiversions.php files on tin, they will still need to be synced to push
  * the upgrade/downgrade to the apaches.
  *
  * The first argument is the old version, typically of the format "php-X.XXwmfX".
