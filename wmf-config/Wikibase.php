@@ -155,12 +155,17 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['otherProjectsLinksBeta'] = true;
 
 	$wgWBClientSettings['excludeNamespaces'] = function() {
+		// @fixme 102 is LiquidThread comments on wikinews and elsewhere?
+		// but is the Extension: namespace on mediawiki.org, so we need
+		// to allow wiki-specific settings here.
 		return array_merge(
 			MWNamespace::getTalkNamespaces(),
+			// 90 => LiquidThread threads
+			// 92 => LiquidThread summary
 			// 118 => Draft
 			// 1198 => NS_TRANSLATE
 			// 2600 => Flow topic
-			array( NS_USER, NS_FILE, NS_MEDIAWIKI, 118, 1198, 2600 )
+			array( NS_USER, NS_FILE, NS_MEDIAWIKI, 90, 92, 118, 1198, 2600 )
 		);
 	};
 
