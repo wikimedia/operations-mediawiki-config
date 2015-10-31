@@ -34,6 +34,24 @@
       "revId": "da2295392042c993daf65ba8ee1f11da9fccb201",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_c9460ac6",
+        "filename": "multiversion/MWScript.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-10-31T23:56:56Z",
+      "side": 1,
+      "message": "Sure, but that\u0027s irrelevant in my opinion. That just means that when I invoke a multiversion script, it is allowed to then sudo (programmatically) into mwdeploy.\n\nThat grant does not make me one of the \"mwdeploy\" users, it\u0027s not a group. No more than I am a Jenkins or Zuul user on gallium, I\u0027m a contint-admin user.\n\nThis is referring to a group of users. The person in question at the terminal can either find out they are in the group and should use sudo -u www-data. Or they realise they don\u0027t have the access required.\n\nThe group in question is \"deployers\" (puppet/ldap) or wikidev (posix gid default for those users).",
+      "parentUuid": "0ebaf39b_495e9aee",
+      "revId": "da2295392042c993daf65ba8ee1f11da9fccb201",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
