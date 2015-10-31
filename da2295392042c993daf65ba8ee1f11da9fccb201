@@ -52,6 +52,24 @@
       "revId": "da2295392042c993daf65ba8ee1f11da9fccb201",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_a94716be",
+        "filename": "multiversion/MWScript.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-10-31T23:58:08Z",
+      "side": 1,
+      "message": "See also the group-id check a few lines higher. That clearly looks for wikidev, not mwdeploy.",
+      "parentUuid": "0ebaf39b_c9460ac6",
+      "revId": "da2295392042c993daf65ba8ee1f11da9fccb201",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
