@@ -234,13 +234,6 @@ $wmgAddWikiNotify = "newprojects@lists.wikimedia.org";
 $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
-// Temporary hack to facilitate migration of l10n cache implementations.
-// Use LCStoreStaticArray if a magic file is present and if the l10n cache
-// appears to be populated. -- Ori, 2015-07-13
-//if ( file_exists( '/etc/lcstore' ) && file_exists( "$IP/cache/l10n/zu.l10n.php" ) ) {
-//	$wgLocalisationCacheConf['storeClass'] = 'LCStoreStaticArray';
-//}
-
 // T29320: skip MessageBlobStore::clear(); handle via refreshMessageBlobs.php instead
 $wgHooks['LocalisationCacheRecache'][] = function( $cache, $code, &$allData, &$purgeBlobs = true ) {
 	$purgeBlobs = false;
@@ -781,9 +774,7 @@ if ( $wmgUseGlobalBlocking ) {
 }
 
 include( $IP . '/extensions/TrustedXFF/TrustedXFF.php' );
-if ( file_exists( "$wmfConfigDir/trusted-xff.cdb" ) ) {
-	$wgTrustedXffFile = "$wmfConfigDir/trusted-xff.cdb";
-}
+$wgTrustedXffFile = "$wmfConfigDir/trusted-xff.cdb";
 
 if ( $wmgUseContactPage ) {
 	include( $IP . '/extensions/ContactPage/ContactPage.php' );
@@ -1356,15 +1347,10 @@ $wgHooks['PrefsPasswordAudit'][] = function( $user, $pass, $status ) {
 	return true;
 };
 
-if ( file_exists( '/etc/wikimedia-image-scaler' ) ) {
-	$wgMaxShellMemory = 512 * 1024;
-	$wgMaxShellFileSize = 512 * 1024;
-	if ( defined( 'HHVM_VERSION' ) ) {
-		$wgMaxShellMemory *= 2;
-		$wgDisableOutputCompression = true;
-	}
-}
-$wgMaxShellTime = 50; // so it times out before PHP and curl and squid
+$wgDisableOutputCompression = true;
+$wgMaxShellFileSize = 512 * 1024;
+$wgMaxShellMemory = 1024 * 1024;
+$wgMaxShellTime = 50;
 
 // Use a cgroup for shell execution.
 // This will cause shell execution to fail if the cgroup is not installed.
@@ -2706,9 +2692,6 @@ if ( $wmgUseContentTranslation ) {
 	);
 }
 
-// @note getRealmSpecificFilename only works with filenames with .suffix
-// needs to be listed outside of use wikibase check below, as localisation cache
-// might be build as "aawikibooks" or something that does not have Wikibase.
 $wgExtensionEntryPointListFiles[] = "$IP/extensions/Wikidata/extension-list-wikidata";
 
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {

@@ -283,14 +283,19 @@ class MWMultiVersion {
 	 * The first item is the MW version
 	 */
 	private function loadVersionInfo() {
+		global $wmfRealm;
+
 		if ( $this->versionLoaded ) {
 			return;
 		}
 		$this->versionLoaded = true;
 
-		$phpFilename = getRealmSpecificFilename(
-			MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.php'
-		);
+		if ( $wmfRealm === 'labs' ) {
+			$phpFilename = MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions-labs.php';
+		} else {
+			$phpFilename = MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.php';
+		}
+
 		$wikiversions = include( $phpFilename );
 
 		if ( !is_array( $wikiversions ) ) {
@@ -304,19 +309,6 @@ class MWMultiVersion {
 		}
 
 		$this->version = $version;
-	}
-
-	/**
-	 * Sanity check that this wiki actually exists.
-	 * @return bool
-	 */
-	private function assertNotMissing() {
-		$phpFilename = getRealmSpecificFilename(
-			MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.php'
-		);
-		if ( $this->isMissing() ) {
-			self::error( "$phpFilename has no version entry for `{$this->db}`.\n" );
-		}
 	}
 
 	/**
@@ -337,7 +329,9 @@ class MWMultiVersion {
 	 */
 	public function getVersion() {
 		$this->loadVersionInfo();
-		$this->assertNotMissing(); // caller should have checked isMissing()
+		if ( $this->version === false ) {
+			self::error( "no version entry for `{$this->db}`.\n" );
+		}
 		return $this->version;
 	}
 
@@ -349,7 +343,9 @@ class MWMultiVersion {
 	 */
 	public function getVersionNumber() {
 		$this->loadVersionInfo();
-		$this->assertNotMissing(); // caller should have checked isMissing()
+		if ( $this->version === false ) {
+			self::error( "no version entry for `{$this->db}`.\n" );
+		}
 		return substr( $this->version, 4 ); // remove "php-"
 	}
 
