@@ -1,56 +1,15 @@
 <?php
 require_once( __DIR__ . '/MWWikiversions.php' );
 
-// Determine realm and datacenter we are on
-// $wmfRealm and $wmfDatacenter are used to vary configuration based on server
-// location. They should be provisioned by puppet in /etc/wikimedia-site and
-// /etc/wikimedia-realm.
-//
-// The possible values of $wmfRealm and $wmfDatacenter as of April 2015 are:
-//  - labs + eqiad
-//  - production + eqiad
-//  - production + codfw
-global $wmfDatacenter, $wmfRealm;
-$wmfRealm   = 'production';
-$wmfDatacenter = 'eqiad';
+global $wmfCluster, $wmfDatacenter, $wmfRealm;
 
-// Puppet provisions the realm in /etc/wikimedia-realm
-if( file_exists( '/etc/wikimedia-realm' ) ) {
-	$wmfRealm = trim( file_get_contents( '/etc/wikimedia-realm' ) );
-}
-if( file_exists( '/etc/wikimedia-site' ) ) {
-	$wmfDatacenter = trim( file_get_contents( '/etc/wikimedia-site' ) );
-}
-
-// Validate settings
-switch( $wmfRealm ) {
-case 'labs':
-    # Anything different from eqiad is wrong in labs
-	$wmfDatacenter = 'eqiad';
-	break;
-case 'production':
-	if ( ! in_array( $wmfDatacenter, array( 'eqiad', 'codfw' ) ) ) {
-		$wmfDatacenter = 'eqiad';
-	}
-	break;
-default:
-	# Assume something vaguely resembling a default
-	$wmfRealm   = 'production';
-	$wmfDatacenter = 'eqiad';
-	break;
-}
-
-/**
- * Function to list all valid realm/datacenter pairs, for testing purposes.
- *
- * @return array List of realm-datacenter pairs
- */
-function listAllRealmsAndDatacenters() {
-	return array(
-		array( 'production', 'eqiad' ),
-		array( 'production', 'codfw' ),
-		array( 'labs', 'eqiad' ),
-	);
+$wmfCluster = trim( file_get_contents( '/etc/wikimedia-cluster' ) );
+if ( $wmfCluster === 'labs' ) {
+    $wmfRealm = 'labs';
+    $wmfDatacenter = 'eqiad';
+} else {
+    $wmfRealm = 'production';
+    $wmfDatacenter = $wmfCluster;
 }
 
 /**
