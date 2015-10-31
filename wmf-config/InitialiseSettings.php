@@ -15767,6 +15767,10 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgUseCheckUser' => array(
+	'default' => true,
+),
+
 );
 
 

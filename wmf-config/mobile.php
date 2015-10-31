@@ -633,3 +633,7 @@ if ( $wmgMobileFrontend ) {
 		);
 	}
 }
+
+if ( $wmfRealm === 'labs' ) {
+	require_once( __DIR__ . '/mobile-labs.php' );
+}

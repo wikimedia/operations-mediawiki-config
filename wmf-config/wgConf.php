@@ -20,9 +20,14 @@ $wgConf->suffixes = array(
 	'wikivoyage',
 );
 
-$wgConf->localVHosts = require( getRealmSpecificFilename( "$wmfConfigDir/wgConfVHosts.php" ) );
+if ( $wmfRealm === 'labs' ) {
+	$wgConf->localVHosts = require( "{$wmfConfigDir}/wgConfVHosts-labs.php" );
+	$dbList = 'all-labs';
+} else {
+	$wgConf->localVHosts = require( "{$wmfConfigDir}/wgConfVHosts.php" );
+	$dbList = 'all';
+}
 
-$dbList = $wmfRealm === 'labs' ? 'all-labs' : 'all';
 $wgConf->wikis = MWWikiversions::readDbListFile( $dbList );
 
 $wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
