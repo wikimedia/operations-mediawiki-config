@@ -16,6 +16,24 @@
       "revId": "da2295392042c993daf65ba8ee1f11da9fccb201",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_495e9aee",
+        "filename": "multiversion/MWScript.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-10-31T21:49:25Z",
+      "side": 1,
+      "message": "The sudoers grant is for the mwdeploy group: https://github.com/wikimedia/operations-puppet/blob/318b9d4e28038f3d3b99aef279e650abb34cea96/modules/mediawiki/manifests/users.pp#L53-L63",
+      "parentUuid": "0ebaf39b_76234000",
+      "revId": "da2295392042c993daf65ba8ee1f11da9fccb201",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
