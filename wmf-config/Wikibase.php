@@ -189,4 +189,4 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 }
 
-require_once( getRealmSpecificFilename( "$wmfConfigDir/Wikibase.php" ) );
+require_once "{$wmfConfigDir}/Wikibase-{$wmfRealm}.php";
