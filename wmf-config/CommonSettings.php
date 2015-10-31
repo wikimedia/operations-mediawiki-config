@@ -834,7 +834,7 @@ if ( $wmgUseClusterFileBackend ) {
 
 if ( $wmgUseClusterJobqueue ) {
 	# Cluster-dependent files for job queue and job queue aggregator
-	require( getRealmSpecificFilename( "$wmfConfigDir/jobqueue.php" ) );
+	clusterRequire( "$wmfConfigDir/jobqueue.php" );
 }
 
 if ( $wgDBname == 'nostalgiawiki' ) {

@@ -71,4 +71,4 @@ if ( $wmgCirrusPerUserPoolCounter ) {
 	);
 }
 
-require( getRealmSpecificFilename( "$wmfConfigDir/PoolCounterSettings.php" ) );
+clusterRequire( "$wmfConfigDir/PoolCounterSettings.php" );

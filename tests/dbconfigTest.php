@@ -13,7 +13,11 @@ require_once __DIR__ . '/../multiversion/MWRealm.php';
 class dbconfigTests extends PHPUnit_Framework_TestCase {
 
 	public static function provideRealmDatacenter() {
-		return listAllRealmsAndDatacenters();
+		return array(
+			array( 'production', 'eqiad' ),
+			array( 'production', 'codfw' ),
+			array( 'labs', 'eqiad' ),
+		);
 	}
 
 	function loadDbFile( $realm, $datacenter ) {

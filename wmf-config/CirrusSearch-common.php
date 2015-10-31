@@ -143,4 +143,4 @@ $wgCirrusSearchWikiToNameMap = array(
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
 #
-require( getRealmSpecificFilename( "$wmfConfigDir/CirrusSearch.php" ) );
+require "{$wmfConfigDir}/CirrusSearch-{$wmfRealm}.php";
