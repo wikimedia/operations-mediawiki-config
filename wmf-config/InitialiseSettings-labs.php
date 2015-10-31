@@ -1056,6 +1056,10 @@ function wmfLabsSettings() {
 			'default' => true,
 		),
 
+		'wmgUseCheckUser' => array(
+			'default' => false,
+		),
+
 		'wmgGraphImgServiceAlways' => array(
 			'default' => true,
 		),

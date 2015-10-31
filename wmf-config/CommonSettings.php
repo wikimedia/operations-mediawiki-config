@@ -180,8 +180,17 @@ require( "$wmfConfigDir/PrivateSettings.php" );
 
 $wgMemCachedServers = array();
 
-foreach ( array( 'logging', 'db', 'mc', 'redis' ) as $cfg ) {
-	require( getRealmSpecificFilename( "{$wmfConfigDir}/{$cfg}.php" ) );
+require "$wmfConfigDir/logging.php";
+require "$wmfConfigDir/redis.php";
+
+if ( $wmfRealm === 'labs' ) {
+	require "$wmfConfigDir/db-labs.php";
+	require "$wmfConfigDir/mc-labs.php";
+	require "$wmfConfigDir/jobqueue-labs.php";
+} else {
+	require "$wmfConfigDir/mc.php";
+	require "$wmfConfigDir/db-{$wmfDatacenter}.php";
+	require "$wmfConfigDir/jobqueue-{$wmfDatacenter}.php";
 }
 
 ini_set( 'memory_limit', $wmgMemoryLimit );
@@ -416,18 +425,19 @@ if ( defined( 'HHVM_VERSION' ) ) {
 # Squid Configuration
 #######################################################################
 
-if ( $wmgUseClusterSquid ) {
-	$wgUseSquid = true;
-	$wgUseESI   = false;
-
-	require( getRealmSpecificFilename( "$wmfConfigDir/squid.php" ) );
-}
-
 if ( $wmfRealm === 'production' ) {
 	$wgStatsdServer = 'statsd.eqiad.wmnet';
+	if ( $wmgUseClusterSquid ) {
+		$wgUseSquid = true;
+		require( "$wmfConfigDir/squid.php" );
+	}
 } elseif ( $wmfRealm === 'labs' ) {
 	$wgStatsdServer = 'labmon1001.eqiad.wmnet';
 	$wgStatsdMetricPrefix = 'BetaMediaWiki';
+	if ( $wmgUseClusterSquid ) {
+		$wgUseSquid = true;
+		require( "$wmfConfigDir/squid-labs.php" );
+	}
 }
 
 // CORS (cross-domain AJAX, T22814)
@@ -497,11 +507,7 @@ if ( $wmgUseTimeline ) {
 		$wgTimelineSettings->fontFile = 'unifont-5.1.20080907.ttf';
 	}
 	$wgTimelineSettings->fileBackend = 'local-multiwrite';
-
-	if ( file_exists( '/usr/bin/ploticus' ) ) {
-		$wgTimelineSettings->ploticusCommand = '/usr/bin/ploticus';
-	}
-
+	$wgTimelineSettings->ploticusCommand = '/usr/bin/ploticus';
 	$wgTimelineSettings->epochTimestamp = '20130601000000';
 }
 
@@ -514,7 +520,7 @@ if ( $wmgUseWikiHiero ) {
 include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 
 // Config for sitematrix
-$wgSiteMatrixFile = getRealmSpecificFilename( "$IP/../langlist" );
+$wgSiteMatrixFile = ( $wmfRealm === 'labs' ) ? "$IP/../langlist-labs" : "$IP/../langlist";
 $wgSiteMatrixClosedSites = MWWikiversions::readDbListFile( 'closed' );
 $wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( 'private' );
 $wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( 'fishbowl' );
@@ -827,14 +833,16 @@ $wgPasswordResetRoutes['email'] = true;
 
 if ( $wmgUseClusterFileBackend ) {
 	# Cluster-dependent files for file backend
-	require( getRealmSpecificFilename( "$wmfConfigDir/filebackend.php" ) );
+	require "{$wmfConfigDir}/filebackend-{$wmfRealm}.php";
 } else {
 	$wgUseInstantCommons = true;
 }
 
 if ( $wmgUseClusterJobqueue ) {
 	# Cluster-dependent files for job queue and job queue aggregator
-	require( getRealmSpecificFilename( "$wmfConfigDir/jobqueue.php" ) );
+	require $wmfRealm === 'labs'
+		? "$wmfConfigDir/jobqueue-labs.php"
+		: "$wmfConfigDir/jobqueue-{$wmfDatacenter}.php";
 }
 
 if ( $wgDBname == 'nostalgiawiki' ) {
@@ -2081,7 +2089,7 @@ if ( $wmgUseMobileApp ) {
 
 # Mobile related configuration
 
-require( getRealmSpecificFilename( "$wmfConfigDir/mobile.php" ) );
+require "{$wmfConfigDir}/mobile.php";
 
 # MUST be after MobileFrontend initialization
 if ( $wmgEnableTextExtracts ) {
@@ -2935,14 +2943,14 @@ $wgExemptFromUserRobotsControl = array_merge( $wgContentNamespaces, $wmgExemptFr
 // additional "language names", adding to Names.php data
 $wgExtraLanguageNames = $wmgExtraLanguageNames;
 
-if ( file_exists( "$wmfConfigDir/CommonSettings-$wmfRealm.php" ) ) {
-	require( "$wmfConfigDir/CommonSettings-$wmfRealm.php" );
+
+if ( $wmfRealm === 'labs' ) {
+	require( "$wmfConfigDir/CommonSettings-labs.php" );
 }
 
-#### Per realm extensions
-
-if ( file_exists( "$wmfConfigDir/ext-$wmfRealm.php" ) ) {
-	require( "$wmfConfigDir/ext-$wmfRealm.php" );
+if ( $wmgUseCheckUser ) {
+	include( $IP . '/extensions/CheckUser/CheckUser.php' );
+	$wgCheckUserForceSummary = $wmgCheckUserForceSummary;
 }
 
 // T39211
@@ -2988,23 +2996,6 @@ $wgAvailableRights[] = 'gather-hidelist';
 
 if ( $wmgUseWPB ) {
 	wfLoadExtension( 'WikidataPageBanner' );
-}
-
-if ( file_exists( "$wmfConfigDir/extension-list-$wmgVersionNumber" ) ) {
-
-	// Version specific extension-list files
-	//
-	// If a new extension is added only in one MediaWiki version,
-	// it should go in a version specific file, and be moved back into
-	// the versionless file when said version becomes the "main" version,
-	// and as such, all deployed versions of MediaWiki have this extension.
-	//
-	// If something is to be removed from newer versions, it should go in a
-	// version specific file for the older version. A symlink of this file may
-	// be created if it needs to cover multiple versions.
-	// This file can then be deleted once this version of MediaWiki isn't in
-	// production usage.
-	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-$wmgVersionNumber";
 }
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
