@@ -145,6 +145,37 @@ if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 	$wgGlobalUserPageDBname = 'metawiki';
 }
 
+if ( $wmgUseUrlShortener ) {
+	wfLoadExtension( 'UrlShortener' );
+	$wgUrlShortenerTemplate = '/$1';
+	$wgUrlShortenerServer = 'w-beta.wmflabs.org';
+	$wgUrlShortenerDBName = 'wikishared';
+	$wgUrlShortenerDomainsWhitelist = array(
+		'(.*\.)?wikipedia\.beta\.wmflabs\.org',
+		'(.*\.)?wiktionary\.beta\.wmflabs\.org',
+		'(.*\.)?wikibooks\.beta\.wmflabs\.org',
+		'(.*\.)?wikinews\.beta\.wmflabs\.org',
+		'(.*\.)?wikiquote\.beta\.wmflabs\.org',
+		'(.*\.)?wikisource\.beta\.wmflabs\.org',
+		'(.*\.)?wikiversity\.beta\.wmflabs\.org',
+		'(.*\.)?wikivoyage\.beta\.wmflabs\.org',
+		'(.*\.)?wikimedia\.beta\.wmflabs\.org',
+		'wikidata\.beta\.wmflabs\.org',
+	);
+	$wgUrlShortenerApprovedDomains = array(
+		'*.wikipedia.beta.wmflabs.org',
+		'*.wiktionary.beta.wmflabs.org',
+		'*.wikibooks.beta.wmflabs.org',
+		'*.wikinews.beta.wmflabs.org',
+		'*.wikiquote.beta.wmflabs.org',
+		'*.wikisource.beta.wmflabs.org',
+		'*.wikiversity.beta.wmflabs.org',
+		'*.wikivoyage.beta.wmflabs.org',
+		'*.wikimedia.beta.wmflabs.org',
+		'wikidata.beta.wmflabs.org',
+	);
+}
+
 if ( $wmgUseApiFeatureUsage ) {
 	// Override server list for Labs
 	$wgApiFeatureUsageQueryEngineConf['serverList'] = array(
