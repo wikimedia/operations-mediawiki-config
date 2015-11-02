@@ -14704,11 +14704,14 @@ $wgConf->settings = array(
 	'dewikivoyage' => false, # T107846
 	'enwikiversity' => false, # T107846
 	'jawikiversity' => false,
-	'ptwikibooks' => false, # T107879
 	'private' => false,
 	'officewiki' => true,
 	'loginwiki' => false,
 	'votewiki' => false,
+),
+'wmgFlowEnglishNamespaceOnly' => array(
+	'default' => false,
+	'ptwikibooks' => true,
 ),
 'wmgFlowOccupyNamespaces' => array(
 	'default' => array(),
