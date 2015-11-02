@@ -141,7 +141,7 @@ if ( !$globals ) {
 	require( "$wmfConfigDir/InitialiseSettings.php" );
 
 	$wikiTags = array();
-	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small', 'medium',
+	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flow', 'flaggedrevs', 'small', 'medium',
 			'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-default',
 			'commonsuploads', 'nonbetafeatures', 'group0', 'wikipedia',
 			'arbitraryaccess', 'nonglobal',
