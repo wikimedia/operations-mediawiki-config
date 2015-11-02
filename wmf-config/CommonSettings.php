@@ -1941,8 +1941,10 @@ if ( $wmgUseVisualEditor ) {
 			global $wgServerName, $wgVisualEditorRestbaseURL, $wmfRealm;
 			if ( $wmfRealm === 'production' ) {
 				$wgVisualEditorRestbaseURL = "https://$wgServerName/api/rest_v1/page/html/";
+				$wgVisualEditorFullRestbaseURL = "https://$wgServerName/api/rest_";
 			} elseif ( $wmfRealm === 'labs' ) {
 				$wgVisualEditorRestbaseURL = "//$wgServerName/api/rest_v1/page/html/";
+				$wgVisualEditorFullRestbaseURL = "//$wgServerName/api/rest_";
 			}
 		};
 	}
