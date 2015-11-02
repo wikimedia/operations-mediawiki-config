@@ -7419,6 +7419,22 @@ $wgConf->settings = array(
 	),
 	'enwikiversity' => array(
 		'user' => array( 'move' => false ), // autoconfirmed only
+		'curator' => array( // T113109
+			'createaccount' => true,
+			'delete' => true,
+			'editprotected' => true,
+			'import' => true,
+			'ipblock-exempt' => true,
+			'mergehistory' => true,
+			'move-categorypages' => true,
+			'movefile' => true,
+			'move' => true,
+			'move-subpages' => true,
+			'protect' => true,
+			'rollback' => true,
+			'suppressredirect' => true,
+			'upload' => true,
+		),
 	),
 	'enwikivoyage' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -8116,6 +8132,7 @@ $wgConf->settings = array(
 	),
 	'+sawiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
+		'patroller' => array ( 'patrol' => true ), // T117314
 	),
 	'+sawikisource' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -8680,6 +8697,9 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled' ),
 		'bureaucrat' => array( 'patroller' ),
 	),
+	'+enwikiversity' => array(
+		'sysop' => array( 'curator' ), // T113109
+	),
 	'+eswiki' => array(
 		'bureaucrat' => array( 'rollbacker', 'confirmed' ),
 		'sysop' => array( 'rollbacker', 'autopatrolled', 'patroller' ),
@@ -8993,7 +9013,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'rollbacker', 'patroller', 'filemover' ), // T48915 and T116143
 	),
 	'+sawiki' => array(
-		'sysop' => array( 'autopatrolled' ),
+		'sysop' => array( 'autopatrolled', 'patroller' ), // T117314
 	),
 	'+sawikisource' => array(
 		'sysop' => array( 'autopatrolled' ),
@@ -9324,6 +9344,9 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled' ),
 		'bureaucrat' => array( 'sysop', 'patroller' ),
 	),
+	'+enwikiversity' => array(
+		'sysop' => array( 'curator' ), // T113109
+	),
 	'+enwikisource' => array(
 		'bureaucrat' => array( 'autopatrolled', 'flood' ), // T38863
 		'sysop' => array( 'abusefilter', 'autopatrolled', ),
@@ -9646,7 +9669,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'rollbacker', 'patroller', 'filemover' ), // T48915 and T116143
 	),
 	'+sawiki' => array(
-		'sysop' => array( 'autopatrolled' ),
+		'sysop' => array( 'autopatrolled', 'patroller' ), // T117314
 	),
 	'+sawikisource' => array(
 		'sysop' => array( 'autopatrolled' ),
