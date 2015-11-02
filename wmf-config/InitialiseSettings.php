@@ -12890,6 +12890,7 @@ $wgConf->settings = array(
 'wmgVisualEditorNewAccountEnableProportion' => array(
 	'default' => false,
 	'enwiki' => 1,
+	'eswiki' => 10,
 ),
 
 // Whether VisualEditor should be enabled for new auto-created accounts on a
@@ -12897,6 +12898,7 @@ $wgConf->settings = array(
 'wmgVisualEditorAutoAccountEnable' => array(
 	'default' => false,
 	'enwiki' => true,
+	'eswiki' => true,
 ),
 
 // Whether VisualEditor should pay attention to the -autodisable user preference
