@@ -1459,16 +1459,16 @@ if ( $wmgUseCentralNotice ) {
 	// Updates made here also need to be reflected in
 	// wikimediafoundation.org/wiki/Template:HideBanners
 	$wgNoticeHideUrls = array(
-		'//en.wikipedia.org/wiki/Special:HideBanners',
-		'//meta.wikimedia.org/wiki/Special:HideBanners',
-		'//commons.wikimedia.org/wiki/Special:HideBanners',
-		'//species.wikimedia.org/wiki/Special:HideBanners',
-		'//en.wikibooks.org/wiki/Special:HideBanners',
-		'//en.wikiquote.org/wiki/Special:HideBanners',
-		'//en.wikisource.org/wiki/Special:HideBanners',
-		'//en.wikinews.org/wiki/Special:HideBanners',
-		'//en.wikiversity.org/wiki/Special:HideBanners',
-		'//www.mediawiki.org/wiki/Special:HideBanners',
+		'//en.wikipedia.org/w/index.php?title=Special:HideBanners',
+		'//meta.wikimedia.org/w/index.php?title=Special:HideBanners',
+		'//commons.wikimedia.org/w/index.php?title=Special:HideBanners',
+		'//species.wikimedia.org/w/index.php?title=Special:HideBanners',
+		'//en.wikibooks.org/w/index.php?title=Special:HideBanners',
+		'//en.wikiquote.org/w/index.php?title=Special:HideBanners',
+		'//en.wikisource.org/w/index.php?title=Special:HideBanners',
+		'//en.wikinews.org/w/index.php?title=Special:HideBanners',
+		'//en.wikiversity.org/w/index.php?title=Special:HideBanners',
+		'//www.mediawiki.org/w/index.php?title=Special:HideBanners',
 	);
 }
 
