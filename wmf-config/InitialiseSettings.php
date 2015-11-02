@@ -14841,16 +14841,9 @@ $wgConf->settings = array(
 ),
 
 'wmgUseFlow' => array(
-	// Explicit wiki settings override tags
-	'default' => true,
-	'betawikiversity' => false, # T107904
-	'dewikivoyage' => false, # T107846
-	'enwikiversity' => false, # T107846
-	'jawikiversity' => false,
-	'private' => false,
-	'officewiki' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
+	// This is computed in flow.dblist as all - "a specific list" (nonflow.dblist)
+	// - "all private wikis" (private.dblist) + "private wikis with Flow" (flowprivate.dblist)
+	'flow' => true,
 ),
 'wmgFlowEnglishNamespaceOnly' => array(
 	'default' => false,
