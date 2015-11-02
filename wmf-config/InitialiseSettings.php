@@ -8086,6 +8086,7 @@ $wgConf->settings = array(
 	),
 	'+sawiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
+		'patroller' => array ( 'patrol' => true ), // T117314
 	),
 	'+sawikisource' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -8963,7 +8964,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'rollbacker', 'patroller', 'filemover' ), // T48915 and T116143
 	),
 	'+sawiki' => array(
-		'sysop' => array( 'autopatrolled' ),
+		'sysop' => array( 'autopatrolled', 'patroller' ), // T117314
 	),
 	'+sawikisource' => array(
 		'sysop' => array( 'autopatrolled' ),
@@ -9616,7 +9617,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'rollbacker', 'patroller', 'filemover' ), // T48915 and T116143
 	),
 	'+sawiki' => array(
-		'sysop' => array( 'autopatrolled' ),
+		'sysop' => array( 'autopatrolled', 'patroller' ), // T117314
 	),
 	'+sawikisource' => array(
 		'sysop' => array( 'autopatrolled' ),
