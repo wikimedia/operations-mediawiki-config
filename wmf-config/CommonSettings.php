@@ -2456,6 +2456,14 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 	// Requires that Parsoid is available for all wikis using Flow.
 	$wgFlowContentFormat = 'html';
 
+	if ( $wmgFlowEnglishNamespaceOnly ) {
+		// HACK: Only use English namespace names, override the localized namespace names
+		// This is needed for languages where the translation for Thread: (from LQT)
+		// and Topic: (from Flow) are the same, like in Portuguese. In those cases we
+		// make the Flow Topic: namespace only use the English name, so the translated name
+		// will still point to the LQT namespace.
+		$wgExtraNamespaces[NS_TOPIC] = 'Topic';
+	}
 
 	$wgFlowDefaultWikiDb = $wmgFlowDefaultWikiDb;
 	$wgFlowCluster = $wmgFlowCluster;
