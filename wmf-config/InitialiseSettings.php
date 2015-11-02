@@ -11544,6 +11544,7 @@ $wgConf->settings = array(
 		'*.ggpht.com',                      // Google Cloud Storage - Temporary domain add for Rijksmuseum - T110869
 		'*.nps.gov',                        // National Park Service, United States - T113188
 		'*.unesco.org',                     // Unesco - T115338
+		'www.webarchive.org.uk',            // UK Web Archive - T116179
 	),
 ),
 
