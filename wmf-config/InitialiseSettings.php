@@ -9911,7 +9911,7 @@ $wgConf->settings = array(
 	), // T25900
 	'enwikisource' => array( 'w', 'OldWikisource', 'b', 'commons', 'q', ), // T17571
 	'enwikibooks' => array( 'w', 's', 'q', 'v', 'wikt', 'n', 'meta', 'simple', 'species' ), // T13226, T14665
-	'enwikiversity' => array( 'betawikiversity', 'w', 'b', 'q', 's' ),
+	'enwikiversity' => array( 'betawikiversity', 'w', 'b', 'q', 's', 'commons' ), // T115938
 	'enwikivoyage' => array( 'b', 'meta', 'w' ), // T44450, T65095
 	'eowikisource' => array( 'meta', 'commons', 'b:eo' ), // T45659
 	'eswiki' => array( 'b', 'q', 'v', 'wikt', 'n', 's', 'en' ),
@@ -13016,6 +13016,7 @@ $wgConf->settings = array(
 	'be_x_oldwiki' => 'uca-be-tarask', // T48005
 	'bewiki' => 'uca-be', // T48004
 	'bewikisource' => 'uca-be', // T48004
+	'bswiki' => 'uca-cs', // T116527
 	'ckbwiki' => 'xx-uca-ckb', // T57630
 	'cswiki' => 'uca-cs', // T66885
 	'cswiktionary' => 'uca-default', // T106337
