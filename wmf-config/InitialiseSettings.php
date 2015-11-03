@@ -13016,6 +13016,7 @@ $wgConf->settings = array(
 	'be_x_oldwiki' => 'uca-be-tarask', // T48005
 	'bewiki' => 'uca-be', // T48004
 	'bewikisource' => 'uca-be', // T48004
+	'bswiki' => 'uca-bs', // T116527
 	'ckbwiki' => 'xx-uca-ckb', // T57630
 	'cswiki' => 'uca-cs', // T66885
 	'cswiktionary' => 'uca-default', // T106337
