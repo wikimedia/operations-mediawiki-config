@@ -9910,7 +9910,7 @@ $wgConf->settings = array(
 	), // T25900
 	'enwikisource' => array( 'w', 'OldWikisource', 'b', 'commons', 'q', ), // T17571
 	'enwikibooks' => array( 'w', 's', 'q', 'v', 'wikt', 'n', 'meta', 'simple', 'species' ), // T13226, T14665
-	'enwikiversity' => array( 'betawikiversity', 'w', 'b', 'q', 's' ),
+	'enwikiversity' => array( 'betawikiversity', 'w', 'b', 'q', 's', 'commons' ), // T115938
 	'enwikivoyage' => array( 'b', 'meta', 'w' ), // T44450, T65095
 	'eowikisource' => array( 'meta', 'commons', 'b:eo' ), // T45659
 	'eswiki' => array( 'b', 'q', 'v', 'wikt', 'n', 's', 'en' ),
