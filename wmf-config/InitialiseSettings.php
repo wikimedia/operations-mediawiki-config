@@ -4365,6 +4365,7 @@ $wgConf->settings = array(
 		'collection' => 'debug', // -cscott for T73675
 		'DBPerformance' => 'debug',
 		'Echo' => 'debug',
+		'error' => array( 'logstash' => false ),
 		'es-hit' => 'debug',
 		'EventLogging' => 'debug',
 		'exception' => array( 'logstash' => false ),
