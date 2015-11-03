@@ -4358,7 +4358,6 @@ $wgConf->settings = array(
 			'kafka' => 'debug',
 			'udp2log' => false,
 			'logstash' => false,
-			'sample' => 1000,
 			'buffer' => true
 		),
 		'CirrusSearchSlowRequests' => 'debug',
