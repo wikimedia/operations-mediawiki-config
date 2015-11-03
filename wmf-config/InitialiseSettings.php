@@ -4409,11 +4409,9 @@ $wgConf->settings = array(
 		'SQLBagOStuff' => 'debug',
 		'StashEdit' => 'debug',
 		'SwiftBackend' => 'debug', // -aaron 5/15/12
-		'T102199' => 'debug', // OL, 30-Jul-2015
 		'T107711' => 'debug', //- aude, hoo and addshore, for Wikidata
 		'T76305' => 'debug', // - Krinkle and Krenair, for https://gerrit.wikimedia.org/r/188987
 		'T87645' => 'debug', // - Ori on behalf of Tim, for https://gerrit.wikimedia.org/r/#/c/188304/
-		'T89258' => 'debug', // - awight and AndyRussG
 		'temp-debug' => 'debug', // generic admin debug log
 		'texvc' => 'debug',
 		'thumbnailaccess' => 'debug', // T106323
@@ -4431,10 +4429,6 @@ $wgConf->settings = array(
 		'XMP' => 'warning', // T89532
 		'xff' => array( 'logstash' => false ),
 		'zero' => 'debug', // zero-rated debug log
-	),
-
-	'+enwiki' => array(
-		'bug46577' => 'debug', // Education Program debugging
 	),
 
 	'+private' => array(
