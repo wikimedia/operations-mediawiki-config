@@ -94,6 +94,7 @@ $IP/extensions/Poem/Poem.php
 $IP/extensions/PoolCounter/PoolCounterClient.php
 $IP/extensions/Popups/Popups.php
 $IP/extensions/ProofreadPage/ProofreadPage.php
+$IP/extensions/QuickSurveys/extension.json
 $IP/extensions/Quiz/Quiz.php
 $IP/extensions/RandomRootPage/Randomrootpage.php
 $IP/extensions/RelatedArticles/RelatedArticles.php
