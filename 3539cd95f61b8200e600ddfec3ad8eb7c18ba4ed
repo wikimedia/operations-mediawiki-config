@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_058e257c",
+        "filename": "robots.txt",
+        "patchSetId": 3
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2015-11-04T21:29:28Z",
+      "side": 1,
+      "message": "Still no evidence that this is correct (hit: it is not). Also, if not commented then the rules at line 149 and following will apply, which is ok but confusing.",
+      "revId": "3539cd95f61b8200e600ddfec3ad8eb7c18ba4ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
