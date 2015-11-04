@@ -15804,6 +15804,25 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgQuickSurveysConfig' => array(
+	'default' => array(),
+	'enwiki' => array(
+		"name" => "analytics-1",
+		"type" => "external",
+		"schema" => "QuickSurveysResponses",
+		"enabled" => true,
+		"description" => "reader-segmentation-1-description",
+		"link" => "https://example.org/survey",
+		"question" => "reader-segmentation-1-message",
+		"privacyPolicy" => "reader-segmentation-1-privacy",
+		"coverage" => 0.002,
+		"platform" => array(
+			"desktop" => array( "stable" ),
+			"mobile" => array(),
+		),
+	),
+),
+
 // WikidataPageBanner extension (T98029)
 'wmgUseWPB' => array(
 	'default' => false,
