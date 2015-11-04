@@ -2665,7 +2665,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 }
 
 if ( $wmgUseContentTranslation ) {
-	require_once "$IP/extensions/ContentTranslation/ContentTranslation.php";
+	wfLoadExtension( 'ContentTranslation' );
 	// T76200: Public URL for cxserver instance
 	$wgContentTranslationSiteTemplates['cx'] = '//cxserver.wikimedia.org/v1';
 	// Used for html2wikitext when publishing
