@@ -1,0 +1,61 @@
+{
+    "name": "mongofill/mongofill",
+    "description": "Polyfill of PECL Mongo extension",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jakub Husák",
+            "email": "husak.j@gmail.com"
+        },
+        {
+            "name":  "Máximo Cuadros",
+            "email": "mcuadros@gmail.com"
+        },
+        {
+            "name": "Mongofill Community",
+            "homepage": "https://github.com/mongofill/mongofill/graphs/contributors"
+        }
+    ],
+    "provide": {
+        "ext-mongo": "*"
+    },
+    "require-dev": {
+        "athletic/athletic": "dev-master",
+        "phpunit/phpunit": "~4.7.7"
+    },
+    "autoload": {
+        "classmap": [
+            { "Mongofill": "src/" },
+            { "Mongo": "src/Mongo.php" },
+            { "MongoBinData": "src/MongoBinData.php" },
+            { "MongoClient": "src/MongoClient.php" },
+            { "MongoCode": "src/MongoCode.php" },
+            { "MongoCollection": "src/MongoCollection.php" },
+            { "MongoConnectionException": "src/MongoConnectionException.php" },
+            { "MongoCursor": "src/MongoCursor.php" },
+            { "MongoCursorException": "src/MongoCursorException.php" },
+            { "MongoCursorTimeoutException": "src/MongoCursorTimeoutException.php" },
+            { "MongoDB": "src/MongoDB.php" },
+            { "MongoDBRef": "src/MongoDBRef.php" },
+            { "MongoDate": "src/MongoDate.php" },
+            { "MongoException": "src/MongoException.php" },
+            { "MongoGridFS": "src/MongoGridFS.php" },
+            { "MongoGridFSFile": "src/MongoGridFSFile.php" },
+            { "MongoGridFSException": "src/MongoGridFSException.php" },
+            { "MongoGridFSCursor": "src/MongoGridFSCursor.php" },
+            { "MongoId": "src/MongoId.php" },
+            { "MongoInt32": "src/MongoInt32.php" },
+            { "MongoInt64": "src/MongoInt64.php" },
+            { "MongoLog": "src/MongoLog.php" },
+            { "MongoMaxKey": "src/MongoMaxKey.php" },
+            { "MongoMinKey": "src/MongoMinKey.php" },
+            { "MongoRegex": "src/MongoRegex.php" },
+            { "MongoResultException": "src/MongoResultException.php" },
+            { "MongoTimestamp": "src/MongoTimestamp.php" }
+        ],
+        "files": [
+            "src/functions.php"
+        ]
+    }
+}
