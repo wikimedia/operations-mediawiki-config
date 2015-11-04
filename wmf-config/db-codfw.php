@@ -93,21 +93,21 @@ $wgLBFactoryConf = array(
 		'db2016' => 100,
 		'db2034' => 100,
 		'db2042' => 100,
-#		'db2048' => 100,
+#		'db2048' => 100, (down for maintenance)
 	),
 	's2' => array(
 		'db1024' => 0,   # 1.4TB  64GB
 		'db2017' => 100,
 		'db2035' => 100,
 		'db2041' => 100,
-		'db2049' => 100,
+#		'db2049' => 100, (down for maintenance)
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038' => 0,   # 1.4TB  64GB
 		'db2018' => 100,
 		'db2036' => 100,
 		'db2043' => 100,
-		'db2050' => 100,
+#		'db2050' => 100, (down for maintenance)
 	),
 	's4' => array(
 		'db1040' => 0,   # 1.4TB  64GB
