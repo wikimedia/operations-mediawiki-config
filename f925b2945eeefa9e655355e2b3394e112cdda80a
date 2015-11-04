@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_3e710573",
+        "filename": "docroot/wikipedia.org/apple-app-site-association",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-11-04T03:10:12Z",
+      "side": 1,
+      "message": "I don\u0027t think this is what you really want this file to contain.",
+      "revId": "f925b2945eeefa9e655355e2b3394e112cdda80a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
