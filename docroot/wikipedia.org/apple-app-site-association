@@ -1,0 +1,27 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "AKK7J2GV64.org.wikimedia.wikipedia.developer",
+                "paths": [ "/wiki/*" ]
+            },
+            {
+                "appID": "AKK7J2GV64.org.wikimedia.wikipedia.tfalpha",
+                "paths": [ "/wiki/*" ]
+            },
+            {
+                "appID": "AKK7J2GV64.org.wikimedia.wikipedia.tfbeta",
+                "paths": [ "/wiki/*" ]
+            },
+            {
+                "appID": "AKK7J2GV64.org.wikimedia.wikipedia.adhoc",
+                "paths": [ "/wiki/*" ]
+            },
+            {
+                "appID": "AKK7J2GV64.org.wikimedia.wikipedia",
+                "paths": [ "/wiki/*" ]
+            }
+        ]
+    }
+}
