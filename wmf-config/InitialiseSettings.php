@@ -15804,6 +15804,21 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgQuickSurveysConfig' => array(
+	'default' => array(),
+	'enwiki' => array(
+		"description" => "",
+		"link" => "https://example.org/survey",
+		"question" => "",
+		"privacyPolicy" => "<msg key>",
+		"coverage" => "50",
+		"platform" => array(
+			"desktop" => array( "stable" ),
+			"mobile" => array( "stable", "beta", "alpha" ),
+		),
+	),
+),
+
 // WikidataPageBanner extension (T98029)
 'wmgUseWPB' => array(
 	'default' => false,
