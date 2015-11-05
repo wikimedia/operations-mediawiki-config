@@ -1347,7 +1347,10 @@ $wgHooks['PrefsPasswordAudit'][] = function( $user, $pass, $status ) {
 	return true;
 };
 
-$wgDisableOutputCompression = true;
+if ( file_exists( '/etc/wikimedia-scaler' ) ) {
+	$wgDisableOutputCompression = true;
+}
+
 $wgMaxShellFileSize = 512 * 1024;
 $wgMaxShellMemory = 1024 * 1024;
 $wgMaxShellTime = 50;
