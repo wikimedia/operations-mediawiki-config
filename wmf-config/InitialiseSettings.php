@@ -4399,7 +4399,7 @@ $wgConf->settings = array(
 		'Renameuser' => 'debug',
 		'resourceloader' => 'debug',
 		'ResourceLoaderImage' => 'debug', // - demon, matmarex
-		'runJobs' => 'debug',
+		'runJobs' => array( 'logstash' => 'warning' ), // - bd808, T113571
 		'session' => 'debug',
 		'SimpleAntiSpam' => 'debug',
 		'slow-parse' => 'debug',
