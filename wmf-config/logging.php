@@ -49,6 +49,22 @@ $wmgMonologProcessors = array(
 	),
 	'web' => array(
 		'class' => '\\Monolog\\Processor\\WebProcessor',
+		'args' => array(
+			function () {
+				// Ensure that context data added by WebProcessor is utf-8
+				// safe by applying htmlentities() encoding
+				$keys = array( 'REQUEST_URI', 'REMOTE_ADDR', 'REQUEST_METHOD', 'SERVER_NAME', 'HTTP_REFERER' );
+				$serverData = array();
+				foreach ( $keys as $key ) {
+					if ( isset( $_SERVER[$key] ) ) {
+						$serverData[$key] = htmlentities(
+							$_SERVER[$key], ENT_NOQUOTES, 'UTF-8', false
+						);
+					}
+				}
+				return $serverData;
+			}
+		),
 	),
 );
 
