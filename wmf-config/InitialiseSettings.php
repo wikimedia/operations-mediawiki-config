@@ -4177,19 +4177,18 @@ $wgConf->settings = array(
 		'',
 		'autoconfirmed', // semi-protection level on
 		'sysop',
-		'superprotect', // per request by Erik Möller
 	),
-	'arwiki' => array( '', 'autoconfirmed', 'autoreview', 'sysop', 'superprotect' ), // T54109
-	'ckbwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), // T54533
-	'dewiki' => array( '', 'autoconfirmed', 'editeditorprotected', 'sysop', 'superprotect' ), // T94368
-	'enwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // T57432
-	'hewiki' => array( '', 'autoconfirmed', 'autopatrol',  'templateeditor' /* T102466 */, 'sysop', 'superprotect' ), // T60207
-	'huwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // T74055
-	'lvwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop', 'superprotect' ), // T92645
-	'plwiki' => array( '', 'autoconfirmed', 'editor', 'sysop', 'superprotect' ), // T48990
-	'ptwiki' => array( '', 'autoconfirmed', 'autoreviewer', 'sysop', 'superprotect' ), // T41652
-	'rowiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // T63172
-	'testwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop', 'superprotect' ), // T61084
+	'arwiki' => array( '', 'autoconfirmed', 'autoreview', 'sysop' ), // T54109
+	'ckbwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop' ), // T54533
+	'dewiki' => array( '', 'autoconfirmed', 'editeditorprotected', 'sysop' ), // T94368
+	'enwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop' ), // T57432
+	'hewiki' => array( '', 'autoconfirmed', 'autopatrol',  'templateeditor' /* T102466 */, 'sysop' ), // T60207
+	'huwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop' ), // T74055
+	'lvwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop' ), // T92645
+	'plwiki' => array( '', 'autoconfirmed', 'editor', 'sysop' ), // T48990
+	'ptwiki' => array( '', 'autoconfirmed', 'autoreviewer', 'sysop' ), // T41652
+	'rowiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop' ), // T63172
+	'testwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop' ), // T61084
 ),
 # @} end of wgRestrictionLevels
 

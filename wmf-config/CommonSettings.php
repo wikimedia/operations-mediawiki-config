@@ -571,7 +571,6 @@ $wgAvailableRights[] = 'movestable';
 $wgAvailableRights[] = 'validate';
 // So that protection rights can be assigned to global groups
 $wgAvailableRights[] = 'templateeditor';
-$wgAvailableRights[] = 'superprotect';
 $wgAvailableRights[] = 'editeditorprotected';
 // Adding Flow's rights so that they are available for global groups/staff rights
 $wgAvailableRights[] = 'flow-edit-post';
