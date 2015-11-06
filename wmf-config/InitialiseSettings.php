@@ -10611,6 +10611,7 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true, // T71974
 	'metawiki' => true,
 	'ptwiki' => true, // T37308
+	'officewiki' => true,
 	'otrs_wikiwiki' => true,
 	'outreachwiki' => true, // T58245
 	'srwiki' => true,
