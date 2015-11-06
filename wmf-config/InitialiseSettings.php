@@ -4429,7 +4429,7 @@ $wgConf->settings = array(
 		'xenon' => 'debug',
 		'XMP' => 'warning', // T89532
 		'xff' => array( 'logstash' => false ),
-		'zero' => 'debug', // zero-rated debug log
+		'zero' => array( 'logstash' => false ), // zero-rated debug log
 	),
 
 	'+enwiki' => array(
