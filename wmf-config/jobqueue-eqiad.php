@@ -12,8 +12,8 @@ $wgJobTypeConf['default'] = array(
 	'configByPartition'   => array(
 		'rdb1' => array(
 			'class'       => 'JobQueueRedis',
-			'redisServer' => '10.64.32.76', # rdb1001 (master)
-			#'redisServer' => '10.64.32.77', # rdb1002 (slave)
+			'redisServer' => 'rdb1001.eqiad.wmnet', # master
+			#'redisServer' => 'rdb1002.eqiad.wmnet', # slave
 			'redisConfig' => array(
 				'connectTimeout' => 2,
 				'password' => $wmgRedisPassword,
@@ -23,8 +23,19 @@ $wgJobTypeConf['default'] = array(
 		),
 		'rdb2' => array(
 			'class'       => 'JobQueueRedis',
-			'redisServer' => '10.64.0.201', # rdb1003 (master)
-			#'redisServer' => '10.64.16.183', # rdb1004 (slave)
+			'redisServer' => 'rdb1003.eqiad.wmnet', # master
+			#'redisServer' => 'rdb1004.eqiad.wmnet', # slave
+			'redisConfig' => array(
+				'connectTimeout' => 2,
+				'password' => $wmgRedisPassword,
+				'compression' => 'gzip'
+			),
+			'daemonized' => true
+		),
+		'rdb3' => array(
+			'class'       => 'JobQueueRedis',
+			'redisServer' => 'rdb1007.eqiad.wmnet', # master
+			#'redisServer' => 'rdb1008.eqiad.wmnet', # slave
 			'redisConfig' => array(
 				'connectTimeout' => 2,
 				'password' => $wmgRedisPassword,
@@ -35,15 +46,15 @@ $wgJobTypeConf['default'] = array(
 	),
 	'sectionsByWiki'      => array(), // default
 	'partitionsBySection' => array(
-		'default' => array( 'rdb1' => 50, 'rdb2' => 50 ),
+		'default' => array( 'rdb1' => 50, 'rdb2' => 50, 'rdb3' => 50 ),
 	)
 );
 // Note: on server failure, this should be changed to any other redis server
 $wgJobQueueAggregator = array(
 	'class'        => 'JobQueueAggregatorRedis',
 	'redisServers' => array( // all after the first are fallbacks
-		'10.64.32.76', # rdb1001
-		'10.64.0.201', # rdb1003
+		'rdb1001.eqiad.wmnet',
+		'rdb1003.eqiad.wmnet',
 	),
 	'redisConfig'  => array(
 		'connectTimeout' => 2,
