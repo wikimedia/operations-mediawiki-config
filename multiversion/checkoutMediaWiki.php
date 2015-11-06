@@ -35,11 +35,13 @@ function checkoutMediaWiki() {
 		exit( 1 );
 	}
 
+
+
 	# MW install path
 	$destIP = MEDIAWIKI_STAGING_DIR . "/$dstVersion";
 
 	if ( !file_exists( $destIP ) ) {
-		passthru( 'git clone -n ' .
+		sudo( 'git clone -n ' .
 			'https://gerrit.wikimedia.org/r/p/mediawiki/core.git ' .
 			escapeshellarg( $destIP ),
 			$ret );
@@ -53,14 +55,14 @@ function checkoutMediaWiki() {
 			exit( 1 );
 		}
 
-		passthru( 'git config branch.autosetuprebase always', $ret );
+		sudo( 'git config branch.autosetuprebase always', $ret );
 		if ( $ret ) {
 			# Don't exit, this isn't a show-stopper
 			print "Error running setting autosetuprebase\n";
 		}
 
 		$checkoutVersion = $gitVersion == 'master' ? $gitVersion : "wmf/$gitVersion";
-		passthru( 'git checkout ' . escapeshellarg( $checkoutVersion ), $ret );
+		sudo( 'git checkout ' . escapeshellarg( $checkoutVersion ), $ret );
 		if ( $ret ) {
 			print "Error checking out branch\n";
 			exit( 1 );
@@ -107,7 +109,7 @@ function checkoutMediaWiki() {
 				}
 
 				foreach ( $cmds as $cmd ) {
-					passthru( $cmd, $ret );
+					sudo( $cmd, $ret );
 
 					if ( $ret ) {
 						print "'${cmd}' failed in ${path}\n";
@@ -118,7 +120,7 @@ function checkoutMediaWiki() {
 				chdir( $rawPath );
 
 				# Update submodules for checked out repos
-				passthru( 'git submodule update --init --recursive' , $ret );
+				sudo( 'git submodule update --init --recursive' , $ret );
 
 				if ( $ret ) {
 					print "Submodule update failed in ${dir}\n";
@@ -128,7 +130,7 @@ function checkoutMediaWiki() {
 			}
 		}
 
-		passthru( 'git submodule update --init --recursive', $ret );
+		sudo( 'git submodule update --init --recursive', $ret );
 		if ( $ret ) {
 			print "Error updating submodules\n";
 			exit( 1 );
@@ -140,7 +142,7 @@ function checkoutMediaWiki() {
 			print "Error finding list of submodules\n";
 		} else {
 			foreach ( $submodules as $moduleName ) {
-				passthru( "git config submodule.\"{$moduleName}\".update rebase", $ret );
+				sudo( "git config submodule.\"{$moduleName}\".update rebase", $ret );
 				if ( $ret ) {
 					print "Failed to set submodule \"{$moduleName}\" to rebase on update.\n";
 				}
@@ -215,3 +217,7 @@ function createSymlink( $path, $link, $createdMsg ) {
 	}
 }
 
+// Do stuff as mwdeploy
+function sudo( $cmd, &$ret ) {
+	passthru( "sudo -u mwdeploy $cmd", $ret );
+}
