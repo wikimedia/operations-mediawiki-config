@@ -55,6 +55,7 @@ $wgJobQueueAggregator = array(
 	'redisServers' => array( // all after the first are fallbacks
 		'rdb1001.eqiad.wmnet',
 		'rdb1003.eqiad.wmnet',
+		'rdb1007.eqiad.wmnet',
 	),
 	'redisConfig'  => array(
 		'connectTimeout' => 2,
