@@ -32,10 +32,21 @@ $wgJobTypeConf['default'] = array(
 			),
 			'daemonized' => true
 		),
+		'rdb3' => array(
+			'class'       => 'JobQueueRedis',
+			'redisServer' => '10.65.7.23', # rdb1007 (master)
+			#'redisServer' => '10.65.7.22', # rdb1008 (slave)
+			'redisConfig' => array(
+				'connectTimeout' => 2,
+				'password' => $wmgRedisPassword,
+				'compression' => 'gzip'
+			),
+			'daemonized' => true
+		),
 	),
 	'sectionsByWiki'      => array(), // default
 	'partitionsBySection' => array(
-		'default' => array( 'rdb1' => 50, 'rdb2' => 50 ),
+		'default' => array( 'rdb1' => 50, 'rdb2' => 50, 'rdb3' => 50 ),
 	)
 );
 // Note: on server failure, this should be changed to any other redis server
