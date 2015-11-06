@@ -85,12 +85,10 @@ $wgStatsFormatString = 'MediaWiki.%3$s:%2$s|m' . "\n";
 # Must be set before InitialiseSettings.php:
 switch( $wmfRealm ) {
 case 'production':
-	# fluorine (nfs1 while fluorine is down)
-	$wmfUdp2logDest = '10.64.0.21:8420';
+	$wmfUdp2logDest = 'fluorine.eqiad.wmnet';
 	break;
 case 'labs':
-	# deployment-fluorine.eqiad.wmflabs
-	$wmfUdp2logDest = '10.68.16.198:8420';
+	$wmfUdp2logDest = 'deployment-fluorine.eqiad.wmflabs';
 	break;
 default:
 	$wmfUdp2logDest = '127.0.0.1:8420';
