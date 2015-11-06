@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_4907481b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15812,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-06T19:40:28Z",
+      "side": 1,
+      "message": "I\u0027m pretty sure you mean \"wg\", not \"wmg\", at least, this variable name (the second one, too) isn\u0027t defined/used anywhere :)",
+      "revId": "c6a0bb3f384d314c6e0809b18c769fa7de145ce8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
