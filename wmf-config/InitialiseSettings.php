@@ -15807,6 +15807,15 @@ $wgConf->settings = array(
 	'ruwikivoyage' => true, // T110837
 	'zhwikivoyage' => true, // T114334
 	'cawiki' => true, // T114392
+	'enwiki' => true, // T101108
+),
+'wgWPBSkinBlacklist' => array(
+	'default' => array(),
+	'enwiki' => array( 'monobook', 'modern', 'vector', 'cologneblue' ), // T101108
+),
+'wgWPBEnableHeadingOverride' => array(
+	'default' => true,
+	'enwiki' => false, // T101108
 ),
 'wgWPBNamespaces' => array(
 	'default' => array( NS_MAIN, NS_USER ),
