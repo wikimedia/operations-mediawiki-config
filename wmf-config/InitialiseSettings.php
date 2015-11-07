@@ -12823,6 +12823,9 @@ $wgConf->settings = array(
 		108 /* Book */ => true, // T58001
 		118 /* Draft */ => true
 	),
+        '+fawiki' => array(
+                118 /* Draft */ => true
+        ),
 	'+frwiki' => array(
 		102 /* Wikiprojet */ => true // T116603
 	),
