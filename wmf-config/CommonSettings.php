@@ -326,6 +326,34 @@ if ( $wgDBname === 'labswiki' ) {
 	$wgPasswordPolicy['policies']['bot']['MinimalPasswordLength'] = 1;
 }
 
+// Enforce enwiki sysop requirements
+$wgHooks['PasswordPoliciesForUser'][] = function( User $user, array &$effectivePolicy ) {
+	$enwikiSysopPolicy = array(
+		'MinimalPasswordLength' => 8,
+		'MinimumPasswordLengthToLogin' => 1,
+		'PasswordCannotMatchUsername' => true,
+	);
+	if ( wfWikiID() !== 'enwiki' ) {
+		$cu = CentralAuthUser::getInstance( $user );
+		$attachInfo = $cu->queryAttached();
+
+		if ( isset( $attachInfo['enwiki']['groups'] )
+			&& in_array( 'sysop', $attachInfo['enwiki']['groups'] ) )
+		{
+			$effectivePolicy = UserPasswordPolicy::maxOfPolicies(
+				$effectivePolicy,
+				$enwikiSysopPolicy
+			);
+		}
+	} elseif ( in_array( 'sysop', $user->getGroups() ) ) {
+		$effectivePolicy = UserPasswordPolicy::maxOfPolicies(
+			$effectivePolicy,
+			$enwikiSysopPolicy
+		);
+	}
+};
+
+
 if ( PHP_SAPI === 'cli' ) {
 	$wgShowExceptionDetails = true;
 }
