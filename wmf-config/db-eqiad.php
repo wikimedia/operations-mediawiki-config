@@ -89,8 +89,8 @@ $wgLBFactoryConf = array(
 	's1' => array(
 		'db1052' => 0,   # 2.8TB  96GB
 		'db1053' => 0,   # 2.8TB  96GB, vslow, dump
-		'db1051' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
-		'db1055' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
+		'db1051' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager, pagesave
+		'db1055' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager, pagesave
 		'db1057' => 200, # 2.8TB  96GB
 		'db1065' => 100, # 2.8TB 160GB, api
 		'db1066' => 100, # 2.8TB 160GB, api
@@ -100,24 +100,24 @@ $wgLBFactoryConf = array(
 	's2' => array(
 		'db1024' => 0,   # 1.4TB  64GB
 		'db1021' => 0,   # 1.4TB  64GB, vslow, dump
-		'db1036' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
+		'db1036' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager, pagesave
 		'db1018' => 200, # 1.4TB  64GB
-		'db1054' => 200, # 2.8TB  96GB, api
-		'db1060' => 200, # 2.8TB  96GB, api
+#		'db1054' => 200, # 2.8TB  96GB, api
+		'db1060' => 0,   # 2.8TB  96GB, api
 		'db1063' => 400, # 2.8TB 128GB
 		'db1067' => 500, # 2.8TB 160GB
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038' => 0,   # 1.4TB  64GB
 		'db1027' => 0,   # 1.4TB  64GB, vslow, dump
-		'db1015' => 50,  # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
+		'db1015' => 50,  # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager, pagesave
 		'db1035' => 300, # 1.4TB  64GB
 		'db1044' => 400, # 1.4TB  64GB
 	),
 	's4' => array(
 		'db1040' => 0,   # 1.4TB  64GB
 		'db1042' => 0,   # 1.4TB  64GB, vslow, dump
-		'db1019' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
+		'db1019' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager, pagesave
 		'db1056' => 100, # 2.8TB  96GB, api
 		'db1059' => 100, # 2.8TB  96GB, api
 		'db1064' => 500, # 2.8TB 160GB
@@ -126,7 +126,7 @@ $wgLBFactoryConf = array(
 	's5' => array(
 		'db1058' => 0,   # 2.8TB  96GB
 		'db1049' => 0,   # 2.8TB  64GB, vslow, dump
-		'db1026' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
+		'db1026' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager, pagesave
 		'db1045' => 0,   # 1.4TB  64GB, api
 		'db1070' => 500, # 2.8TB 160GB
 		'db1071' => 500, # 2.8TB 160GB
@@ -135,14 +135,14 @@ $wgLBFactoryConf = array(
 		'db1023' => 0,   # 1.4TB  64GB
 		'db1022' => 100, # 1.4TB  64GB
 		'db1030' => 0,   # 1.4TB  64GB, vslow, dump
-		'db1037' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
+		'db1037' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager, pagesave
 		'db1050' => 400, # 2.8TB  64GB
 		'db1061' => 500, # 2.8TB 128GB
 	),
 	's7' => array(
 		'db1033' => 0,   # 1.4TB  64GB,
 		'db1028' => 0,   # 1.4TB  64GB, vslow, dump
-		'db1034' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
+		'db1034' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager, pagesave
 		'db1041' => 300, # 1.4TB  64GB
 		'db1039' => 300, # 1.4TB  64GB
 		'db1062' => 500, # 2.8TB 128GB
@@ -186,6 +186,10 @@ $wgLBFactoryConf = array(
 			'db1051' => 1,
 			'db1055' => 1,
 		),
+		'pagesave' => array(
+			'db1051' => 1,
+			'db1055' => 1,
+		),
 		'dump' => array(
 			'db1053' => 1,
 		),
@@ -205,7 +209,7 @@ $wgLBFactoryConf = array(
 			'db1021' => 1,
 		),
 		'api' => array(
-			'db1054' => 1,
+#			'db1054' => 1,
 			'db1060' => 1,
 		),
 		'watchlist' => array(
@@ -221,6 +225,9 @@ $wgLBFactoryConf = array(
 			'db1036' => 1,
 		),
 		'logpager' => array(
+			'db1036' => 1,
+		),
+		'pagesave' => array(
 			'db1036' => 1,
 		),
 	),
@@ -244,6 +251,9 @@ $wgLBFactoryConf = array(
 			'db1015' => 1,
 		),
 		'logpager' => array(
+			'db1015' => 1,
+		),
+		'pagesave' => array(
 			'db1015' => 1,
 		),
 	),
@@ -273,6 +283,9 @@ $wgLBFactoryConf = array(
 		'logpager' => array(
 			'db1019' => 1,
 		),
+		'pagesave' => array(
+			'db1019' => 1,
+		),
 	),
 	's5' => array(
 		'vslow' => array(
@@ -299,6 +312,9 @@ $wgLBFactoryConf = array(
 		'logpager' => array(
 			'db1026' => 1,
 		),
+		'pagesave' => array(
+			'db1026' => 1,
+		),
 	),
 	's6' => array(
 		'vslow' => array(
@@ -322,6 +338,9 @@ $wgLBFactoryConf = array(
 		'logpager' => array(
 			'db1037' => 1,
 		),
+		'pagesave' => array(
+			'db1037' => 1,
+		),
 	),
 	's7' => array(
 		'vslow' => array(
@@ -343,6 +362,9 @@ $wgLBFactoryConf = array(
 			'db1034' => 1,
 		),
 		'logpager' => array(
+			'db1034' => 1,
+		),
+		'pagesave' => array(
 			'db1034' => 1,
 		),
 	),
