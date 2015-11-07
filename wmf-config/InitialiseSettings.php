@@ -4197,6 +4197,19 @@ $wgConf->settings = array(
 	'plwiki' => array( 'editor', 'sysop' ), // T50374
 ),
 
+'wmgLocalSysopPasswordPolicy' => array(
+	'default' => array(
+		'MinimalPasswordLength' => 1,
+		'MinimumPasswordLengthToLogin' => 1,
+		'PasswordCannotMatchUsername' => true,
+	),
+	'enwiki' => array(
+                'MinimalPasswordLength' => 8,
+                'MinimumPasswordLengthToLogin' => 1,
+                'PasswordCannotMatchUsername' => true,
+        ),
+),
+
 'wgSiteNotice' => array(
 	'default' => '',
 ),
