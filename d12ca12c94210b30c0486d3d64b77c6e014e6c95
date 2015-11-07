@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_38733ce6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 15805,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-11-07T18:06:47Z",
+      "side": 1,
+      "message": "Oops. We can\u0027t enable on enwiki until the extension gets there. This initial config should be for testing on testwiki.",
+      "revId": "d12ca12c94210b30c0486d3d64b77c6e014e6c95",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
