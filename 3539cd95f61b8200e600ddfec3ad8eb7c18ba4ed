@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0ebaf39b_fef029d8",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-11-08T22:09:49Z",
+      "side": 1,
+      "message": "There shouldn\u0027t be a blank line between bugs and the change-id",
+      "revId": "3539cd95f61b8200e600ddfec3ad8eb7c18ba4ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_058e257c",
         "filename": "robots.txt",
         "patchSetId": 3
