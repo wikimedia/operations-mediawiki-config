@@ -331,6 +331,10 @@ if ( $wmgUseCapiunto ) {
 	require_once "$IP/extensions/Capiunto/Capiunto.php";
 }
 
+if ( $wmgUseRelatedArticles ) {
+	$wgRelatedArticlesUseCirrusSearch = true;
+}
+
 // Experimental
 $wgGadgetsCaching = false;
 
