@@ -1149,7 +1149,15 @@ $wgEnotifUseJobQ = true;
 include $IP . '/extensions/AntiSpoof/AntiSpoof.php';
 
 // For transwiki import
-ini_set( 'user_agent', 'Wikimedia internal server fetcher (noc@wikimedia.org' );
+ini_set( 'user_agent', 'Wikimedia internal server fetcher (noc@wikimedia.org)' );
+
+// Transwiki import sources
+if ( $wmfRealm === 'labs' ) {
+	include( "$wmfConfigDir/import.php" );
+	$wgHooks['ImportSources'][] = 'wmfImportSources';
+} else {
+	$wgImportSources = $wmgProdImportSources;
+}
 
 // CentralAuth
 if ( $wmgUseCentralAuth ) {
