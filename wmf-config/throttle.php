@@ -20,18 +20,6 @@ $wmgThrottlingExceptions = array();
 #             (default: any project)
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = array( // T116745
-	'from' => '2015-10-27T12:00 +0:00',
-	'to' => '2015-10-27T20:00 +0:00',
-	'ip' => '213.219.164.166',
-	'dbname' => array(
-		'frwikisource',
-		'frwiki',
-		'commonswiki'
-	),
-	'value' => 50 //45 participants
-);
-
 $wmgThrottlingExceptions[] = array( // T110352
 	'from'   => '2015-08-29T00:00 +0:00',
 	'to'     => '2016-02-28T00:00 +0:00',
@@ -40,36 +28,26 @@ $wmgThrottlingExceptions[] = array( // T110352
 	'value'  => 50
 );
 
-$wmgThrottlingExceptions[] = array( // T115245
-	'from'   => '2015-10-13T12:00 +1:00',
-	'to'     => '2015-10-13T18:00 +1:00',
+$wmgThrottlingExceptions[] = array( // T118122
+	'from'   => '2015-11-16T06:00 +0:00',
+	'to'     => '2015-11-16T12:00 +0:00',
 	'range'     => array(
-		'129.215.133.0/24'
+		'132.74.0.0/16',
+		'132.75.0.0/16',
 	),
-	'dbname' => array( 'enwiki', 'commonswiki' ),
-	'value'  => 30 // 20 participants expected
+	'dbname' => array( 'hewiki', 'commonswiki' ),
+	'value'  => 35 // 25 participants expected
 );
 
-$wmgThrottlingExceptions[] = array( // T115632
-	'from'   => '2015-10-24T09:00 +0:00',
-	'to'     => '2015-10-24T16:00 +0:00',
+$wmgThrottlingExceptions[] = array( // T118122
+	'from'   => '2015-11-23T06:00 +0:00',
+	'to'     => '2015-11-23T12:00 +0:00',
 	'range'     => array(
-		'194.113.40.224/28'
+		'132.74.0.0/16',
+		'132.75.0.0/16',
 	),
-	'dbname' => 'dewiki',
-	'value'  => 50
-);
-
-$wmgThrottlingExceptions[] = array( // T116183
-	'from'   => '2015-10-23T09:00 +16:00',
-	'to'     => '2015-10-24T16:00 +18:00',
-	'IP'     => array(
-		'186.67.125.3',
-		'163.247.67.20',
-		'200.72.159.9'
-	),
-	'dbname' => 'eswiki',
-	'value'  => 40 // 30 participants expected
+	'dbname' => array( 'hewiki', 'commonswiki' ),
+	'value'  => 35 // 25 participants expected
 );
 
 ## Add throttling definitions above.
