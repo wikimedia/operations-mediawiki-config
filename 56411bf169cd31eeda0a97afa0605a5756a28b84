@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_39b33bff",
+        "filename": "docroot/noc/createTxtFileSymlinks.sh",
+        "patchSetId": 8
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2015-11-09T08:59:14Z",
+      "side": 1,
+      "message": "So I tried that, and because I\u0027m on Windows, it creates Windows-style NTFS symbolic links, which git doesn\u0027t understand. So, in other words, it just makes a big mess.\n\nI\u0027d really appreciate if you (or someone else with a Linux box) could do this for me!",
+      "parentUuid": "0ebaf39b_de45251b",
+      "revId": "56411bf169cd31eeda0a97afa0605a5756a28b84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_3e41e10e",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 8
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_d9977f4b",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 1154,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2015-11-09T08:59:14Z",
+      "side": 1,
+      "message": "Sorry, I simply forgot to press Ctrl+S in my text editor before committing.",
+      "parentUuid": "0ebaf39b_3e41e10e",
+      "revId": "56411bf169cd31eeda0a97afa0605a5756a28b84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_fe426910",
         "filename": "wmf-config/import.php",
         "patchSetId": 8
@@ -47,6 +83,24 @@
       "writtenOn": "2015-11-08T21:19:44Z",
       "side": 1,
       "message": "Have you spoken to Ori about getRealmSpecificFilename?",
+      "revId": "56411bf169cd31eeda0a97afa0605a5756a28b84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_f994c348",
+        "filename": "wmf-config/import.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2015-11-09T08:59:14Z",
+      "side": 1,
+      "message": "No.. why? Is it deprecated?",
+      "parentUuid": "0ebaf39b_fe426910",
       "revId": "56411bf169cd31eeda0a97afa0605a5756a28b84",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
