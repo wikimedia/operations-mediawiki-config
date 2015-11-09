@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+2: Alex Monk <krenair@gmail.com>
+Code-Review+1: BryanDavis <bdavis@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Mon, 09 Nov 2015 16:27:37 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/250897
+Project: operations/mediawiki-config
+Branch: refs/heads/master
