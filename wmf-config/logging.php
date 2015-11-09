@@ -68,12 +68,19 @@ $wmgMonologProcessors = array(
 	),
 );
 
+// Post construction calls to make for new Logger instances
+$wmgMonologLoggerCalls = array(
+	// T116550 - Requires Monolog > 1.17.2
+	'useMicrosecondTimestamps' => array( false ),
+);
+
 $wmgMonologConfig =  array(
 	'loggers' => array(
 		// Template for all undefined log channels
 		'@default' => array(
 			'handlers' => array( $wmgDefaultMonologHandler ),
 			'processors' => array_keys( $wmgMonologProcessors ),
+			'calls' => $wmgMonologLoggerCalls,
 		),
 	),
 
@@ -115,6 +122,7 @@ $wmgMonologConfig =  array(
 if ( $wmgLogAuthmanagerMetrics ) {
 	$wmgMonologConfig['loggers']['authmanager'] = array(
 		'handlers' => array( 'authmanager-statsd' ),
+		'calls' => $wmgMonologLoggerCalls,
 	);
 	$wmgMonologConfig['handlers']['authmanager-statsd'] = array(
 		// defined in WikimediaEvents
@@ -128,6 +136,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		// Log channel disabled on this wiki
 		$wmgMonologConfig['loggers'][$channel] = array(
 			'handlers' => 'blackhole',
+			'calls' => $wmgMonologLoggerCalls,
 		);
 		continue;
 	}
@@ -264,10 +273,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	$wmgMonologConfig['loggers'][$channel] = array(
 		'handlers' => $handlers,
 		'processors' => array_keys( $wmgMonologProcessors ),
-		'calls' => array(
-			// T116550 - Requires Monolog > 1.17.2
-			'useMicrosecondTimestamps' => array( false ),
-		),
+		'calls' => $wmgMonologLoggerCalls,
 	);
 }
 
