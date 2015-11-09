@@ -104,6 +104,24 @@
       "revId": "56411bf169cd31eeda0a97afa0605a5756a28b84",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_b1f3bfd1",
+        "filename": "wmf-config/import.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-11-09T17:35:24Z",
+      "side": 1,
+      "message": "I think there were performance issues with using it in code run on every request like this.",
+      "parentUuid": "0ebaf39b_f994c348",
+      "revId": "56411bf169cd31eeda0a97afa0605a5756a28b84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
