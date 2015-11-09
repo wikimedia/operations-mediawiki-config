@@ -9664,8 +9664,10 @@ $wgConf->settings = array(
 ),
 # @} end of wgRemoveGroups
 
-# wgImportSources @{
-'wgImportSources' => array(
+# wmgProdImportSources @{
+'wmgProdImportSources' => array(
+	// Used in production only. Labs is using a hook function in CommonSettings for now
+
 	// Generic project entries
 
 	// Note: When adding a specific wiki you have to duplicate these generic sources
@@ -9961,7 +9963,7 @@ $wgConf->settings = array(
 	'zhwikisource' => array( 'w', 'b', 'q', 'wikt', 'meta', 'commons' ),
 	'zuwiki' => array( 'en' ), // T53327
 ),
-# @} end of wgImportSources
+# @} end of wmgProdImportSources
 
 'wgImportTargetNamespace' => array(
 	'default' => null,
