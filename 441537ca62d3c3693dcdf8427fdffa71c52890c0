@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_34049d17",
+        "filename": "wmf-config/import.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-11-09T18:23:58Z",
+      "side": 1,
+      "message": "I\u0027m not sure I understand the purpose of $sources. Are these supposed to resolve to production wikis, importing from beta wikis?\n\nBecause we don\u0027t have beta wikis for Wikimania etc.\n\nIf that is the case, then the commit subject is misleading – which suggests we enable importing to/from any beta cluster project. But rather, this is enabling import from any production cluster wiki, on any beta cluster wiki. Correct?\n\nBut then below it uses local database (which is beta in beta), to fill the rest of the array. So how does it distinguish?",
+      "revId": "441537ca62d3c3693dcdf8427fdffa71c52890c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
