@@ -14811,6 +14811,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'mediawikiwiki' => true,
 	'zhwiki' => true,
+	'wikidatawiki' => true,
 ),
 'wmgUseDisambiguator' => array(
 	'default' => true,
