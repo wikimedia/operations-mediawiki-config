@@ -74,6 +74,8 @@ $wmgMonologConfig =  array(
 		'@default' => array(
 			'handlers' => array( $wmgDefaultMonologHandler ),
 			'processors' => array_keys( $wmgMonologProcessors ),
+			// T116550 - Requires Monolog > 1.17.2
+			'calls' => array( 'useMicrosecondTimestamps' => array( false ) ),
 		),
 	),
 
@@ -115,6 +117,8 @@ $wmgMonologConfig =  array(
 if ( $wmgLogAuthmanagerMetrics ) {
 	$wmgMonologConfig['loggers']['authmanager'] = array(
 		'handlers' => array( 'authmanager-statsd' ),
+		// T116550 - Requires Monolog > 1.17.2
+		'calls' => array( 'useMicrosecondTimestamps' => array( false ) ),
 	);
 	$wmgMonologConfig['handlers']['authmanager-statsd'] = array(
 		// defined in WikimediaEvents
@@ -128,6 +132,8 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		// Log channel disabled on this wiki
 		$wmgMonologConfig['loggers'][$channel] = array(
 			'handlers' => 'blackhole',
+			// T116550 - Requires Monolog > 1.17.2
+			'calls' => array( 'useMicrosecondTimestamps' => array( false ) ),
 		);
 		continue;
 	}
@@ -264,10 +270,8 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	$wmgMonologConfig['loggers'][$channel] = array(
 		'handlers' => $handlers,
 		'processors' => array_keys( $wmgMonologProcessors ),
-		'calls' => array(
-			// T116550 - Requires Monolog > 1.17.2
-			'useMicrosecondTimestamps' => array( false ),
-		),
+		// T116550 - Requires Monolog > 1.17.2
+		'calls' => array( 'useMicrosecondTimestamps' => array( false ) ),
 	);
 }
 
