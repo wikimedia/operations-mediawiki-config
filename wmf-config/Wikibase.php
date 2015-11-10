@@ -87,8 +87,6 @@ if ( $wmgUseWikibaseRepo ) {
 		);
 	}
 
-	$wgWBRepoSettings['subscriptionLookupMode'] = 'subscriptions+sitelinks';
-
 	$wgWBRepoSettings['localClientDatabases'] = array_combine(
 		$wgWBRepoSettings['clientDbList'],
 		$wgWBRepoSettings['clientDbList']
