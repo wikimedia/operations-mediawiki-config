@@ -249,6 +249,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			$handlers[$idx] = $sampledHandler;
 		}
 	}
+
 	if ( $opts['buffer'] ) {
 		foreach ( $handlers as $idx => $handlerName ) {
 			$bufferedHandler = "{$handlerName}-buffered";
@@ -270,8 +271,26 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		}
 	}
 
+	// T118057: wrap the collection of handlers in a WhatFailureGroupHandler
+	// to swallow any exceptions that might leak out otherwise
+	$failureGroupHandler = 'failuregroup-' . implode( '|', $handlers );
+	if ( !isset( $wmgMonologConfig['handlers'][$failureGroupHandler] ) ) {
+		$wmgMonologConfig['handlers'][$failureGroupHandler] = array(
+			'class' => '\\Monolog\\Handler\\WhatFailureGroupHandler',
+			'args' => array(
+				function () use ( $handlers ) {
+					$provider = LoggerFactory::getProvider();
+					return array_map(
+						array( $provider, 'getHandler' ),
+						$handlers
+					);
+				}
+			),
+		);
+	}
+
 	$wmgMonologConfig['loggers'][$channel] = array(
-		'handlers' => $handlers,
+		'handlers' => $failureGroupHandler,
 		'processors' => array_keys( $wmgMonologProcessors ),
 		'calls' => $wmgMonologLoggerCalls,
 	);
