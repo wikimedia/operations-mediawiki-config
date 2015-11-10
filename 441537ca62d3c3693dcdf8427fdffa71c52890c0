@@ -16,6 +16,24 @@
       "revId": "441537ca62d3c3693dcdf8427fdffa71c52890c0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_e08f1b77",
+        "filename": "wmf-config/import.php",
+        "patchSetId": 11
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2015-11-10T01:13:15Z",
+      "side": 1,
+      "message": "This configuration is actually intended for production, but Alex wisely suggested that it be tested on the beta cluster first. If it works on beta, then it can be enabled on production. \n\nI don\u0027t think there is any point creating a specific import setup for labs, as it is just a test environment. The production config should work on labs, but it will include a lot of wikis that don\u0027t exist there (as you point out). For example, on labs, wm20** resolves to the actual Wikimania domains in production. But that\u0027s not a problem.\n\nI think the problem really is that the commit message is incorrect. I\u0027ll try to improve it.",
+      "parentUuid": "0ebaf39b_34049d17",
+      "revId": "441537ca62d3c3693dcdf8427fdffa71c52890c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
