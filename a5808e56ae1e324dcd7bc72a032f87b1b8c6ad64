@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_3b0a48d6",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 335,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-10T08:34:26Z",
+      "side": 1,
+      "message": "The extension is loaded in CommonSettings.php already and enabled on beta labs by I80b0b8944632854089c824e350d4df487005e73b",
+      "revId": "a5808e56ae1e324dcd7bc72a032f87b1b8c6ad64",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
