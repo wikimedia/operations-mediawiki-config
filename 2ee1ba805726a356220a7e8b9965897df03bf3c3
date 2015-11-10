@@ -34,6 +34,24 @@
       "revId": "2ee1ba805726a356220a7e8b9965897df03bf3c3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_006d8f96",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-11-10T01:37:49Z",
+      "side": 1,
+      "message": "Right, so those warnings happened regardless, just twice instead of once.",
+      "parentUuid": "0ebaf39b_00c7cf9b",
+      "revId": "2ee1ba805726a356220a7e8b9965897df03bf3c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
