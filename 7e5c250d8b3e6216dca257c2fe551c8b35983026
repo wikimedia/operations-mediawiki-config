@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_07703e06",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2993,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-11-10T23:13:46Z",
+      "side": 0,
+      "message": "There was a pretty darn good description of why this one was needed right there in the file. Is the stat cache for HHVM so crappy that this causes a problem?",
+      "revId": "7e5c250d8b3e6216dca257c2fe551c8b35983026",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
