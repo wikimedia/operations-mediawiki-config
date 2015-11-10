@@ -23,9 +23,6 @@ if ( $wmgUseWikibaseRepo ) {
 		'P733',
 		'P964',
 	);
-
-	$wgWBRepoSettings['subscriptionLookupMode'] = 'subscriptions+sitelinks';
-	$wgWBRepoSettings['useLegacyChangesSubscription'] = false;
 }
 
 if ( $wmgUseWikibaseClient ) {
@@ -41,6 +38,5 @@ if ( $wmgUseWikibaseClient ) {
 		'Q98651' => 'badge-validated'
 	);
 
-	$wgWBClientSettings['useLegacyChangesSubscription'] = false;
 	$wgWBClientSettings['repoConceptBaseUri'] = 'http://wikidata.beta.wmflabs.org/entity/';
 }
