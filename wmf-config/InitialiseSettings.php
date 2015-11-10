@@ -15804,6 +15804,11 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+// https://phabricator.wikimedia.org/T110661
+'wmgUseQuickSurveys' => array(
+	'default' => false,
+),
+
 // WikidataPageBanner extension (T98029)
 'wmgUseWPB' => array(
 	'default' => false,

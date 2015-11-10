@@ -55,8 +55,6 @@ $wgDnsBlacklistUrls   = array(
 	'proxies.dnsbl.sorbs.net.',
 );
 
-$wgQuickSurveysRequireHttps = false;
-
 //before you remove this, log somewhere why you did it
 //--Petrb
 //Commented until a dedicated wiki is created.
@@ -264,7 +262,7 @@ if ( $wmgUsePageImages ) {
 }
 
 if ( $wmgUseQuickSurveys ) {
-	wfLoadExtensions( array( 'QuickSurveys' ) );
+	$wgQuickSurveysRequireHttps = false;
 
 	$wgQuickSurveysConfig = array(
 		array(
