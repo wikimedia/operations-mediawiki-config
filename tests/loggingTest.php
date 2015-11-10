@@ -25,45 +25,51 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 				// configuration for 'test' channel in wmgMonologChannels
 				'debug',
 				// number of expected handlers
-				4,
+				5,
 				// handlers expected on the 'test' channel
-				array( 'udp2log-debug', 'logstash-info' )
+				array( 'failuregroup|udp2log-debug|logstash-info' )
 			),
 
 			'Can disable logstash' => array(
 				array( 'logstash' => false ),
-				3,
-				array( 'udp2log-debug' ),
+				4,
+				array( 'failuregroup|udp2log-debug' ),
 			),
 
 			'Disabling udp2log also disables logstash' => array(
 				array( 'udp2log' => false ),
 				2,
-				array(),
+				array( 'blackhole' ),
 			),
 
 			'Logstash can be enabled when udp2log is disabled' => array(
 				array( 'udp2log' => false, 'logstash' => 'info' ),
-				3,
-				array( 'logstash-info' )
+				4,
+				array( 'failuregroup|logstash-info' )
 			),
 
 			'can enable only kafka' => array(
 				array( 'kafka' => 'debug', 'logstash' => false, 'udp2log' => false ),
-				3,
-				array( 'kafka-debug' ),
+				4,
+				array( 'failuregroup|kafka-debug' ),
 			),
 
 			'can enable buffering' => array(
 				array( 'buffer' => true ),
-				6,
-				array( 'udp2log-debug-buffered', 'logstash-info-buffered' ),
+				7,
+				array( 'failuregroup|udp2log-debug-buffered|logstash-info-buffered' ),
 			),
 
 			'can enable sampling, which disables logstash' => array(
 				array( 'sample' => 1000 ),
-				4,
-				array( 'udp2log-debug-sampled-1000' ),
+				5,
+				array( 'failuregroup|udp2log-debug-sampled-1000' ),
+			),
+
+			'false yields backhole' => array(
+				false,
+				2,
+				array( 'blackhole' ),
 			),
 		);
 	}
