@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_f52271fb",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 15813,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-11T17:59:25Z",
+      "side": 1,
+      "message": "You should at least use this variable somewhere or use the wg pendant (wgQuickSurveysConfig) directly. This one is currently unused and should be removed :)",
+      "revId": "0e9f04f4a36bafee9bdcade6bd13a6c18b1baede",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
