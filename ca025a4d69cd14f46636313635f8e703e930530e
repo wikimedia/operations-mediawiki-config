@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_750f618e",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3001,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-11-11T17:58:14Z",
+      "side": 1,
+      "message": "why not use wgQuickSurveysConfig directly in InitialiseSettings.php, if you only use it here? That seems to be the more preferred way to avoid unnecessary global variables and confusion :)",
+      "revId": "ca025a4d69cd14f46636313635f8e703e930530e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
