@@ -2998,6 +2998,7 @@ if ( $wmgUseWPB ) {
 
 if ( $wmgUseQuickSurveys ) {
 	wfLoadExtension( 'QuickSurveys' );
+	$wgQuickSurveysConfig = $wmgQuickSurveysConfig;
 }
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
