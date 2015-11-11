@@ -54,7 +54,7 @@ if ( false ) {
 
 require_once( "$IP/extensions/OpenStackManager/OpenStackManager.php" );
 $wgOpenStackManagerNovaKeypairStorage = 'ldap';
-$wgOpenStackManagerNovaIdentityURI = 'http://labcontrol1001.wikimedia.org:35357/v2.0';
+$wgOpenStackManagerNovaIdentityURI = 'http://labcontrol1001.wikimedia.org:35357/v3';
 $wgOpenStackManagerLDAPDomain = 'labs';
 $wgOpenStackManagerLDAPProjectBaseDN = 'ou=projects,dc=wikimedia,dc=org';
 $wgOpenStackManagerLDAPProjectGroupBaseDN = "ou=groups,dc=wikimedia,dc=org";
