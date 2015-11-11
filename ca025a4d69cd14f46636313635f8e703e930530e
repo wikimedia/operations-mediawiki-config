@@ -16,6 +16,24 @@
       "revId": "ca025a4d69cd14f46636313635f8e703e930530e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_b57cf9e9",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3001,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-11-11T17:59:55Z",
+      "side": 1,
+      "message": "Is that the norm? Jdlrobson wrote the original config patch and this is REALLY not my area of expertise... If you look up though there are a bunch of extensions doing this same kind of line.",
+      "parentUuid": "0ebaf39b_750f618e",
+      "revId": "ca025a4d69cd14f46636313635f8e703e930530e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
