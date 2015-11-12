@@ -15801,12 +15801,12 @@ $wgConf->settings = array(
 // https://phabricator.wikimedia.org/T110661
 'wmgUseQuickSurveys' => array(
 	'default' => false,
-	'testwiki' => true,
+	'enwiki' => true,
 ),
 
 'wgQuickSurveysConfig' => array(
 	'default' => array(),
-	'testwiki' => array(
+	'enwiki' => array(
 		array(
 			// T113443
 			"name" => "reader-segmentation-1",
@@ -15814,7 +15814,7 @@ $wgConf->settings = array(
 			"schema" => "QuickSurveysResponses",
 			"enabled" => true,
 			"description" => "reader-segmentation-1-description",
-			"link" => "https://docs.google.com/forms/d/17vKKxhVF4A3iO71JNQ4xbvc42Md3U87WgnYwmXISqoM/viewform",
+			"link" => "reader-segmentation-1-link",
 			"question" => "reader-segmentation-1-message",
 			"privacyPolicy" => "reader-segmentation-1-privacy",
 			"coverage" => 0.005,
