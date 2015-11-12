@@ -15801,12 +15801,12 @@ $wgConf->settings = array(
 // https://phabricator.wikimedia.org/T110661
 'wmgUseQuickSurveys' => array(
 	'default' => false,
-	'testwiki' => true,
+	'enwiki' => true,
 ),
 
 'wmgQuickSurveysConfig' => array(
 	'default' => array(),
-	'testwiki' => array(
+	'enwiki' => array(
 		array(
 			// T113443
 			"name" => "reader-segmentation-1",
