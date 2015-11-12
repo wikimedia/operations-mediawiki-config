@@ -16,6 +16,24 @@
       "revId": "30b9087414153756dccb633ee03bc4bb5051b7f9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_c981d4c9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15804,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-11-12T01:25:57Z",
+      "side": 1,
+      "message": "We should already be able to do that by setting DoNotTrack in the browser (apparently this is in EL). Additionally, testwiki rules said to disable/remove things when you\u0027re done using them or they move to production, so I was erring on the side of caution with regards to that policy. To be honest, it was never going to be deployed to testwiki at all originally.",
+      "parentUuid": "0ebaf39b_a91580a1",
+      "revId": "30b9087414153756dccb633ee03bc4bb5051b7f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
