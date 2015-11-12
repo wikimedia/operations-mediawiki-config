@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_a91580a1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15804,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-11-12T01:22:18Z",
+      "side": 1,
+      "message": "I wonder if we should still keep the surveys enabled for testwiki? We may need it for testing surveys without polluting the event logging results.",
+      "revId": "30b9087414153756dccb633ee03bc4bb5051b7f9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
