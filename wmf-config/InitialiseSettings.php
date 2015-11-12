@@ -11384,11 +11384,6 @@ $wgConf->settings = array(
 	'commonswiki' => array( // T87431
 		'default' => 0.30,
 	),
-	'mediawikiwiki' => array(
-		// Temporary to prevent AF autodisable due to mass spambot attack
-		// 22-Oct-2015
-		'default' => 0.30,
-	),
 ),
 'wmgAbuseFilterEmergencyDisableCount' => array(
 	'default' => array(
@@ -11398,11 +11393,6 @@ $wgConf->settings = array(
 		'default' => 25,
 	),
 	'commonswiki' => array( // T87431
-		'default' => 25,
-	),
-	'mediawikiwiki' => array(
-		// Temporary to prevent AF autodisable due to mass spambot attack
-		// 22-Oct-2015
 		'default' => 25,
 	),
 ),
