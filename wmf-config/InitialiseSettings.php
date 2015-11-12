@@ -15804,7 +15804,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 ),
 
-'wmgQuickSurveysConfig' => array(
+'wgQuickSurveysConfig' => array(
 	'default' => array(),
 	'testwiki' => array(
 		array(
