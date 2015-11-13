@@ -49,6 +49,12 @@
       },
       "default": []
     },
+    {
+        "name": "payload",
+        "type": {"type": "map", "values": "string"},
+        "doc": "General purpose data for this request set",
+        "default": {}
+    },
      {
         "name": "requests",
         "doc": "A list of requests made between mediawiki and elasticsearch in a single execution context",
@@ -138,6 +144,12 @@
                 "doc": "If a suggestion was requested from elasticsearch",
                 "type": "boolean",
                 "default": false
+              },
+              {
+                "name": "payload",
+                "doc": "General purpose data for this request",
+                "type": {"type": "map", "values": "string"},
+                "default": {}
               }
             ]
           }
