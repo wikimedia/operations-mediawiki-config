@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_2090ba45",
+        "filename": "robots.txt",
+        "patchSetId": 4
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2015-11-13T06:39:18Z",
+      "side": 1,
+      "message": "These need to be uncommented as well I think? Otherwise it probably applies the below rule for * with API stuff to archive bot only.",
+      "revId": "a66192011fd3e4c965b82aee745b7efa2f6e39f8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
