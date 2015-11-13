@@ -318,9 +318,16 @@ $wgPasswordConfig['pbkdf2']['cost'] = '64000';
 
 // Temporarily set the policy for these roles to the previous WMF setting until
 // we communicate the change to affected communities.
-$wgPasswordPolicy['policies']['bureaucrat']['MinimalPasswordLength'] = 1;
-$wgPasswordPolicy['policies']['sysop']['MinimalPasswordLength'] = 1;
-$wgPasswordPolicy['policies']['bot']['MinimalPasswordLength'] = 1;
+if ( $wgDBname === 'labswiki' ) {
+	$wgPasswordPolicy['policies']['bureaucrat']['MinimalPasswordLength'] = 8;
+	$wgPasswordPolicy['policies']['sysop']['MinimalPasswordLength'] = 8;
+	$wgPasswordPolicy['policies']['bot']['MinimalPasswordLength'] = 8;
+	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 8;
+} else {
+	$wgPasswordPolicy['policies']['bureaucrat']['MinimalPasswordLength'] = 1;
+	$wgPasswordPolicy['policies']['sysop']['MinimalPasswordLength'] = 1;
+	$wgPasswordPolicy['policies']['bot']['MinimalPasswordLength'] = 1;
+}
 
 if ( PHP_SAPI === 'cli' ) {
 	$wgShowExceptionDetails = true;
