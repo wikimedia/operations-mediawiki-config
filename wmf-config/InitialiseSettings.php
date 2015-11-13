@@ -11571,6 +11571,7 @@ $wgConf->settings = array(
 		'*.nps.gov',                        // National Park Service, United States - T113188
 		'*.unesco.org',                     // Unesco - T115338
 		'www.webarchive.org.uk',            // UK Web Archive - T116179
+		'*.mil',                            // US Military - T118554
 	),
 ),
 
