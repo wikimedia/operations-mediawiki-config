@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_bcadb2e9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8421,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2015-11-14T21:11:41Z",
+      "side": 0,
+      "message": "extraneous tabs\n\nTip: `git diff` highlights also in red these extra whitespace characters",
+      "revId": "f0ade9fbbc2233ac0b8abb3e341dc7147a1a6cb5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
