@@ -42,7 +42,7 @@ $wgJobTypeConf['default'] = array(
 $wgJobQueueAggregator = array(
 	'class'        => 'JobQueueAggregatorRedis',
 	'redisServers' => array( // all after the first are fallbacks
-		'10.192.0.199', # rdb2001
+		'10.192.0.119', # rdb2001
 		'10.192.0.120', # rdb2002
 	),
 	'redisConfig'  => array(
