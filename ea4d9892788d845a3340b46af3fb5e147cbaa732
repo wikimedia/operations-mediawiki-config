@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_63cb0e76",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1320,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2015-11-16T19:32:51Z",
+      "side": 1,
+      "message": "global $wmgUseCentralAuth; ????",
+      "revId": "ea4d9892788d845a3340b46af3fb5e147cbaa732",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_c3ce7a86",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1324,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2015-11-16T19:32:51Z",
+      "side": 1,
+      "message": "I know this comes from a more complex patch, and is likely to be added to again in the near future, but otherwise this could be moved up a level onto the up outer if...",
+      "revId": "ea4d9892788d845a3340b46af3fb5e147cbaa732",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
