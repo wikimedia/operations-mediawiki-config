@@ -1329,7 +1329,7 @@ $wgHooks['LoginAuthenticateAudit'][] = function( $user, $pass, $retval ) {
 		if ( $wmgUseCentralAuth ) {
 			$central = CentralAuthUser::getInstance( $user );
 			if ( $central->exists() && array_intersect(
-				array( 'staff', 'sysadmin', 'steward', 'ombudsman', 'checkuser', 'sysop' ),
+				array( 'staff', 'sysadmin', 'steward', 'ombudsman', 'checkuser' ),
 				array_merge(
 					$central->getLocalGroups(),
 					$central->getGlobalGroups()
