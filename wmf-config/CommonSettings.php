@@ -1336,7 +1336,7 @@ $wgHooks['LoginAuthenticateAudit'][] = function( $user, $pass, $retval ) {
 				)
 			) ) {
 				$logger = LoggerFactory::getInstance( 'badpass' );
-				$logger->info( "Login by privileged user with too short password" );
+				$logger->info( "Login by privileged user '{$user->getName()}' with too short password" );
 			}
 		}
 	}
