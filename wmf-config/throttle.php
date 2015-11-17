@@ -20,23 +20,16 @@ $wmgThrottlingExceptions = array();
 #             (default: any project)
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = array( // T110352
-	'from'   => '2015-08-29T00:00 +0:00',
-	'to'     => '2016-02-28T00:00 +0:00',
-	'ip'     => '218.248.16.20',
-	'dbname' => 'tawiki',
-	'value'  => 50
-);
-
-$wmgThrottlingExceptions[] = array( // T118122
-	'from'   => '2015-11-16T06:00 +0:00',
-	'to'     => '2015-11-16T12:00 +0:00',
-	'range'     => array(
-		'132.74.0.0/16',
-		'132.75.0.0/16',
+$wmgThrottlingExceptions[] = array( // T118702 - Editatón contra la violencia hacia las mujeres
+	'from'   => '2015-11-21T10:00 -4:00',
+	'to'     => '2015-11-21T14:00 -4:00',
+	'IP'     => array(
+		'186.67.125.3',
+		'163.247.67.20',
+		'200.72.159.9',
 	),
-	'dbname' => array( 'hewiki', 'commonswiki' ),
-	'value'  => 35 // 25 participants expected
+	'dbname' => array( 'eswiki', 'commonswiki' ),
+	'value'  => 50 // 30 participants expected
 );
 
 $wmgThrottlingExceptions[] = array( // T118122
