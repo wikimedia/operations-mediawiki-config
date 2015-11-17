@@ -3445,8 +3445,6 @@ $wgConf->settings = array(
 
 		'Участница' => NS_USER,                    // T14320
 		'Обсуждение_участницы' => NS_USER_TALK,
-		'Incubator' => 102,
-		'Incubator_talk' => 103,
 		'Wikiproject' => 104,                      // T36124
 		'Wikiproject_talk' => 105,
 		'Arbcom' => 106,                           // T36527
