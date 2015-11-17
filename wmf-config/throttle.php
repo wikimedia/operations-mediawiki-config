@@ -20,7 +20,7 @@ $wmgThrottlingExceptions = array();
 #             (default: any project)
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = array( // T110352
+$wmgThrottlingExceptions[] = array( // T110352 (long term)
 	'from'   => '2015-08-29T00:00 +0:00',
 	'to'     => '2016-02-28T00:00 +0:00',
 	'ip'     => '218.248.16.20',
@@ -97,4 +97,3 @@ $wgExtensionFunctions[] = function() {
 		return; # No point in proceeding to another entry
 	}
 };
-
