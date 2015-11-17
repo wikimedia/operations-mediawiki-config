@@ -6973,10 +6973,6 @@ $wgConf->settings = array(
 ),
 # @} end of wgRateLimits
 
-'wgRateLimitLog' => array(
-	'default' => null,  # We use $wgDebugLogGroups['ratelimit']
-),
-
 'wgRateLimitsExcludedIPs' => array(
 	// see also wmf-config/throttle.php
 	// exemptions for outreach events should go in that file
