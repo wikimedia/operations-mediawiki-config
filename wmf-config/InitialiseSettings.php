@@ -15522,6 +15522,20 @@ $wgConf->settings = array(
 
 'wmgCirrusSearchUserTesting' => array(
 	'default' => array(
+		// Multiple languages search test. Languages supported: en, es, de, pt, zh, ar, ru
+		'multilang-n-lt-3' => array(
+			'sampleRate' => 10,
+			'buckets' => array(
+				// control bucket, retain defaults
+				'a' => array(),
+				// test bucket, try lang detect and append results if < 3 results found
+				'b' => array(
+					'wgCirrusSearchEnableAltLanguage' => true,
+					'wgCirrusSearchInterwikiProv' => 'iwsw2',
+					'wgCirrusSearchInterwikiThreshold' => 3,
+				),
+			),
+		),
 	),
 ),
 
