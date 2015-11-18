@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_721c256b",
+        "filename": "wmf-config/HttpEventsWMF.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2015-11-18T21:46:45Z",
+      "side": 1,
+      "message": "This should be configurable.",
+      "revId": "be4a1a74a86eb0bd976e64d6d4a75721f8af752e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_b2229da0",
+        "filename": "wmf-config/HttpEventsWMF.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2015-11-18T21:46:45Z",
+      "side": 1,
+      "message": "This should be configurable.",
+      "revId": "be4a1a74a86eb0bd976e64d6d4a75721f8af752e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_b2705da4",
+        "filename": "wmf-config/HttpEventsWMF.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2015-11-18T21:46:45Z",
+      "side": 1,
+      "message": "Not sure what the utility of this hook is, it seems to just dump data into a log. $revs could potentially be a lot of data too.",
+      "revId": "be4a1a74a86eb0bd976e64d6d4a75721f8af752e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_d24cf17b",
+        "filename": "wmf-config/HttpEventsWMF.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2015-11-18T21:46:45Z",
+      "side": 1,
+      "message": "Same as above, configurable.",
+      "revId": "be4a1a74a86eb0bd976e64d6d4a75721f8af752e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
