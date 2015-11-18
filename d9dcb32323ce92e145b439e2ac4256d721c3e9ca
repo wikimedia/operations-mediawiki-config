@@ -51,6 +51,24 @@
       "revId": "d9dcb32323ce92e145b439e2ac4256d721c3e9ca",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_3cac4632",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15598,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2015-11-18T20:46:05Z",
+      "side": 1,
+      "message": "I stripped the varients from the accept-language that i ran because, i\u0027m pretty sure at least, we only do one wikipedia per language. Stripping the accept language headers to only the main code and not the variant made the list much smaller and easier to deal with.  We could apply the same stripping to the results of the language detector if we wanted. Probably easiest to leave it here for now, and remove after applying that same normalization to both places.",
+      "parentUuid": "0ebaf39b_bcd7d627",
+      "revId": "d9dcb32323ce92e145b439e2ac4256d721c3e9ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
