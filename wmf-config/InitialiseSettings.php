@@ -11569,6 +11569,13 @@ $wgConf->settings = array(
 		'*.nps.gov',                        // National Park Service, United States - T113188
 		'*.unesco.org',                     // Unesco - T115338
 		'www.webarchive.org.uk',            // UK Web Archive - T116179
+		'coll.mfn-berlin.de',               // Coding Da Vinci Hackathon - T118844
+		'gbif.naturkundemuseum-berlin.de',
+		'*.bgbm.org',
+		'fotothek.slub-dresden.de',
+		'digital.slub-dresden.de',
+		'grossstadtgeschichten-berlin.de',
+		'content.staatsbibliothek-berlin.de',
 	),
 ),
 
