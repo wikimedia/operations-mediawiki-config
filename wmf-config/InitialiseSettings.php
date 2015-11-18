@@ -15525,6 +15525,145 @@ $wgConf->settings = array(
 	),
 ),
 
+// Enable interwiki search by language detection. The list of language
+// detected and their corresponding wiki is defined by
+// wmgCirrusSearchLanguageToWikiMap and wmgCirrusSearchWikiToNameMap
+'wmgCirrusSearchEnableAltLanguage' => array(
+	'default' => false,
+),
+
+// List of languages detected by the short-text
+// profiles.
+// See: https://www.mediawiki.org/wiki/User:TJones_(WMF)/Notes/Language_Detection_Evaluation
+// This includes also the lang codes that might be used by browsers in Accept-Language
+# wmgCirrusSearchLanguageToWikiMap @{
+'wmgCirrusSearchLanguageToWikiMap' => array(
+	'default' => array(),
+	'wikipedia' => array(
+		"ar" => "ar",
+		"ay" => "ay", // not detected
+		"az" => "az", // not detected
+		"bg" => "bg",
+		"bn" => "bn",
+		"ca" => "ca",
+		"cs" => "cs",
+		"da" => "da",
+		"de" => "de",
+		"el" => "el",
+		"en" => "en",
+		"es" => "es",
+		"et" => "et",
+		"fa" => "fa",
+		"fi" => "fi",
+		"fil" => "tl", // unknown code, filipino? mapping to tagalog, maybe fijian?
+		"fr" => "fr",
+		"gu" => "gu",
+		"he" => "he",
+		"hi" => "hi",
+		"hr" => "hr",
+		"hu" => "hu",
+		"id" => "id",
+		"it" => "it",
+		"ja" => "ja",
+		"km" => "km", // not detected
+		"ko" => "ko",
+		"lt" => "lt",
+		"lv" => "lv",
+		"mk" => "mk",
+		"ml" => "ml",
+		"mr" => "mr", // not detected
+		"ms" => "ms", // not detected
+		"nb" => "no", // not detected but covered by no
+		"nl" => "nl",
+		"no" => "no",
+		"pa" => "pa",
+		"pl" => "pl",
+		"pt" => "pt",
+		"ro" => "ro", // very bad precision
+		"ru" => "ru",
+		"si" => "si",
+		"sk" => "sk", // not detected
+		"sl" => "sl", // not detected
+		"sq" => "sq",
+		"sv" => "sv",
+		"sw" => "sw", // not detected
+		"ta" => "ta",
+		"te" => "te",
+		"th" => "th",
+		"tl" => "tl",
+		"tr" => "tr",
+		"uk" => "uk",
+		"ur" => "ur",
+		"vi" => "vi",
+		"zh" => "zh", // not detected (browser header). Usually detected as zn-cn or zn-tw
+		"zh-cn" => "zh",
+		"zh-tw" => "zh"
+	),
+),
+# @} end of wmgCirrusSearchLanguageToWikiMap
+
+# wmgCirrusSearchWikiToNameMap @{
+'wmgCirrusSearchWikiToNameMap' => array(
+	'default' => array(),
+	'wikipedia' => array(
+		"ar" => "arwiki",
+		"ay" => "aywiki",
+		"az" => "azwiki",
+		"bg" => "bgwiki",
+		"bn" => "bnwiki",
+		"ca" => "cawiki",
+		"cs" => "cswiki",
+		"da" => "dawiki",
+		"de" => "dewiki",
+		"el" => "elwiki",
+		"en" => "enwiki",
+		"es" => "eswiki",
+		"et" => "etwiki",
+		"fa" => "fawiki",
+		"fi" => "fiwiki",
+		"fr" => "frwiki",
+		"gu" => "guwiki",
+		"he" => "hewiki",
+		"hi" => "hiwiki",
+		"hr" => "hrwiki",
+		"hu" => "huwiki",
+		"id" => "idwiki",
+		"it" => "itwiki",
+		"ja" => "jawiki",
+		"ko" => "kowiki",
+		"km" => "kmwiki",
+		"lt" => "ltwiki",
+		"lv" => "lvwiki",
+		"mk" => "mkwiki",
+		"ml" => "mlwiki",
+		"mr" => "mrwiki",
+		"ms" => "mswiki",
+		"nl" => "nlwiki",
+		"no" => "nowiki",
+		"pa" => "pawiki",
+		"pl" => "plwiki",
+		"pt" => "ptwiki",
+		"ro" => "rowiki",
+		"ru" => "ruwiki",
+		"si" => "siwiki",
+		"sk" => "skwiki",
+		"sl" => "slwiki",
+		"sq" => "sqwiki",
+		"sv" => "svwiki",
+		"sw" => "swwiki",
+		"ta" => "tawiki",
+		"te" => "tewiki",
+		"th" => "thwiki",
+		"tl" => "tlwiki",
+		"tr" => "trwiki",
+		"uk" => "ukwiki",
+		"ur" => "urwiki",
+		"vi" => "viwiki",
+		"zh" => "zhwiki",
+	),
+),
+# @} end of wmgCirrusSearchWikiToNameMap
+
 'wmgWMEEnableCompletionExperiment' => array(
 	'default' => false,
 ),
