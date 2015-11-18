@@ -15024,6 +15024,15 @@ $wgConf->settings = array(
 	'labswiki' => false,
 ),
 
+'wgRCWatchCategoryMembership' => array(
+	'default' => false,
+	'mediawikiwiki' => true,
+	'test2wiki' => true,
+	'testwiki' => true,
+	'testwikidatawiki' => true,
+	'zerowiki' => true,
+),
+
 'wmgRelatedSitesPrefixes' => array(
 	'default' => array(),
 	'wikivoyage' => array( 'wikipedia', 'dmoz', 'citizendium', 'commons' ),
