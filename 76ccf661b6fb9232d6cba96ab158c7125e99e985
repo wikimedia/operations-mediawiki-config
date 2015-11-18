@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_b2fb7d10",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 8118,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2015-11-18T21:42:36Z",
+      "side": 0,
+      "message": "This change has been introduced by another commit between your PS1 and PS2.",
+      "revId": "76ccf661b6fb9232d6cba96ab158c7125e99e985",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_d2fe3100",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 8996,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2015-11-18T21:42:36Z",
+      "side": 0,
+      "message": "remove this too",
+      "revId": "76ccf661b6fb9232d6cba96ab158c7125e99e985",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_72050513",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 9649,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2015-11-18T21:42:36Z",
+      "side": 0,
+      "message": "and finally this",
+      "revId": "76ccf661b6fb9232d6cba96ab158c7125e99e985",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
