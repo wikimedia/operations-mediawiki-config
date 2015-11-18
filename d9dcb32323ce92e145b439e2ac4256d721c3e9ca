@@ -33,6 +33,24 @@
       "revId": "d9dcb32323ce92e145b439e2ac4256d721c3e9ca",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_bcd7d627",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15598,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2015-11-18T19:28:59Z",
+      "side": 1,
+      "message": "typo sorry I meant zh, also I\u0027m not sure because Erik removed the variant part of the browser header. So maybe we do not have accept headers with \"zh\" only but \"zh-xx\".\nBut as we map them to zh anyway I\u0027m not sure it\u0027s important to worry about that here.\n\nWill fix the comment.",
+      "parentUuid": "0ebaf39b_7c54fec9",
+      "revId": "d9dcb32323ce92e145b439e2ac4256d721c3e9ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
