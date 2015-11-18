@@ -2893,6 +2893,9 @@ $wgConf->settings = array(
 		'Auxtoro' => 102,
 		'Auxtoro-Diskuto' => 103,
 	),
+	'+eswiktionary' => array(
+		'WN' => NS_PROJECT, // T119006
+	),
 	'+etwiki' => array(
 		'Portal' => 100,
 		'Portal_talk' => 101,
