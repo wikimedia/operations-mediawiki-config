@@ -2979,6 +2979,10 @@ if ( $wmgUseCheckUser ) {
 	$wgCheckUserForceSummary = $wmgCheckUserForceSummary;
 }
 
+if ( $wmgUseHttpEvents ) {
+    require( "$wmfConfigDir/HttpEventWMF.php" );
+}
+
 // T39211
 $wgUseCombinedLoginLink = false;
 

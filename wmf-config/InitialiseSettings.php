@@ -15839,6 +15839,10 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgUseHttpEvents' => array(
+    'default' => true,
+),
+
 );
 
 
