@@ -7419,6 +7419,8 @@ $wgConf->settings = array(
 	),
 	'enwikiversity' => array(
 		'user' => array( 'move' => false ), // autoconfirmed only
+		'sysop' => array ( 'nuke' => false, 'unblockself' => false ), // T113109
+		'bureaucrat' => array ( 'nuke' => true, 'unblockself' => true ), // T113109
 		'curator' => array( // T113109
 			'createaccount' => true,
 			'delete' => true,
