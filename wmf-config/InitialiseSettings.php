@@ -13065,10 +13065,12 @@ $wgConf->settings = array(
 	'ruwikivoyage' => 'uca-ru', // T54997
 	'ruwiktionary' => 'uca-ru', // T54997
 	'shwiki' => 'uca-hr', // T69287
+	'srwiki' => 'uca-sr', // T115806
 	'srwikibooks' => 'uca-sr', // T115806
 	'srwikinews' => 'uca-sr', // T115806
 	'srwikiquote' => 'uca-sr', // T115806
 	'srwikisource' => 'uca-sr', // T115806
+	'srwiktionary' => 'uca-sr', // T115806
 	'skwiki' => 'uca-sk', // [[w:sk:Special:PermaLink/5785371]]
 	'svwiki' => 'uca-sv', // T47446
 	'svwikisource' => 'uca-sv@collation=standard', // T48058
