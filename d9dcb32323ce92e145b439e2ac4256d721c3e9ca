@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_dc5deaf0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15558,
+      "author": {
+        "id": 2705
+      },
+      "writtenOn": "2015-11-18T19:12:52Z",
+      "side": 1,
+      "message": "The relationship between Filipino and Tagalog is complex ( https://en.wikipedia.org/wiki/Filipino_language#Filipino_v._Tagalog ), but Tagalog is the right target wiki for something identified as Filipino.",
+      "revId": "d9dcb32323ce92e145b439e2ac4256d721c3e9ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_7c54fec9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15598,
+      "author": {
+        "id": 2705
+      },
+      "writtenOn": "2015-11-18T19:12:52Z",
+      "side": 1,
+      "message": "Nitpick: Did you mean zn-cn and zn-tw, or zh-cn and zh-tw?",
+      "revId": "d9dcb32323ce92e145b439e2ac4256d721c3e9ca",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
