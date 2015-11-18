@@ -7840,6 +7840,8 @@ $wgConf->settings = array(
 	),
 	'+maiwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ), // T89346
+		'patroller' => array ( 'patrol' => true ), // T118934
+		'rollbacker' => array ( 'rollback' => true ), // T118934
 	),
 	'mediawikiwiki' => array(
 		'user' => array( 'move' => false ),
@@ -8867,7 +8869,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller' ), // T72441
 	),
 	'+maiwiki' => array(
-		'sysop' => array( 'autopatrolled', 'import' ), // T89346, T99491
+		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker', 'import' ), // T89346, T99491, T118934
 	),
 	'+mediawikiwiki' => array(
 		'sysop' => array( 'autoreview' ),
@@ -9517,7 +9519,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller' ), // T72441
 	),
 	'+maiwiki' => array(
-		'sysop' => array( 'autopatrolled', 'import' ), // T89346, T99491
+		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker', 'import' ), // T89346, T99491, T118934
 	),
 	'+mediawikiwiki' => array(
 		'sysop' => array( 'autoreview' ),
