@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_2814fc43",
+        "filename": "wmf-config/HttpEventsWMF.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2384
+      },
+      "writtenOn": "2015-11-19T02:15:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_721c256b",
+      "revId": "be4a1a74a86eb0bd976e64d6d4a75721f8af752e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_b2229da0",
         "filename": "wmf-config/HttpEventsWMF.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2015-11-18T21:46:45Z",
       "side": 1,
       "message": "This should be configurable.",
+      "revId": "be4a1a74a86eb0bd976e64d6d4a75721f8af752e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_e82584a9",
+        "filename": "wmf-config/HttpEventsWMF.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2384
+      },
+      "writtenOn": "2015-11-19T02:15:22Z",
+      "side": 1,
+      "message": "This is just temporary, it\u0027ll come out completely I think.",
+      "parentUuid": "0ebaf39b_b2229da0",
       "revId": "be4a1a74a86eb0bd976e64d6d4a75721f8af752e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_683194e9",
+        "filename": "wmf-config/HttpEventsWMF.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 2384
+      },
+      "writtenOn": "2015-11-19T02:15:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_92ac39ed",
+      "revId": "be4a1a74a86eb0bd976e64d6d4a75721f8af752e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_b2705da4",
         "filename": "wmf-config/HttpEventsWMF.php",
         "patchSetId": 1
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "0ebaf39b_e87344ad",
+        "filename": "wmf-config/HttpEventsWMF.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 174,
+      "author": {
+        "id": 2384
+      },
+      "writtenOn": "2015-11-19T02:15:22Z",
+      "side": 1,
+      "message": "This is just a stub; It is still very much a work in progress, I posted early to elicit feedback before I went too far down the wrong path.",
+      "parentUuid": "0ebaf39b_b2705da4",
+      "revId": "be4a1a74a86eb0bd976e64d6d4a75721f8af752e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0ebaf39b_d24cf17b",
         "filename": "wmf-config/HttpEventsWMF.php",
         "patchSetId": 1
@@ -81,6 +153,24 @@
       "writtenOn": "2015-11-18T21:46:45Z",
       "side": 1,
       "message": "Same as above, configurable.",
+      "revId": "be4a1a74a86eb0bd976e64d6d4a75721f8af752e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_886ac8af",
+        "filename": "wmf-config/HttpEventsWMF.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 176,
+      "author": {
+        "id": 2384
+      },
+      "writtenOn": "2015-11-19T02:15:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0ebaf39b_d24cf17b",
       "revId": "be4a1a74a86eb0bd976e64d6d4a75721f8af752e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
