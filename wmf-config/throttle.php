@@ -40,6 +40,17 @@ $wmgThrottlingExceptions[] = array( // T118702 - Editatón contra la violencia h
 	'value'  => 50 // 30 participants expected
 );
 
+$wmgThrottlingExceptions[] = array( // T118858 - UK Senate House Library
+	'from'   => '2015-11-21T10:00 +0:00',
+	'to'     => '2015-11-21T16:00 +0:00',
+	'IP'     => array(
+		'217.138.7.29',
+		'217.138.7.30',
+	),
+	'dbname' => array( 'enwiki', 'commonswiki' ),
+	'value'  => 30 // 20 participants expected
+);
+
 $wmgThrottlingExceptions[] = array( // T118122
 	'from'   => '2015-11-23T06:00 +0:00',
 	'to'     => '2015-11-23T12:00 +0:00',
