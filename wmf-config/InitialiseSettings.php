@@ -5672,7 +5672,7 @@ $wgConf->settings = array(
 		101 => 'Συζήτηση_παραρτήματος',
 	),
 	'enwiktionary' => array(
-		100 => 'Appendix',
+		100 => 'Appendix', // T8476
 		101 => 'Appendix_talk',
 		102 => 'Concordance',
 		103 => 'Concordance_talk',
@@ -5684,12 +5684,14 @@ $wgConf->settings = array(
 		109 => 'Transwiki_talk',
 		110 => 'Wikisaurus',
 		111 => 'Wikisaurus_talk',
-		# 112 => 'WT', # Removed these in favor of aliases --catrope 1/18/2010
+		# 112 => 'WT', // Removed per T24104
 		# 113 => 'WT_talk',
 		114 => 'Citations',
 		115 => 'Citations_talk',
-		116 => 'Sign_gloss',
+		116 => 'Sign_gloss', // T26570
 		117 => 'Sign_gloss_talk',
+		118 => 'Reconstruction', // T119207
+		119 => 'Reconstruction_talk,'
 	),
 	'eowiktionary' => array(
 		NS_USER => 'Uzanto', // T24426
