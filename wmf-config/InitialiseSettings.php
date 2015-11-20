@@ -8709,7 +8709,6 @@ $wgConf->settings = array(
 	),
 	'+fawiki' => array(
 		'bureaucrat' => array(
-			'patroller',
 			'Image-reviewer', // T66532
 			'botadmin', // T71411
 			'OTRS-member', // T56368
@@ -8722,6 +8721,7 @@ $wgConf->settings = array(
 			'autopatrol', // T31007
 			'uploader', // T71171
 			'confirmed' // T87348
+			'patroller', // T118847
 		),
 		'botadmin' => array(
 			'patroller',
@@ -9354,7 +9354,6 @@ $wgConf->settings = array(
 	),
 	'+fawiki' => array(
 		'bureaucrat' => array(
-			'patroller',
 			'Image-reviewer', // T66532
 			'botadmin', // T71411
 			'OTRS-member', // T56368
@@ -9367,6 +9366,7 @@ $wgConf->settings = array(
 			'autopatrol', // T31007
 			'uploader', // T71171
 			'confirmed' // T87348
+			'patroller', // T118847
 		),
 		'botadmin' => array(
 			'patroller',
