@@ -28,6 +28,14 @@ $wmgThrottlingExceptions[] = array( // T110352 (long term)
 	'value'  => 50
 );
 
+$wmgThrottlingExceptions[] = array( // T119205
+        'from'   => '2015-11-20T06:00 +1:00',
+        'to'     => '2015-11-20T23:00 +1:00',
+        'ip'     => '195.76.195.27',
+        'dbname' => array( 'cawiki', 'commonswiki' ),
+        'value'  => 50
+);
+
 $wmgThrottlingExceptions[] = array( // T118702 - Editatón contra la violencia hacia las mujeres
 	'from'   => '2015-11-21T00:00 -3:00',
 	'to'     => '2015-11-21T23:00 -3:00',
