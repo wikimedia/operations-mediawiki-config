@@ -54,6 +54,17 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		}
 	}
 
+	public function testLanguageMatrix() {
+		$config = $this->loadCirrusConfig( 'production', 'enwiki', 'wiki', 'en', 'wikipedia' );
+		$allDbs = DBList::getall();
+
+		foreach( $config['wgCirrusSearchLanguageToWikiMap'] as $lang => $wiki ) {
+			$this->assertArrayHasKey( $wiki, $config['wgCirrusSearchWikiToNameMap'] );
+			$wikiName = $config['wgCirrusSearchWikiToNameMap'][$wiki];
+			$this->assertContains( $wikiName, $allDbs['wikipedia'] );
+		}
+	}
+
 	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix, $lang, $site ) {
 		// Variables rqeuired for wgConf.php
 		$wmfConfigDir = __DIR__ . "/../wmf-config";
@@ -70,11 +81,14 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		require "{$wmfConfigDir}/InitialiseSettings.php";
 
 		$globals = $wgConf->getAll( $wgDBname, $dbSuffix, array(
-			'lang' => $lang,
-			'docRoot' => '/dev/null',
-			'site' => $site,
-			'stdlogo' => 'file://dev/null',
-		), array() );
+				'lang' => $lang,
+				'docRoot' => '/dev/null',
+				'site' => $site,
+				'stdlogo' => 'file://dev/null',
+			),
+			// Not sure if it's the right way to enable the wikipedia -> enwiki resolution
+			array( $site )
+		);
 
 		extract( $globals );
 
