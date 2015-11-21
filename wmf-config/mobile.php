@@ -101,6 +101,7 @@ if ( $wmgMobileFrontend ) {
 
 	$wgMFQueryPropModules = $wmgMFQueryPropModules;
 	$wgMFSearchAPIParams = $wmgMFSearchAPIParams;
+	$wgMFSearchAPIParams = $wmgMFSearchAPIParams;
 
 	$wgMFUseWikibaseDescription = true; // Alpha experiment
 
