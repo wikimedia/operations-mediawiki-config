@@ -13613,6 +13613,16 @@ $wgConf->settings = array(
 		'wbptterms' => 'label'
 	)
 ),
+'wmgMFSearchGenerator' => array(
+	'default' => array(
+		'name' => 'prefixsearch',
+		'prefix' => 'ps'
+	),
+	'wikidata' => array(
+		'name' => 'wbsearch',
+		'prefix' => 'wbs'
+	)
+),
 'wmgUseGather' => array(
 	'default' => false,
 	'testwiki' => true,
