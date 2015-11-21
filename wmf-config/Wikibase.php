@@ -122,6 +122,10 @@ if ( $wmgUseWikibaseRepo ) {
 	}
 
 	$wgMFSearchAPIParams['wbptterms'] = array( 'label' );
+	$wgMFSearchGenerator = array(
+		'name' => 'wbsearch',
+		'prefix' => 'wbs'
+	);
 
 	// Don't try to let users answer captchas if they try to add links
 	// on either Item or Property pages. T86453
