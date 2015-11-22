@@ -11481,6 +11481,9 @@ $wgConf->settings = array(
 	'testwiki' => true, // T73897
 	'commonswiki' => true, // T73897
 ),
+'wgCopyUploadTimeout' => array(
+	'default' => 90,
+),
 
 'wgCopyUploadsDomains' => array(
 	'default' => array( '*.flickr.com', '*.staticflickr.com', ), // For Flickr uploads via UploadWizard - 2012-11-20
