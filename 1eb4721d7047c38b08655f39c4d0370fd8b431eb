@@ -16,6 +16,24 @@
       "revId": "1eb4721d7047c38b08655f39c4d0370fd8b431eb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_9159822f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5126,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2015-11-22T04:31:58Z",
+      "side": 1,
+      "message": "Comments should add relevant information, not rewrite in English what we do line per line. We here know the talk page namespace follows the main namespace.\n\nTo be coherent, we should create a task to clean namespaces and harmonize comments, that would be welcome.",
+      "parentUuid": "0ebaf39b_aeac6333",
+      "revId": "1eb4721d7047c38b08655f39c4d0370fd8b431eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
