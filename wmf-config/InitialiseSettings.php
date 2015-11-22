@@ -11484,6 +11484,12 @@ $wgConf->settings = array(
 	'testwiki' => true, // T73897
 	'commonswiki' => true, // T73897
 ),
+'wgCopyUploadTimeout' => array(
+	// This is set to a high value because there is no working mechanism for
+	// uploading by URL asyncronously (via the job queue, for example).
+	// See T119336 for details.
+	'default' => 90,  // T118887
+),
 
 'wgCopyUploadsDomains' => array(
 	'default' => array( '*.flickr.com', '*.staticflickr.com', ), // For Flickr uploads via UploadWizard - 2012-11-20
