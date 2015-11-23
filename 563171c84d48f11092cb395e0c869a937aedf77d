@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_d5e11ffc",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14915,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2015-11-23T19:48:50Z",
+      "side": 0,
+      "message": "These should not have been removed!\n\nnikerabbit@tin:~$ mwscript eval.php cawiki\n\u003e var_dump( $wgContentTranslationCampaigns );\narray(3) {\n  [\"cxstats\"]\u003d\u003e\n  bool(true)\n  [\"newarticle\"]\u003d\u003e\n  bool(true)\n  [\"staff-recommender\"]\u003d\u003e\n  bool(true)\n}",
+      "revId": "563171c84d48f11092cb395e0c869a937aedf77d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
