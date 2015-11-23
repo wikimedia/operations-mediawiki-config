@@ -15375,6 +15375,8 @@ $wgConf->settings = array(
 
 'wmgCirrusSearchWriteClusters' => array(
 	'default' => array( 'eqiad', 'codfw' ),
+	'enwiki' => array( 'eqiad', 'codfw', 'labsearch' ),
+	'dewiki' => array( 'eqiad', 'codfw', 'labsearch' ),
 	'testwiki' => array( 'eqiad', 'codfw', 'labsearch' )
 ),
 
