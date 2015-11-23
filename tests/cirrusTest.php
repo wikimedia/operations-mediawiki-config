@@ -44,8 +44,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchClientSideConnectTimeout'] );
 		}
 
-		// Only eqiad and codfw for now
-		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
+		$this->assertCount( 3, $config['wgCirrusSearchWriteClusters'] );
 		foreach ( $config['wgCirrusSearchWriteClusters'] as $cluster ) {
 			$this->assertArrayHasKey(
 				$cluster,
