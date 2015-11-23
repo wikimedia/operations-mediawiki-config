@@ -14904,15 +14904,15 @@ $wgConf->settings = array(
 // CX Campaigns
 'wmgContentTranslationCampaigns' => array(
 	'default' => array(
-		'newarticle' => true,
+		'article-recommender-1' => true,
 		'cxstats' => true,
+		'newarticle' => true,
 		'staff-recommender' => true
 	),
 	'cawiki' => array(
 		'newarticle' => true,
 		'cxstats' => true,
-		'staff-recommender' => true,
-		'article-recommender-1' => true
+		'staff-recommender' => true
 	),
 	'dewiki' => array(
 		'cxstats' => true,
@@ -14922,40 +14922,34 @@ $wgConf->settings = array(
 	'enwiki' => array(
 		'cxstats' => true,
 		'newarticle' => false,
-		'staff-recommender' => true,
-		'article-recommender-1' => true
+		'staff-recommender' => true
 	),
 	'eswiki' => array(
 		'newarticle' => true,
 		'cxstats' => true,
 		'staff-recommender' => true,
-		'eswiki-recommender' => true,
-		'article-recommender-1' => true
+		'eswiki-recommender' => true
 	),
 	'fawiki' => array(
 		'newarticle' => true,
 		'cxstats' => true,
-		'staff-recommender' => true,
-		'article-recommender-1' => true
+		'staff-recommender' => true
 	),
 	'frwiki' => array(
 		'newarticle' => true,
 		'cxstats' => true,
 		'staff-recommender' => true,
-		'frwiki-recommender' => true,
-		'article-recommender-1' => true
+		'frwiki-recommender' => true
 	),
 	'itwiki' => array(
 		'cxstats' => true,
 		'newarticle' => true,
-		'staff-recommender' => true,
-		'article-recommender-1' => true
+		'staff-recommender' => true
 	),
 	'swwiki' => array(
 		'newarticle' => true,
 		'cxstats' => true,
-		'staff-recommender' => true,
-		'article-recommender-1' => true
+		'staff-recommender' => true
 	),
 ),
 
