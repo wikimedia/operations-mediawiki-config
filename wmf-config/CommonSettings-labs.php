@@ -108,8 +108,6 @@ if ( $wgDBname === 'enwiki' || $wgDBname === 'cawiki' ) {
 
 if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org/v1';
-	// $wmgParsoidURL from production is not accessible from Beta, so use public URL
-	$wgContentTranslationParsoid['url'] = 'http://parsoid-lb.eqiad.wikimedia.org';
 	$wgContentTranslationTranslateInTarget = false;
 }
 
