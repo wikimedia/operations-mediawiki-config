@@ -14910,47 +14910,31 @@ $wgConf->settings = array(
 		'newarticle' => true,
 		'staff-recommender' => true
 	),
-	'cawiki' => array(
-		'newarticle' => true,
-		'cxstats' => true,
-		'staff-recommender' => true
-	),
 	'dewiki' => array(
+		'article-recommender-1' => true,
 		'cxstats' => true,
 		'newarticle' => false,
 		'staff-recommender' => true
 	),
 	'enwiki' => array(
+		'article-recommender-1' => true,
 		'cxstats' => true,
 		'newarticle' => false,
 		'staff-recommender' => true
 	),
 	'eswiki' => array(
+		'article-recommender-1' => true,
 		'newarticle' => true,
 		'cxstats' => true,
 		'staff-recommender' => true,
 		'eswiki-recommender' => true
 	),
-	'fawiki' => array(
-		'newarticle' => true,
-		'cxstats' => true,
-		'staff-recommender' => true
-	),
 	'frwiki' => array(
+		'article-recommender-1' => true,
 		'newarticle' => true,
 		'cxstats' => true,
 		'staff-recommender' => true,
 		'frwiki-recommender' => true
-	),
-	'itwiki' => array(
-		'cxstats' => true,
-		'newarticle' => true,
-		'staff-recommender' => true
-	),
-	'swwiki' => array(
-		'newarticle' => true,
-		'cxstats' => true,
-		'staff-recommender' => true
 	),
 ),
 
