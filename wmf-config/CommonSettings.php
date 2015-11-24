@@ -2703,10 +2703,9 @@ if ( $wmgUseContentTranslation ) {
 	// T76200: Public URL for cxserver instance
 	$wgContentTranslationSiteTemplates['cx'] = '//cxserver.wikimedia.org/v1';
 	// Used for html2wikitext when publishing
-	$wgContentTranslationParsoid = array(
-		'url' => $wmgParsoidURL,
+	$wgContentTranslationRESTBase = array(
+		'url' => 'https://rest.wikimedia.org/',
 		'timeout' => 10000,
-		'prefix' => $wgDBname,
 	);
 
 	$wgContentTranslationTranslateInTarget = true;
