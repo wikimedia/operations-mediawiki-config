@@ -15110,10 +15110,7 @@ $wgConf->settings = array(
 
 'wmgWikibaseEnableData' => array(
 	'default' => true,
-	'wikinews' => false,
-	'mediawikiwiki' => false,
 	'metawiki' => false,
-	'specieswiki' => false
 ),
 
 'wmgWikibaseEnableArbitraryAccess' => array(
