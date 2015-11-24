@@ -15363,6 +15363,9 @@ $wgConf->settings = array(
 	'dewiki' => array( 'eqiad', 'codfw', 'labsearch' ),
 	'wikidatawiki' => array( 'eqiad', 'codfw', 'labsearch' ),
 	'commonswiki' => array( 'eqiad', 'codfw', 'labsearch' ),
+	'nlwiki' => array( 'eqiad', 'codfw', 'labsearch' ),
+	'frwiki' => array( 'eqiad', 'codfw', 'labsearch' ),
+	'eswiki' => array( 'eqiad', 'codfw', 'labsearch' ),
 	'testwiki' => array( 'eqiad', 'codfw', 'labsearch' )
 ),
 
