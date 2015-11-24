@@ -2700,13 +2700,16 @@ if ( $wmgUseUniversalLanguageSelector ) {
 
 if ( $wmgUseContentTranslation ) {
 	wfLoadExtension( 'ContentTranslation' );
-	// T76200: Public URL for cxserver instance
+
+	//T76200: Public URL for cxserver instance
 	$wgContentTranslationSiteTemplates['cx'] = '//cxserver.wikimedia.org/v1';
-	// Used for html2wikitext when publishing
-	$wgContentTranslationParsoid = array(
-		'url' => $wmgParsoidURL,
+
+	$wgContentTranslationRESTBase = array(
+		'url' => $wmgRestbaseServer,
+		'domain' => $wgCanonicalServer,
+		'forwardCookies' => false,
 		'timeout' => 10000,
-		'prefix' => $wgDBname,
+		'HTTPProxy' => false,
 	);
 
 	$wgContentTranslationTranslateInTarget = true;
