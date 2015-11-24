@@ -2370,9 +2370,6 @@ require_once( "$IP/extensions/RandomRootPage/Randomrootpage.php" );
 # Avoid excessive CPU due to cache misses from rapid invalidations
 $wgJobBackoffThrottling['htmlCacheUpdate'] = 20; // pages/sec per runner
 
-# If a job runner takes too long to finish a job, assume it died and re-assign the job
-$wgJobTypeConf['default']['claimTTL'] = 3600;
-
 # Job types to exclude from the default queue processing. Aka the very long
 # one. That will exclude the types from any queries such as nextJobDB.php
 # We have to set this for any project cause we usually run PHP script against
@@ -2380,7 +2377,6 @@ $wgJobTypeConf['default']['claimTTL'] = 3600;
 
 # Timed Media Handler:
 $wgJobTypesExcludedFromDefaultQueue[] = 'webVideoTranscode';
-$wgJobTypeConf['webVideoTranscode'] = array( 'claimTTL' => 86400 ) + $wgJobTypeConf['default'];
 
 # GWToolset
 $wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMetadataJob';
