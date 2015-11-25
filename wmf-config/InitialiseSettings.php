@@ -10480,6 +10480,7 @@ $wgConf->settings = array(
 	'+wikimedia' => array( NS_MAIN ),
 	'+special' => array( NS_MAIN ),
 	'+itwiki' => array( 102 ),
+	'+dewikivoyage' => array(102),
 ),
 
 'wmgExemptFromUserRobotsControlExtra' => array(
