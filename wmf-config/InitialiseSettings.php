@@ -8300,6 +8300,7 @@ $wgConf->settings = array(
 	'ukwiki' => array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, ),
 		'rollbacker' => array( 'rollback' => true ),
+		'filemover' => array ( 'movefile' => true, 'move-subpages' => true ) // T119636
 	),
 	'+ukwikivoyage' => array(
 		'autopatrolled' => array( 'autopatrol' => true ), // T56299
@@ -9070,7 +9071,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'technician' ), // T41690
 	),
 	'+ukwiki' => array(
-		'sysop' => array( 'patroller', 'rollbacker', 'accountcreator' ), // T104034
+		'sysop' => array( 'patroller', 'rollbacker', 'accountcreator', 'filemover' ), // T104034, T119636
 	),
 	'+ukwikivoyage' => array(
 		'sysop' => array( 'rollbacker', 'uploader', 'autopatrolled' ), // T56229
@@ -9726,7 +9727,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'technician' ), // T41690
 	),
 	'+ukwiki' => array(
-		'sysop' => array( 'patroller', 'rollbacker', 'accountcreator' ), // T104034
+		'sysop' => array( 'patroller', 'rollbacker', 'accountcreator', 'filemover' ), // T104034, T119636
 	),
 	'+ukwikimedia' => array(
 		'bureaucrat' => array( 'sysop' ),
