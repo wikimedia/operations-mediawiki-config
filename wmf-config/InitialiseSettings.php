@@ -15368,6 +15368,11 @@ $wgConf->settings = array(
 	'nlwiki' => array( 'eqiad', 'codfw', 'labsearch' ),
 	'frwiki' => array( 'eqiad', 'codfw', 'labsearch' ),
 	'eswiki' => array( 'eqiad', 'codfw', 'labsearch' ),
+	'ruwiki' => array( 'eqiad', 'codfw', 'labsearch' ),
+	'zhwiki' => array( 'eqiad', 'codfw', 'labsearch' ),
+	'jawiki' => array( 'eqiad', 'codfw', 'labsearch' ),
+	'ptwiki' => array( 'eqiad', 'codfw', 'labsearch' ),
+	'plwiki' => array( 'eqiad', 'codfw', 'labsearch' ),
 	'testwiki' => array( 'eqiad', 'codfw', 'labsearch' )
 ),
 
