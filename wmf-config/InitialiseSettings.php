@@ -3392,7 +3392,7 @@ $wgConf->settings = array(
 		'Author_talk' => 105,
 	),
 	'+plwiktionary' => array(
-		'WS' => NS_PROJECT,
+		'WS' => NS_PROJECT,	
 	),
 	'+ptwiki' => array(
 		'Utilizador' => NS_USER, // T29495
@@ -5024,6 +5024,10 @@ $wgConf->settings = array(
 		101 => 'Dyskusja_portalu',
 		102 => 'Wikiprojekt',
 		103 => 'Dyskusja_wikiprojektu',
+	),
+	'pswiki' => array(
+		100 => 'تانبه'
+		101 => 'د تانبې خبرې اترې'
 	),
 	'ptwiki' => array(
 		NS_USER => 'Usuário(a)', // T29495
