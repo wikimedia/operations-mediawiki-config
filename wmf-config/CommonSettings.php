@@ -2603,6 +2603,14 @@ if ( $wmgUseInsider ) {
 }
 
 if ( $wmgUseRelatedArticles ) {
+	// ReadMore on wikipedias only
+	if ( $site === 'wikipedia' ) {
+		wfLoadExtension( 'Cards' );
+		$wgRelatedArticlesLoggingSamplingRate = 0.001;
+		$wgRelatedArticlesShowReadMore = true;
+		$wgRelatedArticlesUseCirrusSearch = true;
+		$wgRelatedArticlesOnlyUseCirrusSearch = false;
+	}
 	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
 }
 
