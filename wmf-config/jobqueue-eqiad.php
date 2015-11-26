@@ -6,7 +6,7 @@
 $wmgRedisQueueBaseConfig = array(
 	'class' => 'JobQueueRedis',
 	'redisConfig' => array(
-		'connectTimeout' => 2,
+		'connectTimeout' => .250,
 		'password' => $wmgRedisPassword,
 		'compression' => 'gzip'
 	),
@@ -22,7 +22,6 @@ $wmgRedisQueueBaseConfig = array(
 $wgJobTypeConf['default'] = array(
 	'class' => 'JobQueueFederated',
 	'configByPartition' => array(
-
 		# rdb 1
 
 		'rdb1-6379' => array(
@@ -81,7 +80,8 @@ $wgJobTypeConf['default'] = array(
 			'rdb3-6380' => 50,
 			'rdb3-6381' => 50,
 		),
-	)
+	),
+	'maxPartitionsTry' => 4 // always covers 2+ servers
 );
 // Note: on server failure, this should be changed to any other redis server
 $wgJobQueueAggregator = array(
@@ -92,7 +92,7 @@ $wgJobQueueAggregator = array(
 		'rdb1007.eqiad.wmnet:6379', // fallback
 	),
 	'redisConfig' => array(
-		'connectTimeout' => 2,
+		'connectTimeout' => 1.0,
 		'password' => $wmgRedisPassword,
 	)
 );
