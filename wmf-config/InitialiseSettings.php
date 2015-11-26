@@ -14992,6 +14992,7 @@ $wgConf->settings = array(
 
 'wmgUseRelatedArticles' => array(
 	'default' => false,
+	'wikipedia' => true,
 	'wikivoyage' => true,
 ),
 
