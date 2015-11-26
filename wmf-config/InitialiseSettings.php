@@ -5048,6 +5048,10 @@ $wgConf->settings = array(
 		102 => 'Wikiprojekt',
 		103 => 'Dyskusja_wikiprojektu',
 	),
+	'pswiki' => array(
+		100 => 'تانبه',
+		101 => 'د تانبې خبرې اترې', //T119510
+	),
 	'ptwiki' => array(
 		NS_USER => 'Usuário(a)', // T29495
 		NS_USER_TALK => 'Usuário(a)_Discussão',
