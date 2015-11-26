@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_92b2c790",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2706,
+      "author": {
+        "id": 110
+      },
+      "writtenOn": "2015-11-26T05:56:49Z",
+      "side": 1,
+      "message": "\u0027url\u0027 \u003d\u003e $wmgRestbaseServer,\n\t\t\u0027domain\u0027 \u003d\u003e $wgCanonicalServer,\n\t\t\u0027forwardCookies\u0027 \u003d\u003e false,\n\t\t\"timeout\": 10000,\n\t\t\"HTTPProxy\": false",
+      "revId": "b77d7d7edd119c5c291fd9c78ffa8487433788eb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
