@@ -38,6 +38,10 @@ $wgJobTypeConf['default'] = array(
 				'redisServer' => 'rdb1007.eqiad.wmnet:6380', # master
 				#'redisServer' => 'rdb1008.eqiad.wmnet:6380', # slave
 			) + $wmgRedisQueueBaseConfig,
+		'rdb3-6381' => array(
+				'redisServer' => 'rdb1007.eqiad.wmnet:6381', # master
+				#'redisServer' => 'rdb1008.eqiad.wmnet:6381', # slave
+			) + $wmgRedisQueueBaseConfig,
 	),
 	'sectionsByWiki' => array(), // default
 	'partitionsBySection' => array(
@@ -46,6 +50,7 @@ $wgJobTypeConf['default'] = array(
 			'rdb2-6379' => 50,
 			'rdb3-6379' => 50,
 			'rdb3-6380' => 50,
+			'rdb3-6381' => 50,
 		),
 	)
 );
