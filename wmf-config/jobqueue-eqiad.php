@@ -26,6 +26,14 @@ $wgJobTypeConf['default'] = array(
 				'redisServer' => 'rdb1001.eqiad.wmnet:6379', # master
 				#'redisServer' => 'rdb1002.eqiad.wmnet:6379', # slave
 			) + $wmgRedisQueueBaseConfig,
+		'rdb1-6380' => array(
+				'redisServer' => 'rdb1001.eqiad.wmnet:6380', # master
+				#'redisServer' => 'rdb1002.eqiad.wmnet:6380', # slave
+			) + $wmgRedisQueueBaseConfig,
+		'rdb1-6381' => array(
+				'redisServer' => 'rdb1001.eqiad.wmnet:6381', # master
+				#'redisServer' => 'rdb1002.eqiad.wmnet:6381', # slave
+			) + $wmgRedisQueueBaseConfig,
 
 		# rdb2
 
@@ -61,6 +69,8 @@ $wgJobTypeConf['default'] = array(
 	'partitionsBySection' => array(
 		'default' => array(
 			'rdb1-6379' => 50,
+			'rdb1-6380' => 50,
+			'rdb1-6381' => 50,
 			'rdb2-6379' => 50,
 			'rdb2-6380' => 50,
 			'rdb2-6381' => 50,
