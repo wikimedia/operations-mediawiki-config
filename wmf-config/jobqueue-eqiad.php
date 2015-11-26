@@ -58,7 +58,7 @@ $wgJobTypeConf['default'] = array(
 			) + $wmgRedisQueueBaseConfig,
 	),
 	'sectionsByWiki' => array(), // default
-	'partitionsBySection' => array(
+	'partitionsBySection' => array( // weights for partitions in use
 		'default' => array(
 			'rdb1-6379' => 50,
 			'rdb2-6379' => 50,
