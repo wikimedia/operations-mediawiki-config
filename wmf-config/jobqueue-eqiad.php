@@ -92,7 +92,7 @@ $wgJobQueueAggregator = array(
 		'rdb1007.eqiad.wmnet:6379', // fallback
 	),
 	'redisConfig' => array(
-		'connectTimeout' => 2,
+		'connectTimeout' => 0.5,
 		'password' => $wmgRedisPassword,
 	)
 );
