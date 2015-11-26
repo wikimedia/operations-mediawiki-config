@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_cd70a0a5",
+        "filename": "wmf-config/jobqueue-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2015-11-26T07:15:54Z",
+      "side": 1,
+      "message": "# rdb1",
+      "revId": "d3cfbaed1449cee8ae80989658d8457638a37447",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
