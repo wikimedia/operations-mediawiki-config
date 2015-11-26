@@ -14992,7 +14992,18 @@ $wgConf->settings = array(
 
 'wmgUseRelatedArticles' => array(
 	'default' => false,
+	'wikipedia' => true,
 	'wikivoyage' => true,
+),
+
+'wmgRelatedArticlesShowInSidebar' => array(
+	'default' => false,
+	'wikivoyage' => true
+),
+
+'wmgRelatedArticlesShowInFooter' => array(
+	'default' => false,
+	'wikipedia' => true,
 ),
 
 'wmgUseRelatedSites' => array(

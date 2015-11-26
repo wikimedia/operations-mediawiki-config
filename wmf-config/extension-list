@@ -6,6 +6,7 @@ $IP/extensions/Babel/Babel.php
 $IP/extensions/BetaFeatures/extension.json
 $IP/extensions/BounceHandler/BounceHandler.php
 $IP/extensions/Calendar/extension.json
+$IP/extensions/Cards/extension.json
 $IP/extensions/Campaigns/Campaigns.php
 $IP/extensions/CategoryTree/CategoryTree.php
 $IP/extensions/CentralAuth/CentralAuth.php
@@ -97,7 +98,7 @@ $IP/extensions/ProofreadPage/ProofreadPage.php
 $IP/extensions/QuickSurveys/extension.json
 $IP/extensions/Quiz/Quiz.php
 $IP/extensions/RandomRootPage/Randomrootpage.php
-$IP/extensions/RelatedArticles/RelatedArticles.php
+$IP/extensions/RelatedArticles/extension.json
 $IP/extensions/RelatedSites/RelatedSites.php
 $IP/extensions/Renameuser/Renameuser.php
 $IP/extensions/RestBaseUpdateJobs/RestbaseUpdate.php

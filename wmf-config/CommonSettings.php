@@ -2567,7 +2567,7 @@ if ( $wmgUseGeoCrumbs ) {
 	require_once( "$IP/extensions/GeoCrumbs/GeoCrumbs.php" );
 }
 
-if ( $wmgUseGeoCrumbs || $wmgUseInsider || $wmgUseRelatedArticles || $wmgUseRelatedSites ) {
+if ( $wmgUseGeoCrumbs || $wmgUseInsider || $wmgUseRelatedSites ) {
 	require_once( "$IP/extensions/CustomData/CustomData.php" );
 }
 
@@ -2601,7 +2601,20 @@ if ( $wmgUseInsider ) {
 }
 
 if ( $wmgUseRelatedArticles ) {
-	require_once( "$IP/extensions/RelatedArticles/RelatedArticles.php" );
+	wfLoadExtension( 'RelatedArticles' );
+}
+
+if ( $wmgRelatedArticlesShowInSidebar ) {
+	$wgRelatedArticlesShowInSidebar = true;
+}
+
+if ( $wmgRelatedArticlesShowInFooter ) {
+	wfLoadExtension( 'Cards' );
+
+	$wgRelatedArticlesLoggingSamplingRate = 0.01;
+	$wgRelatedArticlesShowInFooter = true;
+	$wgRelatedArticlesUseCirrusSearch = true;
+	$wgRelatedArticlesOnlyUseCirrusSearch = false;
 }
 
 if ( $wmgUseRelatedSites ) {
