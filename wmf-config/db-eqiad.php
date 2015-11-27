@@ -94,8 +94,8 @@ $wgLBFactoryConf = array(
 		'db1057' => 200, # 2.8TB  96GB
 		'db1065' => 100, # 2.8TB 160GB, api
 		'db1066' => 100, # 2.8TB 160GB, api
-		'db1072' => 500, # 2.8TB 160GB
-		'db1073' => 500, # 2.8TB 160GB
+		'db1072' => 700, # 2.8TB 160GB
+#		'db1073' => 500, # 2.8TB 160GB (network seems down)
 	),
 	's2' => array(
 		'db1024' => 0,   # 1.4TB  64GB
@@ -104,8 +104,8 @@ $wgLBFactoryConf = array(
 		'db1018' => 200, # 1.4TB  64GB
 		'db1054' => 200, # 2.8TB  96GB, api
 		'db1060' => 200, # 2.8TB  96GB, api
-		'db1063' => 400, # 2.8TB 128GB
-		'db1067' => 500, # 2.8TB 160GB
+#		'db1063' => 400, # 2.8TB 128GB (network seems down)
+		'db1067' => 700, # 2.8TB 160GB
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038' => 0,   # 1.4TB  64GB
@@ -125,19 +125,19 @@ $wgLBFactoryConf = array(
 	),
 	's5' => array(
 		'db1058' => 0,   # 2.8TB  96GB
-		'db1049' => 0,   # 2.8TB  64GB, vslow, dump
-		'db1026' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-		'db1045' => 0,   # 1.4TB  64GB, api
-		'db1070' => 500, # 2.8TB 160GB
-		'db1071' => 500, # 2.8TB 160GB
+		'db1049' => 50,   # 2.8TB  64GB, vslow, dump
+		'db1026' => 50,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
+		'db1045' => 50,   # 1.4TB  64GB, api
+		'db1070' => 700, # 2.8TB 160GB
+#		'db1071' => 500, # 2.8TB 160GB (network seems down)
 	),
 	's6' => array(
 		'db1023' => 0,   # 1.4TB  64GB
 		'db1022' => 100, # 1.4TB  64GB
 		'db1030' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1037' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-		'db1050' => 400, # 2.8TB  64GB
-		'db1061' => 500, # 2.8TB 128GB
+		'db1050' => 700, # 2.8TB  64GB
+#		'db1061' => 500, # 2.8TB 128GB (network seems down)
 	),
 	's7' => array(
 		'db1033' => 0,   # 1.4TB  64GB,
@@ -145,7 +145,7 @@ $wgLBFactoryConf = array(
 		'db1034' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1041' => 300, # 1.4TB  64GB
 		'db1039' => 300, # 1.4TB  64GB
-		'db1062' => 500, # 2.8TB 128GB
+#		'db1062' => 500, # 2.8TB 128GB (network seems down)
 	),
 	'silver' => array(
 		'silver' => 100,   # I have no idea if this is right
