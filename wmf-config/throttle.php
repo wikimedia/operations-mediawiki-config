@@ -28,46 +28,35 @@ $wmgThrottlingExceptions[] = array( // T110352 (long term)
 	'value'  => 50
 );
 
-$wmgThrottlingExceptions[] = array( // T119205
-        'from'   => '2015-11-20T06:00 +1:00',
-        'to'     => '2015-11-20T23:00 +1:00',
-        'ip'     => '195.76.195.27',
+$wmgThrottlingExceptions[] = array( // T119715
+        'from'   => '2015-11-30T10:00 +1:00',
+        'to'     => '2015-11-30T21:00 +1:00',
+        'ip'     => '178.237.148.150',
         'dbname' => array( 'cawiki', 'commonswiki' ),
         'value'  => 50
 );
 
-$wmgThrottlingExceptions[] = array( // T118702 - Editatón contra la violencia hacia las mujeres
-	'from'   => '2015-11-21T00:00 -3:00',
-	'to'     => '2015-11-21T23:00 -3:00',
-	'IP'     => array(
-		'186.67.125.3',
-		'163.247.67.20',
-		'200.72.159.9',
-	),
-	'dbname' => array( 'eswiki', 'commonswiki' ),
-	'value'  => 50 // 30 participants expected
+$wmgThrottlingExceptions[] = array( // T119715
+        'from'   => '2015-12-01T10:00 +1:00',
+        'to'     => '2015-12-01T21:00 +1:00',
+        'ip'     => '178.237.148.150',
+        'dbname' => array( 'cawiki', 'commonswiki' ),
+        'value'  => 50
 );
 
-$wmgThrottlingExceptions[] = array( // T118858 - UK Senate House Library
-	'from'   => '2015-11-21T10:00 +0:00',
-	'to'     => '2015-11-21T16:00 +0:00',
-	'IP'     => array(
-		'217.138.7.29',
-		'217.138.7.30',
-	),
-	'dbname' => array( 'enwiki', 'commonswiki' ),
-	'value'  => 30 // 20 participants expected
+$wmgThrottlingExceptions[] = array( // T119715
+        'from'   => '2015-12-02T10:00 +1:00',
+        'to'     => '2015-12-02T21:00 +1:00',
+        'ip'     => '178.237.148.150',
+        'dbname' => array( 'cawiki', 'commonswiki' ),
+        'value'  => 50
 );
-
-$wmgThrottlingExceptions[] = array( // T118122
-	'from'   => '2015-11-23T06:00 +0:00',
-	'to'     => '2015-11-23T12:00 +0:00',
-	'range'     => array(
-		'132.74.0.0/16',
-		'132.75.0.0/16',
-	),
-	'dbname' => array( 'hewiki', 'commonswiki' ),
-	'value'  => 35 // 25 participants expected
+$wmgThrottlingExceptions[] = array( // T119715
+        'from'   => '2015-12-03T10:00 +1:00',
+        'to'     => '2015-12-03T21:00 +1:00',
+        'ip'     => '178.237.148.150',
+        'dbname' => array( 'cawiki', 'commonswiki' ),
+        'value'  => 50
 );
 
 ## Add throttling definitions above.
