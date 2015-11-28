@@ -469,8 +469,8 @@ if ( $wmgUsePagedTiffHandler ) {
 $wgTiffUseTiffinfo = true;
 $wgTiffMaxMetaSize = 1048576;
 
-$wgMaxImageArea = 75e6; // 75MP
-$wgMaxAnimatedGifArea = 75e6; // 75MP
+$wgMaxImageArea = 10e7; // 100MP
+$wgMaxAnimatedGifArea = 10e7; // 100MP
 
 $wgFileExtensions = array_merge( $wgFileExtensions, $wmgFileExtensions );
 
