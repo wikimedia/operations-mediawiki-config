@@ -7601,6 +7601,10 @@ $wgConf->settings = array(
 	'+gawiki' => array(
 		'rollbacker' => array( 'rollback' => true ),
 	),
+	'guwiki' => array(
+		'rollback' => array( 'rollback' => true ),
+		'autopatrolled' => array( 'autopatrol' => true ),
+	),
 	'hewiki' => array(
 		'user' => array(
 			'move' => false,
@@ -8792,6 +8796,9 @@ $wgConf->settings = array(
 	),
 	'+gawiki' => array(
 		'sysop' => array( 'rollbacker' ),
+	),
+	'+guwiki' => array(
+		'sysop' => array( 'rollback', 'autopatrol'),
 	),
 	'+hewiki' => array(
 		'sysop' => array( 'patroller', 'autopatrolled', 'accountcreator' ),
