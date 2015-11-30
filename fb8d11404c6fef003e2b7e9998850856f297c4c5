@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_dafcca6f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15969,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-11-30T16:27:24Z",
+      "side": 1,
+      "message": "OK, if you\u0027re sure extension.json sets the array then that\u0027s fine. But here enwiki is redundant IMO.",
+      "revId": "fb8d11404c6fef003e2b7e9998850856f297c4c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
