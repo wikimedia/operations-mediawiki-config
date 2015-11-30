@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_c4362f4e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15962,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-11-30T01:20:38Z",
+      "side": 0,
+      "message": "Should we not delete this as an array is expected [1] by the code when QuickSurveys is enabled?\n\nhttps://github.com/wikimedia/mediawiki-extensions-QuickSurveys/blob/master/includes/QuickSurveys.hooks.php#L134",
+      "revId": "becf87da6a36274c0a772e014aeeff6423dee589",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
