@@ -164,7 +164,6 @@ function wmfLabsSettings() {
 		),
 
 		//'-wgDebugLogGroups' => array(),
-		'-wgRateLimitLog' => array(),
 		'-wgJobLogFile' => array(),
 
 		// T62013, T58758
