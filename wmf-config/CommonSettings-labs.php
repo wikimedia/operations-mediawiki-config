@@ -329,6 +329,10 @@ if ( $wmgUseCapiunto ) {
 	require_once "$IP/extensions/Capiunto/Capiunto.php";
 }
 
+if ( $wmgUseEcho ) {
+	$wgEchoSharedTrackingDB = 'wikishared';
+}
+
 // Experimental
 $wgGadgetsCaching = false;
 
