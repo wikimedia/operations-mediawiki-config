@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_171d5bc7",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2015-11-30T13:46:42Z",
+      "side": 1,
+      "message": "slash",
+      "revId": "8e658cc81069ce06449cb33d3531902545934b76",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_97286bde",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2709,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2015-11-30T13:46:42Z",
+      "side": 1,
+      "message": "I am surprised that this works, in our config there is no protocol prefix for domain.",
+      "revId": "8e658cc81069ce06449cb33d3531902545934b76",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
