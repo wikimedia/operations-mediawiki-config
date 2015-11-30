@@ -2158,6 +2158,7 @@ $wgConf->settings = array(
 	'itwiktionary' => 'Wikizionario',
 	'iuwiki' => 'ᐅᐃᑭᐱᑎᐊ',
 	'jawikinews' => 'ウィキニュース',
+	'jbowiki' => 'uikipedi\'as', // T118067
 	'kawiki' => 'ვიკიპედია',
 	'kawikibooks' => 'ვიკიწიგნები',
 	'kawikiquote' => 'ვიკიციტატა',
@@ -2408,6 +2409,7 @@ $wgConf->settings = array(
 	'hsbwiktionary' => 'Diskusija_k_Wikisłownikej', // T43328
 	'huwikinews' => 'Wikihírek-vita',
 	'iswiktionary' => 'Wikiorðabókarspjall',
+	'jbowiki' => 'casnu_la_.uikipedi\'as.', // T118067
 	'kbdwiki' => 'Уикипедиэм_и_тепсэлъыхьыгъуэ',
 	'knwikisource' => 'ವಿಕಿಸೋರ್ಸ್_ಚರ್ಚೆ', // T110806
 	'kmwiki' => 'ការពិភាក្សាអំពីវិគីភីឌា',
@@ -3144,6 +3146,9 @@ $wgConf->settings = array(
 	),
 	'+jawikiversity' => array(
 		'Wikiversity_talk' => NS_PROJECT_TALK,
+	),
+	'+jbowiki' => array(
+		'Wikipedia_talk' => NS_PROJECT_TALK,
 	),
 	'+kawikiquote' => array(
 		'Wikiquote_განხილვა' => NS_PROJECT_TALK,
