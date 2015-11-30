@@ -2670,7 +2670,7 @@ include_once( "$IP/extensions/XAnalytics/XAnalytics.php" );
 if ( $wmgUseUniversalLanguageSelector ) {
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
 	$wgULSGeoService = false;
-	$wgULSAnonCanChangeLanguage = false;
+	$wgULSAnonCanChangeLanguage = $wmgULSAnonCanChangeLanguage;
 	$wgULSPosition = $wmgULSPosition;
 	$wgULSIMEEnabled = $wmgULSIMEEnabled;
 	$wgULSWebfontsEnabled = $wmgULSWebfontsEnabled;

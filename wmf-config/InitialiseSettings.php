@@ -15093,6 +15093,11 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
+'wmgULSAnonCanChangeLanguage' => array(
+	'default' => false,
+	'testwiki' => true,
+),
+
 'wmgWikibaseCachePrefix' => array(
 	'default' => 'wikidatawiki',
 	'testwikidatawiki' => 'testwikidatawiki0',
