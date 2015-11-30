@@ -16,6 +16,24 @@
       "revId": "becf87da6a36274c0a772e014aeeff6423dee589",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_7a6fde8f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15962,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2015-11-30T15:40:25Z",
+      "side": 0,
+      "message": "I don\u0027t think it matters too much (pretty sure extension.json sets an array as backup), but no reason not to so Done in PS2.",
+      "parentUuid": "0ebaf39b_c4362f4e",
+      "revId": "becf87da6a36274c0a772e014aeeff6423dee589",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
