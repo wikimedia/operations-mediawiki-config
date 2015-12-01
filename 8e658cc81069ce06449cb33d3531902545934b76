@@ -33,6 +33,24 @@
       "revId": "8e658cc81069ce06449cb33d3531902545934b76",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_4836cd50",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 2709,
+      "author": {
+        "id": 110
+      },
+      "writtenOn": "2015-12-01T04:52:09Z",
+      "side": 1,
+      "message": "It is just a copy of \n\n$wgVirtualRestConfig[\u0027modules\u0027][\u0027restbase\u0027] \u003d array(\n\t\t\u0027url\u0027 \u003d\u003e $wmgRestbaseServer,\n\t\t\u0027domain\u0027 \u003d\u003e $wgCanonicalServer,\n\t\t\u0027forwardCookies\u0027 \u003d\u003e false,\n\t\t\u0027parsoidCompat\u0027 \u003d\u003e false\n\t);\n}\n\nA few line above in this file.\nThat also means, this configuration is never going to be used as long as VRS conf exists. So this is just fallback.",
+      "parentUuid": "0ebaf39b_97286bde",
+      "revId": "8e658cc81069ce06449cb33d3531902545934b76",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
