@@ -12926,6 +12926,7 @@ $wgConf->settings = array(
 'wmgVisualEditorDisableForAnons' => array(
 	'default' => false,
 	'enwiki' => true,
+	'eswiki' => true,
 ),
 
 // Whether VisualEditor should be enabled for a proportion of new accounts on a
