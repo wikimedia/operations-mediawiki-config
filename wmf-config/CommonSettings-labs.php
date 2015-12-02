@@ -261,6 +261,19 @@ if ( $wmgUsePageImages ) {
 	);
 }
 
+if ( $wmgUseRelatedArticles ) {
+	// ReadMore on wikipedias only
+	if ( $site === 'wikipedia' ) {
+		wfLoadExtension( 'Cards' );
+		wfLoadExtension( 'RelatedArticles' );
+		$wgRelatedArticlesLoggingSamplingRate = 0.001;
+		$wgRelatedArticlesShowReadMore = true;
+		$wgRelatedArticlesUseCirrusSearch = true;
+		$wgRelatedArticlesOnlyUseCirrusSearch = false;
+	}
+}
+
+
 if ( $wmgUseQuickSurveys ) {
 	$wgQuickSurveysRequireHttps = false;
 
