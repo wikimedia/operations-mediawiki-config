@@ -926,7 +926,17 @@ function wmfLabsSettings() {
 		),
 
 		'wmgUseRelatedArticles' => array(
-			'default' => true,
+			'default' => false,
+			'wikipedia' => true,
+		),
+
+		'wmgRelatedArticlesShowInSidebar' => array(
+			'default' => false
+		),
+
+		'wmgRelatedArticlesShowInFooter' => array(
+			'default' => false,
+			'wikipedia' => true,
 		),
 
 		'wmgUseNavigationTiming' => array(
