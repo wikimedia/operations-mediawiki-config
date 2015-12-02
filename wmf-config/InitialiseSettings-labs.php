@@ -926,7 +926,8 @@ function wmfLabsSettings() {
 		),
 
 		'wmgUseRelatedArticles' => array(
-			'default' => true,
+			'default' => false,
+			'wikipedia' => true,
 		),
 
 		'wmgUseNavigationTiming' => array(
