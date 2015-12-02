@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0ebaf39b_521e7376",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-12-02T13:00:31Z",
+      "side": 1,
+      "message": "on the Beta Cluster.",
+      "revId": "4d33d1f4eafaae9fd25bc08c2ba8a6629d5186f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_6502cf0e",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 266,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-12-02T13:00:31Z",
+      "side": 1,
+      "message": "The if statement above is exactly what InitialiseSettings-labs.php is supposed to do. The statement should be removed and another configuration variable added to InitialiseSettings-labs.php (see below).",
+      "revId": "4d33d1f4eafaae9fd25bc08c2ba8a6629d5186f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0ebaf39b_92070b20",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 269,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-12-02T13:00:31Z",
+      "side": 1,
+      "message": "This block of four variables should be configured independently from $wmgUseRelatedArticles, e.g.\n\n    if ( $wmgUseRelatedArticles ) {\n      wfLoadExtensions( \u0027RelatedArticles\u0027 );\n    }\n\n    if ( $wgRelatedArticlesShowReadMore ) {\n      wfLoadExtension( \u0027Cards\u0027 );\n\n      $wgRelatedArticlesShowReadMore \u003d true;\n      $wgRelatedArticlesUseCirrusSearch \u003d true;\n      $wgRelatedArticlesOnlyUseCirrusSearch \u003d false;\n    }",
+      "revId": "4d33d1f4eafaae9fd25bc08c2ba8a6629d5186f6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
