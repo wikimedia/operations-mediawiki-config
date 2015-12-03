@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "ceb37bc7_517da6e3",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 934,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2015-12-03T15:40:33Z",
+      "side": 1,
+      "message": "This should be\n\n    array(\n      \u0027default\u0027 \u003d\u003e false,\n      \u0027wikivoyage\u0027 \u003d\u003e true,\n    )\n\nno?",
+      "revId": "5e890346b5f6385636384edf6e220ecf49817778",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ceb37bc7_6eb7abd4",
         "filename": "wmf-config/InitialiseSettings-labs.php",
         "patchSetId": 3
