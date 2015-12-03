@@ -16,6 +16,24 @@
       "revId": "5e890346b5f6385636384edf6e220ecf49817778",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb37bc7_0e870fde",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 937,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2015-12-03T13:38:28Z",
+      "side": 1,
+      "message": "copy paste fail. who wants to type long config names without autocomplete? thanks for pointing out.",
+      "parentUuid": "ceb37bc7_6eb7abd4",
+      "revId": "5e890346b5f6385636384edf6e220ecf49817778",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
