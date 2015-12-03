@@ -186,9 +186,11 @@ require "$wmfConfigDir/redis.php";
 if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/db-labs.php";
 	require "$wmfConfigDir/mc-labs.php";
+	require "$wmfConfigDir/jobqueue-labs.php";
 } else {
 	require "$wmfConfigDir/mc.php";
 	require "$wmfConfigDir/db-{$wmfDatacenter}.php";
+	require "$wmfConfigDir/jobqueue-{$wmfDatacenter}.php";
 }
 
 ini_set( 'memory_limit', $wmgMemoryLimit );
