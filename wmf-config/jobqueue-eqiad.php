@@ -87,9 +87,9 @@ $wgJobTypeConf['default'] = array(
 $wgJobQueueAggregator = array(
 	'class' => 'JobQueueAggregatorRedis',
 	'redisServers' => array(
-		'rdb1001.eqiad.wmnet:6379', // preferred
-		'rdb1003.eqiad.wmnet:6379', // fallback
-		'rdb1007.eqiad.wmnet:6379', // fallback
+		'rdb1001.eqiad.wmnet:6378', // preferred
+		'rdb1003.eqiad.wmnet:6378', // fallback
+		'rdb1007.eqiad.wmnet:6378', // fallback
 	),
 	'redisConfig' => array(
 		'connectTimeout' => 1.0,
