@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceb37bc7_653341c1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 7605,
+      "author": {
+        "id": 866
+      },
+      "writtenOn": "2015-12-04T05:25:33Z",
+      "side": 1,
+      "message": "Should it is \u0027rollbacker\u0027?",
+      "revId": "274a49a3c2d24a329bb01e8365ebaa7d083a77cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb37bc7_c5beadfa",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 8801,
+      "author": {
+        "id": 866
+      },
+      "writtenOn": "2015-12-04T05:25:33Z",
+      "side": 1,
+      "message": "Should it is \u0027rollbacker\u0027?",
+      "revId": "274a49a3c2d24a329bb01e8365ebaa7d083a77cf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
