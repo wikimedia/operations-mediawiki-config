@@ -812,6 +812,11 @@ if ( $wmgUseTimedMediaHandler ) {
 
 	// use new ffmpeg build w/ VP9 & Opus support
 	$wgFFmpegLocation = '/usr/bin/ffmpeg';
+
+	// Test ogg opus support
+	$wgEnabledAudioTranscodeSet = array(
+		WebVideoTranscode::ENC_OGG_OPUS
+	);
 }
 
 if ( $wmgUseUrlShortener ) {
