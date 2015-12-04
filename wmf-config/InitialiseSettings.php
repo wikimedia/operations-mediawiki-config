@@ -7953,7 +7953,7 @@ $wgConf->settings = array(
 		'communityapps' => array( 'view-community-applications' => true ),
 		'flood' => array( 'bot' => true ), // T86237
 		'user' => array( 'massmessage' => true, ), // T66978
-		'sysop' => array( 'flow-create-board' => true ), // T101663
+		'sysop' => array( 'importupload' => true, 'flow-create-board' => true ), // T101663
 	),
 	'+ombudsmenwiki' => array(
 		'autoconfirmed' => array(
@@ -10033,6 +10033,7 @@ $wgConf->settings = array(
 	'nowikiquote' => array( 'w', 'en', 'nn' ),
 	'nowikisource' => array( 'w' ),
 	'nowiktionary' => array( 'w' ),
+	'officewiki' => array( 'en', 'meta', 'commons' ),
 	'orwiki' => array( 'en', 'commons' ), // T33185
 	'orwikisource' => array( 'en', 'mul' ),
 	'otrs_wikiwiki' => array( 'meta' ),
