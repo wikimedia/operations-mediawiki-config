@@ -200,6 +200,10 @@ if ( $wmgUseTimedMediaHandler ) {
 	));
 	$wgEnableTranscode = true; //enable transcoding on labs
 	$wgFFmpegLocation = '/usr/bin/ffmpeg'; // use new ffmpeg build w/ VP9 & Opus support
+
+
+	// Test ogg opus support
+	$wgEnabledAudioTranscodeSet[] = WebVideoTranscode::ENC_OGG_OPUS;
 }
 
 if ( $wgDBname == "testwiki" ) {
