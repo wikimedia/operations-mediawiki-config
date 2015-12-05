@@ -327,6 +327,11 @@ if ( $wgDBname === 'labswiki' ) {
 	$wgPasswordPolicy['policies']['bot']['MinimalPasswordLength'] = 1;
 }
 
+// Temporarily disable PasswordCannotBePopular policies until communicated.
+unset( $wgPasswordPolicy['policies']['bureaucrat']['PasswordCannotBePopular'] );
+unset( $wgPasswordPolicy['policies']['sysop']['PasswordCannotBePopular'] );
+
+
 if ( PHP_SAPI === 'cli' ) {
 	$wgShowExceptionDetails = true;
 }
