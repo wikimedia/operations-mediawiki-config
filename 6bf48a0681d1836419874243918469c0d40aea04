@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeb807a7_6949dc69",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2015-12-07T22:01:01Z",
+      "side": 1,
+      "message": "This doesn\u0027t seem right, why would the variable not be set?",
+      "revId": "6bf48a0681d1836419874243918469c0d40aea04",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
