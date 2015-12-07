@@ -355,4 +355,9 @@ $wgGadgetsCaching = false;
 
 $wgMessageCacheType = CACHE_ACCEL;
 
+// Test of new import source configuration on labs cluster
+$wgImportSources = false;
+include( "$wmfConfigDir/import.php" );
+$wgHooks['ImportSources'][] = 'wmfImportSources';
+
 } # end safeguard
