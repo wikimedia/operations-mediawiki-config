@@ -931,7 +931,8 @@ function wmfLabsSettings() {
 		),
 
 		'wmgRelatedArticlesShowInSidebar' => array(
-			'default' => false
+			'default' => false,
+			'wikivoyage' => true,
 		),
 
 		'wmgRelatedArticlesShowInFooter' => array(
