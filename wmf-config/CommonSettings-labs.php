@@ -25,8 +25,7 @@ $wgRCFeeds['redis'] = array(
 	'uri'       => "redis://deployment-stream.eqiad.wmflabs:6379/rc.$wgDBname",
 );
 
-$wgUDPProfilerHost = 'labmon1001.eqiad.wmnet';
-$wgAggregateStatsID = "$wgVersion-labs";
+$wgProfiler['udphost'] = 'labmon1001.eqiad.wmnet';
 
 $wgDebugTimestamps = true;
 
