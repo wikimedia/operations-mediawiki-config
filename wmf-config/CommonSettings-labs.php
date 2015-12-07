@@ -266,7 +266,7 @@ if ( $wmgUseRelatedArticles ) {
 }
 
 if ( $wmgRelatedArticlesShowInSidebar ) {
-	$wgRelatedArticlesShowInSidebar = true;
+	$wgRelatedArticlesShowInSidebar = $wmgRelatedArticlesShowInSidebar;
 }
 
 if ( $wmgRelatedArticlesShowInFooter ) {
