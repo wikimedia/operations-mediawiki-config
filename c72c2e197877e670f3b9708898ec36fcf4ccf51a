@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeb807a7_bcddd5e3",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15476,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2015-12-07T17:10:20Z",
+      "side": 1,
+      "message": "Maybe we can avoid this one, it\u0027s not really used nor useful for the moment.",
+      "revId": "c72c2e197877e670f3b9708898ec36fcf4ccf51a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
