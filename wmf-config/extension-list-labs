@@ -1,5 +1,4 @@
 $IP/extensions/Capiunto/Capiunto.php
-$IP/extensions/Cards/extension.json
 $IP/extensions/RelatedArticles/extension.json
 $IP/extensions/Sentry/Sentry.php
 $IP/extensions/UrlShortener/extension.json
