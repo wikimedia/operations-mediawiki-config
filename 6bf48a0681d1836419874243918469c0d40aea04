@@ -16,6 +16,24 @@
       "revId": "6bf48a0681d1836419874243918469c0d40aea04",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb807a7_296a04b2",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 268,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2015-12-07T22:03:06Z",
+      "side": 1,
+      "message": "It *should* always be set. The only time it wouldn\u0027t be would be in the case of a race between this file be processed and a change in InitializeSettings that set the wmg var.",
+      "parentUuid": "aeb807a7_6949dc69",
+      "revId": "6bf48a0681d1836419874243918469c0d40aea04",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
