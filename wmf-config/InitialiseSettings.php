@@ -5698,7 +5698,7 @@ $wgConf->settings = array(
 		116 => 'Sign_gloss', // T26570
 		117 => 'Sign_gloss_talk',
 		118 => 'Reconstruction', // T119207
-		119 => 'Reconstruction_talk,'
+		119 => 'Reconstruction_talk',
 	),
 	'eowiktionary' => array(
 		NS_USER => 'Uzanto', // T24426
