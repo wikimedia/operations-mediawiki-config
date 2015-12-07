@@ -19,6 +19,7 @@ mwconfig_files_txt=(
 	filebackend-labs.php
 	filebackend.php
 	flaggedrevs.php
+	import.php
 	jobqueue-eqiad.php
 	LegalContactPages.php
 	AffComContactPages.php
