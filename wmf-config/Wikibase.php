@@ -19,6 +19,8 @@ if ( defined( 'HHVM_VERSION' ) ) {
 
 $wgWBSharedSettings = array();
 
+$wgWBSharedSettings['maxSerializedEntitySize'] = 2500;
+
 $wgWBSharedSettings['siteLinkGroups'] = array(
 	'wikipedia',
 	'wikibooks',
