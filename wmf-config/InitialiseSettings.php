@@ -15006,6 +15006,15 @@ $wgConf->settings = array(
 	'wikivoyage' => true,
 ),
 
+'wmgRelatedArticlesShowInSidebar' => array(
+	'default' => false,
+	'wikivoyage' => true,
+),
+
+'wmgRelatedArticlesShowInFooter' => array(
+	'default' => false,
+),
+
 'wmgUseRelatedSites' => array(
 	'default' => false,
 	'wikivoyage' => true,
