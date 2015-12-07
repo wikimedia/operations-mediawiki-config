@@ -261,23 +261,6 @@ if ( $wmgUsePageImages ) {
 	);
 }
 
-if ( $wmgUseRelatedArticles ) {
-	wfLoadExtension( 'RelatedArticles' );
-}
-
-if ( isset( $wmgRelatedArticlesShowInSidebar ) ) {
-	$wgRelatedArticlesShowInSidebar = $wmgRelatedArticlesShowInSidebar;
-}
-
-if ( $wmgRelatedArticlesShowInFooter ) {
-	wfLoadExtension( 'Cards' );
-
-	$wgRelatedArticlesLoggingSamplingRate = 0.01;
-	$wgRelatedArticlesShowInFooter = true;
-	$wgRelatedArticlesUseCirrusSearch = true;
-	$wgRelatedArticlesOnlyUseCirrusSearch = false;
-}
-
 if ( $wmgUseQuickSurveys ) {
 	$wgQuickSurveysRequireHttps = false;
 
