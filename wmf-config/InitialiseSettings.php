@@ -3812,6 +3812,14 @@ $wgConf->settings = array(
 		109 => true,
 		110 => true,
 		111 => true,
+		112 => true,
+		113 => true,
+		114 => true,
+		115 => true,
+		116 => true,
+		117 => true,
+		118 => true,
+		119 => true,
 	),
 
 	// Wikipedia @{
