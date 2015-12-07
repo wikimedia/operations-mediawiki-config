@@ -265,8 +265,8 @@ if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
 }
 
-if ( $wmgRelatedArticlesShowInSidebar ) {
-	$wgRelatedArticlesShowInSidebar = true;
+if ( isset( $wmgRelatedArticlesShowInSidebar ) ) {
+	$wgRelatedArticlesShowInSidebar = $wmgRelatedArticlesShowInSidebar;
 }
 
 if ( $wmgRelatedArticlesShowInFooter ) {
