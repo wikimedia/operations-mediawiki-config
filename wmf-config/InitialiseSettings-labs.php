@@ -403,21 +403,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		),
 
-		'wmgUseRelatedArticles' => array(
-			'default' => false,
-			'wikipedia' => true,
-		),
-
-		'wmgRelatedArticlesShowInSidebar' => array(
-			'default' => false,
-			'wikivoyage' => true,
-		),
-
-		'wmgRelatedArticlesShowInFooter' => array(
-			'default' => false,
-			'wikipedia' => true,
-		),
-
 		'wmgUseNavigationTiming' => array(
 			'default' => true,
 		),
