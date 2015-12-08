@@ -13495,6 +13495,21 @@ $wgConf->settings = array(
 	'kowiki' => false, // T94388
 ),
 
+'wgMFExperiments' => array(
+	'default' => array(
+		// Experiment to prompts users to opt into the beta experience of the skin.
+		// https://phabricator.wikimedia.org/T114038
+		'betaoptin' => array(
+			'name' => 'betaoptin',
+			'enabled' => false,
+			'buckets' => array(
+				'control' => 1,
+				'A' => 0,
+			),
+		),
+	),
+),
+
 // Enable browse prototype T101155
 'wmgMFIsBrowseEnabled' => array(
 	'default' => false,
