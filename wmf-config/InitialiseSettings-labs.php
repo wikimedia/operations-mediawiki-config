@@ -1094,5 +1094,14 @@ function wmfLabsSettings() {
 			'default' => true,
 			'private' => false,
 		),
+		'wmgWikibaseEnableArbitraryAccess' => array(
+			'default' => false,
+			'metawiki' => true,
+			'arbitraryaccess' => true,
+		),
+		'wmgWikibaseEnableData' => array(
+			'default' => true,
+			'metawiki' => true,
+		),
 	);
 } # wmflLabsSettings()
