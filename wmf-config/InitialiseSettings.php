@@ -15985,7 +15985,7 @@ $wgConf->settings = array(
 ),
 'wgWPBSkinBlacklist' => array(
 	'default' => array(),
-	'enwiki' => array( 'monobook', 'modern', 'vector', 'cologneblue' ), // T101108
+	'enwiki' => array( 'monobook', 'modern', 'vector', 'cologneblue', 'minerva' ), // T101108
 ),
 'wgWPBEnableHeadingOverride' => array(
 	'default' => true,
