@@ -123,6 +123,13 @@ $wgCirrusSearchInterwikiProv = 'iwsw1';
 $wgCirrusSearchWikiToNameMap = $wmgCirrusSearchWikiToNameMap;
 $wgCirrusSearchLanguageToWikiMap = $wmgCirrusSearchLanguageToWikiMap;
 
+// Configure rescore profiles
+$wgCirrusSearchRescoreProfiles += $wmgCirrusSearchRescoreProfiles;
+$wgCirrusSearchRescoreFunctionScoreChains += $wmgCirrusSearchRescoreFunctionScoreChains;
+
+$wgCirrusSearchRescoreProfile = $wgCirrusSearchRescoreProfiles[$wmgCirrusSearchRescoreProfile];
+$wgCirrusSearchPrefixSearchRescoreProfile = $wgCirrusSearchRescoreProfiles[$wmgCirrusSearchPrefixSearchRescoreProfile];
+
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php

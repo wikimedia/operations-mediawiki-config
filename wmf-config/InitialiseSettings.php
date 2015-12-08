@@ -15693,6 +15693,194 @@ $wgConf->settings = array(
 ),
 # @} end of wmgCirrusSearchWikiToNameMap
 
+// List of custom rescore profiles @{cirrus rescore profiles
+'wmgCirrusSearchRescoreProfiles' => array(
+	'default' => array(),
+	'wikidatawiki' => array(
+		// lucene [* phrase] * (sitelinks + statement + label) * namespace
+		'product_simple_sum' => array(
+			'supported_namespaces' => array( 0, 120 ),
+			'fallback_profile' => 'default',
+			'rescore' => array(
+				array(
+					'window' => 8192,
+					'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
+					'type' => 'function_score',
+					'function_chain' => 'simple_sum'
+				),
+				array(
+					'window' => 8192,
+					'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
+					'type' => 'function_score',
+					'function_chain' => 'optional_chain'
+				),
+			)
+		),
+		// lucene [* phrase] * ( sqrt(sitelinks) + sqrt(statement) + sqrt(label) ) * namespace
+		'product_sum_of_squareroots' => array(
+			'supported_namespaces' => array( 0, 120 ),
+			'fallback_profile' => 'default',
+			'rescore' => array(
+				array(
+					'window' => 8192,
+					'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
+					'type' => 'function_score',
+					'function_chain' => 'sum_of_squareroots'
+				),
+				array(
+					'window' => 8192,
+					'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
+					'type' => 'function_score',
+					'function_chain' => 'optional_chain'
+				),
+			)
+		),
+		// lucene [* phrase] * log10( (sitelinks+1) * (statement+1) + (label+1) ) * namespace
+		'product_log_of_product' => array(
+			'supported_namespaces' => array( 0, 120 ),
+			'fallback_profile' => 'default',
+			'rescore' => array(
+				array(
+					'window' => 8192,
+					'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
+					'type' => 'function_score',
+					'function_chain' => 'log_of_product'
+				),
+				array(
+					'window' => 8192,
+					'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
+					'type' => 'function_score',
+					'function_chain' => 'optional_chain'
+				),
+			)
+		),
+		// Inhibits lucene & phrase if the sum is greater
+		// max( lucene [* phrase], (sitelinks + statement + label) ) * namespace
+		'max_simple_sum' => array(
+			'supported_namespaces' => array( 0, 120 ),
+			'fallback_profile' => 'default',
+			'rescore' => array(
+				array(
+					'window' => 8192,
+					'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
+					'score_mode' => 'max',
+					'type' => 'function_score',
+					'function_chain' => 'simple_sum'
+				),
+				array(
+					'window' => 8192,
+					'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
+					'type' => 'function_score',
+					'function_chain' => 'optional_chain'
+				),
+			)
+		),
+		// Inhibits completely lucene & phrase, might provide weird results for 2 words queries...
+		// (sitelinks + statement + label) * namespace
+		'no_lucene_simple_sum' => array(
+			'supported_namespaces' => array( 0, 120 ),
+			'fallback_profile' => 'default',
+			'rescore' => array(
+				array(
+					'window' => 8192,
+					'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
+					'score_mode' => 'total',
+					'query_weight' => 0,
+					'type' => 'function_score',
+					'function_chain' => 'simple_sum'
+				),
+				array(
+					'window' => 8192,
+					'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
+					'type' => 'function_score',
+					'function_chain' => 'optional_chain'
+				),
+			)
+		),
+	),
+),
+'wmgCirrusSearchRescoreFunctionScoreChains' => array(
+	'default' => array(),
+	'wikidatawiki' => array(
+		// label + sitelink + statement
+		'simple_sum' => array(
+			'score_mode' => 'sum',
+			'functions' => array(
+				array(
+					'type' => 'custom_field',
+					'params' => array(
+						'field' => 'label_count',
+						'missing' => 0
+					)
+				),
+				array(
+					'type' => 'custom_field',
+					'params' => array(
+						'field' => 'sitelink_count',
+						'missing' => 0
+					)
+				),
+				array(
+					'type' => 'custom_field',
+					'params' => array(
+						'field' => 'statement_count',
+						'missing' => 0
+					)
+				),
+			)
+		),
+		// sqrt(label) + sqrt(sitelink) + sqrt(statement)
+		'sum_of_squareroots' => array(
+			'score_mode' => 'sum',
+			'functions' => array(
+				array(
+					'type' => 'custom_field',
+					'params' => array(
+						'field' => 'label_count',
+						'modifier' => 'sqrt',
+						'missing' => 0
+					)
+				),
+				array(
+					'type' => 'custom_field',
+					'params' => array(
+						'field' => 'sitelink_count',
+						'modifier' => 'sqrt',
+						'missing' => 0
+					)
+				),
+				array(
+					'type' => 'custom_field',
+					'params' => array(
+						'field' => 'statement_count',
+						'modifier' => 'sqrt',
+						'missing' => 0
+					)
+				),
+			)
+		),
+		// log10( (label+1) * (sitelink+1) * (statement+1) )
+		'log_of_product' => array(
+			'functions' => array(
+				array(
+					'type' => 'script',
+					'script' => "log10( (doc['label_count'].value + 1) * (doc['sitelink_count'].value + 1) * (doc['statement_count'].value + 1) )",
+				),
+			)
+		),
+	),
+),
+// "default" profile is defined in CirrusSearch/profiles/RescoreProfiles.php
+'wmgCirrusSearchRescoreProfile' => array(
+	'default' => 'default',
+	'wikidatawiki' => 'default',
+),
+'wmgCirrusSearchPrefixSearchRescoreProfile' => array(
+	'default' => 'default',
+	'wikidatawiki' => 'default',
+),
+// @} end of cirrus rescore profiles
+
 'wmgWMEEnableCompletionExperiment' => array(
 	'default' => false,
 ),
