@@ -103,6 +103,8 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 			'cirrusKey' => '',
 		);
 		$wgCirrusSearchPoolCounterKey = 'unittest:poolcounter:blahblahblah';
+		$wgCirrusSearchRescoreProfiles = array( 'default' => array() );
+		$wgCirrusSearchRescoreFunctionScoreChains = array();
 
 		require "{$wmfConfigDir}/CirrusSearch-common.php";
 
