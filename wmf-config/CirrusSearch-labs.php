@@ -79,3 +79,9 @@ $wgCirrusSearchWikiToNameMap = array(
     'zh' => 'zhwiki',
 );
 
+// Configure rescore profiles
+$wgCirrusSearchRescoreProfiles += $wmgCirrusSearchRescoreProfiles;
+$wgCirrusSearchRescoreFunctionScoreChains += $wmgCirrusSearchRescoreFunctionScoreChains;
+
+$wgCirrusSearchRescoreProfile = $wgCirrusSearchRescoreProfiles[$wmgCirrusSearchRescoreProfile];
+$wgCirrusSearchPrefixSearchRescoreProfile = $wgCirrusSearchRescoreProfiles[$wmgCirrusSearchPrefixSearchRescoreProfile];
