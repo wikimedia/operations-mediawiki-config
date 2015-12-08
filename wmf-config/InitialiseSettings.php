@@ -4397,6 +4397,7 @@ $wgConf->settings = array(
 		'JobQueueFederated' => 'debug',
 		'JobQueueRedis' => 'debug',
 		'lc-recache' => 'debug',
+		'ldap' => 'debug',
 		'localhost' => array( 'logstash' => false ),
 		'logging' => 'debug',
 		'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
