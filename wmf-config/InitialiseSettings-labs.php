@@ -453,6 +453,12 @@ function wmfLabsSettings() {
 		'wmgUseGuidedTour' => array(
 			'wikidatawiki' => true,
 		),
+		'wmgUseRelatedArticles' => array(
+			'default' => true,
+		),
+		'wmgRelatedArticlesShowInFooter' => array(
+			'default' => true,
+		),
 		// Enable anonymous editor acquisition experiment across labs
 		'wmgGettingStartedRunTest' => array(
 			'default' => true,
