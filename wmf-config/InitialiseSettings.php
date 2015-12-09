@@ -12820,6 +12820,24 @@ $wgConf->settings = array(
 	'private' => false,		# Private wikis aren't yet supported by RESTbase
 ),
 
+// Whether VisualEditor should re-use the edit tab (and section link) or insert its own
+'wmgVisualEditorUseSingleEditTab' => array(
+	'default' => false,		# Deploying slowly with community advanced notice
+),
+
+// Whether VisualEditor's second tab and section link come after those for wikitext
+'wmgVisualEditorSecondaryTabs' => array(
+	'default' => false,
+	'enwiki' => true,
+	'eswiki' => true, // T62188
+	'hewiki' => true, // T54552
+),
+
+// Whether VisualEditor's second tab and section link have a "beta" superscript note?
+'wmgVisualEditorBetaInTab' => array(
+	'default' => false,
+),
+
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
 'wmgVisualEditorAvailableNamespaces' => array(
 	'default' => array(
@@ -12975,19 +12993,6 @@ $wgConf->settings = array(
 // Should VisualEditor's "beta welcome" be shown
 'wmgVisualEditorShowBetaWelcome' => array(
 	'default' => true,
-),
-
-// Should VisualEditor's tab and section link come second behind those for wikitext?
-'wmgVisualEditorSecondaryTabs' => array(
-	'default' => false,
-	'enwiki' => true,
-	'eswiki' => true, // T62188
-	'hewiki' => true, // T54552
-),
-
-// Should VisualEditor's tab and section link have a "beta" superscript note?
-'wmgVisualEditorBetaInTab' => array(
-	'default' => false,
 ),
 
 // Should VisualEditor display a live version of the Table of Contents as you edit

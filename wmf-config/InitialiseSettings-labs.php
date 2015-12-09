@@ -361,6 +361,10 @@ function wmfLabsSettings() {
 			'default' => true,
 		),
 
+		'wmgVisualEditorUseSingleEditTab' => array(
+			'default' => false,
+			'enwiki' => true,
+		),
 		'wmgVisualEditorExperimental' => array(
 			'default' => true,
 		),

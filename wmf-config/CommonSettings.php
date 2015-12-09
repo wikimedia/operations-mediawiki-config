@@ -1990,6 +1990,20 @@ if ( $wmgUseVisualEditor ) {
 		};
 	}
 
+	// Tab configuration
+	if ( $wmgVisualEditorUseSingleEditTab ) {
+		$wgVisualEditorUseSingleEditTab = true;
+	} else {
+		if ( $wmgVisualEditorSecondaryTabs ) {
+			$wgVisualEditorTabPosition = 'after';
+		}
+		if ( $wmgVisualEditorBetaInTab ) {
+			$wgVisualEditorTabMessages['editappendix'] =
+				$wgVisualEditorTabMessages['createappendix'] =
+				$wgVisualEditorTabMessages['editsectionappendix'] = 'visualeditor-beta-appendix';
+		}
+	}
+
 	// Namespace configuration
 	$wgVisualEditorAvailableNamespaces = $wmgVisualEditorAvailableNamespaces;
 	if ( !isset( $wgVisualEditorAvailableNamespaces ) ) {
@@ -2010,16 +2024,6 @@ if ( $wmgUseVisualEditor ) {
 	// T52000 - to remove once roll-out is complete.
 	if ( $wmgVisualEditorDisableForAnons ) {
 		$wgVisualEditorDisableForAnons = true;
-	}
-
-	// Tab configuration
-	if ( $wmgVisualEditorSecondaryTabs ) {
-		$wgVisualEditorTabPosition = 'after';
-	}
-	if ( $wmgVisualEditorBetaInTab ) {
-		$wgVisualEditorTabMessages['editappendix'] =
-			$wgVisualEditorTabMessages['createappendix'] =
-			$wgVisualEditorTabMessages['editsectionappendix'] = 'visualeditor-beta-appendix';
 	}
 
 	// Welcome configuration
