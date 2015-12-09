@@ -7397,8 +7397,8 @@ $wgConf->settings = array(
 			'ipblock-exempt' => true, // T30914
 			'changetags' => true, // T97013
 		),
-		'oversight' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ), // T30465
-		'checkuser' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ), // T30465
+		'oversight' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-view-private' => true), // T30465, T119446
+		'checkuser' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-view-private' => true ), // T30465, T119446
 		'bureaucrat' => array( 'move-subpages' => true, 'suppressredirect' => true, 'tboverride' => true, ),
 		'templateeditor' => array( 'templateeditor' => true, 'tboverride' => true, ), // T57432
 		'sysop' => array(
