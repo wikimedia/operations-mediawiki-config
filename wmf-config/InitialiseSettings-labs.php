@@ -422,10 +422,6 @@ function wmfLabsSettings() {
 			'default' => 300,
 		),
 
-		'wmgUseCirrus' => array(
-			'default' => true,
-		),
-
 		'wmgUseFlow' => array(
 			'enwiki' => true,
 			'en_rtlwiki' => true,
