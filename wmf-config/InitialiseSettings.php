@@ -15543,6 +15543,7 @@ $wgConf->settings = array(
 	'fishbowl' => false,
 
 	'enwikisource' => true, // T78496
+	'frwiki' => true, // T120568
 	'metawiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
