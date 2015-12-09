@@ -12833,11 +12833,6 @@ $wgConf->settings = array(
 	'hewiki' => true, // T54552
 ),
 
-// Whether VisualEditor's second tab and section link have a "beta" superscript note?
-'wmgVisualEditorBetaInTab' => array(
-	'default' => false,
-),
-
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
 'wmgVisualEditorAvailableNamespaces' => array(
 	'default' => array(

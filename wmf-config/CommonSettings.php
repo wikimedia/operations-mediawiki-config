@@ -1997,11 +1997,6 @@ if ( $wmgUseVisualEditor ) {
 		if ( $wmgVisualEditorSecondaryTabs ) {
 			$wgVisualEditorTabPosition = 'after';
 		}
-		if ( $wmgVisualEditorBetaInTab ) {
-			$wgVisualEditorTabMessages['editappendix'] =
-				$wgVisualEditorTabMessages['createappendix'] =
-				$wgVisualEditorTabMessages['editsectionappendix'] = 'visualeditor-beta-appendix';
-		}
 	}
 
 	// Namespace configuration
