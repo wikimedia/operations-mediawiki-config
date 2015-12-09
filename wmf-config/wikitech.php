@@ -31,6 +31,8 @@ $wgLDAPLowerCaseUsername = array( 'labs' => false, 'invaliddomain' => false );
 // Only enable UseLocal if you need to promote an LDAP user
 #$wgLDAPUseLocal = true;
 
+$wgLDAPDebug = 5; // Maximally verbose logs for Andrew Bogott, 8-Dec-2015
+
 // Local debug logging for troubleshooting LDAP issues
 if ( false ) {
 	$wgLDAPDebug = 5;
