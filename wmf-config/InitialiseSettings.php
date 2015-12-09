@@ -8886,7 +8886,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller' ), // T72441
 	),
 	'+maiwiki' => array(
-		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker', 'import' ), // T89346, T99491, T118934
+		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker', 'import', 'bot' ), // T89346, T99491, T118934, T111898
 	),
 	'+mediawikiwiki' => array(
 		'sysop' => array( 'autoreview' ),
@@ -9536,7 +9536,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller' ), // T72441
 	),
 	'+maiwiki' => array(
-		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker', 'import' ), // T89346, T99491, T118934
+		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker', 'import', 'bot' ), // T89346, T99491, T118934, T111898
 	),
 	'+mediawikiwiki' => array(
 		'sysop' => array( 'autoreview' ),
