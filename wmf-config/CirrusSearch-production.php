@@ -5,6 +5,10 @@
 # to the 'production' realm.
 # It should be loaded AFTER CirrusSearch-common.php
 
+// Our cluster often has issues completing master actions
+// within the default 30s timeout. Upgrade that to 2m to
+// help things along.
+$wgCirrusSearchMasterTimeout = '2m';
 
 $wgCirrusSearchClusters = array(
 	'eqiad' => array( '10.2.2.30' ), // search.svc.eqiad.wmnet
