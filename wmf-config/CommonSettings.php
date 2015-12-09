@@ -2022,9 +2022,7 @@ if ( $wmgUseVisualEditor ) {
 	}
 
 	// Welcome configuration
-	if ( $wmgVisualEditorShowBetaWelcome ) {
-		$wgVisualEditorShowBetaWelcome = true;
-	}
+	$wgVisualEditorShowBetaWelcome = true;
 
 	// Experimental code configuration
 	if ( $wmgVisualEditorExperimental ) {
