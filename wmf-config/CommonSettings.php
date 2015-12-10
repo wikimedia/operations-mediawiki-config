@@ -2465,6 +2465,12 @@ if ( $wmgUseEcho ) {
 
 	// Whether to use job queue to process web and email notifications
 	$wgEchoUseJobQueue = $wmgEchoUseJobQueue;
+
+	if ( $wmgEchoUseCrossWikiTrackingTable ) {
+		$wgEchoSharedTrackingDB = 'wikishared';
+		// Explicitly set this to 'extension1', because some wikis have $wgEchoCluster set to false
+		$wgEchoSharedTrackingCluster = 'extension1';
+	}
 }
 
 if ( $wmgUseThanks ) {

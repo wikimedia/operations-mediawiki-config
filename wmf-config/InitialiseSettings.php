@@ -14801,6 +14801,12 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 ),
 
+'wmgEchoUseCrossWikiTrackingTable' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+),
+
 // Thanks should be enabled for wikis with Echo
 'wmgUseThanks' => array(
 	'default' => true,
