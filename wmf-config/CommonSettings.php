@@ -331,6 +331,14 @@ if ( $wgDBname === 'labswiki' ) {
 unset( $wgPasswordPolicy['policies']['bureaucrat']['PasswordCannotBePopular'] );
 unset( $wgPasswordPolicy['policies']['sysop']['PasswordCannotBePopular'] );
 
+// Require 8-byte password for staff. Set MinimumPasswordLengthToLogin
+// to 8 also, once staff have time to update.
+$wgPasswordPolicy['policies']['staff'] = array(
+	'MinimalPasswordLength' => 8,
+	'MinimumPasswordLengthToLogin' => 1,
+	'PasswordCannotMatchUsername' => true,
+	'PasswordCannotBePopular' => 25,
+);
 
 if ( PHP_SAPI === 'cli' ) {
 	$wgShowExceptionDetails = true;
