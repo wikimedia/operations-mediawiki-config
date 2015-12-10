@@ -13177,9 +13177,24 @@ $wgConf->settings = array(
 // Whether VisualEditor's feedback page should be consolidated down to just the
 // single Flow board on MediaWiki.org
 'wmgVisualEditorConsolidateFeedback' => array(
-	'default' => false,
-	'test2wiki' => true,		// Initial testing
+	'default' => true,
 	'mediawikiwiki' => false,   // This is the consolidation point
+	'arwiki' => true,           // Retaining for local conversations
+	'bnwiki' => true,           // Retaining for local conversations
+	'dewiki' => true,           // Retaining for local conversations
+	'enwiki' => true,           // Retaining for local conversations
+	'eswiki' => true,           // Retaining for local conversations
+	'fawiki' => true,           // Retaining for local conversations
+	'fiwiki' => true,           // Retaining for local conversations
+	'frwiki' => true,           // Retaining for local conversations
+	'hiwiki' => true,           // Retaining for local conversations
+	'huwiki' => true,           // Retaining for local conversations
+	'itwiki' => true,           // Retaining for local conversations
+	'jawiki' => true,           // Retaining for local conversations
+	'kowiki' => true,           // Retaining for local conversations
+	'nlwiki' => true,           // Retaining for local conversations
+	'svwiki' => true,           // Retaining for local conversations
+	'zh_yuewiki' => true,       // Retaining for local conversations
 	'betawikiversity' => false, // No local Flow install, so won't work
 	'dewikivoyage' => false,    // No local Flow install, so won't work
 	'enwikiversity' => false,   // No local Flow install, so won't work
