@@ -8010,6 +8010,11 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ),
 		'sysop' => array( 'import' => true ),
 	),
+	'pawiki' => array(
+		'patroller' => array( 'patrol' => true ), // T120369
+		'autopatrolled' => array( 'autopatrol' => true ), // T120369
+		'transwiki' => array ( 'import' => true ) // T120369
+	),
 	// T8303
 	'plwiki' => array(
 		'user' => array( 'upload' => false ),
@@ -8987,6 +8992,9 @@ $wgConf->settings = array(
 	'+outreachwiki' => array(
 		'bureaucrat' => array( 'translationadmin' ),
 	),
+	'+pawiki' => array(
+		'sysop' => array( 'patroller', 'autopatrolled', 'transwiki' ), // T120369
+	),
 	'+plwiki' => array(
 		'bureaucrat' => array( 'abusefilter', 'flood' ),
 	),
@@ -9645,6 +9653,9 @@ $wgConf->settings = array(
 			'sysop', 'bureaucrat', 'autopatrolled', 'import',
 			'translationadmin', // T56207
 		),
+	),
+	'+pawiki' => array(
+		'sysop' => array( 'patroller', 'autopatrolled', 'transwiki' ), // T120369
 	),
 	'+plwiki' => array(
 		'bureaucrat' => array( 'abusefilter', 'flood' ),
