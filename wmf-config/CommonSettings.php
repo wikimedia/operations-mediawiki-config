@@ -2040,9 +2040,6 @@ if ( $wmgUseVisualEditor ) {
 		$wgVisualEditorFeedbackTitle = 'VisualEditor/Feedback';
 	}
 
-	// Welcome configuration
-	$wgVisualEditorShowBetaWelcome = true;
-
 	// Experimental code configuration
 	if ( $wmgVisualEditorExperimental ) {
 		$wgDefaultUserOptions['visualeditor-enable-experimental'] = 1;
