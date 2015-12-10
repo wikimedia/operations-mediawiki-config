@@ -2439,13 +2439,10 @@ if ( $wmgUseEcho ) {
 
 	// Eventlogging for Schema:Echo
 	$wgEchoConfig['eventlogging']['Echo']['enabled'] = true;
-	$wgEchoConfig['eventlogging']['Echo']['revision'] = 7731316;
 	// Eventlogging for Schema:EchoMail
 	$wgEchoConfig['eventlogging']['EchoMail']['enabled'] = true;
-	$wgEchoConfig['eventlogging']['EchoMail']['revision'] = 5467650;
 	// Eventlogging for Schema:EchoInteraction
 	$wgEchoConfig['eventlogging']['EchoInteraction']['enabled'] = true;
-	$wgEchoConfig['eventlogging']['EchoInteraction']['revision'] = 5782287;
 
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
