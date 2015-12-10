@@ -2026,6 +2026,12 @@ if ( $wmgUseVisualEditor ) {
 		$wgVisualEditorDisableForAnons = true;
 	}
 
+	// Feedback configuration
+	if ( $wmgVisualEditorConsolidateFeedback ) {
+		$wgVisualEditorFeedbackAPIURL = 'https://www.mediawiki.org/w/api.php';
+		$wgVisualEditorFeedbackTitle = 'VisualEditor/Feedback';
+	}
+
 	// Welcome configuration
 	if ( $wmgVisualEditorShowBetaWelcome ) {
 		$wgVisualEditorShowBetaWelcome = true;
