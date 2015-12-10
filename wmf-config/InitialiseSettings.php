@@ -14842,6 +14842,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'mediawikiwiki' => true,
 	'bswiki' => true,
+	'cawiki' => true, // T120829
 	'urwiki' => true,
 	'zhwiki' => true,
 	'wikidatawiki' => true,
