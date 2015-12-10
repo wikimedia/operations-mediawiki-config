@@ -13040,8 +13040,12 @@ $wgConf->settings = array(
 
 // Whether VisualEditor's feedback page should be consolidated down to just
 'wmgVisualEditorConsolidateFeedback' => array(
-	'default' => false,
+	'default' => true,
 	'mediawikiwiki' => false,   // This is the consolidation point
+	'dewiki' => true,           // Retaining for local conversations
+	'enwiki' => true,           // Retaining for local conversations
+	'eswiki' => true,           // Retaining for local conversations
+	'frwiki' => true,           // Retaining for local conversations
 	'betawikiversity' => false, // No local Flow install, so won't work
 	'dewikivoyage' => false,    // No local Flow install, so won't work
 	'enwikiversity' => false,   // No local Flow install, so won't work
