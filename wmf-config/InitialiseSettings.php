@@ -8455,6 +8455,11 @@ $wgConf->settings = array(
 		'sysop' => array( 'property-create' => true ), // T48953
 		'flood' => array( 'bot' => true ), // T50013
 	),
+
+	'wuuwiki' => array(
+		'rollbacker' => array( 'rollback' => true, 'autopatrol' => true, 'patrol' => true ), // T116270
+	),
+
 	// due to mass vandalism complaint, 2006-04-11
 	'zhwiki' => array(
 		// '*' => array( 'createpage' => false ),  # re-enabled createpage priv according to T27142, then redisabled *sigh*, then reenabled \o/
@@ -9168,6 +9173,9 @@ $wgConf->settings = array(
 	'+wikimania2016wiki' => array(
 		'bureaucrat' => array( 'translationadmin' ),
 	),
+	'+wuuwiki' => array(
+		'sysop' => array( 'rollbacker' ),
+	),
 	'zerowiki' => array(
 		'sysop' => true,
 	),
@@ -9834,6 +9842,9 @@ $wgConf->settings = array(
 	),
 	'+wikimaniateamwiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'autopatrolled', 'import' ),
+	),
+	'+wuuwiki' => array(
+		'sysop' => array( 'rollbacker' ),
 	),
 	'zerowiki' => array(
 		'sysop' => true,
