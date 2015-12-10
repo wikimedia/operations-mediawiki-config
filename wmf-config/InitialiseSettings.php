@@ -13033,11 +13033,6 @@ $wgConf->settings = array(
 	'enwiki' => true,
 ),
 
-// Should VisualEditor's "beta welcome" be shown
-'wmgVisualEditorShowBetaWelcome' => array(
-	'default' => true,
-),
-
 // Should VisualEditor display a live version of the Table of Contents as you edit
 'wmgVisualEditorEnableTocWidget' => array(
 	'default' => false,
