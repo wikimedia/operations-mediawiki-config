@@ -13038,6 +13038,19 @@ $wgConf->settings = array(
 	'enwiki' => true,
 ),
 
+// Whether VisualEditor's feedback page should be consolidated down to just
+'wmgVisualEditorConsolidateFeedback' => array(
+	'default' => false,
+	'mediawikiwiki' => false,   // This is the consolidation point
+	'betawikiversity' => false, // No local Flow install, so won't work
+	'dewikivoyage' => false,    // No local Flow install, so won't work
+	'enwikiversity' => false,   // No local Flow install, so won't work
+	'jawikiversity' => false,   // No local Flow install, so won't work
+	'private' => false,         // No local Flow install, so won't work
+	'loginwiki' => false,       // No local Flow install, so won't work
+	'votewiki' => false,        // No local Flow install, so won't work
+)
+
 // Should VisualEditor's "beta welcome" be shown
 'wmgVisualEditorShowBetaWelcome' => array(
 	'default' => true,
