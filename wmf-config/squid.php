@@ -69,3 +69,6 @@ $wgProxyWhitelist = array(
 	'62.214.230.86',
 	'217.94.171.96',
 );
+
+# Secondary purges to deal with DB replication lag
+$wgCdnReboundPurgeDelay = 11; // should be safely more than $wgLBFactoryConf 'max lag'
