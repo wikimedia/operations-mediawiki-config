@@ -315,8 +315,6 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 	'replication' => 'async'
 );
 
-$wgObjectCaches['resourceloader'] = $wgObjectCaches['apc'];
-
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
 
