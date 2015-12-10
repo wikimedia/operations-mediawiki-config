@@ -7861,7 +7861,7 @@ $wgConf->settings = array(
 		'rollbacker' => array ( 'rollback' => true ), // T118934
 	),
 	'mediawikiwiki' => array(
-		'user' => array( 'move' => false ),
+		'user' => array( 'move' => false, 'flow-create-board' => true ),
 		// Kept 'autoreview' as substitute for 'autopatrolled' user group
 		// because previously MediaWiki.org did not have one and it would be
 		// tedious to rename everyone's userrights.
