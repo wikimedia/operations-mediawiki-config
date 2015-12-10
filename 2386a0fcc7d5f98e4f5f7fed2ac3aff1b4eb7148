@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ead036b_17fe3836",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15556,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2015-12-10T08:36:01Z",
+      "side": 1,
+      "message": "do we have any interest in setting wgCirrusSearchInterwikiProv in the control group also?\nI understand that wgCirrusSearchInterwikiProv is useful to measure clickthrough, it would be interesting to prove that the results in the c group are more likely to be chosen by the user.\n\nPlease ignore if I\u0027m completely wrong.",
+      "revId": "2386a0fcc7d5f98e4f5f7fed2ac3aff1b4eb7148",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
