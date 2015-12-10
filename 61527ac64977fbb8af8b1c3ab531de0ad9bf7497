@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ead036b_bd2145ae",
+        "filename": "tests/loggingTest.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2015-12-10T15:54:27Z",
+      "side": 1,
+      "message": "Maybe we could assert that revision is set?",
+      "revId": "61527ac64977fbb8af8b1c3ab531de0ad9bf7497",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_fd06dd22",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 4340,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2015-12-10T15:54:27Z",
+      "side": 1,
+      "message": "If you\u0027re going to change the test you can remove this space :)",
+      "revId": "61527ac64977fbb8af8b1c3ab531de0ad9bf7497",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
