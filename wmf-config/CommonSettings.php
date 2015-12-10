@@ -776,8 +776,8 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 		'REL1_19',
 	);
 
-	// track downloads
-	$wgExtDistUseEventLogging = true;
+	// Use Graphite for popular list
+	$wgExtDistGraphiteRenderApi = 'https://graphite.wikimedia.org/render';
 }
 
 if ( $wmgUseGlobalBlocking ) {
