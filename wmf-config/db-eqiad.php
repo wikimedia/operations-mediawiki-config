@@ -481,13 +481,13 @@ $wgLBFactoryConf = array(
 	# es2
 	'cluster24' => array(
 		'10.64.32.184' => 1, # es1015, master
-		'10.64.0.6'    => 1, # es1011
+		'10.64.0.6'    => 3, # es1011
 		'10.64.16.186' => 3, # es1013
 	),
 	# es3
 	'cluster25' => array(
 		'10.64.48.116' => 3, # es1019, master
-#		'10.64.16.187' => 1, # es1014
+		'10.64.16.187' => 1, # es1014
 		'10.64.48.114' => 3, # es1017
 	),
 	# ExtensionStore shard1 - initially for AFTv5
