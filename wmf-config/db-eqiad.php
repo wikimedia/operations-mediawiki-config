@@ -480,9 +480,9 @@ $wgLBFactoryConf = array(
 
 	# es2
 	'cluster24' => array(
-		'10.64.0.6'    => 1, # es1011, master
+		'10.64.32.184' => 1, # es1015, master
+#		'10.64.0.6'    => 1, # es1011 (depooled for maintenance)
 		'10.64.16.186' => 3, # es1013
-		'10.64.32.184' => 3, # es1015
 	),
 	# es3
 	'cluster25' => array(
