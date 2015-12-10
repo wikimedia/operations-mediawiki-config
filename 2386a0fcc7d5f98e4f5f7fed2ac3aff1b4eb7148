@@ -16,6 +16,24 @@
       "revId": "2386a0fcc7d5f98e4f5f7fed2ac3aff1b4eb7148",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_579b501b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15556,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2015-12-10T08:41:57Z",
+      "side": 1,
+      "message": "both right and wrong :) The wprov parameter is our method of tracking clickthroughs of the interwiki links. Unfortunately it\u0027s only attached to the inter-wiki links, and not to intra-wiki links so adding it to the control bucket would be a noop. I like the idea though. The difficulty will be that intra-wiki links can have their wprov set through the javascript satisfaction metrics, so we need to come up with a way to share the wprov parameter between the two without clobbering each other. As currently written, users participating in the satisfaction schema would have this wprov overwritten.\n\nI should really go to bed now...",
+      "parentUuid": "8ead036b_17fe3836",
+      "revId": "2386a0fcc7d5f98e4f5f7fed2ac3aff1b4eb7148",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
