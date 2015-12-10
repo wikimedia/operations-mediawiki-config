@@ -7428,6 +7428,22 @@ $wgConf->settings = array(
 	),
 	'enwikiversity' => array(
 		'user' => array( 'move' => false ), // autoconfirmed only
+		'curator' => array( // T113109
+			'createaccount' => true,
+			'delete' => true,
+			'editprotected' => true,
+			'import' => true,
+			'ipblock-exempt' => true,
+			'mergehistory' => true,
+			'move-categorypages' => true,
+			'movefile' => true,
+			'move' => true,
+			'move-subpages' => true,
+			'protect' => true,
+			'rollback' => true,
+			'suppressredirect' => true,
+			'upload' => true,
+		),
 	),
 	'enwikivoyage' => array(
 		'autopatrolled' => array( 'autopatrol' => true ),
@@ -8692,6 +8708,9 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled' ),
 		'bureaucrat' => array( 'patroller' ),
 	),
+	'+enwikiversity' => array(
+		'sysop' => array( 'curator' ), // T113109
+	),
 	'+eswiki' => array(
 		'bureaucrat' => array( 'rollbacker', 'confirmed' ),
 		'sysop' => array( 'rollbacker', 'autopatrolled', 'patroller' ),
@@ -9335,6 +9354,9 @@ $wgConf->settings = array(
 	'+enwikivoyage' => array(
 		'sysop' => array( 'autopatrolled' ),
 		'bureaucrat' => array( 'sysop', 'patroller' ),
+	),
+	'+enwikiversity' => array(
+		'sysop' => array( 'curator' ), // T113109
 	),
 	'+enwikisource' => array(
 		'bureaucrat' => array( 'autopatrolled', 'flood' ), // T38863
