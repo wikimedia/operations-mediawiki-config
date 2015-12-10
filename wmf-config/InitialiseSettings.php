@@ -13033,6 +13033,20 @@ $wgConf->settings = array(
 	'enwiki' => true,
 ),
 
+// Whether VisualEditor's feedback page should be consolidated down to just the
+// single Flow board on MediaWiki.org
+'wmgVisualEditorConsolidateFeedback' => array(
+	'default' => false,
+	'mediawikiwiki' => false,   // This is the consolidation point
+	'betawikiversity' => false, // No local Flow install, so won't work
+	'dewikivoyage' => false,    // No local Flow install, so won't work
+	'enwikiversity' => false,   // No local Flow install, so won't work
+	'jawikiversity' => false,   // No local Flow install, so won't work
+	'private' => false,         // No local Flow install, so won't work; also risk of private data release
+	'loginwiki' => false,       // No local Flow install, so won't work; also no editing on this wiki
+	'votewiki' => false,        // No local Flow install, so won't work; also no editing on this wiki
+),
+
 // Should VisualEditor display a live version of the Table of Contents as you edit
 'wmgVisualEditorEnableTocWidget' => array(
 	'default' => false,
