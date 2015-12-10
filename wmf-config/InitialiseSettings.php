@@ -15547,6 +15547,38 @@ $wgConf->settings = array(
 
 'wmgCirrusSearchUserTesting' => array(
 	'default' => array(
+		'multilang-accept-lang' => array(
+			'sampleRate' => 7,
+			'buckets' => array(
+				// control bucket, setup threshold and detector but don't turn on the alt
+				// language query.
+				'a' => array(
+					'wgCirrusSearchEnableAltLanguage' => false,
+					'wgCirrusSearchInterwikiThreshold' => 3,
+					'wgCirrusSearchLanguageDetectors' => array(
+						'CirrusSearch\Searcher::detectLanguageViaAcceptLang',
+					),
+				),
+				// test bucket, try accept-lang and append results if < 1 results found
+				'b' => array(
+					'wgCirrusSearchEnableAltLanguage' => true,
+					'wgCirrusSearchInterwikiProv' => 'iwsw4',
+					'wgCirrusSearchInterwikiThreshold' => 1,
+					'wgCirrusSearchLanguageDetectors' => array(
+						'CirrusSearch\Searcher::detectLanguageViaAcceptLang',
+					),
+				),
+				// test bucket, try accept-lang and append results if < 3 results found
+				'c' => array(
+					'wgCirrusSearchEnableAltLanguage' => true,
+					'wgCirrusSearchInterwikiProv' => 'iwsw5',
+					'wgCirrusSearchInterwikiThreshold' => 3,
+					'wgCirrusSearchLanguageDetectors' => array(
+						'CirrusSearch\Searcher::detectLanguageViaAcceptLang',
+					),
+				),
+			),
+		),
 	),
 ),
 
