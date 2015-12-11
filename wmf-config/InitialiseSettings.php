@@ -8349,6 +8349,7 @@ $wgConf->settings = array(
 	),
 	'urwiki' => array(
 		'rollbacker' => array( 'rollback' => true ), // T47642
+		'interface-editor' => array( 'editinterface' => true ), // T120348
 	),
 	'vecwiki' => array(
 		'flood' => array( 'bot' => true ),
@@ -9119,7 +9120,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'technician' ), // T41690
 	),
 	'+ukwiki' => array(
-		'sysop' => array( 'patroller', 'rollbacker', 'accountcreator', 'filemover' ), // T104034, T119636
+		'sysop' => array( 'patroller', 'rollbacker', 'accountcreator', 'filemover', 'interface-editor' ), // T104034, T119636, T120348
 	),
 	'+ukwikivoyage' => array(
 		'sysop' => array( 'rollbacker', 'uploader', 'autopatrolled' ), // T56229
@@ -9784,7 +9785,7 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'technician' ), // T41690
 	),
 	'+ukwiki' => array(
-		'sysop' => array( 'patroller', 'rollbacker', 'accountcreator', 'filemover' ), // T104034, T119636
+		'sysop' => array( 'patroller', 'rollbacker', 'accountcreator', 'filemover', 'interface-editor' ), // T104034, T119636, T120348
 	),
 	'+ukwikimedia' => array(
 		'bureaucrat' => array( 'sysop' ),
