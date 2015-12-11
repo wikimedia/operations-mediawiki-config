@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ead036b_14070b21",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2044,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-11T12:20:29Z",
+      "side": 0,
+      "message": "The config seems to default to false in the repo? :)",
+      "revId": "3a8d2eee6bc6c933765a39a2af7916f5c2b8f680",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
