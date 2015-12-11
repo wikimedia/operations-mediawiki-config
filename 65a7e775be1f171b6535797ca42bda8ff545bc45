@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ead036b_f1bcc11c",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1262,
+      "author": {
+        "id": 99
+      },
+      "writtenOn": "2015-12-11T01:18:35Z",
+      "side": 1,
+      "message": "This should probably actually be PHP_INT_MAX instead of 25 (25 \u003d top 25 passwords. PHP_INT_MAX \u003d all passwords in the common password file [Currently 10,000])",
+      "revId": "65a7e775be1f171b6535797ca42bda8ff545bc45",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
