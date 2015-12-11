@@ -4362,6 +4362,7 @@ $wgConf->settings = array(
 		'Bug58676' => 'debug', # Invalid message parameter
 		'captcha' => 'debug',
 		'CentralAuth' => 'debug',
+		'CentralAuth-Bug39996' => 'debug',
 		'CentralAuthRename' => 'debug', // -legoktm 2014-07-14 for T69875
 		'CentralAuthUserMerge' => 'debug',
 		'CirrusSearch' => 'debug',
