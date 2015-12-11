@@ -15439,10 +15439,6 @@ $wgConf->settings = array(
 	'labswiki' => false,
 ),
 
-'wmgUseCirrus' => array(
-	'default' => true,
-),
-
 'wmgCirrusSearchDefaultCluster' => array(
 	'default' => 'eqiad',
 ),

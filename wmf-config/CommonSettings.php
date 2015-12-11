@@ -887,11 +887,9 @@ $wgCopyrightIcon = '<a href="//wikimediafoundation.org/">' .
 # :SEARCH:
 
 # All wikis are special and get Cirrus :)
-if ( $wmgUseCirrus ) {
-	require_once( "$IP/extensions/Elastica/Elastica.php" );
-	require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
-	include( "$wmfConfigDir/CirrusSearch-common.php" );
-}
+require_once( "$IP/extensions/Elastica/Elastica.php" );
+require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
+include( "$wmfConfigDir/CirrusSearch-common.php" );
 
 // Various DB contention settings
 if ( in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki', 'commonswiki' ) ) ) {
@@ -2427,8 +2425,7 @@ if ( $wmgEnableGeoData ) {
 	require_once( "$IP/extensions/GeoData/GeoData.php" );
 	$wgGeoDataBackend = 'elastic';
 
-	# Don't access Elasticsearch if CirrusSearch has problems
-	if ( !$wmgEnableGeoSearch || !$wmgUseCirrus ) {
+	if ( !$wmgEnableGeoSearch ) {
 		$wgAPIListModules['geosearch'] = 'ApiQueryDisabled';
 	}
 
