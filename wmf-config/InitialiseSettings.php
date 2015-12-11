@@ -8839,6 +8839,9 @@ $wgConf->settings = array(
 	'+gawiki' => array(
 		'sysop' => array( 'rollbacker' ),
 	),
+	'+guwiki' => array(
+		'sysop' => array( 'transwiki' ), // T120346
+	),
 	'+hewiki' => array(
 		'sysop' => array( 'patroller', 'autopatrolled', 'accountcreator' ),
 		'bureaucrat' => array( 'interface-editor' ),
@@ -9495,6 +9498,9 @@ $wgConf->settings = array(
 	),
 	'+gawiki' => array(
 		'sysop' => array( 'rollbacker' ),
+	),
+	'+guwiki' => array(
+		'sysop' => array( 'transwiki' ), // T120346
 	),
 	'+hewiki' => array(
 		'sysop' => array( 'patroller', 'autopatrolled', 'accountcreator' ),
