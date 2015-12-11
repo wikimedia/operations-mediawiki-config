@@ -5015,6 +5015,10 @@ $wgConf->settings = array(
 		100 => 'ପୋର୍ଟାଲ',
 		101 => 'ପୋର୍ଟାଲ_ଆଲୋଚନା',
 	),
+	'pawiki' => array(
+		100 => 'ਫਾਟਕ' // T120936
+		101 => 'ਫਾਟਕ_ਗੱਲ-ਬਾਤ',
+	),
 	'pflwiki' => array(
 		100 => 'Portal', // T44990
 		101 => 'Portal_Diskussion',
