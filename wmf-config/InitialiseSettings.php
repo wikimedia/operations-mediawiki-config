@@ -3306,6 +3306,9 @@ $wgConf->settings = array(
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_cumbersa' => NS_PROJECT_TALK,
 	),
+	'+mywiki' => array(
+		'WP' => NS_PROJECT, // T119807
+	),
 	'+mznwiki' => array(
 		'وپ' => NS_PROJECT,
 		'Portal' => 100,
