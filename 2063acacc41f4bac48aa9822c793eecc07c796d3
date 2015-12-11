@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ead036b_743f5fd4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 5019,
+      "author": {
+        "id": 890
+      },
+      "writtenOn": "2015-12-11T12:13:48Z",
+      "side": 1,
+      "message": "you should use commas :D",
+      "revId": "2063acacc41f4bac48aa9822c793eecc07c796d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
