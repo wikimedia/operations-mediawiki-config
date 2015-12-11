@@ -333,7 +333,7 @@ unset( $wgPasswordPolicy['policies']['sysop']['PasswordCannotBePopular'] );
 
 // Require 8-byte password for staff. Set MinimumPasswordLengthToLogin
 // to 8 also, once staff have time to update.
-$wgPasswordPolicy['policies']['staff'] = array(
+$wgCentralAuthGlobalPasswordPolicies['staff'] = array(
 	'MinimalPasswordLength' => 8,
 	'MinimumPasswordLengthToLogin' => 1,
 	'PasswordCannotMatchUsername' => true,
