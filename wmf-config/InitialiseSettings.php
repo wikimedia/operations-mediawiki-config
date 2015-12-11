@@ -10026,6 +10026,7 @@ $wgConf->settings = array(
 	'glwiki' => array( 'wikt', 's', 'q', 'b' ),
 	'gomwiki' => array( 'commons', 'meta', 'species', 'en', 'en:b', 'en:q', 'en:n', 'en:s', 'en:v', 'hi', 'mr', 'incubator' ), // T104563
 	'guwiki' => array( 'en' ), // T39511
+	'guwiki' => array( 'en', 'commons', 'meta', 'species', 'gu:s', 'bh', 'en', 'en:b', 'en:q', 'en:n', 'en:s', 'en:v', 'hi', 'ml', 'ne', 'pa', 'simple', 'te', 'ta', 'ur', 'sa' ), // T39511, T120346
 	'hakwiki' => array( 'incubator' ),
 	'hewiki' => array( 'wikt', 'q', 'b', 's', 'n', 'commons' ),
 	'hewikibooks' => array( 'w', 'wikt', 'q', 's', 'n' ),
