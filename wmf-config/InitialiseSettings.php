@@ -8405,6 +8405,7 @@ $wgConf->settings = array(
 	),
 	'urwiki' => array(
 		'rollbacker' => array( 'rollback' => true ), // T47642
+		'interface-editor' => array( 'editinterface' => true ), // T120348
 	),
 	'vecwiki' => array(
 		'flood' => array( 'bot' => true ),
@@ -9192,7 +9193,7 @@ $wgConf->settings = array(
 	),
 	'+urwiki' => array(
 		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker' ), // T44737 and T47643
-		'sysop' => array( 'confirmed', 'abusefilter', 'rollbacker' ), // T44737 and T47643
+		'sysop' => array( 'confirmed', 'abusefilter', 'rollbacker', 'interface-editor' ), // T44737, T47643 and T120348
 	),
 	'+viwiki' => array(
 		'sysop' => array(
@@ -9869,7 +9870,7 @@ $wgConf->settings = array(
 	),
 	'+urwiki' => array(
 		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker' ), // T44737 and T47643
-		'sysop' => array( 'confirmed' ), // T44737
+		'sysop' => array( 'confirmed', 'interface-editor' ), // T44737 and T120348
 	),
 	'+viwiki' => array(
 		'sysop' => array(
