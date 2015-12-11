@@ -7872,6 +7872,7 @@ $wgConf->settings = array(
 	'lvwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ), // T72441
 		'patroller' => array( 'autopatrol' => true, 'patrol' => true ), // T72441
+		'flood' => array( 'bot' ), // T121238
 	),
 	'+maiwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ), // T89346
@@ -8915,7 +8916,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'abusefilter' ),
 	),
 	'+lvwiki' => array(
-		'sysop' => array( 'autopatrolled', 'patroller' ), // T72441
+		'sysop' => array( 'autopatrolled', 'patroller', 'flood' ), // T72441, T121238
 	),
 	'+maiwiki' => array(
 		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker', 'import' ), // T89346, T99491, T118934
@@ -9574,7 +9575,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'abusefilter' ),
 	),
 	'+lvwiki' => array(
-		'sysop' => array( 'autopatrolled', 'patroller' ), // T72441
+		'sysop' => array( 'autopatrolled', 'patroller', 'flood' ), // T72441, T121238
 	),
 	'+maiwiki' => array(
 		'sysop' => array( 'autopatrolled', 'patroller', 'rollbacker', 'import' ), // T89346, T99491, T118934
@@ -11425,6 +11426,7 @@ $wgConf->settings = array(
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'frwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
 	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // T38600
+	'lvwiki' => array( 'flood' => array( 'flood' ) ), // T121238
 	'mlwiki' => array( 'botadmin' => array( 'botadmin' ) ),
 	'mlwikisource' => array( 'botadmin' => array( 'botadmin' ) ), // T46335
 	'mlwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
