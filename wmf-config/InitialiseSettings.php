@@ -12024,6 +12024,7 @@ $wgConf->settings = array(
 		'wikibase-otherprojects',                   // 2015-02-27 - Other projects sidebar (Wikidata)
 		'cx',                                       // 2015-07-14 - Content translation
 		'beta-feature-flow-user-talk-page',         // 2015-09-02 - Flow opt-in
+		'read-more',                                 // 2015-12-10 - Read more (Reading)
 	),
 ),
 
