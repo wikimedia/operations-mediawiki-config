@@ -16,6 +16,24 @@
       "revId": "f5fc17c61c24469dbfce69b3ad0ca8d7b6395d37",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ead036b_0a828297",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2421,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2015-12-11T17:35:07Z",
+      "side": 1,
+      "message": "We should remove the latter part of the check. It was meant to be \"don\u0027t use GeoSearch if we don\u0027t have Elastic yet\" but the second part of that question is always true now.",
+      "parentUuid": "8ead036b_cf279cb0",
+      "revId": "f5fc17c61c24469dbfce69b3ad0ca8d7b6395d37",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
