@@ -72,7 +72,7 @@ $wgOpenStackManagerDNSOptions = array(
 );
 $wgOpenStackManagerPuppetOptions = array(
 	'enabled' => true,
-	'defaultclasses' => array( 'base', 'role::labs::instance' ),
+	'defaultclasses' => array(),
 	'defaultvariables' => array(),
 );
 $wgOpenStackManagerInstanceUserData = array(
