@@ -331,14 +331,8 @@ if ( $wgDBname === 'labswiki' ) {
 unset( $wgPasswordPolicy['policies']['bureaucrat']['PasswordCannotBePopular'] );
 unset( $wgPasswordPolicy['policies']['sysop']['PasswordCannotBePopular'] );
 
-// Require 8-byte password for staff. Set MinimumPasswordLengthToLogin
-// to 8 also, once staff have time to update.
-$wgCentralAuthGlobalPasswordPolicies['staff'] = array(
-	'MinimalPasswordLength' => 8,
-	'MinimumPasswordLengthToLogin' => 1,
-	'PasswordCannotMatchUsername' => true,
-	'PasswordCannotBePopular' => 25,
-);
+// For global policies, see $wgCentralAuthGlobalPasswordPolicies below
+
 
 if ( PHP_SAPI === 'cli' ) {
 	$wgShowExceptionDetails = true;
@@ -1258,6 +1252,15 @@ if ( $wmgUseCentralAuth ) {
 	if ( $wmfRealm === 'production' ) {
 		$wgCentralAuthAutoCreateWikis[] = 'mediawikiwiki';
 	}
+
+	// Require 8-byte password for staff. Set MinimumPasswordLengthToLogin
+	// to 8 also, once staff have time to update.
+	$wgCentralAuthGlobalPasswordPolicies['staff'] = array(
+		'MinimalPasswordLength' => 8,
+		'MinimumPasswordLengthToLogin' => 1,
+		'PasswordCannotMatchUsername' => true,
+		'PasswordCannotBePopular' => 25,
+	);
 }
 
 // Config for GlobalCssJs
