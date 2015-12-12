@@ -1835,6 +1835,7 @@ $wgConf->settings = array(
 	'srwikinews' => 'Викивести',
 	'srwikiquote' => 'Викицитат', // T111247
 	'srwikisource' => 'Викизворник',
+	'srwiktionary' => 'Викиречник', // T121278
 	'strategywiki' => 'Strategic Planning',
 	'stewardwiki' => 'Steward Wiki',
 	'tawiki' => 'விக்கிப்பீடியா',
