@@ -28,35 +28,12 @@ $wmgThrottlingExceptions[] = array( // T110352 (long term)
 	'value'  => 50
 );
 
-$wmgThrottlingExceptions[] = array( // T119715
-        'from'   => '2015-11-30T10:00 +1:00',
-        'to'     => '2015-11-30T21:00 +1:00',
-        'ip'     => '178.237.148.150',
-        'dbname' => array( 'cawiki', 'commonswiki' ),
-        'value'  => 50
-);
-
-$wmgThrottlingExceptions[] = array( // T119715
-        'from'   => '2015-12-01T10:00 +1:00',
-        'to'     => '2015-12-01T21:00 +1:00',
-        'ip'     => '178.237.148.150',
-        'dbname' => array( 'cawiki', 'commonswiki' ),
-        'value'  => 50
-);
-
-$wmgThrottlingExceptions[] = array( // T119715
-        'from'   => '2015-12-02T10:00 +1:00',
-        'to'     => '2015-12-02T21:00 +1:00',
-        'ip'     => '178.237.148.150',
-        'dbname' => array( 'cawiki', 'commonswiki' ),
-        'value'  => 50
-);
-$wmgThrottlingExceptions[] = array( // T119715
-        'from'   => '2015-12-03T10:00 +1:00',
-        'to'     => '2015-12-03T21:00 +1:00',
-        'ip'     => '178.237.148.150',
-        'dbname' => array( 'cawiki', 'commonswiki' ),
-        'value'  => 50
+$wmgThrottlingExceptions[] = array( // T121303 - Telugu photo event
+        'from'   => '2015-12-13T00:00 +5:30',
+        'to'     => '2015-12-13T23:59 +5:30',
+        'ip'     => '14.139.69.138', // Hyderabad Central University
+        'dbname' => array( 'tewiki', 'commonswiki' ),
+        'value'  => 100
 );
 
 ## Add throttling definitions above.
