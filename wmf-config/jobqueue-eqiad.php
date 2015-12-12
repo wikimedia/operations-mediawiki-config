@@ -69,15 +69,15 @@ $wgJobTypeConf['default'] = array(
 
 		# rdb4
 
-		'rdb3-6379' => array(
+		'rdb4-6379' => array(
 				'redisServer' => 'rdb1005.eqiad.wmnet:6379', # master
 				#'redisServer' => 'rdb1006.eqiad.wmnet:6379', # slave
 			) + $wmgRedisQueueBaseConfig,
-		'rdb3-6380' => array(
+		'rdb4-6380' => array(
 				'redisServer' => 'rdb1005.eqiad.wmnet:6380', # master
 				#'redisServer' => 'rdb1006.eqiad.wmnet:6380', # slave
 			) + $wmgRedisQueueBaseConfig,
-		'rdb3-6381' => array(
+		'rdb4-6381' => array(
 				'redisServer' => 'rdb1005.eqiad.wmnet:6381', # master
 				#'redisServer' => 'rdb1006.eqiad.wmnet:6381', # slave
 			) + $wmgRedisQueueBaseConfig,
