@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_a2903e47",
+        "filename": "wmf-config/filebackend-codfw.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2015-12-14T21:38:42Z",
+      "side": 1,
+      "message": "codfw",
+      "revId": "d339df6aef6d3e270bb526506a92ced26b104a59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_4295ca34",
+        "filename": "wmf-config/filebackend-codfw.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2015-12-14T21:38:42Z",
+      "side": 1,
+      "message": "codfw",
+      "revId": "d339df6aef6d3e270bb526506a92ced26b104a59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_629a4668",
+        "filename": "wmf-config/filebackend-codfw.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2015-12-14T21:38:42Z",
+      "side": 1,
+      "message": "codfw",
+      "revId": "d339df6aef6d3e270bb526506a92ced26b104a59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
