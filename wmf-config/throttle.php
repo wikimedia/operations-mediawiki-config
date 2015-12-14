@@ -23,7 +23,7 @@ $wmgThrottlingExceptions = array();
 $wmgThrottlingExceptions[] = array( // T110352 (long term)
 	'from'   => '2015-08-29T00:00 +0:00',
 	'to'     => '2016-02-28T00:00 +0:00',
-	'ip'     => '218.248.16.20',
+	'IP'     => '218.248.16.20',
 	'dbname' => 'tawiki',
 	'value'  => 50
 );
@@ -31,7 +31,7 @@ $wmgThrottlingExceptions[] = array( // T110352 (long term)
 $wmgThrottlingExceptions[] = array( // T121303 - Telugu photo event
         'from'   => '2015-12-13T00:00 +5:30',
         'to'     => '2015-12-13T23:59 +5:30',
-        'ip'     => '14.139.69.138', // Hyderabad Central University
+        'IP'     => '14.139.69.138', // Hyderabad Central University
         'dbname' => array( 'tewiki', 'commonswiki' ),
         'value'  => 100
 );
