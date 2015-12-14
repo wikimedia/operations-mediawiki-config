@@ -11789,6 +11789,7 @@ $wgConf->settings = array(
 		'digital.slub-dresden.de',
 		'grossstadtgeschichten-berlin.de',
 		'content.staatsbibliothek-berlin.de',
+		'*.davidabian.com',                 // Trusted user website, used by Museo del Romanticismo - T121383
 	),
 ),
 
