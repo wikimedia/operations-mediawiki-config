@@ -4401,6 +4401,7 @@ $wgConf->settings = array(
 		'ldap' => 'debug',
 		'localhost' => array( 'logstash' => false ),
 		'logging' => 'debug',
+		'Math' => 'info',  // mobrovac for T121445
 		'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
 		'memcached' => 'error', // -aaron 2012/10/24
 		'mobile' => 'debug',
