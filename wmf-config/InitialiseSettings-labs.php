@@ -159,6 +159,7 @@ function wmfLabsSettings() {
 			'+beta' => array(
 				'CentralAuthVerbose' => 'debug',
 				'dnsblacklist' => 'debug',
+				'EventBus' => 'debug',
 				'squid' => 'debug',
 			),
 		),
