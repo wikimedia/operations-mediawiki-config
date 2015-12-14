@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_5d6ff6c0",
+        "filename": "wmf-config/import.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2015-12-14T01:34:21Z",
+      "side": 1,
+      "message": "Need to add $subdomain !\u003d\u003d \u0027test\u0027 \u0026\u0026 $subdomain !\u003d\u003d \u0027test2\u0027 as well, maybe convert to an in_array scenario",
+      "revId": "66ecdcd5552c11b4bd531d1aaa4f03e05494cb32",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
