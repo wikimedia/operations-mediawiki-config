@@ -1,6 +1,8 @@
 <?php
 
 if ( $wmgUseWikibaseRepo ) {
+	$wgWBRepoSettings['formatterUrlProperty'] = 'P9094';
+
 	$wgWBRepoSettings['badgeItems'] = array(
 		'Q49444' => 'wb-badge-goodarticle',
 		'Q49447' => 'wb-badge-featuredarticle',
