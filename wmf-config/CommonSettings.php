@@ -1151,6 +1151,10 @@ include $IP . '/extensions/AntiSpoof/AntiSpoof.php';
 // For transwiki import
 ini_set( 'user_agent', 'Wikimedia internal server fetcher (noc@wikimedia.org' );
 
+// Lazy-load import source configuration using a hook function
+include( "$wmfConfigDir/import.php" );
+$wgHooks['ImportSources'][] = 'wmfImportSources';
+
 // CentralAuth
 if ( $wmgUseCentralAuth ) {
 	include "$IP/extensions/CentralAuth/CentralAuth.php";
