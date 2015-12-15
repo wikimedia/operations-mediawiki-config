@@ -13396,8 +13396,8 @@ $wgConf->settings = array(
 	'zerowiki' => true,
 ),
 
-'wmgGraphImgServiceAlways' => array(
-	'default' => true,
+'wmgGraphEnableGZip' => array(
+	'default' => false,
 ),
 
 // direct format: //graphoid.wikimedia.org/{domain}/v1/png/{title}/{revid}/{hash}.png

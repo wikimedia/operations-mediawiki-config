@@ -2890,7 +2890,7 @@ if ( $wmgUseGraph ) {
 	require_once( "$IP/extensions/Graph/Graph.php" );
 
 	$wgGraphIsTrusted = $wmgGraphIsTrusted;
-	$wgGraphImgServiceAlways = $wmgGraphImgServiceAlways;
+	$wgGraphEnableGZip = $wmgGraphEnableGZip;
 	$wgGraphImgServiceUrl = $wmgGraphImgServiceUrl;
 
 	$wgGraphDataDomains = array(

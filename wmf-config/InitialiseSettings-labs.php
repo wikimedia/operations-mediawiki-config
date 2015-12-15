@@ -543,7 +543,7 @@ function wmfLabsSettings() {
 			'default' => false,
 		),
 
-		'wmgGraphImgServiceAlways' => array(
+		'wmgGraphEnableGZip' => array(
 			'default' => true,
 		),
 
