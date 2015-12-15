@@ -2,6 +2,8 @@
 
 if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
+		$wgWBRepoSettings['formatterUrlProperty'] = 'P368';
+
 		$wgWBRepoSettings['badgeItems'] = array(
 			'Q608' => 'wb-badge-goodarticle',
 			'Q609' => 'wb-badge-featuredarticle'
@@ -22,6 +24,8 @@ if ( $wmgUseWikibaseRepo ) {
 			'P185',
 		);
 	} else {
+		$wgWBRepoSettings['formatterUrlProperty'] = 'P1630';
+
 		$wgWBRepoSettings['badgeItems'] = array(
 			'Q17437798' => 'wb-badge-goodarticle',
 			'Q17437796' => 'wb-badge-featuredarticle',
