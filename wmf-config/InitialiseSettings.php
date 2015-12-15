@@ -4336,7 +4336,10 @@ $wgConf->settings = array(
 // to store these in a wiki and cache them locally.
 'wmgMonologAvroSchemas' => array(
 	'default' => array(
-		'CirrusSearchRequestSet' => file_get_contents( __DIR__ . '/avro/CirrusSearchRequestSet.avsc' ),
+		'CirrusSearchRequestSet' => array(
+			'schema' => file_get_contents( __DIR__ . '/event-schemas/avro/mediawiki/CirrusSearchRequestSet/111448028943.avsc' ), 
+			'revision' => 111448028943,
+		),
 	),
 ),
 # @} end of wmgAvroSchemas
