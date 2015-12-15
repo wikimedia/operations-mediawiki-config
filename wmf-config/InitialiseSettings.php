@@ -12026,19 +12026,19 @@ $wgConf->settings = array(
 
 // Whitelist enablement of individual Beta Features for production; per-wiki
 // configuration should happen below this. Next to each entry, please note the
-// date 6 months after the last major change, which is the automatic cut-off,
+// date **6 months after the last major change**, which is the nominal cut-off,
 // at which point the feature should be un-deployed.
 //
 // DO NOT add entries here without OK from Greg Grossmeier or James Forrester.
 'wmgBetaFeaturesWhitelist' => array(
 	'default' => array(
 		'visualeditor-enable',                      // VisualEditor – on-going (special permission)
-		'uls-compact-links',                        // 2014-09-06 – Compact language links
-		'popups',                                   // 2014-09-18 – Hovercards
-		'wikibase-otherprojects',                   // 2015-02-27 - Other projects sidebar (Wikidata)
-		'cx',                                       // 2015-07-14 - Content translation
-		'beta-feature-flow-user-talk-page',         // 2015-09-02 - Flow opt-in
-		'read-more',                                // 2016-06-10 - Read more (Reading)
+		'wikibase-otherprojects',                   // ! 2015-02-27 - Wikidata other projects sidebar
+		'uls-compact-links',                        // ! 2015-05-03 – Compact language links
+		'popups',                                   // 2016-01-16 – Hovercards
+		'beta-feature-flow-user-talk-page',         // 2016-03-02 - Flow opt-in
+		'cx',                                       // 2016-05-08 - ContentTranslation
+		'read-more',                                // 2016-06-10 - Read more
 	),
 ),
 
