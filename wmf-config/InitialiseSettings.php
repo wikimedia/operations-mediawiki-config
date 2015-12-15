@@ -11970,6 +11970,17 @@ $wgConf->settings = array(
 	'commonswiki' => array(),
 ),
 
+'wgForeignUploadTestEnabled' => array(
+	'default' => false,
+	'enwiki' => true,
+	'enwikibooks' => true,
+	'enwikinews' => true,
+	'enwikiquote' => true,
+	'enwikisource' => true,
+	'enwikiversity' => true,
+	'enwikivoyage' => true,
+),
+
 'wmgUseMwEmbedSupport' => array(
 	'default' => true,
 	'labswiki' => false,
