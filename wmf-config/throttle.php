@@ -28,12 +28,15 @@ $wmgThrottlingExceptions[] = array( // T110352 (long term)
 	'value'  => 50
 );
 
-$wmgThrottlingExceptions[] = array( // T121303 - Telugu photo event
-        'from'   => '2015-12-13T00:00 +5:30',
-        'to'     => '2015-12-13T23:59 +5:30',
-        'IP'     => '14.139.69.138', // Hyderabad Central University
-        'dbname' => array( 'tewiki', 'commonswiki' ),
-        'value'  => 100
+$wmgThrottlingExceptions[] = array( // T121321
+	'from'   => '2015-12-15T07:30 +2:00',
+	'to'     => '2015-12-15T13:00 +2:00',
+	'range'  => array(
+		'132.74.0.0/16',
+		'132.75.0.0/16',
+	),
+	'dbname' => array( 'hewiki', 'commonswiki' ),
+	'value'  => 50 //30 expected participants
 );
 
 ## Add throttling definitions above.
