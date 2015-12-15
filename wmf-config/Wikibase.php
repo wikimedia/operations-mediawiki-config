@@ -106,15 +106,15 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgPropertySuggesterMinProbability = 0.069;
 
 	// T72346
+	// see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18644427
 	$wgPropertySuggesterDeprecatedIds = array(
-		107, // (OBSOLETE) main type (GND)
 		143, // imported from
 		357, // (OBSOLETE) title (use P1476)
-		392, // (OBSOLETE) subtitle (use P1680)
+		387, // (OBSOLETE) quote (use P1683)
 		438, // (OBSOLETE) inscription (use P1684)
-		513, // birth name (Deprecated)
-		741, // (OBSOLETE) playing hand
-		1134, // (OBSOLETE) located in place (use P276)
+		513, // (OBSOLETE) birth name (use P1477)
+		738, // (OBSOLETE) influence of
+		1805, // (OBSOLETE) World Health Organisation International Nonproprietary Name (use P2275)
 	);
 
 	if ( !in_array( 'pageterms', $wgMFQueryPropModules ) ) {
