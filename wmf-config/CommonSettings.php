@@ -2027,6 +2027,11 @@ if ( $wmgUseVisualEditor ) {
 	// User access configuration
 	if ( $wmgVisualEditorDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
+		if ( $wmgVisualEditorSecondaryTabs ) {
+			$wgDefaultUserOptions['visualeditor-editor'] = 'wikitext';
+		} else {
+			$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
+		}
 		$wgHiddenPrefs[] = 'visualeditor-enable'; // T50666
 	} else {
 		// Only show the beta-disable preference if the wiki is in 'beta'.
