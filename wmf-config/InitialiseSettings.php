@@ -13053,6 +13053,7 @@ $wgConf->settings = array(
 // single Flow board on MediaWiki.org
 'wmgVisualEditorConsolidateFeedback' => array(
 	'default' => false,
+	'test2wiki' => true,		// Initial testing
 	'mediawikiwiki' => false,   // This is the consolidation point
 	'betawikiversity' => false, // No local Flow install, so won't work
 	'dewikivoyage' => false,    // No local Flow install, so won't work
