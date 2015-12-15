@@ -124,7 +124,7 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 	 * @dataProvider provideAvroSchemas
 	 */
 	public function testAvroSchemasIsValidJson( $schema ) {
-		json_decode( $schema['schema'] );
+		json_decode( $schema );
 		$this->assertEquals( JSON_ERROR_NONE, json_last_error() );
 	}
 
