@@ -1272,6 +1272,14 @@ if ( $wmgUseCentralAuth ) {
 		'PasswordCannotMatchUsername' => true,
 		'PasswordCannotBePopular' => PHP_INT_MAX,
 	);
+
+	// WMF Staff and two volunteers
+	$wgCentralAuthGlobalPasswordPolicies['sysadmin'] = array(
+		'MinimalPasswordLength' => 8,
+		'MinimumPasswordLengthToLogin' => 1,
+		'PasswordCannotMatchUsername' => true,
+		'PasswordCannotBePopular' => PHP_INT_MAX,
+	);
 }
 
 // Config for GlobalCssJs
