@@ -1280,6 +1280,13 @@ if ( $wmgUseCentralAuth ) {
 		'PasswordCannotMatchUsername' => true,
 		'PasswordCannotBePopular' => PHP_INT_MAX,
 	);
+
+	// See T104371
+	$wgCentralAuthGlobalPasswordPolicies['steward'] = array(
+		'MinimalPasswordLength' => 8,
+		'MinimumPasswordLengthToLogin' => 1,
+		'PasswordCannotMatchUsername' => true,
+	);
 }
 
 // Config for GlobalCssJs
