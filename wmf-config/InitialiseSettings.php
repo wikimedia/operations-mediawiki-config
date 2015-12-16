@@ -13410,8 +13410,7 @@ $wgConf->settings = array(
 ),
 
 'wmgGraphEnableGZip' => array(
-	'default' => false,
-	'mediawikiwiki' => true,
+	'default' => true,
 ),
 
 // direct format: //graphoid.wikimedia.org/{domain}/v1/png/{title}/{revid}/{hash}.png
