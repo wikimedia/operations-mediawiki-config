@@ -4337,7 +4337,7 @@ $wgConf->settings = array(
 'wmgMonologAvroSchemas' => array(
 	'default' => array(
 		'CirrusSearchRequestSet' => array(
-			'schema' => file_get_contents( __DIR__ . '/event-schemas/avro/mediawiki/CirrusSearchRequestSet/111448028943.avsc' ), 
+			'schema' => file_get_contents( __DIR__ . '/event-schemas/avro/mediawiki/CirrusSearchRequestSet/111448028943.avsc' ),
 			'revision' => 111448028943,
 		),
 	),
@@ -13411,6 +13411,7 @@ $wgConf->settings = array(
 
 'wmgGraphEnableGZip' => array(
 	'default' => false,
+	'mediawikiwiki' => true,
 ),
 
 // direct format: //graphoid.wikimedia.org/{domain}/v1/png/{title}/{revid}/{hash}.png
