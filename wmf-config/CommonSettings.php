@@ -1260,6 +1260,13 @@ if ( $wmgUseCentralAuth ) {
 		'PasswordCannotBePopular' => PHP_INT_MAX,
 	);
 
+	// See T104371
+	$wgCentralAuthGlobalPasswordPolicies['steward'] = array(
+		'MinimalPasswordLength' => 8,
+		'MinimumPasswordLengthToLogin' => 1,
+		'PasswordCannotMatchUsername' => true,
+	);
+
 	// testing -- aaron 2016-01-12
 	if ( in_array( $wgDBname, array( 'testwiki', 'mediawikiwiki', 'loginwiki' ) ) ) {
 		$wgCentralAuthUseSlaves = true;
