@@ -13431,8 +13431,6 @@ $wgConf->settings = array(
 	// Yurik would like new wikis only use <graph>...</graph>.
 	// See T97027 discussion for context.
 	'collabwiki' => true,
-	'mediawikiwiki' => true,
-	'metawiki' => true,
 	'zerowiki' => true,
 ),
 
