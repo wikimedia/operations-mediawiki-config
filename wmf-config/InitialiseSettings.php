@@ -11975,6 +11975,16 @@ $wgConf->settings = array(
 
 'wgForeignUploadTestEnabled' => array(
 	'default' => false,
+	// German
+	'dewiki' => true,
+	'dewikibooks' => true,
+	'dewikinews' => true,
+	'dewikiquote' => true,
+	'dewikisource' => true,
+	'dewikiversity' => true,
+	'dewikivoyage' => true,
+	'dewiktionary' => true,
+	// English
 	'enwiki' => true,
 	'enwikibooks' => true,
 	'enwikinews' => true,
@@ -11982,6 +11992,64 @@ $wgConf->settings = array(
 	'enwikisource' => true,
 	'enwikiversity' => true,
 	'enwikivoyage' => true,
+	'enwiktionary' => true,
+	// French
+	'frwiki' => true,
+	'frwikibooks' => true,
+	'frwikinews' => true,
+	'frwikiquote' => true,
+	'frwikisource' => true,
+	'frwikiversity' => true,
+	'frwikivoyage' => true,
+	'frwiktionary' => true,
+	// Hebrew
+	'hewiki' => true,
+	'hewikibooks' => true,
+	'hewikinews' => true,
+	'hewikiquote' => true,
+	'hewikisource' => true,
+	'hewikivoyage' => true,
+	'hewiktionary' => true,
+	// Italian
+	'itwiki' => true,
+	'itwikibooks' => true,
+	'itwikinews' => true,
+	'itwikiquote' => true,
+	'itwikisource' => true,
+	'itwikiversity' => true,
+	'itwikivoyage' => true,
+	'itwiktionary' => true,
+	// Macedonian
+	'mkwiki' => true,
+	'mkwikibooks' => true,
+	'mkwikisource' => true,
+	'mkwiktionary' => true,
+	// Neapolitan
+	'napwiki' => true,
+	// Dutch
+	'nlwiki' => true,
+	'nlwikibooks' => true,
+	'nlwikinews' => true,
+	'nlwikiquote' => true,
+	'nlwikisource' => true,
+	'nlwikivoyage' => true,
+	'nlwiktionary' => true,
+	// Polish
+	'plwiki' => true,
+	'plwikibooks' => true,
+	'plwikinews' => true,
+	'plwikiquote' => true,
+	'plwikisource' => true,
+	'plwikivoyage' => true,
+	'plwiktionary' => true,
+	// Chinese
+	'zhwiki' => true,
+	'zhwikibooks' => true,
+	'zhwikinews' => true,
+	'zhwikiquote' => true,
+	'zhwikisource' => true,
+	'zhwikivoyage' => true,
+	'zhwiktionary' => true,
 ),
 
 'wmgUseMwEmbedSupport' => array(
