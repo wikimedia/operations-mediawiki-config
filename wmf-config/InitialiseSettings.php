@@ -15603,6 +15603,12 @@ $wgConf->settings = array(
 	'zhwiki' => array( 'content' => 1 ),
 ),
 
+// Enable completion suggester on all wikis (except wikidata)
+'wmgCirrusSearchUseCompletionSuggester' => array(
+	'default' => true,
+	'wikidatawiki' => false,
+),
+
 'wmgCirrusSearchAllFields' => array(
 	'default' => array( 'build' => true, 'use' => true ),
 ),
