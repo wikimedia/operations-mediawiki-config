@@ -83,12 +83,10 @@ $wmfConfigDir = "$IP/../wmf-config";
 # Must be set before InitialiseSettings.php:
 switch( $wmfRealm ) {
 case 'production':
-	# fluorine (nfs1 while fluorine is down)
-	$wmfUdp2logDest = '10.64.0.21:8420';
+	$wmfUdp2logDest = 'fluorine.eqiad.wmnet:8420';
 	break;
 case 'labs':
-	# deployment-fluorine.eqiad.wmflabs
-	$wmfUdp2logDest = '10.68.16.198:8420';
+	$wmfUdp2logDest = 'deployment-fluorine.eqiad.wmflabs:8420';
 	break;
 default:
 	$wmfUdp2logDest = '127.0.0.1:8420';
