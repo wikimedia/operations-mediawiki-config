@@ -137,6 +137,7 @@ require_once "$IP/extensions/MobileApp/MobileApp.php";
 
 if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthEnableUserMerge = true;
+	$wgCentralAuthUseSlaves = true;
 }
 
 // Labs override for GlobalCssJs
