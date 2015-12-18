@@ -6,7 +6,7 @@
 $wmgRedisQueueBaseConfig = array(
 	'class' => 'JobQueueRedis',
 	'redisConfig' => array(
-		'connectTimeout' => .250,
+		'connectTimeout' => .200,
 		'password' => $wmgRedisPassword,
 		'compression' => 'gzip'
 	),
@@ -99,7 +99,7 @@ $wgJobTypeConf['default'] = array(
 			'rdb4-6381' => 50,
 		),
 	),
-	'maxPartitionsTry' => 4 // always covers 2+ servers
+	'maxPartitionsTry' => 5 // always covers 2+ servers
 );
 // Note: on server failure, this should be changed to any other redis server
 $wgJobQueueAggregator = array(
