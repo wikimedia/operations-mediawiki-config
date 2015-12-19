@@ -15867,10 +15867,6 @@ $wgConf->settings = array(
 ),
 # @} end of wmgCirrusSearchWikiToNameMap
 
-'wmgWMEEnableCompletionExperiment' => array(
-	'default' => false,
-),
-
 'wmgUseCite' => array(
 	'default' => true,
 	'loginwiki' => false,
