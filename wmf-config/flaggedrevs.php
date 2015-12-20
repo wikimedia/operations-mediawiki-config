@@ -468,8 +468,10 @@ elseif ( $wgDBname == 'hiwiki' ) {
 }
 
 elseif ( $wgDBname == 'huwiki' ) {
-	// # UI
-	$wgFlaggedRevsLowProfile = false;
+	// # "Flagged protection" mode
+	$wgFlaggedRevsProtection = true;
+	$wgFlaggedRevsOverride = false;
+	$wgFlaggedRevsRestrictionLevels = array( '', 'autoconfirmed', 'trusted' );
 
 	// # namespaces
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, array( NS_CATEGORY, 100 ) ); # 100 = Portal
