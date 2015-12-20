@@ -1294,10 +1294,6 @@ $wgConf->settings = array(
 	'default' => 5000,
 ),
 
-'wgArticlePath' => array(
-	'default' => '/wiki/$1',
-),
-
 # wgServer @{
 'wgServer' => array(
 	// Projects
