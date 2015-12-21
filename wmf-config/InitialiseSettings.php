@@ -213,6 +213,7 @@ $wgConf->settings = array(
 	'wikimania2014wiki' => array( 'wm2014' ),
 	'wikimania2015wiki' => array( 'wm2015' ),
 	'wikimania2016wiki' => array( 'wm2016' ),
+	'wikimania2017wiki' => array( 'wm2017' ),
 ),
 
 # wgLocaltimezone @{
@@ -1088,6 +1089,7 @@ $wgConf->settings = array(
 	'wikimania2014wiki' => '/static/images/project-logos/wikimania2014wiki.png',  // T58398
 	'wikimania2015wiki' => '/static/images/project-logos/wikimania2015wiki.png',  // T50382
 	'wikimania2016wiki' => '/static/images/project-logos/wikimania2016wiki.png',
+	'wikimania2017wiki' => '/static/images/project-logos/wikimania2017wiki.png',  // T122062
 	'wikimaniateamwiki' => '/static/images/project-logos/wikimaniateamwiki.png',  // T50376
 ),
 # @} end of wgLogo
@@ -1373,6 +1375,7 @@ $wgConf->settings = array(
 	'wikimania2014wiki' => '//wikimania2014.wikimedia.org',
 	'wikimania2015wiki' => '//wikimania2015.wikimedia.org',
 	'wikimania2016wiki' => '//wikimania2016.wikimedia.org',
+	'wikimania2017wiki' => '//wikimania2017.wikimedia.org',
 	'wikimaniateamwiki' => '//wikimaniateam.wikimedia.org',
 	'zerowiki' => '//zero.wikimedia.org'
 ),
@@ -1454,6 +1457,7 @@ $wgConf->settings = array(
 	'wikimania2014wiki' => 'https://wikimania2014.wikimedia.org',
 	'wikimania2015wiki' => 'https://wikimania2015.wikimedia.org',
 	'wikimania2016wiki' => 'https://wikimania2016.wikimedia.org',
+	'wikimania2017wiki' => 'https://wikimania2017.wikimedia.org',
 	'wikimaniateamwiki' => 'https://wikimaniateam.wikimedia.org',
 	'zerowiki' => 'https://zero.wikimedia.org',
 ),
@@ -6635,6 +6639,21 @@ $wgConf->settings = array(
 		'IRC-url',
 		'Contact-url',
 	),
+	'wikimania2017wiki' => array(
+		'pagetitle',
+		'pagetitle-view-mainpage',
+		'Volunteers-url',
+		'Attendees-url',
+		'Press-url',
+		'Sponsors-url',
+		'Questions-url',
+		'FAQ-url',
+		'Site Map-url',
+		'Registration-url',
+		'Schedule-url',
+		'IRC-url',
+		'Contact-url',
+	),
 	'zhwiki' => array(
 		'pagetitle-view-mainpage',
 	),
@@ -7081,6 +7100,9 @@ $wgConf->settings = array(
 		'*' => array( 'createpage' => false ),
 	),
 	'wikimania2016wiki' => array(
+		'*' => array( 'createpage' => false ),
+	),
+	'wikimania2017wiki' => array(
 		'*' => array( 'createpage' => false ),
 	),
 
@@ -9186,6 +9208,9 @@ $wgConf->settings = array(
 	'+wikimania2016wiki' => array(
 		'bureaucrat' => array( 'translationadmin' ),
 	),
+	'+wikimania2017wiki' => array(
+		'bureaucrat' => array( 'translationadmin' ),
+	),
 	'+wuuwiki' => array(
 		'sysop' => array( 'rollbacker' ),
 	),
@@ -9856,6 +9881,9 @@ $wgConf->settings = array(
 	'+wikimania2016wiki' => array(
 		'bureaucrat' => array( 'translationadmin' ),
 	),
+	'+wikimania2017wiki' => array(
+		'bureaucrat' => array( 'translationadmin' ),
+	),
 	'+wikimaniateamwiki' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'autopatrolled', 'import' ),
 	),
@@ -10178,6 +10206,7 @@ $wgConf->settings = array(
 	'wikimania2014wiki' => array( 'en', 'meta', 'wm2011', 'wm2012', 'wm2013' ),
 	'wikimania2015wiki' => array( 'en', 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014' ),
 	'wikimania2016wiki' => array( 'en', 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015' ),
+	'wikimania2017wiki' => array( 'en', 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016' ),
 	'wuuwiki' => array( 'en', 'th', 'fr', 'zh', ), // T19484
 	'xhwiki' => array( 'en' ), // T53327
 	'zhwikiquote' => array( 'w', 'b', 'wikt', 's', 'meta', 'commons' ),
@@ -10287,6 +10316,7 @@ $wgConf->settings = array(
 	'ptwikibooks' => true,
 	'sourceswiki' => true,
 	'wikimania2016wiki' => true, // T96564
+	'wikimania2017wiki' => true, // T122062
 ),
 
 'wgJobRunRate' => array(
@@ -14398,6 +14428,7 @@ $wgConf->settings = array(
 	'wikimania2014wiki' => true,
 	'wikimania2015wiki' => true,
 	'wikimania2016wiki' => true,
+	'wikimania2017wiki' => true,
 ),
 'wmgTranslateWorkflowStates' => array(
 	'default' => false,
@@ -14470,6 +14501,7 @@ $wgConf->settings = array(
 	'wikimania2014wiki' => true,
 	'wikimania2015wiki' => true,
 	'wikimania2016wiki' => true,
+	'wikimania2017wiki' => true,
 ),
 'wmgUseCleanChanges' => array(
 	'default' => false,
