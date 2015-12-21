@@ -204,6 +204,9 @@ if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/db-{$wmfDatacenter}.php";
 }
 
+# Disallow web request DB transactions slower than this
+$wgMaxUserDBWriteDuration = 6.0;
+
 ini_set( 'memory_limit', $wmgMemoryLimit );
 
 # Rewrite commands given to wfShellWikiCmd() to use Het-Deploy
