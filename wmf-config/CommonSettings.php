@@ -903,9 +903,6 @@ if ( in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki', 'comm
 	$wgSiteStatsAsyncFactor = 1;
 }
 
-# Deferred update still broken
-$wgMaxSquidPurgeTitles = 500;
-
 $wgInvalidateCacheOnLocalSettingsChange = false;
 
 // General Cache Epoch
