@@ -10591,6 +10591,11 @@ $wgConf->settings = array(
 	'testwiki' => 3600,
 ),
 
+'wgPageLanguageUseDB' => array(
+	'default' => false,
+	'testwiki' => true,
+),
+
 'wgShowExceptionDetails' => array(
 	'default' => false,
 	'testwiki' => true,
