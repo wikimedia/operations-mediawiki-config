@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_4c770ad0",
+        "filename": "dblists/small.dblist",
+        "patchSetId": 6
+      },
+      "lineNbr": 512,
+      "author": {
+        "id": 125
+      },
+      "writtenOn": "2015-12-22T13:32:29Z",
+      "side": 1,
+      "message": "Was this added to this patch by accident?",
+      "revId": "8f25798acabcac6ce8725b7235d41a4c3bfbc5d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
