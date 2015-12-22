@@ -16,6 +16,24 @@
       "revId": "8f25798acabcac6ce8725b7235d41a4c3bfbc5d4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_2ab94e29",
+        "filename": "dblists/small.dblist",
+        "patchSetId": 6
+      },
+      "lineNbr": 512,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2015-12-22T17:05:50Z",
+      "side": 1,
+      "message": "It\u0027s fine, I think git does this",
+      "parentUuid": "6eaa8f54_4c770ad0",
+      "revId": "8f25798acabcac6ce8725b7235d41a4c3bfbc5d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
