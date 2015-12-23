@@ -293,7 +293,7 @@ if ( $wmgUseQuickSurveys ) {
 			"description" => "anne-survey-description",
 			"platforms" => array(
 				"desktop" => array( "stable" ),
-				"mobile" => array( "stable", "beta", "alpha" ),
+				"mobile" => array( "stable", "beta" ),
 			),
 		),
 		array(
@@ -311,7 +311,7 @@ if ( $wmgUseQuickSurveys ) {
 			"description" => "ext-quicksurveys-example-internal-survey-description",
 			"platforms" => array(
 				"desktop" => array( "stable" ),
-				"mobile" => array( "stable", "beta", "alpha" ),
+				"mobile" => array( "stable", "beta" ),
 			),
 		),
 		array(
@@ -325,7 +325,7 @@ if ( $wmgUseQuickSurveys ) {
 			'enabled' => true,
 			'platforms' => array(
 				'desktop' => array( 'stable' ),
-				'mobile' => array( 'stable', 'beta', 'alpha' ),
+				'mobile' => array( 'stable', 'beta' ),
 			),
 		),
 	);
