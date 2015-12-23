@@ -291,7 +291,7 @@ if ( $wmgUseQuickSurveys ) {
 			"enabled" => true,
 			"coverage" => 0,
 			"description" => "anne-survey-description",
-			"platform" => array(
+			"platforms" => array(
 				"desktop" => array( "stable" ),
 				"mobile" => array( "stable", "beta", "alpha" ),
 			),
@@ -309,7 +309,7 @@ if ( $wmgUseQuickSurveys ) {
 			"enabled" => true,
 			"coverage" => .5,
 			"description" => "ext-quicksurveys-example-internal-survey-description",
-			"platform" => array(
+			"platforms" => array(
 				"desktop" => array( "stable" ),
 				"mobile" => array( "stable", "beta", "alpha" ),
 			),
@@ -323,7 +323,7 @@ if ( $wmgUseQuickSurveys ) {
 			"privacyPolicy" => "ext-quicksurveys-example-external-survey-privacy-policy",
 			'coverage' => .5,
 			'enabled' => true,
-			'platform' => array(
+			'platforms' => array(
 				'desktop' => array( 'stable' ),
 				'mobile' => array( 'stable', 'beta', 'alpha' ),
 			),
