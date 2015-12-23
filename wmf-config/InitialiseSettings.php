@@ -358,6 +358,7 @@ $wgConf->settings = array(
 	'nowikinews' => 'Europe/Berlin',
 	'nowikisource' => 'Europe/Berlin',
 	'nsowiki' => 'Africa/Johannesburg',
+	'orwiki' => 'Asia/Kolkata', // T122273
 	'orwikisource' => 'Asia/Kolkata', // T73875
 	'pdcwiki' => 'America/New_York',
 	'pflwiki' => 'Europe/Berlin',
