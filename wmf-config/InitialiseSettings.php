@@ -10497,6 +10497,7 @@ $wgConf->settings = array(
 	'cawikimedia' => false, // T94346
 	'cswiktionary' => false,
 	'donatewiki' => false,
+	'dewikibooks' => false, // T122433
 	'enwikibooks' => false,
 	'fawikinews' => false, // T85380
 	'foundationwiki' => false,
