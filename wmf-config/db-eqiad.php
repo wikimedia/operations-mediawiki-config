@@ -134,9 +134,9 @@ $wgLBFactoryConf = array(
 	's6' => array(
 		'db1023' => 0,   # 1.4TB  64GB
 #		'db1022' => 100, # 1.4TB  64GB (data consistency issue)
-		'db1030' => 0,   # 1.4TB  64GB, vslow, dump
-		'db1037' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-		'db1050' => 400, # 2.8TB  64GB
+		'db1030' => 100, # 1.4TB  64GB, vslow, dump
+		'db1037' => 100, # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
+#		'db1050' => 400, # 2.8TB  64GB (depool for cloning)
 		'db1061' => 500, # 2.8TB 128GB
 	),
 	's7' => array(
