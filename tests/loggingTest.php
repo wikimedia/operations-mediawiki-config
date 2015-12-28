@@ -115,8 +115,8 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 		require "{$wmfConfigDir}/InitialiseSettings.php";
 
 		$tests = array();
-		foreach ( $wgConf->settings['wmgMonologAvroSchemas']['default'] as $name => $schema ) {
-			$tests[$name] = array( $schema );
+		foreach ( $wgConf->settings['wmgMonologAvroSchemas']['default'] as $name => $schemaConfig ) {
+			$tests[$name] = array( $schemaConfig );
 		}
 		return $tests;
 	}
@@ -124,8 +124,10 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 	/**
 	 * @dataProvider provideAvroSchemas
 	 */
-	public function testAvroSchemasIsValidJson( $schema ) {
-		json_decode( $schema['schema'] );
+	public function testAvroSchemasIsValidJson( $schemaConfig ) {
+		$this->assertArrayHasKey( 'schema', $schemaConfig );
+		$this->assertArrayHasKey( 'revision', $schemaConfig );
+		json_decode( $schemaConfig['schema'] );
 		$this->assertEquals( JSON_ERROR_NONE, json_last_error() );
 	}
 
