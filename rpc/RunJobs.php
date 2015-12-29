@@ -32,10 +32,8 @@ error_reporting( E_ERROR ); // fatals but not random I/O warnings
 ini_set( 'display_errors', 1 );
 $wgShowExceptionDetails = true;
 
-if ( method_exists( 'LBFactory', 'disableChronologyProtection' ) ) {
-	// This is not helpful here and will slow things down in some cases
-	wfGetLBFactory()->disableChronologyProtection();
-}
+// Session consistency is not helpful here and will slow things down in some cases
+wfGetLBFactory()->disableChronologyProtection();
 
 try {
 	$mediawiki = new MediaWiki();
