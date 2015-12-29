@@ -2194,6 +2194,17 @@ if ( $wmgUseMath ) {
 	// Prevent accidental use.
 	$wgMathLaTeXMLUrl = null;
 	$wgMathMathMLUrl = "http://mathoid.svc.eqiad.wmnet:10042";
+
+	// Set up $wgMathFullRestbaseURL - similar to VE RESTBase config above
+	// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
+	// so use a hook
+	$wgExtensionFunctions[] = function () {
+		global $wgServerName, $wgMathFullRestbaseURL, $wmfRealm;
+
+		$wgMathFullRestbaseURL = $wmfRealm === 'production'
+			? "https://$wgServerName/api/rest_"
+			: "//$wgServerName/api/rest_";
+	};
 }
 
 if ( $wmgUseBabel ) {
