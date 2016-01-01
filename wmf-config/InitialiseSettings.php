@@ -8361,6 +8361,9 @@ $wgConf->settings = array(
 			'noratelimit' => true, // T40690
 		),
 	),
+	'trwikiquote' => array(
+		'sysop' => array( 'unblockself' => false ), // T122710
+	),
 	'ukwiki' => array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, ),
 		'rollbacker' => array( 'rollback' => true ),
