@@ -8361,6 +8361,33 @@ $wgConf->settings = array(
 			'noratelimit' => true, // T40690
 		),
 	),
+	'trwikiquote' => array(
+		'sysop' => array( // T122710
+			'unblockself' => false,
+			'reupload-own' => false,
+		),
+		'editor' => array( // T122710
+			'patrol' => true,
+			'autopatrol' => true,
+			'rollback' => true,
+			'movefile' => true,
+		),
+		'autoreview' => array( 'autopatrol' => true ), // T122710
+		'checkuser' => array( // T122710
+			'deletedtext' => true,
+			'deletedhistory' => true,
+		),
+		'user' => array( 'reupload-own' => true ), // T122710
+		'technican' => array( // T122710
+			'abusefilter-log-detail' => true,
+			'abusefilter-modify' => true,
+			'apihighlimits' => true,
+			'editinterface' => true,
+			'editusercss' => true,
+			'edituserjs' => true,
+			'noratelimit' => true,
+		},
+	),
 	'ukwiki' => array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, ),
 		'rollbacker' => array( 'rollback' => true ),
@@ -9145,6 +9172,9 @@ $wgConf->settings = array(
 		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, T40690
 		'bureaucrat' => array( 'technician' ), // T41690
 	),
+	'+trwikiquote'
+		'bureaucrat' => array( 'technican' ), // T122710
+	),
 	'+ukwiki' => array(
 		'sysop' => array( 'patroller', 'rollbacker', 'accountcreator', 'filemover' ), // T104034, T119636
 	),
@@ -9812,6 +9842,9 @@ $wgConf->settings = array(
 	'+trwiki' => array(
 		'sysop' => array( 'patroller' ), // bureaucrat -> sysop, T40690
 		'bureaucrat' => array( 'technician' ), // T41690
+	),
+	'+trwikiquote'
+		'bureaucrat' => array( 'technican' ), // T122710
 	),
 	'+ukwiki' => array(
 		'sysop' => array( 'patroller', 'rollbacker', 'accountcreator', 'filemover' ), // T104034, T119636
