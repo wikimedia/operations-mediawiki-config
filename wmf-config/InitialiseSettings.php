@@ -10480,6 +10480,9 @@ $wgConf->settings = array(
 		NS_HELP_TALK => 'noindex,follow',
 		NS_CATEGORY_TALK => 'noindex,follow',
 	),
+	'uawikimedia' => array(
+		NS_USER => 'noindex,follow', // T122732
+	),
 	'ukwiki' => array(
 		NS_USER => 'noindex,follow', // T98926
 	),
