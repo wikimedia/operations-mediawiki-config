@@ -31,7 +31,7 @@ ganglia.dat
 /images/*.png
 /images/*.xcf
 # Exceptions:
-# $wgCopyrightIcon
+# $wgFooterIcons['copyright']['copyright']
 !/images/wikimedia-button.png
 !/images/wikimedia-button-1.5x.png
 !/images/wikimedia-button-2x.png
