@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_f8cafd1c",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 882,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-01-04T01:26:59Z",
+      "side": 1,
+      "message": "Take care, typo: `copryight`",
+      "revId": "7960ecb0a588d20d7d7f0fce47305c0d1e8166fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
