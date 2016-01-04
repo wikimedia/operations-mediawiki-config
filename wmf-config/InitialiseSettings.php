@@ -10183,6 +10183,7 @@ $wgConf->settings = array(
 	'svwikiversity' => array( 'w', 'b', 's', 'n', 'en', 'betawikiversity' ),
 	'svwiktionary' => array( 'w', 'meta' ),
 	'szlwiki' => array( 'incubator' ),
+	'tawiki' => array( 'en' ), // T122808
 	'tawikisource' => array( 'oldwikisource', 'w', 'b' ),
 	'tewiki' => array( 'en', 'commons' ), // T43880
 	'tewikisource' => array( 'w', 'b', 'en' ), // T94531
