@@ -2320,7 +2320,9 @@ if ( $wmgUseVips ) {
 
 }
 
-if ( $wmgUseApiSandbox ) {
+// Keep loading the extension for MW before Ic42a6c5, but don't load it in
+// branches where that is merged.
+if ( $wmgUseApiSandbox && !class_exists( 'SpecialApiSandbox' ) ) {
 	wfLoadExtension( 'ApiSandbox' );
 }
 
