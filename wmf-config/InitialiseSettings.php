@@ -11787,6 +11787,8 @@ $wgConf->settings = array(
 		'digital.slub-dresden.de',
 		'grossstadtgeschichten-berlin.de',
 		'content.staatsbibliothek-berlin.de',
+		'webapi.aucklandmuseum.com',        // Auckland Museum - T122995
+		'*.ethz.ch',                        // ETH Library  - T123109
 	),
 ),
 
