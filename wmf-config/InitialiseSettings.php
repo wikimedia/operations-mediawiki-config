@@ -10099,6 +10099,7 @@ $wgConf->settings = array(
 	//'khmwiktionary' => array( 'en', 'fr', 'lm', 'th' ),
 	'kmwiki' => array( 'en', 'be', 'simple' ),
 	'knwiki' => array( 'en' ), // T37603
+	'kn.wikisource' => array( 'w:kn', 'en', 'w:en'), //T122955
 	'kowikiquote' => array( 'w' ),
 	'labswiki' => array( 'mw' ),
 	'lawikibooks' => array( 'w' ),
