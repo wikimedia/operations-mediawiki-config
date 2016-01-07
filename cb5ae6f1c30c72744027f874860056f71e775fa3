@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_6f3b8a98",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11689,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-01-07T15:17:27Z",
+      "side": 1,
+      "message": "Without http:// please. And please make a space between \"//\" and \"Auckland Museum - T122995\", like at the other comments above.",
+      "revId": "cb5ae6f1c30c72744027f874860056f71e775fa3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
