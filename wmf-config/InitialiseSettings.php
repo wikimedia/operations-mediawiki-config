@@ -13308,6 +13308,7 @@ $wgConf->settings = array(
 	'enwiki' => true,
 	'enwikivoyage' => true, // T52063
 	'eswiki' => true, // T103424
+	'eswikivoyage' => true, //T122765
 	'fawiki' => true, // T35541
 	'fawiktionary' => true, // T35541
 	'hewiki' => true,
