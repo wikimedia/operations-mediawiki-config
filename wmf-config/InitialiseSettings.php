@@ -11850,6 +11850,8 @@ $wgConf->settings = array(
 		'*.bodleian.ox.ac.uk',              // Bodleian Libraries - T121779
 		'*.davidabian.com',                 // Trusted user website, used by Museo del Romanticismo - T121383
 		'davidabian.com',
+		'webapi.aucklandmuseum.com',        // Auckland Museum - T122995
+		'*.ethz.ch',                        // ETH Library  - T123109
 	),
 ),
 
