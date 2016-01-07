@@ -2380,12 +2380,6 @@ if ( $wmgUseVips ) {
 
 }
 
-// Keep loading the extension for MW before Ic42a6c5, but don't load it in
-// branches where that is merged.
-if ( $wmgUseApiSandbox && !class_exists( 'SpecialApiSandbox' ) ) {
-	wfLoadExtension( 'ApiSandbox' );
-}
-
 if ( $wmgUseShortUrl ) {
 	require_once( "$IP/extensions/ShortUrl/ShortUrl.php" );
 	$wgShortUrlTemplate = "/s/$1";

@@ -1,7 +1,6 @@
 $IP/extensions/AbuseFilter/AbuseFilter.php
 $IP/extensions/AntiSpoof/AntiSpoof.php
 $IP/extensions/ApiFeatureUsage/ApiFeatureUsage.php
-$IP/extensions/ApiSandbox/extension.json
 $IP/extensions/Babel/Babel.php
 $IP/extensions/BetaFeatures/extension.json
 $IP/extensions/BounceHandler/BounceHandler.php

@@ -14756,12 +14756,6 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
-'wmgUseApiSandbox' => array(
-	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
-),
-
 'wmgUseShortUrl' => array(
 	'default' => false,
 	'bhwiki' => true, // T113348
