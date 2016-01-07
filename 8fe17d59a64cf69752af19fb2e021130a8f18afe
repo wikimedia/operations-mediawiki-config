@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_8f4fe638",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 10102,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-01-07T15:19:59Z",
+      "side": 1,
+      "message": "Please make a space between \"\u0027w:en\u0027\" and \")\", and between \"//\" and \"T122955\" too. Normaly you should use the same style as above.",
+      "revId": "8fe17d59a64cf69752af19fb2e021130a8f18afe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
