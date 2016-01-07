@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_6f370a4c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 11689,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-01-07T17:29:12Z",
+      "side": 1,
+      "message": "No one of the other URLs have a slash at the end, can you remove it at this URL?",
+      "revId": "f4a5efe59a93bc8e97875b005deeb057de4ea6e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
