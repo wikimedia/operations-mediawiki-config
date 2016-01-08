@@ -8,6 +8,27 @@ if ( $wmgUseWikibaseRepo ) {
 			'Q608' => 'wb-badge-goodarticle',
 			'Q609' => 'wb-badge-featuredarticle'
 		);
+		$wgWBRepoSettings['statementSections'] = array(
+			'item' => array(
+				'statements' => null,
+				'identifiers' => array(
+					// TODO: Switch to type "dataType" once the "external-id" data type exists.
+					'type' => 'propertySet',
+					'propertyIds' => array(
+						'P61',
+						'P122',
+						'P137',
+						'P150',
+						'P176',
+						'P360',
+						'P366',
+						'P589',
+						'P610',
+						'P620',
+					),
+				),
+			),
+		);
 		$wgWBRepoSettings['preferredGeoDataProperties'] = array(
 			'P125',
 			'P10',
@@ -36,6 +57,25 @@ if ( $wmgUseWikibaseRepo ) {
 			'Q20748094' => 'wb-badge-problematic',
 			'Q20748092' => 'wb-badge-proofread',
 			'Q20748093' => 'wb-badge-validated'
+		);
+		$wgWBRepoSettings['statementSections'] = array(
+			'item' => array(
+				'statements' => null,
+				'identifiers' => array(
+					// TODO: Switch to type "dataType" once the "external-id" data type exists.
+					'type' => 'propertySet',
+					'propertyIds' => array(
+						'P214',
+						'P227',
+						'P268',
+						'P345',
+						'P646',
+						'P830',
+						'P846',
+						'P1566',
+					),
+				),
+			),
 		);
 		$wgWBRepoSettings['preferredGeoDataProperties'] = array(
 			'P625',
