@@ -14,6 +14,15 @@ if ( $wmgUseWikibaseRepo ) {
 		'Q98658' => 'wb-badge-proofread',
 		'Q98651' => 'wb-badge-validated'
 	);
+	$wgWBRepoSettings['statementSections'] = array(
+		'item' => array(
+			'statements' => null,
+			'identifiers' => array(
+				'type' => 'dataType',
+				'dataTypes' => array( 'external-id' ),
+			),
+		),
+	);
 	$wgWBRepoSettings['preferredGeoDataProperties'] = array(
 		'P740',
 		'P477',

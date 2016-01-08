@@ -8,6 +8,15 @@ if ( $wmgUseWikibaseRepo ) {
 			'Q608' => 'wb-badge-goodarticle',
 			'Q609' => 'wb-badge-featuredarticle'
 		);
+		$wgWBRepoSettings['statementSections'] = array(
+			'item' => array(
+				'statements' => null,
+				'identifiers' => array(
+					'type' => 'dataType',
+					'dataTypes' => array( 'external-id' ),
+				),
+			),
+		);
 		$wgWBRepoSettings['preferredGeoDataProperties'] = array(
 			'P125',
 			'P10',
@@ -36,6 +45,15 @@ if ( $wmgUseWikibaseRepo ) {
 			'Q20748094' => 'wb-badge-problematic',
 			'Q20748092' => 'wb-badge-proofread',
 			'Q20748093' => 'wb-badge-validated'
+		);
+		$wgWBRepoSettings['statementSections'] = array(
+			'item' => array(
+				'statements' => null,
+				'identifiers' => array(
+					'type' => 'dataType',
+					'dataTypes' => array( 'external-id' ),
+				),
+			),
 		);
 		$wgWBRepoSettings['preferredGeoDataProperties'] = array(
 			'P625',
