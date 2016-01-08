@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_56f2e76b",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2016-01-08T17:15:30Z",
+      "side": 1,
+      "message": "+1, these are the top 8 identifiers per https://www.wikidata.org/wiki/Wikidata:Database_reports/List_of_properties/Top100 : P846, P830, P646, P214, P1566, P227, P345, P268; and then: P815, P1070, P960, P269, P244, P685, P961, P213, P850, P351, P1006, P434, P764, P1895, P721, P7116, P436, P627, P727",
+      "revId": "525bf2099e7da421377e8511836c58f9fb83b3e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
