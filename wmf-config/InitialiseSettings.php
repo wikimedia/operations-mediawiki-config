@@ -13987,6 +13987,15 @@ $wgConf->settings = array(
 		'5' => 'Pengguna %code%-5',
 		'N' => 'Pengguna %code%-M',
 	),
+	'napwiki' => array(
+		'0' => 'Utente %code%-0',
+		'1' => 'Utente %code%-1',
+		'2' => 'Utente %code%-2',
+		'3' => 'Utente %code%-3',
+		'4' => 'Utente %code%-4',
+		'5' => 'Utente %code%-5',
+		'N' => 'Utente %code%-N',
+  ),
 	'nlwiki' => array(
 		'0' => false,
 		'1' => 'Wikipedia:Gebruiker %code%-1',
