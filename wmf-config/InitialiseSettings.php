@@ -1755,6 +1755,7 @@ $wgConf->settings = array(
 	'mtwiktionary' => 'Wikizzjunarju',
 	'mwlwiki' => 'Biquipédia',
 	'mxwikimedia' => 'Wikimedia México',
+	'mywiki' => 'ဝီကီပီးဒီးယား', // T123191
 	'myvwiki' => 'Википедиясь',
 	'mznwiki' => 'ویکی‌پدیا',
 	'nahwiki' => 'Huiquipedia',
