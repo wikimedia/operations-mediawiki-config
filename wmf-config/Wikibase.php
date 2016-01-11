@@ -174,7 +174,8 @@ if ( $wmgUseWikibaseClient ) {
 			NS_CATEGORY,
 			NS_PROJECT,
 			NS_TEMPLATE,
-			NS_HELP
+			NS_HELP,
+			828 // NS_MODULE
 		);
 
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
