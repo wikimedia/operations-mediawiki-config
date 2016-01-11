@@ -40,6 +40,8 @@ mwconfig_files_txt=(
 	session.php
 	session-labs.php
 	Wikibase.php
+	Wikibase-labs.php
+	Wikibase-production.php
 	wikitech.php
 )
 
