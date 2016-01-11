@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_ce4ab3c8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13991,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2016-01-11T14:01:05Z",
+      "side": 1,
+      "message": "Use tabs instead of spaces for indentation.",
+      "revId": "ad5b85036116291f9884a48ba8fdc9c39b4eba8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

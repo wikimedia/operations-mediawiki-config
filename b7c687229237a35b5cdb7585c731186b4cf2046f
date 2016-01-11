@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_2e4267b1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1757,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2016-01-11T14:01:05Z",
+      "side": 0,
+      "message": "This removal looks accidental.",
+      "revId": "b7c687229237a35b5cdb7585c731186b4cf2046f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
