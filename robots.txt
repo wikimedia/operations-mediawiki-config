@@ -125,7 +125,6 @@ Disallow: /
 # Don't allow the Wayback Machine to index user-pages
 User-agent: archive.org_bot
 
-Disallow: /wiki/User:
 Disallow: /wiki/Benutzer:
 
 #
