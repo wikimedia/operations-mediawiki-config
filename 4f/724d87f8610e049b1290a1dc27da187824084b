@@ -1,0 +1,12 @@
+Verified+2: jenkins-bot
+Code-Review+1: Billinghurst <billinghurstwiki@gmail.com>
+Code-Review+1: Dereckson <dereckson@espace-win.org>
+Code-Review+1: Jforrester <jforrester@wikimedia.org>
+Code-Review+1: Florianschmidtwelzow <florian.schmidt.stargatewissen@gmail.com>
+Code-Review+2: Thcipriani <tcipriani@wikimedia.org>
+Code-Review+1: Luke081515 <luke081515@web.de>
+Submitted-by: jenkins-bot
+Submitted-at: Mon, 11 Jan 2016 16:26:00 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/257868
+Project: operations/mediawiki-config
+Branch: refs/heads/master
