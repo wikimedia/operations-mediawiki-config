@@ -7661,6 +7661,10 @@ $wgConf->settings = array(
 	'+gawiki' => array(
 		'rollbacker' => array( 'rollback' => true ),
 	),
+	'guwiki' => array( // T119787
+		'rollbacker' => array( 'rollback' => true ),
+		'autopatrolled' => array( 'autopatrol' => true ),
+	),
 	'hewiki' => array(
 		'user' => array(
 			'move' => false,
@@ -8894,6 +8898,9 @@ $wgConf->settings = array(
 	'+gawiki' => array(
 		'sysop' => array( 'rollbacker' ),
 	),
+	'+guwiki' => array( // T119787
+		'sysop' => array( 'rollback', 'autopatrolled'),
+	),
 	'+hewiki' => array(
 		'sysop' => array( 'patroller', 'autopatrolled', 'accountcreator' ),
 		'bureaucrat' => array( 'interface-editor' ),
@@ -9556,6 +9563,9 @@ $wgConf->settings = array(
 	),
 	'+gawiki' => array(
 		'sysop' => array( 'rollbacker' ),
+	),
+	'+guwiki' => array( // T119787
+		'sysop' => array( 'rollback', 'autopatrolled'),
 	),
 	'+hewiki' => array(
 		'sysop' => array( 'patroller', 'autopatrolled', 'accountcreator' ),
