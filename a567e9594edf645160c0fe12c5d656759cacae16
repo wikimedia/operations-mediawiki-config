@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_9865e0ad",
+        "filename": "dblists/all.dblist",
+        "patchSetId": 4
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-01-11T19:20:22Z",
+      "side": 1,
+      "message": "This seems confusing since the database wasn\u0027t really renamed. Let\u0027s at least make sure this doesn\u0027t affect the $wgDBname variable in JavaScript, and that there are no assumptions elsewhere that assume the (real) dbname to be in the dblist files (a fair assumption).\n\nAlso with regards to labs replication and how it reads these files (e.g. to specify which db section etc.)",
+      "revId": "a567e9594edf645160c0fe12c5d656759cacae16",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
