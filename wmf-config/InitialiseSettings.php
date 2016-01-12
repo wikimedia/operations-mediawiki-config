@@ -7917,7 +7917,7 @@ $wgConf->settings = array(
 	'lvwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ), // T72441
 		'patroller' => array( 'autopatrol' => true, 'patrol' => true ), // T72441
-		'flood' => array( 'bot' ), // T121238
+		'flood' => array( 'bot' => true ), // T121238
 	),
 	'+maiwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true ), // T89346
