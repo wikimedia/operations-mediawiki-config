@@ -4,6 +4,20 @@
 $wgMathEnableWikibaseDataType = false;
 
 if ( $wmgUseWikibaseRepo ) {
+
+	// data types setting should be kept in sync with setting in client.
+	$wgWBRepoSettings['dataTypes'] = array(
+		'commonsMedia',
+		'globe-coordinate',
+		'quantity',
+		'monolingualtext',
+		'string',
+		'time',
+		'url',
+		'wikibase-item',
+		'wikibase-property'
+	);
+
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['formatterUrlProperty'] = 'P368';
 
@@ -96,5 +110,18 @@ if ( $wmgUseWikibaseClient ) {
 		'Q20748094' => 'badge-problematic',
 		'Q20748092' => 'badge-proofread',
 		'Q20748093' => 'badge-validated'
+	);
+
+	// dataTypes setting should be kept in sync with repo setting.
+	$wgWBClientSettings['dataTypes'] = array(
+		'commonsMedia',
+		'globe-coordinate',
+		'quantity',
+		'monolingualtext',
+		'string',
+		'time',
+		'url',
+		'wikibase-item',
+		'wikibase-property',
 	);
 }
