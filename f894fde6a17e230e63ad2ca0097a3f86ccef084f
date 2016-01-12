@@ -16,6 +16,24 @@
       "revId": "f894fde6a17e230e63ad2ca0097a3f86ccef084f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_ed1d2bc8",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1725
+      },
+      "writtenOn": "2016-01-12T16:57:28Z",
+      "side": 1,
+      "message": "Don\u0027t think so - per documentation at top",
+      "parentUuid": "6eaa8f54_ad3c132e",
+      "revId": "f894fde6a17e230e63ad2ca0097a3f86ccef084f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
