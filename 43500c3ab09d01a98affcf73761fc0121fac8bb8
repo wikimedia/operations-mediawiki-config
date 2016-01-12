@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_70f4b4ca",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 280,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-01-12T18:03:14Z",
+      "side": 1,
+      "message": "Please add a space here: // T121853",
+      "revId": "43500c3ab09d01a98affcf73761fc0121fac8bb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_50f738d0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1646,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-01-12T18:03:14Z",
+      "side": 1,
+      "message": "here too",
+      "revId": "43500c3ab09d01a98affcf73761fc0121fac8bb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_b00eace6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2121,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-01-12T18:03:14Z",
+      "side": 1,
+      "message": "correct",
+      "revId": "43500c3ab09d01a98affcf73761fc0121fac8bb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_10fd40ae",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2416,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-01-12T18:03:14Z",
+      "side": 1,
+      "message": "here too",
+      "revId": "43500c3ab09d01a98affcf73761fc0121fac8bb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_30fabcb6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 10113,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-01-12T18:03:14Z",
+      "side": 1,
+      "message": "correct",
+      "revId": "43500c3ab09d01a98affcf73761fc0121fac8bb8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
