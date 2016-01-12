@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_703594d5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7875,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-01-12T17:32:51Z",
+      "side": 1,
+      "message": "Should be array( \u0027bot\u0027 \u003d\u003e true ), instead of this. Correct this at https://gerrit.wikimedia.org/r/#/c/263632/",
+      "revId": "b1b482dec6b18599cb0bd79cedceef1c38674596",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
