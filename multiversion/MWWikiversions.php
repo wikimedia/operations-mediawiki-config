@@ -95,4 +95,11 @@ class MWWikiversions {
 		}
 		return $dbs;
 	}
+
+	/**
+	 * @return array List of wiki versions
+	 */
+	public static function getAvailableBranchDirs() {
+		return glob( MEDIAWIKI_DEPLOYMENT_DIR . '/php-*', GLOB_ONLYDIR ) ?: array();
+	}
 }
