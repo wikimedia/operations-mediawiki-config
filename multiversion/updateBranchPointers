@@ -23,19 +23,16 @@ function isMain() {
 }
 
 function updateBranchPointers( $dryRun = false, $all = false ) {
-	$branchDirs = glob( MEDIAWIKI_DEPLOYMENT_DIR . '/php-*', GLOB_ONLYDIR );
+	$branchDirs = MWWikiversions::getAvailableBranchDirs();
 
-	if ( !is_array( $branchDirs ) || count( $branchDirs ) < 1 ) {
+	if ( !$branchDirs ) {
 		fwrite( STDERR, __FUNCTION__ . ': no deployment branch directories found in ' . MEDIAWIKI_DEPLOYMENT_DIR . "\n" );
 		exit( 1 );
 	}
 
-	// Order directories using version_compare.
-	// The native sort is lexographical which gives the wrong result for
-	// collections such as [1.23wmf9, 1.23wmf10].
+	// Default sort is lexographical which incorrectly sorts e.g. [1.23wmf9, 1.23wmf10]
 	usort( $branchDirs, 'version_compare' );
 	$branches = array();
-
 	if ( $all ) {
 		foreach ( $branchDirs as $target ) {
 			$dir = explode( '-', basename( $target ) );
