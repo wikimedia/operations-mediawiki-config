@@ -16,6 +16,24 @@
       "revId": "a567e9594edf645160c0fe12c5d656759cacae16",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_96e608e2",
+        "filename": "dblists/all.dblist",
+        "patchSetId": 4
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2016-01-12T21:36:15Z",
+      "side": 1,
+      "message": "Yeah, we probably need to change the labs replica setup scripts in operations/software.git maintain-replicas to account for this :/",
+      "parentUuid": "6eaa8f54_9865e0ad",
+      "revId": "a567e9594edf645160c0fe12c5d656759cacae16",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
