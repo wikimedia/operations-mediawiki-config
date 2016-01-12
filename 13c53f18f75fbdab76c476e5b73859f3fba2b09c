@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_cd370ffb",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-01-12T17:21:59Z",
+      "side": 1,
+      "message": "Not \"array( \u0027152.74.116.126\u0027 , \u0027152.74.116.104\u0027 ),\" but \"array( \u0027152.74.116.126\u0027, \u0027152.74.116.104\u0027 ),\"",
+      "revId": "13c53f18f75fbdab76c476e5b73859f3fba2b09c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
