@@ -1,5 +1,8 @@
 <?php
 
+// Disable "math" datatype in production for now.
+$wgMathEnableWikibaseDataType = false;
+
 if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['formatterUrlProperty'] = 'P368';
