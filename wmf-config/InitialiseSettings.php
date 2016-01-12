@@ -4557,7 +4557,9 @@ $wgConf->settings = array(
 	),
 	'labswiki' => array(
 		110 => 'Obsolete',
-		111 => 'Obsolete_talk'
+		111 => 'Obsolete_talk',
+		112 => 'OfficeIT', // T123383
+		113 => 'OfficeIT_talk',
 	),
 	'mediawikiwiki' => array(
 		100 => 'Manual',
