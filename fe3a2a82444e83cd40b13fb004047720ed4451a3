@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_cd938f02",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2016-01-12T17:13:52Z",
+      "side": 1,
+      "message": "use spaces here also space before and after array() arguments",
+      "revId": "fe3a2a82444e83cd40b13fb004047720ed4451a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_2df3436a",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2016-01-12T17:13:52Z",
+      "side": 1,
+      "message": "array( \u0027eswiki\u0027, \u0027eswikivoyage\u0027 ),",
+      "revId": "fe3a2a82444e83cd40b13fb004047720ed4451a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
