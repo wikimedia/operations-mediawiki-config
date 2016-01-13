@@ -38,6 +38,7 @@ $IP/extensions/DoubleWiki/DoubleWiki.php
 $IP/extensions/Echo/Echo.php
 $IP/extensions/EducationProgram/EducationProgram.php
 $IP/extensions/Elastica/Elastica.php
+$IP/extensions/EventBus/extension.json
 $IP/extensions/EventLogging/EventLogging.php
 $IP/extensions/ExtensionDistributor/ExtensionDistributor.php
 $IP/extensions/FeaturedFeeds/FeaturedFeeds.php

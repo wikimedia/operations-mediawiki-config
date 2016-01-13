@@ -4414,6 +4414,7 @@ $wgConf->settings = array(
 		'DBPerformance' => 'debug',
 		'Echo' => 'debug',
 		'es-hit' => 'debug',
+		'EventBus' => 'debug',
 		'EventLogging' => 'debug',
 		'exception' => array( 'logstash' => false ),
 		'exception-json' => 'debug',
@@ -16221,6 +16222,10 @@ $wgConf->settings = array(
 
 'wmgUseCheckUser' => array(
 	'default' => true,
+),
+
+'wmgUseEventBus' => array(
+	'default' => false,
 ),
 
 );

@@ -3072,6 +3072,11 @@ if ( $wmgUseQuickSurveys ) {
 	wfLoadExtension( 'QuickSurveys' );
 }
 
+if ( $wmgUseEventBus ) {
+	wfLoadExtension( 'EventBus' );
+	$wgEventServiceUrl = 'http://eventbus.svc.eqiad.wmnet:8085/v1/events';
+}
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
