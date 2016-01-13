@@ -27,6 +27,8 @@ if ( $wmgUseWikibaseRepo ) {
 			'P185',
 		);
 	} else {
+		$wgWBRepoSettings['disabledDataTypes'] = array( 'external-id' );
+
 		$wgWBRepoSettings['formatterUrlProperty'] = 'P1630';
 
 		$wgWBRepoSettings['badgeItems'] = array(
@@ -84,6 +86,8 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['repoDatabase'] = 'testwikidatawiki';
 		$wgWBClientSettings['repoUrl'] = "//test.wikidata.org";
 		$wgWBClientSettings['repoConceptBaseUri'] = 'http://test.wikidata.org/entity/';
+	} else {
+		$wgWBClientSettings['disabledDataTypes'] = array( 'external-id' );
 	}
 
 	$wgWBClientSettings['badgeClassNames'] = array(
