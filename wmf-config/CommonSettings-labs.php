@@ -91,7 +91,7 @@ if ( $wmgEnableInterwiki ) {
 
 if ( $wmgUseMultimediaViewer ) {
 	require_once "$IP/extensions/MultimediaViewer/MultimediaViewer.php";
-	$wgNetworkPerformanceSamplingFactor = $wmgNetworkPerformanceSamplingFactor;
+	$wgMediaViewerNetworkPerformanceSamplingFactor = $wmgMediaViewerNetworkPerformanceSamplingFactor;
 }
 
 if ( $wmgUseParsoid ) {
