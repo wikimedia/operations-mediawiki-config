@@ -341,7 +341,7 @@ function wmfLabsSettings() {
 			'default' => true,
 		),
 
-		'wmgNetworkPerformanceSamplingFactor' => array(
+		'wmgMediaViewerNetworkPerformanceSamplingFactor' => array(
 			'default' => 1,
 		),
 
