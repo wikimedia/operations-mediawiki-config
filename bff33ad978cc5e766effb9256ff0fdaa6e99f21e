@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_49846ab4",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2016-01-13T15:11:27Z",
+      "side": 1,
+      "message": "Why not set them directly in InitializeSettings.php? We do that for many other config variables.",
+      "revId": "bff33ad978cc5e766effb9256ff0fdaa6e99f21e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
