@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_da77ba34",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-01-13T20:28:44Z",
+      "side": 1,
+      "message": "Please don\u0027t use a array, if there is only one element in it.",
+      "revId": "5fe946f4b5d9f9158051dc48f664eaf58a551d86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_fa74f631",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-01-13T20:28:44Z",
+      "side": 1,
+      "message": "Same here",
+      "revId": "5fe946f4b5d9f9158051dc48f664eaf58a551d86",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
