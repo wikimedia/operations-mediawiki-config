@@ -219,6 +219,9 @@ function wmfLabsSettings() {
 		'wmgEchoUseJobQueue' => array(
 			'default' => true,
 		),
+		'-wgEchoUseCrossWikiBetaFeature' => array(
+			'default' => true,
+		),
 		# FIXME: make that settings to be applied
 		'-wgShowExceptionDetails' => array(
 			'default' => true,
