@@ -12202,7 +12202,7 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-'wmgNetworkPerformanceSamplingFactor' => array(
+'wmgMediaViewerNetworkPerformanceSamplingFactor' => array(
 	'default' => 1000,
 ),
 
