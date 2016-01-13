@@ -16,6 +16,24 @@
       "revId": "bff33ad978cc5e766effb9256ff0fdaa6e99f21e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_bf3af091",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 347,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-01-13T18:11:33Z",
+      "side": 1,
+      "message": "I thought it would be nice to have some hint about them at the place where the other security-related globals are set.",
+      "parentUuid": "6eaa8f54_49846ab4",
+      "revId": "bff33ad978cc5e766effb9256ff0fdaa6e99f21e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
