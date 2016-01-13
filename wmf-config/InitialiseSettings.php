@@ -66,6 +66,22 @@ $wgConf->settings = array(
 	'wikimedia' => false,
 ),
 
+'wmgEnableBotPasswords' => array(
+	'default' => true,
+	'private' => false,
+	'fishbowl' => false,
+	'nonglobal' => false,
+),
+'wmgBotPasswordsCluster' => array(
+	'default' => false,
+),
+'wmgBotPasswordsDatabase' => array(
+	'default' => 'metawiki',
+	'private' => false,
+	'fishbowl' => false,
+	'nonglobal' => false,
+),
+
 # wgLanguageCode @{
 'wgLanguageCode' => array(
 	'default' => '$lang',
