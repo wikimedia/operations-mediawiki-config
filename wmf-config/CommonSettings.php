@@ -342,6 +342,10 @@ unset( $wgPasswordPolicy['policies']['sysop']['PasswordCannotBePopular'] );
 
 // For global policies, see $wgCentralAuthGlobalPasswordPolicies below
 
+$wgEnableBotPasswords = $wmgEnableBotPasswords;
+$wgBotPasswordsCluster = $wmgBotPasswordsCluster;
+$wgBotPasswordsDatabase = $wmgBotPasswordsDatabase;
+
 
 if ( PHP_SAPI === 'cli' ) {
 	$wgShowExceptionDetails = true;
