@@ -2,6 +2,143 @@
 # WARNING: This file is publically viewable on the web.
 #          Do not put private data here.
 
+// Start lots of depressing back compat for old branched extensions
+function wfMsg( $key ) {
+	$args = func_get_args();
+	array_shift( $args );
+	return wfMsgReal( $key, $args );
+}
+
+function wfMsgNoTrans( $key ) {
+	$args = func_get_args();
+	array_shift( $args );
+	return wfMsgReal( $key, $args, true, false, false );
+}
+
+function wfMsgForContent( $key ) {
+	global $wgForceUIMsgAsContentMsg;
+	$args = func_get_args();
+	array_shift( $args );
+	$forcontent = true;
+	if ( is_array( $wgForceUIMsgAsContentMsg )
+		&& in_array( $key, $wgForceUIMsgAsContentMsg )
+	) {
+		$forcontent = false;
+	}
+	return wfMsgReal( $key, $args, true, $forcontent );
+}
+
+function wfMsgForContentNoTrans( $key ) {
+	global $wgForceUIMsgAsContentMsg;
+	$args = func_get_args();
+	array_shift( $args );
+	$forcontent = true;
+	if ( is_array( $wgForceUIMsgAsContentMsg )
+		&& in_array( $key, $wgForceUIMsgAsContentMsg )
+	) {
+		$forcontent = false;
+	}
+	return wfMsgReal( $key, $args, true, $forcontent, false );
+}
+
+function wfMsgReal( $key, $args, $useDB = true, $forContent = false, $transform = true ) {
+	$message = wfMsgGetKey( $key, $useDB, $forContent, $transform );
+	$message = wfMsgReplaceArgs( $message, $args );
+	return $message;
+}
+
+function wfMsgGetKey( $key, $useDB = true, $langCode = false, $transform = true ) {
+	Hooks::run( 'NormalizeMessageKey', array( &$key, &$useDB, &$langCode, &$transform ) );
+
+	$cache = MessageCache::singleton();
+	$message = $cache->get( $key, $useDB, $langCode );
+	if ( $message === false ) {
+		$message = '&lt;' . htmlspecialchars( $key ) . '&gt;';
+	} elseif ( $transform ) {
+		$message = $cache->transform( $message );
+	}
+	return $message;
+}
+
+function wfMsgHtml( $key ) {
+	$args = func_get_args();
+	array_shift( $args );
+	return wfMsgReplaceArgs( htmlspecialchars( wfMsgGetKey( $key ) ), $args );
+}
+
+function wfMsgExt( $key, $options ) {
+	$args = func_get_args();
+	array_shift( $args );
+	array_shift( $args );
+	$options = (array)$options;
+	$validOptions = array( 'parse', 'parseinline', 'escape', 'escapenoentities', 'replaceafter',
+		'parsemag', 'content' );
+
+	foreach ( $options as $arrayKey => $option ) {
+		if ( !preg_match( '/^[0-9]+|language$/', $arrayKey ) ) {
+			// An unknown index, neither numeric nor "language"
+			wfWarn( "wfMsgExt called with incorrect parameter key $arrayKey", 1, E_USER_WARNING );
+		} elseif ( preg_match( '/^[0-9]+$/', $arrayKey ) && !in_array( $option, $validOptions ) ) {
+			// A numeric index with unknown value
+			wfWarn( "wfMsgExt called with incorrect parameter $option", 1, E_USER_WARNING );
+		}
+	}
+
+	if ( in_array( 'content', $options, true ) ) {
+		$forContent = true;
+		$langCode = true;
+		$langCodeObj = null;
+	} elseif ( array_key_exists( 'language', $options ) ) {
+		$forContent = false;
+		$langCode = wfGetLangObj( $options['language'] );
+		$langCodeObj = $langCode;
+	} else {
+		$forContent = false;
+		$langCode = false;
+		$langCodeObj = null;
+	}
+
+	$string = wfMsgGetKey( $key, /*DB*/true, $langCode, /*Transform*/false );
+
+	if ( !in_array( 'replaceafter', $options, true ) ) {
+		$string = wfMsgReplaceArgs( $string, $args );
+	}
+
+	$messageCache = MessageCache::singleton();
+	$parseInline = in_array( 'parseinline', $options, true );
+	if ( in_array( 'parse', $options, true ) || $parseInline ) {
+		$string = $messageCache->parse( $string, null, true, !$forContent, $langCodeObj );
+		if ( $string instanceof ParserOutput ) {
+			$string = $string->getText();
+		}
+
+		if ( $parseInline ) {
+			$string = Parser::stripOuterParagraph( $string );
+		}
+	} elseif ( in_array( 'parsemag', $options, true ) ) {
+		$string = $messageCache->transform( $string,
+				!$forContent, $langCodeObj );
+	}
+
+	if ( in_array( 'escape', $options, true ) ) {
+		$string = htmlspecialchars( $string );
+	} elseif ( in_array( 'escapenoentities', $options, true ) ) {
+		$string = Sanitizer::escapeHtmlAllowEntities( $string );
+	}
+
+	if ( in_array( 'replaceafter', $options, true ) ) {
+		$string = wfMsgReplaceArgs( $string, $args );
+	}
+
+	return $string;
+}
+
+function wfEmptyMsg( $key ) {
+	return MessageCache::singleton()->get( $key, /*useDB*/true, /*content*/false ) === false;
+}
+
+// End lots of depressing back compat for old branched extensions
+
 require_once( "$IP/extensions/Validator/Validator.php" );
 require_once( "$IP/extensions/SemanticMediaWiki/SemanticMediaWiki.php" );
 require_once( "$IP/extensions/SemanticForms/SemanticForms.php" );
