@@ -2442,6 +2442,9 @@ if ( $wmgUseEcho ) {
 	// Whether to use job queue to process web and email notifications
 	$wgEchoUseJobQueue = $wmgEchoUseJobQueue;
 
+	// Whether to make the cross-wiki notifications beta feature available
+	$wgEchoUseCrossWikiBetaFeature = $wmgEchoUseCrossWikiBetaFeature;
+
 	if ( $wmgEchoUseCrossWikiTrackingTable ) {
 		$wgEchoSharedTrackingDB = 'wikishared';
 		// Explicitly set this to 'extension1', because some wikis have $wgEchoCluster set to false

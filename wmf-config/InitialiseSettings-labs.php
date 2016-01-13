@@ -219,7 +219,7 @@ function wmfLabsSettings() {
 		'wmgEchoUseJobQueue' => array(
 			'default' => true,
 		),
-		'-wgEchoUseCrossWikiBetaFeature' => array(
+		'-wmgEchoUseCrossWikiBetaFeature' => array(
 			'default' => true,
 		),
 		# FIXME: make that settings to be applied
