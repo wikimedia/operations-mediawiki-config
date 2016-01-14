@@ -27,16 +27,6 @@ $wmgThrottlingExceptions[] = array( // T110352 (long term)
 	'dbname' => 'tawiki',
 	'value'  => 50
 );
-$wmgThrottlingExceptions[] = array( // T123161
-	'from'   => '2016-01-12T15:00 +2:00',
-	'to'     => '2016-01-12T21:00 +2:00',
-	'range'  => array(
-		'132.74.0.0/16',
-		'132.75.0.0/16',
-	),
-	'dbname' => array( 'hewiki', 'commonswiki' ),
-	'value'  => 50 // 30 expected participants
-);
 $wmgThrottlingExceptions[] = array( // T123351
 	'from'   => '2016-01-14T17:00 +0:00',
 	'to'     => '2016-01-15T22:30 +0:00',
@@ -44,7 +34,13 @@ $wmgThrottlingExceptions[] = array( // T123351
 	'dbname' => array( 'eswiki', 'eswikivoyage' ),
 	'value'  => 70 // 50 expected
 );
-
+$wmgThrottlingExceptions[] = array( // T123261 
+	'from'   => '2016-01-19T10:00 +0:00',
+	'to'     => '2016-01-19T19:00 +0:00',
+	'IP'     => '200.54.189.226',
+	'dbname' => array( 'eswiki', 'eswikivoyage' ),
+	'value'  => 60 // 40 expected participants 
+);
 
 ## Add throttling definitions above.
 
