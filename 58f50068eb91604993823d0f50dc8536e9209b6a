@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_f1e098f8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1249,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-01-14T18:40:45Z",
+      "side": 1,
+      "message": "These look accidental; maybe your editor does not handle more esoteric Unicode characters correctly. Can you fix that? You can use something like\n\n    git checkout --patch @~ -- wmf-config/InitialiseSettings.php\n\n(revert to the parent revision, but only for this file and ask line-by-line) if you don\u0027t trust your editor.",
+      "revId": "58f50068eb91604993823d0f50dc8536e9209b6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
