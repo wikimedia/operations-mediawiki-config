@@ -2918,6 +2918,11 @@ $wgConf->settings = array(
 	'+enwiktionary' => array(
 		'WS' => 110, // Wikisaurus
 		'WT' => NS_PROJECT,
+		'CAT' => NS_CATEGORY, // T123187
+		'T' => NS_TEMPLATE, // T123187
+		'MOD' => 828, // T123187
+		'AP' => 100, // T123187
+		'RC' => 118, // T123187
 	),
 	'+eowiki' => array(
 		'VP' => NS_PROJECT,
