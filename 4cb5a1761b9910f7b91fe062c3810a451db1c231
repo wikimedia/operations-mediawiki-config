@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_235ee6ed",
+        "filename": "wmf-config/filebackend-production.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2016-01-14T07:28:55Z",
+      "side": 1,
+      "message": "We still need to modify this in privatesettings, I guess, at the moment of release, right?",
+      "revId": "4cb5a1761b9910f7b91fe062c3810a451db1c231",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
