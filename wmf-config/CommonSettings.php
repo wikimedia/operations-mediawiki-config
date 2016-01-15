@@ -1209,6 +1209,11 @@ if ( $wmgUseCentralAuth ) {
 		'PasswordCannotMatchUsername' => true,
 		'PasswordCannotBePopular' => PHP_INT_MAX,
 	);
+
+	// testing -- aaron 2016-01-12
+	if ( in_array( $wgDBname, array( 'testwiki' ) ) ) {
+		$wgCentralAuthUseSlaves = true;
+	}
 }
 
 // Config for GlobalCssJs
