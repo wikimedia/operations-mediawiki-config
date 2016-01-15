@@ -11115,55 +11115,53 @@ $wgConf->settings = array(
 			array( APCOND_EDITCOUNT, 200 ),
 		),
 	), // T67495
+	'fawiki' => array(
+		'uploader' => array( '&',
+			array( APCOND_AGE, 4 * 86400 ),
+			array( APCOND_EDITCOUNT, 10 ),
+			array( '!', array( APCOND_INGROUPS, 'sysop' ) ),
+			array( '!', array( APCOND_INGROUPS, 'bureaucrat' ) ),
+		),
+	), // T71171
 	'trwiki' => array(
 		'autoreview' => array(
 			'&', // AND
 			array( APCOND_AGE, 7*86400 ),
-			array( APCOND_EDITCOUNT, 30, 2*86400 ),
+			array( APCOND_EDITCOUNT, 30 ),
+			// autopromote conditions handled by FlaggedRevs (constants not yet defined):
 			array( 70821 /*APCOND_FR_EDITSUMMARYCOUNT*/, 5 ),
 			array( 70823 /*APCOND_FR_UNIQUEPAGECOUNT*/, 5 ),
 			array( 70827 /*APCOND_FR_EDITSPACING*/, 7, 7 ),
 			array( 70824 /*APCOND_FR_CONTENTEDITCOUNT*/, 20, 2*86400 ),
 			array( 70822 /*APCOND_FR_NEVERBOCKED*/ ),
 			array( 70829 /*APCOND_FR_MAXREVERTEDEDITRATIO*/, .03 ),
-			array( '!', array( APCOND_INGROUPS, array( 'sysop' ) ) ),
-			array( '!', array( APCOND_INGROUPS, array( 'bureaucrat' ) ) ),
-			array( '!', array( APCOND_INGROUPS, array( 'bot' ) ) ),
-			array( '!', array( APCOND_INGROUPS, array( 'patroller' ) ) ),
+			array( '!', array( APCOND_INGROUPS, 'sysop' ) ),
+			array( '!', array( APCOND_INGROUPS, 'bureaucrat' ) ),
+			array( '!', array( APCOND_INGROUPS, 'bot' ) ),
+			array( '!', array( APCOND_INGROUPS, 'patroller' ) ),
 		),
 		'patroller' => array(
 			'&', // AND
 			array( APCOND_AGE, 15*86400 ),
-			array( APCOND_EDITCOUNT, 150, 1*86400 ),
+			array( APCOND_EDITCOUNT, 150 ),
+			// autopromote conditions handled by FlaggedRevs (constants not yet defined):
 			array( 70821 /*APCOND_FR_EDITSUMMARYCOUNT*/, 25 ),
 			array( 70823 /*APCOND_FR_UNIQUEPAGECOUNT*/, 10 ),
 			array( 70827 /*APCOND_FR_EDITSPACING*/, 7, 15 ),
 			array( 70824 /*APCOND_FR_CONTENTEDITCOUNT*/, 100, 1*86400 ),
 			array( 70822 /*APCOND_FR_NEVERBOCKED*/ ),
 			array( 70829 /*APCOND_FR_MAXREVERTEDEDITRATIO*/, .03 ),
-			array( '!', array( APCOND_INGROUPS, array( 'sysop' ) ) ),
-			array( '!', array( APCOND_INGROUPS, array( 'bureaucrat' ) ) ),
-			array( '!', array( APCOND_INGROUPS, array( 'bot' ) ) ),
+			array( '!', array( APCOND_INGROUPS, 'sysop' ) ),
+			array( '!', array( APCOND_INGROUPS, 'bureaucrat' ) ),
+			array( '!', array( APCOND_INGROUPS, 'bot' ) ),
 		),
 	),
-),
-
-'wmgAutopromoteOnceonView' => array(
-	'default' => array(),
 	'ruwiki' => array(
 		'uploader' => array( '&',
-			array( APCOND_EDITCOUNT, 20 ),
 			array( APCOND_AGE, 14 * 86400 ),
+			array( APCOND_EDITCOUNT, 20 ),
 		),
 	),
-	'fawiki' => array(
-		'uploader' => array( '&',
-			array( APCOND_EDITCOUNT, 10 ),
-			array( APCOND_AGE, 4 * 86400 ),
-			array( '!', array( APCOND_INGROUPS, array( 'sysop' ) ) ),
-			array( '!', array( APCOND_INGROUPS, array( 'bureaucrat' ) ) ),
-		),
-	), // T71171
 ),
 
 'wgAutopromoteOnceLogInRC' => array(
