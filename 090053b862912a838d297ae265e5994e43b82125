@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_66caa71f",
+        "filename": "w/static.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-01-15T02:39:38Z",
+      "side": 1,
+      "message": "TODO: Once MediaWiki core uses hashes in urls, use the static method for that here instead of duplicating the logic. Right now, this isn\u0027t a duplicate yet as the mw-core equivalent doesn\u0027t exist yet.",
+      "revId": "090053b862912a838d297ae265e5994e43b82125",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
