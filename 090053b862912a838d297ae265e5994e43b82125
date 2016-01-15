@@ -2,6 +2,57 @@
   "comments": [
     {
       "key": {
+        "uuid": "6eaa8f54_e962e8d3",
+        "filename": "w/static.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2016-01-15T05:44:06Z",
+      "side": 1,
+      "message": "You should also send \"X-Content-Type-Options: nosniff\". I know you only call this function with string literals, but you never know what the next dev will send to it.",
+      "revId": "090053b862912a838d297ae265e5994e43b82125",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_899334a5",
+        "filename": "w/static.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2016-01-15T05:44:06Z",
+      "side": 1,
+      "message": "So the idea is to allow streaming of any file under any branch directory that has a known type? I think it would be more conventional to at least deny access to *.php files, in case they have private configuration data.",
+      "revId": "090053b862912a838d297ae265e5994e43b82125",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_09a984db",
+        "filename": "w/static.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2016-01-15T05:44:06Z",
+      "side": 1,
+      "message": "It should also have an Expires header.",
+      "revId": "090053b862912a838d297ae265e5994e43b82125",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_66caa71f",
         "filename": "w/static.php",
         "patchSetId": 1
@@ -13,6 +64,23 @@
       "writtenOn": "2016-01-15T02:39:38Z",
       "side": 1,
       "message": "TODO: Once MediaWiki core uses hashes in urls, use the static method for that here instead of duplicating the logic. Right now, this isn\u0027t a duplicate yet as the mw-core equivalent doesn\u0027t exist yet.",
+      "revId": "090053b862912a838d297ae265e5994e43b82125",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_c9404c3b",
+        "filename": "w/static.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2016-01-15T05:44:06Z",
+      "side": 1,
+      "message": "FYI, there is substr_compare() for this.",
       "revId": "090053b862912a838d297ae265e5994e43b82125",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
