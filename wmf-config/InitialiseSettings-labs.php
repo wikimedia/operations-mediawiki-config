@@ -102,6 +102,10 @@ function wmfLabsSettings() {
 			'en_rtlwiki' => 'http://en-rtl.wikipedia.$variant.wmflabs.org',
 		),
 
+		'wgScriptPath' => array(
+			'default' => '/w',
+		),
+
 		'wmgUsabilityPrefSwitch' => array(
 			'default' => ''
 		),
