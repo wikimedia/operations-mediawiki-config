@@ -41,6 +41,13 @@ $wmgThrottlingExceptions[] = array( // T123261
 	'dbname' => array( 'eswiki', 'eswikivoyage' ),
 	'value'  => 60 // 40 expected participants
 );
+$wmgThrottlingExceptions[] = array( // T123458
+	'from'   => '2016-01-16T00:00 +0:00',
+	'to'     => '2016-01-17T00:30 +0:00',
+	'range'  => '181.118.160.216/29',
+	'dbname' => 'eswiki',
+	'value'  => 70 // 50 expected
+);
 
 ## Add throttling definitions above.
 
