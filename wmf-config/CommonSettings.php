@@ -512,6 +512,67 @@ if ( $wmgUseCORS ) {
 
 wfLoadSkins( array( 'Vector', 'MonoBook', 'Modern', 'CologneBlue' ) );
 
+// Grants and rights
+// Note these have to be visible on all wikis, not just the ones the
+// extension is enabled on, for proper display in OAuth pages and such.
+
+// Adding Flaggedrevs rights so that they are available for globalgroups/staff rights - JRA 2013-07-22
+$wgAvailableRights[] = 'stablesettings';
+$wgAvailableRights[] = 'review';
+$wgAvailableRights[] = 'unreviewedpages';
+$wgAvailableRights[] = 'movestable';
+$wgAvailableRights[] = 'validate';
+$wgMWOAuthGrantPermissions['editprotected']['movestable'] = true;
+$wgGrantPermissions['editprotected']['movestable'] = true;
+
+// So that protection rights can be assigned to global groups
+$wgAvailableRights[] = 'templateeditor';
+$wgAvailableRights[] = 'editeditorprotected';
+$wgMWOAuthGrantPermissions['editprotected']['templateeditor'] = true;
+$wgMWOAuthGrantPermissions['editprotected']['editeditorprotected'] = true;
+$wgGrantPermissions['editprotected']['templateeditor'] = true;
+$wgGrantPermissions['editprotected']['editeditorprotected'] = true;
+
+// Allow tboverride with editprotected, and tboverride-account with createaccount
+$wgMWOAuthGrantPermissions['editprotected']['tboverride'] = true;
+$wgMWOAuthGrantPermissions['createaccount']['tboverride-account'] = true;
+$wgGrantPermissions['editprotected']['tboverride'] = true;
+$wgGrantPermissions['createaccount']['tboverride-account'] = true;
+
+// Adding Flow's rights so that they are available for global groups/staff rights
+$wgAvailableRights[] = 'flow-edit-post';
+$wgAvailableRights[] = 'flow-suppress';
+$wgAvailableRights[] = 'flow-hide';
+$wgAvailableRights[] = 'flow-delete';
+$wgAvailableRights[] = 'moodbar-admin'; // To allow global groups to include this right -AG
+
+// Enable gather-hidelist for global user groups - JRA 4-1-2015 T94652
+$wgAvailableRights[] = 'gather-hidelist';
+
+// Checkuser
+$wgMWOAuthGrantPermissions['checkuser']['checkuser'] = true;
+$wgMWOAuthGrantPermissions['checkuser']['checkuser-log'] = true;
+$wgGrantPermissions['checkuser']['checkuser'] = true;
+$wgGrantPermissions['checkuser']['checkuser-log'] = true;
+// Categorize additional groups defined above.
+// Corresponding messages are mwoauth-grant-* in WikimediaMessages.
+$wgMWOAuthGrantPermissionGroups['checkuser'] = 'administration';
+$wgGrantPermissionGroups['checkuser'] = 'administration';
+
+// Rights needed to interact with wikibase
+$wgMWOAuthGrantPermissions['createeditmovepage']['item-create'] = true;
+$wgMWOAuthGrantPermissions['createeditmovepage']['property-create'] = true;
+$wgMWOAuthGrantPermissions['editpage']['item-term'] = true;
+$wgMWOAuthGrantPermissions['editpage']['item-merge'] = true;
+$wgMWOAuthGrantPermissions['editpage']['property-term'] = true;
+$wgMWOAuthGrantPermissions['editpage']['item-redirect'] = true;
+$wgGrantPermissions['createeditmovepage']['item-create'] = true;
+$wgGrantPermissions['createeditmovepage']['property-create'] = true;
+$wgGrantPermissions['editpage']['item-term'] = true;
+$wgGrantPermissions['editpage']['item-merge'] = true;
+$wgGrantPermissions['editpage']['property-term'] = true;
+$wgGrantPermissions['editpage']['item-redirect'] = true;
+
 if ( $wmgUseTimeline ) {
 	include( $IP . '/extensions/timeline/Timeline.php' );
 	if ( $wgDBname == 'testwiki' || $wgDBname == 'mlwiki' ) {
@@ -588,20 +649,6 @@ if ( $wmgUseUnicodeConverter ) {
 if ( $wmgUseFlaggedRevs ) {
 	include( "$wmfConfigDir/flaggedrevs.php" );
 }
-#Adding Flaggedrevs rights so that they are available for globalgroups/staff rights - JRA 2013-07-22
-$wgAvailableRights[] = 'stablesettings';
-$wgAvailableRights[] = 'review';
-$wgAvailableRights[] = 'unreviewedpages';
-$wgAvailableRights[] = 'movestable';
-$wgAvailableRights[] = 'validate';
-// So that protection rights can be assigned to global groups
-$wgAvailableRights[] = 'templateeditor';
-$wgAvailableRights[] = 'editeditorprotected';
-// Adding Flow's rights so that they are available for global groups/staff rights
-$wgAvailableRights[] = 'flow-edit-post';
-$wgAvailableRights[] = 'flow-suppress';
-$wgAvailableRights[] = 'flow-hide';
-$wgAvailableRights[] = 'flow-delete';
 
 if ( $wmgUseCategoryTree ) {
 	require( $IP . '/extensions/CategoryTree/CategoryTree.php' );
@@ -1519,12 +1566,6 @@ if ( $wgDBname == 'enwiki' || $wgDBname == 'fawiki' ) {
 	};
 }
 
-// Enable a "viewdeletedfile" userright for [[m:Global deleted image review]] (T16801)
-$wgAvailableRights[] = 'viewdeletedfile';
-$wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
-	return ( !in_array( $action, array( 'deletedhistory', 'deletedtext' ) ) || !$title->inNamespaces( NS_FILE, NS_FILE_TALK ) || !$user->isAllowed( 'viewdeletedfile' ) );
-};
-
 if ( $wmgUseCollection ) {
 	// PediaPress / PDF generation
 	include "$IP/extensions/Collection/Collection.php";
@@ -2082,7 +2123,6 @@ if ( $wmgUseMoodBar ) {
 	$wgMoodBarConfig['infoUrl'] = $wmgMoodBarInfoUrl;
 	$wgMoodBarConfig['enableTooltip'] = $wmgMoodBarEnableTooltip;
 }
-$wgAvailableRights[] = 'moodbar-admin'; // To allow global groups to include this right -AG
 
 if ( $wmgUseMobileApp ) {
 	require_once( "$IP/extensions/MobileApp/MobileApp.php" );
@@ -2914,24 +2954,6 @@ if ( $wmgUseOAuth ) {
 		return true;
 	};
 
-	// Grants for other extensions' permissions.
-	// Note these have to be visible on all wikis, not just the ones the
-	// extension is enabled on, for proper display in OAuth pages.
-	$wgMWOAuthGrantPermissions['checkuser']['checkuser'] = true;
-	$wgMWOAuthGrantPermissions['checkuser']['checkuser-log'] = true;
-
-	// Categorize additional groups defined above.
-	// Corresponding messages are mwoauth-grant-* in WikimediaMessages.
-	$wgMWOAuthGrantPermissionGroups['checkuser'] = 'administration';
-
-	// Rights needed to interact with wikibase
-	$wgMWOAuthGrantPermissions['createeditmovepage']['item-create'] = true;
-	$wgMWOAuthGrantPermissions['createeditmovepage']['property-create'] = true;
-	$wgMWOAuthGrantPermissions['editpage']['item-term'] = true;
-	$wgMWOAuthGrantPermissions['editpage']['item-merge'] = true;
-	$wgMWOAuthGrantPermissions['editpage']['property-term'] = true;
-	$wgMWOAuthGrantPermissions['editpage']['item-redirect'] = true;
-
 	$wgExtensionFunctions[] = function() {
 		global $wgDBname, $wgMWOAuthCentralWiki, $wgGroupPermissions;
 		if ( $wgDBname === $wgMWOAuthCentralWiki ) {
@@ -3026,9 +3048,6 @@ $wgGroupPermissions['confirmed'] = $wgGroupPermissions['autoconfirmed'];
 $wgGroupPermissions['confirmed']['skipcaptcha'] = true;
 
 $wgImgAuthDetails = true;
-
-// Enable gather-hidelist for global user groups - JRA 4-1-2015 T94652
-$wgAvailableRights[] = 'gather-hidelist';
 
 if ( $wmgUseWPB ) {
 	wfLoadExtension( 'WikidataPageBanner' );
