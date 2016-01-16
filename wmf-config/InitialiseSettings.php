@@ -3883,6 +3883,7 @@ $wgConf->settings = array(
 	),
 
 	// Wikipedia @{
+	'+arwiki' => array( 14 => 1 ), // T121985
 	'+cswiki' => array( 6 => 0, 14 => 1 ),
 	'+dewiki' => array( 6 => 0, 8 => 0, 10 => 0 ),
 	'+enwiki' => array( 6 => 0, 8 => 0 ),
