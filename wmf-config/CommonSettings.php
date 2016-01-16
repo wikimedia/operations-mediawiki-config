@@ -2958,24 +2958,6 @@ if ( $wmgUseOAuth ) {
 			$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
 		}
 	};
-
-	// Apply grants (defined above) to $wgMWOAuthGrantPermissions now that the
-	// extension is loaded. This can be removed after 1.27.0-wmf.11 is
-	// everywhere.
-	$wgMWOAuthGrantPermissions['editprotected']['movestable'] = true;
-	$wgMWOAuthGrantPermissions['editprotected']['templateeditor'] = true;
-	$wgMWOAuthGrantPermissions['editprotected']['editeditorprotected'] = true;
-	$wgMWOAuthGrantPermissions['editprotected']['tboverride'] = true;
-	$wgMWOAuthGrantPermissions['createaccount']['tboverride-account'] = true;
-	$wgMWOAuthGrantPermissions['checkuser']['checkuser'] = true;
-	$wgMWOAuthGrantPermissions['checkuser']['checkuser-log'] = true;
-	$wgMWOAuthGrantPermissions['createeditmovepage']['item-create'] = true;
-	$wgMWOAuthGrantPermissions['createeditmovepage']['property-create'] = true;
-	$wgMWOAuthGrantPermissions['editpage']['item-term'] = true;
-	$wgMWOAuthGrantPermissions['editpage']['item-merge'] = true;
-	$wgMWOAuthGrantPermissions['editpage']['property-term'] = true;
-	$wgMWOAuthGrantPermissions['editpage']['item-redirect'] = true;
-	$wgMWOAuthGrantPermissionGroups['checkuser'] = 'administration';
 }
 
 if ( $wmgUsePetition ) {
