@@ -16,6 +16,24 @@
       "revId": "940dd304c74be791f2d801c21a99979670d72565",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_6be4a739",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1522,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2016-01-16T04:17:28Z",
+      "side": 0,
+      "message": "... Because I forgot to paste it back in. Thanks for catching that.",
+      "parentUuid": "6eaa8f54_2b930fa7",
+      "revId": "940dd304c74be791f2d801c21a99979670d72565",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
