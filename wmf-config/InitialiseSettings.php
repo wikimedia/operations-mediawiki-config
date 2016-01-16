@@ -1183,6 +1183,7 @@ $wgConf->settings = array(
 	'eswikivoyage' => false, // T44933
 	'euwiki' => false, // T30609
 	'gomwiki' => false, // T96468
+	'guwiki' => false,
 	'itwikiquote' => false, // T14012
 	'jawikisource' => false, // T5572
 	'jawiktionary' => false, // T13775
