@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_2b930fa7",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1522,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-01-16T04:11:23Z",
+      "side": 0,
+      "message": "Can you explain in the summary why this was removed?",
+      "revId": "940dd304c74be791f2d801c21a99979670d72565",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
