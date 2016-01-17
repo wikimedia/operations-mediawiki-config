@@ -588,7 +588,7 @@ $wgConf->settings = array(
 	'kwwiki' => '/static/images/project-logos/kwwiki.png',
 	'kywiki' => '/static/images/project-logos/kywiki.png',  // T48589
 	'lawiki' => '/static/images/project-logos/lawiki.png',
-	'labswiki' => '/static/images/project-logos/labswiki.png',
+	'wikitech' => '/static/images/project-logos/wikitech.png',
 	'ladwiki' => '/static/images/project-logos/ladwiki.png',
 	'lbwiki' => '/static/images/project-logos/lbwiki.png',
 	'lbewiki' => '/static/images/project-logos/lbewiki.png',  // T42285
@@ -1354,6 +1354,7 @@ $wgConf->settings = array(
 	'incubatorwiki' => '//incubator.wikimedia.org',
 	'internalwiki' => '//internal.wikimedia.org',
 	'labswiki' => "https://wikitech.wikimedia.org",
+	'labtestwiki' => "https://labtestwikitech.wikimedia.org",
 	'legalteamwiki' => '//legalteam.wikimedia.org',
 	'loginwiki' => '//login.wikimedia.org',
 	'mediawikiwiki' => '//www.mediawiki.org',
@@ -1436,6 +1437,7 @@ $wgConf->settings = array(
 	'incubatorwiki' => 'https://incubator.wikimedia.org',
 	'internalwiki' => 'https://internal.wikimedia.org',
 	'labswiki' => 'https://wikitech.wikimedia.org',
+	'labtestwiki' => 'https://labtestwikitech.wikimedia.org',
 	'legalteamwiki' => 'https://legalteam.wikimedia.org',
 	'loginwiki' => 'https://login.wikimedia.org',
 	'mediawikiwiki' => 'https://www.mediawiki.org',
@@ -1729,7 +1731,7 @@ $wgConf->settings = array(
 	'kowiktionary' => '위키낱말사전',
 	'krcwiki' => 'Википедия',
 	'kuwiki' => 'Wîkîpediya',
-	'labswiki' => 'Wikitech',
+	'wikitech' => 'Wikitech',
 	'lawiki' => 'Vicipaedia',
 	'lawikibooks' => 'Vicilibri',
 	'lawikiquote' => 'Vicicitatio',
@@ -1942,6 +1944,7 @@ $wgConf->settings = array(
 	'private' => '/w/img_auth.php',
 	'commonswiki' => 'https://upload.wikimedia.org/wikipedia/commons',
 	'labswiki' => '//wikitech.wikimedia.org/w/images',
+	'labtestwikitech' => '//labtestwikitech.wikimedia.org/w/images',
 	'metawiki' => '//upload.wikimedia.org/wikipedia/meta',
 	'testwiki' => '//upload.wikimedia.org/wikipedia/test',
 ),
@@ -1956,7 +1959,7 @@ $wgConf->settings = array(
 	'execwiki' => '/mnt/upload7/private/execwiki',
 	'transitionteamwiki' => '/mnt/upload7/private/transitionteamwiki',
 	'iegcomwiki' => '/mnt/upload7/private/iegcomwiki',
-	'labswiki' => '/srv/org/wikimedia/controller/wikis/images',
+	'wikitech' => '/srv/org/wikimedia/controller/wikis/images',
 ),
 
 'wgImgAuthUrlPathMap' => array(
@@ -2208,7 +2211,7 @@ $wgConf->settings = array(
 	'kuwikiquote' => 'Wîkîgotin',
 	'kuwiktionary' => 'Wîkîferheng',
 	'kvwiki' => 'Википедия',
-	'labswiki' => 'Wikitech',
+	'wikitech' => 'Wikitech',
 	'lawiki' => 'Vicipaedia',
 	'lawikibooks' => 'Vicilibri',
 	'lawikiquote' => 'Vicicitatio',
@@ -3886,7 +3889,7 @@ $wgConf->settings = array(
 	'+grantswiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+incubatorwiki' => array( 0 => 1, 6 => 0, 14 => 1 ),
 	'+internalwiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+labswiki' => array( 0 => 1, 110 => 1, 498 => 1 ),
+	'+wikitech' => array( 0 => 1, 110 => 1, 498 => 1 ),
 	'+legalteamwiki' => array( 0 => 1 ),
 	'+mediawikiwiki' => array( 0 => 1, 6 => 0, 8 => 0, 14 => 1 ),
 	'+metawiki' => array( 0 => 1, 6 => 0, 8 => 0, 200 => 1, 201 => 1, 202 => 1, 203 => 1, 208 => 1, 209 => 1 ),
@@ -4572,7 +4575,7 @@ $wgConf->settings = array(
 		102 => 'Affiliate', // T71549
 		103 => 'Affiliate_talk',
 	),
-	'labswiki' => array(
+	'wikitech' => array(
 		110 => 'Obsolete',
 		111 => 'Obsolete_talk',
 		112 => 'OfficeIT', // T123383
@@ -6944,7 +6947,7 @@ $wgConf->settings = array(
 	'+itwikivoyage' => array( 100 => 1, 104 => 1, 106 => 1 ),
 	'+kowikisource' => array( 100 => 1 ),
 	'+lawikisource' => array( 102 => 1, 106 => 1 ),
-	'+labswiki' => array( 12 => 1, 498 => 1 ),
+	'+wikitech' => array( 12 => 1, 498 => 1 ),
 	'+ltwiki' => array( 100 => 1 ),
 	'+mediawikiwiki' => array( 12 => 1, 100 => 1, 102 => 1, 104 => 1, 106 => 1 ), // T85807
 	'+metawiki' => array( 12 => 1, 200 => 1, 202 => 1 ),
@@ -7910,7 +7913,7 @@ $wgConf->settings = array(
 		),
 		'user' => array( 'reupload-own' => false ), // T85621
 	),
-	'labswiki' => array( // contentadmin is handled in CommonSettings, not here
+	'wikitech' => array( // contentadmin is handled in CommonSettings, not here
 		'*' => array(
 			'edit' => false,
 			'createaccount' => true,
@@ -8999,7 +9002,7 @@ $wgConf->settings = array(
 	'+kowiki' => array(
 		'sysop' => array( 'rollbacker', 'confirmed', 'uploader' ), // T85621
 	),
-	'+labswiki' => array('shellmanagers' => array( 'shell')),
+	'+wikitech' => array('shellmanagers' => array( 'shell')),
 	'+legalteamwiki' => array( // T63222
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'translationadmin' ),
 	),
@@ -10178,7 +10181,7 @@ $wgConf->settings = array(
 	'knwiki' => array( 'en' ), // T37603
 	'knwikisource' => array( 'w', 'en', 'w:en' ), // T122955
 	'kowikiquote' => array( 'w' ),
-	'labswiki' => array( 'mw' ),
+	'wikitech' => array( 'mw' ),
 	'lawikibooks' => array( 'w' ),
 	'lawikisource' => array( 'ca', 'de', 'el', 'en', 'es', 'fr', 'it', 'pt', 'ro', 'w', 'b', 'oldwikisource' ),
 	'lbwiktionary' => array( 'w:fr', 'fr', 'w:en', 'en', 'w', 'meta' ), // T26460
@@ -10323,7 +10326,7 @@ $wgConf->settings = array(
 
 	// silver runs PHP 5.5 (not HHVM) on trusty, and therefore has the security
 	// patch by default (and no --no-external-files) so rsvg-secure is broken
-	'labswiki' => 'rsvg-wikitech',
+	'wikitech' => 'rsvg-wikitech',
 ),
 'wgSVGConverterPath' => array(
 	'default' => '/usr/bin',
@@ -10367,7 +10370,7 @@ $wgConf->settings = array(
 	'closed' => false,
 
 	// 'global-multiwrite' backend isn't available, so disable for now
-	'labswiki' => false,
+	'wikitech' => false,
 ),
 
 'wmgEmergencyCaptcha' => array(
@@ -10420,7 +10423,7 @@ $wgConf->settings = array(
 ),
 
 'wgGenerateThumbnailOnParse' => array(
-	'labswiki' => true,
+	'wikitech' => true,
 	'default' => false,
 ),
 
@@ -10749,7 +10752,7 @@ $wgConf->settings = array(
 
 'wmgUseScore' => array(
 	'default' => true,
-	'labswiki' => false,
+	'wikitech' => false,
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
@@ -11052,7 +11055,7 @@ $wgConf->settings = array(
 	'iegcomwiki' => '/static/favicon/wmf.ico',
 	'incubatorwiki' => '/static/favicon/incubator.ico',
 	'internalwiki' => '/static/favicon/internal.ico',
-	'labswiki' => '/static/favicon/wikitech.ico',
+	'wikitech' => '/static/favicon/wikitech.ico',
 	'legalteamwiki' => '/static/favicon/wmf.ico',
 	'loginwiki' => '/static/favicon/wmf.ico',
 	'mediawikiwiki' => '/static/favicon/mediawiki.ico',
@@ -11282,7 +11285,7 @@ $wgConf->settings = array(
 
 'wmgUseOAuth' => array(
 	'default' => true,
-	'labswiki' => true,
+	'wikitech' => true,
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
@@ -11387,7 +11390,7 @@ $wgConf->settings = array(
 
 'wmgTitleBlacklistUsernameSources' => array(
 	'default' => array( 'meta' ),
-	'labswiki' => '*',
+	'wikitech' => '*',
 ),
 
 'wgAllowImageMoving' => array(
@@ -11866,7 +11869,7 @@ $wgConf->settings = array(
 	'default' => true, # Enabled on all PUBLIC wikis
 	'closed' => false,
 	'private' => false,
-	'labswiki' => false,
+	'wikitech' => false,
 ),
 
 // This is also guarded by $wmgUseCentralAuth.
@@ -12107,7 +12110,7 @@ $wgConf->settings = array(
 
 'wmgUseMwEmbedSupport' => array(
 	'default' => true,
-	'labswiki' => false,
+	'wikitech' => false,
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
@@ -12115,7 +12118,7 @@ $wgConf->settings = array(
 // NOTE: TMH *requires* MwEmbedSupport to function
 'wmgUseTimedMediaHandler' => array(
 	'default' => true,
-	'labswiki' => false,
+	'wikitech' => false,
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
@@ -12145,7 +12148,7 @@ $wgConf->settings = array(
 'wmgUseBetaFeatures' => array(
 	'default' => true,
 	'nonbetafeatures' => false,
-	'labswiki' => false,
+	'wikitech' => false,
 ),
 
 // Whitelist enablement of individual Beta Features for production; per-wiki
@@ -12170,7 +12173,7 @@ $wgConf->settings = array(
 'wmgUseCommonsMetadata' => array(
 	'default' => true,
 	'nonbetafeatures' => false,
-	'labswiki' => false,
+	'wikitech' => false,
 ),
 
 'wmgCommonsMetadataSetTrackingCategories' => array(
@@ -12967,7 +12970,7 @@ $wgConf->settings = array(
 // in MW Core
 'wmgUseRestbaseVRS' => array(
 	'default' => true,
-	'labswiki' => false, # T102178
+	'wikitech' => false, # T102178
 	'private' => false,
 ),
 
@@ -13004,7 +13007,7 @@ $wgConf->settings = array(
 // Whether VisualEditor should bypass the MediaWiki layer and contact RESTbase directly for speed
 'wmgVisualEditorAccessRESTbaseDirectly' => array(
 	'default' => true,		# T100026
-	'labswiki' => false,	# Wikitech doesn't properly work yet in RESTbase
+	'wikitech' => false,	# Wikitech doesn't properly work yet in RESTbase
 	'private' => false,		# Private wikis aren't yet supported by RESTbase
 ),
 
@@ -13356,7 +13359,7 @@ $wgConf->settings = array(
 
 'wgParserCacheType' => array(
 	'default' => 'mysql-multiwrite',
-	'labswiki' => 'memcached-pecl',
+	'wikitech' => 'memcached-pecl',
 ),
 
 'wgLanguageConverterCacheType' => array(
@@ -13438,7 +13441,7 @@ $wgConf->settings = array(
 	'ukwiki' => true, // T91530
 	'urwiki' => true, // T42848
 	'viwiki' => true, // T50878
-	'labswiki' => true,
+	'wikitech' => true,
 	'zhwiki' => true, // T32362
 	'zhwikivoyage' => true, // T75717
 ),
@@ -13448,7 +13451,7 @@ $wgConf->settings = array(
 
 'wmgUseMath' => array(
 	'default' => true, // moved from MW core
-	'labswiki' => false,
+	'wikitech' => false,
 	'loginwiki' => false,
 	'votewiki' => false, // T61702
 ),
@@ -13479,7 +13482,7 @@ $wgConf->settings = array(
 ),
 'wmgUseMobileApp' => array(
 	'default' => true,
-	'labswiki' => false,
+	'wikitech' => false,
 ),
 'wmgMobileFrontend' => array(
 	'default' => true,
@@ -13593,11 +13596,11 @@ $wgConf->settings = array(
 	'mediawikiwiki' => 'm.%h1.%h2',
 	'sourceswiki' => 'm.%h0.%h1', // T38002
 	'wikidatawiki' => 'm.%h1.%h2',
-	'labswiki' => '', // Not behind Varnish so no black magick
+	'wikitech' => '', // Not behind Varnish so no black magick
 ),
 'wmgMFAutodetectMobileView' => array(
 	'default' => false,
-	'labswiki' => true, // Not behind Varnish
+	'wikitech' => true, // Not behind Varnish
 ),
 
 'wmgMFCustomLogos' => array(
@@ -14536,7 +14539,7 @@ $wgConf->settings = array(
 ),
 'wmgUseVips' => array(
 	'default' => true,
-	'labswiki' => false,
+	'wikitech' => false,
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
@@ -14576,7 +14579,7 @@ $wgConf->settings = array(
 	'default' => true,
 	'loginwiki' => false,
 	'votewiki' => false,
-	'labswiki' => false,
+	'wikitech' => false,
 ),
 'wmgFeaturedFeedsDefaults' => array(
 	'default' => array(
@@ -14857,7 +14860,7 @@ $wgConf->settings = array(
 ),
 'wmgEnableGeoSearch' => array(
 	'default' => true,
-	'labswiki' => false, // FIXME: this does nothing in absence of GeoData
+	'wikitech' => false, // FIXME: this does nothing in absence of GeoData
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
@@ -14941,7 +14944,7 @@ $wgConf->settings = array(
 	'default' => 'extension1',
 	// The following wikis should be using extension1 db but started with
 	// the application main database, stick with the current setting
-	'labswiki' => false,
+	'wikitech' => false,
 	'mediawikiwiki' => false,
 	'metawiki' => false,
 	'officewiki' => false,
@@ -15254,7 +15257,7 @@ $wgConf->settings = array(
 
 'wmgUseNavigationTiming' => array(
 	'default' => true,
-	'labswiki' => false,
+	'wikitech' => false,
 ),
 
 'wgRCWatchCategoryMembership' => array(
@@ -15526,7 +15529,7 @@ $wgConf->settings = array(
 	'default' => true,
 	'wikibooks' => false, // T68455
 	'wikisource' => false, // T68455
-	'labswiki' => false,
+	'wikitech' => false,
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
@@ -15541,7 +15544,7 @@ $wgConf->settings = array(
 'wmgUseTorBlock' => array(
 	'default' => true,
 	'private' => false,
-	'labswiki' => false,
+	'wikitech' => false,
 ),
 
 'wmgUseSearchExtraNS' => array(
@@ -15555,7 +15558,7 @@ $wgConf->settings = array(
 
 'wmgUseSecurePoll' => array(
 	'default' => true,
-	'labswiki' => false,
+	'wikitech' => false,
 	'loginwiki' => false,
 ),
 
@@ -15585,7 +15588,7 @@ $wgConf->settings = array(
 
 'wmgUseCampaigns' => array(
 	'default' => true,
-	'labswiki' => false,
+	'wikitech' => false,
 ),
 
 'wmgCirrusSearchDefaultCluster' => array(
@@ -15921,7 +15924,7 @@ $wgConf->settings = array(
 	'default' => true,
 	'loginwiki' => false,
 	'votewiki' => false,
-	'labswiki' => false,
+	'wikitech' => false,
 ),
 
 'wmgUseUnicodeConverter' => array(
@@ -15961,7 +15964,7 @@ $wgConf->settings = array(
 
 'wmgUseGlobalBlocking' => array(
 	'default' => true,
-	'labswiki' => false,
+	'wikitech' => false,
 	'private' => false,
 ),
 
@@ -16071,11 +16074,11 @@ $wgConf->settings = array(
 ),
 'wgSessionCacheType' => array(
 	'default' => 'redis_local',  // declared in redis.php
-	'labswiki' => 'memcached-pecl',
+	'wikitech' => 'memcached-pecl',
 ),
 'wgMainStash' => array(
 	'default' => 'redis_local',  // declared in redis.php
-	'labswiki' => 'memcached-pecl',
+	'wikitech' => 'memcached-pecl',
 ),
 
 'wmgFileExtensions' => array(
@@ -16111,17 +16114,17 @@ $wgConf->settings = array(
 
 'wmgUseClusterSquid' => array(
 	'default'  => true,
-	'labswiki' => false,
+	'wikitech' => false,
 ),
 
 'wmgUseClusterFileBackend' => array(
 	'default'  => true,
-	'labswiki' => false,
+	'wikitech' => false,
 ),
 
 'wmgUseClusterJobqueue' => array(
 	'default'  => true,
-	'labswiki' => false,
+	'wikitech' => false,
 ),
 
 // Thumbnail chaining
