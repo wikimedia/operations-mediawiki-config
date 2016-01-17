@@ -155,7 +155,7 @@ if ( !$globals ) {
 	foreach ( array( 'private', 'fishbowl', 'special', 'closed', 'flaggedrevs', 'small', 'medium',
 			'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-default',
 			'commonsuploads', 'nonbetafeatures', 'group0', 'wikipedia',
-			'arbitraryaccess', 'nonglobal',
+			'arbitraryaccess', 'nonglobal', 'wikitech'
 		) as $tag ) {
 		$dblist = MWWikiversions::readDbListFile( $tag );
 		if ( in_array( $wgDBname, $dblist ) ) {
@@ -316,7 +316,7 @@ $wgObjectCaches['mysql-multiwrite'] = array(
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
 
-if ( $wgDBname === 'labswiki' ) {
+if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgMessageCacheType = 'memcached-pecl';
 	$wgCookieDomain = "wikitech.wikimedia.org"; // TODO: Is this really necessary?
 }
@@ -326,7 +326,7 @@ $wgPasswordDefault = 'pbkdf2';
 // This needs to be increased as allowable by server performance
 $wgPasswordConfig['pbkdf2']['cost'] = '64000';
 
-if ( $wgDBname === 'labswiki' ) {
+if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 10;
 } else {
 	// Temporarily set the policy for these roles to the previous WMF setting until
@@ -1049,7 +1049,7 @@ if ( $wmgEnableCaptcha ) {
 		$wgCaptchaTriggers['create'] = true;
 	}
 
-	if ( $wgDBname === 'labswiki' ) {
+	if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		$wgCaptchaTriggers['addurl'] = false;
 	}
 }
@@ -2762,7 +2762,7 @@ if ( $wmfRealm != 'labs' ) {
 	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikitech";
 }
 
-if ( $wgDBname == 'labswiki' ) {
+if ( $wgDBname == 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgEmailConfirmToEdit = true;
 	$wgEnableCreativeCommonsRdf = true;
 
@@ -2898,7 +2898,7 @@ if ( $wmgUseGraph ) {
 
 if ( $wmgUseOAuth ) {
 	require_once( "$IP/extensions/OAuth/OAuth.php" );
-	if ( $wgDBname !== "labswiki" ) {
+	if ( $wgDBname !== "labswiki" && $wgDBname !== 'labtestwiki' ) {
 		$wgMWOAuthCentralWiki = 'metawiki';
 		$wgMWOAuthSharedUserSource = 'CentralAuth';
 	}
