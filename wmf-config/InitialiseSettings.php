@@ -11595,7 +11595,8 @@ $wgConf->settings = array(
 
 # abuse filter @{
 'wmgUseAbuseFilter' => array(
-	'default' => true,
+	'default'  => true,
+	'wikitech' => false,
 ),
 
 'wmgAbuseFilterCentralDB' => array(
