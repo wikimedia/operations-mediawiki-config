@@ -69,6 +69,7 @@ $wgLBFactoryConf = array(
 	'kowiki' => 's7',
 
 	'labswiki' => 'silver',
+	'labtestwiki' => 'labtestweb2001',
 ),
 
 # Load lists
@@ -149,6 +150,9 @@ $wgLBFactoryConf = array(
 	),
 	'silver' => array(
 		'silver' => 100,   # I have no idea if this is right
+	),
+	'labtestweb2001' => array(
+		'labtestweb2001' => 100,   # I have no idea if this is right
 	),
 ),
 
@@ -452,6 +456,7 @@ $wgLBFactoryConf = array(
 	'db1073' => '10.64.48.28', #do not remove or comment out
 	'virt1000' => '208.80.154.18', #do not remove or comment out
 	'silver' => '208.80.154.136', #do not remove or comment out
+        'labtestweb2001' => '208.80.153.14', #do not remove or comment out
 ),
 
 'externalLoads' => array(
