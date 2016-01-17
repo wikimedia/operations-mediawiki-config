@@ -14986,6 +14986,7 @@ $wgConf->settings = array(
 	'officewiki' => true,
 	'loginwiki' => false,
 	'votewiki' => false,
+	'wikitech' => false,
 ),
 'wmgFlowEnglishNamespaceOnly' => array(
 	'default' => false,
