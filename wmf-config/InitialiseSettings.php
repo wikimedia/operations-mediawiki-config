@@ -15349,14 +15349,8 @@ $wgConf->settings = array(
 ),
 
 'wgRCWatchCategoryMembership' => array(
-	'default' => false,
-	'mediawikiwiki' => true,
-	'test2wiki' => true,
-	'testwiki' => true,
-	'testwikidatawiki' => true,
-	'zerowiki' => true,
-	'wikipedia' => true,
-	'commonswiki' => true,
+	'default' => true,
+	'wikisource' => false,
 ),
 
 'wmgRelatedSitesPrefixes' => array(
