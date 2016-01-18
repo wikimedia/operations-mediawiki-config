@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_68e58031",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 321,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2016-01-18T20:53:30Z",
+      "side": 1,
+      "message": "Either this TODO needs answering or we need to separate it out and use a different value for labtest",
+      "revId": "0491ee84743b221b41626c30172da079125932a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_e8d09055",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1356,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2016-01-18T20:53:30Z",
+      "side": 1,
+      "message": "needs to be put back to labswiki and an individual new entry added for labstest",
+      "revId": "0491ee84743b221b41626c30172da079125932a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_88cb1ca6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1438,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2016-01-18T20:53:30Z",
+      "side": 1,
+      "message": "needs to be put back to labswiki and an individual new entry added for labstest",
+      "revId": "0491ee84743b221b41626c30172da079125932a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_48c1a481",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1944,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2016-01-18T20:53:30Z",
+      "side": 1,
+      "message": "needs to be put back to labswiki and an individual new entry added for labstest",
+      "revId": "0491ee84743b221b41626c30172da079125932a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
