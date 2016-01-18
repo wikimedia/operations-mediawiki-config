@@ -15350,7 +15350,6 @@ $wgConf->settings = array(
 
 'wgRCWatchCategoryMembership' => array(
 	'default' => true,
-	'wikisource' => false,
 ),
 
 'wmgRelatedSitesPrefixes' => array(
