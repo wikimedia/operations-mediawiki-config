@@ -168,6 +168,12 @@ function wmfLabsSettings() {
 			),
 		),
 
+		'wmgApplyGlobalBlocks' => array( // T123936
+			'default' => true,
+			'metawiki' => true,
+			'deploymentwiki' => false
+		),
+
 		//'-wgDebugLogGroups' => array(),
 		'-wgJobLogFile' => array(),
 
