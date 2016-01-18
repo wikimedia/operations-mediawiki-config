@@ -67,6 +67,23 @@
       "revId": "0491ee84743b221b41626c30172da079125932a0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_c85354e0",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2016-01-18T20:54:56Z",
+      "side": 1,
+      "message": "I\u0027m not sure what happens here when you change db-codfw but not db-eqiad, and then someone tries to run a DB lookup in the context of labtestwiki from e.g. tin",
+      "revId": "0491ee84743b221b41626c30172da079125932a0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
