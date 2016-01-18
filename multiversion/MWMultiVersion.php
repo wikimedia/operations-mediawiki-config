@@ -142,6 +142,7 @@ class MWMultiVersion {
 			'www.wikidata.org' => 'wikidata',
 			'wikisource.org' => 'sources',
 			'wikitech.wikimedia.org' => 'labs',
+			'labtestwikitech.wikimedia.org' => 'labtest',
 			'affcom.wikimedia.org' => 'chapcom',
 			'be-tarask.wikipedia.org' => 'be_x_old',
 			'ee.wikimedia.org' => 'et',
