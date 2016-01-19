@@ -11790,6 +11790,7 @@ $wgConf->settings = array(
 		'grossstadtgeschichten-berlin.de',
 		'content.staatsbibliothek-berlin.de',
 		'*.archives.gov',                   // US National Archives - T124080
+		'*.bodleian.ox.ac.uk',              // Bodleian Libraries - T121779
 	),
 ),
 
