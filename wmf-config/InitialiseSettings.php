@@ -14938,6 +14938,8 @@ $wgConf->settings = array(
 ),
 'wmgEchoUseCrossWikiBetaFeature' => array(
 	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
 ),
 # from and reply to address when Echo sends email notifications
 'wmgNotificationSender' => array(
