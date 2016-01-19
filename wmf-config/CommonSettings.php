@@ -703,6 +703,7 @@ if ( $wmgUseFundraisingTranslateWorkflow ) {
 if ( $wmgUseGadgets ) {
 	include( "$IP/extensions/Gadgets/Gadgets.php" );
 	$wgGadgetsCacheType = CACHE_ACCEL;
+	$wgSpecialGadgetUsageActiveUsers = $wmgSpecialGadgetUsageActiveUsers;
 }
 
 if ( $wmgUseMwEmbedSupport ) {
