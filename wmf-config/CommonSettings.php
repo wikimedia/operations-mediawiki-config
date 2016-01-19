@@ -527,20 +527,15 @@ $wgAvailableRights[] = 'review';
 $wgAvailableRights[] = 'unreviewedpages';
 $wgAvailableRights[] = 'movestable';
 $wgAvailableRights[] = 'validate';
-$wgMWOAuthGrantPermissions['editprotected']['movestable'] = true;
 $wgGrantPermissions['editprotected']['movestable'] = true;
 
 // So that protection rights can be assigned to global groups
 $wgAvailableRights[] = 'templateeditor';
 $wgAvailableRights[] = 'editeditorprotected';
-$wgMWOAuthGrantPermissions['editprotected']['templateeditor'] = true;
-$wgMWOAuthGrantPermissions['editprotected']['editeditorprotected'] = true;
 $wgGrantPermissions['editprotected']['templateeditor'] = true;
 $wgGrantPermissions['editprotected']['editeditorprotected'] = true;
 
 // Allow tboverride with editprotected, and tboverride-account with createaccount
-$wgMWOAuthGrantPermissions['editprotected']['tboverride'] = true;
-$wgMWOAuthGrantPermissions['createaccount']['tboverride-account'] = true;
 $wgGrantPermissions['editprotected']['tboverride'] = true;
 $wgGrantPermissions['createaccount']['tboverride-account'] = true;
 
@@ -555,22 +550,13 @@ $wgAvailableRights[] = 'moodbar-admin'; // To allow global groups to include thi
 $wgAvailableRights[] = 'gather-hidelist';
 
 // Checkuser
-$wgMWOAuthGrantPermissions['checkuser']['checkuser'] = true;
-$wgMWOAuthGrantPermissions['checkuser']['checkuser-log'] = true;
 $wgGrantPermissions['checkuser']['checkuser'] = true;
 $wgGrantPermissions['checkuser']['checkuser-log'] = true;
 // Categorize additional groups defined above.
 // Corresponding messages are mwoauth-grant-* in WikimediaMessages.
-$wgMWOAuthGrantPermissionGroups['checkuser'] = 'administration';
 $wgGrantPermissionGroups['checkuser'] = 'administration';
 
 // Rights needed to interact with wikibase
-$wgMWOAuthGrantPermissions['createeditmovepage']['item-create'] = true;
-$wgMWOAuthGrantPermissions['createeditmovepage']['property-create'] = true;
-$wgMWOAuthGrantPermissions['editpage']['item-term'] = true;
-$wgMWOAuthGrantPermissions['editpage']['item-merge'] = true;
-$wgMWOAuthGrantPermissions['editpage']['property-term'] = true;
-$wgMWOAuthGrantPermissions['editpage']['item-redirect'] = true;
 $wgGrantPermissions['createeditmovepage']['item-create'] = true;
 $wgGrantPermissions['createeditmovepage']['property-create'] = true;
 $wgGrantPermissions['editpage']['item-term'] = true;
@@ -2972,6 +2958,23 @@ if ( $wmgUseOAuth ) {
 			$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
 		}
 	};
+
+	// Apply grants (defined above) to $wgMWOAuthGrantPermissions now that the
+	// extension is loaded. This can be removed after 1.27.0-wmf.11 is
+	// everywhere.
+	$wgMWOAuthGrantPermissions['editprotected']['movestable'] = true;
+	$wgMWOAuthGrantPermissions['editprotected']['templateeditor'] = true;
+	$wgMWOAuthGrantPermissions['editprotected']['editeditorprotected'] = true;
+	$wgMWOAuthGrantPermissions['editprotected']['tboverride'] = true;
+	$wgMWOAuthGrantPermissions['createaccount']['tboverride-account'] = true;
+	$wgMWOAuthGrantPermissions['checkuser']['checkuser'] = true;
+	$wgMWOAuthGrantPermissions['checkuser']['checkuser-log'] = true;
+	$wgMWOAuthGrantPermissions['createeditmovepage']['item-create'] = true;
+	$wgMWOAuthGrantPermissions['createeditmovepage']['property-create'] = true;
+	$wgMWOAuthGrantPermissions['editpage']['item-term'] = true;
+	$wgMWOAuthGrantPermissions['editpage']['item-merge'] = true;
+	$wgMWOAuthGrantPermissions['editpage']['property-term'] = true;
+	$wgMWOAuthGrantPermissions['editpage']['item-redirect'] = true;
 }
 
 if ( $wmgUsePetition ) {
