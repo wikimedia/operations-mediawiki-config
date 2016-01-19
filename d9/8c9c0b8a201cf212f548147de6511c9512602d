@@ -1,0 +1,8 @@
+Code-Review+2: Catrope <roan.kattouw@gmail.com>
+Code-Review+1: Andrew Bogott <abogott@wikimedia.org>
+Verified+2: jenkins-bot
+Submitted-by: jenkins-bot
+Submitted-at: Tue, 19 Jan 2016 20:42:26 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/264980
+Project: operations/mediawiki-config
+Branch: refs/heads/master
