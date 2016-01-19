@@ -15576,6 +15576,7 @@ $wgConf->settings = array(
 	'medium' => true,
 	'private' => false,
 	'fishbowl' => false,
+	'nonglobal' => false,
 
 	'enwikisource' => true, // T78496
 	'frwiki' => true, // T120568
