@@ -16,6 +16,24 @@
       "revId": "4cb5a1761b9910f7b91fe062c3810a451db1c231",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_e4f3d804",
+        "filename": "wmf-config/filebackend-production.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 1629
+      },
+      "writtenOn": "2016-01-19T15:44:09Z",
+      "side": 1,
+      "message": "privatesettings got swift credentials with T119651 btw",
+      "parentUuid": "6eaa8f54_235ee6ed",
+      "revId": "4cb5a1761b9910f7b91fe062c3810a451db1c231",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
