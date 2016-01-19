@@ -16,6 +16,24 @@
       "revId": "c154491d869707380f3c8cae312b53eff2afda73",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_a7f962e6",
+        "filename": "wmf-config/extension-list",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 2384
+      },
+      "writtenOn": "2016-01-19T17:49:00Z",
+      "side": 1,
+      "message": "Auh, right you are!  Done.",
+      "parentUuid": "6eaa8f54_a441605f",
+      "revId": "c154491d869707380f3c8cae312b53eff2afda73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
