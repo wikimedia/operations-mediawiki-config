@@ -10856,6 +10856,10 @@ $wgConf->settings = array(
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
+'wmgSpecialGadgetUsageActiveUsers' => array(
+	'default' => true,
+	'testwiki' => false,
+),
 
 # @} end of EXTENSIONS
 
