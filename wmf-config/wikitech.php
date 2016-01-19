@@ -6,13 +6,29 @@ require_once( "$IP/extensions/Validator/Validator.php" );
 require_once( "$IP/extensions/SemanticMediaWiki/SemanticMediaWiki.php" );
 require_once( "$IP/extensions/SemanticForms/SemanticForms.php" );
 require_once( "$IP/extensions/SemanticResultFormats/SemanticResultFormats.php" );
-enableSemantics( 'wikitech' );
+
+switch( $wgDBname ) {
+case 'labswiki' :
+	enableSemantics( 'wikitech' );
+        break;
+case 'labtestwiki' :
+	enableSemantics( 'labtestwikitech' );
+        break;
+}
+
 unset( $wgSpecialPages['SMWAdmin'] );
 
 require_once( "$IP/extensions/LdapAuthentication/LdapAuthentication.php" );
 $wgAuth = new LdapAuthenticationPlugin();
 $wgLDAPDomainNames = array( 'labs');
-$wgLDAPServerNames = array( 'labs' => 'ldap-labs.eqiad.wikimedia.org' );
+switch( $wgDBname ) {
+case 'labswiki' :
+	$wgLDAPServerNames = array( 'labs' => 'ldap-labs.eqiad.wikimedia.org' );
+        break;
+case 'labtestwiki' :
+	$wgLDAPServerNames = array( 'labs' => 'labtestservices2001.wikimedia.org' );
+        break;
+}
 $wgLDAPSearchAttributes = array( 'labs' => 'cn');
 $wgLDAPBaseDNs = array( 'labs' => 'dc=wikimedia,dc=org' );
 $wgLDAPUserBaseDNs = array( 'labs' => 'ou=people,dc=wikimedia,dc=org' );
@@ -55,8 +71,25 @@ if ( false ) {
 }
 
 require_once( "$IP/extensions/OpenStackManager/OpenStackManager.php" );
+switch( $wgDBname ) {
+case 'labswiki' :
+	$wgOpenStackManagerNovaIdentityURI = 'http://labcontrol1001.wikimedia.org:35357/v2.0';
+	$wgOpenStackManagerDNSOptions = array(
+		'enabled' => true,
+		'servers' => array( 'primary' => 'labcontrol1001.wikimedia.org' ),
+		'soa'     => array( 'hostmaster' => 'hostmaster.wikimedia.org', 'refresh' => '1800', 'retry' => '3600', 'expiry' => '86400', 'minimum' => '7200' ),
+	);
+        break;
+case 'labtestwiki' :
+	$wgOpenStackManagerNovaIdentityURI = 'http://labtestcontrol2001.wikimedia.org:35357/v2.0';
+	$wgOpenStackManagerDNSOptions = array(
+		'enabled' => true,
+		'servers' => array( 'primary' => 'labtestcontrol2001.wikimedia.org' ),
+		'soa'     => array( 'hostmaster' => 'hostmaster.wikimedia.org', 'refresh' => '1800', 'retry' => '3600', 'expiry' => '86400', 'minimum' => '7200' ),
+	);
+        break;
+}
 $wgOpenStackManagerNovaKeypairStorage = 'ldap';
-$wgOpenStackManagerNovaIdentityURI = 'http://labcontrol1001.wikimedia.org:35357/v2.0';
 $wgOpenStackManagerLDAPDomain = 'labs';
 $wgOpenStackManagerLDAPProjectBaseDN = 'ou=projects,dc=wikimedia,dc=org';
 $wgOpenStackManagerLDAPProjectGroupBaseDN = "ou=groups,dc=wikimedia,dc=org";
@@ -65,11 +98,6 @@ $wgOpenStackManagerLDAPServiceGroupBaseDN = 'ou=servicegroups,dc=wikimedia,dc=or
 $wgOpenStackManagerLDAPDefaultGid = '500';
 $wgOpenStackManagerLDAPDefaultShell = '/bin/bash';
 $wgOpenStackManagerLDAPUseUidAsNamingAttribute = true;
-$wgOpenStackManagerDNSOptions = array(
-	'enabled' => true,
-	'servers' => array( 'primary' => 'labcontrol1001.wikimedia.org' ),
-	'soa'     => array( 'hostmaster' => 'hostmaster.wikimedia.org', 'refresh' => '1800', 'retry' => '3600', 'expiry' => '86400', 'minimum' => '7200' ),
-);
 $wgOpenStackManagerPuppetOptions = array(
 	'enabled' => true,
 	'defaultclasses' => array(),
