@@ -16231,7 +16231,14 @@ $wgConf->settings = array(
 ),
 
 'wmgUseEventBus' => array(
-	'default' => false,
+	'default' => true,
+	'wikitech' => false,
+	'private' => false,
+	'loginwiki' => false,
+	'votewiki' => false,
+	'otrs_wikiwiki' => false,
+	'stewardwiki' => false,
+	'spcomwiki' => false,
 ),
 
 );
