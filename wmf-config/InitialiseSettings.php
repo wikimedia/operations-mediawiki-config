@@ -16231,7 +16231,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseEventBus' => array(
-	'default' => false,
+	'default' => true,
 ),
 
 );
