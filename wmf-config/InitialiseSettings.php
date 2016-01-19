@@ -11525,6 +11525,7 @@ $wgConf->settings = array(
 	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // T56732
 	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // T39198
 	'mediawikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // T87797
+	'officewiki' => array( 'sysop' => array( 'flood' ) ), // T86237
 	'otrs_wikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // T63297
 	'cawikimedia' => array( 'sysop' => array( 'translationadmin' ) ), // T75394
 	'enwikibooks' => array( 'sysop' => array( 'flood' ) ),
@@ -11547,6 +11548,7 @@ $wgConf->settings = array(
 	'commonswiki' => array( 'sysop' => array( 'translationadmin' ) ), // T56732
 	'metawiki' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // T39198
 	'mediawikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // T87797
+	'officewiki' => array( 'sysop' => array( 'flood' ) ), // T86237
 	'otrs_wikiwiki' => array( 'sysop' => array( 'translationadmin' ) ), // T63297
 	'cawikimedia' => array( 'sysop' => array( 'translationadmin' ) ), // T75394
 	'ckbwiki' => array(
