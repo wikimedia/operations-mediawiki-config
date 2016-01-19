@@ -16231,7 +16231,9 @@ $wgConf->settings = array(
 ),
 
 'wmgUseEventBus' => array(
-	'default' => false,
+	'default' => true,
+	'wikitech' => false,
+	'private' => false,
 ),
 
 );
