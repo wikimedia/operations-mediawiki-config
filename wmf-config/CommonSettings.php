@@ -2898,6 +2898,7 @@ if ( $wmgUseGraph ) {
 	require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
 	require_once( "$IP/extensions/Graph/Graph.php" );
 
+	$wgGraphDefaultVegaVer = $wmgGraphDefaultVegaVer;
 	$wgGraphIsTrusted = $wmgGraphIsTrusted;
 	$wgGraphEnableGZip = $wmgGraphEnableGZip;
 	$wgGraphImgServiceUrl = $wmgGraphImgServiceUrl;
