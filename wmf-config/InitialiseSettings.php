@@ -14983,9 +14983,11 @@ $wgConf->settings = array(
 ),
 
 'wmgEchoUseCrossWikiTrackingTable' => array(
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
+	'default' => true,
+	'private' => false,
+	'fishbowl' => false,
+	'nonglobal' => false,
+	// Ignored for wikis where wmgUseEcho is false
 ),
 
 // Thanks should be enabled for wikis with Echo
