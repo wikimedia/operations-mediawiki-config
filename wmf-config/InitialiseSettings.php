@@ -11803,6 +11803,7 @@ $wgConf->settings = array(
 		'*.archives.gov',                   // US National Archives - T124080
 		'*.bodleian.ox.ac.uk',              // Bodleian Libraries - T121779
 		'*.davidabian.com',                 // Trusted user website, used by Museo del Romanticismo - T121383
+		'davidabian.com',
 	),
 ),
 
