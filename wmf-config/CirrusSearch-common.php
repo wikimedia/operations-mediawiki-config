@@ -95,10 +95,15 @@ $wgCirrusSearchDropDelayedJobsAfter = 60 * 60 * 3;
 // for smoothing out I/O spikes caused by merges at the cost of potentially polluting
 // the cache by adding things that won't be used.
 
-// Wikis with more then one shard is a decent way of saying "wikis we expect will get
-// some search traffic every few seconds".  In this commonet the term "cache" refers
-// to all kinds of caches: the linux disk cache, Elasticsearch's filter cache, whatever.
-$wgCirrusSearchMainPageCacheWarmer = ( $wgCirrusSearchShardCount['content'] > 1 );
+// Wikis with more then one shard or with multi-cluster configuration is a
+// decent way of saying "wikis we expect will get some search traffic every
+// few seconds".  In this commonet the term "cache" refers to all kinds of
+// caches: the linux disk cache, Elasticsearch's filter cache, whatever.
+if ( isset( $wgCirrusSearchShardCount['eqiad'] ) ) {
+	$wgCirrusSearchMainPageCacheWarmer = true;
+} else {
+	$wgCirrusSearchMainPageCacheWarmer = ( $wgCirrusSearchShardCount['content'] > 1 );
+}
 
 // Enable concurrent search limits for specified abusive networks
 $wgCirrusSearchForcePerUserPoolCounter = $wmgCirrusSearchForcePerUserPoolCounter;

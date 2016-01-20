@@ -15699,26 +15699,29 @@ $wgConf->settings = array(
 	// Commons is special and has a 'file' index in addition to the regular ones.
 	// We're sharding 'file' like it is a content index because searching it is
 	// very very common.
-	'commonswiki' => array( 
-		'eqiad' => array('content' => 1, 'general' => 10, 'file' => 7, 'titlesuggest' => 1 ),
-		'codfw' => array('content' => 1, 'general' => 8, 'file' => 7, 'titlesuggest' => 1 ),
-	),
+	'commonswiki' => array( 'content' => 1, 'general' => 8, 'file' => 7, 'titlesuggest' => 1 ),
 	'cswiki' => array( 'content' => 3, 'general' => 1, 'titlesuggest' => 1 ),
 	'dawiki' => array( 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ),
-	'dewiki' => array( 'content' => 7, 'general' => 10, 'titlesuggest' => 3 ),
+	'dewiki' => array( 'content' => 6, 'general' => 7, 'titlesuggest' => 3 ),
 	'dewikisource' => array( 'content' => 3, 'general' => 1, 'titlesuggest' => 1 ),
 	'elwiki' => array( 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ),
 	// These shards are also significantly larger than the target 2GB.
-	'enwiki' => array( 'content' => 7, 'general' => 10, 'titlesuggest' => 4 ),
+	'enwiki' => array( 'content' => 6, 'general' => 7, 'titlesuggest' => 4 ),
 	'enwikinews' => array( 'content' => 1, 'general' => 4, 'titlesuggest' => 1 ),
 	'enwikisource' => array( 'content' => 7, 'general' => 1, 'titlesuggest' => 1 ),
 	'enwiktionary' => array( 'content' => 5, 'general' => 2, 'titlesuggest' => 2 ),
 	'eswiki' => array( 'content' => 7, 'general' => 6, 'titlesuggest' => 2 ),
 	'eswikisource' => array( 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ),
 	'fawiki' => array( 'content' => 5, 'general' => 2, 'titlesuggest' => 2 ),
+<<<<<<< HEAD
 	'fiwiki' => array( 'content' => 3, 'general' => 10, 'titlesuggest' => 1 ),
 	'frwiki' => array( 'content' => 7, 'general' => 10, 'titlesuggest' => 3 ),
 	'frwikisource' => array( 'content' => 7, 'general' => 1, 'titlesuggest' => 1 ),
+=======
+	'fiwiki' => array( 'content' => 3, 'general' => 8, 'titlesuggest' => 1 ),
+	'frwiki' => array( 'content' => 7, 'general' => 8, 'titlesuggest' => 4 ),
+	'frwikisource' => array( 'content' => 7, 'general' => 1, 'titlesuggest' => 2 ),
+>>>>>>> fdb41b4... Change CirrusSearch sharding values for codfw
 	'frwiktionary' => array( 'content' => 3, 'general' => 1, 'titlesuggest' => 1 ),
 	'hewiki' => array( 'content' => 3, 'general' => 2, 'titlesuggest' => 1 ),
 	'hewikisource' => array( 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ),
@@ -15726,22 +15729,35 @@ $wgConf->settings = array(
 	'hywiki' => array( 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ),
 	'idwiki' => array( 'content' => 2, 'general' => 2, 'titlesuggest' => 1 ),
 	'incubatorwiki' => array( 'content' => 1, 'general' => 2, 'titlesuggest' => 1 ),
+<<<<<<< HEAD
 	'itwiki' => array( 'content' => 7, 'general' => 9, 'titlesuggest' => 2 ),
+=======
+	'itwiki' => array( 'content' => 7, 'general' => 8, 'titlesuggest' => 4 ),
+>>>>>>> fdb41b4... Change CirrusSearch sharding values for codfw
 	'itwikisource' => array( 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ),
 	'jawiki' => array( 'content' => 7, 'general' => 6, 'titlesuggest' => 2 ),
 	'kkwiki' => array( 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ),
 	'kowiki' => array( 'content' => 4, 'general' => 1, 'titlesuggest' => 1 ),
 	'ltwiktionary' => array( 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ),
 	'mswiki' => array( 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ),
+<<<<<<< HEAD
 	'metawiki' => array( 'content' => 1, 'general' => 10, 'titlesuggest' => 1 ),
 	'mgwiktionary' => array( 'content' => 4, 'general' => 1, 'titlesuggest' => 2 ),
+=======
+	'metawiki' => array( 'content' => 1, 'general' => 8, 'titlesuggest' => 1 ),
+	'mgwiktionary' => array( 'content' => 4, 'general' => 1, 'titlesuggest' => 1 ),
+>>>>>>> fdb41b4... Change CirrusSearch sharding values for codfw
 	'nlwiki' => array( 'content' => 7, 'general' => 4, 'titlesuggest' => 2 ),
 	'nowiki' => array( 'content' => 3, 'general' => 2, 'titlesuggest' => 1 ),
 	'plwiki' => array( 'content' => 7, 'general' => 3, 'titlesuggest' => 2 ),
 	'plwikisource' => array( 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ),
 	'ptwiki' => array( 'content' => 7, 'general' => 5, 'titlesuggest' => 2 ),
 	'rowiki' => array( 'content' => 3, 'general' => 2, 'titlesuggest' => 1 ),
+<<<<<<< HEAD
 	'ruwiki' => array( 'content' => 7, 'general' => 10, 'titlesuggest' => 3 ),
+=======
+	'ruwiki' => array( 'content' => 7, 'general' => 8, 'titlesuggest' => 4 ),
+>>>>>>> fdb41b4... Change CirrusSearch sharding values for codfw
 	'ruwikisource' => array( 'content' => 4, 'general' => 1, 'titlesuggest' => 1 ),
 	'ruwiktionary' => array( 'content' => 3, 'general' => 1, 'titlesuggest' => 1 ),
 	'shwiki' => array( 'content' => 4, 'general' => 1, 'titlesuggest' => 1 ),
@@ -15762,8 +15778,14 @@ $wgConf->settings = array(
 'wmgCirrusSearchReplicas' => array(
 	'default' => array( 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2' ),
 	'+commonswiki' => array( 'file' => '0-3' ),
-	'+dewiki' => array( 'content' => '0-3' ),
-	'+enwiki' => array( 'content' => '0-3' ),
+	'enwiki' => array(
+		'eqiad' => array( 'content' => '0-4', 'general' => '0-3', 'titlesuggest' => '0-2' ),
+		'codfw' => array( 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2' ),
+	),
+	'dewiki' => array(
+		'eqiad' => array( 'content' => '0-4', 'general' => '0-3', 'titlesuggest' => '0-2' ),
+		'codfw' => array( 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2' ),
+	),
 ),
 
 'wmgCirrusSearchMaxShardsPerNode' => array(
