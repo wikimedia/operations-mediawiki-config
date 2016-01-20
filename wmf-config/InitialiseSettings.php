@@ -13723,6 +13723,13 @@ $wgConf->settings = array(
 	'kowiki' => false, // T94388
 ),
 
+'wmgMFSchemaMobileWebLanguageSwitcherSampleRate' => array(
+	'default' => array(
+		'beta' => 0.1,
+		'stable' => 0.0001
+	)
+),
+
 'wgExtraGenderNamespaces' => array(
 	'default' => array(),
 	'cswiki' => array(

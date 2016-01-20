@@ -291,6 +291,12 @@ function wmfLabsSettings() {
 			'default' => true,
 			'enwiki' => false,
 		),
+		'wmgMFSchemaMobileWebLanguageSwitcherSampleRate' => array(
+			'default' => array(
+				'beta' => 0.1,
+				'stable' => 0.0001
+			)
+		),
 
 		// T97704
 		'wmgGatherAutohideFlagLimit' => array(
