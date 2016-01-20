@@ -12179,7 +12179,8 @@ $wgConf->settings = array(
 		'beta-feature-flow-user-talk-page',         // 2016-03-02 - Flow opt-in
 		'cx',                                       // 2016-05-08 - ContentTranslation
 		'read-more',                                // 2016-06-10 - Read more
-		'cirrussearch-completionsuggester',         // 2016-12-17 - Completion Suggester / type as you search
+		'cirrussearch-completionsuggester',         // 2016-06-17 - Completion Suggester / type as you search
+		'echo-cross-wiki-notifications',            // 2016-07-19 - Enhanced/cross-wiki notifications
 	),
 ),
 
