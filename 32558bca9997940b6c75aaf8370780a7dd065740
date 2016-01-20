@@ -34,6 +34,24 @@
       "revId": "32558bca9997940b6c75aaf8370780a7dd065740",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_993b6235",
+        "filename": "dblists/group1.dblist",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1706
+      },
+      "writtenOn": "2016-01-20T19:10:55Z",
+      "side": 1,
+      "message": "as far as I can tell you have it right - it just processes the operations from left to right with no particular operator precedence. So I think what you have will work.",
+      "parentUuid": "6eaa8f54_caf01e64",
+      "revId": "32558bca9997940b6c75aaf8370780a7dd065740",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
