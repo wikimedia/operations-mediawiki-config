@@ -10867,7 +10867,7 @@ $wgConf->settings = array(
 ),
 'wmgSpecialGadgetUsageActiveUsers' => array(
 	'default' => true,
-	'testwiki' => false,
+	'enwiki' => false,
 ),
 
 # @} end of EXTENSIONS
