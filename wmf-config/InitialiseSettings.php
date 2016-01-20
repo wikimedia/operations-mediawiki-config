@@ -11800,6 +11800,7 @@ $wgConf->settings = array(
 		'digital.slub-dresden.de',
 		'grossstadtgeschichten-berlin.de',
 		'content.staatsbibliothek-berlin.de',
+		'*.archives.gov',                   // US National Archives - T124080
 	),
 ),
 
