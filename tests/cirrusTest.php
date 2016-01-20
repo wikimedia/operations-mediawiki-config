@@ -64,8 +64,8 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		}
 	}
 
-	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix, $lang, $site ) {
-		// Variables rqeuired for wgConf.php
+	private function loadWgConf( $wmfRealm ) {
+		// Variables required for wgConf.php
 		$wmfConfigDir = __DIR__ . "/../wmf-config";
 
 		require "{$wmfConfigDir}/wgConf.php";
@@ -78,6 +78,13 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$GLOBALS['wgConf'] = $wgConf;
 
 		require "{$wmfConfigDir}/InitialiseSettings.php";
+
+		return $wgConf;
+	}
+
+	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix, $lang, $site ) {
+		$wmfConfigDir = __DIR__ . "/../wmf-config";
+		$wgConf = $this->loadWgConf( $wmfRealm );
 
 		$globals = $wgConf->getAll( $wgDBname, $dbSuffix, array(
 				'lang' => $lang,
@@ -102,10 +109,91 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 			'cirrusUser' => '',
 			'cirrusKey' => '',
 		);
+		$wmfDatacenter = 'unittest';
 		$wgCirrusSearchPoolCounterKey = 'unittest:poolcounter:blahblahblah';
 
 		require "{$wmfConfigDir}/CirrusSearch-common.php";
 
 		return compact( array_keys( get_defined_vars() ) );
+	}
+
+	private static function resolveConfig( $config, $key ) {
+		if ( isset( $config[$key] ) ) {
+			return $config[$key];
+		}
+		$key = '+' . $key;
+		if ( isset( $config[$key] ) ) {
+			return $config[$key] + $config['default'];
+		}
+		return $config['default'];
+	}
+
+	private static function resolveClusterConfig( $config, $clusterName ) {
+		if ( isset( $config[$clusterName] ) ) {
+			return $config[$clusterName];
+		}
+		return $config;
+	}
+
+	public function providePerClusterShardsAndReplicas() {
+		$wgConf = $this->loadWgConf( 'unittest' );
+		$shards = $wgConf->settings['wmgCirrusSearchShardCount'];
+		$replicas = $wgConf->settings['wmgCirrusSearchReplicas'];
+		$wikis = array_merge( array_keys( $shards ), array_keys( $replicas ) );
+		foreach ( $wikis as $idx => $wiki ) {
+			if ( $wiki[0] === '+' ) {
+					$wikis[$idx] = substr( $wiki, 1 );
+			}
+		}
+		$wikis = array_unique( $wikis );
+		$indexTypes = array( 'content', 'general', 'titlesuggest' );
+		$clusters = array( 'eqiad' => 31, 'codfw' => 24 );
+		$tests = array();
+		foreach ( $wikis as $wiki ) {
+			foreach ( $indexTypes as $indexType ) {
+				foreach ( $clusters as $clusterName => $numServers ) {
+					// wikidata doesn't have completion suggester
+					if ( $wiki === 'wikidatawiki' && $indexType === 'titlesuggest' ) {
+						continue;
+					}
+					$tests["$clusterName {$wiki}_{$indexType}"] = array(
+						$wiki,
+						$indexType,
+						$numServers,
+						self::resolveClusterConfig( self::resolveConfig( $shards, $wiki ), $clusterName ),
+						self::resolveClusterConfig( self::resolveConfig( $replicas, $wiki ), $clusterName ),
+					);
+				}
+			}
+		}
+
+		return $tests;
+	}
+
+	/**
+	 * @dataProvider providePerClusterShardsAndReplicas
+	 */
+	public function testShardAndReplicasCountsAreSane( $wiki, $indexType, $numServers, $shards, $replicas ) {
+		$primaryShards = $shards[$indexType];
+		// parse 0-3 into 3
+		$pieces = explode( '-', $replicas[$indexType] );
+		$numReplicas = end( $pieces );
+
+		// +1 is for the primary.
+		$totalShards = $primaryShards * (1 + $numReplicas);
+
+		$this->assertLessThanOrEqual( $numServers, $totalShards );
+
+		// For our busiest wikis we want to make sure we are using most of the 
+		// cluster for the indices. This was guesstimated by running the following query
+		// in hive and choosing wikis with > 100M queries/week:
+		//   select wikiid, count(1) as count from wmf_raw.cirrussearchrequestset where year = 2016
+		//   and month = 1 and day >= 2 and day < 9 group by wikiid order by count desc limit 10;
+		$busyWikis = array( 'enwiki', 'dewiki' );
+		if ( in_array( $wiki, $busyWikis ) && $indexType !== 'titlesuggest' ) {
+
+			// For busy indices ensure we are using most of the cluster to serve them
+			$this->assertGreaterThanOrEqual( $numServers - 3, $totalShards );
+		}
 	}
 }
