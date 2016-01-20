@@ -36,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_8f56b0cf",
+        "filename": "w/static.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-01-20T21:11:30Z",
+      "side": 1,
+      "message": "Good point, since this won\u0027t adhere to htaccess or some such.\n\nI did try accessing a php file when I applied this to mw1017 last week and it denied that, because StreamFile::contentTypeFromPath in core doesn\u0027t support PHP. It only looks at the file path, not at the contents.\n\ndoGuessMimeType() doesn\u0027t get called here (which is the only method that does support PHP). Anyway, I agree we shouldn\u0027t rely on that.\n\nNote that at the moment, we\u0027ve always allowed public access to PHP files in the document root. This has been the case on bits in the past, and is currently the case in /static/{version}/extensions and /static/{version}/skins as well. So this wouldn\u0027t change anything.\n\nIn fact, this makes it stricter as it limits it to mime types known to MW, as opposed to any file arbitrarily. Not much, but no worse than current state.\n\nhttps://bits.wikimedia.org/w/extensions/VisualEditor/VisualEditor.php (plain text)\n\nhttps://bits.wikimedia.org/static-current/extensions/VisualEditor/VisualEditor.php (plain text)",
+      "parentUuid": "6eaa8f54_899334a5",
+      "revId": "090053b862912a838d297ae265e5994e43b82125",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_09a984db",
         "filename": "w/static.php",
         "patchSetId": 1
@@ -47,6 +65,24 @@
       "writtenOn": "2016-01-15T05:44:06Z",
       "side": 1,
       "message": "It should also have an Expires header.",
+      "revId": "090053b862912a838d297ae265e5994e43b82125",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_0f62c0a2",
+        "filename": "w/static.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-01-20T21:11:30Z",
+      "side": 1,
+      "message": "I intentionally left this out as it is obsoleted by max-age, and has issues with Varnish caching. Afaik Varnish will add that header dynamically the right way (instead of this file hardcoding it into cache the wrong way).",
+      "parentUuid": "6eaa8f54_09a984db",
       "revId": "090053b862912a838d297ae265e5994e43b82125",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -81,6 +117,24 @@
       "writtenOn": "2016-01-15T05:44:06Z",
       "side": 1,
       "message": "FYI, there is substr_compare() for this.",
+      "revId": "090053b862912a838d297ae265e5994e43b82125",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_efe96410",
+        "filename": "w/static.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-01-20T21:11:30Z",
+      "side": 1,
+      "message": "Thanks, done.",
+      "parentUuid": "6eaa8f54_c9404c3b",
       "revId": "090053b862912a838d297ae265e5994e43b82125",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
