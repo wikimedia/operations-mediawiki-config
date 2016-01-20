@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_caf01e64",
+        "filename": "dblists/group1.dblist",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1731
+      },
+      "writtenOn": "2016-01-20T01:56:26Z",
+      "side": 1,
+      "message": "I wasn\u0027t sure about the operator precedence here.",
+      "revId": "32558bca9997940b6c75aaf8370780a7dd065740",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
