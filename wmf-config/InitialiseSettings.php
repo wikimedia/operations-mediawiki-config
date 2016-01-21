@@ -12005,6 +12005,7 @@ $wgConf->settings = array(
 	'kkwiki' => true,
 	'knwiki' => true,
 	'kowiki' => true,
+	'ladwiki' => true, // T121524
 	'lvwiki' => true,
 	'maiwiki' => true,
 	'minwiki' => true,
