@@ -16254,6 +16254,8 @@ $wgConf->settings = array(
 
 'wmgUseEventBus' => array(
 	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
 ),
 
 );
