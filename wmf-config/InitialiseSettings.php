@@ -15203,6 +15203,11 @@ $wgConf->settings = array(
 	'wikipedia' => true,
 ),
 
+//Parallel Corpora
+'wmgContentTranslationCorpora' => array(
+	'default' => false,
+),
+
 'wmgUseMapSources' => array(
 	'default' => false,
 	'wikivoyage' => true,
