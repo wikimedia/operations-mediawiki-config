@@ -557,7 +557,6 @@ $wgGrantPermissions['checkuser']['checkuser-log'] = true;
 $wgGrantPermissionGroups['checkuser'] = 'administration';
 
 // Rights needed to interact with wikibase
-$wgGrantPermissions['createeditmovepage']['item-create'] = true;
 $wgGrantPermissions['createeditmovepage']['property-create'] = true;
 $wgGrantPermissions['editpage']['item-term'] = true;
 $wgGrantPermissions['editpage']['item-merge'] = true;
