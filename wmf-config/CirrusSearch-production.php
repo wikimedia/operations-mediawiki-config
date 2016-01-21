@@ -86,3 +86,4 @@ $wgCirrusSearchDropDelayedJobsAfter = array(
 
 // Enable completion suggester (beta)
 $wgCirrusSearchUseCompletionSuggester = $wmgCirrusSearchUseCompletionSuggester;
+$wgCirrusSearchRecycleCompletionSuggesterIndex = $wmgCirrusSearchRecycleCompletionSuggesterIndex;
