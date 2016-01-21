@@ -107,6 +107,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_356cae98",
+        "filename": "w/static.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2016-01-21T05:18:38Z",
+      "side": 1,
+      "message": "Judging by https://www.varnish-cache.org/trac/wiki/VCLExampleSetExpires , Varnish will not add an Expires header -- we use Varnish 3.0 which requires a lengthy piece of inline C to do so, and there\u0027s no such code in our current configuration. According to RFC 2616 and RFC 7234, CC:maxage overrides the Expires header when both are present -- are you saying that Varnish does not correctly implement this behaviour?",
+      "parentUuid": "6eaa8f54_955d62f2",
+      "revId": "090053b862912a838d297ae265e5994e43b82125",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_66caa71f",
         "filename": "w/static.php",
         "patchSetId": 1
