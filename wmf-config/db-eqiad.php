@@ -8,7 +8,7 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 #$wgReadOnly = "Wikimedia Sites are currently read-only during maintenance, please try again soon.";
 
 $wmgParserCacheDBs = array(
-	'10.64.16.156',  # pc1001
+#	'10.64.16.156',  # pc1001 (down for maintenance)
 	'10.64.16.157',  # pc1002
 	'10.64.16.158',  # pc1003
 );
