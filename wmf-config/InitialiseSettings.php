@@ -15205,7 +15205,7 @@ $wgConf->settings = array(
 
 //Parallel Corpora
 'wmgContentTranslationCorpora' => array(
-	'default' => false,
+	'default' => true,
 ),
 
 'wmgUseMapSources' => array(
