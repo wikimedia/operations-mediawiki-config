@@ -7,11 +7,10 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 
 #$wgReadOnly = "Wikimedia Sites are currently read-only during maintenance, please try again soon.";
 
-# Still using eqiad as codfw does not have these.
 $wmgParserCacheDBs = array(
-	'10.64.16.156',  # pc1001
-	'10.64.16.157',  # pc1002
-	'10.64.16.158',  # pc1003
+	'10.192.16.170', # pc2004
+	'10.192.32.128', # pc2005
+	'10.192.48.39',  # pc2006
 );
 
 $wmgOldExtTemplate = array(
