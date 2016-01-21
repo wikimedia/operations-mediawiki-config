@@ -122,7 +122,6 @@ if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org/v1';
 	$wgContentTranslationRESTBase['url'] = 'https://rest.wikimedia.org';
 	$wgContentTranslationTranslateInTarget = false;
-	$wgContentTranslationCorpora = $wmgContentTranslationCorpora;
 }
 
 if ( $wmgUseCentralNotice ) {
