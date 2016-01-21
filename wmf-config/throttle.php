@@ -27,26 +27,13 @@ $wmgThrottlingExceptions[] = array( // T110352 (long term)
 	'dbname' => 'tawiki',
 	'value'  => 50
 );
-$wmgThrottlingExceptions[] = array( // T123351
-	'from'   => '2016-01-14T17:00 +0:00',
-	'to'     => '2016-01-15T22:30 +0:00',
-	'IP'	 => array( '152.74.116.126', '152.74.116.104' ),
-	'dbname' => array( 'eswiki', 'eswikivoyage' ),
-	'value'  => 70 // 50 expected
-);
-$wmgThrottlingExceptions[] = array( // T123261
-	'from'   => '2016-01-19T10:00 +0:00',
-	'to'     => '2016-01-19T19:00 +0:00',
-	'IP'     => '200.54.189.226',
-	'dbname' => array( 'eswiki', 'eswikivoyage' ),
-	'value'  => 60 // 40 expected participants
-);
-$wmgThrottlingExceptions[] = array( // T123458
-	'from'   => '2016-01-16T00:00 +0:00',
-	'to'     => '2016-01-17T00:30 +0:00',
-	'range'  => '181.118.160.216/29',
-	'dbname' => 'eswiki',
-	'value'  => 70 // 50 expected
+
+$wmgThrottlingExceptions[] = array( // T124284 - Santiago Wikipedia editing workshop
+	'from'   => '2016-01-26T21:00 +0:00',
+	'to'     => '2016-01-27T01:00 +0:00',
+	'IP'     => array( '163.247.43.51', '200.54.105.35' ),
+	'dbname' => array( 'eswiki', 'enwiki', 'eswikivoyage' ),
+	'value'  => 50 // 30 expected
 );
 
 ## Add throttling definitions above.
