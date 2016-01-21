@@ -417,6 +417,10 @@ function wmfLabsSettings() {
 			'default' => true,
 		),
 
+		'wmgContentTranslationCorpora' => array(
+			'default' => true,
+		),
+
 		'wmgUseNavigationTiming' => array(
 			'default' => true,
 		),
