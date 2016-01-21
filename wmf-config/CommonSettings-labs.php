@@ -346,8 +346,10 @@ if ( $wmgUseEventBus ) {
 	$wgEventServiceUrl = 'http://deployment-eventlogging04.deployment-prep.eqiad.wmflabs:8085/v1/events';
 }
 
-if ( $wmgUseEcho ) {
+if ( $wmgUseEcho && $wmgUseCentralAuth ) {
 	$wgEchoSharedTrackingDB = 'wikishared';
+	// Set cluster back to false, to override CommonSettings.php setting it to 'extension1'
+	$wgEchoSharedTrackingCluster = false;
 }
 
 // Experimental

@@ -2492,7 +2492,8 @@ if ( $wmgUseEcho ) {
 	// Whether to make the cross-wiki notifications beta feature available
 	$wgEchoUseCrossWikiBetaFeature = $wmgEchoUseCrossWikiBetaFeature;
 
-	if ( $wmgEchoUseCrossWikiTrackingTable ) {
+	// Enable tracking table only on SULed wikis
+	if ( $wmgUseCentralAuth ) {
 		$wgEchoSharedTrackingDB = 'wikishared';
 		// Explicitly set this to 'extension1', because some wikis have $wgEchoCluster set to false
 		$wgEchoSharedTrackingCluster = 'extension1';
