@@ -2401,7 +2401,7 @@ if ( $wmgEnableInterwiki ) {
 require_once( "$IP/extensions/RandomRootPage/Randomrootpage.php" );
 
 # Avoid excessive CPU due to cache misses from rapid invalidations
-$wgJobBackoffThrottling['htmlCacheUpdate'] = 40; // pages/sec burst per runner
+$wgJobBackoffThrottling['htmlCacheUpdate'] = 20; // pages/sec per runner
 
 # Job types to exclude from the default queue processing. Aka the very long
 # one. That will exclude the types from any queries such as nextJobDB.php
