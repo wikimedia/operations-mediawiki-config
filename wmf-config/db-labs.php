@@ -33,8 +33,8 @@ if( $wmfRealm == 'labs' ) { # safe guard
 		),
 
 		'hostsByName' => array(
-			'deployment-db1'  => '10.68.16.193', # deployment-db1.eqiad.wmflabs
-			'deployment-db2'  => '10.68.17.94', # deployment-db2.eqiad.wmflabs
+			'deployment-db1'  => '10.68.16.193', # deployment-db1.deployment-prep.eqiad.wmflabs
+			'deployment-db2'  => '10.68.17.94', # deployment-db2.deployment-prep.eqiad.wmflabs
 		),
 	);
 

@@ -364,7 +364,7 @@ function wmfLabsSettings() {
 		),
 
 		'wmgRestbaseServer' => array(
-			'default' => "http://10.68.17.227:7231" // deployment-restbase01.eqiad.wmflabs
+			'default' => "http://10.68.17.227:7231" // deployment-restbase01.deployment-prep.eqiad.wmflabs
 		),
 
 		'wmgUseRestbaseVRS' => array(
@@ -526,7 +526,7 @@ function wmfLabsSettings() {
 		),
 
 		'wgUploadThumbnailRenderHttpCustomDomain' => array(
-			'default' => 'deployment-cache-upload04.eqiad.wmflabs',
+			'default' => 'deployment-cache-upload04.deployment-prep.eqiad.wmflabs',
 		),
 
 		'wmgUseApiFeatureUsage' => array(

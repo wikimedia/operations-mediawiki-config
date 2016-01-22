@@ -22,7 +22,7 @@ if ( file_exists( '/etc/wmflabs-instancename' ) ) {
 // stream recent changes to redis
 $wgRCFeeds['redis'] = array(
 	'formatter' => 'JSONRCFeedFormatter',
-	'uri'       => "redis://deployment-stream.eqiad.wmflabs:6379/rc.$wgDBname",
+	'uri'       => "redis://deployment-stream.deployment-prep.eqiad.wmflabs:6379/rc.$wgDBname",
 );
 
 $wgProfiler['udphost'] = 'labmon1001.eqiad.wmnet';
@@ -39,7 +39,7 @@ $wgPreloadJavaScriptMwUtil = true;
 $wgResourceLoaderStorageEnabled = true;
 
 if ( $wmgUseEventLogging ) {
-	$wgEventLoggingFile = 'udp://deployment-eventlogging03.eqiad.wmflabs:8421/EventLogging';
+	$wgEventLoggingFile = 'udp://deployment-eventlogging03.deployment-prep.eqiad.wmflabs:8421/EventLogging';
 }
 
 $wgLocalVirtualHosts = array(
@@ -234,7 +234,7 @@ if ( $wgDBname == 'commonswiki' ) {
 if ( $wmgUseMath ) {
 	$wgMathFileBackend = false;
 	$wgMathDirectory   = '/data/project/upload7/math';
-	$wgMathMathMLUrl = 'http://deployment-mathoid.eqiad.wmflabs:10042';
+	$wgMathMathMLUrl = 'http://deployment-mathoid.deployment-prep.eqiad.wmflabs:10042';
 }
 
 if ( $wmgUseScore ) {

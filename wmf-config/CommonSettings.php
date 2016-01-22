@@ -86,7 +86,7 @@ case 'production':
 	$wmfUdp2logDest = 'fluorine.eqiad.wmnet:8420';
 	break;
 case 'labs':
-	$wmfUdp2logDest = 'deployment-fluorine.eqiad.wmflabs:8420';
+	$wmfUdp2logDest = 'deployment-fluorine.deployment-prep.eqiad.wmflabs:8420';
 	break;
 default:
 	$wmfUdp2logDest = '127.0.0.1:8420';
