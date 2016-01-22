@@ -33,6 +33,7 @@ mwconfig_files_txt=(
 	mobile-labs.php
 	mobile.php
 	proofreadpage.php
+	redis.php
 	throttle.php
 	wgConf.php
 	squid.php
