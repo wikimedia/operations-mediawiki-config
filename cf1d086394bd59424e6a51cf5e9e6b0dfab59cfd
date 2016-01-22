@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_f1d4e118",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 11690,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-01-22T14:27:33Z",
+      "side": 1,
+      "message": "Do we need lots of tabs here?",
+      "revId": "cf1d086394bd59424e6a51cf5e9e6b0dfab59cfd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
