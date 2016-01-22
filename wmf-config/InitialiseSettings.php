@@ -4400,7 +4400,6 @@ $wgConf->settings = array(
 		'CentralAuthUserMerge' => 'debug',
 		'CirrusSearch' => 'debug',
 		'CirrusSearchChangeFailed' => 'debug',
-		'CirrusSearchRequests' => array( 'logstash' => false ),
 		'CirrusSearchRequestSet' => array(
 			'kafka' => 'debug',
 			'udp2log' => false,
