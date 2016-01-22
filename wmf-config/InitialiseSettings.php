@@ -4418,7 +4418,7 @@ $wgConf->settings = array(
 		'CirrusSearchUserTesting' => array( 'logstash' => false ),
 		'cite' => 'debug',
 		'collection' => 'debug', // -cscott for T73675
-		'DBPerformance' => 'debug',
+		'DBPerformance' => array( 'logstash' => 'debug', 'udp2log' => 'warning' ),
 		'Echo' => 'debug',
 		'es-hit' => 'debug',
 		'EventBus' => 'debug',
