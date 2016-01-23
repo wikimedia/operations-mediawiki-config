@@ -5241,6 +5241,10 @@ $wgConf->settings = array(
 		NS_HELP_TALK => 'Help_talk',
 		NS_CATEGORY => 'Category',
 		NS_CATEGORY_TALK => 'Category_talk',
+
+		// Extra namespaces
+		100 => 'Portal',      // T124389
+		101 => 'Portal_talk',
 	),
 	'yiwiki' => array(
 		100 => 'פארטאל',
