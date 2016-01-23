@@ -123,6 +123,12 @@ $wgCirrusSearchInterwikiProv = 'iwsw1';
 $wgCirrusSearchWikiToNameMap = $wmgCirrusSearchWikiToNameMap;
 $wgCirrusSearchLanguageToWikiMap = $wmgCirrusSearchLanguageToWikiMap;
 
+$wgHooks['CirrusSearchMappingConfig'][] = function( array &$config, $mappingConfigBuilder ) {
+	$config['page']['properties']['popularity_score'] = array(
+		'type' => 'double',
+	);
+};
+
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
