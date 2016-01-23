@@ -5241,8 +5241,6 @@ $wgConf->settings = array(
 		NS_HELP_TALK => 'Help_talk',
 		NS_CATEGORY => 'Category',
 		NS_CATEGORY_TALK => 'Category_talk',
-		100 => 'Transwiki',
-		101 => 'Transwiki_talk',
 	),
 	'yiwiki' => array(
 		100 => 'פארטאל',
