@@ -4468,6 +4468,7 @@ $wgConf->settings = array(
 		'T107711' => 'debug', //- aude, hoo and addshore, for Wikidata
 		'T76305' => 'debug', // - Krinkle and Krenair, for https://gerrit.wikimedia.org/r/188987
 		'T87645' => 'debug', // - Ori on behalf of Tim, for https://gerrit.wikimedia.org/r/#/c/188304/
+		'T124356' => 'debug',
 		'temp-debug' => 'debug', // generic admin debug log
 		'texvc' => 'debug',
 		'thumbnailaccess' => 'debug', // T106323
