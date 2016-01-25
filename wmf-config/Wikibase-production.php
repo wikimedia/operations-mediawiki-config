@@ -101,4 +101,7 @@ if ( $wmgUseWikibaseClient ) {
 		'Q20748092' => 'badge-proofread',
 		'Q20748093' => 'badge-validated'
 	);
+
+	// Don't overwrite commons links in the "other projects sidebar" for now
+	$wgWikimediaBadgesCommonsCategoryProperty = null;
 }
