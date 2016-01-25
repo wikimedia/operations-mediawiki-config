@@ -56,7 +56,7 @@ $IP/extensions/GlobalCssJs/GlobalCssJs.php
 $IP/extensions/GlobalUsage/GlobalUsage.php
 $IP/extensions/GlobalUserPage/GlobalUserPage.php
 $IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php
-$IP/extensions/Graph/Graph.php
+$IP/extensions/Graph/extension.json
 $IP/extensions/GuidedTour/GuidedTour.php
 $IP/extensions/GWToolset/GWToolset.php
 $IP/extensions/ImageMap/ImageMap.php
