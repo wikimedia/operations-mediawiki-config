@@ -13605,17 +13605,17 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-'wmgGraphDefaultVegaVer' => array(
+'wgGraphDefaultVegaVer' => array(
 	'default' => 1,
 ),
 
 // All graph data requests should be trusted on these wikis
-'wmgGraphIsTrusted' => array(
+'wgGraphIsTrusted' => array(
 	'default' => false, // MUST BE FALSE for any untrusted wiki
 	'zerowiki' => true,
 ),
 
-'wmgGraphEnableGZip' => array(
+'wgGraphEnableGZip' => array(
 	'default' => true,
 ),
 
@@ -13624,7 +13624,7 @@ $wgConf->settings = array(
 // %2\$s = title
 // %3\$s = revid
 // %4\$s = hash
-'wmgGraphImgServiceUrl' => array(
+'wgGraphImgServiceUrl' => array(
 	'default' => "/api/rest_v1/page/graph/png/%2\$s/%3\$s/%4\$s.png",
 	'private' => false,
 ),
