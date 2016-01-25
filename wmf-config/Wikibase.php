@@ -193,6 +193,9 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['sharedCacheKeyPrefix'] .= $wgWBSharedCacheKey;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
+
+	// Don't overwrite commons links in the "other projects sidebar" for now
+	$wgWikimediaBadgesCommonsCategoryProperty = null;
 }
 
 require_once "{$wmfConfigDir}/Wikibase-{$wmfRealm}.php";
