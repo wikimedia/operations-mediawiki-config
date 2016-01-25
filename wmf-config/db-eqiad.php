@@ -11,6 +11,8 @@ $wmgParserCacheDBs = array(
 	'10.64.0.12',   # pc1004
 	'10.64.16.157', # pc1002
 	'10.64.16.158', # pc1003
+#	'10.64.32.72', # pc1005
+#	'10.64.48.128', # pc1006
 );
 
 $wmgOldExtTemplate = array(
