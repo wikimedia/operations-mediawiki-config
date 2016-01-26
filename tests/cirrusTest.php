@@ -77,6 +77,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$GLOBALS['wmfConfigDir'] = $wmfConfigDir;
 		$GLOBALS['wgConf'] = $wgConf;
 
+		require __DIR__ . '/TestServices.php'
 		require "{$wmfConfigDir}/InitialiseSettings.php";
 
 		return $wgConf;
@@ -184,7 +185,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 
 		$this->assertLessThanOrEqual( $numServers, $totalShards );
 
-		// For our busiest wikis we want to make sure we are using most of the 
+		// For our busiest wikis we want to make sure we are using most of the
 		// cluster for the indices. This was guesstimated by running the following query
 		// in hive and choosing wikis with > 100M queries/week:
 		//   select wikiid, count(1) as count from wmf_raw.cirrussearchrequestset where year = 2016
