@@ -392,6 +392,9 @@ $wgLBFactoryConf = array(
 ),
 
 # This key must exist for the master switch script to work
+#
+# These read only messages should currently be kept,
+# to prevent accidental write to eqiad from codw.
 'readOnlyBySection' => array(
 	'DEFAULT' => 'Brief Database Maintenance in progress, please try again in 3 minutes', #s3
 	's1'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
