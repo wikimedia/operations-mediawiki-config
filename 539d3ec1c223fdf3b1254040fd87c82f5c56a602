@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_7ce8af77",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2902,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2016-01-26T03:53:41Z",
+      "side": 0,
+      "message": "At the same time, we should change this to \"wfLoadExtension( \u0027Graph\u0027 );\" and update extension-list to point to ../Graph/extension.json",
+      "revId": "539d3ec1c223fdf3b1254040fd87c82f5c56a602",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
