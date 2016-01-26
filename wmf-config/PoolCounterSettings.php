@@ -71,6 +71,12 @@ if ( $wmgCirrusPerUserPoolCounter ) {
 	);
 }
 
-require $wmfRealm === 'labs'
-	? "{$wmfConfigDir}/PoolCounterSettings-labs.php"
-	: "{$wmfConfigDir}/PoolCounterSettings-{$wmfDatacenter}.php";
+$wgPoolCountClientConf = array(
+	'servers' => $wmfLocalServices['poolcounter'],
+	'timeout' => 0.5
+);
+
+# Enable connect_timeout for testwiki
+if ( $wgDBname == 'testwiki' || $wmfDatacenter == 'codfw' || $wmfRealm == 'labs' ) {
+	$wgPoolCountClientConf['connect_timeout'] = 0.01;
+}
