@@ -8,5 +8,5 @@ foreach ( array( 'eqiad', 'codfw' ) as $dc ) {
 	);
 }
 
-$wgObjectCaches['redis_master'] = $wgObjectCaches['redis_eqiad'];
+$wgObjectCaches['redis_master'] = $wgObjectCaches['redis_{$wmfMasterDatacenter}'];
 $wgObjectCaches['redis_local'] = $wgObjectCaches["redis_{$wmfDatacenter}"];
