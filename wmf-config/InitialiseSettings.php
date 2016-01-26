@@ -12055,6 +12055,7 @@ $wgConf->settings = array(
 	'minwiki' => true,
 	'newiki' => true,
 	'nlwiki' => true,
+	'nlwikiquote' => true, // T124167
 	'plwiki' => true,
 	'plwikisource' => true,
 	'plwikivoyage' => true,
