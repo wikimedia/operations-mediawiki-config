@@ -955,6 +955,7 @@ $wgConf->settings = array(
 	'srwikinews' => '/static/images/project-logos/srwikinews.png',
 	'tawikinews' => '/static/images/project-logos/tawikinews.png',
 	'thwikinews' => '/static/images/project-logos/thwikinews.png',
+	'ukwikinews' => '/static/images/project-logos/ukwikinews.png', // T124778
 
 	// Wikisource
 	'sourceswiki' => '/static/images/project-logos/sourceswiki.png',
