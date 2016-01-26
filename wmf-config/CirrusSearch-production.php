@@ -88,5 +88,3 @@ $wgCirrusSearchDropDelayedJobsAfter = array(
 $wgCirrusSearchUseCompletionSuggester = $wmgCirrusSearchUseCompletionSuggester;
 $wgCirrusSearchRecycleCompletionSuggesterIndex = $wmgCirrusSearchRecycleCompletionSuggesterIndex;
 
-// repoint morelike queries to codfw
-$wgCirrusSearchMoreLikeThisCluster = 'codfw';
