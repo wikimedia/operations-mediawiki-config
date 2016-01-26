@@ -35,6 +35,33 @@ $wmfAllServices['codfw'] = array(
 	'eventbus' => 'eventbus.svc.eqiad.wmnet',
 );
 
+### Logstash
+$wmfAllServices['eqiad']['logstash'] = 	array(
+	'10.64.0.122', // logstash1001.eqiad.wmnet
+	'10.64.32.137', // logstash1002.eqiad.wmnet
+	'10.64.48.113', // logstash1003.eqiad.wmnet
+);
+$wmfAllServices['codfw']['logstash'] = $wmfAllServices['eqiad']['logstash'];
+
+### Analytics Kafka cluster
+$wmfAllServices['eqiad']['kafka'] = array(
+	'10.64.5.12:9092',   // kafka1012.eqiad.wmnet
+	'10.64.5.13:9092',   // kafka1013.eqiad.wmnet
+	'10.64.36.114:9092', // kafka1014.eqiad.wmnet
+	'10.64.53.10:9092',  // kafka1018.eqiad.wmnet
+	'10.64.53.12:9092',  // kafka1020.eqiad.wmnet
+	'10.64.36.122:9092', // kafka1022.eqiad.wmnet
+);
+$wmfAllServices['codfw']['kafka'] = $wmfAllServices['eqiad']['kafka'];
+
+### IRC
+$wmfAllServices['eqiad']['irc'] = '208.80.154.160'; // eqiad: argon
+$wmfAllServices['codfw']['irc'] = $wmfAllServices['eqiad']['irc'];
+
+### Restbase
+$wmfAllServices['eqiad']['restbase'] = "http://10.2.2.17:7231";
+$wmfAllServices['codfw']['restbase'] = "http://10.2.1.17:7231";
+
 # Shorthand when we have no master-slave situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
