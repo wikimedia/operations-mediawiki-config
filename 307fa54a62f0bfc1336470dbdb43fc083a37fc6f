@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_5c3fee20",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2598,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2016-01-26T19:00:18Z",
+      "side": 1,
+      "message": "I assume this should be something like:\n\n$wgObjectCaches[\u0027redis_master\u0027][\u0027servers\u0027][0]",
+      "revId": "307fa54a62f0bfc1336470dbdb43fc083a37fc6f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
