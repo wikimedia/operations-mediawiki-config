@@ -6,12 +6,7 @@
 # It should be loaded AFTER CirrusSearch-common.php
 
 $wgCirrusSearchClusters = array(
-	'eqiad' => array(
-		'deployment-elastic05',
-		'deployment-elastic06',
-		'deployment-elastic07',
-		'deployment-elastic08',
-	),
+	'eqiad' => array( $wmfAllServices['eqiad']['search'] )
 );
 
 if ( $wgDBname == 'enwiki' ) {

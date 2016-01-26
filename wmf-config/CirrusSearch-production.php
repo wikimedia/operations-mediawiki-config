@@ -11,8 +11,8 @@
 $wgCirrusSearchMasterTimeout = '2m';
 
 $wgCirrusSearchClusters = array(
-	'eqiad' => array( '10.2.2.30' ), // search.svc.eqiad.wmnet
-	'codfw' => array( '10.2.1.30' ), // search.svc.codfw.wmnet
+	'eqiad' => array( $wmfAllServices['eqiad']['search'] ), // search.svc.eqiad.wmnet
+	'codfw' => array( $wmfAllServices['codfw']['search'] ), // search.svc.codfw.wmnet
 	'labsearch' => array( '10.64.37.14' ), // nobelium.eqiad.wmnet
 );
 
