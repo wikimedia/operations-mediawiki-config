@@ -4457,7 +4457,7 @@ $wgConf->settings = array(
 		'resourceloader' => 'debug',
 		'ResourceLoaderImage' => 'debug', // - demon, matmarex
 		'runJobs' => array( 'logstash' => 'warning' ), // - bd808, T113571
-		'session' => array( 'udp2log' => false, 'logstash' => 'debug' ),
+		'session' => array( 'udp2log' => false, 'logstash' => 'warning' ),
 		'SimpleAntiSpam' => 'debug',
 		'slow-parse' => 'debug',
 		'SpamBlacklistHit' => 'debug',
