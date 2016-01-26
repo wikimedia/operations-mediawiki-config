@@ -5,6 +5,7 @@ require_once __DIR__ . '/SiteConfiguration.php';
 
 class cirrusTests extends PHPUnit_Framework_TestCase {
 	public function testClusterConfigurationForProdTestwiki() {
+		$wmfDatacenter = 'unittest';
 		$config = $this->loadCirrusConfig( 'production', 'testwiki', 'wiki' );
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
@@ -68,10 +69,12 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		// InitialiseSettings.php explicitly declares these as global, so we must too
 		$GLOBALS['wmfUdp2logDest'] = 'localhost';
 		$GLOBALS['wmfDatacenter'] = 'unittest';
+		$GLOBALS['wmfMasterDatacenter'] = 'unittest';
 		$GLOBALS['wmfRealm'] = $wmfRealm;
 		$GLOBALS['wmfConfigDir'] = $wmfConfigDir;
 		$GLOBALS['wgConf'] = $wgConf;
 
+		require __DIR__ . '/TestServices.php';
 		require "{$wmfConfigDir}/InitialiseSettings.php";
 
 		return $wgConf;
@@ -198,7 +201,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 
 		$this->assertLessThanOrEqual( $numServers, $totalShards );
 
-		// For our busiest wikis we want to make sure we are using most of the 
+		// For our busiest wikis we want to make sure we are using most of the
 		// cluster for the indices. This was guesstimated by running the following query
 		// in hive and choosing wikis with > 100M queries/week:
 		//   select wikiid, count(1) as count from wmf_raw.cirrussearchrequestset where year = 2016
