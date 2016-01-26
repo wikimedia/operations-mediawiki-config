@@ -5643,6 +5643,10 @@ $wgConf->settings = array(
 		106 => 'अनुक्रमणिका', // Index
 		107 => 'अनुक्रमणिकासंवाद', // Index talk
 	),
+	'skwikisource' => array(
+		102 => 'Autor',               // T122175
+		103 => 'Diskusia_k_autorovi',
+	),
 	'slwikisource' => array(
 		100 => 'Stran',
 		101 => 'Pogovor_o_strani',
