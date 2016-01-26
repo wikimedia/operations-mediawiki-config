@@ -43,6 +43,12 @@ $wmfAllServices['eqiad']['irc'] = null;
 ### Restbase
 $wmfAllServices['eqiad']['restbase'] = 'http://10.68.17.189:7231'; // deployment-restbase02.deployment-prep.eqiad.wmflabs
 
+### Poolcounter
+$wmfAllServices['eqiad']['poolcounter'] = array(
+	'10.68.19.181', # deployment-poolcounter01.deployment-prep.eqiad.wmflabs
+);
+
+
 # Shorthand when we have no master-slave situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
