@@ -2595,7 +2595,7 @@ if ( $wmgUseSubpageSortkey ) {
 
 if ( $wmgUseGettingStarted ) {
 	require_once( "$IP/extensions/GettingStarted/GettingStarted.php" );
-	$wgGettingStartedRedis = '/var/run/nutcracker/redis_eqiad.sock';
+	$wgGettingStartedRedis = $wgObjectCaches['redis_master']['servers'][0];
 	$wgGettingStartedRedisOptions['password'] = $wmgRedisPassword;
 	$wgGettingStartedCategoriesForTaskTypes = $wmgGettingStartedCategoriesForTaskTypes;
 	$wgGettingStartedExcludedCategories = $wmgGettingStartedExcludedCategories;
