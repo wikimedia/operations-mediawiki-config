@@ -3747,6 +3747,25 @@ $wgConf->settings = array(
 	'+vowiktionary' => array(
 		'Wiktionary_talk' => NS_PROJECT_TALK,
 	),
+	'+wuuwiki' => array(
+		// English aliases - T124389
+		'WP' => NS_PROJECT,
+		'T' => NS_TEMPLATE,
+
+		// Wu aliases - T124389
+		'媒体' => NS_MEDIA,
+		'特殊' => NS_SPECIAL,
+		'讨论' => NS_TALK,
+		'用户' => NS_USER,
+		'用户讨论' => NS_USER_TALK,
+		'文件' => NS_FILE,
+		'模板' => NS_TEMPLATE,
+		'模板讨论' => NS_TEMPLATE_TALK,
+		'帮助' => NS_HELP,
+		'帮助讨论' => NS_HELP_TALK,
+		'分类' => NS_CATEGORY,
+		'模块' => 828, // NS_MODULE
+	),
 	'+zh_classicalwiki' => array(
 		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT,
@@ -5206,6 +5225,23 @@ $wgConf->settings = array(
 	),
 	'viwiki' => array( 100 => 'Chủ_đề', 101 => 'Thảo_luận_Chủ_đề' ),
 	'wuuwiki' => array(
+		// Override MediaWiki default namespace names for "wuu",
+		// same than for "yue", see T124389.
+		NS_MEDIA => 'Media',
+		NS_SPECIAL => 'Special',
+		NS_TALK => 'Talk',
+		NS_USER => 'User',
+		NS_USER_TALK => 'User_talk',
+		NS_PROJECT_TALK => '$1_talk',
+		NS_FILE => 'File',
+		NS_FILE_TALK => 'File_talk',
+		NS_MEDIAWIKI_TALK => 'MediaWiki_talk',
+		NS_TEMPLATE => 'Template',
+		NS_TEMPLATE_TALK => 'Template_talk',
+		NS_HELP => 'Help',
+		NS_HELP_TALK => 'Help_talk',
+		NS_CATEGORY => 'Category',
+		NS_CATEGORY_TALK => 'Category_talk',
 		100 => 'Transwiki',
 		101 => 'Transwiki_talk',
 	),
