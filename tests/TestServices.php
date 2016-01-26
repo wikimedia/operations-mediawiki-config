@@ -9,7 +9,7 @@
 #
 #######################################################################
 
-global $wmfDatacenter, $wmfMasterDatacenter;
+$wmfDatacenter = $wmfMasterDatacenter = 'unittest';
 
 $wmfAllServices = array();
 
@@ -47,7 +47,6 @@ $wmfAllServices['unittest']['redis_lock'] = array(
 	'rdb3' => '127.0.0.1'
 );
 
-# Shorthand when we have no master-slave situation to keep into account
-$wmfLocalServices = $wmfAllServices[$wmfDatacenter];
-
-$wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
+# Make sure direct references to our datacenters work
+$wmfLocalServices = $wmfAllServices['eqiad'] = $wmfAllServices['codfw'] = $wmfAllServices['unittest'];
+$wmfMasterServices = $wmfLocalServices;
