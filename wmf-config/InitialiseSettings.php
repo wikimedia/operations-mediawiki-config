@@ -13182,6 +13182,12 @@ $wgConf->settings = array(
 	'eswiki' => 1,
 ),
 
+// Whether VisualEditor should be enabled for a proportion of non accounts (IPs).
+// 1 => 100% of new accounts; 2 => 50%; 10 => 10%; 20 => 5%; etc.
+'wmgVisualEditorNonAccountEnableProportion' => array(
+	'default' => false,
+),
+
 // Whether VisualEditor should be enabled for new auto-created accounts on a
 // wiki where it's not already on by default.
 'wmgVisualEditorAutoAccountEnable' => array(

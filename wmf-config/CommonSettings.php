@@ -2055,6 +2055,10 @@ if ( $wmgUseVisualEditor ) {
 	if ( $wmgVisualEditorNewAccountEnableProportion ) {
 		$wgVisualEditorNewAccountEnableProportion = $wmgVisualEditorNewAccountEnableProportion;
 	}
+	// Enable for a proportion of non accounts ("IPs")
+	if ( $wmgVisualEditorNonAccountEnableProportion ) {
+		$wgVisualEditorNonAccountEnableProportion = $wmgVisualEditorNonAccountEnableProportion;
+	}
 
 	// Citoid
 	require_once "$IP/extensions/Citoid/Citoid.php";
