@@ -71,6 +71,19 @@ $wmfAllServices['codfw']['poolcounter'] = array(
 	'10.192.0.121',
 );
 
+### LockManager Redis
+$wmfAllServices['eqiad']['redis_lock'] = array(
+	'rdb1' => '10.64.0.180',
+	'rdb2' => '10.64.0.181',
+	'rdb3' => '10.64.0.182'
+);
+$wmfAllServices['codfw']['redis_lock'] = array(
+	'rdb1' => '10.192.0.34',
+	'rdb2' => '10.192.16.37',
+	'rdb3' => '10.192.32.20',
+);
+
+
 # Shorthand when we have no master-slave situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
