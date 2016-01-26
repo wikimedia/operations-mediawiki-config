@@ -37,7 +37,9 @@ foreach ( array( 'eqiad', 'codfw' ) as $specificDC ) {
 				=> array( 'levels' => $wmfSwiftShardLocal, 'base' => 36, 'repeat' => 0 )
 		),
 		'parallelize'        => 'implicit',
-		'cacheAuthInfo'      => true
+		'cacheAuthInfo'      => true,
+		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
+		'readAffinity'       => ( $specificDC === $wmfDatacenter )
 	);
 	$wgFileBackends[] = array( // backend config for wiki's access to shared repo
 		'class'              => 'SwiftFileBackend',
@@ -59,7 +61,9 @@ foreach ( array( 'eqiad', 'codfw' ) as $specificDC ) {
 				=> array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
 		),
 		'parallelize'        => 'implicit',
-		'cacheAuthInfo'      => true
+		'cacheAuthInfo'      => true,
+		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
+		'readAffinity'       => ( $specificDC === $wmfDatacenter )
 	);
 	$wgFileBackends[] = array( // backend config for wiki's access to shared files
 		'class'              => 'SwiftFileBackend',
@@ -74,7 +78,9 @@ foreach ( array( 'eqiad', 'codfw' ) as $specificDC ) {
 			'math-render'  => array( 'levels' => 2, 'base' => 16, 'repeat' => 0 ),
 		),
 		'parallelize'        => 'implicit',
-		'cacheAuthInfo'      => true
+		'cacheAuthInfo'      => true,
+		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
+		'readAffinity'       => ( $specificDC === $wmfDatacenter )
 	);
 }
 /* end DC-specific Swift backend config */
@@ -88,7 +94,9 @@ $wgFileBackends[] = array(
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 		array( 'template' => 'local-swift-eqiad', 'isMultiMaster' => true ),
+		array( 'template' => 'local-swift-codfw' ),
 	),
+	'replication' => 'async',
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'autoResync'  => 'conservative' // T41221
 );
@@ -100,7 +108,9 @@ $wgFileBackends[] = array(
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 		array( 'template' => 'shared-swift-eqiad', 'isMultiMaster' => true ),
+		array( 'template' => 'shared-swift-codfw' ),
 	),
+	'replication' => 'async',
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'autoResync'  => 'conservative' // T41221
 );
@@ -112,7 +122,9 @@ $wgFileBackends[] = array(
 	'backends'    => array(
 		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 		array( 'template' => 'global-swift-eqiad', 'isMultiMaster' => true ),
+		array( 'template' => 'global-swift-codfw' ),
 	),
+	'replication' => 'async',
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'autoResync'  => 'conservative'
 );
