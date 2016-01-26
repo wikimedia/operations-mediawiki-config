@@ -7,6 +7,7 @@ mwconfig_files_txt=(
 	CommonSettings.php
 	InitialiseSettings-labs.php
 	InitialiseSettings.php
+	ProductionServices.php
 	PoolCounterSettings-eqiad.php
 	StartProfiler.php
 	abusefilter.php
