@@ -821,8 +821,7 @@ if ( $wmgUseSecurePoll ) {
 
 // PoolCounter
 if ( $wmgUsePoolCounter ) {
-	# Cluster-dependent files for poolcounter are included from the common file
-	include( "$wmfConfigDir/PoolCounterSettings-common.php" );
+	include( "$wmfConfigDir/PoolCounterSettings.php" );
 }
 
 if ( $wmgUseScore ) {
