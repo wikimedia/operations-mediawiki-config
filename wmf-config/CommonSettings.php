@@ -1871,9 +1871,6 @@ if ( $wmgUseUploadWizard ) {
 
 if ( $wmgUseBetaFeatures ) {
 	wfLoadExtension( 'BetaFeatures' );
-	if ( $wmgBetaFeaturesWhitelist ) {
-		$wgBetaFeaturesWhitelist = $wmgBetaFeaturesWhitelist;
-	}
 }
 
 if ( $wmgUseCommonsMetadata ) {
