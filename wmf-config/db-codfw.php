@@ -590,7 +590,10 @@ $wgLBFactoryConf = array(
 	'cluster25'	=> array( 'blobs table' => 'blobs_cluster25' ),
 ),
 
-# This key must exist for the master switch script to work
+# This key must exist for the master switch script to work.
+#
+# These read only messages should currently be kept,
+# to prevent accidental write to eqiad from codfw.
 'readOnlyBySection' => array(
         's1'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
         's2'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
