@@ -3688,6 +3688,9 @@ $wgConf->settings = array(
 		'ВС' => NS_PROJECT,
 	),
 	'+urwiki' => array(
+		'وپ' => NS_PROJECT,                         // T122045
+		'ویکیپیڈیا' => NS_PROJECT,
+		'ویکیپیڈیا_تبادلۂ_خیال' => NS_PROJECT_TALK,
 		'Portal' => 100, // T21569
 		'Portal_talk' => 101, // T21569
 	),
