@@ -43,6 +43,10 @@ $multiVersion = MWMultiVersion::getInstance();
 
 set_include_path( "$IP:/usr/local/lib/php:/usr/share/php" );
 
+# Master datacenter
+# The datacenter from which we serve traffic.
+$wmfMasterDatacenter = 'eqiad';
+
 ### List of some service hostnames
 # 'meta'    : meta wiki for user editable content
 # 'upload'  : hostname where files are hosted
@@ -80,10 +84,15 @@ $wgDBuser = 'wikiuser';
 # wmf-config directory (in common/)
 $wmfConfigDir = "$IP/../wmf-config";
 
+# Include all the service definitions, if in production
+if ( $wmfRealm == 'production' ) {
+	require "$wmfConfigDir/ProductionServices.php";
+}
+
 # Must be set before InitialiseSettings.php:
 switch( $wmfRealm ) {
 case 'production':
-	$wmfUdp2logDest = 'fluorine.eqiad.wmnet:8420';
+	$wmfUdp2logDest = $wmfLocalServices['udp2log'];
 	break;
 case 'labs':
 	$wmfUdp2logDest = 'deployment-fluorine.eqiad.wmflabs:8420';
@@ -449,7 +458,7 @@ if ( defined( 'HHVM_VERSION' ) ) {
 #######################################################################
 
 if ( $wmfRealm === 'production' ) {
-	$wgStatsdServer = 'statsd.eqiad.wmnet';
+	$wgStatsdServer = $wmfLocalServices['statsd'];
 	if ( $wmgUseClusterSquid ) {
 		$wgUseSquid = true;
 		require( "$wmfConfigDir/squid.php" );
@@ -1291,7 +1300,7 @@ if ( $wmgUseApiFeatureUsage ) {
 	$wgApiFeatureUsageQueryEngineConf = array(
 		'class' => 'ApiFeatureUsageQueryEngineElastica',
 		'serverList' => array(
-			'10.2.2.30', # search.svc.eqiad.wmnet
+			$wmfLocalServices['search'],
 		),
 	);
 }
@@ -1564,10 +1573,10 @@ if ( $wgDBname == 'enwiki' || $wgDBname == 'fawiki' ) {
 if ( $wmgUseCollection ) {
 	// PediaPress / PDF generation
 	include "$IP/extensions/Collection/Collection.php";
-	$wgCollectionMWServeURL = 'http://ocg.svc.eqiad.wmnet:8000';
+	$wgCollectionMWServeURL = $wmfLocalServices['ocg'];
 	// Use pediapress server for POD function (T73675)
 	$wgCollectionCommandToServeURL = array(
-		'zip_post' => 'http://url-downloader.wikimedia.org:8080|https://pediapress.com/wmfup/',
+		'zip_post' => "{$wmfLocalServices['urldownloader']}|https://pediapress.com/wmfup/",
 	);
 	$wgCollectionPODPartners = array(
 		'pediapress' => array(
@@ -1953,7 +1962,7 @@ if ( $wmgUseRestbaseVRS ) {
 }
 
 if ( $wmgUseParsoid ) {
-	$wmgParsoidURL = 'http://parsoid.svc.eqiad.wmnet:8000';
+	$wmgParsoidURL = $wmfMasterServices['parsoid'];
 
 	// The wiki prefix to use
 	$wgParsoidWikiPrefix = $wgDBname; // deprecated
@@ -2170,7 +2179,7 @@ if ( $wmgUseMath ) {
 	// This variable points to non-WMF servers by default.
 	// Prevent accidental use.
 	$wgMathLaTeXMLUrl = null;
-	$wgMathMathMLUrl = "http://mathoid.svc.eqiad.wmnet:10042";
+	$wgMathMathMLUrl = $wmfLocalServices['mathoid'];
 
 	// Set up $wgMathFullRestbaseURL - similar to VE RESTBase config above
 	// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
@@ -2674,7 +2683,7 @@ if ( $wmgUseEventLogging ) {
 		// All other wikis reference metawiki.
 		$wgEventLoggingBaseUri = "{$wgServer}/beacon/event";
 		$wgEventLoggingDBname = 'metawiki';
-		$wgEventLoggingFile = 'udp://10.64.32.167:8421/EventLogging';  // eventlog1001.eqiad.wmnet
+		$wgEventLoggingFile = "{$wmfLocalServices['eventlogging']}/EventLogging";
 		$wgEventLoggingSchemaApiUri = 'https://meta.wikimedia.org/w/api.php';
 	}
 	if ( $wgEventLoggingDBname === $wgDBname ) {
@@ -3075,7 +3084,7 @@ if ( $wmgUseQuickSurveys ) {
 
 if ( $wmgUseEventBus ) {
 	wfLoadExtension( 'EventBus' );
-	$wgEventServiceUrl = 'http://eventbus.svc.eqiad.wmnet:8085/v1/events';
+	$wgEventServiceUrl = "{$wmfMasterServices['eventbus']}/v1/events";
 }
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
