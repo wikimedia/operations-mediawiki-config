@@ -71,6 +71,4 @@ if ( $wmgCirrusPerUserPoolCounter ) {
 	);
 }
 
-require $wmfRealm === 'labs'
-	? "{$wmfConfigDir}/PoolCounterSettings-labs.php"
-	: "{$wmfConfigDir}/PoolCounterSettings-{$wmfDatacenter}.php";
+require "{$wmfConfigDir}/PoolCounterSettings-{$wmfRealm}.php";

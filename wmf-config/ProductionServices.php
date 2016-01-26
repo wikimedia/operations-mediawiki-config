@@ -62,6 +62,16 @@ $wmfAllServices['codfw']['irc'] = $wmfAllServices['eqiad']['irc'];
 $wmfAllServices['eqiad']['restbase'] = "http://10.2.2.17:7231";
 $wmfAllServices['codfw']['restbase'] = "http://10.2.1.17:7231";
 
+### Poolcounter
+$wmfAllServices['eqiad']['poolcounter'] = array(
+	'10.64.0.179',
+	'10.64.16.152',
+);
+$wmfAllServices['codfw']['poolcounter'] = array(
+	'10.192.16.124',
+	'10.192.0.121',
+);
+
 # Shorthand when we have no master-slave situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
