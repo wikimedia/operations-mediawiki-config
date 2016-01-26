@@ -111,6 +111,7 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 		$GLOBALS['wmfConfigDir'] = $wmfConfigDir;
 		$GLOBALS['wgConf'] = $wgConf;
 
+		require __DIR__ . "/TestServices.php";
 		require "{$wmfConfigDir}/InitialiseSettings.php";
 
 		$tests = array();
@@ -149,7 +150,7 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 				}
 			}
 		}
-		
+
 		return $tests;
 	}
 
