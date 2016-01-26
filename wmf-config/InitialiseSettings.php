@@ -4389,25 +4389,14 @@ $wgConf->settings = array(
 
 // Logstash servers running syslog endpoint to collect log events.
 // Use false to disable all Logstash logging
-// FIXME: someday this will need to be datacenter aware
 'wmgLogstashServers' => array(
-	'default' => array(
-		'10.64.0.122', // logstash1001.eqiad.wmnet
-		'10.64.32.137', // logstash1002.eqiad.wmnet
-		'10.64.48.113', // logstash1003.eqiad.wmnet
-	),
+	'default' => $wmfLocalServices['logstash'],
 ),
 
 # wmgKafkaServers @{
 // Kafka servers. Use false to disable all kafka logging.
 'wmgKafkaServers' => array(
-	'default' => array(
-	    '10.64.5.13:9092',   // kafka1013.eqiad.wmnet
-	    '10.64.36.114:9092', // kafka1014.eqiad.wmnet
-	    '10.64.53.10:9092',  // kafka1018.eqiad.wmnet
-	    '10.64.53.12:9092',  // kafka1020.eqiad.wmnet
-	    '10.64.36.122:9092', // kafka1022.eqiad.wmnet
-	),
+	'default' => $wmfLocalServices['kafka'],
 ),
 # @} end of wmgKafkaServers
 
@@ -6923,7 +6912,7 @@ $wgConf->settings = array(
 ),
 
 'wmgRC2UDPAddress' => array(
-	'default' => '208.80.154.160', // eqiad: argon
+	'default' => $wmfLocalServices['irc'],
 ),
 
 'wmgRC2UDPPort' => array(
@@ -13071,7 +13060,7 @@ $wgConf->settings = array(
 // -------------- RESTBase start --------------
 
 'wmgRestbaseServer' => array(
-	'default' => "http://10.2.2.17:7231" // restbase.svc.eqiad.wmnet
+	'default' => $wmfLocalServices['restbase']
 ),
 
 // whether to activate the extension sending page edit
