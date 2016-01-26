@@ -3,74 +3,83 @@
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
 #
-# This file hold the configuration for the file backends
-# for production.
+# This file hold the configuration for the file backends for production.
 
-/* Common OpenStack Swift backend config */
+// Common OpenStack Swift backend convenience variables
 $wmfSwiftBigWikis = array( # DO NOT change without proper migration first
 	'commonswiki', 'dewiki', 'enwiki', 'fiwiki', 'frwiki', 'hewiki', 'huwiki', 'idwiki',
 	'itwiki', 'jawiki', 'rowiki', 'ruwiki', 'thwiki', 'trwiki', 'ukwiki', 'zhwiki'
 );
 $wmfSwiftShardLocal = in_array( $wgDBname, $wmfSwiftBigWikis ) ? 2 : 0; // shard levels
 $wmfSwiftShardCommon = in_array( 'commonswiki', $wmfSwiftBigWikis ) ? 2 : 0; // shard levels
-/* end common Swift config */
 
-/* Eqiad Swift backend config */
-$wgFileBackends[] = array( // backend config for wiki's local repo
-	'class'              => 'SwiftFileBackend',
-	'name'               => 'local-swift-eqiad',
-	'wikiId'             => "{$site}-{$lang}",
-	'lockManager'        => 'redisLockManager',
-	'swiftAuthUrl'       => $wmfSwiftEqiadConfig['authUrl'],
-	'swiftUser'          => $wmfSwiftEqiadConfig['user'],
-	'swiftKey'           => $wmfSwiftEqiadConfig['key'],
-	'swiftTempUrlKey'    => $wmfSwiftEqiadConfig['tempUrlKey'],
-	'shardViaHashLevels' => array(
-		'local-public'     => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-thumb'      => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-temp'       => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-transcoded' => array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
-		'local-deleted'    => array( 'levels' => $wmfSwiftShardLocal, 'base' => 36, 'repeat' => 0 )
-	),
-	'parallelize'        => 'implicit',
-	'cacheAuthInfo'      => true
-);
-$wgFileBackends[] = array( // backend config for wiki's access to shared repo
-	'class'              => 'SwiftFileBackend',
-	'name'               => 'shared-swift-eqiad',
-	'wikiId'             => "wikipedia-commons",
-	'lockManager'        => 'redisLockManager',
-	'swiftAuthUrl'       => $wmfSwiftEqiadConfig['authUrl'],
-	'swiftUser'          => $wmfSwiftEqiadConfig['user'],
-	'swiftKey'           => $wmfSwiftEqiadConfig['key'],
-	'swiftTempUrlKey'    => $wmfSwiftEqiadConfig['tempUrlKey'],
-	'shardViaHashLevels' => array(
-		'local-public'     => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'local-thumb'      => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'local-temp'       => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-		'local-transcoded' => array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
-	),
-	'parallelize'        => 'implicit',
-	'cacheAuthInfo'      => true
-);
-$wgFileBackends[] = array( // backend config for wiki's access to shared files
-	'class'              => 'SwiftFileBackend',
-	'name'               => 'global-swift-eqiad',
-	'wikiId'             => "global-data",
-	'lockManager'        => 'redisLockManager',
-	'swiftAuthUrl'       => $wmfSwiftEqiadConfig['authUrl'],
-	'swiftUser'          => $wmfSwiftEqiadConfig['user'],
-	'swiftKey'           => $wmfSwiftEqiadConfig['key'],
-	'swiftTempUrlKey'    => $wmfSwiftEqiadConfig['tempUrlKey'],
-	'shardViaHashLevels' => array(
-		'math-render'  => array( 'levels' => 2, 'base' => 16, 'repeat' => 0 ),
-	),
-	'parallelize'        => 'implicit',
-	'cacheAuthInfo'      => true
-);
-/* end Eqiad Swift backend config */
+/* DC-specific Swift backend config */
+foreach ( array( 'eqiad', 'codfw' ) as $specificDC ) {
+	$wgFileBackends[] = array( // backend config for wiki's local repo
+		'class'              => 'SwiftFileBackend',
+		'name'               => "local-swift-{$specificDC}",
+		'wikiId'             => "{$site}-{$lang}",
+		'lockManager'        => 'redisLockManager',
+		'swiftAuthUrl'       => $wmfSwiftConfig[$specificDC]['authUrl'],
+		'swiftUser'          => $wmfSwiftConfig[$specificDC]['user'],
+		'swiftKey'           => $wmfSwiftConfig[$specificDC]['key'],
+		'swiftTempUrlKey'    => $wmfSwiftConfig[$specificDC]['tempUrlKey'],
+		'shardViaHashLevels' => array(
+			'local-public'
+				=> array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+			'local-thumb'
+				=> array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+			'local-temp'
+				=> array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+			'local-transcoded'
+				=> array( 'levels' => $wmfSwiftShardLocal, 'base' => 16, 'repeat' => 1 ),
+			'local-deleted'
+				=> array( 'levels' => $wmfSwiftShardLocal, 'base' => 36, 'repeat' => 0 )
+		),
+		'parallelize'        => 'implicit',
+		'cacheAuthInfo'      => true
+	);
+	$wgFileBackends[] = array( // backend config for wiki's access to shared repo
+		'class'              => 'SwiftFileBackend',
+		'name'               => "shared-swift-{$specificDC}",
+		'wikiId'             => "wikipedia-commons",
+		'lockManager'        => 'redisLockManager',
+		'swiftAuthUrl'       => $wmfSwiftConfig[$specificDC]['authUrl'],
+		'swiftUser'          => $wmfSwiftConfig[$specificDC]['user'],
+		'swiftKey'           => $wmfSwiftConfig[$specificDC]['key'],
+		'swiftTempUrlKey'    => $wmfSwiftConfig[$specificDC]['tempUrlKey'],
+		'shardViaHashLevels' => array(
+			'local-public'
+				=> array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+			'local-thumb'
+				=> array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+			'local-temp'
+				=> array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+			'local-transcoded'
+				=> array( 'levels' => $wmfSwiftShardCommon, 'base' => 16, 'repeat' => 1 ),
+		),
+		'parallelize'        => 'implicit',
+		'cacheAuthInfo'      => true
+	);
+	$wgFileBackends[] = array( // backend config for wiki's access to shared files
+		'class'              => 'SwiftFileBackend',
+		'name'               => "global-swift-{$specificDC}",
+		'wikiId'             => "global-data",
+		'lockManager'        => 'redisLockManager',
+		'swiftAuthUrl'       => $wmfSwiftConfig[$specificDC]['authUrl'],
+		'swiftUser'          => $wmfSwiftConfig[$specificDC]['user'],
+		'swiftKey'           => $wmfSwiftConfig[$specificDC]['key'],
+		'swiftTempUrlKey'    => $wmfSwiftConfig[$specificDC]['tempUrlKey'],
+		'shardViaHashLevels' => array(
+			'math-render'  => array( 'levels' => 2, 'base' => 16, 'repeat' => 0 ),
+		),
+		'parallelize'        => 'implicit',
+		'cacheAuthInfo'      => true
+	);
+}
+/* end DC-specific Swift backend config */
 
-/* Multiwrite backend config */
+/* Common multiwrite backend config */
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
 	'name'        => 'local-multiwrite',
@@ -109,6 +118,8 @@ $wgFileBackends[] = array(
 );
 /* end multiwrite backend config */
 
+// Lock manager config must use the master datacenter
+// @TODO: configure as a switch
 $wgLockManagers[] = array(
 	'name'         => 'redisLockManager',
 	'class'        => 'RedisLockManager',
