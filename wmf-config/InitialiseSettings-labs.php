@@ -148,12 +148,6 @@ function wmfLabsSettings() {
 			'default' => 'wgDebugLogFile',
 		),
 
-		'-wmgLogstashServers' => array(
-			'default' => array(
-				'10.68.16.147', // deployment-logstash2.deployment-prep.eqiad.wmflabs
-			),
-		),
-
 		// Additional log channels for beta cluster
 		'wmgMonologChannels' => array(
 			'+beta' => array(
@@ -372,10 +366,6 @@ function wmfLabsSettings() {
 
 		'wmgImageMetricsCorsSamplingFactor' => array(
 			'default' => 1,
-		),
-
-		'wmgRestbaseServer' => array(
-			'default' => "http://10.68.17.189:7231" // deployment-restbase02.deployment-prep.eqiad.wmflabs
 		),
 
 		'wmgUseRestbaseVRS' => array(
