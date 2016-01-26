@@ -9,7 +9,7 @@
 #
 #######################################################################
 
-global $wmfDatacenter, $wmfMasterDatacenter;
+$wmfDatacenter = $wmfMasterDatacenter = 'unittest';
 
 $wmfAllServices = array();
 
