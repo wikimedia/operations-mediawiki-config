@@ -1256,7 +1256,7 @@ if ( $wmgUseCentralAuth ) {
 	);
 
 	// testing -- aaron 2016-01-12
-	if ( in_array( $wgDBname, array( 'testwiki' ) ) ) {
+	if ( in_array( $wgDBname, array( 'testwiki', 'mediawikiwiki', 'loginwiki' ) ) ) {
 		$wgCentralAuthUseSlaves = true;
 	}
 }
