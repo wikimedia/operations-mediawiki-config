@@ -123,11 +123,7 @@ $wgFileBackends[] = array(
 $wgLockManagers[] = array(
 	'name'         => 'redisLockManager',
 	'class'        => 'RedisLockManager',
-	'lockServers'  => array(
-		'rdb1' => '10.64.0.180',
-		'rdb2' => '10.64.0.181',
-		'rdb3' => '10.64.0.182'
-	),
+	'lockServers'  => $wmfMasterServices['redis_lock'],
 	'srvsByBucket' => array(
 		0 => array( 'rdb1', 'rdb2', 'rdb3' )
 	),
