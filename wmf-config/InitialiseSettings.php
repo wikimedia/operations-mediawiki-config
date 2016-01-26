@@ -6446,18 +6446,6 @@ $wgConf->settings = array(
 ),
 # @} end of wgExtraNamespaces
 
-'wgAccountCreationThrottle' => array(
-	'default' => 6, // previously 10
-	'private' => 0, // disable for wikis with sysop-only account creation
-	'fishbowl' => 0,
-	'hewikibooks' => 4,
-	'hewikinews' => 4,
-	'hewikiquote' => 4,
-	'hewikisource' => 4,
-	'hewiktionary' => 4,
-	'idwiki' => 0,
-),
-
 'wgDefaultSkin' => array(
 	'default' => 'vector',
 	'nostalgiawiki' => 'nostalgia',
@@ -7053,10 +7041,49 @@ $wgConf->settings = array(
 			'ip' => array( 70, 30 ),
 			'user' => array( 70, 30 ),
 		),
+		'createaccount' => array(
+			'ip-all' => array( 6, 86400 ), // 6 per day per ip for all users
+			'accountcreator' => array( 100, 60 ), // 100 per hour for account creators
+		),
 	),
 	'+dewiki' => array( // T59820
 		'rollback' => array(
 			'editor' => array( 100, 60 ),
+		),
+	),
+	'+private' => array(
+		'createaccount' => array(
+			'ip-all' => null,
+		),
+	),
+	'+fishbowl' => array(
+		'createaccount' => array(
+			'ip-all' => null,
+		),
+	),
+	'+hewikibooks' => array(
+		'createaccount' => array(
+			'ip-all' => array( 4, 86400 ),
+		),
+	),
+	'+hewikinews' => array(
+		'createaccount' => array(
+			'ip-all' => array( 4, 86400 ),
+		),
+	),
+	'+hewikiquote' => array(
+		'createaccount' => array(
+			'ip-all' => array( 4, 86400 ),
+		),
+	),
+	'+hewikisource' => array(
+		'createaccount' => array(
+			'ip-all' => array( 4, 86400 ),
+		),
+	),
+	'+idwiki' => array(
+		'createaccount' => array(
+			'ip-all' => null,
 		),
 	),
 ),
@@ -7314,7 +7341,6 @@ $wgConf->settings = array(
 			'collectionsaveascommunitypage' => false,
 			'skipcaptcha' => false,
 		),
-		'accountcreator' => array( 'noratelimit' => false, ),
 		'bureaucrat' => array( 'createaccount' => true, ),
 		'sysop' => array( 'createaccount' => false, ),
 	),
@@ -7941,7 +7967,6 @@ $wgConf->settings = array(
 		'shellmanagers' => array('userrights' => false ),
 	),
 	'+legalteamwiki' => array( // T63222
-		'accountcreator' => array( 'noratelimit' => false ),
 		'bureaucrat' => array( 'createaccount' => true ),
 		'sysop' => array( 'createaccount' => false ),
 	),
@@ -8079,7 +8104,6 @@ $wgConf->settings = array(
 			'collectionsaveascommunitypage' => false,
 			'skipcaptcha' => false,
 		),
-		'accountcreator' => array( 'noratelimit' => false, ),
 		'bureaucrat' => array( 'createaccount' => true, ),
 		'sysop' => array( 'createaccount' => false, ),
 	),
@@ -8611,9 +8635,6 @@ $wgConf->settings = array(
 			'deletelogentry' => true,
 		),
 		'bot' => array(
-			'noratelimit' => true,
-		),
-		'accountcreator' => array(
 			'noratelimit' => true,
 		),
 		'bureaucrat' => array(
