@@ -28,6 +28,20 @@ $wmfAllServices['eqiad'] = array(
 	'eventbus' => 'http://deployment-eventlogging04.deployment-prep.eqiad.wmflabs:8085',
 );
 
+### Logstash
+$wmfAllServices['eqiad']['logstash'] = array(
+	'10.68.16.147', // deployment-logstash2.deployment-prep.eqiad.wmflabs
+);
+
+### Analytics Kafka cluster (not present in labs)
+$wmfAllServices['eqiad']['kafka'] = array(
+);
+
+### IRC (not present in labs)
+$wmfAllServices['eqiad']['irc'] = null;
+
+### Restbase
+$wmfAllServices['eqiad']['restbase'] = 'http://10.68.17.189:7231'; // deployment-restbase02.deployment-prep.eqiad.wmflabs
 
 # Shorthand when we have no master-slave situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
