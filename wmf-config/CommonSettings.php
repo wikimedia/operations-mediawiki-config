@@ -1255,10 +1255,7 @@ if ( $wmgUseCentralAuth ) {
 		'PasswordCannotBePopular' => PHP_INT_MAX,
 	);
 
-	// testing -- aaron 2016-01-12
-	if ( in_array( $wgDBname, array( 'testwiki', 'mediawikiwiki', 'loginwiki' ) ) ) {
-		$wgCentralAuthUseSlaves = true;
-	}
+	$wgCentralAuthUseSlaves = true;
 }
 
 // Config for GlobalCssJs
