@@ -364,7 +364,7 @@ function wmfLabsSettings() {
 		),
 
 		'wmgRestbaseServer' => array(
-			'default' => "http://10.68.17.227:7231" // deployment-restbase01.eqiad.wmflabs
+			'default' => "http://10.68.17.189:7231" // deployment-restbase02.deployment-prep.eqiad.wmflabs
 		),
 
 		'wmgUseRestbaseVRS' => array(
