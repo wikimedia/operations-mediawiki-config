@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_01bca7b0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15810,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2016-01-27T14:47:19Z",
+      "side": 1,
+      "message": "general \u003d\u003e \u00270-3\u0027 needs 32 nodes\n\nwhy 0-3 for content, 0-4 should work with 1 shard?",
+      "revId": "fe57305d1ddf1922bc375346e95cb0af635f7984",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
