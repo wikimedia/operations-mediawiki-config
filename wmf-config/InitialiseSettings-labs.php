@@ -222,9 +222,6 @@ function wmfLabsSettings() {
 		'-wmgEchoCluster' => array(
 			'default' => false,
 		),
-		'wmgEchoUseJobQueue' => array(
-			'default' => true,
-		),
 		'-wmgEchoUseCrossWikiBetaFeature' => array(
 			'default' => true,
 		),
