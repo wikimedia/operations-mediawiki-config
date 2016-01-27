@@ -146,16 +146,20 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 			}
 		}
 		$wikis = array_unique( $wikis );
-		$indexTypes = array( 'content', 'general', 'titlesuggest' );
+		$indexTypes = array( 'content', 'general', 'titlesuggest', 'file' );
 		$clusters = array( 'eqiad' => 31, 'codfw' => 24 );
 		$tests = array();
 		foreach ( $wikis as $wiki ) {
 			foreach ( $indexTypes as $indexType ) {
+				// only commonswiki has the file index
+				if ( $indexType === 'file' && $wiki !== 'commonswiki' ) {
+					continue;
+				}
+				// wikidata doesn't have completion suggester
+				if ( $wiki === 'wikidatawiki' && $indexType === 'titlesuggest' ) {
+					continue;
+				}
 				foreach ( $clusters as $clusterName => $numServers ) {
-					// wikidata doesn't have completion suggester
-					if ( $wiki === 'wikidatawiki' && $indexType === 'titlesuggest' ) {
-						continue;
-					}
 					$tests["$clusterName {$wiki}_{$indexType}"] = array(
 						$wiki,
 						$indexType,
