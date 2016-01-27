@@ -16014,7 +16014,10 @@ $wgConf->settings = array(
 // some of the larger ones will want more replicas for content indexes
 'wmgCirrusSearchReplicas' => array(
 	'default' => array( 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2' ),
-	'+commonswiki' => array( 'file' => '0-3' ),
+	'commonswiki' => array(
+		'eqiad' => array( 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-3' ),
+		'codfw' => array( 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-2' ),
+	),
 	'+eswiki' => array( 'titlesuggest' => '0-5' ),
 	'+jawiki' => array( 'titlesuggest' => '0-5' ),
 	'+ruwiki' => array( 'titlesuggest' => '0-5' ),
