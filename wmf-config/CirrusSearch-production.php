@@ -56,17 +56,23 @@ $wgCirrusSearchEnableSearchLogging = true;
 // The default configuration is a single-cluster configuration, expand
 // that here into the necessary multi-cluster config
 $wgCirrusSearchShardCount = array(
-	'eqiad' => $wgCirrusSearchShardCount,
-	'codfw' => array_map( function($x) { return min( 7, $x ); }, $wgCirrusSearchShardCount ),
-	'labsearch' => array_map( function() { return 1; }, $wgCirrusSearchShardCount ),
+	'eqiad' => $wmgCirrusSearchShardCount,
+	'codfw' => $wmgCirrusSearchShardCount,
+	'labsearch' => array_map( function() { return 1; }, $wmgCirrusSearchShardCount ),
 );
 
 // Disable replicas for the labsearch cluster, it's only a single machine
-$wgCirrusSearchReplicas = array(
-	'eqiad' => $wgCirrusSearchReplicas,
-	'codfw' => $wgCirrusSearchReplicas,
-	'labsearch' => array_map( function() { return 'false'; }, $wgCirrusSearchReplicas ),
-);
+if ( isset( $wmgCirrusSearchReplicas['eqiad'] ) ) {
+	$wgCirrusSearchReplicas = $wmgCirrusSearchReplicas + array(
+		'labsearch' => array_map( function() { return 'false'; }, $wmgCirrusSearchReplicas['eqiad'] ),
+	);
+} else {
+	$wgCirrusSearchReplicas = array(
+		'eqiad' => $wmgCirrusSearchReplicas,
+		'codfw' => $wmgCirrusSearchReplicas,
+		'labsearch' => array_map( function() { return 'false'; }, $wmgCirrusSearchReplicas ),
+	);
+}
 
 // 5 second timeout for local cluster, 10 seconds for remote. 2 second timeout
 // for the labsearch cluster.
