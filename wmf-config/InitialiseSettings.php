@@ -15351,8 +15351,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'testwikidatawiki' => true,
 	'zerowiki' => true,
-	'wikipedia' => true,
-	'commonswiki' => true,
+	'dewiki' => true,
 ),
 
 'wmgRelatedSitesPrefixes' => array(
