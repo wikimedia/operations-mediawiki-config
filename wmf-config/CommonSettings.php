@@ -1038,6 +1038,7 @@ if ( is_array( $wmgAutopromoteExtraGroups ) ) {
 
 $wgAutopromoteOnce = array(
 	'onEdit' => $wmgAutopromoteOnceonEdit,
+	'onView' => $wmgAutopromoteOnceonView,
 );
 
 if ( is_array( $wmgExtraImplicitGroups ) ) {
