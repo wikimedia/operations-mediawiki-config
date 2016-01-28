@@ -106,6 +106,24 @@
       "revId": "559481908506905903b959eb9f845cef0ef95add",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_8bf98880",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-28T19:01:09Z",
+      "side": 1,
+      "message": "Apparently the user script gets loaded after the schema script, so the sampling is set to 0. I\u0027ll change the above values to 1.",
+      "parentUuid": "6eaa8f54_480f163c",
+      "revId": "559481908506905903b959eb9f845cef0ef95add",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
