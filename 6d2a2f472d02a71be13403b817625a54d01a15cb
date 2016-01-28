@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_8625ffbe",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 294,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-01-28T20:23:20Z",
+      "side": 1,
+      "message": "You\u0027ll need to handle this in mobile-labs.php too.",
+      "revId": "6d2a2f472d02a71be13403b817625a54d01a15cb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
