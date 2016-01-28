@@ -2906,7 +2906,7 @@ if ( $wmgUseGraph ) {
 	$wgGraphEnableGZip = $wmgGraphEnableGZip;
 	$wgGraphImgServiceUrl = $wmgGraphImgServiceUrl;
 
-	$wgGraphDataDomains = array(
+	$wgGraphHttpsDomains = array(
 			'mediawiki.org',
 			'wikibooks.org',
 			'wikidata.org',
@@ -2920,6 +2920,10 @@ if ( $wmgUseGraph ) {
 			'wikivoyage.org',
 			'wiktionary.org',
 		);
+
+	// Soon $wgGraphDataDomains will be removed
+	$wgGraphDataDomains = $wgGraphHttpsDomains;
+
 	if ( $wmgUseGraphWithNamespace ) {
 		$wgJsonConfigModels['Graph.JsonConfig'] = 'Graph\Content';
 		$wgJsonConfigs['Graph.JsonConfig'] = array(
