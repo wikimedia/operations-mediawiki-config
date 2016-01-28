@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "6eaa8f54_f537bfa9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 16333,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-28T13:54:13Z",
+      "side": 1,
+      "message": "The requirements says \"stable\". ;)",
+      "parentUuid": "6eaa8f54_15c13b83",
+      "revId": "1a8e96f1dd590142b0e3c6dfcca5d2d11bd85ced",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_b5d2a75b",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2016-01-28T13:51:45Z",
       "side": 1,
       "message": "Should probably have a comma here like all the other array values, but not a big deal at all.",
+      "revId": "1a8e96f1dd590142b0e3c6dfcca5d2d11bd85ced",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_5546d327",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 16335,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-28T13:54:13Z",
+      "side": 1,
+      "message": "Yeah, it\u0027s optional I think.",
+      "parentUuid": "6eaa8f54_b5d2a75b",
       "revId": "1a8e96f1dd590142b0e3c6dfcca5d2d11bd85ced",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
