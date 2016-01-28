@@ -9,7 +9,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
-		$this->assertEquals( 'eqiad', $config['wgCirrusSearchDefaultCluster'] );
+		$this->assertEquals( 'unittest', $config['wgCirrusSearchDefaultCluster'] );
 		$this->assertCount( 3, $config['wgCirrusSearchClusters'] );
 
 		// testwiki writes to eqiad, codfw and the lab replica

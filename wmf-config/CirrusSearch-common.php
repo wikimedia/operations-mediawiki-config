@@ -23,7 +23,11 @@ if ( $wmgUseClusterJobqueue ) {
 
 # Set up the the default cluster to send queries to,
 # and the list of clusters to write to.
-$wgCirrusSearchDefaultCluster = $wmgCirrusSearchDefaultCluster;
+if ( $wmgCirrusSearchDefaultCluster === 'local' ) {
+	$wgCirrusSearchDefaultCluster = $wmfDatacenter;
+} else {
+	$wgCirrusSearchDefaultCluster = $wmgCirrusSearchDefaultCluster;
+}
 $wgCirrusSearchWriteClusters = $wmgCirrusSearchWriteClusters;
 
 # Enable user testing
