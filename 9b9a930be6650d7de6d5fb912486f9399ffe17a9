@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_7543cf15",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 16333,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-01-28T13:54:19Z",
+      "side": 1,
+      "message": "Same as the eswiki patch, might want to include \"beta\" here and commas on lines 16335 \u0026 16336.",
+      "revId": "9b9a930be6650d7de6d5fb912486f9399ffe17a9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
