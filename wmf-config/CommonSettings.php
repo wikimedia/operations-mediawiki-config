@@ -1004,6 +1004,7 @@ if ( $wgDBname == 'loginwiki' ) {
 	$wgGroupPermissions['*'] = array(
 		'read' => true,
 		'centralauth-autoaccount' => true,
+		'autocreateaccount' => true,
 	);
 	$wgGroupPermissions['user'] = array(
 		'read' => true,
