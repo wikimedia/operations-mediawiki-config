@@ -16332,7 +16332,8 @@ $wgConf->settings = array(
 			'link' => 'Reader-segmentation-1-link',
 			'question' => 'Reader-segmentation-1-message',
 			'privacyPolicy' => 'Reader-segmentation-1-privacy',
-			'coverage' => 0.000625,  // 1 out of 1600
+			// See https://phabricator.wikimedia.org/T123770#1979143
+			'coverage' => 0.0625,  // 1 out of 1600
 			'platforms' => array(
 				'desktop' => array( 'stable' ),
 				'mobile' => array( 'stable', 'beta' ),
@@ -16350,7 +16351,8 @@ $wgConf->settings = array(
 			'link' => 'Reader-segmentation-1-link',
 			'question' => 'Reader-segmentation-1-message',
 			'privacyPolicy' => 'Reader-segmentation-1-privacy',
-			'coverage' => 0.007519,  // 1 out of 133
+			// See https://phabricator.wikimedia.org/T123771#1979140
+			'coverage' => 0.7519,  // 1 out of 133
 			'platforms' => array(
 				'desktop' => array( 'stable' ),
 				'mobile' => array( 'stable', 'beta' ),
