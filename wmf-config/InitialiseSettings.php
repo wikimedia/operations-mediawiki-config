@@ -16317,11 +16317,30 @@ $wgConf->settings = array(
 'wmgUseQuickSurveys' => array(
 	'default' => false,
 	'enwiki' => true,
+	'eswiki' => true,
 	'fawiki' => true,
 ),
 
 'wgQuickSurveysConfig' => array(
 	'default' => array(),
+	'eswiki' => array(
+		array(
+			// T123770
+			'name' => 'Reader-segmentation-1',
+			'type' => 'external',
+			'schema' => 'QuickSurveysResponses',
+			'enabled' => true,
+			'description' => 'Reader-segmentation-1-description',
+			'link' => 'Reader-segmentation-1-link',
+			'question' => 'Reader-segmentation-1-message',
+			'privacyPolicy' => 'Reader-segmentation-1-privacy',
+			'coverage' => 0.000625,  // 1 out of 1600
+			'platforms' => array(
+				'desktop' => array( 'stable' ),
+				'mobile' => array( 'stable', 'beta' ),
+			),
+		),
+	),
 	'fawiki' => array(
 		array(
 			// T123771
