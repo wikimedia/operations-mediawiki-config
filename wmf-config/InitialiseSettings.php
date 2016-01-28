@@ -15688,7 +15688,7 @@ $wgConf->settings = array(
 ),
 
 'wmgCirrusSearchDefaultCluster' => array(
-	'default' => 'eqiad',
+	'default' => 'local',
 ),
 
 'wmgCirrusSearchWriteClusters' => array(
