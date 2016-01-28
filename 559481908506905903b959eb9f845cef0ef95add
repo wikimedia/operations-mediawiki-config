@@ -70,6 +70,24 @@
       "revId": "559481908506905903b959eb9f845cef0ef95add",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_285ada22",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-01-28T16:25:33Z",
+      "side": 1,
+      "message": "Hrrm. It appears not. Could you either set these to 1 so that we can test the event logging in isolation or set wmgMFIgnoreEventLoggingBucketing to true so that we see all of the events.",
+      "parentUuid": "6eaa8f54_483cf6bc",
+      "revId": "559481908506905903b959eb9f845cef0ef95add",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
