@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_7cd3b4d7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1790,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2016-01-28T23:16:12Z",
+      "side": 0,
+      "message": "Nope. It\u0027s newikibooks what should be changed :-)",
+      "revId": "bf07886507711c334a24f1b53ddb60032c6e5f58",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
