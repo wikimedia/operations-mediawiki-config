@@ -16362,10 +16362,11 @@ $wgConf->settings = array(
 ),
 
 'wmgUseEventBus' => array(
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
+	'default' => true,
+	'wikitech' => false,
+	'private' => false,
+	'loginwiki' => false,
+	'votewiki' => false,
 ),
 
 );
