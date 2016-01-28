@@ -16,6 +16,24 @@
       "revId": "559481908506905903b959eb9f845cef0ef95add",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_f52c9f47",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-01-28T14:02:53Z",
+      "side": 1,
+      "message": "What if we merge https://gerrit.wikimedia.org/r/#/c/267020/ instead?",
+      "parentUuid": "6eaa8f54_55b25349",
+      "revId": "559481908506905903b959eb9f845cef0ef95add",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
