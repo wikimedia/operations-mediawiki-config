@@ -34,6 +34,24 @@
       "revId": "559481908506905903b959eb9f845cef0ef95add",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_483cf6bc",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 296,
+      "author": {
+        "id": 1196
+      },
+      "writtenOn": "2016-01-28T16:04:58Z",
+      "side": 1,
+      "message": "That\u0027s been merged now. Does that mean we can test this on the Beta Cluster without this being merged (a la Jdlrobson\u0027s minerva.js)?",
+      "parentUuid": "6eaa8f54_f52c9f47",
+      "revId": "559481908506905903b959eb9f845cef0ef95add",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
