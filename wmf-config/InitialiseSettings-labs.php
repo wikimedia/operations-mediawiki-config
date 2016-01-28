@@ -557,15 +557,6 @@ function wmfLabsSettings() {
 			'default' => false,
 		),
 
-		'wmgGraphEnableGZip' => array(
-			'default' => true,
-		),
-
-		'wmgGraphImgServiceUrl' => array(
-			'default' => "/api/rest_v1/page/graph/png/%2\$s/%3\$s/%4\$s.png",
-			'private' => false,
-		),
-
 		'wmgLogAuthmanagerMetrics' => array(
 			'default' => true,
 		),

@@ -13619,7 +13619,6 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 
-// direct format: //graphoid.wikimedia.org/{domain}/v1/png/{title}/{revid}/{hash}.png
 // restbase format: /api/rest_v1/page/graph/png/{title}/{revid}/{hash}.png
 // %1\$s = domain
 // %2\$s = title
