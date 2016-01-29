@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_97f9ab80",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 925,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2016-01-29T00:39:46Z",
+      "side": 1,
+      "message": "Shouldn\u0027t we keep alphabetical order here? newikibooks -\u003e nowikibooks",
+      "revId": "7f60e85f41eee70bfb9c203d30f68b64a09f410d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
