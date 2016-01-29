@@ -2775,8 +2775,6 @@ if ( $wmgUseContentTranslation ) {
 
 	$wgContentTranslationEnableSuggestions = $wmgContentTranslationEnableSuggestions;
 
-	$wgContentTranslationCorpora = $wmgContentTranslationCorpora;
-
 	$wgContentTranslationCXServerAuth = array(
 		'algorithm' => 'HS256',
 		//This is set in PrivateSettings.php
