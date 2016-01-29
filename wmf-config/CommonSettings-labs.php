@@ -95,7 +95,7 @@ if ( $wmgUseMultimediaViewer ) {
 }
 
 if ( $wmgUseParsoid ) {
-	$wmgParsoidURL = 'http://10.68.20.102'; // deployment-cache-parsoid05
+	$wmgParsoidURL = 'http://10.68.16.120:8000'; // deployment-parsoid05
 	// Re-link now it's been set to a new value
 	$wgVirtualRestConfig['modules']['parsoid']['url'] = $wmgParsoidURL;
 }
