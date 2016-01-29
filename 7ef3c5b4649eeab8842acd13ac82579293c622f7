@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eaa8f54_51bd7a62",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1958,
+      "author": {
+        "id": 2177
+      },
+      "writtenOn": "2016-01-29T21:49:03Z",
+      "side": 1,
+      "message": "Should the port be included here? The previous version of the config pointed to the same place, but without the port.",
+      "revId": "7ef3c5b4649eeab8842acd13ac82579293c622f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
