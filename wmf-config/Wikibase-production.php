@@ -1,7 +1,6 @@
 <?php
 
-// Disable "math" datatype in production for now.
-$wgMathEnableWikibaseDataType = false;
+$wgMathEnableWikibaseDataType = true;
 
 if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
