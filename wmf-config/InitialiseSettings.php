@@ -10469,6 +10469,7 @@ $wgConf->settings = array(
 'wgEnotifMinorEdits' => array(
 	'default' => false,
 	'hiwiki' => true,
+	'huwiki' => true, // T125351
 	'metawiki' => true, // T53108
 	'ptwikibooks' => true,
 	'sourceswiki' => true,
