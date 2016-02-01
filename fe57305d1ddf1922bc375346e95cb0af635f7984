@@ -16,6 +16,24 @@
       "revId": "fe57305d1ddf1922bc375346e95cb0af635f7984",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6eaa8f54_f3a34095",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15810,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2016-02-01T18:57:51Z",
+      "side": 1,
+      "message": "0-4 should be good, i copied enwiki/dewiki without thinking a whole lot about it :( Also since we were already using 0-2 for general it makes sense to leave it there, then they fit on the cluster as expected.",
+      "parentUuid": "6eaa8f54_01bca7b0",
+      "revId": "fe57305d1ddf1922bc375346e95cb0af635f7984",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
