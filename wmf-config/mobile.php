@@ -17,11 +17,6 @@ if ( $wmgMobileFrontend ) {
 	$wgMFDisplayWikibaseDescription = $wmgMFDisplayWikibaseDescription;
 	$wgMFMobileFormatterHeadings = $wmgMFMobileFormatterHeadings;
 
-	// Enable A/B test section collapsing experiment (see T120292)
-	if ( isset( $wgMFExperiments['sectionCollapsing'] ) ) {
-		$wgMFExperiments['sectionCollapsing']['enabled'] = true;
-	}
-
 	if ( $wmgMobileFrontendLogo ) {
 		$wgMobileFrontendLogo = $wmgMobileFrontendLogo;
 	}
