@@ -12062,6 +12062,7 @@ $wgConf->settings = array(
 	'newiki' => true,
 	'nlwiki' => true,
 	'nlwikiquote' => true, // T124167
+	'orwiki' => true, // T124614
 	'plwiki' => true,
 	'plwikisource' => true,
 	'plwikivoyage' => true,
