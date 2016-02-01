@@ -11853,6 +11853,7 @@ $wgConf->settings = array(
 		'*.bodleian.ox.ac.uk',              // Bodleian Libraries - T121779
 		'*.davidabian.com',                 // Trusted user website, used by Museo del Romanticismo - T121383
 		'davidabian.com',
+		'*.museumvictoria.com.au',          // Victoria State (AU) Museum, requested in T125387
 	),
 ),
 
