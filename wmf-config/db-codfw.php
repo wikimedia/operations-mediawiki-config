@@ -89,69 +89,62 @@ $wgLBFactoryConf = array(
 
 'sectionLoads' => array(
 	's1' => array(
-		'db1052' => 0,   # 2.8TB  96GB
-		'db2016' => 100,
-		'db2034' => 100,
-		'db2042' => 100,
-		'db2048' => 100,
-		'db2055' => 100,
-		'db2062' => 100,
-		'db2069' => 100,
-		'db2070' => 100,
+		'db2016' => 0,   # master
+		'db2034' => 50,  # rc, log
+		'db2042' => 50,  # rc, log
+		'db2048' => 400,
+		'db2055' => 0,   # dump, vslow
+		'db2062' => 50,  # api
+		'db2069' => 50,  # api
+		'db2070' => 500,
 	),
 	's2' => array(
-		'db1024' => 0,   # 1.4TB  64GB
-		'db2017' => 100,
-		'db2035' => 100,
-		'db2041' => 100,
-		'db2049' => 100,
-		'db2056' => 100,
-		'db2063' => 100,
-		'db2064' => 100,
+		'db2017' => 0,   # master
+		'db2035' => 50,  # rc, log
+		'db2041' => 50,  # api
+		'db2049' => 400,
+		'db2056' => 0,   # dump, vslow
+		'db2063' => 50,  # api
+		'db2064' => 500,
 	),
 	/* s3 */ 'DEFAULT' => array(
-		'db1038' => 0,   # 1.4TB  64GB
-		'db2018' => 100,
-		'db2036' => 100,
-		'db2043' => 100,
-		'db2050' => 100,
-		'db2057' => 100,
+		'db2018' => 0,   # master
+		'db2036' => 50,  # rc, log
+		'db2043' => 0,   # dump, vslow
+		'db2050' => 100, # api
+		'db2057' => 500,
 	),
 	's4' => array(
-		'db1040' => 0,   # 1.4TB  64GB
-		'db2019' => 100,
-		'db2037' => 100,
-		'db2044' => 100,
-		'db2051' => 100,
-		'db2058' => 100,
-		'db2065' => 100,
+		'db2019' => 0,   # master
+		'db2037' => 50,  # rc, log
+		'db2044' => 50,  # rc, log
+		'db2051' => 100, # api
+		'db2058' => 0,   # dump, vslow
+		'db2065' => 500,
 	),
 	's5' => array(
-		'db1058' => 0,   # 2.8TB  96GB
-		'db2023' => 100,
-		'db2038' => 100,
-		'db2045' => 100,
-		'db2052' => 100,
-		'db2059' => 100,
-		'db2066' => 100,
+		'db2023' => 0,   # master
+		'db2038' => 50,  # rc, log
+		'db2045' => 400,
+		'db2052' => 0,   # dump, vslow
+		'db2059' => 100, # api
+		'db2066' => 500,
 	),
 	's6' => array(
-		'db1023' => 0,   # 1.4TB  64GB
-		'db2028' => 100,
-		'db2039' => 100,
-		'db2046' => 100,
-		'db2053' => 100,
-		'db2060' => 100,
-		'db2067' => 100,
+		'db2028' => 0,   # master
+		'db2039' => 50,  # rc, log
+		'db2046' => 400,
+		'db2053' => 0,   # dump, vslow
+		'db2060' => 100, # api
+		'db2067' => 500,
 	),
 	's7' => array(
-		'db1033' => 0,   # 1.4TB  64GB,
-		'db2029' => 100,
-		'db2040' => 100,
-		'db2047' => 100,
-		'db2054' => 100,
-		'db2061' => 100,
-		'db2068' => 100,
+		'db2029' => 0,   # master
+		'db2040' => 100, # rc, log
+		'db2047' => 400,
+		'db2054' => 0,   # dump, vslow
+		'db2061' => 100, # api
+		'db2068' => 500,
 	),
 	'silver' => array(
 		'silver' => 100,   # I have no idea if this is right
@@ -173,8 +166,202 @@ $wgLBFactoryConf = array(
 	)
 ),
 
-'groupLoadsBySection' => array(),
-
+'groupLoadsBySection' => array(
+	's1' => array(
+		'watchlist' => array(
+			'db2034' => 1,
+			'db2042' => 1,
+		),
+		'recentchanges' => array(
+			'db2034' => 1,
+			'db2042' => 1,
+                ),
+		'recentchangeslinked' => array(
+			'db2034' => 1,
+			'db2042' => 1,
+                ),
+		'contributions' => array(
+			'db2034' => 1,
+			'db2042' => 1,
+		),
+		'logpager' => array(
+			'db2034' => 1,
+			'db2042' => 1,
+		),
+		'dump' => array(
+			'db2055' => 1,
+		),
+		'vslow' => array(
+			'db2055' => 1,
+		),
+		'api' => array(
+			'db2062' => 1,
+			'db2069' => 1,
+		),
+	),
+	's2' => array(
+		'watchlist' => array(
+			'db2035' => 1,
+		),
+		'recentchanges' => array(
+			'db2035' => 1,
+                ),
+		'recentchangeslinked' => array(
+			'db2035' => 1,
+                ),
+		'contributions' => array(
+			'db2035' => 1,
+		),
+		'logpager' => array(
+			'db2035' => 1,
+		),
+		'dump' => array(
+			'db2056' => 1,
+		),
+		'vslow' => array(
+			'db2056' => 1,
+		),
+		'api' => array(
+			'db2041' => 1,
+			'db2063' => 1,
+		),
+	),
+	/* s3 */ 'DEFAULT' => array(
+		'watchlist' => array(
+			'db2036' => 1,
+		),
+		'recentchanges' => array(
+			'db2036' => 1,
+                ),
+		'recentchangeslinked' => array(
+			'db2036' => 1,
+                ),
+		'contributions' => array(
+			'db2036' => 1,
+		),
+		'logpager' => array(
+			'db2036' => 1,
+		),
+		'dump' => array(
+			'db2043' => 1,
+		),
+		'vslow' => array(
+			'db2043' => 1,
+		),
+		'api' => array(
+			'db2050' => 1,
+		),
+	),
+	's4' => array(
+		'watchlist' => array(
+			'db2037' => 1,
+			'db2044' => 1,
+		),
+		'recentchanges' => array(
+			'db2037' => 1,
+			'db2044' => 1,
+                ),
+		'recentchangeslinked' => array(
+			'db2037' => 1,
+			'db2044' => 1,
+                ),
+		'contributions' => array(
+			'db2037' => 1,
+			'db2044' => 1,
+		),
+		'logpager' => array(
+			'db2037' => 1,
+			'db2044' => 1,
+		),
+		'dump' => array(
+			'db2058' => 1,
+		),
+		'vslow' => array(
+			'db2058' => 1,
+		),
+		'api' => array(
+			'db2051' => 1,
+		),
+	),
+	's5' => array(
+		'watchlist' => array(
+			'db2038' => 1,
+		),
+		'recentchanges' => array(
+			'db2038' => 1,
+                ),
+		'recentchangeslinked' => array(
+			'db2038' => 1,
+                ),
+		'contributions' => array(
+			'db2038' => 1,
+		),
+		'logpager' => array(
+			'db2038' => 1,
+		),
+		'dump' => array(
+			'db2052' => 1,
+		),
+		'vslow' => array(
+			'db2052' => 1,
+		),
+		'api' => array(
+			'db2059' => 1,
+		),
+	),
+	's6' => array(
+		'watchlist' => array(
+			'db2039' => 1,
+		),
+		'recentchanges' => array(
+			'db2039' => 1,
+                ),
+		'recentchangeslinked' => array(
+			'db2039' => 1,
+                ),
+		'contributions' => array(
+			'db2039' => 1,
+		),
+		'logpager' => array(
+			'db2039' => 1,
+		),
+		'dump' => array(
+			'db2053' => 1,
+		),
+		'vslow' => array(
+			'db2053' => 1,
+		),
+		'api' => array(
+			'db2060' => 1,
+		),
+	),
+	's7' => array(
+		'watchlist' => array(
+			'db2040' => 1,
+		),
+		'recentchanges' => array(
+			'db2040' => 1,
+                ),
+		'recentchangeslinked' => array(
+			'db2040' => 1,
+                ),
+		'contributions' => array(
+			'db2040' => 1,
+		),
+		'logpager' => array(
+			'db2040' => 1,
+		),
+		'dump' => array(
+			'db2054' => 1,
+		),
+		'vslow' => array(
+			'db2054' => 1,
+		),
+		'api' => array(
+			'db2061' => 1,
+		),
+	),
+),
 
 'groupLoadsByDB' => array(),
 
