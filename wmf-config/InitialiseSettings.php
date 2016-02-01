@@ -10068,7 +10068,7 @@ $wgConf->settings = array(
 	// Specific wikis
 
 	// chapter wikis
-	'bewikimedia' => array( 'meta' ),
+	'bewikimedia' => array( 'meta', 'wlmbe' ), // T125390 (+ wlmbe)
 	'brwikimedia' => array( 'wikipedia:pt', 'meta', 'wiktionary:pt', 'wikisource:pt', 'wikinews:pt', 'wikiquote:pt', 'wikibooks:pt', 'wikiversity:pt', 'commons' ), // T60936
 	'cowikimedia' => array( 'meta', 'wikipedia:es', 'wikibooks:es', 'wikiversity:es' ),
 	'etwikimedia' => array( 'wikipedia:et', 'meta' ),
