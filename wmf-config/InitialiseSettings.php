@@ -14662,6 +14662,7 @@ $wgConf->settings = array(
 	'mrwiki' => true, // T103646
 	'newiki' => true, // T92820
 	'orwiki' => true,
+	'orwikisource' => true, // T124429
 	'orwiktionary' => true, // T103644
 	'sawiki' => true, // T94660
 	'sawikibooks' => true, // T94660
