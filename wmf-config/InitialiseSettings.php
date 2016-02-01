@@ -16361,7 +16361,7 @@ $wgConf->settings = array(
 	'default' => true,
 	'enwiki' => false, // T101108
 ),
-'wgWPBNamespaces' => array(
+'wgWPBBannerNamespaces' => array(
 	'default' => array( NS_MAIN, NS_USER ),
 	'frwikivoyage' => array( NS_MAIN, NS_USER, NS_PROJECT, NS_HELP ), // T123084
 	'ruwikivoyage' => array( 0, 1, 10, 11, 12, 13, 14, 15, 2,
