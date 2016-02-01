@@ -89,69 +89,69 @@ $wgLBFactoryConf = array(
 
 'sectionLoads' => array(
 	's1' => array(
-		'db1052' => 0,   # 2.8TB  96GB
-		'db2016' => 100,
-		'db2034' => 100,
-		'db2042' => 100,
-		'db2048' => 100,
-		'db2055' => 100,
-		'db2062' => 100,
-		'db2069' => 100,
-		'db2070' => 100,
+		'db1052' => 0,   # 2.8TB  96GB, master
+		'db2016' => 0,   # 2.9TB  96GB, local master
+		'db2034' => 50,  # 2.9TB 160GB, rc, log
+		'db2042' => 50,  # 2.9TB 160GB, rc, log
+		'db2048' => 400, # 2.9TB 160GB
+		'db2055' => 200, # 3.3TB 160GB, dump (inactive), vslow
+		'db2062' => 50,  # 3.3TB 160GB, api
+		'db2069' => 50,  # 3.3TB 160GB, api
+		'db2070' => 500, # 3.3TB 160GB
 	),
 	's2' => array(
-		'db1018' => 0,   # 1.4TB  64GB
-		'db2017' => 100,
-		'db2035' => 100,
-		'db2041' => 100,
-		'db2049' => 100,
-		'db2056' => 100,
-		'db2063' => 100,
-		'db2064' => 100,
+		'db1018' => 0,   # 1.4TB  64GB, master
+		'db2017' => 0,   # 2.9TB  96GB, local master
+		'db2035' => 50,  # 2.9TB 160GB, rc, log
+		'db2041' => 50,  # 2.9TB 160GB, api
+		'db2049' => 400, # 2.9TB 160GB,
+		'db2056' => 200, # 3.3TB 160GB, dump (inactive), vslow
+		'db2063' => 50,  # 3.3TB 160GB, api
+		'db2064' => 500, # 3.3TB 160GB
 	),
 	/* s3 */ 'DEFAULT' => array(
-		'db1038' => 0,   # 1.4TB  64GB
-		'db2018' => 100,
-		'db2036' => 100,
-		'db2043' => 100,
-		'db2050' => 100,
-		'db2057' => 100,
+		'db1038' => 0,   # 1.4TB  64GB, master
+		'db2018' => 0,   # 2.9TB  96GB, local master
+		'db2036' => 50,  # 2.9TB 160GB, rc, log
+		'db2043' => 100, # 2.9TB 160GB, dump (inactive), vslow
+		'db2050' => 100, # 2.9TB 160GB, api
+		'db2057' => 500, # 3.3TB 160GB
 	),
 	's4' => array(
-		'db1040' => 0,   # 1.4TB  64GB
-		'db2019' => 100,
-		'db2037' => 100,
-		'db2044' => 100,
-		'db2051' => 100,
-		'db2058' => 100,
-		'db2065' => 100,
+		'db1040' => 0,   # 1.4TB  64GB, master
+		'db2019' => 0,   # 2.9TB  96GB, local master
+		'db2037' => 50,  # 2.9TB 160GB, rc, log
+		'db2044' => 50,  # 2.9TB 160GB, rc, log
+		'db2051' => 100, # 2.9TB 160GB, api
+		'db2058' => 200, # 3.3TB 160GB, dump (inactive), vslow
+		'db2065' => 500, # 3.3TB 160GB
 	),
 	's5' => array(
-		'db1058' => 0,   # 2.8TB  96GB
-		'db2023' => 100,
-		'db2038' => 100,
-		'db2045' => 100,
-		'db2052' => 100,
-		'db2059' => 100,
-		'db2066' => 100,
+		'db1058' => 0,   # 2.8TB  96GB, master
+		'db2023' => 0,   # 2.9TB  96GB, local master
+		'db2038' => 50,  # 2.9TB 160GB, rc, log
+		'db2045' => 400, # 2.9TB 160GB
+		'db2052' => 200, # 2.9TB 160GB, dump (inactive), vslow
+		'db2059' => 100, # 3.3TB 160GB, api
+		'db2066' => 500, # 3.3TB 160GB
 	),
 	's6' => array(
-		'db1023' => 0,   # 1.4TB  64GB
-		'db2028' => 100,
-		'db2039' => 100,
-		'db2046' => 100,
-		'db2053' => 100,
-		'db2060' => 100,
-		'db2067' => 100,
+		'db1023' => 0,   # 1.4TB  64GB, master
+		'db2028' => 0,   # 2.9TB  96GB, local master
+		'db2039' => 50,  # 2.9TB 160GB, rc, log
+		'db2046' => 400, # 2.9TB 160GB
+		'db2053' => 200, # 2.9TB 160GB, dump (inactive), vslow
+		'db2060' => 100, # 3.3TB 160GB, api
+		'db2067' => 500, # 3.3TB 160GB
 	),
 	's7' => array(
-		'db1033' => 0,   # 1.4TB  64GB,
-		'db2029' => 100,
-		'db2040' => 100,
-		'db2047' => 100,
-		'db2054' => 100,
-		'db2061' => 100,
-		'db2068' => 100,
+		'db1033' => 0,   # 1.4TB  64GB, master
+		'db2029' => 0,   # 2.9TB  96GB, local master
+		'db2040' => 100, # 2.9TB 160GB, rc, log
+		'db2047' => 400, # 2.9TB 160GB
+		'db2054' => 200, # 2.9TB 160GB, dump (inactive), vslow
+		'db2061' => 100, # 3.3TB 160GB, api
+		'db2068' => 500, # 3.3TB 160GB
 	),
 	'silver' => array(
 		'silver' => 100,   # I have no idea if this is right
@@ -173,8 +173,202 @@ $wgLBFactoryConf = array(
 	)
 ),
 
-'groupLoadsBySection' => array(),
-
+'groupLoadsBySection' => array(
+	's1' => array(
+		'watchlist' => array(
+			'db2034' => 1,
+			'db2042' => 1,
+		),
+		'recentchanges' => array(
+			'db2034' => 1,
+			'db2042' => 1,
+		),
+		'recentchangeslinked' => array(
+			'db2034' => 1,
+			'db2042' => 1,
+		),
+		'contributions' => array(
+			'db2034' => 1,
+			'db2042' => 1,
+		),
+		'logpager' => array(
+			'db2034' => 1,
+			'db2042' => 1,
+		),
+		'dump' => array(
+			'db2055' => 1,
+		),
+		'vslow' => array(
+			'db2055' => 1,
+		),
+		'api' => array(
+			'db2062' => 1,
+			'db2069' => 1,
+		),
+	),
+	's2' => array(
+		'watchlist' => array(
+			'db2035' => 1,
+		),
+		'recentchanges' => array(
+			'db2035' => 1,
+		),
+		'recentchangeslinked' => array(
+			'db2035' => 1,
+		),
+		'contributions' => array(
+			'db2035' => 1,
+		),
+		'logpager' => array(
+			'db2035' => 1,
+		),
+		'dump' => array(
+			'db2056' => 1,
+		),
+		'vslow' => array(
+			'db2056' => 1,
+		),
+		'api' => array(
+			'db2041' => 1,
+			'db2063' => 1,
+		),
+	),
+	/* s3 */ 'DEFAULT' => array(
+		'watchlist' => array(
+			'db2036' => 1,
+		),
+		'recentchanges' => array(
+			'db2036' => 1,
+		),
+		'recentchangeslinked' => array(
+			'db2036' => 1,
+		),
+		'contributions' => array(
+			'db2036' => 1,
+		),
+		'logpager' => array(
+			'db2036' => 1,
+		),
+		'dump' => array(
+			'db2043' => 1,
+		),
+		'vslow' => array(
+			'db2043' => 1,
+		),
+		'api' => array(
+			'db2050' => 1,
+		),
+	),
+	's4' => array(
+		'watchlist' => array(
+			'db2037' => 1,
+			'db2044' => 1,
+		),
+		'recentchanges' => array(
+			'db2037' => 1,
+			'db2044' => 1,
+		),
+		'recentchangeslinked' => array(
+			'db2037' => 1,
+			'db2044' => 1,
+		),
+		'contributions' => array(
+			'db2037' => 1,
+			'db2044' => 1,
+		),
+		'logpager' => array(
+			'db2037' => 1,
+			'db2044' => 1,
+		),
+		'dump' => array(
+			'db2058' => 1,
+		),
+		'vslow' => array(
+			'db2058' => 1,
+		),
+		'api' => array(
+			'db2051' => 1,
+		),
+	),
+	's5' => array(
+		'watchlist' => array(
+			'db2038' => 1,
+		),
+		'recentchanges' => array(
+			'db2038' => 1,
+		),
+		'recentchangeslinked' => array(
+			'db2038' => 1,
+		),
+		'contributions' => array(
+			'db2038' => 1,
+		),
+		'logpager' => array(
+			'db2038' => 1,
+		),
+		'dump' => array(
+			'db2052' => 1,
+		),
+		'vslow' => array(
+			'db2052' => 1,
+		),
+		'api' => array(
+			'db2059' => 1,
+		),
+	),
+	's6' => array(
+		'watchlist' => array(
+			'db2039' => 1,
+		),
+		'recentchanges' => array(
+			'db2039' => 1,
+		),
+		'recentchangeslinked' => array(
+			'db2039' => 1,
+		),
+		'contributions' => array(
+			'db2039' => 1,
+		),
+		'logpager' => array(
+			'db2039' => 1,
+		),
+		'dump' => array(
+			'db2053' => 1,
+		),
+		'vslow' => array(
+			'db2053' => 1,
+		),
+		'api' => array(
+			'db2060' => 1,
+		),
+	),
+	's7' => array(
+		'watchlist' => array(
+			'db2040' => 1,
+		),
+		'recentchanges' => array(
+			'db2040' => 1,
+		),
+		'recentchangeslinked' => array(
+			'db2040' => 1,
+		),
+		'contributions' => array(
+			'db2040' => 1,
+		),
+		'logpager' => array(
+			'db2040' => 1,
+		),
+		'dump' => array(
+			'db2054' => 1,
+		),
+		'vslow' => array(
+			'db2054' => 1,
+		),
+		'api' => array(
+			'db2061' => 1,
+		),
+	),
+),
 
 'groupLoadsByDB' => array(),
 
@@ -365,8 +559,8 @@ $wgLBFactoryConf = array(
 	),
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => array(
-		'10.64.16.18' => 10, # db1029
-		'10.192.0.12' => 20, # db2009
+		'10.64.16.18' => 10, # db1029, master
+		'10.192.0.12' => 20, # db2009, local master
 	),
 ),
 
@@ -398,10 +592,13 @@ $wgLBFactoryConf = array(
 
 # This key must exist for the master switch script to work
 'readOnlyBySection' => array(
-	'DEFAULT' => 'Brief Database Maintenance in progress, please try again in 3 minutes', #s3
-	's1'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
-	's5'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
-	's3'	   => 'Brief Database Maintenance in progress, please try again in 3 minutes',
+        's1'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
+        's2'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
+        'DEFAULT' 	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes', # s3
+        's4'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
+        's5'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
+        's6'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
+        's7'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
 ),
 
 );
