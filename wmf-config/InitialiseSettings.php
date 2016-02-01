@@ -8102,6 +8102,20 @@ $wgConf->settings = array(
 	'nowiki' => array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true, 'unwatchedpages' => true, 'suppressredirect' => true, ),
 		'autopatrolled' => array( 'autopatrol' => true, 'unwatchedpages' => true ),
+		'confirmed' => array( // T125448
+			'autoconfirmed' => true,
+			'collectionsaveascommunitypage' => true,
+			'collectionsaveasuserpage' => true,
+			'editsemiprotected' => true,
+			'flow-edit-post' => true,
+			'mwoauthproposeconsumer' => true,
+			'mwoauthupdateownconsumer' => true,
+			'move' => true,
+			'reupload' => true,
+			'skipcaptcha' => true,
+			'transcode-reset' => true,
+			'upload' => true,
+		),
 	),
 	'+nowikibooks' => array(
 		'user' => array( 'patrol' => false ),
@@ -9130,7 +9144,7 @@ $wgConf->settings = array(
 	),
 	'+nowiki' => array(
 		'bureaucrat' => array( 'patroller', 'autopatrolled', 'accountcreator' ),
-		'sysop' => array( 'patroller', 'autopatrolled', 'abusefilter', 'transwiki' ),
+		'sysop' => array( 'patroller', 'autopatrolled', 'abusefilter', 'transwiki', 'confirmed' ),
 	),
 	'+nowikibooks' => array(
 		'bureaucrat' => array( 'sysop', 'bureaucrat', 'bot', 'patroller', 'autopatrolled' ),
@@ -9798,7 +9812,7 @@ $wgConf->settings = array(
 	),
 	'+nowiki' => array(
 		'bureaucrat' => array( 'patroller', 'autopatrolled', 'transwiki', 'accountcreator' ),
-		'sysop' => array( 'autopatrolled', 'abusefilter' ),
+		'sysop' => array( 'autopatrolled', 'abusefilter', 'confirmed' ),
 	),
 	'+nowikibooks' => array(
 		'bureaucrat' => array( 'bot', 'patroller', 'autopatrolled' ),
