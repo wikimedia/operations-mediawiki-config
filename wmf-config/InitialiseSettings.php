@@ -234,6 +234,7 @@ $wgConf->settings = array(
 
 # wgLocaltimezone @{
 'wgLocaltimezone' => array(
+	'adywiki' => 'UTC', // T125501
 	'alswiki' => 'Europe/Berlin',
 	'arbcom_dewiki' => 'Europe/Berlin',
 	'arbcom_fiwiki' => 'Europe/Helsinki',
@@ -460,6 +461,7 @@ $wgConf->settings = array(
 	// Wikipedia
 	'abwiki' => '/static/images/project-logos/abwiki.png',  // T48589
 	'acewiki' => '/static/images/project-logos/acewiki.png',
+	'adywiki' => '/static/images/project-logos/adywiki.png', // T125501
 	'afwiki' => '/static/images/project-logos/afwiki.png',
 	'akwiki' => '/static/images/project-logos/akwiki.png',  // T48589
 	'alswiki' => '/static/images/project-logos/alswiki.png',
@@ -1513,6 +1515,7 @@ $wgConf->settings = array(
 	// Individual wikis, alphabetically by DB name
 	'abwiki' => 'Авикипедиа',
 	'advisorywiki' => 'Advisory Board',
+	'adywiki' => 'Википедие', // T125501
 	'angwiki' => 'Wikipǣdia', // T58634
 	'angwikisource' => 'Wicifruma',
 	'angwiktionary' => 'Wikiwordbōc', // T58634
@@ -1996,6 +1999,7 @@ $wgConf->settings = array(
 	// Wikis (alphabetical by DB name)
 	'abwiki' => 'Авикипедиа',
 	'advisorywiki' => 'Project',
+	'adywiki' => 'Википедие', // T125501
 	'amwiki' => 'ውክፔዲያ',
 	'angwiki' => 'Wikipǣdia', // T58634
 	'angwikisource' => 'Wicifruma',
@@ -2417,6 +2421,7 @@ $wgConf->settings = array(
 
 # wgMetaNamespaceTalk @{
 'wgMetaNamespaceTalk' => array(
+	'adywiki' => 'Википедием_и_тегущыӀэн', // T125501
 	'angwiki' => 'Wikipǣdiamōtung', // T58634
 	'angwiktionary' => 'Wikiwordbōcmōtung', // T58634
 	'arwikiversity' => 'نقاش_ويكي_الجامعة',
