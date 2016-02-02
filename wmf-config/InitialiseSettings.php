@@ -10748,7 +10748,7 @@ $wgConf->settings = array(
 
 'wgExtraSignatureNamespaces' => array(
 	// Namespaces not listed in $wgContentNamespaces are not necessary here
-	// for core, but reinforcing defalt config doesn't harm.
+	// for core, but reinforcing default config doesn't harm.
 	'default' => array( NS_PROJECT, NS_HELP ),
 	'+wikimedia' => array( NS_MAIN ),
 	'+special' => array( NS_MAIN ),
