@@ -92,8 +92,6 @@ if ( $wmgMobileFrontend ) {
 	$wgMFAppPackageId = $wmgMFAppPackageId;
 	$wgMFNearbyRange = $wmgMaxGeoSearchRadius;
 
-	$wgMFPageActions = array_diff( $wgMFPageActions, $wmgMFRemovePageActions );
-
 	// restrict access to mobile Uploads to users with minimum editcount T64598
 	$wgMFUploadMinEdits = $wmgMFUploadMinEdits;
 
