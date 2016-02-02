@@ -9188,6 +9188,9 @@ $wgConf->settings = array(
 		'sysop' => array( 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ),
 		'bureaucrat' => array( 'arbcom' ), // T51334
 	),
+	'+ruwikimedia' => array(
+		'bureaucrat' => array ( 'translationadmin' ), // T121766
+	),
 	'+ruwikiquote' => array(
 		'sysop' => array( 'autoeditor' )
 	),
@@ -9858,6 +9861,9 @@ $wgConf->settings = array(
 	'+ruwiki' => array(
 		'bureaucrat' => array( 'sysop', 'arbcom' ), // T51334
 		'sysop' => array( 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ),
+	),
+	'+ruwikimedia' => array(
+		'bureaucrat' => array( 'translationadmin' ), // T121766
 	),
 	'+ruwikiquote' => array(
 		'sysop' => array( 'autoeditor' )
@@ -11601,6 +11607,7 @@ $wgConf->settings = array(
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
 	'plwiki' => array( 'sysop' => array( 'flood' ) ), // T22155
+	'ruwikimedia' => array( 'sysop' => array( 'translationadmin' ) ), // T121766
 	'strategywiki' => array( 'sysop' => array( 'flood' ) ),
 	'wikidata' => array( 'sysop' => array( 'flood', 'translationadmin' ) ), // T50013, T48856
 	'zhwiki' => array( 'sysop' => array( 'flood' ) ),
@@ -11630,6 +11637,7 @@ $wgConf->settings = array(
 	'mlwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
 	'simplewiki' => array( 'sysop' => array( 'flood' ) ),
 	'plwiki' => array( 'flood' => array( 'flood' ) ), // T22155 , T23238
+	'ruwikimedia' => array( 'sysop' => array( 'translationadmin' ) ), // T121766
 	'strategywiki' => array( 'sysop' => array( 'flood' ) ),
 	'srwiki' => array( 'sysop' => array( 'flood' ) ),
 	'wikidata' => array(
@@ -14554,6 +14562,7 @@ $wgConf->settings = array(
 	'metawiki' => true,
 	'otrs_wikiwiki' => true, // T63297
 	'outreachwiki' => true,
+	'ruwikimedia' => true, // T121766
 	'testwiki' => true,
 	'wikidata' => true, // T43585
 	'wikimania2012wiki' => true, // T36120
@@ -14628,6 +14637,7 @@ $wgConf->settings = array(
 	'incubatorwiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
+	'ruwikimedia' => true, // T121766
 	'wikidata' => true, // T43585
 	'wikimania2012wiki' => true,
 	'wikimania2013wiki' => true,
