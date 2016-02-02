@@ -10755,6 +10755,7 @@ $wgConf->settings = array(
 
 	'+dewikivoyage' => array( 102 ), // T119420
 	'+itwiki' => array( 102 ),
+	'+ruwiki' => array( 104 ), // T125509
 ),
 
 'wmgExemptFromUserRobotsControlExtra' => array(
