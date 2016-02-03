@@ -13769,10 +13769,6 @@ $wgConf->settings = array(
 	'wiktionary' => false,
 	'wikidata' => false,
 ),
-'wmgMFRemovePageActions' => array(
-	'default' => array( 'upload' ),
-	'wikisource' => array( 'upload' ), // T68958
-),
 'wmgMFUploadMinEdits' => array(
 	'default' => 10,
 	'commonswiki' => 75, // T64598
