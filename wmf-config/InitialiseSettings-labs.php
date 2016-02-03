@@ -280,7 +280,7 @@ function wmfLabsSettings() {
 
 		'wgMFRemovableClasses' => array(
 			'default' => array(
-				'base' => array(),
+				'base' => array( '.navbox' ),
 				'beta' => array( '.navbox' ),
 				'HTML' => array(),
 			),
