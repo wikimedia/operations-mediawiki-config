@@ -16381,8 +16381,44 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+
 'wmgCirrusSearchUserTesting' => [
 	'default' => [
+	],
+	'enwiki' => [
+		'sampleRate' => 10,
+		// variables applied to all buckets
+		'globals' => [
+			'wgCirrusSearchInterwikiThreshold' => 3,
+			'wgCirrusSearchLanguageDetectors' => [
+				'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat',
+			],
+			'wgCirrusSearchTextcatLanguages' => [
+				'en', 'es', 'zh', 'pt', 'ar', 'ru', 'fa', 'ko',
+				'bn', 'bg', 'hi', 'el', 'ja', 'ta', 'th', 'he'
+			]
+		],
+		'buckets' => [
+			// control bucket. setup threshold and detector but don't turn on the
+			// language query
+			'a' => [
+				'wgCirrusSearchEnableAltLanguage' => false,
+			],
+			// test bucket. try textcat and append results when < 3 results found>
+			'b' => [
+				'wgCirrusSearchEnableAltLanguage' => true,
+				'wgCirrusSearchInterwikiProv' => 'iwsw6',
+			],
+			// test bucket. try accept-language, fallback to textcat
+			'c' => [
+				'wgCirrusSearchEnableAltLanguage' => true,
+				'wgCirrusSearchInterwikiProv' => 'iwsw7',
+				'wgCirrusSearchLanguageDetectors' => [
+					'accept-lang' => 'CirrusSearch\\LanguageDetector\\AcceptLanguage',
+					'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat',
+				],
+			],
+		],
 	],
 ],
 
