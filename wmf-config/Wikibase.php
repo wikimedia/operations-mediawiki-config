@@ -117,12 +117,6 @@ if ( $wmgUseWikibaseRepo ) {
 		1805, // (OBSOLETE) World Health Organisation International Nonproprietary Name (use P2275)
 	);
 
-	if ( !in_array( 'pageterms', $wgMFQueryPropModules ) ) {
-		$wgMFQueryPropModules[] = 'pageterms';
-	}
-
-	$wgMFSearchAPIParams['wbptterms'] = array( 'label' );
-
 	// Don't try to let users answer captchas if they try to add links
 	// on either Item or Property pages. T86453
 	$wgCaptchaTriggersOnNamespace[NS_MAIN]['addurl'] = false;

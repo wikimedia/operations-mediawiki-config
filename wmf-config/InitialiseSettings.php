@@ -13582,6 +13582,20 @@ $wgConf->settings = array(
 'wmgMobileFrontend' => array(
 	'default' => true,
 ),
+'wmgMFQueryPropModules' => array(
+	// workaround for T125672
+	'default' => array( 'pageprops' ),
+	'wikidata' => array( 'pageprops', 'pageterms' ),
+),
+'wmgMFSearchAPIParams' => array(
+	// workaround for T125672, though also fixes T120197
+	'default' => array(
+		'ppprop' => 'displaytitle'
+	),
+	'wikidata' => array(
+		'wbptterms' => 'label'
+	)
+),
 'wmgUseGather' => array(
 	'default' => false,
 	'testwiki' => true,
