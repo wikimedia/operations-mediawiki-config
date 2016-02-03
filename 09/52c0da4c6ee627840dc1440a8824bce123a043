@@ -1,0 +1,10 @@
+Verified+2: jenkins-bot
+Code-Review+1: Kelson <kelson@kiwix.org>
+Code-Review+1: Steinsplitter <steinsplitter@wikipedia.de>
+Code-Review+2: Thcipriani <tcipriani@wikimedia.org>
+Code-Review+1: Luke081515 <luke081515@web.de>
+Submitted-by: jenkins-bot
+Submitted-at: Wed, 03 Feb 2016 16:16:21 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/262893
+Project: operations/mediawiki-config
+Branch: refs/heads/master
