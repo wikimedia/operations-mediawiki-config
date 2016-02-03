@@ -13585,7 +13585,7 @@ $wgConf->settings = array(
 'wmgMFQueryPropModules' => array(
 	// workaround for T125672
 	'default' => array( 'pageprops' ),
-	'wikidata' => array( 'pageprops', 'pageterms' ),
+	'wikidata' => array( 'pageterms' ),
 ),
 'wmgMFSearchAPIParams' => array(
 	// workaround for T125672, though also fixes T120197
