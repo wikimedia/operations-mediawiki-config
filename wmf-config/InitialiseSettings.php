@@ -15926,6 +15926,37 @@ $wgConf->settings = array(
 'wmgCirrusSearchUserTesting' => array(
 	'default' => array(
 	),
+	'enwiki' => array(
+		'sampleRate' => 10,
+		// variables applied to all buckets
+		'globals' => array(
+			'wgCirrusSearchInterwikiThreshold' => 3,
+			'wgCirrusSearchLanguageDetectors' => array(
+				'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat',
+			)
+		),
+		'buckets' => array(
+			// control bucket. setup threshold and detector but don't turn on the
+			// language query
+			'a' => array(
+				'wgCirrusSearchEnableAltLanguage' => false,
+			),
+			// test bucket. try textcat and append results when < 3 results found>
+			'b' => array(
+				'wgCirrusSearchEnableAltLanguage' => true,
+				'wgCirrusSearchInterwikiProv' => 'iwsw6',
+			),
+			// test bucket. try accept-language, fallback to textcat
+			'c' => array(
+				'wgCirrusSearchEnableAltLanguage' => true,
+				'wgCirrusSearchInterwikiProv' => 'iwsw7',
+				'wgCirrusSearchLanguageDetectors' => array(
+					'accept-lang' => 'CirrusSearch\\LanguageDetector\\AcceptLanguage',
+					'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat',
+				),
+			),
+		),
+	),
 ),
 
 // Enable interwiki search by language detection. The list of language
