@@ -117,9 +117,13 @@ if ( $wmgUseWikibaseRepo ) {
 		1805, // (OBSOLETE) World Health Organisation International Nonproprietary Name (use P2275)
 	);
 
-	if ( !in_array( 'pageterms', $wgMFQueryPropModules ) ) {
-		$wgMFQueryPropModules[] = 'pageterms';
-	}
+	// Needs to be deferred until after wfLoadExtensions() has run
+	$wgExtensionFunctions[] = function () {
+		global $wgMFQueryPropModules;
+		if ( !in_array( 'pageterms', $wgMFQueryPropModules ) ) {
+			$wgMFQueryPropModules[] = 'pageterms';
+		}
+	};
 
 	$wgMFSearchAPIParams['wbptterms'] = array( 'label' );
 
