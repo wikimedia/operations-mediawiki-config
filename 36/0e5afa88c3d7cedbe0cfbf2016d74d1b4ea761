@@ -1,0 +1,9 @@
+Verified+2: jenkins-bot
+Code-Review+2: BryanDavis <bdavis@wikimedia.org>
+Code-Review+1: Bmansurov <bmansurov@wikimedia.org>
+Code-Review+1: Jhernandez <jhernandez@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Wed, 03 Feb 2016 18:35:49 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/267812
+Project: operations/mediawiki-config
+Branch: refs/heads/master
