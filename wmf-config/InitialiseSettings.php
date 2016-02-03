@@ -13582,6 +13582,18 @@ $wgConf->settings = array(
 'wmgMobileFrontend' => array(
 	'default' => true,
 ),
+'wmgMFQueryPropModules' => array(
+	'default' => array( 'pageprops' ),
+	'wikidata' => array( 'pageprops', 'pageterms' ),
+),
+'wmgMFSearchAPIParams' => array(
+	'default' => array(
+		'ppprop' => 'displaytitle'
+	),
+	'wikidata' => array(
+		'wbptterms' => 'label'
+	)
+),
 'wmgUseGather' => array(
 	'default' => false,
 	'testwiki' => true,
