@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_6b70f2a3",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2016-02-03T11:14:10Z",
+      "side": 0,
+      "message": "we want this to be true for testwikidatawiki, testwiki and test2wiki (as the next step) and then when we enable on wikidata, we can just remove the setting from here since the default is true.",
+      "revId": "896f8f62788636158c4085adc00a5c327dceae90",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
