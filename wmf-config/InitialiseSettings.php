@@ -15455,6 +15455,13 @@ $wgConf->settings = array(
 	'wikidatawiki' => 500,
 ),
 
+'wgMathEnableWikibaseDataType' => array(
+	'default' => false,
+	'testwikidatawiki' => true,
+	'test2wiki' => true,
+	'testwiki' => true,
+),
+
 'wmgUseWikibaseRepo' => array(
 	'default' => false,
 	'wikidata' => true,
