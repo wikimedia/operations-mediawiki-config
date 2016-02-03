@@ -125,6 +125,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_6e4ec09d",
+        "filename": "w/static.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-03T15:04:14Z",
+      "side": 1,
+      "message": "I\u0027m not sure about Varnish. However RL performance is suffering from T105657.\n\nAnd with CC obsoleting Expires, there doesn\u0027t seem to be much point in adding it. Except maybe for older browsers?\n\nRoan and I ran repeated isolated 1-week experiments over the course of 5 weeks last year and very consistently found that clients all come back for Expires in close clustering. As such suggesting they were following Expires, not Cache-Control – primarily because the date in Expires is hard-coded and cached by Varnish, it doesn\u0027t bounce relatively the way Cache-Control works. The experiments in question did not involve Varnish caching (we were doing it from an isolated file served from testwiki/mw1017 with a cache busting query parameter and a two-step request - that is, one request requesting the other one). So we could see exactly for how long a browser was re-using an old resource.\n\nGrepping for \"Cache-Control\" (ack -Q -i --php) in mediawiki-config, vs Expires (ack -Q --php), shows that we\u0027ve left out Expires in the past as well. Only touch.php and favicon.php set it.\n\nI\u0027m fine with setting it here, I don\u0027t mind. Either way would be consistent with something we\u0027re doing somewhere else (!). And cache-miss pressure is certainly not a problem for static resources, so it wouldn\u0027t do harm either.\n\nOpen to further input on T105657 though.",
+      "parentUuid": "6eaa8f54_356cae98",
+      "revId": "090053b862912a838d297ae265e5994e43b82125",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6eaa8f54_66caa71f",
         "filename": "w/static.php",
         "patchSetId": 1
