@@ -582,5 +582,8 @@ function wmfLabsSettings() {
 			'default' => true,
 			'private' => false,
 		),
+		'wgMathEnableWikibaseDataType' => array(
+			'default' => true,
+		),
 	);
 } # wmflLabsSettings()
