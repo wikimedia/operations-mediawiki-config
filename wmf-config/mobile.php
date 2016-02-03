@@ -99,6 +99,9 @@ if ( $wmgMobileFrontend ) {
 	// enable editing for unregistered users
 	$wgMFEditorOptions = $wmgMFEditorOptions;
 
+	$wgMFQueryPropModules = $wmgMFQueryPropModules;
+	$wgMFSearchAPIParams = $wmgMFSearchAPIParams;
+
 	$wgMFUseWikibaseDescription = true; // Alpha experiment
 
 	// Turn on volunteer recruitment
