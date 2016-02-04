@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_10c63a4f",
+        "filename": "multiversion/MWWikiversions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-02-04T20:33:14Z",
+      "side": 1,
+      "message": "Should probably be `.` instead of a `+`.",
+      "revId": "d6fa2141b0d8a591ad4477ebde4c92f4b0c3c0fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
