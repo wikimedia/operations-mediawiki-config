@@ -15505,6 +15505,10 @@ $wgConf->settings = array(
 	'wikidataclient' => true,
 ),
 
+'wmgUseArticlePlaceholder' => array(
+	'default' => false,
+),
+
 'wmgWikibaseSiteGroup' => array(
 	'wikipedia' => 'wikipedia',
 	'wikibooks' => 'wikibooks',

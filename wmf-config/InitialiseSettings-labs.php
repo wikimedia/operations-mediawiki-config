@@ -578,12 +578,19 @@ function wmfLabsSettings() {
 		'wmgMediaViewerUseThumbnailGuessing' => array(
 			'default' => false, # T69651
 		),
+
 		'wmgUseUrlShortener' => array(
 			'default' => true,
 			'private' => false,
 		),
+
 		'wgMathEnableWikibaseDataType' => array(
 			'default' => true,
+		),
+
+		'wmgUseArticlePlaceholder' => array(
+			'default' => false,
+			'wikidataclient' => true,
 		),
 	);
 } # wmflLabsSettings()
