@@ -1740,11 +1740,7 @@ $wgHooks['EmailUser'][] = function ( &$to, &$from, &$subject, &$text ) {
 // ContributionTracking for handling PayPal redirects
 if ( $wgUseContributionTracking ) {
 	include( "$IP/extensions/ContributionTracking/ContributionTracking.php" );
-	$wgContributionTrackingDBserver = 'db1008.eqiad.wmnet';
-	$wgContributionTrackingDBname = 'drupal';
-	$wgContributionTrackingDBuser = 'contrib_tracking';
-	// From PrivateSettings.php
-	$wgContributionTrackingDBpassword = $wmgContributionTrackingDBpassword;
+	include( "$wmfConfigDir/contribution-tracking-setup.php" );
 	$wgContributionTrackingPayPalIPN = "https://civicrm.wikimedia.org/fundcore_gateway/paypal";
 	$wgContributionTrackingPayPalRecurringIPN = "https://civicrm.wikimedia.org/IPNListener_Recurring.php";
 	$wgContributionTrackingUTMKey = true;
