@@ -13394,6 +13394,7 @@ $wgConf->settings = array(
 	'iswiktionary' => 'identity', // T32722
 	'ltwiki' => 'uca-lt', // T123627
 	'lvwiki' => 'uca-lv', // T67003
+	'nlwiki' => 'uca-nl', // T125774
 	'plwiki' => 'uca-pl', // T44413
 	'plwikisource' => 'uca-pl', // T86821
 	'plwikivoyage' => 'uca-pl', // T47968
