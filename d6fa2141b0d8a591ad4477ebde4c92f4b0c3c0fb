@@ -16,6 +16,24 @@
       "revId": "d6fa2141b0d8a591ad4477ebde4c92f4b0c3c0fb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_f0dd9ee2",
+        "filename": "multiversion/MWWikiversions.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-02-04T20:55:34Z",
+      "side": 1,
+      "message": "Well works for me:\n\n \u003e\u003e\u003e print json.dumps({ \u0027foo\u0027: 3 }) + \"\\n\"\n {\"foo\": 3}\n \n \u003e\u003e\u003e \n\n\nOk been doing too much python recently. Nice catch.",
+      "parentUuid": "4ea78b8a_10c63a4f",
+      "revId": "d6fa2141b0d8a591ad4477ebde4c92f4b0c3c0fb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
