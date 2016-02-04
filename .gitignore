@@ -5,6 +5,7 @@
 *~
 *.swp
 .idea/
+/nbproject/private/
 
 # Wikimedia private/temporary stuff
 private
@@ -14,14 +15,7 @@ php-*/
 wikiversions.php
 wikiversions-labs.php
 wmf-config/*-setup.php
-wmf-config/checkers.php
-lib
-cgi-bin
 boardvote.gpg
-common
-google*
-slot*
-ganglia.dat
 
 ## Old images such as the ones used for $wgLogo
 /images/*.gif
@@ -41,4 +35,3 @@ fonts
 # Operating system stuff
 ## Mac OS X
 .DS_Store
-/nbproject/private/
