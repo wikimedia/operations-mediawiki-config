@@ -1048,7 +1048,7 @@ if ( $wmfRealm == 'labs' ) {
 	$wgHTTPTimeout = 10;
 }
 
-$wgProxyList = "$wmfConfigDir/mwblocker.log";
+$wgProxyList = "$wmfConfigDir/../private/mwblocker.log";
 
 $wgBrowserBlackList[] = '/^Lynx/';
 
