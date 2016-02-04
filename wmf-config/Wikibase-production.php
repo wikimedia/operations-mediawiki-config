@@ -29,6 +29,8 @@ if ( $wmgUseWikibaseRepo ) {
 	} else {
 		$wgWBRepoSettings['disabledDataTypes'] = array( 'external-id' );
 
+		$wgWBRepoSettings['sparqlEndpoint'] = 'https://query.wikidata.org/sparql';
+
 		$wgWBRepoSettings['formatterUrlProperty'] = 'P1630';
 
 		$wgWBRepoSettings['badgeItems'] = array(
