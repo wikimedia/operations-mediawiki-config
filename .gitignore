@@ -9,7 +9,6 @@
 
 # Wikimedia private/temporary stuff
 private
-xrumer
 wmf-config/ExtensionMessages-*.php
 php-*/
 wikiversions.php
