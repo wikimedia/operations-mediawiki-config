@@ -17,16 +17,6 @@ wikiversions-labs.php
 wmf-config/*-setup.php
 boardvote.gpg
 
-## Old images such as the ones used for $wgLogo
-/images/*.gif
-/images/*.png
-/images/*.xcf
-# Exceptions:
-# $wgCopyrightIcon
-!/images/wikimedia-button.png
-!/images/wikimedia-button-1.5x.png
-!/images/wikimedia-button-2x.png
-
 ## Not in version control yet
 fonts
 
