@@ -232,7 +232,12 @@ $wgLoadScript = "{$wgScriptPath}/load.php";
 // - Goes wrong otherwise on mobile web (T106966, T112646)
 // - Improves performance by leveraging HTTP/2
 // - $wgLocalStylePath MUST be relative
-$wgResourceBasePath = "/static/{$wmgVersionNumber}";
+if ( in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki' ) ) ) {
+	// Routed by Apache rewrite to /w/static.php (T99096)
+	$wgResourceBasePath = '/w';
+} else {
+	$wgResourceBasePath = "/static/{$wmgVersionNumber}";
+}
 $wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
 $wgStylePath = "{$wgResourceBasePath}/skins";
 $wgLocalStylePath = $wgStylePath;
