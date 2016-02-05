@@ -14703,7 +14703,6 @@ $wgConf->settings = array(
 	'tawikiquote' => true,
 	'tawikisource' => true,
 	'tawiktionary' => true,
-#	'testwiki' => true,
 	'test2wiki' => true,
 ),
 
