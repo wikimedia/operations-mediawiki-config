@@ -3927,7 +3927,7 @@ $wgConf->settings = array(
 	'+grantswiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
 	'+incubatorwiki' => array( 0 => 1, 6 => 0, 14 => 1 ),
 	'+internalwiki' => array( 0 => 1, 6 => 0, 8 => 0, 10 => 0 ),
-	'+wikitech' => array( 0 => 1, 110 => 1, 498 => 1 ),
+	'+wikitech' => array( 0 => 1, 110 => 1, 498 => 1, 666 => 1 ),
 	'+legalteamwiki' => array( 0 => 1 ),
 	'+mediawikiwiki' => array( 0 => 1, 6 => 0, 8 => 0, 14 => 1 ),
 	'+metawiki' => array( 0 => 1, 6 => 0, 8 => 0, 200 => 1, 201 => 1, 202 => 1, 203 => 1, 208 => 1, 209 => 1 ),
