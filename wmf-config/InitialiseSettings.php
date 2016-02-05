@@ -11230,11 +11230,11 @@ $wgConf->settings = [
 // CT_MODE_CATEGORIES = 0
 // CT_MODE_PAGES = 10
 // CT_MODE_ALL = 20
-'wmgCategoryTreeCategoryPageMode' => [
+'wgCategoryTreeCategoryPageMode' => [
 	'default' => 0,
 ],
 
-'wmgCategoryTreeCategoryPageOptions' => [
+'wgCategoryTreeCategoryPageOptions' => [
 	'default' => [ 'mode' => null, 'showcount' => true ],
 ],
 

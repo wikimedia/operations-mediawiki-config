@@ -789,9 +789,7 @@ if ( $wmgUseFlaggedRevs ) {
 }
 
 if ( $wmgUseCategoryTree ) {
-	require( $IP . '/extensions/CategoryTree/CategoryTree.php' );
-	$wgCategoryTreeCategoryPageMode = $wmgCategoryTreeCategoryPageMode;
-	$wgCategoryTreeCategoryPageOptions = $wmgCategoryTreeCategoryPageOptions;
+	wfLoadExtension( 'CategoryTree' );
 }
 
 if ( $wmgUseProofreadPage ) {
