@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_07211bf6",
+        "filename": "w/static.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-05T18:48:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4ea78b8a_47cab34b",
+      "revId": "08feff791fd38f4c5b9298e2437ec36ce22d8da3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_c705437e",
         "filename": "w/static.php",
         "patchSetId": 9
@@ -30,6 +48,41 @@
       "writtenOn": "2016-02-05T18:24:20Z",
       "side": 1,
       "message": "While (whilst is archaic), guaranteed",
+      "revId": "08feff791fd38f4c5b9298e2437ec36ce22d8da3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_a77da7e6",
+        "filename": "w/static.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-05T18:48:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4ea78b8a_c705437e",
+      "revId": "08feff791fd38f4c5b9298e2437ec36ce22d8da3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_e78e3fd5",
+        "filename": "w/static.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-05T18:48:19Z",
+      "side": 1,
+      "message": "requests*",
       "revId": "08feff791fd38f4c5b9298e2437ec36ce22d8da3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +106,24 @@
     },
     {
       "key": {
+        "uuid": "4ea78b8a_078cbbda",
+        "filename": "w/static.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-05T18:48:19Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4ea78b8a_e74cffe6",
+      "revId": "08feff791fd38f4c5b9298e2437ec36ce22d8da3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4ea78b8a_074a7bc8",
         "filename": "w/static.php",
         "patchSetId": 9
@@ -64,6 +135,24 @@
       "writtenOn": "2016-02-05T18:24:20Z",
       "side": 1,
       "message": "Can this not use FileContentsHasher in core?",
+      "revId": "08feff791fd38f4c5b9298e2437ec36ce22d8da3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_e7515f66",
+        "filename": "w/static.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 130,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-05T18:48:19Z",
+      "side": 1,
+      "message": "Gain is minimal as responses are cached by url for 30 days and FileContentsHasher cache for 24h only.\n\nAnd unlike ResourceLoader, these requests are only for one specific file. So aside from Varnish eviction, cache hit would be impossible.\n\nI\u0027m alo trying to keep this file simple and memory and stream friendly. I know that php readfile() and md5_file() stream. I don\u0027t know that for FileContentsHasher. Afaik it loads the whole file into memory before hashing. \n\nFor now this should reflect OutputPage::transformFilePath, let\u0027s consider doing it there first?",
+      "parentUuid": "4ea78b8a_074a7bc8",
       "revId": "08feff791fd38f4c5b9298e2437ec36ce22d8da3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
