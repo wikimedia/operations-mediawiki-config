@@ -4618,6 +4618,9 @@ $wgConf->settings = array(
 		111 => 'Obsolete_talk',
 		112 => 'OfficeIT', // T123383
 		113 => 'OfficeIT_talk',
+		// NS 114/115 reserved for 'Translation'
+		116 => 'Tool', // T122865
+		117 => 'Tool_talk', // T122865
 	),
 	'mediawikiwiki' => array(
 		100 => 'Manual',
@@ -7008,7 +7011,7 @@ $wgConf->settings = array(
 	'+itwikivoyage' => array( 100 => 1, 104 => 1, 106 => 1 ),
 	'+kowikisource' => array( 100 => 1 ),
 	'+lawikisource' => array( 102 => 1, 106 => 1 ),
-	'+wikitech' => array( 12 => 1, 498 => 1 ),
+	'+wikitech' => array( 12 => 1, 116 => 1, 498 => 1 ),
 	'+ltwiki' => array( 100 => 1 ),
 	'+mediawikiwiki' => array( 12 => 1, 100 => 1, 102 => 1, 104 => 1, 106 => 1 ), // T85807
 	'+metawiki' => array( 12 => 1, 200 => 1, 202 => 1 ),
@@ -10757,6 +10760,7 @@ $wgConf->settings = array(
 	'+vecwikisource' => array( 100 ),
 	'+viwikibooks' => array( 104, 106 ),
 	'+viwikisource' => array( 102 ),
+	'+wikitech' => array( NS_HELP, 116 ), // Tools - T122865
 	'+zhwikisource' => array( 102, 114 ), // T66127
 	'+dewikivoyage' => array( 104 ),
 ),
