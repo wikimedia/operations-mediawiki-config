@@ -11230,6 +11230,15 @@ $wgConf->settings = [
 // CT_MODE_CATEGORIES = 0
 // CT_MODE_PAGES = 10
 // CT_MODE_ALL = 20
+'wgCategoryTreeCategoryPageMode' => [
+	'default' => 0,
+],
+
+'wgCategoryTreeCategoryPageOptions' => [
+	'default' => [ 'mode' => null, 'showcount' => true ],
+],
+
+// Transitional copy of the setting for deployment sync purpose
 'wmgCategoryTreeCategoryPageMode' => [
 	'default' => 0,
 ],
@@ -11237,6 +11246,7 @@ $wgConf->settings = [
 'wmgCategoryTreeCategoryPageOptions' => [
 	'default' => [ 'mode' => null, 'showcount' => true ],
 ],
+
 
 'wmgUseFundraisingTranslateWorkflow' => [
 	'default' => false,
