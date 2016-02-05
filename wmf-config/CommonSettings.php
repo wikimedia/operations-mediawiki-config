@@ -222,7 +222,7 @@ $wgLoadScript = "{$wgScriptPath}/load.php";
 $wgLocalStylePath = "{$wgScriptPath}/static/$wmgVersionNumber/skins";
 
 // Don't include a hostname in these urls (T106966, T112646)
-$wgResourceBasePath = "/static/{$wmgVersionNumber}";
+$wgResourceBasePath = $wgScriptPath;
 $wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
 $wgStylePath = "{$wgResourceBasePath}/skins";
 
