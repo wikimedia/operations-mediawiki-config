@@ -15405,6 +15405,7 @@ $wgConf->settings = array(
 	'zerowiki' => true,
 	'wikipedia' => true,
 	'commonswiki' => true,
+	'frwiktionary' => true, // T126051
 ),
 
 'wmgRelatedSitesPrefixes' => array(
