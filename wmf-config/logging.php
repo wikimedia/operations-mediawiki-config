@@ -186,6 +186,10 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			);
 		}
 		$handlers[] = $udp2logHandler;
+		if ( $wmgDefaultMonologHandler === 'wgDebugLogFile' ) {
+			// T117019: Send events to default handler location as well
+			$handlers[] = $wmgDefaultMonologHandler;
+		}
 	}
 
 	// Configure kafka handler
