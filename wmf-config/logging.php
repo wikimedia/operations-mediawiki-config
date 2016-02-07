@@ -33,6 +33,13 @@ if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 	$wgDebugDumpSql = true;
 }
 
+if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) &&
+	gethostname() === 'mw1017'
+) {
+	$wgDebugLogFile = "udp://{$wmfUdp2logDest}/mw1017";
+	$wmgDefaultMonologHandler = 'wgDebugLogFile';
+}
+
 // Monolog logging configuration
 $wmgMonologProcessors = array(
 	'normalized_message' => array(
