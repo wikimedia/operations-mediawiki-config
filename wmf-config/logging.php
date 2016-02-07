@@ -35,6 +35,34 @@ if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 
 // Monolog logging configuration
 $wmgMonologProcessors = array(
+	'normalized_message' => array(
+		'factory' => function () {
+			/**
+			 * Add a "normalized_message" field to log records.
+			 *
+			 * Field is the first 255 chars of 'message' after stripping out
+			 * anchor tags which are sometimes inserted in error and warning
+			 * messages by PHP. If applied before PsrLogMessageProcessor,
+			 * placeholders in the message will be left unexpanded which can
+			 * reduce variance of messages that expand to include per-request
+			 * details such as session ids.
+			 */
+			return function( array $record ) {
+				$nm = $record['message'];
+				if ( strpos( $nm, '<a href=' ) !== false ) {
+					// Remove documentation anchor tags
+					$nm = preg_replace(
+						"|< href='[^']*'>[^<]*</a>|",
+						'',
+						$nm
+					);
+				}
+				// Trim to <= 255 chars
+				$record['extra']['normalized_message'] = substr( $nm, 0, 255 );
+				return $record;
+			};
+		},
+	),
 	'wiki' => array(
 		'class' => '\\MediaWiki\\Logger\\Monolog\\WikiProcessor',
 	),
