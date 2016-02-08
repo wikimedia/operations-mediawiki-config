@@ -88,8 +88,8 @@ $wgCirrusSearchBoostLinks = $wmgCirrusSearchBoostLinks;
 $wgCirrusSearchWeights = array_merge( $wgCirrusSearchWeights, $wmgCirrusSearchWeightsOverrides );
 $wgCirrusSearchPowerSpecialRandom = $wmgCirrusSearchPowerSpecialRandom;
 $wgCirrusSearchAllFields = $wmgCirrusSearchAllFields;
-$wgCirrusSearchNamespaceWeights = array_merge( $wgCirrusSearchNamespaceWeights,
-	$wmgCirrusSearchNamespaceWeightOverrides );
+$wgCirrusSearchNamespaceWeights = $wmgCirrusSearchNamespaceWeightOverrides +
+	$wgCirrusSearchNamespaceWeights;
 
 // We had an incident of filling up the entire clusters redis instances after
 // 6 hours, half of that seems reasonable.
