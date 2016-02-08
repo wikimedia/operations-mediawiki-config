@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_9fc32461",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2016-02-08T12:20:25Z",
+      "side": 1,
+      "message": "MobileFrontend now uses extension registration, which means the global variable isn\u0027t defined yet. (see T125672)\n\nin this case, maybe it\u0027s okayish since it\u0027s just being set and not referenced otherwise.\n\nbut think it would be better this new setting to be together with the others in the config.",
+      "revId": "47dafb293c7dd3ccf3add5705236647013835eab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
