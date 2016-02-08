@@ -16,6 +16,24 @@
       "revId": "47dafb293c7dd3ccf3add5705236647013835eab",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_28c97c7b",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2016-02-08T12:31:21Z",
+      "side": 1,
+      "message": "i tried this manually and think having it here is not a problem.\n\nif we want to move to InitialiseSettings.php, then the default setting is:\n\narray(\n  \u0027name\u0027 \u003d\u003e \u0027prefixsearch\u0027,\n  \u0027prefix\u0027 \u003d\u003e \u0027ps\u0027\n)",
+      "parentUuid": "4ea78b8a_9fc32461",
+      "revId": "47dafb293c7dd3ccf3add5705236647013835eab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
