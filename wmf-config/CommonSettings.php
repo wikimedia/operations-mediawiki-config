@@ -1103,12 +1103,7 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
 }
 
-if ( $wmfRealm === 'labs' || $wgDBname === 'testwiki' || $wgDBname === 'mediawikiwiki' ) {
-	// Ori, 8-Feb-2016 for T122362
-	$wgInterwikiCache = include_once( "$wmfConfigDir/interwiki.php" );
-} else {
-	$wgInterwikiCache = "$wmfConfigDir/interwiki.cdb";
-}
+$wgInterwikiCache = include_once( "$wmfConfigDir/interwiki.php" );
 
 $wgEnotifUseJobQ = true;
 
