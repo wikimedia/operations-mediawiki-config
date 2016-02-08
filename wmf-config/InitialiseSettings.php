@@ -3278,6 +3278,21 @@ $wgConf->settings = array(
 		'WP' => NS_PROJECT, // T95106
 		'VP' => NS_PROJECT, // T95106
 	),
+	'+maiwiki' => array(
+		'वि' => NS_PROJECT,              // T125801
+		'वि_वा' => NS_PROJECT_TALK,      // T125801
+		'Wikipedia' => NS_PROJECT,       // T125801
+		'CA' => NS_CATEGORY,             // T125801
+		'CT' => NS_CATEGORY_TALK,        // T125801
+		'WP' => NS_PROJECT,              // T125801
+		'WT' => NS_PROJECT_TALK,         // T125801
+		'u' => NS_USER,                  // T125801
+		'ut' => NS_USER_TALK,            // T125801
+		'प्र' => NS_USER,                // T125801
+		'प्र_वा' => NS_USER_TALK,        // T125801
+		'आ' => NS_TEMPLATE,              // T125801
+		'आ_वा' => NS_TEMPLATE_TALK,      // T125801
+	),
 	'+metawiki' => array( // T31129
 		'R' => 202,
 	),
