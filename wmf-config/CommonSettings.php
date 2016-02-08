@@ -1103,7 +1103,10 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
 }
 
-if ( file_exists( "$wmfConfigDir/interwiki.cdb" ) ) {
+if ( $wmfRealm === 'labs' || isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
+	// Ori, 8-Feb-2016 for T122362
+	$wgInterwikiCache = "$wmfConfigDir/interwiki.php";
+} else {
 	$wgInterwikiCache = "$wmfConfigDir/interwiki.cdb";
 }
 
