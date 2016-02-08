@@ -1103,9 +1103,9 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
 }
 
-if ( $wmfRealm === 'labs' || isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
+if ( $wmfRealm === 'labs' || $wgDBname === 'testwiki' || $wgDBname === 'mediawikiwiki' ) {
 	// Ori, 8-Feb-2016 for T122362
-	$wgInterwikiCache = "$wmfConfigDir/interwiki.php";
+	$wgInterwikiCache = include_once( "$wmfConfigDir/interwiki.php" );
 } else {
 	$wgInterwikiCache = "$wmfConfigDir/interwiki.cdb";
 }
