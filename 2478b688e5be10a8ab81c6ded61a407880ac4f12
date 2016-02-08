@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_39778c37",
+        "filename": "wmf-config/ProductionServices.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 63,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2016-02-08T18:31:14Z",
+      "side": 1,
+      "message": "Maybe using 10.2.1.17:7231 should be in another patch? That seems like more than refactoring.",
+      "revId": "2478b688e5be10a8ab81c6ded61a407880ac4f12",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
