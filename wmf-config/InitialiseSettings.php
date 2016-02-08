@@ -13415,6 +13415,7 @@ $wgConf->settings = array(
 	'frwikibooks' => 'uca-fr', // T74513
 	'frwikinews' => 'uca-fr', // T68165
 	'frwikiversity' => 'uca-fr', // T71782
+	'gdwiki' => 'uca-default', // T125315
 	'hsbwiki' => 'uca-hsb', // T90689
 	'huwiki' => 'uca-hu', // T47596
 	'iswiki' => 'uca-is', // T58859
