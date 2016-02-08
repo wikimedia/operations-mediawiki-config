@@ -20,6 +20,7 @@ mwconfig_files_txt=(
 	filebackend.php
 	flaggedrevs.php
 	import.php
+	interwiki.php
 	jobqueue-eqiad.php
 	jobqueue-labs.php
 	LegalContactPages.php
@@ -57,7 +58,6 @@ mwconfig_files=(
 	wmf-config/extension-list
 	wmf-config/extension-list-labs
 	wmf-config/extension-list-wikitech
-	wmf-config/interwiki.cdb
 	wmf-config/trusted-xff.cdb
 )
 
