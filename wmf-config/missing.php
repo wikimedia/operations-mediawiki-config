@@ -23,9 +23,6 @@
 
 require_once dirname( __DIR__ ) . '/multiversion/vendor/autoload.php';
 
-use Cdb\Exception as CdbException;
-use Cdb\Reader as CdbReader;
-
 /**
  * The main function
  */
@@ -75,18 +72,23 @@ function handleMissingWiki() {
 		# Open the interwiki file to see if we have an interwiki prefix
 		$db = null;
 		try {
-			$db = CdbReader::open( __DIR__ . '/interwiki.cdb' );
-		} catch ( CdbException $e ) {}
+			$db = include_once( __DIR__ . '/interwiki.php' );
+		} catch ( Exception $e ) {}
 
 		if ( $db ) {
 			$prefix = strtok( $page, ':' );
 
 			# Try looking for lateral links (w: q: voy: ...)
-			$row = $db->get( "{$language}wiki:$prefix" );
+			$row = null;
+			if ( isset( $db[ "{$language}wiki:$prefix" ] ) ) {
+				$row = $db[ "{$language}wiki:$prefix" ];
+			}
 			if( !$row ) {
 				# Also try interlanguage links
-				$projectForCdb = ( $project === 'wikipedia' ? 'wiki' : $project );
-				$row = $db->get( "_$projectForCdb:$prefix" );
+				$projectKey = ( $project === 'wikipedia' ? 'wiki' : $project );
+				if ( isset( $db[ "_$projectKey:$prefix" ] ) ) {
+					$row = $db[ "_$projectKey:$prefix" ];
+				}
 			}
 
 			if( $row ) {
