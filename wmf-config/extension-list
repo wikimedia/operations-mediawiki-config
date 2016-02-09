@@ -98,7 +98,6 @@ $IP/extensions/Popups/Popups.php
 $IP/extensions/ProofreadPage/ProofreadPage.php
 $IP/extensions/QuickSurveys/extension.json
 $IP/extensions/Quiz/Quiz.php
-$IP/extensions/RandomRootPage/Randomrootpage.php
 $IP/extensions/RelatedArticles/RelatedArticles.php
 $IP/extensions/RelatedSites/RelatedSites.php
 $IP/extensions/Renameuser/Renameuser.php
