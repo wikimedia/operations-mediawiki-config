@@ -35,7 +35,6 @@ foreach ( $selectableFilepaths as $filePath ) {
 }
 // Don't run if executing unit tests
 if ( PHP_SAPI !== 'cli' ) {
-	ob_start( 'ob_gzhandler' );
 	header( 'Content-Type: text/html; charset=utf-8' );
 }
 
