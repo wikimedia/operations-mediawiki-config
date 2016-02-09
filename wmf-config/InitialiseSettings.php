@@ -13855,6 +13855,14 @@ $wgConf->settings = array(
 	'wikivoyage' => array( 'h2', 'h3', 'h4', 'h5', 'h6' ), // T110436, T110837
 ),
 
+'wgMFRemovableClasses' => array(
+	'default' => array(
+		'base' => array(),
+		'beta' => array( '.navbox' ),
+		'HTML' => array(),
+	),
+),
+
 // Formerly known as $wgMFAnonymousEditing
 'wmgMFEditorOptions' => array(
 	'default' => array( 'anonymousEditing' => true, ), // T93210
