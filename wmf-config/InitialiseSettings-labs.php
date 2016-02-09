@@ -581,10 +581,6 @@ function wmfLabsSettings() {
 			'private' => false,
 		),
 
-		'wgMathEnableWikibaseDataType' => array(
-			'default' => true,
-		),
-
 		'wmgUseArticlePlaceholder' => array(
 			'default' => false,
 			'wikidataclient' => true,
