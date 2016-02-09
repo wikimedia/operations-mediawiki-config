@@ -15901,13 +15901,18 @@ $wgConf->settings = array(
 'wmgCirrusSearchReplicas' => array(
 	'default' => array( 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2' ),
 	'+commonswiki' => array( 'file' => '0-3' ),
+	'+eswiki' => array( 'titlesuggest' => '0-5' ),
+	'+jawiki' => array( 'titlesuggest' => '0-5' ),
+	'+ruwiki' => array( 'titlesuggest' => '0-5' ),
+	'+zhwiki' => array( 'titlesuggest' => '0-5' ),
+	'+frwiki' => array( 'titlesuggest' => '0-5' ),
 	'enwiki' => array(
-		'eqiad' => array( 'content' => '0-4', 'general' => '0-3', 'titlesuggest' => '0-2' ),
-		'codfw' => array( 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2' ),
+		'eqiad' => array( 'content' => '0-4', 'general' => '0-3', 'titlesuggest' => '0-5' ),
+		'codfw' => array( 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-5' ),
 	),
 	'dewiki' => array(
-		'eqiad' => array( 'content' => '0-4', 'general' => '0-3', 'titlesuggest' => '0-2' ),
-		'codfw' => array( 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2' ),
+		'eqiad' => array( 'content' => '0-4', 'general' => '0-3', 'titlesuggest' => '0-5' ),
+		'codfw' => array( 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-5' ),
 	),
 ),
 

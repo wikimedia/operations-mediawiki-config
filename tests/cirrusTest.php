@@ -5,7 +5,7 @@ require_once __DIR__ . '/SiteConfiguration.php';
 
 class cirrusTests extends PHPUnit_Framework_TestCase {
 	public function testClusterConfigurationForProdTestwiki() {
-		$config = $this->loadCirrusConfig( 'production', 'testwiki', 'wiki', 'en', 'wikipedia' );
+		$config = $this->loadCirrusConfig( 'production', 'testwiki', 'wiki' );
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
@@ -24,7 +24,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 	}
 
 	public function testClusterConfigurationForProdEnwiki() {
-		$config = $this->loadCirrusConfig( 'production', 'enwiki', 'wiki', 'en', 'wikipedia' );
+		$config = $this->loadCirrusConfig( 'production', 'enwiki', 'wiki' );
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
@@ -49,7 +49,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 	}
 
 	public function testLanguageMatrix() {
-		$config = $this->loadCirrusConfig( 'production', 'enwiki', 'wiki', 'en', 'wikipedia' );
+		$config = $this->loadCirrusConfig( 'production', 'enwiki', 'wiki' );
 		$allDbs = DBList::getall();
 
 		foreach( $config['wgCirrusSearchLanguageToWikiMap'] as $lang => $wiki ) {
@@ -77,10 +77,11 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		return $wgConf;
 	}
 
-	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix, $lang, $site ) {
+	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix ) {
 		$wmfConfigDir = __DIR__ . "/../wmf-config";
 		$wgConf = $this->loadWgConf( $wmfRealm );
 
+		list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 		$globals = $wgConf->getAll( $wgDBname, $dbSuffix, array(
 				'lang' => $lang,
 				'docRoot' => '/dev/null',
@@ -143,8 +144,26 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$wikis = array_unique( $wikis );
 		$indexTypes = array( 'content', 'general', 'titlesuggest' );
 		$clusters = array( 'eqiad' => 31, 'codfw' => 24 );
+
+		// restrict wgConf to only the settings we care about
+		$wgConf->settings = array(
+			'shards' => $shards,
+			'replicas' => $replicas,
+		);
 		$tests = array();
 		foreach ( $wikis as $wiki ) {
+			list( $site, $lang ) = $wgConf->siteFromDB( $wiki );
+			foreach ( $wgConf->suffixes as $altSite => $suffix ) {
+				if ( substr( $wiki, -strlen( $suffix ) ) === $suffix ) {
+					break;
+				}
+			}
+			$config = $wgConf->getAll( $wiki, $suffix, array(
+				'lang' => $lang,
+				'docRoot' => '/dev/null',
+				'site' => $site,
+				'stdlogo' => 'file://dev/null',
+			) );
 			foreach ( $indexTypes as $indexType ) {
 				foreach ( $clusters as $clusterName => $numServers ) {
 					// wikidata doesn't have completion suggester
@@ -155,8 +174,8 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 						$wiki,
 						$indexType,
 						$numServers,
-						self::resolveClusterConfig( self::resolveConfig( $shards, $wiki ), $clusterName ),
-						self::resolveClusterConfig( self::resolveConfig( $replicas, $wiki ), $clusterName ),
+						self::resolveClusterConfig( $config['shards'], $clusterName ),
+						self::resolveClusterConfig( $config['replicas'], $clusterName ),
 					);
 				}
 			}
