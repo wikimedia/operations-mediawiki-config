@@ -15310,24 +15310,28 @@ $wgConf->settings = array(
 		'article-recommender-1' => true,
 		'cxstats' => true,
 		'newarticle' => true,
+		'specialcx' => true,
 		'staff-recommender' => true
 	),
 	'dewiki' => array(
 		'article-recommender-1' => true,
 		'cxstats' => true,
 		'newarticle' => false,
+		'specialcx' => true,
 		'staff-recommender' => true
 	),
 	'enwiki' => array(
 		'article-recommender-1' => true,
 		'cxstats' => true,
 		'newarticle' => false,
+		'specialcx' => true,
 		'staff-recommender' => true
 	),
 	'eswiki' => array(
 		'article-recommender-1' => true,
 		'newarticle' => true,
 		'cxstats' => true,
+		'specialcx' => true,
 		'staff-recommender' => true,
 		'eswiki-recommender' => true
 	),
@@ -15335,6 +15339,7 @@ $wgConf->settings = array(
 		'article-recommender-1' => true,
 		'newarticle' => true,
 		'cxstats' => true,
+		'specialcx' => true,
 		'staff-recommender' => true,
 		'frwiki-recommender' => true
 	),
