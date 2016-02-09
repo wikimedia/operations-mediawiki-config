@@ -3084,6 +3084,13 @@ if ( $wmgUseEventBus ) {
 	$wgEventServiceUrl = "{$wmfMasterServices['eventbus']}/v1/events";
 }
 
+if ( $wmgUseORES ) {
+	wfLoadExtension( 'ORES' );
+	$wgOresModels = array( 'damaging', 'reverted', 'goodfaith' );
+	$wgOresDamagingThresholds['soft'] = 0.90;
+	$wgOresDamagingThresholds['hard'] = 0.80;
+}
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER

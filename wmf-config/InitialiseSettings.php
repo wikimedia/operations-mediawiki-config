@@ -16461,6 +16461,11 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
+'wmgUseORES' => array(
+	'default' => false,
+	'fawiki' => true, // T120923
+),
+
 );
 
 
