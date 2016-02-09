@@ -85,8 +85,12 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['repoDatabase'] = 'testwikidatawiki';
 		$wgWBClientSettings['repoUrl'] = "//test.wikidata.org";
 		$wgWBClientSettings['repoConceptBaseUri'] = 'http://test.wikidata.org/entity/';
+
+		$wgArticlePlaceholderImageProperty = 'P47';
 	} else {
 		$wgWBClientSettings['disabledDataTypes'] = array( 'external-id' );
+
+		$wgArticlePlaceholderImageProperty = 'P18';
 	}
 
 	$wgWBClientSettings['badgeClassNames'] = array(
