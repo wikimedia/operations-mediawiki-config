@@ -15537,6 +15537,9 @@ $wgConf->settings = array(
 
 'wmgUseArticlePlaceholder' => array(
 	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'testwikidatawiki' => true,
 ),
 
 'wmgWikibaseSiteGroup' => array(
