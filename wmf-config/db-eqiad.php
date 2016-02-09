@@ -543,6 +543,7 @@ $wgDefaultExternalStore = array(
 	'DB://cluster25',
 );
 
-# $wgLBFactoryConf['readOnlyBySection']['s2'] =
+$wgLBFactoryConf['readOnlyBySection']['s2'] = 
+'Scheduled maintenance, s2 wikis in read-only mode for 5 minutes';
 # $wgLBFactoryConf['readOnlyBySection']['s2a'] =
 # 'Emergency maintenance, need more servers up, new estimate ~18:30 UTC';
