@@ -25,3 +25,5 @@ fonts
 # Operating system stuff
 ## Mac OS X
 .DS_Store
+
+/multiversion/vendor/**/.git
