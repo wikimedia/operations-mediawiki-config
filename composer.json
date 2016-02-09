@@ -2,6 +2,8 @@
 	"name": "wikimedia/mediawiki-config",
 	"description": "MediaWiki configuration for the Wikimedia farm",
 	"require": {
+		"mongofill/mongofill": "dev-master",
+		"perftools/xhgui": "dev-master",
 		"wikimedia/cdb": "1.3.0"
 	},
 	"config": {
