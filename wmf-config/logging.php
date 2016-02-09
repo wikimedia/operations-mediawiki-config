@@ -41,7 +41,26 @@ if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) &&
 }
 
 // Monolog logging configuration
+
+// T124985: The Processors listed in $wmgMonologProcessors are applied to
+// a message in reverse list order (bottom to top). The normalized_message
+// processor needs to be listed *after* the psr processor to work as expected.
 $wmgMonologProcessors = array(
+	'wiki' => array(
+		'class' => '\\MediaWiki\\Logger\\Monolog\\WikiProcessor',
+	),
+	'psr' => array(
+		'class' => '\\Monolog\\Processor\\PsrLogMessageProcessor',
+	),
+	'pid' => array(
+		'class' => '\\Monolog\\Processor\\ProcessIdProcessor',
+	),
+	'uid' => array(
+		'class' => '\\Monolog\\Processor\\UidProcessor',
+	),
+	'web' => array(
+		'class' => '\\Monolog\\Processor\\WebProcessor',
+	),
 	'normalized_message' => array(
 		'factory' => function () {
 			/**
@@ -69,21 +88,6 @@ $wmgMonologProcessors = array(
 				return $record;
 			};
 		},
-	),
-	'wiki' => array(
-		'class' => '\\MediaWiki\\Logger\\Monolog\\WikiProcessor',
-	),
-	'psr' => array(
-		'class' => '\\Monolog\\Processor\\PsrLogMessageProcessor',
-	),
-	'pid' => array(
-		'class' => '\\Monolog\\Processor\\ProcessIdProcessor',
-	),
-	'uid' => array(
-		'class' => '\\Monolog\\Processor\\UidProcessor',
-	),
-	'web' => array(
-		'class' => '\\Monolog\\Processor\\WebProcessor',
 	),
 );
 
