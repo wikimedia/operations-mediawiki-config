@@ -12271,7 +12271,7 @@ $wgConf->settings = array(
 // at which point the feature should be un-deployed.
 //
 // DO NOT add entries here without OK from Greg Grossmeier or James Forrester.
-'wmgBetaFeaturesWhitelist' => array(
+'wgBetaFeaturesWhitelist' => array(
 	'default' => array(
 		'visualeditor-enable',                      // VisualEditor – on-going (special permission)
 		'wikibase-otherprojects',                   // ! 2015-02-27 - Wikidata other projects sidebar
