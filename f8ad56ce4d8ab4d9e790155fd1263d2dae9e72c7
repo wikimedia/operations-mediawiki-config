@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_a726d961",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2016-02-10T23:59:09Z",
+      "side": 1,
+      "message": "This line needs $wgHooks...",
+      "revId": "f8ad56ce4d8ab4d9e790155fd1263d2dae9e72c7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
