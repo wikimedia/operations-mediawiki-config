@@ -13598,7 +13598,6 @@ $wgConf->settings = array(
 
 'wmgUseMath' => array(
 	'default' => true, // moved from MW core
-	'wikitech' => false,
 	'loginwiki' => false,
 	'votewiki' => false, // T61702
 ),
