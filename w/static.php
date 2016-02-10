@@ -79,8 +79,16 @@ function wmfStaticStreamFile( $filePath, $maxAge = 300 ) {
 function wmfStaticRespond() {
 	global $wgScriptPath, $IP;
 
-	if ( !isset( $_SERVER['REQUEST_URI'] ) ) {
+	if ( !isset( $_SERVER['REQUEST_URI'] ) || !isset( $_SERVER['SCRIPT_NAME'] ) ) {
 		header( 'HTTP/1.1 500 Internal Server Error' );
+		wmfStaticShowError( 'Invalid request' );
+		return;
+	}
+
+	// Ignore direct request (eg. "/w/static.php" or "/w/static.php/test")
+	// (use strpos instead of equal to ignore pathinfo and query string)
+	if ( strpos( $_SERVER['REQUEST_URI'], $_SERVER['SCRIPT_NAME'] ) === 0 ) {
+		header( 'HTTP/1.1 400 Bad Request' );
 		wmfStaticShowError( 'Invalid request' );
 		return;
 	}
