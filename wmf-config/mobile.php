@@ -75,6 +75,17 @@ if ( $wmgMobileFrontend ) {
 			$wgCentralAuthCookieDomain = 'meta.m.wikimedia.org';
 		}
 
+		// Better hack for T49647
+		$wgHooks['WebResponseSetCookie'][] = function ( &$name, &$value, &$expire, &$options ) {
+			if ( isset( $options['domain'] ) ) {
+				if ( $options['domain'] == 'commons.wikimedia.org' ) {
+					$options['domain'] = 'commons.m.wikimedia.org';
+				} elseif ( $options['domain'] == 'meta.wikimedia.org' ) {
+					$options['domain'] = 'meta.m.wikimedia.org';
+				}
+			}
+		};
+
 		return true;
 	};
 
