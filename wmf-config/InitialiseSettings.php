@@ -8423,6 +8423,7 @@ $wgConf->settings = array(
 		'user' => array(
 			'upload_by_url' => true, // For wider testing
 			'upload' => true, // Exception to T14556, used for testing of upload tools
+			'pagelang' => true, // testing of T69223
 		),
 		'templateeditor' => array( 'templateeditor' => true, 'tboverride' => true, ), // T61084
 		'sysop' => array(
@@ -10806,6 +10807,11 @@ $wgConf->settings = array(
 'wgRevisionCacheExpiry' => array(
 	'default' => 86400 * 7,  // set back to 0 if this breaks
 	'testwiki' => 3600,
+),
+
+'wgPageLanguageUseDB' => array(
+	'default' => false,
+	'testwiki' => true,
 ),
 
 'wgShowExceptionDetails' => array(
