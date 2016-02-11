@@ -38,10 +38,6 @@ $wgPreloadJavaScriptMwUtil = true;
 // Experimental! See <https://gerrit.wikimedia.org/r/#/c/86867/>.
 $wgResourceLoaderStorageEnabled = true;
 
-if ( $wmgUseEventLogging ) {
-	$wgEventLoggingFile = 'udp://deployment-eventlogging03.eqiad.wmflabs:8421/EventLogging';
-}
-
 $wgLocalVirtualHosts = array(
 	'wikipedia.beta.wmflabs.org',
 	'wiktionary.beta.wmflabs.org',
@@ -94,11 +90,6 @@ if ( $wmgUseMultimediaViewer ) {
 	$wgMediaViewerNetworkPerformanceSamplingFactor = $wmgMediaViewerNetworkPerformanceSamplingFactor;
 }
 
-if ( $wmgUseParsoid ) {
-	$wmgParsoidURL = 'http://10.68.16.120:8000'; // deployment-parsoid05
-	// Re-link now it's been set to a new value
-	$wgVirtualRestConfig['modules']['parsoid']['url'] = $wmgParsoidURL;
-}
 
 if ( $wmgUseFlow ) {
 	$wgFlowParsoidURL = $wmgParsoidURL; // Re-link now it's been set to a new value
@@ -186,16 +177,6 @@ if ( $wmgUseUrlShortener ) {
 	);
 }
 
-if ( $wmgUseApiFeatureUsage ) {
-	// Override server list for Labs
-	$wgApiFeatureUsageQueryEngineConf['serverList'] = array(
-		'deployment-elastic05',
-		'deployment-elastic06',
-		'deployment-elastic07',
-		'deployment-elastic08',
-	);
-}
-
 // Labs override for BounceHandler
 if ( $wmgUseBounceHandler ) {
 	//$wgVERPsecret = ''; // This was set in PrivateSettings.php by Legoktm
@@ -234,7 +215,6 @@ if ( $wgDBname == 'commonswiki' ) {
 if ( $wmgUseMath ) {
 	$wgMathFileBackend = false;
 	$wgMathDirectory   = '/data/project/upload7/math';
-	$wgMathMathMLUrl = 'http://deployment-mathoid.eqiad.wmflabs:10042';
 }
 
 if ( $wmgUseScore ) {
@@ -256,8 +236,6 @@ if ( file_exists( "$wmfConfigDir/extension-list-labs" ) ) {
 }
 
 if ( $wmgUseCollection ) {
-	// Use the beta/labs OCG service
-	$wgCollectionMWServeURL = 'http://deployment-pdf01:8000';
 	$wgCollectionPortletFormats[] = 'rdf2text';
 	// Don't use production proxy to reach PediaPress
 	$wgCollectionCommandToServeURL[ 'zip_post' ] = 'https://pediapress.com/wmfup/';
@@ -339,11 +317,6 @@ if ( $wmgUseSentry ) {
 
 if ( $wmgUseCapiunto ) {
 	require_once "$IP/extensions/Capiunto/Capiunto.php";
-}
-
-if ( $wmgUseEventBus ) {
-	wfLoadExtension( 'EventBus' );
-	$wgEventServiceUrl = 'http://deployment-eventlogging04.deployment-prep.eqiad.wmflabs:8085/v1/events';
 }
 
 if ( $wmgUseEcho && $wmgUseCentralAuth ) {

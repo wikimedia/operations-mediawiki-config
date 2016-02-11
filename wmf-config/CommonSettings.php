@@ -86,15 +86,20 @@ $wmfConfigDir = "$IP/../wmf-config";
 
 # Include all the service definitions
 # TODO: only include if in production, set up beta separately
-require "$wmfConfigDir/ProductionServices.php";
+switch( $wmfRealm ) {
+case 'labs':
+	require "$wmfConfigDir/LabsServices.php";
+case 'production':
+default:
+	require "$wmfConfigDir/ProductionServices.php";
+	break;
+}
 
 # Must be set before InitialiseSettings.php:
 switch( $wmfRealm ) {
 case 'production':
-	$wmfUdp2logDest = $wmfLocalServices['udp2log'];
-	break;
 case 'labs':
-	$wmfUdp2logDest = 'deployment-fluorine.eqiad.wmflabs:8420';
+	$wmfUdp2logDest = $wmfLocalServices['udp2log'];
 	break;
 default:
 	$wmfUdp2logDest = '127.0.0.1:8420';
@@ -456,14 +461,13 @@ if ( defined( 'HHVM_VERSION' ) ) {
 # Squid Configuration
 #######################################################################
 
+$wgStatsdServer = $wmfLocalServices['statsd'];
 if ( $wmfRealm === 'production' ) {
-	$wgStatsdServer = $wmfLocalServices['statsd'];
 	if ( $wmgUseClusterSquid ) {
 		$wgUseSquid = true;
 		require( "$wmfConfigDir/squid.php" );
 	}
 } elseif ( $wmfRealm === 'labs' ) {
-	$wgStatsdServer = 'labmon1001.eqiad.wmnet';
 	$wgStatsdMetricPrefix = 'BetaMediaWiki';
 	if ( $wmgUseClusterSquid ) {
 		$wgUseSquid = true;
@@ -1305,9 +1309,7 @@ if ( $wmgUseApiFeatureUsage ) {
 	require_once "$IP/extensions/ApiFeatureUsage/ApiFeatureUsage.php";
 	$wgApiFeatureUsageQueryEngineConf = array(
 		'class' => 'ApiFeatureUsageQueryEngineElastica',
-		'serverList' => array(
-			$wmfLocalServices['search'],
-		),
+		'serverList' => $wmfLocalServices['search'],
 	);
 }
 
