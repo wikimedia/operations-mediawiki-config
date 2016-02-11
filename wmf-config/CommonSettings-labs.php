@@ -352,6 +352,14 @@ if ( $wmgUseEcho && $wmgUseCentralAuth ) {
 	$wgEchoSharedTrackingCluster = false;
 }
 
+if ( $wmgUseGraph ) {
+	// **** THIS LIST MUST MATCH puppet/hieradata/labs/deployment-prep/common.yaml ****
+	$wgGraphAllowedDomains['http'] = array( 'wmflabs.org' );
+	$wgGraphAllowedDomains['wikirawupload'][] = 'upload.beta.wmflabs.org';
+	$wgGraphAllowedDomains['wikidatasparql'][] = 'wdqs-test.wmflabs.org';
+}
+
+
 // Experimental
 $wgGadgetsCaching = false;
 
