@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_070c8644",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 135,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2016-02-11T19:42:00Z",
+      "side": 1,
+      "message": "Do we want to test only LM-query or maybe also LM? I realize it may be too many for one test, but just as a thought...",
+      "revId": "b6831625ac92bcb8ffa95a030a252736ae38a714",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
