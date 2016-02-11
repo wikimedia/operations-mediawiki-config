@@ -11829,7 +11829,6 @@ $wgConf->settings = array(
 		'*.raa.se',                         // Swedish National Heritage Board
 		'*.rbge.org.uk',                    // Royal Botanic Garden Edinburgh
 		'*.rijksmuseum.nl',                 // Rijksmuseum
-		'*.llgc.org.uk',                    // National Library of Wales
 		'*.tounoki.org',                    // Musées de la Haute-Saône (test) - T65449
 		'musees.cg70.fr',                   // Musées de la Haute-Saône (prod) - T65449
 		'*.musees.cg70.fr',                 // Musées de la Haute-Saône (prod) - T65449
