@@ -2274,6 +2274,7 @@ $wgConf->settings = array(
 	'nahwiki' => 'Huiquipedia',
 	'nds_nlwiki' => 'Wikipedie',
 	'newiki' => 'विकिपीडिया',
+	'newikibooks' => 'विकिपुस्तक', // T124881
 	'newwiki' => 'विकिपिडिया',
 	'nlwiktionary' => 'WikiWoordenboek',
 	'nostalgiawiki' => 'Wikipedia',
