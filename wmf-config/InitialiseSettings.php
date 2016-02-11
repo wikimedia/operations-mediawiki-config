@@ -10331,6 +10331,7 @@ $wgConf->settings = array(
 	'ptwikiversity' => array( 'incubator', 'w', 'b', ), // T16516
 	'rowikibooks' => array( 'w', 's' ),
 	'ruwikibooks' => array( 'w', 's', ),
+	'ruwikisource' => array( 'b', ), // T123837
 	'ruwikiversity' => array( 'w', 'wikt', 'q', 'b', 's', 'n', 'betawikiversity' ),
 	'sahwiki' => array( 'incubator' ),
 	'sawiki' => array( 'en' ), // T34500
