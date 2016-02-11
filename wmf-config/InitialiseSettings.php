@@ -2158,6 +2158,7 @@ $wgConf->settings = array(
 	'hewikivoyage' => 'ויקימסע',
 	'hewiktionary' => 'ויקימילון',
 	'hiwiki' => 'विकिपीडिया',
+	'hiwikiquote' => 'विकिसूक्ति', // T126185
 	'hiwiktionary' => 'विक्षनरी',
 	'hrwiki' => 'Wikipedija',
 	'hrwikibooks' => 'Wikiknjige',
