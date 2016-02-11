@@ -3620,7 +3620,9 @@ $wgConf->settings = array(
 	),
 	'+tawiki' => array(
 		'Wikipedia' => NS_PROJECT,
+		'WP' => NS_PROJECT, // T126604
 		'Wikipedia_talk' => NS_PROJECT_TALK,
+		'WT' => NS_PROJECT_TALK, // T126604
 	),
 	'+testwiki' => array(
 		'WP' => NS_PROJECT,
