@@ -66,7 +66,7 @@ if ( $wmgMobileFrontend ) {
 	$wgMFNoMobilePages = $wmgMFNoMobilePages;
 
 	$wgHooks['EnterMobileMode'][] = function() {
-		global $wgCentralAuthCookieDomain;
+		global $wgCentralAuthCookieDomain, $wgHooks;
 
 		// Hack for T49647
 		if ( $wgCentralAuthCookieDomain == 'commons.wikimedia.org' ) {
