@@ -435,6 +435,7 @@ $wgConf->settings = array(
 	'vepwiki' => 'Europe/Moscow',
 	'viwikivoyage' => 'Asia/Ho_Chi_Minh',
 	'xmfwiki' => 'Asia/Tbilisi',
+	'wuuwiki' => 'Asia/Shanghai', // T122476
 	'zhwikivoyage' => 'Asia/Shanghai', // T61077
 ),
 # @} end of wgLocaltimezone
@@ -4237,6 +4238,7 @@ $wgConf->settings = array(
 	'dewikibooks' => 7 * 86400,
 	'nowiki' => 7 * 86400, // T71302
 	'tenwiki' => 0, // T28554
+	'wuuwiki' => 7 * 86400, // T122476
 	'zhwiki' => 7 * 3600 * 24, // T16624
 ),
 
@@ -4264,6 +4266,7 @@ $wgConf->settings = array(
 	'ruwiki' => 15, // T43831
 	'simplewiki' => 10,
 	'wikidata' => 50, // T48461
+	'wuuwiki' => 10, // T122476
 	'zhwiki' => 50, // T16624
 	'zh_yuewiki' => 10, // T32538
 ),
