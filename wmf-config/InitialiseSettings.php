@@ -1962,7 +1962,7 @@ $wgConf->settings = array(
 	'private' => '/w/img_auth.php',
 	'commonswiki' => 'https://upload.wikimedia.org/wikipedia/commons',
 	'labswiki' => '//wikitech.wikimedia.org/w/images',
-	'labtestwikitech' => '//labtestwikitech.wikimedia.org/w/images',
+	'labtestwiki' => '//labtestwikitech.wikimedia.org/w/images',
 	'metawiki' => '//upload.wikimedia.org/wikipedia/meta',
 	'testwiki' => '//upload.wikimedia.org/wikipedia/test',
 ),
