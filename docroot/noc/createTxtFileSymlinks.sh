@@ -13,6 +13,7 @@ mwconfig_files_txt=(
 	abusefilter.php
 	CirrusSearch-common.php
 	CirrusSearch-labs.php
+	CirrusSearch-production.php
 	db-eqiad.php
 	db-labs.php
 	ext-labs.php
