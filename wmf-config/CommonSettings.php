@@ -2005,6 +2005,11 @@ if ( $wmgUseVisualEditor ) {
 	// Tab configuration
 	if ( $wmgVisualEditorUseSingleEditTab ) {
 		$wgVisualEditorUseSingleEditTab = true;
+		if ( $wmgVisualEditorSingleEditTabSecondaryEditor ) {
+			$wgDefaultUserOptions['visualeditor-editor'] = 'wikitext';
+		} else {
+			$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
+		}
 	} else {
 		if ( $wmgVisualEditorSecondaryTabs ) {
 			$wgVisualEditorTabPosition = 'after';
@@ -2020,11 +2025,6 @@ if ( $wmgUseVisualEditor ) {
 	// User access configuration
 	if ( $wmgVisualEditorDefault ) {
 		$wgDefaultUserOptions['visualeditor-enable'] = 1;
-		if ( $wmgVisualEditorSecondaryTabs ) {
-			$wgDefaultUserOptions['visualeditor-editor'] = 'wikitext';
-		} else {
-			$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
-		}
 		$wgHiddenPrefs[] = 'visualeditor-enable'; // T50666
 	} else {
 		// Only show the beta-disable preference if the wiki is in 'beta'.
