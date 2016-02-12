@@ -4517,6 +4517,7 @@ $wgConf->settings = array(
 		'ResourceLoaderImage' => 'debug', // - demon, matmarex
 		'runJobs' => array( 'logstash' => 'warning' ), // - bd808, T113571
 		'session' => array( 'udp2log' => false, 'logstash' => 'warning' ),
+		'session-ip' => array( 'udp2log' => false, 'logstash' => 'info' ),
 		'SimpleAntiSpam' => 'debug',
 		'slow-parse' => 'debug',
 		'SpamBlacklistHit' => 'debug',
