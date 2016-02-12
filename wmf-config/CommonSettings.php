@@ -2166,7 +2166,7 @@ $wgVaryOnXFPForAPI = $wgVaryOnXFP = true;
 $wgCookieExpiration = 30 * 86400;
 
 if ( $wmgUseMath ) {
-	require_once( "$IP/extensions/Math/Math.php" );
+	wfLoadExtension ( "Math" );
 
 	$wgTexvc = '/usr/bin/texvc';
 	$wgMathTexvcCheckExecutable = '/usr/bin/texvccheck';
@@ -2175,9 +2175,7 @@ if ( $wmgUseMath ) {
 	if ( $wgDBname === 'hewiki' ) {
 		$wgDefaultUserOptions['math'] = 0;
 	}
-	$wgMathFileBackend = $wmgMathFileBackend;
 	$wgMathDirectory   = '/mnt/upload7/math'; // just for sanity
-	$wgMathPath        = $wmgMathPath;
 	$wgUseMathJax      = true;
 	// This variable points to non-WMF servers by default.
 	// Prevent accidental use.
