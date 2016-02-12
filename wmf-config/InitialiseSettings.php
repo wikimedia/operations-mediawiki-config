@@ -13159,13 +13159,18 @@ $wgConf->settings = array(
 	'private' => false,		# Private wikis aren't yet supported by RESTbase
 ),
 
-// Whether VisualEditor should re-use the edit tab (and section link) or insert its own
+// Whether VisualEditor should re-use the edit tab (and section link) or insert its own; "SET"
 'wmgVisualEditorUseSingleEditTab' => array(
 	'default' => false,		# Deploying slowly with community advanced notice
 	'test2wiki' => true,	# T121421
 ),
 
-// Whether VisualEditor's second tab and section link come after those for wikitext
+// Whether the wikitext editor should be the default (first-open) editor on SET wikis
+'wmgVisualEditorSingleEditTabSecondaryEditor' => array(
+	'default' => true,
+),
+
+// Whether VisualEditor's second tab and section link come after those for wikitext (on non-SET wikis)
 'wmgVisualEditorSecondaryTabs' => array(
 	'default' => false,
 	'enwiki' => true,
