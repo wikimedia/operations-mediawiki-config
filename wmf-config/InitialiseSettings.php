@@ -13607,16 +13607,19 @@ $wgConf->settings = array(
 'wmgUseMath' => array(
 	'default' => true, // moved from MW core
 	'wikitech' => false,
+	'labtestwiki' => true, // to test T126628
 	'loginwiki' => false,
 	'votewiki' => false, // T61702
 ),
 
 'wgMathFileBackend' => array(
-	'default' => 'global-multiwrite'
+	'default' => 'global-multiwrite',
+	'labtestwiki' => 'local-multiwrite', // to test T126628
 ),
 
 'wgMathPath' => array(
 	'default' => '//upload.wikimedia.org/math',
+	'labtestwiki' => '//labtestwikitech.wikimedia.org/w/images/math', // to test T126628
 ),
 
 'wmgUseMoodBar' => array(
