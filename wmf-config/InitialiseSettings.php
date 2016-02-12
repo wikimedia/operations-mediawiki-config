@@ -10862,14 +10862,6 @@ $wgConf->settings = array(
 	'hewiki' => array( 'mode' => 10 /*CT_MODE_PAGES*/ ), // T13776
 ),
 
-'wmgMathFileBackend' => array(
-	'default' => 'global-multiwrite'
-),
-
-'wmgMathPath' => array(
-	'default' => '//upload.wikimedia.org/math',
-),
-
 'wmgUseFundraisingTranslateWorkflow' => array(
 	'default' => false,
 	'metawiki' => true,
@@ -13618,6 +13610,15 @@ $wgConf->settings = array(
 	'loginwiki' => false,
 	'votewiki' => false, // T61702
 ),
+
+'wgMathFileBackend' => array(
+	'default' => 'global-multiwrite'
+),
+
+'wgMathPath' => array(
+	'default' => '//upload.wikimedia.org/math',
+),
+
 
 'wmgUseMoodBar' => array(
 	'default' => false,
