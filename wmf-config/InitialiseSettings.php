@@ -15125,7 +15125,7 @@ $wgConf->settings = array(
 ),
 'wmgEchoSiteNotificationIconUrl' => array(
 	'default' => false, // Placeholder icon
-	'enwiki' => '//upload.wikimedia.org/wikipedia/commons/f/ff/Wikipedia_Echo_notification_icon.png', // https://commons.wikimedia.org/wiki/File:Wikipedia_Echo_notification_icon.png
+	'wikipedia' => '//upload.wikimedia.org/wikipedia/commons/f/ff/Wikipedia_Echo_notification_icon.png', // https://commons.wikimedia.org/wiki/File:Wikipedia_Echo_notification_icon.png
 ),
 'wmgEchoUseCrossWikiBetaFeature' => array(
 	'default' => false,
