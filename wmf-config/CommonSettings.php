@@ -227,12 +227,15 @@ $wgScriptPath  = '/w';
 $wgScript = "{$wgScriptPath}/index.php";
 $wgRedirectScript = "{$wgScriptPath}/redirect.php";
 $wgLoadScript = "{$wgScriptPath}/load.php";
-$wgLocalStylePath = "{$wgScriptPath}/static/$wmgVersionNumber/skins";
 
-// Don't include a hostname in these urls (T106966, T112646)
+// Don't include a hostname in these urls
+// - Goes wrong otherwise on mobile web (T106966, T112646)
+// - Improves performance by leveraging HTTP/2
+// - $wgLocalStylePath MUST be relative
 $wgResourceBasePath = "/static/{$wmgVersionNumber}";
 $wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
 $wgStylePath = "{$wgResourceBasePath}/skins";
+$wgLocalStylePath = $wgStylePath;
 
 // Deprecated
 $wgStyleSheetPath = $wgStylePath;
