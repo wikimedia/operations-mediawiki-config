@@ -2,3 +2,4 @@ $IP/extensions/Capiunto/Capiunto.php
 $IP/extensions/Sentry/Sentry.php
 $IP/extensions/UrlShortener/extension.json
 $IP/extensions/EventBus/extension.json
+$IP/extensions/Kartographer/extension.json

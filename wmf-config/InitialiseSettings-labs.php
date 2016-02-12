@@ -256,6 +256,10 @@ function wmfLabsSettings() {
 			'simplewiki' => true,
 		),
 
+		'wmgUseKartographer' => array(
+			'default'	=> true,
+		),
+
 		//enable TimedMediaHandler and MwEmbedSupport for testing on commons and enwiki
 		'wmgUseMwEmbedSupport' => array(
 			'commonswiki'	=> true,
