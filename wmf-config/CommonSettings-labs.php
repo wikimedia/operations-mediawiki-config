@@ -34,8 +34,12 @@ $wmgAddWikiNotify = false;
 # see r110254 and T35746
 $wgPreloadJavaScriptMwUtil = true;
 
-// Routed by Apache rewrite to /w/static.php (T99096)
+// Enable new /w/static.php routing (T99096)
 $wgResourceBasePath = '/w';
+$wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
+$wgStylePath = "{$wgResourceBasePath}/skins";
+$wgLocalStylePath = $wgStylePath;
+$wgStyleSheetPath = $wgStylePath; // Deprecated
 
 // Cache ResourceLoader modules in localStorage
 // Experimental! See <https://gerrit.wikimedia.org/r/#/c/86867/>.
