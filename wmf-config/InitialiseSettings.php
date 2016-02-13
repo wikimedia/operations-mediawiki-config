@@ -15126,7 +15126,22 @@ $wgConf->settings = array(
 ),
 'wmgEchoSiteNotificationIconUrl' => array(
 	'default' => false, // Placeholder icon
+	'commonswiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/7/76/Notification-icon-Commons-logo.svg/30px-Notification-icon-Commons-logo.svg.png', // https://commons.wikimedia.org/wiki/File:Notification-icon-Commons-logo.svg
+	'foundationwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/30px-Wikimedia-logo.svg.png', // https://commons.wikimedia.org/wiki/File:Wikimedia-logo.svg
+	'incubatorwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Notification-icon-Incubator-logo.svg/30px-Notification-icon-Incubator-logo.svg.png', // https://commons.wikimedia.org/wiki/File:Notification-icon-Incubator-logo.svg
+	'labswiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/6/60/Wikimedia_labs_logo.svg/30px-Wikimedia_labs_logo.svg.png', // https://commons.wikimedia.org/wiki/File:Wikimedia_labs_logo.svg
+	'mediawikiwiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/1/10/Notification-icon-MediaWiki-logo.svg/30px-Notification-icon-MediaWiki-logo.svg.png', // https://commons.wikimedia.org/wiki/File:Notification-icon-MediaWiki-logo.svg
+	'metawiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/8/86/Notification-icon-Meta-logo.svg/30px-Notification-icon-Meta-logo.svg.png', // https://commons.wikimedia.org/wiki/File:Notification-icon-Meta-logo.svg
+	'specieswiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/08/Notification-icon-Wikispecies-logo.svg/30px-Notification-icon-Wikispecies-logo.svg.png', // https://commons.wikimedia.org/wiki/File:Notification-icon-Wikispecies-logo.svg
+	'wikibooks' => '//upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Notification-icon-Wikibooks-logo.svg/30px-Notification-icon-Wikibooks-logo.svg.png', // https://commons.wikimedia.org/wiki/File:Notification-icon-Wikibooks-logo.svg
+	'wikidatawiki' => '//upload.wikimedia.org/wikipedia/commons/thumb/6/67/Notification-icon-Wikidata-logo.svg/30px-Notification-icon-Wikidata-logo.svg.png', // https://commons.wikimedia.org/wiki/File:Notification-icon-Wikidata-logo.svg
+	'wikinews' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/57/Notification-icon-Wikinews-logo.svg/30px-Notification-icon-Wikinews-logo.svg.png', // https://commons.wikimedia.org/wiki/File:Notification-icon-Wikinews-logo.svg
 	'wikipedia' => '//upload.wikimedia.org/wikipedia/commons/f/ff/Wikipedia_Echo_notification_icon.png', // https://commons.wikimedia.org/wiki/File:Wikipedia_Echo_notification_icon.png
+	'wikiquote' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Notification-icon-Wikiquote.svg/30px-Notification-icon-Wikiquote.svg.png', // https://commons.wikimedia.org/wiki/File:Notification-icon-Wikiquote.svg
+	'wikisource' => '//upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Notification-icon-Wikisource-logo.svg/30px-Notification-icon-Wikisource-logo.svg.png', // https://commons.wikimedia.org/wiki/File:Notification-icon-Wikisource-logo.svg
+	'wikiversity' => '//upload.wikimedia.org/wikipedia/commons/thumb/0/01/Notification-icon-Wikiversity-logo.svg/30px-Notification-icon-Wikiversity-logo.svg.png', // https://commons.wikimedia.org/wiki/File:Notification-icon-Wikiversity-logo.svg
+	'wikivoyage' => '//upload.wikimedia.org/wikipedia/commons/thumb/4/47/Notification-icon-Wikivoyage-logo.svg/30px-Notification-icon-Wikivoyage-logo.svg.png', // https://commons.wikimedia.org/wiki/File:Notification-icon-Wikivoyage-logo.svg
+	'wiktionary' => '//upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Notification-icon-Wiktionary-logo.svg/30px-Notification-icon-Wiktionary-logo.svg.png', // https://commons.wikimedia.org/wiki/File:Notification-icon-Wiktionary-logo.svg
 ),
 'wmgEchoUseCrossWikiBetaFeature' => array(
 	'default' => false,
