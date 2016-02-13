@@ -10565,6 +10565,10 @@ $wgConf->settings = array(
 		103 => 'noindex,follow', // wikiproject talk
 		829 => 'noindex,follow', // module talk
 	), // T73663
+	'cswiki' => array(
+		NS_USER => 'noindex,follow', // T125068
+		NS_USER_TALK => 'noindex,follow',
+	),
 	'dewiki' => array(
 		NS_TALK => 'noindex,follow',
 		NS_USER => 'noindex,follow', // T38181
