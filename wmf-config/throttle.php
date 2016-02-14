@@ -28,14 +28,6 @@ $wmgThrottlingExceptions[] = array( // T110352 (long term)
 	'value'  => 50
 );
 
-$wmgThrottlingExceptions[] = array( // T125081 - Santiago Wikipedia editing workshop
-	'from'   => '2016-02-02T20:00 +0:00',
-	'to'     => '2016-02-05T01:00 +0:00',
-	'IP'     => '181.118.160.217',
-	'dbname' => array( 'eswiki', 'enwiki', 'commonswiki' ),
-	'value'  => 50 // 30 expected
-);
-
 ## Add throttling definitions above.
 
 /**
