@@ -43,6 +43,14 @@ $wmgThrottlingExceptions[] = array( // Wikipedia:Wikimedia Deutschland/WPFF Berl
 	'value'  => 50
 );
 
+$wmgThrottlingExceptions[] = array( // T126939 - Wikipedia Edit-a-thon at Do Space in Omaha, NE, USA
+	'from'   => '2016-02-20T04:00 +0:00',
+	'to'     => '2016-02-20T09:00 +0:00',
+	'IP'     => '97.107.199.77',
+	'dbname' => array( 'enwiki', 'commonswiki' ),
+	'value'  => 60 // 50 expected
+);
+
 ## Add throttling definitions above.
 
 /**
