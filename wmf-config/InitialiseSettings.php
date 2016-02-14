@@ -7445,6 +7445,12 @@ $wgConf->settings = array(
 			'deletedtext' => true,
 			'abusefilter-log-detail' => true,
 		),
+		'rollbacker' => array ( 'rollback' => true, ), // T126931
+		'patroller' => array( // T126931
+			'patrol' => true,
+			'patrolmarks' => true,
+			'unwatchedpages' => true,
+		),
 	),
 	'+cswikinews' => array(
 		'autopatrolled' => array( 'autopatrol' => true, ),
@@ -8864,6 +8870,7 @@ $wgConf->settings = array(
 	),
 	'+cswiki' => array(
 		'bureaucrat' => array( 'arbcom', 'autopatrolled' ), // T63418
+		'sysop' => array( 'rollbacker', 'patroller' ), // T126931
 	),
 	'+cswikinews' => array(
 		'bureaucrat' => array( 'autopatrolled' ),
@@ -9535,6 +9542,7 @@ $wgConf->settings = array(
 	),
 	'+cswiki' => array(
 		'bureaucrat' => array( 'arbcom', 'autopatrolled' ), // T63418
+		'sysop' => array( 'rollbacker', 'patroller' ), // T126931
 	),
 	'+cswikinews' => array(
 		'bureaucrat' => array( 'autopatrolled' ),
