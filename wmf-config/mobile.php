@@ -66,7 +66,12 @@ if ( $wmgMobileFrontend ) {
 	$wgMFNoMobilePages = $wmgMFNoMobilePages;
 
 	$wgHooks['EnterMobileMode'][] = function() {
-		global $wgCentralAuthCookieDomain, $wgHooks;
+		global $wgCentralAuthCookieDomain, $wgHooks, $wgResponsiveImages;
+
+		// Disable responsive images on mobile web (T119797), but not on apps.
+		if ( !defined( 'MW_API' ) ) {
+			$wgResponsiveImages = false;
+		}
 
 		// Hack for T49647
 		if ( $wgCentralAuthCookieDomain == 'commons.wikimedia.org' ) {
