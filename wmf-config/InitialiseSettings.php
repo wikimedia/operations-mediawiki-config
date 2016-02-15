@@ -5573,6 +5573,10 @@ $wgConf->settings = array(
 		112 => 'Opera',                     // T93870
 		113 => 'Discussioni_opera',
 	),
+	'jawikisource' => array(
+		102 => '作者', // T126914 - Author
+		103 => '作者・トーク',
+	),
 	'knwikisource' => array( // T39676
 		100 => 'ಸಂಪುಟ',         // Portal
 		101 => 'ಸಂಪುಟ_ಚರ್ಚೆ',
