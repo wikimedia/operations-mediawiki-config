@@ -35,6 +35,13 @@ $wmgThrottlingExceptions[] = array( // T125081 - Santiago Wikipedia editing work
 	'dbname' => array( 'eswiki', 'enwiki', 'commonswiki' ),
 	'value'  => 50 // 30 expected
 );
+$wmgThrottlingExceptions[] = array( // Wikipedia:Wikimedia Deutschland/WPFF Berlinale2016
+	'from'   => '2016-02-15T10:50 +0:00',
+	'to'     => '2016-02-15T22:00 +0:00',
+	'IP'     => '80.153.119.142', // WMDE guest wlan
+	'dbname' => array( 'dewiki', 'wikidatawiki', 'commonswiki' ),
+	'value'  => 50
+);
 
 ## Add throttling definitions above.
 
