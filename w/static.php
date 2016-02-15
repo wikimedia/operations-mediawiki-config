@@ -105,8 +105,8 @@ function wmfStaticRespond() {
 	}
 	$path = substr( $uriPath, strlen( $urlPrefix ) );
 
-	$cacheLong = 30 * 24 * 3600; // 30 days
-	$cacheShort = 5 * 60; // 5 minutes
+	$cacheLong = 31536000; // 1 year (365 * 24 * 3600)
+	$cacheShort = 300; // 5 minutes (5 * 60)
 
 	// Validation hash
 	$urlHash = isset( $_SERVER['QUERY_STRING'] ) ? $_SERVER['QUERY_STRING'] : false;
@@ -174,6 +174,7 @@ function wmfStaticRespond() {
 
 	if ( !$fallback ) {
 		header( 'HTTP/1.1 404 Not Found' );
+		header( 'Cache-Control: s-maxage=300, must-revalidate, max-age=0' );
 		wmfStaticShowError( 'Unknown file' );
 		$stats->increment( 'wmfstatic.notfound' );
 		return;
