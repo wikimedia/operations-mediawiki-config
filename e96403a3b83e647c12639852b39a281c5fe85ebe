@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_0d8d722e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-02-15T13:44:11Z",
+      "side": 1,
+      "message": "Where did this number come from? The task says 0.002. And what does this line mean? Do you mean we need to change the sampling rate later?",
+      "revId": "e96403a3b83e647c12639852b39a281c5fe85ebe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
