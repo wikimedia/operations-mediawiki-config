@@ -3114,6 +3114,10 @@ if ( $wmgUseEventBus ) {
 	$wgEventServiceUrl = "{$wmfMasterServices['eventbus']}/v1/events";
 }
 
+if ( $wmgUseCapiunto ) {
+	require_once "IP/extensions/Capiunto/Capiunto.php";
+}
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER

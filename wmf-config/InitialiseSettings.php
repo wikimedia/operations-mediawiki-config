@@ -16505,6 +16505,13 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
+'wmgUseCapiunto' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'testwikidatawiki' => true,
+),
+
 );
 
 

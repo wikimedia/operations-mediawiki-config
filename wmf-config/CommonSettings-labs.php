@@ -344,10 +344,6 @@ if ( $wmgUseSentry ) {
 	$wgSentryLogPhpErrors = false;
 }
 
-if ( $wmgUseCapiunto ) {
-	require_once "$IP/extensions/Capiunto/Capiunto.php";
-}
-
 if ( $wmgUseEventBus ) {
 	wfLoadExtension( 'EventBus' );
 	$wgEventServiceUrl = 'http://deployment-eventlogging04.deployment-prep.eqiad.wmflabs:8085/v1/events';
