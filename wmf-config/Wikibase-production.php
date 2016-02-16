@@ -105,6 +105,6 @@ if ( $wmgUseWikibaseClient ) {
 		'Q20748093' => 'badge-validated'
 	);
 
-	// Don't overwrite commons links in the "other projects sidebar" for now
-	$wgWikimediaBadgesCommonsCategoryProperty = null;
+	// Overwrite commons links in the "other projects sidebar" with the "commons category" (P373), per T126960
+	$wgWikimediaBadgesCommonsCategoryProperty = 'P373';
 }
