@@ -3115,7 +3115,7 @@ if ( $wmgUseEventBus ) {
 }
 
 if ( $wmgUseCapiunto ) {
-	require_once "IP/extensions/Capiunto/Capiunto.php";
+	require_once "$IP/extensions/Capiunto/Capiunto.php";
 }
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
