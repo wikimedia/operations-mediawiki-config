@@ -24,8 +24,6 @@ if ( $wmgUseWikibaseRepo ) {
 			'P185',
 		);
 	} else {
-		$wgWBRepoSettings['disabledDataTypes'] = array( 'external-id' );
-
 		$wgWBRepoSettings['sparqlEndpoint'] = 'https://query.wikidata.org/sparql';
 
 		$wgWBRepoSettings['formatterUrlProperty'] = 'P1630';
@@ -88,8 +86,6 @@ if ( $wmgUseWikibaseClient ) {
 
 		$wgArticlePlaceholderImageProperty = 'P47';
 	} else {
-		$wgWBClientSettings['disabledDataTypes'] = array( 'external-id' );
-
 		$wgArticlePlaceholderImageProperty = 'P18';
 	}
 
