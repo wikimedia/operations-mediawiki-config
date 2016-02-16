@@ -16,6 +16,24 @@
       "revId": "29e1aeff0748401cf51c724196cbe3c4d793812a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_3f5ac222",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-02-16T21:47:58Z",
+      "side": 1,
+      "message": "I hadn\u0027t originally (see commit) but now you point this out maybe I should to make this a fair test (as otherwise I\u0027ll be testing past 7 days with different conditions) will fix up :)",
+      "parentUuid": "4ea78b8a_7f391aca",
+      "revId": "29e1aeff0748401cf51c724196cbe3c4d793812a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
