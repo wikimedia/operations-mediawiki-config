@@ -12291,7 +12291,6 @@ $wgConf->settings = array(
 'wgBetaFeaturesWhitelist' => array(
 	'default' => array(
 		'visualeditor-enable',                      // VisualEditor – on-going (special permission)
-		'wikibase-otherprojects',                   // ! 2015-02-27 - Wikidata other projects sidebar
 		'uls-compact-links',                        // ! 2015-05-03 – Compact language links
 		'popups',                                   // 2016-01-16 – Hovercards
 		'beta-feature-flow-user-talk-page',         // 2016-03-02 - Flow opt-in
@@ -15627,12 +15626,6 @@ $wgConf->settings = array(
 	'fiu_vrowiki' => array(
 		'sort' => 'alphabetic_revised',
 	),
-	'frwiki' => array(
-		'otherProjectsLinksByDefault' => true,
-	),
-	'frwikisource' => array(
-		'otherProjectsLinksByDefault' => true,
-	),
 	'fywiki' => array(
 		'sort' => 'alphabetic_fy',
 	),
@@ -15648,18 +15641,6 @@ $wgConf->settings = array(
 	'ilowiki' => array(
 		'sort' => 'alphabetic',
 	),
-	'itwiki' => array(
-		'otherProjectsLinksByDefault' => true, // T77012
-	),
-	'itwikisource' => array(
-		'otherProjectsLinksByDefault' => true,
-	),
-	'itwikivoyage' => array(
-		'otherProjectsLinksByDefault' => true, // T73464
-	),
-	'kowiki' => array(
-		'otherProjectsLinksByDefault' => true,
-	),
 	'lbwiki' => array(
 		'sort' => 'alphabetic',
 	),
@@ -15674,6 +15655,9 @@ $wgConf->settings = array(
 	),
 	'nds_nlwiki' => array(
 		'sortPrepend' => array( 'nds' ),
+	),
+	'nlwiki' => array(
+		'otherProjectsLinksByDefault' => false,
 	),
 	'nnwiki' => array(
 		'sort' => 'alphabetic',
@@ -15692,12 +15676,6 @@ $wgConf->settings = array(
 	'plwiki' => array(
 		'sort' => 'alphabetic',
 	),
-	'ptwiki' => array(
-		'otherProjectsLinksByDefault' => true, // T99901
-	),
-	'ruwiki' => array(
-		'otherProjectsLinksByDefault' => true,
-	),
 	'simplewiki' => array(
 		'sort' => 'alphabetic',
 	),
@@ -15706,9 +15684,6 @@ $wgConf->settings = array(
 	),
 	'svwiki' => array(
 		'sort' => 'alphabetic',
-	),
-	'svwikivoyage' => array(
-		'otherProjectsLinksByDefault' => true, // T96502
 	),
 	'tewiki' => array(
 		'sortPrepend' => array( 'en', 'hi', 'kn', 'ta', 'ml' ),
