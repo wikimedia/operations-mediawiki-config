@@ -1,0 +1,9 @@
+Verified+2: jenkins-bot
+Code-Review+2: Ori.livneh <ori@wikimedia.org>
+Code-Review+1: BBlack <bblack@wikimedia.org>
+Code-Review+1: Mholloway <mholloway@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Tue, 16 Feb 2016 18:13:54 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/270793
+Project: operations/mediawiki-config
+Branch: refs/heads/master
