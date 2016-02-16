@@ -64,6 +64,16 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_ITEM] = NS_MAIN;
 	$wgWBRepoSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_PROPERTY] = WB_NS_PROPERTY;
 
+	$wgWBRepoSettings['statementSections'] = array(
+		'item' => array(
+			'statements' => null,
+			'identifiers' => array(
+				'type' => 'dataType',
+				'dataTypes' => array( 'external-id' ),
+			),
+		),
+	);
+
 	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
 
 	$wgWBRepoSettings['dataRightsText'] = 'Creative Commons CC0 License';
