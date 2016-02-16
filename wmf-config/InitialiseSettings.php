@@ -15627,12 +15627,6 @@ $wgConf->settings = array(
 	'fiu_vrowiki' => array(
 		'sort' => 'alphabetic_revised',
 	),
-	'frwiki' => array(
-		'otherProjectsLinksByDefault' => true,
-	),
-	'frwikisource' => array(
-		'otherProjectsLinksByDefault' => true,
-	),
 	'fywiki' => array(
 		'sort' => 'alphabetic_fy',
 	),
@@ -15647,18 +15641,6 @@ $wgConf->settings = array(
 	),
 	'ilowiki' => array(
 		'sort' => 'alphabetic',
-	),
-	'itwiki' => array(
-		'otherProjectsLinksByDefault' => true, // T77012
-	),
-	'itwikisource' => array(
-		'otherProjectsLinksByDefault' => true,
-	),
-	'itwikivoyage' => array(
-		'otherProjectsLinksByDefault' => true, // T73464
-	),
-	'kowiki' => array(
-		'otherProjectsLinksByDefault' => true,
 	),
 	'lbwiki' => array(
 		'sort' => 'alphabetic',
@@ -15692,12 +15674,6 @@ $wgConf->settings = array(
 	'plwiki' => array(
 		'sort' => 'alphabetic',
 	),
-	'ptwiki' => array(
-		'otherProjectsLinksByDefault' => true, // T99901
-	),
-	'ruwiki' => array(
-		'otherProjectsLinksByDefault' => true,
-	),
 	'simplewiki' => array(
 		'sort' => 'alphabetic',
 	),
@@ -15706,9 +15682,6 @@ $wgConf->settings = array(
 	),
 	'svwiki' => array(
 		'sort' => 'alphabetic',
-	),
-	'svwikivoyage' => array(
-		'otherProjectsLinksByDefault' => true, // T96502
 	),
 	'tewiki' => array(
 		'sortPrepend' => array( 'en', 'hi', 'kn', 'ta', 'ml' ),

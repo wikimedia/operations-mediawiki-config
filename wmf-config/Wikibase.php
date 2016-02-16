@@ -142,7 +142,7 @@ if ( $wmgUseWikibaseClient ) {
 	}
 
 	$wgWBClientSettings['siteGroup'] = $wmgWikibaseSiteGroup;
-	$wgWBClientSettings['otherProjectsLinksBeta'] = true;
+	$wgWBClientSettings['otherProjectsLinksByDefault'] = true;
 
 	$wgWBClientSettings['excludeNamespaces'] = function() {
 		// @fixme 102 is LiquidThread comments on wikinews and elsewhere?
