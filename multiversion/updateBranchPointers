@@ -16,6 +16,7 @@
  *   --all: update symlinks for all currently deployed branches
  */
 error_reporting( E_ALL );
+require_once( __DIR__ . '/MWWikiversions.php' );
 require_once( __DIR__ . '/defines.php' );
 
 function isMain() {
