@@ -7,6 +7,7 @@ $IP/extensions/BetaFeatures/extension.json
 $IP/extensions/BounceHandler/BounceHandler.php
 $IP/extensions/Calendar/extension.json
 $IP/extensions/Campaigns/Campaigns.php
+$IP/extensions/Capiunto/Capiunto.php
 $IP/extensions/Cards/extension.json
 $IP/extensions/CategoryTree/CategoryTree.php
 $IP/extensions/CentralAuth/CentralAuth.php
