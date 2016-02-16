@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_08931905",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2016-02-16T11:20:24Z",
+      "side": 1,
+      "message": "think we will want to bump this, though should do so close to deployment time",
+      "revId": "c3d93a4dc56aaf1a67f153034448b91f12e65943",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
