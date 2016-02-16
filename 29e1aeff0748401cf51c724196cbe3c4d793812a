@@ -34,6 +34,24 @@
       "revId": "29e1aeff0748401cf51c724196cbe3c4d793812a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_ffa3cafa",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2016-02-16T21:48:02Z",
+      "side": 1,
+      "message": "(I know you say \"to make this a fair experiment\", but (a) the changes for users are orthogonal, (b) you are likely to want to do both, and (c) it\u0027s plausible that removing one may alter the numbers on the other if e.g. the page magically fits in a smaller chunk size now.)",
+      "parentUuid": "4ea78b8a_7f391aca",
+      "revId": "29e1aeff0748401cf51c724196cbe3c4d793812a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
