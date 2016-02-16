@@ -134,7 +134,7 @@ $wgLBFactoryConf = array(
 	),
 	's6' => array(
 		'db1023' => 0,   # 1.4TB  64GB
-#		'db1022' => 200, # 1.4TB  64GB  Depooled as part of T120122 - volans
+		'db1022' => 25, # 1.4TB  64GB  Repooling as part of T120122, old weight 200 - volans
 		'db1030' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1037' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1050' => 400, # 2.8TB  64GB
