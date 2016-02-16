@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4ea78b8a_7f391aca",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 284,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2016-02-16T21:46:35Z",
+      "side": 1,
+      "message": "Do you not want to extend to add .references and retain .navbox?",
+      "revId": "29e1aeff0748401cf51c724196cbe3c4d793812a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
