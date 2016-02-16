@@ -16425,6 +16425,22 @@ $wgConf->settings = array(
 
 'wgQuickSurveysConfig' => array(
 	'default' => array(),
+	'enwiki' => array(
+		'enabled' => true,
+		'name' => 'Reader-segmentation-1',
+		'type' => 'external',
+		'schema' => 'QuickSurveysResponses',
+		'description' => 'Reader-segmentation-1-description',
+		'link' => 'Reader-segmentation-3prime-link',
+		'question' => 'Reader-segmentation-3-message',
+		'privacyPolicy' => 'Reader-segmentation-3prime-privacy',
+		'coverage' => '0.00005', // Expected to increase to 0.002 soon after going live
+		'platforms' => array(
+			'desktop' => array( 'stable' ),
+			'mobile' => array( 'stable' ),
+		),
+		'instanceTokenParameterName' => 'entry.901222064'
+	),
 ),
 
 // WikidataPageBanner extension (T98029)
