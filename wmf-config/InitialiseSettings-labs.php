@@ -300,6 +300,24 @@ function wmfLabsSettings() {
 			'default' => true,
 			'enwiki' => false,
 		),
+		'wgMFExperiments' => array(
+			'default' => array(
+				'languageOverlay' => array(
+					'enabled' => true,
+					'buckets' => array(
+						'control' => 0.9,  // simpler overlay
+						'A' => 0.1  // structured overlay
+					),
+				),
+				'languageOverlayBeta' => array(
+					'enabled' => true,
+					'buckets' => array(
+						'control' => 0,  // simpler overlay
+						'A' => 1  // structured overlay
+					),
+				),
+			),
+		),
 		'wgMFSchemaMobileWebLanguageSwitcherSampleRate' => array(
 			'default' => array(
 				'beta' => 1,
