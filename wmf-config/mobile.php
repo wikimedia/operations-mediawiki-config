@@ -91,6 +91,18 @@ if ( $wmgMobileFrontend ) {
 			}
 		};
 
+		// Invalidate parser cache entries with srcset. -- OL, 17-Feb-2016
+		$wgHooks['RejectParserCacheValue'][] = function ( ParserOutput $parserOutput, $page, ParserOptions $popts ) {
+			if (
+				mt_rand( 1, 5 ) === 1  // 20% chance
+				&& MobileContext::singleton()->shouldDisplayMobileView()
+				&& strpos( $parserOutput->getText(), 'srcset' ) !== false
+			) {
+				return false;
+			}
+			return true;
+		};
+
 		return true;
 	};
 
