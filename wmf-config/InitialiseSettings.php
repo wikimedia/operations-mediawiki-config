@@ -16269,9 +16269,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseWmfstatic' => array(
-	'default' => false,
-	'small' => true,
-	'medium' => true,
+	'default' => true,
 ),
 
 'wgResourceLoaderStorageEnabled' => array(
