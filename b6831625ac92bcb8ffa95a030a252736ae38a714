@@ -16,6 +16,23 @@
       "revId": "b6831625ac92bcb8ffa95a030a252736ae38a714",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4ea78b8a_cacb9c1f",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 2705
+      },
+      "writtenOn": "2016-02-18T17:25:47Z",
+      "side": 1,
+      "message": "Right now, LM has lots of languages. LM-query is supposed to have only the ones that are best for enwiki (but that list is not quite right). LM would get lots of false positive IDs.",
+      "revId": "b6831625ac92bcb8ffa95a030a252736ae38a714",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
