@@ -13548,7 +13548,7 @@ $wgConf->settings = array(
 ),
 
 'wmgGraphDefaultVegaVer' => array(
-	'default' => 1,
+	'default' => 2,
 ),
 
 // All graph data requests should be trusted on these wikis
