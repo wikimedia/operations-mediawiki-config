@@ -14733,6 +14733,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'brwikimedia' => true, // T46054
 	'cawikimedia' => true, // T75394
+	'commonswiki' => true, // T126901
 	'incubatorwiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
