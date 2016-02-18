@@ -16332,10 +16332,7 @@ $wgConf->settings = array(
 'wmgUseWmfstatic' => array(
 	'default' => false,
 	'small' => true,
-
-	'testwiki' => true,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
+	'medium' => true,
 ),
 
 'wgResourceLoaderStorageEnabled' => array(
