@@ -228,11 +228,11 @@ $wgScript = "{$wgScriptPath}/index.php";
 $wgRedirectScript = "{$wgScriptPath}/redirect.php";
 $wgLoadScript = "{$wgScriptPath}/load.php";
 
-// Don't include a hostname in these urls
+// Don't include a hostname in $wgResourceBasePath and friends
 // - Goes wrong otherwise on mobile web (T106966, T112646)
 // - Improves performance by leveraging HTTP/2
 // - $wgLocalStylePath MUST be relative
-if ( in_array( $wgDBname, array( 'testwiki', 'test2wiki', 'mediawikiwiki' ) ) ) {
+if ( $wmgUseWmfstatic ) {
 	// Routed by Apache rewrite to /w/static.php (T99096)
 	$wgResourceBasePath = '/w';
 } else {
