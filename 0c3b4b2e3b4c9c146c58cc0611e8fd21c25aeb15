@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_dd468b26",
+        "filename": "wmf-config/ProductionServices.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 66,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-19T23:20:48Z",
+      "side": 1,
+      "message": "These values where elsewhere already, but would be nice to add hostname comments here.",
+      "revId": "0c3b4b2e3b4c9c146c58cc0611e8fd21c25aeb15",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
