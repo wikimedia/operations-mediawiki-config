@@ -16292,6 +16292,13 @@ $wgConf->settings = array(
 	'donatewiki' => false,
 ),
 
+'wmgUseWmfstatic' => array(
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
+),
+
 'wgResourceLoaderStorageEnabled' => array(
 	'default' => true,
 ),
