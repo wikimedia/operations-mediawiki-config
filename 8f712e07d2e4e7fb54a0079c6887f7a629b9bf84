@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_dde0cb27",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-19T23:14:37Z",
+      "side": 1,
+      "message": "What other realms exist besides prod and labs? Seems like maybe this should be without a switch statement, like for $wgStatsdServer below.\n\nAccording to MWRealm.php, realm can only be labs or prod.",
+      "revId": "8f712e07d2e4e7fb54a0079c6887f7a629b9bf84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_9d9333a6",
+        "filename": "wmf-config/LabsServices.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-19T23:14:37Z",
+      "side": 1,
+      "message": "copy/pasta comment.",
+      "revId": "8f712e07d2e4e7fb54a0079c6887f7a629b9bf84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
