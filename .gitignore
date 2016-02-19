@@ -27,3 +27,4 @@ fonts
 .DS_Store
 
 /multiversion/vendor/**/.git
+/multiversion/vendor/slim/slim/tests/templates/test.php
