@@ -287,6 +287,10 @@ function wmfLabsSettings() {
 			),
 		),
 
+		'wgMFAllowNonJavaScriptEditing' => array(
+			'default' => true,
+		),
+
 		'wmgMFPhotoUploadEndpoint' => array(
 			'default' => 'http://commons.wikimedia.$variant.wmflabs.org/w/api.php',
 		),
