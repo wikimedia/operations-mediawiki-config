@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_178724de",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 15129,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2016-02-19T21:10:33Z",
+      "side": 1,
+      "message": "Can we please not call it \"echo\" but \"notifications\"? :-)",
+      "revId": "291d6a2f719198e9acb7fae19b7ea776d9c7165d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_b72090f3",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 15139,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2016-02-19T21:10:33Z",
+      "side": 1,
+      "message": "Probably best to swap this over to https://commons.wikimedia.org/wiki/File:Notification-icon-Wikipedia-logo.svg for consistency of file/format/naming.",
+      "revId": "291d6a2f719198e9acb7fae19b7ea776d9c7165d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
