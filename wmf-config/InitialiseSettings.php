@@ -13316,6 +13316,7 @@ $wgConf->settings = array(
 // this will need to be set true for 30 days (anon cache epoch).
 'wmgVisualEditorDisableForAnons' => array(
 	'default' => false,
+	'dewiki' => true,
 	'enwiki' => true,
 	'eswiki' => true,
 ),
@@ -13325,6 +13326,7 @@ $wgConf->settings = array(
 // 1 => 100% of new accounts; 2 => 50%; 10 => 10%; 20 => 5%; etc.
 'wmgVisualEditorNewAccountEnableProportion' => array(
 	'default' => false,
+	'dewiki' => 1,
 	'enwiki' => 1,
 	'eswiki' => 1,
 ),
@@ -13339,6 +13341,7 @@ $wgConf->settings = array(
 // wiki where it's not already on by default.
 'wmgVisualEditorAutoAccountEnable' => array(
 	'default' => false,
+	'dewiki' => true,
 	'enwiki' => true,
 	'eswiki' => true,
 ),
@@ -13348,6 +13351,7 @@ $wgConf->settings = array(
 // opt-out).
 'wmgVisualEditorTransitionDefault' => array(
 	'default' => false,
+	'dewiki' => true,
 	'enwiki' => true,
 ),
 
