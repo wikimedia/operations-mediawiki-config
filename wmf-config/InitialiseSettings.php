@@ -8179,6 +8179,7 @@ $wgConf->settings = array(
 		'flood' => array( 'bot' => true ), // T86237
 		'user' => array( 'massmessage' => true, ), // T66978
 		'sysop' => array( 'importupload' => true, 'flow-create-board' => true ), // T101663
+		'securepoll' => array( 'securepoll-create-poll' => true, 'editinterface' => true ),
 	),
 	'+ombudsmenwiki' => array(
 		'autoconfirmed' => array(
@@ -9199,7 +9200,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller' ),
 	),
 	'+officewiki' => array(
-		'bureaucrat' => array( 'import', 'transwiki', 'communityapps', 'flood' ),
+		'bureaucrat' => array( 'import', 'transwiki', 'communityapps', 'flood', 'securepoll' ),
 	),
 	'+ombudsmenwiki' => array(
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', ),
@@ -9871,7 +9872,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'patroller' ),
 	),
 	'+officewiki' => array(
-		'bureaucrat' => array( 'sysop', 'bureaucrat', 'import', 'transwiki', 'communityapps', 'flood' ),
+		'bureaucrat' => array( 'sysop', 'bureaucrat', 'import', 'transwiki', 'communityapps', 'flood', 'securepoll' ),
 	),
 	'+ombudsmenwiki' => array(
 		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', 'bureaucrat', ),
@@ -15778,6 +15779,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'testwiki' => true,
 	'votewiki' => true,
+	'officewiki' => true,
 ),
 
 'wmgUseGlobalAbuseFilters' => array(
