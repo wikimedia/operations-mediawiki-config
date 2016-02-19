@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_7d0677d3",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 15137,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2016-02-19T23:23:26Z",
+      "side": 1,
+      "message": "You probably also want to apply this logo to testwikidatawiki",
+      "revId": "c439fec056b49b0b4f7249148991fa25aba50ac1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
