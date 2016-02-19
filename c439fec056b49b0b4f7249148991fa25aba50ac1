@@ -2,6 +2,40 @@
   "comments": [
     {
       "key": {
+        "uuid": "2ea41786_9d1573ec",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 15129,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-19T23:28:27Z",
+      "side": 1,
+      "message": "Avoid such long trailing line comments. Put them over the line instead. Also arguably easier to read.",
+      "revId": "c439fec056b49b0b4f7249148991fa25aba50ac1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_3de6bf14",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 15136,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-19T23:28:27Z",
+      "side": 1,
+      "message": "It\u0027s conventional to group tags (e.g. groups/dblists) and individual wikis together. E.g. first default, then the project-wide ones, and then the individual ones alphabetically. Perhaps with a blank line between each group.",
+      "revId": "c439fec056b49b0b4f7249148991fa25aba50ac1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_7d0677d3",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 4
