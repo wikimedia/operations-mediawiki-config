@@ -20,10 +20,10 @@ $wgGroupPermissions['sysop']['abusefilter-private'] = false;
 // Disable some potentially dangerous actions
 $wgAbuseFilterAvailableActions = array_diff(
 		$wgAbuseFilterAvailableActions,
-		array( 'block', 'rangeblock', 'degroup' ) );
+		[ 'block', 'rangeblock', 'degroup' ] );
 
 // T31922 - Prevent anyone being given the abusefilter-private right by removing it
-$wgAvailableRights = array_diff( $wgAvailableRights, array( 'abusefilter-private' ) );
+$wgAvailableRights = array_diff( $wgAvailableRights, [ 'abusefilter-private' ] );
 
 // T66255 - Enable logging to irc.wikimedia.org by default
 $wgAbuseFilterNotifications = "udp";
@@ -95,7 +95,7 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterNotificationsPrivate = true; // T46045
 		break;
 	case 'enwikibooks':
-		$wgAbuseFilterAvailableActions = array( 'flag', 'throttle', 'warn', 'disallow', 'blockautopromote', 'tag' );
+		$wgAbuseFilterAvailableActions = [ 'flag', 'throttle', 'warn', 'disallow', 'blockautopromote', 'tag' ];
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
 		$wgGroupPermissions['*']['abusefilter-log'] = false;
 		$wgAbuseFilterNotifications = false;
@@ -136,7 +136,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
-		$wgAbuseFilterAvailableActions = array( 'flag', 'throttle', 'warn', 'disallow', 'tag', 'block' );
+		$wgAbuseFilterAvailableActions = [ 'flag', 'throttle', 'warn', 'disallow', 'tag', 'block' ];
 		$wgAbuseFilterBlockDuration = '2 days';
 		$wgAbuseFilterAnonBlockDuration = '2 days';
 		break;
@@ -170,7 +170,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
-		$wgAbuseFilterAvailableActions =  array( 'flag', 'throttle', 'warn', 'disallow', 'blockautopromote', 'block', 'degroup', 'tag', 'rangeblock' );
+		$wgAbuseFilterAvailableActions =  [ 'flag', 'throttle', 'warn', 'disallow', 'blockautopromote', 'block', 'degroup', 'tag', 'rangeblock' ];
 		$wgAbuseFilterAnonBlockDuration = '7 days'; // T87317
 		$wgAbuseFilterBlockDuration = 'indefinite';
 		$wgAbuseFilterNotifications = false;
@@ -352,9 +352,9 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true; // T89379
 		$wgAbuseFilterAvailableActions = array_diff(
 			$wgAbuseFilterAvailableActions,
-			array( 'blockautopromote' )
+			[ 'blockautopromote' ]
 		);
-                $wgAbuseFilterAvailableActions[] = 'block'; // T89379
+		$wgAbuseFilterAvailableActions[] = 'block'; // T89379
 		$wgAbuseFilterBlockDuration = '2 hours';    // T89379
 		$wgAbuseFilterAnonBlockDuration = '2 hours';
 		$wgAbuseFilterNotifications = false;

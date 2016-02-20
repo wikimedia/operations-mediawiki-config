@@ -26,7 +26,7 @@ $dontIndex = "User-agent: *\nDisallow: /\n";
 if ( $zeroRated ) {
 	echo $dontIndex;
 } elseif ( $wgArticle->getID() != 0 ) {
-	$extratext = $wgArticle->getContent( false ) ;
+	$extratext = $wgArticle->getContent( false );
 	// Take last modified timestamp of page into account
 	$mtime = max( $mtime, wfTimestamp( TS_UNIX,  $wgArticle->getTouched() ) );
 } elseif( $wmfRealm == 'labs' ) {

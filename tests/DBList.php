@@ -7,12 +7,12 @@
  * @copyright Copyright © 2012, Antoine Musso <hashar at free dot fr>
  * @file
  */
-require_once( __DIR__ . '/../multiversion/MWWikiversions.php' );
+require_once ( __DIR__ . '/../multiversion/MWWikiversions.php' );
 
 class DBList {
 	# List of project names. This array is used to verify that the various
 	# dblist project files only contains names of databases that belong to them
-	static $wiki_projects = array(
+	static $wiki_projects = [
 		'wikibooks',
 		'wikinews',
 		'wikipedia',
@@ -20,17 +20,17 @@ class DBList {
 		'wikisource',
 		'wikiversity',
 		'wiktionary',
-	);
+	];
 
 	public static function getall() {
 		static $list = null;
-		if( $list ) {
+		if ( $list ) {
 			return $list;
 		}
 
-		$objects = scandir(  dirname( __DIR__ ) . '/dblists'  );
-		foreach( $objects as $filename ) {
-			if( substr( $filename, -7, 7 ) == '.dblist' ) {
+		$objects = scandir( dirname( __DIR__ ) . '/dblists' );
+		foreach ( $objects as $filename ) {
+			if ( substr( $filename, -7, 7 ) == '.dblist' ) {
 				$projectname = substr( $filename, 0, -7 );
 				# Happilly prefetch the files content
 				$list[$projectname] = MWWikiversions::readDbListFile( $filename );
@@ -44,4 +44,3 @@ class DBList {
 		return in_array( $dbname, self::$wiki_projects );
 	}
 }
-

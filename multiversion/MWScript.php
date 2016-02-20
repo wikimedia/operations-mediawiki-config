@@ -29,7 +29,7 @@ function getMWScriptWithArgs() {
 	$gids = posix_getgroups();
 	foreach ( $gids as $gid ) {
 		$info = posix_getgrgid( $gid );
-		if ( $info && in_array( $info['name'], array( 'sudo', 'wikidev', 'root' ) ) ) {
+		if ( $info && in_array( $info['name'], [ 'sudo', 'wikidev', 'root' ] ) ) {
 			fwrite( STDERR, "Cannot run a MediaWiki script as a user in the " .
 				"group {$info['name']}\n" );
 			fwrite( STDERR, <<<EOT
@@ -62,7 +62,7 @@ EOT
 
 	# For addwiki.php, the wiki DB doesn't yet exist, and for some
 	# other maintenance scripts we don't care what wiki DB is used...
-	$wikiless = array(
+	$wikiless = [
 		'maintenance/purgeList.php',
 		'extensions/WikimediaMaintenance/addWiki.php', // 1.19
 		'extensions/WikimediaMaintenance/dumpInterwiki.php', // 1.19
@@ -71,19 +71,19 @@ EOT
 		'extensions/WikimediaMaintenance/filebackend/setZoneAccess.php',
 		'maintenance/mctest.php',
 		'maintenance/mcc.php',
-	);
+	];
 
 	# Check if a --wiki param was given...
 	# Maintenance.php will treat $argv[1] as the wiki if it doesn't start '-'
 	if ( !isset( $argv[1] ) || !preg_match( '/^([^-]|--wiki(=|$))/', $argv[1] ) ) {
 		if ( in_array( $relFile, $wikiless ) ) {
 			# Assume aawiki as Maintenance.php does.
-			$argv = array_merge( array( $argv[0], "--wiki=aawiki" ), array_slice( $argv, 1 ) );
+			$argv = array_merge( [ $argv[0], "--wiki=aawiki" ], array_slice( $argv, 1 ) );
 		}
 	}
 
 	# MWScript.php should be in common/
-	require_once( __DIR__ . '/MWVersion.php' );
+	require_once ( __DIR__ . '/MWVersion.php' );
 	$file = getMediaWikiCli( $relFile );
 	if ( !file_exists( $file ) ) {
 		fwrite( STDERR, "The MediaWiki script file \"{$file}\" does not exist.\n" );
@@ -94,4 +94,4 @@ EOT
 }
 
 # Run the script!
-require_once( getMWScriptWithArgs() );
+require_once ( getMWScriptWithArgs() );

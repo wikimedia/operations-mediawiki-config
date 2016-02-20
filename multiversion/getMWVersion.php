@@ -1,9 +1,9 @@
 <?php
 error_reporting( 0 );
 
-require_once( __DIR__ . '/defines.php' );
-require_once( __DIR__ . '/MWRealm.php' );
-require_once( __DIR__ . '/vendor/autoload.php' );
+require_once ( __DIR__ . '/defines.php' );
+require_once ( __DIR__ . '/MWRealm.php' );
+require_once ( __DIR__ . '/vendor/autoload.php' );
 
 /**
  * This script prints the MW version associated with a specified wikidb.
@@ -21,7 +21,7 @@ function getWikiVersion( $dbName ) {
 	$phpFilename = getRealmSpecificFilename(
 		MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.php'
 	);
-	$wikiversions = include( $phpFilename );
+	$wikiversions = include ( $phpFilename );
 	if ( !is_array( $wikiversions ) ) {
 		print "Unable to open $phpFilename.\n";
 		exit( 1 );

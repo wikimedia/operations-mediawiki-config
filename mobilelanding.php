@@ -13,8 +13,8 @@ if ( $redirect === false ) {
 }
 $message = HttpStatus::getMessage( $code );
 
-//$lastmod = gmdate( 'D, j M Y H:i:s', wfTimestamp( TS_UNIX, $wgArticle->getTouched() ) ) . ' GMT';
-//header( "Last-modified: $lastmod" );
+// $lastmod = gmdate( 'D, j M Y H:i:s', wfTimestamp( TS_UNIX, $wgArticle->getTouched() ) ) . ' GMT';
+// header( "Last-modified: $lastmod" );
 
 // note that the following will override any Cache-Control set earlier
 // in extension code called above

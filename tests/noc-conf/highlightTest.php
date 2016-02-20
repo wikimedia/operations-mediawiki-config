@@ -1,7 +1,7 @@
 <?php
 
 class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
-	private $created = array();
+	private $created = [];
 
 	protected function setUp() {
 		parent::setUp();
@@ -51,17 +51,17 @@ class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
 	}
 
 	public static function provideValidCases() {
-		return array(
-			array( 'langlist', 'zh-classical', 'From root, without extension' ),
-			array( 'all.dblist', 'enwiki', 'From root, dblist file' ),
-			array( 'ExampleValid.php', 'smoigel', 'From wmf-config, dblist file' ),
-		);
+		return [
+			[ 'langlist', 'zh-classical', 'From root, without extension' ],
+			[ 'all.dblist', 'enwiki', 'From root, dblist file' ],
+			[ 'ExampleValid.php', 'smoigel', 'From wmf-config, dblist file' ],
+		];
 	}
 
 	/**
 	 * @dataProvider provideValidCases
 	 */
-	public function testValidCases( $q, $expect, $msg) {
+	public function testValidCases( $q, $expect, $msg ) {
 		$this->assertContains(
 			$expect,
 			$this->runHighlight( $q ),
@@ -70,19 +70,19 @@ class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
 	}
 
 	public static function provideInvalidCases() {
-		return array(
-			array( 'search-redirect.php' ),
-			array( 'robots.txt' ),
-			array( 'README' ),
-			array( 'private/PrivateSettings.php' ),
-			array( 'wmf-config/PrivateSettings.php' ),
-			array( 'wmf-config/ExampleFile.php' ),
-			array( 'PrivateSettings.php' ),
-			array( 'ExampleInvalid.php' ),
-			array( 'ExampleContent.php', 'must only contain symlinks' ),
-			array( 'ExampleContent', 'must only contain symlinks' ),
-			array( 'ExampleContent.txt' ),
-		);
+		return [
+			[ 'search-redirect.php' ],
+			[ 'robots.txt' ],
+			[ 'README' ],
+			[ 'private/PrivateSettings.php' ],
+			[ 'wmf-config/PrivateSettings.php' ],
+			[ 'wmf-config/ExampleFile.php' ],
+			[ 'PrivateSettings.php' ],
+			[ 'ExampleInvalid.php' ],
+			[ 'ExampleContent.php', 'must only contain symlinks' ],
+			[ 'ExampleContent', 'must only contain symlinks' ],
+			[ 'ExampleContent.txt' ],
+		];
 	}
 
 	/**
@@ -98,9 +98,9 @@ class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
 
 	/** @return string Page output */
 	protected function runHighlight( $q ) {
-		$_GET = array(
+		$_GET = [
 			'file' => $q
-		);
+		];
 		ob_start();
 		require $this->nocConfDir . '/highlight.php';
 		$out = ob_get_clean();

@@ -8,7 +8,6 @@
  * @file
  */
 
-
 class DbListTests extends PHPUnit_Framework_TestCase {
 	private $initDone = false;
 
@@ -28,15 +27,13 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 		# Override suffix for wikipedia project
 		$dbsuffix = ( $projectname === 'wikipedia' )
 			? 'wiki'
-			: $projectname
-		;
+			: $projectname;
 
 		# Verifiy the databasename suffix
 		$this->assertStringEndsWith( $dbsuffix, $database,
 			"Database name $database lacks db suffix $dbsuffix of $projectname"
 		);
 	}
-
 
 	/**
 	 * FIXME we want to keep continuing showing errors
@@ -49,11 +46,11 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 
 		# No point in checking that the db listed in 'all' are contained
 		# in 'all':
-		unset( $dbs['all']);
+		unset( $dbs['all'] );
 
 		# dblist files we are just ignoring/skipping
 		# FIXME ideally we want to clean those files from any old dbnames
-		$skip = array(
+		$skip = [
 
 			# 'all-labs' is for the 'beta' project which has wikis not yet
 			# available in production ('all'). So we do not verify it.
@@ -66,16 +63,14 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 			'private',
 			'special',
 			'todo',
-		);
+		];
 
-		foreach( $dbs as $dbfile => $dbnames ) {
-			if( in_array( $dbfile, $skip ) ) {
+		foreach ( $dbs as $dbfile => $dbnames ) {
+			if ( in_array( $dbfile, $skip ) ) {
 				continue;
 			}
 
-			$this->assertEquals( array()
-				, array_diff( $dbnames, $all )
-				, "'{$dbfile}.dblist' contains names not in 'all.dblist'"
+			$this->assertEquals( [], array_diff( $dbnames, $all ), "'{$dbfile}.dblist' contains names not in 'all.dblist'"
 			);
 		}
 

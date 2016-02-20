@@ -1,5 +1,5 @@
 <?php
-require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
+require_once ( '/srv/mediawiki/multiversion/activeMWVersions.php' );
 
 	function outputFiles( $viewFilenames, $highlight = true ) {
 		$viewFilenames = array_map( 'basename', $viewFilenames );
@@ -11,7 +11,7 @@ require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
 			echo "\n<li>";
 
 			if ( $highlight ) {
-				echo  '<a href="./highlight.php?file=' . htmlspecialchars( urlencode( $srcFilename ) ) . '">'
+				echo '<a href="./highlight.php?file=' . htmlspecialchars( urlencode( $srcFilename ) ) . '">'
 					. htmlspecialchars( $srcFilename );
 				echo '</a> (<a href="./' . htmlspecialchars( urlencode( $viewFilename ) ) . '">raw text</a>)';
 			} else {

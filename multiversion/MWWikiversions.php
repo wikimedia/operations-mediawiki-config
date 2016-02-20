@@ -1,5 +1,5 @@
 <?php
-require_once( __DIR__ . '/defines.php' );
+require_once ( __DIR__ . '/defines.php' );
 
 /**
  * Helper class for reading the wikiversions.json file
@@ -58,7 +58,7 @@ class MWWikiversions {
 			$dbs = self::readDbListFile( $term );
 			if ( $op === '+' ) {
 				$result = array_unique( array_merge( $result, $dbs ) );
-			} else if ( $op === '-' ) {
+			} elseif ( $op === '-' ) {
 				$result = array_diff( $result, $dbs );
 			}
 		}
@@ -79,7 +79,7 @@ class MWWikiversions {
 			throw new Exception( __METHOD__ . "(): unable to read $dblist.\n" );
 		}
 
-		$dbs = array();
+		$dbs = [];
 		foreach ( $lines as $line ) {
 			// Strip comments ('#' to end-of-line) and trim whitespace.
 			$line = trim( substr( $line, 0, strcspn( $line, '#' ) ) );
@@ -89,7 +89,7 @@ class MWWikiversions {
 				}
 				$dbs = self::evalDbListExpression( $line );
 				break;
-			} else if ( $line !== '' ) {
+			} elseif ( $line !== '' ) {
 				$dbs[] = $line;
 			}
 		}
@@ -100,6 +100,6 @@ class MWWikiversions {
 	 * @return array List of wiki versions
 	 */
 	public static function getAvailableBranchDirs() {
-		return glob( MEDIAWIKI_DEPLOYMENT_DIR . '/php-*', GLOB_ONLYDIR ) ?: array();
+		return glob( MEDIAWIKI_DEPLOYMENT_DIR . '/php-*', GLOB_ONLYDIR ) ?: [];
 	}
 }

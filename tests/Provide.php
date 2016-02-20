@@ -12,16 +12,16 @@
 
 class Provide {
 	function ProjectsDatabases() {
-		$cases=array();
-		foreach( DBList::getall() as $projectname => $databases ) {
-			if( !DBlist::isWikiProject( $projectname ) ) {
+		$cases =[];
+		foreach ( DBList::getall() as $projectname => $databases ) {
+			if ( !DBlist::isWikiProject( $projectname ) ) {
 				# Skip files such as s1, private ...
 				continue;
 			}
-			foreach( $databases as $database ) {
-				$cases[] = array(
+			foreach ( $databases as $database ) {
+				$cases[] = [
 					$projectname, $database
-				);
+				];
 			}
 		}
 		return $cases;

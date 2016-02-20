@@ -18,7 +18,7 @@
  * @file
  * @author Aaron Schulz
  */
-if ( !in_array( $_SERVER['REMOTE_ADDR'], array( '127.0.0.1', '0:0:0:0:0:0:0:1', '::1' ), true ) ) {
+if ( !in_array( $_SERVER['REMOTE_ADDR'], [ '127.0.0.1', '0:0:0:0:0:0:0:1', '::1' ], true ) ) {
 	die( "Only loopback requests are allowed.\n" );
 } elseif ( $_SERVER['REQUEST_METHOD'] !== 'POST' ) {
 	die( "Request must use POST.\n" );
@@ -26,7 +26,7 @@ if ( !in_array( $_SERVER['REMOTE_ADDR'], array( '127.0.0.1', '0:0:0:0:0:0:0:1', 
 
 define( 'MEDIAWIKI_JOB_RUNNER', 1 );
 
-require_once( __DIR__ . '/../multiversion/MWVersion.php' );
+require_once ( __DIR__ . '/../multiversion/MWVersion.php' );
 $wiki = isset( $_GET['wiki'] ) ? $_GET['wiki'] : '';
 require getMediaWiki( 'includes/WebStart.php', $wiki );
 
@@ -40,11 +40,11 @@ wfGetLBFactory()->disableChronologyProtection();
 try {
 	$mediawiki = new MediaWiki();
 	$runner = new JobRunner();
-	$response = $runner->run( array(
+	$response = $runner->run( [
 		'type'     => isset( $_GET['type'] ) ? $_GET['type'] : false,
 		'maxJobs'  => isset( $_GET['maxjobs'] ) ? $_GET['maxjobs'] : 10000,
 		'maxTime'  => isset( $_GET['maxtime'] ) ? $_GET['maxtime'] : 30
-	) );
+	] );
 
 	print json_encode( $response, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
 

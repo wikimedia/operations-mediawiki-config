@@ -5,7 +5,7 @@ putenv( "MW_LANG={$lang}" ); // notify MWMultiVersion
 require_once '/srv/mediawiki/w/MWVersion.php';
 require getMediaWiki( 'includes/WebStart.php' );
 
-$allowed_templates = array(
+$allowed_templates = [
 	'Www.wikimedia.org_template',
 	'Www.wikipedia.org_template',
 	'Www.wikinews.org_template',
@@ -15,7 +15,7 @@ $allowed_templates = array(
 	'Www.wikibooks.org_template',
 	'Www.wikivoyage.org_template',
 	'API_listing_template',
-);
+];
 
 $template = $wgRequest->getText( 'template', 'Www.wikipedia.org_template' );
 if ( !in_array( $template, $allowed_templates ) ) {

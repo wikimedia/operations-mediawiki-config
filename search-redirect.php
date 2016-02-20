@@ -14,14 +14,13 @@ if ( ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED
 	$proto = 'http';
 }
 
-
 // validate $language
 if ( !preg_match( '/^[a-zA-Z\-]*$/', $language ) ) {
 	$language = 'en';
 }
 
 // validate $family
-$sites = array(
+$sites = [
 	'wikipedia',
 	'wiktionary',
 	'wikisource',
@@ -31,7 +30,7 @@ $sites = array(
 	'wikiquote',
 	'wikibooks',
 	'wikivoyage',
-);
+];
 if ( !in_array( $family, $sites ) ) {
 	$family = 'wikipedia';
 }

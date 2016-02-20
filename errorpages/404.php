@@ -10,9 +10,9 @@ $serv = strlen( $_SERVER['HTTP_HOST'] )
 $loc = $_SERVER["REQUEST_URI"];
 
 $encUrl = htmlspecialchars( $prot . $serv . $loc );
-header( "Cache-Control: s-maxage=2678400, max-age=2678400");
-header( "X-Wikimedia-Debug: prot=$prot serv=$serv loc=$loc");
-if( preg_match( "/(%2f)/i", $loc, $matches )
+header( "Cache-Control: s-maxage=2678400, max-age=2678400" );
+header( "X-Wikimedia-Debug: prot=$prot serv=$serv loc=$loc" );
+if ( preg_match( "/(%2f)/i", $loc, $matches )
 	|| preg_match( "/^\/(?:upload|style|wiki|w|extensions)\/(.*)/i", $loc, $matches )
 ) {
 	$title = htmlspecialchars( $matches[1] );
@@ -22,7 +22,7 @@ if( preg_match( "/(%2f)/i", $loc, $matches )
 	$encTarget = htmlspecialchars( $target );
 	$details="<p><b>Did you mean to type <a href=$encTarget>$encTarget</a>?</b></p>";
 }
-$base_404=<<<END
+$base_404 =<<<END
 <!DOCTYPE html>
 <html>
 	<head>
@@ -126,4 +126,4 @@ $base_404=<<<END
 </html>
 END;
 
-print ($base_404);
+print ( $base_404 );

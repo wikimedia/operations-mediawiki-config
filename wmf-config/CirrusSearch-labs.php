@@ -5,73 +5,73 @@
 # to the 'labs' realm which in most of the cases means the beta cluster.
 # It should be loaded AFTER CirrusSearch-common.php
 
-$wgCirrusSearchClusters = array(
-	'eqiad' => array(
+$wgCirrusSearchClusters = [
+	'eqiad' => [
 		'deployment-elastic05',
 		'deployment-elastic06',
 		'deployment-elastic07',
 		'deployment-elastic08',
-	),
-);
+	],
+];
 
 if ( $wgDBname == 'enwiki' ) {
-	$wgCirrusSearchInterwikiSources = array(
+	$wgCirrusSearchInterwikiSources = [
 		'wiktionary' => 'enwiktionary',
 		'wikibooks' => 'enwikibooks',
 		'wikinews' => 'enwikinews',
 		'wikiquote' => 'enwikiquote',
 		'wikisource' => 'enwikisource',
 		'wikiversity' => 'enwikiversity',
-	);
+	];
 }
 
 # We don't have enough nodes to support these settings in beta so just turn
 # them off.
-$wgCirrusSearchMaxShardsPerNode = array();
+$wgCirrusSearchMaxShardsPerNode = [];
 
 # Use the safer query from the extra extension that is currently only deployed
 # in beta.
-$wgCirrusSearchWikimediaExtraPlugin[ 'safer' ] = array(
-	'phrase' => array(
-	)
-);
+$wgCirrusSearchWikimediaExtraPlugin[ 'safer' ] = [
+	'phrase' => [
+	]
+];
 
 # write to all configured clusters, there should only be one in labs
 $wgCirrusSearchWriteClusters = null;
 
 $wgCirrusSearchEnableSearchLogging = true;
 
-$wgCirrusSearchLanguageToWikiMap = array(
-    'ar' => 'ar',
-    'de' => 'de',
-    'en' => 'en',
-    'es' => 'es',
-    'fa' => 'fa',
-    'he' => 'he',
-    'hi' => 'hi',
-    'ja' => 'ja',
-    'ko' => 'ko',
-    'ru' => 'ru',
-    'sq' => 'sq',
-    'uk' => 'uk',
-    'zh-cn' => 'zh',
-    'zh-tw' => 'zh',
-);
+$wgCirrusSearchLanguageToWikiMap = [
+	'ar' => 'ar',
+	'de' => 'de',
+	'en' => 'en',
+	'es' => 'es',
+	'fa' => 'fa',
+	'he' => 'he',
+	'hi' => 'hi',
+	'ja' => 'ja',
+	'ko' => 'ko',
+	'ru' => 'ru',
+	'sq' => 'sq',
+	'uk' => 'uk',
+	'zh-cn' => 'zh',
+	'zh-tw' => 'zh',
+];
 
-$wgCirrusSearchWikiToNameMap = array(
-    'ar' => 'arwiki',
-    'de' => 'dewiki',
-    'en' => 'enwiki',
-    'es' => 'eswiki',
-    'fa' => 'fawiki',
-    'he' => 'hewiki',
-    'hi' => 'hiwiki',
-    'ja' => 'jawiki',
-    'ko' => 'kowiki',
-    'ru' => 'ruwiki',
-    'sq' => 'sqwiki',
-    'uk' => 'ukwiki',
-    'zh' => 'zhwiki',
-);
+$wgCirrusSearchWikiToNameMap = [
+	'ar' => 'arwiki',
+	'de' => 'dewiki',
+	'en' => 'enwiki',
+	'es' => 'eswiki',
+	'fa' => 'fawiki',
+	'he' => 'hewiki',
+	'hi' => 'hiwiki',
+	'ja' => 'jawiki',
+	'ko' => 'kowiki',
+	'ru' => 'ruwiki',
+	'sq' => 'sqwiki',
+	'uk' => 'ukwiki',
+	'zh' => 'zhwiki',
+];
 
 $wgCirrusSearchUseCompletionSuggester = true;

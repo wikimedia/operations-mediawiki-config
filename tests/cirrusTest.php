@@ -33,7 +33,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$this->assertCount( 3, $config['wgCirrusSearchReplicas'] );
 		$this->assertCount( 3, $config['wgCirrusSearchClientSideConnectTimeout'] );
 
-		foreach ( array_keys ( $config['wgCirrusSearchClusters'] ) as $cluster ) {
+		foreach ( array_keys( $config['wgCirrusSearchClusters'] ) as $cluster ) {
 			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchShardCount'] );
 			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchReplicas'] );
 			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchClientSideConnectTimeout'] );
@@ -52,7 +52,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$config = $this->loadCirrusConfig( 'production', 'enwiki', 'wiki' );
 		$allDbs = DBList::getall();
 
-		foreach( $config['wgCirrusSearchLanguageToWikiMap'] as $lang => $wiki ) {
+		foreach ( $config['wgCirrusSearchLanguageToWikiMap'] as $lang => $wiki ) {
 			$this->assertArrayHasKey( $wiki, $config['wgCirrusSearchWikiToNameMap'] );
 			$wikiName = $config['wgCirrusSearchWikiToNameMap'][$wiki];
 			$this->assertContains( $wikiName, $allDbs['wikipedia'] );
@@ -82,14 +82,14 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$wgConf = $this->loadWgConf( $wmfRealm );
 
 		list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
-		$globals = $wgConf->getAll( $wgDBname, $dbSuffix, array(
+		$globals = $wgConf->getAll( $wgDBname, $dbSuffix, [
 				'lang' => $lang,
 				'docRoot' => '/dev/null',
 				'site' => $site,
 				'stdlogo' => 'file://dev/null',
-			),
+			],
 			// Not sure if it's the right way to enable the wikipedia -> enwiki resolution
-			array( $site )
+			[ $site ]
 		);
 
 		extract( $globals );
@@ -97,14 +97,14 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		// variables that would have been setup elsewhere, perhaps in mediawiki
 		// default settings or by CommonSettings.php, or by CirrusSearch.php,
 		// but none of those are a part of this repository
-		$wgJobTypeConf = array( 'default' => array() );
-		$wgCirrusSearchWeights = array();
-		$wgCirrusSearchNamespaceWeights = array();
-		$wmfSwiftEqiadConfig = array(
+		$wgJobTypeConf = [ 'default' => [] ];
+		$wgCirrusSearchWeights = [];
+		$wgCirrusSearchNamespaceWeights = [];
+		$wmfSwiftEqiadConfig = [
 			'cirrusAuthUrl' => '',
 			'cirrusUser' => '',
 			'cirrusKey' => '',
-		);
+		];
 		$wmfDatacenter = 'unittest';
 		$wgCirrusSearchPoolCounterKey = 'unittest:poolcounter:blahblahblah';
 
@@ -142,15 +142,15 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 			}
 		}
 		$wikis = array_unique( $wikis );
-		$indexTypes = array( 'content', 'general', 'titlesuggest' );
-		$clusters = array( 'eqiad' => 31, 'codfw' => 24 );
+		$indexTypes = [ 'content', 'general', 'titlesuggest' ];
+		$clusters = [ 'eqiad' => 31, 'codfw' => 24 ];
 
 		// restrict wgConf to only the settings we care about
-		$wgConf->settings = array(
+		$wgConf->settings = [
 			'shards' => $shards,
 			'replicas' => $replicas,
-		);
-		$tests = array();
+		];
+		$tests = [];
 		foreach ( $wikis as $wiki ) {
 			list( $site, $lang ) = $wgConf->siteFromDB( $wiki );
 			foreach ( $wgConf->suffixes as $altSite => $suffix ) {
@@ -158,25 +158,25 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 					break;
 				}
 			}
-			$config = $wgConf->getAll( $wiki, $suffix, array(
+			$config = $wgConf->getAll( $wiki, $suffix, [
 				'lang' => $lang,
 				'docRoot' => '/dev/null',
 				'site' => $site,
 				'stdlogo' => 'file://dev/null',
-			) );
+			] );
 			foreach ( $indexTypes as $indexType ) {
 				foreach ( $clusters as $clusterName => $numServers ) {
 					// wikidata doesn't have completion suggester
 					if ( $wiki === 'wikidatawiki' && $indexType === 'titlesuggest' ) {
 						continue;
 					}
-					$tests["$clusterName {$wiki}_{$indexType}"] = array(
+					$tests["$clusterName {$wiki}_{$indexType}"] = [
 						$wiki,
 						$indexType,
 						$numServers,
 						self::resolveClusterConfig( $config['shards'], $clusterName ),
 						self::resolveClusterConfig( $config['replicas'], $clusterName ),
-					);
+					];
 				}
 			}
 		}
@@ -194,16 +194,16 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$numReplicas = end( $pieces );
 
 		// +1 is for the primary.
-		$totalShards = $primaryShards * (1 + $numReplicas);
+		$totalShards = $primaryShards * ( 1 + $numReplicas );
 
 		$this->assertLessThanOrEqual( $numServers, $totalShards );
 
-		// For our busiest wikis we want to make sure we are using most of the 
+		// For our busiest wikis we want to make sure we are using most of the
 		// cluster for the indices. This was guesstimated by running the following query
 		// in hive and choosing wikis with > 100M queries/week:
 		//   select wikiid, count(1) as count from wmf_raw.cirrussearchrequestset where year = 2016
 		//   and month = 1 and day >= 2 and day < 9 group by wikiid order by count desc limit 10;
-		$busyWikis = array( 'enwiki', 'dewiki' );
+		$busyWikis = [ 'enwiki', 'dewiki' ];
 		if ( in_array( $wiki, $busyWikis ) && $indexType !== 'titlesuggest' ) {
 
 			// For busy indices ensure we are using most of the cluster to serve them

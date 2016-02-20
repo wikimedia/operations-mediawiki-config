@@ -1,6 +1,6 @@
 <?php
 error_reporting( E_ALL );
-require_once( __DIR__ . '/defines.php' );
+require_once ( __DIR__ . '/defines.php' );
 
 /**
  * Automatically git clone a MediaWiki version and do some basic wmf setup.
@@ -70,11 +70,11 @@ function checkoutMediaWiki() {
 		if ( $checkoutVersion === 'master' ) {
 			$gerrit = 'https://gerrit.wikimedia.org';
 
-			$repos = array(
+			$repos = [
 				'extensions' => 'r/p/mediawiki/extensions',
 				'vendor'     => 'r/p/mediawiki/vendor',
 				'skins'      => 'r/p/mediawiki/skins',
-			);
+			];
 
 			foreach ( $repos as $dir => $upstream ) {
 				# un-escapshellarg'd path needed for chdir, file_exists, etc.
@@ -82,28 +82,28 @@ function checkoutMediaWiki() {
 
 				list( $path, $upstream ) = array_map(
 					'escapeshellarg',
-					array(
+					[
 						$rawPath,
 						"${gerrit}/${upstream}",
-					)
+					]
 				);
 
 				# if the directory exists, checkout upstream into it
 				if ( file_exists( $rawPath ) ) {
 					chdir( $rawPath );
 
-					$cmds = array(
+					$cmds = [
 						'git init',
 						"git remote add origin ${upstream}",
 						'git fetch',
 						'git checkout -f -t origin/master',
-					);
+					];
 
 				# otherwise, clone the repository
 				} else {
-					$cmds = array(
+					$cmds = [
 						"git clone ${upstream} ${path}",
-					);
+					];
 				}
 
 				foreach ( $cmds as $cmd ) {
@@ -118,7 +118,7 @@ function checkoutMediaWiki() {
 				chdir( $rawPath );
 
 				# Update submodules for checked out repos
-				passthru( 'git submodule update --init --recursive' , $ret );
+				passthru( 'git submodule update --init --recursive', $ret );
 
 				if ( $ret ) {
 					print "Submodule update failed in ${dir}\n";
@@ -134,7 +134,7 @@ function checkoutMediaWiki() {
 			exit( 1 );
 		}
 
-		$submodules = array();
+		$submodules = [];
 		exec( 'git submodule status | cut -d" " -f3', $submodules, $ret );
 		if ( $ret ) {
 			print "Error finding list of submodules\n";

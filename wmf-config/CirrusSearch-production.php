@@ -10,15 +10,15 @@
 // help things along.
 $wgCirrusSearchMasterTimeout = '2m';
 
-$wgCirrusSearchClusters = array(
-	'eqiad' => array( '10.2.2.30' ), // search.svc.eqiad.wmnet
-	'codfw' => array( '10.2.1.30' ), // search.svc.codfw.wmnet
-	'labsearch' => array( '10.64.37.14' ), // nobelium.eqiad.wmnet
-);
+$wgCirrusSearchClusters = [
+	'eqiad' => [ '10.2.2.30' ], // search.svc.eqiad.wmnet
+	'codfw' => [ '10.2.1.30' ], // search.svc.codfw.wmnet
+	'labsearch' => [ '10.64.37.14' ], // nobelium.eqiad.wmnet
+];
 
 $wgCirrusSearchConnectionAttempts = 3;
 
-$wgCirrusSearchBackup['backups'] = array(
+$wgCirrusSearchBackup['backups'] = [
 	'type' => 'swift',
 	'swift_url' => $wmfSwiftEqiadConfig['cirrusAuthUrl'],
 	'swift_container' => 'global-data-elastic-backups',
@@ -27,9 +27,9 @@ $wgCirrusSearchBackup['backups'] = array(
 	'max_snapshot_bytes_per_sec' => '10mb',
 	'compress' => false,
 	'chunk_size' => '1g',
-);
+];
 
-$projectsOkForInterwiki = array(
+$projectsOkForInterwiki = [
 	'itwiki' => 'w',
 	'itwiktionary' => 'wikt',
 	'itwikibooks' => 'b',
@@ -38,7 +38,7 @@ $projectsOkForInterwiki = array(
 	'itwikisource' => 's',
 	'itwikivoyage' => 'voy',
 	'itwikiversity' => 'v',
-);
+];
 
 if ( isset( $projectsOkForInterwiki[ $wgDBname ] ) ) {
 	unset( $projectsOkForInterwiki[$wgDBname] );
@@ -55,40 +55,43 @@ $wgCirrusSearchEnableSearchLogging = true;
 
 // The default configuration is a single-cluster configuration, expand
 // that here into the necessary multi-cluster config
-$wgCirrusSearchShardCount = array(
+$wgCirrusSearchShardCount = [
 	'eqiad' => $wmgCirrusSearchShardCount,
 	'codfw' => $wmgCirrusSearchShardCount,
-	'labsearch' => array_map( function() { return 1; }, $wmgCirrusSearchShardCount ),
-);
+	'labsearch' => array_map( function() { return 1;
+	}, $wmgCirrusSearchShardCount ),
+];
 
 // Disable replicas for the labsearch cluster, it's only a single machine
 if ( isset( $wmgCirrusSearchReplicas['eqiad'] ) ) {
-	$wgCirrusSearchReplicas = $wmgCirrusSearchReplicas + array(
-		'labsearch' => array_map( function() { return 'false'; }, $wmgCirrusSearchReplicas['eqiad'] ),
-	);
+	$wgCirrusSearchReplicas = $wmgCirrusSearchReplicas + [
+		'labsearch' => array_map( function() { return 'false';
+	 }, $wmgCirrusSearchReplicas['eqiad'] ),
+	];
 } else {
-	$wgCirrusSearchReplicas = array(
+	$wgCirrusSearchReplicas = [
 		'eqiad' => $wmgCirrusSearchReplicas,
 		'codfw' => $wmgCirrusSearchReplicas,
-		'labsearch' => array_map( function() { return 'false'; }, $wmgCirrusSearchReplicas ),
-	);
+		'labsearch' => array_map( function() { return 'false';
+	 }, $wmgCirrusSearchReplicas ),
+	];
 }
 
 // 5 second timeout for local cluster, 10 seconds for remote. 2 second timeout
 // for the labsearch cluster.
-$wgCirrusSearchClientSideConnectTimeout = array(
+$wgCirrusSearchClientSideConnectTimeout = [
 	'eqiad' => $wmfDatacenter === 'eqiad' ? 5 : 10,
 	'codfw' => $wmfDatacenter === 'codfw' ? 5 : 10,
 	'labsearch' => 2,
-);
+];
 
 // Drop delayed jobs for the labsearch cluster after only 10 minutes to keep them
 // from filling up the job queue.
-$wgCirrusSearchDropDelayedJobsAfter = array(
+$wgCirrusSearchDropDelayedJobsAfter = [
 	'eqiad' => $wgCirrusSearchDropDelayedJobsAfter,
 	'codfw' => $wgCirrusSearchDropDelayedJobsAfter,
 	'labsearch' => 10 * 60, // ten minutes
-);
+];
 
 // Enable completion suggester (beta)
 $wgCirrusSearchUseCompletionSuggester = $wmgCirrusSearchUseCompletionSuggester;

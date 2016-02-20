@@ -6,7 +6,8 @@
  * request by setting the path to this file as the value of HHVM's
  * `hhvm.server.request_init_document` setting.
  */
-if ( !defined( 'HHVM_VERSION' ) ) return;
+if ( !defined( 'HHVM_VERSION' ) ) { return;
+}
 
 /**
  * Set up fatal error handler.
@@ -26,12 +27,12 @@ if ( !defined( 'HHVM_VERSION' ) ) return;
 define( 'E_FATAL', E_ERROR | ( 1 << 24 ) );
 
 set_error_handler( function( $errno, $message, $file, $line, $context, /* nonstandard! */ $backtrace ) {
-	syslog( LOG_ERR, json_encode( array(
+	syslog( LOG_ERR, json_encode( [
 		'message'   => $message,
 		'file'      => $file,
 		'line'      => $line,
 		'context'   => $context,
 		'backtrace' => $backtrace,
-	), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) );
+	], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) );
 	return false;
 }, E_FATAL );

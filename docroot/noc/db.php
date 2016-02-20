@@ -16,12 +16,12 @@ ini_set( 'display_errors', 1 );
 $wgDBname = $wgDBuser = $wgDBpassword = null;
 define( 'DBO_DEFAULT', 'uniq' );
 
-require_once( '../../wmf-config/db-eqiad.php' );
+require_once ( '../../wmf-config/db-eqiad.php' );
 
 class wmfClusters {
 	private $clusters;
 
-	function names( ) {
+	function names() {
 		global $wgLBFactoryConf;
 		return array_keys( $wgLBFactoryConf['sectionLoads'] );
 	}
@@ -29,9 +29,9 @@ class wmfClusters {
 	/** Returns a list of wikis for a clustername */
 	function wikis( $clusterName ) {
 		global $wgLBFactoryConf;
-		$ret = array();
-		foreach( $wgLBFactoryConf['sectionsByDB'] as $wiki => $cluster ) {
-			if( $cluster == $clusterName ) {
+		$ret = [];
+		foreach ( $wgLBFactoryConf['sectionsByDB'] as $wiki => $cluster ) {
+			if ( $cluster == $clusterName ) {
 				$ret[] = $wiki;
 			}
 		}
@@ -48,18 +48,18 @@ class wmfClusters {
 
 	function contentFor( $name ) {
 		print "Cluster <b>$name</b><br><b>Databases:</b><br>";
-		foreach( $this->databases($name) as $db ) {
+		foreach ( $this->databases( $name ) as $db ) {
 			print "$db ";
 		}
 		print '<br><b>Loads</b>:<br>';
-		foreach( $this->loads($name) as $k => $v ) {
+		foreach ( $this->loads( $name ) as $k => $v ) {
 			print "$k => $v<br>";
 		}
 		print '<br><b>Wikis</b>:<br>';
-		if( $name == 'DEFAULT' ) {
+		if ( $name == 'DEFAULT' ) {
 			print 'Any wiki not hosted on the other clusters.<br>';
 		} else {
-			foreach ( $this->wikis($name) as $w ) {
+			foreach ( $this->wikis( $name ) as $w ) {
 				print "$w<br>";
 			}
 		}
@@ -81,7 +81,7 @@ foreach ( $wmf->names() as $name ) {
 print '</ul>';
 
 # Generates tabs content
-$tab=0;
+$tab = 0;
 foreach ( $wmf->names() as $name ) {
 	$tab++;
 	print "<div id=\"tabs-$tab\">\n";

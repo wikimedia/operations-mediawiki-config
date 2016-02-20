@@ -10,68 +10,68 @@
 
 class loggingTests extends PHPUnit_Framework_TestCase {
 
-	private $globals = array();
+	private $globals = [];
 
 	protected function tearDown() {
 		foreach ( $this->globals as $key => $value ) {
 			$GLOBALS[$key] = $value;
 		}
-		$this->globals = array();
+		$this->globals = [];
 	}
 
 	public function provideHandlerSetup() {
-		return array(
-			'Setting only a level sends to udp2log and logstash' => array(
+		return [
+			'Setting only a level sends to udp2log and logstash' => [
 				// configuration for 'test' channel in wmgMonologChannels
 				'debug',
 				// number of expected handlers
 				5,
 				// handlers expected on the 'test' channel
-				array( 'failuregroup|udp2log-debug|logstash-info' )
-			),
+				[ 'failuregroup|udp2log-debug|logstash-info' ]
+			],
 
-			'Can disable logstash' => array(
-				array( 'logstash' => false ),
+			'Can disable logstash' => [
+				[ 'logstash' => false ],
 				4,
-				array( 'failuregroup|udp2log-debug' ),
-			),
+				[ 'failuregroup|udp2log-debug' ],
+			],
 
-			'Disabling udp2log also disables logstash' => array(
-				array( 'udp2log' => false ),
+			'Disabling udp2log also disables logstash' => [
+				[ 'udp2log' => false ],
 				2,
-				array( 'blackhole' ),
-			),
+				[ 'blackhole' ],
+			],
 
-			'Logstash can be enabled when udp2log is disabled' => array(
-				array( 'udp2log' => false, 'logstash' => 'info' ),
+			'Logstash can be enabled when udp2log is disabled' => [
+				[ 'udp2log' => false, 'logstash' => 'info' ],
 				4,
-				array( 'failuregroup|logstash-info' )
-			),
+				[ 'failuregroup|logstash-info' ]
+			],
 
-			'can enable only kafka' => array(
-				array( 'kafka' => 'debug', 'logstash' => false, 'udp2log' => false ),
+			'can enable only kafka' => [
+				[ 'kafka' => 'debug', 'logstash' => false, 'udp2log' => false ],
 				4,
-				array( 'failuregroup|kafka-debug' ),
-			),
+				[ 'failuregroup|kafka-debug' ],
+			],
 
-			'can enable buffering' => array(
-				array( 'buffer' => true ),
+			'can enable buffering' => [
+				[ 'buffer' => true ],
 				7,
-				array( 'failuregroup|udp2log-debug-buffered|logstash-info-buffered' ),
-			),
+				[ 'failuregroup|udp2log-debug-buffered|logstash-info-buffered' ],
+			],
 
-			'can enable sampling, which disables logstash' => array(
-				array( 'sample' => 1000 ),
+			'can enable sampling, which disables logstash' => [
+				[ 'sample' => 1000 ],
 				5,
-				array( 'failuregroup|udp2log-debug-sampled-1000' ),
-			),
+				[ 'failuregroup|udp2log-debug-sampled-1000' ],
+			],
 
-			'false yields backhole' => array(
+			'false yields backhole' => [
 				false,
 				2,
-				array( 'blackhole' ),
-			),
-		);
+				[ 'blackhole' ],
+			],
+		];
 	}
 
 	/**
@@ -82,12 +82,12 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 		// only read from the local scope defined here.
 		$wmgDefaultMonologHandler = 'blackhole';
 		$wgDebugLogFile = false;
-		$wmgMonologAvroSchemas = array();
+		$wmgMonologAvroSchemas = [];
 		$wmgLogAuthmanagerMetrics = false;
 		$wmfUdp2logDest = 'localhost';
-		$wmgLogstashServers = array( 'localhost' );
-		$wmgKafkaServers = array( 'localhost' );
-		$wmgMonologChannels = array( 'test' => $channelConfig );
+		$wmgLogstashServers = [ 'localhost' ];
+		$wmgKafkaServers = [ 'localhost' ];
+		$wmgMonologChannels = [ 'test' => $channelConfig ];
 
 		include __DIR__ . '/../wmf-config/logging.php';
 
@@ -113,9 +113,9 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 
 		require "{$wmfConfigDir}/InitialiseSettings.php";
 
-		$tests = array();
+		$tests = [];
 		foreach ( $wgConf->settings['wmgMonologAvroSchemas']['default'] as $name => $schema ) {
-			$tests[$name] = array( $schema );
+			$tests[$name] = [ $schema ];
 		}
 		return $tests;
 	}
@@ -131,25 +131,25 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 	public function provideConfiguredChannels() {
 		// InitializeSettings.php explicitly declares these as global, so we need
 		// to as well.
-		$this->setGlobals( array(
+		$this->setGlobals( [
 			'wmfUdp2logDest' => 'localhost',
 			'wmfDatacenter' => 'test',
 			'wmfConfigDir' => __DIR__ . '/../wmf-config',
-		) );
+		] );
 		global $wgConf;
-		foreach ( array( 'production', 'labs' ) as $realm ) {
-			$this->setGlobals( array(
+		foreach ( [ 'production', 'labs' ] as $realm ) {
+			$this->setGlobals( [
 				'wgConf' => new stdClass(),
 				'wmfRealm' => $realm,
-			) );
+			] );
 			include __DIR__ . '/../wmf-config/InitialiseSettings.php';
 			foreach ( $wgConf->settings['wmgMonologChannels'] as $wiki => $channels ) {
 				foreach ( $channels as $name => $config ) {
-					$tests["\$wmgMonologChannels['$wiki']['$name']"] = array( $config );
+					$tests["\$wmgMonologChannels['$wiki']['$name']"] = [ $config ];
 				}
 			}
 		}
-		
+
 		return $tests;
 	}
 
@@ -170,26 +170,26 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 
 	public function assertValidLogLevel( $level ) {
 		$this->assertTrue(
-			in_array( $level, array( 'debug', 'info', 'warning', 'error', false ), true ),
+			in_array( $level, [ 'debug', 'info', 'warning', 'error', false ], true ),
 			"$level must be one of: debug, info, warning, error, false"
 		);
 	}
 
 	public function assertChannelConfig( $config ) {
-		$allowed = array( 'udp2log', 'logstash', 'kafka', 'sample', 'buffer' );
+		$allowed = [ 'udp2log', 'logstash', 'kafka', 'sample', 'buffer' ];
 		$extra = array_diff( array_keys( $config ), $allowed );
-		$this->assertEquals( array(), $extra, 'Expect config keys limited to: ' . implode( ', ', $allowed ) );
+		$this->assertEquals( [], $extra, 'Expect config keys limited to: ' . implode( ', ', $allowed ) );
 		if ( isset( $config['buffer'] ) ) {
 			$this->assertInternalType( 'bool', $config['buffer'], 'Buffer must be boolean' );
 		}
 		if ( isset( $config['sample'] ) ) {
 			self::assertThat(
 				$config['sample'],
-				self::logicalOr( self::equalTo( false ), self::greaterThan(0) ),
+				self::logicalOr( self::equalTo( false ), self::greaterThan( 0 ) ),
 				'Sample must be either false or integer > 0'
 			);
 		}
-		foreach ( array( 'udp2log', 'logstash', 'kafka' ) as $handler ) {
+		foreach ( [ 'udp2log', 'logstash', 'kafka' ] as $handler ) {
 			if ( isset( $config[$handler] ) ) {
 				$this->assertValidLogLevel( $config[$handler] );
 			}
@@ -198,7 +198,7 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 
 	protected function setGlobals( $pairs, $value = null ) {
 		if ( is_string( $pairs ) ) {
-			$pairs = array( $pairs => $value );
+			$pairs = [ $pairs => $value ];
 		}
 		foreach ( $pairs as $key => $value ) {
 			// only set value in $this->globals on first call

@@ -11,5 +11,18 @@
 		"optimize-autoloader": true,
 		"prepend-autoloader": false,
 		"vendor-dir": "multiversion/vendor"
+	},
+	"require-dev": {
+		"jakub-onderka/php-parallel-lint": "0.9.2",
+		"mediawiki/mediawiki-codesniffer": "0.6.0"
+	},
+	"scripts": {
+		"test": [
+			"parallel-lint . --exclude vendor --exclude multiversion/vendor --exclude wmf-config/PrivateSettings.php",
+			"phpcs -p -s"
+		],
+		"fix": [
+			"phpcbf"
+		]
 	}
 }

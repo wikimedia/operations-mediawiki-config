@@ -3,7 +3,7 @@ echo "PHP interpreter running\n";
 
 # Work out the number of physical processors
 
-if ( !file_exists ( '/proc/cpuinfo' ) ) {
+if ( !file_exists( '/proc/cpuinfo' ) ) {
 	echo "Can't get CPU information, as procfs isn't mounted or /proc/cpuinfo isn't available on this system.\n";
 	exit;
 }
@@ -12,13 +12,13 @@ $cpuinfo = file_get_contents( '/proc/cpuinfo' );
 
 # Parse cpuinfo
 $processors = explode( "\n\n", $cpuinfo );
-$ids = array();
+$ids = [];
 foreach ( $processors as $i => $processor ) {
 	if ( trim( $processor ) == '' ) {
 		continue;
 	}
 	$lines = explode( "\n", $processor );
-	$props = array();
+	$props = [];
 	foreach ( $lines as $line ) {
 		list( $name, $value ) = array_map( 'trim', explode( ':', $line, 2 ) );
 		$props[$name] = $value;

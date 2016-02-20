@@ -13,30 +13,30 @@ require_once __DIR__ . '/../multiversion/MWRealm.php';
 class dbconfigTests extends PHPUnit_Framework_TestCase {
 
 	public static function provideRealmDatacenter() {
-		return array(
-			array( 'production', 'eqiad' ),
-			array( 'production', 'codfw' ),
-			array( 'labs', 'eqiad' ),
-		);
+		return [
+			[ 'production', 'eqiad' ],
+			[ 'production', 'codfw' ],
+			[ 'labs', 'eqiad' ],
+		];
 	}
 
 	function loadDbFile( $realm, $datacenter ) {
 		global $wmfRealm, $wmfDatacenter;
 
-		list( $oldRealm, $oldDatacenter ) = array( $wmfRealm, $wmfDatacenter );
-		list( $wmfRealm, $wmfDatacenter ) = array( $realm, $datacenter );
+		list( $oldRealm, $oldDatacenter ) = [ $wmfRealm, $wmfDatacenter ];
+		list( $wmfRealm, $wmfDatacenter ) = [ $realm, $datacenter ];
 
 		# "properly" load db.php in local context:
 		$wgDBname     = 'testwiki';
 		$wgDBuser     = 'sqladmin';
 		$wgDBpassword = 'secretpass';
-		if( !defined( 'DBO_DEFAULT' ) ) {
+		if ( !defined( 'DBO_DEFAULT' ) ) {
 			define( 'DBO_DEFAULT', 16 );
 		}
 
-		include( getRealmSpecificFilename( __DIR__ . '/../wmf-config/db.php' ) );
+		include ( getRealmSpecificFilename( __DIR__ . '/../wmf-config/db.php' ) );
 
-		list( $wmfRealm, $wmfDatacenter ) = array( $oldRealm, $oldDatacenter );
+		list( $wmfRealm, $wmfDatacenter ) = [ $oldRealm, $oldDatacenter ];
 
 		return $wgLBFactoryConf;
 	}
@@ -72,7 +72,7 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 	function testDbAssignedToAnExistingCluster( $realm, $datacenter ) {
 		$ok = true;
 		$lb = $this->loadDbFile( $realm, $datacenter );
-		foreach ( $lb['sectionsByDB'] as $dbname => $cluster) {
+		foreach ( $lb['sectionsByDB'] as $dbname => $cluster ) {
 			if ( !array_key_exists( $cluster, $lb['sectionLoads'] ) ) {
 				$ok = false;
 				$this->fail(

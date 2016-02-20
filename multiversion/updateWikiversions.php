@@ -2,9 +2,9 @@
 
 error_reporting( E_ALL );
 
-require_once( __DIR__ . '/defines.php' );
-require_once( __DIR__ . '/MWWikiversions.php' );
-require_once( __DIR__ . '/MWRealm.php' );
+require_once ( __DIR__ . '/defines.php' );
+require_once ( __DIR__ . '/MWWikiversions.php' );
+require_once ( __DIR__ . '/MWRealm.php' );
 
 /*
  * This script switches all wikis in a .dblist file running one MediaWiki
@@ -46,7 +46,7 @@ function updateWikiversions() {
 			exit( 1 );
 		}
 		echo "$jsonPath not found -- rebuilding from scratch!\n";
-		$versionRows = array();
+		$versionRows = [];
 	}
 
 	$inserted = 0;

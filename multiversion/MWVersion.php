@@ -18,7 +18,7 @@
  */
 function getMediaWiki( $file, $wiki = null ) {
 	global $IP;
-	require_once( __DIR__ . '/MWMultiVersion.php' );
+	require_once ( __DIR__ . '/MWMultiVersion.php' );
 
 	if ( $wiki === null ) {
 		$scriptName = @$_SERVER['SCRIPT_NAME'];
@@ -37,7 +37,7 @@ function getMediaWiki( $file, $wiki = null ) {
 	# Wiki doesn't exist yet?
 	if ( $multiVersion->isMissing() ) {
 		header( "Cache-control: no-cache" ); // same hack as CommonSettings.php
-		include( MEDIAWIKI_DEPLOYMENT_DIR . '/wmf-config/missing.php' );
+		include ( MEDIAWIKI_DEPLOYMENT_DIR . '/wmf-config/missing.php' );
 		exit;
 	}
 
@@ -68,9 +68,9 @@ function getMediaWiki( $file, $wiki = null ) {
 function getMediaWikiCli( $file ) {
 	global $IP;
 
-	require_once( __DIR__ . '/MWMultiVersion.php' );
+	require_once ( __DIR__ . '/MWMultiVersion.php' );
 	$multiVersion = MWMultiVersion::getInstance();
-	if( !$multiVersion ) {
+	if ( !$multiVersion ) {
 		$multiVersion = MWMultiVersion::initializeForMaintenance();
 	}
 	if ( $multiVersion->getDatabase() === 'testwiki' ) {

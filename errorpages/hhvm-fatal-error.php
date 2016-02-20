@@ -815,11 +815,11 @@
 		if ( !headers_sent() ) {
 			header( 'HTTP/1.1 500 Internal Server Error' );
 		}
-        $err = error_get_last();
-        $message = $err['message'];
-        # error_get_last() doesn't return a fully populated array in HHVM,
-        # capture file and line manually
-        if ( preg_match( '/#0\\s+(\\S+?)\\((\\d+)\\)/', $message, $matches ) ) {
+		$err = error_get_last();
+		$message = $err['message'];
+		# error_get_last() doesn't return a fully populated array in HHVM,
+		# capture file and line manually
+		if ( preg_match( '/#0\\s+(\\S+?)\\((\\d+)\\)/', $message, $matches ) ) {
 			echo ' ' . htmlspecialchars( $matches[1] ) . ' line ' . $matches[2];
 		}
 		$parts = explode( "\n", $message );
@@ -831,7 +831,7 @@
 		$stat = 'MediaWiki.errors.fatal:1|c';
 		socket_sendto( $sock, $stat, strlen( $stat ), 0, 'statsd.eqiad.wmnet', 8125 );
 
-        ?>: <br/>
+		?>: <br/>
         <?php echo htmlspecialchars( $message ); ?>
     </bdo>
     <div id="AdditionalTechnicalStuff"></div>

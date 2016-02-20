@@ -39,7 +39,7 @@ if ( PHP_SAPI !== 'cli' ) {
 }
 
 if ( !$selectedFilePath ) {
-	if( $selectedFileName === null ){
+	if ( $selectedFileName === null ){
 		// If no 'file' is given (e.g. accessing this file directly), redirect to overview
 		header( 'HTTP/1.1 302 Found' );
 		header( 'Location: ./index.php' );

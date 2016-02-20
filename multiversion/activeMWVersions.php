@@ -1,9 +1,9 @@
 <?php
 error_reporting( 0 );
 
-require_once( __DIR__ . '/defines.php' );
-require_once( __DIR__ . '/MWRealm.php' );
-require_once( __DIR__ . '/MWWikiversions.php' );
+require_once ( __DIR__ . '/defines.php' );
+require_once ( __DIR__ . '/MWRealm.php' );
+require_once ( __DIR__ . '/MWWikiversions.php' );
 
 /*
  * Returns an array of all active MW versions (e.g. "x.xx").
@@ -30,14 +30,14 @@ function getActiveWikiVersions() {
 	# Get all the wikiversion rows in wikiversions.json...
 	try {
 		$versionRows = MWWikiversions::readWikiVersionsFile( $jsonPath );
-	} catch( Exception $e ) {
+	} catch ( Exception $e ) {
 		if ( in_array( '--report', $options ) ) {
 			throw $e; // show error
 		} else {
 			die( 1 ); // silent death
 		}
 	}
-	$result = $activeVersions = array();
+	$result = $activeVersions = [];
 	foreach ( $versionRows as $dbName => $version ) {
 		if ( !isset( $activeVersions[$version] ) ) { // already listed?
 			$activeVersions[$version] = 1;
