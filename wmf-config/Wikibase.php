@@ -112,15 +112,30 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgPropertySuggesterMinProbability = 0.069;
 
 	// T72346
-	// see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18644427
 	$wgPropertySuggesterDeprecatedIds = array(
 		143, // imported from
+		/**
+		 * Deprecated properties
+		 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18644427
+		 */
 		357, // (OBSOLETE) title (use P1476)
-		387, // (OBSOLETE) quote (use P1683)
-		438, // (OBSOLETE) inscription (use P1684)
 		513, // (OBSOLETE) birth name (use P1477)
 		738, // (OBSOLETE) influence of
-		1805, // (OBSOLETE) World Health Organisation International Nonproprietary Name (use P2275)
+		/**
+		 * Sandbox properties
+		 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18720640
+		 */
+		368,  // commonsMedia
+		369,  // wikibase-item
+		370,  // string
+		578,  // time
+		626,  // globe-coordinate
+		855,  // url
+		1106, // quantity
+		1450, // monolingualtext
+		2368, // wikibase-property
+		2535, // math
+		2536, // external-id
 	);
 
 	// Don't try to let users answer captchas if they try to add links
