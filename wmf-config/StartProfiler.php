@@ -130,3 +130,32 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 		}
 	} );
 }
+
+if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
+	xhprof_enable( XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS );
+
+	register_shutdown_function( function () {
+		$data = [ 'profile' => xhprof_disable() ];
+
+		$sec  = $_SERVER['REQUEST_TIME'];
+		$usec = $_SERVER['REQUEST_TIME_FLOAT'] - $sec;
+
+		$data['meta'] = [
+			'url'              => $_SERVER['REQUEST_URI'],
+			'SERVER'           => $_SERVER,
+			'get'              => $_GET,
+			'env'              => $_ENV,
+			'simple_url'       => Xhgui_Util::simpleUrl( $_SERVER['REQUEST_URI'] ),
+			'request_ts'       => new MongoDate( $sec ),
+			'request_ts_micro' => new MongoDate( $sec, $usec ),
+			'request_date'     => date( 'Y-m-d', $sec ),
+		];
+
+		Xhgui_Saver::factory( [
+			'save.handler' => 'mongodb',
+			'db.host'      => 'mongodb://hafnium.eqiad.wmnet:27017',
+			'db.db'        => 'xhprof',
+			'db.options'   => [],
+		] )->save( $data );
+	} );
+}
