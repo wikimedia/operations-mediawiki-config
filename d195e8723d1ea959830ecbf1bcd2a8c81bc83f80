@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_113ac7c0",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 2664
+      },
+      "writtenOn": "2016-02-21T15:19:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ea41786_1133a7f4",
+      "revId": "d195e8723d1ea959830ecbf1bcd2a8c81bc83f80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_b12f3385",
         "filename": "wmf-config/Wikibase.php",
         "patchSetId": 1
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_b1465353",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 2664
+      },
+      "writtenOn": "2016-02-21T15:19:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ea41786_b12f3385",
+      "revId": "d195e8723d1ea959830ecbf1bcd2a8c81bc83f80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_d12c2f92",
         "filename": "wmf-config/Wikibase.php",
         "patchSetId": 1
@@ -47,6 +83,24 @@
       "writtenOn": "2016-02-21T14:58:29Z",
       "side": 1,
       "message": "Please add a comma, so we do not have to touch this line when an other one is added later.",
+      "revId": "d195e8723d1ea959830ecbf1bcd2a8c81bc83f80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_d143cf41",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 2664
+      },
+      "writtenOn": "2016-02-21T15:19:03Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ea41786_d12c2f92",
       "revId": "d195e8723d1ea959830ecbf1bcd2a8c81bc83f80",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
