@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_1133a7f4",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2016-02-21T14:58:29Z",
+      "side": 1,
+      "message": "This could be:\n\n/**\n * Deprecated properties\n * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18644427\n */\n\nThe links is easier to click in IDEs then.",
+      "revId": "d195e8723d1ea959830ecbf1bcd2a8c81bc83f80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_b12f3385",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2016-02-21T14:58:29Z",
+      "side": 1,
+      "message": "Same here.",
+      "revId": "d195e8723d1ea959830ecbf1bcd2a8c81bc83f80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_d12c2f92",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2016-02-21T14:58:29Z",
+      "side": 1,
+      "message": "Please add a comma, so we do not have to touch this line when an other one is added later.",
+      "revId": "d195e8723d1ea959830ecbf1bcd2a8c81bc83f80",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
