@@ -34,6 +34,24 @@
       "revId": "15968f50d4f67d95871a658070fe29f20e96ab34",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_9e01dfbb",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 373,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-02-22T15:44:42Z",
+      "side": 1,
+      "message": "Ah sorry I am getting old and I completely missed the global being defined in extension.json.\n\nSo that will point the beta cluster to the ORES labs project on https://ores.wmflabs.org/ . When later that is redirected to production, it means the beta cluster will use the production service which might be misleading and causing noise in production.\n\nI believe we should setup a development/staging ORES service on beta cluster, so we would point the variable to something like http://ores.beta.wmflabs.org/  . I wrote about it on the task T127661",
+      "parentUuid": "2ea41786_9efb1f11",
+      "revId": "15968f50d4f67d95871a658070fe29f20e96ab34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
