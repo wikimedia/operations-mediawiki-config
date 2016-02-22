@@ -355,7 +355,7 @@ $wgLBFactoryConf = array(
 		'10.64.16.187' => 0, # es1019, master
 		'10.192.16.29' => 1, # es2008
 		'10.192.16.30' => 3, # es2009
-		'10.192.16.31' => 3, # es2010
+#		'10.192.16.31' => 3, # es2010 - depooled because of T127769 - volans
 	),
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => array(
