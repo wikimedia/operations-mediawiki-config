@@ -140,11 +140,17 @@ if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && ini_get( 'hhvm.stats.enable_
 		$sec  = $_SERVER['REQUEST_TIME'];
 		$usec = $_SERVER['REQUEST_TIME_FLOAT'] - $sec;
 
+		$keyWhitelist = array_flip( [
+			'HTTP_HOST', 'REQUEST_METHOD', 'REQUEST_START_TIME', 'REQUEST_TIME',
+			'REQUEST_TIME_FLOAT', 'REQUEST_URI', 'SCRIPT_FILENAME', 'SCRIPT_NAME',
+			'SERVER_ADDR', 'SERVER_NAME', 'THREAD_TYPE'
+		] );
+
 		$data['meta'] = [
 			'url'              => $_SERVER['REQUEST_URI'],
-			'SERVER'           => $_SERVER,
+			'SERVER'           => array_intersect_key( $_SERVER, $keyWhitelist ),
 			'get'              => $_GET,
-			'env'              => $_ENV,
+			'env'              => array_intersect_key( $_ENV, $keyWhitelist ),
 			'simple_url'       => Xhgui_Util::simpleUrl( $_SERVER['REQUEST_URI'] ),
 			'request_ts'       => new MongoDate( $sec ),
 			'request_ts_micro' => new MongoDate( $sec, $usec ),
