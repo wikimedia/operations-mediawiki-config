@@ -10831,6 +10831,7 @@ $wgConf->settings = array(
 	'+special' => array( NS_MAIN ),
 
 	'+dewikivoyage' => array( 102 ), // T119420
+	'+frwiki' => array ( 102 ), // T127688
 	'+itwiki' => array( 102 ),
 	'+ruwiki' => array( 104 ), // T125509
 ),
