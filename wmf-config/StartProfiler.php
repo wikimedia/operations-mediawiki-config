@@ -131,7 +131,10 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 	} );
 }
 
-if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
+if (
+	ini_get( 'hhvm.stats.enable_hot_profiler' ) &&
+	( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) || mt_rand( 1, 10000 ) === 1 )
+) {
 	xhprof_enable( XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS );
 
 	register_shutdown_function( function () {
@@ -141,11 +144,11 @@ if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && ini_get( 'hhvm.stats.enable_
 		$usec = $_SERVER['REQUEST_TIME_FLOAT'] - $sec;
 
 		$keyWhitelist = array_flip( [
-			'HTTP_HOST', 'REQUEST_METHOD', 'REQUEST_START_TIME', 'REQUEST_TIME',
-			'REQUEST_TIME_FLOAT', 'SCRIPT_FILENAME', 'SCRIPT_NAME',
-			'SERVER_ADDR', 'SERVER_NAME', 'THREAD_TYPE', 'action'
+			'HTTP_HOST', 'HTTP_X_WIKIMEDIA_DEBUG', 'REQUEST_METHOD',
+			'REQUEST_START_TIME', 'REQUEST_TIME', 'REQUEST_TIME_FLOAT',
+			'SCRIPT_FILENAME', 'SCRIPT_NAME', 'SERVER_ADDR', 'SERVER_NAME',
+			'THREAD_TYPE', 'action'
 		] );
-
 
 		// Create sanitized copies of $_SERVER, $_ENV, and $_GET:
 		$server = array_intersect_key( $_SERVER, $keyWhitelist );
