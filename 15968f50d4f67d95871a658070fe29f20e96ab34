@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_7b44356f",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 373,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-02-22T14:46:22Z",
+      "side": 1,
+      "message": "In ORES Api::getUrl() craft the backend API URL using that $wgOresWikiId and $wgOresBaseUrl which is unset as far as I can tell.  Asked about that on T127661.",
+      "revId": "15968f50d4f67d95871a658070fe29f20e96ab34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
