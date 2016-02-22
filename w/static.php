@@ -25,7 +25,7 @@
  * - wmfstatic.notfound
  * - wmfstatic.fallback
  */
-define( 'MW_NO_SESSION', 1 );
+define( 'MW_NO_SESSION', 'warn' );
 require_once './MWVersion.php';
 require getMediaWiki( 'includes/WebStart.php' );
 
