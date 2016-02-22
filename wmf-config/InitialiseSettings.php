@@ -10931,6 +10931,7 @@ $wgConf->settings = array(
 	'legalteamwiki' => true, // T64610
 	'mediawikiwiki' => true, // T71974
 	'metawiki' => true,
+	'nowikimedia' => true, // T127161
 	'officewiki' => true,
 	'otrs_wikiwiki' => true,
 	'outreachwiki' => true, // T58245
