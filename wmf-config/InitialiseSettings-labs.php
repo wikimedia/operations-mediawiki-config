@@ -424,6 +424,20 @@ function wmfLabsSettings() {
 		'wmgVisualEditorTransitionDefault' => array(
 			'default' => false,
 		),
+
+                'wmgUseORES' => array(
+                        'default' => false,
+                        'wikipedia' => true, // T127661
+                ),
+                'wgOresModels' => array(
+                        'default' => array( 'damaging', 'reverted', 'goodfaith' ),
+                        'wikipedia' => array( 'damaging' ), // T127661
+                ),
+                'wgOresDamagingThresholds' => array(
+                        'default' => array( 'hard' => 0.7, 'soft'=> 0.5 ),
+                        'wikipedia' => array( 'hard' => 0.8, 'soft'=> 0.7 ), // T127661
+                ),
+
 		// ------------ BetaFeatures end -----------
 
 		'wmgUseRSSExtension' => array(
@@ -610,18 +624,6 @@ function wmfLabsSettings() {
 		'wmgUseArticlePlaceholder' => array(
 			'default' => false,
 			'wikidataclient' => true,
-		),
-		'wmgUseORES' => array(
-			'default' => false,
-			'wikipedia' => true, // T127661
-		),
-		'wgOresModels' => array(
-			'default' => array( 'damaging', 'reverted', 'goodfaith' ),
-			'wikipedia' => array( 'damaging' ), // T127661
-		),
-		'wgOresDamagingThresholds' => array(
-			'default' => array( 'hard' => 0.7, 'soft'=> 0.5 ),
-			'wikipedia' => array( 'hard' => 0.8, 'soft'=> 0.7 ), // T127661
 		),
 	);
 } # wmflLabsSettings()
