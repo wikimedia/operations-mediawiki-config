@@ -14,7 +14,7 @@ $wmgParserCacheDBs = array(
 );
 
 $wmgOldExtTemplate = array(
-#	'10.192.0.25'  => 1, # es2001 - Depooled to copy the data to es2011 - volans
+	'10.192.0.25'  => 1, # es2001
 	'10.192.0.26'  => 1, # es2002
 	'10.192.16.27' => 1, # es2003
 	'10.192.16.28' => 1, # es2004
