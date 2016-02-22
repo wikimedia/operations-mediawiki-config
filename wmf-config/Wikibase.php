@@ -103,7 +103,7 @@ if ( $wmgUseWikibaseRepo ) {
 	// T53637 and T48953
 	$wgGroupPermissions['*']['property-create'] = ( $wgDBname === 'testwikidatawiki' );
 
-	$wgCacheEpoch = '20160218124319';
+	$wgCacheEpoch = '20160222134413';
 
 	$wgWBRepoSettings['dataSquidMaxage'] = 1 * 60 * 60;
 	$wgWBRepoSettings['sharedCacheDuration'] = 60 * 60 * 24;
