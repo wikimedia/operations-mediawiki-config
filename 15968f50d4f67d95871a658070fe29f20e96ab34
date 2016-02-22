@@ -16,6 +16,24 @@
       "revId": "15968f50d4f67d95871a658070fe29f20e96ab34",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_9efb1f11",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 373,
+      "author": {
+        "id": 920
+      },
+      "writtenOn": "2016-02-22T15:03:23Z",
+      "side": 1,
+      "message": "In the extension.json you can find that default value for $wgOresBaseUrl  is \u0027ores.wmflabs.org\u0027 which doesn\u0027t need changing. That\u0027s why I\u0027m not using it since we can work easier without having to change the config once ORES is moved to prod (ores.wikimedia.org) (probably won\u0027t affect anything however since it\u0027ll be probably just a redirect but we can save that too)",
+      "parentUuid": "2ea41786_7b44356f",
+      "revId": "15968f50d4f67d95871a658070fe29f20e96ab34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
