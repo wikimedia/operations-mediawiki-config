@@ -13588,6 +13588,7 @@ $wgConf->settings = array(
 'wmgUseWikiLove' => array(
 	'default' => false,
 	'arwiki' => true,
+	'azwiki' => true, // T119727
 	'commonswiki' => true,
 	'enwiki' => true,
 	'enwikivoyage' => true, // T52063
