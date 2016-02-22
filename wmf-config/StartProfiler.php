@@ -142,16 +142,31 @@ if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && ini_get( 'hhvm.stats.enable_
 
 		$keyWhitelist = array_flip( [
 			'HTTP_HOST', 'REQUEST_METHOD', 'REQUEST_START_TIME', 'REQUEST_TIME',
-			'REQUEST_TIME_FLOAT', 'REQUEST_URI', 'SCRIPT_FILENAME', 'SCRIPT_NAME',
-			'SERVER_ADDR', 'SERVER_NAME', 'THREAD_TYPE'
+			'REQUEST_TIME_FLOAT', 'SCRIPT_FILENAME', 'SCRIPT_NAME',
+			'SERVER_ADDR', 'SERVER_NAME', 'THREAD_TYPE', 'action'
 		] );
 
+
+		// Create sanitized copies of $_SERVER, $_ENV, and $_GET:
+		$server = array_intersect_key( $_SERVER, $keyWhitelist );
+		$env = array_intersect_key( $_ENV, $keyWhitelist );
+		$get = array_intersect_key( $_GET, $keyWhitelist );
+
+		// Strip everything from the query string except 'action=' param:
+		preg_match( '/action=[^&]+/', $_SERVER['REQUEST_URI'], $matches );
+		$repl = $matches ? '?' . $matches[0] : '';
+		$url = preg_replace( '/\?.*/', $repl, $_SERVER['REQUEST_URI'] );
+
+		// Re-insert scrubbed URL as REQUEST_URL:
+		$server['REQUEST_URI'] = $url;
+		$env['REQUEST_URI'] = $url;
+
 		$data['meta'] = [
-			'url'              => $_SERVER['REQUEST_URI'],
-			'SERVER'           => array_intersect_key( $_SERVER, $keyWhitelist ),
-			'get'              => $_GET,
-			'env'              => array_intersect_key( $_ENV, $keyWhitelist ),
-			'simple_url'       => Xhgui_Util::simpleUrl( $_SERVER['REQUEST_URI'] ),
+			'url'              => $url,
+			'SERVER'           => $server,
+			'get'              => $get,
+			'env'              => $env,
+			'simple_url'       => Xhgui_Util::simpleUrl( $url ),
 			'request_ts'       => new MongoDate( $sec ),
 			'request_ts_micro' => new MongoDate( $sec, $usec ),
 			'request_date'     => date( 'Y-m-d', $sec ),
