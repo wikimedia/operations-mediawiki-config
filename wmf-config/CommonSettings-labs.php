@@ -368,6 +368,11 @@ if ( $wmgUseKartographer ) {
 	$wgKartographerMapServer = "https://maps.wikimedia.org";
 }
 
+if ( $wmgUseORES ) {
+	wfLoadExtension( 'ORES' );
+	$wgOresWikiId = 'testwiki';
+}
+
 // Experimental
 $wgGadgetsCaching = false;
 
