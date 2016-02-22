@@ -11336,6 +11336,10 @@ $wgConf->settings = array(
 	'enwiktionary' => '/static/apple-touch/wiktionary/en.png', // T48431
 ),
 
+'wgReferrerPolicy' => array(
+	'default' => 'Origin When Cross-Origin',
+),
+
 'wgUserEmailUseReplyTo' => array(
 	'default' => false, // T14655
 ),
