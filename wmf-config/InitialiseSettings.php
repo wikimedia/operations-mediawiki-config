@@ -11342,7 +11342,7 @@ $wgConf->settings = array(
 ),
 
 'wgReferrerPolicy' => array(
-	'default' => 'Origin When Cross-Origin',
+	'default' => 'origin-when-cross-origin',
 ),
 
 'wgUserEmailUseReplyTo' => array(
