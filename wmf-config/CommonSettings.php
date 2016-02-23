@@ -2018,6 +2018,7 @@ if ( $wmgUseVisualEditor ) {
 		} else {
 			$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
 		}
+		$wgDefaultUserOptions['T47877-buster'] = 1;
 	} else {
 		if ( $wmgVisualEditorSecondaryTabs ) {
 			$wgVisualEditorTabPosition = 'after';
