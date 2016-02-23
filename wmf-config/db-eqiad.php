@@ -15,7 +15,7 @@ $wmgParserCacheDBs = array(
 
 $wmgOldExtTemplate = array(
 	'10.64.0.7'    => 1, # es1012
-#	'10.64.32.185' => 1, # es1016 - Depool to compare RAID perfs with new es201* T127330 - volans
+	'10.64.32.185' => 1, # es1016
 	'10.64.48.115' => 1, # es1018
 );
 
