@@ -14079,7 +14079,7 @@ $wgConf->settings = array(
 'wgMFSchemaMobileWebLanguageSwitcherSampleRate' => array(
 	'default' => array(
 		'beta' => 0.1,
-		'stable' => 0.001,
+		'stable' => 0.0001, // T127212
 	),
 ),
 
