@@ -19,6 +19,23 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_aaa9ebdd",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1300,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-02-23T19:05:49Z",
+      "side": 1,
+      "message": "Stewards config is already here.\nMaybe set \"cannotbepopular\" here too, if this is already required for GS?",
+      "revId": "7b168809f23e53aaab0393cbf6e34c77835e5a14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_5797c593",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
