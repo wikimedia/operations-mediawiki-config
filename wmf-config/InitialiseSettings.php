@@ -8381,6 +8381,11 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true, ),
 		// T29875 (see comment 4)
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
+		'uploader' => array(
+			'upload' => true,
+			'reupload' => true,
+			'reupload-own' => true,
+		), // T127826
 	),
 	'+simplewiktionary' => array(
 		'rollbacker' => array( 'rollback' => true, ),
@@ -9282,7 +9287,7 @@ $wgConf->settings = array(
 	),
 	'+simplewiki' => array(
 		'bureaucrat' => array( 'rollbacker', 'transwiki', 'patroller' ),
-		'sysop' => array( 'rollbacker', 'flood', 'patroller' ),
+		'sysop' => array( 'rollbacker', 'flood', 'patroller', 'uploader', ), // T127826
 	),
 	'+shwiki' => array(
 		'bureaucrat' => array(
@@ -9973,7 +9978,7 @@ $wgConf->settings = array(
 	),
 	'+simplewiki' => array(
 		'bureaucrat' => array( 'flood', 'rollbacker', 'sysop', 'import', 'transwiki', 'patroller' ),
-		'sysop' => array( 'rollbacker', 'flood', 'patroller' ),
+		'sysop' => array( 'rollbacker', 'flood', 'patroller', 'uploader' ), // T127826
 	),
 	'+simplewiktionary' => array(
 		'bureaucrat' => array( 'sysop' ),
