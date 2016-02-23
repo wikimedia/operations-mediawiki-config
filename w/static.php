@@ -21,7 +21,7 @@
  *
  * StatD metrics:
  *
- * - wmfstatic.success.<cacheMaxAge>.<branchName>
+ * - wmfstatic.success.<responseType>
  * - wmfstatic.notfound
  * - wmfstatic.fallback
  */
@@ -38,9 +38,9 @@ function wmfStaticShowError( $message ) {
  * Stream file from disk to web response
  * Based on StreamFile::stream()
  * @param string $filePath
- * @param int $maxAge Time in seconds to cache successful response
+ * @param string $responseType Cache control for successful repsonse (one of 'short' or 'long')
  */
-function wmfStaticStreamFile( $filePath, $maxAge = 300 ) {
+function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 	$stat = stat( $filePath );
 	if ( !$stat ) {
 		header( 'HTTP/1.1 404 Not Found' );
@@ -61,8 +61,13 @@ function wmfStaticStreamFile( $filePath, $maxAge = 300 ) {
 	}
 	header( 'Last-Modified: ' . wfTimestamp( TS_RFC2822, $stat['mtime'] ) );
 	header( "Content-Type: $ctype" );
-	$maxAge = (int) $maxAge;
-	header( "Cache-Control: public, s-maxage=$maxAge, max-age=$maxAge" );
+	if ( $responseType === 'verified' ) {
+		// 1 year (365 * 24 * 3600) on proxy servers and clients
+		header( 'Cache-Control: public, s-maxage=31536000, max-age=31536000' );
+	} else {
+		// 5 min (5 * 50) on proxy servers and 24 hours (24 * 3600) on clients
+		header( 'Cache-Control: public, s-maxage=300, must-revalidate, max-age=86400' );
+	}
 
 	if ( !empty( $_SERVER['HTTP_IF_MODIFIED_SINCE'] ) ) {
 		$ims = preg_replace( '/;.*$/', '', $_SERVER['HTTP_IF_MODIFIED_SINCE'] );
@@ -106,13 +111,9 @@ function wmfStaticRespond() {
 	}
 	$path = substr( $uriPath, strlen( $urlPrefix ) );
 
-	$cacheLong = 31536000; // 1 year (365 * 24 * 3600)
-	$cacheShort = 300; // 5 minutes (5 * 60)
-
 	// Validation hash
 	$urlHash = isset( $_SERVER['QUERY_STRING'] ) ? $_SERVER['QUERY_STRING'] : false;
 	$fallback = false;
-	$maxAge = $cacheShort;
 	$responseType = 'nohash';
 
 	// Get branch dirs and sort with newest first
@@ -164,11 +165,10 @@ function wmfStaticRespond() {
 				continue;
 			}
 			// Cache hash-validated responses for long
-			$maxAge = $cacheLong;
 			$responseType = 'verified';
 		}
 
-		wmfStaticStreamFile( $filePath, $maxAge );
+		wmfStaticStreamFile( $filePath, $responseType );
 		$stats->increment( "wmfstatic.success.$responseType" );
 		return;
 	}
@@ -181,7 +181,7 @@ function wmfStaticRespond() {
 		return;
 	}
 
-	wmfStaticStreamFile( "$fallback/$path", $maxAge );
+	wmfStaticStreamFile( "$fallback/$path", $responseType );
 	$stats->increment( 'wmfstatic.mismatch' );
 	return;
 }
