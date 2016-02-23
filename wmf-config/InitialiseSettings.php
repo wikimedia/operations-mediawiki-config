@@ -11979,11 +11979,9 @@ $wgConf->settings = array(
 	'testwiki' => true, // Expanding out to testwiki -- Andrew 2009-10-13
 	'enwikinews' => true, // Per T23956 -- Andrew 2009-02-09
 	'enwiktionary' => true, // T25417 -- ariel 2010-16-05
-	'fiwikimedia' => true, // T39778
 	'huwiki' => true, // T24909 -- Andrew 2010-09-06
 	'ptwikibooks' => true, // T26143 -- Andrew 2010-08-16
 	'strategywiki' => true, // Philippe says it's cool -- Andrew 2009-10-13
-	'sewikimedia' => true, // T26377 -- Andrew 2010-08-28
 	'svwikisource' => true, // T25220 -- Andrew 2010-08-28
 	'test2wiki' => true,
 	'wikimania2010wiki' => true, // Erik requested, by mail
@@ -12002,6 +12000,7 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 	'officewiki' => true, // replaced with Flow 2014-11-25
 	'sewikimedia' => true, // T106302, T114277
+	'fiwikimedia' => true,
 ),
 
 'wmgLQTUserControlNamespaces' => array(
