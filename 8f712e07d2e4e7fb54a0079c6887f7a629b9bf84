@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_c821d4ad",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2016-02-23T16:17:36Z",
+      "side": 1,
+      "message": "yes, in fact I just avoided solving possible preceding issues, but this is worth symplifying.\n\nDone",
+      "parentUuid": "2ea41786_dde0cb27",
+      "revId": "8f712e07d2e4e7fb54a0079c6887f7a629b9bf84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_9d9333a6",
         "filename": "wmf-config/LabsServices.php",
         "patchSetId": 4
@@ -30,6 +48,24 @@
       "writtenOn": "2016-02-19T23:14:37Z",
       "side": 1,
       "message": "copy/pasta comment.",
+      "revId": "8f712e07d2e4e7fb54a0079c6887f7a629b9bf84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_23e1ab29",
+        "filename": "wmf-config/LabsServices.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2016-02-23T16:17:36Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2ea41786_9d9333a6",
       "revId": "8f712e07d2e4e7fb54a0079c6887f7a629b9bf84",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
