@@ -13172,6 +13172,7 @@ $wgConf->settings = array(
 'wmgVisualEditorUseSingleEditTab' => array(
 	'default' => false,		# Deploying slowly with community advanced notice
 	'test2wiki' => true,	# T121421
+	'huwiki' => true,		# T126801
 ),
 
 // Whether the wikitext editor should be the default (first-open) editor on SET wikis
