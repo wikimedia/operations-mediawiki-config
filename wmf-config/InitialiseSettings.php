@@ -15579,6 +15579,7 @@ $wgConf->settings = array(
 
 'wmgWikibaseEnableData' => array(
 	'default' => true,
+	'wikiversity' => false,
 ),
 
 'wmgWikibaseEnableArbitraryAccess' => array(
@@ -15618,6 +15619,7 @@ $wgConf->settings = array(
 	'wikibooks' => 'wikibooks',
 	'wikinews' => 'wikinews',
 	'wikiquote' => 'wikiquote',
+	'wikiversity' => 'wikiversity',
 	'wikivoyage' => 'wikivoyage',
 	'wikisource' => 'wikisource',
 	'commonswiki' => 'commons',
