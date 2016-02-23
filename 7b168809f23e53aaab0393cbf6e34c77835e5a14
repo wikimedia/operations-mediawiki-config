@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_379a49be",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 356,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2016-02-23T03:09:37Z",
+      "side": 1,
+      "message": "foreach ( [ \u0027bureaucrat\u0027, \u0027sysop\u0027, \u0027checkuser\u0027, \u0027suppress\u0027 ] as $group ) {\n    $wgPasswordPolicy[\u0027policies\u0027][$group][\u0027MinimalPasswordLength\u0027] \u003d 8;\n    $wgPasswordPolicy[\u0027policies\u0027][$group][\u0027MinimumPasswordLengthToLogin\u0027] \u003d 1;\n    $wgPasswordPolicy[\u0027policies\u0027][$group][\u0027PasswordCannotBePopular\u0027] \u003d 10000;\n}",
+      "revId": "7b168809f23e53aaab0393cbf6e34c77835e5a14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_5797c593",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1306,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2016-02-23T03:09:37Z",
+      "side": 1,
+      "message": "does not match stewards?",
+      "revId": "7b168809f23e53aaab0393cbf6e34c77835e5a14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
