@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_3619e27e",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2016-02-23T23:59:14Z",
+      "side": 1,
+      "message": "Isn\u0027t the array() redundant here, given the patches this is based on (https://gerrit.wikimedia.org/r/#/c/269955/5)?",
+      "revId": "3b11264dfea76ae8577678d1512802c54d7ba7e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
