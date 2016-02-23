@@ -353,16 +353,36 @@ $wgPasswordConfig['pbkdf2']['cost'] = '64000';
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 10;
 } else {
-	// Temporarily set the policy for these roles to the previous WMF setting until
-	// we communicate the change to affected communities.
-	$wgPasswordPolicy['policies']['bureaucrat']['MinimalPasswordLength'] = 1;
-	$wgPasswordPolicy['policies']['sysop']['MinimalPasswordLength'] = 1;
+	// See password policy RFC on meta
+	// [[m:Requests_for_comment/Password_policy_for_users_with_certain_advanced_permissions]]
+	foreach ( array( 'bureaucrat', 'sysop', 'checkuser', 'suppress' ) as $group ) {
+		$wgPasswordPolicy['policies'][$group]['MinimalPasswordLength'] = 8;
+		$wgPasswordPolicy['policies'][$group]['MinimumPasswordLengthToLogin'] = 1;
+		$wgPasswordPolicy['policies'][$group]['PasswordCannotBePopular'] = 10000;
+	}
+
 	$wgPasswordPolicy['policies']['bot']['MinimalPasswordLength'] = 1;
 }
 
-// Temporarily disable PasswordCannotBePopular policies until communicated.
-unset( $wgPasswordPolicy['policies']['bureaucrat']['PasswordCannotBePopular'] );
-unset( $wgPasswordPolicy['policies']['sysop']['PasswordCannotBePopular'] );
+// Enforce password policy when users login on other wikis
+if ( $wmgUseCentralAuth ) {
+	$wgHooks['PasswordPoliciesForUser'][] = function( User $user, array &$effectivePolicy ) {
+		$central = CentralAuthUser::getInstance( $user );
+		if ( $central->exists() && array_intersect(
+			array( 'bureaucrat', 'sysop', 'checkuser', 'suppress' ),
+			$central->getLocalGroups()
+		) ) {
+			$effectivePolicy = UserPasswordPolicy::maxOfPolicies(
+				$effectivePolicy,
+				array(
+					'MinimalPasswordLength' => 8,
+					'MinimumPasswordLengthToLogin' => 1,
+					'PasswordCannotBePopular' => 10000,
+				)
+			);
+		}
+	}
+}
 
 // For global policies, see $wgCentralAuthGlobalPasswordPolicies below
 
@@ -1277,6 +1297,18 @@ if ( $wmgUseCentralAuth ) {
 		'MinimumPasswordLengthToLogin' => 1,
 		'PasswordCannotMatchUsername' => true,
 	);
+
+	// See [[m:Requests_for_comment/Password_policy_for_users_with_certain_advanced_permissions]]
+	foreach ( array( 'global-sysop', 'global-interface-editor', 'wmf-researcher',
+		'new-wikis-importer', 'ombudsman', 'founder' ) as $group
+	) {
+		$wgCentralAuthGlobalPasswordPolicies[$group] = array(
+			'MinimalPasswordLength' => 8,
+			'MinimumPasswordLengthToLogin' => 1,
+			'PasswordCannotMatchUsername' => true,
+			'PasswordCannotBePopular' => 10000,
+		);
+	}
 
 	$wgCentralAuthUseSlaves = true;
 }
