@@ -24,6 +24,7 @@ arwikibooks
 arwikinews
 arwikiquote
 arwikisource
+arwikiversity
 arzwiki
 astwiki
 astwikibooks
@@ -44,11 +45,12 @@ bat_smgwiki
 bawiki
 bawikibooks
 bclwiki
-be_x_oldwiki
+betawikiversity
 bewiki
 bewikibooks
 bewikiquote
 bewikisource
+be_x_oldwiki
 bgwiki
 bgwikibooks
 bgwikinews
@@ -105,6 +107,7 @@ cswikibooks
 cswikinews
 cswikiquote
 cswikisource
+cswikiversity
 cuwiki
 cvwiki
 cvwikibooks
@@ -121,6 +124,7 @@ dewikibooks
 dewikinews
 dewikiquote
 dewikisource
+dewikiversity
 dewikivoyage
 diqwiki
 dsbwiki
@@ -132,6 +136,7 @@ elwikibooks
 elwikinews
 elwikiquote
 elwikisource
+elwikiversity
 elwikivoyage
 emlwiki
 enwiki
@@ -139,6 +144,7 @@ enwikibooks
 enwikinews
 enwikiquote
 enwikisource
+enwikiversity
 enwikivoyage
 eowiki
 eowikibooks
@@ -150,6 +156,7 @@ eswikibooks
 eswikinews
 eswikiquote
 eswikisource
+eswikiversity
 eswikivoyage
 etwiki
 etwikibooks
@@ -172,6 +179,7 @@ fiwikibooks
 fiwikinews
 fiwikiquote
 fiwikisource
+fiwikiversity
 fjwiki
 fowiki
 fowikisource
@@ -182,6 +190,7 @@ frwikibooks
 frwikinews
 frwikiquote
 frwikisource
+frwikiversity
 frwikivoyage
 furwiki
 fywiki
@@ -260,6 +269,7 @@ itwikibooks
 itwikinews
 itwikiquote
 itwikisource
+itwikiversity
 itwikivoyage
 iuwiki
 jawiki
@@ -267,6 +277,7 @@ jawikibooks
 jawikinews
 jawikiquote
 jawikisource
+jawikiversity
 jbowiki
 jvwiki
 kaawiki
@@ -294,6 +305,7 @@ kowikibooks
 kowikinews
 kowikiquote
 kowikisource
+kowikiversity
 krcwiki
 krwiki
 krwikiquote
@@ -438,6 +450,7 @@ ptwikibooks
 ptwikinews
 ptwikiquote
 ptwikisource
+ptwikiversity
 ptwikivoyage
 quwiki
 quwikibooks
@@ -460,6 +473,7 @@ ruwikibooks
 ruwikinews
 ruwikiquote
 ruwikisource
+ruwikiversity
 ruwikivoyage
 rwwiki
 sahwiki
@@ -490,6 +504,7 @@ slwiki
 slwikibooks
 slwikiquote
 slwikisource
+slwikiversity
 smwiki
 snwiki
 sowiki
@@ -515,6 +530,7 @@ svwikibooks
 svwikinews
 svwikiquote
 svwikisource
+svwikiversity
 svwikivoyage
 swwiki
 swwikibooks
@@ -614,12 +630,12 @@ zh_min_nanwiki
 zh_min_nanwikibooks
 zh_min_nanwikiquote
 zh_min_nanwikisource
-zh_yuewiki
 zhwiki
 zhwikibooks
 zhwikinews
 zhwikiquote
 zhwikisource
 zhwikivoyage
+zh_yuewiki
 zuwiki
 zuwikibooks
