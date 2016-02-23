@@ -7162,7 +7162,6 @@ $wgConf->settings = array(
 	// note that account creation is not the only bottleneck
 	'default' => array(),
 	'enwiki' => array(
-		'198.89.127.88', // Wiki Education Foundation dashboard T110235
 		'45.56.98.206',  // Wiki Education Foundation dashboard T126541
 	),
 ),
