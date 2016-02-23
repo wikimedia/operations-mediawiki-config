@@ -13182,7 +13182,7 @@ $wgConf->settings = array(
 
 // Whether the wikitext editor should be the default (first-open) editor on SET wikis
 'wmgVisualEditorSingleEditTabSecondaryEditor' => array(
-	'default' => true,
+	'default' => false,
 ),
 
 // Whether VisualEditor's second tab and section link come after those for wikitext (on non-SET wikis)
