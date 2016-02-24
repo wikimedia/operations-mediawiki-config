@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_a6635f3a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 16030,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2016-02-24T20:32:10Z",
+      "side": 1,
+      "message": "for values that we don\u0027t intend to vary by wiki I like to just explicitly set the value in CirrusSearch-production.php and skip the config variable here.",
+      "revId": "c2e10e9f210a08b39163c518113aead39b7dd9ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
