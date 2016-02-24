@@ -92,12 +92,10 @@ $wgFileBackends[] = array(
 	'wikiId'      => "{$site}-{$lang}",
 	'lockManager' => 'redisLockManager',
 	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-	'backends'    => ( $wgDBname === 'commonswiki' )
-		? array( array( 'template' => 'local-swift-eqiad', 'isMultiMaster' => true ) )
-		: array(
-			array( 'template' => 'local-swift-eqiad', 'isMultiMaster' => true ),
-			array( 'template' => 'local-swift-codfw' )
-		),
+	'backends'    => array(
+		array( 'template' => 'local-swift-eqiad', 'isMultiMaster' => true ),
+		array( 'template' => 'local-swift-codfw' )
+	),
 	'replication' => 'async',
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 );
@@ -109,7 +107,7 @@ $wgFileBackends[] = array(
 	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends'    => array(
 		array( 'template' => 'shared-swift-eqiad', 'isMultiMaster' => true ),
-		#array( 'template' => 'shared-swift-codfw' ),
+		array( 'template' => 'shared-swift-codfw' ),
 	),
 	'replication' => 'async',
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
@@ -119,8 +117,8 @@ $wgFileBackends[] = array(
 	'name'        => 'global-multiwrite',
 	'wikiId'      => "global-data",
 	'lockManager' => 'redisLockManager',
+	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends'    => array(
-		# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 		array( 'template' => 'global-swift-eqiad', 'isMultiMaster' => true ),
 		array( 'template' => 'global-swift-codfw' ),
 	),
