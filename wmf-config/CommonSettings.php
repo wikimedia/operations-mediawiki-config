@@ -146,7 +146,7 @@ if ( defined( 'HHVM_VERSION' ) ) {
 }
 
 $globals = false;
-if ( @filemtime( $filename ) >= filemtime( "$wmfConfigDir/InitialiseSettings.php" ) ) {
+if ( @filemtime( $filename ) >= filemtime( "$wmfConfigDir/." ) ) {
 	$cacheRecord = @file_get_contents( $filename );
 	if ( $cacheRecord !== false ) {
 		$globals = unserialize( $cacheRecord );
