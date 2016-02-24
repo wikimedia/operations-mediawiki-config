@@ -15259,6 +15259,7 @@ $wgConf->settings = array(
 ),
 
 'wmgUseFlow' => array(
+	'default' => false,
 	// This is computed in flow.dblist as all - "a specific list" (nonflow.dblist)
 	// - "all private wikis" (private.dblist) + "private wikis with Flow" (flowprivate.dblist)
 	'flow' => true,
