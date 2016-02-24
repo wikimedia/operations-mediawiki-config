@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_b015d59e",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2677,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-02-24T17:20:19Z",
+      "side": 1,
+      "message": "We have wgCanonicalServer and wgInternalServer for this purpose.",
+      "revId": "ff74f662cd5108a2ec1424febdee661ca93ca39d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
