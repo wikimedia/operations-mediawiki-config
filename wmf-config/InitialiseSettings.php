@@ -13247,6 +13247,10 @@ $wgConf->settings = array(
 	),
 
 	// Wiktionaries
+	'+frwiktionary' => array(
+		100 /* Annexe */ => true, // T127819
+		106 /* Thésaurus */ => true // T127819
+	),
 	'svwiktionary' => array(
 		NS_USER => true // T59356
 	),
