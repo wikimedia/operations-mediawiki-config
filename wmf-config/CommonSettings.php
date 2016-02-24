@@ -2677,7 +2677,7 @@ if ( $wmgUseEventLogging ) {
 		$wgEventLoggingFile = "udp://$wmfUdp2logDest/EventLogging-$wgDBname";
 	} else {
 		// All other wikis reference metawiki.
-		$wgEventLoggingBaseUri = "{$wgServer}/beacon/event";
+		$wgEventLoggingBaseUri = $wgCanonicalServer . '/beacon/event';
 		$wgEventLoggingDBname = 'metawiki';
 		$wgEventLoggingFile = "{$wmfLocalServices['eventlogging']}/EventLogging";
 		$wgEventLoggingSchemaApiUri = 'https://meta.wikimedia.org/w/api.php';
