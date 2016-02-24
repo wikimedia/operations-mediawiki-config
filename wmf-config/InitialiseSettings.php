@@ -16025,6 +16025,11 @@ $wgConf->settings = array(
 	'wikidatawiki' => false,
 ),
 
+// Set the completion scoring method
+'wmgCirrusSearchCompletionDefaultScore' => array(
+	'default' => 'popqual',
+)
+
 // wmgCirrusSearchRecycleCompletionSuggesterIndex @{
 // Recycle suggester indices for small wikis (less than 100MB store size)
 'wmgCirrusSearchRecycleCompletionSuggesterIndex' => array(
