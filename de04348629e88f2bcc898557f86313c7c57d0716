@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_906a19b0",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 326,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-02-24T16:11:47Z",
+      "side": 1,
+      "message": "I\u0027m unsure why this extension loading is changing from wfLoadExtension(\u0027EventBus\u0027) to requiring Capiunto. Please clarify :)",
+      "revId": "de04348629e88f2bcc898557f86313c7c57d0716",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
