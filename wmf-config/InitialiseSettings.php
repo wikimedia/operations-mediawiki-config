@@ -10276,6 +10276,7 @@ $wgConf->settings = array(
 	'hewikisource' => array( 'w', 'wikt', 'q', 'b', 'n' ),
 	'hewikivoyage' => array( 'w', 'wikt', 'b', 'n', 'q', 's', 'commons', 'en', 'de', 'el', 'fr', 'it', 'nl', 'pl', 'pt', 'ro', 'ru', 'sv', 'uk', 'vi' ), // T60527, T61601
 	'hiwiki' => array( 'wikt', 'commons', 'meta', 'species', 'de', 'en', 'en:b', 'en:q', 'en:n', 'en:s', 'en:v', 'es', 'fr', 'ml', 'ne', 'nl', 'ro', 'ru', 'pl', 'pt', 'simple', 'ta' ), // T43757
+	'hiwikiquote' => array( 'w', 'w:en', 'w:sa', 'q:en', 'q:gu', 'q:sa', 'meta', 'mw' ), // T127593
 	'hifwiki' => array( 'incubator', 'commons', 'meta', 'species', 'bh', 'de', 'en', 'en:b', 'en:q', 'en:n', 'en:s', 'en:v', 'el', 'es', 'fa', 'fr', 'hi', 'ml', 'ne', 'nl', 'ro', 'ru', 'pa', 'pl', 'pt', 'simple', 'te', 'ta', 'ur' ), // T99826
 	'hsbwiktionary' => array( 'incubator', 'w' ),
 	'huwikinews' => array( 'incubator' ),
