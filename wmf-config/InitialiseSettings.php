@@ -13348,6 +13348,7 @@ $wgConf->settings = array(
 // opt-out).
 'wmgVisualEditorTransitionDefault' => array(
 	'default' => false,
+	'dewiki' => true,
 	'enwiki' => true,
 ),
 
