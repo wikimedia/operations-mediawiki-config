@@ -365,12 +365,12 @@ function wmfLabsSettings() {
 		),
 
 		// ----------- BetaFeatures start ----------
-		'wmgUseBetaFeatures' => array(
+		'wgUseBetaFeatures' => array(
 			'default' => true,
 		),
 
 		// Enable all Beta Features in Beta Labs, even if not in production whitelist
-		'wmgBetaFeaturesWhitelist' => array(
+		'wgBetaFeaturesWhitelist' => array(
 			'default' => false,
 		),
 
