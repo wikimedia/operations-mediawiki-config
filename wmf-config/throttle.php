@@ -45,9 +45,17 @@ $wmgThrottlingExceptions[] = array( // T126939 - Wikipedia Edit-a-thon at Do Spa
 );
 
 $wmgThrottlingExceptions[] = array( // T127599 - Wikipedia Workshop for or.wikipedia
-	'from'   => '2016-02-26T03:00 +0:00',
-	'to'     => '2016-02-26T07:30 +0:00',
+	'from'   => '2016-02-25T05:30 +0:00',
+	'to'     => '2016-02-25T09:30 +0:00',
 	'IP'     => '14.139.212.103',
+	'dbname' => array( 'orwiki' ),
+	'value'  => 60 // 50 expected
+);
+
+$wmgThrottlingExceptions[] = array( // T127599 - Wikipedia Workshop for or.wikipedia
+	'from'   => '2016-02-25T05:30 +0:00',
+	'to'     => '2016-02-25T09:30 +0:00',
+	'IP'     => '192.168.62.62',
 	'dbname' => array( 'orwiki' ),
 	'value'  => 60 // 50 expected
 );
