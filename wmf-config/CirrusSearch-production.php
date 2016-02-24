@@ -92,6 +92,10 @@ $wgCirrusSearchDropDelayedJobsAfter = array(
 
 // Enable completion suggester (beta)
 $wgCirrusSearchUseCompletionSuggester = $wmgCirrusSearchUseCompletionSuggester;
+
+// Set the scoring method
+$wgCirrusSearchCompletionDefaultScore = 'popqual';
+
 $wgCirrusSearchRecycleCompletionSuggesterIndex = $wmgCirrusSearchRecycleCompletionSuggesterIndex;
 
 // repoint morelike queries to codfw
