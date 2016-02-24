@@ -92,7 +92,7 @@ $wgFileBackends[] = array(
 	'wikiId'      => "{$site}-{$lang}",
 	'lockManager' => 'redisLockManager',
 	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
-	'backends'    => in_array( $wgDBname, $wmfSwiftBigWikis )
+	'backends'    => ( $wgDBname === 'commonswiki' )
 		? array( array( 'template' => 'local-swift-eqiad', 'isMultiMaster' => true ) )
 		: array(
 			array( 'template' => 'local-swift-eqiad', 'isMultiMaster' => true ),
