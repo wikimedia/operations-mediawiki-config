@@ -15171,8 +15171,26 @@ $wgConf->settings = array(
 	'ckbwiki' => '//ckb.wikipedia.org/wiki/%DB%8C%D8%A7%D8%B1%D9%85%DB%95%D8%AA%DB%8C:%D8%A6%D8%A7%DA%AF%D8%A7%D8%AF%D8%A7%D8%B1%DB%8C',
 ),
 'wmgEchoSiteNotificationIconUrl' => array(
-	'default' => false, // Placeholder icon
-	'wikipedia' => '//upload.wikimedia.org/wikipedia/commons/f/ff/Wikipedia_Echo_notification_icon.png', // https://commons.wikimedia.org/wiki/File:Wikipedia_Echo_notification_icon.png
+	'default' => false,
+
+	'wikibooks' => '/static/images/project-logos/notifications/30px-Notification-icon-Wikibooks-logo.svg.png',
+	'wikinews' => '/static/images/project-logos/notifications/30px-Notification-icon-Wikinews-logo.svg.png',
+	'wikipedia' => '/static/images/project-logos/notifications/30px-Notification-icon-Wikipedia-logo.svg.png',
+	'wikiquote' => '/static/images/project-logos/notifications/30px-Notification-icon-Wikiquote.svg.png',
+	'wikisource' => '/static/images/project-logos/notifications/30px-Notification-icon-Wikisource-logo.svg.png',
+	'wikiversity' => '/static/images/project-logos/notifications/30px-Notification-icon-Wikiversity-logo.svg.png',
+	'wikivoyage' => '/static/images/project-logos/notifications/30px-Notification-icon-Wikivoyage-logo.svg.png',
+	'wiktionary' => '/static/images/project-logos/notifications/30px-Notification-icon-Wiktionary-logo.svg.png',
+
+	'commonswiki' => '/static/images/project-logos/notifications/30px-Notification-icon-Commons-logo.svg.png',
+	'foundationwiki' => '/static/images/project-logos/notifications/Wikimedia-logo.svg/30px-Wikimedia-logo.svg.png',
+	'incubatorwiki' => '/static/images/project-logos/notifications/30px-Notification-icon-Incubator-logo.svg.png',
+	'labswiki' => '/static/images/project-logos/notifications/30px-Wikimedia_labs_logo.svg.png',
+	'mediawikiwiki' => '/static/images/project-logos/notifications/30px-Notification-icon-MediaWiki-logo.svg.png',
+	'metawiki' => '/static/images/project-logos/notifications/30px-Notification-icon-Meta-logo.svg.png',
+	'specieswiki' => '/static/images/project-logos/notifications/30px-Notification-icon-Wikispecies-logo.svg.png',
+	'wikidatawiki' => '/static/images/project-logos/notifications/30px-Notification-icon-Wikidata-logo.svg.png',
+	'testwikidatawiki' => '/static/images/project-logos/notifications/30px-Notification-icon-Wikidata-logo.svg.png',
 ),
 'wmgEchoUseCrossWikiBetaFeature' => array(
 	'default' => false,
