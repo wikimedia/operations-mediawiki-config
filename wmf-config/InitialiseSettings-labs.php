@@ -606,8 +606,18 @@ function wmfLabsSettings() {
 			'wikipedia' => true, // T127661
 		),
 		'wgOresModels' => array(
-			'default' => array( 'damaging', 'reverted', 'goodfaith' ),
-			'wikipedia' => array( 'damaging' ), // T127661
+			'default' => array(
+				'damaging' => true,
+				'reverted' => true,
+				'goodfaith' => true,
+				'wp10' => false,
+			),
+			'wikipedia' => array(
+				'damaging' => true,
+				'reverted' => false,
+				'goodfaith' => false,
+				'wp10' => false,
+			), // T127661
 		),
 		'wgOresDamagingThresholds' => array(
 			'default' => array( 'hard' => 0.7, 'soft'=> 0.5 ),
