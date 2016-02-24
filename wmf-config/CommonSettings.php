@@ -102,6 +102,7 @@ $wmfUdp2logDest = $wmfLocalServices['udp2log'];
 require( "$wmfConfigDir/wgConf.php" );
 function wmfLoadInitialiseSettings( $conf ) {
 	global $wmfConfigDir;
+	global $wmfAllServices, $wmfLocalServices, $wmfMasterServices;
 	require( "$wmfConfigDir/InitialiseSettings.php" );
 }
 
