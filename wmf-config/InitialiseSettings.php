@@ -13773,6 +13773,10 @@ $wgConf->settings = array(
 
 'wmgUseGraphWithNamespace' => array(
 	'default' => false,
+),
+
+'wmgUseGraphWithJsonNamespace' => array(
+	'default' => false,
 
 	// Legacy Graph deployments, with a Graph: namespace.
 	// Yurik would like new wikis only use <graph>...</graph>.

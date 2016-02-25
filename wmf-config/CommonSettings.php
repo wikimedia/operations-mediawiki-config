@@ -2951,6 +2951,9 @@ if ( $wmgUseGraph ) {
 			'nsName' => 'Graph',
 			'isLocal' => true,
 		);
+	}
+
+	if ( $wmgUseGraphWithJsonNamespace ) {
 		$wgJsonConfigModels['Json.JsonConfig'] = null;
 		$wgJsonConfigs['Json.JsonConfig'] = array(
 			'namespace' => 486,
