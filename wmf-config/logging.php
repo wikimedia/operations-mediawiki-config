@@ -58,6 +58,23 @@ $wmgMonologProcessors = array(
 	'uid' => array(
 		'class' => '\\Monolog\\Processor\\UidProcessor',
 	),
+	'xff-ip' => array(
+		'factory' => function () {
+			/**
+			 * Overwrite the 'ip' key set by WebProcessor with a version that
+			 * honors XFF headers if we can. T114700
+			 */
+			return function( array $record ) {
+				global $wgRequest;
+				try {
+					$record['ip'] = $wgRequest->getIP();
+				} catch ( Exception $ignored ) {
+					// no-op
+				}
+				return $record;
+			};
+		},
+	),
 	'web' => array(
 		'class' => '\\Monolog\\Processor\\WebProcessor',
 	),
