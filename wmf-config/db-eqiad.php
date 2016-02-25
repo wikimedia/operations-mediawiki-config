@@ -100,10 +100,10 @@ $wgLBFactoryConf = array(
 	),
 	's2' => array(
 		'db1018' => 0,   # 1.4TB  64GB, master
-#		'db1024' => 0,   # 1.4TB  64GB
-#		'db1021' => 0,   # 1.4TB  64GB, vslow, dump -- Replication failed(?) Depooled - Hoo
+		'db1024' => 1,   # 1.4TB  64GB  -- pooled with low load for testing 
+		'db1021' => 1,   # 1.4TB  64GB, vslow, dump -- pooled with low load for testing
 		'db1036' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-		'db1054' => 0,   # 2.8TB  96GB, vslow, dump
+		'db1054' => 0,   # 2.8TB  96GB, api
 		'db1060' => 200, # 2.8TB  96GB, api
 		'db1063' => 400, # 2.8TB 128GB
 		'db1067' => 500, # 2.8TB 160GB
@@ -203,13 +203,13 @@ $wgLBFactoryConf = array(
 	),
 	's2' => array(
 		'vslow' => array(
-			'db1054' => 1,
+			'db1021' => 1,
 		),
 		'dump' => array(
-			'db1054' => 1,
+			'db1021' => 1,
 		),
 		'api' => array(
-#			'db1054' => 1,
+			'db1054' => 1,
 			'db1060' => 1,
 		),
 		'watchlist' => array(
