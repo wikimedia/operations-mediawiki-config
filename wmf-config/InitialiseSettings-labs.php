@@ -167,6 +167,10 @@ function wmfLabsSettings() {
 		//'-wgDebugLogGroups' => array(),
 		'-wgJobLogFile' => array(),
 
+		// No IRC feed T128006
+		'-wmgUseRC2UDP' => array(
+			'default' => false,
+		),
 		// T62013, T58758
 		'-wmgRC2UDPPrefix' => array(
 			'default' => false,
