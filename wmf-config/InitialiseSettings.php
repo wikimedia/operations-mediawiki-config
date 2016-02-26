@@ -15130,7 +15130,7 @@ $wgConf->settings = array(
 	'default' => true,
 ),
 'wmgEchoEmailFooterAddress' => array(
-	'default' => 'Wikimedia Foundation, 149 New Montgomery St., 3rd Fl., San Francisco, CA 94105, USA',
+	'default' => 'Wikimedia Foundation, 149 New Montgomery St., 6th Fl., San Francisco, CA 94105, USA',
 ),
 'wmgEchoHelpPage' => array(
 	'default' => '//www.mediawiki.org/wiki/Special:MyLanguage/Help:Notifications',
