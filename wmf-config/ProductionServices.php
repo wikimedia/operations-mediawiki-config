@@ -45,6 +45,7 @@ $wmfAllServices['codfw']['logstash'] = $wmfAllServices['eqiad']['logstash'];
 
 ### Analytics Kafka cluster
 $wmfAllServices['eqiad']['kafka'] = array(
+	'10.64.5.12:9092',   // kafka1012.eqiad.wmnet
 	'10.64.5.13:9092',   // kafka1013.eqiad.wmnet
 	'10.64.36.114:9092', // kafka1014.eqiad.wmnet
 	'10.64.53.10:9092',  // kafka1018.eqiad.wmnet
