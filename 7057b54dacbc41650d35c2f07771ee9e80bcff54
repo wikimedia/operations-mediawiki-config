@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_78bf32f7",
+        "filename": "wmf-config/ProductionServices.php",
+        "patchSetId": 17
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 55
+      },
+      "writtenOn": "2016-02-26T17:15:44Z",
+      "side": 1,
+      "message": "Is it at all possible to get this info out of puppet/hiera?",
+      "revId": "7057b54dacbc41650d35c2f07771ee9e80bcff54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
