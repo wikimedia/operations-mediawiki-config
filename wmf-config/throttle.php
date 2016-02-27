@@ -18,47 +18,15 @@ $wmgThrottlingExceptions = array();
 #  'dbname' => a $wgDBname or array of dbnames to compare to
 #             (eg. enwiki, metawiki, frwikibooks, eswikiversity)
 #             (default: any project)
+# Example:
+# $wmgThrottlingExceptions[] = array(
+#	'from'   => '2015-01-01T00:00 +0:00',
+#	'to'     => '2016-02-01T00:00 +0:00',
+#	'IP'     => '123.456.78.90',
+#	'dbname' => 'xxwiki',
+#	'value'  => xx
+# );
 ## Add throttling definitions below.
-
-$wmgThrottlingExceptions[] = array( // T110352 (long term)
-	'from'   => '2015-08-29T00:00 +0:00',
-	'to'     => '2016-02-28T00:00 +0:00',
-	'IP'     => '218.248.16.20',
-	'dbname' => 'tawiki',
-	'value'  => 50
-);
-
-$wmgThrottlingExceptions[] = array( // Wikipedia:Wikimedia Deutschland/WPFF Berlinale2016
-	'from'   => '2016-02-15T10:50 +0:00',
-	'to'     => '2016-02-15T22:00 +0:00',
-	'IP'     => '80.153.119.142', // WMDE guest wlan
-	'dbname' => array( 'dewiki', 'wikidatawiki', 'commonswiki' ),
-	'value'  => 50
-);
-
-$wmgThrottlingExceptions[] = array( // T126939 - Wikipedia Edit-a-thon at Do Space in Omaha, NE, USA
-	'from'   => '2016-02-20T04:00 +0:00',
-	'to'     => '2016-02-20T09:00 +0:00',
-	'IP'     => '97.107.199.77',
-	'dbname' => array( 'enwiki', 'commonswiki' ),
-	'value'  => 60 // 50 expected
-);
-
-$wmgThrottlingExceptions[] = array( // T127599 - Wikipedia Workshop for or.wikipedia
-	'from'   => '2016-02-25T05:30 +0:00',
-	'to'     => '2016-02-25T09:30 +0:00',
-	'IP'     => '14.139.212.103',
-	'dbname' => array( 'orwiki' ),
-	'value'  => 60 // 50 expected
-);
-
-$wmgThrottlingExceptions[] = array( // T127599 - Wikipedia Workshop for or.wikipedia
-	'from'   => '2016-02-25T05:30 +0:00',
-	'to'     => '2016-02-25T09:30 +0:00',
-	'IP'     => '192.168.62.62',
-	'dbname' => array( 'orwiki' ),
-	'value'  => 60 // 50 expected
-);
 
 ## Add throttling definitions above.
 
