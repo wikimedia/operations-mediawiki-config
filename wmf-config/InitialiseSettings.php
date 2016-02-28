@@ -11934,7 +11934,7 @@ $wgConf->settings = array(
 		'*.davidabian.com',                 // Trusted user website, used by Museo del Romanticismo - T121383
 		'davidabian.com',
 		'webapi.aucklandmuseum.com',        // Auckland Museum - T122995
-		'*.ethz.ch',                        // ETH Library  - T123109
+		'www.e-pics.ethz.ch',               // ETH Library  - T123109
 		'*.museumvictoria.com.au',          // Victoria State (AU) Museum, requested in T125387
 	),
 ),
