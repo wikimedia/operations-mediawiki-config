@@ -2501,6 +2501,9 @@ if ( $wmgUseEcho ) {
 		// Explicitly set this to 'extension1', because some wikis have $wgEchoCluster set to false
 		$wgEchoSharedTrackingCluster = 'extension1';
 	}
+
+	// Temporarily disable thank-you-edit notifications (T128249)
+	$wgEchoDefaultNotificationTypes['thank-you-edit']['web'] = false;
 }
 
 if ( $wmgUseThanks ) {
