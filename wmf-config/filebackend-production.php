@@ -131,11 +131,12 @@ $wgFileBackends[] = array(
 
 // Lock manager config must use the master datacenter
 // @TODO: configure as a switch
+// Hosts de-pooled for maintenance:
+// 'rdb1' => '10.64.0.180',
 $wgLockManagers[] = array(
 	'name'         => 'redisLockManager',
 	'class'        => 'RedisLockManager',
 	'lockServers'  => array(
-		'rdb1' => '10.64.0.180',
 		'rdb2' => '10.64.0.181',
 		'rdb3' => '10.64.0.182'
 	),
