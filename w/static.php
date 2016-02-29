@@ -21,9 +21,9 @@
  *
  * StatD metrics:
  *
- * - wmfstatic.success.<responseType>
+ * - wmfstatic.success.<responseType (nohash, verified)>
  * - wmfstatic.notfound
- * - wmfstatic.fallback
+ * - wmfstatic.mismatch
  */
 define( 'MW_NO_SESSION', 'warn' );
 require_once './MWVersion.php';
