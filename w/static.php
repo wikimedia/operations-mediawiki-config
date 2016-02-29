@@ -21,7 +21,7 @@
  *
  * StatD metrics:
  *
- * - wmfstatic.success.<responseType (nohash, verified)>
+ * - wmfstatic.success.<responseType (nohash, verified, unknown)>
  * - wmfstatic.notfound
  * - wmfstatic.mismatch
  */
@@ -61,12 +61,13 @@ function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 	}
 	header( 'Last-Modified: ' . wfTimestamp( TS_RFC2822, $stat['mtime'] ) );
 	header( "Content-Type: $ctype" );
-	if ( $responseType === 'verified' ) {
-		// 1 year (365 * 24 * 3600) on proxy servers and clients
-		header( 'Cache-Control: public, s-maxage=31536000, max-age=31536000' );
-	} else {
+	if ( $responseType === 'nohash' ) {
 		// 5 min (5 * 50) on proxy servers and 24 hours (24 * 3600) on clients
 		header( 'Cache-Control: public, s-maxage=300, must-revalidate, max-age=86400' );
+	} else {
+		// Response type "verified" or "unknown"
+		// 1 year (365 * 24 * 3600) on proxy servers and clients
+		header( 'Cache-Control: public, s-maxage=31536000, max-age=31536000' );
 	}
 
 	if ( !empty( $_SERVER['HTTP_IF_MODIFIED_SINCE'] ) ) {
@@ -154,18 +155,25 @@ function wmfStaticRespond() {
 		}
 
 		if ( $urlHash ) {
-			// Set fallback to the newest existing version.
-			if ( !$fallback ) {
-				$fallback = $branchDir;
+			if ( strlen( $urlHash ) !== 5 ) {
+				// Garbage query string. Give same response as for requests with
+				// no validation hash (nohash), except with a longer max-age.
+				$responseType = 'unknown';
+			} else {
+				// Set fallback to the newest existing version.
+				if ( !$fallback ) {
+					$fallback = $branchDir;
+				}
+
+				// Match OutputPage::transformFilePath()
+				$fileHash = substr( md5_file( $filePath ), 0, 5 );
+				if ( $fileHash !== $urlHash ) {
+					// Hash mismatch, continue search in older branches
+					continue;
+				}
+				// Cache hash-validated responses for long
+				$responseType = 'verified';
 			}
-			// Match OutputPage::transformFilePath()
-			$fileHash = substr( md5_file( $filePath ), 0, 5 );
-			if ( $fileHash !== $urlHash ) {
-				// Hash mismatch, continue search in older branches
-				continue;
-			}
-			// Cache hash-validated responses for long
-			$responseType = 'verified';
 		}
 
 		wmfStaticStreamFile( $filePath, $responseType );
