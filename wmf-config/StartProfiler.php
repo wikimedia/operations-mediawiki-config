@@ -178,7 +178,7 @@ if (
 
 		Xhgui_Saver::factory( [
 			'save.handler' => 'mongodb',
-			'db.host'      => 'mongodb://hafnium.eqiad.wmnet:27017',
+			'db.host'      => 'mongodb://tungsten.eqiad.wmnet:27017',
 			'db.db'        => 'xhprof',
 			'db.options'   => [],
 		] )->save( $data );
