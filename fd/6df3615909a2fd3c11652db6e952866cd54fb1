@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+1: Ori.livneh <ori@wikimedia.org>
+Code-Review+2: Elukey <ltoscano@wikimedia.org>
+Submitted-by: Elukey <ltoscano@wikimedia.org>
+Submitted-at: Mon, 29 Feb 2016 18:57:24 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/273949
+Project: operations/mediawiki-config
+Branch: refs/heads/master
