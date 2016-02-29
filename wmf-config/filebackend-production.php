@@ -141,7 +141,7 @@ $wgLockManagers[] = array(
 		'rdb3' => '10.64.0.182'
 	),
 	'srvsByBucket' => array(
-		0 => array( 'rdb1', 'rdb2', 'rdb3' )
+		0 => array( 'rdb2', 'rdb3' )
 	),
 	'redisConfig'  => array(
 		'connectTimeout' => 2,
