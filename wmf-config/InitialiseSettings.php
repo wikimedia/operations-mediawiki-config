@@ -7387,6 +7387,13 @@ $wgConf->settings = array(
 	'+cawikinews' => array(
 		'flood' => array( 'bot' => true ), // T98576
 	),
+	'+cewiki' => array(
+		'rollbacker' => array( 'rollback' => true ), // T128205
+		'suppressredirect' => array( // T128205
+			'suppressredirect' => true,
+			'move-categorypages' => true,
+		),
+	),
 	'+checkuserwiki' => array( // T30781
 		'autoconfirmed' => array(
 			'autoconfirmed' => false,
@@ -8849,6 +8856,9 @@ $wgConf->settings = array(
 	'+cawikinews' => array(
 		'sysop' => array( 'flood' ), // T98576
 	),
+	'+cewiki' => array(
+		'sysop' => array( 'rollbacker', 'suppressredirect' ), // T128205
+	),
 	'+checkuserwiki' => array(
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', ),
 	),
@@ -9515,6 +9525,9 @@ $wgConf->settings = array(
 	),
 	'+cawikinews' => array(
 		'sysop' => array( 'flood' ), // T98576
+	),
+	'+cewiki' => array(
+		'sysop' => array( 'rollbacker', 'suppressredirect' ), // T128205
 	),
 	'+checkuserwiki' => array(
 		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', 'bureaucrat', ),
