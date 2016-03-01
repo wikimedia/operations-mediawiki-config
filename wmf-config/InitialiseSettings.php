@@ -13169,6 +13169,7 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,	# T121421
+	'enwiki' => true,		# T128478
 	'huwiki' => true,		# T126801
 	'plwiki' => true,		# T128477
 ),
