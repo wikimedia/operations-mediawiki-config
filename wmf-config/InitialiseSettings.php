@@ -13166,6 +13166,8 @@ $wgConf->settings = array(
 // Whether VisualEditor should re-use the edit tab (and section link) or insert its own; "SET"
 'wmgVisualEditorUseSingleEditTab' => array(
 	'default' => false,		# Deploying slowly with community advanced notice
+	'mediawikiwiki' => true,
+	'testwiki' => true,
 	'test2wiki' => true,	# T121421
 	'huwiki' => true,		# T126801
 ),
