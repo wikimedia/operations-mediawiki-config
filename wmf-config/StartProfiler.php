@@ -158,8 +158,8 @@ if (
 
 		// Strip everything from the query string except 'action=' param:
 		preg_match( '/action=[^&]+/', $_SERVER['REQUEST_URI'], $matches );
-		$repl = $matches ? '?' . $matches[0] : '';
-		$url = preg_replace( '/\?.*/', $repl, $_SERVER['REQUEST_URI'] );
+		$qs = $matches ? '?' . $matches[0] : '';
+		$url = $_SERVER['SCRIPT_NAME'] . $qs;
 
 		// Re-insert scrubbed URL as REQUEST_URL:
 		$server['REQUEST_URI'] = $url;
