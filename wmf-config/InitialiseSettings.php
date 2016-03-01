@@ -10842,6 +10842,12 @@ $wgConf->settings = array(
 	'zhwiki' => array( 118, 119 ), // draft and draft talk - T91223
 ),
 
+'+wgDefaultUserOptions' => array(
+	'+hewiki' => array(
+		'echo-subscriptions-web-emailuser' => 1
+	),
+),
+
 'wgRevisionCacheExpiry' => array(
 	'default' => 86400 * 7,  // set back to 0 if this breaks
 	'testwiki' => 3600,
