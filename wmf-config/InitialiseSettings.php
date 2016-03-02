@@ -16257,6 +16257,18 @@ $wgConf->settings = array(
 	'votewiki' => false,
 ),
 
+'wgCiteStoreReferencesData' => array(
+	'default' => false,
+	// T126802
+	'jawiki' => true,
+),
+
+'wgCiteCacheRawReferencesOnParse' => array(
+	'default' => false,
+	// T126802
+	'jawiki' => true,
+),
+
 'wmgUseCiteThisPage' => array(
 	'default' => true,
 	'loginwiki' => false,
