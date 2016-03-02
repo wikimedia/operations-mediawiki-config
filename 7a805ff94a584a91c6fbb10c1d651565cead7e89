@@ -16,6 +16,24 @@
       "revId": "7a805ff94a584a91c6fbb10c1d651565cead7e89",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_0ba8061c",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 105,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2016-03-02T22:42:14Z",
+      "side": 1,
+      "message": "The default is P373 (as this is a Wikimedia specific feature), but we could (only) explicitly null it for commons. I like it better to be explicit, though.",
+      "parentUuid": "2ea41786_abf8d246",
+      "revId": "7a805ff94a584a91c6fbb10c1d651565cead7e89",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
