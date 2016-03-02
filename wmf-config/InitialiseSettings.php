@@ -11351,7 +11351,7 @@ $wgConf->settings = array(
 
 'wgReferrerPolicy' => array(
 	'default' => 'origin-when-cross-origin',
-	'private' => false,
+	'private' => 'no-referrer',
 ),
 
 'wgUserEmailUseReplyTo' => array(
