@@ -2463,8 +2463,6 @@ if ( $wmgUseEcho ) {
 		$wgJobTypeConf['MWEchoNotificationEmailBundleJob'] = array( 'checkDelay' => true ) + $wgJobTypeConf['default'];
 	}
 
-	// Eventlogging for Schema:Echo
-	$wgEchoConfig['eventlogging']['Echo']['enabled'] = true;
 	// Eventlogging for Schema:EchoMail
 	$wgEchoConfig['eventlogging']['EchoMail']['enabled'] = true;
 	// Eventlogging for Schema:EchoInteraction
