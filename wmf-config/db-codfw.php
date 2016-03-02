@@ -347,14 +347,14 @@ $wgLBFactoryConf = array(
 	'cluster24' => array(
 		'10.64.32.184' => 0, # es1015, master
 		'10.192.0.28'  => 1, # es2006
-#		'10.192.0.27'  => 3, # es2005 - Depooled for migration T127330 - volans
-#		'10.192.0.29'  => 3, # es2007 - Depooled for migration T127330 - volans
+		'10.192.0.27'  => 3, # es2005
+		'10.192.0.29'  => 3, # es2007
 	),
 	# es3
 	'cluster25' => array(
 		'10.64.16.187' => 0, # es1019, master
 		'10.192.16.29' => 1, # es2008
-#		'10.192.16.30' => 3, # es2009 - Depooled for migration T127330 - volans
+		'10.192.16.30' => 3, # es2009
 #		'10.192.16.31' => 3, # es2010 - depooled because of T127769 - volans
 	),
 	# ExtensionStore shard1 - initially for AFTv5
