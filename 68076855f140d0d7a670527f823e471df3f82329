@@ -51,6 +51,24 @@
       "revId": "68076855f140d0d7a670527f823e471df3f82329",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_71b95f28",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 373,
+      "author": {
+        "id": 99
+      },
+      "writtenOn": "2016-03-03T20:31:36Z",
+      "side": 1,
+      "message": "I don\u0027t think there\u0027s any caching. The version of CentralAuth I have doesn\u0027t seem to cache this (That said, an in process cache of this stuff seems like a good idea...)",
+      "parentUuid": "2ea41786_f16eafc3",
+      "revId": "68076855f140d0d7a670527f823e471df3f82329",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
