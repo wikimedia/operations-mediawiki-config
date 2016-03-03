@@ -13184,6 +13184,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 	'test2wiki' => true,	# T121421
 	'huwiki' => true,		# T126801
+	'officewiki' => true,	# Per legoktm's orders, 2016-03-03
 ),
 
 // Whether the wikitext editor should be the default (first-open) editor on SET wikis
