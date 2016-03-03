@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_4e34c2f1",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 99
+      },
+      "writtenOn": "2016-03-03T20:19:47Z",
+      "side": 1,
+      "message": "the suppress group on wikimedia wikis is named \"oversight\". Suppress is sometimes used as a MW default, but Wikimedia wikis don\u0027t use it.\n\nThere\u0027s also a local version of the steward group on all wikis. I don\u0027t entirely understand the purpose of such groups, but it should probably be included too.",
+      "revId": "68076855f140d0d7a670527f823e471df3f82329",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_2e538644",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 373,
+      "author": {
+        "id": 99
+      },
+      "writtenOn": "2016-03-03T20:19:47Z",
+      "side": 1,
+      "message": "So in the worst case, this means logging in can involve doing 2400 queries? That\u0027s kind of sketch, but I guess its ok since the average case is much much better, and logging in doesn\u0027t happen very often. Still not exactly ideal",
+      "revId": "68076855f140d0d7a670527f823e471df3f82329",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
