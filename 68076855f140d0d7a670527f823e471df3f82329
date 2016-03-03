@@ -33,6 +33,24 @@
       "revId": "68076855f140d0d7a670527f823e471df3f82329",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_f16eafc3",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 373,
+      "author": {
+        "id": 204
+      },
+      "writtenOn": "2016-03-03T20:27:29Z",
+      "side": 1,
+      "message": "Yeah, it\u0027s not great. We call getLocalGroups() on line 1369 too, so in theory, only one will do the work and the other will just used the cached version of the group list. So this particular use of it shouldn\u0027t add additional queries overall.",
+      "parentUuid": "2ea41786_2e538644",
+      "revId": "68076855f140d0d7a670527f823e471df3f82329",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
