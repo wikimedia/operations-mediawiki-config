@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_23108603",
+        "filename": "wmf-config/jobqueue-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2016-03-03T10:28:08Z",
+      "side": 1,
+      "message": "remove this",
+      "revId": "22a52a0907cd5ddd9ca282e958296e6190f0cf93",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ea41786_c3f652d4",
+        "filename": "wmf-config/jobqueue-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2016-03-03T10:28:08Z",
+      "side": 1,
+      "message": "comments should IMO start at the start of the line",
+      "revId": "22a52a0907cd5ddd9ca282e958296e6190f0cf93",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
