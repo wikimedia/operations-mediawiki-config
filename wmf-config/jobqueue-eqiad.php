@@ -39,7 +39,7 @@ $wgJobTypeConf['default'] = array(
 			) + $wmgRedisQueueBaseConfig,
 
 		# rdb2
-/* Server under maintenance
+
 		'rdb2-6379' => array(
 				'redisServer' => 'rdb1003.eqiad.wmnet:6379', # master
 				#'redisServer' => 'rdb1004.eqiad.wmnet:6379', # slave
@@ -52,7 +52,7 @@ $wgJobTypeConf['default'] = array(
 				'redisServer' => 'rdb1003.eqiad.wmnet:6381', # master
 				#'redisServer' => 'rdb1004.eqiad.wmnet:6381', # slave
 			) + $wmgRedisQueueBaseConfig,
-*/
+
 		# rdb3
 
 		'rdb3-6379' => array(
@@ -103,12 +103,11 @@ $wgJobTypeConf['default'] = array(
 	'maxPartitionsTry' => 5 // always covers 2+ servers
 );
 // Note: on server failure, this should be changed to any other redis server
-// Servers under maintenance:
-// 'rdb1003.eqiad.wmnet:6378', // fallback
 $wgJobQueueAggregator = array(
 	'class' => 'JobQueueAggregatorRedis',
 	'redisServers' => array(
 		'rdb1001.eqiad.wmnet:6378', // preferred
+		'rdb1003.eqiad.wmnet:6378', // fallback
 		'rdb1005.eqiad.wmnet:6378', // fallback
 		'rdb1007.eqiad.wmnet:6378', // fallback
 	),
