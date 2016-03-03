@@ -355,6 +355,13 @@ $wgGadgetsCaching = false;
 
 $wgMessageCacheType = CACHE_ACCEL;
 
+$wgPasswordConfig['pbkdf2'] = array(
+	'class' => 'Pbkdf2Password',
+	'algo' => 'sha512',
+	'cost' => '128000',
+	'length' => '64',
+);
+
 // Test of new import source configuration on labs cluster
 $wgImportSources = false;
 include( "$wmfConfigDir/import.php" );
