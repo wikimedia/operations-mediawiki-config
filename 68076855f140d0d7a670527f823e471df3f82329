@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2ea41786_11ba6b6d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 358,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2016-03-03T21:41:30Z",
+      "side": 1,
+      "message": "local steward group is used for the ability to make local userrights changes - interwiki userrights only allows groups set up on the wiki you\u0027re running it from",
+      "parentUuid": "2ea41786_4e34c2f1",
+      "revId": "68076855f140d0d7a670527f823e471df3f82329",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ea41786_2e538644",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 4
