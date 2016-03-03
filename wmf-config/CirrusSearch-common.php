@@ -138,6 +138,9 @@ $wgHooks['CirrusSearchMappingConfig'][] = function( array &$config, $mappingConf
 	);
 };
 
+// Set the scoring method
+$wgCirrusSearchCompletionDefaultScore = 'popqual';
+
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
