@@ -885,6 +885,7 @@ $wgCopyrightIcon = '<a href="//wikimediafoundation.org/">' .
 # :SEARCH:
 
 # All wikis are special and get Cirrus :)
+# Must come *AFTER* PoolCounterSettings.php
 require_once( "$IP/extensions/Elastica/Elastica.php" );
 require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
 include( "$wmfConfigDir/CirrusSearch-common.php" );
