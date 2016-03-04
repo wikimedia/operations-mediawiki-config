@@ -15,10 +15,11 @@ $wmfAllServices['eqiad'] = array(
 	'udp2log' => 'deployment-fluorine.eqiad.wmflabs:8420',
 	'statsd' => 'labmon1001.eqiad.wmnet',
 	'search' => array(
-		'deployment-elastic05',
-		'deployment-elastic06',
-		'deployment-elastic07',
-		'deployment-elastic08',
+		// These MUST match the installed SSL certs
+		'deployment-elastic05.deployment-prep.eqiad.wmflabs',
+		'deployment-elastic06.deployment-prep.eqiad.wmflabs',
+		'deployment-elastic07.deployment-prep.eqiad.wmflabs',
+		'deployment-elastic08.deployment-prep.eqiad.wmflabs',
 	),
 	'ocg' => 'http://deployment-pdf01:8000',
 	'urldownloader' => 'http://deployment-urldownloader.deployment-prep.eqiad.wmflabs:8080',

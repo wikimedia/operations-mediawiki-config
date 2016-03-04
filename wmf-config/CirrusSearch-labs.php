@@ -6,7 +6,17 @@
 # It should be loaded AFTER CirrusSearch-common.php
 
 $wgCirrusSearchClusters = array(
-	'eqiad' => $wmfAllServices['eqiad']['search']
+	'eqiad' => array_map( function ( $host ) {
+		return array(
+			'transport' => 'Https',
+			'port' => '9243',
+			'host' => $host,
+			'curl' => array(
+				// We might not need to specify the cert explicitly,
+				// CURLOPT_CAINFO => '/etc/ssl/certs/wmf-labs.pem',
+			),
+		);
+	}, $wmfAllServices['eqiad']['search'] ),
 );
 
 if ( $wgDBname == 'enwiki' ) {
