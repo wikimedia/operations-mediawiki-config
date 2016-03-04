@@ -106,6 +106,14 @@ function wmfLabsSettings() {
 			'default' => ''
 		),
 
+		'wgCiteStoreReferencesData' => array(
+			'default' => true,
+		),
+
+		'wgCiteCacheRawReferencesOnParse' => array(
+			'default' => true,
+		),
+
 		'-wgUploadDirectory' => array(
 			'default'      => '/data/project/upload7/$site/$lang',
 			'private'      => '/data/project/upload7/private/$lang',
