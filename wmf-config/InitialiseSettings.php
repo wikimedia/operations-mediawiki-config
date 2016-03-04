@@ -1934,6 +1934,7 @@ $wgConf->settings = array(
 	'vowiktionary' => 'Vükivödabuk',
 	'wg_enwiki' => 'Wikipedia Working Group',
 	'wikimaniateamwiki' => 'WikimaniaTeam',
+	'wuuwiki' => '维基百科', // T128354
 	'xmfwiki' => 'ვიკიპედია',
 	'yiwiki' => 'װיקיפּעדיע',
 	'yiwikisource' => 'װיקיביבליאָטעק',
@@ -2517,6 +2518,7 @@ $wgConf->settings = array(
 	'ukwiktionary' => 'Обговорення_Вікісловника',
 	'ukwikinews' => 'Обговорення_Вікіновин', // T50843
 	'vepwiki' => 'Paginad_Vikipedii',
+	'wuuwiki' => '维基百科', // T128354
 	'xmfwiki' => 'ვიკიპედია_სხუნუა',
 ),
 # @} end of wgMetaNamespaceTalk
