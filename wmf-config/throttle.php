@@ -28,6 +28,14 @@ $wmgThrottlingExceptions = array();
 # );
 ## Add throttling definitions below.
 
+$wmgThrottlingExceptions[] = array( // T128847 - Ateneo de Manila University workshops
+	'from'   => '2016-03-08T00:00 +8:00',
+	'to'     => '2016-03-08T23:59 +8:00',
+	'IP'     => array( '202.125.102.33', '121.58.232.35' ),
+	'dbname' => array( 'tlwiki', 'enwiki', 'commonswiki' ),
+	'value'  => 100 // 60-80 expected
+);
+
 ## Add throttling definitions above.
 
 /**
