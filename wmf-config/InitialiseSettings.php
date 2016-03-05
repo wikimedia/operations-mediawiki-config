@@ -2419,7 +2419,6 @@ $wgConf->settings = array(
 	'vowikibooks' => 'Vükibuks',
 	'vowiktionary' => 'Vükivödabuk',
 	'wikimaniateamwiki' => 'WikimaniaTeam',
-	'wuuwiki' => '维基百科', // T128354
 	'xmfwiki' => 'ვიკიპედია',
 	'yiwiki' => 'װיקיפּעדיע',
 	'yiwikisource' => 'װיקיביבליאָטעק',
@@ -3795,12 +3794,13 @@ $wgConf->settings = array(
 		'WP' => NS_PROJECT,
 		'T' => NS_TEMPLATE,
 
-		// Wu aliases - T124389
+		// Wu aliases - T124389, T128354
 		'媒体' => NS_MEDIA,
 		'特殊' => NS_SPECIAL,
 		'讨论' => NS_TALK,
 		'用户' => NS_USER,
 		'用户讨论' => NS_USER_TALK,
+		'维基百科' => NS_PROJECT,
 		'文件' => NS_FILE,
 		'模板' => NS_TEMPLATE,
 		'模板讨论' => NS_TEMPLATE_TALK,
