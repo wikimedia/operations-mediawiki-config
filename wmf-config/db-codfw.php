@@ -14,10 +14,13 @@ $wmgParserCacheDBs = array(
 );
 
 $wmgOldExtTemplate = array(
-#	'10.192.0.25'  => 1, # es2001 - Depooled to migrate data to es2011 T127330 - volans
-#	'10.192.0.26'  => 1, # es2002 - Depooled to migrate data to es2012 T127330 - volans
-	'10.192.16.27' => 1, # es2003
-#	'10.192.16.28' => 1, # es2004 - Depooled to migrate data to es2013 T127330 - volans
+	'10.192.0.25'   => 1, # es2001
+	'10.192.0.26'   => 1, # es2002
+	'10.192.16.27'  => 1, # es2003
+	'10.192.16.28'  => 1, # es2004
+#	'10.192.16.171' => 1, # es2011 - New one, not yet in production - T127330 - volans
+#	'10.192.32.129' => 1, # es2012 - New one, not yet in production - T127330 - volans
+#	'10.192.48.40'  => 1, # es2013 - New one, not yet in production - T127330 - volans
 );
 
 $wgLBFactoryConf = array(
