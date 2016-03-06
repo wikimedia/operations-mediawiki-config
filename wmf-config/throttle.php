@@ -20,13 +20,14 @@ $wmgThrottlingExceptions = array();
 #             (default: any project)
 # Example:
 # $wmgThrottlingExceptions[] = array(
-#	'from'   => '2015-01-01T00:00 +0:00',
+#	'from'   => '2016-01-01T00:00 +0:00',
 #	'to'     => '2016-02-01T00:00 +0:00',
 #	'IP'     => '123.456.78.90',
-#	'dbname' => 'xxwiki',
+#	'dbname' => array ( 'xxwiki', etc. ),
 #	'value'  => xx
 # );
 ## Add throttling definitions below.
+
 
 $wmgThrottlingExceptions[] = array( // T128847 - Ateneo de Manila University workshops
 	'from'   => '2016-03-10T00:00 +8:00',
@@ -34,6 +35,14 @@ $wmgThrottlingExceptions[] = array( // T128847 - Ateneo de Manila University wor
 	'IP'     => array( '202.125.102.33', '121.58.232.35' ),
 	'dbname' => array( 'tlwiki', 'enwiki', 'commonswiki' ),
 	'value'  => 100 // 60-80 expected
+);
+
+$wmgThrottlingExceptions[] = array( // T129018 - Workshop for cawiki and frwiki
+	'from'   => '2016-03-16T00:00 +0:00',
+	'to'     => '2016-03-16T23:59 +0:00',
+	'IP'     => array ( '194.167.137.246', '194.167.137.11', '194.167.137.29' ),
+	'dbname' => array ( 'frwiki', 'cawiki' ),
+	'value'  => 70 // 30-60 expected
 );
 
 ## Add throttling definitions above.
