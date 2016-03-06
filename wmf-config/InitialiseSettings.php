@@ -7396,6 +7396,35 @@ $wgConf->settings = array(
 			'move-categorypages' => true,
 		),
 	),
+	'+chapcomwiki' => array( // T66122
+		'*' => array (
+			'translate' => false,
+			'translate-manage' => false,
+			'translate-import' => false,
+			'pagetranslation' => false,
+			'translate-messagereview' => false,
+			'translate-proofr' => false,
+			'translate-groupreview' => false,
+		),
+		'user' => array (
+			'translate' => false,
+			'translate-manage' => false,
+			'translate-import' => false,
+			'pagetranslation' => false,
+			'translate-messagereview' => false,
+			'translate-proofr' => false,
+			'translate-groupreview' => false,
+		),
+		'translationadmin' => array (
+			'translate' => true,
+			'translate-manage' => true,
+			'translate-import' => true,
+			'pagetranslation' => true,
+			'translate-messagereview' => true,
+			'translate-proofr' => true,
+			'translate-groupreview' => true,
+		),
+	),
 	'+checkuserwiki' => array( // T30781
 		'autoconfirmed' => array(
 			'autoconfirmed' => false,
@@ -14708,6 +14737,7 @@ $wgConf->settings = array(
 	'bewikimedia' => true, // T39391
 	'brwikimedia' => true, // T46054
 	'cawikimedia' => true, // T75394
+	'chapcomwiki' => true, // T66122
 	'collabwiki' => true,
 	'commonswiki' => true, // T50620
 	'incubatorwiki' => true, // T36213
@@ -14777,6 +14807,7 @@ $wgConf->settings = array(
 
 'wmgUseTranslationMemory' => array(
 	'default' => true,
+	'chapcomwiki' => false, // T66122
 	'otrs_wikiwiki' => false, // T63297
 ),
 'wmgTranslateESIndex' => array(
