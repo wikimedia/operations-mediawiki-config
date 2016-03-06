@@ -2007,6 +2007,7 @@ if ( $wmgUseVisualEditor ) {
 	// Tab configuration
 	if ( $wmgVisualEditorUseSingleEditTab ) {
 		$wgVisualEditorUseSingleEditTab = true;
+		$wgVisualEditorSingleEditTabSwitchTime = $wmgVisualEditorSingleEditTabSwitchTime;
 		if ( $wmgVisualEditorSingleEditTabSecondaryEditor ) {
 			$wgDefaultUserOptions['visualeditor-editor'] = 'wikitext';
 		} else {

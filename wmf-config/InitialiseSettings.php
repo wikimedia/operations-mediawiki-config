@@ -13189,6 +13189,17 @@ $wgConf->settings = array(
 	'officewiki' => true,	# Per legoktm's orders, 2016-03-03
 ),
 
+// Time that above variable was switched on, used to determine whether we should prompt user about
+// preference on first load
+'wmgVisualEditorSingleEditTabSwitchTime' => array(
+	'default' => 20160101000000,
+	'mediawikiwiki' => 20160203000000,
+	'testwiki' => 20160203000000,
+	'test2wiki' => 20151215000000,
+	'huwiki' => 20160223000000,
+	'officewiki' => 20160303000000,
+),
+
 // Whether the wikitext editor should be the default (first-open) editor on SET wikis
 'wmgVisualEditorSingleEditTabSecondaryEditor' => array(
 	'default' => false,
