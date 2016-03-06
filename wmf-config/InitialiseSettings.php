@@ -6975,6 +6975,11 @@ $wgConf->settings = [
 	'ukwiki' => false, // T35273
 ],
 
+'wgUseFilePatrol' => array(
+	'default' => true,
+	'huwiki' => false, // T21241
+),
+
 # wgNoFollow... @{
 'wgNoFollowLinks' => [
 	'default' => true,
