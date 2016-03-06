@@ -20,13 +20,21 @@ $wmgThrottlingExceptions = array();
 #             (default: any project)
 # Example:
 # $wmgThrottlingExceptions[] = array(
-#	'from'   => '2015-01-01T00:00 +0:00',
+#	'from'   => '2016-01-01T00:00 +0:00',
 #	'to'     => '2016-02-01T00:00 +0:00',
 #	'IP'     => '123.456.78.90',
-#	'dbname' => 'xxwiki',
+#	'dbname' => array ( 'xxwiki', etc. ),
 #	'value'  => xx
 # );
 ## Add throttling definitions below.
+
+$wmgThrottlingExceptions[] = array( // T129018
+	'from'   => '2016-03-16T00:00 +0:00',
+	'to'     => '2016-03-16T23:59 +0:00',
+	'IP'     => '194.167.137.246',
+	'dbname' => array ( 'frwiki', 'cawiki', ),
+	'value'  => 70 // 30-60 expected
+);
 
 ## Add throttling definitions above.
 
