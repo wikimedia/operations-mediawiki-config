@@ -14708,6 +14708,7 @@ $wgConf->settings = array(
 	'bewikimedia' => true, // T39391
 	'brwikimedia' => true, // T46054
 	'cawikimedia' => true, // T75394
+	'chapcomwiki' => true, // T66122
 	'collabwiki' => true,
 	'commonswiki' => true, // T50620
 	'incubatorwiki' => true, // T36213
@@ -14777,6 +14778,7 @@ $wgConf->settings = array(
 
 'wmgUseTranslationMemory' => array(
 	'default' => true,
+	'chapcomwiki' => false, // T66122
 	'otrs_wikiwiki' => false, // T63297
 ),
 'wmgTranslateESIndex' => array(
