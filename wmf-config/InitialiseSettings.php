@@ -6511,6 +6511,8 @@ $wgConf->settings = array(
 	'hewikivoyage' => array(
 		108 => 'ספר', // Book
 		109 => 'שיחת_ספר', // Book talk
+		110 => 'מפה', // Map
+		111 => 'שיחת_מפה',
 	),
 	'itwikivoyage' => array(
 		100 => 'Portale',
