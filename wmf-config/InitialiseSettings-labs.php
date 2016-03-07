@@ -627,5 +627,10 @@ function wmfLabsSettings() {
 			'default' => array( 'hard' => 0.7, 'soft'=> 0.5 ),
 			'wikipedia' => array( 'hard' => 0.8, 'soft'=> 0.7 ), // T127661
 		),
+		// test completion suggester default everywhere in preperation
+		// for rollout to production
+		'wmfCirrusSearchCompletionSuggesterBetaFeature' => array(
+			'default' => false,
+		),
 	);
 } # wmflLabsSettings()
