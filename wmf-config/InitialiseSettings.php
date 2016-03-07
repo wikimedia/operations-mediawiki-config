@@ -16612,7 +16612,10 @@ $wgConf->settings = array(
 
 'wmgUseKartographer' => array(
 	'default' => false,
+	'wikivoyage' => true,
 	'testwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
 ),
 
 );
