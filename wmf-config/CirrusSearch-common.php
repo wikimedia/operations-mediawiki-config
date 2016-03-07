@@ -141,6 +141,25 @@ $wgHooks['CirrusSearchMappingConfig'][] = function( array &$config, $mappingConf
 // Set the scoring method
 $wgCirrusSearchCompletionDefaultScore = 'popqual';
 
+// PoolCounter needs to be adjusted to account for additional latency when default search
+// is pointed at a remote datacenter. Currently this makes the assumption that it will either
+// be eqiad or codfw which have ~40ms latency between them. Multiples are chosen using
+// (p75 + cross dc latency)/p75
+if ( $wgCirrusSearchDefaultCluster !== $wmfDatacenter ) {
+	// prefix has p75 of ~30ms
+	if ( isset( $wgPoolCounterConf[ 'CirrusSearch-Prefix' ] ) ) {
+		$wgPoolCounterConf['CirrusSearch-Prefix']['workers'] *= 2;
+	}
+	// namespace has a p75 of ~15ms
+	if ( isset( $wgPoolCounterConf['CirrusSearch-NamespaceLookup' ] ) ) {
+		$wgPoolCounterConf['CirrusSearch-NamespaceLookup']['workers'] *= 3;
+	}
+	// completion has p75 of ~30ms
+	if ( isset( $wgPoolCounterConf['CirrusSearch-Completion'] ) ) {
+		$wgPoolCounterConf['CirrusSearch-Completion'] *= 2;
+	}
+}
+
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
