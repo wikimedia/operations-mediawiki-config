@@ -16,6 +16,24 @@
       "revId": "95b25e478b8eec4e6f78fc59718b932ab0037672",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_7abd6816",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2016-03-07T23:12:20Z",
+      "side": 1,
+      "message": "When we\u0027re talking about kartography, vikiwoyage is all appropriate.",
+      "parentUuid": "0e2f53b6_9aa4ac06",
+      "revId": "95b25e478b8eec4e6f78fc59718b932ab0037672",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
