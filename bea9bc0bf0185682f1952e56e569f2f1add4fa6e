@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_b90a6522",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2016-03-07T16:12:58Z",
+      "side": 1,
+      "message": "Per bug, switched to range.",
+      "revId": "bea9bc0bf0185682f1952e56e569f2f1add4fa6e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
