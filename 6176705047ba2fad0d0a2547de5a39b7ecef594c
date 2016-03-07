@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_6e0134b9",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-03-07T11:18:29Z",
+      "side": 1,
+      "message": "Normaly I think the coding standard would not set a second comma here? \u0027dbname\u0027 \u003d\u003e array ( \u0027frwiki\u0027, \u0027cawiki\u0027),",
+      "revId": "6176705047ba2fad0d0a2547de5a39b7ecef594c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
