@@ -24,6 +24,13 @@ $wgPoolCounterConf = array(
 		'workers' => 432,
 		'maxqueue' => 600,
 	),
+	// Super common and mostly fast, replaces Prefix (eventually)
+	'CirrusSearch-Completion' => array(
+		'class' => 'PoolCounter_Client',
+		'timeout' => 15,
+		'workers' => 432,
+		'maxqueue' => 600,
+	),
 	// Regex searches are much heavier then regular searches so we limit the
 	// concurrent number.
 	'CirrusSearch-Regex' => array(
