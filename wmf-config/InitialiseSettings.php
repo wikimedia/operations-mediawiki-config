@@ -16610,6 +16610,11 @@ $wgConf->settings = array(
 	'testwikidatawiki' => true,
 ),
 
+'wmgUseKartographer' => array(
+	'default' => false,
+	'testwiki' => true,
+),
+
 );
 
 

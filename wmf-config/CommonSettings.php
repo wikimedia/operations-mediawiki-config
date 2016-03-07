@@ -3105,6 +3105,10 @@ if ( $wmgUseCapiunto ) {
 	require_once "$IP/extensions/Capiunto/Capiunto.php";
 }
 
+if ( $wmgUseKartographer ) {
+	wfLoadExtension( 'Kartographer' );
+}
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
