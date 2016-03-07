@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_d980094e",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-03-07T16:22:47Z",
+      "side": 1,
+      "message": "Do we really need an array for just one value?",
+      "revId": "3c7105312f5b2acaf4690a13f2e60e8f7c7da302",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
