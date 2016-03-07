@@ -89,9 +89,9 @@ $wgJobTypeConf['default'] = array(
 			'rdb1-6379' => 50,
 			'rdb1-6380' => 50,
 			'rdb1-6381' => 50,
-			'rdb2-6379' => 50,
-			'rdb2-6380' => 50,
-			'rdb2-6381' => 50,
+//			'rdb2-6379' => 50, Host removed from the pool for maintenance
+//			'rdb2-6380' => 50,
+//			'rdb2-6381' => 50,
 			'rdb3-6379' => 50,
 			'rdb3-6380' => 50,
 			'rdb3-6381' => 50,
@@ -107,7 +107,7 @@ $wgJobQueueAggregator = array(
 	'class' => 'JobQueueAggregatorRedis',
 	'redisServers' => array(
 		'rdb1001.eqiad.wmnet:6378', // preferred
-		'rdb1003.eqiad.wmnet:6378', // fallback
+//		'rdb1003.eqiad.wmnet:6378', // fallback - Host removed from the pool for maintenance
 		'rdb1005.eqiad.wmnet:6378', // fallback
 		'rdb1007.eqiad.wmnet:6378', // fallback
 	),
