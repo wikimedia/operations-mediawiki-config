@@ -160,6 +160,11 @@ if ( $wgCirrusSearchDefaultCluster !== $wmfDatacenter ) {
 	}
 }
 
+// Enable completion suggester (beta)
+$wgCirrusSearchUseCompletionSuggester = $wmgCirrusSearchUseCompletionSuggester;
+$wgCirrusSearchCompletionSuggesterBetaFeature = $wmgCirrusSearchCompletionSuggesterBetaFeature;
+
+
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php

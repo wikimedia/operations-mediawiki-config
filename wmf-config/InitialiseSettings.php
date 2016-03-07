@@ -16048,6 +16048,13 @@ $wgConf->settings = array(
 	'wikidatawiki' => false,
 ),
 
+// Should completion be a beta feature, rather than default?
+'wmgCirrusSearchCompletionSuggesterBetaFeature' => array(
+	'default' => true,
+	'testwiki' => false,
+	'test2wiki' => false,
+),
+
 // wmgCirrusSearchRecycleCompletionSuggesterIndex @{
 // Recycle suggester indices for small wikis (less than 100MB store size)
 'wmgCirrusSearchRecycleCompletionSuggesterIndex' => array(
