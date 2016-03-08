@@ -211,7 +211,7 @@ if ( $wmfRealm === 'labs' ) {
 }
 
 # Disallow web request DB transactions slower than this
-$wgMaxUserDBWriteDuration = 6.0;
+$wgMaxUserDBWriteDuration = 5.0;
 
 ini_set( 'memory_limit', $wmgMemoryLimit );
 
