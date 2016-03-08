@@ -90,9 +90,6 @@ $wgCirrusSearchDropDelayedJobsAfter = array(
 	'labsearch' => 10 * 60, // ten minutes
 );
 
-// Enable completion suggester (beta)
-$wgCirrusSearchUseCompletionSuggester = $wmgCirrusSearchUseCompletionSuggester;
-
 $wgCirrusSearchRecycleCompletionSuggesterIndex = $wmgCirrusSearchRecycleCompletionSuggesterIndex;
 
 // repoint morelike queries to codfw

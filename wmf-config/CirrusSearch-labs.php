@@ -79,4 +79,3 @@ $wgCirrusSearchWikiToNameMap = array(
     'zh' => 'zhwiki',
 );
 
-$wgCirrusSearchUseCompletionSuggester = true;
