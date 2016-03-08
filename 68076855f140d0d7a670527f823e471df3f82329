@@ -105,6 +105,24 @@
       "revId": "68076855f140d0d7a670527f823e471df3f82329",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_e701d4ba",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 373,
+      "author": {
+        "id": 204
+      },
+      "writtenOn": "2016-03-08T19:50:58Z",
+      "side": 1,
+      "message": "Between keeping the CentralAuthUser object in the loadedUsers cache, and CentralAuthUser::queryAttached() (which getLocalGroups uses) keeping $this-\u003emAttachedInfo around, then we should only query all local wikis once. We can be more aggressive caching, if it starts to be a problem.",
+      "parentUuid": "2ea41786_71b95f28",
+      "revId": "68076855f140d0d7a670527f823e471df3f82329",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
