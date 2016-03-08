@@ -13410,6 +13410,9 @@ $wgConf->settings = array(
 		'https://blog.wikimedia.org/c/technology/feed/',
 		'https://blog.wikimedia.org/c/technology/mediawiki/feed/',
 		'https://git.wikimedia.org/feed/mediawiki/extensions/Translate.git',
+		// Feeds included on WMDE Engineering pages:
+		'https://planet.wikimedia.de/atom.php',
+		'https://sourcecode.berlin/feed/',
 	),
 ),
 
