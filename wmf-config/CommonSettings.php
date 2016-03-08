@@ -346,7 +346,12 @@ if ( $wgDBname === 'labtestwiki' ) {
 // Use PBKDF2 for password hashing (T70766)
 $wgPasswordDefault = 'pbkdf2';
 // This needs to be increased as allowable by server performance
-$wgPasswordConfig['pbkdf2']['cost'] = '64000';
+$wgPasswordConfig['pbkdf2'] = array(
+	'class' => 'Pbkdf2Password',
+	'algo' => 'sha512',
+	'cost' => '128000',
+	'length' => '64',
+);
 
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 10;
