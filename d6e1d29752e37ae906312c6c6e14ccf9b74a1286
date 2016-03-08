@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_eb6a48b0",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1630,
+      "author": {
+        "id": 92
+      },
+      "writtenOn": "2016-03-08T09:24:39Z",
+      "side": 1,
+      "message": "With https://gerrit.wikimedia.org/r/#/c/227361 merged, this line can probably be removed once that\u0027s been deployed to mediawiki.org.",
+      "revId": "d6e1d29752e37ae906312c6c6e14ccf9b74a1286",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
