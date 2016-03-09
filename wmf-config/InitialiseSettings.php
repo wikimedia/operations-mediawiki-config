@@ -11963,6 +11963,7 @@ $wgConf->settings = array(
 		'webapi.aucklandmuseum.com',        // Auckland Museum - T122995
 		'*.e-pics.ethz.ch',                 // ETH Library  - T123109
 		'*.museumvictoria.com.au',          // Victoria State (AU) Museum, requested in T125387
+		'pixabay.com',                      // Pixbay: Free high quality images
 	),
 ),
 
