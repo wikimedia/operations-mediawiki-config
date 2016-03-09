@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_4a3d1cb8",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 197,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-09T19:55:36Z",
+      "side": 0,
+      "message": "This one seems to work fine still? \n\n\u003e db1010.eqiad.wmnet has address 10.64.0.14",
+      "revId": "e57c9ddeb6ff8782c9a8b542d59af37b8ff54395",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
