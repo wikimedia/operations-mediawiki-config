@@ -9,6 +9,7 @@
 // the MediaWiki config to direct traffic there.
 $wgJobTypeConf['default'] = array(
 	'class'               => 'JobQueueFederated',
+	// Do NOT remove entries from here if they are still present in 'partitionsBySection'
 	'configByPartition'   => array(
 		'rdb1' => array(
 			'class'       => 'JobQueueRedis',
@@ -34,6 +35,7 @@ $wgJobTypeConf['default'] = array(
 		),
 	),
 	'sectionsByWiki'      => array(), // default
+	// Weights for partitions in use: use this to depool redis masters
 	'partitionsBySection' => array(
 		'default' => array( 'rdb1' => 50, 'rdb2' => 50 ),
 	)
