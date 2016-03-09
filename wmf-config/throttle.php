@@ -37,6 +37,14 @@ $wmgThrottlingExceptions[] = array( // T128847 - Ateneo de Manila University wor
 	'value'  => 100 // 60-80 expected
 );
 
+$wmgThrottlingExceptions[] = array( // T129342 - Wikipedia while at Women of the World Festival
+	'from'   => '2016-03-13T11:00 +0:00',
+	'to'     => '2016-03-13T13:00 +0:00',
+	'IP'     => array( '5.148.129.61' ),
+	'dbname' => array( 'enwiki' ),
+	'value'  => 30 // 20 expected
+);
+
 $wmgThrottlingExceptions[] = array( // T129018 - Workshop for cawiki and frwiki
 	'from'   => '2016-03-16T00:00 +0:00',
 	'to'     => '2016-03-16T23:59 +0:00',
