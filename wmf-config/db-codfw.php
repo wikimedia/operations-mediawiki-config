@@ -187,17 +187,9 @@ $wgLBFactoryConf = array(
 # it just breaks the site horribly.
 'hostsByName' => array(
 	'db1001' => '10.64.0.5', #do not remove or comment out
-	'db1002' => '10.64.0.6', #do not remove or comment out
-	'db1003' => '10.64.0.7', #do not remove or comment out
-	'db1004' => '10.64.0.8', #do not remove or comment out
-	'db1005' => '10.64.0.9', #do not remove or comment out
-	'db1006' => '10.64.0.10', #do not remove or comment out
-	'db1007' => '10.64.0.11', #do not remove or comment out
 	'db1009' => '10.64.0.13', #do not remove or comment out
-	'db1010' => '10.64.0.14', #do not remove or comment out
 	'db1011' => '10.64.0.15', #do not remove or comment out
 	'db1015' => '10.64.0.19', #do not remove or comment out
-	'db1017' => '10.64.16.6', #do not remove or comment out
 	'db1018' => '10.64.16.7', #do not remove or comment out
 	'db1019' => '10.64.16.8', #do not remove or comment out
 	'db1020' => '10.64.16.9', #do not remove or comment out
@@ -358,7 +350,7 @@ $wgLBFactoryConf = array(
 	),
 	# es3
 	'cluster25' => array(
-		'10.64.16.187'  => 0, # es1019, master
+		'10.64.48.116'  => 0, # es1019, master
 		'10.192.16.172' => 1, # es2018, codfw local master
 		'10.192.16.30'  => 1, # es2009
 		'10.192.16.29'  => 3, # es2008
