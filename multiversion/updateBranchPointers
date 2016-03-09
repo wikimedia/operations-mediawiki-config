@@ -16,14 +16,14 @@
  *   --all: update symlinks for all currently deployed branches
  */
 error_reporting( E_ALL );
-require_once( __DIR__ . '/MWWikiversions.php' );
-require_once( __DIR__ . '/defines.php' );
+require_once __DIR__ . '/MWWikiversions.php';
+require_once __DIR__ . '/defines.php';
 
 function isMain() {
 	return basename( __FILE__ ) === basename( $_SERVER['SCRIPT_FILENAME'] );
 }
 
-function updateBranchPointers( $dryRun = false, $all = false ) {
+function updateBranchPointers( $dryRun = false ) {
 	$branchDirs = MWWikiversions::getAvailableBranchDirs();
 
 	if ( !$branchDirs ) {
@@ -33,95 +33,17 @@ function updateBranchPointers( $dryRun = false, $all = false ) {
 
 	// Default sort is lexographical which incorrectly sorts e.g. [1.23wmf9, 1.23wmf10]
 	usort( $branchDirs, 'version_compare' );
-	$branches = array();
-	if ( $all ) {
-		foreach ( $branchDirs as $target ) {
-			$dir = explode( '-', basename( $target ) );
-			$dir = array_pop( $dir );
-			$branches[$dir] = $target;
-		}
-	}
-
-	$branches['current'] = array_pop( $branchDirs );
+	$current = array_pop( $branchDirs );
 
 	// Symlink common/php to the current branch using a relative path so that
 	// the symlink works from both MEDIAWIKI_STAGING_DIR and
 	// MEDIAWIKI_DEPLOYMENT_DIR
-	$phpLinkTarget = substr(
-		$branches['current'],
-		strlen( MEDIAWIKI_DEPLOYMENT_DIR ) + 1
-	);
+	$phpLinkTarget = substr( $current, strlen( MEDIAWIKI_DEPLOYMENT_DIR ) + 1 );
 	updateSymlink( MEDIAWIKI_STAGING_DIR . '/php', $phpLinkTarget, $dryRun );
-
-	foreach( $branches as $branch => $target ) {
-		updateBranch( $dryRun, '/w/static', $branch, $target );
-	}
 }
 
-/**
- * @param bool $dryRun
- * @param string $prefix Subdir of MEDIAWIKI_STAGING_DIR to update
- * @param string $branch WMF release branch to point at (eg 1.26wmf16)
- * @param string $target Full path under MEDIAWIKI_DEPLOYMENT_DIR of branch
- */
-function updateBranch( $dryRun, $prefix, $branch, $target ) {
-	echo "Updating $branch branch pointer...\n";
-
-	$parent = MEDIAWIKI_STAGING_DIR . "$prefix/$branch";
-
-	if ( !$dryRun && !file_exists( $parent ) && !mkdir( $parent, 0775 ) ) {
-		fwrite( STDERR, __FUNCTION__ . ": $parent does not exist and could not be created.\n" );
-		exit( 1 );
-	}
-
-	foreach( array( 'skins', 'extensions', 'resources' ) as $child ) {
-		$link = $parent . '/' . $child;
-		$dest = $target . '/' . $child;
-		updateSymlink( $link, $dest, $dryRun );
-	}
-	echo "\n";
-}
-
-/**
- * @param string $link
- * @param string $dest
- * @param bool $dryRun
- */
-function updateSymlink( $link, $dest, $dryRun ) {
-	// Change pwd to MEDIAWIKI_STAGING_DIR so that relative paths can be verified
-	chdir( MEDIAWIKI_STAGING_DIR );
-
-	if ( !file_exists( $dest ) ) {
-		fwrite( STDERR, __FUNCTION__ . ": link target $dest does not exist.\n" );
-		exit( 1 );
-	}
-
-	if ( file_exists( $link ) ) {
-		if ( realpath( $link ) === realpath( $dest ) ) {
-			echo "$link is already up-to-date.\n";
-			return;
-		}
-
-		if ( !is_link( $link ) ) {
-			fwrite( STDERR, __FUNCTION__ . ": $link exists and is not a symbolic link.\n" );
-			exit( 1 );
-		}
-
-		if ( !$dryRun && !unlink( $link ) ) {
-			fwrite( STDERR, __FUNCTION__ . ": failed to unlink $link\n" );
-			exit( 1 );
-		}
-	}
-
-	if ( !$dryRun && !symlink( $dest, $link ) ) {
-		fwrite( STDERR, __FUNCTION__ . ": failed to create $link\n" );
-		exit( 1 );
-	}
-	echo "$link => $dest\n";
-}
 
 if ( isMain() ) {
 	$dryRun = in_array( '--dry-run', $argv, true );
-	$all = in_array('--all', $argv);
-	updateBranchPointers( $dryRun, $all );
+	updateBranchPointers( $dryRun );
 }
