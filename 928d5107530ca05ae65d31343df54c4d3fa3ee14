@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_ef0a4223",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-09T18:29:07Z",
+      "side": 1,
+      "message": "This IP exists but points to es1012.eqiad.wmnet.\n\ndb1003.eqiad.wmnet doesn\u0027t resolve.",
+      "revId": "928d5107530ca05ae65d31343df54c4d3fa3ee14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_af003a05",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 381,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-09T18:29:07Z",
+      "side": 1,
+      "message": "This IP exists but points to es1011.eqiad.wmnet.\n\ndb1002.eqiad.wmnet doesn\u0027t resolve.",
+      "revId": "928d5107530ca05ae65d31343df54c4d3fa3ee14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_2f0c2a3d",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 382,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-09T18:29:07Z",
+      "side": 1,
+      "message": "This IP exists but points to ms-be1019.eqiad.wmnet.\n\ndb1004 doesn\u0027t resolve.",
+      "revId": "928d5107530ca05ae65d31343df54c4d3fa3ee14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_6f16324f",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 383,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-09T18:29:07Z",
+      "side": 1,
+      "message": "IP 10.64.0.9 could not be found.\n\ndb1005.eqiad.wmnet doesn\u0027t resolve.",
+      "revId": "928d5107530ca05ae65d31343df54c4d3fa3ee14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_2f3a6ac0",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 384,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-09T18:29:07Z",
+      "side": 1,
+      "message": "IP exists but points to oresrdb1002.eqiad.wmnet.\n\ndb1006.eqiad.wmnet doesn\u0027t resolve.",
+      "revId": "928d5107530ca05ae65d31343df54c4d3fa3ee14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_4f640ee2",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 385,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-09T18:29:07Z",
+      "side": 1,
+      "message": "IP exists but points to kafka1001.eqiad.wmnet.\n\ndb1007.eqiad.wmnet doesn\u0027t resolve.",
+      "revId": "928d5107530ca05ae65d31343df54c4d3fa3ee14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_cf9f7eb8",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 390,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-09T18:29:07Z",
+      "side": 1,
+      "message": "IP exists but points to graphite1002.eqiad.wmnet.\n\ndb1017.eqiad.wmnet doesn\u0027t resolve.",
+      "revId": "928d5107530ca05ae65d31343df54c4d3fa3ee14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2f53b6_8f94568f",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 552,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-09T18:29:07Z",
+      "side": 1,
+      "message": "This IP exists but points to es1014.eqiad.wmnet.\n\nes1019.eqiad.wmnet has address 10.64.48.116",
+      "revId": "928d5107530ca05ae65d31343df54c4d3fa3ee14",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
