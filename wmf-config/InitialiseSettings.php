@@ -15914,14 +15914,6 @@ $wgConf->settings = array(
 
 'wmgCirrusSearchWriteClusters' => array(
 	'default' => array( 'eqiad', 'codfw' ),
-	'enwiki' => array( 'eqiad', 'codfw', 'labsearch' ),
-	'dewiki' => array( 'eqiad', 'codfw', 'labsearch' ),
-	'wikidatawiki' => array( 'eqiad', 'codfw', 'labsearch' ),
-	'commonswiki' => array( 'eqiad', 'codfw', 'labsearch' ),
-	'nlwiki' => array( 'eqiad', 'codfw', 'labsearch' ),
-	'frwiki' => array( 'eqiad', 'codfw', 'labsearch' ),
-	'eswiki' => array( 'eqiad', 'codfw', 'labsearch' ),
-	'testwiki' => array( 'eqiad', 'codfw', 'labsearch' )
 ),
 
 'wmgCirrusPerUserPoolCounter' => array(
