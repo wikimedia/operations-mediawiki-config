@@ -96,7 +96,7 @@ $wgFileBackends[] = array(
 		array( 'template' => 'local-swift-eqiad', 'isMultiMaster' => true ),
 		array( 'template' => 'local-swift-codfw' )
 	),
-	'replication' => 'async',
+	'replication' => 'sync', // sync for codfw originals switch-over test
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 );
 $wgFileBackends[] = array(
@@ -109,7 +109,7 @@ $wgFileBackends[] = array(
 		array( 'template' => 'shared-swift-eqiad', 'isMultiMaster' => true ),
 		array( 'template' => 'shared-swift-codfw' ),
 	),
-	'replication' => 'async',
+	'replication' => 'sync', // sync for codfw originals switch-over test
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 );
 $wgFileBackends[] = array(
