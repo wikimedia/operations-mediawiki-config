@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2f53b6_beb232e2",
+        "filename": "wmf-config/filebackend-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1629
+      },
+      "writtenOn": "2016-03-09T14:19:28Z",
+      "side": 1,
+      "message": "since varnish will be switched for all but /thumb/ I think we should be switching global too to be sync?",
+      "revId": "1286db565052438ec102dd8ee4e1a2ffb11421b5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
