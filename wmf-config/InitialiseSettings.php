@@ -2034,6 +2034,7 @@ $wgConf->settings = array(
 	'azwikibooks' => 'Vikikitab', // T33068
 	'azwikisource' => 'Vikimənbə',
 	'azwikiquote' => 'Vikisitat',
+	'azwiktionary' => 'Vikilüğət', // T128296
 	'azbwiki' => 'ویکی‌پدیا', // T106305
 	'bawiki' => 'Википедия', // T43167
 	'bat_smgwiki' => 'Vikipedėjė',
