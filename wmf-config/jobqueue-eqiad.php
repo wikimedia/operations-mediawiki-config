@@ -88,9 +88,9 @@ $wgJobTypeConf['default'] = array(
 	// Weights for partitions in use: use this to depool redis masters
 	'partitionsBySection' => array(
 		'default' => array(
-			'rdb1-6379' => 50,
-			'rdb1-6380' => 50,
-			'rdb1-6381' => 50,
+//			'rdb1-6379' => 50, Host disabled for maintenance
+//			'rdb1-6380' => 50,
+//			'rdb1-6381' => 50,
 			'rdb2-6379' => 50,
 			'rdb2-6380' => 50,
 			'rdb2-6381' => 50,
@@ -108,7 +108,7 @@ $wgJobTypeConf['default'] = array(
 $wgJobQueueAggregator = array(
 	'class' => 'JobQueueAggregatorRedis',
 	'redisServers' => array(
-		'rdb1001.eqiad.wmnet:6378', // preferred
+//		'rdb1001.eqiad.wmnet:6378', // preferred - Host disabled for maintenance
 		'rdb1003.eqiad.wmnet:6378', // fallback
 		'rdb1005.eqiad.wmnet:6378', // fallback
 		'rdb1007.eqiad.wmnet:6378', // fallback
