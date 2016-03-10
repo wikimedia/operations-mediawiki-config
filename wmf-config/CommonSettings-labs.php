@@ -355,6 +355,67 @@ $wgGadgetsCaching = false;
 
 $wgMessageCacheType = CACHE_ACCEL;
 
+// See password policy RFC on meta
+foreach ( array( 'bureaucrat', 'sysop', 'checkuser', 'oversight' ) as $group ) {
+	$wgPasswordPolicy['policies'][$group]['MinimalPasswordLength'] = 8;
+	$wgPasswordPolicy['policies'][$group]['MinimumPasswordLengthToLogin'] = 1;
+	$wgPasswordPolicy['policies'][$group]['PasswordCannotBePopular'] = 10000;
+}
+
+// Enforce password policy when users login on other wikis
+if ( $wmgUseCentralAuth ) {
+	$wgHooks['PasswordPoliciesForUser'][] = function( User $user, array &$effectivePolicy ) {
+		$central = CentralAuthUser::getInstance( $user );
+		if ( !$central->exists() ) {
+			return true;
+		}
+
+		$privilegedPolicy = array(
+			'MinimalPasswordLength' => 8,
+			'MinimumPasswordLengthToLogin' => 1,
+			'PasswordCannotBePopular' => 10000,
+		);
+
+		if ( array_intersect(
+			array( 'bureaucrat', 'sysop', 'checkuser', 'oversight', 'interface-editor' ),
+			$central->getLocalGroups()
+		) ) {
+			$effectivePolicy = UserPasswordPolicy::maxOfPolicies(
+				$effectivePolicy,
+				$privilegedPolicy
+			);
+			return true;
+		}
+
+		// Result should be cached by getLocalGroups() above
+		$attachInfo = $central->queryAttached();
+		$enforceWikiGroups = array(
+			'centralnoticeadmin' => array( 'metawiki', 'testwiki' ),
+			'templateeditor' => array( 'fawiki', 'rowiki' ),
+			'botadmin' => array( 'frwiktionary', 'mlwiki', 'mlwikisource', 'mlwiktionary' ),
+			'translator' => array( 'incubatorwiki' ),
+			'technician' => array( 'trwiki' ),
+			'wikidata-staff' => array( 'wikidata' ),
+		);
+
+		foreach ( $enforceWikiGroups as $group => $wikis ) {
+			foreach ( $wikis as $wiki ) {
+				if ( isset( $attachInfo[$wiki]['groups'] )
+					&& in_array( $group, $attachInfo[$wiki]['groups'] ) )
+				{
+					$effectivePolicy = UserPasswordPolicy::maxOfPolicies(
+						$effectivePolicy,
+						$privilegedPolicy
+					);
+					return true;
+				}
+			}
+		}
+
+		return true;
+	};
+}
+
 // Test of new import source configuration on labs cluster
 $wgImportSources = false;
 include( "$wmfConfigDir/import.php" );
