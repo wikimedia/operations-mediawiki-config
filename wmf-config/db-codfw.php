@@ -14,10 +14,6 @@ $wmgParserCacheDBs = array(
 );
 
 $wmgOldExtTemplate = array(
-	'10.192.0.25'   => 1, # es2001
-	'10.192.0.26'   => 1, # es2002
-	'10.192.16.27'  => 1, # es2003
-	'10.192.16.28'  => 1, # es2004
 	'10.192.16.171' => 1, # es2011
 	'10.192.32.129' => 1, # es2012
 	'10.192.48.40'  => 1, # es2013
@@ -342,21 +338,15 @@ $wgLBFactoryConf = array(
 	'cluster24' => array(
 		'10.64.32.184'  => 0, # es1015, master
 		'10.192.32.130' => 1, # es2015, codfw local master
-		'10.192.0.27'   => 1, # es2005 - compressed data
-		'10.192.0.28'   => 3, # es2006
-		'10.192.0.29'   => 3, # es2007
-		'10.192.0.141'  => 1, # es2014 - compressed data
-		'10.192.48.41'  => 1, # es2016
+		'10.192.0.141'  => 2, # es2014 - compressed data
+		'10.192.48.41'  => 3, # es2016
 	),
 	# es3
 	'cluster25' => array(
 		'10.64.48.116'  => 0, # es1019, master
 		'10.192.16.172' => 1, # es2018, codfw local master
-		'10.192.16.30'  => 1, # es2009
-		'10.192.16.29'  => 3, # es2008
-#		'10.192.16.31'  => 3, # es2010 - depooled because of T127769 - volans
-		'10.192.0.142'  => 1, # es2017
-		'10.192.48.42'  => 1, # es2019
+		'10.192.0.142'  => 3, # es2017
+		'10.192.48.42'  => 3, # es2019
 	),
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => array(
