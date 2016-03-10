@@ -7368,6 +7368,10 @@ $wgConf->settings = array(
 		'flood' => array( 'bot' => true ), // T30717
 		'filemover' => array( 'movefile' => true ), // T58103
 	),
+	'bnwikisource' => array(
+		'flood' => array( 'bot' => true ), // T129087
+		'filemover' => array( 'movefile' => true ), // T129087
+	),
 	'+bgwiki' => array(
 		'autopatrolled' => array( 'autopatrol' => true, ),
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ),
@@ -8845,6 +8849,9 @@ $wgConf->settings = array(
 		'sysop' => array( 'autopatrolled', 'filemover', 'flood', 'rollbacker' ),
 		'bureaucrat' => array( 'import' ),
 	),
+	'+bnwikisource' => array(
+		'sysop' => array( 'filemover', 'flood' ), // T129087
+	),
 	'+brwikimedia' => array(
 		'sysop' => array( 'translationadmin', 'autopatrolled', 'confirmed' ), // T60123, T65345
 	),
@@ -9517,6 +9524,9 @@ $wgConf->settings = array(
 	'+bnwiki' => array(
 		'sysop' => array( 'autopatrolled', 'filemover', 'flood', 'rollbacker' ),
 		'bureaucrat' => array( 'import' ),
+	),
+	'+bnwikisource' => array(
+		'sysop' => array( 'filemover', 'flood' ), // T129087
 	),
 	'+brwikimedia' => array(
 		'sysop' => array( 'translationadmin', 'autopatrolled', 'confirmed' ), // T7812, T65345
