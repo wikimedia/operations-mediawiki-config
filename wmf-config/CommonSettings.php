@@ -1648,7 +1648,6 @@ if ( $wmgUseCodeReview ) {
 	$wgGroupPermissions['user']['codereview-link-user'] = false;
 	$wgGroupPermissions['user']['codereview-signoff'] = false;
 	$wgGroupPermissions['user']['codereview-associate'] = false;
-	$wgGroupPermissions['svnadmins']['repoadmin'] = false;
 
 	$wgCodeReviewRepoStatsCacheTime = 24 * 60 * 60;
 	$wgCodeReviewMaxDiffPaths = 100;
