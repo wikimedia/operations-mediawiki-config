@@ -41,6 +41,44 @@ function updateBranchPointers( $dryRun = false ) {
 	updateSymlink( MEDIAWIKI_STAGING_DIR . '/php', $phpLinkTarget, $dryRun );
 }
 
+/**
+ * @param string $link
+ * @param string $dest
+ * @param bool $dryRun
+ */
+function updateSymlink( $link, $dest, $dryRun ) {
+	// Change pwd to MEDIAWIKI_STAGING_DIR so that relative paths can be verified
+	chdir( MEDIAWIKI_STAGING_DIR );
+
+	if ( !file_exists( $dest ) ) {
+		fwrite( STDERR, __FUNCTION__ . ": link target $dest does not exist.\n" );
+		exit( 1 );
+	}
+
+	if ( file_exists( $link ) ) {
+		if ( realpath( $link ) === realpath( $dest ) ) {
+			echo "$link is already up-to-date.\n";
+			return;
+		}
+
+		if ( !is_link( $link ) ) {
+			fwrite( STDERR, __FUNCTION__ . ": $link exists and is not a symbolic link.\n" );
+			exit( 1 );
+		}
+
+		if ( !$dryRun && !unlink( $link ) ) {
+			fwrite( STDERR, __FUNCTION__ . ": failed to unlink $link\n" );
+			exit( 1 );
+		}
+	}
+
+	if ( !$dryRun && !symlink( $dest, $link ) ) {
+		fwrite( STDERR, __FUNCTION__ . ": failed to create $link\n" );
+		exit( 1 );
+	}
+	echo "$link => $dest\n";
+}
+
 
 if ( isMain() ) {
 	$dryRun = in_array( '--dry-run', $argv, true );
