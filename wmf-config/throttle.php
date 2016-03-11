@@ -45,6 +45,14 @@ $wmgThrottlingExceptions[] = array( // T129342 - Wikipedia while at Women of the
 	'value'  => 30 // 20 expected
 );
 
+$wmgThrottlingExceptions[] = array( // T129574 - Procomuns Viquimarató - Barcelona
+	'from'   => '2016-03-13T10:00 +1:00',
+	'to'     => '2016-03-13T19:00 +1:00',
+	'IP'     => array( '94.229.206.251' ),
+	'dbname' => array( 'cawiki', 'enwiki', 'eswiki', 'frwiki', 'commonswiki' ),
+	'value'  => 70 // 20-50 expected
+);
+
 $wmgThrottlingExceptions[] = array( // T129018 - Workshop for cawiki and frwiki
 	'from'   => '2016-03-16T00:00 +0:00',
 	'to'     => '2016-03-16T23:59 +0:00',
