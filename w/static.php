@@ -41,17 +41,18 @@ function wmfStaticShowError( $message ) {
  * @param string $responseType Cache control for successful repsonse (one of 'short' or 'long')
  */
 function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
+	$ctype = StreamFile::contentTypeFromPath( $filePath, /* safe: not for upload */ false );
+	if ( !$ctype || $ctype === 'unknown/unknown' ) {
+		// Directory, extension-less file or unknown extension
+		header( 'HTTP/1.1 400 Bad Request' );
+		wmfStaticShowError( 'Invalid path type' );
+		return;
+	}
+
 	$stat = stat( $filePath );
 	if ( !$stat ) {
 		header( 'HTTP/1.1 404 Not Found' );
 		wmfStaticShowError( 'Unknown file path' );
-		return;
-	}
-
-	$ctype = StreamFile::contentTypeFromPath( $filePath, /* safe: not for upload */ false );
-	if ( !$ctype || $ctype === 'unknown/unknown' ) {
-		header( 'HTTP/1.1 400 Bad Request' );
-		wmfStaticShowError( 'Invalid file type' );
 		return;
 	}
 
@@ -148,10 +149,6 @@ function wmfStaticRespond() {
 			header( 'HTTP/1.1 400 Bad Request' );
 			wmfStaticShowError( 'Bad request' );
 			return;
-		}
-
-		if ( !file_exists( $filePath ) ) {
-			continue;
 		}
 
 		if ( $urlHash ) {
