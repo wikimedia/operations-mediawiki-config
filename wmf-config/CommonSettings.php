@@ -907,6 +907,14 @@ $wgCacheEpoch = '20130601000000';
 
 $wgThumbnailEpoch = '20130601000000';
 
+# OAI repository for update server
+include( $IP . '/extensions/OAI/OAIRepo.php' );
+$oaiAgentRegex = '/experimental/';
+$oaiAuth = true;
+$oaiAudit = true;
+$oaiAuditDatabase = 'oai';
+$oaiChunkSize = 40;
+
 $wgEnableUserEmail = true;
 $wgNoFollowLinks = true; // In case the MediaWiki default changed, T44594
 
