@@ -2,8 +2,8 @@
 <?php
 error_reporting( E_ALL );
 
-require_once( __DIR__ . '/defines.php' );
-require_once( __DIR__ . '/updateBranchPointers' );
+require_once __DIR__ . '/defines.php';
+require_once __DIR__ . '/updateBranchPointers';
 
 /**
  * Delete various symlinks created by checkoutMediaWiki.

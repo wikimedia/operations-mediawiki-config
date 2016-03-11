@@ -1,6 +1,6 @@
 <?php
 error_reporting( E_ALL );
-require_once( __DIR__ . '/defines.php' );
+require_once __DIR__ . '/defines.php';
 
 /**
  * Automatically git clone a MediaWiki version and do some basic wmf setup.
@@ -170,23 +170,6 @@ PHP;
 	$path = "$destIP/StartProfiler.php";
 	$link = "../wmf-config/StartProfiler.php";
 	createSymlink( $path, $link, "Created StartProfiler.php symlink." );
-
-	# Create static- symlinks for /w...
-	$liveStaticDir = MEDIAWIKI_STAGING_DIR . "/w/static/$dstVersionNum";
-	if ( !file_exists( $liveStaticDir ) ) {
-		mkdir( $liveStaticDir, 0775 );
-	}
-	$path = MEDIAWIKI_STAGING_DIR . "/w/static/$dstVersionNum/skins";
-	$link = MEDIAWIKI_DEPLOYMENT_DIR . "/php-$dstVersionNum/skins";
-	createSymlink( $path, $link, "Created /w/static/$dstVersionNum/skins symlink." );
-
-	$path = MEDIAWIKI_STAGING_DIR . "/w/static/$dstVersionNum/extensions";
-	$link = MEDIAWIKI_DEPLOYMENT_DIR . "/php-$dstVersionNum/extensions";
-	createSymlink( $path, $link, "Created /w/static/$dstVersionNum/extensions symlink." );
-
-	$path = MEDIAWIKI_STAGING_DIR . "/w/static/$dstVersionNum/resources";
-	$link = MEDIAWIKI_DEPLOYMENT_DIR . "/php-$dstVersionNum/resources";
-	createSymlink( $path, $link, "Created /w/static/$dstVersionNum/resources symlink." );
 
 	# Create l10n cache dir
 	$l10nDir = "$destIP/cache/l10n";
