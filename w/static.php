@@ -52,6 +52,7 @@ function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 	$stat = stat( $filePath );
 	if ( !$stat ) {
 		header( 'HTTP/1.1 404 Not Found' );
+		header( 'Cache-Control: s-maxage=300, must-revalidate, max-age=0' );
 		wmfStaticShowError( 'Unknown file path' );
 		return;
 	}
@@ -181,7 +182,7 @@ function wmfStaticRespond() {
 	if ( !$fallback ) {
 		header( 'HTTP/1.1 404 Not Found' );
 		header( 'Cache-Control: s-maxage=300, must-revalidate, max-age=0' );
-		wmfStaticShowError( 'Unknown file' );
+		wmfStaticShowError( 'Unknown file path' );
 		$stats->increment( 'wmfstatic.notfound' );
 		return;
 	}
