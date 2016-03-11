@@ -15295,6 +15295,9 @@ $wgConf->settings = array(
 	'default' => false,
 	'ptwikibooks' => true,
 ),
+
+// Before updating wmgFlowNamespaces, you must run populateContentModel.php (from core) on
+// the affected namespaces.
 'wmgFlowNamespaces' => array(
 	'default' => array(),
 	'mediawikiwiki' => array(
