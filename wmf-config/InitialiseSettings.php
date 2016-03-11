@@ -4008,7 +4008,6 @@ $wgConf->settings = array(
 	'+enwikisource' => array( 114 => 1, 115 => 1 ), // T52007
 	'+huwikisource' => array( 10 => 0 ),
 	'+nowikisource' => array( 10 => 0 ),
-	'+ruwikisource' => array( 10 => 0 ),
 	'+trwikisource' => array( 10 => 0 ),
 	'+ukwikisource' => array( 114 => 1, 115 => 1 ), // T52561
 	'+viwikisource' => array( 10 => 0 ),
