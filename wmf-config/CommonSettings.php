@@ -2540,8 +2540,7 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 		$wgDefaultUserOptions['flow-editor'] = 'visualeditor';
 	}
 
-	$wgFlowOccupyNamespaces = $wmgFlowOccupyNamespaces;
-	foreach ( $wgFlowOccupyNamespaces as $namespace ) {
+	foreach ( $wmgFlowNamespaces as $namespace ) {
 		$wgNamespaceContentModels[$namespace] = CONTENT_MODEL_FLOW_BOARD;
 	}
 	// Requires that Parsoid is available for all wikis using Flow.

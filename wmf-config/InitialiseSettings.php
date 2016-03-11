@@ -15316,7 +15316,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'ptwikibooks' => true,
 ),
-'wmgFlowOccupyNamespaces' => array(
+'wmgFlowNamespaces' => array(
 	'default' => array(),
 	'mediawikiwiki' => array(
 		NS_TALK,
@@ -15376,7 +15376,6 @@ $wgConf->settings = array(
 	),
 ),
 
-// Do not add new pages to wmgFlowOccupyPages
 // Enable editing other users posts by autoconfirmed
 'wmgFlowAllowAutoconfirmedEdit' => array(
 	'default' => true,
