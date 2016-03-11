@@ -11238,6 +11238,7 @@ $wgConf->settings = array(
 	'stewardwiki' => '/static/favicon/community.ico',
 	'strategywiki' => '/static/favicon/community.ico',
 	'testwiki' => '/static/favicon/black-globe.ico',
+	'test2wiki' => '/static/favicon/black-globe.ico',
 	'testwikidatawiki' => '/static/favicon/testwikidata.ico',
 	'transitionteamwiki' => '/static/favicon/wmf.ico',
 	'usabilitywiki' => '/static/favicon/usability.ico',
