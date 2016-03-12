@@ -18,9 +18,11 @@ mwconfig_files_txt=(
 	db-labs.php
 	ext-labs.php
 	ext-production.php
+	FeaturedFeedsWMF.php
 	filebackend-labs.php
 	filebackend.php
 	flaggedrevs.php
+	HHVMRequestInit.php
 	import.php
 	interwiki.php
 	jobqueue-eqiad.php
