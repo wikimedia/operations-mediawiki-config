@@ -13638,6 +13638,7 @@ $wgConf->settings = array(
 	'default' => false,
 	'arwiki' => true,
 	'azwiki' => true, // T119727
+	'bnwiki' => true, // T129728
 	'commonswiki' => true,
 	'enwiki' => true,
 	'enwikivoyage' => true, // T52063
