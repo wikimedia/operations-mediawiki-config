@@ -9249,9 +9249,6 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'eliminator', 'confirmed', 'autoreviewer', 'interface-editor', 'accountcreator' ), // T41905, T65750
 		'sysop' => array( 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ), // T65750
 	),
-	'+ptwikivoyage' => array(
-		'sysop' => array( 'bot' ), // T47233
-	),
 	'+quwiki' => array(
 		'sysop' => array( 'rollbacker' ),
 	),
@@ -9927,9 +9924,6 @@ $wgConf->settings = array(
 	),
 	'+ptwikinews' => array(
 		'sysop' => array( 'reviewer' ),
-	),
-	'+ptwikivoyage' => array(
-		'sysop' => array( 'bot' ), // T47233
 	),
 	'+quwiki' => array(
 		'sysop' => array( 'rollbacker' ),
