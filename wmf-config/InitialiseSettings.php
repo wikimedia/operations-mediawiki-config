@@ -3258,8 +3258,6 @@ $wgConf->settings = array(
 		'Wikiversity토론' => NS_PROJECT_TALK, // T46899
 	),
 	'+kowiktionary' => array(
-		'Wikisaurus' => 110,
-		'Wikisaurus_talk' => 111,
 		'낱' => NS_PROJECT, // T58761
 	),
 	'+kuwiktionary' => array(
@@ -5912,8 +5910,6 @@ $wgConf->settings = array(
 	'kowiktionary' => array(
 		100 => '부록',
 		101 => '부록_토론',
-		110 => '미주알고주알',
-		111 => '미주알고주알_토론',
 	),
 	'kuwiktionary' => array(
 		NS_PROJECT_TALK => 'Gotûbêja_Wîkîferhengê', // T39524
