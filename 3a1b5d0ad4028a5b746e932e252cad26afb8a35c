@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_29bf1ff8",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-14T23:32:37Z",
+      "side": 1,
+      "message": "Neither of these relates to legacy variables. That\u0027s wgLegacyJavaScriptGlobals which probably shouldn\u0027t be disabled in MF yet since extensions may depend on that.\n\n\nThis is just about loading legacy wikibits by default. It doesn\u0027t (and shouldn\u0027t) disable it in general.",
+      "revId": "3a1b5d0ad4028a5b746e932e252cad26afb8a35c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_8933cbbf",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-14T23:32:37Z",
+      "side": 1,
+      "message": "This is already false by default and will be removed in the next release. No need to set this one.",
+      "revId": "3a1b5d0ad4028a5b746e932e252cad26afb8a35c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
