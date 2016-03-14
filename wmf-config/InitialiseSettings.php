@@ -12184,6 +12184,7 @@ $wgConf->settings = array(
 	'simplewiktionary' => true,
 	'skwiki' => true,
 	'sowiki' => true,
+	'srwiki' => true, // T129485
 	'svwiki' => true,
 	'tawiki' => true,
 	'tawiktionary' => true,
