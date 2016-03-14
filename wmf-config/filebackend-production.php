@@ -128,7 +128,6 @@ $wgFileBackends[] = array(
 /* end multiwrite backend config */
 
 // Lock manager config must use the master datacenter
-// @TODO: configure as a switch
 $wgLockManagers[] = array(
 	'name'         => 'redisLockManager',
 	'class'        => 'RedisLockManager',
