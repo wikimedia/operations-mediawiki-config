@@ -7399,6 +7399,26 @@ $wgConf->settings = array(
 			'suppressredirect' => true,
 			'move-categorypages' => true,
 		),
+
+		// Uploads are restricted to a uploader group - T129005
+		'user' => array(
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
+		),
+		'autoconfirmed' => array(
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
+		),
+		'uploader' => array(
+			'upload' => true,
+			'reupload' => true,
+			'reupload-own' => true,
+			'reupload-shared' => true,
+		),
 	),
 	'+checkuserwiki' => array( // T30781
 		'autoconfirmed' => array(
@@ -8863,7 +8883,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'flood' ), // T98576
 	),
 	'+cewiki' => array(
-		'sysop' => array( 'rollbacker', 'suppressredirect' ), // T128205
+		'sysop' => array( 'rollbacker', 'suppressredirect', 'uploader' ), // T128205, T129005
 	),
 	'+checkuserwiki' => array(
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', ),
@@ -9537,7 +9557,7 @@ $wgConf->settings = array(
 		'sysop' => array( 'flood' ), // T98576
 	),
 	'+cewiki' => array(
-		'sysop' => array( 'rollbacker', 'suppressredirect' ), // T128205
+		'sysop' => array( 'rollbacker', 'suppressredirect', 'uploader' ), // T128205, T129005
 	),
 	'+checkuserwiki' => array(
 		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'user', 'autoconfirmed', 'ipblock-exempt', 'bureaucrat', ),
