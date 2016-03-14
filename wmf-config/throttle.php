@@ -28,15 +28,6 @@ $wmgThrottlingExceptions = array();
 # );
 ## Add throttling definitions below.
 
-
-$wmgThrottlingExceptions[] = array( // T128847 - Ateneo de Manila University workshops
-	'from'   => '2016-03-10T00:00 +8:00',
-	'to'     => '2016-03-10T23:59 +8:00',
-	'IP'     => array( '202.125.102.33', '121.58.232.35' ),
-	'dbname' => array( 'tlwiki', 'enwiki', 'commonswiki' ),
-	'value'  => 100 // 60-80 expected
-);
-
 $wmgThrottlingExceptions[] = array( // T129342 - Wikipedia while at Women of the World Festival
 	'from'   => '2016-03-13T11:00 +0:00',
 	'to'     => '2016-03-13T13:00 +0:00',
@@ -51,6 +42,17 @@ $wmgThrottlingExceptions[] = array( // T129574 - Procomuns Viquimarató - Barcel
 	'IP'     => array( '94.229.206.251' ),
 	'dbname' => array( 'cawiki', 'enwiki', 'eswiki', 'frwiki', 'commonswiki' ),
 	'value'  => 70 // 20-50 expected
+);
+
+$wmgThrottlingExceptions[] = array( // T129697 - Women's writes WikiWarriors edit-a-thon
+	'from'   => '2016-03-15T20:00 -5:00',
+	'to'     => '2016-03-16T01:00 -5:00',
+	'range'  => array(
+		'129.93.0.0/16',
+		'40.135.25.0/24',
+	),
+	'dbname' => array( 'enwiki', 'commonswiki' ),
+	'value'  => 150 // 100 expected
 );
 
 $wmgThrottlingExceptions[] = array( // T129018 - Workshop for cawiki and frwiki
