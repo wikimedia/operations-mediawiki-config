@@ -4537,6 +4537,7 @@ $wgConf->settings = array(
 		'wbq_evaluation' => 'debug', // WikibaseQualityConstraints evaluation logs
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 		'wikibase-debug' => 'debug',
+		'Wikibase\Client\Changes\WikiPageUpdater' => 'debug', // For Aaron, to see titles we enqueue RefreshLinksJobs for
 		'xenon' => 'debug',
 		'XMP' => 'warning', // T89532
 		'xff' => array( 'logstash' => false ),
