@@ -17,6 +17,10 @@ if ( $wmgMobileFrontend ) {
 	$wgMFDisplayWikibaseDescription = $wmgMFDisplayWikibaseDescription;
 	$wgMFMobileFormatterHeadings = $wmgMFMobileFormatterHeadings;
 
+	// Disable legacy variables in the mobile web experience
+	$wgIncludeLegacyJavaScript = false;
+	$wgPreloadJavaScriptMwUtil = false;
+
 	if ( $wmgMobileFrontendLogo ) {
 		$wgMobileFrontendLogo = $wmgMobileFrontendLogo;
 	}
