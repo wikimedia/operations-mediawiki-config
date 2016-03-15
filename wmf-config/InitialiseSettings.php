@@ -16612,12 +16612,18 @@ $wgConf->settings = array(
 	'default' => array(),
 	'enwiki' => array( 'monobook', 'modern', 'vector', 'cologneblue', 'minerva' ), // T101108
 ),
+
+'wgWPBEnablePageImagesBanners' => array(
+	'default' => false,
+	'enwiki' => true, // T101108
+),
+
 'wgWPBEnableHeadingOverride' => array(
 	'default' => true,
 	'enwiki' => false, // T101108
 ),
 'wgWPBNamespaces' => array(
-	'default' => array( NS_MAIN, NS_USER ),
+	'default' => true, // T129099
 	'frwikivoyage' => array( NS_MAIN, NS_USER, NS_PROJECT, NS_HELP ), // T123084
 	'ruwikivoyage' => array( 0, 1, 10, 11, 12, 13, 14, 15, 2,
 		2300, 2301, 2302, 2303, 2600, 3, 4, 5, 6, 7, 8, 828, 829, 9 ), // T114566, T114723
