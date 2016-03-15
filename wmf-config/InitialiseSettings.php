@@ -4509,6 +4509,7 @@ $wgConf->settings = array(
 		'ratelimit' => 'debug',
 		'recursion-guard' => 'debug',
 		'redis' => 'info', // -asher 2012/10/12
+		'RecursiveLinkPurge' => 'debug',
 		'Renameuser' => 'debug',
 		'resourceloader' => 'debug',
 		'ResourceLoaderImage' => 'debug', // - demon, matmarex
