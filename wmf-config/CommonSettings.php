@@ -200,7 +200,7 @@ $wgMemCachedServers = array();
 require "$wmfConfigDir/logging.php";
 require "$wmfConfigDir/redis.php";
 
-if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && preg_match( '/\breadonly;/i', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
+if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && preg_match( '/\breadonly\b/i', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
 	$wgReadOnly = 'X-Wikimedia-Debug';
 }
 
