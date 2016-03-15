@@ -5,6 +5,35 @@
 // NOTE: this file is loaded early on in WebStart.php, so be careful with
 // globals.
 
+// Quick and dirty logging function for local debugging.
+function hackLog() {
+	static $reqId;
+
+	$reqId = $reqId ?: md5( rand() );
+	$timeStamp = date( 'r' );
+
+	$lines = array_map( function ( $arg ) {
+		return json_encode( $arg,
+			JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE );
+	}, func_get_args() );
+
+	$lines[] = implode( ' → ', array_map( function ( $item ) {
+		return isset( $item['type'] )
+			? $item['class'] . $item['type'] . $item['function'] . '()'
+			: $item['function'] . '()';
+	}, array_reverse( debug_backtrace( DEBUG_BACKTRACE_IGNORE_ARGS ) ) ) );
+
+	$msg = '';
+	$lineCount = count( $lines );
+	foreach ( $lines as $idx => $line ) {
+		$msg .= sprintf( "%s [%.6s] #%02d/%02d: %s\n", $timeStamp, $reqId, $idx
+			+ 1, $lineCount, $line );
+	}
+
+	file_put_contents( '/tmp/hack.log', $msg, FILE_APPEND );
+}
+
+
 if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	// Single-request profiling, via 'forceprofile=1' (web) or '--profiler=text' (CLI).
 	if (
