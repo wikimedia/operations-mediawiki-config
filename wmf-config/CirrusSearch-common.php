@@ -163,6 +163,8 @@ if ( $wgCirrusSearchDefaultCluster !== $wmfDatacenter ) {
 // Enable completion suggester
 $wgCirrusSearchUseCompletionSuggester = $wmgCirrusSearchUseCompletionSuggester;
 
+// Configure ICU Folding
+$wgCirrusSearchUseIcuFolding = $wmgCirrusSearchUseIcuFolding;
 
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
