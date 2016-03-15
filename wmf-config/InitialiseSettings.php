@@ -13375,7 +13375,6 @@ $wgConf->settings = array(
 // this will need to be set true for 30 days (anon cache epoch).
 'wmgVisualEditorDisableForAnons' => array(
 	'default' => false,
-	'dewiki' => true,
 	'enwiki' => true,
 	'eswiki' => true,
 ),
