@@ -63,6 +63,14 @@ $wmgThrottlingExceptions[] = array( // T129018 - Workshop for cawiki and frwiki
 	'value'  => 70 // 30-60 expected
 );
 
+$wmgThrottlingExceptions[] = array( // T129490 - Taller d'iniciació a la Viquipèdia, Montserrat
+	'from'   => '2016-04-17T15:30 +2:00',
+	'to'     => '2016-04-17T17:30 +2:00',
+	'ip'     => '80.32.80.220',
+	'dbname' => array( 'cawiki', 'commonswiki' ),
+	'value'  => 20 // 15 expected
+);
+
 ## Add throttling definitions above.
 
 /**
