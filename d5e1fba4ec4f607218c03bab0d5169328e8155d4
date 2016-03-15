@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_bd21a3ae",
+        "filename": "wmf-config/StartProfiler.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-15T22:27:26Z",
+      "side": 1,
+      "message": "No objection from me, but would be nice to prefix as wmfHackLog, similar to some of the other global functions.",
+      "revId": "d5e1fba4ec4f607218c03bab0d5169328e8155d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
