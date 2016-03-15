@@ -200,6 +200,10 @@ $wgMemCachedServers = array();
 require "$wmfConfigDir/logging.php";
 require "$wmfConfigDir/redis.php";
 
+if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && preg_match( '/\breadonly;/i', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
+	$wgReadOnly = 'X-Wikimedia-Debug';
+}
+
 if ( $wmfRealm === 'labs' ) {
 	require "$wmfConfigDir/db-labs.php";
 	require "$wmfConfigDir/mc-labs.php";
