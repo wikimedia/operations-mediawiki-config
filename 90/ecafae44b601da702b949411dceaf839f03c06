@@ -1,0 +1,9 @@
+Verified+2: jenkins-bot
+Code-Review+2: Ori.livneh <ori@wikimedia.org>
+Code-Review+1: Giuseppe Lavagetto <glavagetto@wikimedia.org>
+Code-Review+1: Jcrespo <jcrespo@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Tue, 15 Mar 2016 06:59:10 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/277462
+Project: operations/mediawiki-config
+Branch: refs/heads/master
