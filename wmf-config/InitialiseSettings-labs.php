@@ -633,5 +633,10 @@ function wmfLabsSettings() {
 			'default' => 'yes',
 			'wikidatawiki' => 'no',
 		),
+		'wmgWikibaseAllowDataAccessInUserLanguage' => array(
+			'default' => false,
+			'wikidatawiki' => true,
+			'commonswiki' => true,
+		),
 	);
 } # wmflLabsSettings()
