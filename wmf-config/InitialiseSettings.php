@@ -15384,6 +15384,19 @@ $wgConf->settings = array(
 		2301, // Gadget_talk from Gadgets
 		2303, // Gadget_definition_talk from Gadgets
 	),
+	'gomwiki' => array(
+		NS_TALK,
+		NS_USER_TALK,
+		NS_PROJECT_TALK,
+		NS_FILE_TALK,
+		NS_MEDIAWIKI_TALK,
+		NS_TEMPLATE_TALK,
+		NS_HELP_TALK,
+		NS_CATEGORY_TALK,
+		829, // Module_talk from Scribunto
+		2301, // Gadget_talk from Gadgets
+		2303, // Gadget_definition_talk from Gadgets
+	),
 ),
 
 // Enable editing other users posts by autoconfirmed
