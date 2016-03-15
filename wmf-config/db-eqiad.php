@@ -562,13 +562,13 @@ $wgLBFactoryConf = array(
 
 # This key must exist for the master switch script to work
 'readOnlyBySection' => array(
-#	'DEFAULT' => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes', # s3
-#	's1'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
-#	's2'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
-#	's4'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
-#	's5'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
-#	's6'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
-#	's7'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
+	'DEFAULT' => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes', # s3
+	's1'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
+	's2'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
+	's4'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
+	's5'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
+	's6'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
+	's7'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
 ),
 
 );
