@@ -92,6 +92,14 @@ $wgConf->settings = [
 	'be_x_oldwiki' => 'be-tarask',
 	'crhwiki' => 'crh-latn',
 	'nowiki' => 'nb',
+	'nowiktionary' => 'nb',
+	'nowikiquote' => 'nb',
+	# There is no separate nynorsk for these projects,
+	# but we have to pick a valid language
+	'nowikibooks' => 'nb',
+	'nowikinews' => 'nb',
+	'nowikisource' => 'nb',
+
 	'simplewiki' => 'en',
 	'simplewiktionary' => 'en',
 
@@ -126,7 +134,8 @@ $wgConf->settings = [
 	'ilwikimedia' => 'he',
 	'mkwikimedia' => 'mk',
 	'mxwikimedia' => 'es',
-	'noboard_chapterswikimedia' => 'no',
+	'nowikimedia' => 'nb',
+	'noboard_chapterswikimedia' => 'nb',
 	'nycwikimedia' => 'en',
 	'nzwikimedia' => 'en',
 	'pa_uswikimedia' => 'en',
