@@ -17,6 +17,9 @@ if ( $wmgMobileFrontend ) {
 	}
 }
 
+// T114552
+$wgMobileFrontendLogo = $wgLogo;
+
 $wgMFForceSecureLogin = false;
 $wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
 $wgMFSpecialCaseMainPage = $wmgMFSpecialCaseMainPage;
