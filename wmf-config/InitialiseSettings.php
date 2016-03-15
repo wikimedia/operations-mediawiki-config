@@ -91,6 +91,14 @@ $wgConf->settings = array(
 	'be_x_oldwiki' => 'be-tarask',
 	'crhwiki' => 'crh-latn',
 	'nowiki' => 'nb',
+	'nowiktionary' => 'nb',
+	'nowikiquote' => 'nb',
+	# There is no separate nynorsk for these projects,
+	# but have to pick valid language
+	'nowikibooks' => 'nb',
+	'nowikinews' => 'nb',
+	'nowikisource' => 'nb',
+
 	'simplewiki' => 'en',
 	'simplewiktionary' => 'en',
 
