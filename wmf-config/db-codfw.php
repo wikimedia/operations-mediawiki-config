@@ -88,8 +88,7 @@ $wgLBFactoryConf = array(
 
 'sectionLoads' => array(
 	's1' => array(
-#		'db1052' => 0,   # 2.8TB  96GB, master
-		'db2016' => 0,   # 2.9TB  96GB, local master
+		'db2016' => 0,   # 2.9TB  96GB, master
 		'db2034' => 50,  # 2.9TB 160GB, rc, log
 		'db2042' => 50,  # 2.9TB 160GB, rc, log
 		'db2048' => 400, # 2.9TB 160GB
@@ -99,8 +98,7 @@ $wgLBFactoryConf = array(
 		'db2070' => 500, # 3.3TB 160GB
 	),
 	's2' => array(
-#		'db1018' => 0,   # 1.4TB  64GB, master
-		'db2017' => 0,   # 2.9TB  96GB, local master
+		'db2017' => 0,   # 2.9TB  96GB, master
 		'db2035' => 50,  # 2.9TB 160GB, rc, log
 		'db2041' => 50,  # 2.9TB 160GB, api
 		'db2049' => 400, # 2.9TB 160GB,
@@ -109,16 +107,14 @@ $wgLBFactoryConf = array(
 		'db2064' => 500, # 3.3TB 160GB
 	),
 	/* s3 */ 'DEFAULT' => array(
-#		'db1038' => 0,   # 1.4TB  64GB, master
-		'db2018' => 0,   # 2.9TB  96GB, local master
+		'db2018' => 0,   # 2.9TB  96GB, master
 		'db2036' => 50,  # 2.9TB 160GB, rc, log
 		'db2043' => 100, # 2.9TB 160GB, dump (inactive), vslow
 		'db2050' => 100, # 2.9TB 160GB, api
 		'db2057' => 500, # 3.3TB 160GB
 	),
 	's4' => array(
-#		'db1040' => 0,   # 1.4TB  64GB, master
-		'db2019' => 0,   # 2.9TB  96GB, local master
+		'db2019' => 0,   # 2.9TB  96GB, master
 		'db2037' => 50,  # 2.9TB 160GB, rc, log
 		'db2044' => 50,  # 2.9TB 160GB, rc, log
 		'db2051' => 100, # 2.9TB 160GB, api
@@ -126,8 +122,7 @@ $wgLBFactoryConf = array(
 		'db2065' => 500, # 3.3TB 160GB
 	),
 	's5' => array(
-#		'db1058' => 0,   # 2.8TB  96GB, master
-		'db2023' => 0,   # 2.9TB  96GB, local master
+		'db2023' => 0,   # 2.9TB  96GB, master
 		'db2038' => 50,  # 2.9TB 160GB, rc, log
 		'db2045' => 400, # 2.9TB 160GB
 		'db2052' => 200, # 2.9TB 160GB, dump (inactive), vslow
@@ -135,8 +130,7 @@ $wgLBFactoryConf = array(
 		'db2066' => 500, # 3.3TB 160GB
 	),
 	's6' => array(
-#		'db1023' => 0,   # 1.4TB  64GB, master
-		'db2028' => 0,   # 2.9TB  96GB, local master
+		'db2028' => 0,   # 2.9TB  96GB, master
 		'db2039' => 50,  # 2.9TB 160GB, rc, log
 		'db2046' => 400, # 2.9TB 160GB
 		'db2053' => 200, # 2.9TB 160GB, dump (inactive), vslow
@@ -144,8 +138,7 @@ $wgLBFactoryConf = array(
 		'db2067' => 500, # 3.3TB 160GB
 	),
 	's7' => array(
-#		'db1033' => 0,   # 1.4TB  64GB, master
-		'db2029' => 0,   # 2.9TB  96GB, local master
+		'db2029' => 0,   # 2.9TB  96GB, master
 		'db2040' => 100, # 2.9TB 160GB, rc, log
 		'db2047' => 400, # 2.9TB 160GB
 		'db2054' => 200, # 2.9TB 160GB, dump (inactive), vslow
@@ -530,22 +523,19 @@ $wgLBFactoryConf = array(
 
 	# es2
 	'cluster24' => array(
-#		'10.64.32.184'  => 0, # es1015, master
-		'10.192.32.130' => 1, # es2015, codfw local master
+		'10.192.32.130' => 1, # es2015, master
 		'10.192.0.141'  => 2, # es2014 - compressed data
 		'10.192.48.41'  => 3, # es2016
 	),
 	# es3
 	'cluster25' => array(
-#		'10.64.48.116'  => 0, # es1019, master
-		'10.192.16.172' => 1, # es2018, codfw local master
+		'10.192.16.172' => 1, # es2018, master
 		'10.192.0.142'  => 3, # es2017
 		'10.192.48.42'  => 3, # es2019
 	),
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => array(
-#		'10.64.16.18' => 10, # db1029, master
-		'10.192.0.12' => 20, # db2009, local master
+		'10.192.0.12' => 1, # db2009, master
 	),
 ),
 
@@ -593,6 +583,3 @@ $wgDefaultExternalStore = array(
 	'DB://cluster25',
 );
 
-# $wgLBFactoryConf['readOnlyBySection']['s2'] =
-# $wgLBFactoryConf['readOnlyBySection']['s2a'] =
-# 'Emergency maintenance, need more servers up, new estimate ~18:30 UTC';
