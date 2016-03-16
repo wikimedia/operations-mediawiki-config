@@ -31,9 +31,6 @@ $wgDebugTimestamps = true;
 
 $wmgAddWikiNotify = false;
 
-# see r110254 and T35746
-$wgPreloadJavaScriptMwUtil = true;
-
 // Enable new /w/static.php routing (T99096)
 $wgResourceBasePath = '/w';
 $wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
