@@ -12345,6 +12345,13 @@ $wgConf->settings = array(
 	'default' => 800,
 ),
 
+'wmgUseUrlShortener' => array(
+	'default' => true,
+	'private' => false,
+	'loginwiki' => false,
+	'votewiki' => false,
+),
+
 'wgAllowMicrodataAttributes' => array(
 	'default' => false,
 	'hewikisource' => true, // T89655

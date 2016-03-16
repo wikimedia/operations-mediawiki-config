@@ -151,9 +151,10 @@ if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 }
 
 if ( $wmgUseUrlShortener ) {
-	wfLoadExtension( 'UrlShortener' );
-	$wgUrlShortenerTemplate = '/$1';
+	// Labs overrides
+	$wgUrlShortenerReadOnly = false;
 	$wgUrlShortenerServer = 'w-beta.wmflabs.org';
+	$wgUrlShortenerDBCluster = false;
 	$wgUrlShortenerDBName = 'wikishared';
 	$wgUrlShortenerDomainsWhitelist = array(
 		'(.*\.)?wikipedia\.beta\.wmflabs\.org',

@@ -814,6 +814,40 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgFFmpegLocation = '/usr/bin/ffmpeg';
 }
 
+if ( $wmgUseUrlShortener ) {
+	wfLoadExtension( 'UrlShortener' );
+	$wgUrlShortenerTemplate = '/$1';
+	$wgUrlShortenerServer = 'w.wiki';
+	$wgUrlShortenerDBCluster = 'extension1';
+	$wgUrlShortenerDBName = 'wikishared';
+	$wgUrlShortenerDomainsWhitelist = array(
+		'(.*\.)?wikipedia\.org',
+		'(.*\.)?wiktionary\.org',
+		'(.*\.)?wikibooks\.org',
+		'(.*\.)?wikinews\.org',
+		'(.*\.)?wikiquote\.org',
+		'(.*\.)?wikisource\.org',
+		'(.*\.)?wikiversity\.org',
+		'(.*\.)?wikivoyage\.org',
+		'(.*\.)?wikimedia\.org',
+		'wikidata\.org',
+	);
+	$wgUrlShortenerApprovedDomains = array(
+		'*.wikipedia.org',
+		'*.wiktionary.org',
+		'*.wikibooks.org',
+		'*.wikinews.org',
+		'*.wikiquote.org',
+		'*.wikisource.org',
+		'*.wikiversity.org',
+		'*.wikivoyage.org',
+		'*.wikimedia.org',
+		'wikidata.org',
+	);
+	$wgUrlShortenerReadOnly = true;
+}
+
+
 if ( $wmgPFEnableStringFunctions ) {
 	$wgPFEnableStringFunctions = true;
 }
