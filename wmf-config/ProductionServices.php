@@ -59,7 +59,7 @@ $wmfAllServices['eqiad']['irc'] = '208.80.154.160'; // eqiad: argon
 $wmfAllServices['codfw']['irc'] = $wmfAllServices['eqiad']['irc'];
 
 ### Restbase
-$wmfAllServices['eqiad']['restbase'] = 'http://10.2.2.17:7231'; # restbase.svc.eqiad.wmnet
+$wmfAllServices['eqiad']['restbase'] = 'http://10.2.1.17:7231'; # restbase.svc.codfw.wmnet
 $wmfAllServices['codfw']['restbase'] = 'http://10.2.1.17:7231'; # restbase.svc.codfw.wmnet
 
 ### Poolcounter
