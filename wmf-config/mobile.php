@@ -66,11 +66,7 @@ if ( $wmgMobileFrontend ) {
 	$wgMFNoMobilePages = $wmgMFNoMobilePages;
 
 	$wgHooks['EnterMobileMode'][] = function() {
-		global $wgCentralAuthCookieDomain, $wgHooks, $wgResponsiveImages, $wgRenderHashAppend,
-			$wgIncludeLegacyJavaScript;
-
-		// Disable loading of legacy wikibits in the mobile web experience
-		$wgIncludeLegacyJavaScript = false;
+		global $wgCentralAuthCookieDomain, $wgHooks, $wgResponsiveImages, $wgRenderHashAppend;
 
 		// Disable responsive images on mobile web (T119797), but not on apps.
 		if ( !defined( 'MW_API' ) ) {

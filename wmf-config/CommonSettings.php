@@ -251,7 +251,7 @@ $wgLocalStylePath = $wgStylePath;
 $wgStyleSheetPath = $wgStylePath;
 
 // Deprecated
-$wgIncludeLegacyJavaScript = true;
+$wgIncludeLegacyJavaScript = false;
 
 if ( gethostname() === 'osmium' ) {
 	$wgResourceLoaderStorageEnabled = false;
