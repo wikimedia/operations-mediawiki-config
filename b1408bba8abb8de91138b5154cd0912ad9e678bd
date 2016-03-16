@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_512680ca",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 16106,
+      "author": {
+        "id": 2974
+      },
+      "writtenOn": "2016-03-16T14:00:02Z",
+      "side": 1,
+      "message": "If `yes` is the default (as I understand), why not just delete the `dewiki` line? Is it a way to make it obvious that we are activating completion suggester on dewiki? And we\u0027ll do a cleanup at the end of all deployments? (this is an honest question, I\u0027m not trying to say that removing that line is better, just trying to understand your reasoning).",
+      "revId": "b1408bba8abb8de91138b5154cd0912ad9e678bd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
