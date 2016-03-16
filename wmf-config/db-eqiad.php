@@ -100,8 +100,8 @@ $wgLBFactoryConf = array(
 	),
 	's2' => array(
 		'db1018' => 0,   # 1.4TB  64GB, master
-		'db1024' => 1,   # 1.4TB  64GB  -- pooled with low load for testing 
-		'db1021' => 1,   # 1.4TB  64GB, vslow, dump -- pooled with low load for testing
+		'db1024' => 100, # 1.4TB  64GB
+		'db1021' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1036' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1054' => 0,   # 2.8TB  96GB, api
 		'db1060' => 200, # 2.8TB  96GB, api
