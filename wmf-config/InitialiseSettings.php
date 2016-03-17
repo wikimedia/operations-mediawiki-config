@@ -3417,8 +3417,8 @@ $wgConf->settings = array(
 		'ढाँ' => NS_TEMPLATE,
 		'ढाँवा' => NS_TEMPLATE_TALK,
 		'T' => NS_TEMPLATE,
-
-		// Other aliases
+	),
+	'+newiktionary' => array(
 		'विक्सनरी' => NS_PROJECT, // T129768
 	),
 	'+nlwiki' => array(
