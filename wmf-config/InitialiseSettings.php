@@ -16179,6 +16179,12 @@ $wgConf->settings = array(
 ),
 // @} end of wmgCirrusSearchRecycleCompletionSuggesterIndex
 
+// Configure ICU Folding
+'wmgCirrusSearchUseIcuFolding' => array(
+	'default' => false,
+	'elwiki' => true, // T129502
+),
+
 'wmgCirrusSearchAllFields' => array(
 	'default' => array( 'build' => true, 'use' => true ),
 ),
