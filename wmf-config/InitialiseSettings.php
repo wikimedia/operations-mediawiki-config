@@ -14802,6 +14802,7 @@ $wgConf->settings = array(
 	'otrs_wikiwiki' => true, // T63297
 	'outreachwiki' => true,
 	'ruwikimedia' => true, // T121766
+	'specieswiki' => true, // T129888
 	'testwiki' => true,
 	'wikidata' => true, // T43585
 	'wikimania2012wiki' => true, // T36120
