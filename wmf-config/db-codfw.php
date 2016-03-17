@@ -549,6 +549,7 @@ $wgLBFactoryConf = array(
 	'extension1' => array(
 #		'10.64.16.18' => 10, # db1029, master
 		'10.192.0.12' => 20, # db2009, local master
+#		'10.192.0.11' => 1,  # db2008, old hardware, just in case
 	),
 ),
 
