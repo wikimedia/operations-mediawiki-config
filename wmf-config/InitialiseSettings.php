@@ -3403,7 +3403,8 @@ $wgConf->settings = array(
 	'+nds_nlwiki' => array(
 		'Wikipedia' => NS_PROJECT,
 	),
-	'+newiki' => array( // T89817
+	'+newiki' => array(
+		// Shorcuts per T89817
 		'वि' => NS_PROJECT,
 		'विवा' => NS_PROJECT_TALK,
 		'CT' => NS_CATEGORY_TALK,
@@ -3416,6 +3417,9 @@ $wgConf->settings = array(
 		'ढाँ' => NS_TEMPLATE,
 		'ढाँवा' => NS_TEMPLATE_TALK,
 		'T' => NS_TEMPLATE,
+
+		// Other aliases
+		'विक्सनरी' => NS_PROJECT, // T129768
 	),
 	'+nlwiki' => array(
 		'WP' => NS_PROJECT,
