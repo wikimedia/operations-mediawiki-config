@@ -4460,13 +4460,6 @@ $wgConf->settings = array(
 		'antispoof' => 'debug',
 		'api' => array( 'logstash' => false ),
 		'api-feature-usage' => 'debug',
-		'ApiRequest' => array(
-			'udp2log' => false,
-			'logstash' => false,
-			'kafka' => 'debug',
-			'buffer' => true,
-			'sample' => 5000,
-		),
 		'badpass' => 'debug',
 		'BounceHandler' => 'debug',
 		'Bug58676' => 'debug', # Invalid message parameter
