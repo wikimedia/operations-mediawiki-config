@@ -8061,6 +8061,9 @@ $wgConf->settings = array(
 	'kawiki' => array(
 		'editor' => array( 'rollback' => true ),
 	),
+	'kkwiki' => array(
+		'rollbacker' => array( 'rollback' => true ), // T130215
+	),
 	'kowiki' => array(
 		'autoconfirmed' => array( // T85621
 			'upload' => false,
@@ -9195,6 +9198,9 @@ $wgConf->settings = array(
 	'+kawiki' => array(
 		'sysop' => array( 'trusted' ),
 	),
+	'+kkwiki' => array(
+		'sysop' => array( 'rollbacker' ), // T130215
+	),
 	'+kowiki' => array(
 		'sysop' => array( 'rollbacker', 'confirmed', 'uploader' ), // T85621
 	),
@@ -9874,6 +9880,9 @@ $wgConf->settings = array(
 	),
 	'+kawiki' => array(
 		'sysop' => array( 'trusted' ),
+	),
+	'+kkwiki' => array(
+		'sysop' => array( 'rollbacker' ), // T130215
 	),
 	'+kowiki' => array(
 		'sysop' => array( 'rollbacker', 'confirmed', 'uploader' ), // T85621
