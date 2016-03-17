@@ -16597,7 +16597,7 @@ $wgConf->settings = array(
 ),
 
 'wgUploadThumbnailRenderHttpCustomDomain' => array(
-	'default' => 'upload.svc.eqiad.wmnet',
+	'default' => $wmfLocalServices['upload'],
 ),
 
 // Virtual media views endpoint used by Media Viewer
