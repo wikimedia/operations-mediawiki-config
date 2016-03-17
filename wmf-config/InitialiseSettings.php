@@ -5103,6 +5103,10 @@ $wgConf->settings = array(
 		100 => 'Portal',
 		101 => 'Portal_Diskuschoon'
 	),
+	'newiki' => array(
+		100 => 'पोर्टल', // T130108
+		101 => 'पोर्टल_वार्ता',
+	),
 	'newwiki' => array(
 		100 => 'दबू',
 		101 => 'दबू_खँलाबँला',
