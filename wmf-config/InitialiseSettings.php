@@ -3543,6 +3543,21 @@ $wgConf->settings = array(
 	),
 	'+ruwikibooks' => array(
 		'ВУ' => NS_PROJECT,
+
+		// Shorcuts - T127591
+		'Ш' => NS_TEMPLATE,
+		'T' => NS_TEMPLATE,
+		'MOD' => 828,
+		'М' => 828,
+		'К' => NS_CATEGORY,
+		'У' => NS_USER,
+		'U' => NS_USER,
+		'ОУ' => NS_USER_TALK,
+		'Р' => 104,
+		'П' => 100,
+		'З' => 106,
+		'С' => NS_HELP,
+		'И' => 102,
 	),
 	'+ruwikinews' => array(
 		'ВикиНовости' => NS_PROJECT,
