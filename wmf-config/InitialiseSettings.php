@@ -4436,6 +4436,10 @@ $wgConf->settings = array(
 			'schema' => file_get_contents( __DIR__ . '/event-schemas/avro/mediawiki/CirrusSearchRequestSet/111448028943.avsc' ),
 			'revision' => 111448028943,
 		),
+		'ApiRequest' => array(
+			'schema' => file_get_contents( __DIR__ . '/event-schemas/avro/mediawiki/ApiRequest/101453221640.avsc' ),
+			'revision' => 101453221640,
+		),
 	),
 ),
 # @} end of wmgAvroSchemas
