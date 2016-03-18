@@ -9,7 +9,7 @@ $wmgRedisQueueBaseConfig = array(
 		'connectTimeout' => .250,
 		'password' => $wmgRedisPassword,
 		'compression' => 'gzip',
-		'persistent' => defined( 'MEDIAWIKI_JOB_RUNNER' )
+		#'persistent' => defined( 'MEDIAWIKI_JOB_RUNNER' )
 	),
 	'daemonized' => true
 );
