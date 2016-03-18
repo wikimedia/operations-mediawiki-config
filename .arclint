@@ -1,0 +1,12 @@
+{
+  "linters": {
+    "php": {
+      "type": "php",
+      "include": "(\\.ph(p|html)$|^multiversion/*$)"
+    },
+	"json": {
+		"type": "json",
+		"include": "(\\.json$)"
+	}
+  }
+}
