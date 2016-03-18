@@ -33,10 +33,12 @@ if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 	$wgDebugDumpSql = true;
 }
 
+// When the X-Wikimedia-Debug header is present and contains a 'log' attribute,
+// forward log messages in all channels to a special log bucket set aside for
+// debugging. See <https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug>.
 if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) &&
-	gethostname() === 'mw1017'
-) {
-	$wgDebugLogFile = "udp://{$wmfUdp2logDest}/mw1017";
+		preg_match( '/\blog\b/i', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
+	$wgDebugLogFile = "udp://{$wmfUdp2logDest}/XWikimediaDebug";
 	$wmgDefaultMonologHandler = 'wgDebugLogFile';
 }
 
