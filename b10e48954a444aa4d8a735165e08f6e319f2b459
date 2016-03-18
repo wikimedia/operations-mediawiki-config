@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_57113db0",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2016-03-18T18:47:44Z",
+      "side": 1,
+      "message": "Would love if filename were more intuitive.",
+      "revId": "b10e48954a444aa4d8a735165e08f6e319f2b459",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
