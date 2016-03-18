@@ -3548,6 +3548,7 @@ $wgConf->settings = array(
 		'Ш' => NS_TEMPLATE,
 		'T' => NS_TEMPLATE,
 		'MOD' => 828,
+		'М' => 828,
 		'К' => NS_CATEGORY,
 		'У' => NS_USER,
 		'U' => NS_USER,
