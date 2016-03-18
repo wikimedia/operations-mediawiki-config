@@ -72,7 +72,7 @@ function handleMissingWiki() {
 		# Open the interwiki file to see if we have an interwiki prefix
 		$db = null;
 		try {
-			$db = include_once( __DIR__ . '/interwiki.php' );
+			$db = include  __DIR__ . '/interwiki.php';
 		} catch ( Exception $e ) {}
 
 		if ( $db ) {
