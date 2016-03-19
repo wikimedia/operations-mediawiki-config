@@ -63,6 +63,14 @@ $wmgThrottlingExceptions[] = array( // T129018 - Workshop for cawiki and frwiki
 	'value'  => 70 // 30-60 expected
 );
 
+$wmgThrottlingExceptions[] = array( // T130447 - Telugu Wikipedia outreach
+	'from'   => '2016-03-20T04:30 +0:00',
+	'to'     => '2016-03-20T18:30 +0:00',
+	'ip'     => '123.176.39.75',
+	'dbname' => array( 'tewiki', 'commonswiki' ),
+	'value'  => 120 // 100 expected
+);
+
 $wmgThrottlingExceptions[] = array( // T129490 - Taller d'iniciació a la Viquipèdia, Montserrat
 	'from'   => '2016-04-17T15:30 +2:00',
 	'to'     => '2016-04-17T17:30 +2:00',
