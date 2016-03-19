@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_63c59f90",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 819,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2016-03-19T00:54:40Z",
+      "side": 1,
+      "message": "Ok, looks like we should either include the vorbis setting in this array explicitly as well, or only append to the array instead of resetting it entirely:\n\n$wgEnabledAudioTranscodeSet[] \u003d WebVideoTranscode::ENC_OGG_OPUS;",
+      "revId": "c6504aebabbd2cfd7e56bd3f066c32924b88b16c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
