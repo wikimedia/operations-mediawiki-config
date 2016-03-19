@@ -4,7 +4,7 @@
 # Do not put private data here.
 
 # Initialize the array. Append to that array to add a throttle
-$wmgThrottlingExceptions = array();
+$wmgThrottlingExceptions = [];
 
 # $wmgThrottlingExceptions is an array of arrays of parameters:
 #  'from'  => date/time to start raising account creation throttle
@@ -19,65 +19,30 @@ $wmgThrottlingExceptions = array();
 #             (eg. enwiki, metawiki, frwikibooks, eswikiversity)
 #             (default: any project)
 # Example:
-# $wmgThrottlingExceptions[] = array(
+# $wmgThrottlingExceptions[] = [
 #	'from'   => '2016-01-01T00:00 +0:00',
 #	'to'     => '2016-02-01T00:00 +0:00',
 #	'IP'     => '123.456.78.90',
-#	'dbname' => array ( 'xxwiki', etc. ),
+#	'dbname' => [ 'xxwiki', etc. ],
 #	'value'  => xx
-# );
+# ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = array( // T129342 - Wikipedia while at Women of the World Festival
-	'from'   => '2016-03-13T11:00 +0:00',
-	'to'     => '2016-03-13T13:00 +0:00',
-	'IP'     => array( '5.148.129.61' ),
-	'dbname' => array( 'enwiki' ),
-	'value'  => 30 // 20 expected
-);
-
-$wmgThrottlingExceptions[] = array( // T129574 - Procomuns Viquimarató - Barcelona
-	'from'   => '2016-03-13T10:00 +1:00',
-	'to'     => '2016-03-13T19:00 +1:00',
-	'IP'     => array( '94.229.206.251' ),
-	'dbname' => array( 'cawiki', 'enwiki', 'eswiki', 'frwiki', 'commonswiki' ),
-	'value'  => 70 // 20-50 expected
-);
-
-$wmgThrottlingExceptions[] = array( // T129697 - Women's writes WikiWarriors edit-a-thon
-	'from'   => '2016-03-15T20:00 -5:00',
-	'to'     => '2016-03-16T01:00 -5:00',
-	'range'  => array(
-		'129.93.0.0/16',
-		'40.135.25.0/24',
-	),
-	'dbname' => array( 'enwiki', 'commonswiki' ),
-	'value'  => 150 // 100 expected
-);
-
-$wmgThrottlingExceptions[] = array( // T129018 - Workshop for cawiki and frwiki
-	'from'   => '2016-03-16T00:00 +0:00',
-	'to'     => '2016-03-16T23:59 +0:00',
-	'IP'     => array ( '194.167.137.246', '194.167.137.11', '194.167.137.29' ),
-	'dbname' => array ( 'frwiki', 'cawiki' ),
-	'value'  => 70 // 30-60 expected
-);
-
-$wmgThrottlingExceptions[] = array( // T130447 - Telugu Wikipedia outreach
+$wmgThrottlingExceptions[] = [ // T130447 - Telugu Wikipedia outreach
 	'from'   => '2016-03-20T04:30 +0:00',
 	'to'     => '2016-03-20T18:30 +0:00',
 	'ip'     => '123.176.39.75',
-	'dbname' => array( 'tewiki', 'commonswiki' ),
+	'dbname' => [ 'tewiki', 'commonswiki' ],
 	'value'  => 120 // 100 expected
-);
+];
 
-$wmgThrottlingExceptions[] = array( // T129490 - Taller d'iniciació a la Viquipèdia, Montserrat
+$wmgThrottlingExceptions[] = [ // T129490 - Taller d'iniciació a la Viquipèdia, Montserrat
 	'from'   => '2016-04-17T15:30 +2:00',
 	'to'     => '2016-04-17T17:30 +2:00',
 	'ip'     => '80.32.80.220',
-	'dbname' => array( 'cawiki', 'commonswiki' ),
+	'dbname' => [ 'cawiki', 'commonswiki' ],
 	'value'  => 20 // 15 expected
-);
+];
 
 ## Add throttling definitions above.
 
@@ -120,8 +85,8 @@ $wgExtensionFunctions[] = function() {
 		} else {
 			$wgAccountCreationThrottle = 50; // Provide some sane default
 		}
-		$wgRateLimits['badcaptcha']['ip'] = array( 1000, 86400 );
-		$wgRateLimits['badcaptcha']['newbie'] = array( 1000, 86400 );
+		$wgRateLimits['badcaptcha']['ip'] = [ 1000, 86400 ];
+		$wgRateLimits['badcaptcha']['newbie'] = [ 1000, 86400 ];
 		return; # No point in proceeding to another entry
 	}
 };
