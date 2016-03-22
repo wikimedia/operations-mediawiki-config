@@ -2011,6 +2011,7 @@ $wgConf->settings = array(
 	'advisorywiki' => 'Project',
 	'adywiki' => 'Википедие', // T125501
 	'amwiki' => 'ውክፔዲያ',
+	'anwiktionary' = 'Biquizionario', // T130599
 	'angwiki' => 'Wikipǣdia', // T58634
 	'angwikisource' => 'Wicifruma',
 	'angwiktionary' => 'Wikiwordbōc', // T58634
