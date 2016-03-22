@@ -1125,6 +1125,7 @@ $wgConf->settings = array(
 'wgLogoHD' => array(
     # Wikipedia
 	'bnwiki' => array( '1.5x' => '/static/images/project-logos/bnwiki-1.5x.png', '2x' => '/static/images/project-logos/bnwiki-2x.png' ),
+	'cswiki' => array( '1.5x' => '/static/images/project-logos/cswiki-1.5x.png', '2x' => '/static/images/project-logos/cswiki-2x.png' ), // T130392
 	'enwiki' => array( '1.5x' => '/static/images/project-logos/enwiki-1.5x.png', '2x' => '/static/images/project-logos/enwiki-2x.png' ),
 	'fawiki' => array( '1.5x' => '/static/images/project-logos/fawiki-1.5x.png', '2x' => '/static/images/project-logos/fawiki-2x.png' ),
 	'frwiki' => array( '1.5x' => '/static/images/project-logos/frwiki-1.5x.png', '2x' => '/static/images/project-logos/frwiki-2x.png' ),
