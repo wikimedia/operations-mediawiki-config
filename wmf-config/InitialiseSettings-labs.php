@@ -202,10 +202,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		),
 
-		// Editor Engagement stuff
-		'-wmfUseArticleCreationWorkflow' => array(
-			'default' => false,
-		),
 		'wmgUseEcho' => array(
 			'enwiki' => true,
 			'en_rtlwiki' => true,
