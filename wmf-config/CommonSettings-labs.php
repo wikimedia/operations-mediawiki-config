@@ -44,11 +44,6 @@ $wgLocalVirtualHosts = [
 	'commons.wikimedia.beta.wmflabs.org',
 ];
 
-if ( $wmfUseArticleCreationWorkflow ) {
-	require_once "$IP/extensions/ArticleCreationWorkflow/ArticleCreationWorkflow.php";
-	$wgArticleCreationBucketConfig['buckets']['off'] = 0;
-}
-
 # Attempt to auto block users using faulty servers
 # See also http://www.us.sorbs.net/general/using.shtml
 $wgEnableDnsBlacklist = true;

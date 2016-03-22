@@ -199,12 +199,6 @@ function wmfLabsSettings() {
 		'wgVectorResponsive' => [
 			'default' => true,
 		],
-
-		// Editor Engagement stuff
-		'-wmfUseArticleCreationWorkflow' => [
-			'default' => false,
-		],
-
 		'-wmgUsePoolCounter' => [
 			'default' => false, // T38891
 		],
