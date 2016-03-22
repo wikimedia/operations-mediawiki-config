@@ -1194,6 +1194,7 @@ $wgConf->settings = array(
 	'euwiki' => false, // T30609
 	'gomwiki' => false, // T96468
 	'guwiki' => false,
+	'iawiki' => false, // T130425
 	'itwikiquote' => false, // T14012
 	'jawikisource' => false, // T5572
 	'jawiktionary' => false, // T13775
