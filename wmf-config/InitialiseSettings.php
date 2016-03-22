@@ -9386,8 +9386,9 @@ $wgConf->settings = array(
 	'+skwiki' => array(
 		'sysop' => array( 'rollbacker' ),
 	),
-	'+specieswiki' => array( // T89147
-		'sysop' => array( 'autopatrolled', 'patroller' ),
+	'+specieswiki' => array(
+		'bureaucrat' => array( 'translationadmin' ), // T129888
+		'sysop' => array( 'autopatrolled', 'patroller' ), // T89147
 	),
 	'+sqwiki' => array(
 		'bureaucrat' => array( 'editor' ),
@@ -10071,8 +10072,9 @@ $wgConf->settings = array(
 	'+skwiki' => array(
 		'sysop' => array( 'rollbacker' ),
 	),
-	'+specieswiki' => array( // T89147
-		'sysop' => array( 'autopatrolled', 'patroller' ),
+	'+specieswiki' => array(
+		'bureaucrat' => array( 'translationadmin' ), // T129888
+		'sysop' => array( 'autopatrolled', 'patroller' ), // T89147
 	),
 	'+stewardwiki' => array(
 		'bureaucrat' => array( 'bureaucrat', 'sysop', 'import', 'transwiki', 'user', 'ipblock-exempt' ),
