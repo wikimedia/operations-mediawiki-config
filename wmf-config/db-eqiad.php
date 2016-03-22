@@ -100,13 +100,15 @@ $wgLBFactoryConf = array(
 	),
 	's2' => array(
 		'db1018' => 0,   # 1.4TB  64GB, master
-#		'db1024' => 100, # 1.4TB  64GB, depooled for maintenance
+		'db1024' => 1,   # 1.4TB  64GB, pooled with low weight
 		'db1021' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1036' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1054' => 0,   # 2.8TB  96GB, api
 		'db1060' => 200, # 2.8TB  96GB, api
 		'db1063' => 400, # 2.8TB 128GB
 		'db1067' => 500, # 2.8TB 160GB
+		'db1074' => 1,   # 3.6TB 512GB, pooled with low weight
+		'db1076' => 1,   # 3.6TB 512GB, pooled with low weight
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1038' => 0,   # 1.4TB  64GB
@@ -416,6 +418,8 @@ $wgLBFactoryConf = array(
 	'db1071' => '10.64.48.26', #do not remove or comment out
 	'db1072' => '10.64.48.27', #do not remove or comment out
 	'db1073' => '10.64.48.28', #do not remove or comment out
+	'db1074' => '10.64.0.204', #do not remove or comment out
+	'db1076' => '10.64.16.190', #do not remove or comment out
 	'db2001' => '10.192.0.4', # do not remove or comment out
 	'db2002' => '10.192.0.5', # do not remove or comment out
 	'db2003' => '10.192.0.6', # do not remove or comment out
