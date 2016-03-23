@@ -223,6 +223,9 @@ function wmfLabsSettings() {
 		'-wmgEchoUseCrossWikiBetaFeature' => array(
 			'default' => false,
 		),
+		'-wmgEchoShowFooterNotice' => array(
+			'default' => true
+		),
 		# FIXME: make that settings to be applied
 		'-wgShowExceptionDetails' => array(
 			'default' => true,
