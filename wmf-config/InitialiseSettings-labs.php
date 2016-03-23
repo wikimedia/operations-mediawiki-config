@@ -226,6 +226,9 @@ function wmfLabsSettings() {
 		'-wmgEchoShowFooterNotice' => array(
 			'default' => true
 		),
+		'-wmgEchoFooterNoticeURL' => array(
+			'default' => 'http://example.org',
+		),
 		# FIXME: make that settings to be applied
 		'-wgShowExceptionDetails' => array(
 			'default' => true,

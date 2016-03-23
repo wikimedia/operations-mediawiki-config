@@ -2598,6 +2598,11 @@ if ( $wmgUseEcho ) {
 	// Whether to make the cross-wiki notifications beta feature available
 	$wgEchoUseCrossWikiBetaFeature = $wmgEchoUseCrossWikiBetaFeature;
 
+	// Whether to show the footer notice
+	$wgEchoShowFooterNotice = $wmgEchoShowFooterNotice;
+	// URL to use in the footer notice
+	$wgEchoFooterNoticeURL = $wmgEchoFooterNoticeURL;
+
 	// Enable tracking table only on SULed wikis
 	if ( $wmgUseCentralAuth ) {
 		$wgEchoSharedTrackingDB = 'wikishared';
