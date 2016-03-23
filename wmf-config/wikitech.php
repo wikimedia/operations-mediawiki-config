@@ -180,4 +180,7 @@ $smwgNamespacesWithSemanticLinks[NS_NOVA_RESOURCE] = true;
 #$wgOpenIDConsumerDenyByDefault = true;
 
 require_once( "$IP/extensions/OATHAuth/OATHAuth.php" );
+// Allow all users to enable OATH 2FA on labswiki
+$wgGroupPermissions['*']['oathauth-enable'] = true;
+
 require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
