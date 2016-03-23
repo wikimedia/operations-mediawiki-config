@@ -11092,7 +11092,7 @@ $wgConf->settings = [
 'wmgUseProofreadPage' => [
 	'default' => false,
 	'wikisource' => true,
-	'sourceswiki' => true, // FIXME: Why isn't this part of wikisource?
+	'sourceswiki' => true, // FIXME: should be a part of wikisource (see T91534)
 	'test2wiki' => true,
 	'frrwiki' => true, // T40023
 ],
