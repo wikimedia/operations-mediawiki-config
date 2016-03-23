@@ -692,7 +692,7 @@ if ( $wmgUseParserFunctions ) {
 $wgExpensiveParserFunctionLimit = 500;
 
 if ( $wmgUseCite ) {
-	require( $IP . '/extensions/Cite/Cite.php' );
+	wfLoadExtension( 'Cite' );
 }
 
 if ( $wmgUseCiteThisPage ) {
