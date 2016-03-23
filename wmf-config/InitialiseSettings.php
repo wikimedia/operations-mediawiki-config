@@ -15340,6 +15340,9 @@ $wgConf->settings = array(
 'wmgEchoUseCrossWikiBetaFeature' => array(
 	'default' => true,
 ),
+'wmgEchoShowFooterNotice' => array(
+	'default' => false,
+),
 # from and reply to address when Echo sends email notifications
 'wmgNotificationSender' => array(
 	'default' => 'wiki@wikimedia.org',
