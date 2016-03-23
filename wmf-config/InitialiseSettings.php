@@ -15340,6 +15340,12 @@ $wgConf->settings = array(
 'wmgEchoUseCrossWikiBetaFeature' => array(
 	'default' => true,
 ),
+'wmgEchoShowFooterNotice' => array(
+	'default' => false,
+),
+'wmgEchoFooterNoticeURL' => array(
+	'default' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3',
+),
 # from and reply to address when Echo sends email notifications
 'wmgNotificationSender' => array(
 	'default' => 'wiki@wikimedia.org',
