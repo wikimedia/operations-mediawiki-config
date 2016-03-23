@@ -4510,6 +4510,7 @@ $wgConf->settings = array(
 		'cite' => 'debug',
 		'collection' => 'debug', // -cscott for T73675
 		'DBPerformance' => array( 'logstash' => 'debug', 'udp2log' => 'warning' ),
+		'diff' => 'debug',
 		'Echo' => 'debug',
 		'es-hit' => 'debug',
 		'EventBus' => 'debug',
