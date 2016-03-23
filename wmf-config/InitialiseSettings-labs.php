@@ -221,7 +221,7 @@ function wmfLabsSettings() {
 			'default' => false,
 		),
 		'-wmgEchoUseCrossWikiBetaFeature' => array(
-			'default' => true,
+			'default' => false,
 		),
 		# FIXME: make that settings to be applied
 		'-wgShowExceptionDetails' => array(
