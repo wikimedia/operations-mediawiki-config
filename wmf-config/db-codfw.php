@@ -543,7 +543,7 @@ $wgLBFactoryConf = array(
 #		'10.64.48.116'  => 0, # es1019, master
 		'10.192.16.172' => 1, # es2018, codfw local master
 		'10.192.0.142'  => 3, # es2017
-		'10.192.48.42'  => 3, # es2019
+#		'10.192.48.42'  => 3, # es2019, depooled T130702
 	),
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => array(
