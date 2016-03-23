@@ -2289,6 +2289,7 @@ $wgConf->settings = array(
 	'newiki' => 'विकिपीडिया',
 	'newikibooks' => 'विकिपुस्तक', // T124881
 	'newwiki' => 'विकिपिडिया',
+	'newiktionary' => 'विक्सनरी', // T129768
 	'nlwiktionary' => 'WikiWoordenboek',
 	'nostalgiawiki' => 'Wikipedia',
 	'nowikibooks' => 'Wikibøker',
@@ -3420,9 +3421,6 @@ $wgConf->settings = array(
 		'ढाँ' => NS_TEMPLATE,
 		'ढाँवा' => NS_TEMPLATE_TALK,
 		'T' => NS_TEMPLATE,
-	),
-	'+newiktionary' => array(
-		'विक्सनरी' => NS_PROJECT, // T129768
 	),
 	'+nlwiki' => array(
 		'WP' => NS_PROJECT,
