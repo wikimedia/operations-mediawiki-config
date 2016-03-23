@@ -10440,6 +10440,7 @@ $wgConf->settings = array(
 	'myvwiki' => array( 'incubator' ),
 	'ndswiki' => array( 'en', 'de', 'nl', 'nds-nl', 'wikt' ),
 	'newiki' => array( 'en', 'commons' ), // T97396
+	'newikibooks => array( 'w', 'w:en', 'w:hi', 'commons' ), // T129831
 	'nlwikibooks' => array( 'w' ),
 	'nlwikisource' => array( 'w', 'wikt', 'q', 'b', 'n', 'nl', 'de', 'en' ),
 	'nlwiktionary' => array( 'w', 'en', 'fr' ), // T12856
