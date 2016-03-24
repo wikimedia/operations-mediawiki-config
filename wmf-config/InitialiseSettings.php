@@ -8771,6 +8771,9 @@ $wgConf->settings = array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
 		'autoreviewer' => array( 'autopatrol' => true ),
 		'flood' => array( 'bot' => true ),
+		'massmessage-sender' => array( // T130814
+			'massmessage' => true,
+		),
 	),
 
 	'zhwikinews' => array(
@@ -9512,7 +9515,7 @@ $wgConf->settings = array(
 	),
 	'+zhwiki' => array(
 		'bureaucrat' => array( 'flood' ),
-		'sysop' => array( 'patroller', 'rollbacker', 'autoreviewer', 'confirmed' ),
+		'sysop' => array( 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'massmessage-sender' ), // T130814
 	),
 	'+zhwikinews' => array(
 		'sysop' => array(
@@ -10209,7 +10212,7 @@ $wgConf->settings = array(
 	),
 	'+zhwiki' => array(
 		'bureaucrat' => array( 'flood' ),
-		'sysop' => array( 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'flood' ),
+		'sysop' => array( 'patroller', 'rollbacker', 'autoreviewer', 'confirmed', 'flood', 'massmessage-sender' ), // T130814
 	),
 	'+zhwikinews' => array(
 		'sysop' => array(
@@ -11829,7 +11832,10 @@ $wgConf->settings = array(
 		'sysop' => array( 'flood', 'translationadmin' ), // T50013, T48856
 		'flood' => array( 'flood' ), // T50013
 	),
-	'zhwiki' => array( 'sysop' => array( 'flood' ) ),
+	'zhwiki' => array(
+		'sysop' => array( 'flood' ),
+		'massmessage-sender' => array( 'massmessage-sender' ), // T130814
+	),
 	'zhwikinews' => array( 'flood' => array( 'flood' ) ), // T54546
 ),
 
