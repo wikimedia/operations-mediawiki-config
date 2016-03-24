@@ -25,7 +25,7 @@ mwconfig_files_txt=(
 	HHVMRequestInit.php
 	import.php
 	interwiki.php
-	jobqueue-eqiad.php
+	jobqueue.php
 	jobqueue-labs.php
 	LegalContactPages.php
 	AffComContactPages.php

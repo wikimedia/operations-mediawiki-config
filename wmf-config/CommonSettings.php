@@ -949,7 +949,7 @@ if ( $wmgUseClusterJobqueue ) {
 	# Cluster-dependent files for job queue and job queue aggregator
 	require $wmfRealm === 'labs'
 		? "$wmfConfigDir/jobqueue-labs.php"
-		: "$wmfConfigDir/jobqueue-{$wmfDatacenter}.php";
+		: "$wmfConfigDir/jobqueue.php";
 }
 
 if ( $wgDBname == 'nostalgiawiki' ) {
