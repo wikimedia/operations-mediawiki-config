@@ -699,7 +699,7 @@ if ( $wmgUseCiteThisPage ) {
 }
 
 if ( $wmgUseInputBox ) {
-	include( $IP . '/extensions/InputBox/InputBox.php' );
+	wfLoadExtension( 'InputBox' );
 }
 
 if ( $wmgUseImageMap ) {
