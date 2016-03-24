@@ -14076,15 +14076,15 @@ $wgConf->settings = array(
 		'languageOverlay' => array(
 			'enabled' => true,
 			'buckets' => array(
-				'control' => 0.5,  // simpler overlay
-				'A' => 0.5  // structured overlay
+				'control' => 1,  // simpler overlay
+				'A' => 0  // structured overlay
 			),
 		),
 		'languageOverlayBeta' => array(
 			'enabled' => true,
 			'buckets' => array(
-				'control' => 0,  // simpler overlay
-				'A' => 1  // structured overlay
+				'control' => 1,  // simpler overlay
+				'A' => 0  // structured overlay
 			),
 		),
 	),
