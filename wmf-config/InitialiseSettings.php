@@ -15347,6 +15347,7 @@ $wgConf->settings = array(
 ),
 'wmgEchoShowFooterNotice' => array(
 	'default' => false,
+	'enwiki' => true,
 	'testwiki' => true,
 ),
 'wmgEchoFooterNoticeURL' => array(
