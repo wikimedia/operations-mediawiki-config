@@ -683,9 +683,9 @@ if ( $wmgUseCharInsert ) {
 }
 
 if ( $wmgUseParserFunctions ) {
-	include( $IP . '/extensions/ParserFunctions/ParserFunctions.php' );
+	wfLoadExtension( 'ParserFunctions' );
+	$wgExpensiveParserFunctionLimit = 500;
 }
-$wgExpensiveParserFunctionLimit = 500;
 
 if ( $wmgUseCite ) {
 	wfLoadExtension( 'Cite' );
