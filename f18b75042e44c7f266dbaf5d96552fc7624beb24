@@ -16,6 +16,41 @@
       "revId": "f18b75042e44c7f266dbaf5d96552fc7624beb24",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_ff59242e",
+        "filename": "wmf-config/CirrusSearch-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2016-03-24T15:08:34Z",
+      "side": 1,
+      "message": "for prod there are, but in beta cluster we only have the one cluster.  $host comes from the items of $wmfAllServices[\u0027eqiad\u0027][\u0027search\u0027] which is defined in LabsServices.php: https://github.com/wikimedia/operations-mediawiki-config/blob/master/wmf-config/LabsServices.php#L17-L23",
+      "parentUuid": "ee33df1d_7f57d405",
+      "revId": "f18b75042e44c7f266dbaf5d96552fc7624beb24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee33df1d_5fa010f1",
+        "filename": "wmf-config/CirrusSearch-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2016-03-24T15:08:34Z",
+      "side": 1,
+      "message": "we can just drop this clause since it\u0027s empty, i thought we were going to have to specify them .pem below, but ended up being unnecessary",
+      "revId": "f18b75042e44c7f266dbaf5d96552fc7624beb24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
