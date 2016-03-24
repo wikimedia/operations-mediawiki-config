@@ -31,13 +31,6 @@ $wgDebugTimestamps = true;
 
 $wmgAddWikiNotify = false;
 
-// Enable new /w/static.php routing (T99096)
-$wgResourceBasePath = '/w';
-$wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
-$wgStylePath = "{$wgResourceBasePath}/skins";
-$wgLocalStylePath = $wgStylePath;
-$wgStyleSheetPath = $wgStylePath; // Deprecated
-
 // Cache ResourceLoader modules in localStorage
 // Experimental! See <https://gerrit.wikimedia.org/r/#/c/86867/>.
 $wgResourceLoaderStorageEnabled = true;
