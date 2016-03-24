@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_bbfb2bb9",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 687,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2016-03-24T23:05:41Z",
+      "side": 1,
+      "message": "Why is this being moved into this if block? This setting, while confusingly named, is an MW core setting, not a ParserFunctions setting.",
+      "revId": "3551d7b8a051193f15e0e70ae661344a4ee65f4d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
