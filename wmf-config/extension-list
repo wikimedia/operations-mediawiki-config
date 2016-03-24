@@ -14,7 +14,7 @@ $IP/extensions/CentralNotice/CentralNotice.php
 $IP/extensions/CharInsert/extension.json
 $IP/extensions/CheckUser/CheckUser.php
 $IP/extensions/CirrusSearch/CirrusSearch.php
-$IP/extensions/Cite/Cite.php
+$IP/extensions/Cite/extension.json
 $IP/extensions/CiteThisPage/extension.json
 $IP/extensions/Citoid/Citoid.php
 $IP/extensions/cldr/cldr.php
@@ -75,7 +75,7 @@ $IP/extensions/Listings/Listings.php
 $IP/extensions/LocalisationUpdate/LocalisationUpdate.php
 $IP/extensions/MapSources/MapSources.php
 $IP/extensions/MassMessage/MassMessage.php
-$IP/extensions/Math/Math.php
+$IP/extensions/Math/extension.json
 $IP/extensions/MobileApp/MobileApp.php
 $IP/extensions/MobileFrontend/MobileFrontend.php
 $IP/extensions/MoodBar/MoodBar.php
@@ -98,7 +98,7 @@ $IP/extensions/Popups/Popups.php
 $IP/extensions/ProofreadPage/ProofreadPage.php
 $IP/extensions/QuickSurveys/extension.json
 $IP/extensions/Quiz/Quiz.php
-$IP/extensions/RelatedArticles/RelatedArticles.php
+$IP/extensions/RelatedArticles/extension.json
 $IP/extensions/RelatedSites/RelatedSites.php
 $IP/extensions/Renameuser/Renameuser.php
 $IP/extensions/RestBaseUpdateJobs/RestbaseUpdate.php
