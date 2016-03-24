@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_7f57d405",
+        "filename": "wmf-config/CirrusSearch-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 2974
+      },
+      "writtenOn": "2016-03-24T15:05:33Z",
+      "side": 1,
+      "message": "I\u0027m not really sure what this `$host` is...\n\nAlso, I remember something about connections to both eqiad and codfw being configured, and activated based on some other settings.",
+      "revId": "f18b75042e44c7f266dbaf5d96552fc7624beb24",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
