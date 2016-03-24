@@ -683,7 +683,7 @@ if ( $wmgUseCharInsert ) {
 }
 
 if ( $wmgUseParserFunctions ) {
-	include( $IP . '/extensions/ParserFunctions/ParserFunctions.php' );
+	wfLoadExtension( 'ParserFunctions' );
 }
 $wgExpensiveParserFunctionLimit = 500;
 
