@@ -8,12 +8,15 @@
 $wgCirrusSearchClusters = array(
 	'eqiad' => array_map( function ( $host ) {
 		return array(
-			'transport' => 'Https',
+			'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
 			'port' => '9243',
 			'host' => $host,
 			'curl' => array(
 				// We might not need to specify the cert explicitly,
 				// CURLOPT_CAINFO => '/etc/ssl/certs/wmf-labs.pem',
+			),
+			'config' => array(
+				'pool' => 'cirrus',
 			),
 		);
 	}, $wmfAllServices['eqiad']['search'] ),
