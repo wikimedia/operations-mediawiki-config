@@ -16521,11 +16521,6 @@ $wgConf->settings = array(
 	'donatewiki' => false,
 ),
 
-'wmgUseWmfstatic' => array(
-	'default' => true,
-	'testwiki' => true,
-),
-
 // Cache ResourceLoader modules in localStorage
 'wgResourceLoaderStorageEnabled' => array(
 	'default' => true,

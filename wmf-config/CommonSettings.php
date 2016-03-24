@@ -240,12 +240,8 @@ $wgLoadScript = "{$wgScriptPath}/load.php";
 // - Goes wrong otherwise on mobile web (T106966, T112646)
 // - Improves performance by leveraging HTTP/2
 // - $wgLocalStylePath MUST be relative
-if ( $wmgUseWmfstatic ) {
-	// Routed by Apache rewrite to /w/static.php (T99096)
-	$wgResourceBasePath = '/w';
-} else {
-	$wgResourceBasePath = "/static/{$wmgVersionNumber}";
-}
+// Apache rewrites /w/resources, /w/extensions, and /w/skins to /w/static.php (T99096)
+$wgResourceBasePath = '/w';
 $wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
 $wgStylePath = "{$wgResourceBasePath}/skins";
 $wgLocalStylePath = $wgStylePath;
