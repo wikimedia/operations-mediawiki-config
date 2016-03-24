@@ -31,10 +31,6 @@ $wgDebugTimestamps = true;
 
 $wmgAddWikiNotify = false;
 
-// Cache ResourceLoader modules in localStorage
-// Experimental! See <https://gerrit.wikimedia.org/r/#/c/86867/>.
-$wgResourceLoaderStorageEnabled = true;
-
 $wgLocalVirtualHosts = array(
 	'wikipedia.beta.wmflabs.org',
 	'wiktionary.beta.wmflabs.org',

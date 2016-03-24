@@ -16526,6 +16526,7 @@ $wgConf->settings = array(
 	'testwiki' => true,
 ),
 
+// Cache ResourceLoader modules in localStorage
 'wgResourceLoaderStorageEnabled' => array(
 	'default' => true,
 ),
