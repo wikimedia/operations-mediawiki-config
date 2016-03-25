@@ -57,9 +57,6 @@ $wmgMonologProcessors = array(
 	'pid' => array(
 		'class' => '\\Monolog\\Processor\\ProcessIdProcessor',
 	),
-	'uid' => array(
-		'class' => '\\Monolog\\Processor\\UidProcessor',
-	),
 	'web' => array(
 		'class' => '\\Monolog\\Processor\\WebProcessor',
 	),
@@ -126,7 +123,7 @@ $wmgMonologConfig =  array(
 		'line' => array(
 			'class' => '\\MediaWiki\\Logger\\Monolog\\LineFormatter',
 			'args' => array(
-				"%datetime% %extra.host% %extra.wiki% %extra.mwversion% %channel% %level_name%: %message% %context% %exception%\n",
+				"%datetime% [%extra.reqId%] %extra.host% %extra.wiki% %extra.mwversion% %channel% %level_name%: %message% %context% %exception%\n",
 				'Y-m-d H:i:s',
 				true, // allowInlineLineBreaks
 				true, // ignoreEmptyContextAndExtra
