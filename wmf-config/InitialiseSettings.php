@@ -4484,7 +4484,6 @@ $wgConf->settings = array(
 			'logstash' => false,
 			'kafka' => 'debug',
 			'buffer' => true,
-			'sample' => 5000,
 		),
 		'badpass' => 'debug',
 		'BounceHandler' => 'debug',
