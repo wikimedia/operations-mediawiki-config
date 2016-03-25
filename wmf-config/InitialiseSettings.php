@@ -8520,7 +8520,7 @@ $wgConf->settings = array(
 		'rollbacker' => array( 'rollback' => true ), // T93339
 	),
 	'+swwiki' => array(
-		'*' => array( 'createpage' => false ), // T44894 FIXME recheck for need around September 15 2015
+		'*' => array( 'createpage' => false ), // T44894
 	),
 	'tawiki' => array(
 		'nocreate' => array( 'createpage' => false, ),
