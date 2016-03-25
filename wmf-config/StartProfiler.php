@@ -157,10 +157,21 @@ if (
 		$env = array_intersect_key( $_ENV, $keyWhitelist );
 		$get = array_intersect_key( $_GET, $keyWhitelist );
 
+		$reqId = WebRequest::getRequestId();
+		$server['UNIQUE_ID'] = $reqId;
+		$env['UNIQUE_ID'] = $reqId;
+
 		// Strip everything from the query string except 'action=' param:
 		preg_match( '/action=[^&]+/', $_SERVER['REQUEST_URI'], $matches );
 		$qs = $matches ? '?' . $matches[0] : '';
 		$url = $_SERVER['SCRIPT_NAME'] . $qs;
+
+		// If profiling was explicitly requested (via X-Wikimedia-Debug)
+		// then insert the request ID into the URL we report for this request,
+		// to make it easy to pick out in XHGui.
+		if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
+			$url = "//{$reqId}/{$url}";
+		}
 
 		// Re-insert scrubbed URL as REQUEST_URL:
 		$server['REQUEST_URI'] = $url;
