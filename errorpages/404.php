@@ -1,51 +1,49 @@
 <?php
 header( 'Content-Type: text/html; charset=utf-8' );
+header( 'Cache-Control: s-maxage=2678400, max-age=2678400' );
 
 $prot = ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' )
-	? "https://"
-	: "http://";
-$serv = strlen( $_SERVER['HTTP_HOST'] )
-	? $_SERVER['HTTP_HOST']
-	: $_SERVER['SERVER_NAME'];
-$loc = $_SERVER["REQUEST_URI"];
+	? 'https://'
+	: 'http://';
+$serverName = strlen( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : $_SERVER['SERVER_NAME'];
+$path = $_SERVER['REQUEST_URI'];
 
-$encUrl = htmlspecialchars( $prot . $serv . $loc );
-header( "Cache-Control: s-maxage=2678400, max-age=2678400");
-if( preg_match( "/(%2f)/i", $loc, $matches )
-	|| preg_match( "/^\/(?:upload|style|wiki|w|extensions)\/(.*)/i", $loc, $matches )
+$encUrl = htmlspecialchars( $prot . $serverName . $path );
+
+if( preg_match( '/(%2f)/i', $path, $matches )
+	|| preg_match( '/^\/(?:upload|style|wiki|w|extensions)\/(.*)/i', $path, $matches )
 ) {
-	$title = htmlspecialchars( $matches[1] );
-	$details = "<p style=\"font-weight: bold;\">To check for \"$title\" see: <a href=\"//$serv/wiki/$title\" title=\"$title\">$prot$serv/wiki/$title</a></p>";
+	// "/w/Foo" -> "/wiki/Foo"
+	$target = '/wiki/' . $matches[1];
 } else {
-	$target = $prot . $serv . "/wiki" . $loc;
-	$encTarget = htmlspecialchars( $target );
-	$details="<p><b>Did you mean to type <a href=$encTarget>$encTarget</a>?</b></p>";
+	// "/Foo" -> "/wiki/Foo"
+	$target = '/wiki' . $path;
 }
-$base_404=<<<END
+$encTarget = htmlspecialchars( $target );
+$detailsHtml ="<p><b>Did you mean: <a href=\"$encTarget\">$encTarget</a></b></p>";
+$outputHtml=<<<END
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title>Wikimedia page not found: $encUrl</title>
 			<link rel="shortcut icon" href="/favicon.ico">
-			<style type="text/css">
-				* {
+			<style>
+				body {
+					background-image: url('//upload.wikimedia.org/wikipedia/commons/9/96/Errorbg.png');
+					background-repeat: repeat-x;
+					background-color: white;
+					height: 100%;
+					margin: 0;
+					padding: 0;
 					font-family: 'Gill Sans MT', 'Gill Sans', sans-serif;
+					color: #484848;
 				}
 				a:link, a:visited {
 					color: #005b90;
 				}
 				a:hover, a:active {
 					color: #900000;
-				}
-				body {
-					background-image: url('//upload.wikimedia.org/wikipedia/commons/9/96/Errorbg.png');
-					background-repeat: repeat-x;
-					background-color: white;
-					color: #484848;
-					margin: 0;
-					padding: 0;
-					height: 100%;
 				}
 				h1 {
 					color: black;
@@ -113,9 +111,9 @@ $base_404=<<<END
 				<div id="message">
 					<h1>Error</h1>
 					<h2>404 – File not found</h2>
-					<p style="font-style: italic;">$encUrl</p>
+					<p><em>$encUrl</em></p>
 					<p>We could not find the above page on our servers.</p>
-					$details
+					$detailsHtml
 					<p>Alternatively, you can visit the <a href="/">Main Page</a> or read <a href="//en.wikipedia.org/wiki/HTTP_404" title="Wikipedia: HTTP 404">more information</a> about this type of error.</p>
 					<p style="font-size: smaller;">A project of the <a href="//wikimediafoundation.org/wiki/Home" title="WikimediaFoundation">Wikimedia Foundation</a></p>
 				</div>
@@ -125,4 +123,4 @@ $base_404=<<<END
 </html>
 END;
 
-print ($base_404);
+print $outputHtml;
