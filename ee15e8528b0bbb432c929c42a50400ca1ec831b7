@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee33df1d_5ee3ed03",
+        "filename": "docroot/wikipedia.org/apple-app-site-association",
+        "patchSetId": 3
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-03-25T03:25:25Z",
+      "side": 1,
+      "message": "Is someone wants to review this, you\u0027ll find an expanded version at https://phabricator.wikimedia.org/P2816.",
+      "revId": "ee15e8528b0bbb432c929c42a50400ca1ec831b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
