@@ -13,8 +13,8 @@
  * - $wmgMonologChannels : per-channel logging config
  *   - channel => false  == ignore all log events on this channel
  *   - channel => level  == record all events of this level or higher to udp2log and logstash
- *   - channel => array( 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate )
- *   Defaults: array( 'udp2log'=>'debug', 'logstash'=>'info', 'kafka'=>false, 'sample'=>false )
+ *   - channel => [ 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate ]
+ *   Defaults: [ 'udp2log'=>'debug', 'logstash'=>'info', 'kafka'=>false, 'sample'=>false ]
  *   Valid levels: 'debug', 'info', 'warning', 'error', false
  *   Note: sampled logs will not be sent to Logstash
  *   Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}
@@ -29,9 +29,11 @@ if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 	$wgDebugLogFile = '/tmp/wiki.log';
 	$wmgDefaultMonologHandler = 'wgDebugLogFile';
 	$wmgLogstashServers = false;
-	$wmgMonologChannels = array();
+	$wmgMonologChannels = [];
 	$wgDebugDumpSql = true;
-} elseif ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && preg_match( '/\blog\b/i', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
+} elseif ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) &&
+	preg_match( '/\blog\b/i', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] )
+) {
 	// Forward all log messages to logstash for debugging.
 	// See <https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug>.
 	$wgDebugLogFile = "udp://{$wmfUdp2logDest}/XWikimediaDebug";
@@ -49,17 +51,17 @@ if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 // T124985: The Processors listed in $wmgMonologProcessors are applied to
 // a message in reverse list order (bottom to top). The normalized_message
 // processor needs to be listed *after* the psr processor to work as expected.
-$wmgMonologProcessors = array(
-	'wiki' => array(
+$wmgMonologProcessors = [
+	'wiki' => [
 		'class' => '\\MediaWiki\\Logger\\Monolog\\WikiProcessor',
-	),
-	'psr' => array(
+	],
+	'psr' => [
 		'class' => '\\Monolog\\Processor\\PsrLogMessageProcessor',
-	),
-	'web' => array(
+	],
+	'web' => [
 		'class' => '\\Monolog\\Processor\\WebProcessor',
-	),
-	'normalized_message' => array(
+	],
+	'normalized_message' => [
 		'factory' => function () {
 			/**
 			 * Add a "normalized_message" field to log records.
@@ -86,8 +88,8 @@ $wmgMonologProcessors = array(
 				return $record;
 			};
 		},
-	),
-);
+	],
+];
 
 $wmgMonologHandlers = [
 	'blackhole' => [
@@ -119,78 +121,78 @@ if ( $wmgLogstashServers ) {
 
 
 // Post construction calls to make for new Logger instances
-$wmgMonologLoggerCalls = array(
+$wmgMonologLoggerCalls = [
 	// T116550 - Requires Monolog > 1.17.2
-	'useMicrosecondTimestamps' => array( false ),
-);
+	'useMicrosecondTimestamps' => [ false ],
+];
 
-$wmgMonologConfig =  array(
-	'loggers' => array(
+$wmgMonologConfig =  [
+	'loggers' => [
 		// Template for all undefined log channels
-		'@default' => array(
+		'@default' => [
 			'handlers' => (array) $wmgDefaultMonologHandler,
 			'processors' => array_keys( $wmgMonologProcessors ),
 			'calls' => $wmgMonologLoggerCalls,
-		),
-	),
+		],
+	],
 
 	'processors' => $wmgMonologProcessors,
 
 	'handlers' => $wmgMonologHandlers,
 
-	'formatters' => array(
-		'line' => array(
+	'formatters' => [
+		'line' => [
 			'class' => '\\MediaWiki\\Logger\\Monolog\\LineFormatter',
-			'args' => array(
+			'args' => [
 				"%datetime% [%extra.reqId%] %extra.host% %extra.wiki% %extra.mwversion% %channel% %level_name%: %message% %context% %exception%\n",
 				'Y-m-d H:i:s',
 				true, // allowInlineLineBreaks
 				true, // ignoreEmptyContextAndExtra
 				true, // includeStacktraces
-			),
-		),
-		'logstash' => array(
+			],
+		],
+		'logstash' => [
 			'class' => '\\Monolog\\Formatter\\LogstashFormatter',
-			'args'  => array( 'mediawiki', php_uname( 'n' ), null, '', 1 ),
-		),
-		'avro' => array(
+			'args'  => [ 'mediawiki', php_uname( 'n' ), null, '', 1 ],
+		],
+		'avro' => [
 			'class' => '\\MediaWiki\\Logger\\Monolog\\AvroFormatter',
-			'args' => array( $wmgMonologAvroSchemas ),
-		),
-	),
-);
+			'args' => [ $wmgMonologAvroSchemas ],
+		],
+	],
+];
 
 if ( $wmgLogAuthmanagerMetrics ) {
-	$wmgMonologConfig['loggers']['authmanager'] = array(
-		'handlers' => array( 'authmanager-statsd' ),
+	$wmgMonologConfig['loggers']['authmanager'] = [
+		'handlers' => [ 'authmanager-statsd' ],
 		'calls' => $wmgMonologLoggerCalls,
-	);
-	$wmgMonologConfig['handlers']['authmanager-statsd'] = array(
+	];
+	$wmgMonologConfig['handlers']['authmanager-statsd'] = [
 		// defined in WikimediaEvents
 		'class' => 'AuthManagerStatsdHandler',
-	);
+	];
 }
 
 // Add logging channels defined in $wmgMonologChannels
 foreach ( $wmgMonologChannels as $channel => $opts ) {
 	if ( $opts === false ) {
 		// Log channel disabled on this wiki
-		$wmgMonologConfig['loggers'][$channel] = array(
-			'handlers' => array( 'blackhole' ),
+		$wmgMonologConfig['loggers'][$channel] = [
+			'handlers' => [ 'blackhole' ],
 			'calls' => $wmgMonologLoggerCalls,
-		);
+		];
 		continue;
 	}
 
-	$opts = is_array( $opts ) ? $opts : array( 'udp2log' => $opts );
+	$opts = is_array( $opts ) ? $opts : [ 'udp2log' => $opts ];
 	$opts = array_merge(
-		array(
+		[
 			'udp2log' => 'debug',
 			'logstash' => ( isset( $opts['udp2log'] ) && $opts['udp2log'] !== 'debug' ) ? $opts['udp2log'] : 'info',
 			'kafka' => false,
 			'sample' => false,
 			'buffer' => false,
-		),
+		],
 		$opts
 	);
 	// Note: sampled logs are never passed to logstash
@@ -198,7 +200,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		$opts['logstash'] = false;
 	}
 
-	$handlers = array();
+	$handlers = [];
 
 	if ( $opts['udp2log'] ) {
 		// Configure udp2log handler
@@ -206,13 +208,13 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		if ( !isset( $wmgMonologConfig['handlers'][$udp2logHandler] ) ) {
 			// Register handler that will only pass events of the given
 			// log level
-			$wmgMonologConfig['handlers'][$udp2logHandler] = array(
+			$wmgMonologConfig['handlers'][$udp2logHandler] = [
 				'class' => '\\MediaWiki\\Logger\\Monolog\\LegacyHandler',
-				'args' => array(
+				'args' => [
 					"udp://{$wmfUdp2logDest}/{channel}", false, $opts['udp2log']
-				),
+				],
 				'formatter' => 'line',
-			);
+			];
 		}
 		$handlers[] = $udp2logHandler;
 		if ( $wmgDefaultMonologHandler === 'wgDebugLogFile' ) {
@@ -227,20 +229,20 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		if ( !isset( $wmgMonologConfig['handlers'][$kafkaHandler] ) ) {
 			// Register handler that will only pass events of the given
 			// log level
-			$wmgMonologConfig['handlers'][$kafkaHandler] = array(
+			$wmgMonologConfig['handlers'][$kafkaHandler] = [
 				'factory' => '\\MediaWiki\\Logger\\Monolog\\KafkaHandler::factory',
-				'args' => array(
+				'args' => [
 					$wmgKafkaServers,
-					array(
-						'alias' => array(),
+					[
+						'alias' => [],
 						'swallowExceptions' => true,
 						'logExceptions' => 'wfDebugLogFile',
 						'sendTimeout' => 0.01,
 						'recvTimeout' => 0.5,
-					)
-				),
+					],
+				],
 				'formatter' => 'avro'
-			);
+			];
 		}
 		// include an alias to prefix this channel with
 		// 'mediawiki_' in kafka
@@ -265,17 +267,17 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			if ( !isset( $wmgMonologConfig['handlers'][$sampledHandler] ) ) {
 				// Register a handler that will sample the event stream and
 				// pass events on to $handlerName for storage
-				$wmgMonologConfig['handlers'][$sampledHandler] = array(
+				$wmgMonologConfig['handlers'][$sampledHandler] = [
 					'class' => '\\Monolog\\Handler\\SamplingHandler',
-					'args' => array(
+					'args' => [
 						function () use ( $handlerName ) {
 							return LoggerFactory::getProvider()->getHandler(
 								$handlerName
 							);
 						},
 						$sample,
-					),
-				);
+					],
+				];
 			}
 			$handlers[$idx] = $sampledHandler;
 		}
@@ -287,16 +289,16 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			if ( !isset( $wmgMonologConfig['handlers'][$bufferedHandler] ) ) {
 				// Register a handler that will buffer the event stream and
 				// pass events to the nested handler after closing the request
-				$wmgMonologConfig['handlers'][$bufferedHandler] = array(
+				$wmgMonologConfig['handlers'][$bufferedHandler] = [
 					'class' => '\\MediaWiki\\Logger\\Monolog\\BufferHandler',
-					'args' => array(
+					'args' => [
 						function () use ( $handlerName ) {
 							return LoggerFactory::getProvider()->getHandler(
 								$handlerName
 							);
 						},
-					),
-				);
+					],
+				];
 			}
 			$handlers[$idx] = $bufferedHandler;
 		}
@@ -307,39 +309,39 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 		// to swallow any exceptions that might leak out otherwise
 		$failureGroupHandler = 'failuregroup|' . implode( '|', $handlers );
 		if ( !isset( $wmgMonologConfig['handlers'][$failureGroupHandler] ) ) {
-			$wmgMonologConfig['handlers'][$failureGroupHandler] = array(
+			$wmgMonologConfig['handlers'][$failureGroupHandler] = [
 				'class' => '\\Monolog\\Handler\\WhatFailureGroupHandler',
-				'args' => array(
+				'args' => [
 					function () use ( $handlers ) {
 						$provider = LoggerFactory::getProvider();
 						return array_map(
-							array( $provider, 'getHandler' ),
+							[ $provider, 'getHandler' ],
 							$handlers
 						);
 					}
-				),
-			);
+				],
+			];
 		}
 
-		$wmgMonologConfig['loggers'][$channel] = array(
-			'handlers' => array( $failureGroupHandler ),
+		$wmgMonologConfig['loggers'][$channel] = [
+			'handlers' => [ $failureGroupHandler ],
 			'processors' => array_keys( $wmgMonologProcessors ),
 			'calls' => $wmgMonologLoggerCalls,
-		);
+		];
 
 	} else {
 		// No handlers configured, so use the blackhole route
-		$wmgMonologConfig['loggers'][$channel] = array(
-			'handlers' => array( 'blackhole' ),
+		$wmgMonologConfig['loggers'][$channel] = [
+			'handlers' => [ 'blackhole' ],
 			'calls' => $wmgMonologLoggerCalls,
-		);
+		];
 	}
 }
 
-$wgMWLoggerDefaultSpi = array(
+$wgMWLoggerDefaultSpi = [
 	'class' => '\\MediaWiki\\Logger\\MonologSpi',
-	'args' => array( $wmgMonologConfig ),
-);
+	'args' => [ $wmgMonologConfig ],
+];
 
 // Bug: T99581 - force logger timezone to UTC
 // Guard condition needed for Jenkins; class from mediawiki/vendor
