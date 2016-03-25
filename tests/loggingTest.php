@@ -24,51 +24,42 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 			'Setting only a level sends to udp2log and logstash' => array(
 				// configuration for 'test' channel in wmgMonologChannels
 				'debug',
-				// number of expected handlers
-				5,
 				// handlers expected on the 'test' channel
 				array( 'failuregroup|udp2log-debug|logstash-info' )
 			),
 
 			'Can disable logstash' => array(
 				array( 'logstash' => false ),
-				4,
 				array( 'failuregroup|udp2log-debug' ),
 			),
 
 			'Disabling udp2log also disables logstash' => array(
 				array( 'udp2log' => false ),
-				2,
 				array( 'blackhole' ),
 			),
 
 			'Logstash can be enabled when udp2log is disabled' => array(
 				array( 'udp2log' => false, 'logstash' => 'info' ),
-				4,
 				array( 'failuregroup|logstash-info' )
 			),
 
 			'can enable only kafka' => array(
 				array( 'kafka' => 'debug', 'logstash' => false, 'udp2log' => false ),
-				4,
 				array( 'failuregroup|kafka-debug' ),
 			),
 
 			'can enable buffering' => array(
 				array( 'buffer' => true ),
-				7,
 				array( 'failuregroup|udp2log-debug-buffered|logstash-info-buffered' ),
 			),
 
 			'can enable sampling, which disables logstash' => array(
 				array( 'sample' => 1000 ),
-				5,
 				array( 'failuregroup|udp2log-debug-sampled-1000' ),
 			),
 
 			'false yields backhole' => array(
 				false,
-				2,
 				array( 'blackhole' ),
 			),
 		);
@@ -77,7 +68,7 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 	/**
 	 * @dataProvider provideHandlerSetup
 	 */
-	public function testHandlerSetup( $channelConfig, $expectCount, $expectHandlers ) {
+	public function testHandlerSetup( $channelConfig, $expectHandlers ) {
 		// logging.php does not explicitly declare anything global, so it will
 		// only read from the local scope defined here.
 		$wmgDefaultMonologHandler = 'blackhole';
@@ -91,7 +82,6 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 
 		include __DIR__ . '/../wmf-config/logging.php';
 
-		$this->assertCount( $expectCount, $wmgMonologConfig['handlers'] );
 		foreach ( $expectHandlers as $handlerName ) {
 			$this->assertArrayHasKey( $handlerName, $wmgMonologConfig['handlers'] );
 		}

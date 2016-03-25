@@ -31,16 +31,18 @@ if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 	$wmgLogstashServers = false;
 	$wmgMonologChannels = array();
 	$wgDebugDumpSql = true;
+} elseif ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && preg_match( '/\blog\b/i', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
+	// Forward all log messages to logstash for debugging.
+	// See <https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug>.
+	$wgDebugLogFile = "udp://{$wmfUdp2logDest}/XWikimediaDebug";
+	$wmgDefaultMonologHandler = [ 'wgDebugLogFile' ];
+	if ( $wmgLogstashServers ) {
+		$wmgDefaultMonologHandler[] = 'logstash-debug';
+	}
+	$wmgMonologChannels = [];
 }
 
-// When the X-Wikimedia-Debug header is present and contains a 'log' attribute,
-// forward log messages in all channels to a special log bucket set aside for
-// debugging. See <https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug>.
-if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) &&
-		preg_match( '/\blog\b/i', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
-	$wgDebugLogFile = "udp://{$wmfUdp2logDest}/XWikimediaDebug";
-	$wmgDefaultMonologHandler = 'wgDebugLogFile';
-}
+
 
 // Monolog logging configuration
 
@@ -87,6 +89,35 @@ $wmgMonologProcessors = array(
 	),
 );
 
+$wmgMonologHandlers = [
+	'blackhole' => [
+		'class' => '\\Monolog\\Handler\\NullHandler',
+	],
+	'wgDebugLogFile' => [
+		'class'     => '\\MediaWiki\\Logger\\Monolog\\LegacyHandler',
+		'args'      => [ $wgDebugLogFile ],
+		'formatter' => 'line',
+	],
+];
+
+if ( $wmgLogstashServers ) {
+	shuffle( $wmgLogstashServers );
+	foreach ( [ 'debug', 'info', 'warning', 'error' ] as $logLevel ) {
+		$wmgMonologHandlers[ "logstash-$logLevel" ] = [
+			'class'     => '\\MediaWiki\\Logger\\Monolog\\SyslogHandler',
+			'formatter' => 'logstash',
+			'args'      => [
+				'mediawiki',             // tag
+				$wmgLogstashServers[0],  // host
+				10514,                   // port
+				LOG_USER,                // facility
+				$logLevel,               // log level threshold
+			],
+		];
+	}
+}
+
+
 // Post construction calls to make for new Logger instances
 $wmgMonologLoggerCalls = array(
 	// T116550 - Requires Monolog > 1.17.2
@@ -97,7 +128,7 @@ $wmgMonologConfig =  array(
 	'loggers' => array(
 		// Template for all undefined log channels
 		'@default' => array(
-			'handlers' => array( $wmgDefaultMonologHandler ),
+			'handlers' => (array) $wmgDefaultMonologHandler,
 			'processors' => array_keys( $wmgMonologProcessors ),
 			'calls' => $wmgMonologLoggerCalls,
 		),
@@ -105,16 +136,7 @@ $wmgMonologConfig =  array(
 
 	'processors' => $wmgMonologProcessors,
 
-	'handlers' => array(
-		'blackhole' => array(
-			'class' => '\\Monolog\\Handler\\NullHandler',
-		),
-		'wgDebugLogFile' => array(
-			'class' => '\\MediaWiki\\Logger\\Monolog\\LegacyHandler',
-			'args' => array( $wgDebugLogFile ),
-			'formatter' => 'line',
-		),
-	),
+	'handlers' => $wmgMonologHandlers,
 
 	'formatters' => array(
 		'line' => array(
@@ -230,25 +252,9 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 	if ( $opts['logstash'] && $wmgLogstashServers ) {
 		$level = $opts['logstash'];
 		$logstashHandler = "logstash-{$level}";
-		if ( !isset( $wmgMonologConfig['handlers'][$logstashHandler] ) ) {
-			// Register handler that will only pass events of the given
-			// log level
-			$wmgMonologConfig['handlers'][$logstashHandler] = array(
-				'class' => '\\MediaWiki\\Logger\\Monolog\\SyslogHandler',
-				'args' => array(
-					'mediawiki',    // syslog appname
-					function () use ( $wmgLogstashServers ) {
-						$idx = mt_rand( 0, count( $wmgLogstashServers ) - 1 );
-						return $wmgLogstashServers[$idx];
-					},              // randomly chose server
-					10514,          // logstash syslog listener port
-					LOG_USER,       // syslog facility
-					$level,         // minimum log level to pass to logstash
-				),
-				'formatter' => 'logstash',
-			);
+		if ( isset( $wmgMonologHandlers[ $logstashHandler ] ) ) {
+			$handlers[] = $logstashHandler;
 		}
-		$handlers[] = $logstashHandler;
 	}
 
 
