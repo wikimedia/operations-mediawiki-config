@@ -5,6 +5,13 @@
 // NOTE: this file is loaded early on in WebStart.php, so be careful with
 // globals.
 
+$XWD = false;
+
+// Parse X-Wikimedia-Header (if present) into an associative array.
+if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) {
+	parse_str( preg_replace( '/; ?/', '&', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ), $XWD );
+}
+
 if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 	// Single-request profiling, via 'forceprofile=1' (web) or '--profiler=text' (CLI).
 	if (
@@ -134,12 +141,11 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 if (
 	ini_get( 'hhvm.stats.enable_hot_profiler' ) &&
 	!empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) &&
-	( ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && preg_match( '/\bprofile\b/', $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) ) ||
-	mt_rand( 1, 100000 ) === 1 )
+	( isset( $XWD['profile'] ) || mt_rand( 1, 100000 ) === 1 )
 ) {
 	xhprof_enable( XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS );
 
-	register_shutdown_function( function () {
+	register_postsend_function( function () use ( $XWD ) {
 		$data = [ 'profile' => xhprof_disable() ];
 
 		$sec  = $_SERVER['REQUEST_TIME'];
@@ -148,8 +154,7 @@ if (
 		$keyWhitelist = array_flip( [
 			'HTTP_HOST', 'HTTP_X_WIKIMEDIA_DEBUG', 'REQUEST_METHOD',
 			'REQUEST_START_TIME', 'REQUEST_TIME', 'REQUEST_TIME_FLOAT',
-			'SCRIPT_FILENAME', 'SCRIPT_NAME', 'SERVER_ADDR', 'SERVER_NAME',
-			'THREAD_TYPE', 'action'
+			'SERVER_ADDR', 'SERVER_NAME', 'THREAD_TYPE', 'action'
 		] );
 
 		// Create sanitized copies of $_SERVER, $_ENV, and $_GET:
@@ -161,6 +166,16 @@ if (
 		preg_match( '/action=[^&]+/', $_SERVER['REQUEST_URI'], $matches );
 		$qs = $matches ? '?' . $matches[0] : '';
 		$url = $_SERVER['SCRIPT_NAME'] . $qs;
+
+		// If profiling was explicitly requested (via X-Wikimedia-Debug)
+		// then include the unique request ID in the reported URL, to make
+		// it easy for the person debugging to find the request in Xhgui.
+		if ( $XWD && method_exists( 'WebRequest', 'getRequestId' ) ) {
+			$reqId = WebRequest::getRequestId();
+			$url = '//' . $reqId . $url;
+			$env['UNIQUE_ID'] = $reqId;
+			$server['UNIQUE_ID'] = $reqId;
+		}
 
 		// Re-insert scrubbed URL as REQUEST_URL:
 		$server['REQUEST_URI'] = $url;
