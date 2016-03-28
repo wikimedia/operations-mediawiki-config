@@ -7139,6 +7139,9 @@ $wgConf->settings = array(
 			// 8 ed./min per each non-autoconfirmed, or group thereof from same IP
 			'ip' => array( 8, 60 ),
 			'newbie' => array( 8, 60 ),
+			// 50 edits every 10 minutes for each user (half the recommended bot rate)
+			// Does not apply to +bot, +steward, +sysop; see $groupOverrides2.
+			'user' => array( 50, 10 ),
 		),
 		'badcaptcha' => array( // Bug T92376
 			// Mainly for account creation by unregistered spambots.
