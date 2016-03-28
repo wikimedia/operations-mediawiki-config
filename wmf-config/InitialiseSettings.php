@@ -7196,6 +7196,12 @@ $wgConf->settings = array(
 			'editor' => array( 100, 60 ),
 		),
 	),
+	'+wikidatawiki' => array(
+		'edit' => array(
+			// Wikidata editors edit at a high rate so treat them like as bots.
+			'user' => array( 10, 1 ),
+		),
+	),
 ),
 # @} end of wgRateLimits
 
