@@ -590,6 +590,10 @@ function wmfLabsSettings() {
 			'default' => true,
 		),
 
+		'wgEnablePopupsMobile' => array(
+			'default' => true,
+		),
+
 		'wmgUseCheckUser' => array(
 			'default' => false,
 		),
