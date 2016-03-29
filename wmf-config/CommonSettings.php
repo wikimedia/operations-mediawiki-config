@@ -715,7 +715,7 @@ if ( $wmgUseDoubleWiki ) {
 }
 
 if ( $wmgUsePoem ) {
-	include( $IP . '/extensions/Poem/Poem.php' );
+	wfLoadExtension( 'Poem' );
 }
 
 if ( $wmgUseUnicodeConverter ) {
