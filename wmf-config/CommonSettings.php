@@ -711,7 +711,7 @@ if ( $wmgUseGeSHi ) {
 }
 
 if ( $wmgUseDoubleWiki ) {
-	include( $IP . '/extensions/DoubleWiki/DoubleWiki.php' );
+	include( $IP . '/extensions/DoubleWiki/extension.json' );
 }
 
 if ( $wmgUsePoem ) {
