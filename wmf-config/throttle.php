@@ -28,6 +28,14 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
+$wmgThrottlingExceptions[] = [ // T131152 - Wikipedia course, Prague
+	'from'   => '2016-03-30T08:00 +2:00',
+	'to'     => '2016-03-30T23:59 +2:00',
+	'ip'     => '2001:718:9:1::5',
+	'dbname' => [ 'cswiki', 'commonswiki' ],
+	'value'  => 25 // 10-15 expected
+];
+
 $wmgThrottlingExceptions[] = [ // T129490 - Taller d'iniciació a la Viquipèdia, Montserrat
 	'from'   => '2016-04-17T15:30 +2:00',
 	'to'     => '2016-04-17T17:30 +2:00',
