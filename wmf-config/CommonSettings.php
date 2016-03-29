@@ -703,7 +703,7 @@ if ( $wmgUseInputBox ) {
 }
 
 if ( $wmgUseImageMap ) {
-	include( $IP . '/extensions/ImageMap/ImageMap.php' );
+	wfLoadExtension( 'ImageMap' );
 }
 
 if ( $wmgUseGeSHi ) {
