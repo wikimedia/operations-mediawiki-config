@@ -719,7 +719,7 @@ if ( $wmgUsePoem ) {
 }
 
 if ( $wmgUseUnicodeConverter ) {
-	include( $IP . '/extensions/UnicodeConverter/UnicodeConverter.php' );
+	wfLoadExtension( 'UnicodeConverter' );
 }
 
 // Per-wiki config for Flagged Revisions

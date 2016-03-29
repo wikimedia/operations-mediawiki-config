@@ -126,7 +126,7 @@ $IP/extensions/TorBlock/TorBlock.php
 $IP/extensions/Translate/Translate.php
 $IP/extensions/TranslationNotifications/TranslationNotifications.php
 $IP/extensions/TrustedXFF/TrustedXFF.php
-$IP/extensions/UnicodeConverter/UnicodeConverter.php
+$IP/extensions/UnicodeConverter/extension.json
 $IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php
 $IP/extensions/UploadWizard/UploadWizard.php
 $IP/extensions/UrlShortener/extension.json
