@@ -707,7 +707,7 @@ if ( $wmgUseImageMap ) {
 }
 
 if ( $wmgUseGeSHi ) {
-	include( $IP . '/extensions/SyntaxHighlight_GeSHi/SyntaxHighlight_GeSHi.php' );
+	wfLoadExtension( 'SyntaxHighlight_GeSHi' );
 }
 
 if ( $wmgUseDoubleWiki ) {
