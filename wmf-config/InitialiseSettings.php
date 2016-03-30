@@ -7362,6 +7362,7 @@ $wgConf->settings = array(
 	),
 	'arwiki' => array(
 		'autoconfirmed' => array( 'patrol' => true ),
+		'editor' => array ( 'movefile' => true ), // T131249
 		'rollbacker' => array( 'rollback' => true ),
 	),
 	'+arwikisource' => array(
