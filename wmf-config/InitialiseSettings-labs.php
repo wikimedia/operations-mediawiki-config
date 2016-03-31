@@ -652,5 +652,9 @@ function wmfLabsSettings() {
 		'wmgUseCollection' => array(
 			'zhwiki' => true, // T128425
 		),
+		// Test enabling OATH for 2FA
+		'wmgUseOATHAuth' => array(
+			'default' => true,
+		)
 	);
 } # wmflLabsSettings()
