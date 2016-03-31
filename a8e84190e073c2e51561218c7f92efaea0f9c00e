@@ -34,6 +34,24 @@
       "revId": "a8e84190e073c2e51561218c7f92efaea0f9c00e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_3a901146",
+        "filename": "wmf-config/StartProfiler.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 255
+      },
+      "writtenOn": "2016-03-31T09:39:42Z",
+      "side": 1,
+      "message": "\u003e Is there a prefix index for urls and we\u0027d filter by \"//{reqId}\" to find it?\n\nyes\n\n\u003e Doesn\u0027t the unique id above already make it easy to find it?\n\nNope; it\u0027s not indexed",
+      "parentUuid": "ce38dbff_b4f0b88f",
+      "revId": "a8e84190e073c2e51561218c7f92efaea0f9c00e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
