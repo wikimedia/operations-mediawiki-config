@@ -76,7 +76,6 @@ $IP/extensions/MassMessage/extension.json
 $IP/extensions/Math/extension.json
 $IP/extensions/MobileApp/extension.json
 $IP/extensions/MobileFrontend/extension.json
-$IP/extensions/MoodBar/MoodBar.php
 $IP/extensions/MultimediaViewer/extension.json
 $IP/extensions/MwEmbedSupport/MwEmbedSupport.php
 $IP/extensions/NavigationTiming/extension.json

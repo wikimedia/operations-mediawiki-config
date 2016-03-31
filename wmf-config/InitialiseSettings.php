@@ -14015,25 +14015,6 @@ $wgConf->settings = [
 	'default' => '//upload.wikimedia.org/math',
 ],
 
-'wmgUseMoodBar' => [
-	'default' => false, // Do not enable on any further wikis, T131340
-	'nlwiki' => true, // T34202
-],
-'wmgMoodBarInfoUrl' => [
-	'default' => '//www.mediawiki.org/wiki/MoodBar',
-	'frwikisource' => '//fr.wikisource.org/wiki/Wikisource:MoodBar',
-	'itwikivoyage' => '//it.wikivoyage.org/wiki/Wikivoyage:MoodBar',
-	'nlwiki' => '//nl.wikipedia.org/wiki/Help:Feedback',
-],
-'wmgMoodBarCutoffTime' => [
-	'default' => '20110725221004',
-	'frwikisource' => '20110304202000',
-],
-'wmgMoodBarEnableTooltip' => [
-	'default' => true,
-	'testwiki' => false,
-	'test2wiki' => false,
-],
 'wmgUseMobileApp' => [
 	'default' => true,
 	'wikitech' => false,
