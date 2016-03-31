@@ -13799,31 +13799,6 @@ $wgConf->settings = array(
 'wgMathPath' => array(
 	'default' => '//upload.wikimedia.org/math',
 ),
-
-'wmgUseMoodBar' => array(
-	'default' => false,
-	'testwiki' => true,
-	'frwikisource' => true, // T36618
-	'incubatorwiki' => true, // T34417
-	'nlwiki' => true, // T34202
-	'sewikimedia' => true, // T34757
-//	'tawiki' => true, // T36560 // Disable due to T36615
-),
-'wmgMoodBarInfoUrl' => array(
-	'default' => '//www.mediawiki.org/wiki/MoodBar',
-	'frwikisource' => '//fr.wikisource.org/wiki/Wikisource:MoodBar',
-	'itwikivoyage' => '//it.wikivoyage.org/wiki/Wikivoyage:MoodBar',
-	'nlwiki' => '//nl.wikipedia.org/wiki/Help:Feedback',
-),
-'wmgMoodBarCutoffTime' => array(
-	'default' => '20110725221004',
-	'frwikisource' => '20110304202000',
-),
-'wmgMoodBarEnableTooltip' => array(
-	'default' => true,
-	'testwiki' => false,
-	'test2wiki' => false,
-),
 'wmgUseMobileApp' => array(
 	'default' => true,
 	'wikitech' => false,

@@ -625,7 +625,6 @@ $wgAvailableRights[] = 'flow-edit-post';
 $wgAvailableRights[] = 'flow-suppress';
 $wgAvailableRights[] = 'flow-hide';
 $wgAvailableRights[] = 'flow-delete';
-$wgAvailableRights[] = 'moodbar-admin'; // To allow global groups to include this right -AG
 
 // Enable gather-hidelist for global user groups - JRA 4-1-2015 T94652
 $wgAvailableRights[] = 'gather-hidelist';
@@ -2226,17 +2225,6 @@ if ( $wmgUseWikiLove ) {
 
 if ( $wmgUseGuidedTour || $wmgUseGettingStarted ) {
 	require_once( "$IP/extensions/GuidedTour/GuidedTour.php" );
-}
-
-if ( $wmgUseMoodBar ) {
-	require_once( "$IP/extensions/MoodBar/MoodBar.php" );
-	$wgMoodBarCutoffTime = $wmgMoodBarCutoffTime;
-	$wgMoodBarBlackoutInterval = array( '20120614000000,20120629000000' );
-	$wgMoodBarConfig['privacyUrl'] = "//wikimediafoundation.org/wiki/Feedback_policy";
-	$wgMoodBarConfig['feedbackDashboardUrl'] = "$wgServer/wiki/Special:FeedbackDashboard";
-
-	$wgMoodBarConfig['infoUrl'] = $wmgMoodBarInfoUrl;
-	$wgMoodBarConfig['enableTooltip'] = $wmgMoodBarEnableTooltip;
 }
 
 if ( $wmgUseMobileApp ) {
