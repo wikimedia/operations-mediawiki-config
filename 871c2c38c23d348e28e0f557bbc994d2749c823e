@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_6fd3fd61",
+        "filename": "wmf-config/ProductionServices.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2016-03-31T07:13:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee33df1d_9a5f4677",
+      "revId": "871c2c38c23d348e28e0f557bbc994d2749c823e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_fadc92e7",
         "filename": "wmf-config/ProductionServices.php",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2016-03-24T18:52:27Z",
       "side": 1,
       "message": "rdb1007? is it not there yet?",
+      "revId": "871c2c38c23d348e28e0f557bbc994d2749c823e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_cfc7a999",
+        "filename": "wmf-config/ProductionServices.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2016-03-31T07:13:05Z",
+      "side": 1,
+      "message": "No, we just have rdb2001-2006; in fact I was thinkiing that given we have cross-dc redundancy we could get away with having more partitions but no local replica in one DC, and use rdb1001 -\u003e 1006 all as active masters in a near future; I want to wait for the switchover to be done though.\n\nI will amend the erroneous reference to rdb1005 though.",
+      "parentUuid": "ee33df1d_fadc92e7",
       "revId": "871c2c38c23d348e28e0f557bbc994d2749c823e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "ce38dbff_afc4e595",
+        "filename": "wmf-config/ProductionServices.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2016-03-31T07:13:05Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ee33df1d_7a624238",
+      "revId": "871c2c38c23d348e28e0f557bbc994d2749c823e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ee33df1d_d56401e4",
         "filename": "wmf-config/jobqueue.php",
         "patchSetId": 1
@@ -64,6 +118,24 @@
       "writtenOn": "2016-03-24T18:52:27Z",
       "side": 1,
       "message": "Maybe use array_fill_keys( array_keys( $wmfLocalServices[\u0027jobqueue_redis\u0027] ), 50 ) ?\n\nThen you could depool by removing servers from that place instead of here and just have one list.",
+      "revId": "871c2c38c23d348e28e0f557bbc994d2749c823e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_8fce41b8",
+        "filename": "wmf-config/jobqueue.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2016-03-31T07:13:05Z",
+      "side": 1,
+      "message": "I thought about it; it would prevent us to be able to drain servers, but in fact this is just stupidly redundant.",
+      "parentUuid": "ee33df1d_d56401e4",
       "revId": "871c2c38c23d348e28e0f557bbc994d2749c823e",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
