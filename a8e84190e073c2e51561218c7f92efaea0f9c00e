@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_3405c87d",
+        "filename": "wmf-config/StartProfiler.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-03-31T00:42:38Z",
+      "side": 1,
+      "message": "How would that work exactly? Is there a prefix index for urls and we\u0027d filter by \"//{reqId}\" to find it? It seems a bit arbitrary.\n\nDoesn\u0027t the unique id above already make it easy to find it? (/me doesn\u0027t know the GUI very well and how to easily make it discoverable).\n\nIdeally we\u0027d end up with something that can be addressed with a deterministic url with only information we have on the wikipage side so you can generate a url to it from JavaScript.",
+      "revId": "a8e84190e073c2e51561218c7f92efaea0f9c00e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
