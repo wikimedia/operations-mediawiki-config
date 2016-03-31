@@ -647,7 +647,6 @@ $wgAvailableRights[] = 'flow-edit-post';
 $wgAvailableRights[] = 'flow-suppress';
 $wgAvailableRights[] = 'flow-hide';
 $wgAvailableRights[] = 'flow-delete';
-$wgAvailableRights[] = 'moodbar-admin'; // To allow global groups to include this right -AG
 
 // Checkuser
 $wgGrantPermissions['checkuser']['checkuser'] = true;
@@ -2297,17 +2296,6 @@ if ( $wmgUseWikiLove ) {
 
 if ( $wmgUseGuidedTour || $wmgUseGettingStarted ) {
 	wfLoadExtension( 'GuidedTour' );
-}
-
-if ( $wmgUseMoodBar ) {
-	wfLoadExtension( 'MoodBar' );
-	$wgMoodBarCutoffTime = $wmgMoodBarCutoffTime;
-	$wgMoodBarBlackoutInterval = [ '20120614000000,20120629000000' ];
-	$wgMoodBarConfig['privacyUrl'] = "//wikimediafoundation.org/wiki/Feedback_policy";
-	$wgMoodBarConfig['feedbackDashboardUrl'] = "$wgServer/wiki/Special:FeedbackDashboard";
-
-	$wgMoodBarConfig['infoUrl'] = $wmgMoodBarInfoUrl;
-	$wgMoodBarConfig['enableTooltip'] = $wmgMoodBarEnableTooltip;
 }
 
 if ( $wmgUseMobileApp ) {
