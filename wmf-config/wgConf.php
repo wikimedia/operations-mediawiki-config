@@ -22,6 +22,22 @@ $wgConf->suffixes = array(
 
 $dbList = $wmfRealm === 'labs' ? 'all-labs' : 'all';
 $wgConf->wikis = MWWikiversions::readDbListFile( $dbList );
+global $wgDBname;
+if ( $wgDBname === 'labswiki' ) {
+	$wgConf->wikis = [ 'labswiki' ];
+} else if ( $wgDBname === 'labtestwiki' ) {
+	$wgConf->wikis = [ 'labtestwiki' ];
+} else {
+	$key = array_search( 'labswiki', $wgConf->wikis, true );
+	if ( $key !== false ) {
+		unset( $wgConf->wikis[$key] );
+	}
+	$key = array_search( 'labtestwiki', $wgConf->wikis, true );
+	if ( $key !== false ) {
+		unset( $wgConf->wikis[$key] );
+	}
+	$wgConf->wikis = array_values( $wgConf->wikis );
+}
 
 $wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';
 
