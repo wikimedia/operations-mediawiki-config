@@ -613,8 +613,10 @@ $wgGrantPermissions['editprotected']['movestable'] = true;
 // So that protection rights can be assigned to global groups
 $wgAvailableRights[] = 'templateeditor';
 $wgAvailableRights[] = 'editeditorprotected';
+$wgAvailableRights[] = 'editextendedsemiprotected';
 $wgGrantPermissions['editprotected']['templateeditor'] = true;
 $wgGrantPermissions['editprotected']['editeditorprotected'] = true;
+$wgGrantPermissions['editprotected']['editextendedsemiprotected'] = true;
 
 // Allow tboverride with editprotected, and tboverride-account with createaccount
 $wgGrantPermissions['editprotected']['tboverride'] = true;
