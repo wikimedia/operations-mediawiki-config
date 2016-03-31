@@ -14444,19 +14444,6 @@ $wgConf->settings = [
 	'wikitech' => '/srv/math-images', // T126628
 ],
 
-'wmgUseMoodBar' => [
-	'default' => false, // Do not enable on any further wikis, T131340
-],
-'wmgMoodBarInfoUrl' => [
-	'default' => '//www.mediawiki.org/wiki/MoodBar',
-	'nlwiki' => '//nl.wikipedia.org/wiki/Help:Feedback',
-],
-'wmgMoodBarCutoffTime' => [
-	'default' => '20110725221004',
-],
-'wmgMoodBarEnableTooltip' => [
-	'default' => true,
-],
 'wmgUseMobileApp' => [
 	'default' => true,
 	'wikitech' => false,
