@@ -13467,9 +13467,6 @@ $wgConf->settings = array(
 // wiki where it's not already on by default.
 'wmgVisualEditorAutoAccountEnable' => array(
 	'default' => false,
-	'dewiki' => true,
-	'enwiki' => true,
-	'eswiki' => true,
 ),
 
 // Whether VisualEditor should pay attention to the -autodisable user preference
