@@ -396,12 +396,6 @@ function wmfLabsSettings() {
 		'wmgVisualEditorUseSingleEditTab' => array(
 			'enwiki' => true,
 		),
-		'wmgVisualEditorExperimental' => array(
-			'default' => true,
-		),
-		'wmgVisualEditorEnableTocWidget' => array(
-			'default' => false,
-		),
 		'wmgVisualEditorAccessRESTbaseDirectly' => array(
 			'default' => true,
 		),

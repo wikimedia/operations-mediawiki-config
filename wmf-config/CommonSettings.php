@@ -2155,14 +2155,6 @@ if ( $wmgUseVisualEditor ) {
 		$wgVisualEditorFeedbackTitle = 'VisualEditor/Feedback';
 	}
 
-	// Experimental code configuration
-	if ( $wmgVisualEditorExperimental ) {
-		$wgDefaultUserOptions['visualeditor-enable-experimental'] = 1;
-	}
-	if ( $wmgVisualEditorEnableTocWidget ) {
-		$wgVisualEditorEnableTocWidget = true;
-	}
-
 	// Enable for auto-created accounts
 	if ( $wmgVisualEditorAutoAccountEnable ) {
 		$wgVisualEditorAutoAccountEnable = true;

@@ -13506,13 +13506,6 @@ $wgConf->settings = array(
 	'visualeditor-default' => true,
 ),
 
-// Should VisualEditor's "experimental" code be enabled for testing
-'wmgVisualEditorExperimental' => array(
-	'default' => false,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
-),
-
 // T52000 - Disable for logged-out users if wmgVisualEditorDefault is true
 // This is a temporary variable for roll-out, to be removed once complete.
 // If a wiki was previously enabled by default for all users but then disabled,
@@ -13585,11 +13578,6 @@ $wgConf->settings = array(
 	'private' => false,         // No local Flow install, so won't work; also risk of private data release
 	'loginwiki' => false,       // No local Flow install, so won't work; also no editing on this wiki
 	'votewiki' => false,        // No local Flow install, so won't work; also no editing on this wiki
-),
-
-// Should VisualEditor display a live version of the Table of Contents as you edit
-'wmgVisualEditorEnableTocWidget' => array(
-	'default' => false,
 ),
 
 // Should 50% of new accounts be opted in to VisualEditor (A/B test)
