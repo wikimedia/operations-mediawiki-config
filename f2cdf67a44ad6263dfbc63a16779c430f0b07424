@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_063decb8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7142,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-04-01T19:46:21Z",
+      "side": 1,
+      "message": "seconds, not minutes. The default is 8 edits per minute for IPs.\n\n50 per 10 minutes would effectively be lowering the average to 5 per minute \n\nEither way, the current code says 3000 per 10 min (50 per 10 seconds).",
+      "revId": "f2cdf67a44ad6263dfbc63a16779c430f0b07424",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
