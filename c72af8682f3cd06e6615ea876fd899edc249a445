@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_91ff7b62",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 656,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2016-04-01T10:03:05Z",
+      "side": 1,
+      "message": "Please use tabs instead of spaces, like the rest of the file does",
+      "revId": "c72af8682f3cd06e6615ea876fd899edc249a445",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_31d78ff4",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 659,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2016-04-01T10:03:05Z",
+      "side": 1,
+      "message": "This is 2^32 , not 2^31 - 1",
+      "revId": "c72af8682f3cd06e6615ea876fd899edc249a445",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
