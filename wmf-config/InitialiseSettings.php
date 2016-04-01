@@ -13274,11 +13274,6 @@ $wgConf->settings = array(
 'wmgUseVisualEditor' => array(
 	'default' => true,
 	'nonbetafeatures' => false,
-
-	'wikisource' => false,	# Paused until ProofreadPage integration is good to go
-	'wiktionary' => false,	# Paused until template editing is more tightly integrated
-	'frwiktionary' => true, # Per community request
-	'svwiktionary' => true, # Per community request
 ),
 
 // Whether VisualEditor should bypass the MediaWiki layer and contact RESTbase directly for speed
