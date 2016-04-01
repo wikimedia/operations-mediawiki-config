@@ -12060,7 +12060,7 @@ $wgConf->settings = array(
 'wgMaxUploadSize' => array(
 	// Affects URL uploads and chunked uploads (experimental).
 	// Limit on other web uploads is enforced by PHP.
-	'default' => 1024 * 1024 * 2047, // 2047 MB (i.e. less than 2^31 - 1)
+	'default' => 1024 * 1024 * 5119, // 5 GB (i.e. less than 2^31 - 1)
 	'ptwiki' => 1024 * 500, // 500 KB - T25186
 ),
 
