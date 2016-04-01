@@ -32,7 +32,7 @@ $wmgThrottlingExceptions[] = [ // T130460 - Jerusalem Hackathon
 	'from'	 => '2016-04-01T08:00 +0:00',
 	'to'	 => '2016-04-03T18:00 +0:00',
 	'IP'	 => '82.80.21.122',
-	'dbname' => [ ‘enwiki’, ‘hewiki’, ‘mediawikiwiki’, ‘labswiki’ ],
+	'dbname' => [ 'enwiki', 'hewiki', 'mediawikiwiki', 'labswiki' ],
 	'value'	 => 50 // Some expected
 ];
 
