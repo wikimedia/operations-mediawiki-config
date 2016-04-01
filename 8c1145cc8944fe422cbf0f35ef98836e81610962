@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_8c863d69",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1977,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-04-01T21:44:31Z",
+      "side": 1,
+      "message": "This must be a string. Value \u0027false\u0027 is allowed in DefaultSettings.php, but Setup.php casts that to \"$IP/images\" - which is presumably what will happen here as well (or it will cause run-time failures operating on bool-not-string or unexpected string \"false\").\n\nThere are also various derivative configuration values such as $wgReadOnlyFile and $wgDeletedDirectory.\n\nAre we sure this variable in general is not used anywhere in wmf-production runtime of mediawiki?",
+      "revId": "8c1145cc8944fe422cbf0f35ef98836e81610962",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_ecaf09dd",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 275,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-04-01T21:44:31Z",
+      "side": 0,
+      "message": "Actually, $wgFileStore (the main variable itself) doesn\u0027t exist anymore. This can be safely removed regardless.",
+      "revId": "abb8b404ba83ca2d520be35d7237e69299a3459e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_acaea1e2",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1183,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-04-01T21:44:31Z",
+      "side": 0,
+      "message": "What will the default value be without this override? Is a different directory used instead?  Does it make sense to keep $wgCaptchaDirectoryLevels?",
+      "revId": "abb8b404ba83ca2d520be35d7237e69299a3459e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
