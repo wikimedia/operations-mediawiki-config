@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_162d218c",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 976,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2016-04-01T02:29:01Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be always HTTPS only now, @BBlack?",
+      "revId": "e61881201b7bea33509e97d6964f9a19507fda8b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
