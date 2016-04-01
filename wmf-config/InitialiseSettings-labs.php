@@ -652,5 +652,12 @@ function wmfLabsSettings() {
 		'wmgUseCollection' => array(
 			'zhwiki' => true, // T128425
 		),
+
+        'wgMaxUploadSize' => array(
+        // Affects URL uploads and chunked uploads (experimental).
+        // Limit on other web uploads is enforced by PHP.
+           'default' => 1024 * 1024 * 4294, // 4 GB (i.e. equals 2^31 - 1)
+           'ptwiki' => 1024 * 500, // 500 KB - T25186
+        ),
 	);
 } # wmflLabsSettings()
