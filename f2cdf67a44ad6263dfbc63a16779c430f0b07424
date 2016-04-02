@@ -16,6 +16,24 @@
       "revId": "f2cdf67a44ad6263dfbc63a16779c430f0b07424",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_b9ed3e25",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7142,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2016-04-02T06:23:58Z",
+      "side": 1,
+      "message": "Fixed to be in minutes. Plausibly we should change the IP/newbie limits.",
+      "parentUuid": "ce38dbff_063decb8",
+      "revId": "f2cdf67a44ad6263dfbc63a16779c430f0b07424",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
