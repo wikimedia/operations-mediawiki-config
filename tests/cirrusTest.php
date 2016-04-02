@@ -111,8 +111,6 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		);
 		$wmfDatacenter = 'unittest';
 		$wgCirrusSearchPoolCounterKey = 'unittest:poolcounter:blahblahblah';
-		$wgCirrusSearchRescoreProfiles = array( 'default' => array() );
-		$wgCirrusSearchRescoreFunctionScoreChains = array();
 
 		require "{$wmfConfigDir}/CirrusSearch-common.php";
 
