@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_2782aa97",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-04-02T01:25:20Z",
+      "side": 1,
+      "message": "fr",
+      "revId": "077286ab7e91ebe0a6966f7e04330825eb834bd8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_874e169a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-04-02T01:25:20Z",
+      "side": 1,
+      "message": "space missing",
+      "revId": "077286ab7e91ebe0a6966f7e04330825eb834bd8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_c7481e8f",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 14,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-04-02T01:25:20Z",
+      "side": 1,
+      "message": "The change is too complex to clean in the same commit. I would recommend one commit to reorder, then to rebase this one against the new cleaning reorder commit.",
+      "revId": "077286ab7e91ebe0a6966f7e04330825eb834bd8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_873576f6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7836,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-04-02T01:25:20Z",
+      "side": 1,
+      "message": "too many rights for a oneliner, split it one per line",
+      "revId": "077286ab7e91ebe0a6966f7e04330825eb834bd8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_07620606",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7839,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-04-02T01:25:20Z",
+      "side": 1,
+      "message": "see note in commit message",
+      "revId": "077286ab7e91ebe0a6966f7e04330825eb834bd8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
