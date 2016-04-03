@@ -839,7 +839,7 @@ if ( $wmgUseQuiz ) {
 }
 
 if ( $wmgUseFundraisingTranslateWorkflow ) {
-	include( "$IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php" );
+	wfLoadExtension( 'FundraisingTranslateWorkflow' );
 }
 
 if ( $wmgUseGadgets ) {
