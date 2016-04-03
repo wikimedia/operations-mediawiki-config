@@ -7525,6 +7525,7 @@ $wgConf->settings = array(
 			'deletedtext' => true,
 			'abusefilter-log-detail' => true,
 		),
+		'ep-coordinator' => array ( 'noratelimit' => true ), // T131684
 		'rollbacker' => array ( 'rollback' => true, ), // T126931
 		'patroller' => array( // T126931
 			'patrol' => true,
@@ -8968,7 +8969,7 @@ $wgConf->settings = array(
 	),
 	'+cswiki' => array(
 		'bureaucrat' => array( 'arbcom', 'autopatrolled' ), // T63418
-		'sysop' => array( 'rollbacker', 'patroller' ), // T126931
+		'sysop' => array( 'rollbacker', 'patroller', 'accountcreator' ), // T126931, T131684
 	),
 	'+cswikinews' => array(
 		'bureaucrat' => array( 'autopatrolled' ),
@@ -9651,7 +9652,7 @@ $wgConf->settings = array(
 	),
 	'+cswiki' => array(
 		'bureaucrat' => array( 'arbcom', 'autopatrolled' ), // T63418
-		'sysop' => array( 'rollbacker', 'patroller' ), // T126931
+		'sysop' => array( 'rollbacker', 'patroller', 'accountcreator' ), // T126931, T131684
 	),
 	'+cswikinews' => array(
 		'bureaucrat' => array( 'autopatrolled' ),
