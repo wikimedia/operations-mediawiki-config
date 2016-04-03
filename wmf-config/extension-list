@@ -67,7 +67,7 @@ $IP/extensions/Interwiki/Interwiki.php
 $IP/extensions/Josa/Josa.php
 $IP/extensions/JsonConfig/JsonConfig.php
 $IP/extensions/Kartographer/extension.json
-$IP/extensions/LabeledSectionTransclusion/lst.php
+$IP/extensions/LabeledSectionTransclusion/extension.json
 $IP/extensions/LandingCheck/LandingCheck.php
 $IP/extensions/LiquidThreads/LiquidThreads.php
 $IP/extensions/Listings/Listings.php

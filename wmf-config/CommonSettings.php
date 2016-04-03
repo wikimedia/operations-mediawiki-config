@@ -763,7 +763,7 @@ if ( $wmgUseProofreadPage ) {
 	}
 }
 if ( $wmgUseLabeledSectionTransclusion ) {
-	include( $IP . '/extensions/LabeledSectionTransclusion/lst.php' );
+	wfLoadExtension( 'LabeledSectionTransclusion' );
 }
 
 if ( $wmgUseSpamBlacklist ) {
