@@ -40,7 +40,7 @@ $IP/extensions/EducationProgram/EducationProgram.php
 $IP/extensions/Elastica/Elastica.php
 $IP/extensions/EventBus/extension.json
 $IP/extensions/EventLogging/EventLogging.php
-$IP/extensions/ExtensionDistributor/ExtensionDistributor.php
+$IP/extensions/ExtensionDistributor/extension.json
 $IP/extensions/FeaturedFeeds/FeaturedFeeds.php
 $IP/extensions/FlaggedRevs/FlaggedRevs.php
 $IP/extensions/Flow/Flow.php
