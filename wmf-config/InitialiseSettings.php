@@ -9547,7 +9547,7 @@ $wgConf->settings = array(
 		# 'user' => array( 'editor', 'reviewer' ),
 	),
 	'+test2wiki' => array(
-		'bureaucrat' => array( 'flow-bot' ),
+		'bureaucrat' => array( 'flow-bot', 'sysop' ),
 	),
 	// ******************************************************************
 	'+arbcom_enwiki' => array(
