@@ -855,7 +855,7 @@ if ( $wmgPFEnableStringFunctions ) {
 }
 
 if ( $wgDBname == 'mediawikiwiki' ) {
-	include( "$IP/extensions/ExtensionDistributor/ExtensionDistributor.php" );
+	wfLoadExtension( 'ExtensionDistributor' );
 	$wgExtDistListFile = 'https://gerrit.wikimedia.org/mediawiki-extensions.txt';
 	$wgExtDistAPIConfig = array(
 		'class' => 'GerritExtDistProvider',
