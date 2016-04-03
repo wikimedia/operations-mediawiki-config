@@ -337,6 +337,10 @@ if ( $wmgUseORES ) {
 	$wgOresBaseUrl = 'https://ores.wmflabs.org/';
 }
 
+if ( $wmgUseNewsletter ) {
+	wfLoadExtension( 'Newsletter' );
+}
+
 // Experimental
 $wgGadgetsCaching = false;
 

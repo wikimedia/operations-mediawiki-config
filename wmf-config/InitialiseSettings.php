@@ -14840,6 +14840,9 @@ $wgConf->settings = array(
 'wmgUseBounceHandler' => array(
 	'default' => true,
 ),
+'wmgUseNewsletter' => array(
+	'default' => true,
+),
 
 'wmgUseTranslate' => array(
 	'default' => false,
