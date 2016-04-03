@@ -787,7 +787,7 @@ if ( $wmgUseGadgets ) {
 }
 
 if ( $wmgUseMwEmbedSupport ) {
-	require_once( "$IP/extensions/MwEmbedSupport/MwEmbedSupport.php" );
+	wfLoadExtension( 'MwEmbedSupport' );
 }
 
 if ( $wmgUseTimedMediaHandler ) {
