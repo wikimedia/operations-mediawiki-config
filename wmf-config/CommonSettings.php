@@ -781,9 +781,8 @@ if ( $wmgUseFundraisingTranslateWorkflow ) {
 }
 
 if ( $wmgUseGadgets ) {
-	include( "$IP/extensions/Gadgets/Gadgets.php" );
+	wfLoadExtension( 'Gadgets' );
 	$wgGadgetsCacheType = CACHE_ACCEL;
-	$wgSpecialGadgetUsageActiveUsers = $wmgSpecialGadgetUsageActiveUsers;
 }
 
 if ( $wmgUseMwEmbedSupport ) {

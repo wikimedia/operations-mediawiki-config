@@ -11106,7 +11106,7 @@ $wgConf->settings = array(
 	'loginwiki' => false,
 	'votewiki' => false,
 ),
-'wmgSpecialGadgetUsageActiveUsers' => array(
+'wgSpecialGadgetUsageActiveUsers' => array(
 	'default' => true,
 	'enwiki' => false, // T121949
 ),
