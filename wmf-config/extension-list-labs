@@ -4,3 +4,4 @@ $IP/extensions/UrlShortener/extension.json
 $IP/extensions/EventBus/extension.json
 $IP/extensions/Kartographer/extension.json
 $IP/extensions/ORES/extension.json
+$IP/extensions/Newsletter/extension.json
