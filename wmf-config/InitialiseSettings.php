@@ -13427,6 +13427,9 @@ $wgConf->settings = array(
 	'+hewiki' => array(
 		118 /* Draft */ => true // T87027
 	),
+	'+htwiki' => array(
+		NS_PROJECT => true // T130177
+	),
 	'+jawiki' => array(
 		100 /* Portal */ => true // T97313
 	),
