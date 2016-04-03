@@ -954,9 +954,8 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 }
 
 if ( $wmgUseGlobalBlocking ) {
-	include( $IP . '/extensions/GlobalBlocking/GlobalBlocking.php' );
+	wfLoadExtension ( 'GlobalBlocking' );
 	$wgGlobalBlockingDatabase = 'centralauth';
-	$wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
 	$wgGlobalBlockingBlockXFF = true; // Apply blocks to IPs in XFF (T25343)
 }
 
