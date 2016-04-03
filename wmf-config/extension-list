@@ -46,7 +46,7 @@ $IP/extensions/FlaggedRevs/FlaggedRevs.php
 $IP/extensions/Flow/Flow.php
 $IP/extensions/FundraiserLandingPage/FundraiserLandingPage.php
 $IP/extensions/FundraisingTranslateWorkflow/FundraisingTranslateWorkflow.php
-$IP/extensions/Gadgets/Gadgets.php
+$IP/extensions/Gadgets/extension.json
 $IP/extensions/Gather/Gather.php
 $IP/extensions/GeoCrumbs/GeoCrumbs.php
 $IP/extensions/GeoData/GeoData.php
