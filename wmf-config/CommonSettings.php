@@ -887,9 +887,8 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 }
 
 if ( $wmgUseGlobalBlocking ) {
-	include( $IP . '/extensions/GlobalBlocking/GlobalBlocking.php' );
+	wfLoadExtension ( 'GlobalBlocking' );
 	$wgGlobalBlockingDatabase = 'centralauth';
-	$wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
 	$wgGlobalBlockingBlockXFF = $wmgUseXFFBlocks;
 }
 

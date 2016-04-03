@@ -11751,7 +11751,7 @@ $wgConf->settings = array(
 	'incubatorwiki' => false,
 ),
 
-'wmgApplyGlobalBlocks' => array(
+'wgApplyGlobalBlocks' => array(
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
