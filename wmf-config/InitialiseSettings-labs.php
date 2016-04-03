@@ -665,5 +665,8 @@ function wmfLabsSettings() {
 			'default' => 1024 * 1024 * 4096, // 4 GB (i.e. equals 2^31 - 1)
 			'ptwiki' => 1024 * 500, // 500 KB - T25186
 		),
+		'wmgUseNewsletter' => array(
+			'default' => true,  // T127297
+		),
 	);
 } # wmflLabsSettings()
