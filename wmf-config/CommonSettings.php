@@ -746,7 +746,8 @@ if ( $wmgUseLabeledSectionTransclusion ) {
 }
 
 if ( $wmgUseSpamBlacklist ) {
-	include( $IP . '/extensions/SpamBlacklist/SpamBlacklist.php' );
+	wfLoadExtension( 'SpamBlackList' );
+
 	$wgBlacklistSettings = array(
 		'spam' => array(
 			'files' => array(
