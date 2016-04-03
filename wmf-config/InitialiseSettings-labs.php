@@ -407,10 +407,13 @@ function wmfLabsSettings() {
 		'wmgUseRestbaseVRS' => array(
 			'default' => true,
 		),
-
+		'wmgUseVisualEditor' => array(
+			'enwikisource' => true,
+		),
 		'wmgVisualEditorUseSingleEditTab' => array(
 			'default' => false,
 			'enwiki' => true,
+			'enwikisource' => true,
 		),
 		'wmgVisualEditorExperimental' => array(
 			'default' => true,
