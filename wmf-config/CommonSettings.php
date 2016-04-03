@@ -773,7 +773,7 @@ if ( $wmgUseGlobalTitleBlacklist ) {
 }
 
 if ( $wmgUseQuiz ) {
-	include( "$IP/extensions/Quiz/Quiz.php" );
+	wfLoadExtension( 'Quiz' );
 }
 
 if ( $wmgUseFundraisingTranslateWorkflow ) {
