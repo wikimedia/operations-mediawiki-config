@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_f6b224e3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-04-04T12:52:44Z",
+      "side": 1,
+      "message": "There are legitimate user requests triggered by an user action, through background JS code. \"fake requests\" and \"disguised as user requests\" are inappropriate and misleading. Please describe better this change.",
+      "revId": "a4c40c7ce4540f41d44bbcafcec102af05b04025",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
