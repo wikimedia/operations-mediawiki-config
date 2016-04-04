@@ -3424,6 +3424,25 @@ $wgConf->settings = array(
 		'ढाँवा' => NS_TEMPLATE_TALK,
 		'T' => NS_TEMPLATE,
 	),
+	'+newikibooks' => array(
+		// Per T131754
+		'Wikibooks' => NS_PROJECT,
+		'Wikibooks talk' => NS_PROJECT_TALK,
+		'Cookbook' => 102,
+		'Cookbook talk' => 103,
+		'Wikijunior' => 104,
+		'Wikijunior talk' => 105,
+		'Subject' => 106,
+		'Subject talk' => 107,
+		'विपु' => NS_PROJECT,
+		'विपु वा' => NS_PROJECT_TALK,
+		'प्र' => NS_USER,
+		'प्र वा' => NS_USER_TALK,
+		'ढाँ' => NS_TEMPLATE,
+		'ढाँ वा' => NS_TEMPLATE_TALK,
+		'श्रे' => NS_CATEGORY,
+		'श्रे वा' => NS_CATEGORY_TALK,
+	),
 	'+nlwiki' => array(
 		'WP' => NS_PROJECT,
 		'H' => NS_HELP,
@@ -5138,6 +5157,14 @@ $wgConf->settings = array(
 	'newiki' => array(
 		100 => 'पोर्टल', // T130108
 		101 => 'पोर्टल_वार्ता',
+	),
+	'newikibooks' => array(
+		102 => 'पाकपुस्तक', // T131754, Cookbook
+		103 => 'पाकपुस्तक वार्ता', // T131754, Cookbook talk
+		104 => 'बालपुस्तक', // T131754, Wikijunior
+		105 => 'बालपुस्तक वार्ता', // T131754 Wikijunior talk
+		106 => 'विषय', // T131754, Subject
+		107 => 'विषय वार्ता', // T131754, Subject talk
 	),
 	'newwiki' => array(
 		100 => 'दबू',
