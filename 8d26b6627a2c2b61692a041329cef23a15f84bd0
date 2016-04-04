@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_f19fceb7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 14855,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-04-04T14:27:52Z",
+      "side": 1,
+      "message": "alphabetical",
+      "revId": "8d26b6627a2c2b61692a041329cef23a15f84bd0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_915be225",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 14937,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-04-04T14:27:52Z",
+      "side": 1,
+      "message": "alphabetic order reoloaded (yes, it were tricky here, with a presentation by group reasonnable to deduce from these two entries)\n\ntask number missing",
+      "revId": "8d26b6627a2c2b61692a041329cef23a15f84bd0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
