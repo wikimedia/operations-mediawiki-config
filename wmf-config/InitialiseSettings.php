@@ -9442,6 +9442,9 @@ $wgConf->settings = array(
 	'+trwikiquote' => array(
 		'bureaucrat' => array( 'technican' ), // T122710
 	),
+	'+uawikimedia' => array(
+	    'bureaucrat' => array( 'translationadmin' ), // T131731
+	),
 	'+ukwiki' => array(
 		'sysop' => array( 'patroller', 'rollbacker', 'accountcreator', 'filemover' ), // T104034, T119636
 	),
@@ -10130,6 +10133,9 @@ $wgConf->settings = array(
 	),
 	'+trwikiquote' => array(
 		'bureaucrat' => array( 'technican' ), // T122710
+	),
+	'+uawikimedia' => array(
+		'bureaucrat' => array( 'translationadmin' ), // T131731
 	),
 	'+ukwiki' => array(
 		'sysop' => array( 'patroller', 'rollbacker', 'accountcreator', 'filemover' ), // T104034, T119636
@@ -14846,6 +14852,7 @@ $wgConf->settings = array(
 	'bewikimedia' => true, // T39391
 	'brwikimedia' => true, // T46054
 	'cawikimedia' => true, // T75394
+	'uawikimedia' => true, // T131731
 	'collabwiki' => true,
 	'commonswiki' => true, // T50620
 	'incubatorwiki' => true, // T36213
