@@ -9452,6 +9452,9 @@ $wgConf->settings = array(
 		'bureaucrat' => array( 'autoeditor' ),
 		'sysop' => array( 'autoeditor' ),
 	),
+	'+uawikimedia' => array(
+	    'bureaucrat' => array('translationadmin'), //T131731
+	),
 	'+urwiki' => array(
 		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker' ), // T44737 and T47643
 		'sysop' => array( 'confirmed', 'abusefilter', 'rollbacker', 'interface-editor' ), // T44737, T47643 and T120348
@@ -10130,6 +10133,9 @@ $wgConf->settings = array(
 	),
 	'+trwikiquote' => array(
 		'bureaucrat' => array( 'technican' ), // T122710
+	),
+	'+uawikimedia' => array(
+'bureaucrat' => array('translationadmin'), //T131731
 	),
 	'+ukwiki' => array(
 		'sysop' => array( 'patroller', 'rollbacker', 'accountcreator', 'filemover' ), // T104034, T119636
@@ -14864,6 +14870,7 @@ $wgConf->settings = array(
 	'wikimania2015wiki' => true,
 	'wikimania2016wiki' => true,
 	'wikimania2017wiki' => true,
+	'uawikimedia' => true, //T131731
 ),
 'wmgTranslateWorkflowStates' => array(
 	'default' => false,
