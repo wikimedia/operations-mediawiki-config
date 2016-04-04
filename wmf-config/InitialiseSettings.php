@@ -7525,7 +7525,7 @@ $wgConf->settings = array(
 			'deletedtext' => true,
 			'abusefilter-log-detail' => true,
 		),
-		'ep-coordinator' => array ( 'noratelimit' => true ), // T131684
+		'epcoordinator' => array ( 'noratelimit' => true ), // T131684
 		'rollbacker' => array ( 'rollback' => true, ), // T126931
 		'patroller' => array( // T126931
 			'patrol' => true,
