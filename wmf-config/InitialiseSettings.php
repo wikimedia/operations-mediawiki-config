@@ -4325,6 +4325,7 @@ $wgConf->settings = array(
 	'ckbwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop' ), // T54533
 	'dewiki' => array( '', 'autoconfirmed', 'editeditorprotected', 'sysop' ), // T94368
 	'enwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop' ), // T57432
+	'frwiki' => array( '', 'autoconfirmed', 'editextendedsemiprotected', 'sysop' ), // T131109
 	'hewiki' => array( '', 'autoconfirmed', 'autopatrol',  'templateeditor' /* T102466 */, 'sysop' ), // T60207
 	'huwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop' ), // T74055
 	'lvwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop' ), // T92645
@@ -7835,9 +7836,16 @@ $wgConf->settings = array(
 	),
 	'frwiki' => array(
 		'user' => array( 'move' => false, 'changetags' => false ), // requested by hashar, T98629
-		'bot' => array ( 'changetags' => true ), // T98629
-		'autopatrolled' => array( 'patrol' => true, 'autopatrol' => true, 'movefile' => true, 'changetags' => true ), // T10904, T23078, T87145, T98629
+		'bot' => array ( 'changetags' => true, 'editextendedsemiprotected' => true ), // T98629, T131109
+		'autopatrolled' => array(
+			'patrol' => true, // T10904
+			'autopatrol' => true, // T23078
+			'movefile' => true, // T87145
+			'changetags' => true, // T98629
+			'editextendedsemiprotected' => true // T131109
+		),
 		'checkuser' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ), // T23044
+		'sysop' => array ( 'editextendedsemiprotected' => true ), // T131109
 	),
 	'+frwikibooks' => array(
 		'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
