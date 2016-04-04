@@ -16,6 +16,23 @@
       "revId": "7abc39914fc696b6e27a6963d98f00292e833843",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_562670ca",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 14873,
+      "author": {
+        "id": 876
+      },
+      "writtenOn": "2016-04-04T13:57:28Z",
+      "side": 1,
+      "message": "I believe wikimedia wikis are declared at the top of the array",
+      "revId": "7abc39914fc696b6e27a6963d98f00292e833843",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
