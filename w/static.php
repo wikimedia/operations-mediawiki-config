@@ -45,7 +45,7 @@ function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 	if ( !$ctype || $ctype === 'unknown/unknown' ) {
 		// Directory, extension-less file or unknown extension
 		header( 'HTTP/1.1 400 Bad Request' );
-		wmfStaticShowError( 'Invalid path type' );
+		wmfStaticShowError( 'Invalid file type' );
 		return;
 	}
 
