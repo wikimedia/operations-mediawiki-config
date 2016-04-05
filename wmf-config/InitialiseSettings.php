@@ -4324,7 +4324,7 @@ $wgConf->settings = array(
 	'arwiki' => array( '', 'autoconfirmed', 'autoreview', 'sysop' ), // T54109
 	'ckbwiki' => array( '', 'autoconfirmed', 'autopatrol', 'sysop' ), // T54533
 	'dewiki' => array( '', 'autoconfirmed', 'editeditorprotected', 'sysop' ), // T94368
-	'enwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop' ), // T57432
+	'enwiki' => array( '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ), // T126607, T57432
 	'frwiki' => array( '', 'autoconfirmed', 'editextendedsemiprotected', 'sysop' ), // T131109
 	'hewiki' => array( '', 'autoconfirmed', 'autopatrol',  'templateeditor' /* T102466 */, 'sysop' ), // T60207
 	'huwiki' => array( '', 'autoconfirmed', 'templateeditor', 'sysop' ), // T74055
@@ -7641,6 +7641,7 @@ $wgConf->settings = array(
 		'bot' => array(
 			'ipblock-exempt' => true, // T30914
 			'changetags' => true, // T97013
+			'extendedconfirmed' => true // T126607
 		),
 		'oversight' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-view-private' => true), // T30465, T119446
 		'checkuser' => array( 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-view-private' => true ), // T30465, T119446
@@ -7649,10 +7650,12 @@ $wgConf->settings = array(
 		'sysop' => array(
 			'templateeditor' => true, // T57432
 			'changetags' => true, // T97013
+			'extendedconfirmed' => true // T126607
 		),
 		'massmessage-sender' => array( // T60962
 			'massmessage' => true,
 		),
+		'extendedconfirmed' => array( 'extendedconfirmed' => true ), // T126607
 	),
 	'+enwikibooks' => array(
 		// 'rollbacker' => array( 'rollback' => true ),
@@ -9026,7 +9029,7 @@ $wgConf->settings = array(
 	),
 	'+enwiki' => array(
 		'bureaucrat' => array( 'accountcreator', 'flow-bot' ),
-		'sysop' => array( 'abusefilter', 'accountcreator', 'autoreviewer', 'confirmed', 'filemover', 'reviewer', 'rollbacker', 'templateeditor', 'massmessage-sender' ),
+		'sysop' => array( 'abusefilter', 'accountcreator', 'autoreviewer', 'confirmed', 'filemover', 'reviewer', 'rollbacker', 'templateeditor', 'massmessage-sender', 'extendedconfirmed' ), // T126607
 	),
 	'+enwikibooks' => array(
 		'sysop' => array( 'transwiki', 'uploader' ),
@@ -9703,7 +9706,7 @@ $wgConf->settings = array(
 	),
 	'+enwiki' => array(
 		'bureaucrat' => array( 'ipblock-exempt', 'accountcreator', 'sysop', 'flow-bot' ),
-		'sysop' => array( 'rollbacker', 'accountcreator', 'abusefilter', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender' ),
+		'sysop' => array( 'rollbacker', 'accountcreator', 'abusefilter', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender', 'extendedconfirmed' ), // T126607
 	),
 	'+enwikibooks' => array(
 		'sysop' => array( 'transwiki', 'uploader', ),
@@ -11382,6 +11385,14 @@ $wgConf->settings = array(
 			array( APCOND_EDITCOUNT, 200 ),
 		),
 	), // T67495
+	'enwiki' => array(
+		'extendedconfirmed' => array( '&',	
+			array( APCOND_EDITCOUNT, 500 ),
+ 			array( APCOND_AGE, 30 * 86400 ), // 30 days * seconds in a day
+			array( '!', array( APCOND_INGROUPS, 'sysop' ) ),
+			array( '!', array( APCOND_INGROUPS, 'bot' ) ),
+		),
+	), // T126607
 	'fawiki' => array(
 		'uploader' => array( '&',
 			array( APCOND_AGE, 4 * 86400 ),
