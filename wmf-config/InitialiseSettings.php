@@ -12129,6 +12129,7 @@ $wgConf->settings = array(
 		'*.e-pics.ethz.ch',                 // ETH Library  - T123109
 		'*.museumvictoria.com.au',          // Victoria State (AU) Museum, requested in T125387
 		'bio.acousti.ca',                   // Natural History Museum - T132140
+		'museumcommons.wikimedia.nl',       // Museum Catharijneconvent - T131841
 	),
 ),
 
