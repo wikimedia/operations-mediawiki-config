@@ -128,6 +128,7 @@ $IP/extensions/TranslationNotifications/TranslationNotifications.php
 $IP/extensions/TrustedXFF/TrustedXFF.php
 $IP/extensions/UnicodeConverter/extension.json
 $IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php
+$IP/extensions/UploadsLink/extension.json
 $IP/extensions/UploadWizard/UploadWizard.php
 $IP/extensions/UrlShortener/extension.json
 $IP/extensions/UserMerge/UserMerge.php
