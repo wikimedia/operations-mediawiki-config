@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_685bcc26",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 3430,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-04-05T15:15:11Z",
+      "side": 1,
+      "message": "Spaces should be replaced by underscore. Wikibooks / Wikibooks_talk are already defined in wikibooks section above",
+      "revId": "56e20175ad0a4355838f088083d626c3037d3bcc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_086b20b6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 5163,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-04-05T15:15:11Z",
+      "side": 1,
+      "message": "Spaces should be replaced by underscores.",
+      "revId": "56e20175ad0a4355838f088083d626c3037d3bcc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
