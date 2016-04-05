@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_5745c069",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 12073,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2016-04-05T23:08:09Z",
+      "side": 1,
+      "message": "No, it equals 2^32",
+      "revId": "f3d4d582f4b730e1ea88275828e39e95afe13f6a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
