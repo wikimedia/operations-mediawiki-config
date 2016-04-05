@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_71061422",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 5165,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-04-05T18:31:56Z",
+      "side": 1,
+      "message": "Seems to be \u003cspace\u003e\u003cunderscore\u003e and not an underscore.",
+      "revId": "67f85aa95aeda3cdd5318b857fb05ed5222a3ddc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
