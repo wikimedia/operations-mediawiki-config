@@ -609,6 +609,11 @@ function wmfLabsSettings() {
 			'default' => false, # T69651
 		),
 
+		'wmgUseUploadsLink' => array(
+			'default' => false,
+			'commonswiki' => true,
+		),
+
 		'wmgUseUrlShortener' => array(
 			'default' => true,
 			'private' => false,
