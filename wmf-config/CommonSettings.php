@@ -798,7 +798,7 @@ if ( $wmgUseCategoryTree ) {
 }
 
 if ( $wmgUseProofreadPage ) {
-	include( $IP . '/extensions/ProofreadPage/ProofreadPage.php' );
+	wfLoadExtension( 'ProofreadPage' );
 	if ( $wgDBname == 'dewikisource' ) {
 		$wgGroupPermissions['*']['pagequality'] = true; # 27516
 	} elseif ( $wgDBname == 'enwikisource' || $wgDBname == 'svwikisource' ) {
