@@ -68,7 +68,6 @@ $wgCirrusSearchWikimediaExtraPlugin = array(
 		'use',
 	),
 	'super_detect_noop' => true,
-	'field_value_factor_with_default' => true,
 	'id_hash_mod_filter' => true,
 );
 
