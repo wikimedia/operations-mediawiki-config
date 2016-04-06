@@ -8060,6 +8060,7 @@ $wgConf->settings = array(
 			'deletelogentry' => true, // T42521
 			'deleterevision' => true,
 			'ipblock-exempt' => true,
+			'mergehistory' => true, // T131751
 			'movefile' => true, // T72007
 			'noratelimit' => true,
 			'nuke' => true,
