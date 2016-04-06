@@ -8109,6 +8109,9 @@ $wgConf->settings = array(
 		),
 		'user' => array( 'reupload-own' => false ), // T85621
 	),
+	'ladwiki' => array(
+		'flood' => array( 'bot' => true ), // T131527
+	),
 	'wikitech' => array( // contentadmin is handled in CommonSettings, not here
 		'*' => array(
 			'edit' => false,
@@ -9236,6 +9239,10 @@ $wgConf->settings = array(
 	'+kowiki' => array(
 		'sysop' => array( 'rollbacker', 'confirmed', 'uploader' ), // T85621
 	),
+	'+ladwiki' => array(
+		'sysop' => array ( 'flood' ), // T131527
+		'bureaucrat' => array ( 'flood' ), // T131527
+	),
 	'+wikitech' => array('shellmanagers' => array( 'shell')),
 	'+legalteamwiki' => array( // T63222
 		'bureaucrat' => array( 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'translationadmin' ),
@@ -9922,6 +9929,10 @@ $wgConf->settings = array(
 	),
 	'+kowiki' => array(
 		'sysop' => array( 'rollbacker', 'confirmed', 'uploader' ), // T85621
+	),
+	'+ladwiki' => array(
+		'sysop' => array( 'flood' ), // T131527
+		'bureaucrat' => array ( 'flood' ), // T131527
 	),
 	'+legalteamwiki' => array( // T63222
 		'bureaucrat' => array( 'sysop', 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'bureaucrat', 'translationadmin' ),
@@ -11846,6 +11857,7 @@ $wgConf->settings = array(
 	'frwikinews' => array( 'sysop' => array( 'flood' ) ),
 	'frwiktionary' => array( 'botadmin' => array( 'botadmin' ) ),
 	'itwikisource' => array( 'sysop' => array( 'flood' ) ), // T38600
+	'ladwiki' => array( 'flood' => array( 'flood' ) ), // T131527
 	'lvwiki' => array( 'flood' => array( 'flood' ) ), // T121238
 	'mlwiki' => array( 'botadmin' => array( 'botadmin' ) ),
 	'mlwikisource' => array( 'botadmin' => array( 'botadmin' ) ), // T46335
