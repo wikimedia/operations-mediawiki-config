@@ -11,8 +11,26 @@
 $wgCirrusSearchMasterTimeout = '2m';
 
 $wgCirrusSearchClusters = array(
-	'eqiad' => $wmfAllServices['eqiad']['search'], // search.svc.eqiad.wmnet
-	'codfw' => $wmfAllServices['codfw']['search'], // search.svc.codfw.wmnet
+	'eqiad' => array_map( function ( $host ) {
+		return array(
+			'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
+			'port' => '9243',
+			'host' => $host,
+			'config' => array(
+				'pool' => 'cirrus-eqiad',
+			),
+		);
+	}, $wmfAllServices['eqiad']['search'] ),
+	'codfw' => array_map( function ( $host ) {
+		return array(
+			'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
+			'port' => '9243',
+			'host' => $host,
+			'config' => array(
+				'pool' => 'cirrus-codfw',
+			),
+		);
+	}, $wmfAllServices['eqiad']['search'] ),
 	'labsearch' => array( '10.64.37.14' ), // nobelium.eqiad.wmnet
 );
 
