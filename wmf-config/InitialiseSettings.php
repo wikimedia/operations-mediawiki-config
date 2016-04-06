@@ -9454,6 +9454,9 @@ $wgConf->settings = array(
 	'+trwikiquote' => array(
 		'bureaucrat' => array( 'technican' ), // T122710
 	),
+	'+uawikimedia' => array(
+	    'bureaucrat' => array( 'translationadmin' ), // T131731
+	),
 	'+ukwiki' => array(
 		'sysop' => array( 'patroller', 'rollbacker', 'accountcreator', 'filemover' ), // T104034, T119636
 	),
@@ -10142,6 +10145,9 @@ $wgConf->settings = array(
 	),
 	'+trwikiquote' => array(
 		'bureaucrat' => array( 'technican' ), // T122710
+	),
+	'+uawikimedia' => array(
+		'bureaucrat' => array( 'translationadmin' ), // T131731
 	),
 	'+ukwiki' => array(
 		'sysop' => array( 'patroller', 'rollbacker', 'accountcreator', 'filemover' ), // T104034, T119636
@@ -14875,6 +14881,7 @@ $wgConf->settings = array(
 	'otrs_wikiwiki' => true, // T63297
 	'outreachwiki' => true,
 	'ruwikimedia' => true, // T121766
+	'uawikimedia' => true, // T131731
 	'specieswiki' => true, // T129888
 	'testwiki' => true,
 	'wikidata' => true, // T43585
@@ -14952,6 +14959,7 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 	'metawiki' => true,
 	'ruwikimedia' => true, // T121766
+	'uawikimedia' => true, // T131731
 	'wikidata' => true, // T43585
 	'wikimania2012wiki' => true,
 	'wikimania2013wiki' => true,
