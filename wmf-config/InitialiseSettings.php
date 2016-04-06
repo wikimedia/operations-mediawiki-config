@@ -4341,6 +4341,11 @@ $wgConf->settings = array(
 	'plwiki' => array( 'editor', 'sysop' ), // T50374
 ),
 
+'wgSemiprotectedRestrictionLevels' => array(
+	'default' => array( 'autoconfirmed' ),
+	'+enwiki' => array( 'extendedconfirmed' ), // T126607
+),
+
 'wgSiteNotice' => array(
 	'default' => '',
 ),
