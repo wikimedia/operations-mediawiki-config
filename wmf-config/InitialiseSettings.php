@@ -14106,20 +14106,6 @@ $wgConf->settings = array(
 
 'wgMFExperiments' => array(
 	'default' => array(
-		'languageOverlay' => array(
-			'enabled' => true,
-			'buckets' => array(
-				'control' => 1,  // simpler overlay
-				'A' => 0  // structured overlay
-			),
-		),
-		'languageOverlayBeta' => array(
-			'enabled' => true,
-			'buckets' => array(
-				'control' => 1,  // simpler overlay
-				'A' => 0  // structured overlay
-			),
-		),
 	),
 ),
 
