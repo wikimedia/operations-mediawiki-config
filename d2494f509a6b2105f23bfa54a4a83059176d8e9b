@@ -16,6 +16,24 @@
       "revId": "d2494f509a6b2105f23bfa54a4a83059176d8e9b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_3545916b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11962,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-04-06T17:27:37Z",
+      "side": 1,
+      "message": "These two are currently out of sync: the current value only allows 250-300 Mb files to succeed, it doesn\u0027t allow 2 Gb files.",
+      "parentUuid": "ce38dbff_d55c2551",
+      "revId": "d2494f509a6b2105f23bfa54a4a83059176d8e9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
