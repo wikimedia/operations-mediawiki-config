@@ -457,9 +457,6 @@ $wgMaxAnimatedGifArea = 75e6; // 75MP
 
 $wgFileExtensions = array_merge( $wgFileExtensions, $wmgFileExtensions );
 
-// Disable webp for now. T27397
-$wgFileExtensions = array_values( array_diff( $wgFileExtensions, array( 'webp' ) ) );
-
 if ( isset( $wmgUploadStashMaxAge ) ) {
 	$wgUploadStashMaxAge = $wmgUploadStashMaxAge;
 }
