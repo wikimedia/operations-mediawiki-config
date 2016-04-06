@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_d55c2551",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11962,
+      "author": {
+        "id": 1629
+      },
+      "writtenOn": "2016-04-06T17:18:34Z",
+      "side": 1,
+      "message": "we\u0027re doubling the limit in I9c4e597c16 from 2GB to 4GB, let\u0027s double this too as a first step to 180s so the rate remains constant, we can bump it subsequently too",
+      "revId": "d2494f509a6b2105f23bfa54a4a83059176d8e9b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
