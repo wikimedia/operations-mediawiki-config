@@ -2345,10 +2345,7 @@ if ( $wmgUseTranslate ) {
 
 	$wgTranslateTranslationServices = array();
 	if ( $wmgUseTranslationMemory ) {
-		$servers = array_map(
-			function ( $v ) { return array( 'host' => $v ); },
-			$wgCirrusSearchClusters[$wgCirrusSearchDefaultCluster]
-		);
+		$servers = $wgCirrusSearchClusters[$wgCirrusSearchDefaultCluster];
 		// Read only until renamed to 'TTMServer'
 		$wgTranslateTranslationServices['TTMServer'] = array(
 			'type' => 'ttmserver',
