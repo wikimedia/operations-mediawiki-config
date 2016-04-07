@@ -653,5 +653,9 @@ function wmfLabsSettings() {
 		'wmgUseNewsletter' => array(
 			'default' => true,  // T127297
 		),
+		// Test enabling OATH for 2FA
+		'wmgUseOATHAuth' => array(
+			'default' => true,
+		),
 	);
 } # wmflLabsSettings()
