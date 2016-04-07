@@ -27,6 +27,7 @@ $wmfAllServices['eqiad'] = array(
 	'mathoid' => 'http://deployment-mathoid.eqiad.wmflabs:10042',
 	'eventlogging' => 'udp://deployment-eventlogging03.eqiad.wmflabs:8421',
 	'eventbus' => 'http://deployment-eventlogging04.deployment-prep.eqiad.wmflabs:8085',
+	'upload' => false,
 );
 
 ### Logstash
