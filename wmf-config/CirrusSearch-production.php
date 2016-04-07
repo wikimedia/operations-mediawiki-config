@@ -34,6 +34,14 @@ $wgCirrusSearchClusters = array(
 	'labsearch' => array( '10.64.37.14' ), // nobelium.eqiad.wmnet
 );
 
+if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
+	$wgCirrusSearchClusters = array(
+		'eqiad' => $wmfAllServices['eqiad']['search'],
+		'codfw' => $wmfAllServices['eqiad']['search'],
+		'labsearch' => array( '10.64.37.14' ), // nobelium.eqiad.wmnet
+	);
+}
+
 $wgCirrusSearchConnectionAttempts = 3;
 
 $wgCirrusSearchBackup['backups'] = array(
