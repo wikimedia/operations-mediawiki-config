@@ -156,7 +156,7 @@ if ( $wgCirrusSearchDefaultCluster !== $wmfDatacenter ) {
 	}
 	// completion has p75 of ~30ms
 	if ( isset( $wgPoolCounterConf['CirrusSearch-Completion'] ) ) {
-		$wgPoolCounterConf['CirrusSearch-Completion'] *= 2;
+		$wgPoolCounterConf['CirrusSearch-Completion']['workers'] *= 2;
 	}
 }
 
