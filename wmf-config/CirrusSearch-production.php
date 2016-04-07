@@ -30,14 +30,14 @@ $wgCirrusSearchClusters = array(
 				'pool' => 'cirrus-codfw',
 			),
 		);
-	}, $wmfAllServices['eqiad']['search'] ),
+	}, $wmfAllServices['codfw']['search'] ),
 	'labsearch' => array( '10.64.37.14' ), // nobelium.eqiad.wmnet
 );
 
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgCirrusSearchClusters = array(
 		'eqiad' => $wmfAllServices['eqiad']['search'],
-		'codfw' => $wmfAllServices['eqiad']['search'],
+		'codfw' => $wmfAllServices['codfw']['search'],
 		'labsearch' => array( '10.64.37.14' ), // nobelium.eqiad.wmnet
 	);
 }
