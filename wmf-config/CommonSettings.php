@@ -2343,11 +2343,19 @@ if ( $wmgUseTranslate ) {
 	$wgTranslateDocumentationLanguageCode = 'qqq';
 	$wgExtraLanguageNames['qqq'] = 'Message documentation'; # No linguistic content. Used for documenting messages
 
+	// TODO: proper integration with new CirrusSearch config
+	$wgTranslateExtensionDefaultCluster = 'eqiad';
 	$wgTranslateTranslationServices = array();
 	if ( $wmgUseTranslationMemory ) {
 		$servers = array_map(
-			function ( $v ) { return array( 'host' => $v ); },
-			$wgCirrusSearchClusters[$wgCirrusSearchDefaultCluster]
+			function ( $v ) {
+				if ( is_array( $v ) ) {
+					return array( 'host' => $v['host'] );
+				} else {
+					return array( 'host' => $v );
+				}
+			},
+			$wgCirrusSearchClusters[$wgTranslateExtensionDefaultCluster]
 		);
 		// Read only until renamed to 'TTMServer'
 		$wgTranslateTranslationServices['TTMServer'] = array(
