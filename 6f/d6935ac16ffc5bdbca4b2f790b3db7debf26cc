@@ -1,0 +1,9 @@
+Verified+2: jenkins-bot
+Code-Review+1: Alexandros Kosiaris <akosiaris@wikimedia.org>
+Code-Review+1: Mobrovac <mobrovac@wikimedia.org>
+Code-Review+2: Thcipriani <tcipriani@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Thu, 07 Apr 2016 15:28:41 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/279355
+Project: operations/mediawiki-config
+Branch: refs/heads/master
