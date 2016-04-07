@@ -13301,11 +13301,6 @@ $wgConf->settings = array(
 'wmgUseVisualEditor' => array(
 	'default' => true,
 	'nonbetafeatures' => false,
-
-	'wikisource' => false,	# Paused until ProofreadPage integration is good to go
-	'wiktionary' => false,	# Paused until template editing is more tightly integrated
-	'frwiktionary' => true, # Per community request
-	'svwiktionary' => true, # Per community request
 ),
 
 // Whether VisualEditor should bypass the MediaWiki layer and contact RESTbase directly for speed
@@ -13318,6 +13313,8 @@ $wgConf->settings = array(
 // Whether VisualEditor should re-use the edit tab (and section link) or insert its own; "SET"
 'wmgVisualEditorUseSingleEditTab' => array(
 	'default' => false,		# Deploying slowly with community advanced notice
+	'wikisource' => true,	# Starting from SET
+	'wiktionary' => true,	# Starting from SET
 	'mediawikiwiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,	# T121421
