@@ -16,6 +16,24 @@
       "revId": "191364bd31989097af1b50507709317674dec13b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_42bccbb1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2016-04-08T21:44:02Z",
+      "side": 1,
+      "message": "Yeah, actually the full path does not work (but it is okay to put .dblist).",
+      "parentUuid": "2ea41786_e6ef1781",
+      "revId": "191364bd31989097af1b50507709317674dec13b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
