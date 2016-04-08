@@ -1135,6 +1135,7 @@ $wgConf->settings = array(
 	'ilowiki' => array( '1.5x' => '/static/images/project-logos/ilowiki-1.5x.png', '2x' => '/static/images/project-logos/ilowiki-2x.png' ),
 	'itwiki' => array( '1.5x' => '/static/images/project-logos/itwiki-1.5x.png', '2x' => '/static/images/project-logos/itwiki-2x.png' ),
 	'lawiki' => array( '1.5x' => '/static/images/project-logos/lawiki-1.5x.png', '2x' => '/static/images/project-logos/lawiki-2x.png' ),
+	'ladwiki' => array( '1.5x' => '/static/images/project-logos/ladwiki-1.5x.png', '2x' => '/static/images/project-logos/ladwiki-2x.png' ), // T132120
 	'mswiki' => array( '1.5x' => '/static/images/project-logos/mswiki-1.5x.png', '2x' => '/static/images/project-logos/mswiki-2x.png' ),
 	'nlwiki' => array( '1.5x' => '/static/images/project-logos/nlwiki-1.5x.png', '2x' => '/static/images/project-logos/nlwiki-2x.png' ),
 	'ruwiki' => array( '1.5x' => '/static/images/project-logos/ruwiki-1.5x.png', '2x' => '/static/images/project-logos/ruwiki-2x.png' ),
