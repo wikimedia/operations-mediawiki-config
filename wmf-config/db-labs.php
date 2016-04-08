@@ -36,7 +36,24 @@ if( $wmfRealm == 'labs' ) { # safe guard
 			'deployment-db1'  => '10.68.16.193', # deployment-db1.eqiad.wmflabs
 			'deployment-db2'  => '10.68.17.94', # deployment-db2.eqiad.wmflabs
 		),
+
+		'externalLoads' => array(
+			'cluster1' => array(
+				'10.68.16.193' => 1, # deployment-db1.eqiad.wmflabs, master
+				'10.68.17.94' => 3 , # deployment-db2.eqiad.wmflabs
+			),
+		),
+
+		'templateOverridesByCluster' => array(
+			'cluster1' => array( 'blobs table' => 'blobs1' ),
+		),
 	);
+
+	if ( $wgDBname == 'testwiki' ) {
+		$wgDefaultExternalStore = array(
+			'DB://cluster1',
+		);
+	}
 
 	# No parser cache in beta yet
 	$wmgParserCacheDBs = array();
