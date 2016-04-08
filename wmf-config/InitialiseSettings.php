@@ -15391,9 +15391,25 @@ $wgConf->settings = array(
 'wmgEchoShowFooterNotice' => array(
 	'default' => false,
 	'testwiki' => true,
+	'frwiki' => true, // All French wikis: T131893
+	'frwikibooks' => true,
+	'frwikinews' => true,
+	'frwikiquote' => true,
+	'frwikisource' => true,
+	'frwikiversity' => true,
+	'frwikivoyage' => true,
+	'frwiktionary' => true,
 ),
 'wmgEchoFooterNoticeURL' => array(
 	'default' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3',
+	'frwiki' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3&Q_Language=FR', // All French wikis: T131893
+	'frwikibooks' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3&Q_Language=FR',
+	'frwikinews' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3&Q_Language=FR',
+	'frwikiquote' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3&Q_Language=FR',
+	'frwikisource' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3&Q_Language=FR',
+	'frwikiversity' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3&Q_Language=FR',
+	'frwikivoyage' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3&Q_Language=FR',
+	'frwiktionary' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3&Q_Language=FR',
 ),
 # from and reply to address when Echo sends email notifications
 'wmgNotificationSender' => array(
