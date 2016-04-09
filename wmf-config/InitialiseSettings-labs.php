@@ -634,10 +634,6 @@ function wmfLabsSettings() {
 		'wmgUseCollection' => array(
 			'zhwiki' => true, // T128425
 		),
-		// Let Beta Cluster Commons do upload-from-URL from production Commons.
-		'wgCopyUploadsDomains' => array(
-			'+commonswiki' => array( 'upload.wikimedia.org' )
-		),
 		'wgMaxUploadSize' => array(
 		// Affects URL uploads and chunked uploads (experimental).
 		// Limit on other web uploads is enforced by PHP.
