@@ -4343,6 +4343,7 @@ $wgConf->settings = array(
 
 'wgSemiprotectedRestrictionLevels' => array(
 	'default' => array( 'autoconfirmed' ),
+	'+dewiki' => array( 'editeditorprotected' ), // T132249
 	'+enwiki' => array( 'extendedconfirmed' ), // T126607
 	'+frwiki' => array( 'editextendedsemiprotected' ), // T132248
 ),
