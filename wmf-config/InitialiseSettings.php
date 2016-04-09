@@ -4361,6 +4361,7 @@ $wgConf->settings = array(
 'wgSemiprotectedRestrictionLevels' => array(
 	'default' => array( 'autoconfirmed' ),
 	'+enwiki' => array( 'extendedconfirmed' ), // T126607
+	'+frwiki' => array( 'editextendedsemiprotected' ), // T132248
 ),
 
 'wgSiteNotice' => array(
