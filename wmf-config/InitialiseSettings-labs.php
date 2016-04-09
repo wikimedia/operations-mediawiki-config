@@ -641,7 +641,7 @@ function wmfLabsSettings() {
 			'zhwiki' => true, // T128425
 		),
 		// Let Beta Cluster Commons do upload-from-URL from production Commons.
-		'wgCopyUploadsDomains' => array(
+		'+wgCopyUploadsDomains' => array(
 			'+commonswiki' => array( 'upload.wikimedia.org' )
 		),
 		'wgMaxUploadSize' => array(
