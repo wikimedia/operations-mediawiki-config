@@ -3088,6 +3088,9 @@ if ( $wmgUseGraph ) {
 			'namespace' => 486,
 			'nsName' => 'Data',
 			'isLocal' => true,
+			'pattern' => '/^Json:./',
+			// these two settings should be removed after deploying
+			// https://gerrit.wikimedia.org/r/#/c/281327/
 			'name' => 'Json',
 			'isSubspace' => true,
 		);
