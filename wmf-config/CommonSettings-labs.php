@@ -341,13 +341,6 @@ if ( $wmgUseNewsletter ) {
 	wfLoadExtension( 'Newsletter' );
 }
 
-if ( $wmgUseOATHAuth && $wmgUseCentralAuth ) {
-	wfLoadExtension( 'OATHAuth' );
-	$wgOATHAuthDatabase = 'centralauth';
-	// Roll this feature out to specific groups initially
-	$wgGroupPermissions['*']['oathauth-enable'] = false;
-}
-
 // Experimental
 $wgGadgetsCaching = false;
 
