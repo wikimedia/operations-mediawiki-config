@@ -33,6 +33,23 @@
       "revId": "b6831625ac92bcb8ffa95a030a252736ae38a714",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_debd4bff",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15936,
+      "author": {
+        "id": 2705
+      },
+      "writtenOn": "2016-04-11T18:52:11Z",
+      "side": 1,
+      "message": "Need to specify languages. I think this is the right syntax.\n\u0027wgCirrusSearchTextcatLanguages\u0027 \u003d\u003e array( \u0027en\u0027, \u0027es\u0027, \u0027zh\u0027, \u0027pt\u0027, \u0027ar\u0027, \u0027ru\u0027, \u0027fa\u0027, \u0027ko\u0027, \u0027bn\u0027, \u0027bg\u0027, \u0027hi\u0027, \u0027el\u0027, \u0027ja\u0027, \u0027ta\u0027, \u0027th\u0027, \u0027he\u0027 );",
+      "revId": "b6831625ac92bcb8ffa95a030a252736ae38a714",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
