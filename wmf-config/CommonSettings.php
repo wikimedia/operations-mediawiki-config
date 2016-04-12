@@ -2070,7 +2070,7 @@ if ( $wmgUseRestbaseVRS ) {
 }
 
 if ( $wmgUseParsoid ) {
-	$wmgParsoidURL = $wmfMasterServices['parsoid'];
+	$wmgParsoidURL = $wmfLocalServices['parsoid'];
 
 	// The wiki prefix to use
 	$wgParsoidWikiPrefix = $wgDBname; // deprecated
