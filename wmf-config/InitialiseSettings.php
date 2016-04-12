@@ -10449,6 +10449,7 @@ $wgConf->settings = array(
 	'hewikivoyage' => array( 'w', 'wikt', 'b', 'n', 'q', 's', 'commons', 'en', 'de', 'el', 'fr', 'it', 'nl', 'pl', 'pt', 'ro', 'ru', 'sv', 'uk', 'vi' ), // T60527, T61601
 	'hiwiki' => array( 'wikt', 'commons', 'meta', 'species', 'de', 'en', 'en:b', 'en:q', 'en:n', 'en:s', 'en:v', 'es', 'fr', 'ml', 'ne', 'nl', 'ro', 'ru', 'pl', 'pt', 'simple', 'ta' ), // T43757
 	'hiwikiquote' => array( 'w', 'w:en', 'w:sa', 'q:en', 'q:gu', 'q:sa', 'meta', 'mw' ), // T127593
+	'hiwiktionary' => array( 'commons', 'meta', 'w', 'q', 'b', 'species', 'w:en', 'b:en', 'q:en', 's:en', 'v:en', 'voy:en', 'w:es', 'w:fa', 'w:fr', 'w:ml', 'w:ne', 'w:nl', 'w:ro', 'w:ru', 'w:pl', 'w:pt', 'w:simple', 'w:ta', 'w:ur', 'w:mr', 'w:gu', 'w:bh', 'en', 'mg', 'fr', 'es', 'zh', 'ru', 'it', 'pl', 'sv', 'ku', 'el', 'nl', 'de', 'ko', 'it', 'tr', 'ta', 'hu', 'fi', 'kn', 'ja', 'ml', 'my', 'or', 'te', 'fa', 'gu', 'ar', 'th', 'ps', 'simple', 'sw' ), // T132417
 	'hifwiki' => array( 'incubator', 'commons', 'meta', 'species', 'bh', 'de', 'en', 'en:b', 'en:q', 'en:n', 'en:s', 'en:v', 'el', 'es', 'fa', 'fr', 'hi', 'ml', 'ne', 'nl', 'ro', 'ru', 'pa', 'pl', 'pt', 'simple', 'te', 'ta', 'ur' ), // T99826
 	'hsbwiktionary' => array( 'incubator', 'w' ),
 	'huwikinews' => array( 'incubator' ),
