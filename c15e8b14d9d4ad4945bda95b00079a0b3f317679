@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_140308c3",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 7144,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-04-12T22:04:51Z",
+      "side": 1,
+      "message": "I\u0027d recommend setting it at least to 80. This way it\u0027s the same as the ip/newbie limit, but with the allowance to burst (e.g. you can make more than 8 edits per minute, up to 80, but the system requires a grace period of 9 minutes after that).\n\nThough even then 80 seems a bit low. Remember that this only applies to autoconfirmed users. For \u0027newbie\u0027 we have a separate rule.",
+      "revId": "c15e8b14d9d4ad4945bda95b00079a0b3f317679",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
