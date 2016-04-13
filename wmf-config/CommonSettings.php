@@ -23,6 +23,14 @@ if ( PHP_SAPI != 'cli' ) {
 	header( "Cache-control: no-cache" );
 }
 
+// Clobber any value in $_SERVER['SERVER_SOFTWARE'] other than Apache, so that
+// IEUrlExtension::haveUndecodedRequestUri() always thinks we're running Apache.
+// Otherwise, the absense of 'Apache' from $_SERVER['SERVER_SOFTWARE'] causes it
+// to distrust REQUEST_URI, which leads to incorrect behavior.
+if ( isset( $_SERVER['SERVER_SOFTWARE'] ) ) {
+	$_SERVER['SERVER_SOFTWARE'] = 'Apache';
+}
+
 if ( PHP_SAPI == 'cli' ) {
 	# Override for sanity's sake.
 	ini_set( 'display_errors', 1 );
