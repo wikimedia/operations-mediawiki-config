@@ -16804,8 +16804,13 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 ),
 
-);
+'wgKartographerWikivoyageMode' => array(
+	'default' => false,
+	'mediawikiwiki' => true,
+	'wikivoyage' => true,
+),
 
+);
 
 ### WMF Labs override #####
 if ( $wmfRealm == 'labs' ) {
