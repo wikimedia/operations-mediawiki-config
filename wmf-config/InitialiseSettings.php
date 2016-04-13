@@ -5165,9 +5165,9 @@ $wgConf->settings = array(
 	),
 	'newikibooks' => array(
 		102 => 'पाकपुस्तक', // T131754, Cookbook
-		103 => 'पाकपुस्तक_र्ता', // T131754, Cookbook talk
+		103 => 'पाकपुस्तक_वार्ता', // T131754, Cookbook talk
 		104 => 'बालपुस्तक', // T131754, Wikijunior
-		105 => 'बालपुस्तक_र्ता', // T131754 Wikijunior talk
+		105 => 'बालपुस्तक_वार्ता', // T131754, Wikijunior talk
 		106 => 'विषय', // T131754, Subject
 		107 => 'विषय_र्ता', // T131754, Subject talk
 	),
