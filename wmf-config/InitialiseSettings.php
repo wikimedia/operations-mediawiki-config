@@ -11006,6 +11006,7 @@ $wgConf->settings = array(
 	'+frwiki' => array ( 102 ), // T127688
 	'+itwiki' => array( 102 ),
 	'+ruwiki' => array( 104 ), // T125509
+	'+ruwikinews' => array( 102 ), // T132241 - Комментарии
 ),
 
 'wmgExemptFromUserRobotsControlExtra' => array(
