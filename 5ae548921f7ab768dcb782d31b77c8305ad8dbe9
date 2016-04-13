@@ -16,6 +16,24 @@
       "revId": "5ae548921f7ab768dcb782d31b77c8305ad8dbe9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce38dbff_5bc49894",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2284,
+      "author": {
+        "id": 2177
+      },
+      "writtenOn": "2016-04-13T20:33:43Z",
+      "side": 1,
+      "message": "Exactly the 75 formulae number. The reasoning is that most pages have way less than that, and 150 concurrent conns is still a moderately-low number when our prod infra is taken into account. I prefer to start with a \"lower\" number and make sure all works as expected. We can always bump it at a later time.",
+      "parentUuid": "ce38dbff_69cf192e",
+      "revId": "5ae548921f7ab768dcb782d31b77c8305ad8dbe9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
