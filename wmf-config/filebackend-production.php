@@ -173,6 +173,7 @@ if ( $wgDBname != 'commonswiki' ) {
 		'scriptDirUrl'     => "https://commons.wikimedia.org/w",
 		'favicon'          => "/static/favicon/commons.ico",
 		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 86400,
 		'wiki'             => 'commonswiki',
 		'initialCapital'   => true,
 		'zones'            => array( // actual swift containers have 'local-*'
