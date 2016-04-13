@@ -70,7 +70,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-log-private'] = true;
 		break;
 	case 'commonswiki':
-		$wgAbuseFilterProfile = true; // T132200
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		break;
 	case 'cswiktionary':
