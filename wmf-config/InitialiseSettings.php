@@ -12259,6 +12259,7 @@ $wgConf->settings = array(
 	'enwikibooks' => 'comma', // T29256
 	'ptwikibooks' => 'comma', // T29256
 	'guwikisource' => 'any', // T42173
+	'plwikisource' => 'any', // T131771
 	'zhwikinews' => 'any', // T53604
 ),
 
