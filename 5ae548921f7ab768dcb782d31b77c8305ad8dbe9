@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce38dbff_69cf192e",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2284,
+      "author": {
+        "id": 183
+      },
+      "writtenOn": "2016-04-13T20:19:54Z",
+      "side": 1,
+      "message": "how did you come up with this number?\nThat would be good for pages with up to 75 formulae.",
+      "revId": "5ae548921f7ab768dcb782d31b77c8305ad8dbe9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
