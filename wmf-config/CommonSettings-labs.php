@@ -209,6 +209,7 @@ if ( $wgDBname == 'commonswiki' ) {
 if ( $wmgUseMath ) {
 	$wgMathFileBackend = false;
 	$wgMathDirectory   = '/data/project/upload7/math';
+	$wgDefaultUserOptions[ 'math' ] = 'mathml';
 }
 
 if ( $wmgUseScore ) {
