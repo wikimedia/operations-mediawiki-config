@@ -2286,6 +2286,8 @@ if ( $wmgUseMath ) {
 	// Prevent accidental use.
 	$wgMathLaTeXMLUrl = null;
 	$wgMathMathMLUrl = $wmfLocalServices['mathoid'];
+	// Increase the number of concurrent connections made to RESTBase
+	$wgMathConcurrentReqs = 150;
 
 	// Set up $wgMathFullRestbaseURL - similar to VE RESTBase config above
 	// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
