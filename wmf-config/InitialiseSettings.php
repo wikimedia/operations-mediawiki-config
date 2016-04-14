@@ -14724,6 +14724,15 @@ $wgConf->settings = array(
 		'5' => 'Користувачі %code%-5',
 		'N' => 'Користувачі %code%-N',
 	),
+	'uzwiki' => array( // T131924
+		'0' => false,
+		'1' => 'User %code%',
+		'2' => 'User %code%',
+		'3' => 'User %code%',
+		'4' => 'User %code%',
+		'5' => 'User %code%',
+		'N' => 'User %code%',
+	),
 	'vowiktionary' => array(
 		'0' => 'Geban %code%-0',
 		'1' => 'Geban %code%-1',
