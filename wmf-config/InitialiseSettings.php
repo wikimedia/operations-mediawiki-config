@@ -1012,7 +1012,7 @@ $wgConf->settings = array(
 	'thwikisource' => '/static/images/project-logos/thwikisource.png',  // T54019
 	'trwikisource' => '/static/images/project-logos/trwikisource.png',  // T54019
 	'ukwikisource' => '/static/images/project-logos/ukwikisource.png',  // T56491
-	'vecwikisource' => '/static/images/project-logos/vecwikisource.png',
+	'vecwikisource' => '/static/images/project-logos/vecwikisource.png', // T132157
 	'viwikisource' => '/static/images/project-logos/viwikisource.png',
 	'yiwikisource' => '/static/images/project-logos/yiwikisource.png',
 	'zhwikisource' => '/static/images/project-logos/zhwikisource.png',
@@ -1151,6 +1151,7 @@ $wgConf->settings = array(
 	'viwikibooks' => array( '1.5x' => '/static/images/project-logos/viwikibooks-1.5x.png', '2x' => '/static/images/project-logos/viwikibooks-2x.png' ),
 
     # Wikisource
+	'vecwikisource' => array( '1.5x' => '/static/images/project-logos/vecwikisource-1.5x.png', '2x' => '/static/images/project-logos/vecwikisource-2x.png' ), // T132157
 	'viwikisource' => array( '1.5x' => '/static/images/project-logos/viwikisource-1.5x.png', '2x' => '/static/images/project-logos/viwikisource-2x.png' ),
 
     # Wikivoyage
