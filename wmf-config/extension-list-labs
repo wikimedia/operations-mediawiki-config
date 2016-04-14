@@ -5,3 +5,4 @@ $IP/extensions/EventBus/extension.json
 $IP/extensions/Kartographer/extension.json
 $IP/extensions/ORES/extension.json
 $IP/extensions/Newsletter/extension.json
+$IP/extensions/OATHAuth/extension.json
