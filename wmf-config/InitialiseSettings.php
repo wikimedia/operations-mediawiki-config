@@ -13872,7 +13872,6 @@ $wgConf->settings = array(
 
 'wmgUseMoodBar' => array(
 	'default' => false,
-	'testwiki' => true,
 	'frwikisource' => true, // T36618
 	'incubatorwiki' => true, // T34417
 	'nlwiki' => true, // T34202
