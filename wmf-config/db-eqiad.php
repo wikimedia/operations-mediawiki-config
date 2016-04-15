@@ -116,9 +116,9 @@ $wgLBFactoryConf = array(
 		'db1015' => 100, # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1035' => 500, # 1.4TB  64GB
 		'db1044' => 500, # 1.4TB  64GB
-		'db1075' => 50,  # 3.6TB 512GB, pooled with low weight
-		'db1077' => 50,  # 3.6TB 512GB, pooled with low weight
-		'db1078' => 50,  # 3.6TB 512GB, pooled with low weight
+#		'db1075' => 50,  # 3.6TB 512GB, depooled for TLS upgrade - T111654 - volans
+#		'db1077' => 50,  # 3.6TB 512GB, depooled for TLS upgrade - T111654 - volans
+#		'db1078' => 50,  # 3.6TB 512GB, depooled for TLS upgrade - T111654 - volans
 	),
 	's4' => array(
 		'db1040' => 0,   # 1.4TB  64GB
