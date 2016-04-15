@@ -12132,6 +12132,7 @@ $wgConf->settings = array(
 		'bio.acousti.ca',                   // Natural History Museum - T132140
 		'museumcommons.wikimedia.nl',       // Museum Catharijneconvent - T131841
 		'images.unsplash.com',              // Unsplash - T132701
+		'*.natmus.dk',                      // Natmus.dk - T132748
 	),
 ),
 
