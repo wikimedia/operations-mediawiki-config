@@ -4704,6 +4704,10 @@ $wgConf->settings = array(
 		102 => 'Affiliate', // T71549
 		103 => 'Affiliate_talk',
 	),
+	'foundationwiki' => array(
+		100 => 'Resolution', // T132746
+		101 => 'Resolution talk', // T132746
+	),
 	'wikitech' => array(
 		110 => 'Obsolete',
 		111 => 'Obsolete_talk',
