@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e58336e_c37adcb8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12135,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-04-15T14:35:45Z",
+      "side": 1,
+      "message": "» indicates a tab\n\nAs you can see, the comment is vertically aligned with spaces, not tabs here.",
+      "revId": "8358dfe0f6f80ae650032d2eeefd5adce72437e3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
