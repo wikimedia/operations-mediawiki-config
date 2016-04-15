@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e58336e_43288c32",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13870,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-04-15T12:52:05Z",
+      "side": 1,
+      "message": "I think we can just remove the link, because we want to remove the whole extension, so no need to let this commented out, I think.",
+      "revId": "20176cf72fd6b2772c7d80cedefa8613d293ac4f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
