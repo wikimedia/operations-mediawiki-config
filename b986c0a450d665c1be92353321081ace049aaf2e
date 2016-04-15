@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e58336e_60e9467b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 252
+      },
+      "writtenOn": "2016-04-15T11:58:25Z",
+      "side": 1,
+      "message": "Underscore on the talk namespace.",
+      "revId": "b986c0a450d665c1be92353321081ace049aaf2e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
