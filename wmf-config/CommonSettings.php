@@ -59,7 +59,6 @@ $wmfMasterDatacenter = 'eqiad';
 # 'meta'    : meta wiki for user editable content
 # 'upload'  : hostname where files are hosted
 # 'wikidata': hostname for the data repository
-# 'bits'    : for load.php and js/css assets
 # Whenever all realms/datacenters should use the same host, do not use
 # $wmfHostnames but use the hardcoded hostname instead. A good example are the
 # spam blacklists hosted on meta.wikimedia.org which you will surely want to
@@ -67,7 +66,6 @@ $wmfMasterDatacenter = 'eqiad';
 $wmfHostnames = array();
 switch( $wmfRealm ) {
 case 'labs':
-	$wmfHostnames['bits']     = 'bits.beta.wmflabs.org';
 	$wmfHostnames['meta']     = 'meta.wikimedia.beta.wmflabs.org';
 	$wmfHostnames['test']     = 'test.wikimedia.beta.wmflabs.org';
 	$wmfHostnames['upload']   = 'upload.beta.wmflabs.org';
@@ -75,7 +73,6 @@ case 'labs':
 	break;
 case 'production':
 default:
-	$wmfHostnames['bits']   = 'bits.wikimedia.org';
 	$wmfHostnames['meta']   = 'meta.wikimedia.org';
 	$wmfHostnames['test']   = 'test.wikipedia.org';
 	$wmfHostnames['upload'] = 'upload.wikimedia.org';
@@ -497,7 +494,7 @@ if ( $wmgPrivateWikiUploads ) {
 	$wgFileExtensions[] = 'dv';
 	$wgFileExtensions[] = 'avi';
 	$wgFileExtensions[] = 'mov';
-	$wgFileExtensions[] = 'mp3'; // for Jay for fundraising bits
+	$wgFileExtensions[] = 'mp3'; // for Jay for fundraising files
 	$wgFileExtensions[] = 'aif'; // "
 	$wgFileExtensions[] = 'aiff'; // "
 
