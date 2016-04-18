@@ -15593,6 +15593,7 @@ $wgConf->settings = array(
 	'mediawikiwiki' => true,
 	'bswiki' => true,
 	'cawiki' => true, // T120829
+	'frwikisource' => true, // T132914
 	'urwiki' => true,
 	'zhwiki' => true,
 	'wikidatawiki' => true,
