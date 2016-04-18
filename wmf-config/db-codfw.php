@@ -9,7 +9,7 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 
 $wmgParserCacheDBs = array(
 	'10.192.16.170', # pc2004
-#	'10.192.32.128', # pc2005
+	'10.192.32.128', # pc2005
 	'10.192.48.39',  # pc2006
 );
 
