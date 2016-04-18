@@ -85,7 +85,7 @@ $selectedFileViewRawUrlEsc = htmlspecialchars( $selectedFileViewRawUrl );
 <html lang="en">
 <head>
 	<title><?php echo $selectedFileNameEsc; ?> - Wikimedia configuration files</title>
-	<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wmf.ico">
+	<link rel="shortcut icon" href="//www.wikimedia.org/static/favicon/wmf.ico">
 	<link rel="stylesheet" href="../css/base.css">
 </head>
 <body>

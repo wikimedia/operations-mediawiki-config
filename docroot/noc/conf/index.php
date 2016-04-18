@@ -27,7 +27,7 @@ require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
 <head>
 	<meta charset="UTF-8" />
 	<title>Wikimedia configuration files</title>
-	<link rel="shortcut icon" href="//bits.wikimedia.org/favicon/wmf.ico">
+	<link rel="shortcut icon" href="//www.wikimedia.org/static/favicon/wmf.ico">
 	<link rel="stylesheet" href="../css/base.css">
 </head>
 <body>
