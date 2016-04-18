@@ -3067,6 +3067,9 @@ if ( $wmgUseGraph ) {
 		'wikirawupload' => array(
 			'upload.wikimedia.org',
 		),
+		'wikidatasparql' => array(
+			'query.wikidata.org',
+		),
 	);
 
 	if ( $wmgUseGraphWithNamespace ) {
