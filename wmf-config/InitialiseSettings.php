@@ -11051,12 +11051,10 @@ $wgConf->settings = array(
 // CT_MODE_ALL = 20
 'wmgCategoryTreeCategoryPageMode' => array(
 	'default' => 0,
-	'hewiki' => 10,
 ),
 
 'wmgCategoryTreeCategoryPageOptions' => array(
 	'default' => array( 'mode' => null, 'showcount' => true ),
-	'hewiki' => array( 'mode' => 10 /*CT_MODE_PAGES*/ ), // T13776
 ),
 
 'wmgUseFundraisingTranslateWorkflow' => array(
