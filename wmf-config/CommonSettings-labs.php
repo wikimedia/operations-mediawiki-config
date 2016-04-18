@@ -320,10 +320,7 @@ if ( $wmgUseGraph ) {
 	// See https://www.mediawiki.org/wiki/Extension:Graph#External_data
 	$wgGraphAllowedDomains['http'] = [ 'wmflabs.org' ];
 	$wgGraphAllowedDomains['wikirawupload'][] = 'upload.beta.wmflabs.org';
-	$wgGraphAllowedDomains['wikidatasparql'] = [
-		'query.wikidata.org',
-		'wdqs-test.wmflabs.org'
-	];
+	$wgGraphAllowedDomains['wikidatasparql'][] = 'wdqs-test.wmflabs.org';
 }
 
 if ( $wmgUseKartographer ) {
