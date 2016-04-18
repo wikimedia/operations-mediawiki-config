@@ -88,7 +88,7 @@ $wgLBFactoryConf = array(
 
 'sectionLoads' => array(
 	's1' => array(
-		'db1052' => 0,   # 2.8TB  96GB
+		'db1052' => 0,   # 2.8TB  96GB, master
 		'db1053' => 0,   # 2.8TB  96GB, vslow, dump
 		'db1051' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1055' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
@@ -111,7 +111,7 @@ $wgLBFactoryConf = array(
 		'db1076' => 50,  # 3.6TB 512GB, pooled with low weight
 	),
 	/* s3 */ 'DEFAULT' => array(
-		'db1038' => 0,   # 1.4TB  64GB
+		'db1038' => 0,   # 1.4TB  64GB, master
 		'db1027' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1015' => 100, # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1035' => 500, # 1.4TB  64GB
@@ -121,7 +121,7 @@ $wgLBFactoryConf = array(
 		'db1078' => 50,  # 3.6TB 512GB, pooled with low weight
 	),
 	's4' => array(
-		'db1040' => 0,   # 1.4TB  64GB
+		'db1040' => 0,   # 1.4TB  64GB, master
 		'db1042' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1019' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1056' => 100, # 2.8TB  96GB, api
@@ -130,7 +130,7 @@ $wgLBFactoryConf = array(
 		'db1068' => 500, # 2.8TB 160GB
 	),
 	's5' => array(
-		'db1058' => 0,   # 2.8TB  96GB
+		'db1058' => 0,   # 2.8TB  96GB, master
 		'db1049' => 0,   # 2.8TB  64GB, vslow, dump
 		'db1026' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1045' => 50,  # 1.4TB  64GB, api
@@ -138,7 +138,7 @@ $wgLBFactoryConf = array(
 		'db1071' => 500, # 2.8TB 160GB
 	),
 	's6' => array(
-		'db1023' => 0,   # 1.4TB  64GB
+		'db1023' => 0,   # 1.4TB  64GB, master
 		'db1022' => 100, # 1.4TB  64GB, api
 		'db1030' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1037' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
@@ -146,7 +146,7 @@ $wgLBFactoryConf = array(
 		'db1061' => 500, # 2.8TB 128GB
 	),
 	's7' => array(
-		'db1033' => 0,   # 1.4TB  64GB,
+		'db1033' => 0,   # 1.4TB  64GB, master
 		'db1028' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1034' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1041' => 200, # 1.4TB  64GB
@@ -539,7 +539,7 @@ $wgLBFactoryConf = array(
 	),
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => array(
-		'10.64.16.18' => 10, # db1029
+		'10.64.16.18' => 10, # db1029, master
 		'10.64.16.20' => 20, # db1031 snapshot host
 	),
 ),
