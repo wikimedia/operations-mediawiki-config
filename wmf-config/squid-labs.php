@@ -12,7 +12,6 @@
 $wgSquidServersNoPurge = array( '127.0.0.1',
 	'10.68.18.103',  # deployment-cache-text04
 	'10.68.18.109',  # deployment-cache-upload04
-	'10.68.18.110',  # deployment-cache-mobile04
 );
 $wgHTCPRouting = array(
 	'|^https?://upload\.beta\.wmflabs\.org|' => array(
@@ -20,14 +19,10 @@ $wgHTCPRouting = array(
 		'port' => 4827,
 	),
 
-	# Fallback  (text+mobile)
+	# Fallback  (text)
 	'' => array(
 		array(
 			'host' => '10.68.18.103',  # deployment-cache-text04
-			'port' => 4827,
-		),
-		array(
-			'host' => '10.68.18.110',  # deployment-cache-mobile04
 			'port' => 4827,
 		),
 	),
