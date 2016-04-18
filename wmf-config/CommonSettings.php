@@ -322,8 +322,8 @@ $pcTemplate = array( 'type' => 'mysql',
 );
 
 $pcServers = array();
-foreach ( $wmgParserCacheDBs as $host ) {
-	$pcServers[] = array( 'host' => $host ) + $pcTemplate;
+foreach ( $wmgParserCacheDBs as $tag => $host ) {
+	$pcServers[$tag] = array( 'host' => $host ) + $pcTemplate;
 }
 
 $wgObjectCaches['mysql-multiwrite'] = array(
