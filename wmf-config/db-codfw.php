@@ -92,26 +92,26 @@ $wgLBFactoryConf = array(
 		'db2034' => 50,  # 2.9TB 160GB, rc, log
 		'db2042' => 50,  # 2.9TB 160GB, rc, log
 		'db2048' => 400, # 2.9TB 160GB
-		'db2055' => 200, # 3.3TB 160GB, dump (inactive), vslow
+		'db2055' => 100, # 3.3TB 160GB, dump (inactive), vslow
 		'db2062' => 50,  # 3.3TB 160GB, api
 		'db2069' => 50,  # 3.3TB 160GB, api
-		'db2070' => 500, # 3.3TB 160GB
+		'db2070' => 400, # 3.3TB 160GB
 	),
 	's2' => array(
 		'db2017' => 0,   # 2.9TB  96GB, master
 		'db2035' => 50,  # 2.9TB 160GB, rc, log
 		'db2041' => 50,  # 2.9TB 160GB, api
 		'db2049' => 400, # 2.9TB 160GB,
-		'db2056' => 200, # 3.3TB 160GB, dump (inactive), vslow
+		'db2056' => 100, # 3.3TB 160GB, dump (inactive), vslow
 		'db2063' => 50,  # 3.3TB 160GB, api
-		'db2064' => 500, # 3.3TB 160GB
+		'db2064' => 400, # 3.3TB 160GB
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db2018' => 0,   # 2.9TB  96GB, master
 		'db2036' => 50,  # 2.9TB 160GB, rc, log
 		'db2043' => 100, # 2.9TB 160GB, dump (inactive), vslow
 		'db2050' => 100, # 2.9TB 160GB, api
-		'db2057' => 500, # 3.3TB 160GB
+		'db2057' => 400, # 3.3TB 160GB
 	),
 	's4' => array(
 		'db2019' => 0,   # 2.9TB  96GB, master
@@ -119,7 +119,7 @@ $wgLBFactoryConf = array(
 		'db2044' => 50,  # 2.9TB 160GB, rc, log
 		'db2051' => 100, # 2.9TB 160GB, api
 		'db2058' => 200, # 3.3TB 160GB, dump (inactive), vslow
-		'db2065' => 500, # 3.3TB 160GB
+		'db2065' => 400, # 3.3TB 160GB
 	),
 	's5' => array(
 		'db2023' => 0,   # 2.9TB  96GB, master
@@ -127,23 +127,23 @@ $wgLBFactoryConf = array(
 		'db2045' => 400, # 2.9TB 160GB
 		'db2052' => 200, # 2.9TB 160GB, dump (inactive), vslow
 		'db2059' => 100, # 3.3TB 160GB, api
-		'db2066' => 500, # 3.3TB 160GB
+		'db2066' => 400, # 3.3TB 160GB
 	),
 	's6' => array(
 		'db2028' => 0,   # 2.9TB  96GB, master
 		'db2039' => 50,  # 2.9TB 160GB, rc, log
 		'db2046' => 400, # 2.9TB 160GB
-		'db2053' => 200, # 2.9TB 160GB, dump (inactive), vslow
+		'db2053' => 100, # 2.9TB 160GB, dump (inactive), vslow
 		'db2060' => 100, # 3.3TB 160GB, api
-		'db2067' => 500, # 3.3TB 160GB
+		'db2067' => 400, # 3.3TB 160GB
 	),
 	's7' => array(
 		'db2029' => 0,   # 2.9TB  96GB, master
 		'db2040' => 100, # 2.9TB 160GB, rc, log
 #		'db2047' => 400, # 2.9TB 160GB - crashed, needs reimaging T132011 - volans
-		'db2054' => 200, # 2.9TB 160GB, dump (inactive), vslow
+		'db2054' => 100, # 2.9TB 160GB, dump (inactive), vslow
 		'db2061' => 100, # 3.3TB 160GB, api
-		'db2068' => 500, # 3.3TB 160GB
+		'db2068' => 400, # 3.3TB 160GB
 	),
 	'silver' => array(
 		'silver' => 100,   # I have no idea if this is right
