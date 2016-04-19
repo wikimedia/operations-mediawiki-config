@@ -92,7 +92,7 @@ $wgLBFactoryConf = array(
 		'db1053' => 0,   # 2.8TB  96GB, vslow, dump
 		'db1051' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1055' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
-		'db1057' => 200, # 2.8TB  96GB
+#		'db1057' => 200, # 2.8TB  96GB
 		'db1065' => 100, # 2.8TB 160GB, api
 		'db1066' => 100, # 2.8TB 160GB, api
 		'db1072' => 450, # 2.8TB 160GB
@@ -100,7 +100,7 @@ $wgLBFactoryConf = array(
 	),
 	's2' => array(
 		'db1018' => 0,   # 1.4TB  64GB, master
-		'db1024' => 100, # 1.4TB  64GB
+#		'db1024' => 100, # 1.4TB  64GB
 		'db1021' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1036' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1054' => 0,   # 2.8TB  96GB, api
@@ -116,7 +116,7 @@ $wgLBFactoryConf = array(
 		'db1015' => 100, # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1035' => 500, # 1.4TB  64GB
 		'db1044' => 500, # 1.4TB  64GB
-		'db1075' => 50,  # 3.6TB 512GB, pooled with low weight
+#		'db1075' => 50,  # 3.6TB 512GB, pooled with low weight
 		'db1077' => 50,  # 3.6TB 512GB, pooled with low weight
 		'db1078' => 50,  # 3.6TB 512GB, pooled with low weight
 	),
@@ -126,7 +126,7 @@ $wgLBFactoryConf = array(
 		'db1019' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1056' => 100, # 2.8TB  96GB, api
 		'db1059' => 100, # 2.8TB  96GB, api
-		'db1064' => 500, # 2.8TB 160GB
+#		'db1064' => 500, # 2.8TB 160GB
 		'db1068' => 500, # 2.8TB 160GB
 	),
 	's5' => array(
@@ -134,7 +134,7 @@ $wgLBFactoryConf = array(
 		'db1049' => 0,   # 2.8TB  64GB, vslow, dump
 		'db1026' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1045' => 50,  # 1.4TB  64GB, api
-		'db1070' => 500, # 2.8TB 160GB
+#		'db1070' => 500, # 2.8TB 160GB
 		'db1071' => 500, # 2.8TB 160GB
 	),
 	's6' => array(
@@ -142,14 +142,14 @@ $wgLBFactoryConf = array(
 		'db1022' => 100, # 1.4TB  64GB, api
 		'db1030' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1037' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-		'db1050' => 300, # 2.8TB  64GB
+#		'db1050' => 300, # 2.8TB  64GB
 		'db1061' => 500, # 2.8TB 128GB
 	),
 	's7' => array(
 		'db1033' => 0,   # 1.4TB  64GB, master
 		'db1028' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1034' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-		'db1041' => 200, # 1.4TB  64GB
+#		'db1041' => 200, # 1.4TB  64GB
 		'db1039' => 300, # 1.4TB  64GB
 		'db1062' => 500, # 2.8TB 128GB
 	),
@@ -529,13 +529,13 @@ $wgLBFactoryConf = array(
 	'cluster24' => array(
 		'10.64.32.184' => 1, # es1015, master
 		'10.64.0.6'    => 3, # es1011
-		'10.64.16.186' => 3, # es1013
+#		'10.64.16.186' => 3, # es1013
 	),
 	# es3
 	'cluster25' => array(
 		'10.64.48.116' => 1, # es1019, master
 		'10.64.16.187' => 3, # es1014
-		'10.64.48.114' => 3, # es1017
+#		'10.64.48.114' => 3, # es1017
 	),
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => array(
