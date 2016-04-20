@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_836f41c0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 16832,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2016-04-20T16:49:58Z",
+      "side": 1,
+      "message": "This is not OK. The agreement was that this flag could be enabled *temporarily* and only on Wikivoyages.",
+      "revId": "5d4942d829f5f0f4167a3a425ac93efb1959ce21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
