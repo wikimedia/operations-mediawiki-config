@@ -16,6 +16,24 @@
       "revId": "5d4942d829f5f0f4167a3a425ac93efb1959ce21",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_035b3127",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 16832,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-04-20T16:51:14Z",
+      "side": 1,
+      "message": "According Yurik, it\u0027s needed on mediawiki.org because it\u0027s the place hosting the documentation, and this documentation uses or could use the feature.",
+      "parentUuid": "ae564743_836f41c0",
+      "revId": "5d4942d829f5f0f4167a3a425ac93efb1959ce21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
