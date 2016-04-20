@@ -92,40 +92,40 @@ $wgLBFactoryConf = array(
 		'db2034' => 50,  # 2.9TB 160GB, rc, log
 		'db2042' => 50,  # 2.9TB 160GB, rc, log
 		'db2048' => 400, # 2.9TB 160GB
-		'db2055' => 100, # 3.3TB 160GB, dump (inactive), vslow
-		'db2062' => 50,  # 3.3TB 160GB, api
-		'db2069' => 50,  # 3.3TB 160GB, api
+		'db2055' => 50,  # 3.3TB 160GB, dump (inactive), vslow
+		'db2062' => 100, # 3.3TB 160GB, api
+		'db2069' => 100, # 3.3TB 160GB, api
 		'db2070' => 400, # 3.3TB 160GB
 	),
 	's2' => array(
 		'db2017' => 0,   # 2.9TB  96GB, master
 		'db2035' => 50,  # 2.9TB 160GB, rc, log
-		'db2041' => 50,  # 2.9TB 160GB, api
+		'db2041' => 100, # 2.9TB 160GB, api
 		'db2049' => 400, # 2.9TB 160GB,
-		'db2056' => 100, # 3.3TB 160GB, dump (inactive), vslow
-		'db2063' => 50,  # 3.3TB 160GB, api
+		'db2056' => 50,  # 3.3TB 160GB, dump (inactive), vslow
+		'db2063' => 100, # 3.3TB 160GB, api
 		'db2064' => 400, # 3.3TB 160GB
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db2018' => 0,   # 2.9TB  96GB, master
 		'db2036' => 50,  # 2.9TB 160GB, rc, log
-		'db2043' => 100, # 2.9TB 160GB, dump (inactive), vslow
-		'db2050' => 100, # 2.9TB 160GB, api
+		'db2043' => 50,  # 2.9TB 160GB, dump (inactive), vslow
+		'db2050' => 150, # 2.9TB 160GB, api
 		'db2057' => 400, # 3.3TB 160GB
 	),
 	's4' => array(
 		'db2019' => 0,   # 2.9TB  96GB, master
 		'db2037' => 50,  # 2.9TB 160GB, rc, log
 		'db2044' => 50,  # 2.9TB 160GB, rc, log
-		'db2051' => 100, # 2.9TB 160GB, api
-		'db2058' => 200, # 3.3TB 160GB, dump (inactive), vslow
+		'db2051' => 200, # 2.9TB 160GB, api
+		'db2058' => 50,  # 3.3TB 160GB, dump (inactive), vslow
 		'db2065' => 400, # 3.3TB 160GB
 	),
 	's5' => array(
 		'db2023' => 0,   # 2.9TB  96GB, master
 		'db2038' => 50,  # 2.9TB 160GB, rc, log
 		'db2045' => 400, # 2.9TB 160GB
-		'db2052' => 200, # 2.9TB 160GB, dump (inactive), vslow
+		'db2052' => 50,  # 2.9TB 160GB, dump (inactive), vslow
 		'db2059' => 100, # 3.3TB 160GB, api
 		'db2066' => 400, # 3.3TB 160GB
 	),
@@ -139,11 +139,11 @@ $wgLBFactoryConf = array(
 	),
 	's7' => array(
 		'db2029' => 0,   # 2.9TB  96GB, master
-		'db2040' => 100, # 2.9TB 160GB, rc, log
+		'db2040' => 200, # 2.9TB 160GB, rc, log
 #		'db2047' => 400, # 2.9TB 160GB - crashed, needs reimaging T132011 - volans
-		'db2054' => 100, # 2.9TB 160GB, dump (inactive), vslow
-		'db2061' => 100, # 3.3TB 160GB, api
-		'db2068' => 400, # 3.3TB 160GB
+		'db2054' => 200, # 2.9TB 160GB, dump (inactive), vslow
+		'db2061' => 200, # 3.3TB 160GB, api
+		'db2068' => 300, # 3.3TB 160GB
 	),
 	'silver' => array(
 		'silver' => 100,   # I have no idea if this is right
@@ -541,7 +541,7 @@ $wgLBFactoryConf = array(
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => array(
 		'10.192.0.12' => 20, # db2009, master
-#		'10.192.0.11' => 1,  # db2008, just in case
+		'10.192.0.11' => 10, # db2008, just in case
 	),
 ),
 
