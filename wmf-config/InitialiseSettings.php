@@ -17229,6 +17229,7 @@ $wgConf->settings = [
 	'mkwiki' => true,
 ],
 
+// Deprecated feature. This MUST NOT be enabled on any additional wikis.
 'wgKartographerWikivoyageMode' => [
 	'default' => false,
 	'mediawikiwiki' => true,
