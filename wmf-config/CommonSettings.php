@@ -2615,7 +2615,7 @@ if ( $wmgUseEcho ) {
 	}
 
 	// Temporarily disable thank-you-edit notifications (T128249)
-	$wgEchoDefaultNotificationTypes['thank-you-edit']['web'] = false;
+	$wgNotifyTypeAvailabilityByNotificationType['thank-you-edit']['web'] = false;
 
 	// Default user options: subscriptions
 	foreach ( $wmgEchoDefaultUserSubscriptions as $where => $notifications ) {
