@@ -16839,9 +16839,10 @@ $wgConf->settings = array(
 	'plwikimedia' => true, // T132510
 ),
 
+// Deprecated feature. This MUST NOT be enabled on any additional wikis.
 'wgKartographerWikivoyageMode' => array(
 	'default' => false,
-	'mediawikiwiki' => true,
+	'mediawiki' => false,
 	'wikivoyage' => true,
 ),
 
