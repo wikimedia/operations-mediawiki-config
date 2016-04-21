@@ -12139,6 +12139,7 @@ $wgConf->settings = array(
 		'museumcommons.wikimedia.nl',       // Museum Catharijneconvent - T131841
 		'images.unsplash.com',              // Unsplash - T132701
 		'*.natmus.dk',                      // Natmus.dk - T132748
+		'*.asc-test.nl',                    // African Studies Centre - T133286
 	),
 ),
 
