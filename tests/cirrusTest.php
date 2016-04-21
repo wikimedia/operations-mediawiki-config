@@ -10,8 +10,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
-		# usually, we would expect the local cluster (unittest), but we are at the moment testing the switch to codfw
-		$this->assertEquals( 'codfw', $config['wgCirrusSearchDefaultCluster'] );
+		$this->assertEquals( 'unittest', $config['wgCirrusSearchDefaultCluster'] );
 		$this->assertCount( 3, $config['wgCirrusSearchClusters'] );
 
 		// testwiki writes to eqiad and codfw
