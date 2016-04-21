@@ -70,6 +70,24 @@
       "revId": "5d4942d829f5f0f4167a3a425ac93efb1959ce21",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_cf3958cd",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 16832,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2016-04-21T00:12:10Z",
+      "side": 1,
+      "message": "james, this is not accurate: 1) we never said anything about temporary - I am totally ok to remove this capability if we migrate wikivoyage to a different way for their usecase, but it will be on until there is such a way. At this point no reasonable proposal has been put forth. 2) Interactive team and Ed agreed that this feature is only for Wikivoyage, not for Wikipedia, and at this point I am ok with it even though most likely the community will want it - but this is to be fought over later. For now, this will not be turned on for WP. Yet, we need to be able to test it on testwiki, and we need to document it and demo it on mediawiki.org (the only site we use for documentation), and hence it should remain on at mw.org.",
+      "parentUuid": "ae564743_03fcd1b0",
+      "revId": "5d4942d829f5f0f4167a3a425ac93efb1959ce21",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
