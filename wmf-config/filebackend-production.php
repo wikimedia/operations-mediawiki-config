@@ -96,7 +96,7 @@ $wgFileBackends[] = array(
 		array( 'template' => 'local-swift-eqiad', 'isMultiMaster' => true ),
 		array( 'template' => 'local-swift-codfw' )
 	),
-	'replication' => 'sync',
+	'replication' => 'async',
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 );
 $wgFileBackends[] = array(
@@ -109,7 +109,7 @@ $wgFileBackends[] = array(
 		array( 'template' => 'shared-swift-eqiad', 'isMultiMaster' => true ),
 		array( 'template' => 'shared-swift-codfw' ),
 	),
-	'replication' => 'sync',
+	'replication' => 'async',
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 );
 $wgFileBackends[] = array(
@@ -122,7 +122,7 @@ $wgFileBackends[] = array(
 		array( 'template' => 'global-swift-eqiad', 'isMultiMaster' => true ),
 		array( 'template' => 'global-swift-codfw' ),
 	),
-	'replication' => 'sync',
+	'replication' => 'async',
 	'syncChecks'  => ( 1 | 4 ) // (size & sha1)
 );
 /* end multiwrite backend config */
