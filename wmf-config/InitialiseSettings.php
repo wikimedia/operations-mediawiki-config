@@ -15419,14 +15419,6 @@ $wgConf->settings = array(
 'wmgEchoShowFooterNotice' => array(
 	'default' => false,
 	'testwiki' => true,
-	'frwiki' => true, // All French wikis: T131893
-	'frwikibooks' => true,
-	'frwikinews' => true,
-	'frwikiquote' => true,
-	'frwikisource' => true,
-	'frwikiversity' => true,
-	'frwikivoyage' => true,
-	'frwiktionary' => true,
 ),
 'wmgEchoFooterNoticeURL' => array(
 	'default' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3',
