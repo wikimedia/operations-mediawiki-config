@@ -4606,6 +4606,7 @@ $wgConf->settings = array(
 		'XMP' => 'warning', // T89532
 		'xff' => array( 'logstash' => false ),
 		'zero' => array( 'logstash' => false ), // zero-rated debug log
+		'MessageCacheError' => 'debug',
 	),
 
 	'+private' => array(
