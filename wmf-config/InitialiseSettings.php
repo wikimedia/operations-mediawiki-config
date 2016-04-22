@@ -4892,6 +4892,10 @@ $wgConf->settings = [
 		100 => 'Portal',
 		101 => 'Portal_Diskussion'
 	],
+	'diqwiki' => [
+		100 => 'Portal', // T133702
+		101 => 'Portal_vaten'
+	],
 	'dvwiki' => [
 		NS_PROJECT_TALK => 'ވިކިޕީޑިއާ_ޚިޔާލު', // T50075
 		100 => 'ނެރު',
