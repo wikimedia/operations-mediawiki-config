@@ -4915,6 +4915,10 @@ $wgConf->settings = array(
 		100 => 'Portal',
 		101 => 'Portal_Diskussion'
 	),
+	'diqwiki' => array(
+		100 => 'Portal', // https://translatewiki.net/wiki/Thread:Translating_talk:MediaWiki/Namespace_translation_for_diqwiki
+		101 => 'Portal_vaten'
+	),
 	'dvwiki' => array(
 		NS_PROJECT_TALK => 'ވިކިޕީޑިއާ_ޚިޔާލު', // T50075
 		100 => 'ނެރު',
