@@ -11126,6 +11126,7 @@ $wgConf->settings = [
 	'srwiki' => true,
 	'srwiktionary' => true, // T70346
 	'strategywiki' => true,
+	'tewiki' => true,
 	'viwiktionary' => true, // T10886
 ],
 
