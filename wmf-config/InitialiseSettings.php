@@ -6189,8 +6189,12 @@ $wgConf->settings = [
 		// Skip 102 and 103, reserved for wikiproject
 		104 => 'מדף', # bookshelf
 		105 => 'שיחת_מדף', # bookshelf talk
-	],
-	'hywikibooks' => [ // T55162
+	),
+	'hiwikibooks' => array(
+		106 => 'विषय', // Subject, T133440
+		107 => 'विषय_चर्चा', // Subject talk, T133440
+	),
+	'hywikibooks' => array( // T55162
 		102 => 'Եփութուխ', // cookbook
 		103 => 'Եփութուխի_քննարկում', // cookbook talk
 		110 => 'Վիքիփոքրիկ', // wikijunior
