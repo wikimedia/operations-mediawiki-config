@@ -1648,6 +1648,10 @@ if ( $wmgUseCentralNotice ) {
 		'//en.wikiversity.org/wiki/Special:HideBanners',
 		'//www.mediawiki.org/wiki/Special:HideBanners',
 	);
+
+	// T55443
+	// Special:GlobalAllocation OOMs. Disabled until fixed
+	unset( $wgSpecialPages[ 'GlobalAllocation' ] );
 }
 
 // Load our site-specific l10n extensions
