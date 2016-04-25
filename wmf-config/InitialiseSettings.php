@@ -9515,8 +9515,9 @@ $wgConf->settings = array(
 		'sysop' => array( 'autoeditor' ),
 	),
 	'+urwiki' => array(
-		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker' ), // T44737 and T47643
-		'sysop' => array( 'confirmed', 'abusefilter', 'rollbacker', 'interface-editor' ), // T44737, T47643 and T120348
+		// T44737, T47643, T120348 and T133564
+		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker', 'interface-editor' ),
+		'sysop' => array( 'confirmed', 'abusefilter', 'rollbacker' ),
 	),
 	'+viwiki' => array(
 		'sysop' => array(
@@ -10214,8 +10215,9 @@ $wgConf->settings = array(
 		'sysop' => array( 'autoeditor' ),
 	),
 	'+urwiki' => array(
-		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker' ), // T44737 and T47643
-		'sysop' => array( 'confirmed', 'interface-editor' ), // T44737 and T120348
+		// T44737, T47643, T120348 and T133564
+		'bureaucrat' => array( 'import', 'confirmed', 'abusefilter', 'rollbacker', 'interface-editor' ),
+		'sysop' => array( 'confirmed' ),
 	),
 	'+viwiki' => array(
 		'sysop' => array(
