@@ -15892,6 +15892,12 @@ $wgConf->settings = [
 	'wikidatawiki' => 500,
 ],
 
+'wmgWikibaseAllowDataAccessInUserLanguage' => [
+	'default' => false,
+	'commonswiki' => true, // T98307
+	'testwikidatawiki' => true,
+],
+
 'wmgUseWikibaseRepo' => [
 	'default' => false,
 	'wikidata' => true,
