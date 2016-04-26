@@ -652,5 +652,11 @@ function wmfLabsSettings() {
 		'wmgUseOATHAuth' => [
 			'default' => true,
 		],
+
+		// Ensure ?action=credits isn't break and allow to work
+		// to cache this information. See T130820.
+		'wgMaxCredits' => [
+			'default' => -1,
+		],
 	];
 } # wmflLabsSettings()
