@@ -26,10 +26,10 @@ function wmfLabsOverrideSettings() {
 	// Add a wikitag of 'beta' that can be used to merge beta specific and
 	// default settings by using `'+beta' => array(...),`
 	$wgConf->siteParamsCallback = function( $conf, $wiki ) {
-		return array(
-			'params' => array( 'variant' => 'beta' ),
-			'tags' => array( 'beta' ),
-		);
+		return [
+			'params' => [ 'variant' => 'beta' ],
+			'tags' => [ 'beta' ],
+		];
 	};
 
 	foreach ( $betaSettings as $key => $value ) {
@@ -52,17 +52,17 @@ function wmfLabsOverrideSettings() {
  */
 function wmfLabsSettings() {
 	global $wmfUdp2logDest;
-	return array(
-		'wgParserCacheType' => array(
+	return [
+		'wgParserCacheType' => [
 			'default' => CACHE_MEMCACHED,
-		),
+		],
 
-		'wgSitename' => array(
+		'wgSitename' => [
 			'deploymentwiki' => 'Deployment',
 			'wikivoyage'    => 'Wikivoyage',
-		),
+		],
 
-		'-wgServer' => array(
+		'-wgServer' => [
 			'wiktionary'	=> 'http://$lang.wiktionary.$variant.wmflabs.org',
 			'wikipedia'     => 'http://$lang.wikipedia.$variant.wmflabs.org',
 			'wikiversity'	=> 'http://$lang.wikiversity.$variant.wmflabs.org',
@@ -80,9 +80,9 @@ function wmfLabsSettings() {
 			'zerowiki'      => 'http://zero.wikimedia.$variant.wmflabs.org',
 			'wikidatawiki'  => 'http://wikidata.$variant.wmflabs.org',
 			'en_rtlwiki' => 'http://en-rtl.wikipedia.$variant.wmflabs.org',
-		),
+		],
 
-		'-wgCanonicalServer' => array(
+		'-wgCanonicalServer' => [
 			'wikipedia'     => 'http://$lang.wikipedia.$variant.wmflabs.org',
 			'wikibooks'     => 'http://$lang.wikibooks.$variant.wmflabs.org',
 			'wikiquote'	=> 'http://$lang.wikiquote.$variant.wmflabs.org',
@@ -100,87 +100,87 @@ function wmfLabsSettings() {
 			'zerowiki'      => 'http://zero.wikimedia.$variant.wmflabs.org',
 			'wikidatawiki'  => 'http://wikidata.$variant.wmflabs.org',
 			'en_rtlwiki' => 'http://en-rtl.wikipedia.$variant.wmflabs.org',
-		),
+		],
 
-		'wmgUsabilityPrefSwitch' => array(
+		'wmgUsabilityPrefSwitch' => [
 			'default' => ''
-		),
+		],
 
-		'-wgUploadDirectory' => array(
+		'-wgUploadDirectory' => [
 			'default'      => '/data/project/upload7/$site/$lang',
 			'private'      => '/data/project/upload7/private/$lang',
-		),
+		],
 
 		/* 'wmgUseOnlineStatusBar' => array( */
 		/* 	'default' => false, */
 		/* ), */
 
-		'-wgUploadPath' => array(
+		'-wgUploadPath' => [
 			'default' => 'http://upload.$variant.wmflabs.org/$site/$lang',
 			'private' => '/w/img_auth.php',
 		//	'wikimania2005wiki' => 'http://upload..org/wikipedia/wikimania', // back compat
 			'commonswiki' => 'http://upload.$variant.wmflabs.org/wikipedia/commons',
 			'metawiki' => 'http://upload.$variant.wmflabs.org/wikipedia/meta',
 			'testwiki' => 'http://upload.$variant.wmflabs.org/wikipedia/test',
-		),
+		],
 
-		'-wgThumbnailBuckets' => array(
-			'default' => array( 256, 512, 1024, 2048, 4096 ),
-		),
+		'-wgThumbnailBuckets' => [
+			'default' => [ 256, 512, 1024, 2048, 4096 ],
+		],
 
-		'-wgThumbnailMinimumBucketDistance' => array(
+		'-wgThumbnailMinimumBucketDistance' => [
 			'default' => 32,
-		),
+		],
 
-		'-wmgMathPath' => array(
+		'-wmgMathPath' => [
 			'default' => 'http://upload.$variant.wmflabs.org/math',
-		),
+		],
 
-		'wmgNoticeProject' => array(
+		'wmgNoticeProject' => [
 			'deploymentwiki' => 'meta',
-		),
+		],
 
-		'-wgDebugLogFile' => array(
+		'-wgDebugLogFile' => [
 			'default' => "udp://{$wmfUdp2logDest}/wfDebug",
-		),
+		],
 
-		'-wmgDefaultMonologHandler' => array(
+		'-wmgDefaultMonologHandler' => [
 			'default' => 'wgDebugLogFile',
-		),
+		],
 
 		// Additional log channels for beta cluster
-		'wmgMonologChannels' => array(
-			'+beta' => array(
+		'wmgMonologChannels' => [
+			'+beta' => [
 				'CentralAuthVerbose' => 'debug',
 				'dnsblacklist' => 'debug',
 				'EventBus' => 'debug',
 				'squid' => 'debug',
-			),
-		),
+			],
+		],
 
-		'wmgApplyGlobalBlocks' => array( // T123936
+		'wmgApplyGlobalBlocks' => [ // T123936
 			'default' => true,
 			'metawiki' => true,
 			'deploymentwiki' => false
-		),
+		],
 
 		//'-wgDebugLogGroups' => array(),
-		'-wgJobLogFile' => array(),
+		'-wgJobLogFile' => [],
 
 		// No IRC feed T128006
-		'-wmgUseRC2UDP' => array(
+		'-wmgUseRC2UDP' => [
 			'default' => false,
-		),
+		],
 		// T62013, T58758
-		'-wmgRC2UDPPrefix' => array(
+		'-wmgRC2UDPPrefix' => [
 			'default' => false,
-		),
+		],
 
-		'wmgUseWebFonts' => array(
+		'wmgUseWebFonts' => [
 			'mywiki' => true,
-		),
+		],
 
-		'-wgLogo' => array(
+		'-wgLogo' => [
 			'default' => '/static/images/project-logos/betawiki.png',
 			'commonswiki' => '/static/images/project-logos/betacommons.png',
 			'wikibooks' => '/static/images/project-logos/betacommons.png',
@@ -192,465 +192,465 @@ function wmfLabsSettings() {
 			'wikiversity' => '/static/images/project-logos/betawikiversity.png',
 			'wikivoyage' => '/static/images/project-logos/betacommons.png',
 			'wiktionary' => '/static/images/project-logos/betacommons.png',
-		),
+		],
 
-		'wgFavicon' => array(
+		'wgFavicon' => [
 			'dewiki' => 'http://upload.wikimedia.org/wikipedia/commons/1/14/Favicon-beta-wikipedia.png',
-		),
+		],
 
-		'wgVectorResponsive' => array(
+		'wgVectorResponsive' => [
 			'default' => true,
-		),
+		],
 
 		// Editor Engagement stuff
-		'-wmfUseArticleCreationWorkflow' => array(
+		'-wmfUseArticleCreationWorkflow' => [
 			'default' => false,
-		),
-		'wmgUseEcho' => array(
+		],
+		'wmgUseEcho' => [
 			'enwiki' => true,
 			'en_rtlwiki' => true,
-		),
+		],
 
-		'-wmgUsePoolCounter' => array(
+		'-wmgUsePoolCounter' => [
 			'default' => false, // T38891
-		),
-		'-wmgEnableCaptcha' => array(
+		],
+		'-wmgEnableCaptcha' => [
 			'default' => true,
-		),
-		'-wmgEchoCluster' => array(
+		],
+		'-wmgEchoCluster' => [
 			'default' => false,
-		),
-		'-wmgEchoUseCrossWikiBetaFeature' => array(
+		],
+		'-wmgEchoUseCrossWikiBetaFeature' => [
 			'default' => false,
-		),
-		'-wmgEchoShowFooterNotice' => array(
+		],
+		'-wmgEchoShowFooterNotice' => [
 			'default' => true
-		),
-		'-wmgEchoFooterNoticeURL' => array(
+		],
+		'-wmgEchoFooterNoticeURL' => [
 			'default' => 'http://example.org',
-		),
+		],
 		# FIXME: make that settings to be applied
-		'-wgShowExceptionDetails' => array(
+		'-wgShowExceptionDetails' => [
 			'default' => true,
-		),
-		'-wgUseContributionTracking' => array(
+		],
+		'-wgUseContributionTracking' => [
 			'default' => false,
-		),
-		'-wmgUseContributionReporting' => array(
+		],
+		'-wmgUseContributionReporting' => [
 			'default' => false,
-		),
+		],
 
 		# To help fight spam, makes rules maintained on deploymentwiki
 		# to be available on all beta wikis.
-		'-wmgAbuseFilterCentralDB' => array(
+		'-wmgAbuseFilterCentralDB' => [
 			'default' => 'deploymentwiki',
-		),
-		'-wmgUseGlobalAbuseFilters' => array(
+		],
+		'-wmgUseGlobalAbuseFilters' => [
 			'default' => true,
-		),
+		],
 
-		'wgRCWatchCategoryMembership' => array(
+		'wgRCWatchCategoryMembership' => [
 			'default' => true,
-		),
+		],
 
 		// T39852
-		'wmgUseWikimediaShopLink' => array(
+		'wmgUseWikimediaShopLink' => [
 			'default'    => false,
 			'enwiki'     => true,
 			'simplewiki' => true,
-		),
+		],
 
-		'wmgUseKartographer' => array(
+		'wmgUseKartographer' => [
 			'default'	=> true,
-		),
+		],
 
 		//enable TimedMediaHandler and MwEmbedSupport for testing on commons and enwiki
-		'wmgUseMwEmbedSupport' => array(
+		'wmgUseMwEmbedSupport' => [
 			'commonswiki'	=> true,
 			'enwiki'	=> true,
-		),
+		],
 		// NOTE: TMH *requires* MwEmbedSupport to function
-		'wmgUseTimedMediaHandler' => array(
+		'wmgUseTimedMediaHandler' => [
 			'commonswiki'	=> true,
 			'enwiki'	=> true,
-		),
-		'wmgMobileUrlTemplate' => array(
+		],
+		'wmgMobileUrlTemplate' => [
 			'default' => '%h0.m.%h1.%h2.%h3.%h4',
 			'wikidatawiki' => 'm.%h0.%h1.%h2.%h3', // T87440
-		),
+		],
 
-		'wmgMFMobileFormatterHeadings' => array(
-			'default' => array( 'h2', 'h3', 'h4', 'h5', 'h6' ), // T110436, T110837
-		),
+		'wmgMFMobileFormatterHeadings' => [
+			'default' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ], // T110436, T110837
+		],
 
-		'wgMFRemovableClasses' => array(
-			'default' => array(
-				'base' => array( '.navbox' ),
-				'beta' => array( '.navbox' ),
-				'HTML' => array(),
-			),
-		),
+		'wgMFRemovableClasses' => [
+			'default' => [
+				'base' => [ '.navbox' ],
+				'beta' => [ '.navbox' ],
+				'HTML' => [],
+			],
+		],
 
-		'wgMFAllowNonJavaScriptEditing' => array(
+		'wgMFAllowNonJavaScriptEditing' => [
 			'default' => true,
-		),
+		],
 
-		'wmgMFPhotoUploadEndpoint' => array(
+		'wmgMFPhotoUploadEndpoint' => [
 			'default' => 'http://commons.wikimedia.$variant.wmflabs.org/w/api.php',
-		),
-		'wmgMFUseCentralAuthToken' => array(
+		],
+		'wmgMFUseCentralAuthToken' => [
 			'default' => true,
-		),
-		'wmgMFEnableBetaDiff' => array(
+		],
+		'wmgMFEnableBetaDiff' => [
 			'default' => true,
-		),
-		'wmgMFSpecialCaseMainPage' => array(
+		],
+		'wmgMFSpecialCaseMainPage' => [
 			'default' => true,
 			'enwiki' => false,
-		),
-		'wgMFExperiments' => array(
-			'default' => array(
-			),
-		),
-		'wgMFSchemaMobileWebLanguageSwitcherSampleRate' => array(
-			'default' => array(
+		],
+		'wgMFExperiments' => [
+			'default' => [
+			],
+		],
+		'wgMFSchemaMobileWebLanguageSwitcherSampleRate' => [
+			'default' => [
 				'beta' => 1,
 				'stable' => 1
-			)
-		),
+			]
+		],
 
 		// T97704
-		'wmgGatherAutohideFlagLimit' => array(
+		'wmgGatherAutohideFlagLimit' => [
 			'default' => 3,
-		),
+		],
 
-		'wmgEnableGeoData' => array(
+		'wmgEnableGeoData' => [
 			'wikidatawiki' => true,
-		),
+		],
 
-		'wmgGeoDataDebug' => array(
+		'wmgGeoDataDebug' => [
 			'default' => true,
-		),
+		],
 
-		'wmgULSPosition' => array(
+		'wmgULSPosition' => [
 			# Beta-specific
 			'deploymentwiki' => 'personal',
-		),
+		],
 
 		// (T41653) The plan is to enable it for testing on labs first, so add
 		// the config hook to be able to do that.
-		'wmgUseCodeEditorForCore' => array(
+		'wmgUseCodeEditorForCore' => [
 			'default' => true,
-		),
+		],
 
-		'wmgUseCommonsMetadata' => array(
+		'wmgUseCommonsMetadata' => [
 			'default' => true,
-		),
-		'wmgCommonsMetadataForceRecalculate' => array(
+		],
+		'wmgCommonsMetadataForceRecalculate' => [
 			'default' => true,
-		),
+		],
 
-		'wmgUseGWToolset' => array(
+		'wmgUseGWToolset' => [
 			'default' => false,
 			'commonswiki' => true,
-		),
+		],
 
 		// Don't use an http/https proxy
-		'-wgCopyUploadProxy' => array(
+		'-wgCopyUploadProxy' => [
 			'default' => false,
-		),
+		],
 
 		// ----------- BetaFeatures start ----------
-		'wgUseBetaFeatures' => array(
+		'wgUseBetaFeatures' => [
 			'default' => true,
-		),
+		],
 
 		// Enable all Beta Features in Beta Labs, even if not in production whitelist
-		'wgBetaFeaturesWhitelist' => array(
+		'wgBetaFeaturesWhitelist' => [
 			'default' => false,
-		),
+		],
 
-		'wmgUseMultimediaViewer' => array(
+		'wmgUseMultimediaViewer' => [
 			'default' => true,
-		),
+		],
 
-		'wmgMediaViewerNetworkPerformanceSamplingFactor' => array(
+		'wmgMediaViewerNetworkPerformanceSamplingFactor' => [
 			'default' => 1,
-		),
+		],
 
-		'wmgUseImageMetrics' => array(
+		'wmgUseImageMetrics' => [
 			'default' => true,
-		),
+		],
 
-		'wmgImageMetricsSamplingFactor' => array(
+		'wmgImageMetricsSamplingFactor' => [
 			'default' => 1,
-		),
+		],
 
-		'wmgImageMetricsCorsSamplingFactor' => array(
+		'wmgImageMetricsCorsSamplingFactor' => [
 			'default' => 1,
-		),
+		],
 
-		'wmgUseRestbaseVRS' => array(
+		'wmgUseRestbaseVRS' => [
 			'default' => true,
-		),
-		'wmgVisualEditorUseSingleEditTab' => array(
+		],
+		'wmgVisualEditorUseSingleEditTab' => [
 			'enwiki' => true,
-		),
-		'wmgVisualEditorAccessRESTbaseDirectly' => array(
+		],
+		'wmgVisualEditorAccessRESTbaseDirectly' => [
 			'default' => true,
-		),
-		'wmgVisualEditorTransitionDefault' => array(
+		],
+		'wmgVisualEditorTransitionDefault' => [
 			'default' => false,
-		),
+		],
 		// ------------ BetaFeatures end -----------
 
-		'wmgUseRSSExtension' => array(
+		'wmgUseRSSExtension' => [
 			'dewiki' => true,
-		),
+		],
 
-		'wmgRSSUrlWhitelist' => array(
-			'dewiki' => array( 'http://de.planet.wikimedia.org/atom.xml' ),
-		),
+		'wmgRSSUrlWhitelist' => [
+			'dewiki' => [ 'http://de.planet.wikimedia.org/atom.xml' ],
+		],
 
-		'wmgUseCampaigns' => array(
+		'wmgUseCampaigns' => [
 			'default' => true,
-		),
+		],
 
-		'wmgUseEventLogging' => array(
+		'wmgUseEventLogging' => [
 			'default' => true,
-		),
+		],
 
-		'wmgContentTranslationCluster' => array(
+		'wmgContentTranslationCluster' => [
 			'default' => false,
-		),
+		],
 
-		'wmgContentTranslationCampaigns' => array(
-			'default' => array( 'newarticle' ),
-		),
+		'wmgContentTranslationCampaigns' => [
+			'default' => [ 'newarticle' ],
+		],
 
-		'wmgContentTranslationEnableSuggestions' => array(
+		'wmgContentTranslationEnableSuggestions' => [
 			'default' => true,
-		),
+		],
 
-		'wmgUseNavigationTiming' => array(
+		'wmgUseNavigationTiming' => [
 			'default' => true,
-		),
+		],
 
-		'wgSecureLogin' => array(
+		'wgSecureLogin' => [
 			// Setting false throughout Labs for now due to untrusted SSL certificate
 			// T50501
 			'default' => false,
 			'loginwiki' => false,
-		),
+		],
 
-		'wgSearchSuggestCacheExpiry' => array(
+		'wgSearchSuggestCacheExpiry' => [
 			'default' => 300,
-		),
+		],
 
-		'wmgUseFlow' => array(
+		'wmgUseFlow' => [
 			'enwiki' => true,
 			'en_rtlwiki' => true,
-		),
+		],
 		# No separate Flow DB or cluster (yet) for labs.
-		'-wmgFlowDefaultWikiDb' => array(
+		'-wmgFlowDefaultWikiDb' => [
 			'default' => false,
-		),
-		'-wmgFlowCluster' => array(
+		],
+		'-wmgFlowCluster' => [
 			'default' => false,
-		),
-		'wmgFlowEnableOptInBetaFeature' => array(
+		],
+		'wmgFlowEnableOptInBetaFeature' => [
 			'enwiki' => true,
-		),
-		'wmgUseGather' => array(
+		],
+		'wmgUseGather' => [
 			'default' => true,
-		),
-		'wmgUseWPB' => array(
+		],
+		'wmgUseWPB' => [
 			'default' => false,
 			'enwiki' => true,
-		),
-		'wgWPBBannerProperty' => array(
+		],
+		'wgWPBBannerProperty' => [
 			'default' => 'P751',
-		),
-		'wmgUseGuidedTour' => array(
+		],
+		'wmgUseGuidedTour' => [
 			'wikidatawiki' => true,
-		),
-		'wmgUseRelatedArticles' => array(
+		],
+		'wmgUseRelatedArticles' => [
 			'default' => true,
-		),
-		'wmgRelatedArticlesShowInFooter' => array(
+		],
+		'wmgRelatedArticlesShowInFooter' => [
 			'default' => true,
-		),
+		],
 		// Enable anonymous editor acquisition experiment across labs
-		'wmgGettingStartedRunTest' => array(
+		'wmgGettingStartedRunTest' => [
 			'default' => true,
-		),
-		'+wmgExtraLanguageNames' => array(
-			'default' => array(),
-			'en_rtlwiki' => array( 'en-rtl' => 'English (rtl)' ),
-		),
-		'wmgUseContentTranslation' => array(
+		],
+		'+wmgExtraLanguageNames' => [
+			'default' => [],
+			'en_rtlwiki' => [ 'en-rtl' => 'English (rtl)' ],
+		],
+		'wmgUseContentTranslation' => [
 			'default' => false,
 			'wikipedia' => true,
-		),
+		],
 
-		'wmgUsePetition' => array(
+		'wmgUsePetition' => [
 			'default' => false,
 			'metawiki' => true,
-		),
+		],
 
-		'wmgUseQuickSurveys' => array(
+		'wmgUseQuickSurveys' => [
 			'default' => true,
-		),
+		],
 
-		'wmgUseSentry' => array(
+		'wmgUseSentry' => [
 			'default' => true,
-		),
-		'wmgSentryDsn' => array(
+		],
+		'wmgSentryDsn' => [
 			'default' => 'http://c357be0613e24340a96aeaa28dde08ad@sentry-beta.wmflabs.org/4',
-		),
+		],
 
-		'wmgUseEventBus' => array(
+		'wmgUseEventBus' => [
 			'default' => true,
-		),
+		],
 
 		// Thumbnail chaining
 
-		'wgThumbnailBuckets' => array(
-			'default' => array( 2880 ),
-		),
+		'wgThumbnailBuckets' => [
+			'default' => [ 2880 ],
+		],
 
-		'wgThumbnailMinimumBucketDistance' => array(
+		'wgThumbnailMinimumBucketDistance' => [
 			'default' => 100,
-		),
+		],
 
 		// Thumbnail prerendering at upload time
-		'wgUploadThumbnailRenderMap' => array(
-			'default' => array( 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ),
-		),
+		'wgUploadThumbnailRenderMap' => [
+			'default' => [ 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ],
+		],
 
-		'wgUploadThumbnailRenderMethod' => array(
+		'wgUploadThumbnailRenderMethod' => [
 			'default' => 'http',
-		),
+		],
 
-		'wgUploadThumbnailRenderHttpCustomHost' => array(
+		'wgUploadThumbnailRenderHttpCustomHost' => [
 			'default' => 'upload.beta.wmflabs.org',
-		),
+		],
 
-		'wgUploadThumbnailRenderHttpCustomDomain' => array(
+		'wgUploadThumbnailRenderHttpCustomDomain' => [
 			'default' => 'deployment-cache-upload04.eqiad.wmflabs',
-		),
+		],
 
-		'wmgUseApiFeatureUsage' => array(
+		'wmgUseApiFeatureUsage' => [
 			'default' => true,
-		),
+		],
 
-		'wmgUseBounceHandler' => array(
+		'wmgUseBounceHandler' => [
 			'default' => true,
-		),
+		],
 
-		'-wmgScorePath' => array(
+		'-wmgScorePath' => [
 			'default' => "//upload.beta.wmflabs.org/score",
-		),
+		],
 
-		'wgRateLimitsExcludedIPs' => array(
-			'default' => array(
+		'wgRateLimitsExcludedIPs' => [
+			'default' => [
 				'198.73.209.0/24', // T87841 Office IP
 				'162.222.72.0/21', // T126585 Sauce Labs IP range for browser tests
 				'66.85.48.0/21', // also Sauce Labs
-			),
-		),
+			],
+		],
 
-		'wmgUseCapiunto' => array(
+		'wmgUseCapiunto' => [
 			'default' => true,
-		),
+		],
 
-		'wmgUsePopups' => array(
+		'wmgUsePopups' => [
 			'default' => true,
-		),
+		],
 
-		'wgEnablePopupsMobile' => array(
+		'wgEnablePopupsMobile' => [
 			'default' => true,
-		),
+		],
 
-		'wmgUseCheckUser' => array(
+		'wmgUseCheckUser' => [
 			'default' => false,
-		),
+		],
 
-		'wmgLogAuthmanagerMetrics' => array(
+		'wmgLogAuthmanagerMetrics' => [
 			'default' => true,
-		),
+		],
 
-		'wmgMediaViewerUseThumbnailGuessing' => array(
+		'wmgMediaViewerUseThumbnailGuessing' => [
 			'default' => false, # T69651
-		),
+		],
 
-		'wmgUseUploadsLink' => array(
+		'wmgUseUploadsLink' => [
 			'default' => false,
 			'commonswiki' => true,
-		),
+		],
 
-		'wmgUseUrlShortener' => array(
+		'wmgUseUrlShortener' => [
 			'default' => true,
 			'private' => false,
-		),
+		],
 
-		'wmgUseArticlePlaceholder' => array(
+		'wmgUseArticlePlaceholder' => [
 			'default' => false,
 			'wikidataclient' => true,
-		),
-		'wmgUseORES' => array(
+		],
+		'wmgUseORES' => [
 			'default' => false,
 			'wikipedia' => true, // T127661
-		),
-		'wgOresModels' => array(
-			'default' => array(
+		],
+		'wgOresModels' => [
+			'default' => [
 				'damaging' => true,
 				'reverted' => true,
 				'goodfaith' => true,
 				'wp10' => false,
-			),
-			'wikipedia' => array(
+			],
+			'wikipedia' => [
 				'damaging' => true,
 				'reverted' => false,
 				'goodfaith' => false,
 				'wp10' => false,
-			), // T127661
-		),
-		'wgOresDamagingThresholds' => array(
-			'default' => array( 'hard' => 0.7, 'soft'=> 0.5 ),
-			'wikipedia' => array( 'hard' => 0.8, 'soft'=> 0.7 ), // T127661
-		),
+			], // T127661
+		],
+		'wgOresDamagingThresholds' => [
+			'default' => [ 'hard' => 0.7, 'soft'=> 0.5 ],
+			'wikipedia' => [ 'hard' => 0.8, 'soft'=> 0.7 ], // T127661
+		],
 		// test completion suggester default everywhere in preperation
 		// for rollout to production
-		'wmgCirrusSearchUseCompletionSuggester' => array(
+		'wmgCirrusSearchUseCompletionSuggester' => [
 			'default' => 'yes',
 			'wikidatawiki' => 'no',
-		),
-		'+wmgWikibaseEnableArbitraryAccess' => array(
+		],
+		'+wmgWikibaseEnableArbitraryAccess' => [
 			'commonswiki' => true,
-		),
-		'wmgWikibaseAllowDataAccessInUserLanguage' => array(
+		],
+		'wmgWikibaseAllowDataAccessInUserLanguage' => [
 			'default' => false,
 			'wikidatawiki' => true,
 			'commonswiki' => true,
-		),
+		],
 		// Test the extension Collection in other languages for book creator,
 		// which avoids the bugs related to the PDF generator.
-		'wmgUseCollection' => array(
+		'wmgUseCollection' => [
 			'zhwiki' => true, // T128425
-		),
-		'wgMaxUploadSize' => array(
+		],
+		'wgMaxUploadSize' => [
 		// Affects URL uploads and chunked uploads (experimental).
 		// Limit on other web uploads is enforced by PHP.
 			'default' => 1024 * 1024 * 4096, // 4 GB (i.e. equals 2^31 - 1)
 			'ptwiki' => 1024 * 500, // 500 KB - T25186
-		),
-		'wmgUseNewsletter' => array(
+		],
+		'wmgUseNewsletter' => [
 			'default' => true,  // T127297
-		),
+		],
 		// Test enabling OATH for 2FA
-		'wmgUseOATHAuth' => array(
+		'wmgUseOATHAuth' => [
 			'default' => true,
-		),
-	);
+		],
+	];
 } # wmflLabsSettings()
