@@ -631,13 +631,9 @@ function wmfLabsSettings() {
 			'wikidatawiki' => 'no',
 		],
 
-		'+wmgWikibaseEnableArbitraryAccess' => [
-			'commonswiki' => true,
-		],
 		'wmgWikibaseAllowDataAccessInUserLanguage' => [
 			'default' => false,
 			'wikidatawiki' => true,
-			'commonswiki' => true,
 		],
 
 		// Test the extension Collection in other languages for book creator,
