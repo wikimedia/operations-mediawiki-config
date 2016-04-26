@@ -166,7 +166,7 @@ $wgConf->settings = [
 	'tenwiki' => 'en',
 	'transitionteamwiki' => 'en',
 	'usabilitywiki' => 'en',
-	'votewiki' => 'fa', #T132667
+	'votewiki' => 'fa', // T132667
 	'wikimania' => 'en',
 	'wikimaniateamwiki' => 'en',
 	'zerowiki' => 'en',
@@ -3246,8 +3246,8 @@ $wgConf->settings = [
 		'백토' => NS_PROJECT_TALK,
 		'사' => NS_USER, // T57909
 		'사토' => NS_USER_TALK, // T57342
-		'들머리' => 100, # T87528
-		'들머리토론' => 101, #T87528
+		'들머리' => 100, // T87528
+		'들머리토론' => 101, // T87528
 		'들' => 100,
 		'들토' => 101,
 		'프' => 102,
@@ -4903,8 +4903,8 @@ $wgConf->settings = [
 		103 => 'Diskuse_k_rejstříku',
 	],
 	'cywiki' => [
-		100 => 'Porth', # 27684
-		101 => 'Sgwrs_Porth', # 27684
+		100 => 'Porth', // T29684
+		101 => 'Sgwrs_Porth', // T29684
 	],
 	'dawiki' => [
 		NS_PROJECT_TALK   => 'Wikipedia-diskussion', // T29902
@@ -5085,12 +5085,12 @@ $wgConf->settings = [
 		119 => 'ಕರಡು_ಚರಚ', // T129052
 	],
 	'kowiki' => [
-		100 => '포털', # T87528
-		101 => '포털토론', # T87528
-		102 => '위키프로젝트', # 27651
-		103 => '위키프로젝트토론', # 27651
-		118 => '초안', # T92798
-		119 => '초안토론', # T92798
+		100 => '포털', // T87528
+		101 => '포털토론', // T87528
+		102 => '위키프로젝트', // T29651
+		103 => '위키프로젝트토론', // T29651
+		118 => '초안', // T92798
+		119 => '초안토론', // T92798
 	],
 	'kuwiki' => [
 		100 => 'Portal',
@@ -5234,7 +5234,7 @@ $wgConf->settings = [
 	],
 	'pswiki' => [
 		100 => 'تانبه',
-		101 => 'د تانبې خبرې اترې', //T119510
+		101 => 'د تانبې خبرې اترې', // T119510
 	],
 	'ptwiki' => [
 		NS_USER => 'Usuário(a)', // T29495
@@ -5486,8 +5486,8 @@ $wgConf->settings = [
 		103 => 'Pàgina_Discussió',
 		104 => 'Llibre',
 		105 => 'Llibre_Discussió',
-		106 => 'Autor', # 27898
-		107 => 'Autor_Discussió', # 27898
+		106 => 'Autor', // T29898
+		107 => 'Autor_Discussió', // T29898
 	],
 	'cswikisource' => [
 		100 => 'Autor',
@@ -8833,7 +8833,7 @@ $wgConf->settings = [
 	],
 
 	'zhwikinews' => [
-		'rollbacker' => [ 'rollback' => true ], # 27268
+		'rollbacker' => [ 'rollback' => true ], // T29268
 		'flood' => [ 'bot' => true ], // T54546
 	],
 	'zhwikivoyage' => [ // T62328
@@ -11104,13 +11104,13 @@ $wgConf->settings = [
 	'wikisource' => true, // T10563 and T14423
 	'wikiversity' => true,
 
-	'bswiki' => true, # 8240
+	'bswiki' => true, // T10240
 	'dewiktionary' => true,
 	'enwiktionary' => true,
-	'eswiktionary' => true, # 7952
-	'frrwiki' => true, # 38023
+	'eswiktionary' => true, // T9952
+	'frrwiki' => true, // T40023
 	'incubatorwiki' => true,
-	'iswiktionary' => true, # 7952
+	'iswiktionary' => true, // T9952
 	'legalteamwiki' => true, // T64610
 	'mediawikiwiki' => true, // T71974
 	'metawiki' => true,
@@ -13334,7 +13334,7 @@ $wgConf->settings = [
 // in MW Core
 'wmgUseRestbaseVRS' => [
 	'default' => true,
-	'wikitech' => false, # T102178
+	'wikitech' => false, // T102178
 	'private' => false,
 ],
 
@@ -13365,7 +13365,7 @@ $wgConf->settings = [
 
 // Whether VisualEditor should bypass the MediaWiki layer and contact RESTbase directly for speed
 'wmgVisualEditorAccessRESTbaseDirectly' => [
-	'default' => true,		# T100026
+	'default' => true,		// T100026
 	'wikitech' => false,	# Wikitech doesn't properly work yet in RESTbase
 	'private' => false,		# Private wikis aren't yet supported by RESTbase
 ],
@@ -13377,11 +13377,11 @@ $wgConf->settings = [
 	'wiktionary' => true,	# Starting from SET
 	'mediawikiwiki' => true,
 	'testwiki' => true,
-	'test2wiki' => true,	# T121421
-	'enwiki' => true,		# T128478
-	'huwiki' => true,		# T126801
-	'plwiki' => true,		# T128477
-	'officewiki' => true,	# Per legoktm's orders, 2016-03-03
+	'test2wiki' => true,    // T121421
+	'enwiki' => true,       // T128478
+	'huwiki' => true,       // T126801
+	'plwiki' => true,       // T128477
+	'officewiki' => true,   // Per legoktm's request
 ],
 
 // Time that above variable was switched on, used to determine whether we should prompt user about
