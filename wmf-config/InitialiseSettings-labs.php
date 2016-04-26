@@ -626,13 +626,9 @@ function wmfLabsSettings() {
 			'default' => 'yes',
 			'wikidatawiki' => 'no',
 		),
-		'+wmgWikibaseEnableArbitraryAccess' => array(
-			'commonswiki' => true,
-		),
 		'wmgWikibaseAllowDataAccessInUserLanguage' => array(
 			'default' => false,
 			'wikidatawiki' => true,
-			'commonswiki' => true,
 		),
 		// Test the extension Collection in other languages for book creator,
 		// which avoids the bugs related to the PDF generator.
