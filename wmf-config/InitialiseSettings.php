@@ -15745,6 +15745,7 @@ $wgConf->settings = [
 
 'wgMaxCredits' => [
 	'default' => 0,
+	'testwiki' => -1, // T130820
 	'wikivoyage' => 10,
 ],
 
