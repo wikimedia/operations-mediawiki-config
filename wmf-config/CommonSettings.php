@@ -878,7 +878,8 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 	$wgExtDistDefaultSnapshot = 'REL1_26';
 
 	// When changing the Snapshot Refs please change the corresponding
-	// extension distributor messages for mediawiki.org in WikimediaMessages/i18n/wikimedia/*.json too
+	// extension distributor messages for mediawiki.org in JSON files
+	// in WikimediaMessages/i18n/wikimedia/ too.
 	$wgExtDistSnapshotRefs = [
 		'master',
 		'REL1_26',
