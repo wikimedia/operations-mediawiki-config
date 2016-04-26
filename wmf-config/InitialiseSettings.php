@@ -14142,16 +14142,6 @@ $wgConf->settings = [
 		'HTML' => [],
 	],
 ],
-'wgMFLazyLoadReferences' => [
-	'default' => [
-		'base' => false,
-		'beta' => false,
-	],
-	'enwiki' => [
-		'base' => false,
-		'beta' => true,
-	],
-],
 
 // Formerly known as $wgMFAnonymousEditing
 'wmgMFEditorOptions' => [
