@@ -52,14 +52,16 @@ function wmfLabsOverrideSettings() {
  */
 function wmfLabsSettings() {
 	global $wmfUdp2logDest;
+
 	return [
+
 		'wgParserCacheType' => [
 			'default' => CACHE_MEMCACHED,
 		],
 
 		'wgSitename' => [
 			'deploymentwiki' => 'Deployment',
-			'wikivoyage'    => 'Wikivoyage',
+			'wikivoyage'     => 'Wikivoyage',
 		],
 
 		'-wgServer' => [
@@ -111,10 +113,6 @@ function wmfLabsSettings() {
 			'private'      => '/data/project/upload7/private/$lang',
 		],
 
-		/* 'wmgUseOnlineStatusBar' => array( */
-		/* 	'default' => false, */
-		/* ), */
-
 		'-wgUploadPath' => [
 			'default' => 'http://upload.$variant.wmflabs.org/$site/$lang',
 			'private' => '/w/img_auth.php',
@@ -164,13 +162,13 @@ function wmfLabsSettings() {
 			'deploymentwiki' => false
 		],
 
-		//'-wgDebugLogGroups' => array(),
 		'-wgJobLogFile' => [],
 
-		// No IRC feed T128006
+		// No IRC feed - T128006
 		'-wmgUseRC2UDP' => [
 			'default' => false,
 		],
+
 		// T62013, T58758
 		'-wmgRC2UDPPrefix' => [
 			'default' => false,
@@ -206,16 +204,18 @@ function wmfLabsSettings() {
 		'-wmfUseArticleCreationWorkflow' => [
 			'default' => false,
 		],
-		'wmgUseEcho' => [
-			'enwiki' => true,
-			'en_rtlwiki' => true,
-		],
 
 		'-wmgUsePoolCounter' => [
 			'default' => false, // T38891
 		],
+
 		'-wmgEnableCaptcha' => [
 			'default' => true,
+		],
+
+		'wmgUseEcho' => [
+			'enwiki' => true,
+			'en_rtlwiki' => true,
 		],
 		'-wmgEchoCluster' => [
 			'default' => false,
@@ -229,10 +229,12 @@ function wmfLabsSettings() {
 		'-wmgEchoFooterNoticeURL' => [
 			'default' => 'http://example.org',
 		],
+
 		# FIXME: make that settings to be applied
 		'-wgShowExceptionDetails' => [
 			'default' => true,
 		],
+
 		'-wgUseContributionTracking' => [
 			'default' => false,
 		],
@@ -264,21 +266,21 @@ function wmfLabsSettings() {
 			'default'	=> true,
 		],
 
-		//enable TimedMediaHandler and MwEmbedSupport for testing on commons and enwiki
+		// Enable TimedMediaHandler and MwEmbedSupport for testing on commons and enwiki
+		// TimedMediaHandler requires MwEmbedSupport.
 		'wmgUseMwEmbedSupport' => [
 			'commonswiki'	=> true,
 			'enwiki'	=> true,
 		],
-		// NOTE: TMH *requires* MwEmbedSupport to function
 		'wmgUseTimedMediaHandler' => [
 			'commonswiki'	=> true,
 			'enwiki'	=> true,
 		],
+
 		'wmgMobileUrlTemplate' => [
 			'default' => '%h0.m.%h1.%h2.%h3.%h4',
 			'wikidatawiki' => 'm.%h0.%h1.%h2.%h3', // T87440
 		],
-
 		'wmgMFMobileFormatterHeadings' => [
 			'default' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ], // T110436, T110837
 		],
@@ -290,11 +292,9 @@ function wmfLabsSettings() {
 				'HTML' => [],
 			],
 		],
-
 		'wgMFAllowNonJavaScriptEditing' => [
 			'default' => true,
 		],
-
 		'wmgMFPhotoUploadEndpoint' => [
 			'default' => 'http://commons.wikimedia.$variant.wmflabs.org/w/api.php',
 		],
@@ -327,7 +327,6 @@ function wmfLabsSettings() {
 		'wmgEnableGeoData' => [
 			'wikidatawiki' => true,
 		],
-
 		'wmgGeoDataDebug' => [
 			'default' => true,
 		],
@@ -360,7 +359,10 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
-		// ----------- BetaFeatures start ----------
+		///
+		/// ----------- BetaFeatures start ----------
+		///
+
 		'wgUseBetaFeatures' => [
 			'default' => true,
 		],
@@ -373,7 +375,6 @@ function wmfLabsSettings() {
 		'wmgUseMultimediaViewer' => [
 			'default' => true,
 		],
-
 		'wmgMediaViewerNetworkPerformanceSamplingFactor' => [
 			'default' => 1,
 		],
@@ -385,7 +386,6 @@ function wmfLabsSettings() {
 		'wmgImageMetricsSamplingFactor' => [
 			'default' => 1,
 		],
-
 		'wmgImageMetricsCorsSamplingFactor' => [
 			'default' => 1,
 		],
@@ -393,6 +393,7 @@ function wmfLabsSettings() {
 		'wmgUseRestbaseVRS' => [
 			'default' => true,
 		],
+
 		'wmgVisualEditorUseSingleEditTab' => [
 			'enwiki' => true,
 		],
@@ -402,12 +403,14 @@ function wmfLabsSettings() {
 		'wmgVisualEditorTransitionDefault' => [
 			'default' => false,
 		],
-		// ------------ BetaFeatures end -----------
+
+		///
+		/// ------------ BetaFeatures end -----------
+		///
 
 		'wmgUseRSSExtension' => [
 			'dewiki' => true,
 		],
-
 		'wmgRSSUrlWhitelist' => [
 			'dewiki' => [ 'http://de.planet.wikimedia.org/atom.xml' ],
 		],
@@ -423,11 +426,9 @@ function wmfLabsSettings() {
 		'wmgContentTranslationCluster' => [
 			'default' => false,
 		],
-
 		'wmgContentTranslationCampaigns' => [
 			'default' => [ 'newarticle' ],
 		],
-
 		'wmgContentTranslationEnableSuggestions' => [
 			'default' => true,
 		],
@@ -461,9 +462,11 @@ function wmfLabsSettings() {
 		'wmgFlowEnableOptInBetaFeature' => [
 			'enwiki' => true,
 		],
+
 		'wmgUseGather' => [
 			'default' => true,
 		],
+
 		'wmgUseWPB' => [
 			'default' => false,
 			'enwiki' => true,
@@ -471,23 +474,28 @@ function wmfLabsSettings() {
 		'wgWPBBannerProperty' => [
 			'default' => 'P751',
 		],
+
 		'wmgUseGuidedTour' => [
 			'wikidatawiki' => true,
 		],
+
 		'wmgUseRelatedArticles' => [
 			'default' => true,
 		],
 		'wmgRelatedArticlesShowInFooter' => [
 			'default' => true,
 		],
+
 		// Enable anonymous editor acquisition experiment across labs
 		'wmgGettingStartedRunTest' => [
 			'default' => true,
 		],
+
 		'+wmgExtraLanguageNames' => [
 			'default' => [],
 			'en_rtlwiki' => [ 'en-rtl' => 'English (rtl)' ],
 		],
+
 		'wmgUseContentTranslation' => [
 			'default' => false,
 			'wikipedia' => true,
@@ -514,11 +522,9 @@ function wmfLabsSettings() {
 		],
 
 		// Thumbnail chaining
-
 		'wgThumbnailBuckets' => [
 			'default' => [ 2880 ],
 		],
-
 		'wgThumbnailMinimumBucketDistance' => [
 			'default' => 100,
 		],
@@ -527,15 +533,12 @@ function wmfLabsSettings() {
 		'wgUploadThumbnailRenderMap' => [
 			'default' => [ 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ],
 		],
-
 		'wgUploadThumbnailRenderMethod' => [
 			'default' => 'http',
 		],
-
 		'wgUploadThumbnailRenderHttpCustomHost' => [
 			'default' => 'upload.beta.wmflabs.org',
 		],
-
 		'wgUploadThumbnailRenderHttpCustomDomain' => [
 			'default' => 'deployment-cache-upload04.eqiad.wmflabs',
 		],
@@ -567,7 +570,6 @@ function wmfLabsSettings() {
 		'wmgUsePopups' => [
 			'default' => true,
 		],
-
 		'wgEnablePopupsMobile' => [
 			'default' => true,
 		],
@@ -581,7 +583,7 @@ function wmfLabsSettings() {
 		],
 
 		'wmgMediaViewerUseThumbnailGuessing' => [
-			'default' => false, # T69651
+			'default' => false, // T69651
 		],
 
 		'wmgUseUploadsLink' => [
@@ -598,6 +600,7 @@ function wmfLabsSettings() {
 			'default' => false,
 			'wikidataclient' => true,
 		],
+
 		'wmgUseORES' => [
 			'default' => false,
 			'wikipedia' => true, // T127661
@@ -620,12 +623,14 @@ function wmfLabsSettings() {
 			'default' => [ 'hard' => 0.7, 'soft'=> 0.5 ],
 			'wikipedia' => [ 'hard' => 0.8, 'soft'=> 0.7 ], // T127661
 		],
-		// test completion suggester default everywhere in preperation
+
+		// Test completion suggester default everywhere in preperation
 		// for rollout to production
 		'wmgCirrusSearchUseCompletionSuggester' => [
 			'default' => 'yes',
 			'wikidatawiki' => 'no',
 		],
+
 		'+wmgWikibaseEnableArbitraryAccess' => [
 			'commonswiki' => true,
 		],
@@ -634,20 +639,24 @@ function wmfLabsSettings() {
 			'wikidatawiki' => true,
 			'commonswiki' => true,
 		],
+
 		// Test the extension Collection in other languages for book creator,
 		// which avoids the bugs related to the PDF generator.
 		'wmgUseCollection' => [
 			'zhwiki' => true, // T128425
 		],
-		'wgMaxUploadSize' => [
+
 		// Affects URL uploads and chunked uploads (experimental).
 		// Limit on other web uploads is enforced by PHP.
+		'wgMaxUploadSize' => [
 			'default' => 1024 * 1024 * 4096, // 4 GB (i.e. equals 2^31 - 1)
 			'ptwiki' => 1024 * 500, // 500 KB - T25186
 		],
+
 		'wmgUseNewsletter' => [
 			'default' => true,  // T127297
 		],
+
 		// Test enabling OATH for 2FA
 		'wmgUseOATHAuth' => [
 			'default' => true,
@@ -658,5 +667,6 @@ function wmfLabsSettings() {
 		'wgMaxCredits' => [
 			'default' => -1,
 		],
+
 	];
 } # wmflLabsSettings()
