@@ -11373,8 +11373,6 @@ $wgConf->settings = [
 	'default' => defined( 'HHVM_VERSION' )
 		? [ 'class' => 'Parser', 'preprocessorClass' => 'Preprocessor_Hash' ]
 		: [ 'class' => 'Parser', 'preprocessorClass' => 'Preprocessor_DOM' ],
-	// Workaround for the issue discussed at https://oc.wikipedia.org/wiki/Discussion_Utilizaire:Midom -- TS
-	'ocwiki' => [ 'class' => 'Parser', 'preprocessorClass' => 'Preprocessor_Hash' ],
 ],
 
 # wgFavicon @{
