@@ -112,7 +112,7 @@ $wgCirrusSearchClientSideConnectTimeout = array(
 // from filling up the job queue.
 $wgCirrusSearchDropDelayedJobsAfter = array(
 	'eqiad' => $wgCirrusSearchDropDelayedJobsAfter,
-	'codfw' => $wgCirrusSearchDropDelayedJobsAfter,
+	'codfw' => 0, // Temporary hack to drop failing codfw jobs
 	'labsearch' => 10 * 60, // ten minutes
 );
 
