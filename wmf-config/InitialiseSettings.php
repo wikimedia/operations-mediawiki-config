@@ -16139,7 +16139,7 @@ $wgConf->settings = [
 ],
 
 'wmgCirrusSearchWriteClusters' => [
-	'default' => [ 'eqiad', 'codfw' ],
+	'default' => [ 'eqiad' ],
 ],
 
 'wmgCirrusPerUserPoolCounter' => [
