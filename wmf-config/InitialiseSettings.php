@@ -7237,6 +7237,16 @@ $wgConf->settings = [
 			'editor' => [ 100, 60 ],
 		],
 	],
+	'+commonswiki' => [ // T132930
+		'upload' => [
+			// 380 uploads per 72 minutes
+			'user' => [ 380, 4320 ],
+			// Effectively no upload rate limit for members of these groups
+			'Image-reviewer' => [ 999, 1 ],
+			'patroller' => [ 999, 1 ],
+			'autopatrolled' => [ 999, 1 ],
+		],
+	],
 ],
 # @} end of wgRateLimits
 
