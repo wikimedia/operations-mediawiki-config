@@ -49,11 +49,9 @@ if( $wmfRealm == 'labs' ) { # safe guard
 		),
 	);
 
-	if ( $wgDBname == 'testwiki' ) {
-		$wgDefaultExternalStore = array(
-			'DB://cluster1',
-		);
-	}
+	$wgDefaultExternalStore = array(
+		'DB://cluster1',
+	);
 
 	# No parser cache in beta yet
 	$wmgParserCacheDBs = array();
