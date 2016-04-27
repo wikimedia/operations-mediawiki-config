@@ -21,6 +21,16 @@ $wgCirrusSearchClusters = array(
 			),
 		);
 	}, $wmfAllServices['eqiad']['search'] ),
+	'codfw' => array_map( function ( $host ) {
+		return array(
+			'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
+			'port' => '9243',
+			'host' => $host,
+			'config' => array(
+				'pool' => 'cirrus-codfw',
+			),
+		);
+	}, $wmfAllServices['codfw']['search'] ),
 	'labsearch' => array( '10.64.37.14' ), // nobelium.eqiad.wmnet
 );
 
@@ -102,7 +112,7 @@ $wgCirrusSearchClientSideConnectTimeout = array(
 // from filling up the job queue.
 $wgCirrusSearchDropDelayedJobsAfter = array(
 	'eqiad' => $wgCirrusSearchDropDelayedJobsAfter,
-	'codfw' => 0, // Temporary hack to drop failing codfw jobs
+	'codfw' => $wgCirrusSearchDropDelayedJobsAfter,
 	'labsearch' => 10 * 60, // ten minutes
 );
 
