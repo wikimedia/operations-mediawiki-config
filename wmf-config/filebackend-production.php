@@ -82,6 +82,20 @@ foreach ( array( 'eqiad', 'codfw' ) as $specificDC ) {
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
 		'readAffinity'       => ( $specificDC === $wmfDatacenter )
 	);
+	$wgFileBackends[] = array( // backend config for wiki's access to shared test repo
+		'class'              => 'SwiftFileBackend',
+		'name'               => "shared-testwiki-swift-{$specificDC}",
+		'wikiId'             => "wikipedia-test",
+		'lockManager'        => 'redisLockManager',
+		'swiftAuthUrl'       => $wmfSwiftConfig[$specificDC]['authUrl'],
+		'swiftUser'          => $wmfSwiftConfig[$specificDC]['user'],
+		'swiftKey'           => $wmfSwiftConfig[$specificDC]['key'],
+		'swiftTempUrlKey'    => $wmfSwiftConfig[$specificDC]['tempUrlKey'],
+		'parallelize'        => 'implicit',
+		'cacheAuthInfo'      => true,
+		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
+		'readAffinity'       => ( $specificDC === $wmfDatacenter )
+	);
 }
 /* end DC-specific Swift backend config */
 
@@ -125,6 +139,19 @@ $wgFileBackends[] = array(
 	),
 	'replication' => 'async',
 	'syncChecks'  => ( 1 | 4 ) // (size & sha1)
+);
+$wgFileBackends[] = array(
+	'class'       => 'FileBackendMultiWrite',
+	'name'        => 'shared-testwiki-multiwrite',
+	'wikiId'      => "wikipedia-test",
+	'lockManager' => 'redisLockManager',
+	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
+	'backends'    => array(
+		array( 'template' => 'shared-testwiki-swift-eqiad', 'isMultiMaster' => true ),
+		array( 'template' => 'shared-testwiki-swift-codfw' ),
+	),
+	'replication' => 'async',
+	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 );
 /* end multiwrite backend config */
 
@@ -184,5 +211,33 @@ if ( $wgDBname != 'commonswiki' ) {
 			'deleted' => array( 'container' => 'local-deleted' )
 		),
 		'abbrvThreshold'   => 160 /* Keep in sync with with local repo on commons or things break. */
+	);
+}
+
+// test2wiki uses testwiki as foreign file repo (in addition to Commons)
+if ( $wgDBname === 'test2wiki' ) {
+	$wgForeignFileRepos[] = array(
+		'class'            => 'ForeignDBViaLBRepo',
+		'name'             => 'testwikirepo',
+		'backend'          => 'shared-testwiki-multiwrite',
+		'url'              => "//upload.wikimedia.org/wikipedia/test",
+		'hashLevels'       => 2,
+		'thumbScriptUrl'   => false,
+		'transformVia404'  => true,
+		'hasSharedCache'   => true,
+		'descBaseUrl'      => "https://test.wikipedia.org/wiki/File:",
+		'scriptDirUrl'     => "https://test.wikipedia.org/w",
+		'favicon'          => "/static/favicon/black-globe.ico",
+		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 86400,
+		'wiki'             => 'testwiki',
+		'initialCapital'   => true,
+		'zones'            => array( // actual swift containers have 'local-*'
+			'public'  => array( 'container' => 'local-public' ),
+			'thumb'   => array( 'container' => 'local-thumb' ),
+			'temp'    => array( 'container' => 'local-temp' ),
+			'deleted' => array( 'container' => 'local-deleted' )
+		),
+		'abbrvThreshold'   => 160 /* Keep in sync with with local repo on testwiki or things break. */
 	);
 }
