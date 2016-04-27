@@ -185,3 +185,31 @@ if ( $wgDBname != 'commonswiki' ) {
 		'abbrvThreshold'   => 160 /* Keep in sync with with local repo on commons or things break. */
 	);
 }
+
+// test2wiki uses testwiki as foreign file repo (in addition to Commons)
+if ( $wgDBname === 'test2wiki' ) {
+	$wgForeignFileRepos[] = array(
+		'class'            => 'ForeignDBViaLBRepo',
+		'name'             => 'testwikirepo',
+		'backend'          => 'shared-multiwrite',
+		'url'              => "//upload.wikimedia.org/wikipedia/test",
+		'hashLevels'       => 2,
+		'thumbScriptUrl'   => false,
+		'transformVia404'  => true,
+		'hasSharedCache'   => true,
+		'descBaseUrl'      => "https://test.wikipedia.org/wiki/File:",
+		'scriptDirUrl'     => "https://test.wikipedia.org/w",
+		'favicon'          => "/static/favicon/black-globe.ico",
+		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 86400,
+		'wiki'             => 'testwiki',
+		'initialCapital'   => true,
+		'zones'            => array( // actual swift containers have 'local-*'
+			'public'  => array( 'container' => 'local-public' ),
+			'thumb'   => array( 'container' => 'local-thumb' ),
+			'temp'    => array( 'container' => 'local-temp' ),
+			'deleted' => array( 'container' => 'local-deleted' )
+		),
+		'abbrvThreshold'   => 160 /* Keep in sync with with local repo on testwiki or things break. */
+	);
+}
