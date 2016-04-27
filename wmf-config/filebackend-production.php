@@ -98,6 +98,7 @@ $wgFileBackends[] = array(
 	),
 	'replication' => 'async',
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
+	'autoResync'  => 'conservative'
 );
 $wgFileBackends[] = array(
 	'class'       => 'FileBackendMultiWrite',
