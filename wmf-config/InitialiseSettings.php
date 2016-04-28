@@ -13751,17 +13751,17 @@ $wgConf->settings = [
 
 'wmgUseGoogleNewsSitemap' => [
 	'default' => false,
-	'wikinews' => true,
+	'wikinews' => true, // Following T39608 discussion
 	'testwiki' => true,
 ],
 'wmgGNSMfallbackCategory' => [
 	'default' => 'Published',
-	'elwikinews' => 'Δημοσιευμένα',
+	'elwikinews' => 'Δημοσιευμένα', // T39608
 	'fawikinews' => 'منتشرشده',
 ],
 'wmgGNSMcommentNamespace' => [
 	'default' => true,
-	'elwikinews' => true,
+	'elwikinews' => 102, // T39608
 	'fawikinews' => 102,
 ],
 
