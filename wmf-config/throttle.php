@@ -28,21 +28,6 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T130460 - Jerusalem Hackathon
-	'from'	 => '2016-04-01T08:00 +0:00',
-	'to'	 => '2016-04-03T18:00 +0:00',
-	'IP'	 => '82.80.21.122',
-	'dbname' => [ 'enwiki', 'hewiki', 'mediawikiwiki', 'labswiki' ],
-	'value'	 => 50 // Some expected
-];
-
-$wmgThrottlingExceptions[] = [ // T129490 - Taller d'iniciació a la Viquipèdia, Montserrat
-	'from'   => '2016-04-17T15:30 +2:00',
-	'to'     => '2016-04-17T17:30 +2:00',
-	'IP'     => '80.32.80.220',
-	'dbname' => [ 'cawiki', 'commonswiki' ],
-	'value'  => 20 // 15 expected
-];
 
 ## Add throttling definitions above.
 
