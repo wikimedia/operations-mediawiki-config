@@ -13386,6 +13386,7 @@ $wgConf->settings = [
 	'test2wiki' => true,    // T121421
 	'enwiki' => true,       // T128478
 	'huwiki' => true,       // T126801
+	'jawiki' => true,
 	'plwiki' => true,       // T128477
 	'officewiki' => true,   // Per legoktm's request
 ],
@@ -13397,7 +13398,10 @@ $wgConf->settings = [
 	'mediawikiwiki' => 20160203000000,
 	'testwiki' => 20160203000000,
 	'test2wiki' => 20151215000000,
+	'enwiki' => 20160301000000,
 	'huwiki' => 20160223000000,
+	'jawiki' => 20160510000000,
+	'plwiki' => 20160301000000,
 	'officewiki' => 20160303000000,
 ],
 
