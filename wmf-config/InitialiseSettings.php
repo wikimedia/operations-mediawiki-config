@@ -7697,6 +7697,11 @@ $wgConf->settings = [
 			'massmessage' => true,
 		],
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T126607
+		'extendedmover' => [ // T133981
+			'supressredirect' => true,
+			'move-subpages' => true,
+			'move' => true,
+		],
 	],
 	'+enwikibooks' => [
 		// 'rollbacker' => array( 'rollback' => true ),
@@ -9087,7 +9092,7 @@ $wgConf->settings = [
 	],
 	'+enwiki' => [
 		'bureaucrat' => [ 'accountcreator', 'flow-bot' ],
-		'sysop' => [ 'abusefilter', 'accountcreator', 'autoreviewer', 'confirmed', 'filemover', 'reviewer', 'rollbacker', 'templateeditor', 'massmessage-sender', 'extendedconfirmed' ], // T126607
+		'sysop' => [ 'abusefilter', 'accountcreator', 'autoreviewer', 'confirmed', 'filemover', 'reviewer', 'rollbacker', 'templateeditor', 'massmessage-sender', 'extendedconfirmed', 'extendedmover' ], // T126607, T133981
 	],
 	'+enwikibooks' => [
 		'sysop' => [ 'transwiki', 'uploader' ],
@@ -9763,7 +9768,7 @@ $wgConf->settings = [
 	],
 	'+enwiki' => [
 		'bureaucrat' => [ 'ipblock-exempt', 'accountcreator', 'sysop', 'flow-bot' ],
-		'sysop' => [ 'rollbacker', 'accountcreator', 'abusefilter', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender', 'extendedconfirmed' ], // T126607
+		'sysop' => [ 'rollbacker', 'accountcreator', 'abusefilter', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender', 'extendedconfirmed', 'extendedmover' ], // T126607, T133981
 	],
 	'+enwikibooks' => [
 		'sysop' => [ 'transwiki', 'uploader', ],
