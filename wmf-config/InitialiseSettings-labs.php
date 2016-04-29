@@ -214,9 +214,6 @@ function wmfLabsSettings() {
 		'-wmgEchoCluster' => [
 			'default' => false,
 		],
-		'-wmgEchoUseCrossWikiBetaFeature' => [
-			'default' => false,
-		],
 		'-wmgEchoShowFooterNotice' => [
 			'default' => true
 		],
