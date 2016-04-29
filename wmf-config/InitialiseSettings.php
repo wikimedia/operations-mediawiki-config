@@ -327,6 +327,7 @@ $wgConf->settings = [
 	'itwikibooks' => 'Europe/Berlin',
 	'itwikisource' => 'Europe/Berlin',
 	'itwiktionary' => 'Europe/Berlin',
+	'jamwiki' => 'America/Jamaica',
 	'kbdwiki' => 'Europe/Moscow',
 	'kkwiki' => 'Asia/Almaty',
 	'kkwiktionary' => 'Asia/Almaty',
@@ -574,6 +575,7 @@ $wgConf->settings = [
 	'itwiki' => '/static/images/project-logos/itwiki.png',
 	'iuwiki' => '/static/images/project-logos/iuwiki.png',  // T42285
 	'jawiki' => '/static/images/project-logos/jawiki.png',
+	'jamwiki' => '/static/images/project-logos/jamwiki.png', // T134017
 	'jbowiki' => '/static/images/project-logos/jbowiki.png',  // T48589
 	'jvwiki' => '/static/images/project-logos/jvwiki.png',  // T42285
 	'kaawiki' => '/static/images/project-logos/kaawiki.png',  // T48589
@@ -1134,6 +1136,7 @@ $wgConf->settings = [
 	'frwiki' => [ '1.5x' => '/static/images/project-logos/frwiki-1.5x.png', '2x' => '/static/images/project-logos/frwiki-2x.png' ],
 	'ilowiki' => [ '1.5x' => '/static/images/project-logos/ilowiki-1.5x.png', '2x' => '/static/images/project-logos/ilowiki-2x.png' ],
 	'itwiki' => [ '1.5x' => '/static/images/project-logos/itwiki-1.5x.png', '2x' => '/static/images/project-logos/itwiki-2x.png' ],
+	'jamwiki' => [ '1.5x' => '/static/images/project-logos/jamwiki-1.5x.png', '2x' => '/static/images/project-logos/jamwiki-2x.png' ], // T134017
 	'lawiki' => [ '1.5x' => '/static/images/project-logos/lawiki-1.5x.png', '2x' => '/static/images/project-logos/lawiki-2x.png' ],
 	'ladwiki' => [ '1.5x' => '/static/images/project-logos/ladwiki-1.5x.png', '2x' => '/static/images/project-logos/ladwiki-2x.png' ], // T132120
 	'mswiki' => [ '1.5x' => '/static/images/project-logos/mswiki-1.5x.png', '2x' => '/static/images/project-logos/mswiki-2x.png' ],
@@ -1731,6 +1734,7 @@ $wgConf->settings = [
 	'itwikiversity' => 'Wikiversità',
 	'itwiktionary' => 'Wikizionario',
 	'iuwiki' => 'ᐅᐃᑭᐱᑎᐊ',
+	'jamwiki' => 'Wikipidia',
 	'jawikinews' => 'ウィキニュース',
 	'jawikiversity' => 'ウィキバーシティ',
 	'kawiki' => 'ვიკიპედია',
