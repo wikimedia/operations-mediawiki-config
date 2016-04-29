@@ -15461,13 +15461,9 @@ $wgConf->settings = [
 ],
 
 // Default user options for Echo notifications
+// Format: 'blahwiki' => [ 'web' => [ 'emailuser' => false ], 'email' => [ 'reverted' => true ] ]
 'wmgEchoDefaultUserSubscriptions' => [
 	'default' => [],
-	'hewiki' => [
-		'web' => [
-			'emailuser' => true, // T114982
-		],
-	],
 ],
 
 // Thanks should be enabled for wikis with Echo
