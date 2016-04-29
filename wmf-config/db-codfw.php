@@ -540,8 +540,7 @@ $wgLBFactoryConf = array(
 	),
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => array(
-		'10.192.0.12' => 20, # db2009, master
-		'10.192.0.11' => 10, # db2008, just in case
+		'10.192.32.4' => 1, # db2034, master
 	),
 ),
 
