@@ -13870,11 +13870,23 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+// whether to use the Math extension
 'wmgUseMath' => [
 	'default' => true, // moved from MW core
 	'wikitech' => false,
 	'loginwiki' => false,
 	'votewiki' => false, // T61702
+],
+
+// whether MathML rendering is enabled by default - T131177
+'wmgUseMathML' => [
+	'testwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
+	'dewikibooks' => true,
+	'wikidatawiki' => true,
+	'testwikidatawiki' => true,
+	'default' => false,
 ],
 
 'wgMathFileBackend' => [
