@@ -2279,6 +2279,8 @@ if ( $wmgUseMath ) {
 
 	if ( $wgDBname === 'hewiki' ) {
 		$wgDefaultUserOptions['math'] = 0;
+	} else {
+		$wgDefaultUserOptions['math'] = 'mathml';
 	}
 	$wgMathDirectory   = '/mnt/upload7/math'; // just for sanity
 	$wgUseMathJax      = true;
