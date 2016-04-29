@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_f925cf05",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 7241,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2016-04-29T15:57:48Z",
+      "side": 1,
+      "message": "Please change [100, 60], to [ 100, 60 ], so that the config for all wikis are looking similar.",
+      "revId": "a23749ee0ed2dda5a9768f345c94b60bb47b813b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
