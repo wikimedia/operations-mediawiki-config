@@ -140,10 +140,10 @@ $wgLBFactoryConf = array(
 	's7' => array(
 		'db2029' => 0,   # 2.9TB  96GB, master
 		'db2040' => 200, # 2.9TB 160GB, rc, log
-#		'db2047' => 400, # 2.9TB 160GB - crashed, needs reimaging T132011 - volans
+		'db2047' => 400, # 2.9TB 160GB
 		'db2054' => 200, # 2.9TB 160GB, dump (inactive), vslow
 		'db2061' => 200, # 3.3TB 160GB, api
-#		'db2068' => 300, # 3.3TB 160GB depooled to clone to db2047
+		'db2068' => 300, # 3.3TB 160GB
 	),
 	'silver' => array(
 		'silver' => 100,   # I have no idea if this is right
