@@ -13473,7 +13473,9 @@ $wgConf->settings = [
 		118 /* Draft */ => true // T92798
 	],
 	'+plwiki' => [
-		102 /* Wikiprojekt */ => true // T92698
+		NS_PROJECT => true, // T133980
+		100 /* Portal */ => true, // T133980
+		102 /* Wikiprojekt */ => true, // T92698
 	],
 	'+ruwiki' => [
 		102 /* Draft / Incubator */ => true // T86688
