@@ -11030,6 +11030,7 @@ $wgConf->settings = [
 	'+itwiki' => [ 102 ],
 	'+ruwiki' => [ 104 ], // T125509
 	'+ruwikinews' => [ 102 ], // T132241 - Комментарии
+	'+plwiki' => [ NS_USER, 100, 102 ], // T133978
 ],
 
 'wmgExemptFromUserRobotsControlExtra' => [
