@@ -16,6 +16,23 @@
       "revId": "2efdbd3622de5364b7983fa6e55f745c714358d4",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_def8ace4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 3221,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-04-30T14:15:47Z",
+      "side": 1,
+      "message": "So yes, this will be automatically computed from \"Diskoshan\" in jam lang from l10n code.",
+      "revId": "2efdbd3622de5364b7983fa6e55f745c714358d4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
