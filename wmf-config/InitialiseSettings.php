@@ -8166,6 +8166,11 @@ $wgConf->settings = [
 	'ladwiki' => [
 		'flood' => [ 'bot' => true ], // T131527
 	],
+	'pswiki' => [
+		'interface-editor' => [ // T133472
+			'editinterface' => true,
+		],
+	],
 	'wikitech' => [ // contentadmin is handled in CommonSettings, not here
 		'*' => [
 			'edit' => false,
@@ -9394,6 +9399,9 @@ $wgConf->settings = [
 	'+plwikiquote' => [
 		'sysop' => [ 'patroller' ], // T30479
 	],
+	'+pswiki' => [
+		'bureaucrat' => [ 'interface-editor' ], // T133472
+	],
 	'+ptwikinews' => [
 		'sysop' => [ 'reviewer' ],
 	],
@@ -10086,6 +10094,9 @@ $wgConf->settings = [
 	],
 	'+plwikiquote' => [
 		'sysop' => [ 'patroller' ], // T30479
+	],
+	'+pswiki' => [
+		'bureaucrat' => [ 'interface-editor' ], // T133472
 	],
 	'+ptwiki' => [
 		'bureaucrat' => [ 'eliminator', 'confirmed', 'autoreviewer', 'interface-editor', 'accountcreator', 'bureaucrat', 'sysop' ], // T41905, T65750, T107661
