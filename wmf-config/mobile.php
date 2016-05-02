@@ -129,6 +129,9 @@ if ( $wmgMobileFrontend ) {
 	// Turn on volunteer recruitment
 	$wgMFEnableJSConsoleRecruitment = true;
 
+	// Brute-force bandwidth optimization by stripping srcset
+	$wgMFStripResponsiveImages = true;
+
 	if ( $wmgUseGather ) {
 		require_once "$IP/extensions/Gather/Gather.php";
 	}
