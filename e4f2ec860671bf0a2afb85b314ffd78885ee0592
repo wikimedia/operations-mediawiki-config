@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_4d587059",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11023,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2016-05-02T15:05:43Z",
+      "side": 1,
+      "message": "I\u0027m not OK with this change. Prompting users to sign in the article namespace in visual and the wikitext editors is a very bad idea. Most of the others added here also shouldn\u0027t be signed.",
+      "revId": "e4f2ec860671bf0a2afb85b314ffd78885ee0592",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
