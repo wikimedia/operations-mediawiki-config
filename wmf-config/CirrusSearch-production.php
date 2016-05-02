@@ -123,3 +123,6 @@ $wgCirrusSearchMoreLikeThisCluster = 'eqiad';
 
 // cache morelike queries to ObjectCache for 24 hours
 $wgCirrusSearchMoreLikeThisTTL = 86400;
+
+// This was causing race conditions and is a temporary fix. A better fix is coming soon (T133793)
+$wgCirrusSearchCreateFrozenIndex = false;
