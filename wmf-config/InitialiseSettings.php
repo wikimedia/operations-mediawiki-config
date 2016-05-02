@@ -12515,6 +12515,11 @@ $wgConf->settings = [
 	'default' => 800,
 ],
 
+'wmgUseUploadsLink' => [
+	'default' => false,
+	'commonswiki' => true, // T130018
+],
+
 'wmgUseUrlShortener' => [
 	'default' => true,
 	'private' => false,
