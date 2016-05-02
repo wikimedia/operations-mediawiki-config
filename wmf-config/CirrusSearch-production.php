@@ -11,7 +11,12 @@
 $wgCirrusSearchMasterTimeout = '2m';
 
 $wgCirrusSearchClusters = array(
-	'eqiad' => array_map( function ( $host ) {
+	'eqiad' => $wmfAllServices['eqiad']['search'],
+	'codfw' => $wmfAllServices['codfw']['search'],
+	'labsearch' => array( '10.64.37.14' ), // nobelium.eqiad.wmnet
+);
+if ( defined( 'HHVM_VERSION' ) ) {
+	$wgCirrusSearchClusters['eqiad'] = array_map( function ( $host ) {
 		return array(
 			'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
 			'port' => '9243',
@@ -20,8 +25,8 @@ $wgCirrusSearchClusters = array(
 				'pool' => 'cirrus-eqiad',
 			),
 		);
-	}, $wmfAllServices['eqiad']['search'] ),
-	'codfw' => array_map( function ( $host ) {
+	}, $wgCirrusSearchClusters['eqiad'] );
+	$wgCirrusSearchClusters['codfw'] = array_map( function ( $host ) {
 		return array(
 			'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
 			'port' => '9243',
@@ -30,9 +35,8 @@ $wgCirrusSearchClusters = array(
 				'pool' => 'cirrus-codfw',
 			),
 		);
-	}, $wmfAllServices['codfw']['search'] ),
-	'labsearch' => array( '10.64.37.14' ), // nobelium.eqiad.wmnet
-);
+	}, $wgCirrusSearchClusters['codfw'] );
+}
 
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgCirrusSearchClusters = array(
