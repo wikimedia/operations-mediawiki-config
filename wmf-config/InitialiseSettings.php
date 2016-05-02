@@ -7569,6 +7569,7 @@ $wgConf->settings = [
 	],
 	'commonswiki' => [
 		'user' => [
+			'changetags' => false, // T134196
 			'move' => false, // requested by Bdka on #wikimedia-tech, 2006-05-04
 			'upload' => true, // exception for T14556
 		],
@@ -7577,7 +7578,13 @@ $wgConf->settings = [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'filemover' => [ 'movefile' => true ],
 		'Image-reviewer' => [ 'autopatrol' => true, 'upload_by_url' => true ],
-		'sysop' => [ 'upload_by_url' => true ],
+		'sysop' => [
+			'changetags' => true, // T134196
+			'upload_by_url' => true,
+		],
+		'bot' => [
+			'changetags' => true, // T134196
+		]
 	],
 	'dawiki' => [
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true, ],
