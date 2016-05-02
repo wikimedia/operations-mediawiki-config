@@ -16,6 +16,24 @@
       "revId": "54ef41f1c2fbe9093e8f532af7de199149141c6c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_8d2c4847",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 13455,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2016-05-02T14:24:03Z",
+      "side": 1,
+      "message": "I think NS_PROJECT is the same as 4 and 102 is extra namespace so the line is important.",
+      "parentUuid": "ae564743_2d489c31",
+      "revId": "54ef41f1c2fbe9093e8f532af7de199149141c6c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
