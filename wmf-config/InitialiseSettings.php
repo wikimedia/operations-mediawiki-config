@@ -11780,6 +11780,7 @@ $wgConf->settings = [
 	'fawiktionary' => true, // T90831
 	'gomwiki' => true, // T106169
 	'guwiki' => true, // T42872
+	'guwikiquote' => true, // T134253
 	'guwikisource' => true, // T42872
 	'hiwiki' => true,
 	'hiwikiquote' => true, // T133775
