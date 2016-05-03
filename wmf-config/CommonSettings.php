@@ -2444,6 +2444,12 @@ if ( $wmgUseTranslate ) {
 	unset( $wgSpecialPages['FirstSteps'] );
 	unset( $wgSpecialPages['ManageMessageGroups'] );
 	unset( $wgSpecialPages['TranslationStats'] );
+
+	$wgTranslateTranslationServices['Apertium'] = [
+		'type' => 'cxserver',
+		'host' => $wmfLocalServices['cxserver'],
+		'timeout' => 3,
+	];
 }
 
 if ( $wmgUseTranslationNotifications ) {
