@@ -165,8 +165,7 @@ if ( !$globals ) {
 	$wikiTags = [];
 	foreach ( [ 'private', 'fishbowl', 'special', 'closed', 'flow', 'flaggedrevs', 'small', 'medium',
 			'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-default',
-			'commonsuploads', 'nonbetafeatures', 'group0', 'wikipedia',
-			'arbitraryaccess', 'nonglobal', 'wikitech'
+			'commonsuploads', 'nonbetafeatures', 'group0', 'wikipedia', 'nonglobal', 'wikitech'
 		] as $tag ) {
 		$dblist = MWWikiversions::readDbListFile( $tag );
 		if ( in_array( $wgDBname, $dblist ) ) {
