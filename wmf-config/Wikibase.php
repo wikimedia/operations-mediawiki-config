@@ -204,7 +204,6 @@ if ( $wmgUseWikibaseClient ) {
 	}
 
 	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
-	$wgWBClientSettings['allowArbitraryDataAccess'] = $wmgWikibaseEnableArbitraryAccess;
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = $wmgWikibaseAllowDataAccessInUserLanguage;
 	$wgWBClientSettings['entityAccessLimit'] = $wmgWikibaseEntityAccessLimit;
 
