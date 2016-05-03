@@ -15913,11 +15913,6 @@ $wgConf->settings = [
 	'wikiversity' => false,
 ],
 
-'wmgWikibaseEnableArbitraryAccess' => [
-	'default' => false,
-	'arbitraryaccess' => true,
-],
-
 'wmgWikibaseEntityAccessLimit' => [
 	'default' => 400,
 	'wikidatawiki' => 500,
