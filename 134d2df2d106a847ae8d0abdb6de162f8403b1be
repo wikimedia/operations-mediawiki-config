@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_d0a7eb4b",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 200,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-05-03T19:41:09Z",
+      "side": 1,
+      "message": "s6?",
+      "revId": "134d2df2d106a847ae8d0abdb6de162f8403b1be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_70689ff2",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-05-03T19:41:09Z",
+      "side": 1,
+      "message": "s6?",
+      "revId": "134d2df2d106a847ae8d0abdb6de162f8403b1be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
