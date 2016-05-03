@@ -15911,7 +15911,6 @@ $wgConf->settings = [
 
 'wmgWikibaseEnableData' => [
 	'default' => true,
-	'wikiversity' => false,
 ],
 
 'wmgWikibaseEntityAccessLimit' => [
