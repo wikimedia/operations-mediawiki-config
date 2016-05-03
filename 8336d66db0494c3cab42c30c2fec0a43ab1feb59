@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_40b312e8",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 125,
+      "author": {
+        "id": 3215
+      },
+      "writtenOn": "2016-05-03T07:47:04Z",
+      "side": 1,
+      "message": "Looks like there is a space at the start of the line ;)",
+      "revId": "8336d66db0494c3cab42c30c2fec0a43ab1feb59",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
