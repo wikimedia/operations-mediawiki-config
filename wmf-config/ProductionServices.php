@@ -22,6 +22,7 @@ $wmfAllServices['eqiad'] = array(
 	'eventlogging' => 'udp://10.64.32.167:8421', # eventlog1001.eqiad.wmnet
 	'eventbus' => 'http://eventbus.svc.eqiad.wmnet:8085',
 	'upload' => 'upload.svc.eqiad.wmnet',
+	'cxserver' => 'http://cxserver.svc.eqiad.wmnet:8080',
 );
 
 $wmfAllServices['codfw'] = array(
@@ -35,6 +36,7 @@ $wmfAllServices['codfw'] = array(
 	'eventlogging' => 'udp://10.64.32.167:8421',  # eventlog1001.eqiad.wmnet,
 	'eventbus' => 'http://eventbus.svc.eqiad.wmnet:8085',
 	'upload' => 'upload.svc.codfw.wmnet',
+	'cxserver' => 'http://cxserver.svc.codfw.wmnet:8080',
 );
 
 ### Logstash
