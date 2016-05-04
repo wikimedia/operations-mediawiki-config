@@ -2558,7 +2558,6 @@ $wgConf->settings = [
 		'Wikipedia' => NS_PROJECT,
 	],
 	'+angwiki' => [ // T58634, T60711
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 		'Wikipaedia' => NS_PROJECT,
 		'Wikipædiamotung' => NS_PROJECT_TALK,
@@ -2584,7 +2583,6 @@ $wgConf->settings = [
 		'Ƿicipaediamotung' => NS_PROJECT_TALK,
 	],
 	'+angwiktionary' => [ // T58634, T60711
-		'Wiktionary' => NS_PROJECT,
 		'Wiktionary_talk' => NS_PROJECT_TALK,
 		'Wikiwordboc' => NS_PROJECT,
 		'Wikiwordbocmotung' => NS_PROJECT_TALK,
@@ -2604,9 +2602,6 @@ $wgConf->settings = [
 		'Æteacmotung' => 101,
 		'Aeteaca' => 100,
 		'Aeteacmotung' => 101,
-	],
-	'+arcwiki' => [
-		'Wikipedia' => NS_PROJECT,
 	],
 	'+arwiki' => [
 		'وب' => NS_PROJECT,
@@ -2632,7 +2627,6 @@ $wgConf->settings = [
 		'Portal_talk' => 101,
 	],
 	'+aswiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 		'প্ৰকল্প' => NS_PROJECT,
 		'প্ৰকল্প_আলোচনা' => NS_PROJECT_TALK,
@@ -2670,7 +2664,6 @@ $wgConf->settings = [
 		'Portal_talk' => 101,
 	],
 	'+bawiki' => [
-		'Wikipedia' => NS_PROJECT, // T43167
 		'Wikipedia_буйынса_фекерләшеү' => NS_PROJECT_TALK,
 	],
 	'+barwiki' => [
@@ -2717,7 +2710,6 @@ $wgConf->settings = [
 		'Portal_talk' => 101,
 		'കവാടം' => 100,
 		'കവാടത്തിന്റെ_സംവാദം' => 101,
-		'Wikipedia' => NS_PROJECT,
 		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
 		'വിഭാഗം' => NS_CATEGORY,
@@ -2900,7 +2892,6 @@ $wgConf->settings = [
 		'WS' => NS_PROJECT,
 	],
 	'+dewikivoyage' => [ // T53794
-		'WV' => NS_PROJECT,
 		'WD' => NS_PROJECT_TALK,
 		'BN' => NS_USER,
 		'BD' => NS_USER_TALK,
@@ -3044,7 +3035,6 @@ $wgConf->settings = [
 		'WP' => NS_PROJECT,
 	],
 	'+frwiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'WP' => NS_PROJECT,
 		'Discussion_Wikipedia' => NS_PROJECT_TALK,
 		'Utilisatrice' => NS_USER,
@@ -3066,7 +3056,6 @@ $wgConf->settings = [
 		'WT' => NS_PROJECT,
 	],
 	'+gdwiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	],
 	'+glwiki' => [
@@ -3084,7 +3073,6 @@ $wgConf->settings = [
 	'+hiwiki' => [
 		'वि' => NS_PROJECT,
 		'विवा' => NS_PROJECT_TALK,
-		'Wikipedia' => NS_PROJECT,
 		'WP' => NS_PROJECT,
 		'WPT' => NS_PROJECT_TALK,
 		'U' => NS_USER,
@@ -3111,7 +3099,6 @@ $wgConf->settings = [
 		'Wiktionary diskusija' => NS_PROJECT_TALK,
 	],
 	'+htwiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	],
 	'+huwiki' => [
@@ -3151,7 +3138,6 @@ $wgConf->settings = [
 		'WT' => NS_PROJECT_TALK, // T40247
 	],
 	'+iowiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	],
 	'+incubatorwiki' => [
@@ -3196,7 +3182,6 @@ $wgConf->settings = [
 		'WZ' => NS_PROJECT,
 	],
 	'+iuwiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	],
 	'+jawiki' => [
@@ -3236,7 +3221,6 @@ $wgConf->settings = [
 		'جوبا_تالقىلاۋى' => 103,
 	],
 	'+knwiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	],
 	'+knwikisource' => [ // T39676
@@ -3289,7 +3273,6 @@ $wgConf->settings = [
 		'Portal_nîqaş' => 101, // T39521
 	],
 	'+kvwiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'Обсуждение_Wikipedia' => NS_PROJECT_TALK,
 	],
 	'+lawiki' => [
@@ -3303,18 +3286,15 @@ $wgConf->settings = [
 		'Wiktionary_Diskussioun' => NS_PROJECT_TALK,
 	],
 	'+ltwiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_aptarimas' => NS_PROJECT_TALK,
 	],
 	'+lvwiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'WP' => NS_PROJECT, // T95106
 		'VP' => NS_PROJECT, // T95106
 	],
 	'+maiwiki' => [
 		'वि' => NS_PROJECT,              // T125801
 		'वि_वा' => NS_PROJECT_TALK,      // T125801
-		'Wikipedia' => NS_PROJECT,       // T125801
 		'CA' => NS_CATEGORY,             // T125801
 		'CT' => NS_CATEGORY_TALK,        // T125801
 		'WP' => NS_PROJECT,              // T125801
@@ -3332,7 +3312,6 @@ $wgConf->settings = [
 	'+mlwiki' => [
 		'വിക്കി' => NS_PROJECT,
 		'വിക്കിസം' => NS_PROJECT_TALK,
-		'Wikipedia' => NS_PROJECT,
 		'WP' => NS_PROJECT,
 		'Portal' => 100,
 		'Portal_talk' => 101,
@@ -3375,7 +3354,6 @@ $wgConf->settings = [
 		'വിക്കി‌‌_നിഘണ്ടു_സംവാദം' => NS_PROJECT_TALK,
 	],
 	'+mrwiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'विपी' => NS_PROJECT,
 	],
 	'+mrwikibooks' => [
@@ -3392,7 +3370,6 @@ $wgConf->settings = [
 		'Portal_talk' => 101,
 	],
 	'+mwlwiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_cumbersa' => NS_PROJECT_TALK,
 	],
 	'+mywiki' => [
@@ -3402,18 +3379,13 @@ $wgConf->settings = [
 		'وپ' => NS_PROJECT,
 		'Portal' => 100,
 		'Portal_talk' => 101,
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_گپ' => NS_PROJECT_TALK,
 	],
 	'+nahwiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_tēixnāmiquiliztli' => NS_PROJECT_TALK,
 	],
 	'+ndswiki' => [
 		'WP' => NS_PROJECT,
-	],
-	'+nds_nlwiki' => [
-		'Wikipedia' => NS_PROJECT,
 	],
 	'+newiki' => [
 		// Shorcuts per T89817
@@ -3482,13 +3454,11 @@ $wgConf->settings = [
 		'OW' => NS_PROJECT,
 	],
 	'+orwiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 		'WP' => NS_PROJECT, // T30257
 		'WT' => NS_PROJECT_TALK, // T30257
 	],
 	'+outreachwiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	],
 	'+plwiki' => [ // T12064
@@ -3514,7 +3484,6 @@ $wgConf->settings = [
 		'Utilizador_Discussão' => NS_USER_TALK, // T29495
 		'Discussão_Portal' => 101,
 		'WP' => NS_PROJECT, // T29728
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_Discussão' => NS_PROJECT_TALK,
 	],
 	'+ptwikibooks' => [
@@ -3540,7 +3509,6 @@ $wgConf->settings = [
 	],
 	'+rowikinews' => [
 		'Wikiştiri' => NS_PROJECT,
-		'Wikinews' => NS_PROJECT,
 		'Discuţie_Wikiştiri' => NS_PROJECT_TALK,
 		'Discuţie_MediWiki' => NS_MEDIAWIKI_TALK,
 	],
@@ -3607,7 +3575,6 @@ $wgConf->settings = [
 	'+sawiki' => [
 		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	],
 	'+sewiki' => [
@@ -3638,7 +3605,6 @@ $wgConf->settings = [
 		'WT' => NS_PROJECT,
 	],
 	'+siwiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 		'Portal' => 100,
 		'Portal_talk' => 101,
@@ -3680,7 +3646,6 @@ $wgConf->settings = [
 		'Portal_talk' => 101,
 	],
 	'+tawiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'WP' => NS_PROJECT, // T126604
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 		'WT' => NS_PROJECT_TALK, // T126604
@@ -3690,11 +3655,9 @@ $wgConf->settings = [
 		'WT' => NS_PROJECT_TALK,
 	],
 	'+tewiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	],
 	'+tewikiquote' => [
-		'Wikiquote' => NS_PROJECT, // T89332
 		'Wikiquote_చర్చ' => NS_PROJECT_TALK, // T89332
 	],
 	'+tewikisource' => [
@@ -3707,7 +3670,6 @@ $wgConf->settings = [
 		'Wiktionary_చర్చ' => NS_PROJECT_TALK, // T38533
 	],
 	'+thwiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'WP' => NS_PROJECT,
 		'H' => NS_HELP,
 	], // T70108
@@ -3734,7 +3696,6 @@ $wgConf->settings = [
 	'+ttwiki' => [
 		'WP' => NS_PROJECT,
 		'ВП' => NS_PROJECT,
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	],
 	'+ukwiki' => [
@@ -3834,7 +3795,6 @@ $wgConf->settings = [
 		'Author_talk' => 103,
 	],
 	'+vowiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	],
 	'+vowiktionary' => [
@@ -3861,7 +3821,6 @@ $wgConf->settings = [
 		'模块' => 828, // NS_MODULE
 	],
 	'+zh_classicalwiki' => [
-		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT,
 	],
 	'+zhwiki' => [
