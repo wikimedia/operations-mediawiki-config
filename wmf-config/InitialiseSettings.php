@@ -15419,6 +15419,9 @@ $wgConf->settings = [
 'wmgEchoUseCrossWikiBetaFeature' => [
 	'default' => true,
 ],
+'wmgEchoCrossWikiByDefault' => [
+	'default' => false,
+],
 'wmgEchoShowFooterNotice' => [
 	'default' => true,
 ],

@@ -214,6 +214,12 @@ function wmfLabsSettings() {
 		'-wmgEchoCluster' => [
 			'default' => false,
 		],
+		'-wmgEchoUseCrossWikiBetaFeature' => [
+			'default' => false,
+		],
+		'-wmgEchoCrossWikiByDefault' => [
+			'default' => true,
+		],
 
 		# FIXME: make that settings to be applied
 		'-wgShowExceptionDetails' => [
