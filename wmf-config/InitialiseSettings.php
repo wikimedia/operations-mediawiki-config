@@ -3459,6 +3459,7 @@ $wgConf->settings = [
 		'WT' => NS_PROJECT_TALK, // T30257
 	],
 	'+outreachwiki' => [
+		'Wikipedia' => NS_PROJECT,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 	],
 	'+plwiki' => [ // T12064
