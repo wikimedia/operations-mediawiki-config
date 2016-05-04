@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_a4f5d481",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 829,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-05-04T19:02:44Z",
+      "side": 1,
+      "message": "1293207 Notice: Undefined variable: wmgUseUploadsLink in /srv/mediawiki/wmf-config/CommonSettings.php on line 827",
+      "revId": "7e1cd07dba434c0a433672a2da97b5224d3aaecd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
