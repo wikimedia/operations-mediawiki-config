@@ -202,7 +202,7 @@ $wgLBFactoryConf = array(
 			'db1053' => 1,
 		),
 		'api' => array(
-			'db1065' => 1,
+#			'db1065' => 1,
 			'db1066' => 1,
 		),
 	),
