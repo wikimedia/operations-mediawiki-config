@@ -134,6 +134,10 @@ if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 	$wgGlobalUserPageDBname = 'metawiki';
 }
 
+if ( $wmgUseUploadsLink ) {
+	wfLoadExtension( 'UploadsLink' );
+}
+
 if ( $wmgUseUrlShortener ) {
 	// Labs overrides
 	$wgUrlShortenerReadOnly = false;

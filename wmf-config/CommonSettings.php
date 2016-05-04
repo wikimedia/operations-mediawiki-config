@@ -824,10 +824,6 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgFFmpegLocation = '/usr/bin/ffmpeg';
 }
 
-if ( $wmgUseUploadsLink ) {
-	wfLoadExtension( 'UploadsLink' );
-}
-
 if ( $wmgUseUrlShortener ) {
 	wfLoadExtension( 'UrlShortener' );
 	$wgUrlShortenerTemplate = '/$1';
