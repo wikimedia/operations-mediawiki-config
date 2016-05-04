@@ -214,12 +214,6 @@ function wmfLabsSettings() {
 		'-wmgEchoCluster' => [
 			'default' => false,
 		],
-		'-wmgEchoShowFooterNotice' => [
-			'default' => true
-		],
-		'-wmgEchoFooterNoticeURL' => [
-			'default' => 'http://example.org',
-		],
 
 		# FIXME: make that settings to be applied
 		'-wgShowExceptionDetails' => [
