@@ -5541,6 +5541,10 @@ $wgConf->settings = [
 		112 => 'Livre',
 		113 => 'Discussion_Livre',
 	],
+	'glwikisource' => [
+		102 => 'Autor', // T134041
+		103 => 'Conversa_autor',
+	],
 	'guwikisource' => [
 		104 => 'પૃષ્ઠ', // Page
 		105 => 'પૃષ્ઠ_ચર્ચા',
