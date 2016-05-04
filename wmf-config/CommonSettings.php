@@ -3158,6 +3158,14 @@ if ( $wmfRealm === 'labs' ) {
 if ( $wmgUseCheckUser ) {
 	include( $IP . '/extensions/CheckUser/CheckUser.php' );
 	$wgCheckUserForceSummary = $wmgCheckUserForceSummary;
+	if ( $wmgUseCentralAuth ) {
+		// T128605
+		// Only for CA wikis - will break stuff otherwise
+		$wgCheckUserCAMultiLock = [
+			'centralDB' => 'metawiki',
+			'groups' => [ 'steward' ]
+		];
+	}
 }
 
 // T39211
