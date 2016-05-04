@@ -2607,6 +2607,9 @@ if ( $wmgUseEcho ) {
 
 	// Whether to make the cross-wiki notifications beta feature available
 	$wgEchoUseCrossWikiBetaFeature = $wmgEchoUseCrossWikiBetaFeature;
+	if ( $wmgEchoCrossWikiByDefault ) {
+		$wgDefaultUserOptions['echo-cross-wiki-notifications'] = 1;
+	}
 
 	// Whether to show the footer notice
 	$wgEchoShowFooterNotice = $wmgEchoShowFooterNotice;
