@@ -28,6 +28,13 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
+$wmgThrottlingExceptions[] = [ // T134353 - Shakespeare in London
+	'from'   => '2016-05-07T10:00 +0:00',
+	'to'     => '2016-05-07T16:00 +0:00',
+	'IP'     => [ '217.138.7.29', '217.138.7.30' ],
+	'dbname' => [ 'enwiki', 'commonswiki' ],
+	'value'  => 30 // 20 expected
+];
 
 ## Add throttling definitions above.
 
