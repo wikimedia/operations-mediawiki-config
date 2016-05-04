@@ -15417,13 +15417,13 @@ $wgConf->settings = [
 	'testwikidatawiki' => '/static/images/project-logos/notifications/30px-Notification-icon-Wikidata-logo.svg.png',
 ],
 'wmgEchoUseCrossWikiBetaFeature' => [
-	'default' => true,
-],
-'wmgEchoCrossWikiByDefault' => [
 	'default' => false,
 ],
-'wmgEchoShowFooterNotice' => [
+'wmgEchoCrossWikiByDefault' => [
 	'default' => true,
+],
+'wmgEchoShowFooterNotice' => [
+	'default' => false,
 ],
 'wmgEchoFooterNoticeURL' => [
 	'default' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3',
