@@ -824,7 +824,8 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgFFmpegLocation = '/usr/bin/ffmpeg';
 }
 
-if ( $wmgUseUploadsLink ) {
+// HACK: Shut up undefined $wmgUseUploadsLink warnings
+if ( isset( $wmgUseUploadsLink ) && $wmgUseUploadsLink ) {
 	wfLoadExtension( 'UploadsLink' );
 }
 
