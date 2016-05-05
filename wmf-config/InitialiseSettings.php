@@ -8595,6 +8595,12 @@ $wgConf->settings = [
 		'centralnoticeadmin' => [ 'centralnotice-admin' => true, 'editinterface' => true ], //adding to allow CN access without local sysop JRA 2013-02-21
 	],
 	'test2wiki' => [
+		'autoreview' => [ // T134491
+			'autopatrol' => true,
+		],
+		'editor' => [ // T134491
+			'patrol' => true,
+		],
 		'user' => [
 			'upload_by_url' => true, // For testing of Flickr uploading via UploadWizard
 			'upload' => true,
