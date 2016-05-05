@@ -12012,7 +12012,7 @@ $wgConf->settings = [
 ],
 
 'wgCopyUploadProxy' => [
-	'default' => 'url-downloader.wikimedia.org:8080',
+	'default' => $wmfLocalServices['urldownloader'],
 ],
 'wgAllowCopyUploads' => [
 	'default' => false,
