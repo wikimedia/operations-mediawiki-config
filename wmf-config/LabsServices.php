@@ -38,6 +38,7 @@ $wmfAllServices['eqiad']['logstash'] = array(
 
 ### Analytics Kafka cluster (not present in labs)
 $wmfAllServices['eqiad']['kafka'] = array(
+	'deployment-kafka02.deployment-prep.eqiad.wmflabs:9092',
 );
 
 ### IRC (not present in labs)
