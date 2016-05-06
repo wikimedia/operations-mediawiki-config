@@ -29,6 +29,7 @@ $wmfAllServices['eqiad'] = array(
 	'eventbus' => 'http://deployment-eventlogging04.deployment-prep.eqiad.wmflabs:8085',
 	'upload' => false,
 	'cxserver' => 'http://deployment-sca01.eqiad.wmflabs:8080',
+	'irc' => 'irc.beta.wmflabs.org', // deployment-ircd
 );
 
 ### Logstash
@@ -41,9 +42,6 @@ $wmfAllServices['eqiad']['kafka'] = array(
 	'deployment-kafka02.deployment-prep.eqiad.wmflabs:9092',
 	'deployment-kafka03.deployment-prep.eqiad.wmflabs:9092',
 );
-
-### IRC (not present in labs)
-$wmfAllServices['eqiad']['irc'] = null;
 
 ### Restbase
 $wmfAllServices['eqiad']['restbase'] = 'http://10.68.17.189:7231'; // deployment-restbase02.deployment-prep.eqiad.wmflabs

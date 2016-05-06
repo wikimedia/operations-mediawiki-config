@@ -164,16 +164,6 @@ function wmfLabsSettings() {
 
 		'-wgJobLogFile' => [],
 
-		// No IRC feed - T128006
-		'-wmgUseRC2UDP' => [
-			'default' => false,
-		],
-
-		// T62013, T58758
-		'-wmgRC2UDPPrefix' => [
-			'default' => false,
-		],
-
 		'wmgUseWebFonts' => [
 			'mywiki' => true,
 		],
