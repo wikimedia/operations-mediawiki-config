@@ -93,8 +93,8 @@ $wgLBFactoryConf = array(
 		'db1053' => 0,   # 2.8TB  96GB, vslow, dump
 		'db1051' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1055' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
-#		'db1065' => 100, # 2.8TB 160GB, api -- depool for maintenance
-		'db1066' => 0, # 2.8TB 160GB, api
+		'db1065' => 100, # 2.8TB 160GB, api
+		'db1066' => 100, # 2.8TB 160GB, api
 		'db1072' => 450, # 2.8TB 160GB
 		'db1073' => 500, # 2.8TB 160GB
 	),
@@ -139,7 +139,7 @@ $wgLBFactoryConf = array(
 	),
 	's6' => array(
 		'db1050' => 0,   # 2.8TB  64GB, master
-#		'db1023' => 300, # 1.4TB  64GB, old master - down for reimage
+		'db1023' => 50,  # 1.4TB  64GB, old master - pooled with low weight
 		'db1022' => 100, # 1.4TB  64GB, api
 		'db1030' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1037' => 50,  # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
@@ -202,7 +202,7 @@ $wgLBFactoryConf = array(
 			'db1053' => 1,
 		),
 		'api' => array(
-#			'db1065' => 1,
+			'db1065' => 1,
 			'db1066' => 1,
 		),
 	),
