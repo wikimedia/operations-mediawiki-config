@@ -3037,26 +3037,6 @@ if ( $wmgUseGraph ) {
 	require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
 	wfLoadExtension( 'Graph' );
 
-	$wgGraphHttpsDomains = [
-			'mediawiki.org',
-			'wikibooks.org',
-			'wikidata.org',
-			'wikimedia.org',
-			'wikimediafoundation.org',
-			'wikinews.org',
-			'wikipedia.org',
-			'wikiquote.org',
-			'wikisource.org',
-			'wikiversity.org',
-			'wikivoyage.org',
-			'wiktionary.org',
-		];
-
-	// Soon $wgGraphDataDomains will be removed
-	$wgGraphDataDomains = $wgGraphHttpsDomains;
-
-	// This setting will replace both of the above
-	//
 	// **** THIS LIST MUST MATCH puppet/hieradata/role/common/scb.yaml ****
 	// See https://www.mediawiki.org/wiki/Extension:Graph#External_data
 	//
