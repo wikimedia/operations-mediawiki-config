@@ -13982,10 +13982,6 @@ $wgConf->settings = [
 	'zerowiki' => true,
 ],
 
-'wgGraphEnableGZip' => [
-	'default' => true,
-],
-
 // restbase format: /api/rest_v1/page/graph/png/{title}/{revid}/{hash}.png
 // %1\$s = domain
 // %2\$s = title
