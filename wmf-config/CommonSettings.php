@@ -1785,7 +1785,7 @@ $wgDefaultUserOptions['usebetatoolbar'] = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 
 if ( $wmgUseLocalisationUpdate ) {
-	require_once( "$IP/extensions/LocalisationUpdate/LocalisationUpdate.php" );
+	wfLoadExtension( 'LocalisationUpdate' );
 	$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/caches/cache-$wmgVersionNumber";
 	$wgLocalisationUpdateRepository = 'local';
 	$wgLocalisationUpdateRepositories['local'] = [
