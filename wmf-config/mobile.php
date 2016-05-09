@@ -66,17 +66,10 @@ if ( $wmgMobileFrontend ) {
 	$wgMFNoMobilePages = $wmgMFNoMobilePages;
 
 	$wgHooks['EnterMobileMode'][] = function() {
-		global $wgCentralAuthCookieDomain, $wgHooks, $wgResponsiveImages, $wgRenderHashAppend,
-			$wgIncludeLegacyJavaScript;
+		global $wgCentralAuthCookieDomain, $wgHooks, $wgIncludeLegacyJavaScript;
 
 		// Disable loading of legacy wikibits in the mobile web experience
 		$wgIncludeLegacyJavaScript = false;
-
-		// Disable responsive images on mobile web (T119797), but not on apps.
-		if ( !defined( 'MW_API' ) ) {
-			$wgResponsiveImages = false;
-			$wgRenderHashAppend .= '!responsiveimages=0';
-		}
 
 		// Hack for T49647
 		if ( $wgCentralAuthCookieDomain == 'commons.wikimedia.org' ) {
@@ -129,7 +122,7 @@ if ( $wmgMobileFrontend ) {
 	// Turn on volunteer recruitment
 	$wgMFEnableJSConsoleRecruitment = true;
 
-	// Brute-force bandwidth optimization by stripping srcset
+	// Brute-force bandwidth optimization by stripping srcset (T119797)
 	$wgMFStripResponsiveImages = true;
 }
 
