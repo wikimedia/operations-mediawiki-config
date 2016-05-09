@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_2a384fcf",
+        "filename": "wmf-config/filebackend-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 194,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2016-05-09T23:12:01Z",
+      "side": 1,
+      "message": "The shared-multiwrite backend will have its zones prefixed with that of commons. Maybe I should have called that \"commons-multiwrite\" instead. In any case, you want another backend entry that has the testwiki prefixes instead.",
+      "revId": "e55a107bd99ffaa16bf96228c61fb56fb4bb189f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
