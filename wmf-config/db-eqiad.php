@@ -89,7 +89,7 @@ $wgLBFactoryConf = array(
 'sectionLoads' => array(
 	's1' => array(
 		'db1057' => 0,   # 2.8TB  96GB, master
-		'db1052' => 50,  # 2.8TB  96GB, old master, low weight
+		'db1052' => 100, # 2.8TB  96GB, old master
 		'db1053' => 0,   # 2.8TB  96GB, vslow, dump
 		'db1051' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1055' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
@@ -100,7 +100,7 @@ $wgLBFactoryConf = array(
 	),
 	's2' => array(
 		'db1018' => 0,   # 1.4TB  64GB, master
-		'db1024' => 100, # 1.4TB  64GB
+		'db1024' => 100, # 1.4TB  64GB, old master
 		'db1021' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1036' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1054' => 0,   # 2.8TB  96GB, api
@@ -112,7 +112,7 @@ $wgLBFactoryConf = array(
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1075' => 0,   # 3.6TB 512GB, master
-		'db1038' => 100, # 1.4TB  64GB
+		'db1038' => 100, # 1.4TB  64GB, old master
 		'db1027' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1015' => 100, # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1035' => 500, # 1.4TB  64GB
@@ -122,7 +122,7 @@ $wgLBFactoryConf = array(
 	),
 	's4' => array(
 		'db1042' => 0,   # 1.4TB  64GB, master
-		'db1040' => 0,   # 1.4TB  64GB, vslow, dump
+		'db1040' => 0,   # 1.4TB  64GB, vslow, dump, old master
 		'db1019' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1056' => 100, # 2.8TB  96GB, api
 		'db1059' => 100, # 2.8TB  96GB, api
@@ -131,14 +131,14 @@ $wgLBFactoryConf = array(
 	),
 	's5' => array(
 		'db1049' => 0,   # 2.8TB  64GB, master
-		'db1026' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager, vslow, dump
+		'db1026' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager; vslow, dump until new servers are in production
 		'db1045' => 50,  # 1.4TB  64GB, api
-#		'db1070' => 500, # 2.8TB 160GB - down to recover old master's data
+		'db1070' => 50,  # 2.8TB 160GB, old master, pooled with low weight
 		'db1071' => 500, # 2.8TB 160GB
 	),
 	's6' => array(
 		'db1050' => 0,   # 2.8TB  64GB, master
-		'db1023' => 50,  # 1.4TB  64GB, old master - pooled with low weight
+		'db1023' => 100, # 1.4TB  64GB, old master
 		'db1022' => 100, # 1.4TB  64GB, api
 		'db1030' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1037' => 50,  # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
