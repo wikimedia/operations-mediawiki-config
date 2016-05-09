@@ -12139,6 +12139,8 @@ $wgConf->settings = [
 		'images.unsplash.com',              // Unsplash - T132701
 		'*.natmus.dk',                      // Natmus.dk - T132748
 		'*.asc-test.nl',                    // African Studies Centre - T133286
+		'*.bn.br',                          // National Digital Library of Brazil - T134584
+		'*.*.bn.br',
 	],
 ],
 
