@@ -40,9 +40,9 @@ $wmfAllServices['eqiad']['logstash'] = [
 	'10.68.16.147', // deployment-logstash2.deployment-prep.eqiad.wmflabs
 ];
 
-### Analytics Kafka cluster (not present in labs)
-$wmfAllServices['eqiad']['kafka'] = [
-	'deployment-kafka02.deployment-prep.eqiad.wmflabs:9092',
+### Analytics Kafka cluster (analytics-deployment-prep)
+$wmfAllServices['eqiad']['kafka'] = array(
+	'deployment-kafka01.deployment-prep.eqiad.wmflabs:9092',
 	'deployment-kafka03.deployment-prep.eqiad.wmflabs:9092',
 ];
 
