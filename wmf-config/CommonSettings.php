@@ -3200,13 +3200,6 @@ if ( $wmgUseRC2UDP ) {
 		'omit_bots' => false,
 	];
 
-	$wgRCFeeds['kraz'] = [
-		'formatter' => 'IRCColourfulRCFeedFormatter',
-		'uri' => "udp://208.80.153.44:$wmgRC2UDPPort/$wmgRC2UDPPrefix",
-		'add_interwiki_prefix' => false,
-		'omit_bots' => false,
-	];
-
 	// RCStream / stream.wikimedia.org
 	if ( $wmfRealm === 'production' ) {
 		$wgRCFeeds['rcs1001'] = [
