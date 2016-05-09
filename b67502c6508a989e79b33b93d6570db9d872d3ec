@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_9bbc5069",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 14160,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-05-09T21:17:30Z",
+      "side": 1,
+      "message": "It should be \u0027bnwiki\u0027. Also, in the commit message.",
+      "revId": "b67502c6508a989e79b33b93d6570db9d872d3ec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
