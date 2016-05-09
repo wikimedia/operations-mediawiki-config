@@ -12141,6 +12141,7 @@ $wgConf->settings = [
 		'*.asc-test.nl',                    // African Studies Centre - T133286
 		'*.bn.br',                          // National Digital Library of Brazil - T134584
 		'*.*.bn.br',
+		'museudaimigracao.org.br'           // Immigration museum in Brazil - T134566
 	],
 ],
 
