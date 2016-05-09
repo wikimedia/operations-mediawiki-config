@@ -14151,6 +14151,17 @@ $wgConf->settings = [
 		'HTML' => [],
 	],
 ],
+'wgMFLazyLoadImages' => [
+	'default' => [
+		'base' => false,
+		'beta' => true,
+	],
+	// T134768
+	'bgwiki' => [
+		'base' => true,
+		'beta' => true,
+	],
+],
 'wgMFLazyLoadReferences' => [
 	'default' => [
 		'base' => false,
