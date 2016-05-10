@@ -629,6 +629,10 @@ function wmfLabsSettings() {
 			'default' => true,  // T127297
 		],
 
+		'wmgUseRevisionSlider' => [
+			'default' => true,  // T134770
+		],
+
 		// Test enabling OATH for 2FA
 		'wmgUseOATHAuth' => [
 			'default' => true,
