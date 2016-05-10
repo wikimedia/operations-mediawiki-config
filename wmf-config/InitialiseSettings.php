@@ -15988,6 +15988,10 @@ $wgConf->settings = [
 	'fywiki' => [
 		'sort' => 'alphabetic_fy',
 	],
+	// T103207
+	'fywikibooks' => [
+		'sort' => 'alphabetic_fy',
+	],
 	'hewiki' => [
 		'sortPrepend' => [ 'en' ],
 	],
