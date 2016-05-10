@@ -13588,7 +13588,6 @@ $wgConf->settings = [
 	'fawiki' => false,          // Retaining for local conversations
 	'fiwiki' => false,          // Retaining for local conversations
 	'frwiki' => false,          // Retaining for local conversations
-	'hiwiki' => false,          // Retaining for local conversations
 	'huwiki' => false,          // Retaining for local conversations
 	'itwiki' => false,          // Retaining for local conversations
 	'jawiki' => false,          // Retaining for local conversations
