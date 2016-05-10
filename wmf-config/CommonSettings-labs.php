@@ -340,6 +340,10 @@ if ( $wmgUseNewsletter ) {
 	wfLoadExtension( 'Newsletter' );
 }
 
+if ( $wmgUseRevisionSlider ) {
+	wfLoadExtension( 'RevisionSlider' );
+}
+
 if ( $wmgUseOATHAuth && $wmgUseCentralAuth ) {
 	wfLoadExtension( 'OATHAuth' );
 	$wgOATHAuthDatabase = 'centralauth';
