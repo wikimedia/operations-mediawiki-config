@@ -1890,8 +1890,6 @@ if ( $wmgUseSandboxLink ) {
 
 if ( $wmgUseUploadWizard ) {
 	require_once( "$IP/extensions/UploadWizard/UploadWizard.php" );
-	# Do not change $wgUploadStashScalerBaseUrl to a protocol-relative URL. This is how UploadStash fetches previews from our scaler, behind
-	# the scenes, that it then streams to the client securely (much like img_auth.php). -- neilk, 2011-09-12
 	$wgUploadStashScalerBaseUrl = "//{$wmfHostnames['upload']}/$site/$lang/thumb/temp";
 	$wgUploadWizardConfig = [
 		# 'debug' => true,
