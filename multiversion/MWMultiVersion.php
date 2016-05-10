@@ -61,7 +61,7 @@ class MWMultiVersion {
 
 	/**
 	 * Initialize and get the singleton instance of MWMultiVersion.
-	 * Use this for all web hits except to /w/thumb.php on upload.wikmedia.org.
+	 * Use this for all web hits except to /w/thumb.php on upload.wikimedia.org.
 	 * @param string $serverName the ServerName for this wiki -- $_SERVER['SERVER_NAME']
 	 * @return MWMultiVersion object for this wiki
 	 */
@@ -73,7 +73,7 @@ class MWMultiVersion {
 
 	/**
 	 * Initialize and get the singleton instance of MWMultiVersion.
-	 * Use this for web hits to /w/thumb.php on upload.wikmedia.org.
+	 * Use this for web hits to /w/thumb.php on upload.wikimedia.org.
 	 * @param string $pathInfo the PathInfo -- $_SERVER['PATH_INFO']
 	 * @return MWMultiVersion object for the wiki derived from the pathinfo
 	 */
