@@ -1239,7 +1239,7 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthUseEventLogging = $wmgCentralAuthUseEventLogging;
 	$wgCentralAuthPreventUnattached = true;
 
-	if( $wmfRealm == 'production' ) {
+	if ( $wmfRealm == 'production' ) {
 		$wgCentralAuthRC[] = [
 			'formatter' => 'IRCColourfulCARCFeedFormatter',
 			'uri' => "udp://$wmgRC2UDPAddress:$wmgRC2UDPPort/#central\t",
@@ -3176,13 +3176,6 @@ if ( $wmgUseRC2UDP ) {
 	$wgRCFeeds['default'] = [
 		'formatter' => 'IRCColourfulRCFeedFormatter',
 		'uri' => "udp://$wmgRC2UDPAddress:$wmgRC2UDPPort/$wmgRC2UDPPrefix",
-		'add_interwiki_prefix' => false,
-		'omit_bots' => false,
-	];
-
-	$wgRCFeeds['kraz'] = [
-		'formatter' => 'IRCColourfulRCFeedFormatter',
-		'uri' => "udp://208.80.153.44:$wmgRC2UDPPort/$wmgRC2UDPPrefix",
 		'add_interwiki_prefix' => false,
 		'omit_bots' => false,
 	];
