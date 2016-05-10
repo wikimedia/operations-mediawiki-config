@@ -4444,8 +4444,8 @@ $wgConf->settings = [
 'wmgMonologAvroSchemas' => [
 	'default' => [
 		'CirrusSearchRequestSet' => [
-			'schema' => file_get_contents( __DIR__ . '/event-schemas/avro/mediawiki/CirrusSearchRequestSet/111448028943.avsc' ),
-			'revision' => 111448028943,
+			'schema' => file_get_contents( __DIR__ . '/event-schemas/avro/mediawiki/CirrusSearchRequestSet/121456865906.avsc' ),
+			'revision' => 121456865906,
 		],
 		'ApiAction' => [
 			'schema' => file_get_contents( __DIR__ . '/event-schemas/avro/mediawiki/ApiAction/101453221640.avsc' ),
