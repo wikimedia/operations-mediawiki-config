@@ -12388,11 +12388,6 @@ $wgConf->settings = [
 	'foundationwiki' => true,
 ],
 
-'wmgApiFrameOptions' => [
-	'default' => 'DENY',
-	'enwiki' => 'SAMEORIGIN', // T41877
-],
-
 'wgApiFrameOptions' => [
 	'default' => 'DENY',
 	'enwiki' => 'SAMEORIGIN', // T41877
