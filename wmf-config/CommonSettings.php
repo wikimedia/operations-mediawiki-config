@@ -1986,6 +1986,42 @@ if ( $wmgUseUploadWizard ) {
 	}
 }
 
+if ( $wmgCustomUploadDialog ) {
+	$wgUploadDialog = [
+		'fields' => [
+			'description' => true,
+			'date' => true,
+			'categories' => true,
+		],
+		'licensemessages' => [
+			// Messages defined in WikimediaMessages: upload-form-label-own-work-message-commons,
+			// upload-form-label-not-own-work-message-commons, upload-form-label-not-own-work-local-commons
+			'local' => 'commons',
+			'foreign' => 'commons',
+		],
+		'comment' => 'Cross-wiki upload from $HOST',
+		'format' => [
+			'filepage' => '== {{int:filedesc}} ==
+{{Information
+|description=$DESCRIPTION
+|date=$DATE
+|source=$SOURCE
+|author=$AUTHOR
+}}
+
+== {{int:license-header}} ==
+$LICENSE
+
+$CATEGORIES
+',
+			'description' => '{{$LANGUAGE|1=$TEXT}}',
+			'ownwork' => '{{own}}',
+			'license' => '{{self|cc-by-sa-4.0}}',
+			'uncategorized' => '{{subst:unc}}',
+		],
+	];
+}
+
 if ( $wmgUseBetaFeatures ) {
 	wfLoadExtension( 'BetaFeatures' );
 }
