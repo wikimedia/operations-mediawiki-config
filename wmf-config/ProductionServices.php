@@ -59,7 +59,7 @@ $wmfAllServices['eqiad']['kafka'] = array(
 $wmfAllServices['codfw']['kafka'] = $wmfAllServices['eqiad']['kafka'];
 
 ### IRC
-$wmfAllServices['eqiad']['irc'] = '208.80.154.160'; // eqiad: argon
+$wmfAllServices['eqiad']['irc'] = '208.80.153.44'; // codfw: kraz
 $wmfAllServices['codfw']['irc'] = $wmfAllServices['eqiad']['irc'];
 
 ### Restbase
