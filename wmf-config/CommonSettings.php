@@ -1990,8 +1990,6 @@ if ( $wmgUseUploadWizard ) {
 	}
 }
 
-$wgApiFrameOptions = $wmgApiFrameOptions;
-
 if ( $wmgUseBetaFeatures ) {
 	wfLoadExtension( 'BetaFeatures' );
 }
