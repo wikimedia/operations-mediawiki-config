@@ -8584,7 +8584,7 @@ $wgConf->settings = [
 		'accountcreator' => [ 'override-antispoof' => true, 'tboverride' => true ],
 		'filemover' => [ 'movefile' => true ], // T32121
 		'user' => [
-			'upload_by_url' => true, // For wider testing
+			'upload_by_url' => true, // For testing of Flickr uploading via UploadWizard
 			'upload' => true, // Exception to T14556, used for testing of upload tools
 			'pagelang' => true, // testing of T69223
 		],
@@ -8609,7 +8609,7 @@ $wgConf->settings = [
 			'patrol' => true,
 		],
 		'user' => [
-			'upload_by_url' => true, // For testing of Flickr uploading via UploadWizard
+			'upload_by_url' => true,
 			'upload' => true,
 		],
 		'qa_automation' => [ // For browser tests, T60375 and T63799
@@ -12382,7 +12382,6 @@ $wgConf->settings = [
 	'default' => false,
 	'rowiki' => true, // T61242
 	'testwiki' => true,
-	'test2wiki' => true,
 	'commonswiki' => true,
 	'donatewiki' => true,
 	'foundationwiki' => true,
@@ -12395,7 +12394,6 @@ $wgConf->settings = [
 
 'wmgAltUploadForm' => [ // T35513
 	'default' => 'Special:Upload',
-	'test2wiki' => 'Wikipedia:Upload',
 
 	'commonswiki' => [
 		'default' => 'Commons:Upload',
