@@ -15937,6 +15937,7 @@ $wgConf->settings = [
 
 'wmgUseArticlePlaceholder' => [
 	'default' => false,
+	'htwiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
 	'testwikidatawiki' => true,
