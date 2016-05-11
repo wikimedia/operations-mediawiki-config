@@ -46,6 +46,7 @@ if( $wmfRealm == 'labs' ) { # safe guard
 
 		'templateOverridesByCluster' => array(
 			'cluster1' => array( 'blobs table' => 'blobs1' ),
+			'flow_cluster1' => array( 'blobs table' => 'blobs_flow1' ),
 		),
 	);
 
