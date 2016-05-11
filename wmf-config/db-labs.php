@@ -42,10 +42,16 @@ if( $wmfRealm == 'labs' ) { # safe guard
 				'10.68.16.193' => 1, # deployment-db1.eqiad.wmflabs, master
 				'10.68.17.94' => 3 , # deployment-db2.eqiad.wmflabs
 			),
+
+			'flow_cluster1' => array(
+				'10.68.16.193' => 1, # deployment-db1.eqiad.wmflabs, master
+				'10.68.17.94' => 3 , # deployment-db2.eqiad.wmflabs
+			),
 		),
 
 		'templateOverridesByCluster' => array(
 			'cluster1' => array( 'blobs table' => 'blobs1' ),
+			'flow_cluster1' => array( 'blobs table' => 'blobs_flow1' ),
 		),
 	);
 
