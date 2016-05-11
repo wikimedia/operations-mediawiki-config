@@ -15623,6 +15623,7 @@ $wgConf->settings = [
 	'urwiki' => true,
 	'zhwiki' => true,
 	'wikidatawiki' => true,
+	'specieswiki' => true, // T134898
 ],
 'wmgUseDisambiguator' => [
 	'default' => true,
