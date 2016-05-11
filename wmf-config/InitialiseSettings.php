@@ -4510,6 +4510,7 @@ $wgConf->settings = [
 		'cite' => 'debug',
 		'collection' => 'debug', // -cscott for T73675
 		'DBPerformance' => [ 'logstash' => 'debug', 'udp2log' => 'warning' ],
+		'dewiki_diffstats' => [ 'logstash' => false ], // addshore for T134861
 		'diff' => 'debug',
 		'Echo' => 'debug',
 		'es-hit' => 'debug',
