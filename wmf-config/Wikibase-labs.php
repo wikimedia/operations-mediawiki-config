@@ -41,6 +41,7 @@ if ( $wmgUseWikibaseClient ) {
 	);
 
 	$wgWBClientSettings['repoConceptBaseUri'] = 'http://wikidata.beta.wmflabs.org/entity/';
+	$wgWBClientSettings['repoUrl'] = 'http://wikidata.beta.wmflabs.org';
 
 	$wgWikimediaBadgesCommonsCategoryProperty = 'P725';
 
