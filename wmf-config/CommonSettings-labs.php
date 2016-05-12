@@ -85,7 +85,7 @@ if ( $wmgUseFlow ) {
 	// Override CommonSettings.php, which has:
 	// $wgFlowExternalStore = $wgDefaultExternalStore;
 	$wgFlowExternalStore = [
-		'flow_cluster1',
+		'DB://flow_cluster1',
 	];
 }
 
