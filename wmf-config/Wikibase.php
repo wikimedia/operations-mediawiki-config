@@ -119,9 +119,12 @@ if ( $wmgUseWikibaseRepo ) {
 		 * Deprecated properties
 		 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18644427
 		 */
-		357, // (OBSOLETE) title (use P1476)
+		357, // (OBSOLETE) title (use P1476, "title")
 		513, // (OBSOLETE) birth name (use P1477)
-		738, // (OBSOLETE) influence of
+		/**
+		 * @see https://www.wikidata.org/w/index.php?oldid=335040857
+		 */
+		646, // Freebase ID
 		/**
 		 * Sandbox properties
 		 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18720640
