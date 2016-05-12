@@ -131,6 +131,10 @@ $wgCirrusSearchInterwikiProv = 'iwsw1';
 $wgCirrusSearchWikiToNameMap = $wmgCirrusSearchWikiToNameMap;
 $wgCirrusSearchLanguageToWikiMap = $wmgCirrusSearchLanguageToWikiMap;
 
+// will be overridden by UserTesting triggers, but we need to set the default.
+$wgCirrusSearchTextcatLanguages = array();
+$wgCirrusSearchTextcatModel = "$IP/vendor/wikimedia/textcat/LM-query";
+
 $wgHooks['CirrusSearchMappingConfig'][] = function( array &$config, $mappingConfigBuilder ) {
 	$config['page']['properties']['popularity_score'] = array(
 		'type' => 'double',
