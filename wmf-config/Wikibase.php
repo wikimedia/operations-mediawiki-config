@@ -154,7 +154,6 @@ if ( $wmgUseWikibaseClient ) {
 	// Note: Wikibase-production.php overrides this for the test wikis
 	$wgWBClientSettings['changesDatabase'] = 'wikidatawiki';
 	$wgWBClientSettings['repoDatabase'] = 'wikidatawiki';
-	$wgWBClientSettings['repoUrl'] = "//{$wmfHostnames['wikidata']}";
 
 	$wgWBClientSettings['repoNamespaces'] = array(
 		'wikibase-item' => '',
