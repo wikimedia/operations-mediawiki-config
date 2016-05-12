@@ -131,8 +131,6 @@ $wgCirrusSearchInterwikiProv = 'iwsw1';
 $wgCirrusSearchWikiToNameMap = $wmgCirrusSearchWikiToNameMap;
 $wgCirrusSearchLanguageToWikiMap = $wmgCirrusSearchLanguageToWikiMap;
 
-$wgCirrusSearchTextcatModel = "$IP/vendor/wikimedia/textcat/LM-query";
-
 $wgHooks['CirrusSearchMappingConfig'][] = function( array &$config, $mappingConfigBuilder ) {
 	$config['page']['properties']['popularity_score'] = array(
 		'type' => 'double',

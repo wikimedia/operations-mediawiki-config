@@ -111,8 +111,6 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		);
 		$wmfDatacenter = 'unittest';
 		$wgCirrusSearchPoolCounterKey = 'unittest:poolcounter:blahblahblah';
-		// not used for anything, just to prevent undefined variable
-		$IP = '/dev/null';
 
 		require "{$wmfConfigDir}/CirrusSearch-common.php";
 
