@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_8cca3ca1",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 88,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-05-12T20:45:11Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be https?",
+      "revId": "bac9e4654b3660bfda83b3da362e12d0901ed888",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
