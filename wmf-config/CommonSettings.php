@@ -2597,10 +2597,19 @@ if ( $wmgUseEcho ) {
 	// Whether to use job queue to process web and email notifications
 	$wgEchoUseJobQueue = $wmgEchoUseJobQueue;
 
-	// Whether to make the cross-wiki notifications beta feature available
-	$wgEchoUseCrossWikiBetaFeature = $wmgEchoUseCrossWikiBetaFeature;
-	if ( $wmgEchoCrossWikiByDefault ) {
-		$wgDefaultUserOptions['echo-cross-wiki-notifications'] = 1;
+	// CentralAuth is extra check to be absolutely sure we don't enable on non-SUL
+	// wikis.
+	if ( $wmgUseCentralAuth && ( $wmgEchoUseCrossWikiBetaFeature || $wmgEchoCrossWikiByDefault ) ) {
+		// Whether to make the cross-wiki notifications beta feature available
+		$wgEchoUseCrossWikiBetaFeature = $wmgEchoUseCrossWikiBetaFeature;
+		if ( $wmgEchoCrossWikiByDefault ) {
+			$wgDefaultUserOptions['echo-cross-wiki-notifications'] = 1;
+		}
+	} else {
+		// Neither Beta nor normal.  Hide preference and force to false.
+		$wgEchoUseCrossWikiBetaFeature = false;
+		$wgDefaultUserOptions['echo-cross-wiki-notifications'] = 0;
+		$wgHiddenPrefs[] = 'echo-cross-wiki-notifications';
 	}
 
 	// Whether to show the footer notice

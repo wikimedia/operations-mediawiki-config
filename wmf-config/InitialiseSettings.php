@@ -15447,6 +15447,9 @@ $wgConf->settings = [
 ],
 'wmgEchoCrossWikiByDefault' => [
 	'default' => true,
+	'private' => false,
+	'fishbowl' => false,
+	'nonglobal' => false,
 ],
 'wmgEchoShowFooterNotice' => [
 	'default' => false,
