@@ -2606,11 +2606,6 @@ if ( $wmgUseEcho ) {
 		if ( $wmgEchoCrossWikiByDefault ) {
 			$wgDefaultUserOptions['echo-cross-wiki-notifications'] = 1;
 		}
-	} else {
-		// Neither Beta nor normal.  Hide preference and force to false.
-		$wgEchoUseCrossWikiBetaFeature = false;
-		$wgDefaultUserOptions['echo-cross-wiki-notifications'] = 0;
-		$wgHiddenPrefs[] = 'echo-cross-wiki-notifications';
 	}
 
 	// Whether to show the footer notice
