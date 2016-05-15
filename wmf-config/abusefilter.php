@@ -315,6 +315,8 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
+		$wgAbuseFilterAvailableActions[] = 'block'; // T134779
+		$wgAbuseFilterAnonBlockDuration = '3 days'; // T134779
 		break;
 	case 'rowiki':
 		$wgGroupPermissions['sysop']['abusefilter-modify'] = false;
