@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_3637edfd",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 383,
+      "author": {
+        "id": 3215
+      },
+      "writtenOn": "2016-05-16T14:15:59Z",
+      "side": 1,
+      "message": "This line should be removed too.",
+      "revId": "14f1aad2d5b2157db291f4d3d097fa61acd0bd85",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
