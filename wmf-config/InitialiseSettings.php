@@ -2920,6 +2920,9 @@ $wgConf->settings = [
 	'+dvwiktionary' => [
 		'Wiktionary_talk' => NS_PROJECT_TALK, // T48846
 	],
+	'elwiki' => [
+		'ΒΠ' => NS_PROJECT, // T135383
+	],
 	'+enwiki' => [ // T8313
 		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
