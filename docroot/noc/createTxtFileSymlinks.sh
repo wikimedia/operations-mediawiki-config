@@ -20,7 +20,7 @@ mwconfig_files_txt=(
 	ext-production.php
 	FeaturedFeedsWMF.php
 	filebackend-labs.php
-	filebackend.php
+	filebackend-production.php
 	flaggedrevs.php
 	HHVMRequestInit.php
 	import.php
