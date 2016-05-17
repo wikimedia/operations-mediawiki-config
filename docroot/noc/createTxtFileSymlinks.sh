@@ -16,11 +16,9 @@ mwconfig_files_txt=(
 	CirrusSearch-production.php
 	db-eqiad.php
 	db-labs.php
-	ext-labs.php
-	ext-production.php
 	FeaturedFeedsWMF.php
 	filebackend-labs.php
-	filebackend.php
+	filebackend-production.php
 	flaggedrevs.php
 	HHVMRequestInit.php
 	import.php
