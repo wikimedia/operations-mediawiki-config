@@ -13962,13 +13962,6 @@ $wgConf->settings = [
 		'prefix' => 'wbs'
 	]
 ],
-'wmgUseGather' => [
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'enwikivoyage' => true, // T97488
-	'hewiki' => true, // T97488
-],
 'wmgEnableTextExtracts' => [
 	'default' => true,
 ],

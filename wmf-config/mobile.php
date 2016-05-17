@@ -131,10 +131,6 @@ if ( $wmgMobileFrontend ) {
 
 	// Brute-force bandwidth optimization by stripping srcset
 	$wgMFStripResponsiveImages = true;
-
-	if ( $wmgUseGather ) {
-		require_once "$IP/extensions/Gather/Gather.php";
-	}
 }
 
 if ( $wmfRealm === 'labs' ) {
