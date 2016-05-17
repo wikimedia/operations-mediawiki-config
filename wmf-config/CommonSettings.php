@@ -822,6 +822,9 @@ if ( $wmgUseTimedMediaHandler ) {
 
 	// use new ffmpeg build w/ VP9 & Opus support
 	$wgFFmpegLocation = '/usr/bin/ffmpeg';
+
+	// The type of HTML5 player to use
+	$wgTmhWebPlayer = $wmgTmhWebPlayer;
 }
 
 if ( $wmgUseUploadsLink ) {
