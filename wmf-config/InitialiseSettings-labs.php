@@ -294,11 +294,6 @@ function wmfLabsSettings() {
 			]
 		],
 
-		// T97704
-		'wmgGatherAutohideFlagLimit' => [
-			'default' => 3,
-		],
-
 		'wmgEnableGeoData' => [
 			'wikidatawiki' => true,
 		],
@@ -436,10 +431,6 @@ function wmfLabsSettings() {
 		],
 		'wmgFlowEnableOptInBetaFeature' => [
 			'enwiki' => true,
-		],
-
-		'wmgUseGather' => [
-			'default' => true,
 		],
 
 		'wmgUseWPB' => [
