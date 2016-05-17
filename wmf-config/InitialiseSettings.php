@@ -12503,6 +12503,11 @@ $wgConf->settings = [
 	'foundationwiki' => true,
 ],
 
+'wmgTmhWebPlayer' => [
+	'default' => 'mwembed',
+	'test2wiki' => 'videojs',
+],
+
 'wmgMinimumVideoPlayerSize' => [
 	'default' => 800,
 ],
