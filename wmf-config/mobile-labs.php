@@ -11,10 +11,6 @@ if ( $wmgMobileFrontend ) {
 			$wgJsonConfigs['JsonZeroConfig']['remote']['url'] = 'http://zero.wikimedia.beta.wmflabs.org/w/api.php';
 		}
 	}
-
-	if ( $wmgUseGather ) {
-		require_once "$IP/extensions/Gather/Gather.php";
-	}
 }
 
 // T114552
@@ -24,5 +20,4 @@ $wgMFForceSecureLogin = false;
 $wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
 $wgMFSpecialCaseMainPage = $wmgMFSpecialCaseMainPage;
 
-$wgGatherAutohideFlagLimit = $wmgGatherAutohideFlagLimit;
 $wgMFMobileFormatterHeadings = $wmgMFMobileFormatterHeadings;
