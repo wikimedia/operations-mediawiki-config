@@ -15653,6 +15653,7 @@ $wgConf->settings = [
 	'zhwiki' => true,
 	'wikidatawiki' => true,
 	'specieswiki' => true, // T134898
+	'outreachwiki' => true, // T135582
 ],
 'wmgUseDisambiguator' => [
 	'default' => true,
