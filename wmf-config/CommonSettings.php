@@ -2671,9 +2671,7 @@ if ( $wmgUseEcho ) {
 
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
-	if ( $wmgUseClusterJobqueue ) {
-		$wgEchoBundleEmailInterval = $wmgEchoBundleEmailInterval;
-	}
+	$wgEchoHelpPage = $wmgEchoHelpPage;
 	$wgEchoNotificationIcons['site']['url'] = $wmgEchoSiteNotificationIconUrl;
 
 	# Outgoing from and reply to address for Echo notifications extension
