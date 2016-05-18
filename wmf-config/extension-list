@@ -83,6 +83,7 @@ $IP/extensions/MwEmbedSupport/MwEmbedSupport.php
 $IP/extensions/NavigationTiming/NavigationTiming.php
 $IP/extensions/NewUserMessage/NewUserMessage.php
 $IP/extensions/Nuke/SpecialNuke.php
+$IP/extensions/OATHAuth/extension.json
 $IP/extensions/OAuth/OAuth.php
 $IP/extensions/PagedTiffHandler/PagedTiffHandler.php
 $IP/extensions/PageImages/PageImages.php
