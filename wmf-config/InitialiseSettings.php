@@ -16956,6 +16956,12 @@ $wgConf->settings = [
 	'wikivoyage' => true,
 ],
 
+'wmgUseOATHAuth' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+],
+
 ];
 
 ### WMF Labs override #####
