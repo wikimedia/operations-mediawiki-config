@@ -83,6 +83,10 @@ $wgConf->settings = [
 	'nonglobal' => false,
 ],
 
+'wgDisableAuthManager' => [
+	'default' => true,
+],
+
 # wgLanguageCode @{
 'wgLanguageCode' => [
 	'default' => '$lang',
