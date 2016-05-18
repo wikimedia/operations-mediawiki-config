@@ -2660,10 +2660,6 @@ if ( $wmgEnableGeoData ) {
 if ( $wmgUseEcho ) {
 	require_once( "$IP/extensions/Echo/Echo.php" );
 
-	if ( $wmgUseClusterJobqueue ) {
-		$wgJobTypeConf['MWEchoNotificationEmailBundleJob'] = [ 'checkDelay' => true ] + $wgJobTypeConf['default'];
-	}
-
 	// Eventlogging for Schema:EchoMail
 	$wgEchoConfig['eventlogging']['EchoMail']['enabled'] = true;
 	// Eventlogging for Schema:EchoInteraction
@@ -2671,9 +2667,6 @@ if ( $wmgUseEcho ) {
 
 	$wgEchoEnableEmailBatch = $wmgEchoEnableEmailBatch;
 	$wgEchoEmailFooterAddress = $wmgEchoEmailFooterAddress;
-	if ( $wmgUseClusterJobqueue ) {
-		$wgEchoBundleEmailInterval = $wmgEchoBundleEmailInterval;
-	}
 	$wgEchoNotificationIcons['site']['url'] = $wmgEchoSiteNotificationIconUrl;
 
 	# Outgoing from and reply to address for Echo notifications extension

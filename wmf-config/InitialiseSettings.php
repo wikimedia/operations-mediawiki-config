@@ -15577,14 +15577,6 @@ $wgConf->settings = [
 	'enwiki' => 'no-reply-notifications@wikipedia.org',
 ],
 
-// The time interval in seconds between each bundle-able email notification
-// Set to 0 to disable email bundling
-'wmgEchoBundleEmailInterval' => [
-	'default' => 14400,
-	'test2wiki' => 300,
-	'officewiki' => 0,
-],
-
 // Use extension1 db for all wikis
 'wmgEchoCluster' => [
 	'default' => 'extension1',
