@@ -145,7 +145,7 @@ $wgLBFactoryConf = array(
 	),
 	's7' => array(
 		'db1041' => 0,   # 1.4TB  64GB, master
-		'db1033' => 150, # 1.4TB  64GB, old master
+#		'db1033' => 150, # 1.4TB  64GB, old master - maintenance T134555
 		'db1028' => 50,  # 1.4TB  64GB, vslow, dump
 		'db1034' => 150, # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1039' => 300, # 1.4TB  64GB
@@ -535,7 +535,7 @@ $wgLBFactoryConf = array(
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => array(
 		'10.64.16.20' => 20, # db1031, master
-		'10.64.16.18' => 10, # db1029
+#		'10.64.16.18' => 10, # db1029 - maintenance T112079
 	),
 ),
 
