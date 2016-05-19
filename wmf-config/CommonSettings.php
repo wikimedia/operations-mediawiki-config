@@ -2903,14 +2903,6 @@ if ( $wmgUseUniversalLanguageSelector ) {
 		$wgTranslatePageTranslationULS = true;
 	}
 
-	// Fetch fonts from stable URLs so that they're cached longer. This is to avoid
-	// re-downloading of fonts for each new branch. But that only works for production,
-	// not labs. If this variable is not set, $wgExtensionAssetsPath is used.
-	if ( $wmfRealm === 'production' ) {
-		$wgULSFontRepositoryBasePath = ( $wgServer . '/static/current'
-			. '/extensions/UniversalLanguageSelector/data/fontrepo/fonts/' );
-	}
-
 	$wgULSEventLogging = $wmgULSEventLogging;
 
 	// Enable the compact language links Beta Feature
