@@ -7845,8 +7845,9 @@ $wgConf->settings = [
 			'mergehistory' => true,
 			'protect' => true,
 			'suppressredirect'  => true,
-			'deletedtext'       => true
-		], // T87558, T135370
+			'deletedtext'       => true,
+                        'deletedhistory' => true
+		], // T87558, T135370, T135725
 	],
 	'+fawikibooks' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T111024
