@@ -7845,8 +7845,9 @@ $wgConf->settings = [
 			'mergehistory' => true,
 			'protect' => true,
 			'suppressredirect'  => true,
-			'deletedtext'       => true
-		], // T87558, T135370
+			'deletedtext'       => true,
+                        'deletedhistory' => true
+		], // T87558, T135370, T135725
 	],
 	'+fawikibooks' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T111024
@@ -9149,18 +9150,7 @@ $wgConf->settings = [
 			'uploader', // T71171
 			'confirmed', // T87348
 			'patroller', // T118847
-		],
-		'botadmin' => [
-			'patroller',
-			'Image-reviewer',
-			'rollbacker',
-			'autopatrol',
-			'uploader',
-			'templateeditor', // T74146
-			'abusefilter', // T74502
-			'confirmed', // T87348
-			'eliminator' // T87558
-		], // T71411
+		]
 	],
 	'+fawikibooks' => [
 		'sysop' => [
@@ -9847,7 +9837,6 @@ $wgConf->settings = [
 			'templateeditor', // T74146
 			'abusefilter', // T74502
 			'confirmed', // T87348
-			'eliminator' // T87558
 		], // T71411
 	],
 	'+fawikibooks' => [
