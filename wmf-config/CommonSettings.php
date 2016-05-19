@@ -391,19 +391,6 @@ if ( $wmgUseCentralAuth ) {
 			'PasswordCannotBePopular' => 10000,
 		];
 
-		if ( array_intersect(
-			[ 'bureaucrat', 'sysop', 'checkuser', 'oversight', 'interface-editor' ],
-			$central->getLocalGroups()
-		) ) {
-			$effectivePolicy = UserPasswordPolicy::maxOfPolicies(
-				$effectivePolicy,
-				$privilegedPolicy
-			);
-			return true;
-		}
-
-		// Result should be cached by getLocalGroups() above
-		$attachInfo = $central->queryAttached();
 		$enforceWikiGroups = [
 			'centralnoticeadmin' => [ 'metawiki', 'testwiki' ],
 			'templateeditor' => [ 'fawiki', 'rowiki' ],
@@ -411,21 +398,19 @@ if ( $wmgUseCentralAuth ) {
 			'translator' => [ 'incubatorwiki' ],
 			'technician' => [ 'trwiki' ],
 			'wikidata-staff' => [ 'wikidata' ],
+			'bureaucrat' => '*',
+			'sysop' => '*',
+			'checkuser' => '*',
+			'oversight' => '*',
+			'interface-editor' => '*',
 		];
 
-		foreach ( $enforceWikiGroups as $group => $wikis ) {
-			foreach ( $wikis as $wiki ) {
-				if ( isset( $attachInfo[$wiki]['groups'] )
-					&& in_array( $group, $attachInfo[$wiki]['groups'] ) )
-				{
-					$effectivePolicy = UserPasswordPolicy::maxOfPolicies(
-						$effectivePolicy,
-						$privilegedPolicy
-					);
-					return true;
-				}
-			}
-		}
+		$effectivePolicy = CentralAuthUtils::enforcePasswordPolicyIfInLocalWikiGroup(
+			$central,
+			$enforceWikiGroups,
+			$privilegedPolicy,
+			$effectivePolicy
+		);
 
 		return true;
 	};
@@ -1452,31 +1437,6 @@ $wgHooks['LoginAuthenticateAudit'][] = function( $user, $pass, $retval ) {
 			" - " . @$headers['X-Forwarded-For'] .
 			' - ' . @$headers['User-Agent']
 		);
-	}
-	return true;
-};
-
-// Estimate users affected if we increase the minimum
-// password length to 8 for privileged groups, i.e.
-// T104370, T104371, T104372, T104373
-$wgHooks['LoginAuthenticateAudit'][] = function( $user, $pass, $retval ) {
-	global $wmgUseCentralAuth;
-	if ( $retval == LoginForm::SUCCESS
-		&& strlen( $pass ) < 8
-	) {
-		if ( $wmgUseCentralAuth ) {
-			$central = CentralAuthUser::getInstance( $user );
-			if ( $central->exists() && array_intersect(
-				[ 'staff', 'sysadmin', 'steward', 'ombudsman', 'checkuser' ],
-				array_merge(
-					$central->getLocalGroups(),
-					$central->getGlobalGroups()
-				)
-			) ) {
-				$logger = LoggerFactory::getInstance( 'badpass' );
-				$logger->info( "Login by privileged user '{$user->getName()}' with too short password" );
-			}
-		}
 	}
 	return true;
 };
