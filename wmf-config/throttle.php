@@ -28,13 +28,14 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T134902 - UK EU edit-a-thon
-	'from'   => '2016-05-14T10:00 +1:00',
-	'to'     => '2016-05-14T17:00 +1:00',
-	'IP'     => '31.52.143.57',
+$wmgThrottlingExceptions[] = [ // T135777 - San Francisco Yerba Buena Center for the Arts edit-a-thon
+	'from'   => '2016-05-19T18:00 -7:00',
+	'to'     => '2016-05-19T23:00 -7:00',
+	'IP'     => '209.116.58.194',
 	'dbname' => [ 'enwiki', 'commonswiki' ],
-	'value'  => 30 // 20 expected
+	'value'  => 50
 ];
+
 
 ## Add throttling definitions above.
 
