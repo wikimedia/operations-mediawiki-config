@@ -9158,9 +9158,8 @@ $wgConf->settings = [
 			'uploader',
 			'templateeditor', // T74146
 			'abusefilter', // T74502
-			'confirmed', // T87348
-			'eliminator' // T87558
-		], // T71411
+			'confirmed' // T87348
+		], // T71411, T135736
 	],
 	'+fawikibooks' => [
 		'sysop' => [
