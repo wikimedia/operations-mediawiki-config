@@ -13574,9 +13574,6 @@ $wgConf->settings = [
 // 1 => 100% of new accounts; 2 => 50%; 10 => 10%; 20 => 5%; etc.
 'wmgVisualEditorNewAccountEnableProportion' => [
 	'default' => false,
-	'dewiki' => 1,
-	'enwiki' => 1,
-	'eswiki' => 1,
 ],
 
 // Whether VisualEditor should be enabled for a proportion of non accounts (IPs).
