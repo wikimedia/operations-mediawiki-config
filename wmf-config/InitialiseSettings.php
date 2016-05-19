@@ -7845,8 +7845,9 @@ $wgConf->settings = [
 			'mergehistory' => true,
 			'protect' => true,
 			'suppressredirect'  => true,
-			'deletedtext'       => true
-		], // T87558, T135370
+			'deletedtext'       => true,
+                        'deletedhistory' => true
+		], // T87558, T135370, T135725
 	],
 	'+fawikibooks' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T111024
@@ -9158,9 +9159,8 @@ $wgConf->settings = [
 			'uploader',
 			'templateeditor', // T74146
 			'abusefilter', // T74502
-			'confirmed', // T87348
-			'eliminator' // T87558
-		], // T71411
+			'confirmed' // T87348
+		], // T71411, T135736
 	],
 	'+fawikibooks' => [
 		'sysop' => [
