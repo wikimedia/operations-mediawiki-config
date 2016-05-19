@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_6e1a121d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7849,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-05-19T13:35:02Z",
+      "side": 1,
+      "message": "Add a comma to the last element of an array.",
+      "revId": "9178406b9ed455ab22656a209c58eda07c0b68ad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
