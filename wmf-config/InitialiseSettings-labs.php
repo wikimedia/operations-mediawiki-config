@@ -640,5 +640,9 @@ function wmfLabsSettings() {
 			'default' => -1,
 		],
 
+		// test enabling AuthManager T135498, T135504
+		'wgDisableAuthManager' => [
+			'default' => false,
+		],
 	];
 } # wmflLabsSettings()
