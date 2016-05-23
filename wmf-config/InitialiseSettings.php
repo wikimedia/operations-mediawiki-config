@@ -16949,9 +16949,10 @@ $wgConf->settings = [
 ],
 
 'wmgUseOATHAuth' => [
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
+	'default' => true,
+	'private' => false,
+	'fishbowl' => false,
+	'nonglobal' => false,
 ],
 
 ];
