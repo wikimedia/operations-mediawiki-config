@@ -8230,6 +8230,13 @@ $wgConf->settings = [
 			'createaccount' => true,
 			'noratelimit' => true,
 			'tboverride' => true,
+			'globalgroupmembership' => true,
+		],
+		'wmf-supportsafety' => [ // T136046
+			'userrights-interwiki' => true,
+			'centralauth-lock' => true,
+			'globalblock' => true,
+			'centralauth-rename' => true,
 		],
 	],
 	'mkwiki' => [
