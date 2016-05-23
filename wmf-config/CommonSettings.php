@@ -2916,10 +2916,8 @@ if ( $wmgUseUniversalLanguageSelector ) {
 
 	$wgULSEventLogging = $wmgULSEventLogging;
 
-	// Enable the compact language links Beta Feature
-	if ( $wmgULSCompactLinks ) {
-		$wgULSCompactLinks = true;
-	}
+	// Compact Language Links as Beta feature
+	$wgULSCompactLanguageLinksBetaFeature = $wmgULSCompactLanguageLinksBetaFeature;
 }
 
 if ( $wmgUseContentTranslation ) {

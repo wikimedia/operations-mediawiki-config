@@ -403,6 +403,10 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		'wmgULSCompactLanguageLinksBetaFeature' => [
+			'default' => false,
+		],
+
 		'wmgUseNavigationTiming' => [
 			'default' => true,
 		],
