@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ae564743_af07f2cb",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2920,
+      "author": {
+        "id": 866
+      },
+      "writtenOn": "2016-05-23T15:16:08Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ae564743_3427b7c6",
+      "revId": "c89f7175993e26eb1fb9910b04568b778237990d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ae564743_945b2356",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2016-05-23T14:49:48Z",
       "side": 1,
       "message": "Optionally add:\n\n\u0027testwiki\u0027 \u003d\u003e true,\n\u0027test2wiki\u0027 \u003d\u003e true,",
+      "revId": "c89f7175993e26eb1fb9910b04568b778237990d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_2fe922e1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12593,
+      "author": {
+        "id": 866
+      },
+      "writtenOn": "2016-05-23T15:16:08Z",
+      "side": 1,
+      "message": "Since we need it in user pref, testwiki\u003d\u003efalse, test2wiki\u003d\u003efalse",
+      "parentUuid": "ae564743_945b2356",
       "revId": "c89f7175993e26eb1fb9910b04568b778237990d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
