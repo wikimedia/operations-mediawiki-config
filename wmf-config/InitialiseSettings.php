@@ -12473,9 +12473,9 @@ $wgConf->settings = [
 ],
 
 'wmgCustomUploadDialog' => [
-	// This should be 'commonswiki' only, but we temporarily need it on all wikis until
-	// the new API code from I3017b8f09c27625deb7a92d6f667895b71cc0637 is deployed to Commons
-	'default' => true,
+	'default' => false,
+	'commonswiki' => true,
+	'testwiki' => true,
 ],
 
 'wmgUseMwEmbedSupport' => [
