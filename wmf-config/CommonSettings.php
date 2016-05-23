@@ -3143,8 +3143,11 @@ if ( $wmgUseParsoidBatchAPI ) {
 
 if ( $wmgUseOATHAuth ) {
 	wfLoadExtension( 'OATHAuth' );
-	// Roll this feature out to specific groups initially
-	$wgGroupPermissions['*']['oathauth-enable'] = false;
+
+	if ( $wmgOATHAuthDisableRight ) {
+		$wgGroupPermissions['*']['oathauth-enable'] = false;
+	}
+
 	if ( $wmgUseCentralAuth ) {
 		$wgOATHAuthDatabase = 'centralauth';
 	}
