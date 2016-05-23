@@ -403,6 +403,18 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		'wmgULSCompactLanguageLinksBetaFeature' => [
+			'default' => false,
+		],
+
+		'wmgULSCompactLinksForNewAccounts' => [
+			'default' => true,
+		],
+
+		'wmgULSCompactLinksEnableAnon' => [
+			'default' => true,
+		],
+
 		'wmgUseNavigationTiming' => [
 			'default' => true,
 		],
