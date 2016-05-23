@@ -2916,9 +2916,9 @@ if ( $wmgUseUniversalLanguageSelector ) {
 
 	$wgULSEventLogging = $wmgULSEventLogging;
 
-	// Enable the compact language links Beta Feature
-	if ( $wmgULSCompactLinks ) {
-		$wgULSCompactLinks = true;
+	// Compact Language Links as Beta Feature?
+	if ( $wgULSCompactLanguageLinksBetaFeature ) {
+		$wgULSCompactLanguageLinksBetaFeature = false;
 	}
 }
 
