@@ -15635,6 +15635,7 @@ $wgConf->settings = [
 	'bswiki' => true,
 	'cawiki' => true, // T120829
 	'frwikisource' => true, // T132914
+	'frwikivoyage' => true, // T135702
 	'nowiki' => true, // T132693
 	'urwiki' => true,
 	'zhwiki' => true,
