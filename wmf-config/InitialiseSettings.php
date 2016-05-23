@@ -11721,6 +11721,10 @@ $wgConf->settings = [
 	'private' => false,
 	'fishbowl' => false, // not needed, private editing...
 ],
+'wmgSpamBlacklistEventLogging' => [
+	'default' => false,
+	'testwiki' => true,
+],
 
 'wmgUseGlobalTitleBlacklist' => [
 	'default' => true,

@@ -763,6 +763,7 @@ if ( $wmgUseSpamBlacklist ) {
 		],
 	];
 	$wgLogSpamBlacklistHits = true;
+	$wgSpamBlacklistEventLogging = $wmgSpamBlacklistEventLogging;
 }
 
 include( $IP . '/extensions/TitleBlacklist/TitleBlacklist.php' );
