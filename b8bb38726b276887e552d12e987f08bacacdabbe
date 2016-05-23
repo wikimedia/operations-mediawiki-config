@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_d9daf44f",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2920,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2016-05-23T11:15:09Z",
+      "side": 1,
+      "message": "Typo? Should probably use $wmg.",
+      "revId": "b8bb38726b276887e552d12e987f08bacacdabbe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_791008f8",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2921,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2016-05-23T11:15:09Z",
+      "side": 1,
+      "message": "This makes no sense. Essentially you are always setting it to false.",
+      "revId": "b8bb38726b276887e552d12e987f08bacacdabbe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_b9dd8049",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 407,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2016-05-23T11:15:09Z",
+      "side": 1,
+      "message": "Shouldn\u0027t it be off in labs?",
+      "revId": "b8bb38726b276887e552d12e987f08bacacdabbe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_19e10cfb",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12594,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2016-05-23T11:15:09Z",
+      "side": 1,
+      "message": "It should stay as beta feature in production.",
+      "revId": "b8bb38726b276887e552d12e987f08bacacdabbe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
