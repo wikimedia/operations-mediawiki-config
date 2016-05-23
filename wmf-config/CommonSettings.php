@@ -1991,8 +1991,8 @@ if ( $wmgCustomUploadDialog ) {
 		'licensemessages' => [
 			// Messages defined in WikimediaMessages: upload-form-label-own-work-message-commons,
 			// upload-form-label-not-own-work-message-commons, upload-form-label-not-own-work-local-commons
-			'local' => $wgDBname === 'commonswiki' ? 'commons' : 'generic-local',
-			'foreign' => $wgDBname === 'commonswiki' ? 'commons' : 'generic-foreign',
+			'local' => 'commons',
+			'foreign' => 'commons',
 		],
 		'comment' => 'Cross-wiki upload from $HOST',
 		'format' => [
