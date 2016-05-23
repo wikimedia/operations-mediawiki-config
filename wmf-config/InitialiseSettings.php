@@ -16953,6 +16953,12 @@ $wgConf->settings = [
 	'private' => false,
 	'fishbowl' => false,
 	'nonglobal' => false,
+	'officewiki' => true,
+],
+
+'wmgOATHAuthDisableRight' => [
+	'default' => true, // Roll out to specific groups
+	'officewiki' => false,
 ],
 
 ];
