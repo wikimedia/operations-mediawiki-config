@@ -2916,10 +2916,16 @@ if ( $wmgUseUniversalLanguageSelector ) {
 
 	$wgULSEventLogging = $wmgULSEventLogging;
 
-	// Enable the compact language links Beta Feature
+	// To be removed: Enable the compact language links Beta Feature
 	if ( $wmgULSCompactLinks ) {
 		$wgULSCompactLinks = true;
 	}
+
+	// Compact Language Links as Beta feature
+	$wgULSCompactLanguageLinksBetaFeature = $wmgULSCompactLanguageLinksBetaFeature;
+	$wgULSCompactLinksEnableAnon = $wmgULSCompactLinksEnableAnon;
+	$wgULSCompactLinksForNewAccounts = $wmgULSCompactLinksForNewAccounts;
+	$wgDefaultUserOptions['compact-language-links'] = 1;
 }
 
 if ( $wmgUseContentTranslation ) {
