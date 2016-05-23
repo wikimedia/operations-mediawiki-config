@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_8f32ee03",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 2921,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2016-05-23T16:05:49Z",
+      "side": 1,
+      "message": "I don\u0027t see these two defined anywhere for production.",
+      "revId": "c8c11378299fe7922de13b6dea87be994f30bdc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
