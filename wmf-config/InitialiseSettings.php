@@ -7698,7 +7698,7 @@ $wgConf->settings = [
 		],
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T126607
 		'extendedmover' => [ // T133981
-			'supressredirect' => true,
+			'suppressredirect' => true,
 			'move-subpages' => true,
 			'move' => true,
 		],
