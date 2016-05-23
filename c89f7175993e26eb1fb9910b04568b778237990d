@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_3427b7c6",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2920,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2016-05-23T14:49:48Z",
+      "side": 1,
+      "message": "Should we also add a configuration variable for $wgULSCompactLinksEnableAnon?\n\nIf $wmgULSCompactLanguageLinksBetaFeature is true then I think we will also want to add:\n\n$wgDefaultUserOptions[\u0027compact-language-links\u0027] \u003d 1;\n\nOtherwise the preference is false by default for all users.",
+      "revId": "c89f7175993e26eb1fb9910b04568b778237990d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae564743_945b2356",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12593,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2016-05-23T14:49:48Z",
+      "side": 1,
+      "message": "Optionally add:\n\n\u0027testwiki\u0027 \u003d\u003e true,\n\u0027test2wiki\u0027 \u003d\u003e true,",
+      "revId": "c89f7175993e26eb1fb9910b04568b778237990d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
