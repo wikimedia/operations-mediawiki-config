@@ -8231,6 +8231,12 @@ $wgConf->settings = [
 			'noratelimit' => true,
 			'tboverride' => true,
 		],
+		'wmf-supportsafety' => [ // T136046
+			'userrights-interwiki' => true,
+			'centralauth-lock' => true,
+			'globalblock' => true,
+			'centralauth-rename' => true,
+		],
 	],
 	'mkwiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
