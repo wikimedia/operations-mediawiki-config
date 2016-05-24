@@ -12574,12 +12574,6 @@ $wgConf->settings = [
 	'nonbetafeatures' => false,
 ],
 
-// To be removed
-'wmgULSCompactLinks' => [
-	'default' => true,
-	'nonbetafeatures' => false,
-],
-
 'wmgULSCompactLanguageLinksBetaFeature' => [
 	'default' => true,
 	'testwiki' => false,

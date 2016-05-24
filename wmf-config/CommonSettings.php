@@ -2916,11 +2916,6 @@ if ( $wmgUseUniversalLanguageSelector ) {
 
 	$wgULSEventLogging = $wmgULSEventLogging;
 
-	// To be removed: Enable the compact language links Beta Feature
-	if ( $wmgULSCompactLinks ) {
-		$wgULSCompactLinks = true;
-	}
-
 	// Compact Language Links as Beta feature
 	$wgULSCompactLanguageLinksBetaFeature = $wmgULSCompactLanguageLinksBetaFeature;
 	$wgULSCompactLinksEnableAnon = $wmgULSCompactLinksEnableAnon;
