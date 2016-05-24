@@ -35,6 +35,23 @@ $wgWBSharedSettings['specialSiteLinkGroups'] = array(
 	'species'
 );
 
+$baseNs = 120;
+
+// Define the namespace indexes for repo (and client wikis also need to be aware of these,
+// thus entityNamespaces need to be a shared setting).
+//
+// NOTE: do *not* define WB_NS_ITEM and WB_NS_ITEM_TALK when using a core namespace for items!
+define( 'WB_NS_PROPERTY', $baseNs );
+define( 'WB_NS_PROPERTY_TALK', $baseNs + 1 );
+define( 'WB_NS_QUERY', $baseNs + 2 );
+define( 'WB_NS_QUERY_TALK', $baseNs + 3 );
+
+// Tell Wikibase which namespace to use for which kind of entity content.
+$wgWBSharedSettings['entityNamespaces'] = array(
+	'wikibase-item' => NS_MAIN, // CONTENT_MODEL_WIKIBASE_ITEM
+	'wikibase-property' => WB_NS_PROPERTY // CONTENT_MODEL_WIKIBASE_PROPERTY
+);
+
 if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki', 'testwikidatawiki' ) ) ) {
 	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'testwikidata';
 } else {
@@ -42,14 +59,6 @@ if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki', 'testwikidatawiki' ) )
 }
 
 if ( $wmgUseWikibaseRepo ) {
-	$baseNs = 120;
-
-	// Define the namespace indexes
-	define( 'WB_NS_PROPERTY', $baseNs );
-	define( 'WB_NS_PROPERTY_TALK', $baseNs + 1 );
-	define( 'WB_NS_QUERY', $baseNs + 2 );
-	define( 'WB_NS_QUERY_TALK', $baseNs + 3 );
-
 	$wgNamespaceAliases['Item'] = NS_MAIN;
 	$wgNamespaceAliases['Item_talk'] = NS_TALK;
 
@@ -60,10 +69,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgExtraNamespaces[WB_NS_QUERY_TALK] = 'Query_talk';
 
 	$wgWBRepoSettings = $wgWBSharedSettings + $wgWBRepoSettings;
-
-	// Assigning the correct content models to the namespaces
-	$wgWBRepoSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_ITEM] = NS_MAIN;
-	$wgWBRepoSettings['entityNamespaces'][CONTENT_MODEL_WIKIBASE_PROPERTY] = WB_NS_PROPERTY;
 
 	$wgWBRepoSettings['statementSections'] = array(
 		'item' => array(
