@@ -12590,8 +12590,10 @@ $wgConf->settings = [
 	'nonbetafeatures' => false,
 ],
 
-'wmgULSCompactLinks' => [
+'wmgULSCompactLanguageLinksBetaFeature' => [
 	'default' => true,
+	'testwiki' => false,
+	'test2wiki' => false,
 	'nonbetafeatures' => false,
 ],
 
