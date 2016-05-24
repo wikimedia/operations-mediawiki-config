@@ -13739,6 +13739,12 @@ $wgConf->settings = [
 	'skwiki' => 'uca-sk', // [[w:sk:Special:PermaLink/5785371]]
 	'svwiki' => 'uca-sv', // T47446
 	'svwikisource' => 'uca-sv@collation=standard', // T48058
+	'tawiki' => 'uca-ta', // T75453
+	'tawikibooks' => 'uca-ta', // T75453
+	'tawikinews' => 'uca-ta', // T75453
+	'tawikiquote' => 'uca-ta', // T75453
+	'tawikisource' => 'uca-ta', // T75453
+	'tawiktionary' => 'uca-ta', // T75453
 	'thwikibooks' => 'uca-default', // T50097
 	'thwikinews' => 'uca-default', // T50097
 	'thwiki' => 'uca-default', // T50097
