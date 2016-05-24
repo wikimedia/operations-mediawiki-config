@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae564743_34ededb4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 12593,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2016-05-24T14:37:50Z",
+      "side": 1,
+      "message": "when syncing the config change, I would first sync InitialiseSettings.php and then CommonSettings.php. This way, the new variables below are defined in CommonSettings.php\n\nBut in that case, $wmgULSCompactLinks will then briefly be undefined and for a moment, error logs will be flooded with undefined variable notices.  \n\nMaybe that\u0027s okay, or maybe the patch can be split in a way that avoids that?",
+      "revId": "86dbebe4e232a7cfa91db31ad594fda726a5069c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
