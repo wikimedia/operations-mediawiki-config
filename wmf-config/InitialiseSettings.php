@@ -8434,7 +8434,10 @@ $wgConf->settings = [
 		'autoconfirmed' => [
 			'collectionsaveascommunitypage' => false, // T85780
 		],
-		'bot' => [ 'move-categorypages' => true ], // T87230
+		'bot' => [
+			'move-categorypages' => true, // T87230
+			'changetags' => true, // T136187
+		],
 		'rollbacker' => [ 'rollback' => true ],
 		'uploader' => [ // T14334
 			'upload' => true,
@@ -8443,6 +8446,7 @@ $wgConf->settings = [
 		],
 		'user' => [ // T68871
 			'move-categorypages' => false,
+			'changetags' => false, // T136187
 		],
 		'closer' => [
 			'move-categorypages' => true, // T68871
@@ -8471,6 +8475,9 @@ $wgConf->settings = [
 			'deletedhistory' => true,
 			'deletedtext' => true,
 			'abusefilter-log-detail' => true,
+		],
+		'sysop' => [
+			'changetags' => true, // T136187
 		],
 	],
 	'ruwikiquote' => [
