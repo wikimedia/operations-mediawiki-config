@@ -33,13 +33,6 @@ if ( $wgDBname == 'enwiki' ) {
 # them off.
 $wgCirrusSearchMaxShardsPerNode = array();
 
-# Use the safer query from the extra extension that is currently only deployed
-# in beta.
-$wgCirrusSearchWikimediaExtraPlugin[ 'safer' ] = array(
-	'phrase' => array(
-	)
-);
-
 # Override prod configuration, there is only one cluster in beta
 $wgCirrusSearchDefaultCluster = 'eqiad';
 # Don't specially configure cluster for more like queries in beta
