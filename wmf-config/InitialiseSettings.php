@@ -83,10 +83,6 @@ $wgConf->settings = [
 	'nonglobal' => false,
 ],
 
-'wgDisableAuthManager' => [
-	'default' => true,
-],
-
 # wgLanguageCode @{
 'wgLanguageCode' => [
 	'default' => '$lang',
@@ -2224,7 +2220,6 @@ $wgConf->settings = [
 	'itwikiversity' => 'Wikiversità',
 	'itwiktionary' => 'Wikizionario',
 	'iuwiki' => 'ᐅᐃᑭᐱᑎᐊ',
-	'jamwiki' => 'Wikipidia',
 	'jawikinews' => 'ウィキニュース',
 	'jbowiki' => 'uikipedi\'as', // T118067
 	'kawiki' => 'ვიკიპედია',
@@ -2482,7 +2477,6 @@ $wgConf->settings = [
 	'hsbwiktionary' => 'Diskusija_k_Wikisłownikej', // T43328
 	'huwikinews' => 'Wikihírek-vita',
 	'iswiktionary' => 'Wikiorðabókarspjall',
-	'jamwiki' => 'Wikipidia_diskoshan',
 	'jbowiki' => 'casnu_la_.uikipedi\'as.', // T118067
 	'kbdwiki' => 'Уикипедиэм_и_тепсэлъыхьыгъуэ',
 	'knwikisource' => 'ವಿಕಿಸೋರ್ಸ್_ಚರ್ಚೆ', // T110806
@@ -2925,9 +2919,6 @@ $wgConf->settings = [
 	],
 	'+dvwiktionary' => [
 		'Wiktionary_talk' => NS_PROJECT_TALK, // T48846
-	],
-	'elwiki' => [
-		'ΒΠ' => NS_PROJECT, // T135383
 	],
 	'+enwiki' => [ // T8313
 		'WP' => NS_PROJECT,
@@ -4453,8 +4444,8 @@ $wgConf->settings = [
 'wmgMonologAvroSchemas' => [
 	'default' => [
 		'CirrusSearchRequestSet' => [
-			'schema' => file_get_contents( __DIR__ . '/event-schemas/avro/mediawiki/CirrusSearchRequestSet/121456865906.avsc' ),
-			'revision' => 121456865906,
+			'schema' => file_get_contents( __DIR__ . '/event-schemas/avro/mediawiki/CirrusSearchRequestSet/111448028943.avsc' ),
+			'revision' => 111448028943,
 		],
 		'ApiAction' => [
 			'schema' => file_get_contents( __DIR__ . '/event-schemas/avro/mediawiki/ApiAction/101453221640.avsc' ),
@@ -5036,10 +5027,6 @@ $wgConf->settings = [
 		102 => 'プロジェクト',
 		103 => 'プロジェクト‐ノート',
 		829 => 'モジュール‐ノート', // T49933
-	],
-	'jamwiki' => [
-		100 => 'Puotal', // T135479
-		101 => 'Puotal_diskoshan',
 	],
 	'kawiki' => [
 		100 => 'პორტალი',
@@ -7697,11 +7684,6 @@ $wgConf->settings = [
 			'massmessage' => true,
 		],
 		'extendedconfirmed' => [ 'extendedconfirmed' => true ], // T126607
-		'extendedmover' => [ // T133981
-			'suppressredirect' => true,
-			'move-subpages' => true,
-			'move' => true,
-		],
 	],
 	'+enwikibooks' => [
 		// 'rollbacker' => array( 'rollback' => true ),
@@ -7849,10 +7831,8 @@ $wgConf->settings = [
 			'deleterevision' => true,
 			'mergehistory' => true,
 			'protect' => true,
-			'suppressredirect'  => true,
-			'deletedtext'       => true,
-                        'deletedhistory' => true
-		], // T87558, T135370, T135725
+			'suppressredirect'  => true
+		], // T87558
 	],
 	'+fawikibooks' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T111024
@@ -8230,13 +8210,6 @@ $wgConf->settings = [
 			'createaccount' => true,
 			'noratelimit' => true,
 			'tboverride' => true,
-		],
-		'wmf-supportsafety' => [ // T136046
-			'userrights-interwiki' => true,
-			'centralauth-lock' => true,
-			'globalblock' => true,
-			'centralauth-rename' => true,
-			'userrights' => true,
 		],
 	],
 	'mkwiki' => [
@@ -9099,7 +9072,7 @@ $wgConf->settings = [
 	],
 	'+enwiki' => [
 		'bureaucrat' => [ 'accountcreator', 'flow-bot' ],
-		'sysop' => [ 'abusefilter', 'accountcreator', 'autoreviewer', 'confirmed', 'filemover', 'reviewer', 'rollbacker', 'templateeditor', 'massmessage-sender', 'extendedconfirmed', 'extendedmover' ], // T126607, T133981
+		'sysop' => [ 'abusefilter', 'accountcreator', 'autoreviewer', 'confirmed', 'filemover', 'reviewer', 'rollbacker', 'templateeditor', 'massmessage-sender', 'extendedconfirmed' ], // T126607
 	],
 	'+enwikibooks' => [
 		'sysop' => [ 'transwiki', 'uploader' ],
@@ -9162,7 +9135,18 @@ $wgConf->settings = [
 			'uploader', // T71171
 			'confirmed', // T87348
 			'patroller', // T118847
-		]
+		],
+		'botadmin' => [
+			'patroller',
+			'Image-reviewer',
+			'rollbacker',
+			'autopatrol',
+			'uploader',
+			'templateeditor', // T74146
+			'abusefilter', // T74502
+			'confirmed', // T87348
+			'eliminator' // T87558
+		], // T71411
 	],
 	'+fawikibooks' => [
 		'sysop' => [
@@ -9775,7 +9759,7 @@ $wgConf->settings = [
 	],
 	'+enwiki' => [
 		'bureaucrat' => [ 'ipblock-exempt', 'accountcreator', 'sysop', 'flow-bot' ],
-		'sysop' => [ 'rollbacker', 'accountcreator', 'abusefilter', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender', 'extendedconfirmed', 'extendedmover' ], // T126607, T133981
+		'sysop' => [ 'rollbacker', 'accountcreator', 'abusefilter', 'autoreviewer', 'confirmed', 'reviewer', 'filemover', 'templateeditor', 'massmessage-sender', 'extendedconfirmed' ], // T126607
 	],
 	'+enwikibooks' => [
 		'sysop' => [ 'transwiki', 'uploader', ],
@@ -9840,6 +9824,17 @@ $wgConf->settings = [
 			'confirmed', // T87348
 			'patroller', // T118847
 		],
+		'botadmin' => [
+			'patroller',
+			'Image-reviewer',
+			'rollbacker',
+			'autopatrol',
+			'uploader',
+			'templateeditor', // T74146
+			'abusefilter', // T74502
+			'confirmed', // T87348
+			'eliminator' // T87558
+		], // T71411
 	],
 	'+fawikibooks' => [
 		'sysop' => [
@@ -10511,7 +10506,7 @@ $wgConf->settings = [
 	'maiwiki' => [ 'commons', 'en', 'hi', 'ne' ], // T99490
 	'mdfwiki' => [ 'incubator' ],
 	'mediawikiwiki' => [ 'meta', 'w:en', 'usability' ], // T28580
-	'metawiki' => [ 'commons', 'foundation', 'w', 'cs', 'fr', 'zh', 'strategy', 'outreach' ], // T134788
+	'metawiki' => [ 'commons', 'foundation', 'w', 'cs', 'fr', 'zh', 'strategy' ],
 	'mgwiktionary' => [ 'fr', 'io', 'en', 'w', ], // T24694
 	'mlwiki' => [ 'en' ], // T15734
 	'mlwikibooks' => [ 'w', 'en' ], // T52156
@@ -12017,7 +12012,7 @@ $wgConf->settings = [
 ],
 
 'wgCopyUploadProxy' => [
-	'default' => $wmfLocalServices['urldownloader'],
+	'default' => 'url-downloader.wikimedia.org:8080',
 ],
 'wgAllowCopyUploads' => [
 	'default' => false,
@@ -12146,9 +12141,7 @@ $wgConf->settings = [
 		'*.asc-test.nl',                    // African Studies Centre - T133286
 		'*.bn.br',                          // National Digital Library of Brazil - T134584
 		'*.*.bn.br',
-		'museudaimigracao.org.br',          // Immigration museum in Brazil - T134566
-		'*.tasnimnews.com',                 // CC-BY 4.0 content - T134472
-		'*.khamenei.ir',                    // CC-BY 4.0 content - T134472
+		'museudaimigracao.org.br'           // Immigration museum in Brazil - T134566
 	],
 ],
 
@@ -12473,12 +12466,6 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
-'wmgCustomUploadDialog' => [
-	'default' => false,
-	'commonswiki' => true,
-	'testwiki' => true,
-],
-
 'wmgUseMwEmbedSupport' => [
 	'default' => true,
 	'wikitech' => false,
@@ -12502,11 +12489,6 @@ $wgConf->settings = [
 	'test2wiki' => true,
 	'testwiki' => true,
 	'foundationwiki' => true,
-],
-
-'wmgTmhWebPlayer' => [
-	'default' => 'mwembed',
-	'test2wiki' => 'videojs',
 ],
 
 'wmgMinimumVideoPlayerSize' => [
@@ -12581,10 +12563,8 @@ $wgConf->settings = [
 	'nonbetafeatures' => false,
 ],
 
-'wmgULSCompactLanguageLinksBetaFeature' => [
+'wmgULSCompactLinks' => [
 	'default' => true,
-	'testwiki' => false,
-	'test2wiki' => false,
 	'nonbetafeatures' => false,
 ],
 
@@ -13428,7 +13408,6 @@ $wgConf->settings = [
 // Whether the wikitext editor should be the default (first-open) editor on SET wikis
 'wmgVisualEditorSingleEditTabSecondaryEditor' => [
 	'default' => false,
-	'enwiki' => true, // T132806
 ],
 
 // Whether VisualEditor's second tab and section link come after those for wikitext (on non-SET wikis)
@@ -13566,6 +13545,7 @@ $wgConf->settings = [
 	'default' => false,
 	'enwiki' => true,
 	'eswiki' => true,
+	'jawiki' => true,
 ],
 
 // Whether VisualEditor should be enabled for a proportion of new accounts on a
@@ -13573,6 +13553,9 @@ $wgConf->settings = [
 // 1 => 100% of new accounts; 2 => 50%; 10 => 10%; 20 => 5%; etc.
 'wmgVisualEditorNewAccountEnableProportion' => [
 	'default' => false,
+	'dewiki' => 1,
+	'enwiki' => 1,
+	'eswiki' => 1,
 ],
 
 // Whether VisualEditor should be enabled for a proportion of non accounts (IPs).
@@ -13887,23 +13870,11 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
-// whether to use the Math extension
 'wmgUseMath' => [
 	'default' => true, // moved from MW core
 	'wikitech' => false,
 	'loginwiki' => false,
 	'votewiki' => false, // T61702
-],
-
-// whether MathML rendering is enabled by default - T131177
-'wmgUseMathML' => [
-	'testwiki' => true,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
-	'wikibooks' => true,
-	'wikidatawiki' => true,
-	'testwikidatawiki' => true,
-	'default' => false,
 ],
 
 'wgMathFileBackend' => [
@@ -13967,6 +13938,13 @@ $wgConf->settings = [
 		'name' => 'wbsearch',
 		'prefix' => 'wbs'
 	]
+],
+'wmgUseGather' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'enwikivoyage' => true, // T97488
+	'hewiki' => true, // T97488
 ],
 'wmgEnableTextExtracts' => [
 	'default' => true,
@@ -15410,38 +15388,6 @@ $wgConf->settings = [
 'wmgEchoEmailFooterAddress' => [
 	'default' => 'Wikimedia Foundation, 149 New Montgomery St., 6th Fl., San Francisco, CA 94105, USA',
 ],
-'wmgEchoHelpPage' => [
-	'default' => '//www.mediawiki.org/wiki/Special:MyLanguage/Help:Notifications',
-	'enwiki' => '//en.wikipedia.org/wiki/Wikipedia:Notifications/FAQ',
-	'metawiki' => '//meta.wikimedia.org/wiki/Help:Notifications',
-	'dewiki' => '//de.wikipedia.org/wiki/Hilfe:Echo',
-	'frwiki' => '//fr.wikipedia.org/wiki/Aide:Notifications',
-	'huwiki' => '//hu.wikipedia.org/wiki/Wikip%C3%A9dia:%C3%89rtes%C3%ADt%C3%A9sek',
-	'plwiki' => '//pl.wikipedia.org/wiki/Wikipedia:Powiadomienia/FAQ',
-	'ptwiki' => '//www.mediawiki.org/wiki/Help:Notifications/pt-br',
-	'svwiki' => '//sv.wikipedia.org/wiki/Wikipedia:Meddelanden',
-	'bswiki' => '//bs.wikipedia.org/wiki/Pomo%C4%87:Obavje%C5%A1tenja',
-	'nlwiki' => '//nl.wikipedia.org/wiki/Wikipedia:Notificaties',
-	'etwiki' => '//www.mediawiki.org/wiki/Help:Notifications/et',
-	'fawiki' => '//fa.wikipedia.org/wiki/Project:%D8%A2%DA%AF%D8%A7%D9%87%E2%80%8C%D8%B3%D8%A7%D8%B2%DB%8C',
-	'hewiki' => '//www.mediawiki.org/wiki/Help:Notifications/he',
-	'rowiki' => '//www.mediawiki.org/wiki/Help:Notifications/ro',
-	'eswiki' => '//es.wikipedia.org/wiki/Wikipedia:Notificaciones/FAQ',
-	'enwikivoyage' => '//www.mediawiki.org/wiki/Help:Notifications',
-	'simplewiki' => '//www.mediawiki.org/wiki/Help:Notifications/Simple',
-	'cawiki' => '//www.mediawiki.org/wiki/Help:Notifications/ca',
-	'jawiki' => '//www.mediawiki.org/wiki/Help:Notifications/ja',
-	'knwiki' => '//www.mediawiki.org/wiki/Help:Notifications/kn',
-	'kowiki' => '//www.mediawiki.org/wiki/Help:Notifications/ko',
-	'nowiki' => '//www.mediawiki.org/wiki/Help:Notifications/no',
-	'tewiki' => '//www.mediawiki.org/wiki/Help:Notifications/te',
-	'ukwiki' => '//www.mediawiki.org/wiki/Help:Notifications/uk',
-	'viwiki' => '//www.mediawiki.org/wiki/Help:Notifications/vi',
-	'zhwiki' => '//zh.wikipedia.org/wiki/Wikipedia:%E9%80%9A%E7%9F%A5/FAQ',
-	'fiwiki' => '//www.mediawiki.org/wiki/Help:Notifications/fi',
-	'slwiki' => '//www.mediawiki.org/wiki/Help:Notifications/sl',
-	'ckbwiki' => '//ckb.wikipedia.org/wiki/%DB%8C%D8%A7%D8%B1%D9%85%DB%95%D8%AA%DB%8C:%D8%A6%D8%A7%DA%AF%D8%A7%D8%AF%D8%A7%D8%B1%DB%8C',
-],
 'wmgEchoSiteNotificationIconUrl' => [
 	'default' => false,
 
@@ -15465,16 +15411,13 @@ $wgConf->settings = [
 	'testwikidatawiki' => '/static/images/project-logos/notifications/30px-Notification-icon-Wikidata-logo.svg.png',
 ],
 'wmgEchoUseCrossWikiBetaFeature' => [
-	'default' => false,
+	'default' => true,
 ],
 'wmgEchoCrossWikiByDefault' => [
-	'default' => true,
-	'private' => false,
-	'fishbowl' => false,
-	'nonglobal' => false,
+	'default' => false,
 ],
 'wmgEchoShowFooterNotice' => [
-	'default' => false,
+	'default' => true,
 ],
 'wmgEchoFooterNoticeURL' => [
 	'default' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3',
@@ -15644,13 +15587,11 @@ $wgConf->settings = [
 	'bswiki' => true,
 	'cawiki' => true, // T120829
 	'frwikisource' => true, // T132914
-	'frwikivoyage' => true, // T135702
 	'nowiki' => true, // T132693
 	'urwiki' => true,
 	'zhwiki' => true,
 	'wikidatawiki' => true,
 	'specieswiki' => true, // T134898
-	'outreachwiki' => true, // T135582
 ],
 'wmgUseDisambiguator' => [
 	'default' => true,
@@ -15926,16 +15867,6 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
-// Whether Compact Links is enabled for new accounts *by default*
-'wmgULSCompactLinksForNewAccounts' => [
-	'default' => false,
-],
-
-// Whether Compact Links is enabled for anonymous users *by default*
-'wmgULSCompactLinksEnableAnon' => [
-	'default' => false,
-],
-
 'wmgWikibaseCachePrefix' => [
 	'default' => 'wikidatawiki',
 	'testwikidatawiki' => 'testwikidatawiki0',
@@ -16032,10 +15963,6 @@ $wgConf->settings = [
 		'sort' => 'alphabetic_revised',
 	],
 	'fywiki' => [
-		'sort' => 'alphabetic_fy',
-	],
-	// T103207
-	'fywikibooks' => [
 		'sort' => 'alphabetic_fy',
 	],
 	'hewiki' => [
@@ -16423,56 +16350,8 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
-
 'wmgCirrusSearchUserTesting' => [
 	'default' => [
-	],
-	'enwiki' => [
-		'textcat1' => [
-			// Test only activated via query string trigger
-			'sampleRate' => 0,
-			// variables applied to all buckets
-			'globals' => [
-				'wgCirrusSearchInterwikiThreshold' => 3,
-				'wgCirrusSearchLanguageDetectors' => [
-					'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat',
-				],
-				'wgCirrusSearchTextcatLanguages' => [
-					'en', 'es', 'zh', 'pt', 'ar', 'ru', 'fa', 'ko',
-					'bn', 'bg', 'hi', 'el', 'ja', 'ta', 'th', 'he'
-				]
-			],
-			'buckets' => [
-				// control bucket. setup threshold and detector but don't turn on the
-				// language query
-				'a' => [
-					'trigger' => 'textcat1:a',
-					'globals' => [
-						'wgCirrusSearchEnableAltLanguage' => false,
-					],
-				],
-				// test bucket. try textcat and append results when < 3 results found
-				'b' => [
-					'trigger' => 'textcat1:b',
-					'globals' => [
-						'wgCirrusSearchEnableAltLanguage' => true,
-						'wgCirrusSearchInterwikiProv' => 'iwsw6',
-					],
-				],
-				// test bucket. try accept-language, fallback to textcat
-				'c' => [
-					'trigger' => 'textcat1:c',
-					'globals' => [
-						'wgCirrusSearchEnableAltLanguage' => true,
-						'wgCirrusSearchInterwikiProv' => 'iwsw7',
-						'wgCirrusSearchLanguageDetectors' => [
-							'accept-lang' => 'CirrusSearch\\LanguageDetector\\HttpAccept',
-							'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat',
-						],
-					],
-				],
-			],
-		],
 	],
 ],
 
@@ -16966,13 +16845,6 @@ $wgConf->settings = [
 	'default' => false,
 	'mediawikiwiki' => true,
 	'wikivoyage' => true,
-],
-
-'wmgUseOATHAuth' => [
-	'default' => true,
-	'private' => false,
-	'fishbowl' => false,
-	'nonglobal' => false,
 ],
 
 ];

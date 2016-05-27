@@ -186,10 +186,7 @@ if ( !$globals ) {
 	@mkdir( '/tmp/mw-cache-' . $wmgVersionNumber );
 	$tmpFile = tempnam( '/tmp/', "conf-$wmgVersionNumber-$wgDBname" );
 	if ( $tmpFile && file_put_contents( $tmpFile, serialize( $globals ) ) ) {
-		if ( !rename( $tmpFile, $filename ) ) {
-			// T136258: Rename failed, cleanup temp file
-			unlink( $tmpFile );
-		};
+		rename( $tmpFile, $filename );
 	}
 }
 
@@ -220,7 +217,7 @@ if ( $wmfRealm === 'labs' ) {
 }
 
 # Disallow web request DB transactions slower than this
-$wgMaxUserDBWriteDuration = 5;
+$wgMaxUserDBWriteDuration = 6.0;
 # Activate read-only mode for bots when lag is getting high.
 # This should be lower than 'max lag' in the LBFactory conf.
 $wgAPIMaxLagThreshold = 6;
@@ -825,9 +822,6 @@ if ( $wmgUseTimedMediaHandler ) {
 
 	// use new ffmpeg build w/ VP9 & Opus support
 	$wgFFmpegLocation = '/usr/bin/ffmpeg';
-
-	// The type of HTML5 player to use
-	$wgTmhWebPlayer = $wmgTmhWebPlayer;
 }
 
 if ( $wmgUseUploadsLink ) {
@@ -1337,6 +1331,9 @@ if ( $wmgUseCentralAuth ) {
 
 	// Enables Special:GlobalRenameRequest
 	$wgCentralAuthEnableGlobalRenameRequest = true;
+
+	// Enables login using pre-SULF username and notification
+	$wgCentralAuthCheckSULMigration = true;
 
 	// temporary for testing -- legoktm 2015-07-02
 	if ( $wgDBname === 'metawiki' ) {
@@ -1984,42 +1981,6 @@ if ( $wmgUseUploadWizard ) {
 	}
 }
 
-if ( $wmgCustomUploadDialog ) {
-	$wgUploadDialog = [
-		'fields' => [
-			'description' => true,
-			'date' => true,
-			'categories' => true,
-		],
-		'licensemessages' => [
-			// Messages defined in WikimediaMessages: upload-form-label-own-work-message-commons,
-			// upload-form-label-not-own-work-message-commons, upload-form-label-not-own-work-local-commons
-			'local' => $wgDBname === 'commonswiki' ? 'commons' : 'generic-local',
-			'foreign' => $wgDBname === 'commonswiki' ? 'commons' : 'generic-foreign',
-		],
-		'comment' => 'Cross-wiki upload from $HOST',
-		'format' => [
-			'filepage' => '== {{int:filedesc}} ==
-{{Information
-|description=$DESCRIPTION
-|date=$DATE
-|source=$SOURCE
-|author=$AUTHOR
-}}
-
-== {{int:license-header}} ==
-$LICENSE
-
-$CATEGORIES
-',
-			'description' => '{{$LANGUAGE|1=$TEXT}}',
-			'ownwork' => '{{own}}',
-			'license' => '{{self|cc-by-sa-4.0}}',
-			'uncategorized' => '{{subst:unc}}',
-		],
-	];
-}
-
 if ( $wmgUseBetaFeatures ) {
 	wfLoadExtension( 'BetaFeatures' );
 }
@@ -2307,8 +2268,6 @@ if ( $wmgUseMath ) {
 
 	if ( $wgDBname === 'hewiki' ) {
 		$wgDefaultUserOptions['math'] = 0;
-	} elseif ( $wmgUseMathML && $wmgUseRestbaseVRS ) {
-		$wgDefaultUserOptions['math'] = 'mathml';
 	}
 	$wgMathDirectory   = '/mnt/upload7/math'; // just for sanity
 	$wgUseMathJax      = true;
@@ -2621,7 +2580,6 @@ if ( $wmgUseEcho ) {
 	if ( $wmgUseClusterJobqueue ) {
 		$wgEchoBundleEmailInterval = $wmgEchoBundleEmailInterval;
 	}
-	$wgEchoHelpPage = $wmgEchoHelpPage;
 	$wgEchoNotificationIcons['site']['url'] = $wmgEchoSiteNotificationIconUrl;
 
 	# Outgoing from and reply to address for Echo notifications extension
@@ -2638,20 +2596,10 @@ if ( $wmgUseEcho ) {
 	// Whether to use job queue to process web and email notifications
 	$wgEchoUseJobQueue = $wmgEchoUseJobQueue;
 
-	// CentralAuth is extra check to be absolutely sure we don't enable on non-SUL
-	// wikis.
-	if ( $wmgUseCentralAuth && ( $wmgEchoUseCrossWikiBetaFeature || $wmgEchoCrossWikiByDefault ) ) {
-		$wgEchoCrossWikiNotifications = true;
-		// Whether to make the cross-wiki notifications beta feature available
-		$wgEchoUseCrossWikiBetaFeature = $wmgEchoUseCrossWikiBetaFeature;
-		if ( $wmgEchoCrossWikiByDefault ) {
-			$wgDefaultUserOptions['echo-cross-wiki-notifications'] = 1;
-		}
-	} else {
-		// Neither Beta nor normal.  Hide preference and force to false.
-		$wgEchoUseCrossWikiBetaFeature = false;
-		$wgDefaultUserOptions['echo-cross-wiki-notifications'] = 0;
-		$wgHiddenPrefs[] = 'echo-cross-wiki-notifications';
+	// Whether to make the cross-wiki notifications beta feature available
+	$wgEchoUseCrossWikiBetaFeature = $wmgEchoUseCrossWikiBetaFeature;
+	if ( $wmgEchoCrossWikiByDefault ) {
+		$wgDefaultUserOptions['echo-cross-wiki-notifications'] = 1;
 	}
 
 	// Whether to show the footer notice
@@ -2919,11 +2867,10 @@ if ( $wmgUseUniversalLanguageSelector ) {
 
 	$wgULSEventLogging = $wmgULSEventLogging;
 
-	// Compact Language Links as Beta feature
-	$wgULSCompactLanguageLinksBetaFeature = $wmgULSCompactLanguageLinksBetaFeature;
-	$wgULSCompactLinksEnableAnon = $wmgULSCompactLinksEnableAnon;
-	$wgULSCompactLinksForNewAccounts = $wmgULSCompactLinksForNewAccounts;
-	$wgDefaultUserOptions['compact-language-links'] = 1;
+	// Enable the compact language links Beta Feature
+	if ( $wmgULSCompactLinks ) {
+		$wgULSCompactLinks = true;
+	}
 }
 
 if ( $wmgUseContentTranslation ) {
@@ -3171,14 +3118,6 @@ if ( $wmgUseParsoidBatchAPI ) {
 	wfLoadExtension( 'ParsoidBatchAPI' );
 }
 
-if ( $wmgUseOATHAuth ) {
-	wfLoadExtension( 'OATHAuth' );
-	// Roll this feature out to specific groups initially
-	$wgGroupPermissions['*']['oathauth-enable'] = false;
-	if ( $wmgUseCentralAuth ) {
-		$wgOATHAuthDatabase = 'centralauth';
-	}
-}
 
 ### End (roughly) of general extensions ########################
 
