@@ -6941,7 +6941,6 @@ $wgConf->settings = [
 	'specieswiki' => true, // T89147
 	'srwiki' => true, // req by dungodung in #wikimedia-tech, 2008-02-25
 	'srwikisource' => true, // #25963
-	'tawikiquote' => true, // T132868
 	'viwiki' => true, // T7060
 	'testwiki' => true,
 	'test2wiki' => true, // request by Krinkle for testing
