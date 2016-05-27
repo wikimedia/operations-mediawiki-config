@@ -122,9 +122,6 @@ $wgCirrusSearchDropDelayedJobsAfter = array(
 
 $wgCirrusSearchRecycleCompletionSuggesterIndex = $wmgCirrusSearchRecycleCompletionSuggesterIndex;
 
-// repoint morelike queries to codfw
-$wgCirrusSearchMoreLikeThisCluster = 'eqiad';
-
 // cache morelike queries to ObjectCache for 24 hours
 $wgCirrusSearchMoreLikeThisTTL = 86400;
 
