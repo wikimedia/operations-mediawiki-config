@@ -2133,10 +2133,13 @@ if ( $wmgUseVisualEditor ) {
 				$wgVisualEditorRestbaseURL, $wgVisualEditorFullRestbaseURL;
 			if ( $wmfRealm === 'production' ) {
 				$wgVisualEditorRestbaseURL = "https://$wgServerName/api/rest_v1/page/html/";
-				$wgVisualEditorFullRestbaseURL = "https://$wgServerName/api/rest_";
+				// Use domain-relative URLs to avoid the need for
+				// cross-domain API requests on mobile domains. Those are
+				// slower & buggy in some older browsers (see T135171).
+				$wgVisualEditorFullRestbaseURL = "/api/rest_";
 			} elseif ( $wmfRealm === 'labs' ) {
 				$wgVisualEditorRestbaseURL = "//$wgServerName/api/rest_v1/page/html/";
-				$wgVisualEditorFullRestbaseURL = "//$wgServerName/api/rest_";
+				$wgVisualEditorFullRestbaseURL = "/api/rest_";
 			}
 		};
 	}
