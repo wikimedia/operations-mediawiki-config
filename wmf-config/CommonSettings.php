@@ -2131,13 +2131,8 @@ if ( $wmgUseVisualEditor ) {
 		$wgExtensionFunctions[] = function () {
 			global $wgServerName, $wmfRealm,
 				$wgVisualEditorRestbaseURL, $wgVisualEditorFullRestbaseURL;
-			if ( $wmfRealm === 'production' ) {
-				$wgVisualEditorRestbaseURL = "https://$wgServerName/api/rest_v1/page/html/";
-				$wgVisualEditorFullRestbaseURL = "https://$wgServerName/api/rest_";
-			} elseif ( $wmfRealm === 'labs' ) {
-				$wgVisualEditorRestbaseURL = "//$wgServerName/api/rest_v1/page/html/";
-				$wgVisualEditorFullRestbaseURL = "//$wgServerName/api/rest_";
-			}
+			$wgVisualEditorRestbaseURL = "/api/rest_v1/page/html/";
+			$wgVisualEditorFullRestbaseURL = "/api/rest_";
 		};
 	}
 
