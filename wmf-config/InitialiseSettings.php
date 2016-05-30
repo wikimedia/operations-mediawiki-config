@@ -12554,14 +12554,13 @@ $wgConf->settings = [
 // DO NOT add entries here without OK from Greg Grossmeier or James Forrester.
 'wgBetaFeaturesWhitelist' => [
 	'default' => [
-		'visualeditor-enable',                      // VisualEditor – on-going (special permission)
-		'uls-compact-links',                        // ! 2015-05-03 – Compact language links
-		'popups',                                   // 2016-01-16 – Hovercards
-		'beta-feature-flow-user-talk-page',         // 2016-03-02 - Flow opt-in
-		'cx',                                       // 2016-05-08 - ContentTranslation
-		'read-more',                                // 2016-06-10 - Read more
-		'cirrussearch-completionsuggester',         // 2016-06-17 - Completion Suggester / type as you search
-		'echo-cross-wiki-notifications',            // 2016-07-19 - Enhanced/cross-wiki notifications
+		'visualeditor-enable',                      // [Editing] On-going (special permission) – VisualEditor
+		'beta-feature-flow-user-talk-page',         // [Editing] On-going (special permission) – Flow opt-in
+		'uls-compact-links',                        // [Editing] 2016-11-23 – Compact language links
+		'popups',                                   // [Reading] 2016-11-26 – Hovercards
+		'cx',                                       // [Editing] 2016-11-07 - ContentTranslation
+		'read-more',                                // [Reading] 2016-11-11 - Read more
+		'cirrussearch-completionsuggester',         // [Discovery] 2016-11-27 - Completion Suggester / type as you search
 	],
 ],
 
