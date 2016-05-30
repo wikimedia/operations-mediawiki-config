@@ -13903,13 +13903,8 @@ $wgConf->settings = [
 
 // whether MathML rendering is enabled by default - T131177
 'wmgUseMathML' => [
-	'testwiki' => true,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
-	'wikibooks' => true,
-	'wikidatawiki' => true,
-	'testwikidatawiki' => true,
-	'default' => false,
+	'private' => false,
+	'default' => true,
 ],
 
 'wgMathFileBackend' => [
