@@ -1128,7 +1128,6 @@ foreach ( $groupOverrides as $group => $permissions ) {
 if ( $wgDBname == 'loginwiki' ) {
 	$wgGroupPermissions['*'] = [
 		'read' => true,
-		'centralauth-autoaccount' => true,
 		'autocreateaccount' => true,
 	];
 	$wgGroupPermissions['user'] = [
