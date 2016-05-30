@@ -6,14 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname(dirname($vendorDir));
 
 return array(
-    'Cdb\\Exception' => $vendorDir . '/wikimedia/cdb/src/Exception.php',
-    'Cdb\\Reader' => $vendorDir . '/wikimedia/cdb/src/Reader.php',
-    'Cdb\\Reader\\DBA' => $vendorDir . '/wikimedia/cdb/src/Reader/DBA.php',
-    'Cdb\\Reader\\PHP' => $vendorDir . '/wikimedia/cdb/src/Reader/PHP.php',
-    'Cdb\\Util' => $vendorDir . '/wikimedia/cdb/src/Util.php',
-    'Cdb\\Writer' => $vendorDir . '/wikimedia/cdb/src/Writer.php',
-    'Cdb\\Writer\\DBA' => $vendorDir . '/wikimedia/cdb/src/Writer/DBA.php',
-    'Cdb\\Writer\\PHP' => $vendorDir . '/wikimedia/cdb/src/Writer/PHP.php',
     'Mongo' => $vendorDir . '/mongofill/mongofill/src/Mongo.php',
     'MongoBinData' => $vendorDir . '/mongofill/mongofill/src/MongoBinData.php',
     'MongoClient' => $vendorDir . '/mongofill/mongofill/src/MongoClient.php',
