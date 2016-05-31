@@ -5,6 +5,19 @@
 # You must also set wmgUseAbuseFilter in InitialiseSettings.php
 # This file is referenced from an include in CommonSettings.php
 
+# FIXME temporarily duplicated from extension.json to prevent T136644
+$wgAbuseFilterAvailableActions = array(
+	'flag',
+	'throttle',
+	'warn',
+	'disallow',
+	'blockautopromote',
+	'block',
+	'degroup',
+	'tag',
+);
+
+
 $wgGroupPermissions['*']['abusefilter-view'] = true;
 $wgGroupPermissions['*']['abusefilter-log'] = true;
 
