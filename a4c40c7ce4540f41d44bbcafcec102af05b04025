@@ -34,6 +34,24 @@
       "revId": "a4c40c7ce4540f41d44bbcafcec102af05b04025",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e68cf02_3eb2cde4",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 5
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 143
+      },
+      "writtenOn": "2016-05-31T19:15:44Z",
+      "side": 1,
+      "message": "I agree with Dereckson, I think what you mean is something like \"These are not pageviews, they\u0027re background requests, so we use the full URL as a courtesy to analytics scripts.\"",
+      "parentUuid": "ce38dbff_5264b5e1",
+      "revId": "a4c40c7ce4540f41d44bbcafcec102af05b04025",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
