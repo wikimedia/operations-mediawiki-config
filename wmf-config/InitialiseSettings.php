@@ -13724,6 +13724,7 @@ $wgConf->settings = [
 	'huwiki' => 'uca-hu', // T47596
 	'iswiki' => 'uca-is', // T58859
 	'iswiktionary' => 'identity', // T32722
+	'itwiki' => 'uca-it', // T136647
 	'ltwiki' => 'uca-lt', // T123627
 	'lvwiki' => 'uca-lv', // T67003
 	'nlwiki' => 'uca-nl', // T125774
