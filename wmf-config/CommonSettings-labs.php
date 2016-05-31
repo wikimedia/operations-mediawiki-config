@@ -351,6 +351,10 @@ if ( $wmgUsePageAssessments ) {
 	wfLoadExtension( 'PageAssessments' );
 }
 
+if ( $wmgUseUniversalLanguageSelector ) {
+	$wgDefaultUserOptions['compact-language-links'] = 0;
+}
+
 // Experimental
 $wgGadgetsCaching = false;
 

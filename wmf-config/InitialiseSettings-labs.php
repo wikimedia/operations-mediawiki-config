@@ -410,7 +410,7 @@ function wmfLabsSettings() {
 
 		// Whether Compact Links is enabled for new accounts *by default*
 		'wmgULSCompactLinksForNewAccounts' => [
-			'default' => false,
+			'default' => true,
 		],
 
 		// Whether Compact Links is enabled for anonymous users *by default*
