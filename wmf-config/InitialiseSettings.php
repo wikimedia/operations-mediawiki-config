@@ -13515,6 +13515,9 @@ $wgConf->settings = [
 		100 /* Portal */ => true, // T58000
 		102 /* Viquiprojecte */ => true // T58000
 	],
+	'+cswiki' => [
+		NS_PROJECT => true, // T136628
+	],
 	'+enwiki' => [
 		100 /* Portal */ => true, // T58001
 		108 /* Book */ => true, // T58001
