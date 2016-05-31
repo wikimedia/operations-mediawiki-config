@@ -347,6 +347,10 @@ if ( $wmgUseOATHAuth && $wmgUseCentralAuth ) {
 	$wgGroupPermissions['*']['oathauth-enable'] = false;
 }
 
+if ( $wmgUseUniversalLanguageSelector ) {
+	$wgDefaultUserOptions['compact-language-links'] = 0;
+}
+
 // Experimental
 $wgGadgetsCaching = false;
 
