@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+1: Awight <awight@wikimedia.org>
+Code-Review+2: Dereckson <dereckson@espace-win.org>
+Submitted-by: jenkins-bot
+Submitted-at: Wed, 01 Jun 2016 23:20:01 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/250384
+Project: operations/mediawiki-config
+Branch: refs/heads/master
