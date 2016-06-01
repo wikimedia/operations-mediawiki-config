@@ -13613,10 +13613,6 @@ $wgConf->settings = [
 	'default' => false,
 	'enwiki' => true,
 	'eswiki' => true,
-	'kowiki' => true,
-	'wuuwiki' => true,
-	'zh_classicalwiki' => true,
-	'zh_yuewiki' => true,
 ],
 
 // Whether VisualEditor should be enabled for a proportion of new accounts on a
