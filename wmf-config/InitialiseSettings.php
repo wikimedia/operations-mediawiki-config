@@ -13432,17 +13432,25 @@ $wgConf->settings = [
 
 // Whether VisualEditor should re-use the edit tab (and section link) or insert its own; "SET"
 'wmgVisualEditorUseSingleEditTab' => [
-	'default' => false,		# Deploying slowly with community advanced notice
-	'wikisource' => true,	# Starting from SET
-	'wiktionary' => true,	# Starting from SET
+	'default' => false,         // Deploying slowly with community advanced notice
+
+	'wikisource' => true,       // Starting from SET
+	'wiktionary' => true,       // Starting from SET
+
 	'mediawikiwiki' => true,
 	'testwiki' => true,
-	'test2wiki' => true,    // T121421
-	'enwiki' => true,       // T128478
-	'huwiki' => true,       // T126801
-	'jawiki' => true,
-	'plwiki' => true,       // T128477
-	'officewiki' => true,   // Per legoktm's request
+	'test2wiki' => true,        // T121421
+
+	'enwiki' => true,           // T128478
+	'huwiki' => true,           // T126801
+	'jawiki' => true,           // Starting from SET
+	'kowiki' => true,           // Starting from SET
+	'plwiki' => true,           // T128477
+	'wuuwiki' => true,          // Starting from SET
+	'zh_classicalwiki' => true, // Starting from SET
+	'zh_yuewiki' => true,       // Starting from SET
+
+	'officewiki' => true,
 ],
 
 // Time that above variable was switched on, used to determine whether we should prompt user about
@@ -13600,6 +13608,10 @@ $wgConf->settings = [
 	'default' => false,
 	'enwiki' => true,
 	'eswiki' => true,
+	'kowiki' => true,
+	'wuuwiki' => true,
+	'zh_classicalwiki' => true,
+	'zh_yuewiki' => true,
 ],
 
 // Whether VisualEditor should be enabled for a proportion of new accounts on a
