@@ -2194,7 +2194,7 @@ if ( $wmgUseVisualEditor ) {
 
 	// Citoid
 	require_once "$IP/extensions/Citoid/Citoid.php";
-	$wgCitoidServiceUrl = '//citoid.wikimedia.org/api';
+	$wgCitoidServiceUrl = 'https://citoid.wikimedia.org/api';
 }
 
 if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
