@@ -12580,13 +12580,41 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+// T134778
 'wmgUsePopups' => [
 	'default' => false,
+	'huwiki' => true,
 ],
 
 'wmgPopupsBetaFeature' => [
 	'default' => true,
 	'nonbetafeatures' => false,
+],
+
+// T134778
+'wmgPopupsExperiment' => [
+	'default' => false,
+	'huwiki' => true,
+],
+
+// T134778
+'wmgPopupsExperimentConfig' => [
+	'default' => [
+		'name' => 'Disabled experiment',
+		'enabled' => false,
+		'buckets' => [
+			'control' => 1,
+			'A' => 0,
+		],
+	],
+	'huwiki' => [
+		'name' => 'T134778',
+		'enabled' => true,
+		'buckets' => [
+			'control' => 0.99,
+			'A' => 0.01,
+		],
+	],
 ],
 
 'wmgULSCompactLanguageLinksBetaFeature' => [
