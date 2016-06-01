@@ -12578,13 +12578,28 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+// T134778
 'wmgUsePopups' => [
 	'default' => false,
+	'huwiki' => true,
 ],
 
 'wmgPopupsBetaFeature' => [
 	'default' => true,
 	'nonbetafeatures' => false,
+],
+
+// T134778
+'wmgPopupsExperiment' => [
+	'default' => false,
+	'huwiki' => [
+		'name' => 'Hovercards huwiki experiment',
+		'enabled' => true,
+		'buckets' => [
+			'control' => 0.99,
+			'A' => 0.01,
+		],
+	],
 ],
 
 'wmgULSCompactLanguageLinksBetaFeature' => [
