@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e68cf02_2a8283cd",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 413,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2016-06-01T06:45:19Z",
+      "side": 1,
+      "message": "This cannot be tested without making the default for the preference be off.",
+      "revId": "e1b3bf87823295abf26867f9081877a18b2b1e36",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
