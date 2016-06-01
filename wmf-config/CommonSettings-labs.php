@@ -347,10 +347,6 @@ if ( $wmgUseOATHAuth && $wmgUseCentralAuth ) {
 	$wgGroupPermissions['*']['oathauth-enable'] = false;
 }
 
-if ( $wmgUsePageAssessments ) {
-	wfLoadExtension( 'PageAssessments' );
-}
-
 // Experimental
 $wgGadgetsCaching = false;
 
