@@ -640,5 +640,9 @@ function wmfLabsSettings() {
 			'default' => -1,
 		],
 
+		// Test PageAssessments. See T125551.
+		'wmgUsePageAssessments' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
