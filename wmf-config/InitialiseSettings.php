@@ -13369,6 +13369,7 @@ $wgConf->settings = [
 'wmgUseRestbaseVRS' => [
 	'default' => true,
 	'wikitech' => false, // T102178
+	'officewiki' => true,
 	'private' => false,
 ],
 
