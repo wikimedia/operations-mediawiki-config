@@ -2075,6 +2075,8 @@ if ( $wmgUsePopups || ( $wmgPopupsBetaFeature && $wmgUseBetaFeatures ) ) {
 
 	// Make sure we don't enable as a beta feature if we are set to be enabled by default.
 	$wgPopupsBetaFeature = $wmgPopupsBetaFeature && !$wmgUsePopups;
+	$wgPopupsExperiment = $wmgPopupsExperiment;
+	$wgPopupsExperimentConfig = $wmgPopupsExperimentConfig;
 }
 
 if ( $wmgUseRestbaseUpdateJobs ) {
