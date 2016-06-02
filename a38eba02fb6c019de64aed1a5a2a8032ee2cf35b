@@ -34,6 +34,24 @@
       "revId": "a38eba02fb6c019de64aed1a5a2a8032ee2cf35b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_1c16faf6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 12602,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-02T19:52:22Z",
+      "side": 1,
+      "message": "You maybe right, because there is a check for the existence of the config variable: https://github.com/wikimedia/mediawiki-extensions-Popups/blob/master/resources/ext.popups.experiment.js#L81\n\nI may resurrect this patch before SWAT. thanks",
+      "parentUuid": "0efd9372_7c10e604",
+      "revId": "a38eba02fb6c019de64aed1a5a2a8032ee2cf35b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
