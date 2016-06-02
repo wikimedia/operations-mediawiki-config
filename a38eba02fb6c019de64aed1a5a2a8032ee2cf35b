@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_3c8bfe73",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 12602,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-02T19:27:51Z",
+      "side": 1,
+      "message": "An experiment needs to be an object, I guess an empty object would work, but I\u0027d suggest passing a valid experiment object which is disabled. See: https://doc.wikimedia.org/mediawiki-core/master/js/source/mediawiki.experiments.html#mw-experiments-method-getBucket",
+      "revId": "a38eba02fb6c019de64aed1a5a2a8032ee2cf35b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
