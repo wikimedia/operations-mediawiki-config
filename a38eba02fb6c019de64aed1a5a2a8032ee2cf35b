@@ -16,6 +16,24 @@
       "revId": "a38eba02fb6c019de64aed1a5a2a8032ee2cf35b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_7c10e604",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 12602,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-06-02T19:48:04Z",
+      "side": 1,
+      "message": "Personally, I disagree, as it gives the impression that it is an experiment that was at one time enabled or will at some time be enabled in the future. Neither case is true without significant changes to the experiment config.\n\nThat being said, since you\u0027re overseeing the SWAT deployment, I\u0027d rather you be comfortable with the patch and not block over a trivial point, so I\u0027ve updated it in PS 5.",
+      "parentUuid": "0efd9372_3c8bfe73",
+      "revId": "a38eba02fb6c019de64aed1a5a2a8032ee2cf35b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
