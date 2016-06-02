@@ -11733,7 +11733,8 @@ $wgConf->settings = [
 	'private' => false,
 	'fishbowl' => false, // not needed, private editing...
 ],
-'wmgSpamBlacklistEventLogging' => [
+
+'wgSpamBlacklistEventLogging' => [
 	'default' => false,
 	'testwiki' => true,
 ],

@@ -110,7 +110,7 @@ $IP/extensions/SearchExtraNS/SearchExtraNS.php
 $IP/extensions/SecurePoll/SecurePoll.php
 $IP/extensions/ShortUrl/ShortUrl.php
 $IP/extensions/SiteMatrix/SiteMatrix.php
-$IP/extensions/SpamBlacklist/SpamBlacklist.php
+$IP/extensions/SpamBlacklist/extension.json
 $IP/extensions/SubPageList3/SubPageList3.php
 $IP/extensions/SubpageSortkey/SubpageSortkey.php
 $IP/extensions/SyntaxHighlight_GeSHi/extension.json
