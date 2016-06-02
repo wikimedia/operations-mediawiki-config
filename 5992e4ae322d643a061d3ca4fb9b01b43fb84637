@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_01685483",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12594,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-06-02T01:11:01Z",
+      "side": 1,
+      "message": "I think this also should like the one below, but disabled and cotrol set to 1 just in case.",
+      "revId": "5992e4ae322d643a061d3ca4fb9b01b43fb84637",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
