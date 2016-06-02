@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_e1127000",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 760,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2016-06-02T02:04:15Z",
+      "side": 1,
+      "message": "Lowercase L, it seems.",
+      "revId": "ed151c224f4e5129c97237f850afa0d80600e159",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
