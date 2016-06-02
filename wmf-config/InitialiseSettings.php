@@ -4540,6 +4540,7 @@ $wgConf->settings = [
 		'OAuth' => 'debug',
 		'OutputBuffer' => 'debug',
 		'poolcounter' => 'debug',
+		'purge' => 'debug',
 		'query' => 'debug',
 		'ratelimit' => 'debug',
 		'recursion-guard' => 'debug',
