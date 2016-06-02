@@ -810,7 +810,7 @@ if ( $wmgUseLabeledSectionTransclusion ) {
 }
 
 if ( $wmgUseSpamBlacklist ) {
-	include( $IP . '/extensions/SpamBlacklist/SpamBlacklist.php' );
+	wfLoadExtension( 'SpamBlacklist' );
 	$wgBlacklistSettings = [
 		'spam' => [
 			'files' => [
@@ -819,7 +819,6 @@ if ( $wmgUseSpamBlacklist ) {
 		],
 	];
 	$wgLogSpamBlacklistHits = true;
-	$wgSpamBlacklistEventLogging = $wmgSpamBlacklistEventLogging;
 }
 
 wfLoadExtension( 'TitleBlacklist' );
