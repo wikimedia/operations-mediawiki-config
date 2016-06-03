@@ -1811,14 +1811,13 @@ if ( $wmgUseCodeReview ) {
 	$wgCodeReviewMaxDiffPaths = 100;
 }
 
-if ( $wmgUseAbuseFilter ) {
-	include "$IP/extensions/AbuseFilter/AbuseFilter.php";
-	include( "$wmfConfigDir/abusefilter.php" );
+# abuse filter @{
+include "$IP/extensions/AbuseFilter/AbuseFilter.php";
+include( "$wmfConfigDir/abusefilter.php" );
 
-	$wgAbuseFilterEmergencyDisableThreshold = $wmgAbuseFilterEmergencyDisableThreshold;
-	$wgAbuseFilterEmergencyDisableCount = $wmgAbuseFilterEmergencyDisableCount;
-	$wgAbuseFilterEmergencyDisableAge = $wmgAbuseFilterEmergencyDisableAge;
-}
+$wgAbuseFilterEmergencyDisableThreshold = $wmgAbuseFilterEmergencyDisableThreshold;
+$wgAbuseFilterEmergencyDisableCount = $wmgAbuseFilterEmergencyDisableCount;
+$wgAbuseFilterEmergencyDisableAge = $wmgAbuseFilterEmergencyDisableAge;
 
 if ( $wmgUsePdfHandler ) {
 	include ( "$IP/extensions/PdfHandler/PdfHandler.php" );
