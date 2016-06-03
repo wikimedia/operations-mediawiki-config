@@ -1427,10 +1427,8 @@ if ( $wmgUseApiFeatureUsage ) {
 }
 
 // taking it live 2006-12-15 brion
-if ( $wmgUseDismissableSiteNotice ) {
-	require( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
-	$wgDismissableSiteNoticeForAnons = true; // T59732
-}
+require( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
+$wgDismissableSiteNoticeForAnons = true; // T59732
 $wgMajorSiteNoticeID = '2';
 
 $wgHooks['LoginAuthenticateAudit'][] = function( $user, $pass, $retval ) {

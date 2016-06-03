@@ -4350,10 +4350,6 @@ $wgConf->settings = [
 	'private' => true // make files private and such
 ],
 
-'wmgUseDismissableSiteNotice' => [
-	'default' => true,
-],
-
 'wmgUseCentralNotice' => [
 	'default' => true,
 	'advisorywiki' => false, // Per T27519
