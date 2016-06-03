@@ -8237,12 +8237,15 @@ $wgConf->settings = [
 			'noratelimit' => true,
 			'tboverride' => true,
 		],
-		'wmf-supportsafety' => [ // T136046
+		'wmf-supportsafety' => [ // T136046, T136864
 			'userrights-interwiki' => true,
 			'centralauth-lock' => true,
 			'globalblock' => true,
 			'centralauth-rename' => true,
 			'userrights' => true,
+			'editcontentmodel' => true, // TODO: remove when a change for T85847 is deployed
+			'massmessage' => true,
+			'centralauth-oversight' => true,
 		],
 	],
 	'mkwiki' => [
