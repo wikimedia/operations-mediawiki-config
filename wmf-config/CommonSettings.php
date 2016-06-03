@@ -1249,7 +1249,6 @@ if ( $wmgUseCentralAuth ) {
 	$wgGroupPermissions['steward']['centralauth-rename'] = true;
 	$wgCentralAuthCookies = true;
 
-	$wgDisableUnmergedEditing = $wmgDisableUnmergedEdits;
 	$wgCentralAuthUseEventLogging = true;
 	$wgCentralAuthPreventUnattached = true;
 

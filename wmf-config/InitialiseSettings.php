@@ -15764,11 +15764,6 @@ $wgConf->settings = [
 	'private' => false,
 ],
 
-'wmgDisableUnmergedEdits' => [
-	'default' => false,
-	'wikivoyage' => false,
-],
-
 'wmgUseGeoCrumbs' => [
 	'default' => false,
 	'incubatorwiki' => true, // T46725
