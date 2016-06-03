@@ -1242,7 +1242,7 @@ if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthCookies = true;
 
 	$wgDisableUnmergedEditing = $wmgDisableUnmergedEdits;
-	$wgCentralAuthUseEventLogging = $wmgCentralAuthUseEventLogging;
+	$wgCentralAuthUseEventLogging = true;
 	$wgCentralAuthPreventUnattached = true;
 
 	if ( $wmfRealm == 'production' ) {
