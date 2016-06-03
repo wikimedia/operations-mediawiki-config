@@ -16834,11 +16834,6 @@ $wgConf->settings = [
 ],
 ### End (roughly) of general extensions ########################
 
-// Apply blocks to IPs in XFF (T25343)
-'wmgUseXFFBlocks' => [
-	'default' => true,
-],
-
 'wgUseTidy' => [
 	'default' => true,
 	'foundationwiki' => false,

@@ -918,7 +918,7 @@ if ( $wmgUseGlobalBlocking ) {
 	include( $IP . '/extensions/GlobalBlocking/GlobalBlocking.php' );
 	$wgGlobalBlockingDatabase = 'centralauth';
 	$wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
-	$wgGlobalBlockingBlockXFF = $wmgUseXFFBlocks;
+	$wgGlobalBlockingBlockXFF = true; // Apply blocks to IPs in XFF (T25343)
 }
 
 include( $IP . '/extensions/TrustedXFF/TrustedXFF.php' );
