@@ -11952,10 +11952,6 @@ $wgConf->settings = [
 ],
 
 # abuse filter @{
-'wmgUseAbuseFilter' => [
-	'default' => true,
-],
-
 'wmgAbuseFilterCentralDB' => [
 	'default' => 'metawiki',
 ],
