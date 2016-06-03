@@ -11844,10 +11844,6 @@ $wgConf->settings = [
 	'ukwiki' => true, // T67125
 ],
 
-'wmgNewUserSuppressRC' => [
-	'default' => true,
-],
-
 'wmgNewUserMinorEdit' => [
 	'default' => true,
 	'arwiki' => false,
