@@ -11638,9 +11638,6 @@ $wgConf->settings = [
 	'default' => 'loginwiki',
 ],
 
-'wmgCentralAuthUseEventLogging' => [
-	'default' => true,
-],
 // This is also guarded by $wmgUseCentralAuth
 'wmgUseGlobalCssJs' => [
 	'default' => true,
