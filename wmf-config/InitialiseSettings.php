@@ -13877,6 +13877,7 @@ $wgConf->settings = [
 	'viwiktionary' => 'uca-vi', // T47979
 ],
 
+// Varied for Labs only.
 'wmgUsePoolCounter' => [
 	'default' => true,
 ],
@@ -17060,6 +17061,7 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+// Varied for Labs only.
 'wmgLogAuthmanagerMetrics' => [
 	'default' => true,
 ],
@@ -17116,6 +17118,7 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+// Varied for Labs only.
 'wmgUseCheckUser' => [
 	'default' => true,
 ],
