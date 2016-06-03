@@ -13992,9 +13992,6 @@ $wgConf->settings = [
 	'zhwiki' => true, // T32362
 	'zhwikivoyage' => true, // T75717
 ],
-'wmgWikiLoveDefault' => [
-	'default' => true,
-],
 
 // whether to use the Math extension
 'wmgUseMath' => [
