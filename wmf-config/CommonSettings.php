@@ -1840,16 +1840,15 @@ $wgHiddenPrefs[] = 'wikieditor-publish';
 $wgDefaultUserOptions['usebetatoolbar'] = 1;
 $wgDefaultUserOptions['usebetatoolbar-cgd'] = 1;
 
-if ( $wmgUseLocalisationUpdate ) {
-	wfLoadExtension( 'LocalisationUpdate' );
-	$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/caches/cache-$wmgVersionNumber";
-	$wgLocalisationUpdateRepository = 'local';
-	$wgLocalisationUpdateRepositories['local'] = [
-		'mediawiki' => '/var/lib/l10nupdate/mediawiki/core/%PATH%',
-		'extension' => '/var/lib/l10nupdate/mediawiki/extensions/%NAME%/%PATH%',
-		'skins' => '/var/lib/l10nupdate/mediawiki/skins/%NAME%/%PATH%',
-	];
-}
+# LocalisationUpdate
+wfLoadExtension( 'LocalisationUpdate' );
+$wgLocalisationUpdateDirectory = "/var/lib/l10nupdate/caches/cache-$wmgVersionNumber";
+$wgLocalisationUpdateRepository = 'local';
+$wgLocalisationUpdateRepositories['local'] = [
+	'mediawiki' => '/var/lib/l10nupdate/mediawiki/core/%PATH%',
+	'extension' => '/var/lib/l10nupdate/mediawiki/extensions/%NAME%/%PATH%',
+	'skins' => '/var/lib/l10nupdate/mediawiki/skins/%NAME%/%PATH%',
+];
 
 if ( $wmgEnableLandingCheck ) {
 	require_once(  "$IP/extensions/LandingCheck/LandingCheck.php" );
