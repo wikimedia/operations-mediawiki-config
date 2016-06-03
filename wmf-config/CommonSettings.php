@@ -1793,7 +1793,7 @@ require( "$wmfConfigDir/throttle.php" );
 
 if ( $wmgUseNewUserMessage ) {
 	include "$IP/extensions/NewUserMessage/NewUserMessage.php";
-	$wgNewUserSuppressRC = $wmgNewUserSuppressRC;
+	$wgNewUserSuppressRC = true;
 	$wgNewUserMinorEdit = $wmgNewUserMinorEdit;
 	$wgNewUserMessageOnAutoCreate = $wmgNewUserMessageOnAutoCreate;
 }
