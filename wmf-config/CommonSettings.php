@@ -2311,9 +2311,7 @@ if ( $wmgUseIncubator ) {
 if ( $wmgUseWikiLove ) {
 	require_once( "$IP/extensions/WikiLove/WikiLove.php" );
 	$wgWikiLoveLogging = true;
-	if ( $wmgWikiLoveDefault ) {
-		$wgDefaultUserOptions['wikilove-enabled'] = 1;
-	}
+	$wgDefaultUserOptions['wikilove-enabled'] = 1;
 }
 
 if ( $wmgUseGuidedTour || $wmgUseGettingStarted ) {
