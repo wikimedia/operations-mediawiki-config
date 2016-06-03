@@ -239,6 +239,7 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 						'logExceptions' => 'wfDebugLogFile',
 						'sendTimeout' => 0.01,
 						'recvTimeout' => 0.5,
+                        'requireAck' => 1,
 					],
 				],
 				'formatter' => 'avro'
