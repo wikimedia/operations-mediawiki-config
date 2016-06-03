@@ -12175,10 +12175,6 @@ $wgConf->settings = [
 	'default' => 1024,
 ],
 
-'wmgUseLocalisationUpdate' => [
-	'default' => true,
-],
-
 'wmgUseLiquidThreads' => [
 //
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
