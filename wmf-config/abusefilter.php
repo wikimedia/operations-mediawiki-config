@@ -2,7 +2,6 @@
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
 # This file is for the default permissions and custom permissions of the AbuseFilter extension.
-# You must also set wmgUseAbuseFilter in InitialiseSettings.php
 # This file is referenced from an include in CommonSettings.php
 
 $wgGroupPermissions['*']['abusefilter-view'] = true;
