@@ -13436,6 +13436,7 @@ $wgConf->settings = [
 
 	'wikisource' => true,       // Starting from SET
 	'wiktionary' => true,       // Starting from SET
+	'wikivoyage' => true,       // Starting from SET
 
 	'mediawikiwiki' => true,
 	'testwiki' => true,
