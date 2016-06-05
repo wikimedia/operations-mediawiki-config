@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_2fc29388",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-06-05T20:39:45Z",
+      "side": 1,
+      "message": "That\u0027s a better title than the first line, as it contains the wiki",
+      "revId": "1e0e1c789c0ec00cd3ab361e4cdb84c60e804102",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_cfc4a797",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10474,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-06-05T20:39:45Z",
+      "side": 1,
+      "message": "Add a reference to the task id",
+      "revId": "1e0e1c789c0ec00cd3ab361e4cdb84c60e804102",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
