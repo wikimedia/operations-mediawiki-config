@@ -12609,8 +12609,9 @@ $wgConf->settings = [
 		'name' => 'T134778',
 		'enabled' => true,
 		'buckets' => [
-			'control' => 0.99,
-			'A' => 0.01,
+			// T136713
+			'control' => 0.5,
+			'A' => 0.5,
 		],
 	],
 ],
