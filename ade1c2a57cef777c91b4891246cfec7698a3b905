@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_154a40c8",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 126,
+      "author": {
+        "id": 2974
+      },
+      "writtenOn": "2016-06-06T15:01:44Z",
+      "side": 1,
+      "message": "Do we really want to send more like queries to eqiad? This does not match the comment...",
+      "revId": "ade1c2a57cef777c91b4891246cfec7698a3b905",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
