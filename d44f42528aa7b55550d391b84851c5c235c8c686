@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_bde87ab0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2016-06-06T20:21:10Z",
+      "side": 1,
+      "message": "With the BC addition, this should work with or without I790d39c2 now.",
+      "revId": "d44f42528aa7b55550d391b84851c5c235c8c686",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
