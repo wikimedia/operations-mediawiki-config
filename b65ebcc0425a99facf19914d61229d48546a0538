@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_f5d17c28",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2016-06-06T14:52:15Z",
+      "side": 1,
+      "message": "The old version removed \u0027blockautopromote\u0027, which isn\u0027t reflected here.",
+      "revId": "b65ebcc0425a99facf19914d61229d48546a0538",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
