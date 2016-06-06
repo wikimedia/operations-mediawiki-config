@@ -3063,6 +3063,12 @@ if ( $wmgZeroPortal ) {
 	$wgGroupPermissions['zeroscriptips']['jsonconfig-flush'] = true;
 	$wgGroupPermissions['zeroscriptips'] = $wgGroupPermissions['zeroscriptips'] + $zpUserRights;
 
+	$wgGrantPermissions['zeroscript']['zero-edit'] = true;
+	$wgGrantPermissions['zeroscript']['zero-script'] = true;
+	$wgGrantPermissions['zeroscript']['zero-script-ips'] = true;
+	$wgGrantPermissions['zeroscript']['jsonconfig-flush'] = true;
+	$wgGrantPermissionGroups['zeroscript'] = 'administration';
+
 	$wgZeroPortalImpersonateUser = 'Impersonator';
 
 	// zerowiki needs to enable Common.css for restricted pages in order to
