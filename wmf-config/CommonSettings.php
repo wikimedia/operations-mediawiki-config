@@ -2366,12 +2366,7 @@ if ( $wmgUseTranslate ) {
 	$wgExtraLanguageNames['qqq'] = 'Message documentation'; # No linguistic content. Used for documenting messages
 
 	// TODO: proper integration with new CirrusSearch config
-	if ( substr( $IP, -12 ) === '1.28.0-wmf.4' ) {
-		// temporary hack for the elasticsearch 2.3 rollout
-		$wgTranslateExtensionDefaultCluster = 'codfw';
-	} else {
-		$wgTranslateExtensionDefaultCluster = 'eqiad';
-	}
+	$wgTranslateExtensionDefaultCluster = 'eqiad';
 	$wgTranslateTranslationServices = [];
 	if ( $wmgUseTranslationMemory ) {
 		$servers = array_map(

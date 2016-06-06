@@ -23,10 +23,7 @@ if ( $wmgUseClusterJobqueue ) {
 
 # Set up the the default cluster to send queries to,
 # and the list of clusters to write to.
-if ( substr($IP, -12 ) === '1.28.0-wmf.4' ) {
-	// temporary hack for the elasticsearch 2.3 rollout
-	$wgCirrusSearchDefaultCluster = 'codfw';
-} elseif ( $wmgCirrusSearchDefaultCluster === 'local' ) {
+if ( $wmgCirrusSearchDefaultCluster === 'local' ) {
 	$wgCirrusSearchDefaultCluster = $wmfDatacenter;
 } else {
 	$wgCirrusSearchDefaultCluster = $wmgCirrusSearchDefaultCluster;
