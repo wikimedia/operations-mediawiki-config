@@ -15436,8 +15436,7 @@ $wgConf->settings = [
 	'wikivoyage' => 20000,
 ],
 'wmgGeoDataDebug' => [
-	'default' => false,
-	'testwiki' => true,
+	'default' => true,
 ],
 
 'wmgUseEcho' => [
