@@ -2492,7 +2492,7 @@ if ( $wmgUseTranslate ) {
 
 if ( $wmgUseTranslationNotifications ) {
 	require_once( "$IP/extensions/TranslationNotifications/TranslationNotifications.php" );
-	$wgNotificationUsername = 'Translation Notification Bot';
+	$wgNotificationUsername = 'Translation Notification Bot@Translation_Notification_Bot';
 	$wgNotificationUserPassword = $wmgTranslationNotificationUserPassword;
 
 	$wgTranslationNotificationsContactMethods['talkpage-elsewhere'] = true;
