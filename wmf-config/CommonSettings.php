@@ -2322,7 +2322,7 @@ if ( $wmgUseMath ) {
 		global $wgServerName, $wgMathFullRestbaseURL, $wmfRealm;
 
 		$wgMathFullRestbaseURL = $wmfRealm === 'production'
-			? "https://$wgServerName/api/rest_"
+			? 'https://wikimedia.org/api/rest_'  // T136205
 			: "//$wgServerName/api/rest_";
 	};
 }
