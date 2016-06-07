@@ -86,6 +86,7 @@ $wgConf->settings = [
 
 'wgDisableAuthManager' => [
 	'default' => true,
+	'group0' => false,
 	'labtestwiki' => false,
 ],
 
