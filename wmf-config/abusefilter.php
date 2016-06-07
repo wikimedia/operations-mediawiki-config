@@ -390,19 +390,3 @@ if ( $wmfRealm === 'labs' ) {
 	$wgAbuseFilterAnonBlockDuration = '48 hours';
 }
 
-// For BC until I790d39c28 is deployed everywhere
-if ( isset( $wgAbuseFilterAvailableActions ) ) {
-	$wgAbuseFilterActions += [
-		'flag' => true,
-		'throttle' => true,
-		'warn' => true,
-		'disallow' => true,
-		'blockautopromote' => true,
-		'block' => true,
-		'rangeblock' => false,
-		'degroup' => true,
-		'tag' => true,
-	];
-	$wgAbuseFilterAvailableActions = array_keys( array_filter( $wgAbuseFilterActions ) );
-}
-
