@@ -16,6 +16,24 @@
       "revId": "09a5b34943280364c78003819ad59548669df47d",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_7153d943",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-06-07T14:26:43Z",
+      "side": 1,
+      "message": "Um. I probably should have checked that.",
+      "parentUuid": "0efd9372_7105997c",
+      "revId": "09a5b34943280364c78003819ad59548669df47d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
