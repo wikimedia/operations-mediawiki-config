@@ -112,7 +112,7 @@ $wgLBFactoryConf = array(
 	),
 	/* s3 */ 'DEFAULT' => array(
 		'db1075' => 0,   # 3.6TB 512GB, master
-		'db1038' => 0,   # 1.4TB  64GB, vslow, dump
+		'db1038' => 0,   # 1.4TB  64GB, vslow, dump, old master
 		'db1015' => 100, # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1035' => 100, # 1.4TB  64GB
 		'db1044' => 100, # 1.4TB  64GB
@@ -130,10 +130,13 @@ $wgLBFactoryConf = array(
 	),
 	's5' => array(
 		'db1049' => 0,   # 2.8TB  64GB, master
-		'db1026' => 0,   # 1.4TB  64GB, old master, watchlist, recentchanges, contributions, logpager
+		'db1026' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1045' => 0,   # 1.4TB  64GB, vslow, dump
-		'db1070' => 200, # 2.8TB 160GB, api
+		'db1070' => 200, # 2.8TB 160GB, api, old master
 		'db1071' => 300, # 2.8TB 160GB
+		'db1082' => 10,  # 3.6TB 512GB, low weight
+		'db1087' => 10,  # 3.6TB 512GB, low weight
+		'db1092' => 10,  # 3.6TB 512GB, low weight
 	),
 	's6' => array(
 		'db1050' => 0,   # 2.8TB  64GB, master
