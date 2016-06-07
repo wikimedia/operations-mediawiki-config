@@ -263,6 +263,10 @@ if ( gethostname() === 'osmium' ) {
 	$wgResourceLoaderStorageEnabled = false;
 }
 
+if ( $wmgReduceStartupExpiry ) {
+	$wgResourceLoaderMaxage['unversioned'] = [ 'server' => 30, 'client' => 30 ];
+}
+
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmgVersionNumber;
 $wgGitInfoCacheDirectory = "$IP/cache/gitinfo";
 
@@ -2577,10 +2581,6 @@ if ( $wmgUseFeaturedFeeds ) {
 }
 
 $wgDisplayFeedsInSidebar = $wmgDisplayFeedsInSidebar;
-
-if ( $wmgReduceStartupExpiry ) {
-	$wgResourceLoaderMaxage['unversioned'] = [ 'server' => 30, 'client' => 30 ];
-}
 
 if ( $wmgEnablePageTriage ) {
 	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
