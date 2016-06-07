@@ -1434,6 +1434,7 @@ if ( $wmgUseDismissableSiteNotice ) {
 }
 $wgMajorSiteNoticeID = '2';
 
+// pre-Authmanager code for logging failed login attempts
 $wgHooks['LoginAuthenticateAudit'][] = function( $user, $pass, $retval ) {
 	if ( $user->isAllowed( 'delete' ) && $retval != LoginForm::SUCCESS ) {
 		global $wgRequest;
@@ -1460,6 +1461,29 @@ $wgHooks['LoginAuthenticateAudit'][] = function( $user, $pass, $retval ) {
 		);
 	}
 	return true;
+};
+
+// log failed login attempts
+$wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $username ) {
+	$guessed = false;
+	if ( !$user && $username ) {
+		$user = User::newFromName( $username );
+		$guessed = true;
+	}
+	if ( $user && $user->isAllowed( 'delete' ) && $response->status === \MediaWiki\Auth\AuthenticationResponse::FAIL ) {
+		global $wgRequest;
+		$headers = apache_request_headers();
+
+		$logger = LoggerFactory::getInstance( 'badpass' );
+		$logger->info( 'Login failed for sysop {name} from {ip} - {xff} - {ua}: {message}', [
+			'name' => $user->getName(),
+			'ip' => $wgRequest->getIP(),
+			'xff' => @$headers['X-Forwarded-For'],
+			'ua' => @$headers['User-Agent'],
+			'guessed' => $guessed,
+			'message' => $response->message->toString(),
+		] );
+	}
 };
 
 // Estimate users affected if we increase the minimum
@@ -1505,6 +1529,7 @@ $wgHooks['PrefsEmailAudit'][] = function( $user, $old, $new ) {
 	return true;
 };
 
+// pre-AuthManager code to log sysop password changes
 $wgHooks['PrefsPasswordAudit'][] = function( $user, $pass, $status ) {
 	if ( $user->isAllowed( 'delete' ) ) {
 		global $wgRequest;
@@ -1521,6 +1546,25 @@ $wgHooks['PrefsPasswordAudit'][] = function( $user, $pass, $status ) {
 		);
 	}
 	return true;
+};
+
+// log sysop password changes
+$wgHooks['ChangeAuthenticationDataAudit'][] = function( $req, $status ) {
+	$user = User::newFromName( $req->username );
+	$status = Status::wrap( $status );
+	if ( $user->isAllowed( 'delete' ) && $req instanceof \MediaWiki\Auth\PasswordAuthenticationRequest ) {
+		global $wgRequest;
+		$headers = apache_request_headers();
+
+		$logger = LoggerFactory::getInstance( 'badpass' );
+		$logger->info( 'Password change in prefs for sysop {name}: {status} - {ip} - {xff} - {ua}', [
+			'name' => $user->getName(),
+			'status' => $status->isGood() ? 'ok' : $status->getWikiText( null, null, 'en' ),
+			'ip' => $wgRequest->getIP(),
+			'xff' => @$headers['X-Forwarded-For'],
+			'ua' => @$headers['User-Agent'],
+		] );
+	}
 };
 
 if ( file_exists( '/etc/wikimedia-scaler' ) ) {
