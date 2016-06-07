@@ -19,7 +19,9 @@ case 'labtestwiki' :
 unset( $wgSpecialPages['SMWAdmin'] );
 
 require_once( "$IP/extensions/LdapAuthentication/LdapAuthentication.php" );
-$wgAuth = new LdapAuthenticationPlugin();
+if ( $wgDisableAuthManager ) {
+	$wgAuth = new LdapAuthenticationPlugin();
+}
 $wgLDAPDomainNames = array( 'labs');
 switch( $wgDBname ) {
 case 'labswiki' :
