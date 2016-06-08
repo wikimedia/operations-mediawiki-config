@@ -16983,6 +16983,12 @@ $wgConf->settings = [
 	'wikivoyage' => true,
 ],
 
+'wgKartographerUseMarkerStyle' => [
+	'default' => false,
+	'mediawikiwiki' => true,
+	'wikivoyage' => true,
+],
+
 'wmgUseOATHAuth' => [
 	'default' => true,
 	'private' => false,
