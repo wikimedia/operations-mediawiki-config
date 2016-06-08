@@ -12487,9 +12487,9 @@ $wgConf->settings = [
 
 'wgForeignUploadTargets' => [
 	'default' => [ 'shared' ],
-	'commonswiki' => [],
+	'commonswiki' => [ 'local' ],
 	'test2wiki' => [ 'testwikirepo' ],
-	'testwiki' => [],
+	'testwiki' => [ 'local' ],
 ],
 
 'wgForeignUploadTestEnabled' => [
