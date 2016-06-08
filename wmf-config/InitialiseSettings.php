@@ -85,9 +85,8 @@ $wgConf->settings = [
 ],
 
 'wgDisableAuthManager' => [
-	'default' => true,
-	'group0' => false,
-	'labtestwiki' => false,
+	'default' => false,
+	'group2' => true,
 ],
 
 # wgLanguageCode @{
