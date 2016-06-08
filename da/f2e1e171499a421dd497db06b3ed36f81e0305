@@ -1,0 +1,8 @@
+Verified+2: jenkins-bot
+Code-Review+1: Anomie <bjorsch@wikimedia.org>
+Code-Review+2: Gergő Tisza <gtisza@wikimedia.org>
+Submitted-by: jenkins-bot
+Submitted-at: Wed, 08 Jun 2016 22:25:17 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/293357
+Project: operations/mediawiki-config
+Branch: refs/heads/master
