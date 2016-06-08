@@ -267,6 +267,11 @@ if ( $wmgReduceStartupExpiry ) {
 	$wgResourceLoaderMaxage['unversioned'] = [ 'server' => 30, 'client' => 30 ];
 }
 
+// Cache version key for ResourceLoader client-side module store
+// - Bumped to fix breakage due to old /static/$branchName/ urls still
+//   being cached after the switch to /w/static.php (T134368).
+$wgResourceLoaderStorageVersion .= '-2';
+
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmgVersionNumber;
 $wgGitInfoCacheDirectory = "$IP/cache/gitinfo";
 
