@@ -110,7 +110,7 @@ $wgFileBackends[] = array(
 		array( 'template' => 'local-swift-eqiad', 'isMultiMaster' => true ),
 		array( 'template' => 'local-swift-codfw' )
 	),
-	'replication' => 'async',
+	'replication' => 'sync', // read-after-update for assets
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'autoResync'  => 'conservative'
 );
@@ -124,7 +124,7 @@ $wgFileBackends[] = array(
 		array( 'template' => 'shared-swift-eqiad', 'isMultiMaster' => true ),
 		array( 'template' => 'shared-swift-codfw' ),
 	),
-	'replication' => 'async',
+	'replication' => 'sync', // read-after-update for assets
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 );
 $wgFileBackends[] = array(
@@ -137,7 +137,7 @@ $wgFileBackends[] = array(
 		array( 'template' => 'global-swift-eqiad', 'isMultiMaster' => true ),
 		array( 'template' => 'global-swift-codfw' ),
 	),
-	'replication' => 'async',
+	'replication' => 'sync', // read-after-update for assets
 	'syncChecks'  => ( 1 | 4 ) // (size & sha1)
 );
 $wgFileBackends[] = array(
@@ -150,7 +150,7 @@ $wgFileBackends[] = array(
 		array( 'template' => 'shared-testwiki-swift-eqiad', 'isMultiMaster' => true ),
 		array( 'template' => 'shared-testwiki-swift-codfw' ),
 	),
-	'replication' => 'async',
+	'replication' => 'sync', // read-after-update for assets
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 );
 /* end multiwrite backend config */
