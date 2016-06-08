@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_b5fb6310",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2016-06-08T22:44:40Z",
+      "side": 1,
+      "message": "FYI, it doesn\u0027t look like this line does anything either. The list seems to be \u0027private\u0027, \u0027fishbowl\u0027, \u0027special\u0027, \u0027closed\u0027, \u0027flow\u0027, \u0027flaggedrevs\u0027, \u0027small\u0027, \u0027medium\u0027, \u0027large\u0027, \u0027wikimania\u0027, \u0027wikidata\u0027, \u0027wikidataclient\u0027, \u0027visualeditor-default\u0027, \u0027commonsuploads\u0027, \u0027nonbetafeatures\u0027, \u0027group0\u0027, \u0027wikipedia\u0027, \u0027nonglobal\u0027, \u0027wikitech\u0027\n\n(see CommonSettings.php, variable $wikiTags)",
+      "revId": "76e89fe90427503d1c5a987151ff787f3f03cb2d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
