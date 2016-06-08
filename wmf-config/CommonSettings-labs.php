@@ -333,7 +333,7 @@ if ( $wmgUseKartographer ) {
 if ( $wmgUseORES ) {
 	wfLoadExtension( 'ORES' );
 	$wgOresWikiId = 'testwiki';
-	$wgOresBaseUrl = 'https://ores.wmflabs.org/';
+	$wgOresBaseUrl = 'https://ores.wikimedia.org/';
 }
 
 if ( $wmgUseNewsletter ) {
