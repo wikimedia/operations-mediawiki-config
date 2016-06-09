@@ -15996,6 +15996,7 @@ $wgConf->settings = [
 	'htwiki' => true,
 	'lvwiki' => true,
 	'napwiki' => true,
+	'nnwiki' => true,
 	'orwiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
