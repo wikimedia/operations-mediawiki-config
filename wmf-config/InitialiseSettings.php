@@ -86,8 +86,6 @@ $wgConf->settings = [
 
 'wgDisableAuthManager' => [
 	'default' => false,
-	'wikipedia' => true,
-	'group1-wikipedia' => false,
 ],
 
 # wgLanguageCode @{
