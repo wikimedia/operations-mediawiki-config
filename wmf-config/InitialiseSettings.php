@@ -12151,6 +12151,7 @@ $wgConf->settings = [
 		'grossstadtgeschichten-berlin.de',
 		'content.staatsbibliothek-berlin.de',
 		'*.archives.gov',                   // US National Archives - T124080
+		'*.nara.gov',                       // US National Archives - T137423
 		'*.bodleian.ox.ac.uk',              // Bodleian Libraries - T121779
 		'*.davidabian.com',                 // Trusted user website, used by Museo del Romanticismo - T121383
 		'davidabian.com',
