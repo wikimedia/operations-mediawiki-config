@@ -15994,6 +15994,7 @@ $wgConf->settings = [
 	'eowiki' => true,
 	'guwiki' => true,
 	'htwiki' => true,
+	'lvwiki' => true,
 	'napwiki' => true,
 	'orwiki' => true,
 	'testwiki' => true,
