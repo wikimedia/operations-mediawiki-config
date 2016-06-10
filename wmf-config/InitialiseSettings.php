@@ -11946,6 +11946,7 @@ $wgConf->settings = [
 	'zhwiki' => [
 		'sysop' => [ 'flood' ],
 		'massmessage-sender' => [ 'massmessage-sender' ], // T130814
+		'ipblock-exempt' => [ 'ipblock-exempt' ], // T137532
 	],
 	'zhwikinews' => [ 'flood' => [ 'flood' ] ], // T54546
 ],
