@@ -35,6 +35,13 @@ $wmgThrottlingExceptions[] = [ // T135777 - San Francisco Yerba Buena Center for
 	'dbname' => [ 'enwiki', 'commonswiki' ],
 	'value'  => 50
 ];
+$wmgThrottlingExeptions[] = [ // T137587 - Eswiki event
+	'from'   => '2016-05-10T13:45 -5:00',
+	'to'     => '2016-05-10T17:00 -5:00',
+	'IP'     => '186.3.110.63',
+	'dbname' => ['eswiki', 'commonswiki'],
+	'value'  => 40
+];
 
 
 ## Add throttling definitions above.
