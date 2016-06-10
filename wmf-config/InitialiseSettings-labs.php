@@ -649,5 +649,10 @@ function wmfLabsSettings() {
 		'wmgUsePageAssessments' => [
 			'default' => true,
 		],
+
+		// Test Wikidata descriptions on mobile: T127250
+		'wmgMFUseWikibaseDescription' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
