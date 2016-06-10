@@ -224,7 +224,7 @@ if ( $wmfRealm === 'labs' ) {
 $wgMaxUserDBWriteDuration = 5;
 # Activate read-only mode for bots when lag is getting high.
 # This should be lower than 'max lag' in the LBFactory conf.
-$wgAPIMaxLagThreshold = 6;
+$wgAPIMaxLagThreshold = 5;
 
 ini_set( 'memory_limit', $wmgMemoryLimit );
 
