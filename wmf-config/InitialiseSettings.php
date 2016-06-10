@@ -10517,6 +10517,7 @@ $wgConf->settings = [
 	'knwikisource' => [ 'w', 'en', 'w:en' ], // T122955
 	'kowikiquote' => [ 'w' ],
 	'wikitech' => [ 'meta', 'mw' ],
+	'lawiktionary' => [ 'wikt:en' ],
 	'lawikibooks' => [ 'w' ],
 	'lawikisource' => [ 'ca', 'de', 'el', 'en', 'es', 'fr', 'it', 'pt', 'ro', 'w', 'b', 'oldwikisource' ],
 	'lbwiktionary' => [ 'w:fr', 'fr', 'w:en', 'en', 'w', 'meta' ], // T26460
