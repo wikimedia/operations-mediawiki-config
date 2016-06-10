@@ -218,7 +218,8 @@ class MWMultiVersion {
 	private function setSiteInfoForMaintenance() {
 		global $argv;
 
-		$dbname = '';
+		$dbname = getenv( 'MW_WIKI' ) ?: '';
+
 		# The --wiki param must the second argument to to avoid
 		# any "options with args" ambiguity (see Maintenance.php).
 		if ( isset( $argv[1] ) && $argv[1] === '--wiki' ) {

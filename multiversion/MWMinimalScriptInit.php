@@ -1,0 +1,10 @@
+<?php
+call_user_func( function () {
+	$user = posix_getpwuid( posix_geteuid() );
+	if ( PHP_SAPI !== 'cli' || $user['name'] !== getenv( 'MEDIAWIKI_WEB_USER' ) ) {
+		fprintf( STDERR, "Bad user or SAPI.\n" );
+		die( 1 );
+	}
+} );
+@require_once '/srv/mediawiki/multiversion/MWVersion.php';
+@require_once getMediaWiki( 'maintenance/commandLine.inc', getenv( 'MW_WIKI' ) ?: 'testwiki' );
