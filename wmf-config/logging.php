@@ -163,7 +163,13 @@ $wmgMonologConfig =  [
 ];
 
 if ( $wmgLogAuthmanagerMetrics ) {
+	// authmanager is the old name, but it has been repurposed
+	// to be a more generic log channel; authevents is the new name
 	$wmgMonologConfig['loggers']['authmanager'] = [
+		'handlers' => [ 'authmanager-statsd' ],
+		'calls' => $wmgMonologLoggerCalls,
+	];
+	$wmgMonologConfig['loggers']['authevents'] = [
 		'handlers' => [ 'authmanager-statsd' ],
 		'calls' => $wmgMonologLoggerCalls,
 	];
