@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_51403c5b",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 924,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2016-06-11T16:00:53Z",
+      "side": 1,
+      "message": "Use \u0027ooui\u0027?",
+      "revId": "f90ca7945f6b1541bdaddc0a2c2285608cab0e2a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_b13088fd",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 929,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2016-06-11T16:00:53Z",
+      "side": 1,
+      "message": "Needs another text field for the actual message.",
+      "revId": "f90ca7945f6b1541bdaddc0a2c2285608cab0e2a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
