@@ -3215,6 +3215,11 @@ if ( $wmgUseOATHAuth ) {
 	}
 }
 
+if ( $wmgUseORES ) {
+	wfLoadExtension( 'ORES' );
+	$wgOresBaseUrl = 'https://ores.wikimedia.org/';
+}
+
 ### End (roughly) of general extensions ########################
 
 $wgApplyIpBlocksToXff = $wmgUseXFFBlocks;

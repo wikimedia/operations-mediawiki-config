@@ -16744,6 +16744,28 @@ $wgConf->settings = [
 	'default' => true,
 	'loginwiki' => false, // T61702
 ],
+'wmgUseORES' => [
+	'default' => false,
+	'fawiki' => true, // T130211
+],
+'wgOresModels' => [
+	'default' => [
+		'damaging' => true,
+		'reverted' => true,
+		'goodfaith' => true,
+		'wp10' => false,
+	],
+	'fawiki' => [
+		'damaging' => true,
+		'reverted' => false,
+		'goodfaith' => false,
+		'wp10' => false,
+	], // T130211
+],
+'wgOresDamagingThresholds' => [
+	'default' => [ 'hard' => 0.5, 'soft'=> 0.7 ],
+	'fawiki' => [ 'hard' => 0.12, 'soft'=> 0.45 ], // T130211
+],
 ### End (roughly) of general extensions ########################
 
 // Apply blocks to IPs in XFF (T25343)
