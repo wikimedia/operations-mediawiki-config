@@ -28,21 +28,6 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T135777 - San Francisco Yerba Buena Center for the Arts edit-a-thon
-	'from'   => '2016-05-19T18:00 -7:00',
-	'to'     => '2016-05-19T23:00 -7:00',
-	'IP'     => '209.116.58.194',
-	'dbname' => [ 'enwiki', 'commonswiki' ],
-	'value'  => 50
-];
-$wmgThrottlingExceptions[] = [ // T137587 - Eswiki event
-	'from'   => '2016-06-10T13:45 -5:00',
-	'to'     => '2016-06-10T17:00 -5:00',
-	'IP'     => '186.3.110.63',
-	'dbname' => ['eswiki', 'commonswiki'],
-	'value'  => 40
-];
-
 
 ## Add throttling definitions above.
 
