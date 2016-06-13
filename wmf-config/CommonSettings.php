@@ -902,14 +902,10 @@ if ( $wgDBname == 'mediawikiwiki' ) {
 	// in WikimediaMessages/i18n/wikimedia/ too.
 	$wgExtDistSnapshotRefs = [
 		'master',
+		'REL1_27',
 		'REL1_26',
 		'REL1_25',
-		'REL1_24',
 		'REL1_23',
-		'REL1_22',
-		'REL1_21',
-		'REL1_20',
-		'REL1_19',
 	];
 
 	// Use Graphite for popular list
