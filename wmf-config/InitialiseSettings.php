@@ -12577,6 +12577,7 @@ $wgConf->settings = [
 		'cx',                                       // [Editing] 2016-11-07 - ContentTranslation
 		'read-more',                                // [Reading] 2016-11-11 - Read more
 		'cirrussearch-completionsuggester',         // [Discovery] 2016-11-27 - Completion Suggester / type as you search
+		'ores-enabled',                             // [Research] 2016-12-12 - ORES
 	],
 ],
 
