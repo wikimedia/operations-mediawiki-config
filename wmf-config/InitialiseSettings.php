@@ -15457,10 +15457,7 @@ $wgConf->settings = [
 
 'wmgUseEcho' => [
 	'default' => true,
-	'legalteamwiki' => false,
-	'loginwiki' => false,
-	'votewiki' => false,
-	'zerowiki' => false,
+	'nonecho' => false,
 ],
 'wmgEchoEnableEmailBatch' => [
 	'default' => true,
