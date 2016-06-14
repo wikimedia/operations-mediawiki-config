@@ -14259,6 +14259,15 @@ $wgConf->settings = [
 		'base' => true,
 		'beta' => true,
 	],
+	// T134003
+	'fawiki' => [
+		'base' => true,
+		'beta' => true,
+	],
+	'ukwiki' => [
+		'base' => true,
+		'beta' => true,
+	],
 ],
 'wgMFLazyLoadReferences' => [
 	'default' => [
