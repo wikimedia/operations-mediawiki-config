@@ -8161,6 +8161,7 @@ $wgConf->settings = [
 			'movefile' => true,
 		],
 		'user' => [ 'reupload-own' => false ], // T85621
+		'autopatrolled' => [ 'autopatrol' ], // T130808
 	],
 	'ladwiki' => [
 		'flood' => [ 'bot' => true ], // T131527
@@ -9307,7 +9308,7 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker' ], // T130215
 	],
 	'+kowiki' => [
-		'sysop' => [ 'rollbacker', 'confirmed', 'uploader' ], // T85621
+		'sysop' => [ 'rollbacker', 'confirmed', 'uploader', 'autopatrolled' ], // T85621, T130808
 	],
 	'+ladwiki' => [
 		'sysop' => [ 'flood' ], // T131527
@@ -9990,7 +9991,7 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker' ], // T130215
 	],
 	'+kowiki' => [
-		'sysop' => [ 'rollbacker', 'confirmed', 'uploader' ], // T85621
+		'sysop' => [ 'rollbacker', 'confirmed', 'uploader', 'autopatrolled' ], // T85621, T130808
 	],
 	'+ladwiki' => [
 		'sysop' => [ 'flood' ], // T131527
