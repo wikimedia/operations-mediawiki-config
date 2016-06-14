@@ -73,6 +73,7 @@ switch ( $wgDBname ) {
 		break;
 	case 'commonswiki':
 		$wgAbuseFilterProfile = true; // T132200
+		$wgAbuseFilterConditionLimit = 2000; // T132048
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		break;
 	case 'cswiktionary':
