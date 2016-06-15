@@ -457,7 +457,7 @@ if ( PHP_SAPI === 'cli' ) {
 
 $wgUseImageResize               = true;
 $wgUseImageMagick               = true;
-$wgImageMagickConvertCommand    = '/usr/bin/convert';
+$wgImageMagickConvertCommand    = '/usr/local/bin/mediawiki-firejail-convert';
 $wgSharpenParameter = '0x0.8'; # for IM>6.5, T26857
 
 $wgFileBlacklist[] = 'txt';
