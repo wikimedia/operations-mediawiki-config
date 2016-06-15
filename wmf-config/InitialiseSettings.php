@@ -4487,6 +4487,7 @@ $wgConf->settings = [
 			'kafka' => 'debug',
 			'buffer' => true,
 		],
+		'authentication' => 'info',
 		'badpass' => 'debug',
 		'BounceHandler' => 'debug',
 		'Bug58676' => 'debug', # Invalid message parameter
