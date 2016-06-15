@@ -8162,7 +8162,7 @@ $wgConf->settings = [
 			'movefile' => true,
 		],
 		'user' => [ 'reupload-own' => false ], // T85621
-		'autopatrolled' => [ 'autopatrol' ], // T130808
+		'autopatrolled' => [ 'autopatrol' => true ], // T130808
 	],
 	'ladwiki' => [
 		'flood' => [ 'bot' => true ], // T131527
