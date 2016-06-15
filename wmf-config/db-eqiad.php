@@ -155,11 +155,14 @@ $wgLBFactoryConf = array(
 	),
 	's7' => array(
 		'db1041' => 0,   # 1.4TB  64GB, master
-#		'db1033' => 150, # 1.4TB  64GB, old master
+		'db1033' => 150, # 1.4TB  64GB, old master
 		'db1028' => 50,  # 1.4TB  64GB, vslow, dump
 		'db1034' => 150, # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1039' => 300, # 1.4TB  64GB
 		'db1062' => 500, # 2.8TB 128GB
+		'db1079' => 50,  # 3.6TB 512GB, low weight
+		'db1086' => 50,  # 3.6TB 512GB, low weight
+		'db1094' => 50,  # 3.6TB 512GB, low weight
 	),
 	'silver' => array(
 		'silver' => 100,   # I have no idea if this is right
