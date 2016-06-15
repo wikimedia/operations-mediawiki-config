@@ -147,11 +147,14 @@ $wgLBFactoryConf = array(
 	),
 	's6' => array(
 		'db1050' => 0,   # 2.8TB  64GB, master
-#		'db1023' => 200, # 1.4TB  64GB, old master
+		'db1023' => 200, # 1.4TB  64GB, old master
 		'db1022' => 100, # 1.4TB  64GB, api
 		'db1030' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1037' => 50,  # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1061' => 500, # 2.8TB 128GB
+#		'db1085' => 50,  # 3.6TB 512GB, depooled for maintenance 
+		'db1088' => 50,  # 3.6TB 512GB, low weight
+		'db1093' => 50,  # 3.6TB 512GB, low weight
 	),
 	's7' => array(
 		'db1041' => 0,   # 1.4TB  64GB, master
