@@ -2181,13 +2181,8 @@ if ( $wmgUseVisualEditor ) {
 
 	// RESTbase connection configuration
 	if ( $wmgVisualEditorAccessRESTbaseDirectly ) {
-		// HACK: $wgServerName is not available yet at this point, it's set by Setup.php
-		// so use a hook
-		$wgExtensionFunctions[] = function () {
-			global $wgVisualEditorRestbaseURL, $wgVisualEditorFullRestbaseURL;
-			$wgVisualEditorRestbaseURL = "/api/rest_v1/page/html/";
-			$wgVisualEditorFullRestbaseURL = "/api/rest_";
-		};
+		$wgVisualEditorRestbaseURL = "/api/rest_v1/page/html/";
+		$wgVisualEditorFullRestbaseURL = "/api/rest_";
 	}
 
 	// Tab configuration
