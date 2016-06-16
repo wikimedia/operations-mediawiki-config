@@ -8746,8 +8746,10 @@ $wgConf->settings = [
 		'autoeditor' => [ 'autoreview' => true ],
 	],
 	'urwiki' => [
-		'rollbacker' => [ 'rollback' => true ], // T47642
+		'accountcreator' => [ 'tboverride-account' => true, 'override-antispoof' => true ], // T137888
+		'filemover' => [ 'movefile' => true ], // T137888
 		'interface-editor' => [ 'editinterface' => true ], // T120348
+		'rollbacker' => [ 'rollback' => true ], // T47642
 	],
 	'vecwiki' => [
 		'flood' => [ 'bot' => true ],
@@ -9551,7 +9553,7 @@ $wgConf->settings = [
 	],
 	'+urwiki' => [
 		'bureaucrat' => [ 'import', 'confirmed', 'abusefilter', 'rollbacker' ], // T44737 and T47643
-		'sysop' => [ 'confirmed', 'abusefilter', 'rollbacker', 'interface-editor' ], // T44737, T47643 and T120348
+		'sysop' => [ 'confirmed', 'abusefilter', 'rollbacker', 'interface-editor', 'accountcreator', 'filemover' ], // T44737, T47643, T120348 and T137888
 	],
 	'+viwiki' => [
 		'sysop' => [
@@ -10242,7 +10244,7 @@ $wgConf->settings = [
 	],
 	'+urwiki' => [
 		'bureaucrat' => [ 'import', 'confirmed', 'abusefilter', 'rollbacker' ], // T44737 and T47643
-		'sysop' => [ 'confirmed', 'interface-editor' ], // T44737 and T120348
+		'sysop' => [ 'confirmed', 'interface-editor', 'accountcreator', 'filemover' ], // T44737, T120348 and T137888
 	],
 	'+viwiki' => [
 		'sysop' => [
