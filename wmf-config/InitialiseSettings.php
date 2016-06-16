@@ -16456,9 +16456,9 @@ $wgConf->settings = [
 
 
 'wmgCirrusSearchUserTesting' => [
+	// Only being utilized on some wiki's, but because this requires a special query parameter
+	// to trigger it is safe to use everywhere rather than duplicate the config.
 	'default' => [
-	],
-	'enwiki' => [
 		'textcat1' => [
 			// Test only activated via query string trigger
 			'sampleRate' => 0,
@@ -16468,34 +16468,30 @@ $wgConf->settings = [
 				'wgCirrusSearchLanguageDetectors' => [
 					'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat',
 				],
-				'wgCirrusSearchTextcatLanguages' => [
-					'en', 'es', 'zh', 'pt', 'ar', 'ru', 'fa', 'ko',
-					'bn', 'bg', 'hi', 'el', 'ja', 'ta', 'th', 'he'
-				]
 			],
 			'buckets' => [
 				// control bucket. setup threshold and detector but don't turn on the
 				// language query
 				'a' => [
-					'trigger' => 'textcat1:a',
+					'trigger' => 'textcat2:a',
 					'globals' => [
 						'wgCirrusSearchEnableAltLanguage' => false,
 					],
 				],
 				// test bucket. try textcat and append results when < 3 results found
 				'b' => [
-					'trigger' => 'textcat1:b',
+					'trigger' => 'textcat2:b',
 					'globals' => [
 						'wgCirrusSearchEnableAltLanguage' => true,
-						'wgCirrusSearchInterwikiProv' => 'iwsw6',
+						'wgCirrusSearchInterwikiProv' => 'iwsw8',
 					],
 				],
 				// test bucket. try accept-language, fallback to textcat
 				'c' => [
-					'trigger' => 'textcat1:c',
+					'trigger' => 'textcat2:c',
 					'globals' => [
 						'wgCirrusSearchEnableAltLanguage' => true,
-						'wgCirrusSearchInterwikiProv' => 'iwsw7',
+						'wgCirrusSearchInterwikiProv' => 'iwsw9',
 						'wgCirrusSearchLanguageDetectors' => [
 							'accept-lang' => 'CirrusSearch\\LanguageDetector\\HttpAccept',
 							'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat',
@@ -16504,6 +16500,27 @@ $wgConf->settings = [
 				],
 			],
 		],
+	],
+],
+
+'wgCirrusSearchTextcatLanguages' => [
+	'default' => [
+			'en', 'es', 'zh', 'pt', 'ar', 'ru', 'fa', 'ko',
+			'bn', 'bg', 'hi', 'el', 'ja', 'ta', 'th', 'he'
+	],
+	'frwiki' => [
+		'fr', 'en', 'ar', 'ru', 'zh', 'th', 'el', 'hy',
+		'he', 'ko',
+	],
+	'eswiki' => [
+		'es', 'en', 'ru', 'zh', 'ar', 'ja',
+	],
+	'itwiki' => [
+		'it', 'en', 'ru', 'ar', 'zh', 'ja', 'el', 'ko',
+	],
+	'dewiki' => [
+		'de', 'en', 'zh', 'el', 'ru', 'ar', 'hi', 'th',
+		'ko', 'ja',
 	],
 ],
 
