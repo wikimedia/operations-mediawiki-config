@@ -12635,6 +12635,14 @@ $wgConf->settings = [
 	'testwiki' => false,
 	'test2wiki' => false,
 	'nonbetafeatures' => false,
+	'wikipedia' => false,
+	'wiktionary' => false,
+	'wikiversity' => false,
+	'wikiquote' => false,
+	'wikibooks' => false,
+	'wikinews' => false,
+	'wikivoyage' => false,
+	'cll-default' => true,
 ],
 
 // ------------ BetaFeatures end -----------
@@ -15957,11 +15965,13 @@ $wgConf->settings = [
 // Whether Compact Links is enabled for new accounts *by default*
 'wmgULSCompactLinksForNewAccounts' => [
 	'default' => false,
+	'cll-default' => true,
 ],
 
 // Whether Compact Links is enabled for anonymous users *by default*
 'wmgULSCompactLinksEnableAnon' => [
 	'default' => false,
+	'cll-default' => true,
 ],
 
 'wmgWikibaseCachePrefix' => [
