@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0efd9372_f2c2f286",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 12645,
+      "author": {
+        "id": 866
+      },
+      "writtenOn": "2016-06-17T07:45:38Z",
+      "side": 1,
+      "message": "Fixed.",
+      "revId": "77a2c8236aa70f00ba3b4857514fa477eab52162",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_f2bdd217",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 3
@@ -19,6 +36,24 @@
     },
     {
       "key": {
+        "uuid": "0efd9372_d2bd2eff",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 15968,
+      "author": {
+        "id": 866
+      },
+      "writtenOn": "2016-06-17T07:45:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0efd9372_f2bdd217",
+      "revId": "77a2c8236aa70f00ba3b4857514fa477eab52162",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0efd9372_d2b88e27",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 3
@@ -30,6 +65,24 @@
       "writtenOn": "2016-06-17T07:30:14Z",
       "side": 1,
       "message": "cll-default does not exist.\n\nYou do not need to set this setting. \"$wgDefaultUserOptions[\u0027compact-language-links\u0027] \u003d 1;\" present in CommonSettings.php means that it is enabled for everyone by default.",
+      "revId": "77a2c8236aa70f00ba3b4857514fa477eab52162",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_32347aa7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 15974,
+      "author": {
+        "id": 866
+      },
+      "writtenOn": "2016-06-17T07:45:38Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0efd9372_d2b88e27",
       "revId": "77a2c8236aa70f00ba3b4857514fa477eab52162",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
