@@ -9038,7 +9038,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'translationadmin' ], // T75394
 	],
 	'+cawikinews' => [
-		'sysop' => [ 'flood' ], // T98576
+		'sysop' => [ 'flood', 'confirmed' ], // T98576, T138069
 	],
 	'+cewiki' => [
 		'sysop' => [ 'rollbacker', 'suppressredirect', 'uploader' ], // T128205, T129005
@@ -9715,7 +9715,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'translationadmin' ], // T75394
 	],
 	'+cawikinews' => [
-		'sysop' => [ 'flood' ], // T98576
+		'sysop' => [ 'flood', 'confirmed' ], // T98576, T138069
 	],
 	'+cewiki' => [
 		'sysop' => [ 'rollbacker', 'suppressredirect', 'uploader' ], // T128205, T129005
