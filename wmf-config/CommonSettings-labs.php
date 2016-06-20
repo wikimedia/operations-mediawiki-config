@@ -315,6 +315,10 @@ if ( $wmgUseEcho && $wmgUseCentralAuth ) {
 	$wgEchoSharedTrackingDB = 'wikishared';
 	// Set cluster back to false, to override CommonSettings.php setting it to 'extension1'
 	$wgEchoSharedTrackingCluster = false;
+
+	// Testing these transition flags in beta
+	$wgEchoSectionTransition = true;
+	$wgEchoBundleTransition = true;
 }
 
 if ( $wmgUseGraph ) {
