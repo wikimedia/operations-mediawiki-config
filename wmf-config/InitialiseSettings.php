@@ -6383,14 +6383,6 @@ $wgConf->settings = [
 		106 => 'Portal',
 		107 => 'Portal-diskusjon',
 	],
-	'ptwikinews' => [
-		100 => 'Portal',
-		101 => 'Portal_Discussão',
-		102 => 'Efeméride',
-		103 => 'Efeméride_Discussão',
-		104 => 'Transwiki',
-		105 => 'Transwiki_Discussão',
-	],
 	'plwikinews' => [
 		NS_PROJECT_TALK => 'Dyskusja_Wikinews',
 		NS_USER => 'Wikireporter',
@@ -6399,6 +6391,12 @@ $wgConf->settings = [
 		101 => 'Dyskusja_portalu'
 	],
 	'ptwikinews' => [
+		100 => 'Portal',
+		101 => 'Portal_Discussão',
+		102 => 'Efeméride',
+		103 => 'Efeméride_Discussão',
+		104 => 'Transwiki',
+		105 => 'Transwiki_Discussão',
 		110 => 'Colaboração', // T94894
 		111 => 'Colaboração_Discussão',
 	],
