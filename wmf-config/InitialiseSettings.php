@@ -11799,6 +11799,7 @@ $wgConf->settings = [
 	'ndswiki' => true,
 	'newiki' => true, // T96823
 	'pawiki' => true, // T99331
+	'plwiki' => true, // T138169
 	'pswiki' => true, // T121132
 	'ptwiktionary' => true, // T46412
 	'rowiki' => true,
@@ -11862,6 +11863,7 @@ $wgConf->settings = [
 	'default' => true,
 	'arwiki' => false,
 	'fawiki' => false,
+	'plwiki' => false, // T138169
 	'incubatorwiki' => false,
 ],
 
