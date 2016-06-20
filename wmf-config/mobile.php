@@ -117,8 +117,6 @@ if ( $wmgMobileFrontend ) {
 	$wgMFSearchAPIParams = $wmgMFSearchAPIParams;
 	$wgMFSearchGenerator = $wmgMFSearchGenerator;
 
-	$wgMFUseWikibaseDescription = true; // Alpha experiment
-
 	// Turn on volunteer recruitment
 	$wgMFEnableJSConsoleRecruitment = true;
 
