@@ -12635,14 +12635,6 @@ $wgConf->settings = [
 	'testwiki' => false,
 	'test2wiki' => false,
 	'nonbetafeatures' => false,
-	'wikipedia' => false,
-	'wiktionary' => false,
-	'wikiversity' => false,
-	'wikiquote' => false,
-	'wikibooks' => false,
-	'wikinews' => false,
-	'wikivoyage' => false,
-	'cll-nondefault' => true,
 ],
 
 // ------------ BetaFeatures end -----------
