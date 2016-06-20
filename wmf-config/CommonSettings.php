@@ -2338,7 +2338,14 @@ if ( $wmgUseSubPageList3 ) {
 	include( "$IP/extensions/SubPageList3/SubPageList3.php" );
 }
 
-$wgFooterIcons["poweredby"]["mediawiki"]["url"] = "//www.mediawiki.org/";
+// Serve 'Powered by MediaWiki' badge from /static/images instead of
+// $wgResourceBasePath so we can set far-future expires.
+$wgFooterIcons['poweredby']['mediawiki']['src'] =
+       '/static/images/poweredby_mediawiki_88x31.png';
+$wgFooterIcons['poweredby']['mediawiki']['srcset'] =
+       '/static/images/poweredby_mediawiki_132x47.png 1.5x, ' .
+       '/static/images/poweredby_mediawiki_176x62.png 2x';
+
 if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
 	$wgCookieSecure = true;
 	$_SERVER['HTTPS'] = 'on'; // Fake this so MW goes into HTTPS mode
