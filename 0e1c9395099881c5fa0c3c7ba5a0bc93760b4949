@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_f0a659bd",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12178,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-06-22T15:14:58Z",
+      "side": 0,
+      "message": "To avoid this, always end the arrays by a comma.",
+      "revId": "0e1c9395099881c5fa0c3c7ba5a0bc93760b4949",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
