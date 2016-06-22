@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_c1254505",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14246,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2016-06-22T23:01:31Z",
+      "side": 1,
+      "message": "Please use tabs.",
+      "revId": "60defddfcfb25691b6303bb126fca4cf7711e57b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
