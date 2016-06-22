@@ -12637,16 +12637,19 @@ $wgConf->settings = [
 	'nonbetafeatures' => false,
 	'wikiversity' => false,
 	'wikivoyage' => false,
+	'wikinews' => false,
+	'wikibooks' => false,
+	'clldefault' => false,
 ],
 
 // Whether Compact Links is enabled for new accounts *by default*
 'wmgULSCompactLinksForNewAccounts' => [
-	'default' => false,
+	'default' => true,
 ],
 
 // Whether Compact Links is enabled for anonymous users *by default*
 'wmgULSCompactLinksEnableAnon' => [
-	'default' => false,
+	'default' => true,
 ],
 
 // ------------ BetaFeatures end -----------
