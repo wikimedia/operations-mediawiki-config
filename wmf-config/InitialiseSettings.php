@@ -12639,6 +12639,9 @@ $wgConf->settings = [
 	'nonbetafeatures' => false,
 	'wikiversity' => false,
 	'wikivoyage' => false,
+	'wikinews' => false,
+	'wikibooks' => false,
+	'clldefault' => false,
 ],
 
 // Whether Compact Links is enabled for new accounts *by default*
