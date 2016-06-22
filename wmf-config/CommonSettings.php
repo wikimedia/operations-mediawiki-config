@@ -31,9 +31,9 @@ if ( isset( $_SERVER['SERVER_SOFTWARE'] ) ) {
 	$_SERVER['SERVER_SOFTWARE'] = 'Apache';
 }
 
-if ( PHP_SAPI == 'cli' ) {
-	# Override for sanity's sake.
-	ini_set( 'display_errors', 1 );
+if ( PHP_SAPI === 'cli' ) {
+	# Override for sanity's sake. Log errors to stderr.
+	ini_set( 'display_errors', 'stderr' );
 }
 if ( isset( $_SERVER['SERVER_ADDR'] ) ) {
 	ini_set( 'error_append_string', ' (' . $_SERVER['SERVER_ADDR'] . ')' );
