@@ -12176,7 +12176,7 @@ $wgConf->settings = [
 		'*.tasnimnews.com',                 // CC-BY 4.0 content - T134472
 		'*.khamenei.ir',                    // CC-BY 4.0 content - T134472
 		'images.nypl.org',                  // New York Public Library - T137687
-		'www.wpc.ncep.noaa.gov'             // National Oceanic and Atmospheric Administration - T138383
+		'www.wpc.ncep.noaa.gov',            // National Oceanic and Atmospheric Administration - T138383
 	],
 ],
 
