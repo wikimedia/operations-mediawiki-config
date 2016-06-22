@@ -14241,6 +14241,13 @@ $wgConf->settings = [
 	'wikivoyage' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ], // T110436, T110837
 ],
 
+'wgMFSpecialCaseMainPage' => [
+	'default' => true,
+	'wikidata' => false,
+	'wikiquote' => false, // T138129
+	'wiktionary' => false, // T138129
+],
+
 'wgMFRemovableClasses' => [
 	'default' => [
 		'base' => [ '.navbox', '.nomobile' ],
