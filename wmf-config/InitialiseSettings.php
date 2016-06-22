@@ -14242,10 +14242,7 @@ $wgConf->settings = [
 ],
 
 'wgMFSpecialCaseMainPage' => [
-	'default' => true,
-	'wikidata' => false,
-	'wikiquote' => false, // T138129
-	'wiktionary' => false, // T138129
+	'default' => false,
 	'mobilemainpagelegacy' => true,
 ],
 
