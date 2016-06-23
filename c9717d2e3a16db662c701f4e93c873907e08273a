@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_57d3d7d6",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2016-06-23T10:50:10Z",
+      "side": 1,
+      "message": "This does not match what the patch does (it enabled it for all users)",
+      "revId": "c9717d2e3a16db662c701f4e93c873907e08273a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_97dd3fe4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12647,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2016-06-23T10:50:10Z",
+      "side": 1,
+      "message": "Both of these options were supposed to stay false until we get to the later deployments. This one does nothing because new users inherit the default setting.\n\nAlso note that turning this on with this setting would enable compact language links for all new users in *all* wikis.",
+      "revId": "c9717d2e3a16db662c701f4e93c873907e08273a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_f7ebeb74",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 12652,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2016-06-23T10:50:10Z",
+      "side": 1,
+      "message": "This one cannot be turned false after T138321, but I don\u0027t understand why that was changed.\n\nAlso note that turning this on with this setting would enable compact language links for all anonymous users in *all* wikis.",
+      "revId": "c9717d2e3a16db662c701f4e93c873907e08273a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
