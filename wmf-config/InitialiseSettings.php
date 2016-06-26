@@ -14035,7 +14035,7 @@ $wgConf->settings = [
 		'ppprop' => 'displaytitle'
 	],
 	'wikidata' => [
-		'wbptterms' => 'label'
+		'wbptterms' => [ 'label', 'description' ]
 	]
 ],
 'wmgMFSearchGenerator' => [
