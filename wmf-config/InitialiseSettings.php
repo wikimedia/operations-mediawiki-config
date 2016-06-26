@@ -7231,6 +7231,11 @@ $wgConf->settings = [
 			'autopatrolled' => [ 999, 1 ],
 		],
 	],
+	'+enwiki' => [
+		'move' => [
+			'extendedmover' => [16, 60], // T138703
+		],
+	],
 ],
 # @} end of wgRateLimits
 
