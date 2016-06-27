@@ -14,7 +14,6 @@ if ( $wmgMobileFrontend ) {
 	$wgMFContentNamespace = $wmgMFContentNamespace;
 	$wgMFPhotoUploadAppendToDesc = $wmgMFPhotoUploadAppendToDesc;
 	$wgMFUseWikibaseDescription = $wmgMFUseWikibaseDescription;
-	$wgMFDisplayWikibaseDescription = $wmgMFDisplayWikibaseDescription;
 	$wgMFMobileFormatterHeadings = $wmgMFMobileFormatterHeadings;
 
 	if ( $wmgMobileFrontendLogo ) {
