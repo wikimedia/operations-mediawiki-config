@@ -14238,13 +14238,16 @@ $wgConf->settings = [
 	'commonswiki' => 75, // T64598
 ],
 'wmgMFUseWikibaseDescription' => [
+	'default' => true,
+],
+'wmgMFDisplayWikibaseDescription' => [
+	'default' => true,
+],
+'wmgMFDisplayWikibaseDescriptionsAsTaglines' => [
 	'default' => false,
 	'testwikidatawiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
-],
-'wmgMFDisplayWikibaseDescription' => [
-	'default' => true,
 ],
 'wmgMFMobileFormatterHeadings' => [
 	'default' => [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ],
