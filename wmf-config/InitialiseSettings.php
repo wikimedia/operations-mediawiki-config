@@ -12641,6 +12641,7 @@ $wgConf->settings = [
 	'wikivoyage' => false,
 	'wikinews' => false,
 	'wikibooks' => false,
+	'wikiquote' => false,
 	'clldefault' => false,
 ],
 
