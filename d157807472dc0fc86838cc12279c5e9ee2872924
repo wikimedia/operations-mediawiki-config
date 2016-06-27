@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_a5bf585b",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-06-27T15:00:44Z",
+      "side": 1,
+      "message": "Looks like this one is expired as well.",
+      "revId": "d157807472dc0fc86838cc12279c5e9ee2872924",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
