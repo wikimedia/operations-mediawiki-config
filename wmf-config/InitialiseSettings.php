@@ -14248,6 +14248,8 @@ $wgConf->settings = [
 	'testwikidatawiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
+	'cawiki' => true, // T135429
+	'plwiki' => true, // T135429
 ],
 'wmgMFMobileFormatterHeadings' => [
 	'default' => [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ],
