@@ -14286,7 +14286,7 @@ $wgConf->settings = [
 'wgMFLazyLoadReferences' => [
 	'default' => [
 		'base' => false,
-		'beta' => false,
+		'beta' => true,
 	],
 	'enwiki' => [
 		'base' => false,
