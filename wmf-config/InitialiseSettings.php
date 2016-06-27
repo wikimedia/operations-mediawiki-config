@@ -6260,6 +6260,12 @@ $wgConf->settings = [
 		114 => 'කණිෂ්ඨ_විකි',
 		115 => 'කණිෂ්ඨ_විකි_සාකච්ඡාව',
 	],
+	'skwikibooks' => [
+		102 => 'Wikirecepty',                 // T138779
+		103 => 'Diskusia_k_Wikireceptom',
+		110 => 'Wikijunior',                  // T138779
+		111 => 'Diskusia_k_Wikijunioru',
+	],
 	'srwikibooks' => [
 		102 => 'Кувар',
 		103 => 'Разговор_о_кувару'
