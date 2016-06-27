@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_565aa485",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14243,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-27T22:10:11Z",
+      "side": 1,
+      "message": "You can drop the `m` from here and then remove the corresponding rules in mobile.php",
+      "revId": "742ba33f7008e9be4ebe753c04533dacf420c331",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_3657205d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14246,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-27T22:10:11Z",
+      "side": 1,
+      "message": "Drop the m in wmg",
+      "revId": "742ba33f7008e9be4ebe753c04533dacf420c331",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0efd9372_f6611833",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-27T22:10:11Z",
+      "side": 1,
+      "message": "No need to do this here any more - simply add it in InitialiseSettings.php (the above is a legacy pattern)",
+      "revId": "742ba33f7008e9be4ebe753c04533dacf420c331",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
