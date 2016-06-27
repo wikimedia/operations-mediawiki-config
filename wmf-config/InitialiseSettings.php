@@ -14268,6 +14268,11 @@ $wgConf->settings = [
 		'base' => false,
 		'beta' => true,
 	],
+	// T137822
+	'tlwiki' => [
+		'base' => true,
+		'beta' => true,
+	],
 	// T134768
 	'bnwiki' => [
 		'base' => true,
@@ -14290,6 +14295,11 @@ $wgConf->settings = [
 	],
 	'enwiki' => [
 		'base' => false,
+		'beta' => true,
+	],
+	// T137822
+	'tlwiki' => [
+		'base' => true,
 		'beta' => true,
 	],
 ],
