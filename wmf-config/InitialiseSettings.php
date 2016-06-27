@@ -14236,6 +14236,8 @@ $wgConf->settings = [
 	'testwikidatawiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
+	'cawiki' => true, // T135429
+	'plwiki' => true, // T135429
 ],
 'wmgMFDisplayWikibaseDescription' => [
 	'default' => true,
