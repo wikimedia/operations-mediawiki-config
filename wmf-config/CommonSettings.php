@@ -2727,6 +2727,9 @@ if ( $wmgUseEcho ) {
 			$wgDefaultUserOptions[$option] = $value;
 		}
 	}
+
+	$wgEchoBundleTransition = $wmgEchoTransition;
+	$wgEchoSectionTransition = $wmgEchoTransition;
 }
 
 if ( $wmgUseThanks ) {
