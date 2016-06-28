@@ -13,11 +13,11 @@ if ( defined( 'HHVM_VERSION' ) ) {
 	$wgWBSharedCacheKey .= '-hhvm';
 }
 
-$wgWBSharedSettings = array();
+$wgWBSharedSettings = [];
 
 $wgWBSharedSettings['maxSerializedEntitySize'] = 2500;
 
-$wgWBSharedSettings['siteLinkGroups'] = array(
+$wgWBSharedSettings['siteLinkGroups'] = [
 	'wikipedia',
 	'wikibooks',
 	'wikinews',
@@ -26,14 +26,14 @@ $wgWBSharedSettings['siteLinkGroups'] = array(
 	'wikiversity',
 	'wikivoyage',
 	'special'
-);
+];
 
-$wgWBSharedSettings['specialSiteLinkGroups'] = array(
+$wgWBSharedSettings['specialSiteLinkGroups'] = [
 	'commons',
 	'mediawiki',
 	'meta',
 	'species'
-);
+];
 
 $baseNs = 120;
 
@@ -47,12 +47,12 @@ define( 'WB_NS_QUERY', $baseNs + 2 );
 define( 'WB_NS_QUERY_TALK', $baseNs + 3 );
 
 // Tell Wikibase which namespace to use for which kind of entity content.
-$wgWBSharedSettings['entityNamespaces'] = array(
+$wgWBSharedSettings['entityNamespaces'] = [
 	'wikibase-item' => NS_MAIN, // CONTENT_MODEL_WIKIBASE_ITEM
 	'wikibase-property' => WB_NS_PROPERTY // CONTENT_MODEL_WIKIBASE_PROPERTY
-);
+];
 
-if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki', 'testwikidatawiki' ) ) ) {
+if ( in_array( $wgDBname, [ 'test2wiki', 'testwiki', 'testwikidatawiki' ] ) ) {
 	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'testwikidata';
 } else {
 	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'wikidata';
@@ -70,15 +70,15 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBRepoSettings = $wgWBSharedSettings + $wgWBRepoSettings;
 
-	$wgWBRepoSettings['statementSections'] = array(
-		'item' => array(
+	$wgWBRepoSettings['statementSections'] = [
+		'item' => [
 			'statements' => null,
-			'identifiers' => array(
+			'identifiers' => [
 				'type' => 'dataType',
-				'dataTypes' => array( 'external-id' ),
-			),
-		),
-	);
+				'dataTypes' => [ 'external-id' ],
+			],
+		],
+	];
 
 	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
 
@@ -87,12 +87,12 @@ if ( $wmgUseWikibaseRepo ) {
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		// there is no cronjob dispatcher yet, this will do nothing
-		$wgWBRepoSettings['clientDbList'] = array( 'testwiki', 'test2wiki', 'testwikidatawiki' );
-		$wgPropertySuggesterClassifyingPropertyIds = array( 7 );
+		$wgWBRepoSettings['clientDbList'] = [ 'testwiki', 'test2wiki', 'testwikidatawiki' ];
+		$wgPropertySuggesterClassifyingPropertyIds = [ 7 ];
 	} else {
 		$wgWBRepoSettings['clientDbList'] = array_diff(
 			MWWikiversions::readDbListFile( 'wikidataclient' ),
-			array( 'testwikidatawiki', 'testwiki', 'test2wiki' )
+			[ 'testwikidatawiki', 'testwiki', 'test2wiki' ]
 		);
 		// Exclude closed wikis
 		$wgWBRepoSettings['clientDbList'] = array_diff(
@@ -118,7 +118,7 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgPropertySuggesterMinProbability = 0.069;
 
 	// T72346
-	$wgPropertySuggesterDeprecatedIds = array(
+	$wgPropertySuggesterDeprecatedIds = [
 		143, // imported from
 		/**
 		 * Deprecated properties
@@ -145,7 +145,7 @@ if ( $wmgUseWikibaseRepo ) {
 		2368, // wikibase-property
 		2535, // math
 		2536, // external-id
-	);
+	];
 
 	// Don't try to let users answer captchas if they try to add links
 	// on either Item or Property pages. T86453
@@ -163,14 +163,14 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['changesDatabase'] = 'wikidatawiki';
 	$wgWBClientSettings['repoDatabase'] = 'wikidatawiki';
 
-	$wgWBClientSettings['repoNamespaces'] = array(
+	$wgWBClientSettings['repoNamespaces'] = [
 		'wikibase-item' => '',
 		'wikibase-property' => 'Property'
-	);
+	];
 
 	$wgWBClientSettings['languageLinkSiteGroup'] = $wmgWikibaseSiteGroup;
 
-	if ( in_array( $wgDBname, array( 'commonswiki', 'mediawikiwiki', 'metawiki', 'specieswiki' ) ) ) {
+	if ( in_array( $wgDBname, [ 'commonswiki', 'mediawikiwiki', 'metawiki', 'specieswiki' ] ) ) {
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
 	}
 
@@ -188,18 +188,18 @@ if ( $wmgUseWikibaseClient ) {
 			// 118 => Draft
 			// 1198 => NS_TRANSLATE
 			// 2600 => Flow topic
-			array( NS_USER, NS_FILE, NS_MEDIAWIKI, 90, 92, 118, 1198, 2600 )
+			[ NS_USER, NS_FILE, NS_MEDIAWIKI, 90, 92, 118, 1198, 2600 ]
 		);
 	};
 
 	if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
-		$wgWBClientSettings['namespaces'] = array(
+		$wgWBClientSettings['namespaces'] = [
 			NS_CATEGORY,
 			NS_PROJECT,
 			NS_TEMPLATE,
 			NS_HELP,
 			828 // NS_MODULE
-		);
+		];
 
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
 		$wgWBClientSettings['injectRecentChanges'] = false;

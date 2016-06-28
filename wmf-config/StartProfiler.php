@@ -18,11 +18,11 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 		( isset( $_GET['forceprofile'] ) && isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) )
 		|| PHP_SAPI === 'cli'
 	) {
-		$wgProfiler = array(
+		$wgProfiler = [
 			'class'  => 'ProfilerXhprof',
 			'flags'  => XHPROF_FLAGS_NO_BUILTINS,
 			'output' => 'text',
-		);
+		];
 	// If HTTP_FORCE_LOCAL_XHPROF is set in the shell environment,
 	// profile all requests from localhost.
 	} elseif (
@@ -85,10 +85,10 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 
 		// Collate stack samples and fold into single lines.
 		// This is the format expected by FlameGraph.
-		$stacks = array();
+		$stacks = [];
 
 		foreach ( $data as $sample ) {
-			$stack = array();
+			$stack = [];
 
 			if ( empty( $sample['phpStack'] ) ) {
 				continue;

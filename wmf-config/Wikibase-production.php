@@ -4,15 +4,15 @@ if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['formatterUrlProperty'] = 'P368';
 
-		$wgWBRepoSettings['badgeItems'] = array(
+		$wgWBRepoSettings['badgeItems'] = [
 			'Q608' => 'wb-badge-goodarticle',
 			'Q609' => 'wb-badge-featuredarticle'
-		);
-		$wgWBRepoSettings['preferredGeoDataProperties'] = array(
+		];
+		$wgWBRepoSettings['preferredGeoDataProperties'] = [
 			'P125',
 			'P10',
-		);
-		$wgWBRepoSettings['preferredPageImagesProperties'] = array(
+		];
+		$wgWBRepoSettings['preferredPageImagesProperties'] = [
 			'P6',
 			'P47',
 			'P50',
@@ -22,13 +22,13 @@ if ( $wmgUseWikibaseRepo ) {
 			'P152',
 			'P153',
 			'P185',
-		);
+		];
 	} else {
 		$wgWBRepoSettings['sparqlEndpoint'] = 'https://query.wikidata.org/sparql';
 
 		$wgWBRepoSettings['formatterUrlProperty'] = 'P1630';
 
-		$wgWBRepoSettings['badgeItems'] = array(
+		$wgWBRepoSettings['badgeItems'] = [
 			'Q17437798' => 'wb-badge-goodarticle',
 			'Q17437796' => 'wb-badge-featuredarticle',
 			'Q17559452' => 'wb-badge-recommendedarticle', // T72268
@@ -38,11 +38,11 @@ if ( $wmgUseWikibaseRepo ) {
 			'Q20748094' => 'wb-badge-problematic',
 			'Q20748092' => 'wb-badge-proofread',
 			'Q20748093' => 'wb-badge-validated'
-		);
-		$wgWBRepoSettings['preferredGeoDataProperties'] = array(
+		];
+		$wgWBRepoSettings['preferredGeoDataProperties'] = [
 			'P625',
-		);
-		$wgWBRepoSettings['preferredPageImagesProperties'] = array(
+		];
+		$wgWBRepoSettings['preferredPageImagesProperties'] = [
 			// Photos
 			'P18',
 			// Complex graphics
@@ -71,12 +71,12 @@ if ( $wmgUseWikibaseRepo ) {
 			'P117',
 			'P692',
 			'P491',
-		);
+		];
 	}
 }
 
 if ( $wmgUseWikibaseClient ) {
-	if ( in_array( $wgDBname, array( 'test2wiki', 'testwiki', 'testwikidatawiki' ) ) ) {
+	if ( in_array( $wgDBname, [ 'test2wiki', 'testwiki', 'testwikidatawiki' ] ) ) {
 		$wgWBClientSettings['changesDatabase'] = 'testwikidatawiki';
 		$wgWBClientSettings['repoDatabase'] = 'testwikidatawiki';
 		$wgWBClientSettings['repoUrl'] = "https://test.wikidata.org";
@@ -89,7 +89,7 @@ if ( $wmgUseWikibaseClient ) {
 		$wgArticlePlaceholderImageProperty = 'P18';
 	}
 
-	$wgWBClientSettings['badgeClassNames'] = array(
+	$wgWBClientSettings['badgeClassNames'] = [
 		'Q17437796' => 'badge-featuredarticle',
 		'Q17437798' => 'badge-goodarticle',
 		'Q17559452' => 'badge-recommendedarticle', // T72268
@@ -99,7 +99,7 @@ if ( $wmgUseWikibaseClient ) {
 		'Q20748094' => 'badge-problematic',
 		'Q20748092' => 'badge-proofread',
 		'Q20748093' => 'badge-validated'
-	);
+	];
 
 	// Overwrite or add commons links in the "other projects sidebar" with the "commons category" (P373), per T126960
 	$wgWikimediaBadgesCommonsCategoryProperty = $wgDBname === 'commonswiki' ? null : 'P373';

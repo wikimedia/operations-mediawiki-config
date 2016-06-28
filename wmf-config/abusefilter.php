@@ -18,14 +18,14 @@ $wgGroupPermissions['sysop']['abusefilter-modify'] = true;
 $wgGroupPermissions['sysop']['abusefilter-private'] = false;
 
 // Disable some potentially dangerous actions
-$wgAbuseFilterActions = array(
+$wgAbuseFilterActions = [
 	'block' => false,
 	'rangeblock' => false,
 	'degroup' => false,
-);
+];
 
 // T31922 - Prevent anyone being given the abusefilter-private right by removing it
-$wgAvailableRights = array_diff( $wgAvailableRights, array( 'abusefilter-private' ) );
+$wgAvailableRights = array_diff( $wgAvailableRights, [ 'abusefilter-private' ] );
 
 // T66255 - Enable logging to irc.wikimedia.org by default
 $wgAbuseFilterNotifications = "udp";
@@ -174,7 +174,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
-		$wgAbuseFilterActions = array( 'rangeblock' => true );
+		$wgAbuseFilterActions = [ 'rangeblock' => true ];
 		$wgAbuseFilterAnonBlockDuration = '7 days'; // T87317
 		$wgAbuseFilterBlockDuration = 'indefinite';
 		$wgAbuseFilterNotifications = false;

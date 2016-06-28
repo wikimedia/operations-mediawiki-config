@@ -16,7 +16,7 @@ if ( isset( $wgTimelineSettings ) ) {
 
 // labs does not have swift yet as of 20120525 -- hashar
 
-$wgLocalFileRepo = array(
+$wgLocalFileRepo = [
 		'class' => 'LocalRepo',
 		'name' => 'local',
 		'directory' => $wgUploadDirectory,
@@ -30,11 +30,11 @@ $wgLocalFileRepo = array(
 		'deletedHashLevels' => 3,
 		'abbrvThreshold'    => 160,
 		'isPrivate'	    => $wmgPrivateWiki
-);
+];
 
 # New commons settings
 if ( $wgDBname != 'commonswiki' ) {
-	$wgForeignFileRepos[] = array(
+	$wgForeignFileRepos[] = [
 		'class'            => 'ForeignDBViaLBRepo',
 		'name'             => 'shared',
 		'directory'        => '/data/project/upload7/wikipedia/commons',
@@ -49,14 +49,14 @@ if ( $wgDBname != 'commonswiki' ) {
 		'wiki'             => 'commonswiki',
 		'initialCapital'   => true,
 		'abbrvThreshold'   => 160,
-	);
+	];
 }
 
 # not sure what to use for the basePath; experimenting with the value below
-$wgFileBackends[] = array(
+$wgFileBackends[] = [
 	'name'           => 'gwtoolset-backend',
 	'class'          => 'FSFileBackend',
 	'lockManager'    => 'nullLockManager',
 	'fileMode'       => 0644,
 	'basePath'       => "/data/project/upload7/private/gwtoolset/$site/$lang"
-);
+];

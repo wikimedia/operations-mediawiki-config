@@ -9,21 +9,21 @@
 # requests directly to the varnish instances.  They have varnishhtcpd listening
 # on UDP port 4827.
 
-$wgSquidServersNoPurge = array( '127.0.0.1',
+$wgSquidServersNoPurge = [ '127.0.0.1',
 	'10.68.18.103',  # deployment-cache-text04
 	'10.68.18.109',  # deployment-cache-upload04
-);
-$wgHTCPRouting = array(
-	'|^https?://upload\.beta\.wmflabs\.org|' => array(
+];
+$wgHTCPRouting = [
+	'|^https?://upload\.beta\.wmflabs\.org|' => [
 		'host' => '10.68.18.109',  # deployment-cache-upload04
 		'port' => 4827,
-	),
+	],
 
 	# Fallback  (text)
-	'' => array(
-		array(
+	'' => [
+		[
 			'host' => '10.68.18.103',  # deployment-cache-text04
 			'port' => 4827,
-		),
-	),
-);
+		],
+	],
+];

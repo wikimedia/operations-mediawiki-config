@@ -19,27 +19,27 @@ function wmfImportSources( &$sources ) {
 	// Look at dumpInterwiki.php in WikimediaMaintenance for guidance.
 
 	// Enforce a sensible order
-	$sources = array(
+	$sources = [
 		// Put really common special wikis first
 		'meta', 'commons', 'incubator',
-		'wikipedia' => array(),
-		'wiktionary' => array(),
-		'wikibooks' => array(),
-		'wikinews' => array(),
-		'wikiquote' => array(),
-		'wikisource' => array( 'oldwikisource' ),
-		'wikiversity' => array( 'betawikiversity' ),
-		'wikivoyage' => array(),
-		'chapter' => array(),
+		'wikipedia' => [],
+		'wiktionary' => [],
+		'wikibooks' => [],
+		'wikinews' => [],
+		'wikiquote' => [],
+		'wikisource' => [ 'oldwikisource' ],
+		'wikiversity' => [ 'betawikiversity' ],
+		'wikivoyage' => [],
+		'chapter' => [],
 		// Add a selection of non-private special wikis
 		'foundation', 'mediawikiwiki', 'nostalgia', 'outreach', 'strategy',
 		'tenwiki', 'testwiki', 'test2wiki', 'testwikidata', 'usability',
 		'wikidata', 'wikispecies', 'wikitech',
-		'wmania' => array(
+		'wmania' => [
 			'wm2005', 'wm2006', 'wm2007', 'wm2008', 'wm2009', 'wm2010', 'wm2011',
 			'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016',
-		),
-	);
+		],
+	];
 
 	// Add all regular language projects as import sources
 	foreach ( $wgConf->getLocalDatabases() as $dbname ) {

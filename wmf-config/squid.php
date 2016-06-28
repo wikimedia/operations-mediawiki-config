@@ -1,15 +1,15 @@
 <?php
 # HTCP multicast squid purging
-$wgHTCPRouting = array(
-	'' => array(
+$wgHTCPRouting = [
+	'' => [
 		'host' => '239.128.0.112',
 		'port' => 4827
-	)
-);
+	]
+];
 $wgHTCPMulticastTTL = 8;
 
 # Accept XFF from these proxies
-$wgSquidServersNoPurge = array(
+$wgSquidServersNoPurge = [
 	# Note: the general idea here is to cover infrastructure space
 	# where e.g. Varnish and SSL servers could be located, but exclude
 	# other misc subnets (e.g. labs, analytics).
@@ -60,15 +60,15 @@ $wgSquidServersNoPurge = array(
 	'10.128.0.0/24',	# private1-ulsfo
 	'2620:0:863:101::/64',	# private1-ulsfo
 	'10.2.4.26',		# mobile.svc.ulsfo.wmnet, appears in XFF
-);
+];
 
 # IP addresses that aren't proxies, regardless of what the other sources might say
-$wgProxyWhitelist = array(
+$wgProxyWhitelist = [
 	'68.124.59.186',
 	'202.63.61.242',
 	'62.214.230.86',
 	'217.94.171.96',
-);
+];
 
 # Secondary purges to deal with DB replication lag
 $wgCdnReboundPurgeDelay = 11; // should be safely more than $wgLBFactoryConf 'max lag'

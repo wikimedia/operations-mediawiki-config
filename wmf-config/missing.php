@@ -27,7 +27,7 @@ require_once dirname( __DIR__ ) . '/multiversion/vendor/autoload.php';
  * The main function
  */
 function handleMissingWiki() {
-	$projects = array(
+	$projects = [
 		'wikibooks'   => 'b',
 		'wikinews'    => 'n',
 		'wikipedia'   => 'p',
@@ -36,7 +36,7 @@ function handleMissingWiki() {
 		'wikiversity' => 'v', // forward compatiblity, unused ATM
 		'wikivoyage'  => 'y',
 		'wiktionary'  => 't',
-	);
+	];
 
 	list( $protocol, $host ) = getProtocolAndHost();
 
@@ -139,7 +139,7 @@ function getProtocolAndHost() {
 		$host = $_SERVER['HTTP_HOST'];
 	}
 	$host = strtolower( $host );
-	return array( $protocol, $host );
+	return [ $protocol, $host ];
 }
 
 /**
@@ -233,14 +233,14 @@ function showMobileError() {
  * Wikiversity.
  */
 function showMissingSubdomainError( $project, $language ) {
-	$projectInfos = array(
-		'wikiversity' => array(
+	$projectInfos = [
+		'wikiversity' => [
 			'logo' => '//upload.wikimedia.org/wikipedia/commons/thumb/9/91/Wikiversity-logo.svg/300px-Wikiversity-logo.svg.png',
 			'home' => '//beta.wikiversity.org',
 			'name' => 'Wikiversity',
 			'home-name' => 'Beta Wikiversity',
-		)
-	);
+		]
+	];
 	$info = $projectInfos[$project];
 	header( 'HTTP/1.x 404 Not Found' );
 	header( 'Content-Type: text/html; charset=utf-8' );
