@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_09759ac8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14038,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-06-28T18:21:09Z",
+      "side": 1,
+      "message": "This shouldn\u0027t be necessary. This is added when wmgMFUseWikibaseDescription \u003d true\n\nThis is currently true (see https://gerrit.wikimedia.org/r/#/c/296346/4/wmf-config/InitialiseSettings.php)",
+      "revId": "4641a1a5e509ee03234edaeee3452f011a25790a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
