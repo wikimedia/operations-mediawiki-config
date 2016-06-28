@@ -15595,6 +15595,11 @@ $wgConf->settings = [
 	'default' => [],
 ],
 
+// Whether to enable the transition flags for the bundling and recategorization changes in Echo
+'wmgEchoTransition' => [
+	'default' => false,
+],
+
 // Thanks should be enabled for wikis with Echo
 'wmgUseThanks' => [
 	'default' => true,
