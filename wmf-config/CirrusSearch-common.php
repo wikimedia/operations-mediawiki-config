@@ -17,7 +17,7 @@ if ( $wmgUseClusterJobqueue ) {
 	# The secondary update job has a delay of a few seconds to make sure that Elasticsearch
 	# has completed a refresh cycle between when the data that the job needs is added and
 	# when the job is run.
-	$wgJobTypeConf['cirrusSearchIncomingLinkCount'] = array( 'checkDelay' => true ) +
+	$wgJobTypeConf['cirrusSearchIncomingLinkCount'] = [ 'checkDelay' => true ] +
 		$wgJobTypeConf['default'];
 }
 
@@ -62,14 +62,14 @@ $wgCirrusSearchClientSideSearchTimeout[ 'regex' ] = 80;
 $wgCirrusSearchBannedPlugins[] = 'elasticsearch-analysis-hebrew';
 
 # Build and use an ngram index for faster regex matching
-$wgCirrusSearchWikimediaExtraPlugin = array(
-	'regex' => array(
+$wgCirrusSearchWikimediaExtraPlugin = [
+	'regex' => [
 		'build',
 		'use',
-	),
+	],
 	'super_detect_noop' => true,
 	'id_hash_mod_filter' => true,
-);
+];
 
 # Enable the "experimental" highlighter on all wikis
 $wgCirrusSearchUseExperimentalHighlighter = true;
@@ -119,7 +119,7 @@ if ( $wgDBname == 'commonswiki' ) {
 	// T94856 - makes searching difficult for locally uploaded files
 	// T76957 - doesn't make sense to have Commons files on foundationwiki search
 } else { // So is everyone else, for using commons
-	$wgCirrusSearchExtraIndexes[ NS_FILE ] = array( 'commonswiki_file' );
+	$wgCirrusSearchExtraIndexes[ NS_FILE ] = [ 'commonswiki_file' ];
 }
 
 // Configuration for initial test deployment of inline interwiki search via
@@ -132,13 +132,13 @@ $wgCirrusSearchWikiToNameMap = $wmgCirrusSearchWikiToNameMap;
 $wgCirrusSearchLanguageToWikiMap = $wmgCirrusSearchLanguageToWikiMap;
 
 // will be overridden by UserTesting triggers, but we need to set the default.
-$wgCirrusSearchTextcatLanguages = array();
+$wgCirrusSearchTextcatLanguages = [];
 $wgCirrusSearchTextcatModel = "$IP/vendor/wikimedia/textcat/LM-query";
 
 $wgHooks['CirrusSearchMappingConfig'][] = function( array &$config, $mappingConfigBuilder ) {
-	$config['page']['properties']['popularity_score'] = array(
+	$config['page']['properties']['popularity_score'] = [
 		'type' => 'double',
-	);
+	];
 };
 
 // Set the scoring method

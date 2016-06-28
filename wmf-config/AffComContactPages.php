@@ -14,64 +14,64 @@ $wgHooks['ContactForm'][] = function (
 	return true;
 };
 
-$wgContactConfig['affcomusergroup'] = array(
+$wgContactConfig['affcomusergroup'] = [
 	'RecipientUser' => 'Usergroups',
 	'SenderName' => 'User group contact form on ' . $wgSitename,
 	'SenderEmail' => null,
 	'RequireDetails' => true,
 	'IncludeIP' => false,
 	'DisplayFormat' => 'vform',
-	'RLStyleModules' => array(
+	'RLStyleModules' => [
 		'ext.wikimediamessages.contactpage.affcomusergroup',
-	),
-	'AdditionalFields' => array(
-		'GroupName' => array(
+	],
+	'AdditionalFields' => [
+		'GroupName' => [
 			'label-message' => 'contactpage-affcom-user-group-name-label',
 			'contactpage-email-label' => 'Group name',
 			'type' => 'text'
-		),
-		'GroupDescription' => array(
+		],
+		'GroupDescription' => [
 			'label-message' => 'contactpage-affcom-user-group-description-label',
 			'contactpage-email-label' => 'Group description',
 			'type' => 'textarea',
 			'rows' => 10
 
-		),
-		'GroupWikiPage' => array(
+		],
+		'GroupWikiPage' => [
 			'label-message' => 'contactpage-affcom-user-group-wikipage-label',
 			'contactpage-email-label' => 'Group wiki page',
 			'type' => 'text'
-		),
-		'GroupLocation' => array(
+		],
+		'GroupLocation' => [
 			'label-message' => 'contactpage-affcom-user-group-location-label',
 			'contactpage-email-label' => 'Group location',
 			'type' => 'text'
-		),
-		'GroupLeaders' => array(
+		],
+		'GroupLeaders' => [
 			'label-message' => 'contactpage-affcom-user-group-leaders-label',
 			'contactpage-email-label' => 'Active Wikimedians',
 			'type' => 'textarea',
 			'rows' => 10
-		),
-		'GroupLogo' => array(
+		],
+		'GroupLogo' => [
 			'label-message' => 'contactpage-affcom-user-group-logo-label',
 			'contactpage-email-label' => 'Logo',
 			'type' => 'radio',
-			'options-messages' => array(
+			'options-messages' => [
 				'contactpage-affcom-user-group-logo-community' => 'Wikimedia community',
 				'contactpage-affcom-user-group-logo-affiliate' => 'Wikipedia affiliate'
-			)
-		),
-		'Rules' => array(
+			]
+		],
+		'Rules' => [
 			'label-message' => 'contactpage-affcom-user-group-rules-label',
 			'type' => 'info',
-		),
-		'Terms' => array(
+		],
+		'Terms' => [
 			'label-message' => 'contactpage-affcom-user-group-terms-label',
 			'contactpage-email-label' => 'Terms',
 			'type' => 'check',
 			'required' => true,
 			'validation-callback' => function ( $value ) { return !!$value; }
-		)
-	)
-);
+		]
+	]
+];

@@ -7,23 +7,23 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 
 #$wgReadOnly = "Wikimedia Sites are currently read-only during maintenance, please try again soon.";
 
-$wmgParserCacheDBs = array(
+$wmgParserCacheDBs = [
 	'10.64.0.12'   => '10.192.16.170', # pc2004
 	'10.64.32.72'  => '10.192.32.128', # pc2005
 	'10.64.48.128' => '10.192.48.39',  # pc2006
-);
+];
 
-$wmgOldExtTemplate = array(
+$wmgOldExtTemplate = [
 	'10.192.16.171' => 1, # es2011
 	'10.192.32.129' => 1, # es2012
 	'10.192.48.40'  => 1, # es2013
-);
+];
 
-$wgLBFactoryConf = array(
+$wgLBFactoryConf = [
 
 'class' => 'LBFactoryMulti',
 
-'sectionsByDB' => array(
+'sectionsByDB' => [
 	'enwiki' => 's1',
 
 	# New master
@@ -70,7 +70,7 @@ $wgLBFactoryConf = array(
 
 	'labswiki' => 'silver',
 	'labtestwiki' => 'labtestweb2001',
-),
+],
 
 # Load lists
 #
@@ -86,8 +86,8 @@ $wgLBFactoryConf = array(
 # Servers which are down should be removed to avoid a timeout overhead
 # per invocation.
 
-'sectionLoads' => array(
-	's1' => array(
+'sectionLoads' => [
+	's1' => [
 		'db2016' => 0,   # 2.9TB  96GB, master
 		'db2034' => 50,  # 2.9TB 160GB, rc, log
 		'db2042' => 50,  # 2.9TB 160GB, rc, log
@@ -96,8 +96,8 @@ $wgLBFactoryConf = array(
 		'db2062' => 100, # 3.3TB 160GB, api
 		'db2069' => 100, # 3.3TB 160GB, api
 		'db2070' => 400, # 3.3TB 160GB
-	),
-	's2' => array(
+	],
+	's2' => [
 		'db2017' => 0,   # 2.9TB  96GB, master
 		'db2035' => 50,  # 2.9TB 160GB, rc, log
 		'db2041' => 100, # 2.9TB 160GB, api
@@ -105,270 +105,270 @@ $wgLBFactoryConf = array(
 		'db2056' => 50,  # 3.3TB 160GB, dump (inactive), vslow
 		'db2063' => 100, # 3.3TB 160GB, api
 		'db2064' => 400, # 3.3TB 160GB
-	),
-	/* s3 */ 'DEFAULT' => array(
+	],
+	/* s3 */ 'DEFAULT' => [
 		'db2018' => 0,   # 2.9TB  96GB, master
 		'db2036' => 50,  # 2.9TB 160GB, rc, log
 		'db2043' => 50,  # 2.9TB 160GB, dump (inactive), vslow
 		'db2050' => 150, # 2.9TB 160GB, api
 		'db2057' => 400, # 3.3TB 160GB
-	),
-	's4' => array(
+	],
+	's4' => [
 		'db2019' => 0,   # 2.9TB  96GB, master
 		'db2037' => 50,  # 2.9TB 160GB, rc, log
 		'db2044' => 50,  # 2.9TB 160GB, rc, log
 		'db2051' => 200, # 2.9TB 160GB, api
 		'db2058' => 50,  # 3.3TB 160GB, dump (inactive), vslow
 		'db2065' => 400, # 3.3TB 160GB
-	),
-	's5' => array(
+	],
+	's5' => [
 		'db2023' => 0,   # 2.9TB  96GB, master
 		'db2038' => 50,  # 2.9TB 160GB, rc, log
 		'db2045' => 400, # 2.9TB 160GB
 		'db2052' => 50,  # 2.9TB 160GB, dump (inactive), vslow
 		'db2059' => 100, # 3.3TB 160GB, api
 		'db2066' => 400, # 3.3TB 160GB
-	),
-	's6' => array(
+	],
+	's6' => [
 		'db2028' => 0,   # 2.9TB  96GB, master
 		'db2039' => 50,  # 2.9TB 160GB, rc, log
 		'db2046' => 400, # 2.9TB 160GB
 		'db2053' => 100, # 2.9TB 160GB, dump (inactive), vslow
 		'db2060' => 100, # 3.3TB 160GB, api
 		'db2067' => 400, # 3.3TB 160GB
-	),
-	's7' => array(
+	],
+	's7' => [
 		'db2029' => 0,   # 2.9TB  96GB, master
 		'db2040' => 200, # 2.9TB 160GB, rc, log
 		'db2047' => 400, # 2.9TB 160GB
 		'db2054' => 200, # 2.9TB 160GB, dump (inactive), vslow
 		'db2061' => 200, # 3.3TB 160GB, api
 		'db2068' => 300, # 3.3TB 160GB
-	),
-	'silver' => array(
+	],
+	'silver' => [
 		'silver' => 100,   # I have no idea if this is right
-	),
-	'labtestweb2001' => array(
+	],
+	'labtestweb2001' => [
 		'labtestweb2001' => 100,   # I have no idea if this is right
-	),
-),
+	],
+],
 
-'serverTemplate' => array(
+'serverTemplate' => [
 	'dbname'	  => $wgDBname,
 	'user'		  => $wgDBuser,
 	'password'	  => $wgDBpassword,
 	'type'		  => 'mysql',
 	'flags'		  => DBO_DEFAULT,
 	'max lag'	  => 8, // should be safely less than $wgCdnReboundPurgeDelay
-	'variables'   => array(
+	'variables'   => [
 		'innodb_lock_wait_timeout' => 15
-	)
-),
+	]
+],
 
-'groupLoadsBySection' => array(
-	's1' => array(
-		'watchlist' => array(
+'groupLoadsBySection' => [
+	's1' => [
+		'watchlist' => [
 			'db2034' => 1,
 			'db2042' => 1,
-		),
-		'recentchanges' => array(
+		],
+		'recentchanges' => [
 			'db2034' => 1,
 			'db2042' => 1,
-		),
-		'recentchangeslinked' => array(
+		],
+		'recentchangeslinked' => [
 			'db2034' => 1,
 			'db2042' => 1,
-		),
-		'contributions' => array(
+		],
+		'contributions' => [
 			'db2034' => 1,
 			'db2042' => 1,
-		),
-		'logpager' => array(
+		],
+		'logpager' => [
 			'db2034' => 1,
 			'db2042' => 1,
-		),
-		'dump' => array(
+		],
+		'dump' => [
 			'db2055' => 1,
-		),
-		'vslow' => array(
+		],
+		'vslow' => [
 			'db2055' => 1,
-		),
-		'api' => array(
+		],
+		'api' => [
 			'db2062' => 1,
 			'db2069' => 1,
-		),
-	),
-	's2' => array(
-		'watchlist' => array(
+		],
+	],
+	's2' => [
+		'watchlist' => [
 			'db2035' => 1,
-		),
-		'recentchanges' => array(
+		],
+		'recentchanges' => [
 			'db2035' => 1,
-		),
-		'recentchangeslinked' => array(
+		],
+		'recentchangeslinked' => [
 			'db2035' => 1,
-		),
-		'contributions' => array(
+		],
+		'contributions' => [
 			'db2035' => 1,
-		),
-		'logpager' => array(
+		],
+		'logpager' => [
 			'db2035' => 1,
-		),
-		'dump' => array(
+		],
+		'dump' => [
 			'db2056' => 1,
-		),
-		'vslow' => array(
+		],
+		'vslow' => [
 			'db2056' => 1,
-		),
-		'api' => array(
+		],
+		'api' => [
 			'db2041' => 1,
 			'db2063' => 1,
-		),
-	),
-	/* s3 */ 'DEFAULT' => array(
-		'watchlist' => array(
+		],
+	],
+	/* s3 */ 'DEFAULT' => [
+		'watchlist' => [
 			'db2036' => 1,
-		),
-		'recentchanges' => array(
+		],
+		'recentchanges' => [
 			'db2036' => 1,
-		),
-		'recentchangeslinked' => array(
+		],
+		'recentchangeslinked' => [
 			'db2036' => 1,
-		),
-		'contributions' => array(
+		],
+		'contributions' => [
 			'db2036' => 1,
-		),
-		'logpager' => array(
+		],
+		'logpager' => [
 			'db2036' => 1,
-		),
-		'dump' => array(
+		],
+		'dump' => [
 			'db2043' => 1,
-		),
-		'vslow' => array(
+		],
+		'vslow' => [
 			'db2043' => 1,
-		),
-		'api' => array(
+		],
+		'api' => [
 			'db2050' => 1,
-		),
-	),
-	's4' => array(
-		'watchlist' => array(
+		],
+	],
+	's4' => [
+		'watchlist' => [
 			'db2037' => 1,
 			'db2044' => 1,
-		),
-		'recentchanges' => array(
+		],
+		'recentchanges' => [
 			'db2037' => 1,
 			'db2044' => 1,
-		),
-		'recentchangeslinked' => array(
+		],
+		'recentchangeslinked' => [
 			'db2037' => 1,
 			'db2044' => 1,
-		),
-		'contributions' => array(
+		],
+		'contributions' => [
 			'db2037' => 1,
 			'db2044' => 1,
-		),
-		'logpager' => array(
+		],
+		'logpager' => [
 			'db2037' => 1,
 			'db2044' => 1,
-		),
-		'dump' => array(
+		],
+		'dump' => [
 			'db2058' => 1,
-		),
-		'vslow' => array(
+		],
+		'vslow' => [
 			'db2058' => 1,
-		),
-		'api' => array(
+		],
+		'api' => [
 			'db2051' => 1,
-		),
-	),
-	's5' => array(
-		'watchlist' => array(
+		],
+	],
+	's5' => [
+		'watchlist' => [
 			'db2038' => 1,
-		),
-		'recentchanges' => array(
+		],
+		'recentchanges' => [
 			'db2038' => 1,
-		),
-		'recentchangeslinked' => array(
+		],
+		'recentchangeslinked' => [
 			'db2038' => 1,
-		),
-		'contributions' => array(
+		],
+		'contributions' => [
 			'db2038' => 1,
-		),
-		'logpager' => array(
+		],
+		'logpager' => [
 			'db2038' => 1,
-		),
-		'dump' => array(
+		],
+		'dump' => [
 			'db2052' => 1,
-		),
-		'vslow' => array(
+		],
+		'vslow' => [
 			'db2052' => 1,
-		),
-		'api' => array(
+		],
+		'api' => [
 			'db2059' => 1,
-		),
-	),
-	's6' => array(
-		'watchlist' => array(
+		],
+	],
+	's6' => [
+		'watchlist' => [
 			'db2039' => 1,
-		),
-		'recentchanges' => array(
+		],
+		'recentchanges' => [
 			'db2039' => 1,
-		),
-		'recentchangeslinked' => array(
+		],
+		'recentchangeslinked' => [
 			'db2039' => 1,
-		),
-		'contributions' => array(
+		],
+		'contributions' => [
 			'db2039' => 1,
-		),
-		'logpager' => array(
+		],
+		'logpager' => [
 			'db2039' => 1,
-		),
-		'dump' => array(
+		],
+		'dump' => [
 			'db2053' => 1,
-		),
-		'vslow' => array(
+		],
+		'vslow' => [
 			'db2053' => 1,
-		),
-		'api' => array(
+		],
+		'api' => [
 			'db2060' => 1,
-		),
-	),
-	's7' => array(
-		'watchlist' => array(
+		],
+	],
+	's7' => [
+		'watchlist' => [
 			'db2040' => 1,
-		),
-		'recentchanges' => array(
+		],
+		'recentchanges' => [
 			'db2040' => 1,
-		),
-		'recentchangeslinked' => array(
+		],
+		'recentchangeslinked' => [
 			'db2040' => 1,
-		),
-		'contributions' => array(
+		],
+		'contributions' => [
 			'db2040' => 1,
-		),
-		'logpager' => array(
+		],
+		'logpager' => [
 			'db2040' => 1,
-		),
-		'dump' => array(
+		],
+		'dump' => [
 			'db2054' => 1,
-		),
-		'vslow' => array(
+		],
+		'vslow' => [
 			'db2054' => 1,
-		),
-		'api' => array(
+		],
+		'api' => [
 			'db2061' => 1,
-		),
-	),
-),
+		],
+	],
+],
 
-'groupLoadsByDB' => array(),
+'groupLoadsByDB' => [],
 
 # Hosts settings
 # Do not remove servers from this list ever
 # Removing a server from this list does not remove the server from rotation,
 # it just breaks the site horribly.
-'hostsByName' => array(
+'hostsByName' => [
 	'db1001' => '10.64.0.5', #do not remove or comment out
 	'db1009' => '10.64.0.13', #do not remove or comment out
 	'db1011' => '10.64.0.15', #do not remove or comment out
@@ -512,9 +512,9 @@ $wgLBFactoryConf = array(
 	'virt1000' => '208.80.154.18', #do not remove or comment out
 	'silver' => '208.80.154.136', #do not remove or comment out
 	'labtestweb2001' => '208.80.153.14', #do not remove or comment out
-),
+],
 
-'externalLoads' => array(
+'externalLoads' => [
 	# Recompressed stores
 	'rc1' => $wmgOldExtTemplate,
 
@@ -539,55 +539,55 @@ $wgLBFactoryConf = array(
 	'cluster23' => $wmgOldExtTemplate,
 
 	# es2
-	'cluster24' => array(
+	'cluster24' => [
 		'10.192.32.130' => 1, # es2015, master
 		'10.192.0.141'  => 2, # es2014 - compressed data
 		'10.192.48.41'  => 3, # es2016
-	),
+	],
 	# es3
-	'cluster25' => array(
+	'cluster25' => [
 		'10.192.16.172' => 1, # es2018, master
 		'10.192.0.142'  => 3, # es2017
 #		'10.192.48.42'  => 3, # es2019, depooled T130702
-	),
+	],
 	# ExtensionStore shard1 - initially for AFTv5
-	'extension1' => array(
+	'extension1' => [
 		'10.192.32.4' => 1, # db2033, master
-	),
-),
+	],
+],
 
-'masterTemplateOverrides' => array(
-),
+'masterTemplateOverrides' => [
+],
 
-'externalTemplateOverrides' => array(
+'externalTemplateOverrides' => [
 	'flags' => 0, // No transactions
-),
+],
 
-'templateOverridesByCluster' => array(
-	'rc1'		=> array( 'is static' => true ),
-	'cluster1'	=> array( 'blobs table' => 'blobs_cluster1', 'is static' => true ),
-	'cluster2'	=> array( 'blobs table' => 'blobs_cluster2', 'is static' => true ),
-	'cluster3'	=> array( 'blobs table' => 'blobs_cluster3', 'is static' => true ),
-	'cluster4'	=> array( 'blobs table' => 'blobs_cluster4', 'is static' => true ),
-	'cluster5'	=> array( 'blobs table' => 'blobs_cluster5', 'is static' => true ),
-	'cluster6'	=> array( 'blobs table' => 'blobs_cluster6', 'is static' => true ),
-	'cluster7'	=> array( 'blobs table' => 'blobs_cluster7', 'is static' => true ),
-	'cluster8'	=> array( 'blobs table' => 'blobs_cluster8', 'is static' => true ),
-	'cluster9'	=> array( 'blobs table' => 'blobs_cluster9', 'is static' => true ),
-	'cluster10'	=> array( 'blobs table' => 'blobs_cluster10', 'is static' => true ),
-	'cluster20'	=> array( 'blobs table' => 'blobs_cluster20', 'is static' => true ),
-	'cluster21'	=> array( 'blobs table' => 'blobs_cluster21', 'is static' => true ),
-	'cluster22'	=> array( 'blobs table' => 'blobs_cluster22', 'is static' => true ),
-	'cluster23'	=> array( 'blobs table' => 'blobs_cluster23', 'is static' => true ),
-	'cluster24'	=> array( 'blobs table' => 'blobs_cluster24' ),
-	'cluster25'	=> array( 'blobs table' => 'blobs_cluster25' ),
-),
+'templateOverridesByCluster' => [
+	'rc1'		=> [ 'is static' => true ],
+	'cluster1'	=> [ 'blobs table' => 'blobs_cluster1', 'is static' => true ],
+	'cluster2'	=> [ 'blobs table' => 'blobs_cluster2', 'is static' => true ],
+	'cluster3'	=> [ 'blobs table' => 'blobs_cluster3', 'is static' => true ],
+	'cluster4'	=> [ 'blobs table' => 'blobs_cluster4', 'is static' => true ],
+	'cluster5'	=> [ 'blobs table' => 'blobs_cluster5', 'is static' => true ],
+	'cluster6'	=> [ 'blobs table' => 'blobs_cluster6', 'is static' => true ],
+	'cluster7'	=> [ 'blobs table' => 'blobs_cluster7', 'is static' => true ],
+	'cluster8'	=> [ 'blobs table' => 'blobs_cluster8', 'is static' => true ],
+	'cluster9'	=> [ 'blobs table' => 'blobs_cluster9', 'is static' => true ],
+	'cluster10'	=> [ 'blobs table' => 'blobs_cluster10', 'is static' => true ],
+	'cluster20'	=> [ 'blobs table' => 'blobs_cluster20', 'is static' => true ],
+	'cluster21'	=> [ 'blobs table' => 'blobs_cluster21', 'is static' => true ],
+	'cluster22'	=> [ 'blobs table' => 'blobs_cluster22', 'is static' => true ],
+	'cluster23'	=> [ 'blobs table' => 'blobs_cluster23', 'is static' => true ],
+	'cluster24'	=> [ 'blobs table' => 'blobs_cluster24' ],
+	'cluster25'	=> [ 'blobs table' => 'blobs_cluster25' ],
+],
 
 # This key must exist for the master switch script to work.
 #
 # These read only messages should currently be kept,
 # to prevent accidental write to eqiad from codfw.
-'readOnlyBySection' => array(
+'readOnlyBySection' => [
         's1'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
         's2'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
         'DEFAULT' 	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes', # s3
@@ -595,14 +595,14 @@ $wgLBFactoryConf = array(
         's5'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
         's6'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
         's7'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
-),
+],
 
-);
+];
 
-$wgDefaultExternalStore = array(
+$wgDefaultExternalStore = [
 	'DB://cluster24',
 	'DB://cluster25',
-);
+];
 
 # $wgLBFactoryConf['readOnlyBySection']['s2'] =
 # $wgLBFactoryConf['readOnlyBySection']['s2a'] =
