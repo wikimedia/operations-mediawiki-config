@@ -32,30 +32,30 @@ if ( $wgDisableAuthManager ) {
 		],
 	];
 }
-$wgLDAPDomainNames = array( 'labs');
+$wgLDAPDomainNames = [ 'labs'];
 switch( $wgDBname ) {
 case 'labswiki' :
-	$wgLDAPServerNames = array( 'labs' => 'ldap-labs.eqiad.wikimedia.org' );
+	$wgLDAPServerNames = [ 'labs' => 'ldap-labs.eqiad.wikimedia.org' ];
         break;
 case 'labtestwiki' :
-	$wgLDAPServerNames = array( 'labs' => 'labtestservices2001.wikimedia.org' );
+	$wgLDAPServerNames = [ 'labs' => 'labtestservices2001.wikimedia.org' ];
         break;
 }
-$wgLDAPSearchAttributes = array( 'labs' => 'cn');
-$wgLDAPBaseDNs = array( 'labs' => 'dc=wikimedia,dc=org' );
-$wgLDAPUserBaseDNs = array( 'labs' => 'ou=people,dc=wikimedia,dc=org' );
-$wgLDAPEncryptionType = array( 'labs' => 'tls');
-$wgLDAPWriteLocation = array( 'labs' => 'ou=people,dc=wikimedia,dc=org' );
-$wgLDAPAddLDAPUsers = array( 'labs' => true );
-$wgLDAPUpdateLDAP = array( 'labs' => true );
-$wgLDAPPasswordHash = array( 'labs' => 'clear' );
+$wgLDAPSearchAttributes = [ 'labs' => 'cn'];
+$wgLDAPBaseDNs = [ 'labs' => 'dc=wikimedia,dc=org' ];
+$wgLDAPUserBaseDNs = [ 'labs' => 'ou=people,dc=wikimedia,dc=org' ];
+$wgLDAPEncryptionType = [ 'labs' => 'tls'];
+$wgLDAPWriteLocation = [ 'labs' => 'ou=people,dc=wikimedia,dc=org' ];
+$wgLDAPAddLDAPUsers = [ 'labs' => true ];
+$wgLDAPUpdateLDAP = [ 'labs' => true ];
+$wgLDAPPasswordHash = [ 'labs' => 'clear' ];
 // 'invaliddomain' is set to true so that mail password options
 // will be available on user creation and password mailing
-$wgLDAPMailPassword = array( 'labs' => true, 'invaliddomain' => true );
-$wgLDAPPreferences = array( 'labs' => array( "email"=>"mail" ) );
-$wgLDAPUseFetchedUsername = array( 'labs' => true );
-$wgLDAPLowerCaseUsernameScheme = array( 'labs' => false, 'invaliddomain' => false );
-$wgLDAPLowerCaseUsername = array( 'labs' => false, 'invaliddomain' => false );
+$wgLDAPMailPassword = [ 'labs' => true, 'invaliddomain' => true ];
+$wgLDAPPreferences = [ 'labs' => [ "email"=>"mail" ] ];
+$wgLDAPUseFetchedUsername = [ 'labs' => true ];
+$wgLDAPLowerCaseUsernameScheme = [ 'labs' => false, 'invaliddomain' => false ];
+$wgLDAPLowerCaseUsername = [ 'labs' => false, 'invaliddomain' => false ];
 // Only enable UseLocal if you need to promote an LDAP user
 #$wgLDAPUseLocal = true;
 
@@ -65,21 +65,21 @@ $wgLDAPDebug = 5; // Maximally verbose logs for Andrew Bogott, 8-Dec-2015
 if ( false ) {
 	$wgLDAPDebug = 5;
 	$monolog = \Mediawiki\Logger\LoggerFactory::getProvider();
-	$monolog->mergeConfig( array(
-		'loggers' => array(
-			'ldap' => array(
-				'handlers' => array( 'wikitech-ldap' ),
+	$monolog->mergeConfig( [
+		'loggers' => [
+			'ldap' => [
+				'handlers' => [ 'wikitech-ldap' ],
 				'processors' => array_keys( $wmgMonologProcessors ),
-			),
-		),
-		'handlers' => array(
-			'wikitech-ldap' => array(
+			],
+		],
+		'handlers' => [
+			'wikitech-ldap' => [
 				'class' => '\\Monolog\\Handler\\StreamHandler',
-				'args' => array( '/tmp/ldap-s-1-debug.log' ),
+				'args' => [ '/tmp/ldap-s-1-debug.log' ],
 				'formatter' => 'line',
-			),
-		),
-	) );
+			],
+		],
+	] );
 }
 
 require_once( "$IP/extensions/OpenStackManager/OpenStackManager.php" );
@@ -87,20 +87,20 @@ switch( $wgDBname ) {
 case 'labswiki' :
 	$wgOpenStackManagerNovaIdentityURI = 'http://labcontrol1001.wikimedia.org:35357/v2.0';
 	$wgOpenStackManagerNovaIdentityV3URI = 'http://labcontrol1001.wikimedia.org:35357/v3';
-	$wgOpenStackManagerDNSOptions = array(
+	$wgOpenStackManagerDNSOptions = [
 		'enabled' => true,
-		'servers' => array( 'primary' => 'labcontrol1001.wikimedia.org' ),
-		'soa'     => array( 'hostmaster' => 'hostmaster.wikimedia.org', 'refresh' => '1800', 'retry' => '3600', 'expiry' => '86400', 'minimum' => '7200' ),
-	);
+		'servers' => [ 'primary' => 'labcontrol1001.wikimedia.org' ],
+		'soa'     => [ 'hostmaster' => 'hostmaster.wikimedia.org', 'refresh' => '1800', 'retry' => '3600', 'expiry' => '86400', 'minimum' => '7200' ],
+	];
         break;
 case 'labtestwiki' :
 	$wgOpenStackManagerNovaIdentityURI = 'http://labtestcontrol2001.wikimedia.org:35357/v2.0';
 	$wgOpenStackManagerNovaIdentityV3URI = 'http://labtestcontrol2001.wikimedia.org:35357/v3';
-	$wgOpenStackManagerDNSOptions = array(
+	$wgOpenStackManagerDNSOptions = [
 		'enabled' => true,
-		'servers' => array( 'primary' => 'labtestcontrol2001.wikimedia.org' ),
-		'soa'     => array( 'hostmaster' => 'hostmaster.wikimedia.org', 'refresh' => '1800', 'retry' => '3600', 'expiry' => '86400', 'minimum' => '7200' ),
-	);
+		'servers' => [ 'primary' => 'labtestcontrol2001.wikimedia.org' ],
+		'soa'     => [ 'hostmaster' => 'hostmaster.wikimedia.org', 'refresh' => '1800', 'retry' => '3600', 'expiry' => '86400', 'minimum' => '7200' ],
+	];
         break;
 }
 $wgOpenStackManagerNovaKeypairStorage = 'ldap';
@@ -112,49 +112,49 @@ $wgOpenStackManagerLDAPServiceGroupBaseDN = 'ou=servicegroups,dc=wikimedia,dc=or
 $wgOpenStackManagerLDAPDefaultGid = '500';
 $wgOpenStackManagerLDAPDefaultShell = '/bin/bash';
 $wgOpenStackManagerLDAPUseUidAsNamingAttribute = true;
-$wgOpenStackManagerPuppetOptions = array(
+$wgOpenStackManagerPuppetOptions = [
 	'enabled' => true,
-	'defaultclasses' => array(),
-	'defaultvariables' => array(),
-);
-$wgOpenStackManagerInstanceUserData = array(
-	'cloud-config' => array(
+	'defaultclasses' => [],
+	'defaultvariables' => [],
+];
+$wgOpenStackManagerInstanceUserData = [
+	'cloud-config' => [
 		#'puppet' => array( 'conf' => array( 'puppetd' => array( 'server' => 'wikitech.wikimedia.org', 'certname' => '%i' ) ) ),
 		#'apt_upgrade' => 'true',
 		'apt_update' => 'false', // Puppet will cause this
 		#'apt_mirror' => 'http://ubuntu.wikimedia.org/ubuntu/',
-	),
-	'scripts' => array(
+	],
+	'scripts' => [
 		# Used for new images
 		'runpuppet.sh' => '/srv/org/wikimedia/controller/scripts/runpuppet.sh',
 		# Used for pre-configured images
 		'runpuppet-new.sh' => '/srv/org/wikimedia/controller/scripts/runpuppet-new.sh',
-	),
-	'upstarts' => array(
+	],
+	'upstarts' => [
 		'ttyS0.conf' => '/srv/org/wikimedia/controller/upstarts/ttyS0.conf',
 		'ttyS1.conf' => '/srv/org/wikimedia/controller/upstarts/ttyS1.conf',
-	),
-);
-$wgOpenStackManagerDefaultSecurityGroupRules = array(
+	],
+];
+$wgOpenStackManagerDefaultSecurityGroupRules = [
 	# Allow all traffic within the project
-	array( 'group' => 'default' ),
+	[ 'group' => 'default' ],
 	# Allow ping from everywhere
-	array( 'fromport' => '-1',
+	[ 'fromport' => '-1',
 		'toport' => '-1',
 		'protocol' => 'icmp',
-		'range' => '0.0.0.0/0' ),
+		'range' => '0.0.0.0/0' ],
 	# Allow ssh from all projects
-	array( 'fromport' => '22',
+	[ 'fromport' => '22',
 		'toport' => '22',
 		'protocol' => 'tcp',
-		'range' => '10.0.0.0/8' ),
+		'range' => '10.0.0.0/8' ],
 	# Allow nrpe access from all projects (access is limited in config)
-	array( 'fromport' => '5666',
+	[ 'fromport' => '5666',
 		'toport' => '5666',
 		'protocol' => 'tcp',
-		'range' => '10.0.0.0/8' ),
-);
-$wgOpenStackManagerInstanceBannedInstanceTypes = array(
+		'range' => '10.0.0.0/8' ],
+];
+$wgOpenStackManagerInstanceBannedInstanceTypes = [
 	"m1.tiny",
 	"s1.tiny",
 	"s1.small",
@@ -172,12 +172,12 @@ $wgOpenStackManagerInstanceBannedInstanceTypes = array(
 	"pmtpa-9",
 	"pmtpa-10",
 	"pmtpa-11"
-);
+];
 
 # Enable doc links on the 'configure instance' page
 $wgOpenStackManagerPuppetDocBase = 'http://doc.wikimedia.org/puppet/classes/__site__/';
 
-$wgOpenStackManagerProxyGateways = array( 'eqiad' => '208.80.155.156' );
+$wgOpenStackManagerProxyGateways = [ 'eqiad' => '208.80.155.156' ];
 
 # This must be loaded AFTER OSM, to overwrite it's defaults
 require_once( '/etc/mediawiki/WikitechPrivateSettings.php' );

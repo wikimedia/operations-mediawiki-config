@@ -3,7 +3,7 @@
 if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['formatterUrlProperty'] = 'P9094';
 
-	$wgWBRepoSettings['badgeItems'] = array(
+	$wgWBRepoSettings['badgeItems'] = [
 		'Q49444' => 'wb-badge-goodarticle',
 		'Q49447' => 'wb-badge-featuredarticle',
 		'Q49448' => 'wb-badge-recommendedarticle', // T72268
@@ -13,22 +13,22 @@ if ( $wmgUseWikibaseRepo ) {
 		'Q98650' => 'wb-badge-problematic',
 		'Q98658' => 'wb-badge-proofread',
 		'Q98651' => 'wb-badge-validated'
-	);
-	$wgWBRepoSettings['preferredGeoDataProperties'] = array(
+	];
+	$wgWBRepoSettings['preferredGeoDataProperties'] = [
 		'P740',
 		'P477',
-	);
-	$wgWBRepoSettings['preferredPageImagesProperties'] = array(
+	];
+	$wgWBRepoSettings['preferredPageImagesProperties'] = [
 		'P448',
 		'P715',
 		'P723',
 		'P733',
 		'P964',
-	);
+	];
 }
 
 if ( $wmgUseWikibaseClient ) {
-	$wgWBClientSettings['badgeClassNames'] = array(
+	$wgWBClientSettings['badgeClassNames'] = [
 		'Q49444' => 'badge-goodarticle',
 		'Q49447' => 'badge-featuredarticle',
 		'Q49448' => 'badge-recommendedarticle', // T72268
@@ -38,7 +38,7 @@ if ( $wmgUseWikibaseClient ) {
 		'Q98650' => 'badge-problematic',
 		'Q98658' => 'badge-proofread',
 		'Q98651' => 'badge-validated'
-	);
+	];
 
 	$wgWBClientSettings['repoConceptBaseUri'] = 'http://wikidata.beta.wmflabs.org/entity/';
 	$wgWBClientSettings['repoUrl'] = 'http://wikidata.beta.wmflabs.org';

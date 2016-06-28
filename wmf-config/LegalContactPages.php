@@ -1,8 +1,8 @@
 <?php
 
-$trademark = array(
+$trademark = [
 	'type' => 'multiselect',
-	'options-messages' => array(
+	'options-messages' => [
 		'contactpage-wikimedia-trademark-globe' => 'wikiglobe',
 		'contactpage-wikimedia-trademark-wikiwordmark' => 'wikipediawordmark',
 		'contactpage-wikimedia-trademark-w' => 'stylizedw',
@@ -20,112 +20,112 @@ $trademark = array(
 		'contactpage-wikimedia-trademark-wikiversity' => 'wikiversity',
 		'contactpage-wikimedia-trademark-wiktionary' => 'wiktionary',
 		'contactpage-wikimedia-trademark-wikivoyage' => 'wikivoyage',
-	),
+	],
 	'required' => true,
-);
+];
 
-$wgContactConfig['requestlicense'] = array(
+$wgContactConfig['requestlicense'] = [
 	'RecipientUser' => 'Trademarks (WMF)',
 	'SenderEmail' => $wmgNotificationSender, // TODO: Replace with details submitted on form
 	'SenderName' => 'Contact Page',
 	'RequireDetails' => true,
 	'IncludeIP' => false,
-	'AdditionalFields' => array(
-		'Username' => array(
+	'AdditionalFields' => [
+		'Username' => [
 			'type' => 'text',
 			'label-message' => 'contactpage-license-request-username',
-		),
-		'Site' => array(
+		],
+		'Site' => [
 			'type' => 'text',
 			'label-message' => 'contactpage-license-request-relevantsite',
-		),
-		'Group' => array(
+		],
+		'Group' => [
 			'type' => 'text',
 			'label-message' => 'contactpage-license-request-group',
-		),
-		'Title' => array(
+		],
+		'Title' => [
 			'type' => 'text',
 			'label-message' => 'contactpage-license-request-title',
-		),
-		'Org' => array(
+		],
+		'Org' => [
 			'type' => 'text',
 			'label-message' => 'contactpage-license-request-organization',
-		),
-		'OrgType' => array(
+		],
+		'OrgType' => [
 			'type' => 'text',
 			'label-message' => 'contactpage-license-request-organization-type',
-		),
-		'ProposedUse' => array(
+		],
+		'ProposedUse' => [
 			'type' => 'selectorother',
 			'label-message' => 'contactpage-license-request-use-proposed',
-			'options-messages' => array(
+			'options-messages' => [
 				'contactpage-license-request-use-online' => 'online',
 				'contactpage-license-request-use-book' => 'book',
 				'contactpage-license-request-use-print' => 'print',
 				'contactpage-license-request-use-tv' => 'tv',
-			),
+			],
 			'default' => 'online',
 			'required' => true,
-		),
+		],
 
-		'Description' => array(
+		'Description' => [
 			'label-message' => 'contactpage-license-request-description',
 			'type' => 'textarea',
 			'rows' => 10,
 			'cols' => 80,
 			'required' => true,
-		),
+		],
 
-		'Trademark' => array(
+		'Trademark' => [
 			'label-message' => 'contactpage-license-request-selectmark',
-		) + $trademark,
+		] + $trademark,
 
-		'use-note' => array(
+		'use-note' => [
 			'type' => 'info',
-			'help-messages' => array( 'contactpage-license-request-use-note' ),
-		),
-	)
-);
+			'help-messages' => [ 'contactpage-license-request-use-note' ],
+		],
+	]
+];
 
-$wgContactConfig['licenseabuse'] = array(
+$wgContactConfig['licenseabuse'] = [
 	'RecipientUser' => 'WMF Trademark Abuse',
 	'SenderEmail' => $wmgNotificationSender, // TODO: Replace with details submitted on form
 	'SenderName' => 'Contact Page',
 	'RequireDetails' => true,
 	'IncludeIP' => false,
-	'AdditionalFields' => array(
-		'Description' => array(
+	'AdditionalFields' => [
+		'Description' => [
 			'label-message' => 'contactpage-license-abuse-description',
 			'type' => 'textarea',
 			'rows' => 5,
 			'cols' => 80,
 			'required' => true,
-		),
-		'Location' => array(
+		],
+		'Location' => [
 			'label-message' => 'contactpage-license-abuse-location',
 			'type' => 'textarea',
 			'rows' => 5,
 			'cols' => 80,
 			'required' => true,
-		),
-		'TheirContact' => array(
+		],
+		'TheirContact' => [
 			'label-message' => 'contactpage-license-abuse-theircontact',
 			'type' => 'textarea',
 			'rows' => 5,
 			'cols' => 80,
 			'required' => true,
-		),
-		'YourContact' => array(
+		],
+		'YourContact' => [
 			'label-message' => 'contactpage-license-abuse-yourcontact',
 			'type' => 'textarea',
 			'rows' => 5,
 			'cols' => 80,
 			'required' => true,
-		),
-		'TradeMark' => array(
+		],
+		'TradeMark' => [
 			'label-message' => 'contactpage-license-abuse-selectmark',
-		) + $trademark,
-	)
-);
+		] + $trademark,
+	]
+];
 
 unset( $trademark );

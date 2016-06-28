@@ -12,7 +12,7 @@ if ( $wmgLiquidThreadsFrozen ) {
 	// LQT pages from being created.
 	$wgLqtTalkPages = false;
 	$wgLiquidThreadsAllowUserControl = false;
-	$wgLiquidThreadsAllowUserControlNamespaces = array();
+	$wgLiquidThreadsAllowUserControlNamespaces = [];
 	$wgLiquidThreadsAllowEmbedding = false;
 	$wgLiquidThreadsEnableNewMessages = false;
 } else {

@@ -5,33 +5,33 @@
 # to the 'labs' realm which in most of the cases means the beta cluster.
 # It should be loaded AFTER CirrusSearch-common.php
 
-$wgCirrusSearchClusters = array(
+$wgCirrusSearchClusters = [
 	'eqiad' => array_map( function ( $host ) {
-		return array(
+		return [
 			'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
 			'port' => '9243',
 			'host' => $host,
-			'config' => array(
+			'config' => [
 				'pool' => 'cirrus-eqiad',
-			),
-		);
+			],
+		];
 	}, $wmfAllServices['eqiad']['search'] ),
-);
+];
 
 if ( $wgDBname == 'enwiki' ) {
-	$wgCirrusSearchInterwikiSources = array(
+	$wgCirrusSearchInterwikiSources = [
 		'wiktionary' => 'enwiktionary',
 		'wikibooks' => 'enwikibooks',
 		'wikinews' => 'enwikinews',
 		'wikiquote' => 'enwikiquote',
 		'wikisource' => 'enwikisource',
 		'wikiversity' => 'enwikiversity',
-	);
+	];
 }
 
 # We don't have enough nodes to support these settings in beta so just turn
 # them off.
-$wgCirrusSearchMaxShardsPerNode = array();
+$wgCirrusSearchMaxShardsPerNode = [];
 
 # Override prod configuration, there is only one cluster in beta
 $wgCirrusSearchDefaultCluster = 'eqiad';
@@ -42,7 +42,7 @@ $wgCirrusSearchWriteClusters = null;
 
 $wgCirrusSearchEnableSearchLogging = true;
 
-$wgCirrusSearchLanguageToWikiMap = array(
+$wgCirrusSearchLanguageToWikiMap = [
     'ar' => 'ar',
     'de' => 'de',
     'en' => 'en',
@@ -57,9 +57,9 @@ $wgCirrusSearchLanguageToWikiMap = array(
     'uk' => 'uk',
     'zh-cn' => 'zh',
     'zh-tw' => 'zh',
-);
+];
 
-$wgCirrusSearchWikiToNameMap = array(
+$wgCirrusSearchWikiToNameMap = [
     'ar' => 'arwiki',
     'de' => 'dewiki',
     'en' => 'enwiki',
@@ -73,5 +73,5 @@ $wgCirrusSearchWikiToNameMap = array(
     'sq' => 'sqwiki',
     'uk' => 'ukwiki',
     'zh' => 'zhwiki',
-);
+];
 
