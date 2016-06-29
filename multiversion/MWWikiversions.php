@@ -58,7 +58,7 @@ class MWWikiversions {
 			$dbs = self::readDbListFile( $term );
 			if ( $op === '+' ) {
 				$result = array_unique( array_merge( $result, $dbs ) );
-			} else if ( $op === '-' ) {
+			} elseif ( $op === '-' ) {
 				$result = array_diff( $result, $dbs );
 			}
 		}
@@ -89,7 +89,7 @@ class MWWikiversions {
 				}
 				$dbs = self::evalDbListExpression( $line );
 				break;
-			} else if ( $line !== '' ) {
+			} elseif ( $line !== '' ) {
 				$dbs[] = $line;
 			}
 		}
