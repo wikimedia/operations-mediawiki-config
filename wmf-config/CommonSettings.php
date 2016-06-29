@@ -2247,6 +2247,11 @@ if ( $wmgUseVisualEditor ) {
 	// Citoid
 	require_once "$IP/extensions/Citoid/Citoid.php";
 	$wgCitoidServiceUrl = 'https://citoid.wikimedia.org/api';
+
+	// Move the citation button from the primary toolbar into the "other" group
+	if ( $wmgCiteVisualEditorOtherGroup ) {
+		$wgCiteVisualEditorOtherGroup = true;
+	}
 }
 
 if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20

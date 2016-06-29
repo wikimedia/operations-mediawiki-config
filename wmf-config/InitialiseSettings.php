@@ -13707,6 +13707,12 @@ $wgConf->settings = [
 	'votewiki' => false,        // No local Flow install, so won't work; also no editing on this wiki
 ],
 
+// Should the citation button be moved from the primary toolbar into the "other" group
+'wmgCiteVisualEditorOtherGroup' => [
+	'default' => false,
+	'wikivoyage' => true, // T133725
+],
+
 // Should 50% of new accounts be opted in to VisualEditor (A/B test)
 'wmgVisualEditorEnableSplitTest' => [
 	'default' => false,
