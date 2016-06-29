@@ -62,6 +62,13 @@ $wmgThrottlingExceptions[] = [ // T138322
 	'dbname' => ['eswiki', 'commonswiki'],
 	'value'  => 40 // 30 expected
 ];
+$wmgThrottlingExceptions[] = [ // T138167
+	'from'   => '2016-06-29T11:15 -7:00',
+	'to'     => '2016-06-29T12:45 -7:00',
+	'IP'     => '74.3.135.213',
+	'dbname' => 'enwiki',
+	'value'  => 20 // 18 expected
+];
 $wgExtensionFunctions[] = function() {
 	global $wmgThrottlingExceptions, $wgDBname, $wgRequest;
 
