@@ -44,7 +44,7 @@ $wmgThrottlingExceptions[] = [ // T137917
 $wmgThrottlingExceptions[] = [ // T137917
 	'from'   => '2016-06-29T13:00 -5:00',
 	'to'     => '2016-06-29T16:00 -5:00',
-	'IP'     => '181.39.138.146 ',
+	'IP'     => '181.39.138.146',
 	'dbname' => ['eswiki', 'commonswiki'],
 	'value'  => 40 // 30 expected
 ];
