@@ -12214,7 +12214,11 @@ $wgConf->settings = [
 'wmgUseLocalisationUpdate' => [
 	'default' => true,
 ],
-
+'wgMaxRedirects' => [
+       //appears to only work in certain cases - see T122771 for more information
+       'default' => 1,
+       'enwiki' => 3, // T67064
+],
 'wmgUseLiquidThreads' => [
 //
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
