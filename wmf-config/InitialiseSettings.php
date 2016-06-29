@@ -13543,72 +13543,72 @@ $wgConf->settings = [
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
 'wmgVisualEditorAvailableNamespaces' => [
 	'default' => [
-		NS_USER => true,
-		NS_FILE => true,
-		NS_HELP => true,
-		NS_CATEGORY => true
+		'User' => true,
+		'File' => true,
+		'Help' => true,
+		'Category' => true
 	],
 
 	// Group 0 wikis
 	'+mediawikiwiki' => [
-		NS_PROJECT => true, // T50430
-		100 /* Manual */ => true, // T50430
-		102 /* Extension */ => true, // T50430
-		104 /* API */ => true, // T50430
-		106 /* Skin */ => true // T50430
+		'Project' => true, // T50430
+		'Manual' => true, // T50430
+		'Extension' => true, // T50430
+		'API' => true, // T50430
+		'Skin' => true // T50430
 	],
 
 	// Wikipedias
 	'+cawiki' => [
-		NS_PROJECT => true, // T88896
-		100 /* Portal */ => true, // T58000
-		102 /* Viquiprojecte */ => true // T58000
+		'Project' => true, // T88896
+		'Portal' => true, // T58000
+		'Viquiprojecte' => true // T58000
 	],
 	'+cswiki' => [
-		NS_PROJECT => true, // T136628
+		'Project' => true, // T136628
 	],
 	'+enwiki' => [
-		100 /* Portal */ => true, // T58001
-		108 /* Book */ => true, // T58001
-		118 /* Draft */ => true
+		'Portal' => true, // T58001
+		'Book' => true, // T58001
+		'Draft' => true
 	],
 	'+fawiki' => [
-		118 /* Draft */ => true // T118060
+		'Draft' => true // T118060
 	],
 	'+frwiki' => [
-		102 /* Wikiprojet */ => true // T116603
+		'Projet' => true // T116603
 	],
 	'+hewiki' => [
-		118 /* Draft */ => true // T87027
+		'Draft' => true // T87027
 	],
 	'+htwiki' => [
-		NS_PROJECT => true // T130177
+		'Project' => true // T130177
 	],
 	'+jawiki' => [
-		100 /* Portal */ => true // T97313
+		'Portal' => true // T97313
 	],
 	'+kowiki' => [
-		118 /* Draft */ => true // T92798
+		'Draft' => true // T92798
 	],
 	'+plwiki' => [
-		NS_PROJECT => true, // T133980
-		100 /* Portal */ => true, // T133980
-		102 /* Wikiprojekt */ => true, // T92698
+		'Project' => true, // T133980
+		'Portal' => true, // T133980
+		'Wikiprojekt' => true, // T92698
 	],
 	'+ruwiki' => [
-		102 /* Draft / Incubator */ => true // T86688
+		'Инкубатор' /* Draft / Incubator */ => true // T86688
 	],
 	'+zhwiki' => [
-		118 /* Draft */ => true // T91223
+		'Draft' => true // T91223
 	],
 
 	// Wiktionaries
 	'+frwiktionary' => [
-		100 /* Annexe */ => true, // T127819
-		106 /* Thésaurus */ => true // T127819
+		'Annexe' => true, // T127819
+		'Thésaurus' => true // T127819
 	],
 	'svwiktionary' => [
-		NS_USER => true // T59356
+		'User' => true // T59356
 	],
 
 	// Wikiquotes
@@ -13621,7 +13621,7 @@ $wgConf->settings = [
 
 	// Wikiversities
 	'+frwikiversity' => [
-		104 /* Recherche */ => true // T63874
+		'Recherche' => true // T63874
 	],
 
 	// Wikivoyages
@@ -13630,29 +13630,29 @@ $wgConf->settings = [
 
 	// Wikimedias
 	'+sewikimedia' => [
-		100 /* Projekt */ => true // T62882
+		'Projekt' => true // T62882
 	],
 
 	// Other wikis (e.g. Commons, Meta)
 	'+commonswiki' => [
-		100 /* Creator */ => true, // T67067
-		106 /* Institution */ => true // T67067
+		'Creator' => true, // T67067
+		'Institution' => true // T67067
 	],
 	'+metawiki' => [
-		NS_PROJECT => true, // T107003
-		200 /* Grants */ => true, // T67067
-		202 /* Research */ => true, // T67067
-		204 /* Participation */ => true, // T67067
-		206 /* Iberocoop */ => true, // T67067
-		208 /* Programs */ => true // T67067
+		'Project' => true, // T107003
+		'Grants' => true, // T67067
+		'Research' => true, // T67067
+		'Participation' => true, // T67067
+		'Iberocoop' => true, // T67067
+		'Programs' => true // T67067
 	],
 	'+wikidata' => [
-		NS_PROJECT => true
+		'Project' => true
 	],
 
 	// Private wikis
 	'+officewiki' => [
-		100 /* Report */ => true // T60547
+		'Report' => true // T60547
 	],
 ],
 
