@@ -13710,8 +13710,10 @@ $wgConf->settings = [
 
 // Should the citation button be moved from the primary toolbar into the "other" group
 'wmgCiteVisualEditorOtherGroup' => [
-	'default' => false,
-	'wikivoyage' => true, // T133725
+	'default' => true,
+	'wikipedia' => false,
+	'wikibooks' => false,
+	'wikiversity' => false,
 ],
 
 // Should 50% of new accounts be opted in to VisualEditor (A/B test)
