@@ -11777,6 +11777,11 @@ $wgConf->settings = [
 	'wikitech' => '*',
 ],
 
+'wgTitleBlacklistUsernameSources' => [
+	'default' => [ 'meta' ],
+	'wikitech' => '*',
+],
+
 'wgAllowImageMoving' => [
 	'default' => true, // brion 2009-09-21
 	'testwiki' => true,
