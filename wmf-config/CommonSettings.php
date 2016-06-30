@@ -779,19 +779,16 @@ if ( $wmgUseSpamBlacklist ) {
 	$wgSpamBlacklistEventLogging = $wmgSpamBlacklistEventLogging;
 }
 
-include( $IP . '/extensions/TitleBlacklist/TitleBlacklist.php' );
-
+wfLoadExtension( 'TitleBlacklist' );
 $wgTitleBlacklistBlockAutoAccountCreation = false;
 
 if ( $wmgUseGlobalTitleBlacklist ) {
 	$wgTitleBlacklistSources = [
 		'meta' => [
-			'type' => TBLSRC_URL,
+			'type' => 'url',
 			'src'  => "https://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw&tb_ver=1",
 		],
 	];
-
-	$wgTitleBlacklistUsernameSources = $wmgTitleBlacklistUsernameSources;
 }
 
 if ( $wmgUseQuiz ) {
