@@ -15906,6 +15906,12 @@ $wgConf->settings = [
 	'wikivoyage' => true,
 ],
 
+'wmgUseRevisionSlider' => [
+	'default' => false,
+	'testwiki' => true,// T138943
+	'test2wiki' => true,// T138943
+],
+
 'wmgUseUserMerge' => [
 	'default' => true,
 	'private' => false,

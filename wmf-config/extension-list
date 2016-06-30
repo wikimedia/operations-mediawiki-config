@@ -104,6 +104,7 @@ $IP/extensions/RelatedSites/RelatedSites.php
 $IP/extensions/Renameuser/Renameuser.php
 $IP/extensions/RestBaseUpdateJobs/RestbaseUpdate.php
 $IP/extensions/RSS/RSS.php
+$IP/extensions/RevisionSlider/extension.json
 $IP/extensions/SandboxLink/SandboxLink.php
 $IP/extensions/Score/Score.php
 $IP/extensions/Scribunto/Scribunto.php
