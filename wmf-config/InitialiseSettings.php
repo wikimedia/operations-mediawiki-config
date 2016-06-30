@@ -4559,6 +4559,7 @@ $wgConf->settings = [
 		'SpamRegex' => 'debug',
 		'SQLBagOStuff' => 'debug',
 		'StashEdit' => 'debug',
+		'SaveParse' => 'debug',
 		'SwiftBackend' => 'debug', // -aaron 5/15/12
 		'T107711' => 'debug', //- aude, hoo and addshore, for Wikidata
 		'T76305' => 'debug', // - Krinkle and Krenair, for https://gerrit.wikimedia.org/r/188987
