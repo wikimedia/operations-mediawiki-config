@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0efd9372_aa75512e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2016-06-30T15:10:14Z",
+      "side": 1,
+      "message": "testikidata? :)",
+      "revId": "b41d12a1d730378d3f1af5cb4657b724493575ff",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
