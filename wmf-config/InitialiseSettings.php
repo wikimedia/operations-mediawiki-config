@@ -11976,7 +11976,7 @@ $wgConf->settings = [
 'wgSquidMaxage' => [
 	'default' => 2678400, // 31 days
 	'foundationwiki' => 3600, // 1 hour; template links may be funky
-	'test2wiki' => 62400, // 1 day; Match Varnish ttl_cap (T124954)
+	'test2wiki' => 14 * 24 * 2600, // 14 days (T124954)
 ],
 
 # abuse filter @{
