@@ -11756,11 +11756,6 @@ $wgConf->settings = [
 	'fishbowl' => false, // not needed, private editing...
 ],
 
-'wmgTitleBlacklistUsernameSources' => [
-	'default' => [ 'meta' ],
-	'wikitech' => '*',
-],
-
 'wgTitleBlacklistUsernameSources' => [
 	'default' => [ 'meta' ],
 	'wikitech' => '*',
