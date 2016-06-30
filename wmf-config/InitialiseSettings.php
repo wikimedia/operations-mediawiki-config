@@ -12604,6 +12604,7 @@ $wgConf->settings = [
 		'read-more',                                // [Reading] 2016-11-11 - Read more
 		'cirrussearch-completionsuggester',         // [Discovery] 2016-11-27 - Completion Suggester / type as you search
 		'ores-enabled',                             // [Research] 2016-12-12 - ORES
+		'revisionslider',                           // [WMDE] 2017-01-05 - RevisionSlider
 	],
 ],
 
@@ -15955,6 +15956,12 @@ $wgConf->settings = [
 'wmgUseRelatedSites' => [
 	'default' => false,
 	'wikivoyage' => true,
+],
+
+'wmgUseRevisionSlider' => [
+	'default' => false,
+	'testwiki' => true,// T138943
+	'test2wiki' => true,// T138943
 ],
 
 'wmgUseUserMerge' => [
