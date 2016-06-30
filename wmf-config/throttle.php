@@ -34,20 +34,6 @@ $wmgThrottlingExceptions = [];
 /**
  * Helper to easily add a throttling request.
  */
-$wmgThrottlingExceptions[] = [ // T137917
-	'from'   => '2016-06-28T13:00 -5:00',
-	'to'     => '2016-06-28T16:00 -5:00',
-	'IP'     => '186.3.110.63',
-	'dbname' => ['eswiki', 'commonswiki'],
-	'value'  => 40 // 30 expected
-];
-$wmgThrottlingExceptions[] = [ // T137917
-	'from'   => '2016-06-29T13:00 -5:00',
-	'to'     => '2016-06-29T16:00 -5:00',
-	'IP'     => '181.39.138.146',
-	'dbname' => ['eswiki', 'commonswiki'],
-	'value'  => 40 // 30 expected
-];
 $wmgThrottlingExceptions[] = [ // T138322
 	'from'   => '2016-06-30T13:00 -5:00',
 	'to'     => '2016-06-30T16:00 -5:00',
@@ -61,13 +47,6 @@ $wmgThrottlingExceptions[] = [ // T138322
 	'IP'     => '181.39.163.9',
 	'dbname' => ['eswiki', 'commonswiki'],
 	'value'  => 40 // 30 expected
-];
-$wmgThrottlingExceptions[] = [ // T138167
-	'from'   => '2016-06-29T11:15 -7:00',
-	'to'     => '2016-06-29T12:45 -7:00',
-	'IP'     => '74.3.135.213',
-	'dbname' => 'enwiki',
-	'value'  => 20 // 18 expected
 ];
 $wgExtensionFunctions[] = function() {
 	global $wmgThrottlingExceptions, $wgDBname, $wgRequest;
