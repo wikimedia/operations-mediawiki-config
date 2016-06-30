@@ -779,7 +779,8 @@ if ( $wmgUseSpamBlacklist ) {
 	$wgSpamBlacklistEventLogging = $wmgSpamBlacklistEventLogging;
 }
 
-wfLoadExtension( 'TitleBlacklist' );
+include( $IP . '/extensions/TitleBlacklist/TitleBlacklist.php' );
+
 $wgTitleBlacklistBlockAutoAccountCreation = false;
 
 if ( $wmgUseGlobalTitleBlacklist ) {
@@ -789,6 +790,8 @@ if ( $wmgUseGlobalTitleBlacklist ) {
 			'src'  => "https://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw&tb_ver=1",
 		],
 	];
+
+	$wgTitleBlacklistUsernameSources = $wmgTitleBlacklistUsernameSources;
 }
 
 if ( $wmgUseQuiz ) {
