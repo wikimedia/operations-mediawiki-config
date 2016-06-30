@@ -918,7 +918,7 @@ if ( $wmgUseGlobalBlocking ) {
 	include( $IP . '/extensions/GlobalBlocking/GlobalBlocking.php' );
 	$wgGlobalBlockingDatabase = 'centralauth';
 	$wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
-	$wgGlobalBlockingBlockXFF = $wmgUseXFFBlocks;
+	$wgGlobalBlockingBlockXFF = true; // Apply blocks to IPs in XFF (T25343)
 }
 
 include( $IP . '/extensions/TrustedXFF/TrustedXFF.php' );
@@ -3229,8 +3229,7 @@ if ( $wmgUseORES ) {
 
 ### End (roughly) of general extensions ########################
 
-$wgApplyIpBlocksToXff = $wmgUseXFFBlocks;
-
+$wgApplyIpBlocksToXff = true;
 
 // On Special:Version, link to useful release notes
 $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
