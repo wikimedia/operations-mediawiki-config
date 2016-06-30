@@ -14284,10 +14284,20 @@ $wgConf->settings = [
 		'base' => true,
 		'beta' => true,
 	],
+	// T137822
+	'tlwiki' => [
+		'base' => true,
+		'beta' => true,
+	],
 ],
 'wgMFLazyLoadReferences' => [
 	'default' => [
 		'base' => false,
+		'beta' => true,
+	],
+	// T137822
+	'tlwiki' => [
+		'base' => true,
 		'beta' => true,
 	],
 ],
