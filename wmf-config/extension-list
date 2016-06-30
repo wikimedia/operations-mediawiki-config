@@ -86,6 +86,7 @@ $IP/extensions/Nuke/SpecialNuke.php
 $IP/extensions/OATHAuth/extension.json
 $IP/extensions/OAuth/OAuth.php
 $IP/extensions/ORES/extension.json
+$IP/extensions/PageAssessments/extension.json
 $IP/extensions/PagedTiffHandler/PagedTiffHandler.php
 $IP/extensions/PageImages/PageImages.php
 $IP/extensions/PageTriage/PageTriage.php
