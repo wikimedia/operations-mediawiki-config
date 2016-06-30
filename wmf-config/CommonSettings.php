@@ -2887,6 +2887,10 @@ if ( $wmgUseRelatedSites ) {
 	$wgRelatedSitesPrefixes = $wmgRelatedSitesPrefixes;
 }
 
+if ( $wmgUseRevisionSlider ) {
+	wfLoadExtension( 'RevisionSlider' );
+}
+
 if ( $wmgUseUserMerge ) {
 	require_once( "$IP/extensions/UserMerge/UserMerge.php" );
 	// Don't let users get deleted outright (T69789)
