@@ -6,5 +6,4 @@ $IP/extensions/Kartographer/extension.json
 $IP/extensions/ORES/extension.json
 $IP/extensions/Newsletter/extension.json
 $IP/extensions/OATHAuth/extension.json
-$IP/extensions/PageAssessments/extension.json
 $IP/extensions/RevisionSlider/extension.json
