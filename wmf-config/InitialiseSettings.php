@@ -1152,6 +1152,7 @@ $wgConf->settings = [
 	'zhwiki' => [ '1.5x' => '/static/images/project-logos/zhwiki-1.5x.png', '2x' => '/static/images/project-logos/zhwiki-2x.png' ],
 
     # Wiktionary
+	'enwiktionary' => [ '1.5x' => '/static/images/project-logos/enwiktionary-1.5x.png', '2x' => '/static/images/project-logos/enwiktionary-2x.png' ], // T138801
 	'viwiktionary' => [ '1.5x' => '/static/images/project-logos/viwiktionary-1.5x.png', '2x' => '/static/images/project-logos/viwiktionary-2x.png' ],
 
     # Wikiquote
