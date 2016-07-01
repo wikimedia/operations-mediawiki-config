@@ -13635,8 +13635,8 @@ $wgConf->settings = [
 
 // Should VisualEditor be enabled for all users by default ('beta' mode)
 'wmgVisualEditorDefault' => [
-	'default' => false,
-	'visualeditor-default' => true,
+	'default' => true,
+	'visualeditor-nondefault' => false,
 ],
 
 // T52000 - Disable for logged-out users if wmgVisualEditorDefault is true
