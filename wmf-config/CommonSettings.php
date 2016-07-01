@@ -260,9 +260,7 @@ $wgStyleSheetPath = $wgStylePath;
 // Deprecated
 $wgIncludeLegacyJavaScript = true;
 
-if ( gethostname() === 'osmium' ) {
-	$wgResourceLoaderStorageEnabled = false;
-}
+$wgResourceLoaderMaxQueryLength = 3000;
 
 if ( $wmgReduceStartupExpiry ) {
 	$wgResourceLoaderMaxage['unversioned'] = [ 'server' => 30, 'client' => 30 ];
