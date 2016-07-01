@@ -12181,6 +12181,7 @@ $wgConf->settings = [
 		'images.nypl.org',                  // New York Public Library - T137687
 		'www.wpc.ncep.noaa.gov',            // National Oceanic and Atmospheric Administration - T138383
 		'www.photolib.noaa.gov',            // National Oceanic and Atmospheric Administration - T138383
+		'contentdm.lib.byu.edu',            // Harold B. Lee Library - T139095
 	],
 ],
 
