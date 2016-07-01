@@ -260,7 +260,7 @@ $wgStyleSheetPath = $wgStylePath;
 // Deprecated
 $wgIncludeLegacyJavaScript = true;
 
-$wgResourceLoaderMaxQueryLength = 4000;
+$wgResourceLoaderMaxQueryLength = 5000;
 
 if ( $wmgReduceStartupExpiry ) {
 	$wgResourceLoaderMaxage['unversioned'] = [ 'server' => 30, 'client' => 30 ];
