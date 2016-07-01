@@ -164,7 +164,7 @@ if ( !$globals ) {
 
 	$wikiTags = [];
 	foreach ( [ 'private', 'fishbowl', 'special', 'closed', 'flow', 'flaggedrevs', 'small', 'medium',
-			'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-default',
+			'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-nondefault', 'visualeditor-default',
 			'commonsuploads', 'nonbetafeatures', 'group0', 'group1', 'group2', 'wikipedia', 'nonglobal',
 			'wikitech', 'nonecho', 'mobilemainpagelegacy', 'clldefault'
 		] as $tag ) {
