@@ -640,7 +640,7 @@ $wgConf->settings = [
 	'napwiki' => '/static/images/project-logos/napwiki.png',  // T42285
 	'ndswiki' => '/static/images/project-logos/ndswiki.png',  // T51125
 	'nds_nlwiki' => '/static/images/project-logos/nds_nlwiki.png',
-	'newiki' => '/static/images/project-logos/newiki.png',
+	'newiki' => '/static/images/project-logos/newiki.png',    // T139240
 	'newwiki' => '/static/images/project-logos/newwiki.png',  // T42285
 	'nlwiki' => '/static/images/project-logos/nlwiki.png',
 	'nnwiki' => '/static/images/project-logos/nnwiki.png',
@@ -1145,6 +1145,7 @@ $wgConf->settings = [
 	'lawiki' => [ '1.5x' => '/static/images/project-logos/lawiki-1.5x.png', '2x' => '/static/images/project-logos/lawiki-2x.png' ],
 	'ladwiki' => [ '1.5x' => '/static/images/project-logos/ladwiki-1.5x.png', '2x' => '/static/images/project-logos/ladwiki-2x.png' ], // T132120
 	'mswiki' => [ '1.5x' => '/static/images/project-logos/mswiki-1.5x.png', '2x' => '/static/images/project-logos/mswiki-2x.png' ],
+	'newiki' => [ '1.5x' => '/static/images/project-logos/newiki-1.5x.png', '2x' => '/static/images/project-logos/newiki-2x.png' ],    // T139240
 	'nlwiki' => [ '1.5x' => '/static/images/project-logos/nlwiki-1.5x.png', '2x' => '/static/images/project-logos/nlwiki-2x.png' ],
 	'ruwiki' => [ '1.5x' => '/static/images/project-logos/ruwiki-1.5x.png', '2x' => '/static/images/project-logos/ruwiki-2x.png' ],
 	'tawiki' => [ '1.5x' => '/static/images/project-logos/tawiki-1.5x.png', '2x' => '/static/images/project-logos/tawiki-2x.png' ],
