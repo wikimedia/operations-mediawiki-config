@@ -46,10 +46,13 @@ define( 'WB_NS_PROPERTY_TALK', $baseNs + 1 );
 define( 'WB_NS_QUERY', $baseNs + 2 );
 define( 'WB_NS_QUERY_TALK', $baseNs + 3 );
 
-// Tell Wikibase which namespace to use for which kind of entity content.
+// Tell Wikibase which namespace to use for which type of entities
+// @note when we enable WikibaseRepo on commons, then having NS_MAIN for items
+// will be a problem, though commons should be aware that Wikidata items are in
+// the main namespace. (see T137444)
 $wgWBSharedSettings['entityNamespaces'] = [
-	'wikibase-item' => NS_MAIN, // CONTENT_MODEL_WIKIBASE_ITEM
-	'wikibase-property' => WB_NS_PROPERTY // CONTENT_MODEL_WIKIBASE_PROPERTY
+	'item' => NS_MAIN,
+	'property' => WB_NS_PROPERTY
 ];
 
 if ( in_array( $wgDBname, [ 'test2wiki', 'testwiki', 'testwikidatawiki' ] ) ) {
