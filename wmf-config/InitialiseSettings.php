@@ -14289,6 +14289,11 @@ $wgConf->settings = [
 		'base' => true,
 		'beta' => true,
 	],
+	// T136731
+	'jawiki' => [
+		'base' => true,
+		'beta' => true,
+	],
 ],
 'wgMFLazyLoadReferences' => [
 	'default' => [
