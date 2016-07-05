@@ -16557,6 +16557,12 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+// Enable CirrusSearch continuous sanity check
+'wgCirrusSearchSanityCheck' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 // List of languages detected by the short-text
 // profiles.
 // See: https://www.mediawiki.org/wiki/User:TJones_(WMF)/Notes/Language_Detection_Evaluation
