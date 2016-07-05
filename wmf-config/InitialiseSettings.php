@@ -16197,6 +16197,11 @@ $wgConf->settings = [
 	'votewiki' => false,
 ],
 
+'wmgUsePageAssessments' => [
+	'default' => false,
+	'testwiki' => true, // T137918
+],
+
 'wmgUsePageImages' => [
 	'default' => true,
 	'wikibooks' => false, // T68455
