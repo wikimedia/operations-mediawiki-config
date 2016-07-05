@@ -652,11 +652,6 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
-		// Test PageAssessments. See T125551.
-		'wmgUsePageAssessments' => [
-			'default' => true,
-		],
-
 		// Test Wikidata descriptions on mobile: T127250
 		'wgMFDisplayWikibaseDescriptionsAsTaglines' => [
 			'default' => true,
