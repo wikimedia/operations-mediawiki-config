@@ -234,7 +234,6 @@ $wgHooks['wfShellWikiCmd'][] = 'MWMultiVersion::onWfShellMaintenanceCmd';
 setlocale( LC_ALL, 'en_US.UTF-8' );
 
 unset( $wgStylePath );
-unset( $wgStyleSheetPath );
 
 $wgInternalServer = $wgCanonicalServer;
 $wgArticlePath = '/wiki/$1';
@@ -253,9 +252,6 @@ $wgResourceBasePath = '/w';
 $wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
 $wgStylePath = "{$wgResourceBasePath}/skins";
 $wgLocalStylePath = $wgStylePath;
-
-// Deprecated
-$wgStyleSheetPath = $wgStylePath;
 
 // Deprecated
 $wgIncludeLegacyJavaScript = true;
