@@ -49,6 +49,36 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		}
 	}
 
+	public function testSanitizeProfileExists() {
+		$wgConf = $this->loadWgConf( 'unittest' );
+		$config = $this->loadCirrusConfig( 'production', 'enwiki', 'wiki' );
+		$profiles = $wgConf->settings['wmgCirrusSearchSanitizeProfile'];
+		foreach( $profiles as $wiki => $prof ) {
+			$this->assertArrayHasKey( $prof, $config['wgCirrusSearchSanitizeProfiles'] );
+		}
+	}
+
+	/**
+	 * @dataProvider provideSanitizeconfigs
+	 */
+	public function testSanitizeConfig( $wiki, $expectedProfile ) {
+		$config = $this->loadCirrusConfig( 'production', $wiki, 'wiki' );
+		$this->assertEquals( $config['wgCirrusSearchSanityCheck'],
+			$config['wgCirrusSearchSanitizeProfiles'][$expectedProfile] );
+	}
+
+	public function provideSanitizeconfigs() {
+		return [
+			'test en' => [ 'enwiki', 'XXL' ],
+			'test wikidata' => [ 'wikidatawiki', 'XL' ],
+			'test frwiki' => [ 'frwiki', 'L' ],
+			'test anwiki' => [ 'anwiki', 'M' ],
+			'test mrjwiki' => [ 'mrjwiki', 'S' ],
+			'test xalwiki' => [ 'xalwiki', 'XS' ],
+			'test unknown wiki' => [ 'xxx_unknown_wiki', 'XS' ],
+		];
+	}
+
 	public function testLanguageMatrix() {
 		$config = $this->loadCirrusConfig( 'production', 'enwiki', 'wiki' );
 		$allDbs = DBList::getall();

@@ -169,6 +169,74 @@ $wgCirrusSearchUseCompletionSuggester = $wmgCirrusSearchUseCompletionSuggester;
 // Configure ICU Folding
 $wgCirrusSearchUseIcuFolding = $wmgCirrusSearchUseIcuFolding;
 
+// Configure sanitize jobs
+$wgCirrusSearchSanitizeProfiles = [
+	// Loop in 16 days for 50m ids, 0.34 jobs/sec, with 18% ids wrong
+	// it's 6 updates/sec per cluster
+	'XXL' => [
+		'jobs_chunk_size' => 100,
+		'checker_batch_size' => 10, // 10*10 =~ 5sec on terbium
+		'max_checker_jobs' => 2500,
+		'update_jobs_max_pressure' => 1000,
+		'checker_job_max_time' => 60,
+		'min_loop_duration' => 2*7*24*3600,
+	],
+	// Loop in 15 days for 27m ids, 0.20 jobs/sec, with 18% ids wrong
+	// it's 3.75 updates/sec per cluster
+	'XL' => [
+		'jobs_chunk_size' => 100,
+		'checker_batch_size' => 10,
+		'max_checker_jobs' => 1500,
+		'update_jobs_max_pressure' => 750,
+		'checker_job_max_time' => 60,
+		'min_loop_duration' => 2*7*24*3600,
+	],
+	// Loop in 17 days for 10m ids, 0.13 jobs/sec, with 18% ids wrong
+	// it's 1.25 updates/sec per cluster
+	'L' => [
+		'jobs_chunk_size' => 50,
+		'checker_batch_size' => 10,
+		'max_checker_jobs' => 1000,
+		'update_jobs_max_pressure' => 500,
+		'checker_job_max_time' => 60,
+		'min_loop_duration' => 2*7*24*3600,
+	],
+	// Loop in 15 days for 920k ids, 0.06 jobs/sec, with 18% ids wrong
+	// it's 0.125 updates/sec per cluster
+	'M' => [
+		'jobs_chunk_size' => 10,
+		'checker_batch_size' => 10,
+		'max_checker_jobs' => 500,
+		'update_jobs_max_pressure' => 250,
+		'checker_job_max_time' => 60,
+		'min_loop_duration' => 2*7*24*3600,
+	],
+	// Loop in 16 days for 99k ids, 0.006 jobs/sec, with 18% ids wrong
+	// it's 0.0125 updates/sec per cluster
+	'S' => [
+		'jobs_chunk_size' => 10,
+		'checker_batch_size' => 10,
+		'max_checker_jobs' => 50,
+		'update_jobs_max_pressure' => 100,
+		'checker_job_max_time' => 60,
+		'min_loop_duration' => 2*7*24*3600,
+	],
+	// Loop in 9 days for 11k ids, 0.00014 jobs/sec, with 18% ids wrong
+	// it's 0.0025 updates/sec per cluster
+	'XS' => [
+		'jobs_chunk_size' => 10,
+		'checker_batch_size' => 10,
+		'max_checker_jobs' => 10,
+		'update_jobs_max_pressure' => 50,
+		'checker_job_max_time' => 60,
+		'min_loop_duration' => 2*7*24*3600,
+	],
+];
+
+if ( isset( $wgCirrusSearchSanitizeProfiles[$wmgCirrusSearchSanitizeProfile] ) ) {
+	$wgCirrusSearchSanityCheck = $wgCirrusSearchSanitizeProfiles[$wmgCirrusSearchSanitizeProfile];
+}
+
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
