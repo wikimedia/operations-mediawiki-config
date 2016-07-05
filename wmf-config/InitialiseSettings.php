@@ -16794,6 +16794,7 @@ $wgConf->settings = [
 	'default' => false,
 	'fawiki' => true, // T130211
 	'wikidatawiki' => true, // T130212
+	'nlwiki' => true, // T139432
 ],
 'wgOresModels' => [
 	'default' => [
@@ -16814,11 +16815,18 @@ $wgConf->settings = [
 		'goodfaith' => false,
 		'wp10' => false,
 	], // T130212
+	'nlwiki' => [
+		'damaging' => true,
+		'reverted' => false,
+		'goodfaith' => false,
+		'wp10' => false,
+	], // T139432
 ],
 'wgOresDamagingThresholds' => [
 	'default' => [ 'hard' => 0.5, 'soft' => 0.7 ],
 	'fawiki' => [ 'hard' => 0.12, 'soft' => 0.45 ], // T130211
 	'wikidatawiki' => [ 'hard' => 0.8, 'soft' => 0.96 ], // T130212
+	'nlwiki' => [ 'hard' => 0.3, 'soft' => 0.72 ], // T139432
 ],
 ### End (roughly) of general extensions ########################
 
