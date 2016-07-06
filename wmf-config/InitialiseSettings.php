@@ -15964,6 +15964,7 @@ $wgConf->settings = [
 	// but available to encode information on Wikidata.
 	'wikidata' => [
 		'din' => 'dinka',           // T75563
+		'kea' => 'Kabuverdianu',    // T127435
 		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ',            // T93880
 		'ota' => 'لسان توركى',      // T59342
 		'rwr' => 'मारवाड़ी',           // T61905
