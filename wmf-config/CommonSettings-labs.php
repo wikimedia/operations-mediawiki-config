@@ -352,6 +352,10 @@ if ( $wmgUseOATHAuth && $wmgUseCentralAuth ) {
 	$wgGroupPermissions['*']['oathauth-enable'] = false;
 }
 
+if ( $wmgUsePageAssessments ) {
+	wfLoadExtension( 'PageAssessments' );
+}
+
 if ( $wmgUseUniversalLanguageSelector ) {
 	$wgDefaultUserOptions['compact-language-links'] = 0;
 }

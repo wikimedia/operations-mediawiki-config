@@ -3051,10 +3051,6 @@ if ( $wmgUseTemplateSandbox ) {
 	}
 }
 
-if ( $wmgUsePageAssessments ) {
-	wfLoadExtension( 'PageAssessments' );
-}
-
 if ( $wmgUsePageImages ) {
 	require_once( "$IP/extensions/PageImages/PageImages.php" );
 	$wgPageImagesExpandOpenSearchXml = $wmgPageImagesExpandOpenSearchXml;
