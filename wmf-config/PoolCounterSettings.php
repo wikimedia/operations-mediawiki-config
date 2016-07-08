@@ -2,7 +2,7 @@
 
 if ( !defined( 'MEDIAWIKI' ) ) exit( 1 );
 
-include( "$IP/extensions/PoolCounter/PoolCounterClient.php" );
+wfLoadExtension( 'PoolCounter/PoolCounterClient.php' );
 
 $wgPoolCounterConf = [
 	'ArticleView' => [
