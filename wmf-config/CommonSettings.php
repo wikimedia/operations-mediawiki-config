@@ -2125,7 +2125,7 @@ if ( $wmgUsePopups || ( $wmgPopupsBetaFeature && $wmgUseBetaFeatures ) ) {
 }
 
 if ( $wmgUseRestbaseUpdateJobs ) {
-	require_once( "$IP/extensions/RestBaseUpdateJobs/RestBaseUpdateJobs.php" );
+	wfLoadExtension( 'RestBaseUpdateJobs' );
 	$wgRestbaseServer = $wmgRestbaseServer;
 }
 
