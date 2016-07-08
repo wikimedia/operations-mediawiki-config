@@ -103,7 +103,7 @@ $IP/extensions/Quiz/Quiz.php
 $IP/extensions/RelatedArticles/extension.json
 $IP/extensions/RelatedSites/RelatedSites.php
 $IP/extensions/Renameuser/Renameuser.php
-$IP/extensions/RestBaseUpdateJobs/RestBaseUpdateJobs.php
+$IP/extensions/RestBaseUpdateJobs/extension.json
 $IP/extensions/RSS/RSS.php
 $IP/extensions/SandboxLink/SandboxLink.php
 $IP/extensions/Score/Score.php
