@@ -11733,6 +11733,10 @@ $wgConf->settings = [
 	],
 	'+enwikisource' => [ 114 ], // T58899
 	'+metawiki' => [ 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215 ], // T74493
+	'wikidata' => [
+		NS_TALK, NS_USER, NS_USER_TALK, NS_PROJECT, NS_PROJECT_TALK, NS_MEDIAWIKI, NS_MEDIAWIKI_TALK,
+		NS_HELP, NS_HELP_TALK
+	],
 ],
 
 'wmgCollectionPortletFormats' => [
