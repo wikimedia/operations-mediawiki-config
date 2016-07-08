@@ -95,9 +95,9 @@ $IP/extensions/ParsoidBatchAPI/extension.json
 $IP/extensions/PdfHandler/extension.json
 $IP/extensions/Petition/extension.json
 $IP/extensions/Poem/extension.json
-$IP/extensions/PoolCounter/PoolCounterClient.php
 $IP/extensions/Popups/extension.json
 $IP/extensions/ProofreadPage/extension.json
+$IP/extensions/PoolCounter/extension.json
 $IP/extensions/QuickSurveys/extension.json
 $IP/extensions/Quiz/extension.json
 $IP/extensions/RelatedArticles/extension.json
