@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee011f3e_aac81a26",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-07-08T20:36:18Z",
+      "side": 1,
+      "message": "We use infinitive in titles.",
+      "revId": "b145f994152afd155a948caedb7ea8ec41f835bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_cac3de08",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-07-08T20:36:18Z",
+      "side": 1,
+      "message": "When the reason is known, a commit message benefits greatly of the \"why?\".",
+      "revId": "b145f994152afd155a948caedb7ea8ec41f835bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee011f3e_8a527668",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 17118,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-07-08T20:36:18Z",
+      "side": 1,
+      "message": "Add task ID here.",
+      "revId": "b145f994152afd155a948caedb7ea8ec41f835bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
