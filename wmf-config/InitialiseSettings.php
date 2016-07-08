@@ -17115,6 +17115,7 @@ $wgConf->settings = [
 	'test2wiki' => true,
 	'testwikidatawiki' => true,
 	'mediawikiwiki' => true,
+	'metawiki' => true,
 	'plwikimedia' => true, // T132510
 ],
 
