@@ -13415,7 +13415,7 @@ $wgConf->settings = [
 
 // -------------- RESTBase start --------------
 
-'wmgRestbaseServer' => [
+'wgRestbaseServer' => [
 	'default' => $wmfLocalServices['restbase']
 ],
 

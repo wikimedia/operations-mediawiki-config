@@ -2163,8 +2163,7 @@ if ( $wmgUsePopups || ( $wmgPopupsBetaFeature && $wmgUseBetaFeatures ) ) {
 }
 
 if ( $wmgUseRestbaseUpdateJobs ) {
-	require_once( "$IP/extensions/RestBaseUpdateJobs/RestBaseUpdateJobs.php" );
-	$wgRestbaseServer = $wmgRestbaseServer;
+	wfLoadExtension( 'RestBaseUpdateJobs' );
 }
 
 if ( !isset( $wgVirtualRestConfig ) && ( $wmgUseRestbaseVRS || $wmgUseParsoid ) ) {
@@ -2181,7 +2180,7 @@ if ( !isset( $wgVirtualRestConfig ) && ( $wmgUseRestbaseVRS || $wmgUseParsoid ) 
 
 if ( $wmgUseRestbaseVRS ) {
 	$wgVirtualRestConfig['modules']['restbase'] = [
-		'url' => $wmgRestbaseServer,
+		'url' => $wgRestbaseServer,
 		'domain' => $wgCanonicalServer,
 		'forwardCookies' => false,
 		'parsoidCompat' => false
