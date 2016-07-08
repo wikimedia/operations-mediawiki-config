@@ -56,11 +56,6 @@ $wgDnsBlacklistUrls   = [
 //Commented until a dedicated wiki is created.
 //require_once ("$IP/extensions/OnlineStatusBar/OnlineStatusBar.php");
 
-// the beta cluster uses a different filebackend than production
-if ( $wmgUseGWToolset ) {
-	$wgGWTFileBackend = 'gwtoolset-backend';
-}
-
 if ( $wmgUseOAuth ) {
 	$wgMWOAuthCentralWiki = 'metawiki';
 
