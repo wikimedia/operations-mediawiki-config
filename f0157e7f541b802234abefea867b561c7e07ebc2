@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce061b56_503eac27",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15967,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2016-07-09T11:03:46Z",
+      "side": 1,
+      "message": "This is good. In case the official name is not the best, please report to CLDR (and mention sources). http://www.unicode.org/cldr/charts/28/summary/kea.html#249",
+      "revId": "f0157e7f541b802234abefea867b561c7e07ebc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
