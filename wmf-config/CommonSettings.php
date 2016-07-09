@@ -2961,7 +2961,9 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgULSCompactLanguageLinksBetaFeature = $wmgULSCompactLanguageLinksBetaFeature;
 	$wgULSCompactLinksEnableAnon = $wmgULSCompactLinksEnableAnon;
 	$wgULSCompactLinksForNewAccounts = $wmgULSCompactLinksForNewAccounts;
-	$wgDefaultUserOptions['compact-language-links'] = 1;
+	if ( $wgULSCompactLanguageLinksBetaFeature ) {
+		$wgDefaultUserOptions['compact-language-links'] = 1;
+	}
 }
 
 if ( $wmgUseContentTranslation ) {
