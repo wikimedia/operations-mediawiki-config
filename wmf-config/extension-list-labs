@@ -1,9 +1,3 @@
-$IP/extensions/Capiunto/Capiunto.php
-$IP/extensions/Sentry/Sentry.php
-$IP/extensions/UrlShortener/extension.json
-$IP/extensions/EventBus/extension.json
-$IP/extensions/Kartographer/extension.json
-$IP/extensions/ORES/extension.json
 $IP/extensions/Newsletter/extension.json
-$IP/extensions/OATHAuth/extension.json
 $IP/extensions/RevisionSlider/extension.json
+$IP/extensions/Sentry/extension.json
