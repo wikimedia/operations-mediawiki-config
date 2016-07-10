@@ -3001,7 +3001,12 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	// … as a stable feature
 	$wgULSCompactLinksEnableAnon = $wmgULSCompactLinksEnableAnon;
 	$wgULSCompactLinksForNewAccounts = $wmgULSCompactLinksForNewAccounts;
-	$wgDefaultUserOptions['compact-language-links'] = 1;
+	if ($wmgULSCompactLinksDefaultUserOptions) {
+		$wgDefaultUserOptions['compact-language-links'] = 1;
+	}
+	else {
+		$wgDefaultUserOptions['compact-language-links'] = 0;
+	}
 }
 
 if ( $wmgUseContentTranslation ) {
