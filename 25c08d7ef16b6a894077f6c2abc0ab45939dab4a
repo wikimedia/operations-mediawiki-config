@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce061b56_33b85274",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12664,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-07-10T18:38:47Z",
+      "side": 1,
+      "message": "This will create a 0 \u003d\u003e false entry.\n\nArray is filled by a value or by a key/values pair. When the key is omitted, it\u0027s autoindex numerically starting at 0.",
+      "revId": "25c08d7ef16b6a894077f6c2abc0ab45939dab4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
