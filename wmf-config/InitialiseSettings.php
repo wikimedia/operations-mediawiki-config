@@ -12659,6 +12659,11 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+'wmgULSCompactLinksDefaultUserOptions' => [
+	'default' => true,
+	'enwikivoyage'
+],
+
 // ------------ BetaFeatures end -----------
 
 // -------------- Media Viewer configs --------------
