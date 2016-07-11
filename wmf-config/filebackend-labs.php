@@ -159,7 +159,7 @@ $wgLockManagers[] = [
 	'class'        => 'RedisLockManager',
 	'lockServers'  => $wmfMasterServices['redis_lock'],
 	'srvsByBucket' => [
-		0 => [ 'memc04', 'memc05' ]
+		0 => [ 'rdb1', 'rdb2' ]
 	],
 	'redisConfig'  => [
 		'connectTimeout' => 2,

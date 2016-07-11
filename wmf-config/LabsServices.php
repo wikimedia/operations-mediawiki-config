@@ -31,8 +31,8 @@ $wmfAllServices['eqiad'] = [
 	'cxserver' => 'http://deployment-sca01.eqiad.wmflabs:8080',
 	'irc' => 'irc.beta.wmflabs.org', // deployment-ircd
 	'redis_lock' => [
-		'memc04' => '10.68.23.25', // deployment-memc04.deployment-prep.eqiad.wmflabs
-		'memc05' => '10.68.23.49', // deployment-memc05.deployment-prep.eqiad.wmflabs
+		'rdb1' => '10.68.16.177', // deployment-redis01.deployment-prep.eqiad.wmflabs
+		'rdb2' => '10.68.16.231', // deployment-redis02.deployment-prep.eqiad.wmflabs
 	],
 ];
 
