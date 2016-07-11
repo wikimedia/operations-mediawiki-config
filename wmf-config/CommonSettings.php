@@ -1036,7 +1036,7 @@ $wgPasswordResetRoutes['email'] = true;
 
 if ( $wmgUseClusterFileBackend ) {
 	# Cluster-dependent files for file backend
-	require "{$wmfConfigDir}/filebackend-{$wmfRealm}.php";
+	require "{$wmfConfigDir}/filebackend.php";
 } else {
 	$wgUseInstantCommons = true;
 }

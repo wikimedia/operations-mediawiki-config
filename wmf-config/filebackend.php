@@ -3,8 +3,9 @@
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
 #
-# This file hold the configuration for the file backends for production.
+# This file hold the configuration for the file backends.
 
+global $wmfSwiftConfig;
 // Common OpenStack Swift backend convenience variables
 $wmfSwiftBigWikis = [ # DO NOT change without proper migration first
 	'commonswiki', 'dewiki', 'enwiki', 'fiwiki', 'frwiki', 'hewiki', 'huwiki', 'idwiki',
@@ -13,8 +14,20 @@ $wmfSwiftBigWikis = [ # DO NOT change without proper migration first
 $wmfSwiftShardLocal = in_array( $wgDBname, $wmfSwiftBigWikis ) ? 2 : 0; // shard levels
 $wmfSwiftShardCommon = in_array( 'commonswiki', $wmfSwiftBigWikis ) ? 2 : 0; // shard levels
 
+if ( $wmfRealm === 'labs' ) {
+	$datacenters = [ 'eqiad' ];
+	$redisLockServers = [ 'rdb1', 'rdb2' ];
+	$commonsUrl = "//commons.wikimedia.beta.wmflabs.org";
+	$uploadUrl = "//upload.beta.wmflabs.org";
+} else {
+	$datacenters = [ 'eqiad', 'codfw' ];
+	$redisLockServers = [ 'rdb1', 'rdb2', 'rdb3' ];
+	$commonsUrl = "https://commons.wikimedia.org";
+	$uploadUrl = "//upload.wikimedia.org";
+}
+
 /* DC-specific Swift backend config */
-foreach ( [ 'eqiad', 'codfw' ] as $specificDC ) {
+foreach ( $datacenters as $specificDC ) {
 	$wgFileBackends[] = [ // backend config for wiki's local repo
 		'class'              => 'SwiftFileBackend',
 		'name'               => "local-swift-{$specificDC}",
@@ -100,7 +113,7 @@ foreach ( [ 'eqiad', 'codfw' ] as $specificDC ) {
 /* end DC-specific Swift backend config */
 
 /* Common multiwrite backend config */
-$wgFileBackends[] = [
+$localMultiWriteFileBackend = [
 	'class'       => 'FileBackendMultiWrite',
 	'name'        => 'local-multiwrite',
 	'wikiId'      => "{$site}-{$lang}",
@@ -108,13 +121,12 @@ $wgFileBackends[] = [
 	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends'    => [
 		[ 'template' => 'local-swift-eqiad', 'isMultiMaster' => true ],
-		[ 'template' => 'local-swift-codfw' ]
 	],
 	'replication' => 'sync', // read-after-update for assets
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 	'autoResync'  => 'conservative'
 ];
-$wgFileBackends[] = [
+$sharedMultiwriteFileBackend = [
 	'class'       => 'FileBackendMultiWrite',
 	'name'        => 'shared-multiwrite',
 	'wikiId'      => "wikipedia-commons",
@@ -122,12 +134,11 @@ $wgFileBackends[] = [
 	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends'    => [
 		[ 'template' => 'shared-swift-eqiad', 'isMultiMaster' => true ],
-		[ 'template' => 'shared-swift-codfw' ],
 	],
 	'replication' => 'sync', // read-after-update for assets
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 ];
-$wgFileBackends[] = [
+$globalMultiWriteFileBackend = [
 	'class'       => 'FileBackendMultiWrite',
 	'name'        => 'global-multiwrite',
 	'wikiId'      => "global-data",
@@ -135,12 +146,11 @@ $wgFileBackends[] = [
 	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends'    => [
 		[ 'template' => 'global-swift-eqiad', 'isMultiMaster' => true ],
-		[ 'template' => 'global-swift-codfw' ],
 	],
 	'replication' => 'sync', // read-after-update for assets
 	'syncChecks'  => ( 1 | 4 ) // (size & sha1)
 ];
-$wgFileBackends[] = [
+$sharedTestwikiMultiWriteFileBackend = [
 	'class'       => 'FileBackendMultiWrite',
 	'name'        => 'shared-testwiki-multiwrite',
 	'wikiId'      => "wikipedia-test",
@@ -148,11 +158,22 @@ $wgFileBackends[] = [
 	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends'    => [
 		[ 'template' => 'shared-testwiki-swift-eqiad', 'isMultiMaster' => true ],
-		[ 'template' => 'shared-testwiki-swift-codfw' ],
 	],
 	'replication' => 'sync', // read-after-update for assets
 	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
 ];
+
+if ( in_array( 'codfw', $datacenters ) ) {
+	$localMultiWriteFileBackend['backends'][] = [ 'template' => 'local-swift-codfw' ];
+	$sharedMultiwriteFileBackend['backends'][] = [ 'template' => 'shared-swift-codfw' ];
+	$globalMultiWriteFileBackend['backends'][] = [ 'template' => 'global-swift-codfw' ];
+	$sharedTestwikiMultiWriteFileBackend['backends'][] = [ 'template' => 'shared-testwiki-swift-codfw' ];
+}
+$wgFileBackends[] = $localMultiWriteFileBackend;
+$wgFileBackends[] = $sharedMultiwriteFileBackend;
+$wgFileBackends[] = $globalMultiWriteFileBackend;
+$wgFileBackends[] = $sharedTestwikiMultiWriteFileBackend;
+
 /* end multiwrite backend config */
 
 // Lock manager config must use the master datacenter
@@ -161,7 +182,7 @@ $wgLockManagers[] = [
 	'class'        => 'RedisLockManager',
 	'lockServers'  => $wmfMasterServices['redis_lock'],
 	'srvsByBucket' => [
-		0 => [ 'rdb1', 'rdb2', 'rdb3' ]
+		0 => $redisLockServers
 	],
 	'redisConfig'  => [
 		'connectTimeout' => 2,
@@ -189,12 +210,13 @@ $wgLocalFileRepo = [
 		: [],
 ];
 // test2wiki uses testwiki as foreign file repo (e.g. local => testwiki => commons)
+// Does not exist in labs.
 if ( $wgDBname === 'test2wiki' ) {
 	$wgForeignFileRepos[] = [
 		'class'            => 'ForeignDBViaLBRepo',
 		'name'             => 'testwikirepo',
 		'backend'          => 'shared-testwiki-multiwrite',
-		'url'              => "//upload.wikimedia.org/wikipedia/test",
+		'url'              => "{$uploadUrl}/wikipedia/test",
 		'hashLevels'       => 2,
 		'thumbScriptUrl'   => false,
 		'transformVia404'  => true,
@@ -220,13 +242,13 @@ if ( $wgDBname != 'commonswiki' ) {
 		'class'            => 'ForeignDBViaLBRepo',
 		'name'             => 'shared',
 		'backend'          => 'shared-multiwrite',
-		'url'              => "//upload.wikimedia.org/wikipedia/commons",
+		'url'              => "{$uploadUrl}/wikipedia/commons",
 		'hashLevels'       => 2,
 		'thumbScriptUrl'   => false,
 		'transformVia404'  => true,
 		'hasSharedCache'   => true,
-		'descBaseUrl'      => "https://commons.wikimedia.org/wiki/File:",
-		'scriptDirUrl'     => "https://commons.wikimedia.org/w",
+		'descBaseUrl'      => "{$commonsUrl}/wiki/File:",
+		'scriptDirUrl'     => "{$commonsUrl}/w",
 		'favicon'          => "/static/favicon/commons.ico",
 		'fetchDescription' => true,
 		'descriptionCacheExpiry' => 86400 * 7,
