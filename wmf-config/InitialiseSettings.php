@@ -15222,6 +15222,7 @@ $wgConf->settings = [
 	'tawikisource' => true,
 	'tawiktionary' => true,
 	'test2wiki' => true,
+	'urwiki' => true, // T138507
 ],
 
 'wmgUseFeaturedFeeds' => [
