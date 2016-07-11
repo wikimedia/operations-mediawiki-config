@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce061b56_3abdbe64",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 13755,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-07-11T23:44:03Z",
+      "side": 1,
+      "message": "Not your fault but I\u0027m noticing this while we\u0027re here. This should go away.",
+      "revId": "01ec6dd820b3adcaf931d15c437f8fdaf069f597",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
