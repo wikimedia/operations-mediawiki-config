@@ -13758,6 +13758,15 @@ $wgConf->settings = [
 		'https://planet.wikimedia.de/atom.php',
 		'https://planet.wikimedia.de/wikidata/atom.php',
 		'https://sourcecode.berlin/feed/',
+
+		// Feeds included for Fundraising Tech pages
+		'https://codeclimate.com/github/wikimedia/mediawiki-extensions-CentralNotice/feed.atom',
+		'https://codeclimate.com/github/wikimedia/mediawiki-extensions-DonationInterface/feed.atom',
+		'https://codeclimate.com/github/wikimedia/wikimedia-fundraising-crm/feed.atom',
+		'https://codeclimate.com/github/wikimedia/wikimedia-fundraising-dash/feed.atom',
+		'https://codeclimate.com/github/wikimedia/wikimedia-fundraising-php-queue/feed.atom',
+		'https://codeclimate.com/github/wikimedia/wikimedia-fundraising-SmashPig/feed.atom',
+		'https://codeclimate.com/github/wikimedia/wikimedia-fundraising-tools/feed.atom',
 	],
 ],
 
