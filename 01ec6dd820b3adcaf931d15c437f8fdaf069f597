@@ -16,6 +16,24 @@
       "revId": "01ec6dd820b3adcaf931d15c437f8fdaf069f597",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce061b56_baa88e1e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 13755,
+      "author": {
+        "id": 143
+      },
+      "writtenOn": "2016-07-11T23:45:14Z",
+      "side": 1,
+      "message": "Totally.  Searching for these and the WMDE links, I found that they\u0027re almost all unused.",
+      "parentUuid": "ce061b56_3abdbe64",
+      "revId": "01ec6dd820b3adcaf931d15c437f8fdaf069f597",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
