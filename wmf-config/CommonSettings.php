@@ -283,8 +283,6 @@ $wgHooks['LocalisationCacheRecache'][] = function( $cache, $code, &$allData, &$p
 	return true;
 };
 
-$wgFileStore['deleted']['directory'] = "/mnt/upload7/private/archive/$site/$lang";
-
 # used for mysql/search settings
 $tmarray = getdate( time() );
 $hour = $tmarray['hours'];
@@ -1190,11 +1188,8 @@ if ( $wmgEnableCaptcha ) {
 	require( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
 	require( "$IP/extensions/ConfirmEdit/FancyCaptcha.php" );
 	$wgGroupPermissions['autoconfirmed']['skipcaptcha'] = true;
-	if ( $wmfRealm !== 'labs' ) {
-		$wgCaptchaFileBackend = 'global-multiwrite';
-	}
+	$wgCaptchaFileBackend = 'global-multiwrite';
 	$wgCaptchaSecret = $wmgCaptchaSecret;
-	$wgCaptchaDirectory = '/mnt/upload7/private/captcha';
 	$wgCaptchaDirectoryLevels = 3;
 	$wgCaptchaStorageClass = 'CaptchaCacheStore';
 	$wgCaptchaClass = 'FancyCaptcha';
@@ -2363,7 +2358,6 @@ if ( $wmgUseMath ) {
 	} elseif ( $wmgUseMathML && $wmgUseRestbaseVRS ) {
 		$wgDefaultUserOptions['math'] = 'mathml';
 	}
-	$wgMathDirectory   = '/mnt/upload7/math'; // just for sanity
 	$wgUseMathJax      = true;
 	// This variable points to non-WMF servers by default.
 	// Prevent accidental use.

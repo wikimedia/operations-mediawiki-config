@@ -108,11 +108,6 @@ function wmfLabsSettings() {
 			'default' => ''
 		],
 
-		'-wgUploadDirectory' => [
-			'default'      => '/data/project/upload7/$site/$lang',
-			'private'      => '/data/project/upload7/private/$lang',
-		],
-
 		'-wgUploadPath' => [
 			'default' => 'http://upload.$variant.wmflabs.org/$site/$lang',
 			'private' => '/w/img_auth.php',

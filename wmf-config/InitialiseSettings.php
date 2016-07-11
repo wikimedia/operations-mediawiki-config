@@ -1990,15 +1990,6 @@ $wgConf->settings = [
 ],
 
 'wgUploadDirectory' => [
-	# Using upload7 since Oct 2012
-	'default' => '/mnt/upload7/$site/$lang',
-	'private' => '/mnt/upload7/private/$lang',
-
-	'wikimania2005wiki' => '/mnt/upload7/wikipedia/wikimania', // back compat
-	'otrs_wikiwiki' => '/mnt/upload7/private/otrs_wiki',
-	'execwiki' => '/mnt/upload7/private/execwiki',
-	'transitionteamwiki' => '/mnt/upload7/private/transitionteamwiki',
-	'iegcomwiki' => '/mnt/upload7/private/iegcomwiki',
 	'wikitech' => '/srv/org/wikimedia/controller/wikis/images',
 ],
 

@@ -187,12 +187,6 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgFFmpegLocation = '/usr/bin/ffmpeg'; // use new ffmpeg build w/ VP9 & Opus support
 }
 
-if ( $wgDBname == "testwiki" ) {
-	$wgCaptchaDirectory = '/data/project/upload7/private/captcha/random';
-} else {
-	$wgCaptchaDirectory = '/data/project/upload7/private/captcha';
-}
-
 // Enable Flickr uploads on commons beta T86120
 if ( $wgDBname == 'commonswiki' ) {
 	$wgGroupPermissions['user']['upload'] = true;
@@ -201,16 +195,8 @@ if ( $wgDBname == 'commonswiki' ) {
 	$wgUseInstantCommons = true;
 }
 
-# Backends:
 if ( $wmgUseMath ) {
-	$wgMathFileBackend = false;
-	$wgMathDirectory   = '/data/project/upload7/math';
 	$wgDefaultUserOptions[ 'math' ] = 'mathml';
-}
-
-if ( $wmgUseScore ) {
-	$wgScoreFileBackend = false;
-	$wgScoreDirectory = '/data/project/upload7/score';
 }
 
 // CORS (cross-domain AJAX, T22814)
