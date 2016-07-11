@@ -283,8 +283,6 @@ $wgHooks['LocalisationCacheRecache'][] = function( $cache, $code, &$allData, &$p
 	return true;
 };
 
-$wgFileStore['deleted']['directory'] = "/mnt/upload7/private/archive/$site/$lang";
-
 # used for mysql/search settings
 $tmarray = getdate( time() );
 $hour = $tmarray['hours'];
@@ -1198,7 +1196,6 @@ if ( $wmgEnableCaptcha ) {
 	$wgGroupPermissions['autoconfirmed']['skipcaptcha'] = true;
 	$wgCaptchaFileBackend = 'global-multiwrite';
 	$wgCaptchaSecret = $wmgCaptchaSecret;
-	$wgCaptchaDirectory = '/mnt/upload7/private/captcha';
 	$wgCaptchaDirectoryLevels = 3;
 	$wgCaptchaStorageClass = 'CaptchaCacheStore';
 	$wgCaptchaClass = 'FancyCaptcha';
@@ -2367,7 +2364,6 @@ if ( $wmgUseMath ) {
 	} elseif ( $wmgUseMathML && $wmgUseRestbaseVRS ) {
 		$wgDefaultUserOptions['math'] = 'mathml';
 	}
-	$wgMathDirectory   = '/mnt/upload7/math'; // just for sanity
 	$wgUseMathJax      = true;
 	// This variable points to non-WMF servers by default.
 	// Prevent accidental use.
