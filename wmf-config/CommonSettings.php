@@ -410,7 +410,13 @@ if ( $wmgUseCentralAuth ) {
 		}
 
 		// Result should be cached by getLocalGroups() above
-		$attachInfo = $central->queryAttached();
+		try {
+			$attachInfo = $central->queryAttached();
+		} catch ( Exception $e ) {
+			// Don't block login if we can't query attached (T119736)
+			MWExceptionHandler::logException( $e );
+			return true;
+		}
 		$enforceWikiGroups = [
 			'centralnoticeadmin' => [ 'metawiki', 'testwiki' ],
 			'templateeditor' => [ 'fawiki', 'rowiki' ],
