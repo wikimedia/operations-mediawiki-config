@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce061b56_a2d220d3",
+        "filename": "dblists/visualeditor-nondefault.dblist",
+        "patchSetId": 1
+      },
+      "lineNbr": 440,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2016-07-12T20:23:56Z",
+      "side": 1,
+      "message": "I think you want these:\n\u003e\u003e\u003e all \u003d set(open(\u0027dblists/all.dblist\u0027).read().splitlines())\n\u003e\u003e\u003e wikisource \u003d set(open(\u0027dblists/wikisource.dblist\u0027).read().splitlines())\n\u003e\u003e\u003e visualeditor_default \u003d set([line for line in open(\u0027dblists/visualeditor-default.dblist\u0027).read().splitlines() if line[0] !\u003d \u0027#\u0027])\n\u003e\u003e\u003e (all - visualeditor_default) \u0026 wikisource\nset([\u0027knwikisource\u0027, \u0027svwikisource\u0027, \u0027plwikisource\u0027, \u0027mlwikisource\u0027, \u0027brwikisource\u0027, \u0027ruwikisource\u0027, \u0027kowikisource\u0027, \u0027lawikisource\u0027, \u0027ltwikisource\u0027, \u0027orwikisource\u0027, \u0027cswikisource\u0027, \u0027enwikisource\u0027, \u0027tawikisource\u0027, \u0027skwikisource\u0027, \u0027srwikisource\u0027, \u0027rowikisource\u0027, \u0027aswikisource\u0027, \u0027tewikisource\u0027, \u0027frwikisource\u0027, \u0027itwikisource\u0027, \u0027vecwikisource\u0027, \u0027sawikisource\u0027, \u0027yiwikisource\u0027, \u0027dewikisource\u0027, \u0027ukwikisource\u0027, \u0027bewikisource\u0027, \u0027idwikisource\u0027, \u0027etwikisource\u0027, \u0027mrwikisource\u0027, \u0027fowikisource\u0027, \u0027cawikisource\u0027, \u0027eowikisource\u0027, \u0027bswikisource\u0027, \u0027zhwikisource\u0027, \u0027hrwikisource\u0027, \u0027zh_min_nanwikisource\u0027, \u0027hewikisource\u0027, \u0027liwikisource\u0027, \u0027sahwikisource\u0027, \u0027iswikisource\u0027, \u0027trwikisource\u0027, \u0027bgwikisource\u0027, \u0027htwikisource\u0027, \u0027nlwikisource\u0027, \u0027viwikisource\u0027, \u0027ptwikisource\u0027, \u0027azwikisource\u0027, \u0027slwikisource\u0027, \u0027guwikisource\u0027, \u0027arwikisource\u0027, \u0027eswikisource\u0027, \u0027dawikisource\u0027, \u0027huwikisource\u0027, \u0027thwikisource\u0027, \u0027elwikisource\u0027, \u0027hywikisource\u0027, \u0027cywikisource\u0027, \u0027jawikisource\u0027, \u0027mkwikisource\u0027, \u0027fiwikisource\u0027, \u0027nowikisource\u0027, \u0027bnwikisource\u0027, \u0027glwikisource\u0027, \u0027fawikisource\u0027, \u0027angwikisource\u0027])",
+      "revId": "0673c22fd404f171fc30a4b263cd486531210932",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
