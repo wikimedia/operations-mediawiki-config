@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce061b56_c25e447b",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 167,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2016-07-12T20:18:02Z",
+      "side": 0,
+      "message": "visualeditor-default needs to stay until I798528b6, otherwise it\u0027s impossible to deploy this commit properly.",
+      "revId": "274b12b419ec3390560274ee07767a4bdf52166f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
