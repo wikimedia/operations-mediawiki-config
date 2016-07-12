@@ -1811,6 +1811,9 @@ if ( $wmgUseCodeReview ) {
 
 	$wgCodeReviewRepoStatsCacheTime = 24 * 60 * 60;
 	$wgCodeReviewMaxDiffPaths = 100;
+
+	// Delist the deprecated special page.
+	$wgCodeReviewListSpecialPage = false;
 }
 
 # AbuseFilter
