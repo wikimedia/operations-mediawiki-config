@@ -7220,6 +7220,11 @@ $wgConf->settings = [
 			'ip' => [ 70, 30 ],
 			'user' => [ 70, 30 ],
 		],
+		'cxsave' => [
+			// 10 saves per 30 seconds
+			'ip' => [ 10, 30 ],
+			'user' => [ 10, 30 ],
+		],
 	],
 	'+dewiki' => [ // T59820
 		'rollback' => [
