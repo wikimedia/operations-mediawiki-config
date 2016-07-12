@@ -7949,6 +7949,9 @@ $wgConf->settings = [
 	'+gawiki' => [
 		'rollbacker' => [ 'rollback' => true ],
 	],
+	'gomwiki' => [
+		'sysop' => [ 'flow-create-board' => true ],
+	],
 	'guwiki' => [ // T119787
 		'rollbacker' => [ 'rollback' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
