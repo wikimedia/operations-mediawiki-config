@@ -23,7 +23,7 @@ $wmfAllServices['eqiad'] = [
 	],
 	'ocg' => 'http://deployment-pdf01:8000',
 	'urldownloader' => 'http://deployment-urldownloader.deployment-prep.eqiad.wmflabs:8080',
-	'parsoid' => 'http://10.68.16.120:8000',
+	'parsoid' => 'http://deployment-parsoid07.deployment-prep.eqiad.wmflabs:8000',
 	'mathoid' => 'http://deployment-mathoid.eqiad.wmflabs:10042',
 	'eventlogging' => 'udp://deployment-eventlogging03.eqiad.wmflabs:8421',
 	'eventbus' => 'http://deployment-eventlogging04.deployment-prep.eqiad.wmflabs:8085',
