@@ -7327,9 +7327,6 @@ $wgConf->settings = [
 			// for show only
 		],
 	],
-	'wikimania2015wiki' => [
-		'*' => [ 'createpage' => false ],
-	],
 	'wikimania2016wiki' => [
 		'*' => [ 'createpage' => false ],
 	],
@@ -9615,9 +9612,6 @@ $wgConf->settings = [
 			'wikidata-staff', // T74459
 		],
 	],
-	'+wikimania2015wiki' => [
-		'bureaucrat' => [ 'translationadmin' ],
-	],
 	'+wikimania2016wiki' => [
 		'bureaucrat' => [ 'translationadmin' ],
 	],
@@ -10307,9 +10301,6 @@ $wgConf->settings = [
 		'wikidata-staff' => [
 			'wikidata-staff', // T74459
 		],
-	],
-	'+wikimania2015wiki' => [
-		'bureaucrat' => [ 'translationadmin' ],
 	],
 	'+wikimania2016wiki' => [
 		'bureaucrat' => [ 'translationadmin' ],
