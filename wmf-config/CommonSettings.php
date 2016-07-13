@@ -936,7 +936,7 @@ if ( $wmgUseContactPage ) {
 			'SenderEmail' => $wmgNotificationSender,
 			'RequireDetails' => true,
 			'IncludeIP' => true,
-			'DisplayFormat' => 'ooui',
+			'DisplayFormat' => 'vform',
 			'AdditionalFields' => [
 				'Text' => [
 					'label-message' => 'emailmessage',
