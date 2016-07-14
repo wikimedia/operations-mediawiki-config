@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eed2fc9_56e6aa14",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 2177
+      },
+      "writtenOn": "2016-07-14T09:43:38Z",
+      "side": 1,
+      "message": "Need to append the port too:\n\n  http://deployment-restbase01.deployment-prep.eqiad.wmflabs:7231\n\nAlso note that you need to append the full path when making the actual request (i.e. you need to add /{domain}/v1/...).",
+      "revId": "8ccfaf359c41badd8a8d9c1e2c92f1dd3a9a6c92",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
