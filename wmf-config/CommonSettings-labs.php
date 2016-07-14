@@ -303,7 +303,6 @@ if ( $wmgUseGraph ) {
 	$wgGraphAllowedDomains['http'] = [ 'wmflabs.org' ];
 	$wgGraphAllowedDomains['wikirawupload'][] = 'upload.beta.wmflabs.org';
 	$wgGraphAllowedDomains['wikidatasparql'][] = 'wdqs-test.wmflabs.org';
-	$wgGraphAllowedDomains['geoshape'] = [ 'maps.wikimedia.org' ];
 }
 
 if ( $wmgUseKartographer ) {
