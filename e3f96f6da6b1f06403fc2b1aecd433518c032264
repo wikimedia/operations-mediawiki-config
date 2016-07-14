@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6eed2fc9_d6061a23",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 103,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2016-07-14T12:47:00Z",
+      "side": 1,
+      "message": "Can we use $wmgRestbaseServer?\n\nIn fact, if we just remove this line, CommonSettings.php should already default to correct value in labs:\n\nLabsServices.php:\n51:$wmfAllServices[\u0027eqiad\u0027][\u0027restbase\u0027] \u003d \u0027http://10.68.17.189:7231\u0027; // deployment-restbase02.deployment-prep.eqiad.wmflabs",
+      "revId": "e3f96f6da6b1f06403fc2b1aecd433518c032264",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
