@@ -185,7 +185,7 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 		'-wmgUsePoolCounter' => [
-			'default' => false, // T38891
+			'default' => true, // T38891
 		],
 
 		'-wmgEnableCaptcha' => [
