@@ -184,9 +184,6 @@ function wmfLabsSettings() {
 		'wgVectorResponsive' => [
 			'default' => true,
 		],
-		'-wmgUsePoolCounter' => [
-			'default' => false, // T38891
-		],
 
 		'-wmgEnableCaptcha' => [
 			'default' => true,
