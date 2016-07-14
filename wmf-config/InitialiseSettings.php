@@ -4584,7 +4584,8 @@ $wgConf->settings = [
 		'xff' => [ 'logstash' => false ],
 		'zero' => [ 'logstash' => false ], // zero-rated debug log
 		'MessageCacheError' => 'debug',
-		'LocalFile' => 'debug'
+		'LocalFile' => 'debug',
+		'DBTransaction' => 'debug',
 	],
 
 	'+private' => [
