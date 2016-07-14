@@ -3182,6 +3182,9 @@ if ( $wmgUseGraph ) {
 		'wikidatasparql' => [
 			'query.wikidata.org',
 		],
+		'geoshape' => [
+			'maps.wikimedia.org',
+		],
 	];
 
 	if ( $wmgUseGraphWithNamespace ) {
