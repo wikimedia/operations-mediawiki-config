@@ -100,7 +100,7 @@ if ( $wgDBname === 'enwiki' || $wgDBname === 'cawiki' ) {
 
 if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org/v1';
-	$wgContentTranslationRESTBase['url'] = 'https://rest.wikimedia.org';
+	$wgContentTranslationRESTBase['url'] = 'http://deployment-restbase01.deployment-prep.eqiad.wmflabs:7231';
 	$wgContentTranslationTranslateInTarget = false;
 }
 
