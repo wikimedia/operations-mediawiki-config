@@ -16311,6 +16311,7 @@ $wgConf->settings = [
 	'specieswiki' => true,
 	'incubatorwiki' => true,
 	'wikidatawiki' => true,
+	'ptwiki' => true, // T140395
 ],
 
 'wmgUseCampaigns' => [
