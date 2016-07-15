@@ -11987,9 +11987,8 @@ $wgConf->settings = [
 ],
 
 'wgSquidMaxage' => [
-	'default' => 2678400, // 31 days
+	'default' => 14 * 24 * 3600, // 14 days (T124954)
 	'foundationwiki' => 3600, // 1 hour; template links may be funky
-	'test2wiki' => 14 * 24 * 3600, // 14 days (T124954)
 ],
 
 # abuse filter @{
