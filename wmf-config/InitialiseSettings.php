@@ -7706,7 +7706,6 @@ $wgConf->settings = [
 		],
 		'oversight' => [ 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-view-private' => true], // T30465, T119446
 		'checkuser' => [ 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true, 'abusefilter-view-private' => true ], // T30465, T119446
-		'bureaucrat' => [ 'move-subpages' => true, 'suppressredirect' => true, 'tboverride' => true, ],
 		'templateeditor' => [ 'templateeditor' => true, 'tboverride' => true, ], // T57432
 		'sysop' => [
 			'templateeditor' => true, // T57432
