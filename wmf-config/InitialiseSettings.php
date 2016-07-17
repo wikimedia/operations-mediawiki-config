@@ -6917,6 +6917,7 @@ $wgConf->settings = [
 	'hewikibooks' => true, // T29918
 	'hewikiquote' => true,
 	'hewiktionary' => true, // T75197
+	'hewikinews' => true, // T140544
 	'hiwiki' => true,
 	'hrwiki' => true, // by request of stemd from #wikipedia-hr 2007-05-15 -jeronim
 	'idwiki' => true, // T8042
@@ -8026,6 +8027,16 @@ $wgConf->settings = [
 	'hewiktionary' => [
 		'patroller'     => [ 'patrol' => true, 'autopatrol' => true, 'unwatchedpages' => true, 'rollback' => true,], // T75197
 		'autopatrolled' => [ 'autopatrol' => true, 'unwatchedpages' => true, ], // T75197
+	],
+	'+hewikinews' => [ // T140544
+		'autopatrolled' => [ 'autopatrol' => true ],
+		'patroller' => [
+			'patrol' => true,
+			'patrolmarks' => true,
+			'autopatrol' => true,
+			'rollback' => true,
+			'unwatchedpages' => true,
+		],
 	],
 	'hiwiki' => [
 		'rollbacker' => [ 'rollback' => true ], // T56589
@@ -9280,6 +9291,9 @@ $wgConf->settings = [
 	'+hewiktionary' => [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
 	],
+	'+hewikinews' => [
+		'sysop' => [ 'patroller', 'autopatrolled' ], // T140544
+	],
 	'+hiwiki' => [
 		'sysop' => [ 'abusefilter', 'autopatrolled', 'reviewer', 'rollbacker', 'filemover', 'templateeditor' ], // T37355, T56589, T120342
 	],
@@ -9957,11 +9971,14 @@ $wgConf->settings = [
 	'+hewikivoyage' => [
 		'sysop' => [ 'autopatrolled' ], // T52377
 	],
+	'+hewikinews' => [
+		'sysop' => [ 'patroller', 'autopatrolled' ], // T140544
+	],
 	'+hiwiki' => [
 		'sysop' => [ 'abusefilter', 'autopatrolled', 'reviewer', 'rollbacker', 'filemover', 'templateeditor' ], // T37355, T56589, T120342
 	],
 	'+hiwiktionary' => [
-			'bureaucrat' => [ 'sysop', ],
+		'bureaucrat' => [ 'sysop', ],
 	],
 	'+hrwiki' => [
 		'bureaucrat' => [ 'patroller', 'autopatrolled' ],
