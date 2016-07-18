@@ -14265,19 +14265,18 @@ $wgConf->settings = [
 	'default' => 10,
 	'commonswiki' => 75, // T64598
 ],
-'wmgMFUseWikibaseDescription' => [
+'wgMFUseWikibase' => [
 	'default' => true,
 ],
-'wgMFDisplayWikibaseDescription' => [
-	'default' => true,
-],
-'wgMFDisplayWikibaseDescriptionsAsTaglines' => [
-	'default' => false,
-	'testwikidatawiki' => true,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'cawiki' => true, // T135429
-	'plwiki' => true, // T135429
+'wgMFDisplayWikibaseDescriptions' => [
+	'default' => [
+		'search' => true, 'nearby' => true, 'watchlist' => true,
+	],
+	'+testwikidatawiki' => [ 'tagline' => true ],
+	'+testwiki' => [ 'tagline' => true ],
+	'test2wiki' => [ 'tagline' => true ],
+	'cawiki' => [ 'tagline' => true ],
+	'plwiki' => [ 'tagline' => true ],
 ],
 'wmgMFMobileFormatterHeadings' => [
 	'default' => [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ],
