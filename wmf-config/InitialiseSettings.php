@@ -14330,6 +14330,11 @@ $wgConf->settings = [
 		'base' => true,
 		'beta' => true,
 	],
+	// T140197
+	'ruwiki' => [
+		'base' => true,
+		'beta' => true,
+	],
 ],
 'wgMFLazyLoadReferences' => [
 	'default' => [
@@ -14343,6 +14348,11 @@ $wgConf->settings = [
 	],
 	// T137822
 	'tlwiki' => [
+		'base' => true,
+		'beta' => true,
+	],
+	// T140197
+	'ruwiki' => [
 		'base' => true,
 		'beta' => true,
 	],
