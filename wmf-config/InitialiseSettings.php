@@ -15961,6 +15961,7 @@ $wgConf->settings = [
 	'default' => false,
 	'testwiki' => true,// T138943
 	'test2wiki' => true,// T138943
+	'arwiki' => true,//T140551
 ],
 
 'wmgUseUserMerge' => [
