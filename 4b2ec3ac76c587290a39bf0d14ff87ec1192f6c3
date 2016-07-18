@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efa2b83_13a6eb50",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 656,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2016-07-18T20:02:24Z",
+      "side": 1,
+      "message": "Shouldn\u0027t this be wgMFUseWikibaseDescription now?",
+      "revId": "4b2ec3ac76c587290a39bf0d14ff87ec1192f6c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
