@@ -125,6 +125,8 @@ $wgLocalVirtualHosts = [
 	'commons.wikimedia.org',
 ];
 
+$wgHTTPProxy = 'url-downloader.wikimedia.org:8080';
+
 # Is this database listed in dblist?
 # Note: $wgLocalDatabases set in wgConf.php.
 # Note: must be done before calling $multiVersion functions other than getDatabase().
