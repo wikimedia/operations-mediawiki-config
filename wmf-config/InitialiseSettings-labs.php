@@ -627,8 +627,10 @@ function wmfLabsSettings() {
 		],
 
 		// Test Wikidata descriptions on mobile: T127250
-		'wgMFDisplayWikibaseDescriptionsAsTaglines' => [
-			'default' => true,
+		'wgMFDisplayWikibaseDescriptions' => [
+			'default' => [
+				'tagline' => true, 'search' => true, 'nearby' => true, 'watchlist' => true
+			]
 		],
 	];
 } # wmflLabsSettings()
