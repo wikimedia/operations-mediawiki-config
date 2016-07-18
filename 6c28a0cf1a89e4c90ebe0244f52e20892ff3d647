@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efa2b83_f3a23f3a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2016-07-18T20:01:33Z",
+      "side": 1,
+      "message": "Which wiki? ;)",
+      "revId": "6c28a0cf1a89e4c90ebe0244f52e20892ff3d647",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
