@@ -12059,10 +12059,6 @@ $wgConf->settings = [
 	],
 ],
 
-'wgHTTPProxy' => [
-	'default' => $wmfLocalServices['urldownloader'],
-],
-
 'wgCopyUploadProxy' => [
 	'default' => $wmfLocalServices['urldownloader'],
 ],
