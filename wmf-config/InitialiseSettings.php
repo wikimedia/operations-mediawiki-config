@@ -17143,6 +17143,10 @@ $wgConf->settings = [
 	'testwikidatawiki' => true,
 	'mediawikiwiki' => true,
 	'plwikimedia' => true, // T132510
+	'metawiki' => true,
+	'cawiki' => true,
+	'hewiki' => true,
+	'mkwiki' => true,
 ],
 
 'wgKartographerWikivoyageMode' => [
