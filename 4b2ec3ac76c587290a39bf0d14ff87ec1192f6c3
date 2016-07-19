@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "0e2673f8_9095bc45",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 656,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-19T15:30:48Z",
+      "side": 1,
+      "message": "With the `s` yes. Not without.",
+      "parentUuid": "0e2673f8_6a95b735",
+      "revId": "4b2ec3ac76c587290a39bf0d14ff87ec1192f6c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e2673f8_caa5c39c",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 1
@@ -48,6 +66,24 @@
       "writtenOn": "2016-07-19T09:28:46Z",
       "side": 1,
       "message": "What about the default for \u0027tagline\u0027? Shouldn\u0027t it be false?",
+      "revId": "4b2ec3ac76c587290a39bf0d14ff87ec1192f6c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2673f8_10aa6c82",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14273,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-07-19T15:30:48Z",
+      "side": 1,
+      "message": "Note [\u0027tagline\u0027\u003d\u003efalse] +  [\u0027tagline\u0027\u003d\u003etrue]  \u003d [\u0027tagline\u0027\u003d\u003efalse].\nThat said it seems shouldShowWikibaseDescriptions throws an exception if its not set.\n\nWithout being able to use that it seems cleanest to use a dblist for this roll out.",
+      "parentUuid": "0e2673f8_caa5c39c",
       "revId": "4b2ec3ac76c587290a39bf0d14ff87ec1192f6c3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
