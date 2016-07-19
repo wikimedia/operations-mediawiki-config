@@ -16,6 +16,41 @@
       "revId": "4b2ec3ac76c587290a39bf0d14ff87ec1192f6c3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2673f8_6a95b735",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 656,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-19T09:28:46Z",
+      "side": 1,
+      "message": "Yes, `wgMFUseWikibaseDescriptions`.",
+      "parentUuid": "4efa2b83_13a6eb50",
+      "revId": "4b2ec3ac76c587290a39bf0d14ff87ec1192f6c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2673f8_caa5c39c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14273,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-07-19T09:28:46Z",
+      "side": 1,
+      "message": "What about the default for \u0027tagline\u0027? Shouldn\u0027t it be false?",
+      "revId": "4b2ec3ac76c587290a39bf0d14ff87ec1192f6c3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
