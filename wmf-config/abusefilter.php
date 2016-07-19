@@ -71,7 +71,6 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-log-private'] = true;
 		break;
 	case 'commonswiki':
-		$wgAbuseFilterProfile = true; // T132200
 		$wgAbuseFilterConditionLimit = 2000; // T132048
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		break;
@@ -405,4 +404,3 @@ if ( isset( $wgAbuseFilterAvailableActions ) ) {
 	];
 	$wgAbuseFilterAvailableActions = array_keys( array_filter( $wgAbuseFilterActions ) );
 }
-
