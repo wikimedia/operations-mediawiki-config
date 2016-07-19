@@ -199,9 +199,6 @@ function wmfLabsSettings() {
 		'-wmgEchoCluster' => [
 			'default' => false,
 		],
-		'-wmgEchoTransition' => [
-			'default' => true,
-		],
 
 		# FIXME: make that settings to be applied
 		'-wgShowExceptionDetails' => [
