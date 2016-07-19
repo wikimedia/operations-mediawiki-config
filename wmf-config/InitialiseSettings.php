@@ -12639,6 +12639,7 @@ $wgConf->settings = [
 	'nonbetafeatures' => false,
 	'wikiversity' => false,
 	'wikivoyage' => false,
+	'ruwikivoyage' => true,
 	'wikinews' => false,
 	'wikibooks' => false,
 	'wikiquote' => false,
