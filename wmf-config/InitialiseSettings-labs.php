@@ -208,9 +208,6 @@ function wmfLabsSettings() {
 		'-wgUseContributionTracking' => [
 			'default' => false,
 		],
-		'-wmgUseContributionReporting' => [
-			'default' => false,
-		],
 
 		# To help fight spam, makes rules maintained on deploymentwiki
 		# to be available on all beta wikis.
