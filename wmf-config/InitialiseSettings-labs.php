@@ -276,10 +276,6 @@ function wmfLabsSettings() {
 			]
 		],
 
-		'wmgGeoDataDebug' => [
-			'default' => true,
-		],
-
 		'wmgULSPosition' => [
 			# Beta-specific
 			'deploymentwiki' => 'personal',
