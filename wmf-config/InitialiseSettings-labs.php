@@ -616,11 +616,6 @@ function wmfLabsSettings() {
 			'default' => -1,
 		],
 
-		// test enabling AuthManager T135498, T135504
-		'wgDisableAuthManager' => [
-			'default' => false,
-		],
-
 		// Test PageAssessments. See T125551.
 		'wmgUsePageAssessments' => [
 			'default' => true,
