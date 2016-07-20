@@ -479,10 +479,6 @@ function wmfLabsSettings() {
 			'default' => 100,
 		],
 
-		// Thumbnail prerendering at upload time
-		'wgUploadThumbnailRenderMap' => [
-			'default' => [ 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ],
-		],
 		'wgUploadThumbnailRenderHttpCustomHost' => [
 			'default' => 'upload.beta.wmflabs.org',
 		],
