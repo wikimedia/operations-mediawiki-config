@@ -261,9 +261,6 @@ function wmfLabsSettings() {
 		'wmgMFPhotoUploadEndpoint' => [
 			'default' => 'http://commons.wikimedia.$variant.wmflabs.org/w/api.php',
 		],
-		'wmgMFUseCentralAuthToken' => [
-			'default' => true,
-		],
 		'wmgMFSpecialCaseMainPage' => [
 			'default' => true,
 			'enwiki' => false,
