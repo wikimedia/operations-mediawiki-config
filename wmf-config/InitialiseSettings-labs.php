@@ -528,10 +528,6 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
-		'wmgLogAuthmanagerMetrics' => [
-			'default' => true,
-		],
-
 		'wmgMediaViewerUseThumbnailGuessing' => [
 			'default' => false, // T69651
 		],
