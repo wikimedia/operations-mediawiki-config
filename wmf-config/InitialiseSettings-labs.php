@@ -264,9 +264,6 @@ function wmfLabsSettings() {
 		'wmgMFUseCentralAuthToken' => [
 			'default' => true,
 		],
-		'wmgMFEnableBetaDiff' => [
-			'default' => true,
-		],
 		'wmgMFSpecialCaseMainPage' => [
 			'default' => true,
 			'enwiki' => false,
