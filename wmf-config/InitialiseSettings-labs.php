@@ -281,12 +281,6 @@ function wmfLabsSettings() {
 			'deploymentwiki' => 'personal',
 		],
 
-		// (T41653) The plan is to enable it for testing on labs first, so add
-		// the config hook to be able to do that.
-		'wmgUseCodeEditorForCore' => [
-			'default' => true,
-		],
-
 		'wmgUseCommonsMetadata' => [
 			'default' => true,
 		],
