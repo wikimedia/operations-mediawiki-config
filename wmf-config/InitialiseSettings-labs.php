@@ -497,10 +497,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wmgUseBounceHandler' => [
-			'default' => true,
-		],
-
 		'-wmgScorePath' => [
 			'default' => "//upload.beta.wmflabs.org/score",
 		],
