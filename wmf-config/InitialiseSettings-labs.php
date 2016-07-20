@@ -467,10 +467,6 @@ function wmfLabsSettings() {
 			'default' => 'http://c357be0613e24340a96aeaa28dde08ad@sentry-beta.wmflabs.org/4',
 		],
 
-		'wmgUseEventBus' => [
-			'default' => true,
-		],
-
 		// Thumbnail chaining
 		'wgThumbnailBuckets' => [
 			'default' => [ 2880 ],
