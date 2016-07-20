@@ -276,9 +276,6 @@ function wmfLabsSettings() {
 			]
 		],
 
-		'wmgEnableGeoData' => [
-			'wikidatawiki' => true,
-		],
 		'wmgGeoDataDebug' => [
 			'default' => true,
 		],
