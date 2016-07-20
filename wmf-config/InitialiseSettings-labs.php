@@ -446,11 +446,6 @@ function wmfLabsSettings() {
 			'en_rtlwiki' => [ 'en-rtl' => 'English (rtl)' ],
 		],
 
-		'wmgUseContentTranslation' => [
-			'default' => false,
-			'wikipedia' => true,
-		],
-
 		'wmgUsePetition' => [
 			'default' => false,
 			'metawiki' => true,
