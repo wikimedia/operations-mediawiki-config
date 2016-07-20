@@ -483,9 +483,6 @@ function wmfLabsSettings() {
 		'wgUploadThumbnailRenderMap' => [
 			'default' => [ 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ],
 		],
-		'wgUploadThumbnailRenderMethod' => [
-			'default' => 'http',
-		],
 		'wgUploadThumbnailRenderHttpCustomHost' => [
 			'default' => 'upload.beta.wmflabs.org',
 		],
