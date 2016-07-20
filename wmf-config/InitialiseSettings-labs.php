@@ -605,11 +605,6 @@ function wmfLabsSettings() {
 			'default' => true,  // T134770
 		],
 
-		// Test enabling OATH for 2FA
-		'wmgUseOATHAuth' => [
-			'default' => true,
-		],
-
 		// Ensure ?action=credits isn't break and allow to work
 		// to cache this information. See T130820.
 		'wgMaxCredits' => [
