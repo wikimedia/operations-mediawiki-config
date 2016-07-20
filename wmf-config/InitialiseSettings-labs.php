@@ -572,12 +572,6 @@ function wmfLabsSettings() {
 			'default' => [],
 			'enwiki' => [ 0 => true ],
 		],
-		// Test completion suggester default everywhere in preperation
-		// for rollout to production
-		'wmgCirrusSearchUseCompletionSuggester' => [
-			'default' => 'yes',
-			'wikidatawiki' => 'no',
-		],
 
 		'wmgWikibaseAllowDataAccessInUserLanguage' => [
 			'default' => false,
