@@ -9865,6 +9865,7 @@ $wgConf->settings = [
 			'templateeditor', // T74146
 			'abusefilter', // T74502
 			'eliminator' // T87558
+			'sysop', // T140810
 		],
 		'sysop' => [
 			'rollbacker', // T25233
