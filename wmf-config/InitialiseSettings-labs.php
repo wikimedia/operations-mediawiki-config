@@ -354,10 +354,6 @@ function wmfLabsSettings() {
 			'dewiki' => [ 'http://de.planet.wikimedia.org/atom.xml' ],
 		],
 
-		'wmgUseCampaigns' => [
-			'default' => true,
-		],
-
 		'wmgContentTranslationCluster' => [
 			'default' => false,
 		],
