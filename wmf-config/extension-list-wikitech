@@ -1,6 +1,5 @@
 $IP/extensions/DynamicSidebar/extension.json
 $IP/extensions/LdapAuthentication/LdapAuthentication.php
-$IP/extensions/OATHAuth/extension.json
 $IP/extensions/OpenStackManager/OpenStackManager.php
 $IP/extensions/Validator/Validator.php
 $IP/extensions/SemanticMediaWiki/SemanticMediaWiki.php
