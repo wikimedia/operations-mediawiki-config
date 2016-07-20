@@ -16917,6 +16917,10 @@ $wgConf->settings = [
 	'ptwiki' => [ 'hard' => 0.22, 'soft' => 0.48 ], // T139692
 	'trwiki' => [ 'hard' => 0.22, 'soft' => 0.49 ], // T139992
 ],
+'wgOresEnabledNamespaces' => [
+	'default' => [],
+	'wikidatawiki' => [ 0 => true, 120 => true ], // T139660
+],
 ### End (roughly) of general extensions ########################
 
 'wgUseTidy' => [
