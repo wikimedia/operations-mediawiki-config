@@ -358,10 +358,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wmgUseEventLogging' => [
-			'default' => true,
-		],
-
 		'wmgContentTranslationCluster' => [
 			'default' => false,
 		],
