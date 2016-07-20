@@ -594,7 +594,10 @@ function wmfLabsSettings() {
 			'default' => [ 'hard' => 0.5, 'soft'=> 0.7 ],
 			'wikipedia' => [ 'hard' => 0.6, 'soft'=> 0.7 ], // T127661
 		],
-
+		'wgOresEnabledNamespaces' => [
+			'default' => [],
+			'enwiki' => [ 0 => true ],
+		],
 		// Test completion suggester default everywhere in preperation
 		// for rollout to production
 		'wmgCirrusSearchUseCompletionSuggester' => [
