@@ -493,10 +493,6 @@ function wmfLabsSettings() {
 			'default' => 'deployment-cache-upload04.eqiad.wmflabs',
 		],
 
-		'wmgUseApiFeatureUsage' => [
-			'default' => true,
-		],
-
 		'-wmgScorePath' => [
 			'default' => "//upload.beta.wmflabs.org/score",
 		],
