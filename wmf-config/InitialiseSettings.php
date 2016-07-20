@@ -9864,7 +9864,8 @@ $wgConf->settings = [
 			'OTRS-member', // T56368
 			'templateeditor', // T74146
 			'abusefilter', // T74502
-			'eliminator' // T87558
+			'eliminator', // T87558
+			'sysop', // T140810
 		],
 		'sysop' => [
 			'rollbacker', // T25233
