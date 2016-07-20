@@ -431,6 +431,7 @@ $wgConf->settings = [
 	'svwikiversity' => 'Europe/Berlin',
 	'svwikivoyage' => 'Europe/Stockholm', // T43992
 	'szlwiki' => 'Europe/Warsaw',
+	'tcywiki' => 'Asia/Kolkata', // T140898
 	'thwiki' => 'Asia/Bangkok',
 	'thwikibooks' => 'Asia/Bangkok',
 	'thwikisource' => 'Asia/Bangkok',
@@ -703,6 +704,7 @@ $wgConf->settings = [
 	'swwiki' => '/static/images/project-logos/swwiki.png',
 	'szlwiki' => '/static/images/project-logos/szlwiki.png',
 	'tawiki' => '/static/images/project-logos/tawiki.png',  // T29826
+	'tcywiki' => '/static/images/project-logos/tcywiki.png', // T140898
 	'tewiki' => '/static/images/project-logos/tewiki.png',
 	'tetwiki' => '/static/images/project-logos/tetwiki.png',  // T48589
 	'tgwiki' => '/static/images/project-logos/tgwiki.png',  // T48589
@@ -1149,6 +1151,7 @@ $wgConf->settings = [
 	'nlwiki' => [ '1.5x' => '/static/images/project-logos/nlwiki-1.5x.png', '2x' => '/static/images/project-logos/nlwiki-2x.png' ],
 	'ruwiki' => [ '1.5x' => '/static/images/project-logos/ruwiki-1.5x.png', '2x' => '/static/images/project-logos/ruwiki-2x.png' ],
 	'tawiki' => [ '1.5x' => '/static/images/project-logos/tawiki-1.5x.png', '2x' => '/static/images/project-logos/tawiki-2x.png' ],
+	'tcywiki' => [ '1.5x' => '/static/images/project-logos/tcywiki-1.5x.png', '2x' => '/static/images/project-logos/tcywiki-2x.png' ], // T140898
 	'viwiki' => [ '1.5x' => '/static/images/project-logos/viwiki-1.5x.png', '2x' => '/static/images/project-logos/viwiki-2x.png' ],
 	'zhwiki' => [ '1.5x' => '/static/images/project-logos/zhwiki-1.5x.png', '2x' => '/static/images/project-logos/zhwiki-2x.png' ],
 
@@ -1908,6 +1911,7 @@ $wgConf->settings = [
 	'tawiktionary' => 'விக்சனரி',
 	'tawikiquote' => 'விக்கிமேற்கோள்',
 	'tawikisource' => 'விக்கிமூலம்',
+	'tcywiki' => 'ವಿಕಿಪೀಡಿಯ', // T140898
 	'tewiki' => 'వికీపీడియా',
 	'tewikiquote' => 'వికీవ్యాఖ్య', // T89332
 	'tewikisource' => 'వికీసోర్స్', // T52357
@@ -2399,6 +2403,7 @@ $wgConf->settings = [
 	'tawikisource' => 'விக்கிமூலம்',
 	'tawiktionary' => 'விக்சனரி',
 	'tawikiquote' => 'விக்கிமேற்கோள்',
+	'tcywiki' => 'ವಿಕಿಪೀಡಿಯ', // T140898
 	'tewiki' => 'వికీపీడియా',
 	'tewikiquote' => 'వికీవ్యాఖ్య', // T89332
 	'tewikisource' => 'వికీసోర్స్',
@@ -3665,6 +3670,25 @@ $wgConf->settings = [
 		'WP' => NS_PROJECT, // T126604
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 		'WT' => NS_PROJECT_TALK, // T126604
+	],
+	'+tcywiki' => [
+		// Shorcuts per T89817
+		'ಮಾದ್ಯಮೊ' => NS_MEDIA,
+		'ವಿಸೇಸೊ' => NS_SPECIAL,
+		'ಪಾತೆರ' => NS_TALK,
+		'$1_ಪಾತೆರ' => NS_PROJECT_TALK,
+		'ಫೈಲ್' => NS_FILE,
+		'ಫೈಲ್_ಪಾತೆರ' => NS_FILE_TALK,
+		'ಮಾದ್ಯಮೊ ವಿಕಿ' => NS_MEDIAWIKI,
+		'ಮಾದ್ಯಮೊ ವಿಕಿ_ಪಾತೆರ' => NS_MEDIAWIKI_TALK,
+		'ವರ್ಗೊ' => NS_CATEGORY,
+		'ವರ್ಗೊ_ಪಾತೆರ' => NS_CATEGORY_TALK,
+		'ಬಳಕೆದಾರೆ' => NS_USER,
+		'ಬಳಕೆದಾರೆ_ಪಾತೆರ' => NS_USER_TALK,
+		'ಟೆಂಪ್ಲೇಟ್' => NS_TEMPLATE,
+		'ಟೆಂಪ್ಲೇಟ್_ಪಾತೆರ' => NS_TEMPLATE_TALK,
+		'ಸಕಾಯೊ' => NS_HELP,
+		'ಸಕಾಯೊ_ಪಾತೆರ' => NS_HELP_TALK,
 	],
 	'+testwiki' => [
 		'WP' => NS_PROJECT,
