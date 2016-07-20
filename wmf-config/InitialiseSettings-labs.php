@@ -536,11 +536,6 @@ function wmfLabsSettings() {
 			'default' => false, // T69651
 		],
 
-		'wmgUseUrlShortener' => [
-			'default' => true,
-			'private' => false,
-		],
-
 		'wmgUseArticlePlaceholder' => [
 			'default' => false,
 			'wikidataclient' => true,
