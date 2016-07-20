@@ -6,7 +6,7 @@ $IP/extensions/BetaFeatures/extension.json
 $IP/extensions/BounceHandler/extension.json
 $IP/extensions/Calendar/extension.json
 $IP/extensions/Campaigns/extension.json
-$IP/extensions/Capiunto/Capiunto.php
+$IP/extensions/Capiunto/extension.json
 $IP/extensions/Cards/extension.json
 $IP/extensions/CategoryTree/CategoryTree.php
 $IP/extensions/CentralAuth/extension.json
@@ -44,7 +44,7 @@ $IP/extensions/ExtensionDistributor/extension.json
 $IP/extensions/FeaturedFeeds/extension.json
 $IP/extensions/FlaggedRevs/FlaggedRevs.php
 $IP/extensions/Flow/Flow.php
-$IP/extensions/FundraiserLandingPage/FundraiserLandingPage.php
+$IP/extensions/FundraiserLandingPage/extension.json
 $IP/extensions/FundraisingTranslateWorkflow/extension.json
 $IP/extensions/Gadgets/extension.json
 $IP/extensions/GeoCrumbs/GeoCrumbs.php
@@ -62,7 +62,7 @@ $IP/extensions/ImageMap/extension.json
 $IP/extensions/ImageMetrics/ImageMetrics.php
 $IP/extensions/InputBox/extension.json
 $IP/extensions/Insider/Insider.php
-$IP/extensions/intersection/DynamicPageList.php
+$IP/extensions/intersection/extension.json
 $IP/extensions/Interwiki/extension.json
 $IP/extensions/Josa/extension.json
 $IP/extensions/JsonConfig/JsonConfig.php
@@ -101,9 +101,9 @@ $IP/extensions/PoolCounter/extension.json
 $IP/extensions/QuickSurveys/extension.json
 $IP/extensions/Quiz/extension.json
 $IP/extensions/RelatedArticles/extension.json
-$IP/extensions/RelatedSites/RelatedSites.php
+$IP/extensions/RelatedSites/extension.json
 $IP/extensions/Renameuser/extension.json
-$IP/extensions/RestBaseUpdateJobs/RestBaseUpdateJobs.php
+$IP/extensions/RestBaseUpdateJobs/extension.json
 $IP/extensions/RevisionSlider/extension.json
 $IP/extensions/RSS/RSS.php
 $IP/extensions/SandboxLink/extension.json
@@ -146,7 +146,7 @@ $IP/extensions/WikimediaEvents/extension.json
 $IP/extensions/WikimediaIncubator/extension.json
 $IP/extensions/WikimediaMessages/WikimediaLicenseTexts.php
 $IP/extensions/WikimediaMessages/extension.json
-$IP/extensions/XAnalytics/XAnalytics.php
+$IP/extensions/XAnalytics/extension.json
 $IP/extensions/ZeroBanner/ZeroBanner.php
 $IP/extensions/ZeroPortal/ZeroPortal.php
 $IP/skins/CologneBlue/skin.json
