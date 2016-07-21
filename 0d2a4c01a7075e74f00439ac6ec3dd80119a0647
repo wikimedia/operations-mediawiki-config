@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2673f8_7bea9d74",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 434,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-07-21T01:12:38Z",
+      "side": 1,
+      "message": "Task reference still missing here.",
+      "revId": "0d2a4c01a7075e74f00439ac6ec3dd80119a0647",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
