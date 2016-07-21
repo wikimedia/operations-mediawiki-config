@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2673f8_5bdeb915",
+        "filename": "dblists/visualeditor-nondefault.dblist",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2016-07-21T00:48:06Z",
+      "side": 1,
+      "message": "Why does this wiki not get VE?",
+      "revId": "42b72ea65dade551c2c68ee2ae58efd5f1f5d21f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
