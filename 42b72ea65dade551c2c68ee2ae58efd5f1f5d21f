@@ -16,6 +16,57 @@
       "revId": "42b72ea65dade551c2c68ee2ae58efd5f1f5d21f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2673f8_5b05197c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1154,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-07-21T00:51:15Z",
+      "side": 1,
+      "message": "So we need to add these logo files.",
+      "revId": "42b72ea65dade551c2c68ee2ae58efd5f1f5d21f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2673f8_bbfa5571",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1914,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-07-21T00:51:15Z",
+      "side": 1,
+      "message": "Add task reference here.",
+      "revId": "42b72ea65dade551c2c68ee2ae58efd5f1f5d21f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e2673f8_dbf0e990",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2406,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-07-21T00:51:15Z",
+      "side": 1,
+      "message": "Add task reference here.",
+      "revId": "42b72ea65dade551c2c68ee2ae58efd5f1f5d21f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
