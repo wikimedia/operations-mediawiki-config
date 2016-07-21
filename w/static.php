@@ -29,7 +29,11 @@ define( 'MW_NO_SESSION', 'warn' );
 require_once './MWVersion.php';
 require getMediaWiki( 'includes/WebStart.php' );
 
-function wmfStaticShowError( $message ) {
+function wmfStaticShowError( $message, $smaxage = 60, $maxage = 0 ) {
+	header(
+		'Cache-Control: ' .
+		's-maxage=' . (int)$smaxage . ', must-revalidate, max-age=' . (int)$maxage
+	);
 	header( 'Content-Type: text/plain; charset=utf-8' );
 	echo "$message\n";
 }
@@ -52,8 +56,7 @@ function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 	$stat = stat( $filePath );
 	if ( !$stat ) {
 		header( 'HTTP/1.1 404 Not Found' );
-		header( 'Cache-Control: s-maxage=300, must-revalidate, max-age=0' );
-		wmfStaticShowError( 'Unknown file path' );
+		wmfStaticShowError( 'Unknown file path', 300 );
 		return;
 	}
 
@@ -181,8 +184,7 @@ function wmfStaticRespond() {
 
 	if ( !$fallback ) {
 		header( 'HTTP/1.1 404 Not Found' );
-		header( 'Cache-Control: s-maxage=300, must-revalidate, max-age=0' );
-		wmfStaticShowError( 'Unknown file path' );
+		wmfStaticShowError( 'Unknown file path', 300 );
 		$stats->increment( 'wmfstatic.notfound' );
 		return;
 	}
