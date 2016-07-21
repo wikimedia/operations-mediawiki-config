@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e2673f8_7bc3bd0a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-07-21T01:10:09Z",
+      "side": 1,
+      "message": "Commit message looks good to me.",
+      "revId": "83d4281353a5db4e076e7c1e1ad523f08b6cdffd",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
