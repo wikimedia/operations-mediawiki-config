@@ -361,10 +361,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wmgUseNavigationTiming' => [
-			'default' => true,
-		],
-
 		'wgSecureLogin' => [
 			// Setting false throughout Labs for now due to untrusted SSL certificate
 			// T50501
