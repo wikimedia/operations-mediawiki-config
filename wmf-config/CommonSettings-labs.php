@@ -305,11 +305,6 @@ if ( $wmgUseGraph ) {
 	$wgGraphAllowedDomains['wikidatasparql'][] = 'wdqs-test.wmflabs.org';
 }
 
-if ( $wmgUseKartographer ) {
-	wfLoadExtension( 'Kartographer' );
-	$wgKartographerMapServer = "https://maps.wikimedia.org";
-}
-
 if ( $wmgUseORES ) {
 	wfLoadExtension( 'ORES' );
 	$wgOresWikiId = 'testwiki';
