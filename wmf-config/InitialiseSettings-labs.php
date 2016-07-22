@@ -450,9 +450,6 @@ function wmfLabsSettings() {
 		'wgThumbnailBuckets' => [
 			'default' => [ 2880 ],
 		],
-		'wgThumbnailMinimumBucketDistance' => [
-			'default' => 100,
-		],
 
 		'wgUploadThumbnailRenderHttpCustomHost' => [
 			'default' => 'upload.beta.wmflabs.org',
