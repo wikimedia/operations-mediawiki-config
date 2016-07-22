@@ -51,11 +51,6 @@ $wgDnsBlacklistUrls   = [
 	'proxies.dnsbl.sorbs.net.',
 ];
 
-//before you remove this, log somewhere why you did it
-//--Petrb
-//Commented until a dedicated wiki is created.
-//require_once ("$IP/extensions/OnlineStatusBar/OnlineStatusBar.php");
-
 if ( $wmgUseOAuth ) {
 	$wgMWOAuthCentralWiki = 'metawiki';
 
