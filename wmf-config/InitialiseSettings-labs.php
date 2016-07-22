@@ -310,9 +310,6 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
-		'wmgUseMultimediaViewer' => [
-			'default' => true,
-		],
 		'wmgMediaViewerNetworkPerformanceSamplingFactor' => [
 			'default' => 1,
 		],
