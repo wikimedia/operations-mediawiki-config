@@ -321,9 +321,6 @@ function wmfLabsSettings() {
 		'wmgVisualEditorUseSingleEditTab' => [
 			'enwiki' => true,
 		],
-		'wmgVisualEditorAccessRESTbaseDirectly' => [
-			'default' => true,
-		],
 		'wmgVisualEditorTransitionDefault' => [
 			'default' => false,
 		],
