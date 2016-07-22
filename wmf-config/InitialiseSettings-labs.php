@@ -311,10 +311,6 @@ function wmfLabsSettings() {
 			'default' => 1,
 		],
 
-		'wmgUseImageMetrics' => [
-			'default' => true,
-		],
-
 		'wmgImageMetricsSamplingFactor' => [
 			'default' => 1,
 		],
