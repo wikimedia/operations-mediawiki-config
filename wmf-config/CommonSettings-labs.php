@@ -63,12 +63,6 @@ if ( $wmgUseOAuth ) {
 	$wgMWOAuthSecureTokenTransfer = false;
 }
 
-if ( $wmgUseMultimediaViewer ) {
-	require_once "$IP/extensions/MultimediaViewer/MultimediaViewer.php";
-	$wgMediaViewerNetworkPerformanceSamplingFactor = $wmgMediaViewerNetworkPerformanceSamplingFactor;
-}
-
-
 if ( $wmgUseFlow ) {
 	$wgFlowParsoidURL = $wmgParsoidURL; // Re-link now it's been set to a new value
 
