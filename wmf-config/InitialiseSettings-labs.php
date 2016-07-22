@@ -302,10 +302,6 @@ function wmfLabsSettings() {
 		/// ----------- BetaFeatures start ----------
 		///
 
-		'wgUseBetaFeatures' => [
-			'default' => true,
-		],
-
 		// Enable all Beta Features in Beta Labs, even if not in production whitelist
 		'wgBetaFeaturesWhitelist' => [
 			'default' => false,
