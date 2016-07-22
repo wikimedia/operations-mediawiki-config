@@ -409,10 +409,6 @@ function wmfLabsSettings() {
 			'enwiki' => true,
 		],
 
-		'wmgUseWPB' => [
-			'default' => false,
-			'enwiki' => true,
-		],
 		'wgWPBBannerProperty' => [
 			'default' => 'P751',
 		],
