@@ -417,10 +417,6 @@ function wmfLabsSettings() {
 			'default' => 'P751',
 		],
 
-		'wmgUseGuidedTour' => [
-			'wikidatawiki' => true,
-		],
-
 		'wmgUseRelatedArticles' => [
 			'default' => true,
 		],
