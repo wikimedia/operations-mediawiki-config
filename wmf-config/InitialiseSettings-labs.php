@@ -314,10 +314,6 @@ function wmfLabsSettings() {
 			'default' => 1,
 		],
 
-		'wmgUseRestbaseVRS' => [
-			'default' => true,
-		],
-
 		'wmgVisualEditorUseSingleEditTab' => [
 			'enwiki' => true,
 		],
