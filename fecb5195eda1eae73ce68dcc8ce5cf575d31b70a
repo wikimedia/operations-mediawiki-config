@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e130ba1_272f74f5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 3692,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2016-07-24T11:53:28Z",
+      "side": 1,
+      "message": "Ain\u0027t some of this messages provided via mediawiki-core instead?",
+      "revId": "fecb5195eda1eae73ce68dcc8ce5cf575d31b70a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
