@@ -34,6 +34,24 @@
       "revId": "345ac76edf8eef46593491035e5a634fee1bff4a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aed9e73f_ff4ebfc3",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1187,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2016-07-25T09:58:30Z",
+      "side": 1,
+      "message": "Adding to commonsuploads means sysops will have the right to upload but other users won\u0027t have the right. So that doesn\u0027t completely disable but since you have set $wgEnableUploads to false here, it\u0027s kind of pointless to add it to commonsuploads.",
+      "parentUuid": "aed9e73f_bf26f70f",
+      "revId": "345ac76edf8eef46593491035e5a634fee1bff4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
