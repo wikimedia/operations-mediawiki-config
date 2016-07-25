@@ -318,17 +318,6 @@ function wmfLabsSettings() {
 			'default' => 1,
 		],
 
-		'wmgUseImageMetrics' => [
-			'default' => true,
-		],
-
-		'wmgImageMetricsSamplingFactor' => [
-			'default' => 1,
-		],
-		'wmgImageMetricsCorsSamplingFactor' => [
-			'default' => 1,
-		],
-
 		'wmgUseRestbaseVRS' => [
 			'default' => true,
 		],

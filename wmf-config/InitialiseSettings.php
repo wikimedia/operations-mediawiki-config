@@ -13415,27 +13415,6 @@ $wgConf->settings = [
 	],
 ],
 
-// ----------------- ImageMetrics -----------------
-
-'wmgUseImageMetrics' => [
-	'default' => true,
-	'loginwiki' => false,
-	'votewiki' => false,
-	'private' => false,
-],
-
-'wmgImageMetricsSamplingFactor' => [
-	'default' => 1000,
-],
-
-'wmgImageMetricsLoggedinSamplingFactor' => [
-	'default' => 10,
-],
-
-'wmgImageMetricsCorsSamplingFactor' => [
-	'default' => 1000,
-],
-
 // -------------- RESTBase start --------------
 
 'wmgRestbaseServer' => [
