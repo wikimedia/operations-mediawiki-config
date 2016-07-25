@@ -963,7 +963,7 @@ if ( $wmgUseGlobalBlocking ) {
 }
 
 include( $IP . '/extensions/TrustedXFF/TrustedXFF.php' );
-$wgTrustedXffFile = "$wmfConfigDir/trusted-xff.cdb";
+$wgTrustedXffFile = "$wmfConfigDir/trusted-xff.php";
 
 if ( $wmgUseContactPage ) {
 	include( $IP . '/extensions/ContactPage/ContactPage.php' );
