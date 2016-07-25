@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aed9e73f_d49b9a66",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 4513,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-07-25T22:13:00Z",
+      "side": 1,
+      "message": "Could you add task ID?",
+      "revId": "7bb65892adc352a9784ec5d0db2353b5dd284254",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
