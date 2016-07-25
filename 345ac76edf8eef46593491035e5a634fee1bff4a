@@ -52,6 +52,24 @@
       "revId": "345ac76edf8eef46593491035e5a634fee1bff4a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aed9e73f_bfd357d6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1187,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2016-07-25T10:01:05Z",
+      "side": 1,
+      "message": "After looking at the actual discussion on wiki, I don\u0027t think you want to disable local uploads completely so the line below which sets it to false should be removed.",
+      "parentUuid": "aed9e73f_ff4ebfc3",
+      "revId": "345ac76edf8eef46593491035e5a634fee1bff4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
