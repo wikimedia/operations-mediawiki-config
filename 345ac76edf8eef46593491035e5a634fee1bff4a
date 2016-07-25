@@ -16,6 +16,24 @@
       "revId": "345ac76edf8eef46593491035e5a634fee1bff4a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aed9e73f_bf26f70f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1187,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2016-07-25T09:47:45Z",
+      "side": 1,
+      "message": "I\u0027m not sure, that\u0027s why I added the wiki to the commonsuploads.dblist and onto here. I\u0027ll wait for expert review before scheduling the patch for SWAT.",
+      "parentUuid": "4e130ba1_0a751f93",
+      "revId": "345ac76edf8eef46593491035e5a634fee1bff4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
