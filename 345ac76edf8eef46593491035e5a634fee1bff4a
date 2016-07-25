@@ -70,6 +70,24 @@
       "revId": "345ac76edf8eef46593491035e5a634fee1bff4a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aed9e73f_c27764ce",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1187,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2016-07-25T13:44:08Z",
+      "side": 1,
+      "message": "Okay. Do I have to remove from the \u0027user\u0027 group the right to upload too, or will the adittion to such list do that directly?",
+      "parentUuid": "aed9e73f_ff4ebfc3",
+      "revId": "345ac76edf8eef46593491035e5a634fee1bff4a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
