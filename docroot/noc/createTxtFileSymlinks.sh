@@ -38,6 +38,7 @@ mwconfig_files_txt=(
 	proofreadpage.php
 	redis.php
 	throttle.php
+	trusted-xff.php
 	wgConf.php
 	squid.php
 	squid-labs.php
@@ -60,7 +61,6 @@ mwconfig_files=(
 	wmf-config/extension-list
 	wmf-config/extension-list-labs
 	wmf-config/extension-list-wikitech
-	wmf-config/trusted-xff.cdb
 )
 
 for i in ./*
