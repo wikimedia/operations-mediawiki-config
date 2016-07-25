@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aed9e73f_08ba4b1e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1310,
+      "author": {
+        "id": 892
+      },
+      "writtenOn": "2016-07-25T16:13:04Z",
+      "side": 1,
+      "message": "This is also not needed as \u0027commonsuploads\u0027 already does this.",
+      "revId": "49cf141700dd977b9c6a98c41659d39b11661cc2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
