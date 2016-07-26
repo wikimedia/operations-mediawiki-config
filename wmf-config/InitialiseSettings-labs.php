@@ -542,5 +542,21 @@ function wmfLabsSettings() {
 			'dewiki' => 'uca-de-u-kn', // T128806
 			'enwiki' => 'uca-default-u-kn',
 		],
+
+		// Test gallery settings; see T141349
+		'wmgGalleryOptions' => [
+			'default' => [
+				'imagesPerRow' => 0,
+				'imageWidth' => 120,
+				'imageHeight' => 120,
+				'captionLength' => true,
+				'showBytes' => true,
+				'mode' => 'traditional',
+			],
+			'+enwiki' => [
+				'mode' => 'packed', // T141349
+			],
+		],
+
 	];
 } # wmflLabsSettings()
