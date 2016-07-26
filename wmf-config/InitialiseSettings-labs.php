@@ -576,20 +576,5 @@ function wmfLabsSettings() {
 			]
 		],
 
-		// Test gallery settings
-		'wmgGalleryOptions' =[
-			'default' => [
-				'imagesPerRow' => 0,
-				'imageWidth' => 120,
-				'imageHeight' => 120,
-				'captionLength' => true,
-				'showBytes' => true,
-				'mode' => 'traditional',
-			],
-			'+enwiki' => [
-				'mode' => 'packed', // T141349
-			],
-		],
-
 	];
 } # wmflLabsSettings()
