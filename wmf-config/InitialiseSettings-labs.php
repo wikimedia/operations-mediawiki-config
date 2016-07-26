@@ -575,5 +575,21 @@ function wmfLabsSettings() {
 				'tagline' => true, 'search' => true, 'nearby' => true, 'watchlist' => true
 			]
 		],
+
+		// Test gallery settings
+		'wmgGalleryOptions' =[
+			'default' => [
+				'imagesPerRow' => 0,
+				'imageWidth' => 120,
+				'imageHeight' => 120,
+				'captionLength' => true,
+				'showBytes' => true,
+				'mode' => 'traditional',
+			],
+			'+enwiki' => [
+				'mode' => 'packed', // T141349
+			],
+		],
+
 	];
 } # wmflLabsSettings()
