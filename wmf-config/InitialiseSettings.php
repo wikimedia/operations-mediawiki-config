@@ -15970,6 +15970,7 @@ $wgConf->settings = [
 
 'wmgUseRevisionSlider' => [
 	'default' => false,
+	'mediawikiwiki' => true,// T138943
 	'testwiki' => true,// T138943
 	'test2wiki' => true,// T138943
 	'arwiki' => true,// T140551
