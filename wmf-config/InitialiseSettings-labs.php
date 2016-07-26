@@ -558,5 +558,20 @@ function wmfLabsSettings() {
 		'wmgUseQuiz' => [
 			'cawiki' => true,
 		],
+
+		// Test gallery settings; see T141349
+		'wmgGalleryOptions' => [
+			'default' => [
+				'imagesPerRow' => 0,
+				'imageWidth' => 120,
+				'imageHeight' => 120,
+				'captionLength' => true,
+				'showBytes' => true,
+				'mode' => 'traditional',
+			],
+			'+enwiki' => [
+				'mode' => 'packed', // T141349
+			],
+		],
 	];
 } # wmflLabsSettings()
