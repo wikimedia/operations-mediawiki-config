@@ -461,6 +461,10 @@ $wgSharpenParameter = '0x0.8'; # for IM>6.5, T26857
 $wgFileBlacklist[] = 'txt';
 $wgFileBlacklist[] = 'mht';
 
+if ( $wmgGalleryOptions ) {
+	$wgGalleryOptions = $wmgGalleryOptions;
+}
+
 if ( $wmgUsePagedTiffHandler ) {
 	include( $IP . '/extensions/PagedTiffHandler/PagedTiffHandler.php' );
 }
