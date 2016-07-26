@@ -16854,6 +16854,20 @@ $wgConf->settings = [
 	'votewiki' => false, // T61702
 ],
 
+'wmgGalleryOptions' =[
+	'default' => [
+		'imagesPerRow' => 0,
+		'imageWidth' => 120,
+		'imageHeight' => 120,
+		'captionLength' => true,
+		'showBytes' => true,
+		'mode' => 'traditional',
+	],
+	'+enwiki' => [
+		'mode' => 'packed', // T141349
+	],
+],
+
 'wmgUseParserFunctions' => [
 	'default' => true,
 	'loginwiki' => false, // T61702
