@@ -13853,6 +13853,7 @@ $wgConf->settings = [
 	'tawikiquote' => 'uca-ta', // T75453
 	'tawikisource' => 'uca-ta', // T75453
 	'tawiktionary' => 'uca-ta', // T75453
+	'testwiki' => 'uca-default-u-kn', // T141433
 	'thwikibooks' => 'uca-default', // T50097
 	'thwikinews' => 'uca-default', // T50097
 	'thwiki' => 'uca-default', // T50097
