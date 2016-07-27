@@ -28,6 +28,13 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
+$wmgThrottlingExceptions[] = [ // T141421 - Request to lift IP cap for Wikipedia Edit-a-thon on 2016-08-03
+	'from'   => '2016-08-03T07:00 +0:00',
+	'to'     => '2016-08-03T10:00 +0:00',
+	'IP'     => '38.101.231.254',
+	'dbname' => [ 'enwiki', 'commonswiki' ],
+	'value'  => 90
+];
 
 ## Add throttling definitions above.
 
