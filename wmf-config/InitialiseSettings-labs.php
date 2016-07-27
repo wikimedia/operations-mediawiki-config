@@ -567,5 +567,11 @@ function wmfLabsSettings() {
 				'tagline' => true, 'search' => true, 'nearby' => true, 'watchlist' => true
 			]
 		],
+
+		// Test numeric sorting. See T8948.
+		'wgCategoryCollation' => [
+			'default' => 'uppercase',
+			'enwiki' => 'uca-default-u-kn',
+		],
 	];
 } # wmflLabsSettings()
