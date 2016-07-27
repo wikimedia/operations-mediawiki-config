@@ -16568,6 +16568,12 @@ $wgConf->settings = [
 	'frwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
 ],
 
+// Enable interwiki search by language detection. The list of language
+// detected and their corresponding wiki is defined by
+// wmgCirrusSearchLanguageToWikiMap and wmgCirrusSearchWikiToNameMap.
+// Note that if language detectors are enabled they will always run, this
+// gates if the result of running is shown to the user (for AB test control
+// bucket reasons).
 'wmgCirrusSearchEnableAltLanguage' => [
 	'default' => false,
 	'enwiki' => true,
@@ -16596,13 +16602,6 @@ $wgConf->settings = [
 		'de', 'en', 'zh', 'el', 'ru', 'ar', 'hi', 'th',
 		'ko', 'ja',
 	],
-],
-
-// Enable interwiki search by language detection. The list of language
-// detected and their corresponding wiki is defined by
-// wmgCirrusSearchLanguageToWikiMap and wmgCirrusSearchWikiToNameMap
-'wmgCirrusSearchEnableAltLanguage' => [
-	'default' => false,
 ],
 
 // List of languages detected by the short-text
