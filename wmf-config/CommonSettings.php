@@ -1109,7 +1109,11 @@ $wgNoFollowLinks = true; // In case the MediaWiki default changed, T44594
 # XFF log for vandal tracking
 $wgExtensionFunctions[] = function() {
 	global $wmfUdp2logDest, $wgRequest;
-	if ( isset( $_SERVER['REQUEST_METHOD'] ) && $_SERVER['REQUEST_METHOD'] === 'POST' ) {
+	if (
+		isset( $_SERVER['REQUEST_METHOD'] )
+		&& $_SERVER['REQUEST_METHOD'] === 'POST'
+		&& $wgRequest->getIP() !== '127.0.0.1'  # T129982
+	) {
 		$uri = ( ( isset( $_SERVER['HTTPS'] ) && $_SERVER['HTTPS'] ) ? 'https://' : 'http://' ) .
 			$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 		$xff = isset( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ? $_SERVER['HTTP_X_FORWARDED_FOR'] : '';
@@ -1122,17 +1126,6 @@ $wgExtensionFunctions[] = function() {
 			"$xff, {$_SERVER['REMOTE_ADDR']}\t" .
 			( ( isset( $_REQUEST['wpSave'] ) && $_REQUEST['wpSave'] ) ? 'save' : '' )
 		);
-		if ( $wgRequest->getIP() === '127.0.0.1' ) {
-			$logger = LoggerFactory::getInstance( 'localhost' );
-			// TODO: it would be nice to log this as actual structured data
-			// instead of this ad-hoc tab delimited format
-			$logger->info(
-				gmdate( 'r' ) . "\t" .
-				wfHostname() .
-				"\t$xff, {$_SERVER['REMOTE_ADDR']}\t" .
-				WebRequest::detectProtocol()
-			);
-		}
 	}
 };
 
