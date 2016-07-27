@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6edb6f39_c0968097",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 16857,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-27T21:22:14Z",
+      "side": 1,
+      "message": "Missing \"\u003e\" and space (see failing unit test). I\u0027m actually surprised this wasn\u0027t caught while it was on labs... Are we sure this experiment was tested properly since the configuration was wrong?",
+      "revId": "ec5b83ce62b76f1dd483aa16ca09298895c0214c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_40f27004",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 16866,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-07-27T21:22:14Z",
+      "side": 1,
+      "message": "Why \"+enwiki\" and not just \"enwiki\"?",
+      "revId": "ec5b83ce62b76f1dd483aa16ca09298895c0214c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
