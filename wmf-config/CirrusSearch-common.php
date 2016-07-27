@@ -123,16 +123,14 @@ if ( $wgDBname == 'commonswiki' ) {
 }
 
 // Configuration for initial test deployment of inline interwiki search via
-// language detection on the search terms. With EnableAltLanguage set to false
-// this is only available with a special query string (cirrusAltLanguage=yes)
-$wgCirrusSearchEnableAltLanguage = $wmgCirrusSearchEnableAltLanguage;
-$wgCirrusSearchInterwikiProv = 'iwsw1';
+// language detection on the search terms.
 
 $wgCirrusSearchWikiToNameMap = $wmgCirrusSearchWikiToNameMap;
 $wgCirrusSearchLanguageToWikiMap = $wmgCirrusSearchLanguageToWikiMap;
 
-// will be overridden by UserTesting triggers, but we need to set the default.
-$wgCirrusSearchTextcatLanguages = [];
+$wgCirrusSearchEnableAltLanguage = $wmgCirrusSearchEnableAltLanguage;
+$wgCirrusSearchLanguageDetectors = $wmgCirrusSearchLanguageDetectors;
+$wgCirrusSearchTextcatLanguages = $wmgCirrusSearchTextcatLanguages;
 $wgCirrusSearchTextcatModel = "$IP/vendor/wikimedia/textcat/LM-query";
 
 $wgHooks['CirrusSearchMappingConfig'][] = function( array &$config, $mappingConfigBuilder ) {

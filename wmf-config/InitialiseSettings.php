@@ -16534,59 +16534,32 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
-
 'wmgCirrusSearchUserTesting' => [
-	// Only being utilized on some wiki's, but because this requires a special query parameter
-	// to trigger it is safe to use everywhere rather than duplicate the config.
-	'default' => [
-		'textcat1' => [
-			// Test only activated via query string trigger
-			'sampleRate' => 0,
-			// variables applied to all buckets
-			'globals' => [
-				'wgCirrusSearchInterwikiThreshold' => 3,
-				'wgCirrusSearchLanguageDetectors' => [
-					'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat',
-				],
-			],
-			'buckets' => [
-				// control bucket. setup threshold and detector but don't turn on the
-				// language query
-				'a' => [
-					'trigger' => 'textcat2:a',
-					'globals' => [
-						'wgCirrusSearchEnableAltLanguage' => false,
-					],
-				],
-				// test bucket. try textcat and append results when < 3 results found
-				'b' => [
-					'trigger' => 'textcat2:b',
-					'globals' => [
-						'wgCirrusSearchEnableAltLanguage' => true,
-						'wgCirrusSearchInterwikiProv' => 'iwsw8',
-					],
-				],
-				// test bucket. try accept-language, fallback to textcat
-				'c' => [
-					'trigger' => 'textcat2:c',
-					'globals' => [
-						'wgCirrusSearchEnableAltLanguage' => true,
-						'wgCirrusSearchInterwikiProv' => 'iwsw9',
-						'wgCirrusSearchLanguageDetectors' => [
-							'accept-lang' => 'CirrusSearch\\LanguageDetector\\HttpAccept',
-							'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat',
-						],
-					],
-				],
-			],
-		],
-	],
+	'default' => [],
 ],
 
-'wgCirrusSearchTextcatLanguages' => [
+'wmgCirrusSearchLanguageDetectors' => [
+	'default' => [],
+	'enwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
+	'dewiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
+	'eswiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
+	'itwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
+	'frwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
+],
+
+'wmgCirrusSearchEnableAltLanguage' => [
+	'default' => false,
+	'enwiki' => true,
+	'dewiki' => true,
+	'eswiki' => true,
+	'itwiki' => true,
+	'frwiki' => true,
+],
+
+'wmgCirrusSearchTextcatLanguages' => [
 	'default' => [
-			'en', 'es', 'zh', 'pt', 'ar', 'ru', 'fa', 'ko',
-			'bn', 'bg', 'hi', 'el', 'ja', 'ta', 'th', 'he'
+		'en', 'es', 'zh', 'pt', 'ar', 'ru', 'fa', 'ko',
+		'bn', 'bg', 'hi', 'el', 'ja', 'ta', 'th', 'he'
 	],
 	'frwiki' => [
 		'fr', 'en', 'ar', 'ru', 'zh', 'th', 'el', 'hy',
