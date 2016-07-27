@@ -9116,7 +9116,7 @@ $wgConf->settings = [
 	'+commonswiki' => [
 		'bureaucrat' => [ 'gwtoolset', 'ipblock-exempt', 'translationadmin' ], // T26374, T65124, T78814
 		'checkuser' => [ 'ipblock-exempt' ],
-		'sysop' => [ 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer' ],
+		'sysop' => [ 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer', 'upwizcampeditors' ],
 		'Image-reviewer' => [ 'Image-reviewer' ],
 	],
 	'+dawiki' => [
@@ -9780,7 +9780,7 @@ $wgConf->settings = [
 	'+commonswiki' => [
 		'bureaucrat' => [ 'gwtoolset', 'ipblock-exempt', 'translationadmin' ], // T50620, T65124, T78814
 		'checkuser' => [ 'ipblock-exempt' ],
-		'sysop' => [ 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer' ],
+		'sysop' => [ 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer', 'upwizcampeditors' ],
 	],
 	'+cswiki' => [
 		'bureaucrat' => [ 'arbcom', 'autopatrolled' ], // T63418
