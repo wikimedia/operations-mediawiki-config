@@ -4553,7 +4553,7 @@ $wgConf->settings = [
 		'redis' => 'info', // -asher 2012/10/12
 		'RecursiveLinkPurge' => 'debug',
 		'Renameuser' => 'debug',
-		'resourceloader' => 'debug',
+		'resourceloader' => 'info',
 		'ResourceLoaderImage' => 'debug', // - demon, matmarex
 		'runJobs' => [ 'logstash' => 'warning' ], // - bd808, T113571
 		'session' => [ 'udp2log' => false, 'logstash' => 'warning' ],
