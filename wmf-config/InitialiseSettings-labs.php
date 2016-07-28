@@ -571,6 +571,7 @@ function wmfLabsSettings() {
 		// Test numeric sorting. See T8948.
 		'wgCategoryCollation' => [
 			'default' => 'uppercase',
+			'dewiki' => 'uca-de-u-kn', // T128806
 			'enwiki' => 'uca-default-u-kn',
 		],
 	];
