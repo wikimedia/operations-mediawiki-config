@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eeb83fd6_5c53311a",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 572,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2016-07-28T22:08:04Z",
+      "side": 0,
+      "message": "Does it make sense to keep it here to allow further testing before this feature is rolled out in prod on a permanent basis?",
+      "range": {
+        "startLine": 572,
+        "startChar": 3,
+        "endLine": 572,
+        "endChar": 22
+      },
+      "revId": "6cf7a77b8bc54f6b4735d8e6ee9c7a548001d4be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
