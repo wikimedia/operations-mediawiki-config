@@ -22,6 +22,30 @@
       "revId": "6cf7a77b8bc54f6b4735d8e6ee9c7a548001d4be",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eeb83fd6_7ca0f53e",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 572,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2016-07-28T23:04:21Z",
+      "side": 0,
+      "message": "This is the sort of feature that is either going to show bugs locally or on a real wiki with weird edge cases. I don\u0027t see a whole lot of use for testing this further on Beta Cluster, honestly.",
+      "parentUuid": "eeb83fd6_5c53311a",
+      "range": {
+        "startLine": 572,
+        "startChar": 3,
+        "endLine": 572,
+        "endChar": 22
+      },
+      "revId": "6cf7a77b8bc54f6b4735d8e6ee9c7a548001d4be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
