@@ -33,6 +33,24 @@
       "revId": "ec5b83ce62b76f1dd483aa16ca09298895c0214c",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6edb6f39_66af8492",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 16866,
+      "author": {
+        "id": 99
+      },
+      "writtenOn": "2016-07-28T00:06:09Z",
+      "side": 1,
+      "message": "Presumably because he wanted to merge array keys instead of replace them.",
+      "parentUuid": "6edb6f39_40f27004",
+      "revId": "ec5b83ce62b76f1dd483aa16ca09298895c0214c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
