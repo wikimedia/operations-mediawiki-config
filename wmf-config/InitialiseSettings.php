@@ -12667,6 +12667,7 @@ $wgConf->settings = [
 	'wikibooks' => false,
 	'wikiquote' => false,
 	'wiktionary' => false,
+	'incubatorwiki' => false,
 	'clldefault' => false,
 ],
 
