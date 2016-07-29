@@ -1404,11 +1404,6 @@ if ( $wmgUseCentralAuth ) {
 	// Enables Special:GlobalRenameRequest
 	$wgCentralAuthEnableGlobalRenameRequest = true;
 
-	// temporary for testing -- legoktm 2015-07-02
-	if ( $wgDBname === 'metawiki' ) {
-		$wgCentralAuthEnableUserMerge = false;
-	}
-
 	// Only allow users with global accounts to login
 	$wgCentralAuthStrict = true;
 
