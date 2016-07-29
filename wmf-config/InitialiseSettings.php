@@ -14014,27 +14014,18 @@ $wgConf->settings = [
 ],
 
 'wmgUseMoodBar' => [
-	'default' => false,
-	'frwikisource' => true, // T36618
-	'incubatorwiki' => true, // T34417
+	'default' => false, // Do not enable on any further wikis, T131340
 	'nlwiki' => true, // T34202
-	'sewikimedia' => true, // T34757
-//	'tawiki' => true, // T36560 // Disable due to T36615
 ],
 'wmgMoodBarInfoUrl' => [
 	'default' => '//www.mediawiki.org/wiki/MoodBar',
-	'frwikisource' => '//fr.wikisource.org/wiki/Wikisource:MoodBar',
-	'itwikivoyage' => '//it.wikivoyage.org/wiki/Wikivoyage:MoodBar',
 	'nlwiki' => '//nl.wikipedia.org/wiki/Help:Feedback',
 ],
 'wmgMoodBarCutoffTime' => [
 	'default' => '20110725221004',
-	'frwikisource' => '20110304202000',
 ],
 'wmgMoodBarEnableTooltip' => [
 	'default' => true,
-	'testwiki' => false,
-	'test2wiki' => false,
 ],
 'wmgUseMobileApp' => [
 	'default' => true,
