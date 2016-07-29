@@ -302,9 +302,6 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgDefaultUserOptions['compact-language-links'] = 0;
 }
 
-// Experimental
-$wgGadgetsCaching = false;
-
 $wgMessageCacheType = CACHE_ACCEL;
 
 // Let Beta Cluster Commons do upload-from-URL from production Commons.
