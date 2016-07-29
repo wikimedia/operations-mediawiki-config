@@ -279,6 +279,8 @@ if ( $wmgUseEcho && $wmgUseCentralAuth ) {
 	$wgEchoSharedTrackingDB = 'wikishared';
 	// Set cluster back to false, to override CommonSettings.php setting it to 'extension1'
 	$wgEchoSharedTrackingCluster = false;
+	// Enable mention status notifications for testing Bug: T140234
+	$wgEchoMentionStatusNotifications = true;
 }
 
 if ( $wmgUseGraph ) {
