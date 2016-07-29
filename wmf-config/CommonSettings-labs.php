@@ -94,8 +94,6 @@ if ( $wmgUseCentralNotice ) {
 	$wgCentralDBname = 'metawiki';
 }
 
-require_once "$IP/extensions/MobileApp/MobileApp.php";
-
 if ( $wmgUseCentralAuth ) {
 	$wgCentralAuthEnableUserMerge = true;
 	$wgCentralAuthUseSlaves = true;
