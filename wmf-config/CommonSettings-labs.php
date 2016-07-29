@@ -95,7 +95,6 @@ if ( $wmgUseCentralNotice ) {
 }
 
 if ( $wmgUseCentralAuth ) {
-	$wgCentralAuthEnableUserMerge = true;
 	$wgCentralAuthUseSlaves = true;
 }
 
