@@ -2866,10 +2866,6 @@ if ( $wmgUseGeoCrumbs ) {
 	require_once( "$IP/extensions/GeoCrumbs/GeoCrumbs.php" );
 }
 
-if ( $wmgUseGeoCrumbs || $wmgUseInsider || $wmgUseRelatedSites ) {
-	require_once( "$IP/extensions/CustomData/CustomData.php" );
-}
-
 if ( $wmgUseCalendar ) {
 	wfLoadExtension( 'Calendar' );
 }
