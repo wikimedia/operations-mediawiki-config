@@ -59,8 +59,6 @@ if ( $wmgUseOAuth ) {
 }
 
 if ( $wmgUseFlow ) {
-	$wgFlowParsoidURL = $wmgParsoidURL; // Re-link now it's been set to a new value
-
 	// Override CommonSettings.php, which has:
 	// $wgFlowExternalStore = $wgDefaultExternalStore;
 	$wgFlowExternalStore = [
