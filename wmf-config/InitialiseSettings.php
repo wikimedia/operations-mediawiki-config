@@ -14014,12 +14014,8 @@ $wgConf->settings = [
 ],
 
 'wmgUseMoodBar' => [
-	'default' => false,
-	'frwikisource' => true, // T36618
-	'incubatorwiki' => true, // T34417
+	'default' => false, // Do not enable on any further wikis, T131340
 	'nlwiki' => true, // T34202
-	'sewikimedia' => true, // T34757
-//	'tawiki' => true, // T36560 // Disable due to T36615
 ],
 'wmgMoodBarInfoUrl' => [
 	'default' => '//www.mediawiki.org/wiki/MoodBar',
