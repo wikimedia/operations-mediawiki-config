@@ -9970,6 +9970,9 @@ $wgConf->settings = [
 	'+hewikiquote' => [
 		'sysop' => [ 'autopatrolled' ],
 	],
+	'+hewiktionary' => [
+        'sysop' => [ 'autopatrolled', 'patroller' ], // T140563
+	],
 	'+hewikivoyage' => [
 		'sysop' => [ 'autopatrolled' ], // T52377
 	],
