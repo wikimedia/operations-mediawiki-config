@@ -4566,7 +4566,6 @@ $wgConf->settings = [
 		'StashEdit' => 'debug',
 		'SaveParse' => 'debug',
 		'SwiftBackend' => 'debug', // -aaron 5/15/12
-		'T107711' => 'debug', //- aude, hoo and addshore, for Wikidata
 		'T76305' => 'debug', // - Krinkle and Krenair, for https://gerrit.wikimedia.org/r/188987
 		'T87645' => 'debug', // - Ori on behalf of Tim, for https://gerrit.wikimedia.org/r/#/c/188304/
 		'T124356' => 'debug',
