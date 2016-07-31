@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aeb2c7f3_0b65edaa",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14022,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2016-07-31T09:19:07Z",
+      "side": 1,
+      "message": "Shouldn\u0027t all this parameters be removed as well, except the nlwiki ones? In case it\u0027s later decided to remove nlwiki, I think we can remove all of this altogether?",
+      "range": {
+        "startLine": 14022,
+        "startChar": 1,
+        "endLine": 14022,
+        "endChar": 18
+      },
+      "revId": "8233a04d3ea007bd27f3b8c4ee6f630dd096e0cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb2c7f3_2b01d1b9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14028,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2016-07-31T09:19:07Z",
+      "side": 1,
+      "message": "Per above.",
+      "range": {
+        "startLine": 14028,
+        "startChar": 1,
+        "endLine": 14028,
+        "endChar": 21
+      },
+      "revId": "8233a04d3ea007bd27f3b8c4ee6f630dd096e0cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb2c7f3_4b0605d3",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 14032,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2016-07-31T09:19:07Z",
+      "side": 1,
+      "message": "Per above.",
+      "range": {
+        "startLine": 14032,
+        "startChar": 1,
+        "endLine": 14032,
+        "endChar": 24
+      },
+      "revId": "8233a04d3ea007bd27f3b8c4ee6f630dd096e0cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
