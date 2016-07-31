@@ -4566,7 +4566,6 @@ $wgConf->settings = [
 		'SaveParse' => 'debug',
 		'SwiftBackend' => 'debug', // -aaron 5/15/12
 		'T138987' => 'debug',
-		'T107711' => 'debug', //- aude, hoo and addshore, for Wikidata
 		'T76305' => 'debug', // - Krinkle and Krenair, for https://gerrit.wikimedia.org/r/188987
 		'T87645' => 'debug', // - Ori on behalf of Tim, for https://gerrit.wikimedia.org/r/#/c/188304/
 		'temp-debug' => 'debug', // generic admin debug log
