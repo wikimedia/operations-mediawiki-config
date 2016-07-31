@@ -52,6 +52,24 @@
       "revId": "fecb5195eda1eae73ce68dcc8ce5cf575d31b70a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb2c7f3_ab9ec157",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 3692,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2016-07-31T10:50:26Z",
+      "side": 1,
+      "message": "I\u0027ve uploaded Ie8a22d4d for this. We should see if they wish \"Wikipedia\" as the name NS_PROJECT or they want instead the translated name of \"Wikipedia\" into tcy. All this messages can be removed from here IMHO.",
+      "parentUuid": "aeb2c7f3_4bdc454c",
+      "revId": "fecb5195eda1eae73ce68dcc8ce5cf575d31b70a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
