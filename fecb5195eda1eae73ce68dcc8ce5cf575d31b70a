@@ -34,6 +34,24 @@
       "revId": "fecb5195eda1eae73ce68dcc8ce5cf575d31b70a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aeb2c7f3_4bdc454c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 3692,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2016-07-31T09:48:40Z",
+      "side": 1,
+      "message": "Yes, they need to be patched in MessagesTcy.php, except NS_PROJECT* where you need to check if that\u0027s a generic name or one for Wikipedia.",
+      "parentUuid": "4e130ba1_272f74f5",
+      "revId": "fecb5195eda1eae73ce68dcc8ce5cf575d31b70a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
