@@ -15634,10 +15634,6 @@ $wgConf->settings = [
 	'default' => [],
 ],
 
-'wmgEchoMentionStatusNotifications' => [
-	'default' => false,
-],
-
 // Thanks should be enabled for wikis with Echo
 'wmgUseThanks' => [
 	'default' => true,
