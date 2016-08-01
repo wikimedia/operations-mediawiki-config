@@ -2737,6 +2737,9 @@ if ( $wmgUseEcho ) {
 	// URL to use in the footer notice
 	$wgEchoFooterNoticeURL = $wmgEchoFooterNoticeURL;
 
+	// Whether to make mention failure/success notifications available
+	$wgEchoMentionStatusNotifications = $wmgEchoMentionStatusNotifications;
+
 	// Enable tracking table only on SULed wikis
 	if ( $wmgUseCentralAuth ) {
 		$wgEchoSharedTrackingDB = 'wikishared';
