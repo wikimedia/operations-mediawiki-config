@@ -114,7 +114,7 @@ if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
 
 if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
 	// Labs override
-	$wgGlobalUserPageAPIUrl = 'http://meta.wikimedia.beta.wmflabs.org/w/api.php';
+	$wgGlobalUserPageAPIUrl = 'https://meta.wikimedia.beta.wmflabs.org/w/api.php';
 	$wgGlobalUserPageDBname = 'metawiki';
 }
 

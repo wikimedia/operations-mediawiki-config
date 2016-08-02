@@ -8,7 +8,7 @@ if ( $wmgMobileFrontend ) {
 	if ( $wmgZeroBanner ) {
 		$wgZeroBannerClusterDomain = 'beta.wmflabs.org'; // need a better way to calc this
 		if ( !$wmgZeroPortal ) {
-			$wgJsonConfigs['JsonZeroConfig']['remote']['url'] = 'http://zero.wikimedia.beta.wmflabs.org/w/api.php';
+			$wgJsonConfigs['JsonZeroConfig']['remote']['url'] = 'https://zero.wikimedia.beta.wmflabs.org/w/api.php';
 		}
 	}
 }

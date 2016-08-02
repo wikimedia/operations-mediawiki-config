@@ -40,8 +40,8 @@ if ( $wmgUseWikibaseClient ) {
 		'Q98651' => 'badge-validated'
 	];
 
-	$wgWBClientSettings['repoConceptBaseUri'] = 'http://wikidata.beta.wmflabs.org/entity/';
-	$wgWBClientSettings['repoUrl'] = 'http://wikidata.beta.wmflabs.org';
+	$wgWBClientSettings['repoConceptBaseUri'] = 'https://wikidata.beta.wmflabs.org/entity/';
+	$wgWBClientSettings['repoUrl'] = 'https://wikidata.beta.wmflabs.org';
 
 	$wgWikimediaBadgesCommonsCategoryProperty = 'P725';
 
