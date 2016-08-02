@@ -39,6 +39,15 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 		break;
+	case 'azbwiki': // T109755
+		$wgGroupPermissions['abusefilter']['abusefilter-log'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-log-detail'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-modify-restricted'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-revert'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-view'] = true;
+		$wgGroupPermissions['abusefilter']['abusefilter-view-private'] = true;
+		break;
 	case 'be_x_oldwiki':
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log'] = true;
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = false; // T44012
