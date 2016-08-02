@@ -11018,7 +11018,6 @@ $wgConf->settings = [
 // affected namespace from search results until a full reindex is completed.
 'wgContentNamespaces' => [
 	'default' => [ NS_MAIN ],
-	'+arwiki' => [ 104 ], // T22623
 	'+arwikisource' => [ 102 ],
 	'+aswikisource' => [ 102 ], // T45129, T72464
 	'+bgwikisource' => [ 100 ],
