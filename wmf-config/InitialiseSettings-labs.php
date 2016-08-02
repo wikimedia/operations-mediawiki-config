@@ -157,8 +157,6 @@ function wmfLabsSettings() {
 			'deploymentwiki' => false
 		],
 
-		'-wgJobLogFile' => [],
-
 		'wmgUseWebFonts' => [
 			'mywiki' => true,
 		],
