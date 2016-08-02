@@ -7432,15 +7432,6 @@ $wgConf->settings = [
 		'rollbacker' => [ 'rollback' => true ],
 	],
 	'+azbwiki' => [
-		'abusefilter' => [ // T109755
-			'abusefilter-log' => true, // T109755
-			'abusefilter-log-detail' => true, // T109755
-			'abusefilter-modify' => true, // T109755
-			'abusefilter-modify-restricted' => true, // T109755
-			'abusefilter-revert' => true, // T109755
-			'abusefilter-view' => true, // T109755
-			'abusefilter-view-private' => true, // T109755
-		],
 		'autopatrolled' => [ // T109755
 			'autopatrol' => true, // T109755
 		],
