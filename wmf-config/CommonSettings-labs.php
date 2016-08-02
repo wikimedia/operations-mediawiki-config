@@ -284,7 +284,7 @@ if ( $wmgUseGraph ) {
 if ( $wmgUseORES ) {
 	wfLoadExtension( 'ORES' );
 	$wgOresWikiId = 'testwiki';
-	$wgOresBaseUrl = 'https://ores.wikimedia.org/';
+	$wgOresBaseUrl = 'https://ores-beta.wmflabs.org/';
 }
 
 if ( $wmgUseNewsletter ) {
