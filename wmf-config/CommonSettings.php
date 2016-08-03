@@ -899,7 +899,7 @@ if ( $wmgUseUrlShortener ) {
 		'(.*\.)?wikiversity\.org',
 		'(.*\.)?wikivoyage\.org',
 		'(.*\.)?wikimedia\.org',
-		'wikidata\.org',
+		'(.*\.)?wikidata\.org',
 	];
 	$wgUrlShortenerApprovedDomains = [
 		'*.wikipedia.org',
@@ -911,7 +911,7 @@ if ( $wmgUseUrlShortener ) {
 		'*.wikiversity.org',
 		'*.wikivoyage.org',
 		'*.wikimedia.org',
-		'wikidata.org',
+		'*.wikidata.org',
 	];
 	$wgUrlShortenerReadOnly = true;
 }
