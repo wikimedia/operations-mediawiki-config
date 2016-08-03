@@ -53,9 +53,6 @@ $wgDnsBlacklistUrls   = [
 
 if ( $wmgUseOAuth ) {
 	$wgMWOAuthCentralWiki = 'metawiki';
-
-	// T61141 - Return this to true and reset secrets once SSL works in labs
-	$wgMWOAuthSecureTokenTransfer = false;
 }
 
 if ( $wmgUseFlow ) {
