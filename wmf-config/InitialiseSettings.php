@@ -15947,6 +15947,7 @@ $wgConf->settings = [
 	'arwiki' => true,// T140551
 	'dewiki' => true,// T140232
 	'hewiki' => true,// T140545
+	'plwiki' => true,// T141974
 ],
 
 'wmgUseUserMerge' => [
