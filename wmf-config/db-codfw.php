@@ -204,6 +204,7 @@ $wgLBFactoryConf = array(
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
 			'conds' => [ 'shard' => 's6', 'datacenter' => $wmfMasterDatacenter ] ],
+		'useGTIDs' => true
 	),
 	/*
 	's7' => array(
