@@ -126,7 +126,7 @@ if ( $wmgUseUrlShortener ) {
 		'(.*\.)?wikiversity\.beta\.wmflabs\.org',
 		'(.*\.)?wikivoyage\.beta\.wmflabs\.org',
 		'(.*\.)?wikimedia\.beta\.wmflabs\.org',
-		'wikidata\.beta\.wmflabs\.org',
+		'(.*\.)?wikidata\.beta\.wmflabs\.org',
 	];
 	$wgUrlShortenerApprovedDomains = [
 		'*.wikipedia.beta.wmflabs.org',
@@ -138,7 +138,7 @@ if ( $wmgUseUrlShortener ) {
 		'*.wikiversity.beta.wmflabs.org',
 		'*.wikivoyage.beta.wmflabs.org',
 		'*.wikimedia.beta.wmflabs.org',
-		'wikidata.beta.wmflabs.org',
+		'*.wikidata.beta.wmflabs.org',
 	];
 }
 
