@@ -12371,11 +12371,6 @@ $wgConf->settings = [
 	'zhwiktionary' => [ 'zh-cn', 'zh-hk', 'zh-mo', 'zh-my', 'zh-sg', 'zh-tw' ],
 ],
 
-'wmgUseWikimediaLicenseTexts' => [
-	'default' => false,
-	'commonswiki' => true,
-],
-
 'wgSearchSuggestCacheExpiry' => [
 	'default' => 10800,
 ],
