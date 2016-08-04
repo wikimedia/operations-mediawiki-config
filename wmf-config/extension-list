@@ -141,7 +141,6 @@ $IP/extensions/wikihiero/extension.json
 $IP/extensions/WikiLove/extension.json
 $IP/extensions/WikimediaEvents/extension.json
 $IP/extensions/WikimediaIncubator/extension.json
-$IP/extensions/WikimediaMessages/WikimediaLicenseTexts.php
 $IP/extensions/WikimediaMessages/extension.json
 $IP/extensions/XAnalytics/extension.json
 $IP/extensions/ZeroBanner/ZeroBanner.php
