@@ -14342,6 +14342,11 @@ $wgConf->settings = [
 	],
 ],
 
+'wgMFMinervaUsePageActionBarV2' => [
+	'default' => false,
+	'ruwiki' => true,
+],
+
 // Formerly known as $wgMFAnonymousEditing
 'wmgMFEditorOptions' => [
 	'default' => [ 'anonymousEditing' => true, ], // T93210
