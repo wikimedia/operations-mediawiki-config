@@ -15626,6 +15626,8 @@ $wgConf->settings = [
 
 'wmgEchoMentionStatusNotifications' => [
 	'default' => false,
+	'testwiki' => true,// T141995
+	'test2wiki' => true,// T141995
 ],
 
 // Thanks should be enabled for wikis with Echo
