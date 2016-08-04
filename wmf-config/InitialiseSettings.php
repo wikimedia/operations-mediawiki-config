@@ -8225,13 +8225,14 @@ $wgConf->settings = [
 		'rollbacker' => [ 'rollback' => true ], // T118934
 	],
 	'mediawikiwiki' => [
-		'user' => [ 'move' => false, 'flow-create-board' => true ],
-		// Kept 'autoreview' as substitute for 'autopatrolled' user group
-		// because previously MediaWiki.org did not have one and it would be
-		// tedious to rename everyone's userrights.
-		'autoreview' => [ 'autopatrol' => true ],
+		'user' => [
+			'move' => false,
+			'flow-create-board' => true,
+		],
+		'autopatrolled' => [
+			'autopatrol' => true,
+		],
 	],
-
 	'+metawiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'centralnoticeadmin' => [ //adding to allow CN access without local sysop JRA 2013-02-21
