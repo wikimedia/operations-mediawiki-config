@@ -49,7 +49,7 @@ $IP/extensions/Gadgets/extension.json
 $IP/extensions/GeoCrumbs/extension.json
 $IP/extensions/GeoData/GeoData.php
 $IP/extensions/GettingStarted/GettingStarted.php
-$IP/extensions/GlobalBlocking/GlobalBlocking.php
+$IP/extensions/GlobalBlocking/extension.json
 $IP/extensions/GlobalCssJs/extension.json
 $IP/extensions/GlobalUsage/extension.json
 $IP/extensions/GlobalUserPage/extension.json
@@ -75,7 +75,7 @@ $IP/extensions/MassMessage/extension.json
 $IP/extensions/Math/extension.json
 $IP/extensions/MobileApp/extension.json
 $IP/extensions/MobileFrontend/extension.json
-$IP/extensions/MoodBar/MoodBar.php
+$IP/extensions/MoodBar/extension.json
 $IP/extensions/MultimediaViewer/extension.json
 $IP/extensions/MwEmbedSupport/extension.json
 $IP/extensions/NavigationTiming/extension.json
