@@ -1,4 +1,4 @@
-$IP/extensions/AbuseFilter/AbuseFilter.php
+$IP/extensions/AbuseFilter/extension.json
 $IP/extensions/AntiSpoof/extension.json
 $IP/extensions/ApiFeatureUsage/extension.json
 $IP/extensions/Babel/extension.json
@@ -23,8 +23,8 @@ $IP/extensions/CodeEditor/extension.json
 $IP/extensions/CodeReview/extension.json
 $IP/extensions/Collection/Collection.php
 $IP/extensions/CommonsMetadata/extension.json
-$IP/extensions/ConfirmEdit/ConfirmEdit.php
-$IP/extensions/ConfirmEdit/FancyCaptcha.php
+$IP/extensions/ConfirmEdit/extension.json
+$IP/extensions/ConfirmEdit/extension.json
 $IP/extensions/ContactPage/ContactPage.php
 $IP/extensions/ContentTranslation/extension.json
 $IP/extensions/ContributionTracking/extension.json
@@ -32,7 +32,7 @@ $IP/extensions/CreditsSource/extension.json
 $IP/extensions/DisableAccount/extension.json
 $IP/extensions/Disambiguator/extension.json
 $IP/extensions/DismissableSiteNotice/extension.json
-$IP/extensions/DonationInterface/donationinterface_langonly.php
+$IP/extensions/DonationInterface/extension.json
 $IP/extensions/DoubleWiki/extension.json
 $IP/extensions/Echo/Echo.php
 $IP/extensions/EducationProgram/EducationProgram.php
@@ -46,12 +46,12 @@ $IP/extensions/Flow/Flow.php
 $IP/extensions/FundraiserLandingPage/extension.json
 $IP/extensions/FundraisingTranslateWorkflow/extension.json
 $IP/extensions/Gadgets/extension.json
-$IP/extensions/GeoCrumbs/GeoCrumbs.php
+$IP/extensions/GeoCrumbs/extension.json
 $IP/extensions/GeoData/GeoData.php
 $IP/extensions/GettingStarted/GettingStarted.php
 $IP/extensions/GlobalBlocking/GlobalBlocking.php
 $IP/extensions/GlobalCssJs/extension.json
-$IP/extensions/GlobalUsage/GlobalUsage.php
+$IP/extensions/GlobalUsage/extension.json
 $IP/extensions/GlobalUserPage/extension.json
 $IP/extensions/GoogleNewsSitemap/extension.json
 $IP/extensions/Graph/extension.json
@@ -77,7 +77,7 @@ $IP/extensions/MobileApp/extension.json
 $IP/extensions/MobileFrontend/extension.json
 $IP/extensions/MoodBar/MoodBar.php
 $IP/extensions/MultimediaViewer/extension.json
-$IP/extensions/MwEmbedSupport/MwEmbedSupport.php
+$IP/extensions/MwEmbedSupport/extension.json
 $IP/extensions/NavigationTiming/extension.json
 $IP/extensions/NewUserMessage/extension.json
 $IP/extensions/Nuke/extension.json
@@ -99,7 +99,7 @@ $IP/extensions/PoolCounter/extension.json
 $IP/extensions/QuickSurveys/extension.json
 $IP/extensions/Quiz/extension.json
 $IP/extensions/RelatedArticles/extension.json
-$IP/extensions/RelatedSites/RelatedSites.php
+$IP/extensions/RelatedSites/extension.json
 $IP/extensions/Renameuser/extension.json
 $IP/extensions/RestBaseUpdateJobs/extension.json
 $IP/extensions/RevisionSlider/extension.json
@@ -123,14 +123,14 @@ $IP/extensions/TimedMediaHandler/TimedMediaHandler.php
 $IP/extensions/timeline/Timeline.php
 $IP/extensions/TitleBlacklist/extension.json
 $IP/extensions/TocTree/extension.json
-$IP/extensions/TorBlock/TorBlock.php
+$IP/extensions/TorBlock/extension.json
 $IP/extensions/Translate/Translate.php
 $IP/extensions/TranslationNotifications/extension.json
-$IP/extensions/TrustedXFF/TrustedXFF.php
+$IP/extensions/TrustedXFF/extension.json
 $IP/extensions/UnicodeConverter/extension.json
 $IP/extensions/UniversalLanguageSelector/extension.json
 $IP/extensions/UploadsLink/extension.json
-$IP/extensions/UploadWizard/UploadWizard.php
+$IP/extensions/UploadWizard/extension.json
 $IP/extensions/UrlShortener/extension.json
 $IP/extensions/UserMerge/extension.json
 $IP/extensions/VipsScaler/VipsScaler.php
