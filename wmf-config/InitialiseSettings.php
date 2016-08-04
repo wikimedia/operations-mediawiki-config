@@ -8233,14 +8233,25 @@ $wgConf->settings = [
 	],
 
 	'+metawiki' => [
-		'autopatrolled' => [ 'autopatrol' => true ],
-		'centralnoticeadmin' => [ //adding to allow CN access without local sysop JRA 2013-02-21
+		'autopatrolled' => [ // T27160
+			'autopatrol' => true,
+		],
+		'centralnoticeadmin' => [ // adding to allow CN access without local sysop JRA 2013-02-21; T142123
+			'autopatrol' => true,
 			'centralnotice-admin' => true,
 			'editinterface' => true,
 		],
-		'flood' => [ 'bot' => true ],
-		'global-renamer' => [ 'centralauth-rename' => true ], // T71651
-		'massmessage-sender' => [ 'massmessage' => true ], // T59611
+		'flood' => [ // T17176
+			'bot' => true,
+		],
+		'global-renamer' => [ // T142123, T71651
+			'autopatrol' => true,
+			'centralauth-rename' => true,
+		],
+		'massmessage-sender' => [
+			'autopatrol' => true, // T142123
+			'massmessage' => true, // T59611
+		],
 		'steward' => [
 			'userrights-interwiki' => true,  // new steward stuff, yay 2007-12-27
 			'centralauth-usermerge' => true,
@@ -8250,13 +8261,15 @@ $wgConf->settings = [
 			'reupload' => true,
 			'reupload-own' => true,
 		],
-		'wmf-officeit' => [ // T106724
+		'wmf-officeit' => [ // T106724, T142123
+			'autopatrol' => true,
 			'centralauth-lock' => true,
 			'createaccount' => true,
 			'noratelimit' => true,
 			'tboverride' => true,
 		],
-		'wmf-supportsafety' => [ // T136046, T136864
+		'wmf-supportsafety' => [ // T136046, T136864, T142123
+			'autopatrol' => true,
 			'userrights-interwiki' => true,
 			'centralauth-lock' => true,
 			'globalblock' => true,
