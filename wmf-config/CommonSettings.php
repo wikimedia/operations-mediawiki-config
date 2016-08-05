@@ -672,19 +672,19 @@ $wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $acti
 };
 
 if ( $wmgUseTimeline ) {
-	include( $IP . '/extensions/timeline/Timeline.php' );
+	wfLoadExtension( 'timeline' );
 	if ( $wgDBname == 'testwiki' || $wgDBname == 'mlwiki' ) {
 		// FreeSansWMF has been generated from FreeSans and FreeSerif by using this script with fontforge:
 		// Open("FreeSans.ttf");
 		// MergeFonts("FreeSerif.ttf");
 		// SetFontNames("FreeSans-WMF", "FreeSans WMF", "FreeSans WMF Regular", "Regular", "");
 		// Generate("FreeSansWMF.ttf", "", 4 );
-		$wgTimelineSettings->fontFile = $wgTimelineFontFile = 'FreeSansWMF.ttf';
+		$wgTimelineFontFile = 'FreeSansWMF.ttf';
 	} elseif ( $lang == 'zh' ) {
-		$wgTimelineSettings->fontFile = $wgTimelineFontFile = 'unifont-5.1.20080907.ttf';
+		$wgTimelineFontFile = 'unifont-5.1.20080907.ttf';
 	}
-	$wgTimelineSettings->fileBackend = $wgTimelineFileBackend = 'local-multiwrite';
-	$wgTimelineSettings->epochTimestamp = $wgTimelineEpochTimestamp = '20130601000000';
+	$wgTimelineFileBackend = 'local-multiwrite';
+	$wgTimelineEpochTimestamp = '20130601000000';
 }
 
 putenv( "GDFONTPATH=/srv/mediawiki/fonts" );
