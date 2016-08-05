@@ -28,14 +28,6 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T141421 - Meetup Women Archivists Roundtable Edit-a-thon
-	'from'   => '2016-08-03T07:00 +0:00',
-	'to'     => '2016-08-03T10:00 +0:00',
-	'IP'     => '38.101.231.254',
-	'dbname' => [ 'enwiki', 'commonswiki' ],
-	'value'  => 120 // 90 expected
-];
-
 ## Add throttling definitions above.
 
 /**
