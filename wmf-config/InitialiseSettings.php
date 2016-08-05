@@ -8258,7 +8258,6 @@ $wgConf->settings = [
 		'massmessage-sender' => [ 'massmessage' => true ], // T59611
 		'steward' => [
 			'userrights-interwiki' => true,  // new steward stuff, yay 2007-12-27
-			'centralauth-usermerge' => true,
 		],
 		'uploader' => [ // T52287
 			'upload' => true,
