@@ -679,13 +679,12 @@ if ( $wmgUseTimeline ) {
 		// MergeFonts("FreeSerif.ttf");
 		// SetFontNames("FreeSans-WMF", "FreeSans WMF", "FreeSans WMF Regular", "Regular", "");
 		// Generate("FreeSansWMF.ttf", "", 4 );
-		$wgTimelineSettings->fontFile = 'FreeSansWMF.ttf';
+		$wgTimelineSettings->fontFile = $wgTimelineFontFile = 'FreeSansWMF.ttf';
 	} elseif ( $lang == 'zh' ) {
-		$wgTimelineSettings->fontFile = 'unifont-5.1.20080907.ttf';
+		$wgTimelineSettings->fontFile = $wgTimelineFontFile = 'unifont-5.1.20080907.ttf';
 	}
-	$wgTimelineSettings->fileBackend = 'local-multiwrite';
-	$wgTimelineSettings->ploticusCommand = '/usr/bin/ploticus';
-	$wgTimelineSettings->epochTimestamp = '20130601000000';
+	$wgTimelineSettings->fileBackend = $wgTimelineFileBackend = 'local-multiwrite';
+	$wgTimelineSettings->epochTimestamp = $wgTimelineEpochTimestamp = '20130601000000';
 }
 
 putenv( "GDFONTPATH=/srv/mediawiki/fonts" );
