@@ -85,6 +85,11 @@ $wgLBFactoryConf = [
 # when load zero servers will be used, such as if the others are lagged.
 # Servers which are down should be removed to avoid a timeout overhead
 # per invocation.
+#
+# Additionally, if a server should not to be lagged (for example,
+# an api node, or a recentchanges node, set the load to at least 1.
+# This will make the node be taken into account on the wait for lag
+# function (the master is not included, as by definition has lag 0).
 
 'sectionLoads' => [
 	's1' => [
@@ -105,19 +110,19 @@ $wgLBFactoryConf = [
 		'db1018' => 0,   # 1.4TB  64GB, master
 #		'db1024' => 0,   # 1.4TB  64GB, old master
 		'db1021' => 0,   # 1.4TB  64GB, vslow, dump
-		'db1036' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-		'db1054' => 0,   # 2.8TB  96GB, api
-		'db1060' => 0,   # 2.8TB  96GB, api
+		'db1036' => 1,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
+		'db1054' => 1,   # 2.8TB  96GB, api
+		'db1060' => 1,   # 2.8TB  96GB, api
 #		'db1063' => 0,   # 2.8TB 128GB
 #		'db1067' => 0,   # 2.8TB 160GB
-		'db1074' => 400, # 3.6TB 512GB, + backup rc until T116425 is resolved
+		'db1074' => 500, # 3.6TB 512GB
 		'db1076' => 500, # 3.6TB 512GB
 		'db1090' => 500, # 3.6TB 512GB
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,   # 3.6TB 512GB, master
 		'db1038' => 0,   # 1.4TB  64GB, vslow, dump, old master
-		'db1015' => 0  , # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
+		'db1015' => 1  , # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 #		'db1035' => 0,   # 1.4TB  64GB
 #		'db1044' => 0,   # 1.4TB  64GB
 		'db1077' => 500, # 3.6TB 512GB
@@ -127,17 +132,17 @@ $wgLBFactoryConf = [
 #		'db1042' => 0,   # 1.4TB  64GB, temporary master
 		'db1040' => 0,   # 1.4TB  64GB, master
 #		'db1019' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-		'db1056' => 0,   # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
-		'db1059' => 0,   # 2.8TB  96GB, api
+		'db1056' => 1,   # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
+		'db1059' => 1,   # 2.8TB  96GB, api
 		'db1064' => 0,   # 2.8TB 160GB, vslow, dump
-		'db1068' => 0,   # 2.8TB 160GB, api
+		'db1068' => 1,   # 2.8TB 160GB, api
 		'db1081' => 500, # 3.6TB 512GB
 		'db1084' => 500, # 3.6TB 512GB
 		'db1091' => 500, # 3.6TB 512GB
 	],
 	's5' => [
 		'db1049' => 0,   # 2.8TB  64GB, master
-		'db1026' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
+		'db1026' => 1,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1045' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1070' => 50,  # 2.8TB 160GB, api, old master
 		'db1071' => 50,  # 2.8TB 160GB, api
@@ -148,9 +153,9 @@ $wgLBFactoryConf = [
 	's6' => [
 		'db1050' => 0,   # 2.8TB  64GB, master
 #		'db1023' => 0,   # 1.4TB  64GB, old master
-		'db1022' => 0,   # 1.4TB  64GB, api
+		'db1022' => 1,   # 1.4TB  64GB, api
 		'db1030' => 0,   # 1.4TB  64GB, vslow, dump
-		'db1037' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
+		'db1037' => 1,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 #		'db1061' => 0,   # 2.8TB 128GB
 		'db1085' => 500, # 3.6TB 512GB
 		'db1088' => 500, # 3.6TB 512GB
@@ -160,9 +165,9 @@ $wgLBFactoryConf = [
 		'db1041' => 0,   # 1.4TB  64GB, master
 #		'db1033' => 0,   # 1.4TB  64GB, old master
 		'db1028' => 0,   # 1.4TB  64GB, vslow, dump
-		'db1034' => 0,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
+		'db1034' => 1,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 #		'db1039' => 0,   # 1.4TB  64GB
-		'db1062' => 0,   # 2.8TB 128GB, watchlist, recentchanges, contributions, logpager
+		'db1062' => 1,   # 2.8TB 128GB, watchlist, recentchanges, contributions, logpager
 		'db1079' => 500, # 3.6TB 512GB
 		'db1086' => 500, # 3.6TB 512GB
 		'db1094' => 500, # 3.6TB 512GB
@@ -232,24 +237,19 @@ $wgLBFactoryConf = [
 			'db1060' => 1,
 		],
 		'watchlist' => [
-			'db1036' => 100,
-			'db1074' => 1,
+			'db1036' => 1,
 		],
 		'recentchanges' => [
-			'db1036' => 100,
-			'db1074' => 1,
+			'db1036' => 1,
 		],
 		'recentchangeslinked' => [
-			'db1036' => 100,
-			'db1074' => 1,
+			'db1036' => 1,
 		],
 		'contributions' => [
-			'db1036' => 100,
-			'db1074' => 1,
+			'db1036' => 1,
 		],
 		'logpager' => [
-			'db1036' => 100,
-			'db1074' => 1,
+			'db1036' => 1,
 		],
 	],
 	/* s3 */ 'DEFAULT' => [

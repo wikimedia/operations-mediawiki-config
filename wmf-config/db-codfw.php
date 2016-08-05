@@ -85,6 +85,11 @@ $wgLBFactoryConf = [
 # when load zero servers will be used, such as if the others are lagged.
 # Servers which are down should be removed to avoid a timeout overhead
 # per invocation.
+#
+# Additionally, if a server should not to be lagged (for example,
+# an api node, or a recentchanges node, set the load to at least 1.
+# This will make the node be taken into account on the wait for lag
+# function (the master is not included, as by definition has lag 0).
 
 'sectionLoads' => [
 	's1' => [
