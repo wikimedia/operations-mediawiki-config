@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e991383_8659da03",
+        "filename": "wmf-config/extension-list",
+        "patchSetId": 1
+      },
+      "lineNbr": 52,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2016-08-05T20:46:44Z",
+      "side": 1,
+      "message": "typo…",
+      "range": {
+        "startLine": 52,
+        "startChar": 30,
+        "endLine": 52,
+        "endChar": 38
+      },
+      "revId": "66ad885d85e0e178ae5d1adabf4179f156e43866",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
