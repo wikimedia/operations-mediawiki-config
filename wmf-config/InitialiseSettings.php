@@ -8201,6 +8201,7 @@ $wgConf->settings = [
 			'edit' => false,
 			'createaccount' => true,
 		],
+		'autopatrolled' => [ 'autopatrol' => true ],
 		'bots' => ['skipcaptcha' => true ],
 		'cloudadmin' => [
 			'listall' => true,
