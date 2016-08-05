@@ -8201,8 +8201,10 @@ $wgConf->settings = [
 			'edit' => false,
 			'createaccount' => true,
 		],
+		'autopatrolled' => [ 'autopatrol' => true ],
 		'bots' => ['skipcaptcha' => true ],
 		'cloudadmin' => [
+			'autopatrol' => true,
 			'listall' => true,
 			'manageproject' => true,
 			'userrights' => true,
@@ -8212,7 +8214,10 @@ $wgConf->settings = [
 			'editallhiera' => true,
 		],
 		'shell' => ['loginviashell' => true ],
-		'shellmanagers' => ['userrights' => false ],
+		'shellmanagers' => [
+			'autopatrol' => true,
+			'userrights' => false,
+		],
 	],
 	'+legalteamwiki' => [ // T63222
 		'accountcreator' => [ 'noratelimit' => false ],
