@@ -2655,7 +2655,7 @@ $wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetGWTFileBackendCleanupJob';
 
 if ( $wmgUseEducationProgram ) {
 	require_once( "$IP/extensions/EducationProgram/EducationProgram.php" );
-	$egEPSettings['dykCategory'] = $wmgEducationProgramDYKCat;
+	$egEPSettings['dykCategory'] = $wgEPSettings['dykCategory'] = $wmgEducationProgramDYKCat;
 	$wgNamespaceProtection[EP_NS] = [ 'ep-course' ]; // T112806 (security)
 }
 
