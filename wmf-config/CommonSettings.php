@@ -3227,6 +3227,7 @@ if ( $wmgUseOAuth ) {
 		if ( $wgDBname === $wgMWOAuthCentralWiki ) {
 			// Only needed on the central wiki.
 			$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
+			$wgOAuthGroupsToNotify = ['oauthadmin'];
 		}
 	};
 }
