@@ -961,8 +961,8 @@ if ( $wmgUseGlobalBlocking ) {
 	$wgGlobalBlockingBlockXFF = true; // Apply blocks to IPs in XFF (T25343)
 }
 
-include( $IP . '/extensions/TrustedXFF/TrustedXFF.php' );
-$wgTrustedXffFile = "$wmfConfigDir/trusted-xff.cdb";
+wfLoadExtension( 'TrustedXFF' );
+$wgTrustedXffFile = "$wmfConfigDir/trusted-xff.php";
 
 if ( $wmgUseContactPage ) {
 	include( $IP . '/extensions/ContactPage/ContactPage.php' );

@@ -43,6 +43,7 @@ mwconfig_files_txt=(
 	squid-labs.php
 	session.php
 	session-labs.php
+	trusted-xff.php
 	Wikibase.php
 	Wikibase-labs.php
 	Wikibase-production.php
@@ -60,7 +61,6 @@ mwconfig_files=(
 	wmf-config/extension-list
 	wmf-config/extension-list-labs
 	wmf-config/extension-list-wikitech
-	wmf-config/trusted-xff.cdb
 )
 
 for i in ./*
