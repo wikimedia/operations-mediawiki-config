@@ -64,13 +64,6 @@ require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
 ?>
 </ul>
 
-<h3><img src="./images/document.png" alt=""> CDB files</h3>
-<ul>
-<?php
-	outputFiles( glob( __DIR__ . '/*.cdb' ), false );
-?>
-</ul>
-
 <hr>
 </body>
 </html>
