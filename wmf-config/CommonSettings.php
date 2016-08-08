@@ -3001,7 +3001,7 @@ if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationSiteTemplates['cx'] = '//cxserver.wikimedia.org/v1';
 
 	$wgContentTranslationRESTBase = [
-		'url' => $wmgRestbaseServer,
+		'url' => $wgRestbaseServer,
 		'domain' => $wgCanonicalServer,
 		'forwardCookies' => false,
 		'timeout' => 10000,
