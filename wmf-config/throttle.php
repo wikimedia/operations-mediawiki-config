@@ -36,6 +36,13 @@ $wmgThrottlingExceptions[] = [ // T141421 - Meetup Women Archivists Roundtable E
 	'value'  => 120 // 90 expected
 ];
 
+$wmgThrottlingExceptions[] = [ // T142396 - UN Women Editathon in NYC, Aug 12
+	'from'   => '2016-08-12T13:00 +0:00',
+	'to'     => '2016-08-12T21:00 +0:00',
+	'IP'     => '157.150.62.35', // WARNING!: United Nations Headquarters, NY, USA.
+	'value'  => 900 // 600 expected
+];
+
 ## Add throttling definitions above.
 
 /**
