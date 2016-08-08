@@ -13541,11 +13541,25 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'test2wiki' => true,        // T121421
 
+	'arwiki' => true,			// Starting from SET
+	'arzwiki' => true,			// Starting from SET
+	'azbwiki' => true,			// Starting from SET
+	'ckbwiki' => true,			// Starting from SET
 	'enwiki' => true,           // T128478
+	'fawiki' => true,			// Starting from SET
+	'glkwiki' => true,			// Starting from SET
 	'huwiki' => true,           // T126801
 	'jawiki' => true,           // Starting from SET
 	'kowiki' => true,           // Starting from SET
+	'lrcwiki' => true,			// Starting from SET
+	'mznwiki' => true,			// Starting from SET
 	'plwiki' => true,           // T128477
+	'pnbwiki' => true,			// Starting from SET
+	'pswiki' => true,			// Starting from SET
+	'sdwiki' => true,			// Starting from SET
+	'tcywiki' => true,			// Starting from SET
+	'ugwiki' => true,			// Starting from SET
+	'urwiki' => true,			// Starting from SET
 	'wuuwiki' => true,          // Starting from SET
 	'zh_classicalwiki' => true, // Starting from SET
 	'zh_yuewiki' => true,       // Starting from SET
@@ -13560,10 +13574,24 @@ $wgConf->settings = [
 	'mediawikiwiki' => 20160203000000,
 	'testwiki' => 20160203000000,
 	'test2wiki' => 20151215000000,
+	'arwiki' => 20160810000000,
+	'arzwiki' => 20160810000000,
+	'azbwiki' => 20160810000000,
+	'ckbwiki' => 20160810000000,
 	'enwiki' => 20160301000000,
+	'fawiki' => 20160810000000,
+	'glkwiki' => 20160810000000,
 	'huwiki' => 20160223000000,
 	'jawiki' => 20160510000000,
+	'lrcwiki' => 20160810000000,
+	'mznwiki' => 20160810000000,
 	'plwiki' => 20160301000000,
+	'pnbwiki' => 20160810000000,
+	'pswiki' => 20160810000000,
+	'sdwiki' => 20160810000000,
+	'tcywiki' => 20160810000000,
+	'ugwiki' => 20160810000000,
+	'urwiki' => 20160810000000,
 	'officewiki' => 20160303000000,
 ],
 
@@ -13709,8 +13737,23 @@ $wgConf->settings = [
 // this will need to be set true for 30 days (anon cache epoch).
 'wmgVisualEditorDisableForAnons' => [
 	'default' => false,
+
 	'enwiki' => true,
 	'eswiki' => true,
+
+	'arwiki' => true,
+	'arzwiki' => true,
+	'azbwiki' => true,
+	'ckbwiki' => true,
+	'fawiki' => true,
+	'glkwiki' => true,
+	'lrcwiki' => true,
+	'mznwiki' => true,
+	'pnbwiki' => true,
+	'pswiki' => true,
+	'sdwiki' => true,
+	'ugwiki' => true,
+	'urwiki' => true,
 ],
 
 // Whether VisualEditor should be enabled for a proportion of new accounts on a
