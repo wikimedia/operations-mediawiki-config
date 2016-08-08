@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee9d9f70_2ed47eec",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-08-08T20:12:14Z",
+      "side": 1,
+      "message": "13h UTC",
+      "revId": "a8cbce090db6f02b9fa9f4d0f9b8ce37bf870822",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee9d9f70_4e00e26d",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-08-08T20:12:14Z",
+      "side": 1,
+      "message": "21h UTC",
+      "revId": "a8cbce090db6f02b9fa9f4d0f9b8ce37bf870822",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee9d9f70_8efaca71",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-08-08T20:12:14Z",
+      "side": 1,
+      "message": "The initial request asks \"English Wikipedia and other projects if possible, since this will be a multilingual event\".\n\nYes, that\u0027s possible: delete the line 43 and the throttle rule will be valid for every wiki.",
+      "revId": "a8cbce090db6f02b9fa9f4d0f9b8ce37bf870822",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
