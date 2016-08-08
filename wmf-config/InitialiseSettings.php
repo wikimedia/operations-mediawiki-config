@@ -4331,6 +4331,7 @@ $wgConf->settings = [
 	'ckbwiki' => [ '', 'autoconfirmed', 'autopatrol', 'sysop' ], // T54533
 	'dewiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T94368
 	'enwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T126607, T57432
+	'fawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T140839
 	'frwiki' => [ '', 'autoconfirmed', 'editextendedsemiprotected', 'sysop' ], // T131109
 	'hewiki' => [ '', 'autoconfirmed', 'autopatrol',  'templateeditor' /* T102466 */, 'sysop' ], // T60207
 	'huwiki' => [ '', 'autoconfirmed', 'templateeditor', 'sysop' ], // T74055
@@ -4350,6 +4351,7 @@ $wgConf->settings = [
 'wgSemiprotectedRestrictionLevels' => [
 	'default' => [ 'autoconfirmed' ],
 	'+enwiki' => [ 'extendedconfirmed' ], // T126607
+	'+fawiki' => [ 'extendedconfirmed' ], // T140839
 	'+frwiki' => [ 'editextendedsemiprotected' ], // T132248
 ],
 
@@ -7850,6 +7852,7 @@ $wgConf->settings = [
 			'mergehistory' => true,
 			'protect' => true,
 			'undelete' => true,
+			'extendedconfirmed' => true,
 		], // T71411
 		'OTRS-member' => [ 'read' => true ], // T56368
 		'templateeditor' => [
@@ -7867,8 +7870,15 @@ $wgConf->settings = [
 			'protect' => true,
 			'suppressredirect'  => true,
 			'deletedtext'       => true,
-                        'deletedhistory' => true
+			'deletedhistory' => true,
+			'extendedconfirmed' => true,
 		], // T87558, T135370, T135725
+		'sysop' => [
+			'extendedconfirmed' => true,
+		],
+		'extendedconfirmed' => [
+			'extendedconfirmed' => true,
+		], // T140839
 	],
 	'+fawikibooks' => [
 		'autopatrolled' => [ 'autopatrol' => true ], // T111024
@@ -9205,6 +9215,7 @@ $wgConf->settings = [
 			'uploader', // T71171
 			'confirmed', // T87348
 			'patroller', // T118847
+			'extendedconfirmed', // T140839
 		]
 	],
 	'+fawikibooks' => [
@@ -9886,6 +9897,7 @@ $wgConf->settings = [
 			'uploader', // T71171
 			'confirmed', // T87348
 			'patroller', // T118847
+			'extendedconfirmed', // T140839
 		],
 	],
 	'+fawikibooks' => [
@@ -11520,8 +11532,15 @@ $wgConf->settings = [
 			[ APCOND_EDITCOUNT, 10 ],
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bureaucrat' ] ],
-		],
-	], // T71171
+		], // T71171
+		'extendedconfirmed' => [ '&',
+			[ APCOND_EDITCOUNT, 500 ],
+			[ APCOND_AGE, 30 * 86400 ], // 30 days * seconds in a day
+			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
+			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
+			[ '!', [ APCOND_INGROUPS, 'eliminator' ] ],
+		], // T140839
+	],
 	'trwiki' => [
 		'autoreview' => [
 			'&', // AND
