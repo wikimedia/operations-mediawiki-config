@@ -14351,7 +14351,7 @@ $wgConf->settings = [
 	],
 ],
 
-'wgMFMinervaUsePageActionBarV2' => [
+'wgMinervaUsePageActionBarV2' => [
 	'default' => false,
 	'ruwiki' => true,
 ],
