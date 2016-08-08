@@ -3223,7 +3223,7 @@ if ( $wmgUseOAuth ) {
 	};
 
 	$wgExtensionFunctions[] = function() {
-		global $wgDBname, $wgMWOAuthCentralWiki, $wgGroupPermissions;
+		global $wgDBname, $wgMWOAuthCentralWiki, $wgGroupPermissions, $wgOAuthGroupsToNotify;
 		if ( $wgDBname === $wgMWOAuthCentralWiki ) {
 			// Only needed on the central wiki.
 			$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
