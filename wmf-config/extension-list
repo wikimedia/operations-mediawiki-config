@@ -8,7 +8,7 @@ $IP/extensions/Calendar/extension.json
 $IP/extensions/Campaigns/extension.json
 $IP/extensions/Capiunto/extension.json
 $IP/extensions/Cards/extension.json
-$IP/extensions/CategoryTree/CategoryTree.php
+$IP/extensions/CategoryTree/extension.json
 $IP/extensions/CentralAuth/extension.json
 $IP/extensions/CentralNotice/CentralNotice.php
 $IP/extensions/CharInsert/extension.json
@@ -25,7 +25,7 @@ $IP/extensions/Collection/Collection.php
 $IP/extensions/CommonsMetadata/extension.json
 $IP/extensions/ConfirmEdit/extension.json
 $IP/extensions/ConfirmEdit/extension.json
-$IP/extensions/ContactPage/ContactPage.php
+$IP/extensions/ContactPage/extension.json
 $IP/extensions/ContentTranslation/extension.json
 $IP/extensions/ContributionTracking/extension.json
 $IP/extensions/CreditsSource/extension.json
@@ -38,7 +38,7 @@ $IP/extensions/Echo/Echo.php
 $IP/extensions/EducationProgram/EducationProgram.php
 $IP/extensions/Elastica/extension.json
 $IP/extensions/EventBus/extension.json
-$IP/extensions/EventLogging/EventLogging.php
+$IP/extensions/EventLogging/extension.json
 $IP/extensions/ExtensionDistributor/extension.json
 $IP/extensions/FeaturedFeeds/extension.json
 $IP/extensions/FlaggedRevs/FlaggedRevs.php
@@ -48,7 +48,7 @@ $IP/extensions/FundraisingTranslateWorkflow/extension.json
 $IP/extensions/Gadgets/extension.json
 $IP/extensions/GeoCrumbs/extension.json
 $IP/extensions/GeoData/GeoData.php
-$IP/extensions/GettingStarted/GettingStarted.php
+$IP/extensions/GettingStarted/extension.json
 $IP/extensions/GlobalBlocking/extension.json
 $IP/extensions/GlobalCssJs/extension.json
 $IP/extensions/GlobalUsage/extension.json
@@ -67,7 +67,7 @@ $IP/extensions/JsonConfig/JsonConfig.php
 $IP/extensions/Kartographer/extension.json
 $IP/extensions/LabeledSectionTransclusion/extension.json
 $IP/extensions/LandingCheck/extension.json
-$IP/extensions/LiquidThreads/LiquidThreads.php
+$IP/extensions/LiquidThreads/extension.json
 $IP/extensions/Listings/extension.json
 $IP/extensions/LocalisationUpdate/extension.json
 $IP/extensions/MapSources/extension.json
@@ -82,7 +82,7 @@ $IP/extensions/NavigationTiming/extension.json
 $IP/extensions/NewUserMessage/extension.json
 $IP/extensions/Nuke/extension.json
 $IP/extensions/OATHAuth/extension.json
-$IP/extensions/OAuth/OAuth.php
+$IP/extensions/OAuth/extension.json
 $IP/extensions/ORES/extension.json
 $IP/extensions/PageAssessments/extension.json
 $IP/extensions/PagedTiffHandler/PagedTiffHandler.php
@@ -120,7 +120,7 @@ $IP/extensions/TemplateSandbox/extension.json
 $IP/extensions/TextExtracts/extension.json
 $IP/extensions/Thanks/extension.json
 $IP/extensions/TimedMediaHandler/TimedMediaHandler.php
-$IP/extensions/timeline/Timeline.php
+$IP/extensions/timeline/extension.json
 $IP/extensions/TitleBlacklist/extension.json
 $IP/extensions/TocTree/extension.json
 $IP/extensions/TorBlock/extension.json
@@ -133,8 +133,7 @@ $IP/extensions/UploadsLink/extension.json
 $IP/extensions/UploadWizard/extension.json
 $IP/extensions/UrlShortener/extension.json
 $IP/extensions/UserMerge/extension.json
-$IP/extensions/VipsScaler/VipsScaler.php
-$IP/extensions/VipsScaler/VipsTest.php
+$IP/extensions/VipsScaler/extensions.json
 $IP/extensions/VisualEditor/extension.json
 $IP/extensions/WikidataPageBanner/extension.json
 $IP/extensions/WikiEditor/extension.json
