@@ -9417,8 +9417,8 @@ $wgConf->settings = [
 		'sysop' => [ 'autopatrolled', 'patroller', 'rollbacker', 'import', 'accountcreator' ], // T89346, T99491, T118934, T126950
 	],
 	'+mediawikiwiki' => [
-		'sysop' => [ 'autoreview' ],
-		'bureaucrat' => [ 'autoreview', 'transwiki', 'import', 'translationadmin' ],
+		'sysop' => [ 'autopatrolled' ],
+		'bureaucrat' => [ 'autopatrolled', 'transwiki', 'import', 'translationadmin' ],
 	],
 	'+metawiki' => [
 		'bureaucrat' => [ 'centralnoticeadmin', 'flood', 'uploader', 'translationadmin' ], // T48639, T110674
@@ -10107,8 +10107,8 @@ $wgConf->settings = [
 		'sysop' => [ 'autopatrolled', 'patroller', 'rollbacker', 'import', 'accountcreator' ], // T89346, T99491, T118934, T126950
 	],
 	'+mediawikiwiki' => [
-		'sysop' => [ 'autoreview' ],
-		'bureaucrat' => [ 'autoreview', 'transwiki', 'import', 'translationadmin' ],
+		'sysop' => [ 'autopatrolled' ],
+		'bureaucrat' => [ 'autopatrolled', 'transwiki', 'import', 'translationadmin' ],
 	],
 	'+metawiki' => [
 		'bureaucrat' => [ 'flood', 'translationadmin', 'centralnoticeadmin', 'uploader' ], // T39198, T52287, T110674
