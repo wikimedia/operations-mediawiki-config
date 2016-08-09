@@ -648,9 +648,6 @@ $wgAvailableRights[] = 'flow-hide';
 $wgAvailableRights[] = 'flow-delete';
 $wgAvailableRights[] = 'moodbar-admin'; // To allow global groups to include this right -AG
 
-// Enable gather-hidelist for global user groups - JRA 4-1-2015 T94652
-$wgAvailableRights[] = 'gather-hidelist';
-
 // Checkuser
 $wgGrantPermissions['checkuser']['checkuser'] = true;
 $wgGrantPermissions['checkuser']['checkuser-log'] = true;
