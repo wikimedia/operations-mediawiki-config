@@ -8298,6 +8298,9 @@ $wgConf->settings = [
 		'steward' => [
 			'userrights-interwiki' => true,  // new steward stuff, yay 2007-12-27
 		],
+		'translationadmin' => [
+			'autopatrol' => true, // T142123
+                ],
 		'uploader' => [ // T52287
 			'upload' => true,
 			'reupload' => true,
