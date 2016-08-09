@@ -21,3 +21,20 @@ $wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
 $wgMFSpecialCaseMainPage = $wmgMFSpecialCaseMainPage;
 
 $wgMFMobileFormatterHeadings = $wmgMFMobileFormatterHeadings;
+
+// T49647
+$wgHooks['EnterMobileMode'][] = function() {
+	global $wgCentralAuthCookieDomain, $wgHooks;
+
+	if ( preg_match( '\.wikimedia\.org$', $wgCentralAuthCookieDomain ) ) {
+		$wgCentralAuthCookieDomain = preg_replace( '\.wikimedia\.org$', '.m.wikimedia.org',
+			$wgCentralAuthCookieDomain );
+	}
+	$wgHooks['WebResponseSetCookie'][] = function ( &$name, &$value, &$expire, &$options ) {
+		if ( isset( $options['domain'] ) && preg_match( '\.wikimedia\.org$', $options['domain'] ) ) {
+			$options['domain'] = preg_replace( '\.wikimedia\.org$', '.m.wikimedia.org',
+				$options['domain'] );
+		}
+	};
+};
+
