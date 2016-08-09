@@ -966,6 +966,26 @@ $wgTrustedXffFile = "$wmfConfigDir/trusted-xff.php";
 
 if ( $wmgUseContactPage ) {
 	include( $IP . '/extensions/ContactPage/ContactPage.php' );
+	$wgContactConfig['default'] = [
+		'RecipientUser' => null,
+		'SenderEmail' => null,
+		'SenderName' => 'Contact Form on ' . $wgSitename,
+		'RequireDetails' => false,
+		'IncludeIP' => false,
+		'DisplayFormat' => 'table',
+		'RLModules' => [],
+		'RLStyleModules' => [],
+		'AdditionalFields' => [
+			Text' => [
+				'label-message' => 'emailmessage',
+				'type' => 'textarea',
+				'rows' => 20,
+				'cols' => 80,
+				'required' => true,
+			],
+		],
+	];
+
 	$wgContactConfig['default'] = array_merge( $wgContactConfig['default'], $wmgContactPageConf );
 
 	if ( $wgDBname === 'metawiki' ) {
