@@ -673,6 +673,7 @@ $wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $acti
 
 if ( $wmgUseTimeline ) {
 	include( $IP . '/extensions/timeline/Timeline.php' );
+	$wgTimelineSettings = new stdClass; // Transitional, pending 303303
 	if ( $wgDBname == 'testwiki' || $wgDBname == 'mlwiki' ) {
 		// FreeSansWMF has been generated from FreeSans and FreeSerif by using this script with fontforge:
 		// Open("FreeSans.ttf");
