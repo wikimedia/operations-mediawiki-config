@@ -19,19 +19,15 @@ case 'labtestwiki' :
 unset( $wgSpecialPages['SMWAdmin'] );
 
 require_once( "$IP/extensions/LdapAuthentication/LdapAuthentication.php" );
-if ( $wgDisableAuthManager ) {
-	$wgAuth = new LdapAuthenticationPlugin();
-} else {
-	$wgAuthManagerAutoConfig['primaryauth'] += [
-		LdapPrimaryAuthenticationProvider::class => [
-			'class' => LdapPrimaryAuthenticationProvider::class,
-			'args' => [ [
-				'authoritative' => true, // don't allow local non-LDAP accounts
-			] ],
-			'sort' => 50, // must be smaller than local pw provider
-		],
-	];
-}
+$wgAuthManagerAutoConfig['primaryauth'] += [
+	LdapPrimaryAuthenticationProvider::class => [
+		'class' => LdapPrimaryAuthenticationProvider::class,
+		'args' => [ [
+			'authoritative' => true, // don't allow local non-LDAP accounts
+		] ],
+		'sort' => 50, // must be smaller than local pw provider
+	],
+];
 $wgLDAPDomainNames = [ 'labs'];
 switch( $wgDBname ) {
 case 'labswiki' :

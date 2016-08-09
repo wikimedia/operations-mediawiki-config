@@ -1508,35 +1508,6 @@ wfLoadExtension( 'DismissableSiteNotice' );
 $wgDismissableSiteNoticeForAnons = true; // T59732
 $wgMajorSiteNoticeID = '2';
 
-// pre-Authmanager code for logging failed login attempts
-$wgHooks['LoginAuthenticateAudit'][] = function( $user, $pass, $retval ) {
-	if ( $user->isAllowed( 'delete' ) && $retval != LoginForm::SUCCESS ) {
-		global $wgRequest;
-		$headers = apache_request_headers();
-
-		switch( $retval ) {
-		case LoginForm::WRONG_PASS:
-		case LoginForm::EMPTY_PASS:
-			$bit = 'Bad login attempt';
-			break;
-		case LoginForm::RESET_PASS:
-			$bit = 'Login with temporary password';
-			break;
-		default:
-			$bit = '???';
-		}
-
-		$logger = LoggerFactory::getInstance( 'badpass' );
-		$logger->info( "$bit for sysop '" .
-			$user->getName() . "' from " . $wgRequest->getIP() .
-			# " - " . serialize( apache_request_headers() )
-			" - " . @$headers['X-Forwarded-For'] .
-			' - ' . @$headers['User-Agent']
-		);
-	}
-	return true;
-};
-
 // log failed login attempts
 $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $username ) {
 	$guessed = false;
@@ -1560,31 +1531,6 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $u
 	}
 };
 
-// Estimate users affected if we increase the minimum
-// password length to 8 for privileged groups, i.e.
-// T104370, T104371, T104372, T104373
-$wgHooks['LoginAuthenticateAudit'][] = function( $user, $pass, $retval ) {
-	global $wmgUseCentralAuth;
-	if ( $retval == LoginForm::SUCCESS
-		&& strlen( $pass ) < 8
-	) {
-		if ( $wmgUseCentralAuth ) {
-			$central = CentralAuthUser::getInstance( $user );
-			if ( $central->exists() && array_intersect(
-				[ 'staff', 'sysadmin', 'steward', 'ombudsman', 'checkuser' ],
-				array_merge(
-					$central->getLocalGroups(),
-					$central->getGlobalGroups()
-				)
-			) ) {
-				$logger = LoggerFactory::getInstance( 'badpass' );
-				$logger->info( "Login by privileged user '{$user->getName()}' with too short password" );
-			}
-		}
-	}
-	return true;
-};
-
 $wgHooks['PrefsEmailAudit'][] = function( $user, $old, $new ) {
 	if ( $user->isAllowed( 'delete' ) ) {
 		global $wgRequest;
@@ -1594,25 +1540,6 @@ $wgHooks['PrefsEmailAudit'][] = function( $user, $old, $new ) {
 		$logger->info( "Email changed in prefs for sysop '" .
 			$user->getName() .
 			"' from '$old' to '$new'" .
-			" - " . $wgRequest->getIP() .
-			# " - " . serialize( apache_request_headers() )
-			" - " . @$headers['X-Forwarded-For'] .
-			' - ' . @$headers['User-Agent']
-		);
-	}
-	return true;
-};
-
-// pre-AuthManager code to log sysop password changes
-$wgHooks['PrefsPasswordAudit'][] = function( $user, $pass, $status ) {
-	if ( $user->isAllowed( 'delete' ) ) {
-		global $wgRequest;
-		$headers = apache_request_headers();
-
-		$logger = LoggerFactory::getInstance( 'badpass' );
-		$logger->info( "Password change in prefs for sysop '" .
-			$user->getName() .
-			"': $status" .
 			" - " . $wgRequest->getIP() .
 			# " - " . serialize( apache_request_headers() )
 			" - " . @$headers['X-Forwarded-For'] .
