@@ -1674,7 +1674,7 @@ if ( $wmfRealm == 'labs' && file_exists( '/etc/wikimedia-transcoding' ) ) {
 
 // Banner notice system
 if ( $wmgUseCentralNotice ) {
-	include "$IP/extensions/CentralNotice/CentralNotice.php";
+	wfLoadExtension( 'CentralNotice' );
 
 	// for DNS prefetching
 	$wgCentralHost = "//{$wmfHostnames['meta']}";
@@ -1696,15 +1696,11 @@ if ( $wmgUseCentralNotice ) {
 	// Allow only these domains to access CentralNotice data through the reporter
 	$wgNoticeReporterDomains = 'https://donate.wikimedia.org';
 
-	$wgNoticeProject = $wmgNoticeProject;
-
 	$wgCentralDBname = 'metawiki';
 	if ( $wmfRealm == 'production' && $wgDBname == 'testwiki' ) {
 		# test.wikipedia.org has its own central database:
 		$wgCentralDBname = 'testwiki';
 	}
-
-	$wgCentralNoticeLoader = $wmgCentralNoticeLoader;
 
 	$wgNoticeInfrastructure = false;
 	if ( $wgDBname == 'metawiki' ) {
