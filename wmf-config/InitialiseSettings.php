@@ -16187,6 +16187,7 @@ $wgConf->settings = [
 	'eowiki' => true,
 	'guwiki' => true,
 	'htwiki' => true,
+	'knwiki' => true,
 	'lvwiki' => true,
 	'napwiki' => true,
 	'nnwiki' => true,
