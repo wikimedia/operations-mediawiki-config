@@ -273,6 +273,9 @@ if ( $wmgUseEcho && $wmgUseCentralAuth ) {
 	$wgEchoSharedTrackingCluster = false;
 }
 
+// Enabling thank-you-edit on beta for testing T128249. Still disabled in prod.
+$wgEchoNotifications['thank-you-edit']['notify-type-availability']['web'] = true;
+
 if ( $wmgUseGraph ) {
 	// **** THIS LIST MUST MATCH puppet/hieradata/labs/deployment-prep/common.yaml ****
 	// See https://www.mediawiki.org/wiki/Extension:Graph#External_data
