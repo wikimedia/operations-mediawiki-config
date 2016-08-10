@@ -13825,31 +13825,6 @@ $wgConf->settings = [
 
 	'enwiki' => true,
 	'eswiki' => true,
-
-	'aswiki' => true,
-	'bhwiki' => true,
-	'bnwiki' => true,
-	'bowiki' => true,
-	'bpywiki' => true,
-	'dzwiki' => true,
-	'gomwiki' => true,
-	'guwiki' => true,
-	'hiwiki' => true,
-	'knwiki' => true,
-	'kswiki' => true,
-	'maiwiki' => true,
-	'mlwiki' => true,
-	'mrwiki' => true,
-	'newiki' => true,
-	'newwiki' => true,
-	'orwiki' => true,
-	'pawiki' => true,
-	'piwiki' => true,
-	'sawiki' => true,
-	'siwiki' => true,
-	'tawiki' => true,
-	'tewiki' => true,
-
 ],
 
 // Whether VisualEditor should be enabled for a proportion of new accounts on a
