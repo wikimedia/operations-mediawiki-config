@@ -4375,12 +4375,12 @@ $wgConf->settings = [
 	'votewiki' => false, // T61702
 ],
 
-'wmgCentralNoticeLoader' => [
+'wgCentralNoticeLoader' => [
 	'default' => true, // *gulp* -- bv 2008-11-03
 ],
 
 // For CentralNotice project pickers
-'wmgNoticeProject' => [
+'wgNoticeProject' => [
 	'advisorywiki' => 'wikimedia',
 	'default' => '$site',
 	'commonswiki' => 'commons',
