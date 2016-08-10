@@ -16183,6 +16183,7 @@ $wgConf->settings = [
 
 'wmgUseArticlePlaceholder' => [
 	'default' => false,
+	'cywiki' => true,
 	'eowiki' => true,
 	'guwiki' => true,
 	'htwiki' => true,
