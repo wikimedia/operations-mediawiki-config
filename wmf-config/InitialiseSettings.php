@@ -16653,6 +16653,9 @@ $wgConf->settings = [
 	'eswiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
 	'itwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
 	'frwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
+	'ptwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
+	'ruwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
+	'jawiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
 ],
 
 // Enable interwiki search by language detection. The list of language
@@ -16668,6 +16671,9 @@ $wgConf->settings = [
 	'eswiki' => true,
 	'itwiki' => true,
 	'frwiki' => true,
+	'ptwiki' => true,
+	'ruwiki' => true,
+	'jawiki' => true,
 ],
 
 'wmgCirrusSearchTextcatLanguages' => [
@@ -16688,6 +16694,16 @@ $wgConf->settings = [
 	'dewiki' => [
 		'de', 'en', 'zh', 'el', 'ru', 'ar', 'hi', 'th',
 		'ko', 'ja',
+	],
+	'ptwiki' => [
+		'pt', 'en', 'ru', 'he', 'ar', 'zh', 'ko', 'el',
+	],
+	'ruwiki' => [
+		'ru', 'en', 'uk', 'ka', 'hy', 'ja', 'ar', 'he',
+		'zh',
+	],
+	'jawiki' => [
+		'ja', 'en', 'ru', 'ko', 'ar', 'he',
 	],
 ],
 
