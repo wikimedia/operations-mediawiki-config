@@ -15687,7 +15687,7 @@ $wgConf->settings = [
 	'nonglobal' => false,
 ],
 'wmgEchoShowFooterNotice' => [
-	'default' => false,
+	'default' => true,
 ],
 'wmgEchoFooterNoticeURL' => [
 	'default' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3',
