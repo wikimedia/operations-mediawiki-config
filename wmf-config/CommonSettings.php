@@ -2755,14 +2755,6 @@ if ( $wmgUseEcho ) {
 		$wgEchoSharedTrackingCluster = 'extension1';
 	}
 
-	// Temporarily disable thank-you-edit notifications (T128249)
-	if ( isset( $wgDefaultNotifyTypeAvailability ) ) {
-		$wgEchoNotifications['thank-you-edit']['notify-type-availability']['web'] = false;
-	} else {
-		// Backwards compatibility, remove after 1.27.0-wmf.22 is deployed everywhere
-		$wgEchoDefaultNotificationTypes['thank-you-edit']['web'] = false;
-	}
-
 	// Default user options: subscriptions
 	foreach ( $wmgEchoDefaultUserSubscriptions as $where => $notifications ) {
 		foreach ( $notifications as $notification => $value ) {
