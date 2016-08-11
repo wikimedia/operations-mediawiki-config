@@ -11,7 +11,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
 		$this->assertEquals( 'unittest', $config['wgCirrusSearchDefaultCluster'] );
-		$this->assertCount( 3, $config['wgCirrusSearchClusters'] );
+		$this->assertCount( 2, $config['wgCirrusSearchClusters'] );
 
 		// testwiki writes to eqiad and codfw
 		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
@@ -29,10 +29,10 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
-		$this->assertCount( 3, $config['wgCirrusSearchClusters'] );
-		$this->assertCount( 3, $config['wgCirrusSearchShardCount'] );
-		$this->assertCount( 3, $config['wgCirrusSearchReplicas'] );
-		$this->assertCount( 3, $config['wgCirrusSearchClientSideConnectTimeout'] );
+		$this->assertCount( 2, $config['wgCirrusSearchClusters'] );
+		$this->assertCount( 2, $config['wgCirrusSearchShardCount'] );
+		$this->assertCount( 2, $config['wgCirrusSearchReplicas'] );
+		$this->assertCount( 2, $config['wgCirrusSearchClientSideConnectTimeout'] );
 
 		foreach ( array_keys ( $config['wgCirrusSearchClusters'] ) as $cluster ) {
 			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchShardCount'] );

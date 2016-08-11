@@ -13,7 +13,6 @@ $wgCirrusSearchMasterTimeout = '2m';
 $wgCirrusSearchClusters = [
 	'eqiad' => $wmfAllServices['eqiad']['search'],
 	'codfw' => $wmfAllServices['codfw']['search'],
-	'labsearch' => [ '10.64.37.14' ], // nobelium.eqiad.wmnet
 ];
 if ( defined( 'HHVM_VERSION' ) ) {
 	$wgCirrusSearchClusters['eqiad'] = array_map( function ( $host ) {
@@ -42,7 +41,6 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgCirrusSearchClusters = [
 		'eqiad' => $wmfAllServices['eqiad']['search'],
 		'codfw' => $wmfAllServices['codfw']['search'],
-		'labsearch' => [ '10.64.37.14' ], // nobelium.eqiad.wmnet
 	];
 }
 
@@ -88,36 +86,24 @@ $wgCirrusSearchEnableSearchLogging = true;
 $wgCirrusSearchShardCount = [
 	'eqiad' => $wmgCirrusSearchShardCount,
 	'codfw' => $wmgCirrusSearchShardCount,
-	'labsearch' => array_map( function() { return 1; }, $wmgCirrusSearchShardCount ),
 ];
 
-// Disable replicas for the labsearch cluster, it's only a single machine
-if ( isset( $wmgCirrusSearchReplicas['eqiad'] ) ) {
-	$wgCirrusSearchReplicas = $wmgCirrusSearchReplicas + [
-		'labsearch' => array_map( function() { return 'false'; }, $wmgCirrusSearchReplicas['eqiad'] ),
-	];
-} else {
+if (! isset( $wmgCirrusSearchReplicas['eqiad'] ) ) {
 	$wgCirrusSearchReplicas = [
 		'eqiad' => $wmgCirrusSearchReplicas,
 		'codfw' => $wmgCirrusSearchReplicas,
-		'labsearch' => array_map( function() { return 'false'; }, $wmgCirrusSearchReplicas ),
 	];
 }
 
-// 5 second timeout for local cluster, 10 seconds for remote. 2 second timeout
-// for the labsearch cluster.
+// 5 second timeout for local cluster, 10 seconds for remote.
 $wgCirrusSearchClientSideConnectTimeout = [
 	'eqiad' => $wmfDatacenter === 'eqiad' ? 5 : 10,
 	'codfw' => $wmfDatacenter === 'codfw' ? 5 : 10,
-	'labsearch' => 2,
 ];
 
-// Drop delayed jobs for the labsearch cluster after only 10 minutes to keep them
-// from filling up the job queue.
 $wgCirrusSearchDropDelayedJobsAfter = [
 	'eqiad' => $wgCirrusSearchDropDelayedJobsAfter,
 	'codfw' => $wgCirrusSearchDropDelayedJobsAfter,
-	'labsearch' => 10 * 60, // ten minutes
 ];
 
 $wgCirrusSearchRecycleCompletionSuggesterIndex = $wmgCirrusSearchRecycleCompletionSuggesterIndex;
