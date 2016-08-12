@@ -183,6 +183,9 @@ if ( $wmgUseCORS ) {
 	];
 }
 
+// Temporary override to test T68699 on Beta Cluster.  Remove when in production.
+$wgExtendedLoginCookieExpiration = 365 * 86400;
+
 if ( file_exists( "$wmfConfigDir/extension-list-labs" ) ) {
 	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-labs";
 }
