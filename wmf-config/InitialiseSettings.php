@@ -15990,11 +15990,6 @@ $wgConf->settings = [
 	'wikivoyage' => true,
 ],
 
-'wmgUseSlippyMap' => [
-	'default' => false,
-	'wikivoyage' => false,
-],
-
 'wmgUseCreditsSource' => [
 	'default' => false,
 	'wikivoyage' => true,
