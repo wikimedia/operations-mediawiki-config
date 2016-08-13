@@ -2874,10 +2874,6 @@ if ( $wmgUseMapSources ) {
 	require_once( "$IP/extensions/MapSources/MapSources.php" );
 }
 
-if ( $wmgUseSlippyMap ) {
-	require_once( "$IP/extensions/OpenStreetMapSlippyMap/SlippyMap.php" );
-}
-
 if ( $wmgUseCreditsSource ) {
 	require_once( "$IP/extensions/CreditsSource/CreditsSource.php" );
 }
