@@ -24,7 +24,7 @@ $IP/extensions/CodeReview/extension.json
 $IP/extensions/Collection/Collection.php
 $IP/extensions/CommonsMetadata/extension.json
 $IP/extensions/ConfirmEdit/extension.json
-$IP/extensions/ConfirmEdit/extension.json
+$IP/extensions/ConfirmEdit/FancyCaptcha/extension.json
 $IP/extensions/ContactPage/extension.json
 $IP/extensions/ContentTranslation/extension.json
 $IP/extensions/ContributionTracking/extension.json
