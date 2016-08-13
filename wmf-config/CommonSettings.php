@@ -1759,7 +1759,7 @@ if ( $wmgUseCentralNotice ) {
 }
 
 // Load our site-specific l10n extension
-wfLoadExtension( 'WikimediaMessages.php' );
+wfLoadExtension( 'WikimediaMessages' );
 
 if ( $wgDBname == 'enwiki' ) {
 	// Please don't interfere with our hundreds of wikis ability to manage themselves.
