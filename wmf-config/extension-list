@@ -133,7 +133,7 @@ $IP/extensions/UploadsLink/extension.json
 $IP/extensions/UploadWizard/extension.json
 $IP/extensions/UrlShortener/extension.json
 $IP/extensions/UserMerge/extension.json
-$IP/extensions/VipsScaler/extensions.json
+$IP/extensions/VipsScaler/extension.json
 $IP/extensions/VisualEditor/extension.json
 $IP/extensions/WikidataPageBanner/extension.json
 $IP/extensions/WikiEditor/extension.json
