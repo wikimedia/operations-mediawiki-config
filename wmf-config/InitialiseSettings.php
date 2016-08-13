@@ -17153,7 +17153,7 @@ $wgConf->settings = [
 ],
 
 // WikidataPageBanner extension (T98029)
-'wmgUseWPB' => [
+'wmgUseWikidataPageBanner' => [
 	'default' => false,
 	'enwikivoyage' => true,
 	'eswikivoyage' => true, // T125000
@@ -17164,6 +17164,7 @@ $wgConf->settings = [
 	'cawiki' => true, // T114392
 	'enwiki' => true, // T101108
 ],
+
 'wgWPBSkinBlacklist' => [
 	'default' => [],
 	'enwiki' => [ 'monobook', 'modern', 'vector', 'cologneblue', 'minerva' ], // T101108
@@ -17178,6 +17179,7 @@ $wgConf->settings = [
 	'default' => true,
 	'enwiki' => false, // T101108
 ],
+
 'wgWPBNamespaces' => [
 	'default' => true, // T129099
 	'frwikivoyage' => [ NS_MAIN, NS_USER, NS_PROJECT, NS_HELP ], // T123084
@@ -17186,6 +17188,7 @@ $wgConf->settings = [
 	'ukwikivoyage' => [ NS_MAIN, NS_USER, NS_PROJECT ], // T121999
 	'cawiki' => [ 102, NS_USER ], // T114392
 ],
+
 'wgWPBBannerProperty' => [
 	'default' => 'P948',
 ],
