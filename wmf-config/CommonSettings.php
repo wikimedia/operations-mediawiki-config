@@ -1988,7 +1988,7 @@ if ( $wmgUseMassMessage ) {
 }
 
 if ( $wmgUseSandboxLink ) {
-	wfLoadExtenson( 'SandboxLink' );
+	wfLoadExtension( 'SandboxLink' );
 }
 
 if ( $wmgUseUploadWizard ) {
