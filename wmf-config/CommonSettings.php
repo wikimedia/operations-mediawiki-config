@@ -1165,11 +1165,11 @@ include( $IP . '/extensions/Renameuser/Renameuser.php' );
 $wgGroupPermissions['bureaucrat']['renameuser'] = $wmgAllowLocalRenameuser;
 
 if ( $wmgUseSpecialNuke ) {
-	include( $IP . '/extensions/Nuke/Nuke.php' );
+	wfLoadExtension( 'Nuke' );
 }
 
 if ( $wmgUseTorBlock ) {
-	include( "$IP/extensions/TorBlock/TorBlock.php" );
+	wfLoadExtension( 'TorBlock' );
 	$wgTorLoadNodes = false;
 	$wgTorIPs = [ '91.198.174.232', '208.80.152.2', '208.80.152.134' ];
 	$wgTorAutoConfirmAge = 90 * 86400;
@@ -1270,8 +1270,8 @@ if ( isset( $_REQUEST['captchabypass'] ) && $_REQUEST['captchabypass'] == $wmgCa
 }
 
 if ( $wmgEnableCaptcha ) {
-	require( "$IP/extensions/ConfirmEdit/ConfirmEdit.php" );
-	require( "$IP/extensions/ConfirmEdit/FancyCaptcha.php" );
+	wfLoadExtension( 'ConfirmEdit' );
+	wfLoadExtension( 'ConfirmEdit/FancyCaptcha' );
 	$wgGroupPermissions['autoconfirmed']['skipcaptcha'] = true;
 	$wgCaptchaFileBackend = 'global-multiwrite';
 	$wgCaptchaSecret = $wmgCaptchaSecret;
@@ -1311,7 +1311,7 @@ $wgInterwikiCache = include_once( "$wmfConfigDir/interwiki.php" );
 $wgEnotifUseJobQ = true;
 
 // Username spoofing / mixed-script / similarity check detection
-include $IP . '/extensions/AntiSpoof/AntiSpoof.php';
+wfLoadExtension( 'AntiSpoof' );
 
 // For transwiki import
 ini_set( 'user_agent', 'Wikimedia internal server fetcher (noc@wikimedia.org' );
@@ -1471,7 +1471,7 @@ if ( $wmgUseCentralAuth ) {
 // Config for GlobalCssJs
 // Only enable on CentralAuth wikis
 if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
-	require_once( "$IP/extensions/GlobalCssJs/GlobalCssJs.php" );
+	wfLoadExtension( 'GlobalCssJs' );
 
 	// Disable site-wide global css/js
 	$wgUseGlobalSiteCssJs = false;
@@ -1489,15 +1489,14 @@ if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
 }
 
 if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
-	require_once "$IP/extensions/GlobalUserPage/GlobalUserPage.php";
+	wfLoadExtension( 'GlobalUserPage' );
 	$wgGlobalUserPageAPIUrl = 'https://meta.wikimedia.org/w/api.php';
 	$wgGlobalUserPageDBname = 'metawiki';
 	$wgHooks['GlobalUserPageWikis'][] = 'wmfCentralAuthWikiList';
 }
 
 if ( $wmgUseApiFeatureUsage ) {
-	require_once "$IP/extensions/Elastica/Elastica.php";
-	require_once "$IP/extensions/ApiFeatureUsage/ApiFeatureUsage.php";
+	wfLoadExtension( 'ApiFeatureUsage' );
 	$wgApiFeatureUsageQueryEngineConf = [
 		'class' => 'ApiFeatureUsageQueryEngineElastica',
 		'serverList' => $wmfLocalServices['search'],
@@ -1505,7 +1504,7 @@ if ( $wmgUseApiFeatureUsage ) {
 }
 
 // taking it live 2006-12-15 brion
-require( "$IP/extensions/DismissableSiteNotice/DismissableSiteNotice.php" );
+wfLoadExtension( 'DismissableSiteNotice' );
 $wgDismissableSiteNoticeForAnons = true; // T59732
 $wgMajorSiteNoticeID = '2';
 
@@ -1879,10 +1878,10 @@ $wgAbuseFilterEmergencyDisableCount = $wmgAbuseFilterEmergencyDisableCount;
 $wgAbuseFilterEmergencyDisableAge = $wmgAbuseFilterEmergencyDisableAge;
 
 if ( $wmgUsePdfHandler ) {
-	include ( "$IP/extensions/PdfHandler/PdfHandler.php" );
+	wfLoadExtension( 'PdfHandler' );
 }
 
-require( "$IP/extensions/WikiEditor/WikiEditor.php" );
+wfLoadExtension( 'WikiEditor' );
 
 // Disable experimental things
 $wgWikiEditorFeatures['preview'] =
@@ -1906,7 +1905,7 @@ $wgLocalisationUpdateRepositories['local'] = [
 ];
 
 if ( $wmgEnableLandingCheck ) {
-	require_once(  "$IP/extensions/LandingCheck/LandingCheck.php" );
+	wfLoadExtension( 'LandingCheck' );
 
 	$wgPriorityCountries = [
 		// === Fundraising Chapers
@@ -1926,7 +1925,7 @@ if ( $wmgEnableLandingCheck ) {
 }
 
 if ( $wmgEnableFundraiserLandingPage ) {
-	require_once( "$IP/extensions/FundraiserLandingPage/FundraiserLandingPage.php" );
+	wfLoadExtension( 'FundraiserLandingPage' );
 }
 
 if ( $wmgUseLiquidThreads || $wmgLiquidThreadsFrozen ) {
@@ -1940,7 +1939,7 @@ if ( $wmgDonationInterface ) {
 }
 
 if ( $wmgUseGlobalUsage ) {
-	require_once( "$IP/extensions/GlobalUsage/GlobalUsage.php" );
+	wfLoadExtension( 'GlobalUsage' );
 	$wgGlobalUsageDatabase = 'commonswiki';
 	$wgGlobalUsageSharedRepoWiki = 'commonswiki';
 	$wgGlobalUsagePurgeBacklinks = true;
@@ -1974,7 +1973,7 @@ $wgHooks['EmailUser'][] = function ( &$to, &$from, &$subject, &$text ) {
 
 // ContributionTracking for handling PayPal redirects
 if ( $wgUseContributionTracking ) {
-	include( "$IP/extensions/ContributionTracking/ContributionTracking.php" );
+	wfLoadExtension( 'ContributionTracking' );
 	include( "$wmfConfigDir/contribution-tracking-setup.php" );
 	$wgContributionTrackingPayPalIPN = "https://civicrm.wikimedia.org/fundcore_gateway/paypal";
 	$wgContributionTrackingPayPalRecurringIPN = "https://civicrm.wikimedia.org/IPNListener_Recurring.php";
@@ -1992,7 +1991,7 @@ if ( $wmgUseMassMessage ) {
 }
 
 if ( $wmgUseSandboxLink ) {
-	require_once "$IP/extensions/SandboxLink/SandboxLink.php";
+	wfLoadExtenson( 'SandboxLink' );
 }
 
 if ( $wmgUseUploadWizard ) {
@@ -2132,7 +2131,7 @@ if ( $wmgUseBetaFeatures ) {
 }
 
 if ( $wmgUseCommonsMetadata ) {
-	require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
+	wfLoadExtension( 'CommonsMetadata' );
 	$wgCommonsMetadataSetTrackingCategories = true;
 	$wgCommonsMetadataForceRecalculate = false;
 }
@@ -2301,7 +2300,7 @@ if ( $wmgUseVisualEditor ) {
 
 if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
 	// TemplateData enabled for all wikis - 2014-09-29
-	require_once( "$IP/extensions/TemplateData/TemplateData.php" );
+	wfLoadExtension( 'TemplateData' );
 	// TemplateData GUI enabled for all wikis - 2014-11-06
 	$wgTemplateDataUseGUI = true;
 }
@@ -2313,7 +2312,7 @@ if ( $wmgUseGoogleNewsSitemap ) {
 }
 
 if ( $wmgUseCLDR ) {
-	require_once( "$IP/extensions/cldr/cldr.php" );
+	wfLoadExtension( 'cldr' );
 }
 
 # APC not available in CLI mode
@@ -2328,23 +2327,23 @@ $wgStyleVersion .= '-4';
 // DO NOT DISABLE WITHOUT CONTACTING PHILIPPE / LEGAL!
 // Installed by Andrew, 2011-04-26
 if ( $wmgUseDisableAccount ) {
-	require_once( "$IP/extensions/DisableAccount/DisableAccount.php" );
+	wfLoadExtension( 'DisableAccount' );
 	$wgGroupPermissions['bureaucrat']['disableaccount'] = true;
 }
 
 if ( $wmgUseIncubator ) {
-	require_once( "$IP/extensions/WikimediaIncubator/WikimediaIncubator.php" );
+	wfLoadExtension( 'WikimediaIncubator' );
 	$wmincClosedWikis = $wgSiteMatrixClosedSites;
 }
 
 if ( $wmgUseWikiLove ) {
-	require_once( "$IP/extensions/WikiLove/WikiLove.php" );
+	wfLoadExtension( 'WikiLove' );
 	$wgWikiLoveLogging = true;
 	$wgDefaultUserOptions['wikilove-enabled'] = 1;
 }
 
 if ( $wmgUseGuidedTour || $wmgUseGettingStarted ) {
-	require_once( "$IP/extensions/GuidedTour/GuidedTour.php" );
+	wfLoadExtension( 'GuidedTour' );
 }
 
 if ( $wmgUseMoodBar ) {
@@ -2359,7 +2358,7 @@ if ( $wmgUseMoodBar ) {
 }
 
 if ( $wmgUseMobileApp ) {
-	require_once( "$IP/extensions/MobileApp/MobileApp.php" );
+	wfLoadExtension( 'MobileApp' );
 }
 
 # Mobile related configuration
@@ -2379,7 +2378,7 @@ if ( $wmgEnableTextExtracts ) {
 }
 
 if ( $wmgUseSubPageList3 ) {
-	include( "$IP/extensions/SubPageList3/SubPageList3.php" );
+	wfLoadExtension( 'SubPageList3' );
 }
 
 // Serve 'Powered by MediaWiki' badge from /static/images instead of
@@ -2440,7 +2439,7 @@ if ( $wmgUseBabel ) {
 }
 
 if ( $wmgUseBounceHandler ) {
-	require_once "$IP/extensions/BounceHandler/BounceHandler.php";
+	wfLoadExtension( 'BounceHandler' );
 	// $wmgVERPsecret is set in PrivateSettings.php
 	$wgVERPsecret = $wmgVERPsecret;
 	$wgVERPdomainPart = 'wikimedia.org';
@@ -2599,13 +2598,12 @@ if ( $wmgUseTranslationNotifications ) {
 
 if ( $wmgUseCleanChanges ) {
 	$wgDefaultUserOptions['usenewrc'] = 1;
-	require_once( "$IP/extensions/CleanChanges/CleanChanges.php" );
+	wfLoadExtension( 'CleanChanges' );
 	$wgCCTrailerFilter = true;
 }
 
 if ( $wmgUseVips ) {
-	include( "$IP/extensions/VipsScaler/VipsScaler.php" );
-	include( "$IP/extensions/VipsScaler/VipsTest.php" );
+	wfLoadExtension( 'VipsScaler' );
 	$wgVipsThumbnailerHost = '10.2.1.21';
 	$wgVipsOptions = [
 		[
@@ -2627,12 +2625,12 @@ if ( $wmgUseVips ) {
 }
 
 if ( $wmgUseShortUrl ) {
-	require_once( "$IP/extensions/ShortUrl/ShortUrl.php" );
+	wfLoadExtension( 'ShortUrl' );
 	$wgShortUrlTemplate = "/s/$1";
 }
 
 if ( $wmgUseFeaturedFeeds ) {
-	require_once( "$IP/extensions/FeaturedFeeds/FeaturedFeeds.php" );
+	wfLoadExtension( 'FeaturedFeeds' );
 	require_once( "$wmfConfigDir/FeaturedFeedsWMF.php" );
 }
 
@@ -2644,7 +2642,7 @@ if ( $wmgEnablePageTriage ) {
 }
 
 if ( $wmgEnableInterwiki ) {
-	require_once( "$IP/extensions/Interwiki/Interwiki.php" );
+	wfLoadExtension( 'Interwiki' );
 	$wgInterwikiViewOnly = true;
 }
 
@@ -2762,7 +2760,7 @@ if ( $wmgUseEcho ) {
 }
 
 if ( $wmgUseThanks ) {
-	require_once( "$IP/extensions/Thanks/Thanks.php" );
+	wfLoadExtension( 'Thanks' );
 }
 
 if ( $wmgUseFlow && $wmgUseParsoid ) {
@@ -2813,7 +2811,7 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 }
 
 if ( $wmgUseDisambiguator ) {
-	require_once( "$IP/extensions/Disambiguator/Disambiguator.php" );
+	wfLoadExtension( 'Disambiguator' );
 }
 
 if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgZeroPortal ) {
@@ -2863,7 +2861,7 @@ if ( $wmgUseGettingStarted ) {
 }
 
 if ( $wmgUseGeoCrumbs ) {
-	require_once( "$IP/extensions/GeoCrumbs/GeoCrumbs.php" );
+	wfLoadExtension( 'GeoCrumbs; );
 }
 
 if ( $wmgUseCalendar ) {
@@ -2871,7 +2869,7 @@ if ( $wmgUseCalendar ) {
 }
 
 if ( $wmgUseMapSources ) {
-	require_once( "$IP/extensions/MapSources/MapSources.php" );
+	wfLoadExtension( 'MapSources' );
 }
 
 if ( $wmgUseSlippyMap ) {
@@ -2879,11 +2877,11 @@ if ( $wmgUseSlippyMap ) {
 }
 
 if ( $wmgUseCreditsSource ) {
-	require_once( "$IP/extensions/CreditsSource/CreditsSource.php" );
+	wfLoadExtension( 'CreditsSource' );
 }
 
 if ( $wmgUseListings ) {
-	require_once( "$IP/extensions/Listings/Listings.php" );
+	wfLoadExtension( 'Listings' );
 }
 
 if ( $wmgUseTocTree ) {
@@ -2892,7 +2890,7 @@ if ( $wmgUseTocTree ) {
 }
 
 if ( $wmgUseInsider ) {
-	require_once( "$IP/extensions/Insider/Insider.php" );
+	wfLoadExtension( 'Insider' );
 }
 
 if ( $wmgUseRelatedArticles ) {
@@ -2919,7 +2917,7 @@ if ( $wmgUseRevisionSlider ) {
 }
 
 if ( $wmgUseUserMerge ) {
-	require_once( "$IP/extensions/UserMerge/UserMerge.php" );
+	wfLoadExtension( 'UserMerge' );
 	// Don't let users get deleted outright (T69789)
 	$wgUserMergeEnableDelete = false;
 }
@@ -2971,7 +2969,7 @@ if ( $wmgUseEventLogging && $wmgUseNavigationTiming ) {
 	$wgPercentHHVM = 0;
 }
 
-include_once( "$IP/extensions/XAnalytics/XAnalytics.php" );
+wfLoadExtension( 'XAnalytics' );
 
 if ( $wmgUseUniversalLanguageSelector ) {
 	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
@@ -3082,7 +3080,7 @@ if ( $wgDBname == 'labswiki' || $wgDBname === 'labtestwiki' ) {
 $wgWBClientSettings['repoSiteName'] = 'wikibase-repo-name';
 
 if ( $wmgUseTemplateSandbox ) {
-	require_once( "$IP/extensions/TemplateSandbox/TemplateSandbox.php" );
+	wfLoadExtension( 'TemplateSandbox' );
 	if( $wmgUseScribunto ) {
 		$wgTemplateSandboxEditNamespaces[] = NS_MODULE;
 	}
@@ -3216,7 +3214,7 @@ if ( $wmgUseGraph ) {
 }
 
 if ( $wmgUseOAuth ) {
-	require_once( "$IP/extensions/OAuth/OAuth.php" );
+	wfLoadExtension( 'OAuth' );
 	if ( $wgDBname !== "labswiki" && $wgDBname !== 'labtestwiki' ) {
 		$wgMWOAuthCentralWiki = 'metawiki';
 		$wgMWOAuthSharedUserSource = 'CentralAuth';
@@ -3244,12 +3242,12 @@ if ( $wmgUseOAuth ) {
 }
 
 if ( $wmgUsePetition ) {
-	require_once( "$IP/extensions/Petition/Petition.php" );
+	wfLoadExtension( 'Petition' );
 }
 
 // T15712
 if ( $wmgUseJosa ) {
-	require_once( "$IP/extensions/Josa/Josa.php" );
+	wfLoadExtension( 'Josa' );
 }
 
 if ( $wmgUseParsoidBatchAPI ) {
@@ -3299,7 +3297,7 @@ if ( $wmfRealm === 'labs' ) {
 }
 
 if ( $wmgUseCheckUser ) {
-	include( $IP . '/extensions/CheckUser/CheckUser.php' );
+	wfLoadExtension( 'CheckUser' );
 	$wgCheckUserForceSummary = $wmgCheckUserForceSummary;
 	if ( $wmgUseCentralAuth ) {
 		// T128605
@@ -3363,7 +3361,7 @@ if ( $wmgUseEventBus ) {
 }
 
 if ( $wmgUseCapiunto ) {
-	require_once "$IP/extensions/Capiunto/Capiunto.php";
+	wfLoadExtension( 'Capiunto' );
 }
 
 if ( $wmgUseKartographer ) {
