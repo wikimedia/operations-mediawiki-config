@@ -3001,8 +3001,11 @@ if ( $wmgUseGlobalAbuseFilters ) {
 	$wgAbuseFilterIsCentral = ( $wgDBname == $wgAbuseFilterCentralDB );
 }
 
-if ( $wmgZeroPortal ) {
+if ( $wmgZeroPortal || $wmgUseGraph ) {
 	require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
+}
+
+if ( $wmgZeroPortal ) {
 	require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
 	require_once( "$IP/extensions/ZeroPortal/ZeroPortal.php" );
 
@@ -3052,7 +3055,6 @@ if ( $wmgZeroPortal ) {
 }
 
 if ( $wmgUseGraph ) {
-	require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
 	wfLoadExtension( 'Graph' );
 
 	// **** THIS LIST MUST MATCH puppet/hieradata/role/common/scb.yaml ****
