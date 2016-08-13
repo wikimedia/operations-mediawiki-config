@@ -3341,7 +3341,7 @@ $wgGroupPermissions['confirmed']['skipcaptcha'] = true;
 
 $wgImgAuthDetails = true;
 
-if ( $wmgUseWPB ) {
+if ( $wmgUseWikidataPageBanner ) {
 	wfLoadExtension( 'WikidataPageBanner' );
 }
 
