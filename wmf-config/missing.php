@@ -96,7 +96,7 @@ function handleMissingWiki() {
 				if ( $iw_local ) {
 					# Redirect to the appropriate WMF wiki
 					# strtok gives us the remainder of the page title after the interwiki prefix
-					showRedirect( $protocol . ':' . str_replace( '$1', strtok( '' ), $iw_url ) );
+					showRedirect( str_replace( '$1', strtok( '' ), $iw_url ) );
 					return;
 				}
 			}
