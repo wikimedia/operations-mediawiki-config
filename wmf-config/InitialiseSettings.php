@@ -8134,7 +8134,11 @@ $wgConf->settings = [
 		'patroller' => [ 'autopatrol' => true, 'rollback' => true, ],
 		'flood' => [ 'bot' => true, ], // T41569
 	],
-	'+itwikinews' => [ 'autoconfirmed' => [ 'patrol' => true ] ],
+	'+itwikinews' => [
+		'autoconfirmed' => [ 'patrol' => true ],
+		'rollbacker' => [ 'rollback' => true, 'autopatrol' => true, ], // T142571
+		'autopatrolled' => [ 'autopatrol' => true ], // T142571
+	],
 	'itwikiquote' => [
 		'autoconfirmed' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ], // T64200
@@ -9368,6 +9372,9 @@ $wgConf->settings = [
 	'+itwikibooks' => [
 		'sysop' => [ 'autopatrolled', 'patroller' ],
 	],
+	'+itwikinews' => [
+		'sysop' => [ 'autopatrolled', 'rollbacker' ], // T142571
+	],
 	'+itwikiquote' => [
 		'sysop' => [ 'autopatrolled' ], // T64200
 	],
@@ -10055,6 +10062,9 @@ $wgConf->settings = [
 	],
 	'+itwikibooks' => [
 		'sysop' => [ 'autopatrolled', 'patroller', 'flood' ], // flood added per T41569
+	],
+	'+itwikinews' => [
+		'sysop' => [ 'autopatrolled', 'rollbacker' ], // T142571
 	],
 	'+itwikiquote' => [
 		'bureaucrat' => [ 'autopatrolled' ], // T64200
