@@ -17191,6 +17191,7 @@ $wgConf->settings = [
 	'eswikivoyage' => true, // T125000
 	'frwikivoyage' => true, // T115023
 	'hewikivoyage' => true, // T140717
+	'rowikivoyage' => true, // T142963
 	'ruwikivoyage' => true, // T110837
 	'ukwikivoyage' => true, // T121999
 	'zhwikivoyage' => true, // T114334
