@@ -13921,6 +13921,7 @@ $wgConf->settings = [
 	'itwiki' => 'uca-it', // T136647
 	'ltwiki' => 'uca-lt', // T123627
 	'lvwiki' => 'uca-lv', // T67003
+	'mkwiki' => 'uca-mk-u-kn', // T26953
 	'nlwiki' => 'uca-nl', // T125774
 	'plwiki' => 'uca-pl', // T44413
 	'plwikisource' => 'uca-pl', // T86821
