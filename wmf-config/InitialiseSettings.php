@@ -13637,7 +13637,7 @@ $wgConf->settings = [
 		'Draft' => true
 	],
 	'+fawiki' => [
-		'پیشنویس' /* Draft */ => true // T118060
+		'پیش‌نویس' /* Draft */ => true // T118060
 	],
 	'+frwiki' => [
 		'Projet' => true // T116603
