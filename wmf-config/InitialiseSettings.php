@@ -13671,9 +13671,6 @@ $wgConf->settings = [
 		'Annexe' => true, // T127819
 		'Thésaurus' => true // T127819
 	],
-	'svwiktionary' => [
-		'User' => true // T59356
-	],
 
 	// Wikiquotes
 
