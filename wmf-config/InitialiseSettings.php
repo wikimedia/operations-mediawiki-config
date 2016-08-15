@@ -13637,13 +13637,13 @@ $wgConf->settings = [
 		'Draft' => true
 	],
 	'+fawiki' => [
-		'Draft' => true // T118060
+		'پیشنویس' => true // T118060
 	],
 	'+frwiki' => [
 		'Projet' => true // T116603
 	],
 	'+hewiki' => [
-		'Draft' => true // T87027
+		'טיוטה' => true // T87027
 	],
 	'+htwiki' => [
 		'Project' => true // T130177
@@ -13652,7 +13652,7 @@ $wgConf->settings = [
 		'Portal' => true // T97313
 	],
 	'+kowiki' => [
-		'Draft' => true // T92798
+		'초안' => true // T92798
 	],
 	'+plwiki' => [
 		'Project' => true, // T133980
