@@ -241,7 +241,6 @@ $wgConf->settings = [
 
 # wgLocaltimezone @{
 'wgLocaltimezone' => [
-	'adywiki' => 'UTC', // T125501
 	'alswiki' => 'Europe/Berlin',
 	'arbcom_dewiki' => 'Europe/Berlin',
 	'arbcom_fiwiki' => 'Europe/Helsinki',
@@ -283,7 +282,6 @@ $wgConf->settings = [
 	'dvwiktionary' => 'Indian/Maldives', // T48351
 	'elwikinews' => 'Europe/Athens',
 	'elwikivoyage' => 'Europe/Athens',
-	'eowikisource' => 'UTC',
 	'etwiki' => 'Europe/Tallinn',
 	'etwikibooks' => 'Europe/Tallinn',
 	'etwikimedia' => 'Europe/Tallinn',
