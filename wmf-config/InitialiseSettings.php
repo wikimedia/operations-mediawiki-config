@@ -17248,6 +17248,21 @@ $wgConf->settings = [
 	'nonglobal' => false,
 ],
 
+'wmgGalleryOptions' => [
+	'default' => [
+		'imagesPerRow' => 0,
+		'imageWidth' => 120,
+		'imageHeight' => 120,
+		'captionLength' => true,
+		'showBytes' => true,
+		'mode' => 'traditional',
+	],
+	'+svwiki' => [
+		'imageWidth' => 150,
+		'imageHeight' => 150,
+	],
+],
+
 ];
 
 ### WMF Labs override #####
