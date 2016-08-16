@@ -297,6 +297,10 @@ if ( $wmgUseNewsletter ) {
 	wfLoadExtension( 'Newsletter' );
 }
 
+if ( $wmgUsePerformanceInspector ) {
+	wfLoadExtension( 'PerformanceInspector' );
+}
+
 if ( $wmgUseOATHAuth && $wmgUseCentralAuth ) {
 	wfLoadExtension( 'OATHAuth' );
 	$wgOATHAuthDatabase = 'centralauth';

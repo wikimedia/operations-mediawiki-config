@@ -526,6 +526,11 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		// Test PerformanceInspector
+		'wmgUsePerformanceInspector' => [
+			'default' => true,
+		],
+
 		// Test Wikidata descriptions on mobile: T127250
 		'wgMFDisplayWikibaseDescriptions' => [
 			'default' => [
