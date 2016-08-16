@@ -1760,6 +1760,8 @@ if ( $wmgUseCollection ) {
 
 	$wgLicenseURL = "http://creativecommons.org/licenses/by-sa/3.0/";
 
+	$wgCollectionShowRenderNotes[] = 'coll-rendering_finished_note_article_rdf2latex';
+
 	$wgCollectionPortletForLoggedInUsersOnly = $wmgCollectionPortletForLoggedInUsersOnly;
 	$wgCollectionArticleNamespaces = $wmgCollectionArticleNamespaces;
 	$wgCollectionPortletFormats = $wmgCollectionPortletFormats;
