@@ -16928,6 +16928,7 @@ $wgConf->settings = [
 	'ruwiki' => true, // T139541
 	'ptwiki' => true, // T139692
 	'trwiki' => true, // T139992
+	'plwiki' => true, // T140005
 ],
 'wgOresModels' => [
 	'default' => [
@@ -16972,6 +16973,12 @@ $wgConf->settings = [
 		'goodfaith' => false,
 		'wp10' => false,
 	], // T139992
+	'plwiki' => [
+		'damaging' => true,
+		'reverted' => false,
+		'goodfaith' => false,
+		'wp10' => false,
+	], // T140005
 ],
 'wgOresDamagingThresholds' => [
 	'default' => [ 'hard' => 0.5, 'soft' => 0.7 ],
@@ -16981,6 +16988,7 @@ $wgConf->settings = [
 	'ruwiki' => [ 'hard' => 0.44, 'soft' => 0.69 ], // T139541
 	'ptwiki' => [ 'hard' => 0.22, 'soft' => 0.48 ], // T139692
 	'trwiki' => [ 'hard' => 0.22, 'soft' => 0.49 ], // T139992
+	'plwiki' => [ 'hard' => 0.11, 'soft' => 0.40 ], // T140005
 ],
 'wgOresEnabledNamespaces' => [
 	'default' => [],
