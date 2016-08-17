@@ -16160,6 +16160,7 @@ $wgConf->settings = [
 'wmgWikibaseAllowDataAccessInUserLanguage' => [
 	'default' => false,
 	'commonswiki' => true, // T98307
+	'metawiki' => true,
 	'testwikidatawiki' => true,
 ],
 
