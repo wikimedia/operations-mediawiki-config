@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e89af39_c0466326",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 17260,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-08-17T19:15:55Z",
+      "side": 1,
+      "message": "For better readability, I\u0027d recommend either one key per line or all keys on one line.",
+      "revId": "fa0609a5c8fc7d68f791adf65e24593121722fa6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e89af39_00514bdd",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 17261,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-08-17T19:15:55Z",
+      "side": 1,
+      "message": "This changed to `true` in MediaWiki core. We should not change that back to 25 for WMF.",
+      "range": {
+        "startLine": 17261,
+        "startChar": 24,
+        "endLine": 17261,
+        "endChar": 45
+      },
+      "revId": "fa0609a5c8fc7d68f791adf65e24593121722fa6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
