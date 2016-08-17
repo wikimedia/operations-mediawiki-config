@@ -14365,42 +14365,17 @@ $wgConf->settings = [
 	],
 ],
 'wgMFLazyLoadImages' => [
+	// T142399
 	'default' => [
+		'base' => true,
+		'beta' => true,
+	],
+	'private' => [
 		'base' => false,
 		'beta' => true,
 	],
-	// T134768
-	'bnwiki' => [
-		'base' => true,
-		'beta' => true,
-	],
-	// T134003
-	'fawiki' => [
-		'base' => true,
-		'beta' => true,
-	],
-	'ukwiki' => [
-		'base' => true,
-		'beta' => true,
-	],
-	// T137822
-	'tlwiki' => [
-		'base' => true,
-		'beta' => true,
-	],
-	// T136731
-	'thwiki' => [
-		'base' => true,
-		'beta' => true,
-	],
-	// T136731
-	'jawiki' => [
-		'base' => true,
-		'beta' => true,
-	],
-	// T140197
-	'ruwiki' => [
-		'base' => true,
+	'fishbowl' => [
+		'base' => false,
 		'beta' => true,
 	],
 ],
