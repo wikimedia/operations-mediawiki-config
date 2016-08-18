@@ -16377,7 +16377,7 @@ $wgConf->settings = [
 ],
 
 'wmgCirrusSearchDefaultCluster' => [
-	'default' => 'codfw',
+	'default' => 'local',
 ],
 
 'wmgCirrusSearchWriteClusters' => [
