@@ -1220,6 +1220,7 @@ $wgConf->settings = [
 	'jawiktionary' => false, // T13775
 	'loginwiki' => false,
 	'lrcwiki' => false, // T102026
+	'mswiki' => false, // T126944
 	'mswiktionary' => false, // T69152
 	'nlwikisource' => false, // T73403
 	'nlwikivoyage' => false, // T73403
@@ -1310,6 +1311,7 @@ $wgConf->settings = [
 	'lrcwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=lrc', // T102026
 	'metawiki' => false, // T52287
 	'mlwiki' => '/wiki/വിക്കിപീഡിയ:അപ്‌ലോഡ്',
+	'mswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ms', // T126944
 	'ndswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nds',
 	'nlwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
 	'nlwikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
