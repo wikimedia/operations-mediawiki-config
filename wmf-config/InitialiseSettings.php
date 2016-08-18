@@ -1275,6 +1275,7 @@ $wgConf->settings = [
 
 	// Individual wikis
 	// NOTE: Use relative paths for same-wiki links so the SSL converter can tweak them correctly
+	'arwiki' => '/wiki/ويكيبيديا:رفع', // T142450
 	'aswiki' => '/wiki/ৱিকিপিডিয়া:ফাইল_আপল’ড_বিশেষজ্ঞ',
 	'azbwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=azb', // T106305
 	'bgwiki' => '/wiki/MediaWiki:Uploadtext', // T16836
@@ -7424,8 +7425,40 @@ $wgConf->settings = [
 	],
 	'arwiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
-		'editor' => [ 'movefile' => true ], // T131249
+		'editor' => [
+			'movefile' => true, // T131249
+			'upload' => true, // T142450
+			'reupload' => true,
+			'reupload-own' => true,
+			'reupload-shared' => true,
+		],
 		'rollbacker' => [ 'rollback' => true ],
+
+		// Uploads are restricted to a uploader group - T142450
+		'user' => [
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
+		],
+		'autoconfirmed' => [
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
+		],
+		'uploader' => [
+			'upload' => true,
+			'reupload' => true,
+			'reupload-own' => true,
+			'reupload-shared' => true,
+		],
+		'reviewer' => [
+			'upload' => true,
+			'reupload' => true,
+			'reupload-own' => true,
+			'reupload-shared' => true,
+		],
 	],
 	'+arwikisource' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
