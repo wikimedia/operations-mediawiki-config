@@ -12,7 +12,7 @@
 $wmfAllServices = [];
 
 $wmfAllServices['eqiad'] = [
-	'udp2log' => 'deployment-fluorine.eqiad.wmflabs:8420',
+	'udp2log' => 'deployment-fluorine02.eqiad.wmflabs:8420',
 	'statsd' => 'labmon1001.eqiad.wmnet',
 	'search' => [
 		// These MUST match the installed SSL certs
