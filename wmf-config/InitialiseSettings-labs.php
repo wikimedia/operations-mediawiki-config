@@ -374,6 +374,9 @@ function wmfLabsSettings() {
 			'enwiki' => true,
 			'en_rtlwiki' => true,
 		],
+		'wmgFlowNamespaces' => [
+			'cawiki' => [],
+		],
 		# No separate Flow DB or cluster (yet) for labs.
 		'-wmgFlowDefaultWikiDb' => [
 			'default' => false,
