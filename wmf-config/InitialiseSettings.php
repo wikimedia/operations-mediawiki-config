@@ -17734,6 +17734,7 @@ $wgConf->settings = [
 	'testwikidatawiki' => true,
 ],
 
+// Feature does not work for non-JS read clients. This MUST NOT be enabled on any additional wikis.
 'wmgUseKartographer' => [
 	'default' => true,
 	'private' => false,
