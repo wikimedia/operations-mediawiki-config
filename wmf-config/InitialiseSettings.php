@@ -15767,6 +15767,9 @@ $wgConf->settings = [
 	'cawiki' => [
 		NS_PROJECT_TALK, // T99117
 	],
+	'kabwiki' => [
+		NS_USER_TALK, // T140588
+	],
 	'sewikimedia' => [
 		NS_TALK,
 		NS_USER_TALK,
