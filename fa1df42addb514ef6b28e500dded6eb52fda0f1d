@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ea41786_0c6b9683",
+        "filename": "wmf-config/StartProfiler.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 154,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-08-19T02:29:17Z",
+      "side": 1,
+      "message": "try/catch?\n\nhttps://github.com/perftools/xhgui/blob/01c72a71bdfe1040121786b6dd5f190c2437ae4c/external/header.php#L157",
+      "revId": "fa1df42addb514ef6b28e500dded6eb52fda0f1d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
