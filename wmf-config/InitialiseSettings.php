@@ -10711,6 +10711,7 @@ $wgConf->settings = [
 	'szlwiki' => [ 'incubator' ],
 	'tawiki' => [ 'en' ], // T122808
 	'tawikisource' => [ 'oldwikisource', 'w', 'b' ],
+	'tcywiki' => [ 'en', 'kn', 'te', 'c', 'meta' ], // T143397
 	'tewiki' => [ 'en', 'commons' ], // T43880
 	'tewikisource' => [ 'w', 'b', 'en' ], // T94531
 	'tewikiquote' => [ 'w', 'en' ], // T91635
