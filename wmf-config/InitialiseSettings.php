@@ -14482,6 +14482,10 @@ $wgConf->settings = [
 		NS_USER => [ 'male' => 'Usuário', 'female' => 'Usuária' ],
 		NS_USER_TALK => [ 'male' => 'Usuário_Discussão', 'female' => 'Usuária_Discussão' ],
 	],
+	'skwiki' => [ // T143472
+		NS_USER => [ 'male' => 'Redaktor', 'female' => 'Redaktorka' ],
+		NS_USER_TALK => [ 'male' => 'Diskusia_s_redaktorom', 'female' => 'Diskusia_s_redaktorkou' ],
+	],
 	'test2wiki' => [ NS_USER => [ 'male' => 'Male_user', 'female' => 'Female_user' ] ],
 ],
 
