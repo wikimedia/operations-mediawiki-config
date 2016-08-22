@@ -2474,12 +2474,6 @@ if ( $wmgUseTranslate ) {
 		],
 	];
 
-	// Can't translate to source language
-	// TODO: figure out what to do once T37489 is fixed
-	if ( $wgLanguageCode === 'en' ) {
-		$wgTranslateBlacklist['*']['en'] = 'English is the source language.';
-	}
-
 	$wgTranslateEC = [];
 
 	if ( $wgDBname === 'wikimania2013wiki' ) {
