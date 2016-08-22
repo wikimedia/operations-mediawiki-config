@@ -16949,6 +16949,7 @@ $wgConf->settings = [
 	'ptwiki' => true, // T139692
 	'trwiki' => true, // T139992
 	'plwiki' => true, // T140005
+	'enwiki' => true, // T140003
 ],
 'wgOresModels' => [
 	'default' => [
@@ -16999,6 +17000,12 @@ $wgConf->settings = [
 		'goodfaith' => false,
 		'wp10' => false,
 	], // T140005
+	'enwiki' => [
+		'damaging' => true,
+		'reverted' => true,
+		'goodfaith' => true,
+		'wp10' => true,
+	], // T140003
 ],
 'wgOresDamagingThresholds' => [
 	'default' => [ 'hard' => 0.5, 'soft' => 0.7 ],
@@ -17009,6 +17016,7 @@ $wgConf->settings = [
 	'ptwiki' => [ 'hard' => 0.22, 'soft' => 0.48 ], // T139692
 	'trwiki' => [ 'hard' => 0.22, 'soft' => 0.49 ], // T139992
 	'plwiki' => [ 'hard' => 0.11, 'soft' => 0.40 ], // T140005
+	'enwiki' => [ 'hard' => 0.14, 'soft' => 0.43 ], // T140003
 ],
 'wgOresEnabledNamespaces' => [
 	'default' => [],
