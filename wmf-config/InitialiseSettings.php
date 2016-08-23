@@ -13976,7 +13976,7 @@ $wgConf->settings = [
 	'srwikisource' => 'uca-sr', // T115806
 	'srwiktionary' => 'uca-sr', // T115806
 	'skwiki' => 'uca-sk', // [[w:sk:Special:PermaLink/5785371]]
-	'svwiki' => 'uca-sv', // T47446
+	'svwiki' => 'uca-sv-u-kn', // T47446, T142113
 	'svwikisource' => 'uca-sv@collation=standard', // T48058
 	'tawiki' => 'uca-ta', // T75453
 	'tawikibooks' => 'uca-ta', // T75453
