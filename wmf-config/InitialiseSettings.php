@@ -14073,6 +14073,15 @@ $wgConf->settings = [
 	'stewardwiki' => true,
 ],
 
+// Whether to show "Publish" rather than "Save" on the edit page (and related circumstances)
+// This should be set to true for all public WMF wikis, and any changes should be discussed
+// with Editing before they are done due to the legal implications.
+'wgEditSubmitButtonLabelPublish' => [
+	'default' => true,      // T131132
+	'private' => false,     // Private wikis are not public
+	'wikinews' => false,    // Done in local {{int:Copyrightwarning}}s instead.
+],
+
 'wmgCheckUserForceSummary' => [
 	'default' => true, // T73457
 ],
