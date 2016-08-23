@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e89af39_62867269",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2431,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2016-08-23T08:52:58Z",
+      "side": 0,
+      "message": "export-as-file and suggestions have been removed from Translate.php $wgTranslateTasks, optional is still there.",
+      "revId": "9e7831fc935aec3b2c7cd5f4f3c8c42e163a3988",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
