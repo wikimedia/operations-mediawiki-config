@@ -6661,13 +6661,12 @@ $wgConf->settings = [
 		'village pump-url',
 		'welcome-url',
 		// Other
-		'contact-url',
-		'aboutpage',
-		'disclaimerpage',
-		'copyright',
+		'contact-url', // T7925
+		'aboutpage', // T7925
+		'disclaimerpage', // T7925
+		'copyright', // T7925
 		'licenses',
 		'upload-url',
-		'helppage', // T7925
 		'license-header',
 		'filedesc',
 		'filestatus',
