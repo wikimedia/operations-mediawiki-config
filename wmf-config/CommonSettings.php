@@ -2480,8 +2480,6 @@ if ( $wmgUseTranslate ) {
 		$wgTranslateBlacklist['*']['en'] = 'English is the source language.';
 	}
 
-	$wgTranslateEC = [];
-
 	if ( $wgDBname === 'wikimania2013wiki' ) {
 		$wgHooks['TranslatePostInitGroups'][] = function ( &$cc ) {
 			$id = 'wiki-sidebar';
