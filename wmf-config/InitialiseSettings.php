@@ -16265,7 +16265,7 @@ $wgConf->settings = [
 
 'wmgWikibaseClientSettings' => [
 	// @note because of unconventional way of doing wikibase settings, the default setting
-	// here does not work the same way. Instead, put defaults in CommonSettings.php
+	// here does not work the same way. Instead, put defaults in Wikibase.php
 	'default' => [
 	],
 	'testwiki' => [
