@@ -16034,6 +16034,7 @@ $wgConf->settings = [
 	'default' => false,
 	'wikipedia' => true,
 	'wikivoyage' => true,
+	'frwikinews' => true, // T143480
 ],
 
 'wmgRelatedArticlesShowInSidebar' => [
@@ -16044,6 +16045,7 @@ $wgConf->settings = [
 'wmgRelatedArticlesShowInFooter' => [
 	'default' => false,
 	'wikipedia' => true,
+	'frwikinews' => true, // T143480
 ],
 
 'wmgUseRelatedSites' => [
