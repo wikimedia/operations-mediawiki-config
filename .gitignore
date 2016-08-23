@@ -28,3 +28,8 @@ fonts
 
 /multiversion/vendor/**/.git
 /multiversion/vendor/slim/slim/tests/templates/test.php
+
+# python stuff
+*.pyc
+/.tox
+mediawiki_config.egg-info
