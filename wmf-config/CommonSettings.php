@@ -2427,10 +2427,6 @@ if ( $wmgUseTranslate ) {
 	$wgTranslateWorkflowStates = $wmgTranslateWorkflowStates;
 	$wgTranslateRcFilterDefault = $wmgTranslateRcFilterDefault;
 
-	unset( $wgTranslateTasks['export-as-file'] );
-	unset( $wgTranslateTasks['optional'] );
-	unset( $wgTranslateTasks['suggestions'] );
-
 	$wgTranslateUsePreSaveTransform = true; // T39304
 
 	$wgEnablePageTranslation = true;
