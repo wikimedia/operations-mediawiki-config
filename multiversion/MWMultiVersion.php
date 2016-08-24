@@ -152,6 +152,7 @@ class MWMultiVersion {
 			'wikidata.beta.wmflabs.org' => 'wikidata',
 		);
 
+		$lang = null;
 		$site = "wikipedia";
 		if ( getenv( 'MW_LANG' ) ) {
 			# Language forced from some hacky script like extract2.php
@@ -267,8 +268,8 @@ class MWMultiVersion {
 	 * "php /srv/mediawiki-staging/multiversion/MWScript.php maintenance/foo.php"
 	 *
 	 * @param &$script string
-	 * @param &$params Array
-	 * @param &$options Array
+	 * @param &$params array
+	 * @param &$options array
 	 * @return boolean
 	 */
 	public static function onWfShellMaintenanceCmd( &$script, array &$params, array &$options ) {
