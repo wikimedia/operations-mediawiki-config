@@ -4519,6 +4519,8 @@ $wgConf->settings = [
 		'CirrusSearchUserTesting' => [ 'logstash' => false ],
 		'cite' => 'debug',
 		'collection' => 'debug', // -cscott for T73675
+		'csp' => 'info',
+		'csp-report-only' => 'info',
 		'DBPerformance' => [ 'logstash' => 'debug', 'udp2log' => 'warning' ],
 		'diff' => 'debug',
 		'Echo' => 'debug',
