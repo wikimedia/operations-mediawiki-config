@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_e0bfeaa5",
+        "filename": "scap/plugins/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1706
+      },
+      "writtenOn": "2016-08-24T16:44:46Z",
+      "side": 1,
+      "message": "We probably don\u0027t want to actually introduce this dependency, it\u0027s just something I was trying out.",
+      "revId": "157d301a953122e20425a50cabf5689665307093",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e96ab59_00bdd6ad",
+        "filename": "scap/plugins/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1706
+      },
+      "writtenOn": "2016-08-24T16:44:46Z",
+      "side": 1,
+      "message": "json encoding is for debugging purposes, this is temporary.",
+      "revId": "157d301a953122e20425a50cabf5689665307093",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e96ab59_40defe15",
+        "filename": "scap/plugins/gerrit.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 1706
+      },
+      "writtenOn": "2016-08-24T16:44:46Z",
+      "side": 1,
+      "message": "map json fields to concrete python types",
+      "revId": "157d301a953122e20425a50cabf5689665307093",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
