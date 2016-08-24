@@ -1186,6 +1186,7 @@ $wgConf->settings = [
 	// Projects
 	'default' => true,
 	'commonsuploads' => true, // Soft-disabling
+	'uploadsdisabled' => false, // Uploads totally disabled
 	'wikidata' => false,
 
 	// Wikinews
@@ -1257,6 +1258,7 @@ $wgConf->settings = [
 	// Projects
 	'default' => false,
 	'commonsuploads' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=$lang',
+	'uploadsdisabled' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=$lang',
 	'wikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 
 	// These are commonsuploads wikis (not specified below) where $lang does not work
@@ -7318,6 +7320,30 @@ $wgConf->settings = [
 			'reupload-own' => true,
 			'reupload-shared' => true,
 		],
+	],
+	'uploadsdisabled' => [
+		'user' => [
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
+		],
+		'autoconfirmed' => [
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
+		],
+		'confirmed' => [
+			'upload' => false,
+			'reupload' => false,
+			'reupload-own' => false,
+			'reupload-shared' => false,
+		],
+		'sysop' => [
+			'reupload' => true,
+			'reupload-own' => true,
+			'reupload-shared' => true,
 	],
 
 	// Whitelist read wikis
