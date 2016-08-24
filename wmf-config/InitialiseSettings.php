@@ -17030,9 +17030,6 @@ $wgConf->settings = [
 	'default' => [],
 	'wikidatawiki' => [ 0 => true, 120 => true ], // T139660
 ],
-'wgOresDamagingDefault' => [
-	'default' => 'soft', // T143738
-],
 ### End (roughly) of general extensions ########################
 
 'wgUseTidy' => [
