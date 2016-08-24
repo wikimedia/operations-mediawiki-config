@@ -164,6 +164,9 @@ if ( $wgCirrusSearchDefaultCluster !== $wmfDatacenter ) {
 // Enable completion suggester
 $wgCirrusSearchUseCompletionSuggester = $wmgCirrusSearchUseCompletionSuggester;
 
+// Enable phrase suggester (did you mean)
+$wgCirrusSearchEnablePhraseSuggest = $wmgCirrusSearchEnablePhraseSuggest;
+
 // Configure ICU Folding
 $wgCirrusSearchUseIcuFolding = $wmgCirrusSearchUseIcuFolding;
 
