@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_b27c581d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1117,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-08-24T10:07:52Z",
+      "side": 1,
+      "message": "Realigned on multiple lines",
+      "revId": "616d0a32ca91866df93117a312da6f9527d0dd5d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e96ab59_d279e42b",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1118,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-08-24T10:07:52Z",
+      "side": 1,
+      "message": "short circuit moved from below",
+      "revId": "616d0a32ca91866df93117a312da6f9527d0dd5d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

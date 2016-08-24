@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_f276e038",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1128,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-08-24T10:07:52Z",
+      "side": 0,
+      "message": "That condition got moved up the whole block is rendered useless as a result and I have firm believing that the logs are no more used nowadays.",
+      "revId": "6bf36a602b3a49f4bfba94418d5342906d505372",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
