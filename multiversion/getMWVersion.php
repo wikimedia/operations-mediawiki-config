@@ -27,7 +27,7 @@ function getWikiVersion( $dbName ) {
 		exit( 1 );
 	}
 	if ( empty( $wikiversions[$dbName] ) ) {
-		print "$cdbFilename has no version entry for `$dbName`.\n";
+		print "wikiversions.php has no version entry for `$dbName`.\n";
 		exit( 1 );
 	}
 	return $wikiversions[$dbName];
