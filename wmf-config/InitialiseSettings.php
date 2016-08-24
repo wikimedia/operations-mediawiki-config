@@ -17022,7 +17022,7 @@ $wgConf->settings = [
 	'ptwiki' => [ 'hard' => 0.22, 'soft' => 0.48 ], // T139692
 	'trwiki' => [ 'hard' => 0.22, 'soft' => 0.49 ], // T139992
 	'plwiki' => [ 'hard' => 0.11, 'soft' => 0.40 ], // T140005
-	'enwiki' => [ 'hard' => 0.14, 'soft' => 0.43 ], // T140003
+	'enwiki' => [ 'hard' => 0.43, 'soft' => 0.60 ], // T140003
 ],
 'wgOresEnabledNamespaces' => [
 	'default' => [],
