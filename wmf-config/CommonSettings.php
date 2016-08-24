@@ -167,7 +167,7 @@ if ( !$globals ) {
 			'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-nondefault',
 			'commonsuploads', 'nonbetafeatures', 'group0', 'group1', 'group2', 'wikipedia', 'nonglobal',
 			'wikitech', 'nonecho', 'mobilemainpagelegacy', 'clldefault', 'nowikidatadescriptiontaglines',
-			'top6-wikipedia'
+			'top6-wikipedia', 'uploadsdisabled'
 		] as $tag ) {
 		$dblist = MWWikiversions::readDbListFile( $tag );
 		if ( in_array( $wgDBname, $dblist ) ) {
