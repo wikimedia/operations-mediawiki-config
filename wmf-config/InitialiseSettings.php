@@ -16673,6 +16673,12 @@ $wgConf->settings = [
 	'wikidatawiki' => 'no',
 ],
 
+// Enable phrase suggester (did you mean) on all wikis (except wikidata)
+'wmgCirrusSearchEnablePhraseSuggest' => [
+	'default' => true,
+	'wikidatawiki' => false
+],
+
 // wmgCirrusSearchRecycleCompletionSuggesterIndex @{
 // Recycle suggester indices for small wikis (less than 100MB store size)
 'wmgCirrusSearchRecycleCompletionSuggesterIndex' => [
