@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "4e96ab59_418c36dc",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 14077,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2016-08-25T22:29:24Z",
+      "side": 1,
+      "message": "What does the Legal team have to do with this? I also asked this at https://phabricator.wikimedia.org/T131132#2569616 and I\u0027m awaiting a response.\n\nI think it\u0027s comments like this that make people really distrust your motives. This change has the appearance of you both trying to forcefully push it through and as an added punch you\u0027re trying to erect roadblocks to anyone who would dare even consider changing this text/functionality again in the future. What gives?",
+      "range": {
+        "startLine": 14077,
+        "startChar": 0,
+        "endLine": 14077,
+        "endChar": 47
+      },
+      "revId": "39f2c68b9d1696c4f4668c1125ddf7e1c6d4dcf3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e96ab59_e23287ee",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 3
