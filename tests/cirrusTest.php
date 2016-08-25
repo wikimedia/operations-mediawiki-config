@@ -101,6 +101,9 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		// variables that would have been setup elsewhere, perhaps in mediawiki
 		// default settings or by CommonSettings.php, or by CirrusSearch.php,
 		// but none of those are a part of this repository
+		$wgCirrusSearchRescoreProfiles = array();
+		$wgCirrusSearchRescoreFunctionScoreChains = array();
+		$wgCirrusSearchFullTextQueryBuilderProfiles = array();
 		$wgJobTypeConf = array( 'default' => array() );
 		$wgCirrusSearchWeights = array();
 		$wgCirrusSearchNamespaceWeights = array();
