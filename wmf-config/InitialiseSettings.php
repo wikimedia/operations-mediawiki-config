@@ -9109,7 +9109,7 @@ $wgConf->settings = [
 	],
 	// ******************************************************************
 	'+arwiki' => [
-		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter' ],
+		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter', 'accountcreator' ], // T143844
 		'sysop' => [ 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', ],
 	],
 	'+arwikisource' => [
@@ -9789,7 +9789,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'sysop', 'bureaucrat' ],
 	],
 	'+arwiki' => [
-		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter' ],
+		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter', 'accountcreator' ], // T143844
 		'sysop' => [ 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', 'patroller', 'autopatrolled', ],
 	],
 	'+arwikisource' => [
