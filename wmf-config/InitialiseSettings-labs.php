@@ -488,6 +488,10 @@ function wmfLabsSettings() {
 			'default' => [],
 			'enwiki' => [ 0 => true ],
 		],
+		'wgOresWikiId' => [
+			'default' => 'testwiki',
+			'enwiki' => 'enwiki',
+		],
 
 		'wmgWikibaseAllowDataAccessInUserLanguage' => [
 			'default' => false,
