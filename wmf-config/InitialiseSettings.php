@@ -17012,9 +17012,9 @@ $wgConf->settings = [
 	], // T140005
 	'enwiki' => [
 		'damaging' => true,
-		'reverted' => true,
-		'goodfaith' => true,
-		'wp10' => true,
+		'reverted' => false,
+		'goodfaith' => false,
+		'wp10' => false,
 	], // T140003
 ],
 'wgOresDamagingThresholds' => [
