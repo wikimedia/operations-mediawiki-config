@@ -5859,6 +5859,10 @@ $wgConf->settings = [
 		100 => 'Ætēaca',
 		101 => 'Ætēacmōtung',
 	],
+	'azwiktionary' => [
+		100 => 'Əlavə', // Appendix - T143851
+		101 => 'Əlavə_müzakirəsi',
+	],
 	'bgwiktionary' => [
 		100 => 'Словоформи',
 		101 => 'Словоформи_беседа'
