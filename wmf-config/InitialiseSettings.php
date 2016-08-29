@@ -11359,6 +11359,7 @@ $wgConf->settings = [
 	'+itwikivoyage' => [ 100, 104 ], // T57620
 	'+kowikisource' => [ 100 ],
 	'+lawikisource' => [ 102 ],
+	'+ltwikipedia' => [ 104 ], // T144118
 	'+mediawikiwiki' => [ 100, 102, 104, 106 ], // Manuals, extensions, Api & skin - T86391
 	'+metawiki' => [ NS_HELP ], // T45687
 	'+mlwikisource' => [ 100 ],
