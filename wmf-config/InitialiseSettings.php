@@ -13923,6 +13923,7 @@ $wgConf->settings = [
 	'cywikiquote' => 'uca-cy', // T61800
 	'cywikisource' => 'uca-cy', // T61800
 	'cywiktionary' => 'uca-cy', // T61800
+	'enwiki' => 'uca-default-u-kn', // T136150
 	'etwiki' => 'xx-uca-et', // T56168
 	'etwikibooks' => 'xx-uca-et', // T56168
 	'etwikimedia' => 'xx-uca-et', // T56168
