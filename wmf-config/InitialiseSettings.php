@@ -17029,14 +17029,14 @@ $wgConf->settings = [
 ],
 'wgOresDamagingThresholds' => [
 	'default' => [ 'hard' => 0.5, 'soft' => 0.7 ],
-	'fawiki' => [ 'hard' => 0.12, 'soft' => 0.45 ], // T130211
-	'wikidatawiki' => [ 'hard' => 0.8, 'soft' => 0.96 ], // T130212
-	'nlwiki' => [ 'hard' => 0.3, 'soft' => 0.72 ], // T139432
-	'ruwiki' => [ 'hard' => 0.44, 'soft' => 0.69 ], // T139541
-	'ptwiki' => [ 'hard' => 0.22, 'soft' => 0.48 ], // T139692
-	'trwiki' => [ 'hard' => 0.22, 'soft' => 0.49 ], // T139992
-	'plwiki' => [ 'hard' => 0.11, 'soft' => 0.40 ], // T140005
-	'enwiki' => [ 'hard' => 0.14, 'soft' => 0.43 ], // T140003
+	'fawiki' => [ 'hard' => 0.07, 'soft' => 0.37 ], // T130211
+	'wikidatawiki' => [ 'hard' => 0.92, 'soft' => 0.97 ], // T130212
+	'nlwiki' => [ 'hard' => 0.39, 'soft' => 0.75 ], // T139432
+	'ruwiki' => [ 'hard' => 0.50, 'soft' => 0.73 ], // T139541
+	'ptwiki' => [ 'hard' => 0.24, 'soft' => 0.57 ], // T139692
+	'trwiki' => [ 'hard' => 0.20, 'soft' => 0.58 ], // T139992
+	'plwiki' => [ 'hard' => 0.19, 'soft' => 0.41 ], // T140005
+	'enwiki' => [ 'hard' => 0.17, 'soft' => 0.49 ], // T140003
 ],
 'wgOresEnabledNamespaces' => [
 	'default' => [],
