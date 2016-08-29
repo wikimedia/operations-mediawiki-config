@@ -14435,21 +14435,6 @@ $wgConf->settings = [
 		'base' => false,
 		'beta' => true,
 	],
-	// T136731
-	'thwiki' => [
-		'base' => true,
-		'beta' => true,
-	],
-	// T137822
-	'tlwiki' => [
-		'base' => true,
-		'beta' => true,
-	],
-	// T140197
-	'ruwiki' => [
-		'base' => true,
-		'beta' => true,
-	],
 ],
 
 'wgMinervaUsePageActionBarV2' => [
