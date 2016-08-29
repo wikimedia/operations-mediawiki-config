@@ -35,19 +35,21 @@ $wgCirrusSearchUserTesting = $wmgCirrusSearchUserTesting;
 
 # BM25 A/B test, enabled only on enwiki to avoid conflicts with
 # with TextCat language detection
-if ( $wgDBname === 'enwiki' ) {
 # UserTesting requires that a var exists in $GLOBALS before setting it
-# All extra vars needed to customize rescore weights
-	$wgCirrusSearchPageViewsW = 1.0;
-	$wgCirrusSearchPageViewsK = 1.0;
-	$wgCirrusSearchPageViewsA = 1.0;
-	$wgCirrusSearchIncLinksW = 1.0;
-	$wgCirrusSearchIncLinksK = 1.0;
-	$wgCirrusSearchIncLinksA = 1.0;
-	$wgCirrusSearchIncLinksAloneW = 1.0;
-	$wgCirrusSearchIncLinksAloneK = 1.0;
-	$wgCirrusSearchIncLinksAloneA = 1.0;
+# All extra vars needed to customize rescore weights. These must be defined
+# at the top level so textcat can still attempt to fetch them when building
+# an other-wiki query.
+$wgCirrusSearchPageViewsW = 1.0;
+$wgCirrusSearchPageViewsK = 1.0;
+$wgCirrusSearchPageViewsA = 1.0;
+$wgCirrusSearchIncLinksW = 1.0;
+$wgCirrusSearchIncLinksK = 1.0;
+$wgCirrusSearchIncLinksA = 1.0;
+$wgCirrusSearchIncLinksAloneW = 1.0;
+$wgCirrusSearchIncLinksAloneK = 1.0;
+$wgCirrusSearchIncLinksAloneA = 1.0;
 
+if ( $wgDBname === 'enwiki' ) {
 	$wgCirrusSearchUserTesting['bm25'] = [
 		'sampleRate' => 0,
 		'globals' => [
