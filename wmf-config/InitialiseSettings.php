@@ -14144,7 +14144,6 @@ $wgConf->settings = [
 // whether to use the Math extension
 'wmgUseMath' => [
 	'default' => true, // moved from MW core
-	'wikitech' => false,
 	'loginwiki' => false,
 	'votewiki' => false, // T61702
 ],
@@ -14156,11 +14155,14 @@ $wgConf->settings = [
 ],
 
 'wgMathFileBackend' => [
-	'default' => 'global-multiwrite'
+	'default' => 'global-multiwrite',
+	'wikitech' => 'local-multiwrite', // T126338, T126628
 ],
 
 'wgMathPath' => [
 	'default' => '//upload.wikimedia.org/math',
+	'labswiki' => '//wikitech.wikimedia.org/w/images/math', // T126338, T126628
+	'labtestwiki' => '//labtestwikitech.wikimedia.org/w/images/math', // T126338, T126628
 ],
 
 'wmgUseMoodBar' => [
