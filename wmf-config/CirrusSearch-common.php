@@ -250,17 +250,17 @@ if ( $wgDBname === 'enwiki' ) {
 								'k1' => 1.2,
 								'b' => 0.3,
 							],
-							'default' => [
+							'text' => [
 								'type' => 'BM25',
 								'k1' => 1.2,
 								'b' => 0.75,
 							],
 						],
 						'fields' => [
-							'__default__' => 'default',
+							'__default__' => 'text',
 							'category' => 'arrays',
 							'heading' => 'arrays',
-							'redirect' => 'arrays',
+							'redirect.title' => 'arrays',
 							'suggest' => 'arrays',
 						],
 					],
