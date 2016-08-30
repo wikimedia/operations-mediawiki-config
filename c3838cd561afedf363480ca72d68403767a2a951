@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e96ab59_4df532b5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14159,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2016-08-30T13:42:01Z",
+      "side": 1,
+      "message": "I believe you want \"local-backend\", the automagic filesystem backend that exists when $wgLocalFileRepo does not have an explicit backend set (as it does for wikitech given wmgUseClusterFileBackend).",
+      "revId": "c3838cd561afedf363480ca72d68403767a2a951",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
