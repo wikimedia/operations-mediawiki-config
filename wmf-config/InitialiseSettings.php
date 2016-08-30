@@ -16188,7 +16188,7 @@ $wgConf->settings = [
 	'default' => false,
 	'commonswiki' => true, // T98307
 	'metawiki' => true,
-	'testwikidatawiki' => true,
+	'wikidata' => true,
 ],
 
 'wmgUseWikibaseRepo' => [
