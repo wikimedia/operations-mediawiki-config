@@ -11239,16 +11239,6 @@ $wgConf->settings = [
 	'default' => [ 'mode' => null, 'showcount' => true ],
 ],
 
-// Transitional copy of the setting for deployment sync purpose
-'wmgCategoryTreeCategoryPageMode' => [
-	'default' => 0,
-],
-
-'wmgCategoryTreeCategoryPageOptions' => [
-	'default' => [ 'mode' => null, 'showcount' => true ],
-],
-
-
 'wmgUseFundraisingTranslateWorkflow' => [
 	'default' => false,
 	'metawiki' => true,
