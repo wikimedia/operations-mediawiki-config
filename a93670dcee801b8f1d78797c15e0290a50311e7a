@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e93376b_a8bdc2d3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2016-09-01T15:04:27Z",
+      "side": 1,
+      "message": "It doesn\u0027t look like it was \"worked around\", the differing configuration was changed to no longer differ so the problem no longer exists.",
+      "range": {
+        "startLine": 9,
+        "startChar": 55,
+        "endLine": 10,
+        "endChar": 40
+      },
+      "revId": "a93670dcee801b8f1d78797c15e0290a50311e7a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e93376b_e8e7ca0b",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3140,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2016-09-01T15:04:27Z",
+      "side": 1,
+      "message": "You\u0027re now setting these two permissions only on the central wiki. Is that intended? It\u0027s not mentioned in the commit summary.",
+      "revId": "a93670dcee801b8f1d78797c15e0290a50311e7a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
