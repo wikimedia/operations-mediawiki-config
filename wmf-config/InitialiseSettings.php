@@ -17377,14 +17377,14 @@ $wgConf->settings = [
 	'wikivoyage' => true,
 ],
 
-'wgKartographerEnableTags' => [
-	'default' => [ 'mapframe', 'maplink' ],
-	'wikipedia' => [ 'maplink' ],
-	'cawiki' => [ 'mapframe', 'maplink' ],
-	'hewiki' => [ 'mapframe', 'maplink' ],
-	'mkwiki' => [ 'mapframe', 'maplink' ],
-	'testwiki' => [ 'mapframe', 'maplink' ],
-	'test2wiki' => [ 'mapframe', 'maplink' ],
+'wgKartographerEnableMapFrame' => [
+	'default' => true,
+	'wikipedia' => false,
+	'cawiki' => true,
+	'hewiki' => true,
+	'mkwiki' => true,
+	'testwiki' => true,
+	'test2wiki' => true,
 ],
 
 'wmgUseOATHAuth' => [
