@@ -537,7 +537,7 @@ function wmfLabsSettings() {
 
 		// Test Wikidata descriptions on mobile: T127250
 		'wgMFDisplayWikibaseDescriptions' => [
-			'default' => [
+			'enwiki' => [
 				'tagline' => true, 'search' => true, 'nearby' => true, 'watchlist' => true
 			]
 		],
