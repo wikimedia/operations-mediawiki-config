@@ -16438,6 +16438,7 @@ $wgConf->settings = [
 'wmgUsePageAssessments' => [
 	'default' => false,
 	'testwiki' => true, // T137918
+	'enwikivoyage' => true, // T142056
 ],
 
 'wmgUsePageImages' => [
