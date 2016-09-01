@@ -3131,23 +3131,19 @@ if ( $wmgUseOAuth ) {
 	}
 	$wgMWOAuthSecureTokenTransfer = true;
 
-	$wgGroupPermissions['autoconfirmed']['mwoauthproposeconsumer'] = true;
-	$wgGroupPermissions['autoconfirmed']['mwoauthupdateownconsumer'] = true;
+	if ( $wgDBname === $wgMWOAuthCentralWiki ) {
+		// management interfaces are only available on the central wiki
+		$wgGroupPermissions['autoconfirmed']['mwoauthproposeconsumer'] = true;
+		$wgGroupPermissions['autoconfirmed']['mwoauthupdateownconsumer'] = true;
+		$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
+		$wgOAuthGroupsToNotify = ['oauthadmin'];
+	}
 
 	$wgHooks['OAuthReplaceMessage'][] = function( &$msgKey ) {
 		if ( $msgKey === 'mwoauth-form-privacypolicy-link' ) {
 			$msgKey = 'wikimedia-oauth-privacy-link';
 		}
 		return true;
-	};
-
-	$wgExtensionFunctions[] = function() {
-		global $wgDBname, $wgMWOAuthCentralWiki, $wgGroupPermissions, $wgOAuthGroupsToNotify;
-		if ( $wgDBname === $wgMWOAuthCentralWiki ) {
-			// Only needed on the central wiki.
-			$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
-			$wgOAuthGroupsToNotify = ['oauthadmin'];
-		}
 	};
 }
 
