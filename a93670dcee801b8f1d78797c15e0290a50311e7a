@@ -73,6 +73,30 @@
     },
     {
       "key": {
+        "uuid": "2e93376b_594eee73",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-09-01T20:50:17Z",
+      "side": 1,
+      "message": "Ah, OK. I forgot that the beta central wiki setting could not match production while the latter used mediawikiwiki.",
+      "parentUuid": "2e93376b_fe322005",
+      "range": {
+        "startLine": 9,
+        "startChar": 55,
+        "endLine": 10,
+        "endChar": 40
+      },
+      "revId": "a93670dcee801b8f1d78797c15e0290a50311e7a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e93376b_e8e7ca0b",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
