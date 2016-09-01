@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "2e93376b_fec14084",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-09-01T18:56:06Z",
+      "side": 1,
+      "message": "I might have misread the history but my read was that in the past $wgMWOAuthCentralWiki was overridden in CommonSettings-labs.php so an extension function was needed to delay the check until we are sure $wgMWOAuthCentralWiki has been properly set. Since e8ae00c overriding is handled in CommonSettings.php instead so no need for that.",
+      "parentUuid": "2e93376b_a8bdc2d3",
+      "range": {
+        "startLine": 9,
+        "startChar": 55,
+        "endLine": 10,
+        "endChar": 40
+      },
+      "revId": "a93670dcee801b8f1d78797c15e0290a50311e7a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e93376b_e8e7ca0b",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
@@ -36,6 +60,24 @@
       "writtenOn": "2016-09-01T15:04:27Z",
       "side": 1,
       "message": "You\u0027re now setting these two permissions only on the central wiki. Is that intended? It\u0027s not mentioned in the commit summary.",
+      "revId": "a93670dcee801b8f1d78797c15e0290a50311e7a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e93376b_7e80f04b",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3140,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-09-01T18:56:06Z",
+      "side": 1,
+      "message": "Well, it\u0027s mentioned in the comment here :)\nI think it makes the config easier to read, and no difference functionally - special pages other than Special:OAuth only exist on the central wiki.",
+      "parentUuid": "2e93376b_e8e7ca0b",
       "revId": "a93670dcee801b8f1d78797c15e0290a50311e7a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
