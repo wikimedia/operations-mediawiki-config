@@ -22,6 +22,30 @@
       "revId": "4b886cd7401db2973f98d9500c137dc1e0a54fd7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e93376b_f9cb1a73",
+        "filename": "scap/plugins/scrape.py",
+        "patchSetId": 10
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 1706
+      },
+      "writtenOn": "2016-09-01T21:26:04Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "2e93376b_196546ab",
+      "range": {
+        "startLine": 51,
+        "startChar": 44,
+        "endLine": 51,
+        "endChar": 59
+      },
+      "revId": "4b886cd7401db2973f98d9500c137dc1e0a54fd7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
