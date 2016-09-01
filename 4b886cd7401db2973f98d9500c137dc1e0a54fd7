@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e93376b_196546ab",
+        "filename": "scap/plugins/scrape.py",
+        "patchSetId": 10
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2016-09-01T21:22:35Z",
+      "side": 1,
+      "message": "Cutoff",
+      "range": {
+        "startLine": 51,
+        "startChar": 44,
+        "endLine": 51,
+        "endChar": 59
+      },
+      "revId": "4b886cd7401db2973f98d9500c137dc1e0a54fd7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
