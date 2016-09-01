@@ -17361,8 +17361,19 @@ $wgConf->settings = [
 ],
 
 'wmgUseKartographer' => [
-	'default' => true,
-	'private' => false,
+	'default' => false,
+	'wikivoyage' => true,
+	'commonswiki' => true,
+	'wikidatawiki' => true,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'testwikidatawiki' => true,
+	'mediawikiwiki' => true,
+	'plwikimedia' => true, // T132510
+	'metawiki' => true,
+	'cawiki' => true,
+	'hewiki' => true,
+	'mkwiki' => true,
 ],
 
 'wgKartographerWikivoyageMode' => [
