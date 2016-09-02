@@ -14220,7 +14220,7 @@ $wgConf->settings = [
 
 'wgMathFileBackend' => [
 	'default' => 'global-multiwrite',
-	'wikitech' => 'local-backend', // T126338, T126628
+	'wikitech' => false, // T126338, T126628
 ],
 
 'wgMathPath' => [
