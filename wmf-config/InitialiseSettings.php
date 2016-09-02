@@ -8896,7 +8896,7 @@ $wgConf->settings = [
 			'review' => true, // T40690
 			'unreviewedpages' => true, // T40690
 		],
-		'technician' => [
+		'interface-editor' => [
 			'abusefilter-log-detail' => true, // T40690
 			'abusefilter-modify' => true, // T40690
 			'apihighlimits' => true, // T40690
@@ -8923,7 +8923,7 @@ $wgConf->settings = [
 			'deletedhistory' => true,
 		],
 		'user' => [ 'reupload-own' => true ], // T122710
-		'technican' => [ // T122710
+		'interface-editor' => [ // T122710
 			'abusefilter-log-detail' => true,
 			'abusefilter-modify' => true,
 			'apihighlimits' => true,
@@ -9751,11 +9751,11 @@ $wgConf->settings = [
 		'sysop' => [ 'patroller', 'rollbacker', 'autopatrolled' ], // T95180
 	],
 	'+trwiki' => [
+		'bureaucrat' => [ 'interface-editor' ], // T41690
 		'sysop' => [ 'patroller', 'massmessage-sender' ], // bureaucrat -> sysop, T40690, T147740
-		'bureaucrat' => [ 'technician' ], // T41690
 	],
 	'+trwikiquote' => [
-		'bureaucrat' => [ 'technican' ], // T122710
+		'bureaucrat' => [ 'interface-editor' ], // T122710
 	],
 	'+uawikimedia' => [
 	    'bureaucrat' => [ 'translationadmin' ], // T131731
@@ -10452,11 +10452,11 @@ $wgConf->settings = [
 		'sysop' => [ 'patroller', 'rollbacker', 'autopatrolled' ], // T95180
 	],
 	'+trwiki' => [
+		'bureaucrat' => [ 'interface-editor' ], // T41690
 		'sysop' => [ 'patroller', 'massmessage-sender' ], // bureaucrat -> sysop, T40690, T147740
-		'bureaucrat' => [ 'technician' ], // T41690
 	],
 	'+trwikiquote' => [
-		'bureaucrat' => [ 'technican' ], // T122710
+		'bureaucrat' => [ 'interface-editor' ], // T122710
 	],
 	'+uawikimedia' => [
 		'bureaucrat' => [ 'translationadmin' ], // T131731
