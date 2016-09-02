@@ -14238,6 +14238,11 @@ $wgConf->settings = [
 	'labtestwiki' => '//labtestwikitech.wikimedia.org/w/images/math', // T126338, T126628
 ],
 
+'wgMathDirectory' => [
+	'default' => '/mnt/upload7/math',
+	'wikitech' => '/srv/math-images', // T126628
+],
+
 'wmgUseMoodBar' => [
 	'default' => false, // Do not enable on any further wikis, T131340
 	'nlwiki' => true, // T34202

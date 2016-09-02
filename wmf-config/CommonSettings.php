@@ -2334,7 +2334,6 @@ if ( $wmgUseMath ) {
 	} elseif ( $wmgUseMathML && $wmgUseRestbaseVRS ) {
 		$wgDefaultUserOptions['math'] = 'mathml';
 	}
-	$wgMathDirectory   = '/mnt/upload7/math'; // just for sanity
 	$wgUseMathJax      = true;
 	// This variable points to non-WMF servers by default.
 	// Prevent accidental use.
