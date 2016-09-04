@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e93376b_1a9c4a5f",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 169,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2016-09-04T10:50:43Z",
+      "side": 1,
+      "message": "should be \u0027nowikidatadescriptiontagli\u0027 - fixing",
+      "range": {
+        "startLine": 169,
+        "startChar": 65,
+        "endLine": 169,
+        "endChar": 94
+      },
+      "revId": "863880c239c56030b9ce0c753163b1ed96694a95",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
