@@ -8592,6 +8592,20 @@ $wgConf->settings = [
 			'reupload' => true,
 			'move-subpages' => true, // T76131
 		],
+		'engineer' => [ // T144599
+			'apihighlimits' => true,
+			'editcontentmodel' => true,
+			'editinterface' => true,
+			'editprotected' => true,
+			'editusercss' => true,
+			'edituserjs' => true,
+			'jsonconfig-flush' => true,
+			'move-categorypages' => true,
+			'move-subpages' => true,
+			'movefile' => true,
+			'noratelimit' => true,
+			'suppressredirect' => true,
+		],
 		'filemover' => [ // T32984
 			'movefile' => true,
 			'suppressredirect' => true,
@@ -9574,7 +9588,7 @@ $wgConf->settings = [
 	],
 	'+ruwiki' => [
 		'sysop' => [ 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ],
-		'bureaucrat' => [ 'arbcom' ], // T51334
+		'bureaucrat' => [ 'arbcom', 'engineer' ], // T51334, T144599
 	],
 	'+ruwikimedia' => [
 		'bureaucrat' => [ 'translationadmin' ], // T121766
@@ -10269,7 +10283,7 @@ $wgConf->settings = [
 		],
 	],
 	'+ruwiki' => [
-		'bureaucrat' => [ 'sysop', 'arbcom' ], // T51334
+		'bureaucrat' => [ 'arbcom', 'engineer', 'sysop' ], // T51334, T144599
 		'sysop' => [ 'rollbacker', 'autoeditor', 'uploader', 'closer', 'filemover', 'suppressredirect' ],
 	],
 	'+ruwikimedia' => [
