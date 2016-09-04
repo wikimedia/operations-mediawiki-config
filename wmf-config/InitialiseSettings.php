@@ -7885,7 +7885,7 @@ $wgConf->settings = [
 		'bot' => [ 'move-categorypages' => true ], // T67728
 		'patroller' => [ 'patrol' => true, 'move-categorypages' => true ], // T67728
 		'rollbacker' => [ 'rollback' => true ], // T25233
-		'autopatrol' => [ 'autopatrol' => true, 'move-categorypages' => true ], // T31007 and T67728
+		'autopatrolled' => [ 'autopatrol' => true, 'move-categorypages' => true ], // T31007, T67728, T144699
 		'Image-reviewer' => [ 'movefile' => true, 'delete' => true ], // T66532 and T73229
 		'uploader' => [ 'upload' => true, 'reupload' => true, 'reupload-own' => true ], // T71171
 		'botadmin' => [
