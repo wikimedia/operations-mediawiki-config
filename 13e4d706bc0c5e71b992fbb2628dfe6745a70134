@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e93376b_9a059a7f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 2733
+      },
+      "writtenOn": "2016-09-04T12:05:46Z",
+      "side": 1,
+      "message": "this addition for sa.wikipedia is very well done by Urbanecm",
+      "revId": "13e4d706bc0c5e71b992fbb2628dfe6745a70134",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
