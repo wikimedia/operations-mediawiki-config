@@ -8592,6 +8592,20 @@ $wgConf->settings = [
 			'reupload' => true,
 			'move-subpages' => true, // T76131
 		],
+		'engineer' => [ // T144599
+			'apihighlimits' => true,
+			'editcontentmodel' => true,
+			'editinterface' => true,
+			'editprotected' => true,
+			'editusercss' => true,
+			'edituserjs' => true,
+			'jsonconfig-flush' => true,
+			'move-categorypages' = true,
+			'move-subpages' = true,
+			'movefile' = true,
+			'noratelimit' = true,
+			'suppressredirect' = true,
+		],
 		'filemover' => [ // T32984
 			'movefile' => true,
 			'suppressredirect' => true,
