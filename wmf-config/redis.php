@@ -5,6 +5,7 @@ foreach ( [ 'eqiad', 'codfw' ] as $dc ) {
 		'servers'  => [ "/var/run/nutcracker/redis_{$dc}.sock" ],
 		'password' => $wmgRedisPassword,
 		'loggroup' => 'redis',
+		'reportDupes' => false
 	];
 }
 
