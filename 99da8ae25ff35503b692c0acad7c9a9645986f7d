@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e93376b_ef1c1d6d",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 138,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2016-09-05T10:33:17Z",
+      "side": 1,
+      "message": "Do not put a single entry twice, even if commented. A recipe for a future issue.\n\nI try to do an alphabetic ordering (except the master, that has to be the first one).",
+      "range": {
+        "startLine": 138,
+        "startChar": 3,
+        "endLine": 138,
+        "endChar": 9
+      },
+      "revId": "99da8ae25ff35503b692c0acad7c9a9645986f7d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
