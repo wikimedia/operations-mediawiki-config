@@ -16141,6 +16141,7 @@ $wgConf->settings = [
 	'mediawikiwiki' => true,// T138943
 	'testwiki' => true,// T138943
 	'test2wiki' => true,// T138943
+	'testwikidatawiki' => true,// T144616
 	'arwiki' => true,// T140551
 	'dewiki' => true,// T140232
 	'hewiki' => true,// T140545
