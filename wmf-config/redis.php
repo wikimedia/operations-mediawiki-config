@@ -1,10 +1,11 @@
 <?php
 foreach ( [ 'eqiad', 'codfw' ] as $dc ) {
 	$wgObjectCaches["redis_{$dc}"] = [
-		'class'    => 'RedisBagOStuff',
-		'servers'  => [ "/var/run/nutcracker/redis_{$dc}.sock" ],
-		'password' => $wmgRedisPassword,
-		'loggroup' => 'redis',
+		'class'       => 'RedisBagOStuff',
+		'servers'     => [ "/var/run/nutcracker/redis_{$dc}.sock" ],
+		'password'    => $wmgRedisPassword,
+		'loggroup'    => 'redis',
+		'reportDupes' => false
 	];
 }
 
