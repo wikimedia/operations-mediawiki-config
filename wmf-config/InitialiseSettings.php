@@ -5289,6 +5289,8 @@ $wgConf->settings = [
 	'shwiki' => [ 100 => 'Portal', 101 => 'Razgovor_o_portalu' ], // T32928
 	'siwiki' => [ 100 => 'ද්වාරය', 101 => 'ද්වාරය_සාකච්ඡාව' ], // T8435, T26936
 	'skwiki' => [
+		NS_USER => 'Redaktor', // T143472
+		NS_USER_TALK => 'Diskusia_s_redaktorom',
 		100 => 'Portál',
 		101 => 'Diskusia_k_portálu',
 	],
