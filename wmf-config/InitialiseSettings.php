@@ -6920,6 +6920,7 @@ $wgConf->settings = [
 	'fawikibooks' => true, // T111024
 	'fawikinews' => true,
 	'fawiktionary' => true, // T85381
+	'fiwiki' => true, // T144817
 	'frwiki' => true, // T9269
 	'frwikibooks' => true, // T23517
 	'frwikisource' => true, // yannf asked in irc, 2006-07-25
@@ -7947,6 +7948,9 @@ $wgConf->settings = [
 		'rollbacker' => [ 'rollback' => true ],
 		// T21561:
 		'arbcom' => [ 'deletedhistory' => true, 'deletedtext' => true, 'undelete' => true ],
+		'editor' => [ 'patrol', 'autopatrol'], // T144817
+		'reviewer' => [ 'patrol', 'autopatrol' ], // T144817
+		'autoreview' => [ 'autopatrol' ], // T144817
 	],
 	'+foundationwiki' => [
 		'user' => [ 'editinterface' => true ],
