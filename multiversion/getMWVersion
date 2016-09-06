@@ -1,5 +1,0 @@
-#!/usr/bin/env php
-<?php
-require_once( __DIR__  . '/getMWVersion.php' );
-
-echo getWikiVersion( $argv[1] ) . "\n";
