@@ -4538,7 +4538,11 @@ $wgConf->settings = [
 		'FSFileBackend' => 'debug', // - gilles for T75229
 		'generated-pp-node-count' => 'debug',
 		'GettingStarted' => 'debug',
-		'GlobalTitleFail' => [ 'sample' => 10000 ], // chad hates $wgTitle
+		'GlobalTitleFail' => [ // chad hates $wgTitle
+			'udp2log' => 'info',
+			'logstash' => 'info',
+			'sample' => 10000
+		],
 		'HttpError' => 'error', // Only log http errors with a 500+ code T85795
 		'jobqueue' => 'debug',
 		'JobQueueFederated' => 'debug',
