@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e93376b_9e82e595",
+        "filename": "wmf-config/redis.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1357
+      },
+      "writtenOn": "2016-09-06T07:49:36Z",
+      "side": 1,
+      "message": "Alignment? The above lines added padding to align arrows.",
+      "revId": "80cd97e8c3282386aba6675b523da2ba1f7e1d2d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
