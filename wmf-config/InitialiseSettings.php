@@ -3640,6 +3640,10 @@ $wgConf->settings = [
 	'+siwiktionary' => [
 		'Wiktionary_talk' => NS_PROJECT_TALK,
 	],
+	'+skwiki' => [
+		'Užívateľ' => NS_USER, // T143472
+		'Diskusia_s_užívateľom' => NS_USER_TALK,
+	],
 	'+skwikibooks' => [
 		'Wikibooks_talk' => NS_PROJECT_TALK,
 	],
