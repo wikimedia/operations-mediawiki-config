@@ -1,9 +1,2 @@
-%% wikinews.dblist + wikiversity.dblist + wikisource.dblist + wikibooks.dblist + wikibooks.dblist + wiktionary.dblist
-ruwiki
-frwiki
-dewiki
-eswiki
-jawiki
-enwiki
-mediawikiwiki
-metawiki
+%% wikinews.dblist + wikiversity.dblist + wikisource.dblist + wikibooks.dblist + wiktionary.dblist + top6wikipedias.dblist
++ special.dblist - s4.dblist
