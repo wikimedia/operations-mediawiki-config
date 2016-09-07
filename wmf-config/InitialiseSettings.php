@@ -8887,6 +8887,7 @@ $wgConf->settings = [
 		'interface-editor' => [ 'editinterface' => true ], // T120348
 		'rollbacker' => [ 'rollback' => true ], // T47642
 		'autopatrolled' => [ 'autopatrol' => true ], // T139302
+		'massmessage-sender' => [ 'massmessage' => true, ], //T144927
 	],
 	'vecwiki' => [
 		'flood' => [ 'bot' => true ],
@@ -15654,6 +15655,7 @@ $wgConf->settings = [
 	'svwiki' => true, // T51009
 	'test2wiki' => true,
 	'ukwiki' => true, // T66143
+	'urwiki' => true, // T144927
 ],
 
 'wmgEducationProgramDYKCat' => [
@@ -15663,6 +15665,7 @@ $wgConf->settings = [
 	'fawiki' => 'نکته روز ویکی‌پدیا',
 	'lvwiki' => 'Mani kursi — Vai tu zināji?', // T89898
 	'ptwiki' => '!Você Sabia sobre cursos', // T54870
+        'urwiki' => 'کیا آپ جانتے ہیں؟',
 ],
 
 'wmgUseWikimediaShopLink' => [
