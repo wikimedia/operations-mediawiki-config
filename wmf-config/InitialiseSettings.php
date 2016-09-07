@@ -9370,8 +9370,8 @@ $wgConf->settings = [
 	'+frwikivoyage' => [
 		'sysop' => [ 'patroller' ],
 	],
-	'+frwiktionary' => [
-		'bureaucrat' => [ 'accountcreator', 'patroller', 'transwiki', 'autopatrolled', 'confirmed', 'abusefilter', 'botadmin' ],
+	'+frwiktionary' => [ // T138972
+		'bureaucrat' => [ 'accountcreator', 'patroller', 'transwiki', 'autopatrolled', 'confirmed', 'abusefilter', 'botadmin', 'translationadmin' ],
 	],
 	'+gawiki' => [
 		'sysop' => [ 'rollbacker' ],
@@ -10055,8 +10055,8 @@ $wgConf->settings = [
 	'+frwikivoyage' => [
 		'sysop' => [ 'patroller' ],
 	],
-	'+frwiktionary' => [
-		'bureaucrat' => [ 'accountcreator', 'patroller', 'transwiki', 'autopatrolled', 'confirmed', 'abusefilter', 'botadmin' ],
+	'+frwiktionary' => [ // T138972
+		'bureaucrat' => [ 'accountcreator', 'patroller', 'transwiki', 'autopatrolled', 'confirmed', 'abusefilter', 'botadmin', 'translationadmin' ],
 	],
 	'+gawiki' => [
 		'sysop' => [ 'rollbacker' ],
@@ -15274,6 +15274,7 @@ $wgConf->settings = [
 	'cawikimedia' => true, // T75394
 	'collabwiki' => true,
 	'commonswiki' => true, // T50620
+	'frwiktionary' => true, // T138972
 	'incubatorwiki' => true, // T36213
 	'legalteamwiki' => true, // T64610
 	'mediawikiwiki' => true,
@@ -15344,6 +15345,7 @@ $wgConf->settings = [
 'wmgUseTranslationMemory' => [
 	'default' => true,
 	'otrs_wikiwiki' => false, // T63297
+	'frwiktionary' => false, // T138972
 ],
 'wmgTranslateESIndex' => [
 	'default' => 'ttmserver',
@@ -15355,6 +15357,7 @@ $wgConf->settings = [
 	'brwikimedia' => true, // T46054
 	'cawikimedia' => true, // T75394
 	'commonswiki' => true, // T126901
+	'frwiktionary' => true, // T138972
 	'incubatorwiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
