@@ -8887,6 +8887,9 @@ $wgConf->settings = [
 		'interface-editor' => [ 'editinterface' => true ], // T120348
 		'rollbacker' => [ 'rollback' => true ], // T47642
 		'autopatrolled' => [ 'autopatrol' => true ], // T139302
+		'massmessage-sender' => [ // T144701
+			'massmessage' => true,
+		],
 	],
 	'vecwiki' => [
 		'flood' => [ 'bot' => true ],
