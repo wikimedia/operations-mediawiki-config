@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e93376b_0a34e5a6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 14455,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-09-07T16:27:10Z",
+      "side": 1,
+      "message": "This is wrong...\nWe want the non-taglines on other projects.",
+      "revId": "4ca184d98eedd04bc69664b40f616f11659cc148",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
