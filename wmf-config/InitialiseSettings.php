@@ -14451,8 +14451,8 @@ $wgConf->settings = [
 	'default' => [
 		'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => true
 	],
-	'nowikidatadescriptiontaglines' => [
-		'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => false
+	'nowikidatadescriptions' => [
+		'search' => false, 'nearby' => false, 'watchlist' => false, 'tagline' => false
 	],
 ],
 'wmgMFMobileFormatterHeadings' => [
