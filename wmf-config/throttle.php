@@ -35,6 +35,13 @@ $wmgThrottlingExceptions[] = [ // T143951 - University of British Columbia
 	'dbname' => [ 'enwiki' ],
 	'value' => 60 //50 expected
 ];
+$wmgThrottlingExceptions[] = [ // https://www.mediawiki.org/wiki/Wikimedia_Hackathon_Amrita_University
+	'from' => '2016-09-07T00:00 +5:30',
+	'to' => '2016-10-03T00:00 +5:30',
+	'IP' => '182.19.48.18',
+	'dbname' => 'labswiki',
+	'value' => 60 //50 expected
+];
 
 ## Add throttling definitions above.
 
