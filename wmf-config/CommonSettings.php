@@ -2659,6 +2659,28 @@ if ( $wmgUseEcho ) {
 	}
 }
 
+// Wikitech specific settings
+if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
+	$wgEmailConfirmToEdit = true;
+	$wgEnableCreativeCommonsRdf = true;
+
+	// Don't depend on other DB servers
+	$wgDefaultExternalStore = false;
+
+	$wgGroupPermissions['contentadmin'] = $wgGroupPermissions['sysop'];
+	$wgGroupPermissions['contentadmin']['editusercss'] = false;
+	$wgGroupPermissions['contentadmin']['edituserjs'] = false;
+	$wgGroupPermissions['contentadmin']['editrestrictedfield'] = false;
+	$wgGroupPermissions['contentadmin']['editinterface'] = false;
+	$wgGroupPermissions['contentadmin']['tboverride'] = false;
+	$wgGroupPermissions['contentadmin']['titleblacklistlog'] = false;
+	$wgGroupPermissions['contentadmin']['override-antispoof'] = false;
+	$wgGroupPermissions['contentadmin']['createaccount'] = false;
+
+	// Some settings specific to wikitech's extensions
+	include( "$wmfConfigDir/wikitech.php" );
+}
+
 if ( $wmgUseThanks ) {
 	wfLoadExtension( 'Thanks' );
 }
@@ -2950,27 +2972,6 @@ if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 if ( $wmfRealm != 'labs' ) {
 	// Tell localization cache builder about extensions used in wikitech
 	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikitech";
-}
-
-if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
-	$wgEmailConfirmToEdit = true;
-	$wgEnableCreativeCommonsRdf = true;
-
-	// Don't depend on other DB servers
-	$wgDefaultExternalStore = false;
-
-	$wgGroupPermissions['contentadmin'] = $wgGroupPermissions['sysop'];
-	$wgGroupPermissions['contentadmin']['editusercss'] = false;
-	$wgGroupPermissions['contentadmin']['edituserjs'] = false;
-	$wgGroupPermissions['contentadmin']['editrestrictedfield'] = false;
-	$wgGroupPermissions['contentadmin']['editinterface'] = false;
-	$wgGroupPermissions['contentadmin']['tboverride'] = false;
-	$wgGroupPermissions['contentadmin']['titleblacklistlog'] = false;
-	$wgGroupPermissions['contentadmin']['override-antispoof'] = false;
-	$wgGroupPermissions['contentadmin']['createaccount'] = false;
-
-	// Some settings specific to wikitech's extensions
-	include( "$wmfConfigDir/wikitech.php" );
 }
 
 // put this here to ensure it is available for localisation cache rebuild
