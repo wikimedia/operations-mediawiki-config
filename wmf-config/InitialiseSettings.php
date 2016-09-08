@@ -4548,6 +4548,7 @@ $wgConf->settings = [
 		'Math' => 'info',  // mobrovac for T121445
 		'memcached' => 'error', // -aaron 2012/10/24
 		'mobile' => 'debug',
+		'NewUserMessage' => 'debug',
 		'oai' => 'debug',
 		'OAuth' => 'debug',
 		'OutputBuffer' => 'debug',
