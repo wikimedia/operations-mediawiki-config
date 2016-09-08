@@ -1,6 +1,4 @@
 <?php
-require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
-
 	function outputFiles( $viewFilenames, $highlight = true ) {
 		$viewFilenames = array_map( 'basename', $viewFilenames );
 		natsort( $viewFilenames );
@@ -42,7 +40,9 @@ require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
 </ul>
 
 <hr>
-<p>Currently active MediaWiki versions: <?php echo implode( ', ', getActiveWikiVersions() ); ?></p>
+<p>Currently active MediaWiki versions: <?php
+	echo str_replace( ' ', ', ', exec( '/usr/bin/scap wikiversions-inuse' ) );
+?></p>
 <hr>
 
 <h2><img src="./images/source_php.png" alt=""> MediaWiki configuration</h2>
