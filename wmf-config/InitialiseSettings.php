@@ -8279,6 +8279,7 @@ $wgConf->settings = [
 	],
 	'ladwiki' => [
 		'flood' => [ 'bot' => true ], // T131527
+		'autoconfirmed' => [ 'upload' => false, 'reupload' => false ], // T145090
 	],
 	'pswiki' => [
 		'interface-editor' => [ // T133472
