@@ -1,5 +1,0 @@
-#!/usr/bin/env php
-<?php
-require_once( __DIR__  . '/activeMWVersions.php' );
-
-echo implode( ' ', getActiveWikiVersions() ) . "\n";
