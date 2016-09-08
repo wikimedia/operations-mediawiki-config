@@ -1,3 +1,3 @@
 <?php
-require_once './MWVersion.php';
-require getMediaWiki( 'img_auth.php' );
+require_once './MWMultiVersion.php';
+require MWMultiVersion::getMediaWiki( 'img_auth.php' );

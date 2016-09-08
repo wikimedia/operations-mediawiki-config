@@ -1,6 +1,6 @@
 <?php
-require_once './MWVersion.php';
-require getMediaWiki( 'includes/WebStart.php' );
+require_once './MWMultiVersion.php';
+require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
 $wgTitle = Title::newFromText( 'Mediawiki:robots.txt' );
 $page = WikiPage::factory( $wgTitle );
