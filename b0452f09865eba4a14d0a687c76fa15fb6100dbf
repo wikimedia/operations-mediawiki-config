@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e93376b_d41c377f",
+        "filename": "multiversion/MWMinimalScriptInit.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-09-08T17:49:38Z",
+      "side": 1,
+      "message": "I\u0027m thinking this should be getMediaWikiCli() instead, but I kept it as-is for now.\n\nAlso: this is only used for one thing in puppet, I\u0027m not a huge fan of supporting two entry points for CLI scripts.",
+      "range": {
+        "startLine": 10,
+        "startChar": 30,
+        "endLine": 10,
+        "endChar": 42
+      },
+      "revId": "b0452f09865eba4a14d0a687c76fa15fb6100dbf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
