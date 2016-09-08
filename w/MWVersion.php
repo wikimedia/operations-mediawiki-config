@@ -4,4 +4,4 @@
 $secure = getenv( 'MW_SECURE_HOST' );
 $host = $secure ?: $_SERVER['HTTP_HOST'];
 
-require_once '/srv/mediawiki/multiversion/MWVersion.php';
+require_once '/srv/mediawiki/multiversion/MWMultiVersion.php';

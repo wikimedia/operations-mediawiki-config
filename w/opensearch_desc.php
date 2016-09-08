@@ -1,3 +1,3 @@
 <?php
-require_once './MWVersion.php';
-require getMediaWiki( 'opensearch_desc.php' );
+require_once './MWMultiVersion.php';
+require MWMultiVersion::getMediaWiki( 'opensearch_desc.php' );

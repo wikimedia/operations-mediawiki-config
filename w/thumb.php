@@ -1,3 +1,3 @@
 <?php
-require_once './MWVersion.php';
-require getMediaWiki( 'thumb.php' );
+require_once './MWMultiVersion.php';
+require MWMultiVersion::getMediaWiki( 'thumb.php' );
