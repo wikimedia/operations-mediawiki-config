@@ -26,8 +26,8 @@
  * - wmfstatic.mismatch
  */
 define( 'MW_NO_SESSION', 'warn' );
-require_once './MWVersion.php';
-require getMediaWiki( 'includes/WebStart.php' );
+require_once '/srv/mediawiki/multiversion/MWMultiVersion.php';
+require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
 function wmfStaticShowError( $message, $smaxage = 60, $maxage = 0 ) {
 	header(

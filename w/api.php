@@ -1,3 +1,3 @@
 <?php
-require_once './MWVersion.php';
-require getMediaWiki( 'api.php' );
+require_once '/srv/mediawiki/multiversion/MWMultiVersion.php';
+require MWMultiVersion::getMediaWiki( 'api.php' );
