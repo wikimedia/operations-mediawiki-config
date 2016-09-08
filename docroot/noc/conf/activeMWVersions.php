@@ -1,4 +1,3 @@
 <?php
 
-require_once( '/srv/mediawiki/multiversion/activeMWVersions.php' );
-echo implode( ' ', getActiveWikiVersions() ) . "\n";
+echo str_replace( ' ', ', ', exec( '/usr/bin/scap wikiversions-inuse' ) );
