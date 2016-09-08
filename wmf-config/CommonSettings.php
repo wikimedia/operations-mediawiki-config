@@ -2103,10 +2103,6 @@ if ( $wmgUsePopups || ( $wmgPopupsBetaFeature && $wmgUseBetaFeatures ) ) {
 	$wgPopupsExperimentConfig = $wmgPopupsExperimentConfig;
 }
 
-if ( $wmgUseRestbaseUpdateJobs ) {
-	wfLoadExtension( 'RestBaseUpdateJobs' );
-}
-
 if ( !isset( $wgVirtualRestConfig ) && ( $wmgUseRestbaseVRS || $wmgUseParsoid ) ) {
 	$wgVirtualRestConfig = [
 		'modules' => [],

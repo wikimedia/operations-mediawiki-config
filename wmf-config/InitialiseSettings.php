@@ -13532,12 +13532,6 @@ $wgConf->settings = [
 	'default' => $wmfLocalServices['restbase']
 ],
 
-// whether to activate the extension sending page edit
-// updates to RESTBase
-'wmgUseRestbaseUpdateJobs' => [
-	'default' => true
-],
-
 // whether to configure RESTBase as a Virtual REST Service
 // in MW Core
 'wmgUseRestbaseVRS' => [
