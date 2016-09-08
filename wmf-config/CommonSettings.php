@@ -669,7 +669,7 @@ $wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $acti
 
 if ( $wmgUseTimeline ) {
 	wfLoadExtension( 'timeline' );
-	if ( $wgDBname == 'testwiki' || $wgDBname == 'mlwiki' ) {
+	if ( $wgDBname === 'testwiki' || $wgDBname === 'mlwiki' ) {
 		// FreeSansWMF has been generated from FreeSans and FreeSerif by using this script with fontforge:
 		// Open("FreeSans.ttf");
 		// MergeFonts("FreeSerif.ttf");
@@ -793,9 +793,9 @@ if ( $wmgUseCategoryTree ) {
 
 if ( $wmgUseProofreadPage ) {
 	wfLoadExtension( 'ProofreadPage' );
-	if ( $wgDBname == 'dewikisource' ) {
+	if ( $wgDBname === 'dewikisource' ) {
 		$wgGroupPermissions['*']['pagequality'] = true; # 27516
-	} elseif ( $wgDBname == 'enwikisource' || $wgDBname == 'svwikisource' ) {
+	} elseif ( $wgDBname === 'enwikisource' || $wgDBname === 'svwikisource' ) {
 		$wgDefaultUserOptions['proofreadpage-showheaders'] = 1;
 	}
 }
@@ -847,7 +847,7 @@ if ( $wmgUseMwEmbedSupport ) {
 if ( $wmgUseTimedMediaHandler ) {
 	require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
 	$wgTimedTextForeignNamespaces = [ 'commonswiki' => 102 ];
-	if ( $wgDBname == 'commonswiki' ) {
+	if ( $wgDBname === 'commonswiki' ) {
 		$wgTimedTextNS = 102;
 	}
 	//overwrite enabling of local TimedText namespace
@@ -915,7 +915,7 @@ if ( $wmgPFEnableStringFunctions ) {
 	$wgPFEnableStringFunctions = true;
 }
 
-if ( $wgDBname == 'mediawikiwiki' ) {
+if ( $wgDBname === 'mediawikiwiki' ) {
 	wfLoadExtension( 'ExtensionDistributor' );
 	$wgExtDistListFile = 'https://gerrit.wikimedia.org/mediawiki-extensions.txt';
 	$wgExtDistAPIConfig = [
@@ -1057,7 +1057,7 @@ if ( $wmgUseClusterJobqueue ) {
 		: "$wmfConfigDir/jobqueue.php";
 }
 
-if ( $wgDBname == 'nostalgiawiki' ) {
+if ( $wgDBname === 'nostalgiawiki' ) {
 	# Link back to current version from the archive funhouse
 	if ( ( isset( $_REQUEST['title'] ) && ( $title = $_REQUEST['title'] ) )
 		|| ( isset( $_SERVER['PATH_INFO'] )  && ( $title = substr( $_SERVER['PATH_INFO'], 1 ) ) ) ) {
@@ -1130,7 +1130,7 @@ $wgExtensionFunctions[] = function() {
 };
 
 // T26313, turn off minordefault on enwiki
-if ( $wgDBname == 'enwiki' ) {
+if ( $wgDBname === 'enwiki' ) {
 	$wgHiddenPrefs[] = 'minordefault';
 }
 
@@ -1201,7 +1201,7 @@ foreach ( $groupOverrides as $group => $permissions ) {
 	$wgGroupPermissions[$group] = $permissions + $wgGroupPermissions[$group];
 }
 
-if ( $wgDBname == 'loginwiki' ) {
+if ( $wgDBname === 'loginwiki' ) {
 	$wgGroupPermissions['*'] = [
 		'read' => true,
 		'autocreateaccount' => true,
@@ -1364,10 +1364,10 @@ if ( $wmgUseCentralAuth ) {
 	if ( isset( $wgCentralAuthAutoLoginWikis[$wmgSecondLevelDomain] ) ) {
 		unset( $wgCentralAuthAutoLoginWikis[$wmgSecondLevelDomain] );
 		$wgCentralAuthCookieDomain = $wmgSecondLevelDomain;
-	} elseif ( $wgDBname == 'commonswiki' && isset( $wgCentralAuthAutoLoginWikis["commons$wmgSecondLevelDomain"] ) ) {
+	} elseif ( $wgDBname === 'commonswiki' && isset( $wgCentralAuthAutoLoginWikis["commons$wmgSecondLevelDomain"] ) ) {
 		unset( $wgCentralAuthAutoLoginWikis["commons$wmgSecondLevelDomain"] );
 		$wgCentralAuthCookieDomain = "commons$wmgSecondLevelDomain";
-	} elseif ( $wgDBname == 'metawiki' ) {
+	} elseif ( $wgDBname === 'metawiki' ) {
 		unset( $wgCentralAuthAutoLoginWikis["meta$wmgSecondLevelDomain"] );
 		$wgCentralAuthCookieDomain = "meta$wmgSecondLevelDomain";
 	} else {
@@ -1597,7 +1597,7 @@ if ( $wmgUseCentralNotice ) {
 	$wgCentralGeoScriptURL = false;
 
 	// for banner loading
-	if ( $wgDBname == 'testwiki' ) {
+	if ( $wgDBname === 'testwiki' ) {
 		$wgCentralPagePath = "//test.wikipedia.org/w/index.php";
 		$wgCentralSelectedBannerDispatcher = "//test.wikipedia.org/w/index.php?title=Special:BannerLoader";
 	} else {
@@ -1611,16 +1611,16 @@ if ( $wmgUseCentralNotice ) {
 	$wgNoticeReporterDomains = 'https://donate.wikimedia.org';
 
 	$wgCentralDBname = 'metawiki';
-	if ( $wmfRealm == 'production' && $wgDBname == 'testwiki' ) {
+	if ( $wmfRealm == 'production' && $wgDBname === 'testwiki' ) {
 		# test.wikipedia.org has its own central database:
 		$wgCentralDBname = 'testwiki';
 	}
 
 	$wgNoticeInfrastructure = false;
-	if ( $wgDBname == 'metawiki' ) {
+	if ( $wgDBname === 'metawiki' ) {
 		$wgNoticeInfrastructure = true;
 	}
-	if( $wmfRealm == 'production' && $wgDBname == 'testwiki' ) {
+	if( $wmfRealm == 'production' && $wgDBname === 'testwiki' ) {
 		$wgNoticeInfrastructure = true;
 	}
 
@@ -1629,7 +1629,7 @@ if ( $wmgUseCentralNotice ) {
 
 	// No caching for banners on testwiki, so we can develop them there a bit faster - NeilK 2012-01-16
 	// Never set this to zero on a highly trafficked wiki, there are server-melting consequences
-	if ( $wgDBname == 'testwiki' ) {
+	if ( $wgDBname === 'testwiki' ) {
 		$wgNoticeBannerMaxAge = 0;
 	}
 
@@ -1674,7 +1674,7 @@ if ( $wmgUseCentralNotice ) {
 // Load our site-specific l10n extension
 wfLoadExtension( 'WikimediaMessages' );
 
-if ( $wgDBname == 'enwiki' ) {
+if ( $wgDBname === 'enwiki' ) {
 	// Please don't interfere with our hundreds of wikis ability to manage themselves.
 	// Only use this shitty hack for enwiki. Thanks.
 	// -- brion 2008-04-10
@@ -1692,7 +1692,7 @@ if ( $wgDBname == 'enwiki' ) {
 	};
 }
 
-if ( $wgDBname == 'enwiki' || $wgDBname == 'fawiki' ) {
+if ( $wgDBname === 'enwiki' || $wgDBname === 'fawiki' ) {
 	// T59569, T105118
 	//
 	// If it's an anonymous user creating a page in the English and Persian Wikipedia
@@ -1865,7 +1865,7 @@ if ( $wmgUseLivePreview ) {
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
 $wgDefaultUserOptions['showhiddencats'] = $wmgShowHiddenCats;
 
-if( $wgDBname == 'commonswiki' ) {
+if( $wgDBname === 'commonswiki' ) {
 	$wgDefaultUserOptions['watchcreations'] = 0;
 } else {
 	$wgDefaultUserOptions['watchcreations'] = 1;
@@ -1991,11 +1991,11 @@ if ( $wmgUseUploadWizard ) {
 	$wgUploadWizardConfig['enableChunked'] = 'opt-in';
 	$wgUploadWizardConfig['altUploadForm'] = $wmgAltUploadForm; // T35513
 
-	if ( $wgDBname == 'testwiki' ) {
+	if ( $wgDBname === 'testwiki' ) {
 		$wgUploadWizardConfig['feedbackPage'] = 'Prototype_upload_wizard_feedback';
 		$wgUploadWizardConfig["missingCategoriesWikiText"] = '<p><span class="errorbox"><b>Hey, no categories?</b></span></p>';
 		unset( $wgUploadWizardConfig['fallbackToAltUploadForm'] );
-	} elseif ( $wgDBname == 'commonswiki' ) {
+	} elseif ( $wgDBname === 'commonswiki' ) {
 		$wgUploadWizardConfig['feedbackPage'] = 'Commons:Upload_Wizard_feedback'; # Set by neilk, 2011-11-01, per erik
 		$wgUploadWizardConfig["missingCategoriesWikiText"] = "{{subst:unc}}";
 		$wgUploadWizardConfig['blacklistIssuesPage'] = 'Commons:Upload_Wizard_blacklist_issues'; # Set by neilk, 2011-11-01, per erik
@@ -2952,7 +2952,7 @@ if ( $wmfRealm != 'labs' ) {
 	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikitech";
 }
 
-if ( $wgDBname == 'labswiki' || $wgDBname === 'labtestwiki' ) {
+if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgEmailConfirmToEdit = true;
 	$wgEnableCreativeCommonsRdf = true;
 
@@ -3000,7 +3000,7 @@ if ( $wmgUseSearchExtraNS ) {
 
 if ( $wmgUseGlobalAbuseFilters ) {
 	$wgAbuseFilterCentralDB = $wmgAbuseFilterCentralDB;
-	$wgAbuseFilterIsCentral = ( $wgDBname == $wgAbuseFilterCentralDB );
+	$wgAbuseFilterIsCentral = ( $wgDBname === $wgAbuseFilterCentralDB );
 }
 
 if ( $wmgZeroPortal || $wmgUseGraph ) {
