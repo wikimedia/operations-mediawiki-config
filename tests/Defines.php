@@ -46,13 +46,12 @@ define( 'DBO_COMPRESS', 512 );
  * Valid database indexes
  * Operation-based indexes
  */
-define( 'DB_SLAVE', -1 );     # Read from the slave (or only server)
+define( 'DB_REPLICA', -1 );     # Read from a replica (or only server)
 define( 'DB_MASTER', -2 );    # Write to master (or only server)
 /**@}*/
 
 # Obsolete aliases
-define( 'DB_READ', -1 );
-define( 'DB_WRITE', -2 );
+define( 'DB_SLAVE', -1 );
 
 /**@{
  * Virtual namespaces; don't appear in the page database
@@ -184,8 +183,9 @@ define( 'EDIT_UPDATE', 2 );
 define( 'EDIT_MINOR', 4 );
 define( 'EDIT_SUPPRESS_RC', 8 );
 define( 'EDIT_FORCE_BOT', 16 );
-define( 'EDIT_DEFER_UPDATES', 32 );
+define( 'EDIT_DEFER_UPDATES', 32 ); // Unused since 1.27
 define( 'EDIT_AUTOSUMMARY', 64 );
+define( 'EDIT_INTERNAL', 128 );
 /**@}*/
 
 /**@{
@@ -198,6 +198,11 @@ define( 'LIST_SET', 2 );
 define( 'LIST_NAMES', 3 );
 define( 'LIST_OR', 4 );
 /**@}*/
+
+/**
+ * Unicode and normalisation related
+ */
+require_once __DIR__ . '/compat/normal/UtfNormalDefines.php';
 
 /**@{
  * Hook support constants
@@ -302,4 +307,10 @@ define( 'CONTENT_FORMAT_SERIALIZED', 'application/vnd.php.serialized' );
 define( 'CONTENT_FORMAT_JSON', 'application/json' );
 // for future use with the api, and for use by extensions
 define( 'CONTENT_FORMAT_XML', 'application/xml' );
+/**@}*/
+
+/**@{
+ * Max string length for shell invocations; based on binfmts.h
+ */
+define( 'SHELL_MAX_ARG_STRLEN', '100000' );
 /**@}*/
