@@ -15899,6 +15899,9 @@ $wgConf->settings = [
 		2301, // Gadget_talk from Gadgets
 		2303, // Gadget_definition_talk from Gadgets
 	],
+	'wikitech' => [
+		117, // Tool talk - T127792
+	],
 ],
 
 // Enable editing other users posts by autoconfirmed
@@ -15909,10 +15912,12 @@ $wgConf->settings = [
 'wmgFlowDefaultWikiDb' => [
 	'default' => 'flowdb',
 	'private' => false,
+	'wikitech' => false, // T127792
 ],
 'wmgFlowCluster' => [
 	'default' => 'extension1',
 	'private' => false,
+	'wikitech' => false, // T127792
 ],
 'wmgFlowMaintenanceMode' => [
 	'default' => false,
