@@ -176,7 +176,10 @@ $wgOpenStackManagerPuppetDocBase = 'http://doc.wikimedia.org/puppet/classes/__si
 $wgOpenStackManagerProxyGateways = [ 'eqiad' => '208.80.155.156' ];
 
 # This must be loaded AFTER OSM, to overwrite it's defaults
-require_once( '/etc/mediawiki/WikitechPrivateSettings.php' );
+# Except when we're not an OSM host and we're running like a maintenance script.
+if ( file_exists( '/etc/mediawiki/WikitechPrivateSettings.php' ) ) {
+	require_once( '/etc/mediawiki/WikitechPrivateSettings.php' );
+}
 
 $smwgNamespacesWithSemanticLinks[NS_NOVA_RESOURCE] = true;
 
