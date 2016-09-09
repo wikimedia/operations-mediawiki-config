@@ -35,7 +35,7 @@ if ( $wgDBname == 'alswiki' ) {
 }
 
 elseif ( $wgDBname == 'arwiki' ) {
-	$wgFlaggedRevsWhitelist = [ 'الص�?حة_الرئيسية' ];
+	$wgFlaggedRevsWhitelist = [ 'الصفحة_الرئيسية' ];
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ 100, 104 ] ); // T21332
 }
 
