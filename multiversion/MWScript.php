@@ -47,7 +47,8 @@ EOT
 		}
 	}
 
-	$relFile = $argv[1]; // the script file to run
+	// the script file to run
+	$relFile = getenv( 'MW_BOOTSTRAP_ONLY' ) ? 'commandLine.inc' : $argv[1];
 	# If no MW directory is given then assume this is a /maintenance script
 	if ( strpos( $relFile, '/' ) === false ) {
 		$relFile = "maintenance/$relFile"; // convenience
