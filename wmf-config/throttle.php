@@ -42,6 +42,13 @@ $wmgThrottlingExceptions[] = [ // https://www.mediawiki.org/wiki/Wikimedia_Hacka
 	'dbname' => 'labswiki',
 	'value' => 60 //50 expected
 ];
+$wmgThrottlingExceptions[] = [ // T145115
+	'from' => '2016-09-21T13:00 -4:00',
+	'to' => '2016-09-21T17:00 -4:00',
+	'range' => '132.205.228.0/24',
+	'dbname' => [ 'enwiki', 'frwiki' ],
+	'value' => 50 //40 expected
+];
 
 ## Add throttling definitions above.
 
