@@ -19,7 +19,7 @@
 
 # Globals set in CommonSettings.php for use in settings values
 global $wmfUdp2logDest, $wmfDatacenter, $wmfRealm, $wmfConfigDir, $wgConf,
-	$wmfAllServices, $wmfLocalServices, $wmfMasterServices;
+	$wmfAllServices, $wmfLocalServices, $wmfMasterServices, $wmfMasterDatacenter;
 
 $wgConf->settings = [
 

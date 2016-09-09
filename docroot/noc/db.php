@@ -13,7 +13,7 @@ error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
 
 # some lame definitions used in db.php
-$wgDBname = $wgDBuser = $wgDBpassword = null;
+$wgDBname = $wgDBuser = $wgDBpassword = $wmfMasterDatacenter = null;
 define( 'DBO_DEFAULT', 'uniq' );
 
 require_once( '../../wmf-config/db-eqiad.php' );
