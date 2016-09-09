@@ -203,7 +203,7 @@ if ( $wgDBname === 'test2wiki' ) {
 		'scriptDirUrl'     => "https://test.wikipedia.org/w",
 		'favicon'          => "/static/favicon/black-globe.ico",
 		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 86400,
+		'descriptionCacheExpiry' => 86400 * 7,
 		'wiki'             => 'testwiki',
 		'initialCapital'   => true,
 		'zones'            => [ // actual swift containers have 'local-*'
@@ -229,7 +229,7 @@ if ( $wgDBname != 'commonswiki' ) {
 		'scriptDirUrl'     => "https://commons.wikimedia.org/w",
 		'favicon'          => "/static/favicon/commons.ico",
 		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 86400,
+		'descriptionCacheExpiry' => 86400 * 7,
 		'wiki'             => 'commonswiki',
 		'initialCapital'   => true,
 		'zones'            => [ // actual swift containers have 'local-*'
