@@ -37,10 +37,10 @@ mwconfig_files_txt=(
 	mobile.php
 	proofreadpage.php
 	redis.php
+	ReverseProxy.php
+	ReverseProxy-labs.php
 	throttle.php
 	wgConf.php
-	squid.php
-	squid-labs.php
 	session.php
 	session-labs.php
 	trusted-xff.php

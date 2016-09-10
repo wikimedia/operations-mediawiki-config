@@ -1,5 +1,6 @@
 <?php
-# HTCP multicast squid purging
+
+# Multicast HTCP purging
 $wgHTCPRouting = [
 	'' => [
 		'host' => '239.128.0.112',
@@ -9,6 +10,7 @@ $wgHTCPRouting = [
 $wgHTCPMulticastTTL = 8;
 
 # Accept XFF from these proxies
+# The name is misleading: this is currently handled by Varnish.
 $wgSquidServersNoPurge = [
 	# Note: the general idea here is to cover infrastructure space
 	# where e.g. Varnish and SSL servers could be located, but exclude

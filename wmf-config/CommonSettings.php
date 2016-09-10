@@ -544,21 +544,22 @@ if ( defined( 'HHVM_VERSION' ) ) {
 	// but on PHP 5.5 (not HHVM)
 	$wgSVGConverters['rsvg-wikitech'] = '$path/rsvg-convert -w $width -h $height -o $output $input';
 }
+
 #######################################################################
-# Squid Configuration
+# Reverse proxy configuration (Multicast HTCP / CDN purging, XFF)
 #######################################################################
 
 $wgStatsdServer = $wmfLocalServices['statsd'];
 if ( $wmfRealm === 'production' ) {
 	if ( $wmgUseClusterSquid ) {
 		$wgUseSquid = true;
-		require( "$wmfConfigDir/squid.php" );
+		require( "$wmfConfigDir/ReverseProxy.php" );
 	}
 } elseif ( $wmfRealm === 'labs' ) {
 	$wgStatsdMetricPrefix = 'BetaMediaWiki';
 	if ( $wmgUseClusterSquid ) {
 		$wgUseSquid = true;
-		require( "$wmfConfigDir/squid-labs.php" );
+		require( "$wmfConfigDir/ReverseProxy-labs.php" );
 	}
 }
 
