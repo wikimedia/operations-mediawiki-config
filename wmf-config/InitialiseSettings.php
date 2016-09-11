@@ -17261,6 +17261,7 @@ $wgConf->settings = [
 	'eswikivoyage' => true, // T125000
 	'frwikivoyage' => true, // T115023
 	'hewikivoyage' => true, // T140717
+	'itwikivoyage' => true, // T145328
 	'rowikivoyage' => true, // T142963
 	'ruwikivoyage' => true, // T110837
 	'ukwikivoyage' => true, // T121999
@@ -17287,6 +17288,7 @@ $wgConf->settings = [
 'wgWPBNamespaces' => [
 	'default' => true, // T129099
 	'frwikivoyage' => [ NS_MAIN, NS_USER, NS_PROJECT, NS_HELP ], // T123084
+	'itwikivoyage' => [ 0, 1, 2, 3, 4, 5, 12, 13, 104, 105 ], // T145328
 	'ruwikivoyage' => [ 0, 1, 10, 11, 12, 13, 14, 15, 2,
 		2300, 2301, 2302, 2303, 2600, 3, 4, 5, 6, 7, 8, 828, 829, 9 ], // T114566, T114723
 	'ukwikivoyage' => [ NS_MAIN, NS_USER, NS_PROJECT ], // T121999
