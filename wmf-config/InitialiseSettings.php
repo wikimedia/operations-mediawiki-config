@@ -9223,7 +9223,12 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'autopatrolled' ],
 	],
 	'+commonswiki' => [
-		'bureaucrat' => [ 'gwtoolset', 'ipblock-exempt', 'translationadmin' ], // T26374, T65124, T78814
+		'bureaucrat' => [
+			'gwtoolset', // T65124
+			'ipblock-exempt',
+			'translationadmin', // T50620
+			'accountcreator', // T144689
+		],
 		'checkuser' => [ 'ipblock-exempt' ],
 		'sysop' => [ 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer', 'upwizcampeditors' ],
 		'Image-reviewer' => [ 'Image-reviewer' ],
@@ -9888,7 +9893,12 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'translationadmin', 'sysop', 'bureaucrat' ],
 	],
 	'+commonswiki' => [
-		'bureaucrat' => [ 'gwtoolset', 'ipblock-exempt', 'translationadmin' ], // T50620, T65124, T78814
+		'bureaucrat' => [
+			'gwtoolset', // T65124
+			'ipblock-exempt',
+			'translationadmin', // T50620
+			'accountcreator', // T144689
+		],
 		'checkuser' => [ 'ipblock-exempt' ],
 		'sysop' => [ 'rollbacker', 'confirmed', 'patroller', 'autopatrolled', 'filemover', 'Image-reviewer', 'upwizcampeditors' ],
 	],
