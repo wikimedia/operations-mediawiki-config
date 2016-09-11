@@ -7666,6 +7666,7 @@ $wgConf->settings = [
 		],
 		'bot' => [
 			'changetags' => true, // T134196
+			'upload_by_url' => true, // T145010
 		]
 	],
 	'dawiki' => [
