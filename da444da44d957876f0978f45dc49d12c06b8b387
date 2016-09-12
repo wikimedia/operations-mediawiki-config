@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e93376b_98ac8f34",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1142,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-09-12T12:55:50Z",
+      "side": 1,
+      "message": "The second one should be -2x :)",
+      "revId": "da444da44d957876f0978f45dc49d12c06b8b387",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
