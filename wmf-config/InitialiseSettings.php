@@ -4599,6 +4599,7 @@ $wgConf->settings = [
 		'MessageCacheError' => 'debug',
 		'LocalFile' => 'debug',
 		'DBTransaction' => 'debug',
+		'DBReplication' => 'warning'
 	],
 
 	'+private' => [
