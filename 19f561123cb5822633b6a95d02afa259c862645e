@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e93376b_1bfc1908",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 49,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-09-12T13:02:05Z",
+      "side": 1,
+      "message": "Had a trailing white space. Fixed it and rebased in next patch.",
+      "revId": "19f561123cb5822633b6a95d02afa259c862645e",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
