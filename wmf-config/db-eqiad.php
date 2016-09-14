@@ -185,7 +185,7 @@ $wgLBFactoryConf = [
 	'password'	  => $wgDBpassword,
 	'type'		  => 'mysql',
 	'flags'		  => DBO_DEFAULT,
-	'max lag'	  => 8, // should be safely less than $wgCdnReboundPurgeDelay
+	'max lag'	  => 6, // should be safely less than $wgCdnReboundPurgeDelay
 	'variables'   => [
 		'innodb_lock_wait_timeout' => 15
 	]
