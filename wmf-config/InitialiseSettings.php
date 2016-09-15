@@ -11187,7 +11187,7 @@ $wgConf->settings = [
 	'default' => [ NS_PROJECT, NS_HELP ],
 	'+wikimedia' => [ NS_MAIN ],
 	'+special' => [ NS_MAIN ],
-
+	'+dewiki' => [ 0, 1, 2, 3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 15, 100, 829, 2301, 2303, 2600 ], // T145619
 	'+dewikivoyage' => [ 102 ], // T119420
 	'+frwiki' => [ 102 ], // T127688
 	'+itwiki' => [ 102 ],
