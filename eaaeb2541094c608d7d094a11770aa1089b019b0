@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_587dffe3",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12792,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-09-15T19:56:15Z",
+      "side": 1,
+      "message": "Should probably be 0.1 to not interfere with Hungarian sampling as that\u0027s the default as defined in extension.json.",
+      "revId": "eaaeb2541094c608d7d094a11770aa1089b019b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
