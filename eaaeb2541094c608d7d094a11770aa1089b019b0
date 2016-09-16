@@ -16,6 +16,24 @@
       "revId": "eaaeb2541094c608d7d094a11770aa1089b019b0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_8db80fe4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12792,
+      "author": {
+        "id": 1948
+      },
+      "writtenOn": "2016-09-16T15:49:25Z",
+      "side": 1,
+      "message": "Done. I\u0027ll also submit a follow-up patch in ext/Popups to make the default in extension.json 0, since we should\u0027ve probably always been setting it in the config to begin with.",
+      "parentUuid": "0e82f318_587dffe3",
+      "revId": "eaaeb2541094c608d7d094a11770aa1089b019b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
