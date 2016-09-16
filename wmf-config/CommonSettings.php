@@ -1561,9 +1561,11 @@ if ( file_exists( '/etc/wikimedia-scaler' ) ) {
 	$wgDisableOutputCompression = true;
 }
 
-$wgMaxShellFileSize = 512 * 1024;
-$wgMaxShellMemory = 1024 * 1024;
-$wgMaxShellTime = 50;
+// Passed to ulimit
+
+$wgMaxShellFileSize = 512 * 1024; // Kilobytes
+$wgMaxShellMemory = 1024 * 1024;  // Kilobytes
+$wgMaxShellTime = 50;  // seconds
 
 // Use a cgroup for shell execution.
 // This will cause shell execution to fail if the cgroup is not installed.
