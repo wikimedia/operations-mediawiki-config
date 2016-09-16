@@ -45,7 +45,7 @@ $wmgThrottlingExceptions[] = [ // T143951 - Vancouver, University of British Col
 	'to' => '2016-09-21T16:00 -8:00',
 	'range' => [ '128.189.64.0/19', '128.189.192.0/18', '206.12.64.0/21', '206.87.112.0/21', '206.87.120.0/21', '206.87.128.0/19', '206.87.192.0/21', '206.87.208.0/21', '206.87.216.0/21', '137.82.104.0/24', '137.82.79.0/24', '137.82.82.128/25' ],
 	'dbname' => [ 'enwiki' ],
-	'value' => 60 //50 expected
+	'value' => 70 //50 expected
 ];
 
 $wmgThrottlingExceptions[] = [ // T145115 - Montréal, Concordia Library and McGill University
