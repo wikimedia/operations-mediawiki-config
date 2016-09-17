@@ -73,6 +73,13 @@ if ( $wmgUseWikibaseRepo ) {
 			'P491',
 		];
 	}
+
+	if ( $wgDBname === 'wikidatawiki' ) {
+		$wgWBRepoSettings['unitStorage'] = [
+			'class' => '\\Wikibase\\Lib\\JsonUnitStorage', 
+			'args' => [__DIR__ . '/unitConversionConfig.json']
+		];
+	}
 }
 
 if ( $wmgUseWikibaseClient ) {
