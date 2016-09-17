@@ -73,6 +73,13 @@ if ( $wmgUseWikibaseRepo ) {
 			'P491',
 		];
 	}
+	
+	if ( $wgDBname === 'wikidatawiki' ) {
+		$wgWBRepoSettings['unitStorage'] = [
+			'class' => '\\Wikibase\\Lib\\JsonUnitStorage', 
+			'args' => [ __DIR__ . '/unitConversionConfig.json' ]
+		];
+	}
 }
 
 if ( $wmgUseWikibaseClient ) {
@@ -88,7 +95,7 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['repoConceptBaseUri'] = 'http://www.wikidata.org/entity/';
 		$wgArticlePlaceholderImageProperty = 'P18';
 	}
-
+	
 	$wgWBClientSettings['badgeClassNames'] = [
 		'Q17437796' => 'badge-featuredarticle',
 		'Q17437798' => 'badge-goodarticle',

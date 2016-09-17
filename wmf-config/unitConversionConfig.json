@@ -1,0 +1,80 @@
+{
+    "Q11573": {
+        "factor": "1",
+        "unit": "Q11573",
+        "label": "metre",
+        "siLabel": "metre"
+    },
+    "Q218593": {
+        "factor": "0.0254",
+        "unit": "Q11573",
+        "label": "inch",
+        "siLabel": "metre"
+    },
+    "Q3710": {
+        "factor": "0.3048",
+        "unit": "Q11573",
+        "label": "foot",
+        "siLabel": "metre"
+    },
+    "Q178674": {
+        "factor": "0.000000001",
+        "unit": "Q11573",
+        "label": "nanometre",
+        "siLabel": "metre"
+    },
+    "Q93318": {
+        "factor": "1852",
+        "unit": "Q11573",
+        "label": "nautical mile",
+        "siLabel": "metre"
+    },
+    "Q253276": {
+        "factor": "1609.344",
+        "unit": "Q11573",
+        "label": "mile",
+        "siLabel": "metre"
+    },
+    "Q174728": {
+        "factor": "0.01",
+        "unit": "Q11573",
+        "label": "centimetre",
+        "siLabel": "metre"
+    },
+    "Q174789": {
+        "factor": "0.001",
+        "unit": "Q11573",
+        "label": "millimetre",
+        "siLabel": "metre"
+    },
+    "Q531": {
+        "factor": "9460730472580800",
+        "unit": "Q11573",
+        "label": "light-year",
+        "siLabel": "metre"
+    },
+    "Q1811": {
+        "factor": "149597870700",
+        "unit": "Q11573",
+        "label": "astronomical unit",
+        "siLabel": "metre"
+    },
+    "Q828224": {
+        "factor": "1000",
+        "unit": "Q11573",
+        "label": "kilometre",
+        "siLabel": "metre"
+    },
+    "Q482798": {
+        "factor": "0.9144",
+        "unit": "Q11573",
+        "label": "yard",
+        "siLabel": "metre"
+    },
+    "Q25906460": {
+        "factor": "0.01847",
+        "unit": "Q11573",
+        "label": "dactylos",
+        "siLabel": "metre"
+    }
+}
