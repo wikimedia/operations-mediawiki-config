@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_18e8dcdc",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2016-09-17T12:33:32Z",
+      "side": 1,
+      "message": "this setting should be with the other repo settings in the $wmgUseWikibaseRepo block above. (not in client settings)\n\nalso, whitespace :o",
+      "revId": "a3c864505217e946b7d91f9f92c25140d68ac1d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_58f254ce",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 92,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2016-09-17T12:33:32Z",
+      "side": 1,
+      "message": "is this not needed for test wikidata?  I suppose this is for the query service and we don\u0027t have an instance of that for test.wikidata yet?",
+      "revId": "a3c864505217e946b7d91f9f92c25140d68ac1d2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
