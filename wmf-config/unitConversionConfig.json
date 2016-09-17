@@ -1,0 +1,752 @@
+{
+    "Q613726": {
+        "factor": "1000000000000000000000",
+        "unit": "Q11570",
+        "label": "yottagram",
+        "siLabel": "kilogram"
+    },
+    "Q177974": {
+        "factor": "101325",
+        "unit": "Q44395",
+        "label": "atmosphere",
+        "siLabel": "pascal"
+    },
+    "Q211256": {
+        "factor": "0.44704",
+        "unit": "Q182429",
+        "label": "miles per hour",
+        "siLabel": "metre per second"
+    },
+    "Q2483628": {
+        "factor": "0.000000000000000001",
+        "unit": "Q11574",
+        "label": "attosecond",
+        "siLabel": "second"
+    },
+    "Q26162541": {
+        "factor": "1",
+        "unit": "Q26162541",
+        "label": "square meter per second",
+        "siLabel": "square meter per second"
+    },
+    "Q26162545": {
+        "factor": "1",
+        "unit": "Q26162545",
+        "label": "square centimetre per second",
+        "siLabel": "square centimetre per second"
+    },
+    "Q844211": {
+        "factor": "1",
+        "unit": "Q844211",
+        "label": "kilogram per cubic metre",
+        "siLabel": "kilogram per cubic metre"
+    },
+    "Q180154": {
+        "factor": "0.2777777777777777778",
+        "unit": "Q182429",
+        "label": "kilometre per hour",
+        "siLabel": "metre per second"
+    },
+    "Q182429": {
+        "factor": "1",
+        "unit": "Q182429",
+        "label": "metre per second",
+        "siLabel": "metre per second"
+    },
+    "Q21064807": {
+        "factor": "1000",
+        "unit": "Q44395",
+        "label": "kilopascal",
+        "siLabel": "pascal"
+    },
+    "Q215571": {
+        "factor": "1",
+        "unit": "Q215571",
+        "label": "newton metre",
+        "siLabel": "newton metre"
+    },
+    "Q6859652": {
+        "factor": "133.322387415",
+        "unit": "Q44395",
+        "label": "millimeter of mercury",
+        "siLabel": "pascal"
+    },
+    "Q13147228": {
+        "factor": "1",
+        "unit": "Q13147228",
+        "label": "gram per cubic centimetre",
+        "siLabel": "gram per cubic centimetre"
+    },
+    "Q6982035": {
+        "factor": "1000000",
+        "unit": "Q25236",
+        "label": "megawatt",
+        "siLabel": "watt"
+    },
+    "Q13035094": {
+        "factor": "1",
+        "unit": "Q13035094",
+        "label": "joule per mole",
+        "siLabel": "joule per mole"
+    },
+    "Q3320608": {
+        "factor": "1000",
+        "unit": "Q25236",
+        "label": "kilowatt",
+        "siLabel": "watt"
+    },
+    "Q4243638": {
+        "factor": "1000000000",
+        "unit": "Q25517",
+        "label": "cubic kilometre",
+        "siLabel": "cubic metre"
+    },
+    "Q185648": {
+        "factor": "133.322387415",
+        "unit": "Q44395",
+        "label": "torr",
+        "siLabel": "pascal"
+    },
+    "Q128822": {
+        "factor": "0.514444",
+        "unit": "Q182429",
+        "label": "knot",
+        "siLabel": "metre per second"
+    },
+    "Q2489298": {
+        "factor": "1",
+        "unit": "Q2489298",
+        "label": "square centimetre",
+        "siLabel": "square centimetre"
+    },
+    "Q100995": {
+        "factor": "0.45359237",
+        "unit": "Q11570",
+        "label": "pound",
+        "siLabel": "kilogram"
+    },
+    "Q857027": {
+        "factor": "0.09290304",
+        "unit": "Q25343",
+        "label": "square foot",
+        "siLabel": "square metre"
+    },
+    "Q218593": {
+        "factor": "0.0254",
+        "unit": "Q11573",
+        "label": "inch",
+        "siLabel": "metre"
+    },
+    "Q81292": {
+        "factor": "4046.8564224",
+        "unit": "Q25343",
+        "label": "acre",
+        "siLabel": "square metre"
+    },
+    "Q83327": {
+        "factor": "0.000000000000000000160217656535",
+        "unit": "Q25269",
+        "label": "electronvolt",
+        "siLabel": "joule"
+    },
+    "Q1022113": {
+        "factor": "0.000001",
+        "unit": "Q25517",
+        "label": "cubic centimetre",
+        "siLabel": "cubic metre"
+    },
+    "Q1815100": {
+        "factor": "0.00001",
+        "unit": "Q25517",
+        "label": "centiliter",
+        "siLabel": "cubic metre"
+    },
+    "Q838801": {
+        "factor": "0.000000001",
+        "unit": "Q11574",
+        "label": "nanosecond",
+        "siLabel": "second"
+    },
+    "Q178674": {
+        "factor": "0.000000001",
+        "unit": "Q11573",
+        "label": "nanometre",
+        "siLabel": "metre"
+    },
+    "Q93318": {
+        "factor": "1852",
+        "unit": "Q11573",
+        "label": "nautical mile",
+        "siLabel": "metre"
+    },
+    "Q483261": {
+        "factor": "0.00000000000000000000000000166053904",
+        "unit": "Q11570",
+        "label": "atomic mass unit",
+        "siLabel": "kilogram"
+    },
+    "Q794261": {
+        "factor": "1",
+        "unit": "Q794261",
+        "label": "cubic metre per second",
+        "siLabel": "cubic metre per second"
+    },
+    "Q253276": {
+        "factor": "1609.344",
+        "unit": "Q11573",
+        "label": "mile",
+        "siLabel": "metre"
+    },
+    "Q174728": {
+        "factor": "0.01",
+        "unit": "Q11573",
+        "label": "centimetre",
+        "siLabel": "metre"
+    },
+    "Q232291": {
+        "factor": "2589988.110336",
+        "unit": "Q25343",
+        "label": "square mile",
+        "siLabel": "square metre"
+    },
+    "Q174789": {
+        "factor": "0.001",
+        "unit": "Q11573",
+        "label": "millimetre",
+        "siLabel": "metre"
+    },
+    "Q191118": {
+        "factor": "1000",
+        "unit": "Q11570",
+        "label": "tonne",
+        "siLabel": "kilogram"
+    },
+    "Q834105": {
+        "factor": "1",
+        "unit": "Q834105",
+        "label": "gram per litre",
+        "siLabel": "gram per litre"
+    },
+    "Q842015": {
+        "factor": "0.000001",
+        "unit": "Q11574",
+        "label": "microsecond",
+        "siLabel": "second"
+    },
+    "Q723733": {
+        "factor": "0.001",
+        "unit": "Q11574",
+        "label": "millisecond",
+        "siLabel": "second"
+    },
+    "Q828224": {
+        "factor": "1000",
+        "unit": "Q11573",
+        "label": "kilometre",
+        "siLabel": "metre"
+    },
+    "Q752197": {
+        "factor": "1",
+        "unit": "Q752197",
+        "label": "kilojoule per mole",
+        "siLabel": "kilojoule per mole"
+    },
+    "Q712226": {
+        "factor": "1",
+        "unit": "Q712226",
+        "label": "square kilometre",
+        "siLabel": "square kilometre"
+    },
+    "Q935614": {
+        "factor": "1600",
+        "unit": "Q25343",
+        "label": "rai",
+        "siLabel": "square metre"
+    },
+    "Q482798": {
+        "factor": "0.9144",
+        "unit": "Q11573",
+        "label": "yard",
+        "siLabel": "metre"
+    },
+    "Q1051665": {
+        "factor": "1",
+        "unit": "Q1051665",
+        "label": "metre per second squared",
+        "siLabel": "metre per second squared"
+    },
+    "Q11573": {
+        "factor": "1",
+        "unit": "Q11573",
+        "label": "metre",
+        "siLabel": "metre"
+    },
+    "Q7727": {
+        "factor": "60",
+        "unit": "Q11574",
+        "label": "minute",
+        "siLabel": "second"
+    },
+    "Q3710": {
+        "factor": "0.3048",
+        "unit": "Q11573",
+        "label": "foot",
+        "siLabel": "metre"
+    },
+    "Q11574": {
+        "factor": "1",
+        "unit": "Q11574",
+        "label": "second",
+        "siLabel": "second"
+    },
+    "Q3276763": {
+        "factor": "1000000000",
+        "unit": "Q39369",
+        "label": "gigahertz",
+        "siLabel": "hertz"
+    },
+    "Q23387": {
+        "factor": "604800",
+        "unit": "Q11574",
+        "label": "week",
+        "siLabel": "second"
+    },
+    "Q83216": {
+        "factor": "1",
+        "unit": "Q83216",
+        "label": "candela",
+        "siLabel": "candela"
+    },
+    "Q25272": {
+        "factor": "1",
+        "unit": "Q25272",
+        "label": "ampere",
+        "siLabel": "ampere"
+    },
+    "Q25235": {
+        "factor": "3600",
+        "unit": "Q11574",
+        "label": "hour",
+        "siLabel": "second"
+    },
+    "Q11582": {
+        "factor": "0.001",
+        "unit": "Q25517",
+        "label": "liter",
+        "siLabel": "cubic metre"
+    },
+    "Q41509": {
+        "factor": "1",
+        "unit": "Q41509",
+        "label": "mole",
+        "siLabel": "mole"
+    },
+    "Q25343": {
+        "factor": "1",
+        "unit": "Q25343",
+        "label": "square metre",
+        "siLabel": "square metre"
+    },
+    "Q732707": {
+        "factor": "1000000",
+        "unit": "Q39369",
+        "label": "megahertz",
+        "siLabel": "hertz"
+    },
+    "Q44395": {
+        "factor": "1",
+        "unit": "Q44395",
+        "label": "pascal",
+        "siLabel": "pascal"
+    },
+    "Q12438": {
+        "factor": "1",
+        "unit": "Q12438",
+        "label": "newton",
+        "siLabel": "newton"
+    },
+    "Q531": {
+        "factor": "9460730472580800",
+        "unit": "Q11573",
+        "label": "light-year",
+        "siLabel": "metre"
+    },
+    "Q1811": {
+        "factor": "149597870700",
+        "unit": "Q11573",
+        "label": "astronomical unit",
+        "siLabel": "metre"
+    },
+    "Q35852": {
+        "factor": "10000",
+        "unit": "Q25343",
+        "label": "hectare",
+        "siLabel": "square metre"
+    },
+    "Q21604951": {
+        "factor": "0.001",
+        "unit": "Q844211",
+        "label": "grams per cubic meter",
+        "siLabel": "kilogram per cubic metre"
+    },
+    "Q573": {
+        "factor": "86400",
+        "unit": "Q11574",
+        "label": "day",
+        "siLabel": "second"
+    },
+    "Q25236": {
+        "factor": "1",
+        "unit": "Q25236",
+        "label": "watt",
+        "siLabel": "watt"
+    },
+    "Q25267": {
+        "factor": "1",
+        "unit": "Q25267",
+        "label": "degrees Celsius",
+        "siLabel": "degrees Celsius"
+    },
+    "Q25269": {
+        "factor": "1",
+        "unit": "Q25269",
+        "label": "joule",
+        "siLabel": "joule"
+    },
+    "Q39369": {
+        "factor": "1",
+        "unit": "Q39369",
+        "label": "hertz",
+        "siLabel": "hertz"
+    },
+    "Q11570": {
+        "factor": "1",
+        "unit": "Q11570",
+        "label": "kilogram",
+        "siLabel": "kilogram"
+    },
+    "Q25517": {
+        "factor": "1",
+        "unit": "Q25517",
+        "label": "cubic metre",
+        "siLabel": "cubic metre"
+    },
+    "Q21077820": {
+        "factor": "0.000001",
+        "unit": "Q844211",
+        "label": "milligram per cubic meter",
+        "siLabel": "kilogram per cubic metre"
+    },
+    "Q41803": {
+        "factor": "0.001",
+        "unit": "Q11570",
+        "label": "gram",
+        "siLabel": "kilogram"
+    },
+    "Q25906460": {
+        "factor": "0.01847",
+        "unit": "Q11573",
+        "label": "dactylos",
+        "siLabel": "metre"
+    },
+    "Q25250": {
+        "factor": "1",
+        "unit": "Q25250",
+        "label": "volt",
+        "siLabel": "volt"
+    },
+    "Q25406": {
+        "factor": "1",
+        "unit": "Q25406",
+        "label": "coulomb",
+        "siLabel": "coulomb"
+    },
+    "Q33680": {
+        "factor": "1",
+        "unit": "Q33680",
+        "label": "radian",
+        "siLabel": "radian"
+    },
+    "Q47083": {
+        "factor": "1",
+        "unit": "Q47083",
+        "label": "ohm",
+        "siLabel": "ohm"
+    },
+    "Q102573": {
+        "factor": "1",
+        "unit": "Q102573",
+        "label": "becquerel",
+        "siLabel": "becquerel"
+    },
+    "Q103246": {
+        "factor": "1",
+        "unit": "Q103246",
+        "label": "sievert",
+        "siLabel": "sievert"
+    },
+    "Q131255": {
+        "factor": "1",
+        "unit": "Q131255",
+        "label": "farad",
+        "siLabel": "farad"
+    },
+    "Q163343": {
+        "factor": "1",
+        "unit": "Q163343",
+        "label": "tesla",
+        "siLabel": "tesla"
+    },
+    "Q163354": {
+        "factor": "1",
+        "unit": "Q163354",
+        "label": "henry",
+        "siLabel": "henry"
+    },
+    "Q169893": {
+        "factor": "1",
+        "unit": "Q169893",
+        "label": "siemens",
+        "siLabel": "siemens"
+    },
+    "Q170804": {
+        "factor": "1",
+        "unit": "Q170804",
+        "label": "weber",
+        "siLabel": "weber"
+    },
+    "Q177612": {
+        "factor": "1",
+        "unit": "Q177612",
+        "label": "steradian",
+        "siLabel": "steradian"
+    },
+    "Q179836": {
+        "factor": "1",
+        "unit": "Q179836",
+        "label": "lux",
+        "siLabel": "lux"
+    },
+    "Q190095": {
+        "factor": "1",
+        "unit": "Q190095",
+        "label": "gray",
+        "siLabel": "gray"
+    },
+    "Q208634": {
+        "factor": "1",
+        "unit": "Q208634",
+        "label": "katal",
+        "siLabel": "katal"
+    },
+    "Q281096": {
+        "factor": "1",
+        "unit": "Q281096",
+        "label": "candela per square metre",
+        "siLabel": "candela per square metre"
+    },
+    "Q484092": {
+        "factor": "1",
+        "unit": "Q484092",
+        "label": "lumen",
+        "siLabel": "lumen"
+    },
+    "Q910311": {
+        "factor": "1",
+        "unit": "Q910311",
+        "label": "lumen second",
+        "siLabel": "lumen second"
+    },
+    "Q1063756": {
+        "factor": "1",
+        "unit": "Q1063756",
+        "label": "radian per second",
+        "siLabel": "radian per second"
+    },
+    "Q1709783": {
+        "factor": "1",
+        "unit": "Q1709783",
+        "label": "joule-second",
+        "siLabel": "joule-second"
+    },
+    "Q2282906": {
+        "factor": "1",
+        "unit": "Q2282906",
+        "label": "nanogram",
+        "siLabel": "nanogram"
+    },
+    "Q2737347": {
+        "factor": "1",
+        "unit": "Q2737347",
+        "label": "square millimetre",
+        "siLabel": "square millimetre"
+    },
+    "Q3085309": {
+        "factor": "1",
+        "unit": "Q3085309",
+        "label": "Joule per kilogram-kelvin",
+        "siLabel": "Joule per kilogram-kelvin"
+    },
+    "Q3331719": {
+        "factor": "1",
+        "unit": "Q3331719",
+        "label": "square decimetre",
+        "siLabel": "square decimetre"
+    },
+    "Q3395194": {
+        "factor": "1",
+        "unit": "Q3395194",
+        "label": "newton-second",
+        "siLabel": "newton-second"
+    },
+    "Q3566736": {
+        "factor": "1",
+        "unit": "Q3566736",
+        "label": "watt per meter kelvin",
+        "siLabel": "watt per meter kelvin"
+    },
+    "Q17093295": {
+        "factor": "1",
+        "unit": "Q17093295",
+        "label": "metre per hour",
+        "siLabel": "metre per hour"
+    },
+    "Q18413919": {
+        "factor": "1",
+        "unit": "Q18413919",
+        "label": "centimetre per second",
+        "siLabel": "centimetre per second"
+    },
+    "Q20966455": {
+        "factor": "1",
+        "unit": "Q20966455",
+        "label": "joule per mole kelvin",
+        "siLabel": "joule per mole kelvin"
+    },
+    "Q21016931": {
+        "factor": "1",
+        "unit": "Q21016931",
+        "label": "pascal second",
+        "siLabel": "pascal second"
+    },
+    "Q21088638": {
+        "factor": "1",
+        "unit": "Q21088638",
+        "label": "joule(s) per tesla",
+        "siLabel": "joule(s) per tesla"
+    },
+    "Q21294882": {
+        "factor": "1",
+        "unit": "Q21294882",
+        "label": "farad per metre",
+        "siLabel": "farad per metre"
+    },
+    "Q21392882": {
+        "factor": "1",
+        "unit": "Q21392882",
+        "label": "newton per ampere squared",
+        "siLabel": "newton per ampere squared"
+    },
+    "Q21393312": {
+        "factor": "1",
+        "unit": "Q21393312",
+        "label": "joule per kelvin",
+        "siLabel": "joule per kelvin"
+    },
+    "Q21395031": {
+        "factor": "1",
+        "unit": "Q21395031",
+        "label": "newton metre squared per kilogram squared",
+        "siLabel": "newton metre squared per kilogram squared"
+    },
+    "Q21395834": {
+        "factor": "1",
+        "unit": "Q21395834",
+        "label": "watt per metre squared per kelvin to the fourth",
+        "siLabel": "watt per metre squared per kelvin to the fourth"
+    },
+    "Q21396202": {
+        "factor": "1",
+        "unit": "Q21396202",
+        "label": "coulomb per mole",
+        "siLabel": "coulomb per mole"
+    },
+    "Q21396212": {
+        "factor": "1",
+        "unit": "Q21396212",
+        "label": "reciprocal metre",
+        "siLabel": "reciprocal metre"
+    },
+    "Q21401573": {
+        "factor": "1",
+        "unit": "Q21401573",
+        "label": "reciprocal cubic metre",
+        "siLabel": "reciprocal cubic metre"
+    },
+    "Q21615967": {
+        "factor": "1",
+        "unit": "Q21615967",
+        "label": "cubic meter per mole",
+        "siLabel": "cubic meter per mole"
+    },
+    "Q24008536": {
+        "factor": "1",
+        "unit": "Q24008536",
+        "label": "cubic decimeter per mole",
+        "siLabel": "cubic decimeter per mole"
+    },
+    "Q24008537": {
+        "factor": "1",
+        "unit": "Q24008537",
+        "label": "cubic centimeter per mole",
+        "siLabel": "cubic centimeter per mole"
+    },
+    "Q24666811": {
+        "factor": "1",
+        "unit": "Q24666811",
+        "label": "metre per farad",
+        "siLabel": "metre per farad"
+    },
+    "Q25999243": {
+        "factor": "1",
+        "unit": "Q25999243",
+        "label": "kilogram per metre",
+        "siLabel": "kilogram per metre"
+    },
+    "Q26156113": {
+        "factor": "1",
+        "unit": "Q26156113",
+        "label": "Newton per metre",
+        "siLabel": "Newton per metre"
+    },
+    "Q26156132": {
+        "factor": "1",
+        "unit": "Q26156132",
+        "label": "millinewton per metre",
+        "siLabel": "millinewton per metre"
+    },
+    "Q26158194": {
+        "factor": "1",
+        "unit": "Q26158194",
+        "label": "millipascal-second",
+        "siLabel": "millipascal-second"
+    },
+    "Q26162546": {
+        "factor": "1",
+        "unit": "Q26162546",
+        "label": "square milimetre per second",
+        "siLabel": "square milimetre per second"
+    },
+    "Q26162587": {
+        "factor": "1",
+        "unit": "Q26162587",
+        "label": "micropascal second",
+        "siLabel": "micropascal second"
+    },
+    "Q11579": {
+        "factor": "1",
+        "unit": "Q11579",
+        "label": "kelvin",
+        "siLabel": "kelvin"
+    }
+}
