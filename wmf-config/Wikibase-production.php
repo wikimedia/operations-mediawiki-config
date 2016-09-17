@@ -88,6 +88,13 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['repoConceptBaseUri'] = 'http://www.wikidata.org/entity/';
 		$wgArticlePlaceholderImageProperty = 'P18';
 	}
+	
+	if ( $wgDBname === 'wikidatawiki' ) {
+		$wgWBRepoSettings['unitStorage'] = [
+			'class' => '\\Wikibase\\Lib\\JsonUnitStorage', 
+			'args' => [ __DIR__ . '/unitConfig.json']
+		];
+	}
 
 	$wgWBClientSettings['badgeClassNames'] = [
 		'Q17437796' => 'badge-featuredarticle',
