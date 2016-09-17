@@ -3157,7 +3157,11 @@ if ( $wmgUseOATHAuth ) {
 if ( $wmgUseORES ) {
 	wfLoadExtension( 'ORES' );
 	$wgOresBaseUrl = 'https://ores.wikimedia.org/';
-	$wgDefaultUserOptions['oresDamagingPref'] = 'soft';
+	if ( $wgDBname === 'wikidatawiki' ) {
+		$wgDefaultUserOptions['oresDamagingPref'] = 'hard';
+	} else {
+		$wgDefaultUserOptions['oresDamagingPref'] = 'soft';
+	}
 }
 
 ### End (roughly) of general extensions ########################
