@@ -3392,6 +3392,10 @@ $wgConf->settings = [
 	'+mywiki' => [
 		'WP' => NS_PROJECT, // T119807
 	],
+	'+mywiktionary' =>
+	[
+		'WT' => NS_PROJECT, // T140998
+	],
 	'+mznwiki' => [
 		'وپ' => NS_PROJECT,
 		'Portal' => 100,
