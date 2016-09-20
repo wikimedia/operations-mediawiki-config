@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_236e412b",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 170,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2016-09-20T11:33:47Z",
+      "side": 1,
+      "message": "red thingy (extra space)",
+      "revId": "08cbc68f65288d1b55359a89797155820b26c579",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
