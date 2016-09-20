@@ -1,0 +1,113 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_3772f8e2",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 28
+      },
+      "lineNbr": 15,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-09-20T23:30:09Z",
+      "side": 1,
+      "message": "It\u0027s not obvious that this only shows details as opposed to actually deploying something. Intuitively, reading this command sounds like it will immediately deploy that to production.\n\nMaybe a \u0027scap swat show\u0027 command to go alongside \u0027scap swat search\u0027 and \u0027scap swat pick\u0027?",
+      "range": {
+        "startLine": 15,
+        "startChar": 8,
+        "endLine": 15,
+        "endChar": 50
+      },
+      "revId": "b7f75ecb7f6ac16a942e390abfefc25d50292245",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_f71ce07e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 28
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-09-20T23:30:09Z",
+      "side": 1,
+      "message": "Again, probably better moved to a \u0027show\u0027 subcommand.\n\nNot so long ago, I was incredibly uncomfortable running as much as \u0027scap --help\u0027 in production since \u0027scap\u0027 used to what is now part of scap as \u0027scap sync\u0027. Which ignored any parameters and immediately did a full-scale sync to all production hosts.\n\nEventhough \u0027scap swat\u0027 nor \u0027swat scap \u003carg\u003e\u0027 are not currently valid ways of starting a sync, unless explicitly part of the command, I\u0027d rather not make people get used to non-explicit  read-only commands.",
+      "range": {
+        "startLine": 17,
+        "startChar": 3,
+        "endLine": 17,
+        "endChar": 22
+      },
+      "revId": "b7f75ecb7f6ac16a942e390abfefc25d50292245",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_7710f05b",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 28
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-09-20T23:30:09Z",
+      "side": 1,
+      "message": "In Gerrit? Or locally in the staging directory?",
+      "range": {
+        "startLine": 18,
+        "startChar": 35,
+        "endLine": 18,
+        "endChar": 66
+      },
+      "revId": "b7f75ecb7f6ac16a942e390abfefc25d50292245",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_571ccc79",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 28
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-09-20T23:30:09Z",
+      "side": 1,
+      "message": "already*",
+      "range": {
+        "startLine": 19,
+        "startChar": 38,
+        "endLine": 19,
+        "endChar": 41
+      },
+      "revId": "b7f75ecb7f6ac16a942e390abfefc25d50292245",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_b70a6827",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 28
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-09-20T23:30:09Z",
+      "side": 1,
+      "message": "Spurious line break. Bug is not currently part of meta data.",
+      "revId": "b7f75ecb7f6ac16a942e390abfefc25d50292245",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
