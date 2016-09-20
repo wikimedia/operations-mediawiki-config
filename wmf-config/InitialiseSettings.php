@@ -15426,6 +15426,7 @@ $wgConf->settings = [
 
 'wmgUseShortUrl' => [
 	'default' => false,
+	'bdwikimedia' => true, //T146014
 	'bhwiki' => true, // T113348
 	'bnwiki' => true, // T62956
 	'bnwikisource' => true, // T127968
