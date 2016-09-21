@@ -142,6 +142,30 @@
     },
     {
       "key": {
+        "uuid": "0e82f318_5a3f9322",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 28
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1706
+      },
+      "writtenOn": "2016-09-21T01:14:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e82f318_571ccc79",
+      "range": {
+        "startLine": 19,
+        "startChar": 38,
+        "endLine": 19,
+        "endChar": 41
+      },
+      "revId": "b7f75ecb7f6ac16a942e390abfefc25d50292245",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e82f318_b70a6827",
         "filename": "/COMMIT_MSG",
         "patchSetId": 28
@@ -153,6 +177,24 @@
       "writtenOn": "2016-09-20T23:30:09Z",
       "side": 1,
       "message": "Spurious line break. Bug is not currently part of meta data.",
+      "revId": "b7f75ecb7f6ac16a942e390abfefc25d50292245",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_9a402baa",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 28
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1706
+      },
+      "writtenOn": "2016-09-21T01:14:28Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e82f318_b70a6827",
       "revId": "b7f75ecb7f6ac16a942e390abfefc25d50292245",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
