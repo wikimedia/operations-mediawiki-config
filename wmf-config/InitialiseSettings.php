@@ -13697,19 +13697,12 @@ $wgConf->settings = [
 	'enwiki' => true, // T132806
 ],
 
-// Whether VisualEditor's second tab and section link come after (rather than before) those for
-// wikitext (on non-SET wikis)
+// Whether VisualEditor's second tab and section link come after those for wikitext (on non-SET wikis)
 'wmgVisualEditorSecondaryTabs' => [
 	'default' => false,
 	'enwiki' => true,
 	'eswiki' => true, // T62188
 	'hewiki' => true, // T54552
-],
-
-// Whether to enable the 2017 wikitext editor alongside the visual editor. This is a feature flag
-// on top of the Beta Feature which needs each user to opt-in (once it's added to the whitelist).
-'wmgVisualEditorEnableWikitext' => [
-	'default' => false,
 ],
 
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces

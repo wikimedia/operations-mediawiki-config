@@ -2154,9 +2154,6 @@ if ( $wmgUseVisualEditor ) {
 			$wgVisualEditorTabPosition = 'after';
 		}
 	}
-	if ( $wmgVisualEditorEnableWikitext ) {
-		$wgVisualEditorEnableWikitext = true;
-	}
 
 	// Namespace configuration
 	$wgVisualEditorAvailableNamespaces = $wmgVisualEditorAvailableNamespaces;

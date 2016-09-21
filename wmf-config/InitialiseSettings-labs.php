@@ -319,9 +319,6 @@ function wmfLabsSettings() {
 		'wmgVisualEditorTransitionDefault' => [
 			'default' => false,
 		],
-		'wmgVisualEditorEnableWikitext' => [
-			'default' => true,
-		],
 
 		///
 		/// ------------ BetaFeatures end -----------
