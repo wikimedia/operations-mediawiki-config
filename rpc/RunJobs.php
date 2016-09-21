@@ -50,5 +50,8 @@ try {
 
 	$mediawiki->restInPeace();
 } catch ( Exception $e ) {
+	# Since output is logged to file, get MediaWiki to generate a raw error
+	$wgCommandLineMode = true;
+
 	MWExceptionHandler::handleException( $e );
 }
