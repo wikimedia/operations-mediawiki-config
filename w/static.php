@@ -128,8 +128,10 @@ function wmfStaticRespond() {
 		return version_compare( $b, $a );
 	} );
 
-	// If request has no verification hash, prefer the current wikiversion
-	if ( !$urlHash ) {
+	// If request has no or invalid verification hash, prefer the current wikiversion
+	// Note we can't do this for a matching verification hash because varnish will
+	// have already sent us to the static host instead of the individual wiki.
+	if ( !$urlHash || !preg_match( '/^[a-fA-F0-9]+$/', $urlHash ) ) {
 		array_unshift( $branchDirs, $IP );
 	}
 
