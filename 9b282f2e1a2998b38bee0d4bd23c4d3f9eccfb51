@@ -22,6 +22,30 @@
       "revId": "9b282f2e1a2998b38bee0d4bd23c4d3f9eccfb51",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e82f318_b59fb205",
+        "filename": "w/static.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 25
+      },
+      "writtenOn": "2016-09-22T17:47:23Z",
+      "side": 1,
+      "message": "ok, fixed to use both the regex (which matches the VCL) and the length check here.",
+      "parentUuid": "0e82f318_9588eeed",
+      "range": {
+        "startLine": 161,
+        "startChar": 8,
+        "endLine": 161,
+        "endChar": 33
+      },
+      "revId": "9b282f2e1a2998b38bee0d4bd23c4d3f9eccfb51",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
