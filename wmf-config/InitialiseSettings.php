@@ -4509,7 +4509,6 @@ $wgConf->settings = [
 		'CentralAuth-Bug39996' => 'debug',
 		'CentralAuthRename' => 'debug', // -legoktm 2014-07-14 for T69875
 		'CentralAuthUserMerge' => 'debug',
-		'CentralNotice' => 'debug',
 		'CirrusSearch' => 'debug',
 		'CirrusSearchChangeFailed' => 'debug',
 		'CirrusSearchRequestSet' => [
