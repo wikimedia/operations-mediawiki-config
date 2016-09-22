@@ -6,13 +6,18 @@
  *
  * Overview:
  *
- * - multiversion requires the MediaWiki script directory (/w) to be shared
- *   across all domains. Files in /w are generic and load the real MediaWiki
- *   entry point based on the currently configured version based on host name.
+ * - multiversion requires the MediaWiki script directory (/w) to be shared across
+ *   all domains. Files in /w are generic and load the real MediaWiki entry point
+ *   from the current wiki's MediaWiki version (based on request host name).
  * - MediaWiki configuration sets $wgResourceBasePath to "/w".
  * - Apache configuration rewrites "/w/skins/*", "/w/resources/*", and "/w/extension/*"
  *   to /w/static.php (this file).
  * - static.php streams the file from the appropiate MediaWiki branch directory.
+ * - For performance, Varnish caches responses from static.php in a hostname-agnostic
+ *   way if a hexidecimal query string was set. (E.g. verifiable hash.)
+ *   Therefore static.php MUST respond in a deterministic way for those requests
+ *   regardless of which wiki made the request. (Compliance is enforced via VCL by
+ *   hardcoding 'en.wikipedia.org' for these requesrs, per static_host config.)
  *
  * In addition to the above, this file also looks in older MediaWiki branch
  * directories in order to support references from our static HTML cache for 30 days.
@@ -124,8 +129,11 @@ function wmfStaticRespond() {
 		return version_compare( $b, $a );
 	} );
 
-	// If request has no verification hash, prefer the current wikiversion
-	if ( !$urlHash ) {
+	// If request has no or invalid verification hash, prefer the current wikiversion
+	// Note we can't do this for a matching verification hash because varnish will
+	// have already sent us to the static host instead of the individual wiki.
+	$validHash = $urlHash ? preg_match( '/^[a-fA-F0-9]+$/', $urlHash ) : false;
+	if ( !$validHash ) {
 		array_unshift( $branchDirs, $IP );
 	}
 
@@ -151,9 +159,13 @@ function wmfStaticRespond() {
 		}
 
 		if ( $urlHash ) {
-			if ( strlen( $urlHash ) !== 5 ) {
+			if ( !$validHash || strlen( $urlHash ) !== 5 ) {
 				// Garbage query string. Give same response as for requests with
 				// no validation hash (nohash), except with a longer max-age.
+				//
+				// This prevents extra backend hits from unexpected random strings,
+				// and also keeps expected behavior for extensions using libraries
+				// with their own versioned cache-buster query strings.
 				$responseType = 'unknown';
 			} else {
 				// Set fallback to the newest existing version.
