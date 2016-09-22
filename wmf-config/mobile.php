@@ -91,7 +91,6 @@ if ( $wmgMobileFrontend ) {
 		return true;
 	};
 
-	$wgMFEnableSiteNotice = $wmgMFEnableSiteNotice;
 	$wgMFCollapseSectionsByDefault = $wmgMFCollapseSectionsByDefault;
 	$wgMFTidyMobileViewSections = false; // experimental
 
