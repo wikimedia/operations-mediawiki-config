@@ -9,10 +9,8 @@ if ( $wmgMobileFrontend ) {
 	$wgMFNoindexPages = false;
 	$wgMFNearby = $wmgMFNearby && $wmgEnableGeoData;
 	$wgMFPhotoUploadEndpoint = $wmgMFPhotoUploadEndpoint;
-	$wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
 	$wgMFPhotoUploadWiki = $wmgMFPhotoUploadWiki;
 	$wgMFContentNamespace = $wmgMFContentNamespace;
-	$wgMFPhotoUploadAppendToDesc = $wmgMFPhotoUploadAppendToDesc;
 	$wgMFMobileFormatterHeadings = $wmgMFMobileFormatterHeadings;
 
 	if ( $wmgMobileFrontendLogo ) {
@@ -91,7 +89,6 @@ if ( $wmgMobileFrontend ) {
 		return true;
 	};
 
-	$wgMFEnableSiteNotice = $wmgMFEnableSiteNotice;
 	$wgMFCollapseSectionsByDefault = $wmgMFCollapseSectionsByDefault;
 	$wgMFTidyMobileViewSections = false; // experimental
 
@@ -99,13 +96,6 @@ if ( $wmgMobileFrontend ) {
 	// They originally special-cased us but would like it done the normal way now. :)
 	$wgMFAppPackageId = $wmgMFAppPackageId;
 	$wgMFNearbyRange = $wmgMaxGeoSearchRadius;
-
-	// restrict access to mobile Uploads to users with minimum editcount T64598
-	$wgMFUploadMinEdits = $wmgMFUploadMinEdits;
-
-	// Disable mobile uploads per T64598
-	$wgGroupPermissions['autoconfirmed']['mf-uploadbutton'] = false;
-	$wgGroupPermissions['sysop']['mf-uploadbutton'] = false;
 
 	$wgMFEnableBeta = true;
 

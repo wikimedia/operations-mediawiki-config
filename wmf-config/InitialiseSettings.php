@@ -14438,9 +14438,6 @@ $wgConf->settings = [
 	'default' => NS_MAIN,
 	'commonswiki' => NS_FILE,
 ],
-'wmgMFUseCentralAuthToken' => [
-	'default' => true,
-],
 'wmgMFNearby' => [
 	'default' => true, // Does not gets enabled on wikis w/o GeoData anyway
 ],
@@ -14448,13 +14445,10 @@ $wgConf->settings = [
 	'default' => 'commonswiki',
 	'test2wiki' => '',
 ],
-'wmgMFPhotoUploadAppendToDesc' => [
-	'default' => "{{Uploaded from Mobile|platform=Web|version=}}\n{{subst:unc}}",
-],
 'wmgMFEnableXAnalyticsLogging' => [
 	'default' => true,
 ],
-'wmgMFEnableSiteNotice' => [
+'wgMinervaEnableSiteNotice' => [
 	'default' => false,
 ],
 'wmgMFAppPackageId' => [
@@ -14480,10 +14474,6 @@ $wgConf->settings = [
 	'default' => true,
 	'wiktionary' => false,
 	'wikidata' => false,
-],
-'wmgMFUploadMinEdits' => [
-	'default' => 10,
-	'commonswiki' => 75, // T64598
 ],
 'wgMFUseWikibase' => [
 	'default' => true,
