@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_9588eeed",
+        "filename": "w/static.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 161,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-09-22T17:34:04Z",
+      "side": 1,
+      "message": "This still uses the strlen check. However we don\u0027t unset urlHash above. Maybe we should? In that case we need to set $responseType\u003d\u0027unknown\u0027 there too (for the urlhash \u0026\u0026 !preg_math case), so that we keep the long caching behaviour.",
+      "range": {
+        "startLine": 161,
+        "startChar": 8,
+        "endLine": 161,
+        "endChar": 33
+      },
+      "revId": "9b282f2e1a2998b38bee0d4bd23c4d3f9eccfb51",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
