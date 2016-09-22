@@ -128,8 +128,8 @@ function wmfStaticRespond() {
 		return version_compare( $b, $a );
 	} );
 
-	// If request has no verification hash, prefer the current wikiversion
-	if ( !$urlHash ) {
+	// If request has no or invalid verification hash, prefer the current wikiversion
+	if ( !$urlHash || strlen( $urlHash ) !== 5 ) {
 		array_unshift( $branchDirs, $IP );
 	}
 
