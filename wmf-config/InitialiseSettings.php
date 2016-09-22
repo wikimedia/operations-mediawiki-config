@@ -17487,58 +17487,10 @@ $wgConf->settings = [
 'wgOresModels' => [
 	'default' => [
 		'damaging' => true,
-		'reverted' => true,
-		'goodfaith' => true,
+		'reverted' => false,
+		'goodfaith' => false,
 		'wp10' => false,
 	],
-	'fawiki' => [
-		'damaging' => true,
-		'reverted' => false,
-		'goodfaith' => false,
-		'wp10' => false,
-	], // T130211
-	'wikidatawiki' => [
-		'damaging' => true,
-		'reverted' => false,
-		'goodfaith' => false,
-		'wp10' => false,
-	], // T130212
-	'nlwiki' => [
-		'damaging' => true,
-		'reverted' => false,
-		'goodfaith' => false,
-		'wp10' => false,
-	], // T139432
-	'ruwiki' => [
-		'damaging' => true,
-		'reverted' => false,
-		'goodfaith' => false,
-		'wp10' => false,
-	], // T139541
-	'ptwiki' => [
-		'damaging' => true,
-		'reverted' => false,
-		'goodfaith' => false,
-		'wp10' => false,
-	], // T139692
-	'trwiki' => [
-		'damaging' => true,
-		'reverted' => false,
-		'goodfaith' => false,
-		'wp10' => false,
-	], // T139992
-	'plwiki' => [
-		'damaging' => true,
-		'reverted' => false,
-		'goodfaith' => false,
-		'wp10' => false,
-	], // T140005
-	'enwiki' => [
-		'damaging' => true,
-		'reverted' => false,
-		'goodfaith' => false,
-		'wp10' => false,
-	], // T140003
 ],
 'wgOresDamagingThresholds' => [
 	'default' => [ 'hard' => 0.5, 'soft' => 0.7 ],
