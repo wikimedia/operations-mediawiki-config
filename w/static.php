@@ -128,8 +128,11 @@ function wmfStaticRespond() {
 		return version_compare( $b, $a );
 	} );
 
-	// If request has no verification hash, prefer the current wikiversion
-	if ( !$urlHash ) {
+	// If request has no or invalid verification hash, prefer the current wikiversion
+	// Note we can't do this for a matching verification hash because varnish will
+	// have already sent us to the static host instead of the individual wiki.
+	$validHash = $urlHash ? preg_match( '/^[a-fA-F0-9]+$/', $urlHash ) : false;
+	if ( !$validHash ) {
 		array_unshift( $branchDirs, $IP );
 	}
 
@@ -156,9 +159,13 @@ function wmfStaticRespond() {
 		}
 
 		if ( $urlHash ) {
-			if ( strlen( $urlHash ) !== 5 ) {
+			if ( !$validHash || strlen( $urlHash ) !== 5 ) {
 				// Garbage query string. Give same response as for requests with
 				// no validation hash (nohash), except with a longer max-age.
+				//
+				// This prevents extra backend hits from unexpected random strings,
+				// and also keeps expected behavior for extensions using libraries
+				// with their own versioned cache-buster query strings.
 				$responseType = 'unknown';
 			} else {
 				// Set fallback to the newest existing version.
