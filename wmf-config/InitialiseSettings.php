@@ -15950,6 +15950,7 @@ $wgConf->settings = [
 	'mediawikiwiki' => true,
 	'bswiki' => true,
 	'cawiki' => true, // T120829
+	'elwiki' => true, // T144384
 	'frwiki' => true, // T136684
 	'frwikiquote' => true, // T138064
 	'frwikisource' => true, // T132914
