@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_cc4c9ba2",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 2798,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-09-23T00:15:52Z",
+      "side": 1,
+      "message": "FYI no need to use wmg - you can actually just skip this line and add wgRelatedArticles directly in InitialiseSettings.php",
+      "revId": "32daf55e42c8b444b0f48542f8068ff2919d795c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
