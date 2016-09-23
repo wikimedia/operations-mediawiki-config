@@ -4017,6 +4017,7 @@ $wgConf->settings = [
 	'+uawikimedia' => [ 0 => 1 ], // T91185
 	'+ukwikimedia' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
 	'+usabilitywiki' => [ 0 => 1 ],
+	'+wikidata' => [121 => 1], // T146271
 	'+wikimaniateamwiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
 
 	'+wikimania' => [ 0 => 1, 6 => 0, 8 => 0, ],
