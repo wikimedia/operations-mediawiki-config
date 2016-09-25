@@ -4329,7 +4329,7 @@ $wgConf->settings = [
 		'autoconfirmed', // semi-protection level on
 		'sysop',
 	],
-	'arwiki' => [ '', 'autoconfirmed', 'autoreview', 'sysop' ], // T54109
+	'arwiki' => [ '', 'autoconfirmed', 'review', 'sysop' ], // T54109, T146575
 	'ckbwiki' => [ '', 'autoconfirmed', 'autopatrol', 'sysop' ], // T54533
 	'dewiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T94368
 	'enwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T126607, T57432
