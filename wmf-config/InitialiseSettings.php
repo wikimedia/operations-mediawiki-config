@@ -16281,6 +16281,8 @@ $wgConf->settings = [
 		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ',            // T93880
 		'ota' => 'لسان توركى',      // T59342
 		'rwr' => 'मारवाड़ी',           // T61905
+		'sje' => 'bidumsámegiella', // T146707
+		'smj' => 'julevsámegiella', // T146707
 	],
 ],
 
