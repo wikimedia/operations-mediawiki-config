@@ -99,6 +99,44 @@ $wmgThrottlingExceptions[] = [ // T146788
 	'value' => 45 //35 expected
 ];
 
+// Winona State University - T146600
+
+// October 4th
+$wmgThrottlingExceptions[] = [ // T146600
+	'from' => '2016-10-04T15:30 -6:00',
+	'to' => '2016-10-04T18:30 -6:00',
+	'range' => '199.17.0.0/16',
+	'dbname' => 'enwiki',
+	'value' => 40 //35 expected
+];
+
+// October 10th
+$wmgThrottlingExceptions[] = [ // T146600
+	'from' => '2016-10-10T13:30 -6:00',
+	'to' => '2016-10-10T18:30 -6:00',
+	'range' => '199.17.0.0/16',
+	'dbname' => 'enwiki',
+	'value' => 40 //35 expected
+];
+
+// October 11th
+$wmgThrottlingExceptions[] = [ // T146600
+	'from' => '2016-10-11T15:30 -6:00',
+	'to' => '2016-10-11T18:30 -6:00',
+	'range' => '199.17.0.0/16',
+	'dbname' => 'enwiki',
+	'value' => 40 //35 expected
+];
+
+// December 2nd
+$wmgThrottlingExceptions[] = [ // T146600
+	'from' => '2016-12-02T12:30 -6:00',
+	'to' => '2016-12-02T13:00 -6:00',
+	'ramge' => '199.17.0.0/16',
+	'dbname' => 'enwiki',
+	'value' => 40 // 35 expected
+];
+
 ## Add throttling definitions above.
 
 /**
