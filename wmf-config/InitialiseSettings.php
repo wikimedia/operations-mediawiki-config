@@ -380,6 +380,7 @@ $wgConf->settings = [
 	'nowikinews' => 'Europe/Berlin',
 	'nowikisource' => 'Europe/Berlin',
 	'nsowiki' => 'Africa/Johannesburg',
+	'olowiki' => 'Europe/Moscow', // T146612
 	'orwiki' => 'Asia/Kolkata', // T122273
 	'orwikisource' => 'Asia/Kolkata', // T73875
 	'pdcwiki' => 'America/New_York',
@@ -648,6 +649,7 @@ $wgConf->settings = [
 	'nsowiki' => '/static/images/project-logos/nsowiki.png',
 	'nvwiki' => '/static/images/project-logos/nvwiki.png',  // T42285
 	'ocwiki' => '/static/images/project-logos/ocwiki.png',
+	'olowiki' => '/static/images/project-logos/olowiki.png', // T146612
 	'omwiki' => '/static/images/project-logos/omwiki.png',  // T46974
 	'orwiki' => '/static/images/project-logos/orwiki.png',  // T29704
 	'oswiki' => '/static/images/project-logos/oswiki.png',
@@ -1149,6 +1151,7 @@ $wgConf->settings = [
 	'mswiki' => [ '1.5x' => '/static/images/project-logos/mswiki-1.5x.png', '2x' => '/static/images/project-logos/mswiki-2x.png' ],
 	'newiki' => [ '1.5x' => '/static/images/project-logos/newiki-1.5x.png', '2x' => '/static/images/project-logos/newiki-2x.png' ],    // T139240
 	'nlwiki' => [ '1.5x' => '/static/images/project-logos/nlwiki-1.5x.png', '2x' => '/static/images/project-logos/nlwiki-2x.png' ],
+	'olowiki' => ['1.5x' => '/static/images/project-logos/olowiki-1.5x.png', '2x' => '/static/images/project-logos/olowiki-1.5x.png'], // T146745
 	'ruwiki' => [ '1.5x' => '/static/images/project-logos/ruwiki-1.5x.png', '2x' => '/static/images/project-logos/ruwiki-2x.png' ],
 	'tawiki' => [ '1.5x' => '/static/images/project-logos/tawiki-1.5x.png', '2x' => '/static/images/project-logos/tawiki-2x.png' ],
 	'tcywiki' => [ '1.5x' => '/static/images/project-logos/tcywiki-1.5x.png', '2x' => '/static/images/project-logos/tcywiki-2x.png' ], // T140898
@@ -1841,6 +1844,7 @@ $wgConf->settings = [
 	'ocwikibooks' => 'Wikilibres',
 	'ocwiktionary' => 'Wikiccionari',
 	'officewiki' => 'Wikimedia Office',
+	'olowiki' => 'Wikipedii', // T146612
 	'ombudsmenwiki' => 'Ombudsmen Wiki',
 	'orwiki' => 'ଉଇକିପିଡ଼ିଆ',
 	'orwikisource' => 'ଉଇକିପାଠାଗାର', // T73875
@@ -2323,6 +2327,7 @@ $wgConf->settings = [
 	'ocwikibooks' => 'Wikilibres',
 	'ocwiktionary' => 'Wikiccionari',
 	'officewiki' => 'OfficeWiki', // T66976
+	'olowiki' => 'Wikipedii', // T146612
 	'ombudsmenwiki' => 'Project',
 	'orwiki' => 'ଉଇକିପିଡ଼ିଆ',
 	'orwikisource' => 'ଉଇକିପାଠାଗାର', // T73875
@@ -2517,6 +2522,7 @@ $wgConf->settings = [
 	'newwiki' => 'विकिपिडिया_खँलाबँला',
 	'noboard_chapterswikimedia' => 'Wikimedia-diskusjon',
 	'nsowiki' => 'Dipolelo_tša_Wikipedia',
+	'olowiki' => 'Wikipedien_paginat', // T146612
 	'orwikisource'  => 'ଉଇକିପାଠାଗାର_ଆଲୋଚନା', // T73875
 	'pnbwiktionary' => 'گل_ات',
 	'pntwiki' => 'Βικιπαίδεια_καλάτσεμαν',
