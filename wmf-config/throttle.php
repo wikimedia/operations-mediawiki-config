@@ -91,6 +91,14 @@ $wmgThrottlingExceptions[] = [
 	'value' => 60 //50 expected
 ];
 
+$wmgThrottlingExceptions[] = [ // T146600
+	'from' => '2016-10-10T3:30 -6:00',
+	'to' => '2016-10-10T6:30 -6:00',
+	'range' => '199.17.0.0/16',
+	'dbname' => 'enwiki',
+	'value' => 40 //35 expected
+];
+
 ## Add throttling definitions above.
 
 /**
