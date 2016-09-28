@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_f7a02ef3",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 36
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-09-28T18:32:58Z",
+      "side": 1,
+      "message": "I don\u0027t see code for --rebase anywhere. Also, what would this mean? A cherry-pick always effectively rebases it on the tip of the target branch.\n\nOr is this to rebase an existing cherry-pick? By default, when cherry-picking something from master that was already cherry-picked, gerrit just silently redoes the same action based on the latest target branch tip. And since it uses the same change-id, it will become Patch Set 2 in the existing patch instead of a new change.\n\nManually rebasing it by going to the cherry-pick change itself (instead of re-doing it) also works, but in that case it probably doesn\u0027t belong in the \u0027pick\u0027 command.",
+      "range": {
+        "startLine": 16,
+        "startChar": 13,
+        "endLine": 16,
+        "endChar": 67
+      },
+      "revId": "b04e2e9fa9057e1829ce970943e46da45c2cb99c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
