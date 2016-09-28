@@ -2586,7 +2586,7 @@ if ( $wmgUseWikimediaShopLink ) {
 }
 
 if ( $wmgEnableGeoData ) {
-	require_once( "$IP/extensions/GeoData/GeoData.php" );
+	wfLoadExtension( 'GeoData' );
 	$wgGeoDataBackend = 'elastic';
 
 	if ( !$wmgEnableGeoSearch ) {
