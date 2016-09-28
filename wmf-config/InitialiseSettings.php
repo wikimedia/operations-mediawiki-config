@@ -16651,19 +16651,6 @@ $wgConf->settings = [
 	'default' => [ 'eqiad', 'codfw' ],
 ],
 
-'wmgCirrusPerUserPoolCounter' => [
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
-],
-
-'wmgCirrusSearchForcePerUserPoolCounter' => [
-	'default' => [
-		'23.92.71.118/32',
-	],
-],
-
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => [
 	'default' => 0,
 	'wikinews' => .6,

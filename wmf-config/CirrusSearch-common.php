@@ -169,9 +169,6 @@ if ( isset( $wgCirrusSearchShardCount['eqiad'] ) ) {
 	$wgCirrusSearchMainPageCacheWarmer = ( $wgCirrusSearchShardCount['content'] > 1 );
 }
 
-// Enable concurrent search limits for specified abusive networks
-$wgCirrusSearchForcePerUserPoolCounter = $wmgCirrusSearchForcePerUserPoolCounter;
-
 // Commons is special
 if ( $wgDBname == 'commonswiki' ) {
 	$wgCirrusSearchNamespaceMappings[ NS_FILE ] = 'file';
