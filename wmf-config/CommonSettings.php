@@ -2591,7 +2591,7 @@ if ( $wmgEnableGeoData ) {
 
 	$wgMaxCoordinatesPerPage = 2000;
 	$wgMaxGeoSearchRadius = $wmgMaxGeoSearchRadius;
-	$wgGeoDataDebug = $wmgGeoDataDebug;
+	$wgGeoDataDebug = true;
 }
 
 if ( $wmgUseEcho ) {
