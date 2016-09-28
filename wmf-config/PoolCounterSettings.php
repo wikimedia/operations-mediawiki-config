@@ -68,16 +68,6 @@ $wgPoolCounterConf = [
 	],
 ];
 
-// temporarily group0 for testing. Will promote to all wikis soon
-if ( $wmgCirrusPerUserPoolCounter ) {
-	$wgPoolCounterConf['CirrusSearch-PerUser'] = [
-		'class' => 'PoolCounter_Client',
-		'timeout' => 0,
-		'workers' => 5,
-		'maxqueue' => 5,
-	];
-}
-
 $wgPoolCountClientConf = [
 	'servers' => $wmfLocalServices['poolcounter'],
 	'timeout' => 0.5
