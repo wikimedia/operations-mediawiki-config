@@ -15722,7 +15722,7 @@ $wgConf->settings = [
 	'wikidata' => true,
 	'incubatorwiki' => true,
 ],
-'wmgMaxGeoSearchRadius' => [
+'wgMaxGeoSearchRadius' => [
 	'default' => 10000,
 	'wikivoyage' => 20000,
 ],
