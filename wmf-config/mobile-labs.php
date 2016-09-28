@@ -17,8 +17,6 @@ if ( $wmgMobileFrontend ) {
 $wgMobileFrontendLogo = $wgLogo;
 
 $wgMFForceSecureLogin = false;
-$wgMFUseCentralAuthToken = $wmgMFUseCentralAuthToken;
-$wgMFSpecialCaseMainPage = $wmgMFSpecialCaseMainPage;
 
 $wgMFMobileFormatterHeadings = $wmgMFMobileFormatterHeadings;
 
