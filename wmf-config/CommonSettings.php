@@ -2590,7 +2590,9 @@ if ( $wmgEnableGeoData ) {
 	$wgGeoDataBackend = 'elastic';
 
 	$wgMaxCoordinatesPerPage = 2000;
-	$wgMaxGeoSearchRadius = $wmgMaxGeoSearchRadius;
+	if ( isset ( $wmgMaxGeoSearchRadius ) ) {
+		$wgMaxGeoSearchRadius = $wmgMaxGeoSearchRadius;
+	}
 	$wgGeoDataDebug = true;
 }
 
