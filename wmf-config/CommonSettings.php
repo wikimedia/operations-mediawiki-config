@@ -2589,10 +2589,6 @@ if ( $wmgEnableGeoData ) {
 	wfLoadExtension( 'GeoData' );
 	$wgGeoDataBackend = 'elastic';
 
-	if ( !$wmgEnableGeoSearch ) {
-		$wgAPIListModules['geosearch'] = 'ApiQueryDisabled';
-	}
-
 	$wgMaxCoordinatesPerPage = 2000;
 	$wgMaxGeoSearchRadius = $wmgMaxGeoSearchRadius;
 	$wgGeoDataDebug = $wmgGeoDataDebug;

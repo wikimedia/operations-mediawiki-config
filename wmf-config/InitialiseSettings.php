@@ -15716,9 +15716,6 @@ $wgConf->settings = [
 	'enwiki' => true,
 ],
 
-# *** DO NOT disable this extension if it causes an overload via API ***
-# or you will break a lot of pages where its parser function is used. Instead,
-# disable its API modules in CommonSettings.php or below
 'wmgEnableGeoData' => [
 	'default' => false,
 	'wikipedia' => true,
@@ -15734,12 +15731,6 @@ $wgConf->settings = [
 	'wg_enwiki' => false,
 	'wikidata' => true,
 	'incubatorwiki' => true,
-],
-'wmgEnableGeoSearch' => [
-	'default' => true,
-	'wikitech' => false, // FIXME: this does nothing in absence of GeoData
-	'loginwiki' => false,
-	'votewiki' => false,
 ],
 'wmgMaxGeoSearchRadius' => [
 	'default' => 10000,
