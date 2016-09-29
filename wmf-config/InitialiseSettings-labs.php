@@ -147,6 +147,7 @@ function wmfLabsSettings() {
 				'CentralAuthVerbose' => 'debug',
 				'dnsblacklist' => 'debug',
 				'EventBus' => 'debug',
+				'runJobs' => 'info',
 				'squid' => 'debug',
 			],
 		],
