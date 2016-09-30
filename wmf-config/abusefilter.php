@@ -286,6 +286,7 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterAnonBlockDuration = '3 months'; // T72828
 		break;
 	case 'metawiki':
+		$wgAbuseFilterConditionLimit = 2000; // T147063
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true; // T76270
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true; // T76270
