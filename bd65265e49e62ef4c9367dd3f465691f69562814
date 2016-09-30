@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_692a9a90",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15937,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2016-09-30T02:13:48Z",
+      "side": 1,
+      "message": "Except wikitech.",
+      "revId": "bd65265e49e62ef4c9367dd3f465691f69562814",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
