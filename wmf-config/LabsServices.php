@@ -52,7 +52,7 @@ $wmfAllServices['eqiad']['restbase'] = 'http://10.68.17.189:7231'; // deployment
 
 ### Poolcounter
 $wmfAllServices['eqiad']['poolcounter'] = [
-	'10.68.23.77', # deployment-poolcounter02.deployment-prep.eqiad.wmflabs
+	'10.68.17.48', # deployment-poolcounter04.deployment-prep.eqiad.wmflabs
 ];
 
 
