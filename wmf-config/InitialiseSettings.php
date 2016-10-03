@@ -16130,6 +16130,12 @@ $wgConf->settings = [
 	'frwikinews' => true, // T143480
 ],
 
+'wgRelatedArticlesFooterBlacklistedSkins' => [
+	// T144812
+	'default' => [],
+	'top6-wikipedia' => [ 'minerva' ],
+],
+
 'wmgRelatedArticlesShowInSidebar' => [
 	'default' => false,
 	'wikivoyage' => true,
