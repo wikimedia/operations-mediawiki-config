@@ -15782,18 +15782,10 @@ $wgConf->settings = [
 	'nonglobal' => false,
 ],
 'wmgEchoShowFooterNotice' => [
-	'default' => true,
+	'default' => false,
 ],
 'wmgEchoFooterNoticeURL' => [
-	'default' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3',
-	'frwiki' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3&Q_Language=FR', // All French wikis: T131893
-	'frwikibooks' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3&Q_Language=FR',
-	'frwikinews' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3&Q_Language=FR',
-	'frwikiquote' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3&Q_Language=FR',
-	'frwikisource' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3&Q_Language=FR',
-	'frwikiversity' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3&Q_Language=FR',
-	'frwikivoyage' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3&Q_Language=FR',
-	'frwiktionary' => 'https://wikimedia.qualtrics.com/SE/?SID=SV_eRMpgEPhVcUEkn3&Q_Language=FR',
+	'default' => '',
 ],
 # from and reply to address when Echo sends email notifications
 'wmgNotificationSender' => [
