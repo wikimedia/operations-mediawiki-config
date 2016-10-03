@@ -3981,6 +3981,7 @@ $wgConf->settings = [
 
 	// Specials wiki @{
 	'+arbcom_enwiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
+	'arbcom_nlwiki' => [0 => 1], // T147186
 	'+auditcomwiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
 	'+bewikimedia' => [ 0 => 1 ],
 	'+boardwiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
