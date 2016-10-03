@@ -16632,18 +16632,13 @@ $wgConf->settings = [
 		'eqiad' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-3' ],
 		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-2' ],
 	],
-	'+eswiki' => [ 'titlesuggest' => '0-5' ],
-	'+jawiki' => [ 'titlesuggest' => '0-5' ],
-	'+ruwiki' => [ 'titlesuggest' => '0-5' ],
-	'+zhwiki' => [ 'titlesuggest' => '0-5' ],
-	'+frwiki' => [ 'titlesuggest' => '0-5' ],
 	'enwiki' => [
-		'eqiad' => [ 'content' => '0-4', 'general' => '0-3', 'titlesuggest' => '0-5' ],
-		'codfw' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-5' ],
+		'eqiad' => [ 'content' => '0-4', 'general' => '0-3', 'titlesuggest' => '0-3' ],
+		'codfw' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-3' ],
 	],
 	'dewiki' => [
-		'eqiad' => [ 'content' => '0-4', 'general' => '0-3', 'titlesuggest' => '0-5' ],
-		'codfw' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-5' ],
+		'eqiad' => [ 'content' => '0-4', 'general' => '0-3', 'titlesuggest' => '0-2' ],
+		'codfw' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2' ],
 	],
 ],
 
