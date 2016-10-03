@@ -14487,6 +14487,9 @@ $wgConf->settings = [
 		'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => false
 	],
 ],
+'wgMinervaUseFooterV2' => [
+	'default' => true,
+],
 'wmgMFMobileFormatterHeadings' => [
 	'default' => [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ],
 	'wikivoyage' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ], // T110436, T110837
