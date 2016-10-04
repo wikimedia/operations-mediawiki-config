@@ -2677,6 +2677,10 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgGroupPermissions['contentadmin']['override-antispoof'] = false;
 	$wgGroupPermissions['contentadmin']['createaccount'] = false;
 
+	// Temporary enable wgFlowDefaultWikiDb to allow to create Flow tables for Wikitech
+	// Could be safely removed afterwards, as we've got the setting through Flow config.
+	$wgFlowDefaultWikiDb = $wmgFlowDefaultWikiDb;
+
 	// Some settings specific to wikitech's extensions
 	include( "$wmfConfigDir/wikitech.php" );
 }
