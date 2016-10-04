@@ -35,19 +35,6 @@
         color: green;
     }
 
-    form.mini_login input.bz_login  {
-        width: 10em;
-    }
-    form.mini_login input.bz_password {
-        width: 6em;
-    }
-    form.mini_login input.bz_remember {
-        margin: 0;
-    }
-    .bz_mini_login_help {
-        color: #777;
-    }
-
 /* header (end)   */
 
 
@@ -140,93 +127,6 @@ div#docslinks {
     margin: 0;
 }
 
-.bz_obsolete {
-    text-decoration: line-through;
-}
-.bz_inactive {
-    text-decoration: line-through;
-}
-.bz_closed,
-.bz_CLOSED td {
-    text-decoration: line-through;
-}
-.bz_private {
-    color: darkred;
-    background: #f3eeee;
-}
-.bz_disabled {
-    color: #a0a0a0;
-}
-
-/************/
-/* Comments */
-/************/
-
-.bz_comment {
-    margin-bottom: 2em;
-}
-
-/* The rules for these classes make international text wrap correctly,
-   even for languages like Japanese that have no spaces. */
-.bz_comment_text, .uneditable_textarea {
-     font-family: monospace;
-    /* Note that these must all be on separate lines or they stop
-       working in Konqueror. */
-     white-space: pre-wrap;      /* CSS 3 & 2.1 */
-     white-space: -moz-pre-wrap; /* Gecko */
-     white-space: -pre-wrap;     /* Opera 4-6 */
-     white-space: -o-pre-wrap;   /* Opera 7 */
-}
-
-.bz_comment_text {
-     width: 50em;
-}
-
-.bz_comment_user, .bz_comment_time, .bz_comment_number, 
-.bz_private_checkbox, .bz_comment_actions
-{
-    margin: 0 .5em;
-}
-
-.bz_comment_actions, .bz_comment_number, .bz_private_checkbox {
-    float: right;
-}
-
-.bz_collapse_comment {
-    text-decoration: none;
-}
-
-.bz_private_checkbox input { 
-    margin: 0;
-    vertical-align: middle;
-}
-
-.bz_comment_head, .bz_first_comment_head {
-    padding-top: .1em;
-    padding-bottom: .1em;
-    padding-left: .5em;
-    background-color: #e0e0e0;
-}
-
-.bz_comment_user_images img {
-    vertical-align: bottom;
-}
-
-.bz_comment_hilite pre {
-    background-color: lightgreen;
-    margin: 0;
-    padding: 1em 0;
-}
-
-/** End Comments **/
-
-.bz_default_hidden, .bz_tui_hidden, .bz_hidden_field, .bz_hidden_option {
-    /* We have !important because we want elements with these classes to always
-     * be hidden, even if there is some CSS that overrides it (we use these
-     * classes inside JavaScript to hide things). */
-    display: none !important;
-}
-
 span.quote {
     color: #65379c;
     /* Make quoted text not wrap. */
@@ -267,60 +167,6 @@ dl dl > dt {
 
 #admin_table th {
     white-space: normal !important;
-}
-
-/* Style of the attachment table and time tracking table */
-#attachment_table {
-    border-collapse: collapse;
-    border: 1px solid silver !important;
-    width: 52em;
-}
-
-table.bz_time_tracking_table {
-    padding: 0.3em 0.3em 0.3em 0.5em;
-}
-#attachment_table th, .bz_attach_footer, .bz_time_tracking_table th {
-    background-color: #E0E0E0;
-    color: black;
-}
-
-#attachment_table td, .bz_time_tracking_table th, .bz_time_tracking_table td {
-    border: 1px solid #333333;
-}
-
-.bz_attach_extra_info {
-    font-size: smaller;
-}
-
-.bz_attach_flags, .bz_attach_footer {
-    white-space: nowrap;
-}
-
-.bz_attach_view_hide {
-    float: right;
-    padding-left: 1em;
-}
-
-table.attachment_info th {
-    text-align: right;
-    vertical-align: top;
-}
-
-table.attachment_info td {
-    text-align: left;
-    vertical-align: top;
-}
-
-/* Text displayed when the attachment is not viewable by the web browser */
-#noview {
-    text-align: left;
-    vertical-align: middle;
-}
-
-/* For bug fields */
-.uneditable_textarea {
-    width: 30em;
-    font-size: medium;
 }
 
 div.user_match {
@@ -417,7 +263,4 @@ form#Create .comment {
 
 #down_button {
     background-image: url(images/global/down.png);
-}
-.bz_emailprefs tr.bz_row_odd {
-    background-color: #f0f0f0;
 }

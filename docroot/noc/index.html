@@ -1,41 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<link rel="stylesheet" href="css/vector.css" media="screen" />
-
-	<meta name="robots" content="index,follow">
+	<meta charset="UTF-8">
 	<title>Wikimedia NOC</title>
-
-	<link href="css/global.css" rel="stylesheet" type="text/css">
-<!--[if lte IE 7]>
-
-  <link href="css/IE-fixes.css"
-		rel="stylesheet"
-		type="text/css">
-<![endif]-->
-	<link rel="stylesheet" href="css/index.css" media="screen" />
-	<style type="text/css">
-	dd {margin-bottom: 1em;}
-	</style>
+	<link rel="stylesheet" href="css/vector.css">
+	<link rel="stylesheet" href="css/global.css">
+	<!--[if lte IE 7]>
+	<link rel="stylesheet" href="css/IE-fixes.css">
+	<![endif]-->
+	<link rel="stylesheet" href="css/index.css">
+	<meta name="robots" content="index,follow">
+	<style>dd { margin-bottom: 1em; }</style>
 </head>
-
-<body class="skin-vector bugzilla-wikimedia-org" dir="ltr" onload="" >
-
-	<div id="page-base" class="noprint"></div>
-	<div id="head-base" class="noprint"></div>
-	<!-- content -->
+<body>
+	<div id="page-base"></div>
+	<div id="head-base"></div>
 	<div id="content-container" >
 		<a id="top"></a>
-		<!-- bodyContent -->
-
 		<div id="bodyContent">
-
-
-<div id="page-index">
-
-	<h2 style="border-bottom:solid 1px silver;">Wikimedia NOC</h2>
-	<dl style="margin-bottom:3em;">
+			<div id="page-index">
+	<h2 style="border-bottom: solid 1px silver;">Wikimedia NOC</h2>
+	<dl style="margin-bottom: 3em;">
 		<dt><a href="./conf/">Server configuration</a></dt>
 		   <dd>Config files of Wikimedia's MediaWiki installation</dd>
 		<dt><a href="https://config-master.wikimedia.org/conftool/">Conftool configuration</a></dt>
@@ -54,7 +39,7 @@
 		   <dt><a href="https://blog.wikimedia.org/c/technology/">Blog</a></dt>
 		   <dd>Blog of the operators of Wikimedia's servers</dd>
 	</dl>
-	<h2 style="border-bottom:solid 1px silver;">Other Wikimedia Resources</h2>
+	<h2 style="border-bottom: solid 1px silver;">Other Wikimedia Resources</h2>
 	<dl>
 		<dt><a href="https://gerrit.wikimedia.org/">Wikimedia Git repository</a></dt>
 			<dd>Revision control system for MediaWiki and other Wikimedia projects, managed via Gerrit code review</dd>
@@ -65,68 +50,32 @@
 		<dt><a href="http://dumps.wikimedia.org/">Wikimedia Downloads</a></dt>
 		   <dd>Software and data downloads</dd>
 	</dl>
-
-
-  <div style="clear:both;"></div>
-
-
-
-  <div class="outro"></div>
-</div>
-<div class="visualClear"></div>
+	<div style="clear: both;"></div>
+	<div class="outro"></div>
 			</div>
-			<!-- /bodyContent -->
 		</div>
-		<!-- /content -->
-
-		<!-- header -->
-		<div id="head" class="noprint">
-			<!-- personal -->
-			<div id="p-personal" class="">
-				<h5>Personal tools</h5>
-
-				<ul >
+	</div>
+	<div id="panel">
+		<div id="p-logo"><a style="background-image: url(./static/images/project-logos/foundationwiki-2x.png);
+    background-size: 135px auto;" href="./"  title="Visit the main page"></a></div>
+		<div class="portal">
+			<h5>Links</h5>
+			<div class="body">
+				<ul><li><a href="https://www.wikimedia.org/">Wikimedia</a></li>
+				<li><a href="https://www.mediawiki.org/">MediaWiki</a></li>
 				</ul>
 			</div>
-
-			<!-- /personal -->
 		</div>
-		<!-- /header -->
-		<!-- panel -->
-			<div id="panel" class="noprint">
-				<!-- logo -->
-				<div id="p-logo"><a style="background-image: url(https://upload.wikimedia.org/wikipedia/foundation/b/bc/Wiki.png);" href="./"  title="Visit the main page"></a></div>
-				<!-- /logo -->
-				<!-- toolbox -->
-				<div class="portal">
-					<h5>Links</h5>
-					<div class="body">
-
-						<ul><li><a href="https://www.wikimedia.org/">Wikimedia</a></li>
-						<li><a href="https://www.mediawiki.org/">MediaWiki</a></li>
-
-						</ul>
-					</div>
-				</div>
-
-				<!-- /toolbox -->
-			</div>
-		<!-- /panel -->
-
-		<!-- footer -->
-		<div id="footer" >
-
-			<ul id="footer-places">
-				<li><a href="https://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
-				<li><a href="https://www.mediawiki.org/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
-				<li><a href="https://www.mediawiki.org/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
-			</ul>
-			<ul id="footer-icons" class="noprint">
-				<!-- <li id="footer-icon-poweredby"><a href="https://www.bugzilla.org/"><img src="skins/custom/images/bugzilla-badge.png" height="31" width="88" alt="Powered by Bugzilla" /></a></li> -->
-
-			</ul>
-			<div style="clear:both"></div>
-		</div>
-		<!-- /footer -->
-	</body>
+	</div>
+	<div id="footer" >
+		<ul id="footer-places">
+			<li><a href="https://wikimediafoundation.org/wiki/Privacy_policy" title="wikimedia:Privacy policy">Privacy policy</a></li>
+			<li><a href="https://www.mediawiki.org/wiki/Project:About" title="Project:About">About MediaWiki.org</a></li>
+			<li><a href="https://www.mediawiki.org/wiki/Project:General_disclaimer" title="Project:General disclaimer">Disclaimers</a></li>
+		</ul>
+		<ul id="footer-icons">
+		</ul>
+		<div style="clear: both;"></div>
+	</div>
+</body>
 </html>

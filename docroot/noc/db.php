@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<title>Wikimedia databases configuration</title>
 	<script src="https://www.mediawiki.org/w/load.php?modules=startup&only=scripts"></script>
 	<style>body { font-family: sans-serif; }</style>

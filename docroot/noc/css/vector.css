@@ -141,20 +141,6 @@ body {
 	#simpleSearch > button#searchButton {
 		height: 100%;
 	}
-	
-	form.mini_login input.bz_login  {
-		width: 10em;
-	}
-	form.mini_login input.bz_password {
-		width: 6em;
-	}
-	form.mini_login input.bz_remember {
-		margin: 0;
-	}
-	.bz_default_hidden {
-		display: none !important;
-	}
-
 
 /* Panel */
 #panel {

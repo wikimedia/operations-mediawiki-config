@@ -49,27 +49,6 @@
     {
         font-weight: bold;
     }
-    
-    .bz_common_actions {
-        display: block;
-        height: 190px;
-        width: 195px;
-        float: left;
-        margin: 0 3ex 3em 0;
-        text-align: center;
-    }
-    .bz_common_actions span {
-        position: relative;
-        top: 95%;
-        font-weight: bold;
-    }
-    
-    .bz_common_actions,
-    .bz_common_actions:visited,
-    .bz_common_actions:hover
-    {
-        text-decoration: none;
-    }
 
     #enter_bug { background: url(images/index/bug.gif)     no-repeat; }
     #query     { background: url(images/index/search.gif)  no-repeat; }
@@ -120,11 +99,6 @@
     ul.additional_links li
     {
         display: inline;
-    }
-    
-    ul.additional_links li.bz_default_hidden
-    {
-        display: none;
     }
     
     input.quicksearch_help_text
