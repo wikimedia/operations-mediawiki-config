@@ -15937,6 +15937,7 @@ $wgConf->settings = [
 'wmgFlowDefaultWikiDb' => [
 	'default' => 'flowdb',
 	'private' => false,
+	'wikitech' => false, // T127792
 ],
 'wmgFlowCluster' => [
 	'default' => 'extension1',
