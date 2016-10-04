@@ -380,6 +380,7 @@ $wgConf->settings = [
 	'nowikinews' => 'Europe/Berlin',
 	'nowikisource' => 'Europe/Berlin',
 	'nsowiki' => 'Africa/Johannesburg',
+	'olowiki' => 'Europe/Moscow', // T146612
 	'orwiki' => 'Asia/Kolkata', // T122273
 	'orwikisource' => 'Asia/Kolkata', // T73875
 	'pdcwiki' => 'America/New_York',
@@ -648,6 +649,7 @@ $wgConf->settings = [
 	'nsowiki' => '/static/images/project-logos/nsowiki.png',
 	'nvwiki' => '/static/images/project-logos/nvwiki.png',  // T42285
 	'ocwiki' => '/static/images/project-logos/ocwiki.png',
+	'olowiki' => '/static/images/project-logos/olowiki.png', // T146745
 	'omwiki' => '/static/images/project-logos/omwiki.png',  // T46974
 	'orwiki' => '/static/images/project-logos/orwiki.png',  // T29704
 	'oswiki' => '/static/images/project-logos/oswiki.png',
@@ -1148,6 +1150,7 @@ $wgConf->settings = [
 	'mswiki' => [ '1.5x' => '/static/images/project-logos/mswiki-1.5x.png', '2x' => '/static/images/project-logos/mswiki-2x.png' ],
 	'newiki' => [ '1.5x' => '/static/images/project-logos/newiki-1.5x.png', '2x' => '/static/images/project-logos/newiki-2x.png' ],    // T139240
 	'nlwiki' => [ '1.5x' => '/static/images/project-logos/nlwiki-1.5x.png', '2x' => '/static/images/project-logos/nlwiki-2x.png' ],
+	'olowiki' => [ '1.5x' => '/static/images/project-logos/olowiki-1.5x.png', '2x' => '/static/images/project-logos/olowiki-2x.png' ], // T146745
 	'ruwiki' => [ '1.5x' => '/static/images/project-logos/ruwiki-1.5x.png', '2x' => '/static/images/project-logos/ruwiki-2x.png' ],
 	'tawiki' => [ '1.5x' => '/static/images/project-logos/tawiki-1.5x.png', '2x' => '/static/images/project-logos/tawiki-2x.png' ],
 	'tcywiki' => [ '1.5x' => '/static/images/project-logos/tcywiki-1.5x.png', '2x' => '/static/images/project-logos/tcywiki-2x.png' ], // T140898
@@ -1839,6 +1842,7 @@ $wgConf->settings = [
 	'ocwikibooks' => 'Wikilibres',
 	'ocwiktionary' => 'Wikiccionari',
 	'officewiki' => 'Wikimedia Office',
+	'olowiki' => 'Wikipedii', // T146745
 	'ombudsmenwiki' => 'Ombudsmen Wiki',
 	'orwiki' => 'ଉଇକିପିଡ଼ିଆ',
 	'orwikisource' => 'ଉଇକିପାଠାଗାର', // T73875
@@ -2321,6 +2325,7 @@ $wgConf->settings = [
 	'ocwikibooks' => 'Wikilibres',
 	'ocwiktionary' => 'Wikiccionari',
 	'officewiki' => 'OfficeWiki', // T66976
+	'olowiki' => 'Wikipedii', // T146745
 	'ombudsmenwiki' => 'Project',
 	'orwiki' => 'ଉଇକିପିଡ଼ିଆ',
 	'orwikisource' => 'ଉଇକିପାଠାଗାର', // T73875
@@ -10718,7 +10723,7 @@ $wgConf->settings = [
 	'pflwiki' => [ 'de', 'fr', 'als', 'pdc', 'en' ], // T27996
 	'ptwikisource' => [ 'w', 'b' ],
 	'plwiki' => [ 's', 'b', 'q', 'n', 'wikt' ], // T10546, T22996, T23506
-	'plwikibooks' => [ 'w', 's' ], # bug 8546
+	'plwikibooks' => [ 'w', 's' ], # bug 8546
 	'plwikisource' => [ 'w', 'b', 'q', 'n', 'wikt', 'mul', 'de', 'en', 'es', 'fr', 'it', 'pt', 'sv' ], // T129015
 	'plwiktionary' => [ 'w' ], // T12374
 	'pntwiki' => [ 'en', 'el', 'elwikiversity', 'incubator' ],
@@ -12726,7 +12731,7 @@ $wgConf->settings = [
 'wgBetaFeaturesWhitelist' => [
 	'default' => [
 		'visualeditor-enable',                      // [Editing] On-going (special permission) – VisualEditor
-		'beta-feature-flow-user-talk-page',         // [Editing] On-going (special permission) – Flow opt-in
+		'beta-feature-flow-user-talk-page',         // [Editing] On-going (special permission) – Flow opt-in
 		'uls-compact-links',                        // [Editing] 2016-11-23 – Compact language links
 		'popups',                                   // [Reading] 2016-11-26 – Hovercards
 		'cx',                                       // [Editing] 2016-11-07 - ContentTranslation
