@@ -107,6 +107,14 @@ $wmgThrottlingExceptions[] = [ // T146654
 	'value' => 25 //15 expected
 ];
 
+$wmgThrottlingExceptions[] = [ // T147293
+	'from' => '2016-10-14T00:00 -0:00',
+	'to' => '2016-10-16T0:00 -0:00',
+	'IP' => '194.167.137.246',
+	'dbname' => ['frwiki', 'cawiki', 'wikidatawiki'],
+	'value' => 40
+];
+
 // Winona State University - T146600
 
 // October 4th
