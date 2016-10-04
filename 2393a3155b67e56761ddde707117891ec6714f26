@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_cd870013",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3984,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-10-04T12:58:14Z",
+      "side": 1,
+      "message": "It lacks a leading + to merge this wiki more specific values with the defaults?",
+      "revId": "2393a3155b67e56761ddde707117891ec6714f26",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
