@@ -2685,6 +2685,13 @@ if ( $wmgUseThanks ) {
 	wfLoadExtension( 'Thanks' );
 }
 
+
+// Flow configuration
+
+// We always set this variable, as it's required by the create table
+// maintenance script. This allows to deploy Flow on non standard wikis.
+$wgFlowDefaultWikiDb = $wgFlowDefaultWikiDb;
+
 if ( $wmgUseFlow && $wmgUseParsoid ) {
 	require_once( "$IP/extensions/Flow/Flow.php" );
 
@@ -2718,7 +2725,6 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 		$wgExtraNamespaces[NS_TOPIC] = 'Topic';
 	}
 
-	$wgFlowDefaultWikiDb = $wmgFlowDefaultWikiDb;
 	$wgFlowCluster = $wmgFlowCluster;
 	$wgFlowExternalStore = $wgDefaultExternalStore;
 	$wgFlowMaintenanceMode = $wmgFlowMaintenanceMode;
