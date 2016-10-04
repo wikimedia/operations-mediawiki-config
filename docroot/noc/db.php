@@ -2,9 +2,20 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Wikimedia databases configuration</title>
-	<script src="https://www.mediawiki.org/w/load.php?modules=startup&only=scripts"></script>
-	<style>body { font-family: sans-serif; }</style>
+	<title>Wikimedia database configuration</title>
+	<style>
+	body { font: 14px/21px sans-serif; color: #252525; }
+	h2 { font-weight: normal; }
+	a { text-decoration: none; color: #0645ad; }
+	a:hover { text-decoration: underline; }
+	code { color: #000; background: #f9f9f9; border: 1px solid #ddd; border-radius: 2px; padding: 1px 4px; }
+	main { display: flex; flex-wrap: wrap; }
+	nav li { float: left; list-style: none; border: 1px solid #eee; padding: 1px 4px; margin: 0 1em 1em 0; }
+	section { flex: 1; min-width: 300px; border: 1px solid #eee; padding: 0 1em; margin: 0 1em 1em 0; }
+	main, footer { clear: both; }
+	section:target { border-color: orange; }
+	section:target h2 { background: #ffe; }
+	</style>
 </head>
 <body>
 <?php
@@ -13,13 +24,13 @@
 error_reporting( E_ALL );
 ini_set( 'display_errors', 1 );
 
-# some lame definitions used in db.php
-$wgDBname = $wgDBuser = $wgDBpassword = $wmfMasterDatacenter = null;
+// Mock vars from CommonSettings.php for db-eqiad.php
+$wgDBname = $wgDBuser = $wgDBpassword = null; $wmfMasterDatacenter = 'eqiad';
 define( 'DBO_DEFAULT', 'uniq' );
 
-require_once( '../../wmf-config/db-eqiad.php' );
+require_once '../../wmf-config/db-eqiad.php';
 
-class wmfClusters {
+class WmfClusters {
 	private $clusters;
 
 	function names( ) {
@@ -27,12 +38,12 @@ class wmfClusters {
 		return array_keys( $wgLBFactoryConf['sectionLoads'] );
 	}
 
-	/** Returns a list of wikis for a clustername */
+	/** Return a list of wikis for a clustername */
 	function wikis( $clusterName ) {
 		global $wgLBFactoryConf;
 		$ret = array();
-		foreach( $wgLBFactoryConf['sectionsByDB'] as $wiki => $cluster ) {
-			if( $cluster == $clusterName ) {
+		foreach ( $wgLBFactoryConf['sectionsByDB'] as $wiki => $cluster ) {
+			if ( $cluster == $clusterName ) {
 				$ret[] = $wiki;
 			}
 		}
@@ -48,56 +59,45 @@ class wmfClusters {
 	}
 
 	function contentFor( $name ) {
-		print "Cluster <b>$name</b><br><b>Databases:</b><br>";
-		foreach( $this->databases($name) as $db ) {
-			print "$db ";
+		print "<strong>Databases:</strong><br>";
+		foreach( $this->databases( $name ) as $db ) {
+			print "<code>$db</code> ";
 		}
-		print '<br><b>Loads</b>:<br>';
-		foreach( $this->loads($name) as $k => $v ) {
-			print "$k => $v<br>";
+		print '<br><strong>Loads</strong>:<br>';
+		foreach( $this->loads( $name ) as $key => $val ) {
+			print "$key => $val<br>";
 		}
-		print '<br><b>Wikis</b>:<br>';
+		print '<br><strong>Wikis</strong>:<br>';
 		if( $name == 'DEFAULT' ) {
 			print 'Any wiki not hosted on the other clusters.<br>';
 		} else {
-			foreach ( $this->wikis($name) as $w ) {
+			foreach ( $this->wikis( $name ) as $w ) {
 				print "$w<br>";
 			}
 		}
 	}
 }
 
-$wmf = new wmfClusters();
+$wmf = new WmfClusters();
 
-print '<div id="tabs">';
-
-# Generates tabs:
-print '<ul>';
+// Generate navigation links
+print '<nav><ul>';
 $tab = 0;
 foreach ( $wmf->names() as $name ) {
 	$tab++;
-	print "\n";
-	print '<li><a href="#tabs-' . $tab . '">Cluster ' . $name . '</a></li>';
+	print '<li><a href="#tabs-' . $tab . '">Cluster ' . htmlspecialchars( $name ) . '</a></li>';
 }
-print '</ul>';
+print '</ul></nav><main>';
 
-# Generates tabs content
-$tab=0;
+// Generate content sections
+$tab = 0;
 foreach ( $wmf->names() as $name ) {
 	$tab++;
-	print "<div id=\"tabs-$tab\">\n";
-	$wmf->contentFor( $name );
-	print '</div>';
+	print "<section id=\"tabs-$tab\"><h2>Cluster <strong>" . htmlspecialchars( $name ) . '</strong></h2>';
+	print $wmf->contentFor( $name ) . '</section>';
 }
-?></div>
-<div id="footer">Automatically generated from <a href="//noc.wikimedia.org/conf/highlight.php?file=db-eqiad.php">wmf-config/db-eqiad.php</a></div>
-<script>
-window.RLQ = window.RLQ || [];
-window.RLQ.push( function () {
-	mw.loader.using( 'jquery.ui.tabs', function () {
-		$( '#tabs' ).tabs();
-	} );
-} );
-</script>
+print '</main>';
+?>
+<footer>Automatically generated from <a href="./conf/highlight.php?file=db-eqiad.php">wmf-config/db-eqiad.php</a></footer>
 </body>
 </html>
