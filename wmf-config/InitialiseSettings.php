@@ -16655,6 +16655,38 @@ $wgConf->settings = [
 	'wikidatawiki' => 'no',
 ],
 
+// wmgCirrusSearchCompletionSuggesterSubphrases @{
+// Please verify mem usage on the cluster before adding new wiki here.
+// NOTE: activate 'build' => true first then verify that the index has been
+// updated with the new mapping then you can switch 'use' to true
+'wmgCirrusSearchCompletionSuggesterSubphrases' => [
+	'default' => [
+		'build' => false,
+		'use' => false,
+		'type' => 'anywords',
+		'limit' => 10,
+	],
+	'enwikisource' => [
+		'build' => true,
+		'use' => false,
+		'type' => 'anywords',
+		'limit' => 10,
+	],
+	'mediawikiwiki' => [
+		'build' => true,
+		'use' => false,
+		'type' => 'anywords',
+		'limit' => 10,
+	],
+	'wikitech' => [
+		'build' => true,
+		'use' => false,
+		'type' => 'anywords',
+		'limit' => 10,
+	],
+],
+// @} end of wmgCirrusSearchCompletionSuggesterSubphrases
+
 // Enable phrase suggester (did you mean) on all wikis (except wikidata)
 'wmgCirrusSearchEnablePhraseSuggest' => [
 	'default' => true,
