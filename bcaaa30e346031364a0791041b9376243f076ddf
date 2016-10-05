@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e82f318_70617dff",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 2693,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2016-10-05T22:43:46Z",
+      "side": 1,
+      "message": "Right side since should be wmg, like below.",
+      "revId": "bcaaa30e346031364a0791041b9376243f076ddf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
