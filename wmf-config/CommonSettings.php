@@ -305,7 +305,9 @@ if ( $wgLocaltimezone !== 'UTC' ) {
 }
 
 $wgShowIPinHeader = false;
-$wgUseGzip = true;
+# Disabled 2016-10-05 by Chad/Brandon -- varnish already does this for us
+# and it's not worth the internal savings for the headaches it can cause
+# $wgUseGzip = true;
 $wgRCMaxAge = 30 * 86400;
 
 $wgTmpDirectory     = '/tmp';
