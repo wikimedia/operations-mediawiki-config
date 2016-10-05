@@ -9053,6 +9053,7 @@ $wgConf->settings = [
 			'noratelimit' => true,
 			'deleterevision' => true,
 			'deletelogentry' => true,
+			'editcontentmodel' => true,
 		],
 		'bot' => [
 			'noratelimit' => true,
@@ -9077,6 +9078,7 @@ $wgConf->settings = [
 			'move' => false, // T14071
 			'move-subpages' => false, // for now...
 			'movefile' => false, // r93871 CR
+			'editcontentmodel' => false, // temp, pending T85847
 		],
 		'autoconfirmed' => [
 			'reupload' => true,
