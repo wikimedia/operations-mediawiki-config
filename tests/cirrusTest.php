@@ -233,7 +233,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		//   select wikiid, count(1) as count from wmf_raw.cirrussearchrequestset where year = 2016
 		//   and month = 1 and day >= 2 and day < 9 group by wikiid order by count desc limit 10;
 		$busyWikis = array( 'enwiki', 'dewiki' );
-		if ( in_array( $wiki, $busyWikis ) && $indexType !== 'titlesuggest' ) {
+		if ( in_array( $wiki, $busyWikis ) && $indexType == 'content' ) {
 
 			// For busy indices ensure we are using most of the cluster to serve them
 			$this->assertGreaterThanOrEqual( $numServers - 3, $totalShards );

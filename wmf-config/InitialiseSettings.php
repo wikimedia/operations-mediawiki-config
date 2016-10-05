@@ -16656,11 +16656,11 @@ $wgConf->settings = [
 	'commonswiki' => [ 'content' => 1, 'general' => 8, 'file' => 7, 'titlesuggest' => 1 ],
 	'cswiki' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1 ],
 	'dawiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
-	'dewiki' => [ 'content' => 6, 'general' => 7, 'titlesuggest' => 3 ],
+	'dewiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 3 ],
 	'dewikisource' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1 ],
 	'elwiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
 	// These shards are also significantly larger than the target 2GB.
-	'enwiki' => [ 'content' => 6, 'general' => 7, 'titlesuggest' => 4 ],
+	'enwiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 4 ],
 	'enwikinews' => [ 'content' => 1, 'general' => 4, 'titlesuggest' => 1 ],
 	'enwikisource' => [ 'content' => 7, 'general' => 1, 'titlesuggest' => 1 ],
 	'enwiktionary' => [ 'content' => 5, 'general' => 2, 'titlesuggest' => 2 ],
@@ -16717,12 +16717,12 @@ $wgConf->settings = [
 		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-2' ],
 	],
 	'enwiki' => [
-		'eqiad' => [ 'content' => '0-4', 'general' => '0-3', 'titlesuggest' => '0-3' ],
-		'codfw' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-3' ],
+		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-3' ],
+		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-3' ],
 	],
 	'dewiki' => [
-		'eqiad' => [ 'content' => '0-4', 'general' => '0-3', 'titlesuggest' => '0-2' ],
-		'codfw' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2' ],
+		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2' ],
+		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2' ],
 	],
 ],
 
