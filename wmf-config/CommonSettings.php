@@ -2719,6 +2719,7 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 		$wgExtraNamespaces[NS_TOPIC] = 'Topic';
 	}
 
+	$wgFlowDefaultWikiDb = $wmgFlowDefaultWikiDb;
 	$wgFlowCluster = $wmgFlowCluster;
 	$wgFlowExternalStore = $wgDefaultExternalStore;
 	$wgFlowMaintenanceMode = $wmgFlowMaintenanceMode;
