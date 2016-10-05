@@ -16702,19 +16702,19 @@ $wgConf->settings = [
 	],
 	'wikisource' => [
 		'build' => true,
-		'use' => false,
+		'use' => true,
 		'type' => 'anywords',
 		'limit' => 10,
 	],
 	'mediawikiwiki' => [
 		'build' => true,
-		'use' => false,
+		'use' => true,
 		'type' => 'anywords',
 		'limit' => 10,
 	],
 	'wikitech' => [
 		'build' => true,
-		'use' => false,
+		'use' => true,
 		'type' => 'anywords',
 		'limit' => 10,
 	],
