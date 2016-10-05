@@ -49,6 +49,22 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		}
 	}
 
+	public function testSubphraseCompletion() {
+		// never ever enable subphrases completion for enwiki
+		$config = $this->loadCirrusConfig( 'production', 'enwiki', 'wiki' );
+		$this->assertFalse( $config['wgCirrusSearchCompletionSuggesterSubphrases']['build'] );
+		$this->assertFalse( $config['wgCirrusSearchCompletionSuggesterSubphrases']['use'] );
+
+		$config = $this->loadCirrusConfig( 'production', 'frwikisource', 'wiki' );
+		$this->assertTrue( $config['wgCirrusSearchCompletionSuggesterSubphrases']['build'] );
+
+		$config = $this->loadCirrusConfig( 'production', 'mediawikiwiki', 'wiki' );
+		$this->assertTrue( $config['wgCirrusSearchCompletionSuggesterSubphrases']['build'] );
+
+		$config = $this->loadCirrusConfig( 'production', 'wikitech', 'wiki' );
+		$this->assertTrue( $config['wgCirrusSearchCompletionSuggesterSubphrases']['build'] );
+	}
+
 	public function testLanguageMatrix() {
 		$config = $this->loadCirrusConfig( 'production', 'enwiki', 'wiki' );
 		$allDbs = DBList::getall();
