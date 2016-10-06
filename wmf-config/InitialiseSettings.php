@@ -1058,6 +1058,7 @@ $wgConf->settings = [
 	'nzwikimedia' => '/static/images/project-logos/nzwikimedia.png',
 	'pa_uswikimedia' => '/static/images/project-logos/pa_uswikimedia.png',
 	'plwikimedia' => '/static/images/project-logos/plwikimedia.png',
+	'ptwikimedia' => '/static/images/project-logos/ptwikimedia.png', // T126832
 	'rswikimedia' => '/static/images/project-logos/rswikimedia.png',
 	'ruwikimedia' => '/static/images/project-logos/ruwikimedia.png',
 	'sewikimedia' => '/static/images/project-logos/sewikimedia.png',
@@ -1173,6 +1174,7 @@ $wgConf->settings = [
 	'viwikivoyage' => [ '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ],
 
     # Chapter wikis
+	'ptwikimedia' => [ '1.5x' => '/static/images/project-logos/ptwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ptwikimedia-2x.png'], // T126832
 	'trwikimedia' => [ '1.5x' => '/static/images/project-logos/trwikimedia-1.5x.png', '2x' => '/static/images/project-logos/trwikimedia-2x.png'],
     # Special wikis
 	'foundationwiki' => [ '1.5x' => '/static/images/project-logos/foundationwiki-1.5x.png', '2x' => '/static/images/project-logos/foundationwiki-2x.png' ],
