@@ -11533,6 +11533,15 @@ $wgConf->settings = [
 		: [ 'class' => 'Parser', 'preprocessorClass' => 'Preprocessor_DOM' ],
 ],
 
+# Enable magic links regardless of core default (T145604)
+'wgEnableMagicLinks' => [
+	'default' => [
+		'ISBN' => true,
+		'PMID' => true,
+		'RFC' => true,
+	],
+],
+
 # wgFavicon @{
 'wgFavicon' => [
 	# Projects
