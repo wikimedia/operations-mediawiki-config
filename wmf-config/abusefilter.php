@@ -397,4 +397,5 @@ if ( $wmfRealm === 'labs' ) {
 	$wgAbuseFilterActions['block'] = true;
 	$wgAbuseFilterBlockDuration = 'indefinite';
 	$wgAbuseFilterAnonBlockDuration = '48 hours';
+	$wgAbuseFilterParserClass = 'AbuseFilterCachingParser';
 }
