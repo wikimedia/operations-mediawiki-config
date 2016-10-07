@@ -2060,7 +2060,7 @@ if ( $wmgUseGWToolset ) {
 }
 
 if ( $wmgUseMultimediaViewer ) {
-	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
+	wfLoadExtension( 'MultimediaViewer' );
 	$wgMediaViewerNetworkPerformanceSamplingFactor = $wmgMediaViewerNetworkPerformanceSamplingFactor;
 	$wgMediaViewerDurationLoggingSamplingFactor = $wmgMediaViewerDurationLoggingSamplingFactor;
 	$wgMediaViewerAttributionLoggingSamplingFactor = $wmgMediaViewerAttributionLoggingSamplingFactor;
@@ -2081,7 +2081,7 @@ if ( $wmgUseMultimediaViewer ) {
 }
 
 if ( $wmgUsePopups || ( $wmgPopupsBetaFeature && $wmgUseBetaFeatures ) ) {
-	require_once( "$IP/extensions/Popups/Popups.php" );
+	wfLoadExtension( 'Popups' );
 
 	// Make sure we don't enable as a beta feature if we are set to be enabled by default.
 	$wgPopupsBetaFeature = $wmgPopupsBetaFeature && !$wmgUsePopups;
@@ -2199,7 +2199,7 @@ if ( $wmgUseVisualEditor ) {
 	}
 
 	// Citoid
-	require_once "$IP/extensions/Citoid/Citoid.php";
+	wfLoadExtension( 'Citoid' );
 	$wgCitoidServiceUrl = 'https://citoid.wikimedia.org/api';
 
 	// Move the citation button from the primary toolbar into the "other" group
@@ -2216,7 +2216,7 @@ if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
 }
 
 if ( $wmgUseGoogleNewsSitemap ) {
-	include( "$IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php" );
+	wfLoadExtension( 'GoogleNewsSitemap' );
 	$wgGNSMfallbackCategory = $wmgGNSMfallbackCategory;
 	$wgGNSMcommentNamespace = $wmgGNSMcommentNamespace;
 }
@@ -2257,7 +2257,7 @@ if ( $wmgUseGuidedTour || $wmgUseGettingStarted ) {
 }
 
 if ( $wmgUseMoodBar ) {
-	require_once( "$IP/extensions/MoodBar/MoodBar.php" );
+	wfLoadExtension( 'MoodBar' );
 	$wgMoodBarCutoffTime = $wmgMoodBarCutoffTime;
 	$wgMoodBarBlackoutInterval = [ '20120614000000,20120629000000' ];
 	$wgMoodBarConfig['privacyUrl'] = "//wikimediafoundation.org/wiki/Feedback_policy";
@@ -2277,7 +2277,7 @@ require "{$wmfConfigDir}/mobile.php";
 
 # MUST be after MobileFrontend initialization
 if ( $wmgEnableTextExtracts ) {
-	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
+	wfLoadExtension( 'TextExtracts' );
 	if ( isset( $wgExtractsRemoveClasses ) ) {
 		// Back-compat for pre-extension.json
 		$wgExtractsRemoveClasses = array_merge( $wgExtractsRemoveClasses, $wmgExtractsRemoveClasses );
@@ -2341,7 +2341,7 @@ if ( $wmgUseMath ) {
 }
 
 if ( $wmgUseBabel ) {
-	require_once( "$IP/extensions/Babel/Babel.php" );
+	wfLoadExtension( 'Babel' );
 	$wgBabelCategoryNames = $wmgBabelCategoryNames;
 	$wgBabelMainCategory = $wmgBabelMainCategory;
 	$wgBabelDefaultLevel = $wmgBabelDefaultLevel;
@@ -2487,7 +2487,7 @@ if ( $wmgUseTranslate ) {
 }
 
 if ( $wmgUseTranslationNotifications ) {
-	require_once( "$IP/extensions/TranslationNotifications/TranslationNotifications.php" );
+	wfLoadExtension( 'TranslationNotifications' );
 	$wgNotificationUsername = 'Translation Notification Bot@Translation_Notification_Bot';
 	$wgNotificationUserPassword = $wmgTranslationNotificationUserPassword;
 
