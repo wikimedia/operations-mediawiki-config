@@ -3,10 +3,10 @@ require_once './MWVersion.php';
 require getMediaWiki( 'includes/WebStart.php' );
 
 $wgTitle = Title::newFromText( 'Mediawiki:robots.txt' );
-$page = WikiPage::factory( $title );
+$wgArticle = new Article( $wgTitle, 0 );
 
 header( 'Content-Type: text/plain; charset=utf-8' );
-header( 'X-Article-ID: ' . $page->getId() );
+header( 'X-Article-ID: ' . $wgArticle->getID() );
 header( 'X-Language: ' . $lang );
 header( 'X-Site: ' . $site );
 header( 'Vary: X-Subdomain' );
@@ -25,10 +25,10 @@ $dontIndex = "User-agent: *\nDisallow: /\n";
 
 if ( $zeroRated ) {
 	echo $dontIndex;
-} elseif ( $page->exists() ) {
-	$extratext = $page->getText() ?: '';
+} elseif ( $wgArticle->getID() != 0 ) {
+	$extratext = $wgArticle->getContent( false ) ;
 	// Take last modified timestamp of page into account
-	$mtime = max( $mtime, wfTimestamp( TS_UNIX, $page->getTouched() ) );
+	$mtime = max( $mtime, wfTimestamp( TS_UNIX,  $wgArticle->getTouched() ) );
 } elseif( $wmfRealm == 'labs' ) {
 	echo $dontIndex;
 }
