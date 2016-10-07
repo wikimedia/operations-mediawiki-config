@@ -1581,10 +1581,6 @@ case 'labs':
 	break;
 }
 
-if ( $wmfRealm == 'labs' && file_exists( '/etc/wikimedia-transcoding' ) ) {
-	require( "$wmfConfigDir/transcoding-labs.org" );
-}
-
 // Banner notice system
 if ( $wmgUseCentralNotice ) {
 	wfLoadExtension( 'CentralNotice' );
