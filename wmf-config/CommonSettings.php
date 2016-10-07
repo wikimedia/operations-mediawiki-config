@@ -2522,6 +2522,7 @@ $wgDisplayFeedsInSidebar = $wmgDisplayFeedsInSidebar;
 if ( $wmgEnablePageTriage ) {
 	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 	$wgPageTriageEnableCurationToolbar = $wmgPageTriageEnableCurationToolbar;
+	$wgPageTriageNoIndexUnreviewedNewArticles = $wmgPageTriageNoIndexUnreviewedNewArticles;
 }
 
 if ( $wmgEnableInterwiki ) {

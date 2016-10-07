@@ -15608,6 +15608,9 @@ $wgConf->settings = [
 	'test2wiki' => true,
 	'enwiki' => true,
 ],
+'wmgPageTriageNoIndexUnreviewedNewArticles' => [
+	'default' => true,
+],
 
 'wmgEnableInterwiki' => [
 	'default' => true,
