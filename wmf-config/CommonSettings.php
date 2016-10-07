@@ -1008,7 +1008,7 @@ if ( $wmgUseContactPage ) {
 }
 
 if ( $wmgUseSecurePoll ) {
-	include( $IP . '/extensions/SecurePoll/SecurePoll.php' );
+	wfLoadExtension( 'SecurePoll' );
 
 	$wgSecurePollUseNamespace = $wmgSecurePollUseNamespace;
 	$wgSecurePollScript = 'auth-api.php';
@@ -1029,7 +1029,7 @@ if ( $wmgUsePoolCounter ) {
 }
 
 if ( $wmgUseScore ) {
-	include( "$IP/extensions/Score/Score.php" );
+	wfLoadExtension( 'Score' );
 	$wgScoreFileBackend = $wmgScoreFileBackend;
 	$wgScorePath = $wmgScorePath;
 }
@@ -1306,7 +1306,7 @@ ini_set( 'user_agent', 'Wikimedia internal server fetcher (noc@wikimedia.org' );
 
 // CentralAuth
 if ( $wmgUseCentralAuth ) {
-	include "$IP/extensions/CentralAuth/CentralAuth.php";
+	wfLoadExtension( 'CentralAuth' );
 
 	$wgCentralAuthDryRun = false;
 	$wgGroupPermissions['steward']['centralauth-rename'] = true;
@@ -1754,7 +1754,7 @@ if ( $wmgUseCollection ) {
 require( "$wmfConfigDir/throttle.php" );
 
 if ( $wmgUseNewUserMessage ) {
-	include "$IP/extensions/NewUserMessage/NewUserMessage.php";
+	wfLoadExtension( 'NewUserMessage' );
 	$wgNewUserSuppressRC = true;
 	$wgNewUserMinorEdit = $wmgNewUserMinorEdit;
 	$wgNewUserMessageOnAutoCreate = $wmgNewUserMessageOnAutoCreate;
@@ -1779,7 +1779,7 @@ if ( $wmgUseCodeReview ) {
 }
 
 # AbuseFilter
-include "$IP/extensions/AbuseFilter/AbuseFilter.php";
+wfLoadExtension( 'AbuseFilter' );
 include( "$wmfConfigDir/abusefilter.php" );
 $wgAbuseFilterEmergencyDisableThreshold = $wmgAbuseFilterEmergencyDisableThreshold;
 $wgAbuseFilterEmergencyDisableCount = $wmgAbuseFilterEmergencyDisableCount;
@@ -1893,7 +1893,7 @@ if ( $wgUseContributionTracking ) {
 }
 
 if ( $wmgUseMassMessage ) {
-	require_once( "$IP/extensions/MassMessage/MassMessage.php" );
+	wfLoadExtension( 'MassMessage' );
 	$wgNamespacesToPostIn = $wmgNamespacesToPostIn;
 	$wgAllowGlobalMessaging = $wmgAllowGlobalMessaging;
 }
@@ -1903,7 +1903,7 @@ if ( $wmgUseSandboxLink ) {
 }
 
 if ( $wmgUseUploadWizard ) {
-	require_once( "$IP/extensions/UploadWizard/UploadWizard.php" );
+	wfLoadExtension( 'UploadWizard' );
 	$wgUploadStashScalerBaseUrl = "//{$wmfHostnames['upload']}/$site/$lang/thumb/temp";
 	$wgUploadWizardConfig = [
 		# 'debug' => true,
@@ -2056,7 +2056,7 @@ if ( $wmgUseGWToolset ) {
 }
 
 if ( $wmgUseMultimediaViewer ) {
-	require_once( "$IP/extensions/MultimediaViewer/MultimediaViewer.php" );
+	wfLoadExtension( 'MultimediaViewer' );
 	$wgMediaViewerNetworkPerformanceSamplingFactor = $wmgMediaViewerNetworkPerformanceSamplingFactor;
 	$wgMediaViewerDurationLoggingSamplingFactor = $wmgMediaViewerDurationLoggingSamplingFactor;
 	$wgMediaViewerAttributionLoggingSamplingFactor = $wmgMediaViewerAttributionLoggingSamplingFactor;
@@ -2077,7 +2077,7 @@ if ( $wmgUseMultimediaViewer ) {
 }
 
 if ( $wmgUsePopups || ( $wmgPopupsBetaFeature && $wmgUseBetaFeatures ) ) {
-	require_once( "$IP/extensions/Popups/Popups.php" );
+	wfLoadExtension( 'Popups' );
 
 	// Make sure we don't enable as a beta feature if we are set to be enabled by default.
 	$wgPopupsBetaFeature = $wmgPopupsBetaFeature && !$wmgUsePopups;
@@ -2195,7 +2195,7 @@ if ( $wmgUseVisualEditor ) {
 	}
 
 	// Citoid
-	require_once "$IP/extensions/Citoid/Citoid.php";
+	wfLoadExtension( 'Citoid' );
 	$wgCitoidServiceUrl = 'https://citoid.wikimedia.org/api';
 
 	// Move the citation button from the primary toolbar into the "other" group
@@ -2212,7 +2212,7 @@ if ( $wmgUseTemplateData ) { // T61702 - 2015-07-20
 }
 
 if ( $wmgUseGoogleNewsSitemap ) {
-	include( "$IP/extensions/GoogleNewsSitemap/GoogleNewsSitemap.php" );
+	wfLoadExtension( 'GoogleNewsSitemap' );
 	$wgGNSMfallbackCategory = $wmgGNSMfallbackCategory;
 	$wgGNSMcommentNamespace = $wmgGNSMcommentNamespace;
 }
@@ -2253,7 +2253,7 @@ if ( $wmgUseGuidedTour || $wmgUseGettingStarted ) {
 }
 
 if ( $wmgUseMoodBar ) {
-	require_once( "$IP/extensions/MoodBar/MoodBar.php" );
+	wfLoadExtension( 'MoodBar' );
 	$wgMoodBarCutoffTime = $wmgMoodBarCutoffTime;
 	$wgMoodBarBlackoutInterval = [ '20120614000000,20120629000000' ];
 	$wgMoodBarConfig['privacyUrl'] = "//wikimediafoundation.org/wiki/Feedback_policy";
@@ -2273,7 +2273,7 @@ require "{$wmfConfigDir}/mobile.php";
 
 # MUST be after MobileFrontend initialization
 if ( $wmgEnableTextExtracts ) {
-	require_once( "$IP/extensions/TextExtracts/TextExtracts.php" );
+	wfLoadExtension( 'TextExtracts' );
 	if ( isset( $wgExtractsRemoveClasses ) ) {
 		// Back-compat for pre-extension.json
 		$wgExtractsRemoveClasses = array_merge( $wgExtractsRemoveClasses, $wmgExtractsRemoveClasses );
@@ -2305,7 +2305,7 @@ $wgCookieExpiration = 30 * 86400;
 $wgExtendedLoginCookieExpiration = 365 * 86400;
 
 if ( $wmgUseMath ) {
-	wfLoadExtension ( "Math" );
+	wfLoadExtension ( 'Math' );
 
 	$wgTexvc = '/usr/bin/texvc';
 	$wgMathTexvcCheckExecutable = '/usr/bin/texvccheck';
@@ -2337,7 +2337,7 @@ if ( $wmgUseMath ) {
 }
 
 if ( $wmgUseBabel ) {
-	require_once( "$IP/extensions/Babel/Babel.php" );
+	wfLoadExtension( 'Babel' );
 	$wgBabelCategoryNames = $wmgBabelCategoryNames;
 	$wgBabelMainCategory = $wmgBabelMainCategory;
 	$wgBabelDefaultLevel = $wmgBabelDefaultLevel;
@@ -2472,7 +2472,7 @@ if ( $wmgUseTranslate ) {
 }
 
 if ( $wmgUseTranslationNotifications ) {
-	require_once( "$IP/extensions/TranslationNotifications/TranslationNotifications.php" );
+	wfLoadExtension( 'TranslationNotifications' );
 	$wgNotificationUsername = 'Translation Notification Bot@Translation_Notification_Bot';
 	$wgNotificationUserPassword = $wmgTranslationNotificationUserPassword;
 
@@ -2722,7 +2722,7 @@ if ( $wmgUseDisambiguator ) {
 }
 
 if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgZeroPortal ) {
-	include_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
+	wfLoadExtension( 'CodeEditor' );
 	$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore;
 	if ( $wgDBname === 'metawiki' ) {
 		$wgHooks['CodeEditorGetPageLanguage'][] = function ( Title $title, &$lang ) {
@@ -2753,12 +2753,12 @@ if ( $wmgUseScribunto ) {
 }
 
 if ( $wmgUseSubpageSortkey ) {
-	include( "$IP/extensions/SubpageSortkey/SubpageSortkey.php" );
+	wfLoadExtension( 'SubpageSortkey' );
 	$wgSubpageSortkeyByNamespace = $wmgSubpageSortkeyByNamespace;
 }
 
 if ( $wmgUseGettingStarted ) {
-	require_once( "$IP/extensions/GettingStarted/GettingStarted.php" );
+	wfLoadExtension( 'GettingStarted' );
 	$wgGettingStartedRedis = $wgObjectCaches['redis_master']['servers'][0];
 	$wgGettingStartedRedisOptions['password'] = $wmgRedisPassword;
 	$wgGettingStartedCategoriesForTaskTypes = $wmgGettingStartedCategoriesForTaskTypes;
@@ -2788,7 +2788,7 @@ if ( $wmgUseListings ) {
 }
 
 if ( $wmgUseTocTree ) {
-	require_once( "$IP/extensions/TocTree/TocTree.php" );
+	wfLoadExtension( 'TocTree' );
 	$wgDefaultUserOptions['toc-floated'] = $wmgUseFloatedToc;
 }
 
@@ -2812,7 +2812,7 @@ if ( $wmgUseRelatedArticles ) {
 }
 
 if ( $wmgUseRelatedSites ) {
-	require_once( "$IP/extensions/RelatedSites/RelatedSites.php" );
+	wfLoadExtension( 'RelatedSites' );
 	$wgRelatedSitesPrefixes = $wmgRelatedSitesPrefixes;
 }
 
@@ -2827,7 +2827,7 @@ if ( $wmgUseUserMerge ) {
 }
 
 if ( $wmgUseEventLogging ) {
-	require_once( "$IP/extensions/EventLogging/EventLogging.php" );
+	wfLoadExtension( 'EventLogging' );
 	if ( $wgDBname === 'test2wiki' ) {
 		// test2wiki has its own Schema: NS.
 		$wgEventLoggingDBname = 'test2wiki';
@@ -2855,16 +2855,16 @@ if ( $wmgUseEventLogging ) {
 
 	// Extensions dependent on EventLogging
 	if ( $wmgUseCampaigns ) {
-		include_once( "$IP/extensions/Campaigns/Campaigns.php" );
+		wfLoadExtension( 'Campaigns' );
 	}
 
-	include_once( "$IP/extensions/WikimediaEvents/WikimediaEvents.php" );
+	wfLoadExtension( 'WikimediaEvents' );
 	$wgWMEStatsdBaseUri = '/beacon/statsv';
 	$wgWMETrackGeoFeatures = $wmgWMETrackGeoFeatures;
 }
 
 if ( $wmgUseEventLogging && $wmgUseNavigationTiming ) {
-	include_once( "$IP/extensions/NavigationTiming/NavigationTiming.php" );
+	wfLoadExtension( 'NavigationTiming' );
 	// Careful! The LOWER the value, the MORE requests will be logged. A
 	// sampling factor of 1 means log every request. This should not be
 	// lowered without careful coordination with ops.
@@ -2876,7 +2876,7 @@ if ( $wmgUseEventLogging && $wmgUseNavigationTiming ) {
 wfLoadExtension( 'XAnalytics' );
 
 if ( $wmgUseUniversalLanguageSelector ) {
-	require_once( "$IP/extensions/UniversalLanguageSelector/UniversalLanguageSelector.php" );
+	wfLoadExtension( 'UniversalLanguageSelector' );
 	$wgULSGeoService = false;
 	$wgULSAnonCanChangeLanguage = false;
 	$wgULSPosition = $wmgULSPosition;
@@ -2980,7 +2980,7 @@ if ( $wmgUsePageImages ) {
 }
 
 if ( $wmgUseSearchExtraNS ) {
-	require_once( "$IP/extensions/SearchExtraNS/SearchExtraNS.php" );
+	wfLoadExtension( 'SearchExtraNS' );
 	$wgSearchExtraNamespaces = $wmgSearchExtraNamespaces;
 }
 
@@ -2990,7 +2990,7 @@ if ( $wmgUseGlobalAbuseFilters ) {
 }
 
 if ( $wmgZeroPortal || $wmgUseGraph ) {
-	require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
+	wfLoadExtension( 'JsonConfig' );
 }
 
 if ( $wmgZeroPortal ) {
