@@ -2453,17 +2453,6 @@ if ( $wmgUseTranslate ) {
 		],
 	];
 
-	if ( $wgDBname === 'wikimania2013wiki' ) {
-		$wgHooks['TranslatePostInitGroups'][] = function ( &$cc ) {
-			$id = 'wiki-sidebar';
-			$mg = new WikiMessageGroup( $id, 'sidebar-messages' );
-			$mg->setLabel( 'Sidebar' );
-			$mg->setDescription( 'Messages used in the sidebar of this wiki' );
-			$cc[$id] = $mg;
-			return true;
-		};
-	}
-
 	if ( $wgDBname === 'commonswiki' ) {
 		$wgHooks['TranslatePostInitGroups'][] = function ( &$cc ) {
 			$id = 'wiki-translatable';
