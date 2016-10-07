@@ -3004,13 +3004,13 @@ if ( $wmgUseGlobalAbuseFilters ) {
 	$wgAbuseFilterIsCentral = ( $wgDBname === $wgAbuseFilterCentralDB );
 }
 
-if ( $wmgZeroPortal || $wmgUseGraph ) {
-	require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
+if ( $wmgZeroPortal || $wmgUseGraph || $wmgZeroBanner ) {
+	wfLoadExtension( 'JsonConfig' );
 }
 
 if ( $wmgZeroPortal ) {
-	require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
-	require_once( "$IP/extensions/ZeroPortal/ZeroPortal.php" );
+	wfLoadExtension( 'ZeroBanner' );
+	wfLoadExtension( 'ZeroPortal' );
 
 	// zerowiki treats all logged-in users the same as anonymous, without giving them any extra rights
 	// Only sysops and scripts get additional rights on zerowiki

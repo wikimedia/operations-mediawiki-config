@@ -14308,12 +14308,12 @@ $wgConf->settings = [
 'wmgMobileFrontend' => [
 	'default' => true,
 ],
-'wmgMFQueryPropModules' => [
+'wgMFQueryPropModules' => [
 	// workaround for T125672
 	'default' => [ 'pageprops' ],
 	'wikidata' => [ 'pageterms' ],
 ],
-'wmgMFSearchAPIParams' => [
+'wgMFSearchAPIParams' => [
 	// workaround for T125672, though also fixes T120197
 	'default' => [
 		'ppprop' => 'displaytitle'
@@ -14322,7 +14322,7 @@ $wgConf->settings = [
 		'wbptterms' => 'label'
 	]
 ],
-'wmgMFSearchGenerator' => [
+'wgMFSearchGenerator' => [
 	'default' => [
 		'name' => 'prefixsearch',
 		'prefix' => 'ps'
@@ -14411,7 +14411,7 @@ $wgConf->settings = [
 	'commonswiki' => true,
 ],
 
-'wmgMobileFrontendLogo' => [
+'wgMobileFrontendLogo' => [
 	'default' => '/static/images/mobile/wikimedia.png',
 	'commonswiki' => '/static/images/mobile/commons.png',
 	'mediawikiwiki' => '/static/images/mobile/mediawiki.png',
@@ -14428,7 +14428,7 @@ $wgConf->settings = [
 	'wiktionary' => '/static/images/mobile/wiktionary.png',
 ],
 
-'wmgMobileUrlTemplate' => [
+'wgMobileUrlTemplate' => [
 	'default' => '%h0.m.%h1.%h2',
 	'foundationwiki' => 'm.%h0.%h1',
 	'mediawikiwiki' => 'm.%h1.%h2',
@@ -14436,12 +14436,12 @@ $wgConf->settings = [
 	'wikidatawiki' => 'm.%h1.%h2',
 	'wikitech' => '', // Not behind Varnish so no black magick
 ],
-'wmgMFAutodetectMobileView' => [
+'wgMFAutodetectMobileView' => [
 	'default' => false,
 	'wikitech' => true, // Not behind Varnish
 ],
 
-'wmgMFCustomLogos' => [
+'wgMFCustomLogos' => [
 	'default' => [],
 	'enwiki' => [
 		'copyright' => '/static/images/mobile/wikipedia-wordmark-en.png',
@@ -14454,53 +14454,65 @@ $wgConf->settings = [
 		'copyright-height' => 15,
 	],
 ],
-'wmgMFEnableDesktopResources' => [
+
+// Enable loading of desktop-specific resources from MobileFrontend
+'wgMFEnableDesktopResources' => [
 	'default' => true,
 ],
-'wmgMFPhotoUploadEndpoint' => [
+
+'wgMFPhotoUploadEndpoint' => [
 	'default' => '//commons.m.wikimedia.org/w/api.php',
 	'commonswiki' => '', // T47256
 	'test2wiki' => '',
 	'private' => '',
 	'fishbowl' => '',
 ],
-'wmgMFContentNamespace' => [
+'wgMFContentNamespace' => [
 	'default' => NS_MAIN,
 	'commonswiki' => NS_FILE,
 ],
-'wmgMFNearby' => [
+'wgMFNearby' => [
 	'default' => true, // Does not gets enabled on wikis w/o GeoData anyway
 ],
-'wmgMFPhotoUploadWiki' => [
+'wgMFPhotoUploadWiki' => [
 	'default' => 'commonswiki',
 	'test2wiki' => '',
 ],
-'wmgMFEnableXAnalyticsLogging' => [
+
+// Enable X-Analytics logging
+'wgMFEnableXAnalyticsLogging' => [
 	'default' => true,
 ],
+
 'wgMinervaEnableSiteNotice' => [
 	'default' => false,
 ],
-'wmgMFAppPackageId' => [
+
+// Link to help Google spider associate pages on wiki with our Android app.
+// They originally special-cased us but would like it done the normal way now. :)
+'wgMFAppPackageId' => [
 	'default' => false,
 	'wikipedia' => 'org.wikipedia',
 ],
 
-# trademark status
-'wmgMFTrademarkSitename' => [
+// Enable appending of TM (text) / (R) (icon) on site name in footer.
+'wgMFTrademarkSitename' => [
 	'default' => 'registered',
 	'wikidatawiki' => 'unregistered',
 	'metawiki' => false, // T43141
 ],
-'wmgMFNoMobileCategory' => [
+
+// Blacklist some pages
+'wgMFNoMobileCategory' => [
 	'default' => false,
 	'foundationwiki' => 'Desktop-only_pages',
 ],
-'wmgMFNoMobilePages' => [
+'wgMFNoMobilePages' => [
 	'default' => [],
 	'foundationwiki' => [ 'Special:FundraiserStatistics' ],
 ],
-'wmgMFCollapseSectionsByDefault' => [
+
+'wgMFCollapseSectionsByDefault' => [
 	'default' => true,
 	'wiktionary' => false,
 	'wikidata' => false,
@@ -14527,7 +14539,7 @@ $wgConf->settings = [
 'wgMinervaUseFooterV2' => [
 	'default' => true,
 ],
-'wmgMFMobileFormatterHeadings' => [
+'wgMFMobileFormatterHeadings' => [
 	'default' => [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ],
 	'wikivoyage' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ], // T110436, T110837
 ],
@@ -14570,9 +14582,11 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
-// Formerly known as $wgMFAnonymousEditing
-'wmgMFEditorOptions' => [
-	'default' => [ 'anonymousEditing' => true, ], // T93210
+// Enable editing for unregistered users
+'wgMFEditorOptions' => [
+	'default' => [
+		'anonymousEditing' => true, // T93210
+	],
 	'kowiki' => false, // T94388
 ],
 
