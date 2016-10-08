@@ -12169,6 +12169,9 @@ $wgConf->settings = [
 	'commonswiki' => [ // T87431
 		'default' => 0.30,
 	],
+	'eswikibooks' => [
+		'default' => 0.30, // T145765
+	],
 ],
 'wmgAbuseFilterEmergencyDisableCount' => [
 	'default' => [
@@ -12176,6 +12179,9 @@ $wgConf->settings = [
 	],
 	'enwiki' => [
 		'default' => 25,
+	],
+	'eswikibooks' => [
+		'default' => 10, // T145765
 	],
 	'commonswiki' => [ // T87431
 		'default' => 25,
