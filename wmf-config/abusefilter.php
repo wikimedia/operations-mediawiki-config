@@ -140,7 +140,8 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterActions['block'] = true;
 		$wgAbuseFilterBlockDuration = 'indefinite'; // T96669
 		$wgAbuseFilterAnonBlockDuration = '31 hours'; // T96669
-		$wgAbuseFilterNotifications = false;
+		$wgAbuseFilterNotifications = true; // T147744
+		$wgAbuseFilterNotificationsPrivate = true; // T147744
 		break;
 	case 'eswiktionary':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
