@@ -10428,7 +10428,7 @@ $wgConf->settings = [
 	],
 	'+urwiki' => [
 		'bureaucrat' => [ 'import', 'confirmed', 'abusefilter', 'rollbacker', 'massmessage-sender'], // T44737, T47643 and T144701
-		'sysop' => [ 'confirmed', 'interface-editor', 'accountcreator', 'filemover', 'autopatrolled', 'masssmessage-sender' ], // T44737, T120348, T137888, T139302 and T144701
+		'sysop' => [ 'confirmed', 'interface-editor', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender' ], // T44737, T120348, T137888, T139302 and T144701
 	],
 	'+viwiki' => [
 		'sysop' => [
