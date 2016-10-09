@@ -8838,6 +8838,9 @@ $wgConf->settings = [
 			'deletedhistory' => true, // T40690
 			'deletedtext' => true, // T40690
 		],
+		'massmessage-sender' => [ // T147740
+			'massmessage' => true,
+		],
 		'oversight' => [
 			'browsearchive' => true, // T40690
 			'deletedhistory' => true, // T40690
@@ -9708,7 +9711,7 @@ $wgConf->settings = [
 		'sysop' => [ 'patroller', 'rollbacker', 'autopatrolled' ], // T95180
 	],
 	'+trwiki' => [
-		'sysop' => [ 'patroller' ], // bureaucrat -> sysop, T40690
+		'sysop' => [ 'patroller', 'massmessage-sender' ], // bureaucrat -> sysop, T40690, T147740
 		'bureaucrat' => [ 'technician' ], // T41690
 	],
 	'+trwikiquote' => [
@@ -10404,7 +10407,7 @@ $wgConf->settings = [
 		'sysop' => [ 'patroller', 'rollbacker', 'autopatrolled' ], // T95180
 	],
 	'+trwiki' => [
-		'sysop' => [ 'patroller' ], // bureaucrat -> sysop, T40690
+		'sysop' => [ 'patroller', 'massmessage-sender' ], // bureaucrat -> sysop, T40690, T147740
 		'bureaucrat' => [ 'technician' ], // T41690
 	],
 	'+trwikiquote' => [
@@ -12127,6 +12130,7 @@ $wgConf->settings = [
 	'ruwikimedia' => [ 'sysop' => [ 'translationadmin' ] ], // T121766
 	'strategywiki' => [ 'sysop' => [ 'flood' ] ],
 	'srwiki' => [ 'sysop' => [ 'flood' ] ],
+	'trwiki' => [ 'massmessage-sender' => [ 'massmessage-sender' ] ], // T147740
 	'wikidata' => [
 		'sysop' => [ 'flood', 'translationadmin' ], // T50013, T48856
 		'flood' => [ 'flood' ], // T50013
