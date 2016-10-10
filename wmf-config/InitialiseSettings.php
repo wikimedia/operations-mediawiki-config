@@ -8307,7 +8307,7 @@ $wgConf->settings = [
 			'edit' => false,
 			'createaccount' => true,
 		],
-		'bots' => ['skipcaptcha' => true ],
+		'bots' => [ 'skipcaptcha' => true ],
 		'cloudadmin' => [
 			'listall' => true,
 			'manageproject' => true,
@@ -8317,8 +8317,9 @@ $wgConf->settings = [
 			'accessrestrictedregions' => true,
 			'editallhiera' => true,
 		],
-		'shell' => ['loginviashell' => true ],
-		'shellmanagers' => ['userrights' => false ],
+		'oauthadmin' => [ 'autopatrol' => true ],
+		'shell' => [ 'loginviashell' => true ],
+		'shellmanagers' => [ 'userrights' => false ],
 	],
 	'+legalteamwiki' => [ // T63222
 		'accountcreator' => [ 'noratelimit' => false ],
@@ -11839,10 +11840,8 @@ $wgConf->settings = [
 
 'wmgUseOAuth' => [
 	'default' => true,
-	'wikitech' => true,
 	'private' => false,
 	'fishbowl' => false,
-	'nonglobal' => false,
 ],
 
 # @}

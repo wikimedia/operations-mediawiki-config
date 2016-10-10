@@ -3115,13 +3115,13 @@ if ( $wmgUseGraph ) {
 
 if ( $wmgUseOAuth ) {
 	wfLoadExtension( 'OAuth' );
-	if ( $wgDBname !== "labswiki" && $wgDBname !== 'labtestwiki' ) {
+	if ( !in_array( $wgDBname, [ 'labswiki', 'labtestwiki' ] ) ) {
 		$wgMWOAuthCentralWiki = 'metawiki';
 		$wgMWOAuthSharedUserSource = 'CentralAuth';
 	}
 	$wgMWOAuthSecureTokenTransfer = true;
 
-	if ( $wgDBname === $wgMWOAuthCentralWiki ) {
+	if ( in_array( $wgDBname, [ $wgMWOAuthCentralWiki, 'labswiki', 'labtestwiki' ] ) ) {
 		// management interfaces are only available on the central wiki
 		$wgGroupPermissions['autoconfirmed']['mwoauthproposeconsumer'] = true;
 		$wgGroupPermissions['autoconfirmed']['mwoauthupdateownconsumer'] = true;
