@@ -33,6 +33,24 @@
       "revId": "92e0a3e36dd61960e081c52083bd763571e0a382",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e6f8b3b_4469a31c",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1916,
+      "author": {
+        "id": 417
+      },
+      "writtenOn": "2016-10-10T20:23:38Z",
+      "side": 1,
+      "message": "I\u0027m not sure if this will work. Removing the whole \u0027autoAdd\u0027 section would probably be best (the default is to not add anything).",
+      "parentUuid": "4e6f8b3b_e12361fe",
+      "revId": "92e0a3e36dd61960e081c52083bd763571e0a382",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
