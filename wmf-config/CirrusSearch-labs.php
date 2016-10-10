@@ -75,3 +75,5 @@ $wgCirrusSearchWikiToNameMap = [
     'zh' => 'zhwiki',
 ];
 
+# Force the number of replicas to 1 max for the beta cluster
+$wgCirrusSearchReplicas = '0-1';
