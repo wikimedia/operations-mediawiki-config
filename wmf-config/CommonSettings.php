@@ -1914,11 +1914,6 @@ if ( $wmgUseUploadWizard ) {
 	$wgUploadStashScalerBaseUrl = "//{$wmfHostnames['upload']}/$site/$lang/thumb/temp";
 	$wgUploadWizardConfig = [
 		# 'debug' => true,
-		'autoAdd' => [
-			'categories' => [
-				'Uploaded with UploadWizard',
-			],
-		],
 		// Normally we don't include API keys in CommonSettings, but this key
 		// isn't private since it's used on the client-side, i.e. anyone can see
 		// it in the outgoing AJAX requests to Flickr.
