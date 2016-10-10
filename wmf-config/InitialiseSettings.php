@@ -11839,10 +11839,8 @@ $wgConf->settings = [
 
 'wmgUseOAuth' => [
 	'default' => true,
-	'wikitech' => true,
 	'private' => false,
 	'fishbowl' => false,
-	'nonglobal' => false,
 ],
 
 # @}
