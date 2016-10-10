@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e6f8b3b_415fd5e8",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-10T16:12:00Z",
+      "side": 0,
+      "message": "Given the misuse of this file - why don\u0027t we add some more context at the top here.\n\n\"This file should only be used for globals which depend on the state of other extensions.\"",
+      "revId": "36d0bb1d492d42b853e4d07de695a387a841f075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e6f8b3b_4106f5d2",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-10T16:12:00Z",
+      "side": 0,
+      "message": "This can be moved out of here. There\u0027s no harm in setting this unconditionally.",
+      "revId": "36d0bb1d492d42b853e4d07de695a387a841f075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e6f8b3b_2101f9b9",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-10T16:12:00Z",
+      "side": 0,
+      "message": "This can be moved out of here. There\u0027s no harm in setting this unconditionally.",
+      "revId": "36d0bb1d492d42b853e4d07de695a387a841f075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e6f8b3b_a16de998",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-10T16:12:00Z",
+      "side": 0,
+      "message": "Yuk. Can we remove commented out lines? They just confuse the reader. This is not a notepad! :)",
+      "revId": "36d0bb1d492d42b853e4d07de695a387a841f075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e6f8b3b_8142ad11",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-10T16:12:00Z",
+      "side": 0,
+      "message": "This can be moved out of here. There\u0027s no harm in setting this unconditionally.",
+      "revId": "36d0bb1d492d42b853e4d07de695a387a841f075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e6f8b3b_4138b59b",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 100,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-10T16:12:00Z",
+      "side": 0,
+      "message": "This can be moved out of here. There\u0027s no harm in setting this unconditionally.",
+      "revId": "36d0bb1d492d42b853e4d07de695a387a841f075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e6f8b3b_2133b9c1",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 110,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-10T16:12:00Z",
+      "side": 0,
+      "message": "This can be moved out of here. There\u0027s no harm in setting this unconditionally.",
+      "revId": "36d0bb1d492d42b853e4d07de695a387a841f075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e6f8b3b_c143c513",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 113,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-10-10T16:12:00Z",
+      "side": 0,
+      "message": "This can be moved out of here. There\u0027s no harm in setting this unconditionally.",
+      "revId": "36d0bb1d492d42b853e4d07de695a387a841f075",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
