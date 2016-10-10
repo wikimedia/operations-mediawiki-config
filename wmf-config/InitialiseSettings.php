@@ -11222,6 +11222,7 @@ $wgConf->settings = [
 	'+wikimedia' => [ NS_MAIN ],
 	'+special' => [ NS_MAIN ],
 
+	'+dewiki' => [ 100 ], // Portal - T145619
 	'+dewikivoyage' => [ 102 ], // T119420
 	'+frwiki' => [ 102 ], // T127688
 	'+itwiki' => [ 102 ],
