@@ -1913,7 +1913,7 @@ if ( $wmgUseUploadWizard ) {
 		# 'debug' => true,
 		'autoAdd' => [
 			'categories' => [
-				'Uploaded with UploadWizard',
+				'', // T147799
 			],
 		],
 		// Normally we don't include API keys in CommonSettings, but this key
