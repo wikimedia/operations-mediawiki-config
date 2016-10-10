@@ -589,9 +589,9 @@ $wgLBFactoryConf = [
 
 	# es2
 	'cluster24' => [
-		'10.192.32.130' => 1, # es2015, master
+		'10.192.48.41'  => 1, # es2016, master
 		'10.192.0.141'  => 2, # es2014 - compressed data
-		'10.192.48.41'  => 3, # es2016
+#		'10.192.32.130' => 1, # es2015, crashed T147769
 	],
 	# es3
 	'cluster25' => [
