@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e6f8b3b_a12969e4",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1914,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2016-10-10T17:09:24Z",
+      "side": 1,
+      "message": "Maybe another solution would be to prepend an \u0027#\u0027 here as well as it\u0027s done above?",
+      "revId": "92e0a3e36dd61960e081c52083bd763571e0a382",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e6f8b3b_e12361fe",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1916,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2016-10-10T17:09:24Z",
+      "side": 1,
+      "message": "Not sure if leaving blank or removing the whole section.",
+      "revId": "92e0a3e36dd61960e081c52083bd763571e0a382",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
