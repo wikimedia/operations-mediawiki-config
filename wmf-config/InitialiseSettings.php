@@ -13967,17 +13967,6 @@ $wgConf->settings = [
 	'enwiki' => true,
 	'eswiki' => true,
 
-	// Temporary whilst we do T142589 in two parts
-	'arcwiki' => true,
-	'chrwiki' => true,
-	'dvwiki' => true,
-	'gotwiki' => true,
-	'kmwiki' => true,
-	'lowiki' => true,
-	'mywiki' => true,
-	'tetwiki' => true,
-	'thwiki' => true,
-	'twwiki' => true,
 ],
 
 // Whether VisualEditor should be enabled for a proportion of new accounts on a
