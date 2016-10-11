@@ -30,200 +30,21 @@ if ( $wmgCirrusSearchDefaultCluster === 'local' ) {
 }
 $wgCirrusSearchWriteClusters = $wmgCirrusSearchWriteClusters;
 $wgCirrusSearchClusterOverrides = $wmgCirrusSearchClusterOverrides;
+// TODO: remove, transitional config hack to support
+// var name change and avoid warnings with interwiki
+// (textcat) searches
+$wgCirrusSearchFullTextClusterOverrides = $wmgCirrusSearchClusterOverrides;
 
 # Enable user testing
 $wgCirrusSearchUserTesting = $wmgCirrusSearchUserTesting;
 
-# BM25 A/B test, enabled only on enwiki to avoid conflicts with
-# with TextCat language detection
-# UserTesting requires that a var exists in $GLOBALS before setting it
-# All extra vars needed to customize rescore weights. These must be defined
-# at the top level so textcat can still attempt to fetch them when building
-# an other-wiki query.
-$wgCirrusSearchPageViewsW = 1.0;
-$wgCirrusSearchPageViewsK = 1.0;
-$wgCirrusSearchPageViewsA = 1.0;
-$wgCirrusSearchIncLinksW = 1.0;
-$wgCirrusSearchIncLinksK = 1.0;
-$wgCirrusSearchIncLinksA = 1.0;
-$wgCirrusSearchIncLinksAloneW = 1.0;
-$wgCirrusSearchIncLinksAloneK = 1.0;
-$wgCirrusSearchIncLinksAloneA = 1.0;
-
-if ( $wgDBname === 'enwiki' ) {
-	$wgCirrusSearchUserTesting['bm25'] = [
+// BM25 A/B test for ja, zh and th
+if ( in_array( $wgDBname, ['jawiki', 'zhwiki', 'thwiki'] ) ) {
+	$wgCirrusSearchUserTesting['bm25sc'] = [
 		'sampleRate' => 0,
-		'globals' => [
-			'wgCirrusSearchBoostTemplates' => [],
-			'wgCirrusSearchRescoreProfiles' => $wgCirrusSearchRescoreProfiles + [
-				'wsum_inclinks' => [
-					'supported_namespaces' => 'all',
-					'rescore' => [
-						[
-							'window' => 8192,
-							'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
-							'query_weight' => 1.0,
-							'rescore_query_weight' => 1.0,
-							'score_mode' => 'total',
-							'type' => 'function_score',
-							'function_chain' => 'wsum_inclinks'
-						],
-						[
-							'window' => 8192,
-							'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
-							'query_weight' => 1.0,
-							'rescore_query_weight' => 1.0,
-							'score_mode' => 'multiply',
-							'type' => 'function_score',
-							'function_chain' => 'optional_chain'
-						],
-					],
-				],
-				'wsum_inclinks_pv' => [
-					'supported_namespaces' => 'content',
-					'fallback_profile' => 'wsum_inclinks',
-					'rescore' => [
-						[
-							'window' => 8192,
-							'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
-							'query_weight' => 1.0,
-							'rescore_query_weight' => 1.0,
-							'score_mode' => 'total',
-							'type' => 'function_score',
-							'function_chain' => 'wsum_inclinks_pv'
-						],
-						[
-							'window' => 8192,
-							'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
-							'query_weight' => 1.0,
-							'rescore_query_weight' => 1.0,
-							'score_mode' => 'multiply',
-							'type' => 'function_score',
-							'function_chain' => 'optional_chain'
-						],
-					],
-				],
-			],
-			'wgCirrusSearchRescoreFunctionScoreChains' => $wgCirrusSearchRescoreFunctionScoreChains + [
-				'wsum_inclinks' => [
-					'functions' => [
-						[
-							'type' => 'satu',
-							'weight' => [
-								'value' => 1.2,
-								'config_override' => 'CirrusSearchIncLinksAloneW',
-								'uri_param_override' => 'cirrusIncLinksAloneW',
-							],
-							'params' => [
-								'field' => 'incoming_links',
-								'k' => [
-									'value' => 10,
-									'config_override' => 'CirrusSearchIncLinksAloneK',
-									'uri_param_override' => 'cirrusIncLinksAloneK',
-								],
-								'a' => [
-									'value' => 1,
-									'config_override' => 'CirrusSearchIncLinksAloneA',
-									'uri_param_override' => 'cirrusIncLinksAloneA',
-								]
-							],
-						],
-					],
-				],
-				'wsum_inclinks_pv' => [
-					'score_mode' => 'sum',
-					'boost_mode' => 'sum',
-					'functions' => [
-						[
-							'type' => 'satu',
-							'weight' => [
-								'value' => 1.8,
-								'config_override' => 'CirrusSearchPageViewsW',
-								'uri_param_override' => 'cirrusPageViewsW',
-							],
-							'params' => [
-								'field' => 'popularity_score',
-								'k' => [
-									'value' => 0.0000007,
-									'config_override' => 'CirrusSearchPageViewsK',
-									'uri_param_override' => 'cirrusPageViewsK',
-								],
-								'a' => [
-									'value' => 1,
-									'config_override' => 'CirrusSearchPageViewsA',
-									'uri_param_override' => 'cirrusPageViewsA',
-								],
-							],
-						],
-						[
-							'type' => 'satu',
-							'weight' => [
-								'value' => 0.6,
-								'config_override' => 'CirrusSearchIncLinksW',
-								'uri_param_override' => 'cirrusIncLinkssW',
-							],
-							'params' => [
-								'field' => 'incoming_links',
-								'k' => [
-									'value' => 10,
-									'config_override' => 'CirrusSearchIncLinksK',
-									'uri_param_override' => 'cirrusIncLinksK',
-								],
-								'a' => [
-									'value' => 1,
-									'config_override' => 'CirrusSearchIncLinksA',
-									'uri_param_override' => 'cirrusIncLinksA',
-								],
-							],
-						],
-					],
-				],
-			],
-			'wgCirrusSearchFullTextQueryBuilderProfiles' => $wgCirrusSearchFullTextQueryBuilderProfiles + [
-				'perfield_builder' => [
-					'builder_class' => \CirrusSearch\Query\FullTextSimpleMatchQueryBuilder::class,
-					'settings' => [
-						'default_min_should_match' => '1',
-						'default_query_type' => 'most_fields',
-						'default_stem_weight' => 3.0,
-						'fields' => [
-							'title' => 0.3,
-							'redirect.title' => [
-								'boost' => 0.27,
-								'in_dismax' => 'redirects_or_shingles'
-							],
-							'suggest' => [
-								'is_plain' => true,
-								'boost' => 0.20,
-								'in_dismax' => 'redirects_or_shingles',
-							],
-							'category' => 0.05,
-							'heading' => 0.05,
-							'text' => [
-								'boost' => 0.6,
-								'in_dismax' => 'text_and_opening_text',
-							],
-							'opening_text' => [
-								'boost' => 0.5,
-								'in_dismax' => 'text_and_opening_text',
-							],
-							'auxiliary_text' => 0.05,
-							'file_text' => 0.5,
-						],
-						'phrase_rescore_fields' => [
-							// very low (don't forget it's multiplied by 10 by default)
-							// Use the all field to avoid loading positions on another field,
-							// score is roughly the same when used on text
-							'all' => 0.03,
-							'all.plain' => 0.05,
-						],
-					],
-				],
-			],
-		],
+		'globals' => [],
 		'buckets' => [
 			// Prod settings on eqiad
-			// nDCG@5 0.2772 (enwiki scores excluded)
 			'control' => [
 				'trigger' => 'bm25:control',
 				'globals' => [
@@ -232,111 +53,37 @@ if ( $wgDBname === 'enwiki' ) {
 				],
 			],
 			// BM25+allfield and QueryString, inclinks as a sum
-			// nDCG@5 0.2689 (enwiki scores excluded)
 			'bm25_allfield' => [
 				'trigger' => 'bm25:allfield',
 				'globals' => [
 					'wgCirrusSearchDefaultCluster' => 'codfw',
 					'wgCirrusSearchFullTextQueryBuilderProfile' => 'default',
-					'wgCirrusSearchPhraseSuggestReverseField' => [
-						'build' => true,
-						'use' => false,
-					],
 					'wgCirrusSearchIgnoreOnWikiBoostTemplates' => true,
-					// set only here because only needed for reindexing
-					'wgCirrusSearchSimilarityProfile' => [
-						'similarity' => [
-							'arrays' => [
-								'type' => 'BM25',
-								'k1' => 1.2,
-								'b' => 0.3,
-							],
-							'text' => [
-								'type' => 'BM25',
-								'k1' => 1.2,
-								'b' => 0.75,
-							],
-						],
-						'fields' => [
-							'__default__' => 'text',
-							'category' => 'arrays',
-							'heading' => 'arrays',
-							'redirect.title' => 'arrays',
-							'suggest' => 'arrays',
-						],
-					],
+					'wgCirrusSearchSimilarityProfile' => 'wmf_defaults',
 					'wgCirrusSearchRescoreProfile' => 'wsum_inclinks',
-					'wgCirrusSearchIncLinksAloneW' => 1.3,
-					'wgCirrusSearchIncLinksAloneK' => 30,
-					'wgCirrusSearchIncLinksAloneA' => 0.7,
 				]
 			],
 			// BM25, perfield and SimpleMatch Query builder, inclinks as a sum
-			// nDCG@5 0.3371 (enwiki scores excluded)
 			'bm25_inclinks' => [
 				'trigger' => 'bm25:inclinks',
 				'globals' => [
 					'wgCirrusSearchDefaultCluster' => 'codfw',
 					'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
 					'wgCirrusSearchIgnoreOnWikiBoostTemplates' => true,
-					'wgCirrusSearchPhraseSuggestReverseField' => [
-						'build' => true,
-						'use' => false,
-					],
+					'wgCirrusSearchSimilarityProfile' => 'wmf_defaults',
 					'wgCirrusSearchRescoreProfile' => 'wsum_inclinks',
-					'wgCirrusSearchIncLinksAloneW' => 6.5,
-					'wgCirrusSearchIncLinksAloneK' => 30,
-					'wgCirrusSearchIncLinksAloneA' => 0.7,
 				]
 			],
 			// BM25, perfield and SimpleMatch Query builder, inclinks+pop score as a sum
-			// nDCG@5 0.3368 (enwiki scores excluded)
 			'bm25_inclinks_pv' => [
 				'trigger' => 'bm25:inclinks_pv',
 				'globals' => [
 					'wgCirrusSearchDefaultCluster' => 'codfw',
 					'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
 					'wgCirrusSearchIgnoreOnWikiBoostTemplates' => true,
-					'wgCirrusSearchPhraseSuggestReverseField' => [
-						'build' => true,
-						'use' => false,
-					],
+					'wgCirrusSearchSimilarityProfile' => 'wmf_defaults',
 					'wgCirrusSearchRescoreProfile' => 'wsum_inclinks_pv',
-					'wgCirrusSearchPageViewsW' => 1.5,
-					'wgCirrusSearchPageViewsK' => 8E-6,
-					'wgCirrusSearchPageViewsA' => 0.8,
-					'wgCirrusSearchIncLinksW' => 5.0,
-					'wgCirrusSearchIncLinksK' => 30,
-					'wgCirrusSearchIncLinksA' => 0.7,
-					'wgCirrusSearchIncLinksAloneW' => 6.5,
-					'wgCirrusSearchIncLinksAloneK' => 30,
-					'wgCirrusSearchIncLinksAloneA' => 0.7,
 				]
-			],
-			// BM25, perfield and SimpleMatch Query builder, inclinks+pop score as a sum
-			// nDCG@5 0.3368 (enwiki scores excluded)
-			// Reverse field enabled for DYM
-			'bm25_inclinks_pv_rev' => [
-				'trigger' => 'bm25:inclinks_pv_rev',
-				'globals' => [
-					'wgCirrusSearchDefaultCluster' => 'codfw',
-					'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
-					'wgCirrusSearchPhraseSuggestReverseField' => [
-						'build' => true,
-						'use' => true,
-					],
-					'wgCirrusSearchIgnoreOnWikiBoostTemplates' => true,
-					'wgCirrusSearchPageViewsW' => 1.5,
-					'wgCirrusSearchPageViewsK' => 8E-6,
-					'wgCirrusSearchPageViewsA' => 0.8,
-					'wgCirrusSearchIncLinksW' => 5.0,
-					'wgCirrusSearchIncLinksK' => 30,
-					'wgCirrusSearchIncLinksA' => 0.7,
-					'wgCirrusSearchRescoreProfile' => 'wsum_inclinks_pv',
-					'wgCirrusSearchIncLinksAloneW' => 6.5,
-					'wgCirrusSearchIncLinksAloneK' => 30,
-					'wgCirrusSearchIncLinksAloneA' => 0.7,
-				],
 			],
 		],
 	];
