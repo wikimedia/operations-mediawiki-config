@@ -84,12 +84,16 @@ $wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
 $wgCirrusSearchReplicas = $wmgCirrusSearchReplicas;
 $wgCirrusSearchMaxShardsPerNode = $wmgCirrusSearchMaxShardsPerNode;
 $wgCirrusSearchPreferRecentDefaultDecayPortion = $wmgCirrusSearchPreferRecentDefaultDecayPortion;
-$wgCirrusSearchBoostLinks = $wmgCirrusSearchBoostLinks;
 $wgCirrusSearchWeights = array_merge( $wgCirrusSearchWeights, $wmgCirrusSearchWeightsOverrides );
 $wgCirrusSearchPowerSpecialRandom = $wmgCirrusSearchPowerSpecialRandom;
 $wgCirrusSearchAllFields = $wmgCirrusSearchAllFields;
 $wgCirrusSearchNamespaceWeights = $wmgCirrusSearchNamespaceWeightOverrides +
 	$wgCirrusSearchNamespaceWeights;
+
+$wgCirrusSimilarityProfile = $wmgCirrusSimilarityProfile;
+$wgCirrusSearchRescoreProfile = $wmgCirrusSearchRescoreProfile;
+$wgCirrusSearchFullTextQueryBuilderProfile = $wmgCirrusSearchFullTextQueryBuilderProfile;
+$wgCirrusSearchIgnoreOnWikiBoostTemplates = $wmgCirrusSearchIgnoreOnWikiBoostTemplates;
 
 // We had an incident of filling up the entire clusters redis instances after
 // 6 hours, half of that seems reasonable.
