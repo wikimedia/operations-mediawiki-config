@@ -16614,6 +16614,7 @@ $wgConf->settings = [
 	'wikinews' => .6,
 ],
 
+// TODO: remove (handled by wmgCirrusSearchRescoreProfile)
 'wmgCirrusSearchBoostLinks' => [
 	'default' => true,
 	'commonswiki' => false,
@@ -16628,6 +16629,59 @@ $wgConf->settings = [
 
 'wmgCirrusSearchPowerSpecialRandom' => [
 	'default' => false,
+],
+
+'wmgCirrusSimilarityProfile' => [
+	'default' => 'default',
+	'enwiki' => 'wmf_defaults',
+	'arwiki' => 'wmf_defaults',
+	'dewiki' => 'wmf_defaults',
+	'eswiki' => 'wmf_defaults',
+	'frwiki' => 'wmf_defaults',
+	'itwiki' => 'wmf_defaults',
+	'nlwiki' => 'wmf_defaults',
+	'ruwiki' => 'wmf_defaults',
+	'plwiki' => 'wmf_defaults',
+	'ptwiki' => 'wmf_defaults',
+],
+
+'wmgCirrusSearchRescoreProfile' => [
+	'default' => 'classic',
+	'commonswiki' => 'classic_noboostlinks',
+	// TODO: switch to wsum_inclinks_pv
+	'enwiki' => 'classic',
+	// TODO: switch to wsum_inclinks
+	'arwiki' => 'classic',
+	'dewiki' => 'classic',
+	'eswiki' => 'classic',
+	'frwiki' => 'classic',
+	'itwiki' => 'classic',
+	'nlwiki' => 'classic',
+	'ruwiki' => 'classic',
+	'plwiki' => 'classic',
+	'ptwiki' => 'classic',
+],
+
+'wmgCirrusSearchFullTextQueryBuilderProfile' => [
+	'default' => 'default',
+	// TODO: switch to perfield_builder
+	'enwiki' => 'default',
+	'arwiki' => 'default',
+	'dewiki' => 'default',
+	'eswiki' => 'default',
+	'frwiki' => 'default',
+	'itwiki' => 'default',
+	'nlwiki' => 'default',
+	'ruwiki' => 'default',
+	'plwiki' => 'default',
+	'ptwiki' => 'default',
+],
+
+'wmgCirrusSearchIgnoreOnWikiBoostTemplates' => [
+	'default' => false,
+	// TODO: turn on (on wiki boost templates have to high boosts for
+	// enwiki)
+	'enwiki' => false,
 ],
 
 // Shard each wiki to be under 2gb per shard if possible.  Changing this for a wiki
