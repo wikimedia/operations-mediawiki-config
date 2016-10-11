@@ -29,6 +29,7 @@ if ( $wmgCirrusSearchDefaultCluster === 'local' ) {
 	$wgCirrusSearchDefaultCluster = $wmgCirrusSearchDefaultCluster;
 }
 $wgCirrusSearchWriteClusters = $wmgCirrusSearchWriteClusters;
+$wgCirrusSearchClusterOverrides = $wmgCirrusSearchClusterOverrides;
 
 # Enable user testing
 $wgCirrusSearchUserTesting = $wmgCirrusSearchUserTesting;

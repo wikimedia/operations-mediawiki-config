@@ -16585,6 +16585,10 @@ $wgConf->settings = [
 	'default' => 'local',
 ],
 
+'wmgCirrusSearchClusterOverrides' => [
+	'default' => [],
+],
+
 'wmgCirrusSearchWriteClusters' => [
 	'default' => [ 'eqiad', 'codfw' ],
 ],
