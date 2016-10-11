@@ -19,7 +19,6 @@ $wmfAllServices['eqiad'] = [
 		'deployment-elastic05.deployment-prep.eqiad.wmflabs',
 		'deployment-elastic06.deployment-prep.eqiad.wmflabs',
 		'deployment-elastic07.deployment-prep.eqiad.wmflabs',
-		'deployment-elastic08.deployment-prep.eqiad.wmflabs',
 	],
 	'ocg' => 'http://deployment-pdf01:8000',
 	'urldownloader' => 'http://deployment-urldownloader.deployment-prep.eqiad.wmflabs:8080',
