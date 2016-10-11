@@ -14524,6 +14524,9 @@ $wgConf->settings = [
 'wgMinervaEnableSiteNotice' => [
 	'default' => false,
 ],
+'MinervaBottomLanguageButton' => [
+	'default' => false,
+],
 'wmgMFAppPackageId' => [
 	'default' => false,
 	'wikipedia' => 'org.wikipedia',
