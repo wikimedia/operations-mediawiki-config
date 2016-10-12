@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e6f8b3b_dd59da02",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 143,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-10-12T13:14:27Z",
+      "side": 1,
+      "message": "We have somewhere above:\n\n // T66255 - Enable logging to irc.wikimedia.org by default\n $wgAbuseFilterNotifications \u003d \"udp\";\n\nSo I guess you \"just\" want to drop the line.",
+      "revId": "dd22fb9b268cbc730740993d3188706fd856238a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
