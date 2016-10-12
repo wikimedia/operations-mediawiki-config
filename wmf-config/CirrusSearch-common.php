@@ -483,6 +483,9 @@ $wgCirrusSearchEnablePhraseSuggest = $wmgCirrusSearchEnablePhraseSuggest;
 // Configure ICU Folding
 $wgCirrusSearchUseIcuFolding = $wmgCirrusSearchUseIcuFolding;
 
+// Prefer pages in user's language in multilingual wikis
+$wgCirrusSearchLanguageWeight = $wmgCirrusSearchLanguageWeight;
+
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
