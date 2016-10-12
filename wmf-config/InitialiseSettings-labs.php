@@ -149,6 +149,7 @@ function wmfLabsSettings() {
 				'EventBus' => 'debug',
 				'runJobs' => [ 'logstash' => 'info' ],
 				'squid' => 'debug',
+				'MessageCache' => 'debug',
 			],
 		],
 
