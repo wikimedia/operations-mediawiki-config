@@ -3101,6 +3101,7 @@ if ( $wmgUseGraph ) {
 
 if ( $wmgUseOAuth ) {
 	wfLoadExtension( 'OAuth' );
+	$wgMWOAuthCentralWiki = false;
 	if ( !in_array( $wgDBname, [ 'labswiki', 'labtestwiki' ] ) ) {
 		$wgMWOAuthCentralWiki = 'metawiki';
 		$wgMWOAuthSharedUserSource = 'CentralAuth';
