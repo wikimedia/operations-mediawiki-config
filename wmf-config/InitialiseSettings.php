@@ -16688,6 +16688,18 @@ $wgConf->settings = [
 	'enwiki' => false,
 ],
 
+'wmgCirrusSearchLanguageWeight' => [
+	'default' => [
+		'user' => 0.0,
+		'wiki' => 0,0,
+	],
+	'mediawikiwiki' => [
+		'user' => 5.0,
+		'wiki' => 2.5,
+	],
+],
+
+
 // Shard each wiki to be under 2gb per shard if possible.  Changing this for a wiki
 // requires an in place reindex.  Last full review 2014-07-01.  See
 // https://wikitech.wikimedia.org/wiki/Search/New#Estimating_the_number_of_shards_required
