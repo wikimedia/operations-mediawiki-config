@@ -146,7 +146,7 @@ $wgCirrusSearchAllFields = $wmgCirrusSearchAllFields;
 $wgCirrusSearchNamespaceWeights = $wmgCirrusSearchNamespaceWeightOverrides +
 	$wgCirrusSearchNamespaceWeights;
 
-$wgCirrusSimilarityProfile = $wmgCirrusSimilarityProfile;
+$wgCirrusSearchSimilarityProfile = $wmgCirrusSearchSimilarityProfile;
 $wgCirrusSearchRescoreProfile = $wmgCirrusSearchRescoreProfile;
 $wgCirrusSearchFullTextQueryBuilderProfile = $wmgCirrusSearchFullTextQueryBuilderProfile;
 $wgCirrusSearchIgnoreOnWikiBoostTemplates = $wmgCirrusSearchIgnoreOnWikiBoostTemplates;

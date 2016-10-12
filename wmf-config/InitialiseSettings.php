@@ -16635,7 +16635,7 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
-'wmgCirrusSimilarityProfile' => [
+'wmgCirrusSearchSimilarityProfile' => [
 	'default' => 'default',
 	'enwiki' => 'wmf_defaults',
 	'arwiki' => 'wmf_defaults',
