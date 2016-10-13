@@ -34,14 +34,12 @@ if ( $wmgMobileFrontend ) {
 		require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
 		require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
 
-		if ( $wgDBname !== 'zerowiki' ) {
-			$wgJsonConfigs['JsonZeroConfig']['isLocal'] = false;
-			$wgJsonConfigs['JsonZeroConfig']['remote'] = [
-				'url' => 'https://zero.wikimedia.org/w/api.php',
-				'username' => $wmgZeroPortalApiUserName,
-				'password' => $wmgZeroPortalApiPassword,
-			];
-		}
+		$wgJsonConfigs['JsonZeroConfig']['isLocal'] = false;
+		$wgJsonConfigs['JsonZeroConfig']['remote'] = [
+			'url' => 'https://zero.wikimedia.org/w/api.php',
+			'username' => $wmgZeroPortalApiUserName,
+			'password' => $wmgZeroPortalApiPassword,
+		];
 
 		// @TODO: which group(s) on all wikies should Zero allow to flush cache?
 		$wgGroupPermissions['sysop']['jsonconfig-flush'] = true;
