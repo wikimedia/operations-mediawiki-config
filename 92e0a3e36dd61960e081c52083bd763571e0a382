@@ -51,6 +51,24 @@
       "revId": "92e0a3e36dd61960e081c52083bd763571e0a382",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e6c1747_926da299",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1916,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2016-10-13T08:28:16Z",
+      "side": 1,
+      "message": "We have now product signoff to remove this, so I guess we can remove the whole autoadd section as suggested for all projects.",
+      "parentUuid": "4e6f8b3b_4469a31c",
+      "revId": "92e0a3e36dd61960e081c52083bd763571e0a382",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
