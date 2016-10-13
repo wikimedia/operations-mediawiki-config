@@ -12207,6 +12207,12 @@ $wgConf->settings = [
 		'default' => 86400,
 	],
 ],
+
+'wgAbuseFilterParserClass' => [
+	'default' => 'AbuseFilterParser',
+	'mediawikiwiki' => 'AbuseFilterCachingParser',
+	'testwiki' => 'AbuseFilterCachingParser',
+],
 # @}
 
 'wgThumbLimits' => [
