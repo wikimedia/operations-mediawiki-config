@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e6c1747_e5d60df6",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2016-10-13T21:00:23Z",
+      "side": 1,
+      "message": "$wgJsonConfigs",
+      "revId": "9edf8a832adfe04f9ddc6b11eb2e090214a296bc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
