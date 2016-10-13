@@ -986,8 +986,7 @@ if ( $wmgUseContactPage ) {
 	$wgContactConfig['default'] = array_merge( $wgContactConfig['default'], $wmgContactPageConf );
 
 	if ( $wgDBname === 'metawiki' ) {
-		include( "$wmfConfigDir/LegalContactPages.php" );
-		include( "$wmfConfigDir/AffComContactPages.php" );
+		include( "$wmfConfigDir/MetaContactPages.php" );
 		$wgContactConfig['stewards'] = [ // T98625
 			'RecipientUser' => 'Wikimedia Stewards',
 			'SenderEmail' => $wmgNotificationSender,
