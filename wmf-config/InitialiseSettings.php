@@ -4343,6 +4343,7 @@ $wgConf->settings = [
 	'ckbwiki' => [ '', 'autoconfirmed', 'autopatrol', 'sysop' ], // T54533
 	'dewiki' => [ '', 'autoconfirmed', 'editeditorprotected', 'sysop' ], // T94368
 	'enwiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'templateeditor', 'sysop' ], // T126607, T57432
+	'enwiktionary' => [ '', 'autoconfirmed', 'templateeditor', 'sysop'], // T148007
 	'fawiki' => [ '', 'autoconfirmed', 'extendedconfirmed', 'sysop' ], // T140839
 	'frwiki' => [ '', 'autoconfirmed', 'editextendedsemiprotected', 'sysop' ], // T131109
 	'hewiki' => [ '', 'autoconfirmed', 'autopatrol',  'templateeditor' /* T102466 */, 'sysop' ], // T60207
@@ -7830,13 +7831,13 @@ $wgConf->settings = [
 	],
 	// T7033
 	'+enwiktionary' => [
-		'user' => [
-			'move' => false, // requested in beer parlour, 13 june 2006
-		],
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'flood' => [ 'bot' => true ],
 		'patroller' => [ 'patrol' => true ],
-		'rollbacker' => [ 'rollback' => true ]
+		'rollbacker' => [ 'rollback' => true ],
+		'sysop' => [ 'templateeditor' => true ], // T148007
+		'templateeditor' => [ 'templateeditor' => true ], // T148007
+		'user' => [ 'move' => false ], // requested in beer parlour, 13 june 2006
 	],
 	'+eswiki' => [
 		'rollbacker' => [
@@ -9343,7 +9344,7 @@ $wgConf->settings = [
 		'sysop' => [ 'abusefilter', 'autopatrolled' ],
 	],
 	'+enwiktionary' => [
-		'sysop' => [ 'autopatrolled', 'flood', 'patroller', 'rollbacker' ],
+		'sysop' => [ 'autopatrolled', 'flood', 'patroller', 'rollbacker', 'templateeditor' ], // T148007
 	],
 	'+fawiki' => [
 		'bureaucrat' => [
@@ -10029,7 +10030,7 @@ $wgConf->settings = [
 	],
 	'+enwiktionary' => [
 		'bureaucrat' => [ 'sysop' ], // bureaucrat removed per T44113
-		'sysop' => [ 'autopatrolled', 'patroller', 'rollbacker', 'flood' ],
+		'sysop' => [ 'autopatrolled', 'patroller', 'rollbacker', 'flood', 'templateeditor' ], // T148007
 	],
 	'+fawiki' => [
 		'bureaucrat' => [
