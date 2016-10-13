@@ -25,8 +25,7 @@ mwconfig_files_txt=(
 	interwiki.php
 	jobqueue.php
 	jobqueue-labs.php
-	LegalContactPages.php
-	AffComContactPages.php
+	MetaContactPages.php
 	liquidthreads.php
 	logging.php
 	logging-labs.php
