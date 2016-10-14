@@ -16513,10 +16513,12 @@ $wgConf->settings = [
 		'din' => 'dinka',           // T75563
 		'kea' => 'Kabuverdianu',    // T127435
 		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ',            // T93880
+		'nys' => 'Noongar',         // T127858
 		'ota' => 'لسان توركى',      // T59342
 		'rwr' => 'मारवाड़ी',           // T61905
 		'sje' => 'bidumsámegiella', // T146707
 		'smj' => 'julevsámegiella', // T146707
+		'srq' => 'mbia cheë',       // T113408
 	],
 ],
 
