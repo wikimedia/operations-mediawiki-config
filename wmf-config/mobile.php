@@ -4,34 +4,19 @@
 # # Do not put private data here.
 
 if ( $wmgMobileFrontend ) {
-	require_once( "$IP/extensions/MobileFrontend/MobileFrontend.php" );
+	wfLoadExtension( 'MobileFrontend' );
+
 	$wgMFMobileHeader = 'X-Subdomain';
 	$wgMFNoindexPages = false;
-	$wgMFNearby = $wmgMFNearby && $wmgEnableGeoData;
-	$wgMFPhotoUploadEndpoint = $wmgMFPhotoUploadEndpoint;
-	$wgMFPhotoUploadWiki = $wmgMFPhotoUploadWiki;
-	$wgMFContentNamespace = $wmgMFContentNamespace;
-	$wgMFMobileFormatterHeadings = $wmgMFMobileFormatterHeadings;
-
-	if ( $wmgMobileFrontendLogo ) {
-		$wgMobileFrontendLogo = $wmgMobileFrontendLogo;
-	}
-	if ( $wmgMFCustomLogos ) {
-		if ( isset( $wmgMFCustomLogos['copyright'] ) ) {
-			$wmgMFCustomLogos['copyright'] = str_replace( '{wgExtensionAssetsPath}', $wgExtensionAssetsPath, $wmgMFCustomLogos['copyright'] );
-		}
-		$wgMFCustomLogos = $wmgMFCustomLogos;
+	if ( !$wmgEnableGeoData ) {
+		$wgMFNearby = false;
 	}
 
-	// If a URL template is set for MobileFrontend, use it.
-	if ( $wmgMobileUrlTemplate ) {
-		$wgMobileUrlTemplate = $wmgMobileUrlTemplate;
+	if ( isset( $wgMFCustomLogos['copyright'] ) ) {
+		$wgMFCustomLogos['copyright'] = str_replace( '{wgExtensionAssetsPath}', $wgExtensionAssetsPath, $wgMFCustomLogos['copyright'] );
 	}
-
-	$wgMFAutodetectMobileView = $wmgMFAutodetectMobileView;
 
 	if ( $wmgZeroBanner && !$wmgZeroPortal ) {
-		require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
 		require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
 
 		if ( !isset( $wgJsonConfigs ) ) {
@@ -52,21 +37,6 @@ if ( $wmgMobileFrontend ) {
 		// $wgZeroBannerFont = '/usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf';
 		// $wgZeroBannerFontSize = '10';
 	}
-
-	// Enable loading of desktop-specific resources from MobileFrontend
-	if ( $wmgMFEnableDesktopResources ) {
-		$wgMFEnableDesktopResources = true;
-	}
-
-	// Enable appending of TM (text) / (R) (icon) on site name in footer.
-	$wgMFTrademarkSitename = $wmgMFTrademarkSitename;
-
-	// Enable X-Analytics logging
-	$wgMFEnableXAnalyticsLogging = $wmgMFEnableXAnalyticsLogging;
-
-	// Blacklist some pages
-	$wgMFNoMobileCategory = $wmgMFNoMobileCategory;
-	$wgMFNoMobilePages = $wmgMFNoMobilePages;
 
 	$wgHooks['EnterMobileMode'][] = function() {
 		global $wgCentralAuthCookieDomain, $wgHooks, $wgIncludeLegacyJavaScript;
@@ -95,22 +65,10 @@ if ( $wmgMobileFrontend ) {
 		return true;
 	};
 
-	$wgMFCollapseSectionsByDefault = $wmgMFCollapseSectionsByDefault;
 	$wgMFTidyMobileViewSections = false; // experimental
-
-	// Link to help Google spider associate pages on wiki with our Android app.
-	// They originally special-cased us but would like it done the normal way now. :)
-	$wgMFAppPackageId = $wmgMFAppPackageId;
 	$wgMFNearbyRange = $wgMaxGeoSearchRadius;
 
 	$wgMFEnableBeta = true;
-
-	// enable editing for unregistered users
-	$wgMFEditorOptions = $wmgMFEditorOptions;
-
-	$wgMFQueryPropModules = $wmgMFQueryPropModules;
-	$wgMFSearchAPIParams = $wmgMFSearchAPIParams;
-	$wgMFSearchGenerator = $wmgMFSearchGenerator;
 
 	// Turn on volunteer recruitment
 	$wgMFEnableJSConsoleRecruitment = true;
