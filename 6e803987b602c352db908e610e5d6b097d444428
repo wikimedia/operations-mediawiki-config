@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e97535f_f181f2c9",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 2994,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-10-14T18:16:45Z",
+      "side": 1,
+      "message": "JsonConfig migration already done by 7df4d29f",
+      "revId": "6e803987b602c352db908e610e5d6b097d444428",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
