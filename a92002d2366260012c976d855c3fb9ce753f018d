@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e97535f_f1ee9285",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2016-10-14T18:27:54Z",
+      "side": 1,
+      "message": "Can we change this? There aren\u0027t any ZeroBanner users that also use Portal etc..\n\n\u0027wmgZeroBanner\u0027 \u003d\u003e [\n\t\u0027default\u0027 \u003d\u003e false,\n\t\u0027wikipedia\u0027 \u003d\u003e true,\n\t\u0027wikidatawiki\u0027 \u003d\u003e false, // safety\n\t\u0027metawiki\u0027 \u003d\u003e false,\n\t\u0027zerowiki\u0027 \u003d\u003e false,\n],\n\n\u0027wmgZeroPortal\u0027 \u003d\u003e [\n\t\u0027default\u0027 \u003d\u003e false,\n\t\u0027zerowiki\u0027 \u003d\u003e true,\n],",
+      "range": {
+        "startLine": 19,
+        "startChar": 1,
+        "endLine": 19,
+        "endChar": 43
+      },
+      "revId": "a92002d2366260012c976d855c3fb9ce753f018d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
