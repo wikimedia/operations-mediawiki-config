@@ -553,5 +553,10 @@ function wmfLabsSettings() {
 			'dewiki' => 'uca-de-u-kn', // T128806
 			'enwiki' => 'uca-default-u-kn',
 		],
+
+		// Test Quiz. See T142692
+		'wmgUsePerformanceInspector' => [
+			'cawiki' => true,
+		],
 	];
 } # wmflLabsSettings()
