@@ -13037,7 +13037,7 @@ $wgConf->settings = [
 	'wikiquote' => false,
 	'wiktionary' => false,
 	'incubatorwiki' => false,
-	'clldefault' => false,
+	'compact-language-links' => false,
 ],
 
 // Whether Compact Links is enabled for new accounts *by default*
