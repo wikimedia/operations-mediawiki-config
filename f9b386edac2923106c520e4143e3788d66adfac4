@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e97535f_7626f8ca",
+        "filename": "extract2.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-14T16:54:31Z",
+      "side": 1,
+      "message": "should this be: /srv/mediawiki/multiversion/MWMultiversion.php?",
+      "revId": "f9b386edac2923106c520e4143e3788d66adfac4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e97535f_5633f40a",
+        "filename": "mobilelanding.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-14T16:54:31Z",
+      "side": 1,
+      "message": "should this be: /srv/mediawiki/multiversion/MWMultiversion.php?",
+      "revId": "f9b386edac2923106c520e4143e3788d66adfac4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e97535f_710cc23d",
+        "filename": "w/api.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-14T16:54:31Z",
+      "side": 1,
+      "message": "this could probably be left alone? w/MWVersion.php still exists in this patch.\n\nOR could be changed to: ../multiversion/MWMultiVersion.php",
+      "revId": "f9b386edac2923106c520e4143e3788d66adfac4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e97535f_5119be7d",
+        "filename": "w/auth-api.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-14T16:54:31Z",
+      "side": 1,
+      "message": "this could probably be left alone? w/MWVersion.php still exists in this patch.\n\nOR could be changed to: ../multiversion/MWMultiVersion.php",
+      "revId": "f9b386edac2923106c520e4143e3788d66adfac4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e97535f_f12692b4",
+        "filename": "w/favicon.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-14T16:54:31Z",
+      "side": 1,
+      "message": "multiversion/MWMultiVersion.php",
+      "revId": "f9b386edac2923106c520e4143e3788d66adfac4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e97535f_913626e3",
+        "filename": "w/index.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-14T16:54:31Z",
+      "side": 1,
+      "message": "this could probably be left alone? w/MWVersion.php still exists in this patch.\n\nOR could be changed to: ../multiversion/MWMultiVersion.php",
+      "revId": "f9b386edac2923106c520e4143e3788d66adfac4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
