@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "0e97535f_916e2692",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3008,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-10-14T17:26:35Z",
+      "side": 1,
+      "message": "Will be a separate change to ease deployment one extension at the time.",
+      "revId": "851e8a0a8ab9ab78807f55812ac1fbc7ead293c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "0e97535f_51ebfe09",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
@@ -13,6 +30,30 @@
       "writtenOn": "2016-10-14T17:13:44Z",
       "side": 1,
       "message": "Revert these",
+      "range": {
+        "startLine": 3012,
+        "startChar": 0,
+        "endLine": 3013,
+        "endChar": 33
+      },
+      "revId": "851e8a0a8ab9ab78807f55812ac1fbc7ead293c2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e97535f_b1580aff",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3013,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-10-14T17:26:35Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "0e97535f_51ebfe09",
       "range": {
         "startLine": 3012,
         "startChar": 0,
