@@ -2990,7 +2990,7 @@ if ( $wmgUseGlobalAbuseFilters ) {
 	$wgAbuseFilterIsCentral = ( $wgDBname === $wgAbuseFilterCentralDB );
 }
 
-if ( $wmgZeroPortal || $wmgUseGraph ) {
+if ( $wmgZeroPortal || $wmgUseGraph || $wmgZeroBanner ) {
 	wfLoadExtension( 'JsonConfig' );
 }
 
