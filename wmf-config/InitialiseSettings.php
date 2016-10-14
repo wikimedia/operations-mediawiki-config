@@ -14513,9 +14513,6 @@ $wgConf->settings = [
 		'copyright-height' => 15,
 	],
 ],
-'wgMFEnableDesktopResources' => [
-	'default' => true,
-],
 'wgMFPhotoUploadEndpoint' => [
 	'default' => '//commons.m.wikimedia.org/w/api.php',
 	'commonswiki' => '', // T47256
