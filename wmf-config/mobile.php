@@ -32,10 +32,7 @@ if ( $wmgMobileFrontend ) {
 			'password' => $wmgZeroPortalApiPassword,
 		];
 
-		// @TODO: which group(s) on all wikies should Zero allow to flush cache?
 		$wgGroupPermissions['sysop']['jsonconfig-flush'] = true;
-		// $wgZeroBannerFont = '/usr/share/fonts/truetype/ttf-dejavu/DejaVuSans.ttf';
-		// $wgZeroBannerFontSize = '10';
 	}
 
 	$wgHooks['EnterMobileMode'][] = function() {
