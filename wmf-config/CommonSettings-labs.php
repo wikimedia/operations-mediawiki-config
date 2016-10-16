@@ -309,8 +309,6 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgDefaultUserOptions['compact-language-links'] = 0;
 }
 
-$wgMessageCacheType = CACHE_ACCEL;
-
 // Let Beta Cluster Commons do upload-from-URL from production Commons.
 if ( $wgDBname == 'commonswiki' ) {
 	$wgCopyUploadsDomains[] = 'upload.wikimedia.org';
