@@ -297,7 +297,6 @@ if ( $wmgUseGraph ) {
 
 if ( $wmgUseORES ) {
 	wfLoadExtension( 'ORES' );
-	$wgOresBaseUrl = 'https://ores-beta.wmflabs.org/';
 }
 
 if ( $wmgUseNewsletter ) {
