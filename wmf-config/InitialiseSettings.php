@@ -167,7 +167,6 @@ $wgConf->settings = [
 	'tenwiki' => 'en',
 	'transitionteamwiki' => 'en',
 	'usabilitywiki' => 'en',
-	'votewiki' => 'fa', // T132667
 	'wikimania' => 'en',
 	'wikimaniateamwiki' => 'en',
 	'zerowiki' => 'en',
