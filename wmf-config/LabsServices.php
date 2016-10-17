@@ -54,6 +54,8 @@ $wmfAllServices['eqiad']['poolcounter'] = [
 	'10.68.17.48', # deployment-poolcounter04.deployment-prep.eqiad.wmflabs
 ];
 
+# ORES
+$wmfAllServices['eqiad']['ores'] = 'https://ores-beta.wmflabs.org/';
 
 # Shorthand when we have no master-slave situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];

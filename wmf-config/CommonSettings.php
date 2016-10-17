@@ -3262,7 +3262,7 @@ if ( $wmgUseOATHAuth ) {
 
 if ( $wmgUseORES ) {
 	wfLoadExtension( 'ORES' );
-	$wgOresBaseUrl = 'https://ores.wikimedia.org/';
+	$wgOresBaseUrl = $wmfLocalServices['ores'];
 	if ( $wgDBname === 'wikidatawiki' ) {
 		$wgDefaultUserOptions['oresDamagingPref'] = 'hard';
 	} else {
