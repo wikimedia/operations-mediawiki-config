@@ -17623,6 +17623,10 @@ $wgConf->settings = [
 	'cswiki' => true, // T148328
 ],
 
+'wmgWatchlistNumberOfDaysShow' => [
+	'default' => 3,
+	'cswiki' => 14,
+],
 ];
 
 ### WMF Labs override #####
