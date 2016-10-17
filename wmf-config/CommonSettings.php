@@ -3234,6 +3234,11 @@ $wgGroupPermissions['confirmed']['skipcaptcha'] = true;
 
 $wgImgAuthDetails = true;
 
+if ( isset( $wmgWatchlistNumberOfDaysShow ) )
+{
+	$wgDefaultUserOptions['watchlistdays'] = $wmgWatchlistNumberOfDaysShow;
+}
+
 if ( $wmgUseWikidataPageBanner ) {
 	wfLoadExtension( 'WikidataPageBanner' );
 }
