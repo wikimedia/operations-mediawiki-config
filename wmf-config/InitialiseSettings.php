@@ -17596,6 +17596,11 @@ $wgConf->settings = [
 	'nonglobal' => false,
 ],
 
+'wmgWatchlistNumberOfDaysShow' => [
+	'default' => 3,
+	'cswiki' => 14,
+],
+
 ];
 
 ### WMF Labs override #####
