@@ -68,7 +68,7 @@ $wmfAllServices['codfw']['restbase'] = 'http://10.2.1.17:7231'; # restbase.svc.c
 
 ### Poolcounter
 $wmfAllServices['eqiad']['poolcounter'] = [
-	'10.64.0.179', # helium.eqiad.wmnet
+	'10.64.32.126', # poolcounter1001.eqiad.wmnet
 	'10.64.16.152', # potassium.eqiad.wmnet
 ];
 $wmfAllServices['codfw']['poolcounter'] = [
