@@ -139,6 +139,10 @@ $wmfAllServices['codfw']['jobqueue_aggregator'] = [
 	'rdb2005.codfw.wmnet:6378', // fallback
 ];
 
+# ORES
+$wmfAllServices['eqiad']['ores'] = 'http://ores.svc.eqiad.wmnet:8081/';
+# is eqiad-only for now
+$wmfAllServices['codfw']['ores'] = $wmfAllServices['eqiad']['ores'];
 
 # Shorthand when we have no master-slave situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
