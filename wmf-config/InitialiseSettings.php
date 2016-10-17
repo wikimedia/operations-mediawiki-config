@@ -17263,7 +17263,7 @@ $wgConf->settings = [
 		'wp10' => false,
 	], // T130211
 	'wikidatawiki' => [
-		'damaging' => true,
+		'damaging' => false,
 		'reverted' => false,
 		'goodfaith' => false,
 		'wp10' => false,
