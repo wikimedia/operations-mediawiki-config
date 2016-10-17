@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e97535f_f39a0f17",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 290,
+      "author": {
+        "id": 920
+      },
+      "writtenOn": "2016-10-17T10:49:03Z",
+      "side": 0,
+      "message": "It should be $wgOresBaseUrl \u003d $wmfLocalServices[\u0027ores\u0027];",
+      "revId": "9d9b94eebaf2ad8658995b52f4c2fc2f911b4bd7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
