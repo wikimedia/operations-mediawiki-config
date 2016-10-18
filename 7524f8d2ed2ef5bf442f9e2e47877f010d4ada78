@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cea0dbb8_e0d80282",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 332,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2016-10-18T06:28:34Z",
+      "side": 1,
+      "message": "Make sure to reduce the weight of api role, then",
+      "range": {
+        "startLine": 332,
+        "startChar": 15,
+        "endLine": 332,
+        "endChar": 16
+      },
+      "revId": "7524f8d2ed2ef5bf442f9e2e47877f010d4ada78",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
