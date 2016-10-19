@@ -23,6 +23,8 @@ $wgLBFactoryConf = [
 
 'class' => 'LBFactoryMulti',
 
+'loadMonitorClass' => 'LoadMonitorMySQL',
+
 'sectionsByDB' => [
 	'enwiki' => 's1',
 
