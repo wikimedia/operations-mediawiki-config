@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cea0dbb8_1d5a24fa",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3237,
+      "author": {
+        "id": 2664
+      },
+      "writtenOn": "2016-10-19T15:48:13Z",
+      "side": 1,
+      "message": "coding convetions require his line to look like:\n\n if ( isset(_$wmgWatchlistNumberOfDaysShow_) )_{\n\nalso, isn\u0027t there a better place for this? (in order to have similar settings together)",
+      "range": {
+        "startLine": 3237,
+        "startChar": 0,
+        "endLine": 3237,
+        "endChar": 43
+      },
+      "revId": "e671d15faf2dfd17256ff188cb76188970d979fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
