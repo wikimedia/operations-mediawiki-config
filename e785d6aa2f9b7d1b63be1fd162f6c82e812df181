@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cea0dbb8_52ed3221",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 7226,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2016-10-20T14:36:39Z",
+      "side": 1,
+      "message": "seems to be a non standard whitespace",
+      "range": {
+        "startLine": 7226,
+        "startChar": 14,
+        "endLine": 7226,
+        "endChar": 15
+      },
+      "revId": "e785d6aa2f9b7d1b63be1fd162f6c82e812df181",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
