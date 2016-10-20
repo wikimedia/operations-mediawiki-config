@@ -16789,8 +16789,8 @@ $wgConf->settings = [
 	'cebwiki' => [ 'content' => 4, 'general' => 1, 'titlesuggest' => 2 ],
 	// Commons is special and has a 'file' index in addition to the regular ones.
 	// We're sharding 'file' like it is a content index because searching it is
-	// very very common.
-	'commonswiki' => [ 'content' => 1, 'general' => 8, 'file' => 7, 'titlesuggest' => 1 ],
+	// very very common. Increased to 15 because 7 generates giant 70Gb shards
+	'commonswiki' => [ 'content' => 1, 'general' => 8, 'file' => 15, 'titlesuggest' => 1 ],
 	'cswiki' => [ 'content' => 3, 'general' => 1, 'titlesuggest' => 1 ],
 	'dawiki' => [ 'content' => 2, 'general' => 1, 'titlesuggest' => 1 ],
 	'dewiki' => [ 'content' => 7, 'general' => 8, 'titlesuggest' => 3 ],
@@ -16849,10 +16849,7 @@ $wgConf->settings = [
 // some of the larger ones will want more replicas for content indexes
 'wmgCirrusSearchReplicas' => [
 	'default' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2' ],
-	'commonswiki' => [
-		'eqiad' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-3' ],
-		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-2' ],
-	],
+	'commonswiki' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-2' ],
 	'enwiki' => [
 		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-3' ],
 		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-3' ],
@@ -16865,7 +16862,7 @@ $wgConf->settings = [
 
 'wmgCirrusSearchMaxShardsPerNode' => [
 	'default' => [],
-	'commonswiki' => [ 'file' => 1, 'general' => 2 ],
+	'commonswiki' => [ 'file' => 3, 'general' => 2 ],
 	'dewiki' => [ 'content' => 1 ],
 	'enwiktionary' => [ 'content' => 1, 'general' => 1 ],
 	'enwiki' => [ 'content' => 1, 'general' => 2 ],
