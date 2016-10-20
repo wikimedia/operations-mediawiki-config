@@ -7221,6 +7221,7 @@ $wgConf->settings = [
 			// 8 ed./min per each non-autoconfirmed, or group thereof from same IP
 			'ip' => [ 8, 60 ],
 			'newbie' => [ 8, 60 ],
+			'user' => [ 1000, 60 ],
 		],
 		'badcaptcha' => [ // Bug T92376
 			// Mainly for account creation by unregistered spambots.
