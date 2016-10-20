@@ -12223,7 +12223,11 @@ $wgConf->settings = [
 ],
 
 'wgAbuseFilterParserClass' => [
-	'default' => 'AbuseFilterCachingParser',
+	'default' => 'AbuseFilterParser',
+	'mediawikiwiki' => 'AbuseFilterCachingParser',
+	'metawiki' => 'AbuseFilterCachingParser',
+	'commonswiki' => 'AbuseFilterCachingParser',
+	'testwiki' => 'AbuseFilterCachingParser',
 ],
 # @}
 
