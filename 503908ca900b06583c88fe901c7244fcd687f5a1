@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "cea0dbb8_ac29c89c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 16724,
+      "author": {
+        "id": 2974
+      },
+      "writtenOn": "2016-10-20T14:00:37Z",
+      "side": 1,
+      "message": "2 shards per node means a maximum of 48 shards for codfw. with 15 shards per index and 2 replicas, we have 15*(1+2)\u003d45 shards. That does not leave much room to move shards around during cluster restarts or if we loose 12 node. I think it make sense to increase this to 3.",
+      "range": {
+        "startLine": 16724,
+        "startChar": 20,
+        "endLine": 16724,
+        "endChar": 31
+      },
+      "revId": "503908ca900b06583c88fe901c7244fcd687f5a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
