@@ -3101,13 +3101,16 @@ if ( $wmgUseGraph ) {
 
 if ( $wmgUseOAuth ) {
 	wfLoadExtension( 'OAuth' );
-	if ( !in_array( $wgDBname, [ 'labswiki', 'labtestwiki' ] ) ) {
+	if ( in_array( $wgDBname, [ 'labswiki', 'labtestwiki' ] ) ) {
+		// Wikitech and its testing variant use local OAuth tables
+		$wgMWOAuthCentralWiki = $wgDBname;
+	} else {
 		$wgMWOAuthCentralWiki = 'metawiki';
 		$wgMWOAuthSharedUserSource = 'CentralAuth';
 	}
 	$wgMWOAuthSecureTokenTransfer = true;
 
-	if ( in_array( $wgDBname, [ $wgMWOAuthCentralWiki, 'labswiki', 'labtestwiki' ] ) ) {
+	if ( $wgDBname === $wgMWOAuthCentralWiki ) {
 		// management interfaces are only available on the central wiki
 		$wgGroupPermissions['autoconfirmed']['mwoauthproposeconsumer'] = true;
 		$wgGroupPermissions['autoconfirmed']['mwoauthupdateownconsumer'] = true;
