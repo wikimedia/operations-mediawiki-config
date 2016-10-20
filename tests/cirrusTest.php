@@ -120,6 +120,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$wgCirrusSearchRescoreProfiles = array();
 		$wgCirrusSearchRescoreFunctionScoreChains = array();
 		$wgCirrusSearchFullTextQueryBuilderProfiles = array();
+		$wgCirrusSearchMaxShardsPerNode = [];
 		$wgJobTypeConf = array( 'default' => array() );
 		$wgCirrusSearchWeights = array();
 		$wgCirrusSearchNamespaceWeights = array();
@@ -160,7 +161,8 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$wgConf = $this->loadWgConf( 'unittest' );
 		$shards = $wgConf->settings['wmgCirrusSearchShardCount'];
 		$replicas = $wgConf->settings['wmgCirrusSearchReplicas'];
-		$wikis = array_merge( array_keys( $shards ), array_keys( $replicas ) );
+		$maxShardPerNode = $wgConf->settings['wmgCirrusSearchMaxShardsPerNode'];
+		$wikis = array_merge( array_keys( $shards ), array_keys( $replicas ), array_keys( $maxShardPerNode ) );
 		foreach ( $wikis as $idx => $wiki ) {
 			if ( $wiki[0] === '+' ) {
 					$wikis[$idx] = substr( $wiki, 1 );
@@ -174,6 +176,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$wgConf->settings = array(
 			'shards' => $shards,
 			'replicas' => $replicas,
+			'max_shards_per_node' => $maxShardPerNode,
 		);
 		$tests = array();
 		foreach ( $wikis as $wiki ) {
@@ -205,6 +208,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 						$numServers,
 						self::resolveClusterConfig( $config['shards'], $clusterName ),
 						self::resolveClusterConfig( $config['replicas'], $clusterName ),
+						self::resolveClusterConfig( $config['max_shards_per_node'], $clusterName ),
 					);
 				}
 			}
@@ -216,7 +220,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 	/**
 	 * @dataProvider providePerClusterShardsAndReplicas
 	 */
-	public function testShardAndReplicasCountsAreSane( $wiki, $indexType, $numServers, $shards, $replicas ) {
+	public function testShardAndReplicasCountsAreSane( $wiki, $indexType, $numServers, $shards, $replicas, $totalShardPernode ) {
 		$primaryShards = $shards[$indexType];
 		// parse 0-3 into 3
 		$pieces = explode( '-', $replicas[$indexType] );
@@ -225,7 +229,9 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		// +1 is for the primary.
 		$totalShards = $primaryShards * (1 + $numReplicas);
 
-		$this->assertLessThanOrEqual( $numServers, $totalShards );
+		if ( array_key_exists( $indexType, $totalShardPernode ) ) {
+			$this->assertLessThanOrEqual( $numServers * $totalShardPernode[$indexType], $totalShards );
+		}
 
 		// For our busiest wikis we want to make sure we are using most of the
 		// cluster for the indices. This was guesstimated by running the following query
