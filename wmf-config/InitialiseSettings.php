@@ -14136,6 +14136,7 @@ $wgConf->settings = [
 	'frwikiversity' => 'uca-fr', // T71782
 	'gdwiki' => 'uca-default', // T125315
 	'hewiki' => 'numeric', // T146675
+	'hrwiki' => 'uca-hr', // T148749
 	'hsbwiki' => 'uca-hsb', // T90689
 	'huwiki' => 'uca-hu-u-kn', // T47596, T146675
 	'iswiki' => 'uca-is', // T58859
