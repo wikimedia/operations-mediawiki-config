@@ -16613,6 +16613,30 @@ $wgConf->settings = [
 
 'wmgCirrusSearchDefaultCluster' => [
 	'default' => 'local',
+	'enwiki' => 'codfw',
+	'arwiki' => 'codfw',
+	'dewiki' => 'codfw',
+	'eswiki' => 'codfw',
+	'frwiki' => 'codfw',
+	'itwiki' => 'codfw',
+	'nlwiki' => 'codfw',
+	'ruwiki' => 'codfw',
+	'plwiki' => 'codfw',
+	'ptwiki' => 'codfw',
+],
+
+'wmgCirrusSearchClusterOverrides' => [
+	'default' => [],
+	'enwiki' => ['completion' => 'eqiad'],
+	'arwiki' => ['completion' => 'eqiad'],
+	'dewiki' => ['completion' => 'eqiad'],
+	'eswiki' => ['completion' => 'eqiad'],
+	'frwiki' => ['completion' => 'eqiad'],
+	'itwiki' => ['completion' => 'eqiad'],
+	'nlwiki' => ['completion' => 'eqiad'],
+	'ruwiki' => ['completion' => 'eqiad'],
+	'plwiki' => ['completion' => 'eqiad'],
+	'ptwiki' => ['completion' => 'eqiad'],
 ],
 
 'wmgCirrusSearchClusterOverrides' => [
@@ -16639,12 +16663,6 @@ $wgConf->settings = [
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => [
 	'default' => 0,
 	'wikinews' => .6,
-],
-
-// TODO: remove (handled by wmgCirrusSearchRescoreProfile)
-'wmgCirrusSearchBoostLinks' => [
-	'default' => true,
-	'commonswiki' => false,
 ],
 
 'wmgCirrusSearchWeightsOverrides' => [
@@ -16675,40 +16693,36 @@ $wgConf->settings = [
 'wmgCirrusSearchRescoreProfile' => [
 	'default' => 'classic',
 	'commonswiki' => 'classic_noboostlinks',
-	// TODO: switch to wsum_inclinks_pv
-	'enwiki' => 'classic',
-	// TODO: switch to wsum_inclinks
-	'arwiki' => 'classic',
-	'dewiki' => 'classic',
-	'eswiki' => 'classic',
-	'frwiki' => 'classic',
-	'itwiki' => 'classic',
-	'nlwiki' => 'classic',
-	'ruwiki' => 'classic',
-	'plwiki' => 'classic',
-	'ptwiki' => 'classic',
+	'enwiki' => 'wsum_inclinks_pv',
+	'arwiki' => 'wsum_inclinks',
+	'dewiki' => 'wsum_inclinks',
+	'eswiki' => 'wsum_inclinks',
+	'frwiki' => 'wsum_inclinks',
+	'itwiki' => 'wsum_inclinks',
+	'nlwiki' => 'wsum_inclinks',
+	'ruwiki' => 'wsum_inclinks',
+	'plwiki' => 'wsum_inclinks',
+	'ptwiki' => 'wsum_inclinks',
 ],
 
 'wmgCirrusSearchFullTextQueryBuilderProfile' => [
 	'default' => 'default',
-	// TODO: switch to perfield_builder
-	'enwiki' => 'default',
-	'arwiki' => 'default',
-	'dewiki' => 'default',
-	'eswiki' => 'default',
-	'frwiki' => 'default',
-	'itwiki' => 'default',
-	'nlwiki' => 'default',
-	'ruwiki' => 'default',
-	'plwiki' => 'default',
-	'ptwiki' => 'default',
+	'enwiki' => 'perfield_builder',
+	'arwiki' => 'perfield_builder',
+	'dewiki' => 'perfield_builder',
+	'eswiki' => 'perfield_builder',
+	'frwiki' => 'perfield_builder',
+	'itwiki' => 'perfield_builder',
+	'nlwiki' => 'perfield_builder',
+	'ruwiki' => 'perfield_builder',
+	'plwiki' => 'perfield_builder',
+	'ptwiki' => 'perfield_builder',
 ],
 
 'wmgCirrusSearchIgnoreOnWikiBoostTemplates' => [
 	'default' => false,
-	// TODO: turn on (on wiki boost templates have to high boosts for
-	// enwiki)
-	'enwiki' => false,
+	// on wiki boost templates have to high boosts for enwiki
+	'enwiki' => true,
 ],
 
 'wmgCirrusSearchLanguageWeight' => [
