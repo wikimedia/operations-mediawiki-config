@@ -22,6 +22,30 @@
       "revId": "e671d15faf2dfd17256ff188cb76188970d979fc",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "cea0dbb8_e1b352fc",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3237,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2016-10-21T07:54:18Z",
+      "side": 1,
+      "message": "I fixed the first problem. Do you know any other place for this? I didn\u0027t find any...",
+      "parentUuid": "cea0dbb8_1d5a24fa",
+      "range": {
+        "startLine": 3237,
+        "startChar": 0,
+        "endLine": 3237,
+        "endChar": 43
+      },
+      "revId": "e671d15faf2dfd17256ff188cb76188970d979fc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
