@@ -64,6 +64,14 @@ $wmgThrottlingExceptions[] = [ // T146600
 	'value' => 40 //35 expected
 ];
 
+$rule = [ // T148852 - Edit-a-thon BDA (Poitiers)
+	'from'   => '2016-11-15T08:00 -1:00',
+	'to'     => '2016-11-18T19:00 -1:00',
+	'IP'     => '193.55.161.2',
+	'dbname' => [ 'enwiki', 'frwiki', 'commonswiki' ],
+	'value'  => 50 // 40 expected
+];
+
 // December 2nd
 $wmgThrottlingExceptions[] = [ // T146600
 	'from' => '2016-12-02T12:30 -6:00',
