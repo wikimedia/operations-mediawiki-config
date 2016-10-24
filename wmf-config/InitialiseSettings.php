@@ -16639,10 +16639,6 @@ $wgConf->settings = [
 	'ptwiki' => ['completion' => 'eqiad'],
 ],
 
-'wmgCirrusSearchClusterOverrides' => [
-	'default' => [],
-],
-
 'wmgCirrusSearchWriteClusters' => [
 	'default' => [ 'eqiad', 'codfw' ],
 ],
