@@ -1868,7 +1868,7 @@ if( $wgDBname === 'commonswiki' ) {
 
 // Temporary override: WMF is not hardcore enough to enable this.
 // See T37785, T38316, T47022 about it.
-if ( $wmgWatchlistdefault )
+if ( $wmgWatchlistDefault )
 {
 	$wgDefaultUserOptions['watchdefault'] = 1;
 }

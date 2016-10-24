@@ -17595,7 +17595,7 @@ $wgConf->settings = [
 	'nonglobal' => false,
 ],
 
-'wmgWatchlistdefault' => [
+'wmgWatchlistDefault' => [
 	'default' => false,
 	'cswiki' => true, // T148328
 ],
