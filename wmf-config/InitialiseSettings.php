@@ -17601,6 +17601,11 @@ $wgConf->settings = [
 	'cswiki' => true, // T148328
 ],
 
+'wmgWatchlistDefault' => [
+	'default' => false,
+	'cswiki' => true, // T148328
+],
+
 ];
 
 ### WMF Labs override #####
