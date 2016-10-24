@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aea567c8_65c52290",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 3237,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-10-24T14:44:31Z",
+      "side": 1,
+      "message": "It\u0027s always set, as the setting has a default value.",
+      "revId": "879ad5bf5616ba0513c3b93b6d31dfef4080b9ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
