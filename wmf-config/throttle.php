@@ -28,40 +28,12 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T146654
-	'from' => '2016-10-11T13:00 -6:00',
-	'to' => '2016-10-11T18:30 -6:00',
-	'IP' => '97.107.199.77',
-	'dbname' => 'enwiki',
-	'value' => 25 //15 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T147293
-	'from' => '2016-10-14T00:00 -0:00',
-	'to' => '2016-10-16T0:00 -0:00',
-	'IP' => '194.167.137.246',
-	'dbname' => ['frwiki', 'cawiki', 'wikidatawiki'],
-	'value' => 40
-];
-
-// Winona State University - T146600
-
-// October 10th
-$wmgThrottlingExceptions[] = [ // T146600
-	'from' => '2016-10-10T13:30 -6:00',
-	'to' => '2016-10-10T18:30 -6:00',
-	'range' => '199.17.0.0/16',
-	'dbname' => 'enwiki',
-	'value' => 40 //35 expected
-];
-
-// October 11th
-$wmgThrottlingExceptions[] = [ // T146600
-	'from' => '2016-10-11T15:30 -6:00',
-	'to' => '2016-10-11T18:30 -6:00',
-	'range' => '199.17.0.0/16',
-	'dbname' => 'enwiki',
-	'value' => 40 //35 expected
+$rule = [ // T149063 - Nashville Architecture edit-a-thon (Vanderbilt library)
+	'from'   => '2016-10-25T10:30 -5:00',
+	'to'     => '2016-10-25T16:00 -5:00',
+	'IP'     => '129.59.151.133',
+	'dbname' => [ 'enwiki', 'commonswiki' ],
+	'value'  => 50 // 20 to 30 expected
 ];
 
 $rule = [ // T148852 - Edit-a-thon BDA (Poitiers)
