@@ -28,3 +28,4 @@ fonts
 
 /multiversion/vendor/**/.git
 /multiversion/vendor/slim/slim/tests/templates/test.php
+/multiversion/vendor/composer/autoload_static.php
