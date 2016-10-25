@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8eaa6398_21fca8b0",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-10-25T19:57:43Z",
+      "side": 1,
+      "message": "nargs returns a list, even if it\u0027s just 1 item. Since we only want one item and it has to pass the VersionParser, we can just omit it I think.",
+      "parentUuid": "aea567c8_d26ee5c3",
+      "revId": "acf48f09fe02ad70c59be8293ef03797b50ce7b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aea567c8_f2a8c9da",
         "filename": "scap/plugins/prep.py",
         "patchSetId": 2
@@ -36,6 +54,24 @@
     },
     {
       "key": {
+        "uuid": "8eaa6398_a10f98e3",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-10-25T19:57:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aea567c8_f2a8c9da",
+      "revId": "acf48f09fe02ad70c59be8293ef03797b50ce7b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8eaa6398_de3725aa",
         "filename": "scap/plugins/prep.py",
         "patchSetId": 2
@@ -47,6 +83,24 @@
       "writtenOn": "2016-10-25T17:57:15Z",
       "side": 1,
       "message": "Ah! Should be os.symlink otherwise it will check to see if the path exists.",
+      "revId": "acf48f09fe02ad70c59be8293ef03797b50ce7b9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8eaa6398_c10aa4d5",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-10-25T19:57:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "8eaa6398_de3725aa",
       "revId": "acf48f09fe02ad70c59be8293ef03797b50ce7b9",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
