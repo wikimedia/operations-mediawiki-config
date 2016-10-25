@@ -3,6 +3,7 @@
 if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgWBRepoSettings['formatterUrlProperty'] = 'P368';
+		$wgWBRepoSettings['enableStatementsParserFunction'] = true;
 
 		$wgWBRepoSettings['badgeItems'] = [
 			'Q608' => 'wb-badge-goodarticle',
