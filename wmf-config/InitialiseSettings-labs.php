@@ -247,10 +247,6 @@ function wmfLabsSettings() {
 			'default' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ], // T110436, T110837
 		],
 
-		'wgMinervaUsePageActionBarV2' => [
-			'default' => true,
-		],
-
 		'wgMFRemovableClasses' => [
 			'default' => [
 				'base' => [ '.navbox' ],
@@ -271,12 +267,6 @@ function wmfLabsSettings() {
 		'wgMFExperiments' => [
 			'default' => [
 			],
-		],
-		'wgMFSchemaMobileWebLanguageSwitcherSampleRate' => [
-			'default' => [
-				'beta' => 1,
-				'stable' => 1
-			]
 		],
 
 		'wmgULSPosition' => [
