@@ -14670,10 +14670,6 @@ $wgConf->settings = [
 	],
 ],
 
-'wgMinervaUsePageActionBarV2' => [
-	'default' => true,
-],
-
 // Formerly known as $wgMFAnonymousEditing
 'wmgMFEditorOptions' => [
 	'default' => [ 'anonymousEditing' => true, ], // T93210
@@ -14682,13 +14678,6 @@ $wgConf->settings = [
 
 'wgMFExperiments' => [
 	'default' => [
-	],
-],
-
-'wgMFSchemaMobileWebLanguageSwitcherSampleRate' => [
-	'default' => [
-		'beta' => 0.1,
-		'stable' => 0.001,
 	],
 ],
 
