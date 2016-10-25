@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "aea567c8_f79afb16",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-10-25T16:48:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aea567c8_976baf82",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aea567c8_575be726",
         "filename": "scap/plugins/prep.py",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2016-10-25T16:24:03Z",
       "side": 1,
       "message": "help\u003d\u0027Checkout MediaWiki version to staging\u0027",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aea567c8_d79ff704",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-10-25T16:48:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aea567c8_575be726",
       "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "aea567c8_97828fa8",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-10-25T16:48:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aea567c8_97616fd3",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aea567c8_97de0f6f",
         "filename": "scap/plugins/prep.py",
         "patchSetId": 1
@@ -70,6 +124,24 @@
     },
     {
       "key": {
+        "uuid": "aea567c8_f73e7bd6",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-10-25T16:48:07Z",
+      "side": 1,
+      "message": "Because of nargs maybe?",
+      "parentUuid": "aea567c8_97de0f6f",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aea567c8_b7c8f3ab",
         "filename": "scap/plugins/prep.py",
         "patchSetId": 1
@@ -81,6 +153,24 @@
       "writtenOn": "2016-10-25T16:24:03Z",
       "side": 1,
       "message": "should be:\n\nos.path.join(self.config[\u0027stage_dir\u0027], \u0027{}{}\u0027.format(self.arguments.prefix, self.branch))",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aea567c8_f7b1db8e",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-10-25T16:48:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aea567c8_b7c8f3ab",
       "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -121,6 +211,24 @@
     },
     {
       "key": {
+        "uuid": "aea567c8_b729139d",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-10-25T16:48:07Z",
+      "side": 1,
+      "message": "Yeah you\u0027re right. The old script was a little overzealous in chmod()ing things and not relying on permissions/umasks to be correct (which they should be anyway for a billion reasons). Removed most of them, but this one needs to stay yeah. Done.",
+      "parentUuid": "aea567c8_777b8bec",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aea567c8_577887ed",
         "filename": "scap/plugins/prep.py",
         "patchSetId": 1
@@ -132,6 +240,24 @@
       "writtenOn": "2016-10-25T16:24:03Z",
       "side": 1,
       "message": "no \u0027self.\u0027 needed. Should just be \u0027checkout_version\u0027",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aea567c8_77a6eb51",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-10-25T16:48:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aea567c8_577887ed",
       "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -155,6 +281,24 @@
     },
     {
       "key": {
+        "uuid": "aea567c8_37674324",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-10-25T16:48:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aea567c8_d7b017db",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aea567c8_d7e7f7dd",
         "filename": "scap/plugins/prep.py",
         "patchSetId": 1
@@ -166,6 +310,24 @@
       "writtenOn": "2016-10-25T16:24:03Z",
       "side": 1,
       "message": "maybe use an absolute path here, I get the exception: OSError: [Errno 2] No such file or directory",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aea567c8_b710f35c",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-10-25T16:48:07Z",
+      "side": 1,
+      "message": "That\u0027s annoying. Problem is the symlink needs to function in both /srv/mediawiki-staging \u0026 /srv/mediawiki, which is why we do relative symlinks...everywhere....\n\nI\u0027m open to suggestions. I know `ln` will let me get away with making a bogus symlink, maybe just shell out?",
+      "parentUuid": "aea567c8_d7e7f7dd",
       "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -189,6 +351,24 @@
     },
     {
       "key": {
+        "uuid": "aea567c8_d775b7c9",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-10-25T16:48:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aea567c8_574f67c0",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "aea567c8_f7cc3b3a",
         "filename": "scap/plugins/prep.py",
         "patchSetId": 1
@@ -200,6 +380,24 @@
       "writtenOn": "2016-10-25T16:24:03Z",
       "side": 1,
       "message": "Needs \"\u003c?php\" at top of file?",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aea567c8_5759a75c",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-10-25T16:48:07Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "aea567c8_f7cc3b3a",
       "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
