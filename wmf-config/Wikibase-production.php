@@ -85,6 +85,8 @@ if ( $wmgUseWikibaseRepo ) {
 
 if ( $wmgUseWikibaseClient ) {
 	if ( in_array( $wgDBname, [ 'test2wiki', 'testwiki', 'testwikidatawiki' ] ) ) {
+		$wgWBClientSettings['enableStatementsParserFunction'] = true;
+		$wgWBClientSettings['enableLuaEntityFormatStatements'] = true;
 		$wgWBClientSettings['changesDatabase'] = 'testwikidatawiki';
 		$wgWBClientSettings['repoDatabase'] = 'testwikidatawiki';
 		$wgWBClientSettings['repoUrl'] = "https://test.wikidata.org";
