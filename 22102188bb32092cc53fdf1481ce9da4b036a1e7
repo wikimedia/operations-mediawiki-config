@@ -1,0 +1,208 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aea567c8_976baf82",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 4,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-25T16:24:03Z",
+      "side": 1,
+      "message": "Nitpick: blank line after this import as a sacrifice to appease pep8",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aea567c8_575be726",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-25T16:24:03Z",
+      "side": 1,
+      "message": "help\u003d\u0027Checkout MediaWiki version to staging\u0027",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aea567c8_97616fd3",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-25T16:24:03Z",
+      "side": 1,
+      "message": "TypeError: \u0027required\u0027 is an invalid argument for positionals\n\nI think you mostly use nargs to control this so you can drop \u0027required\u0027",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aea567c8_97de0f6f",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-25T16:24:03Z",
+      "side": 1,
+      "message": "Unclear why, but self.branch here is coming out as a list. i.e., if I pass 1.28.0-wmf.22 self.branch \u003d\u003d [\u00271.28.0-wmf.22\u0027]",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aea567c8_b7c8f3ab",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 35,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-25T16:24:03Z",
+      "side": 1,
+      "message": "should be:\n\nos.path.join(self.config[\u0027stage_dir\u0027], \u0027{}{}\u0027.format(self.arguments.prefix, self.branch))",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aea567c8_b7f593c9",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-25T16:24:03Z",
+      "side": 1,
+      "message": "Need to pass it a remote here, this should probably be fixed in scap/git.py, but you can workaround with a dummy value:\n\ngit.update_submodules(self.dest_dir, \u0027blah\u0027, use_upstream\u003dTrue)",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aea567c8_777b8bec",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-25T16:24:03Z",
+      "side": 1,
+      "message": "In multiversion\u0027s checkoutMediawiki we first:\n\nos.chmod(os.path.join(self.dest_dir, \u0027cache\u0027), 0777)\n\nThat is needed or this command fails",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aea567c8_577887ed",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-25T16:24:03Z",
+      "side": 1,
+      "message": "no \u0027self.\u0027 needed. Should just be \u0027checkout_version\u0027",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aea567c8_d7b017db",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-25T16:24:03Z",
+      "side": 1,
+      "message": "This needs the \u0027self\u0027 argument to make it a class method.\n\nEverything from here down needs to be un-indented a level (4 spaces)",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aea567c8_d7e7f7dd",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-25T16:24:03Z",
+      "side": 1,
+      "message": "maybe use an absolute path here, I get the exception: OSError: [Errno 2] No such file or directory",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aea567c8_574f67c0",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 76,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-25T16:24:03Z",
+      "side": 1,
+      "message": "Nitpick: \u0027StartProfiler symlink already exists\u0027",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aea567c8_f7cc3b3a",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-10-25T16:24:03Z",
+      "side": 1,
+      "message": "Needs \"\u003c?php\" at top of file?",
+      "revId": "22102188bb32092cc53fdf1481ce9da4b036a1e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
