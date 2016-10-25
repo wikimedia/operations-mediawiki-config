@@ -34,6 +34,12 @@ if ( $wmgMobileFrontend ) {
 		require_once( "$IP/extensions/JsonConfig/JsonConfig.php" );
 		require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
 
+		if ( !isset( $wgJsonConfigs ) ) {
+			$wgJsonConfigs = [];
+		}
+		if ( !isset( $wgJsonConfigs['JsonZeroConfig'] ) ) {
+			$wgJsonConfigs['JsonZeroConfig'] = [];
+		}
 		$wgJsonConfigs['JsonZeroConfig']['isLocal'] = false;
 		$wgJsonConfigs['JsonZeroConfig']['remote'] = [
 			'url' => 'https://zero.wikimedia.org/w/api.php',
