@@ -17590,6 +17590,12 @@ $wgConf->settings = [
 	'wikivoyage' => true,
 ],
 
+'wgKartographerStaticMapframe' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+],
+
 'wgKartographerEnableMapFrame' => [
 	'default' => true,
 	'wikipedia' => false,
