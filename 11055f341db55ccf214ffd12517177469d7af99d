@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_62963251",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 50
+      },
+      "writtenOn": "2016-10-26T19:12:50Z",
+      "side": 1,
+      "message": "This is not a repo setting.",
+      "revId": "11055f341db55ccf214ffd12517177469d7af99d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
