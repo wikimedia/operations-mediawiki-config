@@ -461,7 +461,7 @@ $wgSharpenParameter = '0x0.8'; # for IM>6.5, T26857
 $wgFileBlacklist[] = 'txt';
 $wgFileBlacklist[] = 'mht';
 
-if ( $wmgGalleryOptions ) {
+if ( isset( $wmgGalleryOptions ) ) {
 	$wgGalleryOptions = $wmgGalleryOptions;
 }
 
