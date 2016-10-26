@@ -16,6 +16,24 @@
       "revId": "879ad5bf5616ba0513c3b93b6d31dfef4080b9ed",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_a24c3aa0",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 3237,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2016-10-26T19:57:39Z",
+      "side": 1,
+      "message": "What is always set? $wgDefaultUserOptions[\u0027watchlistdays\u0027]? $wmgWatchlistNumberOfDaysShow?",
+      "parentUuid": "aea567c8_65c52290",
+      "revId": "879ad5bf5616ba0513c3b93b6d31dfef4080b9ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
