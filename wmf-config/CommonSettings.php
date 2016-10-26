@@ -3105,7 +3105,7 @@ if ( $wmgUseOAuth ) {
 	wfLoadExtension( 'OAuth' );
 	if ( in_array( $wgDBname, [ 'labswiki', 'labtestwiki' ] ) ) {
 		// Wikitech and its testing variant use local OAuth tables
-		$wgMWOAuthCentralWiki = $wgDBname;
+		$wgMWOAuthCentralWiki = false;
 	} else {
 		$wgMWOAuthCentralWiki = 'metawiki';
 		$wgMWOAuthSharedUserSource = 'CentralAuth';
