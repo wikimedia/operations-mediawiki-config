@@ -7765,7 +7765,7 @@ $wgConf->settings = [
 		],
 		'autoreviewer' => [ 'autopatrol' => true ],
 		'researcher' => [ 'browsearchive' => true, 'deletedhistory' => true, 'apihighlimits' => true ],
-		'reviewer' => [ 'patrol' => true ],
+		'reviewer' => [ 'patrol' => true, 'validate' => false ],
 		'filemover' => [ 'movefile' => true ], // T29927
 		'bot' => [
 			'ipblock-exempt' => true, // T30914
