@@ -34,6 +34,24 @@
       "revId": "879ad5bf5616ba0513c3b93b6d31dfef4080b9ed",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_700cb83d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 3237,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-10-26T21:21:01Z",
+      "side": 1,
+      "message": "$wmgWatchlistNumberOfDaysShow",
+      "parentUuid": "4eb4ebfb_a24c3aa0",
+      "revId": "879ad5bf5616ba0513c3b93b6d31dfef4080b9ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
