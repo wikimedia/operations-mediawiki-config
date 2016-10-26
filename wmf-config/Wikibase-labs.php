@@ -2,6 +2,7 @@
 
 if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['formatterUrlProperty'] = 'P9094';
+	$wgWBRepoSettings['enableStatementsParserFunction'] = true;
 
 	$wgWBRepoSettings['badgeItems'] = [
 		'Q49444' => 'wb-badge-goodarticle',
