@@ -48,7 +48,7 @@ $wmgThrottlingExceptions[] = [ // T148852 - Edit-a-thon BDA (Poitiers)
 $wmgThrottlingExceptions[] = [ // T146600
 	'from' => '2016-12-02T12:30 -6:00',
 	'to' => '2016-12-02T13:00 -6:00',
-	'ramge' => '199.17.0.0/16',
+	'range' => '199.17.0.0/16',
 	'dbname' => 'enwiki',
 	'value' => 40 // 35 expected
 ];
