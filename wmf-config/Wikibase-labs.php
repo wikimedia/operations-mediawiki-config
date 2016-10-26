@@ -28,6 +28,8 @@ if ( $wmgUseWikibaseRepo ) {
 }
 
 if ( $wmgUseWikibaseClient ) {
+	$wgWBRepoSettings['enableStatementsParserFunction'] = true;
+
 	$wgWBClientSettings['badgeClassNames'] = [
 		'Q49444' => 'badge-goodarticle',
 		'Q49447' => 'badge-featuredarticle',
