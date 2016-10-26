@@ -167,6 +167,28 @@ if ( $wgDBname == 'commonswiki' ) {
 	$wgUseInstantCommons = true;
 }
 
+
+// Enable Tabular data namespace on Commons - T148745
+if ( $wgDBname == 'commonswiki' ) {
+	// Safety: before extension.json, these values were initialized by JsonConfig.php
+	if ( !isset( $wgJsonConfigModels ) ) {
+		$wgJsonConfigModels = [];
+	}
+	if ( !isset( $wgJsonConfigs ) ) {
+		$wgJsonConfigs = [];
+	}
+	// https://www.mediawiki.org/wiki/Extension:JsonConfig#Configuration
+	$wgJsonConfigModels['Tabular.JsonConfig'] = 'JsonConfig\JCTabularContent';
+	$wgJsonConfigs['Tabular.JsonConfig'] = [
+		'namespace' => 486,
+		'nsName' => 'Data',
+		// page name must end in ".tab", and contain at least one symbol
+		'pattern' => '/.\.tab$/',
+		'store' => true,
+	];
+}
+
+
 if ( $wmgUseMath ) {
 	$wgDefaultUserOptions[ 'math' ] = 'mathml';
 }
