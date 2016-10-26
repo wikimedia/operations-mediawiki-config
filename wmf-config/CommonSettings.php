@@ -3108,8 +3108,9 @@ if ( $wmgUseOAuth ) {
 	}
 	$wgMWOAuthSecureTokenTransfer = true;
 
-	if ( $wgDBname === $wgMWOAuthCentralWiki ) {
-		// management interfaces are only available on the central wiki
+	if ( $wgMWOAuthCentralWiki === $wgDBname || $wgMWOAuthCentralWiki === false ) {
+		// Management interfaces are available on the central wiki or wikis
+		// that are using local OAuth tables
 		$wgGroupPermissions['autoconfirmed']['mwoauthproposeconsumer'] = true;
 		$wgGroupPermissions['autoconfirmed']['mwoauthupdateownconsumer'] = true;
 		$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
