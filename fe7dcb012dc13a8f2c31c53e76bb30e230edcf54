@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_f6c2005d",
+        "filename": "wmf-config/Wikibase-labs.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2016-10-27T08:29:29Z",
+      "side": 1,
+      "message": "Hm…",
+      "range": {
+        "startLine": 31,
+        "startChar": 6,
+        "endLine": 31,
+        "endChar": 10
+      },
+      "revId": "fe7dcb012dc13a8f2c31c53e76bb30e230edcf54",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
