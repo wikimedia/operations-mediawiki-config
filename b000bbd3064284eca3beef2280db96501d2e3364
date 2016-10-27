@@ -1,0 +1,89 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_836edd28",
+        "filename": "tests/ThrottleTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-10-27T15:20:16Z",
+      "side": 1,
+      "message": "The test testIfThrottlingExceptionsContainTheRequiredParameters already ensure that the rule has both \u0027from\u0027 and \u0027to\u0027, so that is slightly redundant.  Though if they are missing, you will want to skip the value check.  That can be done using a dependency:\n\n @depends testIfThrottlingExceptionsContainTheRequiredParameters\n public function testThrottlingExceptionsValues() {\n  ...\n }\n\nThen if either \u0027from\u0027 or \u0027to\u0027 are missing the test fail and the ExceptionsValues one is skip entirely.",
+      "revId": "b000bbd3064284eca3beef2280db96501d2e3364",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_2364a944",
+        "filename": "tests/ThrottleTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-10-27T15:20:16Z",
+      "side": 1,
+      "message": "array_keys_exists( \u0027to\u0027 ) not needed if the test is marked with a @depends",
+      "revId": "b000bbd3064284eca3beef2280db96501d2e3364",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_8327fd0c",
+        "filename": "tests/ThrottleTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 71,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-10-27T15:20:16Z",
+      "side": 1,
+      "message": "There is a wrong whitespace just before ctype_digit() :(\n\n\nThe code uses is_numeric(), then the test is more strict so that is all good to me.",
+      "revId": "b000bbd3064284eca3beef2280db96501d2e3364",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_a358b98d",
+        "filename": "tests/ThrottleTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 81,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-10-27T15:20:16Z",
+      "side": 1,
+      "message": "valid -\u003e valid",
+      "revId": "b000bbd3064284eca3beef2280db96501d2e3364",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_8355bd54",
+        "filename": "tests/ThrottleTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-10-27T15:20:16Z",
+      "side": 1,
+      "message": "valid -\u003e valid",
+      "revId": "b000bbd3064284eca3beef2280db96501d2e3364",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
