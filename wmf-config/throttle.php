@@ -83,8 +83,6 @@ $wgExtensionFunctions[] = function() {
 		$ip = $wgRequest->getIP();
 		if ( isset ( $options['IP'] ) ) {
 			$throttleIP = $options['IP'];
-		} elseif ( isset ( $options['ip'] ) ) {
-			$throttleIP = $options['ip']; // Allow frequent case typo
 		}
 		if ( isset( $throttleIP ) && !in_array( $ip, (array) $throttleIP ) ) {
 			continue;
