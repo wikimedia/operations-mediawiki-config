@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_9110665d",
+        "filename": "tests/ThrottleTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-10-27T13:33:58Z",
+      "side": 1,
+      "message": "That is a good start. While at it I would enhance the test to be more strict:\n\n\u0027from\u0027 and \u0027to\u0027 are both required. They should be valid for strtotime().\n\nSetting \u0027ip\u0027 will bypass \u0027range\u0027. I guess they should be mutually exclusive, eg ensure that only one of each is set.\n\nWhen \u0027value\u0027 is set, it must be is_numeric() else that fallback to the default value of 50.\n\nFood for later: \u0027IP\u0027 should really be always lower case \u0027ip\u0027.  Will need to update the comment and the fallback code that accommodate for both lower/uper cases.",
+      "revId": "550f53795b61532a417f50c198a141d7348b3fb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_710dda40",
+        "filename": "tests/ThrottleTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-10-27T13:33:58Z",
+      "side": 1,
+      "message": "Nitpick: that array confused me, I parsed it as:\n\n [ \u0027from\u0027, \u0027IP\u0027, \u0027dbname\u0027, ]\n\nEither put all members on the same line and split at 78 characters or put each members on its own line :]",
+      "revId": "550f53795b61532a417f50c198a141d7348b3fb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
