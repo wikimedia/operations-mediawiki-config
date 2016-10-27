@@ -23,8 +23,7 @@ class ThrottleTest extends PHPUnit_Framework_TestCase {
 		return [
 			'from',
 			'to',
-			'IP', // temporary — we can now get rid of this case tolerance
-			'ip',
+			'IP',
 			'range',
 			'dbname',
 			'value',
