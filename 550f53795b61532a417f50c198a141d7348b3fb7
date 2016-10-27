@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_232269a3",
+        "filename": "tests/ThrottleTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 20,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-10-27T13:40:16Z",
+      "side": 1,
+      "message": "Valid concerns, I\u0027ll submit these values tests in a follow-up change.\n\nThis test checks typo in keys, a detection already working with real cases and so we can benefit from that right now.",
+      "parentUuid": "4eb4ebfb_9110665d",
+      "revId": "550f53795b61532a417f50c198a141d7348b3fb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_710dda40",
         "filename": "tests/ThrottleTest.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2016-10-27T13:33:58Z",
       "side": 1,
       "message": "Nitpick: that array confused me, I parsed it as:\n\n [ \u0027from\u0027, \u0027IP\u0027, \u0027dbname\u0027, ]\n\nEither put all members on the same line and split at 78 characters or put each members on its own line :]",
+      "revId": "550f53795b61532a417f50c198a141d7348b3fb7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_e31b6172",
+        "filename": "tests/ThrottleTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 26,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-10-27T13:40:16Z",
+      "side": 1,
+      "message": "Yes, one by line will be easier to parse. The thematic presentation \"from/to\" \"ip/IP/range\" doesn\u0027t work well.",
+      "parentUuid": "4eb4ebfb_710dda40",
       "revId": "550f53795b61532a417f50c198a141d7348b3fb7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
