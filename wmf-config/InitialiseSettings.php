@@ -16652,30 +16652,10 @@ $wgConf->settings = [
 
 'wmgCirrusSearchDefaultCluster' => [
 	'default' => 'local',
-	'enwiki' => 'codfw',
-	'arwiki' => 'codfw',
-	'dewiki' => 'codfw',
-	'eswiki' => 'codfw',
-	'frwiki' => 'codfw',
-	'itwiki' => 'codfw',
-	'nlwiki' => 'codfw',
-	'ruwiki' => 'codfw',
-	'plwiki' => 'codfw',
-	'ptwiki' => 'codfw',
 ],
 
 'wmgCirrusSearchClusterOverrides' => [
 	'default' => [],
-	'enwiki' => ['completion' => 'eqiad'],
-	'arwiki' => ['completion' => 'eqiad'],
-	'dewiki' => ['completion' => 'eqiad'],
-	'eswiki' => ['completion' => 'eqiad'],
-	'frwiki' => ['completion' => 'eqiad'],
-	'itwiki' => ['completion' => 'eqiad'],
-	'nlwiki' => ['completion' => 'eqiad'],
-	'ruwiki' => ['completion' => 'eqiad'],
-	'plwiki' => ['completion' => 'eqiad'],
-	'ptwiki' => ['completion' => 'eqiad'],
 ],
 
 'wmgCirrusSearchWriteClusters' => [
