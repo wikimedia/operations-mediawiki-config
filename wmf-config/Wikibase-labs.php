@@ -29,6 +29,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['enableStatementsParserFunction'] = true;
+	$wgWBClientSettings['enableLuaEntityFormatStatements'] = true;
 
 	$wgWBClientSettings['badgeClassNames'] = [
 		'Q49444' => 'badge-goodarticle',
