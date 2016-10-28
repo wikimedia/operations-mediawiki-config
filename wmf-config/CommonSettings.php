@@ -1997,6 +1997,7 @@ if ( $wmgUseUploadWizard ) {
 		$wgUploadWizardConfig['feedbackPage'] = 'Commons:Upload_Wizard_feedback'; # Set by neilk, 2011-11-01, per erik
 		$wgUploadWizardConfig["missingCategoriesWikiText"] = "{{subst:unc}}";
 		$wgUploadWizardConfig['flickrBlacklistPage'] = 'User:FlickreviewR/bad-authors';
+		$wgUploadWizardConfig['customLicenseTemplate'] = 'Template:License_template_tag';
 	}
 }
 
