@@ -7782,7 +7782,6 @@ $wgConf->settings = [
 			'collectionsaveasuserpage' => true, // T48944
 			'changetags' => false, // T97013
 		],
-		'autoconfirmed' => [ 'patrol' => true ], // T14007
 		'founder' => [ 'userrights' => true ],
 		'rollbacker' => [ 'rollback' => true ],
 		'accountcreator' => [
@@ -7792,7 +7791,6 @@ $wgConf->settings = [
 		],
 		'autoreviewer' => [ 'autopatrol' => true ],
 		'researcher' => [ 'browsearchive' => true, 'deletedhistory' => true, 'apihighlimits' => true ],
-		'reviewer' => [ 'patrol' => true ],
 		'filemover' => [ 'movefile' => true ], // T29927
 		'bot' => [
 			'ipblock-exempt' => true, // T30914
