@@ -3080,15 +3080,6 @@ if ( $wmgUseGraph ) {
 		],
 	];
 
-	if ( $wmgUseGraphWithNamespace ) {
-		$wgJsonConfigModels['Graph.JsonConfig'] = 'Graph\Content';
-		$wgJsonConfigs['Graph.JsonConfig'] = [
-			'namespace' => 484,
-			'nsName' => 'Graph',
-			'isLocal' => true,
-		];
-	}
-
 	if ( $wmgUseGraphWithJsonNamespace ) {
 		$wgJsonConfigModels['Json.JsonConfig'] = null;
 		$wgJsonConfigs['Json.JsonConfig'] = [
