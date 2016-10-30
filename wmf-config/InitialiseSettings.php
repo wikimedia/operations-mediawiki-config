@@ -14455,10 +14455,6 @@ $wgConf->settings = [
 	'private' => false,
 ],
 
-'wmgUseGraphWithNamespace' => [
-	'default' => false,
-],
-
 'wmgUseGraphWithJsonNamespace' => [
 	'default' => false,
 
