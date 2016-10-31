@@ -371,9 +371,15 @@ $wgPasswordConfig['pbkdf2'] = [
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 10;
 } else {
+	$groupsToSecure = [ 'bureaucrat', 'sysop', 'checkuser', 'oversight' ]
+
+	if ( $wgDBname === 'enwiki' ) {
+		$groupsToSecure[] = 'abusefilter';
+	}
+
 	// See password policy RFC on meta
 	// [[m:Requests_for_comment/Password_policy_for_users_with_certain_advanced_permissions]]
-	foreach ( [ 'bureaucrat', 'sysop', 'checkuser', 'oversight' ] as $group ) {
+	foreach ( $groupsToSecure as $group ) {
 		$wgPasswordPolicy['policies'][$group]['MinimalPasswordLength'] = 8;
 		$wgPasswordPolicy['policies'][$group]['MinimumPasswordLengthToLogin'] = 1;
 		$wgPasswordPolicy['policies'][$group]['PasswordCannotBePopular'] = 10000;
