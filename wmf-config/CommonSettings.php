@@ -373,7 +373,7 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 } else {
 	// See password policy RFC on meta
 	// [[m:Requests_for_comment/Password_policy_for_users_with_certain_advanced_permissions]]
-	foreach ( [ 'bureaucrat', 'sysop', 'checkuser', 'oversight' ] as $group ) {
+	foreach ( [ 'bureaucrat', 'sysop', 'checkuser', 'oversight', 'ombudsman' ] as $group ) {
 		$wgPasswordPolicy['policies'][$group]['MinimalPasswordLength'] = 8;
 		$wgPasswordPolicy['policies'][$group]['MinimumPasswordLengthToLogin'] = 1;
 		$wgPasswordPolicy['policies'][$group]['PasswordCannotBePopular'] = 10000;
