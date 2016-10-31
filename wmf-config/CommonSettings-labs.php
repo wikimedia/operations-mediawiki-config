@@ -169,7 +169,7 @@ if ( $wgDBname == 'commonswiki' ) {
 
 
 // Enable Tabular data namespace on Commons - T148745
-if ( $wgDBname == 'commonswiki' ) {
+if ( $wmgEnableTabularData ) {
 	// Safety: before extension.json, these values were initialized by JsonConfig.php
 	if ( !isset( $wgJsonConfigModels ) ) {
 		$wgJsonConfigModels = [];
@@ -184,8 +184,14 @@ if ( $wgDBname == 'commonswiki' ) {
 		'nsName' => 'Data',
 		// page name must end in ".tab", and contain at least one symbol
 		'pattern' => '/.\.tab$/',
-		'store' => true,
 	];
+	if ( $wgDBname == 'commonswiki' ) {
+		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
+	} else {
+		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php'
+		];
+	}
 }
 
 
