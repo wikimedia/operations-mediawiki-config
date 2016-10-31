@@ -192,6 +192,7 @@ if ( $wmgEnableTabularData ) {
 			'url' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php'
 		];
 	}
+	$wgJsonConfigEnableLuaSupport = true;
 }
 
 
