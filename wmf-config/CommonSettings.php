@@ -377,6 +377,10 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		$groupsToElevatePasswordPolicy[] = 'default'; // Covers 'user'
 	}
 
+	if ( $wgDBname === 'enwiki' ) {
+		$groupsToElevatePasswordPolicy[] = 'abusefilter';
+	}
+
 	// See password policy RFC on meta
 	// [[m:Requests_for_comment/Password_policy_for_users_with_certain_advanced_permissions]]
 	foreach ( $groupsToElevatePasswordPolicy as $group ) {
