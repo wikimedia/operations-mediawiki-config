@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_448209cf",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 400,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2016-10-31T15:45:29Z",
+      "side": 1,
+      "message": "I think ombudsmen should be in here too?",
+      "range": {
+        "startLine": 400,
+        "startChar": 3,
+        "endLine": 400,
+        "endChar": 74
+      },
+      "revId": "52b4d31fe06085f9c054fdb7a18ed61f0cab4d72",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
