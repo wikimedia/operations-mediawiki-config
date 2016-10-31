@@ -573,5 +573,11 @@ function wmfLabsSettings() {
 				'mode' => 'packed', // T141349
 			],
 		],
+
+		// Enable Tabular data namespace on Commons - T148745
+		'wmgEnableTabularData' => [
+			'default' => true,
+		],
+
 	];
 } # wmflLabsSettings()
