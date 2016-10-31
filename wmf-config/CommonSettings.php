@@ -378,8 +378,6 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		$wgPasswordPolicy['policies'][$group]['MinimumPasswordLengthToLogin'] = 1;
 		$wgPasswordPolicy['policies'][$group]['PasswordCannotBePopular'] = 10000;
 	}
-
-	$wgPasswordPolicy['policies']['bot']['MinimalPasswordLength'] = 1;
 }
 
 // Enforce password policy when users login on other wikis
