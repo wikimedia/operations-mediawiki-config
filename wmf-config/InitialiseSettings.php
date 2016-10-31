@@ -14455,7 +14455,7 @@ $wgConf->settings = [
 // %3\$s = revid
 // %4\$s = hash
 'wgGraphImgServiceUrl' => [
-	'default' => "/api/rest_v1/page/graph/png/%2\$s/%3\$s/%4\$s.png",
+	'default' => "/api/rest_v1/page/graph/png/%2\$s/0/%4\$s.png",
 	'private' => false,
 ],
 
