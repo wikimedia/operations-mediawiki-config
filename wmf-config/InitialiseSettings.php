@@ -14618,6 +14618,15 @@ $wgConf->settings = [
 		'HTML' => [],
 	],
 ],
+
+'wgMFShowFirstParagraphBeforeInfobox' => [
+	// T145216#2757310
+	'default' => [
+		'base' => false,
+		'beta' => false
+	]
+],
+
 'wgMFLazyLoadImages' => [
 	// T142399
 	'default' => [
