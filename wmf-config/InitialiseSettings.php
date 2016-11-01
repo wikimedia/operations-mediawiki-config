@@ -17629,15 +17629,14 @@ $wgConf->settings = [
 
 'wmgUseOATHAuth' => [
 	'default' => true,
-	'private' => false,
+	'private' => true, // T149614
 	'fishbowl' => false,
 	'nonglobal' => false,
-	'officewiki' => true,
 ],
 
 'wmgOATHAuthDisableRight' => [
 	'default' => true, // Roll out to specific groups
-	'officewiki' => false,
+	'private' => false, // T149614
 ],
 
 'wmgWatchlistDefault' => [
