@@ -177,13 +177,15 @@ if ( !$globals ) {
 	}
 
 	$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
-	$globals = $wgConf->getAll( $wgDBname, $dbSuffix,
-		[
-			'lang'    => $lang,
-			'docRoot' => $_SERVER['DOCUMENT_ROOT'],
-			'site'    => $site,
-			'stdlogo' => "//{$wmfHostnames['upload']}/$site/$lang/b/bc/Wiki.png" ,
-		], $wikiTags );
+	$confParams = [
+		'lang'    => $lang,
+		'docRoot' => $_SERVER['DOCUMENT_ROOT'],
+		'site'    => $site,
+		'stdlogo' => "//{$wmfHostnames['upload']}/$site/$lang/b/bc/Wiki.png" ,
+	];
+	// Add a per-language tag as well
+	$wikiTags[] = $wgConf->get( 'wgLanguageCode', $wgDBname, $dbSuffix, $confParams, $wikiTags );
+	$globals = $wgConf->getAll( $wgDBname, $dbSuffix, $confParams, $wikiTags );
 
 	# Save cache
 	@mkdir( '/tmp/mw-cache-' . $wmgVersionNumber );
