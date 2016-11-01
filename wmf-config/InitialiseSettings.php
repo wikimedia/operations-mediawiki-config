@@ -17619,7 +17619,7 @@ $wgConf->settings = [
 
 'wmgUseOATHAuth' => [
 	'default' => true,
-	'private' => false,
+	'private' => true, // T149614
 	'fishbowl' => false,
 	'nonglobal' => false,
 	'officewiki' => true,
@@ -17637,7 +17637,7 @@ $wgConf->settings = [
 
 'wmgWatchlistNumberOfDaysShow' => [
 	'default' => 3,
-	'cswiki' => 14,
+	'cswiki' => 14, // T148327
 ],
 ];
 
