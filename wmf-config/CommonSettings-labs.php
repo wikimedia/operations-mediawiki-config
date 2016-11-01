@@ -187,8 +187,12 @@ if ( $wmgEnableTabularData ) {
 		'isLocal' => false,
 	];
 	if ( $wgDBname == 'commonswiki' ) {
+		// Ensure we have a stable cross-wiki title resolution
+		// See JCSingleton::parseTitle()
+		$wgJsonConfigInterwikiPrefix = "meta";
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 	} else {
+		$wgJsonConfigInterwikiPrefix = "commons";
 		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
 			'url' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php'
 		];
