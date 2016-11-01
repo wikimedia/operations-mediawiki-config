@@ -4,7 +4,7 @@
 
 require_once( "$IP/extensions/Validator/Validator.php" );
 require_once( "$IP/extensions/SemanticMediaWiki/SemanticMediaWiki.php" );
-require_once( "$IP/extensions/SemanticForms/SemanticForms.php" );
+require_once( "$IP/extensions/PageForms/PageForms.php" );
 require_once( "$IP/extensions/SemanticResultFormats/SemanticResultFormats.php" );
 
 switch( $wgDBname ) {
