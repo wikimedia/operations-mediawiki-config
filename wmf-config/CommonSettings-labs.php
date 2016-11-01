@@ -184,6 +184,7 @@ if ( $wmgEnableTabularData ) {
 		'nsName' => 'Data',
 		// page name must end in ".tab", and contain at least one symbol
 		'pattern' => '/.\.tab$/',
+		'isLocal' => false,
 	];
 	if ( $wgDBname == 'commonswiki' ) {
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
