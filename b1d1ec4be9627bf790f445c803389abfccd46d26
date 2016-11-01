@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_063402d9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 17625,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2016-11-01T12:10:25Z",
+      "side": 0,
+      "message": "Might aswell remove this now, as officewiki is private",
+      "range": {
+        "startLine": 17625,
+        "startChar": 1,
+        "endLine": 17625,
+        "endChar": 22
+      },
+      "revId": "b1d1ec4be9627bf790f445c803389abfccd46d26",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_e630f6e7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 17630,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2016-11-01T12:10:25Z",
+      "side": 0,
+      "message": "This should be changed to private too",
+      "range": {
+        "startLine": 17630,
+        "startChar": 1,
+        "endLine": 17630,
+        "endChar": 23
+      },
+      "revId": "b1d1ec4be9627bf790f445c803389abfccd46d26",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
