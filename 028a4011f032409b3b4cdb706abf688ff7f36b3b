@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_b5ea0e72",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2016-11-02T00:01:10Z",
+      "side": 1,
+      "message": "Is this value generally different than the $lang that has already been fetched via SiteConfiguration::siteFromDB()?",
+      "revId": "028a4011f032409b3b4cdb706abf688ff7f36b3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
