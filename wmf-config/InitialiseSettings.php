@@ -14622,9 +14622,10 @@ $wgConf->settings = [
 ],
 
 'wgMFShowFirstParagraphBeforeInfobox' => [
+	// T145216#2757310
 	'default' => [
 		'base' => false,
-		'beta' => true
+		'beta' => false
 	]
 ],
 
