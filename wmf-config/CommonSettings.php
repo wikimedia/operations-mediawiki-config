@@ -2526,6 +2526,7 @@ if ( $wmgEnablePageTriage ) {
 	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
 	$wgPageTriageEnableCurationToolbar = $wmgPageTriageEnableCurationToolbar;
 	$wgPageTriageNoIndexUnreviewedNewArticles = $wmgPageTriageNoIndexUnreviewedNewArticles;
+	$wgPageTriageNoIndexTemplates = $wmgPageTriageNoIndexTemplates;
 }
 
 if ( $wmgEnableInterwiki ) {

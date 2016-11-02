@@ -15664,6 +15664,10 @@ $wgConf->settings = [
 'wmgPageTriageNoIndexUnreviewedNewArticles' => [
 	'default' => true,
 ],
+'wmgPageTriageNoIndexTemplates' => [
+	'default' => [],
+	'enwiki' => [ 'NOINDEX' ]
+],
 
 'wmgEnableInterwiki' => [
 	'default' => true,
