@@ -1148,6 +1148,7 @@ $wgConf->settings = [
 	'jamwiki' => [ '1.5x' => '/static/images/project-logos/jamwiki-1.5x.png', '2x' => '/static/images/project-logos/jamwiki-2x.png' ], // T134017
 	'lawiki' => [ '1.5x' => '/static/images/project-logos/lawiki-1.5x.png', '2x' => '/static/images/project-logos/lawiki-2x.png' ],
 	'ladwiki' => [ '1.5x' => '/static/images/project-logos/ladwiki-1.5x.png', '2x' => '/static/images/project-logos/ladwiki-2x.png' ], // T132120
+	'maiwiki' => [ '1.5x' => '/static/images/project-logos/maiwiki-1.5x.png', '2x' => '/static/images/project-logos/maiwiki-2x.png' ], // T149790
 	'mswiki' => [ '1.5x' => '/static/images/project-logos/mswiki-1.5x.png', '2x' => '/static/images/project-logos/mswiki-2x.png' ],
 	'newiki' => [ '1.5x' => '/static/images/project-logos/newiki-1.5x.png', '2x' => '/static/images/project-logos/newiki-2x.png' ],    // T139240
 	'nlwiki' => [ '1.5x' => '/static/images/project-logos/nlwiki-1.5x.png', '2x' => '/static/images/project-logos/nlwiki-2x.png' ],
