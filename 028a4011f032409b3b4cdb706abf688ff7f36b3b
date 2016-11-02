@@ -16,6 +16,24 @@
       "revId": "028a4011f032409b3b4cdb706abf688ff7f36b3b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_72d37231",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 186,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2016-11-02T22:23:42Z",
+      "side": 1,
+      "message": "Sadly it does, an incomplete set of examples:\n\nwiki: lang wgLanguageCode\nadvisorywiki: advisory en\nalswiki: als gsw\nboardwiki: board en\ncommonswiki: commons en\nfoundationwiki: foundation en\nmxwikimedia: mx en\nilwikimedia: il he\n\nFor the most part, the lang \u003c-\u003e wgLanguageCode matches fairly well for our average projects, but for many special cases like chapters, one-off wikis, and such it\u0027s wrong. It seems for the most part lang is just the dbName minus the project specific postfix",
+      "parentUuid": "4eb4ebfb_b5ea0e72",
+      "revId": "028a4011f032409b3b4cdb706abf688ff7f36b3b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
