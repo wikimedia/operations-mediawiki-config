@@ -17606,6 +17606,9 @@ $wgConf->settings = [
 'wgKartographerStaticMapframe' => [
 	'default' => false,
 	'mediawikiwiki' => true,
+	'cawiki' => true,
+	'hewiki' => true,
+	'mkwiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
 ],
