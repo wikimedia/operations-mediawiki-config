@@ -8318,7 +8318,6 @@ $wgConf->settings = [
 			'edit' => false,
 			'createaccount' => true,
 		],
-		'bots' => [ 'skipcaptcha' => true ],
 		'cloudadmin' => [
 			'listall' => true,
 			'manageproject' => true,
