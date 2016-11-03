@@ -16289,6 +16289,10 @@ $wgConf->settings = [
 
 'wmgRevisionSliderBetaFeature' => [
 	'default' => true,
+	'mediawikiwiki' => false, // T149724
+	'testwiki' => false, // T149724
+	'test2wiki' => false, // T149724
+	'testwikidatawiki' => false, // T149724
 ],
 
 'wmgUseUserMerge' => [
