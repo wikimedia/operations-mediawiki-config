@@ -17647,7 +17647,7 @@ $wgConf->settings = [
 
 'wmgWatchlistNumberOfDaysShow' => [
 	'default' => 3,
-	'cswiki' => 14,
+	'cswiki' => 14, // T148327
 ],
 ];
 
