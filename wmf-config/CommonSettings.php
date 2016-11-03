@@ -348,16 +348,6 @@ $wgObjectCaches['mysql-multiwrite'] = [
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
 
-if ( $wgDBname === 'labswiki' ) {
-	$wgMessageCacheType = 'memcached-pecl';
-	$wgCookieDomain = "wikitech.wikimedia.org"; // TODO: Is this really necessary?
-}
-
-if ( $wgDBname === 'labtestwiki' ) {
-	$wgMessageCacheType = 'memcached-pecl';
-	$wgCookieDomain = "labtestwikitech.wikimedia.org"; // TODO: Is this really necessary?
-}
-
 // Use PBKDF2 for password hashing (T70766)
 $wgPasswordDefault = 'pbkdf2';
 // This needs to be increased as allowable by server performance
@@ -2660,6 +2650,14 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgGroupPermissions['contentadmin']['titleblacklistlog'] = false;
 	$wgGroupPermissions['contentadmin']['override-antispoof'] = false;
 	$wgGroupPermissions['contentadmin']['createaccount'] = false;
+
+	$wgMessageCacheType = 'memcached-pecl';
+
+	if ( $wgDBname === 'labswiki' ) {
+		$wgCookieDomain = "wikitech.wikimedia.org"; // TODO: Is this really necessary?
+	} elseif ( $wgDBname === 'labtestwiki' ) {
+		$wgCookieDomain = "labtestwikitech.wikimedia.org"; // TODO: Is this really necessary?
+	}
 
 	// Some settings specific to wikitech's extensions
 	include( "$wmfConfigDir/wikitech.php" );
