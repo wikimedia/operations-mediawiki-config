@@ -83,6 +83,9 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterConditionLimit = 2000; // T132048
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		break;
+	case 'cswiki':
+		$wgAbuseFilterProfile = true; // T149899
+		break;
 	case 'cswiktionary':
 		$wgAbuseFilterNotificationsPrivate = true;
 		break;
