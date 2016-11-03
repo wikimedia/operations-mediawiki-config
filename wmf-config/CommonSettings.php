@@ -2824,6 +2824,7 @@ if ( $wmgUseRelatedSites ) {
 
 if ( $wmgUseRevisionSlider ) {
 	wfLoadExtension( 'RevisionSlider' );
+	$wgRevisionSliderBetaFeature = $wmgRevisionSliderBetaFeature;
 }
 
 if ( $wmgUseUserMerge ) {

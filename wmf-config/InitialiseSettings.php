@@ -16263,6 +16263,10 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wmgRevisionSliderBetaFeature' => [
+	'default' => true,
+],
+
 'wmgUseUserMerge' => [
 	'default' => true,
 	'private' => false,
