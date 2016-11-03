@@ -183,11 +183,4 @@ if ( file_exists( '/etc/mediawiki/WikitechPrivateSettings.php' ) ) {
 
 $smwgNamespacesWithSemanticLinks[NS_NOVA_RESOURCE] = true;
 
-# TODO:  Re-enable OpenID
-#require_once( "$IP/extensions/OpenID/OpenID.php" );
-#$wgOpenIDClientOnly = false;
-#$wgHideOpenIDLoginLink = true;
-#$wgOpenIDConsumerAllow = '';
-#$wgOpenIDConsumerDenyByDefault = true;
-
 require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
