@@ -17635,12 +17635,12 @@ $wgConf->settings = [
 	'default' => true,
 	'private' => true, // T149614
 	'fishbowl' => false,
-	'nonglobal' => false,
 ],
 
 'wmgOATHAuthDisableRight' => [
 	'default' => true, // Roll out to specific groups
 	'private' => false, // T149614
+	'nonglobal' => false,
 ],
 
 'wmgWatchlistDefault' => [
