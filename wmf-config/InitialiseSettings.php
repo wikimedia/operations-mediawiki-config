@@ -83,6 +83,10 @@ $wgConf->settings = [
 	'fishbowl' => false,
 	'nonglobal' => false,
 ],
+'wmgElevateDefaultPasswordPolicy' => [
+	'default' => false,
+	'private' => true, // T149638
+],
 
 # wgLanguageCode @{
 'wgLanguageCode' => [
