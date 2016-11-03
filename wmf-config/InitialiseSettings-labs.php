@@ -525,7 +525,7 @@ function wmfLabsSettings() {
 		],
 
 		'wmgRevisionSliderBetaFeature' => [
-			'default' => true,
+			'default' => false, // T149725
 		],
 
 		// Ensure ?action=credits isn't break and allow to work
