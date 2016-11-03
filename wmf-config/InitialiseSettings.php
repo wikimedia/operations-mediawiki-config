@@ -7909,6 +7909,9 @@ $wgConf->settings = [
 		'rollbacker' => [ 'rollback' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
 	],
+	'etwiki' => [
+		'toolusers' => [ 'tooluse' ] // T149610
+	],
 	'+fawiki' => [
 		'*' => [ 'createpage' => false ], // T29195
 		'user' => [ 'move-categorypages' => false ], // T67728
