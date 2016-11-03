@@ -583,5 +583,10 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		// Enable Map (GeoJSON) data namespace on Commons - T149548
+		'wmgEnableMapData' => [
+			'default' => true,
+		],
+
 	];
 } # wmflLabsSettings()

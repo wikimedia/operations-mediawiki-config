@@ -200,6 +200,38 @@ if ( $wmgEnableTabularData ) {
 	$wgJsonConfigEnableLuaSupport = true;
 }
 
+// Enable Map (GeoJSON) data namespace on Commons - T149548
+if ( $wmgEnableMapData ) {
+	// Safety: before extension.json, these values were initialized by JsonConfig.php
+	if ( !isset( $wgJsonConfigModels ) ) {
+		$wgJsonConfigModels = [];
+	}
+	if ( !isset( $wgJsonConfigs ) ) {
+		$wgJsonConfigs = [];
+	}
+	// https://www.mediawiki.org/wiki/Extension:JsonConfig#Configuration
+	$wgJsonConfigModels['Map.JsonConfig'] = 'JsonConfig\JCMapDataContent';
+	$wgJsonConfigs['Map.JsonConfig'] = [
+		'namespace' => 486,
+		'nsName' => 'Data',
+		// page name must end in ".map", and contain at least one symbol
+		'pattern' => '/.\.map$/',
+		'isLocal' => false,
+	];
+	if ( $wgDBname == 'commonswiki' ) {
+		// Ensure we have a stable cross-wiki title resolution
+		// See JCSingleton::parseTitle()
+		$wgJsonConfigInterwikiPrefix = "meta";
+		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+	} else {
+		$wgJsonConfigInterwikiPrefix = "commons";
+		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
+			'url' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php'
+		];
+	}
+	$wgJsonConfigEnableLuaSupport = true;
+}
+
 
 if ( $wmgUseMath ) {
 	$wgDefaultUserOptions[ 'math' ] = 'mathml';
