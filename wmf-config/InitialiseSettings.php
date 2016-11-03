@@ -16269,6 +16269,9 @@ $wgConf->settings = [
 	'testwiki' => false, // T149724
 	'test2wiki' => false, // T149724
 	'testwikidatawiki' => false, // T149724
+	'arwiki' => false, // T149995
+	'dewiki' => false, // T148646
+	'hewiki' => false, // T150573
 ],
 
 'wmgUseUserMerge' => [
