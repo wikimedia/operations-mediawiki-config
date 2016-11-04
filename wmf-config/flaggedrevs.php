@@ -396,6 +396,7 @@ elseif ( $wgDBname == 'fiwiki' ) {
 	$wgSimpleFlaggedRevsUI = false;
 	$wgGroupPermissions['sysop']['review'] = true;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
+	$wgGroupPermissions['reviewer']['stablesettings'] = true; // T149987
 	$wgGroupPermissions['sysop']['unreviewedpages'] = true;
 
 	$wgFlaggedRevsTags = [
