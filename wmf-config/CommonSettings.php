@@ -466,7 +466,7 @@ if ( isset( $wmgGalleryOptions ) ) {
 }
 
 if ( $wmgUsePagedTiffHandler ) {
-	include( $IP . '/extensions/PagedTiffHandler/PagedTiffHandler.php' );
+	wfLoadExtension( 'PagedTiffHandler' );
 }
 $wgTiffUseTiffinfo = true;
 $wgTiffMaxMetaSize = 1048576;
@@ -689,10 +689,10 @@ if ( $wmgUseTimeline ) {
 putenv( "GDFONTPATH=/srv/mediawiki/fonts" );
 
 if ( $wmgUseWikiHiero ) {
-	include( $IP . '/extensions/wikihiero/wikihiero.php' );
+	wfLoadExtension( 'wikihiero' );
 }
 
-include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
+wfLoadExtension( 'SiteMatrix' );
 
 // Config for sitematrix
 $wgSiteMatrixFile = ( $wmfRealm === 'labs' ) ? "$IP/../langlist-labs" : "$IP/../langlist";
@@ -961,7 +961,7 @@ wfLoadExtension( 'TrustedXFF' );
 $wgTrustedXffFile = "$wmfConfigDir/trusted-xff.php";
 
 if ( $wmgUseContactPage ) {
-	include( $IP . '/extensions/ContactPage/ContactPage.php' );
+	wfLoadExtension( 'ContactPage' );
 	$wgContactConfig = [];
 	$wgContactConfig['default'] = [
 		'RecipientUser' => null,
@@ -1150,10 +1150,10 @@ if ( $wmgUseFooterContactLink ) {
 $wgAPIModules['imagerotate'] = 'ApiDisabled';
 
 if ( $wmgUseDPL ) {
-	include( $IP . '/extensions/intersection/DynamicPageList.php' );
+	wfLoadExtension( 'intersection' );
 }
 
-include( $IP . '/extensions/Renameuser/Renameuser.php' );
+wfLoadExtension( 'Renameuser' );
 $wgGroupPermissions['bureaucrat']['renameuser'] = $wmgAllowLocalRenameuser;
 
 if ( $wmgUseSpecialNuke ) {
@@ -2883,7 +2883,7 @@ if ( $wmgUseEventLogging ) {
 		$wgExtraNamespaces[470] = 'Schema';
 		$wgExtraNamespaces[471] = 'Schema_talk';
 
-		include_once( "$IP/extensions/CodeEditor/CodeEditor.php" );
+		wfLoadExtension( 'CodeEditor' );
 		$wgCodeEditorEnableCore = $wmgUseCodeEditorForCore; // For safety's sake
 	}
 
@@ -3011,7 +3011,7 @@ if ( $wmgUsePageAssessments ) {
 }
 
 if ( $wmgUsePageImages ) {
-	require_once( "$IP/extensions/PageImages/PageImages.php" );
+	wfLoadExtension( 'PageImages' );
 	$wgPageImagesExpandOpenSearchXml = $wmgPageImagesExpandOpenSearchXml;
 	$wgPageImagesUseGalleries = $wmgPageImagesUseGalleries;
 }
@@ -3031,8 +3031,7 @@ if ( $wmgZeroPortal || $wmgUseGraph ) {
 }
 
 if ( $wmgZeroPortal ) {
-	require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
-	require_once( "$IP/extensions/ZeroPortal/ZeroPortal.php" );
+	wfLoadExtensions( [ 'ZeroBanner', 'ZeroPortal' ] );
 
 	// zerowiki treats all logged-in users the same as anonymous, without giving them any extra rights
 	// Only sysops and scripts get additional rights on zerowiki
