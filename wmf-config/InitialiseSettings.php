@@ -9397,7 +9397,7 @@ $wgConf->settings = [
 	],
 	'+fiwiki' => [
 		'bureaucrat' => [ 'arbcom' ],
-		'sysop' => [ 'rollbacker' ],
+		'sysop' => [ 'rollbacker', 'accountcreator' ], // T149986
 	],
 	'+foundationwiki' => [
 		'sysop' => [ 'inactive', 'flood' ],
@@ -10084,7 +10084,7 @@ $wgConf->settings = [
 	],
 	'+fiwiki' => [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'arbcom' ],
-		'sysop' => [ 'rollbacker', ],
+		'sysop' => [ 'rollbacker', 'accountcreator' ], // T149986
 	],
 	'+fiwikimedia' => [
 		'bureaucrat' => [ 'sysop', 'bureaucrat' ],
