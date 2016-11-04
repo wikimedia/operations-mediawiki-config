@@ -85,8 +85,8 @@ $IP/extensions/OATHAuth/extension.json
 $IP/extensions/OAuth/extension.json
 $IP/extensions/ORES/extension.json
 $IP/extensions/PageAssessments/extension.json
-$IP/extensions/PagedTiffHandler/PagedTiffHandler.php
-$IP/extensions/PageImages/PageImages.php
+$IP/extensions/PagedTiffHandler/extension.json
+$IP/extensions/PageImages/extension.json
 $IP/extensions/PageTriage/PageTriage.php
 $IP/extensions/ParserFunctions/extension.json
 $IP/extensions/ParsoidBatchAPI/extension.json
@@ -142,8 +142,8 @@ $IP/extensions/WikimediaEvents/extension.json
 $IP/extensions/WikimediaIncubator/extension.json
 $IP/extensions/WikimediaMessages/extension.json
 $IP/extensions/XAnalytics/extension.json
-$IP/extensions/ZeroBanner/ZeroBanner.php
-$IP/extensions/ZeroPortal/ZeroPortal.php
+$IP/extensions/ZeroBanner/extension.json
+$IP/extensions/ZeroPortal/extension.json
 $IP/skins/CologneBlue/skin.json
 $IP/skins/Modern/skin.json
 $IP/skins/MonoBook/skin.json
