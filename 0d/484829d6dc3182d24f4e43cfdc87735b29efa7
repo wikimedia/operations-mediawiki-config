@@ -1,0 +1,10 @@
+Code-Review+1: Alex Monk <alex@wikimedia.org>
+Code-Review+1: MarcoAurelio <strigiwm@gmail.com>
+Code-Review+1: Andrew Bogott <abogott@wikimedia.org>
+Code-Review+2: Reedy <reedy@wikimedia.org>
+Verified+2: jenkins-bot
+Submitted-by: jenkins-bot
+Submitted-at: Fri, 04 Nov 2016 15:18:35 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/319683
+Project: operations/mediawiki-config
+Branch: refs/heads/master
