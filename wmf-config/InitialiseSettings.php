@@ -15907,7 +15907,7 @@ $wgConf->settings = [
 	'wiktionary' => '/static/images/project-logos/notifications/30px-Notification-icon-Wiktionary-logo.svg.png',
 
 	'commonswiki' => '/static/images/project-logos/notifications/30px-Notification-icon-Commons-logo.svg.png',
-	'foundationwiki' => '/static/images/project-logos/notifications/Wikimedia-logo.svg/30px-Wikimedia-logo.svg.png',
+	'foundationwiki' => '/static/images/project-logos/notifications/30px-Wikimedia-logo.svg.png',
 	'incubatorwiki' => '/static/images/project-logos/notifications/30px-Notification-icon-Incubator-logo.svg.png',
 	'labswiki' => '/static/images/project-logos/notifications/30px-Wikimedia_labs_logo.svg.png',
 	'mediawikiwiki' => '/static/images/project-logos/notifications/30px-Notification-icon-MediaWiki-logo.svg.png',
