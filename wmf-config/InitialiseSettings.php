@@ -165,6 +165,7 @@ $wgConf->settings = [
 	'officewiki' => 'en',
 	'ombudsmenwiki' => 'en',
 	'otrs_wikiwiki' => 'en',
+	'projectcomwiki' => 'en',
 	'qualitywiki' => 'en',
 	'searchcomwiki' => 'en',
 	'stewardwiki' => 'en',
@@ -1425,6 +1426,7 @@ $wgConf->settings = [
 	'otrs_wikiwiki' => '//otrs-wiki.wikimedia.org',
 	'outreachwiki' => '//outreach.wikimedia.org',
 	'pa_uswikimedia' => '//pa-us.wikimedia.org',
+	'projectcomwiki' => '//projectcom.wikimedia.org', // T143138
 	'qualitywiki' => '//quality.wikimedia.org',
 	'searchcomwiki' => '//searchcom.wikimedia.org',
 	'sourceswiki' => '//wikisource.org',
@@ -1871,6 +1873,7 @@ $wgConf->settings = [
 	'pnbwiki' => 'وکیپیڈیا',
 	'pnbwiktionary' => 'وکشنری',
 	'pntwiki' => 'Βικιπαίδεια',
+	'projectcomwiki' => 'Project Grants Committee',
 	'pswiki' => 'ويکيپېډيا' ,
 	'pswikibooks' => 'ويکيتابونه' ,
 	'pswiktionary' => 'ويکيسيند' ,
@@ -10856,6 +10859,9 @@ $wgConf->settings = [
 	'zhwikibooks' => [ 'w', 'wikt', 'q', 's', 'meta', 'commons' ],
 	'zhwikisource' => [ 'w', 'b', 'q', 'wikt', 'meta', 'commons' ],
 	'zuwiki' => [ 'en' ], // T53327
+
+	// Special wikis
+	'projectcomwiki' => [ 'wikipedia:en', 'meta' ], // T143138
 ],
 # @} end of wgImportSources
 
@@ -11642,6 +11648,7 @@ $wgConf->settings = [
 	'ombudsmenwiki' => '/static/favicon/wmf.ico', // T50404
 	'otrs_wikiwiki' => '/static/favicon/wmf.ico',
 	'outreachwiki' => '/static/favicon/community.ico',
+	'projectcomwiki' => '/static/favicon/wmf.ico',
 	'searchcomwiki' => '/static/favicon/wmf.ico',
 	'sourceswiki' => '/static/favicon/wikisource.ico',
 	'spcomwiki' => '/static/favicon/spcom.ico',
