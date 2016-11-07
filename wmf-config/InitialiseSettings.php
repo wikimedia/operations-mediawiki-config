@@ -126,6 +126,7 @@ $wgConf->settings = [
 	'cawikimedia' => 'en', // T88843#1098439
 	'cowikimedia' => 'es',
 	'dkwikimedia' => 'da',
+	'ecwikimedia' => 'es', // T135521
 	'ilwikimedia' => 'he',
 	'mkwikimedia' => 'mk',
 	'mxwikimedia' => 'es',
@@ -280,6 +281,7 @@ $wgConf->settings = [
 	'dsbwiki' => 'Europe/Berlin',
 	'dvwiki' => 'Indian/Maldives', // T48351
 	'dvwiktionary' => 'Indian/Maldives', // T48351
+	'ecwikimedia' => 'America/Guayaquil', // T135521
 	'elwikinews' => 'Europe/Athens',
 	'elwikivoyage' => 'Europe/Athens',
 	'etwiki' => 'Europe/Tallinn',
@@ -1054,6 +1056,7 @@ $wgConf->settings = [
 	'cawikimedia' => '/static/images/project-logos/cawikimedia.png',
 	'cowikimedia' => '/static/images/project-logos/cowikimedia.png',
 	'dkwikimedia' => '/static/images/project-logos/dkwikimedia.png',
+	'ecwikimedia' => '/static/images/project-logos/ecwikimedia.png', // T135521
 	'etwikimedia' => '/static/images/project-logos/etwikimedia.png',
 	'fiwikimedia' => '/static/images/project-logos/fiwikimedia.png',
 	'mkwikimedia' => '/static/images/project-logos/mkwikimedia.png',
@@ -1182,6 +1185,7 @@ $wgConf->settings = [
 	'viwikivoyage' => [ '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ],
 
     # Chapter wikis
+	'ecwikimedia' => [ '1.5x' => '/static/images/project-logos/ecwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ecwikimedia-2x.png'], // T135521
 	'ptwikimedia' => [ '1.5x' => '/static/images/project-logos/ptwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ptwikimedia-2x.png'], // T126832
 	'trwikimedia' => [ '1.5x' => '/static/images/project-logos/trwikimedia-1.5x.png', '2x' => '/static/images/project-logos/trwikimedia-2x.png'],
     # Special wikis
@@ -1651,6 +1655,7 @@ $wgConf->settings = [
 	'dsbwiki' => 'Wikipedija',
 	'dvwiki' => 'ވިކިޕީޑިއާ', // T50075
 	'dvwiktionary' => 'ވިކިރަދީފު',
+	'ecwikimedia' => 'Wikimedistas de Ecuador', // T135521
 	'elwiki' => 'Βικιπαίδεια',
 	'elwikibooks' => 'Βικιβιβλία',
 	'elwikinews' => 'Βικινέα',
@@ -4004,6 +4009,7 @@ $wgConf->settings = [
 	'+checkuserwiki' => [ 0 => 1 ],
 	'+collabwiki' => [ 0 => 1 ],
 	'+commonswiki' => [ 6 => 0, 8 => 0 ],
+	'+ecwikimedia' => [ 0 => 1 ],
 	'+execwiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
 	'+fdcwiki' => [ 0 => 1 ],
 	'+foundationwiki' => [ 0 => 1, 6 => 0, 8 => 0 ],
@@ -10556,6 +10562,7 @@ $wgConf->settings = [
 	'bewikimedia' => [ 'meta' ],
 	'brwikimedia' => [ 'wikipedia:pt', 'meta', 'wiktionary:pt', 'wikisource:pt', 'wikinews:pt', 'wikiquote:pt', 'wikibooks:pt', 'wikiversity:pt', 'commons' ], // T60936
 	'cowikimedia' => [ 'meta', 'wikipedia:es', 'wikibooks:es', 'wikiversity:es' ],
+	'ecwikimedia' => [ 'meta' ], // T135521
 	'etwikimedia' => [ 'wikipedia:et', 'meta' ],
 	'fiwikimedia' => [ 'wikipedia:fi', 'meta' ],
 	'mkwikimedia' => [ 'meta', 'wikipedia:mk' ],
