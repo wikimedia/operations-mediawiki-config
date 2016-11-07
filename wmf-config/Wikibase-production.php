@@ -2,6 +2,7 @@
 
 if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
+		$wgPropertySuggesterClassifyingPropertyIds = [ 7 ];
 		$wgWBRepoSettings['formatterUrlProperty'] = 'P368';
 
 		$wgWBRepoSettings['badgeItems'] = [
