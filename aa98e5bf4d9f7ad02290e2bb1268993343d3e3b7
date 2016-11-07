@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_9ef9524d",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2016-11-07T18:08:00Z",
+      "side": 1,
+      "message": "I think you need to array_flip this one or build CirrusSearch-interwikiSources.php with interwiki prefix as keys and not values",
+      "range": {
+        "startLine": 77,
+        "startChar": 35,
+        "endLine": 77,
+        "endChar": 67
+      },
+      "revId": "aa98e5bf4d9f7ad02290e2bb1268993343d3e3b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
