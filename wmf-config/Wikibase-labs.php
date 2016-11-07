@@ -1,6 +1,7 @@
 <?php
 
 if ( $wmgUseWikibaseRepo ) {
+	$wgPropertySuggesterClassifyingPropertyIds = [ 7 ];
 	$wgWBRepoSettings['formatterUrlProperty'] = 'P9094';
 
 	$wgWBRepoSettings['badgeItems'] = [
