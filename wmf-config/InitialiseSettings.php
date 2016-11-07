@@ -16246,6 +16246,11 @@ $wgConf->settings = [
 	'wikipedia' => true,
 ],
 
+
+'wmgContentTranslationSiteTemplates' => [
+	'cookieDomain' => null,
+],
+
 'wmgUseMapSources' => [
 	'default' => false,
 	'wikivoyage' => true,
