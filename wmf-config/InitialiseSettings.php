@@ -15566,6 +15566,7 @@ $wgConf->settings = [
 	'tawikiquote' => true,
 	'tawikisource' => true,
 	'tawiktionary' => true,
+	'tcywiki' => true, // T150166
 	'test2wiki' => true,
 	'urwiki' => true, // T138507
 ],
