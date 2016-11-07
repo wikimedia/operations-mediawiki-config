@@ -77,6 +77,7 @@ if ( $wmgUseFlow ) {
 
 if ( $wmgUseContentTranslation ) {
 	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org/v1';
+	$wgContentTranslationSiteTemplates['cookieDomain'] = false;
 	$wgContentTranslationTranslateInTarget = false;
 }
 
