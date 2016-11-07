@@ -3147,6 +3147,7 @@ if ( $wmgUseOATHAuth ) {
 	}
 
 	if ( $wmgUseCentralAuth ) {
+		$wgOATHAuthAccountPrefix = 'Wikimedia';
 		$wgOATHAuthDatabase = 'centralauth';
 	}
 }
