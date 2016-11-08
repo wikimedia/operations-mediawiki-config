@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_0c34f5a5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 17674,
+      "author": {
+        "id": 3941
+      },
+      "writtenOn": "2016-11-08T17:49:30Z",
+      "side": 1,
+      "message": "if we\u0027re started to rename labs to beta, lets do so with all references then",
+      "range": {
+        "startLine": 17674,
+        "startChar": 19,
+        "endLine": 17674,
+        "endChar": 23
+      },
+      "revId": "b9041ed1e6480df815ec936af39a9b0493662b3f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
