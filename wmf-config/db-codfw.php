@@ -95,7 +95,7 @@ $wgLBFactoryConf = [
 	's1' => [
 		'db2016' => 0,   # 2.9TB  96GB, master
 #		'db2034' => 50,  # 2.9TB 160GB, rc, log #Maintenance - T149553
-		'db2042' => 50,  # 2.9TB 160GB, rc, log
+#		'db2042' => 50,  # 2.9TB 160GB, rc, log
 		'db2048' => 400, # 2.9TB 160GB
 		'db2055' => 50,  # 3.3TB 160GB, dump (inactive), vslow
 		'db2062' => 100, # 3.3TB 160GB, api
@@ -219,23 +219,23 @@ $wgLBFactoryConf = [
 	's1' => [
 		'watchlist' => [
 #			'db2034' => 1,
-			'db2042' => 1,
+#			'db2042' => 1,
 		],
 		'recentchanges' => [
 #			'db2034' => 1,
-			'db2042' => 1,
+#			'db2042' => 1,
 		],
 		'recentchangeslinked' => [
 #			'db2034' => 1,
-			'db2042' => 1,
+#			'db2042' => 1,
 		],
 		'contributions' => [
 #			'db2034' => 1,
-			'db2042' => 1,
+#			'db2042' => 1,
 		],
 		'logpager' => [
 #			'db2034' => 1,
-			'db2042' => 1,
+#			'db2042' => 1,
 		],
 		'dump' => [
 			'db2055' => 1,
