@@ -3,48 +3,48 @@ cd $(dirname $0)/conf
 
 # Create .txt symlink from mediawiki-config
 mwconfig_files_txt=(
-	CommonSettings-labs.php
+	CommonSettings-beta.php
 	CommonSettings.php
-	InitialiseSettings-labs.php
+	InitialiseSettings-beta.php
 	InitialiseSettings.php
 	ProductionServices.php
 	PoolCounterSettings.php
 	StartProfiler.php
 	abusefilter.php
 	CirrusSearch-common.php
-	CirrusSearch-labs.php
+	CirrusSearch-beta.php
 	CirrusSearch-production.php
 	db-eqiad.php
-	db-labs.php
+	db-beta.php
 	FeaturedFeedsWMF.php
-	filebackend-labs.php
+	filebackend-beta.php
 	filebackend-production.php
 	flaggedrevs.php
 	HHVMRequestInit.php
 	import.php
 	interwiki.php
 	jobqueue.php
-	jobqueue-labs.php
+	jobqueue-beta.php
 	MetaContactPages.php
 	liquidthreads.php
 	logging.php
-	logging-labs.php
+	logging-beta.php
 	mc.php
-	mc-labs.php
+	mc-beta.php
 	missing.php
-	mobile-labs.php
+	mobile-beta.php
 	mobile.php
 	proofreadpage.php
 	redis.php
 	throttle.php
 	wgConf.php
 	squid.php
-	squid-labs.php
+	squid-beta.php
 	session.php
-	session-labs.php
+	session-beta.php
 	trusted-xff.php
 	Wikibase.php
-	Wikibase-labs.php
+	Wikibase-beta.php
 	Wikibase-production.php
 	wikitech.php
 )
@@ -56,9 +56,9 @@ mwconfig_files=(
 	fc-list
 	langlist
 	wikiversions.json
-	wikiversions-labs.json
+	wikiversions-beta.json
 	wmf-config/extension-list
-	wmf-config/extension-list-labs
+	wmf-config/extension-list-beta
 	wmf-config/extension-list-wikitech
 )
 
