@@ -16,7 +16,7 @@ $wmgParserCacheDBs = [
 $wmgOldExtTemplate = [
 	'10.64.0.7'    => 1, # es1012
 	'10.64.32.185' => 1, # es1016
-#	'10.64.48.115' => 0, # es1018 # T148506
+	'10.64.48.115' => 1, # es1018
 ];
 
 $wgLBFactoryConf = [
@@ -97,13 +97,13 @@ $wgLBFactoryConf = [
 #		'db1052' => 1  , # 2.8TB  96GB, old master
 		'db1051' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1055' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
-		'db1065' => 0,   # 2.8TB 160GB, api
-		'db1066' => 0,   # 2.8TB 160GB, api
+		'db1065' => 50,  # 2.8TB 160GB, api
+		'db1066' => 50,  # 2.8TB 160GB, api
 		'db1072' => 0,   # 2.8TB 160GB, vslow, dump
 #		'db1073' => 1,   # 2.8TB 160GB
 #		'db1080' => 500, # 3.6TB 512GB schema change T139090
-		'db1083' => 300, # 3.6TB 512GB, api T148506
-		'db1089' => 300, # 3.6TB 512GB, api T148506
+		'db1083' => 500, # 3.6TB 512GB
+		'db1089' => 500, # 3.6TB 512GB
 	],
 	's2' => [
 		'db1018' => 0,   # 1.4TB  64GB, master
@@ -133,20 +133,20 @@ $wgLBFactoryConf = [
 		'db1056' => 1,   # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 #		'db1059' => 1,   # 2.8TB  96GB, api # Maintenance #T149079 # T147305
 		'db1064' => 0,   # 2.8TB 160GB, vslow, dump
-		'db1068' => 0,   # 2.8TB 160GB, api T148506
-		'db1081' => 200, # 3.6TB 512GB, api T148506
+		'db1068' => 1,   # 2.8TB 160GB, api
+		'db1081' => 500, # 3.6TB 512GB
 		'db1084' => 500, # 3.6TB 512GB
-		'db1091' => 0,   # 3.6TB 512GB T148506
+		'db1091' => 500, # 3.6TB 512GB
 	],
 	's5' => [
 		'db1049' => 0,   # 2.8TB  64GB, master
 		'db1026' => 1,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1045' => 0,   # 1.4TB  64GB, vslow, dump
-		'db1070' => 0,   # 2.8TB 160GB, api, old master T148506
-		'db1071' => 0,   # 2.8TB 160GB, api T148506
-		'db1082' => 200, # 3.6TB 512GB, api T148506
+		'db1070' => 50,  # 2.8TB 160GB, api, old master
+		'db1071' => 50,  # 2.8TB 160GB, api
+		'db1082' => 500, # 3.6TB 512GB
 		'db1087' => 500, # 3.6TB 512GB
-		'db1092' => 0,   # 3.6TB 512GB T148506
+		'db1092' => 500, # 3.6TB 512GB
 	],
 	's6' => [
 		'db1050' => 0,   # 2.8TB  64GB, master
@@ -157,7 +157,7 @@ $wgLBFactoryConf = [
 #		'db1061' => 0,   # 2.8TB 128GB
 		'db1085' => 500, # 3.6TB 512GB
 		'db1088' => 500, # 3.6TB 512GB
-		'db1093' => 0,   # 3.6TB 512GB T148506
+		'db1093' => 500, # 3.6TB 512GB
 	],
 	's7' => [
 		'db1041' => 0,   # 1.4TB  64GB, master
@@ -165,10 +165,10 @@ $wgLBFactoryConf = [
 		'db1028' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1034' => 1,   # 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 #		'db1039' => 0,   # 1.4TB  64GB
-		'db1062' => 0,   # 2.8TB 128GB, watchlist, recentchanges, contributions, logpager T148506
+		'db1062' => 1,   # 2.8TB 128GB, watchlist, recentchanges, contributions, logpager
 		'db1079' => 300, # 3.6TB 512GB, api
 		'db1086' => 500, # 3.6TB 512GB, api
-		'db1094' => 0,   # 3.6TB 512GB T148506
+		'db1094' => 500, # 3.6TB 512GB
 	],
 	'silver' => [
 		'silver' => 100,   # I have no idea if this is right
@@ -264,10 +264,8 @@ $wgLBFactoryConf = [
 			'db1072' => 1,
 		],
 		'api' => [
-			'db1065' => 0,
-			'db1066' => 0,
-			'db1083' => 1,
-			'db1089' => 1,
+			'db1065' => 1,
+			'db1066' => 1,
 		],
 	],
 	's2' => [
@@ -329,8 +327,7 @@ $wgLBFactoryConf = [
 		],
 		'api' => [
 #			'db1059' => 1,
-			'db1068' => 0, #T148506
-			'db1081' => 1, #T148506
+			'db1068' => 3,
 		],
 		'watchlist' => [
 			'db1053' => 1,
@@ -361,9 +358,8 @@ $wgLBFactoryConf = [
 			'db1045' => 1,
 		],
 		'api' => [
-			'db1070' => 0, # T148506
-			'db1071' => 0, # T148506
-			'db1082' => 1, # T148506
+			'db1070' => 1,
+			'db1071' => 1,
 		],
 		'watchlist' => [
 			'db1026' => 1,
@@ -420,23 +416,23 @@ $wgLBFactoryConf = [
 		],
 		'watchlist' => [
 			'db1034' => 1,
-			'db1062' => 0,
+			'db1062' => 100,
 		],
 		'recentchanges' => [
 			'db1034' => 1,
-			'db1062' => 0,
+			'db1062' => 100,
 		],
 		'recentchangeslinked' => [
 			'db1034' => 1,
-			'db1062' => 0,
+			'db1062' => 100,
 		],
 		'contributions' => [
 			'db1034' => 1,
-			'db1062' => 0,
+			'db1062' => 100,
 		],
 		'logpager' => [
 			'db1034' => 1,
-			'db1062' => 0,
+			'db1062' => 100,
 		],
 	],
 ],
@@ -626,7 +622,7 @@ $wgLBFactoryConf = [
 	'cluster25' => [
 		'10.64.48.116' => 1, # es1019, master
 		'10.64.16.187' => 1, # es1014
-#		'10.64.48.114' => 1, # es1017 T148506
+		'10.64.48.114' => 1, # es1017
 	],
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => [
