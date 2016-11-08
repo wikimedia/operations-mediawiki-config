@@ -221,4 +221,8 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 }
 
-require_once "{$wmfConfigDir}/Wikibase-{$wmfRealm}.php";
+if ( $wmfRealm === 'production' ) {
+	require "{$wmfConfigDir}/Wikibase-production.php";
+} elseif ( $wmfRealm === 'labs' ) {
+	require "{$wmfConfigDir}/Wikibase-beta.php";
+}
