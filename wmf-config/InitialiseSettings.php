@@ -15519,7 +15519,6 @@ $wgConf->settings = [
 'wmgUseTranslationMemory' => [
 	'default' => true,
 	'otrs_wikiwiki' => false, // T63297
-	'frwiktionary' => false, // T138972
 ],
 'wmgTranslateESIndex' => [
 	'default' => 'ttmserver',
