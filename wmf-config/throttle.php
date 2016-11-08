@@ -36,6 +36,14 @@ $wmgThrottlingExceptions[] = [ // T148852 - Edit-a-thon BDA (Poitiers)
 	'value'  => 50 // 40 expected
 ];
 
+$wmgThrottlingExceptions[] = [ // T150207 - Nashville Science edit-a-thon (Vanderbilt library)
+	'from'   => '2016-11-15T10:30 -6:00',
+	'to'     => '2016-11-15T16:00 -6:00',
+	'range'  => '129.59.122.1/25',
+	'dbname' => [ 'enwiki', 'commonswiki' ],
+	'value'  => 50 // 20 to 25 expected
+];
+
 // December 2nd
 $wmgThrottlingExceptions[] = [ // T146600
 	'from' => '2016-12-02T12:30 -6:00',
