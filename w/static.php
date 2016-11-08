@@ -29,10 +29,10 @@ define( 'MW_NO_SESSION', 'warn' );
 require_once './MWVersion.php';
 require getMediaWiki( 'includes/WebStart.php' );
 
-function wmfStaticShowError( $message, $smaxage = 60, $maxage = 0 ) {
+function wmfStaticShowError( $message, $smaxage = 60 ) {
 	header(
 		'Cache-Control: ' .
-		's-maxage=' . (int)$smaxage . ', must-revalidate, max-age=' . (int)$maxage
+		's-maxage=' . (int)$smaxage . ', must-revalidate, max-age=0'
 	);
 	header( 'Content-Type: text/plain; charset=utf-8' );
 	echo "$message\n";
