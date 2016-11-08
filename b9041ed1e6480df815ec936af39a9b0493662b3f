@@ -46,6 +46,30 @@
       "revId": "b9041ed1e6480df815ec936af39a9b0493662b3f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_4c867dad",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 17674,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2016-11-08T19:14:19Z",
+      "side": 1,
+      "message": "Actually. I\u0027m not sure... realm is indeed \"labs\"\n\nhttps://github.com/wikimedia/operations-puppet/blob/production/modules/base/manifests/environment.pp#L75-L85",
+      "parentUuid": "4eb4ebfb_cc3ded8b",
+      "range": {
+        "startLine": 17674,
+        "startChar": 19,
+        "endLine": 17674,
+        "endChar": 23
+      },
+      "revId": "b9041ed1e6480df815ec936af39a9b0493662b3f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
