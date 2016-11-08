@@ -103,7 +103,7 @@ $wgLBFactoryConf = [
 #		'db1073' => 1,   # 2.8TB 160GB multiple hardware issues T149728
 		'db1080' => 500, # 3.6TB 512GB
 		'db1083' => 500, # 3.6TB 512GB
-#		'db1089' => 500, # 3.6TB 512GB schema change T139090
+		'db1089' => 500, # 3.6TB 512GB
 	],
 	's2' => [
 		'db1018' => 0,   # 1.4TB  64GB, master
