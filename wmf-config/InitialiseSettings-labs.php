@@ -588,5 +588,8 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		'wmgEnablePageViewInfo' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
