@@ -214,8 +214,8 @@ if ( isset( $_SERVER['HTTP_X_WIKIMEDIA_DEBUG'] ) && preg_match( '/\breadonly\b/i
 }
 
 if ( $wmfRealm === 'labs' ) {
-	require "$wmfConfigDir/db-labs.php";
-	require "$wmfConfigDir/mc-labs.php";
+	require "$wmfConfigDir/db-beta.php";
+	require "$wmfConfigDir/mc-beta.php";
 } else {
 	require "$wmfConfigDir/mc.php";
 	require "$wmfConfigDir/db-{$wmfDatacenter}.php";
@@ -557,7 +557,7 @@ if ( $wmfRealm === 'production' ) {
 	$wgStatsdMetricPrefix = 'BetaMediaWiki';
 	if ( $wmgUseClusterSquid ) {
 		$wgUseSquid = true;
-		require( "$wmfConfigDir/squid-labs.php" );
+		require( "$wmfConfigDir/squid-beta.php" );
 	}
 }
 
@@ -693,7 +693,7 @@ if ( $wmgUseWikiHiero ) {
 include( $IP . '/extensions/SiteMatrix/SiteMatrix.php' );
 
 // Config for sitematrix
-$wgSiteMatrixFile = ( $wmfRealm === 'labs' ) ? "$IP/../langlist-labs" : "$IP/../langlist";
+$wgSiteMatrixFile = ( $wmfRealm === 'labs' ) ? "$IP/../langlist-beta" : "$IP/../langlist";
 
 $wgSiteMatrixSites = [
 	'wiki' => [
@@ -1045,7 +1045,11 @@ $wgPasswordResetRoutes['email'] = true;
 
 if ( $wmgUseClusterFileBackend ) {
 	# Cluster-dependent files for file backend
-	require "{$wmfConfigDir}/filebackend-{$wmfRealm}.php";
+	if ( $wmfRealm === 'production' ) {
+		require "{$wmfConfigDir}/filebackend-production.php";
+	} elseif ( $wmfRealm === 'labs' ) {
+		require "{$wmfConfigDir}/filebackend-beta.php";
+	}
 } else {
 	$wgUseInstantCommons = true;
 }
@@ -1053,7 +1057,7 @@ if ( $wmgUseClusterFileBackend ) {
 if ( $wmgUseClusterJobqueue ) {
 	# Cluster-dependent files for job queue and job queue aggregator
 	require $wmfRealm === 'labs'
-		? "$wmfConfigDir/jobqueue-labs.php"
+		? "$wmfConfigDir/jobqueue-beta.php"
 		: "$wmfConfigDir/jobqueue.php";
 }
 
@@ -3187,7 +3191,7 @@ $wgExtraLanguageNames = $wmgExtraLanguageNames;
 
 
 if ( $wmfRealm === 'labs' ) {
-	require( "$wmfConfigDir/CommonSettings-labs.php" );
+	require( "$wmfConfigDir/CommonSettings-beta.php" );
 }
 
 if ( $wmgUseCheckUser ) {
