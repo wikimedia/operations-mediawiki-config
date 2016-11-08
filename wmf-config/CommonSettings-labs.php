@@ -364,13 +364,6 @@ if ( $wmgUsePerformanceInspector ) {
 	wfLoadExtension( 'PerformanceInspector' );
 }
 
-if ( $wmgUseOATHAuth && $wmgUseCentralAuth ) {
-	wfLoadExtension( 'OATHAuth' );
-	$wgOATHAuthDatabase = 'centralauth';
-	// Roll this feature out to specific groups initially
-	$wgGroupPermissions['*']['oathauth-enable'] = false;
-}
-
 if ( $wmgUseUniversalLanguageSelector ) {
 	$wgDefaultUserOptions['compact-language-links'] = 0;
 }
