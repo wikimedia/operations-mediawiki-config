@@ -251,6 +251,7 @@ $wgConf->settings = [
 	'aswikisource' => 'Asia/Kolkata', // T45129
 	'barwiki' => 'Europe/Berlin',
 	'bat_smgwiki' => 'Europe/Vilnius',
+	'bdwikimedia' => 'Asia/Dhaka', // T150252
 	'be_x_oldwiki' => 'Europe/Minsk',
 	'bewiki' => 'Europe/Minsk',
 	'bewikisource' => 'Europe/Minsk',
