@@ -2,6 +2,29 @@
   "comments": [
     {
       "key": {
+        "uuid": "4eb4ebfb_65d83159",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 134,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2016-11-08T09:52:11Z",
+      "side": 1,
+      "message": "Shouldn\u0027t it be depooled from here, too?",
+      "range": {
+        "startLine": 134,
+        "startChar": 2,
+        "endLine": 134,
+        "endChar": 37
+      },
+      "revId": "ddf0e05fbbc4f9bf14dff1a3fcb7ca6d31187a0c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_e51d6115",
         "filename": "wmf-config/db-eqiad.php",
         "patchSetId": 1
