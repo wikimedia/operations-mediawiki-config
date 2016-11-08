@@ -346,6 +346,7 @@ if ( $wmgUseGraph ) {
 	// **** THIS LIST MUST MATCH puppet/hieradata/labs/deployment-prep/common.yaml ****
 	// See https://www.mediawiki.org/wiki/Extension:Graph#External_data
 	$wgGraphAllowedDomains['http'] = [ 'wmflabs.org' ];
+	$wgGraphAllowedDomains['https'][] = [ 'beta.wmflabs.org' ];
 	$wgGraphAllowedDomains['wikirawupload'][] = 'upload.beta.wmflabs.org';
 	$wgGraphAllowedDomains['wikidatasparql'][] = 'wdqs-test.wmflabs.org';
 }
