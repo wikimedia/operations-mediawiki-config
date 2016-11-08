@@ -238,7 +238,12 @@ $wgCirrusSearchUseIcuFolding = $wmgCirrusSearchUseIcuFolding;
 $wgCirrusSearchLanguageWeight = $wmgCirrusSearchLanguageWeight;
 
 # Load per realm specific configuration, either:
-# - CirrusSearch-labs.php
+# - CirrusSearch-beta.php
 # - CirrusSearch-production.php
 #
-require "{$wmfConfigDir}/CirrusSearch-{$wmfRealm}.php";
+
+if ( $wmfRealm === 'production' ) {
+	require "{$wmfConfigDir}/CirrusSearch-production.php";
+} elseif ( $wmfRealm === 'labs' ) {
+	require "{$wmfConfigDir}/CirrusSearch-beta.php";
+}
