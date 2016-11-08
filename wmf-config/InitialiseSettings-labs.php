@@ -582,5 +582,8 @@ function wmfLabsSettings() {
 		'wmgUsePageViewInfo' => [
 			'default' => true,
 		],
+		'wgPageViewInfoDomain' => [
+			'default' => 'en.wikipedia.org',
+		],
 	];
 } # wmflLabsSettings()
