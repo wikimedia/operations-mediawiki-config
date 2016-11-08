@@ -294,7 +294,7 @@ class MWMultiVersion {
 		$this->versionLoaded = true;
 
 		if ( $wmfRealm === 'labs' ) {
-			$phpFilename = MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions-labs.php';
+			$phpFilename = MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions-beta.php';
 		} else {
 			$phpFilename = MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.php';
 		}
