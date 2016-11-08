@@ -29,7 +29,8 @@ define( 'MW_NO_SESSION', 'warn' );
 require_once './MWVersion.php';
 require getMediaWiki( 'includes/WebStart.php' );
 
-function wmfStaticShowError( $message, $smaxage = 60 ) {
+function wmfStaticShowError( $message, $status, $smaxage = 60 ) {
+	HttpStatus::header( $status );
 	header(
 		'Cache-Control: ' .
 		's-maxage=' . (int)$smaxage . ', must-revalidate, max-age=0'
@@ -48,15 +49,13 @@ function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 	$ctype = StreamFile::contentTypeFromPath( $filePath, /* safe: not for upload */ false );
 	if ( !$ctype || $ctype === 'unknown/unknown' ) {
 		// Directory, extension-less file or unknown extension
-		header( 'HTTP/1.1 400 Bad Request' );
-		wmfStaticShowError( 'Invalid file type' );
+		wmfStaticShowError( 'Invalid file type', 400 );
 		return;
 	}
 
 	$stat = stat( $filePath );
 	if ( !$stat ) {
-		header( 'HTTP/1.1 404 Not Found' );
-		wmfStaticShowError( 'Unknown file path', 300 );
+		wmfStaticShowError( 'Unknown file path', 404, 300 );
 		return;
 	}
 
@@ -92,16 +91,14 @@ function wmfStaticRespond() {
 	global $wgScriptPath, $IP;
 
 	if ( !isset( $_SERVER['REQUEST_URI'] ) || !isset( $_SERVER['SCRIPT_NAME'] ) ) {
-		header( 'HTTP/1.1 500 Internal Server Error' );
-		wmfStaticShowError( 'Invalid request' );
+		wmfStaticShowError( 'Invalid request', 500 );
 		return;
 	}
 
 	// Ignore direct request (eg. "/w/static.php" or "/w/static.php/test")
 	// (use strpos instead of equal to ignore pathinfo and query string)
 	if ( strpos( $_SERVER['REQUEST_URI'], $_SERVER['SCRIPT_NAME'] ) === 0 ) {
-		header( 'HTTP/1.1 400 Bad Request' );
-		wmfStaticShowError( 'Invalid request' );
+		wmfStaticShowError( 'Invalid request', 400 );
 		return;
 	}
 
@@ -111,8 +108,7 @@ function wmfStaticRespond() {
 	// Strip prefix
 	$urlPrefix = $wgScriptPath;
 	if ( strpos( $uriPath, $urlPrefix ) !== 0 ) {
-		header( 'HTTP/1.1 400 Bad Request' );
-		wmfStaticShowError( 'Bad request' );
+		wmfStaticShowError( 'Bad request', 400 );
 		return;
 	}
 	$path = substr( $uriPath, strlen( $urlPrefix ) );
@@ -150,8 +146,7 @@ function wmfStaticRespond() {
 		}
 
 		if ( strpos( $filePath, $branchDir ) !== 0 ) {
-			header( 'HTTP/1.1 400 Bad Request' );
-			wmfStaticShowError( 'Bad request' );
+			wmfStaticShowError( 'Bad request', 400 );
 			return;
 		}
 
@@ -183,8 +178,7 @@ function wmfStaticRespond() {
 	}
 
 	if ( !$fallback ) {
-		header( 'HTTP/1.1 404 Not Found' );
-		wmfStaticShowError( 'Unknown file path', 300 );
+		wmfStaticShowError( 'Unknown file path', 404, 300 );
 		$stats->increment( 'wmfstatic.notfound' );
 		return;
 	}
