@@ -95,10 +95,10 @@ $wgLBFactoryConf = [
 	's1' => [
 		'db1057' => 0,   # 2.8TB  96GB, master
 #		'db1052' => 1  , # 2.8TB  96GB, old master
-		'db1051' => 1,   # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
+		'db1051' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1055' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
-		'db1065' => 1,   # 2.8TB 160GB, api
-		'db1066' => 1,   # 2.8TB 160GB, api
+		'db1065' => 50,  # 2.8TB 160GB, api
+		'db1066' => 50,  # 2.8TB 160GB, api
 		'db1072' => 0,   # 2.8TB 160GB, vslow, dump
 #		'db1073' => 1,   # 2.8TB 160GB
 		'db1080' => 500, # 3.6TB 512GB
@@ -238,24 +238,24 @@ $wgLBFactoryConf = [
 'groupLoadsBySection' => [
 	's1' => [
 		'watchlist' => [
-			'db1051' => 1, # hw. issues, decrease load T149908
-			'db1055' => 2,
+			'db1051' => 1,
+			'db1055' => 1,
 		],
 		'recentchanges' => [
 			'db1051' => 1,
-			'db1055' => 2,
+			'db1055' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1051' => 1,
-			'db1055' => 2,
+			'db1055' => 1,
 		],
 		'contributions' => [
 			'db1051' => 1,
-			'db1055' => 2,
+			'db1055' => 1,
 		],
 		'logpager' => [
 			'db1051' => 1,
-			'db1055' => 2,
+			'db1055' => 1,
 		],
 		'dump' => [
 			'db1072' => 1,
