@@ -61,9 +61,7 @@ if ( $wmgUseFlow ) {
 	$wgFlowExternalStore = [
 		'DB://flow_cluster1',
 	];
-}
 
-if ( $wgDBname === 'enwiki' || $wgDBname === 'cawiki' ) {
 	$wgExtraNamespaces += [
 		190 => 'Flow_test',
 		191 => 'Flow_test_talk',
