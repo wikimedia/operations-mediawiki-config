@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "4eb4ebfb_43908398",
+        "filename": "scap/plugins/patch.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 1706
+      },
+      "writtenOn": "2016-11-09T19:05:47Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4eb4ebfb_63481f61",
+      "revId": "218e454227c34599862c9eaed229390173f1aeba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4eb4ebfb_4343e343",
         "filename": "scap/plugins/patch.py",
         "patchSetId": 5
@@ -30,6 +48,24 @@
       "writtenOn": "2016-11-09T18:50:16Z",
       "side": 1,
       "message": "if you get rid of args\u003d1 does it still need this?",
+      "revId": "218e454227c34599862c9eaed229390173f1aeba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_23ee971f",
+        "filename": "scap/plugins/patch.py",
+        "patchSetId": 5
+      },
+      "lineNbr": 48,
+      "author": {
+        "id": 1706
+      },
+      "writtenOn": "2016-11-09T19:05:47Z",
+      "side": 1,
+      "message": "Nope, apparently not. Fixed.",
+      "parentUuid": "4eb4ebfb_4343e343",
       "revId": "218e454227c34599862c9eaed229390173f1aeba",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
