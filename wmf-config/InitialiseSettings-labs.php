@@ -375,6 +375,7 @@ function wmfLabsSettings() {
 		],
 		'wmgFlowEnableOptInBetaFeature' => [
 			'enwiki' => true,
+			'hewiki' => true,
 		],
 
 		'wgWPBBannerProperty' => [
