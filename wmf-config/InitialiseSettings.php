@@ -4584,6 +4584,7 @@ $wgConf->settings = [
 		'oai' => 'debug',
 		'OAuth' => 'debug',
 		'OutputBuffer' => 'debug',
+		'PageViewInfo' => 'info',
 		'poolcounter' => 'debug',
 		'purge' => 'debug',
 		'query' => 'debug',
