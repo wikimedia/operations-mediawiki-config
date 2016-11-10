@@ -225,7 +225,7 @@ function wmfLabsSettings() {
 			'simplewiki' => true,
 		],
 
-		'wmgUseKartographer' => [
+		'-wgKartographerEnableMapFrame' => [
 			'default'	=> true,
 		],
 
