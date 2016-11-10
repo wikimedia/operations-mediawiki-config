@@ -14587,6 +14587,7 @@ $wgConf->settings = [
 	'default' => 'registered',
 	'wikidatawiki' => 'unregistered',
 	'metawiki' => false, // T43141
+	'officewiki' => false, // T95007
 ],
 'wmgMFNoMobileCategory' => [
 	'default' => false,
