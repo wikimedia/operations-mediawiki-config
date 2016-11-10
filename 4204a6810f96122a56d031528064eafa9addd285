@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4eb4ebfb_b8208da9",
+        "filename": "scap/plugins/patch.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2016-11-10T17:22:49Z",
+      "side": 1,
+      "message": "if you did:\n\nos.path.join(self.config[\u0027stage_dir\u0027], \u0027php-%s\u0027 % branch)\n\nyou could run this from anywhere on the machine.",
+      "revId": "4204a6810f96122a56d031528064eafa9addd285",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
