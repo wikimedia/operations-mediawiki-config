@@ -16,6 +16,24 @@
       "revId": "4204a6810f96122a56d031528064eafa9addd285",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_dbfc730a",
+        "filename": "scap/plugins/patch.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-11-10T17:25:44Z",
+      "side": 1,
+      "message": "Really? Since it\u0027s a plugin it wouldn\u0027t be loaded unless you\u0027re doing scap in this directory to begin with :)",
+      "parentUuid": "4eb4ebfb_b8208da9",
+      "revId": "4204a6810f96122a56d031528064eafa9addd285",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
