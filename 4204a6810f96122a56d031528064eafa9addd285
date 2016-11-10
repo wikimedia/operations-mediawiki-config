@@ -34,6 +34,24 @@
       "revId": "4204a6810f96122a56d031528064eafa9addd285",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4eb4ebfb_3b0c773c",
+        "filename": "scap/plugins/patch.py",
+        "patchSetId": 6
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 1706
+      },
+      "writtenOn": "2016-11-10T17:28:30Z",
+      "side": 1,
+      "message": "Actually you can put the plugin in ~/.scap/plugins/ to run it from anywhere.",
+      "parentUuid": "4eb4ebfb_dbfc730a",
+      "revId": "4204a6810f96122a56d031528064eafa9addd285",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
