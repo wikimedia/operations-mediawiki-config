@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
-require_once __DIR__ . '/SiteConfiguration.php';
+// TODO: how will we import SiteConfiguration?
 
 class cirrusTests extends PHPUnit_Framework_TestCase {
 	public function testClusterConfigurationForProdTestwiki() {
