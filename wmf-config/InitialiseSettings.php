@@ -4615,6 +4615,7 @@ $wgConf->settings = [
 		'texvc' => 'debug',
 		'thumbnailaccess' => 'debug', // T106323
 		'thumbnail' => 'debug',
+		'throttler' => 'info',
 		'TitleBlacklist-cache' => 'debug', // For T85428
 		'torblock' => 'debug',
 		'ts_badpass' => 'debug',
