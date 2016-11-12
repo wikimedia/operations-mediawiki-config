@@ -22,6 +22,30 @@
       "revId": "13d556f569f13acfdede075ac153ae550b3740b7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2eb1770d_2f4a51c9",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1512,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-11-12T17:05:30Z",
+      "side": 1,
+      "message": "Make it {group} rather and add\n\n    \u0027group\u0027 \u003d\u003e $user-\u003eisAllowed( \u0027delete\u0027 ) ? \u0027sysop\u0027 : \u0027user\u0027,\n\nto the context data.",
+      "parentUuid": "2eb1770d_cff9ad80",
+      "range": {
+        "startLine": 1512,
+        "startChar": 34,
+        "endLine": 1512,
+        "endChar": 41
+      },
+      "revId": "13d556f569f13acfdede075ac153ae550b3740b7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
