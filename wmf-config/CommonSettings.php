@@ -3145,6 +3145,10 @@ if ( $wmgUseOATHAuth ) {
 
 	if ( $wmgOATHAuthDisableRight ) {
 		$wgGroupPermissions['*']['oathauth-enable'] = false;
+		$wgGroupPermissions['bureaucrat']['oathauth-enable'] = true;
+		$wgGroupPermissions['checkuser']['oathauth-enable'] = true;
+		$wgGroupPermissions['sysop']['oathauth-enable'] = true;
+		$wgGroupPermissions['oversight']['oathauth-enable'] = true;
 	}
 
 	if ( $wmgUseCentralAuth ) {
