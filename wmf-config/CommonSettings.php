@@ -2691,6 +2691,15 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 		$wgCookieDomain = "labtestwikitech.wikimedia.org"; // TODO: Is this really necessary?
 	}
 
+	$wgPasswordAttemptThrottle = [
+		// Short term limit
+		[ 'count' => 20, 'seconds' => 300 ],
+		// Long term limit. We need to balance the risk
+		// of somebody using this as a DoS attack to lock someone
+		// out of their account, and someone doing a brute force attack.
+		[ 'count' => 600, 'seconds' => 60*60*48 ],
+	];
+
 	// Some settings specific to wikitech's extensions
 	include( "$wmfConfigDir/wikitech.php" );
 }
