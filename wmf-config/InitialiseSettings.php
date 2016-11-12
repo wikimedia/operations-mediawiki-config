@@ -3550,11 +3550,11 @@ $wgConf->settings = [
 		'Discussão_em_tradução' => 109,
 	],
 	'+rowiki' => [
-		'Discuţie_MediWiki' => NS_MEDIAWIKI_TALK,
+		'Discuţie_MediaWiki' => NS_MEDIAWIKI_TALK,
 		'Discuţie_Portal' => 101,
 		'Discuţie_Proiect' => 103,
 		'Book' => 110, // T68530
-		'Discuţie_Book' => 111,
+		'Book_talk' => 111,
 	],
 	'+rowikibooks' => [
 		'Discuţie_Wikibooks' => NS_PROJECT_TALK,
@@ -3562,7 +3562,7 @@ $wgConf->settings = [
 	'+rowikinews' => [
 		'Wikiştiri' => NS_PROJECT,
 		'Discuţie_Wikiştiri' => NS_PROJECT_TALK,
-		'Discuţie_MediWiki' => NS_MEDIAWIKI_TALK,
+		'Discuție_MediaWiki' => NS_MEDIAWIKI_TALK,
 	],
 	'+rowikisource' => [
 		'Author' => 102,
