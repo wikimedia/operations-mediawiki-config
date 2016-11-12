@@ -86,6 +86,7 @@ $wgConf->settings = [
 'wmgElevateDefaultPasswordPolicy' => [
 	'default' => false,
 	'private' => true, // T149638
+	'fishbowl' => true,
 ],
 
 # wgLanguageCode @{
@@ -17611,13 +17612,12 @@ $wgConf->settings = [
 
 'wmgUseOATHAuth' => [
 	'default' => true,
-	'private' => true, // T149614
-	'fishbowl' => false,
 ],
 
 'wmgOATHAuthDisableRight' => [
 	'default' => true, // Roll out to specific groups
 	'private' => false, // T149614
+	'fishbowl' => false,
 	'nonglobal' => false,
 ],
 
