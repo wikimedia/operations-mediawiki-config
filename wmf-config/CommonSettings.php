@@ -1514,13 +1514,33 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $u
 		$headers = apache_request_headers();
 
 		$logger = LoggerFactory::getInstance( 'badpass' );
-		$logger->info( 'Login failed for sysop {name} from {ip} - {xff} - {ua}: {messagestr}', [
+		$logger->info( 'Login failed for {group} {name} from {ip} - {xff} - {ua} - {geocookie}: {messagestr}', [
+			'successful' => false,
+			'group' => $user->isAllowed( 'delete' ) ? 'sysop' : 'user',
 			'name' => $user->getName(),
 			'ip' => $wgRequest->getIP(),
 			'xff' => @$headers['X-Forwarded-For'],
 			'ua' => @$headers['User-Agent'],
 			'guessed' => $guessed,
 			'messagestr' => $response->message->toString(),
+			'geocookie' => $wgRequest->getCookie( 'GeoIP', '' ),
+		] );
+	}
+};
+// T150554 log successful attempts too
+$wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $username ) {
+	if ( $response->status === \MediaWiki\Auth\AuthenticationResponse::PASS ) {
+		global $wgRequest;
+		$headers = apache_request_headers();
+		$logger = LoggerFactory::getInstance( 'badpass' );
+		$logger->info( 'Login succeeded for {group} {name} from {ip} - {xff} - {ua} - {geocookie}', [
+			'successful' => true,
+			'group' => $user->isAllowed( 'delete' ) ? 'sysop' : 'user',
+			'name' => $user->getName(),
+			'ip' => $wgRequest->getIP(),
+			'xff' => @$headers['X-Forwarded-For'],
+			'ua' => @$headers['User-Agent'],
+			'geocookie' => $wgRequest->getCookie( 'GeoIP', '' ),
 		] );
 	}
 };
