@@ -3149,6 +3149,9 @@ if ( $wmgUseOATHAuth ) {
 		$wgGroupPermissions['checkuser']['oathauth-enable'] = true;
 		$wgGroupPermissions['sysop']['oathauth-enable'] = true;
 		$wgGroupPermissions['oversight']['oathauth-enable'] = true;
+		if ( isset( $wgGroupPermissions['abusefilter'] ) ) {
+			$wgGroupPermissions['abusefilter']['oathauth-enable'] = true;
+		}
 	}
 
 	if ( $wmgUseCentralAuth ) {
