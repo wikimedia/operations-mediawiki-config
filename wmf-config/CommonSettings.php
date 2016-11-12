@@ -1504,7 +1504,7 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $u
 		$user = User::newFromName( $username );
 		$guessed = true;
 	}
-	if ( $user && $user->isAllowed( 'delete' ) && $response->status === \MediaWiki\Auth\AuthenticationResponse::FAIL ) {
+	if ( $user && $response->status === \MediaWiki\Auth\AuthenticationResponse::FAIL ) {
 		global $wgRequest;
 		$headers = apache_request_headers();
 
