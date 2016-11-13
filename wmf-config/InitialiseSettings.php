@@ -1146,6 +1146,7 @@ $wgConf->settings = [
 'wgLogoHD' => [
     # Wikipedia
 	'bnwiki' => [ '1.5x' => '/static/images/project-logos/bnwiki-1.5x.png', '2x' => '/static/images/project-logos/bnwiki-2x.png' ],
+	'cebwiki' => [ '1.5x' => '/static/images/project-logos/cebwiki-1.5x.png', '2x' => '/static/images/project-logos/cebwiki-2x.png' ], // T150616
 	'cswiki' => [ '1.5x' => '/static/images/project-logos/cswiki-1.5x.png', '2x' => '/static/images/project-logos/cswiki-2x.png' ], // T130392
 	'enwiki' => [ '1.5x' => '/static/images/project-logos/enwiki-1.5x.png', '2x' => '/static/images/project-logos/enwiki-2x.png' ],
 	'dawiki' => [ '1.5x' => '/static/images/project-logos/dawiki-1.5x.png', '2x' => '/static/images/project-logos/dawiki-2x.png' ], // T131033
