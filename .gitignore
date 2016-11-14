@@ -16,9 +16,6 @@ wikiversions-labs.php
 wmf-config/*-setup.php
 boardvote.gpg
 
-## Not in version control yet
-fonts
-
 # Test runners
 /logs
 

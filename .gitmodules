@@ -7,3 +7,6 @@
 [submodule "wmf-config/event-schemas"]
 	path = wmf-config/event-schemas
 	url = https://gerrit.wikimedia.org/r/mediawiki/event-schemas
+[submodule "fonts"]
+	path = fonts
+	url = https://gerrit.wikimedia.org/r/p/operations/mediawiki-config/fonts
