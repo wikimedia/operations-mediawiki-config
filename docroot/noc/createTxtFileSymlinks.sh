@@ -42,6 +42,7 @@ mwconfig_files_txt=(
 	squid-labs.php
 	session.php
 	session-labs.php
+	timeline.php
 	trusted-xff.php
 	Wikibase.php
 	Wikibase-labs.php
