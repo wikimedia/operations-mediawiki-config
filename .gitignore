@@ -15,9 +15,6 @@ wikiversions.php
 wikiversions-labs.php
 wmf-config/*-setup.php
 
-## Not in version control yet
-fonts
-
 # Test runners
 /logs
 
