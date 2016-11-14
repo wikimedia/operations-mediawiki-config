@@ -88,7 +88,7 @@ $wgCirrusSearchShardCount = [
 	'codfw' => $wmgCirrusSearchShardCount,
 ];
 
-if (! isset( $wmgCirrusSearchReplicas['eqiad'] ) ) {
+if ( ! isset( $wmgCirrusSearchReplicas['eqiad'] ) ) {
 	$wgCirrusSearchReplicas = [
 		'eqiad' => $wmgCirrusSearchReplicas,
 		'codfw' => $wmgCirrusSearchReplicas,

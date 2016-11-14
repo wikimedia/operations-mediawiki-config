@@ -2,14 +2,14 @@
 # WARNING: This file is publically viewable on the web.
 #          Do not put private data here.
 
-if( $wmfRealm == 'labs' ) { # safe guard
+if ( $wmfRealm == 'labs' ) { # safe guard
 	# Database configuration files for the beta labs
 
 	$wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
 
 	$wgLBFactoryConf = [
 
-		#Requires 'sectionsByDB', 'sectionLoads', 'serverTemplate'
+		# Requires 'sectionsByDB', 'sectionLoads', 'serverTemplate'
 
 		'class' => 'LBFactoryMulti',
 
