@@ -4,7 +4,6 @@ import os.path
 import subprocess
 
 import scap.cli as cli
-import scap.arg as arg
 import scap.utils as utils
 
 from exceptions import ValueError
@@ -48,7 +47,7 @@ class SecurityPatchManager(cli.Application):
 
         branch = branch.rstrip('/')
         stage_dir = self.config.get('stage_dir', './')
-        
+
         self.patchdir = os.path.join('/srv/patches/', branch)
         self.checkdir('patch', self.patchdir)
 
@@ -93,7 +92,8 @@ class SecurityPatchManager(cli.Application):
         with utils.cd(repo_dir):
             self.check_patch(patch)
             if not self.arguments.check_only:
-                self.get_logger().info('In %s, Applying patch: %s' % (repo_dir, patch))
+                self.get_logger().info(
+                    'In %s, Applying patch: %s' % (repo_dir, patch))
                 try:
                     subprocess.check_call(['git', 'am', '-3', patch])
                 except subprocess.CalledProcessError as ex:
