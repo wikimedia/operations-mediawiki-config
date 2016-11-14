@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2eb1770d_4430dffc",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2016-11-14T05:10:16Z",
+      "side": 1,
+      "message": "Fixed in https://gerrit.wikimedia.org/r/#/c/321350/",
+      "revId": "7094f2b64aa218180a2687db2892e552910cabeb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
