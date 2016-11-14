@@ -17159,6 +17159,8 @@ $wgConf->settings = [
 ],
 # @} end of wmgCirrusSearchWikiToNameMap
 
+'wmgCirrusSearchInterwikiSources' => include __DIR__ . '/CirrusSearch-interwikiSources.php',
+
 'wmgUseCite' => [
 	'default' => true,
 	'loginwiki' => false,
