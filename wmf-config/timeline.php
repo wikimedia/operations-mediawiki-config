@@ -11,9 +11,9 @@ if ( $wgDBname === 'testwiki' || $wgDBname === 'mlwiki' ) {
 	// MergeFonts("FreeSerif.ttf");
 	// SetFontNames("FreeSans-WMF", "FreeSans WMF", "FreeSans WMF Regular", "Regular", "");
 	// Generate("FreeSansWMF.ttf", "", 4 );
-	$wgTimelineFontFile = 'FreeSansWMF.ttf';
+	$wgTimelineFontFile = 'FreeSansWMF';
 } elseif ( $lang == 'zh' ) {
-	$wgTimelineFontFile = 'unifont-5.1.20080907.ttf';
+	$wgTimelineFontFile = 'unifont-5.1.20080907';
 }
 $wgTimelineFileBackend = 'local-multiwrite';
 $wgTimelineEpochTimestamp = '20130601000000';
