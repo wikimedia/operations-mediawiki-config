@@ -665,21 +665,10 @@ $wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $acti
 };
 
 if ( $wmgUseTimeline ) {
-	wfLoadExtension( 'timeline' );
-	if ( $wgDBname === 'testwiki' || $wgDBname === 'mlwiki' ) {
-		// FreeSansWMF has been generated from FreeSans and FreeSerif by using this script with fontforge:
-		// Open("FreeSans.ttf");
-		// MergeFonts("FreeSerif.ttf");
-		// SetFontNames("FreeSans-WMF", "FreeSans WMF", "FreeSans WMF Regular", "Regular", "");
-		// Generate("FreeSansWMF.ttf", "", 4 );
-		$wgTimelineFontFile = 'FreeSansWMF.ttf';
-	} elseif ( $lang == 'zh' ) {
-		$wgTimelineFontFile = 'unifont-5.1.20080907.ttf';
-	}
-	$wgTimelineFileBackend = 'local-multiwrite';
-	$wgTimelineEpochTimestamp = '20130601000000';
+	include( "$wmfConfigDir/timeline.php" );
 }
-
+# Most probably only used by EasyTimeline which is conditionally included above
+# but it is hard know whether there other use cases.
 putenv( "GDFONTPATH=/srv/mediawiki/fonts" );
 
 if ( $wmgUseWikiHiero ) {
