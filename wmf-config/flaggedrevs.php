@@ -94,7 +94,7 @@ elseif ( $wgDBname == 'cewiki' ) { // based on ruwiki settings
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 }
 
-elseif ( $wgDBname == 'ckbwiki') {
+elseif ( $wgDBname == 'ckbwiki' ) {
 	# Namespaces
 	$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT, NS_HELP, NS_TEMPLATE, NS_CATEGORY, NS_FILE, 100, 102, 828 ];
 	# Show only on a per-page basis
@@ -339,7 +339,7 @@ elseif ( $wgDBname == 'eowiki' ) {
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 }
 
-elseif ( $wgDBname == 'fawiki') {
+elseif ( $wgDBname == 'fawiki' ) {
 	# Namespaces
 	$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT, NS_HELP, NS_TEMPLATE, NS_CATEGORY, NS_FILE, 100, 102, 828 ];
 	# Show only on a per-page basis
@@ -389,7 +389,7 @@ elseif ( $wgDBname == 'fawikinews' ) {
 }
 
 elseif ( $wgDBname == 'fiwiki' ) {
-	//$wgFlaggedRevsTags = array( 'accuracy'=>2 );
+	// $wgFlaggedRevsTags = array( 'accuracy'=>2 );
 	$wgFlaggedRevsAutoReview = true;
 	$wgFlaggedRevsAutoReviewNew = true;
 	$wgFlaggedRevsOverride = false;
@@ -653,7 +653,7 @@ elseif ( $wgDBname == 'ruwikinews' ) {
 	$wgFlaggedRevsWhitelist = [ 'Main_Page' ];
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 	$wgGroupPermissions['sysop']['review'] = true;
-	unset($wgGroupPermissions['reviewer']);
+	unset( $wgGroupPermissions['reviewer'] );
 }
 
 elseif ( $wgDBname == 'ruwikiquote' ) {}
@@ -728,7 +728,7 @@ elseif ( $wgDBname == 'trwikiquote' ) {
 	unset( $wgGroupPermissions['reviewer'] );
 }
 
-elseif( $wgDBname == 'ukwiki' ) {
+elseif ( $wgDBname == 'ukwiki' ) {
 	$wgFlaggedRevValues = 1;
 	$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 828 ];
 	$wgFlaggedRevsTags['accuracy']['levels'] = 3;

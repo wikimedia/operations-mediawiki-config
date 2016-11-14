@@ -477,8 +477,8 @@ function wmfLabsSettings() {
 			], // T127661
 		],
 		'wgOresDamagingThresholds' => [
-			'default' => [ 'hard' => 0.5, 'soft'=> 0.7 ],
-			'wikipedia' => [ 'hard' => 0.6, 'soft'=> 0.7 ], // T127661
+			'default' => [ 'hard' => 0.5, 'soft' => 0.7 ],
+			'wikipedia' => [ 'hard' => 0.6, 'soft' => 0.7 ], // T127661
 		],
 		'wgOresEnabledNamespaces' => [
 			'default' => [],

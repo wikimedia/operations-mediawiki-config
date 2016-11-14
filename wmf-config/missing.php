@@ -51,11 +51,11 @@ function handleMissingWiki() {
 	$project = $incubatorCode = false;
 	if ( count( $tmp ) == 3 ) {
 		list( $language, $project, $tld ) = $tmp;
-		if( isset( $_SERVER['PATH_INFO'] )
+		if ( isset( $_SERVER['PATH_INFO'] )
 			&& preg_match( '!^/(.*)$!', $_SERVER['PATH_INFO'], $m ) )
 		{
 			$page = $m[1];
-		} elseif( isset( $_GET['title'] ) ) {
+		} elseif ( isset( $_GET['title'] ) ) {
 			$page = $_GET['title']; # index.php?title=Page
 		} else {
 			$page = ''; # Main page
@@ -68,7 +68,7 @@ function handleMissingWiki() {
 		return;
 	}
 
-	if( strpos( $page, ':' ) !== false ) {
+	if ( strpos( $page, ':' ) !== false ) {
 		# Open the interwiki file to see if we have an interwiki prefix
 		$db = null;
 		try {
@@ -83,7 +83,7 @@ function handleMissingWiki() {
 			if ( isset( $db[ "{$language}wiki:$prefix" ] ) ) {
 				$row = $db[ "{$language}wiki:$prefix" ];
 			}
-			if( !$row ) {
+			if ( !$row ) {
 				# Also try interlanguage links
 				$projectKey = ( $project === 'wikipedia' ? 'wiki' : $project );
 				if ( isset( $db[ "_$projectKey:$prefix" ] ) ) {
@@ -91,7 +91,7 @@ function handleMissingWiki() {
 				}
 			}
 
-			if( $row ) {
+			if ( $row ) {
 				list( $iw_local, $iw_url ) = explode( ' ', $row );
 				if ( $iw_local ) {
 					# Redirect to the appropriate WMF wiki
@@ -104,10 +104,10 @@ function handleMissingWiki() {
 		}
 	}
 
-	if( $project === 'wikisource' ) {
+	if ( $project === 'wikisource' ) {
 		# Wikisource should redirect to the multilingual wikisource
 		showRedirect( $protocol . '://wikisource.org/wiki/' . $page );
-	} elseif( $project === 'wikiversity' ) {
+	} elseif ( $project === 'wikiversity' ) {
 		# Wikiversity gives an error page
 		showMissingSubdomainError( $project, $language );
 	} else {

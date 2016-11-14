@@ -94,7 +94,7 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 				continue;
 			}
 
-			foreach( $sample['phpStack'] as $frame ) {
+			foreach ( $sample['phpStack'] as $frame ) {
 				if ( $frame['function'] === 'include' ) {
 					// For file scope, just use the path as the name.
 					$func = $frame['file'];

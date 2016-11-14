@@ -1,7 +1,7 @@
 <?php
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
-if( $wmfRealm == 'labs' ) {  # safe guard
+if ( $wmfRealm == 'labs' ) {  # safe guard
 
 $jobRedisServer = 'deployment-redis01.eqiad.wmflabs';
 
@@ -24,6 +24,6 @@ $wgJobQueueAggregator = [
 	],
 	'daemonized' => true
 ];
-unset($jobRedisServer);
+unset( $jobRedisServer );
 
 } # end safe guard
