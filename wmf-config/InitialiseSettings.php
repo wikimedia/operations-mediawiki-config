@@ -11299,6 +11299,7 @@ $wgConf->settings = [
 	// If true, allows to use __NOINDEX__ and __INDEX__ everywhere,
 	// even in content namespaces (see $wgContentNamespaces).
 	'default' => false,
+	'metawiki' => true, // T150245
 ],
 
 'wmgExemptFromUserRobotsControlExtra' => [
