@@ -292,6 +292,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true; // T76270
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true; // T76270
+		$wgGroupPermissions['steward']['abusefilter-modify-global'] = true; // T150752
 		$wgAbuseFilterActions['block'] = true; // T54681
 		$wgAbuseFilterAnonBlockDuration = '31 hours'; // T76270
 		$wgAbuseFilterProfile = true; // T149901
