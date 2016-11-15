@@ -11285,6 +11285,7 @@ $wgConf->settings = [
 'wmgAllowRobotsControlInAllNamespaces' => [
 	// If true, allows to use __NOINDEX__ and __INDEX__ everywhere, even in (main).
 	'default' => false,
+	'metawiki' => true, // T150245
 ],
 
 'wmgExemptFromUserRobotsControlExtra' => [
