@@ -3233,7 +3233,11 @@ $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
 	return true;
 };
 
-$wgExemptFromUserRobotsControl = array_merge( $wgContentNamespaces, $wmgExemptFromUserRobotsControlExtra );
+if ( $wmgAllowRobotsControlInAllNamespaces ) {
+	$wgExemptFromUserRobotsControl = [];
+} else {
+	$wgExemptFromUserRobotsControl = array_merge( $wgContentNamespaces, $wmgExemptFromUserRobotsControlExtra );
+}
 
 // additional "language names", adding to Names.php data
 $wgExtraLanguageNames = $wmgExtraLanguageNames;

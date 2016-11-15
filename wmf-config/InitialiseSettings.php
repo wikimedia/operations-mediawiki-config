@@ -11312,7 +11312,16 @@ $wgConf->settings = [
 	'+plwiki' => [ NS_USER, 100, 102 ], // T133978; 100 -> Portal, 102 -> Wikiproject
 ],
 
+'wmgAllowRobotsControlInAllNamespaces' => [
+	// If true, allows to use __NOINDEX__ and __INDEX__ everywhere,
+	// even in content namespaces (see $wgContentNamespaces).
+	'default' => false,
+],
+
 'wmgExemptFromUserRobotsControlExtra' => [
+	// When wmgAllowRobotsControlInAllNamespaces is false (the default),
+	// __NOINDEX__ and __INDEX__ will be ignored for these namepaces,
+	// as well as for namespaces in $wgContentNamespaces.
 	'default' => [],
 	'enwiki' => [ 118, 119 ], // draft and draft talk
 	'hewiki' => [ 118, 119 ], // draft and draft talk - T86329
