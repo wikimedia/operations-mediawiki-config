@@ -3158,6 +3158,12 @@ if ( $wmgUseOATHAuth ) {
 		if ( isset( $wgGroupPermissions['abusefilter'] ) ) {
 			$wgGroupPermissions['abusefilter']['oathauth-enable'] = true;
 		}
+		if ( isset( $wgGroupPermissions['interface-editor'] ) ) {
+			$wgGroupPermissions['interface-editor']['oathauth-enable'] = true;
+		}
+		if ( isset( $wgGroupPermissions['engineer'] ) ) {
+			$wgGroupPermissions['engineer']['oathauth-enable'] = true;
+		}
 	}
 
 	if ( $wmgUseCentralAuth ) {
