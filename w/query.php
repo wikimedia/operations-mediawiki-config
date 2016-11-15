@@ -1,5 +1,5 @@
 <?php
-header( 'HTTP/1.x 500 Gone' );
+header( 'HTTP/1.x 410 Gone' );
 ?><!DOCTYPE html>
 <html>
 <head>
