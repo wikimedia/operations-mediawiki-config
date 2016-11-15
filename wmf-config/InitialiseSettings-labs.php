@@ -104,10 +104,6 @@ function wmfLabsSettings() {
 			'en_rtlwiki' => 'https://en-rtl.wikipedia.$variant.wmflabs.org',
 		],
 
-		'wmgUsabilityPrefSwitch' => [
-			'default' => ''
-		],
-
 		'-wgUploadPath' => [
 			'default' => 'https://upload.$variant.wmflabs.org/$site/$lang',
 			'private' => '/w/img_auth.php',
