@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eec4bf7e_42d443ec",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1533,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-11-16T23:28:33Z",
+      "side": 1,
+      "message": "add | or some other separator?",
+      "revId": "a8bb940fa1ee7927319f7841791573e4951983e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
