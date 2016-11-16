@@ -1521,6 +1521,7 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $u
 			'ua' => @$headers['User-Agent'],
 			'guessed' => $guessed,
 			'messagestr' => $response->message->toString(),
+			'geoip' => $wgRequest->getIP( 'GeoIP', '' ),
 		] );
 	}
 };
