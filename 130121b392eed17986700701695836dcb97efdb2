@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eec4bf7e_88627f05",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2016-11-16T19:10:07Z",
+      "side": 1,
+      "message": "Why wikimedia.org instead of standard-docroot? They\u0027re the same except for WikipediaMobileFirefoxOS/\t, which probably doesn\u0027t need to exist on usability.\n\nBut maybe it\u0027s clean to have it be wikimedia.org because it\u0027s a subdomain of it? But then commons is also linked to standard-docroot, not wikimedia.org.",
+      "range": {
+        "startLine": 10,
+        "startChar": 2,
+        "endLine": 10,
+        "endChar": 47
+      },
+      "revId": "130121b392eed17986700701695836dcb97efdb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
