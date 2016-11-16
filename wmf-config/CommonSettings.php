@@ -380,10 +380,7 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	}
 }
 
-// T150570
-if ( $wgDBname === 'fawiki' ) {
-	$wgPasswordPolicy['policies']['default']['PasswordCannotBePopular'] = 10;
-}
+$wgPasswordPolicy['policies']['default']['PasswordCannotBePopular'] = 100;
 
 // Enforce password policy when users login on other wikis
 if ( $wmgUseCentralAuth ) {
