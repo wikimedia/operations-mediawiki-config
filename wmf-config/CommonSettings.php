@@ -1494,6 +1494,27 @@ wfLoadExtension( 'DismissableSiteNotice' );
 $wgDismissableSiteNoticeForAnons = true; // T59732
 $wgMajorSiteNoticeID = '2';
 
+/**
+ * Get an array of groups (in $wmgPrivilegedGroups) that $username is part of
+ *
+ * @param string $username
+ * @return array Any elevated/priviliged groups the user is a member of
+ */
+function wfGetPrivilegedGroups( $username ) {
+	global $wmgUseCentralAuth, $wmgPrivilegedGroups;
+	$groups = [];
+	if ( $wmgUseCentralAuth && CentralAuthUser::getInstanceByName( $username )->exists() ) {
+		$centralUser = CentralAuthUser::getInstanceByName( $username );
+		$groups = array_intersect(
+			$wmgPrivilegedGroups,
+			array_merge( $centralUser->getGlobalGroups(), $centralUser->getLocalGroups() )
+		);
+	} else {
+		$groups = array_intersect( $wmgPrivilegedGroups, $user->getGroups() );
+	}
+	return $groups;
+}
+
 // log failed login attempts
 $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $username ) {
 	$guessed = false;
@@ -1501,14 +1522,16 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $u
 		$user = User::newFromName( $username );
 		$guessed = true;
 	}
-	if ( $user && $user->isAllowed( 'delete' ) && $response->status === \MediaWiki\Auth\AuthenticationResponse::FAIL ) {
+	if ( $user && $response->status === \MediaWiki\Auth\AuthenticationResponse::FAIL ) {
 		global $wgRequest;
 		$headers = apache_request_headers();
 
+		$privGroups = wfGetPrivilegedGroups( $username );
 		$logger = LoggerFactory::getInstance( 'badpass' );
-		$logger->info( 'Login failed for {group} {name} from {ip} - {xff} - {ua} - {geocookie}: {messagestr}', [
+		$logger->info( 'Login failed for {priv} {name} from {ip} - {xff} - {ua} - {geocookie}: {messagestr}', [
 			'successful' => false,
-			'group' => $user->isAllowed( 'delete' ) ? 'sysop' : 'user',
+			'groups' => implode( ', ', $privGroups ),
+			'priv' => count( $privGroups ) ? 'elevated' : 'normal',
 			'name' => $user->getName(),
 			'ip' => $wgRequest->getIP(),
 			'xff' => @$headers['X-Forwarded-For'],
@@ -1524,10 +1547,13 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $u
 	if ( $response->status === \MediaWiki\Auth\AuthenticationResponse::PASS ) {
 		global $wgRequest;
 		$headers = apache_request_headers();
+
+		$privGroups = wfGetPrivilegedGroups( $username );
 		$logger = LoggerFactory::getInstance( 'badpass' );
-		$logger->info( 'Login succeeded for {group} {name} from {ip} - {xff} - {ua} - {geocookie}', [
+		$logger->info( 'Login succeeded for {priv} {name} from {ip} - {xff} - {ua} - {geocookie}', [
 			'successful' => true,
-			'group' => $user->isAllowed( 'delete' ) ? 'sysop' : 'user',
+			'groups' => implode( ', ', $privGroups ),
+			'priv' => count( $privGroups ) ? 'elevated' : 'normal',
 			'name' => $user->getName(),
 			'ip' => $wgRequest->getIP(),
 			'xff' => @$headers['X-Forwarded-For'],
