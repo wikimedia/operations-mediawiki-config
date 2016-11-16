@@ -12834,13 +12834,12 @@ $wgConf->settings = [
 	'default' => [
 		'visualeditor-enable',                      // [Editing] On-going (special permission) – VisualEditor
 		'beta-feature-flow-user-talk-page',         // [Editing] On-going (special permission) – Flow opt-in
-		'uls-compact-links',                        // [Editing] 2016-11-23 – Compact language links
-		'popups',                                   // [Reading] 2016-11-26 – Hovercards
-		'cx',                                       // [Editing] 2016-11-07 - ContentTranslation
-		'read-more',                                // [Reading] 2016-11-11 - Read more
-		'cirrussearch-completionsuggester',         // [Discovery] 2016-11-27 - Completion Suggester / type as you search
-		'ores-enabled',                             // [Research] 2016-12-12 - ORES
-		'revisionslider',                           // [WMDE] 2017-01-05 - RevisionSlider
+		'uls-compact-links',                        // [Editing] 2017-02-19 – Compact language links
+		'popups',                                   // [Reading] 2017-03-23 – Hovercards
+		'cx',                                       // [Editing] 2017-05-08 - ContentTranslation
+		'read-more',                                // [Reading] 2017-03-15 - Read more
+		'ores-enabled',                             // [Research] 2017-05-10 - ORES
+		'revisionslider',                           // [WMDE] 2017-05-08 - RevisionSlider
 	],
 ],
 
