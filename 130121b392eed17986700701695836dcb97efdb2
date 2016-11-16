@@ -22,6 +22,30 @@
       "revId": "130121b392eed17986700701695836dcb97efdb2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eec4bf7e_88295f9d",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2016-11-16T19:15:31Z",
+      "side": 1,
+      "message": "*.wikimedia.org wikis should all be using the wikimedia.org docroot I think. The point was to limit one-off subdomains from needing their own docroot.\n\nCommons could probably be fixed in the same puppet patch I think. Lemme do that and adjust this commit summary.",
+      "parentUuid": "eec4bf7e_88627f05",
+      "range": {
+        "startLine": 10,
+        "startChar": 2,
+        "endLine": 10,
+        "endChar": 47
+      },
+      "revId": "130121b392eed17986700701695836dcb97efdb2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
