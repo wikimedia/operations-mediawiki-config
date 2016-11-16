@@ -12909,6 +12909,7 @@ $wgConf->settings = [
 		'read-more',                                // [Reading] 2017-03-15 - Read more
 		'ores-enabled',                             // [Research] 2017-05-10 - ORES
 		'revisionslider',                           // [WMDE] 2017-05-08 - RevisionSlider
+		'visualeditor-newwikitext',                 // [Editing] 2017-05-29 – New wikitext editor
 	],
 ],
 
@@ -13912,7 +13913,9 @@ $wgConf->settings = [
 // Whether to enable the 2017 wikitext editor alongside the visual editor. This is a feature flag
 // on top of the Beta Feature which needs each user to opt-in (once it's added to the whitelist).
 'wmgVisualEditorEnableWikitext' => [
-	'default' => false,
+	'default' => true,
+	'nonbetafeatures' => false,
+	'wikitech' => false,
 ],
 
 // Namespaces for VisualEditor to be active in, as well as wgContentNamespaces
