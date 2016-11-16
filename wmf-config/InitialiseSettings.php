@@ -12259,6 +12259,7 @@ $wgConf->settings = [
 
 'wgAbuseFilterParserClass' => [
 	'default' => 'AbuseFilterCachingParser',
+	'bgwiki' => 'AbuseFilterParser',
 ],
 # @}
 
