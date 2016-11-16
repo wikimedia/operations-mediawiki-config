@@ -1502,6 +1502,19 @@ wfLoadExtension( 'DismissableSiteNotice' );
 $wgDismissableSiteNoticeForAnons = true; // T59732
 $wgMajorSiteNoticeID = '2';
 
+function wfGetPrivilegedGroups( $username ) {
+	global $wmgUseCentralAuth;
+	$privilegedGroups = [ 'steward', 'staff', 'bureaucrat', 'sysop', 'checkuser', 'oversight', 'interface-editor' ];
+	if ( $wmgUseCentralAuth && CentralAuthUser::getInstanceByName( $username )->exists() ) {
+		$centralUser = CentralAuthUser::getInstanceByName( $username );
+		return array_intersect(
+			$privilegedGroups,
+			array_merge( $centralUser->getGlobalGroups(), $centralUser->getLocalGroups() )
+		);
+	}
+	return array_intersect( $privilegedGroups, $user->getGroups() );
+}
+
 // log failed login attempts
 $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $username ) {
 	$guessed = false;
@@ -1509,14 +1522,15 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $u
 		$user = User::newFromName( $username );
 		$guessed = true;
 	}
-	if ( $user && $user->isAllowed( 'delete' ) && $response->status === \MediaWiki\Auth\AuthenticationResponse::FAIL ) {
+	if ( $user && $response->status === \MediaWiki\Auth\AuthenticationResponse::FAIL ) {
 		global $wgRequest;
 		$headers = apache_request_headers();
 
+		$priv = wfGetPrivilegedGroups( $username );
 		$logger = LoggerFactory::getInstance( 'badpass' );
 		$logger->info( 'Login failed for {group} {name} from {ip} - {xff} - {ua} - {geocookie}: {messagestr}', [
 			'successful' => false,
-			'group' => $user->isAllowed( 'delete' ) ? 'sysop' : 'user',
+			'group' => $priv ? implode( $priv ) : 'user',
 			'name' => $user->getName(),
 			'ip' => $wgRequest->getIP(),
 			'xff' => @$headers['X-Forwarded-For'],
@@ -1532,10 +1546,12 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $u
 	if ( $response->status === \MediaWiki\Auth\AuthenticationResponse::PASS ) {
 		global $wgRequest;
 		$headers = apache_request_headers();
+
+		$priv = wfGetPrivilegedGroups( $username );
 		$logger = LoggerFactory::getInstance( 'badpass' );
 		$logger->info( 'Login succeeded for {group} {name} from {ip} - {xff} - {ua} - {geocookie}', [
 			'successful' => true,
-			'group' => $user->isAllowed( 'delete' ) ? 'sysop' : 'user',
+			'group' => $priv ? implode( $priv ) : 'user',
 			'name' => $user->getName(),
 			'ip' => $wgRequest->getIP(),
 			'xff' => @$headers['X-Forwarded-For'],
