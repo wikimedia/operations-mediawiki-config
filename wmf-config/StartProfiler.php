@@ -192,11 +192,14 @@ if (
 			'request_date'     => date( 'Y-m-d', $sec ),
 		];
 
-		Xhgui_Saver::factory( [
-			'save.handler' => 'mongodb',
-			'db.host'      => 'mongodb://tungsten.eqiad.wmnet:27017',
-			'db.db'        => 'xhprof',
-			'db.options'   => [],
-		] )->save( $data );
+		try {
+			Xhgui_Saver::factory( [
+				'save.handler' => 'mongodb',
+				'db.host'      => 'mongodb://tungsten.eqiad.wmnet:27017',
+				'db.db'        => 'xhprof',
+				'db.options'   => [],
+			] )->save( $data );
+		} catch ( Exception $e ) {
+		}
 	} );
 }
