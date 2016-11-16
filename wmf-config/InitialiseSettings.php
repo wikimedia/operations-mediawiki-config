@@ -9378,6 +9378,9 @@ $wgConf->settings = [
 	'+enwiktionary' => [
 		'sysop' => [ 'autopatrolled', 'flood', 'patroller', 'rollbacker', 'templateeditor' ], // T148007
 	],
+	'+etwiki' => [
+		'sysop' => [ 'autopatrolled' ], // T150852
+	],
 	'+fawiki' => [
 		'bureaucrat' => [
 			'Image-reviewer', // T66532
@@ -10064,6 +10067,9 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'sysop' ], // bureaucrat removed per T44113
 		'sysop' => [ 'autopatrolled', 'flood', 'patroller', 'rollbacker', 'templateeditor' ], // T148007
 	],
+	'+etwiki' => [
+		'sysop' => [ 'autopatrolled' ], // T150852
+	], 
 	'+fawiki' => [
 		'bureaucrat' => [
 			'Image-reviewer', // T66532
