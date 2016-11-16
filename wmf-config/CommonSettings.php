@@ -1514,14 +1514,13 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $u
 		$headers = apache_request_headers();
 
 		$logger = LoggerFactory::getInstance( 'badpass' );
-		$logger->info( 'Login failed for sysop {name} from {ip} - {xff} - {ua} - {geoip}: {messagestr}', [
+		$logger->info( 'Login failed for sysop {name} from {ip} - {xff} - {ua}: {messagestr}', [
 			'name' => $user->getName(),
 			'ip' => $wgRequest->getIP(),
 			'xff' => @$headers['X-Forwarded-For'],
 			'ua' => @$headers['User-Agent'],
 			'guessed' => $guessed,
 			'messagestr' => $response->message->toString(),
-			'geoip' => $wgRequest->getIP( 'GeoIP', '' ),
 		] );
 	}
 };
