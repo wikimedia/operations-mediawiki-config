@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eec4bf7e_22ea6f74",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1511,
+      "author": {
+        "id": 3941
+      },
+      "writtenOn": "2016-11-16T23:51:07Z",
+      "side": 1,
+      "message": "https://gerrit.wikimedia.org/r/#/c/321797/ + \u0027engineer\u0027 and:\n\ncc Alex Monk:\n\n\"Also:\nAll users on donatewiki and foundationwiki\ntemplateeditor on fawiki and rowiki\nbotadmin on frwiktionary and mlwiki, mlwikisource, mlwiktionary, \ntranslator on incubatorwiki\ncentralnoticeadmin on metawiki and testwiki\nsecurepoll on officewiki\ntechnician on trwiki and trwikiquote\nelectcomm on votewiki\nstaffsupport on votewiki\nelectionadmin on votewiki\nwikidata-staff on wikidatawiki and testwikidatawiki\n\n(some of this may already be covered)\"",
+      "revId": "405442a509f89601b7763ea5b0155be9348c7230",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
