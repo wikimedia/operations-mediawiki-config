@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "eec4bf7e_d98f3325",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 11286,
+      "author": {
+        "id": 531
+      },
+      "writtenOn": "2016-11-16T00:05:40Z",
+      "side": 1,
+      "message": "Perhaps more specifically \"even in content namespaces\" or \"even in $wgContentNamespaces\"?",
+      "revId": "886d2e0147dd757c149163124d4c82e0a94bd30d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
