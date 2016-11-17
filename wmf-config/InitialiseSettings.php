@@ -7351,6 +7351,11 @@ $wgConf->settings = [
 	'votewiki' => true, // T74589
 ],
 
+'wgCookieSetOnAutoblock' => [
+	'default' => false,
+	'testwiki' => true, // T150991
+],
+
 # groupOverrides @{
 'groupOverrides' => [
 	// Note: don't change the default setting here, because it won't take
