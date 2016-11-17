@@ -351,4 +351,7 @@ $wgImportSources = false;
 include( "$wmfConfigDir/import.php" );
 $wgHooks['ImportSources'][] = 'wmfImportSources';
 
+// Reenable Preview and Changes tabs for wikieditor preview
+$wgHiddenPrefs = array_diff ( $wgHiddenPrefs, [ 'wikieditor-preview' ] );
+
 } # end safeguard
