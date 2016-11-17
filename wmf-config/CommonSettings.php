@@ -361,19 +361,13 @@ $wgPasswordConfig['pbkdf2'] = [
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	$wgPasswordPolicy['policies']['default']['MinimalPasswordLength'] = 10;
 } else {
-	$groupsToElevatePasswordPolicy = [ 'bureaucrat', 'sysop', 'checkuser', 'oversight' ];
-
-	if ( $wmgElevateDefaultPasswordPolicy ) {
-		$groupsToElevatePasswordPolicy[] = 'default'; // Covers 'user'
-	}
-
-	if ( $wgDBname === 'enwiki' ) {
-		$groupsToElevatePasswordPolicy[] = 'abusefilter';
-	}
-
 	// See password policy RFC on meta
 	// [[m:Requests_for_comment/Password_policy_for_users_with_certain_advanced_permissions]]
-	foreach ( $groupsToElevatePasswordPolicy as $group ) {
+	foreach ( $wmgPrivelegedGroups as $group ) {
+		if ( $group === 'user' ) {
+			$group = 'default'; // Covers 'user' in password policies
+		}
+
 		$wgPasswordPolicy['policies'][$group]['MinimalPasswordLength'] = 8;
 		$wgPasswordPolicy['policies'][$group]['MinimumPasswordLengthToLogin'] = 1;
 		$wgPasswordPolicy['policies'][$group]['PasswordCannotBePopular'] = 10000;
@@ -3168,18 +3162,8 @@ if ( $wmgUseOATHAuth ) {
 
 	if ( $wmgOATHAuthDisableRight ) {
 		$wgGroupPermissions['*']['oathauth-enable'] = false;
-		$wgGroupPermissions['bureaucrat']['oathauth-enable'] = true;
-		$wgGroupPermissions['checkuser']['oathauth-enable'] = true;
-		$wgGroupPermissions['sysop']['oathauth-enable'] = true;
-		$wgGroupPermissions['oversight']['oathauth-enable'] = true;
-		if ( isset( $wgGroupPermissions['abusefilter'] ) ) {
-			$wgGroupPermissions['abusefilter']['oathauth-enable'] = true;
-		}
-		if ( isset( $wgGroupPermissions['interface-editor'] ) ) {
-			$wgGroupPermissions['interface-editor']['oathauth-enable'] = true;
-		}
-		if ( isset( $wgGroupPermissions['engineer'] ) ) {
-			$wgGroupPermissions['engineer']['oathauth-enable'] = true;
+		foreach( $wmgPrivelegedGroups as $group ) {
+			$wgGroupPermissions[$group]['oathauth-enable'] = true;
 		}
 	}
 
