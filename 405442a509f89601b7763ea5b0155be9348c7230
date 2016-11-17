@@ -16,6 +16,41 @@
       "revId": "405442a509f89601b7763ea5b0155be9348c7230",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eec4bf7e_2235cff3",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1511,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-11-17T00:03:10Z",
+      "side": 1,
+      "message": "Where is that cc\u0027d from? I don\u0027t know if we consider most of these a security risk (although centralnoticeadmin is certainly scary and probably the securepoll stuff too).\n\nWe should probably flag all private logins (and maybe fishbowl too, but at least foundationwiki) regardless of user group.",
+      "parentUuid": "eec4bf7e_22ea6f74",
+      "revId": "405442a509f89601b7763ea5b0155be9348c7230",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eec4bf7e_8226dbc7",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1522,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-11-17T00:03:10Z",
+      "side": 1,
+      "message": "I would return the full list and have two separate fields, one with the list (which is not referenced in the message) and one for elevated/normal (which is). Being able to search by user right in logstash would be nice.",
+      "revId": "405442a509f89601b7763ea5b0155be9348c7230",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
