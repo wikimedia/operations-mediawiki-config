@@ -91,7 +91,7 @@ function wmfLabsSettings() {
 			'wikinews'	=> 'https://$lang.wikinews.$variant.wmflabs.org',
 			'wikisource'	=> 'https://$lang.wikisource.$variant.wmflabs.org',
 			'wikiversity'     => 'https://$lang.wikiversity.$variant.wmflabs.org',
-			'wiktionary'     => 'httpss://$lang.wiktionary.$variant.wmflabs.org',
+			'wiktionary'     => 'https://$lang.wiktionary.$variant.wmflabs.org',
 			'wikivoyage'    => 'https://$lang.wikivoyage.$variant.wmflabs.org',
 
 			'metawiki'      => 'https://meta.wikimedia.$variant.wmflabs.org',
