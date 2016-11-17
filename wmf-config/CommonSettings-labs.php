@@ -257,6 +257,14 @@ if ( $wmgUseCollection ) {
 	$wgCollectionCommandToServeURL[ 'zip_post' ] = 'https://pediapress.com/wmfup/';
 }
 
+if ( $wmgUseElectronPdfService ) {
+	wfLoadExtension( 'ElectronPdfService' );
+	$wgElectronPdfService = array(
+		'serviceUrl' => 'https://pdf-electron.wmflabs.org',
+		'format' => 'pdf',
+	);
+}
+
 if ( $wmgUsePageImages ) {
 	require_once "$IP/extensions/PageImages/PageImages.php";
 	$wgPageImagesExpandOpenSearchXml = $wmgPageImagesExpandOpenSearchXml;
