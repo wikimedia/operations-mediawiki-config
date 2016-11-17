@@ -934,7 +934,7 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	$wgExtDistDefaultSnapshot = 'REL1_27';
 
 	// Current development snapshot
-	// $wgExtDistCandidateSnapshot = 'REL1_28';
+	$wgExtDistCandidateSnapshot = 'REL1_28';
 
 	// When changing the Snapshot Refs please change the corresponding
 	// extension distributor messages for mediawiki.org in JSON files
