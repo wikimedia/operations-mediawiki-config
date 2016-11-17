@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "eec4bf7e_c584dd60",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1511,
+      "author": {
+        "id": 3941
+      },
+      "writtenOn": "2016-11-17T00:27:58Z",
+      "side": 1,
+      "message": "cc/quote is from the change linked, in the comments for patchset3",
+      "parentUuid": "eec4bf7e_2235cff3",
+      "revId": "405442a509f89601b7763ea5b0155be9348c7230",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "eec4bf7e_8226dbc7",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
