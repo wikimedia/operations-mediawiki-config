@@ -492,6 +492,10 @@ function wmfLabsSettings() {
 			'zhwiki' => true, // T128425
 		],
 
+		'wmgUseElectronPdfService' => [
+			'default' => true,
+		],
+
 		// Affects URL uploads and chunked uploads (experimental).
 		// Limit on other web uploads is enforced by PHP.
 		'wgMaxUploadSize' => [
