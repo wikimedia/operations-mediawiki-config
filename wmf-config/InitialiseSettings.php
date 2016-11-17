@@ -83,11 +83,6 @@ $wgConf->settings = [
 	'fishbowl' => false,
 	'nonglobal' => false,
 ],
-'wmgElevateDefaultPasswordPolicy' => [
-	'default' => false,
-	'private' => true, // T149638
-	'fishbowl' => true,
-],
 
 # wgLanguageCode @{
 'wgLanguageCode' => [
@@ -9171,6 +9166,23 @@ $wgConf->settings = [
 	],
 ],
 # @} end of wgGroupOverrides2
+
+'wmgPrivilegedGroups' => [
+	// Default should include any privileged group that's on more than a few wikis
+	'default' => [ 'botadmin', 'bureaucrat', 'checkuser', 'interface-editor' 'sysop', 'oversight' ],
+	'+enwiki' => [ 'abusefilter' ],
+	'+fawiki' => [ 'templateeditor' ],
+	'+fishbowl' => [ 'user' ],
+	'+incubatorwiki' => [ 'translator' ],
+	'+metawiki' => [ 'centralnoticeadmin' ],
+	'+private' => [ 'user' ],
+	'+rowiki' => [ 'templateeditor' ],
+	'+ruwiki' => [ 'engineer' ],
+	'+testwiki' => [ 'centralnoticeadmin' ],
+	'+trwiki' => [ 'technician' ],
+	'+trwikiquote' => [ 'technician' ],
+	'+wikidata' => [ 'wikidata-staff' ],
+],
 
 # wgAddGroups @{
 'wgAddGroups' => [
