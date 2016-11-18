@@ -11814,7 +11814,7 @@ $wgConf->settings = [
 ],
 
 'wgUserEmailUseReplyTo' => [
-	'default' => false, // T14655
+	'default' => true, // T14655, T66795
 ],
 
 'wgStatsMethod' => [
