@@ -336,7 +336,8 @@ elseif ( $wgDBname == 'enwikinews' ) {
 elseif ( $wgDBname == 'eowiki' ) {
 	$wgFlaggedRevsOverride = false;
 	$wgFlaggedRevsTags['accuracy']['levels'] = 1;
-	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
+	# Disable autopromotion of users - T150591
+	$wgFlaggedRevsAutopromote = false; // T150591
 }
 
 elseif ( $wgDBname == 'fawiki' ) {
