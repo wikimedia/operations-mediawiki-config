@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ceb9bbfa_9fc6344d",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2016-11-18T23:56:45Z",
+      "side": 1,
+      "message": "The default is false (from the top of this file), so removing the line also works.",
+      "revId": "f5e1e99911b34881a07d25a0aa0e91c697645e75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
