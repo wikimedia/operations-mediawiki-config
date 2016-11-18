@@ -1155,6 +1155,7 @@ $wgConf->settings = [
 	'dawiki' => [ '1.5x' => '/static/images/project-logos/dawiki-1.5x.png', '2x' => '/static/images/project-logos/dawiki-2x.png' ], // T131033
 	'dewiki' => [ '1.5x' => '/static/images/project-logos/dewiki-1.5x.png', '2x' => '/static/images/project-logos/dewiki-2x.png' ], // T132792
 	'fawiki' => [ '1.5x' => '/static/images/project-logos/fawiki-1.5x.png', '2x' => '/static/images/project-logos/fawiki-2x.png' ],
+	'fowiki' => [ '1.5x' => '/static/images/project-logos/fowiki-1.5x.png', '2x' => '/static/images/project-logos/fowiki-2x.png' ], // T150618
 	'frwiki' => [ '1.5x' => '/static/images/project-logos/frwiki-1.5x.png', '2x' => '/static/images/project-logos/frwiki-2x.png' ],
 	'hewiki' => [ '1.5x' => '/static/images/project-logos/hewiki-1.5x.png', '2x' => '/static/images/project-logos/hewiki-2x.png' ], // T145017
 	'hywiki' => [ '1.5x' => '/static/images/project-logos/hywiki-1.5x.png', '2x' => '/static/images/project-logos/hywiki-2x.png' ], // T150620
