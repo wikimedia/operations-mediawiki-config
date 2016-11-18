@@ -12751,6 +12751,7 @@ $wgConf->settings = [
 	'commonswiki' => [ 'local' ],
 	'test2wiki' => [ 'testwikirepo' ],
 	'testwiki' => [ 'local' ],
+	'zhwiki' => [ 'local' ], // T139257
 ],
 
 'wgForeignUploadTestEnabled' => [
