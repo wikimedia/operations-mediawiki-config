@@ -34,6 +34,24 @@
       "revId": "f5e1e99911b34881a07d25a0aa0e91c697645e75",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_d5212b4d",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2016-11-19T21:02:21Z",
+      "side": 1,
+      "message": "Because of the \" \u003d $wmfStandardAutoPromote\" line presumably.",
+      "parentUuid": "ceb9bbfa_82c37b3d",
+      "revId": "f5e1e99911b34881a07d25a0aa0e91c697645e75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
