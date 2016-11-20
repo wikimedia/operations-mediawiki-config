@@ -14909,6 +14909,15 @@ $wgConf->settings = [
 		'5' => false,
 		'N' => 'Utilisateur %code%-M',
 	],
+	'frwikibooks' => [ // T146213
+		'0' => 'Utilisateurs %code%-0',
+		'1' => 'Utilisateurs %code%-1',
+		'2' => 'Utilisateurs %code%-2',
+		'3' => 'Utilisateurs %code%-3',
+		'4' => 'Utilisateurs %code%-4',
+		'5' => 'Utilisateurs %code%-5',
+		'N' => 'Utilisateurs %code%-M',
+	],
 	'frwikiquote' => [ // T41472
 		'0' => 'Utilisateur %code%-0',
 		'1' => 'Utilisateur %code%-1',
@@ -14919,6 +14928,15 @@ $wgConf->settings = [
 		'N' => 'Utilisateur %code%-M',
 	],
 	'frwikisource' => [
+		'0' => 'Utilisateurs %code%-0',
+		'1' => 'Utilisateurs %code%-1',
+		'2' => 'Utilisateurs %code%-2',
+		'3' => 'Utilisateurs %code%-3',
+		'4' => 'Utilisateurs %code%-4',
+		'5' => false,
+		'N' => 'Utilisateurs %code%-M',
+	],
+	'frwikiversity' => [ // T146213
 		'0' => 'Utilisateurs %code%-0',
 		'1' => 'Utilisateurs %code%-1',
 		'2' => 'Utilisateurs %code%-2',
@@ -15381,8 +15399,10 @@ $wgConf->settings = [
 	'fiwiki' => 'User %code%',
 	'fowiki' => 'Brúkari %code%', // T39401
 	'frwiki' => 'Utilisateur %code%',
+	'frwikibooks' => 'Utilisateurs %code%', // T146213
 	'frwikiquote' => 'Utilisateur %code%', // T41472
 	'frwikisource' => 'Utilisateurs %code%',
+	'frwikiversity' => 'Utilisateurs %code%', // T146213
 	'frwiktionary' => 'Utilisateurs %code%',
 	'huwikiquote' => 'User %code%', // T94842
 	'ilowiki' => 'Agar-aramat %code%', // T39981
