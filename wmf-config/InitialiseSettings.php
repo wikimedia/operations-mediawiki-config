@@ -8384,7 +8384,7 @@ $wgConf->settings = [
 		'autopatrolled' => [ // T27160
 			'autopatrol' => true,
 		],
-		'centralnoticeadmin' => [ // adding to allow CN access without local sysop JRA 2013-02-21; T142123
+		'centralnoticeadmin' => [ // gerrit:50196, T142123
 			'autopatrol' => true,
 			'centralnotice-admin' => true,
 			'editinterface' => true,
@@ -8394,7 +8394,7 @@ $wgConf->settings = [
 		],
 		'global-renamer' => [ // T142123, T71651
 			'autopatrol' => true,
-			// 'centralauth-rename' => true,
+			'centralauth-rename' => true,
 		],
 		'massmessage-sender' => [
 			'autopatrol' => true, // T142123
@@ -8404,7 +8404,8 @@ $wgConf->settings = [
 			'autopatrol' => true, // T142123
 		],
 		'steward' => [
-			'userrights-interwiki' => true,  // new steward stuff, yay 2007-12-27
+			'userrights-interwiki' => true,
+			'centralauth-rename' => true,
 		],
 		'translationadmin' => [
 			'autopatrol' => true, // T142123
@@ -8426,7 +8427,7 @@ $wgConf->settings = [
 			'userrights-interwiki' => true,
 			'centralauth-lock' => true,
 			'globalblock' => true,
-			// 'centralauth-rename' => true,
+			'centralauth-rename' => true,
 			'userrights' => true,
 			'editcontentmodel' => true, // TODO: remove when a change for T85847 is deployed
 			'massmessage' => true,
