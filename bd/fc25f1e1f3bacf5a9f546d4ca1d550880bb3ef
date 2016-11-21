@@ -1,0 +1,9 @@
+Code-Review+1: Steinsplitter <steinsplitter@wikipedia.de>
+Code-Review+1: Bartosz Dziewoński <matma.rex@gmail.com>
+Code-Review+2: Zfilipin <zfilipin@wikimedia.org>
+Verified+2: jenkins-bot
+Submitted-by: jenkins-bot
+Submitted-at: Mon, 21 Nov 2016 14:14:12 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/322251
+Project: operations/mediawiki-config
+Branch: refs/heads/master
