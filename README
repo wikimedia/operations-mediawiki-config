@@ -16,6 +16,11 @@ branch). The .cdb file is updated by editing wikiversions.json first and then
 running multiversion/refreshWikiversions. To vary by realm, add a suffix
 before the extension, e.g. "wikiversions-labs.json".
 
+debug.json
+ Configuration for X-Wikimedia-Debug. The browser extensions use this to
+ determine which app servers are available to use as X-Wikimedia-Debug
+ backends. See <https://wikitech.wikimedia.org/wiki/X-Wikimedia-Debug>.
+
 docroot/
  The Apache document root for several of our VirtualHosts.
 

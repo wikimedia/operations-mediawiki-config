@@ -1,0 +1,8 @@
+{
+  "backends": [
+    "mw1017.eqiad.wmnet",
+    "mw1099.eqiad.wmnet",
+    "mw2017.codfw.wmnet",
+    "mw2099.codfw.wmnet"
+  ]
+}

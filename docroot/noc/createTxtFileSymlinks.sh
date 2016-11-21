@@ -53,6 +53,7 @@ mwconfig_files_txt=(
 # raw views should use txt for consistent behaviour in browsers
 # (not triggering a download instead of a view, and rendering as plain text).
 mwconfig_files=(
+	debug.json
 	fc-list
 	langlist
 	wikiversions.json
