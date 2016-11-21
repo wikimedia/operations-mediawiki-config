@@ -8401,7 +8401,7 @@ $wgConf->settings = [
 		'autopatrolled' => [ // T27160
 			'autopatrol' => true,
 		],
-		'centralnoticeadmin' => [ // adding to allow CN access without local sysop JRA 2013-02-21; T142123
+		'centralnoticeadmin' => [ // gerrit:50196, T142123
 			'autopatrol' => true,
 			'centralnotice-admin' => true,
 			'editinterface' => true,
@@ -8411,17 +8411,18 @@ $wgConf->settings = [
 		],
 		'global-renamer' => [ // T142123, T71651
 			'autopatrol' => true,
-			// 'centralauth-rename' => true,
+			'centralauth-rename' => true,
 		],
-		'massmessage-sender' => [
-			'autopatrol' => true, // T142123
-			'massmessage' => true, // T59611
+		'massmessage-sender' => [ // T59611, T142123
+			'autopatrol' => true,
+			'massmessage' => true,
 		],
-		'oauthadmin' => [
-			'autopatrol' => true, // T142123
+		'oauthadmin' => [ // T142123
+			'autopatrol' => true,
 		],
 		'steward' => [
-			'userrights-interwiki' => true,  // new steward stuff, yay 2007-12-27
+			'centralauth-rename' => true,
+			'userrights-interwiki' => true,
 		],
 		'translationadmin' => [
 			'autopatrol' => true, // T142123
@@ -8440,14 +8441,14 @@ $wgConf->settings = [
 		],
 		'wmf-supportsafety' => [ // T136046, T136864, T142123
 			'autopatrol' => true,
-			'userrights-interwiki' => true,
 			'centralauth-lock' => true,
-			'globalblock' => true,
-			// 'centralauth-rename' => true,
-			'userrights' => true,
-			'editcontentmodel' => true, // TODO: remove when a change for T85847 is deployed
-			'massmessage' => true,
 			'centralauth-oversight' => true,
+			'centralauth-rename' => true,
+			'editcontentmodel' => true, // TODO: remove when a change for T85847 is deployed
+			'globalblock' => true,
+			'massmessage' => true,
+			'userrights' => true,
+			'userrights-interwiki' => true,
 		],
 	],
 	'mkwiki' => [
