@@ -1,3 +1,4 @@
+$IP/extensions/EmailAuth/extension.json
 $IP/extensions/Newsletter/extension.json
 $IP/extensions/PageViewInfo/extension.json
 $IP/extensions/PerformanceInspector/extension.json

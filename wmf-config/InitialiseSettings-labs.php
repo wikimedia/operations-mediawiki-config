@@ -581,5 +581,9 @@ function wmfLabsSettings() {
 		'wgPageViewInfoDomain' => [
 			'default' => 'en.wikipedia.org',
 		],
+
+		'wmgUseEmailAuth' => [
+			'default' => 'true',
+		],
 	];
 } # wmflLabsSettings()
