@@ -1306,7 +1306,6 @@ if ( $wmgUseCentralAuth ) {
 	wfLoadExtension( 'CentralAuth' );
 
 	$wgCentralAuthDryRun = false;
-	// $wgGroupPermissions['steward']['centralauth-rename'] = true;
 	$wgCentralAuthCookies = true;
 
 	$wgCentralAuthUseEventLogging = true;
