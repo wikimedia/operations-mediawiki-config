@@ -52,6 +52,24 @@
       "revId": "f5e1e99911b34881a07d25a0aa0e91c697645e75",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ceb9bbfa_4d5a2ffb",
+        "filename": "wmf-config/flaggedrevs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 340,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2016-11-21T16:33:08Z",
+      "side": 1,
+      "message": "Yes, but:\n\n  $wmfStandardAutoPromote \u003d $wgFlaggedRevsAutopromote;\n  $wgFlaggedRevsAutopromote \u003d false;\n\nis set here in L22 as default settings for all wikis, so I\u0027m not sure why if everything is set to false, autopromotions are still happening.",
+      "parentUuid": "ceb9bbfa_d5212b4d",
+      "revId": "f5e1e99911b34881a07d25a0aa0e91c697645e75",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
