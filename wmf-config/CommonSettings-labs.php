@@ -371,6 +371,20 @@ if ( $wmgUsePageViewInfo ) {
 	wfLoadExtension( 'PageViewInfo' );
 }
 
+if ( $wmgUseEmailAuth ) {
+	wfLoadExtension( 'EmailAuth' );
+	// make it do something testable
+	$wgHooks['EmailAuthRequireToken'][] = function (
+		$user, &$verificationRequired, &$formMessage,
+		&$subjectMessage, &$bodyMessage
+	) {
+		if ( preg_match( '/EmailAuth$/', $user->getRealName() ) ) {
+			$verificationRequired = true;
+			return false;
+		}
+	};
+}
+
 $wgMessageCacheType = CACHE_ACCEL;
 
 // Let Beta Cluster Commons do upload-from-URL from production Commons.
