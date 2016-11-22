@@ -378,7 +378,7 @@ if ( $wmgUseEmailAuth ) {
 		$user, &$verificationRequired, &$formMessage,
 		&$subjectMessage, &$bodyMessage
 	) {
-		if ( preg_match( '/EmailAuth$/', $user->getRealName() ) ) {
+		if ( preg_match( '/\+emailauth@/', $user->getEmail() ) ) {
 			$verificationRequired = true;
 			return false;
 		}
