@@ -75,7 +75,7 @@ if ( isset( $projectsOkForInterwiki[ $wgDBname ] ) ) {
 	$wgCirrusSearchInterwikiCacheTime = 60;
 } else {
 	$wgCirrusSearchInterwikiSources = $wmgCirrusSearchInterwikiSources;
-	$wgCirrusSearchInterwikiLoadTest = $wgCirrusSearchInterwikiSources ? 0.50 : null;
+	$wgCirrusSearchInterwikiLoadTest = $wgCirrusSearchInterwikiSources ? 0.75 : null;
 }
 
 if ( $wgDBname == 'enwiki' ) {
