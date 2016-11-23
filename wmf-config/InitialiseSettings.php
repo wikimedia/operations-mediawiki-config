@@ -882,6 +882,7 @@ $wgConf->settings = [
 	'eowikiquote' => '/static/images/project-logos/eowikiquote.png',  // T45879
 	'etwikiquote' => '/static/images/project-logos/etwikiquote.png',
 	'fawikiquote' => '/static/images/project-logos/fawikiquote.png',
+	'guwikiquote' => '/static/images/project-logos/guwikiquote.png', // T121853
 	'hewikiquote' => '/static/images/project-logos/hewikiquote.png',
 	'hiwikiquote' => '/static/images/project-logos/hiwikiquote.png',  // T126185
 	'hrwikiquote' => '/static/images/project-logos/hrwikiquote.png',
@@ -1183,6 +1184,7 @@ $wgConf->settings = [
 	'frwiktionary' => [ '1.5x' => '/static/images/project-logos/frwiktionary-1.5x.png', '2x' => '/static/images/project-logos/frwiktionary-2x.png' ], //T144427
 
     # Wikiquote
+	'guwikiquote' => [ '1.5x' => '/static/images/project-logos/guwikiquote-1.5x.png', '2x' => '/static/images/project-logos/guwikiquote-2x.png' ],
 	'sqwikiquote' => [ '1.5x' => '/static/images/project-logos/sqwikiquote-1.5x.png', '2x' => '/static/images/project-logos/sqwikiquote-2x.png' ],
 	'viwikiquote' => [ '1.5x' => '/static/images/project-logos/viwikiquote-1.5x.png', '2x' => '/static/images/project-logos/viwikiquote-2x.png' ],
 
