@@ -152,7 +152,7 @@ $wmgMonologConfig =  [
 			],
 		],
 		'logstash' => [
-			'class' => '\\Monolog\\Formatter\\LogstashFormatter',
+			'class' => '\\MediaWiki\\Logger\\Monolog\\LogstashFormatter',
 			'args'  => [ 'mediawiki', php_uname( 'n' ), null, '', 1 ],
 		],
 		'avro' => [
