@@ -166,8 +166,8 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['repoDatabase'] = 'wikidatawiki';
 
 	$wgWBClientSettings['repoNamespaces'] = [
-		'wikibase-item' => '',
-		'wikibase-property' => 'Property'
+		'item' => '',
+		'property' => 'Property'
 	];
 
 	$wgWBClientSettings['languageLinkSiteGroup'] = $wmgWikibaseSiteGroup;
