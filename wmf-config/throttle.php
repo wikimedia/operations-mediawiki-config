@@ -28,22 +28,6 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T148852 - Edit-a-thon BDA (Poitiers)
-	'from'   => '2016-11-15T08:00 -1:00',
-	'to'     => '2016-11-18T19:00 -1:00',
-	'IP'     => '193.55.161.2',
-	'dbname' => [ 'enwiki', 'frwiki', 'commonswiki' ],
-	'value'  => 50 // 40 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T150207 - Nashville Science edit-a-thon (Vanderbilt library)
-	'from'   => '2016-11-15T10:30 -6:00',
-	'to'     => '2016-11-15T16:00 -6:00',
-	'range'  => '129.59.122.1/25',
-	'dbname' => [ 'enwiki', 'commonswiki' ],
-	'value'  => 50 // 20 to 25 expected
-];
-
 // December 2nd
 $wmgThrottlingExceptions[] = [ // T146600
 	'from' => '2016-12-02T12:30 -6:00',
@@ -51,23 +35,6 @@ $wmgThrottlingExceptions[] = [ // T146600
 	'range' => '199.17.0.0/16',
 	'dbname' => 'enwiki',
 	'value' => 40 // 35 expected
-];
-
-// Nov 02
-$wmgThrottlingExceptions[] = [ // T149200
-	'from' => '2016-11-01T00:00 -0:00',
-	'to' => '2016-11-03T00:00 -0:00',
-	'range' => '140.254.110.0/23',
-	'dbname' => [ 'eswiki', 'enwiki', 'ptwiki'],
-	'value' => 30 // 25 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T149443 - Working Class Movement Library (Salford)
-	'from' => '2016-11-20T09:00 -0:00',
-	'to' => '2016-11-20T17:00 -0:00',
-	'range' => '146.87.210.102',
-	'dbname' => [ 'enwiki', 'commonswiki' ],
-	'value' => 30
 ];
 
 $wmgThrottlingExceptions[] = [ // T151650 - #MOWomenOnWikipedia Edit-A-Thon
