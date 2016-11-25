@@ -70,6 +70,14 @@ $wmgThrottlingExceptions[] = [ // T149443 - Working Class Movement Library (Salf
 	'value' => 30
 ];
 
+$wmgThrottlingExceptions[] = [ // T151650 - #MOWomenOnWikipedia Edit-A-Thon
+	'from' => '2016-12-01T10:00 -6:00',
+	'to' => '2016-12-01T14:00 -6:00',
+	'range' => [ '128.206.160.0/22', '161.130.188.0/23', '161.130.190.0/23' ],
+	'dbname' => [ 'enwiki', 'commonswiki' ],
+	'value' => 200 // 100 expected
+];
+
 ## Add throttling definitions above.
 
 /**
