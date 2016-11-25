@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "aebe47e0_911cec19",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 2975,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2016-11-25T08:05:57Z",
+      "side": 1,
+      "message": "This would remove all other values from $wgContentTranslationSiteTemplates. Either set all values or set the specific key only. Compare with line 2947.",
+      "revId": "11045d077fce834aeb568a9ac69def53831c9556",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "aebe47e0_11d7bc29",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 16251,
+      "author": {
+        "id": 93
+      },
+      "writtenOn": "2016-11-25T08:05:57Z",
+      "side": 1,
+      "message": "Only wiki(set) names are allowed at this level.",
+      "revId": "11045d077fce834aeb568a9ac69def53831c9556",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
