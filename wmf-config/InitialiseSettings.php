@@ -8349,7 +8349,6 @@ $wgConf->settings = [
 			'manageproject' => true,
 			'userrights' => true,
 			'managednsdomain' => true,
-			'manageglobalpuppet' => true,
 			'accessrestrictedregions' => true,
 			'editallhiera' => true,
 		],
