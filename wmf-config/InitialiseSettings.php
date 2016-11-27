@@ -1047,6 +1047,7 @@ $wgConf->settings = [
 	// Wikivoyage
 	'elwikivoyage' => '/static/images/project-logos/elwikivoyage.png',
 	'fawikivoyage' => '/static/images/project-logos/fawikivoyage.png',  // T73382
+	'fiwikivoyage' => '/static/images/project-logos/fiwikivoyage.png', // T151571
 	'hewikivoyage' => '/static/images/project-logos/hewikivoyage.png',
 	'plwikivoyage' => '/static/images/project-logos/plwikivoyage.png',
 	'ukwikivoyage' => '/static/images/project-logos/ukwikivoyage.png',  // T110370
@@ -1192,6 +1193,7 @@ $wgConf->settings = [
 	'viwikisource' => [ '1.5x' => '/static/images/project-logos/viwikisource-1.5x.png', '2x' => '/static/images/project-logos/viwikisource-2x.png' ],
 
     # Wikivoyage
+	'fiwikivoyage' => [ '1.5x' => '/static/images/project-logos/fiwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/fiwikivoyage-2x.png' ], // T151571
 	'viwikivoyage' => [ '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ],
 
     # Chapter wikis
