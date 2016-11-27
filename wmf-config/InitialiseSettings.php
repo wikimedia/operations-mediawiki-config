@@ -291,6 +291,7 @@ $wgConf->settings = [
 	'fawikinews' => 'Asia/Tehran',
 	'fiwiki' => 'Europe/Helsinki',
 	'fiwikimedia' => 'Europe/Helsinki',
+	'fiwikivoyage' => 'Europe/Helsinki', // T151570
 	'frrwiki' => 'Europe/Berlin',
 	'frwiki' => 'Europe/Paris',
 	'frwikibooks' => 'Europe/Paris',
@@ -1042,6 +1043,7 @@ $wgConf->settings = [
 	// Wikivoyage
 	'elwikivoyage' => '/static/images/project-logos/elwikivoyage.png',
 	'fawikivoyage' => '/static/images/project-logos/fawikivoyage.png',  // T73382
+	'fiwikivoyage' => '/static/images/project-logos/fiwikivoyage.png',  // T151570
 	'hewikivoyage' => '/static/images/project-logos/hewikivoyage.png',
 	'plwikivoyage' => '/static/images/project-logos/plwikivoyage.png',
 	'ukwikivoyage' => '/static/images/project-logos/ukwikivoyage.png',  // T110370
@@ -1191,12 +1193,14 @@ $wgConf->settings = [
 	'viwikisource' => [ '1.5x' => '/static/images/project-logos/viwikisource-1.5x.png', '2x' => '/static/images/project-logos/viwikisource-2x.png' ],
 
     # Wikivoyage
-	'viwikivoyage' => [ '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ],
+	'fiwikivoyage' => [ '1.5x' => '/static/images/project-logos/fiwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/fiwikivoyage-2x.png' ],
+	'viwikivoyage' => [ '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ], // T151570
 
     # Chapter wikis
 	'ecwikimedia' => [ '1.5x' => '/static/images/project-logos/ecwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ecwikimedia-2x.png'], // T135521
 	'ptwikimedia' => [ '1.5x' => '/static/images/project-logos/ptwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ptwikimedia-2x.png'], // T126832
 	'trwikimedia' => [ '1.5x' => '/static/images/project-logos/trwikimedia-1.5x.png', '2x' => '/static/images/project-logos/trwikimedia-2x.png'],
+
     # Special wikis
 	'foundationwiki' => [ '1.5x' => '/static/images/project-logos/foundationwiki-1.5x.png', '2x' => '/static/images/project-logos/foundationwiki-2x.png' ],
 	'metawiki' => [ '1.5x' => '/static/images/project-logos/metawiki-1.5x.png', '2x' => '/static/images/project-logos/metawiki-2x.png' ],
@@ -1707,6 +1711,7 @@ $wgConf->settings = [
 	'fiwikiquote' => 'Wikisitaatit',
 	'fiwikisource' => 'Wikiaineisto',
 	'fiwikiversity' => 'Wikiopisto',
+	'fiwikivoyage' => 'Wikimatkat', // T151570
 	'fiwiktionary' => 'Wikisanakirja',
 	'foundationwiki' => 'Wikimedia Foundation',
 	'fowikisource' => 'Wikiheimild',
@@ -2188,6 +2193,7 @@ $wgConf->settings = [
 	'fiwikiquote' => 'Wikisitaatit',
 	'fiwikisource' => 'Wikiaineisto',
 	'fiwikiversity' => 'Wikiopisto',
+	'fiwikivoyage' => 'Wikimatkat', // T151570
 	'fiwiktionary' => 'Wikisanakirja',
 	'foundationwiki' => 'Wikimedia',
 	'fowikisource' => 'Wikiheimild',
@@ -2511,6 +2517,7 @@ $wgConf->settings = [
 	'fawikisource' => 'بحث_ویکی‌نبشته',
 	'fawikivoyage' => 'بحث_ویکی‌سفر', // T73382
 	'fiwikiversity' => 'Keskustelu_Wikiopistosta',
+	'fiwikivoyage' => 'Keskustelu_Wikimatkoista', // T151570
 	'gagwiki' => 'Vikipediyanın_laflanması',
 	'guwikiquote' => 'વિકિસૂક્તિની_ચર્ચા', // T121853
 	'guwikisource' => 'વિકિસ્રોત_ચર્ચા',
