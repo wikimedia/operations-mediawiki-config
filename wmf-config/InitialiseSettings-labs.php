@@ -177,10 +177,6 @@ function wmfLabsSettings() {
 			'dewiki' => 'https://upload.wikimedia.org/wikipedia/commons/1/14/Favicon-beta-wikipedia.png',
 		],
 
-		'wgVectorResponsive' => [
-			'default' => true,
-		],
-
 		'-wmgEnableCaptcha' => [
 			'default' => true,
 		],
