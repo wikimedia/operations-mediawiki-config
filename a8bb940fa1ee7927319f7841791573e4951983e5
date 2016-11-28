@@ -16,6 +16,24 @@
       "revId": "a8bb940fa1ee7927319f7841791573e4951983e5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "eec4bf7e_62ee27b3",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1533,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2016-11-28T22:07:10Z",
+      "side": 1,
+      "message": "I was meaning to add a comma and a space",
+      "parentUuid": "eec4bf7e_42d443ec",
+      "revId": "a8bb940fa1ee7927319f7841791573e4951983e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
