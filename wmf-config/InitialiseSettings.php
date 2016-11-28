@@ -12860,8 +12860,6 @@ $wgConf->settings = [
 'wmgUsePopups' => [
 	'default' => false,
 	'huwiki' => true,
-	'ruwiki' => true,
-	'itwiki' => true,
 ],
 
 'wmgPopupsBetaFeature' => [
@@ -12870,16 +12868,12 @@ $wgConf->settings = [
 ],
 
 // T134778
-// T136746
 'wmgPopupsExperiment' => [
 	'default' => false,
 	'huwiki' => true,
-	'ruwiki' => true,
-	'itwiki' => true,
 ],
 
 // T134778
-// T136746
 'wmgPopupsExperimentConfig' => [
 	'default' => false,
 	'huwiki' => [
@@ -12891,31 +12885,10 @@ $wgConf->settings = [
 			'A' => 0.5,
 		],
 	],
-	'ruwiki' => [
-		'name' => 'T136746',
-		'enabled' => true,
-		'buckets' => [
-			// T136746
-			'control' => 0.9,
-			'A' => 0.1,
-		],
-	],
-	'itwiki' => [
-		'name' => 'T136746',
-		'enabled' => true,
-		'buckets' => [
-			// T136746
-			'control' => 0.8,
-			'A' => 0.2,
-		],
-	],
 ],
 
-// T136746
 'wgSchemaPopupsSamplingRate' => [
 	'default' => 0.1,
-	'ruwiki' => 0.01,
-	'itwiki' => 0.02,
 ],
 
 'wmgULSCompactLanguageLinksBetaFeature' => [
