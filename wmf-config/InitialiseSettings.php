@@ -10281,14 +10281,16 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'botadmin' ],
 	],
 	'+newiki' => [
+		'sysop' => [
+			'autopatrolled',        // T89816, T148171
+			'import',               // T100925, T148171
+			'reviewer',             // T95101, T148171
+			'rollbacker',           // T90888, T148171
+		],
 		'bureaucrat' => [
-			'autopatrolled',        // T89816
-			'rollbacker',           // T90888
-			'reviewer',             // T95101
 			'abusefilter',          // T95102
 			'filemover',            // T95103
 			'accountcreator',       // T96824
-			'import',               // T100925
 		],
 	],
 	'+nlwiki' => [
