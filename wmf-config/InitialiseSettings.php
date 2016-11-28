@@ -146,6 +146,7 @@ $wgConf->settings = [
 	# Special wikis
 	'special' => 'en', # default - overridden below by some wikis
 	'advisorywiki' => 'en',
+	'arbcom_cswiki' => 'cs', // T151731
 	'arbcom_dewiki' => 'de',
 	'arbcom_enwiki' => 'en',
 	'arbcom_fiwiki' => 'fi',
@@ -245,6 +246,7 @@ $wgConf->settings = [
 # wgLocaltimezone @{
 'wgLocaltimezone' => [
 	'alswiki' => 'Europe/Berlin',
+	'arbcom_cswiki' => 'Europe/Prague', // T151731
 	'arbcom_dewiki' => 'Europe/Berlin',
 	'arbcom_fiwiki' => 'Europe/Helsinki',
 	'arbcom_nlwiki' => 'Europe/Berlin',
@@ -1580,6 +1582,7 @@ $wgConf->settings = [
 	'angwikisource' => 'Wicifruma',
 	'angwiktionary' => 'Wikiwordbōc', // T58634
 	'amwiki' => 'ውክፔዲያ',
+	'arbcom_cswiki' => 'Arbitration Committee', // T151731
 	'arbcom_dewiki' => 'Arbitration Committee',
 	'arbcom_enwiki' => 'Arbitration Committee',
 	'arbcom_fiwiki' => 'Arbitration Committee',
@@ -2067,6 +2070,7 @@ $wgConf->settings = [
 	'angwiki' => 'Wikipǣdia', // T58634
 	'angwikisource' => 'Wicifruma',
 	'angwiktionary' => 'Wikiwordbōc', // T58634
+	'arbcom_cswiki' => 'Project', // T151731
 	'arbcom_dewiki' => 'Project',
 	'arbcom_enwiki' => 'Project',
 	'arbcom_fiwiki' => 'Project',
@@ -9873,6 +9877,9 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'flow-bot', 'sysop' ], // T131037
 	],
 	// ******************************************************************
+	'+arbcom_cswiki' => [ // T151731
+		'bureaucrat' => [ 'sysop', 'bureaucrat' ],
+	],
 	'+arbcom_enwiki' => [
 		'bureaucrat' => [ 'sysop', 'bureaucrat' ],
 	],
@@ -15894,6 +15901,7 @@ $wgConf->settings = [
 	'cawikibooks' => true, // T93637
 	'wikivoyage' => true,
 	'commonswiki' => true,
+	'arbcom_cswiki' => false, // T151731
 	'arbcom_dewiki' => false,
 	'arbcom_enwiki' => false,
 	'arbcom_fiwiki' => false,
@@ -16185,6 +16193,7 @@ $wgConf->settings = [
 'wmgUseContentTranslation' => [
 	'default' => false,
 	'wikipedia' => true,
+	'arbcom_cswiki' => false, // T151731
 	'arbcom_dewiki' => false,
 	'arbcom_enwiki' => false,
 	'arbcom_fiwiki' => false,
