@@ -1498,9 +1498,10 @@ $wgMajorSiteNoticeID = '2';
  * Get an array of groups (in $wmgPrivilegedGroups) that $username is part of
  *
  * @param string $username
+ * @param User $user
  * @return array Any elevated/privileged groups the user is a member of
  */
-function wfGetPrivilegedGroups( $username ) {
+function wfGetPrivilegedGroups( $username, $user ) {
 	global $wmgUseCentralAuth, $wmgPrivilegedGroups;
 	$groups = [];
 	if ( $wmgUseCentralAuth && CentralAuthUser::getInstanceByName( $username )->exists() ) {
@@ -1529,7 +1530,7 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $u
 		global $wgRequest;
 		$headers = apache_request_headers();
 
-		$privGroups = wfGetPrivilegedGroups( $username );
+		$privGroups = wfGetPrivilegedGroups( $username, $user );
 		$logger = LoggerFactory::getInstance( 'badpass' );
 		$logger->info( 'Login failed for {priv} {name} from {ip} - {xff} - {ua} - {geocookie}: {messagestr}', [
 			'successful' => false,
@@ -1551,7 +1552,7 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $u
 		global $wgRequest;
 		$headers = apache_request_headers();
 
-		$privGroups = wfGetPrivilegedGroups( $username );
+		$privGroups = wfGetPrivilegedGroups( $username, $user );
 		$logger = LoggerFactory::getInstance( 'badpass' );
 		$logger->info( 'Login succeeded for {priv} {name} from {ip} - {xff} - {ua} - {geocookie}', [
 			'successful' => true,
