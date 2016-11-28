@@ -141,6 +141,7 @@ $wgConf->settings = [
 	# Special wikis
 	'special' => 'en', # default - overridden below by some wikis
 	'advisorywiki' => 'en',
+	'arbcom_cswiki' => 'cs', // T151731
 	'arbcom_dewiki' => 'de',
 	'arbcom_enwiki' => 'en',
 	'arbcom_fiwiki' => 'fi',
@@ -240,6 +241,7 @@ $wgConf->settings = [
 # wgLocaltimezone @{
 'wgLocaltimezone' => [
 	'alswiki' => 'Europe/Berlin',
+	'arbcom_cswiki' => 'Europe/Prague', // T151731
 	'arbcom_dewiki' => 'Europe/Berlin',
 	'arbcom_fiwiki' => 'Europe/Helsinki',
 	'arbcom_nlwiki' => 'Europe/Berlin',
@@ -1078,6 +1080,7 @@ $wgConf->settings = [
 
 	// Special wikis
 	'advisorywiki' => '/static/images/project-logos/advisorywiki.png',
+	'arbcom_cswiki' => '/static/images/project-logos/arbcom_cswiki.png', // T151731
 	'arbcom_enwiki' => '/static/images/project-logos/arbcom_enwiki.png',
 	'arbcom_fiwiki' => '/static/images/project-logos/arbcom_fiwiki.png',
 	'arbcom_nlwiki' => '/static/images/project-logos/arbcom_nlwiki.png',
@@ -1197,7 +1200,9 @@ $wgConf->settings = [
 	'ecwikimedia' => [ '1.5x' => '/static/images/project-logos/ecwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ecwikimedia-2x.png'], // T135521
 	'ptwikimedia' => [ '1.5x' => '/static/images/project-logos/ptwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ptwikimedia-2x.png'], // T126832
 	'trwikimedia' => [ '1.5x' => '/static/images/project-logos/trwikimedia-1.5x.png', '2x' => '/static/images/project-logos/trwikimedia-2x.png'],
+
     # Special wikis
+	'arbcom_cswiki' => ['1.5x' => '/static/images/project-logos/arbcom_cswiki-1.5x.png', '2x' => '/static/images/project-logos/arbcom_cswiki-2x.png'], // T151731
 	'foundationwiki' => [ '1.5x' => '/static/images/project-logos/foundationwiki-1.5x.png', '2x' => '/static/images/project-logos/foundationwiki-2x.png' ],
 	'metawiki' => [ '1.5x' => '/static/images/project-logos/metawiki-1.5x.png', '2x' => '/static/images/project-logos/metawiki-2x.png' ],
 	'test2wiki' => [ '1.5x' => '/static/images/project-logos/test2wiki-1.5x.png', '2x' => '/static/images/project-logos/test2wiki-2x.png' ],
@@ -1575,6 +1580,7 @@ $wgConf->settings = [
 	'angwikisource' => 'Wicifruma',
 	'angwiktionary' => 'Wikiwordbōc', // T58634
 	'amwiki' => 'ውክፔዲያ',
+	'arbcom_cswiki' => 'Arbitrážní výbor', // T151731
 	'arbcom_dewiki' => 'Arbitration Committee',
 	'arbcom_enwiki' => 'Arbitration Committee',
 	'arbcom_fiwiki' => 'Arbitration Committee',
@@ -2062,6 +2068,7 @@ $wgConf->settings = [
 	'angwiki' => 'Wikipǣdia', // T58634
 	'angwikisource' => 'Wicifruma',
 	'angwiktionary' => 'Wikiwordbōc', // T58634
+	'arbcom_cswiki' => 'Projekt', // T151731
 	'arbcom_dewiki' => 'Project',
 	'arbcom_enwiki' => 'Project',
 	'arbcom_fiwiki' => 'Project',
@@ -2491,6 +2498,7 @@ $wgConf->settings = [
 	'adywiki' => 'Википедием_и_тегущыӀэн', // T125501
 	'angwiki' => 'Wikipǣdiamōtung', // T58634
 	'angwiktionary' => 'Wikiwordbōcmōtung', // T58634
+	'arbcom_cswiki' => 'Diskuse_k_projektu', // T151731
 	'arwikiversity' => 'نقاش_ويكي_الجامعة',
 	'aswiki' => 'ৱিকিপিডিয়া_বাৰ্তা',
 	'aswikisource' => 'ৱিকিউ স_বাৰ্তা', // T45129
@@ -9885,6 +9893,9 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'flow-bot', 'sysop' ], // T131037
 	],
 	// ******************************************************************
+	'+arbcom_cswiki' => [ // T151731
+		'bureaucrat' => [ 'sysop', 'bureaucrat' ],
+	],
 	'+arbcom_enwiki' => [
 		'bureaucrat' => [ 'sysop', 'bureaucrat' ],
 	],
@@ -15888,6 +15899,7 @@ $wgConf->settings = [
 	'cawikibooks' => true, // T93637
 	'wikivoyage' => true,
 	'commonswiki' => true,
+	'arbcom_cswiki' => false, // T151731
 	'arbcom_dewiki' => false,
 	'arbcom_enwiki' => false,
 	'arbcom_fiwiki' => false,
@@ -16179,6 +16191,7 @@ $wgConf->settings = [
 'wmgUseContentTranslation' => [
 	'default' => false,
 	'wikipedia' => true,
+	'arbcom_cswiki' => false, // T151731
 	'arbcom_dewiki' => false,
 	'arbcom_enwiki' => false,
 	'arbcom_fiwiki' => false,
