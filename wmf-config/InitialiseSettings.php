@@ -12874,8 +12874,6 @@ $wgConf->settings = [
 'wmgPopupsExperiment' => [
 	'default' => false,
 	'huwiki' => true,
-	'ruwiki' => true,
-	'itwiki' => true,
 ],
 
 // T134778
