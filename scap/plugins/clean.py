@@ -21,7 +21,7 @@ class Clean(main.AbstractSync):
                                 user=self.config['ssh_user'])
             clean_job.exclude_hosts([socket.getfqdn()])
             clean_job.shuffle()
-            clean_job.command(self._clean_command(self.config['staging_dir']))
+            clean_job.command(self._clean_command(self.config['stage_dir']))
             clean_job.progress('clean-apaches')
             succeeded, failed = clean_job.run()
             if failed:
