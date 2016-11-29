@@ -16861,6 +16861,13 @@ $wgConf->settings = [
 	'private' => false,
 ],
 
+'wmgAllowLabsAnonEdits' => [
+	'default' => false,
+	'testwiki' => true, // for CI
+	'test2wiki' => true, // for CI
+	'testwikidatawiki' => true, // for CI
+],
+
 'wmgUseSearchExtraNS' => [
 	'default' => false,
 	'commonswiki' => true,

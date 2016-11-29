@@ -582,5 +582,10 @@ function wmfLabsSettings() {
 		'wgPageImagesLeadSectionOnly' => [
 			'default' => true,
 		],
+
+		// Probably no point in blocking Tool Labs edits to Beta Labs
+		'wmgAllowLabsAnonEdits' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
