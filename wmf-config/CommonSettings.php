@@ -1541,7 +1541,7 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $u
 			'xff' => @$headers['X-Forwarded-For'],
 			'ua' => @$headers['User-Agent'],
 			'guessed' => $guessed,
-			'messagestr' => $response->message->toString(),
+			'messagestr' => $response->message->parse(),
 			'geocookie' => $wgRequest->getCookie( 'GeoIP', '' ),
 		] );
 	}
