@@ -593,6 +593,11 @@ function wmfLabsSettings() {
 			'default' => [
 				'10.68.20.142' => true // deployment-parsoid09.deployment-prep.eqiad.wmflabs
 			]
-		]
+		],
+
+		// Probably no point in blocking Tool Labs edits to Beta Labs
+		'wmgAllowLabsAnonEdits' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
