@@ -566,5 +566,10 @@ function wmfLabsSettings() {
 		'wgLinterStatsdSampleFactor' => [
 			'default' => 10,
 		],
+
+		// Probably no point in blocking Tool Labs edits to Beta Labs
+		'wmgAllowLabsAnonEdits' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
