@@ -58,22 +58,6 @@ $wmgMonologProcessors = [
 	'psr' => [
 		'class' => '\\Monolog\\Processor\\PsrLogMessageProcessor',
 	],
-	'xff-ip' => [
-		'factory' => function () {
-			/**
-			 * Overwrite the 'ip' key set by WebProcessor with a version that
-			 * honors XFF headers if we can. T114700
-			 */
-			return function( array $record ) {
-				try {
-					$record['ip'] = RequestContext::getMain()->getRequest()->getIP();
-				} catch ( Exception $ignored ) {
-					// no-op
-				}
-				return $record;
-			};
-		},
-	],
 	'web' => [
 		'class' => '\\Monolog\\Processor\\WebProcessor',
 	],
