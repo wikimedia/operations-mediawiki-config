@@ -3296,6 +3296,64 @@ if ( $wmgUseORES ) {
 
 $wgApplyIpBlocksToXff = true;
 
+// Soft-block private IPs and other shared resources.
+// Note this has no effect on edits from traffic proxied through any of these
+// IPs with a trusted XFF header, only edits where MediaWiki is actually going
+// to attribute the edit (or other logged action) to one of these IPs, e.g.
+// that it would show up on [[Special:Contributions/127.0.0.1]].
+$wgSoftBlockRanges = array_merge(
+	[
+		// Ranges that aren't supposed to be publicly routable
+		'0.0.0.0/8', // "This host on this network" (RFC 6890)
+		// 10.0.0.0/8 is handled below, don't add it here.
+		'100.64.0.0/10', // "Shared address space" for internal routing (RFC 6598)
+		'127.0.0.0/8', // Loopback
+		'169.254.0.0/16', // Link local
+		'172.16.0.0/12', // Private
+		'192.0.0.0/24', // IETF Protocol Assignments (RFC 6890)
+		'192.0.2.0/24', // Documentation
+		'192.168.0.0/16', // Private
+		'198.18.0.0/15', // Benchmarking (RFC 2544)
+		'198.51.100.0/24', // Documentation
+		'203.0.113.0/24', // Documentation
+		'240.0.0.0/4', // Reserved (RFC 1112)
+		'::/128', // Unspecified address
+		'::1/128', // Loopback
+		'::ffff:0:0/96', // IPv4 mapped (these should be coming in as IPv4, not IPv6)
+		'100::/64', // Discard-only address block
+		'2001:2::/48', // Benchmarking
+		'2001:db8::/32', // Documentation
+		'2001:10::/28', // ORCHID (RFC 4843)
+		'fc00::/7', // Local communications, not globally routable (RFC 4193)
+		'fe80::/10', // Link-local
+
+		// We shouldn't be getting edits via multicast either
+		'224.0.0.0/4',
+		'ff00::/8',
+	],
+
+	// Addresses used by WMF, people should log in to edit from them directly.
+	$wgSquidServersNoPurge
+);
+if ( $wmgAllowLabsAnonEdits ) {
+	// CI makes anonymous edits on some wikis, so don't block Labs (10.68.0.0/16).
+	// The rest of 10.0.0.0/8 is ok to block.
+	$wgSoftBlockRanges = array_merge( $wgSoftBlockRanges, [
+		'10.0.0.0/10',
+		'10.64.0.0/14',
+		'10.69.0.0/16',
+		'10.70.0.0/15',
+		'10.72.0.0/13',
+		'10.80.0.0/12',
+		'10.96.0.0/11',
+		'10.128.0.0/9',
+	] );
+} else {
+	// Labs shouldn't be editing anonymously on most wikis, so we can block
+	// anonymous edits from the whole /8.
+	$wgSoftBlockRanges[] = '10.0.0.0/8';
+}
+
 // On Special:Version, link to useful release notes
 $wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
 	$matches = [];
