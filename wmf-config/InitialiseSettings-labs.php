@@ -232,11 +232,11 @@ function wmfLabsSettings() {
 			'enwiki'	=> true,
 		],
 
-		'wmgMobileUrlTemplate' => [
+		'wgMobileUrlTemplate' => [
 			'default' => '%h0.m.%h1.%h2.%h3.%h4',
 			'wikidatawiki' => 'm.%h0.%h1.%h2.%h3', // T87440
 		],
-		'wmgMFMobileFormatterHeadings' => [
+		'wgMFMobileFormatterHeadings' => [
 			'default' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ], // T110436, T110837
 		],
 
@@ -250,10 +250,10 @@ function wmfLabsSettings() {
 		'wgMFAllowNonJavaScriptEditing' => [
 			'default' => true,
 		],
-		'wmgMFPhotoUploadEndpoint' => [
+		'wgMFPhotoUploadEndpoint' => [
 			'default' => 'https://commons.wikimedia.$variant.wmflabs.org/w/api.php',
 		],
-		'wmgMFSpecialCaseMainPage' => [
+		'wgMFSpecialCaseMainPage' => [
 			'default' => true,
 			'enwiki' => false,
 		],
