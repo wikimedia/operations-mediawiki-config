@@ -1797,6 +1797,10 @@ if ( $wmgUseCollection ) {
 	$wgCollectionPortletFormats = $wmgCollectionPortletFormats;
 }
 
+if ( $wmgUseElectronPdfService ) {
+	wfLoadExtension( 'ElectronPdfService' );
+}
+
 # Various system to allow/prevent flooding
 # (including exemptions for scheduled outreach events)
 require( "$wmfConfigDir/throttle.php" );

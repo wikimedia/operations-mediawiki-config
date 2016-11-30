@@ -12029,6 +12029,13 @@ $wgConf->settings = [
 	// ta/gu/ml/ne/ur (T39154, T39384, T39672, T39374, T43714).
 ],
 
+'wmgUseElectronPdfService' => [
+	'default' => false,
+	'testwiki' => true, // T150944
+	'test2wiki' => true, // T150944
+	'mediawikiwiki' => true, // T150944
+],
+
 'wmgUseSpamBlacklist' => [
 	'default' => true,
 	'private' => false,
