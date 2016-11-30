@@ -925,10 +925,10 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	];
 
 	// Current stable release
-	$wgExtDistDefaultSnapshot = 'REL1_27';
+	$wgExtDistDefaultSnapshot = 'REL1_28';
 
 	// Current development snapshot
-	$wgExtDistCandidateSnapshot = 'REL1_28';
+	// $wgExtDistCandidateSnapshot = 'REL1_29';
 
 	// When changing the Snapshot Refs please change the corresponding
 	// extension distributor messages for mediawiki.org in JSON files
@@ -937,7 +937,6 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 		'master',
 		'REL1_28',
 		'REL1_27',
-		'REL1_26',
 		'REL1_23',
 	];
 
