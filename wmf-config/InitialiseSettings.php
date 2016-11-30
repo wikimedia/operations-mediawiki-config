@@ -9565,7 +9565,6 @@ $wgConf->settings = [
 		'sysop' => [ 'flood' ], // T131527
 		'bureaucrat' => [ 'flood' ], // T131527
 	],
-	'+wikitech' => ['shellmanagers' => [ 'shell']],
 	'+legalteamwiki' => [ // T63222
 		'bureaucrat' => [ 'accountcreator', 'import', 'transwiki', 'ipblock-exempt', 'translationadmin' ],
 	],
@@ -9851,6 +9850,11 @@ $wgConf->settings = [
 	],
 	'+wikimania2017wiki' => [
 		'bureaucrat' => [ 'translationadmin' ],
+	],
+	'+wikitech' => [
+		'contentadmin' => [ 'autopatrolled' ],
+		'shellmanagers' => [ 'shell' ],
+		'sysop' => [ 'autopatrolled' ],
 	],
 	'+wuuwiki' => [
 		'sysop' => [ 'rollbacker' ],
@@ -10565,6 +10569,10 @@ $wgConf->settings = [
 	],
 	'+wikimaniateamwiki' => [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'autopatrolled', 'import' ],
+	],
+	'+wikitech' => [
+		'contentadmin' => [ 'autopatrolled' ],
+		'sysop' => [ 'autopatrolled' ],
 	],
 	'+wuuwiki' => [
 		'sysop' => [ 'rollbacker' ],
