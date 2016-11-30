@@ -14,7 +14,7 @@ $wmgParserCacheDBs = [
 ];
 
 $wmgOldExtTemplate = [
-#	'10.64.0.7'    => 1, # es1012 depooled for maintenance T151995
+	'10.64.0.7'    => 1, # es1012
 	'10.64.32.185' => 1, # es1016
 	'10.64.48.115' => 1, # es1018
 ];
