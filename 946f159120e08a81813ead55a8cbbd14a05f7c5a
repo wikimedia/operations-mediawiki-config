@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ed34346_cb7f5562",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 362,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2016-12-01T06:57:39Z",
+      "side": 1,
+      "message": "1",
+      "range": {
+        "startLine": 362,
+        "startChar": 15,
+        "endLine": 362,
+        "endChar": 16
+      },
+      "revId": "946f159120e08a81813ead55a8cbbd14a05f7c5a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_ab84195f",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 364,
+      "author": {
+        "id": 2556
+      },
+      "writtenOn": "2016-12-01T06:57:39Z",
+      "side": 1,
+      "message": "3",
+      "range": {
+        "startLine": 364,
+        "startChar": 15,
+        "endLine": 364,
+        "endChar": 16
+      },
+      "revId": "946f159120e08a81813ead55a8cbbd14a05f7c5a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
