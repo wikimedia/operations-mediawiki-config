@@ -16748,11 +16748,11 @@ $wgConf->settings = [
 ],
 
 'wmgCirrusSearchDefaultCluster' => [
-	'default' => 'local',
+	'default' => 'codfw',
 ],
 
 'wmgCirrusSearchClusterOverrides' => [
-	'default' => [],
+	'default' => ['completion' => 'eqiad'],
 ],
 
 'wmgCirrusSearchWriteClusters' => [
@@ -16804,32 +16804,61 @@ $wgConf->settings = [
 ],
 
 'wmgCirrusSearchRescoreProfile' => [
-	'default' => 'classic',
+	'default' => 'wsum_inclinks',
 	'commonswiki' => 'classic_noboostlinks',
 	'enwiki' => 'wsum_inclinks_pv',
-	'arwiki' => 'wsum_inclinks',
-	'dewiki' => 'wsum_inclinks',
-	'eswiki' => 'wsum_inclinks',
-	'frwiki' => 'wsum_inclinks',
-	'itwiki' => 'wsum_inclinks',
-	'nlwiki' => 'wsum_inclinks',
-	'ruwiki' => 'wsum_inclinks',
-	'plwiki' => 'wsum_inclinks',
-	'ptwiki' => 'wsum_inclinks',
+	// Uses the lang tag, list of spaceless languages
+	// (see https://www.mediawiki.org/wiki/User:TJones_(WMF)/Notes/Spaceless_Writing_Systems_and_Wiki-Projects)
+	"bo" => "classic",
+	"dz" => "classic",
+	"gan" => "classic",
+	"ja" => "classic",
+	"km" => "classic",
+	"lo" => "classic",
+	"my" => "classic",
+	"th" => "classic",
+	"wuu" => "classic",
+	"zh" => "classic",
+	"zh-classical" => "classic", // should be deprecated in favor of lzh
+	"lzh" => "classic", // zh-classical
+	"zh-yue" => "classic", // should be deprecated in favor of yue
+	"yue" => "classic", // zh_yue
+	// This list below are languages that may use use mixed scripts
+	"bug" => "classic",
+	"cdo" => "classic",
+	"cr" => "classic",
+	"hak" => "classic",
+	"jv" => "classic",
+	"zh-min-nan" => "classic", // needs to support deprecated language code (e.g. zh_min_nanwikisource)
+	"nan" => "classic", // e.g. zh_min_nan
 ],
 
 'wmgCirrusSearchFullTextQueryBuilderProfile' => [
-	'default' => 'default',
-	'enwiki' => 'perfield_builder',
-	'arwiki' => 'perfield_builder',
-	'dewiki' => 'perfield_builder',
-	'eswiki' => 'perfield_builder',
-	'frwiki' => 'perfield_builder',
-	'itwiki' => 'perfield_builder',
-	'nlwiki' => 'perfield_builder',
-	'ruwiki' => 'perfield_builder',
-	'plwiki' => 'perfield_builder',
-	'ptwiki' => 'perfield_builder',
+	'default' => 'perfield_builder',
+	// Uses the lang tag, list of spaceless languages
+	// (see https://www.mediawiki.org/wiki/User:TJones_(WMF)/Notes/Spaceless_Writing_Systems_and_Wiki-Projects)
+	"bo" => "default",
+	"dz" => "default",
+	"gan" => "default",
+	"ja" => "default",
+	"km" => "default",
+	"lo" => "default",
+	"my" => "default",
+	"th" => "default",
+	"wuu" => "default",
+	"zh" => "default",
+	"zh-classical" => "default", // should be deprecated in favor of lzh
+	"lzh" => "default", // zh-classical
+	"zh-yue" => "default", // should be deprecated in favor of yue
+	"yue" => "default", // zh_yue
+	// This list below are languages that may use use mixed scripts
+	"bug" => "default",
+	"cdo" => "default",
+	"cr" => "default",
+	"hak" => "default",
+	"jv" => "default",
+	"zh-min-nan" => "default", // needs to support deprecated language code (e.g. zh_min_nanwikisource)
+	"nan" => "default", // e.g. zh_min_nan
 ],
 
 'wmgCirrusSearchIgnoreOnWikiBoostTemplates' => [

@@ -10,7 +10,8 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
-		$this->assertEquals( 'unittest', $config['wgCirrusSearchDefaultCluster'] );
+		 // FIXME: switch back to 'unittest'
+		$this->assertEquals( 'codfw', $config['wgCirrusSearchDefaultCluster'] );
 		$this->assertCount( 2, $config['wgCirrusSearchClusters'] );
 
 		// testwiki writes to eqiad and codfw
@@ -259,22 +260,66 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		}
 	}
 
-	public static function provideSimilarityByLanguage() {
+	public static function provideConfigByLanguage() {
 		return [
-			'zhwiki' => [ 'zhwiki', 'wiki', 'default' ],
-			'zh_min_nanwikisource' => [ 'zh_min_nanwikisource', 'wikisource', 'default' ],
-			'zh_classicalwiki' => [ 'zh_classicalwiki', 'wiki', 'default' ],
-			'thwiktionary' => [ 'thwiktionary', 'wiktionary', 'default' ],
-			'zh_yuewiki' => [ 'zh_yuewiki', 'wiki', 'default' ],
-			'enwiki' => [ 'enwiki', 'wiki', 'wmf_defaults' ],
-			'frwiktionary' => [ 'frwiktionary', 'wiktionary', 'wmf_defaults' ],
+			'zhwiki' => [ 'zhwiki', 'wiki',
+				[
+					'wmgCirrusSearchSimilarityProfile' => 'default',
+					'wmgCirrusSearchRescoreProfile' => 'classic',
+					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'default',
+				],
+			],
+			'zh_min_nanwikisource' => [ 'zh_min_nanwikisource', 'wikisource',
+				[
+					'wmgCirrusSearchSimilarityProfile' => 'default',
+					'wmgCirrusSearchRescoreProfile' => 'classic',
+					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'default',
+				],
+			],
+			'zh_classicalwiki' => [ 'zh_classicalwiki', 'wiki',
+				[
+					'wmgCirrusSearchSimilarityProfile' => 'default',
+					'wmgCirrusSearchRescoreProfile' => 'classic',
+					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'default',
+				],
+			],
+			'thwiktionary' => [ 'thwiktionary', 'wiktionary',
+				[
+					'wmgCirrusSearchSimilarityProfile' => 'default',
+					'wmgCirrusSearchRescoreProfile' => 'classic',
+					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'default',
+				],
+			],
+			'zh_yuewiki' => [ 'zh_yuewiki', 'wiki',
+				[
+					'wmgCirrusSearchSimilarityProfile' => 'default',
+					'wmgCirrusSearchRescoreProfile' => 'classic',
+					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'default',
+				],
+			],
+			'enwiki' => [ 'enwiki', 'wiki',
+				[
+					'wmgCirrusSearchSimilarityProfile' => 'wmf_defaults',
+					'wmgCirrusSearchRescoreProfile' => 'wsum_inclinks_pv',
+					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
+				],
+			],
+			'frwiktionary' => [ 'frwiktionary', 'wiktionary',
+				[
+					'wmgCirrusSearchSimilarityProfile' => 'wmf_defaults',
+					'wmgCirrusSearchRescoreProfile' => 'wsum_inclinks',
+					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
+				],
+			],
 		];
 	}
 	/**
-	 * @dataProvider provideSimilarityByLanguage
+	 * @dataProvider provideConfigByLanguage
 	 */
-	public function testSimilarityByLanguage( $wiki, $type, $expectedSimilarity ) {
+	public function testConfigByLanguage( $wiki, $type, array $expectedConfValues ) {
 		$config = $this->loadCirrusConfig( 'production', $wiki, $type );
-		$this->assertEquals( $config['wmgCirrusSearchSimilarityProfile'], $expectedSimilarity );
+		foreach( $expectedConfValues as $key => $val ) {
+			$this->assertEquals( $config[$key], $val );
+		}
 	}
 }
