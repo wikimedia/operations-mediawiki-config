@@ -10,7 +10,7 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 $wmgParserCacheDBs = [
 	'10.64.0.12'   => '10.64.0.12',   # pc1004
 	'10.64.32.72'  => '10.64.32.72',  # pc1005
-	'10.64.48.128' => '10.64.0.12',   # '10.64.48.128', # pc1006 temp. depooled, sending queries to pc1004
+	'10.64.48.128' => '10.64.48.128', # pc1006
 ];
 
 $wmgOldExtTemplate = [
