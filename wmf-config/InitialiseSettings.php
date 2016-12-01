@@ -16141,19 +16141,19 @@ $wgConf->settings = [
 	'testwiki' => true,
 
 	// Temporarily disabled for T138310
-// 	'bswiki' => true,
-// 	'cawiki' => true, // T120829
-// 	'elwiki' => true, // T144384
-// 	'frwiki' => true, // T136684
+	'bswiki' => true,
+	'cawiki' => true, // T120829
+	'elwiki' => true, // T144384
+	'frwiki' => true, // T136684
 	'frwikiquote' => true, // T138064
-// 	'frwikisource' => true, // T132914
-// 	'frwikivoyage' => true, // T135702
-// 	'nowiki' => true, // T132693
-// 	'urwiki' => true,
-// 	'zhwiki' => true,
-// 	'wikidatawiki' => true,
-// 	'specieswiki' => true, // T134898
-// 	'outreachwiki' => true, // T135582
+	'frwikisource' => true, // T132914
+	'frwikivoyage' => true, // T135702
+	'nowiki' => true, // T132693
+	'urwiki' => true,
+	'zhwiki' => true,
+	'wikidatawiki' => true,
+	'specieswiki' => true, // T134898
+	'outreachwiki' => true, // T135582
 ],
 'wmgUseDisambiguator' => [
 	'default' => true,
