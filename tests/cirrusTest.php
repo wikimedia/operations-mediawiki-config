@@ -102,16 +102,29 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$wgConf = $this->loadWgConf( $wmfRealm );
 
 		list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
-		$globals = $wgConf->getAll( $wgDBname, $dbSuffix, array(
-				'lang' => $lang,
-				'docRoot' => '/dev/null',
-				'site' => $site,
-				'stdlogo' => 'file://dev/null',
-			),
-			// Not sure if it's the right way to enable the wikipedia -> enwiki resolution
-			array( $site )
-		);
+		$wikiTags = [];
+		foreach ( [ 'private', 'fishbowl', 'special', 'closed', 'flow', 'flaggedrevs', 'small', 'medium',
+				'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-nondefault',
+				'commonsuploads', 'nonbetafeatures', 'group0', 'group1', 'group2', 'wikipedia', 'nonglobal',
+				'wikitech', 'nonecho', 'mobilemainpagelegacy', 'clldefault', 'nowikidatadescriptiontaglines',
+				'top6-wikipedia'
+			] as $tag ) {
+			$dblist = MWWikiversions::readDbListFile( $tag );
+			if ( in_array( $wgDBname, $dblist ) ) {
+				$wikiTags[] = $tag;
+			}
+		}
 
+		$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
+		$confParams = [
+			'lang'    => $lang,
+			'docRoot' => $_SERVER['DOCUMENT_ROOT'],
+			'site'    => $site,
+			'stdlogo' => "//" ,
+		];
+		// Add a per-language tag as well
+		$wikiTags[] = $wgConf->get( 'wgLanguageCode', $wgDBname, $dbSuffix, $confParams, $wikiTags );
+		$globals = $wgConf->getAll( $wgDBname, $dbSuffix, $confParams, $wikiTags );
 		extract( $globals );
 
 		// variables that would have been setup elsewhere, perhaps in mediawiki
@@ -244,5 +257,24 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 			// For busy indices ensure we are using most of the cluster to serve them
 			$this->assertGreaterThanOrEqual( $numServers - 3, $totalShards );
 		}
+	}
+
+	public static function provideSimilarityByLanguage() {
+		return [
+			'zhwiki' => [ 'zhwiki', 'wiki', 'default' ],
+			'zh_min_nanwikisource' => [ 'zh_min_nanwikisource', 'wikisource', 'default' ],
+			'zh_classicalwiki' => [ 'zh_classicalwiki', 'wiki', 'default' ],
+			'thwiktionary' => [ 'thwiktionary', 'wiktionary', 'default' ],
+			'zh_yuewiki' => [ 'zh_yuewiki', 'wiki', 'default' ],
+			'enwiki' => [ 'enwiki', 'wiki', 'wmf_defaults' ],
+			'frwiktionary' => [ 'frwiktionary', 'wiktionary', 'wmf_defaults' ],
+		];
+	}
+	/**
+	 * @dataProvider provideSimilarityByLanguage
+	 */
+	public function testSimilarityByLanguage( $wiki, $type, $expectedSimilarity ) {
+		$config = $this->loadCirrusConfig( 'production', $wiki, $type );
+		$this->assertEquals( $config['wmgCirrusSearchSimilarityProfile'], $expectedSimilarity );
 	}
 }
