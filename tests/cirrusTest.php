@@ -67,12 +67,12 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 
 	public function testLanguageMatrix() {
 		$config = $this->loadCirrusConfig( 'production', 'enwiki', 'wiki' );
-		$allDbs = DBList::getall();
+		$lists = DBList::getLists();
 
 		foreach( $config['wgCirrusSearchLanguageToWikiMap'] as $lang => $wiki ) {
 			$this->assertArrayHasKey( $wiki, $config['wgCirrusSearchWikiToNameMap'] );
 			$wikiName = $config['wgCirrusSearchWikiToNameMap'][$wiki];
-			$this->assertContains( $wikiName, $allDbs['wikipedia'] );
+			$this->assertContains( $wikiName, $lists['wikipedia'] );
 		}
 	}
 
