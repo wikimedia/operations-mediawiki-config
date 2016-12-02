@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ed34346_3322b4a3",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3223,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-12-02T21:25:52Z",
+      "side": 1,
+      "message": "There is a lot of overlap between this and IP::isPublic. Maybe move the non-WMF-specific part to a static property of IP?",
+      "revId": "93074228f53a9acc378073967d3a88f787222330",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_d36ee0c3",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 16636,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2016-12-02T21:25:52Z",
+      "side": 1,
+      "message": "Probably should be set to true everywhere in InitialiseSettings-labs.php.",
+      "revId": "93074228f53a9acc378073967d3a88f787222330",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
