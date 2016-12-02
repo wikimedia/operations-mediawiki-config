@@ -10,54 +10,57 @@
 
 
 class DbListTests extends PHPUnit_Framework_TestCase {
-	private $initDone = false;
 
-	# Contains the db list filenames (ex: foobar.dblist) as key and an array of
-	# lines as values.
-	# Never modify it outside of ->init()
-	private $db;
+	public static function provideProjectDbnames() {
+		$cases = array();
+		foreach ( DBList::getLists() as $projectname => $databases ) {
+			if ( !DBlist::isWikiProject( $projectname ) ) {
+				// Skip files such as s1, private ...
+				continue;
+			}
+			foreach ( $databases as $database ) {
+				$cases[] = array(
+					$projectname, $database
+				);
+			}
+		}
+		return $cases;
+	}
 
 	/**
 	 * Projects dblist should only contains databasenames which
 	 * belongs to them.
 	 *
-	 * @dataProvider Provide::ProjectsDatabases
+	 * @dataProvider provideProjectDbnames
 	 */
-	function testDatabaseNamesUseProjectNameAsSuffix( $projectname, $database ) {
+	public function testDatabaseNamesUseProjectNameAsSuffix( $projectname, $database ) {
 
-		# Override suffix for wikipedia project
+		// Override suffix for wikipedia project
 		$dbsuffix = ( $projectname === 'wikipedia' )
 			? 'wiki'
 			: $projectname
 		;
 
-		# Verifiy the databasename suffix
+		// Verifiy the databasename suffix
 		$this->assertStringEndsWith( $dbsuffix, $database,
 			"Database name $database lacks db suffix $dbsuffix of $projectname"
 		);
 	}
 
+	public function testDblistAllContainsEverything() {
+		$lists = DBList::getLists();
 
-	/**
-	 * FIXME we want to keep continuing showing errors
-	 */
-	function testDblistAllContainsAllDatabaseNames() {
-		$dbs = DBList::getall();
+		// Content of all.dblist
+		$all = $lists['all'];
 
-		# Content of all.dblist
-		$all = $dbs['all'];
 
-		# No point in checking that the db listed in 'all' are contained
-		# in 'all':
-		unset( $dbs['all']);
-
-		# dblist files we are just ignoring/skipping
-		# FIXME ideally we want to clean those files from any old dbnames
+		// dblist files that are exceptions
 		$skip = array(
+			// No point in checking all includes itself
+			'all',
 
-			# 'all-labs' and 'flow_only_labs' are for the 'beta' project, which
-			# has wikis not yet available in production ('all'). So we do not
-			# verify it.
+			// 'all-labs' and 'flow_only_labs' are for beta.wmflabs.org only,
+			// which may have wikis not (yet) in production.
 			'all-labs',
 			'flow_computed_labs',
 			'flow_only_labs',
@@ -71,14 +74,15 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 			'todo',
 		);
 
-		foreach( $dbs as $dbfile => $dbnames ) {
-			if( in_array( $dbfile, $skip ) ) {
+		foreach ( $lists as $dbfile => $dbnames ) {
+			if ( in_array( $dbfile, $skip ) ) {
 				continue;
 			}
 
-			$this->assertEquals( array()
-				, array_diff( $dbnames, $all )
-				, "'{$dbfile}.dblist' contains names not in 'all.dblist'"
+			$this->assertEquals(
+				array(),
+				array_diff( $dbnames, $all ),
+				"'{$dbfile}.dblist' contains names not in 'all.dblist'"
 			);
 		}
 
@@ -87,7 +91,7 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 	/**
 	 * @covers MWWikiversions::evalDbListExpression
 	 */
-	function testEvalDbListExpression() {
+	public function testEvalDbListExpression() {
 		$allDbs = MWWikiversions::readDbListFile( 'all' );
 		$allLabsDbs = MWWikiversions::readDbListFile( 'private' );
 		$exprDbs = MWWikiversions::evalDbListExpression( 'all - private' );
