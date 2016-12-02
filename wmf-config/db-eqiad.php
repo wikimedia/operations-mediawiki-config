@@ -114,7 +114,7 @@ $wgLBFactoryConf = [
 		'db1060' => 1,   # 2.8TB  96GB, api
 #		'db1063' => 0,   # 2.8TB 128GB
 #		'db1067' => 0,   # 2.8TB 160GB
-#		'db1074' => 500, # 3.6TB 512GB, depool for maintenance T152188
+		'db1074' => 50,  # 3.6TB 512GB, repooled with low load after maintenance
 		'db1076' => 500, # 3.6TB 512GB
 		'db1090' => 500, # 3.6TB 512GB
 	],
