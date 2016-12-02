@@ -53,8 +53,8 @@ class ClassLoader
 
     private $useIncludePath = false;
     private $classMap = array();
-
     private $classMapAuthoritative = false;
+    private $missingClasses = array();
 
     public function getPrefixes()
     {

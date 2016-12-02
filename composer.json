@@ -5,6 +5,12 @@
 		"mongofill/mongofill": "dev-master",
 		"perftools/xhgui": "dev-master"
 	},
+	"require-dev": {
+		"phpunit/phpunit": "3.7.37"
+	},
+	"scripts": {
+		"test": "phpunit"
+	},
 	"config": {
 		"classmap-authoritative": true,
 		"optimize-autoloader": true,
