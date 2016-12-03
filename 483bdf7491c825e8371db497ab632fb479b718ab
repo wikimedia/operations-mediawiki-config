@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ed34346_79c24d8a",
+        "filename": "composer.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2016-12-03T01:18:03Z",
+      "side": 1,
+      "message": "why still use phpunit 3.7.37?\n\nmediawiki core specifies phpunit 4.8.24 (which is newer, though also is not the most recent, stable release)",
+      "revId": "483bdf7491c825e8371db497ab632fb479b718ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
