@@ -72,7 +72,7 @@ if ( $wmgUseFlow ) {
 		191 => true,
 	];
 
-	$wgNamespaceContentModels[ 191 ] = CONTENT_MODEL_FLOW_BOARD;
+	$wgNamespaceContentModels[ 191 ] = 'flow-board'; // CONTENT_MODEL_FLOW_BOARD
 }
 
 if ( $wmgUseContentTranslation ) {
