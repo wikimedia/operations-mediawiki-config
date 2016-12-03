@@ -18,8 +18,6 @@ $wgMobileFrontendLogo = $wgLogo;
 
 $wgMFForceSecureLogin = false;
 
-$wgMFMobileFormatterHeadings = $wmgMFMobileFormatterHeadings;
-
 // T49647
 $wgHooks['EnterMobileMode'][] = function() {
 	global $wgCentralAuthCookieDomain, $wgHooks;
