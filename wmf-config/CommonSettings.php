@@ -2749,7 +2749,7 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 	}
 
 	foreach ( $wmgFlowNamespaces as $namespace ) {
-		$wgNamespaceContentModels[$namespace] = CONTENT_MODEL_FLOW_BOARD;
+		$wgNamespaceContentModels[$namespace] = 'flow-board'; // CONTENT_MODEL_FLOW_BOARD
 	}
 	// Requires that Parsoid is available for all wikis using Flow.
 	$wgFlowContentFormat = 'html';
