@@ -17598,22 +17598,18 @@ $wgConf->settings = [
 	'svwikivoyage' => false,
 	'viwikivoyage' => false,
 	'cawiki' => true, // T114392
-	'enwiki' => true, // T101108
 ],
 
 'wgWPBSkinBlacklist' => [
 	'default' => [],
-	'enwiki' => [ 'monobook', 'modern', 'vector', 'cologneblue', 'minerva' ], // T101108
 ],
 
 'wgWPBEnablePageImagesBanners' => [
 	'default' => false,
-	'enwiki' => true, // T101108
 ],
 
 'wgWPBEnableHeadingOverride' => [
 	'default' => true,
-	'enwiki' => false, // T101108
 ],
 
 'wgWPBNamespaces' => [
