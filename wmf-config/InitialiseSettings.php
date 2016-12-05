@@ -16341,7 +16341,7 @@ $wgConf->settings = [
 'wmgRelatedArticlesFooterBlacklistedSkins' => [
 	// T144812
 	'default' => [],
-	'top6-wikipedia' => [ 'minerva' ],
+	'related-articles-footer-blacklisted-skins' => [ 'minerva' ],
 ],
 
 'wmgUseRelatedSites' => [
