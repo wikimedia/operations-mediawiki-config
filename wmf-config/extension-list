@@ -37,6 +37,7 @@ $IP/extensions/DoubleWiki/extension.json
 $IP/extensions/Echo/Echo.php
 $IP/extensions/EducationProgram/EducationProgram.php
 $IP/extensions/Elastica/extension.json
+$IP/extensions/ElectronPdfService/extension.json
 $IP/extensions/EventBus/extension.json
 $IP/extensions/EventLogging/extension.json
 $IP/extensions/ExtensionDistributor/extension.json
