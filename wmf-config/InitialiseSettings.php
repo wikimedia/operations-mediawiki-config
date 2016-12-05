@@ -16325,6 +16325,8 @@ $wgConf->settings = [
 	'wikipedia' => true,
 	'wikivoyage' => true,
 	'frwikinews' => true, // T143480
+	'jawiki' => true,  // T151346
+	'eswiki' => true  // T151346
 ],
 
 'wmgRelatedArticlesShowInSidebar' => [
@@ -16336,6 +16338,8 @@ $wgConf->settings = [
 	'default' => false,
 	'wikipedia' => true,
 	'frwikinews' => true, // T143480
+	'jawiki' => true,  // T151346
+	'eswiki' => true  // T151346
 ],
 
 'wmgRelatedArticlesFooterBlacklistedSkins' => [
