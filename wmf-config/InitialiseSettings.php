@@ -17586,15 +17586,18 @@ $wgConf->settings = [
 // WikidataPageBanner extension (T98029)
 'wmgUseWikidataPageBanner' => [
 	'default' => false,
-	'enwikivoyage' => true,
-	'eswikivoyage' => true, // T125000
-	'frwikivoyage' => true, // T115023
-	'hewikivoyage' => true, // T140717
-	'itwikivoyage' => true, // T145328
-	'rowikivoyage' => true, // T142963
-	'ruwikivoyage' => true, // T110837
-	'ukwikivoyage' => true, // T121999
-	'zhwikivoyage' => true, // T114334
+	// T125000, T115023, T140717, T145328, T142963
+	// T110837, T121999, T114334, T152344
+	'wikivoyage' => true,
+	'plwikivoyage' => false,
+	'fawikivoyage' => false,
+	'dewikivoyage' => false,
+	'elwikivoyage' => false,
+	'ptwikivoyage' => false,
+	'nlwikivoyage' => false,
+	'rowikivoyage' => false,
+	'svwikivoyage' => false,
+	'viwikivoyage' => false,
 	'cawiki' => true, // T114392
 	'enwiki' => true, // T101108
 ],
