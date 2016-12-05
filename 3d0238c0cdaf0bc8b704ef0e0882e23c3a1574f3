@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ed34346_4eb457e4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 17602,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-12-05T21:17:11Z",
+      "side": 0,
+      "message": "Should we remove this one too? (And the one above which is unrelated to the patch, but a good to have).",
+      "revId": "3d0238c0cdaf0bc8b704ef0e0882e23c3a1574f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_2e9a3b76",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 17607,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2016-12-05T21:17:11Z",
+      "side": 0,
+      "message": "Remove this one too?",
+      "revId": "3d0238c0cdaf0bc8b704ef0e0882e23c3a1574f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
