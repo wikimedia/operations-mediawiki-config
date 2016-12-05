@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8ed34346_ddc26388",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3246,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2016-12-05T16:11:05Z",
+      "side": 1,
+      "message": "Blocking on isPrivate() would break MediaWiki for anyone using it in their internal network where private-range IPs are expected.\n\nThe point is to stop edits like those returned by \u003chttps://en.wikipedia.org/w/api.php?action\u003dquery\u0026list\u003dusercontribs\u0026ucuserprefix\u003d10.68.\u003e, those bots should be logged in.\n\nThe block handling code for this variable already looks at the IP after applying trusted proxies and such.",
+      "parentUuid": "8ed34346_fdde3f6f",
+      "revId": "c00d4c5919fb53684b9d9528e1b178a6d6ec3687",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ed34346_ddbdc317",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2016-12-05T15:49:44Z",
       "side": 1,
       "message": "Edits from multicast do not make any sense I dont see how it is going to happen.",
+      "revId": "c00d4c5919fb53684b9d9528e1b178a6d6ec3687",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_bdbfa7f5",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3250,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2016-12-05T16:11:05Z",
+      "side": 1,
+      "message": "That\u0027s the point, if it somehow would happen that we\u0027d have an anonymous edit attributed to a multicast IP thanks to some weird misconfiguration then this should block it.",
+      "parentUuid": "8ed34346_ddbdc317",
       "revId": "c00d4c5919fb53684b9d9528e1b178a6d6ec3687",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "8ed34346_7d5fcfe8",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3256,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2016-12-05T16:11:05Z",
+      "side": 1,
+      "message": "ok",
+      "parentUuid": "8ed34346_fdb07f40",
+      "revId": "c00d4c5919fb53684b9d9528e1b178a6d6ec3687",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8ed34346_5da9b3db",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 2
@@ -64,6 +118,24 @@
       "writtenOn": "2016-12-05T15:49:44Z",
       "side": 1,
       "message": "For the requests made from wmflabs public IP, we trust the X-Forwarded-For header that is sent to us as define in $wgSquidServersNoPurge thus showing the private labs IP is perfectly legitimate.",
+      "revId": "c00d4c5919fb53684b9d9528e1b178a6d6ec3687",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_bd4e873a",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3269,
+      "author": {
+        "id": 221
+      },
+      "writtenOn": "2016-12-05T16:11:05Z",
+      "side": 1,
+      "message": "If I understand what you\u0027re trying to say here, you seem to be missing the point.\n\nOn a wiki like enwiki, we should never have anonymous edits attributed to Labs IPs, everything editing from Labs should be logged in. If someone\u0027s bot gets logged out, we want it to be prevented from editing.\n\nOn testwiki, though, we need to allow anonymous edits attributed to Labs IPs (10.68.0.0/16, as far as I know) because some Selenium tests test making anonymous edits there.\n\nThis code branch is for the testwiki case, blocking everything in 10.0.0.0/8 except for 10.68.0.0/16. The \"enwiki\" case is just below, blocking the whole /8.",
+      "parentUuid": "8ed34346_5da9b3db",
       "revId": "c00d4c5919fb53684b9d9528e1b178a6d6ec3687",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
