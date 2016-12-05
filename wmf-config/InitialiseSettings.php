@@ -14665,13 +14665,11 @@ $wgConf->settings = [
 	'nowikidatadescriptiontaglines' => [
 		'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => false
 	],
-	// This can be removed when top6-wikipedia.dblist is no longer inside nowikidatadescriptiontaglines
-	'jawiki' => [
-		'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => true
+	'ruwiki' => [
+		'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => false
 	],
-	// This can be removed when top6-wikipedia.dblist is no longer inside nowikidatadescriptiontaglines
-	'eswiki' => [
-		'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => true
+	'enwiki' => [
+		'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => false
 	],
 ],
 'wgMinervaUseFooterV2' => [
