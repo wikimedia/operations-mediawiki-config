@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ed34346_fdde3f6f",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3246,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-12-05T15:49:44Z",
+      "side": 1,
+      "message": "Lot of range can not reach our frontend or plainly dont make any sense cause they dont exist. Looks like the intended behavior is to prevent edit for an IP coming from a proxy for which the X-Forwarded-For IP is a private IP.\n\nIn the block handling code, when it is a trustedProxy apply the soft block whenever the IP isPrivate()? This way we reuse existing code inside MediaWiki instead of having yet an other config variable to maintain.",
+      "revId": "c00d4c5919fb53684b9d9528e1b178a6d6ec3687",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_ddbdc317",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3250,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-12-05T15:49:44Z",
+      "side": 1,
+      "message": "Edits from multicast do not make any sense I dont see how it is going to happen.",
+      "revId": "c00d4c5919fb53684b9d9528e1b178a6d6ec3687",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_fdb07f40",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3256,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-12-05T15:49:44Z",
+      "side": 1,
+      "message": "Those blocks are already defined in wgSquidServersNoPurge would probably be easier to reuse that",
+      "revId": "c00d4c5919fb53684b9d9528e1b178a6d6ec3687",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_5da9b3db",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3269,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2016-12-05T15:49:44Z",
+      "side": 1,
+      "message": "For the requests made from wmflabs public IP, we trust the X-Forwarded-For header that is sent to us as define in $wgSquidServersNoPurge thus showing the private labs IP is perfectly legitimate.",
+      "revId": "c00d4c5919fb53684b9d9528e1b178a6d6ec3687",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
