@@ -22,11 +22,11 @@ class Clean(main.AbstractSync):
             clean_job.exclude_hosts([socket.getfqdn()])
             clean_job.shuffle()
             clean_job.command(self._clean_command(self.config['stage_dir']))
-            clean_job.progress('clean-apaches')
+            clean_job.progress('clean-masters')
             succeeded, failed = clean_job.run()
             if failed:
                 self.get_logger().warning(
-                    '%d apaches had clean errors', failed)
+                    '%d masters had clean errors', failed)
 
         # Update apaches
         with log.Timer('clean-apaches', self.get_stats()):
