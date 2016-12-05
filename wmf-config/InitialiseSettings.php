@@ -17609,12 +17609,10 @@ $wgConf->settings = [
 
 'wgWPBEnablePageImagesBanners' => [
 	'default' => false,
-	'enwiki' => true, // T101108
 ],
 
 'wgWPBEnableHeadingOverride' => [
 	'default' => true,
-	'enwiki' => false, // T101108
 ],
 
 'wgWPBNamespaces' => [
