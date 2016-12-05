@@ -1,0 +1,9 @@
+Code-Review+1: Thiemo Mättig (WMDE) <thiemo.maettig@wikimedia.de>
+Code-Review+1: Daniel Kinzler <daniel.kinzler@wikimedia.de>
+Code-Review+2: Aude <aude.wiki@gmail.com>
+Verified+2: jenkins-bot
+Submitted-by: jenkins-bot
+Submitted-at: Mon, 05 Dec 2016 14:36:54 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/323556
+Project: operations/mediawiki-config
+Branch: refs/heads/master
