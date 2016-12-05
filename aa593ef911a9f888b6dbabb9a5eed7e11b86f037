@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ed34346_0ec65f9d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 16329,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-05T20:47:23Z",
+      "side": 1,
+      "message": "These are the same as Wikipedia so shouldn\u0027t be needed.",
+      "revId": "aa593ef911a9f888b6dbabb9a5eed7e11b86f037",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8ed34346_4ed33762",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 16342,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2016-12-05T20:47:23Z",
+      "side": 1,
+      "message": "These are the same as wikipedia so shouldn\u0027t be needed.",
+      "revId": "aa593ef911a9f888b6dbabb9a5eed7e11b86f037",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
