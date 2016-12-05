@@ -144,7 +144,7 @@ $wgLBFactoryConf = [
 		'db1045' => 0,   # 1.4TB  64GB, vslow, dump
 		'db1070' => 50,  # 2.8TB 160GB, api, old master
 		'db1071' => 50,  # 2.8TB 160GB, api
-		'db1082' => 500, # 3.6TB 512GB
+#		'db1082' => 500, # 3.6TB 512GB  #T148967
 		'db1087' => 500, # 3.6TB 512GB
 		'db1092' => 500, # 3.6TB 512GB
 	],
