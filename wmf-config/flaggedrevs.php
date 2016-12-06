@@ -14,7 +14,7 @@ $wgFlaggedRevsNamespaces[] = 828; // NS_MODULE
 $wgFlaggedRevsTags = [
 	'accuracy' => [ 'levels' => 2, 'quality' => 2, 'pristine' => 4 ],
 ];
-$wgFlagRestrictions = [
+$wgFlaggedRevsTagsRestrictions = [
 	'accuracy' => [ 'review' => 1, 'autoreview' => 1 ],
 ];
 $wgGroupPermissions['autoconfirmed']['movestable'] = true; // T16166
@@ -56,7 +56,7 @@ elseif ( $wgDBname == 'bnwiki' ) { // T30717
 		'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
 	];
 	# Restrict autoconfirmed to flagging semi-protected
-	$wgFlagRestrictions = [
+	$wgFlaggedRevsTagsRestrictions = [
 		'status' => [ 'review' => 1, 'autoreview' => 1 ],
 	];
 	# Restriction levels for auto-review/review rights
@@ -104,7 +104,7 @@ elseif ( $wgDBname == 'ckbwiki' ) {
 		'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
 	];
 	# Restrict autoconfirmed to flagging semi-protected
-	$wgFlagRestrictions = [
+	$wgFlaggedRevsTagsRestrictions = [
 		'status' => [ 'review' => 1, 'autoreview' => 1 ],
 	];
 	# Restriction levels for autoconfirmed, autopatrol and review rights
@@ -247,7 +247,7 @@ elseif ( $wgDBname == 'enwiki' || $wgDBname == 'testwiki' ) {
 		'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
 	];
 	# Restrict autoconfirmed to flagging semi-protected
-	$wgFlagRestrictions = [
+	$wgFlaggedRevsTagsRestrictions = [
 		'status' => [ 'review' => 1, 'autoreview' => 1 ],
 	];
 	# Restriction levels for auto-review/review rights
@@ -350,7 +350,7 @@ elseif ( $wgDBname == 'fawiki' ) {
 		'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
 	];
 	# Restrict autoconfirmed to flagging semi-protected
-	$wgFlagRestrictions = [
+	$wgFlaggedRevsTagsRestrictions = [
 		'status' => [ 'review' => 1, 'autoreview' => 1 ],
 	];
 	# Restriction levels for auto-review/review rights
@@ -403,7 +403,7 @@ elseif ( $wgDBname == 'fiwiki' ) {
 	$wgFlaggedRevsTags = [
 		'accuracy' => [ 'levels' => 3, 'quality' => 3, 'pristine' => 4 ],
 	];
-	$wgFlagRestrictions = [
+	$wgFlaggedRevsTagsRestrictions = [
 		'accuracy' => [ 'review' => 3, 'autoreview' => 2 ],
 	];
 }
@@ -426,7 +426,7 @@ elseif ( $wgDBname == 'hewikisource' ) {
 	$wgFlaggedRevsTags = [ 'completeness' => 3, 'accuracy' => 3, 'formatting' => 3 ];
 	$wgFlaggedRevValues = 4;
 	$wgFlaggedRevsAutoReviewNew = false;
-	$wgFlagRestrictions = [
+	$wgFlaggedRevsTagsRestrictions = [
 		'completeness' => [ 'review' => 3, 'autoreview' => 3 ],
 		'accuracy'     => [ 'review' => 3, 'autoreview' => 3 ],
 		'formatting'   => [ 'review' => 3, 'autoreview' => 3 ],
@@ -445,7 +445,7 @@ elseif ( $wgDBname == 'hiwiki' ) {
 		'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
 	];
 	# Restrict autoconfirmed to flagging semi-protected
-	$wgFlagRestrictions = [
+	$wgFlaggedRevsTagsRestrictions = [
 		'status' => [ 'review' => 1, 'autoreview' => 1 ],
 	];
 	# Restriction levels for auto-review/review rights
@@ -558,7 +558,7 @@ elseif ( $wgDBname == 'ptwiki' ) { // T56828
 		'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
 	];
 	# Restrict autoconfirmed to flagging semi-protected
-	$wgFlagRestrictions = [
+	$wgFlaggedRevsTagsRestrictions = [
 		'status' => [ 'review' => 1, 'autoreview' => 1 ],
 	];
 	# Restriction levels for autoconfirmed rights
