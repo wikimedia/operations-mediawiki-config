@@ -17595,7 +17595,6 @@ $wgConf->settings = [
 	'elwikivoyage' => false,
 	'ptwikivoyage' => false,
 	'nlwikivoyage' => false,
-	'rowikivoyage' => false,
 	'svwikivoyage' => false,
 	'viwikivoyage' => false,
 	'cawiki' => true, // T114392
