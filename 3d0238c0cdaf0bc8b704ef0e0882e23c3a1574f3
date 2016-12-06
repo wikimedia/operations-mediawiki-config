@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8ed34346_f4cc148e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 17589,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2016-12-06T00:17:52Z",
+      "side": 1,
+      "message": "I don\u0027t like this, honestly. The old way was more clear.",
+      "revId": "3d0238c0cdaf0bc8b704ef0e0882e23c3a1574f3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
