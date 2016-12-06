@@ -342,7 +342,8 @@ $wgObjectCaches['mysql-multiwrite'] = [
 			'shards' => 256,
 		],
 	],
-	'replication' => 'async'
+	'replication' => 'async',
+	'reportDupes' => false
 ];
 
 $wgSessionsInObjectCache = true;
