@@ -9214,6 +9214,9 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'bot' ],
 		'sysop' => [ 'ipblock-exempt' ],
 	],
+	'+private' => [
+		'bureaucrat' => [ 'inactive' ],
+	],
 	'+testwiki' => [
 		'bureaucrat' => [ 'researcher', 'centralnoticeadmin', 'translationadmin', 'flow-bot' ],
 		'sysop' => [ 'filemover', 'rollbacker', 'accountcreator', 'confirmed', 'templateeditor' ],
@@ -9676,9 +9679,6 @@ $wgConf->settings = [
 	'+ptwikinews' => [
 		'sysop' => [ 'reviewer' ],
 	],
-	'+private' => [ // Cary made me do it! --Andrew 2009-05-01
-		'bureaucrat' => [ 'inactive' ],
-	],
 	'+ptwiki' => [
 		'bureaucrat' => [ 'eliminator', 'confirmed', 'autoreviewer', 'interface-editor', 'accountcreator' ], // T41905, T65750
 		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ], // T65750
@@ -9897,6 +9897,9 @@ $wgConf->settings = [
 	'default' => [
 		'bureaucrat' => [ 'bot' ],
 		'sysop' => [ 'ipblock-exempt' ],
+	],
+	'+private' => [ // T152489
+		'bureaucrat' => [ 'bureaucrat', 'inactive', 'sysop' ],
 	],
 	'+testwiki' => [
 		'bureaucrat' => [ 'sysop', 'researcher', 'translationadmin', 'centralnoticeadmin', 'flow-bot' ],
@@ -10604,9 +10607,6 @@ $wgConf->settings = [
 	],
 	'+zh_yuewiki' => [
 		'sysop' => [ 'abusefilter', 'rollbacker', 'autoreviewer', 'confirmed' ],
-	],
-	'+private' => [ // Cary made me do it! --Andrew 2009-05-01
-		'bureaucrat' => [ 'inactive' ],
 	],
 
 ],
