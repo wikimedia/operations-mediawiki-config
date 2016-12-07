@@ -28,6 +28,13 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
+$wmgThrottlingExceptions[] = [ // T152588 - TSG office
+	'from' => '2016-12-06T22:00-08:00',
+	'to' => '2018-01-01T00:00-08:00',
+	'IP' => '50.250.225.50',
+	'value' => 1000,
+];
+
 // December 2nd
 $wmgThrottlingExceptions[] = [ // T146600
 	'from' => '2016-12-02T12:30 -6:00',
