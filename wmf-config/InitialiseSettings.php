@@ -12665,6 +12665,7 @@ $wgConf->settings = [
 	'bhwiki' => true,
 	'bnwiki' => true,
 	'bnwikibooks' => true,
+	'bnwikisource' => true, // T152692
 	'bnwiktionary' => true,
 	'brwikimedia' => true,
 	'cawiki' => true,
