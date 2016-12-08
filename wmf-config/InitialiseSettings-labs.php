@@ -585,5 +585,13 @@ function wmfLabsSettings() {
 		'wmgUseEmailAuth' => [
 			'default' => 'true',
 		],
+		'wmgUseLinter' => [
+			'default' => true,
+		],
+		'wgLinterSubmitterWhitelist' => [
+			'default' => [
+				'10.68.20.142' => true // deployment-parsoid09.deployment-prep.eqiad.wmflabs
+			]
+		]
 	];
 } # wmflLabsSettings()
