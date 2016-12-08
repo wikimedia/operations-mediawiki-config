@@ -167,69 +167,13 @@ if ( $wgDBname == 'commonswiki' ) {
 
 
 // Enable Tabular data namespace on Commons - T148745
-if ( $wmgEnableTabularData ) {
-	// Safety: before extension.json, these values were initialized by JsonConfig.php
-	if ( !isset( $wgJsonConfigModels ) ) {
-		$wgJsonConfigModels = [];
-	}
-	if ( !isset( $wgJsonConfigs ) ) {
-		$wgJsonConfigs = [];
-	}
-	// https://www.mediawiki.org/wiki/Extension:JsonConfig#Configuration
-	$wgJsonConfigModels['Tabular.JsonConfig'] = 'JsonConfig\JCTabularContent';
-	$wgJsonConfigs['Tabular.JsonConfig'] = [
-		'namespace' => 486,
-		'nsName' => 'Data',
-		// page name must end in ".tab", and contain at least one symbol
-		'pattern' => '/.\.tab$/',
-		'license' => 'CC0-1.0+',
-		'isLocal' => false,
-	];
-	if ( $wgDBname == 'commonswiki' ) {
-		// Ensure we have a stable cross-wiki title resolution
-		// See JCSingleton::parseTitle()
-		$wgJsonConfigInterwikiPrefix = "meta";
-		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
-	} else {
-		$wgJsonConfigInterwikiPrefix = "commons";
-		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
-			'url' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php'
-		];
-	}
-	$wgJsonConfigEnableLuaSupport = true;
+if ( $wmgEnableTabularData && $wgDBname !== 'commonswiki' ) {
+	$wgJsonConfigs['Tabular.JsonConfig']['remote']['url'] = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
 }
 
 // Enable Map (GeoJSON) data namespace on Commons - T149548
-if ( $wmgEnableMapData ) {
-	// Safety: before extension.json, these values were initialized by JsonConfig.php
-	if ( !isset( $wgJsonConfigModels ) ) {
-		$wgJsonConfigModels = [];
-	}
-	if ( !isset( $wgJsonConfigs ) ) {
-		$wgJsonConfigs = [];
-	}
-	// https://www.mediawiki.org/wiki/Extension:JsonConfig#Configuration
-	$wgJsonConfigModels['Map.JsonConfig'] = 'JsonConfig\JCMapDataContent';
-	$wgJsonConfigs['Map.JsonConfig'] = [
-		'namespace' => 486,
-		'nsName' => 'Data',
-		// page name must end in ".map", and contain at least one symbol
-		'pattern' => '/.\.map$/',
-		'license' => 'CC0-1.0+',
-		'isLocal' => false,
-	];
-	if ( $wgDBname == 'commonswiki' ) {
-		// Ensure we have a stable cross-wiki title resolution
-		// See JCSingleton::parseTitle()
-		$wgJsonConfigInterwikiPrefix = "meta";
-		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
-	} else {
-		$wgJsonConfigInterwikiPrefix = "commons";
-		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
-			'url' => 'https://commons.wikimedia.beta.wmflabs.org/w/api.php'
-		];
-	}
-	$wgJsonConfigEnableLuaSupport = true;
+if ( $wmgEnableMapData && $wgDBname !== 'commonswiki' ) {
+	$wgJsonConfigs['Map.JsonConfig']['remote']['url'] = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
 }
 
 

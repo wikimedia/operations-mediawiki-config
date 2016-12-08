@@ -14508,6 +14508,16 @@ $wgConf->settings = [
 	'zerowiki' => true,
 ],
 
+// Enable Tabular data namespace on Commons - T148745
+'wmgEnableTabularData' => [
+	'default' => true,
+],
+
+// Enable Map (GeoJSON) data namespace on Commons - T149548
+'wmgEnableMapData' => [
+	'default' => true,
+],
+
 'wmgUseGraph' => [
 	'default' => true,
 ],
