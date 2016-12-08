@@ -16340,7 +16340,6 @@ $wgConf->settings = [
 		'rwr' => 'मारवाड़ी',           // T61905
 		'sje' => 'bidumsámegiella', // T146707
 		'smj' => 'julevsámegiella', // T146707
-		'abe' => 'wôbanakiôdwawôgan', // T150633
 	],
 ],
 
