@@ -45,6 +45,14 @@ $wmgThrottlingExceptions[] = [ // T151650 - #MOWomenOnWikipedia Edit-A-Thon
 	'value' => 200 // 100 expected
 ];
 
+$wmgThrottlingExceptions[] = [ // T152669
+	'from' => '2016-12-08T08:00 -0:00',
+	'to' => '2016-12-09T08:00 -0:00',
+	'IP' => '132.185.153.3',
+	'dbname' => 'enwiki',
+	'value' => 60 // 50 expected
+];
+
 ## Add throttling definitions above.
 
 /**
