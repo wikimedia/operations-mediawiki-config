@@ -8411,7 +8411,7 @@ $wgConf->settings = [
 		],
 		'global-renamer' => [ // T142123, T71651
 			'autopatrol' => true,
-			'centralauth-rename' => true,
+			// 'centralauth-rename' => true,
 		],
 		'massmessage-sender' => [ // T59611, T142123
 			'autopatrol' => true,
@@ -8421,7 +8421,7 @@ $wgConf->settings = [
 			'autopatrol' => true,
 		],
 		'steward' => [
-			'centralauth-rename' => true,
+			// 'centralauth-rename' => true,
 			'userrights-interwiki' => true,
 		],
 		'translationadmin' => [
@@ -8443,7 +8443,7 @@ $wgConf->settings = [
 			'autopatrol' => true,
 			'centralauth-lock' => true,
 			'centralauth-oversight' => true,
-			'centralauth-rename' => true,
+			// 'centralauth-rename' => true,
 			'editcontentmodel' => true, // TODO: remove when a change for T85847 is deployed
 			'globalblock' => true,
 			'massmessage' => true,
