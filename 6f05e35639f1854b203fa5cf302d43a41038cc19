@@ -16,6 +16,24 @@
       "revId": "6f05e35639f1854b203fa5cf302d43a41038cc19",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6ed52f32_164ea23c",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 593,
+      "author": {
+        "id": 458
+      },
+      "writtenOn": "2016-12-08T18:32:33Z",
+      "side": 1,
+      "message": "Those are expecting to be used as domains, but the code in ApiRecordLint.php is expecting IP addresses...",
+      "parentUuid": "6ed52f32_b63c6e8f",
+      "revId": "6f05e35639f1854b203fa5cf302d43a41038cc19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
