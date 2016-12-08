@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6ed52f32_b63c6e8f",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 593,
+      "author": {
+        "id": 910
+      },
+      "writtenOn": "2016-12-08T18:30:34Z",
+      "side": 1,
+      "message": "wgUploadThumbnailRenderHttpCustomDomain above, and others, don\u0027t specify the ip",
+      "revId": "6f05e35639f1854b203fa5cf302d43a41038cc19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
