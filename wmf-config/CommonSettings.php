@@ -2762,7 +2762,7 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 		// and Topic: (from Flow) are the same, like in Portuguese. In those cases we
 		// make the Flow Topic: namespace only use the English name, so the translated name
 		// will still point to the LQT namespace.
-		$wgExtraNamespaces[NS_TOPIC] = 'Topic';
+		$wgExtraNamespaces[2600] = 'Topic'; // NS_TOPIC
 	}
 
 	$wgFlowDefaultWikiDb = $wmgFlowDefaultWikiDb;
