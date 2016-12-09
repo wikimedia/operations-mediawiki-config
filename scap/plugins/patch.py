@@ -6,9 +6,6 @@ import subprocess
 import scap.cli as cli
 import scap.utils as utils
 
-from exceptions import ValueError
-
-
 class PatchError(Exception):
     """Exception raised for errors applying a patch.
 
