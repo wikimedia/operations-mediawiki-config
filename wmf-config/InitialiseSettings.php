@@ -3323,6 +3323,7 @@ $wgConf->settings = [
 		'Portal_nîqas' => 105, // T39524 (old namespace name)
 	],
 	'+kuwiki' => [
+		'WP' => NS_PROJECT, // T152815
 		'Portal_nîqaş' => 101, // T39521
 	],
 	'+kvwiki' => [
