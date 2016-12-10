@@ -15881,6 +15881,7 @@ $wgConf->settings = [
 	'knwiki' => true, // T103659
 	'kowiki' => true,
 	'mediawikiwiki' => true,
+	'metawiki' => true,
 	'mkwiki' => true,
 	'mlwiki' => true,
 	'mswiki' => true,
