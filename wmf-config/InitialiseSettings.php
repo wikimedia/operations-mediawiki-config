@@ -16616,6 +16616,7 @@ $wgConf->settings = [
 	],
 	'nowiki' => [
 		'sort' => 'alphabetic',
+		'sortPrepend' => [ 'nn', 'da', 'sv', 'fo', 'is' ], // T148021
 	],
 	'nvwiki' => [
 		'sort' => 'alphabetic',
