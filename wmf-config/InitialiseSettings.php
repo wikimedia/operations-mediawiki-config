@@ -8942,15 +8942,6 @@ $wgConf->settings = [
 			'deletedhistory' => true,
 		],
 		'user' => [ 'reupload-own' => true ], // T122710
-		'technican' => [ // T122710
-			'abusefilter-log-detail' => true,
-			'abusefilter-modify' => true,
-			'apihighlimits' => true,
-			'editinterface' => true,
-			'editusercss' => true,
-			'edituserjs' => true,
-			'noratelimit' => true,
-		],
 	],
 	'ukwiki' => [
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, ],
@@ -9203,7 +9194,6 @@ $wgConf->settings = [
 	'+ruwiki' => [ 'engineer' ],
 	'+testwiki' => [ 'centralnoticeadmin' ],
 	'+trwiki' => [ 'technician' ],
-	'+trwikiquote' => [ 'technican' ],
 	'+wikidata' => [ 'wikidata-staff' ],
 ],
 
@@ -9791,9 +9781,6 @@ $wgConf->settings = [
 	'+trwiki' => [
 		'sysop' => [ 'patroller', 'massmessage-sender' ], // bureaucrat -> sysop, T40690, T147740
 		'bureaucrat' => [ 'technician' ], // T41690
-	],
-	'+trwikiquote' => [
-		'bureaucrat' => [ 'technican' ], // T122710
 	],
 	'+uawikimedia' => [
 	    'bureaucrat' => [ 'translationadmin' ], // T131731
@@ -10502,9 +10489,6 @@ $wgConf->settings = [
 	'+trwiki' => [
 		'sysop' => [ 'patroller', 'massmessage-sender' ], // bureaucrat -> sysop, T40690, T147740
 		'bureaucrat' => [ 'technician' ], // T41690
-	],
-	'+trwikiquote' => [
-		'bureaucrat' => [ 'technican' ], // T122710
 	],
 	'+uawikimedia' => [
 		'bureaucrat' => [ 'translationadmin' ], // T131731
