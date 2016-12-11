@@ -419,7 +419,6 @@ if ( $wmgUseCentralAuth ) {
 			'templateeditor' => [ 'fawiki', 'rowiki' ],
 			'botadmin' => [ 'frwiktionary', 'mlwiki', 'mlwikisource', 'mlwiktionary' ],
 			'translator' => [ 'incubatorwiki' ],
-			'technician' => [ 'trwiki' ],
 			'wikidata-staff' => [ 'wikidata' ],
 		];
 

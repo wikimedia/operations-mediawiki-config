@@ -8915,7 +8915,7 @@ $wgConf->settings = [
 			'review' => true, // T40690
 			'unreviewedpages' => true, // T40690
 		],
-		'technician' => [
+		'interface-editor' => [ // Renamed from 'technician' per T144638
 			'abusefilter-log-detail' => true, // T40690
 			'abusefilter-modify' => true, // T40690
 			'apihighlimits' => true, // T40690
@@ -9202,7 +9202,6 @@ $wgConf->settings = [
 	'+rowiki' => [ 'templateeditor' ],
 	'+ruwiki' => [ 'engineer' ],
 	'+testwiki' => [ 'centralnoticeadmin' ],
-	'+trwiki' => [ 'technician' ],
 	'+trwikiquote' => [ 'technican' ],
 	'+wikidata' => [ 'wikidata-staff' ],
 ],
@@ -9790,7 +9789,7 @@ $wgConf->settings = [
 	],
 	'+trwiki' => [
 		'sysop' => [ 'patroller', 'massmessage-sender' ], // bureaucrat -> sysop, T40690, T147740
-		'bureaucrat' => [ 'technician' ], // T41690
+		'bureaucrat' => [ 'interface-editor' ], // T41690
 	],
 	'+trwikiquote' => [
 		'bureaucrat' => [ 'technican' ], // T122710
@@ -10501,7 +10500,7 @@ $wgConf->settings = [
 	],
 	'+trwiki' => [
 		'sysop' => [ 'patroller', 'massmessage-sender' ], // bureaucrat -> sysop, T40690, T147740
-		'bureaucrat' => [ 'technician' ], // T41690
+		'bureaucrat' => [ 'interface-editor' ], // T41690
 	],
 	'+trwikiquote' => [
 		'bureaucrat' => [ 'technican' ], // T122710
