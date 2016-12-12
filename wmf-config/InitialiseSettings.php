@@ -16434,6 +16434,9 @@ $wgConf->settings = [
 
 	// Some languages aren't currently supported by MediaWiki
 	// but available to encode information on Wikidata.
+	// Note: If the language is only supposed to be used with
+	// Monolingual text statements, it should rather be added to:
+	// Wikibase\Repo\WikibaseRepo::getMonolingualTextLanguages
 	'wikidata' => [
 		'din' => 'dinka',           // T75563
 		'kea' => 'Kabuverdianu',    // T127435
