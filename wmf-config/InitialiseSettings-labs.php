@@ -164,6 +164,7 @@ function wmfLabsSettings() {
 		'-wgLogo' => [
 			'default' => '/static/images/project-logos/betawiki.png',
 			'commonswiki' => '/static/images/project-logos/betacommons.png',
+			'metawiki' => '/static/images/project-logos/betametawiki.png' // T125942
 			'wikibooks' => '/static/images/project-logos/betacommons.png',
 			'wikidata' => '/static/images/project-logos/betawikidata.png',
 			'wikinews' => '/static/images/project-logos/betacommons.png',
