@@ -14292,6 +14292,7 @@ $wgConf->settings = [
 	'fiwikiquote' => 'uca-fi', // T48330
 	'fiwikisource' => 'uca-fi', // T48330
 	'fiwikiversity' => 'uca-fi', // T48330
+	'fiwikivoyage' => 'uca-fi', // T151570
 	'frwiki' => 'uca-fr-u-kn', // T56680, T146675
 	'frwikibooks' => 'uca-fr', // T74513
 	'frwikinews' => 'uca-fr', // T68165
