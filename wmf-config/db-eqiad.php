@@ -102,7 +102,7 @@ $wgLBFactoryConf = [
 		'db1072' => 0,   # 2.8TB 160GB, vslow, dump
 #		'db1073' => 1,   # 2.8TB 160GB multiple hardware issues T149728
 		'db1080' => 500, # 3.6TB 512GB
-#		'db1083' => 500, # 3.6TB 512GB # depooled for maintenance T69223
+		'db1083' => 50,  # 3.6TB 512GB, pooled with low load
 		'db1089' => 500, # 3.6TB 512GB
 	],
 	's2' => [
