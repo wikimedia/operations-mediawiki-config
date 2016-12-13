@@ -9648,6 +9648,9 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'bot', 'patroller', 'autopatrolled' ],
 		'sysop' => [ 'autopatrolled', 'patroller' ],
 	],
+	'+nowikimedia' => [
+		'sysop' => [ 'translationadmin' ], // T152490
+	],
 	'+officewiki' => [
 		'bureaucrat' => [ 'import', 'transwiki', 'communityapps', 'flood', 'securepoll' ],
 	],
@@ -10353,6 +10356,9 @@ $wgConf->settings = [
 	'+nowikibooks' => [
 		'bureaucrat' => [ 'bot', 'patroller', 'autopatrolled' ],
 		'sysop' => [ 'autopatrolled', 'patroller' ],
+	],
+	'+nowikimedia' => [
+		'sysop' => [ 'translationadmin' ], // T152490
 	],
 	'+officewiki' => [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'import', 'transwiki', 'communityapps', 'flood', 'securepoll' ],
