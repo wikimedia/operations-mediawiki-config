@@ -103,8 +103,10 @@ $wgCirrusSearchRefreshInterval = 30;
 $wgCirrusSearchQueryStringMaxDeterminizedStates = 500;
 
 # Lower the regex timeouts - the defaults are too high in an environment with reverse proxies.
-$wgCirrusSearchSearchShardTimeout[ 'regex' ] = '40s';
-$wgCirrusSearchClientSideSearchTimeout[ 'regex' ] = 80;
+$wgCirrusSearchSearchShardTimeout[ 'regex' ] = '20s';
+$wgCirrusSearchClientSideSearchTimeout[ 'regex' ] = 40;
+$wgCirrusSearchSearchShardTimeout[ 'default' ] = '10s';
+$wgCirrusSearchClientSideSearchTimeout[ 'default' ] = 20;
 
 # Set the backoff for Cirrus' job that reacts to template changes - slow and steady
 # will help prevent spikes in Elasticsearch load.
