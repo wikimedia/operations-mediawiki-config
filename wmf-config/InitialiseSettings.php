@@ -14446,7 +14446,6 @@ $wgConf->settings = [
 
 'wmgUseMoodBar' => [
 	'default' => false, // Do not enable on any further wikis, T131340
-	'nlwiki' => true, // T34202
 ],
 'wmgMoodBarInfoUrl' => [
 	'default' => '//www.mediawiki.org/wiki/MoodBar',
