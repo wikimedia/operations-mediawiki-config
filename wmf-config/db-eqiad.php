@@ -94,8 +94,8 @@ $wgLBFactoryConf = [
 'sectionLoads' => [
 	's1' => [
 		'db1057' => 0,   # 2.8TB  96GB, master
-#		'db1052' => 1  , # 2.8TB  96GB, api, old master #Temporary master for db1095 - new sanitarium #T150960
-		'db1051' => 1,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager # low load after repool
+#		'db1052' => 1  , # 2.8TB  96GB, old master #Temporary master for db1095 - new sanitarium #T150960
+		'db1051' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1055' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1065' => 50,  # 2.8TB 160GB, api
 		'db1066' => 50,  # 2.8TB 160GB, api
@@ -239,23 +239,23 @@ $wgLBFactoryConf = [
 	's1' => [
 		'watchlist' => [
 			'db1051' => 1,
-			'db1055' => 10,
+			'db1055' => 1,
 		],
 		'recentchanges' => [
 			'db1051' => 1,
-			'db1055' => 10,
+			'db1055' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1051' => 1,
-			'db1055' => 10,
+			'db1055' => 1,
 		],
 		'contributions' => [
 			'db1051' => 1,
-			'db1055' => 10,
+			'db1055' => 1,
 		],
 		'logpager' => [
 			'db1051' => 1,
-			'db1055' => 10,
+			'db1055' => 1,
 		],
 		'dump' => [
 			'db1072' => 1,
@@ -266,7 +266,6 @@ $wgLBFactoryConf = [
 		'api' => [
 			'db1065' => 1,
 			'db1066' => 1,
-#			'db1052' => 1,
 		],
 	],
 	's2' => [
