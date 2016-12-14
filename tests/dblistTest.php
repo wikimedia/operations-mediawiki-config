@@ -55,9 +55,11 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 		# FIXME ideally we want to clean those files from any old dbnames
 		$skip = array(
 
-			# 'all-labs' is for the 'beta' project which has wikis not yet
-			# available in production ('all'). So we do not verify it.
+			# 'all-labs' and 'flow_only_labs' are for the 'beta' project, which
+			# has wikis not yet available in production ('all'). So we do not
+			# verify it.
 			'all-labs',
+			'flow_only_labs',
 
 			'closed',
 			'deleted',

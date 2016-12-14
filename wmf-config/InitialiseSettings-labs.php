@@ -26,9 +26,19 @@ function wmfLabsOverrideSettings() {
 	// Add a wikitag of 'beta' that can be used to merge beta specific and
 	// default settings by using `'+beta' => array(...),`
 	$wgConf->siteParamsCallback = function( $conf, $wiki ) {
+		$wikiTags = [ 'beta' ];
+
+		$betaDblistTags = [ 'flow_only_labs' ];
+		foreach ( $betaDblistTags as $tag ) {
+			$dblist = MWWikiversions::readDbListFile( $tag );
+			if ( in_array( $wiki, $dblist ) ) {
+				$wikiTags[] = $tag;
+			}
+		}
+
 		return [
 			'params' => [ 'variant' => 'beta' ],
-			'tags' => [ 'beta' ],
+			'tags' => $wikiTags
 		];
 	};
 
@@ -355,8 +365,8 @@ function wmfLabsSettings() {
 		],
 
 		'wmgUseFlow' => [
-			'enwiki' => true,
-			'en_rtlwiki' => true,
+			// 'flow_computed_labs' is full set applicable on Beta Cluster.
+			'flow_only_labs' => true,
 		],
 		# No separate Flow DB or cluster (yet) for labs.
 		'-wmgFlowDefaultWikiDb' => [
