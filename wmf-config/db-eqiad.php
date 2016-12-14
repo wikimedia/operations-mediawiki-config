@@ -146,7 +146,7 @@ $wgLBFactoryConf = [
 		'db1071' => 50,  # 2.8TB 160GB, api
 		'db1082' => 500, # 3.6TB 512GB
 		'db1087' => 500, # 3.6TB 512GB
-		'db1092' => 500, # 3.6TB 512GB
+#		'db1092' => 500, # 3.6TB 512GB, depool for schema change T69223
 	],
 	's6' => [
 		'db1050' => 0,   # 2.8TB  64GB, master
