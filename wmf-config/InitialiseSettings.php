@@ -12328,7 +12328,7 @@ $wgConf->settings = [
 ],
 
 'wgAbuseFilterParserClass' => [
-	'default' => 'AbuseFilterCachingParser',
+	'default' => 'AbuseFilterParser',
 ],
 # @}
 
