@@ -63,7 +63,7 @@ class CheckoutMediaWiki(cli.Application):
         self.create_startprofiler_symlink()
 
         cache_dir = os.path.join(self.dest_dir, 'cache')
-        os.chmod(cache_dir, 0777)
+        os.chmod(cache_dir, 0o777)
         utils.sudo_check_call('l10nupdate',
                               'mkdir "%s"' % os.path.join(cache_dir, 'l10n'))
 
