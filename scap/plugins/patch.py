@@ -1,10 +1,11 @@
-from __future__ import print_function, unicode_literals
+from __future__ import unicode_literals
 
 import os.path
 import subprocess
 
 import scap.cli as cli
 import scap.utils as utils
+
 
 class PatchError(Exception):
     """Exception raised for errors applying a patch.
