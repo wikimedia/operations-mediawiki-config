@@ -14641,6 +14641,7 @@ $wgConf->settings = [
 
 'wgMinervaEnableSiteNotice' => [
 	'default' => false,
+	'arwiki' => true,
 ],
 
 'wgMinervaBottomLanguageButton' => [
