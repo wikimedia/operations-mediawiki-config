@@ -2403,11 +2403,15 @@ if ( $wmgUseTranslate ) {
 	$wgGroupPermissions['translationadmin']['pagetranslation'] = true;
 	$wgGroupPermissions['translationadmin']['translate-manage'] = true;
 	$wgGroupPermissions['translationadmin']['translate-import'] = true; // T42341
+	$wgGroupPermissions['translationadmin']['pagelang'] = true; // T153209
 	$wgGroupPermissions['user']['translate-messagereview'] = true;
 	$wgGroupPermissions['user']['translate-groupreview'] = true;
+	$wgGroupPermissions['sysop']['pagelang'] = true; // T153209
 
 	$wgTranslateDocumentationLanguageCode = 'qqq';
 	$wgExtraLanguageNames['qqq'] = 'Message documentation'; # No linguistic content. Used for documenting messages
+
+	$wgPageLanguageUseDB = true; // T153209
 
 	// TODO: proper integration with new CirrusSearch config
 	$wgTranslateExtensionDefaultCluster = 'eqiad';
