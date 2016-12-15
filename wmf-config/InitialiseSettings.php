@@ -11371,7 +11371,7 @@ $wgConf->settings = [
 
 'wgPageLanguageUseDB' => [
 	'default' => false,
-	'testwiki' => true,
+	// overridden to true in CommonSettings for wikis using the Translate extension
 ],
 
 'wgShowExceptionDetails' => [
