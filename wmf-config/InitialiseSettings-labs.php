@@ -593,6 +593,9 @@ function wmfLabsSettings() {
 			'default' => [
 				'10.68.20.142' => true // deployment-parsoid09.deployment-prep.eqiad.wmflabs
 			]
-		]
+		],
+		'wgLinterStatsdSampleFactor' => [
+			'default' => 10,
+		],
 	];
 } # wmflLabsSettings()
