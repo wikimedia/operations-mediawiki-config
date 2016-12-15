@@ -100,7 +100,7 @@ $wgLBFactoryConf = [
 		'db1065' => 50,  # 2.8TB 160GB, api
 		'db1066' => 50,  # 2.8TB 160GB, api
 		'db1072' => 0,   # 2.8TB 160GB, vslow, dump
-#		'db1073' => 1,   # 2.8TB 160GB multiple hardware issues T149728
+		'db1073' => 40,  # 2.8TB 160GB, api 
 		'db1080' => 500, # 3.6TB 512GB
 		'db1083' => 500, # 3.6TB 512GB
 		'db1089' => 500, # 3.6TB 512GB
@@ -266,6 +266,7 @@ $wgLBFactoryConf = [
 		'api' => [
 			'db1065' => 1,
 			'db1066' => 1,
+			'db1073' => 1,
 		],
 	],
 	's2' => [
