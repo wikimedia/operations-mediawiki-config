@@ -12,6 +12,8 @@ class Clean(main.AbstractSync):
     """ Scap sub-command to clean old branches """
 
     @cli.argument('branch', help='The name of the branch to clean.')
+    @cli.argument('--l10n-only', action='store_true',
+                  help='Only prune old l10n cache files.')
     def main(self, *extra_args):
         """ Clean old branches from the cluster for space savings! """
 
@@ -41,5 +43,7 @@ class Clean(main.AbstractSync):
                     '%d apaches had clean errors', failed)
 
     def _clean_command(self, location):
-        return 'rm -fR %s' % os.path.join(
-            location, 'php-%s' % self.arguments.branch)
+        path = os.path.join(location, 'php-%s' % self.arguments.branch)
+        if self.arguments.l10n_only:
+            path = os.path.join(path, 'cache', 'l10n', '*.cdb')
+        return 'rm -fR %s' % path
