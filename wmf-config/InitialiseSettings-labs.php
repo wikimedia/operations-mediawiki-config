@@ -165,7 +165,6 @@ function wmfLabsSettings() {
 			'default' => '/static/images/project-logos/betawiki.png',
 			'commonswiki' => '/static/images/project-logos/betacommons.png',
 			'wikibooks' => '/static/images/project-logos/betacommons.png',
-			'wikidata' => '/static/images/project-logos/betacommons.png',
 			'wikidata' => '/static/images/project-logos/betawikidata.png',
 			'wikinews' => '/static/images/project-logos/betacommons.png',
 			'wikiquote' => '/static/images/project-logos/betacommons.png',
