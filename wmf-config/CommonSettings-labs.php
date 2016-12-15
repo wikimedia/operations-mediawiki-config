@@ -335,6 +335,13 @@ if ( $wmgUseLinter ) {
 	wfLoadExtension( 'Linter' );
 }
 
+if ( $wmgUseTranslate ) {
+	// test of T153209
+	$wgGroupPermissions['translationadmin']['pagelang'] = true;
+	$wgGroupPermissions['sysop']['pagelang'] = true;
+	$wgPageLanguageUseDB = true;
+}
+
 $wgMessageCacheType = CACHE_ACCEL;
 
 // Let Beta Cluster Commons do upload-from-URL from production Commons.
