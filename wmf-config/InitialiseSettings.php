@@ -8426,6 +8426,7 @@ $wgConf->settings = [
 			'accessrestrictedregions' => true,
 			'editallhiera' => true,
 		],
+		'oathauth' => [ 'oathauth-api-all' => true ], // T153487
 		'oauthadmin' => [ 'autopatrol' => true ],
 		'shell' => [ 'loginviashell' => true ],
 		'shellmanagers' => [
