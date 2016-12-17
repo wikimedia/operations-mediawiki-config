@@ -76,5 +76,215 @@
         "unit": "Q11573",
         "label": "dactylos",
         "siLabel": "metre"
+    },
+    "Q613726": {
+        "factor": "1000000000000000000000",
+        "unit": "Q11570",
+        "label": "yottagram",
+        "siLabel": "kilogram"
+    },
+    "Q100995": {
+        "factor": "0.45359237",
+        "unit": "Q11570",
+        "label": "pound",
+        "siLabel": "kilogram"
+    },
+    "Q483261": {
+        "factor": "0.00000000000000000000000000166053904",
+        "unit": "Q11570",
+        "label": "atomic mass unit",
+        "siLabel": "kilogram"
+    },
+    "Q191118": {
+        "factor": "1000",
+        "unit": "Q11570",
+        "label": "tonne",
+        "siLabel": "kilogram"
+    },
+    "Q180892": {
+        "factor": "1988550000000000000000000000000",
+        "unit": "Q11570",
+        "label": "solar mass",
+        "siLabel": "kilogram"
+    },
+    "Q11570": {
+        "factor": "1",
+        "unit": "Q11570",
+        "label": "kilogram",
+        "siLabel": "kilogram"
+    },
+    "Q83327": {
+        "factor": "0.000000000000000000000000000000000001782662",
+        "unit": "Q11570",
+        "label": "electronvolt",
+        "siLabel": "kilogram"		
+    },
+    "Q41803": {
+        "factor": "0.001",
+        "unit": "Q11570",
+        "label": "gram",
+        "siLabel": "kilogram"
+	},
+    "Q857027": {
+        "factor": "0.09290304",
+        "unit": "Q25343",
+        "label": "square foot",
+        "siLabel": "square metre"
+    },
+    "Q81292": {
+        "factor": "4046.8564224",
+        "unit": "Q25343",
+        "label": "acre",
+        "siLabel": "square metre"
+    },
+    "Q25343": {
+        "factor": "1",
+        "unit": "Q25343",
+        "label": "square metre",
+        "siLabel": "square metre"
+    },
+    "Q21074767": {
+        "factor": "1138100",
+        "unit": "Q25343",
+        "label": "square versta",
+        "siLabel": "square metre"
+    },
+    "Q232291": {
+        "factor": "2589988.110336",
+        "unit": "Q25343",
+        "label": "square mile",
+        "siLabel": "square metre"
+    },
+    "Q35852": {
+        "factor": "10000",
+        "unit": "Q25343",
+        "label": "hectare",
+        "siLabel": "square metre"
+    },
+    "Q712226": {
+        "factor": "1000000",
+        "unit": "Q25343",
+        "label": "square kilometre",
+        "siLabel": "square metre"
+    },
+    "Q935614": {
+        "factor": "1600",
+        "unit": "Q25343",
+        "label": "rai",
+        "siLabel": "square metre"
+    },
+    "Q211256": {
+        "factor": "0.44704",
+        "unit": "Q182429",
+        "label": "miles per hour",
+        "siLabel": "metre per second"
+    },
+    "Q180154": {
+        "factor": "0.2777777777777777778",
+        "unit": "Q182429",
+        "label": "kilometre per hour",
+        "siLabel": "metre per second"
+    },
+    "Q4220561": {
+        "factor": "1000",
+        "unit": "Q182429",
+        "label": "kilometer per second",
+        "siLabel": "metre per second"
+    },
+    "Q182429": {
+        "factor": "1",
+        "unit": "Q182429",
+        "label": "metre per second",
+        "siLabel": "metre per second"
+    },
+    "Q128822": {
+        "factor": "0.514444",
+        "unit": "Q182429",
+        "label": "knot",
+        "siLabel": "metre per second"
+    },
+    "Q1022113": {
+        "factor": "0.000001",
+        "unit": "Q25517",
+        "label": "cubic centimetre",
+        "siLabel": "cubic metre"
+    },
+    "Q1815100": {
+        "factor": "0.00001",
+        "unit": "Q25517",
+        "label": "centiliter",
+        "siLabel": "cubic metre"
+    },
+    "Q11582": {
+        "factor": "0.001",
+        "unit": "Q25517",
+        "label": "liter",
+        "siLabel": "cubic metre"
+    },
+    "Q4243638": {
+        "factor": "1000000000",
+        "unit": "Q25517",
+        "label": "cubic kilometre",
+        "siLabel": "cubic metre"
+    },
+    "Q25517": {
+        "factor": "1",
+        "unit": "Q25517",
+        "label": "cubic metre",
+        "siLabel": "cubic metre"
+    },
+    "Q7727": {
+        "factor": "60",
+        "unit": "Q11574",
+        "label": "minute",
+        "siLabel": "second"
+    },
+    "Q11574": {
+        "factor": "1",
+        "unit": "Q11574",
+        "label": "second",
+        "siLabel": "second"
+    },
+    "Q2483628": {
+        "factor": "0.000000000000000001",
+        "unit": "Q11574",
+        "label": "attosecond",
+        "siLabel": "second"
+    },
+    "Q23387": {
+        "factor": "604800",
+        "unit": "Q11574",
+        "label": "week",
+        "siLabel": "second"
+    },
+    "Q25235": {
+        "factor": "3600",
+        "unit": "Q11574",
+        "label": "hour",
+        "siLabel": "second"
+    },
+    "Q838801": {
+        "factor": "0.000000001",
+        "unit": "Q11574",
+        "label": "nanosecond",
+        "siLabel": "second"
+    },
+    "Q842015": {
+        "factor": "0.000001",
+        "unit": "Q11574",
+        "label": "microsecond",
+        "siLabel": "second"
+    },
+    "Q723733": {
+        "factor": "0.001",
+        "unit": "Q11574",
+        "label": "millisecond",
+        "siLabel": "second"
+    },
+    "Q573": {
+        "factor": "86400",
+        "unit": "Q11574",
+        "label": "day",
+        "siLabel": "second"
     }
 }
