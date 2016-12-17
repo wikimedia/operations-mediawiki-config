@@ -18,6 +18,8 @@ from pygments.formatters import TerminalFormatter
 import json
 import logging
 import re
+import urllib
+
 
 gerrit_session = None
 gerrit_uri = 'https://gerrit.wikimedia.org'
@@ -62,11 +64,25 @@ def error_log(msg, *args):
     logger.error(msg, *args)
 
 
+class urlencode_map(object):
+    def __init__(self, *base_maps):
+        """ wrap one or more mappings and urlencode the values """
+        self.base_maps = base_maps
+
+    def __getitem__(self, key):
+        for map in self.base_maps:
+            if key in map:
+                return urllib.quote(map[key], safe='')
+
+        raise KeyError('Key "%s" not found' % key)
+
+
 class GerritEndpoint(object):
     ''' base class for gerrit api endpoints '''
 
     # derived classes override the path section of the uri for each endpoint
     _path = "/"
+    _uri_template = None
 
     def __init__(self, path='/'):
         '''
@@ -80,12 +96,15 @@ class GerritEndpoint(object):
         ''' Builds the url for http requests to this endpoint.
         This is done by combining api_uri with self._path and then replacing
         variable placeholders in the url with values from self.__dict__
+
         Variables can be overridden by calling this method with arbitrary
         keyword arguments which will take precedence over values from __dict__
         '''
-        uri = Template("/".join((api_uri, self._path)))
-        uri = uri.safe_substitute(self.__dict__, **kwargs)
-        return uri
+        if self._uri_template is None:
+            self._uri_template = Template("/".join((api_uri, self._path)))
+
+        return self._uri_template.safe_substitute(
+                urlencode_map(self.__dict__, kwargs))
 
     def get(self,  **kwargs):
         ''' Call the api with a http get request '''
@@ -116,12 +135,22 @@ class GerritEndpoint(object):
                             res.status_code, res.text))
 
     def post(self, data={}, **kwargs):
-        ''' make a http post request to this api endpoint '''
+        ''' make a http POST request to this api endpoint '''
         uri = self._url()
         debug_log('POST to: %s', uri)
         debug_log('POST Data: %s', data)
         dump_json(data)
         res = session().post(uri, json=data, timeout=30)
+        debug_log('Response: %s', res.text)
+        return self.load(res)
+
+    def put(self, data={}, **kwargs):
+        ''' make a http PUT request to this api endpoint '''
+        uri = self._url()
+        debug_log('PUT to: %s', uri)
+        debug_log('PUT Data: %s', data)
+        dump_json(data)
+        res = session().put(uri, json=data, timeout=30)
         debug_log('Response: %s', res.text)
         return self.load(res)
 
@@ -191,6 +220,27 @@ class ChangeRevisions(GerritEndpoint):
     def __init__(self, changeid, revisionid='current'):
         self.changeid = changeid
         self.revisionid = revisionid
+
+
+class ProjectBranch(GerritEndpoint):
+    _path = 'projects/${project}/branches/${name}'
+
+    def __init__(self, project, name):
+        self.project = project
+        self.name = name
+
+
+class ProjectBranches(GerritEndpoint):
+    _path = 'projects/${project}/branches'
+    project = None
+
+    def __init__(self, project):
+        self.project = project
+
+    def create(self, name, revision):
+        newbranch = ProjectBranch(self.project, name)
+        data = {"revision": revision}
+        return newbranch.put(data=data)
 
 
 def dump_json(data):

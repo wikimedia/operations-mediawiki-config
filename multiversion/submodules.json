@@ -1,0 +1,653 @@
+{
+    "extensions/AbuseFilter": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/AccountAudit": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/ActiveAbstract": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/AntiSpoof": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/ApiFeatureUsage": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Babel": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/BetaFeatures": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/BounceHandler": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Calendar": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Campaigns": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Capiunto": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Cards": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/CategoryTree": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/CentralAuth": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/CharInsert": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/CheckUser": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/CirrusSearch": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Cite": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/CiteThisPage": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Citoid": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/cldr": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/CleanChanges": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/CodeEditor": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/CodeReview": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Collection": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/CommonsMetadata": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/ConfirmEdit": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/ContactPage": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/ContentTranslation": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/ContributionTracking": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/CreditsSource": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/DisableAccount": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Disambiguator": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/DismissableSiteNotice": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/DonationInterface": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/DoubleWiki": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/DynamicSidebar": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Echo": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/EducationProgram": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Elastica": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/EventBus": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/EventLogging": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/ExtensionDistributor": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/FeaturedFeeds": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/FlaggedRevs": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Flow": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/FundraiserLandingPage": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/FundraisingTranslateWorkflow": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Gadgets": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/GeoCrumbs": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/GeoData": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/GettingStarted": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Graph": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/GlobalBlocking": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/GlobalCssJs": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/GlobalUsage": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/GlobalUserPage": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/GoogleNewsSitemap": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/GuidedTour": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/GWToolset": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/ImageMap": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/InputBox": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Insider": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/intersection": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Interwiki": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Josa": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/JsonConfig": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Kartographer": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/LabeledSectionTransclusion": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/LandingCheck": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/LdapAuthentication": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/LiquidThreads": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Listings": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/LocalisationUpdate": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/MapSources": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/MassMessage": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Math": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/MobileApp": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/MobileFrontend": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/MoodBar": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/MultimediaViewer": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/MwEmbedSupport": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/NavigationTiming": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/NewUserMessage": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Nuke": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/OAuth": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/OATHAuth": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/ORES": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/OpenStackManager": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/PagedTiffHandler": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/PageAssessments": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/PageImages": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/PageTriage": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/ParserFunctions": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/ParsoidBatchAPI": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/PdfHandler": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Petition": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Poem": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/PoolCounter": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Popups": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/ProofreadPage": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/QuickSurveys": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Quiz": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/RelatedArticles": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/RelatedSites": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Renameuser": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/RevisionSlider": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/RSS": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/SandboxLink": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Scribunto": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Score": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/SearchExtraNS": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/SecurePoll": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/ShortUrl": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/SiteMatrix": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/SpamBlacklist": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/SubPageList3": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/SubpageSortkey": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/SyntaxHighlight_GeSHi": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/TemplateData": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/TemplateSandbox": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/TextExtracts": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Thanks": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/TimedMediaHandler": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/timeline": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/TitleBlacklist": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/TocTree": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/TorBlock": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/Translate": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/TranslationNotifications": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/TrustedXFF": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/UnicodeConverter": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/UniversalLanguageSelector": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/UploadsLink": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/UploadWizard": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/UrlShortener": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/UserMerge": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/VectorBeta": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/VipsScaler": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/VisualEditor": {
+        "action": "branch",
+        "ref": ".",
+        "children": {
+            "lib/ve": {
+                "action": "branch",
+                "ref": "."
+            }
+        }
+    },
+    "extensions/WikidataPageBanner": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/WikiEditor": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/wikihiero": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/WikiLove": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/WikimediaEvents": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/WikimediaIncubator": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/WikimediaMaintenance": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/WikimediaMessages": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/XAnalytics": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/ZeroBanner": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/ZeroPortal": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/SemanticForms": {
+        "action": "branch",
+        "ref": "."
+    },
+    "extensions/CentralNotice": "wmf_deploy",
+    "extensions/Wikidata": {
+        "action": "checkout-latest",
+        "ref": "wmf/.*"
+    },
+    "extensions/SemanticMediaWiki": {
+        "action": "checkout",
+        "ref": "1.8.x"
+    },
+    "extensions/SemanticResultFormats": {
+        "action": "checkout",
+        "ref": "1.8.x"
+    },
+    "extensions/Validator": {
+        "action": "checkout",
+        "ref": "0.5.x"
+    },
+    "skins/CologneBlue": {
+        "action": "branch",
+        "ref": "."
+    },
+    "skins/MonoBook": {
+        "action": "branch",
+        "ref": "."
+    },
+    "skins/Modern": {
+        "action": "branch",
+        "ref": "."
+    },
+    "skins/Nostalgia": {
+        "action": "branch",
+        "ref": "."
+    },
+    "skins/Vector": {
+        "action": "branch",
+        "ref": "."
+    }
+}
