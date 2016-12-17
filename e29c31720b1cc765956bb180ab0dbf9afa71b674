@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e0e73b5_8ec02231",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 644
+      },
+      "writtenOn": "2016-12-17T08:29:28Z",
+      "side": 1,
+      "message": "Should we fix this as well? What about nowikimedia?",
+      "revId": "e29c31720b1cc765956bb180ab0dbf9afa71b674",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
