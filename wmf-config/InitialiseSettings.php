@@ -12524,6 +12524,7 @@ $wgConf->settings = [
 		'www.photolib.noaa.gov',            // National Oceanic and Atmospheric Administration - T138383
 		'contentdm.lib.byu.edu',            // Harold B. Lee Library - T139095
 		'*.ic.uva.nl',                      // University of Amsterdam - T150167
+		'ftpmirror.your.org'                // Public mirror of Wikimedia images - T153569
 	],
 ],
 
