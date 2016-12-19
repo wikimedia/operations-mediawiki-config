@@ -19,9 +19,9 @@
  * @author Aaron Schulz
  */
 if ( !in_array( $_SERVER['REMOTE_ADDR'], array( '127.0.0.1', '0:0:0:0:0:0:0:1', '::1' ), true ) ) {
-	die( "Only loopback requests are allowed.\n" );
+	throw new Exception( "Only loopback requests are allowed.\n", 1 );
 } elseif ( $_SERVER['REQUEST_METHOD'] !== 'POST' ) {
-	die( "Request must use POST.\n" );
+	throw new Exception( "Request must use POST.\n", 2 );
 }
 
 define( 'MEDIAWIKI_JOB_RUNNER', 1 );
