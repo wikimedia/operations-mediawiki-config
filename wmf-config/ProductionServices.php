@@ -34,7 +34,7 @@ $wmfAllServices['codfw'] = [
 	'parsoid' => 'http://parsoid.svc.codfw.wmnet:8000', # Change this once parsoid is up and running in codfw
 	'mathoid' => 'http://mathoid.svc.codfw.wmnet:10042',
 	'eventlogging' => 'udp://10.64.32.167:8421',  # eventlog1001.eqiad.wmnet,
-	'eventbus' => 'http://eventbus.svc.eqiad.wmnet:8085',
+	'eventbus' => 'http://eventbus.svc.codfw.wmnet:8085',
 	'upload' => 'upload.svc.codfw.wmnet',
 	'cxserver' => 'http://cxserver.svc.codfw.wmnet:8080',
 ];

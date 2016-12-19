@@ -3371,7 +3371,7 @@ if ( $wmgUseQuickSurveys ) {
 
 if ( $wmgUseEventBus ) {
 	wfLoadExtension( 'EventBus' );
-	$wgEventServiceUrl = "{$wmfMasterServices['eventbus']}/v1/events";
+	$wgEventServiceUrl = "$wmfLocalServices['eventbus']}/v1/events";
 }
 
 if ( $wmgUseCapiunto ) {
