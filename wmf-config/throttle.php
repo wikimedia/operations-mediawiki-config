@@ -28,29 +28,12 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-// December 2nd
-$wmgThrottlingExceptions[] = [ // T146600
-	'from' => '2016-12-02T12:30 -6:00',
-	'to' => '2016-12-02T13:00 -6:00',
-	'range' => '199.17.0.0/16',
-	'dbname' => 'enwiki',
-	'value' => 40 // 35 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T151650 - #MOWomenOnWikipedia Edit-A-Thon
-	'from' => '2016-12-01T10:00 -6:00',
-	'to' => '2016-12-01T16:00 -6:00',
-	'range' => [ '128.206.160.0/22', '161.130.188.0/23', '161.130.190.0/23' ],
-	'dbname' => [ 'enwiki', 'commonswiki' ],
-	'value' => 200 // 100 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T152669
-	'from' => '2016-12-08T08:00 -0:00',
-	'to' => '2016-12-09T08:00 -0:00',
-	'IP' => '132.185.153.3',
-	'dbname' => 'enwiki',
-	'value' => 60 // 50 expected
+$wmgThrottlingExceptions[] = [ // T153741
+	'from' => '2016-12-23T14:00 +5:30',
+	'to' => '2016-12-23T19:00 +5:30',
+	'IP' => '14.139.121.212',
+	'dbname' => [ 'enwiki', 'mrwiki', 'commonswiki' ],
+	'value' => 50 // 40 expected
 ];
 
 ## Add throttling definitions above.
