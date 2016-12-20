@@ -9,10 +9,7 @@
  *
  * php links to the current primary deployed version of MediaWiki.
  *
- * Usage: updateBranchPointers [OPTIONS]
- *
- * Options:
- *   --dry-run: Don't touch the file system; only show what would be done.
+ * Usage: updateBranchPointers
  */
 error_reporting( E_ALL );
 require_once __DIR__ . '/MWWikiversions.php';
@@ -22,7 +19,7 @@ function isMain() {
 	return basename( __FILE__ ) === basename( $_SERVER['SCRIPT_FILENAME'] );
 }
 
-function updateBranchPointers( $dryRun = false ) {
+function updateBranchPointers() {
 	$branchDirs = MWWikiversions::getAvailableBranchDirs();
 
 	if ( !$branchDirs ) {
@@ -38,15 +35,14 @@ function updateBranchPointers( $dryRun = false ) {
 	// the symlink works from both MEDIAWIKI_STAGING_DIR and
 	// MEDIAWIKI_DEPLOYMENT_DIR
 	$phpLinkTarget = substr( $current, strlen( MEDIAWIKI_DEPLOYMENT_DIR ) + 1 );
-	updateSymlink( MEDIAWIKI_STAGING_DIR . '/php', $phpLinkTarget, $dryRun );
+	updateSymlink( MEDIAWIKI_STAGING_DIR . '/php', $phpLinkTarget );
 }
 
 /**
  * @param string $link
  * @param string $dest
- * @param bool $dryRun
  */
-function updateSymlink( $link, $dest, $dryRun ) {
+function updateSymlink( $link, $dest ) {
 	// Change pwd to MEDIAWIKI_STAGING_DIR so that relative paths can be verified
 	chdir( MEDIAWIKI_STAGING_DIR );
 
@@ -66,13 +62,13 @@ function updateSymlink( $link, $dest, $dryRun ) {
 			exit( 1 );
 		}
 
-		if ( !$dryRun && !unlink( $link ) ) {
+		if ( !unlink( $link ) ) {
 			fwrite( STDERR, __FUNCTION__ . ": failed to unlink $link\n" );
 			exit( 1 );
 		}
 	}
 
-	if ( !$dryRun && !symlink( $dest, $link ) ) {
+	if ( !symlink( $dest, $link ) ) {
 		fwrite( STDERR, __FUNCTION__ . ": failed to create $link\n" );
 		exit( 1 );
 	}
@@ -81,6 +77,5 @@ function updateSymlink( $link, $dest, $dryRun ) {
 
 
 if ( isMain() ) {
-	$dryRun = in_array( '--dry-run', $argv, true );
-	updateBranchPointers( $dryRun );
+	updateBranchPointers();
 }
