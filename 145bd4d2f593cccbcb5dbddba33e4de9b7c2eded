@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e0e73b5_c15c9d50",
+        "filename": "wmf-config/unitConversionConfig.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2016-12-20T15:17:59Z",
+      "side": 1,
+      "message": "Due to energy-mass equivalence, this is a valid conversion...\nBut if we support this, we cannot support conversion between electronvolt and joul, can we? There can be only one base unit...\n\nI suggest to treat electronvolt as a unit of energy, not mass.",
+      "revId": "145bd4d2f593cccbcb5dbddba33e4de9b7c2eded",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
