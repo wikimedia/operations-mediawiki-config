@@ -16,6 +16,24 @@
       "revId": "145bd4d2f593cccbcb5dbddba33e4de9b7c2eded",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e0e73b5_779ff3b9",
+        "filename": "wmf-config/unitConversionConfig.json",
+        "patchSetId": 2
+      },
+      "lineNbr": 120,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2016-12-20T17:32:29Z",
+      "side": 1,
+      "message": "Yeah I was thinking about that... in nuclear physics, eV is commonly used as mass unit. But then again, we don\u0027t have to support all the physical calculations. I\u0027ll drop it for now.",
+      "parentUuid": "0e0e73b5_c15c9d50",
+      "revId": "145bd4d2f593cccbcb5dbddba33e4de9b7c2eded",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
