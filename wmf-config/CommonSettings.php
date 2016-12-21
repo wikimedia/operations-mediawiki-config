@@ -1160,7 +1160,7 @@ if ( $wmgUseTorBlock ) {
 }
 
 if ( $wmgUseRSSExtension ) {
-	include( "$IP/extensions/RSS/RSS.php" );
+	wfLoadExtension( 'RSS' );
 	$wgRSSProxy = $wgCopyUploadProxy;
 	$wgRSSUrlWhitelist = $wmgRSSUrlWhitelist;
 }
@@ -2618,7 +2618,7 @@ if ( $wmgEnableGeoData ) {
 }
 
 if ( $wmgUseEcho ) {
-	require_once( "$IP/extensions/Echo/Echo.php" );
+	wfLoadExtension( 'Echo' );
 
 	if ( isset( $wgEchoConfig ) ) {
 		// Eventlogging for Schema:EchoMail
@@ -2725,7 +2725,7 @@ if ( $wmgUseThanks ) {
 $wgFlowDefaultWikiDb = $wmgFlowDefaultWikiDb;
 
 if ( $wmgUseFlow && $wmgUseParsoid ) {
-	require_once( "$IP/extensions/Flow/Flow.php" );
+	wfLoadExtension( 'Flow' );
 
 	// Flow Parsoid - These are now specified directly as Flow-specific
 	// configuration variables, though it currently uses the same Parsoid URL
