@@ -34,7 +34,7 @@ $IP/extensions/Disambiguator/extension.json
 $IP/extensions/DismissableSiteNotice/extension.json
 $IP/extensions/DonationInterface/extension.json
 $IP/extensions/DoubleWiki/extension.json
-$IP/extensions/Echo/Echo.php
+$IP/extensions/Echo/extension.json
 $IP/extensions/EducationProgram/EducationProgram.php
 $IP/extensions/Elastica/extension.json
 $IP/extensions/ElectronPdfService/extension.json
@@ -43,7 +43,7 @@ $IP/extensions/EventLogging/extension.json
 $IP/extensions/ExtensionDistributor/extension.json
 $IP/extensions/FeaturedFeeds/extension.json
 $IP/extensions/FlaggedRevs/FlaggedRevs.php
-$IP/extensions/Flow/Flow.php
+$IP/extensions/Flow/extension.json
 $IP/extensions/FundraiserLandingPage/extension.json
 $IP/extensions/FundraisingTranslateWorkflow/extension.json
 $IP/extensions/Gadgets/extension.json
@@ -102,7 +102,7 @@ $IP/extensions/RelatedArticles/extension.json
 $IP/extensions/RelatedSites/extension.json
 $IP/extensions/Renameuser/extension.json
 $IP/extensions/RevisionSlider/extension.json
-$IP/extensions/RSS/RSS.php
+$IP/extensions/RSS/extension.json
 $IP/extensions/SandboxLink/extension.json
 $IP/extensions/Score/extension.json
 $IP/extensions/Scribunto/Scribunto.php
