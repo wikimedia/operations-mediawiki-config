@@ -16601,6 +16601,9 @@ $wgConf->settings = [
 	'fywikibooks' => [
 		'sort' => 'alphabetic_fy',
 	],
+	'gdwiki' => [
+		'sortPrepend' => [ 'ga', 'gv', 'sco', 'cy' ], // T153900
+	]
 	'hewiki' => [
 		'sortPrepend' => [ 'en' ],
 	],
