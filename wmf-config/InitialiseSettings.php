@@ -12732,6 +12732,7 @@ $wgConf->settings = [
 	'plwiktionary' => true,
 	'pswiki' => true,
 	'ptwiki' => true,
+	'ruwiki' => true, // T153855
 	'sawiki' => true,
 	'sdwiki' => true, // T152609
 	'sdwiktionary' => true, // T152609
