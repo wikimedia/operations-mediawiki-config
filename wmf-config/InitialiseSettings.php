@@ -3098,6 +3098,7 @@ $wgConf->settings = [
 	],
 	'+frwiki' => [
 		'WP' => NS_PROJECT,
+		'DW' => NS_PROJECT_TALK, // T153952
 		'Discussion_Wikipedia' => NS_PROJECT_TALK,
 		'Utilisatrice' => NS_USER,
 		'Discussion_Utilisatrice' => NS_USER_TALK,
