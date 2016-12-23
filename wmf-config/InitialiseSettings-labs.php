@@ -255,11 +255,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wmgUseGWToolset' => [
-			'default' => false,
-			'commonswiki' => true,
-		],
-
 		// Don't use an http/https proxy
 		'-wgCopyUploadProxy' => [
 			'default' => false,
