@@ -251,10 +251,6 @@ function wmfLabsSettings() {
 			'deploymentwiki' => 'personal',
 		],
 
-		'wmgCommonsMetadataForceRecalculate' => [
-			'default' => true,
-		],
-
 		'wmgUseGWToolset' => [
 			'default' => false,
 			'commonswiki' => true,
