@@ -187,10 +187,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wmgUseEcho' => [
-			'enwiki' => true,
-			'en_rtlwiki' => true,
-		],
 		'-wmgEchoCluster' => [
 			'default' => false,
 		],
