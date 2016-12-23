@@ -135,10 +135,6 @@ function wmfLabsSettings() {
 			'default' => 'https://upload.$variant.wmflabs.org/math',
 		],
 
-		'wmgNoticeProject' => [
-			'deploymentwiki' => 'meta',
-		],
-
 		'-wgDebugLogFile' => [
 			'default' => "udp://{$wmfUdp2logDest}/wfDebug",
 		],
