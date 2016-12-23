@@ -186,9 +186,6 @@ function wmfLabsSettings() {
 		'-wmgEchoCluster' => [
 			'default' => false,
 		],
-		'-wmgEchoMentionStatusNotifications' => [
-			'default' => true,
-		],
 
 		# FIXME: make that settings to be applied
 		'-wgShowExceptionDetails' => [
