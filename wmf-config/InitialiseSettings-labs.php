@@ -231,17 +231,6 @@ function wmfLabsSettings() {
 			'default'	=> true,
 		],
 
-		// Enable TimedMediaHandler and MwEmbedSupport for testing on commons and enwiki
-		// TimedMediaHandler requires MwEmbedSupport.
-		'wmgUseMwEmbedSupport' => [
-			'commonswiki'	=> true,
-			'enwiki'	=> true,
-		],
-		'wmgUseTimedMediaHandler' => [
-			'commonswiki'	=> true,
-			'enwiki'	=> true,
-		],
-
 		'wgMobileUrlTemplate' => [
 			'default' => '%h0.m.%h1.%h2.%h3.%h4',
 			'wikidatawiki' => 'm.%h0.%h1.%h2.%h3', // T87440
