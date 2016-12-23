@@ -16750,6 +16750,10 @@ $wgConf->settings = [
 	'enwikivoyage' => true, // T142056
 	'testwiki' => true, // T137918
 ],
+'wgPageAssessmentsOnTalkPages' => [
+	'default' => true,
+	'enwikivoyage' => false,
+],
 
 'wmgUsePageImages' => [
 	'default' => true,
