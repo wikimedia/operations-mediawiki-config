@@ -161,10 +161,6 @@ function wmfLabsSettings() {
 			'deploymentwiki' => false
 		],
 
-		'wmgUseWebFonts' => [
-			'mywiki' => true,
-		],
-
 		'-wgLogo' => [
 			'default' => '/static/images/project-logos/betawiki.png',
 			'commonswiki' => '/static/images/project-logos/betacommons.png',
