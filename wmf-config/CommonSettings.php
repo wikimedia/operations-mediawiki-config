@@ -1779,7 +1779,7 @@ if ( $wmgUseCollection ) {
 	//	'rl' => 'mwlib PDF', // replaced by [[:mw:OCG]] 29 Sep 2014
 	];
 
-	$wgLicenseURL = "http://creativecommons.org/licenses/by-sa/3.0/";
+	$wgLicenseURL = "https://creativecommons.org/licenses/by-sa/3.0/";
 
 	$wgCollectionShowRenderNotes[] = 'coll-rendering_finished_note_article_rdf2latex';
 
