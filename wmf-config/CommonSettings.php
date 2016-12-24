@@ -3276,6 +3276,10 @@ if ( $wmgUseORES ) {
 	}
 }
 
+if ( $wgDBname === 'fawiki' ) {
+	// T154070
+	$wgDefaultUserOptions['visualeditor-tabs'] = 'multi-tab';
+}
 ### End (roughly) of general extensions ########################
 
 $wgApplyIpBlocksToXff = true;
