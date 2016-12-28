@@ -36,6 +36,22 @@ $wmgThrottlingExceptions[] = [ // T153741
 	'value' => 50 // 40 expected
 ];
 
+$wmgThrottlingExceptions[] = [ // T154245
+	'from' => '2017-01-13T00:00 +0:00',
+	'to' => '2017-01-13T23:59 +0:00',
+	'range' => [ '161.23.0.0/16', '138.37.0.0/16', '2a01:56c0::/32' ],
+	'dbname' => 'enwiki',
+	'value' => 50 // 40 expected
+];
+
+$wmgThrottlingExceptions[] = [ // T154245
+	'from' => '2017-01-20T0:00 +0:00',
+	'to' => '2017-01-20T23:59 +0:00',
+	'range' => [ '161.23.0.0/16', '138.37.0.0/16', '2a01:56c0::/32' ],
+	'dbname' => 'enwiki',
+	'value' => 50 // 40 expected
+];
+
 ## Add throttling definitions above.
 
 /**
