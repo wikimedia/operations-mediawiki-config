@@ -14784,7 +14784,6 @@ $wgConf->settings = [
 	'default' => [
 		'anonymousEditing' => true, // T93210
 	],
-	'kowiki' => false, // T94388
 ],
 
 'wgMFExperiments' => [
