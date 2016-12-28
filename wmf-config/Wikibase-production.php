@@ -38,7 +38,8 @@ if ( $wmgUseWikibaseRepo ) {
 			'Q20748091' => 'wb-badge-notproofread', // T97014 - Wikisource badges
 			'Q20748094' => 'wb-badge-problematic',
 			'Q20748092' => 'wb-badge-proofread',
-			'Q20748093' => 'wb-badge-validated'
+			'Q20748093' => 'wb-badge-validated',
+			'Q28064618' => 'wb-badge-digitaldocument', // T153186
 		];
 		$wgWBRepoSettings['preferredGeoDataProperties'] = [
 			'P625',
@@ -106,7 +107,8 @@ if ( $wmgUseWikibaseClient ) {
 		'Q20748091' => 'badge-notproofread', // T97014 - Wikisource badges
 		'Q20748094' => 'badge-problematic',
 		'Q20748092' => 'badge-proofread',
-		'Q20748093' => 'badge-validated'
+		'Q20748093' => 'badge-validated',
+		'Q28064618' => 'badge-digitaldocument', // T153186
 	];
 
 	// Overwrite or add commons links in the "other projects sidebar" with the "commons category" (P373), per T126960
