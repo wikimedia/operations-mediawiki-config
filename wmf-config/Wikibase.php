@@ -123,11 +123,9 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgPropertySuggesterDeprecatedIds = [
 		143, // imported from
 		/**
-		 * Deprecated properties
+		 * Deprecated properties (none at the moment)
 		 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18644427
 		 */
-		357, // (OBSOLETE) title (use P1476, "title")
-		513, // (OBSOLETE) birth name (use P1477)
 		/**
 		 * @see https://www.wikidata.org/w/index.php?oldid=335040857
 		 */
