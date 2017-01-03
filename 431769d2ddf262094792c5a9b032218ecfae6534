@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e0e73b5_9a748e97",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 17796,
+      "author": {
+        "id": 571
+      },
+      "writtenOn": "2017-01-03T21:13:23Z",
+      "side": 1,
+      "message": "tab",
+      "range": {
+        "startLine": 17796,
+        "startChar": 0,
+        "endLine": 17796,
+        "endChar": 8
+      },
+      "revId": "431769d2ddf262094792c5a9b032218ecfae6534",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
