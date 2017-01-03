@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e0e73b5_d8a2163b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 4029,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2017-01-03T14:05:15Z",
+      "side": 1,
+      "message": "I have fixed a trailing whitespace.",
+      "revId": "e91681e8471f430425b1033cfe6f348805677863",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
