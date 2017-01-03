@@ -809,12 +809,21 @@ wfLoadExtension( 'TitleBlacklist' );
 $wgTitleBlacklistBlockAutoAccountCreation = false;
 
 if ( $wmgUseGlobalTitleBlacklist ) {
-	$wgTitleBlacklistSources = [
-		'meta' => [
-			'type' => 'url',
-			'src'  => "https://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw&tb_ver=1",
-		],
-	];
+	if ( $wmfRealm === 'production' && $wgDBname === 'metawiki' ) {
+		$wgTitleBlacklistSources = [
+			'meta' => [
+				'type' => 'localpage',
+				'src' => 'Title_blacklist',
+			],
+		];
+	} else {
+		$wgTitleBlacklistSources = [
+			'meta' => [
+				'type' => 'url',
+				'src'  => "https://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw&tb_ver=1",
+			],
+		];
+	}
 }
 
 if ( $wmgUseQuiz ) {
