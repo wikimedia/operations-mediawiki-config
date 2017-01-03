@@ -2086,7 +2086,7 @@ if ( $wmgUseBetaFeatures ) {
 if ( $wmgUseCommonsMetadata ) {
 	wfLoadExtension( 'CommonsMetadata' );
 	$wgCommonsMetadataSetTrackingCategories = true;
-	$wgCommonsMetadataForceRecalculate = false;
+	$wgCommonsMetadataForceRecalculate = $wmgCommonsMetadataForceRecalculate;
 }
 
 if ( $wmgUseGWToolset ) {
