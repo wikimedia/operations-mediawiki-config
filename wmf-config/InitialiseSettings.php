@@ -12605,6 +12605,14 @@ $wgConf->settings = [
 	'wikitech' => false,
 ],
 
+'wmgCommonsMetadataSetTrackingCategories' => [
+	'default' => true,
+],
+
+'wmgCommonsMetadataForceRecalculate' => [
+	'default' => false,
+],
+
 // T134778
 'wmgUsePopups' => [
 	'default' => false,

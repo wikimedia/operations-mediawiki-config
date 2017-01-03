@@ -2078,8 +2078,8 @@ if ( $wmgUseBetaFeatures ) {
 
 if ( $wmgUseCommonsMetadata ) {
 	require_once( "$IP/extensions/CommonsMetadata/CommonsMetadata.php" );
-	$wgCommonsMetadataSetTrackingCategories = true;
-	$wgCommonsMetadataForceRecalculate = false;
+	$wgCommonsMetadataSetTrackingCategories = $wmgCommonsMetadataSetTrackingCategories;
+	$wgCommonsMetadataForceRecalculate = $wmgCommonsMetadataForceRecalculate;
 }
 
 if ( $wmgUseGWToolset ) {
