@@ -12982,6 +12982,10 @@ $wgConf->settings = [
 	'wikitech' => false,
 ],
 
+'wmgCommonsMetadataForceRecalculate' => [
+	'default' => false,
+],
+
 // T134778
 // T136746
 'wmgUsePopups' => [
