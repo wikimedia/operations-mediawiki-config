@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee12ffd6_d2a37afc",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-01-04T11:49:04Z",
+      "side": 1,
+      "message": "A /17 range contains (2^32-17) addresses, ie 2^15 addresses, ie 32 768 IPs, here from 117.211.0.1 to 117.211.127.254.\n\nThis /17 is a big range containing the /18 with only (2^32-18) addresses, ie 2^14 \u003d 16 384 addresses, from 117.211.128.1 to 117.211.191.254.\n\nFinally, this /18 range contains 117.211.192.0/20. As a /20 it contains (2^32-20) addresses, ie 2^12 \u003d 4096 addresses, from 117.211.192.1 to 117.211.207.254.\n\nSo here, if what you wish is to whitelist all the network, take the smallest, ie the /20.\n\nBUT\n\nThere is another relevant information in whois: WHO is the assignee of the ip block. I used a range for the other events because the block belong to the universities themselves. So we whitelisted the university network, mainly so we don\u0027t need to worry about building change and so IP request change coming during the India morning, ie night for us.\n\nHere, it belongs to BSNL Internet, apparently an ISP. In such case, we don\u0027t have any more hint about what the IP addresses could be, so I\u0027d only whitelist the IP submitted in the task.",
+      "revId": "3f4250887ca9518013cc40d3bf6dc2b8a0319393",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
