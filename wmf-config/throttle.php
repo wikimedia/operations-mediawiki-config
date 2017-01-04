@@ -50,7 +50,13 @@ $wmgThrottlingExceptions[] = [ // T154312 - Maharashtra 'Edit Wikipedia…' work
 	'value'  => 100 // expected participants are unknown
 ];
 
-// TODO: VNGIASS 2017-01-06
+$wmgThrottlingExceptions[] = [ // T154312 - Maharashtra 'Edit Wikipedia' workshops (Pune)
+	'from' => '2017-01-06T10:00 +5:30',
+	'to' => '2017-01-06T20:00 +5:30',
+	'range' => [ '117.211.0.0/17', '117.211.128.0/18', '117.211.192.0/20' ],
+	'dbname' => $wmgMaharashtraEventsWikis,
+	'value' => 100 // unknown participants
+];
 
 $wmgThrottlingExceptions[] = [ // T154312 - Maharashtra 'Edit Wikipedia…' workshops (MPKV)
 	'from'   => '2017-01-07T07:00 +5:30',
@@ -73,6 +79,7 @@ $wmgThrottlingExceptions[] = [ // T154245
 	'dbname' => 'enwiki',
 	'value' => 50 // 40 expected
 ];
+
 
 $wmgThrottlingExceptions[] = [ // T154245
 	'from' => '2017-01-20T0:00 +0:00',
