@@ -95,9 +95,11 @@ $wmgMonologProcessors = [
 			return function( array $record ) {
 				global $wgLBFactoryConf, $wgDBname;
 
-				return isset( $wgLBFactoryConf['sectionsByDB'][$wgDBname] )
+				$record['extra']['shard'] = isset( $wgLBFactoryConf['sectionsByDB'][$wgDBname] )
 					? $wgLBFactoryConf['sectionsByDB'][$wgDBname]
 					: 's3';
+
+				return $record;
 			};
 		}
 	],
