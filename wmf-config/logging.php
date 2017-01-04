@@ -87,19 +87,7 @@ $wmgMonologProcessors = [
 				$record['extra']['normalized_message'] = substr( $nm, 0, 255 );
 				return $record;
 			};
-		}
-	],
-	'shard' => [
-		'factory' => function () {
-			/** Adds the database shard name (e.g. s1, s2, ...) */
-			return function( array $record ) {
-				global $wgLBFactoryConf, $wgDBname;
-
-				return isset( $wgLBFactoryConf['sectionsByDB'][$wgDBname] )
-					? $wgLBFactoryConf['sectionsByDB'][$wgDBname]
-					: 's3';
-			};
-		}
+		},
 	],
 ];
 
