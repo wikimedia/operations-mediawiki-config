@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee12ffd6_68d4d6be",
+        "filename": "wmf-config/logging.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-01-05T03:08:15Z",
+      "side": 1,
+      "message": "I think these are expected to return $record. \u0027shard\u0027 is merely an identifier for the factory, it is not the key for the value. A factory can add multiple keys, too.\n\nProbably needs $record[\u0027extra\u0027][\u0027shard\u0027] \u003d ;. Other fields like \"host\" and \"mwversion\" are also put in \"extra\" by WikiProcessor.",
+      "range": {
+        "startLine": 95,
+        "startChar": 3,
+        "endLine": 95,
+        "endChar": 37
+      },
+      "revId": "e6afabee20e7f86625191cac4ff4983012aed329",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
