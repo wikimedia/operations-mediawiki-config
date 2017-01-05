@@ -12553,6 +12553,7 @@ $wgConf->settings = [
 		'www.photolib.noaa.gov',            // National Oceanic and Atmospheric Administration - T138383
 		'contentdm.lib.byu.edu',            // Harold B. Lee Library - T139095
 		'*.ic.uva.nl',                      // University of Amsterdam - T150167
+		'digitalmedia.fws.gov',             // U.S. Fish and Wildlife Service - T154671
 	],
 ],
 
