@@ -79,6 +79,7 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 		$wmgLogstashServers = array( 'localhost' );
 		$wmgKafkaServers = array( 'localhost' );
 		$wmgMonologChannels = array( 'test' => $channelConfig );
+		$wmfRealm = 'production';
 
 		include __DIR__ . '/../wmf-config/logging.php';
 

@@ -30,3 +30,4 @@ wmf-config/*-setup.php
 /.tox
 mediawiki_config.egg-info
 __pycache__
+mediawiki-config.iml
