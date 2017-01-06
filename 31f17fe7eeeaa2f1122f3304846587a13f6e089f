@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae0c87c0_67b3f24d",
+        "filename": ".gitignore",
+        "patchSetId": 5
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-01-06T01:50:51Z",
+      "side": 1,
+      "message": "Might want to put edit-specific files locally in {repo}/.git/info/exclude or in your home directory after enabling via \u0027git config --global core.excludesfile ~/.gitignore\u0027.\n\nI guess we already do this in the repo for some, but just fyi, since you might run into it elsewhere too where it\u0027s harder to get this merged.",
+      "range": {
+        "startLine": 33,
+        "startChar": 16,
+        "endLine": 33,
+        "endChar": 20
+      },
+      "revId": "31f17fe7eeeaa2f1122f3304846587a13f6e089f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
