@@ -10975,6 +10975,7 @@ $wgConf->settings = [
 	'zuwiki' => [ 'en' ], // T53327
 
 	// Special wikis
+	'arbcom_cswiki' => [ 'w:cs' ], // T154799
 	'projectcomwiki' => [ 'wikipedia:en', 'meta' ], // T143138
 ],
 # @} end of wgImportSources
