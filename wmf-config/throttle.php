@@ -66,7 +66,13 @@ $wmgThrottlingExceptions[] = [ // T154312 - Maharashtra 'Edit Wikipedia…' work
 	'value'  => 100 // expected participants are unknown
 ];
 
-// TODO: DBF 2017-01-10
+$wmgThrottlingExceptions[] = [ // T154312
+	'from' => '2017-01-10T10:00 +5:30',
+	'to' => '2017-01-10T20:00 +5:30',
+	'range' => '45.121.3.0/24',
+	'dbname' => $wmgMaharashtraEventsWikis,
+	'value' => 100 // unknown
+];
 
 ///
 /// Other rules
@@ -87,14 +93,6 @@ $wmgThrottlingExceptions[] = [ // T154245
 	'range' => [ '161.23.0.0/16', '138.37.0.0/16', '2a01:56c0::/32' ],
 	'dbname' => 'enwiki',
 	'value' => 50 // 40 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T154278
-	'from' => '2016-12-30T08:00 +5:45',
-	'to' => '2016-12-30T16:00 +5:45',
-	'IP' => [ '49.244.190.255', '49.244.160.201' ],
-	'dbname' => 'maiwiki',
-	'value' => 30 // 20 expected
 ];
 
 $wmgThrottlingExceptions[] = [ // T154568
