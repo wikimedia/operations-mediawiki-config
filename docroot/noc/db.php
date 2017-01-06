@@ -1,4 +1,82 @@
-<!DOCTYPE html>
+<?php
+
+$format = isset( $_GET['format'] ) && $_GET['format'] === 'json' ? 'json' : 'html';
+
+if ( $format === 'json' ) {
+	error_reporting( 0 );
+} else {
+	// Verbose error reporting
+	error_reporting( E_ALL );
+	ini_set( 'display_errors', 1 );
+}
+
+// Mock vars from CommonSettings.php for db-eqiad.php
+$wgDBname = $wgDBuser = $wgDBpassword = null; $wmfMasterDatacenter = 'eqiad';
+define( 'DBO_DEFAULT', 'uniq' );
+require_once '../../wmf-config/db-eqiad.php';
+
+class WmfClusters {
+	private $clusters;
+
+	public function getNames( ) {
+		global $wgLBFactoryConf;
+		return array_keys( $wgLBFactoryConf['sectionLoads'] );
+	}
+	public function getHosts( $clusterName ) {
+		global $wgLBFactoryConf;
+		return array_keys( $wgLBFactoryConf['sectionLoads'][$clusterName] );
+	}
+	public function getLoads( $clusterName ) {
+		global $wgLBFactoryConf;
+		return $wgLBFactoryConf['sectionLoads'][$clusterName];
+	}
+	public function getDBs( $clusterName ) {
+		global $wgLBFactoryConf;
+		$ret = array();
+		foreach ( $wgLBFactoryConf['sectionsByDB'] as $db => $cluster ) {
+			if ( $cluster == $clusterName ) {
+				$ret[] = $db;
+			}
+		}
+		return $ret;
+	}
+	public function htmlFor( $clusterName ) {
+		print "<strong>Hosts</strong><br>";
+		foreach ( $this->getHosts( $clusterName ) as $host ) {
+			print "<code>$host</code> ";
+		}
+		print '<br><strong>Loads</strong>:<br>';
+		foreach ( $this->getLoads( $clusterName ) as $host => $load ) {
+			print "$host => $load<br>";
+		}
+		print '<br><strong>Databases</strong>:<br>';
+		if ( $clusterName == 'DEFAULT' ) {
+			print 'Any wiki not hosted on the other clusters.<br>';
+		} else {
+			foreach ( $this->getDBs( $clusterName ) as $db ) {
+				print "$db<br>";
+			}
+		}
+	}
+}
+
+$wmf = new WmfClusters();
+
+if ( $format === 'json' ) {
+	$data = array();
+	foreach ( $wmf->getNames() as $name ) {
+		$data[$name] = array(
+			'hosts' => $wmf->getHosts( $name ),
+			'loads' => $wmf->getLoads( $name ),
+			'dbs' => $wmf->getDBs( $name ),
+		);
+	}
+	header( 'Content-Type: application/json; charset=utf-8' );
+	echo json_encode( $data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES );
+	exit;
+}
+
+?><!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -20,70 +98,10 @@
 <body>
 <?php
 
-// ERRORS
-error_reporting( E_ALL );
-ini_set( 'display_errors', 1 );
-
-// Mock vars from CommonSettings.php for db-eqiad.php
-$wgDBname = $wgDBuser = $wgDBpassword = null; $wmfMasterDatacenter = 'eqiad';
-define( 'DBO_DEFAULT', 'uniq' );
-
-require_once '../../wmf-config/db-eqiad.php';
-
-class WmfClusters {
-	private $clusters;
-
-	function names( ) {
-		global $wgLBFactoryConf;
-		return array_keys( $wgLBFactoryConf['sectionLoads'] );
-	}
-
-	/** Return a list of wikis for a clustername */
-	function wikis( $clusterName ) {
-		global $wgLBFactoryConf;
-		$ret = array();
-		foreach ( $wgLBFactoryConf['sectionsByDB'] as $wiki => $cluster ) {
-			if ( $cluster == $clusterName ) {
-				$ret[] = $wiki;
-			}
-		}
-		return $ret;
-	}
-	function loads( $clusterName ) {
-		global $wgLBFactoryConf;
-		return $wgLBFactoryConf['sectionLoads'][$clusterName];
-	}
-	function databases( $clusterName ) {
-		global $wgLBFactoryConf;
-		return array_keys( $wgLBFactoryConf['sectionLoads'][$clusterName] );
-	}
-
-	function contentFor( $name ) {
-		print "<strong>Databases:</strong><br>";
-		foreach( $this->databases( $name ) as $db ) {
-			print "<code>$db</code> ";
-		}
-		print '<br><strong>Loads</strong>:<br>';
-		foreach( $this->loads( $name ) as $key => $val ) {
-			print "$key => $val<br>";
-		}
-		print '<br><strong>Wikis</strong>:<br>';
-		if( $name == 'DEFAULT' ) {
-			print 'Any wiki not hosted on the other clusters.<br>';
-		} else {
-			foreach ( $this->wikis( $name ) as $w ) {
-				print "$w<br>";
-			}
-		}
-	}
-}
-
-$wmf = new WmfClusters();
-
 // Generate navigation links
 print '<nav><ul>';
 $tab = 0;
-foreach ( $wmf->names() as $name ) {
+foreach ( $wmf->getNames() as $name ) {
 	$tab++;
 	print '<li><a href="#tabs-' . $tab . '">Cluster ' . htmlspecialchars( $name ) . '</a></li>';
 }
@@ -91,10 +109,10 @@ print '</ul></nav><main>';
 
 // Generate content sections
 $tab = 0;
-foreach ( $wmf->names() as $name ) {
+foreach ( $wmf->getNames() as $name ) {
 	$tab++;
 	print "<section id=\"tabs-$tab\"><h2>Cluster <strong>" . htmlspecialchars( $name ) . '</strong></h2>';
-	print $wmf->contentFor( $name ) . '</section>';
+	print $wmf->htmlFor( $name ) . '</section>';
 }
 print '</main>';
 ?>
