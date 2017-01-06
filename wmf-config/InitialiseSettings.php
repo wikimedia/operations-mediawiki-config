@@ -7760,10 +7760,14 @@ $wgConf->settings = [
 		'sysop' => [
 			'changetags' => true, // T134196
 			'upload_by_url' => true,
+			'transcode-reset' => false, // T154733
 		],
 		'bot' => [
 			'changetags' => true, // T134196
 			'upload_by_url' => true, // T145010
+		],
+		'autoconfirmed' => [
+			'transcode-reset' => false, // T154733
 		]
 	],
 	'dawiki' => [
