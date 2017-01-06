@@ -16,6 +16,24 @@
       "revId": "483bdf7491c825e8371db497ab632fb479b718ab",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ae0c87c0_07c9d67b",
+        "filename": "composer.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-01-06T04:21:11Z",
+      "side": 1,
+      "message": "Because that\u0027s what the Jenkins job for operations-mediawiki-config currently has as its pre-installed non-composer version of PHPUnit.\n\nOnce we migrate to one declared here we can easily upgrade it and make any other changes needed in the same commit.",
+      "parentUuid": "8ed34346_79c24d8a",
+      "revId": "483bdf7491c825e8371db497ab632fb479b718ab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
