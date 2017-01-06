@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/../multiversion/MWVersion.php';
-require getMediaWiki( 'includes/WebStart.php' );
+require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
+require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
 function faviconShowError( $text ) {
 	header( 'Content-Type: text/html; charset=utf-8' );
