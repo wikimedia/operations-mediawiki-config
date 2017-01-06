@@ -14862,6 +14862,15 @@ $wgConf->settings = [
 		'5' => false,
 		'N' => 'Usuaris %code%-N',
 	],
+	'cswikiversity' => [ // T67211
+		'0' => 'Uživatel %code%-0',
+		'1' => 'Uživatel %code%-1',
+		'2' => 'Uživatel %code%-2',
+		'3' => 'Uživatel %code%-3',
+		'4' => 'Uživatel %code%-4',
+		'5' => 'Uživatel %code%-5',
+		'N' => 'Uživatel %code%-N',
+	],
 	'cawiktionary' => [ // T49287
 		'0' => false,
 		'1' => 'Usuaris %code%-1',
