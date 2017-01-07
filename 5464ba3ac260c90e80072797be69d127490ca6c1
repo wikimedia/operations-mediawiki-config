@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e01838a_c03cc290",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 129,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2017-01-07T20:33:04Z",
+      "side": 0,
+      "message": "P357 still exists in the wbs_propertypairs database table, though I don\u0027t see any more usages of the property:\n\nhttps://www.wikidata.org/w/index.php?title\u003dSpecial%3AWhatLinksHere\u0026limit\u003d500\u0026target\u003dProperty%3AP357\u0026namespace\u003d0 \n\nMaybe it will be gone from the database table next time we update.",
+      "revId": "5464ba3ac260c90e80072797be69d127490ca6c1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
