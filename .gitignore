@@ -2,10 +2,25 @@
 .svn
 
 # Editors
-*~
-*.swp
-.idea/
 /nbproject/private/
+.idea/
+*.kate-swp
+*~
+\#*#
+.#*
+.*.swp
+.project
+.buildpath
+.classpath
+.settings
+cscope.files
+cscope.out
+*.orig
+## NetBeans
+project.index
+## Sublime
+sublime-*
+sftp-config.json
 
 # Wikimedia private/temporary stuff
 private
