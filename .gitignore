@@ -6,6 +6,21 @@
 *.swp
 .idea/
 /nbproject/private/
+*.kate-swp
+\#*#
+.#*
+.project
+.buildpath
+.classpath
+.settings
+cscope.files
+cscope.out
+*.orig
+## NetBeans
+project.index
+## Sublime
+sublime-*
+sftp-config.json
 
 # Wikimedia private/temporary stuff
 private
