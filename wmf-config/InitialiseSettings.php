@@ -1195,7 +1195,7 @@ $wgConf->settings = [
 	'tawiki' => [ '1.5x' => '/static/images/project-logos/tawiki-1.5x.png', '2x' => '/static/images/project-logos/tawiki-2x.png' ],
 	'tcywiki' => [ '1.5x' => '/static/images/project-logos/tcywiki-1.5x.png', '2x' => '/static/images/project-logos/tcywiki-2x.png' ], // T140898
 	'tgwiki' => [ '1.5x' => '/static/images/project-logos/tgwiki-1.5x.png', '2x' => '/static/images/project-logos/tgwiki-2x.png' ], //T150618
-	'udmwiki' => [ '1.5x' => '/static/images/project-logos/udmwiki-1.5x.png', '2x' => '/static/images/project-logos/udmwiki-2x.png' ], //T150618	
+	'udmwiki' => [ '1.5x' => '/static/images/project-logos/udmwiki-1.5x.png', '2x' => '/static/images/project-logos/udmwiki-2x.png' ], //T150618
 	'ukwiki' => [ '1.5x' => '/static/images/project-logos/ukwiki-1.5x.png', '2x' => '/static/images/project-logos/ukwiki-2x.png' ], // T150618
 	'uzwiki' => [ '1.5x' => '/static/images/project-logos/uzwiki-1.5x.png', '2x' => '/static/images/project-logos/uzwiki-2x.png' ], //T150618
 	'vecwiki' => [ '1.5x' => '/static/images/project-logos/vecwiki-1.5x.png', '2x' => '/static/images/project-logos/vecwiki-2x.png' ], //T150618
@@ -3570,6 +3570,8 @@ $wgConf->settings = [
 		'WS' => NS_PROJECT,
 		'Author' => 104,
 		'Author_talk' => 105,
+		'Collection' => 124, // T154711
+		'Collection_talk' => 125, // T154711
 	],
 	'+plwiktionary' => [
 		'WS' => NS_PROJECT,
@@ -4120,6 +4122,7 @@ $wgConf->settings = [
 	'+enwikisource' => [ 114 => 1, 115 => 1 ], // T52007
 	'+huwikisource' => [ 10 => 0 ],
 	'+nowikisource' => [ 10 => 0 ],
+	'+plwikisource' => [ 124 => 1, 125 => 1, ] // T154711
 	'+trwikisource' => [ 10 => 0 ],
 	'+ukwikisource' => [ 114 => 1, 115 => 1 ], // T52561
 	'+viwikisource' => [ 10 => 0 ],
@@ -5837,6 +5840,8 @@ $wgConf->settings = [
 		103 => 'Dyskusja_indeksu',
 		104 => 'Autor',
 		105 => 'Dyskusja_autora',
+		124 => 'Kolekcja', // T154711
+		125 => 'Dyskusja_kolekcji', // T154711
 	],
 	'ptwikisource' => [
 		100 => 'Portal',
@@ -7254,7 +7259,7 @@ $wgConf->settings = [
 	'+nlwikivoyage' => [ 6 => 1, 14 => 1, 100 => 1, 104 => 1, 106 => 1 ],
 	'+nowikisource' => [ 102 => 1, 106 => 1 ],
 	'+plwiktionary' => [ 100 => 1, 102 => 1 ],
-	'+plwikisource' => [ 102 => 1, 104 => 1 ],
+	'+plwikisource' => [ 102 => 1, 104 => 1, 124 => 1, ], // T154711
 	'+ptwikisource' => [ 102 => 1, 104 => 1 ],
 	'+rowikisource' => [ 102 => 1, 106 => 1 ], // T31190
 	'+ruwiki' => [ 104 => 0, 105 => 0, 106 => 0, 107 => 0 ],
@@ -11352,7 +11357,7 @@ $wgConf->settings = [
 	'+mlwikisource' => [ 100 ],
 	'+nlwikisource' => [ 102 ],
 	'+nowikisource' => [ 102 ],
-	'+plwikisource' => [ 104 ],
+	'+plwikisource' => [ 104, 124 ], // T154711
 	'+ptwikisource' => [ 102 ],
 	'+rowikisource' => [ 102 ], // Follow-up for T31190
 	'+srwikibooks' => [ 102, ], // T17282
