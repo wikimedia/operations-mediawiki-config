@@ -3446,6 +3446,10 @@ $wgConf->settings = [
 		'Portal_talk' => 103,
 		'WS' => NS_PROJECT,
 		'H' => NS_HELP, // T37712
+		'Translation' => 114, // T154087
+		'Translation_talk' => 115,
+		'പ' => 114,
+		'പസം' => 115,
 	],
 	'+mlwiktionary' => [
 		'വിക്കി‌‌_നിഘണ്ടു' => NS_PROJECT,
@@ -5809,6 +5813,8 @@ $wgConf->settings = [
 		105 => 'സൂചികയുടെ_സംവാദം',
 		106 => 'താൾ',
 		107 => 'താളിന്റെ_സംവാദം',
+		114 => 'പരിഭാഷ', // T154087 - Translate
+		115 => 'പരിഭാഷയുടെ_സംവാദം',
 	],
 	'mrwikisource' => [
 		100 => 'दालन', // Portal
