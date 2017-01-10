@@ -113,11 +113,11 @@ class CheckoutMediaWiki(cli.Application):
 
             if os.path.exists(path):
                 with utils.cd(path):
-                    subprocess.check_command(
+                    subprocess.check_call(
                         ['/usr/bin/git', 'init'],
                         Shell=True
                     )
-                    subprocess.check_command(
+                    subprocess.check_call(
                         ['/usr/bin/git', 'remote', 'add', 'origin', url],
                         Shell=True
                     )
