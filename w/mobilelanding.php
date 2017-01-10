@@ -1,8 +1,8 @@
 <?php
 putenv( 'MW_LANG=en' ); // notify MWMultiVersion
 
-require_once __DIR__ . '/../multiversion/MWVersion.php';
-require getMediaWiki( 'includes/WebStart.php' );
+require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
+require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
 $code = '302';
 $state = ZeroBanner\PageRenderingHooks::getState();
