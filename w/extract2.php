@@ -2,8 +2,8 @@
 $lang = 'meta';
 putenv( "MW_LANG={$lang}" ); // notify MWMultiVersion
 
-require_once __DIR__ . '/../multiversion/MWVersion.php';
-require getMediaWiki( 'includes/WebStart.php' );
+require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
+require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
 $allowed_templates = array(
 	'Www.wikimedia.org_template',
