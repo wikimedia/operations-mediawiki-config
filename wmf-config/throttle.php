@@ -69,7 +69,7 @@ $wmgThrottlingExceptions[] = [ // T154312 - Maharashtra 'Edit Wikipedia…' work
 $wmgThrottlingExceptions[] = [ // T154312
 	'from' => '2017-01-10T10:00 +5:30',
 	'to' => '2017-01-10T20:00 +5:30',
-	'range' => '45.121.3.0/24',
+	'IP' => '117.200.216.15',
 	'dbname' => $wmgMaharashtraEventsWikis,
 	'value' => 100 // unknown
 ];
