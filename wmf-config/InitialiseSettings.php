@@ -14707,6 +14707,10 @@ $wgConf->settings = [
 	'arwiki' => true,
 ],
 
+'wgMinervaApplyKnownTemplateHacks' => [
+	'default' => true,
+],
+
 'wgMinervaBottomLanguageButton' => [
 	'default' => false,
 ],
