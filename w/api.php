@@ -1,3 +1,3 @@
 <?php
-require_once __DIR__ . '/../multiversion/MWVersion.php';
-require getMediaWiki( 'api.php' );
+require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
+require MWMultiVersion::getMediaWiki( 'api.php' );
