@@ -14701,6 +14701,10 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+'wgMinervaApplyKnownTemplateHacks' => [
+	'default' => true,
+],
+
 'wgMinervaBottomLanguageButton' => [
 	'default' => false,
 ],
