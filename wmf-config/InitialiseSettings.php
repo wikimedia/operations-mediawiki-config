@@ -10688,6 +10688,7 @@ $wgConf->settings = [
 	// Specific wikis
 
 	// chapter wikis
+	'bdwikimedia' => [ 'w:bn', 'w:en', 'c' ], // T154990
 	'bewikimedia' => [ 'meta' ],
 	'brwikimedia' => [ 'wikipedia:pt', 'meta', 'wiktionary:pt', 'wikisource:pt', 'wikinews:pt', 'wikiquote:pt', 'wikibooks:pt', 'wikiversity:pt', 'commons' ], // T60936
 	'cowikimedia' => [ 'meta', 'wikipedia:es', 'wikibooks:es', 'wikiversity:es' ],
