@@ -7100,6 +7100,7 @@ $wgConf->settings = [
 'wgUseFilePatrol' => array(
 	'default' => true,
 	'huwiki' => false, // T21241
+	'ruwiki' => false, // T154285
 ),
 
 # wgNoFollow... @{
@@ -8694,32 +8695,28 @@ $wgConf->settings = [
 		],
 	],
 	'+ruwiki' => [
-		'*' => [ 'patrolmarks' => true, ],
+		'arbcom' => [ // T51334
+			'abusefilter-log-detail' => true,
+			'browsearchive' => true,
+			'deletedhistory' => true,
+			'deletedtext' => true,
+		],
 		'autoconfirmed' => [
 			'collectionsaveascommunitypage' => false, // T85780
 		],
 		'bot' => [
-			'move-categorypages' => true, // T87230
+			'autopatrol' => false, // T154285
 			'changetags' => true, // T136187
-		],
-		'rollbacker' => [ 'rollback' => true ],
-		'uploader' => [ // T14334
-			'upload' => true,
-			'reupload-own' => true,
-			'reupload' => true,
-		],
-		'user' => [ // T68871
-			'move-categorypages' => false,
-			'changetags' => false, // T136187
+			'move-categorypages' => true, // T87230
 		],
 		'closer' => [
-			'move-categorypages' => true, // T68871
 			'delete' => true,
+			'move-categorypages' => true, // T68871
+			'move-subpages' => true, // T76131
+			'reupload' => true,
+			'reupload-own' => true,
 			'suppressredirect' => true,
 			'upload' => true,
-			'reupload-own' => true,
-			'reupload' => true,
-			'move-subpages' => true, // T76131
 		],
 		'engineer' => [ // T144599
 			'apihighlimits' => true,
@@ -8736,26 +8733,36 @@ $wgConf->settings = [
 			'suppressredirect' => true,
 		],
 		'filemover' => [ // T32984
+			'move-categorypages' => true, // T68871
+			'move-subpages' => true, // T76131
 			'movefile' => true,
+			'reupload' => true,
+			'reupload-own' => true,
 			'suppressredirect' => true,
+			'upload' => true,
+		],
+
+		'uploader' => [ // T14334
 			'upload' => true,
 			'reupload-own' => true,
 			'reupload' => true,
-			'move-categorypages' => true, // T68871
-			'move-subpages' => true, // T76131
+		],
+		'user' => [ // T68871
+			'changetags' => false, // T136187
+			'move-categorypages' => false,
+		],
+		'rollbacker' => [
+			'rollback' => true
 		],
 		'suppressredirect' => [ // T40408, T68871
-			'suppressredirect' => true,
 			'move-categorypages' => true,
-		],
-		'arbcom' => [ // T51334
-			'browsearchive' => true,
-			'deletedhistory' => true,
-			'deletedtext' => true,
-			'abusefilter-log-detail' => true,
+			'suppressredirect' => true,
 		],
 		'sysop' => [
+			'autopatrol' => false, // T154285
 			'changetags' => true, // T136187
+			'patrol' => false, // T154285
+			'patrolmarks' => false, // T154285
 		],
 	],
 	'ruwikiquote' => [
