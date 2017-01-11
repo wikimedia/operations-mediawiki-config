@@ -2573,6 +2573,7 @@ $wgJobBackoffThrottling['htmlCacheUpdate'] = 30; // pages/sec per runner
 
 # Timed Media Handler:
 $wgJobTypesExcludedFromDefaultQueue[] = 'webVideoTranscode';
+$wgJobTypesExcludedFromDefaultQueue[] = 'webVideoTranscodePrioritized';
 
 # GWToolset
 $wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMetadataJob';
