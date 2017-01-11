@@ -75,11 +75,14 @@ $wmgThrottlingExceptions[] = [ // T154312
 ];
 
 $wmgThrottlingExceptions[] = [ // T154312
-        'from' => '2017-01-12T10:00 +5:30',
-        'to' => '2017-01-12T20:00 +5:30',
-        'range' => '45.121.3.0/24',
-        'dbname' => $wmgMaharashtraEventsWikis,
-        'value' => 100 // unknown
+	'from' => '2017-01-12T10:00 +5:30',
+	'to' => '2017-01-12T20:00 +5:30',
+	'range' => [
+		'14.139.125.192/28',
+		'121.241.25.1/24',
+	],
+	'dbname' => $wmgMaharashtraEventsWikis,
+	'value' => 100 // unknown
 ];
 
 ///
