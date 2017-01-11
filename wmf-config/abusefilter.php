@@ -294,7 +294,7 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterActions['block'] = true; // T54681
 		$wgAbuseFilterAnonBlockDuration = '31 hours'; // T76270
 		$wgAbuseFilterProfile = true; // T149901
-		$wgAbuseFilterNotificationsPrivate = true; // TBD
+		$wgAbuseFilterNotificationsPrivate = true; // T154358
 		break;
 	case 'mrwiki':
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true; // T42611
