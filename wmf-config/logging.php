@@ -89,10 +89,7 @@ $wmgMonologProcessors = [
 			};
 		}
 	],
-];
-
-if ( $wmfRealm === 'labs' ) {
-	$wmgMonologProcessors['shard'] = [
+	'shard' => [
 		'factory' => function () {
 			/** Adds the database shard name (e.g. s1, s2, ...) */
 			return function ( array $record ) {
@@ -104,8 +101,8 @@ if ( $wmfRealm === 'labs' ) {
 				return $record;
 			};
 		}
-	];
-}
+	]
+];
 
 $wmgMonologHandlers = [
 	'blackhole' => [
