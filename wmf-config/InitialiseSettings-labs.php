@@ -563,5 +563,8 @@ function wmfLabsSettings() {
 		'wmgUseTwoColConflict' => [
 			'default' => true,
 		],
+		'wgLinterStatsdSampleFactor' => [
+			'default' => 10,
+		],
 	];
 } # wmflLabsSettings()
