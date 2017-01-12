@@ -1,5 +1,7 @@
 <?php
 
+use Wikimedia\Config\DatabaseLists;
+
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require_once __DIR__ . '/SiteConfiguration.php';
 
@@ -102,18 +104,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$wgConf = $this->loadWgConf( $wmfRealm );
 
 		list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
-		$wikiTags = [];
-		foreach ( [ 'private', 'fishbowl', 'special', 'closed', 'flow', 'flaggedrevs', 'small', 'medium',
-				'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-nondefault',
-				'commonsuploads', 'nonbetafeatures', 'group0', 'group1', 'group2', 'wikipedia', 'nonglobal',
-				'wikitech', 'nonecho', 'mobilemainpagelegacy', 'compact-language-links', 'nowikidatadescriptiontaglines',
-				'top6-wikipedia'
-			] as $tag ) {
-			$dblist = MWWikiversions::readDbListFile( $tag );
-			if ( in_array( $wgDBname, $dblist ) ) {
-				$wikiTags[] = $tag;
-			}
-		}
+		$wikiTags = DatabaseLists::getTagsListsFor( $wgDBname );
 
 		$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 		$confParams = [

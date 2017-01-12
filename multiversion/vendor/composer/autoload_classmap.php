@@ -250,6 +250,7 @@ return array(
     'Twig_TokenStream' => $vendorDir . '/twig/twig/lib/Twig/TokenStream.php',
     'Twig_Util_DeprecationCollector' => $vendorDir . '/twig/twig/lib/Twig/Util/DeprecationCollector.php',
     'Twig_Util_TemplateDirIterator' => $vendorDir . '/twig/twig/lib/Twig/Util/TemplateDirIterator.php',
+    'Wikimedia\\Config\\DatabaseLists' => $baseDir . '/wmf-config/DatabaseLists.php',
     'Xhgui_Config' => $vendorDir . '/perftools/xhgui/src/Xhgui/Config.php',
     'Xhgui_Controller' => $vendorDir . '/perftools/xhgui/src/Xhgui/Controller.php',
     'Xhgui_Controller_Custom' => $vendorDir . '/perftools/xhgui/src/Xhgui/Controller/Custom.php',
