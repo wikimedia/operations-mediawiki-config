@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efb0bce_21d4b9eb",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 299,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-01-12T00:28:03Z",
+      "side": 1,
+      "message": "Unrelated to this patch.. But this isn\u0027t needed",
+      "range": {
+        "startLine": 299,
+        "startChar": 1,
+        "endLine": 299,
+        "endChar": 27
+      },
+      "revId": "a3644202a32bc4bbd2419f678dfaa3a6e307d797",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
