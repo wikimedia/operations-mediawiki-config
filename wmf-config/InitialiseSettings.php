@@ -18939,7 +18939,7 @@ $wgConf->settings = [
 	'cswiki' => 14, // T148327
 ],
 
-'wmgGalleryOptions' => [
+'wgGalleryOptions' => [
 	'default' => [
 		'imagesPerRow' => 0,
 		'imageWidth' => 120,
