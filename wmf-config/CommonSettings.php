@@ -11,6 +11,7 @@
 #######################################################################
 
 use MediaWiki\Logger\LoggerFactory;
+use Wikimedia\Config\DatabaseLists;
 
 # Godforsaken hack to work around problems with the Squid caching changes...
 #
@@ -162,19 +163,7 @@ if ( !$globals ) {
 	# Get configuration from SiteConfiguration object
 	require( "$wmfConfigDir/InitialiseSettings.php" );
 
-	$wikiTags = [];
-	foreach ( [ 'private', 'fishbowl', 'special', 'closed', 'flow', 'flaggedrevs', 'small', 'medium',
-			'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-nondefault',
-			'commonsuploads', 'nonbetafeatures', 'group0', 'group1', 'group2', 'wikipedia', 'nonglobal',
-			'wikitech', 'nonecho', 'mobilemainpagelegacy', 'compact-language-links', 'nowikidatadescriptiontaglines',
-			'related-articles-footer-blacklisted-skins',
-			'top6-wikipedia'
-		] as $tag ) {
-		$dblist = MWWikiversions::readDbListFile( $tag );
-		if ( in_array( $wgDBname, $dblist ) ) {
-			$wikiTags[] = $tag;
-		}
-	}
+	$wikiTags = DatabaseLists::getTagsListsFor( $wgDBname );
 
 	$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 	$confParams = [

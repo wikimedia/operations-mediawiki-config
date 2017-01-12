@@ -9,6 +9,11 @@
 		"jakub-onderka/php-parallel-lint": "0.9.2",
 		"phpunit/phpunit": "4.8.31"
 	},
+	"autoload": {
+		"psr-4": {
+			"Wikimedia\\Config\\": "wmf-config/"
+		}
+	},
 	"scripts": {
 		"test": [
 			"phpunit",
