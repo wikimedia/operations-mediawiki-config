@@ -12405,7 +12405,8 @@ $wgConf->settings = [
 ],
 'wmgThumbsizeIndex' => [
 	'default' => 4,
-	'svwiki' => 2, // T18739
+	'hewiki' => 5, // T43712 (250px)
+	'svwiki' => 2, // T18739 (250px)
 ],
 
 'wgTorTagChanges' => [
@@ -17836,7 +17837,11 @@ $wgConf->settings = [
 		'showBytes' => true,
 		'mode' => 'traditional',
 	],
-	'+svwiki' => [
+	'+hewiki' => [ // T43712
+		'imageWidth' => 200,
+		'imageHeight' => 200,
+	],
+	'+svwiki' => [ // T18739
 		'imageWidth' => 150,
 		'imageHeight' => 150,
 	],
