@@ -42,38 +42,6 @@ $wmgMaharashtraEventsWikis = [
 	"commonswiki",
 ];
 
-$wmgThrottlingExceptions[] = [ // T154312 - Maharashtra 'Edit Wikipedia…' workshops (Pune)
-	'from'   => '2017-01-04T07:00 +5:30',
-	'to'     => '2017-01-04T20:00 +5:30',
-	'range'  => '196.1.114.0/24', // 196.1.114.200
-	'dbname' => $wmgMaharashtraEventsWikis,
-	'value'  => 100 // expected participants are unknown
-];
-
-$wmgThrottlingExceptions[] = [ // T154312 - Maharashtra 'Edit Wikipedia' workshops (VNGIASS)
-	'from' => '2017-01-06T10:00 +5:30',
-	'to' => '2017-01-06T20:00 +5:30',
-	'range' => '117.211.27.0/24', // 117.211.27.103
-	'dbname' => $wmgMaharashtraEventsWikis,
-	'value' => 100 // unknown participants
-];
-
-$wmgThrottlingExceptions[] = [ // T154312 - Maharashtra 'Edit Wikipedia…' workshops (MPKV)
-	'from'   => '2017-01-07T07:00 +5:30',
-	'to'     => '2017-01-07T20:00 +5:30',
-	'range'  => '14.139.120.144/28', // 14.139.120.152
-	'dbname' => $wmgMaharashtraEventsWikis,
-	'value'  => 100 // expected participants are unknown
-];
-
-$wmgThrottlingExceptions[] = [ // T154312
-	'from' => '2017-01-10T10:00 +5:30',
-	'to' => '2017-01-10T20:00 +5:30',
-	'IP' => '117.200.216.15',
-	'dbname' => $wmgMaharashtraEventsWikis,
-	'value' => 100 // unknown
-];
-
 $wmgThrottlingExceptions[] = [ // T154312
 	'from' => '2017-01-12T10:00 +5:30',
 	'to' => '2017-01-12T20:00 +5:30',
@@ -104,14 +72,6 @@ $wmgThrottlingExceptions[] = [ // T154245
 	'range' => [ '161.23.0.0/16', '138.37.0.0/16', '2a01:56c0::/32' ],
 	'dbname' => 'enwiki',
 	'value' => 50 // 40 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T154568
-	'from' => '2017-01-06T09:00 +5:30',
-	'to' => '2017-01-08T0:00 +5:30',
-	'IP' => '103.5.18.101',
-	'dbname' => [ 'tewiki', 'commonswiki' ],
-	'value' => 130 // 100 expected
 ];
 
 ## Add throttling definitions above.
