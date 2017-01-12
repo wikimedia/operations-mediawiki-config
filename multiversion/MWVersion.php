@@ -66,24 +66,6 @@ function getMediaWiki( $file, $wiki = null ) {
  * @return string Absolute file path with proper MW location
  */
 function getMediaWikiCli( $file ) {
-	global $IP;
-
-	require_once( __DIR__ . '/MWMultiVersion.php' );
-	$multiVersion = MWMultiVersion::getInstance();
-	if( !$multiVersion ) {
-		$multiVersion = MWMultiVersion::initializeForMaintenance();
-	}
-	if ( $multiVersion->getDatabase() === 'testwiki' ) {
-		define( 'TESTWIKI', 1 );
-	}
-
-	# Get the MediaWiki version running on this wiki...
-	$version = $multiVersion->getVersion();
-
-	# Get the correct MediaWiki path based on this version...
-	$IP = dirname( __DIR__ ) . "/$version";
-
-	putenv( "MW_INSTALL_PATH=$IP" );
-
-	return "$IP/$file";
+	require_once __DIR__ . '/MWMultiVersion.php';
+	return MWMultiVersion::getMediaWikiCli( $file );
 }

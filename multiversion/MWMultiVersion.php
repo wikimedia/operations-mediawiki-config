@@ -367,4 +367,38 @@ class MWMultiVersion {
 		trigger_error( $msg, E_USER_ERROR );
 		exit( 1 ); // sanity
 	}
+
+	/**
+	 * Get the location of the correct version of a MediaWiki CLI
+	 * entry-point file given the --wiki parameter passed in.
+	 *
+	 * This also has some other effects:
+	 * (a) Sets the $IP global variable (path to MediaWiki)
+	 * (b) Sets the MW_INSTALL_PATH environmental variable
+	 * (c) Changes PHP's current directory to the directory of this file.
+	 *
+	 * @param $file string File path (relative to MediaWiki dir)
+	 * @return string Absolute file path with proper MW location
+	 */
+	public static function getMediaWikiCli( $file ) {
+		global $IP;
+
+		$multiVersion = self::getInstance();
+		if( !$multiVersion ) {
+			$multiVersion = self::initializeForMaintenance();
+		}
+		if ( $multiVersion->getDatabase() === 'testwiki' ) {
+			define( 'TESTWIKI', 1 );
+		}
+
+		# Get the MediaWiki version running on this wiki...
+		$version = $multiVersion->getVersion();
+
+		# Get the correct MediaWiki path based on this version...
+		$IP = dirname( __DIR__ ) . "/$version";
+
+		putenv( "MW_INSTALL_PATH=$IP" );
+
+		return "$IP/$file";
+	}
 }
