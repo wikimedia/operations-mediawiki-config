@@ -12116,6 +12116,7 @@ $wgConf->settings = [
 	'testwiki' => true, // T150944
 	'test2wiki' => true, // T150944
 	'mediawikiwiki' => true, // T150944
+	'testwikidatawiki' => true,
 ],
 
 'wmgUseSpamBlacklist' => [
