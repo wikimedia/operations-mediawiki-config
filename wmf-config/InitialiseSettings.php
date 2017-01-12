@@ -1181,11 +1181,14 @@ $wgConf->settings = [
 	'ladwiki' => [ '1.5x' => '/static/images/project-logos/ladwiki-1.5x.png', '2x' => '/static/images/project-logos/ladwiki-2x.png' ], // T132120
 	'maiwiki' => [ '1.5x' => '/static/images/project-logos/maiwiki-1.5x.png', '2x' => '/static/images/project-logos/maiwiki-2x.png' ], // T149790
 	'mswiki' => [ '1.5x' => '/static/images/project-logos/mswiki-1.5x.png', '2x' => '/static/images/project-logos/mswiki-2x.png' ],
+	'napwiki' => [ '1.5x' => '/static/images/project-logos/mapwiki-1.5x.png', '2x' => '/static/images/project-logos/napwiki-2x.png' ], // T150618
 	'newiki' => [ '1.5x' => '/static/images/project-logos/newiki-1.5x.png', '2x' => '/static/images/project-logos/newiki-2x.png' ],    // T139240
 	'nlwiki' => [ '1.5x' => '/static/images/project-logos/nlwiki-1.5x.png', '2x' => '/static/images/project-logos/nlwiki-2x.png' ],
 	'olowiki' => ['1.5x' => '/static/images/project-logos/olowiki-1.5x.png', '2x' => '/static/images/project-logos/olowiki-1.5x.png'], // T146745
+	'oswiki' => [ '1.5x' => '/static/images/project-logos/oswiki-1.5x.png', '2x' => '/static/images/project-logos/oswiki-2x.png' ], // T150618
 	'pawiki' => [ '1.5x' => '/static/images/project-logos/pawiki-1.5x.png', '2x' => '/static/images/project-logos/pawiki-2x.png'], // T150618 
 	'pcdwiki' => [ '1.5x' => '/static/images/project-logos/pcdwiki-1.5x.png', '2x' => '/static/images/project-logos/pcdwiki-2x.png' ], // T150618
+	'plwiki' => [ '1.5x' => '/static/images/project-logos/plwiki-1.5x.png', '2x' => '/static/images/project-logos/plwiki-2x.png' ], // T150618
 	'ruwiki' => [ '1.5x' => '/static/images/project-logos/ruwiki-1.5x.png', '2x' => '/static/images/project-logos/ruwiki-2x.png' ],
 	'roa_tarawiki' => [ '1.5x' => '/static/images/project-logos/roa_tarawiki-1.5x.png', '2x' => '/static/images/project-logos/roa_tarawiki-2x.png' ], //T150618
 	'scowiki' => [ '1.5x' => '/static/images/project-logos/scowiki-1.5x.png', '2x' => '/static/images/project-logos/scowiki-2x.png' ], //T150618
