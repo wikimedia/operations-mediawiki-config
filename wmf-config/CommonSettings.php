@@ -1288,6 +1288,7 @@ wfLoadExtension( 'AntiSpoof' );
 
 // For transwiki import
 ini_set( 'user_agent', 'Wikimedia internal server fetcher (noc@wikimedia.org' );
+$wgHTTPImportTimeout = 50; // T155209
 
 // CentralAuth
 if ( $wmgUseCentralAuth ) {
