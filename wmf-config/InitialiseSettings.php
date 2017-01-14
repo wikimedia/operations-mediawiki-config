@@ -12573,6 +12573,7 @@ $wgConf->settings = [
 		'contentdm.lib.byu.edu',            // Harold B. Lee Library - T139095
 		'*.ic.uva.nl',                      // University of Amsterdam - T150167
 		'digitalmedia.fws.gov',             // U.S. Fish and Wildlife Service - T154671
+		'*.leventhalmap.org',               // Leventhal Map Center at the Boston Public Library - T155309
 	],
 ],
 
