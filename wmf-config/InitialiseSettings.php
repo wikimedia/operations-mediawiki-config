@@ -15531,6 +15531,7 @@ $wgConf->settings = [
 	'cawiktionary' => 'Usuaris %code%', // T49287
 	'checkuserwiki' => 'User %code%',
 	'commonswiki' => 'User %code%',
+	'cswikiversity' => 'Uživatel %code%', // T15530
 	'enwiki' => 'User %code%',
 	'enwikibooks' => 'User %code%',
 	'enwiktionary' => 'User %code%',
