@@ -2799,6 +2799,16 @@ $wgConf->settings = [
 		'Author' => 100,
 		'Author_talk' => 101,
 	],
+	'+bhwiki' => [ // T155278
+		'बिसेस' => NS_SPECIAL,
+		'सदस्य' => NS_USER,
+		'स' => NS_USER,
+		'सदस्य' => NS_USER,
+		'U' => NS_USER,
+		'वि' => NS_PROJECT,
+		'वि' => NS_PROJECT,
+		'WP' => NS_PROJECT,
+	],
 	'+bjnwiki' => [
 		'Wikipidia_pamandiran' => NS_PROJECT_TALK,
 	],
