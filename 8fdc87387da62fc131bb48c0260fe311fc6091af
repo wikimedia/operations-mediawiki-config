@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efb0bce_6b33a30b",
+        "filename": "multiversion/MWVersion.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2017-01-15T21:35:23Z",
+      "side": 1,
+      "message": "This and the other one should return the file name, not require it.",
+      "revId": "8fdc87387da62fc131bb48c0260fe311fc6091af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
