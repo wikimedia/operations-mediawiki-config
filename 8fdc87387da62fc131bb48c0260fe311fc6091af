@@ -16,6 +16,24 @@
       "revId": "8fdc87387da62fc131bb48c0260fe311fc6091af",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efb0bce_00bd29d1",
+        "filename": "multiversion/MWVersion.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-01-16T07:23:46Z",
+      "side": 1,
+      "message": "Lol, yup. Chad noticed this when he reviewed his commits again",
+      "parentUuid": "4efb0bce_6b33a30b",
+      "revId": "8fdc87387da62fc131bb48c0260fe311fc6091af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
