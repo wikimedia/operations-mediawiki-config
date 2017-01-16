@@ -2130,6 +2130,7 @@ $wgConf->settings = [
 	'aswiki' => 'ৱিকিপিডিয়া',
 	'aswikisource' => 'ৱিকিউৎস', // T45129
 	'auditcomwiki' => 'Project',
+	'avwiki' => 'Википедия', // T155321
 	'aywiki' => 'Wikipidiya',
 	'azwiki' => 'Vikipediya',
 	'azwikibooks' => 'Vikikitab', // T33068
