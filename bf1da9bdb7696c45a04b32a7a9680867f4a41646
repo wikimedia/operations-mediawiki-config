@@ -16,6 +16,24 @@
       "revId": "bf1da9bdb7696c45a04b32a7a9680867f4a41646",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efb0bce_8f137a05",
+        "filename": "multiversion/MWMultiVersion.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 377,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2017-01-17T21:43:48Z",
+      "side": 1,
+      "message": "I don\u0027t entirely disagree, but I think we should also differentiate between bad internal callers (which logging + fixing is a good idea) and bad external callers (which we can do nothing about and logging is a waste of time)",
+      "parentUuid": "4efb0bce_2f3da68a",
+      "revId": "bf1da9bdb7696c45a04b32a7a9680867f4a41646",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
