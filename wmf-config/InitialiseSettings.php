@@ -17193,6 +17193,13 @@ $wgConf->settings = [
 
 'wmgCirrusSearchNamespaceWeightOverrides' => [
 	'default' => [],
+	'mediawikiwiki' => [ // T155142
+		12 => 0.9,
+		100 => 0.9,
+		102 => 0.9,
+		104 => 0.9,
+		106 => 0.9,
+	],
 	'wikisource' => [
 		'author' => 1,
 	],
