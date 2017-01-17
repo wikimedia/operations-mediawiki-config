@@ -51,6 +51,8 @@ EOT
 	# If no MW directory is given then assume this is a /maintenance script
 	if ( strpos( $relFile, '/' ) === false ) {
 		$relFile = "maintenance/$relFile"; // convenience
+	} elseif( getenv( 'MEDIAWIKI_MAINT_INIT_ONLY' ) ) {
+		$relFile = 'maintenance/commandLine.inc';
 	}
 
 	# Remove effects of this wrapper from $argv...
