@@ -174,7 +174,7 @@ class MWMultiVersion {
 					$site = $matches[2];
 				}
 			} else {
-				self::error( "Invalid host name ($serverName).\n" );
+				self::error( "Invalid host name ($serverName).\n", 400 );
 			}
 		} elseif ( preg_match( '/^(.*)\.([a-z]+)\.org$/', $serverName, $matches ) ) {
 			$lang = $matches[1];
@@ -193,7 +193,7 @@ class MWMultiVersion {
 			$ip = @$_SERVER['REQUEST_ADDR'];
 			$xff = @$_SERVER['HTTP_X_FORWARDED_FOR'];
 			$request = @$_SERVER['REQUEST_URI'];
-			self::error( "Invalid host name (server: $serverName, request: $request, ip: $ip, xff: $xff).\n" );
+			self::error( "Invalid host name (server: $serverName, request: $request, ip: $ip, xff: $xff).\n", 400 );
 		}
 		$this->loadDBFromSite( $site, $lang );
 	}
@@ -354,14 +354,24 @@ class MWMultiVersion {
 
 	/**
 	 * Error out and exit(1);
-	 * @param $msg String
+	 * @param string $msg Error to show to the client
+	 * @param int $httpError HTTP header error code
 	 * @return void
 	 */
-	private static function error( $msg ) {
+	private static function error( $msg, $httpError = 500 ) {
 		$msg = (string)$msg;
 		if ( PHP_SAPI !== 'cli' ) {
 			$msg = htmlspecialchars( $msg );
-			header( 'HTTP/1.1 500 Internal server error' );
+			switch( $httpError ) {
+				case 400:
+					$httpMsg = 'Bad Request';
+					break;
+				case 500:
+				default:
+					$httpMsg = 'Internal server error';
+					break;
+			}
+			header( "HTTP/1.1 $httpError $httpMsg" );
 		}
 		echo $msg;
 		trigger_error( $msg, E_USER_ERROR );
