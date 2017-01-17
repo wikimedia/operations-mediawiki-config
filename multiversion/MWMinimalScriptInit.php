@@ -6,5 +6,5 @@ call_user_func( function () {
 		die( 1 );
 	}
 } );
-require_once __DIR__ . '/MWVersion.php';
-@require_once getMediaWiki( 'maintenance/commandLine.inc', getenv( 'MW_WIKI' ) ?: 'testwiki' );
+require_once __DIR__ . '/MWMultiVersion.php';
+@require_once MWMultiVersion::getMediaWiki( 'maintenance/commandLine.inc', getenv( 'MW_WIKI' ) ?: 'testwiki' );
