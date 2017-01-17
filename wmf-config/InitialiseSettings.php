@@ -4162,6 +4162,9 @@ $wgConf->settings = [
 	'+cswikiversity' => [ 0 => 1, 6 => 0, 14 => 1 ],
 	'+dewikiversity' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
 	'+enwikiversity' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
+	'+eswikiversity' => [
+		0 => 1, // T155498
+	],
 	'+fiwikiversity' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
 	'+frwikiversity' => [ 0 => 1, 6 => 0, 8 => 0, 112 => 1, 113 => 1 ],
 	'+itwikiversity' => [ 0 => 1, 6 => 0, 8 => 0, 14 => 0 ],
