@@ -26,9 +26,9 @@ if ( !in_array( $_SERVER['REMOTE_ADDR'], array( '127.0.0.1', '0:0:0:0:0:0:0:1', 
 
 define( 'MEDIAWIKI_JOB_RUNNER', 1 );
 
-require_once __DIR__ . '/../multiversion/MWVersion.php';
+require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 $wiki = isset( $_GET['wiki'] ) ? $_GET['wiki'] : '';
-require getMediaWiki( 'includes/WebStart.php', $wiki );
+require MWMultiVersion::getMediaWiki( 'includes/WebStart.php', $wiki );
 
 error_reporting( E_ERROR ); // fatals but not random I/O warnings
 ini_set( 'display_errors', 1 );
