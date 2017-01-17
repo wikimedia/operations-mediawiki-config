@@ -105,7 +105,7 @@ $wgLBFactoryConf = [
 	's2' => [
 		'db2017' => 0,   # 2.9TB  96GB, master
 		'db2035' => 50,  # 2.9TB 160GB, rc, log
-		'db2041' => 100, # 2.9TB 160GB, api
+#		'db2041' => 100, # 2.9TB 160GB, api #T154097
 		'db2049' => 400, # 2.9TB 160GB,
 		'db2056' => 50,  # 3.3TB 160GB, dump (inactive), vslow
 		'db2063' => 100, # 3.3TB 160GB, api
@@ -271,7 +271,7 @@ $wgLBFactoryConf = [
 			'db2056' => 1,
 		],
 		'api' => [
-			'db2041' => 1,
+#			'db2041' => 1,
 			'db2063' => 1,
 		],
 	],
