@@ -48,9 +48,12 @@ EOT
 	}
 
 	$relFile = $argv[1]; // the script file to run
+	$envFile = getenv( 'MEDIAWIKI_MAINT_INIT_ONLY' ); // possible override by environment var
 	# If no MW directory is given then assume this is a /maintenance script
 	if ( strpos( $relFile, '/' ) === false ) {
 		$relFile = "maintenance/$relFile"; // convenience
+	} elseif( $envFile ) {
+		$relFile = 'maintenance/commandLine.inc';
 	}
 
 	# Remove effects of this wrapper from $argv...
