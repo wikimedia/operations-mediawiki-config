@@ -2973,7 +2973,7 @@ if ( $wmgUseContentTranslation ) {
 		'HTTPProxy' => false,
 	];
 
-	$wgContentTranslationTranslateInTarget = true;
+	$wgContentTranslationTranslateInTarget = $wmgContentTranslationTranslateInTarget;
 
 	$wgContentTranslationTargetNamespace = $wmgContentTranslationTargetNamespace;
 
