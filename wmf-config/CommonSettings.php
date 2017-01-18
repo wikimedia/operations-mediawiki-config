@@ -2870,6 +2870,10 @@ if ( $wmgUseRevisionSlider ) {
 	$wgRevisionSliderBetaFeature = $wmgRevisionSliderBetaFeature;
 }
 
+if ( $wmgUseTwoColConflict ) {
+	wfLoadExtension( 'TwoColConflict' );
+}
+
 if ( $wmgUseUserMerge ) {
 	wfLoadExtension( 'UserMerge' );
 	// Don't let users get deleted outright (T69789)
