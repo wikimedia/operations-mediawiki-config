@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efb0bce_548bcd72",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3373,
+      "author": {
+        "id": 55
+      },
+      "writtenOn": "2017-01-18T19:17:42Z",
+      "side": 1,
+      "message": "Do I need to be careful here?  Should I check that $wgRCEngines is already initialized as an array?",
+      "revId": "d61c94892f3c543d65a58722866cecea1bd60e97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
