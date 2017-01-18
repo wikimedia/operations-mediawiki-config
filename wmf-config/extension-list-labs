@@ -4,4 +4,3 @@ $IP/extensions/Newsletter/extension.json
 $IP/extensions/PageViewInfo/extension.json
 $IP/extensions/PerformanceInspector/extension.json
 $IP/extensions/Sentry/extension.json
-$IP/extensions/TwoColConflict/extension.json

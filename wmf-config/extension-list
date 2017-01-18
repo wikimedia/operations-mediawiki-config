@@ -126,6 +126,7 @@ $IP/extensions/TorBlock/extension.json
 $IP/extensions/Translate/Translate.php
 $IP/extensions/TranslationNotifications/extension.json
 $IP/extensions/TrustedXFF/extension.json
+$IP/extensions/TwoColConflict/extension.json
 $IP/extensions/UnicodeConverter/extension.json
 $IP/extensions/UniversalLanguageSelector/extension.json
 $IP/extensions/UploadsLink/extension.json

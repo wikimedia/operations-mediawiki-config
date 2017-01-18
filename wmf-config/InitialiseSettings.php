@@ -16490,6 +16490,13 @@ $wgConf->settings = [
 	'hewiki' => false, // T150573
 ],
 
+'wmgUseTwoColConflict' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'testwikidatawiki' => true,
+],
+
 'wmgUseUserMerge' => [
 	'default' => true,
 	'private' => false,
