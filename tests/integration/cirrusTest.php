@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
+require_once __DIR__ . '/../../multiversion/MWMultiVersion.php';
 // TODO: how will we import SiteConfiguration?
 
 class cirrusTests extends PHPUnit_Framework_TestCase {
@@ -78,7 +78,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 
 	private function loadWgConf( $wmfRealm ) {
 		// Variables required for wgConf.php
-		$wmfConfigDir = __DIR__ . "/../wmf-config";
+		$wmfConfigDir = __DIR__ . "/../../wmf-config";
 
 		require "{$wmfConfigDir}/wgConf.php";
 
@@ -90,15 +90,15 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$GLOBALS['wmfConfigDir'] = $wmfConfigDir;
 		$GLOBALS['wgConf'] = $wgConf;
 
-		require __DIR__ . '/TestServices.php';
+		require __DIR__ . '/../TestServices.php';
 		require "{$wmfConfigDir}/InitialiseSettings.php";
 
 		return $wgConf;
 	}
 
 	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix ) {
-		$wmfConfigDir = __DIR__ . "/../wmf-config";
-		require __DIR__ . '/TestServices.php';
+		$wmfConfigDir = __DIR__ . "/../../wmf-config";
+		require __DIR__ . '/../TestServices.php';
 		$wgConf = $this->loadWgConf( $wmfRealm );
 
 		list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );

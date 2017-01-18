@@ -18,8 +18,13 @@
 		<testsuite name="wmfconfig">
 			<directory>tests/wmf-config</directory>
 		</testsuite>
-		<testsuite name="main">
+		<testsuite name="unit">
 			<directory>tests</directory>
+			<exclude>tests/integration</exclude>
+		</testsuite>
+		<testsuite name="integration">
+			<file>tests/integration/WmfCurrentVersionSuite.php</file>
+			<file>tests/integration/WmfPreviousVersionSuite.php</file>
 		</testsuite>
 	</testsuites>
 
