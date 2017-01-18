@@ -47,7 +47,7 @@ function wmfStaticShowError( $message, $status, $smaxage = 60 ) {
 /**
  * Stream file from disk to web response
  * Based on StreamFile::stream()
- * @param string $filePath
+ * @param string $filePath File to stream
  * @param string $responseType Cache control for successful repsonse (one of 'short' or 'long')
  */
 function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
