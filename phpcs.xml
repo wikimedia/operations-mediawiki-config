@@ -1,0 +1,126 @@
+<?xml version="1.0"?>
+<ruleset>
+	<rule ref="multiversion/vendor/mediawiki/mediawiki-codesniffer/MediaWiki" />
+	<file>.</file>
+	<arg name="encoding" value="utf8"/>
+	<arg name="extensions" value="php,php5,inc,sample"/>
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax.Found">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Generic.CodeAnalysis.UnconditionalIfStatement.Found">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Generic.ControlStructures.InlineControlStructure.NotAllowed">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Generic.Files.EndFileNewline.NotFound">
+		<severity>0</severity>
+	</rule>
+ 	<rule ref="Generic.Files.LineLength.MaxExceeded">
+		<exclude-pattern>wmf-config/interwiki.php</exclude-pattern>
+	</rule>
+	<rule ref="Generic.Files.LineLength.TooLong">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Generic.Formatting.DisallowMultipleStatements.SameLine">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Generic.Formatting.MultipleStatementAlignment.IncorrectWarning">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Generic.PHP.NoSilencedErrors.Discouraged">
+		<severity>0</severity>
+	</rule>
+	<rule ref="PSR2.Classes.PropertyDeclaration.ScopeMissing">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.Classes.ValidClassName.NotCamelCaps">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.WhiteSpace.LanguageConstructSpacing.Incorrect">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.WhiteSpace.LanguageConstructSpacing.IncorrectSingle">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing.TooMuchSpaceBefore">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.WhiteSpace.SemicolonSpacing.Incorrect">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.AlternativeSyntax.AlternativeSyntax.AlternativeSyntax">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.Commenting.FunctionComment.MissingReturn">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.Commenting.FunctionComment.Missing.Protected">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.Commenting.FunctionComment.Missing.Public">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.Commenting.FunctionComment.WrongStyle">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.ControlStructures.IfElseStructure.SpaceAfterElse">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.ControlStructures.IfElseStructure.SpaceBeforeElse">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.ExtraCharacters.CharacterBeforePHPOpeningTag.Found">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.NamingConventions.PrefixedGlobalFunctions.wfPrefix">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.NamingConventions.ValidGlobalName.wgPrefix">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.VariableAnalysis.UnusedGlobalVariables">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.WhiteSpace.MultipleEmptyLines.MultipleEmptyLines">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.WhiteSpace.SpaceAfterControlStructure.Incorrect">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.EmptyComment">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.SingleSpaceBeforeSingleLineComment">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.WhiteSpace.SpaceyParenthesis.SingleSpaceAfterOpenParenthesis">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.WhiteSpace.SpaceyParenthesis.SingleSpaceBeforeCloseParenthesis">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.WhiteSpace.SpaceyParenthesis.SpaceBeforeOpeningParenthesis">
+		<severity>0</severity>
+	</rule>
+	<rule ref="MediaWiki.WhiteSpace.SpaceyParenthesis.UnnecessarySpaceBetweenParentheses">
+		<severity>0</severity>
+	</rule>
+	<exclude-pattern>.git/</exclude-pattern>
+	<exclude-pattern>vendor/</exclude-pattern>
+	<exclude-pattern>multiversion/</exclude-pattern>
+	<exclude-pattern>wmf-config/PrivateSettings.php</exclude-pattern>
+	<exclude-pattern>docroot/foundation</exclude-pattern>
+</ruleset>
