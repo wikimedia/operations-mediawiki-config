@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ruleset>
+	<rule ref="multiversion/vendor/mediawiki/mediawiki-codesniffer/MediaWiki" />
+	<file>.</file>
+	<arg name="encoding" value="utf8"/>
+	<arg name="extensions" value="php,php5,inc,sample"/>
+	<rule name="CamelCase">
+		<exclude name="Squiz.Classes.ValidClassName.NotCamelCaps" />
+	</rule>
+	<rule name="LineLength">
+		<exclude name="Generic.Files.LineLength.TooLong" />
+	</rule>
+	<rule name="EmptyComments">
+		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.EmptyComment" />
+	</rule>
+	<rule name="SpaceyComments">
+		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.SingleSpaceBeforeSingleLineComment" />
+	</rule>
+	<exclude-pattern>vendor/</exclude-pattern>
+	<exclude-pattern>multiversion</exclude-pattern>
+	<exclude-pattern>wmf-config/PrivateSettings.php</exclude-pattern>
+	<exclude-pattern>docroot/foundation</exclude-pattern>
+</ruleset>
+
