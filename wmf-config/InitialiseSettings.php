@@ -13013,6 +13013,7 @@ $wgConf->settings = [
 		'ores-enabled',                             // [Research] 2017-05-10 - ORES
 		'revisionslider',                           // [WMDE] 2017-05-08 - RevisionSlider
 		'visualeditor-newwikitext',                 // [Editing] 2017-05-29 – New wikitext editor
+		'twocolconflict',                           // [WMDE] 2017-07-18 – New edit conflict view
 	],
 ],
 
