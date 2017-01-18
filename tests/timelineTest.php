@@ -9,7 +9,7 @@ class timelineTest extends \PHPUnit_Framework_TestCase {
 	 *
 	 * @dataProvider wgTimelineFontFileValues
 	 */
-	function testTimelinefontfile_does_not_have_ttf_suffix( $filename ) {
+	function testTimelineFontFileDoesNotHaveTtfSuffix( $filename ) {
 		$this->assertStringEndsNotWith( '.ttf', $filename );
 	}
 
@@ -17,7 +17,7 @@ class timelineTest extends \PHPUnit_Framework_TestCase {
 	/**
 	 * @dataProvider wgTimelineFontFileValues
 	 */
-	function testTimelinefontfile_exists( $filename ) {
+	function testTimelineFontFileEexists( $filename ) {
 		$this->assertFileExists( __DIR__ . "/../fonts/" . $filename );
 	}
 
@@ -25,7 +25,6 @@ class timelineTest extends \PHPUnit_Framework_TestCase {
 	 * Parse wmf-config/timeline.php and find values for $wgTimelineFontFile
 	 */
 	public static function wgTimelineFontFileValues() {
-
 		$testCases = [];
 		$conf = file_get_contents( __DIR__ . '/../wmf-config/timeline.php' );
 		$tokens = ( token_get_all( $conf ) );
