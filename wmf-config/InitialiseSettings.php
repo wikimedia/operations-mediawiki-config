@@ -7442,6 +7442,10 @@ $wgConf->settings = [
 	'testwiki' => true, // T150991
 ],
 
+'wgDisableUserGroupExpiry' => [
+	'default' => true,
+],
+
 # groupOverrides @{
 'groupOverrides' => [
 	// Note: don't change the default setting here, because it won't take
