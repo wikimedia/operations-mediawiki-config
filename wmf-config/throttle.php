@@ -86,13 +86,13 @@ $wgExtensionFunctions[] = function() {
 
 		# 1) skip when it does not apply to our database name
 
-		if ( isset( $options['dbname'] ) && !in_array( $wgDBname, (array) $options['dbname'] ) ) {
+		if ( isset( $options['dbname'] ) && !in_array( $wgDBname, (array)$options['dbname'] ) ) {
 			continue;
 		}
 
 		# 2) skip expired entries
 		$inTimeWindow = time() >= strtotime( $options['from'] )
-				&& time() <= strtotime( $options['to'] );
+			&& time() <= strtotime( $options['to'] );
 
 		if ( !$inTimeWindow ) {
 			continue;
@@ -103,10 +103,10 @@ $wgExtensionFunctions[] = function() {
 		if ( isset ( $options['IP'] ) ) {
 			$throttleIP = $options['IP'];
 		}
-		if ( isset( $throttleIP ) && !in_array( $ip, (array) $throttleIP ) ) {
+		if ( isset( $throttleIP ) && !in_array( $ip, (array)$throttleIP ) ) {
 			continue;
 		}
-		if ( isset ( $options['range'] ) && !IP::isInRanges( $ip, (array) $options['range'] ) ) {
+		if ( isset ( $options['range'] ) && !IP::isInRanges( $ip, (array)$options['range'] ) ) {
 			continue;
 		}
 
