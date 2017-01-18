@@ -16497,6 +16497,7 @@ $wgConf->settings = [
 	'testwikidatawiki' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
+	'dewiki' => true,
 ],
 
 'wmgUseUserMerge' => [
