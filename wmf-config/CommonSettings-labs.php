@@ -350,10 +350,6 @@ if ( $wmgUseLinter ) {
 	wfLoadExtension( 'Linter' );
 }
 
-if ( $wmgUseTwoColConflict ) {
-	wfLoadExtension( 'TwoColConflict' );
-}
-
 $wgMessageCacheType = CACHE_ACCEL;
 
 // Let Beta Cluster Commons do upload-from-URL from production Commons.
