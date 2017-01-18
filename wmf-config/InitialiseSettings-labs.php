@@ -260,6 +260,10 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
+		'-wgDisableUserGroupExpiry' => [
+			'default' => false,
+		],
+
 		///
 		/// ----------- BetaFeatures start ----------
 		///
