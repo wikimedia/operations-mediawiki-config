@@ -28,6 +28,15 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
+$wmgMaharashtraEventsWikis = [
+        "mrwiki",
+        "mrwiktionary",
+        "mrwikisource",
+        "mrwikibooks",
+        "mrwikiquote",
+        "enwiki",
+        "commonswiki",
+];
 
 $wmgThrottlingExceptions[] = [ // T154245
 	'from' => '2017-01-20T0:00 +0:00',
@@ -67,6 +76,14 @@ $wmgThrottlingExceptions[] = [ // T155493
 	'range' => '134.190.0.0/16',
 	'dbname' => [ 'enwiki', 'frwiki' ],
 	'value' => 30 // 20 expected
+];
+
+$wmgThrottlingExceptions[] = [ // T154312
+	'from' => '2017-01-19T09:00 +5:30',
+	'to' => '2017-01-19T18:00 +5:30',
+	'range' => '103.19.18.0/24',
+	'dbname' => $wmgMaharashtraEventsWikis,
+	'value' => 60 // 40-50 expected
 ];
 
 ## Add throttling definitions above.
