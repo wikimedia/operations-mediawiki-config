@@ -143,7 +143,7 @@ $wmgMonologConfig =  [
 	'loggers' => [
 		// Template for all undefined log channels
 		'@default' => [
-			'handlers' => (array) $wmgDefaultMonologHandler,
+			'handlers' => (array)$wmgDefaultMonologHandler,
 			'processors' => array_keys( $wmgMonologProcessors ),
 			'calls' => $wmgMonologLoggerCalls,
 		],

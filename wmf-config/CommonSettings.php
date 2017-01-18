@@ -445,8 +445,7 @@ if ( $wmgUseCentralAuth ) {
 		foreach ( $enforceWikiGroups as $group => $wikis ) {
 			foreach ( $wikis as $wiki ) {
 				if ( isset( $attachInfo[$wiki]['groups'] )
-					&& in_array( $group, $attachInfo[$wiki]['groups'] ) )
-				{
+					&& in_array( $group, $attachInfo[$wiki]['groups'] ) ) {
 					$effectivePolicy = UserPasswordPolicy::maxOfPolicies(
 						$effectivePolicy,
 						$privilegedPolicy
@@ -1962,12 +1961,9 @@ if( $wgDBname === 'commonswiki' ) {
 
 // Temporary override: WMF is not hardcore enough to enable this.
 // See T37785, T38316, T47022 about it.
-if ( $wmgWatchlistDefault )
-{
+if ( $wmgWatchlistDefault ) {
 	$wgDefaultUserOptions['watchdefault'] = 1;
-}
-else
-{
+} else {
 	$wgDefaultUserOptions['watchdefault'] = 0;
 }
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
