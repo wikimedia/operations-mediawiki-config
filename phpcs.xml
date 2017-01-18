@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<ruleset>
+	<rule ref="multiversion/vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
+		<exclude name="MediaWiki.AlternativeSyntax.AlternativeSyntax.AlternativeSyntax" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamComment" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamName" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingParamTag" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.Missing.Protected" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.Missing.Public" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.MissingReturn" />
+		<exclude name="MediaWiki.Commenting.FunctionComment.WrongStyle" />
+		<exclude name="MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures" />
+		<exclude name="MediaWiki.ControlStructures.IfElseStructure.SpaceAfterElse" />
+		<exclude name="MediaWiki.ControlStructures.IfElseStructure.SpaceBeforeElse" />
+		<exclude name="MediaWiki.ExtraCharacters.CharacterBeforePHPOpeningTag.Found" />
+		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.wfPrefix" />
+		<exclude name="MediaWiki.NamingConventions.ValidGlobalName.wgPrefix" />
+		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
+		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables" />
+		<exclude name="MediaWiki.WhiteSpace.MultipleEmptyLines.MultipleEmptyLines" />
+		<exclude name="MediaWiki.WhiteSpace.SpaceAfterControlStructure.Incorrect" />
+		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.EmptyComment" />
+		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.SingleSpaceBeforeSingleLineComment" />
+		<exclude name="MediaWiki.WhiteSpace.SpaceyParenthesis.SingleSpaceAfterOpenParenthesis" />
+		<exclude name="MediaWiki.WhiteSpace.SpaceyParenthesis.SingleSpaceBeforeCloseParenthesis" />
+		<exclude name="MediaWiki.WhiteSpace.SpaceyParenthesis.SpaceBeforeOpeningParenthesis" />
+		<exclude name="MediaWiki.WhiteSpace.SpaceyParenthesis.UnnecessarySpaceBetweenParentheses" />
+	</rule>
+	<file>.</file>
+	<arg name="encoding" value="utf8"/>
+	<arg name="extensions" value="php,php5,inc,sample"/>
+	<rule ref="Generic.Arrays.DisallowLongArraySyntax.Found">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Generic.CodeAnalysis.UnconditionalIfStatement.Found">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Generic.ControlStructures.InlineControlStructure.NotAllowed">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Generic.Files.EndFileNewline.NotFound">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Generic.Files.LineLength.MaxExceeded">
+		<exclude-pattern>wmf-config/interwiki.php</exclude-pattern>
+	</rule>
+	<rule ref="Generic.Files.LineLength.TooLong">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Generic.Formatting.DisallowMultipleStatements.SameLine">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Generic.Formatting.MultipleStatementAlignment.IncorrectWarning">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Generic.PHP.NoSilencedErrors.Discouraged">
+		<severity>0</severity>
+	</rule>
+	<rule ref="PSR2.Classes.PropertyDeclaration.ScopeMissing">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.Classes.ValidClassName.NotCamelCaps">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.WhiteSpace.LanguageConstructSpacing.Incorrect">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.WhiteSpace.LanguageConstructSpacing.IncorrectSingle">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing.TooMuchSpaceBefore">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore">
+		<severity>0</severity>
+	</rule>
+	<rule ref="Squiz.WhiteSpace.SemicolonSpacing.Incorrect">
+		<severity>0</severity>
+	</rule>
+
+	<exclude-pattern>.git/</exclude-pattern>
+	<exclude-pattern>vendor/</exclude-pattern>
+	<exclude-pattern>multiversion/</exclude-pattern>
+	<exclude-pattern>wmf-config/PrivateSettings.php</exclude-pattern>
+	<exclude-pattern>docroot/foundation</exclude-pattern>
+</ruleset>

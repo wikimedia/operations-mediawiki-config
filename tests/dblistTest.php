@@ -34,7 +34,6 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 	 * @dataProvider provideProjectDbnames
 	 */
 	public function testDatabaseNamesUseProjectNameAsSuffix( $projectname, $database ) {
-
 		// Override suffix for wikipedia project
 		$dbsuffix = ( $projectname === 'wikipedia' )
 			? 'wiki'
