@@ -1,3 +1,4 @@
+$IP/extensions/Dashiki/extension.json
 $IP/extensions/EmailAuth/extension.json
 $IP/extensions/Linter/extension.json
 $IP/extensions/Newsletter/extension.json
