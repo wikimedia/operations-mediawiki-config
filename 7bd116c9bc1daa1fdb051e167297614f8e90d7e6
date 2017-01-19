@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efb0bce_61b72382",
+        "filename": "wmf-config/extension-list-labs",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2017-01-19T20:13:24Z",
+      "side": 1,
+      "message": "Should be at the top, alphabetical order here :)",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 37
+      },
+      "revId": "7bd116c9bc1daa1fdb051e167297614f8e90d7e6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
