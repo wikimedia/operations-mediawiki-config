@@ -37,11 +37,15 @@ class DatabaseLists {
 	/**
 	 * @return string[]
 	 */
-	public static function getTagsListsFor ( $databaseName ) {
+	public static function getTagsListsFor ( $databaseName, $realm ) {
 		$tags = [];
 
 		foreach ( self::getAllTagsLists() as $tag ) {
-			$databaseList = MWWikiversions::readDbListFile( $databaseName );
+			$fname = $tag;
+			if ( $realm === 'labs' && $tag === 'closed' ) {
+				$fname .= '-labs';
+			}
+			$databaseList = MWWikiversions::readDbListFile( $fname );
 			if ( in_array( $databaseName, $databaseList ) ) {
 				$tags[] = $tag;
 			}

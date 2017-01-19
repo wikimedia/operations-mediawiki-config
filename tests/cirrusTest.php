@@ -99,12 +99,13 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 	}
 
 	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix ) {
+		global $wmfRealm;
 		$wmfConfigDir = __DIR__ . "/../wmf-config";
 		require __DIR__ . '/TestServices.php';
 		$wgConf = $this->loadWgConf( $wmfRealm );
 
 		list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
-		$wikiTags = DatabaseLists::getTagsListsFor( $wgDBname );
+		$wikiTags = DatabaseLists::getTagsListsFor( $wgDBname, $wmfRealm );
 
 		$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 		$confParams = [
