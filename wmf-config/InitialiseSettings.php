@@ -16583,6 +16583,10 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wmgUseInterwikiSorting' => [
+	'default' => false,
+],
+
 'wmgWikibaseCachePrefix' => [
 	'default' => 'wikidatawiki',
 	'testwikidatawiki' => 'testwikidatawiki0',

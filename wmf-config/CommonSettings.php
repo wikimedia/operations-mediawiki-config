@@ -2994,6 +2994,12 @@ if ( $wmgUseContentTranslation ) {
 
 $wgExtensionEntryPointListFiles[] = "$IP/extensions/Wikidata/extension-list-wikidata";
 
+if ( $wmgUseInterwikiSorting ) {
+	wfLoadExtension( 'InterwikiSorting' );
+	// This setting must be set before loading WikibaseClient
+	$wgWikibaseInterwikiSorting = false;
+}
+
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 	if ( $wmgUseWikibaseRepo && $wmfRealm === 'labs' ) {
 		// enable on beta only
