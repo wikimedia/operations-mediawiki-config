@@ -28,6 +28,10 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
+///
+/// Maharashtra 'Edit Wikipedia…' workshops
+///
+
 $wmgMaharashtraEventsWikis = [
         "mrwiki",
         "mrwiktionary",
@@ -38,6 +42,18 @@ $wmgMaharashtraEventsWikis = [
         "commonswiki",
 ];
 
+$wmgThrottlingExceptions[] = [ // T154312 - Maharashtra 'Edit Wikipedia…' workshops (BAMU)
+	'from'   => '2017-01-20T07:00+05:30',
+	'to'     => '2017-01-20T20:00+05:30',
+	'IP'  => '117.232.125.2',
+	'dbname' => $maharashtraEventsWikis,
+	'value'  => 100 // expected participants are unknown
+];
+
+///
+/// Other events
+///
+
 $wmgThrottlingExceptions[] = [ // T154245
 	'from' => '2017-01-20T0:00 +0:00',
 	'to' => '2017-01-20T23:59 +0:00',
@@ -46,44 +62,12 @@ $wmgThrottlingExceptions[] = [ // T154245
 	'value' => 50 // 40 expected
 ];
 
-$wmgThrottlingExceptions[] = [ // T155345
-	'from' => '2017-01-18T09:00 +5:30',
-	'to' => '2017-01-18T18:00 +5:30',
-	'range' => '49.248.104.0/24',
-	'dbname' => [ 'mrwiki', 'enwiki', 'commonswiki' ],
-	'value' => 50 // 40 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T155416
-	'from' => '2017-01-19T03:00 +5:30',
-	'to' => '2017-01-19T18:00 +5:30',
-	'range' => '14.139.121.0/24',
-	'dbname' => [ 'mrwiki', 'enwiki', 'commonswiki' ],
-	'value' => 50 // 40 expected
-];
-
-$wmgThrottlingExceptions[] = [ //T155510
-	'from' => '2017-01-17T18:00 +1:00',
-	'to' => '2017-01-17T22:00 +1:00',
-	'range' => '84.89.157.0/24',
-	'dbname' => [ 'cawiki', 'eswiki', 'commonswiki' ],
-	'value' => 30 // 15+ expected
-];
-
 $wmgThrottlingExceptions[] = [ // T155493
 	'from' => '2017-01-23T00:00 +0:00',
 	'to' => '2017-01-25T00:00 +0:00',
 	'range' => '134.190.0.0/16',
 	'dbname' => [ 'enwiki', 'frwiki' ],
 	'value' => 30 // 20 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T154312
-	'from' => '2017-01-19T09:00 +5:30',
-	'to' => '2017-01-19T18:00 +5:30',
-	'IP' => '117.211.110.105',
-	'dbname' => $wmgMaharashtraEventsWikis,
-	'value' => 60 // 40-50 expected
 ];
 
 ## Add throttling definitions above.
