@@ -369,4 +369,19 @@ $wgHooks['ImportSources'][] = 'wmfImportSources';
 // Reenable Preview and Changes tabs for wikieditor preview
 $wgHiddenPrefs = array_diff ( $wgHiddenPrefs, [ 'wikieditor-preview' ] );
 
+// Testing Dashiki extension on the beta cluster
+// Configure Dashiki sub-namespace with JsonConfig
+$wgJsonConfigs['JsonConfig.Dashiki'] = array(
+  'pattern' => '/^Dashiki\:./',
+  'isLocal' => true,
+);
+
+// register the custom view implemented by the Dashiki extension
+$wgJsonConfigModels['JsonConfig.Dashiki'] = array(
+    'class' => null,
+    'view'  => 'Dashiki\DashikiView',
+);
+
+wfLoadExtension( 'Dashiki' );
+
 } # end safeguard
