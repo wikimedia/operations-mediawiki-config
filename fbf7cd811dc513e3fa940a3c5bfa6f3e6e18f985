@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efb0bce_c4fb8510",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 370,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2017-01-19T20:18:21Z",
+      "side": 1,
+      "message": "You don\u0027t want the $ here, it\u0027s not a dynamic function name :)\n\nShould this be above your JsonConfig stuff, or does it not matter?",
+      "range": {
+        "startLine": 370,
+        "startChar": 0,
+        "endLine": 370,
+        "endChar": 16
+      },
+      "revId": "fbf7cd811dc513e3fa940a3c5bfa6f3e6e18f985",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
