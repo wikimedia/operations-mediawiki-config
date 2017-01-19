@@ -22,6 +22,30 @@
       "revId": "fbf7cd811dc513e3fa940a3c5bfa6f3e6e18f985",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efb0bce_443795e0",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 370,
+      "author": {
+        "id": 469
+      },
+      "writtenOn": "2017-01-19T20:21:28Z",
+      "side": 1,
+      "message": "Ah! weird... it worked in vagrant.  As you can see, I know zero php.  It doesn\u0027t need to be above the other config, as the other config is for the JsonConfig extension, not Dashiki.  I\u0027m assuming JsonConfig is configured already on beta, but I might be wrong...",
+      "parentUuid": "4efb0bce_c4fb8510",
+      "range": {
+        "startLine": 370,
+        "startChar": 0,
+        "endLine": 370,
+        "endChar": 16
+      },
+      "revId": "fbf7cd811dc513e3fa940a3c5bfa6f3e6e18f985",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
