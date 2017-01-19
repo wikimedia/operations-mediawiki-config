@@ -14784,9 +14784,6 @@ $wgConf->settings = [
 	'ruwiki' => [
 		'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => false
 	],
-	'enwiki' => [
-		'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => false
-	],
 ],
 'wgMinervaUseFooterV2' => [
 	'default' => true,
