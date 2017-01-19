@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efb0bce_034bdacd",
+        "filename": "wmf-config/DatabaseLists.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 98
+      },
+      "writtenOn": "2017-01-19T04:20:38Z",
+      "side": 1,
+      "message": "$tag ?",
+      "range": {
+        "startLine": 44,
+        "startChar": 51,
+        "endLine": 44,
+        "endChar": 64
+      },
+      "revId": "e94548252ce8e59cf2d0a9ac32e707ea67ab394f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
