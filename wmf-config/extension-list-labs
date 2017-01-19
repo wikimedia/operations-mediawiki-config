@@ -1,4 +1,5 @@
 $IP/extensions/EmailAuth/extension.json
+$IP/extensions/InterwikiSorting/extension.json
 $IP/extensions/Linter/extension.json
 $IP/extensions/Newsletter/extension.json
 $IP/extensions/PageViewInfo/extension.json
