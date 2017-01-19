@@ -3700,6 +3700,7 @@ $wgConf->settings = [
 		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
 		'Wikipedia_talk' => NS_PROJECT_TALK,
+		'सहाय्यस्य_प्रवेशद्वारम्' => 101, // T101634 - Portal talk
 	],
 	'+sewiki' => [
 		'WP' => NS_PROJECT, // T42436
@@ -5392,7 +5393,7 @@ $wgConf->settings = [
 	],
 	'sawiki' => [
 		100 => 'प्रवेशद्वारम्',          // T78394 - Portal
-		101 => 'सहाय्यस्य_प्रवेशद्वारम्',
+		101 => 'प्रवेशद्वारसम्भाषणम्', // T78394, T101634
 	],
 	'scnwiki' => [
 		100 => 'Purtali',
