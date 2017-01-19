@@ -81,7 +81,7 @@ $wmgThrottlingExceptions[] = [ // T155493
 $wmgThrottlingExceptions[] = [ // T154312
 	'from' => '2017-01-19T09:00 +5:30',
 	'to' => '2017-01-19T18:00 +5:30',
-	'range' => '103.19.18.0/24',
+	'IP' => '117.211.110.105',
 	'dbname' => $wmgMaharashtraEventsWikis,
 	'value' => 60 // 40-50 expected
 ];
