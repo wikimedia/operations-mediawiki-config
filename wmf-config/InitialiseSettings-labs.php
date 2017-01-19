@@ -570,5 +570,8 @@ function wmfLabsSettings() {
 		'wgLinterStatsdSampleFactor' => [
 			'default' => 10,
 		],
+		'wmgUseInterwikiSorting' => [
+			'default' => false,
+		],
 	];
 } # wmflLabsSettings()
