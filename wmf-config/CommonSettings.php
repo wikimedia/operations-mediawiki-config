@@ -849,6 +849,13 @@ if ( $wmgUseTimedMediaHandler ) {
 	//for avconv / ffmpeg2theora
 	$wgTranscodeBackgroundMemoryLimit = 4 * 1024 * 1024; // 4GB
 	$wgFFmpegThreads = 2;
+	
+	// ffmpeg tends to use about 175% CPU when threaded, so hits
+	// the default 8-hour ulimit in 4-6 hours. This tends to cut
+	// off very large files at very high resolution just before
+	// they finish, wasting a lot of time.
+	// Pad it back out so we don't waste that CPU time with a fail!
+	$wgTranscodeBackgroundTimeLimit *= $wgFFmpegThreads;
 
 	// Minimum size for an embed video player
 	$wgMinimumVideoPlayerSize = $wmgMinimumVideoPlayerSize;
