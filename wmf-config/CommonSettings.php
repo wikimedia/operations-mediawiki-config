@@ -163,7 +163,7 @@ if ( !$globals ) {
 	# Get configuration from SiteConfiguration object
 	require( "$wmfConfigDir/InitialiseSettings.php" );
 
-	$wikiTags = DatabaseLists::getTagsListsFor( $wgDBname );
+	$wikiTags = DatabaseLists::getTagsListsFor( $wgDBname, $wmfRealm );
 
 	$dbSuffix = ( $site === 'wikipedia' ) ? 'wiki' : $site;
 	$confParams = [
@@ -713,7 +713,7 @@ $wgSiteMatrixSites = [
 	],
 ];
 
-$wgSiteMatrixClosedSites = MWWikiversions::readDbListFile( 'closed' );
+$wgSiteMatrixClosedSites = MWWikiversions::readDbListFile( $wmfRealm === 'labs' ? 'closed-labs' : 'closed' );
 $wgSiteMatrixPrivateSites = MWWikiversions::readDbListFile( 'private' );
 $wgSiteMatrixFishbowlSites = MWWikiversions::readDbListFile( 'fishbowl' );
 
