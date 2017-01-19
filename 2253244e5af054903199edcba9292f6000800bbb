@@ -16,6 +16,24 @@
       "revId": "2253244e5af054903199edcba9292f6000800bbb",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efb0bce_cfea8373",
+        "filename": "scap/plugins/wmf-beta-autoupdate.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2017-01-19T18:51:51Z",
+      "side": 1,
+      "message": "Habit?",
+      "parentUuid": "4efb0bce_235db64a",
+      "revId": "2253244e5af054903199edcba9292f6000800bbb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
