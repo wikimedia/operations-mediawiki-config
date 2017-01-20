@@ -16,6 +16,24 @@
       "revId": "d61c94892f3c543d65a58722866cecea1bd60e97",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4efb0bce_1adfb46d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 3373,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-01-20T15:49:28Z",
+      "side": 1,
+      "message": "No, it\u0027s an array by default (and non-empty, too). This just adds another key, which is fine :)",
+      "parentUuid": "4efb0bce_548bcd72",
+      "revId": "d61c94892f3c543d65a58722866cecea1bd60e97",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
