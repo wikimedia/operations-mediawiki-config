@@ -16172,8 +16172,12 @@ $wgConf->settings = [
 
 'wmgUseFlow' => [
 	'default' => false,
-	// This is computed in flow.dblist as all - "a specific list" (nonflow.dblist)
-	// - "all private wikis" (private.dblist) + "private wikis with Flow" (flowprivate.dblist)
+	// To update flow.dblist, regenerate it (with expanddblist) from
+	// flow-computed.dblist.
+	//
+	// as all - "a specific list" (nonflow.dblist)
+	// - "all private wikis" (private.dblist) - "all fishbowl wikis" (fishbowl.dblist)
+	// + "private wikis with Flow" (flowprivate.dblist)
 	'flow' => true,
 ],
 'wmgFlowEnglishNamespaceOnly' => [
