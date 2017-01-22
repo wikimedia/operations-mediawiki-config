@@ -261,7 +261,7 @@ function wmfLabsSettings() {
 		],
 
 		'-wgDisableUserGroupExpiry' => [
-			'default' => false,
+			'default' => true,
 		],
 
 		///
