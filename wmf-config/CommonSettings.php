@@ -3305,11 +3305,6 @@ if ( $wmgAllowRobotsControlInAllNamespaces ) {
 // additional "language names", adding to Names.php data
 $wgExtraLanguageNames = $wmgExtraLanguageNames;
 
-
-if ( $wmfRealm === 'labs' ) {
-	require( "$wmfConfigDir/CommonSettings-labs.php" );
-}
-
 if ( $wmgUseCheckUser ) {
 	wfLoadExtension( 'CheckUser' );
 	$wgCheckUserForceSummary = $wmgCheckUserForceSummary;
@@ -3387,5 +3382,9 @@ if ( $wmgUseKartographer ) {
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
+
+if ( $wmfRealm === 'labs' ) {
+	require( "$wmfConfigDir/CommonSettings-labs.php" );
+}
 
 require( "$wmfConfigDir/ExtensionMessages-$wmgVersionNumber.php" );
