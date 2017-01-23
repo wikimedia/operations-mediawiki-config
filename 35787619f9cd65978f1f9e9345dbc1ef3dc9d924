@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4efb0bce_cc9a7c75",
+        "filename": "wmf-config/Wikibase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 198,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2017-01-23T12:21:03Z",
+      "side": 1,
+      "message": "include_once will return true if a file is included multiple times, which would be wrong here.",
+      "range": {
+        "startLine": 198,
+        "startChar": 12,
+        "endLine": 198,
+        "endChar": 16
+      },
+      "revId": "35787619f9cd65978f1f9e9345dbc1ef3dc9d924",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
