@@ -571,7 +571,7 @@ function wmfLabsSettings() {
 			'default' => 10,
 		],
 		'wmgUseInterwikiSorting' => [
-			'default' => false,
+			'default' => true,
 		],
 	];
 } # wmflLabsSettings()
