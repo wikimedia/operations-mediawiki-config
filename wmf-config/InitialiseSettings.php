@@ -12595,6 +12595,7 @@ $wgConf->settings = [
 		'digitalmedia.fws.gov',             // U.S. Fish and Wildlife Service - T154671
 		'*.leventhalmap.org',               // Leventhal Map Center at the Boston Public Library - T155309
 		'*.finds.org.uk',                   // Portable Antiquities Scheme - T155844
+		'finds.org.uk',                     // Portable Antiquities Scheme - T155844
 	],
 ],
 
