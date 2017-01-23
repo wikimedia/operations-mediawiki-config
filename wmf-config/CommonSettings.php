@@ -849,7 +849,7 @@ if ( $wmgUseTimedMediaHandler ) {
 	//for avconv / ffmpeg2theora
 	$wgTranscodeBackgroundMemoryLimit = 4 * 1024 * 1024; // 4GB
 	$wgFFmpegThreads = 2;
-	
+
 	// ffmpeg tends to use about 175% CPU when threaded, so hits
 	// the default 8-hour ulimit in 4-6 hours. This tends to cut
 	// off very large files at very high resolution just before
@@ -1196,6 +1196,7 @@ if ( $wgDBname === 'loginwiki' ) {
 	$wgGroupPermissions['*'] = [
 		'read' => true,
 		'autocreateaccount' => true,
+		'createaccount' => false,
 	];
 	$wgGroupPermissions['user'] = [
 		'read' => true,
@@ -1213,6 +1214,7 @@ if ( $wgDBname === 'loginwiki' ) {
 			'editinterface' => false,
 			'editusercss' => false,
 			'edituserjs' => false,
+			'createaccount' => false,
 		]
 	);
 }
