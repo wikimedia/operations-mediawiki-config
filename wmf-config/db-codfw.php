@@ -93,14 +93,14 @@ $wgLBFactoryConf = [
 
 'sectionLoads' => [
 	's1' => [
-		'db2016' => 0,   # 2.9TB  96GB, master
-		'db2034' => 50,  # 2.9TB 160GB, rc, log
-		'db2042' => 50,  # 2.9TB 160GB, rc, log
-		'db2048' => 400, # 2.9TB 160GB
-		'db2055' => 50,  # 3.3TB 160GB, dump (inactive), vslow
-		'db2062' => 100, # 3.3TB 160GB, api
-		'db2069' => 100, # 3.3TB 160GB, api
-		'db2070' => 400, # 3.3TB 160GB
+		'db2016' => 0,   # 2.9TB  96GB, master #B6
+		'db2034' => 50,  # 2.9TB 160GB, rc, log #C6
+		'db2042' => 50,  # 2.9TB 160GB, rc, log #C6
+		'db2048' => 400, # 2.9TB 160GB #C6
+		'db2055' => 50,  # 3.3TB 160GB, dump (inactive), vslow #D6
+		'db2062' => 100, # 3.3TB 160GB, api #D6
+		'db2069' => 100, # 3.3TB 160GB, api #D6
+		'db2070' => 400, # 3.3TB 160GB #D6
 	],
 	's2' => [
 		'db2017' => 0,   # 2.9TB  96GB, master
