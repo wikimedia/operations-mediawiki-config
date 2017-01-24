@@ -192,9 +192,6 @@ if ( $wmgUseWikibaseClient ) {
 		);
 	};
 
-	$wgWBClientSettings['interwikiSortOrders']
-		= include( "$wmfConfigDir/InterwikiSortOrders.php" );
-
 	if ( $wgDBname === 'wikidatawiki' || $wgDBname === 'testwikidatawiki' ) {
 		$wgWBClientSettings['namespaces'] = [
 			NS_CATEGORY,

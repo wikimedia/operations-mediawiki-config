@@ -16636,7 +16636,6 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
-// @note this is currently duplicated in wmgWikibaseClientSettings
 'wgInterwikiSortingSort' => [
 	'default' => 'code',
 	'enwiki' => 'alphabetic',
@@ -16661,7 +16660,6 @@ $wgConf->settings = [
 	'srwiki' => 'alphabetic_sr',
 ],
 
-	// @note this is currently duplicated in wmgWikibaseClientSettings
 'wgInterwikiSortingSortPrepend' => [
 	'default' => [],
 	'hewiki' => [ 'en' ],
@@ -16753,8 +16751,6 @@ $wgConf->settings = [
 'wmgWikibaseClientSettings' => [
 	// @note because of unconventional way of doing wikibase settings, the default setting
 	// here does not work the same way. Instead, put defaults in Wikibase.php
-	// @note these settings are currently duplicated for the InterwikiSortingExtension
-	// in wgInterwikiSortingSort and wgInterwikiSortingSortPrepend
 	'default' => [
 	],
 	'testwiki' => [
@@ -16764,105 +16760,9 @@ $wgConf->settings = [
 	'test2wiki' => [
 		'siteGlobalID' => 'enwiki'
 	],
-	'be_x_oldwiki' => [
-		'sort' => 'alphabetic',
-	],
-	// T55993
-	'ckbwiki' => [
-		'sortPrepend' => [ 'ku', 'diq' ],
-	],
-	'enwiki' => [
-		'sort' => 'alphabetic',
-	],
-	'etwiki' => [
-		'sort' => 'alphabetic_revised',
-	],
-	'fiwiki' => [
-		'sort' => 'alphabetic_revised',
-	],
-	'fiu_vrowiki' => [
-		'sort' => 'alphabetic_revised',
-	],
-	'fywiki' => [
-		'sort' => 'alphabetic_fy',
-	],
-	// T103207
-	'fywikibooks' => [
-		'sort' => 'alphabetic_fy',
-	],
-	'gdwiki' => [
-		'sortPrepend' => [ 'ga', 'gv', 'sco', 'cy' ], // T153900
-	],
-	'hewiki' => [
-		'sortPrepend' => [ 'en' ],
-	],
-	'hewikivoyage' => [
-		'sortPrepend' => [ 'en' ],
-	],
-	'huwiki' => [
-		'sortPrepend' => [ 'en' ],
-	],
-	'ilowiki' => [
-		'sort' => 'alphabetic',
-	],
-	'lbwiki' => [
-		'sort' => 'alphabetic',
-	],
-	'mkwiki' => [
-		'sort' => 'alphabetic',
-	],
-	'mswiki' => [
-		'sort' => 'alphabetic_revised',
-	],
-	'ndswiki' => [
-		'sortPrepend' => [ 'nds-nl' ],
-	],
-	'nds_nlwiki' => [
-		'sortPrepend' => [ 'nds' ],
-	],
 	'nlwiki' => [
 		'otherProjectsLinksByDefault' => false,
 	],
-	'nnwiki' => [
-		'sort' => 'alphabetic',
-		'sortPrepend' => [ 'no', 'sv', 'da' ],
-	],
-	'nowiki' => [
-		'sort' => 'alphabetic',
-		'sortPrepend' => [ 'nn', 'da', 'sv', 'fo', 'is' ], // T148021
-	],
-	'nvwiki' => [
-		'sort' => 'alphabetic',
-		'sortPrepend' => [ 'en', 'es' ],
-	],
-	'pdcwiki' => [
-		'sortPrepend' => [ 'de', 'en' ],
-	],
-	'plwiki' => [
-		'sort' => 'alphabetic',
-	],
-	'simplewiki' => [
-		'sort' => 'alphabetic',
-	],
-	'srwiki' => [
-		'sort' => 'alphabetic_sr',
-	],
-	'svwiki' => [
-		'sort' => 'alphabetic',
-	],
-	'tewiki' => [
-		'sortPrepend' => [ 'en', 'hi', 'kn', 'ta', 'ml' ],
-	],
-	'urwiki' => [
-		'sort' => 'alphabetic',
-		'sortPrepend' => [ 'ar', 'fa', 'en' ],
-	],
-	'viwiki' => [
-		'sort' => 'alphabetic_revised',
-	],
-	'yiwiki' => [
-		'sortPrepend' => [ 'en', 'he', 'de' ],
-	]
 ],
 
 'wmgUseWikibaseQuality' => [
