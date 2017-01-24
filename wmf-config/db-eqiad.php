@@ -95,7 +95,7 @@ $wgLBFactoryConf = [
 	's1' => [
 		'db1057' => 0,   # 2.8TB  96GB, master #C2
 #		'db1052' => 1,   # 2.8TB  96GB, old master #Temporary master for db1095 - new sanitarium #T150960 #C2
-		'db1051' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager #C2
+#		'db1051' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager #B3 #Maintenance - T156004
 		'db1055' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager #C2
 		'db1065' => 50,  # 2.8TB 160GB, api #D1
 		'db1066' => 50,  # 2.8TB 160GB, api #D1
@@ -238,7 +238,7 @@ $wgLBFactoryConf = [
 'groupLoadsBySection' => [
 	's1' => [
 		'watchlist' => [
-			'db1051' => 1,
+#			'db1051' => 1,
 			'db1055' => 1,
 		],
 		'recentchanges' => [
