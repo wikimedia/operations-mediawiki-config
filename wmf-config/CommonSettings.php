@@ -3001,8 +3001,11 @@ if ( $wmgUseContentTranslation ) {
 
 $wgExtensionEntryPointListFiles[] = "$IP/extensions/Wikidata/extension-list-wikidata";
 
-if ( $wmgUseInterwikiSorting ) {
+if( $wmgUseWikibaseClient || $wmgUseInterwikiSorting ) {
 	$wgInterwikiSortingInterwikiSortOrders = include( "$wmfConfigDir/InterwikiSortOrders.php" );
+}
+
+if ( $wmgUseInterwikiSorting ) {
 	wfLoadExtension( 'InterwikiSorting' );
 	// This setting must be set before loading WikibaseClient
 	$wgWikibaseInterwikiSorting = false;
