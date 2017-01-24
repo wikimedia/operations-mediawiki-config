@@ -93,17 +93,17 @@ $wgLBFactoryConf = [
 
 'sectionLoads' => [
 	's1' => [
-		'db1057' => 0,   # 2.8TB  96GB, master #C2
-#		'db1052' => 1,   # 2.8TB  96GB, old master #Temporary master for db1095 - new sanitarium #T150960 #B3
-		'db1051' => 1,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager #B3
-		'db1055' => 50,  # 2.8TB  96GB, watchlist, recentchanges, contributions, logpager #C2
-#		'db1065' => 50,  # 2.8TB 160GB, api #D1 #Maintenance T156006
-		'db1066' => 50,  # 2.8TB 160GB, api #D1
-#		'db1072' => 0,   # 2.8TB 160GB, vslow, dump #D1 #T156006
-		'db1073' => 50,  # 2.8TB 160GB, api #D1
-		'db1080' => 100, # 3.6TB 512GB #A2
-		'db1083' => 500, # 3.6TB 512GB #B1
-		'db1089' => 500, # 3.6TB 512GB #C3
+		'db1057' => 0,   # C2 2.8TB  96GB, master
+#		'db1052' => 1,   # B3 2.8TB  96GB, old master #maintenance T156008
+		'db1051' => 1,   # B3 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
+		'db1055' => 50,  # C2 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
+		'db1065' => 0,   # D1 2.8TB 160GB, vslow, dump
+		'db1066' => 50,  # D1 2.8TB 160GB, api
+#		'db1072' => 0,   # D1 2.8TB 160GB #maintenance T156166
+		'db1073' => 50,  # D1 2.8TB 160GB, api
+		'db1080' => 500, # A2 3.6TB 512GB
+		'db1083' => 500, # B1 3.6TB 512GB
+		'db1089' => 500, # C3 3.6TB 512GB
 	],
 	's2' => [
 		'db1018' => 0,   # 1.4TB  64GB, master
@@ -239,34 +239,33 @@ $wgLBFactoryConf = [
 	's1' => [
 		'watchlist' => [
 			'db1051' => 1,
-			'db1055' => 2,
+			'db1055' => 1,
 		],
 		'recentchanges' => [
 			'db1051' => 1,
-			'db1055' => 2,
+			'db1055' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1051' => 1,
-			'db1055' => 2,
+			'db1055' => 1,
 		],
 		'contributions' => [
 			'db1051' => 1,
-			'db1055' => 2,
+			'db1055' => 1,
 		],
 		'logpager' => [
 			'db1051' => 1,
-			'db1055' => 2,
+			'db1055' => 1,
 		],
 		'dump' => [
-			'db1080' => 1,
+			'db1065' => 1,
 		],
 		'vslow' => [
-			'db1080' => 1,
+			'db1065' => 1,
 		],
 		'api' => [
-#			'db1065' => 5,
-			'db1066' => 5,
-			'db1073' => 5,
+			'db1066' => 1,
+			'db1073' => 1,
 		],
 	],
 	's2' => [
