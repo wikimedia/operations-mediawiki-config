@@ -16599,6 +16599,50 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
+// @note this is currently duplicated in wmgWikibaseClientSettings
+'wgInterwikiSortingSort' => [
+	'default' => 'code',
+	'enwiki' => 'alphabetic',
+	'be_x_oldwiki' => 'alphabetic',
+	'ilowiki' => 'alphabetic',
+	'lbwiki' => 'alphabetic',
+	'mkwiki' => 'alphabetic',
+	'nnwiki' => 'alphabetic',
+	'nowiki' => 'alphabetic',
+	'nvwiki' => 'alphabetic',
+	'plwiki' => 'alphabetic',
+	'simplewiki' => 'alphabetic',
+	'svwiki' => 'alphabetic',
+	'urwiki' => 'alphabetic',
+	'etwiki' => 'alphabetic_revised',
+	'fiwiki' => 'alphabetic_revised',
+	'fiu_vrowiki' => 'alphabetic_revised',
+	'mswiki' => 'alphabetic_revised',
+	'viwiki' => 'alphabetic_revised',
+	'fywiki' => 'alphabetic_fy',
+	'fywikibooks' => 'alphabetic_fy', // T103207
+	'srwiki' => 'alphabetic_sr',
+],
+
+// @note this is currently duplicated in wmgWikibaseClientSettings
+'wgInterwikiSortingSortPrepend' => [
+	'default' => [],
+	'hewiki' => [ 'en' ],
+	'hewikivoyage' => [ 'en' ],
+	'huwiki' => [ 'en' ],
+	'ndswiki' => [ 'nds-nl' ],
+	'nds_nlwiki' => [ 'nds' ],
+	'ckbwiki' => [ 'ku', 'diq' ], // T55993
+	'gdwiki' => [ 'ga', 'gv', 'sco', 'cy' ], // T153900
+	'nnwiki' => [ 'no', 'sv', 'da' ],
+	'nowiki' => [ 'nn', 'da', 'sv', 'fo', 'is' ], // T148021
+	'nvwiki' => [ 'en', 'es' ],
+	'pdcwiki' => [ 'de', 'en' ],
+	'tewiki' => [ 'en', 'hi', 'kn', 'ta', 'ml' ],
+	'urwiki' => [ 'ar', 'fa', 'en' ],
+	'yiwiki' => [ 'en', 'he', 'de' ],
+],
+
 'wmgWikibaseCachePrefix' => [
 	'default' => 'wikidatawiki',
 	'testwikidatawiki' => 'testwikidatawiki0',
@@ -16672,6 +16716,8 @@ $wgConf->settings = [
 'wmgWikibaseClientSettings' => [
 	// @note because of unconventional way of doing wikibase settings, the default setting
 	// here does not work the same way. Instead, put defaults in Wikibase.php
+	// @note these settings are currently duplicated for the InterwikiSortingExtension
+	// in wgInterwikiSortingSort and wgInterwikiSortingSortPrepend
 	'default' => [
 	],
 	'testwiki' => [
