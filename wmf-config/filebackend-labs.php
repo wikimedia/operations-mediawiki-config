@@ -68,6 +68,23 @@ $wgFileBackends[] = [ // backend config for wiki's access to shared repo
 	// When used by FileBackendMultiWrite, read from this cluster if it's the local one
 	'readAffinity'       => true
 ];
+$wgFileBackends[] = [ // backend config for wiki's access to thumbnails of production Commons files
+	'class'              => 'SwiftFileBackend',
+	'name'               => "prod-swift-eqiad",
+	'wikiId'             => "prod-commons",
+	'lockManager'        => 'redisLockManager',
+	'swiftAuthUrl'       => $wmfSwiftConfig['eqiad']['authUrl'],
+	'swiftUser'          => $wmfSwiftConfig['eqiad']['user'],
+	'swiftKey'           => $wmfSwiftConfig['eqiad']['key'],
+	'swiftTempUrlKey'    => $wmfSwiftConfig['eqiad']['tempUrlKey'],
+	'shardViaHashLevels' => [
+		'math-render'  => [ 'levels' => 2, 'base' => 16, 'repeat' => 0 ],
+	],
+	'parallelize'        => 'implicit',
+	'cacheAuthInfo'      => true,
+	// When used by FileBackendMultiWrite, read from this cluster if it's the local one
+	'readAffinity'       => true
+];
 $wgFileBackends[] = [ // backend config for wiki's access to shared files
 	'class'              => 'SwiftFileBackend',
 	'name'               => "global-swift-eqiad",
@@ -119,6 +136,18 @@ $wgFileBackends[] = [
 	'class'       => 'FileBackendMultiWrite',
 	'name'        => 'shared-multiwrite',
 	'wikiId'      => "wikipedia-commons",
+	'lockManager' => 'redisLockManager',
+	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
+	'backends'    => [
+		[ 'template' => 'shared-swift-eqiad', 'isMultiMaster' => true ],
+	],
+	'replication' => 'sync', // read-after-update for assets
+	'syncChecks'  => ( 1 | 4 ), // (size & sha1)
+];
+$wgFileBackends[] = [
+	'class'       => 'FileBackendMultiWrite',
+	'name'        => 'prod-multiwrite',
+	'wikiId'      => "prod-commons",
 	'lockManager' => 'redisLockManager',
 	# DO NOT change the master backend unless it is fully trusted or autoRsync is off
 	'backends'    => [
@@ -212,5 +241,19 @@ if ( $wgDBname != 'commonswiki' ) {
 			'deleted' => [ 'container' => 'local-deleted' ]
 		],
 		'abbrvThreshold'   => 160 /* Keep in sync with with local repo on commons or things break. */
+	];
+
+	$wgForeignFileRepos[] = [
+		'class'                  => 'ForeignAPIRepo',
+		'name'                   => 'wikimediacommons',
+		'backend'                => 'prod-multiwrite',
+		'apibase'                => 'https://commons.wikimedia.org/w/api.php',
+		'url'                    => 'https://upload.wikimedia.org/wikipedia/commons',
+		'thumbUrl'               => 'https://upload.wikimedia.org/wikipedia/commons/thumb',
+		'hashLevels'             => 2,
+		'transformVia404'        => true,
+		'fetchDescription'       => true,
+		'descriptionCacheExpiry' => 43200,
+		'apiThumbCacheExpiry'    => 86400,
 	];
 }

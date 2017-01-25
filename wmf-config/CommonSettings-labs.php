@@ -160,9 +160,7 @@ if ( $wmgUseTimedMediaHandler ) {
 // Enable Flickr uploads on commons beta T86120
 if ( $wgDBname == 'commonswiki' ) {
 	$wgGroupPermissions['user']['upload'] = true;
-    $wgGroupPermissions['user']['upload_by_url'] = true;
-} else { // Use InstantCommons on all betawikis except commonswiki
-	$wgUseInstantCommons = true;
+	$wgGroupPermissions['user']['upload_by_url'] = true;
 }
 
 
