@@ -26,7 +26,7 @@ if ( !in_array( $template, $allowed_templates ) ) {
 
 $wgTitle = Title::newFromText( $template );
 $wgArticle = new Article( $wgTitle );
-$rawHtml = $wgArticle->getContent( false );
+$rawHtml = $wgArticle->getPage()->getContent()->getNativeData();
 
 $lastmod = gmdate( 'D, j M Y H:i:s', wfTimestamp( TS_UNIX, $wgArticle->getTouched() ) ) . ' GMT';
 header( 'Content-Type: text/html; charset=utf-8' );
