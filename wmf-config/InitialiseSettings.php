@@ -4644,6 +4644,7 @@ $wgConf->settings = [
 		'csp' => 'info',
 		'csp-report-only' => 'info',
 		'DBPerformance' => [ 'logstash' => 'debug', 'udp2log' => 'warning' ],
+		'deprecated' => 'debug',
 		'diff' => 'debug',
 		'Echo' => 'debug',
 		'es-hit' => 'debug',
