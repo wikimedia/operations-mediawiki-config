@@ -12781,6 +12781,7 @@ $wgConf->settings = [
 	'eswiktionary' => true, // T97135
 	'fawiki' => true,
 	'frwiki' => true, // T95604
+	'gdwiki' => true, // T156281
 	'hewiki' => true,
 	'hewikibooks' => true,
 	'hewikinews' => true,
