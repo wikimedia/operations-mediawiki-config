@@ -10270,6 +10270,9 @@ $wgConf->settings = [
 	'+frwikivoyage' => [
 		'sysop' => [ 'patroller' ],
 	],
+	'+frwikiquote' => [
+		'bureaucrat' => [ 'sysop' ], // T156227
+	],
 	'+frwiktionary' => [ // T138972
 		'bureaucrat' => [ 'accountcreator', 'patroller', 'transwiki', 'autopatrolled', 'confirmed', 'abusefilter', 'botadmin', 'translationadmin' ],
 	],
