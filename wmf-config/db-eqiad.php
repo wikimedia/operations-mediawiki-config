@@ -93,8 +93,8 @@ $wgLBFactoryConf = [
 
 'sectionLoads' => [
 	's1' => [
-		'db1057' => 0,   # C2 2.8TB  96GB, master
-		'db1052' => 50,  # B3 2.8TB  96GB, old master
+		'db1052' => 0,  # B3 2.8TB  96GB, master
+#		'db1057' => 0,   # C2 2.8TB  96GB, old master
 		'db1051' => 50,  # B3 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1055' => 50,  # C2 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1065' => 0,   # D1 2.8TB 160GB, vslow, dump, master for sanitarium
