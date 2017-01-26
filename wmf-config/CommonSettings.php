@@ -850,8 +850,14 @@ if ( $wmgUseTimedMediaHandler ) {
 	$wgTranscodeBackgroundMemoryLimit = 4 * 1024 * 1024; // 4GB
 	$wgFFmpegThreads = 2;
 	
+	// HD transcodes of full-length films/docs/conference vids can
+	// take several hours, and sometimes over 12. Bump up from default
+	// 8 hour limit to 16 to avoid wasting the time we've already spent
+	// when breaking these off.
+	$wgTranscodeBackgroundTimeLimit = 16 * 3600;
+
 	// ffmpeg tends to use about 175% CPU when threaded, so hits
-	// the default 8-hour ulimit in 4-6 hours. This tends to cut
+	// say an 8-hour ulimit in 4-6 hours. This tends to cut
 	// off very large files at very high resolution just before
 	// they finish, wasting a lot of time.
 	// Pad it back out so we don't waste that CPU time with a fail!
