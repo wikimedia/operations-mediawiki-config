@@ -14392,6 +14392,7 @@ $wgConf->settings = [
 	'mkwiki' => 'uca-mk-u-kn', // T26953
 	'nlwiki' => 'uca-nl', // T125774
 	'nowiki' => 'uca-nb-u-kn', // T146675, T148488
+	'olowiki' => 'uca-fi-u-kn', // T147064
 	'plwiki' => 'uca-pl-u-kn', // T44413, T146675
 	'plwikisource' => 'uca-pl', // T86821
 	'plwikivoyage' => 'uca-pl', // T47968
