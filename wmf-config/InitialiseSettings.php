@@ -12825,6 +12825,7 @@ $wgConf->settings = [
 	'tcywiki' => true, // T144925
 	'tewiki' => true,
 	'tewikiquote' => true,
+	'tgwiki' => true, // T156473
 	'thwiki' => true,
 	'thwikibooks' => true,
 	'thwikiquote' => true,
