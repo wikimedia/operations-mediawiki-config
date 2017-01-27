@@ -17263,14 +17263,15 @@ $wgConf->settings = [
 
 'wmgCirrusSearchLanguageDetectors' => [
 	'default' => [],
-	'enwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
 	'dewiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
+	'enwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
 	'eswiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'itwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
 	'frwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
+	'itwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
+	'jawiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
+	'nlwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
 	'ptwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
 	'ruwiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
-	'jawiki' => [ 'textcat' => 'CirrusSearch\\LanguageDetector\\TextCat' ],
 ],
 
 // Enable interwiki search by language detection. The list of language
@@ -17281,44 +17282,57 @@ $wgConf->settings = [
 // bucket reasons).
 'wmgCirrusSearchEnableAltLanguage' => [
 	'default' => false,
-	'enwiki' => true,
 	'dewiki' => true,
+	'enwiki' => true,
 	'eswiki' => true,
-	'itwiki' => true,
 	'frwiki' => true,
+	'itwiki' => true,
+	'jawiki' => true,
+	'nlwiki' => true,
 	'ptwiki' => true,
 	'ruwiki' => true,
-	'jawiki' => true,
 ],
 
 'wmgCirrusSearchTextcatLanguages' => [
-	'default' => [
-		'en', 'es', 'zh', 'pt', 'ar', 'ru', 'fa', 'ko',
-		'bn', 'bg', 'hi', 'el', 'ja', 'ta', 'th', 'he'
+	'default' => [],
+	'dewiki' => [
+		'de', 'en', 'la', 'it', 'es', 'fr', 'zh', 'pl',
+		'vi', 'el', 'ru', 'ar', 'hi', 'th', 'ko', 'ja',
 	],
-	'frwiki' => [
-		'fr', 'en', 'ar', 'ru', 'zh', 'th', 'el', 'hy',
-		'he', 'ko',
+	'enwiki' => [
+		'en', 'zh', 'es', 'ar', 'de', 'fa', 'fr', 'id',
+		'pl', 'ru', 'vi', 'it', 'ja', 'pt', 'cs', 'bn',
+		'hr', 'he', 'no', 'af', 'is', 'tl', 'th', 'hu',
+		'ga', 'ko', 'uk', 'ur', 'hi', 'el', 'te', 'ka',
 	],
 	'eswiki' => [
-		'es', 'en', 'ru', 'zh', 'ar', 'ja',
+		'es', 'en', 'la', 'ru', 'zh', 'pt', 'it', 'fr',
+		'de', 'ar', 'ja',
+	],
+	'frwiki' => [
+		'fr', 'en', 'ar', 'pt', 'de', 'es', 'ru', 'zh',
+		'nl', 'pl', 'it', 'th', 'sv', 'la', 'is', 'hy',
+		'hu', 'br', 'el', 'he', 'ko',
 	],
 	'itwiki' => [
-		'it', 'en', 'ru', 'ar', 'zh', 'ja', 'el', 'ko',
-	],
-	'dewiki' => [
-		'de', 'en', 'zh', 'el', 'ru', 'ar', 'hi', 'th',
-		'ko', 'ja',
-	],
-	'ptwiki' => [
-		'pt', 'en', 'ru', 'he', 'ar', 'zh', 'ko', 'el',
-	],
-	'ruwiki' => [
-		'ru', 'en', 'uk', 'ka', 'hy', 'ja', 'ar', 'he',
-		'zh',
+		'it', 'en', 'de', 'ru', 'ar', 'zh', 'pl', 'el',
+		'ko',
 	],
 	'jawiki' => [
-		'ja', 'en', 'ru', 'ko', 'ar', 'he',
+		'ja', 'en', 'zh', 'ko', 'de', 'ar', 'he',
+	],
+	'nlwiki' => [
+		'nl', 'en', 'fr', 'de', 'es', 'la', 'zh', 'pl',
+		'ar', 'vi', 'pt', 'my', 'ko', 'hr', 'da', 'cs',
+		'el', 'he', 'ja', 'ru',
+	],
+	'ptwiki' => [
+		'pt', 'en', 'tl', 'ru', 'fr', 'he', 'ar', 'zh',
+		'ko', 'el',
+	],
+	'ruwiki' => [
+		'ru', 'en', 'uk', 'de', 'ka', 'hy', 'lv', 'ja',
+		'fi', 'es', 'ar', 'he', 'zh',
 	],
 ],
 
