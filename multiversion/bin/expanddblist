@@ -1,0 +1,18 @@
+#!/usr/bin/php
+<?php
+require_once dirname( __DIR__ ) . '/MWWikiversions.php';
+$param = trim( $argv[1] );
+if ( !$param ) {
+	print "Usage: expanddblist [<dblist> or <expression>]";
+	exit( 1 );
+}
+if ( !strpos( $param, ' ') ) {
+	// dblist (Let readDbListFile read and expand the file)
+	$wikis = MWWikiversions::readDbListFile( $param );
+} else {
+	// expression
+	$wikis = MWWikiversions::evalDbListExpression( $param );
+}
+foreach ( $wikis as $wiki ) {
+	echo "$wiki\n";
+}
