@@ -143,12 +143,12 @@ $wgLBFactoryConf = [
 		'db2067' => 400, # D6 3.3TB 160GB
 	],
 	's7' => [
-		'db2029' => 0,   # 2.9TB  96GB, master
-		'db2040' => 200, # 2.9TB 160GB, rc, log
-		'db2047' => 400, # 2.9TB 160GB
-		'db2054' => 200, # 2.9TB 160GB, dump (inactive), vslow
-		'db2061' => 200, # 3.3TB 160GB, api
-		'db2068' => 300, # 3.3TB 160GB
+		'db2029' => 0,   # B6 2.9TB  96GB, master
+		'db2040' => 200, # C6 2.9TB 160GB, rc, log
+		'db2047' => 400, # C6 2.9TB 160GB
+		'db2054' => 200, # D6 2.9TB 160GB, dump (inactive), vslow
+		'db2061' => 200, # D6 3.3TB 160GB, api
+		'db2068' => 300, # D6 3.3TB 160GB
 	],
 	'silver' => [
 		'silver' => 100,   # I have no idea if this is right
