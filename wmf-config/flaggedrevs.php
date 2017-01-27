@@ -251,7 +251,7 @@ elseif ( $wgDBname == 'enwiki' || $wgDBname == 'testwiki' ) {
 		'status' => [ 'review' => 1, 'autoreview' => 1 ],
 	];
 	# Restriction levels for auto-review/review rights
-	$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed', 'review' ];
+	$wgFlaggedRevsRestrictionLevels = [ '', 'autoconfirmed' ];
 	# Use flag "protection" levels
 	$wgFlaggedRevsProtection = true;
 	# Use current templates/files
