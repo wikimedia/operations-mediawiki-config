@@ -17219,6 +17219,41 @@ $wgConf->settings = [
 
 'wmgCirrusSearchUserTesting' => [
 	'default' => [],
+	// Specific wikis are enabled from the client
+	// Enabling this on itwiki might lead to unexpected behaviors
+	'wikipedia' => [
+		'sidebar' => [
+			'sampleRate' => 0,
+			'globals' => [
+				// Should enable crossproject with sitematrix
+				'wgCirrusSearchEnableCrossProjectSearch' => true,
+				// Enable for all buckets
+				'wgCirrusSearchNewCrossProjectPage' => true,
+				'wgCirrusSearchNumCrossProjectSearchResults' => 1,
+			],
+			'buckets' => [
+				// control, we explicitly hide the side bar
+				'no_sidebar' => [
+					'trigger' => 'no_sidebar',
+					'globals' => [
+						'wgCirrusSearchHideCrossProjectResults' => true,
+					]
+				],
+				'recall_sidebar_results' => [
+					'trigger' => 'recall_sidebar_results',
+					'globals' => [
+						'wgCirrusSearchCrossProjectOrder' => 'recall',
+					],
+				],
+				'random_sidebar_results' => [
+					'trigger' => 'random_sidebar_results',
+					'globals' => [
+						'wgCirrusSearchCrossProjectOrder' => 'random',
+					],
+				]
+			]
+		]
+	],
 ],
 
 'wmgCirrusSearchLanguageDetectors' => [
