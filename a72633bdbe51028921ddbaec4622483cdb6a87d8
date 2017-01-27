@@ -16,6 +16,24 @@
       "revId": "a72633bdbe51028921ddbaec4622483cdb6a87d8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_3b673d24",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 17255,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2017-01-27T16:37:34Z",
+      "side": 1,
+      "message": "Sure, I was not sure. I could not even remember if we agreed on a specific number here.\nI\u0027ll set it to 1 so it conforms to the sistersearch demo.",
+      "parentUuid": "2ef897d1_1b96c1f3",
+      "revId": "a72633bdbe51028921ddbaec4622483cdb6a87d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
