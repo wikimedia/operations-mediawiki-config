@@ -3145,6 +3145,9 @@ $wgConf->settings = [
 		'وس' => NS_PROJECT,
 		'عب' => 106,
 	], // T73668
+	'+fawikiquote' => [
+		'وگ' => NS_PROJECT, // T156451
+	],
 	'+fawiktionary' => [
 		'وو' => NS_PROJECT,
 	],
