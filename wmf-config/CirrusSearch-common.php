@@ -242,6 +242,17 @@ $wgCirrusSearchUseIcuFolding = $wmgCirrusSearchUseIcuFolding;
 // Prefer pages in user's language in multilingual wikis
 $wgCirrusSearchLanguageWeight = $wmgCirrusSearchLanguageWeight;
 
+// Setup map of interwiki prefixes to sister search display type
+$wgInterwikiPrefixContentTypes = [
+	'wikt' => 'definition',
+	'b' => 'textbook',
+	'n' => 'news',
+	'q' => 'quotation',
+	's' => 'book',
+	'voy' => 'travel',
+	'v' => 'course',
+];
+
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
