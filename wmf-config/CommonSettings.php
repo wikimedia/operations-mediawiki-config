@@ -168,7 +168,6 @@ if ( !$globals ) {
 			'commonsuploads', 'nonbetafeatures', 'group0', 'group1', 'group2', 'wikipedia', 'nonglobal',
 			'wikitech', 'nonecho', 'mobilemainpagelegacy', 'compact-language-links', 'nowikidatadescriptiontaglines',
 			'related-articles-footer-blacklisted-skins',
-			'top6-wikipedia'
 		] as $tag ) {
 		$dblist = MWWikiversions::readDbListFile( $tag );
 		if ( in_array( $wgDBname, $dblist ) ) {
