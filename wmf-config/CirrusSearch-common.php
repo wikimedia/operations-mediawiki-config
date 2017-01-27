@@ -197,7 +197,7 @@ $wgCirrusSearchLanguageToWikiMap = $wmgCirrusSearchLanguageToWikiMap;
 $wgCirrusSearchEnableAltLanguage = $wmgCirrusSearchEnableAltLanguage;
 $wgCirrusSearchLanguageDetectors = $wmgCirrusSearchLanguageDetectors;
 $wgCirrusSearchTextcatLanguages = $wmgCirrusSearchTextcatLanguages;
-$wgCirrusSearchTextcatModel = "$IP/vendor/wikimedia/textcat/LM-query";
+$wgCirrusSearchTextcatModel = [ "$IP/vendor/wikimedia/textcat/LM-query", "$IP/vendor/wikimedia/textcat/LM" ];
 
 $wgHooks['CirrusSearchMappingConfig'][] = function( array &$config, $mappingConfigBuilder ) {
 	$config['page']['properties']['popularity_score'] = [
