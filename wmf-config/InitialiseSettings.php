@@ -12435,6 +12435,7 @@ $wgConf->settings = [
 ],
 'wmgThumbsizeIndex' => [
 	'default' => 4,
+	'nowiki' => 5, // T155892
 	'svwiki' => 2, // T18739
 ],
 
