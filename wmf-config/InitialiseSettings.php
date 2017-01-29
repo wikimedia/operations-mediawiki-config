@@ -14231,6 +14231,7 @@ $wgConf->settings = [
 	'default' => false,
 	'foundationwiki' => true,
 	'mediawikiwiki' => true,
+	'metawiki' => true, // T155830
 	'uawikimedia' => true,
 ],
 'wmgRSSUrlWhitelist' => [
@@ -14264,6 +14265,9 @@ $wgConf->settings = [
 		'https://codeclimate.com/github/wikimedia/wikimedia-fundraising-php-queue/feed.atom',
 		'https://codeclimate.com/github/wikimedia/wikimedia-fundraising-SmashPig/feed.atom',
 		'https://codeclimate.com/github/wikimedia/wikimedia-fundraising-tools/feed.atom',
+	],
+	'metawiki' => [
+		'https://tagteam.harvard.edu/hubs/wmde-policy-update/tag/rss/wmde.policy.update', // WM DE political RSS feed - T155830
 	],
 ],
 
