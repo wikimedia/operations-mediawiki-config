@@ -5103,6 +5103,8 @@ $wgConf->settings = [
 		103 => 'Keskustelu_metasivusta',
 		104 => 'Kirja',
 		105 => 'Keskustelu_kirjasta',
+		106 => 'Wikiprojekti', // T156621
+		107 => 'Keskustelu_wikiprojektista', // T156621
 	],
 	'frrwiki' => [ // Per T40023
 		102 => 'Seite',
@@ -14054,6 +14056,9 @@ $wgConf->settings = [
 	],
 	'+fawiki' => [
 		'پیش‌نویس' /* Draft */ => true // T118060
+	],
+	'+fiwiki' => [
+		'Wikiprojekti' => true, // T156621
 	],
 	'+frwiki' => [
 		'Projet' => true // T116603
