@@ -68,6 +68,7 @@ $IP/extensions/JsonConfig/extension.json
 $IP/extensions/Kartographer/extension.json
 $IP/extensions/LabeledSectionTransclusion/extension.json
 $IP/extensions/LandingCheck/extension.json
+$IP/extensions/Linter/extension.json
 $IP/extensions/LiquidThreads/extension.json
 $IP/extensions/Listings/extension.json
 $IP/extensions/LocalisationUpdate/extension.json
