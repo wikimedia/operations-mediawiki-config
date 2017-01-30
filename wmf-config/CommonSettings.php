@@ -2126,6 +2126,10 @@ if ( $wmgUsePopups || ( $wmgPopupsBetaFeature && $wmgUseBetaFeatures ) ) {
 	$wgPopupsBetaFeature = $wmgPopupsBetaFeature && !$wmgUsePopups;
 }
 
+if ( $wmgUseLinter ) {
+	wfLoadExtension( 'Linter' );
+}
+
 if ( !isset( $wgVirtualRestConfig ) && ( $wmgUseRestbaseVRS || $wmgUseParsoid ) ) {
 	$wgVirtualRestConfig = [
 		'modules' => [],
