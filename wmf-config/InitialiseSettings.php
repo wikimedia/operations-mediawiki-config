@@ -13823,6 +13823,17 @@ $wgConf->settings = [
 	],
 ],
 
+'wmgUseLinter' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
+'wgLinterSubmitterWhitelist' => [
+	'default' => [
+		// 127.0.0.1 => true,
+	],
+],
+
 // -------------- RESTBase start --------------
 
 'wgRestbaseServer' => [
