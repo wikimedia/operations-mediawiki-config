@@ -222,19 +222,19 @@ $wgLBFactoryConf = [
 			'db2042' => 1,
 		],
 		'recentchanges' => [
-			'db2034' => 1,
+#			'db2034' => 1,
 			'db2042' => 1,
 		],
 		'recentchangeslinked' => [
-			'db2034' => 1,
+#			'db2034' => 1,
 			'db2042' => 1,
 		],
 		'contributions' => [
-			'db2034' => 1,
+#			'db2034' => 1,
 			'db2042' => 1,
 		],
 		'logpager' => [
-			'db2034' => 1,
+#			'db2034' => 1,
 			'db2042' => 1,
 		],
 		'dump' => [
@@ -520,7 +520,7 @@ $wgLBFactoryConf = [
 	'db2031' => '10.192.16.19', # do not remove or comment out
 	'db2032' => '10.192.16.20', # do not remove or comment out
 	'db2033' => '10.192.32.4', # do not remove or comment out
-	'db2034' => '10.192.32.5', # do not remove or comment out
+	'db2034' => '10.192.0.87', # do not remove or comment out
 	'db2035' => '10.192.32.6', # do not remove or comment out
 	'db2036' => '10.192.32.7', # do not remove or comment out
 	'db2037' => '10.192.32.8', # do not remove or comment out
