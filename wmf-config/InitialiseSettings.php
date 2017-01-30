@@ -13823,6 +13823,56 @@ $wgConf->settings = [
 	],
 ],
 
+'wmgUseLinter' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
+'wgLinterSubmitterWhitelist' => [
+	'default' => [
+		'10.64.32.74' => true, # wtp1003.eqiad.wmnet
+		'10.64.32.75' => true, # wtp1004.eqiad.wmnet
+		'10.64.32.84' => true, # wtp1005.eqiad.wmnet
+		'10.64.32.85' => true, # wtp1006.eqiad.wmnet
+		'10.64.32.86' => true, # wtp1007.eqiad.wmnet
+		'10.64.32.87' => true, # wtp1008.eqiad.wmnet
+		'10.64.16.177' => true, # wtp1009.eqiad.wmnet
+		'10.64.16.178' => true, # wtp1010.eqiad.wmnet
+		'10.64.16.179' => true, # wtp1011.eqiad.wmnet
+		'10.64.16.180' => true, # wtp1012.eqiad.wmnet
+		'10.64.16.181' => true, # wtp1013.eqiad.wmnet
+		'10.64.16.182' => true, # wtp1014.eqiad.wmnet
+		'10.64.32.88' => true, # wtp1015.eqiad.wmnet
+		'10.64.32.89' => true, # wtp1016.eqiad.wmnet
+		'10.64.32.90' => true, # wtp1017.eqiad.wmnet
+		'10.64.32.91' => true, # wtp1018.eqiad.wmnet
+		'10.64.0.214' => true, # wtp1019.eqiad.wmnet
+		'10.64.0.215' => true, # wtp1020.eqiad.wmnet
+		'10.64.0.216' => true, # wtp1021.eqiad.wmnet
+		'10.64.0.217' => true, # wtp1022.eqiad.wmnet
+		'10.64.0.218' => true, # wtp1023.eqiad.wmnet
+		'10.64.0.219' => true, # wtp1024.eqiad.wmnet
+		'10.192.16.45' => true, # wtp2003.codfw.wmnet
+		'10.192.16.46' => true, # wtp2004.codfw.wmnet
+		'10.192.16.47' => true, # wtp2005.codfw.wmnet
+		'10.192.16.48' => true, # wtp2006.codfw.wmnet
+		'10.192.16.49' => true, # wtp2007.codfw.wmnet
+		'10.192.16.50' => true, # wtp2008.codfw.wmnet
+		'10.192.16.51' => true, # wtp2009.codfw.wmnet
+		'10.192.16.52' => true, # wtp2010.codfw.wmnet
+		'10.192.32.26' => true, # wtp2011.codfw.wmnet
+		'10.192.32.27' => true, # wtp2012.codfw.wmnet
+		'10.192.32.28' => true, # wtp2013.codfw.wmnet
+		'10.192.32.29' => true, # wtp2014.codfw.wmnet
+		'10.192.32.30' => true, # wtp2015.codfw.wmnet
+		'10.192.32.31' => true, # wtp2016.codfw.wmnet
+		'10.192.32.32' => true, # wtp2017.codfw.wmnet
+		'10.192.32.33' => true, # wtp2018.codfw.wmnet
+		'10.192.32.34' => true, # wtp2019.codfw.wmnet
+		'10.192.32.35' => true, # wtp2020.codfw.wmnet
+	],
+],
+
 // -------------- RESTBase start --------------
 
 'wgRestbaseServer' => [
