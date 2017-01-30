@@ -100,8 +100,8 @@ $wgLBFactoryConf = [
 		'db1065' => 0,   # D1 2.8TB 160GB, vslow, dump, master for sanitarium
 		'db1066' => 50,  # D1 2.8TB 160GB, api
 #		'db1072' => 0,   # B2 2.8TB 160GB #maintenance T156166
-		'db1073' => 50,  # D1 2.8TB 160GB, api
-		'db1080' => 500, # A2 3.6TB 512GB
+#		'db1073' => 50,  # D1 2.8TB 160GB, api #T156226 going to reclone db1072 from this host
+		'db1080' => 100, # A2 3.6TB 512GB, api #T156226
 		'db1083' => 500, # B1 3.6TB 512GB
 		'db1089' => 500, # C3 3.6TB 512GB
 	],
@@ -265,7 +265,7 @@ $wgLBFactoryConf = [
 		],
 		'api' => [
 			'db1066' => 1,
-			'db1073' => 1,
+			'db1080' => 1,
 		],
 	],
 	's2' => [
