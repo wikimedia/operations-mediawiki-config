@@ -241,6 +241,17 @@ $wgCirrusSearchUseIcuFolding = $wmgCirrusSearchUseIcuFolding;
 
 // Prefer pages in user's language in multilingual wikis
 $wgCirrusSearchLanguageWeight = $wmgCirrusSearchLanguageWeight;
+// Aliases for filetype: search
+$wgCirrusSearchFiletypeAliases = [
+	"pdf" => "office",
+	"ppt" => "office",
+	"doc" => "office",
+	"jpg" => "bitmap",
+	"image" => "bitmap",
+	"webp" => "bitmap",
+	"mp3" => "audio",
+	"svg" => "drawing"
+];
 
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
