@@ -16841,7 +16841,6 @@ $wgConf->settings = [
 'wmgUseTorBlock' => [
 	'default' => true,
 	'private' => false,
-	'wikitech' => false,
 ],
 
 'wmgUseSearchExtraNS' => [
