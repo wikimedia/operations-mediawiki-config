@@ -166,9 +166,9 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['patroller']['abusefilter-log'] = true;
 		$wgGroupPermissions['patroller']['abusefilter-view'] = true;
 		$wgGroupPermissions['patroller']['abusefilter-log-detail'] = true;
-		$wgGroupPermissions['autopatrol']['abusefilter-log'] = true;
-		$wgGroupPermissions['autopatrol']['abusefilter-view'] = true;
-		$wgGroupPermissions['autopatrol']['abusefilter-log-detail'] = true;
+		$wgGroupPermissions['autopatrolled']['abusefilter-log'] = true;
+		$wgGroupPermissions['autopatrolled']['abusefilter-view'] = true;
+		$wgGroupPermissions['autopatrolled']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-log'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-log-private'] = true;
