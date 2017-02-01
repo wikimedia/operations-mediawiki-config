@@ -362,7 +362,7 @@ elseif ( $wgDBname == 'fawiki' ) {
 
 	# User groups permissions
 	$wgGroupPermissions['rollbacker']['autoreviewrestore'] = true;
-	$wgGroupPermissions['autopatrol']['autoreview'] = true;
+	$wgGroupPermissions['autopatrolled']['autoreview'] = true;
 	$wgGroupPermissions['patroller']['autoreview'] = true;
 	$wgGroupPermissions['patroller']['review'] = true;
 	$wgGroupPermissions['patroller']['validate'] = true;
