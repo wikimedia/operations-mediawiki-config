@@ -22,6 +22,30 @@
       "revId": "ec716ccc9bf6e4be114be26c1a95c7941cb3e9c0",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_19f90d4b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 17279,
+      "author": {
+        "id": 2705
+      },
+      "writtenOn": "2017-02-01T20:40:30Z",
+      "side": 1,
+      "message": "Thanks, I never really got a good explanation of how all this stuff works, so I was trying to do it by analogy, which sometimes works, and sometimes doesn\u0027t.",
+      "parentUuid": "2ef897d1_b5ff9fa6",
+      "range": {
+        "startLine": 17279,
+        "startChar": 1,
+        "endLine": 17279,
+        "endChar": 28
+      },
+      "revId": "ec716ccc9bf6e4be114be26c1a95c7941cb3e9c0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
