@@ -1852,6 +1852,7 @@ $wgConf->settings = [
 	'kowiktionary' => '위키낱말사전',
 	'krcwiki' => 'Википедия',
 	'kuwiki' => 'Wîkîpediya',
+	'kuwiktionary' => 'Wîkîferheng', // T29878
 	'wikitech' => 'Wikitech',
 	'lawiki' => 'Vicipaedia',
 	'lawikibooks' => 'Vicilibri',
