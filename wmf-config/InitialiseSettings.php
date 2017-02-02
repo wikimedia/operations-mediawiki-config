@@ -16505,6 +16505,11 @@ $wgConf->settings = [
 	'related-articles-footer-blacklisted-skins' => [ 'minerva' ],
 ],
 
+'wgRelatedArticlesEnabledSamplingRate' => [
+	'default' => 1,
+	'enwiki' => 0.9,
+],
+
 'wmgUseRelatedSites' => [
 	'default' => false,
 	'wikivoyage' => true,
