@@ -12607,6 +12607,7 @@ $wgConf->settings = [
 		'*.leventhalmap.org',               // Leventhal Map Center at the Boston Public Library - T155309
 		'*.finds.org.uk',                   // Portable Antiquities Scheme - T155844
 		'finds.org.uk',                     // Portable Antiquities Scheme - T155844
+		'images.metmuseum.org',             // MET - T156855
 	],
 ],
 
