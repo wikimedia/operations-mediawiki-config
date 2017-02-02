@@ -573,5 +573,10 @@ function wmfLabsSettings() {
 		'wmgUseInterwikiSorting' => [
 			'default' => false,
 		],
+
+		// T152115
+		'wmgPageImagesLeadSectionOnly' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
