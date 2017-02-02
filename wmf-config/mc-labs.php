@@ -28,4 +28,7 @@ $wgObjectCaches['memcached-pecl'] = [
 	'loggroup' => 'memcached',
 ];
 
+# Confirm page related key purges via scanning recent changes
+$wgEnableWANCacheReaper = true;
+
 } # end safe guard
