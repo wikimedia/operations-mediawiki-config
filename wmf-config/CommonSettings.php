@@ -2408,33 +2408,45 @@ if ( $wmgUseTranslate ) {
 
 	$wgPageLanguageUseDB = true; // T153209
 
-	// TODO: proper integration with new CirrusSearch config
-	$wgTranslateExtensionDefaultCluster = 'eqiad';
 	$wgTranslateTranslationServices = [];
 	if ( $wmgUseTranslationMemory ) {
-		$servers = array_map(
-			function ( $v ) {
-				if ( is_array( $v ) ) {
-					return [ 'host' => $v['host'] ];
-				} else {
-					return [ 'host' => $v ];
-				}
-			},
-			$wgCirrusSearchClusters[$wgTranslateExtensionDefaultCluster]
-		);
-		// Read only until renamed to 'TTMServer'
-		$wgTranslateTranslationServices['TTMServer'] = [
-			'type' => 'ttmserver',
-			'class' => 'ElasticSearchTTMServer',
-			'shards' => 1,
-			'replicas' => 1,
-			'index' => $wmgTranslateESIndex,
-			'cutoff' => 0.65,
-			'use_wikimedia_extra' => true,
-			'config' => [
-				'servers' => $servers,
-			],
+		// Switch to 'eqiad' or 'codfw' if you plan to bring down
+		// the elastic cluster equals to $wmfDatacenter
+		$wgTranslateTranslationDefaultService = $wmfDatacenter;
+
+		// If the downtime is long (> 10mins) consider disabling
+		// mirroring in this var to avoid logspam about ttm updates
+		// then plan to refresh this index via ttmserver-export when
+		// it's back up.
+		$wgTranslateClustersAndMirrors = [
+			'eqiad' => [ 'codfw' ],
+			'codfw' => [ 'eqiad' ],
 		];
+		foreach( $wgTranslateClustersAndMirrors as $cluster => $mirrors ) {
+			if ( !isset( $wmfAllServices[$cluster]['search'] ) ) {
+				continue;
+			}
+			$wgTranslateTranslationServices[$cluster] = [
+				'type' => 'ttmserver',
+				'class' => 'ElasticSearchTTMServer',
+				'shards' => 1,
+				'replicas' => 1,
+				'index' => $wmgTranslateESIndex,
+				'cutoff' => 0.65,
+				'use_wikimedia_extra' => true,
+				'config' => [
+					'servers' => array_map( function( $host ) {
+						return [
+							'host' => $host,
+							'port' => 9243,
+							'transport' => 'Https',
+						];
+					}, $wmfAllServices[$cluster]['search'] ),
+				],
+				'mirrors' => $mirrors,
+			];
+		}
+		unset( $wgTranslateClustersAndMirrors );
 	}
 
 	$wgTranslateWorkflowStates = $wmgTranslateWorkflowStates;
