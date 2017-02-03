@@ -16984,6 +16984,9 @@ $wgConf->settings = [
 	'wikitech' => false,
 ],
 
+// NOTE: don't forget to update TTM default cluster via
+// $wgTranslateTranslationDefaultService in CommonSettings.php if you plan to
+// bring down a specific cluster.
 'wmgCirrusSearchDefaultCluster' => [
 	'default' => 'local',
 ],
