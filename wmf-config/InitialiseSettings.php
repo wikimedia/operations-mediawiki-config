@@ -15823,6 +15823,12 @@ $wgConf->settings = [
 	'default' => 'ttmserver',
 	'testwiki' => 'ttmserver-test',
 ],
+'wmgTranslateClustersAndMirrors' => [
+	'default' => [
+		'eqiad' => [ 'codfw' ],
+		'codfw' => [ 'eqiad' ],
+	],
+],
 'wmgUseTranslationNotifications' => [
 	'default' => false,
 	'testwiki' => true,
@@ -16956,6 +16962,12 @@ $wgConf->settings = [
 	'wikitech' => false,
 ],
 
+// NOTE: don't forget to update TTM default cluster via
+// $wgTranslateTranslationDefaultService in CommonSettings.php if you plan to
+// bring down a specific cluster. If the downtime is long (> 10mins) consider
+// disabling mirroring in wmgTranslateClustersAndMirrors to avoid logspam
+// about ttm updates then plan to refresh this index via ttmserver-export
+// when it's back up.
 'wmgCirrusSearchDefaultCluster' => [
 	'default' => 'local',
 ],
