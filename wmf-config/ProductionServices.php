@@ -15,6 +15,7 @@ $wmfAllServices['eqiad'] = [
 	'udp2log' => 'fluorine.eqiad.wmnet:8420',
 	'statsd' => 'statsd.eqiad.wmnet',
 	'search' => [ 'search.svc.eqiad.wmnet' ], # elasticsearch must be accessed by hostname for SSL certificate verification to work
+	'ttm' => [ [ 'host' => 'search.svc.eqiad.wmnet' ] ],
 	'ocg' => 'http://ocg.svc.eqiad.wmnet:8000',
 	'urldownloader' => 'http://url-downloader.eqiad.wikimedia.org:8080',
 	'parsoid' => 'http://parsoid.svc.eqiad.wmnet:8000',
@@ -29,6 +30,7 @@ $wmfAllServices['codfw'] = [
 	'udp2log' => 'fluorine.eqiad.wmnet:8420',
 	'statsd' => 'statsd.eqiad.wmnet',
 	'search' => [ 'search.svc.codfw.wmnet' ], # elasticsearch must be accessed by hostname for SSL certificate verification to work
+	'ttm' => [ [ 'host' => 'search.svc.codfw.wmnet' ] ],
 	'ocg' => 'http://ocg.svc.eqiad.wmnet:8000',
 	'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',
 	'parsoid' => 'http://parsoid.svc.codfw.wmnet:8000', # Change this once parsoid is up and running in codfw

@@ -2414,33 +2414,31 @@ if ( $wmgUseTranslate ) {
 
 	$wgPageLanguageUseDB = true; // T153209
 
-	// TODO: proper integration with new CirrusSearch config
-	$wgTranslateExtensionDefaultCluster = 'eqiad';
 	$wgTranslateTranslationServices = [];
 	if ( $wmgUseTranslationMemory ) {
-		$servers = array_map(
-			function ( $v ) {
-				if ( is_array( $v ) ) {
-					return [ 'host' => $v['host'] ];
-				} else {
-					return [ 'host' => $v ];
-				}
-			},
-			$wgCirrusSearchClusters[$wgTranslateExtensionDefaultCluster]
-		);
-		// Read only until renamed to 'TTMServer'
-		$wgTranslateTranslationServices['TTMServer'] = [
-			'type' => 'ttmserver',
-			'class' => 'ElasticSearchTTMServer',
-			'shards' => 1,
-			'replicas' => 1,
-			'index' => $wmgTranslateESIndex,
-			'cutoff' => 0.65,
-			'use_wikimedia_extra' => true,
-			'config' => [
-				'servers' => $servers,
-			],
-		];
+		if ( $wmgTranslateTranslationDefautService === 'local' ) {
+			$wgTranslateTranslationDefaultService = $wmfDatacenter;
+		} else {
+			$wgTranslateTranslationDefaultService = $wmgTranslateTranslationDefautService;
+		}
+		foreach( $wmgTranslateClustersAndMirrors as $cluster => $mirrors ) {
+			if ( !isset( $wmfAllServices[$cluster]['ttm'] ) ) {
+				continue;
+			}
+			$wgTranslateTranslationServices[$cluster] = [
+				'type' => 'ttmserver',
+				'class' => 'ElasticSearchTTMServer',
+				'shards' => 1,
+				'replicas' => 1,
+				'index' => $wmgTranslateESIndex,
+				'cutoff' => 0.65,
+				'use_wikimedia_extra' => true,
+				'config' => [
+					'servers' => $wmfAllServices[$cluster]['ttm']
+				],
+				'mirrors' => $mirrors,
+			];
+		}
 	}
 
 	$wgTranslateWorkflowStates = $wmgTranslateWorkflowStates;

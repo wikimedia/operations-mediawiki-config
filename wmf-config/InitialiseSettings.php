@@ -15740,6 +15740,15 @@ $wgConf->settings = [
 	'default' => 'ttmserver',
 	'testwiki' => 'ttmserver-test',
 ],
+'wmgTranslateTranslationDefautService' => [
+	'default' => 'local',
+],
+'wmgTranslateClustersAndMirrors' => [
+	'default' => [
+		'eqiad' => [ 'codfw' ],
+		'codfw' => [ 'eqiad' ],
+	],
+],
 'wmgUseTranslationNotifications' => [
 	'default' => false,
 	'testwiki' => true,
