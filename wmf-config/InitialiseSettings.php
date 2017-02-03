@@ -16508,6 +16508,9 @@ $wgConf->settings = [
 'wmgUseRelatedSites' => [
 	'default' => false,
 	'wikivoyage' => true,
+	'enwikivoyage' => false,
+	'frwikivoyage' => false,
+	'itwikivoyage' => false,
 ],
 
 'wmgUseRevisionSlider' => [
