@@ -3039,6 +3039,12 @@ $wgConf->settings = [
 	'elwiki' => [
 		'ΒΠ' => NS_PROJECT, // T135383
 	],
+	'+elwikisource' => [
+		'Portal' => 110, // T157187
+		'Portal_talk' => 111, // T157187
+		'Author' => 108, // T157187
+		'Author_talk' => 109, // T157187
+	],
 	'+enwiki' => [ // T8313
 		'WP' => NS_PROJECT,
 		'WT' => NS_PROJECT_TALK,
@@ -5664,6 +5670,8 @@ $wgConf->settings = [
 		103 => 'Συζήτηση_βιβλίου',
 		108 => 'Συγγραφέας',           // T78793 (Author)
 		109 => 'Συζήτηση_συγγραφέα',
+		110 => 'Πύλη', // T157187 (Portal)
+		111 => 'Συζήτηση_πύλης', // T157187 (Portal talk)
 	],
 	'enwikisource' => [
 		100 => 'Portal',
