@@ -17906,6 +17906,11 @@ $wgConf->settings = [
 	],
 ],
 
+'wgArticlePlaceholderSearchEngineIndexed' => [
+	'default' => false,
+	'cywiki' => 'Q2794',
+],
+
 ];
 
 ### WMF Labs override #####
