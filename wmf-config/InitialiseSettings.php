@@ -1196,7 +1196,7 @@ $wgConf->settings = [
 	'shwiki' => [ '1.5x' => '/static/images/project-logos/shwiki-1.5x.png', '2x' => '/static/images/project-logos/shwiki-2x.png' ], //T150618
 	'sowiki' => [ '1.5x' => '/static/images/project-logos/sowiki-1.5x.png', '2x' => '/static/images/project-logos/sowiki-2x.png' ], //T150618
 	'stqwiki' => [ '1.5x' => '/static/images/project-logos/stqwiki-1.5x.png', '2x' => '/static/images/project-logos/stqwiki-2x.png' ], //T150618
-	'svwiki' => [ '1.5x' => '/static/images/project-logos/1.5x.png', '2x' => '/static/images/project-logos/svwiki-2x.png' ], //T150618
+	'svwiki' => [ '1.5x' => '/static/images/project-logos/svwiki-1.5x.png', '2x' => '/static/images/project-logos/svwiki-2x.png' ], //T150618
 	'tawiki' => [ '1.5x' => '/static/images/project-logos/tawiki-1.5x.png', '2x' => '/static/images/project-logos/tawiki-2x.png' ],
 	'tcywiki' => [ '1.5x' => '/static/images/project-logos/tcywiki-1.5x.png', '2x' => '/static/images/project-logos/tcywiki-2x.png' ], // T140898
 	'tgwiki' => [ '1.5x' => '/static/images/project-logos/tgwiki-1.5x.png', '2x' => '/static/images/project-logos/tgwiki-2x.png' ], //T150618
