@@ -943,6 +943,7 @@ $wgConf->settings = [
 	'fiwikibooks' => '/static/images/project-logos/fiwikibooks.png',
 	'fywikibooks' => '/static/images/project-logos/fywikibooks.png',
 	'hewikibooks' => '/static/images/project-logos/hewikibooks.png',
+	'hiwikibooks' => '/static/images/project-logos/hiwikibooks.png', // T157229
 	'hrwikibooks' => '/static/images/project-logos/hrwikibooks.png',
 	'huwikibooks' => '/static/images/project-logos/huwikibooks.png',
 	'idwikibooks' => '/static/images/project-logos/idwikibooks.png',
