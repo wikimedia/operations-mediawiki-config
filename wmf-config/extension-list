@@ -29,6 +29,7 @@ $IP/extensions/ContactPage/extension.json
 $IP/extensions/ContentTranslation/extension.json
 $IP/extensions/ContributionTracking/extension.json
 $IP/extensions/CreditsSource/extension.json
+$IP/extensions/Dashiki/extension.json
 $IP/extensions/DisableAccount/extension.json
 $IP/extensions/Disambiguator/extension.json
 $IP/extensions/DismissableSiteNotice/extension.json
