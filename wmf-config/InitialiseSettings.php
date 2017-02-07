@@ -14140,6 +14140,7 @@ $wgConf->settings = [
 	'+frwiktionary' => [
 		'Annexe' => true, // T127819
 		'Thésaurus' => true, // T127819
+		'Projet' => true, // T156660
 	],
 
 	// Wikiquotes
