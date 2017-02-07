@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_3e525040",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3046,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2017-02-07T14:16:45Z",
+      "side": 1,
+      "message": "I am reordering them :))",
+      "revId": "36699612c6a036402d9bd342b7316282748b40b0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
