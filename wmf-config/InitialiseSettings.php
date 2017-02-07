@@ -11620,6 +11620,7 @@ $wgConf->settings = [
 	'dewikibooks' => true,
 	'enwikibooks' => true,
 	'enwikinews' => true,
+	'eswikibooks' => true, // T157513
 	'frwikibooks' => true, // T103263
 	'frwiktionary' => true,
 	'hiwiki' => true,
