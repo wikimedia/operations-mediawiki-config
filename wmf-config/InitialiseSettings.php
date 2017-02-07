@@ -14730,15 +14730,50 @@ $wgConf->settings = [
 
 'wgMFCustomLogos' => [
 	'default' => [],
-	'enwiki' => [
-		'copyright' => '/static/images/mobile/wikipedia-wordmark-en.png',
-		'copyright-width' => 97,
-		'copyright-height' => 15,
+	'wikipedia' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
+		'copyright-width' => 116,
+		'copyright-height' => 18,
 	],
 	'testwiki' => [
-		'copyright' => '/static/images/mobile/wikipedia-wordmark-en.png',
-		'copyright-width' => 97,
-		'copyright-height' => 15,
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
+		'copyright-width' => 116,
+		'copyright-height' => 18,
+	],
+	'frwiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
+		'copyright-width' => 116,
+		'copyright-height' => 18,
+	],
+	'jawiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-ja.svg',
+		'copyright-width' => 116,
+		'copyright-height' => 18,
+	],
+	'ruwiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-ru.svg',
+		'copyright-width' => 116,
+		'copyright-height' => 18,
+	],
+	'cawiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-ca.svg',
+		'copyright-width' => 95,
+		'copyright-height' => 18,
+	],
+	'wikivoyage' => [
+		'copyright' => '/static/images/mobile/copyright/wikivoyage-wordmark-en.svg',
+		'copyright-width' => 96,
+		'copyright-height' => 18,
+	],
+	'wiktionary' => [
+		'copyright' => '/static/images/mobile/copyright/wikitionary-wordmark-en.svg',
+		'copyright-width' => 90,
+		'copyright-height' => 18,
+	],
+	'commonswiki' => [
+		'copyright' => '/static/images/mobile/copyright/commons-wordmark-en.svg',
+		'copyright-width' => 105,
+		'copyright-height' => 18,
 	],
 ],
 'wgMFPhotoUploadEndpoint' => [
