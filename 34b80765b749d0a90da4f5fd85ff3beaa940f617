@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_3d4ed5dd",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15743,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2017-02-07T18:23:33Z",
+      "side": 1,
+      "message": "since none of this varies by wiki should it just be static config in CommonSettings.php?",
+      "revId": "34b80765b749d0a90da4f5fd85ff3beaa940f617",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_dd1901dd",
+        "filename": "wmf-config/ProductionServices.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2017-02-07T18:23:33Z",
+      "side": 1,
+      "message": "does this need to specify https and port 9243?",
+      "revId": "34b80765b749d0a90da4f5fd85ff3beaa940f617",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
