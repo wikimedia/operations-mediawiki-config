@@ -605,5 +605,9 @@ function wmfLabsSettings() {
 			'default' => false,
 			'enwiki' => true,
 		],
+
+		'wmgEnableDashikiData' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
