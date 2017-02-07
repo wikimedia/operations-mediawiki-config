@@ -578,5 +578,9 @@ function wmfLabsSettings() {
 		'wgPageImagesLeadSectionOnly' => [
 			'default' => true,
 		],
+
+		'wmgEnableDashikiData' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
