@@ -8094,6 +8094,10 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true ], // T111024
 		'rollbacker' => [ 'rollback' => true ], // T111024
 	],
+	'+fawikiquote' => [
+		'autopatrolled' => [ 'autopatrol' => true ], // T156163
+		'rollbacker' => [ 'rollback' => true ], // T156163
+	],
 	'+fawikinews' => [
 		'rollbacker' => [ 'rollback' => true ],
 		'patroller' => [ 'patrol' => true ],
@@ -9534,6 +9538,12 @@ $wgConf->settings = [
 			'rollbacker', // T111024
 		],
 	],
+	'+fawikiquote' => [
+		'sysop' => [
+			'autopatrolled', // T56951
+			'rollbacker', // T56951
+		],
+	],
 	'+fawikinews' => [
 		'sysop' => [ 'rollbacker', 'patroller' ],
 	],
@@ -10230,6 +10240,12 @@ $wgConf->settings = [
 			'autopatrolled', // T111024
 			'patroller', // T111024
 			'rollbacker', // T111024
+		],
+	],
+	'+fawikiquote' => [
+		'sysop' => [
+			'autopatrolled', // T56951
+			'rollbacker', // T56951
 		],
 	],
 	'+fawikinews' => [
