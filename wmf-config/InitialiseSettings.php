@@ -14039,7 +14039,7 @@ $wgConf->settings = [
 		'User' => true,
 		'File' => true,
 		'Help' => true,
-		'Category' => true
+		'Category' => true,
 	],
 
 	// Group 0 wikis
@@ -14048,14 +14048,14 @@ $wgConf->settings = [
 		'Manual' => true, // T50430
 		'Extension' => true, // T50430
 		'API' => true, // T50430
-		'Skin' => true // T50430
+		'Skin' => true, // T50430
 	],
 
 	// Wikipedias
 	'+cawiki' => [
 		'Project' => true, // T88896
 		'Portal' => true, // T58000
-		'Viquiprojecte' => true // T58000
+		'Viquiprojecte' => true, // T58000
 	],
 	'+cswiki' => [
 		'Project' => true, // T136628
@@ -14063,28 +14063,28 @@ $wgConf->settings = [
 	'+enwiki' => [
 		'Portal' => true, // T58001
 		'Book' => true, // T58001
-		'Draft' => true
+		'Draft' => true,
 	],
 	'+fawiki' => [
-		'پیش‌نویس' /* Draft */ => true // T118060
+		'پیش‌نویس' /* Draft */ => true, // T118060
 	],
 	'+fiwiki' => [
 		'Wikiprojekti' => true, // T156621
 	],
 	'+frwiki' => [
-		'Projet' => true // T116603
+		'Projet' => true, // T116603
 	],
 	'+hewiki' => [
-		'טיוטה' /* Draft */ => true // T87027
+		'טיוטה' /* Draft */ => true, // T87027
 	],
 	'+htwiki' => [
-		'Project' => true // T130177
+		'Project' => true, // T130177
 	],
 	'+jawiki' => [
-		'Portal' => true // T97313
+		'Portal' => true, // T97313
 	],
 	'+kowiki' => [
-		'초안' /* Draft */ => true // T92798
+		'초안' /* Draft */ => true, // T92798
 	],
 	'+plwiki' => [
 		'Project' => true, // T133980
@@ -14092,20 +14092,20 @@ $wgConf->settings = [
 		'Wikiprojekt' => true, // T92698
 	],
 	'+ruwiki' => [
-		'Инкубатор' /* Draft / Incubator */ => true // T86688
+		'Инкубатор' /* Draft / Incubator */ => true, // T86688
 	],
 	'+svwiki' => [
 		'Project' => true, // T144688
 		'Portal' => true, // T144688
 	],
 	'+zhwiki' => [
-		'Draft' => true // T91223
+		'Draft' => true, // T91223
 	],
 
 	// Wiktionaries
 	'+frwiktionary' => [
 		'Annexe' => true, // T127819
-		'Thésaurus' => true // T127819
+		'Thésaurus' => true, // T127819
 	],
 
 	// Wikiquotes
@@ -14118,7 +14118,7 @@ $wgConf->settings = [
 
 	// Wikiversities
 	'+frwikiversity' => [
-		'Recherche' => true // T63874
+		'Recherche' => true, // T63874
 	],
 
 	// Wikivoyages
@@ -14127,13 +14127,13 @@ $wgConf->settings = [
 
 	// Wikimedias
 	'+sewikimedia' => [
-		'Projekt' => true // T62882
+		'Projekt' => true, // T62882
 	],
 
 	// Other wikis (e.g. Commons, Meta)
 	'+commonswiki' => [
 		'Creator' => true, // T67067
-		'Institution' => true // T67067
+		'Institution' => true, // T67067
 	],
 	'+metawiki' => [
 		'Project' => true, // T107003
@@ -14144,12 +14144,12 @@ $wgConf->settings = [
 		'Programs' => true // T67067
 	],
 	'+wikidata' => [
-		'Project' => true
+		'Project' => true,
 	],
 
 	// Private wikis
 	'+officewiki' => [
-		'Report' => true // T60547
+		'Report' => true, // T60547
 	],
 ],
 
