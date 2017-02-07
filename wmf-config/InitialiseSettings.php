@@ -14746,6 +14746,11 @@ $wgConf->settings = [
 	'fishbowl' => false,
 ],
 
+'wmgEnableDashikiData' => [
+	'default' => false,
+	'metawiki' => true,
+],
+
 'wmgUseGraph' => [
 	'default' => true,
 ],
