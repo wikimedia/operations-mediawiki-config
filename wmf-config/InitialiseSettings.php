@@ -8094,6 +8094,10 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true ], // T111024
 		'rollbacker' => [ 'rollback' => true ], // T111024
 	],
+	'+fawikiquote' => [
+		'autopatrolled' => [ 'autopatrol' => true ], // T156163
+		'rollbacker' => [ 'rollback' = true ], // T156163
+	],
 	'+fawikinews' => [
 		'rollbacker' => [ 'rollback' => true ],
 		'patroller' => [ 'patrol' => true ],
