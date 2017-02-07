@@ -3445,6 +3445,8 @@ $wgConf->settings = [
 		'WP' => NS_PROJECT,
 		'Portal' => 100,
 		'Portal_talk' => 101,
+		'ഘ' => 828, // T56951
+		'ഘസം' => 829, // T56951
 	],
 	'+mlwikibooks' => [
 		'വിക്കി‌‌_പുസ്തകശാല' => NS_PROJECT,
@@ -3466,10 +3468,14 @@ $wgConf->settings = [
 		'വസം' => NS_CATEGORY_TALK,
 		'സ' => NS_HELP,
 		'സസം' => NS_HELP_TALK,
+		'ഘ' => 828, // T56951
+		'ഘസം' => 829, // T56951
 	],
 	'+mlwikiquote' => [
 		'വിക്കി_ചൊല്ലുകൾ' => NS_PROJECT, // T40111
 		'വിക്കി_ചൊല്ലുകൾ_സംവാദം' => NS_PROJECT_TALK, // T40111
+		'ഘ' => 828, // T56951
+		'ഘസം' => 829, // T56951	
 	],
 	'+mlwikisource' => [
 		'Author' => 100,
@@ -3482,10 +3488,14 @@ $wgConf->settings = [
 		'Translation_talk' => 115,
 		'പ' => 114,
 		'പസം' => 115,
+		'ഘ' => 828, // T56951
+		'ഘസം' => 829, // T56951
 	],
 	'+mlwiktionary' => [
 		'വിക്കി‌‌_നിഘണ്ടു' => NS_PROJECT,
 		'വിക്കി‌‌_നിഘണ്ടു_സംവാദം' => NS_PROJECT_TALK,
+		'ഘ' => 828, // T56951
+		'ഘസം' => 829, // T56951
 	],
 	'+mrwiki' => [
 		'विपी' => NS_PROJECT,
