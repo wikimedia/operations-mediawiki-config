@@ -357,9 +357,6 @@ function wmfLabsSettings() {
 		'wmgUseRelatedArticles' => [
 			'default' => true,
 		],
-		'wmgRelatedArticlesShowInFooter' => [
-			'default' => true,
-		],
 		'wgRelatedArticlesEnabledSamplingRate' => [
 			'default' => 1,
 		],
