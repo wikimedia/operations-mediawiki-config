@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_c90edee7",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-02-08T18:54:08Z",
+      "side": 1,
+      "message": "You mean enable?",
+      "revId": "95aa30d08fdeb383941cde66393dd4bb04ddb452",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
