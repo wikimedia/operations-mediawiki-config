@@ -16,6 +16,24 @@
       "revId": "95aa30d08fdeb383941cde66393dd4bb04ddb452",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_bce63ee1",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-02-08T20:51:47Z",
+      "side": 1,
+      "message": "Don\u0027t think so.. I\u0027m setting it to false. Am I missing something?",
+      "parentUuid": "2ef897d1_c90edee7",
+      "revId": "95aa30d08fdeb383941cde66393dd4bb04ddb452",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
