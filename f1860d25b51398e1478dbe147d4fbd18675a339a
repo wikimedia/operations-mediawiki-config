@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2ef897d1_a99ba2c0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-02-08T18:43:39Z",
+      "side": 1,
+      "message": "Decrease the length to 55 chars ideally, 72 max",
+      "revId": "f1860d25b51398e1478dbe147d4fbd18675a339a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_098ab66e",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-02-08T18:43:39Z",
+      "side": 1,
+      "message": "Use the same format for from and to, so we can get a feeling of coherence.",
+      "revId": "f1860d25b51398e1478dbe147d4fbd18675a339a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2ef897d1_e9807a4d",
+        "filename": "wmf-config/throttle.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-02-08T18:43:39Z",
+      "side": 1,
+      "message": "Code style asks for a final comma in PHP arrays (yes, I see some other rules missed it too)",
+      "revId": "f1860d25b51398e1478dbe147d4fbd18675a339a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
