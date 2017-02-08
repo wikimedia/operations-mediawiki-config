@@ -14832,9 +14832,7 @@ $wgConf->settings = [
 
 // Enable appending of TM (text) / (R) (icon) on site name in footer.
 'wgMFTrademarkSitename' => [
-	'default' => 'registered',
-	// wikipedia uses logos
-	'wikipedia' => false,
+	'default' => false, // T157476
 	'wikidatawiki' => 'unregistered',
 	'metawiki' => false, // T43141
 	'officewiki' => false, // T95007
