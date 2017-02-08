@@ -6,14 +6,30 @@ import scap.log as log
 import scap.main as main
 import scap.ssh as ssh
 
+STATIC_TYPES = [
+    'gif',
+    'jpg',
+    'jpeg',
+    'png',
+    'css',
+    'js',
+    'json',
+    'woff',
+    'woff2',
+    'svg',
+    'eot',
+    'ttf',
+    'ico'
+]
+
 
 @cli.command('clean')
 class Clean(main.AbstractSync):
     """ Scap sub-command to clean old branches """
 
     @cli.argument('branch', help='The name of the branch to clean.')
-    @cli.argument('--l10n-only', action='store_true',
-                  help='Only prune old l10n cache files.')
+    @cli.argument('--keep-static', action='store_true',
+                  help='Only keep static assets (CSS/JS and the like).')
     def main(self, *extra_args):
         """ Clean old branches from the cluster for space savings! """
 
@@ -44,6 +60,9 @@ class Clean(main.AbstractSync):
 
     def clean_command(self, location):
         path = os.path.join(location, 'php-%s' % self.arguments.branch)
-        if self.arguments.l10n_only:
-            path = os.path.join(path, 'cache', 'l10n', '*.cdb')
-        return 'rm -fR %s' % path
+        regex = '".*\.(%s)"' % ('|'.join(STATIC_TYPES))
+        if self.arguments.keep_static:
+            return ['find', path, '-type', 'f', '-regextype', 'posix-extended',
+                    '-not', '-regex', regex, '-delete']
+        else:
+            return ['rm', '-fR', path]
