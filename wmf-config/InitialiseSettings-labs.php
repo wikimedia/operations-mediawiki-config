@@ -360,6 +360,9 @@ function wmfLabsSettings() {
 		'wmgRelatedArticlesShowInFooter' => [
 			'default' => true,
 		],
+		'wgRelatedArticlesEnabledSamplingRate' => [
+			'default' => 1,
+		],
 
 		// Enable anonymous editor acquisition experiment across labs
 		'wmgGettingStartedRunTest' => [
