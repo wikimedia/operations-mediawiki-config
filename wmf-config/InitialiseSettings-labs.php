@@ -367,7 +367,7 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'+wmgExtraLanguageNames' => [
+		'wmgExtraLanguageNames' => [
 			'default' => [],
 			'en_rtlwiki' => [ 'en-rtl' => 'English (rtl)' ],
 		],
