@@ -17300,6 +17300,9 @@ $wgConf->settings = [
 				// Enable for all buckets
 				'wgCirrusSearchNewCrossProjectPage' => true,
 				'wgCirrusSearchNumCrossProjectSearchResults' => 1,
+				// Disables the CirrusConfigInterwikiResolver, allowing
+				// SiteMatrixInterwikiResolver to take over.
+				'wgCirrusSearchWikiToNameMap' => [],
 			],
 			'buckets' => [
 				// control, we explicitly hide the side bar
