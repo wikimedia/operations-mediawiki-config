@@ -359,6 +359,7 @@ function wmfLabsSettings() {
 		],
 		'wgRelatedArticlesEnabledSamplingRate' => [
 			'default' => 1,
+			'enwiki' => 1,
 		],
 
 		// Enable anonymous editor acquisition experiment across labs
