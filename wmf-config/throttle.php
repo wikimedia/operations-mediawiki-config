@@ -28,74 +28,12 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-///
-/// Maharashtra 'Edit Wikipedia…' workshops
-///
-
-$wmgMaharashtraEventsWikis = [
-        "mrwiki",
-        "mrwiktionary",
-        "mrwikisource",
-        "mrwikibooks",
-        "mrwikiquote",
-        "enwiki",
-        "commonswiki",
-];
-
-$wmgThrottlingExceptions[] = [ // T154312 - Maharashtra 'Edit Wikipedia…' workshops (BAMU)
-	'from'   => '2017-01-20T07:00+05:30',
-	'to'     => '2017-01-20T20:00+05:30',
-	'IP'  => '117.232.125.2',
-	'dbname' => $wmgMaharashtraEventsWikis,
-	'value'  => 100 // expected participants are unknown
-];
-
-///
-/// Other events
-///
-
-$wmgThrottlingExceptions[] = [ // T154245
-	'from' => '2017-01-20T0:00 +0:00',
-	'to' => '2017-01-20T23:59 +0:00',
-	'range' => [ '161.23.0.0/16', '138.37.0.0/16', '2a01:56c0::/32' ],
-	'dbname' => 'enwiki',
-	'value' => 50 // 40 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T155493
-	'from' => '2017-01-23T00:00 +0:00',
-	'to' => '2017-01-25T00:00 +0:00',
-	'range' => '134.190.0.0/16',
-	'dbname' => [ 'enwiki', 'frwiki' ],
-	'value' => 30 // 20 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T155877
-	'from'   => '2017-01-23T09:00 +05:30',
-	'to'     => '2017-01-23T18:00 +05:30',
-	'IP'     => '117.200.183.66',
-	'dbname' => [ 'mrwiki', 'enwiki', 'commonswiki' ],
-	'value'  => 70 // 50 expected
-];
-
 $wmgThrottlingExceptions[] = [ // T156258
 	'from' => '2017-02-09T17:00 -5:00',
 	'to' => '2017-02-09T20:00 -5:00',
 	'range' => ["152.12.0.0/16", "152.13.0.0/16", "152.14.0.0/16", "152.15.0.0/16", "152.16.0.0/16", "152.17.0.0/16"],
 	'dbname' => [ 'enwiki', 'commonswiki' ],
-	'value' => 30 // max 20 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T156278
-	'from' => '2017-01-28T09:00 -5:00',
-	'to' => '2017-01-28T18:00 -5:00',
-	'IP' => [
-		'104.130.254.117',
-		'207.87.175.130',
-		'4.15.214.210',
-	],
-	'dbname' => [ 'enwiki' ],
-	'value' => 250 // max 200 expected
+	'value' => 30, // max 20 expected
 ];
 
 $wmgThrottlingExceptions[] = [ // T157504
