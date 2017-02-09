@@ -17019,6 +17019,37 @@ $wgConf->settings = [
 	"nan" => "classic", // e.g. zh_min_nan
 ],
 
+// Mostly the same as wmgCirrusSearchRescoreProfile, but
+// nothing can use wsum_inclinks_pv
+'wmgCirrusSearchInterwikiRescoreProfile' => [
+	'default' => 'wsum_inclinks',
+	'commonswiki' => 'classic_noboostlinks',
+	// Uses the lang tag, list of spaceless languages
+	// (see https://www.mediawiki.org/wiki/User:TJones_(WMF)/Notes/Spaceless_Writing_Systems_and_Wiki-Projects)
+	"bo" => "classic",
+	"dz" => "classic",
+	"gan" => "classic",
+	"ja" => "classic",
+	"km" => "classic",
+	"lo" => "classic",
+	"my" => "classic",
+	"th" => "classic",
+	"wuu" => "classic",
+	"zh" => "classic",
+	"zh-classical" => "classic", // should be deprecated in favor of lzh
+	"lzh" => "classic", // zh-classical
+	"zh-yue" => "classic", // should be deprecated in favor of yue
+	"yue" => "classic", // zh_yue
+	// This list below are languages that may use use mixed scripts
+	"bug" => "classic",
+	"cdo" => "classic",
+	"cr" => "classic",
+	"hak" => "classic",
+	"jv" => "classic",
+	"zh-min-nan" => "classic", // needs to support deprecated language code (e.g. zh_min_nanwikisource)
+	"nan" => "classic", // e.g. zh_min_nan
+],
+
 'wmgCirrusSearchFullTextQueryBuilderProfile' => [
 	'default' => 'perfield_builder',
 	// Uses the lang tag, list of spaceless languages
@@ -17300,6 +17331,9 @@ $wgConf->settings = [
 				// Enable for all buckets
 				'wgCirrusSearchNewCrossProjectPage' => true,
 				'wgCirrusSearchNumCrossProjectSearchResults' => 1,
+				// Disables the CirrusConfigInterwikiResolver, allowing
+				// SiteMatrixInterwikiResolver to take over.
+				'wgCirrusSearchWikiToNameMap' => [],
 			],
 			'buckets' => [
 				// control, we explicitly hide the side bar
