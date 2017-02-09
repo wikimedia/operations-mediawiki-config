@@ -262,6 +262,23 @@ $wgCirrusSearchFiletypeAliases = [
 	"svg" => "drawing"
 ];
 
+$wgCirrusSearchExtraIndexSettings = [
+	// indexing slow log
+	'indexing.slowlog.threshold.index.warn' => '10s',
+	'indexing.slowlog.threshold.index.info' => '5s',
+	'indexing.slowlog.threshold.index.debug' => '2s',
+	'indexing.slowlog.threshold.index.trace' => -1,
+	// search slow log
+	'search.slowlog.threshold.fetch.warn' => '1s',
+	'search.slowlog.threshold.fetch.info' => '800ms',
+	'search.slowlog.threshold.fetch.debug' => '500ms',
+	'search.slowlog.threshold.fetch.trace' => '200ms',
+	// Number of merge threads to use. Use only 1 thread
+	// (instead of 3) to avoid updates interfering with
+	// actual searches
+	'merge.scheduler.max_thread_count' => 1,
+];
+
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
