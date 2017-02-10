@@ -85,7 +85,30 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 				"'{$dbfile}.dblist' contains names not in 'all.dblist'"
 			);
 		}
+	}
 
+	public function testComputedListsFreshness() {
+		$lists = DBList::getLists();
+		foreach ( $lists as $listname => $dbnames ) {
+			if ( strpos( $listname, 'computed' ) !== false ) {
+				if ( strpos( $listname, 'labs' ) !== false ) {
+					continue;
+				}
+				$suffix = '-computed';
+				$expandedListName = str_replace( $suffix, '', $listname );
+				$this->assertEquals(
+					$suffix,
+					substr( $listname, -strlen( $suffix ) ),
+					"Computed list name '$listname' must end with '$suffix'"
+				);
+				$expandedList = MWWikiversions::readDbListFile( $expandedListName );
+				$this->assertEquals(
+					$expandedList,
+					$dbnames,
+					"Contents of '$expandedListName' must match expansion of '$listname'"
+				);
+			}
+		}
 	}
 
 	/**
