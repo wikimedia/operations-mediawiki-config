@@ -3098,6 +3098,10 @@ $wgConf->settings = [
 		'Author' => 106,
 		'Author_talk' => 107,
 	],
+	'+extwiki' => [ // Temporary for debug following rename of NS_CATEGORY in MW-core.
+		'Categoria' => NS_CATEGORY,
+		'Categoria_caraba' => NS_CATEGORY_TALK,
+	],
 	'+fawiki' => [
 		'كاربر' => NS_USER,
 		'بحث كاربر' => NS_USER_TALK,
