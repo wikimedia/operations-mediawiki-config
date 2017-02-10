@@ -13073,11 +13073,8 @@ $wgConf->settings = [
 	'default' => false,
 ],
 
-// T134778
-// T136746
 'wmgUsePopups' => [
 	'default' => false,
-	'huwiki' => true,
 ],
 
 'wmgPopupsBetaFeature' => [
