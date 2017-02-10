@@ -263,7 +263,7 @@ $wgCirrusSearchFiletypeAliases = [
 ];
 
 // Setup map of interwiki prefixes to sister search display type
-$wgInterwikiPrefixContentTypes = [
+$wgInterwikiPrefixDisplayTypes = [
 	'wikt' => 'definition',
 	'b' => 'textbook',
 	'n' => 'news',
