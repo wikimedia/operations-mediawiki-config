@@ -506,6 +506,10 @@ function wmfLabsSettings() {
 		'wmgUsePageAssessments' => [
 			'default' => true,
 		],
+		'wgPageAssessmentsSubprojects' => [
+			'default' => false,
+			'enwiki' => true,
+		],
 
 		// Test PerformanceInspector
 		'wmgUsePerformanceInspector' => [

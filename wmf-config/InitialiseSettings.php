@@ -16863,7 +16863,6 @@ $wgConf->settings = [
 'wgPageAssessmentsSubprojects' => [
 	'default' => false,
 	'testwiki' => true,
-	'enwiki' => true,
 ],
 
 'wmgUsePageImages' => [
