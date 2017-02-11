@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee375f69_c1e5e207",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2017-02-11T02:21:27Z",
+      "side": 1,
+      "message": "Documentation for \u0027-\u0027",
+      "revId": "15ae7b4b420814e1b131c7f86cb981de5d874be1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee375f69_81e83adf",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2017-02-11T02:21:27Z",
+      "side": 1,
+      "message": "\u0027-\u0027 handled here",
+      "revId": "15ae7b4b420814e1b131c7f86cb981de5d874be1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee375f69_21f5aeb5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 7488,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2017-02-11T02:21:27Z",
+      "side": 1,
+      "message": "Documentation for \u0027+\u0027",
+      "revId": "15ae7b4b420814e1b131c7f86cb981de5d874be1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
