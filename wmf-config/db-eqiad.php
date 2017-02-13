@@ -125,7 +125,7 @@ $wgLBFactoryConf = [
 #		'db1035' => 0,   # B2 1.4TB  64GB
 #		'db1044' => 0,   # B2 1.4TB  64GB, #Temporary master for db1095 - new sanitarium #T150802
 		'db1077' => 500, # B1 3.6TB 512GB
-		'db1078' => 500, # C3 3.6TB 512GB
+#		'db1078' => 500, # C3 3.6TB 512GB
 	],
 	's4' => [
 		'db1040' => 0,   # B2 1.4TB  64GB, master
