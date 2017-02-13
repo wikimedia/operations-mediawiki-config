@@ -5581,10 +5581,6 @@ $wgConf->settings = [
 	// Please reserve NS 114 for 'Translation', thanks!
 
 	'sourceswiki' => [
-		104 => 'Page',
-		105 => 'Page_talk',
-		106 => 'Index',
-		107 => 'Index_talk',
 		108 => 'Author',
 		109 => 'Author_talk',
 	],
@@ -5599,26 +5595,14 @@ $wgConf->settings = [
 		101 => 'نقاش_البوابة',
 		102 => 'مؤلف',
 		103 => 'نقاش_المؤلف',
-		104 => 'صفحة',
-		105 => 'نقاش_الصفحة',
-		106 => 'فهرس',
-		107 => 'نقاش_الفهرس',
 	],
 	'aswikisource' => [
 		102 => 'লেখক', // T72464 - Author
 		103 => 'লেখক_আলোচনা',
-		104 => 'পৃষ্ঠা', // T45129 - Page
-		105 => 'পৃষ্ঠা_আলোচনা',
-		106 => 'সূচী', // T45129 - Index
-		107 => 'সূচী_আলোচনা',
 	],
 	'bewikisource' => [
 		102 => 'Аўтар', // Author
 		103 => 'Размовы_пра_аўтара',
-		104 => 'Старонка', // Page
-		105 => 'Размовы_пра_старонку',
-		106 => 'Індэкс', // Index
-		107 => 'Размовы_пра_індэкс',
 	],
 	'bgwikisource' => [
 		100 => 'Автор',
@@ -5627,29 +5611,17 @@ $wgConf->settings = [
 	'bnwikisource' => [
 		100 => 'লেখক', // Author
 		101 => 'লেখক_আলাপ', // Author talk
-		102 => 'নির্ঘণ্ট', // Index
-		103 => 'নির্ঘণ্ট_আলাপ',
-		104 => 'পাতা', // Page
-		105 => 'পাতা_আলাপ',
 		106 => 'প্রবেশদ্বার', // Portal
 		107 => 'প্রবেশদ্বার_আলাপ',
 		114 => 'অনুবাদ', // T114623 - Translation
 		115 => 'অনুবাদ আলোচনা',
 	],
 	'brwikisource' => [
-		100 => 'Meneger',
-		101 => 'Kaozeadenn_meneger',
-		102 => 'Pajenn',
-		103 => 'Kaozeadenn_pajenn',
 		104 => 'Oberour',
 		105 => 'Kaozeadenn_oberour',
 	],
 	'cawikisource' => [
 		# 100, 101 reserved for Portal
-		102 => 'Pàgina', // T17784
-		103 => 'Pàgina_Discussió',
-		104 => 'Llibre',
-		105 => 'Llibre_Discussió',
 		106 => 'Autor', // T29898
 		107 => 'Autor_Discussió', // T29898
 	],
@@ -5666,22 +5638,8 @@ $wgConf->settings = [
 	'dawikisource' => [
 		102 => 'Forfatter', // T9796
 		103 => 'Forfatterdiskussion',
-		104 => 'Side', // T26440
-		105 => 'Sidediskussion',
-		106 => 'Indeks',
-		107 => 'Indeksdiskussion',
-	],
-	'dewikisource' => [
-		102 => 'Seite', // T13101
-		103 => 'Seite_Diskussion',
-		104 => 'Index', // T13101
-		105 => 'Index_Diskussion',
 	],
 	'elwikisource' => [
-		100 => 'Σελίδα',               // T16732 (Page)
-		101 => 'Συζήτηση_σελίδας',
-		102 => 'Βιβλίο',               // T16732 (Index)
-		103 => 'Συζήτηση_βιβλίου',
 		108 => 'Συγγραφέας',           // T78793 (Author)
 		109 => 'Συζήτηση_συγγραφέα',
 		110 => 'Πύλη', // T157187 (Portal)
@@ -5692,32 +5650,14 @@ $wgConf->settings = [
 		101 => 'Portal_talk',
 		102 => 'Author',
 		103 => 'Author_talk',
-		104 => 'Page', // http://fr.wikisource.org/wiki/Wikisource:Scriptorium#Page:_Namespace
-		105 => 'Page_talk',
-		106 => 'Index',
-		107 => 'Index_talk',
 		114 => 'Translation', // T52007
 		115 => 'Translation_talk', // T52007
 	],
 	'eowikisource' => [
 		102 => 'Aŭtoro', // Author
 		103 => 'Aŭtoro-Diskuto', // Author talk
-		104 => 'Paĝo',
-		105 => 'Paĝo-Diskuto',
-		106 => 'Indekso',
-		107 => 'Indekso-Diskuto',
-	],
-	'eswikisource' => [
-		102 => 'Página', // T17775
-		103 => 'Página_Discusión',
-		104 => 'Índice',
-		105 => 'Índice_Discusión',
 	],
 	'etwikisource' => [
-		102 => 'Lehekülg',
-		103 => 'Lehekülje_arutelu',
-		104 => 'Register',
-		105 => 'Registri_arutelu',
 		106 => 'Autor',
 		107 => 'Autori_arutelu',
 	],
@@ -5726,91 +5666,59 @@ $wgConf->settings = [
 		101 => 'بحث_درگاه', // Portal talk
 		102 => 'پدیدآورنده', // Author
 		103 => 'بحث_پدیدآورنده', // Author talk
-		104 => 'برگه', // Page
-		105 => 'بحث_برگه', // Page talk
-		106 => 'فهرست', // Index
-		107 => 'بحث_فهرست', // Index talk
 	],
 	'frwikisource' => [
 		100 => 'Transwiki',
 		101 => 'Discussion_Transwiki',
 		102 => 'Auteur',
 		103 => 'Discussion_Auteur',
-		104 => 'Page', // http://fr.wikisource.org/wiki/Wikisource:Scriptorium#Page:_Namespace
-		105 => 'Discussion_Page',
 		106 => 'Portail',
 		107 => 'Discussion_Portail',
-		112 => 'Livre',
-		113 => 'Discussion_Livre',
 	],
 	'glwikisource' => [
 		102 => 'Autor', // T134041
 		103 => 'Conversa_autor',
 	],
 	'guwikisource' => [
-		104 => 'પૃષ્ઠ', // Page
-		105 => 'પૃષ્ઠ_ચર્ચા',
-		106 => 'સૂચિ', // Index "list"
-		107 => 'સૂચિ_ચર્ચા',
 		108 => 'સર્જક', // Author
 		109 => 'સર્જક_ચર્ચા',
 	],
 	'hewikisource' => [
 		100 => 'קטע',
 		101 => 'שיחת_קטע',
-		104 => 'עמוד',
-		105 => 'שיחת_עמוד',
 		106 => 'ביאור',
 		107 => 'שיחת_ביאור',
 		108 => 'מחבר',
 		109 => 'שיחת_מחבר',
 		110 => 'תרגום',
 		111 => 'שיחת_תרגום',
-		112 => 'מפתח',
-		113 => 'שיחת_מפתח',
 		116 => 'מקור', // T66353
 		117 => 'שיחת_מקור', // T66353
 	],
 	'hrwikisource' => [
 		100 => 'Autor',
 		101 => 'Razgovor_o_autoru',
-		102 => 'Stranica',
-		103 => 'Razgovor_o_stranici',
-		104 => 'Sadržaj',
-		105 => 'Razgovor_o_sadržaju',
 	],
 	'huwikisource' => [
 		100 => 'Szerző',
 		101 => 'Szerző_vita',
-		104 => 'Oldal',
-		105 => 'Oldal_vita',
-		106 => 'Index',
-		107 => 'Index_vita',
 	],
 	'hywikisource' => [
 		100 => 'Հեղինակ',
 		101 => 'Հեղինակի_քննարկում',
 		102 => 'Պորտալ',
 		103 => 'Պորտալի_քննարկում',
-		104 => 'Էջ',
-		105 => 'Էջի_քննարկում',
-		106 => 'Ինդեքս',
-		107 => 'Ինդեքսի_քննարկում',
 	],
 	'idwikisource' => [
 		100 => 'Pengarang',
 		101 => 'Pembicaraan_Pengarang',
-		102 => 'Indeks',
-		103 => 'Pembicaraan_Indeks',
-		104 => 'Halaman',
-		105 => 'Pembicaraan_Halaman',
 		106 => 'Portal',
 		107 => 'Pembicaraan_Portal',
 	],
 	'iswikisource' => [
-		100 => 'Gátt', // T46164
+		100 => 'Gátt', // T46164 - Portal
 		101 => 'Gáttarspjall', // T46164
-		102 => 'Höfundur', // T46164
+		102 => 'Höfundur', // T46164 - Author
 		103 => 'Höfundarspjall', // T46164
 	],
 	'itwikisource' => [
@@ -5820,10 +5728,6 @@ $wgConf->settings = [
 		105 => 'Discussioni_progetto',
 		106 => 'Portale',
 		107 => 'Discussioni_portale',
-		108 => 'Pagina',
-		109 => 'Discussioni_pagina',
-		110 => 'Indice',
-		111 => 'Discussioni_indice',
 		112 => 'Opera',                     // T93870
 		113 => 'Discussioni_opera',
 	],
@@ -5836,10 +5740,6 @@ $wgConf->settings = [
 		101 => 'ಸಂಪುಟ_ಚರ್ಚೆ',
 		102 => 'ಕರ್ತೃ',         // Author
 		103 => 'ಕರ್ತೃ_ಚರ್ಚೆ',
-		104 => 'ಪುಟ',         // Page
-		105 => 'ಪುಟ_ಚರ್ಚೆ',
-		106 => 'ಪರಿವಿಡಿ',         // Index
-		107 => 'ಪರಿವಿಡಿ_ಚರ್ಚೆ',
 	],
 	'kowikisource' => [
 		100 => '저자',
@@ -5850,10 +5750,6 @@ $wgConf->settings = [
 	'lawikisource' => [
 		102 => 'Scriptor',
 		103 => 'Disputatio_Scriptoris',
-		104 => 'Pagina',
-		105 => 'Disputatio_Paginae',
-		106 => 'Liber',
-		107 => 'Disputatio_Libri',
 	],
 	'mkwikisource' => [
 		102 => 'Автор',
@@ -5864,10 +5760,6 @@ $wgConf->settings = [
 		101 => 'രചയിതാവിന്റെ_സംവാദം',
 		102 => 'കവാടം',
 		103 => 'കവാടത്തിന്റെ_സംവാദം',
-		104 => 'സൂചിക',
-		105 => 'സൂചികയുടെ_സംവാദം',
-		106 => 'താൾ',
-		107 => 'താളിന്റെ_സംവാദം',
 		114 => 'പരിഭാഷ', // T154087 - Translate
 		115 => 'പരിഭാഷയുടെ_സംവാദം',
 	],
@@ -5876,37 +5768,21 @@ $wgConf->settings = [
 		101 => 'दालन_चर्चा', // Portal talk
 		102 => 'साहित्यिक', // Author
 		103 => 'साहित्यिक_चर्चा', // Author talk
-		104 => 'पान', // Page
-		105 => 'पान_चर्चा', // Page talk
-		106 => 'अनुक्रमणिका', // Index
-		107 => 'अनुक्रमणिका_चर्चा', // Index talk
 	],
 	'nlwikisource' => [
 		100 => 'Hoofdportaal',
 		101 => 'Overleg_hoofdportaal',
 		102 => 'Auteur',
 		103 => 'Overleg_auteur',
-		104 => 'Pagina',         // T39482
-		105 => 'Overleg_pagina', // T39482
-		106 => 'Index',          // T39482
-		107 => 'Overleg_index',  // T39482
 	],
 	'nowikisource' => [
 		102 => 'Forfatter',
 		103 => 'Forfatterdiskusjon',
-		104 => 'Side',
-		105 => 'Sidediskusjon',
-		106 => 'Indeks',
-		107 => 'Indeksdiskusjon',
 	],
 	'plwikisource' => [
 		NS_USER => 'Wikiskryba',
 		NS_USER_TALK => 'Dyskusja_wikiskryby',
 		NS_PROJECT_TALK => 'Dyskusja_Wikiźródeł',
-		100 => 'Strona',
-		101 => 'Dyskusja_strony',
-		102 => 'Indeks',
-		103 => 'Dyskusja_indeksu',
 		104 => 'Autor',
 		105 => 'Dyskusja_autora',
 		124 => 'Kolekcja', // T154711
@@ -5917,10 +5793,6 @@ $wgConf->settings = [
 		101 => 'Portal_Discussão',
 		102 => 'Autor',
 		103 => 'Autor_Discussão',
-		104 => 'Galeria',
-		105 => 'Galeria_Discussão',
-		106 => 'Página',
-		107 => 'Página_Discussão',
 		108 => 'Em_Tradução',
 		109 => 'Discussão_Em_Tradução',
 		110 => 'Anexo',
@@ -5929,34 +5801,14 @@ $wgConf->settings = [
 	'rowikisource' => [
 		102 => 'Autor',
 		103 => 'Discuție_Autor',
-		104 => 'Pagină',
-		105 => 'Discuție_Pagină',
-		106 => 'Index',
-		107 => 'Discuție_Index',
 	],
 	'ruwikisource' => [
-		104 => 'Страница',
-		105 => 'Обсуждение_страницы',
-		106 => 'Индекс',
-		107 => 'Обсуждение_индекса',
 		108 => 'Импортировано', // T123837 (transwiki)
 		109 => 'Обсуждение_импортированного',
-	],
-	'sawikisource' => [
-		104 => 'पुटम्', // Page
-		105 => 'पुटसंवाद', // Page talk
-		106 => 'अनुक्रमणिका', // Index
-		107 => 'अनुक्रमणिकासंवाद', // Index talk
 	],
 	'skwikisource' => [
 		102 => 'Autor',               // T122175
 		103 => 'Diskusia_k_autorovi',
-	],
-	'slwikisource' => [
-		100 => 'Stran',
-		101 => 'Pogovor_o_strani',
-		104 => 'Kazalo',
-		105 => 'Pogovor_o_kazalu',
 	],
 	'srwikisource' => [
 		100 => 'Аутор',
@@ -5965,22 +5817,14 @@ $wgConf->settings = [
 		103 => 'Разговор_о_додатку', // T39742
 	],
 	'svwikisource' => [
-		104 => 'Sida',
-		105 => 'Siddiskussion',
 		106 => 'Författare',
 		107 => 'Författardiskussion',
-		108 => 'Index',
-		109 => 'Indexdiskussion',
 	],
 	'tewikisource' => [
 		100 => 'ద్వారము', // Portal
 		101 => 'ద్వారము_చర్చ',
 		102 => 'రచయిత', // Author
 		103 => 'రచయిత_చర్చ',
-		104 => 'పుట', // Page
-		105 => 'పుట_చర్చ', // Page_talk
-		106 => 'సూచిక', // Index
-		107 => 'సూచిక_చర్చ',
 	],
 	'trwikisource' => [
 		100 => 'Kişi',
@@ -5996,28 +5840,16 @@ $wgConf->settings = [
 	'vecwikisource' => [
 		100 => 'Autor',
 		101 => 'Discussion_autor',
-		102 => 'Pagina',
-		103 => 'Discussion_pagina',
-		104 => 'Indice',
-		105 => 'Discussion_indice',
 	],
 	'viwikisource' => [
 		100 => 'Chủ_đề',
 		101 => 'Thảo_luận_Chủ_đề',
 		102 => 'Tác_gia',
 		103 => 'Thảo_luận_Tác_gia',
-		104 => 'Trang',
-		105 => 'Thảo_luận_Trang',
-		106 => 'Mục_lục',
-		107 => 'Thảo_luận_Mục_lục'
 	],
 	'zhwikisource' => [ // Added on 2009-03-19 per T17722
 		102 => 'Author',
 		103 => 'Author_talk',
-		104 => 'Page',
-		105 => 'Page_talk',
-		106 => 'Index',
-		107 => 'Index_talk',
 		108 => 'Transwiki', // T42474
 		109 => 'Transwiki_talk',
 		114 => 'Translation', // T66127
