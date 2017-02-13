@@ -14790,6 +14790,11 @@ $wgConf->settings = [
 		'copyright-width' => 95,
 		'copyright-height' => 18,
 	],
+	'hiwiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-hi.svg',
+		'copyright-width' => 78,
+		'copyright-height' => 18,
+	],
 	'hewiki' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-he.svg',
 		'copyright-width' => 88,
