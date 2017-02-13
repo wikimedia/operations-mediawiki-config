@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ee375f69_db62ab37",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15743,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2017-02-13T15:29:04Z",
+      "side": 1,
+      "message": "Sure",
+      "parentUuid": "2ef897d1_3d4ed5dd",
+      "revId": "34b80765b749d0a90da4f5fd85ff3beaa940f617",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2ef897d1_dd1901dd",
         "filename": "wmf-config/ProductionServices.php",
         "patchSetId": 2
@@ -30,6 +48,24 @@
       "writtenOn": "2017-02-07T18:23:33Z",
       "side": 1,
       "message": "does this need to specify https and port 9243?",
+      "revId": "34b80765b749d0a90da4f5fd85ff3beaa940f617",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee375f69_3b7b97ed",
+        "filename": "wmf-config/ProductionServices.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2017-02-13T15:29:04Z",
+      "side": 1,
+      "message": "I should perhaps use the same piece of code written in CirrusSearch-production :\n\t$wgCirrusSearchClusters[\u0027eqiad\u0027] \u003d array_map( function ( $host ) {\n\t\treturn [\n\t\t\t\u0027transport\u0027 \u003d\u003e \u0027CirrusSearch\\\\Elastica\\\\PooledHttps\u0027,\n\t\t\t\u0027port\u0027 \u003d\u003e \u00279243\u0027,\n\t\t\t\u0027host\u0027 \u003d\u003e $host,\n\t\t\t\u0027config\u0027 \u003d\u003e [\n\t\t\t\t\u0027pool\u0027 \u003d\u003e \u0027cirrus-eqiad\u0027,\n\t\t\t],\n\t\t];\n\t}, $wgCirrusSearchClusters[\u0027eqiad\u0027] );\n\nI would have to use Https instead of CirrusSearch\\\\Elastica\\\\PooledHttps because TTM uses \u0027new \\Elastica\\Client( $config_array )\u0027 and not the custom Cirrus connection.\n\nI could then reuse the same \u0027search\u0027 service definition.\nOr maybe write all of this directly in the service definition.\n\nIt\u0027s unclear to me what\u0027s the best strategy, more logic in wmf-config or more verbose config definition.",
+      "parentUuid": "2ef897d1_dd1901dd",
       "revId": "34b80765b749d0a90da4f5fd85ff3beaa940f617",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
