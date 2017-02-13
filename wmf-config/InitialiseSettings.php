@@ -17268,10 +17268,10 @@ $wgConf->settings = [
 ],
 // @} end of wmgCirrusSearchRecycleCompletionSuggesterIndex
 
-// Configure ICU Folding
+// Configure ICU Folding, 'default': controlled by cirrus
+// 'no': disable, 'yes': force
 'wmgCirrusSearchUseIcuFolding' => [
-	'default' => false,
-	'elwiki' => true, // T129502
+	'default' => 'default',
 ],
 
 'wmgCirrusSearchAllFields' => [
