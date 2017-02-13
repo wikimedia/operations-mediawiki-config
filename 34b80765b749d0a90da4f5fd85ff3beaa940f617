@@ -69,6 +69,24 @@
       "revId": "34b80765b749d0a90da4f5fd85ff3beaa940f617",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ee375f69_d6fe0266",
+        "filename": "wmf-config/ProductionServices.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 18,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2017-02-13T17:04:56Z",
+      "side": 1,
+      "message": "The reason we use the extra bit of code for PooledHttps is because we need to check if HHVM is being used, some maintenance scripts via mwscript still use zend so it has to be gated behind a variable.\n\nFor TTM it\u0027s probably ok for now to use plain Https rather than Pooled. It\u0027s not ideal but i think the volume is low enough and the average query is long enough it\u0027s not a big enough deal to worry about (vs say, completion suggester with 7ms p50).\n\nSince we don\u0027t need the change for HHVM here, i think it\u0027s safe to just expand this definition here to specify Https and port 9243",
+      "parentUuid": "ee375f69_3b7b97ed",
+      "revId": "34b80765b749d0a90da4f5fd85ff3beaa940f617",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
