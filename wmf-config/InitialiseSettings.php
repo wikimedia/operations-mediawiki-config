@@ -14797,7 +14797,7 @@ $wgConf->settings = [
 	],
 	'hewiki' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-he.svg',
-		'copyright-width' => 88,
+		'copyright-width' => 75,
 		'copyright-height' => 18,
 	],
 	'wikivoyage' => [
