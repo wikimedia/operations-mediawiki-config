@@ -3730,6 +3730,9 @@ $wgConf->settings = [
 		'Wikipedia_talk' => NS_PROJECT_TALK,
 		'सहाय्यस्य_प्रवेशद्वारम्' => 101, // T101634 - Portal talk
 	],
+	'+sawikiquote' => [
+		'विकिसूक्तिःसम्भाषणम्' => NS_PROJECT_TALK, // T101634
+	],
 	'+sewiki' => [
 		'WP' => NS_PROJECT, // T42436
 		'Temasiidu' => 100, // T41206
