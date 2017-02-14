@@ -9678,7 +9678,7 @@ $wgConf->settings = [
 		'sysop' => [ 'patroller', 'autopatrolled' ],
 	],
 	'+itwikiversity' => [
-		'sysop' => [ 'autopatrolled', 'patroller', 'flood' ], // T114930
+		'sysop' => [ 'autopatrolled', 'patroller', 'flood', 'accountcreator' ], // T114930, T158062
 	],
 	'+jawiki' => [
 		'sysop' => [ 'abusefilter' ],
@@ -10391,7 +10391,7 @@ $wgConf->settings = [
 		'sysop' => [ 'patroller', 'autopatrolled', 'flood' ], // Flood added per T41306
 	],
 	'+itwikiversity' => [
-		'sysop' => [ 'autopatrolled', 'patroller', 'flood' ], // T114930
+		'sysop' => [ 'autopatrolled', 'patroller', 'flood', 'accountcreator' ], // T114930, T158062
 	],
 	'+jawiki' => [
 		'sysop' => [ 'abusefilter' ],
