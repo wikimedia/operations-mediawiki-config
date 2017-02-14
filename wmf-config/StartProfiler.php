@@ -130,7 +130,7 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 		}
 
 		$redis = new Redis();
-		if ( $redis->connect( 'fluorine.eqiad.wmnet', 6379, 0.1 ) ) {
+		if ( $redis->connect( 'mwlog1001.eqiad.wmnet', 6379, 0.1 ) ) {
 			foreach ( $stacks as $stack => $count ) {
 				$redis->publish( 'xenon', "$stack $count" );
 			}
