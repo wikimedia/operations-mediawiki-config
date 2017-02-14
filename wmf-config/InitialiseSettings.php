@@ -14516,8 +14516,9 @@ $wgConf->settings = [
 // This should be set to true for all public WMF wikis, and any changes should be discussed
 // with Editing before they are done due to the legal implications.
 'wgEditSubmitButtonLabelPublish' => [
-	'default' => false,     // T131132; temporarily not set
+	'default' => true,      // T131132 from 2017-03-15
 	'private' => false,     // Private wikis are not public
+	'wikipedia' => false,   // Temporarily not set until 2017-03-22
 	'wikinews' => false,    // Done in local {{int:Copyrightwarning}}s instead.
 ],
 
