@@ -12,7 +12,7 @@
 $wmfAllServices = [];
 
 $wmfAllServices['eqiad'] = [
-	'udp2log' => 'fluorine.eqiad.wmnet:8420',
+	'udp2log' => 'mwlog1001.eqiad.wmnet:8420',
 	'statsd' => 'statsd.eqiad.wmnet',
 	'search' => [ 'search.svc.eqiad.wmnet' ], # elasticsearch must be accessed by hostname for SSL certificate verification to work
 	'ocg' => 'http://ocg.svc.eqiad.wmnet:8000',
@@ -26,7 +26,7 @@ $wmfAllServices['eqiad'] = [
 ];
 
 $wmfAllServices['codfw'] = [
-	'udp2log' => 'fluorine.eqiad.wmnet:8420',
+	'udp2log' => 'mwlog1001.eqiad.wmnet:8420',
 	'statsd' => 'statsd.eqiad.wmnet',
 	'search' => [ 'search.svc.codfw.wmnet' ], # elasticsearch must be accessed by hostname for SSL certificate verification to work
 	'ocg' => 'http://ocg.svc.eqiad.wmnet:8000',
