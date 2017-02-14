@@ -5459,6 +5459,8 @@ $wgConf->settings = [
 	'swwiki' => [
 		100 => 'Lango',
 		101 => 'Majadiliano_ya_lango',
+		102 => 'Wikichanzo', // T158041
+		103 => 'Majadiliano_ya_Wikichanzo',
 	],
 	'tawiki' => [ 100 => 'வலைவாசல்', 101 => 'வலைவாசல்_பேச்சு', ],
 	'tewiki' => [ 100 => 'వేదిక', 101 => 'వేదిక_చర్చ', ],
