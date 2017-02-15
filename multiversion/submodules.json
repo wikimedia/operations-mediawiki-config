@@ -123,6 +123,10 @@
         "action": "branch",
         "ref": "."
     },
+    "extensions/Dashiki": {
+        "action": "branch",
+        "ref": "."
+    },
     "extensions/DisableAccount": {
         "action": "branch",
         "ref": "."
