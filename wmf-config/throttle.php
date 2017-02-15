@@ -55,6 +55,14 @@ $wmgThrottlingExceptions[] =[ // T158040
 	'value' => 50 // 20-30 expected
 ];
 
+$wmgThrottlingExceptions[] = [ // T158171 - Royal College of Nursing
+	'from' => '2017-02-15T00:00 +0:00',
+	'to' => '2017-02-15T23:59 +0:00',
+	'IP' => '85.115.54.202',
+	'dbname' => [ 'enwiki', 'commonswiki' ],
+	'value' => 100, // expected unknown
+];
+
 ## Add throttling definitions above.
 
 /**
