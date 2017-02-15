@@ -13075,6 +13075,7 @@ $wgConf->settings = [
 
 'wmgUsePopups' => [
 	'default' => false,
+	'sewikimedia' => true, // T68374
 ],
 
 'wmgPopupsBetaFeature' => [
