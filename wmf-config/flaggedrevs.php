@@ -47,6 +47,7 @@ elseif ( $wgDBname == 'bewiki' ) {
 	$wgGroupPermissions['autoeditor']['autoconfirmed'] = true;
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 }
+
 elseif ( $wgDBname == 'bnwiki' ) { // T30717
 	$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT ];
 	# Show only on a per-page basis
@@ -306,6 +307,7 @@ elseif ( $wgDBname == 'enwikibooks' ) {
 	$wgFeedbackAge = 180 * 24 * 3600;
 	$wgFeedbackSizeThreshhold = 5;
 }
+
 elseif ( $wgDBname == 'elwikinews' ) {
 	$wgFlaggedRevsAutoReviewNew = false;
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ NS_CATEGORY, 100 ] );
@@ -434,6 +436,7 @@ elseif ( $wgDBname == 'hewikisource' ) {
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 }
+
 // T31911
 elseif ( $wgDBname == 'hiwiki' ) {
 	// # namespaces
