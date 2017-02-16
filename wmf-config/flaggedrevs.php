@@ -657,13 +657,9 @@ elseif ( $wgDBname == 'ruwikinews' ) {
 	unset( $wgGroupPermissions['reviewer'] );
 }
 
-elseif ( $wgDBname == 'ruwikiquote' ) {}
-
 elseif ( $wgDBname == 'ruwiktionary' ) {
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ NS_PROJECT, NS_CATEGORY, 100, 104, 106 ] );
 }
-
-elseif ( $wgDBname == 'idwiki' ) {}
 
 elseif ( $wgDBname == 'ruwikisource' ) {
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ NS_HELP, NS_PROJECT, 104, 106 ] );
@@ -737,8 +733,6 @@ elseif ( $wgDBname == 'ukwiki' ) {
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
 }
 
-elseif ( $wgDBname == 'ukwiktionary' ) {}
-
 elseif ( $wgDBname == 'plwikisource' ) {
 	$wgFlaggedRevsNamespaces = array_merge( $wgFlaggedRevsNamespaces, [ NS_CATEGORY, NS_HELP, 100, 102, 104 ] );
 
@@ -760,9 +754,6 @@ elseif ( $wgDBname == 'vecwiki' ) {
 
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 }
-
-elseif ( $wgDBname == 'zh_classicalwiki' ) {}
-
 
 # All wikis...
 
