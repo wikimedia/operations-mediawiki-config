@@ -3129,7 +3129,7 @@ if ( $wmgEnableTabularData ) {
 		'nsName' => 'Data',
 		// page name must end in ".tab", and contain at least one symbol
 		'pattern' => '/.\.tab$/',
-		'license' => 'CC0-1.0+',
+		'license' => 'CC0-1.0',
 		'isLocal' => false,
 	];
 	if ( $wgDBname === 'commonswiki' ) {
@@ -3163,7 +3163,7 @@ if ( $wmgEnableMapData ) {
 		'nsName' => 'Data',
 		// page name must end in ".map", and contain at least one symbol
 		'pattern' => '/.\.map$/',
-		'license' => 'CC0-1.0+',
+		'license' => 'CC0-1.0',
 		'isLocal' => false,
 	];
 	if ( $wgDBname === 'commonswiki' ) {
