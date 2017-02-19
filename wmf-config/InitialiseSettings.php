@@ -8492,10 +8492,6 @@ $wgConf->settings = [
 		'oathauth' => [ 'oathauth-api-all' => true ], // T153487
 		'oauthadmin' => [ 'autopatrol' => true ],
 		'shell' => [ 'loginviashell' => true ],
-		'shellmanagers' => [
-			'autopatrol' => true,
-			'userrights' => false,
-		],
 	],
 	'+legalteamwiki' => [ // T63222
 		'accountcreator' => [ 'noratelimit' => false ],
@@ -9989,7 +9985,6 @@ $wgConf->settings = [
 	],
 	'+wikitech' => [
 		'contentadmin' => [ 'autopatrolled' ],
-		'shellmanagers' => [ 'shell' ],
 		'sysop' => [ 'autopatrolled' ],
 	],
 	'+wuuwiki' => [
