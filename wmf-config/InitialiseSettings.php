@@ -16616,6 +16616,7 @@ $wgConf->settings = [
 	'mediawikiwiki' => true, // T155717
 	'metawiki' => true, // T155721
 	'dewiki' => true, // T155721
+	'arwiki' => true, // T158493
 ],
 
 'wmgUseUserMerge' => [
