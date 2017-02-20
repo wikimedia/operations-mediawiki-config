@@ -9987,10 +9987,30 @@ $wgConf->settings = [
 	'+wikimania2017wiki' => [
 		'bureaucrat' => [ 'translationadmin' ],
 	],
-	'+wikitech' => [
-		'contentadmin' => [ 'autopatrolled' ],
+	'wikitech' => [
+		'contentadmin' => [
+			'autopatrolled',
+			'ipblock-exempt',
+		],
+		'bureaucrat' => [
+			'bot',
+			'bureaucrat',
+			'confirmed',
+			'contentadmin',
+			'oathauth',
+			'oauthadmin',
+			'shell',
+			'transwiki',
+		],
 		'shellmanagers' => [ 'shell' ],
-		'sysop' => [ 'autopatrolled' ],
+		'sysop' => [
+			'autopatrolled',
+			'ipblock-exempt',
+		],
+		'cloudadmin' => [
+			'bureaucrat',
+			'sysop',
+		],
 	],
 	'+wuuwiki' => [
 		'sysop' => [ 'rollbacker' ],
@@ -10716,9 +10736,29 @@ $wgConf->settings = [
 	'+wikimaniateamwiki' => [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'autopatrolled', 'import' ],
 	],
-	'+wikitech' => [
-		'contentadmin' => [ 'autopatrolled' ],
-		'sysop' => [ 'autopatrolled' ],
+	'wikitech' => [
+		'contentadmin' => [
+			'autopatrolled',
+			'ipblock-exempt',
+		],
+		'bureaucrat' => [
+			'bot',
+			'confirmed',
+			'contentadmin',
+			'oathauth',
+			'oauthadmin',
+			'shell',
+			'transwiki',
+		],
+		'shellmanagers' => [ 'shell' ],
+		'sysop' => [
+			'autopatrolled',
+			'ipblock-exempt',
+		],
+		'cloudadmin' => [
+			'bureaucrat',
+			'sysop',
+		],
 	],
 	'+wuuwiki' => [
 		'sysop' => [ 'rollbacker' ],
