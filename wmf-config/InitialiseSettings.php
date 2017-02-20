@@ -14502,14 +14502,12 @@ $wgConf->settings = [
 	'ptwikibooks' => '//commons.wikimedia.org/wiki/Special:Upload/pt?uselang=pt',
 ],
 
-// DO NOT DISABLE WITHOUT CONTACTING PHILIPPE / LEGAL!
+// DO NOT DISABLE WITHOUT CONTACTING LEGAL!
 // Installed by Andrew, 2011-04-26
 'wmgUseDisableAccount' => [
 	'default' => false,
 	'arbcom_enwiki' => true,
 	'checkuserwiki' => true,
-	'legalteamwiki' => true,
-	'ombudsmenwiki' => true,
 	'stewardwiki' => true,
 ],
 
