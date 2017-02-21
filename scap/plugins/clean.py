@@ -18,31 +18,29 @@ class Clean(main.AbstractSync):
         """ Clean old branches from the cluster for space savings! """
 
         # Update masters
-        with log.Timer('clean-masters', self.get_stats()):
-            clean_job = ssh.Job(self._get_master_list(),
-                                user=self.config['ssh_user'])
-            clean_job.exclude_hosts([socket.getfqdn()])
-            clean_job.shuffle()
-            clean_job.command(self.clean_command(self.config['stage_dir']))
-            clean_job.progress(log.reporter('clean-masters',
-                               self.config['fancy_progress']))
-            succeeded, failed = clean_job.run()
-            if failed:
-                self.get_logger().warning(
-                    '%d masters had clean errors', failed)
+        self.execute_remote(
+            'clean-masters',
+            self._get_master_list(),
+            self.clean_command(self.config['stage_dir'])
+        )
 
         # Update apaches
-        with log.Timer('clean-apaches', self.get_stats()):
-            clean_job = ssh.Job(self._get_target_list(),
-                                user=self.config['ssh_user'])
+        self.execute_remote(
+            'clean-apaches',
+            self._get_target_list(),
+            self.clean_command(self.config['deploy_dir'])
+        )
+
+    def execute_remote(self, description, targets, command):
+        with log.Timer(description, self.get_stats()):
+            clean_job = ssh.Job(targets, user=self.config['ssh_user'])
             clean_job.shuffle()
-            clean_job.command(self.clean_command(self.config['deploy_dir']))
-            clean_job.progress(log.reporter('clean-apaches',
+            clean_job.command(command)
+            clean_job.progress(log.reporter(description,
                                self.config['fancy_progress']))
             succeeded, failed = clean_job.run()
             if failed:
-                self.get_logger().warning(
-                    '%d apaches had clean errors', failed)
+                self.get_logger().warning('%d had clean errors', failed)
 
     def clean_command(self, location):
         path = os.path.join(location, 'php-%s' % self.arguments.branch)
