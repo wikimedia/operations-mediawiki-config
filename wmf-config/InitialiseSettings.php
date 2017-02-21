@@ -17662,6 +17662,7 @@ $wgConf->settings = [
 	'trwiki' => true, // T139992
 	'plwiki' => true, // T140005
 	'enwiki' => true, // T140003
+	'cswiki' => true, // T151611
 ],
 'wgOresModels' => [
 	'default' => [
@@ -17681,6 +17682,7 @@ $wgConf->settings = [
 	'trwiki' => [ 'hard' => 0.20, 'soft' => 0.58, 'softest' => 0.92 ], // T139992
 	'plwiki' => [ 'hard' => 0.19, 'soft' => 0.41, 'softest' => 0.92 ], // T140005
 	'enwiki' => [ 'hard' => 0.17, 'soft' => 0.49, 'softest' => 0.96 ], // T140003
+	'cswiki' => [ 'hard' => 0.45, 'soft' => 0.8, 'softest' => 0.88 ], // T151611
 ],
 'wgOresEnabledNamespaces' => [
 	'default' => [],
