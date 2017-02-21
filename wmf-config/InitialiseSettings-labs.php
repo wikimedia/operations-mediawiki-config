@@ -543,7 +543,7 @@ function wmfLabsSettings() {
 		'wmgUsePageViewInfo' => [
 			'default' => true,
 		],
-		'wgPageViewInfoDomain' => [
+		'wgPageViewInfoWikimediaDomain' => [
 			'default' => 'en.wikipedia.org',
 		],
 
