@@ -37,6 +37,24 @@
     },
     {
       "key": {
+        "uuid": "ce3c5b53_4e9b11c2",
+        "filename": "scap/plugins/clean.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2017-02-21T23:09:25Z",
+      "side": 1,
+      "message": "wouldn\u0027t this command delete all l10n generated cdbs, json, and md5 file for every branch under /srv/mediawiki-staging?\n\nThat means when we run scap sync it will generate from scratch all new cdb, json, and md5 files for all wikiversions in-use rather than comparing the md5(cdb) and md5 files before regenerating.\n\nI guess I\u0027m fine doing this for wikiversions that are not in-use, but why everything under /srv/mediawiki-staging? Am I misreading this?",
+      "parentUuid": "ce3c5b53_883a70e3",
+      "revId": "798adab5b6e75bdb57957cb27fe06260194cf7e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce3c5b53_a87bb4ea",
         "filename": "scap/plugins/clean.py",
         "patchSetId": 1
@@ -66,6 +84,24 @@
       "side": 1,
       "message": "Empty directories aren\u0027t a super huge deal. Maybe include a -type f?",
       "parentUuid": "ce3c5b53_a87bb4ea",
+      "revId": "798adab5b6e75bdb57957cb27fe06260194cf7e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce3c5b53_6eb13542",
+        "filename": "scap/plugins/clean.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2017-02-21T23:09:25Z",
+      "side": 1,
+      "message": "wfm.\n\nFWIW, I also noticed an error when I tried to run this in labs, see my comment on If720c9c80d7c07047cdeb35a1a9acd43e8290333 (where I suppose I should have put this comment :))",
+      "parentUuid": "ce3c5b53_a833b409",
       "revId": "798adab5b6e75bdb57957cb27fe06260194cf7e1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
