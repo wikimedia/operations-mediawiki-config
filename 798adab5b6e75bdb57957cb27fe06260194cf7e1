@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "ce3c5b53_883a70e3",
+        "filename": "scap/plugins/clean.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2017-02-21T22:43:57Z",
+      "side": 1,
+      "message": "Since we\u0027re wanting to prune everything that\u0027s not a static asset (or we\u0027re deleting *everything*) I don\u0027t see why we want to keep them or the md5 really. The former will get caught up in the regex though.",
+      "parentUuid": "ce3c5b53_48ff8862",
+      "revId": "798adab5b6e75bdb57957cb27fe06260194cf7e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "ce3c5b53_a87bb4ea",
         "filename": "scap/plugins/clean.py",
         "patchSetId": 1
@@ -30,6 +48,24 @@
       "writtenOn": "2017-02-21T22:17:35Z",
       "side": 1,
       "message": "For whatever it\u0027s worth, this command will likely exit non-zero since it will probably try to delete a lot of directories that have files in them that will not get deleted.",
+      "revId": "798adab5b6e75bdb57957cb27fe06260194cf7e1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce3c5b53_a833b409",
+        "filename": "scap/plugins/clean.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2017-02-21T22:43:57Z",
+      "side": 1,
+      "message": "Empty directories aren\u0027t a super huge deal. Maybe include a -type f?",
+      "parentUuid": "ce3c5b53_a87bb4ea",
       "revId": "798adab5b6e75bdb57957cb27fe06260194cf7e1",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
