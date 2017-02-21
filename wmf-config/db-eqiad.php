@@ -92,84 +92,96 @@ $wgLBFactoryConf = [
 # function (the master is not included, as by definition has lag 0).
 
 'sectionLoads' => [
-	's1' => [
-		'db1052' => 0,   # B3 2.8TB  96GB, master
-#		'db1057' => 0,   # C2 2.8TB  96GB, old master
-		'db1051' => 50,  # B3 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
-		'db1055' => 50,  # C2 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
-		'db1065' => 0,   # D1 2.8TB 160GB, vslow, dump, master for sanitarium
-		'db1066' => 50,  # D1 2.8TB 160GB, api
-		'db1072' => 50,  # B2 2.8TB 160GB, api
-		'db1073' => 50,  # B3 2.8TB 160GB, api
-		'db1080' => 500, # A2 3.6TB 512GB
-		'db1083' => 500, # B1 3.6TB 512GB
-		'db1089' => 500, # C3 3.6TB 512GB
-	],
-	's2' => [
-		'db1018' => 0,   # B1 1.4TB  64GB, master
-#		'db1024' => 0,   # B1 1.4TB  64GB, old master
-		'db1021' => 0,   # B1 1.4TB  64GB, vslow, dump
-		'db1036' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-		'db1054' => 1,   # A3 2.8TB  96GB, api
-		'db1060' => 1,   # C2 2.8TB  96GB, api
-#		'db1063' => 0,   # D1 2.8TB 128GB
-#		'db1067' => 0,   # D1 2.8TB 160GB
-		'db1074' => 500, # A2 3.6TB 512GB
-		'db1076' => 500, # B1 3.6TB 512GB
-		'db1090' => 500, # C3 3.6TB 512GB
-	],
-	/* s3 */ 'DEFAULT' => [
-		'db1075' => 0,   # A2 3.6TB 512GB, master
-		'db1038' => 0,   # B2 1.4TB  64GB, vslow, dump, old master
-		'db1015' => 1,   # A2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-#		'db1035' => 0,   # B2 1.4TB  64GB
-#		'db1044' => 0,   # B2 1.4TB  64GB, #Temporary master for db1095 - new sanitarium #T150802
-		'db1077' => 500, # B1 3.6TB 512GB
-		'db1078' => 500, # C3 3.6TB 512GB
-	],
-	's4' => [
-		'db1040' => 0,   # B2 1.4TB  64GB, master
-		'db1053' => 1,   # A2 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
-		'db1056' => 1,   # C2 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
-		'db1059' => 1,   # C2 2.8TB  96GB, api
-		'db1064' => 0,   # D1 2.8TB 160GB, vslow, dump #Master for db1095 - new sanitarium #T153743
-		'db1068' => 1,   # D1 2.8TB 160GB, api
-		'db1081' => 500, # A2 3.6TB 512GB
-		'db1084' => 500, # B1 3.6TB 512GB
-		'db1091' => 500, # D2 3.6TB 512GB
-	],
-	's5' => [
-		'db1049' => 0,   # B1 2.8TB  64GB, master
-		'db1026' => 1,   # B1 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-#		'db1045' => 0,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-		'db1070' => 50,  # D1 2.8TB 160GB, vslow, dump
-		'db1071' => 50,  # D1 2.8TB 160GB, api
-		'db1082' => 300, # A2 3.6TB 512GB, api
-		'db1087' => 500, # C2 3.6TB 512GB
-		'db1092' => 500, # D2 3.6TB 512GB
-	],
-	's6' => [
-		'db1050' => 0,   # B2 2.8TB  64GB, master
-#		'db1023' => 0,   # B1 1.4TB  64GB, old master
-		'db1022' => 1,   # B1 1.4TB  64GB, api
-		'db1030' => 0,   # B1 1.4TB  64GB, vslow, dump
-		'db1037' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-#		'db1061' => 0,   # D1 2.8TB 128GB
-		'db1085' => 500, # B3 3.6TB 512GB
-		'db1088' => 500, # C2 3.6TB 512GB
-		'db1093' => 500, # D2 3.6TB 512GB
-	],
-	's7' => [
-		'db1041' => 0,   # B2 1.4TB  64GB, master
-#		'db1033' => 0,   # B2 1.4TB  64GB, old master
-		'db1028' => 0,   # B1 1.4TB  64GB, vslow, dump
-		'db1034' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-#		'db1039' => 0,   # B2 1.4TB  64GB
-		'db1062' => 1,   # D1 2.8TB 128GB, watchlist, recentchanges, contributions, logpager
-		'db1079' => 300, # A2 3.6TB 512GB, api
-		'db1086' => 500, # B3 3.6TB 512GB, api
-		'db1094' => 500, # D2 3.6TB 512GB
-	],
+        's1' => [
+                'db1065' => 0,   # D1 2.8TB 160GB, master
+                'db1073' => 50,  # B3 2.8TB 160GB, old master, vslow, dump
+                'db1067' => 0,   # D1 2.8TB 160GB, watchlist, recentchanges, contributions, logpager
+                'db1066' => 50,  # D1 2.8TB 160GB, watchlist, recentchanges, contributions, logpager
+                'db1101' => 300, # XX 3.6TB 512GB, api
+                'db1080' => 300, # A2 3.6TB 512GB, api
+                'db1083' => 500, # B1 3.6TB 512GB
+                'db1089' => 500, # C3 3.6TB 512GB
+        ],
+
+        's2' => [
+                'db1054' => 1,   # A3 2.8TB  96GB, master
+                'db1060' => 1,   # C2 2.8TB  96GB, vslow, dump, old master, master for sanitarium*
+                'db1096:3312' => 1,   # watchlist, recentchanges, contributions, logpager
+                'db1097:3312' => 1,   # watchlist, recentchanges, contributions, logpager
+                'db1074' => 100, # A2 3.6TB 512GB, api
+                'db1095' => 100, # A2 3.6TB 512GB, api
+                'db1076' => 500, # B1 3.6TB 512GB
+                'db1090' => 500, # C3 3.6TB 512GB
+        ],
+
+        /* s3 */ 'DEFAULT' => [
+                'db1075' => 0,   # A2 3.6TB 512GB, master
+                'db1053' => 1,   # A2 2.8TB  96GB, vslow, dump
+                'db1077' => 500, # B1 3.6TB 512GB
+                'db1078' => 500, # C3 3.6TB 512GB
+
+        ],
+
+        's4' => [
+                'db1068' => 1,   # D1 2.8TB 160GB, master
+                'db1056' => 0,   # C2 2.8TB  96GB, vslow, dump
+                'db1096:3314' => 1,   # watchlist, recentchanges, contributions, logpager
+                'db1097:3314'' => 1,   # watchlist, recentchanges, contributions, logpager
+                'db1102' => 1,   # D1 2.8TB 512GB, api
+                'db1081' => 300, # A2 3.6TB 512GB, api
+                'db1084' => 500, # B1 3.6TB 512GB
+                'db1091' => 500, # D2 3.6TB 512GB
+        ],
+
+        's5' => [
+                'db1063' => 0,   # D1 2.8TB 128GB, master
+                'db1070' => 50,  # D1 2.8TB 160GB, vslow
+                'db1098:3315' => 1,   # watchlist, recentchanges, contributions, logpager
+                'db1099:3315'' => 1,   # watchlist, recentchanges, contributions, logpager
+                'db1100' => 50,  # XX 3.6TB 512GB, api
+                'db1082' => 300, # A2 3.6TB 512GB, api
+                'db1087' => 500, # C2 3.6TB 512GB
+                'db1092' => 500, # D2 3.6TB 512GB
+
+        ],
+
+        's6' => [
+                'db1061' => 0,   # D1 2.8TB 128GB, master
+                'db1098:3318' => 1,   # watchlist, recentchanges, contributions, logpager
+                'db1099:3318'' => 1,   # watchlist, recentchanges, contributions, logpager
+                'db1065' => 0,   # D1 2.8TB 160GB, vslow, dump
+                'db1085' => 50, # B3 3.6TB 512GB, api
+                'db1088' => 300, # C2 3.6TB 512GB, api
+                'db1093' => 500, # D2 3.6TB 512GB
+        ],
+
+        's7' => [
+                'db1062' => 1,   # D1 2.8TB 128GB, master
+                'db1064' => 0,   # D1 2.8TB 160GB, vslow, dump
+                'db1079' => 50, # A2 3.6TB 512GB, api
+                'db1086' => 300, # B3 3.6TB 512GB, api
+                'db1094' => 500, # D2 3.6TB 512GB
+
+'s8' => [
+                'db1103' => 0,   #  XX 3.6TB 512GB, master
+                'db1072' => 0, # B2 2.8TB 160GB, vslow, dump
+                'db1098:3318' => 1,   # watchlist, recentchanges, contributions, logpager
+                'db1099:3318'' => 1,   # watchlist, recentchanges, contributions, logpager
+                'db1104' => 50,   #  XX 3.6TB 512GB, api
+                'db1105' => 300,   #  XX 3.6TB 512GB, api
+                'db1106' => 500,   #  XX 3.6TB 512GB
+        ],
+
+#MISC:
+#               m1 & m2: 'db1057' => 0,   # C2 2.8TB  96GB one master, one slave
+#               m1 & m2: 'db1051' => 50,  # B3 2.8TB  96GB one master, one slave
+#               m3 'db1055' => 50,  # C2 2.8TB  96GB, master
+#               m3 'db1059' => 1,   # C2 2.8TB  96GB, slave
+#               m5 'db1052' => 0,   # B3 2.8TB  96GB
+               
+# missing 2 (smaller) servers for x1
+
+
 	'silver' => [
 		'silver' => 100,   # I have no idea if this is right
 	],
