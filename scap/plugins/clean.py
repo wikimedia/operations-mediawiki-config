@@ -23,7 +23,7 @@ class Clean(main.AbstractSync):
                                 user=self.config['ssh_user'])
             clean_job.exclude_hosts([socket.getfqdn()])
             clean_job.shuffle()
-            clean_job.command(self._clean_command(self.config['stage_dir']))
+            clean_job.command(self.clean_command(self.config['stage_dir']))
             clean_job.progress(log.reporter('clean-masters',
                                self.config['fancy_progress']))
             succeeded, failed = clean_job.run()
@@ -36,7 +36,7 @@ class Clean(main.AbstractSync):
             clean_job = ssh.Job(self._get_target_list(),
                                 user=self.config['ssh_user'])
             clean_job.shuffle()
-            clean_job.command(self._clean_command(self.config['deploy_dir']))
+            clean_job.command(self.clean_command(self.config['deploy_dir']))
             clean_job.progress(log.reporter('clean-apaches',
                                self.config['fancy_progress']))
             succeeded, failed = clean_job.run()
@@ -44,7 +44,7 @@ class Clean(main.AbstractSync):
                 self.get_logger().warning(
                     '%d apaches had clean errors', failed)
 
-    def _clean_command(self, location):
+    def clean_command(self, location):
         path = os.path.join(location, 'php-%s' % self.arguments.branch)
         if self.arguments.l10n_only:
             path = os.path.join(path, 'cache', 'l10n', '*.cdb')
