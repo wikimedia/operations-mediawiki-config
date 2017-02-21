@@ -18012,6 +18012,10 @@ $wgConf->settings = [
 	'cywiki' => 'Q2794',
 ],
 
+'wgWMEReadingDepthEnabled' => [
+	'default' => true,
+],
+
 ];
 
 ### WMF Labs override #####
