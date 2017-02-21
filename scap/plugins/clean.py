@@ -6,6 +6,22 @@ import scap.log as log
 import scap.main as main
 import scap.ssh as ssh
 
+STATIC_TYPES = [
+    'gif',
+    'jpg',
+    'jpeg',
+    'png',
+    'css',
+    'js',
+    'json',
+    'woff',
+    'woff2',
+    'svg',
+    'eot',
+    'ttf',
+    'ico'
+]
+
 
 @cli.command('clean')
 class Clean(main.AbstractSync):
@@ -16,6 +32,14 @@ class Clean(main.AbstractSync):
                   help='Only keep static assets (CSS/JS and the like).')
     def main(self, *extra_args):
         """ Clean old branches from the cluster for space savings! """
+
+        # Prune junk from masters owned by l10nupdate
+        self.do_stuff(
+            'clean-masters-l10nupdate',
+            self._get_master_list(),
+            ['sudo', '-u', 'l10nupdate', 'find', self.config['stage_dir']
+             '-user', 'l10nupdate', '-delete']
+        )
 
         # Update masters
         self.do_stuff(
@@ -44,7 +68,7 @@ class Clean(main.AbstractSync):
 
     def clean_command(self, location):
         path = os.path.join(location, 'php-%s' % self.arguments.branch)
-        regex = '.*\.(gif|jpe?g|png|css|js|json|woff|woff2|svg|eot|ttf|ico)'
+        regex = '.*\.(%s)' % ('|'.join(STATIC_TYPES))
         if self.arguments.keep_static:
             return ['find', path, '-regextype', 'posix-extended', '-not',
                     '-regex', regex, '-delete']
