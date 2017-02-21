@@ -385,7 +385,7 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 		'wmgSentryDsn' => [
-			'default' => 'http://c357be0613e24340a96aeaa28dde08ad@sentry-beta.wmflabs.org/4',
+			'default' => 'https://c357be0613e24340a96aeaa28dde08ad@sentry-beta.wmflabs.org/4',
 		],
 
 		'wgUploadThumbnailRenderHttpCustomHost' => [
