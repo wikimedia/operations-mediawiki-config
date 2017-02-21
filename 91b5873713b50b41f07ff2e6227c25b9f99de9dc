@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce3c5b53_2816c45a",
+        "filename": "scap/plugins/clean.py",
+        "patchSetId": 4
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2017-02-21T23:02:06Z",
+      "side": 1,
+      "message": "When I try this in labs I get:\n22:46:42 [\u0027find\u0027, \u0027/srv/mediawiki/php-1.29.0-wmf.11\u0027, \u0027-regextype\u0027, \u0027posix-extended\u0027, \u0027-not\u0027, \u0027-regex\u0027, \u0027.*\\\\.(gif|jpe?g|png|css|js|json|woff|woff2|svg|eot|ttf|ico)\u0027, \u0027-d\nelete\u0027] on thcipriani-mediawiki.staging.eqiad.wmflabs returned [1]: bash: -c: line 0: syntax error near unexpected token `(\u0027\nbash: -c: line 0: `find /srv/mediawiki/php-1.29.0-wmf.11 -regextype posix-extended -not -regex .*\\.(gif|jpe?g|png|css|js|json|woff|woff2|svg|eot|ttf|ico) -delete\u0027",
+      "revId": "91b5873713b50b41f07ff2e6227c25b9f99de9dc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
