@@ -374,7 +374,9 @@ class MWMultiVersion {
 			header( "HTTP/1.1 $httpError $httpMsg" );
 		}
 		echo $msg;
-		trigger_error( $msg, E_USER_ERROR );
+		if ( $httpError >= 500 ) {
+			trigger_error( $msg, E_USER_ERROR );
+		}
 		exit( 1 ); // sanity
 	}
 

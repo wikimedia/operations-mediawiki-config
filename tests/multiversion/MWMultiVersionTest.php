@@ -152,14 +152,4 @@ class MWMultiVersionTests extends PHPUnit_Framework_TestCase {
 			array( 'wikidatawiki', 'wikidata.beta.wmflabs.org' ),
 		);
 	}
-
-	/**
-	 * Whenever a hostname is not recognized, we send an error message.
-	 *
-	 * @expectedException PHPUnit_Framework_Error
-	 */
-	function testInvalidHostDumpAnErrorMessage() {
-		$this->expectOutputString( "Invalid host name (server: invalidhost, request: , ip: , xff: ).\n" );
-		MWMultiversion::initializeForWiki( 'invalidhost' );
-	}
 }
