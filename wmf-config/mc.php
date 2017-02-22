@@ -17,4 +17,9 @@ $wgObjectCaches['memcached-pecl'] = [
 	'timeout'              => $wgMemCachedTimeout
 ];
 
+if ( $wgDBname === 'testwiki' || $wgDBname === 'mediawikiwiki' ) {
+	# Confirm page related key purges via scanning recent changes
+	$wgEnableWANCacheReaper = true;
+}
+
 # vim: set sts=4 sw=4 et :
