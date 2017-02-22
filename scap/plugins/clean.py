@@ -33,18 +33,31 @@ class Clean(main.AbstractSync):
     def main(self, *extra_args):
         """ Clean old branches from the cluster for space savings! """
 
+        stage_dir = os.path.join(self.config['stage_dir'],
+                                 'php-%s' % self.arguments.branch)
+        deploy_dir = os.path.join(self.config['deploy_dir'],
+                                  'php-%s' % self.arguments.branch)
+
+        # Prune junk from masters owned by l10nupdate
+        self.execute_remote(
+            'clean-masters-l10nupdate',
+            self._get_master_list(),
+            ['sudo', '-u', 'l10nupdate', 'find', stage_dir,
+             '-user', 'l10nupdate', '-delete']
+        )
+
         # Update masters
         self.execute_remote(
             'clean-masters',
             self._get_master_list(),
-            self.clean_command(self.config['stage_dir'])
+            self.clean_command(stage_dir)
         )
 
         # Update apaches
         self.execute_remote(
             'clean-apaches',
             self._get_target_list(),
-            self.clean_command(self.config['deploy_dir'])
+            self.clean_command(deploy_dir)
         )
 
     def execute_remote(self, description, targets, command):
@@ -58,8 +71,7 @@ class Clean(main.AbstractSync):
             if failed:
                 self.get_logger().warning('%d had clean errors', failed)
 
-    def clean_command(self, location):
-        path = os.path.join(location, 'php-%s' % self.arguments.branch)
+    def clean_command(self, path):
         regex = '".*\.(%s)"' % ('|'.join(STATIC_TYPES))
         if self.arguments.keep_static:
             return ['find', path, '-type', 'f', '-regextype', 'posix-extended',
