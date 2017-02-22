@@ -28,14 +28,6 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T156258
-	'from' => '2017-02-09T17:00 -5:00',
-	'to' => '2017-02-09T20:00 -5:00',
-	'range' => ["152.12.0.0/16", "152.13.0.0/16", "152.14.0.0/16", "152.15.0.0/16", "152.16.0.0/16", "152.17.0.0/16"],
-	'dbname' => [ 'enwiki', 'commonswiki' ],
-	'value' => 30, // max 20 expected
-];
-
 $wmgThrottlingExceptions[] = [ // T157504
 	'from' => '2017-01-09T00:00:00 UTC',
 	'to' =>   '2017-06-31T23:59:59 UTC',
@@ -45,30 +37,6 @@ $wmgThrottlingExceptions[] = [ // T157504
 	],
 	'dbname' => [ 'itwikiversity' ],
 	'value' => 200,
-];
-
-$wmgThrottlingExceptions[] =[ // T158040
-	'from' => '2017-02-15T14:00 +1:00',
-	'to' => '2017-02-15T18:00 +1:00',
-	'range' => [ '195.113.180.192/26', '2001:718:9::/48' ],
-	'dbname' => [ 'cswiki' ],
-	'value' => 50 // 20-30 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T158171 - Royal College of Nursing
-	'from' => '2017-02-15T00:00 +0:00',
-	'to' => '2017-02-15T23:59 +0:00',
-	'IP' => '85.115.54.202',
-	'dbname' => [ 'enwiki', 'commonswiki' ],
-	'value' => 100, // expected unknown
-];
-
-$wmgThrottlingExceptions[] = [ //
-	'from' => '2017-02-20T0:00 +0:00',
-	'to' => '2017-02-20T23:59 +0:00',
-	'range' => '158.94.0.0/16',
-	'dbname' => [ 'enwiki', 'commonswiki' ],
-	'value' => 100 // unknown
 ];
 
 $wmgThrottlingExceptions[] = [ // T158312
@@ -85,6 +53,14 @@ $wmgThrottlingExceptions[] = [ // T158762
 	'IP' => '200.72.159.4',
 	'dbname' => [ 'eswiki', 'enwiki' ],
 	'value' => 40 // 30 expected
+];
+
+$wmgThrottlingExceptions[] = [ // T158767
+	'from' => '2017-02-22T20:00:00 UTC',
+	'to' =>   '2017-02-25T23:59:59 UTC',
+	'IP' =>	  '213.26.151.190';
+	'dbname' => [ 'itwikiversity' ],
+	'value' => 200
 ];
 
 ## Add throttling definitions above.
