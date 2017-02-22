@@ -10000,7 +10000,6 @@ $wgConf->settings = [
 			'sysop',
 			'transwiki',
 		],
-		'shellmanagers' => [ 'shell' ],
 		'sysop' => [
 			'autopatrolled',
 			'ipblock-exempt',
@@ -10745,7 +10744,6 @@ $wgConf->settings = [
 			'sysop',
 			'transwiki',
 		],
-		'shellmanagers' => [ 'shell' ],
 		'sysop' => [
 			'autopatrolled',
 			'ipblock-exempt',
