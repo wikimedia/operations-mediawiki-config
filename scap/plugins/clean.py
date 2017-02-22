@@ -38,6 +38,24 @@ class Clean(main.AbstractSync):
         stage_dir = os.path.join(self.config['stage_dir'], 'php-%s' % branch)
         deploy_dir = os.path.join(self.config['deploy_dir'], 'php-%s' % branch)
 
+        if not keep_static:
+            gerrit_prune_cmd = ['git', 'push', '--force', 'origin',
+                                ':wmf/%s' % branch]
+            logger = self.get_logger()
+            with log.Timer('prune-git-branches', self.get_stats()):
+                # Prune all the submodules' remote branches
+                for submodule in git.list_submodules(stage_dir):
+                    with utils.cd(os.path.join(stage_dir, submodule)):
+                        if subprocess.call(cmd) != 0:
+                            logger.info(
+                                'Failed to prune submodule branch for %s' %
+                                submodule)
+
+                # Prune core last
+                with utils.cd(stage_dir):
+                    if subprocess.call(cmd) != 0:
+                        logger.info('Failed to prune core branch')
+
         # Prune junk from masters owned by l10nupdate
         self.execute_remote(
             'clean-masters-l10nupdate',
