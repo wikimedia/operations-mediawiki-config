@@ -293,7 +293,7 @@ $wgLBFactoryConf = [
 			'db1063' => 1,
 		],
 		'logpager' => [
-			'db1036' => 1,
+			'db1063' => 1,
 		],
 	],
 	/* s3 */ 'DEFAULT' => [
