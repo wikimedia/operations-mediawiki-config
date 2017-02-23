@@ -38,57 +38,6 @@ $wgCirrusSearchFullTextClusterOverrides = $wmgCirrusSearchClusterOverrides;
 # Enable user testing
 $wgCirrusSearchUserTesting = $wmgCirrusSearchUserTesting;
 
-// BM25 A/B test for ja, zh and th
-if ( in_array( $wgDBname, ['jawiki', 'zhwiki', 'thwiki'] ) ) {
-	$wgCirrusSearchUserTesting['bm25sc'] = [
-		'sampleRate' => 0,
-		'globals' => [],
-		'buckets' => [
-			// Prod settings on eqiad
-			'control' => [
-				'trigger' => 'bm25:control',
-				'globals' => [
-					'wgCirrusSearchFullTextQueryBuilderProfile' => 'default',
-					'wgCirrusSearchExtraBackendLatency' => 30000,
-				],
-			],
-			// BM25+allfield and QueryString, inclinks as a sum
-			'bm25_allfield' => [
-				'trigger' => 'bm25:allfield',
-				'globals' => [
-					'wgCirrusSearchDefaultCluster' => 'codfw',
-					'wgCirrusSearchFullTextQueryBuilderProfile' => 'default',
-					'wgCirrusSearchIgnoreOnWikiBoostTemplates' => true,
-					'wgCirrusSearchSimilarityProfile' => 'wmf_defaults',
-					'wgCirrusSearchRescoreProfile' => 'wsum_inclinks',
-				]
-			],
-			// BM25, perfield and SimpleMatch Query builder, inclinks as a sum
-			'bm25_inclinks' => [
-				'trigger' => 'bm25:inclinks',
-				'globals' => [
-					'wgCirrusSearchDefaultCluster' => 'codfw',
-					'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
-					'wgCirrusSearchIgnoreOnWikiBoostTemplates' => true,
-					'wgCirrusSearchSimilarityProfile' => 'wmf_defaults',
-					'wgCirrusSearchRescoreProfile' => 'wsum_inclinks',
-				]
-			],
-			// BM25, perfield and SimpleMatch Query builder, inclinks+pop score as a sum
-			'bm25_inclinks_pv' => [
-				'trigger' => 'bm25:inclinks_pv',
-				'globals' => [
-					'wgCirrusSearchDefaultCluster' => 'codfw',
-					'wgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
-					'wgCirrusSearchIgnoreOnWikiBoostTemplates' => true,
-					'wgCirrusSearchSimilarityProfile' => 'wmf_defaults',
-					'wgCirrusSearchRescoreProfile' => 'wsum_inclinks_pv',
-				]
-			],
-		],
-	];
-}
-
 # Turn off leading wildcard matches, they are a very slow and inefficient query
 $wgCirrusSearchAllowLeadingWildcard = false;
 
