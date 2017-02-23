@@ -3306,7 +3306,23 @@ $wgConf->settings = [
 	],
 	'+itwikiversity' => [
 		'Facoltà' => 100,
-		'Discussioni_facoltà' => 101
+		'Discussioni_facoltà' => 101,
+		'U' => NS_USER, // T158775
+		'UT' => NS_USER_TALK, // T158775
+		'WV' => NS_PROJECT, // T158775
+		'DWV' => NS_PROJECT_TALK, // T158775
+		'T' => NS_TEMPLATE, // T158775
+		'DT' => NS_TEMPLATE_TALK, // T158775
+		'H' => NS_HELP, // T158775
+		'DH' => NS_HELP_TALK, // T158775
+		'CAT' => NS_CATEGORY, // T158775
+		'DCAT' => NS_CATEGORY_TALK, // T158775
+		'DAREA' => 101, // T158775
+		'DC' => 103, // T158775
+		'MA' => 104, // T158775
+		'DMA' => 105, // T158775
+		'DIP' => 106, // T158775
+		'DDIP' => 107, // T158775
 	],
 	'+itwiktionary' => [
 		'WZ' => NS_PROJECT,
