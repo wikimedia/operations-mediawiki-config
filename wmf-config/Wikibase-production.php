@@ -41,6 +41,11 @@ if ( $wmgUseWikibaseRepo ) {
 			'Q20748093' => 'wb-badge-validated',
 			'Q28064618' => 'wb-badge-digitaldocument', // T153186
 		];
+
+		$wgWBRepoSettings['disabledDataTypes'] = [
+			'geo-shape'
+		];
+
 		$wgWBRepoSettings['preferredGeoDataProperties'] = [
 			'P625',
 		];
