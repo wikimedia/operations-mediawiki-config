@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce3c5b53_7a6fa0c0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3309,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-02-23T17:38:46Z",
+      "side": 1,
+      "message": "Missing comma (,) after \u003d\u003e101",
+      "revId": "56a1aab5a71243c3a5b0088f21d04f3f5d8c26a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
