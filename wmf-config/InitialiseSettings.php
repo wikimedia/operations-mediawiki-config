@@ -14667,6 +14667,25 @@ $wgConf->settings = [
 		'prefix' => 'wbs'
 	]
 ],
+
+'wgMinervaUseHeaderV2' => [
+	'default' => [
+		'base' => false,
+		'beta' => true,
+	],
+
+	// T156794: Enable the feature by default on cawiki and itwiki.
+	'cawiki' => [
+		'base' => true,
+
+		// Implied by the above.
+		//'beta' => true,
+	],
+	'itwiki' => [
+		'base' => true,
+	],
+],
+
 'wmgEnableTextExtracts' => [
 	'default' => true,
 ],
