@@ -13121,26 +13121,6 @@ $wgConf->settings = [
 	'nonbetafeatures' => false,
 ],
 
-// T134778
-'wmgPopupsExperiment' => [
-	'default' => false,
-	'huwiki' => true,
-],
-
-// T134778
-'wmgPopupsExperimentConfig' => [
-	'default' => false,
-	'huwiki' => [
-		'name' => 'T134778',
-		'enabled' => true,
-		'buckets' => [
-			// T136713
-			'control' => 0.5,
-			'A' => 0.5,
-		],
-	],
-],
-
 'wgSchemaPopupsSamplingRate' => [
 	'default' => 0.1,
 ],
