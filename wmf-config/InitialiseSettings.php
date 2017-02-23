@@ -17722,8 +17722,8 @@ $wgConf->settings = [
 'wgOresModels' => [
 	'default' => [
 		'damaging' => true,
+		'goodfaith' => true,
 		'reverted' => false,
-		'goodfaith' => false,
 		'wp10' => false,
 	],
 ],
