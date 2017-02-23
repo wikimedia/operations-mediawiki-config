@@ -577,5 +577,10 @@ function wmfLabsSettings() {
 		'wmgAllowLabsAnonEdits' => [
 			'default' => true,
 		],
+
+		// T156800: Make Page Prevews (Popups) use RESTBase's page summary endpoint.
+		'wgPopupsAPIUseRESTBase' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
