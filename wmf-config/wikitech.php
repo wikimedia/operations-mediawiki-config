@@ -1,6 +1,8 @@
 <?php
-# WARNING: This file is publically viewable on the web.
+# WARNING: This file is publicly viewable on the web.
 #          Do not put private data here.
+
+use MediaWiki\Logger\LoggerFactory;
 
 require_once( "$IP/extensions/Validator/Validator.php" );
 require_once( "$IP/extensions/SemanticMediaWiki/SemanticMediaWiki.php" );
@@ -60,7 +62,7 @@ $wgLDAPDebug = 5; // Maximally verbose logs for Andrew Bogott, 8-Dec-2015
 // Local debug logging for troubleshooting LDAP issues
 if ( false ) {
 	$wgLDAPDebug = 5;
-	$monolog = \Mediawiki\Logger\LoggerFactory::getProvider();
+	$monolog = LoggerFactory::getProvider();
 	$monolog->mergeConfig( [
 		'loggers' => [
 			'ldap' => [
