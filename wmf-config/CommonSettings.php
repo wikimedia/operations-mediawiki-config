@@ -1196,6 +1196,7 @@ if ( $wgDBname === 'loginwiki' ) {
 	$wgGroupPermissions['*'] = [
 		'read' => true,
 		'autocreateaccount' => true,
+		'editmyoptions' => true, // T158871
 	];
 	$wgGroupPermissions['user'] = [
 		'read' => true,
