@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce3c5b53_5fce3560",
+        "filename": "scap/plugins/clean.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2017-02-27T23:49:09Z",
+      "side": 1,
+      "message": "Still need to raise here. This just makes a particularly scary looking log message.\n\nWould be good to make sure this looks like a version number, too. Not sure what a good way to validate refspecs is, but ensuring it only contains only wmf, ., and [0-9] seems sane.",
+      "revId": "34646c8e263f36861de84aea8f7cb66ae680c97a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
