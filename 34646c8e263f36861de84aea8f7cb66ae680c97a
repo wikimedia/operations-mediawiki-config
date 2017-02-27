@@ -16,6 +16,24 @@
       "revId": "34646c8e263f36861de84aea8f7cb66ae680c97a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce3c5b53_bf3c212e",
+        "filename": "scap/plugins/clean.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2017-02-27T23:53:07Z",
+      "side": 1,
+      "message": "InvalidArgumentException? I considered that too but went with fatal. Will amend.\n\nYeah, probably. Right now we\u0027re expecting something similar to \"1.29.0-wmf.13\", I could probably replicate what I did in prep.py: https://phabricator.wikimedia.org/source/mediawiki-config/browse/master/scap/plugins/prep.py",
+      "parentUuid": "ce3c5b53_5fce3560",
+      "revId": "34646c8e263f36861de84aea8f7cb66ae680c97a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
