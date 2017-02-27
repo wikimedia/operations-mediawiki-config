@@ -34,6 +34,9 @@ class Clean(main.AbstractSync):
                   help='Only keep static assets (CSS/JS and the like).')
     def main(self, *extra_args):
         """ Clean old branches from the cluster for space savings! """
+        if self.arguments.branch in self.active_wikiversions():
+            self.get_logger().fatal('Branch "%s" is still in use, aborting' %
+                                    self.arguments.branch)
         self.cleanup_branch(self.arguments.branch, self.arguments.keep_static)
 
     def cleanup_branch(self, branch, keep_static):
