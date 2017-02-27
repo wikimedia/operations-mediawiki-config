@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce3c5b53_59489532",
+        "filename": "scap/plugins/clean.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2017-02-27T20:34:37Z",
+      "side": 1,
+      "message": "syntax error, missing a comma",
+      "revId": "61dcfe1e538ed34bf557c29a843e6f3085a0bd23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
