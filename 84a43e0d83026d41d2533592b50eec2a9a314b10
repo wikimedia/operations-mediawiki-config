@@ -16,6 +16,24 @@
       "revId": "84a43e0d83026d41d2533592b50eec2a9a314b10",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce3c5b53_bf250158",
+        "filename": "scap/plugins/clean.py",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2017-02-27T23:07:12Z",
+      "side": 1,
+      "message": "That\u0027s already a thought I had, but isn\u0027t specific to this patch set. I\u0027m going to write that up after this series lands.",
+      "parentUuid": "ce3c5b53_5fb4f532",
+      "revId": "84a43e0d83026d41d2533592b50eec2a9a314b10",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
