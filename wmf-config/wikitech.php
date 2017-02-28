@@ -23,6 +23,9 @@ unset( $wgSpecialPages['SMWAdmin'] );
 // Disable creation of new Forms on wikitech, we're moving away from this
 $wgNamespaceProtection[106] = 'nomorenewforms';
 
+$wgAPIModules['sfautocomplete'] = 'ApiDisabled';
+$wgAPIModules['sfautoedit'] = 'ApiDisabled';
+
 require_once( "$IP/extensions/LdapAuthentication/LdapAuthentication.php" );
 $wgAuthManagerAutoConfig['primaryauth'] += [
 	LdapPrimaryAuthenticationProvider::class => [
