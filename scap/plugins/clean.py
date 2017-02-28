@@ -2,6 +2,7 @@ import os
 import socket
 
 import scap.cli as cli
+import scap.git as git
 import scap.log as log
 import scap.main as main
 import scap.ssh as ssh
