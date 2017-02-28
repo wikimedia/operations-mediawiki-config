@@ -12763,13 +12763,6 @@ $wgConf->settings = [
 	'enwikinews' => [ 102 ], // Comments namespace
 ],
 
-'wmgDonationInterface' => [
-	'default' => false,
-	'testwiki' => true,
-	'foundationwiki' => true,
-	'donatewiki' => true,
-],
-
 'wmgUseGlobalUsage' => [
 	'default' => true, # Enabled on all PUBLIC wikis
 	'closed' => false,

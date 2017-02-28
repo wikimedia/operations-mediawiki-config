@@ -1887,12 +1887,6 @@ if ( $wmgUseLiquidThreads || $wmgLiquidThreadsFrozen ) {
 	require_once( "$wmfConfigDir/liquidthreads.php" );
 }
 
-if ( $wmgDonationInterface ) {
-	// Regular DonationInterface should not be enabled on the WMF cluster.
-	// So, only load i18n files for DonationInterface -awjrichards 1 November 2011
-	require_once( "$IP/extensions/DonationInterface/donationinterface_langonly.php" );
-}
-
 if ( $wmgUseGlobalUsage ) {
 	wfLoadExtension( 'GlobalUsage' );
 	$wgGlobalUsageDatabase = 'commonswiki';
