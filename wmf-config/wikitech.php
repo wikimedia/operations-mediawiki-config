@@ -20,6 +20,9 @@ case 'labtestwiki' :
 
 unset( $wgSpecialPages['SMWAdmin'] );
 
+// Disable creation of new Forms on wikitech, we're moving away from this
+$wgNamespaceProtection[106] = 'nomorenewforms';
+
 require_once( "$IP/extensions/LdapAuthentication/LdapAuthentication.php" );
 $wgAuthManagerAutoConfig['primaryauth'] += [
 	LdapPrimaryAuthenticationProvider::class => [
