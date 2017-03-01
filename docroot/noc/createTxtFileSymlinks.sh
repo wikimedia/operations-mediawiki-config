@@ -14,6 +14,7 @@ mwconfig_files_txt=(
 	CirrusSearch-common.php
 	CirrusSearch-labs.php
 	CirrusSearch-production.php
+        db-codfw.php
 	db-eqiad.php
 	db-labs.php
 	FeaturedFeedsWMF.php
