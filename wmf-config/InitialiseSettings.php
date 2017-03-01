@@ -16381,6 +16381,7 @@ $wgConf->settings = [
 	],
 	'cawiki' => [
 		NS_PROJECT_TALK, // T99117
+		103, // Viquiprojecte Discussió, T159047
 	],
 	'kabwiki' => [
 		NS_USER_TALK, // T140588
