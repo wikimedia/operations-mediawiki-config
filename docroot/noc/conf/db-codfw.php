@@ -1,0 +1,1 @@
+../../../wmf-config/db-codfw.php
