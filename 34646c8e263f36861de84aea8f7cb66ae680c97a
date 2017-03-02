@@ -52,6 +52,24 @@
       "revId": "34646c8e263f36861de84aea8f7cb66ae680c97a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "ce3c5b53_c081efc9",
+        "filename": "scap/plugins/clean.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2017-03-02T23:20:20Z",
+      "side": 1,
+      "message": "Rebased to see master context. Since we hard-code wmf/ in the git command on line 48, I\u0027m not worried about having the wrong refspec.",
+      "parentUuid": "ce3c5b53_202c5bf1",
+      "revId": "34646c8e263f36861de84aea8f7cb66ae680c97a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
