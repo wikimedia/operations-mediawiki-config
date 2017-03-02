@@ -450,6 +450,7 @@ $wgBotPasswordsDatabase = $wmgBotPasswordsDatabase;
 
 if ( PHP_SAPI === 'cli' ) {
 	$wgShowExceptionDetails = true;
+	$wgShowDBErrorBacktrace = true;
 }
 
 $wgUseImageResize               = true;
