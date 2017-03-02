@@ -131,7 +131,7 @@ $wgCirrusSearchWikimediaExtraPlugin = [
 		'build',
 		'use',
 	],
-	//'super_detect_noop' => true,
+	'super_detect_noop' => true,
 	'id_hash_mod_filter' => true,
 	'documentVersion' => true,
 ];
