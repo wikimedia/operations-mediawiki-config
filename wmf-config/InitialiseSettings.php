@@ -13145,6 +13145,18 @@ $wgConf->settings = [
 	'default' => 0.1,
 ],
 
+'wgPopupsAPIUseRESTBase' => [
+	'default' => false,
+
+	// T158221: Make Page Previews use RESTBase for the following "stage 0" wikis
+	// (see T136602 for more detail of the release plan for Page Previews).
+	'itwiki' => true,
+	'ruwiki' => true,
+	'elwiki' => true,
+	'cawiki' => true,
+	'hewiki' => true,
+],
+
 'wmgULSCompactLanguageLinksBetaFeature' => [
 	'default' => true,
 	'testwiki' => false,
