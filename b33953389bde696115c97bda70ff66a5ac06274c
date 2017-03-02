@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce3c5b53_cf04c282",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 399,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-03-02T17:38:32Z",
+      "side": 1,
+      "message": "I understand that with \u0027interface-editor\u0027 being here it means that we don\u0027t need a new entry such the one that is being removed in this patch for this group at trwiki.",
+      "revId": "b33953389bde696115c97bda70ff66a5ac06274c",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
