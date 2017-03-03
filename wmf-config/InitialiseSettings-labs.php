@@ -582,5 +582,9 @@ function wmfLabsSettings() {
 		'wgPopupsAPIUseRESTBase' => [
 			'default' => true,
 		],
+
+		'wgEnableRcFiltersBetaFeature' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
