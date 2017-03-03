@@ -1214,6 +1214,7 @@ $wgConf->settings = [
 	'zh_yuewiki' => [ '1.5x' => '/static/images/project-logos/zh_yuewiki-1.5x.png', '2x' => '/static/images/project-logos/zh_yuewiki-2x.png' ], // T150618
 
     # Wiktionary
+	'bswiktionary' => [ '1.5x' => '/static/images/project-logos/bswiktionary-1.5x.png', '2x' => '/static/images/project-logos/bswiktionary-2x.png' ], // T159542
 	'cswiktionary' => [ '1.5x' => '/static/images/project-logos/cswiktionary-1.5x.png', '2x' => '/static/images/project-logos/cswiktionary-2x.png' ], // T150618
 	'enwiktionary' => [ '1.5x' => '/static/images/project-logos/enwiktionary-1.5x.png', '2x' => '/static/images/project-logos/enwiktionary-2x.png' ], // T138801
 	'viwiktionary' => [ '1.5x' => '/static/images/project-logos/viwiktionary-1.5x.png', '2x' => '/static/images/project-logos/viwiktionary-2x.png' ],
