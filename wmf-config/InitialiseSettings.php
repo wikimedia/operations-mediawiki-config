@@ -16761,6 +16761,7 @@ $wgConf->settings = [
 
 'wmgUseInterwikiSorting' => [
 	'default' => false,
+	'interwikisorting' => true,
 ],
 
 'wgInterwikiSortingSort' => [
