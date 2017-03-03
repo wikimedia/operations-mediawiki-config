@@ -564,9 +564,6 @@ function wmfLabsSettings() {
 		'wgLinterStatsdSampleFactor' => [
 			'default' => 10,
 		],
-		'wmgUseInterwikiSorting' => [
-			'default' => true,
-		],
 
 		// T152115
 		'wgPageImagesLeadSectionOnly' => [
