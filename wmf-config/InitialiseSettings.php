@@ -1226,6 +1226,7 @@ $wgConf->settings = [
 	'viwikiquote' => [ '1.5x' => '/static/images/project-logos/viwikiquote-1.5x.png', '2x' => '/static/images/project-logos/viwikiquote-2x.png' ],
 
     # Wikibooks
+	'srwikibooks' => [ '1.5x' => '/static/images/project-logos/srwikibooks-1.5x.png', '2x' => '/static/images/project-logos/srwikibooks-2x.png'], // T159534
 	'viwikibooks' => [ '1.5x' => '/static/images/project-logos/viwikibooks-1.5x.png', '2x' => '/static/images/project-logos/viwikibooks-2x.png' ],
 
     # Wikisource
