@@ -47,6 +47,11 @@ if ( $wmfRealm == 'labs' ) { # safe guard
 				'10.68.23.30' => 1,  # deployment-db03.eqiad.wmflabs, master
 				'10.68.18.35' => 3 , # deployment-db04.eqiad.wmflabs
 			],
+
+			'extension1' => [
+				'10.68.23.30' => 1,  # deployment-db03.eqiad.wmflabs, master
+				'10.68.18.35' => 3 , # deployment-db04.eqiad.wmflabs
+			],
 		],
 
 		'templateOverridesByCluster' => [
