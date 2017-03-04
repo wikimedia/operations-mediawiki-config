@@ -8512,6 +8512,7 @@ $wgConf->settings = [
 			'accessrestrictedregions' => true,
 			'editallhiera' => true,
 		],
+		'flood' => [ 'bot' => true ],
 		'oathauth' => [ 'oathauth-api-all' => true ], // T153487
 		'oauthadmin' => [ 'autopatrol' => true ],
 		'shell' => [ 'loginviashell' => true ],
@@ -12423,6 +12424,10 @@ $wgConf->settings = [
 	'ruwikimedia' => [ 'sysop' => [ 'translationadmin' ] ], // T121766
 	'strategywiki' => [ 'sysop' => [ 'flood' ] ],
 	'wikidata' => [ 'sysop' => [ 'flood', 'translationadmin' ] ], // T50013, T48856
+	'wikitech' => [
+		'contentadmin' => [ 'flood' ],
+		'sysop' => [ 'flood' ],
+	],
 	'zhwiki' => [ 'sysop' => [ 'flood' ] ],
 ],
 'wgGroupsRemoveFromSelf' => [
@@ -12459,6 +12464,7 @@ $wgConf->settings = [
 		'sysop' => [ 'flood', 'translationadmin' ], // T50013, T48856
 		'flood' => [ 'flood' ], // T50013
 	],
+	'wikitech' => [ 'flood' => [ 'flood' ] ],
 	'zhwiki' => [
 		'sysop' => [ 'flood' ],
 		'massmessage-sender' => [ 'massmessage-sender' ], // T130814
