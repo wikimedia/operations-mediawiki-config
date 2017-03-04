@@ -3025,14 +3025,9 @@ if ( $wmgUseCognate ) {
 	$wgCognateNamespaces = [ 0 ];
 }
 
-if( $wmgUseWikibaseClient || $wmgUseInterwikiSorting ) {
-	$wgInterwikiSortingInterwikiSortOrders = include( "$wmfConfigDir/InterwikiSortOrders.php" );
-}
-
 if ( $wmgUseInterwikiSorting ) {
+	$wgInterwikiSortingInterwikiSortOrders = include( "$wmfConfigDir/InterwikiSortOrders.php" );
 	wfLoadExtension( 'InterwikiSorting' );
-	// This setting must be set before loading WikibaseClient
-	$wgWikibaseInterwikiSorting = false;
 }
 
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
