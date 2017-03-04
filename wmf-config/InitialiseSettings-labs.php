@@ -567,6 +567,10 @@ function wmfLabsSettings() {
 		'wmgUseInterwikiSorting' => [
 			'default' => true,
 		],
+		'wmgUseCognate' => [
+			'default' => false,
+			'wiktionary' => 'wiktionary', // T156241
+		],
 
 		// T152115
 		'wgPageImagesLeadSectionOnly' => [

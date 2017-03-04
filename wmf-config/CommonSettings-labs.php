@@ -335,6 +335,13 @@ if ( $wmgUseLinter ) {
 	wfLoadExtension( 'Linter' );
 }
 
+if ( $wmgUseCognate ) {
+	wfLoadExtension( 'Cognate' );
+	$wgCognateDb = 'cognate_' . $wmgUseCognate;
+	$wgCognateCluster = 'extension1';
+	$wgCognateNamespaces = [ 0 ];
+}
+
 $wgMessageCacheType = CACHE_ACCEL;
 
 // Let Beta Cluster Commons do upload-from-URL from production Commons.
