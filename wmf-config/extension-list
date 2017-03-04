@@ -64,6 +64,7 @@ $IP/extensions/InputBox/extension.json
 $IP/extensions/Insider/extension.json
 $IP/extensions/intersection/extension.json
 $IP/extensions/Interwiki/extension.json
+$IP/extensions/InterwikiSorting/extension.json
 $IP/extensions/Josa/extension.json
 $IP/extensions/JsonConfig/extension.json
 $IP/extensions/Kartographer/extension.json
