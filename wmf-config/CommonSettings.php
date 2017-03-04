@@ -2999,14 +2999,9 @@ if ( $wmgUseContentTranslation ) {
 
 $wgExtensionEntryPointListFiles[] = "$IP/extensions/Wikidata/extension-list-wikidata";
 
-if( $wmgUseWikibaseClient || $wmgUseInterwikiSorting ) {
-	$wgInterwikiSortingInterwikiSortOrders = include( "$wmfConfigDir/InterwikiSortOrders.php" );
-}
-
 if ( $wmgUseInterwikiSorting ) {
+	$wgInterwikiSortingInterwikiSortOrders = include( "$wmfConfigDir/InterwikiSortOrders.php" );
 	wfLoadExtension( 'InterwikiSorting' );
-	// This setting must be set before loading WikibaseClient
-	$wgWikibaseInterwikiSorting = false;
 }
 
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
