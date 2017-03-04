@@ -3087,12 +3087,8 @@ if ( $wmgUseCognate ) {
 
 if ( $wmgUseWikibaseClient || $wmgUseInterwikiSorting ) {
 	$wgInterwikiSortingInterwikiSortOrders = include "$wmfConfigDir/InterwikiSortOrders.php";
-}
-
 if ( $wmgUseInterwikiSorting ) {
 	wfLoadExtension( 'InterwikiSorting' );
-	// This setting must be set before loading WikibaseClient
-	$wgWikibaseInterwikiSorting = false;
 }
 
 if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
