@@ -3486,6 +3486,18 @@ if ( $wmgUseKartographer ) {
 	wfLoadExtension( 'Kartographer' );
 }
 
+if ( $wgDBname === 'foundationwiki' ) {
+	// Foundationwiki has raw html enabled. Attempt to prevent people
+	// from accidentally violating the privacy policy with external scripts.
+	$wgHooks['BeforePageDisplay'][] = function ( $out, $skin ) {
+		$resp = $out->getRequest()->response();
+		$cspHeader = "default-src *.wikimedia.org data: blob: 'self'; script-src *.wikimedia.org 'unsafe-inline' 'unsafe-eval' 'self'; style-src  *.wikimedia.org data: 'unsafe-inline' 'self'; report-uri /w/api.php?action=cspreport&format=none&reportonly=1&source=wmfwiki&";
+		$resp->header( "X-Webkit-CSP-Report-Only: $cspHeader" );
+		$resp->header( "X-Content-Security-Policy-Report-Only: $cspHeader" );
+		$resp->header( "Content-Security-Policy-Report-Only: $cspHeader" );
+	};
+}
+
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
