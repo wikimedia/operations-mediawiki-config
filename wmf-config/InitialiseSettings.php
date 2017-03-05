@@ -17132,9 +17132,6 @@ $wgConf->settings = [
 	'test2wiki' => [
 		'siteGlobalID' => 'enwiki'
 	],
-	'nlwiki' => [
-		'otherProjectsLinksByDefault' => false,
-	],
 ],
 
 'wmgUseWikibaseQuality' => [
