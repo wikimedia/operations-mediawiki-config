@@ -6829,7 +6829,6 @@ $wgConf->settings = [
 	'hewikiquote' => 4,
 	'hewikisource' => 4,
 	'hewiktionary' => 4,
-	'idwiki' => 0,
 ],
 
 'wgDefaultSkin' => [
