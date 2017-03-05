@@ -640,6 +640,7 @@ $wgGrantPermissions['editprotected']['tboverride'] = true;
 $wgGrantPermissions['createaccount']['tboverride-account'] = true;
 
 // Adding Flow's rights so that they are available for global groups/staff rights
+$wgAvailableRights[] = 'flow-create-board';
 $wgAvailableRights[] = 'flow-edit-post';
 $wgAvailableRights[] = 'flow-suppress';
 $wgAvailableRights[] = 'flow-hide';
