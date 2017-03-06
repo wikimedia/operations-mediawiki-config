@@ -569,7 +569,7 @@ function wmfLabsSettings() {
 		],
 		'wmgUseCognate' => [
 			'default' => false,
-			'wiktionary' => 'wiktionary', // T156241
+			// 'wiktionary' => 'wiktionary', // T156241
 		],
 
 		// T152115
