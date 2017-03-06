@@ -7321,12 +7321,14 @@ $wgConf->settings = [
 	'ruwiki' => false, // T33650
 	'sqwiki' => false, // T27822
 	'ukwiki' => false, // T35273
+	'bswiki' => false, // T158662
 ],
 
 'wgUseFilePatrol' => array(
 	'default' => true,
 	'huwiki' => false, // T21241
 	'ruwiki' => false, // T154285
+	'bswiki' => false, // T158662
 ),
 
 # wgNoFollow... @{
@@ -7873,10 +7875,15 @@ $wgConf->settings = [
 		'autopatrolled' => [ 'autopatrol' => true, ],
 	],
 	'bswiki' => [
-		'patroller' => [ 'patrol' => true ],
-		'autopatrolled' => [ 'autopatrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
-		'flood' => [ 'bot' => true ], // T52425
+		'flood' => [
+			'bot' => true, // T52425
+			'autopatrol' => false, //T158662
+		],
+		'sysop' => [ // T158662
+			'autopatrol' => false,
+			'patrol' => false,
+		],
 	],
 	'cawiki' => [
 		'user' => [ 'patrol' => false ],
