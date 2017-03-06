@@ -80,6 +80,15 @@ elseif ( $wgDBname == 'bnwiki' ) { // T30717
 	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'editor' ] );
 }
 
+elseif ( $wgDBname == 'bswiki' ) { //T158662
+
+	$wgFlaggedRevsTags = [
+		'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
+	];
+
+	$wgGroupPermissions['sysop']['stablesettings'] = true;
+}
+
 elseif ( $wgDBname == 'cewiki' ) { // based on ruwiki settings
 
 	// T58408
