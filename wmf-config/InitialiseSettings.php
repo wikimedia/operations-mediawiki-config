@@ -16656,6 +16656,11 @@ $wgConf->settings = [
 ],
 'wmgFeaturedFeedsOverrides' => [
 	'default' => [],
+	'dewiki' => [
+		'featured' => [
+			'limit' => 7, // T159664
+		],
+	],
 	'fawiki' => [ // T57884
 		'dyk' => [
 			'frequency' => 'weekly',
