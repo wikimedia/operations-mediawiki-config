@@ -623,5 +623,17 @@ function wmfLabsSettings() {
 		'wmgUseTimeless' => [
 			'default' => true,
 		],
+
+		'wmgUse3d' => [
+			'default' => true,
+		],
+
+		'wg3dProcessor' => [
+			'default' => '/srv/deployment/3d2png/deploy/src/3d2png.js',
+		],
+
+		'wg3dProcessEnviron' => [
+			'default' => [ 'DISPLAY' => ':99' ],
+		],
 	];
 } # wmflLabsSettings()
