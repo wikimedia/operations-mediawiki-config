@@ -10760,6 +10760,7 @@ $wgConf->settings = [
 			'bot',
 			'confirmed',
 			'contentadmin',
+			'flood',
 			'oathauth',
 			'oauthadmin',
 			'shell',
@@ -12464,7 +12465,10 @@ $wgConf->settings = [
 		'sysop' => [ 'flood', 'translationadmin' ], // T50013, T48856
 		'flood' => [ 'flood' ], // T50013
 	],
-	'wikitech' => [ 'flood' => [ 'flood' ] ],
+	'wikitech' => [
+		'contentadmin' => [ 'flood' ],
+		'sysop' => [ 'flood' ],
+	],
 	'zhwiki' => [
 		'sysop' => [ 'flood' ],
 		'massmessage-sender' => [ 'massmessage-sender' ], // T130814
