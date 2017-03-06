@@ -15942,6 +15942,9 @@ $wgConf->settings = [
 		'limit' => 10,
 		'inUserLanguage' => false,
 	],
+	'+dewiki' => [ // T159664
+		'limit' => 7,
+	],
 	'frwikisource' => [ // T41919
 		'limit' => 70,
 		'inUserLanguage' => false,
