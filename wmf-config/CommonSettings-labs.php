@@ -365,4 +365,16 @@ $wgJsonConfigModels['JsonConfig.Dashiki'] = array(
 
 wfLoadExtension( 'Dashiki' );
 
+if ( $wmgUse3d ) {
+	wfLoadExtension( '3d' );
+	// Add 3d file type
+	$wgFileExtensions[] = 'stl';
+	$wgTrustedMediaFiles[] = 'application/sla';
+
+	// Add 3d media viewer extension
+	if ( isset( $wgMediaViewerExtensions ) {
+		$wgMediaViewerExtensions['stl'] = 'mmv.3d';
+	}
+}
+
 } # end safeguard
