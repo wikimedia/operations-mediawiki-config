@@ -17,8 +17,7 @@ mwconfig_files_txt=(
 	db-eqiad.php
 	db-labs.php
 	FeaturedFeedsWMF.php
-	filebackend-labs.php
-	filebackend-production.php
+	filebackend.php
 	flaggedrevs.php
 	HHVMRequestInit.php
 	import.php
