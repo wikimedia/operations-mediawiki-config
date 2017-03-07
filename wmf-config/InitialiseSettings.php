@@ -14314,6 +14314,15 @@ $wgConf->settings = [
 
 // --------------- VisualEditor end ---------------
 
+'wgCiteResponsiveReferences' => [
+	'default' => false,
+
+	// group0
+	'testwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => true,
+],
+
 'wmgUseRSSExtension' => [
 	'default' => false,
 	'foundationwiki' => true,
