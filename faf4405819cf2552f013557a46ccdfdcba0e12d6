@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_61d730c5",
+        "filename": "tests/cirrusTest.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-03-08T03:52:56Z",
+      "side": 1,
+      "message": "Seems in conflict with the function parameter?",
+      "range": {
+        "startLine": 102,
+        "startChar": 2,
+        "endLine": 102,
+        "endChar": 19
+      },
+      "revId": "faf4405819cf2552f013557a46ccdfdcba0e12d6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
