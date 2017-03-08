@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_61e17029",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 3497,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-03-08T02:17:50Z",
+      "side": 1,
+      "message": "wikidata.org should be www.wikidata.org or *.wikidata.org, right? wikidata.org is just a redirect.",
+      "range": {
+        "startLine": 3497,
+        "startChar": 177,
+        "endLine": 3497,
+        "endChar": 189
+      },
+      "revId": "0194d58b949f02e0f2bd0b58a9690d9f87df3d1b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
