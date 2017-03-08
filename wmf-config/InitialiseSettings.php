@@ -12312,7 +12312,6 @@ $wgConf->settings = [
 	'kuwikibooks' => false,
 	'kuwikiquote' => false,
 	'kuwiktionary' => false,
-	'srnwiki' => false,
 	'srwiki' => false,
 	'srwikibooks' => false,
 	'srwikinews' => false,
