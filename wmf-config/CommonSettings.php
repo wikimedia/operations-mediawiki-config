@@ -2427,8 +2427,8 @@ if ( $wmgUseTranslate ) {
 		// it's back up.
 		// NOTE: codfw depooled for es5 upgrade
 		$wgTranslateClustersAndMirrors = [
-			'eqiad' => [ /* 'codfw' */ ],
-			// 'codfw' => [ 'eqiad' ],
+			'eqiad' => [ 'codfw' ],
+			'codfw' => [ 'eqiad' ],
 		];
 		foreach( $wgTranslateClustersAndMirrors as $cluster => $mirrors ) {
 			if ( !isset( $wmfAllServices[$cluster]['search'] ) ) {
