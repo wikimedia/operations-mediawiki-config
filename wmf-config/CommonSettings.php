@@ -2424,9 +2424,10 @@ if ( $wmgUseTranslate ) {
 		// mirroring in this var to avoid logspam about ttm updates
 		// then plan to refresh this index via ttmserver-export when
 		// it's back up.
+		// NOTE: codfw depooled for es5 upgrade
 		$wgTranslateClustersAndMirrors = [
-			'eqiad' => [ 'codfw' ],
-			'codfw' => [ 'eqiad' ],
+			'eqiad' => [ /* 'codfw' */ ],
+			// 'codfw' => [ 'eqiad' ],
 		];
 		foreach( $wgTranslateClustersAndMirrors as $cluster => $mirrors ) {
 			if ( !isset( $wmfAllServices[$cluster]['search'] ) ) {
