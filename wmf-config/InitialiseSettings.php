@@ -17222,7 +17222,7 @@ $wgConf->settings = [
 // $wgTranslateTranslationDefaultService in CommonSettings.php if you plan to
 // bring down a specific cluster.
 'wmgCirrusSearchDefaultCluster' => [
-	'default' => 'local',
+	'default' => 'codfw',
 ],
 
 'wmgCirrusSearchClusterOverrides' => [
@@ -17230,7 +17230,7 @@ $wgConf->settings = [
 ],
 
 'wmgCirrusSearchWriteClusters' => [
-	'default' => [ 'eqiad', 'codfw' ],
+	'default' => [ /* 'eqiad', */ 'codfw' ],
 ],
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => [
