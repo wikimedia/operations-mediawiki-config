@@ -2926,7 +2926,7 @@ if ( $wmgUseEventLogging ) {
 	// Temporary hack for 'jsonschema' API module migration
 	$wgEventLoggingSchemaIndexUri = $wgEventLoggingSchemaApiUri;
 
-	// Extensions dependent on EventLogging
+	// Dependens on EventLogging
 	if ( $wmgUseCampaigns ) {
 		wfLoadExtension( 'Campaigns' );
 	}
@@ -2934,16 +2934,17 @@ if ( $wmgUseEventLogging ) {
 	wfLoadExtension( 'WikimediaEvents' );
 	$wgWMEStatsdBaseUri = '/beacon/statsv';
 	$wgWMETrackGeoFeatures = $wmgWMETrackGeoFeatures;
-}
 
-if ( $wmgUseEventLogging && $wmgUseNavigationTiming ) {
-	wfLoadExtension( 'NavigationTiming' );
-	// Careful! The LOWER the value, the MORE requests will be logged. A
-	// sampling factor of 1 means log every request. This should not be
-	// lowered without careful coordination with ops.
-	$wgNavigationTimingSamplingFactor = 1000;
+	// Dependens on EventLogging
+	if ( $wmgUseNavigationTiming ) {
+		wfLoadExtension( 'NavigationTiming' );
+		// Careful! The LOWER the value, the MORE requests will be logged. A
+		// sampling factor of 1 means log every request. This should not be
+		// lowered without careful coordination with ops.
+		$wgNavigationTimingSamplingFactor = 1000;
 
-	$wgPercentHHVM = 0;
+		$wgPercentHHVM = 0;
+	}
 }
 
 wfLoadExtension( 'XAnalytics' );
