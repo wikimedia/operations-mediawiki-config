@@ -16897,6 +16897,11 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wmgUseWikimediaEvents' => [
+	'default' => true,
+	'closed' => false, // T158721
+],
+
 'wmgUseNavigationTiming' => [
 	'default' => true,
 	'wikitech' => false,
