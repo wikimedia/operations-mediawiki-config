@@ -21,9 +21,19 @@ if ( $wmgUseClusterJobqueue ) {
 		$wgJobTypeConf['default'];
 }
 
+// Needed for elastic version 5.0 to 5.3 is deployed
+// in 5.3 it'll produce, we should really silent this
+// log message when upgrading to 5.3
+$wgCirrusSearchElasticQuirks = [
+	'query_string_max_determinized_states' => true,
+];
+
 # Set up the the default cluster to send queries to,
 # and the list of clusters to write to.
-if ( $wmgCirrusSearchDefaultCluster === 'local' ) {
+if ( substr( $IP, -13 ) === '1.28.0-wmf.16' ) {
+	$wgCirrusSearchDefaultCluster = 'codfw';
+	$wmgCirrusSearchUseCompletionSuggester = 'no';
+} else if ( $wmgCirrusSearchDefaultCluster === 'local' ) {
 	$wgCirrusSearchDefaultCluster = $wmfDatacenter;
 } else {
 	$wgCirrusSearchDefaultCluster = $wmgCirrusSearchDefaultCluster;
@@ -80,7 +90,7 @@ $wgCirrusSearchWikimediaExtraPlugin = [
 		'build',
 		'use',
 	],
-	'super_detect_noop' => true,
+	// 'super_detect_noop' => true,
 	'id_hash_mod_filter' => true,
 	'documentVersion' => true,
 ];
