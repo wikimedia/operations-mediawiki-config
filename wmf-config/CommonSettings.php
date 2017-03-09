@@ -1786,7 +1786,9 @@ if ( $wmgUseCollection ) {
 
 	$wgLicenseURL = "https://creativecommons.org/licenses/by-sa/3.0/";
 
-	$wgCollectionShowRenderNotes[] = 'coll-rendering_finished_note_article_rdf2latex';
+	if ( !$wmgUseElectronPdfService ) {
+		$wgCollectionShowRenderNotes[] = 'coll-rendering_finished_note_article_rdf2latex';
+	}
 
 	$wgCollectionPortletForLoggedInUsersOnly = $wmgCollectionPortletForLoggedInUsersOnly;
 	$wgCollectionArticleNamespaces = $wmgCollectionArticleNamespaces;
