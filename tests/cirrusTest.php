@@ -10,11 +10,13 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchDefaultCluster', $config );
-		$this->assertEquals( 'unittest', $config['wgCirrusSearchDefaultCluster'] );
+		// Forced to codfw
+		$this->assertEquals( 'codfw', $config['wgCirrusSearchDefaultCluster'] );
 		$this->assertCount( 2, $config['wgCirrusSearchClusters'] );
 
 		// testwiki writes to eqiad and codfw
-		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
+		// eqiad depooled
+		$this->assertCount( 1, $config['wgCirrusSearchWriteClusters'] );
 
 		foreach ( $config['wgCirrusSearchWriteClusters'] as $writeCluster ) {
 			$this->assertArrayHasKey(
@@ -40,7 +42,8 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchClientSideConnectTimeout'] );
 		}
 
-		$this->assertCount( 2, $config['wgCirrusSearchWriteClusters'] );
+		// eqiad depooled
+		$this->assertCount( 1, $config['wgCirrusSearchWriteClusters'] );
 		foreach ( $config['wgCirrusSearchWriteClusters'] as $cluster ) {
 			$this->assertArrayHasKey(
 				$cluster,
