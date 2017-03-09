@@ -2933,9 +2933,12 @@ if ( $wmgUseEventLogging ) {
 		wfLoadExtension( 'Campaigns' );
 	}
 
-	wfLoadExtension( 'WikimediaEvents' );
-	$wgWMEStatsdBaseUri = '/beacon/statsv';
-	$wgWMETrackGeoFeatures = $wmgWMETrackGeoFeatures;
+	// Depends on EventLogging
+	if ( $wmgUseWikimediaEvents ) {
+		wfLoadExtension( 'WikimediaEvents' );
+		$wgWMEStatsdBaseUri = '/beacon/statsv';
+		$wgWMETrackGeoFeatures = $wmgWMETrackGeoFeatures;
+	}
 
 	// Depends on EventLogging
 	if ( $wmgUseNavigationTiming ) {
