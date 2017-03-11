@@ -1,5 +1,6 @@
 import os
 import socket
+import subprocess
 
 import scap.cli as cli
 import scap.git as git
@@ -50,15 +51,16 @@ class Clean(main.AbstractSync):
             with log.Timer('prune-git-branches', self.get_stats()):
                 # Prune all the submodules' remote branches
                 for submodule in git.list_submodules(stage_dir):
-                    with utils.cd(os.path.join(stage_dir, submodule)):
-                        if subprocess.call(cmd) != 0:
+                    submodule_path = submodule.lstrip(' ').split(' ')[1]
+                    with utils.cd(os.path.join(stage_dir, submodule_path)):
+                        if subprocess.call(gerrit_prune_cmd) != 0:
                             logger.info(
                                 'Failed to prune submodule branch for %s' %
                                 submodule)
 
                 # Prune core last
                 with utils.cd(stage_dir):
-                    if subprocess.call(cmd) != 0:
+                    if subprocess.call(gerrit_prune_cmd) != 0:
                         logger.info('Failed to prune core branch')
 
         # Prune junk from masters owned by l10nupdate
