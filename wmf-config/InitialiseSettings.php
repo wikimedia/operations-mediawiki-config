@@ -7835,7 +7835,7 @@ $wgConf->settings = [
 		],
 		'interface-editor' => [ // T109755
 			'editinterface' => true, // T109755
-			'editusercssjs' => true, // T109755
+			'editusercssjs' !=> true, // T109755
 			'tboverride' => true, // T109755
 		],
 		'patroller' => [ // T109755
@@ -8429,7 +8429,7 @@ $wgConf->settings = [
 			'abusefilter-view' => true,
 			'abusefilter-view-private' => true,
 			'editinterface' => true,
-			'editusercssjs' => true,
+			'editusercssjs' !=> true,
 			'import' => true,
 			'tboverride' => true,
 			'templateeditor' => true, // T102466
