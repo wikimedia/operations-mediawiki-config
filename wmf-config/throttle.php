@@ -39,30 +39,14 @@ $wmgThrottlingExceptions[] = [ // T157504
 	'value' => 200,
 ];
 
-$wmgThrottlingExceptions[] = [ // T158762
-	'from' => '2017-03-11T13:00 +0:00',
-	'to' => '2017-03-11T21:00 +0:00',
-	'IP' => '200.72.159.4',
-	'dbname' => [ 'eswiki', 'enwiki' ],
-	'value' => 40 // 30 expected
+// https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Edit-a-thon/Atividades_em_portugu%C3%AAs/Neuroci%C3%AAncia_e_Matem%C3%A1tica_III
+$wmgThrottlingExceptions[] = [ // Requested on IRC
+	'from' => '2017-03-13T17:00 +0:00',
+	'to' => '2017-03-13T20:00 +0:00',
+	'IP' => '143.107.45.11',
+	'dbname' => [ 'ptwiki', 'commonswiki' ],
+	'value' => 30 // 20 expected
 ];
-
-$wmgThrottlingExceptions[] = [ // T159803
-	'from' => '2017-03-10T18:00 +1:00',
-	'to' => '2017-03-10T23:090 +1:00',
-	'IP' => '195.76.195.27',
-	'dbname' => [ 'cawiki', 'commonswiki' ],
-	'value' => 40 // +20 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T159957
-	'from' => '2017-03-11T0:00 -5:00',
-	'to' => '2017-03-11T18:00 -5:00',
-	'IP' => [ '38.125.33.54', '38.125.15.118' ],
-	'dbname' => [ 'enwiki', 'commonswiki' ],
-	'value' => 250 // 200 editors, maybe 75 accounts
-];
-
 
 ## Add throttling definitions above.
 
