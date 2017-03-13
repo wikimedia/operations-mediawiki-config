@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "8e46e3ee_02372ee1",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 1499,
+      "author": {
+        "id": 3418
+      },
+      "writtenOn": "2017-03-13T21:52:13Z",
+      "side": 1,
+      "message": "It looks the same to me.",
+      "parentUuid": "8e46e3ee_b87b10bd",
+      "range": {
+        "startLine": 1499,
+        "startChar": 1,
+        "endLine": 1499,
+        "endChar": 39
+      },
+      "revId": "a4a4dff74b9984cfa5255202e78410db80f97f93",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e46e3ee_d8785cc2",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 10
