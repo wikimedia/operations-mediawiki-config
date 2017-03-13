@@ -247,7 +247,7 @@ if ( $wmgUseQuickSurveys ) {
 			],
 			"schema" => "QuickSurveysResponses",
 			"enabled" => true,
-			"coverage" => .5,
+			"coverage" => 0,
 			"description" => "ext-quicksurveys-example-internal-survey-description",
 			"platforms" => [
 				"desktop" => [ "stable" ],
@@ -261,7 +261,7 @@ if ( $wmgUseQuickSurveys ) {
 			"description" => "ext-quicksurveys-example-external-survey-description",
 			"link" => "ext-quicksurveys-example-external-survey-link",
 			"privacyPolicy" => "ext-quicksurveys-example-external-survey-privacy-policy",
-			'coverage' => .5,
+			'coverage' => 0,
 			'enabled' => true,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
