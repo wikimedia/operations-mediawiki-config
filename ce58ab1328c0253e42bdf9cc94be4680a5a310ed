@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_78a90878",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 7838,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-03-13T21:11:44Z",
+      "side": 1,
+      "message": "So we just remove this line",
+      "range": {
+        "startLine": 7838,
+        "startChar": 3,
+        "endLine": 7838,
+        "endChar": 39
+      },
+      "revId": "ce58ab1328c0253e42bdf9cc94be4680a5a310ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_98a654a6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 8432,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-03-13T21:11:44Z",
+      "side": 1,
+      "message": "And this one",
+      "range": {
+        "startLine": 8432,
+        "startChar": 3,
+        "endLine": 8432,
+        "endChar": 28
+      },
+      "revId": "ce58ab1328c0253e42bdf9cc94be4680a5a310ed",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
