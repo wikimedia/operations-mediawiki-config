@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_221b4d84",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2017-03-13T17:10:02Z",
+      "side": 1,
+      "message": "1.29.0 ?",
+      "revId": "3e3d537857fe4e4af92b5f1577401eb287a1a081",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
