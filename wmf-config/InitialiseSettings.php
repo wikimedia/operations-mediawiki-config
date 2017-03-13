@@ -1496,7 +1496,7 @@ $wgConf->settings = [
 	'aswiki' => '/wiki/ৱিকিপিডিয়া:ফাইল_আপল’ড_বিশেষজ্ঞ',
 	'azbwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=azb', // T106305
 	'bgwiki' => '/wiki/MediaWiki:Uploadtext', // T16836
-	'bnwiki' => '/wiki/উইকিপিডিয়া:আপলোড',
+	'bnwiki' => '/wiki/উইকিপিডিয়া:আপলোড',
 	'bswiki' => '/wiki/Wikipedia:Upload', // T14044
 	'dawiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=da&campaign=dk', // T39662
 	'dewikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=de',
@@ -1793,7 +1793,7 @@ $wgConf->settings = [
 	'azwikisource' => 'Vikimənbə', // T114002
 	'azbwiki' => 'ویکی‌پدیا', // T106305
 	'bawiki' => 'Википедия', // T43167
-	'bdwikimedia' => 'উইকিমিডিয়া বাংলাদেশ',
+	'bdwikimedia' => 'উইকিমিডিয়া বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
 	'bewiki' => 'Вікіпедыя',
 	'bewikimedia' => 'Wikimedia Belgium',
@@ -7835,7 +7835,8 @@ $wgConf->settings = [
 		],
 		'interface-editor' => [ // T109755
 			'editinterface' => true, // T109755
-			'editusercssjs' => true, // T109755
+			'editusercss' => true, // T109755
+			'edituserjs' => true,
 			'tboverride' => true, // T109755
 		],
 		'patroller' => [ // T109755
@@ -8429,7 +8430,7 @@ $wgConf->settings = [
 			'abusefilter-view' => true,
 			'abusefilter-view-private' => true,
 			'editinterface' => true,
-			'editusercssjs' => true,
+			'edituserjs' !=> true,
 			'import' => true,
 			'tboverride' => true,
 			'templateeditor' => true, // T102466
