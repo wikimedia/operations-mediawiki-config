@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_b87b10bd",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 1499,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-03-13T21:41:51Z",
+      "side": 1,
+      "message": "You\u0027ve  either corrupted this, or you\u0027ve reverted an earlier commit",
+      "range": {
+        "startLine": 1499,
+        "startChar": 1,
+        "endLine": 1499,
+        "endChar": 39
+      },
+      "revId": "a4a4dff74b9984cfa5255202e78410db80f97f93",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_d8785cc2",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 1796,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-03-13T21:41:51Z",
+      "side": 1,
+      "message": "Same here",
+      "range": {
+        "startLine": 1796,
+        "startChar": 1,
+        "endLine": 1796,
+        "endChar": 41
+      },
+      "revId": "a4a4dff74b9984cfa5255202e78410db80f97f93",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_5853ec43",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 10
+      },
+      "lineNbr": 7839,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-03-13T21:41:51Z",
+      "side": 1,
+      "message": "Might aswell copy down the task too",
+      "range": {
+        "startLine": 7839,
+        "startChar": 3,
+        "endLine": 7839,
+        "endChar": 24
+      },
+      "revId": "a4a4dff74b9984cfa5255202e78410db80f97f93",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
