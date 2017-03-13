@@ -228,7 +228,7 @@ if ( $wmgUseQuickSurveys ) {
 				"anne-survey-answer-four"
 			],
 			"schema" => "QuickSurveysResponses",
-			"enabled" => true,
+			"enabled" => false,
 			"coverage" => 0,
 			"description" => "anne-survey-description",
 			"platforms" => [
@@ -246,7 +246,7 @@ if ( $wmgUseQuickSurveys ) {
 				"ext-quicksurveys-example-internal-survey-answer-negative",
 			],
 			"schema" => "QuickSurveysResponses",
-			"enabled" => true,
+			"enabled" => false,
 			"coverage" => .5,
 			"description" => "ext-quicksurveys-example-internal-survey-description",
 			"platforms" => [
@@ -262,7 +262,7 @@ if ( $wmgUseQuickSurveys ) {
 			"link" => "ext-quicksurveys-example-external-survey-link",
 			"privacyPolicy" => "ext-quicksurveys-example-external-survey-privacy-policy",
 			'coverage' => .5,
-			'enabled' => true,
+			'enabled' => false,
 			'platforms' => [
 				'desktop' => [ 'stable' ],
 				'mobile' => [ 'stable', 'beta' ],
