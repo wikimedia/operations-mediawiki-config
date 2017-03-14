@@ -297,7 +297,6 @@ if ( $wmgUseGraph ) {
 
 if ( $wmgUseORES ) {
 	wfLoadExtension( 'ORES' );
-	$wgOresWikiId = 'testwiki';
 	$wgOresBaseUrl = 'https://ores-beta.wmflabs.org/';
 }
 

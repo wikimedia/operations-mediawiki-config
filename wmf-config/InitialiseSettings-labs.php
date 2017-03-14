@@ -431,13 +431,22 @@ function wmfLabsSettings() {
 		'wgOresModels' => [
 			'default' => [
 				'damaging' => true,
+				'goodfaith' => false,
 				'reverted' => true,
+				'wp10' => false,
+			],
+			// This is separate because
+			// it uses the real wgOresWikiId
+			// below.
+			'enwiki' => [
+				'damaging' => true,
 				'goodfaith' => true,
+				'reverted' => false,
 				'wp10' => false,
 			],
 			'wikipedia' => [
 				'damaging' => true,
-				'goodfaith' => true,
+				'goodfaith' => false,
 				'reverted' => false,
 				'wp10' => false,
 			], // T127661
