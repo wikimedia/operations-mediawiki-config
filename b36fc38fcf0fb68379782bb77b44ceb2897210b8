@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_8c2dac43",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 920
+      },
+      "writtenOn": "2017-03-14T23:56:38Z",
+      "side": 0,
+      "message": "We did this after a downtime in ORES in production that could\u0027ve been caught by using a real model instead of testwiki (a fake one) so we decided to have enwiki in beta uses the model for English Wikipedia to catch more errors. I can point out to the discussions.",
+      "revId": "b36fc38fcf0fb68379782bb77b44ceb2897210b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
