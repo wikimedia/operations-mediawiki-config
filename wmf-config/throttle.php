@@ -48,6 +48,14 @@ $wmgThrottlingExceptions[] = [ // Requested on IRC
 	'value' => 30 // 20 expected
 ];
 
+$wmgThrottlingExceptions[] = [ // T160427
+	'from' => '2017-03-25T09:00 -5:00',
+	'to' => '2017-03-25T17:00 -5:00',
+	'range' => '129.21.0.0/16',
+	'dbname' => 'enwiki',
+	'value' => 120 // 100 expected
+];
+
 ## Add throttling definitions above.
 
 /**
