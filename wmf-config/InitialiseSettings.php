@@ -18331,7 +18331,7 @@ $wgConf->settings = [
 
 'wmgUsePageViewInfo' => [
 	'default' => false,
-	'testwiki' => true,
+	'group0' => true,
 ],
 
 ];
