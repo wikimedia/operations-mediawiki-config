@@ -3493,6 +3493,10 @@ if ( $wmgUseKartographer ) {
 	wfLoadExtension( 'Kartographer' );
 }
 
+if ( $wmgUsePageViewInfo ) {
+	wfLoadExtension( 'PageViewInfo' );
+}
+
 if ( $wgDBname === 'foundationwiki' ) {
 	// Foundationwiki has raw html enabled. Attempt to prevent people
 	// from accidentally violating the privacy policy with external scripts.
