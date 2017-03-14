@@ -13287,6 +13287,12 @@ $wgConf->settings = [
 	'default' => 0.05,
 ],
 
+'wgPopupsStatsvSamplingRate' => [
+	// Careful! This value should not be increased without coordination with the
+	// Operations and/or Analytics teams.
+	'default' => 0.05,
+],
+
 'wgPopupsAPIUseRESTBase' => [
 	'default' => false,
 
