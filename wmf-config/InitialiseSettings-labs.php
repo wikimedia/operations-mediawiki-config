@@ -437,8 +437,8 @@ function wmfLabsSettings() {
 			],
 			'wikipedia' => [
 				'damaging' => true,
+				'goodfaith' => true,
 				'reverted' => false,
-				'goodfaith' => false,
 				'wp10' => false,
 			], // T127661
 		],
