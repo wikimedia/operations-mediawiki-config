@@ -13385,6 +13385,7 @@ $wgConf->settings = [
 	'loginwiki' => false,
 	'votewiki' => false,
 	'private' => false,
+	'officewiki' => true, // T160420
 ],
 
 'wmgMediaViewerEnableByDefault' => [
