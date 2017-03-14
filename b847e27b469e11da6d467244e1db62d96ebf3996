@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_17868abe",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 13
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-03-14T21:36:16Z",
+      "side": 1,
+      "message": "No it shouldn\u0027t. Remove this",
+      "range": {
+        "startLine": 8,
+        "startChar": 0,
+        "endLine": 8,
+        "endChar": 63
+      },
+      "revId": "b847e27b469e11da6d467244e1db62d96ebf3996",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_d7f82249",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 1499,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-03-14T21:36:16Z",
+      "side": 1,
+      "message": "You\u0027re still making a change here.",
+      "range": {
+        "startLine": 1499,
+        "startChar": 1,
+        "endLine": 1499,
+        "endChar": 39
+      },
+      "revId": "b847e27b469e11da6d467244e1db62d96ebf3996",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_77a02e3f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 13
+      },
+      "lineNbr": 1796,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-03-14T21:36:16Z",
+      "side": 1,
+      "message": "And here",
+      "range": {
+        "startLine": 1796,
+        "startChar": 1,
+        "endLine": 1796,
+        "endChar": 41
+      },
+      "revId": "b847e27b469e11da6d467244e1db62d96ebf3996",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
