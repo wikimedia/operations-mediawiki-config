@@ -18303,6 +18303,11 @@ $wgConf->settings = [
 	'wikipedia' => 0.001,
 ],
 
+'wmgUsePageViewInfo' => [
+	'default' => false,
+	'group0' => true,
+],
+
 ];
 
 ### WMF Labs override #####

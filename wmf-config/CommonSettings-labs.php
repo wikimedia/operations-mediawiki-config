@@ -313,10 +313,6 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	$wgDefaultUserOptions['compact-language-links'] = 0;
 }
 
-if ( $wmgUsePageViewInfo ) {
-	wfLoadExtension( 'PageViewInfo' );
-}
-
 if ( $wmgUseEmailAuth ) {
 	wfLoadExtension( 'EmailAuth' );
 	// make it do something testable

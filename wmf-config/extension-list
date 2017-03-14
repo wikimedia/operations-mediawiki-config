@@ -91,6 +91,7 @@ $IP/extensions/PageAssessments/extension.json
 $IP/extensions/PagedTiffHandler/extension.json
 $IP/extensions/PageImages/extension.json
 $IP/extensions/PageTriage/PageTriage.php
+$IP/extensions/PageViewInfo/extension.json
 $IP/extensions/ParserFunctions/extension.json
 $IP/extensions/ParsoidBatchAPI/extension.json
 $IP/extensions/PdfHandler/extension.json
