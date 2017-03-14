@@ -17176,6 +17176,11 @@ $wgConf->settings = [
 	'loginwiki' => false,
 	'votewiki' => false,
 ],
+// T152115
+'wgPageImagesLeadSectionOnly' => [
+	'default' => false,
+	'cawiki' => true,
+],
 'wmgPageImagesExpandOpenSearchXml' => [
 	'default' => true,
 ],
