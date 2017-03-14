@@ -63,6 +63,14 @@ class Clean(main.AbstractSync):
                     if subprocess.call(gerrit_prune_cmd) != 0:
                         logger.info('Failed to prune core branch')
 
+        # Prune cache junk from masters used by l10nupdate
+        self.execute_remote(
+            'clean-masters-l10nupdate-cache',
+            self._get_master_list(),
+            ['sudo', '-u', 'l10nupdate', 'rm', '-fR',
+             '/var/lib/l10nupdate/caches/cache-%s' % branch]
+        )
+
         # Prune junk from masters owned by l10nupdate
         self.execute_remote(
             'clean-masters-l10nupdate',
