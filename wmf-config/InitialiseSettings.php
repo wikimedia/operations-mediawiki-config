@@ -18342,9 +18342,11 @@ $wgConf->settings = [
 ],
 
 'wmgUsePageViewInfo' => [
-	'default' => false,
-	'group0' => true,
-	'group1' => true,
+	'default' => true,
+	'private' => false,
+	'fishbowl' => false,
+	'nonglobal' => false,
+	'foundationwiki' => true,
 ],
 
 ];
