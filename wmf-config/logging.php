@@ -178,7 +178,7 @@ $wmgMonologConfig =  [
 	],
 ];
 
-if ( $wmgLogAuthmanagerMetrics ) {
+if ( $wmgLogAuthmanagerMetrics && $wmgUseWikimediaEvents ) {
 	// authmanager is the old name, but it has been repurposed
 	// to be a more generic log channel; authevents is the new name
 	$wmgMonologConfig['loggers']['authmanager'] = [
