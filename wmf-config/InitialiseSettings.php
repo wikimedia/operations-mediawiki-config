@@ -14068,7 +14068,9 @@ $wgConf->settings = [
 
 'wmgUseLinter' => [
 	'default' => false,
+	'small' => true,
 	'testwiki' => true,
+	'group0' => true,
 ],
 
 'wgLinterSubmitterWhitelist' => [
