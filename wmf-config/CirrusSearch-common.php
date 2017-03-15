@@ -251,6 +251,12 @@ $wgCirrusSearchExtraIndexSettings = [
 	'merge.scheduler.max_thread_count' => 1,
 ];
 
+// Temp hax for variable that was removed, due to interwiki search based on
+// lang detection asking for this variable from wmf.15 to wmf.16 wikis.
+if ( !isset( $wgCirrusSearchCompletionGeoContextSettings ) ) {
+	$wgCirrusSearchCompletionGeoContextSettings = [];
+}
+
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
