@@ -16,6 +16,24 @@
       "revId": "b36fc38fcf0fb68379782bb77b44ceb2897210b8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_4cb1e4db",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 300,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2017-03-15T00:16:36Z",
+      "side": 0,
+      "message": "That\u0027s what I\u0027m doing.\n\nIf you check $wgOresWikiId on Beta Cluster (deployment-tin) enwiki, it\u0027s wrongly \u0027testwiki\u0027 due to this line:\n\nmattflaschen@deployment-tin:~$ echo \u0027echo $wgOresWikiId;\u0027|mwscript eval.php --wiki\u003denwiki\ntestwiki\n\nWith this fix, it will properly follow InitialiseSettings-labs.php (I added a comment there).",
+      "parentUuid": "8e46e3ee_8c2dac43",
+      "revId": "b36fc38fcf0fb68379782bb77b44ceb2897210b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }

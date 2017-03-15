@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_acc0a830",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 464,
+      "author": {
+        "id": 519
+      },
+      "writtenOn": "2017-03-15T00:16:36Z",
+      "side": 1,
+      "message": "This will now start working for \u0027enwiki\u0027 because it\u0027s no longer forced to \u0027testwiki\u0027.",
+      "revId": "404ee1bc63a271697468bcdc95975645f8ff95e7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
