@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_d8a36e3e",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 1928,
+      "author": {
+        "id": 3418
+      },
+      "writtenOn": "2017-03-15T17:11:55Z",
+      "side": 1,
+      "message": "remove this from the comment as its unprofessional",
+      "range": {
+        "startLine": 1928,
+        "startChar": 35,
+        "endLine": 1928,
+        "endChar": 40
+      },
+      "revId": "a0233c2deadd0b8f504f99ae5d690b340385ca46",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
