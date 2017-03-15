@@ -255,6 +255,7 @@ $wgCirrusSearchExtraIndexSettings = [
 // lang detection asking for this variable from wmf.15 to wmf.16 wikis.
 if ( !isset( $wgCirrusSearchCompletionGeoContextSettings ) ) {
 	$wgCirrusSearchCompletionGeoContextSettings = [];
+    $wgCirrusSearchCacheWarmers = [];
 }
 
 # Load per realm specific configuration, either:
