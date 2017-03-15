@@ -6,6 +6,8 @@ $wgDBpassword = '*';
 $wmgCaptchaSecret = '*';
 $wmgCaptchaPassword = '*';
 
+$wmgContributionTrackingDBpassword = '*';
+
 $wmgLogstashPassword = '*';
 
 $wmgRedisPassword = '*';
