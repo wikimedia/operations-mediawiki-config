@@ -257,6 +257,8 @@ if ( !isset( $wgCirrusSearchCompletionGeoContextSettings ) ) {
 	$wgCirrusSearchCompletionGeoContextSettings = [];
 	$wgCirrusSearchCacheWarmers = [];
 	$wgCirrusSearchCompletionGeoContextProfiles = [];
+	$wgCirrusSearchMainPageCacheWarmer = false;
+	$wgCirrusSearchCompletionSuggesterGeoContext = [];
 }
 
 # Load per realm specific configuration, either:
