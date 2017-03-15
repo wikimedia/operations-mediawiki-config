@@ -17965,6 +17965,9 @@ $wgConf->settings = [
 	'enwiki' => true, // T140003
 	'cswiki' => true, // T151611
 ],
+'wgOresExtensionStatus' => [
+	'default' => 'beta'
+],
 'wgOresModels' => [
 	'default' => [
 		'damaging' => true,
