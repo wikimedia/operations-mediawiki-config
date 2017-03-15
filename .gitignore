@@ -13,7 +13,6 @@ wmf-config/ExtensionMessages-*.php
 php-*/
 wikiversions.php
 wikiversions-labs.php
-wmf-config/*-setup.php
 
 # Test runners
 /logs
