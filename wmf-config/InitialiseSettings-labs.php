@@ -428,6 +428,9 @@ function wmfLabsSettings() {
 			'default' => false,
 			'wikipedia' => true, // T127661
 		],
+		'wgOresExtensionStatus' => [
+			'cawiki' => 'on',
+		],
 		'wgOresModels' => [
 			'default' => [
 				'damaging' => true,
