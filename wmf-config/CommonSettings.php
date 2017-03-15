@@ -1925,7 +1925,7 @@ $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
 $wgDefaultUserOptions['usenewrc'] = 0;
 $wgDefaultUserOptions['extendwatchlist'] = 0;
 
-# # Hack to block emails from some idiot user who likes 'The Joker' --Andrew 2009-05-28
+# # Hack to block emails from some user who likes 'The Joker' --Andrew 2009-05-28
 $wgHooks['EmailUser'][] = function ( &$to, &$from, &$subject, &$text ) {
 	$blockedAddresses = [ 'the4joker@gmail.com', 'randomdude5555@gmail.com', 'siyang.li@yahoo.com', 'johnnywiki@gmail.com', 'wikifreedomfighter@googlemail.com' ];
 	return !in_array( $from->address, $blockedAddresses );
