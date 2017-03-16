@@ -17005,7 +17005,7 @@ $wgConf->settings = [
 
 'wmgUseInterwikiSorting' => [
 	'default' => false,
-	// 'wikidataclient' => true, // T150183
+	'wikidataclient' => true, // T150183
 ],
 
 'wgInterwikiSortingSort' => [
