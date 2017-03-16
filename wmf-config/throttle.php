@@ -28,18 +28,6 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[]  = [ // T160619 - Odia Wikipedia's 100 Women Editathon:
-	'from'   => '2017-03-18T07:00+05:30',
-	'to'     => '2017-03-19T20:00+05:30',
-	'IP'     => [
-		'111.93.176.73',
-		'117.247.70.19',
-		'103.72.63.6',
-	],
-	'dbname' => [ 'orwiki', 'hiwiki', 'enwiki', 'commonswiki' ],
-	'value'  => 70, // 25-30 expected participants
-];
-
 $wmgThrottlingExceptions[] = [ // T157504
 	'from' => '2017-01-09T00:00:00 UTC',
 	'to' =>   '2017-06-31T23:59:59 UTC',
