@@ -1,0 +1,35 @@
+App server error pages
+----------------------
+
+Files in this directory are used by PHP or Apache in the event
+of an error. Remember that this repository is deployed to app
+servers at '/srv/mediawiki'.
+
+404.html
+ Symlinked to "/404.html" in some docroots (e.g. 'secure') and configured via
+ individual site's Apache config in operations/puppet.git.
+
+404.php
+ Configured by class mediawiki::hhvm in operations/puppet.git as the
+ default 404-handler (error_document404) for HHVM.
+
+ Also symlinked to /w/404.php, which is the default 404-handler as
+ configured by 'apache/apache2.conf.erb', and various mediawiki sites
+ in operations/puppet.git.
+
+503.html
+ Symlinked to "/503.html" in most docroots, which is the default 503-handler
+ configured by 'apache/apache2.conf.erb' in operations/puppet.git.
+
+default.html
+ Symlinked to docroot/default/index.html.
+
+ The default DocumentRoot on app servers is /srv/mediawiki/docroot/default
+ as configured by 'apache/apache2.conf.erb', 'sites/nonexistent.conf' and
+ 'sites/redirects.conf' in the mediawiki module in operations/puppet.git.
+
+hhvm-fatal-error.php
+ Configured by class mediawiki::hhvm in operations/puppet.git.
+
+php-fatal-error.php
+ Configured by wmerrors.ini in operations/puppet.git.
