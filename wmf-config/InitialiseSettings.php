@@ -17975,7 +17975,6 @@ $wgConf->settings = [
 ],
 'wgOresExtensionStatus' => [
 	'default' => 'on',
-	'enwiki' => 'beta',
 ],
 'wgOresModels' => [
 	'default' => [
@@ -18014,6 +18013,7 @@ $wgConf->settings = [
 	'trwiki' => true,
 	'cswiki' => true,
 	'wikidatawiki' => true,
+	'enwiki' => true,
 ],
 ### End (roughly) of general extensions ########################
 
