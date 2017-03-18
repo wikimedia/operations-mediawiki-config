@@ -18020,12 +18020,11 @@ $wgConf->settings = [
 	'hewiki' => true, // T161621
 ],
 'wgOresExtensionStatus' => [
-	'default' => 'beta',
-	'plwiki' => 'on',
-	'ptwiki' => 'on',
-	'fawiki' => 'on',
-	'ruwiki' => 'on',
-	'trwiki' => 'on',
+	'default' => 'on',
+	'wikidatawiki' => 'beta',
+	'nlwiki' => 'beta',
+	'cswiki' => 'beta',
+	'etwiki' => 'beta',
 ],
 'wgOresModels' => [
 	'default' => [
@@ -18135,16 +18134,11 @@ $wgConf->settings = [
 	'wikidatawiki' => [ 0 => true, 120 => true ], // T139660
 ],
 'wgEnableRcFiltersBetaFeature' => [
-	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'mediawikiwiki' => true,
-	'plwiki' => true,
-	'ptwiki' => true,
-	'fawiki' => true,
-	'ruwiki' => true,
-	'trwiki' => true,
-	'frwiki' => true,
+	'default' => true,
+	'wikidatawiki' => false,
+	'nlwiki' => false,
+	'cswiki' => false,
+	'etwiki' => false,
 ],
 ### End (roughly) of general extensions ########################
 
