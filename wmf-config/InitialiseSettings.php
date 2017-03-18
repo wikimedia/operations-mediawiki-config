@@ -13258,6 +13258,7 @@ $wgConf->settings = [
 		'revisionslider',                           // [WMDE] 2017-05-08 - RevisionSlider
 		'visualeditor-newwikitext',                 // [Editing] 2017-05-29 – New wikitext editor
 		'twocolconflict',                           // [WMDE] 2017-07-18 – New edit conflict view
+		'rcenhancedfilters',                        // [Editing] 2017-09-28 - Enhanced recent changes filters
 	],
 ],
 
