@@ -18131,6 +18131,9 @@ $wgConf->settings = [
 	'default' => 'beta',
 	'plwiki' => 'on',
 	'ptwiki' => 'on',
+	'fawiki' => 'on',
+	'ruwiki' => 'on',
+	'trwiki' => 'on',
 ],
 'wgOresModels' => [
 	'default' => [
@@ -18193,6 +18196,10 @@ $wgConf->settings = [
 	'mediawikiwiki' => true,
 	'plwiki' => true,
 	'ptwiki' => true,
+	'fawiki' => true,
+	'ruwiki' => true,
+	'trwiki' => true,
+	'frwiki' => true,
 ],
 ### End (roughly) of general extensions ########################
 
