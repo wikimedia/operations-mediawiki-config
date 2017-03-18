@@ -18021,7 +18021,9 @@ $wgConf->settings = [
 	'etwiki' => true, // T159609
 ],
 'wgOresExtensionStatus' => [
-	'default' => 'beta'
+	'default' => 'beta',
+	'plwiki' => 'on',
+	'ptwiki' => 'on',
 ],
 'wgOresModels' => [
 	'default' => [
@@ -18052,6 +18054,9 @@ $wgConf->settings = [
 	'default' => false,
 	'testwiki' => true,
 	'test2wiki' => true,
+	'mediawikiwiki' => true,
+	'plwiki' => true,
+	'ptwiki' => true,
 ],
 ### End (roughly) of general extensions ########################
 
