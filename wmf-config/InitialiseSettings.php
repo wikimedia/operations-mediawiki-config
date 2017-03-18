@@ -18000,6 +18000,11 @@ $wgConf->settings = [
 	'default' => [],
 	'wikidatawiki' => [ 0 => true, 120 => true ], // T139660
 ],
+'wgEnableRcFiltersBetaFeature' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+],
 ### End (roughly) of general extensions ########################
 
 'wgUseTidy' => [
