@@ -321,10 +321,6 @@ if ( $wmgUseEmailAuth ) {
 	};
 }
 
-if ( $wmgUseCollaborationKit ) {
-	wfLoadExtension( 'CollaborationKit' );
-}
-
 if ( $wmgUseTemplateStyles ) {
 	wfLoadExtension( 'TemplateStyles' );
 }
