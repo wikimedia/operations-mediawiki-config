@@ -13274,6 +13274,14 @@ $wgConf->settings = [
 'wmgUsePopups' => [
 	'default' => false,
 	'sewikimedia' => true, // T68374
+
+	// T136602: Make Page Previews enabled by default for the following "stage
+	// 0" wikis. Note well that enabling Page Previews by default on hewiki is
+	// blocked on T160614.
+	'itwiki' => true,
+	'ruwiki' => true,
+	'elwiki' => true,
+	'cawiki' => true,
 ],
 
 'wmgPopupsBetaFeature' => [
@@ -13286,13 +13294,13 @@ $wgConf->settings = [
 	// Operations and/or Analytics teams. At the very least, be mindful of the
 	// current rate of Popups events being logged:
 	// https://grafana.wikimedia.org/dashboard/db/eventlogging-schema?var-schema=Popups
-	'default' => 0.05,
+	'default' => 0.001,
 ],
 
 'wgPopupsStatsvSamplingRate' => [
 	// Careful! This value should not be increased without coordination with the
 	// Operations and/or Analytics teams.
-	'default' => 0.05,
+	'default' => 0.001,
 ],
 
 'wgPopupsAPIUseRESTBase' => [
