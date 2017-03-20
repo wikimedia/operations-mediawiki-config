@@ -21,6 +21,7 @@ $IP/extensions/cldr/extension.json
 $IP/extensions/CleanChanges/extension.json
 $IP/extensions/CodeEditor/extension.json
 $IP/extensions/CodeReview/extension.json
+$IP/extensions/CollaborationKit/extension.json
 $IP/extensions/Collection/Collection.php
 $IP/extensions/CommonsMetadata/extension.json
 $IP/extensions/ConfirmEdit/extension.json

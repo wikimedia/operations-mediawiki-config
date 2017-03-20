@@ -18376,6 +18376,11 @@ $wgConf->settings = [
 	'foundationwiki' => true,
 ],
 
+'wmgUseCollaborationKit' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 ];
 
 ### WMF Labs override #####
