@@ -430,6 +430,7 @@ function wmfLabsSettings() {
 		],
 		'wgOresExtensionStatus' => [
 			'cawiki' => 'on',
+			'ruwiki' => 'on',
 		],
 		'wgOresModels' => [
 			'default' => [
