@@ -30,10 +30,7 @@ $wgCirrusSearchElasticQuirks = [
 
 # Set up the the default cluster to send queries to,
 # and the list of clusters to write to.
-if ( substr( $IP, -13 ) === '1.29.0-wmf.16' ) {
-	$wgCirrusSearchDefaultCluster = 'codfw';
-	$wmgCirrusSearchUseCompletionSuggester = 'no';
-} else if ( $wmgCirrusSearchDefaultCluster === 'local' ) {
+if ( $wmgCirrusSearchDefaultCluster === 'local' ) {
 	$wgCirrusSearchDefaultCluster = $wmfDatacenter;
 } else {
 	$wgCirrusSearchDefaultCluster = $wmgCirrusSearchDefaultCluster;
