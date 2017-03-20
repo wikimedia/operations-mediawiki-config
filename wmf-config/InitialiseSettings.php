@@ -13274,6 +13274,27 @@ $wgConf->settings = [
 'wmgUsePopups' => [
 	'default' => false,
 	'sewikimedia' => true, // T68374
+
+	// T136602: Make Page Previews enabled by default for the following "stage
+	// 0" wikis. Note well that enabling Page Previews by default on hewiki is
+	// blocked on T160614.
+	'itwiki' => true,
+	'ruwiki' => true,
+	'elwiki' => true,
+	'cawiki' => true,
+],
+
+'wgPopupsAnonsEnabledSamplingRate' => [
+	'default' => 0,
+	'sewikimedia' => 1, // T68374
+
+	// T136602: Make Page Previews enabled by default for 90% of anon users for
+	// the following stage 0 wikis. As above, note well that enabling Page
+	// Previews by default on hewiki is blocked on T160614.
+	'itwiki' => 0.9,
+	'ruwiki' => 0.9,
+	'elwiki' => 0.9,
+	'cawiki' => 0.9,
 ],
 
 'wmgPopupsBetaFeature' => [
@@ -13286,20 +13307,19 @@ $wgConf->settings = [
 	// Operations and/or Analytics teams. At the very least, be mindful of the
 	// current rate of Popups events being logged:
 	// https://grafana.wikimedia.org/dashboard/db/eventlogging-schema?var-schema=Popups
-	'default' => 0.05,
+	'default' => 0.001,
 ],
 
 'wgPopupsStatsvSamplingRate' => [
 	// Careful! This value should not be increased without coordination with the
 	// Operations and/or Analytics teams.
-	'default' => 0.05,
+	'default' => 0.001,
 ],
 
 'wgPopupsAPIUseRESTBase' => [
 	'default' => false,
 
-	// T158221: Make Page Previews use RESTBase for the following "stage 0" wikis
-	// (see T136602 for more detail of the release plan for Page Previews).
+	// T158221: Make Page Previews use RESTBase for the following stage 0 wikis.
 	'itwiki' => true,
 	'ruwiki' => true,
 	'elwiki' => true,
