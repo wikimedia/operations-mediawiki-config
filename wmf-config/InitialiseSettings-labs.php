@@ -602,5 +602,10 @@ function wmfLabsSettings() {
 		'wgEnableRcFiltersBetaFeature' => [
 			'default' => true,
 		],
+
+		'wmgUseCollaborationKit' => [
+			'default' => false,
+			'testwiki' => true,
+		],
 	];
 } # wmflLabsSettings()
