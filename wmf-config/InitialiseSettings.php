@@ -17207,8 +17207,7 @@ $wgConf->settings = [
 ],
 // T152115
 'wgPageImagesLeadSectionOnly' => [
-	'default' => false,
-	'cawiki' => true,
+	'default' => true,
 ],
 'wmgPageImagesExpandOpenSearchXml' => [
 	'default' => true,
