@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_80cd4f8a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 13288,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-03-20T18:00:01Z",
+      "side": 1,
+      "message": "I think the default should be 1 here and it should reflect the default in Popups which should also be 1.\n\nA third party enabling this extension shouldn\u0027t need to play with this value.",
+      "revId": "830aa64cdba8d69a93cbf62eea433204cf0b8dab",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
