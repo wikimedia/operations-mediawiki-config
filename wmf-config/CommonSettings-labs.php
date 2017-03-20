@@ -330,10 +330,6 @@ if ( $wmgUseLinter ) {
 	wfLoadExtension( 'Linter' );
 }
 
-if ( $wmgUseCollaborationKit ) {
-	wfLoadExtension( 'CollaborationKit' );
-}
-
 if ( $wmgUseTemplateStyles ) {
 	wfLoadExtension( 'TemplateStyles' );
 }

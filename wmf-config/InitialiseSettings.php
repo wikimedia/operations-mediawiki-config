@@ -18777,6 +18777,11 @@ $wgConf->settings = [
 	'zerowiki' => [ 480 ], // NS_ZERO. See T162771
 ],
 
+'wmgUseCollaborationKit' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
 ];
 
 ### WMF Labs override #####
