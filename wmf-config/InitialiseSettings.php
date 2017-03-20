@@ -14567,6 +14567,9 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
+
+	// Wikis by request
+	'frwiki' => true, // T160609
 ],
 
 'wmgUseRSSExtension' => [
