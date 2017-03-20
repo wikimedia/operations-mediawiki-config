@@ -3524,6 +3524,10 @@ if ( $wmgUsePageViewInfo ) {
 	wfLoadExtension( 'PageViewInfo' );
 }
 
+if ( $wmgUseCollaborationKit ) {
+        wfLoadExtension( 'CollaborationKit' );
+}
+
 if ( $wgDBname === 'foundationwiki' ) {
 	// Foundationwiki has raw html enabled. Attempt to prevent people
 	// from accidentally violating the privacy policy with external scripts.
