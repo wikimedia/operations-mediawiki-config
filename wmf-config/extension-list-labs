@@ -1,4 +1,5 @@
 $IP/extensions/Cognate/extension.json
+$IP/extensions/CollaborationKit/extension.json
 $IP/extensions/Dashiki/extension.json
 $IP/extensions/EmailAuth/extension.json
 $IP/extensions/Linter/extension.json
