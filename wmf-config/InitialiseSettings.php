@@ -14570,6 +14570,7 @@ $wgConf->settings = [
 
 	// Wikis by request
 	'frwiki' => true, // T160609
+	'lawiki' => true, // T160844
 ],
 
 'wmgUseRSSExtension' => [
