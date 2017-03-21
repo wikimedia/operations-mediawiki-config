@@ -18318,6 +18318,7 @@ $wgConf->settings = [
 	'mkwiki' => true,
 	'nowiki' => true, // T154021
 	'ruwiki' => true,
+	'svwiki' => true, // T161032
 	'testwiki' => true,
 	'test2wiki' => true,
 ],
