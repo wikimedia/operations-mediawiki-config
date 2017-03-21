@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e46e3ee_873481f2",
+        "filename": "errorpages/404.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-03-21T05:06:08Z",
+      "side": 1,
+      "message": "Let\u0027s stay with quoting attributes…",
+      "revId": "94835fdd079a25c8d097a5a9bf20391a0aecd946",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_870b212d",
+        "filename": "errorpages/404.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-03-21T05:06:08Z",
+      "side": 1,
+      "message": "Where\u0027s the `\u003chead\u003e`, where the `\u003cbody\u003e`?",
+      "revId": "94835fdd079a25c8d097a5a9bf20391a0aecd946",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_c7112961",
+        "filename": "errorpages/404.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-03-21T05:06:08Z",
+      "side": 1,
+      "message": "We should align this with CSS Coding guidelines. Also mixing `px` and `em`s for font",
+      "revId": "94835fdd079a25c8d097a5a9bf20391a0aecd946",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_07171157",
+        "filename": "errorpages/404.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-03-21T05:06:08Z",
+      "side": 1,
+      "message": "No HTTPS here?",
+      "revId": "94835fdd079a25c8d097a5a9bf20391a0aecd946",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
