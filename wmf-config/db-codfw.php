@@ -636,13 +636,13 @@ $wgLBFactoryConf = [
 # These read only messages should currently be kept,
 # to prevent accidental write to eqiad from codfw.
 'readOnlyBySection' => [
-        's1'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
-        's2'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
-        'DEFAULT' 	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes', # s3
-        's4'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
-        's5'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
-        's6'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
-        's7'      	=> 'Mediawiki is in read-only mode during maintenance, please try again in 15 minutes',
+	's1'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
+	's2'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
+	'DEFAULT' => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes', # s3
+	's4'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
+	's5'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
+	's6'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
+	's7'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
 ],
 
 ];
