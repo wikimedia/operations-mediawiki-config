@@ -4852,6 +4852,7 @@ $wgConf->settings = [
 		'generated-pp-node-count' => 'debug',
 		'GettingStarted' => 'debug',
 		'GlobalTitleFail' => [ 'sample' => 10000 ], // chad hates $wgTitle
+		'headers-sent' => 'debug',
 		'HttpError' => 'error', // Only log http errors with a 500+ code T85795
 		'jobqueue' => 'debug',
 		'JobQueueFederated' => 'debug',
