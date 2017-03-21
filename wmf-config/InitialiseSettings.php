@@ -17300,7 +17300,7 @@ $wgConf->settings = [
 ],
 
 'wmgCirrusSearchWriteClusters' => [
-	'default' => [ /* 'eqiad', */ 'codfw' ],
+	'default' => [ 'eqiad', 'codfw' ],
 ],
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => [
