@@ -17528,7 +17528,7 @@ $wgConf->settings = [
 
 // Enable completion suggester on all wikis (except wikidata)
 'wmgCirrusSearchUseCompletionSuggester' => [
-	'default' => 'no',
+	'default' => 'yes',
 	'wikidatawiki' => 'no',
 ],
 
