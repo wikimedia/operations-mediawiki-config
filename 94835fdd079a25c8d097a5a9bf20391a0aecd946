@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "8e46e3ee_42fc2708",
+        "filename": "errorpages/404.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-03-21T05:11:29Z",
+      "side": 1,
+      "message": "Not new, same as other errorpages. Let\u0027s do in commit before or after this, otherwise this will diverge.",
+      "parentUuid": "8e46e3ee_873481f2",
+      "revId": "94835fdd079a25c8d097a5a9bf20391a0aecd946",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e46e3ee_870b212d",
         "filename": "errorpages/404.php",
         "patchSetId": 3
@@ -30,6 +48,24 @@
       "writtenOn": "2017-03-21T05:06:08Z",
       "side": 1,
       "message": "Where\u0027s the `\u003chead\u003e`, where the `\u003cbody\u003e`?",
+      "revId": "94835fdd079a25c8d097a5a9bf20391a0aecd946",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_02061f20",
+        "filename": "errorpages/404.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-03-21T05:11:29Z",
+      "side": 1,
+      "message": "They\u0027re optional in HTML5.\n\nEvery new HTML document automatically has a \u003chead\u003e and \u003cbody\u003e in its DOM, regardless of what it the HTML response declares. The first few nodes are appended to the \u003chead\u003e, the first valid content node and further nodes are appended to the \u003cbody\u003e\n\nThis is common to omit for simple pages. MediaWiki does this already in various places.\n\nAnd also, this is the same as the other error pages. If important, should be in a separate commit before or after this.",
+      "parentUuid": "8e46e3ee_870b212d",
       "revId": "94835fdd079a25c8d097a5a9bf20391a0aecd946",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
@@ -53,6 +89,24 @@
     },
     {
       "key": {
+        "uuid": "8e46e3ee_c2103756",
+        "filename": "errorpages/404.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 36,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-03-21T05:11:29Z",
+      "side": 1,
+      "message": "It sets the root size using pixels. The rest uses ems. No mixing? Either way, this is the same as other pages.",
+      "parentUuid": "8e46e3ee_c7112961",
+      "revId": "94835fdd079a25c8d097a5a9bf20391a0aecd946",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e46e3ee_07171157",
         "filename": "errorpages/404.php",
         "patchSetId": 3
@@ -64,6 +118,24 @@
       "writtenOn": "2017-03-21T05:06:08Z",
       "side": 1,
       "message": "No HTTPS here?",
+      "revId": "94835fdd079a25c8d097a5a9bf20391a0aecd946",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e46e3ee_2209db2f",
+        "filename": "errorpages/404.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-03-21T05:11:29Z",
+      "side": 1,
+      "message": "Matches existing pages.",
+      "parentUuid": "8e46e3ee_07171157",
       "revId": "94835fdd079a25c8d097a5a9bf20391a0aecd946",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
