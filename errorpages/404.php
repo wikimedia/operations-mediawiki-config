@@ -1,14 +1,20 @@
 <?php
+/**
+ * This is the 404-handler for Apache and HHVM (see README).
+ * It is typically served from wiki domains for urls outside
+ * the scope of MediaWiki. For example:
+ *
+ * - https://en.wikipedia.org/Example
+ * - https://en.wikipedia.org/w/Example
+ *
+ * The response is similar to errorpages/404.html, except that it uses a
+ * project-specific favicon (instead of generic wmf.ico).
+ */
 header( 'Content-Type: text/html; charset=utf-8' );
 header( 'Cache-Control: s-maxage=2678400, max-age=2678400' );
 
-$prot = ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' )
-	? 'https://'
-	: 'http://';
-$serverName = strlen( $_SERVER['HTTP_HOST'] ) ? $_SERVER['HTTP_HOST'] : $_SERVER['SERVER_NAME'];
-$path = $_SERVER['REQUEST_URI'];
-
-$encUrl = htmlspecialchars( $prot . $serverName . $path );
+$path = '/errorpages/404.php';#$_SERVER['REQUEST_URI'];
+$encUrl = htmlspecialchars( $path );
 
 if( preg_match( '/(%2f)/i', $path, $matches )
 	|| preg_match( '/^\/(?:upload|style|wiki|w|extensions)\/(.*)/i', $path, $matches )
@@ -20,106 +26,30 @@ if( preg_match( '/(%2f)/i', $path, $matches )
 	$target = '/wiki' . $path;
 }
 $encTarget = htmlspecialchars( $target );
-$detailsHtml ="<p><b>Did you mean: <a href=\"$encTarget\">$encTarget</a></b></p>";
 $outputHtml=<<<END
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Wikimedia page not found: $encUrl</title>
-			<link rel="shortcut icon" href="/favicon.ico">
-			<style>
-				body {
-					background-image: url('//upload.wikimedia.org/wikipedia/commons/9/96/Errorbg.png');
-					background-repeat: repeat-x;
-					background-color: white;
-					height: 100%;
-					margin: 0;
-					padding: 0;
-					font-family: 'Gill Sans MT', 'Gill Sans', sans-serif;
-					color: #484848;
-				}
-				a:link, a:visited {
-					color: #005b90;
-				}
-				a:hover, a:active {
-					color: #900000;
-				}
-				h1 {
-					color: black;
-					margin: 0px;
-				}
-				h2 {
-					color: #484848;
-					padding: 0px;
-					margin: 0px;
-				}
-				p {
-					margin-top: 10px;
-					margin-bottom: 0px;
-					padding-bottom: 0.5em;
-				}
-				#center {
-					position: absolute;
-					top: 50%;
-					width: 100%;
-					height: 1px;
-					overflow: visible;
-				}
-				#main {
-					position: absolute;
-					left: 50%;
-					width: 720px;
-					margin-left: -360px;
-					height: 340px;
-					top: -170px
-				}
-				#logo {
-					display: block;
-					float: left;
-					background-image: url('//upload.wikimedia.org/wikipedia/commons/thumb/8/81/Wikimedia-logo.svg/300px-Wikimedia-logo.svg.png');
-					background-position: top center;
-					background-repeat: no-repeat;
-					height: 340px;
-					width: 300px;
-				}
-				#divider {
-					display: block;
-					float: left;
-					background-image: url('//upload.wikimedia.org/wikipedia/commons/9/97/Errorline.png');
-					background-position: center center;
-					background-repeat: no-repeat;
-					height: 340px;
-					width: 1px;
-					margin-left: 10px;
-					margin-right: 10px;
-				}
-				#message {
-					padding-left: 10px;
-					float: left;
-					display: block;
-					height: 340px;
-					width: 370px;
-				}
-		</style>
-	</head>
-	<body>
-		<div id="center">
-			<div id="main">
-				<div id="logo"></div>
-				<div id="divider"></div>
-				<div id="message">
-					<h1>Error</h1>
-					<h2>404 – File not found</h2>
-					<p><em>$encUrl</em></p>
-					<p>We could not find the above page on our servers.</p>
-					$detailsHtml
-					<p>Alternatively, you can visit the <a href="/">Main Page</a> or read <a href="//en.wikipedia.org/wiki/HTTP_404" title="Wikipedia: HTTP 404">more information</a> about this type of error.</p>
-					<p style="font-size: smaller;">A project of the <a href="//wikimediafoundation.org/wiki/Home" title="WikimediaFoundation">Wikimedia Foundation</a></p>
-				</div>
-			</div>
-		</div>
-	</body>
+<html lang=en>
+<meta charset="utf-8">
+<title>Not Found</title>
+<link rel="shortcut icon" href="/favicon.ico">
+<style>
+* { margin: 0; padding: 0; }
+body { background: #fff; margin: 7% auto 0; padding: 2em 1em 1em; font: 14px/21px sans-serif; color: #333; max-width: 560px; }
+img { float: left; margin: 0 2em 2em 0; }
+a img { border: 0; }
+h1 { margin-top: 1em; font-size: 1.2em; }
+p { margin: 0.7em 0 1em 0; }
+a { color: #0645AD; text-decoration: none; }
+a:hover { text-decoration: underline; }
+em { font-style: normal; color: #777; }
+</style>
+<a href="//www.wikimedia.org"><img src="//www.wikimedia.org/static/images/wmf.png" srcset="//www.wikimedia.org/static/images/wmf-2x.png 2x" alt=Wikimedia width=135 height=135></a>
+<h1>File not found</h1>
+<p><em>$encUrl</em></p>
+<p>We could not find the above page on our servers.</p>
+<p><b>Did you mean: <a href="$encTarget">$encTarget</a></b></p>
+<div style="clear:both;"></div>
+<p>Alternatively, you can visit the <a href="/">Main Page</a> or read <a href="https://en.wikipedia.org/wiki/HTTP_404" title="Wikipedia: HTTP 404">more information</a> about this type of error.</p>
 </html>
 END;
 
