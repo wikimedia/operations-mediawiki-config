@@ -9539,6 +9539,9 @@ $wgConf->settings = [
 			'transwiki', // T109755
 		],
 	],
+	'+betawikiversity' => [
+		'bureaucrat' => [ 'translationadmin' ], // T160120
+	],
 	'+bewiki' => [
 		'sysop' => [ 'autoeditor' ],
 	],
@@ -10256,6 +10259,9 @@ $wgConf->settings = [
 	],
 	'+bawiki' => [
 		'bureaucrat' => [ 'sysop' ],
+	],
+	'+betawikiversity' => [
+		'bureaucrat' => [ 'translationadmin' ], // T160120
 	],
 	'+bewiki' => [
 		'sysop' => [ 'autoeditor' ],
@@ -16063,6 +16069,7 @@ $wgConf->settings = [
 'wmgUseTranslate' => [
 	'default' => false,
 	'bewikimedia' => true, // T39391
+	'betawikiversity' => true, // T160120
 	'brwikimedia' => true, // T46054
 	'cawikimedia' => true, // T75394
 	'collabwiki' => true,
@@ -16147,6 +16154,7 @@ $wgConf->settings = [
 'wmgUseTranslationNotifications' => [
 	'default' => false,
 	'testwiki' => true,
+	'betawikiversity' => true, // T160120
 	'brwikimedia' => true, // T46054
 	'cawikimedia' => true, // T75394
 	'commonswiki' => true, // T126901
