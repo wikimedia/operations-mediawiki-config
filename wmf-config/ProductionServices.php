@@ -17,8 +17,8 @@ $wmfAllServices['eqiad'] = [
 	'search' => [ 'search.svc.eqiad.wmnet' ], # elasticsearch must be accessed by hostname for SSL certificate verification to work
 	'ocg' => 'http://ocg.svc.eqiad.wmnet:8000',
 	'urldownloader' => 'http://url-downloader.eqiad.wikimedia.org:8080',
-	'parsoid' => 'http://parsoid.svc.eqiad.wmnet:8000',
-	'mathoid' => 'http://mathoid.svc.eqiad.wmnet:10042',
+	'parsoid' => 'http://parsoid.discovery.wmnet:8000',
+	'mathoid' => 'http://mathoid.discovery.wmnet:10042',
 	'eventlogging' => 'udp://10.64.32.167:8421', # eventlog1001.eqiad.wmnet
 	'eventbus' => 'http://eventbus.svc.eqiad.wmnet:8085',
 	'upload' => 'upload.svc.eqiad.wmnet',
@@ -31,8 +31,8 @@ $wmfAllServices['codfw'] = [
 	'search' => [ 'search.svc.codfw.wmnet' ], # elasticsearch must be accessed by hostname for SSL certificate verification to work
 	'ocg' => 'http://ocg.svc.eqiad.wmnet:8000',
 	'urldownloader' => 'http://url-downloader.codfw.wikimedia.org:8080',
-	'parsoid' => 'http://parsoid.svc.codfw.wmnet:8000', # Change this once parsoid is up and running in codfw
-	'mathoid' => 'http://mathoid.svc.codfw.wmnet:10042',
+	'parsoid' => 'http://parsoid.discovery.wmnet:8000', # Change this once parsoid is up and running in codfw
+	'mathoid' => 'http://mathoid.discovery.wmnet:10042',
 	'eventlogging' => 'udp://10.64.32.167:8421',  # eventlog1001.eqiad.wmnet,
 	'eventbus' => 'http://eventbus.svc.codfw.wmnet:8085',
 	'upload' => 'upload.svc.codfw.wmnet',
@@ -63,8 +63,8 @@ $wmfAllServices['eqiad']['irc'] = '208.80.153.44'; // codfw: kraz
 $wmfAllServices['codfw']['irc'] = $wmfAllServices['eqiad']['irc'];
 
 ### Restbase
-$wmfAllServices['eqiad']['restbase'] = 'http://10.2.2.17:7231'; # restbase.svc.eqiad.wmnet
-$wmfAllServices['codfw']['restbase'] = 'http://10.2.1.17:7231'; # restbase.svc.codfw.wmnet
+$wmfAllServices['eqiad']['restbase'] = 'http://restbase.discovery.wmnet:7231';
+$wmfAllServices['codfw']['restbase'] = 'http://restbase.discovery.wmnet:7231';
 
 ### Poolcounter
 $wmfAllServices['eqiad']['poolcounter'] = [
