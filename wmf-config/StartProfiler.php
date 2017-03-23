@@ -141,7 +141,7 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 if (
 	ini_get( 'hhvm.stats.enable_hot_profiler' ) &&
 	!empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) &&
-	( isset( $XWD['profile'] ) || mt_rand( 1, 100000 ) === 1 )
+	isset( $XWD['profile'] )
 ) {
 	xhprof_enable( XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS );
 
