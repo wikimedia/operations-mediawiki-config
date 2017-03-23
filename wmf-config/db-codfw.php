@@ -589,14 +589,14 @@ $wgLBFactoryConf = [
 	# es2
 	'cluster24' => [
 		'10.192.48.41'  => 1, # es2016, master
-		'10.192.0.141'  => 2, # es2014 - compressed data
-#		'10.192.32.130' => 1, # es2015, crashed T147769
+#		'10.192.0.141'  => 3, # es2014 # depooled for maintenance
+		'10.192.32.130' => 3, # es2015
 	],
 	# es3
 	'cluster25' => [
 		'10.192.16.172' => 1, # es2018, master
 		'10.192.0.142'  => 3, # es2017
-#		'10.192.48.42'  => 3, # es2019, depooled T130702
+		'10.192.48.42'  => 3, # es2019
 	],
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => [
