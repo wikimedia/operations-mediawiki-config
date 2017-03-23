@@ -9122,6 +9122,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'userrights' => true ], // T30773
 	],
 	'svwiki' => [
+		'autopatrolled' => [ 'autopatrol' => true ], // T161210
 		'autoconfirmed' => [ 'patrol' => true ],
 		'rollbacker' => [ 'rollback' => true, 'autopatrol' => true ],
 	],
