@@ -18385,6 +18385,10 @@ $wgConf->settings = [
 	'foundationwiki' => true,
 ],
 
+'wmgUseParserMigration' => [
+	'default' => true,
+],
+
 ];
 
 ### WMF Labs override #####
