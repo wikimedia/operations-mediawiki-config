@@ -3512,12 +3512,25 @@ if ( $wgDBname === 'foundationwiki' ) {
 	};
 }
 
-# THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
-#
-# REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
+if ( $wmgUseParserMigration ) {
+	wfLoadExtension( 'ParserMigration' );
+	$wgParserMigrationTidiers = [
+		[
+			'driver' => 'RaggettInternalHHVM',
+			'tidyConfigFile' => $wgTidyConf,
+		],
+		[
+			'driver' => 'RemexHtml',
+		],
+	];
+}
 
 if ( $wmfRealm === 'labs' ) {
 	require( "$wmfConfigDir/CommonSettings-labs.php" );
 }
+
+# THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
+#
+# REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
 
 require( "$wmfConfigDir/ExtensionMessages-$wmgVersionNumber.php" );
