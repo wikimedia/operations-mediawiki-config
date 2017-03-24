@@ -14578,6 +14578,7 @@ $wgConf->settings = [
 	'mediawikiwiki' => true,
 
 	// Wikis by request
+	'cawiki' => true, // T161307
 	'frwiki' => true, // T160609
 	'itwiki' => true, // T160932
 	'lawiki' => true, // T160844
