@@ -609,6 +609,7 @@ $wgConf->settings = [
 	'kabwiki' => '/static/images/project-logos/kabwiki.png',  // T46974
 	'kawiki' => '/static/images/project-logos/kawiki.png',
 	'kbdwiki' => '/static/images/project-logos/kbdwiki.png',
+	'kbpwiki' => '/static/images/project-logos/kbpwiki.png', // T160868
 	'kiwiki' => '/static/images/project-logos/kiwiki.png',  // T50397
 	'kkwiki' => '/static/images/project-logos/kkwiki.png',
 	'klwiki' => '/static/images/project-logos/klwiki.png',
@@ -1272,6 +1273,7 @@ $wgConf->settings = [
 	'jvwiki' => [ '1.5x' => '/static/images/project-logos/jvwiki-1.5x.png', '2x' => '/static/images/project-logos/jvwiki-2x.png'], // T150618
 	'kaawiki' => [ '1.5x' => '/static/images/project-logos/kaawiki-1.5x.png', '2x' => '/static/images/project-logos/kaawiki-2x.png'], // T150618
 	'kabwiki' => [ '1.5x' => '/static/images/project-logos/kabwiki-1.5x.png', '2x' => '/static/images/project-logos/kabwiki-2x.png'], // T150618
+	'kbpwiki' => [ '1.5x' => '/static/images/project-logos/kbpwiki-1.5x.png', '2x' => '/static/images/project-logos/kbpwiki-2x.png'], // T160868
 	'kiwiki' => [ '1.5x' => '/static/images/project-logos/kiwiki-1.5x.png', '2x' => '/static/images/project-logos/kiwiki-2x.png'], // T150618
 	'knwiki' => [ '1.5x' => '/static/images/project-logos/knwiki-1.5x.png', '2x' => '/static/images/project-logos/knwiki-2x.png'], // T150618
 	'koiwiki' => [ '1.5x' => '/static/images/project-logos/koiwiki-1.5x.png', '2x' => '/static/images/project-logos/koiwiki-2x.png'], // T150618
