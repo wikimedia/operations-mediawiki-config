@@ -177,6 +177,10 @@ if (
 			$server['UNIQUE_ID'] = $reqId;
 		}
 
+		// Include web server name (SERVER_NAME is e.g. wikipedia.org,
+		// SERVER_ADDR is the LVS service name, e.g. appservers.svc)
+		$env['HOSTNAME'] = wfHostname();
+
 		// Re-insert scrubbed URL as REQUEST_URL:
 		$server['REQUEST_URI'] = $url;
 		$env['REQUEST_URI'] = $url;
