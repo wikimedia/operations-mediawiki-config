@@ -341,6 +341,11 @@ if ( $wmgUseCollaborationKit ) {
 	wfLoadExtension( 'CollaborationKit' );
 }
 
+if ( $wmgUseTimeless ) {
+	// Test new Isarra responsive skin
+	wfLoadSkin( 'Timeless' ); // T160643
+}
+
 $wgMessageCacheType = CACHE_ACCEL;
 
 // Let Beta Cluster Commons do upload-from-URL from production Commons.

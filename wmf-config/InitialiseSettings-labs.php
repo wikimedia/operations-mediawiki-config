@@ -609,5 +609,9 @@ function wmfLabsSettings() {
 		'wmgEnableDashikiData' => [
 			'default' => true,
 		],
+
+		'wmgUseTimeless' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
