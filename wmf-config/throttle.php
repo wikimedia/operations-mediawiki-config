@@ -28,6 +28,14 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
+$wmgThrottlingExceptions[]  = [ // T161402 - BordeauxJS (CUBale)
+	'from' => '2017-03-25T13:00:00+00:00',
+	'to' => '2017-03-25T19:00:00+00:00',
+	'IP' => '37.58.139.53',
+	'dbname' => [ 'frwiki', 'enwiki', 'commonswiki' ],
+	'value'  => 50,
+];
+
 $wmgThrottlingExceptions[]  = [ // T160619 - Odia Wikipedia's 100 Women Editathon:
 	'from'   => '2017-03-18T07:00+05:30',
 	'to'     => '2017-03-19T20:00+05:30',
