@@ -32,7 +32,7 @@ $wmgThrottlingExceptions[]  = [ // T161402 - BordeauxJS (CUBale)
 	'from' => '2017-03-25T13:00:00+00:00',
 	'to' => '2017-03-25T19:00:00+00:00',
 	'IP' => '37.58.139.53',
-	'dbname' => [ 'frwiki', 'enwiki', 'commonswiki' ],
+	'dbname' => [ 'frwiki', 'enwiki', 'commonswiki', 'wikidatawiki' ],
 	'value'  => 50,
 ];
 
