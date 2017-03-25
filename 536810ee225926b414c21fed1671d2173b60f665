@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_d43a74c0",
+        "filename": "tests/InitialiseSettingsTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-03-25T20:23:55Z",
+      "side": 1,
+      "message": "This is copied from cirrusTests::loadWgConf. Perhaps in the future create a ConfigUnitTest base class would be valuable.",
+      "revId": "536810ee225926b414c21fed1671d2173b60f665",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_f4521016",
+        "filename": "tests/InitialiseSettingsTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-03-25T20:23:55Z",
+      "side": 1,
+      "message": "Do we need to define the variables in TestServices.phpp for plain IS syntax or is that Cirrus specific?",
+      "revId": "536810ee225926b414c21fed1671d2173b60f665",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_7447e050",
+        "filename": "tests/InitialiseSettingsTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-03-25T20:23:55Z",
+      "side": 1,
+      "message": "So my first approach was:\n\npublic function provideLogoHD () {\n    $entries \u003d [];\n    foreach ( $this-\u003esettings[ \u0027wgLogoHD\u0027 ] as $db \u003d\u003e $configValue ) {\n        $entries[] \u003d [ $db, $configValue ];\n}\n    return $entries;\n}\n\npublic function testLogoHD ( $db, $configValue ) {\n... // current code without the foreach\n}\n\nBut as documented at https://phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers data providers are called BEFORE setUp",
+      "revId": "536810ee225926b414c21fed1671d2173b60f665",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_9444ec4b",
+        "filename": "tests/InitialiseSettingsTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-03-25T20:23:55Z",
+      "side": 1,
+      "message": "canonicalize allows to order the array before compare them",
+      "revId": "536810ee225926b414c21fed1671d2173b60f665",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
