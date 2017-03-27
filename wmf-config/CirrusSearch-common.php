@@ -86,6 +86,7 @@ $wgCirrusSearchWikimediaExtraPlugin = [
 	'regex' => [
 		'build',
 		'use',
+		'use_extra_timeout', // More accurate timeout (T152895)
 	],
 	'super_detect_noop' => true,
 	'id_hash_mod_filter' => true,
