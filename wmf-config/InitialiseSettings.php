@@ -14114,6 +14114,8 @@ $wgConf->settings = [
 
 'wgLinterSubmitterWhitelist' => [
 	'default' => [
+		'10.64.32.78' => true, # wtp1001.eqiad.wmnet
+		'10.64.32.73' => true, # wtp1002.eqiad.wmnet
 		'10.64.32.74' => true, # wtp1003.eqiad.wmnet
 		'10.64.32.75' => true, # wtp1004.eqiad.wmnet
 		'10.64.32.84' => true, # wtp1005.eqiad.wmnet
@@ -14136,6 +14138,8 @@ $wgConf->settings = [
 		'10.64.0.217' => true, # wtp1022.eqiad.wmnet
 		'10.64.0.218' => true, # wtp1023.eqiad.wmnet
 		'10.64.0.219' => true, # wtp1024.eqiad.wmnet
+		'10.192.16.43' => true, # wtp2001.codfw.wmnet
+		'10.192.16.44' => true, # wtp2002.codfw.wmnet
 		'10.192.16.45' => true, # wtp2003.codfw.wmnet
 		'10.192.16.46' => true, # wtp2004.codfw.wmnet
 		'10.192.16.47' => true, # wtp2005.codfw.wmnet
