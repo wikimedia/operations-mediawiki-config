@@ -28,26 +28,6 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[]  = [ // T161402 - BordeauxJS (CUBale)
-	'from' => '2017-03-25T13:00:00+00:00',
-	'to' => '2017-03-25T19:00:00+00:00',
-	'IP' => '37.58.139.53',
-	'dbname' => [ 'frwiki', 'enwiki', 'commonswiki', 'wikidatawiki' ],
-	'value'  => 50,
-];
-
-$wmgThrottlingExceptions[]  = [ // T160619 - Odia Wikipedia's 100 Women Editathon:
-	'from'   => '2017-03-18T07:00+05:30',
-	'to'     => '2017-03-19T20:00+05:30',
-	'IP'     => [
-		'111.93.176.73',
-		'117.247.70.19',
-		'103.72.63.6',
-	],
-	'dbname' => [ 'orwiki', 'hiwiki', 'enwiki', 'commonswiki' ],
-	'value'  => 70, // 25-30 expected participants
-];
-
 $wmgThrottlingExceptions[] = [ // T157504
 	'from' => '2017-01-09T00:00:00 UTC',
 	'to' =>   '2017-06-31T23:59:59 UTC',
@@ -57,23 +37,6 @@ $wmgThrottlingExceptions[] = [ // T157504
 	],
 	'dbname' => [ 'itwikiversity' ],
 	'value' => 200,
-];
-
-// https://pt.wikipedia.org/wiki/Wikip%C3%A9dia:Edit-a-thon/Atividades_em_portugu%C3%AAs/Neuroci%C3%AAncia_e_Matem%C3%A1tica_III
-$wmgThrottlingExceptions[] = [ // Requested on IRC
-	'from' => '2017-03-13T17:00 +0:00',
-	'to' => '2017-03-13T20:00 +0:00',
-	'IP' => '143.107.45.11',
-	'dbname' => [ 'ptwiki', 'commonswiki' ],
-	'value' => 30 // 20 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T160427
-	'from' => '2017-03-25T09:00 -5:00',
-	'to' => '2017-03-25T17:00 -5:00',
-	'range' => '129.21.0.0/16',
-	'dbname' => 'enwiki',
-	'value' => 120 // 100 expected
 ];
 
 ## Add throttling definitions above.
