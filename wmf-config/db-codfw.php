@@ -589,7 +589,7 @@ $wgLBFactoryConf = [
 	# es2
 	'cluster24' => [
 		'10.192.48.41'  => 1, # es2016, master
-#		'10.192.0.141'  => 3, # es2014 # depooled for maintenance T129350
+		'10.192.0.141'  => 3, # es2014
 		'10.192.32.130' => 3, # es2015
 	],
 	# es3
