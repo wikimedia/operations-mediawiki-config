@@ -8889,7 +8889,11 @@ $wgConf->settings = [
 	'ptwiki' => [
 		'autoconfirmed' => [ 'patrol' => true, 'abusefilter-log-detail' => true ],
 		'bot' => [ 'autoreviewer' => true, ],
-		'autoreviewer' => [ 'autopatrol' => true, 'autoreviewer' => true ],
+		'autoreviewer' => [
+			'autopatrol' => true,
+			'autoreviewer' => true,
+			'movefile' => true, // T161532
+		],
 		'eliminator' => [
 			'browsearchive' => true,
 			'delete' => true,
@@ -8899,7 +8903,8 @@ $wgConf->settings = [
 			'deletedtext' => true,
 			'autopatrol' => true,
 			'suppressredirect' => true,
-			'autoreviewer' => true
+			'autoreviewer' => true,
+			'movefile' => true, // T161532
 		],
 		'rollbacker' => [
 			'rollback' => true,
