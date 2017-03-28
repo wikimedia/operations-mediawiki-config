@@ -83,6 +83,7 @@ if ( $wmgUseWikibaseRepo ) {
 		],
 	];
 
+	$wgWBRepoSettings['supportedEntityTypesForEntitiesWithoutTermListings'] = [ 'property' ];
 	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
 
 	$wgWBRepoSettings['dataRightsText'] = 'Creative Commons CC0 License';
