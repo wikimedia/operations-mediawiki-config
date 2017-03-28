@@ -11,6 +11,7 @@
 $wgCirrusSearchMasterTimeout = '2m';
 
 $wgCirrusSearchClusters = [
+	'discovery' => $wmfAllServices['discovery']['search'],
 	'eqiad' => $wmfAllServices['eqiad']['search'],
 	'codfw' => $wmfAllServices['codfw']['search'],
 ];
@@ -35,6 +36,16 @@ if ( defined( 'HHVM_VERSION' ) ) {
 			],
 		];
 	}, $wgCirrusSearchClusters['codfw'] );
+	$wgCirrusSearchClusters['discovery'] = array_map( function ( $host ) {
+		return [
+			'transport' => 'CirrusSearch\\Elastica\\PooledHttps',
+			'port' => '9243',
+			'host' => $host,
+			'config' => [
+				'pool' => 'cirrus-discovery',
+			],
+		];
+	}, $wgCirrusSearchClusters['discovery'] );
 }
 
 if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {

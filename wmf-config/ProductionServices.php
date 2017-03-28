@@ -39,6 +39,10 @@ $wmfAllServices['codfw'] = [
 	'cxserver' => 'http://cxserver.svc.codfw.wmnet:8080',
 ];
 
+$wmfAllServices['discovery'] = [
+	'search' => [ 'search.discovery.wmnet' ], # elasticsearch must be accessed by hostname for SSL certificate verification to work
+];
+
 ### Logstash
 $wmfAllServices['eqiad']['logstash'] = [
 	'10.64.0.122', // logstash1001.eqiad.wmnet
