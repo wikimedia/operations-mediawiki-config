@@ -1243,8 +1243,6 @@ if ( $wmfRealm == 'labs' ) {
 	$wgHTTPTimeout = 10;
 }
 
-$wgProxyList = "$wmfConfigDir/../private/mwblocker.log";
-
 $wgBrowserBlackList[] = '/^Lynx/';
 
 $wgHiddenPrefs[] = 'prefershttps'; // T91352, T102245
