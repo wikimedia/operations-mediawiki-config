@@ -8790,9 +8790,11 @@ $wgConf->settings = [
 	],
 	'nlwiki' => [
 		'autoconfirmed' => [ 'patrol' => true ],
+		'bot' => [ 'move-categorypages' => true ], // T161551
 		'checkuser' => [ 'deletedhistory' => true, 'deletedtext' => true, 'browsearchive' => true ],
 		'arbcom' => [ 'deletedhistory' => true, 'deletedtext' => true, 'browsearchive' => true ],
 		'rollbacker' => [ 'rollback' => true ],
+		'user' => [ 'move-categorypages' => false ], // T161551
 	],
 	'+nlwiktionary' => [ 'user' => [ 'patrol' => true ] ],
 	'+nlwikivoyage' => [
