@@ -14951,8 +14951,9 @@ $wgConf->settings = [
 ],
 
 'wgMinervaUseHeaderV2' => [
+	// T160471
 	'default' => [
-		'base' => false,
+		'base' => true,
 		'beta' => true,
 	],
 
