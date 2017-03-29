@@ -20,9 +20,9 @@ $wmfAllServices['eqiad'] = [
 	'parsoid' => 'http://parsoid.discovery.wmnet:8000',
 	'mathoid' => 'http://mathoid.discovery.wmnet:10042',
 	'eventlogging' => 'udp://10.64.32.167:8421', # eventlog1001.eqiad.wmnet
-	'eventbus' => 'http://eventbus.svc.eqiad.wmnet:8085',
+	'eventbus' => 'http://eventbus.discovery.wmnet:8085',
 	'upload' => 'upload.svc.eqiad.wmnet',
-	'cxserver' => 'http://cxserver.svc.eqiad.wmnet:8080',
+	'cxserver' => 'http://cxserver.discovery.wmnet:8080',
 ];
 
 $wmfAllServices['codfw'] = [
@@ -34,9 +34,9 @@ $wmfAllServices['codfw'] = [
 	'parsoid' => 'http://parsoid.discovery.wmnet:8000', # Change this once parsoid is up and running in codfw
 	'mathoid' => 'http://mathoid.discovery.wmnet:10042',
 	'eventlogging' => 'udp://10.64.32.167:8421',  # eventlog1001.eqiad.wmnet,
-	'eventbus' => 'http://eventbus.svc.codfw.wmnet:8085',
+	'eventbus' => 'http://eventbus.discovery.wmnet:8085',
 	'upload' => 'upload.svc.codfw.wmnet',
-	'cxserver' => 'http://cxserver.svc.codfw.wmnet:8080',
+	'cxserver' => 'http://cxserver.discovery.wmnet:8080',
 ];
 
 ### Logstash
