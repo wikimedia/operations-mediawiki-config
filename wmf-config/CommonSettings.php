@@ -2167,7 +2167,7 @@ if ( $wmgUseParsoid ) {
 }
 
 if ( $wmgUseVisualEditor ) {
-	require_once( "$IP/extensions/VisualEditor/VisualEditor.php" );
+	wfLoadExtension( 'VisualEditor' );
 
 	// RESTBase connection configuration is done by $wmfUseRestbaseVRS above.
 	// Parsoid connection configuration is done by $wmgUseParsoid above.
