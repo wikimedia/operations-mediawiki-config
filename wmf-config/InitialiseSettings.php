@@ -14830,7 +14830,8 @@ $wgConf->settings = [
 'wgEditSubmitButtonLabelPublish' => [
 	'default' => true,      // T131132 from 2017-03-15
 	'private' => false,     // Private wikis are not public
-	'wikipedia' => false,   // Temporarily not set until 2017-03-22
+	'dewiki' => false,      // Temporarily not set
+	'enwiki' => false,      // Temporarily not set
 	'wikinews' => false,    // Done in local {{int:Copyrightwarning}}s instead.
 ],
 
