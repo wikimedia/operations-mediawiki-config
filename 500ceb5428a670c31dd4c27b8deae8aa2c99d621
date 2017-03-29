@@ -16,6 +16,24 @@
       "revId": "500ceb5428a670c31dd4c27b8deae8aa2c99d621",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_cdbad01e",
+        "filename": "errorpages/503.html",
+        "patchSetId": 2
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-03-29T16:41:17Z",
+      "side": 1,
+      "message": "It was there in the old design, and is also there in the current design for the Varnish error page. For example, at https://misc-web-lb.wikimedia.org/ - or whenever an internal server error happens.\n\nThis is more useful in the case of an actual exception happening in PHP/HHVM, or an internal error from Varnish/Apache.\n\nThe 503.html is just a weird faux-invocation of that same error template, always has been, with a fixed error message. I suppose we can make it more like the 404 error instead (e.g. no \"report this error message\" footer) .",
+      "parentUuid": "6e436fe2_d0302ee8",
+      "revId": "500ceb5428a670c31dd4c27b8deae8aa2c99d621",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
