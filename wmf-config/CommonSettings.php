@@ -2952,7 +2952,7 @@ wfLoadExtension( 'XAnalytics' );
 if ( $wmgUseUniversalLanguageSelector ) {
 	wfLoadExtension( 'UniversalLanguageSelector' );
 	$wgULSGeoService = false;
-	$wgULSAnonCanChangeLanguage = false;
+	$wgULSAnonCanChangeLanguage = $wmgULSAnonCanChangeLanguage;
 	$wgULSPosition = $wmgULSPosition;
 	$wgULSIMEEnabled = $wmgULSIMEEnabled;
 	$wgULSWebfontsEnabled = $wmgULSWebfontsEnabled;
