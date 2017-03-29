@@ -2602,7 +2602,7 @@ $wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetGWTFileBackendCleanupJob';
 if ( $wmgUseEducationProgram ) {
 	require_once( "$IP/extensions/EducationProgram/EducationProgram.php" );
 	$wgEPSettings['dykCategory'] = $wmgEducationProgramDYKCat;
-	$wgNamespaceProtection[EP_NS] = [ 'ep-course' ]; // T112806 (security)
+	$wgNamespaceProtection[/*EP_NS*/446] = [ 'ep-course' ]; // T112806 (security)
 }
 
 if ( $wmgUseWikimediaShopLink ) {
