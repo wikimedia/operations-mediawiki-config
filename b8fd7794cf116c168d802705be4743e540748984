@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_75426c15",
+        "filename": "errorpages/404.php",
+        "patchSetId": 7
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 2604
+      },
+      "writtenOn": "2017-03-29T01:33:34Z",
+      "side": 1,
+      "message": "“File” versus “page“ two lines further down. We should simplify by saying “Page” in both occasions assuming that the majority of 404s shown to the users are pages. 404s are confusing enough for people.",
+      "revId": "b8fd7794cf116c168d802705be4743e540748984",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
