@@ -17062,6 +17062,11 @@ $wgConf->settings = [
 	'wikidataclient' => true, // T150183
 ],
 
+'wmgULSAnonCanChangeLanguage' => [
+	'default' => false,
+	'commonswiki' => true, // T161517
+],
+
 'wgInterwikiSortingSort' => [
 	'default' => 'code',
 	'enwiki' => 'alphabetic',
