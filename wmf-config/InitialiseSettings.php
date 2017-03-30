@@ -5424,6 +5424,10 @@ $wgConf->settings = [
 		100 => 'Porth',
 		101 => 'Keskows_Porth',
 	],
+	'ladwiki' => [
+		100 => 'Portal', // T161843
+		101 => 'Diskusyón_de_Portal', // T161843
+	],
 	'lawiki' => [
 		100 => 'Porta',
 		101 => 'Disputatio_Portae',
