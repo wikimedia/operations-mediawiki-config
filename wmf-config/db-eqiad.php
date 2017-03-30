@@ -113,10 +113,10 @@ $wgLBFactoryConf = [
 		'db1036' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1054' => 1,   # A3 2.8TB  96GB, api
 		'db1060' => 1,   # C2 2.8TB  96GB, api
-#		'db1063' => 0,   # D1 2.8TB 128GB
+		'db1063' => 100,   # D1 2.8TB 128GB
 		'db1074' => 500, # A2 3.6TB 512GB
 		'db1076' => 500, # B1 3.6TB 512GB
-		'db1090' => 500, # C3 3.6TB 512GB
+#		'db1090' => 500, # C3 3.6TB 512GB T17441
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,   # A2 3.6TB 512GB, master
