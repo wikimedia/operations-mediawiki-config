@@ -16934,8 +16934,8 @@ $wgConf->settings = [
 
 'wmgRelatedArticlesFooterBlacklistedSkins' => [
 	// T144812
-	'default' => [],
-	'related-articles-footer-blacklisted-skins' => [ 'minerva' ],
+	'default' => [ 'vector', 'monobook', 'cologneblue' ],
+	'related-articles-footer-blacklisted-skins' => [ 'vector', 'monobook', 'cologneblue', 'minerva' ],
 ],
 
 'wgRelatedArticlesEnabledSamplingRate' => [
