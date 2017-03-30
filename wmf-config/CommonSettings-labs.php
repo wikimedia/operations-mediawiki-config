@@ -346,6 +346,10 @@ if ( $wmgUseTimeless ) {
 	wfLoadSkin( 'Timeless' ); // T160643
 }
 
+if ( $wmgUseLoginNotify ) {
+	wfLoadExtension( 'LoginNotify' );
+}
+
 $wgMessageCacheType = CACHE_ACCEL;
 
 // Let Beta Cluster Commons do upload-from-URL from production Commons.
