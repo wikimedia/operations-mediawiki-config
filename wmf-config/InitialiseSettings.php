@@ -18036,6 +18036,7 @@ $wgConf->settings = [
 	'enwiki' => true, // T140003
 	'cswiki' => true, // T151611
 	'etwiki' => true, // T159609
+	'hewiki' => true, // T161621
 ],
 'wgOresExtensionStatus' => [
 	'default' => 'beta',
@@ -18062,6 +18063,7 @@ $wgConf->settings = [
 	'enwiki' => [ 'hard' => 0.17, 'soft' => 0.49, 'softest' => 0.96 ], // T140003
 	'cswiki' => [ 'hard' => 0.45, 'soft' => 0.8, 'softest' => 0.88 ], // T151611
 	'etwiki' => [ 'hard' => 0.34, 'soft' => 0.62, 'softest' => 0.95 ], // T159609
+	'hewiki' => [ 'hard' => 0.07, 'soft' => 0.50, 'softest' => 0.94 ], // T161621
 ],
 'wgOresEnabledNamespaces' => [
 	'default' => [],
