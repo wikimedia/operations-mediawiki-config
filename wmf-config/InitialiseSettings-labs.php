@@ -494,6 +494,10 @@ function wmfLabsSettings() {
 			'default' => true,  // T127297
 		],
 
+		'wmgUseLoginNotify' => [
+			'default' => true, // T158878
+		],
+
 		'wmgUseRevisionSlider' => [
 			'default' => true,  // T134770
 		],
