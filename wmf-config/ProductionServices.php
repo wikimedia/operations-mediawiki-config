@@ -140,8 +140,7 @@ $wmfAllServices['codfw']['jobqueue_aggregator'] = [
 ];
 
 # ORES
-$wmfAllServices['eqiad']['ores'] = 'http://ores.svc.eqiad.wmnet:8081/';
-# is eqiad-only for now
+$wmfAllServices['eqiad']['ores'] = 'http://ores.discovery.wmnet:8081/';
 $wmfAllServices['codfw']['ores'] = $wmfAllServices['eqiad']['ores'];
 
 # Shorthand when we have no master-slave situation to keep into account
