@@ -362,6 +362,10 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['autoconfirmed']['abusefilter-log-detail'] = true; // T48154
 		$wgAbuseFilterNotifications = false;
 		break;
+	case 'trwiki':
+		$wgAbuseFilterBlockDuration = 'indefinite'; // T161960
+		$wgAbuseFilterAnonBlockDuration = '24 hours';
+		break;
 	case 'ukwiki':
 		$wgGroupPermissions['*']['abusefilter-log'] = false;
 		$wgGroupPermissions['*']['abusefilter-view'] = false;
