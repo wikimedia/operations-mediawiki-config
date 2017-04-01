@@ -9159,6 +9159,9 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true ], // T93339
 		'rollbacker' => [ 'rollback' => true ], // T93339
 	],
+	'+svwiktionary' => [
+		'autopatrolled' => [ 'autopatrol' => true ], // T161919
+	],
 	'+swwiki' => [
 		'*' => [ 'createpage' => false ], // T44894
 	],
@@ -10119,6 +10122,11 @@ $wgConf->settings = [
 			'rollbacker', // T93339
 		],
 	],
+	'+svwiktionary' => [
+		'sysop' => [
+			'autopatrolled', // T161919
+		],
+	],
 	'+tawiki' => [
 		'bureaucrat' => [ 'nocreate' ],
 		'sysop' => [ 'patroller', 'rollbacker', 'autopatrolled' ], // T95180
@@ -10862,6 +10870,11 @@ $wgConf->settings = [
 			'autopatrolled', // T93339
 			'patroller', // T93339
 			'rollbacker', // T93339
+		],
+	],
+	'+svwiktionary' => [
+		'sysop' => [
+			'autopatrolled', // T161919
 		],
 	],
 	'+tawiki' => [
