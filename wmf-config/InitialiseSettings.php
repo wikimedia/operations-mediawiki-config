@@ -8312,6 +8312,9 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true ], // T85381
 		'rollbacker' => [ 'rollback' => true ], // T85381
 	],
+	'+fawikisource' => [
+		'rollbacker' => [ 'rollback' => true ], // T161946
+	],
 	'fiwiki' => [
 		'patroller' => [ 'patrol' => true ],
 		'rollbacker' => [ 'rollback' => true ],
@@ -9763,6 +9766,11 @@ $wgConf->settings = [
 			'transwiki', // T73681
 		],
 	],
+	'+fawikisource' => [
+		'sysop' => [
+			'rollbacker', // T161946
+		],
+	],
 	'+fawiktionary' => [
 		'sysop' => [ 'autopatrolled', 'patroller', 'rollbacker' ], // T85381
 	],
@@ -10488,6 +10496,11 @@ $wgConf->settings = [
 	],
 	'+fawiktionary' => [
 		'sysop' => [ 'autopatrolled', 'patroller', 'rollbacker' ], // T85381
+	],
+	'+fawikisource' => [
+		'sysop' => [
+			'rollbacker', // T161946
+		],
 	],
 	'+fiwiki' => [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'arbcom' ],
