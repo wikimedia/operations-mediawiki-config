@@ -15408,6 +15408,15 @@ $wgConf->settings = [
 		'5' => false,
 		'N' => 'User %code%-M',
 	],
+	'elwikisource' => [ // T161593
+		'0' => 'Χρήστης %code%-0',
+		'1' => 'Χρήστης %code%-1',
+		'2' => 'Χρήστης %code%-2',
+		'3' => 'Χρήστης %code%-3',
+		'4' => 'Χρήστης %code%-4',
+		'5' => 'Χρήστης %code%-5',
+		'N' => 'Χρήστης %code%-M',
+	],
 	'enwiki' => [
 		'0' => false,
 		'1' => 'User %code%-1',
@@ -16012,6 +16021,7 @@ $wgConf->settings = [
 	'checkuserwiki' => 'User %code%',
 	'commonswiki' => 'User %code%',
 	'cswikiversity' => 'Uživatel %code%', // T15530
+	'elwikisource' => 'Χρήστης %code%', //T161593
 	'enwiki' => 'User %code%',
 	'enwikibooks' => 'User %code%',
 	'enwiktionary' => 'User %code%',
