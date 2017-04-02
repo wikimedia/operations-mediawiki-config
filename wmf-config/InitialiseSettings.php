@@ -14602,6 +14602,7 @@ $wgConf->settings = [
 	'itwiki' => true, // T160932
 	'lawiki' => true, // T160844
 	'nowiki' => true, // T160362
+	'hewiki' => true, // T161804
 
 	'enwiktionary' => true, // T160933
 ],
