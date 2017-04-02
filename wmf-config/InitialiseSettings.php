@@ -976,22 +976,39 @@ $wgConf->settings = [
 	'zhwikibooks' => '/static/images/project-logos/zhwikibooks.png',
 
 	// Wikinews
+	'arwikinews' => '/static/images/project-logos/arwikinews.png',
+	'bgwikinews' => '/static/images/project-logos/bgwikinews.png',
 	'bswikinews' => '/static/images/project-logos/bswikinews.png',
 	'cawikinews' => '/static/images/project-logos/cawikinews.png',
+	'cswikinews' => '/static/images/project-logos/cswikinews.png',
+	'dewikinews' => '/static/images/project-logos/dewikinews.png',
 	'elwikinews' => '/static/images/project-logos/elwikinews.png',
+	'enwikinews' => '/static/images/project-logos/enwikinews.png',
 	'eowikinews' => '/static/images/project-logos/eowikinews.png',
 	'eswikinews' => '/static/images/project-logos/eswikinews.png',
 	'fawikinews' => '/static/images/project-logos/fawikinews.png',
+	'fiwikinews' => '/static/images/project-logos/fiwikinews.png',
+	'frwikinews' => '/static/images/project-logos/frwikinews.png',
+	'hewikinews' => '/static/images/project-logos/hewikinews.png',
 	'huwikinews' => '/static/images/project-logos/huwikinews.png',
+	'itwikinews' => '/static/images/project-logos/itwikinews.png',
+	'jawikinews' => '/static/images/project-logos/jawikinews.png',
 	'kowikinews' => '/static/images/project-logos/kowikinews.png',
+	'nlwikinews' => '/static/images/project-logos/nlwikinews.png',
+	'nowikinews' => '/static/images/project-logos/nowikinews.png',
+	'plwikinews' => '/static/images/project-logos/plwikinews.png',
 	'ptwikinews' => '/static/images/project-logos/ptwikinews.png',
 	'rowikinews' => '/static/images/project-logos/rowikinews.png',
+	'ruwikinews' => '/static/images/project-logos/ruwikinews.png',
 	'sdwikinews' => '/static/images/project-logos/sdwikinews.png',
-	'sqwikinews' => '/static/images/project-logos/sqwikinews.png',  // T30114
+	'sqwikinews' => '/static/images/project-logos/sqwikinews.png', // T30114
 	'srwikinews' => '/static/images/project-logos/srwikinews.png',
+	'svwikinews' => '/static/images/project-logos/svwikinews.png',
 	'tawikinews' => '/static/images/project-logos/tawikinews.png',
 	'thwikinews' => '/static/images/project-logos/thwikinews.png',
+	'trwikinews' => '/static/images/project-logos/trwikinews.png',
 	'ukwikinews' => '/static/images/project-logos/ukwikinews.png', // T124778
+	'zhwikinews' => '/static/images/project-logos/zhwikinews.png',
 
 	// Wikisource
 	'sourceswiki' => '/static/images/project-logos/sourceswiki.png',
