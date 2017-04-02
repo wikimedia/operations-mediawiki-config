@@ -14616,6 +14616,7 @@ $wgConf->settings = [
 
 	// Wikis by request
 	'frwiki' => true, // T160609
+	'hewiki' => true, // T161804
 	'itwiki' => true, // T160932
 	'lawiki' => true, // T160844
 	'nowiki' => true, // T160362
