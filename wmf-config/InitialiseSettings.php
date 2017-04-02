@@ -476,7 +476,7 @@ $wgConf->settings = [
 	'wikipedia' => '/static/images/project-logos/enwiki.png',
 	'wikiquote' => '/static/images/project-logos/wikiquote.png',
 	'wikisource' => '/static/images/project-logos/wikisource.png',
-	'wikiversity' => '$stdlogo',
+	'wikiversity' => '/static/images/project-logos/wikiversity.png',
 	'wiktionary' => '/static/images/project-logos/wiktionary.png',
 	'wikivoyage' => '/static/images/project-logos/wikivoyage.png',  // T55653
 
@@ -1048,10 +1048,21 @@ $wgConf->settings = [
 
 	// Wikiversity
 	'arwikiversity' => '/static/images/project-logos/arwikiversity.png',
+	'betawikiversity' => '/static/images/project-logos/betawikiversity.png',
 	'cswikiversity' => '/static/images/project-logos/cswikiversity.png',  // T54019
+	'dewikiversity' => '/static/images/project-logos/dewikiversity.png',
+	'elwikiversity' => '/static/images/project-logos/elwikiversity.png',
+	'enwikiversity' => '/static/images/project-logos/enwikiversity.png',
+	'eswikiversity' => '/static/images/project-logos/eswikiversity.png',
+	'fiwikiversity' => '/static/images/project-logos/fiwikiversity.png',
+	'frwikiversity' => '/static/images/project-logos/frwikiversity.png',
+	'itwikiversity' => '/static/images/project-logos/itwikiversity.png',
+	'jawikiversity' => '/static/images/project-logos/jawikiversity.png',
 	'kowikiversity' => '/static/images/project-logos/kowikiversity.png',
+	'ptwikiversity' => '/static/images/project-logos/ptwikiversity.png',
 	'ruwikiversity' => '/static/images/project-logos/ruwikiversity.png',
 	'slwikiversity' => '/static/images/project-logos/slwikiversity.png',
+	'svwikiversity' => '/static/images/project-logos/svwikiversity.png',
 
 	// Wikivoyage
 	'elwikivoyage' => '/static/images/project-logos/elwikivoyage.png',
