@@ -15246,6 +15246,9 @@ $wgConf->settings = [
 	'nowikidatadescriptiontaglines' => [
 		'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => false
 	],
+	'enwiki' => [
+		'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => false
+	],
 	'ruwiki' => [
 		'search' => true, 'nearby' => true, 'watchlist' => true, 'tagline' => false
 	],
