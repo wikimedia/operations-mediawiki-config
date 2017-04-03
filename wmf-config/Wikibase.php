@@ -216,9 +216,6 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['allowDataAccessInUserLanguage'] = $wmgWikibaseAllowDataAccessInUserLanguage;
 	$wgWBClientSettings['entityAccessLimit'] = $wmgWikibaseEntityAccessLimit;
 
-	$wgWBClientSettings['enableStatementsParserFunction'] = true;
-	$wgWBClientSettings['enableLuaEntityFormatStatements'] = true;
-
 	$wgWBClientSettings['sharedCacheKeyPrefix'] .= $wgWBSharedCacheKey;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 }
