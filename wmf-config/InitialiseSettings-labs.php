@@ -582,6 +582,11 @@ function wmfLabsSettings() {
 		'wgLinterStatsdSampleFactor' => [
 			'default' => 10,
 		],
+		'wmgUseInterwikiSorting' => [
+			'default' => false,
+			'wikidataclient' => true,
+			'wiktionary' => true,
+		],
 		'wmgUseCognate' => [
 			'default' => false,
 			'wiktionary' => 'wiktionary', // T156241
