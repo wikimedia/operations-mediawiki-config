@@ -45,7 +45,7 @@ class Clean(main.AbstractSync):
         deploy_dir = os.path.join(self.config['deploy_dir'], 'php-%s' % branch)
 
         if not keep_static:
-            gerrit_prune_cmd = ['git', 'push', 'origin', '--delete',
+            gerrit_prune_cmd = ['git', 'push', 'origin', '--quiet', '--delete',
                                 'wmf/%s' % branch]
             logger = self.get_logger()
             with log.Timer('prune-git-branches', self.get_stats()):
