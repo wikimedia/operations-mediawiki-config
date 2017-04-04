@@ -496,6 +496,7 @@ function wmfLabsSettings() {
 
 		'wmgUseLoginNotify' => [
 			'default' => true, // T158878
+			'nonecho' => false,
 		],
 
 		'wmgUseRevisionSlider' => [
