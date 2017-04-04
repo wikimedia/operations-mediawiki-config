@@ -53,7 +53,7 @@ set_include_path( "$IP:/usr/local/lib/php:/usr/share/php" );
 
 # Master datacenter
 # The datacenter from which we serve traffic.
-$wmfMasterDatacenter = 'eqiad';
+$wmfMasterDatacenter = 'codfw';
 
 ### List of some service hostnames
 # 'meta'    : meta wiki for user editable content
