@@ -18042,6 +18042,35 @@ $wgConf->settings = [
 	'cswiki' => [ 'hard' => 0.45, 'soft' => 0.8, 'softest' => 0.88 ], // T151611
 	'etwiki' => [ 'hard' => 0.34, 'soft' => 0.62, 'softest' => 0.95 ], // T159609
 ],
+'wgOresFiltersThresholds' => [
+	'default' => [],
+	'plwiki' => [
+		'damaging' => [
+			'likelygood' => [ 'min' => 0, 'max' => 0.700 ], // ~98% precision at 0.861, lowered to 0.700 to avoid overlap with likelybad
+			'maybebad' => [ 'min' => 0.373, 'max' => 1 ], // ~45% precision
+			'likelybad' => [ 'min' => 0.733, 'max' => 1 ], // ~90% precision
+			'verylikelybad' => [ 'min' => 0.851, 'max' => 1 ], // ~98% precision
+		],
+		'goodfaith' => [
+			'good' => [ 'min' => 0.720, 'max' => 1 ], // ~98% precision at 0.302, raised to 0.720 to avoid overlap with bad
+			'maybebad' => [ 'min' => 0, 'max' => 0.938 ], // ~45% precision
+			'bad' => [ 'min' => 0, 'max' => 0.708 ], // ~90% precision
+		],
+	],
+	'ptwiki' => [
+		'damaging' => [
+			'likelygood' => [ 'min' => 0, 'max' => 0.546 ], // ~98% precision
+			'maybebad' => [ 'min' => 0.290, 'max' => 1 ], // ~90% recall
+			'likelybad' => [ 'min' => 0.739, 'max' => 1 ], // ~45% precision
+			'verylikelybad' => [ 'min' => 0.950, 'max' => 1 ], // ~90% precision
+		],
+		'goodfaith' => [
+			'good' => [ 'min' => 0.403, 'max' => 1 ], // ~98% precision
+			'maybebad' => [ 'min' => 0, 'max' => 0.256 ], // ~45% precision
+			'bad' => [ 'min' => 0, 'max' => 0.047 ], // ~90% precision
+		],
+	],
+],
 'wgOresEnabledNamespaces' => [
 	'default' => [],
 	'wikidatawiki' => [ 0 => true, 120 => true ], // T139660
