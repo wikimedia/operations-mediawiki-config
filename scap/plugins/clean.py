@@ -67,7 +67,7 @@ class Clean(main.AbstractSync):
         self.execute_remote(
             'clean-masters-l10nupdate-cache',
             self._get_master_list(),
-            ['sudo', '-u', 'l10nupdate', 'rm', '-fR',
+            ['sudo', '-u', 'www-data', 'rm', '-fR',
              '/var/lib/l10nupdate/caches/cache-%s' % branch]
         )
 
