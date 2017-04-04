@@ -80,7 +80,8 @@ class Clean(main.AbstractSync):
         )
 
         # Update active master (passive gets it on next sync)
-        subprocess.check_call(self.clean_command(stage_dir, keep_static))
+        master_command = ' '.join(self.clean_command(stage_dir, keep_static))
+        subprocess.check_call(master_command, shell=True)
 
         # Update apaches
         self.execute_remote(
