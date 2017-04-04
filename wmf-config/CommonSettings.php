@@ -2875,7 +2875,6 @@ if ( $wmgUseRelatedArticles ) {
 
 	if ( $wmgRelatedArticlesShowInFooter ) {
 		wfLoadExtension( 'Cards' );
-		$wgRelatedArticlesFooterBlacklistedSkins = $wmgRelatedArticlesFooterBlacklistedSkins;
 		$wgRelatedArticlesShowInSidebar = false;
 		$wgRelatedArticlesShowInFooter = true;
 		$wgRelatedArticlesLoggingSamplingRate = 0.01;
