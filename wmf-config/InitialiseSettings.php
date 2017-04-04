@@ -16963,8 +16963,14 @@ $wgConf->settings = [
 	'frwikinews' => true, // T143480
 ],
 
-'wmgRelatedArticlesFooterBlacklistedSkins' => [
+'wgRelatedArticlesFooterWhitelistedSkins' => [
 	// T144812
+	'default' => [ 'minerva' ],
+	'related-articles-footer-blacklisted-skins' => [],
+],
+
+// Can be removed when T160076 is deployed everywhere
+'wmgRelatedArticlesFooterBlacklistedSkins' => [
 	'default' => [],
 	'related-articles-footer-blacklisted-skins' => [ 'minerva' ],
 ],
