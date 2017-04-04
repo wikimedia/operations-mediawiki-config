@@ -79,12 +79,8 @@ class Clean(main.AbstractSync):
              '-user', 'l10nupdate', '-delete']
         )
 
-        # Update masters
-        self.execute_remote(
-            'clean-masters',
-            self._get_master_list(),
-            self.clean_command(stage_dir, keep_static)
-        )
+        # Update active master (passive gets it on next sync)
+        subprocess.check_call(self.clean_command(stage_dir, keep_static))
 
         # Update apaches
         self.execute_remote(
