@@ -633,15 +633,16 @@ $wgLBFactoryConf = [
 # This key must exist for the master switch script to work.
 #
 # These read only messages should currently be kept,
-# to prevent accidental write to eqiad from codfw.
+# to prevent accidental write to eqiad from codfw,
+# when the master dc is eqiad.
 'readOnlyBySection' => [
-	's1'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
-	's2'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
-	'DEFAULT' => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes', # s3
-	's4'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
-	's5'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
-	's6'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
-	's7'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
+#	's1'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
+#	's2'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
+#	'DEFAULT' => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes', # s3
+#	's4'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
+#	's5'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
+#	's6'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
+#	's7'      => 'MediaWiki is in read-only mode for maintenance. Please try again in 3 minutes',
 ],
 
 ];
