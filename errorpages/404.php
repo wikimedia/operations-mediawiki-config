@@ -51,7 +51,7 @@ em { font-style: normal; color: #777; }
 <p>We could not find the above page on our servers.</p>
 <p><b>Did you mean: <a href="$encTarget">$encTarget</a></b></p>
 <div style="clear:both;"></div>
-<p>Alternatively, you can visit the <a href="/">Main Page</a> or read <a href="https://en.wikipedia.org/wiki/HTTP_404" title="Wikipedia: HTTP 404">more information</a> about this type of error.</p>
+<p>Alternatively, you can visit the <a href="/">Main Page</a> or read <a href="//www.wikidata.org/wiki/Q208219#sitelinks-wikipedia" title="Wikipedia: HTTP 404">more information</a> about this type of error.</p>
 </div>
 </html>
 END;
