@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_668136fd",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 376,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-04-05T15:00:00Z",
+      "side": 1,
+      "message": "missing )",
+      "range": {
+        "startLine": 376,
+        "startChar": 1,
+        "endLine": 376,
+        "endChar": 41
+      },
+      "revId": "4fdb930ab2f26650020eadf0c0f75c5d3b4f35e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
