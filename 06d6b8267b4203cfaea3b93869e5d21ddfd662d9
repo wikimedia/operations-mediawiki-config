@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e436fe2_46b99a28",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 591,
+      "author": {
+        "id": 214
+      },
+      "writtenOn": "2017-04-05T14:53:31Z",
+      "side": 1,
+      "message": "/srv/deployment/3d2png/deploy/src/3d2png.js",
+      "revId": "06d6b8267b4203cfaea3b93869e5d21ddfd662d9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
