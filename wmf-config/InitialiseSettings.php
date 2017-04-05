@@ -13324,6 +13324,10 @@ $wgConf->settings = [
 	'ruwiki' => true,
 	'elwiki' => true,
 	'cawiki' => true,
+
+	// T162162
+	'hewiki' => true,
+	'huwiki' => true,
 ],
 
 'wgPopupsAnonsEnabledSamplingRate' => [
@@ -13337,6 +13341,8 @@ $wgConf->settings = [
 	'ruwiki' => 0.9,
 	'elwiki' => 0.9,
 	'cawiki' => 0.9,
+	'hewiki' => 0.9,
+	'huwiki' => 0.9
 ],
 
 'wmgPopupsBetaFeature' => [
@@ -13367,6 +13373,7 @@ $wgConf->settings = [
 	'elwiki' => true,
 	'cawiki' => true,
 	'hewiki' => true,
+	'huwiki' => true,
 ],
 
 'wmgULSCompactLanguageLinksBetaFeature' => [
