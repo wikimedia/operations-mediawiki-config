@@ -22,6 +22,29 @@
       "revId": "4fdb930ab2f26650020eadf0c0f75c5d3b4f35e5",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e436fe2_06ddd216",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 378,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-04-05T15:03:28Z",
+      "side": 1,
+      "message": "I\u0027ve got a feeling this won\u0027t work as expected either with the isset call...\n\nAFAIK, you can just define it unconditionally due to extension registration and it\u0027ll merge it and stuff",
+      "range": {
+        "startLine": 376,
+        "startChar": 0,
+        "endLine": 378,
+        "endChar": 2
+      },
+      "revId": "4fdb930ab2f26650020eadf0c0f75c5d3b4f35e5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
