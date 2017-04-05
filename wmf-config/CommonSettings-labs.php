@@ -330,13 +330,6 @@ if ( $wmgUseLinter ) {
 	wfLoadExtension( 'Linter' );
 }
 
-if ( $wmgUseCognate ) {
-	wfLoadExtension( 'Cognate' );
-	$wgCognateDb = 'cognate_' . $wmgUseCognate;
-	$wgCognateCluster = 'extension1';
-	$wgCognateNamespaces = [ 0 ];
-}
-
 if ( $wmgUseCollaborationKit ) {
 	wfLoadExtension( 'CollaborationKit' );
 }

@@ -17110,6 +17110,11 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wmgUseCognate' => [
+	'default' => false,
+	'wiktionary' => 'wiktionary', // T150182
+],
+
 'wmgUseInterwikiSorting' => [
 	'default' => false,
 	'wikidataclient' => true, // T150183

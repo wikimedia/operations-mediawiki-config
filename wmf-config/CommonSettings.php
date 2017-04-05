@@ -3018,6 +3018,13 @@ if ( $wmgUseContentTranslation ) {
 
 $wgExtensionEntryPointListFiles[] = "$IP/extensions/Wikidata/extension-list-wikidata";
 
+if ( $wmgUseCognate ) {
+	wfLoadExtension( 'Cognate' );
+	$wgCognateDb = 'cognate_' . $wmgUseCognate;
+	$wgCognateCluster = 'extension1';
+	$wgCognateNamespaces = [ 0 ];
+}
+
 if( $wmgUseWikibaseClient || $wmgUseInterwikiSorting ) {
 	$wgInterwikiSortingInterwikiSortOrders = include( "$wmfConfigDir/InterwikiSortOrders.php" );
 }
