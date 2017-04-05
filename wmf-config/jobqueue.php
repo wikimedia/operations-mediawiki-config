@@ -6,7 +6,7 @@
 $wmgRedisQueueBaseConfig = [
 	'class' => 'JobQueueRedis',
 	'redisConfig' => [
-		'connectTimeout' => .300,
+		'connectTimeout' => (defined( 'MEDIAWIKI_JOB_RUNNER' ) ? .500 : .300),
 		'password' => $wmgRedisPassword,
 		'compression' => 'gzip',
 		# 'persistent' => defined( 'MEDIAWIKI_JOB_RUNNER' )
