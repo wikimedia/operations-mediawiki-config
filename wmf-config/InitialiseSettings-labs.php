@@ -589,10 +589,6 @@ function wmfLabsSettings() {
 		'wgLinterStatsdSampleFactor' => [
 			'default' => 10,
 		],
-		'wmgUseCognate' => [
-			'default' => false,
-			'wiktionary' => 'wiktionary', // T156241
-		],
 
 		// T152115
 		'wgPageImagesLeadSectionOnly' => [
