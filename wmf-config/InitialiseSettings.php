@@ -17059,6 +17059,7 @@ $wgConf->settings = [
 'wmgUseInterwikiSorting' => [
 	'default' => false,
 	'wikidataclient' => true, // T150183
+	'wiktionary' => true, // T162253
 ],
 
 'wgInterwikiSortingSort' => [
