@@ -14147,6 +14147,7 @@ $wgConf->settings = [
 'wmgUseLinter' => [
 	'default' => false,
 	'small' => true,
+	'medium' => true,
 	'testwiki' => true,
 	'group0' => true,
 ],
