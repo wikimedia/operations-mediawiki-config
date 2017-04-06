@@ -367,7 +367,7 @@ $wgHooks['ImportSources'][] = 'wmfImportSources';
 $wgHiddenPrefs = array_diff ( $wgHiddenPrefs, [ 'wikieditor-preview' ] );
 
 if ( $wmgUse3d ) {
-	wfLoadExtension( '3d' );
+	wfLoadExtension( '3D' );
 	// Add 3d file type
 	$wgFileExtensions[] = 'stl';
 	$wgTrustedMediaFiles[] = 'application/sla';
