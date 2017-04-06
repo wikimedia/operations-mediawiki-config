@@ -4933,12 +4933,6 @@ $wgConf->settings = [
 		'articles' => 'debug',
 		'imagemove' => 'debug',
 	],
-
-	// Temporary to evaluate T159828
-	'+testwikidatawiki' => [
-		'Wikibase\Store\Sql\SqlChangeDispatchCoordinator::selectClient' => 'debug',
-		'Wikibase\Client\Changes\WikiPageUpdater' => 'debug',
-	]
 ],
 # @} end of wmgMonologChannels
 
