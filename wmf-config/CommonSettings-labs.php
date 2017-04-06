@@ -366,7 +366,8 @@ $wgHooks['ImportSources'][] = 'wmfImportSources';
 // Reenable Preview and Changes tabs for wikieditor preview
 $wgHiddenPrefs = array_diff ( $wgHiddenPrefs, [ 'wikieditor-preview' ] );
 
-if ( $wmgUse3d ) {
+// MultimediaViewer is a dependency of 3d extension
+if ( $wmgUse3d && $wmgUseMultimediaViewer ) {
 	wfLoadExtension( '3D' );
 	// Add 3d file type
 	$wgFileExtensions[] = 'stl';
