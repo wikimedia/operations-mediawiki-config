@@ -18117,15 +18117,15 @@ $wgConf->settings = [
 	'default' => [],
 	'plwiki' => [
 		'damaging' => [
-			'likelygood' => [ 'min' => 0, 'max' => 0.400 ], // ~99% precision at 0.460, lowered to 0.400 to avoid overlap with likelybad
-			'maybebad' => [ 'min' => 0.197, 'max' => 1 ], // ~97% precision
-			'likelybad' => [ 'min' => 0.422, 'max' => 1 ], // ~99% precision
-			'verylikelybad' => [ 'min' => 0.587, 'max' => 1 ], // ~99.5% precision
+			'likelygood' => [ 'min' => 0, 'max' => 0.472 ], // ~99.5% precision
+			'maybebad' => [ 'min' => 0.392, 'max' => 1 ], // ~45% precision
+			'likelybad' => [ 'min' => 0.75, 'max' => 1 ], // ~90% precision
+			'verylikelybad' => [ 'min' => 0.852, 'max' => 1 ], // ~98% precision
 		],
 		'goodfaith' => [
-			'good' => [ 'min' => 0.852, 'max' => 1 ], // ~99% precision
-			'maybebad' => [ 'min' => 0, 'max' => 0.766 ], // ~99% precision
-			'bad' => [ 'min' => 0, 'max' => 0.472 ], // ~99.5% precision
+			'good' => [ 'min' => 0.587, 'max' => 1 ], // ~99.5% precision
+			'maybebad' => [ 'min' => 0, 'max' => 0.909 ], // ~70% precision
+			'bad' => [ 'min' => 0, 'max' => 0.46 ], // ~99% precision
 		],
 	],
 	'ptwiki' => [
@@ -18137,7 +18137,7 @@ $wgConf->settings = [
 		],
 		'goodfaith' => [
 			'good' => [ 'min' => 0.400, 'max' => 1 ], // ~98% precision
-			'maybebad' => [ 'min' => 0, 'max' => 0.449 ], // ~90% recall
+			'maybebad' => [ 'min' => 0, 'max' => 0.715 ], // ~90% recall
 			'bad' => [ 'min' => 0, 'max' => 0.256 ], // ~45% precision
 		],
 	],
