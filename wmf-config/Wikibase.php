@@ -89,7 +89,6 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBRepoSettings['dataRightsUrl'] = 'https://creativecommons.org/publicdomain/zero/1.0/';
 
 	if ( $wgDBname === 'testwikidatawiki' ) {
-		// there is no cronjob dispatcher yet, this will do nothing
 		$wgWBRepoSettings['clientDbList'] = [ 'testwiki', 'test2wiki', 'testwikidatawiki' ];
 	} else {
 		$wgWBRepoSettings['clientDbList'] = array_diff(
