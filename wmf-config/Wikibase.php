@@ -57,8 +57,8 @@ $wgWBSharedSettings['entityNamespaces'] = [
 
 if ( in_array( $wgDBname, [ 'test2wiki', 'testwiki', 'testwikidatawiki' ] ) ) {
 	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'testwikidata';
-	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'testwiki';
-	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'test2wiki';
+	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'test';
+	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'test2';
 } else {
 	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'wikidata';
 }
