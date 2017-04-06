@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_7c6119d0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 17615,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2017-04-06T02:35:22Z",
+      "side": 1,
+      "message": "test wikidata also needs this?\n\n+wikidata includes both test.wikidata and wikidata",
+      "revId": "44a5e640ee5c6d5ac1cdc6c32df4d7a0e8849d76",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
