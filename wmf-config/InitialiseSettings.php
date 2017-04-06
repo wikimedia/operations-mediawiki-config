@@ -14152,6 +14152,12 @@ $wgConf->settings = [
 	'group0' => true,
 ],
 
+'wgLinterStatsdSampleFactor' => [
+	'default' => 1000,
+	'small' => 50,
+	'medium' => 100,
+],
+
 'wgLinterSubmitterWhitelist' => [
 	'default' => [
 		'10.64.32.78' => true, # wtp1001.eqiad.wmnet
