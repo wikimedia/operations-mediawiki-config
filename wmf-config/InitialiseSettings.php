@@ -18111,28 +18111,28 @@ $wgConf->settings = [
 	'default' => [],
 	'plwiki' => [
 		'damaging' => [
-			'likelygood' => [ 'min' => 0, 'max' => 0.700 ], // ~98% precision at 0.861, lowered to 0.700 to avoid overlap with likelybad
-			'maybebad' => [ 'min' => 0.373, 'max' => 1 ], // ~45% precision
-			'likelybad' => [ 'min' => 0.733, 'max' => 1 ], // ~90% precision
-			'verylikelybad' => [ 'min' => 0.851, 'max' => 1 ], // ~98% precision
+			'likelygood' => [ 'min' => 0, 'max' => 0.400 ], // ~99% precision at 0.460, lowered to 0.400 to avoid overlap with likelybad
+			'maybebad' => [ 'min' => 0.197, 'max' => 1 ], // ~97% precision
+			'likelybad' => [ 'min' => 0.422, 'max' => 1 ], // ~99% precision
+			'verylikelybad' => [ 'min' => 0.587, 'max' => 1 ], // ~99.5% precision
 		],
 		'goodfaith' => [
-			'good' => [ 'min' => 0.720, 'max' => 1 ], // ~98% precision at 0.302, raised to 0.720 to avoid overlap with bad
-			'maybebad' => [ 'min' => 0, 'max' => 0.938 ], // ~45% precision
-			'bad' => [ 'min' => 0, 'max' => 0.708 ], // ~90% precision
+			'good' => [ 'min' => 0.852, 'max' => 1 ], // ~99% precision
+			'maybebad' => [ 'min' => 0, 'max' => 0.766 ], // ~99% precision
+			'bad' => [ 'min' => 0, 'max' => 0.472 ], // ~99.5% precision
 		],
 	],
 	'ptwiki' => [
 		'damaging' => [
-			'likelygood' => [ 'min' => 0, 'max' => 0.546 ], // ~98% precision
-			'maybebad' => [ 'min' => 0.290, 'max' => 1 ], // ~90% recall
-			'likelybad' => [ 'min' => 0.739, 'max' => 1 ], // ~45% precision
-			'verylikelybad' => [ 'min' => 0.950, 'max' => 1 ], // ~90% precision
+			'likelygood' => [ 'min' => 0, 'max' => 0.303 ], // ~99% precision
+			'maybebad' => [ 'min' => 0.294, 'max' => 1 ], // ~90% recall
+			'likelybad' => [ 'min' => 0.734, 'max' => 1 ], // ~45% precision
+			'verylikelybad' => [ 'min' => 0.956, 'max' => 1 ], // ~90% precision
 		],
 		'goodfaith' => [
-			'good' => [ 'min' => 0.403, 'max' => 1 ], // ~98% precision
-			'maybebad' => [ 'min' => 0, 'max' => 0.256 ], // ~45% precision
-			'bad' => [ 'min' => 0, 'max' => 0.047 ], // ~90% precision
+			'good' => [ 'min' => 0.400, 'max' => 1 ], // ~98% precision
+			'maybebad' => [ 'min' => 0, 'max' => 0.449 ], // ~90% recall
+			'bad' => [ 'min' => 0, 'max' => 0.256 ], // ~45% precision
 		],
 	],
 ],
