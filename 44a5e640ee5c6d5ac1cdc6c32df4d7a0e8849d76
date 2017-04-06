@@ -16,6 +16,24 @@
       "revId": "44a5e640ee5c6d5ac1cdc6c32df4d7a0e8849d76",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_dc9e2dbd",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 17615,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2017-04-06T02:36:25Z",
+      "side": 1,
+      "message": "yes, test also, since it\u0027ll have new mapping code too.",
+      "parentUuid": "4e506ba4_7c6119d0",
+      "revId": "44a5e640ee5c6d5ac1cdc6c32df4d7a0e8849d76",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
