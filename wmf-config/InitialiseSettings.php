@@ -18021,11 +18021,6 @@ $wgConf->settings = [
 ],
 'wgOresExtensionStatus' => [
 	'default' => 'on',
-	'wikidatawiki' => 'beta',
-	'nlwiki' => 'beta',
-	'cswiki' => 'beta',
-	'etwiki' => 'beta',
-	'hewiki' => 'beta',
 ],
 'wgOresModels' => [
 	'default' => [
@@ -18136,11 +18131,6 @@ $wgConf->settings = [
 ],
 'wgEnableRcFiltersBetaFeature' => [
 	'default' => true,
-	'wikidatawiki' => false,
-	'nlwiki' => false,
-	'cswiki' => false,
-	'etwiki' => false,
-	'hewiki' => false,
 ],
 ### End (roughly) of general extensions ########################
 
