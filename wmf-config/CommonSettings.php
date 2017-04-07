@@ -2606,7 +2606,7 @@ $wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetUploadMediafileJob';
 $wgJobTypesExcludedFromDefaultQueue[] = 'gwtoolsetGWTFileBackendCleanupJob';
 
 if ( $wmgUseEducationProgram ) {
-	require_once( "$IP/extensions/EducationProgram/EducationProgram.php" );
+	wfLoadExtension( 'EducationProgram' );
 	$wgEPSettings['dykCategory'] = $wmgEducationProgramDYKCat;
 	$wgNamespaceProtection[/*EP_NS*/446] = [ 'ep-course' ]; // T112806 (security)
 }
