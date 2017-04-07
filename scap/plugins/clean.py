@@ -90,6 +90,13 @@ class Clean(main.AbstractSync):
             self.clean_command(deploy_dir, keep_static)
         )
 
+        announce = 'Pruned MediaWiki: %s' % branch
+        if keep_static:
+            announce += ' [keeping static files]'
+
+        self.announce(announce + ' (duration: %s)' %
+                      utils.human_duration(self.get_duration()))
+
     def execute_remote(self, description, targets, command):
         with log.Timer(description, self.get_stats()):
             clean_job = ssh.Job(targets, user=self.config['ssh_user'])
