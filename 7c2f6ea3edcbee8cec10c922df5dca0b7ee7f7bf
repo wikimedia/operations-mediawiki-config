@@ -16,6 +16,24 @@
       "revId": "7c2f6ea3edcbee8cec10c922df5dca0b7ee7f7bf",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_6eff11a8",
+        "filename": "scap/plugins/clean.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2017-04-07T23:40:39Z",
+      "side": 1,
+      "message": "No, good catch. Refactored this about 3 times.",
+      "parentUuid": "4e506ba4_4ed9f582",
+      "revId": "7c2f6ea3edcbee8cec10c922df5dca0b7ee7f7bf",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
