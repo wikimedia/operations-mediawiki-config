@@ -17020,6 +17020,11 @@ $wgConf->settings = [
 	'hewiki' => false, // T150573
 ],
 
+// T160410 can be removed when the new view is the default
+'wmgRevisionSliderAlternateSlider' => [
+	'default' => false,
+],
+
 'wmgUseTwoColConflict' => [
 	'default' => false,
 	'testwiki' => true, // T155716
