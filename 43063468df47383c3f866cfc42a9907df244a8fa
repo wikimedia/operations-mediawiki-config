@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_e8579803",
+        "filename": "scap/plugins/clean.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 108,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2017-04-07T23:05:03Z",
+      "side": 1,
+      "message": "This command looks correct, but I don\u0027t know if subprocess will be happy about it:\n\n\u003e\u003e\u003e subprocess.check_output([\u0027find\u0027, \u0027/home/thcipriani\u0027, \u0027-name\u0027, \u0027blah\u0027, \u0027\u0026\u0026\u0027, \u0027find\u0027, \u0027/home/thcipriani\u0027, \u0027-name\u0027, \u0027foo\u0027])                                            \nfind: paths must precede expression: \u0026\u0026\nTry \u0027find --help\u0027 for more information.\nTraceback (most recent call last):\n  File \"\u003cstdin\u003e\", line 1, in \u003cmodule\u003e\n  File \"/usr/lib/python2.7/subprocess.py\", line 219, in check_output\n    raise CalledProcessError(retcode, cmd, output\u003doutput)\nsubprocess.CalledProcessError: Command \u0027[\u0027find\u0027, \u0027/home/thcipriani\u0027, \u0027-name\u0027, \u0027blah\u0027, \u0027\u0026\u0026\u0027, \u0027find\u0027, \u0027/home/thcipriani\u0027, \u0027-name\u0027, \u0027foo\u0027]\u0027 returned non-zero exit status 1",
+      "revId": "43063468df47383c3f866cfc42a9907df244a8fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
