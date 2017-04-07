@@ -4731,6 +4731,7 @@ $wgConf->settings = [
 	'arwikiversity' => false,
 	'arwikinews' => false,
 	'aswiki' => false, // T33371
+	'bhwiki' => false, // T160098
 	'hiwiki' => false, // T31279
 	'tewiki' => false, // by request -- maybe remove from file
 	'mlwiki' => false, // 2005-01-03, by dubious request on Ts's talk page -ævar
