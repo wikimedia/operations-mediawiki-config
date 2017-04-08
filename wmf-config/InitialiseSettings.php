@@ -9748,6 +9748,7 @@ $wgConf->settings = [
 			'confirmed', // T87348
 			'patroller', // T118847
 			'extendedconfirmed', // T140839
+			'eliminator', // T162396
 		]
 	],
 	'+fawikibooks' => [
