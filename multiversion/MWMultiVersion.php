@@ -183,7 +183,7 @@ class MWMultiVersion {
 					$lang,
 					array(
 						'ar', 'bd', 'be', 'br', 'ca', 'cn', 'co', 'dk', 'ec', 'et', 'fi', 'il', 'mk', 'mx', 'nl',
-						'noboard-chapters', 'no', 'nyc', 'nz', 'pa-us', 'pl', 'rs', 'ru', 'se', 'tr', 'ua', 'uk', 've'
+						'noboard-chapters', 'no', 'nyc', 'nz', 'pa-us', 'pl', 'rs', 'ru', 'se', 'tr', 'ua', 'uk', 've', 'wb'
 					)
 			) ) ) {
 				// wikimedia (non chapters) sites stay as wiki
