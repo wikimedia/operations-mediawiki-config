@@ -13323,15 +13323,12 @@ $wgConf->settings = [
 	'default' => false,
 	'sewikimedia' => true, // T68374
 
-	// T136602: Make Page Previews enabled by default for the following "stage
-	// 0" wikis. Note well that enabling Page Previews by default on hewiki is
-	// blocked on T160614.
+	// T136602, T162162: Make Page Previews enabled by default for the following
+	// "stage 0" wikis.
 	'itwiki' => true,
 	'ruwiki' => true,
 	'elwiki' => true,
 	'cawiki' => true,
-
-	// T162162
 	'hewiki' => true,
 	'huwiki' => true,
 ],
@@ -13380,6 +13377,44 @@ $wgConf->settings = [
 	'cawiki' => true,
 	'hewiki' => true,
 	'huwiki' => true,
+],
+
+// T160081 (and others): Make sure that Page Previews can detect the many, many
+// variants of the NavPopups gadget.
+//
+// Generated using go_go_gadget_export.php from
+// https://gist.github.com/phuedx/8dd383e9b444270df6d068564aad9412.
+'wgPopupsConflictingNavPopupsGadgetName' => [
+	'default' => 'Navigation_popups',
+	'af' => 'popups',
+	'av' => 'popups',
+	'az' => 'popups',
+	'azb' => 'popups',
+	'be' => 'popups',
+	'br' => 'Popups',
+	'da' => 'Popups',
+	'de' => 'navigation-popups',
+	'el' => 'popupdelay',
+	'eo' => 'Popups',
+	'es' => 'Navigation_popups ',
+	'fa' => 'popups',
+	'fi' => 'popups',
+	'fr' => 'Popups ',
+	'gag' => 'popups',
+	'he' => 'popup',
+	'id' => 'NavPopups',
+	'min' => 'NavPopups',
+	'mzn' => 'popups',
+	'nl' => 'Navigatie popups',
+	'oc' => 'Popups',
+	'pl' => 'Navigation popups ',
+	'ro' => 'popups',
+	'ru' => 'popups',
+	'simple' => 'Navigation_popups-API',
+	'sr' => 'Popups',
+	'tg' => 'popups',
+	'vec' => 'Popup',
+	'yi' => 'NavigationPopups',
 ],
 
 'wmgULSCompactLanguageLinksBetaFeature' => [
