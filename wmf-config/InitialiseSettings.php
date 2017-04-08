@@ -146,6 +146,7 @@ $wgConf->settings = [
 
 	# Local user group wikis (xxwikimedia)
 	'cnwikimedia' => 'zh', // T98676
+	'wbwikimedia' => 'bn', // T162510
 
 	# Special wikis
 	'special' => 'en', # default - overridden below by some wikis
@@ -1120,6 +1121,7 @@ $wgConf->settings = [
 
 	// Local user group wikis
 	'cnwikimedia' => '/static/images/project-logos/cnwikimedia.png', // T98676
+	'wbwikimedia' => '/static/images/project-logos/wbwikimedia.png', // T162510
 
 	// Special wikis
 	'advisorywiki' => '/static/images/project-logos/advisorywiki.png',
@@ -1419,6 +1421,7 @@ $wgConf->settings = [
 	'ecwikimedia' => [ '1.5x' => '/static/images/project-logos/ecwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ecwikimedia-2x.png'], // T135521
 	'ptwikimedia' => [ '1.5x' => '/static/images/project-logos/ptwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ptwikimedia-2x.png'], // T126832
 	'trwikimedia' => [ '1.5x' => '/static/images/project-logos/trwikimedia-1.5x.png', '2x' => '/static/images/project-logos/trwikimedia-2x.png'],
+	'wbwikimedia' => [ '1.5x' => '/static/images/project-logos/wbwikimedia-1.5x.png', '2x' => '/static/images/project-logos/wbwikimedia-2x.png' ], // T162510
 
     # Special wikis
 	'arbcom_cswiki' => ['1.5x' => '/static/images/project-logos/arbcom_cswiki-1.5x.png', '2x' => '/static/images/project-logos/arbcom_cswiki-2x.png'], // T151731
@@ -2220,6 +2223,7 @@ $wgConf->settings = [
 	'vowiki' => 'Vükiped',
 	'vowikibooks' => 'Vükibuks',
 	'vowiktionary' => 'Vükivödabuk',
+	'wbwikimedia' => 'West Bengal Wikimedians', // T162510
 	'wg_enwiki' => 'Wikipedia Working Group',
 	'wikimaniateamwiki' => 'WikimaniaTeam',
 	'wuuwiki' => '维基百科', // T128354
@@ -10038,6 +10042,9 @@ $wgConf->settings = [
 			'electionadmin'
 		],
 	],
+	'+wbwikimedia' => [
+		'bureaucrat' => [ 'translationadmin' ], // T162510
+	],
 	'+wikidata' => [
 		'sysop' => [
 			'rollbacker', // T47165
@@ -10789,6 +10796,9 @@ $wgConf->settings = [
 		'electcomm' => [
 			'electionadmin'
 		],
+	],
+	'+wbwikimedia' => [
+		'bureaucrat' => [ 'translationadmin', 'sysop', 'bureaucrat' ], // T162510
 	],
 	'+wikidata' => [
 		'sysop' => [
@@ -12485,6 +12495,7 @@ $wgConf->settings = [
 	'plwiki' => [ 'sysop' => [ 'flood' ] ], // T22155
 	'ruwikimedia' => [ 'sysop' => [ 'translationadmin' ] ], // T121766
 	'strategywiki' => [ 'sysop' => [ 'flood' ] ],
+	'wbwikimedia' => [ 'sysop' => [ 'translationadmin' ], ], // T162510
 	'wikidata' => [ 'sysop' => [ 'flood', 'translationadmin' ] ], // T50013, T48856
 	'wikitech' => [
 		'contentadmin' => [ 'flood' ],
@@ -12523,6 +12534,7 @@ $wgConf->settings = [
 	'strategywiki' => [ 'sysop' => [ 'flood' ] ],
 	'srwiki' => [ 'sysop' => [ 'flood' ] ],
 	'trwiki' => [ 'massmessage-sender' => [ 'massmessage-sender' ] ], // T147740
+	'wbwikimedia' => [ 'sysop' => [ 'translationadmin' ] ], // T162510
 	'wikidata' => [
 		'sysop' => [ 'flood', 'translationadmin' ], // T50013, T48856
 		'flood' => [ 'flood' ], // T50013
@@ -14726,6 +14738,7 @@ $wgConf->settings = [
 	'viwikisource' => 'uca-vi', // T47979
 	'viwikivoyage' => 'uca-vi', // T55616
 	'viwiktionary' => 'uca-vi', // T47979
+	'wbwikimedia' => 'numeric', // T162510
 ],
 
 // Varied for Labs only.
@@ -16075,6 +16088,7 @@ $wgConf->settings = [
 	'uawikimedia' => true, // T131731
 	'specieswiki' => true, // T129888
 	'testwiki' => true,
+	'wbwikimedia' => true, // T162510
 	'wikidata' => true, // T43585
 	'wikimania2012wiki' => true, // T36120
 	'wikimania2013wiki' => true, // T38477
@@ -16154,6 +16168,7 @@ $wgConf->settings = [
 	'nowikimedia' => true, // T152490
 	'ruwikimedia' => true, // T121766
 	'uawikimedia' => true, // T131731
+	'wbwikimedia' => true, // T162510
 	'wikidata' => true, // T43585
 	'wikimania2012wiki' => true,
 	'wikimania2013wiki' => true,
