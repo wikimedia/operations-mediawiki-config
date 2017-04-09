@@ -289,6 +289,7 @@ $wgConf->settings = [
 	'dewikivoyage' => 'Europe/Berlin', // T43992
 	'dewikiversity' => 'Europe/Berlin',
 	'dsbwiki' => 'Europe/Berlin',
+	'dtywiki' => 'Asia/Kathmandu', // T161529
 	'dvwiki' => 'Indian/Maldives', // T48351
 	'dvwiktionary' => 'Indian/Maldives', // T48351
 	'ecwikimedia' => 'America/Guayaquil', // T135521
@@ -543,6 +544,7 @@ $wgConf->settings = [
 	'dewiki' => '/static/images/project-logos/dewiki.png',
 	'diqwiki' => '/static/images/project-logos/diqwiki.png',
 	'dsbwiki' => '/static/images/project-logos/dsbwiki.png',
+	'dtywiki' => '/static/images/project-logos/dtywiki.png', // T161529
 	'dvwiki' => '/static/images/project-logos/dvwiki.png',  // T42285
 	'dzwiki' => '/static/images/project-logos/dzwiki.png',  // T50397
 	'eewiki' => '/static/images/project-logos/eewiki.png',  // T50397
@@ -1222,6 +1224,7 @@ $wgConf->settings = [
 	'dewiki' => [ '1.5x' => '/static/images/project-logos/dewiki-1.5x.png', '2x' => '/static/images/project-logos/dewiki-2x.png' ], // T132792
 	'diqwiki' => [ '1.5x' => '/static/images/project-logos/diqwiki-1.5x.png', '2x' => '/static/images/project-logos/diqwiki-2x.png'], // T150618
 	'dsbwiki' => [ '1.5x' => '/static/images/project-logos/dsbwiki-1.5x.png', '2x' => '/static/images/project-logos/dsbwiki-2x.png'], // T150618
+	'dtywiki' => [ '1.5x' => '/static/images/project-logos/dtywiki-1.5x.png', '2x' => '/static/images/project-logos/dtywiki-2x.png'], // T150618
 	'emlwiki' => [ '1.5x' => '/static/images/project-logos/emlwiki-1.5x.png', '2x' => '/static/images/project-logos/emlwiki-2x.png'], // T150618
 	'enwiki' => [ '1.5x' => '/static/images/project-logos/enwiki-1.5x.png', '2x' => '/static/images/project-logos/enwiki-2x.png' ],
 	'eswiki' => [ '1.5x' => '/static/images/project-logos/eswiki-1.5x.png', '2x' => '/static/images/project-logos/eswiki-2x.png' ], // T150618
@@ -1891,6 +1894,7 @@ $wgConf->settings = [
 	'dkwikimedia' => 'Wikimedia Danmark',
 	'donatewiki' => 'Donate',
 	'dsbwiki' => 'Wikipedija',
+	'dtywiki' => 'विकिपिडिया', // T161529
 	'dvwiki' => 'ވިކިޕީޑިއާ', // T50075
 	'dvwiktionary' => 'ވިކިރަދީފު',
 	'ecwikimedia' => 'Wikimedistas de Ecuador', // T135521
@@ -2384,6 +2388,7 @@ $wgConf->settings = [
 	'cywiktionary' => 'Wiciadur',
 	'donatewiki' => 'Donate',
 	'dsbwiki' => 'Wikipedija',
+	'dtywiki' => 'विकिपिडिया', // T161529
 	'dvwiki' => 'ވިކިޕީޑިއާ', // T50075
 	'dvwiktionary' => 'ވިކިރަދީފު', // T48846
 	'elwiki' => 'Βικιπαίδεια',
