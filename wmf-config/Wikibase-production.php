@@ -24,8 +24,6 @@ if ( $wmgUseWikibaseRepo ) {
 			'P153',
 			'P185',
 		];
-
-		$wgWBRepoSettings['dispatchingLockManager'] = 'redisLockManager';
 	} else {
 		$wgWBRepoSettings['sparqlEndpoint'] = 'https://query.wikidata.org/sparql';
 
@@ -91,6 +89,8 @@ if ( $wmgUseWikibaseRepo ) {
 	}
 
 	$wgWBRepoSettings['hasFullEntityIdColumn'] = false;
+
+	$wgWBRepoSettings['dispatchingLockManager'] = 'redisLockManager';
 }
 
 if ( $wmgUseWikibaseClient ) {
