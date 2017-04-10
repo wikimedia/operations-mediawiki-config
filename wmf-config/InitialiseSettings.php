@@ -13229,6 +13229,7 @@ $wgConf->settings = [
 	'commonswiki' => [ 'local' ],
 	'test2wiki' => [ 'testwikirepo' ],
 	'testwiki' => [ 'local' ],
+	'wikitech' => [ 'local' ], // T162374
 	'zhwiki' => [ 'local' ], // T139257
 ],
 
