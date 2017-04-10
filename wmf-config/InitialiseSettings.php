@@ -16847,6 +16847,7 @@ $wgConf->settings = [
 	'frwiki' => true, // T136684
 	'frwikiquote' => true, // T138064
 	'frwikisource' => true, // T132914
+	'frwikiversity' => true, // T162022
 	'frwikivoyage' => true, // T135702
 	'nowiki' => true, // T132693
 	'urwiki' => true,
