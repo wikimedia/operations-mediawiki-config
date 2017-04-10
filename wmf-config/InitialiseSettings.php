@@ -13222,10 +13222,6 @@ $wgConf->settings = [
 	'zhwiki' => [ 'local' ], // T139257
 ],
 
-'wgForeignUploadTestEnabled' => [
-	'default' => false,
-],
-
 'wmgCustomUploadDialog' => [
 	'default' => false,
 	'commonswiki' => true,
