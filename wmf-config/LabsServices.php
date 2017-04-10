@@ -33,6 +33,7 @@ $wmfAllServices['eqiad'] = [
 		'rdb1' => '10.68.16.177', // deployment-redis01.deployment-prep.eqiad.wmflabs
 		'rdb2' => '10.68.16.231', // deployment-redis02.deployment-prep.eqiad.wmflabs
 	],
+	'etcd' => 'deployment-etcd-01.deployment-prep.eqiad.wmflabs:2379',
 ];
 
 ### Logstash
@@ -53,9 +54,3 @@ $wmfAllServices['eqiad']['restbase'] = 'http://10.68.17.189:7231'; // deployment
 $wmfAllServices['eqiad']['poolcounter'] = [
 	'10.68.17.48', # deployment-poolcounter04.deployment-prep.eqiad.wmflabs
 ];
-
-
-# Shorthand when we have no master-slave situation to keep into account
-$wmfLocalServices = $wmfAllServices['eqiad'];
-
-$wmfMasterServices = $wmfAllServices['eqiad'];
