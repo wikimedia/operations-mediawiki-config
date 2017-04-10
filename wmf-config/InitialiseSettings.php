@@ -4765,14 +4765,6 @@ $wgConf->settings = [
 	'wikivoyage' => 'wikivoyage',
 ],
 
-'wgReadOnly' => [
-	'default' => null,
-],
-
-'wgReadOnlyFile' => [
-	'default' => false,
-],
-
 # wgTranslateNumerals @{
 'wgTranslateNumerals' => [
 	'default' => true,
