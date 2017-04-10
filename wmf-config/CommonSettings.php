@@ -51,9 +51,24 @@ $multiVersion = MWMultiVersion::getInstance();
 
 set_include_path( "$IP:/usr/local/lib/php:/usr/share/php" );
 
+# Get configuration from etcd
+$wgConfigRegistry = function () {
+	global $wmfDatacenter;
+
+	return new MultiConfig( [
+		new EtcdConfig( [
+			'host' => "_etcd._tcp.$wmfDatacenter.wmnet",
+			'protocol' => 'https'
+		] ),
+		new GlobalVarConfig
+	] );
+};
+$wmgConfig = MediaWikiServices::getInstance()->getMainConfig();
+
 # Master datacenter
 # The datacenter from which we serve traffic.
-$wmfMasterDatacenter = 'eqiad';
+$wmfMasterDatacenter = $wmgConfig->has( 'wmfMasterDatacenter' )
+	? $wmgConfig->get( 'wmfMasterDatacenter' ) : 'eqiad';
 
 ### List of some service hostnames
 # 'meta'    : meta wiki for user editable content
