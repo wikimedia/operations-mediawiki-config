@@ -17238,10 +17238,6 @@ $wgConf->settings = [
 'wmgPageImagesExpandOpenSearchXml' => [
 	'default' => true,
 ],
-'wmgPageImagesUseGalleries' => [
-	'default' => false,
-	'commonswiki' => true,
-],
 
 'wmgUseTorBlock' => [
 	'default' => true,
