@@ -51,9 +51,36 @@ $multiVersion = MWMultiVersion::getInstance();
 
 set_include_path( "$IP:/usr/local/lib/php:/usr/share/php" );
 
+# Create a cache object for etcd
+if ( PHP_SAPI === 'cli' ) {
+	$wmgLocalCache = new HashBagOStuff;
+} else {
+	$wmgLocalCache = new APCBagOStuff;
+}
+
+# Get configuration from etcd
+$wmgEtcdConfig = new MultiConfig( [
+	new EtcdConfig( [
+		'host' => "_etcd._tcp.$wmfDatacenter.wmnet",
+		'protocol' => 'https',
+		'directory' => "mediawiki-config/$wmfDatacenter",
+		'cache' => $wmgLocalCache,
+	] ),
+	new EtcdConfig( [
+		'host' => "_etcd._tcp.$wmfDatacenter.wmnet",
+		'protocol' => 'https',
+		'directory' => "mediawiki-config/global",
+		'cache' => $wmgLocalCache,
+	] ),
+] );
+
+$wgReadOnly = $wmgEtcdConfig->has( 'ReadOnly' )
+	? $wmgEtcdConfig->get( 'ReadOnly' ) : null;
+
 # Master datacenter
 # The datacenter from which we serve traffic.
-$wmfMasterDatacenter = 'codfw';
+$wmfMasterDatacenter = $wmgEtcdConfig->has( 'WMFMasterDatacenter' )
+	? $wmgEtcdConfig->get( 'WMFMasterDatacenter' ) : 'codfw';
 
 ### List of some service hostnames
 # 'meta'    : meta wiki for user editable content
