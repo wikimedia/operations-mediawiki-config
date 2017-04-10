@@ -23,6 +23,7 @@ $wmfAllServices['eqiad'] = [
 	'eventbus' => 'http://eventbus.discovery.wmnet:8085',
 	'upload' => 'upload.svc.eqiad.wmnet',
 	'cxserver' => 'http://cxserver.discovery.wmnet:8080',
+	'etcd' => '_etcd._tcp.eqiad.wmnet',
 ];
 
 $wmfAllServices['codfw'] = [
@@ -37,6 +38,7 @@ $wmfAllServices['codfw'] = [
 	'eventbus' => 'http://eventbus.discovery.wmnet:8085',
 	'upload' => 'upload.svc.codfw.wmnet',
 	'cxserver' => 'http://cxserver.discovery.wmnet:8080',
+	'etcd' => '_etcd._tcp.codfw.wmnet',
 ];
 
 ### Logstash
@@ -138,9 +140,3 @@ $wmfAllServices['codfw']['jobqueue_aggregator'] = [
 	'rdb2003.codfw.wmnet:6378', // fallback
 	'rdb2005.codfw.wmnet:6378', // fallback
 ];
-
-
-# Shorthand when we have no master-slave situation to keep into account
-$wmfLocalServices = $wmfAllServices[$wmfDatacenter];
-
-$wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
