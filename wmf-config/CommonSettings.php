@@ -51,10 +51,6 @@ $multiVersion = MWMultiVersion::getInstance();
 
 set_include_path( "$IP:/usr/local/lib/php:/usr/share/php" );
 
-# Master datacenter
-# The datacenter from which we serve traffic.
-$wmfMasterDatacenter = 'codfw';
-
 ### List of some service hostnames
 # 'meta'    : meta wiki for user editable content
 # 'upload'  : hostname where files are hosted
@@ -99,6 +95,19 @@ case 'production':
 default:
 	require "$wmfConfigDir/ProductionServices.php";
 }
+
+# Shorthand when we have no master-slave situation to keep into account
+$wmfLocalServices = $wmfAllServices[$wmfDatacenter];
+
+# Labs-only for testing, eventually etcd.php will be used in production as well
+if ( $wmfRealm === 'labs' ) {
+	# Get configuration from etcd. This gives us the correct $wmfMasterDatacenter
+	require "$wmfConfigDir/etcd.php";
+} else {
+	$wmfMasterDatacenter = 'codfw';
+}
+
+$wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
 
 # Must be set before InitialiseSettings.php:
 $wmfUdp2logDest = $wmfLocalServices['udp2log'];

@@ -17,6 +17,7 @@ mwconfig_files_txt=(
 	db-codfw.php
 	db-eqiad.php
 	db-labs.php
+	etcd.php
 	FeaturedFeedsWMF.php
 	filebackend.php
 	flaggedrevs.php
