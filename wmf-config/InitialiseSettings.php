@@ -8943,6 +8943,9 @@ $wgConf->settings = [
 			'editusercss' => true,
 		],
 	],
+	'ptwikinews' => [
+		'editprotected' => [ 'editprotected' => true, 'editsemiprotected' => true ], // T162577
+	],
 	'+quwiki' => [
 		'rollbacker' => [ 'rollback' => true ],
 	],
@@ -10005,7 +10008,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'interface-editor' ], // T133472
 	],
 	'+ptwikinews' => [
-		'sysop' => [ 'reviewer' ],
+		'sysop' => [ 'reviewer', 'editprotected' ], // T162577
 	],
 	'+private' => [ // Cary made me do it! --Andrew 2009-05-01
 		'bureaucrat' => [ 'inactive' ],
@@ -10751,7 +10754,7 @@ $wgConf->settings = [
 		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ], // T65750
 	],
 	'+ptwikinews' => [
-		'sysop' => [ 'reviewer' ],
+		'sysop' => [ 'reviewer', 'editprotected' ], // T162577
 	],
 	'+quwiki' => [
 		'sysop' => [ 'rollbacker' ],
