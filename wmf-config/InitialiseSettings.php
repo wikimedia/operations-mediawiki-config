@@ -18617,6 +18617,16 @@ $wgConf->settings = [
 'wmgUseParserMigration' => [
 	'default' => true,
 ],
+// Enable archive for testwiki 
+'wmgCirrusSearchIndexDeletes' => [
+	'default' => false,
+	'testwiki' => true,
+],
+
+'wmgCirrusSearchEnableArchive' => [
+	'default' => false,
+	'testwiki' => true,
+],
 
 ];
 
