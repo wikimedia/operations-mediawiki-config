@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_e94f89be",
+        "filename": "scap/plugins/clean.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2017-04-11T17:26:43Z",
+      "side": 1,
+      "message": "Played around with this a bit, and I\u0027m not sure that is correct. I think we want:\n\n    find . -name \u0027.git*\u0027 -prune -o -type f -regextype posix-extended -not -regex \u0027.*\\.(gif|jpg|jpeg|png|css|js|json|woff|woff2|svg|eot|ttf|ico)\u0027 -delete\n\nHere\u0027s my fiddling: https://gist.github.com/thcipriani/ae50e0f6a18e796e9fb955612b23baec",
+      "revId": "aa5428756b2c0b1c827cdb9b6c99dbf5f37a152b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
