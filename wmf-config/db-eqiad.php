@@ -7,13 +7,13 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 
 # $wgReadOnly = "Wikimedia Sites are currently read-only during maintenance, please try again soon.";
 
-$wmgParserCacheDBs = [
+$wgWMFParserCacheDBs = [
 	'10.64.0.12'   => '10.64.0.12',   # pc1004
 	'10.64.32.72'  => '10.64.32.72',  # pc1005
 	'10.64.48.128' => '10.64.48.128', # pc1006
 ];
 
-$wmgOldExtTemplate = [
+$wgWMFOldExtTemplate = [
 	'10.64.0.7'    => 1, # es1012
 	'10.64.32.185' => 1, # es1016
 	'10.64.48.115' => 1, # es1018
@@ -193,43 +193,43 @@ $wgLBFactoryConf = [
 	's1' => [
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's1', 'datacenter' => $wmfMasterDatacenter ] ],
+			'conds' => [ 'shard' => 's1', 'datacenter' => $wgWMFMasterDatacenter ] ],
 		'useGTIDs' => true
 	],
 	's2' => [
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's2', 'datacenter' => $wmfMasterDatacenter ] ],
+			'conds' => [ 'shard' => 's2', 'datacenter' => $wgWMFMasterDatacenter ] ],
 		'useGTIDs' => true
 	],
 	'DEFAULT' /* s3 */  => [
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's3', 'datacenter' => $wmfMasterDatacenter ] ],
+			'conds' => [ 'shard' => 's3', 'datacenter' => $wgWMFMasterDatacenter ] ],
 		'useGTIDs' => true
 	],
 	's4' => [
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's4', 'datacenter' => $wmfMasterDatacenter ] ],
+			'conds' => [ 'shard' => 's4', 'datacenter' => $wgWMFMasterDatacenter ] ],
 		'useGTIDs' => true
 	],
 	's5' => [
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's5', 'datacenter' => $wmfMasterDatacenter ] ],
+			'conds' => [ 'shard' => 's5', 'datacenter' => $wgWMFMasterDatacenter ] ],
 		'useGTIDs' => true
 	],
 	's6' => [
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's6', 'datacenter' => $wmfMasterDatacenter ] ],
+			'conds' => [ 'shard' => 's6', 'datacenter' => $wgWMFMasterDatacenter ] ],
 		'useGTIDs' => true
 	],
 	's7' => [
 		'lagDetectionMethod' => 'pt-heartbeat',
 		'lagDetectionOptions' => [
-			'conds' => [ 'shard' => 's7', 'datacenter' => $wmfMasterDatacenter ] ],
+			'conds' => [ 'shard' => 's7', 'datacenter' => $wgWMFMasterDatacenter ] ],
 		'useGTIDs' => true
 	],
 ],
@@ -590,27 +590,27 @@ $wgLBFactoryConf = [
 
 'externalLoads' => [
 	# Recompressed stores
-	'rc1' => $wmgOldExtTemplate,
+	'rc1' => $wgWMFOldExtTemplate,
 
 	# Former Ubuntu dual-purpose stores
-	'cluster3' => $wmgOldExtTemplate,
-	'cluster4' => $wmgOldExtTemplate,
-	'cluster5' => $wmgOldExtTemplate,
-	'cluster6' => $wmgOldExtTemplate,
-	'cluster7' => $wmgOldExtTemplate,
-	'cluster8' => $wmgOldExtTemplate,
-	'cluster9' => $wmgOldExtTemplate,
-	'cluster10' => $wmgOldExtTemplate,
-	'cluster20' => $wmgOldExtTemplate,
-	'cluster21' => $wmgOldExtTemplate,
+	'cluster3' => $wgWMFOldExtTemplate,
+	'cluster4' => $wgWMFOldExtTemplate,
+	'cluster5' => $wgWMFOldExtTemplate,
+	'cluster6' => $wgWMFOldExtTemplate,
+	'cluster7' => $wgWMFOldExtTemplate,
+	'cluster8' => $wgWMFOldExtTemplate,
+	'cluster9' => $wgWMFOldExtTemplate,
+	'cluster10' => $wgWMFOldExtTemplate,
+	'cluster20' => $wgWMFOldExtTemplate,
+	'cluster21' => $wgWMFOldExtTemplate,
 
 	# Clusters required for T24624
-	'cluster1' => $wmgOldExtTemplate,
-	'cluster2' => $wmgOldExtTemplate,
+	'cluster1' => $wgWMFOldExtTemplate,
+	'cluster2' => $wgWMFOldExtTemplate,
 
 	# Old dedicated clusters
-	'cluster22' => $wmgOldExtTemplate,
-	'cluster23' => $wmgOldExtTemplate,
+	'cluster22' => $wgWMFOldExtTemplate,
+	'cluster23' => $wgWMFOldExtTemplate,
 
 	# es2
 	'cluster24' => [

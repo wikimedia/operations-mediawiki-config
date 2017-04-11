@@ -1,6 +1,6 @@
 <?php
 
-if ( $wmgUseWikibaseRepo ) {
+if ( $wgWMFUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgPropertySuggesterClassifyingPropertyIds = [ 7 ];
 		$wgWBRepoSettings['formatterUrlProperty'] = 'P368';
@@ -91,7 +91,7 @@ if ( $wmgUseWikibaseRepo ) {
 	}
 }
 
-if ( $wmgUseWikibaseClient ) {
+if ( $wgWMFUseWikibaseClient ) {
 	if ( in_array( $wgDBname, [ 'test2wiki', 'testwiki', 'testwikidatawiki' ] ) ) {
 		$wgWBClientSettings['changesDatabase'] = 'testwikidatawiki';
 		$wgWBClientSettings['repoDatabase'] = 'testwikidatawiki';
@@ -121,6 +121,6 @@ if ( $wmgUseWikibaseClient ) {
 	// Overwrite or add commons links in the "other projects sidebar" with the "commons category" (P373), per T126960
 	$wgWikimediaBadgesCommonsCategoryProperty = $wgDBname === 'commonswiki' ? null : 'P373';
 
-	$wgArticlePlaceholderSearchEngineIndexed = $wmgArticlePlaceholderSearchEngineIndexed;
+	$wgArticlePlaceholderSearchEngineIndexed = $wgWMFArticlePlaceholderSearchEngineIndexed;
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://www.wikidata.org/w/index.php?title=MediaWiki:Wikibase-SortedProperties&action=raw&sp_ver=1';
 }

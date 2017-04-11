@@ -1,13 +1,13 @@
 <?php
 # WARNING: This file is publicly viewable on the web. Do not put private data here.
 
-/** @var string $wmgRedisPassword From PrivateSettings.php */
+/** @var string $wgWMFRedisPassword From PrivateSettings.php */
 
-$wmgRedisQueueBaseConfig = [
+$wgWMFRedisQueueBaseConfig = [
 	'class' => 'JobQueueRedis',
 	'redisConfig' => [
 		'connectTimeout' => .300,
-		'password' => $wmgRedisPassword,
+		'password' => $wgWMFRedisPassword,
 		'compression' => 'gzip',
 		# 'persistent' => defined( 'MEDIAWIKI_JOB_RUNNER' )
 	],
@@ -25,23 +25,23 @@ function wmfRedisConfigByPartition( $base, $partitions ) {
 $wgJobTypeConf['default'] = [
 	'class' => 'JobQueueFederated',
 	'configByPartition' => wmfRedisConfigByPartition(
-		$wmgRedisQueueBaseConfig,
-		$wmfLocalServices['jobqueue_redis']
+		$wgWMFRedisQueueBaseConfig,
+		$wgWMFLocalServices['jobqueue_redis']
 	),
 	'sectionsByWiki' => [], // default
 	// Weights for partitions in use: use this to depool redis masters
 	'partitionsBySection' => [
-		'default' => array_fill_keys( array_keys( $wmfLocalServices['jobqueue_redis'] ), 50 )
+		'default' => array_fill_keys( array_keys( $wgWMFLocalServices['jobqueue_redis'] ), 50 )
 	],
 	'maxPartitionsTry' => 5 // always covers 2+ servers
 ];
 // Note: on server failure, this should be changed to any other redis server
 $wgJobQueueAggregator = [
 	'class' => 'JobQueueAggregatorRedis',
-	'redisServers' => $wmfLocalServices['jobqueue_aggregator'],
+	'redisServers' => $wgWMFLocalServices['jobqueue_aggregator'],
 	'redisConfig' => [
 		'connectTimeout' => 0.5,
-		'password' => $wmgRedisPassword,
+		'password' => $wgWMFRedisPassword,
 	]
 ];
 

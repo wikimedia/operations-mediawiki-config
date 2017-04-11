@@ -13,7 +13,7 @@
 
 $wgSearchType = 'CirrusSearch';
 
-if ( $wmgUseClusterJobqueue ) {
+if ( $wgWMFUseClusterJobqueue ) {
 	# The secondary update job has a delay of a few seconds to make sure that Elasticsearch
 	# has completed a refresh cycle between when the data that the job needs is added and
 	# when the job is run.
@@ -30,20 +30,20 @@ $wgCirrusSearchElasticQuirks = [
 
 # Set up the the default cluster to send queries to,
 # and the list of clusters to write to.
-if ( $wmgCirrusSearchDefaultCluster === 'local' ) {
-	$wgCirrusSearchDefaultCluster = $wmfDatacenter;
+if ( $wgWMFCirrusSearchDefaultCluster === 'local' ) {
+	$wgCirrusSearchDefaultCluster = $wgWMFDatacenter;
 } else {
-	$wgCirrusSearchDefaultCluster = $wmgCirrusSearchDefaultCluster;
+	$wgCirrusSearchDefaultCluster = $wgWMFCirrusSearchDefaultCluster;
 }
-$wgCirrusSearchWriteClusters = $wmgCirrusSearchWriteClusters;
-$wgCirrusSearchClusterOverrides = $wmgCirrusSearchClusterOverrides;
+$wgCirrusSearchWriteClusters = $wgWMFCirrusSearchWriteClusters;
+$wgCirrusSearchClusterOverrides = $wgWMFCirrusSearchClusterOverrides;
 // TODO: remove, transitional config hack to support
 // var name change and avoid warnings with interwiki
 // (textcat) searches
-$wgCirrusSearchFullTextClusterOverrides = $wmgCirrusSearchClusterOverrides;
+$wgCirrusSearchFullTextClusterOverrides = $wgWMFCirrusSearchClusterOverrides;
 
 # Enable user testing
-$wgCirrusSearchUserTesting = $wmgCirrusSearchUserTesting;
+$wgCirrusSearchUserTesting = $wgWMFCirrusSearchUserTesting;
 
 # Turn off leading wildcard matches, they are a very slow and inefficient query
 $wgCirrusSearchAllowLeadingWildcard = false;
@@ -98,23 +98,23 @@ $wgCirrusSearchUseExperimentalHighlighter = true;
 $wgCirrusSearchOptimizeIndexForExperimentalHighlighter = true;
 
 # Setup the feedback link on Special:Search if enabled
-$wgCirrusSearchFeedbackLink = $wmgCirrusSearchFeedbackLink;
+$wgCirrusSearchFeedbackLink = $wgWMFCirrusSearchFeedbackLink;
 
 # Settings customized per index.
-$wgCirrusSearchShardCount = $wmgCirrusSearchShardCount;
-$wgCirrusSearchReplicas = $wmgCirrusSearchReplicas;
-$wgCirrusSearchMaxShardsPerNode = $wmgCirrusSearchMaxShardsPerNode;
-$wgCirrusSearchPreferRecentDefaultDecayPortion = $wmgCirrusSearchPreferRecentDefaultDecayPortion;
-$wgCirrusSearchWeights = array_merge( $wgCirrusSearchWeights, $wmgCirrusSearchWeightsOverrides );
-$wgCirrusSearchPowerSpecialRandom = $wmgCirrusSearchPowerSpecialRandom;
-$wgCirrusSearchAllFields = $wmgCirrusSearchAllFields;
-$wgCirrusSearchNamespaceWeights = $wmgCirrusSearchNamespaceWeightOverrides +
+$wgCirrusSearchShardCount = $wgWMFCirrusSearchShardCount;
+$wgCirrusSearchReplicas = $wgWMFCirrusSearchReplicas;
+$wgCirrusSearchMaxShardsPerNode = $wgWMFCirrusSearchMaxShardsPerNode;
+$wgCirrusSearchPreferRecentDefaultDecayPortion = $wgWMFCirrusSearchPreferRecentDefaultDecayPortion;
+$wgCirrusSearchWeights = array_merge( $wgCirrusSearchWeights, $wgWMFCirrusSearchWeightsOverrides );
+$wgCirrusSearchPowerSpecialRandom = $wgWMFCirrusSearchPowerSpecialRandom;
+$wgCirrusSearchAllFields = $wgWMFCirrusSearchAllFields;
+$wgCirrusSearchNamespaceWeights = $wgWMFCirrusSearchNamespaceWeightOverrides +
 	$wgCirrusSearchNamespaceWeights;
 
-$wgCirrusSearchSimilarityProfile = $wmgCirrusSearchSimilarityProfile;
-$wgCirrusSearchRescoreProfile = $wmgCirrusSearchRescoreProfile;
-$wgCirrusSearchFullTextQueryBuilderProfile = $wmgCirrusSearchFullTextQueryBuilderProfile;
-$wgCirrusSearchIgnoreOnWikiBoostTemplates = $wmgCirrusSearchIgnoreOnWikiBoostTemplates;
+$wgCirrusSearchSimilarityProfile = $wgWMFCirrusSearchSimilarityProfile;
+$wgCirrusSearchRescoreProfile = $wgWMFCirrusSearchRescoreProfile;
+$wgCirrusSearchFullTextQueryBuilderProfile = $wgWMFCirrusSearchFullTextQueryBuilderProfile;
+$wgCirrusSearchIgnoreOnWikiBoostTemplates = $wgWMFCirrusSearchIgnoreOnWikiBoostTemplates;
 
 // We had an incident of filling up the entire clusters redis instances after
 // 6 hours, half of that seems reasonable.
@@ -148,12 +148,12 @@ if ( $wgDBname == 'commonswiki' ) {
 // Configuration for initial test deployment of inline interwiki search via
 // language detection on the search terms.
 
-$wgCirrusSearchWikiToNameMap = $wmgCirrusSearchWikiToNameMap;
-$wgCirrusSearchLanguageToWikiMap = $wmgCirrusSearchLanguageToWikiMap;
+$wgCirrusSearchWikiToNameMap = $wgWMFCirrusSearchWikiToNameMap;
+$wgCirrusSearchLanguageToWikiMap = $wgWMFCirrusSearchLanguageToWikiMap;
 
-$wgCirrusSearchEnableAltLanguage = $wmgCirrusSearchEnableAltLanguage;
-$wgCirrusSearchLanguageDetectors = $wmgCirrusSearchLanguageDetectors;
-$wgCirrusSearchTextcatLanguages = $wmgCirrusSearchTextcatLanguages;
+$wgCirrusSearchEnableAltLanguage = $wgWMFCirrusSearchEnableAltLanguage;
+$wgCirrusSearchLanguageDetectors = $wgWMFCirrusSearchLanguageDetectors;
+$wgCirrusSearchTextcatLanguages = $wgWMFCirrusSearchTextcatLanguages;
 $wgCirrusSearchTextcatModel = [ "$IP/vendor/wikimedia/textcat/LM-query", "$IP/vendor/wikimedia/textcat/LM" ];
 $wgCirrusSearchTextcatConfig = [
 	'maxNgrams' => 9000,
@@ -178,7 +178,7 @@ $wgCirrusSearchCompletionDefaultScore = 'popqual';
 // is pointed at a remote datacenter. Currently this makes the assumption that it will either
 // be eqiad or codfw which have ~40ms latency between them. Multiples are chosen using
 // (p75 + cross dc latency)/p75
-if ( $wgCirrusSearchDefaultCluster !== $wmfDatacenter ) {
+if ( $wgCirrusSearchDefaultCluster !== $wgWMFDatacenter ) {
 	// prefix has p75 of ~30ms
 	if ( isset( $wgPoolCounterConf[ 'CirrusSearch-Prefix' ] ) ) {
 		$wgPoolCounterConf['CirrusSearch-Prefix']['workers'] *= 2;
@@ -194,19 +194,19 @@ if ( $wgCirrusSearchDefaultCluster !== $wmfDatacenter ) {
 }
 
 // Enable completion suggester
-$wgCirrusSearchUseCompletionSuggester = $wmgCirrusSearchUseCompletionSuggester;
+$wgCirrusSearchUseCompletionSuggester = $wgWMFCirrusSearchUseCompletionSuggester;
 
 // Configure sub-phrases completion
-$wgCirrusSearchCompletionSuggesterSubphrases = $wmgCirrusSearchCompletionSuggesterSubphrases;
+$wgCirrusSearchCompletionSuggesterSubphrases = $wgWMFCirrusSearchCompletionSuggesterSubphrases;
 
 // Enable phrase suggester (did you mean)
-$wgCirrusSearchEnablePhraseSuggest = $wmgCirrusSearchEnablePhraseSuggest;
+$wgCirrusSearchEnablePhraseSuggest = $wgWMFCirrusSearchEnablePhraseSuggest;
 
 // Configure ICU Folding
-$wgCirrusSearchUseIcuFolding = $wmgCirrusSearchUseIcuFolding;
+$wgCirrusSearchUseIcuFolding = $wgWMFCirrusSearchUseIcuFolding;
 
 // Prefer pages in user's language in multilingual wikis
-$wgCirrusSearchLanguageWeight = $wmgCirrusSearchLanguageWeight;
+$wgCirrusSearchLanguageWeight = $wgWMFCirrusSearchLanguageWeight;
 // Aliases for filetype: search
 $wgCirrusSearchFiletypeAliases = [
 	"pdf" => "office",
@@ -253,4 +253,4 @@ $wgCirrusSearchExtraIndexSettings = [
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
 #
-require "{$wmfConfigDir}/CirrusSearch-{$wmfRealm}.php";
+require "{$wgWMFConfigDir}/CirrusSearch-{$wgWMFRealm}.php";

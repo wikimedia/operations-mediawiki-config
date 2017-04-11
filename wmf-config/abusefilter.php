@@ -396,7 +396,7 @@ switch ( $wgDBname ) {
 // Please add new wikis in their correct place in alphabetical order!
 }
 
-if ( $wmfRealm === 'labs' ) {
+if ( $wgWMFRealm === 'labs' ) {
 	// T103060
 	$wgAbuseFilterActions['block'] = true;
 	$wgAbuseFilterBlockDuration = 'indefinite';

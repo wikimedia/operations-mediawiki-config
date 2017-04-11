@@ -2,7 +2,7 @@
 # WARNING: This file is publically viewable on the web.
 #          Do not put private data here.
 
-if ( $wmfRealm == 'labs' ) { # safe guard
+if ( $wgWMFRealm == 'labs' ) { # safe guard
 	# Database configuration files for the beta labs
 
 	$wgDBTableOptions = "ENGINE=InnoDB, DEFAULT CHARSET=binary";
@@ -65,6 +65,6 @@ if ( $wmfRealm == 'labs' ) { # safe guard
 	];
 
 	# No parser cache in beta yet
-	$wmgParserCacheDBs = [];
+	$wgWMFParserCacheDBs = [];
 
 } # end safe guard

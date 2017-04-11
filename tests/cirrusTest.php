@@ -5,7 +5,7 @@ require_once __DIR__ . '/SiteConfiguration.php';
 
 class cirrusTests extends PHPUnit_Framework_TestCase {
 	public function testClusterConfigurationForProdTestwiki() {
-		$wmfDatacenter = 'unittest';
+		$wgWMFDatacenter = 'unittest';
 		$config = $this->loadCirrusConfig( 'production', 'testwiki', 'wiki' );
 		$this->assertArrayNotHasKey( 'wgCirrusSearchServers', $config );
 		$this->assertArrayHasKey( 'wgCirrusSearchClusters', $config );
@@ -76,30 +76,30 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		}
 	}
 
-	private function loadWgConf( $wmfRealm ) {
+	private function loadWgConf( $wgWMFRealm ) {
 		// Variables required for wgConf.php
-		$wmfConfigDir = __DIR__ . "/../wmf-config";
+		$wgWMFConfigDir = __DIR__ . "/../wmf-config";
 
-		require "{$wmfConfigDir}/wgConf.php";
+		require "{$wgWMFConfigDir}/wgConf.php";
 
 		// InitialiseSettings.php explicitly declares these as global, so we must too
-		$GLOBALS['wmfUdp2logDest'] = 'localhost';
-		$GLOBALS['wmfDatacenter'] = 'unittest';
-		$GLOBALS['wmfMasterDatacenter'] = 'unittest';
-		$GLOBALS['wmfRealm'] = $wmfRealm;
-		$GLOBALS['wmfConfigDir'] = $wmfConfigDir;
+		$GLOBALS['wgWMFUdp2logDest'] = 'localhost';
+		$GLOBALS['wgWMFDatacenter'] = 'unittest';
+		$GLOBALS['wgWMFMasterDatacenter'] = 'unittest';
+		$GLOBALS['wgWMFRealm'] = $wgWMFRealm;
+		$GLOBALS['wgWMFConfigDir'] = $wgWMFConfigDir;
 		$GLOBALS['wgConf'] = $wgConf;
 
 		require __DIR__ . '/TestServices.php';
-		require "{$wmfConfigDir}/InitialiseSettings.php";
+		require "{$wgWMFConfigDir}/InitialiseSettings.php";
 
 		return $wgConf;
 	}
 
-	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix ) {
-		$wmfConfigDir = __DIR__ . "/../wmf-config";
+	private function loadCirrusConfig( $wgWMFRealm, $wgDBname, $dbSuffix ) {
+		$wgWMFConfigDir = __DIR__ . "/../wmf-config";
 		require __DIR__ . '/TestServices.php';
-		$wgConf = $this->loadWgConf( $wmfRealm );
+		$wgConf = $this->loadWgConf( $wgWMFRealm );
 
 		list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
 		$wikiTags = [];
@@ -137,17 +137,17 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$wgJobTypeConf = array( 'default' => array() );
 		$wgCirrusSearchWeights = array();
 		$wgCirrusSearchNamespaceWeights = array();
-		$wmfSwiftEqiadConfig = array(
+		$wgWMFSwiftEqiadConfig = array(
 			'cirrusAuthUrl' => '',
 			'cirrusUser' => '',
 			'cirrusKey' => '',
 		);
-		$wmfDatacenter = 'unittest';
+		$wgWMFDatacenter = 'unittest';
 		$wgCirrusSearchPoolCounterKey = 'unittest:poolcounter:blahblahblah';
 		// not used for anything, just to prevent undefined variable
 		$IP = '/dev/null';
 
-		require "{$wmfConfigDir}/CirrusSearch-common.php";
+		require "{$wgWMFConfigDir}/CirrusSearch-common.php";
 
 		return compact( array_keys( get_defined_vars() ) );
 	}
@@ -172,9 +172,9 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 
 	public function providePerClusterShardsAndReplicas() {
 		$wgConf = $this->loadWgConf( 'unittest' );
-		$shards = $wgConf->settings['wmgCirrusSearchShardCount'];
-		$replicas = $wgConf->settings['wmgCirrusSearchReplicas'];
-		$maxShardPerNode = $wgConf->settings['wmgCirrusSearchMaxShardsPerNode'];
+		$shards = $wgConf->settings['wgWMFCirrusSearchShardCount'];
+		$replicas = $wgConf->settings['wgWMFCirrusSearchReplicas'];
+		$maxShardPerNode = $wgConf->settings['wgWMFCirrusSearchMaxShardsPerNode'];
 		$wikis = array_merge( array_keys( $shards ), array_keys( $replicas ), array_keys( $maxShardPerNode ) );
 		foreach ( $wikis as $idx => $wiki ) {
 			if ( $wiki[0] === '+' ) {
@@ -263,51 +263,51 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		return [
 			'zhwiki' => [ 'zhwiki', 'wiki',
 				[
-					'wmgCirrusSearchSimilarityProfile' => 'default',
-					'wmgCirrusSearchRescoreProfile' => 'classic',
-					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'default',
+					'wgWMFCirrusSearchSimilarityProfile' => 'default',
+					'wgWMFCirrusSearchRescoreProfile' => 'classic',
+					'wgWMFCirrusSearchFullTextQueryBuilderProfile' => 'default',
 				],
 			],
 			'zh_min_nanwikisource' => [ 'zh_min_nanwikisource', 'wikisource',
 				[
-					'wmgCirrusSearchSimilarityProfile' => 'default',
-					'wmgCirrusSearchRescoreProfile' => 'classic',
-					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'default',
+					'wgWMFCirrusSearchSimilarityProfile' => 'default',
+					'wgWMFCirrusSearchRescoreProfile' => 'classic',
+					'wgWMFCirrusSearchFullTextQueryBuilderProfile' => 'default',
 				],
 			],
 			'zh_classicalwiki' => [ 'zh_classicalwiki', 'wiki',
 				[
-					'wmgCirrusSearchSimilarityProfile' => 'default',
-					'wmgCirrusSearchRescoreProfile' => 'classic',
-					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'default',
+					'wgWMFCirrusSearchSimilarityProfile' => 'default',
+					'wgWMFCirrusSearchRescoreProfile' => 'classic',
+					'wgWMFCirrusSearchFullTextQueryBuilderProfile' => 'default',
 				],
 			],
 			'thwiktionary' => [ 'thwiktionary', 'wiktionary',
 				[
-					'wmgCirrusSearchSimilarityProfile' => 'default',
-					'wmgCirrusSearchRescoreProfile' => 'classic',
-					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'default',
+					'wgWMFCirrusSearchSimilarityProfile' => 'default',
+					'wgWMFCirrusSearchRescoreProfile' => 'classic',
+					'wgWMFCirrusSearchFullTextQueryBuilderProfile' => 'default',
 				],
 			],
 			'zh_yuewiki' => [ 'zh_yuewiki', 'wiki',
 				[
-					'wmgCirrusSearchSimilarityProfile' => 'default',
-					'wmgCirrusSearchRescoreProfile' => 'classic',
-					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'default',
+					'wgWMFCirrusSearchSimilarityProfile' => 'default',
+					'wgWMFCirrusSearchRescoreProfile' => 'classic',
+					'wgWMFCirrusSearchFullTextQueryBuilderProfile' => 'default',
 				],
 			],
 			'enwiki' => [ 'enwiki', 'wiki',
 				[
-					'wmgCirrusSearchSimilarityProfile' => 'wmf_defaults',
-					'wmgCirrusSearchRescoreProfile' => 'wsum_inclinks_pv',
-					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
+					'wgWMFCirrusSearchSimilarityProfile' => 'wmf_defaults',
+					'wgWMFCirrusSearchRescoreProfile' => 'wsum_inclinks_pv',
+					'wgWMFCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
 				],
 			],
 			'frwiktionary' => [ 'frwiktionary', 'wiktionary',
 				[
-					'wmgCirrusSearchSimilarityProfile' => 'wmf_defaults',
-					'wmgCirrusSearchRescoreProfile' => 'wsum_inclinks',
-					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
+					'wgWMFCirrusSearchSimilarityProfile' => 'wmf_defaults',
+					'wgWMFCirrusSearchRescoreProfile' => 'wsum_inclinks',
+					'wgWMFCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
 				],
 			],
 		];

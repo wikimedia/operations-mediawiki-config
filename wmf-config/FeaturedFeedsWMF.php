@@ -11,7 +11,7 @@ $wgHooks['FeaturedFeeds::getFeeds'][] = 'wfFeaturedFeedsWMF_getFeeds';
  * @return bool
  */
 function wfFeaturedFeedsWMF_getFeeds( &$feeds ) {
-	global $wgConf, $wmgFeaturedFeedsOverrides;
+	global $wgConf, $wgWMFFeaturedFeedsOverrides;
 	list( $site, $lang ) = $wgConf->siteFromDB( wfGetDB( DB_SLAVE )->getDBname() );
 	$media = [
 		'potd' => [ // Picture Of The Day
@@ -110,7 +110,7 @@ function wfFeaturedFeedsWMF_getFeeds( &$feeds ) {
 			];
 			break;
 	}
-	foreach ( $wmgFeaturedFeedsOverrides as $feedName => $overrides ) {
+	foreach ( $wgWMFFeaturedFeedsOverrides as $feedName => $overrides ) {
 		if ( isset( $feeds[$feedName] ) ) {
 			$feeds[$feedName] = $overrides + $feeds[$feedName];
 		}

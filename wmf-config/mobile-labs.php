@@ -4,10 +4,10 @@
 # # Do not put private data here.
 
 
-if ( $wmgMobileFrontend ) {
-	if ( $wmgZeroBanner ) {
+if ( $wgWMFMobileFrontend ) {
+	if ( $wgWMFZeroBanner ) {
 		$wgZeroBannerClusterDomain = 'beta.wmflabs.org'; // need a better way to calc this
-		if ( !$wmgZeroPortal ) {
+		if ( !$wgWMFZeroPortal ) {
 			$wgJsonConfigs['JsonZeroConfig']['remote']['url'] = 'https://zero.wikimedia.beta.wmflabs.org/w/api.php';
 		}
 	}

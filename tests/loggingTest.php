@@ -22,7 +22,7 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 	public function provideHandlerSetup() {
 		return array(
 			'Setting only a level sends to udp2log and logstash' => array(
-				// configuration for 'test' channel in wmgMonologChannels
+				// configuration for 'test' channel in wgWMFMonologChannels
 				'debug',
 				// handlers expected on the 'test' channel
 				array( 'failuregroup|udp2log-debug|logstash-info' )
@@ -71,42 +71,42 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 	public function testHandlerSetup( $channelConfig, $expectHandlers ) {
 		// logging.php does not explicitly declare anything global, so it will
 		// only read from the local scope defined here.
-		$wmgDefaultMonologHandler = 'blackhole';
+		$wgWMFDefaultMonologHandler = 'blackhole';
 		$wgDebugLogFile = false;
-		$wmgMonologAvroSchemas = array();
-		$wmgLogAuthmanagerMetrics = false;
-		$wmfUdp2logDest = 'localhost';
-		$wmgLogstashServers = array( 'localhost' );
-		$wmgKafkaServers = array( 'localhost' );
-		$wmgMonologChannels = array( 'test' => $channelConfig );
-		$wmfRealm = 'production';
+		$wgWMFMonologAvroSchemas = array();
+		$wgWMFLogAuthmanagerMetrics = false;
+		$wgWMFUdp2logDest = 'localhost';
+		$wgWMFLogstashServers = array( 'localhost' );
+		$wgWMFKafkaServers = array( 'localhost' );
+		$wgWMFMonologChannels = array( 'test' => $channelConfig );
+		$wgWMFRealm = 'production';
 
 		include __DIR__ . '/../wmf-config/logging.php';
 
 		foreach ( $expectHandlers as $handlerName ) {
-			$this->assertArrayHasKey( $handlerName, $wmgMonologConfig['handlers'] );
+			$this->assertArrayHasKey( $handlerName, $wgWMFMonologConfig['handlers'] );
 		}
 		$this->assertEquals(
 			$expectHandlers,
-			$wmgMonologConfig['loggers']['test']['handlers']
+			$wgWMFMonologConfig['loggers']['test']['handlers']
 		);
 	}
 
 	public static function provideAvroSchemas() {
 		$wgConf = new stdClass;
-		$wmfConfigDir = __DIR__ . '/../wmf-config';
+		$wgWMFConfigDir = __DIR__ . '/../wmf-config';
 
-		$GLOBALS['wmfUdp2logDest'] = 'localhost';
-		$GLOBALS['wmfDatacenter'] = 'unittest';
-		$GLOBALS['wmfRealm'] = 'production';
-		$GLOBALS['wmfConfigDir'] = $wmfConfigDir;
+		$GLOBALS['wgWMFUdp2logDest'] = 'localhost';
+		$GLOBALS['wgWMFDatacenter'] = 'unittest';
+		$GLOBALS['wgWMFRealm'] = 'production';
+		$GLOBALS['wgWMFConfigDir'] = $wgWMFConfigDir;
 		$GLOBALS['wgConf'] = $wgConf;
 
 		require __DIR__ . "/TestServices.php";
-		require "{$wmfConfigDir}/InitialiseSettings.php";
+		require "{$wgWMFConfigDir}/InitialiseSettings.php";
 
 		$tests = array();
-		foreach ( $wgConf->settings['wmgMonologAvroSchemas']['default'] as $name => $schemaConfig ) {
+		foreach ( $wgConf->settings['wgWMFMonologAvroSchemas']['default'] as $name => $schemaConfig ) {
 			$tests[$name] = array( $schemaConfig );
 		}
 		return $tests;
@@ -126,20 +126,20 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 		// InitializeSettings.php explicitly declares these as global, so we need
 		// to as well.
 		$this->setGlobals( array(
-			'wmfUdp2logDest' => 'localhost',
-			'wmfDatacenter' => 'test',
-			'wmfConfigDir' => __DIR__ . '/../wmf-config',
+			'wgWMFUdp2logDest' => 'localhost',
+			'wgWMFDatacenter' => 'test',
+			'wgWMFConfigDir' => __DIR__ . '/../wmf-config',
 		) );
 		global $wgConf;
 		foreach ( array( 'production', 'labs' ) as $realm ) {
 			$this->setGlobals( array(
 				'wgConf' => new stdClass(),
-				'wmfRealm' => $realm,
+				'wgWMFRealm' => $realm,
 			) );
 			include __DIR__ . '/../wmf-config/InitialiseSettings.php';
-			foreach ( $wgConf->settings['wmgMonologChannels'] as $wiki => $channels ) {
+			foreach ( $wgConf->settings['wgWMFMonologChannels'] as $wiki => $channels ) {
 				foreach ( $channels as $name => $config ) {
-					$tests["\$wmgMonologChannels['$wiki']['$name']"] = array( $config );
+					$tests["\$wgWMFMonologChannels['$wiki']['$name']"] = array( $config );
 				}
 			}
 		}

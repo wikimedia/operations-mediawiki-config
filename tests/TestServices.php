@@ -9,11 +9,11 @@
 #
 #######################################################################
 
-$wmfDatacenter = $wmfMasterDatacenter = 'unittest';
+$wgWMFDatacenter = $wgWMFMasterDatacenter = 'unittest';
 
-$wmfAllServices = array();
+$wgWMFAllServices = array();
 
-$wmfAllServices['unittest'] = array(
+$wgWMFAllServices['unittest'] = array(
 	'udp2log' => 'localhost:8420',
 	'statsd' => 'localhost',
 	'search' => array( 'localhost' ),
@@ -26,27 +26,27 @@ $wmfAllServices['unittest'] = array(
 );
 
 ### Logstash
-$wmfAllServices['unittest']['logstash'] = array( '127.0.0.1' );
+$wgWMFAllServices['unittest']['logstash'] = array( '127.0.0.1' );
 
 ### Analytics Kafka cluster
-$wmfAllServices['unittest']['kafka'] = array( '127.0.0.1:9092' );
+$wgWMFAllServices['unittest']['kafka'] = array( '127.0.0.1:9092' );
 
 ### IRC
-$wmfAllServices['unittest']['irc'] = '127.0.0.1';
+$wgWMFAllServices['unittest']['irc'] = '127.0.0.1';
 
 ### Restbase
-$wmfAllServices['unittest']['restbase'] = "http://127.0.0.1:7231";
+$wgWMFAllServices['unittest']['restbase'] = "http://127.0.0.1:7231";
 
 ### Poolcounter
-$wmfAllServices['unittest']['poolcounter'] = array( '127.0.0.1' );
+$wgWMFAllServices['unittest']['poolcounter'] = array( '127.0.0.1' );
 
 ### LockManager Redis
-$wmfAllServices['unittest']['redis_lock'] = array(
+$wgWMFAllServices['unittest']['redis_lock'] = array(
 	'rdb1' => '127.0.0.1',
 	'rdb2' => '127.0.0.1',
 	'rdb3' => '127.0.0.1'
 );
 
 # Make sure direct references to our datacenters work
-$wmfLocalServices = $wmfAllServices['eqiad'] = $wmfAllServices['codfw'] = $wmfAllServices['unittest'];
-$wmfMasterServices = $wmfLocalServices;
+$wgWMFLocalServices = $wgWMFAllServices['eqiad'] = $wgWMFAllServices['codfw'] = $wgWMFAllServices['unittest'];
+$wgWMFMasterServices = $wgWMFLocalServices;

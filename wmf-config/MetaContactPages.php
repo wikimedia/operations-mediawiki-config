@@ -105,7 +105,7 @@ $trademark = [
 
 $wgContactConfig['requestlicense'] = [
 	'RecipientUser' => 'Trademarks (WMF)',
-	'SenderEmail' => $wmgNotificationSender, // TODO: Replace with details submitted on form
+	'SenderEmail' => $wgWMFNotificationSender, // TODO: Replace with details submitted on form
 	'SenderName' => 'Contact Page',
 	'RequireDetails' => true,
 	'IncludeIP' => false,
@@ -168,7 +168,7 @@ $wgContactConfig['requestlicense'] = [
 
 $wgContactConfig['licenseabuse'] = [
 	'RecipientUser' => 'WMF Trademark Abuse',
-	'SenderEmail' => $wmgNotificationSender, // TODO: Replace with details submitted on form
+	'SenderEmail' => $wgWMFNotificationSender, // TODO: Replace with details submitted on form
 	'SenderName' => 'Contact Page',
 	'RequireDetails' => true,
 	'IncludeIP' => false,
