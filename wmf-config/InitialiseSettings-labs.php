@@ -499,10 +499,6 @@ function wmfLabsSettings() {
 			'nonecho' => false,
 		],
 
-		'wmgUseRevisionSlider' => [
-			'default' => true,  // T134770
-		],
-
 		'wmgRevisionSliderBetaFeature' => [
 			'default' => false, // T149725
 		],
