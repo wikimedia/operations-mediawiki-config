@@ -509,7 +509,7 @@ function wmfLabsSettings() {
 
 		// T160410 can be removed when the new view is the default
 		'wgRevisionSliderAlternateSlider' => [
-		        'default' => true,
+			'default' => true,
 		],
 
 		// Ensure ?action=credits isn't break and allow to work
