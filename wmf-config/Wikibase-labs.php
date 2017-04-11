@@ -1,6 +1,6 @@
 <?php
 
-if ( $wmgUseWikibaseRepo ) {
+if ( $wgWMFUseWikibaseRepo ) {
 	$wgPropertySuggesterClassifyingPropertyIds = [ 694 ];
 	$wgWBRepoSettings['formatterUrlProperty'] = 'P9094';
 
@@ -28,7 +28,7 @@ if ( $wmgUseWikibaseRepo ) {
 	];
 }
 
-if ( $wmgUseWikibaseClient ) {
+if ( $wgWMFUseWikibaseClient ) {
 	$wgWBClientSettings['badgeClassNames'] = [
 		'Q49444' => 'badge-goodarticle',
 		'Q49447' => 'badge-featuredarticle',

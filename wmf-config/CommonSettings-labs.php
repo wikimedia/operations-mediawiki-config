@@ -6,7 +6,7 @@
 # This file hold configuration statement overriding CommonSettings.php
 # Should not be loaded on production
 
-if ( $wmfRealm == 'labs' ) {  # safe guard
+if ( $wgWMFRealm == 'labs' ) {  # safe guard
 
 // test wiki
 if ( $wgDBname == 'testwiki' ) {
@@ -29,7 +29,7 @@ $wgProfiler['udphost'] = 'labmon1001.eqiad.wmnet';
 
 $wgDebugTimestamps = true;
 
-$wmgAddWikiNotify = false;
+$wgWMFAddWikiNotify = false;
 
 $wgLocalVirtualHosts = [
 	'wikipedia.beta.wmflabs.org',
@@ -51,11 +51,11 @@ $wgDnsBlacklistUrls   = [
 	'proxies.dnsbl.sorbs.net.',
 ];
 
-if ( $wmgUseOAuth ) {
+if ( $wgWMFUseOAuth ) {
 	$wgMWOAuthCentralWiki = 'metawiki';
 }
 
-if ( $wmgUseFlow ) {
+if ( $wgWMFUseFlow ) {
 	// Override CommonSettings.php, which has:
 	// $wgFlowExternalStore = $wgDefaultExternalStore;
 	$wgFlowExternalStore = [
@@ -75,23 +75,23 @@ if ( $wmgUseFlow ) {
 	$wgNamespaceContentModels[ 191 ] = 'flow-board'; // CONTENT_MODEL_FLOW_BOARD
 }
 
-if ( $wmgUseContentTranslation ) {
+if ( $wgWMFUseContentTranslation ) {
 	$wgContentTranslationSiteTemplates['cx'] = 'https://cxserver-beta.wmflabs.org/v1';
 	$wgContentTranslationTranslateInTarget = false;
 }
 
-if ( $wmgUseCentralNotice ) {
+if ( $wgWMFUseCentralNotice ) {
 	$wgCentralPagePath = "//meta.wikimedia.beta.wmflabs.org/w/index.php";
 	$wgCentralSelectedBannerDispatcher = "//meta.wikimedia.beta.wmflabs.org/w/index.php?title=Special:BannerLoader";
 	$wgCentralBannerRecorder = "//meta.wikimedia.beta.wmflabs.org/w/index.php?title=Special:RecordImpression";
 }
 
-if ( $wmgUseCentralAuth ) {
+if ( $wgWMFUseCentralAuth ) {
 	$wgCentralAuthUseSlaves = true;
 }
 
 // Labs override for GlobalCssJs
-if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
+if ( $wgWMFUseGlobalCssJs && $wgWMFUseCentralAuth ) {
 	// Load from betalabs metawiki
 	$wgResourceLoaderSources['metawiki'] = [
 		'apiScript' => '//meta.wikimedia.beta.wmflabs.org/w/api.php',
@@ -99,13 +99,13 @@ if ( $wmgUseGlobalCssJs && $wmgUseCentralAuth ) {
 	];
 }
 
-if ( $wmgUseGlobalUserPage && $wmgUseCentralAuth ) {
+if ( $wgWMFUseGlobalUserPage && $wgWMFUseCentralAuth ) {
 	// Labs override
 	$wgGlobalUserPageAPIUrl = 'https://meta.wikimedia.beta.wmflabs.org/w/api.php';
 	$wgGlobalUserPageDBname = 'metawiki';
 }
 
-if ( $wmgUseUrlShortener ) {
+if ( $wgWMFUseUrlShortener ) {
 	// Labs overrides
 	$wgUrlShortenerReadOnly = false;
 	$wgUrlShortenerServer = 'w-beta.wmflabs.org';
@@ -138,7 +138,7 @@ if ( $wmgUseUrlShortener ) {
 }
 
 // Labs override for BounceHandler
-if ( $wmgUseBounceHandler ) {
+if ( $wgWMFUseBounceHandler ) {
 	// $wgVERPsecret = ''; // This was set in PrivateSettings.php by Legoktm
 	$wgBounceHandlerCluster = false;
 	$wgBounceHandlerSharedDB = false;
@@ -148,7 +148,7 @@ if ( $wmgUseBounceHandler ) {
 	$wgVERPdomainPart = 'beta.wmflabs.org';
 }
 
-if ( $wmgUseTimedMediaHandler ) {
+if ( $wgWMFUseTimedMediaHandler ) {
 	$wgMwEmbedModuleConfig[ 'MediaWiki.ApiProviders' ] =  [
 	"commons" => [
 		'url' => '//commons.wikimedia.beta.wmflabs.org/w/api.php'
@@ -167,24 +167,24 @@ if ( $wgDBname == 'commonswiki' ) {
 
 
 // Enable Tabular data namespace on Commons - T148745
-if ( $wmgEnableTabularData && $wgDBname !== 'commonswiki' ) {
+if ( $wgWMFEnableTabularData && $wgDBname !== 'commonswiki' ) {
 	$wgJsonConfigs['Tabular.JsonConfig']['remote']['url'] = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
 }
 
 // Enable Map (GeoJSON) data namespace on Commons - T149548
-if ( $wmgEnableMapData && $wgDBname !== 'commonswiki' ) {
+if ( $wgWMFEnableMapData && $wgDBname !== 'commonswiki' ) {
 	$wgJsonConfigs['Map.JsonConfig']['remote']['url'] = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
 }
 
 
-if ( $wmgUseMath ) {
+if ( $wgWMFUseMath ) {
 	$wgDefaultUserOptions[ 'math' ] = 'mathml';
 }
 
 // CORS (cross-domain AJAX, T22814)
 // This lists the domains that are accepted as *origins* of CORS requests
 // DO NOT add domains here that aren't WMF wikis unless you really know what you're doing
-if ( $wmgUseCORS ) {
+if ( $wgWMFUseCORS ) {
 	$wgCrossSiteAJAXdomains = [
 		'*.beta.wmflabs.org',
 	];
@@ -193,19 +193,19 @@ if ( $wmgUseCORS ) {
 // Temporary override to test T68699 on Beta Cluster.  Remove when in production.
 $wgExtendedLoginCookieExpiration = 365 * 86400;
 
-if ( file_exists( "$wmfConfigDir/extension-list-labs" ) ) {
-	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-labs";
+if ( file_exists( "$wgWMFConfigDir/extension-list-labs" ) ) {
+	$wgExtensionEntryPointListFiles[] = "$wgWMFConfigDir/extension-list-labs";
 }
 
-if ( $wmgUseCollection ) {
+if ( $wgWMFUseCollection ) {
 	$wgCollectionPortletFormats[] = 'rdf2text';
 	// Don't use production proxy to reach PediaPress
 	$wgCollectionCommandToServeURL[ 'zip_post' ] = 'https://pediapress.com/wmfup/';
 }
 
-if ( $wmgUsePageImages ) {
+if ( $wgWMFUsePageImages ) {
 	require_once "$IP/extensions/PageImages/PageImages.php";
-	$wgPageImagesExpandOpenSearchXml = $wmgPageImagesExpandOpenSearchXml;
+	$wgPageImagesExpandOpenSearchXml = $wgWMFPageImagesExpandOpenSearchXml;
 	$wgPageImagesBlacklist[] = [
 		'type' => 'db',
 		'page' => 'MediaWiki:Pageimages-blacklist',
@@ -213,7 +213,7 @@ if ( $wmgUsePageImages ) {
 	];
 }
 
-if ( $wmgUseQuickSurveys ) {
+if ( $wgWMFUseQuickSurveys ) {
 	$wgQuickSurveysRequireHttps = false;
 
 	$wgQuickSurveysConfig = [
@@ -271,13 +271,13 @@ if ( $wmgUseQuickSurveys ) {
 	];
 }
 
-if ( $wmgUseSentry ) {
+if ( $wgWMFUseSentry ) {
 	require_once( "$IP/extensions/Sentry/Sentry.php" );
-	$wgSentryDsn = $wmgSentryDsn;
+	$wgSentryDsn = $wgWMFSentryDsn;
 	$wgSentryLogPhpErrors = false;
 }
 
-if ( $wmgUseEcho && $wmgUseCentralAuth ) {
+if ( $wgWMFUseEcho && $wgWMFUseCentralAuth ) {
 	$wgEchoSharedTrackingDB = 'wikishared';
 	// Set cluster back to false, to override CommonSettings.php setting it to 'extension1'
 	$wgEchoSharedTrackingCluster = false;
@@ -286,7 +286,7 @@ if ( $wmgUseEcho && $wmgUseCentralAuth ) {
 // Enabling thank-you-edit on beta for testing T128249. Still disabled in prod.
 $wgEchoNotifications['thank-you-edit']['notify-type-availability']['web'] = true;
 
-if ( $wmgUseGraph ) {
+if ( $wgWMFUseGraph ) {
 	// **** THIS LIST MUST MATCH puppet/hieradata/labs/deployment-prep/common.yaml ****
 	// See https://www.mediawiki.org/wiki/Extension:Graph#External_data
 	$wgGraphAllowedDomains['http'] = [ 'wmflabs.org' ];
@@ -295,24 +295,24 @@ if ( $wmgUseGraph ) {
 	$wgGraphAllowedDomains['wikidatasparql'][] = 'wdqs-test.wmflabs.org';
 }
 
-if ( $wmgUseORES ) {
+if ( $wgWMFUseORES ) {
 	wfLoadExtension( 'ORES' );
 	$wgOresBaseUrl = 'https://ores-beta.wmflabs.org/';
 }
 
-if ( $wmgUseNewsletter ) {
+if ( $wgWMFUseNewsletter ) {
 	wfLoadExtension( 'Newsletter' );
 }
 
-if ( $wmgUsePerformanceInspector ) {
+if ( $wgWMFUsePerformanceInspector ) {
 	wfLoadExtension( 'PerformanceInspector' );
 }
 
-if ( $wmgUseUniversalLanguageSelector ) {
+if ( $wgWMFUseUniversalLanguageSelector ) {
 	$wgDefaultUserOptions['compact-language-links'] = 0;
 }
 
-if ( $wmgUseEmailAuth ) {
+if ( $wgWMFUseEmailAuth ) {
 	wfLoadExtension( 'EmailAuth' );
 	// make it do something testable
 	$wgHooks['EmailAuthRequireToken'][] = function (
@@ -326,27 +326,27 @@ if ( $wmgUseEmailAuth ) {
 	};
 }
 
-if ( $wmgUseLinter ) {
+if ( $wgWMFUseLinter ) {
 	wfLoadExtension( 'Linter' );
 }
 
-if ( $wmgUseCognate ) {
+if ( $wgWMFUseCognate ) {
 	wfLoadExtension( 'Cognate' );
-	$wgCognateDb = 'cognate_' . $wmgUseCognate;
+	$wgCognateDb = 'cognate_' . $wgWMFUseCognate;
 	$wgCognateCluster = 'extension1';
 	$wgCognateNamespaces = [ 0 ];
 }
 
-if ( $wmgUseCollaborationKit ) {
+if ( $wgWMFUseCollaborationKit ) {
 	wfLoadExtension( 'CollaborationKit' );
 }
 
-if ( $wmgUseTimeless ) {
+if ( $wgWMFUseTimeless ) {
 	// Test new Isarra responsive skin
 	wfLoadSkin( 'Timeless' ); // T160643
 }
 
-if ( $wmgUseLoginNotify ) {
+if ( $wgWMFUseLoginNotify ) {
 	wfLoadExtension( 'LoginNotify' );
 	$wgLoginNotifyAttemptsKnownIP = 4;
 }
@@ -360,14 +360,14 @@ if ( $wgDBname == 'commonswiki' ) {
 
 // Test of new import source configuration on labs cluster
 $wgImportSources = false;
-include( "$wmfConfigDir/import.php" );
+include( "$wgWMFConfigDir/import.php" );
 $wgHooks['ImportSources'][] = 'wmfImportSources';
 
 // Reenable Preview and Changes tabs for wikieditor preview
 $wgHiddenPrefs = array_diff ( $wgHiddenPrefs, [ 'wikieditor-preview' ] );
 
 // MultimediaViewer is a dependency of 3d extension
-if ( $wmgUse3d && $wmgUseMultimediaViewer ) {
+if ( $wgWMFUse3d && $wgWMFUseMultimediaViewer ) {
 	wfLoadExtension( '3D' );
 	// Add 3d file type
 	$wgFileExtensions[] = 'stl';

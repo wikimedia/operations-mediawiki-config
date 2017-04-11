@@ -23,11 +23,11 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 	}
 
 	function loadDbFile( $realm, $datacenter, $masterdatacenter ) {
-		global $wmfRealm, $wmfDatacenter, $wmfMasterDatacenter;
+		global $wgWMFRealm, $wgWMFDatacenter, $wgWMFMasterDatacenter;
 
 		list( $oldRealm, $oldDatacenter, $oldMasterDatacenter ) =
-			array( $wmfRealm, $wmfDatacenter, $wmfMasterDatacenter );
-		list( $wmfRealm, $wmfDatacenter, $wmfMasterDatacenter ) =
+			array( $wgWMFRealm, $wgWMFDatacenter, $wgWMFMasterDatacenter );
+		list( $wgWMFRealm, $wgWMFDatacenter, $wgWMFMasterDatacenter ) =
 			array( $realm, $datacenter, $masterdatacenter );
 
 		# "properly" load db.php in local context:
@@ -40,7 +40,7 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 
 		include( getRealmSpecificFilename( __DIR__ . '/../wmf-config/db.php' ) );
 
-		list( $wmfRealm, $wmfDatacenter, $wmfMasterDatacenter ) =
+		list( $wgWMFRealm, $wgWMFDatacenter, $wgWMFMasterDatacenter ) =
 			array( $oldRealm, $oldDatacenter, $oldMasterDatacenter );
 
 		return $wgLBFactoryConf;

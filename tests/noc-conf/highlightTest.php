@@ -7,7 +7,7 @@ class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
 		parent::setUp();
 
 		$common = dirname( dirname( __DIR__ ) );
-		$wmfConfigDir =  "$common/wmf-config";
+		$wgWMFConfigDir =  "$common/wmf-config";
 		$this->nocConfDir = "$common/docroot/noc/conf";
 
 		// Created various files to test with
@@ -20,11 +20,11 @@ class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
 			file_put_contents( "$common/private/PrivateSettings.php", '<?php $forbiddenFruit = "p";' );
 		}
 
-		$this->created[] = "$wmfConfigDir/ExampleValid.php";
-		file_put_contents( "$wmfConfigDir/ExampleValid.php", '<?php $smoigel = "v";' );
+		$this->created[] = "$wgWMFConfigDir/ExampleValid.php";
+		file_put_contents( "$wgWMFConfigDir/ExampleValid.php", '<?php $smoigel = "v";' );
 
-		$this->created[] = "$wmfConfigDir/ExampleInvalid.php";
-		file_put_contents( "$wmfConfigDir/ExampleInvalid.php", '<?php $forbiddenFruit = "x";' );
+		$this->created[] = "$wgWMFConfigDir/ExampleInvalid.php";
+		file_put_contents( "$wgWMFConfigDir/ExampleInvalid.php", '<?php $forbiddenFruit = "x";' );
 
 		$this->created[] = "{$this->nocConfDir}/ExampleContent.php.txt";
 		file_put_contents( "{$this->nocConfDir}/ExampleContent.php.txt", '<?php forbiddenFruit = "content";' );
@@ -36,7 +36,7 @@ class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
 		file_put_contents( "{$this->nocConfDir}/ExampleContent", 'forbiddenFruit=content' );
 
 		$this->created[] = "{$this->nocConfDir}/ExampleValid.php.txt";
-		symlink( "$wmfConfigDir/ExampleValid.php", "{$this->nocConfDir}/ExampleValid.php.txt" );
+		symlink( "$wgWMFConfigDir/ExampleValid.php", "{$this->nocConfDir}/ExampleValid.php.txt" );
 	}
 
 	protected function tearDown() {

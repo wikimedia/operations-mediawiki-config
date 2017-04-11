@@ -50,14 +50,14 @@ class MWRealmTests extends PHPUnit_Framework_TestCase {
 	 * @dataProvider provideFilenames
 	 */
 	function testRealmFilenames( $expected, $filename, $realm = null, $datacenter = null ) {
-		global $wmfRealm, $wmfDatacenter;
+		global $wgWMFRealm, $wgWMFDatacenter;
 
 		// save globals
-		$old['realm']      = $wmfRealm;
-		$old['datacenter'] = $wmfDatacenter;
+		$old['realm']      = $wgWMFRealm;
+		$old['datacenter'] = $wgWMFDatacenter;
 
-		if( $realm      !== null ) { $wmfRealm      = $realm;      }
-		if( $datacenter !== null ) { $wmfDatacenter = $datacenter; }
+		if( $realm      !== null ) { $wgWMFRealm      = $realm;      }
+		if( $datacenter !== null ) { $wgWMFDatacenter = $datacenter; }
 
 		# The function requires a real path:
 		$basePath = self::$fixturesDir . "/";
@@ -68,8 +68,8 @@ class MWRealmTests extends PHPUnit_Framework_TestCase {
 		$this->assertEquals( $expected, $specific );
 
 		// restore globals
-		$wmfRealm      = $old['realm'];
-		$wmfDatacenter = $old['datacenter'];
+		$wgWMFRealm      = $old['realm'];
+		$wgWMFDatacenter = $old['datacenter'];
 	}
 
 	function provideFilenames() {

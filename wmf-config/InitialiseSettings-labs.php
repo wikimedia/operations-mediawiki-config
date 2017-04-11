@@ -16,7 +16,7 @@
  * Settings are fetched through wmfLabsSettings() defined below.
  */
 function wmfLabsOverrideSettings() {
-	global $wmfConfigDir, $wgConf;
+	global $wgWMFConfigDir, $wgConf;
 
 	// Override (or add) settings that we need within the labs environment,
 	// but not in production.
@@ -61,7 +61,7 @@ function wmfLabsOverrideSettings() {
  * their settings combined with the regular settings.
  */
 function wmfLabsSettings() {
-	global $wmfUdp2logDest;
+	global $wgWMFUdp2logDest;
 
 	return [
 
@@ -136,15 +136,15 @@ function wmfLabsSettings() {
 		],
 
 		'-wgDebugLogFile' => [
-			'default' => "udp://{$wmfUdp2logDest}/wfDebug",
+			'default' => "udp://{$wgWMFUdp2logDest}/wfDebug",
 		],
 
-		'-wmgDefaultMonologHandler' => [
+		'-wgWMFDefaultMonologHandler' => [
 			'default' => 'wgDebugLogFile',
 		],
 
 		// Additional log channels for beta cluster
-		'wmgMonologChannels' => [
+		'wgWMFMonologChannels' => [
 			'+beta' => [
 				'CentralAuthVerbose' => 'debug',
 				'dnsblacklist' => 'debug',
@@ -155,7 +155,7 @@ function wmfLabsSettings() {
 			],
 		],
 
-		'wmgApplyGlobalBlocks' => [ // T123936
+		'wgWMFApplyGlobalBlocks' => [ // T123936
 			'default' => true,
 			'metawiki' => true,
 			'deploymentwiki' => false
@@ -179,11 +179,11 @@ function wmfLabsSettings() {
 			'dewiki' => 'https://upload.wikimedia.org/wikipedia/commons/1/14/Favicon-beta-wikipedia.png',
 		],
 
-		'-wmgEnableCaptcha' => [
+		'-wgWMFEnableCaptcha' => [
 			'default' => true,
 		],
 
-		'-wmgEchoCluster' => [
+		'-wgWMFEchoCluster' => [
 			'default' => false,
 		],
 
@@ -198,15 +198,15 @@ function wmfLabsSettings() {
 
 		# To help fight spam, makes rules maintained on deploymentwiki
 		# to be available on all beta wikis.
-		'-wmgAbuseFilterCentralDB' => [
+		'-wgWMFAbuseFilterCentralDB' => [
 			'default' => 'deploymentwiki',
 		],
-		'-wmgUseGlobalAbuseFilters' => [
+		'-wgWMFUseGlobalAbuseFilters' => [
 			'default' => true,
 		],
 
 		// T39852
-		'wmgUseWikimediaShopLink' => [
+		'wgWMFUseWikimediaShopLink' => [
 			'default'    => false,
 			'enwiki'     => true,
 			'simplewiki' => true,
@@ -246,12 +246,12 @@ function wmfLabsSettings() {
 			],
 		],
 
-		'wmgULSPosition' => [
+		'wgWMFULSPosition' => [
 			# Beta-specific
 			'deploymentwiki' => 'personal',
 		],
 
-		'wmgCommonsMetadataForceRecalculate' => [
+		'wgWMFCommonsMetadataForceRecalculate' => [
 			'default' => true,
 		],
 
@@ -273,17 +273,17 @@ function wmfLabsSettings() {
 			'default' => false,
 		],
 
-		'wmgMediaViewerNetworkPerformanceSamplingFactor' => [
+		'wgWMFMediaViewerNetworkPerformanceSamplingFactor' => [
 			'default' => 1,
 		],
 
-		'wmgVisualEditorUseSingleEditTab' => [
+		'wgWMFVisualEditorUseSingleEditTab' => [
 			'enwiki' => true,
 		],
-		'wmgVisualEditorTransitionDefault' => [
+		'wgWMFVisualEditorTransitionDefault' => [
 			'default' => false,
 		],
-		'wmgVisualEditorEnableWikitext' => [
+		'wgWMFVisualEditorEnableWikitext' => [
 			'default' => true,
 		],
 
@@ -291,35 +291,35 @@ function wmfLabsSettings() {
 		/// ------------ BetaFeatures end -----------
 		///
 
-		'wmgUseRSSExtension' => [
+		'wgWMFUseRSSExtension' => [
 			'dewiki' => true,
 		],
-		'wmgRSSUrlWhitelist' => [
+		'wgWMFRSSUrlWhitelist' => [
 			'dewiki' => [ 'http://de.planet.wikimedia.org/atom.xml' ],
 		],
 
-		'wmgContentTranslationCluster' => [
+		'wgWMFContentTranslationCluster' => [
 			'default' => false,
 		],
-		'wmgContentTranslationCampaigns' => [
+		'wgWMFContentTranslationCampaigns' => [
 			'default' => [ 'newarticle' ],
 		],
-		'wmgContentTranslationEnableSuggestions' => [
+		'wgWMFContentTranslationEnableSuggestions' => [
 			'default' => true,
 		],
 
 		// Whether Compact Links is Beta feature
-		'wmgULSCompactLanguageLinksBetaFeature' => [
+		'wgWMFULSCompactLanguageLinksBetaFeature' => [
 			'default' => false,
 		],
 
 		// Whether Compact Links is enabled for new accounts *by default*
-		'wmgULSCompactLinksForNewAccounts' => [
+		'wgWMFULSCompactLinksForNewAccounts' => [
 			'default' => true,
 		],
 
 		// Whether Compact Links is enabled for anonymous users *by default*
-		'wmgULSCompactLinksEnableAnon' => [
+		'wgWMFULSCompactLinksEnableAnon' => [
 			'default' => true,
 		],
 
@@ -334,18 +334,18 @@ function wmfLabsSettings() {
 			'default' => 300,
 		],
 
-		'wmgUseFlow' => [
+		'wgWMFUseFlow' => [
 			// 'flow_computed_labs' is full set applicable on Beta Cluster.
 			'flow_only_labs' => true,
 		],
 		# No separate Flow DB or cluster (yet) for labs.
-		'-wmgFlowDefaultWikiDb' => [
+		'-wgWMFFlowDefaultWikiDb' => [
 			'default' => false,
 		],
-		'-wmgFlowCluster' => [
+		'-wgWMFFlowCluster' => [
 			'default' => false,
 		],
-		'wmgFlowEnableOptInBetaFeature' => [
+		'wgWMFFlowEnableOptInBetaFeature' => [
 			'enwiki' => true,
 			'hewiki' => true,
 		],
@@ -354,7 +354,7 @@ function wmfLabsSettings() {
 			'default' => 'P751',
 		],
 
-		'wmgUseRelatedArticles' => [
+		'wgWMFUseRelatedArticles' => [
 			'default' => true,
 		],
 		'wgRelatedArticlesEnabledSamplingRate' => [
@@ -363,28 +363,28 @@ function wmfLabsSettings() {
 		],
 
 		// Enable anonymous editor acquisition experiment across labs
-		'wmgGettingStartedRunTest' => [
+		'wgWMFGettingStartedRunTest' => [
 			'default' => true,
 		],
 
-		'wmgExtraLanguageNames' => [
+		'wgWMFExtraLanguageNames' => [
 			'default' => [],
 			'en_rtlwiki' => [ 'en-rtl' => 'English (rtl)' ],
 		],
 
-		'wmgUsePetition' => [
+		'wgWMFUsePetition' => [
 			'default' => false,
 			'metawiki' => true,
 		],
 
-		'wmgUseQuickSurveys' => [
+		'wgWMFUseQuickSurveys' => [
 			'default' => true,
 		],
 
-		'wmgUseSentry' => [
+		'wgWMFUseSentry' => [
 			'default' => true,
 		],
-		'wmgSentryDsn' => [
+		'wgWMFSentryDsn' => [
 			'default' => 'https://c357be0613e24340a96aeaa28dde08ad@sentry-beta.wmflabs.org/4',
 		],
 
@@ -395,7 +395,7 @@ function wmfLabsSettings() {
 			'default' => 'deployment-cache-upload04.eqiad.wmflabs',
 		],
 
-		'-wmgScorePath' => [
+		'-wgWMFScorePath' => [
 			'default' => "//upload.beta.wmflabs.org/score",
 		],
 
@@ -407,24 +407,24 @@ function wmfLabsSettings() {
 			],
 		],
 
-		'wmgUseCapiunto' => [
+		'wgWMFUseCapiunto' => [
 			'default' => true,
 		],
 
-		'wmgUseCheckUser' => [
+		'wgWMFUseCheckUser' => [
 			'default' => false,
 		],
 
-		'wmgMediaViewerUseThumbnailGuessing' => [
+		'wgWMFMediaViewerUseThumbnailGuessing' => [
 			'default' => false, // T69651
 		],
 
-		'wmgUseArticlePlaceholder' => [
+		'wgWMFUseArticlePlaceholder' => [
 			'default' => false,
 			'wikidataclient' => true,
 		],
 
-		'wmgUseORES' => [
+		'wgWMFUseORES' => [
 			'default' => false,
 			'wikipedia' => true, // T127661
 		],
@@ -468,18 +468,18 @@ function wmfLabsSettings() {
 			'enwiki' => 'enwiki',
 		],
 
-		'wmgWikibaseAllowDataAccessInUserLanguage' => [
+		'wgWMFWikibaseAllowDataAccessInUserLanguage' => [
 			'default' => false,
 			'wikidatawiki' => true,
 		],
 
 		// Test the extension Collection in other languages for book creator,
 		// which avoids the bugs related to the PDF generator.
-		'wmgUseCollection' => [
+		'wgWMFUseCollection' => [
 			'zhwiki' => true, // T128425
 		],
 
-		'wmgUseElectronPdfService' => [
+		'wgWMFUseElectronPdfService' => [
 			'default' => true,
 		],
 
@@ -490,20 +490,20 @@ function wmfLabsSettings() {
 			'ptwiki' => 1024 * 500, // 500 KB - T25186
 		],
 
-		'wmgUseNewsletter' => [
+		'wgWMFUseNewsletter' => [
 			'default' => true,  // T127297
 		],
 
-		'wmgUseLoginNotify' => [
+		'wgWMFUseLoginNotify' => [
 			'default' => true, // T158878
 			'nonecho' => false,
 		],
 
-		'wmgUseRevisionSlider' => [
+		'wgWMFUseRevisionSlider' => [
 			'default' => true,  // T134770
 		],
 
-		'wmgRevisionSliderBetaFeature' => [
+		'wgWMFRevisionSliderBetaFeature' => [
 			'default' => false, // T149725
 		],
 
@@ -519,12 +519,12 @@ function wmfLabsSettings() {
 		],
 
 		// Test PageAssessments. See T125551.
-		'wmgUsePageAssessments' => [
+		'wgWMFUsePageAssessments' => [
 			'default' => true,
 		],
 
 		// Test PerformanceInspector
-		'wmgUsePerformanceInspector' => [
+		'wgWMFUsePerformanceInspector' => [
 			'default' => true,
 		],
 
@@ -544,12 +544,12 @@ function wmfLabsSettings() {
 		],
 
 		// Test Quiz. See T142692
-		'wmgUseQuiz' => [
+		'wgWMFUseQuiz' => [
 			'cawiki' => true,
 		],
 
 		// Test gallery settings; see T141349
-		'wmgGalleryOptions' => [
+		'wgWMFGalleryOptions' => [
 			'default' => [
 				'imagesPerRow' => 0,
 				'imageWidth' => 120,
@@ -563,17 +563,17 @@ function wmfLabsSettings() {
 			],
 		],
 
-		'wmgUsePageViewInfo' => [
+		'wgWMFUsePageViewInfo' => [
 			'default' => true,
 		],
 		'wgPageViewInfoWikimediaDomain' => [
 			'default' => 'en.wikipedia.org',
 		],
 
-		'wmgUseEmailAuth' => [
+		'wgWMFUseEmailAuth' => [
 			'default' => 'true',
 		],
-		'wmgUseLinter' => [
+		'wgWMFUseLinter' => [
 			'default' => true,
 		],
 		'wgLinterSubmitterWhitelist' => [
@@ -581,18 +581,18 @@ function wmfLabsSettings() {
 				'10.68.20.142' => true // deployment-parsoid09.deployment-prep.eqiad.wmflabs
 			]
 		],
-		'wmgUseTwoColConflict' => [
+		'wgWMFUseTwoColConflict' => [
 			'default' => true,
 		],
 		'wgLinterStatsdSampleFactor' => [
 			'default' => 10,
 		],
-		'wmgUseInterwikiSorting' => [
+		'wgWMFUseInterwikiSorting' => [
 			'default' => false,
 			'wikidataclient' => true,
 			'wiktionary' => true,
 		],
-		'wmgUseCognate' => [
+		'wgWMFUseCognate' => [
 			'default' => false,
 			'wiktionary' => 'wiktionary', // T156241
 		],
@@ -603,7 +603,7 @@ function wmfLabsSettings() {
 		],
 
 		// Probably no point in blocking Tool Labs edits to Beta Labs
-		'wmgAllowLabsAnonEdits' => [
+		'wgWMFAllowLabsAnonEdits' => [
 			'default' => true,
 		],
 
@@ -616,20 +616,20 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wmgUseCollaborationKit' => [
+		'wgWMFUseCollaborationKit' => [
 			'default' => false,
 			'enwiki' => true,
 		],
 
-		'wmgEnableDashikiData' => [
+		'wgWMFEnableDashikiData' => [
 			'default' => true,
 		],
 
-		'wmgUseTimeless' => [
+		'wgWMFUseTimeless' => [
 			'default' => true,
 		],
 
-		'wmgUse3d' => [
+		'wgWMFUse3d' => [
 			'default' => true,
 		],
 

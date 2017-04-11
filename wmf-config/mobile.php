@@ -3,12 +3,12 @@
 # WARNING: This file is publically viewable on the web.
 # # Do not put private data here.
 
-if ( $wmgMobileFrontend ) {
+if ( $wgWMFMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
 
 	$wgMFMobileHeader = 'X-Subdomain';
 	$wgMFNoindexPages = false;
-	if ( !$wmgEnableGeoData ) {
+	if ( !$wgWMFEnableGeoData ) {
 		$wgMFNearby = false;
 	}
 
@@ -16,7 +16,7 @@ if ( $wmgMobileFrontend ) {
 		$wgMFCustomLogos['copyright'] = str_replace( '{wgExtensionAssetsPath}', $wgExtensionAssetsPath, $wgMFCustomLogos['copyright'] );
 	}
 
-	if ( $wmgZeroBanner && !$wmgZeroPortal ) {
+	if ( $wgWMFZeroBanner && !$wgWMFZeroPortal ) {
 		require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
 
 		if ( !isset( $wgJsonConfigs ) ) {
@@ -28,8 +28,8 @@ if ( $wmgMobileFrontend ) {
 		$wgJsonConfigs['JsonZeroConfig']['isLocal'] = false;
 		$wgJsonConfigs['JsonZeroConfig']['remote'] = [
 			'url' => 'https://zero.wikimedia.org/w/api.php',
-			'username' => $wmgZeroPortalApiUserName,
-			'password' => $wmgZeroPortalApiPassword,
+			'username' => $wgWMFZeroPortalApiUserName,
+			'password' => $wgWMFZeroPortalApiPassword,
 		];
 
 		$wgGroupPermissions['sysop']['jsonconfig-flush'] = true;
@@ -74,6 +74,6 @@ if ( $wmgMobileFrontend ) {
 	$wgMFStripResponsiveImages = true;
 }
 
-if ( $wmfRealm === 'labs' ) {
+if ( $wgWMFRealm === 'labs' ) {
 	require_once( __DIR__ . '/mobile-labs.php' );
 }

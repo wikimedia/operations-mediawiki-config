@@ -4,9 +4,9 @@
 # Do not put private data here.
 
 # Initialize the array. Append to that array to add a throttle
-$wmgThrottlingExceptions = [];
+$wgWMFThrottlingExceptions = [];
 
-# $wmgThrottlingExceptions is an array of arrays of parameters:
+# $wgWMFThrottlingExceptions is an array of arrays of parameters:
 #  'from'  => date/time to start raising account creation throttle
 #  'to'    => date/time to stop
 #
@@ -19,7 +19,7 @@ $wmgThrottlingExceptions = [];
 #             (eg. enwiki, metawiki, frwikibooks, eswikiversity)
 #             (default: any project)
 # Example:
-# $wmgThrottlingExceptions[] = [
+# $wgWMFThrottlingExceptions[] = [
 #	'from'   => '2016-01-01T00:00 +0:00',
 #	'to'     => '2016-02-01T00:00 +0:00',
 #	'IP'     => '123.456.78.90',
@@ -28,7 +28,7 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-$wmgThrottlingExceptions[] = [ // T157504
+$wgWMFThrottlingExceptions[] = [ // T157504
 	'from' => '2017-01-09T00:00:00 UTC',
 	'to' =>   '2017-06-31T23:59:59 UTC',
 	'IP' => [
@@ -39,7 +39,7 @@ $wmgThrottlingExceptions[] = [ // T157504
 	'value' => 200,
 ];
 
-$wmgThrottlingExceptions[] = [ // T162089
+$wgWMFThrottlingExceptions[] = [ // T162089
 	'from' => '2017-04-06T10:00 UTC',
 	'to' => '2017-04-06T16:00 UTC',
 	'IP' => '190.96.91.202',
@@ -53,9 +53,9 @@ $wmgThrottlingExceptions[] = [ // T162089
  * Helper to easily add a throttling request.
  */
 $wgExtensionFunctions[] = function() {
-	global $wmgThrottlingExceptions, $wgDBname, $wgRequest;
+	global $wgWMFThrottlingExceptions, $wgDBname, $wgRequest;
 
-	foreach ( $wmgThrottlingExceptions as $options ) {
+	foreach ( $wgWMFThrottlingExceptions as $options ) {
 		# Validate entry, skip when it does not apply to our case
 
 		# 1) skip when it does not apply to our database name

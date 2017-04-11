@@ -1,7 +1,7 @@
 <?php
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
-if ( $wmfRealm == 'labs' ) {  # safe guard
+if ( $wgWMFRealm == 'labs' ) {  # safe guard
 
 $jobRedisServer = 'deployment-redis01.eqiad.wmflabs';
 
@@ -10,7 +10,7 @@ $wgJobTypeConf['default'] = [
 	'redisServer' => $jobRedisServer,
 	'redisConfig' => [
 		'connectTimeout' => 1,
-		'password' => $wmgRedisPassword,
+		'password' => $wgWMFRedisPassword,
 	],
 	'daemonized' => true
 ];
@@ -20,7 +20,7 @@ $wgJobQueueAggregator = [
 	'redisServer' => $jobRedisServer,
 	'redisConfig' => [
 		'connectTimeout' => 1,
-		'password' => $wmgRedisPassword,
+		'password' => $wgWMFRedisPassword,
 	],
 	'daemonized' => true
 ];

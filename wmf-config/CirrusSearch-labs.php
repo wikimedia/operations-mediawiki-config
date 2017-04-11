@@ -15,7 +15,7 @@ $wgCirrusSearchClusters = [
 				'pool' => 'cirrus-eqiad',
 			],
 		];
-	}, $wmfAllServices['eqiad']['search'] ),
+	}, $wgWMFAllServices['eqiad']['search'] ),
 ];
 
 if ( $wgDBname == 'enwiki' ) {

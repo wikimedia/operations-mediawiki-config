@@ -7,7 +7,7 @@ $extName = 'LiquidThreads';
 $wgLiquidThreadsExtensionName = $extName;
 $wgLiquidThreadsExtensionPath = "{$wgExtensionAssetsPath}/{$extName}";
 
-if ( $wmgLiquidThreadsFrozen ) {
+if ( $wgWMFLiquidThreadsFrozen ) {
 	// Preserve access to LQT edits and logs after converting all LQT, but prevent
 	// LQT pages from being created.
 	$wgLqtTalkPages = false;
@@ -16,11 +16,11 @@ if ( $wmgLiquidThreadsFrozen ) {
 	$wgLiquidThreadsAllowEmbedding = false;
 	$wgLiquidThreadsEnableNewMessages = false;
 } else {
-	if ( $wmgLiquidThreadsOptIn ) {
+	if ( $wgWMFLiquidThreadsOptIn ) {
 		$wgLqtTalkPages = false;
 	}
 
-	if ( isset( $wmgLQTUserControlNamespaces ) ) {
-		$wgLiquidThreadsAllowUserControlNamespaces = $wmgLQTUserControlNamespaces;
+	if ( isset( $wgWMFLQTUserControlNamespaces ) ) {
+		$wgLiquidThreadsAllowUserControlNamespaces = $wgWMFLQTUserControlNamespaces;
 	}
 }

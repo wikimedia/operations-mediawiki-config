@@ -20,7 +20,7 @@ $wgConf->suffixes = [
 	'wikivoyage',
 ];
 
-$dbList = $wmfRealm === 'labs' ? 'all-labs' : 'all';
+$dbList = $wgWMFRealm === 'labs' ? 'all-labs' : 'all';
 $wgConf->wikis = MWWikiversions::readDbListFile( $dbList );
 
 $wgConf->fullLoadCallback = 'wmfLoadInitialiseSettings';

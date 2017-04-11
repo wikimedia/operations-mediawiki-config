@@ -72,7 +72,7 @@ if ( false ) {
 		'loggers' => [
 			'ldap' => [
 				'handlers' => [ 'wikitech-ldap' ],
-				'processors' => array_keys( $wmgMonologProcessors ),
+				'processors' => array_keys( $wgWMFMonologProcessors ),
 			],
 		],
 		'handlers' => [

@@ -94,11 +94,11 @@ class ThrottleTest extends PHPUnit_Framework_TestCase {
 	}
 
 	public function provideRules () {
-		global $wmgThrottlingExceptions;
+		global $wgWMFThrottlingExceptions;
 
 		$rules = [];
 
-		foreach ( $wmgThrottlingExceptions as $rule ) {
+		foreach ( $wgWMFThrottlingExceptions as $rule ) {
 			$rules[] = [ $rule ];
 		}
 

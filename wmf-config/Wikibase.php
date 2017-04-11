@@ -6,7 +6,7 @@ require_once( "$IP/extensions/Wikidata/Wikidata.php" );
 // included above, so that cache invalidations can be in sync
 // extension changes when there is a new extension branch or
 // otherwise needed to change the cache key.
-$wgWBSharedCacheKey = '-' . $wmgWikibaseCachePrefix;
+$wgWBSharedCacheKey = '-' . $wgWMFWikibaseCachePrefix;
 
 if ( defined( 'HHVM_VERSION' ) ) {
 	// Split the cache up for hhvm. T73461
@@ -63,7 +63,7 @@ if ( in_array( $wgDBname, [ 'test2wiki', 'testwiki', 'testwikidatawiki' ] ) ) {
 	$wgWBSharedSettings['specialSiteLinkGroups'][] = 'wikidata';
 }
 
-if ( $wmgUseWikibaseRepo ) {
+if ( $wgWMFUseWikibaseRepo ) {
 	$wgNamespaceAliases['Item'] = NS_MAIN;
 	$wgNamespaceAliases['Item_talk'] = NS_TALK;
 
@@ -100,7 +100,7 @@ if ( $wmgUseWikibaseRepo ) {
 		// Exclude closed wikis
 		$wgWBRepoSettings['clientDbList'] = array_diff(
 			$wgWBRepoSettings['clientDbList'],
-			MWWikiversions::readDbListFile( $wmfRealm === 'labs' ? 'closed-labs' : 'closed' )
+			MWWikiversions::readDbListFile( $wgWMFRealm === 'labs' ? 'closed-labs' : 'closed' )
 		);
 	}
 
@@ -154,7 +154,7 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgCaptchaTriggersOnNamespace[WB_NS_PROPERTY]['addurl'] = false;
 }
 
-if ( $wmgUseWikibaseClient ) {
+if ( $wgWMFUseWikibaseClient ) {
 	$wgWBClientSettings = $wgWBSharedSettings + $wgWBClientSettings;
 
 	// to be safe, keeping this here although $wgDBname is default setting
@@ -169,13 +169,13 @@ if ( $wmgUseWikibaseClient ) {
 		'property' => 'Property'
 	];
 
-	$wgWBClientSettings['languageLinkSiteGroup'] = $wmgWikibaseSiteGroup;
+	$wgWBClientSettings['languageLinkSiteGroup'] = $wgWMFWikibaseSiteGroup;
 
 	if ( in_array( $wgDBname, [ 'commonswiki', 'mediawikiwiki', 'metawiki', 'specieswiki' ] ) ) {
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
 	}
 
-	$wgWBClientSettings['siteGroup'] = $wmgWikibaseSiteGroup;
+	$wgWBClientSettings['siteGroup'] = $wgWMFWikibaseSiteGroup;
 	$wgWBClientSettings['otherProjectsLinksByDefault'] = true;
 
 	$wgWBClientSettings['excludeNamespaces'] = function() {
@@ -207,16 +207,16 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['showExternalRecentChanges'] = false;
 	}
 
-	foreach( $wmgWikibaseClientSettings as $setting => $value ) {
+	foreach( $wgWMFWikibaseClientSettings as $setting => $value ) {
 		$wgWBClientSettings[$setting] = $value;
 	}
 
-	$wgWBClientSettings['allowDataTransclusion'] = $wmgWikibaseEnableData;
-	$wgWBClientSettings['allowDataAccessInUserLanguage'] = $wmgWikibaseAllowDataAccessInUserLanguage;
-	$wgWBClientSettings['entityAccessLimit'] = $wmgWikibaseEntityAccessLimit;
+	$wgWBClientSettings['allowDataTransclusion'] = $wgWMFWikibaseEnableData;
+	$wgWBClientSettings['allowDataAccessInUserLanguage'] = $wgWMFWikibaseAllowDataAccessInUserLanguage;
+	$wgWBClientSettings['entityAccessLimit'] = $wgWMFWikibaseEntityAccessLimit;
 
 	$wgWBClientSettings['sharedCacheKeyPrefix'] .= $wgWBSharedCacheKey;
 	$wgWBClientSettings['sharedCacheDuration'] = 60 * 60 * 24;
 }
 
-require_once "{$wmfConfigDir}/Wikibase-{$wmfRealm}.php";
+require_once "{$wgWMFConfigDir}/Wikibase-{$wgWMFRealm}.php";
