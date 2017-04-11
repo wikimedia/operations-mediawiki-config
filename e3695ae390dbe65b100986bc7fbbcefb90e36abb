@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_63fcf8d5",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 18136,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2017-04-11T12:59:03Z",
+      "side": 1,
+      "message": "frwiki is not added to $wgOresExtensionsStatus is that intentional ?  Looks like it is kept in beta status.",
+      "revId": "e3695ae390dbe65b100986bc7fbbcefb90e36abb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
