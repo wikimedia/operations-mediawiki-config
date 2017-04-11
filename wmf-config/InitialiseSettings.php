@@ -7533,10 +7533,6 @@ $wgConf->settings = [
 	'enwiki' => true, // T152076
 ],
 
-'wgDisableUserGroupExpiry' => [
-	'default' => true,
-],
-
 # groupOverrides @{
 'groupOverrides' => [
 	// Note: don't change the default setting here, because it won't take
