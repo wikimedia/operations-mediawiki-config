@@ -112,6 +112,7 @@ class Clean(main.AbstractSync):
         regex = '".*\.(%s)"' % ('|'.join(STATIC_TYPES))
         if keep_static:
             return ['find', path, '-type', 'f', '-regextype', 'posix-extended',
-                    '-not', '-regex', regex, '-delete']
+                    '-not', '-regex', regex, '-path', './.git', '-prune',
+                    '-or', '-delete']
         else:
             return ['rm', '-fR', path]
