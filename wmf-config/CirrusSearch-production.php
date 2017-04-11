@@ -113,3 +113,9 @@ $wgCirrusSearchMoreLikeThisTTL = 86400;
 
 // This was causing race conditions and is a temporary fix. A better fix is coming soon (T133793)
 $wgCirrusSearchCreateFrozenIndex = false;
+
+// Index deletes into archive
+$wgCirrusSearchIndexDeletes = $wmgCirrusSearchIndexDeletes;
+// Enable searching archive
+$wgCirrusSearchEnableArchive = $wmgCirrusSearchEnableArchive;
+
