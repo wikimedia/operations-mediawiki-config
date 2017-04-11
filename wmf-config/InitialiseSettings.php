@@ -14188,7 +14188,6 @@ $wgConf->settings = [
 	'default' => false,
 	'small' => true,
 	'medium' => true,
-	'testwiki' => true,
 	'group0' => true,
 ],
 
