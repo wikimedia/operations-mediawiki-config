@@ -14,7 +14,10 @@ $wgObjectCaches['memcached-pecl'] = [
 	'server_failure_limit' => 1e9,
 	'retry_timeout'        => -1,
 	'loggroup'             => 'memcached',
-	'timeout'              => $wgMemCachedTimeout
+	'timeout'              => $wgMemCachedTimeout,
+	'use_binary_protocol'  => defined( 'HHVM_VERSION' )
+		? false
+		: true,  # T158613: enable binary protocol for wikitech
 ];
 
 # vim: set sts=4 sw=4 et :
