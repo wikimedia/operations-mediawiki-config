@@ -4966,7 +4966,6 @@ $wgConf->settings = [
 		'wbq_evaluation' => 'debug', // WikibaseQualityConstraints evaluation logs
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 		'wikibase-debug' => 'debug',
-		'WMDE' => 'debug', // addshore 12/04/2017, to be removed after 22/04/2017
 		'xenon' => 'debug',
 		'XMP' => 'warning', // T89532
 		'xff' => [ 'logstash' => false ],
