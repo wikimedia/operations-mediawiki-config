@@ -15222,8 +15222,8 @@ $wgConf->settings = [
 	],
 	'ruwiki' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-ru.svg',
-		'copyright-width' => 116,
-		'copyright-height' => 18,
+		'copyright-width' => 132,
+		'copyright-height' => 21,
 	],
 	'cawiki' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-ca.svg',
