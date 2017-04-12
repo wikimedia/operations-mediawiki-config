@@ -26,6 +26,7 @@ $wgObjectCaches['memcached-pecl'] = [
 	'servers'    => [ '127.0.0.1:11212' ],
 	'retry_timeout' => 1,
 	'loggroup' => 'memcached',
+	'use_binary_protocol' => true,  # T158613
 ];
 
 # Confirm page related key purges via scanning recent changes
