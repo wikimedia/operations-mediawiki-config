@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_1128cfdc",
+        "filename": "wmf-config/db-codfw.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 640,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2017-04-12T22:03:10Z",
+      "side": 1,
+      "message": "in *a* few minutes",
+      "range": {
+        "startLine": 640,
+        "startChar": 80,
+        "endLine": 640,
+        "endChar": 90
+      },
+      "revId": "4243c0a9229eff7ec2b25bb0ec3775b1c1568981",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
