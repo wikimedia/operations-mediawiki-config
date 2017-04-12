@@ -16583,6 +16583,7 @@ $wgConf->settings = [
 	'frwikisource' => true, // T105853
 	'hewiki' => true, // T50848
 	'hewiktionary' => true, // T89393
+	'itwikiversity' => true, // T162692
 	'legalteamwiki' => true, // T64610
 	'lvwiki' => true, // T89898
 	'mkwiki' => true,
