@@ -348,7 +348,8 @@ if ( $wmgUseTimeless ) {
 
 if ( $wmgUseLoginNotify ) {
 	wfLoadExtension( 'LoginNotify' );
-	$wgLoginNotifyAttemptsKnownIP = 4;
+	$wgLoginNotifyAttemptsKnownIP = 10;
+	$wgLoginNotifyAttemptsNewIP = 1;
 }
 
 $wgMessageCacheType = CACHE_ACCEL;
