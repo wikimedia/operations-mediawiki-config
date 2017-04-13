@@ -399,6 +399,7 @@ $wgConf->settings = [
 	'olowiki' => 'Europe/Moscow', // T146612
 	'orwiki' => 'Asia/Kolkata', // T122273
 	'orwikisource' => 'Asia/Kolkata', // T73875
+	'pawikisource' => 'Asia/Kolkata', // T149522
 	'pdcwiki' => 'America/New_York',
 	'pflwiki' => 'Europe/Berlin',
 	'plwiki' => 'Europe/Warsaw',
@@ -1045,6 +1046,7 @@ $wgConf->settings = [
 	'mlwikisource' => '/static/images/project-logos/mlwikisource.png',
 	'mrwikisource' => '/static/images/project-logos/mrwikisource.png',  // T103655
 	'orwikisource' => '/static/images/project-logos/orwikisource.png',  // T73875
+	'pawikisource' => '/static/images/project-logos/pawikisource.png',  // T149522
 	'plwikisource' => '/static/images/project-logos/plwikisource.png',
 	'ruwikisource' => '/static/images/project-logos/ruwikisource.png',
 	'sawikisource' => '/static/images/project-logos/sawikisource.png',
@@ -1402,6 +1404,7 @@ $wgConf->settings = [
 
     # Wikisource
 	'cswikisource' => [ '1.5x' => '/static/images/project-logos/cswikisource-1.5x.png', '2x' => '/static/images/project-logos/cswikisource-2x.png' ], // T150618
+	'pawikisource' => [ '1.5x' => '/static/images/project-logos/pawikisource-1.5x.png', '2x' => '/static/images/project-logos/pawikisource-2x.png' ], // T149522
 	'viwikisource' => [ '1.5x' => '/static/images/project-logos/viwikisource-1.5x.png', '2x' => '/static/images/project-logos/viwikisource-2x.png' ],
 
 	# Wikiversity
@@ -2098,6 +2101,7 @@ $wgConf->settings = [
 	'outreachwiki' => 'Outreach Wiki',
 	'pa_uswikimedia' => 'Wikimedia Pennsylvania',
 	'pawiki' => 'ਵਿਕੀਪੀਡੀਆ',
+	'pawikisource' => 'ਵਿਕੀਸਰੋਤ', // T149522
 	'plwikiquote' => 'Wikicytaty',
 	'plwikisource' => 'Wikiźródła',
 	'plwikivoyage' => 'Wikipodróże',
@@ -2588,6 +2592,7 @@ $wgConf->settings = [
 	'outreachwiki' => 'Wikimedia',
 	'pa_uswikimedia' => 'Project',
 	'pawiki' => 'ਵਿਕੀਪੀਡੀਆ',
+	'pawikisource' => 'ਵਿਕੀਸਰੋਤ', // T149522
 	'plwikiquote' => 'Wikicytaty',
 	'plwikisource' => 'Wikiźródła',
 	'plwikivoyage' => 'Wikipodróże',
