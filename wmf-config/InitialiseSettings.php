@@ -16920,6 +16920,12 @@ $wgConf->settings = [
 	'related-articles-footer-blacklisted-skins' => [],
 ],
 
+// Can be removed when T160076 is deployed everywhere
+'wmgRelatedArticlesFooterBlacklistedSkins' => [
+	'default' => [],
+	'related-articles-footer-blacklisted-skins' => [ 'minerva' ],
+],
+
 'wgRelatedArticlesEnabledSamplingRate' => [
 	'default' => 1,
 	'enwiki' => 0.9,
