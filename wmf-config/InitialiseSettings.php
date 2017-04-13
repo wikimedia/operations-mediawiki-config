@@ -14692,7 +14692,7 @@ $wgConf->settings = [
 // Whether to use jQuery 3.x or keep using the 1.x series.
 // Temporarily disabled during testing of the feature, 2017-04-13.
 'wgUsejQueryThree' => [
-	'default' => false,
+	'default' => false, // T124742
 ],
 
 // Whether to use OOUI to render the buttons on EditPage.php
@@ -16431,11 +16431,6 @@ $wgConf->settings = [
 'wgEnableJavaScriptTest' => [
 	'default' => false,
 	'test2wiki' => true,
-],
-
-'wgIncludejQueryMigrate' => [
-	'default' => true,
-	'test2wiki' => false,
 ],
 
 'wmgEnablePageTriage' => [

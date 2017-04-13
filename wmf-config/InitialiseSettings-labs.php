@@ -632,5 +632,10 @@ function wmfLabsSettings() {
 		'wg3dProcessEnviron' => [
 			'default' => [ 'DISPLAY' => ':99' ],
 		],
+
+		// Test jQuery 3 (T124742)
+		'wgUsejQueryThree' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
