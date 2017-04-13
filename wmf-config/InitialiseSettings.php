@@ -16902,6 +16902,8 @@ $wgConf->settings = [
 'wgRelatedArticlesFooterWhitelistedSkins' => [
 	// T144812
 	'default' => [ 'minerva' ],
+	// T126826
+	'htwiki' => [ 'minerva', 'vector' ],
 	'related-articles-footer-blacklisted-skins' => [],
 ],
 
