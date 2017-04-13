@@ -621,5 +621,10 @@ function wmfLabsSettings() {
 		'wgCognateReadOnly' => [
 			'default' => false,
 		],
+
+		// Test jQuery 3 (T124742)
+		'wgUsejQueryThree' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
