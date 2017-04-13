@@ -363,6 +363,7 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterNotifications = false;
 		break;
 	case 'trwiki':
+		$wgAbuseFilterActions['block'] = true; // T161960
 		$wgAbuseFilterBlockDuration = 'indefinite'; // T161960
 		$wgAbuseFilterAnonBlockDuration = '24 hours';
 		break;
