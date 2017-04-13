@@ -16433,9 +16433,9 @@ $wgConf->settings = [
 	'test2wiki' => true,
 ],
 
-'wgIncludejQueryMigrate' => [
-	'default' => true,
-	'test2wiki' => false,
+// T124742
+'wgUsejQueryThree' => [
+	'default' => false,
 ],
 
 'wmgEnablePageTriage' => [
