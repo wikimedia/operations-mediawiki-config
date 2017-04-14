@@ -370,7 +370,7 @@ if ( $wmgUse3d && $wmgUseMultimediaViewer ) {
 	// Add 3d media viewer extension
 	$wgMediaViewerExtensions['stl'] = 'mmv.3d';
 
-	$wg3dProcessor = 'xvfb-run -a -s "-ac -screen 0 1280x1024x24" /srv/deployment/3d2png/deploy/src/3d2png.js';
+	$wg3dProcessor = '/usr/bin/xvfb-run -a -s "-ac -screen 0 1280x1024x24" /srv/deployment/3d2png/deploy/src/3d2png.js';
 }
 
 } # end safeguard
