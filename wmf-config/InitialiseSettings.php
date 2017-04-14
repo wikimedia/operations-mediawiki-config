@@ -14065,9 +14065,10 @@ $wgConf->settings = [
 ],
 
 'wmgUseLinter' => [
-	'default' => true,
-	'votewiki' => false,
-	'loginwiki' => false,
+	'default' => false,
+	'small' => true,
+	'medium' => true,
+	'group0' => true,
 ],
 
 'wgLinterStatsdSampleFactor' => [
