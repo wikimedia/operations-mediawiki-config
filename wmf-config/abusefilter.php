@@ -363,6 +363,8 @@ switch ( $wgDBname ) {
 		$wgAbuseFilterNotifications = false;
 		break;
 	case 'trwiki':
+		$wgGroupPermissions['interface-editor']['abusefilter-modify-restricted'] = true; // T161960
+		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true; // T161960
 		$wgAbuseFilterActions['block'] = true; // T161960
 		$wgAbuseFilterBlockDuration = 'indefinite'; // T161960
 		$wgAbuseFilterAnonBlockDuration = '24 hours';
