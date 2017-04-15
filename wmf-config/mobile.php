@@ -17,7 +17,7 @@ if ( $wmgMobileFrontend ) {
 	}
 
 	if ( $wmgZeroBanner && !$wmgZeroPortal ) {
-		require_once( "$IP/extensions/ZeroBanner/ZeroBanner.php" );
+		wfLoadExtension( 'ZeroBanner' );
 
 		if ( !isset( $wgJsonConfigs ) ) {
 			$wgJsonConfigs = [];
