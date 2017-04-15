@@ -12403,6 +12403,7 @@ $wgConf->settings = [
 	'trwikiquote' => true, // T161962
 	'ukwiki' => true, // T67125
 	'urwiki' => true, // T64398
+	'zh_classicalwiki' => true, // T163043
 	'zhwiki' => true, // T32362
 ],
 
