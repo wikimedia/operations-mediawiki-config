@@ -12311,10 +12311,7 @@ $wgConf->settings = [
 
 'wmgUseElectronPdfService' => [
 	'default' => false,
-	'testwiki' => true, // T150944
-	'test2wiki' => true, // T150944
-	'mediawikiwiki' => true, // T150944
-	'testwikidatawiki' => true,
+	'group0' => true, // T150944
 	'metawiki' => true, // T150943
 	'dewiki' => true, // T150942
 ],
@@ -16939,10 +16936,7 @@ $wgConf->settings = [
 
 'wmgRevisionSliderBetaFeature' => [
 	'default' => true,
-	'mediawikiwiki' => false, // T149724
-	'testwiki' => false, // T149724
-	'test2wiki' => false, // T149724
-	'testwikidatawiki' => false, // T149724
+	'group0' => false, // T149724
 	'arwiki' => false, // T149995
 	'dewiki' => false, // T148646
 	'hewiki' => false, // T150573
@@ -16956,10 +16950,7 @@ $wgConf->settings = [
 
 'wmgUseTwoColConflict' => [
 	'default' => false,
-	'testwiki' => true, // T155716
-	'test2wiki' => true, // T155716
-	'testwikidatawiki' => true, // T155716
-	'mediawikiwiki' => true, // T155717
+	'group0' => true, // T155716 & T155717
 	'metawiki' => true, // T155721
 	'dewiki' => true, // T155721
 	'arwiki' => true, // T158493
