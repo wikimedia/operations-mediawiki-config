@@ -2874,6 +2874,8 @@ if ( $wmgUseInsider ) {
 if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
 	$wgRelatedArticlesShowInSidebar = $wmgRelatedArticlesShowInSidebar;
+	// We need to override this.. not merge it.
+	$wgRelatedArticlesFooterWhitelistedSkins = $wmgRelatedArticlesFooterWhitelistedSkins;
 
 	if ( $wmgRelatedArticlesShowInFooter ) {
 		wfLoadExtension( 'Cards' );
