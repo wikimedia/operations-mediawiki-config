@@ -46,6 +46,30 @@
       "revId": "8e41175194aedc7ae8069ed8521004393dffaa70",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_1da68fbe",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-17T19:48:40Z",
+      "side": 1,
+      "message": "The PrivateSettings.php.example file in this repo is sometimes used to programmatically read mediawiki-config values from Git outside the cluster (e.g. Jenkins). As it ensures any variables defined in that file in prod will also be defined here.\n\nI haven\u0027t checked, but since the above mentioned a variable being moved there, I\u0027m asking if it was added there as well.",
+      "parentUuid": "4e506ba4_4883fead",
+      "range": {
+        "startLine": 10,
+        "startChar": 23,
+        "endLine": 10,
+        "endChar": 70
+      },
+      "revId": "8e41175194aedc7ae8069ed8521004393dffaa70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
