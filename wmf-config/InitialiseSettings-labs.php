@@ -205,6 +205,12 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		'wmgUseGuidedTour' => [
+			'default' => true,
+			'loginwiki' => false,
+			'votewiki' => false,
+		],
+
 		// T39852
 		'wmgUseWikimediaShopLink' => [
 			'default'    => false,
