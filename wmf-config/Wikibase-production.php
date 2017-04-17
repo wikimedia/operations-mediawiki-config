@@ -89,6 +89,8 @@ if ( $wmgUseWikibaseRepo ) {
 			'args' => [__DIR__ . '/unitConversionConfig.json']
 		];
 	}
+
+	$wgWBRepoSettings['hasFullEntityIdColumn'] = false;
 }
 
 if ( $wmgUseWikibaseClient ) {
@@ -123,4 +125,5 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgArticlePlaceholderSearchEngineIndexed = $wmgArticlePlaceholderSearchEngineIndexed;
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://www.wikidata.org/w/index.php?title=MediaWiki:Wikibase-SortedProperties&action=raw&sp_ver=1';
+	$wgWBClientSettings['hasFullEntityIdColumn'] = false;
 }
