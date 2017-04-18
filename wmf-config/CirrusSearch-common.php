@@ -143,6 +143,19 @@ if ( $wgDBname == 'commonswiki' ) {
 	// T76957 - doesn't make sense to have Commons files on foundationwiki search
 } else { // So is everyone else, for using commons
 	$wgCirrusSearchExtraIndexes[ NS_FILE ] = [ 'commonswiki_file' ];
+	$wgCirrusSearchExtraIndexBoostTemplates = [
+		'commonswiki_file' => [
+			'wiki' => 'commonswiki',
+			'boosts' => [
+				// Copied from https://commons.wikimedia.org/wiki/MediaWiki:Cirrussearch-boost-templates
+				'Template:Assessments/commons/featured' => 2.5,
+				'Template:Picture_of_the_day' => 1.5,
+				'Template:Valued_image' => 1.75,
+				'Template:Assessments' => 1.5,
+				'Template:Quality_image' => 1.75,
+			],
+		],
+	];
 }
 
 // Configuration for initial test deployment of inline interwiki search via
