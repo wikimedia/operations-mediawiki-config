@@ -4651,6 +4651,7 @@ $wgConf->settings = [
 	'default' => 0,
 	'arwiki' => 50, // T14123
 	'ckbwiki' => 10, // T53537
+	'cswiki' => 10, // T163207
 	'enwiki' => 10, // T16191
 	'eswiki' => 50, // T15261
 	'eswikivoyage' => 25, // T46285
