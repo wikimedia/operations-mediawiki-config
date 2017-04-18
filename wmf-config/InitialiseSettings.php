@@ -14599,7 +14599,6 @@ $wgConf->settings = [
 		// Feeds included on WMDE Engineering pages - T127176:
 		'https://planet.wikimedia.de/atom.php',
 		'https://planet.wikimedia.de/wikidata/atom.php',
-		'https://sourcecode.berlin/feed/',
 
 		// Feeds included for Fundraising Tech pages
 		'https://codeclimate.com/github/wikimedia/mediawiki-extensions-CentralNotice/feed.atom',
