@@ -70,6 +70,30 @@
       "revId": "8e41175194aedc7ae8069ed8521004393dffaa70",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_c9438914",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2017-04-18T03:01:07Z",
+      "side": 1,
+      "message": "Got it. No, it hasn\u0027t. I can fix that prior to merging this",
+      "parentUuid": "4e506ba4_1da68fbe",
+      "range": {
+        "startLine": 10,
+        "startChar": 23,
+        "endLine": 10,
+        "endChar": 70
+      },
+      "revId": "8e41175194aedc7ae8069ed8521004393dffaa70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
