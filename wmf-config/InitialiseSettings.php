@@ -9504,7 +9504,7 @@ $wgConf->settings = [
 	],
 	'+cswiki' => [
 		'bureaucrat' => [ 'arbcom', 'autopatrolled' ], // T63418
-		'sysop' => [ 'rollbacker', 'patroller', 'accountcreator' ], // T126931, T131684
+		'sysop' => [ 'rollbacker', 'patroller', 'accountcreator', 'confirmed' ], // T126931, T131684
 	],
 	'+cswikinews' => [
 		'bureaucrat' => [ 'autopatrolled' ],
@@ -10247,7 +10247,7 @@ $wgConf->settings = [
 	],
 	'+cswiki' => [
 		'bureaucrat' => [ 'arbcom', 'autopatrolled' ], // T63418
-		'sysop' => [ 'rollbacker', 'patroller', 'accountcreator' ], // T126931, T131684
+		'sysop' => [ 'rollbacker', 'patroller', 'accountcreator', 'confirmed' ], // T126931, T131684, T163206
 	],
 	'+cswikinews' => [
 		'bureaucrat' => [ 'autopatrolled' ],
