@@ -83,9 +83,9 @@ $wmfAllServices['eqiad']['redis_lock'] = [
 	'rdb3' => '10.64.0.182'
 ];
 $wmfAllServices['codfw']['redis_lock'] = [
-	'rdb1' => '10.192.0.34',
-	'rdb2' => '10.192.16.37',
-	'rdb3' => '10.192.32.20',
+	'rdb1' => '10.192.0.83',
+	'rdb2' => '10.192.0.84',
+	'rdb3' => '10.192.0.85',
 ];
 
 ### Jobqueue redis
