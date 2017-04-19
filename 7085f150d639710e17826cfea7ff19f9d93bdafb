@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_80f6abc0",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-19T00:49:58Z",
+      "side": 1,
+      "message": "Please do mention in the commit message from which exact url the logo(s) were downloaded. You previously proposed putting it on the task instead, but I\u0027d like to avoid that since the task is too ephemeral, it changes over time and gets lengthy, the commit message is imho the appropiate place to document the change being made, and the source of any added binary files.",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 36
+      },
+      "revId": "7085f150d639710e17826cfea7ff19f9d93bdafb",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
