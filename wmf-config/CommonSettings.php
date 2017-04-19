@@ -3333,6 +3333,10 @@ if ( $wmgUseORES ) {
 	} else {
 		$wgDefaultUserOptions['oresDamagingPref'] = 'soft';
 	}
+
+	// Backwards compatibility for upcoming config format change
+	$wgOresFiltersThresholds['goodfaith']['likelygood'] = $wgOresFiltersThresholds['goodfaith']['good'];
+	$wgOresFiltersThresholds['goodfaith']['likelybad'] = $wgOresFiltersThresholds['goodfaith']['bad'];
 }
 
 ### End (roughly) of general extensions ########################
