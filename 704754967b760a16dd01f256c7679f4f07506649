@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_8de25c2d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2017-04-19T23:48:56Z",
+      "side": 1,
+      "message": "Missing \u0027directory\u0027 parameter.",
+      "revId": "704754967b760a16dd01f256c7679f4f07506649",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
