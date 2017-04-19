@@ -97,9 +97,9 @@ $wgLBFactoryConf = [
 		'db2034' => 50,  # A5 2.9TB 160GB, rc, log
 		'db2042' => 50,  # C6 2.9TB 160GB, rc, log
 		'db2048' => 400, # C6 2.9TB 160GB,
-		'db2055' => 50,  # D6 3.3TB 160GB, dump (inactive), vslow
-		'db2062' => 100, # B5 3.3TB 160GB, api
-		'db2069' => 100, # D6 3.3TB 160GB, api
+		'db2055' => 50,  # D6 3.3TB 160GB, dump (inactive), vslow, api
+		'db2062' => 50,  # B5 3.3TB 160GB, api
+		'db2069' => 50,  # D6 3.3TB 160GB, api
 		'db2070' => 400, # C5 3.3TB 160GB
 	],
 	's2' => [
@@ -244,6 +244,7 @@ $wgLBFactoryConf = [
 			'db2055' => 1,
 		],
 		'api' => [
+			'db2055' => 1,
 			'db2062' => 1,
 			'db2069' => 1,
 		],
