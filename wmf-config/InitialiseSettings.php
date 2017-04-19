@@ -18016,6 +18016,19 @@ $wgConf->settings = [
 ],
 'wgOresFiltersThresholds' => [
 	'default' => [],
+	'enwiki' => [
+		'damaging' => [
+			'likelygood' => [ 'min' => 0, 'max' => 0.398 ], // ~99% precision
+			'maybebad' => [ 'min' => 0.280, 'max' => 1 ], // ~15% precision
+			'likelybad' => [ 'min' => 0.879, 'max' => 1 ], // ~60% precision
+			'verylikelybad' => [ 'min' => 0.938, 'max' => 1 ], // ~90% precision
+		],
+		'goodfaith' => [
+			'good' => [ 'min' => 0.86, 'max' => 1 ], // ~99.5% precision
+			'maybebad' => [ 'min' => 0, 'max' => 0.663 ], // ~15% precision
+			'bad' => [ 'min' => 0, 'max' => 0.115 ], // ~60% precision
+		],
+	],
 	'plwiki' => [
 		'damaging' => [
 			'likelygood' => [ 'min' => 0, 'max' => 0.472 ], // ~99.5% precision
