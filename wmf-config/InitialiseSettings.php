@@ -461,6 +461,7 @@ $wgConf->settings = [
 	'vecwiktionary' => 'Europe/Brussels',
 	'vepwiki' => 'Europe/Moscow',
 	'viwikivoyage' => 'Asia/Ho_Chi_Minh',
+	'wbwikimedia' => 'Asia/Kolkata', // T163322
 	'xmfwiki' => 'Asia/Tbilisi',
 	'wuuwiki' => 'Asia/Shanghai', // T122476
 	'zhwikivoyage' => 'Asia/Shanghai', // T61077
