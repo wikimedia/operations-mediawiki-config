@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_cde144fd",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 4755,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-20T00:07:48Z",
+      "side": 0,
+      "message": "This is also false by default so it seem redundant. However, in Setup.php false is casted to the dynamic default of \"{$wgUploadDirectory}/lock_yBgMBwiR\".\n\nI wonder if that means prod servers are looking for this completely unused filename given it should be looked up if wgReadOnly\u003dnull.",
+      "range": {
+        "startLine": 4755,
+        "startChar": 0,
+        "endLine": 4755,
+        "endChar": 19
+      },
+      "revId": "21761a39b0edc3ea5860a3282fedbf1f46ba2137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
