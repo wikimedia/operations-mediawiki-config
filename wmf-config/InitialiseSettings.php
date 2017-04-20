@@ -18035,80 +18035,137 @@ $wgConf->settings = [
 	'default' => [],
 	'enwiki' => [
 		'damaging' => [
-			'likelygood' => [ 'min' => 0, 'max' => 0.398 ], // ~99% precision
-			'maybebad' => [ 'min' => 0.280, 'max' => 1 ], // ~15% precision
-			'likelybad' => [ 'min' => 0.879, 'max' => 1 ], // ~60% precision
-			'verylikelybad' => [ 'min' => 0.938, 'max' => 1 ], // ~90% precision
+			'likelygood' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.99)' ],
+			'maybebad' => [ 'min' => 'recall_at_precision(min_precision=0.15)', 'max' => 1 ],
+			// likelybad and verylikelybad use defaults
 		],
 		'goodfaith' => [
-			'good' => [ 'min' => 0.86, 'max' => 1 ], // ~99.5% precision
-			'maybebad' => [ 'min' => 0, 'max' => 0.663 ], // ~15% precision
-			'bad' => [ 'min' => 0, 'max' => 0.115 ], // ~60% precision
+			// likelygood uses default
+			'maybebad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.15)' ],
+			// likelybad uses default
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.9)' ],
 		],
 	],
 	'plwiki' => [
 		'damaging' => [
-			'likelygood' => [ 'min' => 0, 'max' => 0.472 ], // ~99.5% precision
-			'maybebad' => [ 'min' => 0.392, 'max' => 1 ], // ~45% precision
-			'likelybad' => [ 'min' => 0.75, 'max' => 1 ], // ~90% precision
-			'verylikelybad' => [ 'min' => 0.852, 'max' => 1 ], // ~98% precision
+			// likelygood uses default
+			'maybebad' => false,
+			'likelybad' => [ 'min' => 'recall_at_precision(min_precision=0.75)', 'max' => 1 ],
+			'verylikelybad' => [ 'min' => 'recall_at_precision(min_precision=0.98)', 'max' => 1 ],
 		],
 		'goodfaith' => [
-			'good' => [ 'min' => 0.587, 'max' => 1 ], // ~99.5% precision
-			'maybebad' => [ 'min' => 0, 'max' => 0.909 ], // ~70% precision
-			'bad' => [ 'min' => 0, 'max' => 0.46 ], // ~99% precision
+			// likelygood uses default
+			'maybebad' => false,
+			'likelybad' => false,
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.98)' ],
 		],
 	],
 	'ptwiki' => [
 		'damaging' => [
-			'likelygood' => [ 'min' => 0, 'max' => 0.303 ], // ~99% precision
-			'maybebad' => [ 'min' => 0.294, 'max' => 1 ], // ~90% recall
-			'likelybad' => [ 'min' => 0.734, 'max' => 1 ], // ~45% precision
-			'verylikelybad' => [ 'min' => 0.956, 'max' => 1 ], // ~90% precision
+			'likelygood' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.99)' ],
+			// maybebad, likelybad, verylikelybad use defaults
 		],
 		'goodfaith' => [
-			'good' => [ 'min' => 0.400, 'max' => 1 ], // ~98% precision
-			'maybebad' => [ 'min' => 0, 'max' => 0.715 ], // ~90% recall
-			'bad' => [ 'min' => 0, 'max' => 0.256 ], // ~45% precision
+			// likelygood, maybebad, likelybad use defaults
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.9)' ],
+		],
+	],
+	'cswiki' => [
+		'damaging' => [
+			// likelygood, maybebad, likelybad use defaults
+			'verylikelybad' => [ 'min' => 'recall_at_precision(min_precision=0.98)', 'max' => 1 ],
+		],
+		'goodfaith' => [
+			// likelygood, maybebad, likelybad use defaults
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.98)' ],
 		],
 	],
 	'fawiki' => [
 		'damaging' => [
-			'likelygood' => [ 'min' => 0, 'max' => 0.495 ], // ~99.5% precision
-			'maybebad' => [ 'min' => 0.330, 'max' => 1 ], // ~15% precision
-			'likelybad' => [ 'min' => 0.941, 'max' => 1 ], // ~45% precision
-			'verylikelybad' => [ 'min' => 0.963, 'max' => 1 ], // ~75% precision
+			// likelygood uses default
+			'maybebad' => [ 'min' => 'recall_at_precision(min_precision=0.15)', 'max' => 1 ],
+			'likelybad' => false,
+			'verylikelybad' => [ 'min' => 'recall_at_precision(min_precision=0.6)', 'max' => 1 ],
 		],
 		'goodfaith' => [
-			'good' => [ 'min' => 0.381, 'max' => 1 ], // ~99.5% precision
-			'maybebad' => [ 'min' => 0, 'max' => 0.608 ], // ~15% precision
-			'bad' => [ 'min' => 0, 'max' => 0.042 ], // ~100% precision
+			// likelygood uses default
+			'maybebad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.15)' ],
+			'likelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.45)' ],
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.75)' ],
+		],
+	],
+	'nlwiki' => [
+		'damaging' => [
+			'likelygood' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.99)' ],
+			// maybebad, likelybad, verylikelybad use defaults
+		],
+		'goodfaith' => [
+			// likelygood, maybebad, likelybad use defaults
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.9)' ],
 		],
 	],
 	'ruwiki' => [
 		'damaging' => [
-			'likelygood' => [ 'min' => 0, 'max' => 0.599 ], // ~99% precision
-			'maybebad' => [ 'min' => 0.466, 'max' => 1 ], // ~90% recall
-			'likelybad' => [ 'min' => 0.859, 'max' => 1 ], // ~45% precision
-			'verylikelybad' => [ 'min' => 0.935, 'max' => 1 ], // ~75% precision
+			'likelygood' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.99)' ],
+			// maybebad uses default
+			'likelybad' => [ 'min' => 'recall_at_precision(min_precision=0.45)', 'max' => 1 ],
+			'verylikelybad' => [ 'min' => 'recall_at_precision(min_precision=0.75)', 'max' => 1 ],
 		],
 		'goodfaith' => [
-			'good' => [ 'min' => 0.570, 'max' => 1 ], // ~99.5% precision
-			'maybebad' => [ 'min' => 0, 'max' => 0.549 ], // ~15% precision
-			'bad' => [ 'min' => 0, 'max' => 0.081 ], // ~45% precision
+			// likelygood uses default
+			'maybebad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.15)' ],
+			'likelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.45)' ],
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.75)' ],
 		],
 	],
 	'trwiki' => [
 		'damaging' => [
-			'likelygood' => [ 'min' => 0, 'max' => 0.155 ], // ~99.5% precision
-			'maybebad' => [ 'min' => 0.105, 'max' => 1 ], // ~15% precision
-			'likelybad' => [ 'min' => 0.882, 'max' => 1 ], // ~45% precision
-			'verylikelybad' => [ 'min' => 0.912, 'max' => 1 ], // ~75% precision
+			// likelygood, maybebad use defaults
+			'likelybad' => [ 'min' => 'recall_at_precision(min_precision=0.45)', 'max' => 1 ],
+			'verylikelybad' => [ 'min' => 'recall_at_precision(min_precision=0.75)', 'max' => 1 ],
 		],
 		'goodfaith' => [
-			'good' => [ 'min' => 0.809, 'max' => 1 ], // ~99.5% precision
-			'maybebad' => [ 'min' => 0, 'max' => 0.860 ], // ~15% precision
-			'bad' => [ 'min' => 0, 'max' => 0.119 ], // ~45% precision
+			// likelygood, maybebad use defaults
+			'likelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.45)' ],
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.75)' ],
+		],
+	],
+	'wikidatawiki' => [
+		'damaging' => [
+			// likelygood uses default
+			'maybebad' => false,
+			'likelybad' => [ 'min' => 'recall_at_precision(min_precision=0.75)', 'max' => 1 ],
+			// verylikelybad uses defaults
+		],
+		'goodfaith' => [
+			// likelygood uses default
+			'maybebad' => false,
+			// likelybad uses default
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.9)' ],
+		],
+	],
+	'hewiki' => [
+		'damaging' => [
+			// likelygood uses default
+			'maybebad' => false,
+			'likelybad' => [ 'min' => 'recall_at_precision(min_precision=0.45)', 'max' => 1 ],
+			'verylikelybad' => [ 'min' => 'recall_at_precision(min_precision=0.98)', 'max' => 1 ],
+		],
+		'goodfaith' => [
+			// likelygood uses default
+			'maybebad' => false,
+			'likelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.45)' ],
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.99)' ],
+		],
+	],
+	'etwiki' => [
+		'damaging' => [
+			// likelygood, maybebad, likelybad use defaults
+			'verylikelybad' => [ 'min' => 'recall_at_precision(min_precision=0.98)', 'max' => 1 ],
+		],
+		'goodfaith' => [
+			// likelygood, maybebad, likelybad use defaults
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.9)' ],
 		],
 	],
 ],
