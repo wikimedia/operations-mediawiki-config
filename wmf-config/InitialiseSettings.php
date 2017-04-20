@@ -7463,7 +7463,6 @@ $wgConf->settings = [
 		],
 		'cxsave' => [
 			// 10 saves per 30 seconds
-			'ip' => [ 10, 30 ],
 			'user' => [ 10, 30 ],
 		],
 	],
