@@ -22,6 +22,30 @@
       "revId": "21761a39b0edc3ea5860a3282fedbf1f46ba2137",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_0db3ace9",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 4755,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2017-04-20T00:18:55Z",
+      "side": 0,
+      "message": "Yes, production servers are looking for the unused filename. I considered fixing it as part of the ReadOnlyMode refactor, but the motivation left me as I considered the various trade-offs between preserving stupid Lee-isms (you know the \"yBgMBwiR\" part is a secret key, right?), breaking backwards compatibility, or having hackish secret features like $wgReadOnlyFile\u003dnull means don\u0027t check the file. HHVM has a stat cache, right?\n\nThese variables were here in InitialiseSettings.php so that people could find them and change them easily. But we\u0027re not recommending that people do it that way anymore.",
+      "parentUuid": "4e506ba4_cde144fd",
+      "range": {
+        "startLine": 4755,
+        "startChar": 0,
+        "endLine": 4755,
+        "endChar": 19
+      },
+      "revId": "21761a39b0edc3ea5860a3282fedbf1f46ba2137",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
