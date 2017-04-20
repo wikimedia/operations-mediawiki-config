@@ -101,6 +101,7 @@ $wgLBFactoryConf = [
 		'db2062' => 50,  # B5 3.3TB 160GB, api
 		'db2069' => 50,  # D6 3.3TB 160GB, api
 		'db2070' => 400, # C5 3.3TB 160GB
+#		'db2071' => 0,   # A6 3.6TB 512GB, #being setup T163413
 	],
 	's2' => [
 		'db2017' => 0,   # B6 2.9TB  96GB, master
@@ -557,6 +558,7 @@ $wgLBFactoryConf = [
 	'db2068' => '10.192.48.20', # do not remove or comment out
 	'db2069' => '10.192.48.21', # do not remove or comment out
 	'db2070' => '10.192.32.5', # do not remove or comment out
+	'db2071' => '10.192.0.4', # do not remove or comment out
 	'tempdb2001' => '10.192.48.14', # do not remove or comment out
 	'virt1000' => '208.80.154.18', # do not remove or comment out
 	'silver' => '208.80.154.136', # do not remove or comment out
