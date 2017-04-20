@@ -56,6 +56,6 @@ $wmfAllServices['eqiad']['poolcounter'] = [
 
 
 # Shorthand when we have no master-slave situation to keep into account
-$wmfLocalServices = $wmfAllServices[$wmfDatacenter];
+$wmfLocalServices = $wmfAllServices['eqiad'];
 
-$wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
+$wmfMasterServices = $wmfAllServices['eqiad'];
