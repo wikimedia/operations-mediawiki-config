@@ -15032,11 +15032,6 @@ $wgConf->settings = [
 		'prefix' => 'wbs'
 	]
 ],
-// Enable mobile non-JavaScript editing
-'wgMFAllowNonJavaScriptEditing' => [
-	'default' => false,
-	'ptwiki' => true,
-],
 
 'wmgEnableTextExtracts' => [
 	'default' => true,
