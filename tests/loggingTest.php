@@ -12,7 +12,7 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 
 	private $globals = array();
 
-	protected function tearDown() {
+	protected function restoreGlobals() {
 		foreach ( $this->globals as $key => $value ) {
 			$GLOBALS[$key] = $value;
 		}
@@ -144,6 +144,7 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 			}
 		}
 
+		$this->restoreGlobals();
 		return $tests;
 	}
 
