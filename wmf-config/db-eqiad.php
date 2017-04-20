@@ -101,7 +101,7 @@ $wgLBFactoryConf = [
 		'db1066' => 50,  # D1 2.8TB 160GB, api
 		'db1072' => 50,  # B2 2.8TB 160GB, api
 		'db1073' => 50,  # B3 2.8TB 160GB, api
-		'db1080' => 500, # A2 3.6TB 512GB
+#		'db1080' => 500, # A2 3.6TB 512GB # used for cloning to db2071 # T163413
 		'db1083' => 500, # B1 3.6TB 512GB
 		'db1089' => 500, # C3 3.6TB 512GB
 	],
@@ -582,6 +582,7 @@ $wgLBFactoryConf = [
 	'db2068' => '10.192.48.20', # do not remove or comment out
 	'db2069' => '10.192.48.21', # do not remove or comment out
 	'db2070' => '10.192.32.5', # do not remove or comment out
+	'db2071' => '10.192.0.4', # do not remove or comment out
 	'tempdb2001' => '10.192.48.14', # do not remove or comment out
 	'virt1000' => '208.80.154.18', # do not remove or comment out
 	'silver' => '208.80.154.136', # do not remove or comment out
