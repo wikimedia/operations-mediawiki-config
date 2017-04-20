@@ -1,7 +1,4 @@
 <?php
-
-require_once __DIR__ . '/../wmf-config/throttle.php';
-
 class ThrottleTest extends PHPUnit_Framework_TestCase {
 
 	/**
@@ -94,7 +91,8 @@ class ThrottleTest extends PHPUnit_Framework_TestCase {
 	}
 
 	public function provideRules () {
-		global $wmgThrottlingExceptions;
+
+		require __DIR__ . '/../wmf-config/throttle.php';
 
 		$rules = [];
 

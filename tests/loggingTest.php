@@ -12,7 +12,7 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 
 	private $globals = array();
 
-	protected function tearDown() {
+	protected function restoreGlobals() {
 		foreach ( $this->globals as $key => $value ) {
 			$GLOBALS[$key] = $value;
 		}
@@ -92,15 +92,17 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 		);
 	}
 
-	public static function provideAvroSchemas() {
+	public function provideAvroSchemas() {
 		$wgConf = new stdClass;
 		$wmfConfigDir = __DIR__ . '/../wmf-config';
 
-		$GLOBALS['wmfUdp2logDest'] = 'localhost';
-		$GLOBALS['wmfDatacenter'] = 'unittest';
-		$GLOBALS['wmfRealm'] = 'production';
-		$GLOBALS['wmfConfigDir'] = $wmfConfigDir;
-		$GLOBALS['wgConf'] = $wgConf;
+		$this->setGlobals( array(
+			'wmfUdp2logDest' => 'localhost',
+			'wmfDatacenter' => 'unittest',
+			'wmfRealm' => 'production',
+			'wmfConfigDir' => $wmfConfigDir,
+			'wgConf' => $wgConf,
+		) );
 
 		require __DIR__ . "/TestServices.php";
 		require "{$wmfConfigDir}/InitialiseSettings.php";
@@ -109,6 +111,7 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 		foreach ( $wgConf->settings['wmgMonologAvroSchemas']['default'] as $name => $schemaConfig ) {
 			$tests[$name] = array( $schemaConfig );
 		}
+		$this->restoreGlobals();
 		return $tests;
 	}
 
@@ -144,6 +147,7 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 			}
 		}
 
+		$this->restoreGlobals();
 		return $tests;
 	}
 
