@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_b0320bee",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-20T04:21:44Z",
+      "side": 1,
+      "message": "This means we\u0027ll always make 2 http requests to etcd (and not in parallel) to get started. Presumably once \u0027cache\u0027 is configured to be something other than HashBagOStuff (e.g. APC or Memcached presumably) that will not happen in most cases. Although it\u0027ll still make 2 roundtrips to the cache instead of two. Which seems fine if it was modelled as one apc key per config var, but it was specifically modelled to store all in one key, but that\u0027s not happening because we fragment it by directoryHash.",
+      "range": {
+        "startLine": 56,
+        "startChar": 1,
+        "endLine": 56,
+        "endChar": 18
+      },
+      "revId": "c320b4f872d9395ce762c1e8efbfe25558ae316b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
