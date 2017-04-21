@@ -2609,6 +2609,8 @@ if ( $wmgUseEducationProgram ) {
 	wfLoadExtension( 'EducationProgram' );
 	$wgEPSettings['dykCategory'] = $wmgEducationProgramDYKCat;
 	$wgNamespaceProtection[/*EP_NS*/446] = [ 'ep-course' ]; // T112806 (security)
+	$wgAddGroups['sysop'] = array_merge( $wgAddGroups['sysop'], [ 'eponline', 'epcampus', 'epinstructor', 'epcoordinator' ] ); // T163167 remove when  T123085  is resolved
+	$wgRemoveGroups['sysop'] = array_merge( $wgRemoveGroups['sysop'], [ 'eponline', 'epcampus', 'epinstructor', 'epcoordinator' ] ); // T163167 remove  when  T123085  is resolved
 }
 
 if ( $wmgUseWikimediaShopLink ) {
