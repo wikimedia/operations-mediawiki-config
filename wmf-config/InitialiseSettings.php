@@ -9407,8 +9407,8 @@ $wgConf->settings = [
 	],
 	// ******************************************************************
 	'+arwiki' => [
-		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter', 'accountcreator' ], // T143844
-		'sysop' => [ 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', ],
+		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter', 'accountcreator','epcoordinator','epcampus','eponline','epinstructor', ], // T143844, ep usergroup T163511
+		'sysop' => [ 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter','epcoordinator','epcampus','eponline','epinstructor', ], //T163511
 	],
 	'+arwikisource' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
@@ -10136,8 +10136,8 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'sysop', 'bureaucrat' ],
 	],
 	'+arwiki' => [
-		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter', 'accountcreator' ], // T143844
-		'sysop' => [ 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', 'patroller', 'autopatrolled', ],
+		'bureaucrat' => [ 'import', 'reviewer', 'abusefilter', 'accountcreator','epcoordinator','epcampus','eponline','epinstructor', ], // T143844 // T163511
+		'sysop' => [ 'uploader', 'reviewer', 'confirmed', 'rollbacker', 'abusefilter', 'patroller', 'autopatrolled','epcoordinator','epcampus','eponline','epinstructor', ], // T163511
 	],
 	'+arwikisource' => [
 		'sysop' => [ 'patroller', 'autopatrolled', 'rollbacker' ],
