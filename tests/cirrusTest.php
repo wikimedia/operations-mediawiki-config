@@ -3,7 +3,7 @@
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require_once __DIR__ . '/SiteConfiguration.php';
 
-class cirrusTests extends PHPUnit_Framework_TestCase {
+class cirrusTests extends WgConfTestCase {
 	public function testClusterConfigurationForProdTestwiki() {
 		$wmfDatacenter = 'unittest';
 		$config = $this->loadCirrusConfig( 'production', 'testwiki', 'wiki' );
@@ -83,12 +83,14 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		require "{$wmfConfigDir}/wgConf.php";
 
 		// InitialiseSettings.php explicitly declares these as global, so we must too
-		$GLOBALS['wmfUdp2logDest'] = 'localhost';
-		$GLOBALS['wmfDatacenter'] = 'unittest';
-		$GLOBALS['wmfMasterDatacenter'] = 'unittest';
-		$GLOBALS['wmfRealm'] = $wmfRealm;
-		$GLOBALS['wmfConfigDir'] = $wmfConfigDir;
-		$GLOBALS['wgConf'] = $wgConf;
+		$this->setGlobals( array(
+			'wmfUdp2logDest' => 'localhost',
+			'wmfDatacenter' => 'unittest',
+			'wmfMasterDatacenter' => 'unittest',
+			'wmfRealm' => $wmfRealm,
+			'wmfConfigDir' => $wmfConfigDir,
+			'wgConf' => $wgConf,
+		) );
 
 		require __DIR__ . '/TestServices.php';
 		require "{$wmfConfigDir}/InitialiseSettings.php";
@@ -145,7 +147,9 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 
 		require "{$wmfConfigDir}/CirrusSearch-common.php";
 
-		return compact( array_keys( get_defined_vars() ) );
+		$ret = compact( array_keys( get_defined_vars() ) );
+		$this->restoreGlobals();
+		return $ret;
 	}
 
 	private static function resolveConfig( $config, $key ) {
@@ -223,6 +227,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 			}
 		}
 
+		$this->restoreGlobals();
 		return $tests;
 	}
 
