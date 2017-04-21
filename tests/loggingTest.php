@@ -8,16 +8,7 @@
  * @file
  */
 
-class loggingTests extends PHPUnit_Framework_TestCase {
-
-	private $globals = array();
-
-	protected function restoreGlobals() {
-		foreach ( $this->globals as $key => $value ) {
-			$GLOBALS[$key] = $value;
-		}
-		$this->globals = array();
-	}
+class loggingTests extends WgConfTestCase {
 
 	public function provideHandlerSetup() {
 		return array(
@@ -191,28 +182,6 @@ class loggingTests extends PHPUnit_Framework_TestCase {
 			if ( isset( $config[$handler] ) ) {
 				$this->assertValidLogLevel( $config[$handler] );
 			}
-		}
-	}
-
-	protected function setGlobals( $pairs, $value = null ) {
-		if ( is_string( $pairs ) ) {
-			$pairs = array( $pairs => $value );
-		}
-		foreach ( $pairs as $key => $value ) {
-			// only set value in $this->globals on first call
-			if ( !array_key_exists( $key, $this->globals ) ) {
-				if ( isset( $GLOBALS[$key] ) ) {
-					// break any object references
-					try {
-						$this->globals[$key] = unserialize( serialize( $GLOBALS[$key] ) );
-					} catch ( \Exception $e ) {
-						$this->globals[$key] = $GLOBALS[$key];
-					}
-				} else {
-					$this->globals[$key] = null;
-				}
-			}
-			$GLOBALS[$key] = $value;
 		}
 	}
 }
