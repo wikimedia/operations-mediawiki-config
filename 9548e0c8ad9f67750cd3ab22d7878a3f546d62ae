@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_faf66cf5",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2017-04-21T18:06:05Z",
+      "side": 1,
+      "message": "In production this is a SRV record, in beta it\u0027s just a server as labs dns doesn\u0027t support registering SRV records.\n\nDoes the current EtcdConfig support single hosts definitions too?",
+      "revId": "9548e0c8ad9f67750cd3ab22d7878a3f546d62ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
