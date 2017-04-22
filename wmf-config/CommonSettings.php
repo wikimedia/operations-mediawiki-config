@@ -479,6 +479,9 @@ if ( isset( $wmgUploadStashMaxAge ) ) {
 	$wgUploadStashMaxAge = $wmgUploadStashMaxAge;
 }
 
+// Disable mp3 for now. T115170
+$wgFileExtensions = array_values( array_diff( $wgFileExtensions, [ 'mp3' ] ) );
+
 if ( $wmgPrivateWikiUploads ) {
 	# mav forced me to --midom
 	$wgFileExtensions[] = 'ppt';
