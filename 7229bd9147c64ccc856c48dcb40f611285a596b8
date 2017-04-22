@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_f8ddcae1",
+        "filename": "tests/WgConfTestCase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-22T02:36:15Z",
+      "side": 1,
+      "message": "In this case we should keep the key in a separate array and from restoreGlobals, use unset() for the keys in that array. Similar to MediaWikiTestCase.",
+      "range": {
+        "startLine": 28,
+        "startChar": 8,
+        "endLine": 28,
+        "endChar": 50
+      },
+      "revId": "7229bd9147c64ccc856c48dcb40f611285a596b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_eddbd152",
+        "filename": "tests/WgConfTestCase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-22T02:36:15Z",
+      "side": 1,
+      "message": "Should probably use tearDownAfterClass instead.",
+      "range": {
+        "startLine": 44,
+        "startChar": 10,
+        "endLine": 44,
+        "endChar": 20
+      },
+      "revId": "7229bd9147c64ccc856c48dcb40f611285a596b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
