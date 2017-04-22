@@ -16,6 +16,24 @@
       "revId": "9548e0c8ad9f67750cd3ab22d7878a3f546d62ae",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_38557252",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-22T02:16:36Z",
+      "side": 1,
+      "message": "We have wmnet entries that work in labs? Hm.. \u0027dig +nocmd _etcd._tcp.eqiad.wmnet any\u0027 does indeed appear to work from deployment-tin in labs, though I was expecting it to return nothing.\n\nInstead, it returns the same three conf entries from prod.\n\nShould this not be changed to a wmflabs hostname? This currently runs before any -labs files are loaded afaik, so we\u0027ll figure something for that.",
+      "parentUuid": "4e506ba4_faf66cf5",
+      "revId": "9548e0c8ad9f67750cd3ab22d7878a3f546d62ae",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
