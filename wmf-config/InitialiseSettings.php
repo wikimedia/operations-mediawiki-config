@@ -13235,6 +13235,8 @@ $wgConf->settings = [
 
 'wmgPopupsBetaFeature' => [
 	'default' => true,
+	'wikidatawiki' => false,
+	'wiktionary' => false,
 	'nonbetafeatures' => false,
 ],
 
