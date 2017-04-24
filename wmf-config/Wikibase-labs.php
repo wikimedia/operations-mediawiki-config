@@ -43,6 +43,8 @@ if ( $wmgUseWikibaseClient ) {
 
 	$wgWBClientSettings['repoConceptBaseUri'] = 'https://wikidata.beta.wmflabs.org/entity/';
 	$wgWBClientSettings['repoUrl'] = 'https://wikidata.beta.wmflabs.org';
+	$wgWBClientSettings['sendEchoNotification'] = true;
+	$wgWBClientSettings['echoIcon'] = [ 'path' => '/static/images/wikibase/echoIcon.svg' ];
 
 	$wgWikimediaBadgesCommonsCategoryProperty = 'P725';
 
