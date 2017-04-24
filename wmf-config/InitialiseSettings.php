@@ -18280,7 +18280,7 @@ $wgConf->settings = [
 'wmgUseWikidataPageBanner' => [
 	'default' => false,
 	// T125000, T115023, T140717, T145328, T142963
-	// T110837, T121999, T114334, T152344
+	// T110837, T121999, T114334, T152344, T163662
 	'wikivoyage' => true,
 	'plwikivoyage' => false,
 	'fawikivoyage' => false,
@@ -18289,7 +18289,6 @@ $wgConf->settings = [
 	'ptwikivoyage' => false,
 	'nlwikivoyage' => false,
 	'svwikivoyage' => false,
-	'viwikivoyage' => false,
 	'cawiki' => true, // T114392
 ],
 
