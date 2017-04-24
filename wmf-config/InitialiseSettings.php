@@ -16867,7 +16867,7 @@ $wgConf->settings = [
 	'frwikinews' => true, // T143480
 ],
 
-'wgRelatedArticlesFooterWhitelistedSkins' => [
+'wmgRelatedArticlesFooterWhitelistedSkins' => [
 	// T144812
 	'default' => [ 'minerva' ],
 	// T126826
