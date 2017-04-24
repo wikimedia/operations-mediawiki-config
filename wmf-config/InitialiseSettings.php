@@ -5772,7 +5772,12 @@ $wgConf->settings = [
 		118 => 'Draft', // T91223
 		119 => 'Draft_talk' // T91223
 	],
-	'zh_classicalwiki' => [ 100 => '門', 101 => '議' ],
+	'zh_classicalwiki' => [
+		100 => '門',
+		101 => '議',
+		106 => '稿', // Draft, T163655
+		107 => '酌稿', // Draft talk, T163655
+	],
 	'zh_min_nanwiki' => [ 100 => 'Portal', 101 => 'Portal_talk' ],
 	'zh_yuewiki' => [
 		# Override MediaWiki default namespace names for "yue".
@@ -11467,6 +11472,10 @@ $wgConf->settings = [
 	],
 	'ukwiki' => [
 		NS_USER => 'noindex,follow', // T98926
+	],
+	'zh_classicalwiki' => [
+		106 => 'noindex,nofollow', // T163655
+		107 => 'noindex,nofollow', // T163655
 	],
 	'zhwiki' => [
 		118 => 'noindex,nofollow', // T91223
