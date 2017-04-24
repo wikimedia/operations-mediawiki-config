@@ -4191,6 +4191,12 @@ $wgConf->settings = [
 		'模块' => 828, // NS_MODULE
 	],
 	'+zh_classicalwiki' => [
+		'WP' => NS_PROJECT, // T162547
+		'H' => NS_HELP, // T162547
+		'WT' => NS_PROJECT_TALK, // T162547
+		'T' => NS_TEMPLATE, // T162547
+		'CAT' => NS_CATEGORY, // T162547
+		'P' => 100, // T162547
 		'Wikipedia_talk' => NS_PROJECT,
 	],
 	'+zhwiki' => [
