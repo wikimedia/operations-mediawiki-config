@@ -148,7 +148,7 @@ $wgLBFactoryConf = [
 		'db2040' => 200, # C6 2.9TB 160GB, rc, log
 		'db2047' => 400, # C6 2.9TB 160GB
 		'db2054' => 200, # D6 2.9TB 160GB, dump (inactive), vslow
-		'db2061' => 50, # D6 3.3TB 160GB, api #T163339
+		'db2061' => 100, # D6 3.3TB 160GB, api #T163339
 		'db2068' => 300, # D6 3.3TB 160GB
 	],
 	'silver' => [
