@@ -3335,8 +3335,12 @@ if ( $wmgUseORES ) {
 	}
 
 	// Backwards compatibility for upcoming config format change
-	$wgOresFiltersThresholds['goodfaith']['likelygood'] = $wgOresFiltersThresholds['goodfaith']['good'];
-	$wgOresFiltersThresholds['goodfaith']['likelybad'] = $wgOresFiltersThresholds['goodfaith']['bad'];
+	if (isset($wgOresFiltersThresholds['goodfaith']['good'])) {
+		$wgOresFiltersThresholds['goodfaith']['likelygood'] = $wgOresFiltersThresholds['goodfaith']['good'];
+	}
+	if (isset($wgOresFiltersThresholds['goodfaith']['bad'])) {
+		$wgOresFiltersThresholds['goodfaith']['likelybad'] = $wgOresFiltersThresholds['goodfaith']['bad'];
+	}
 }
 
 ### End (roughly) of general extensions ########################
