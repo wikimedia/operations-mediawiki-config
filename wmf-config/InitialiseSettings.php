@@ -7533,9 +7533,7 @@ $wgConf->settings = [
 ],
 
 'wgCookieSetOnAutoblock' => [
-	'default' => false,
-	'testwiki' => true, // T150991
-	'enwiki' => true, // T152076
+	'default' => true,
 ],
 
 # groupOverrides @{
