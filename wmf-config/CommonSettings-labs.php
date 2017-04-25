@@ -373,4 +373,44 @@ if ( $wmgUse3d && $wmgUseMultimediaViewer ) {
 	$wg3dProcessor = '/usr/bin/xvfb-run -a -s "-ac -screen 0 1280x1024x24" /srv/deployment/3d2png/deploy/src/3d2png.js';
 }
 
+
+$wgAuthManagerAutoConfig['preauth'][GuanacoProvider::class] = [
+	'class' => GuanacoProvider::class,
+	'sort' => 0,
+];
+class GuanacoProvider extends \MediaWiki\auth\AbstractPreAuthenticationProvider {
+	const EVILUA = 'Bawolff test';
+
+	public function testUserForCreation( $user, $autocreate, array $options = [] ) {
+		return $this->testUser( $user );
+	}
+	public function testForAccountCreation( $user, $creator, array $reqs ) {
+		return $this->testUser( $user );
+	}
+	public function testUser( $user ) {
+		$ua = $this->manager->getRequest()->getHeader( 'User-agent' );
+		$logger = \MediaWiki\Logger\LoggerFactory::getInstance( 'badpass' );
+		if ( $ua === self::EVILUA ) {
+			$logger->info( 'Account creation prevented due to UA {name}', [
+				'successful' => false,
+				'name' => $user->getName(),
+				'ua' => $ua,
+			] );
+			// To be misleading, claim its a throttle hit.
+			// hopefully this will confuse attacker.
+			$msg = wfMessage( 'acct_creation_throttle_hit' )->params( 6 )
+				->durationParams( 86400 );
+			return \StatusValue::newFatal( $msg );
+		}
+
+		$logger->info( 'Account creation allowed due to UA {name}', [
+			'successful' => true,
+			'name' => $user->getName(),
+			'ua' => $ua,
+		] );
+		return \StatusValue::newGood();
+	}
+}
+
+
 } # end safeguard
