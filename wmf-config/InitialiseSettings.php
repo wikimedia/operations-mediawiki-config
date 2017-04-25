@@ -4876,6 +4876,7 @@ $wgConf->settings = [
 		'CirrusSearchSlowRequests' => 'debug',
 		'CirrusSearchUserTesting' => [ 'logstash' => false ],
 		'cite' => 'debug',
+		'Cognate' => 'debug', // WMDE & Addshore
 		'collection' => 'debug', // -cscott for T73675
 		'csp' => 'info',
 		'csp-report-only' => 'info',
