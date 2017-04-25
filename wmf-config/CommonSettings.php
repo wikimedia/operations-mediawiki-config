@@ -2874,9 +2874,12 @@ if ( $wmgUseInsider ) {
 if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
 	$wgRelatedArticlesShowInSidebar = $wmgRelatedArticlesShowInSidebar;
-	// We need to override this.. not merge it.
-	$wgRelatedArticlesFooterWhitelistedSkins = $wmgRelatedArticlesFooterWhitelistedSkins;
-
+	// for unknown reasons, this isn't always set? This was causing this error:
+	// "Notice: Undefined variable: wmgRelatedArticlesFooterWhitelistedSkins"
+	if ( isset( $wmgRelatedArticlesFooterWhitelistedSkins ) ) {
+		// We need to override this.. not merge it.
+		$wgRelatedArticlesFooterWhitelistedSkins = $wmgRelatedArticlesFooterWhitelistedSkins;
+	}
 	if ( $wmgRelatedArticlesShowInFooter ) {
 		wfLoadExtension( 'Cards' );
 		$wgRelatedArticlesShowInSidebar = false;
