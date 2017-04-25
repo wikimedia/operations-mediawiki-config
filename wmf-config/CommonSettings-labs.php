@@ -343,6 +343,7 @@ if ( $wmgUseLoginNotify ) {
 	wfLoadExtension( 'LoginNotify' );
 	$wgLoginNotifyAttemptsKnownIP = 10;
 	$wgLoginNotifyAttemptsNewIP = 1;
+	$wgLoginNotifyEnableOnSuccess = false;
 }
 
 $wgMessageCacheType = CACHE_ACCEL;
