@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_71a6a9bf",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-25T03:23:29Z",
+      "side": 1,
+      "message": "Throwing fatal or otherwise failing if wmfMasterDatacenter is not available is avoided by maintaining a default below, which is fine.\n\nHowever for ReadOnly, I\u0027m not sure null/false makes sense. Presumably if for some reason Etcd is unavailable for a short period of time, we should assume ReadOnly mode, right? Or does it not matter given that we still have MySQL as last layer of defence, which also has a read-only mode enforced that MediaWiki will find out about and cache accordingly (todo: Double-check that we a short-lived cache in APC or Memc for if mysql responds with read-only.)",
+      "range": {
+        "startLine": 78,
+        "startChar": 39,
+        "endLine": 78,
+        "endChar": 44
+      },
+      "revId": "8392203b4950eaa0fe178779c4036ab3d48b274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
