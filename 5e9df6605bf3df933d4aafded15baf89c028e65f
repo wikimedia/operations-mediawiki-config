@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_f49aa774",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 109,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-04-25T08:37:33Z",
+      "side": 1,
+      "message": "why weight 1?\nalso, just saying, binlog format still MIXED",
+      "range": {
+        "startLine": 109,
+        "startChar": 14,
+        "endLine": 109,
+        "endChar": 15
+      },
+      "revId": "5e9df6605bf3df933d4aafded15baf89c028e65f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
