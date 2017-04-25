@@ -137,8 +137,8 @@ $wgLBFactoryConf = [
 		'db1091' => 500, # D2 3.6TB 512GB
 	],
 	's5' => [
-		'db1049' => 0,   # B1 2.8TB  64GB, master
-#		'db1063' => 0,   # D1 2.8TB 128GB #future new master T162133
+		'db1063' => 0,   # D1 2.8TB 128GB, master
+#		'db1049' => 0,   # B1 2.8TB  64GB, old master
 #		'db1026' => 1,   # B1 1.4TB  64GB, watchlist, recentchanges, contributions, logpager #T163548 #T162539
 		'db1045' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1070' => 50,  # D1 2.8TB 160GB, vslow, dump #ROW based replication - master for db1095 #T137191
