@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "4e506ba4_67302b54",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 3215
+      },
+      "writtenOn": "2017-04-25T11:10:27Z",
+      "side": 1,
+      "message": "I\u0027m not super familiar with wmf-config, but is not clear to me how we keep one DC in read-only while the other in read-write with this single variable. Do we check if the master datacenter is the same of the host\u0027s datacenter?\n\nOr should we gather from Etcd two distinct $wgReadOnly for the two db-$DC.php configuration files?",
+      "revId": "8392203b4950eaa0fe178779c4036ab3d48b274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_71a6a9bf",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 6
@@ -18,6 +35,53 @@
         "startChar": 39,
         "endLine": 78,
         "endChar": 44
+      },
+      "revId": "8392203b4950eaa0fe178779c4036ab3d48b274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_47b3affd",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 3215
+      },
+      "writtenOn": "2017-04-25T11:10:27Z",
+      "side": 1,
+      "message": "I think that having default values might be dangerous in the general case. While for ReadOnly a value of True might the right safe choice, for other configs it will easily be the wrong value compared to the Etcd value.\nHaving defaults here means that each time we change something in Etcd we still have to commit and deploy the affected configuration file to keep them in sync, defeating the purpose of a dynamic configuration.\nI think that the approach should be to transparently survive a temporarily Etcd failure just using stale configuration data from the cache and requiring a functioning Etcd on application restart, that is the same failure model that we have right now on pybal.\nWe have 2 independent clusters of Etcd, one in each main datacenter, with replication of the data.",
+      "parentUuid": "4e506ba4_71a6a9bf",
+      "range": {
+        "startLine": 78,
+        "startChar": 39,
+        "endLine": 78,
+        "endChar": 44
+      },
+      "revId": "8392203b4950eaa0fe178779c4036ab3d48b274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e506ba4_0796074f",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 3215
+      },
+      "writtenOn": "2017-04-25T11:10:27Z",
+      "side": 1,
+      "message": "ditto for the default value",
+      "range": {
+        "startLine": 83,
+        "startChar": 51,
+        "endLine": 83,
+        "endChar": 56
       },
       "revId": "8392203b4950eaa0fe178779c4036ab3d48b274f",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
