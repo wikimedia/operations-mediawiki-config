@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e506ba4_077da716",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 151,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-04-25T10:42:19Z",
+      "side": 1,
+      "message": "weight 1? i guess it is the copy paste :)",
+      "revId": "fd39c2d50a4898b935ea7485ee932ba05a991b23",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
