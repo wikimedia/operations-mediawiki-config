@@ -18487,6 +18487,14 @@ $wgConf->settings = [
 	'testwiki' => true,
 ],
 
+'wmgUse3d' => [
+	'default' => true,
+],
+
+'wg3dProcessEnviron' => [
+	'default' => [ 'DISPLAY' => ':99' ],
+],
+
 ];
 
 ### WMF Labs override #####

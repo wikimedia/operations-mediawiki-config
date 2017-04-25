@@ -3551,6 +3551,20 @@ if ( $wmgUseParserMigration ) {
 	];
 }
 
+// MultimediaViewer is a dependency of 3d extension
+if ( $wmgUse3d && $wmgUseMultimediaViewer ) {
+	wfLoadExtension( '3D' );
+
+	// Add 3d file type
+	$wgFileExtensions[] = 'stl';
+	$wgTrustedMediaFiles[] = 'application/sla';
+
+	// Add 3d media viewer extension
+	$wgMediaViewerExtensions['stl'] = 'mmv.3d';
+
+	$wg3dProcessor = ['/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' ,'/srv/deployment/3d2png/deploy/src/3d2png.js'];
+}
+
 if ( $wmfRealm === 'labs' ) {
 	require( "$wmfConfigDir/CommonSettings-labs.php" );
 }
