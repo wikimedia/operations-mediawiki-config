@@ -4198,6 +4198,8 @@ $wgConf->settings = [
 		'CAT' => NS_CATEGORY, // T162547
 		'P' => 100, // T162547
 		'Wikipedia_talk' => NS_PROJECT,
+		'Portal' => 100, // T162547
+		'Portal_talk' => 101, // T162547
 	],
 	'+zhwiki' => [
 		'维基百科' => NS_PROJECT,
