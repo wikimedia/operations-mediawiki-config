@@ -263,9 +263,9 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		return [
 			'zhwiki' => [ 'zhwiki', 'wiki',
 				[
-					'wmgCirrusSearchSimilarityProfile' => 'default',
-					'wmgCirrusSearchRescoreProfile' => 'classic',
-					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'default',
+					'wmgCirrusSearchSimilarityProfile' => 'wmf_defaults',
+					'wmgCirrusSearchRescoreProfile' => 'wsum_inclinks',
+					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
 				],
 			],
 			'zh_min_nanwikisource' => [ 'zh_min_nanwikisource', 'wikisource',
