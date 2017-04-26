@@ -2874,12 +2874,6 @@ if ( $wmgUseInsider ) {
 if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
 	$wgRelatedArticlesShowInSidebar = $wmgRelatedArticlesShowInSidebar;
-	// for unknown reasons, this isn't always set? This was causing this error:
-	// "Notice: Undefined variable: wmgRelatedArticlesFooterWhitelistedSkins"
-	if ( isset( $wmgRelatedArticlesFooterWhitelistedSkins ) ) {
-		// We need to override this.. not merge it.
-		$wgRelatedArticlesFooterWhitelistedSkins = $wmgRelatedArticlesFooterWhitelistedSkins;
-	}
 	if ( $wmgRelatedArticlesShowInFooter ) {
 		wfLoadExtension( 'Cards' );
 		$wgRelatedArticlesShowInSidebar = false;
@@ -2889,6 +2883,13 @@ if ( $wmgUseRelatedArticles ) {
 		$wgRelatedArticlesOnlyUseCirrusSearch = false;
 	}
 }
+
+// Workaround for T142663 - override flat arrays
+$wgExtensionFunctions[] = function() {
+	global $wmgRelatedArticlesFooterWhitelistedSkins, $wgRelatedArticlesFooterWhitelistedSkins;
+
+	$wgRelatedArticlesFooterWhitelistedSkins = $wmgRelatedArticlesFooterWhitelistedSkins;
+};
 
 if ( $wmgUseRelatedSites ) {
 	wfLoadExtension( 'RelatedSites' );
