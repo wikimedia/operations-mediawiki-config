@@ -1107,7 +1107,12 @@ $wgNoFollowLinks = true; // In case the MediaWiki default changed, T44594
 
 # XFF log for vandal tracking
 $wgExtensionFunctions[] = function() {
-	global $wmfUdp2logDest, $wgRequest;
+	global $wmfUdp2logDest, $wgRequest,
+		$wmgRelatedArticlesFooterWhitelistedSkins, $wgRelatedArticlesFooterWhitelistedSkins;
+
+	// Workaround for T142663
+	$wgRelatedArticlesFooterWhitelistedSkins = $wmgRelatedArticlesFooterWhitelistedSkins;
+
 	if (
 		isset( $_SERVER['REQUEST_METHOD'] )
 		&& $_SERVER['REQUEST_METHOD'] === 'POST'
@@ -2874,12 +2879,6 @@ if ( $wmgUseInsider ) {
 if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
 	$wgRelatedArticlesShowInSidebar = $wmgRelatedArticlesShowInSidebar;
-	// for unknown reasons, this isn't always set? This was causing this error:
-	// "Notice: Undefined variable: wmgRelatedArticlesFooterWhitelistedSkins"
-	if ( isset( $wmgRelatedArticlesFooterWhitelistedSkins ) ) {
-		// We need to override this.. not merge it.
-		$wgRelatedArticlesFooterWhitelistedSkins = $wmgRelatedArticlesFooterWhitelistedSkins;
-	}
 	if ( $wmgRelatedArticlesShowInFooter ) {
 		wfLoadExtension( 'Cards' );
 		$wgRelatedArticlesShowInSidebar = false;
