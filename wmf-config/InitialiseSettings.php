@@ -18000,6 +18000,7 @@ $wgConf->settings = [
 	'cswiki' => true, // T151611
 	'etwiki' => true, // T159609
 	'hewiki' => true, // T161621
+	'fiwiki' => true, // T163011
 ],
 'wgOresExtensionStatus' => [
 	'default' => 'on',
@@ -18163,6 +18164,13 @@ $wgConf->settings = [
 			// likelygood, maybebad, likelybad use defaults
 			'verylikelybad' => [ 'min' => 'recall_at_precision(min_precision=0.98)', 'max' => 1 ],
 		],
+		'goodfaith' => [
+			// likelygood, maybebad, likelybad use defaults
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.9)' ],
+		],
+	],
+	'fiwiki' => [
+		// damaging uses defaults for everything
 		'goodfaith' => [
 			// likelygood, maybebad, likelybad use defaults
 			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.9)' ],
