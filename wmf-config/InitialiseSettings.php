@@ -16688,7 +16688,7 @@ $wgConf->settings = [
 	'default' => false,
 	'testwiki' => true,
 
-	// Temporarily disabled for T138310
+	'arwiki' => true, // T155720
 	'bswiki' => true,
 	'cawiki' => true, // T120829
 	'elwiki' => true, // T144384
