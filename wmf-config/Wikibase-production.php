@@ -97,6 +97,8 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['repoConceptBaseUri'] = 'http://test.wikidata.org/entity/';
 
 		$wgArticlePlaceholderImageProperty = 'P47';
+
+		$wgWBClientSettings['sendEchoNotification'] = true;
 	} else {
 		$wgWBClientSettings['repoUrl'] = 'https://www.wikidata.org';
 		$wgWBClientSettings['repoConceptBaseUri'] = 'http://www.wikidata.org/entity/';
