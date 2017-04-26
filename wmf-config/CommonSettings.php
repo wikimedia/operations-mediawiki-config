@@ -1108,6 +1108,7 @@ $wgNoFollowLinks = true; // In case the MediaWiki default changed, T44594
 # XFF log for vandal tracking
 $wgExtensionFunctions[] = function() {
 	global $wmfUdp2logDest, $wgRequest;
+
 	if (
 		isset( $_SERVER['REQUEST_METHOD'] )
 		&& $_SERVER['REQUEST_METHOD'] === 'POST'
@@ -1126,6 +1127,13 @@ $wgExtensionFunctions[] = function() {
 			( ( isset( $_REQUEST['wpSave'] ) && $_REQUEST['wpSave'] ) ? 'save' : '' )
 		);
 	}
+};
+
+// Workaround for T142663 - override flat arrays
+$wgExtensionFunctions[] = function() {
+	global $wmgRelatedArticlesFooterWhitelistedSkins, $wgRelatedArticlesFooterWhitelistedSkins;
+
+	$wgRelatedArticlesFooterWhitelistedSkins = $wmgRelatedArticlesFooterWhitelistedSkins;
 };
 
 // T26313, turn off minordefault on enwiki
@@ -2874,12 +2882,6 @@ if ( $wmgUseInsider ) {
 if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
 	$wgRelatedArticlesShowInSidebar = $wmgRelatedArticlesShowInSidebar;
-	// for unknown reasons, this isn't always set? This was causing this error:
-	// "Notice: Undefined variable: wmgRelatedArticlesFooterWhitelistedSkins"
-	if ( isset( $wmgRelatedArticlesFooterWhitelistedSkins ) ) {
-		// We need to override this.. not merge it.
-		$wgRelatedArticlesFooterWhitelistedSkins = $wmgRelatedArticlesFooterWhitelistedSkins;
-	}
 	if ( $wmgRelatedArticlesShowInFooter ) {
 		wfLoadExtension( 'Cards' );
 		$wgRelatedArticlesShowInSidebar = false;
