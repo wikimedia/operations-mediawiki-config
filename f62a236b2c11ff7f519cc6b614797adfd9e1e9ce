@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e4df70f_e14d829f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 18022,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2017-04-26T00:50:58Z",
+      "side": 1,
+      "message": "Move to CommonSettings.php (or set usefully in the extension and drop entirely)?",
+      "revId": "f62a236b2c11ff7f519cc6b614797adfd9e1e9ce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_0153ce44",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 18132,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2017-04-26T00:50:58Z",
+      "side": 1,
+      "message": "Move to CommonSettings.php (or set usefully in the extension and drop entirely)?",
+      "revId": "f62a236b2c11ff7f519cc6b614797adfd9e1e9ce",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
