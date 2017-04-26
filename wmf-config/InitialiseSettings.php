@@ -15234,6 +15234,7 @@ $wgConf->settings = [
 	],
 ],
 'wgMFMobileFormatterHeadings' => [
+	'_merge_strategy' => 'array_replace_recursive',
 	'default' => [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ],
 	'wikivoyage' => [ 'h2', 'h3', 'h4', 'h5', 'h6' ], // T110436, T110837
 ],
@@ -16885,6 +16886,7 @@ $wgConf->settings = [
 ],
 
 'wmgRelatedArticlesFooterWhitelistedSkins' => [
+	'_merge_strategy' => 'array_replace_recursive',
 	// T144812
 	'default' => [ 'minerva' ],
 	// T126826
