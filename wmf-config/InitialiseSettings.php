@@ -16763,7 +16763,7 @@ $wgConf->settings = [
 
 'wmgUseContentTranslation' => [
 	'default' => false,
-	'wikipedia' => false,
+	'wikipedia' => true,
 	'arbcom_cswiki' => false, // T151731
 	'arbcom_dewiki' => false,
 	'arbcom_enwiki' => false,
