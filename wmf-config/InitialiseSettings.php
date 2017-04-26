@@ -8068,6 +8068,8 @@ $wgConf->settings = [
 		'user' => [ 'move' => false ], // requested in beer parlour, 13 june 2006
 	],
 	'+eswiki' => [
+		'autoconfirmed' => [ 'collectionsaveascommunitypage' => false ], // T163767
+		'confirmed' => [ 'collectionsaveascommunitypage' => false ],
 		'rollbacker' => [
 			'rollback' => true,
 			'abusefilter-log-detail' => true, // T70319
@@ -16761,7 +16763,7 @@ $wgConf->settings = [
 
 'wmgUseContentTranslation' => [
 	'default' => false,
-	'wikipedia' => true,
+	'wikipedia' => false,
 	'arbcom_cswiki' => false, // T151731
 	'arbcom_dewiki' => false,
 	'arbcom_enwiki' => false,
