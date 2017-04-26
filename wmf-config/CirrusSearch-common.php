@@ -243,6 +243,16 @@ $wgInterwikiPrefixDisplayTypes = [
 	'v' => 'course',
 ];
 
+// Override sister search profiles for specific projects
+$wgCirrusSearchCrossProjectProfiles = [
+	// full text wikivoyage results are often irrelevant, filter the
+	// search with title matches to improve relevance.
+	'v' => [
+		'ftbuilder' => 'perfield_builder_title_match',
+		'rescore' => 'wsum_inclinks',
+	],
+];
+
 // Setup our custom index settings, only used at index
 // creation time.
 $wgCirrusSearchExtraIndexSettings = [
