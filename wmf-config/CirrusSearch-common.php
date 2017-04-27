@@ -248,7 +248,7 @@ $wgCirrusSearchCrossProjectProfiles = [
 	// full text wikivoyage results are often irrelevant, filter the
 	// search with title matches to improve relevance.
 	'v' => [
-		'ftbuilder' => 'perfield_builder_title_match',
+		'ftbuilder' => 'perfield_builder_title_filter',
 		'rescore' => 'wsum_inclinks',
 	],
 ];
