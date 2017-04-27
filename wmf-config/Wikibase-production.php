@@ -103,7 +103,7 @@ if ( $wmgUseWikibaseClient ) {
 		$wgArticlePlaceholderImageProperty = 'P47';
 
 		$wgWBClientSettings['sendEchoNotification'] = true;
-		$wgWBClientSettings['echoIcon'] = [ 'path' => '/static/images/wikibase/echoIcon.svg' ];
+		$wgWBClientSettings['echoIcon'] = [ 'url' => '/static/images/wikibase/echoIcon.svg' ];
 	} else {
 		$wgWBClientSettings['repoUrl'] = 'https://www.wikidata.org';
 		$wgWBClientSettings['repoConceptBaseUri'] = 'http://www.wikidata.org/entity/';
