@@ -41,20 +41,20 @@ class Clean(main.AbstractSync):
     """ Scap sub-command to clean old branches """
 
     @cli.argument('branch', help='The name of the branch to clean.')
-    @cli.argument('--keep-static', action='store_true',
-                  help='Only keep static assets (CSS/JS and the like).')
+    @cli.argument('--delete', action='store_true',
+                  help='Delete everything (not just static assets).')
     def main(self, *extra_args):
         """ Clean old branches from the cluster for space savings! """
         if self.arguments.branch in self.active_wikiversions():
             raise ValueError('Branch "%s" is still in use, aborting' %
                              self.arguments.branch)
-        self.cleanup_branch(self.arguments.branch, self.arguments.keep_static)
+        self.cleanup_branch(self.arguments.branch, self.arguments.delete)
 
-    def cleanup_branch(self, branch, keep_static):
+    def cleanup_branch(self, branch, delete):
         stage_dir = os.path.join(self.config['stage_dir'], 'php-%s' % branch)
         deploy_dir = os.path.join(self.config['deploy_dir'], 'php-%s' % branch)
 
-        if not keep_static:
+        if delete:
             gerrit_prune_cmd = ['git', 'push', 'origin', '--quiet', '--delete',
                                 'wmf/%s' % branch]
             logger = self.get_logger()
@@ -90,18 +90,18 @@ class Clean(main.AbstractSync):
         )
 
         # Update active master (passive gets it on next sync)
-        master_command = ' '.join(self.clean_command(stage_dir, keep_static))
+        master_command = ' '.join(self.clean_command(stage_dir, delete))
         subprocess.check_call(master_command, shell=True)
 
         # Update apaches
         self.execute_remote(
             'clean-apaches',
             self._get_target_list(),
-            self.clean_command(deploy_dir, keep_static)
+            self.clean_command(deploy_dir, delete)
         )
 
         announce = 'Pruned MediaWiki: %s' % branch
-        if keep_static:
+        if not delete:
             announce += ' [keeping static files]'
 
         self.announce(announce + ' (duration: %s)' %
@@ -118,10 +118,10 @@ class Clean(main.AbstractSync):
             if failed:
                 self.get_logger().warning('%d had clean errors', failed)
 
-    def clean_command(self, path, keep_static):
+    def clean_command(self, path, delete):
         regex = '".*\.?(%s)$"' % ('|'.join(DELETABLE_TYPES))
-        if keep_static:
+        if delete:
+            return ['rm', '-fR', path]
+        else:
             return ['find', path, '-type', 'f', '-regextype', 'posix-extended',
                     '-regex', regex, '-delete']
-        else:
-            return ['rm', '-fR', path]
