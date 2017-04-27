@@ -134,7 +134,7 @@ $wgLBFactoryConf = [
 		'db1064' => 0,   # D1 2.8TB 160GB, vslow, dump #Master for db1095 - new sanitarium
 		'db1081' => 300, # A2 3.6TB 512GB, api
 		'db1084' => 500, # B1 3.6TB 512GB
-#		'db1091' => 500, # D2 3.6TB 512GB #T162681
+		'db1091' => 500, # D2 3.6TB 512GB
 	],
 	's5' => [
 		'db1063' => 0,   # D1 2.8TB 128GB, master
@@ -145,7 +145,7 @@ $wgLBFactoryConf = [
 		'db1071' => 50,  # D1 2.8TB 160GB, api
 		'db1082' => 300, # A2 3.6TB 512GB, api
 		'db1087' => 500, # C2 3.6TB 512GB
-#		'db1092' => 500, # D2 3.6TB 512GB #T162681
+		'db1092' => 500, # D2 3.6TB 512GB
 	],
 	's6' => [
 		'db1061' => 0,   # D1 2.8TB 128GB, master
@@ -156,7 +156,7 @@ $wgLBFactoryConf = [
 		'db1037' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1085' => 300, # B3 3.6TB 512GB, api
 		'db1088' => 500, # C2 3.6TB 512GB
-#		'db1093' => 500, # D2 3.6TB 512GB #T162681
+		'db1093' => 500, # D2 3.6TB 512GB
 	],
 	's7' => [
 		'db1062' => 0,   # D1 2.8TB 128GB, master
@@ -167,7 +167,7 @@ $wgLBFactoryConf = [
 #		'db1039' => 0,   # B2 1.4TB  64GB
 		'db1079' => 300, # A2 3.6TB 512GB, api
 		'db1086' => 500, # B3 3.6TB 512GB, api
-#		'db1094' => 500, # D2 3.6TB 512GB #T162681
+		'db1094' => 500, # D2 3.6TB 512GB
 	],
 	'silver' => [
 		'silver' => 100,   # I have no idea if this is right
@@ -623,7 +623,7 @@ $wgLBFactoryConf = [
 	'cluster25' => [
 		'10.64.16.187' => 1, # es1014, master
 		'10.64.48.114' => 1, # es1017
-#		'10.64.48.116' => 1, # es1019 #T162681
+		'10.64.48.116' => 1, # es1019
 	],
 	# ExtensionStore shard1 - initially for AFTv5
 	'extension1' => [
