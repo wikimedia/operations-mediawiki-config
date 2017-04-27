@@ -247,6 +247,11 @@ $wgInterwikiPrefixDisplayTypes = [
 $wgCirrusSearchCrossProjectProfiles = [
 	// full text wikivoyage results are often irrelevant, filter the
 	// search with title matches to improve relevance.
+	'voy' => [
+		'ftbuilder' => 'perfield_builder_title_filter',
+		'rescore' => 'wsum_inclinks',
+	],
+	// Same for wikiversity
 	'v' => [
 		'ftbuilder' => 'perfield_builder_title_filter',
 		'rescore' => 'wsum_inclinks',
