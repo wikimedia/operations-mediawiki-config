@@ -9,20 +9,30 @@ import scap.main as main
 import scap.ssh as ssh
 import scap.utils as utils
 
-STATIC_TYPES = [
-    'gif',
-    'jpg',
-    'jpeg',
-    'png',
-    'css',
-    'js',
-    'json',
-    'woff',
-    'woff2',
-    'svg',
-    'eot',
-    'ttf',
-    'ico'
+DELETABLE_TYPES = [
+    'arcconfig',
+    'arclint',
+    'cdb',
+    'COPYING',
+    'CREDITS',
+    'ini',
+    'inc',
+    'jshintignore',
+    'jscsrc',
+    'jshintrc',
+    'lock',
+    'md',
+    'md5',
+    'mailmap',
+    'Makefile'
+    'ml',
+    'mli',
+    'php',
+    'py',
+    'rb',
+    'README',
+    'sql',
+    'stylelintrc',
 ]
 
 
@@ -109,9 +119,9 @@ class Clean(main.AbstractSync):
                 self.get_logger().warning('%d had clean errors', failed)
 
     def clean_command(self, path, keep_static):
-        regex = '".*\.(%s)"' % ('|'.join(STATIC_TYPES))
+        regex = '".*\.?(%s)$"' % ('|'.join(DELETABLE_TYPES))
         if keep_static:
             return ['find', path, '-type', 'f', '-regextype', 'posix-extended',
-                    '-not', '-regex', regex, '-delete']
+                    '-regex', regex, '-delete']
         else:
             return ['rm', '-fR', path]
