@@ -66,6 +66,30 @@
     },
     {
       "key": {
+        "uuid": "2e4df70f_5d2d2e8a",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-27T01:08:32Z",
+      "side": 1,
+      "message": "Falling back to stale values seems sane, however I\u0027m not 100% sure EtcConfig in MediaWiki core will always fall back to it and keeps it indefinitely. I\u0027ll double check. This class really should have unit tests.",
+      "parentUuid": "4e506ba4_47b3affd",
+      "range": {
+        "startLine": 78,
+        "startChar": 39,
+        "endLine": 78,
+        "endChar": 44
+      },
+      "revId": "8392203b4950eaa0fe178779c4036ab3d48b274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_0796074f",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 6
