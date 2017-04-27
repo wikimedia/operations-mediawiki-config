@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "2e4df70f_7d3d8ab7",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-27T01:11:18Z",
+      "side": 1,
+      "message": "We already do. But instead of manually calling has()/get() twice, we use the etc directory/namespace. See above where we have two namespaces. Once per-dc and one global. One overrides the other. I assume the idea is that readonly is per-dc and masterdc is global.\n\nBut if that\u0027s the case, perhaps we could consolidate them so that they are cached together and just move it to the get call here? That means using a slash in has() and get() which may be odd for a Config instance, but I don\u0027t think there\u0027s anything against that.\n\nDoing so would also address my previous CR comment about this making 2 http requests instead of 1 and storing it in two separate apc entries. Which isn\u0027t too bad, but doesn\u0027t match the original intent of \"all values\" (2) being fetched and stored from a single snapshot.",
+      "parentUuid": "4e506ba4_67302b54",
+      "revId": "8392203b4950eaa0fe178779c4036ab3d48b274f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_71a6a9bf",
         "filename": "wmf-config/CommonSettings.php",
         "patchSetId": 6
