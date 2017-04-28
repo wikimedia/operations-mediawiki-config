@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e4df70f_bc96ab4d",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 3215
+      },
+      "writtenOn": "2017-04-28T09:59:41Z",
+      "side": 1,
+      "message": "I disagree with this approach, having a fallback on the committed configuration files means that for every change to etcd we need to commit too to wmf-config.\nIf we really want to survive also a restart of mediawiki in absence of etcd, we could use an optional local disk cache, but IMHO it should not be in the committed configuration.",
+      "revId": "ffe3b56a656a15ac8e2486de3e65f6da62b7b1fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_7ca0239b",
+        "filename": "wmf-config/etcd.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 3215
+      },
+      "writtenOn": "2017-04-28T09:59:41Z",
+      "side": 1,
+      "message": "trailing tab",
+      "range": {
+        "startLine": 10,
+        "startChar": 2,
+        "endLine": 10,
+        "endChar": 3
+      },
+      "revId": "ffe3b56a656a15ac8e2486de3e65f6da62b7b1fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_3c913b53",
+        "filename": "wmf-config/etcd.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 3215
+      },
+      "writtenOn": "2017-04-28T09:59:41Z",
+      "side": 1,
+      "message": "does this means that each time we\u0027re making 2 connections to etcd to get the data?",
+      "revId": "ffe3b56a656a15ac8e2486de3e65f6da62b7b1fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e4df70f_1c8b1f1d",
+        "filename": "wmf-config/etcd.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 3215
+      },
+      "writtenOn": "2017-04-28T09:59:41Z",
+      "side": 1,
+      "message": "Will this put the whole application in read-only mode causing an outage if etcd is temporarily unavailable?\nIt seems wrong to me and also inconsistent with the failure model in CommonSettings.php where default values to survive even a restart without etcd are used.\n\nIMHO here too, like WMFMasterDatacenter, we should be serving the data from stale cache if etcd is not reachable, failing if there is no data in cache (on restart). Optionally we we could add a local disk cache if we want to survive also restarts with unreachable etcd.",
+      "revId": "ffe3b56a656a15ac8e2486de3e65f6da62b7b1fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
