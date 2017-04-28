@@ -505,11 +505,6 @@ function wmfLabsSettings() {
 			'default' => false, // T149725
 		],
 
-		// T160410 can be removed when the new view is the default
-		'wgRevisionSliderAlternateSlider' => [
-			'default' => true,
-		],
-
 		// Ensure ?action=credits isn't break and allow to work
 		// to cache this information. See T130820.
 		'wgMaxCredits' => [
