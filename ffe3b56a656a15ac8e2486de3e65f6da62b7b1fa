@@ -59,6 +59,24 @@
     },
     {
       "key": {
+        "uuid": "2e4df70f_677bb0ec",
+        "filename": "wmf-config/etcd.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 17
+      },
+      "writtenOn": "2017-04-28T13:00:31Z",
+      "side": 1,
+      "message": "It means two connections will be made on cache refresh, once every 10 seconds per server.",
+      "parentUuid": "2e4df70f_3c913b53",
+      "revId": "ffe3b56a656a15ac8e2486de3e65f6da62b7b1fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e4df70f_1c8b1f1d",
         "filename": "wmf-config/etcd.php",
         "patchSetId": 8
