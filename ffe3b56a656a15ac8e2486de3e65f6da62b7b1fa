@@ -77,6 +77,24 @@
     },
     {
       "key": {
+        "uuid": "2e4df70f_2f857a5a",
+        "filename": "wmf-config/etcd.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 21,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-04-28T23:22:20Z",
+      "side": 1,
+      "message": "Both connections will be to the same dc-local service. As such I\u0027m not comfortable storing these in separate instances. It implies that they are logically separate and both allowed to have a value for any given key, but I think that makes it a bit too generic and doesn\u0027t seem like something we actually need.\n\nThere\u0027s two scenarios I\u0027d like to avoid:\n\n* Two instances means two etcd connections, but also two DnsDiscoverer sub-instances which means they might actually end up connecting to different individual etcd servers.\n* Regardless of whether they connect to a different slave, the time drift alone between the get() call that hits config/:dc and the get() call hits config/common, could be enough for the snapshots to be different, which is bad.\n\nThe easiest way to avoid this would be to simply operate on a single instance and use the intended prefix directly. However this would sacrifice the flexibility of being able to set the key into either namespace. I think this is desirable and would make things more strict. E.g. we\u0027d enforce that ReadOnly is set for every DC, no default should exist. And likewise, MasterDC should be centralised. Or if otherwise, that logic change should be explicitly code here when we add that behaviour to WMF prod.\n\nAlternatively, instead of removing the idea of having two instances, we could exchange that complexity for a different kind of complexity. For example an \"PrefixedEtcdConfig\" of sorts that both operates on the same underlying EtcdConfig but can be used as convenient way to support multiple prefixes.\n\n $etcdConfig \u003d new EtcdConfig( [\n   \u0027directory\u0027 \u003d\u003e \u0027conftool/v1/mediawiki-config\u0027, ..\n ] );\n $etcdMultiConfig \u003d new MultiConfig( [\n   new PrefixedEtcdConfig( $etcdConfig, $wmfDatacenter ),\n   new PrefixedEtcdConfig( $etcdConfig, \u0027common\u0027 ),\n ] );\n $wgReadOnly \u003d $etcdMultiConfig-\u003eget( \u0027ReadOnly\u0027 );\n $wmfMasterDatacenter \u003d $etcdMultiConfig-\u003eget( \u0027WMFMasterDatacenter\u0027 );\n\nThe same could also be done by subclassing MultiConfig instead of EtcdConfig, depending on where we want the logic to live:\n\n $etcdConfig \u003d new EtcdConfig( [\n   \u0027directory\u0027 \u003d\u003e \u0027conftool/v1/mediawiki-config\u0027, ..\n ] );\n $etcdMultiConfig \u003d new MultiPrefixConfig( $etcdConfig, [\n   \"$wmfDatacenter/\",\n   \u0027common/\u0027,\n ] );\n $wgReadOnly \u003d $etcdMultiConfig-\u003eget( \u0027ReadOnly\u0027 );\n $wmfMasterDatacenter \u003d $etcdMultiConfig-\u003eget( \u0027WMFMasterDatacenter\u0027 );\n\nHowever, I\u0027d recommend removing it instead, into something simple like this:\n\n $etcdConfig \u003d new EtcdConfig( [\n   \u0027directory\u0027 \u003d\u003e \u0027conftool/v1/mediawiki-config\u0027, ..\n ] );\n\n $wgReadOnly \u003d $etcdConfig-\u003eget( \"$wmfDatacenter/ReadOnly\" );\n $wmfMasterDatacenter \u003d $etcdConfig-\u003eget( \u0027common/WMFMasterDatacenter\u0027 );\n\n\nThoughts?",
+      "parentUuid": "2e4df70f_677bb0ec",
+      "revId": "ffe3b56a656a15ac8e2486de3e65f6da62b7b1fa",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "2e4df70f_1c8b1f1d",
         "filename": "wmf-config/etcd.php",
         "patchSetId": 8
