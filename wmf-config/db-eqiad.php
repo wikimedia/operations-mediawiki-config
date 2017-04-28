@@ -148,7 +148,7 @@ $wgLBFactoryConf = [
 		'db1092' => 500, # D2 3.6TB 512GB
 	],
 	's6' => [
-		'db1061' => 0,   # D1 2.8TB 128GB, master
+		'db1061' => 0,   # C3 2.8TB 128GB, master
 #		'db1050' => 0,   # B2 2.8TB  64GB, old master2
 #		'db1023' => 0,   # B1 1.4TB  64GB, old master
 #		'db1022' => 1,   # B1 1.4TB  64GB, broken, do not pool
@@ -481,7 +481,7 @@ $wgLBFactoryConf = [
 	'db1056' => '10.64.32.26', # do not remove or comment out
 	'db1059' => '10.64.32.29', # do not remove or comment out
 	'db1060' => '10.64.32.30', # do not remove or comment out
-	'db1061' => '10.64.48.14', # do not remove or comment out
+	'db1061' => '10.64.32.227', # do not remove or comment out
 	'db1062' => '10.64.48.15', # do not remove or comment out
 	'db1063' => '10.64.48.16', # do not remove or comment out
 	'db1064' => '10.64.48.19', # do not remove or comment out
