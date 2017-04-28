@@ -16917,10 +16917,8 @@ $wgConf->settings = [
 	'hewiki' => false, // T150573
 ],
 
-// T160410 can be removed when the new view is the default
 'wgRevisionSliderAlternateSlider' => [
-	'default' => false,
-	'group0' => true,
+	'default' => true,
 ],
 
 'wmgUseTwoColConflict' => [
