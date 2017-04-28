@@ -579,9 +579,6 @@ function wmfLabsSettings() {
 				'10.68.20.142' => true // deployment-parsoid09.deployment-prep.eqiad.wmflabs
 			]
 		],
-		'wmgUseTwoColConflict' => [
-			'default' => true,
-		],
 		'wgLinterStatsdSampleFactor' => [
 			'default' => 10,
 		],

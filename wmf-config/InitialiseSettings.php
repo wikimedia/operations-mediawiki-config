@@ -16924,13 +16924,7 @@ $wgConf->settings = [
 ],
 
 'wmgUseTwoColConflict' => [
-	'default' => false,
-	'group0' => true, // T155716 & T155717
-	'metawiki' => true, // T155721
-	'dewiki' => true, // T155721
-	'arwiki' => true, // T158493
-	'hewiki' => true, // T158832
-	'fiwiki' => true, // T162370
+	'default' => true,
 ],
 
 'wmgUseUserMerge' => [
