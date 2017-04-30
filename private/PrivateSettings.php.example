@@ -1,16 +1,28 @@
 <?php
 
-# change all of these, and then keep them secret
-$wgDBuser           = 'wikiadmin';
-$wgDBpassword       = 'blaaaaahblaaaaaahballll';
+$wgDBuser = 'example';
+$wgDBpassword = '*';
 
-$wmgCaptchaSecret = 'boomboompow';
+$wmgCaptchaSecret = '*';
+$wmgCaptchaPassword = '*';
 
-$wmgRedisPassword = 'isitjustlove';
+$wmgLogstashPassword = '*';
 
-$wmgZeroPortalApiUserName = 'zscript';
-$wmgZeroPortalApiPassword = 'zscript1';
+$wmgRedisPassword = '*';
 
-$wmgVERPsecret = 'tuttut';
+$wmgTranslationNotificationUserPassword = '*';
 
-$wmgLogstashPassword = 'neenenee';
+$wmgVERPsecret = '*';
+
+$wmgZeroPortalApiUserName = 'example';
+$wmgZeroPortalApiPassword = '*';
+
+$wmfSwiftEqiadConfig = $wmfSwiftCodfwConfig = [
+	'cirrusAuthUrl' => '',
+	'cirrusUser' => '',
+	'cirrusKey' => '',
+];
+$wmfSwiftConfig = [
+	'eqiad' => $wmfSwiftEqiadConfig,
+	'codfw' => $wmfSwiftCodfwConfig,
+];

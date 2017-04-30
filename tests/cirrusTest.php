@@ -98,6 +98,7 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 
 	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix ) {
 		$wmfConfigDir = __DIR__ . "/../wmf-config";
+		require __DIR__ . '/../private/PrivateSettings.php.example';
 		require __DIR__ . '/TestServices.php';
 		$wgConf = $this->loadWgConf( $wmfRealm );
 
@@ -137,11 +138,6 @@ class cirrusTests extends PHPUnit_Framework_TestCase {
 		$wgJobTypeConf = array( 'default' => array() );
 		$wgCirrusSearchWeights = array();
 		$wgCirrusSearchNamespaceWeights = array();
-		$wmfSwiftEqiadConfig = array(
-			'cirrusAuthUrl' => '',
-			'cirrusUser' => '',
-			'cirrusKey' => '',
-		);
 		$wmfDatacenter = 'unittest';
 		$wgCirrusSearchPoolCounterKey = 'unittest:poolcounter:blahblahblah';
 		// not used for anything, just to prevent undefined variable
