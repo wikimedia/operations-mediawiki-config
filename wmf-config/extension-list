@@ -76,6 +76,7 @@ $IP/extensions/Linter/extension.json
 $IP/extensions/LiquidThreads/extension.json
 $IP/extensions/Listings/extension.json
 $IP/extensions/LocalisationUpdate/extension.json
+$IP/extensions/LoginNotify/extension.json
 $IP/extensions/MapSources/extension.json
 $IP/extensions/MassMessage/extension.json
 $IP/extensions/Math/extension.json
