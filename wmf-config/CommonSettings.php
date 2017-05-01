@@ -1937,6 +1937,11 @@ if ( $wmgUseLivePreview ) {
 	$wgDefaultUserOptions['uselivepreview'] = 1;
 }
 
+if ( $wmgUseLoginNotify ) {
+	wfLoadExtension( 'LoginNotify' );
+	$wgLoginNotifyEnableOnSuccess = false;
+}
+
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
 $wgDefaultUserOptions['showhiddencats'] = $wmgShowHiddenCats;
 
