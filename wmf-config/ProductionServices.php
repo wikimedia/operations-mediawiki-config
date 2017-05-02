@@ -80,9 +80,9 @@ $wmfAllServices['codfw']['poolcounter'] = [
 
 ### LockManager Redis
 $wmfAllServices['eqiad']['redis_lock'] = [
-	'rdb1' => '10.64.0.180',
-	'rdb2' => '10.64.0.181',
-	'rdb3' => '10.64.0.182'
+	'rdb1' => '10.64.0.80',
+	'rdb2' => '10.64.0.81',
+	'rdb3' => '10.64.0.82'
 ];
 $wmfAllServices['codfw']['redis_lock'] = [
 	'rdb1' => '10.192.0.83',
