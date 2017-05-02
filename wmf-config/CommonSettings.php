@@ -296,6 +296,14 @@ $wgHooks['LocalisationCacheRecache'][] = function( $cache, $code, &$allData, &$p
 	return true;
 };
 
+// Add some useful config data to query=siteinfo
+$wgHooks['APIQuerySiteInfoGeneralInfo'][] = function ( $module, &$data ) {
+	global $wmfMasterDatacenter;
+	$data['wmf-config'] = [
+		'wmfMasterDatacenter' => $wmfMasterDatacenter
+	];
+};
+
 # used for mysql/search settings
 $tmarray = getdate( time() );
 $hour = $tmarray['hours'];
