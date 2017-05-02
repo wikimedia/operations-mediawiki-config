@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e4df70f_342862dd",
+        "filename": "wmf-config/ProductionServices.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1616
+      },
+      "writtenOn": "2017-05-02T15:57:04Z",
+      "side": 1,
+      "message": "use one server per row",
+      "revId": "8c403bef6c7306adb6c17f52fcf084782a6ac0be",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
