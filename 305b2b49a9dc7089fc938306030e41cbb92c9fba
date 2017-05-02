@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e4df70f_684db39a",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 302,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-05-02T00:52:25Z",
+      "side": 1,
+      "message": "Most custom entries we have from various extensions use a prefix that contains a dash. wmf-config seems natural and would also match the directory name here which is a nice coincidence.",
+      "range": {
+        "startLine": 302,
+        "startChar": 1,
+        "endLine": 302,
+        "endChar": 19
+      },
+      "revId": "305b2b49a9dc7089fc938306030e41cbb92c9fba",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
