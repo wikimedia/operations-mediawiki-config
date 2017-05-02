@@ -35,12 +35,17 @@ class CheckoutMediaWiki(cli.Application):
             self.config['stage_dir'],
             '{}{}'.format(self.arguments.prefix, self.branch)
         )
+        old_branch = self.active_wikiversions()[0]
+        copy_dir = os.path.join(
+            self.config['stage_dir'],
+            '{}{}'.format(self.arguments.prefix, old_branch)
+        )
 
         if os.path.isdir(self.dest_dir):
             self.get_logger().info('Version already checked out')
             return 0
 
-        git.fetch(self.dest_dir, self.gerrit + 'mediawiki/core')
+        git.fetch(self.dest_dir, self.gerrit + 'mediawiki/core', copy_dir)
 
         with utils.cd(self.dest_dir):
             if subprocess.call(['/usr/bin/git', 'config',
