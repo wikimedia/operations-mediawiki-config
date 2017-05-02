@@ -8372,9 +8372,10 @@ $wgConf->settings = [
 		'rollbacker' => [ 'rollback' => true ], // T56589
 		'filemover' => [ 'movefile' => true ], // T56589
 		'reviewer' => [ 'patrol' => true, 'autopatrol' => true ],
-		'autopatrolled' => [ 'autopatrol' => true ],
+		'autopatrolled' => [ 'autopatrol' => true, 'move' => true ], // T164239
 		'sysop' => [ 'validate' => true ],
 		'templateeditor' => [ 'templateeditor' => true, 'editprotected' => true ], // T120342
+		'autoconfirmed' => [ 'move' => false ] // T164239
 	],
 	'hrwiki' => [
 		'patroller' => [ 'patrol' => true, 'autopatrol' => true, 'rollback' => true ],
