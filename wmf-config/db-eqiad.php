@@ -119,22 +119,22 @@ $wgLBFactoryConf = [
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,   # A2 3.6TB 512GB, master
 		'db1038' => 0,   # B2 1.4TB  64GB, vslow, dump, old master
-		'db1015' => 1,   # A2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-#		'db1035' => 0,   # B2 1.4TB  64GB
+#		'db1015' => 1,   # A2 1.4TB  64GB, low on space
+		'db1035' => 0,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 #		'db1044' => 0,   # B2 1.4TB  64GB, #Temporary master for db1095 - new sanitarium #T150802
 		'db1077' => 500, # B1 3.6TB 512GB
 		'db1078' => 500, # C3 3.6TB 512GB
 	],
 	's4' => [
 		'db1068' => 0,   # D1 2.8TB 160GB, master
-#		'db1040' => 0,   # B2 1.4TB  64GB, old master
+#		'db1040' => 0,   # B2 1.4TB  64GB, broken, do not pool T164057
 		'db1053' => 1,   # A2 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1056' => 1,   # C2 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1059' => 1,   # C2 2.8TB  96GB, api
 		'db1064' => 0,   # D1 2.8TB 160GB, vslow, dump #Master for db1095 - new sanitarium
 		'db1081' => 300, # A2 3.6TB 512GB, api
 		'db1084' => 500, # B1 3.6TB 512GB
-		'db1091' => 500, # D2 3.6TB 512GB
+		'db1091' => 500, # D2 3.6TB 512GB, old master
 	],
 	's5' => [
 		'db1063' => 0,   # C5 2.8TB 128GB, master
@@ -151,7 +151,7 @@ $wgLBFactoryConf = [
 		'db1061' => 0,   # C3 2.8TB 128GB, master
 #		'db1050' => 0,   # B2 2.8TB  64GB, old master2
 #		'db1023' => 0,   # B1 1.4TB  64GB, old master
-#		'db1022' => 1,   # B1 1.4TB  64GB, broken, do not pool
+#		'db1022' => 1,   # B1 1.4TB  64GB, broken, do not pool T163778
 		'db1030' => 0,   # B1 1.4TB  64GB, vslow, dump
 		'db1037' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1085' => 300, # B3 3.6TB 512GB, api
@@ -303,19 +303,19 @@ $wgLBFactoryConf = [
 			'db1038' => 1,
 		],
 		'watchlist' => [
-			'db1015' => 1,
+			'db1035' => 1,
 		],
 		'recentchanges' => [
-			'db1015' => 1,
+			'db1035' => 1,
 		],
 		'recentchangeslinked' => [
-			'db1015' => 1,
+			'db1035' => 1,
 		],
 		'contributions' => [
-			'db1015' => 1,
+			'db1035' => 1,
 		],
 		'logpager' => [
-			'db1015' => 1,
+			'db1035' => 1,
 		],
 	],
 	's4' => [
