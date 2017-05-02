@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e4df70f_3362bcd6",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 305,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-05-02T01:57:13Z",
+      "side": 1,
+      "message": "Redundant since 1.22 and removing it will reduce risk of hard-to-detect accidental breakage, which we\u0027ve observed (and consequently fixed) numerous times sense then :)",
+      "range": {
+        "startLine": 305,
+        "startChar": 1,
+        "endLine": 305,
+        "endChar": 13
+      },
+      "revId": "67c1ecbab70673e0739988dc0a55be4dbfb81254",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
