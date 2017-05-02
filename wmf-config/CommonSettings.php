@@ -99,8 +99,13 @@ default:
 # Shorthand when we have no master-slave situation to keep into account
 $wmfLocalServices = $wmfAllServices[$wmfDatacenter];
 
-# Get configuration from etcd. This gives us the correct $wmfMasterDatacenter
-require "$wmfConfigDir/etcd.php";
+# Labs-only for testing, eventually etcd.php will be used in production as well
+if ( $wmfRealm === 'labs' ) {
+	# Get configuration from etcd. This gives us the correct $wmfMasterDatacenter
+	require "$wmfConfigDir/etcd.php";
+} else {
+	$wmfMasterDatacenter = 'codfw';
+}
 
 $wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
 
