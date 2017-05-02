@@ -7737,7 +7737,7 @@ $wgConf->settings = [
 	],
 	'bnwiki' => [
 		'user' => [ 'patrol' => false ],
-		'autoconfirmed' => [ 'patrol' => false ],
+		'autoconfirmed' => [ 'patrol' => true ],
 		'sysop' => [ 'patrol' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ], // T30717
 		'rollbacker' => [ 'rollback' => true ], // T30717
