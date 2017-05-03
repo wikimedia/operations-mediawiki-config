@@ -17025,7 +17025,7 @@ $wgConf->settings = [
 
 'wmgUseCognate' => [
 	'default' => false,
-	'wiktionary' => 'wiktionary', // T150182
+#	'wiktionary' => 'wiktionary', // T150182
 ],
 
 'wmgUseInterwikiSorting' => [
