@@ -2896,7 +2896,7 @@ if ( $wmgUseRelatedArticles ) {
 		$wgRelatedArticlesShowInSidebar = false;
 		$wgRelatedArticlesShowInFooter = true;
 		$wgRelatedArticlesLoggingSamplingRate = 0.01;
-		$wgRelatedArticlesUseCirrusSearch = true;
+		$wgRelatedArticlesUseCirrusSearch = $wmgRelatedArticlesUseCirrusSearch;
 		$wgRelatedArticlesOnlyUseCirrusSearch = false;
 	}
 }
