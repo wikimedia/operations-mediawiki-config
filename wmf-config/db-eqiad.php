@@ -663,13 +663,13 @@ $wgLBFactoryConf = [
 
 # This key must exist for the master switch script to work
 'readOnlyBySection' => [
-	's1'      => 'MediaWiki is in read-only mode for maintenance. Please try again in a few minutes',
-	's2'      => 'MediaWiki is in read-only mode for maintenance. Please try again in a few minutes',
-	'DEFAULT' => 'MediaWiki is in read-only mode for maintenance. Please try again in a few minutes', # s3
-	's4'      => 'MediaWiki is in read-only mode for maintenance. Please try again in a few minutes',
-	's5'      => 'MediaWiki is in read-only mode for maintenance. Please try again in a few minutes',
-	's6'      => 'MediaWiki is in read-only mode for maintenance. Please try again in a few minutes',
-	's7'      => 'MediaWiki is in read-only mode for maintenance. Please try again in a few minutes',
+	's1'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
+	's2'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
+	'DEFAULT' => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.', # s3
+	's4'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
+	's5'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
+	's6'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
+	's7'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
 ],
 
 ];
