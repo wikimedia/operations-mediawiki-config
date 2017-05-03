@@ -1,0 +1,9 @@
+Verified+2: jenkins-bot
+Code-Review+1: EddieGP <wikimedia.org@eddie-sh.de>
+Code-Review+1: ArielGlenn <ariel@wikimedia.org>
+Code-Review+2: Giuseppe Lavagetto <glavagetto@wikimedia.org>
+Submitted-by: Giuseppe Lavagetto <glavagetto@wikimedia.org>
+Submitted-at: Wed, 03 May 2017 11:23:34 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/351614
+Project: operations/mediawiki-config
+Branch: refs/heads/master
