@@ -16869,14 +16869,11 @@ $wgConf->settings = [
 ],
 
 'wmgRelatedArticlesShowInSidebar' => [
-	'default' => false,
-	'wikivoyage' => true,
+	'default' => false, // T164391
 ],
 
 'wmgRelatedArticlesShowInFooter' => [
-	'default' => false,
-	'wikipedia' => true,
-	'frwikinews' => true, // T143480
+	'default' => true, // T164391, T143480
 ],
 
 'wmgRelatedArticlesFooterWhitelistedSkins' => [
