@@ -104,7 +104,7 @@ if ( $wmfRealm === 'labs' ) {
 	# Get configuration from etcd. This gives us the correct $wmfMasterDatacenter
 	require "$wmfConfigDir/etcd.php";
 } else {
-	$wmfMasterDatacenter = 'codfw';
+	$wmfMasterDatacenter = 'eqiad';
 }
 
 $wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
