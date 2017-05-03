@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2e4df70f_d7649647",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15945,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-05-03T18:48:22Z",
+      "side": 1,
+      "message": "You can use a \u0027+dewiki\u0027 key and only override default parameter (ie only limit, not inUserLanguage).",
+      "revId": "36d368c89753c642d2a6b6f0a18ef422e1ffa15f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
