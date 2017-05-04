@@ -625,5 +625,9 @@ function wmfLabsSettings() {
 		'wg3dProcessEnviron' => [
 			'default' => [ 'DISPLAY' => ':99' ],
 		],
+
+		'wgCognateReadOnly' => [
+			'default' => false,
+		],
 	];
 } # wmflLabsSettings()
