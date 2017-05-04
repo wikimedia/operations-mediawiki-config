@@ -17031,6 +17031,7 @@ $wgConf->settings = [
 'wgCognateReadOnly' => [
 	'default' => true,
 	'small' => false,
+	'medium' => false,
 ],
 
 'wmgUseInterwikiSorting' => [
