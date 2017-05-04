@@ -63,6 +63,14 @@ $wmgThrottlingExceptions[] = [ // T163870
 	'value' => 40 // 30 expected
 ];
 
+$wmgThrottlingExceptions[] = [ // T164482
+	'from' => '2017-05-06T09:00 +1:00',
+	'to' => '2017-05-06T18:00 +1:00',
+	'IP' => '193.39.172.207',
+	'dbname' => [ 'cywiki' ],
+	'value' => 60 // 50 expected
+];
+
 ## Add throttling definitions above.
 
 /**
