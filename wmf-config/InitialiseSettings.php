@@ -14963,7 +14963,7 @@ $wgConf->settings = [
 'wmgEnableTextExtracts' => [
 	'default' => true,
 ],
-'wmgExtractsRemoveClasses' => [
+'wgExtractsRemoveClasses' => [
 	'default' => [
 		// This is a good thing to remove in any case
 		'.metadata',
@@ -14971,7 +14971,7 @@ $wgConf->settings = [
 		'span.coordinates', 'span.geo-multi-punct', 'span.geo-nondefault', '#coordinates',
 	],
 ],
-'wmgExtractsExtendOpenSearchXml' => [
+'wgExtractsExtendOpenSearchXml' => [
 	'default' => true,
 ],
 
@@ -15273,13 +15273,6 @@ $wgConf->settings = [
 	'default' => [
 		'base' => false,
 		'beta' => true,
-	],
-],
-
-// Enable editing for unregistered users
-'wmgMFEditorOptions' => [
-	'default' => [
-		'anonymousEditing' => true, // T93210
 	],
 ],
 
