@@ -16684,6 +16684,7 @@ $wgConf->settings = [
 	'arwiki' => true, // T155720
 	'bswiki' => true,
 	'cawiki' => true, // T120829
+	'cawikiquote' => true, // T164498
 	'elwiki' => true, // T144384
 	'frwiki' => true, // T136684
 	'frwikiquote' => true, // T138064
