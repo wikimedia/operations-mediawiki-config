@@ -127,7 +127,6 @@ $wgLBFactoryConf = [
 	],
 	's4' => [
 		'db1068' => 0,   # D1 2.8TB 160GB, master
-#		'db1040' => 0,   # B2 1.4TB  64GB, broken, do not pool T164057
 		'db1053' => 1,   # A2 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1056' => 1,   # C2 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1059' => 1,   # C2 2.8TB  96GB, api
@@ -466,7 +465,6 @@ $wgLBFactoryConf = [
 	'db1037' => '10.64.16.26', # do not remove or comment out
 	'db1038' => '10.64.16.27', # do not remove or comment out
 	'db1039' => '10.64.16.28', # do not remove or comment out
-	'db1040' => '10.64.16.29', # do not remove or comment out
 	'db1041' => '10.64.16.30', # do not remove or comment out
 	'db1043' => '10.64.16.32', # do not remove or comment out
 	'db1044' => '10.64.16.33', # do not remove or comment out
