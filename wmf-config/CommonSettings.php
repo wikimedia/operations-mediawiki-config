@@ -2332,13 +2332,6 @@ require "{$wmfConfigDir}/mobile.php";
 # MUST be after MobileFrontend initialization
 if ( $wmgEnableTextExtracts ) {
 	wfLoadExtension( 'TextExtracts' );
-	if ( isset( $wgExtractsRemoveClasses ) ) {
-		// Back-compat for pre-extension.json
-		$wgExtractsRemoveClasses = array_merge( $wgExtractsRemoveClasses, $wmgExtractsRemoveClasses );
-	} else {
-		$wgExtractsRemoveClasses = $wmgExtractsRemoveClasses;
-	}
-	$wgExtractsExtendOpenSearchXml = $wmgExtractsExtendOpenSearchXml;
 }
 
 if ( $wmgUseSubPageList3 ) {
