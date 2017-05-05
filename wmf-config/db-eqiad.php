@@ -138,10 +138,10 @@ $wgLBFactoryConf = [
 	],
 	's5' => [
 		'db1063' => 0,   # C5 2.8TB 128GB, master
-		'db1049' => 0,   # B1 2.8TB  64GB, old master, vslow, dump
+#		'db1049' => 0,   # B1 2.8TB  64GB, old master
 		'db1026' => 1,   # B1 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1045' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-#		'db1070' => 50,  # D1 2.8TB 160GB, vslow, dump #ROW based replication - master for db1095 #T137191
+		'db1070' => 50,  # D1 2.8TB 160GB, vslow, dump #ROW based replication - master for db1095 #T137191
 		'db1071' => 50,  # D1 2.8TB 160GB, api
 		'db1082' => 300, # A2 3.6TB 512GB, api
 		'db1087' => 500, # C2 3.6TB 512GB
@@ -351,10 +351,10 @@ $wgLBFactoryConf = [
 	],
 	's5' => [
 		'vslow' => [
-			'db1049' => 1,
+			'db1070' => 1,
 		],
 		'dump' => [
-			'db1049' => 1,
+			'db1070' => 1,
 		],
 		'api' => [
 			'db1071' => 1,
