@@ -5878,6 +5878,12 @@ $wgConf->settings = [
 		114 => 'Translation', // T52007
 		115 => 'Translation_talk', // T52007
 	],
+	'eswikisource' => [
+		100 => 'Portal', // T164195
+		101 => 'Portal_discusión', // T164195
+		104 => 'Autor', // T164195
+		105 => 'Autor_discusión', // T164195
+	],
 	'eowikisource' => [
 		102 => 'Aŭtoro', // Author
 		103 => 'Aŭtoro-Diskuto', // Author talk
