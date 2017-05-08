@@ -18375,10 +18375,48 @@ $wgConf->settings = [
 'wmgUseQuickSurveys' => [
 	'default' => false,
 	'enwiki' => true,
+	'jawiki' => true,
+	'rowiki' => true,
 ],
 
 'wgQuickSurveysConfig' => [
 	'default' => [],
+	// T164894
+	'jawiki' => [
+		[
+			'enabled' => true,
+			'name' => '',
+			'type' => 'external',
+			'description' => 'Reader-segmentation-1-description',
+			'link' => 'Reader-segmentation-3-link',
+			'question' => 'Reader-segmentation-3-message',
+			'privacyPolicy' => 'Reader-segmentation-3-privacy',
+			'coverage' => 0.1,
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ],
+			],
+			'instanceTokenParameterName' => 'entry.901222064',
+		],
+	],
+	// T164769
+	'rowiki' => [
+		[
+			'enabled' => true,
+			'name' => '',
+			'type' => 'external',
+			'description' => 'Reader-segmentation-1-description',
+			'link' => 'Reader-segmentation-3-link',
+			'question' => 'Reader-segmentation-3-message',
+			'privacyPolicy' => 'Reader-segmentation-3-privacy',
+			'coverage' => 0.5,
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ],
+			],
+			'instanceTokenParameterName' => 'entry.901222064',
+		],
+	],
 ],
 
 // WikidataPageBanner extension (T98029)
