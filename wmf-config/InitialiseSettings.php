@@ -18373,11 +18373,87 @@ $wgConf->settings = [
 // https://phabricator.wikimedia.org/T110661
 'wmgUseQuickSurveys' => [
 	'default' => false,
+	'dewiki' => true,
 	'enwiki' => true,
+	'hewiki' => true,
+	'jawiki' => true,
+	'rowiki' => true,
 ],
 
 'wgQuickSurveysConfig' => [
 	'default' => [],
+	// T164960
+	'dewiki' => [
+		[
+			'enabled' => true,
+			'name' => 'Reader-segmentation-3-de-test',
+			'type' => 'external',
+			'description' => 'Reader-segmentation-1-description',
+			'link' => 'Reader-segmentation-3-link',
+			'question' => 'Reader-segmentation-3-message',
+			'privacyPolicy' => 'Reader-segmentation-3-privacy',
+			'coverage' => 0.1,
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ],
+			],
+			'instanceTokenParameterName' => 'entry.901222064',
+		],
+	],
+	// T164963
+	'hewiki' => [
+		[
+			'enabled' => true,
+			'name' => 'Reader-segmentation-3-he-test',
+			'type' => 'external',
+			'description' => 'Reader-segmentation-1-description',
+			'link' => 'Reader-segmentation-3-link',
+			'question' => 'Reader-segmentation-3-message',
+			'privacyPolicy' => 'Reader-segmentation-3-privacy',
+			'coverage' => 0.5,
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ],
+			],
+			'instanceTokenParameterName' => 'entry.901222064',
+		],
+	],
+	// T164894
+	'jawiki' => [
+		[
+			'enabled' => true,
+			'name' => 'Reader-segmentation-3-ja-test',
+			'type' => 'external',
+			'description' => 'Reader-segmentation-1-description',
+			'link' => 'Reader-segmentation-3-link',
+			'question' => 'Reader-segmentation-3-message',
+			'privacyPolicy' => 'Reader-segmentation-3-privacy',
+			'coverage' => 0.1,
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ],
+			],
+			'instanceTokenParameterName' => 'entry.901222064',
+		],
+	],
+	// T164769
+	'rowiki' => [
+		[
+			'enabled' => true,
+			'name' => 'Reader-segmentation-3-ro-test',
+			'type' => 'external',
+			'description' => 'Reader-segmentation-1-description',
+			'link' => 'Reader-segmentation-3-link',
+			'question' => 'Reader-segmentation-3-message',
+			'privacyPolicy' => 'Reader-segmentation-3-privacy',
+			'coverage' => 0.5,
+			'platforms' => [
+				'desktop' => [ 'stable' ],
+				'mobile' => [ 'stable' ],
+			],
+			'instanceTokenParameterName' => 'entry.901222064',
+		],
+	],
 ],
 
 // WikidataPageBanner extension (T98029)
