@@ -17028,12 +17028,6 @@ $wgConf->settings = [
 	'wiktionary' => 'wiktionary', // T150182
 ],
 
-'wgCognateReadOnly' => [
-	'default' => true,
-	'small' => false,
-	'medium' => false,
-],
-
 'wmgUseInterwikiSorting' => [
 	'default' => false,
 	'wikidataclient' => true, // T150183
