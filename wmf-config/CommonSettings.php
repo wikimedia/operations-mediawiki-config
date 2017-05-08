@@ -1871,6 +1871,8 @@ $wgAbuseFilterEmergencyDisableAge = $wmgAbuseFilterEmergencyDisableAge;
 
 if ( $wmgUsePdfHandler ) {
 	wfLoadExtension( 'PdfHandler' );
+	$wgPdfProcessor = '/usr/local/bin/mediawiki-firejail-ghostscript';
+	$wgPdfPostProcessor = '/usr/local/bin/mediawiki-firejail-convert';
 }
 
 wfLoadExtension( 'WikiEditor' );
