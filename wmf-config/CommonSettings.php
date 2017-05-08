@@ -2890,7 +2890,6 @@ if ( $wmgUseInsider ) {
 
 if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
-	$wgRelatedArticlesShowInSidebar = $wmgRelatedArticlesShowInSidebar;
 	if ( $wmgRelatedArticlesShowInFooter ) {
 		wfLoadExtension( 'Cards' );
 		$wgRelatedArticlesShowInSidebar = false;
