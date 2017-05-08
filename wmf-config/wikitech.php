@@ -4,24 +4,6 @@
 
 use MediaWiki\Logger\LoggerFactory;
 
-require_once( "$IP/extensions/Validator/Validator.php" );
-require_once( "$IP/extensions/SemanticMediaWiki/SemanticMediaWiki.php" );
-require_once( "$IP/extensions/SemanticForms/SemanticForms.php" );
-require_once( "$IP/extensions/SemanticResultFormats/SemanticResultFormats.php" );
-
-switch( $wgDBname ) {
-case 'labswiki' :
-	enableSemantics( 'wikitech' );
-        break;
-case 'labtestwiki' :
-	enableSemantics( 'labtestwikitech' );
-        break;
-}
-
-unset( $wgSpecialPages['SMWAdmin'] );
-
-$wgAPIModules['sfautocomplete'] = 'ApiDisabled';
-
 require_once( "$IP/extensions/LdapAuthentication/LdapAuthentication.php" );
 $wgAuthManagerAutoConfig['primaryauth'] += [
 	LdapPrimaryAuthenticationProvider::class => [

@@ -1,7 +1,3 @@
 $IP/extensions/DynamicSidebar/extension.json
 $IP/extensions/LdapAuthentication/LdapAuthentication.php
 $IP/extensions/OpenStackManager/OpenStackManager.php
-$IP/extensions/Validator/Validator.php
-$IP/extensions/SemanticMediaWiki/SemanticMediaWiki.php
-$IP/extensions/SemanticForms/SemanticForms.php
-$IP/extensions/SemanticResultFormats/SemanticResultFormats.php
