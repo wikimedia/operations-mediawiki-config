@@ -18478,6 +18478,7 @@ $wgConf->settings = [
 	'ruwiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
+	'uawikimedia' => true,
 ],
 
 'wgKartographerEnableMapFrame' => [
