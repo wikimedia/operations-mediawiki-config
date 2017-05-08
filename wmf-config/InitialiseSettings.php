@@ -3864,7 +3864,7 @@ $wgConf->settings = [
 		'Discuţie_Portal' => 101,
 		'Discuţie_Proiect' => 103,
 		'Book' => 110, // T68530
-		'Discuţie_Book' => 111,
+		'Book_talk' => 111, // T68530#2824358
 	],
 	'+rowikibooks' => [
 		'Discuţie_Wikibooks' => NS_PROJECT_TALK,
