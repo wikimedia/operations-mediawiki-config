@@ -17541,7 +17541,7 @@ $wgConf->settings = [
 		// actual searches
 		'merge.scheduler.max_thread_count' => 1,
 	],
-	'+wikidatawiki' => [
+	'+wikidata' => [
 		// increase defaults to add language specific fields
 		'index.mapping.total_fields.limit' => 5000,
 	],
