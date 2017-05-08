@@ -16882,6 +16882,7 @@ $wgConf->settings = [
 	'default' => [ 'minerva' ],
 	// T126826
 	'htwiki' => [ 'minerva', 'vector' ],
+	'wikivoyage' => [ 'minerva', 'vector' ],
 	'related-articles-footer-blacklisted-skins' => [],
 ],
 
