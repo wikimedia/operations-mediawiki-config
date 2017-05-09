@@ -168,5 +168,3 @@ if ( file_exists( '/etc/mediawiki/WikitechPrivateSettings.php' ) ) {
 }
 
 $smwgNamespacesWithSemanticLinks[NS_NOVA_RESOURCE] = true;
-
-require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );

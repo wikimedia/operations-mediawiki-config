@@ -18580,6 +18580,12 @@ $wgConf->settings = [
 	'testwiki' => true,
 ],
 
+'wmgUseDynamicSidebar' =>
+	'default' => false,
+	'labswiki' => true,
+	'labstestwiki' => true,
+],
+
 ];
 
 ### WMF Labs override #####

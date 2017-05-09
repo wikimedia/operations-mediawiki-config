@@ -3557,6 +3557,10 @@ if ( $wmgUseParserMigration ) {
 	];
 }
 
+if ( $wmgUseDynamicSidebar ) {
+	wfLoadExtension( 'DynamicSidebar' );
+}
+
 if ( $wmfRealm === 'labs' ) {
 	require( "$wmfConfigDir/CommonSettings-labs.php" );
 }
