@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_991bbbd4",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 136,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2017-05-09T13:10:00Z",
+      "side": 1,
+      "message": "Around line 100, we already enable those settings for the tests wiki. That vary based on $wgDBname though:\n\n if ( in_array( $wgDBname, [ \u0027test2wiki\u0027, \u0027testwiki\u0027, \u0027testwikidatawiki\u0027 ] ) ) {\n     $wgWBClientSettings[\u0027sendEchoNotification\u0027] \u003d true;\n     $wgWBClientSettings[\u0027echoIcon\u0027] \u003d [ \u0027url\u0027 \u003d\u003e \u0027/static/images/wikibase/echoIcon.svg\u0027 ];\n\nMaybe move the condition there and use some strpos( wikivoyage, $wgDBname ) ?",
+      "revId": "dff9a92886ab352bfb3b7523a94fe0b6f3420fde",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
