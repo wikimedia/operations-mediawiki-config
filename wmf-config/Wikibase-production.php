@@ -129,4 +129,10 @@ if ( $wmgUseWikibaseClient ) {
 	$wgArticlePlaceholderSearchEngineIndexed = $wmgArticlePlaceholderSearchEngineIndexed;
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://www.wikidata.org/w/index.php?title=MediaWiki:Wikibase-SortedProperties&action=raw&sp_ver=1';
 	$wgWBClientSettings['hasFullEntityIdColumn'] = false;
+	list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
+	if ( $site === 'wikivoyage' ) {
+		$wgWBClientSettings['sendEchoNotification'] = true;
+		$wgWBClientSettings['echoIcon'] = [ 'url' => '/static/images/wikibase/echoIcon.svg' ];
+	}
+
 }
