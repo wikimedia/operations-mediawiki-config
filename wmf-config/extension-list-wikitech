@@ -1,3 +1,2 @@
-$IP/extensions/DynamicSidebar/extension.json
 $IP/extensions/LdapAuthentication/LdapAuthentication.php
 $IP/extensions/OpenStackManager/OpenStackManager.php
