@@ -10961,6 +10961,7 @@ $wgConf->settings = [
 	'dewiktionary' => [ 'w', 'en' ],
 	'dewikivoyage' => [ 'en', 'fr', 'nl', 'it', 'w', 'w:da', 'w:en', 'w:fr', 'w:nl', 'w:nn', 'w:no', 'incubator', 'meta' ], // T46411, T76355
 	'dsbwiki' => [ 'incubator', ],
+	'dtywiki' => [ 'commons', 'en', 'hi', 'mai', 'ne' ], // T164573
 	'elwiki' => [ 'en', 'de', 'v', 's', 'wikt', 'b', 'q', 'fr', 'meta', 'commons', 'it', ], // T9747
 	'elwikibooks' => [ 'en', 'w:en', 'w', 'v', 'q', 's', 'meta', 'wikt' ], // T14812, T16131, T22351
 	'elwikisource' => [ 'w', 'v', 'en', 'fr', 'oldwikisource' ], // T78795
