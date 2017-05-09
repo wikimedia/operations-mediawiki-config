@@ -3230,18 +3230,7 @@ if ( $wmgEnableMapData ) {
 
 // Enable Config:Dashiki: sub-namespace on meta.wikimedia.org - T156971
 if ( $wmgEnableDashikiData ) {
-	// Configure Dashiki sub-namespace with JsonConfig
-	$wgJsonConfigs['JsonConfig.Dashiki'] = array(
-		'pattern' => '/^Dashiki\:./',
-		'isLocal' => true,
-	);
-
-	// register the custom view implemented by the Dashiki extension
-	$wgJsonConfigModels['JsonConfig.Dashiki'] = array(
-		'class' => null,
-		'view'  => 'Dashiki\DashikiView',
-	);
-
+	// Dashiki sub-namespace Config:Dashiki: is configured in extension.json
 	wfLoadExtension( 'Dashiki' );
 }
 
