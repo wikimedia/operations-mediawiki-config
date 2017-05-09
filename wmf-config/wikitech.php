@@ -166,5 +166,3 @@ $wgOpenStackManagerProxyGateways = [ 'eqiad' => '208.80.155.156' ];
 if ( file_exists( '/etc/mediawiki/WikitechPrivateSettings.php' ) ) {
 	require_once( '/etc/mediawiki/WikitechPrivateSettings.php' );
 }
-
-require_once( "$IP/extensions/DynamicSidebar/DynamicSidebar.php" );
