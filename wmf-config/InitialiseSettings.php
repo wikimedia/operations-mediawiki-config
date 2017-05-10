@@ -3278,7 +3278,7 @@ $wgConf->settings = [
 		'Vikipediisto' => NS_USER, // T24426
 		'Vikipediista_diskuto' => NS_USER_TALK, // T24426
 	],
-	'+eswikisource' => [
+	'+eowikisource' => [
 		'Auxtoro' => 102,
 		'Auxtoro-Diskuto' => 103,
 	],
