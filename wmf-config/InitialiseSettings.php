@@ -17401,6 +17401,15 @@ $wgConf->settings = [
 	"nan" => "default", // e.g. zh_min_nan
 ],
 
+
+// Define list of projects to blacklist from CrossProject search
+// (only effective if SiteMatrix implementation is being used)
+'wmgCirrusSearchCrossProjectSearchBlackList' => [
+	'default' => [],
+	// Blacklist wikinews and wikiversity T163463
+	'enwiki' => [ 'n', 'v' ],
+],
+
 'wmgCirrusSearchIgnoreOnWikiBoostTemplates' => [
 	'default' => false,
 	// on wiki boost templates have to high boosts for enwiki
