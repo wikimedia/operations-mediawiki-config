@@ -13255,6 +13255,12 @@ $wgConf->settings = [
 	'wikidatawiki' => false,
 	'wiktionary' => false,
 	'nonbetafeatures' => false,
+	// T164740
+	'wikibooks' => false,
+	'wikisource' => false,
+	'wikinews' => false,
+	'wikiversity' => false,
+	'commonswiki' => false,
 ],
 
 'wgPopupsSchemaSamplingRate' => [
