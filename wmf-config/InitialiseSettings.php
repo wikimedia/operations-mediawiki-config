@@ -5882,6 +5882,12 @@ $wgConf->settings = [
 		102 => 'Aŭtoro', // Author
 		103 => 'Aŭtoro-Diskuto', // Author talk
 	],
+	'eswikisource' => [
+		100 => 'Portal', // Portal, T164195
+		101 => 'Portal_discusión', // Portal talk, T164195
+		106 => 'Autor', // Author, T164195
+		107 => 'Autor_discusión', // Author talk, T164195
+	],
 	'etwikisource' => [
 		106 => 'Autor',
 		107 => 'Autori_arutelu',
