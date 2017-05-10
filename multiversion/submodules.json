@@ -613,26 +613,10 @@
         "action": "branch",
         "ref": "."
     },
-    "extensions/SemanticForms": {
-        "action": "branch",
-        "ref": "."
-    },
     "extensions/CentralNotice": "wmf_deploy",
     "extensions/Wikidata": {
         "action": "checkout-latest",
         "ref": "wmf/.*"
-    },
-    "extensions/SemanticMediaWiki": {
-        "action": "checkout",
-        "ref": "1.8.x"
-    },
-    "extensions/SemanticResultFormats": {
-        "action": "checkout",
-        "ref": "1.8.x"
-    },
-    "extensions/Validator": {
-        "action": "checkout",
-        "ref": "0.5.x"
     },
     "skins/CologneBlue": {
         "action": "branch",
