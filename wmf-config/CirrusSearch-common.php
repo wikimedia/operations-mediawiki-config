@@ -251,12 +251,10 @@ $wgCirrusSearchCrossProjectProfiles = [
 		'ftbuilder' => 'perfield_builder_title_filter',
 		'rescore' => 'wsum_inclinks',
 	],
-	// Same for wikiversity
-	'v' => [
-		'ftbuilder' => 'perfield_builder_title_filter',
-		'rescore' => 'wsum_inclinks',
-	],
 ];
+
+$wgCirrusSearchCrossProjectSearchBlackList = $wmgCirrusSearchCrossProjectSearchBlackList;
+$wgCirrusSearchCrossProjectShowMultimedia = $wmgCirrusSearchCrossProjectShowMultimedia;
 
 // Configure extra index settings set during index creation
 $wgCirrusSearchExtraIndexSettings = $wmgCirrusSearchExtraIndexSettings;
