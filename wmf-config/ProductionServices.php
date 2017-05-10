@@ -24,6 +24,8 @@ $wmfAllServices['eqiad'] = [
 	'upload' => 'upload.svc.eqiad.wmnet',
 	'cxserver' => 'http://cxserver.discovery.wmnet:8080',
 	'etcd' => '_etcd._tcp.eqiad.wmnet',
+	'mediaSwiftAuth' => 'http://ms-fe.svc.eqiad.wmnet/auth',
+	'mediaSwiftStore' => 'http://ms-fe.svc.eqiad.wmnet/v1/AUTH_mw'
 ];
 
 $wmfAllServices['codfw'] = [
@@ -39,6 +41,8 @@ $wmfAllServices['codfw'] = [
 	'upload' => 'upload.svc.codfw.wmnet',
 	'cxserver' => 'http://cxserver.discovery.wmnet:8080',
 	'etcd' => '_etcd._tcp.codfw.wmnet',
+	'mediaSwiftAuth' => 'http://ms-fe.svc.codfw.wmnet/auth',
+	'mediaSwiftStore' => 'http://ms-fe.svc.codfw.wmnet/v1/AUTH_mw'
 ];
 
 ### Logstash
@@ -70,8 +74,8 @@ $wmfAllServices['codfw']['restbase'] = 'http://restbase.discovery.wmnet:7231';
 
 ### Poolcounter
 $wmfAllServices['eqiad']['poolcounter'] = [
-        '10.64.32.126', # poolcounter1001.eqiad.wmnet
-        '10.64.16.152', # poolcounter1002.eqiad.wmnet
+	'10.64.32.126', # poolcounter1001.eqiad.wmnet
+	'10.64.16.152', # poolcounter1002.eqiad.wmnet
 ];
 $wmfAllServices['codfw']['poolcounter'] = [
 	'10.192.16.124', # subra.codfw.wmnet
