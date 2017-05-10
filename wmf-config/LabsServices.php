@@ -34,6 +34,8 @@ $wmfAllServices['eqiad'] = [
 		'rdb2' => '10.68.16.231', // deployment-redis02.deployment-prep.eqiad.wmflabs
 	],
 	'etcd' => 'deployment-etcd-01.deployment-prep.eqiad.wmflabs:2379',
+	'mediaSwiftAuth' => 'http://deployment-ms-fe02.deployment-prep.eqiad.wmflabs/auth',
+	'mediaSwiftStore' => 'http://deployment-ms-fe02.deployment-prep.eqiad.wmflabs/v1/AUTH_mw'
 ];
 
 ### Logstash
