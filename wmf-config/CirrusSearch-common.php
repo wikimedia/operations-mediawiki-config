@@ -21,12 +21,7 @@ if ( $wmgUseClusterJobqueue ) {
 		$wgJobTypeConf['default'];
 }
 
-// Needed for elastic version 5.0 to 5.3 is deployed
-// in 5.3 it'll produce, we should really silent this
-// log message when upgrading to 5.3
-$wgCirrusSearchElasticQuirks = [
-	'query_string_max_determinized_states' => true,
-];
+$wgCirrusSearchElasticQuirks = [];
 
 # Set up the the default cluster to send queries to,
 # and the list of clusters to write to.
