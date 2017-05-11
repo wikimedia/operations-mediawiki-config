@@ -22,6 +22,30 @@
       "revId": "57dbad4fe3729d5c57a79917a442dba90b01af19",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_9327045f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 18205,
+      "author": {
+        "id": 5
+      },
+      "writtenOn": "2017-05-11T15:21:36Z",
+      "side": 1,
+      "message": "Wikidata\u0027s default was previously \u0027hard\u0027 because of the if statement in CommonSettings, but this changes it to \u0027soft\u0027, which should fix the problem. I\u0027ll make this more explicit in the commit message, because it\u0027s not obvious from the diff that I changed the wikidata setting.",
+      "parentUuid": "0e1cb3f9_d306dcd0",
+      "range": {
+        "startLine": 18205,
+        "startChar": 2,
+        "endLine": 18205,
+        "endChar": 8
+      },
+      "revId": "57dbad4fe3729d5c57a79917a442dba90b01af19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
