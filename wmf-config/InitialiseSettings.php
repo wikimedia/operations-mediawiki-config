@@ -14574,6 +14574,7 @@ $wgConf->settings = [
 // Temporarily disabled during testing of the feature, 2017-03-24.
 'wgOOUIEditPage' => [
 	'default' => false,
+	'fawiki' => true, // T162849
 ],
 
 'wgCiteResponsiveReferences' => [
