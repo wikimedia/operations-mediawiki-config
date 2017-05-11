@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_d306dcd0",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 18205,
+      "author": {
+        "id": 920
+      },
+      "writtenOn": "2017-05-11T15:19:55Z",
+      "side": 1,
+      "message": "This needs to be wikidata not fawiki",
+      "range": {
+        "startLine": 18205,
+        "startChar": 2,
+        "endLine": 18205,
+        "endChar": 8
+      },
+      "revId": "57dbad4fe3729d5c57a79917a442dba90b01af19",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
