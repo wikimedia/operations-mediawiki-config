@@ -346,6 +346,8 @@ if ( $wmgUseLoginNotify ) {
 	$wgLoginNotifyEnableOnSuccess = false;
 }
 
+$wgStructuredChangeFiltersEnableSaving = true;
+
 $wgMessageCacheType = CACHE_ACCEL;
 
 // Let Beta Cluster Commons do upload-from-URL from production Commons.
