@@ -341,11 +341,11 @@ $wgLBFactoryConf = [
 		],
 		'contributions' => [
 			'db1053' => 1,
-#			'db1056' => 1,
+			'db1056' => 1,
 		],
 		'logpager' => [
 			'db1053' => 1,
-#			'db1056' => 1,
+			'db1056' => 1,
 		],
 	],
 	's5' => [
