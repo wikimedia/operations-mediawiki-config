@@ -11,6 +11,7 @@ $wgJobTypeConf['default'] = [
 	'redisConfig' => [
 		'connectTimeout' => 1,
 		'password' => $wmgRedisPassword,
+		'persistent' => defined( 'MEDIAWIKI_JOB_RUNNER' )
 	],
 	'daemonized' => true
 ];
