@@ -15,6 +15,9 @@ DELETABLE_TYPES = [
     'cdb',
     'COPYING',
     'CREDITS',
+    'FAQ',
+    'Gemfile',
+    'HISTORY',
     'ini',
     'inc',
     'jshintignore',
@@ -31,8 +34,12 @@ DELETABLE_TYPES = [
     'py',
     'rb',
     'README',
+    'sample',
+    'sh',
     'sql',
     'stylelintrc',
+    'txt',
+    'xsd',
 ]
 
 
