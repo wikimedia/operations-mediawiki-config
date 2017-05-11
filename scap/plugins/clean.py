@@ -52,7 +52,7 @@ class Clean(main.AbstractSync):
                   help='Delete everything (not just static assets).')
     def main(self, *extra_args):
         """ Clean old branches from the cluster for space savings! """
-        if self.arguments.branch in self.active_wikiversions():
+        if self.arguments.branch in self.active_wikiversions().keys():
             raise ValueError('Branch "%s" is still in use, aborting' %
                              self.arguments.branch)
         self.cleanup_branch(self.arguments.branch, self.arguments.delete)
