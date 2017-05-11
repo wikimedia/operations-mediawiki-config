@@ -18198,6 +18198,12 @@ $wgConf->settings = [
 		],
 	],
 ],
+'wmgOresDefaultSensitivityLevel' => [
+	'default' => 'soft', // likelybad
+	// One some wikis, there is no likelybad level for damaging ('likelybad' => false) above
+	// Set a different value on those wikis to prevent exceptions (T165011)
+	'fawiki' => 'hard', // maybebad
+],
 'wgOresEnabledNamespaces' => [
 	'default' => [],
 	'wikidatawiki' => [ 0 => true, 120 => true ], // T139660
