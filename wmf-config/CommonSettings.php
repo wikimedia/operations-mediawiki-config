@@ -3332,11 +3332,7 @@ if ( $wmgUseOATHAuth ) {
 if ( $wmgUseORES ) {
 	wfLoadExtension( 'ORES' );
 	$wgOresBaseUrl = 'https://ores.wikimedia.org/';
-	if ( $wgDBname === 'wikidatawiki' ) {
-		$wgDefaultUserOptions['oresDamagingPref'] = 'hard';
-	} else {
-		$wgDefaultUserOptions['oresDamagingPref'] = 'soft';
-	}
+	$wgDefaultUserOptions['oresDamagingPref'] = $wmgOresDefaultSensitivityLevel;
 
 	// Backwards compatibility for upcoming config format change
 	if (isset($wgOresFiltersThresholds['goodfaith']['good'])) {
