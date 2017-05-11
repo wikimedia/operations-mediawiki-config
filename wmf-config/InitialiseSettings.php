@@ -18561,12 +18561,6 @@ $wgConf->settings = [
 	'foundationwiki' => true,
 ],
 
-// Enable LoginNotify on testwiki (T165007)
-'wmgUseLoginNotify' => [
-	'default' => false,
-	'testwiki' => true,
-],
-
 'wmgUseParserMigration' => [
 	'default' => true,
 ],
