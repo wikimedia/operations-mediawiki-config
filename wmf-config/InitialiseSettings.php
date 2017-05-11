@@ -18317,7 +18317,7 @@ $wgConf->settings = [
 // Thumbnail chaining
 
 'wgThumbnailBuckets' => [
-	'default' => [ 2880 ],
+	'default' => [ 1920 ],
 ],
 
 'wgThumbnailMinimumBucketDistance' => [
@@ -18326,7 +18326,7 @@ $wgConf->settings = [
 
 // Thumbnail prerendering at upload time
 'wgUploadThumbnailRenderMap' => [
-	'default' => [ 320, 640, 800, 1024, 1280, 1920, 2560, 2880 ],
+	'default' => [ 320, 640, 800, 1024, 1280, 1920 ],
 ],
 
 'wgUploadThumbnailRenderMethod' => [
