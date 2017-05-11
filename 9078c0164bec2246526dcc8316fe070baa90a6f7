@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_99d2c5d4",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 18567,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-05-11T20:04:33Z",
+      "side": 1,
+      "message": "one indent level too much here",
+      "range": {
+        "startLine": 18567,
+        "startChar": 1,
+        "endLine": 18567,
+        "endChar": 2
+      },
+      "revId": "9078c0164bec2246526dcc8316fe070baa90a6f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_19df95db",
+        "filename": "wmf-config/extension-list",
+        "patchSetId": 2
+      },
+      "lineNbr": 155,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-05-11T20:04:33Z",
+      "side": 1,
+      "message": "Keep it alphabetized :)",
+      "range": {
+        "startLine": 155,
+        "startChar": 0,
+        "endLine": 155,
+        "endChar": 41
+      },
+      "revId": "9078c0164bec2246526dcc8316fe070baa90a6f7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
