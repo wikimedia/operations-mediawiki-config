@@ -7,4 +7,3 @@ $IP/extensions/Newsletter/extension.json
 $IP/extensions/PerformanceInspector/extension.json
 $IP/extensions/Sentry/extension.json
 $IP/skins/Timeless/skin.json
-$IP/extensions/LoginNotify/extension.json
