@@ -24,6 +24,7 @@ if ( $wmgUseWikibaseRepo ) {
 			'P153',
 			'P185',
 		];
+		$wgWBRepoSettings['writeFullEntityIdColumn'] = true;
 	} else {
 		$wgWBRepoSettings['sparqlEndpoint'] = 'https://query.wikidata.org/sparql';
 
@@ -75,6 +76,7 @@ if ( $wmgUseWikibaseRepo ) {
 			'P692',
 			'P491',
 		];
+		$wgWBRepoSettings['writeFullEntityIdColumn'] = false;
 	}
 
 	if ( $wgDBname === 'wikidatawiki' ) {
@@ -83,8 +85,6 @@ if ( $wmgUseWikibaseRepo ) {
 			'args' => [__DIR__ . '/unitConversionConfig.json']
 		];
 	}
-
-	$wgWBRepoSettings['hasFullEntityIdColumn'] = false;
 
 	$wgWBRepoSettings['dispatchingLockManager'] = 'redisLockManager';
 }
