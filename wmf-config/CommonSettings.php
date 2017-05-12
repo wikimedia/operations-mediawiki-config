@@ -369,7 +369,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 
 // T165161: Purge mw-parser-output out of cache, since it breaks TextExtracts
 $wgHooks['RejectParserCacheValue'][] = function( $value, $wikiPage, $popts ) {
-	if ( strpos( $value, 'mw-parser-output') !== false ) {
+	if ( strpos( $value->getText(), 'mw-parser-output') !== false ) {
 		// If mw-parser-output in cache, then invalidate
 		return false;
 	}
