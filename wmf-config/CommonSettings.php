@@ -367,6 +367,13 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'reportDupes' => false
 ];
 
+$wgHooks['RejectParserCacheValue'][] = function( $value, $wikiPage, $popts ) {
+	if ( strpos( $value, 'mw-parser-output') !== false ) {
+		// If mw-parser-output in cache, then invalidate
+		return false;
+	}
+};
+
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
 
