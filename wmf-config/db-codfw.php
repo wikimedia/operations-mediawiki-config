@@ -109,8 +109,8 @@ $wgLBFactoryConf = [
 		'db2041' => 100, # C6 2.9TB 160GB, api
 		'db2049' => 400, # C6 2.9TB 160GB,
 		'db2056' => 50,  # D6 3.3TB 160GB, dump (inactive), vslow
-		'db2063' => 100, # D6 3.3TB 160GB, api
-#		'db2064' => 400, # D6 3.3TB 160GB #T162611
+#		'db2063' => 100, # D6 3.3TB 160GB, api #T162611
+		'db2064' => 400, # D6 3.3TB 160GB
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db2018' => 0,   # B6 2.9TB  96GB, master
@@ -275,7 +275,7 @@ $wgLBFactoryConf = [
 		],
 		'api' => [
 			'db2041' => 1,
-			'db2063' => 1,
+#			'db2063' => 1,
 		],
 	],
 	/* s3 */ 'DEFAULT' => [
