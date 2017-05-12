@@ -367,6 +367,14 @@ $wgObjectCaches['mysql-multiwrite'] = [
 	'reportDupes' => false
 ];
 
+// T165161: Purge mw-parser-output out of cache, since it breaks TextExtracts
+$wgHooks['RejectParserCacheValue'][] = function( $value, $wikiPage, $popts ) {
+	if ( strpos( $value, 'mw-parser-output') !== false ) {
+		// If mw-parser-output in cache, then invalidate
+		return false;
+	}
+};
+
 $wgSessionsInObjectCache = true;
 session_name( $lang . 'wikiSession' );
 
