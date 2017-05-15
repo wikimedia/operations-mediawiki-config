@@ -42,10 +42,6 @@ if ( $wmgUseWikibaseRepo ) {
 			'Q28064618' => 'wb-badge-digitaldocument', // T153186
 		];
 
-		$wgWBRepoSettings['disabledDataTypes'] = [
-			'tabular-data'
-		];
-
 		$wgWBRepoSettings['preferredGeoDataProperties'] = [
 			'P625',
 		];
