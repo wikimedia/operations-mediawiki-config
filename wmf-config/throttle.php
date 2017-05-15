@@ -71,6 +71,18 @@ $wmgThrottlingExceptions[] = [ // T164482
 	'value' => 60 // 50 expected
 ];
 
+$wmgThrottlingExceptions[] = [ // per irc discussion
+	'from' => '2017-05-26T19:00 +0:00',
+	'to' => '2017-05-06T23:00 +0:00',
+	'IP' => [
+  		'184.171.112.58',
+  		'128.223.223.182',
+  		'2607:8400:2802:0010:0250:56ff:feab:339c'
+		],
+	'dbname' => [ 'enwiki','commons' ],
+	'value' => 40 // 30 expected
+];
+
 ## Add throttling definitions above.
 
 /**
