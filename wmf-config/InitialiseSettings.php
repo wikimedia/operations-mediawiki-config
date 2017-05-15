@@ -18391,7 +18391,7 @@ $wgConf->settings = [
 	// T164960
 	'dewiki' => [
 		[
-			'enabled' => true,
+			'enabled' => false,
 			'name' => 'Reader-segmentation-3-de-test',
 			'type' => 'external',
 			'description' => 'Reader-segmentation-1-description',
@@ -18409,7 +18409,7 @@ $wgConf->settings = [
 	// T164963
 	'hewiki' => [
 		[
-			'enabled' => true,
+			'enabled' => false,
 			'name' => 'Reader-segmentation-3-he-test',
 			'type' => 'external',
 			'description' => 'Reader-segmentation-1-description',
@@ -18427,7 +18427,7 @@ $wgConf->settings = [
 	// T164894
 	'jawiki' => [
 		[
-			'enabled' => true,
+			'enabled' => false,
 			'name' => 'Reader-segmentation-3-ja-test',
 			'type' => 'external',
 			'description' => 'Reader-segmentation-1-description',
@@ -18445,7 +18445,7 @@ $wgConf->settings = [
 	// T164769
 	'rowiki' => [
 		[
-			'enabled' => true,
+			'enabled' => false,
 			'name' => 'Reader-segmentation-3-ro-test',
 			'type' => 'external',
 			'description' => 'Reader-segmentation-1-description',
