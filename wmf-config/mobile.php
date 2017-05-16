@@ -12,8 +12,8 @@ if ( $wmgMobileFrontend ) {
 		$wgMFNearby = false;
 	}
 
-	if ( isset( $wgMFCustomLogos['copyright'] ) ) {
-		$wgMFCustomLogos['copyright'] = str_replace( '{wgExtensionAssetsPath}', $wgExtensionAssetsPath, $wgMFCustomLogos['copyright'] );
+	if ( isset( $wgMinervaCustomLogos['copyright'] ) ) {
+		$wgMinervaCustomLogos['copyright'] = str_replace( '{wgExtensionAssetsPath}', $wgExtensionAssetsPath, $wgMinervaCustomLogos['copyright'] );
 	}
 
 	if ( $wmgZeroBanner && !$wmgZeroPortal ) {
