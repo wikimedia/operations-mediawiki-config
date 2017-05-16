@@ -12,10 +12,6 @@ if ( $wmgMobileFrontend ) {
 		$wgMFNearby = false;
 	}
 
-	if ( isset( $wgMinervaCustomLogos['copyright'] ) ) {
-		$wgMinervaCustomLogos['copyright'] = str_replace( '{wgExtensionAssetsPath}', $wgExtensionAssetsPath, $wgMinervaCustomLogos['copyright'] );
-	}
-
 	if ( $wmgZeroBanner && !$wmgZeroPortal ) {
 		wfLoadExtension( 'ZeroBanner' );
 
