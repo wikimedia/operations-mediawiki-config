@@ -2370,9 +2370,7 @@ if ( $wmgUseMath ) {
 	$wgMathTexvcCheckExecutable = '/usr/bin/texvccheck';
 	$wgMathCheckFiles = false;
 
-	if ( $wgDBname === 'hewiki' ) {
-		$wgDefaultUserOptions['math'] = 0;
-	} elseif ( $wmgUseMathML && $wmgUseRestbaseVRS ) {
+	if ( $wmgUseMathML && $wmgUseRestbaseVRS ) {
 		$wgDefaultUserOptions['math'] = 'mathml';
 	}
 	$wgUseMathJax      = true;
