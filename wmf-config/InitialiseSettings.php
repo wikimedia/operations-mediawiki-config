@@ -14634,7 +14634,7 @@ $wgConf->settings = [
 		'https://codeclimate.com/github/wikimedia/wikimedia-fundraising-tools/feed.atom',
 	],
 	'metawiki' => [
-		'https://tagteam.harvard.edu/hubs/wmde-policy-update/tag/rss/wmde.policy.update', // WM DE political RSS feed - T155830
+		'https://tagteam.harvard.edu/hubs/wmde-policy/items.rss', // WM DE political RSS feed - T165285
 	],
 ],
 
