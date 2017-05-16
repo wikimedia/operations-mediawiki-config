@@ -14955,6 +14955,12 @@ $wgConf->settings = [
 	]
 ],
 
+// T163287
+'wgMinervaPrintStyles' => [
+	'base' => true,
+	'beta' => true,
+],
+
 'wgMinervaUseHeaderV2' => [
 	// T160471
 	'default' => [
