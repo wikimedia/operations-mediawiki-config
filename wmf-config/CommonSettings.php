@@ -2375,7 +2375,7 @@ if ( $wmgUseMath ) {
 	} elseif ( $wmgUseMathML && $wmgUseRestbaseVRS ) {
 		$wgDefaultUserOptions['math'] = 'mathml';
 	}
-	$wgUseMathJax      = true;
+
 	// This variable points to non-WMF servers by default.
 	// Prevent accidental use.
 	$wgMathLaTeXMLUrl = null;
