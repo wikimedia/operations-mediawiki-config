@@ -16,6 +16,24 @@
       "revId": "00b32410ecfb2ff13058239c18bf089a89b969a2",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_dff1ecdb",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-05-16T11:01:41Z",
+      "side": 1,
+      "message": "Checked with mwrepl in several wikis, indeed nothing uses this magic string anymore.\n\nDone at https://gerrit.wikimedia.org/r/353973.",
+      "parentUuid": "0e1cb3f9_7fbea014",
+      "revId": "00b32410ecfb2ff13058239c18bf089a89b969a2",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
