@@ -15212,14 +15212,6 @@ $wgConf->settings = [
 	'wikipedia' => 'org.wikipedia',
 ],
 
-// Enable appending of TM (text) / (R) (icon) on site name in footer.
-'wgMFTrademarkSitename' => [
-	'default' => false, // T157476
-	'wikidatawiki' => 'unregistered',
-	'metawiki' => false, // T43141
-	'officewiki' => false, // T95007
-],
-
 // Blacklist some pages
 'wgMFNoMobileCategory' => [
 	'default' => false,
