@@ -501,10 +501,6 @@ function wmfLabsSettings() {
 			'nonecho' => false,
 		],
 
-		'wmgRevisionSliderBetaFeature' => [
-			'default' => false, // T149725
-		],
-
 		// Ensure ?action=credits isn't break and allow to work
 		// to cache this information. See T130820.
 		'wgMaxCredits' => [
