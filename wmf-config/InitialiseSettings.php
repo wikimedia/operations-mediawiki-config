@@ -16910,11 +16910,7 @@ $wgConf->settings = [
 ],
 
 'wmgRevisionSliderBetaFeature' => [
-	'default' => true,
-	'group0' => false, // T149724
-	'arwiki' => false, // T149995
-	'dewiki' => false, // T148646
-	'hewiki' => false, // T150573
+	'default' => false,
 ],
 
 'wgRevisionSliderAlternateSlider' => [
