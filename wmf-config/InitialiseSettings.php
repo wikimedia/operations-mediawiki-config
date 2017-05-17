@@ -4627,7 +4627,6 @@ $wgConf->settings = [
 	'foundationwiki' => true,
 	'internalwiki' => true,
 	'collabwiki' => true, // T31269
-	'zerowiki' => true,
 ],
 
 # wgWhitelistRead @{
@@ -18660,6 +18659,11 @@ $wgConf->settings = [
 	'default' => false,
 	'labswiki' => true,
 	'labstestwiki' => true,
+],
+
+'wgNonincludableNamespaces' => [
+	'default' => [],
+	'zerowiki' => [ 480 ], // NS_ZERO. See T162771
 ],
 
 ];
