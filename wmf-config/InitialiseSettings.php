@@ -4848,6 +4848,7 @@ $wgConf->settings = [
 		'antispoof' => 'debug',
 		'api' => [ 'logstash' => false ],
 		'api-feature-usage' => 'debug',
+		'api-readonly' => 'debug',
 		'ApiAction' => [
 			'udp2log' => false,
 			'logstash' => false,
