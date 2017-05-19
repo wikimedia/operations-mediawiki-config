@@ -17670,6 +17670,10 @@ $wgConf->settings = [
 	'wikisource' => [
 		'author' => 1,
 	],
+	'wikitech' => [ // T165725
+		116 => 1.0, // Tool
+		498 => 1.0, // Nova Resource
+	],
 ],
 
 // Enable the "Give us feedback" link after search results on enwiki
