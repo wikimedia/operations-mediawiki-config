@@ -780,5 +780,3 @@ if ( isset ( $wgGroupPermissions['reviewer'] ) ) {
 		$wgRemoveGroups['bureaucrat'][] = 'reviewer'; // demote from full reviewers
 	}
 }
-
-$wgFlaggedRevsStatsAge = false;
