@@ -13708,6 +13708,7 @@ $wgConf->settings = [
 		'rcenhancedfilters',                 // [Contrib] 2018-05-22 - Enhanced watchlist filters
 		'codemirror-syntax-highlight',       // [ComTech] 2018-05-06 - Syntax highlighting
 		'advancedsearch',                    // [WMDE TW] 2018-05-22 - Advanced Search
+		'tmh-videojs',                       // [Contrib] 2018-06-05 - New video player
 	],
 ],
 
