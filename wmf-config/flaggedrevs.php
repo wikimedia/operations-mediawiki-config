@@ -427,6 +427,9 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], [ 'editor' ] );
 	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'editor' ] );
  } elseif ( $wgDBname == 'huwiki' ) {
+	// Test from to April to October 2018 - T121995
+	$wgFlaggedRevsOverride = false;
+
 	// # UI
 	$wgFlaggedRevsLowProfile = false;
 
