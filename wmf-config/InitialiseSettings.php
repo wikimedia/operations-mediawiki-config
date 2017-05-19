@@ -12831,6 +12831,13 @@ $wgConf->settings = [
 	'ukwiki' => true, // T104924
 ],
 
+'wmgUseFooterCodeOfConductLink' => [
+	'default' => false,
+	'labstestwiki' => true,
+	'labswiki' => true,
+	'mediawikiwiki' => true,
+],
+
 'wgMaxMsgCacheEntrySize' => [
 	'default' => 1024,
 ],
