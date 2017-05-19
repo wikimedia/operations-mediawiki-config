@@ -3,7 +3,6 @@ aawikibooks
 aawiktionary
 abwiki
 abwiktionary
-acewiki
 advisorywiki
 adywiki
 afwikibooks
@@ -55,7 +54,6 @@ bhwiktionary
 biwiki
 biwikibooks
 biwiktionary
-bjnwiki
 bmwiki
 bmwikibooks
 bmwikiquote
@@ -72,13 +70,12 @@ bswikibooks
 bswikinews
 bswikiquote
 bswikisource
+bswiktionary
 bxrwiki
 cawikibooks
 cawikimedia
-cawikinews
 cawikiquote
 cbk_zamwiki
-cdowiki
 chairwiki
 chapcomwiki
 checkuserwiki
@@ -89,19 +86,15 @@ chwikibooks
 chwiktionary
 chywiki
 cnwikimedia
-collabwiki
 cowikibooks
 cowikimedia
 cowikiquote
-cowiktionary
 crwiki
 crwikiquote
 crwiktionary
 csbwiki
 csbwiktionary
 cswikibooks
-cswikinews
-cswikiversity
 cuwiki
 cvwikibooks
 cywikibooks
@@ -111,7 +104,6 @@ dawikibooks
 dawikiquote
 dkwikimedia
 donatewiki
-dsbwiki
 dtywiki
 dvwiktionary
 dzwiki
@@ -119,7 +111,6 @@ dzwiktionary
 ecwikimedia
 eewiki
 elwikibooks
-elwikinews
 elwikiquote
 elwikiversity
 elwikivoyage
@@ -172,7 +163,6 @@ hawiki
 hawiktionary
 hawwiki
 hewikinews
-hewikiquote
 hiwikibooks
 hiwikiquote
 howiki
@@ -210,7 +200,6 @@ jawikiversity
 jbowiki
 jbowiktionary
 kaawiki
-kabwiki
 kawikibooks
 kawikiquote
 kbdwiki
@@ -225,7 +214,6 @@ klwiktionary
 kmwikibooks
 knwikibooks
 knwikiquote
-knwikisource
 koiwiki
 kowikibooks
 kowikinews
@@ -233,7 +221,6 @@ kowikiquote
 kowikiversity
 krwiki
 krwikiquote
-kshwiki
 kswiki
 kswikibooks
 kswikiquote
@@ -247,7 +234,6 @@ kywikibooks
 kywikiquote
 lawikibooks
 lawikiquote
-lbewiki
 lbwikibooks
 lbwikiquote
 legalteamwiki
@@ -267,7 +253,6 @@ ltwikibooks
 ltwikiquote
 ltwikisource
 lvwikibooks
-maiwiki
 mdfwiki
 mgwikibooks
 mhwiki
@@ -328,7 +313,6 @@ ombudsmenwiki
 omwiki
 omwiktionary
 orwikisource
-otrs_wikiwiki
 pa_uswikimedia
 pagwiki
 papwiki
@@ -343,10 +327,10 @@ piwiki
 piwiktionary
 plwikimedia
 plwikivoyage
-pnbwiktionary
 pntwiki
 projectcomwiki
 pswikibooks
+ptwikimedia
 ptwikivoyage
 qualitywiki
 quwikibooks
@@ -365,21 +349,17 @@ rowikinews
 rowikiquote
 rowikivoyage
 rswikimedia
-ruewiki
 ruwikimedia
 rwwiki
 rwwiktionary
 sahwikisource
 sawikibooks
 sawikiquote
-sawiktionary
 scwiktionary
-sdwiki
 sdwikinews
 sdwiktionary
 searchcomwiki
 sewikibooks
-sewikimedia
 sgwiki
 sgwiktionary
 simplewikibooks
@@ -389,7 +369,6 @@ siwiktionary
 skwikibooks
 skwikiquote
 skwikisource
-skwiktionary
 slwikibooks
 slwikiquote
 slwikiversity
@@ -421,15 +400,12 @@ svwikiversity
 swwikibooks
 tawikibooks
 tawikiquote
-tawikisource
 tcywiki
 tenwiki
-testwikidatawiki
 tetwiki
 tewikibooks
 tewikiquote
 tgwikibooks
-thwikibooks
 thwikinews
 thwikiquote
 tiwiki
@@ -466,7 +442,6 @@ ugwiktionary
 ukwikibooks
 ukwikimedia
 ukwikinews
-ukwikiquote
 ukwikivoyage
 urwikibooks
 urwikiquote
@@ -494,7 +469,6 @@ wikimania2010wiki
 wikimania2011wiki
 wikimania2012wiki
 wikimania2013wiki
-wikimania2016wiki
 wikimania2017wiki
 wikimaniateamwiki
 wowiki
@@ -517,7 +491,6 @@ zerowiki
 zh_min_nanwikibooks
 zh_min_nanwikiquote
 zh_min_nanwikisource
-zhwikivoyage
 zuwiki
 zuwikibooks
 zuwiktionary
