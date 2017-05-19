@@ -24,8 +24,6 @@ $wgFlaggedRevsAutopromote = false;
 
 $wgGroupPermissions['sysop']['stablesettings'] = false; // -aaron 3/20/10
 
-$wgEnableValidationStatisticsUpdates = false;
-
 ///////////////////////////////////////
 // Wiki-specific configurations
 
