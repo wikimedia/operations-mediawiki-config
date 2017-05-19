@@ -484,6 +484,9 @@ elseif ( $wgDBname == 'hiwiki' ) {
 }
 
 elseif ( $wgDBname == 'huwiki' ) {
+	// Test from to May to November - T121995
+	$wgFlaggedRevsOverride = false;
+
 	// # UI
 	$wgFlaggedRevsLowProfile = false;
 
