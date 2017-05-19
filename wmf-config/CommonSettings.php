@@ -898,6 +898,9 @@ if ( $wmgUseTimedMediaHandler ) {
 
 	// The type of HTML5 player to use
 	$wgTmhWebPlayer = $wmgTmhWebPlayer;
+
+	// Enable the Beta Feature for trying out the new video player (see also the BF whitelist)
+	$wgTmhUseBetaFeatures = true;
 }
 
 if ( $wmgUseUploadsLink ) {
