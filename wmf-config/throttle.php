@@ -1,3 +1,7 @@
+
+
+
+
 <?php
 
 # WARNING: This file is publically viewable on the web.
@@ -39,37 +43,16 @@ $wmgThrottlingExceptions[] = [ // T157504
 	'value' => 200,
 ];
 
-$wmgThrottlingExceptions[] = [ // T162089
-	'from' => '2017-04-06T10:00 UTC',
-	'to' => '2017-04-06T16:00 UTC',
-	'IP' => '190.96.91.202',
-	'dbname' => [ 'eswiki' ],
-	'value' => 30 // 25 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T163726
-	'from' => '2017-04-24T21:00 UTC',
-	'to' => '2017-04-24T23:00 UTC',
-	'IP' => '200.137.128.130',
-	'dbname' => [ 'ptwiki', 'wikidatawiki', 'commonswiki' ],
-	'value' => 50 // at least 20 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T163870
-	'from' => '2017-04-27T06:00 UTC',
-	'to' => '2017-04-27T15:00 UTC',
-	'IP' => '213.82.186.58',
-	'dbname' => [ 'itwiki', 'wikidatawiki', 'commonswiki' ],
-	'value' => 40 // 30 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T164482
-	'from' => '2017-05-06T09:00 +1:00',
-	'to' => '2017-05-06T18:00 +1:00',
-	'IP' => '193.39.172.207',
-	'dbname' => [ 'cywiki' ],
-	'value' => 60 // 50 expected
-];
+$wmgThrottlingExceptions[] = [ // Wikimedia Vienna Hackathon
+	'from' => '2017-05-19T08:00 +1:00',
+	'to' => '2017-05-21T21:00 +1:00',
+	'IP' => [
+		'217.196.74.137',
+		'80.123.167.113',
+	],
+	'dbname' => [ 'labswiki', 'mediawikiwiki' ],
+	'value' => 100,
+;
 
 $wmgThrottlingExceptions[] = [ // per irc discussion
 	'from' => '2017-05-26T19:00 +0:00',
