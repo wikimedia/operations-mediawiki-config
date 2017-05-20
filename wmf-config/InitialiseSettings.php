@@ -12833,9 +12833,8 @@ $wgConf->settings = [
 
 'wmgUseFooterCodeOfConductLink' => [
 	'default' => false,
-	'labstestwiki' => true,
-	'labswiki' => true,
 	'mediawikiwiki' => true,
+	'wikitech' => true,
 ],
 
 'wgMaxMsgCacheEntrySize' => [
@@ -17259,8 +17258,7 @@ $wgConf->settings = [
 	'nonglobal' => false,
 
 	// Effectively repeat nonglobal entry above because both labswiki and labtestwiki are also medium
-	'labswiki' => false,
-	'labtestwiki' => false,
+	'wikitech' => false,
 
 	'enwikisource' => true, // T78496
 	'frwiki' => true, // T120568
@@ -18662,8 +18660,7 @@ $wgConf->settings = [
 
 'wmgUseDynamicSidebar' => [
 	'default' => false,
-	'labswiki' => true,
-	'labstestwiki' => true,
+	'wikitech' => true,
 ],
 
 'wgNonincludableNamespaces' => [
