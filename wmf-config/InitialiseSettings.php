@@ -13236,17 +13236,14 @@ $wgConf->settings = [
 // DO NOT add entries here without OK from Greg Grossmeier or James Forrester.
 'wgBetaFeaturesWhitelist' => [
 	'default' => [
-		'visualeditor-enable',                      // [Editing] On-going (special permission) – VisualEditor
-		'beta-feature-flow-user-talk-page',         // [Editing] On-going (special permission) – Flow opt-in
-		'uls-compact-links',                        // [Editing] 2017-02-19 – Compact language links
-		'popups',                                   // [Reading] 2017-03-23 – Hovercards
-		'cx',                                       // [Editing] 2017-05-08 - ContentTranslation
-		'read-more',                                // [Reading] 2017-03-15 - Read more
-		'ores-enabled',                             // [Research] 2017-05-10 - ORES
-		'revisionslider',                           // [WMDE] 2017-05-08 - RevisionSlider
-		'visualeditor-newwikitext',                 // [Editing] 2017-05-29 – New wikitext editor
-		'twocolconflict',                           // [WMDE] 2017-07-18 – New edit conflict view
-		'rcenhancedfilters',                        // [Editing] 2017-09-28 - Enhanced recent changes filters
+		'visualeditor-enable',               // [Editing] On-going (special permission) – VisualEditor
+		'beta-feature-flow-user-talk-page',  // [Editing] On-going (special permission) – Flow opt-in
+		'uls-compact-links',                 // [Editing] 2017-11-20 – Compact language links
+		'popups',                            // [Reading] 2017-11-05 – Page Previews
+		'cx',                                // [Editing] 2017-11-20 - ContentTranslation
+		'visualeditor-newwikitext',          // [Editing] 2017-11-02 – New wikitext editor
+		'twocolconflict',                    // [WMDE TW] 2017-11-12 – New edit conflict view
+		'rcenhancedfilters',                 // [Editing] 2017-11-18 - Enhanced recent changes filters
 	],
 ],
 
