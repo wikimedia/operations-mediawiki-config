@@ -18440,9 +18440,6 @@ $wgConf->settings = [
 	'fiwiki' => true, // T163011
 	'frwiki' => true, // T165044
 ],
-'wgOresExtensionStatus' => [
-	'default' => 'on',
-],
 'wgOresModels' => [
 	'default' => [
 		'damaging' => true,
