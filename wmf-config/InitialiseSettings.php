@@ -18003,21 +18003,20 @@ $wgConf->settings = [
 ],
 'wmgUseORES' => [
 	'default' => false,
-	'fawiki' => true, // T130211
-	'wikidatawiki' => true, // T130212
-	'nlwiki' => true, // T139432
-	'ruwiki' => true, // T139541
-	'ptwiki' => true, // T139692
-	'trwiki' => true, // T139992
-	'plwiki' => true, // T140005
-	'enwiki' => true, // T140003
+
 	'cswiki' => true, // T151611
+	'enwiki' => true, // T140003
 	'etwiki' => true, // T159609
-	'hewiki' => true, // T161621
+	'fawiki' => true, // T130211
 	'fiwiki' => true, // T163011
-],
-'wgOresExtensionStatus' => [
-	'default' => 'on',
+	'hewiki' => true, // T161621
+	'nlwiki' => true, // T139432
+	'plwiki' => true, // T140005
+	'ptwiki' => true, // T139692
+	'ruwiki' => true, // T139541
+	'trwiki' => true, // T139992
+
+	'wikidatawiki' => true, // T130212
 ],
 'wgOresModels' => [
 	'default' => [
