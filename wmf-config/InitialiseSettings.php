@@ -1582,6 +1582,7 @@ $wgConf->settings = [
 	'ruwiki' => false, // T14334
 	'ruwikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ru',
 	'sewikimedia' => false, // T63947
+	'srwiki' => '/wiki/Википедија:Водич_за_отпремање', // T165901
 	'svwikisource' => false,
 	'svwiktionary' => false,
 	'specieswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
