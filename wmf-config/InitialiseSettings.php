@@ -17252,7 +17252,8 @@ $wgConf->settings = [
 	'nonglobal' => false,
 
 	// Effectively repeat nonglobal entry above because both labswiki and labtestwiki are also medium
-	'wikitech' => false,
+	'labswiki' => false,
+	'labtestwiki' => false,
 
 	'enwikisource' => true, // T78496
 	'frwiki' => true, // T120568
@@ -18654,7 +18655,8 @@ $wgConf->settings = [
 
 'wmgUseDynamicSidebar' => [
 	'default' => false,
-	'wikitech' => true,
+	'labswiki' => true,
+	'labstestwiki' => true,
 ],
 
 'wgNonincludableNamespaces' => [
