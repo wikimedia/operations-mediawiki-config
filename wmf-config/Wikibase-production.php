@@ -131,4 +131,6 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['echoIcon'] = [ 'url' => '/static/images/wikibase/echoIcon.svg' ];
 	}
 
+	$wgWBClientSettings['disabledUsageAspects'] = [ 'C' ];
+
 }
