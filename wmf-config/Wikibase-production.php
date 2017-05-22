@@ -139,4 +139,6 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['sendEchoNotification'] = true;
 		$wgWBClientSettings['echoIcon'] = [ 'url' => '/static/images/wikibase/echoIcon.svg' ];
 	}
+
+	$wgWBClientSettings['disabledUsageAspects'] = [ 'C' ];
 }
