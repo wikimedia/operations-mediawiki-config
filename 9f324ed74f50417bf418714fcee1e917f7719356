@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_f6c70b48",
+        "filename": "multiversion/MWMultiVersion.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 467,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-05-23T20:31:19Z",
+      "side": 1,
+      "message": "Hm, we should probably check somewhere that $file[0] isn\u0027t empty...",
+      "revId": "9f324ed74f50417bf418714fcee1e917f7719356",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
