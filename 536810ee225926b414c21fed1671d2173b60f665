@@ -53,6 +53,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_2627940e",
+        "filename": "tests/InitialiseSettingsTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2017-05-23T14:51:31Z",
+      "side": 1,
+      "message": "Additionally PHPUnit only backup globals on setUp(), hence a dataprovider messing up with globals pollute them for other tests.\n\nI recently enhanced loggingTest.php to properly deal with globals in a data provider https://gerrit.wikimedia.org/r/#/c/349210/3/tests/loggingTest.php\n\n\nAnyway, given the size of InitialiseSettings.php and number of settings, it is probably better to initialize the SiteConfiguration once for all and use what you did:  foreach settings -\u003e assertion. This way setup/teardown is not run for each setting we want to check.\n\n\nSo the loadsettings can be done in a setupBeforeClass() that would be executed once for the suite, and save the config in a static variable.",
+      "parentUuid": "6e436fe2_7447e050",
+      "revId": "536810ee225926b414c21fed1671d2173b60f665",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e436fe2_9444ec4b",
         "filename": "tests/InitialiseSettingsTest.php",
         "patchSetId": 1
@@ -64,6 +82,24 @@
       "writtenOn": "2017-03-25T20:23:55Z",
       "side": 1,
       "message": "canonicalize allows to order the array before compare them",
+      "revId": "536810ee225926b414c21fed1671d2173b60f665",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_e64e7cc3",
+        "filename": "tests/InitialiseSettingsTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2017-05-23T14:51:31Z",
+      "side": 1,
+      "message": "I would rephrase the error message to show what is expected:\n\n \"$db logo sizes must have all sizes: \" . join(\u0027, \u0027,  $requiredKeys\")\n\nFor the canonicalize form what about simply sorting them instead of adding extra parameters to assertEquals:\n\n $requiredKeys \u003d $this-\u003egetRequiredLogoHDKeys()\n $keys \u003d array_keys( $entry );\n // canonicalize:\n sort( $requiredKeys );\n sort( $keys );\n\n $this-\u003eassertEquals( $requiredKeys, $keys );",
+      "parentUuid": "6e436fe2_9444ec4b",
       "revId": "536810ee225926b414c21fed1671d2173b60f665",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
