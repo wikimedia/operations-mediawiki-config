@@ -5702,7 +5702,9 @@ $wgConf->settings = [
 	],
 	'trwiki' => [
 		100 => 'Portal',
-		101 => 'Portal_tartışma'
+		101 => 'Portal_tartışma',
+		102 => 'Vikiproje', // Wikiproject, T166102
+		103 => 'Vikiproje_tartışma', // Wikiproject talk
 	],
 	'ttwiki' => [
 		100 => 'Портал',
