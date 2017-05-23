@@ -16,6 +16,24 @@
       "revId": "9f324ed74f50417bf418714fcee1e917f7719356",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_56e7d7de",
+        "filename": "multiversion/MWMultiVersion.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 467,
+      "author": {
+        "id": 2096
+      },
+      "writtenOn": "2017-05-23T20:33:28Z",
+      "side": 1,
+      "message": "if it\u0027s empty the result of this function wouldn\u0027t make much sense anyway... Right now you get this:\n\nPHP Warning:  require_once(/srv/mediawiki/php-1.30.0-wmf.2/maintenance): failed to open stream: Success in /srv/mediawiki/multiversion/MWScript.php on line 99\n\nI\u0027d say it\u0027s not worse with this patch. Maybe another patch to add explicit check?",
+      "parentUuid": "0e1cb3f9_f6c70b48",
+      "revId": "9f324ed74f50417bf418714fcee1e917f7719356",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
