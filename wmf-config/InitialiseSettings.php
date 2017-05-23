@@ -12374,6 +12374,7 @@ $wgConf->settings = [
 	'ckbwiki' => true, // T54678
 	'commonswiki' => true,
 	'dewikiversity' => true, // T51449
+	'dtywiki' => true, // T166121
 	'enwikinews' => true,
 	'fawiki' => true, // T55981
 	'fawikibooks' => true, // T91861
