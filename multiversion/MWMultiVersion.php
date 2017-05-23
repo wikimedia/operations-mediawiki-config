@@ -442,14 +442,14 @@ class MWMultiVersion {
 	 * (b) Sets the MW_INSTALL_PATH environmental variable
 	 * (c) Changes PHP's current directory to the directory of this file.
 	 *
-	 * @param $file string File path (relative to MediaWiki dir)
+	 * @param $file string File path (relative to MediaWiki dir or absolute)
 	 * @return string Absolute file path with proper MW location
 	 */
 	public static function getMediaWikiCli( $file ) {
 		global $IP;
 
 		$multiVersion = self::getInstance();
-		if( !$multiVersion ) {
+		if ( !$multiVersion ) {
 			$multiVersion = self::initializeForMaintenance();
 		}
 		if ( $multiVersion->getDatabase() === 'testwiki' ) {
@@ -464,6 +464,10 @@ class MWMultiVersion {
 
 		putenv( "MW_INSTALL_PATH=$IP" );
 
-		return "$IP/$file";
+		if ( $file[0] === '/' ) {
+			return $file;
+		} else {
+			return "$IP/$file";
+		}
 	}
 }
