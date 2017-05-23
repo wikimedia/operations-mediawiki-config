@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_768c5b32",
+        "filename": "multiversion/MWMultiVersion.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 467,
+      "author": {
+        "id": 2
+      },
+      "writtenOn": "2017-05-23T20:26:42Z",
+      "side": 1,
+      "message": "This half of the check is useless, none of this code can even remotely be expected to run on Windows.",
+      "range": {
+        "startLine": 467,
+        "startChar": 27,
+        "endLine": 467,
+        "endChar": 59
+      },
+      "revId": "a6f1714a1c621da0816b54baaee838943595d0e0",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
