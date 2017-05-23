@@ -1,5 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+    scap.plugins.clean
+    ~~~~~~~~~~~~~~~~~~
+    For cleaning up old MediaWiki
+"""
 import os
-import socket
 import subprocess
 
 import scap.cli as cli
@@ -58,6 +63,16 @@ class Clean(main.AbstractSync):
         self.cleanup_branch(self.arguments.branch, self.arguments.delete)
 
     def cleanup_branch(self, branch, delete):
+        """
+        Given a branch, go through the cleanup proccess
+
+        (1) Prune git branches [if deletion]
+        (2) Remove l10nupdate cache
+        (3) Remove l10n cache
+        (4) Remove files [either all, or keeping static + git]
+        (4.1) From master
+        (4.2) Then targets
+        """
         stage_dir = os.path.join(self.config['stage_dir'], 'php-%s' % branch)
         deploy_dir = os.path.join(self.config['deploy_dir'], 'php-%s' % branch)
 
@@ -97,14 +112,14 @@ class Clean(main.AbstractSync):
         )
 
         # Update active master (passive gets it on next sync)
-        master_command = ' '.join(self.clean_command(stage_dir, delete))
+        master_command = ' '.join(clean_command(stage_dir, delete))
         subprocess.check_call(master_command, shell=True)
 
         # Update apaches
         self.execute_remote(
             'clean-apaches',
             self._get_target_list(),
-            self.clean_command(deploy_dir, delete)
+            clean_command(deploy_dir, delete)
         )
 
         announce = 'Pruned MediaWiki: %s' % branch
@@ -119,16 +134,18 @@ class Clean(main.AbstractSync):
             clean_job = ssh.Job(targets, user=self.config['ssh_user'])
             clean_job.shuffle()
             clean_job.command(command)
-            clean_job.progress(log.reporter(description,
-                               self.config['fancy_progress']))
+            clean_job.progress(
+                log.reporter(description, self.config['fancy_progress']))
             succeeded, failed = clean_job.run()
             if failed:
                 self.get_logger().warning('%d had clean errors', failed)
 
-    def clean_command(self, path, delete):
-        regex = '".*\.?(%s)$"' % ('|'.join(DELETABLE_TYPES))
-        if delete:
-            return ['rm', '-fR', path]
-        else:
-            return ['find', path, '-type', 'f', '-regextype', 'posix-extended',
-                    '-regex', regex, '-delete']
+
+def clean_command(path, delete):
+    """Generate a command depending on where we are and what we're doing"""
+    regex = '".*\.?(%s)$"' % ('|'.join(DELETABLE_TYPES))
+    if delete:
+        return ['rm', '-fR', path]
+    else:
+        return ['find', path, '-type', 'f', '-regextype', 'posix-extended',
+                '-regex', regex, '-delete']
