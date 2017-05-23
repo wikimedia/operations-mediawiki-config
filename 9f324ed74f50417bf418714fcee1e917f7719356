@@ -34,6 +34,24 @@
       "revId": "9f324ed74f50417bf418714fcee1e917f7719356",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_16cabf4a",
+        "filename": "multiversion/MWMultiVersion.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 467,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-05-23T20:33:41Z",
+      "side": 1,
+      "message": "Hm.. indeed. And this is actually relied upon.\n\n wikimedia/puppet – runphpscriptletonallwikis.py\n\nCalls it with an empty string.",
+      "parentUuid": "0e1cb3f9_f6c70b48",
+      "revId": "9f324ed74f50417bf418714fcee1e917f7719356",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
