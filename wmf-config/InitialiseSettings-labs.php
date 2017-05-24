@@ -617,5 +617,9 @@ function wmfLabsSettings() {
 		'wgCognateReadOnly' => [
 			'default' => false,
 		],
+
+		'wgEchoPerUserBlacklist' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()
