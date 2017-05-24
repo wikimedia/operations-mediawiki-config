@@ -1966,10 +1966,6 @@ $wgHooks['EmailUser'][] = function ( &$to, &$from, &$subject, &$text ) {
 // ContributionTracking for handling PayPal redirects
 if ( $wgUseContributionTracking ) {
 	wfLoadExtension( 'ContributionTracking' );
-	include( "$wmfConfigDir/contribution-tracking-setup.php" );
-	$wgContributionTrackingPayPalIPN = "https://civicrm.wikimedia.org/fundcore_gateway/paypal";
-	$wgContributionTrackingPayPalRecurringIPN = "https://civicrm.wikimedia.org/IPNListener_Recurring.php";
-	$wgContributionTrackingUTMKey = true;
 
 	// the following variables will disable all donation forms and send users to a maintenance page
 	$wgContributionTrackingFundraiserMaintenance = false;
