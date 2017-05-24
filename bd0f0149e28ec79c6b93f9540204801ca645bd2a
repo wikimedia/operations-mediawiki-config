@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_58362001",
+        "filename": "private/PrivateSettings.php.example",
+        "patchSetId": 6
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1070
+      },
+      "writtenOn": "2017-05-24T18:45:59Z",
+      "side": 1,
+      "message": "don\u0027t actually need this after all",
+      "range": {
+        "startLine": 9,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 41
+      },
+      "revId": "bd0f0149e28ec79c6b93f9540204801ca645bd2a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}

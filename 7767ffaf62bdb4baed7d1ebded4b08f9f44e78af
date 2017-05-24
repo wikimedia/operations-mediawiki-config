@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_f85e1447",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 6
+      },
+      "lineNbr": 1961,
+      "author": {
+        "id": 1070
+      },
+      "writtenOn": "2017-05-24T18:45:59Z",
+      "side": 0,
+      "message": "can delete all of these",
+      "range": {
+        "startLine": 1958,
+        "startChar": 0,
+        "endLine": 1961,
+        "endChar": 38
+      },
+      "revId": "7767ffaf62bdb4baed7d1ebded4b08f9f44e78af",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
