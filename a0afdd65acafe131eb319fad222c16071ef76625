@@ -22,6 +22,30 @@
       "revId": "a0afdd65acafe131eb319fad222c16071ef76625",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_6a8d4784",
+        "filename": "tests/InitialiseSettingsTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-05-24T19:29:41Z",
+      "side": 1,
+      "message": "Yeah, we\u0027ll need to prepare a commit to add \u0027svg\u0027 in this array before we add a \u0027svg\u0027 key in our $wgLogo config.\n\nThis is actually one of the reason this is a small isolated function, to ease maintenance and to be able to add new keys in the future.",
+      "parentUuid": "0e1cb3f9_1d873a15",
+      "range": {
+        "startLine": 19,
+        "startChar": 2,
+        "endLine": 19,
+        "endChar": 26
+      },
+      "revId": "a0afdd65acafe131eb319fad222c16071ef76625",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
