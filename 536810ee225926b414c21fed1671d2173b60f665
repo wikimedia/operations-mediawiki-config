@@ -71,6 +71,24 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_3d99de71",
+        "filename": "tests/InitialiseSettingsTest.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2017-05-24T15:47:58Z",
+      "side": 1,
+      "message": "I have factored out common code in  https://gerrit.wikimedia.org/r/355440 test: factor out wgConf loading\n\nI have rebased this change and patchset 2 show how trivial it is now :-}",
+      "parentUuid": "0e1cb3f9_2627940e",
+      "revId": "536810ee225926b414c21fed1671d2173b60f665",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e436fe2_9444ec4b",
         "filename": "tests/InitialiseSettingsTest.php",
         "patchSetId": 1
