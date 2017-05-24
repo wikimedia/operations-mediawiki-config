@@ -84,25 +84,12 @@ class loggingTests extends WgConfTestCase {
 	}
 
 	public function provideAvroSchemas() {
-		$wgConf = new stdClass;
-		$wmfConfigDir = __DIR__ . '/../wmf-config';
-
-		$this->setGlobals( array(
-			'wmfUdp2logDest' => 'localhost',
-			'wmfDatacenter' => 'unittest',
-			'wmfRealm' => 'production',
-			'wmfConfigDir' => $wmfConfigDir,
-			'wgConf' => $wgConf,
-		) );
-
-		require __DIR__ . "/TestServices.php";
-		require "{$wmfConfigDir}/InitialiseSettings.php";
+		$wgConf = $this->loadWgConf( 'production' );
 
 		$tests = array();
 		foreach ( $wgConf->settings['wmgMonologAvroSchemas']['default'] as $name => $schemaConfig ) {
 			$tests[$name] = array( $schemaConfig );
 		}
-		$this->restoreGlobals();
 		return $tests;
 	}
 
@@ -117,28 +104,14 @@ class loggingTests extends WgConfTestCase {
 	}
 
 	public function provideConfiguredChannels() {
-		// InitializeSettings.php explicitly declares these as global, so we need
-		// to as well.
-		$this->setGlobals( array(
-			'wmfUdp2logDest' => 'localhost',
-			'wmfDatacenter' => 'test',
-			'wmfConfigDir' => __DIR__ . '/../wmf-config',
-		) );
-		global $wgConf;
 		foreach ( array( 'production', 'labs' ) as $realm ) {
-			$this->setGlobals( array(
-				'wgConf' => new stdClass(),
-				'wmfRealm' => $realm,
-			) );
-			include __DIR__ . '/../wmf-config/InitialiseSettings.php';
+			$wgConf = $this->loadWgConf( $realm );
 			foreach ( $wgConf->settings['wmgMonologChannels'] as $wiki => $channels ) {
 				foreach ( $channels as $name => $config ) {
 					$tests["\$wmgMonologChannels['$wiki']['$name']"] = array( $config );
 				}
 			}
 		}
-
-		$this->restoreGlobals();
 		return $tests;
 	}
 

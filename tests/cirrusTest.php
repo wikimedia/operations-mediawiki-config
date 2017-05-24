@@ -76,28 +76,6 @@ class cirrusTests extends WgConfTestCase {
 		}
 	}
 
-	private function loadWgConf( $wmfRealm ) {
-		// Variables required for wgConf.php
-		$wmfConfigDir = __DIR__ . "/../wmf-config";
-
-		require "{$wmfConfigDir}/wgConf.php";
-
-		// InitialiseSettings.php explicitly declares these as global, so we must too
-		$this->setGlobals( array(
-			'wmfUdp2logDest' => 'localhost',
-			'wmfDatacenter' => 'unittest',
-			'wmfMasterDatacenter' => 'unittest',
-			'wmfRealm' => $wmfRealm,
-			'wmfConfigDir' => $wmfConfigDir,
-			'wgConf' => $wgConf,
-		) );
-
-		require __DIR__ . '/TestServices.php';
-		require "{$wmfConfigDir}/InitialiseSettings.php";
-
-		return $wgConf;
-	}
-
 	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix ) {
 		$wmfConfigDir = __DIR__ . "/../wmf-config";
 		require __DIR__ . '/../private/PrivateSettings.php.example';
@@ -148,7 +126,6 @@ class cirrusTests extends WgConfTestCase {
 		require "{$wmfConfigDir}/CirrusSearch-common.php";
 
 		$ret = compact( array_keys( get_defined_vars() ) );
-		$this->restoreGlobals();
 		return $ret;
 	}
 
@@ -227,7 +204,6 @@ class cirrusTests extends WgConfTestCase {
 			}
 		}
 
-		$this->restoreGlobals();
 		return $tests;
 	}
 

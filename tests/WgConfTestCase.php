@@ -8,6 +8,8 @@
  * @file
  */
 
+require_once __DIR__ . '/SiteConfiguration.php';
+
 class WgConfTestCase extends PHPUnit_Framework_TestCase {
 
 	protected $globals = array();
@@ -56,6 +58,42 @@ class WgConfTestCase extends PHPUnit_Framework_TestCase {
 		if ( ! empty( $this->globals ) ) {
 			throw new Exception( __CLASS__ . ': setGlobals() used without restoreGlobals()' );
 		}
+	}
+
+	/**
+	 * Load $wgConf from InitialiseSettings.php
+	 *
+	 * Example usage:
+	 *
+	 *     $wgLogoHD = $this->loadWgConf( 'production' )->settings['wgLogoHD'];
+	 *
+	 * @param string $wmfRealm Realm to use for example: 'labs' or 'production'
+	 * @return SiteConfiguration
+	 */
+	final protected function loadWgConf( $wmfRealm ) {
+		// Variables required for wgConf.php
+		$wmfConfigDir = __DIR__ . "/../wmf-config";
+
+		require "{$wmfConfigDir}/wgConf.php";
+
+		// InitialiseSettings.php explicitly declares these as global, so we must too
+		$this->setGlobals( array(
+			'wmfUdp2logDest' => 'localhost',
+			'wmfDatacenter' => 'unittest',
+			'wmfMasterDatacenter' => 'unittest',
+			'wmfRealm' => $wmfRealm,
+			'wmfConfigDir' => $wmfConfigDir,
+			'wgConf' => $wgConf,
+		) );
+
+		require __DIR__ . '/TestServices.php';
+		require "{$wmfConfigDir}/InitialiseSettings.php";
+
+		$ret = $wgConf;
+		// Make sure globals are restored, else they will be serialized on each
+		// test run which slow the test run dramatically.
+		$this->restoreGlobals();
+		return $ret;
 	}
 
 }
