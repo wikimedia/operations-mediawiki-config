@@ -14961,25 +14961,6 @@ $wgConf->settings = [
 	]
 ],
 
-'wgMinervaUseHeaderV2' => [
-	// T160471
-	'default' => [
-		'base' => true,
-		'beta' => true,
-	],
-
-	// T156794: Enable the feature by default on cawiki and itwiki.
-	'cawiki' => [
-		'base' => true,
-
-		// Implied by the above.
-		//'beta' => true,
-	],
-	'itwiki' => [
-		'base' => true,
-	],
-],
-
 'wmgEnableTextExtracts' => [
 	'default' => true,
 ],
@@ -15205,10 +15186,6 @@ $wgConf->settings = [
 
 'wgMinervaApplyKnownTemplateHacks' => [
 	'default' => true,
-],
-
-'wgMinervaBottomLanguageButton' => [
-	'default' => false,
 ],
 
 // Link to help Google spider associate pages on wiki with our Android app.
