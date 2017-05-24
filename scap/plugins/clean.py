@@ -95,21 +95,21 @@ class Clean(main.AbstractSync):
                     if subprocess.call(gerrit_prune_cmd) != 0:
                         logger.info('Failed to prune core branch')
 
-        # Prune cache junk from masters used by l10nupdate
-        self.execute_remote(
-            'clean-masters-l10nupdate-cache',
-            self._get_master_list(),
-            ['sudo', '-u', 'www-data', 'rm', '-fR',
-             '/var/lib/l10nupdate/caches/cache-%s' % branch]
-        )
-
-        # Prune junk from masters owned by l10nupdate
-        self.execute_remote(
-            'clean-masters-l10nupdate',
-            self._get_master_list(),
-            ['sudo', '-u', 'l10nupdate', 'find', stage_dir,
-             '-user', 'l10nupdate', '-delete']
-        )
+        # Various l10n-related junk on the master to purge
+        master_l10n_junk = {
+            'clean-masters-l10nupdate-cache':
+                ['sudo', '-u', 'www-data', 'rm', '-fR',
+                 '/var/lib/l10nupdate/caches/cache-%s' % branch],
+            'clean-masters-l10n-bootstrap':
+                ['rm', '-fR', os.path.join(
+                    self.config['stage_dir'], 'wmf-config',
+                    'ExtensionMessages-%s.php' % branch)],
+            'clean-masters-l10nupdate':
+                ['sudo', '-u', 'l10nupdate', 'find', stage_dir,
+                 '-user', 'l10nupdate', '-delete'],
+        }
+        for desc, cmd in master_l10n_junk:
+            self.execute_remote(desc, self._get_master_list(), cmd)
 
         # Update active master (passive gets it on next sync)
         master_command = ' '.join(clean_command(stage_dir, delete))
