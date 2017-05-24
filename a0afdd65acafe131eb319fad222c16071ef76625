@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_1d873a15",
+        "filename": "tests/InitialiseSettingsTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 1665
+      },
+      "writtenOn": "2017-05-24T15:46:38Z",
+      "side": 1,
+      "message": "This will need to be changed soon if https://gerrit.wikimedia.org/r/#/c/193434/ gets landed soon.",
+      "range": {
+        "startLine": 19,
+        "startChar": 2,
+        "endLine": 19,
+        "endChar": 26
+      },
+      "revId": "a0afdd65acafe131eb319fad222c16071ef76625",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
