@@ -15087,6 +15087,14 @@ $wgConf->settings = [
 	'wikitech' => true, // Not behind Varnish
 ],
 
+// T163287
+'wgMinervaPrintStyles' => [
+	'default' => [
+		'base' => true,
+		'beta' => true,
+	],
+],
+
 'wgMinervaCustomLogos' => [
 	'default' => [],
 	'wikipedia' => [
