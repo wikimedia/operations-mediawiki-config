@@ -17207,6 +17207,8 @@ $wgConf->settings = [
 // T152115
 'wgPageImagesLeadSectionOnly' => [
 	'default' => true,
+	// T166251
+	'wikivoyage' => false,
 ],
 'wmgPageImagesExpandOpenSearchXml' => [
 	'default' => true,
