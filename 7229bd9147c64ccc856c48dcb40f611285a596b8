@@ -45,6 +45,30 @@
       "revId": "7229bd9147c64ccc856c48dcb40f611285a596b8",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_62b9f177",
+        "filename": "tests/WgConfTestCase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2017-05-24T14:22:43Z",
+      "side": 1,
+      "message": "The trouble is that the globals are set by the data providers.  The large one ends up being serialized/unserialized before each tests which slow things down.\n\ntearDownAfterClass() or tearDown() are part of the test running and the globals have already been messed up and the globals are considered untouched. Thus there is no exception thrown.\n\nThe way I test it is running tests/loggingTest.php:\n\n* with PS1 it takes half a second\n\n* with PS4 in provideAvroSchemas() I comment out $this-\u003erestoreGlobals();\n** all tests pass, no exception is thrown but the test run goes to 7 seconds\n\nThat is because the globals are polluted before the test run, some are filled with huge structures which PHPUnit ends up serializing/deserializing on each test run.\n\nGoing to rollback to __desctruct version and add a comment about it.",
+      "parentUuid": "4e506ba4_eddbd152",
+      "range": {
+        "startLine": 44,
+        "startChar": 10,
+        "endLine": 44,
+        "endChar": 20
+      },
+      "revId": "7229bd9147c64ccc856c48dcb40f611285a596b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
