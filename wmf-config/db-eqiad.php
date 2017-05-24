@@ -164,8 +164,8 @@ $wgLBFactoryConf = [
 		'db1034' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 #		'db1039' => 0,   # B2 1.4TB  64GB
 		'db1079' => 300, # A2 3.6TB 512GB, api
-#		'db1086' => 500, # B3 3.6TB 512GB, api #T164530
-		'db1094' => 500, # D2 3.6TB 512GB
+		'db1086' => 500, # B3 3.6TB 512GB, api
+#		'db1094' => 500, # D2 3.6TB 512GB #T164530
 	],
 	'silver' => [
 		'silver' => 100,   # I have no idea if this is right
@@ -415,7 +415,7 @@ $wgLBFactoryConf = [
 		],
 		'api' => [
 			'db1079' => 100,
-#			'db1086' => 1,
+			'db1086' => 1,
 		],
 		'watchlist' => [
 			'db1034' => 1,
