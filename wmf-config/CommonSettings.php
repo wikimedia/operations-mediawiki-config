@@ -1170,15 +1170,6 @@ if ( $wmgUseFooterContactLink ) {
 		return true;
 	};
 }
-if ( $wmgUseFooterCodeOfConductLink ) {
-	$wgHooks['SkinTemplateOutputPageBeforeExec'][] = function( $sk, &$tpl ) {
-		$contactLink = Html::element( 'a', [ 'href' => $sk->msg( 'wm-codeofconduct-url' )->escaped() ],
-			$sk->msg( 'wm-codeofconduct' )->text() );
-		$tpl->set( 'wm-codeofconduct', $contactLink );
-		$tpl->data['footerlinks']['places'][] = 'wm-codeofconduct';
-		return true;
-	};
-}
 
 // T35186: turn off incomplete feature action=imagerotate
 $wgAPIModules['imagerotate'] = 'ApiDisabled';
