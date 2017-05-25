@@ -117,11 +117,11 @@ $wgLBFactoryConf = [
 	],
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,   # A2 3.6TB 512GB, master
-		'db1038' => 50,  # B2 1.4TB  64GB, vslow, dump, old master
+		'db1038' => 0,   # B2 1.4TB  64GB, vslow, dump, old master
 #		'db1015' => 1,   # A2 1.4TB  64GB, do not pool, it is missing cebwiki
 		'db1035' => 50,  # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-		'db1044' => 50,  # B2 1.4TB  64GB, #Temporary master for db1095 - new sanitarium #T150802
-		'db1077' => 50,  # B1 3.6TB 512GB
+#		'db1044' => 0,   # B2 1.4TB  64GB, #Temporary master for db1095 - new sanitarium #T150802
+		'db1077' => 500, # B1 3.6TB 512GB
 		'db1078' => 500, # C3 3.6TB 512GB
 	],
 	's4' => [
