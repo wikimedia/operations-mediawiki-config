@@ -66,14 +66,14 @@ class Clean(main.AbstractSync):
 
     def cleanup_branch(self, branch, delete):
         """
-        Given a branch, go through the cleanup proccess
+        Given a branch, go through the cleanup proccess on the master:
 
         (1) Prune git branches [if deletion]
         (2) Remove l10nupdate cache
         (3) Remove l10n cache
-        (4) Remove files [either all, or keeping static + git]
-        (4.1) From master
-        (4.2) Then targets
+        (4) Remove l10n bootstrap file
+        (5) Remove some branch files [all if deletion]
+        (6) Remove security patches [if deletion]
         """
         stage_dir = os.path.join(self.config['stage_dir'], 'php-%s' % branch)
         if not os.path.isdir(stage_dir):
@@ -111,6 +111,8 @@ class Clean(main.AbstractSync):
                     if subprocess.call(gerrit_prune_cmd) != 0:
                         logger.info('Failed to prune core branch')
             commands['cleaning-branch'] = ['rm', '-fR', stage_dir]
+            commands['cleaning-patches'] = [
+                'rm' '-fR', os.path.join('/srv/patches', branch)]
         else:
             regex = r'".*\.?({0})$"'.format('|'.join(DELETABLE_TYPES))
             commands['cleaning-branch'] = ['find', stage_dir, '-type', 'f',
