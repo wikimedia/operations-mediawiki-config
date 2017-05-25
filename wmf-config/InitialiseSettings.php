@@ -12813,6 +12813,7 @@ $wgConf->settings = [
 		'finds.org.uk',                     // Portable Antiquities Scheme - T155844
 		'images.metmuseum.org',             // MET - T156855
 		'*.esa.int',                        // ESA - T164643
+		'www.defenceimagery.mod.uk',        // UK Ministry of Defence - T166271
 	],
 ],
 
