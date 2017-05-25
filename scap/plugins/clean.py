@@ -85,7 +85,11 @@ class Clean(main.AbstractSync):
                  '/var/lib/l10nupdate/caches/cache-%s' % branch],
             'clean-l10nupdate-owned-files':
                 ['sudo', '-u', 'l10nupdate', 'find', stage_dir,
-                 '-user', 'l10nupdate', '-delete']
+                 '-user', 'l10nupdate', '-delete'],
+            'clean-l10n-bootstrap':
+                ['rm', '-fR', os.path.join(
+                    self.config['stage_dir'], 'wmf-config',
+                    'ExtensionMessages-%s.php' % branch)],
         }
 
         if delete:
