@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_00b6df3b",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 17674,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-05-26T21:50:57Z",
+      "side": 1,
+      "message": "Maybe mention inline with namespaces these represent to ease future maintenance.",
+      "revId": "6713547d7fefd6a0b8c568334b8da29ef318cac9",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
