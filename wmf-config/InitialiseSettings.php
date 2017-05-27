@@ -12840,6 +12840,7 @@ $wgConf->settings = [
 		'finds.org.uk',                     // Portable Antiquities Scheme - T155844
 		'images.metmuseum.org',             // MET - T156855
 		'*.esa.int',                        // ESA - T164643
+		'media.static.onlinesammlung.thenetexperts.info',  // Bayerische Staatsgemäldesammlungen - T166437
 	],
 ],
 
