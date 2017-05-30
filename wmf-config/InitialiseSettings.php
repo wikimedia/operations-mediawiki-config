@@ -17231,6 +17231,10 @@ $wgConf->settings = [
 'wmgPageImagesExpandOpenSearchXml' => [
 	'default' => true,
 ],
+'wgPageImagesAPIDefaultLicense' => [
+	'default' => 'free',
+	'wikidata' => 'any', // T159678
+],
 
 'wmgUseTorBlock' => [
 	'default' => true,
