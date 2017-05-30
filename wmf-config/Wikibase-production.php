@@ -125,10 +125,18 @@ if ( $wmgUseWikibaseClient ) {
 	$wgArticlePlaceholderSearchEngineIndexed = $wmgArticlePlaceholderSearchEngineIndexed;
 	$wgWBClientSettings['propertyOrderUrl'] = 'https://www.wikidata.org/w/index.php?title=MediaWiki:Wikibase-SortedProperties&action=raw&sp_ver=1';
 	$wgWBClientSettings['hasFullEntityIdColumn'] = false;
-	list( $site, $lang ) = $wgConf->siteFromDB( $wgDBname );
-	if ( $site === 'wikivoyage' ) {
+
+	// T142103
+	$wgWBClientEchoNotificationWikis = array_diff(
+		array_merge(
+			MWWikiversions::readDbListFile( 'wikipedia' ),
+			MWWikiversions::readDbListFile( 'wikivoyage' )
+		),
+		[ 'dewiki', 'enwiki', 'frwiki' ]
+	);
+
+	if ( in_array( $wgDBname, $wgWBClientEchoNotificationWikis ) ) {
 		$wgWBClientSettings['sendEchoNotification'] = true;
 		$wgWBClientSettings['echoIcon'] = [ 'url' => '/static/images/wikibase/echoIcon.svg' ];
 	}
-
 }
