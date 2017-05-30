@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_422cd1a9",
+        "filename": "tests/cirrusTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 276,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2017-05-30T17:56:00Z",
+      "side": 1,
+      "message": "should these other zh_* ones change as well?",
+      "revId": "9f0f574782dd581b42c92dda9d30d280636101f1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
