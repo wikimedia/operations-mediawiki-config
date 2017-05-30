@@ -130,14 +130,14 @@ $wgLBFactoryConf = [
 		'db1056' => 1,   # C2 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1059' => 1,   # C2 2.8TB  96GB, api
 		'db1064' => 0,   # D1 2.8TB 160GB, vslow, dump #Master for db1095 - new sanitarium
-		'db1081' => 300, # A2 3.6TB 512GB, api
-#		'db1084' => 500, # B1 3.6TB 512GB #T166206
+#		'db1081' => 300, # A2 3.6TB 512GB, api #T166206
+		'db1084' => 300, # B1 3.6TB 512GB #temporary api #T166206
 		'db1091' => 500, # D2 3.6TB 512GB
 		'db1097' => 0,   # D1 3.6TB 512GB, old master
 	],
 	's5' => [
 		'db1063' => 0,   # C5 2.8TB 128GB, master
-#		'db1049' => 0,   # B1 2.8TB  64GB, old master #temporary vslow #T153743 
+#		'db1049' => 0,   # B1 2.8TB  64GB, old master #temporary vslow #T153743
 		'db1026' => 1,   # B1 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1045' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 #		'db1070' => 50,  # D1 2.8TB 160GB, vslow, dump #ROW based replication - master for db1095
@@ -324,7 +324,7 @@ $wgLBFactoryConf = [
 		],
 		'api' => [
 			'db1059' => 1,
-			'db1081' => 2,
+			'db1084' => 2,
 		],
 		'watchlist' => [
 			'db1053' => 1,
