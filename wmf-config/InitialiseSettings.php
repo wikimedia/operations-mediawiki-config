@@ -11643,11 +11643,12 @@ $wgConf->settings = [
 
 	'+dewiki' => [ 100 ], // Portal - T145619
 	'+dewikivoyage' => [ 102 ], // T119420
-	'+frwiki' => [ 102 ], // T127688
+	'+frwiki' => [ 102 ], // T127688 - Projet
 	'+itwiki' => [ 102 ],
+	'+plwiki' => [ NS_USER, 100, 102 ], // T133978; 100 -> Portal, 102 -> Wikiproject
 	'+ruwiki' => [ 104 ], // T125509
 	'+ruwikinews' => [ 102 ], // T132241 - Комментарии
-	'+plwiki' => [ NS_USER, 100, 102 ], // T133978; 100 -> Portal, 102 -> Wikiproject
+	'+trwiki' => [ 102 ], // T166522 - Vikiproje
 ],
 
 'wmgAllowRobotsControlInAllNamespaces' => [
