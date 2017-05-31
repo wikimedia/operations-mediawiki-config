@@ -101,9 +101,14 @@ class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
 		$_GET = array(
 			'file' => $q
 		);
-		ob_start();
-		require $this->nocConfDir . '/highlight.php';
-		$out = ob_get_clean();
+		try {
+			ob_start();
+			require $this->nocConfDir . '/highlight.php';
+			$out = ob_get_clean();
+		} finally {
+			// make sure we never pollute the global namespace
+			unset( $_GET );
+		}
 		return $out;
 	}
 }

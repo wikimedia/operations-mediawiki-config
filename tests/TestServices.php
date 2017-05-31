@@ -9,8 +9,9 @@
 #
 #######################################################################
 
-$wmfDatacenter = $wmfMasterDatacenter = 'unittest';
+# FIXME variables should be set in WgConfTestCase::loadWgConf??
 
+$wmfDatacenter = $wmfMasterDatacenter = 'unittest';
 $wmfAllServices = array();
 
 $wmfAllServices['unittest'] = array(
