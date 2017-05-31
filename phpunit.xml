@@ -8,8 +8,13 @@
 	stopOnError="false"
 	stopOnFailure="false"
 	colors="true"
-	strict="true"
 	verbose="true"
+
+	beStrictAboutOutputDuringTests="true"
+	beStrictAboutTestSize="true"
+	beStrictAboutTestsThatDoNotTestAnything="true"
+	checkForUnintentionallyCoveredCode="true"
+	disallowTodoAnnotatedTests="true"
 >
 	<testsuites>
 		<testsuite name="dblists">
