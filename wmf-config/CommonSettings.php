@@ -961,14 +961,14 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	$wgExtDistDefaultSnapshot = 'REL1_28';
 
 	// Current development snapshot
-	// $wgExtDistCandidateSnapshot = 'REL1_29';
+	$wgExtDistCandidateSnapshot = 'REL1_29';
 
 	// Available snapshots
 	$wgExtDistSnapshotRefs = [
 		'master',
+		'REL1_29',
 		'REL1_28',
 		'REL1_27',
-		'REL1_23',
 	];
 
 	// Use Graphite for popular list
