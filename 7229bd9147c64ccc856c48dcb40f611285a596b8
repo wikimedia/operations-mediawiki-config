@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "0e1cb3f9_a4313559",
+        "filename": "tests/WgConfTestCase.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 28,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2017-05-31T12:19:11Z",
+      "side": 1,
+      "message": "Sorry I have missed your comment :(   Addressed in Ib7a1e7cb0dfe7c9481e850a6a6fc89c91de18faf",
+      "parentUuid": "4e506ba4_f8ddcae1",
+      "range": {
+        "startLine": 28,
+        "startChar": 8,
+        "endLine": 28,
+        "endChar": 50
+      },
+      "revId": "7229bd9147c64ccc856c48dcb40f611285a596b8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e506ba4_eddbd152",
         "filename": "tests/WgConfTestCase.php",
         "patchSetId": 1
