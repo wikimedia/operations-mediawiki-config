@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e1cb3f9_0c84c7d6",
+        "filename": "phpunit.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2017-05-31T19:01:07Z",
+      "side": 1,
+      "message": "That makes PHPUnit pedantic, hopefully ensuring we are no more leaking globals between tests.",
+      "revId": "af9de9d2ee2009e863ae055e662381dad592d5cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_ac84bbd7",
+        "filename": "tests/WgConfTestCase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2017-05-31T19:01:07Z",
+      "side": 1,
+      "message": "Since there is no preexisting global with that name, set it and continue.\n\nPreviously due to isset( $GLOBALS[$key] )  we would save a global whether it exists or got set to null later causing restoreGlobals() to create a global having a null value.\n\nPHP is cursed. Stas should fix it.",
+      "revId": "af9de9d2ee2009e863ae055e662381dad592d5cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_cc89eff0",
+        "filename": "tests/WgConfTestCase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2017-05-31T19:01:07Z",
+      "side": 1,
+      "message": "Else we save the existing one.",
+      "revId": "af9de9d2ee2009e863ae055e662381dad592d5cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_6c730315",
+        "filename": "tests/WgConfTestCase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2017-05-31T19:01:07Z",
+      "side": 1,
+      "message": "Dumping the content of the variables helped me when the WgConfTestCase instance got randomly destroyed.",
+      "revId": "af9de9d2ee2009e863ae055e662381dad592d5cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_ec65d341",
+        "filename": "tests/dbconfigTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 13,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2017-05-31T19:01:07Z",
+      "side": 1,
+      "message": "Changes to dbconfigTest.php are probably standalone. I guess I can split it in a different change if that is easier.",
+      "revId": "af9de9d2ee2009e863ae055e662381dad592d5cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "0e1cb3f9_ac5b5b8a",
+        "filename": "tests/noc-conf/highlightTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 111,
+      "author": {
+        "id": 24
+      },
+      "writtenOn": "2017-05-31T19:01:07Z",
+      "side": 1,
+      "message": "Somehow $_GET does not get restored by PHPUnit backup globals system.  But unset() makes sure it not kept behind and pleases PHPUnit beStrictAboutChangesToGlobalState",
+      "revId": "af9de9d2ee2009e863ae055e662381dad592d5cc",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
