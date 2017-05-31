@@ -10,7 +10,7 @@
 
 require_once __DIR__ . '/../multiversion/MWRealm.php';
 
-class dbconfigTests extends PHPUnit_Framework_TestCase {
+class dbconfigTests extends WgConfTestCase {
 
 	public static function provideRealmDatacenter() {
 		return array(
@@ -23,12 +23,11 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 	}
 
 	function loadDbFile( $realm, $datacenter, $masterdatacenter ) {
-		global $wmfRealm, $wmfDatacenter, $wmfMasterDatacenter;
-
-		list( $oldRealm, $oldDatacenter, $oldMasterDatacenter ) =
-			array( $wmfRealm, $wmfDatacenter, $wmfMasterDatacenter );
-		list( $wmfRealm, $wmfDatacenter, $wmfMasterDatacenter ) =
-			array( $realm, $datacenter, $masterdatacenter );
+		// For getRealmSpecificFilename()
+		$this->setGlobals( [
+			'wmfRealm' => $realm,
+			'wmfDatacenter' => $datacenter,
+		] );
 
 		# "properly" load db.php in local context:
 		$wgDBname     = 'testwiki';
@@ -38,11 +37,13 @@ class dbconfigTests extends PHPUnit_Framework_TestCase {
 			define( 'DBO_DEFAULT', 16 );
 		}
 
+		// intentionally not marked as global
+		$wmfMasterDatacenter = $masterdatacenter;
+		$wmfRealm = $realm;
+		$wmfDatacenter = $datacenter;
 		include( getRealmSpecificFilename( __DIR__ . '/../wmf-config/db.php' ) );
 
-		list( $wmfRealm, $wmfDatacenter, $wmfMasterDatacenter ) =
-			array( $oldRealm, $oldDatacenter, $oldMasterDatacenter );
-
+		$this->restoreGlobals();
 		return $wgLBFactoryConf;
 	}
 
