@@ -13,12 +13,18 @@ require_once __DIR__ . '/SiteConfiguration.php';
 class WgConfTestCase extends PHPUnit_Framework_TestCase {
 
 	protected $globals = array();
+	protected $globalsToUnset = array();
 
 	protected function restoreGlobals() {
 		foreach ( $this->globals as $key => $value ) {
 			$GLOBALS[$key] = $value;
 		}
 		$this->globals = array();
+
+		foreach ( $this->globalsToUnset as $key ) {
+			unset( $GLOBALS[$key] );
+		}
+		$this->globalsToUnset = array();
 	}
 
 	protected function setGlobals( $pairs, $value = null ) {
@@ -27,16 +33,21 @@ class WgConfTestCase extends PHPUnit_Framework_TestCase {
 		}
 		foreach ( $pairs as $key => $value ) {
 			// only set value in $this->globals on first call
-			if ( !array_key_exists( $key, $this->globals ) ) {
-				if ( isset( $GLOBALS[$key] ) ) {
-					// break any object references
-					try {
-						$this->globals[$key] = unserialize( serialize( $GLOBALS[$key] ) );
-					} catch ( \Exception $e ) {
-						$this->globals[$key] = $GLOBALS[$key];
-					}
-				} else {
-					$this->globals[$key] = null;
+			if (
+				!array_key_exists( $key, $this->globals ) &&
+				!array_key_exists( $key, $this->globalsToUnset )
+			) {
+				if ( !array_key_exists( $key, $GLOBALS ) ) {
+					$this->globalsToUnset[$key] = $key;
+					$GLOBALS[$key] = $value;
+					continue;
+				}
+
+				// break any object references
+				try {
+					$this->globals[$key] = unserialize( serialize( $GLOBALS[$key] ) );
+				} catch ( \Exception $e ) {
+					$this->globals[$key] = $GLOBALS[$key];
 				}
 			}
 			$GLOBALS[$key] = $value;
@@ -55,8 +66,12 @@ class WgConfTestCase extends PHPUnit_Framework_TestCase {
 	 * the only way to achieve that is when leaving the data provider scope.
 	 */
 	function __destruct() {
-		if ( ! empty( $this->globals ) ) {
-			throw new Exception( __CLASS__ . ': setGlobals() used without restoreGlobals()' );
+		if ( ! empty( $this->globals ) or ! empty( $this->globalsToUnset ) ) {
+			throw new Exception(
+				__CLASS__ . ": setGlobals() used without restoreGlobals().\n" .
+				"Mangled globals:\n" . var_export( $this->globals, true ) .
+				"Created globals:\n" . var_export( $this->globalsToUnset, true )
+			);
 		}
 	}
 
@@ -86,7 +101,14 @@ class WgConfTestCase extends PHPUnit_Framework_TestCase {
 			'wgConf' => $wgConf,
 		) );
 
+		// Other InitialiseSettings.php globals that we set in TestServices.php
+		$this->setGlobals( array(
+			'wmfAllServices' => null,
+			'wmfLocalServices' => null,
+			'wmfMasterServices' => null,
+		) );
 		require __DIR__ . '/TestServices.php';
+
 		require "{$wmfConfigDir}/InitialiseSettings.php";
 
 		$ret = $wgConf;
