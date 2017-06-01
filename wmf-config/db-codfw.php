@@ -631,19 +631,24 @@ $wgLBFactoryConf = [
 	'cluster25'	=> [ 'blobs table' => 'blobs_cluster25' ],
 ],
 
-# This key must exist for the master switch script to work.
+# This key must exist for the master switch script to work, which means comment and uncomment
+# the individual shards, but leave the 'readOnlyBySection' => [ ], alone.
 #
-# These read only messages should currently be kept,
-# to prevent accidental write to eqiad from codfw,
-# when the master dc is eqiad.
+# When going read only, please change the comment to something appropiate (like a brief idea
+# of what is happening, with a wiki link for further explanation. Avoid linking to external
+# infrastructure if possible (IRC, other webpages) or infrastructure not prepared to absorve
+# large traffic (phabricator) because they tend to colapse. A meta page would be appropiate.
+#
+# Also keep these read only messages if codfw is not the active dc, to prevent accidental writes
+# getting trasmitted from codfw to eqiad when the master dc is eqiad.
 'readOnlyBySection' => [
-	's1'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-	's2'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-	'DEFAULT' => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.', # s3
-	's4'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-	's5'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-	's6'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-	's7'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
+	's1'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	's2'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	'DEFAULT' => 'This request is served by a passive datacenter. If you see this something is really wrong.', # s3
+	's4'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	's5'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	's6'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	's7'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 ],
 
 ];
