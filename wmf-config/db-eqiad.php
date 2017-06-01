@@ -652,15 +652,24 @@ $wgLBFactoryConf = [
 	'cluster25'	=> [ 'blobs table' => 'blobs_cluster25' ],
 ],
 
-# This key must exist for the master switch script to work
+# This key must exist for the master switch script to work, which means commen and uncomment
+# the individual shards, but leave the 'readOnlyBySection' => [ ], alone
+#
+# When going read only, please change the comment to something appropiate (like a brief idea
+# of what is happening, with a wiki link for further explanation. Avoid linking to external
+# infrastructure if possible (IRC, other webpages) or infrastructure not prepared to absorve
+# large traffic (phabricator) because they then to colapse. A meta page would be appropiate.
+#
+# Also keep these read only messages if eqiad is not the active dc, to prevent accidental writes
+# getting trasmitted from eqiad to codfw when the master dc is codfw.
 'readOnlyBySection' => [
-#	's1'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-#	's2'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-#	'DEFAULT' => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.', # s3
-#	's4'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-#	's5'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-#	's6'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-#	's7'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
+#	's1'      => 'If you are seeing this, something went really wrong.',
+#	's2'      => 'If you are seeing this, something went really wrong.',
+#	'DEFAULT' => 'If you are seeing this, something went really wrong.', # s3
+#	's4'      => 'If you are seeing this, something went really wrong.',
+#	's5'      => 'If you are seeing this, something went really wrong.',
+#	's6'      => 'If you are seeing this, something went really wrong.',
+#	's7'      => 'If you are seeing this, something went really wrong.',
 ],
 
 ];
