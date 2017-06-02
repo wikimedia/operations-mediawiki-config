@@ -39,29 +39,6 @@ $wmgThrottlingExceptions[] = [ // T157504
 	'value' => 200,
 ];
 
-$wmgThrottlingExceptions[] = [ // Wikimedia Vienna Hackathon
-	'from' => '2017-05-19T08:00 +1:00',
-	'to' => '2017-05-21T21:00 +1:00',
-	'IP' => [
-		'217.196.74.137',
-		'80.123.167.113',
-	],
-	'dbname' => [ 'labswiki', 'mediawikiwiki' ],
-	'value' => 100,
-];
-
-$wmgThrottlingExceptions[] = [ // per irc discussion
-	'from' => '2017-05-26T19:00 +0:00',
-	'to' => '2017-05-26T23:00 +0:00',
-	'IP' => [
-  		'184.171.112.58',
-  		'128.223.223.182',
-  		'2607:8400:2802:0010:0250:56ff:feab:339c'
-		],
-	'dbname' => [ 'enwiki','commons' ],
-	'value' => 40 // 30 expected
-];
-
 $wmgThrottlingExceptions[] = [ // T166619
 	'from' => '2017-06-01T17:00 UTC',
 	'to' => '2017-06-01T21:00 UTC',
