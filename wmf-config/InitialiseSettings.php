@@ -4887,6 +4887,7 @@ $wgConf->settings = [
 			'buffer' => true,
 		],
 		'authentication' => 'info',
+		'autoloader' => 'debug',  // ori, for T166759 (2017-06-02)
 		'badpass' => 'debug',
 		'BounceHandler' => 'debug',
 		'Bug58676' => 'debug', # Invalid message parameter
