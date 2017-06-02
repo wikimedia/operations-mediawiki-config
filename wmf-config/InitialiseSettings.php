@@ -12367,10 +12367,7 @@ $wgConf->settings = [
 ],
 
 'wmgUseElectronPdfService' => [
-	'default' => false,
-	'group0' => true, // T150944
-	'metawiki' => true, // T150943
-	'dewiki' => true, // T150942
+	'default' => true  // T165954
 ],
 
 'wmgUseSpamBlacklist' => [
