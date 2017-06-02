@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ce153bd1_24a4d703",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 12366,
+      "author": {
+        "id": 3945
+      },
+      "writtenOn": "2017-06-02T20:25:32Z",
+      "side": 1,
+      "message": "can we add a Phab ticket number here? it looks like common practice",
+      "revId": "84396aa63bc189008529f8643435d8c541cc689b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
