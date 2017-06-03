@@ -5348,6 +5348,8 @@ $wgConf->settings = [
 	'etwiki' => [
 		100 => 'Portaal',
 		101 => 'Portaali_arutelu',
+		102 => 'Mustand', // Draft - T166887
+		103 => 'Mustandi_arutelu',
 	],
 	'euwiki' => [
 		100 => 'Atari', // portal
