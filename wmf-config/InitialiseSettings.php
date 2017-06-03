@@ -13060,6 +13060,7 @@ $wgConf->settings = [
 	'srwiki' => true, // T129485
 	'svwiki' => true,
 	'tawiki' => true,
+	'tawikiquote' => true, // T166901
 	'tawiktionary' => true,
 	'tcywiki' => true, // T144925
 	'tewiki' => true,
