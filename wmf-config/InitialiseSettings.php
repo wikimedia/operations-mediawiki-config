@@ -18731,6 +18731,11 @@ $wgConf->settings = [
 	'zerowiki' => [ 480 ], // NS_ZERO. See T162771
 ],
 
+'wgAllowSiteCSSOnRestrictedPage' => [
+	'default' => false,
+	'arbcom_dewiki' => true, // T166947
+],
+
 ];
 
 ### WMF Labs override #####
