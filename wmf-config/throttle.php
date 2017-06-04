@@ -46,6 +46,22 @@ $wmgThrottlingExceptions[] = [ // T166619
 	'dbname' => [ 'ptwiki', 'wikidatawiki', 'commonswiki' ],
 	'value' => 20 // 10 expected
 ];
+
+$wmgThrottlingExceptions[] = [ // T166788
+	'from'=> '2017-06-06T15:00 UTC',
+	'to' => '2017-06-06T21:00 UTC',
+	'IP' => [
+		'200.29.165.192/26',
+		'190.98.227.64/26',
+		'200.111.61.128/26',
+		'200.72.240.0/26',
+		'200.91.9.192/26',
+		'200.91.9.128/26',
+	],
+	'dbname' => [ 'enwiki', 'eswiki' ],
+	'value' => 120 // 100 expected
+];
+
 ## Add throttling definitions above.
 
 /**
