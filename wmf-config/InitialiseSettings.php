@@ -16153,8 +16153,8 @@ $wgConf->settings = [
 'wmgTranslateWorkflowStates' => [
 	'default' => false,
 	'commonswiki' => [ // T50620
-		'progress' => [ 'color' => 'E00' ],
-		'proofreading' => [ 'color' => 'FFBF00' ],
+		'progress' => [ 'color' => 'd33' ],
+		'proofreading' => [ 'color' => 'fc3' ],
 		'ready' => [ 'color' => 'FF0' ],
 		'state conditions' => [
 			[ 'ready', [ 'PROOFREAD' => 'MAX' ] ],
@@ -16163,9 +16163,9 @@ $wgConf->settings = [
 		],
 	],
 	'metawiki' => [
-		'progress' => [ 'color' => 'E00' ],
-		'needs-updating' => [ 'color' => 'FFBF00' ],
-		'proofreading' => [ 'color' => 'FFBF00' ],
+		'progress' => [ 'color' => 'd33' ],
+		'needs-updating' => [ 'color' => 'fc3' ],
+		'proofreading' => [ 'color' => 'fc3' ],
 		'ready' => [ 'color' => 'FF0' ],
 		'published' => [ 'color' => 'AEA' ],
 		'state conditions' => [
@@ -16175,8 +16175,8 @@ $wgConf->settings = [
 		],
 	],
 	'otrs_wikiwiki' => [ // T63297
-		'progress' => [ 'color' => 'E00' ],
-		'proofreading' => [ 'color' => 'FFBF00' ],
+		'progress' => [ 'color' => 'd33' ],
+		'proofreading' => [ 'color' => 'fc3' ],
 		'ready' => [ 'color' => 'FF0' ],
 		'state conditions' => [
 			[ 'ready', [ 'PROOFREAD' => 'MAX' ] ],
@@ -16185,10 +16185,10 @@ $wgConf->settings = [
 		],
 	],
 	'wikidata' => [
-		'progress' => [ 'color' => 'E00' ],
-		'needs-updating' => [ 'color' => 'FFBF00' ],
-		'updating' => [ 'color' => 'FFBF00' ],
-		'proofreading' => [ 'color' => 'FFBF00' ],
+		'progress' => [ 'color' => 'd33' ],
+		'needs-updating' => [ 'color' => 'fc3' ],
+		'updating' => [ 'color' => 'fc3' ],
+		'proofreading' => [ 'color' => 'fc3' ],
 		'ready' => [ 'color' => 'FF0' ],
 		'published' => [ 'color' => 'AEA' ],
 	],
