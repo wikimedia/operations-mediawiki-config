@@ -334,6 +334,10 @@ if ( $wmgUseCollaborationKit ) {
 	wfLoadExtension( 'CollaborationKit' );
 }
 
+if ( $wmgUseTemplateStyles ) {
+	wfLoadExtension( 'TemplateStyles' );
+}
+
 if ( $wmgUseTimeless ) {
 	// Test new Isarra responsive skin
 	wfLoadSkin( 'Timeless' ); // T160643

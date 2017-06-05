@@ -602,6 +602,10 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		'wmgUseTemplateStyles' => [
+			'default' => true,
+		],
+
 		'wmgUseTimeless' => [
 			'default' => true,
 		],
