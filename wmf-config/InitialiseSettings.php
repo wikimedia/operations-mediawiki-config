@@ -18090,6 +18090,7 @@ $wgConf->settings = [
 	'etwiki' => true, // T159609
 	'hewiki' => true, // T161621
 	'fiwiki' => true, // T163011
+	'frwiki' => true, // T165044
 ],
 'wgOresExtensionStatus' => [
 	'default' => 'on',
@@ -18115,6 +18116,7 @@ $wgConf->settings = [
 	'cswiki' => [ 'hard' => 0.45, 'soft' => 0.8, 'softest' => 0.88 ], // T151611
 	'etwiki' => [ 'hard' => 0.34, 'soft' => 0.62, 'softest' => 0.95 ], // T159609
 	'hewiki' => [ 'hard' => 0.07, 'soft' => 0.50, 'softest' => 0.94 ], // T161621
+	'frwiki' => [ 'hard' => 0.18, 'soft' => 0.40, 'softest' => 0.51 ], // T165044
 ],
 'wgOresFiltersThresholds' => [
 	'default' => [],
@@ -18255,6 +18257,13 @@ $wgConf->settings = [
 		],
 	],
 	'fiwiki' => [
+		// damaging uses defaults for everything
+		'goodfaith' => [
+			// likelygood, maybebad, likelybad use defaults
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.9)' ],
+		],
+	],
+	'frwiki' => [
 		// damaging uses defaults for everything
 		'goodfaith' => [
 			// likelygood, maybebad, likelybad use defaults
