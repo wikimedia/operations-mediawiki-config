@@ -13307,6 +13307,8 @@ $wgConf->settings = [
 	'wikinews' => false,
 	'wikiversity' => false,
 	'commonswiki' => false,
+	//T166894
+	'specieswiki' => false,
 ],
 
 'wgPopupsSchemaSamplingRate' => [
