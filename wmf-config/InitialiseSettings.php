@@ -17446,6 +17446,22 @@ $wgConf->settings = [
 	"nan" => "default", // e.g. zh_min_nan
 ],
 
+// Enable crossprocess search (side bar)
+'wmgCirrusSearchEnableCrossProjectSearch' => [
+	'default' => false,
+	// Activated on all wikipedias
+	'wikipedia' => true,
+	// italian wikis used to have the old sidebar on all sisterwikis
+	// use the one there too.
+	'itwiktionary' => true,
+	'itwikibooks' => true,
+	'itwikinews' => true,
+	'itwikiquote' => true,
+	'itwikisource' => true,
+	'itwikiversity' => true,
+	'itwikivoyage' => true,
+],
+
 
 // Define list of projects to blacklist from CrossProject search
 // (only effective if SiteMatrix implementation is being used)
@@ -17460,6 +17476,14 @@ $wgConf->settings = [
 'wmgCirrusSearchCrossProjectShowMultimedia' => [
 	'default' => true,
 	'enwiki' => false, // T163463, requested during RfC
+	// Disable multimedia on italian non-wikipedias
+	'itwiktionary' => false,
+	'itwikibooks' => false,
+	'itwikinews' => false,
+	'itwikiquote' => false,
+	'itwikisource' => false,
+	'itwikiversity' => false,
+	'itwikivoyage' => false,
 ],
 
 'wmgCirrusSearchIgnoreOnWikiBoostTemplates' => [
@@ -17729,44 +17753,6 @@ $wgConf->settings = [
 
 'wmgCirrusSearchUserTesting' => [
 	'default' => [],
-	// Specific wikis are enabled from the client
-	// Enabling this on itwiki might lead to unexpected behaviors
-	'wikipedia' => [
-		'sidebar' => [
-			'sampleRate' => 0,
-			'globals' => [
-				// Should enable crossproject with sitematrix
-				'wgCirrusSearchEnableCrossProjectSearch' => true,
-				// Enable for all buckets
-				'wgCirrusSearchNewCrossProjectPage' => true,
-				'wgCirrusSearchNumCrossProjectSearchResults' => 1,
-				// Disables the CirrusConfigInterwikiResolver, allowing
-				// SiteMatrixInterwikiResolver to take over.
-				'wgCirrusSearchWikiToNameMap' => [],
-			],
-			'buckets' => [
-				// control, we explicitly hide the side bar
-				'no_sidebar' => [
-					'trigger' => 'no_sidebar',
-					'globals' => [
-						'wgCirrusSearchHideCrossProjectResults' => true,
-					]
-				],
-				'recall_sidebar_results' => [
-					'trigger' => 'recall_sidebar_results',
-					'globals' => [
-						'wgCirrusSearchCrossProjectOrder' => 'recall',
-					],
-				],
-				'random_sidebar_results' => [
-					'trigger' => 'random_sidebar_results',
-					'globals' => [
-						'wgCirrusSearchCrossProjectOrder' => 'random',
-					],
-				]
-			]
-		]
-	],
 ],
 
 'wmgCirrusSearchLanguageDetectors' => [
