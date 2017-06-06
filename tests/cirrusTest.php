@@ -219,6 +219,9 @@ class cirrusTests extends WgConfTestCase {
 		// +1 is for the primary.
 		$totalShards = $primaryShards * (1 + $numReplicas);
 
+		$this->assertGreaterThanOrEqual( 2, $numReplicas );
+		$this->assertLessThanOrEqual( 3, $numReplicas );
+
 		if ( array_key_exists( $indexType, $totalShardPernode ) ) {
 			$this->assertLessThanOrEqual( $numServers * $totalShardPernode[$indexType], $totalShards );
 		}
