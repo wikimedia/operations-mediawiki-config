@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ae1ac700_ca1ba672",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 241,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2017-06-06T16:28:35Z",
+      "side": 1,
+      "message": "s/taht/that/, and while at it wiki could be plural",
+      "revId": "0310ae19fe8dc9aea07aa292e145fb8f24fd89a3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
