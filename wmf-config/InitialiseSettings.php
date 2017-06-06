@@ -11634,6 +11634,7 @@ $wgConf->settings = [
 	'+wikitech' => [ NS_HELP, 116 ], // Tools - T122865
 	'+zhwikisource' => [ 102, 114 ], // T66127
 	'+dewikivoyage' => [ 104 ],
+	'+commonswiki' => [ 6 ], // T167077
 ],
 
 'wgExtraSignatureNamespaces' => [
