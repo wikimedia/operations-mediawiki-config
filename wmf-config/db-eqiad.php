@@ -164,7 +164,7 @@ $wgLBFactoryConf = [
 #		'db1039' => 0,   # B2 1.4TB  64GB
 		'db1079' => 300, # A2 3.6TB 512GB, api
 		'db1086' => 500, # B3 3.6TB 512GB, api
-		'db1094' => 100, # D2 3.6TB 512GB
+		'db1094' => 300, # D2 3.6TB 512GB
 	],
 	'silver' => [
 		'silver' => 100,   # I have no idea if this is right
