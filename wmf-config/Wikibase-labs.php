@@ -26,6 +26,18 @@ if ( $wmgUseWikibaseRepo ) {
 		'P733',
 		'P964',
 	];
+
+	$wgWBRepoSettings['siteLinkGroups'] = [
+		'wikipedia',
+		'wikibooks',
+		'wikinews',
+		'wikiquote',
+		'wikisource',
+		'wikiversity',
+		'wikivoyage',
+		'wiktionary',
+		'special'
+	];
 }
 
 if ( $wmgUseWikibaseClient ) {
@@ -49,4 +61,16 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWikimediaBadgesCommonsCategoryProperty = 'P725';
 
 	$wgArticlePlaceholderImageProperty = 'P964';
+
+	$wgWBClientSettings['siteLinkGroups'] = [
+		'wikipedia',
+		'wikibooks',
+		'wikinews',
+		'wikiquote',
+		'wikisource',
+		'wikiversity',
+		'wikivoyage',
+		'wiktionary',
+		'special'
+	];
 }
