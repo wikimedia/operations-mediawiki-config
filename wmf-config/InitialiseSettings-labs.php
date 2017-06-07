@@ -626,5 +626,9 @@ function wmfLabsSettings() {
 			'wikidataclient' => true,
 			'wiktionary' => true,
 		],
+		'wmgWikibaseEnableData' => [
+			'default' => true,
+			'wiktionary' => false,
+		],
 	];
 } # wmflLabsSettings()
