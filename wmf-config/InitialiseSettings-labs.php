@@ -621,5 +621,10 @@ function wmfLabsSettings() {
 		'wgEchoPerUserBlacklist' => [
 			'default' => true,
 		],
+		'wmgUseWikibaseClient' => [
+			'default' => false,
+			'wikidataclient' => true,
+			'wiktionary' => true,
+		],
 	];
 } # wmflLabsSettings()
