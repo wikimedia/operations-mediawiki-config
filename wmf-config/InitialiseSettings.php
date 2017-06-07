@@ -17796,6 +17796,22 @@ $wgConf->settings = [
 	"nan" => "default", // e.g. zh_min_nan
 ],
 
+// Enable crossprocess search (side bar)
+'wmgCirrusSearchEnableCrossProjectSearch' => [
+	'default' => false,
+	// Activated on all wikipedias
+	'wikipedia' => true,
+	// italian wikis used to have the old sidebar on all sisterwikis
+	// use the one there too.
+	'itwiktionary' => true,
+	'itwikibooks' => true,
+	'itwikinews' => true,
+	'itwikiquote' => true,
+	'itwikisource' => true,
+	'itwikiversity' => true,
+	'itwikivoyage' => true,
+],
+
 
 // Define list of projects to blacklist from CrossProject search
 // (only effective if SiteMatrix implementation is being used)
@@ -17810,6 +17826,14 @@ $wgConf->settings = [
 'wmgCirrusSearchCrossProjectShowMultimedia' => [
 	'default' => true,
 	'enwiki' => false, // T163463, requested during RfC
+	// Disable multimedia on italian non-wikipedias
+	'itwiktionary' => false,
+	'itwikibooks' => false,
+	'itwikinews' => false,
+	'itwikiquote' => false,
+	'itwikisource' => false,
+	'itwikiversity' => false,
+	'itwikivoyage' => false,
 ],
 
 'wmgCirrusSearchIgnoreOnWikiBoostTemplates' => [
@@ -18079,44 +18103,6 @@ $wgConf->settings = [
 
 'wmgCirrusSearchUserTesting' => [
 	'default' => [],
-	// Specific wikis are enabled from the client
-	// Enabling this on itwiki might lead to unexpected behaviors
-	'wikipedia' => [
-		'sidebar' => [
-			'sampleRate' => 0,
-			'globals' => [
-				// Should enable crossproject with sitematrix
-				'wgCirrusSearchEnableCrossProjectSearch' => true,
-				// Enable for all buckets
-				'wgCirrusSearchNewCrossProjectPage' => true,
-				'wgCirrusSearchNumCrossProjectSearchResults' => 1,
-				// Disables the CirrusConfigInterwikiResolver, allowing
-				// SiteMatrixInterwikiResolver to take over.
-				'wgCirrusSearchWikiToNameMap' => [],
-			],
-			'buckets' => [
-				// control, we explicitly hide the side bar
-				'no_sidebar' => [
-					'trigger' => 'no_sidebar',
-					'globals' => [
-						'wgCirrusSearchHideCrossProjectResults' => true,
-					]
-				],
-				'recall_sidebar_results' => [
-					'trigger' => 'recall_sidebar_results',
-					'globals' => [
-						'wgCirrusSearchCrossProjectOrder' => 'recall',
-					],
-				],
-				'random_sidebar_results' => [
-					'trigger' => 'random_sidebar_results',
-					'globals' => [
-						'wgCirrusSearchCrossProjectOrder' => 'random',
-					],
-				]
-			]
-		]
-	],
 ],
 
 'wmgCirrusSearchLanguageDetectors' => [
@@ -18264,67 +18250,10 @@ $wgConf->settings = [
 ],
 # @} end of wmgCirrusSearchLanguageToWikiMap
 
-# wmgCirrusSearchWikiToNameMap @{
+# TODO: remove this entry in a followup patch
 'wmgCirrusSearchWikiToNameMap' => [
 	'default' => [],
-	'wikipedia' => [
-		"ar" => "arwiki",
-		"ay" => "aywiki",
-		"az" => "azwiki",
-		"bg" => "bgwiki",
-		"bn" => "bnwiki",
-		"ca" => "cawiki",
-		"cs" => "cswiki",
-		"da" => "dawiki",
-		"de" => "dewiki",
-		"el" => "elwiki",
-		"en" => "enwiki",
-		"es" => "eswiki",
-		"et" => "etwiki",
-		"fa" => "fawiki",
-		"fi" => "fiwiki",
-		"fr" => "frwiki",
-		"gu" => "guwiki",
-		"he" => "hewiki",
-		"hi" => "hiwiki",
-		"hr" => "hrwiki",
-		"hu" => "huwiki",
-		"id" => "idwiki",
-		"it" => "itwiki",
-		"ja" => "jawiki",
-		"ko" => "kowiki",
-		"km" => "kmwiki",
-		"lt" => "ltwiki",
-		"lv" => "lvwiki",
-		"mk" => "mkwiki",
-		"ml" => "mlwiki",
-		"mr" => "mrwiki",
-		"ms" => "mswiki",
-		"nl" => "nlwiki",
-		"no" => "nowiki",
-		"pa" => "pawiki",
-		"pl" => "plwiki",
-		"pt" => "ptwiki",
-		"ro" => "rowiki",
-		"ru" => "ruwiki",
-		"si" => "siwiki",
-		"sk" => "skwiki",
-		"sl" => "slwiki",
-		"sq" => "sqwiki",
-		"sv" => "svwiki",
-		"sw" => "swwiki",
-		"ta" => "tawiki",
-		"te" => "tewiki",
-		"th" => "thwiki",
-		"tl" => "tlwiki",
-		"tr" => "trwiki",
-		"uk" => "ukwiki",
-		"ur" => "urwiki",
-		"vi" => "viwiki",
-		"zh" => "zhwiki",
-	],
 ],
-# @} end of wmgCirrusSearchWikiToNameMap
 
 'wmgUseCite' => [
 	'default' => true,

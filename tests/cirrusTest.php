@@ -65,15 +65,13 @@ class cirrusTests extends WgConfTestCase {
 		$this->assertTrue( $config['wgCirrusSearchCompletionSuggesterSubphrases']['build'] );
 	}
 
-	public function testLanguageMatrix() {
-		$config = $this->loadCirrusConfig( 'production', 'enwiki', 'wiki' );
+	public function testSiteMatrixCanLoad() {
+		$config = $this->loadCirrusConfig( 'production', 'itwiki', 'wiki' );
 		$lists = DBList::getLists();
-
-		foreach( $config['wgCirrusSearchLanguageToWikiMap'] as $lang => $wiki ) {
-			$this->assertArrayHasKey( $wiki, $config['wgCirrusSearchWikiToNameMap'] );
-			$wikiName = $config['wgCirrusSearchWikiToNameMap'][$wiki];
-			$this->assertContains( $wikiName, $lists['wikipedia'] );
-		}
+		// Make sure that these config vars are empty so the SiteMatrix integration
+		// can be loaded.
+		$this->assertArrayNotHasKey( 'wgCirrusSearchInterwikiSources', $config );
+		$this->assertArrayNotHasKey( 'wgCirrusSearchWikiToNameMap', $config );
 	}
 
 	private function loadCirrusConfig( $wmfRealm, $wgDBname, $dbSuffix ) {

@@ -157,7 +157,6 @@ if ( $wgDBname == 'commonswiki' ) {
 // Configuration for initial test deployment of inline interwiki search via
 // language detection on the search terms.
 
-$wgCirrusSearchWikiToNameMap = $wmgCirrusSearchWikiToNameMap;
 $wgCirrusSearchLanguageToWikiMap = $wmgCirrusSearchLanguageToWikiMap;
 
 $wgCirrusSearchEnableAltLanguage = $wmgCirrusSearchEnableAltLanguage;
@@ -228,16 +227,14 @@ $wgCirrusSearchFiletypeAliases = [
 	"svg" => "drawing"
 ];
 
-// Setup map of interwiki prefixes to sister search display type
-$wgInterwikiPrefixDisplayTypes = [
-	'wikt' => 'definition',
-	'b' => 'textbook',
-	'n' => 'news',
-	'q' => 'quotation',
-	's' => 'book',
-	'voy' => 'travel',
-	'v' => 'course',
-];
+// Activate crossproject search
+$wgCirrusSearchEnableCrossProjectSearch = $wmgCirrusSearchEnableCrossProjectSearch;
+// Enable the new layout, FIXME: remove the old one
+$wgCirrusSearchNewCrossProjectPage = true;
+// Display X results per crossproject
+$wgCirrusSearchNumCrossProjectSearchResults = 1;
+// Order snippets by recall (wiki taht return more results first)
+$wgCirrusSearchCrossProjectOrder = 'recall';
 
 // Override sister search profiles for specific projects
 $wgCirrusSearchCrossProjectProfiles = [
