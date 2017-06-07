@@ -18114,7 +18114,7 @@ $wgConf->settings = [
 
 // Enable interwiki search by language detection. The list of language
 // detected and their corresponding wiki is defined by
-// wmgCirrusSearchLanguageToWikiMap and wmgCirrusSearchWikiToNameMap.
+// wmgCirrusSearchLanguageToWikiMap and SiteMatrix.
 // Note that if language detectors are enabled they will always run, this
 // gates if the result of running is shown to the user (for AB test control
 // bucket reasons).
@@ -18243,11 +18243,6 @@ $wgConf->settings = [
 	],
 ],
 # @} end of wmgCirrusSearchLanguageToWikiMap
-
-# TODO: remove this entry in a followup patch
-'wmgCirrusSearchWikiToNameMap' => [
-	'default' => [],
-],
 
 'wmgUseCite' => [
 	'default' => true,

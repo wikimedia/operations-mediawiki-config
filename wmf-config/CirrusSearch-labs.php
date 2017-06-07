@@ -19,14 +19,7 @@ $wgCirrusSearchClusters = [
 ];
 
 if ( $wgDBname == 'enwiki' ) {
-	$wgCirrusSearchInterwikiSources = [
-		'wiktionary' => 'enwiktionary',
-		'wikibooks' => 'enwikibooks',
-		'wikinews' => 'enwikinews',
-		'wikiquote' => 'enwikiquote',
-		'wikisource' => 'enwikisource',
-		'wikiversity' => 'enwikiversity',
-	];
+	$wgCirrusSearchEnableCrossProjectSearch = true;
 }
 
 # We don't have enough nodes to support these settings in beta so just turn
@@ -57,22 +50,6 @@ $wgCirrusSearchLanguageToWikiMap = [
     'uk' => 'uk',
     'zh-cn' => 'zh',
     'zh-tw' => 'zh',
-];
-
-$wgCirrusSearchWikiToNameMap = [
-    'ar' => 'arwiki',
-    'de' => 'dewiki',
-    'en' => 'enwiki',
-    'es' => 'eswiki',
-    'fa' => 'fawiki',
-    'he' => 'hewiki',
-    'hi' => 'hiwiki',
-    'ja' => 'jawiki',
-    'ko' => 'kowiki',
-    'ru' => 'ruwiki',
-    'sq' => 'sqwiki',
-    'uk' => 'ukwiki',
-    'zh' => 'zhwiki',
 ];
 
 # Force the number of replicas to 1 max for the beta cluster
