@@ -16954,6 +16954,8 @@ $wgConf->settings = [
 
 'wgRelatedArticlesEnabledSamplingRate' => [
 	'default' => 1,
+	// T167310
+	'enwiki' => 0.98,
 ],
 
 'wmgUseRelatedSites' => [
