@@ -57,23 +57,7 @@ $wgCirrusSearchBackup['backups'] = [
 	'chunk_size' => '1g',
 ];
 
-$projectsOkForInterwiki = [
-	'itwiki' => 'w',
-	'itwiktionary' => 'wikt',
-	'itwikibooks' => 'b',
-	'itwikinews' => 'n',
-	'itwikiquote' => 'q',
-	'itwikisource' => 's',
-	'itwikivoyage' => 'voy',
-	'itwikiversity' => 'v',
-];
-
-if ( isset( $projectsOkForInterwiki[ $wgDBname ] ) ) {
-	unset( $projectsOkForInterwiki[$wgDBname] );
-	$interwikiSearchConf = array_flip( $projectsOkForInterwiki );
-	$wgCirrusSearchInterwikiSources = $interwikiSearchConf;
-	$wgCirrusSearchInterwikiCacheTime = 60;
-}
+$wgCirrusSearchInterwikiCacheTime = 60;
 
 if ( $wgDBname == 'enwiki' ) {
 	$wgCirrusSearchPoolCounterKey .= '_enwiki';
