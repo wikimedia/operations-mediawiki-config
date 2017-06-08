@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e81134c_d226f962",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 15197,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-06-08T17:03:09Z",
+      "side": 1,
+      "message": "The commit message mentions only \u0027sr\u0027. Can we document this too?",
+      "revId": "a86d343f6a3b9cad042ee1a09a7a9467b5e77323",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
