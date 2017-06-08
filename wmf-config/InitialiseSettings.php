@@ -15187,13 +15187,13 @@ $wgConf->settings = [
 	],
 	'mkwiki' => [ // T165896
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-sr.svg',
-		'copyright-width' => 100,
-		'copyright-height' => 18,
+		'copyright-width' => 122,
+		'copyright-height' => 22,
 	],
 	'srwiki' => [ // T165896
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-sr.svg',
-		'copyright-width' => 100,
-		'copyright-height' => 18,
+		'copyright-width' => 122,
+		'copyright-height' => 22,
 	],
 	'wikivoyage' => [
 		'copyright' => '/static/images/mobile/copyright/wikivoyage-wordmark-en.svg',
