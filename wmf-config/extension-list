@@ -7,7 +7,6 @@ $IP/extensions/BounceHandler/extension.json
 $IP/extensions/Calendar/extension.json
 $IP/extensions/Campaigns/extension.json
 $IP/extensions/Capiunto/extension.json
-$IP/extensions/Cards/extension.json
 $IP/extensions/CategoryTree/extension.json
 $IP/extensions/CentralAuth/extension.json
 $IP/extensions/CentralNotice/extension.json

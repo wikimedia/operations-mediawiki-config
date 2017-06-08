@@ -43,10 +43,6 @@
         "action": "branch",
         "ref": "."
     },
-    "extensions/Cards": {
-        "action": "branch",
-        "ref": "."
-    },
     "extensions/CategoryTree": {
         "action": "branch",
         "ref": "."
