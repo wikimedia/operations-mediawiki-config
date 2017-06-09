@@ -13334,6 +13334,18 @@ $wgConf->settings = [
 	'huwiki' => true,
 ],
 
+'wgPopupsGateway' => [
+	'default' => 'mwApiPlain',
+
+	// T158221: Make Page Previews use RESTBase for the following stage 0 wikis.
+	'itwiki' => 'restbasePlain',
+	'ruwiki' => 'restbasePlain',
+	'elwiki' => 'restbasePlain',
+	'cawiki' => 'restbasePlain',
+	'hewiki' => 'restbasePlain',
+	'huwiki' => 'restbasePlain',
+],
+
 // T160081 (and others): Make sure that Page Previews can detect the many, many
 // variants of the NavPopups gadget.
 //
