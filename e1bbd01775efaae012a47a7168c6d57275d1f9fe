@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e81134c_8f859fb3",
+        "filename": "robots.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 127,
+      "author": {
+        "id": 105
+      },
+      "writtenOn": "2017-06-10T14:39:09Z",
+      "side": 0,
+      "message": "The correct user agent is ia_archiver and it\u0027s correct to whitelist it.",
+      "revId": "e1bbd01775efaae012a47a7168c6d57275d1f9fe",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
