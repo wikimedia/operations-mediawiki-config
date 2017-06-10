@@ -122,11 +122,6 @@ Disallow: /
 User-agent: WebReaper
 Disallow: /
 
-# Wayback Machine: defaults and whether to index user-pages
-# FIXME: Complete the removal of this block, per T7582.
-# User-agent: archive.org_bot
-# Allow: /
-
 
 #
 # Friendly, low-speed bots are welcome viewing article pages, but not
