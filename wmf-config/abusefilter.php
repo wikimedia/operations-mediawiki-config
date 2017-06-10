@@ -185,7 +185,7 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
 		$wgAbuseFilterActions = [ 'rangeblock' => true ];
 		$wgAbuseFilterAnonBlockDuration = '7 days'; // T87317
-		$wgAbuseFilterBlockDuration = 'indefinite';
+		$wgAbuseFilterBlockDuration = '14 days'; // T167562
 		$wgAbuseFilterNotifications = false;
 		break;
 	case 'fiwiki': // T59395
