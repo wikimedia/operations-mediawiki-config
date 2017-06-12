@@ -60,7 +60,7 @@ $wmgThrottlingExceptions[] = [ // T167201
 
 $wmgThrottlingExceptions[] = [ // T167517
 	'from'=> '2017-06-13T07:30 UTC',
-	'to' => '2017-06-06T10:30 UTC',
+	'to' => '2017-06-13T10:30 UTC',
 	'IP' => [
 		'130.209.6.43',
 		'130.209.6.40',
