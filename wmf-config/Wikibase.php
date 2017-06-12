@@ -83,6 +83,13 @@ if ( $wmgUseWikibaseRepo ) {
 				'dataTypes' => [ 'external-id' ],
 			],
 		],
+		'property' => [
+			'statements' => null,
+			'constraints' => [
+				'type' => 'propertySet',
+				'propertyIds' => [ 'P2302' ]
+			]
+		]
 	];
 
 	$wgWBRepoSettings['normalizeItemByTitlePageNames'] = true;
