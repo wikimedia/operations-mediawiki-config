@@ -13322,18 +13322,6 @@ $wgConf->settings = [
 	'default' => 0.01,
 ],
 
-'wgPopupsAPIUseRESTBase' => [
-	'default' => false,
-
-	// T158221: Make Page Previews use RESTBase for the following stage 0 wikis.
-	'itwiki' => true,
-	'ruwiki' => true,
-	'elwiki' => true,
-	'cawiki' => true,
-	'hewiki' => true,
-	'huwiki' => true,
-],
-
 'wgPopupsGateway' => [
 	'default' => 'mwApiPlain',
 
