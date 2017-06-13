@@ -128,10 +128,7 @@ if ( $wmgUseWikibaseClient ) {
 
 	// T142103
 	$wgWBClientEchoNotificationWikis = array_diff(
-		array_merge(
-			MWWikiversions::readDbListFile( 'wikipedia' ),
-			MWWikiversions::readDbListFile( 'wikivoyage' )
-		),
+		MWWikiversions::readDbListFile( 'wikidataclient' ),
 		[ 'dewiki', 'enwiki', 'frwiki' ]
 	);
 
