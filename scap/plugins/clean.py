@@ -59,6 +59,7 @@ class Clean(main.AbstractSync):
         self.arguments.message = 'Pruned MediaWiki: %s' % self.arguments.branch
         if not self.arguments.delete:
             self.arguments.message += ' [keeping static files]'
+        self.arguments.force = False
         return super(Clean, self).main(*extra_args)
 
     def _before_cluster_sync(self):
