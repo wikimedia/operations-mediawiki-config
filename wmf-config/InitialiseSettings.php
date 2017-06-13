@@ -16662,6 +16662,12 @@ $wgConf->settings = [
 			'frequency' => 'weekly',
 		],
 	],
+	'frwiki' => [ // T167617
+		'raw' => [
+			'frequency' => 'daily',
+			'limit' => 60,
+		],
+	],
 	'frwikisource' => [ // T41919
 		'featuredtexts' => [
 			'frequency' => 'weekly',
