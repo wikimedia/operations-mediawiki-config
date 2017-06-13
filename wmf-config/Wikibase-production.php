@@ -93,6 +93,10 @@ if ( $wmgUseWikibaseRepo ) {
 				'propertyIds' => [ 'P2302' ],
 			],
 		];
+
+		$wgWBQualityConstraintsSparqlEndpoint = $wgWBRepoSettings['sparqlEndpoint'];
+		$wgWBQualityConstraintsSparqlMaxMillis = 5000; // limit SPARQL queries to just 5 seconds for now
+		$wgWBQualityConstraintsTypeCheckMaxEntities = 10; // only check few entities in PHP => fall back to SPARQL very quickly
 	}
 
 	if ( $wgDBname === 'wikidatawiki' ) {
