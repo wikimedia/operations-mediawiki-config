@@ -73,6 +73,14 @@ function wfFeaturedFeedsWMF_getFeeds( &$feeds ) {
 						'entryName' => 'ffeed-dyk-entry',
 					],
 				];
+			} if ( $lang == 'fr' ) {
+				$feeds['raw'] = array( // T167617 - French Regards sur l'actualité de la Wikimedia bulletin
+					'page' => 'ffeed-raw-page',
+					'title' => 'ffeed-raw-title',
+					'short-title' => 'ffeed-raw-short-title',
+					'description' => 'ffeed-raw-desc',
+					'entryName' => 'ffeed-raw-entry',
+					);
 			}
 			break;
 		case 'wikiquote':
