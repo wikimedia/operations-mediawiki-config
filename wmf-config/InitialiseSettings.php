@@ -17345,7 +17345,8 @@ $wgConf->settings = [
 // $wgTranslateTranslationDefaultService in CommonSettings.php if you plan to
 // bring down a specific cluster.
 'wmgCirrusSearchDefaultCluster' => [
-	'default' => 'local',
+	// T149006: Test elastic2020 does not fall out of cluster
+	'default' => 'codfw',
 ],
 
 'wmgCirrusSearchClusterOverrides' => [
