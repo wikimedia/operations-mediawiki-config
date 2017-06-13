@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "0e81134c_d7e8120e",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 1453
+      },
+      "writtenOn": "2017-06-13T11:58:03Z",
+      "side": 1,
+      "message": "It\u0027s not obvious how a \"max entities\" setting is related to a fallback, but the commit message explains it.",
+      "range": {
+        "startLine": 83,
+        "startChar": 55,
+        "endLine": 83,
+        "endChar": 64
+      },
+      "revId": "21795abd040495e99f854b455c118aa9a6c0ea34",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
