@@ -77,6 +77,10 @@ if ( $wmgUseWikibaseRepo ) {
 			'P491',
 		];
 		$wgWBRepoSettings['writeFullEntityIdColumn'] = false;
+
+		$wgWBQualityConstraintsSparqlEndpoint = $wgWBRepoSettings['sparqlEndpoint'];
+		$wgWBQualityConstraintsSparqlMaxMillis = 5000; // limit SPARQL queries to just 5 seconds for now
+		$wgWBQualityConstraintsTypeCheckMaxEntities = 10; // fall back to SPARQL very quickly
 	}
 
 	if ( $wgDBname === 'wikidatawiki' ) {
