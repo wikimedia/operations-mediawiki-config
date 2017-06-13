@@ -103,7 +103,7 @@ $wgLBFactoryConf = [
 		'db1073' => 50,  # B3 2.8TB 160GB, api
 		'db1080' => 500, # A2 3.6TB 512GB
 		'db1083' => 500, # B1 3.6TB 512GB
-#		'db1089' => 100, # C3 3.6TB 512GB #T166935 - still needs raid firmware upgrade
+		'db1089' => 100, # C3 3.6TB 512GB
 	],
 	's2' => [
 		'db1054' => 0,   # A3 2.8TB  96GB, master
