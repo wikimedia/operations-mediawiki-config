@@ -56,6 +56,9 @@ class Clean(main.AbstractSync):
                   help='Delete everything (not just static assets).')
     def main(self, *extra_args):
         """ Clean old branches from the cluster for space savings! """
+        self.arguments.message = 'Pruned MediaWiki: %s' % self.arguments.branch
+        if not self.arguments.delete:
+            self.arguments.message += ' [keeping static files]'
         return super(Clean, self).main(*extra_args)
 
     def _before_cluster_sync(self):
@@ -124,9 +127,5 @@ class Clean(main.AbstractSync):
                 subprocess.check_call(command)
 
     def _after_lock_release(self):
-        announce = 'Pruned MediaWiki: %s' % self.arguments.branch
-        if not self.arguments.delete:
-            announce += ' [keeping static files]'
-
-        self.announce(announce + ' (duration: %s)' %
+        self.announce(self.arguments.message + ' (duration: %s)' %
                       utils.human_duration(self.get_duration()))
