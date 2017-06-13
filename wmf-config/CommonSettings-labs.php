@@ -165,7 +165,6 @@ if ( $wgDBname == 'commonswiki' ) {
 	$wgUseInstantCommons = true;
 }
 
-
 // Enable Tabular data namespace on Commons - T148745
 if ( $wmgEnableTabularData && $wgDBname !== 'commonswiki' ) {
 	$wgJsonConfigs['Tabular.JsonConfig']['remote']['url'] = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
@@ -175,7 +174,6 @@ if ( $wmgEnableTabularData && $wgDBname !== 'commonswiki' ) {
 if ( $wmgEnableMapData && $wgDBname !== 'commonswiki' ) {
 	$wgJsonConfigs['Map.JsonConfig']['remote']['url'] = 'https://commons.wikimedia.beta.wmflabs.org/w/api.php';
 }
-
 
 if ( $wmgUseMath ) {
 	$wgDefaultUserOptions[ 'math' ] = 'mathml';
@@ -204,8 +202,6 @@ if ( $wmgUseCollection ) {
 }
 
 if ( $wmgUsePageImages ) {
-	require_once "$IP/extensions/PageImages/PageImages.php";
-	$wgPageImagesExpandOpenSearchXml = $wmgPageImagesExpandOpenSearchXml;
 	$wgPageImagesBlacklist[] = [
 		'type' => 'db',
 		'page' => 'MediaWiki:Pageimages-blacklist',
@@ -296,7 +292,6 @@ if ( $wmgUseGraph ) {
 }
 
 if ( $wmgUseORES ) {
-	wfLoadExtension( 'ORES' );
 	$wgOresBaseUrl = 'https://ores-beta.wmflabs.org/';
 }
 
@@ -326,10 +321,6 @@ if ( $wmgUseEmailAuth ) {
 	};
 }
 
-if ( $wmgUseLinter ) {
-	wfLoadExtension( 'Linter' );
-}
-
 if ( $wmgUseCollaborationKit ) {
 	wfLoadExtension( 'CollaborationKit' );
 }
@@ -344,10 +335,8 @@ if ( $wmgUseTimeless ) {
 }
 
 if ( $wmgUseLoginNotify ) {
-	wfLoadExtension( 'LoginNotify' );
 	$wgLoginNotifyAttemptsKnownIP = 10;
 	$wgLoginNotifyAttemptsNewIP = 1;
-	$wgLoginNotifyEnableOnSuccess = false;
 }
 
 $wgStructuredChangeFiltersEnableSaving = true;
