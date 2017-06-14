@@ -16896,11 +16896,6 @@ $wgConf->settings = [
 	],
 ],
 
-// Namespace to publish article
-'wmgContentTranslationTargetNamespace' => [
-	'default' => 'Main',
-],
-
 // Suggestions
 'wmgContentTranslationEnableSuggestions' => [
 	'default' => false,
