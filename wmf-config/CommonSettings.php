@@ -2897,7 +2897,6 @@ if ( $wmgUseInsider ) {
 if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
 	if ( $wmgRelatedArticlesShowInFooter ) {
-		wfLoadExtension( 'Cards' );
 		$wgRelatedArticlesShowInSidebar = false;
 		$wgRelatedArticlesShowInFooter = true;
 		$wgRelatedArticlesLoggingSamplingRate = 0.01;
