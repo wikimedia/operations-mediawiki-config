@@ -335,7 +335,7 @@ if ( $wmgUseLoginNotify ) {
 	$wgLoginNotifyAttemptsNewIP = 1;
 }
 
-$wgStructuredChangeFiltersEnableSaving = true;
+$wgStructuredChangeFiltersEnableExperimentalViews = true;
 
 $wgMessageCacheType = CACHE_ACCEL;
 
