@@ -3027,8 +3027,6 @@ if ( $wmgUseContentTranslation ) {
 
 	$wgContentTranslationTranslateInTarget = $wmgContentTranslationTranslateInTarget;
 
-	$wgContentTranslationTargetNamespace = $wmgContentTranslationTargetNamespace;
-
 	$wgContentTranslationEventLogging = $wmgContentTranslationEventLogging;
 
 	if ( $wmgContentTranslationCluster ) {
