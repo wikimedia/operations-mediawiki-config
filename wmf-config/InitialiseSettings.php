@@ -2753,6 +2753,7 @@ $wgConf->settings = [
 	'arwikiversity' => 'نقاش_ويكي_الجامعة',
 	'aswiki' => 'ৱিকিপিডিয়া_বাৰ্তা',
 	'aswikisource' => 'ৱিকিউ স_বাৰ্তা', // T45129
+	'atjwiki' => 'Ke_ici_aimihitonaniwok_Wikipetcia', // T167714
 	'aywiki' => 'Wikipidiyan_Aruskipäwi',
 	'azbwiki' => 'ویکی‌پدیا_دانیشیغی', // T106305
 	'bat_smgwiki' => 'Vikipedėjės_aptarėms',
