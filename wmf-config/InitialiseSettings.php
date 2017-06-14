@@ -257,6 +257,7 @@ $wgConf->settings = [
 	'arbcom_nlwiki' => 'Europe/Berlin',
 	'alswiktionary' => 'Europe/Berlin',
 	'aswikisource' => 'Asia/Kolkata', // T45129
+	'atjwiki' => 'America/Montreal', // T167714
 	'barwiki' => 'Europe/Berlin',
 	'bat_smgwiki' => 'Europe/Vilnius',
 	'bdwikimedia' => 'Asia/Dhaka', // T150252
@@ -503,6 +504,7 @@ $wgConf->settings = [
 	'arzwiki' => '/static/images/project-logos/arzwiki.png',
 	'aswiki' => '/static/images/project-logos/aswiki.png',
 	'astwiki' => '/static/images/project-logos/astwiki.png',  // T42285, T131247
+	'atjwiki' => '/static/images/project-logos/atjwiki.png', // T167714
 	'avwiki' => '/static/images/project-logos/avwiki.png',  // T48589
 	'aywiki' => '/static/images/project-logos/aywiki.png',
 	'azwiki' => '/static/images/project-logos/azwiki.png',  // T50397
@@ -1200,6 +1202,7 @@ $wgConf->settings = [
 	'alswiki' => [ '1.5x' => '/static/images/project-logos/alswiki-1.5x.png', '2x' => '/static/images/project-logos/alswiki-2x.png' ], // T150618
 	'amwiki' => [ '1.5x' => '/static/images/project-logos/amwiki-1.5x.png', '2x' => '/static/images/project-logos/amwiki-2x.png' ], // T150618
 	'angwiki' => [ '1.5x' => '/static/images/project-logos/angwiki-1.5x.png', '2x' => '/static/images/project-logos/angwiki-2x.png' ], // T150618
+	'atjwiki' => [ '1.5x' => '/static/images/project-logos/atjwiki-1.5x.png', '2x' => '/static/images/project-logos/atjwiki-2x.png' ], // T167714
 	'avwiki' => [ '1.5x' => '/static/images/project-logos/avwiki-1.5x.png', '2x' => '/static/images/project-logos/avwiki-2x.png' ], // T150618
 	'aywiki' => [ '1.5x' => '/static/images/project-logos/aywiki-1.5x.png', '2x' => '/static/images/project-logos/aywiki-2x.png' ], // T150618
 	'azwiki' => [ '1.5x' => '/static/images/project-logos/azwiki-1.5x.png', '2x' => '/static/images/project-logos/azwiki-2x.png' ], // T150618
@@ -1827,6 +1830,7 @@ $wgConf->settings = [
 	'arzwiki' => 'ويكيبيديا',
 	'astwiktionary' => 'Wikcionariu', // T99315
 	'aswiki' => 'অসমীয়া ৱিকিপিডিয়া',
+	'atjwiki' => 'Wikipetcia', // T167714
 	'aswikisource' => 'ৱিকিউৎস', // T45129
 	'auditcomwiki' => 'Audit Committee',
 	'azwiki' => 'Vikipediya',
@@ -2324,6 +2328,7 @@ $wgConf->settings = [
 	'astwiktionary' => 'Wikcionariu', // T99315
 	'aswiki' => 'ৱিকিপিডিয়া',
 	'aswikisource' => 'ৱিকিউৎস', // T45129
+	'atjwiki' => 'Wikipetcia', // T167714
 	'auditcomwiki' => 'Project',
 	'avwiki' => 'Википедия', // T155321
 	'aywiki' => 'Wikipidiya',
