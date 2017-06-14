@@ -8,7 +8,8 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 # $wgReadOnly = "Wikimedia Sites are currently read-only during maintenance, please try again soon.";
 
 $wmgParserCacheDBs = [
-	'10.64.0.12'   => '10.64.0.12',   # pc1004
+#	'10.64.0.12'   => '10.64.0.12',   # pc1004
+	'10.64.0.12'   => '10.64.0.163',  # db1096, temporary pc1004 T167567
 	'10.64.32.72'  => '10.64.32.72',  # pc1005
 	'10.64.48.128' => '10.64.48.128', # pc1006
 ];
@@ -507,6 +508,7 @@ $wgLBFactoryConf = [
 	'db1092' => '10.64.48.151', # do not remove or comment out
 	'db1093' => '10.64.48.152', # do not remove or comment out
 	'db1094' => '10.64.48.153', # do not remove or comment out
+	'db1096' => '10.64.0.163', # do not remove or comment out
 	'db1097' => '10.64.48.11', # do not remove or comment out
 	'db2001' => '10.192.0.4', # do not remove or comment out
 	'db2002' => '10.192.0.5', # do not remove or comment out
@@ -577,6 +579,7 @@ $wgLBFactoryConf = [
 	'db2069' => '10.192.48.21', # do not remove or comment out
 	'db2070' => '10.192.32.5', # do not remove or comment out
 	'db2071' => '10.192.0.4', # do not remove or comment out
+	'db2072' => '10.192.16.37', # do not remove or comment out
 	'virt1000' => '208.80.154.18', # do not remove or comment out
 	'silver' => '208.80.154.136', # do not remove or comment out
         'labtestweb2001' => '208.80.153.14', # do not remove or comment out
