@@ -25,6 +25,14 @@ if ( $wmgUseWikibaseRepo ) {
 			'P185',
 		];
 		$wgWBRepoSettings['writeFullEntityIdColumn'] = true;
+
+		$wgWBRepoSettings['statementSections']['property'] = [
+			'statements' => null,
+			'constraints' => [
+				'type' => 'propertySet',
+				'propertyIds' => [ 'P400' ],
+			],
+		];
 	} else {
 		$wgWBRepoSettings['sparqlEndpoint'] = 'https://query.wikidata.org/sparql';
 
@@ -77,6 +85,14 @@ if ( $wmgUseWikibaseRepo ) {
 			'P491',
 		];
 		$wgWBRepoSettings['writeFullEntityIdColumn'] = false;
+
+		$wgWBRepoSettings['statementSections']['property'] = [
+			'statements' => null,
+			'constraints' => [
+				'type' => 'propertySet',
+				'propertyIds' => [ 'P2302' ],
+			],
+		];
 	}
 
 	if ( $wgDBname === 'wikidatawiki' ) {
