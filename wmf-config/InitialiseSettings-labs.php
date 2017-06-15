@@ -580,9 +580,10 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		// T156800: Make Page Prevews (Popups) use RESTBase's page summary endpoint.
-		'wgPopupsAPIUseRESTBase' => [
-			'default' => true,
+		// T165018: Make Page Previews (Popups) use RESTBase's page summary endpoint
+		// and consume the HTML returned.
+		'wgPopupsGateway' => [
+			'default' => 'restbaseHTML',
 		],
 
 		'wgEnableRcFiltersBetaFeature' => [
