@@ -14640,6 +14640,7 @@ $wgConf->settings = [
 	'default' => false,
 	'mediawikiwiki' => true,
 	'fawiki' => true, // T162849
+	'plwiki' => true, // T162849
 ],
 
 'wgCiteResponsiveReferences' => [
