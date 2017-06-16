@@ -160,7 +160,7 @@ class cirrusTests extends WgConfTestCase {
 		}
 		$wikis = array_unique( $wikis );
 		$indexTypes = array( 'content', 'general', 'titlesuggest', 'file' );
-		$clusters = array( 'eqiad' => 31, 'codfw' => 24 );
+		$clusters = array( 'eqiad' => 36, 'codfw' => 36 );
 
 		// restrict wgConf to only the settings we care about
 		$wgConf->settings = array(
@@ -235,7 +235,7 @@ class cirrusTests extends WgConfTestCase {
 		if ( in_array( $wiki, $busyWikis ) && $indexType == 'content' ) {
 
 			// For busy indices ensure we are using most of the cluster to serve them
-			$this->assertGreaterThanOrEqual( $numServers - 3, $totalShards );
+			$this->assertGreaterThanOrEqual( $numServers - 7, $totalShards );
 		}
 	}
 

@@ -17903,14 +17903,8 @@ $wgConf->settings = [
 'wmgCirrusSearchReplicas' => [
 	'default' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2' ],
 	'commonswiki' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2', 'file' => '0-2' ],
-	'enwiki' => [
-		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-3' ],
-		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-3' ],
-	],
-	'dewiki' => [
-		'eqiad' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2' ],
-		'codfw' => [ 'content' => '0-2', 'general' => '0-2', 'titlesuggest' => '0-2' ],
-	],
+	'enwiki' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-3' ],
+	'dewiki' => [ 'content' => '0-3', 'general' => '0-2', 'titlesuggest' => '0-2' ],
 ],
 
 'wmgCirrusSearchMaxShardsPerNode' => [
