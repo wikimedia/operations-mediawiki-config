@@ -13023,6 +13023,7 @@ $wgConf->settings = [
 	'ckbwiki' => true,
 	'cswiki' => true, // T100513
 	'dawiki' => true,
+	'dtywiki' => true, // T168038
 	'elwiki' => true,
 	'elwikivoyage' => true,
 	'enwiki' => true,
