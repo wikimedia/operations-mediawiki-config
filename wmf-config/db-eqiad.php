@@ -10,8 +10,10 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 $wmgParserCacheDBs = [
 #	'10.64.0.12'   => '10.64.0.12',   # pc1004
 	'10.64.0.12'   => '10.64.0.163',  # db1096, temporary pc1004 T167567
-	'10.64.32.72'  => '10.64.32.72',  # pc1005
-	'10.64.48.128' => '10.64.48.128', # pc1006
+#	'10.64.32.72'  => '10.64.32.72',  # pc1005
+	'10.64.32.72'  => '10.64.16.84',  # db1099, temporary pc1005 T167567
+#	'10.64.48.128' => '10.64.48.128', # pc1006
+	'10.64.48.128' => '10.64.32.198', # db1101, temporary pc1006 T167567
 ];
 
 $wmgOldExtTemplate = [
@@ -510,6 +512,8 @@ $wgLBFactoryConf = [
 	'db1094' => '10.64.48.153', # do not remove or comment out
 	'db1096' => '10.64.0.163', # do not remove or comment out
 	'db1097' => '10.64.48.11', # do not remove or comment out
+	'db1099' => '10.64.16.84', # do not remove or comment out
+	'db1101' => '10.64.32.198', # do not remove or comment out
 	'db2001' => '10.192.0.4', # do not remove or comment out
 	'db2002' => '10.192.0.5', # do not remove or comment out
 	'db2003' => '10.192.0.6', # do not remove or comment out
