@@ -16659,6 +16659,9 @@ $wgConf->settings = [
 			'frequency' => 'daily',
 			'limit' => 60,
 		],
+		'wikimag' => [
+			'frequency' => 'weekly',
+		],
 	],
 	'frwikisource' => [ // T41919
 		'featuredtexts' => [

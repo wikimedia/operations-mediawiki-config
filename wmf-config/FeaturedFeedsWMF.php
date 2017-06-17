@@ -35,7 +35,7 @@ function wfFeaturedFeedsWMF_getFeeds( &$feeds ) {
 			if ( $lang == 'commons' ) {
 				$feeds['potd']['inUserLanguage'] = $feeds['motd']['inUserLanguage'] = true;
 			} elseif ( $lang == 'meta' ) {
-				$feeds['technews'] = [ // Tech News bulletin
+				$feeds['technews'] = [ // T65596 - Metawiki Tech News bulletin
 					'page' => 'ffeed-technews-page',
 					'title' => 'ffeed-technews-title',
 					'short-title' => 'ffeed-technews-short-title',
@@ -74,13 +74,22 @@ function wfFeaturedFeedsWMF_getFeeds( &$feeds ) {
 					],
 				];
 			} if ( $lang == 'fr' ) {
-				$feeds['raw'] = array( // T167617 - French Regards sur l'actualité de la Wikimedia bulletin
-					'page' => 'ffeed-raw-page',
-					'title' => 'ffeed-raw-title',
-					'short-title' => 'ffeed-raw-short-title',
-					'description' => 'ffeed-raw-desc',
-					'entryName' => 'ffeed-raw-entry',
-					);
+				$feeds += [
+					'raw' => [ // T167617 - French Regards sur l'actualité de la Wikimedia bulletin
+						'page' => 'ffeed-raw-page',
+						'title' => 'ffeed-raw-title',
+						'short-title' => 'ffeed-raw-short-title',
+						'description' => 'ffeed-raw-desc',
+						'entryName' => 'ffeed-raw-entry',
+					],
+					'wikimag' => [ // T168005 - French Wikimag bulletin
+						'page' => 'ffeed-wikimag-page',
+						'title' => 'ffeed-wikimag-title',
+						'short-title' => 'ffeed-wikimag-short-title',
+						'description' => 'ffeed-wikimag-desc',
+						'entryName' => 'ffeed-wikimag-entry',
+					],
+				];
 			}
 			break;
 		case 'wikiquote':
