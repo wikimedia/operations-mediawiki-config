@@ -7,11 +7,13 @@
 	},
 	"require-dev": {
 		"jakub-onderka/php-parallel-lint": "0.9.2",
-		"phpunit/phpunit": "4.8.31"
+		"phpunit/phpunit": "4.8.35",
+		"mediawiki/mediawiki-codesniffer": "0.8.0"
 	},
 	"scripts": {
 		"test": [
 			"phpunit",
+			"phpcs -p -s",
 			"parallel-lint --exclude multiversion/vendor --ignore-fails ."
 		]
 	},
