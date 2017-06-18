@@ -3341,10 +3341,10 @@ if ( $wmgUseORES ) {
 	$wgDefaultUserOptions['oresDamagingPref'] = $wmgOresDefaultSensitivityLevel;
 
 	// Backwards compatibility for upcoming config format change
-	if (isset($wgOresFiltersThresholds['goodfaith']['good'])) {
+	if ( isset( $wgOresFiltersThresholds['goodfaith']['good'] ) ) {
 		$wgOresFiltersThresholds['goodfaith']['likelygood'] = $wgOresFiltersThresholds['goodfaith']['good'];
 	}
-	if (isset($wgOresFiltersThresholds['goodfaith']['bad'])) {
+	if ( isset( $wgOresFiltersThresholds['goodfaith']['bad'] ) ) {
 		$wgOresFiltersThresholds['goodfaith']['likelybad'] = $wgOresFiltersThresholds['goodfaith']['bad'];
 	}
 }
@@ -3525,7 +3525,7 @@ if ( $wmgUsePageViewInfo ) {
 }
 
 if ( $wmgUseCollaborationKit ) {
-        wfLoadExtension( 'CollaborationKit' );
+	wfLoadExtension( 'CollaborationKit' );
 }
 
 if ( $wgDBname === 'foundationwiki' ) {
