@@ -8877,7 +8877,7 @@ $wgConf->settings = [
 			'templateeditor' => true, // T63172
 		],
 		'patroller' => [ 'patrol' => true, 'upwizcampaigns' => true, ], // T61242
-		'autopatrolled' => [ 'autopatrol' => true, ],
+		'autopatrolled' => [ 'autopatrol' => true, 'movefile' => true ], // T168192
 		'templateeditor' => [ // T63172
 			'templateeditor' => true,
 			'editinterface' => true,
