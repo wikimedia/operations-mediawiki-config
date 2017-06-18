@@ -8,7 +8,6 @@ $baseDir = dirname(dirname($vendorDir));
 return array(
     'Xhgui_' => array($vendorDir . '/perftools/xhgui/src'),
     'Twig_' => array($vendorDir . '/twig/twig/lib'),
-    'Slim\\Views' => array($vendorDir . '/slim/views'),
     'Slim' => array($vendorDir . '/slim/slim'),
     'Pimple' => array($vendorDir . '/pimple/pimple/lib'),
 );

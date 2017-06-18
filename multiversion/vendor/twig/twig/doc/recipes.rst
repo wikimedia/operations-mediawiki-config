@@ -30,7 +30,7 @@ catches deprecation notices, and return them.
 .. tip::
 
     If your templates are not stored on the filesystem, use the ``collect()``
-    method instead which takes an ``Iterator``; the iterator must return
+    method instead. ``collect()`` takes a ``Traversable`` which must return
     template names as keys and template contents as values (as done by
     ``Twig_Util_TemplateDirIterator``).
 
@@ -280,7 +280,7 @@ For functions, use ``registerUndefinedFunctionCallback()``::
     // don't try this at home as it's not secure at all!
     $twig->registerUndefinedFunctionCallback(function ($name) {
         if (function_exists($name)) {
-            return new Twig_Function_Function($name);
+            return new Twig_SimpleFunction($name, $name);
         }
 
         return false;
@@ -306,7 +306,7 @@ saving it. If the template code is stored in a `$template` variable, here is
 how you can do it::
 
     try {
-        $twig->parse($twig->tokenize($template));
+        $twig->parse($twig->tokenize(new Twig_Source($template)));
 
         // the $template is valid
     } catch (Twig_Error_Syntax $e) {
@@ -318,13 +318,17 @@ If you iterate over a set of files, you can pass the filename to the
 
     foreach ($files as $file) {
         try {
-            $twig->parse($twig->tokenize($template, $file));
+            $twig->parse($twig->tokenize(new Twig_Source($template, $file->getFilename(), $file)));
 
             // the $template is valid
         } catch (Twig_Error_Syntax $e) {
             // $template contains one or more syntax errors
         }
     }
+
+.. versionadded:: 1.27
+    ``Twig_Source`` was introduced in version 1.27, pass the source and the
+    identifier directly on previous versions.
 
 .. note::
 
@@ -413,7 +417,7 @@ We have created a simple ``templates`` table that hosts two templates:
 
 Now, let's define a loader able to use this database::
 
-    class DatabaseTwigLoader implements Twig_LoaderInterface, Twig_ExistsLoaderInterface
+    class DatabaseTwigLoader implements Twig_LoaderInterface, Twig_ExistsLoaderInterface, Twig_SourceContextLoaderInterface
     {
         protected $dbh;
 
@@ -429,6 +433,16 @@ Now, let's define a loader able to use this database::
             }
 
             return $source;
+        }
+
+        // Twig_SourceContextLoaderInterface as of Twig 1.27
+        public function getSourceContext($name)
+        {
+            if (false === $source = $this->getValue('source', $name)) {
+                throw new Twig_Error_Loader(sprintf('Template "%s" does not exist.', $name));
+            }
+
+            return new Twig_Source($source, $name);
         }
 
         // Twig_ExistsLoaderInterface as of Twig 1.11
@@ -499,7 +513,7 @@ Loading a Template from a String
 
 From a template, you can easily load a template stored in a string via the
 ``template_from_string`` function (available as of Twig 1.11 via the
-``Twig_Extension_StringLoader`` extension)::
+``Twig_Extension_StringLoader`` extension):
 
 .. code-block:: jinja
 
@@ -514,5 +528,41 @@ From PHP, it's also possible to load a template stored in a string via
 .. note::
 
     Never use the ``Twig_Loader_String`` loader, which has severe limitations.
+
+Using Twig and AngularJS in the same Templates
+----------------------------------------------
+
+Mixing different template syntaxes in the same file is not a recommended
+practice as both AngularJS and Twig use the same delimiters in their syntax:
+``{{`` and ``}}``.
+
+Still, if you want to use AngularJS and Twig in the same template, there are
+two ways to make it work depending on the amount of AngularJS you need to
+include in your templates:
+
+* Escaping the AngularJS delimiters by wrapping AngularJS sections with the
+  ``{% verbatim %}`` tag or by escaping each delimiter via ``{{ '{{' }}`` and
+  ``{{ '}}' }}``;
+
+* Changing the delimiters of one of the template engines (depending on which
+  engine you introduced last):
+
+  * For AngularJS, change the interpolation tags using the
+    ``interpolateProvider`` service, for instance at the module initialization
+    time:
+
+    ..  code-block:: javascript
+
+        angular.module('myApp', []).config(function($interpolateProvider) {
+            $interpolateProvider.startSymbol('{[').endSymbol(']}');
+        });
+
+  * For Twig, change the delimiters via the ``tag_variable`` Lexer option:
+
+    ..  code-block:: php
+
+        $env->setLexer(new Twig_Lexer($env, array(
+            'tag_variable' => array('{[', ']}'),
+        )));
 
 .. _callback: http://www.php.net/manual/en/function.is-callable.php

@@ -3,10 +3,10 @@
  * Slim - a micro PHP 5 framework
  *
  * @author      Josh Lockhart <info@slimframework.com>
- * @copyright   2011 Josh Lockhart
+ * @copyright   2011-2017 Josh Lockhart
  * @link        http://www.slimframework.com
  * @license     http://www.slimframework.com/license
- * @version     2.3.0
+ * @version     2.6.3
  *
  * MIT LICENSE
  *
@@ -64,7 +64,7 @@ class MethodOverrideTest extends PHPUnit_Framework_TestCase
         \Slim\Environment::mock(array(
             'REQUEST_METHOD' => 'POST',
             'CONTENT_TYPE' => 'application/x-www-form-urlencoded',
-            'CONENT_LENGTH' => 11,
+            'CONTENT_LENGTH' => 11,
             'slim.input' => '_METHOD=PUT'
         ));
         $app = new CustomAppMethod();
@@ -132,9 +132,9 @@ class MethodOverrideTest extends PHPUnit_Framework_TestCase
         \Slim\Environment::mock(array(
             'REQUEST_METHOD' => 'POST',
             'CONTENT_TYPE' => 'application/json',
-            'CONENT_LENGTH' => 0,
+            'CONTENT_LENGTH' => 0,
             'slim.input' => '',
-            'X_HTTP_METHOD_OVERRIDE' => 'DELETE'
+            'HTTP_X_HTTP_METHOD_OVERRIDE' => 'DELETE'
         ));
         $app = new CustomAppMethod();
         $mw = new \Slim\Middleware\MethodOverride();

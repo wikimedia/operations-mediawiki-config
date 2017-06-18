@@ -3,10 +3,10 @@
  * Slim - a micro PHP 5 framework
  *
  * @author      Josh Lockhart <info@slimframework.com>
- * @copyright   2011 Josh Lockhart
+ * @copyright   2011-2017 Josh Lockhart
  * @link        http://www.slimframework.com
  * @license     http://www.slimframework.com/license
- * @version     2.3.0
+ * @version     2.6.3
  * @package     Slim
  *
  * MIT LICENSE
@@ -60,9 +60,9 @@ class Util
         $strip = is_null($overrideStripSlashes) ? get_magic_quotes_gpc() : $overrideStripSlashes;
         if ($strip) {
             return self::stripSlashes($rawData);
-        } else {
-            return $rawData;
         }
+
+        return $rawData;
     }
 
     /**
@@ -170,7 +170,7 @@ class Util
         //Decrypt value
         mcrypt_generic_init($module, $key, $iv);
         $decryptedData = @mdecrypt_generic($module, $data);
-        $res = str_replace("\x0", '', $decryptedData);
+        $res = rtrim($decryptedData, "\0");
         mcrypt_generic_deinit($module);
 
         return $res;
@@ -224,7 +224,7 @@ class Util
      */
     public static function encodeSecureCookie($value, $expires, $secret, $algorithm, $mode)
     {
-        $key = hash_hmac('sha1', $expires, $secret);
+        $key = hash_hmac('sha1', (string) $expires, $secret);
         $iv = self::getIv($expires, $secret);
         $secureString = base64_encode(
             self::encrypt(
@@ -389,7 +389,7 @@ class Util
     /**
      * Parse cookie header
      *
-     * This method will parse the HTTP requst's `Cookie` header
+     * This method will parse the HTTP request's `Cookie` header
      * and extract cookies into an associative array.
      *
      * @param  string
@@ -401,7 +401,7 @@ class Util
         $header = rtrim($header, "\r\n");
         $headerPieces = preg_split('@\s*[;,]\s*@', $header);
         foreach ($headerPieces as $c) {
-            $cParts = explode('=', $c);
+            $cParts = explode('=', $c, 2);
             if (count($cParts) === 2) {
                 $key = urldecode($cParts[0]);
                 $value = urldecode($cParts[1]);
@@ -431,5 +431,4 @@ class Util
 
         return pack("h*", $data1.$data2);
     }
-
 }

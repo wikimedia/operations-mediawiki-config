@@ -3,10 +3,10 @@
  * Slim - a micro PHP 5 framework
  *
  * @author      Josh Lockhart <info@slimframework.com>
- * @copyright   2011 Josh Lockhart
+ * @copyright   2011-2017 Josh Lockhart
  * @link        http://www.slimframework.com
  * @license     http://www.slimframework.com/license
- * @version     2.3.0
+ * @version     2.6.3
  * @package     Slim
  *
  * MIT LICENSE
@@ -140,6 +140,30 @@ class Set implements \ArrayAccess, \Countable, \IteratorAggregate
     }
 
     /**
+     * Property Overloading
+     */
+
+    public function __get($key)
+    {
+        return $this->get($key);
+    }
+
+    public function __set($key, $value)
+    {
+        $this->set($key, $value);
+    }
+
+    public function __isset($key)
+    {
+        return $this->has($key);
+    }
+
+    public function __unset($key)
+    {
+        $this->remove($key);
+    }
+
+    /**
      * Clear all values
      */
     public function clear()
@@ -191,8 +215,8 @@ class Set implements \ArrayAccess, \Countable, \IteratorAggregate
 
     /**
      * Ensure a value or object will remain globally unique
-     * @param  string  $key   The value or object name
-     * @param  Closure        The closure that defines the object
+     * @param  string   $key   The value or object name
+     * @param  \Closure $value The closure that defines the object
      * @return mixed
      */
     public function singleton($key, $value)
@@ -210,8 +234,8 @@ class Set implements \ArrayAccess, \Countable, \IteratorAggregate
 
     /**
      * Protect closure from being directly invoked
-     * @param  Closure $callable A closure to keep from being invoked and evaluated
-     * @return Closure
+     * @param  \Closure $callable A closure to keep from being invoked and evaluated
+     * @return \Closure
      */
     public function protect(\Closure $callable)
     {

@@ -3,10 +3,10 @@
  * Slim - a micro PHP 5 framework
  *
  * @author      Josh Lockhart <info@slimframework.com>
- * @copyright   2011 Josh Lockhart
+ * @copyright   2011-2017 Josh Lockhart
  * @link        http://www.slimframework.com
  * @license     http://www.slimframework.com/license
- * @version     2.3.0
+ * @version     2.6.3
  * @package     Slim
  *
  * MIT LICENSE
@@ -72,7 +72,7 @@ class Headers extends \Slim\Helper\Set
         foreach ($data as $key => $value) {
             $key = strtoupper($key);
             if (strpos($key, 'X_') === 0 || strpos($key, 'HTTP_') === 0 || in_array($key, static::$special)) {
-                if ($key === 'HTTP_CONTENT_TYPE' || $key === 'HTTP_CONTENT_LENGTH') {
+                if ($key === 'HTTP_CONTENT_LENGTH') {
                     continue;
                 }
                 $results[$key] = $value;

@@ -3,10 +3,10 @@
  * Slim - a micro PHP 5 framework
  *
  * @author      Josh Lockhart <info@slimframework.com>
- * @copyright   2011 Josh Lockhart
+ * @copyright   2011-2017 Josh Lockhart
  * @link        http://www.slimframework.com
  * @license     http://www.slimframework.com/license
- * @version     2.3.0
+ * @version     2.6.3
  * @package     Slim
  *
  * MIT LICENSE
@@ -33,23 +33,26 @@
 namespace Slim;
 
 // Ensure mcrypt constants are defined even if mcrypt extension is not loaded
-if (!extension_loaded('mcrypt')) {
-    define('MCRYPT_MODE_CBC', 0);
-    define('MCRYPT_RIJNDAEL_256', 0);
-}
+if (!defined('MCRYPT_MODE_CBC')) define('MCRYPT_MODE_CBC', 0);
+if (!defined('MCRYPT_RIJNDAEL_256')) define('MCRYPT_RIJNDAEL_256', 0);
 
 /**
  * Slim
- * @package Slim
- * @author  Josh Lockhart
- * @since   1.0.0
+ * @package  Slim
+ * @author   Josh Lockhart
+ * @since    1.0.0
+ *
+ * @property \Slim\Environment   $environment
+ * @property \Slim\Http\Response $response
+ * @property \Slim\Http\Request  $request
+ * @property \Slim\Router        $router
  */
 class Slim
 {
     /**
      * @const string
      */
-    const VERSION = '2.3.0';
+    const VERSION = '2.6.3';
 
     /**
      * @var \Slim\Helper\Set
@@ -172,8 +175,11 @@ class Slim
         // Default view
         $this->container->singleton('view', function ($c) {
             $viewClass = $c['settings']['view'];
+            $templatesPath = $c['settings']['templates.path'];
 
-            return ($viewClass instanceOf \Slim\View) ? $viewClass : new $viewClass;
+            $view = ($viewClass instanceOf \Slim\View) ? $viewClass : new $viewClass;
+            $view->setTemplatesDirectory($templatesPath);
+            return $view;
         });
 
         // Default log writer
@@ -223,20 +229,22 @@ class Slim
 
     public function __get($name)
     {
-        return $this->container[$name];
+        return $this->container->get($name);
     }
 
     public function __set($name, $value)
     {
-        $this->container[$name] = $value;
+        $this->container->set($name, $value);
     }
-    
-    public function __isset($name){
-    	return isset($this->container[$name]);
+
+    public function __isset($name)
+    {
+        return $this->container->has($name);
     }
-  
-    public function __unset($name){
-    	unset($this->container[$name]);
+
+    public function __unset($name)
+    {
+        $this->container->remove($name);
     }
 
     /**
@@ -298,7 +306,9 @@ class Slim
             'cookies.cipher' => MCRYPT_RIJNDAEL_256,
             'cookies.cipher_mode' => MCRYPT_MODE_CBC,
             // HTTP
-            'http.version' => '1.1'
+            'http.version' => '1.1',
+            // Routing
+            'routes.case_sensitive' => true
         );
     }
 
@@ -323,16 +333,20 @@ class Slim
      */
     public function config($name, $value = null)
     {
-        if (func_num_args() === 1) {
-            if (is_array($name)) {
-                $this->settings = array_merge($this->settings, $name);
+        $c = $this->container;
+
+        if (is_array($name)) {
+            if (true === $value) {
+                $c['settings'] = array_merge_recursive($c['settings'], $name);
             } else {
-                return isset($this->settings[$name]) ? $this->settings[$name] : null;
+                $c['settings'] = array_merge($c['settings'], $name);
             }
+        } elseif (func_num_args() === 1) {
+            return isset($c['settings'][$name]) ? $c['settings'][$name] : null;
         } else {
-            $settings = $this->settings;
+            $settings = $c['settings'];
             $settings[$name] = $value;
-            $this->settings = $settings;
+            $c['settings'] = $settings;
         }
     }
 
@@ -424,7 +438,7 @@ class Slim
     {
         $pattern = array_shift($args);
         $callable = array_pop($args);
-        $route = new \Slim\Route($pattern, $callable);
+        $route = new \Slim\Route($pattern, $callable, $this->settings['routes.case_sensitive']);
         $this->router->map($route);
         if (count($args) > 0) {
             $route->setMiddleware($args);
@@ -524,7 +538,7 @@ class Slim
      * declarations in the callback will be prepended by the group(s)
      * that it is in
      *
-     * Accepts the same paramters as a standard route so:
+     * Accepts the same parameters as a standard route so:
      * (pattern, middleware1, middleware2, ..., $callback)
      */
     public function group()
@@ -737,7 +751,6 @@ class Slim
         if (!is_null($status)) {
             $this->response->status($status);
         }
-        $this->view->setTemplatesDirectory($this->config('templates.path'));
         $this->view->appendData($data);
         $this->view->display($template);
     }
@@ -870,6 +883,7 @@ class Slim
      * the current request will not be available until the next request.
      *
      * @param  string      $name
+     * @param  bool        $deleteIfInvalid
      * @return string|null
      */
     public function getCookie($name, $deleteIfInvalid = true)
@@ -890,7 +904,12 @@ class Slim
             }
         }
 
-        return $value;
+        /*
+         * transform $value to @return doc requirement.
+         * \Slim\Http\Util::decodeSecureCookie -  is able
+         * to return false and we have to cast it to null.
+         */
+        return $value === false ? null : $value;
     }
 
     /**
@@ -1084,6 +1103,18 @@ class Slim
         $this->halt($status);
     }
 
+    /**
+     * RedirectTo
+     *
+     * Redirects to a specific named route
+     *
+     * @param string    $route      The route name
+     * @param array     $params     Associative array of URL parameters and replacement values
+     */
+    public function redirectTo($route, $params = array(), $status = 302){
+        $this->redirect($this->urlFor($route, $params), $status);
+    }
+
     /********************************************************************************
     * Flash Messages
     *******************************************************************************/
@@ -1122,6 +1153,16 @@ class Slim
         }
     }
 
+    /**
+     * Get all flash messages
+     */
+    public function flashData()
+    {
+        if (isset($this->environment['slim.flash'])) {
+            return $this->environment['slim.flash']->getMessages();
+        }
+    }
+
     /********************************************************************************
     * Hooks
     *******************************************************************************/
@@ -1144,10 +1185,10 @@ class Slim
 
     /**
      * Invoke hook
-     * @param  string   $name       The hook name
-     * @param  mixed    $hookArg    (Optional) Argument for hooked functions
+     * @param  string $name The hook name
+     * @param  mixed  ...   (Optional) Argument(s) for hooked functions, can specify multiple arguments
      */
-    public function applyHook($name, $hookArg = null)
+    public function applyHook($name)
     {
         if (!isset($this->hooks[$name])) {
             $this->hooks[$name] = array(array());
@@ -1157,10 +1198,14 @@ class Slim
             if (count($this->hooks[$name]) > 1) {
                 ksort($this->hooks[$name]);
             }
+
+            $args = func_get_args();
+            array_shift($args);
+
             foreach ($this->hooks[$name] as $priority) {
                 if (!empty($priority)) {
                     foreach ($priority as $callable) {
-                        call_user_func($callable, $hookArg);
+                        call_user_func_array($callable, $args);
                     }
                 }
             }
@@ -1221,6 +1266,10 @@ class Slim
      */
     public function add(\Slim\Middleware $newMiddleware)
     {
+        if(in_array($newMiddleware, $this->middleware)) {
+            $middleware_class = get_class($newMiddleware);
+            throw new \RuntimeException("Circular Middleware setup detected. Tried to queue the same Middleware instance ({$middleware_class}) twice.");
+        }
         $newMiddleware->setApplication($this);
         $newMiddleware->setNextMiddleware($this->middleware[0]);
         array_unshift($this->middleware, $newMiddleware);
@@ -1242,9 +1291,9 @@ class Slim
         set_error_handler(array('\Slim\Slim', 'handleErrors'));
 
         //Apply final outer middleware layers
-        if($this->config('debug')){
-        	//Apply pretty exceptions only in debug to avoid accidental information leakage in production
-        	$this->add(new \Slim\Middleware\PrettyExceptions());
+        if ($this->config('debug')) {
+            //Apply pretty exceptions only in debug to avoid accidental information leakage in production
+            $this->add(new \Slim\Middleware\PrettyExceptions());
         }
 
         //Invoke middleware and application stack
@@ -1274,8 +1323,12 @@ class Slim
             }
         }
 
-        //Send body
-        echo $body;
+        //Send body, but only if it isn't a HEAD request
+        if (!$this->request->isHead()) {
+            echo $body;
+        }
+
+        $this->applyHook('slim.after');
 
         restore_error_handler();
     }
@@ -1315,12 +1368,13 @@ class Slim
             $this->stop();
         } catch (\Slim\Exception\Stop $e) {
             $this->response()->write(ob_get_clean());
-            $this->applyHook('slim.after');
         } catch (\Exception $e) {
             if ($this->config('debug')) {
+                ob_end_clean();
                 throw $e;
             } else {
                 try {
+                    $this->response()->write(ob_get_clean());
                     $this->error($e);
                 } catch (\Slim\Exception\Stop $e) {
                     // Do nothing
@@ -1384,6 +1438,6 @@ class Slim
     protected function defaultError($e)
     {
         $this->getLog()->error($e);
-        echo self::generateTemplateMarkup('Error', '<p>A website error has occured. The website administrator has been notified of the issue. Sorry for the temporary inconvenience.</p>');
+        echo self::generateTemplateMarkup('Error', '<p>A website error has occurred. The website administrator has been notified of the issue. Sorry for the temporary inconvenience.</p>');
     }
 }
