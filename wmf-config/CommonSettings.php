@@ -3072,7 +3072,6 @@ if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 	include( "$wmfConfigDir/Wikibase.php" );
 }
 
-// Do not attempt to load SMW for l10n in beta.
 if ( $wmfRealm != 'labs' ) {
 	// Tell localization cache builder about extensions used in wikitech
 	$wgExtensionEntryPointListFiles[] = "$wmfConfigDir/extension-list-wikitech";
