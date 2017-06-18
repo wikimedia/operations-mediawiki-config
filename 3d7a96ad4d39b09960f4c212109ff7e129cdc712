@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ee859f59_2d16f15a",
+        "filename": "composer.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-06-18T22:56:38Z",
+      "side": 0,
+      "message": "This was roughly 0.7.1... But it\u0027s not tagged on packagist\n\nhttps://packagist.org/packages/perftools/xhgui",
+      "range": {
+        "startLine": 6,
+        "startChar": 21,
+        "endLine": 6,
+        "endChar": 33
+      },
+      "revId": "3d7a96ad4d39b09960f4c212109ff7e129cdc712",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
