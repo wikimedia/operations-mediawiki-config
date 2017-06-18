@@ -3,7 +3,7 @@
 return [
 	'alphabetic' => [
 		'ace', 'kbd', 'ady', 'af', 'ak', 'als', 'am', 'ang', 'ab', 'ar', 'an', 'arc',
-		'roa-rup', 'frp', 'as', 'ast', 'gn', 'av', 'ay', 'az', 'azb', 'bm', 'bn', 'bjn',
+		'roa-rup', 'frp', 'as', 'ast', 'atj', 'gn', 'av', 'ay', 'az', 'azb', 'bm', 'bn', 'bjn',
 		'zh-min-nan', 'nan', 'map-bms', 'ba', 'be', 'be-x-old', 'bh', 'bcl', 'bi',
 		'bg', 'bar', 'bo', 'bs', 'br', 'bxr', 'ca', 'cv', 'ceb', 'cs', 'ch',
 		'cbk-zam', 'ny', 'sn', 'tum', 'cho', 'co', 'cy', 'da', 'dk', 'pdc', 'de',
@@ -31,7 +31,7 @@ return [
 	],
 	'alphabetic_revised' => [
 		'ace', 'ady', 'kbd', 'af', 'ak', 'als', 'am', 'ang', 'ab', 'ar', 'an', 'arc', 'roa-rup',
-		'frp', 'as', 'ast', 'gn', 'av', 'ay', 'az', 'azb', 'bjn', 'id', 'ms', 'bm', 'bn',
+		'frp', 'as', 'ast', 'atj', 'gn', 'av', 'ay', 'az', 'azb', 'bjn', 'id', 'ms', 'bm', 'bn',
 		'zh-min-nan', 'nan', 'map-bms', 'jv', 'su', 'ba', 'min', 'be', 'be-x-old', 'bh',
 		'bcl', 'bi', 'bar', 'bo', 'bs', 'br', 'bug', 'bg', 'bxr', 'ca', 'ceb', 'cv', 'cs',
 		'ch', 'cbk-zam', 'ny', 'sn', 'tum', 'cho', 'co', 'cy', 'da', 'dk', 'pdc', 'de',
@@ -58,7 +58,7 @@ return [
 	],
 	'alphabetic_sr' => [
 		'ace', 'ady', 'kbd', 'af', 'ak', 'als', 'am', 'ang', 'ab', 'ar', 'an', 'arc',
-		'roa-rup', 'frp', 'arz', 'as', 'ast', 'gn', 'av', 'ay', 'az', 'azb', 'bjn', 'id',
+		'roa-rup', 'frp', 'arz', 'as', 'ast', 'atj', 'gn', 'av', 'ay', 'az', 'azb', 'bjn', 'id',
 		'ms', 'bg', 'bm', 'zh-min-nan', 'nan', 'map-bms', 'jv', 'su', 'ba', 'be',
 		'be-x-old', 'bh', 'bcl', 'bi', 'bn', 'bo', 'bar', 'bs', 'bpy', 'br', 'bug',
 		'bxr', 'ca', 'ceb', 'ch', 'cbk-zam', 'sn', 'tum', 'ny', 'cho', 'chr', 'co',
@@ -86,8 +86,8 @@ return [
 	],
 	'alphabetic_fy' => [
 		'aa', 'ab', 'ace', 'ady', 'af', 'ay', 'ak', 'als', 'am', 'an', 'ang', 'ar', 'arc',
-		'arz', 'as', 'ast', 'av', 'az', 'azb', 'ba', 'bar', 'bat-smg', 'bcl', 'be', 'be-x-old',
-		'bg', 'bh', 'bi', 'bjn', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'bug', 'bxr',
+		'arz', 'as', 'ast', 'atj', 'av', 'az', 'azb', 'ba', 'bar', 'bat-smg', 'bcl', 'be',
+		'be-x-old', 'bg', 'bh', 'bi', 'bjn', 'bm', 'bn', 'bo', 'bpy', 'br', 'bs', 'bug', 'bxr',
 		'ca', 'cbk-zam', 'cdo', 'ce', 'ceb', 'ch', 'chy', 'cho', 'chr', 'cy', 'ckb',
 		'co', 'cr', 'crh', 'cs', 'csb', 'cu', 'cv', 'da', 'de', 'diq', 'dk', 'dsb', 'dv',
 		'dz', 'ee', 'el', 'eml', 'en', 'eo', 'es', 'et', 'eu', 'ext', 'fa', 'ff', 'fi',
@@ -112,7 +112,7 @@ return [
 		'zh-tw', 'zu'
 	],
 	'alphabetic_svwiktionary' => [
-		'aa', 'af', 'ak', 'als', 'an', 'roa-rup', 'ast', 'gn', 'ay', 'az',
+		'aa', 'af', 'ak', 'als', 'an', 'roa-rup', 'ast', 'atj', 'gn', 'ay', 'az',
 		'id', 'ms', 'bm', 'zh-min-nan', 'jv', 'su', 'mt', 'bi', 'bo', 'bs',
 		'br', 'ca', 'cs', 'ch', 'sn', 'co', 'za', 'cy', 'da', 'de', 'na',
 		'mh', 'et', 'ang', 'en', 'es', 'eo', 'eu', 'to', 'fr', 'fy', 'fo',
