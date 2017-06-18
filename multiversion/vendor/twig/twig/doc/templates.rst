@@ -59,6 +59,7 @@ Many IDEs support syntax highlighting and auto-completion for Twig:
 * *Notepad++* via the `Notepad++ Twig Highlighter`_
 * *Emacs* via `web-mode.el`_
 * *Atom* via the `PHP-twig for atom`_
+* *Visual Studio Code* via the `Twig pack`_
 
 Also, `TwigFiddle`_ is an online service that allows you to execute Twig templates
 from a browser; it supports all versions of Twig.
@@ -293,25 +294,24 @@ designers or yourself:
 Including other Templates
 -------------------------
 
-The :doc:`include<tags/include>` tag is useful to include a template and
-return the rendered content of that template into the current one:
+The :doc:`include<functions/include>` function is useful to include a template
+and return the rendered content of that template into the current one:
 
 .. code-block:: jinja
 
-    {% include 'sidebar.html' %}
+    {{ include('sidebar.html') }}
 
-Per default included templates are passed the current context.
-
-The context that is passed to the included template includes variables defined
-in the template:
+By default, included templates have access to the same context as the template
+which includes them. This means that any variable defined in the main template
+will be available in the included template too:
 
 .. code-block:: jinja
 
     {% for box in boxes %}
-        {% include "render_box.html" %}
+        {{ include('render_box.html') }}
     {% endfor %}
 
-The included template ``render_box.html`` is able to access ``box``.
+The included template ``render_box.html`` is able to access the ``box`` variable.
 
 The filename of the template depends on the template loader. For instance, the
 ``Twig_Loader_Filesystem`` allows you to access other templates by giving the
@@ -319,7 +319,7 @@ filename. You can access templates in subdirectories with a slash:
 
 .. code-block:: jinja
 
-    {% include "sections/articles/sidebar.html" %}
+    {{ include('sections/articles/sidebar.html') }}
 
 This behavior depends on the application embedding Twig.
 
@@ -424,10 +424,8 @@ everything by default.
 
 Twig supports both, automatic escaping is enabled by default.
 
-.. note::
-
-    Automatic escaping is only supported if the *escaper* extension has been
-    enabled (which is the default).
+The automatic escaping strategy can be configured via the
+:ref:`autoescape<environment_options>` option and defaults to ``html``.
 
 Working with Manual Escaping
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -587,7 +585,9 @@ exist:
   string. They are useful whenever you need a string in the template (for
   example as arguments to function calls, filters or just to extend or include
   a template). A string can contain a delimiter if it is preceded by a
-  backslash (``\``) -- like in ``'It\'s good'``.
+  backslash (``\``) -- like in ``'It\'s good'``. If the string contains a
+  backslash (e.g. ``'c:\Program Files'``) escape it by doubling it
+  (e.g. ``'c:\\Program Files'``).
 
 * ``42`` / ``42.23``: Integers and floating point numbers are created by just
   writing the number down. If a dot is present the number is a float,
@@ -821,7 +821,7 @@ String Interpolation
 .. versionadded:: 1.5
     String interpolation was added in Twig 1.5.
 
-String interpolation (`#{expression}`) allows any valid expression to appear
+String interpolation (``#{expression}``) allows any valid expression to appear
 within a *double-quoted string*. The result of evaluating that expression is
 inserted into the string:
 
@@ -869,7 +869,7 @@ leading and or trailing whitespace:
     {# output 'no spaces' #}
 
 The above sample shows the default whitespace control modifier, and how you can
-use it to remove whitespace around tags.  Trimming space will consume all whitespace
+use it to remove whitespace around tags. Trimming space will consume all whitespace
 for that side of the tag.  It is possible to use whitespace trimming on one side
 of a tag:
 
@@ -893,7 +893,7 @@ Extension<creating_extensions>` chapter.
 
 .. _`Twig bundle`:                https://github.com/Anomareh/PHP-Twig.tmbundle
 .. _`Jinja syntax plugin`:        http://jinja.pocoo.org/docs/integration/#vim
-.. _`vim-twig plugin`:            https://github.com/evidens/vim-twig
+.. _`vim-twig plugin`:            https://github.com/lumiliet/vim-twig
 .. _`Twig syntax plugin`:         http://plugins.netbeans.org/plugin/37069/php-twig
 .. _`Twig plugin`:                https://github.com/pulse00/Twig-Eclipse-Plugin
 .. _`Twig language definition`:   https://github.com/gabrielcorpse/gedit-twig-template-language
@@ -905,3 +905,4 @@ Extension<creating_extensions>` chapter.
 .. _`regular expressions`:        http://php.net/manual/en/pcre.pattern.php
 .. _`PHP-twig for atom`:          https://github.com/reesef/php-twig
 .. _`TwigFiddle`:                 http://twigfiddle.com/
+.. _`Twig pack`:                  https://marketplace.visualstudio.com/items?itemName=bajdzis.vscode-twig-pack

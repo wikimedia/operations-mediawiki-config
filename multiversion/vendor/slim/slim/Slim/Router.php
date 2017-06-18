@@ -3,10 +3,10 @@
  * Slim - a micro PHP 5 framework
  *
  * @author      Josh Lockhart <info@slimframework.com>
- * @copyright   2011 Josh Lockhart
+ * @copyright   2011-2017 Josh Lockhart
  * @link        http://www.slimframework.com
  * @license     http://www.slimframework.com/license
- * @version     2.3.0
+ * @version     2.6.3
  * @package     Slim
  *
  * MIT LICENSE
@@ -192,8 +192,8 @@ class Router
         }
         $pattern = preg_replace($search, $params, $this->getNamedRoute($name)->getPattern());
 
-        //Remove remnants of unpopulated, trailing optional pattern segments
-        return preg_replace('#\(/?:.+\)|\(|\)#', '', $pattern);
+        //Remove remnants of unpopulated, trailing optional pattern segments, escaped special characters
+        return preg_replace('#\(/?:.+\)|\(|\)|\\\\#', '', $pattern);
     }
 
     /**
@@ -232,9 +232,9 @@ class Router
         $this->getNamedRoutes();
         if ($this->hasNamedRoute($name)) {
             return $this->namedRoutes[(string) $name];
-        } else {
-            return null;
         }
+
+        return null;
     }
 
     /**
