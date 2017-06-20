@@ -34,7 +34,7 @@ if ( $wmgUseWikibaseRepo ) {
 			],
 		];
 
-		$wgWBSharedSettings['siteLinkGroups'] = [
+		$wgWBRepoSettings['siteLinkGroups'] = [
 			'wikipedia',
 			'wikibooks',
 			'wikinews',
