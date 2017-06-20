@@ -17299,7 +17299,7 @@ $wgConf->settings = [
 	'related-articles-footer-blacklisted-skins' => [],
 ],
 
-'wgRelatedArticlesEnabledSamplingRate' => [
+'wgRelatedArticlesEnabledBucketSize' => [
 	'default' => 1,
 	// T167310
 	'enwiki' => 0.98,

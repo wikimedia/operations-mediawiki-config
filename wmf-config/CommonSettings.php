@@ -2891,7 +2891,7 @@ if ( $wmgUseRelatedArticles ) {
 	if ( $wmgRelatedArticlesShowInFooter ) {
 		$wgRelatedArticlesShowInSidebar = false;
 		$wgRelatedArticlesShowInFooter = true;
-		$wgRelatedArticlesLoggingSamplingRate = 0.01;
+		$wgRelatedArticlesLoggingBucketSize = 0.01;
 		$wgRelatedArticlesUseCirrusSearch = $wmgRelatedArticlesUseCirrusSearch;
 		$wgRelatedArticlesOnlyUseCirrusSearch = false;
 	}
