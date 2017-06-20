@@ -25,6 +25,7 @@ $wgWBSharedSettings['siteLinkGroups'] = [
 	'wikisource',
 	'wikiversity',
 	'wikivoyage',
+	'wiktionary',
 	'special'
 ];
 
@@ -196,6 +197,7 @@ if ( $wmgUseWikibaseClient ) {
 
 		if ( in_array( $wgDBname, MWWikiversions::readDbListFile( 'wiktionary' ) ) ) {
 			$excludeNamespaces[] = NS_MAIN;
+			$excludeNamespaces[] = 114; // citations ns
 		}
 
 		return $excludeNamespaces;

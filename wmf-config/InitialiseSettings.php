@@ -17496,6 +17496,7 @@ $wgConf->settings = [
 
 'wmgWikibaseEnableData' => [
 	'default' => true,
+	'wiktionary' => false,
 ],
 
 'wmgWikibaseEntityAccessLimit' => [
@@ -17523,6 +17524,7 @@ $wgConf->settings = [
 'wmgUseWikibaseClient' => [
 	'default' => false,
 	'wikidataclient' => true,
+	'wiktionary' => true,
 ],
 
 'wmgUseArticlePlaceholder' => [
@@ -17549,6 +17551,7 @@ $wgConf->settings = [
 	'wikiversity' => 'wikiversity',
 	'wikivoyage' => 'wikivoyage',
 	'wikisource' => 'wikisource',
+	'wiktionary' => 'wiktionary',
 	'commonswiki' => 'commons',
 	'mediawikiwiki' => 'mediawiki',
 	'metawiki' => 'meta',
