@@ -14652,12 +14652,18 @@ $wgConf->settings = [
 ],
 
 // Whether to use OOUI to render the buttons on EditPage.php
-// Temporarily disabled during testing of the feature, 2017-03-24.
+// Temporarily disabled during testing of the feature, 2017-03-24 – T162849.
 'wgOOUIEditPage' => [
 	'default' => false,
 	'mediawikiwiki' => true,
-	'fawiki' => true, // T162849
-	'plwiki' => true, // T162849
+	'eswiki' => true,
+	'fawiki' => true,
+	'frwiki' => true,
+	'itwiki' => true,
+	'jawiki' => true,
+	'plwiki' => true,
+	'ruwiki' => true,
+	'metawiki' => true,
 ],
 
 'wgCiteResponsiveReferences' => [
