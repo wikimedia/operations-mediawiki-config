@@ -25,6 +25,7 @@ $wgWBSharedSettings['siteLinkGroups'] = [
 	'wikisource',
 	'wikiversity',
 	'wikivoyage',
+	'wiktionary',
 	'special'
 ];
 
