@@ -17304,6 +17304,12 @@ $wgConf->settings = [
 	'enwiki' => 0.98,
 ],
 
+'wgRelatedArticlesEnabledBucketSize' => [
+	'default' => 1,
+	// T167310
+	'enwiki' => 0.98,
+],
+
 'wmgUseRelatedSites' => [
 	'default' => false,
 	'wikivoyage' => true,

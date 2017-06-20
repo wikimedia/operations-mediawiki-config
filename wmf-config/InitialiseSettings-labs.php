@@ -359,7 +359,7 @@ function wmfLabsSettings() {
 		'wmgUseRelatedArticles' => [
 			'default' => true,
 		],
-		'wgRelatedArticlesEnabledSamplingRate' => [
+		'wgRelatedArticlesEnabledBucketSize' => [
 			'default' => 1,
 			'enwiki' => 1,
 		],
