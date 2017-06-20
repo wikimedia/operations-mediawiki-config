@@ -4241,6 +4241,9 @@ $wgConf->settings = [
 		'Portal' => 100, // T162547
 		'Portal_talk' => 101, // T162547
 		'Wikipedia_talk' => NS_PROJECT_TALK, // T162547
+		'用户' => NS_USER,  // T168422
+		'用户討論' NS_USER_TALK, // T168422
+
 	],
 	'+zhwiki' => [
 		'维基百科' => NS_PROJECT,
