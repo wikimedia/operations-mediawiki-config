@@ -25,6 +25,7 @@ $wgWBSharedSettings['siteLinkGroups'] = [
 	'wikisource',
 	'wikiversity',
 	'wikivoyage',
+	'wiktionary',
 	'special'
 ];
 
@@ -188,10 +189,11 @@ if ( $wmgUseWikibaseClient ) {
 			MWNamespace::getTalkNamespaces(),
 			// 90 => LiquidThread threads
 			// 92 => LiquidThread summary
+			// 114 => Citations namespace on Wiktionary
 			// 118 => Draft
 			// 1198 => NS_TRANSLATE
 			// 2600 => Flow topic
-			[ NS_USER, NS_FILE, NS_MEDIAWIKI, 90, 92, 118, 1198, 2600 ]
+			[ NS_USER, NS_FILE, NS_MEDIAWIKI, 90, 92, 114, 118, 1198, 2600 ]
 		);
 
 		if ( in_array( $wgDBname, MWWikiversions::readDbListFile( 'wiktionary' ) ) ) {
