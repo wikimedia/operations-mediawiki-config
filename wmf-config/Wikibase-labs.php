@@ -61,16 +61,4 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWikimediaBadgesCommonsCategoryProperty = 'P725';
 
 	$wgArticlePlaceholderImageProperty = 'P964';
-
-	$wgWBClientSettings['siteLinkGroups'] = [
-		'wikipedia',
-		'wikibooks',
-		'wikinews',
-		'wikiquote',
-		'wikisource',
-		'wikiversity',
-		'wikivoyage',
-		'wiktionary',
-		'special'
-	];
 }

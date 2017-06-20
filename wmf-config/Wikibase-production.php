@@ -33,18 +33,6 @@ if ( $wmgUseWikibaseRepo ) {
 				'propertyIds' => [ 'P400' ],
 			],
 		];
-
-		$wgWBRepoSettings['siteLinkGroups'] = [
-			'wikipedia',
-			'wikibooks',
-			'wikinews',
-			'wikiquote',
-			'wikisource',
-			'wikiversity',
-			'wikivoyage',
-			'wiktionary',
-			'special'
-		];
 	} else {
 		$wgWBRepoSettings['sparqlEndpoint'] = 'https://query.wikidata.org/sparql';
 
