@@ -14645,13 +14645,7 @@ $wgConf->settings = [
 'wgOOUIEditPage' => [
 	'default' => false,
 	'mediawikiwiki' => true,
-	'eswiki' => true,
-	'fawiki' => true,
-	'frwiki' => true,
-	'itwiki' => true,
-	'jawiki' => true,
-	'plwiki' => true,
-	'ruwiki' => true,
+	'wikipedia' => true,
 ],
 
 'wgCiteResponsiveReferences' => [
