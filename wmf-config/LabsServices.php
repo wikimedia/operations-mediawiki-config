@@ -30,8 +30,8 @@ $wmfAllServices['eqiad'] = [
 	'cxserver' => 'http://deployment-sca01.eqiad.wmflabs:8080',
 	'irc' => 'irc.beta.wmflabs.org', // deployment-ircd
 	'redis_lock' => [
-		'rdb1' => '10.68.16.177', // deployment-redis01.deployment-prep.eqiad.wmflabs
-		'rdb2' => '10.68.16.231', // deployment-redis02.deployment-prep.eqiad.wmflabs
+		'rdb1' => 'deployment-redis01.deployment-prep.eqiad.wmflabs'
+		'rdb2' => 'deployment-redis02.deployment-prep.eqiad.wmflabs'
 	],
 	'etcd' => 'deployment-etcd-01.deployment-prep.eqiad.wmflabs:2379',
 	'mediaSwiftAuth' => 'http://deployment-ms-fe02.deployment-prep.eqiad.wmflabs/auth',
@@ -40,7 +40,7 @@ $wmfAllServices['eqiad'] = [
 
 ### Logstash
 $wmfAllServices['eqiad']['logstash'] = [
-	'10.68.16.147', // deployment-logstash2.deployment-prep.eqiad.wmflabs
+	'deployment-logstash2.deployment-prep.eqiad.wmflabs',
 ];
 
 ### Analytics Kafka cluster (analytics-deployment-prep)
@@ -50,9 +50,9 @@ $wmfAllServices['eqiad']['kafka'] = [
 ];
 
 ### Restbase
-$wmfAllServices['eqiad']['restbase'] = 'http://10.68.17.189:7231'; // deployment-restbase02.deployment-prep.eqiad.wmflabs
+$wmfAllServices['eqiad']['restbase'] = 'http://deployment-restbase02.deployment-prep.eqiad.wmflabs:7231';
 
 ### Poolcounter
 $wmfAllServices['eqiad']['poolcounter'] = [
-	'10.68.17.48', # deployment-poolcounter04.deployment-prep.eqiad.wmflabs
+	'deployment-poolcounter04.deployment-prep.eqiad.wmflabs',
 ];
