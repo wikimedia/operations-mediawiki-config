@@ -11822,6 +11822,7 @@ $wgConf->settings = [
 	'nlwikibooks' => true,
 	'plwikibooks' => true,
 	'ptwikibooks' => true,
+	'huwikibooks' => true, // T168471
 	'svwiki' => true,
 	'viwikibooks' => true, // T40361
 	'zhwiki' => true,
