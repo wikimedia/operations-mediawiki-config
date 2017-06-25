@@ -482,6 +482,7 @@
     "lvwikibooks": "php-1.30.0-wmf.6",
     "lvwiktionary": "php-1.30.0-wmf.6",
     "maiwiki": "php-1.30.0-wmf.5",
+    "maiwikimedia": "php-1.30.0-wmf.6",
     "map_bmswiki": "php-1.30.0-wmf.5",
     "mdfwiki": "php-1.30.0-wmf.5",
     "mediawikiwiki": "php-1.30.0-wmf.6",
