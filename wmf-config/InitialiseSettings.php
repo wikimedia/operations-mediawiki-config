@@ -368,6 +368,7 @@ $wgConf->settings = [
 	'lmowiki' => 'Europe/Rome',
 	'lvwiki' => 'Europe/Riga', // T45592
 	'maiwiki' => 'Asia/Kathmandu', // T74346
+	'maiwikimedia' => 'Asia/Kathmandu',
 	'mkwiki' => 'Europe/Berlin',
 	'mkwikibooks' => 'Europe/Berlin',
 	'mkwikimedia' => 'Europe/Berlin',
@@ -1665,6 +1666,7 @@ $wgConf->settings = [
 	'labtestwiki' => "https://labtestwikitech.wikimedia.org",
 	'legalteamwiki' => '//legalteam.wikimedia.org',
 	'loginwiki' => '//login.wikimedia.org',
+	'maiwikimedia' => '//mai.wikimedia.org',
 	'mediawikiwiki' => '//www.mediawiki.org',
 	'metawiki' => '//meta.wikimedia.org',
 	'movementroleswiki' => '//movementroles.wikimedia.org',
@@ -2072,6 +2074,7 @@ $wgConf->settings = [
 	'ltwiktionary' => 'Vikižodynas',
 	'lvwiki' => 'Vikipēdija',
 	'maiwiki' => 'विकिपिडिया', // T74346
+	'maiwikimedia' => 'मैथिली विकिमिडियन्स',
 	'mdfwiki' => 'Википедиесь',
 	'mediawikiwiki' => 'MediaWiki',
 	'metawiki' => 'Meta',
@@ -9854,6 +9857,9 @@ $wgConf->settings = [
 	'+maiwiki' => [
 		'sysop' => [ 'autopatrolled', 'patroller', 'rollbacker', 'import', 'accountcreator' ], // T89346, T99491, T118934, T126950
 	],
+	'+maiwikimedia' => [
+		'bureaucrat' => [ 'translationadmin' ],
+	],
 	'+mediawikiwiki' => [
 		'sysop' => [ 'autopatrolled' ],
 		'bureaucrat' => [ 'autopatrolled', 'transwiki', 'import', 'translationadmin' ],
@@ -10598,6 +10604,9 @@ $wgConf->settings = [
 	],
 	'+maiwiki' => [
 		'sysop' => [ 'autopatrolled', 'patroller', 'rollbacker', 'import', 'accountcreator' ], // T89346, T99491, T118934, T126950
+	],
+	'+maiwikimedia' => [
+		'bureaucrat' => [ 'translationadmin' ],
 	],
 	'+mediawikiwiki' => [
 		'sysop' => [ 'autopatrolled' ],
@@ -16499,6 +16508,7 @@ $wgConf->settings = [
 	'frwiktionary' => true, // T138972
 	'incubatorwiki' => true, // T36213
 	'legalteamwiki' => true, // T64610
+	'maiwikimedia' => true,
 	'mediawikiwiki' => true,
 	'metawiki' => true,
 	'nowikimedia' => true, // T152490
