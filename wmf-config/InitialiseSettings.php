@@ -4952,6 +4952,7 @@ $wgConf->settings = [
 		'JobQueueRedis' => 'debug',
 		'lc-recache' => 'debug',
 		'ldap' => 'warning',
+		'Linter' => 'debug',
 		'localhost' => [ 'logstash' => false ],
 		'logging' => 'debug',
 		'MassMessage' => 'debug', // for 59464 -legoktm 2013/12/15
