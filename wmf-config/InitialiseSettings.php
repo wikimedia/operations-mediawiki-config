@@ -15246,6 +15246,9 @@ $wgConf->settings = [
 	'private' => '',
 	'fishbowl' => '',
 ],
+'wgMFLogWrappedInfoboxes' => [
+	'default' => false, // T169001
+],
 'wgMFNearby' => [
 	'default' => true, // Does not gets enabled on wikis w/o GeoData anyway
 ],
