@@ -15246,10 +15246,6 @@ $wgConf->settings = [
 	'private' => '',
 	'fishbowl' => '',
 ],
-'wgMFContentNamespace' => [
-	'default' => NS_MAIN,
-	'commonswiki' => NS_FILE,
-],
 'wgMFNearby' => [
 	'default' => true, // Does not gets enabled on wikis w/o GeoData anyway
 ],
