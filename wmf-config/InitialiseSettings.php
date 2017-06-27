@@ -8876,6 +8876,9 @@ $wgConf->settings = [
 	'ptwikinews' => [
 		'editprotected' => [ 'editprotected' => true, 'editsemiprotected' => true ], // T162577
 	],
+	'ptwikivoyage' => [
+		'autopatrolled' => [ 'autopatrol' => true, ], // T168981
+	],
 	'+quwiki' => [
 		'rollbacker' => [ 'rollback' => true ],
 	],
