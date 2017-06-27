@@ -8876,6 +8876,9 @@ $wgConf->settings = [
 	'ptwikinews' => [
 		'editprotected' => [ 'editprotected' => true, 'editsemiprotected' => true ], // T162577
 	],
+	'ptwikivoyage' => [
+		'autopatrolled' => [ 'autopatrol' => true, ], // T168981
+	],
 	'+quwiki' => [
 		'rollbacker' => [ 'rollback' => true ],
 	],
@@ -9944,6 +9947,9 @@ $wgConf->settings = [
 	'+ptwikinews' => [
 		'sysop' => [ 'reviewer', 'editprotected' ], // T162577
 	],
+	'+ptwikivoyage' => [
+		'sysop' => [ 'autopatrolled' ], // T168981
+	],
 	'+private' => [ // Cary made me do it! --Andrew 2009-05-01
 		'bureaucrat' => [ 'inactive' ],
 	],
@@ -10694,6 +10700,9 @@ $wgConf->settings = [
 	],
 	'+ptwikinews' => [
 		'sysop' => [ 'reviewer', 'editprotected' ], // T162577
+	],
+	'+ptwikivoyage' => [
+		'sysop' => [ 'autopatrolled' ], // T168981
 	],
 	'+quwiki' => [
 		'sysop' => [ 'rollbacker' ],
