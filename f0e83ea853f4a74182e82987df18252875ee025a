@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e742343_63272fb2",
+        "filename": "wikiversions.json",
+        "patchSetId": 4
+      },
+      "lineNbr": 485,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-06-27T19:02:25Z",
+      "side": 1,
+      "message": "Unexpected trailing space.",
+      "range": {
+        "startLine": 485,
+        "startChar": 39,
+        "endLine": 485,
+        "endChar": 40
+      },
+      "revId": "f0e83ea853f4a74182e82987df18252875ee025a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e742343_a32d178d",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 372,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-06-27T19:02:25Z",
+      "side": 1,
+      "message": "Unexpected trailing space.",
+      "range": {
+        "startLine": 372,
+        "startChar": 36,
+        "endLine": 372,
+        "endChar": 37
+      },
+      "revId": "f0e83ea853f4a74182e82987df18252875ee025a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
