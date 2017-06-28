@@ -4990,7 +4990,6 @@ $wgConf->settings = [
 		'T76305' => 'debug', // - Krinkle and Krenair, for https://gerrit.wikimedia.org/r/188987
 		'T87645' => 'debug', // - Ori on behalf of Tim, for https://gerrit.wikimedia.org/r/#/c/188304/
 		'T143073' => 'debug',
-		'temp-debug' => 'debug', // generic admin debug log
 		'texvc' => 'debug',
 		'thumbnailaccess' => 'debug', // T106323
 		'thumbnail' => 'debug',
