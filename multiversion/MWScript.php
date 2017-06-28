@@ -12,13 +12,13 @@ if ( PHP_SAPI !== 'cli' ) {
  * The second argument must be the --wiki parameter. This is to avoid
  * any "options with args" ambiguity (see Maintenance.php).
  *
- * When the actual script is run, $argv[0] (this file's name) will be not be kept.
+ * When the actual script wis run, $argv[0] (this file's name) will be not be kept.
  * Also, $argv[1] (the script path) will be changed to the script file name.
  * All other arguments will be preserved.
  *
  * @return string Absolute MediaWiki script path
  */
-function getMWScriptWithArgs() {
+function getMWScriptWithArgsw() {
 	global $argv;
 	if ( count( $argv ) < 2 ) {
 		fwrite( STDERR, "This script can only be run from the command line.\n" );
