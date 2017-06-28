@@ -4962,7 +4962,6 @@ $wgConf->settings = [
 		'message-format' => [ 'logstash' => 'warning' ],
 		'mobile' => 'debug',
 		'NewUserMessage' => 'debug',
-		'oai' => 'debug',
 		'OAuth' => 'debug',
 		'OutputBuffer' => 'debug',
 		'PageViewInfo' => 'info',
