@@ -5019,12 +5019,6 @@ $wgConf->settings = [
 	'+private' => [
 		'slow-parse' => false,  // Don't log slow parse on private wikis, so we can make the slow parse log public.
 	],
-
-	// To measure the # of articles on enwiki during the <million => >million transition
-	'+testwiki' => [
-		'articles' => 'debug',
-		'imagemove' => 'debug',
-	],
 ],
 # @} end of wmgMonologChannels
 
