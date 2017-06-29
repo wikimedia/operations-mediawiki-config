@@ -288,6 +288,7 @@ $wgConf->settings = [
 	'dewikisource' => 'Europe/Berlin',
 	'dewikivoyage' => 'Europe/Berlin', // T43992
 	'dewikiversity' => 'Europe/Berlin',
+	'dinwiki' => 'Africa/Juba',
 	'dsbwiki' => 'Europe/Berlin',
 	'dtywiki' => 'Asia/Kathmandu', // T161529
 	'dvwiki' => 'Indian/Maldives', // T48351
@@ -545,6 +546,7 @@ $wgConf->settings = [
 	'cywiki' => '/static/images/project-logos/cywiki.png',
 	'dawiki' => '/static/images/project-logos/dawiki.png',
 	'dewiki' => '/static/images/project-logos/dewiki.png',
+	'dinwiki' => '/static/images/project-logos/dinwiki.png',
 	'diqwiki' => '/static/images/project-logos/diqwiki.png',
 	'dsbwiki' => '/static/images/project-logos/dsbwiki.png',
 	'dtywiki' => '/static/images/project-logos/dtywiki.png', // T161529
@@ -1228,6 +1230,7 @@ $wgConf->settings = [
 	'cywiki' => [ '1.5x' => '/static/images/project-logos/cywiki-1.5x.png', '2x' => '/static/images/project-logos/cywiki-2x.png'], // T150618
 	'dawiki' => [ '1.5x' => '/static/images/project-logos/dawiki-1.5x.png', '2x' => '/static/images/project-logos/dawiki-2x.png' ], // T131033
 	'dewiki' => [ '1.5x' => '/static/images/project-logos/dewiki-1.5x.png', '2x' => '/static/images/project-logos/dewiki-2x.png' ], // T132792
+	'dinwiki' => [ '1.5x' => '/static/images/project-logos/dinwiki-1.5x.png', '2x' => '/static/images/project-logos/dinwiki-2x.png' ],
 	'diqwiki' => [ '1.5x' => '/static/images/project-logos/diqwiki-1.5x.png', '2x' => '/static/images/project-logos/diqwiki-2x.png'], // T150618
 	'dsbwiki' => [ '1.5x' => '/static/images/project-logos/dsbwiki-1.5x.png', '2x' => '/static/images/project-logos/dsbwiki-2x.png'], // T150618
 	'dtywiki' => [ '1.5x' => '/static/images/project-logos/dtywiki-1.5x.png', '2x' => '/static/images/project-logos/dtywiki-2x.png'], // T150618
