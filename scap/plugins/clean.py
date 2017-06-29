@@ -130,8 +130,7 @@ class Clean(main.AbstractSync):
                     subprocess.call(command)
                 except subprocess.CalledProcessError:
                     logger.warning('Command failed [%s]: %s' % (
-                        name, ' '.join(command))
-                    pass
+                        name, ' '.join(command)))
 
     def _after_lock_release(self):
         self.announce(self.arguments.message + ' (duration: %s)' %
