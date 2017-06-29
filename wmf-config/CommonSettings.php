@@ -1938,7 +1938,8 @@ if ( $wmgUseLivePreview ) {
 
 if ( $wmgUseLoginNotify ) {
 	wfLoadExtension( 'LoginNotify' );
-	$wgLoginNotifyEnableOnSuccess = false;
+	$wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
+
 }
 
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
