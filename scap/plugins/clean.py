@@ -96,10 +96,11 @@ class Clean(main.AbstractSync):
                     'ExtensionMessages-%s.php' % branch)],
         }
 
+        logger = self.get_logger()
+
         if delete:
             gerrit_prune_cmd = ['git', 'push', 'origin', '--quiet', '--delete',
                                 'wmf/%s' % branch]
-            logger = self.get_logger()
             with log.Timer('prune-git-branches', self.get_stats()):
                 # Prune all the submodules' remote branches
                 for submodule in git.list_submodules(stage_dir):
@@ -125,7 +126,12 @@ class Clean(main.AbstractSync):
 
         for name, command in commands.iteritems():
             with log.Timer(name + '-' + branch, self.get_stats()):
-                subprocess.check_call(command)
+                try:
+                    subprocess.call(command)
+                except subprocess.CalledProcessError:
+                    logger.warning('Command failed [%s]: %s' % (
+                        name, ' '.join(command))
+                    pass
 
     def _after_lock_release(self):
         self.announce(self.arguments.message + ' (duration: %s)' %
