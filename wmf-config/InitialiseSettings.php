@@ -16702,16 +16702,6 @@ $wgConf->settings = [
 	'default' => 1500000,
 ],
 
-'wgEnableJavaScriptTest' => [
-	'default' => false,
-	'test2wiki' => true,
-],
-
-'wgIncludejQueryMigrate' => [
-	'default' => true,
-	'test2wiki' => false,
-],
-
 'wmgEnablePageTriage' => [
 	'default' => false,
 	'testwiki' => true,
