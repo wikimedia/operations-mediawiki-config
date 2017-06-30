@@ -308,10 +308,6 @@ if ( $wmgUseORES ) {
 	$wgOresBaseUrl = 'https://ores-beta.wmflabs.org/';
 }
 
-if ( $wmgUseNewsletter ) {
-	wfLoadExtension( 'Newsletter' );
-}
-
 if ( $wmgUsePerformanceInspector ) {
 	wfLoadExtension( 'PerformanceInspector' );
 }
