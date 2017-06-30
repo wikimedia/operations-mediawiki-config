@@ -18912,6 +18912,11 @@ $wgConf->settings = [
 	'foundationwiki' => true,
 ],
 
+'wmgUseNewsletter' => [
+    'default' => false,
+    'mediawikiwiki' => true, // T110170
+],
+
 // Enable LoginNotify on testwiki (T165007)
 'wmgUseLoginNotify' => [
 	'default' => false,
