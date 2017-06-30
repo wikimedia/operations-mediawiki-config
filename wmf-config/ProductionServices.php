@@ -78,8 +78,8 @@ $wmfAllServices['eqiad']['poolcounter'] = [
 	'10.64.16.152', # poolcounter1002.eqiad.wmnet
 ];
 $wmfAllServices['codfw']['poolcounter'] = [
-	'10.192.16.124', # subra.codfw.wmnet
-	'10.192.0.121', # suhail.codfw.wmnet
+	'10.192.0.19', # poolcounter2001.codfw.wmnet
+	'10.192.16.21', # poolcounter2002.codfw.wmnet
 ];
 
 ### LockManager Redis
