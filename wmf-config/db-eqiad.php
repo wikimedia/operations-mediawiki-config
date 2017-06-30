@@ -151,9 +151,9 @@ $wgLBFactoryConf = [
 	],
 	's6' => [
 		'db1061' => 0,   # C3 2.8TB 128GB, master
-		'db1050' => 1,   # B2 2.8TB  64GB, old master2 #temporary recent changes #T168661
+#		'db1050' => 0,   # B2 2.8TB  64GB, old master2
 		'db1030' => 0,   # B1 1.4TB  64GB, vslow, dump
-#		'db1037' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager #T168661
+		'db1037' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1085' => 300, # B3 3.6TB 512GB, api
 		'db1088' => 500, # C2 3.6TB 512GB
 		'db1093' => 500, # D2 3.6TB 512GB
@@ -393,19 +393,19 @@ $wgLBFactoryConf = [
 			'db1085' => 1,
 		],
 		'watchlist' => [
-			'db1050' => 1,
+			'db1037' => 1,
 		],
 		'recentchanges' => [
-			'db1050' => 1,
+			'db1037' => 1,
 		],
 		'recentchangeslinked' => [
-			'db1050' => 1,
+			'db1037' => 1,
 		],
 		'contributions' => [
-			'db1050' => 1,
+			'db1037' => 1,
 		],
 		'logpager' => [
-			'db1050' => 1,
+			'db1037' => 1,
 		],
 	],
 	's7' => [
