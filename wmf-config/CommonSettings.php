@@ -1941,6 +1941,11 @@ if ( $wmgUseLoginNotify ) {
 	$wgLoginNotifyEnableOnSuccess = false;
 }
 
+if ( $wmgUseCodeMirror ) {
+	wfLoadExtension( 'CodeMirror' );
+	$wgCodeMirrorBetaFeature = true;
+}
+
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
 $wgDefaultUserOptions['showhiddencats'] = $wmgShowHiddenCats;
 
