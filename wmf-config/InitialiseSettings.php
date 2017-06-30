@@ -3276,6 +3276,7 @@ $wgConf->settings = [
 	'+enwikisource' => [
 		'WS' => NS_PROJECT, // T44853
 		'WT' => NS_PROJECT_TALK, // T44853
+		'H' => NS_HELP, // T167563
 	],
 	'+enwikiversity' => [
 		'WV' => NS_PROJECT,
