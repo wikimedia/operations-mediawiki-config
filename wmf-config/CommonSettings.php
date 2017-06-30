@@ -3362,6 +3362,10 @@ if ( $wmgUseORES ) {
 	}
 }
 
+if ( $wmgUseNewsletter ) {
+    wfLoadExtension( 'Newsletter' );
+}
+
 ### End (roughly) of general extensions ########################
 
 $wgApplyIpBlocksToXff = true;
