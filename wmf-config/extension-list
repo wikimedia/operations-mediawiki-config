@@ -85,6 +85,7 @@ $IP/extensions/MobileFrontend/extension.json
 $IP/extensions/MultimediaViewer/extension.json
 $IP/extensions/MwEmbedSupport/extension.json
 $IP/extensions/NavigationTiming/extension.json
+$IP/extensions/Newsletter/extension.json
 $IP/extensions/NewUserMessage/extension.json
 $IP/extensions/Nuke/extension.json
 $IP/extensions/OATHAuth/extension.json
