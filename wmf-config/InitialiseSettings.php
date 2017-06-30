@@ -14783,6 +14783,7 @@ $wgConf->settings = [
 	'gdwiki' => 'uca-default', // T125315
 	'glwiki' => 'uca-gl-u-kn', // T149002
 	'hewiki' => 'numeric', // T146675
+	'hewikisource' => 'numeric', // T168321
 	'hrwiki' => 'uca-hr-u-kn', // T148749, T148682
 	'hsbwiki' => 'uca-hsb', // T90689
 	'huwiki' => 'uca-hu-u-kn', // T47596, T146675
