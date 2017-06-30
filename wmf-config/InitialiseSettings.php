@@ -7548,6 +7548,11 @@ $wgConf->settings = [
 			'extendedmover' => [16, 60], // T138703
 		],
 	],
+	'+plwiki' => [
+		'thanks-notification' => [
+			'newbie' => [ 3, 86400 ], // T169268
+		],
+	],
 ],
 # @} end of wgRateLimits
 
