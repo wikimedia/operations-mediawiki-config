@@ -17383,7 +17383,6 @@ $wgConf->settings = [
 	// Monolingual text statements, it should rather be added to:
 	// Wikibase\Repo\WikibaseRepo::getMonolingualTextLanguages
 	'wikidata' => [
-		'din' => 'dinka',           // T75563
 		'kea' => 'Kabuverdianu',    // T127435
 		'nod' => 'ᨣᩴᩤᨾᩮᩥᩬᨦ',            // T93880
 		'nys' => 'Noongar',         // T127858
