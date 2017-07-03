@@ -14939,6 +14939,7 @@ $wgConf->settings = [
 	'azwiki' => true, // T119727
 	'bnwiki' => true, // T129728
 	'bnwikisource' => true, // T149683
+	'ckbwiki' => true, // T169563
 	'commonswiki' => true,
 	'enwiki' => true,
 	'enwikivoyage' => true, // T52063
