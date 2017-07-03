@@ -7552,7 +7552,8 @@ $wgConf->settings = [
 		// Limit to 3 per day for new users (T169268)
 		// Re-evaluate on 2017-08-01
 		'thanks-notification' => [
-			'newbie' => [ 3, 86400 ],
+			'user' => [ 3, 86400 ],
+			'autoconfirmed' => [ 10, 60 ],
 		],
 	],
 ],
