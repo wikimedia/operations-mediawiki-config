@@ -17168,6 +17168,11 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wgEchoPerUserBlacklist' => [
+	'default' => false,
+	'metawiki' => true,
+],
+
 // Thanks should be enabled for wikis with Echo
 'wmgUseThanks' => [
 	'default' => true,
