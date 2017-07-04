@@ -122,8 +122,8 @@ $wgLBFactoryConf = [
 		'db1075' => 0,   # A2 3.6TB 512GB, master
 		'db1038' => 0,   # B2 1.4TB  64GB, vslow, dump, old master
 #		'db1015' => 1,   # A2 1.4TB  64GB, do not pool, it is missing cebwiki
-		'db1035' => 50,  # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-#		'db1044' => 0,   # B2 1.4TB  64GB, #Temporary master for db1095 - new sanitarium #T150802
+#		'db1035' => 50,  # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager #T168661
+		'db1044' => 1,   # B2 1.4TB  64GB, #Temporary master for db1095 - new sanitarium #T150802 #temporary rc service #T168661
 		'db1077' => 500, # B1 3.6TB 512GB
 		'db1078' => 500, # C3 3.6TB 512GB
 	],
@@ -306,16 +306,16 @@ $wgLBFactoryConf = [
 			'db1077' => 1,
 		],
 		'recentchanges' => [
-			'db1035' => 1,
+			'db1044' => 1,
 		],
 		'recentchangeslinked' => [
-			'db1035' => 1,
+			'db1044' => 1,
 		],
 		'contributions' => [
-			'db1035' => 1,
+			'db1044' => 1,
 		],
 		'logpager' => [
-			'db1035' => 1,
+			'db1044' => 1,
 		],
 	],
 	's4' => [
