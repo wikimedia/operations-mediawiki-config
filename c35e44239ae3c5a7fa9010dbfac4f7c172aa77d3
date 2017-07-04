@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e742343_6daa8e6f",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2017-07-04T15:23:04Z",
+      "side": 1,
+      "message": "do we want to enable this also on test.wikidata?",
+      "revId": "c35e44239ae3c5a7fa9010dbfac4f7c172aa77d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
