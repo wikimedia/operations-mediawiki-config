@@ -34,6 +34,8 @@ if ( $wmgUseWikibaseRepo ) {
 				'propertyIds' => [ 'P400' ],
 			],
 		];
+
+		$wgWBQualityConstraintsEnableConstraintsImportFromStatements = true;
 	} else {
 		$wgPropertySuggesterClassifyingPropertyIds = [ 31 ]; // T169058
 
@@ -97,6 +99,8 @@ if ( $wmgUseWikibaseRepo ) {
 				'propertyIds' => [ 'P2302' ],
 			],
 		];
+
+		$wgWBQualityConstraintsEnableConstraintsImportFromStatements = true;
 	}
 
 	if ( $wgDBname === 'wikidatawiki' ) {
