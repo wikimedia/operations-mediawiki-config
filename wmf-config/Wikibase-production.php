@@ -33,6 +33,8 @@ if ( $wmgUseWikibaseRepo ) {
 				'propertyIds' => [ 'P400' ],
 			],
 		];
+
+		$wgWBQualityConstraintsEnableConstraintsImportFromStatements = true;
 	} else {
 		$wgWBRepoSettings['sparqlEndpoint'] = 'https://query.wikidata.org/sparql';
 
@@ -93,6 +95,8 @@ if ( $wmgUseWikibaseRepo ) {
 				'propertyIds' => [ 'P2302' ],
 			],
 		];
+
+		$wgWBQualityConstraintsEnableConstraintsImportFromStatements = true;
 	}
 
 	if ( $wgDBname === 'wikidatawiki' ) {
