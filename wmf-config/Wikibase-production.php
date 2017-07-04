@@ -111,6 +111,7 @@ if ( $wmgUseWikibaseRepo ) {
 		}
 	}
 
+	$wgWBQualityConstraintsEnableConstraintsImportFromStatements = true;
 	$wgWBRepoSettings['dispatchingLockManager'] = 'redisLockManager';
 }
 
