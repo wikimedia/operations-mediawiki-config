@@ -16,6 +16,24 @@
       "revId": "c35e44239ae3c5a7fa9010dbfac4f7c172aa77d3",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e742343_8d201af4",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 97,
+      "author": {
+        "id": 4699
+      },
+      "writtenOn": "2017-07-04T15:59:51Z",
+      "side": 1,
+      "message": "I guess so, good point… did you ever import constraints for that wiki? (There are a few pages in https://test.wikidata.org/wiki/Category:Properties_with_constraints, but not many.)",
+      "parentUuid": "8e742343_6daa8e6f",
+      "revId": "c35e44239ae3c5a7fa9010dbfac4f7c172aa77d3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
