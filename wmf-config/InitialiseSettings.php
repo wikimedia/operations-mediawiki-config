@@ -1129,6 +1129,7 @@ $wgConf->settings = [
 
 	// Local user group wikis
 	'cnwikimedia' => '/static/images/project-logos/cnwikimedia.png', // T98676
+	'maiwikimedia' => '/static/images/project-logos/maiwikimedia.png',
 	'wbwikimedia' => '/static/images/project-logos/wbwikimedia.png', // T162510
 
 	// Special wikis
@@ -1432,6 +1433,7 @@ $wgConf->settings = [
 
     # Chapter wikis
 	'ecwikimedia' => [ '1.5x' => '/static/images/project-logos/ecwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ecwikimedia-2x.png'], // T135521
+	'maiwikimedia' => [ '1.5x' => '/static/images/project-logos/maiwikimedia-1.5x.png', '2x' => '/static/images/project-logos/maiwikimedia-2x.png' ],
 	'ptwikimedia' => [ '1.5x' => '/static/images/project-logos/ptwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ptwikimedia-2x.png'], // T126832
 	'trwikimedia' => [ '1.5x' => '/static/images/project-logos/trwikimedia-1.5x.png', '2x' => '/static/images/project-logos/trwikimedia-2x.png'],
 	'wbwikimedia' => [ '1.5x' => '/static/images/project-logos/wbwikimedia-1.5x.png', '2x' => '/static/images/project-logos/wbwikimedia-2x.png' ], // T162510
