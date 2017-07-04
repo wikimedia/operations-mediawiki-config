@@ -2923,7 +2923,6 @@ if ( $wmgUseRelatedSites ) {
 
 if ( $wmgUseRevisionSlider ) {
 	wfLoadExtension( 'RevisionSlider' );
-	$wgRevisionSliderBetaFeature = $wmgRevisionSliderBetaFeature;
 }
 
 if ( $wmgUseTwoColConflict ) {
