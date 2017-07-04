@@ -17545,10 +17545,6 @@ $wgConf->settings = [
 	'default' => false, // T163685
 ],
 
-'wgRevisionSliderAlternateSlider' => [
-	'default' => true,
-],
-
 'wmgUseTwoColConflict' => [
 	'default' => true,
 ],
