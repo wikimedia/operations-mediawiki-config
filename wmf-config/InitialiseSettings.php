@@ -17201,6 +17201,11 @@ $wgConf->settings = [
 	'testwiki' => false,
 ],
 
+'wmgContentTranslationTargetNamespace' => [
+	'default' => NS_MAIN,
+	'zhwiki' => 118, // T168727
+],
+
 // CX Campaigns
 'wmgContentTranslationCampaigns' => [
 	'default' => [
