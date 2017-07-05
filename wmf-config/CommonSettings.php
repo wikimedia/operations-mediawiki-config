@@ -1557,7 +1557,7 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $u
 	}
 	if ( $user && $response->status === \MediaWiki\Auth\AuthenticationResponse::FAIL ) {
 		global $wgRequest;
-		$headers = apache_request_headers();
+		$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
 
 		$privGroups = wfGetPrivilegedGroups( $username, $user );
 		$logger = LoggerFactory::getInstance( 'badpass' );
@@ -1579,7 +1579,7 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $u
 $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $username ) {
 	if ( $response->status === \MediaWiki\Auth\AuthenticationResponse::PASS ) {
 		global $wgRequest;
-		$headers = apache_request_headers();
+		$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
 
 		$privGroups = wfGetPrivilegedGroups( $username, $user );
 		$logger = LoggerFactory::getInstance( 'badpass' );
@@ -1599,14 +1599,14 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $u
 $wgHooks['PrefsEmailAudit'][] = function( $user, $old, $new ) {
 	if ( $user->isAllowed( 'delete' ) ) {
 		global $wgRequest;
-		$headers = apache_request_headers();
+		$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
 
 		$logger = LoggerFactory::getInstance( 'badpass' );
 		$logger->info( "Email changed in prefs for sysop '" .
 			$user->getName() .
 			"' from '$old' to '$new'" .
 			" - " . $wgRequest->getIP() .
-			# " - " . serialize( apache_request_headers() )
+			# " - " . serialize( $headers )
 			" - " . @$headers['X-Forwarded-For'] .
 			' - ' . @$headers['User-Agent']
 		);
@@ -1620,7 +1620,7 @@ $wgHooks['ChangeAuthenticationDataAudit'][] = function( $req, $status ) {
 	$status = Status::wrap( $status );
 	if ( $user->isAllowed( 'delete' ) && $req instanceof \MediaWiki\Auth\PasswordAuthenticationRequest ) {
 		global $wgRequest;
-		$headers = apache_request_headers();
+		$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
 
 		$logger = LoggerFactory::getInstance( 'badpass' );
 		$logger->info( 'Password change in prefs for sysop {name}: {status} - {ip} - {xff} - {ua}', [
