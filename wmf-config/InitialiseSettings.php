@@ -13276,6 +13276,7 @@ $wgConf->settings = [
 		'visualeditor-newwikitext',          // [Editing] 2017-11-02 – New wikitext editor
 		'twocolconflict',                    // [WMDE TW] 2017-11-12 – New edit conflict view
 		'rcenhancedfilters',                 // [Editing] 2017-11-18 - Enhanced recent changes filters
+		'codemirror-syntax-highlight',       // [Community Tech] 2018-01-05 - Syntax highlighting
 	],
 ],
 
