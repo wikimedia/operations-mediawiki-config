@@ -8,12 +8,9 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 # $wgReadOnly = "Wikimedia Sites are currently read-only during maintenance, please try again soon.";
 
 $wmgParserCacheDBs = [
-#	'10.64.0.12'   => '10.64.0.12',   # pc1004
-	'10.64.0.12'   => '10.64.0.163',  # db1096, temporary pc1004 T167567
-#	'10.64.32.72'  => '10.64.32.72',  # pc1005
-	'10.64.32.72'  => '10.64.16.84',  # db1099, temporary pc1005 T167567
-#	'10.64.48.128' => '10.64.48.128', # pc1006
-	'10.64.48.128' => '10.64.32.198', # db1101, temporary pc1006 T167567
+	'10.64.0.12'   => '10.64.0.12',   # pc1004
+	'10.64.32.72'  => '10.64.32.72',  # pc1005
+	'10.64.48.128' => '10.64.48.128', # pc1006
 ];
 
 $wmgOldExtTemplate = [
