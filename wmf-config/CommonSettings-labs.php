@@ -335,6 +335,11 @@ if ( $wmgUseLoginNotify ) {
 	$wgLoginNotifyAttemptsNewIP = 1;
 }
 
+if ( $wmgUseCodeMirror ) {
+	wfLoadExtension( 'CodeMirror' );
+	$wgCodeMirrorBetaFeature = true;
+}
+
 $wgStructuredChangeFiltersEnableExperimentalViews = true;
 
 $wgMessageCacheType = CACHE_ACCEL;
