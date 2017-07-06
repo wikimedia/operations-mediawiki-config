@@ -3096,7 +3096,13 @@ $wgWBClientSettings['repoSiteName'] = 'wikibase-repo-name';
 if ( $wmgUseTemplateSandbox ) {
 	wfLoadExtension( 'TemplateSandbox' );
 	if( $wmgUseScribunto ) {
-		$wgTemplateSandboxEditNamespaces[] = NS_MODULE;
+		if ( defined( 'NS_MODULE' ) ) {
+			// Pre-extension.json Scribunto has this set
+			// constant set early and didn't set the
+			// TemplateSandbox attribute.
+			// Remove after 1.30.0-wmf.7 is gone
+			$wgTemplateSandboxEditNamespaces[] = NS_MODULE;
+		}
 	}
 }
 
