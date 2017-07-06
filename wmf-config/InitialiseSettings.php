@@ -18921,18 +18921,7 @@ $wgConf->settings = [
 ],
 // Enable archive for testwiki
 'wmgCirrusSearchIndexDeletes' => [
-	'default' => false,
-	'testwiki' => true,
-	'mediawikiwiki' => true,
-        'cawiki' => true,
-        'itwiki' => true,
-        'ruwiki' => true,
-        'fawiki' => true,
-        'dewiki' => true,
-        'frwiki' => true,
-        'plwiki' => true,
-        'arwiki' => true,
-        'enwiki' => true,
+	'default' => true,
 ],
 
 'wmgCirrusSearchEnableArchive' => [
