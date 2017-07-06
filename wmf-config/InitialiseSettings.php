@@ -5047,12 +5047,8 @@ $wgConf->settings = [
 		201 => 'Grants_talk',
 		202 => 'Research', // T30742
 		203 => 'Research_talk',
-		204 => 'Participation',
-		205 => 'Participation_talk',
 		206 => 'Iberocoop', // T40398
 		207 => 'Iberocoop_talk',
-		208 => 'Programs', // T51312
-		209 => 'Programs_talk',
 	],
 	// @}
 
