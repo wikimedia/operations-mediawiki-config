@@ -142,7 +142,6 @@ $wgConf->settings = [
 	'rswikimedia' => 'sr',
 	'sewikimedia' => 'sv',
 	'uawikimedia' => 'uk',
-	'ukwikimedia' => 'en-gb',
 
 	# Local user group wikis (xxwikimedia)
 	'cnwikimedia' => 'zh', // T98676
@@ -1125,7 +1124,6 @@ $wgConf->settings = [
 	'sewikimedia' => '/static/images/project-logos/sewikimedia.png',
 	'trwikimedia' => '/static/images/project-logos/trwikimedia.png',
 	'uawikimedia' => '/static/images/project-logos/uawikimedia.png',
-	'ukwikimedia' => '/static/images/project-logos/ukwikimedia.png',
 
 	// Local user group wikis
 	'cnwikimedia' => '/static/images/project-logos/cnwikimedia.png', // T98676
@@ -2222,7 +2220,6 @@ $wgConf->settings = [
 	'udmwiki' => 'Википедия', // T49820
 	'ukwiki' => 'Вікіпедія',
 	'ukwikibooks' => 'Вікіпідручник',
-	'ukwikimedia' => 'Wikimedia UK', // Andrew 2009-04-27 Private request of current board member
 	'ukwikinews' => 'Вікіновини', // T50843
 	'ukwikiquote' => 'Вікіцитати',
 	'ukwikisource' => 'Вікіджерела',
@@ -4416,7 +4413,6 @@ $wgConf->settings = [
 	'+stewardwiki' => [ 0 => 1, 6 => 1, 14 => 1 ],
 	'+strategywiki' => [ 0 => 1 ],
 	'+uawikimedia' => [ 0 => 1 ], // T91185
-	'+ukwikimedia' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
 	'+usabilitywiki' => [ 0 => 1 ],
 	'+wikidata' => [121 => 1], // T146271
 	'+wikimaniateamwiki' => [ 0 => 1, 6 => 0, 8 => 0, 10 => 0 ],
@@ -4781,7 +4777,6 @@ $wgConf->settings = [
 	'fiwikimedia' => false, // T19718
 	'private' => false, // :D
 	'qualitywiki' => false,
-	'ukwikimedia' => false, // T19718 Disable CentralNotice on private/fishbowl wikis
 	'votewiki' => false, // T61702
 ],
 
@@ -10826,9 +10821,6 @@ $wgConf->settings = [
 	'+ukwiki' => [
 		'sysop' => [ 'patroller', 'rollbacker', 'accountcreator', 'filemover' ], // T104034, T119636
 	],
-	'+ukwikimedia' => [
-		'bureaucrat' => [ 'sysop' ],
-	],
 	'+ukwikivoyage' => [
 		'sysop' => [ 'rollbacker', 'uploader', 'autopatrolled' ], // T56229
 	],
@@ -10974,7 +10966,6 @@ $wgConf->settings = [
 	'sewikimedia' => [ 'wikipedia:sv', 'commons' ],
 	'trwikimedia' => [ 'wikipedia:tr', 'meta' ],
 	'uawikimedia' => [ 'wikipedia:uk', 'wikipedia', 'wikipedia:ru', 'meta', 'foundation', 'outreachwiki', 'mediawikiwiki', 'commons' ], // T91187
-	'ukwikimedia' => [ 'meta' ], // T19167
 
 	// content wikis
 	'alswiki' => [ 'de', 'wikt', 'b', 'q', 'en', 'fr', 'it', 'b:de' ],
@@ -11983,25 +11974,6 @@ $wgConf->settings = [
 		NS_CATEGORY_TALK => [ 'editallpages' ],
 		100 => [ 'editallpages' ],
 		101 => [ 'editallpages' ],
-	],
-	'ukwikimedia' => [
-		NS_MAIN => [ 'editallpages' ],   // rt 5203: read-only except for user_talk
-		NS_TALK => [ 'editallpages' ],
-		NS_USER => [ 'editallpages' ],
-		NS_PROJECT => [ 'editallpages' ],
-		NS_PROJECT_TALK => [ 'editallpages' ],
-		NS_IMAGE => [ 'editallpages' ],
-		NS_IMAGE_TALK => [ 'editallpages' ],
-		NS_MEDIAWIKI => [ 'editallpages' ],
-		NS_MEDIAWIKI_TALK => [ 'editallpages' ],
-		NS_TEMPLATE => [ 'editallpages' ],
-		NS_TEMPLATE_TALK => [ 'editallpages' ],
-		NS_HELP => [ 'editallpages' ],
-		NS_HELP_TALK => [ 'editallpages' ],
-		NS_CATEGORY => [ 'editallpages' ],
-		NS_CATEGORY_TALK => [ 'editallpages' ],
-		828 => [ 'editallpages' ],
-		829 => [ 'editallpages' ],
 	],
 	'+wikidatawiki' => [
 		122 => [ 'query-update' ],  // Query namespace per T51001
