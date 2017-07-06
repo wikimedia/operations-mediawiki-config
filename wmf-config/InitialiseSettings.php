@@ -17276,6 +17276,11 @@ $wgConf->settings = [
 	'default' => true, // T164391, T143480
 ],
 
+'wgRelatedArticlesCardLimit' => [
+	'default' => 3,
+	'wikivoyage' => 9,
+],
+
 'wmgRelatedArticlesUseCirrusSearch' => [
 	'default' => true,
 	'wikivoyage' => false, // T164391
