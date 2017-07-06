@@ -14760,6 +14760,7 @@ $wgConf->settings = [
 	'frwikibooks' => 'uca-fr', // T74513
 	'frwikinews' => 'uca-fr', // T68165
 	'frwikiversity' => 'uca-fr', // T71782
+	'frwiktionary' => 'uca-default', // T169810
 	'gdwiki' => 'uca-default', // T125315
 	'glwiki' => 'uca-gl-u-kn', // T149002
 	'hewiki' => 'numeric', // T146675
