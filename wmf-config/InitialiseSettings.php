@@ -11202,6 +11202,7 @@ $wgConf->settings = [
 		'sv', 'ta', 'te', 'th', 'tr', 'uk', 'vi', 'yi', 'zh',
 		'meta', 'commons',
 	], // T34411
+	'specieswiki' => [ 'd', 'c', 'incubator', 'outreach', 'm', 'mediawiki' ], // T170094
 	'srnwiki' => [ 'incubator' ],
 	'srwiki' => [ 'wikt', 'meta' ], // T64533
 	'srwiktionary' => [ 'w' ],
