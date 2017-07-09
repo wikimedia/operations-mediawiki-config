@@ -1559,6 +1559,7 @@ $wgConf->settings = [
 	'fawiki' => '/wiki/ویکی‌پدیا:بارگذاری',
 	'fawikivoyage' => '/wiki/%D9%88%DB%8C%DA%A9%DB%8C%E2%80%8C%D8%B3%D9%81%D8%B1:%D8%A8%D8%A7%D8%B1%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C', // T102714
 	'frwiki' => '/wiki/Aide:Importer_un_fichier',
+	'frwiktionary' => '/wiki/Aide:Importer_un_fichier', // T170083
 	'gomwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=gom', // T96468
 	'guwiki' => false,
 	'hewikinews' => false,
