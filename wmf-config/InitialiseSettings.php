@@ -1545,6 +1545,7 @@ $wgConf->settings = [
 	'bgwiki' => '/wiki/MediaWiki:Uploadtext', // T16836
 	'bnwiki' => '/wiki/উইকিপিডিয়া:আপলোড',
 	'bswiki' => '/wiki/Wikipedia:Upload', // T14044
+	'cawiki' => '/wiki/Ajuda:Carregar_un_fitxer', // T170083
 	'dawiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=da&campaign=dk', // T39662
 	'dewikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=de',
 	'enwiki' => '/wiki/Wikipedia:File_Upload_Wizard', // T44263
@@ -1559,6 +1560,8 @@ $wgConf->settings = [
 	'fawiki' => '/wiki/ویکی‌پدیا:بارگذاری',
 	'fawikivoyage' => '/wiki/%D9%88%DB%8C%DA%A9%DB%8C%E2%80%8C%D8%B3%D9%81%D8%B1:%D8%A8%D8%A7%D8%B1%DA%AF%D8%B0%D8%A7%D8%B1%DB%8C', // T102714
 	'frwiki' => '/wiki/Aide:Importer_un_fichier',
+	'frwiktionary' => '/wiki/Aide:Importer_un_fichier', // T170083
+	'frwikiversity' => '/wiki/Aide:Importer_un_fichier', // T170083
 	'gomwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=gom', // T96468
 	'guwiki' => false,
 	'hewikinews' => false,
@@ -1572,6 +1575,7 @@ $wgConf->settings = [
 	'jawiki' => '/wiki/Wikipedia:%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%82%A2%E3%83%83%E3%83%97%E3%83%AD%E3%83%BC%E3%83%89',
 	'jawikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ja',
 	'kowiki' => '/wiki/위키백과:파일_올리기', // T54076
+	'kuwiki' => '//commons.wikimedia.org/wiki/Commons:Upload?uselang=ku', // T170083
 	'lrcwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=lrc', // T102026
 	'metawiki' => false, // T52287
 	'mlwiki' => '/wiki/വിക്കിപീഡിയ:അപ്‌ലോഡ്',
@@ -1581,6 +1585,7 @@ $wgConf->settings = [
 	'nlwikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
 	'nlwikivoyage' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl', // T73403
 	'nlwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl',
+	'nlwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=nl', // T170083
 	'plwiki' => '//pl.wikipedia.org/wiki/Wikipedia:Prześlij_plik', // T44579
 	'plwikinews' => false,
 	'plwikiquote' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=pl',
@@ -1592,12 +1597,18 @@ $wgConf->settings = [
 	'ruwikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=ru',
 	'sewikimedia' => false, // T63947
 	'srwiki' => '/wiki/Википедија:Водич_за_отпремање', // T165901
+	'svwikiversity' => '/wiki/Wikiversity:Ladda_upp_filer', // T170083
 	'svwikisource' => false,
 	'svwiktionary' => false,
 	'specieswiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard',
 	'tawiki' => '/wiki/விக்கிப்பீடியா:File_Upload_Wizard', // T85697
 	'tewiki' => '/wiki/వికీపీడియా:ఫైల్_ఎక్కింపు_విజర్డు', // T59042
 	'thwiki' => '/wiki/%E0%B8%A7%E0%B8%B4%E0%B8%81%E0%B8%B4%E0%B8%9E%E0%B8%B5%E0%B9%80%E0%B8%94%E0%B8%B5%E0%B8%A2:%E0%B8%AD%E0%B8%B1%E0%B8%9B%E0%B9%82%E0%B8%AB%E0%B8%A5%E0%B8%94',
+	'ukwiki' => '/wiki/Вікіпедія:Майстер_завантаження_файлів', // T170083
+	'viwiki' => '/wiki/Wikipedia:Tải_tập_tin_lên', // T170083
+	'viwikibooks' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=vi', // T170083
+	'viwiktionary' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=vi', // T170083
+	'viwikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=vi', // T170083
 	'zhwiki' => '/wiki/Project:%E4%B8%8A%E4%BC%A0',
 	'zhwikinews' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=zh-hans',
 	'zh_yuewiki' => '/wiki/Project:%E4%B8%8A%E8%BC%89',
