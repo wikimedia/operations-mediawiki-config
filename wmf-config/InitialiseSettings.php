@@ -1131,6 +1131,7 @@ $wgConf->settings = [
 
 	// Special wikis
 	'advisorywiki' => '/static/images/project-logos/advisorywiki.png',
+	'arbcom_dewiki' => '/static/images/project-logos/arbcom_dewiki.png', // T166947
 	'arbcom_cswiki' => '/static/images/project-logos/arbcom_cswiki.png', // T151731
 	'arbcom_enwiki' => '/static/images/project-logos/arbcom_enwiki.png',
 	'arbcom_fiwiki' => '/static/images/project-logos/arbcom_fiwiki.png',
@@ -1435,6 +1436,7 @@ $wgConf->settings = [
 	'wbwikimedia' => [ '1.5x' => '/static/images/project-logos/wbwikimedia-1.5x.png', '2x' => '/static/images/project-logos/wbwikimedia-2x.png' ], // T162510
 
     # Special wikis
+	'arbcom_dewiki' => ['1.5x' => '/static/images/project-logos/arbcom_dewiki-1.5x.png', '2x' => '/static/images/project-logos/arbcom_dewiki-2x.png'], // T166947
 	'arbcom_cswiki' => ['1.5x' => '/static/images/project-logos/arbcom_cswiki-1.5x.png', '2x' => '/static/images/project-logos/arbcom_cswiki-2x.png'], // T151731
 	'donatewiki' => [ '1.5x' => '/static/images/project-logos/donatewiki-1.5x.png', '2x' => '/static/images/project-logos/donatewiki-2x.png' ],
 	'foundationwiki' => [ '1.5x' => '/static/images/project-logos/foundationwiki-1.5x.png', '2x' => '/static/images/project-logos/foundationwiki-2x.png' ],
@@ -12023,6 +12025,7 @@ $wgConf->settings = [
 
 	# Special wikis
 	'advisorywiki' => '/static/favicon/wmf.ico',
+	'arbcom_dewiki' => '/static/favicon/arbcom_dewiki.ico', // T166947
 	'chapcomwiki' => '/static/favicon/wmf.ico', // T41482
 	'checkuserwiki' => '/static/favicon/community.ico',
 	'commonswiki' => '/static/favicon/commons.ico',
