@@ -1,0 +1,8 @@
+Code-Review+1: Bmansurov <bmansurov@wikimedia.org>
+Code-Review+2: Thcipriani <tcipriani@wikimedia.org>
+Verified+2: jenkins-bot
+Submitted-by: jenkins-bot
+Submitted-at: Mon, 10 Jul 2017 23:03:27 +0000
+Reviewed-on: https://gerrit.wikimedia.org/r/364269
+Project: operations/mediawiki-config
+Branch: refs/heads/master
