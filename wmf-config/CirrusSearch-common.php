@@ -86,8 +86,14 @@ $wgCirrusSearchWikimediaExtraPlugin = [
 	'super_detect_noop' => true,
 	'id_hash_mod_filter' => true,
 	'documentVersion' => true,
-	'token_count_router' => true,
 ];
+
+# Investigate T169498, only activate token_count_router for spaceless languages with sane
+# analysis chain and the perfield_builder ft builder.
+if ( $wgLanguageCode === 'zh' ) {
+	$wgCirrusSearchWikimediaExtraPlugin['token_count_router'] = true;
+}
+
 
 # Enable the "experimental" highlighter on all wikis
 $wgCirrusSearchUseExperimentalHighlighter = true;
