@@ -341,6 +341,7 @@ if ( $wmgUseCodeMirror ) {
 }
 
 $wgStructuredChangeFiltersEnableExperimentalViews = true;
+$wgStructuredChangeFiltersEnableLiveUpdate = true;
 
 $wgMessageCacheType = CACHE_ACCEL;
 
