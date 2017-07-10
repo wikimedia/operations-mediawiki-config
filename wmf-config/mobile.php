@@ -58,7 +58,6 @@ if ( $wmgMobileFrontend ) {
 		return true;
 	};
 
-	$wgMFTidyMobileViewSections = false; // experimental
 	$wgMFNearbyRange = $wgMaxGeoSearchRadius;
 
 	$wgMFEnableBeta = true;
