@@ -15225,11 +15225,11 @@ $wgConf->settings = [
 		'copyright-width' => 96,
 		'copyright-height' => 18,
 	],
-	'wiktionary' => [
-		'copyright' => '/static/images/mobile/copyright/wikitionary-wordmark-en.svg',
-		'copyright-width' => 90,
-		'copyright-height' => 18,
-	],
+	// T162010
+	'eswikivoyage' => [],
+	'fawikivoyage' => [],
+	'zhwikivoyage' => [],
+	'wiktionary' => [],
 	'commonswiki' => [
 		'copyright' => '/static/images/mobile/copyright/commons-wordmark-en.svg',
 		'copyright-width' => 105,
