@@ -13556,19 +13556,9 @@ $wgConf->settings = [
 ],
 
 'wmgULSCompactLanguageLinksBetaFeature' => [
-	'default' => true,
-	'testwiki' => false,
-	'test2wiki' => false,
-	'nonbetafeatures' => false,
-	'wikiversity' => false,
-	'wikivoyage' => false,
-	'ruwikivoyage' => true,
-	'wikinews' => false,
-	'wikibooks' => false,
-	'wikiquote' => false,
-	'wiktionary' => false,
-	'incubatorwiki' => false,
-	'compact-language-links' => false,
+	'default' => false,
+	'dewiki' => true,
+	'enwiki' => true,
 ],
 
 // Whether Compact Links is enabled for new accounts *by default*
