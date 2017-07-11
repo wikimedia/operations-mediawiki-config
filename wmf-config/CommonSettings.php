@@ -171,7 +171,7 @@ if ( !$globals ) {
 	foreach ( [ 'private', 'fishbowl', 'special', 'closed', 'flow', 'flaggedrevs', 'small', 'medium',
 			'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-nondefault',
 			'commonsuploads', 'nonbetafeatures', 'group0', 'group1', 'group2', 'wikipedia', 'nonglobal',
-			'wikitech', 'nonecho', 'mobilemainpagelegacy', 'compact-language-links', 'nowikidatadescriptiontaglines',
+			'wikitech', 'nonecho', 'mobilemainpagelegacy', 'nowikidatadescriptiontaglines',
 			'related-articles-footer-blacklisted-skins',
 			'top6-wikipedia'
 		] as $tag ) {
@@ -3016,7 +3016,6 @@ if ( $wmgUseUniversalLanguageSelector ) {
 	// … as a stable feature
 	$wgULSCompactLinksEnableAnon = $wmgULSCompactLinksEnableAnon;
 	$wgULSCompactLinksForNewAccounts = $wmgULSCompactLinksForNewAccounts;
-	$wgDefaultUserOptions['compact-language-links'] = 1;
 }
 
 if ( $wmgUseContentTranslation ) {
