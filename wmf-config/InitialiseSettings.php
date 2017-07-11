@@ -13405,6 +13405,9 @@ $wgConf->settings = [
 	'test2wiki' => false,
 	'nonbetafeatures' => false,
 	'wikiversity' => false,
+	'wikipedia' => false,
+	'dewiki' => true,
+	'enwiki' => true,
 	'wikivoyage' => false,
 	'ruwikivoyage' => true,
 	'wikinews' => false,
@@ -13412,7 +13415,6 @@ $wgConf->settings = [
 	'wikiquote' => false,
 	'wiktionary' => false,
 	'incubatorwiki' => false,
-	'compact-language-links' => false,
 ],
 
 // Whether Compact Links is enabled for new accounts *by default*
