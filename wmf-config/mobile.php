@@ -4,6 +4,9 @@
 # # Do not put private data here.
 
 if ( $wmgMobileFrontend ) {
+	if ( $wmgMinervaNeue ) {
+		wfLoadSkin( 'MiervaNeue' );
+	}
 	wfLoadExtension( 'MobileFrontend' );
 
 	$wgMFMobileHeader = 'X-Subdomain';

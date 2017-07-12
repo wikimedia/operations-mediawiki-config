@@ -15010,6 +15010,9 @@ $wgConf->settings = [
 	'wikitech' => '/srv/math-images', // T126628
 ],
 
+'wmgMinervaNeue' => [
+	'default' => false,
+],
 'wmgUseMobileApp' => [
 	'default' => true,
 	'wikitech' => false,
