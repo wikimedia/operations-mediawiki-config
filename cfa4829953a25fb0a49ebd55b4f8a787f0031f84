@@ -16,6 +16,24 @@
       "revId": "cfa4829953a25fb0a49ebd55b4f8a787f0031f84",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e742343_de73f512",
+        "filename": "wmf-config/mobile.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-07-12T20:55:31Z",
+      "side": 1,
+      "message": "Should also be defined under wfLoadExtension call",
+      "parentUuid": "8e742343_fe2911e2",
+      "revId": "cfa4829953a25fb0a49ebd55b4f8a787f0031f84",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
