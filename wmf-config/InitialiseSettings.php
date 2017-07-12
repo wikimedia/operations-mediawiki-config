@@ -19379,6 +19379,7 @@ $wgConf->settings = [
 'wmgUseNewsletter' => [
 	'default' => false,
 	'testwiki' => true, // T110170
+	'mediawikiwiki' => true, // T110170
 ],
 
 'wmgUseLoginNotify' => [
