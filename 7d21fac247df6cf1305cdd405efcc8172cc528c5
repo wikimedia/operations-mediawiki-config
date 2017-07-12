@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "8e742343_a234d1f1",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 306,
+      "author": {
+        "id": 866
+      },
+      "writtenOn": "2017-07-12T07:32:59Z",
+      "side": 0,
+      "message": "Why this was removed?",
+      "revId": "7d21fac247df6cf1305cdd405efcc8172cc528c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "8e742343_c22f9d9a",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 3019,
+      "author": {
+        "id": 866
+      },
+      "writtenOn": "2017-07-12T07:32:59Z",
+      "side": 0,
+      "message": "Why this was removed?",
+      "revId": "7d21fac247df6cf1305cdd405efcc8172cc528c5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
