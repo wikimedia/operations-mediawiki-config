@@ -631,5 +631,9 @@ function wmfLabsSettings() {
 		'wgEchoPerUserBlacklist' => [
 			'default' => true,
 		],
+
+		'wmgMinervaNeue' => [
+			'default' => true,
+		],
 	];
 } # wmflLabsSettings()

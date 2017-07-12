@@ -6,6 +6,11 @@
 if ( $wmgMobileFrontend ) {
 	wfLoadExtension( 'MobileFrontend' );
 
+	// Load skin
+	if ( $wmgMinervaNeue ) {
+		wfLoadSkin( 'MinervaNeue' );
+	}
+
 	$wgMFMobileHeader = 'X-Subdomain';
 	$wgMFNoindexPages = false;
 	if ( !$wmgEnableGeoData ) {
