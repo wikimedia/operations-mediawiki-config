@@ -1569,6 +1569,7 @@ $wgConf->settings = [
 	# Wikiversity
 	'arwikiversity' => [ '1.5x' => '/static/images/project-logos/arwikiversity-1.5x.png', '2x' => '/static/images/project-logos/arwikiversity-2x.png' ],
 	'cswikiversity' => [ '1.5x' => '/static/images/project-logos/cswikiversity-1.5x.png', '2x' => '/static/images/project-logos/cswikiversity-2x.png' ], // T150618
+<<<<<<< HEAD
 	'dewikiversity' => [ '1.5x' => '/static/images/project-logos/dewikiversity-1.5x.png', '2x' => '/static/images/project-logos/dewikiversity-2x.png' ],
 	'elwikiversity' => [ '1.5x' => '/static/images/project-logos/elwikiversity-1.5x.png', '2x' => '/static/images/project-logos/elwikiversity-2x.png' ], // T150618
 	'enwikiversity' => [ '1.5x' => '/static/images/project-logos/enwikiversity-1.5x.png', '2x' => '/static/images/project-logos/enwikiversity-2x.png' ], // T150618
@@ -1584,6 +1585,11 @@ $wgConf->settings = [
 	'svwikiversity' => [ '1.5x' => '/static/images/project-logos/svwikiversity-1.5x.png', '2x' => '/static/images/project-logos/svwikiversity-2x.png' ],
 
 	# Wikivoyage
+=======
+	'eswikiversity' => [ '1.5x' => '/static/images/project-logos/eswikiversity-1.5x.png', '2x' => '/static/images/project-logos/eswikiversity-2x.png' ], // T170604
+
+    # Wikivoyage
+>>>>>>> High density logos for es.wikiversity
 	'cswikivoyage' => [ '1.5x' => '/static/images/project-logos/cswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/cswikivoyage-2x.png' ], // T150618
 	'fiwikivoyage' => [ '1.5x' => '/static/images/project-logos/fiwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/fiwikivoyage-2x.png' ],
 	'viwikivoyage' => [ '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ], // T151570
