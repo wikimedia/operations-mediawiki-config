@@ -1572,7 +1572,7 @@ $wgConf->settings = [
 	'dewikiversity' => [ '1.5x' => '/static/images/project-logos/dewikiversity-1.5x.png', '2x' => '/static/images/project-logos/dewikiversity-2x.png' ],
 	'elwikiversity' => [ '1.5x' => '/static/images/project-logos/elwikiversity-1.5x.png', '2x' => '/static/images/project-logos/elwikiversity-2x.png' ], // T150618
 	'enwikiversity' => [ '1.5x' => '/static/images/project-logos/enwikiversity-1.5x.png', '2x' => '/static/images/project-logos/enwikiversity-2x.png' ], // T150618
-	'eswikiversity' => [ '1.5x' => '/static/images/project-logos/eswikiversity-1.5x.png', '2x' => '/static/images/project-logos/eswikiversity-2x.png' ],
+	'eswikiversity' => [ '1.5x' => '/static/images/project-logos/eswikiversity-1.5x.png', '2x' => '/static/images/project-logos/eswikiversity-2x.png' ], // T170604
 	'fiwikiversity' => [ '1.5x' => '/static/images/project-logos/fiwikiversity-1.5x.png', '2x' => '/static/images/project-logos/fiwikiversity-2x.png' ], // T150618
 	'frwikiversity' => [ '1.5x' => '/static/images/project-logos/frwikiversity-1.5x.png', '2x' => '/static/images/project-logos/frwikiversity-2x.png' ], // T150618
 	'itwikiversity' => [ '1.5x' => '/static/images/project-logos/itwikiversity-1.5x.png', '2x' => '/static/images/project-logos/itwikiversity-2x.png' ], // T150618
