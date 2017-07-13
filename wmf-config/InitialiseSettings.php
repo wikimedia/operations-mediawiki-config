@@ -15011,7 +15011,8 @@ $wgConf->settings = [
 ],
 
 'wmgMinervaNeue' => [
-	'default' => true,
+	'default' => false,
+	'testwiki' => true,
 ],
 'wmgUseMobileApp' => [
 	'default' => true,
