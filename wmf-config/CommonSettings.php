@@ -949,13 +949,13 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 	];
 
 	// Current stable release
-	$wgExtDistDefaultSnapshot = 'REL1_28';
+	$wgExtDistDefaultSnapshot = 'REL1_29';
 
 	// Current development snapshot
 	$wgExtDistCandidateSnapshot = 'REL1_29';
 
 	// Available snapshots
-	$wgExtDistSnapshotRefs = [
+#	$wgExtDistSnapshotRefs = [
 		'master',
 		'REL1_29',
 		'REL1_28',
