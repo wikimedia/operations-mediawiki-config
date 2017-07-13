@@ -1430,6 +1430,7 @@ $wgConf->settings = [
 
 	# Wikiversity
 	'cswikiversity' => [ '1.5x' => '/static/images/project-logos/cswikiversity-1.5x.png', '2x' => '/static/images/project-logos/cswikiversity-2x.png' ], // T150618
+	'eswikiversity' => [ '1.5x' => '/static/images/project-logos/eswikiversity-1.5x.png', '2x' => '/static/images/project-logos/eswikiversity-2x.png' ], // T170604
 
     # Wikivoyage
 	'cswikivoyage' => [ '1.5x' => '/static/images/project-logos/cswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/cswikivoyage-2x.png' ], // T150618
