@@ -8581,7 +8581,6 @@ $wgConf->settings = [
 	'huwiki' => [
 		'editor' => [ 'noratelimit' => true ],
 		'sysop' => [ 'templateeditor' => true ], // T74055
-		'user' => [ 'upload' => true ], // T30576
 		'templateeditor' => [ 'templateeditor' => true ], // T74055
 		'interface-editor' => [ 'editinterface' => true, 'editusercss' => true, 'edituserjs' => true ], // T109408
 	],
