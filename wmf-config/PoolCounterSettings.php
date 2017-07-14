@@ -14,7 +14,7 @@ $wgPoolCounterConf = [
 	'CirrusSearch-Search' => [
 		'class' => 'PoolCounter_Client',
 		'timeout' => 15,
-		'workers' => 432,
+		'workers' => 382,
 		'maxqueue' => 600,
 	],
 	// Super common and mostly fast
@@ -41,6 +41,15 @@ $wgPoolCounterConf = [
 	],
 	// These should be very very fast and reasonably rare
 	'CirrusSearch-NamespaceLookup' => [
+		'class' => 'PoolCounter_Client',
+		'timeout' => 5,
+		'workers' => 50,
+		'maxqueue' => 200,
+	],
+	// These are very expensive and incredibly common at more than 5M per hour
+	// before varnish caching. If the somehow the cache hit rate drops this
+	// protects the cluster
+	'CirrusSearch-MoreLike' => [
 		'class' => 'PoolCounter_Client',
 		'timeout' => 5,
 		'workers' => 50,
