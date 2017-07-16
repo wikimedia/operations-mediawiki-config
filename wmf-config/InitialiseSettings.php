@@ -8440,6 +8440,7 @@ $wgConf->settings = [
 			'changetags' => true, // T98629
 			'editextendedsemiprotected' => true // T131109
 		],
+		'rollbacker' => [ 'rollback' => true ], // T170780
 		'checkuser' => [ 'browsearchive' => true, 'deletedhistory' => true, 'deletedtext' => true ], // T23044
 		'sysop' => [ 'editextendedsemiprotected' => true ], // T131109
 	],
@@ -9895,7 +9896,8 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'import', 'transwiki', 'inactive', 'petitiondata' ],
 	],
 	'+frwiki' => [
-		'bureaucrat' => [ 'abusefilter', 'accountcreator' ],
+		'sysop' => [ 'rollbacker' ], // T170780
+		'bureaucrat' => [ 'abusefilter', 'accountcreator', 'rollbacker' ],
 	],
 	'+frwikibooks' => [
 		'bureaucrat' => [ 'abusefilter' ],
@@ -10637,7 +10639,8 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'import', 'transwiki', 'inactive', 'confirmed', 'petitiondata' ],
 	],
 	'+frwiki' => [
-		'bureaucrat' => [ 'abusefilter', 'sysop', 'accountcreator' ],
+		'sysop' => [ 'rollbacker' ], // T170780
+		'bureaucrat' => [ 'abusefilter', 'sysop', 'accountcreator', 'rollbacker' ],
 	],
 	'+frwikibooks' => [
 		'bureaucrat' => [ 'abusefilter' ],
