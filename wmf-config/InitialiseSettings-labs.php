@@ -589,7 +589,13 @@ function wmfLabsSettings() {
 		'wgPopupsGateway' => [
 			'default' => 'restbaseHTML',
 		],
-
+		// To allow us to test EventLogging in the beta cluster we log all events
+		'wgPopupsSchemaSamplingRate' => [
+			'default' => 1,
+		],
+		'wgPopupsStatsvSamplingRate' => [
+			'default' => 1,
+		],
 		'wgEnableRcFiltersBetaFeature' => [
 			'default' => true,
 		],
