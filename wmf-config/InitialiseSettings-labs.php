@@ -601,6 +601,14 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		// Enable page previews for everyone in labs (T162672)
+		'wgPopupsAnonsEnabledSamplingRate' => [
+			'default' => 1,
+		],
+		'wmgPopupsBetaFeature' => [
+			'default' => false,
+		],
+
 		'wmgUseCollaborationKit' => [
 			'default' => false,
 			'enwiki' => true,
