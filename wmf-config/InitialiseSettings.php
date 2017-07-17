@@ -1539,11 +1539,23 @@ $wgConf->settings = [
 	'wawiktionary' => [ '1.5x' => '/static/images/project-logos/wawiktionary-1.5x.png', '2x' => '/static/images/project-logos/wawiktionary-2x.png' ], // T150618
 
     # Wikiquote
+    'cawikiquote' => [ '1.5x' => '/static/images/project-logos/cawikiquote-1.5x.png', '2x' => '/static/images/project-logos/cawikiquote-2x.png' ], // T150618
 	'cswikiquote' => [ '1.5x' => '/static/images/project-logos/cswikiquote-1.5x.png', '2x' => '/static/images/project-logos/cswikiquote-2x.png' ], // T150618
+	'enwikiquote' => [ '1.5x' => '/static/images/project-logos/enwikiquote-1.5x.png', '2x' => '/static/images/project-logos/enwikiquote-2x.png' ], // T150618
+	'eowikiquote' => [ '1.5x' => '/static/images/project-logos/eowikiquote-1.5x.png', '2x' => '/static/images/project-logos/eowikiquote-2x.png' ], // T150618
 	'guwikiquote' => [ '1.5x' => '/static/images/project-logos/guwikiquote-1.5x.png', '2x' => '/static/images/project-logos/guwikiquote-2x.png' ],
+	'hrwikiquote' => [ '1.5x' => '/static/images/project-logos/hrwikiquote-1.5x.png', '2x' => '/static/images/project-logos/hrwikiquote-2x.png' ], // T150618
+	'hywikiquote' => [ '1.5x' => '/static/images/project-logos/hywikiquote-1.5x.png', '2x' => '/static/images/project-logos/hywikiquote-2x.png' ], // T150618
+	'mlwikiquote' => [ '1.5x' => '/static/images/project-logos/mlwikiquote-1.5x.png', '2x' => '/static/images/project-logos/mlwikiquote-2x.png' ], // T150618
+	'plwikiquote' => [ '1.5x' => '/static/images/project-logos/plwikiquote-1.5x.png', '2x' => '/static/images/project-logos/plwikiquote-2x.png' ], // T150618
+	'slwikiquote' => [ '1.5x' => '/static/images/project-logos/slwikiquote-1.5x.png', '2x' => '/static/images/project-logos/slwikiquote-2x.png' ], // T150618
 	'sqwikiquote' => [ '1.5x' => '/static/images/project-logos/sqwikiquote-1.5x.png', '2x' => '/static/images/project-logos/sqwikiquote-2x.png' ],
+	'srwikiquote' => [ '1.5x' => '/static/images/project-logos/srwikiquote-1.5x.png', '2x' => '/static/images/project-logos/srwikiquote-2x.png' ], // T150618
 	'srwikiquote' => [ '1.5x' => '/static/images/project-logos/srwikiquote-1.5x.png', '2x' => '/static/images/project-logos/srwikiquote-2x.png' ], // T168444
+	'suwikiquote' => [ '1.5x' => '/static/images/project-logos/suwikiquote-1.5x.png', '2x' => '/static/images/project-logos/suwikiquote-2x.png' ], // T150618
 	'viwikiquote' => [ '1.5x' => '/static/images/project-logos/viwikiquote-1.5x.png', '2x' => '/static/images/project-logos/viwikiquote-2x.png' ],
+	'zhwikiquote' => [ '1.5x' => '/static/images/project-logos/zhwikiquote-1.5x.png', '2x' => '/static/images/project-logos/zhwikiquote-2x.png' ], // T150618
+
 
     # Wikibooks
 	'eswikibooks' => [ '1.5x' => '/static/images/project-logos/eswikibooks-1.5x.png', '2x' => '/static/images/project-logos/eswikibooks-2x.png'], // T170248
