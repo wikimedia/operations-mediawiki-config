@@ -598,6 +598,20 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		// Enable page previews for everyone in labs (T162672)
+		//
+		// Note well that the Popups extension is only loaded when either
+		// wmgUsePopups or wmgPopupsBetaFeature is truthy.
+		'wmgUsePopups' => [
+			'default' => true,
+		],
+		'wmgPopupsBetaFeature' => [
+			'default' => false,
+		],
+		'wgPopupsAnonsEnabledSamplingRate' => [
+			'default' => 1,
+		],
+
 		'wmgUseCollaborationKit' => [
 			'default' => false,
 			'enwiki' => true,
