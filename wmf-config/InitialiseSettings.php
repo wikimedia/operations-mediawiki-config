@@ -19085,6 +19085,7 @@ $wgConf->settings = [
 
 'wmgUseCodeMirror' => [
 	'default' => false,
+	'simplewiki' => true,
 	'testwiki' => true, // T169284
 ],
 
