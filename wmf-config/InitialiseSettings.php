@@ -13036,7 +13036,7 @@ $wgConf->settings = [
 	'default' => false,
 	'mediawikiwiki' => true,
 	'labswiki' => true,
-	'labstestwiki' => true,
+	'labtestwiki' => true,
 ],
 
 'wgMaxMsgCacheEntrySize' => [
@@ -19123,7 +19123,7 @@ $wgConf->settings = [
 'wmgUseDynamicSidebar' => [
 	'default' => false,
 	'labswiki' => true,
-	'labstestwiki' => true,
+	'labtestwiki' => true,
 ],
 
 'wgNonincludableNamespaces' => [
@@ -19141,7 +19141,7 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'mediawikiwiki' => true,
 	'labswiki' => true,
-	'labstestwiki' => true,
+	'labtestwiki' => true,
 ],
 
 ];
