@@ -386,6 +386,7 @@ $wgConf->settings = [
 	'nlwiki' => 'Europe/Berlin',
 	'nlwikimedia' => 'Europe/Berlin',
 	'nlwikibooks' => 'Europe/Berlin',
+	'nlwikinews' => 'Europe/Berlin', // T170985
 	'nlwikiquote' => 'Europe/Berlin',
 	'nlwikisource' => 'Europe/Berlin',
 	'nlwikivoyage' => 'Europe/Amsterdam', // T43992
