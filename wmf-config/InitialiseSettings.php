@@ -1557,16 +1557,21 @@ $wgConf->settings = [
 	'viwikisource' => [ '1.5x' => '/static/images/project-logos/viwikisource-1.5x.png', '2x' => '/static/images/project-logos/viwikisource-2x.png' ],
 
 	# Wikiversity
+	'arwikiversity' => [ '1.5x' => '/static/images/project-logos/arwikiversity-1.5x.png', '2x' => '/static/images/project-logos/arwikiversity-2x.png' ],
 	'cswikiversity' => [ '1.5x' => '/static/images/project-logos/cswikiversity-1.5x.png', '2x' => '/static/images/project-logos/cswikiversity-2x.png' ], // T150618
+	'dewikiversity' => [ '1.5x' => '/static/images/project-logos/dewikiversity-1.5x.png', '2x' => '/static/images/project-logos/dewikiversity-2x.png' ],
 	'elwikiversity' => [ '1.5x' => '/static/images/project-logos/elwikiversity-1.5x.png', '2x' => '/static/images/project-logos/elwikiversity-2x.png' ], // T150618
 	'enwikiversity' => [ '1.5x' => '/static/images/project-logos/enwikiversity-1.5x.png', '2x' => '/static/images/project-logos/enwikiversity-2x.png' ], // T150618
+	'eswikiversity' => [ '1.5x' => '/static/images/project-logos/eswikiversity-1.5x.png', '2x' => '/static/images/project-logos/eswikiversity-2x.png' ],
 	'fiwikiversity' => [ '1.5x' => '/static/images/project-logos/fiwikiversity-1.5x.png', '2x' => '/static/images/project-logos/fiwikiversity-2x.png' ], // T150618
 	'frwikiversity' => [ '1.5x' => '/static/images/project-logos/frwikiversity-1.5x.png', '2x' => '/static/images/project-logos/frwikiversity-2x.png' ], // T150618
 	'itwikiversity' => [ '1.5x' => '/static/images/project-logos/itwikiversity-1.5x.png', '2x' => '/static/images/project-logos/itwikiversity-2x.png' ], // T150618
+	'jawikiversity' => [ '1.5x' => '/static/images/project-logos/jawikiversity-1.5x.png', '2x' => '/static/images/project-logos/jawikiversity-2x.png' ],
 	'kowikiversity' => [ '1.5x' => '/static/images/project-logos/kowikiversity-1.5x.png', '2x' => '/static/images/project-logos/kowikiversity-2x.png' ], // T150618
 	'ptwikiversity' => [ '1.5x' => '/static/images/project-logos/ptwikiversity-1.5x.png', '2x' => '/static/images/project-logos/ptwikiversity-2x.png' ], // T150618
 	'ruwikiversity' => [ '1.5x' => '/static/images/project-logos/ruwikiversity-1.5x.png', '2x' => '/static/images/project-logos/ruwikiversity-2x.png' ], // T150618
 	'slwikiversity' => [ '1.5x' => '/static/images/project-logos/slwikiversity-1.5x.png', '2x' => '/static/images/project-logos/slwikiversity-2x.png' ], // T150618
+	'svwikiversity' => [ '1.5x' => '/static/images/project-logos/svwikiversity-1.5x.png', '2x' => '/static/images/project-logos/svwikiversity-2x.png' ],
 
     # Wikivoyage
 	'cswikivoyage' => [ '1.5x' => '/static/images/project-logos/cswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/cswikivoyage-2x.png' ], // T150618
