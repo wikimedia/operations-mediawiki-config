@@ -1936,6 +1936,10 @@ if ( $wmgUseLivePreview ) {
 	$wgDefaultUserOptions['uselivepreview'] = 1;
 }
 
+if ( $wmgUseTemplateStyles ) {
+	wfLoadExtension( 'TemplateStyles' );
+}
+
 if ( $wmgUseLoginNotify ) {
 	wfLoadExtension( 'LoginNotify' );
 	$wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;

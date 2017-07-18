@@ -19136,6 +19136,14 @@ $wgConf->settings = [
 	'testwiki' => true,
 ],
 
+'wmgUseTemplateStyles' => [
+	'default' => false,
+	'testwiki' => true,
+	'mediawikiwiki' => true,
+	'labswiki' => true,
+	'labstestwiki' => true,
+],
+
 ];
 
 ### WMF Labs override #####
