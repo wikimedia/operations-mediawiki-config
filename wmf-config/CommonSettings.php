@@ -800,10 +800,13 @@ if ( $wmgUseProofreadPage ) {
 	wfLoadExtension( 'ProofreadPage' );
 	if ( $wgDBname === 'dewikisource' ) {
 		$wgGroupPermissions['*']['pagequality'] = true; # 27516
-	} elseif ( $wgDBname === 'enwikisource' || $wgDBname === 'svwikisource' ) {
+	}
+
+	if ( $wmgProofreadPageShowHeaders ) {
 		$wgDefaultUserOptions['proofreadpage-showheaders'] = 1;
 	}
 }
+
 if ( $wmgUseLabeledSectionTransclusion ) {
 	wfLoadExtension( 'LabeledSectionTransclusion' );
 }
