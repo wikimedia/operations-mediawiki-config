@@ -12,22 +12,14 @@
 		<exclude name="MediaWiki.Commenting.IllegalSingleLineComment.IllegalSingleLineCommentStart" />
 		<exclude name="MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures" />
 		<exclude name="MediaWiki.ControlStructures.IfElseStructure.SpaceAfterElse" />
-		<exclude name="MediaWiki.ControlStructures.IfElseStructure.SpaceBeforeElse" />
 		<exclude name="MediaWiki.ExtraCharacters.CharacterBeforePHPOpeningTag.Found" />
-		<exclude name="MediaWiki.ExtraCharacters.ParenthesesAroundKeyword.ParenthesesAroundKeywords" />
 		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.wfPrefix" />
 		<exclude name="MediaWiki.NamingConventions.ValidGlobalName.wgPrefix" />
 		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
 		<exclude name="MediaWiki.VariableAnalysis.UnusedGlobalVariables" />
-		<exclude name="MediaWiki.WhiteSpace.MultipleEmptyLines.MultipleEmptyLines" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeControlStructureBrace.EmptyLines" />
-		<exclude name="MediaWiki.WhiteSpace.SpaceAfterControlStructure.Incorrect" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.EmptyComment" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.NewLineComment" />
-		<exclude name="MediaWiki.WhiteSpace.SpaceBeforeSingleLineComment.SingleSpaceBeforeSingleLineComment" />
-		<exclude name="MediaWiki.WhiteSpace.SpaceyParenthesis.SingleSpaceAfterOpenParenthesis" />
-		<exclude name="MediaWiki.WhiteSpace.SpaceyParenthesis.SingleSpaceBeforeCloseParenthesis" />
-		<exclude name="MediaWiki.WhiteSpace.SpaceyParenthesis.SpaceBeforeOpeningParenthesis" />
 		<exclude name="MediaWiki.WhiteSpace.SpaceyParenthesis.UnnecessarySpaceBetweenParentheses" />
 	</rule>
 	<file>.</file>
@@ -37,9 +29,6 @@
 		<severity>0</severity>
 	</rule>
 	<rule ref="Generic.CodeAnalysis.UnconditionalIfStatement.Found">
-		<severity>0</severity>
-	</rule>
-	<rule ref="Generic.ControlStructures.InlineControlStructure.NotAllowed">
 		<severity>0</severity>
 	</rule>
 	<rule ref="Generic.Files.EndFileNewline.NotFound">

@@ -14,7 +14,6 @@ if ( ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED
 	$proto = 'http';
 }
 
-
 // validate $language
 if ( !preg_match( '/^[a-zA-Z\-]*$/', $language ) ) {
 	$language = 'en';

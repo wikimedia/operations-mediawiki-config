@@ -4,7 +4,7 @@
 
 use MediaWiki\Logger\LoggerFactory;
 
-require_once( "$IP/extensions/LdapAuthentication/LdapAuthentication.php" );
+require_once "$IP/extensions/LdapAuthentication/LdapAuthentication.php" ;
 $wgAuthManagerAutoConfig['primaryauth'] += [
 	LdapPrimaryAuthenticationProvider::class => [
 		'class' => LdapPrimaryAuthenticationProvider::class,
@@ -14,8 +14,8 @@ $wgAuthManagerAutoConfig['primaryauth'] += [
 		'sort' => 50, // must be smaller than local pw provider
 	],
 ];
-$wgLDAPDomainNames = [ 'labs'];
-switch( $wgDBname ) {
+$wgLDAPDomainNames = [ 'labs' ];
+switch ( $wgDBname ) {
 case 'labswiki' :
 	$wgLDAPServerNames = [ 'labs' => 'ldap-labs.eqiad.wikimedia.org' ];
         break;
@@ -23,10 +23,10 @@ case 'labtestwiki' :
 	$wgLDAPServerNames = [ 'labs' => 'labtestservices2001.wikimedia.org' ];
         break;
 }
-$wgLDAPSearchAttributes = [ 'labs' => 'cn'];
+$wgLDAPSearchAttributes = [ 'labs' => 'cn' ];
 $wgLDAPBaseDNs = [ 'labs' => 'dc=wikimedia,dc=org' ];
 $wgLDAPUserBaseDNs = [ 'labs' => 'ou=people,dc=wikimedia,dc=org' ];
-$wgLDAPEncryptionType = [ 'labs' => 'tls'];
+$wgLDAPEncryptionType = [ 'labs' => 'tls' ];
 $wgLDAPWriteLocation = [ 'labs' => 'ou=people,dc=wikimedia,dc=org' ];
 $wgLDAPAddLDAPUsers = [ 'labs' => true ];
 $wgLDAPUpdateLDAP = [ 'labs' => true ];
@@ -39,7 +39,7 @@ $wgLDAPUseFetchedUsername = [ 'labs' => true ];
 $wgLDAPLowerCaseUsernameScheme = [ 'labs' => false, 'invaliddomain' => false ];
 $wgLDAPLowerCaseUsername = [ 'labs' => false, 'invaliddomain' => false ];
 // Only enable UseLocal if you need to promote an LDAP user
-#$wgLDAPUseLocal = true;
+# $wgLDAPUseLocal = true;
 
 $wgLDAPDebug = 5; // Maximally verbose logs for Andrew Bogott, 8-Dec-2015
 
@@ -64,8 +64,8 @@ if ( false ) {
 	] );
 }
 
-require_once( "$IP/extensions/OpenStackManager/OpenStackManager.php" );
-switch( $wgDBname ) {
+require_once "$IP/extensions/OpenStackManager/OpenStackManager.php" ;
+switch ( $wgDBname ) {
 case 'labswiki' :
 	$wgOpenStackManagerNovaIdentityURI = 'http://labcontrol1001.wikimedia.org:35357/v2.0';
 	$wgOpenStackManagerNovaIdentityV3URI = 'http://labcontrol1001.wikimedia.org:35357/v3';
@@ -101,10 +101,10 @@ $wgOpenStackManagerPuppetOptions = [
 ];
 $wgOpenStackManagerInstanceUserData = [
 	'cloud-config' => [
-		#'puppet' => array( 'conf' => array( 'puppetd' => array( 'server' => 'wikitech.wikimedia.org', 'certname' => '%i' ) ) ),
-		#'apt_upgrade' => 'true',
+		# 'puppet' => array( 'conf' => array( 'puppetd' => array( 'server' => 'wikitech.wikimedia.org', 'certname' => '%i' ) ) ),
+		# 'apt_upgrade' => 'true',
 		'apt_update' => 'false', // Puppet will cause this
-		#'apt_mirror' => 'http://ubuntu.wikimedia.org/ubuntu/',
+		# 'apt_mirror' => 'http://ubuntu.wikimedia.org/ubuntu/',
 	],
 	'scripts' => [
 		# Used for new images
@@ -164,5 +164,5 @@ $wgOpenStackManagerProxyGateways = [ 'eqiad' => '208.80.155.156' ];
 # This must be loaded AFTER OSM, to overwrite it's defaults
 # Except when we're not an OSM host and we're running like a maintenance script.
 if ( file_exists( '/etc/mediawiki/WikitechPrivateSettings.php' ) ) {
-	require_once( '/etc/mediawiki/WikitechPrivateSettings.php' );
+	require_once '/etc/mediawiki/WikitechPrivateSettings.php' ;
 }

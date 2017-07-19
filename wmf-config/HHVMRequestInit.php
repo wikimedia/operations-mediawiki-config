@@ -6,7 +6,9 @@
  * request by setting the path to this file as the value of HHVM's
  * `hhvm.server.request_init_document` setting.
  */
-if ( !defined( 'HHVM_VERSION' ) ) return;
+if ( !defined( 'HHVM_VERSION' ) ) {
+	return;
+}
 
 /**
  * Set up fatal error handler.

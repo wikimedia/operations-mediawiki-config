@@ -8,7 +8,6 @@
  * @file
  */
 
-
 class DbListTests extends PHPUnit_Framework_TestCase {
 
 	public static function provideProjectDbnames() {
@@ -51,7 +50,6 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 
 		// Content of all.dblist
 		$all = $lists['all'];
-
 
 		// dblist files that are exceptions
 		$skip = array(

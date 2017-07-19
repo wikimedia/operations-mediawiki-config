@@ -25,7 +25,7 @@ class DBList {
 	public static function getLists() {
 		static $list = null;
 		if ( !$list ) {
-			$filenames = scandir(  dirname( __DIR__ ) . '/dblists'  );
+			$filenames = scandir( dirname( __DIR__ ) . '/dblists' );
 			foreach ( $filenames as $filename ) {
 				if ( substr( $filename, -7, 7 ) == '.dblist' ) {
 					$projectname = substr( $filename, 0, -7 );
