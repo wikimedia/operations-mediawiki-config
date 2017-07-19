@@ -94,7 +94,6 @@ if ( $wgLanguageCode === 'zh' ) {
 	$wgCirrusSearchWikimediaExtraPlugin['token_count_router'] = true;
 }
 
-
 # Enable the "experimental" highlighter on all wikis
 $wgCirrusSearchUseExperimentalHighlighter = true;
 $wgCirrusSearchOptimizeIndexForExperimentalHighlighter = true;

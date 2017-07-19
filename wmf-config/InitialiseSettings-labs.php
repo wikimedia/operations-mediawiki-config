@@ -117,7 +117,7 @@ function wmfLabsSettings() {
 		'-wgUploadPath' => [
 			'default' => 'https://upload.$variant.wmflabs.org/$site/$lang',
 			'private' => '/w/img_auth.php',
-		//	'wikimania2005wiki' => 'http://upload..org/wikipedia/wikimania', // back compat
+		// 'wikimania2005wiki' => 'http://upload..org/wikipedia/wikimania', // back compat
 			'commonswiki' => 'https://upload.$variant.wmflabs.org/wikipedia/commons',
 			'metawiki' => 'https://upload.$variant.wmflabs.org/wikipedia/meta',
 			'testwiki' => 'https://upload.$variant.wmflabs.org/wikipedia/test',

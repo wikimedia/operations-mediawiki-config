@@ -5,7 +5,7 @@ class InitialiseSettingsTest extends WgConfTestCase {
 	///
 	/// wgLogoHD
 	///
-	public function testLogoHD () {
+	public function testLogoHD() {
 		$requiredKeys = $this->getRequiredLogoHDKeys();
 		$wgConf = $this->loadWgConf( 'unittest' );
 
@@ -15,7 +15,7 @@ class InitialiseSettingsTest extends WgConfTestCase {
 		}
 	}
 
-	public function getRequiredLogoHDKeys () {
+	public function getRequiredLogoHDKeys() {
 		return [ '1.5x', '2x' ];
 	}
 
