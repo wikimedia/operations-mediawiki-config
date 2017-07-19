@@ -1954,7 +1954,7 @@ if ( $wmgUseCodeMirror ) {
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
 $wgDefaultUserOptions['showhiddencats'] = $wmgShowHiddenCats;
 
-if( $wgDBname === 'commonswiki' ) {
+if ( $wgDBname === 'commonswiki' ) {
 	$wgDefaultUserOptions['watchcreations'] = 0;
 } else {
 	$wgDefaultUserOptions['watchcreations'] = 1;
@@ -1962,12 +1962,9 @@ if( $wgDBname === 'commonswiki' ) {
 
 // Temporary override: WMF is not hardcore enough to enable this.
 // See T37785, T38316, T47022 about it.
-if ( $wmgWatchlistDefault )
-{
+if ( $wmgWatchlistDefault ) {
 	$wgDefaultUserOptions['watchdefault'] = 1;
-}
-else
-{
+} else {
 	$wgDefaultUserOptions['watchdefault'] = 0;
 }
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
