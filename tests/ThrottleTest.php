@@ -4,7 +4,7 @@ class ThrottleTest extends PHPUnit_Framework_TestCase {
 	/**
 	 * @dataProvider provideRules
 	 */
-	public function testThrottlingExceptionsKeys ( $rule ) {
+	public function testThrottlingExceptionsKeys( $rule ) {
 		$validParameters = self::getThrottlingExceptionsValidParameters();
 
 		foreach ( $rule as $key => $value ) {
@@ -18,7 +18,7 @@ class ThrottleTest extends PHPUnit_Framework_TestCase {
 	/**
 	 * @dataProvider provideRules
 	 */
-	public function testIfThrottlingExceptionsContainTheRequiredParameters ( $rule ) {
+	public function testIfThrottlingExceptionsContainTheRequiredParameters( $rule ) {
 		$keys = array_keys( $rule );
 		$this->assertContains( 'from', $keys, "Throttle rule required parameter missing: from" );
 		$this->assertContains( 'to', $keys, "Throttle rule required parameter missing: to" );
@@ -27,9 +27,9 @@ class ThrottleTest extends PHPUnit_Framework_TestCase {
 	/**
 	 * @dataProvider provideRules
 	 */
-	public function testIfThrottlingExceptionsDontContainBothRangeAndIP ( $rule ) {
+	public function testIfThrottlingExceptionsDontContainBothRangeAndIP( $rule ) {
 		$keys = array_keys( $rule );
-		$this->assertFalse (
+		$this->assertFalse(
 			in_array( 'IP', $keys ) &&
 			in_array( 'range', $keys ),
 			"Throttle rules can apply to range(s) or IP(s) but not both"
@@ -40,7 +40,7 @@ class ThrottleTest extends PHPUnit_Framework_TestCase {
 	 * @dataProvider provideRules
 	 * @depends testIfThrottlingExceptionsContainTheRequiredParameters
 	 */
-	public function testThrottlingExceptionsValues ( $rule ) {
+	public function testThrottlingExceptionsValues( $rule ) {
 		foreach ( $rule as $key => $value ) {
 			// Parses date
 			// strtotime returns false when the string can't be parsed.
@@ -79,7 +79,7 @@ class ThrottleTest extends PHPUnit_Framework_TestCase {
 		}
 	}
 
-	protected static function getThrottlingExceptionsValidParameters () {
+	protected static function getThrottlingExceptionsValidParameters() {
 		return [
 			'from',
 			'to',
@@ -90,7 +90,7 @@ class ThrottleTest extends PHPUnit_Framework_TestCase {
 		];
 	}
 
-	public function provideRules () {
+	public function provideRules() {
 		require __DIR__ . '/../wmf-config/throttle.php';
 
 		$rules = [];

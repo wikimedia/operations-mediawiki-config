@@ -44,8 +44,6 @@ if ( getenv( 'MW_DEBUG_LOCAL' ) ) {
 	$wmgMonologChannels = [];
 }
 
-
-
 // Monolog logging configuration
 
 // T124985: The Processors listed in $wmgMonologProcessors are applied to
@@ -131,7 +129,6 @@ if ( $wmgLogstashServers ) {
 		];
 	}
 }
-
 
 // Post construction calls to make for new Logger instances
 $wmgMonologLoggerCalls = [
@@ -281,7 +278,6 @@ foreach ( $wmgMonologChannels as $channel => $opts ) {
 			$handlers[] = $logstashHandler;
 		}
 	}
-
 
 	if ( $opts['sample'] ) {
 		$sample = $opts['sample'];

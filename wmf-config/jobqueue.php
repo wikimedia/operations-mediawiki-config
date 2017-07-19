@@ -17,7 +17,7 @@ $wmgRedisQueueBaseConfig = [
 function wmfRedisConfigByPartition( $base, $partitions ) {
 	$result = [];
 	foreach ( $partitions as $partition => $addr ) {
-		$result[$partition] = ['redisServer' => $addr] + $base;
+		$result[$partition] = [ 'redisServer' => $addr ] + $base;
 	}
 	return $result;
 }

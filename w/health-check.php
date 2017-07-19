@@ -3,7 +3,7 @@ echo "PHP interpreter running\n";
 
 # Work out the number of physical processors
 
-if ( !file_exists ( '/proc/cpuinfo' ) ) {
+if ( !file_exists( '/proc/cpuinfo' ) ) {
 	echo "Can't get CPU information, as procfs isn't mounted or /proc/cpuinfo isn't available on this system.\n";
 	exit;
 }
