@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e71af52_4dacb932",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-07-19T23:47:18Z",
+      "side": 1,
+      "message": "Spaces shouldn\u0027t be left here :(",
+      "range": {
+        "startLine": 141,
+        "startChar": 37,
+        "endLine": 141,
+        "endChar": 38
+      },
+      "revId": "88c4bd72c90d215ea268314e6c2fd5e27b7a4d8d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
