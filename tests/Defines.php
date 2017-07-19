@@ -40,7 +40,7 @@ define( 'DBO_SYSDBA', 64 ); // for oracle maintenance
 define( 'DBO_DDLMODE', 128 ); // when using schema files: mostly for Oracle
 define( 'DBO_SSL', 256 );
 define( 'DBO_COMPRESS', 512 );
-/**@}*/
+/*@}*/
 
 /**@{
  * Valid database indexes
@@ -48,7 +48,7 @@ define( 'DBO_COMPRESS', 512 );
  */
 define( 'DB_REPLICA', -1 );     # Read from a replica (or only server)
 define( 'DB_MASTER', -2 );    # Write to master (or only server)
-/**@}*/
+/*@}*/
 
 # Obsolete aliases
 define( 'DB_SLAVE', -1 );
@@ -58,7 +58,7 @@ define( 'DB_SLAVE', -1 );
  */
 define( 'NS_MEDIA', -2 );
 define( 'NS_SPECIAL', -1 );
-/**@}*/
+/*@}*/
 
 /**@{
  * Real namespaces
@@ -95,7 +95,7 @@ define( 'NS_CATEGORY_TALK', 15 );
  */
 define( 'NS_IMAGE', NS_FILE );
 define( 'NS_IMAGE_TALK', NS_FILE_TALK );
-/**@}*/
+/*@}*/
 
 /**@{
  * Cache type
@@ -105,7 +105,7 @@ define( 'CACHE_NONE', 0 );       // Do not cache
 define( 'CACHE_DB', 1 );         // Store cache objects in the DB
 define( 'CACHE_MEMCACHED', 2 );  // MemCached, must specify servers in $wgMemCacheServers
 define( 'CACHE_ACCEL', 3 );      // APC, XCache or WinCache
-/**@}*/
+/*@}*/
 
 /**@{
  * Media types.
@@ -132,7 +132,7 @@ define( 'MEDIATYPE_TEXT', 'TEXT' );
 define( 'MEDIATYPE_EXECUTABLE', 'EXECUTABLE' );
 // archive file (zip, tar, etc)
 define( 'MEDIATYPE_ARCHIVE', 'ARCHIVE' );
-/**@}*/
+/*@}*/
 
 /**@{
  * Antivirus result codes, for use in $wgAntivirusSetup.
@@ -141,7 +141,7 @@ define( 'AV_NO_VIRUS', 0 );  # scan ok, no virus found
 define( 'AV_VIRUS_FOUND', 1 );  # virus found!
 define( 'AV_SCAN_ABORTED', -1 );  # scan aborted, the file is probably immune
 define( 'AV_SCAN_FAILED', false );  # scan failed (scanner not found or error in scanner)
-/**@}*/
+/*@}*/
 
 /**@{
  * Anti-lock flags
@@ -152,7 +152,7 @@ define( 'ALF_PRELOAD_LINKS', 1 ); // unused
 define( 'ALF_PRELOAD_EXISTENCE', 2 ); // unused
 define( 'ALF_NO_LINK_LOCK', 4 ); // unused
 define( 'ALF_NO_BLOCK_LOCK', 8 ); // unused
-/**@}*/
+/*@}*/
 
 /**@{
  * Date format selectors; used in user preference storage and by
@@ -163,7 +163,7 @@ define( 'MW_DATE_MDY', 'mdy' );
 define( 'MW_DATE_DMY', 'dmy' );
 define( 'MW_DATE_YMD', 'ymd' );
 define( 'MW_DATE_ISO', 'ISO 8601' );
-/**@}*/
+/*@}*/
 
 /**@{
  * RecentChange type identifiers
@@ -173,7 +173,7 @@ define( 'RC_NEW', 1 );
 define( 'RC_LOG', 3 );
 define( 'RC_EXTERNAL', 5 );
 define( 'RC_CATEGORIZE', 6 );
-/**@}*/
+/*@}*/
 
 /**@{
  * Article edit flags
@@ -186,7 +186,7 @@ define( 'EDIT_FORCE_BOT', 16 );
 define( 'EDIT_DEFER_UPDATES', 32 ); // Unused since 1.27
 define( 'EDIT_AUTOSUMMARY', 64 );
 define( 'EDIT_INTERNAL', 128 );
-/**@}*/
+/*@}*/
 
 /**@{
  * Flags for Database::makeList()
@@ -197,7 +197,7 @@ define( 'LIST_AND', 1 );
 define( 'LIST_SET', 2 );
 define( 'LIST_NAMES', 3 );
 define( 'LIST_OR', 4 );
-/**@}*/
+/*@}*/
 
 /**@{
  * Hook support constants
@@ -206,7 +206,7 @@ define( 'MW_SUPPORTS_PARSERFIRSTCALLINIT', 1 );
 define( 'MW_SUPPORTS_LOCALISATIONCACHE', 1 );
 define( 'MW_SUPPORTS_CONTENTHANDLER', 1 );
 define( 'MW_EDITFILTERMERGED_SUPPORTS_API', 1 );
-/**@}*/
+/*@}*/
 
 /** Support for $wgResourceModules */
 define( 'MW_SUPPORTS_RESOURCE_MODULES', 1 );
@@ -226,7 +226,7 @@ define( 'OT_WIKI', 2 );
 define( 'OT_PREPROCESS', 3 );
 define( 'OT_MSG', 3 );  // b/c alias for OT_PREPROCESS
 define( 'OT_PLAIN', 4 );
-/**@}*/
+/*@}*/
 
 /**@{
  * Flags for Parser::setFunctionHook
@@ -236,7 +236,7 @@ define( 'OT_PLAIN', 4 );
  */
 define( 'SFH_NO_HASH', 1 );
 define( 'SFH_OBJECT_ARGS', 2 );
-/**@}*/
+/*@}*/
 
 /**@{
  * Autopromote conditions (must be here and not in Autopromote.php, so that
@@ -251,7 +251,7 @@ define( 'APCOND_IPINRANGE', 6 );
 define( 'APCOND_AGE_FROM_EDIT', 7 );
 define( 'APCOND_BLOCKED', 8 );
 define( 'APCOND_ISBOT', 9 );
-/**@}*/
+/*@}*/
 
 /** @{
  * Protocol constants for wfExpandUrl()
@@ -262,7 +262,7 @@ define( 'PROTO_RELATIVE', '//' );
 define( 'PROTO_CURRENT', null );
 define( 'PROTO_CANONICAL', 1 );
 define( 'PROTO_INTERNAL', 2 );
-/**@}*/
+/*@}*/
 
 /**@{
  * Content model ids, used by Content and ContentHandler.
@@ -277,7 +277,7 @@ define( 'CONTENT_MODEL_JAVASCRIPT', 'javascript' );
 define( 'CONTENT_MODEL_CSS', 'css' );
 define( 'CONTENT_MODEL_TEXT', 'text' );
 define( 'CONTENT_MODEL_JSON', 'json' );
-/**@}*/
+/*@}*/
 
 /**@{
  * Content formats, used by Content and ContentHandler.
@@ -302,10 +302,10 @@ define( 'CONTENT_FORMAT_SERIALIZED', 'application/vnd.php.serialized' );
 define( 'CONTENT_FORMAT_JSON', 'application/json' );
 // for future use with the api, and for use by extensions
 define( 'CONTENT_FORMAT_XML', 'application/xml' );
-/**@}*/
+/*@}*/
 
 /**@{
  * Max string length for shell invocations; based on binfmts.h
  */
 define( 'SHELL_MAX_ARG_STRLEN', '100000' );
-/**@}*/
+/*@}*/

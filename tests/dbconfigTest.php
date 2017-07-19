@@ -33,7 +33,7 @@ class dbconfigTests extends WgConfTestCase {
 		$wgDBname     = 'testwiki';
 		$wgDBuser     = 'sqladmin';
 		$wgDBpassword = 'secretpass';
-		if( !defined( 'DBO_DEFAULT' ) ) {
+		if ( !defined( 'DBO_DEFAULT' ) ) {
 			define( 'DBO_DEFAULT', 16 );
 		}
 
@@ -41,7 +41,7 @@ class dbconfigTests extends WgConfTestCase {
 		$wmfMasterDatacenter = $masterdatacenter;
 		$wmfRealm = $realm;
 		$wmfDatacenter = $datacenter;
-		include( getRealmSpecificFilename( __DIR__ . '/../wmf-config/db.php' ) );
+		include getRealmSpecificFilename( __DIR__ . '/../wmf-config/db.php' );
 
 		$this->restoreGlobals();
 		return $wgLBFactoryConf;
@@ -78,7 +78,7 @@ class dbconfigTests extends WgConfTestCase {
 	function testDbAssignedToAnExistingCluster( $realm, $datacenter, $masterdatacenter ) {
 		$ok = true;
 		$lb = $this->loadDbFile( $realm, $datacenter, $masterdatacenter );
-		foreach ( $lb['sectionsByDB'] as $dbname => $cluster) {
+		foreach ( $lb['sectionsByDB'] as $dbname => $cluster ) {
 			if ( !array_key_exists( $cluster, $lb['sectionLoads'] ) ) {
 				$ok = false;
 				$this->fail(

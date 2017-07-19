@@ -72,9 +72,7 @@ function handleMissingWiki() {
 		$db = null;
 		try {
 			$db = include  __DIR__ . '/interwiki.php';
-		} catch ( Exception $e ) {}
-
-		if ( $db ) {
+		} catch ( Exception $e ) {}		if ( $db ) {
 			$prefix = strtok( $page, ':' );
 
 			# Try looking for lateral links (w: q: voy: ...)

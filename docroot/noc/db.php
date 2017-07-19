@@ -18,7 +18,7 @@ require_once '../../wmf-config/db-eqiad.php';
 class WmfClusters {
 	private $clusters;
 
-	public function getNames( ) {
+	public function getNames() {
 		global $wgLBFactoryConf;
 		return array_keys( $wgLBFactoryConf['sectionLoads'] );
 	}
