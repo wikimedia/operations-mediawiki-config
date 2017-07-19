@@ -1951,7 +1951,7 @@ if ( $wmgUseCodeMirror ) {
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
 $wgDefaultUserOptions['showhiddencats'] = $wmgShowHiddenCats;
 
-if( $wgDBname === 'commonswiki' ) {
+if ( $wgDBname === 'commonswiki' ) {
 	$wgDefaultUserOptions['watchcreations'] = 0;
 } else {
 	$wgDefaultUserOptions['watchcreations'] = 1;
