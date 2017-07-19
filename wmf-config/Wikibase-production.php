@@ -101,7 +101,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	if ( $wgDBname === 'wikidatawiki' ) {
 		$wgWBRepoSettings['unitStorage'] = [
-			'class' => '\\Wikibase\\Lib\\JsonUnitStorage',
+			'class' => '\\Wikibase\\Lib\\Units\\JsonUnitStorage',
 			'args' => [__DIR__ . '/unitConversionConfig.json']
 		];
 	}
