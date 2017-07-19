@@ -11925,6 +11925,13 @@ $wgConf->settings = [
 	'frrwiki' => true, // T40023
 ],
 
+'wmgProofreadPageShowHeaders' => [
+	'default' => false,
+	'enwikisource' => true,
+	'svwikisource' => true,
+	'tawikisource' => true,
+],
+
 'wmgUseDPL' => [
 	// DynamicPageList extension
 	'default' => false,
