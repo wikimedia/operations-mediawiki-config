@@ -34,7 +34,7 @@ class cirrusTests extends WgConfTestCase {
 		$this->assertCount( 2, $config['wgCirrusSearchReplicas'] );
 		$this->assertCount( 2, $config['wgCirrusSearchClientSideConnectTimeout'] );
 
-		foreach ( array_keys ( $config['wgCirrusSearchClusters'] ) as $cluster ) {
+		foreach ( array_keys( $config['wgCirrusSearchClusters'] ) as $cluster ) {
 			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchShardCount'] );
 			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchReplicas'] );
 			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchClientSideConnectTimeout'] );
@@ -215,7 +215,7 @@ class cirrusTests extends WgConfTestCase {
 		$numReplicas = end( $pieces );
 
 		// +1 is for the primary.
-		$totalShards = $primaryShards * (1 + $numReplicas);
+		$totalShards = $primaryShards * ( 1 + $numReplicas );
 
 		$this->assertGreaterThanOrEqual( 2, $numReplicas );
 		$this->assertLessThanOrEqual( 3, $numReplicas );
@@ -227,11 +227,10 @@ class cirrusTests extends WgConfTestCase {
 		// For our busiest wikis we want to make sure we are using most of the
 		// cluster for the indices. This was guesstimated by running the following query
 		// in hive and choosing wikis with > 100M queries/week:
-		//   select wikiid, count(1) as count from wmf_raw.cirrussearchrequestset where year = 2016
-		//   and month = 1 and day >= 2 and day < 9 group by wikiid order by count desc limit 10;
+		// select wikiid, count(1) as count from wmf_raw.cirrussearchrequestset where year = 2016
+		// and month = 1 and day >= 2 and day < 9 group by wikiid order by count desc limit 10;
 		$busyWikis = array( 'enwiki', 'dewiki' );
 		if ( in_array( $wiki, $busyWikis ) && $indexType == 'content' ) {
-
 			// For busy indices ensure we are using most of the cluster to serve them
 			$this->assertGreaterThanOrEqual( $numServers - 3, $totalShards );
 		}
@@ -295,7 +294,7 @@ class cirrusTests extends WgConfTestCase {
 	 */
 	public function testConfigByLanguage( $wiki, $type, array $expectedConfValues ) {
 		$config = $this->loadCirrusConfig( 'production', $wiki, $type );
-		foreach( $expectedConfValues as $key => $val ) {
+		foreach ( $expectedConfValues as $key => $val ) {
 			$this->assertEquals( $config[$key], $val );
 		}
 	}

@@ -2,7 +2,6 @@
 # WARNING: This file is publically viewable on the web.
 #          Do not put private data here.
 if ( $wmfRealm == 'labs' ) {  # safe guard
-
 /*
  * Before altering the wgMemCachedServers array below, make sure you planned
  * your change. Memcached compute a hash of the data and given the hash
@@ -12,8 +11,7 @@ if ( $wmfRealm == 'labs' ) {  # safe guard
  *
  * Hashar, based on dammit comments. Nov 28 2005.
  *
- */
-$wgMemCachedPersistent = true;
+ */$wgMemCachedPersistent = true;
 
 $wgMainCacheType = "memcached-pecl";
 

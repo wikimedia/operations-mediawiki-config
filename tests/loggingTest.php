@@ -147,7 +147,7 @@ class loggingTests extends WgConfTestCase {
 		if ( isset( $config['sample'] ) ) {
 			self::assertThat(
 				$config['sample'],
-				self::logicalOr( self::equalTo( false ), self::greaterThan(0) ),
+				self::logicalOr( self::equalTo( false ), self::greaterThan( 0 ) ),
 				'Sample must be either false or integer > 0'
 			);
 		}

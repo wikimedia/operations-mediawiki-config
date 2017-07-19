@@ -61,7 +61,7 @@ class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
 	/**
 	 * @dataProvider provideValidCases
 	 */
-	public function testValidCases( $q, $expect, $msg) {
+	public function testValidCases( $q, $expect, $msg ) {
 		$this->assertContains(
 			$expect,
 			$this->runHighlight( $q ),

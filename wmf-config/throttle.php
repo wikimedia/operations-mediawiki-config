@@ -20,11 +20,11 @@ $wmgThrottlingExceptions = [];
 #             (default: any project)
 # Example:
 # $wmgThrottlingExceptions[] = [
-#	'from'   => '2016-01-01T00:00 +0:00',
-#	'to'     => '2016-02-01T00:00 +0:00',
-#	'IP'     => '123.456.78.90',
-#	'dbname' => [ 'xxwiki', etc. ],
-#	'value'  => xx
+# 'from'   => '2016-01-01T00:00 +0:00',
+# 'to'     => '2016-02-01T00:00 +0:00',
+# 'IP'     => '123.456.78.90',
+# 'dbname' => [ 'xxwiki', etc. ],
+# 'value'  => xx
 # ];
 ## Add throttling definitions below.
 
