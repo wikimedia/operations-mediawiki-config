@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e71af52_0d7b11ed",
+        "filename": "wmf-config/Wikibase-production.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 104,
+      "author": {
+        "id": 33
+      },
+      "writtenOn": "2017-07-19T23:07:53Z",
+      "side": 1,
+      "message": "maybe for safety and compat with wmf.9, we could have both the old and new configs for now?",
+      "revId": "01b2ffa6fd8397f48762ecd9112d383740a528b3",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
