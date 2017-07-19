@@ -141,11 +141,11 @@ function wmfStaticRespond() {
 
 	// Try each version in descending order
 	// - Requests without a validation hash will get the latest version.
-	//   (If the file no longer exists in the latest version, it will correctly
-	//   fall back to the last available version.)
+	// (If the file no longer exists in the latest version, it will correctly
+	// fall back to the last available version.)
 	// - Requests with validation hash get the first match. If none found, falls back to the last
-	//   available version. Cache expiry is shorted in that case to allow eventual-consistency and
-	//   avoids cache poisoning (see T47877).
+	// available version. Cache expiry is shorted in that case to allow eventual-consistency and
+	// avoids cache poisoning (see T47877).
 	foreach ( $branchDirs as $branchDir ) {
 		// Use realpath() to prevent path escalation through e.g. "../"
 		$filePath = realpath( "$branchDir/$path" );

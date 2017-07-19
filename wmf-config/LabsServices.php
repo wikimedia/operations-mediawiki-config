@@ -1,13 +1,13 @@
 <?php
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
-#######################################################################
+# ######################################################################
 # LabsServices.php should include all the service hostnames/ips
 # for any service used in labs
 #
 # It is included by CommonSettings.php
 #
-#######################################################################
+# ######################################################################
 
 $wmfAllServices = [];
 

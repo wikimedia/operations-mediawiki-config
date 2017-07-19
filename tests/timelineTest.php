@@ -13,7 +13,6 @@ class timelineTest extends \PHPUnit_Framework_TestCase {
 		$this->assertStringEndsNotWith( '.ttf', $filename );
 	}
 
-
 	/**
 	 * @dataProvider wgTimelineFontFileValues
 	 */
@@ -29,8 +28,7 @@ class timelineTest extends \PHPUnit_Framework_TestCase {
 		$conf = file_get_contents( __DIR__ . '/../wmf-config/timeline.php' );
 		$tokens = ( token_get_all( $conf ) );
 
-		while( $token = each( $tokens )[1] ) {
-
+		while ( $token = each( $tokens )[1] ) {
 			# Skip until we find $wgTimelineFontFile
 			if ( !(
 					is_array( $token )
@@ -40,7 +38,7 @@ class timelineTest extends \PHPUnit_Framework_TestCase {
 				continue;
 			}
 
-			while ( $next_token = next($tokens) ) {
+			while ( $next_token = next( $tokens ) ) {
 				# Skip ' = ' to reach the actual value being set
 				if (
 					$next_token == '='

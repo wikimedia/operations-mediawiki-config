@@ -1,7 +1,9 @@
 <?php
 
-if ( !defined( 'MEDIAWIKI' ) ) exit( 1 );
-
+if ( !defined( 'MEDIAWIKI' ) ) {
+	exit( 1 );
+}
+ 
 wfLoadExtension( 'PoolCounter' );
 
 $wgPoolCounterConf = [
