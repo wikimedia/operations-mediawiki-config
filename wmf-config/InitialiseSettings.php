@@ -16542,6 +16542,7 @@ $wgConf->settings = [
 	'dewikiquote' => 'User %code%',
 	'dewikisource' => 'User %code%',
 	'dewikiversity' => 'User %code%',
+	'dinwiki' => 'User %code%',
 	'diqwiki' => 'User %code%',
 	'dsbwiki' => 'Wužywaŕ %code%',
 	'dvwiki' => 'User %code%',
