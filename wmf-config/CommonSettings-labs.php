@@ -268,7 +268,7 @@ if ( $wmgUseQuickSurveys ) {
 }
 
 if ( $wmgUseSentry ) {
-	require_once( "$IP/extensions/Sentry/Sentry.php" );
+	require_once "$IP/extensions/Sentry/Sentry.php";
 	$wgSentryDsn = $wmgSentryDsn;
 	$wgSentryLogPhpErrors = false;
 }
@@ -348,7 +348,7 @@ if ( $wgDBname == 'commonswiki' ) {
 
 // Test of new import source configuration on labs cluster
 $wgImportSources = false;
-include( "$wmfConfigDir/import.php" );
+include "$wmfConfigDir/import.php";
 $wgHooks['ImportSources'][] = 'wmfImportSources';
 
 // Reenable Preview and Changes tabs for wikieditor preview

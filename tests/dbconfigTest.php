@@ -41,7 +41,7 @@ class dbconfigTests extends WgConfTestCase {
 		$wmfMasterDatacenter = $masterdatacenter;
 		$wmfRealm = $realm;
 		$wmfDatacenter = $datacenter;
-		include( getRealmSpecificFilename( __DIR__ . '/../wmf-config/db.php' ) );
+		include getRealmSpecificFilename( __DIR__ . '/../wmf-config/db.php' );
 
 		$this->restoreGlobals();
 		return $wgLBFactoryConf;

@@ -4,7 +4,7 @@
 
 use MediaWiki\Logger\LoggerFactory;
 
-require_once( "$IP/extensions/LdapAuthentication/LdapAuthentication.php" );
+require_once "$IP/extensions/LdapAuthentication/LdapAuthentication.php";
 $wgAuthManagerAutoConfig['primaryauth'] += [
 	LdapPrimaryAuthenticationProvider::class => [
 		'class' => LdapPrimaryAuthenticationProvider::class,
@@ -64,7 +64,7 @@ if ( false ) {
 	] );
 }
 
-require_once( "$IP/extensions/OpenStackManager/OpenStackManager.php" );
+require_once "$IP/extensions/OpenStackManager/OpenStackManager.php";
 switch( $wgDBname ) {
 case 'labswiki' :
 	$wgOpenStackManagerNovaIdentityURI = 'http://labcontrol1001.wikimedia.org:35357/v2.0';
@@ -164,5 +164,5 @@ $wgOpenStackManagerProxyGateways = [ 'eqiad' => '208.80.155.156' ];
 # This must be loaded AFTER OSM, to overwrite it's defaults
 # Except when we're not an OSM host and we're running like a maintenance script.
 if ( file_exists( '/etc/mediawiki/WikitechPrivateSettings.php' ) ) {
-	require_once( '/etc/mediawiki/WikitechPrivateSettings.php' );
+	require_once '/etc/mediawiki/WikitechPrivateSettings.php';
 }
