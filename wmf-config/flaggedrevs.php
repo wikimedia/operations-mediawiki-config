@@ -650,7 +650,7 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'editor' ] ); // T40690
 
 	// T46587:
-	$wgFlaggedRevsNamespaces[] = 100 /* NS_PORTAL */;
+	$wgFlaggedRevsNamespaces[] = 100; // NS_PORTAL
 	$wgFlaggedRevsNamespaces[] = NS_HELP;
  } elseif ( $wgDBname == 'trwikiquote' ) {
 	unset( $wgGroupPermissions['reviewer'] );

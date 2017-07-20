@@ -71,7 +71,9 @@ $wgContactConfig['affcomusergroup'] = [
 			'contactpage-email-label' => 'Terms',
 			'type' => 'check',
 			'required' => true,
-			'validation-callback' => function ( $value ) { return !!$value; }
+			'validation-callback' => function ( $value ) {
+				return !!$value;
+			}
 		]
 	]
 ];

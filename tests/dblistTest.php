@@ -36,8 +36,7 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 		// Override suffix for wikipedia project
 		$dbsuffix = ( $projectname === 'wikipedia' )
 			? 'wiki'
-			: $projectname
-		;
+			: $projectname;
 
 		// Verifiy the databasename suffix
 		$this->assertStringEndsWith( $dbsuffix, $database,

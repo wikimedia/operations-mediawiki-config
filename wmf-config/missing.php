@@ -72,7 +72,8 @@ function handleMissingWiki() {
 		$db = null;
 		try {
 			$db = include  __DIR__ . '/interwiki.php';
-		} catch ( Exception $e ) {}
+		} catch ( Exception $e ) {
+		}
 
 		if ( $db ) {
 			$prefix = strtok( $page, ':' );

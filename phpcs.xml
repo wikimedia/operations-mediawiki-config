@@ -65,15 +65,6 @@
 	<rule ref="Squiz.WhiteSpace.LanguageConstructSpacing.IncorrectSingle">
 		<severity>0</severity>
 	</rule>
-	<rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing.TooMuchSpaceBefore">
-		<severity>0</severity>
-	</rule>
-	<rule ref="Squiz.WhiteSpace.ScopeClosingBrace.ContentBefore">
-		<severity>0</severity>
-	</rule>
-	<rule ref="Squiz.WhiteSpace.SemicolonSpacing.Incorrect">
-		<severity>0</severity>
-	</rule>
 
 	<exclude-pattern>\.git/</exclude-pattern>
 	<exclude-pattern>vendor/</exclude-pattern>
