@@ -11,8 +11,6 @@
 		<exclude name="MediaWiki.Commenting.FunctionComment.WrongStyle" />
 		<exclude name="MediaWiki.Commenting.IllegalSingleLineComment.IllegalSingleLineCommentStart" />
 		<exclude name="MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures" />
-		<exclude name="MediaWiki.ControlStructures.IfElseStructure.SpaceAfterElse" />
-		<exclude name="MediaWiki.ControlStructures.IfElseStructure.SpaceBeforeElse" />
 		<exclude name="MediaWiki.ExtraCharacters.CharacterBeforePHPOpeningTag.Found" />
 		<exclude name="MediaWiki.ExtraCharacters.ParenthesesAroundKeyword.ParenthesesAroundKeywords" />
 		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.wfPrefix" />
