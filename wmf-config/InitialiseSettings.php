@@ -19145,6 +19145,6 @@ $wgConf->settings = [
 
 ### WMF Labs override #####
 if ( $wmfRealm == 'labs' ) {
-	require ( "$wmfConfigDir/InitialiseSettings-labs.php" );
+	require "$wmfConfigDir/InitialiseSettings-labs.php" ;
 	wmfLabsOverrideSettings();
 }

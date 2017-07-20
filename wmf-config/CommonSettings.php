@@ -109,10 +109,10 @@ $wmfMasterServices = $wmfAllServices[$wmfMasterDatacenter];
 $wmfUdp2logDest = $wmfLocalServices['udp2log'];
 
 # Initialise wgConf
-require( "$wmfConfigDir/wgConf.php" );
+require "$wmfConfigDir/wgConf.php" ;
 function wmfLoadInitialiseSettings( $conf ) {
 	global $wmfConfigDir;
-	require( "$wmfConfigDir/InitialiseSettings.php" );
+	require "$wmfConfigDir/InitialiseSettings.php" ;
 }
 
 $wgLocalVirtualHosts = [
@@ -138,7 +138,7 @@ if ( array_search( $wgDBname, $wgLocalDatabases ) === false ) {
 	if ( $wgCommandLineMode ) {
 		print "Database name $wgDBname is not listed in dblist\n";
 	} else {
-		require( "$wmfConfigDir/missing.php" );
+		require "$wmfConfigDir/missing.php" ;
 	}
 	exit;
 }
@@ -165,7 +165,7 @@ if ( @filemtime( $filename ) >= filemtime( "$wmfConfigDir/InitialiseSettings.php
 
 if ( !$globals ) {
 	# Get configuration from SiteConfiguration object
-	require( "$wmfConfigDir/InitialiseSettings.php" );
+	require "$wmfConfigDir/InitialiseSettings.php" ;
 
 	$wikiTags = [];
 	foreach ( [ 'private', 'fishbowl', 'special', 'closed', 'flow', 'flaggedrevs', 'small', 'medium',
@@ -210,7 +210,7 @@ extract( $globals );
 
 # Private settings such as passwords, that shouldn't be published
 # Needs to be before db.php
-require( "$wmfConfigDir/PrivateSettings.php" );
+require "$wmfConfigDir/PrivateSettings.php" ;
 
 $wgMemCachedServers = [];
 
@@ -564,13 +564,13 @@ $wgStatsdServer = $wmfLocalServices['statsd'];
 if ( $wmfRealm === 'production' ) {
 	if ( $wmgUseClusterSquid ) {
 		$wgUseSquid = true;
-		require( "$wmfConfigDir/squid.php" );
+		require "$wmfConfigDir/squid.php" ;
 	}
 } elseif ( $wmfRealm === 'labs' ) {
 	$wgStatsdMetricPrefix = 'BetaMediaWiki';
 	if ( $wmgUseClusterSquid ) {
 		$wgUseSquid = true;
-		require( "$wmfConfigDir/squid-labs.php" );
+		require "$wmfConfigDir/squid-labs.php" ;
 	}
 }
 
@@ -683,7 +683,7 @@ $wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $acti
 };
 
 if ( $wmgUseTimeline ) {
-	include( "$wmfConfigDir/timeline.php" );
+	include "$wmfConfigDir/timeline.php" ;
 }
 # Most probably only used by EasyTimeline which is conditionally included above
 # but it is hard know whether there other use cases.
@@ -788,7 +788,7 @@ if ( $wmgUseUnicodeConverter ) {
 
 // Per-wiki config for Flagged Revisions
 if ( $wmgUseFlaggedRevs ) {
-	include( "$wmfConfigDir/flaggedrevs.php" );
+	include "$wmfConfigDir/flaggedrevs.php" ;
 }
 
 if ( $wmgUseCategoryTree ) {
@@ -849,7 +849,7 @@ if ( $wmgUseMwEmbedSupport ) {
 }
 
 if ( $wmgUseTimedMediaHandler ) {
-	require_once( "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" );
+	require_once "$IP/extensions/TimedMediaHandler/TimedMediaHandler.php" ;
 	$wgTimedTextForeignNamespaces = [ 'commonswiki' => 102 ];
 	if ( $wgDBname === 'commonswiki' ) {
 		$wgTimedTextNS = 102;
@@ -1001,7 +1001,7 @@ if ( $wmgUseContactPage ) {
 	$wgContactConfig['default'] = array_merge( $wgContactConfig['default'], $wmgContactPageConf );
 
 	if ( $wgDBname === 'metawiki' ) {
-		include( "$wmfConfigDir/MetaContactPages.php" );
+		include "$wmfConfigDir/MetaContactPages.php" ;
 		$wgContactConfig['stewards'] = [ // T98625
 			'RecipientUser' => 'Wikimedia Stewards',
 			'SenderEmail' => $wmgNotificationSender,
@@ -1043,7 +1043,7 @@ if ( $wmgUseSecurePoll ) {
 
 // PoolCounter
 if ( $wmgUsePoolCounter ) {
-	include( "$wmfConfigDir/PoolCounterSettings.php" );
+	include "$wmfConfigDir/PoolCounterSettings.php" ;
 }
 
 if ( $wmgUseScore ) {
@@ -1105,8 +1105,8 @@ $wgFooterIcons['copyright']['copyright'] = '<a href="https://wikimediafoundation
 # All wikis are special and get Cirrus :)
 # Must come *AFTER* PoolCounterSettings.php
 wfLoadExtension( 'Elastica' );
-require_once( "$IP/extensions/CirrusSearch/CirrusSearch.php" );
-include( "$wmfConfigDir/CirrusSearch-common.php" );
+require_once "$IP/extensions/CirrusSearch/CirrusSearch.php" ;
+include "$wmfConfigDir/CirrusSearch-common.php" ;
 
 // Various DB contention settings
 if ( in_array( $wgDBname, [ 'testwiki', 'test2wiki', 'mediawikiwiki', 'commonswiki' ] ) ) {
@@ -1320,7 +1320,7 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
 }
 
-$wgInterwikiCache = include_once( "$wmfConfigDir/interwiki.php" );
+$wgInterwikiCache = include_once "$wmfConfigDir/interwiki.php" ;
 
 $wgEnotifUseJobQ = true;
 
@@ -1833,7 +1833,7 @@ if ( $wmgUseElectronPdfService ) {
 
 # Various system to allow/prevent flooding
 # (including exemptions for scheduled outreach events)
-require( "$wmfConfigDir/throttle.php" );
+require "$wmfConfigDir/throttle.php" ;
 
 if ( $wmgUseNewUserMessage ) {
 	wfLoadExtension( 'NewUserMessage' );
@@ -1862,7 +1862,7 @@ if ( $wmgUseCodeReview ) {
 
 # AbuseFilter
 wfLoadExtension( 'AbuseFilter' );
-include( "$wmfConfigDir/abusefilter.php" );
+include "$wmfConfigDir/abusefilter.php" ;
 $wgAbuseFilterEmergencyDisableThreshold = $wmgAbuseFilterEmergencyDisableThreshold;
 $wgAbuseFilterEmergencyDisableCount = $wmgAbuseFilterEmergencyDisableCount;
 $wgAbuseFilterEmergencyDisableAge = $wmgAbuseFilterEmergencyDisableAge;
@@ -1921,7 +1921,7 @@ if ( $wmgEnableFundraiserLandingPage ) {
 }
 
 if ( $wmgUseLiquidThreads || $wmgLiquidThreadsFrozen ) {
-	require_once( "$wmfConfigDir/liquidthreads.php" );
+	require_once "$wmfConfigDir/liquidthreads.php" ;
 }
 
 if ( $wmgUseGlobalUsage ) {
@@ -2131,7 +2131,7 @@ if ( $wmgUseCommonsMetadata ) {
 }
 
 if ( $wmgUseGWToolset ) {
-	require_once( "$IP/extensions/GWToolset/GWToolset.php" );
+	require_once "$IP/extensions/GWToolset/GWToolset.php" ;
 	$wgGWTFileBackend = 'local-multiwrite';
 	$wgGWTFBMaxAge = '1 week';
 	if ( $wmgUseClusterJobqueue ) {
@@ -2431,7 +2431,7 @@ if ( $wmgUseBounceHandler ) {
 }
 
 if ( $wmgUseTranslate ) {
-	require_once( "$IP/extensions/Translate/Translate.php" );
+	require_once "$IP/extensions/Translate/Translate.php" ;
 
 	$wgGroupPermissions['*']['translate'] = true;
 	$wgGroupPermissions['translationadmin']['pagetranslation'] = true;
@@ -2599,13 +2599,13 @@ if ( $wmgUseShortUrl ) {
 
 if ( $wmgUseFeaturedFeeds ) {
 	wfLoadExtension( 'FeaturedFeeds' );
-	require_once( "$wmfConfigDir/FeaturedFeedsWMF.php" );
+	require_once "$wmfConfigDir/FeaturedFeedsWMF.php" ;
 }
 
 $wgDisplayFeedsInSidebar = $wmgDisplayFeedsInSidebar;
 
 if ( $wmgEnablePageTriage ) {
-	require_once( "$IP/extensions/PageTriage/PageTriage.php" );
+	require_once "$IP/extensions/PageTriage/PageTriage.php" ;
 	$wgPageTriageEnableCurationToolbar = $wmgPageTriageEnableCurationToolbar;
 	$wgPageTriageNoIndexUnreviewedNewArticles = $wmgPageTriageNoIndexUnreviewedNewArticles;
 	$wgPageTriageNoIndexTemplates = $wmgPageTriageNoIndexTemplates;
@@ -2759,7 +2759,7 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 	}
 
 	// Some settings specific to wikitech's extensions
-	include( "$wmfConfigDir/wikitech.php" );
+	include "$wmfConfigDir/wikitech.php" ;
 }
 
 if ( $wmgUseThanks ) {
@@ -2840,7 +2840,7 @@ if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgZeroPortal ) {
 }
 
 if ( $wmgUseScribunto ) {
-	include( "$IP/extensions/Scribunto/Scribunto.php" );
+	include "$IP/extensions/Scribunto/Scribunto.php" ;
 	$wgScribuntoUseGeSHi = true;
 	$wgScribuntoUseCodeEditor = true;
 	$wgScribuntoGatherFunctionStats = true;  // ori, 29-Oct-2015
@@ -3063,7 +3063,7 @@ if ( $wmgUseCognate ) {
 }
 
 if( $wmgUseWikibaseClient || $wmgUseInterwikiSorting ) {
-	$wgInterwikiSortingInterwikiSortOrders = include( "$wmfConfigDir/InterwikiSortOrders.php" );
+	$wgInterwikiSortingInterwikiSortOrders = include "$wmfConfigDir/InterwikiSortOrders.php" ;
 }
 
 if ( $wmgUseInterwikiSorting ) {
@@ -3078,7 +3078,7 @@ if ( $wmgUseWikibaseRepo || $wmgUseWikibaseClient ) {
 		$wmgUseWikibasePropertySuggester = true;
 	}
 
-	include( "$wmfConfigDir/Wikibase.php" );
+	include "$wmfConfigDir/Wikibase.php" ;
 }
 
 if ( $wmfRealm != 'labs' ) {
@@ -3556,11 +3556,11 @@ if ( $wmgUseDynamicSidebar ) {
 }
 
 if ( $wmfRealm === 'labs' ) {
-	require( "$wmfConfigDir/CommonSettings-labs.php" );
+	require "$wmfConfigDir/CommonSettings-labs.php" ;
 }
 
 # THIS MUST BE AFTER ALL EXTENSIONS ARE INCLUDED
 #
 # REALLY ... we're not kidding here ... NO EXTENSIONS AFTER
 
-require( "$wmfConfigDir/ExtensionMessages-$wmgVersionNumber.php" );
+require "$wmfConfigDir/ExtensionMessages-$wmgVersionNumber.php" ;
