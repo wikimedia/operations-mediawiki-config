@@ -24,7 +24,8 @@ code { font-family: inherit; }
 <div class="footer">
 <p>If you report this error to the Wikimedia System Administrators, please include the details below.</p>
 <p class="text-muted"><code>
-  PHP fatal error<?php
+<?php
+    echo '  PHP fatal error';  
     // Guard against "Cannot modify header information - headers already sent" warning
     if ( !headers_sent() ) {
       header( 'HTTP/1.1 500 Internal Server Error' );

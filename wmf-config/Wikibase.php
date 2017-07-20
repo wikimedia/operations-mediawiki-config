@@ -1,6 +1,6 @@
 <?php
 
-require_once( "$IP/extensions/Wikidata/Wikidata.php" );
+require_once "$IP/extensions/Wikidata/Wikidata.php";
 
 // The version number now comes from the Wikidata build,
 // included above, so that cache invalidations can be in sync
