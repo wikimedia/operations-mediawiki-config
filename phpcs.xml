@@ -28,9 +28,6 @@
 	<rule ref="Generic.CodeAnalysis.UnconditionalIfStatement.Found">
 		<severity>0</severity>
 	</rule>
-	<rule ref="Generic.ControlStructures.InlineControlStructure.NotAllowed">
-		<severity>0</severity>
-	</rule>
 	<rule ref="Generic.Files.EndFileNewline.NotFound">
 		<severity>0</severity>
 	</rule>

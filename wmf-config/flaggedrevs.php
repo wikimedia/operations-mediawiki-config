@@ -463,10 +463,12 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgAddGroups['bureaucrat'][] = 'trusted';
 	$wgRemoveGroups['bureaucrat'][] = 'trusted';
 	// # Normally admins promote/demote editors...not here
-	if ( is_array( $wgAddGroups['sysop'] ) )
+	if ( is_array( $wgAddGroups['sysop'] ) ) {
 		unset( $wgAddGroups['sysop'][ array_search( 'editor', $wgAddGroups['sysop'] ) ] );
-	if ( is_array( $wgRemoveGroups['sysop'] ) )
+	}
+	if ( is_array( $wgRemoveGroups['sysop'] ) ) {
 		unset( $wgRemoveGroups['sysop'][ array_search( 'editor', $wgRemoveGroups['sysop'] ) ] );
+	}
 
 	// # Remove 'autoreview' user group; T74055
 	unset( $wgGroupPermissions['autoreview'] );
