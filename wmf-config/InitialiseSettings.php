@@ -6250,6 +6250,10 @@ $wgConf->settings = [
 		106 => 'Författare',
 		107 => 'Författardiskussion',
 	],
+	'tawikisource' => [
+		102 => 'ஆசிரியர்', // T165813 - Author
+		103 => 'ஆசிரியர்_பேச்சு',
+	],
 	'tewikisource' => [
 		100 => 'ద్వారము', // Portal
 		101 => 'ద్వారము_చర్చ',
