@@ -608,8 +608,7 @@ $wgLBFactoryConf = [
 	],
 ],
 
-'masterTemplateOverrides' => [
-],
+'masterTemplateOverrides' => [],
 
 'externalTemplateOverrides' => [
 	'flags' => 0, // No transactions
