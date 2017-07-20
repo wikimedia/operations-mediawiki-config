@@ -434,7 +434,6 @@ $wgLBFactoryConf = [
 	],
 ],
 
-
 'groupLoadsByDB' => [],
 
 # Hosts settings

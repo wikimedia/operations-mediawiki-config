@@ -307,7 +307,6 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgGroupPermissions['sysop']['stablesettings'] = true; // -aaron 3/20/10
 	$wgGroupPermissions['sysop']['autoreview'] = false; // T25948
 
-
 	$wgFeedbackNamespaces = [ NS_MAIN ]; // per Aaron 2008-10-06
 
 	unset( $wgGroupPermissions['reviewer'] );
