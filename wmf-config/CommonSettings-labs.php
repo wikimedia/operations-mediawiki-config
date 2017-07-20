@@ -367,7 +367,6 @@ if ( $wmgUse3d && $wmgUseMultimediaViewer ) {
 	$wg3dProcessor = ['/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' ,'/srv/deployment/3d2png/deploy/src/3d2png.js'];
 }
 
-
 $wgAuthManagerAutoConfig['preauth'][GuanacoProvider::class] = [
 	'class' => GuanacoProvider::class,
 	'sort' => 0,
@@ -405,6 +404,5 @@ class GuanacoProvider extends \MediaWiki\auth\AbstractPreAuthenticationProvider 
 		return \StatusValue::newGood();
 	}
 }
-
 
 } # end safeguard
