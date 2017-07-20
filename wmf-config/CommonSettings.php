@@ -60,7 +60,7 @@ set_include_path( "$IP:/usr/local/lib/php:/usr/share/php" );
 # spam blacklists hosted on meta.wikimedia.org which you will surely want to
 # reuse.
 $wmfHostnames = [];
-switch( $wmfRealm ) {
+switch ( $wmfRealm ) {
 case 'labs':
 	$wmfHostnames['meta']     = 'meta.wikimedia.beta.wmflabs.org';
 	$wmfHostnames['test']     = 'test.wikimedia.beta.wmflabs.org';
@@ -87,7 +87,7 @@ $wmfConfigDir = "$IP/../wmf-config";
 
 # Include all the service definitions
 # TODO: only include if in production, set up beta separately
-switch( $wmfRealm ) {
+switch ( $wmfRealm ) {
 case 'labs':
 	require "$wmfConfigDir/LabsServices.php";
 	break;
@@ -1646,7 +1646,7 @@ $wgMaxShellTime = 50;  // seconds
 // with: mkdir -p -m777 /sys/fs/cgroup/memory/mediawiki/job
 $wgShellCgroup = '/sys/fs/cgroup/memory/mediawiki/job';
 
-switch( $wmfRealm ) {
+switch ( $wmfRealm ) {
 case 'production'  :
 	$wgImageMagickTempDir = '/tmp/magick-tmp';
 	break;
@@ -1689,7 +1689,7 @@ if ( $wmgUseCentralNotice ) {
 	if ( $wgDBname === 'metawiki' ) {
 		$wgNoticeInfrastructure = true;
 	}
-	if( $wmfRealm == 'production' && $wgDBname === 'testwiki' ) {
+	if ( $wmfRealm == 'production' && $wgDBname === 'testwiki' ) {
 		$wgNoticeInfrastructure = true;
 	}
 
@@ -2459,7 +2459,7 @@ if ( $wmgUseTranslate ) {
 			'eqiad' => [ 'codfw' ],
 			'codfw' => [ 'eqiad' ],
 		];
-		foreach( $wgTranslateClustersAndMirrors as $cluster => $mirrors ) {
+		foreach ( $wgTranslateClustersAndMirrors as $cluster => $mirrors ) {
 			if ( !isset( $wmfAllServices[$cluster]['search'] ) ) {
 				continue;
 			}
@@ -3059,7 +3059,7 @@ if ( $wmgUseCognate ) {
 	$wgCognateNamespaces = [ 0 ];
 }
 
-if( $wmgUseWikibaseClient || $wmgUseInterwikiSorting ) {
+if ( $wmgUseWikibaseClient || $wmgUseInterwikiSorting ) {
 	$wgInterwikiSortingInterwikiSortOrders = include "$wmfConfigDir/InterwikiSortOrders.php";
 }
 
@@ -3088,7 +3088,7 @@ $wgWBClientSettings['repoSiteName'] = 'wikibase-repo-name';
 
 if ( $wmgUseTemplateSandbox ) {
 	wfLoadExtension( 'TemplateSandbox' );
-	if( $wmgUseScribunto ) {
+	if ( $wmgUseScribunto ) {
 		$wgTemplateSandboxEditNamespaces[] = 828; // NS_MODULE
 	}
 }
@@ -3327,7 +3327,7 @@ if ( $wmgUseOATHAuth ) {
 
 	if ( $wmgOATHAuthDisableRight ) {
 		$wgGroupPermissions['*']['oathauth-enable'] = false;
-		foreach( $wmgPrivilegedGroups as $group ) {
+		foreach ( $wmgPrivilegedGroups as $group ) {
 			if ( isset( $wgGroupPermissions[$group] ) ) {
 				$wgGroupPermissions[$group]['oathauth-enable'] = true;
 			}

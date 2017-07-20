@@ -16,7 +16,7 @@ header( 'Cache-Control: s-maxage=2678400, max-age=2678400' );
 $path = $_SERVER['REQUEST_URI'];
 $encUrl = htmlspecialchars( $path );
 
-if( preg_match( '/(%2f)/i', $path, $matches )
+if ( preg_match( '/(%2f)/i', $path, $matches )
 	|| preg_match( '/^\/(?:upload|style|wiki|w|extensions)\/(.*)/i', $path, $matches )
 ) {
 	// "/w/Foo" -> "/wiki/Foo"

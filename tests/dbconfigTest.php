@@ -33,7 +33,7 @@ class dbconfigTests extends WgConfTestCase {
 		$wgDBname     = 'testwiki';
 		$wgDBuser     = 'sqladmin';
 		$wgDBpassword = 'secretpass';
-		if( !defined( 'DBO_DEFAULT' ) ) {
+		if ( !defined( 'DBO_DEFAULT' ) ) {
 			define( 'DBO_DEFAULT', 16 );
 		}
 

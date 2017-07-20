@@ -231,7 +231,6 @@ class cirrusTests extends WgConfTestCase {
 		//   and month = 1 and day >= 2 and day < 9 group by wikiid order by count desc limit 10;
 		$busyWikis = array( 'enwiki', 'dewiki' );
 		if ( in_array( $wiki, $busyWikis ) && $indexType == 'content' ) {
-
 			// For busy indices ensure we are using most of the cluster to serve them
 			$this->assertGreaterThanOrEqual( $numServers - 3, $totalShards );
 		}
@@ -295,7 +294,7 @@ class cirrusTests extends WgConfTestCase {
 	 */
 	public function testConfigByLanguage( $wiki, $type, array $expectedConfValues ) {
 		$config = $this->loadCirrusConfig( 'production', $wiki, $type );
-		foreach( $expectedConfValues as $key => $val ) {
+		foreach ( $expectedConfValues as $key => $val ) {
 			$this->assertEquals( $config[$key], $val );
 		}
 	}

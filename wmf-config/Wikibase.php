@@ -217,7 +217,7 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['showExternalRecentChanges'] = false;
 	}
 
-	foreach( $wmgWikibaseClientSettings as $setting => $value ) {
+	foreach ( $wmgWikibaseClientSettings as $setting => $value ) {
 		$wgWBClientSettings[$setting] = $value;
 	}
 

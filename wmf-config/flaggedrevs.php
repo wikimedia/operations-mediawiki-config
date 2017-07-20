@@ -72,7 +72,6 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], [ 'editor' ] );
 	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'editor' ] );
 } elseif ( $wgDBname == 'bswiki' ) { //T158662
-
 	$wgFlaggedRevsTags = [
 		'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
 	];
@@ -81,7 +80,6 @@ if ( $wgDBname == 'alswiki' ) {
 	#Remove reviewer group
 	unset( $wgGroupPermissions['reviewer'] );
 } elseif ( $wgDBname == 'cewiki' ) { // based on ruwiki settings
-
 	// T58408
 	$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 ];
 
@@ -578,7 +576,6 @@ if ( $wgDBname == 'alswiki' ) {
 	$wgFlaggedRevsTags['accuracy']['levels'] = 1;
 	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
  } elseif ( $wgDBname == 'ruwiki' ) {
-
 	// T39675, T49337
 	$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_FILE, NS_TEMPLATE, NS_CATEGORY, 100, 828 ];
 

@@ -15,7 +15,7 @@ $wgAuthManagerAutoConfig['primaryauth'] += [
 	],
 ];
 $wgLDAPDomainNames = [ 'labs' ];
-switch( $wgDBname ) {
+switch ( $wgDBname ) {
 case 'labswiki' :
 	$wgLDAPServerNames = [ 'labs' => 'ldap-labs.eqiad.wikimedia.org' ];
 		break;
@@ -65,7 +65,7 @@ if ( false ) {
 }
 
 require_once "$IP/extensions/OpenStackManager/OpenStackManager.php";
-switch( $wgDBname ) {
+switch ( $wgDBname ) {
 case 'labswiki' :
 	$wgOpenStackManagerNovaIdentityURI = 'http://labcontrol1001.wikimedia.org:35357/v2.0';
 	$wgOpenStackManagerNovaIdentityV3URI = 'http://labcontrol1001.wikimedia.org:35357/v3';
