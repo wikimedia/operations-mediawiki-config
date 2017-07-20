@@ -91,7 +91,7 @@ $selectedFileViewRawUrlEsc = htmlspecialchars( $selectedFileViewRawUrl );
 <body>
 <h1><a href="./">&laquo;</a> <?php echo $selectedFileNameEsc; ?></h1>
 <?php
-if ( $selectedFilePath !== false ) :
+if ( $selectedFilePath !== false ) {
 ?>
 <p>(
 <a href="https://phabricator.wikimedia.org/diffusion/OMWC/history/master/<?php echo $selectedFileRepoPathEsc; ?>">version control</a> &bull;
@@ -99,7 +99,7 @@ if ( $selectedFilePath !== false ) :
 <a href="<?php echo $selectedFileViewRawUrlEsc; ?>">raw text</a>
 )</p>
 <?php
-endif;
+}
 ?>
 <hr>
 <?php echo $hlHtml; ?>
