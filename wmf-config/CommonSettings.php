@@ -2907,6 +2907,11 @@ if ( $wmgUseRelatedArticles ) {
 		$wgRelatedArticlesLoggingBucketSize = 0.01;
 		$wgRelatedArticlesUseCirrusSearch = $wmgRelatedArticlesUseCirrusSearch;
 		$wgRelatedArticlesOnlyUseCirrusSearch = false;
+
+		// T167236: Maintain backwards compatibility with the currently deployed
+		// version of RelatedArticles.
+		$wgRelatedArticlesEnabledSamplingRate = $wgRelatedArticlesEnabledBucketSize;
+		$wgRelatedArticlesLoggingSamplingRate = $wgRelatedArticlesLoggingBucketSize;
 	}
 }
 
