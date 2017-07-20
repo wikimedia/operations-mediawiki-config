@@ -39,7 +39,7 @@ class timelineTest extends \PHPUnit_Framework_TestCase {
 				continue;
 			}
 
-			while ( $next_token = next($tokens) ) {
+			while ( $next_token = next( $tokens ) ) {
 				# Skip ' = ' to reach the actual value being set
 				if (
 					$next_token == '='

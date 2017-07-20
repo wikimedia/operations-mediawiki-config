@@ -543,7 +543,7 @@ if ( $wgDBname == 'alswiki' ) {
 	// Sets the most recent version as shown
 	$wgFlaggedRevsOverride = false;
 
-	$wgFlaggedRevsNamespaces = [NS_MAIN, NS_TEMPLATE, NS_HELP, NS_PROJECT, 828];
+	$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_TEMPLATE, NS_HELP, NS_PROJECT, 828 ];
 
 	$wgSimpleFlaggedRevsUI = false;
 	$wgFlaggedRevComments = false;

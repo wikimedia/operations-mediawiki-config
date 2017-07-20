@@ -14,7 +14,7 @@ $wgAuthManagerAutoConfig['primaryauth'] += [
 		'sort' => 50, // must be smaller than local pw provider
 	],
 ];
-$wgLDAPDomainNames = [ 'labs'];
+$wgLDAPDomainNames = [ 'labs' ];
 switch( $wgDBname ) {
 case 'labswiki' :
 	$wgLDAPServerNames = [ 'labs' => 'ldap-labs.eqiad.wikimedia.org' ];
@@ -23,10 +23,10 @@ case 'labtestwiki' :
 	$wgLDAPServerNames = [ 'labs' => 'labtestservices2001.wikimedia.org' ];
 		break;
 }
-$wgLDAPSearchAttributes = [ 'labs' => 'cn'];
+$wgLDAPSearchAttributes = [ 'labs' => 'cn' ];
 $wgLDAPBaseDNs = [ 'labs' => 'dc=wikimedia,dc=org' ];
 $wgLDAPUserBaseDNs = [ 'labs' => 'ou=people,dc=wikimedia,dc=org' ];
-$wgLDAPEncryptionType = [ 'labs' => 'tls'];
+$wgLDAPEncryptionType = [ 'labs' => 'tls' ];
 $wgLDAPWriteLocation = [ 'labs' => 'ou=people,dc=wikimedia,dc=org' ];
 $wgLDAPAddLDAPUsers = [ 'labs' => true ];
 $wgLDAPUpdateLDAP = [ 'labs' => true ];

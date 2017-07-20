@@ -11,8 +11,8 @@ function dieOut( $msg='' ) {
 	die( "Wikimedia search service internal error.\n\n$msg" );
 }
 
-error_reporting(E_ALL);
-ini_set("display_errors", false);
+error_reporting( E_ALL );
+ini_set( "display_errors", false );
 
 $caching = true;
 

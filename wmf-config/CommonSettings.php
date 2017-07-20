@@ -45,7 +45,7 @@ if ( isset( $_SERVER['SERVER_ADDR'] ) ) {
 # Get the version object for this Wiki (must be set by now, along with $IP)
 if ( !class_exists( 'MWMultiVersion' ) ) {
 	print "No MWMultiVersion instance initialized! MWScript.php wrapper not used?\n";
-	exit(1);
+	exit( 1 );
 }
 $multiVersion = MWMultiVersion::getInstance();
 
@@ -3298,7 +3298,7 @@ if ( $wmgUseOAuth ) {
 		$wgGroupPermissions['autoconfirmed']['mwoauthproposeconsumer'] = true;
 		$wgGroupPermissions['autoconfirmed']['mwoauthupdateownconsumer'] = true;
 		$wgGroupPermissions['oauthadmin']['mwoauthmanageconsumer'] = true;
-		$wgOAuthGroupsToNotify = ['oauthadmin'];
+		$wgOAuthGroupsToNotify = [ 'oauthadmin' ];
 	}
 
 	$wgHooks['OAuthReplaceMessage'][] = function( &$msgKey ) {

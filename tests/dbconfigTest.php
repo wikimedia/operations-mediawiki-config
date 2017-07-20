@@ -78,7 +78,7 @@ class dbconfigTests extends WgConfTestCase {
 	function testDbAssignedToAnExistingCluster( $realm, $datacenter, $masterdatacenter ) {
 		$ok = true;
 		$lb = $this->loadDbFile( $realm, $datacenter, $masterdatacenter );
-		foreach ( $lb['sectionsByDB'] as $dbname => $cluster) {
+		foreach ( $lb['sectionsByDB'] as $dbname => $cluster ) {
 			if ( !array_key_exists( $cluster, $lb['sectionLoads'] ) ) {
 				$ok = false;
 				$this->fail(

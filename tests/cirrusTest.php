@@ -215,7 +215,7 @@ class cirrusTests extends WgConfTestCase {
 		$numReplicas = end( $pieces );
 
 		// +1 is for the primary.
-		$totalShards = $primaryShards * (1 + $numReplicas);
+		$totalShards = $primaryShards * ( 1 + $numReplicas );
 
 		$this->assertGreaterThanOrEqual( 2, $numReplicas );
 		$this->assertLessThanOrEqual( 3, $numReplicas );
