@@ -52,12 +52,6 @@
 	<rule ref="Squiz.Classes.ValidClassName.NotCamelCaps">
 		<severity>0</severity>
 	</rule>
-	<rule ref="Squiz.WhiteSpace.LanguageConstructSpacing.Incorrect">
-		<severity>0</severity>
-	</rule>
-	<rule ref="Squiz.WhiteSpace.LanguageConstructSpacing.IncorrectSingle">
-		<severity>0</severity>
-	</rule>
 
 	<exclude-pattern>\.git/</exclude-pattern>
 	<exclude-pattern>vendor/</exclude-pattern>

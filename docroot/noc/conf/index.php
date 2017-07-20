@@ -9,7 +9,7 @@
 			echo "\n<li>";
 
 			if ( $highlight ) {
-				echo  '<a href="./highlight.php?file=' . htmlspecialchars( urlencode( $srcFilename ) ) . '">'
+				echo '<a href="./highlight.php?file=' . htmlspecialchars( urlencode( $srcFilename ) ) . '">'
 					. htmlspecialchars( $srcFilename );
 				echo '</a> (<a href="./' . htmlspecialchars( urlencode( $viewFilename ) ) . '">raw text</a>)';
 			} else {
