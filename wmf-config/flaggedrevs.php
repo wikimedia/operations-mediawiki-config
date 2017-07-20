@@ -71,13 +71,13 @@ if ( $wgDBname == 'alswiki' ) {
 	unset( $wgGroupPermissions['editor'] );
 	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], [ 'editor' ] );
 	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'editor' ] );
-} elseif ( $wgDBname == 'bswiki' ) { //T158662
+} elseif ( $wgDBname == 'bswiki' ) { // T158662
 	$wgFlaggedRevsTags = [
 		'status' => [ 'levels' => 1, 'quality' => 2, 'pristine' => 3 ],
 	];
 
 	$wgGroupPermissions['sysop']['stablesettings'] = true;
-	#Remove reviewer group
+	# Remove reviewer group
 	unset( $wgGroupPermissions['reviewer'] );
 } elseif ( $wgDBname == 'cewiki' ) { // based on ruwiki settings
 	// T58408

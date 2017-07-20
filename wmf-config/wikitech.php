@@ -39,7 +39,7 @@ $wgLDAPUseFetchedUsername = [ 'labs' => true ];
 $wgLDAPLowerCaseUsernameScheme = [ 'labs' => false, 'invaliddomain' => false ];
 $wgLDAPLowerCaseUsername = [ 'labs' => false, 'invaliddomain' => false ];
 // Only enable UseLocal if you need to promote an LDAP user
-#$wgLDAPUseLocal = true;
+# $wgLDAPUseLocal = true;
 
 $wgLDAPDebug = 5; // Maximally verbose logs for Andrew Bogott, 8-Dec-2015
 
@@ -101,10 +101,10 @@ $wgOpenStackManagerPuppetOptions = [
 ];
 $wgOpenStackManagerInstanceUserData = [
 	'cloud-config' => [
-		#'puppet' => array( 'conf' => array( 'puppetd' => array( 'server' => 'wikitech.wikimedia.org', 'certname' => '%i' ) ) ),
-		#'apt_upgrade' => 'true',
+		# 'puppet' => array( 'conf' => array( 'puppetd' => array( 'server' => 'wikitech.wikimedia.org', 'certname' => '%i' ) ) ),
+		# 'apt_upgrade' => 'true',
 		'apt_update' => 'false', // Puppet will cause this
-		#'apt_mirror' => 'http://ubuntu.wikimedia.org/ubuntu/',
+		# 'apt_mirror' => 'http://ubuntu.wikimedia.org/ubuntu/',
 	],
 	'scripts' => [
 		# Used for new images

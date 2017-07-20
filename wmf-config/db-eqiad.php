@@ -95,7 +95,7 @@ $wgLBFactoryConf = [
 	's1' => [
 		'db1052' => 0,   # B3 2.8TB  96GB, master
 		'db1067' => 0,   # D1 2.8TB 160GB, old master
-#		'db1051' => 50,  # B3 2.8TB  96GB, watchlist, recentchanges, contributions, logpager #T166204
+# 'db1051' => 50,  # B3 2.8TB  96GB, watchlist, recentchanges, contributions, logpager #T166204
 		'db1055' => 1,  # C2 2.8TB  96GB, watchlist, recentchanges, contributions, logpager
 		'db1065' => 0,   # D1 2.8TB 160GB, vslow, dump, master for sanitarium
 		'db1066' => 10,  # D1 2.8TB 160GB, api
@@ -107,7 +107,7 @@ $wgLBFactoryConf = [
 	],
 	's2' => [
 		'db1054' => 0,   # A3 2.8TB  96GB, master
-#		'db1018' => 0,   # B1 1.4TB  64GB, old master 2
+# 'db1018' => 0,   # B1 1.4TB  64GB, old master 2
 		'db1021' => 0,   # B1 1.4TB  64GB, vslow, dump
 		'db1036' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1060' => 1,   # C2 2.8TB  96GB, api #master for sanitarium #T153743
@@ -118,9 +118,9 @@ $wgLBFactoryConf = [
 	/* s3 */ 'DEFAULT' => [
 		'db1075' => 0,   # A2 3.6TB 512GB, master
 		'db1038' => 0,   # B2 1.4TB  64GB, vslow, dump, old master
-#		'db1015' => 1,   # A2 1.4TB  64GB, do not pool, it is missing cebwiki
+# 'db1015' => 1,   # A2 1.4TB  64GB, do not pool, it is missing cebwiki
 		'db1035' => 50,  # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-#		'db1044' => 0,   # B2 1.4TB  64GB, #Temporary master for db1095 - new sanitarium #T150802
+# 'db1044' => 0,   # B2 1.4TB  64GB, #Temporary master for db1095 - new sanitarium #T150802
 		'db1077' => 500, # B1 3.6TB 512GB
 		'db1078' => 500, # C3 3.6TB 512GB
 	],
@@ -137,7 +137,7 @@ $wgLBFactoryConf = [
 	],
 	's5' => [
 		'db1063' => 0,   # C5 2.8TB 128GB, master
-#		'db1049' => 1,   # B1 2.8TB  64GB, old master
+# 'db1049' => 1,   # B1 2.8TB  64GB, old master
 		'db1026' => 1,   # B1 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1045' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1070' => 50,  # D1 2.8TB 160GB, vslow, dump #ROW based replication - master for db1095
@@ -148,7 +148,7 @@ $wgLBFactoryConf = [
 	],
 	's6' => [
 		'db1061' => 0,   # C3 2.8TB 128GB, master
-#		'db1050' => 0,   # B2 2.8TB  64GB, old master2
+# 'db1050' => 0,   # B2 2.8TB  64GB, old master2
 		'db1030' => 0,   # B1 1.4TB  64GB, vslow, dump
 		'db1037' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		'db1085' => 300, # B3 3.6TB 512GB, api #master for db1102 (sanitarium 3) - T153743
@@ -157,11 +157,11 @@ $wgLBFactoryConf = [
 	],
 	's7' => [
 		'db1062' => 0,   # D4 2.8TB 128GB, master
-#		'db1041' => 0,   # B2 1.4TB  64GB, old master2
-#		'db1033' => 0,   # B2 1.4TB  64GB, old master
+# 'db1041' => 0,   # B2 1.4TB  64GB, old master2
+# 'db1033' => 0,   # B2 1.4TB  64GB, old master
 		'db1028' => 0,   # B1 1.4TB  64GB, vslow, dump
 		'db1034' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
-#		'db1039' => 0,   # B2 1.4TB  64GB
+# 'db1039' => 0,   # B2 1.4TB  64GB
 		'db1079' => 300, # A2 3.6TB 512GB, api #master for db1102 (sanitarium 3)
 		'db1086' => 500, # B3 3.6TB 512GB, api
 		'db1094' => 500, # D2 3.6TB 512GB
@@ -234,23 +234,23 @@ $wgLBFactoryConf = [
 'groupLoadsBySection' => [
 	's1' => [
 		'watchlist' => [
-#			'db1051' => 1,
+# 'db1051' => 1,
 			'db1055' => 1,
 		],
 		'recentchanges' => [
-#			'db1051' => 1,
+# 'db1051' => 1,
 			'db1055' => 1,
 		],
 		'recentchangeslinked' => [
-#			'db1051' => 1,
+# 'db1051' => 1,
 			'db1055' => 1,
 		],
 		'contributions' => [
-#			'db1051' => 1,
+# 'db1051' => 1,
 			'db1055' => 1,
 		],
 		'logpager' => [
-#			'db1051' => 1,
+# 'db1051' => 1,
 			'db1055' => 1,
 		],
 		'dump' => [
@@ -656,13 +656,13 @@ $wgLBFactoryConf = [
 
 # This key must exist for the master switch script to work
 'readOnlyBySection' => [
-#	's1'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-#	's2'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-#	'DEFAULT' => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.', # s3
-#	's4'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-#	's5'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-#	's6'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-#	's7'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
+# 's1'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
+# 's2'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
+# 'DEFAULT' => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.', # s3
+# 's4'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
+# 's5'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
+# 's6'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
+# 's7'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
 ],
 
 ];

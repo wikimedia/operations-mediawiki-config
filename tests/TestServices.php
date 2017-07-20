@@ -1,13 +1,13 @@
 <?php
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
-#######################################################################
+# ######################################################################
 # TestServices.php should include all the service hostnames/ips
 # for any service referenced in unittests, divided by datacenter.
 #
 # It is included by CommonSettings.php
 #
-#######################################################################
+# ######################################################################
 
 # FIXME variables should be set in WgConfTestCase::loadWgConf??
 

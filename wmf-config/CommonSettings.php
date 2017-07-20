@@ -1,14 +1,14 @@
 <?php
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
-#######################################################################
+# ######################################################################
 # CommonSettings.php is the main configuration file of the WMF cluster.
 # It is included by LocalSettings.php
 #
 # This file contains settings common to all or many WMF wikis.
 # Per-wiki configuration is done in InitialiseSettings.php (included
 # into this file a little way down).
-#######################################################################
+# ######################################################################
 
 use MediaWiki\Logger\LoggerFactory;
 
@@ -280,7 +280,7 @@ if ( $wmgReduceStartupExpiry ) {
 
 // Cache version key for ResourceLoader client-side module store
 // - Bumped to fix breakage due to old /static/$branchName/ urls still
-//   being cached after the switch to /w/static.php (T134368).
+// being cached after the switch to /w/static.php (T134368).
 $wgResourceLoaderStorageVersion .= '-2';
 
 $wgCacheDirectory = '/tmp/mw-cache-' . $wmgVersionNumber;
@@ -555,9 +555,9 @@ if ( defined( 'HHVM_VERSION' ) ) {
 	// but on PHP 5.5 (not HHVM)
 	$wgSVGConverters['rsvg-wikitech'] = '$path/rsvg-convert -w $width -h $height -o $output $input';
 }
-#######################################################################
+# ######################################################################
 # Squid Configuration
-#######################################################################
+# ######################################################################
 
 $wgStatsdServer = $wmfLocalServices['statsd'];
 if ( $wmfRealm === 'production' ) {
@@ -853,16 +853,16 @@ if ( $wmgUseTimedMediaHandler ) {
 	if ( $wgDBname === 'commonswiki' ) {
 		$wgTimedTextNS = 102;
 	}
-	//overwrite enabling of local TimedText namespace
+	// overwrite enabling of local TimedText namespace
 	$wgEnableLocalTimedText = $wmgEnableLocalTimedText;
 
-	//enable transcoding on all wikis that allow uploads
+	// enable transcoding on all wikis that allow uploads
 	$wgEnableTranscode = $wgEnableUploads;
 
 	$wgOggThumbLocation = false; // use ffmpeg for performance
 
-	//tmh1/2 have 12 cores and need lots of shared memory
-	//for avconv / ffmpeg2theora
+	// tmh1/2 have 12 cores and need lots of shared memory
+	// for avconv / ffmpeg2theora
 	$wgTranscodeBackgroundMemoryLimit = 4 * 1024 * 1024; // 4GB
 	$wgFFmpegThreads = 2;
 
@@ -1808,10 +1808,10 @@ if ( $wmgUseCollection ) {
 		// which was shut down Oct 3, 2014.
 		// They may eventually be reinstated when new OCG backends
 		// are written for them.
-	//	'epub' => 'EPUB',
-	//	'odf' => 'ODT',
-	//	'zim' => 'openZIM',
-	//	'rl' => 'mwlib PDF', // replaced by [[:mw:OCG]] 29 Sep 2014
+	// 'epub' => 'EPUB',
+	// 'odf' => 'ODT',
+	// 'zim' => 'openZIM',
+	// 'rl' => 'mwlib PDF', // replaced by [[:mw:OCG]] 29 Sep 2014
 	];
 
 	$wgLicenseURL = "https://creativecommons.org/licenses/by-sa/3.0/";
@@ -1902,10 +1902,10 @@ if ( $wmgEnableLandingCheck ) {
 		'DE', 'CH',
 
 		// --- France and it's territories (per WMFr email 2012-06-13)
-		//     Not a fundraising chapter in 2013+ due to FR regulations
-		//'FR',
-		//'GP', 'MQ', 'GF', 'RE', 'YT', 'PM',
-				//'NC', 'PF', 'WF', 'BL', 'MF', 'TF',
+		// Not a fundraising chapter in 2013+ due to FR regulations
+		// 'FR',
+		// 'GP', 'MQ', 'GF', 'RE', 'YT', 'PM',
+				// 'NC', 'PF', 'WF', 'BL', 'MF', 'TF',
 
 		// === Blacklisted countries
 				'BY', 'CD', 'CI', 'CU', 'IQ', 'IR', 'KP', 'LB', 'LY', 'MM', 'SD', 'SO', 'SY', 'YE', 'ZW',
@@ -3015,7 +3015,7 @@ if ( $wmgUseUniversalLanguageSelector ) {
 if ( $wmgUseContentTranslation ) {
 	wfLoadExtension( 'ContentTranslation' );
 
-	//T76200: Public URL for cxserver instance
+	// T76200: Public URL for cxserver instance
 	$wgContentTranslationSiteTemplates['cx'] = '//cxserver.wikimedia.org/v1';
 
 	$wgContentTranslationRESTBase = [
@@ -3044,7 +3044,7 @@ if ( $wmgUseContentTranslation ) {
 
 	$wgContentTranslationCXServerAuth = [
 		'algorithm' => 'HS256',
-		//This is set in PrivateSettings.php
+		// This is set in PrivateSettings.php
 		'key' => $wmgContentTranslationCXServerAuthKey,
 		'age' => '3600',
 	];

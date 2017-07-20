@@ -3,7 +3,7 @@
 
 # WARNING: This file is publically viewable on the web. Do not put private data here.
 
-#######################################################################
+# ######################################################################
 # InitialiseSettings.php contains the specific configuration settings
 # for each wiki in the WMF cluster.
 #
@@ -11,7 +11,7 @@
 #   variables.
 # * Settings prefixed with 'wmg' are custom parameters handled by
 #   CommonSettings.php.
-#######################################################################
+# ######################################################################
 
 # Here are some umlauted vowels: öäü
 # Here is a deck of cards: ♠♣♥♦
@@ -1218,7 +1218,7 @@ $wgConf->settings = [
 	'azbwiki' => [ '1.5x' => '/static/images/project-logos/azbwiki-1.5x.png', '2x' => '/static/images/project-logos/azbwiki-2x.png' ], // T150618
 	'azwiki' => [ '1.5x' => '/static/images/project-logos/azwiki-1.5x.png', '2x' => '/static/images/project-logos/azwiki-2x.png' ], // T150618
 	'barwiki' => [ '1.5x' => '/static/images/project-logos/barwiki-1.5x.png', '2x' => '/static/images/project-logos/barwiki-2x.png' ], // T150618
-	'bat_smgwiki' => [ '1.5x' => '/static/images/project-logos/bat_smgwiki-1.5x.png', '2x' => '/static/images/project-logos/bat_smgwiki-2x.png' ], //T150618
+	'bat_smgwiki' => [ '1.5x' => '/static/images/project-logos/bat_smgwiki-1.5x.png', '2x' => '/static/images/project-logos/bat_smgwiki-2x.png' ], // T150618
 	'bawiki' => [ '1.5x' => '/static/images/project-logos/bawiki-1.5x.png', '2x' => '/static/images/project-logos/bawiki-2x.png' ], // T150618
 	'bclwiki' => [ '1.5x' => '/static/images/project-logos/bclwiki-1.5x.png', '2x' => '/static/images/project-logos/bclwiki-2x.png' ], // T150618
 	'bewiki' => [ '1.5x' => '/static/images/project-logos/bewiki-1.5x.png', '2x' => '/static/images/project-logos/bewiki-2x.png' ], // T150618
@@ -1231,7 +1231,7 @@ $wgConf->settings = [
 	'bowiki' => [ '1.5x' => '/static/images/project-logos/bowiki-1.5x.png', '2x' => '/static/images/project-logos/bowiki-2x.png' ], // T150618
 	'bpywiki' => [ '1.5x' => '/static/images/project-logos/bpywiki-1.5x.png', '2x' => '/static/images/project-logos/bpywiki-2x.png' ], // T150618
 	'brwiki' => [ '1.5x' => '/static/images/project-logos/brwiki-1.5x.png', '2x' => '/static/images/project-logos/brwiki-2x.png' ], // T150618
-	'bswiki' => [ '1.5x' => '/static/images/project-logos/bswiki-1.5x.png', '2x' => '/static/images/project-logos/bswiki-2x.png' ], //T158815
+	'bswiki' => [ '1.5x' => '/static/images/project-logos/bswiki-1.5x.png', '2x' => '/static/images/project-logos/bswiki-2x.png' ], // T158815
 	'bugwiki' => [ '1.5x' => '/static/images/project-logos/bugwiki-1.5x.png', '2x' => '/static/images/project-logos/bugwiki-2x.png' ], // T150618
 	'bxrwiki' => [ '1.5x' => '/static/images/project-logos/bxrwiki-1.5x.png', '2x' => '/static/images/project-logos/bxrwiki-2x.png' ], // T150618
 	'cawiki' => [ '1.5x' => '/static/images/project-logos/cawiki-1.5x.png', '2x' => '/static/images/project-logos/cawiki-2x.png' ], // T150618
@@ -1289,7 +1289,7 @@ $wgConf->settings = [
 	'hifwiki' => [ '1.5x' => '/static/images/project-logos/hifwiki-1.5x.png', '2x' => '/static/images/project-logos/hifwiki-2x.png' ], // T150618
 	'hiwiki' => [ '1.5x' => '/static/images/project-logos/hiwiki-1.5x.png', '2x' => '/static/images/project-logos/hiwiki-2x.png' ], // T150618
 	'hrwiki' => [ '1.5x' => '/static/images/project-logos/hrwiki-1.5x.png', '2x' => '/static/images/project-logos/hrwiki-2x.png' ], // T150618
-	'hsbwiki' => [ '1.5x' => '/static/images/project-logos/hsbwiki-1.5x.png', '2x' => '/static/images/project-logos/hsbwiki-2x.png' ], //T150618
+	'hsbwiki' => [ '1.5x' => '/static/images/project-logos/hsbwiki-1.5x.png', '2x' => '/static/images/project-logos/hsbwiki-2x.png' ], // T150618
 	'htwiki' => [ '1.5x' => '/static/images/project-logos/htwiki-1.5x.png', '2x' => '/static/images/project-logos/htwiki-2x.png' ], // T150618
 	'huwiki' => [ '1.5x' => '/static/images/project-logos/huwiki-1.5x.png', '2x' => '/static/images/project-logos/huwiki-2x.png' ], // T150618
 	'hywiki' => [ '1.5x' => '/static/images/project-logos/hywiki-1.5x.png', '2x' => '/static/images/project-logos/hywiki-2x.png' ], // T150620
@@ -1394,40 +1394,40 @@ $wgConf->settings = [
 	'quwiki' => [ '1.5x' => '/static/images/project-logos/quwiki-1.5x.png', '2x' => '/static/images/project-logos/quwiki-2x.png' ], // T150618
 	'rmwiki' => [ '1.5x' => '/static/images/project-logos/rmwiki-1.5x.png', '2x' => '/static/images/project-logos/rmwiki-2x.png' ], // T150618
 	'rmywiki' => [ '1.5x' => '/static/images/project-logos/rmywiki-1.5x.png', '2x' => '/static/images/project-logos/rmywiki-2x.png' ], // T150618
-	'roa_tarawiki' => [ '1.5x' => '/static/images/project-logos/roa_tarawiki-1.5x.png', '2x' => '/static/images/project-logos/roa_tarawiki-2x.png' ], //T150618
+	'roa_tarawiki' => [ '1.5x' => '/static/images/project-logos/roa_tarawiki-1.5x.png', '2x' => '/static/images/project-logos/roa_tarawiki-2x.png' ], // T150618
 	'rowiki' => [ '1.5x' => '/static/images/project-logos/rowiki-1.5x.png', '2x' => '/static/images/project-logos/rowiki-2x.png' ], // T150618
 	'ruewiki' => [ '1.5x' => '/static/images/project-logos/ruewiki-1.5x.png', '2x' => '/static/images/project-logos/ruewiki-2x.png' ], // T150618
 	'ruwiki' => [ '1.5x' => '/static/images/project-logos/ruwiki-1.5x.png', '2x' => '/static/images/project-logos/ruwiki-2x.png' ],
 	'sahwiki' => [ '1.5x' => '/static/images/project-logos/sahwiki-1.5x.png', '2x' => '/static/images/project-logos/sahwiki-2x.png' ], // T150618
 	'sawiki' => [ '1.5x' => '/static/images/project-logos/sawiki-1.5x.png', '2x' => '/static/images/project-logos/sawiki-2x.png' ], // T150618
 	'scnwiki' => [ '1.5x' => '/static/images/project-logos/scnwiki-1.5x.png', '2x' => '/static/images/project-logos/scnwiki-2x.png' ], // T150618
-	'scowiki' => [ '1.5x' => '/static/images/project-logos/scowiki-1.5x.png', '2x' => '/static/images/project-logos/scowiki-2x.png' ], //T150618
+	'scowiki' => [ '1.5x' => '/static/images/project-logos/scowiki-1.5x.png', '2x' => '/static/images/project-logos/scowiki-2x.png' ], // T150618
 	'scwiki' => [ '1.5x' => '/static/images/project-logos/scwiki-1.5x.png', '2x' => '/static/images/project-logos/scwiki-2x.png' ], // T150618
 	'sdwiki' => [ '1.5x' => '/static/images/project-logos/sdwiki-1.5x.png', '2x' => '/static/images/project-logos/sdwiki-2x.png' ], // T150618
 	'sewiki' => [ '1.5x' => '/static/images/project-logos/sewiki-1.5x.png', '2x' => '/static/images/project-logos/sewiki-2x.png' ], // T150618
 	'sgwiki' => [ '1.5x' => '/static/images/project-logos/sgwiki-1.5x.png', '2x' => '/static/images/project-logos/sgwiki-2x.png' ], // T150618
-	'shwiki' => [ '1.5x' => '/static/images/project-logos/shwiki-1.5x.png', '2x' => '/static/images/project-logos/shwiki-2x.png' ], //T150618
+	'shwiki' => [ '1.5x' => '/static/images/project-logos/shwiki-1.5x.png', '2x' => '/static/images/project-logos/shwiki-2x.png' ], // T150618
 	'siwiki' => [ '1.5x' => '/static/images/project-logos/siwiki-1.5x.png', '2x' => '/static/images/project-logos/siwiki-2x.png' ], // T150618
 	'skwiki' => [ '1.5x' => '/static/images/project-logos/skwiki-1.5x.png', '2x' => '/static/images/project-logos/skwiki-2x.png' ], // T150618
 	'slwiki' => [ '1.5x' => '/static/images/project-logos/slwiki-1.5x.png', '2x' => '/static/images/project-logos/slwiki-2x.png' ], // T150618
 	'smwiki' => [ '1.5x' => '/static/images/project-logos/smwiki-1.5x.png', '2x' => '/static/images/project-logos/smwiki-2x.png' ], // T150618
 	'snwiki' => [ '1.5x' => '/static/images/project-logos/snwiki-1.5x.png', '2x' => '/static/images/project-logos/snwiki-2x.png' ], // T150618
-	'sowiki' => [ '1.5x' => '/static/images/project-logos/sowiki-1.5x.png', '2x' => '/static/images/project-logos/sowiki-2x.png' ], //T150618
+	'sowiki' => [ '1.5x' => '/static/images/project-logos/sowiki-1.5x.png', '2x' => '/static/images/project-logos/sowiki-2x.png' ], // T150618
 	'sqwiki' => [ '1.5x' => '/static/images/project-logos/sqwiki-1.5x.png', '2x' => '/static/images/project-logos/sqwiki-2x.png' ], // T150618
 	'srnwiki' => [ '1.5x' => '/static/images/project-logos/srnwiki-1.5x.png', '2x' => '/static/images/project-logos/srnwiki-2x.png' ], // T150618
 	'srwiki' => [ '1.5x' => '/static/images/project-logos/srwiki-1.5x.png', '2x' => '/static/images/project-logos/srwiki-2x.png' ], // T150618
 	'sswiki' => [ '1.5x' => '/static/images/project-logos/sswiki-1.5x.png', '2x' => '/static/images/project-logos/sswiki-2x.png' ], // T150618
-	'stqwiki' => [ '1.5x' => '/static/images/project-logos/stqwiki-1.5x.png', '2x' => '/static/images/project-logos/stqwiki-2x.png' ], //T150618
+	'stqwiki' => [ '1.5x' => '/static/images/project-logos/stqwiki-1.5x.png', '2x' => '/static/images/project-logos/stqwiki-2x.png' ], // T150618
 	'stwiki' => [ '1.5x' => '/static/images/project-logos/stwiki-1.5x.png', '2x' => '/static/images/project-logos/stwiki-2x.png' ], // T150618
 	'suwiki' => [ '1.5x' => '/static/images/project-logos/suwiki-1.5x.png', '2x' => '/static/images/project-logos/suwiki-2x.png' ], // T150618
-	'svwiki' => [ '1.5x' => '/static/images/project-logos/svwiki-1.5x.png', '2x' => '/static/images/project-logos/svwiki-2x.png' ], //T150618
+	'svwiki' => [ '1.5x' => '/static/images/project-logos/svwiki-1.5x.png', '2x' => '/static/images/project-logos/svwiki-2x.png' ], // T150618
 	'swwiki' => [ '1.5x' => '/static/images/project-logos/swwiki-1.5x.png', '2x' => '/static/images/project-logos/swwiki-2x.png' ], // T150618
 	'szlwiki' => [ '1.5x' => '/static/images/project-logos/szlwiki-1.5x.png', '2x' => '/static/images/project-logos/szlwiki-2x.png' ], // T150618
 	'tawiki' => [ '1.5x' => '/static/images/project-logos/tawiki-1.5x.png', '2x' => '/static/images/project-logos/tawiki-2x.png' ],
 	'tcywiki' => [ '1.5x' => '/static/images/project-logos/tcywiki-1.5x.png', '2x' => '/static/images/project-logos/tcywiki-2x.png' ], // T140898
 	'tetwiki' => [ '1.5x' => '/static/images/project-logos/tetwiki-1.5x.png', '2x' => '/static/images/project-logos/tetwiki-2x.png' ], // T150618
 	'tewiki' => [ '1.5x' => '/static/images/project-logos/tewiki-1.5x.png', '2x' => '/static/images/project-logos/tewiki-2x.png' ], // T150618
-	'tgwiki' => [ '1.5x' => '/static/images/project-logos/tgwiki-1.5x.png', '2x' => '/static/images/project-logos/tgwiki-2x.png' ], //T150618
+	'tgwiki' => [ '1.5x' => '/static/images/project-logos/tgwiki-1.5x.png', '2x' => '/static/images/project-logos/tgwiki-2x.png' ], // T150618
 	'thwiki' => [ '1.5x' => '/static/images/project-logos/thwiki-1.5x.png', '2x' => '/static/images/project-logos/thwiki-2x.png' ], // T150618
 	'tkwiki' => [ '1.5x' => '/static/images/project-logos/tkwiki-1.5x.png', '2x' => '/static/images/project-logos/tkwiki-2x.png' ], // T150618
 	'tlwiki' => [ '1.5x' => '/static/images/project-logos/tlwiki-1.5x.png', '2x' => '/static/images/project-logos/tlwiki-2x.png' ], // T150618
@@ -1439,26 +1439,26 @@ $wgConf->settings = [
 	'ttwiki' => [ '1.5x' => '/static/images/project-logos/ttwiki-1.5x.png', '2x' => '/static/images/project-logos/ttwiki-2x.png' ], // T150618
 	'tyvwiki' => [ '1.5x' => '/static/images/project-logos/tyvwiki-1.5x.png', '2x' => '/static/images/project-logos/tyvwiki-2x.png' ], // T150618
 	'tywiki' => [ '1.5x' => '/static/images/project-logos/tywiki-1.5x.png', '2x' => '/static/images/project-logos/tywiki-2x.png' ], // T150618
-	'udmwiki' => [ '1.5x' => '/static/images/project-logos/udmwiki-1.5x.png', '2x' => '/static/images/project-logos/udmwiki-2x.png' ], //T150618
+	'udmwiki' => [ '1.5x' => '/static/images/project-logos/udmwiki-1.5x.png', '2x' => '/static/images/project-logos/udmwiki-2x.png' ], // T150618
 	'ugwiki' => [ '1.5x' => '/static/images/project-logos/ugwiki-1.5x.png', '2x' => '/static/images/project-logos/ugwiki-2x.png' ], // T150618
 	'ukwiki' => [ '1.5x' => '/static/images/project-logos/ukwiki-1.5x.png', '2x' => '/static/images/project-logos/ukwiki-2x.png' ], // T150618
 	'urwiki' => [ '1.5x' => '/static/images/project-logos/urwiki-1.5x.png', '2x' => '/static/images/project-logos/urwiki-2x.png' ], // T150618
-	'uzwiki' => [ '1.5x' => '/static/images/project-logos/uzwiki-1.5x.png', '2x' => '/static/images/project-logos/uzwiki-2x.png' ], //T150618
-	'vecwiki' => [ '1.5x' => '/static/images/project-logos/vecwiki-1.5x.png', '2x' => '/static/images/project-logos/vecwiki-2x.png' ], //T150618
-	'vepwiki' => [ '1.5x' => '/static/images/project-logos/vepwiki-2x.png', '2x' => '/static/images/project-logos/vepwiki-2x.png' ], //T150618
+	'uzwiki' => [ '1.5x' => '/static/images/project-logos/uzwiki-1.5x.png', '2x' => '/static/images/project-logos/uzwiki-2x.png' ], // T150618
+	'vecwiki' => [ '1.5x' => '/static/images/project-logos/vecwiki-1.5x.png', '2x' => '/static/images/project-logos/vecwiki-2x.png' ], // T150618
+	'vepwiki' => [ '1.5x' => '/static/images/project-logos/vepwiki-2x.png', '2x' => '/static/images/project-logos/vepwiki-2x.png' ], // T150618
 	'viwiki' => [ '1.5x' => '/static/images/project-logos/viwiki-1.5x.png', '2x' => '/static/images/project-logos/viwiki-2x.png' ],
 	'vlswiki' => [ '1.5x' => '/static/images/project-logos/vlswiki-1.5x.png', '2x' => '/static/images/project-logos/vlswiki-2x.png' ], // T150618
-	'vowiki' => [ '1.5x' => '/static/images/project-logos/vowiki-1.5x.png', '2x' => '/static/images/project-logos/vowiki-2x.png' ], //T150618
-	'warwiki' => [ '1.5x' => '/static/images/project-logos/warwiki-1.5x.png', '2x' => '/static/images/project-logos/warwiki-2x.png' ], //T150618
+	'vowiki' => [ '1.5x' => '/static/images/project-logos/vowiki-1.5x.png', '2x' => '/static/images/project-logos/vowiki-2x.png' ], // T150618
+	'warwiki' => [ '1.5x' => '/static/images/project-logos/warwiki-1.5x.png', '2x' => '/static/images/project-logos/warwiki-2x.png' ], // T150618
 	'wawiki' => [ '1.5x' => '/static/images/project-logos/wawiki-1.5x.png', '2x' => '/static/images/project-logos/wawiki-2x.png' ], // T150618
 	'wowiki' => [ '1.5x' => '/static/images/project-logos/wowiki-1.5x.png', '2x' => '/static/images/project-logos/wowiki-2x.png' ], // T150618
 	'wuuwiki' => [ '1.5x' => '/static/images/project-logos/wuuwiki-1.5x.png', '2x' => '/static/images/project-logos/wuuwiki-2x.png' ], // T150618
 	'xalwiki' => [ '1.5x' => '/static/images/project-logos/xalwiki-1.5x.png', '2x' => '/static/images/project-logos/xalwiki-2x.png' ], // T150618
 	'xmfwiki' => [ '1.5x' => '/static/images/project-logos/xmfwiki-1.5x.png', '2x' => '/static/images/project-logos/xmfwiki-2x.png' ], // T150618
 	'yiwiki' => [ '1.5x' => '/static/images/project-logos/yiwiki-1.5x.png', '2x' => '/static/images/project-logos/yiwiki-2x.png' ], // T150618
-	'yowiki' => [ '1.5x' => '/static/images/project-logos/yowiki-1.5x.png', '2x' => '/static/images/project-logos/yowiki-2x.png' ], //T150618
+	'yowiki' => [ '1.5x' => '/static/images/project-logos/yowiki-1.5x.png', '2x' => '/static/images/project-logos/yowiki-2x.png' ], // T150618
 	'zawiki' => [ '1.5x' => '/static/images/project-logos/zawiki-1.5x.png', '2x' => '/static/images/project-logos/zawiki-2x.png' ], // T150618
-	'zeawiki' => [ '1.5x' => '/static/images/project-logos/zeawiki-1.5x.png', '2x' => '/static/images/project-logos/zeawiki-2x.png' ], //T150618
+	'zeawiki' => [ '1.5x' => '/static/images/project-logos/zeawiki-1.5x.png', '2x' => '/static/images/project-logos/zeawiki-2x.png' ], // T150618
 	'zhwiki' => [ '1.5x' => '/static/images/project-logos/zhwiki-1.5x.png', '2x' => '/static/images/project-logos/zhwiki-2x.png' ],
 	'zh_yuewiki' => [ '1.5x' => '/static/images/project-logos/zh_yuewiki-1.5x.png', '2x' => '/static/images/project-logos/zh_yuewiki-2x.png' ], // T150618
 
@@ -1478,7 +1478,7 @@ $wgConf->settings = [
 	'etwiktionary' => [ '1.5x' => '/static/images/project-logos/etwiktionary-1.5x.png', '2x' => '/static/images/project-logos/etwiktionary-2x.png' ], // T150618
 	'fiwiktionary' => [ '1.5x' => '/static/images/project-logos/fiwiktionary-1.5x.png', '2x' => '/static/images/project-logos/fiwiktionary-2x.png' ], // T150618
 	'fowiktionary' => [ '1.5x' => '/static/images/project-logos/fowiktionary-1.5x.png', '2x' => '/static/images/project-logos/fowiktionary-2x.png' ], // T150618
-	'frwiktionary' => [ '1.5x' => '/static/images/project-logos/frwiktionary-1.5x.png', '2x' => '/static/images/project-logos/frwiktionary-2x.png' ], //T144427
+	'frwiktionary' => [ '1.5x' => '/static/images/project-logos/frwiktionary-1.5x.png', '2x' => '/static/images/project-logos/frwiktionary-2x.png' ], // T144427
 	'fywiktionary' => [ '1.5x' => '/static/images/project-logos/fywiktionary-1.5x.png', '2x' => '/static/images/project-logos/fywiktionary-2x.png' ], // T150618
 	'gdwiktionary' => [ '1.5x' => '/static/images/project-logos/gdwiktionary-1.5x.png', '2x' => '/static/images/project-logos/gdwiktionary-2x.png' ], // T150618
 	'gvwiktionary' => [ '1.5x' => '/static/images/project-logos/gvwiktionary-1.5x.png', '2x' => '/static/images/project-logos/gvwiktionary-2x.png' ], // T150618
@@ -5040,9 +5040,9 @@ $wgConf->settings = [
 
 # wmgMonologChannels @{
 // Configure Monolog logging to udp2log, Logstash and/or kafka
-//   channel => false  == ignore all log events on this channel
-//   channel => level  == record all events of this level or higher
-//   channel => array( 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate )
+// channel => false  == ignore all log events on this channel
+// channel => level  == record all events of this level or higher
+// channel => array( 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate )
 // Defaults: array( 'udp2log'=>'debug', 'logstash'=>'info', 'kafka'=>false, 'sample'=>false )
 // Valid levels: 'debug', 'info', 'warning', 'error', false
 // Note: sampled logs will not be sent to Logstash
@@ -6535,7 +6535,7 @@ $wgConf->settings = [
 	],
 	'skwiktionary' => [
 		100 => 'Príloha', // T148563
-		101 => 'Diskusia_k_prílohe', //T148563
+		101 => 'Diskusia_k_prílohe', // T148563
 	],
 	'srwiktionary' => [
 		100 => 'Портал',
@@ -7052,10 +7052,10 @@ $wgConf->settings = [
 	'itwikivoyage' => [
 		100 => 'Portale',
 		101 => 'Discussioni_portale',
-		//102 and 103 (Elezione) deleted per T47636
+		// 102 and 103 (Elezione) deleted per T47636
 		104 => 'Tematica',
 		105 => 'Discussioni_tematica',
-		//106 and 107 (Notizie) deleted per T47636
+		// 106 and 107 (Notizie) deleted per T47636
 	],
 	'plwikivoyage' => [
 		NS_PROJECT_TALK => 'Dyskusja_Wikipodróży',
@@ -7977,7 +7977,7 @@ $wgConf->settings = [
 		'rollbacker' => [ 'rollback' => true ],
 		'flood' => [
 			'bot' => true, // T52425
-			'autopatrol' => false, //T158662
+			'autopatrol' => false, // T158662
 		],
 		'sysop' => [ // T158662
 			'autopatrol' => false,
@@ -9280,7 +9280,7 @@ $wgConf->settings = [
 		],
 		'researcher' => [ 'browsearchive' => true, 'deletedhistory' => true, 'apihighlimits' => true ],
 		'rollbacker' => [ 'rollback' => true ],
-		'centralnoticeadmin' => [ 'centralnotice-admin' => true, 'editinterface' => true ], //adding to allow CN access without local sysop JRA 2013-02-21
+		'centralnoticeadmin' => [ 'centralnotice-admin' => true, 'editinterface' => true ], // adding to allow CN access without local sysop JRA 2013-02-21
 	],
 	'test2wiki' => [
 		'autoreview' => [ // T134491
@@ -11296,7 +11296,7 @@ $wgConf->settings = [
 	'jawikiversity' => [ 'betawikiversity', 'w', 'wikt', 'en', 'b', 'q', 's', 'n' ],
 	'jawiktionary' => [ 'w' ], // T10670
 	'kaawiki' => [ 'incubator' ],
-	//'khmwiktionary' => array( 'en', 'fr', 'lm', 'th' ),
+	// 'khmwiktionary' => array( 'en', 'fr', 'lm', 'th' ),
 	'kmwiki' => [ 'en', 'be', 'simple' ],
 	'knwiki' => [ 'en' ], // T37603
 	'knwikisource' => [ 'w', 'en', 'w:en' ], // T122955
@@ -12024,7 +12024,7 @@ $wgConf->settings = [
 	'srwiktionary' => '/$2/$1',
 	'srwikibooks' => '/$2/$1',
 	'srwikiquote' => '/$2/$1',
-	//'srwikiversity' => '/$2/$1',
+	// 'srwikiversity' => '/$2/$1',
 	'srwikinews' => '/$2/$1',
 	'srwikisource' => '/$2/$1',
 	'zhwiki' => '/$2/$1',
@@ -12034,7 +12034,7 @@ $wgConf->settings = [
 	'zhwikiquote' => '/$2/$1',
 	'zhwikinews' => '/$2/$1',
 	'zhwikivoyage' => '/$2/$1',
-	//'zhwikiversity' => '/$2/$1',
+	// 'zhwikiversity' => '/$2/$1',
 ],
 # @} end of wgVariantArticlePath
 
@@ -13475,7 +13475,7 @@ $wgConf->settings = [
 	'wikinews' => false,
 	'wikiversity' => false,
 	'commonswiki' => false,
-	//T166894
+	// T166894
 	'specieswiki' => false,
 ],
 
@@ -16318,7 +16318,7 @@ $wgConf->settings = [
 	'elwiki' => 'Χρήστης %code%',
 	'elwikibooks' => 'Χρήστης %code%',
 	'elwikiquote' => 'Χρήστης %code%',
-	'elwikisource' => 'Χρήστης %code%', //T161593
+	'elwikisource' => 'Χρήστης %code%', // T161593
 	'elwikiversity' => 'User %code%',
 	'emlwiki' => 'User %code%',
 	'enwiki' => 'User %code%',
@@ -16764,7 +16764,7 @@ $wgConf->settings = [
 ],
 'wmgUseCleanChanges' => [
 	'default' => false,
-//	'metawiki' => true, // T55541
+// 'metawiki' => true, // T55541
 ],
 'wmgUseVips' => [
 	'default' => true,
@@ -16775,7 +16775,7 @@ $wgConf->settings = [
 
 'wmgUseShortUrl' => [
 	'default' => false,
-	'bdwikimedia' => true, //T146014
+	'bdwikimedia' => true, // T146014
 	'bhwiki' => true, // T113348
 	'bnwiki' => true, // T62956
 	'bnwikisource' => true, // T127968
