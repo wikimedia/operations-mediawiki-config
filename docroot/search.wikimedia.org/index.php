@@ -84,7 +84,7 @@ $suggest = json_decode( $result );
 // Confirm return result was format we expect
 // for opensearch...
 if( is_array( $suggest ) && count( $suggest ) >= 2
- 	&& is_string( $suggest[0] ) && is_array( $suggest[1] ) ) {
+	 && is_string( $suggest[0] ) && is_array( $suggest[1] ) ) {
 		$returnedTerm = $suggest[0];
 		$results = $suggest[1];
 } else {

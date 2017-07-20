@@ -36,20 +36,20 @@ $wgCirrusSearchWriteClusters = null;
 $wgCirrusSearchEnableSearchLogging = true;
 
 $wgCirrusSearchLanguageToWikiMap = [
-    'ar' => 'ar',
-    'de' => 'de',
-    'en' => 'en',
-    'es' => 'es',
-    'fa' => 'fa',
-    'he' => 'he',
-    'hi' => 'hi',
-    'ja' => 'ja',
-    'ko' => 'ko',
-    'ru' => 'ru',
-    'sq' => 'sq',
-    'uk' => 'uk',
-    'zh-cn' => 'zh',
-    'zh-tw' => 'zh',
+	'ar' => 'ar',
+	'de' => 'de',
+	'en' => 'en',
+	'es' => 'es',
+	'fa' => 'fa',
+	'he' => 'he',
+	'hi' => 'hi',
+	'ja' => 'ja',
+	'ko' => 'ko',
+	'ru' => 'ru',
+	'sq' => 'sq',
+	'uk' => 'uk',
+	'zh-cn' => 'zh',
+	'zh-tw' => 'zh',
 ];
 
 # Force the number of replicas to 1 max for the beta cluster

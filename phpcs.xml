@@ -59,9 +59,6 @@
 	<rule ref="PSR2.Classes.PropertyDeclaration.ScopeMissing">
 		<severity>0</severity>
 	</rule>
-	<rule ref="Generic.WhiteSpace.DisallowSpaceIndent.SpacesUsed">
-		<severity>0</severity>
-	</rule>
 	<rule ref="Squiz.Classes.ValidClassName.NotCamelCaps">
 		<severity>0</severity>
 	</rule>
@@ -81,7 +78,7 @@
 		<severity>0</severity>
 	</rule>
 
-	<exclude-pattern>.git/</exclude-pattern>
+	<exclude-pattern>\.git/</exclude-pattern>
 	<exclude-pattern>vendor/</exclude-pattern>
 	<exclude-pattern>multiversion/</exclude-pattern>
 	<exclude-pattern>wmf-config/PrivateSettings.php</exclude-pattern>

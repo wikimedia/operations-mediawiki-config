@@ -1905,10 +1905,10 @@ if ( $wmgEnableLandingCheck ) {
 		//     Not a fundraising chapter in 2013+ due to FR regulations
 		//'FR',
 		//'GP', 'MQ', 'GF', 'RE', 'YT', 'PM',
-                //'NC', 'PF', 'WF', 'BL', 'MF', 'TF',
+				//'NC', 'PF', 'WF', 'BL', 'MF', 'TF',
 
 		// === Blacklisted countries
-                'BY', 'CD', 'CI', 'CU', 'IQ', 'IR', 'KP', 'LB', 'LY', 'MM', 'SD', 'SO', 'SY', 'YE', 'ZW',
+				'BY', 'CD', 'CI', 'CU', 'IQ', 'IR', 'KP', 'LB', 'LY', 'MM', 'SD', 'SO', 'SY', 'YE', 'ZW',
 	];
 	$wgLandingCheckPriorityURLBase = "//wikimediafoundation.org/wiki/Special:LandingCheck";
 	$wgLandingCheckNormalURLBase = "//donate.wikimedia.org/wiki/Special:LandingCheck";
@@ -2359,10 +2359,10 @@ if ( $wmgUseSubPageList3 ) {
 // Serve 'Powered by MediaWiki' badge from /static/images instead of
 // $wgResourceBasePath so we can set far-future expires.
 $wgFooterIcons['poweredby']['mediawiki']['src'] =
-       '/static/images/poweredby_mediawiki_88x31.png';
+	   '/static/images/poweredby_mediawiki_88x31.png';
 $wgFooterIcons['poweredby']['mediawiki']['srcset'] =
-       '/static/images/poweredby_mediawiki_132x47.png 1.5x, ' .
-       '/static/images/poweredby_mediawiki_176x62.png 2x';
+	   '/static/images/poweredby_mediawiki_132x47.png 1.5x, ' .
+	   '/static/images/poweredby_mediawiki_176x62.png 2x';
 
 if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https' ) {
 	$wgCookieSecure = true;

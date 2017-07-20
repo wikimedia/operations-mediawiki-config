@@ -18,10 +18,10 @@ $wgLDAPDomainNames = [ 'labs'];
 switch( $wgDBname ) {
 case 'labswiki' :
 	$wgLDAPServerNames = [ 'labs' => 'ldap-labs.eqiad.wikimedia.org' ];
-        break;
+		break;
 case 'labtestwiki' :
 	$wgLDAPServerNames = [ 'labs' => 'labtestservices2001.wikimedia.org' ];
-        break;
+		break;
 }
 $wgLDAPSearchAttributes = [ 'labs' => 'cn'];
 $wgLDAPBaseDNs = [ 'labs' => 'dc=wikimedia,dc=org' ];
@@ -74,7 +74,7 @@ case 'labswiki' :
 		'servers' => [ 'primary' => 'labcontrol1001.wikimedia.org' ],
 		'soa'     => [ 'hostmaster' => 'hostmaster.wikimedia.org', 'refresh' => '1800', 'retry' => '3600', 'expiry' => '86400', 'minimum' => '7200' ],
 	];
-        break;
+		break;
 case 'labtestwiki' :
 	$wgOpenStackManagerNovaIdentityURI = 'http://labtestcontrol2001.wikimedia.org:35357/v2.0';
 	$wgOpenStackManagerNovaIdentityV3URI = 'http://labtestcontrol2001.wikimedia.org:35357/v3';
@@ -83,7 +83,7 @@ case 'labtestwiki' :
 		'servers' => [ 'primary' => 'labtestcontrol2001.wikimedia.org' ],
 		'soa'     => [ 'hostmaster' => 'hostmaster.wikimedia.org', 'refresh' => '1800', 'retry' => '3600', 'expiry' => '86400', 'minimum' => '7200' ],
 	];
-        break;
+		break;
 }
 $wgOpenStackManagerNovaKeypairStorage = 'ldap';
 $wgOpenStackManagerLDAPDomain = 'labs';

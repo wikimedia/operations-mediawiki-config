@@ -582,7 +582,7 @@ $wgLBFactoryConf = [
 	'db2072' => '10.192.16.37', # do not remove or comment out
 	'virt1000' => '208.80.154.18', # do not remove or comment out
 	'silver' => '208.80.154.136', # do not remove or comment out
-        'labtestweb2001' => '208.80.153.14', # do not remove or comment out
+		'labtestweb2001' => '208.80.153.14', # do not remove or comment out
 ],
 
 'externalLoads' => [
