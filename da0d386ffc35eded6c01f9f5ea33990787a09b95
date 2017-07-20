@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e71af52_56f205cf",
+        "filename": "tests/dbconfigTest.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-07-20T21:52:00Z",
+      "side": 1,
+      "message": "Double space",
+      "range": {
+        "startLine": 44,
+        "startChar": 69,
+        "endLine": 44,
+        "endChar": 71
+      },
+      "revId": "da0d386ffc35eded6c01f9f5ea33990787a09b95",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e71af52_36f5f9b5",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 112,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-07-20T21:52:00Z",
+      "side": 1,
+      "message": "This is wrong :(",
+      "range": {
+        "startLine": 112,
+        "startChar": 34,
+        "endLine": 112,
+        "endChar": 36
+      },
+      "revId": "da0d386ffc35eded6c01f9f5ea33990787a09b95",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
