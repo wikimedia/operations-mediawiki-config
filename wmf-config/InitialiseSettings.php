@@ -1462,8 +1462,6 @@ $wgConf->settings = [
 	'zhwiki' => [ '1.5x' => '/static/images/project-logos/zhwiki-1.5x.png', '2x' => '/static/images/project-logos/zhwiki-2x.png' ],
 	'zh_yuewiki' => [ '1.5x' => '/static/images/project-logos/zh_yuewiki-1.5x.png', '2x' => '/static/images/project-logos/zh_yuewiki-2x.png' ], // T150618
 
-
-
     # Wiktionary
     'amwiktionary' => [ '1.5x' => '/static/images/project-logos/amwiktionary-1.5x.png', '2x' => '/static/images/project-logos/amwiktionary-2x.png' ], // T150618
 	'arwiktionary' => [ '1.5x' => '/static/images/project-logos/arwiktionary-1.5x.png', '2x' => '/static/images/project-logos/arwiktionary-2x.png' ], // T150618
@@ -1556,7 +1554,6 @@ $wgConf->settings = [
 	'suwikiquote' => [ '1.5x' => '/static/images/project-logos/suwikiquote-1.5x.png', '2x' => '/static/images/project-logos/suwikiquote-2x.png' ], // T150618
 	'viwikiquote' => [ '1.5x' => '/static/images/project-logos/viwikiquote-1.5x.png', '2x' => '/static/images/project-logos/viwikiquote-2x.png' ],
 	'zhwikiquote' => [ '1.5x' => '/static/images/project-logos/zhwikiquote-1.5x.png', '2x' => '/static/images/project-logos/zhwikiquote-2x.png' ], // T150618
-
 
     # Wikibooks
 	'eswikibooks' => [ '1.5x' => '/static/images/project-logos/eswikibooks-1.5x.png', '2x' => '/static/images/project-logos/eswikibooks-2x.png'], // T170248
@@ -11876,7 +11873,6 @@ $wgConf->settings = [
 	'test2wiki' => true,
 ],
 
-
 # below seems to be for extensions
 
 # EXTENSIONS @{
@@ -17994,7 +17990,6 @@ $wgConf->settings = [
 	'itwikivoyage' => true,
 ],
 
-
 // Define list of projects to blacklist from CrossProject search
 // (only effective if SiteMatrix implementation is being used)
 'wmgCirrusSearchCrossProjectSearchBlackList' => [
@@ -18034,7 +18029,6 @@ $wgConf->settings = [
 		'wiki' => 2.5,
 	],
 ],
-
 
 // Shard each wiki to be under 2gb per shard if possible.  Changing this for a wiki
 // requires an in place reindex.  Last full review 2014-07-01.  See

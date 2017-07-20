@@ -13,7 +13,6 @@ class timelineTest extends \PHPUnit_Framework_TestCase {
 		$this->assertStringEndsNotWith( '.ttf', $filename );
 	}
 
-
 	/**
 	 * @dataProvider wgTimelineFontFileValues
 	 */

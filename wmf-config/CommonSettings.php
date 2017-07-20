@@ -465,7 +465,6 @@ $wgEnableBotPasswords = $wmgEnableBotPasswords;
 $wgBotPasswordsCluster = $wmgBotPasswordsCluster;
 $wgBotPasswordsDatabase = $wmgBotPasswordsDatabase;
 
-
 if ( PHP_SAPI === 'cli' ) {
 	$wgShowExceptionDetails = true;
 	$wgShowDBErrorBacktrace = true;
@@ -929,7 +928,6 @@ if ( $wmgUseUrlShortener ) {
 	];
 	$wgUrlShortenerReadOnly = true;
 }
-
 
 if ( $wmgPFEnableStringFunctions ) {
 	$wgPFEnableStringFunctions = true;
@@ -2765,7 +2763,6 @@ if ( $wgDBname === 'labswiki' || $wgDBname === 'labtestwiki' ) {
 if ( $wmgUseThanks ) {
 	wfLoadExtension( 'Thanks' );
 }
-
 
 // Flow configuration
 

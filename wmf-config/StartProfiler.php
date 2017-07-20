@@ -80,7 +80,6 @@ if ( extension_loaded( 'xenon' ) && ini_get( 'hhvm.xenon.period' ) ) {
 			return;
 		}
 
-
 		$entryPoint = basename( $_SERVER['SCRIPT_NAME'] );
 
 		// Collate stack samples and fold into single lines.
