@@ -34,7 +34,7 @@ class cirrusTests extends WgConfTestCase {
 		$this->assertCount( 2, $config['wgCirrusSearchReplicas'] );
 		$this->assertCount( 2, $config['wgCirrusSearchClientSideConnectTimeout'] );
 
-		foreach ( array_keys ( $config['wgCirrusSearchClusters'] ) as $cluster ) {
+		foreach ( array_keys( $config['wgCirrusSearchClusters'] ) as $cluster ) {
 			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchShardCount'] );
 			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchReplicas'] );
 			$this->assertArrayHasKey( $cluster, $config['wgCirrusSearchClientSideConnectTimeout'] );

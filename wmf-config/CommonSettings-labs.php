@@ -352,7 +352,7 @@ include "$wmfConfigDir/import.php";
 $wgHooks['ImportSources'][] = 'wmfImportSources';
 
 // Reenable Preview and Changes tabs for wikieditor preview
-$wgHiddenPrefs = array_diff ( $wgHiddenPrefs, [ 'wikieditor-preview' ] );
+$wgHiddenPrefs = array_diff( $wgHiddenPrefs, [ 'wikieditor-preview' ] );
 
 // MultimediaViewer is a dependency of 3d extension
 if ( $wmgUse3d && $wmgUseMultimediaViewer ) {

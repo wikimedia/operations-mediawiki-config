@@ -964,7 +964,7 @@ if ( $wgDBname === 'mediawikiwiki' ) {
 }
 
 if ( $wmgUseGlobalBlocking ) {
-	wfLoadExtension ( 'GlobalBlocking' );
+	wfLoadExtension( 'GlobalBlocking' );
 	$wgGlobalBlockingDatabase = 'centralauth';
 	$wgApplyGlobalBlocks = $wmgApplyGlobalBlocks;
 	$wgGlobalBlockingBlockXFF = true; // Apply blocks to IPs in XFF (T25343)
@@ -2374,7 +2374,7 @@ $wgCookieExpiration = 30 * 86400;
 $wgExtendedLoginCookieExpiration = 365 * 86400;
 
 if ( $wmgUseMath ) {
-	wfLoadExtension ( 'Math' );
+	wfLoadExtension( 'Math' );
 
 	$wgTexvc = '/usr/bin/texvc';
 	$wgMathTexvcCheckExecutable = '/usr/bin/texvccheck';
