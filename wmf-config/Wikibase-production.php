@@ -100,15 +100,7 @@ if ( $wmgUseWikibaseRepo ) {
 	}
 
 	if ( $wgDBname === 'wikidatawiki' ) {
-		$wgWBRepoSettings['unitStorage'] = [
-			'args' => [__DIR__ . '/unitConversionConfig.json']
-		];
-		// TODO: remove the conditional once wmf.9 is no longer deployed anywhere
-		if ( class_exists( '\\Wikibase\\Lib\\Units\\JsonUnitStorage' ) ) {
-			$wgWBRepoSettings['unitStorage']['class'] = '\\Wikibase\\Lib\\Units\\JsonUnitStorage';
-		} else {
-			$wgWBRepoSettings['unitStorage']['class'] = '\\Wikibase\\Lib\\JsonUnitStorage';
-		}
+		$wgWBRepoSettings['unitStorage'] = __DIR__ . '/unitConversionConfig.json';
 	}
 
 	$wgWBRepoSettings['dispatchingLockManager'] = 'redisLockManager';
