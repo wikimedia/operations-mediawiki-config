@@ -34,6 +34,11 @@ define( 'MW_NO_SESSION', 'warn' );
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
+/**
+ * @param string $message
+ * @param int $status
+ * @param int $smaxage
+ */
 function wmfStaticShowError( $message, $status, $smaxage = 60 ) {
 	HttpStatus::header( $status );
 	header(

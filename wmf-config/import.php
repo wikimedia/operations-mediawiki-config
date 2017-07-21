@@ -6,7 +6,11 @@
 
 # NOTE: Labs only for now. Will be put into production later
 
-// Set up import sources for transwiki import (T17583)
+/**
+ * Set up import sources for transwiki import (T17583)
+ *
+ * @param array $sources
+ */
 function wmfImportSources( &$sources ) {
 	global $wgConf, $IP, $lang;
 	$wikipedias = array_flip( MWWikiversions::readDbListFile(

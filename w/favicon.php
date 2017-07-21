@@ -2,11 +2,17 @@
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
+/**
+ * @param string $text
+ */
 function faviconShowError( $text ) {
 	header( 'Content-Type: text/html; charset=utf-8' );
 	echo "<!DOCTYPE html>\n<p>" . htmlspecialchars( $text ) . "</p>\n";
 }
 
+/**
+ * Stream the favicon!
+ */
 function streamFavicon() {
 	global $wgFavicon;
 	wfResetOutputBuffers();

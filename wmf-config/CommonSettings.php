@@ -110,6 +110,9 @@ $wmfUdp2logDest = $wmfLocalServices['udp2log'];
 
 # Initialise wgConf
 require "$wmfConfigDir/wgConf.php";
+/**
+ * @param $conf
+ */
 function wmfLoadInitialiseSettings( $conf ) {
 	global $wmfConfigDir;
 	require "$wmfConfigDir/InitialiseSettings.php";
@@ -1403,6 +1406,9 @@ if ( $wmgUseCentralAuth ) {
 	/**
 	 * This function is used for both the CentralAuthWikiList and
 	 * GlobalUserPageWikis hooks.
+	 *
+	 * @param array &$list
+	 * @return bool
 	 */
 	function wmfCentralAuthWikiList( &$list ) {
 		global $wgLocalDatabases, $IP, $wgSiteMatrixPrivateSites,

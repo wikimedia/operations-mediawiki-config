@@ -14,6 +14,8 @@
  * Main entry point to override production settings. Supports key beginning with
  * a dash to completely override a setting.
  * Settings are fetched through wmfLabsSettings() defined below.
+ *
+ * @return array
  */
 function wmfLabsOverrideSettings() {
 	global $wmfConfigDir, $wgConf;
@@ -59,6 +61,8 @@ function wmfLabsOverrideSettings() {
  * Keys that start with a hyphen will completely override the regular settings
  * in InitializeSettings.php. Keys that don't start with a hyphen will have
  * their settings combined with the regular settings.
+ *
+ * @return array
  */
 function wmfLabsSettings() {
 	global $wmfUdp2logDest;
