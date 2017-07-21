@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "6e71af52_7bbfe1f6",
+        "filename": "w/static.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-07-21T22:31:52Z",
+      "side": 1,
+      "message": "It\u0027s inconsistent because we\u0027re forgetful humans and we don\u0027t have a linter reminding us.\n\n* Conventions mention type-first https://www.mediawiki.org/wiki/Manual:Coding_conventions/PHP#Comments_and_documentation\n* Will presumably be phpcs by once we get around it\n* Matches PHP\u0027s native typehint order (type before variable name).\n* Aligns with @return\n* Required by Doxygen (which we use).\n* Matches conventions of other major php libraries I looked at (e.g. WordPress).\n* Matches conventions for other doc generators (including non-php ones, such as JSDoc and JSDuck).",
+      "parentUuid": "6e71af52_0fef7c83",
+      "range": {
+        "startLine": 38,
+        "startChar": 10,
+        "endLine": 38,
+        "endChar": 25
+      },
+      "revId": "4cecfbbad502ec705c767b61b76ae07cd5890112",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e71af52_2cc28689",
         "filename": "w/static.php",
         "patchSetId": 2
