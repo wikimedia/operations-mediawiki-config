@@ -13485,6 +13485,16 @@ $wgConf->settings = [
 	// current rate of Popups events being logged:
 	// https://grafana.wikimedia.org/dashboard/db/eventlogging-schema?var-schema=Popups
 	'default' => 0.001,
+
+	// T171325: Increase the per-session sampling rate of the Page Previews
+	// EventLogging instrumentation to 1% of all distinct browser sessions so
+	// that analysis of the stage 0* test can be completed in a reasonable amount
+	// of time.
+	//
+	// * See $wmgUsePopups above for the definition of "stage 0".
+	'itwiki' => 0.01,
+	'huwiki' => 0.01,
+	'itwiki' => 0.01,
 ],
 
 'wgPopupsStatsvSamplingRate' => [
