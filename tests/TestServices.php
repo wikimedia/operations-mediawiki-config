@@ -12,25 +12,25 @@
 # FIXME variables should be set in WgConfTestCase::loadWgConf??
 
 $wmfDatacenter = $wmfMasterDatacenter = 'unittest';
-$wmfAllServices = array();
+$wmfAllServices = [];
 
-$wmfAllServices['unittest'] = array(
+$wmfAllServices['unittest'] = [
 	'udp2log' => 'localhost:8420',
 	'statsd' => 'localhost',
-	'search' => array( 'localhost' ),
+	'search' => [ 'localhost' ],
 	'ocg' => 'localhost',
 	'urldownloader' => 'localhost',
 	'parsoidcache' => 'localhost',
 	'mathoid' => 'localhost',
 	'eventlogging' => 'localhost',
 	'eventbus' => 'localhost',
-);
+];
 
 ### Logstash
-$wmfAllServices['unittest']['logstash'] = array( '127.0.0.1' );
+$wmfAllServices['unittest']['logstash'] = [ '127.0.0.1' ];
 
 ### Analytics Kafka cluster
-$wmfAllServices['unittest']['kafka'] = array( '127.0.0.1:9092' );
+$wmfAllServices['unittest']['kafka'] = [ '127.0.0.1:9092' ];
 
 ### IRC
 $wmfAllServices['unittest']['irc'] = '127.0.0.1';

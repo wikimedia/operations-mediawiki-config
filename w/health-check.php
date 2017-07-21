@@ -12,13 +12,13 @@ $cpuinfo = file_get_contents( '/proc/cpuinfo' );
 
 # Parse cpuinfo
 $processors = explode( "\n\n", $cpuinfo );
-$ids = array();
+$ids = [];
 foreach ( $processors as $i => $processor ) {
 	if ( trim( $processor ) == '' ) {
 		continue;
 	}
 	$lines = explode( "\n", $processor );
-	$props = array();
+	$props = [];
 	foreach ( $lines as $line ) {
 		list( $name, $value ) = array_map( 'trim', explode( ':', $line, 2 ) );
 		$props[$name] = $value;

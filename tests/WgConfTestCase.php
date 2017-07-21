@@ -12,24 +12,24 @@ require_once __DIR__ . '/SiteConfiguration.php';
 
 class WgConfTestCase extends PHPUnit_Framework_TestCase {
 
-	protected $globals = array();
-	protected $globalsToUnset = array();
+	protected $globals = [];
+	protected $globalsToUnset = [];
 
 	protected function restoreGlobals() {
 		foreach ( $this->globals as $key => $value ) {
 			$GLOBALS[$key] = $value;
 		}
-		$this->globals = array();
+		$this->globals = [];
 
 		foreach ( $this->globalsToUnset as $key ) {
 			unset( $GLOBALS[$key] );
 		}
-		$this->globalsToUnset = array();
+		$this->globalsToUnset = [];
 	}
 
 	protected function setGlobals( $pairs, $value = null ) {
 		if ( is_string( $pairs ) ) {
-			$pairs = array( $pairs => $value );
+			$pairs = [ $pairs => $value ];
 		}
 		foreach ( $pairs as $key => $value ) {
 			// only set value in $this->globals on first call
@@ -92,21 +92,21 @@ class WgConfTestCase extends PHPUnit_Framework_TestCase {
 		require "{$wmfConfigDir}/wgConf.php";
 
 		// InitialiseSettings.php explicitly declares these as global, so we must too
-		$this->setGlobals( array(
+		$this->setGlobals( [
 			'wmfUdp2logDest' => 'localhost',
 			'wmfDatacenter' => 'unittest',
 			'wmfMasterDatacenter' => 'unittest',
 			'wmfRealm' => $wmfRealm,
 			'wmfConfigDir' => $wmfConfigDir,
 			'wgConf' => $wgConf,
-		) );
+		] );
 
 		// Other InitialiseSettings.php globals that we set in TestServices.php
-		$this->setGlobals( array(
+		$this->setGlobals( [
 			'wmfAllServices' => null,
 			'wmfLocalServices' => null,
 			'wmfMasterServices' => null,
-		) );
+		] );
 		require __DIR__ . '/TestServices.php';
 
 		require "{$wmfConfigDir}/InitialiseSettings.php";

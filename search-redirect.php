@@ -20,7 +20,7 @@ if ( !preg_match( '/^[a-zA-Z\-]*$/', $language ) ) {
 }
 
 // validate $family
-$sites = array(
+$sites = [
 	'wikipedia',
 	'wiktionary',
 	'wikisource',
@@ -30,7 +30,8 @@ $sites = array(
 	'wikiquote',
 	'wikibooks',
 	'wikivoyage',
-);
+];
+
 if ( !in_array( $family, $sites ) ) {
 	$family = 'wikipedia';
 }

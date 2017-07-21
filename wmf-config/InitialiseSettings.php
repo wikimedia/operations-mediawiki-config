@@ -5042,8 +5042,8 @@ $wgConf->settings = [
 // Configure Monolog logging to udp2log, Logstash and/or kafka
 // channel => false  == ignore all log events on this channel
 // channel => level  == record all events of this level or higher
-// channel => array( 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate )
-// Defaults: array( 'udp2log'=>'debug', 'logstash'=>'info', 'kafka'=>false, 'sample'=>false )
+// channel => [ 'udp2log'=>level, 'logstash'=>level, 'kafka'=>level, 'sample'=>rate ]
+// Defaults: [ 'udp2log'=>'debug', 'logstash'=>'info', 'kafka'=>false, 'sample'=>false ]
 // Valid levels: 'debug', 'info', 'warning', 'error', false
 // Note: sampled logs will not be sent to Logstash
 // Note: Udp2log events are sent to udp://{$wmfUdp2logDest}/{$channel}
@@ -6612,10 +6612,10 @@ $wgConf->settings = [
 		113 => 'Subject_talk',
 	],
 	/*
-	'eswikibooks' => array(
+	'eswikibooks' => [
 		//102 => 'Wikiversidad',            // T42838 (ns removed)
 		//103 => 'Wikiversidad_Discusión',
-	),
+	],
 	*/
 	'fawikibooks' => [
 		102 => 'کتاب‌آشپزی',
@@ -7424,12 +7424,12 @@ $wgConf->settings = [
 	'bswiki' => false, // T158662
 ],
 
-'wgUseFilePatrol' => array(
+'wgUseFilePatrol' => [
 	'default' => true,
 	'huwiki' => false, // T21241
 	'ruwiki' => false, // T154285
 	'bswiki' => false, // T158662
-),
+],
 
 # wgNoFollow... @{
 'wgNoFollowLinks' => [
@@ -7659,7 +7659,7 @@ $wgConf->settings = [
 		],
 		// For expanded rollback permissions...
 		'rollback' => [
-			'user' => [ 10, 60 ], // was array( 5, 60 ), -- brion 2008-05-15
+			'user' => [ 10, 60 ], // was [ 5, 60 ], -- brion 2008-05-15
 			'newbie' => [ 5, 120 ],
 			// practicality has won out over paranoia on enwiki, raising from 20 to 100 -- TS 2008-05-21
 			'rollbacker' => [ 100, 60 ],
@@ -8222,8 +8222,8 @@ $wgConf->settings = [
 		'patroller' => [ 'patrol' => true ], // T149019
 	],
 	'+enwikibooks' => [
-		// 'rollbacker' => array( 'rollback' => true ),
-		// 'patroller' => array( 'patrol' => true, 'autopatrol' => true ),
+		// 'rollbacker' => [ 'rollback' => true ],
+		// 'patroller' => [ 'patrol' => true, 'autopatrol' => true ],
 		'flood' => [ 'bot' => true ],
 		'uploader' => [ 'upload' => true, 'reupload' => true ],
 	],
@@ -8906,7 +8906,7 @@ $wgConf->settings = [
 		],
 	],
 	'+nlwikibooks' => [ 'user' => [ 'patrol' => true ] ],
-	// 'nlwikinews' => array( 'user' => array( 'patrol' => true ) ),
+	// 'nlwikinews' => [ 'user' => [ 'patrol' => true ] ],
 	'+nnwiki' => [
 		'autopatrolled' => [ 'autopatrol' => true ],
 		'patroller' => [ 'autopatrol' => true, 'patrol' => true, 'rollback' => true ],
