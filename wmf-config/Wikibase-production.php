@@ -35,7 +35,7 @@ if ( $wmgUseWikibaseRepo ) {
 			],
 		];
 	} else {
-		$wgPropertySuggesterClassifyingPropertyIds = [ 31 ]; // T169058
+		$wgPropertySuggesterClassifyingPropertyIds = [ 31, 279 ]; // T169060
 
 		$wgWBRepoSettings['sparqlEndpoint'] = 'https://query.wikidata.org/sparql';
 
