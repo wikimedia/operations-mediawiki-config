@@ -11,49 +11,49 @@
 class loggingTests extends WgConfTestCase {
 
 	public function provideHandlerSetup() {
-		return array(
-			'Setting only a level sends to udp2log and logstash' => array(
+		return [
+			'Setting only a level sends to udp2log and logstash' => [
 				// configuration for 'test' channel in wmgMonologChannels
 				'debug',
 				// handlers expected on the 'test' channel
-				array( 'failuregroup|udp2log-debug|logstash-info' )
-			),
+				[ 'failuregroup|udp2log-debug|logstash-info' ]
+			],
 
-			'Can disable logstash' => array(
-				array( 'logstash' => false ),
-				array( 'failuregroup|udp2log-debug' ),
-			),
+			'Can disable logstash' => [
+				[ 'logstash' => false ],
+				[ 'failuregroup|udp2log-debug' ],
+			],
 
-			'Disabling udp2log also disables logstash' => array(
-				array( 'udp2log' => false ),
-				array( 'blackhole' ),
-			),
+			'Disabling udp2log also disables logstash' => [
+				[ 'udp2log' => false ],
+				[ 'blackhole' ],
+			],
 
-			'Logstash can be enabled when udp2log is disabled' => array(
-				array( 'udp2log' => false, 'logstash' => 'info' ),
-				array( 'failuregroup|logstash-info' )
-			),
+			'Logstash can be enabled when udp2log is disabled' => [
+				[ 'udp2log' => false, 'logstash' => 'info' ],
+				[ 'failuregroup|logstash-info' ]
+			],
 
-			'can enable only kafka' => array(
-				array( 'kafka' => 'debug', 'logstash' => false, 'udp2log' => false ),
-				array( 'failuregroup|kafka-debug' ),
-			),
+			'can enable only kafka' => [
+				[ 'kafka' => 'debug', 'logstash' => false, 'udp2log' => false ],
+				[ 'failuregroup|kafka-debug' ],
+			],
 
-			'can enable buffering' => array(
-				array( 'buffer' => true ),
-				array( 'failuregroup|udp2log-debug-buffered|logstash-info-buffered' ),
-			),
+			'can enable buffering' => [
+				[ 'buffer' => true ],
+				[ 'failuregroup|udp2log-debug-buffered|logstash-info-buffered' ],
+			],
 
-			'can enable sampling, which disables logstash' => array(
-				array( 'sample' => 1000 ),
-				array( 'failuregroup|udp2log-debug-sampled-1000' ),
-			),
+			'can enable sampling, which disables logstash' => [
+				[ 'sample' => 1000 ],
+				[ 'failuregroup|udp2log-debug-sampled-1000' ],
+			],
 
-			'false yields backhole' => array(
+			'false yields backhole' => [
 				false,
-				array( 'blackhole' ),
-			),
-		);
+				[ 'blackhole' ],
+			],
+		];
 	}
 
 	/**
@@ -64,12 +64,12 @@ class loggingTests extends WgConfTestCase {
 		// only read from the local scope defined here.
 		$wmgDefaultMonologHandler = 'blackhole';
 		$wgDebugLogFile = false;
-		$wmgMonologAvroSchemas = array();
+		$wmgMonologAvroSchemas = [];
 		$wmgLogAuthmanagerMetrics = false;
 		$wmfUdp2logDest = 'localhost';
-		$wmgLogstashServers = array( 'localhost' );
-		$wmgKafkaServers = array( 'localhost' );
-		$wmgMonologChannels = array( 'test' => $channelConfig );
+		$wmgLogstashServers = [ 'localhost' ];
+		$wmgKafkaServers = [ 'localhost' ];
+		$wmgMonologChannels = [ 'test' => $channelConfig ];
 		$wmfRealm = 'production';
 
 		include __DIR__ . '/../wmf-config/logging.php';
@@ -86,9 +86,9 @@ class loggingTests extends WgConfTestCase {
 	public function provideAvroSchemas() {
 		$wgConf = $this->loadWgConf( 'production' );
 
-		$tests = array();
+		$tests = [];
 		foreach ( $wgConf->settings['wmgMonologAvroSchemas']['default'] as $name => $schemaConfig ) {
-			$tests[$name] = array( $schemaConfig );
+			$tests[$name] = [ $schemaConfig ];
 		}
 		return $tests;
 	}
@@ -104,11 +104,11 @@ class loggingTests extends WgConfTestCase {
 	}
 
 	public function provideConfiguredChannels() {
-		foreach ( array( 'production', 'labs' ) as $realm ) {
+		foreach ( [ 'production', 'labs' ] as $realm ) {
 			$wgConf = $this->loadWgConf( $realm );
 			foreach ( $wgConf->settings['wmgMonologChannels'] as $wiki => $channels ) {
 				foreach ( $channels as $name => $config ) {
-					$tests["\$wmgMonologChannels['$wiki']['$name']"] = array( $config );
+					$tests["\$wmgMonologChannels['$wiki']['$name']"] = [ $config ];
 				}
 			}
 		}
@@ -132,15 +132,15 @@ class loggingTests extends WgConfTestCase {
 
 	public function assertValidLogLevel( $level ) {
 		$this->assertTrue(
-			in_array( $level, array( 'debug', 'info', 'warning', 'error', false ), true ),
+			in_array( $level, [ 'debug', 'info', 'warning', 'error', false ], true ),
 			"$level must be one of: debug, info, warning, error, false"
 		);
 	}
 
 	public function assertChannelConfig( $config ) {
-		$allowed = array( 'udp2log', 'logstash', 'kafka', 'sample', 'buffer' );
+		$allowed = [ 'udp2log', 'logstash', 'kafka', 'sample', 'buffer' ];
 		$extra = array_diff( array_keys( $config ), $allowed );
-		$this->assertEquals( array(), $extra, 'Expect config keys limited to: ' . implode( ', ', $allowed ) );
+		$this->assertEquals( [], $extra, 'Expect config keys limited to: ' . implode( ', ', $allowed ) );
 		if ( isset( $config['buffer'] ) ) {
 			$this->assertInternalType( 'bool', $config['buffer'], 'Buffer must be boolean' );
 		}
@@ -151,7 +151,7 @@ class loggingTests extends WgConfTestCase {
 				'Sample must be either false or integer > 0'
 			);
 		}
-		foreach ( array( 'udp2log', 'logstash', 'kafka' ) as $handler ) {
+		foreach ( [ 'udp2log', 'logstash', 'kafka' ] as $handler ) {
 			if ( isset( $config[$handler] ) ) {
 				$this->assertValidLogLevel( $config[$handler] );
 			}

@@ -13,13 +13,13 @@ require_once __DIR__ . '/../multiversion/MWRealm.php';
 class dbconfigTests extends WgConfTestCase {
 
 	public static function provideRealmDatacenter() {
-		return array(
-			array( 'production', 'eqiad', 'eqiad' ),
-			array( 'production', 'eqiad', 'codfw' ),
-			array( 'production', 'codfw', 'eqiad' ),
-			array( 'production', 'codfw', 'codfw' ),
-			array( 'labs', 'eqiad', 'eqiad' ),
-		);
+		return [
+			[ 'production', 'eqiad', 'eqiad' ],
+			[ 'production', 'eqiad', 'codfw' ],
+			[ 'production', 'codfw', 'eqiad' ],
+			[ 'production', 'codfw', 'codfw' ],
+			[ 'labs', 'eqiad', 'eqiad' ],
+		];
 	}
 
 	function loadDbFile( $realm, $datacenter, $masterdatacenter ) {

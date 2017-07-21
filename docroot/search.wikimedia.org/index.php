@@ -21,11 +21,12 @@ $lang = 'en';
 $search = '';
 $limit = 20;
 
-$allowedSites = array(
+$allowedSites = [
 	'wikipedia',
 	'wiktionary',
 	'wikinews',
-	'wikisource' );
+	'wikisource'
+];
 
 if ( isset( $_GET['site'] ) ) {
 	if ( is_string( $_GET['site'] ) && in_array( $_GET['site'], $allowedSites ) ) {
@@ -65,11 +66,11 @@ $urlSearch = urlencode( $search );
 # OpenSearch JSON suggest API
 $url = "https://$lang.$site.org/w/api.php?action=opensearch&search=$urlSearch&limit=$limit";
 $c = curl_init( $url );
-curl_setopt_array( $c, array(
+curl_setopt_array( $c, [
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_TIMEOUT_MS => 5000,
 	CURLOPT_USERAGENT => 'Wikimedia OpenSearch to Apple Dictionary bridge'
-) );
+] );
 $result = curl_exec( $c );
 $code = curl_getinfo( $c, CURLINFO_HTTP_CODE );
 if ( $result === false || !$code ) {

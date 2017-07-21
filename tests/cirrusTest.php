@@ -109,13 +109,13 @@ class cirrusTests extends WgConfTestCase {
 		// variables that would have been setup elsewhere, perhaps in mediawiki
 		// default settings or by CommonSettings.php, or by CirrusSearch.php,
 		// but none of those are a part of this repository
-		$wgCirrusSearchRescoreProfiles = array();
-		$wgCirrusSearchRescoreFunctionScoreChains = array();
-		$wgCirrusSearchFullTextQueryBuilderProfiles = array();
+		$wgCirrusSearchRescoreProfiles = [];
+		$wgCirrusSearchRescoreFunctionScoreChains = [];
+		$wgCirrusSearchFullTextQueryBuilderProfiles = [];
 		$wgCirrusSearchMaxShardsPerNode = [];
-		$wgJobTypeConf = array( 'default' => array() );
-		$wgCirrusSearchWeights = array();
-		$wgCirrusSearchNamespaceWeights = array();
+		$wgJobTypeConf = [ 'default' => [] ];
+		$wgCirrusSearchWeights = [];
+		$wgCirrusSearchNamespaceWeights = [];
 		$wmfDatacenter = 'unittest';
 		$wgCirrusSearchPoolCounterKey = 'unittest:poolcounter:blahblahblah';
 		// not used for anything, just to prevent undefined variable
@@ -157,16 +157,16 @@ class cirrusTests extends WgConfTestCase {
 			}
 		}
 		$wikis = array_unique( $wikis );
-		$indexTypes = array( 'content', 'general', 'titlesuggest', 'file' );
-		$clusters = array( 'eqiad' => 31, 'codfw' => 24 );
+		$indexTypes = [ 'content', 'general', 'titlesuggest', 'file' ];
+		$clusters = [ 'eqiad' => 31, 'codfw' => 24 ];
 
 		// restrict wgConf to only the settings we care about
-		$wgConf->settings = array(
+		$wgConf->settings = [
 			'shards' => $shards,
 			'replicas' => $replicas,
 			'max_shards_per_node' => $maxShardPerNode,
-		);
-		$tests = array();
+		];
+		$tests = [];
 		foreach ( $wikis as $wiki ) {
 			list( $site, $lang ) = $wgConf->siteFromDB( $wiki );
 			foreach ( $wgConf->suffixes as $altSite => $suffix ) {
@@ -174,12 +174,12 @@ class cirrusTests extends WgConfTestCase {
 					break;
 				}
 			}
-			$config = $wgConf->getAll( $wiki, $suffix, array(
+			$config = $wgConf->getAll( $wiki, $suffix, [
 				'lang' => $lang,
 				'docRoot' => '/dev/null',
 				'site' => $site,
 				'stdlogo' => 'file://dev/null',
-			) );
+			] );
 			foreach ( $indexTypes as $indexType ) {
 				// only commonswiki has the file index
 				if ( $indexType === 'file' && $wiki !== 'commonswiki' ) {
@@ -190,14 +190,14 @@ class cirrusTests extends WgConfTestCase {
 					continue;
 				}
 				foreach ( $clusters as $clusterName => $numServers ) {
-					$tests["$clusterName {$wiki}_{$indexType}"] = array(
+					$tests["$clusterName {$wiki}_{$indexType}"] = [
 						$wiki,
 						$indexType,
 						$numServers,
 						self::resolveClusterConfig( $config['shards'], $clusterName ),
 						self::resolveClusterConfig( $config['replicas'], $clusterName ),
 						self::resolveClusterConfig( $config['max_shards_per_node'], $clusterName ),
-					);
+					];
 				}
 			}
 		}
@@ -229,7 +229,7 @@ class cirrusTests extends WgConfTestCase {
 		// in hive and choosing wikis with > 100M queries/week:
 		// select wikiid, count(1) as count from wmf_raw.cirrussearchrequestset where year = 2016
 		// and month = 1 and day >= 2 and day < 9 group by wikiid order by count desc limit 10;
-		$busyWikis = array( 'enwiki', 'dewiki' );
+		$busyWikis = [ 'enwiki', 'dewiki' ];
 		if ( in_array( $wiki, $busyWikis ) && $indexType == 'content' ) {
 			// For busy indices ensure we are using most of the cluster to serve them
 			$this->assertGreaterThanOrEqual( $numServers - 3, $totalShards );
