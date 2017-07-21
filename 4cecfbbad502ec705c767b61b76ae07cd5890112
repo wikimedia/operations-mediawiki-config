@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e71af52_0cd9ca83",
+        "filename": "tests/WgConfTestCase.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-07-21T04:24:44Z",
+      "side": 1,
+      "message": "mixed [optional] might be more accurate. It\u0027s never expected to be given null as special value.",
+      "range": {
+        "startLine": 32,
+        "startChar": 18,
+        "endLine": 32,
+        "endChar": 22
+      },
+      "revId": "4cecfbbad502ec705c767b61b76ae07cd5890112",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
