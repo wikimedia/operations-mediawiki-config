@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e71af52_45e1e596",
+        "filename": "wmf-config/StartProfiler.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-07-21T17:51:24Z",
+      "side": 1,
+      "message": "Aye, we should remove this. I disabled this because it will likely cause tungsten to crash again and/or real-user requests to sometimes get exceptions, if re-enabled.",
+      "range": {
+        "startLine": 61,
+        "startChar": 1,
+        "endLine": 74,
+        "endChar": 2
+      },
+      "revId": "cc6906514957a7a1586c524381743d5bb94fc639",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
