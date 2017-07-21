@@ -11,8 +11,13 @@ if ( $format === 'json' ) {
 }
 
 // Mock vars from CommonSettings.php for db-eqiad.php
-$wgDBname = $wgDBuser = $wgDBpassword = null; $wmfMasterDatacenter = 'eqiad';
+$wgDBname = null;
+$wgDBuser = null;
+$wgDBpassword = null;
+$wmfMasterDatacenter = 'eqiad';
+
 define( 'DBO_DEFAULT', 'uniq' );
+
 require_once '../../wmf-config/db-eqiad.php';
 
 class WmfClusters {
