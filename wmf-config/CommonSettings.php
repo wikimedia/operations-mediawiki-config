@@ -3570,9 +3570,6 @@ $wgImgAuthDetails = true;
 
 $wgDefaultUserOptions['watchlistdays'] = $wmgWatchlistNumberOfDaysShow;
 
-// Use OOUI to render the buttons on EditPage.php
-$wgOOUIEditPage = true;
-
 if ( $wmgUseWikidataPageBanner ) {
 	wfLoadExtension( 'WikidataPageBanner' );
 }
