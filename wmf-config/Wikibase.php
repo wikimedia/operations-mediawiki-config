@@ -153,6 +153,8 @@ if ( $wmgUseWikibaseRepo ) {
 	// on either Item or Property pages. T86453
 	$wgCaptchaTriggersOnNamespace[NS_MAIN]['addurl'] = false;
 	$wgCaptchaTriggersOnNamespace[WB_NS_PROPERTY]['addurl'] = false;
+	// Soft-enable Cirrus usage for wbsearchentities
+	$wgWBRepoSettings['entitySearch']['useCirrus'] = null;
 }
 
 if ( $wmgUseWikibaseClient ) {
