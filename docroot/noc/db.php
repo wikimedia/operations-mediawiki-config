@@ -23,18 +23,36 @@ require_once '../../wmf-config/db-eqiad.php';
 class WmfClusters {
 	private $clusters;
 
+	/**
+	 * @return array
+	 */
 	public function getNames() {
 		global $wgLBFactoryConf;
 		return array_keys( $wgLBFactoryConf['sectionLoads'] );
 	}
+
+	/**
+	 * @param $clusterName string
+	 * @return array
+	 */
 	public function getHosts( $clusterName ) {
 		global $wgLBFactoryConf;
 		return array_keys( $wgLBFactoryConf['sectionLoads'][$clusterName] );
 	}
+
+	/**
+	 * @param $clusterName string
+	 * @return string
+	 */
 	public function getLoads( $clusterName ) {
 		global $wgLBFactoryConf;
 		return $wgLBFactoryConf['sectionLoads'][$clusterName];
 	}
+
+	/**
+	 * @param $clusterName
+	 * @return array
+	 */
 	public function getDBs( $clusterName ) {
 		global $wgLBFactoryConf;
 		$ret = array();
@@ -45,6 +63,10 @@ class WmfClusters {
 		}
 		return $ret;
 	}
+
+	/**
+	 * @param $clusterName string
+	 */
 	public function htmlFor( $clusterName ) {
 		print "<strong>Hosts</strong><br>";
 		foreach ( $this->getHosts( $clusterName ) as $host ) {

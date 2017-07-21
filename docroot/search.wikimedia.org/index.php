@@ -6,7 +6,10 @@
 // Brion Vibber <brion@wikimedia.org>
 // 2007-12-28
 
-function dieOut( $msg='' ) {
+/**
+ * @param $msg string
+ */
+function dieOut( $msg = '' ) {
 	header( "HTTP/1.0 500 Internal Server Error" );
 	die( "Wikimedia search service internal error.\n\n$msg" );
 }

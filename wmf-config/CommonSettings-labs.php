@@ -376,9 +376,11 @@ class GuanacoProvider extends \MediaWiki\auth\AbstractPreAuthenticationProvider 
 	public function testUserForCreation( $user, $autocreate, array $options = [] ) {
 		return $this->testUser( $user );
 	}
+
 	public function testForAccountCreation( $user, $creator, array $reqs ) {
 		return $this->testUser( $user );
 	}
+
 	public function testUser( $user ) {
 		$ua = $this->manager->getRequest()->getHeader( 'User-agent' );
 		$logger = \MediaWiki\Logger\LoggerFactory::getInstance( 'badpass' );

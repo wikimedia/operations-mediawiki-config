@@ -1,4 +1,8 @@
 <?php
+	/**
+	 * @param $viewFilenames array
+	 * @param $highlight bool
+	 */
 	function outputFiles( $viewFilenames, $highlight = true ) {
 		$viewFilenames = array_map( 'basename', $viewFilenames );
 		natsort( $viewFilenames );

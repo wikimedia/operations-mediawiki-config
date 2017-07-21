@@ -22,9 +22,13 @@ class DBList {
 		'wiktionary',
 	);
 
+	/**
+	 * @return array
+	 */
 	public static function getLists() {
 		static $list = null;
 		if ( !$list ) {
+			$list = [];
 			$filenames = scandir( dirname( __DIR__ ) . '/dblists' );
 			foreach ( $filenames as $filename ) {
 				if ( substr( $filename, -7, 7 ) == '.dblist' ) {
@@ -36,6 +40,10 @@ class DBList {
 		return $list;
 	}
 
+	/**
+	 * @param $dbname string
+	 * @return bool
+	 */
 	public static function isWikiProject( $dbname ) {
 		return in_array( $dbname, self::$wiki_projects );
 	}
