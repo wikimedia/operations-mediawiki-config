@@ -330,7 +330,7 @@ if ( $wgLocaltimezone !== 'UTC' ) {
 $wgShowIPinHeader = false;
 $wgRCMaxAge = 30 * 86400;
 
-$wgTmpDirectory     = '/tmp';
+$wgTmpDirectory = '/tmp';
 
 $wgSQLMode = null;
 

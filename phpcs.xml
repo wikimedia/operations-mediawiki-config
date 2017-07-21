@@ -30,13 +30,7 @@
 	<rule ref="Generic.Files.LineLength.TooLong">
 		<severity>0</severity>
 	</rule>
-	<rule ref="Generic.Formatting.MultipleStatementAlignment.IncorrectWarning">
-		<severity>0</severity>
-	</rule>
 	<rule ref="Generic.PHP.NoSilencedErrors.Discouraged">
-		<severity>0</severity>
-	</rule>
-	<rule ref="PSR2.Classes.PropertyDeclaration.ScopeMissing">
 		<severity>0</severity>
 	</rule>
 	<rule ref="Squiz.Classes.ValidClassName.NotCamelCaps">

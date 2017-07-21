@@ -12,7 +12,7 @@ require_once __DIR__ . '/../multiversion/MWWikiversions.php';
 class DBList {
 	# List of project names. This array is used to verify that the various
 	# dblist project files only contains names of databases that belong to them
-	static $wiki_projects = array(
+	private static $wiki_projects = array(
 		'wikibooks',
 		'wikinews',
 		'wikipedia',
