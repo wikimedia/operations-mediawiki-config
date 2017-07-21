@@ -14922,13 +14922,6 @@ $wgConf->settings = [
 	'mediawikiwiki' => true,
 ],
 
-// Whether to use OOUI to render the buttons on EditPage.php
-// Temporarily disabled during testing of the feature, 2017-03-24 – T162849.
-'wgOOUIEditPage' => [
-	'default' => true,
-	'commonswiki' => false,
-],
-
 'wgCiteResponsiveReferences' => [
 	'default' => false,
 
