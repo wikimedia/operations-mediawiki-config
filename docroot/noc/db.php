@@ -37,7 +37,7 @@ class WmfClusters {
 	}
 	public function getDBs( $clusterName ) {
 		global $wgLBFactoryConf;
-		$ret = array();
+		$ret = [];
 		foreach ( $wgLBFactoryConf['sectionsByDB'] as $db => $cluster ) {
 			if ( $cluster == $clusterName ) {
 				$ret[] = $db;
@@ -68,13 +68,13 @@ class WmfClusters {
 $wmf = new WmfClusters();
 
 if ( $format === 'json' ) {
-	$data = array();
+	$data = [];
 	foreach ( $wmf->getNames() as $name ) {
-		$data[$name] = array(
+		$data[$name] = [
 			'hosts' => $wmf->getHosts( $name ),
 			'loads' => $wmf->getLoads( $name ),
 			'dbs' => $wmf->getDBs( $name ),
-		);
+		];
 	}
 	header( 'Content-Type: application/json; charset=utf-8' );
 	echo json_encode( $data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES );

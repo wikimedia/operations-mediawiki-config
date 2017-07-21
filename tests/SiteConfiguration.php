@@ -39,15 +39,15 @@
  *
  * @code
  * $conf = new SiteConfiguration;
- * $conf->wikis = array( 'de', 'en', 'beta' );
+ * $conf->wikis = [ 'de', 'en', 'beta' ];
  * @endcode
  *
  * When configuring the MediaWiki global settings (the $wg variables),
  * the identifiers will be available to specify settings on a per wiki basis.
  *
  * @code
- * $conf->settings = array(
- *	'wgSomeSetting' => array(
+ * $conf->settings = [
+ *	'wgSomeSetting' => [
  *
  *		# production:
  *		'de'     => false,
@@ -55,8 +55,8 @@
  *
  *		# test:
  *		'beta    => true,
- *	),
- * );
+ *	],
+ * ];
  * @endcode
  *
  * With three wikis, that is easy to manage. But what about a farm with
@@ -65,15 +65,15 @@
  * the above code could be written:
  *
  * @code
- * $conf->settings = array(
- *	'wgSomeSetting' => array(
+ * $conf->settings = [
+ *	'wgSomeSetting' => [
  *
  *		'default' => false,
  *
  *		# Enable feature on test
  *		'beta'    => true,
- *	),
- * );
+ *	],
+ * ];
  * @endcode
  *
  *
@@ -83,23 +83,23 @@
  * on a per wiki basis.
  *
  * @code
- * $conf->settings = array(
- *	'wgMergeSetting' = array(
+ * $conf->settings = [
+ *	'wgMergeSetting' = [
  *		# Value that will be shared among all wikis:
- *		'default' => array( NS_USER => true ),
+ *		'default' => [ NS_USER => true ],
  *
  *		# Leading '+' means merging the array of value with the defaults
- *		'+beta' => array( NS_HELP => true ),
- *	),
- * );
+ *		'+beta' => [ NS_HELP => true ],
+ *	],
+ * ];
  *
  * # Get configuration for the German site:
  * $conf->get( 'wgMergeSetting', 'de' );
- * // --> array( NS_USER => true );
+ * // --> [ NS_USER => true ];
  *
  * # Get configuration for the testing site:
  * $conf->get( 'wgMergeSetting', 'beta' );
- * // --> array( NS_USER => true, NS_HELP => true );
+ * // --> [ NS_USER => true, NS_HELP => true ];
  * @endcode
  *
  * Finally, to load all configuration settings, extract them in global context:
@@ -113,7 +113,7 @@
  *
  * @todo Give examples for,
  * suffixes:
- * $conf->suffixes = array( 'wiki' );
+ * $conf->suffixes = [ 'wiki' ];
  * localVHosts
  * callbacks!
  */
@@ -417,18 +417,18 @@ class SiteConfiguration {
 	 * @return array
 	 */
 	protected function getWikiParams( $wiki ) {
-		static $default = array(
+		static $default = [
 			'suffix' => null,
 			'lang' => null,
 			'tags' => [],
 			'params' => [],
-		);
+		];
 
 		if ( !is_callable( $this->siteParamsCallback ) ) {
 			return $default;
 		}
 
-		$ret = call_user_func_array( $this->siteParamsCallback, array( $this, $wiki ) );
+		$ret = call_user_func_array( $this->siteParamsCallback, [ $this, $wiki ] );
 		# Validate the returned value
 		if ( !is_array( $ret ) ) {
 			return $default;
@@ -487,7 +487,7 @@ class SiteConfiguration {
 		// Allow override
 		$def = $this->getWikiParams( $db );
 		if ( !is_null( $def['suffix'] ) && !is_null( $def['lang'] ) ) {
-			return array( $def['suffix'], $def['lang'] );
+			return [ $def['suffix'], $def['lang'] ];
 		}
 
 		$site = null;
@@ -504,7 +504,7 @@ class SiteConfiguration {
 			}
 		}
 		$lang = str_replace( '_', '-', $lang );
-		return array( $site, $lang );
+		return [ $site, $lang ];
 	}
 
 	/**
@@ -547,14 +547,14 @@ class SiteConfiguration {
 			$retVal = 1;
 			$cmd = wfShellWikiCmd(
 				"$IP/maintenance/getConfiguration.php",
-				array(
+				[
 					'--wiki', $wiki,
 					'--settings', implode( ' ', $settings ),
 					'--format', 'PHP'
-				)
+				]
 			);
 			// ulimit5.sh breaks this call
-			$data = trim( wfShellExec( $cmd, $retVal, [], array( 'memory' => 0 ) ) );
+			$data = trim( wfShellExec( $cmd, $retVal, [], [ 'memory' => 0 ] ) );
 			if ( $retVal != 0 || !strlen( $data ) ) {
 				throw new MWException( "Failed to run getConfiguration.php." );
 			}

@@ -11,16 +11,16 @@
 class DbListTests extends PHPUnit_Framework_TestCase {
 
 	public static function provideProjectDbnames() {
-		$cases = array();
+		$cases = [];
 		foreach ( DBList::getLists() as $projectname => $databases ) {
 			if ( !DBlist::isWikiProject( $projectname ) ) {
 				// Skip files such as s1, private ...
 				continue;
 			}
 			foreach ( $databases as $database ) {
-				$cases[] = array(
+				$cases[] = [
 					$projectname, $database
-				);
+				];
 			}
 		}
 		return $cases;
@@ -51,7 +51,7 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 		$all = $lists['all'];
 
 		// dblist files that are exceptions
-		$skip = array(
+		$skip = [
 			// No point in checking all includes itself
 			'all',
 
@@ -68,7 +68,7 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 			'private',
 			'special',
 			'todo',
-		);
+		];
 
 		foreach ( $lists as $dbfile => $dbnames ) {
 			if ( in_array( $dbfile, $skip ) ) {
@@ -76,7 +76,7 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 			}
 
 			$this->assertEquals(
-				array(),
+				[],
 				array_diff( $dbnames, $all ),
 				"'{$dbfile}.dblist' contains names not in 'all.dblist'"
 			);
