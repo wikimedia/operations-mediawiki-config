@@ -34,6 +34,11 @@ define( 'MW_NO_SESSION', 'warn' );
 require_once __DIR__ . '/../multiversion/MWMultiVersion.php';
 require MWMultiVersion::getMediaWiki( 'includes/WebStart.php' );
 
+/**
+ * @param $message string
+ * @param $status int
+ * @param $smaxage int
+ */
 function wmfStaticShowError( $message, $status, $smaxage = 60 ) {
 	HttpStatus::header( $status );
 	header(
@@ -92,6 +97,9 @@ function wmfStaticStreamFile( $filePath, $responseType = 'nohash' ) {
 	readfile( $filePath );
 }
 
+/**
+ *
+ */
 function wmfStaticRespond() {
 	global $wgScriptPath, $IP;
 
