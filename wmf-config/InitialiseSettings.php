@@ -14800,10 +14800,8 @@ $wgConf->settings = [
 // Whether to use OOUI to render the buttons on EditPage.php
 // Temporarily disabled during testing of the feature, 2017-03-24 – T162849.
 'wgOOUIEditPage' => [
-	'default' => false,
-	'mediawikiwiki' => true,
-	'wikipedia' => true,
-	'metawiki' => true,
+	'default' => true,
+	'commonswiki' => false,
 ],
 
 'wgCiteResponsiveReferences' => [
