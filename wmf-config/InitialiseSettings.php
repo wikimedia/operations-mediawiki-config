@@ -11938,6 +11938,7 @@ $wgConf->settings = [
 
 	'bswiki' => true, // T10240
 	'dewiktionary' => true,
+	'dewikivoyage' => true, // T171293
 	'enwiktionary' => true,
 	'eswiktionary' => true, // T9952
 	'frrwiki' => true, // T40023
