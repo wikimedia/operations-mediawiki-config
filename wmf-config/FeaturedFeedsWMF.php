@@ -7,7 +7,7 @@
 $wgHooks['FeaturedFeeds::getFeeds'][] = 'wfFeaturedFeedsWMF_getFeeds';
 
 /**
- * @param $feeds array
+ * @param array &$feeds
  * @return bool
  */
 function wfFeaturedFeedsWMF_getFeeds( &$feeds ) {

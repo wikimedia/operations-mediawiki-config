@@ -27,6 +27,10 @@ class WgConfTestCase extends PHPUnit_Framework_TestCase {
 		$this->globalsToUnset = [];
 	}
 
+	/**
+	 * @param string|array $pairs
+	 * @param null $value
+	 */
 	protected function setGlobals( $pairs, $value = null ) {
 		if ( is_string( $pairs ) ) {
 			$pairs = [ $pairs => $value ];

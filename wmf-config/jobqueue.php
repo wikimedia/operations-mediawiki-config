@@ -14,6 +14,11 @@ $wmgRedisQueueBaseConfig = [
 	'daemonized' => true
 ];
 
+/**
+ * @param array $base
+ * @param array $partitions
+ * @return array
+ */
 function wmfRedisConfigByPartition( $base, $partitions ) {
 	$result = [];
 	foreach ( $partitions as $partition => $addr ) {

@@ -144,6 +144,7 @@ function getProtocolAndHost() {
 
 /**
  * Get a stylesheet with the specified logo in the background.
+ * @param string $logo
  * @return string
  */
 function getStyleSheet( $logo ) {
@@ -231,6 +232,9 @@ function showMobileError() {
  * Output an error message explaining that no wiki for the given subdomain exists.
  * This has been superseded by an Incubator redirect for all projects other than
  * Wikiversity.
+ *
+ * @param string $project
+ * @param string $language
  */
 function showMissingSubdomainError( $project, $language ) {
 	$projectInfos = [
@@ -323,6 +327,7 @@ function showGenericError() {
 
 /**
  * Show a redirect, including "short hypertext note" as suggested by RFC 2616 section 10.3.2.
+ * @param string $url
  */
 function showRedirect( $url ) {
 	header( 'Location: ' . $url );
