@@ -44,7 +44,9 @@ $wgLDAPLowerCaseUsername = [ 'labs' => false, 'invaliddomain' => false ];
 $wgLDAPDebug = 5; // Maximally verbose logs for Andrew Bogott, 8-Dec-2015
 
 // Local debug logging for troubleshooting LDAP issues
+// @codingStandardsIgnoreStart
 if ( false ) {
+	// @codingStandardsIgnoreEnd
 	$wgLDAPDebug = 5;
 	$monolog = LoggerFactory::getProvider();
 	$monolog->mergeConfig( [

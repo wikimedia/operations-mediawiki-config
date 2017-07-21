@@ -24,12 +24,6 @@
 	<rule ref="Generic.Arrays.DisallowLongArraySyntax.Found">
 		<severity>0</severity>
 	</rule>
-	<rule ref="Generic.CodeAnalysis.UnconditionalIfStatement.Found">
-		<severity>0</severity>
-	</rule>
-	<rule ref="Generic.Files.EndFileNewline.NotFound">
-		<severity>0</severity>
-	</rule>
 	<rule ref="Generic.Files.LineLength.MaxExceeded">
 		<exclude-pattern>wmf-config/interwiki.php</exclude-pattern>
 	</rule>
