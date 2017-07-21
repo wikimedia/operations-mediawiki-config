@@ -39,14 +39,14 @@ $wmfAllServices['unittest']['irc'] = '127.0.0.1';
 $wmfAllServices['unittest']['restbase'] = "http://127.0.0.1:7231";
 
 ### Poolcounter
-$wmfAllServices['unittest']['poolcounter'] = array( '127.0.0.1' );
+$wmfAllServices['unittest']['poolcounter'] = [ '127.0.0.1' ];
 
 ### LockManager Redis
-$wmfAllServices['unittest']['redis_lock'] = array(
+$wmfAllServices['unittest']['redis_lock'] = [
 	'rdb1' => '127.0.0.1',
 	'rdb2' => '127.0.0.1',
 	'rdb3' => '127.0.0.1'
-);
+];
 
 # Make sure direct references to our datacenters work
 $wmfLocalServices = $wmfAllServices['eqiad'] = $wmfAllServices['codfw'] = $wmfAllServices['unittest'];
