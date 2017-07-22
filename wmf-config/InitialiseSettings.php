@@ -12774,6 +12774,7 @@ $wgConf->settings = [
 		'patroller' => [ 'patroller' ], // T137532
 		'rollbacker' => [ 'rollbacker' ], // T137532
 		'autoreviewer' => [ 'autoreviewer' ], // T137532
+		'flood' => [ 'flood' ], // T171379
 	],
 	'zhwikinews' => [ 'flood' => [ 'flood' ] ], // T54546
 ],
