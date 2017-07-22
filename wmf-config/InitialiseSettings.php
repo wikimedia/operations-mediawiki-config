@@ -14792,9 +14792,13 @@ $wgConf->settings = [
 // --------------- VisualEditor end ---------------
 
 // Whether to use jQuery 3.x or keep using the 1.x series.
-// Temporarily disabled during testing of the feature, 2017-04-13.
+// Temporarily disabled during testing of the feature, 2017-04-13 – T124742.
 'wgUsejQueryThree' => [
-	'default' => false, // T124742
+	'default' => false,
+
+	// group 0
+	'testwiki' => true,
+	'test2wiki' => true,
 ],
 
 // Whether to use OOUI to render the buttons on EditPage.php
