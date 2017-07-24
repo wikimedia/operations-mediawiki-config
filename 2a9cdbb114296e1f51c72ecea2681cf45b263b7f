@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e71af52_3aa5cab1",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-07-24T09:27:46Z",
+      "side": 1,
+      "message": "Does that mean that it\u0027ll work at wikitech (labswiki) or in the whole test wikis? It says \"realm\" so I\u0027m not sure here.",
+      "range": {
+        "startLine": 406,
+        "startChar": 0,
+        "endLine": 406,
+        "endChar": 27
+      },
+      "revId": "2a9cdbb114296e1f51c72ecea2681cf45b263b7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e71af52_1ab48ee3",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 408,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-07-24T09:27:46Z",
+      "side": 1,
+      "message": "For reference see: https://github.com/wikimedia/operations-mediawiki-config/blob/master/wmf-config/CommonSettings.php#L2733-L2749",
+      "range": {
+        "startLine": 408,
+        "startChar": 4,
+        "endLine": 408,
+        "endChar": 49
+      },
+      "revId": "2a9cdbb114296e1f51c72ecea2681cf45b263b7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e71af52_da96064f",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 411,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-07-24T09:27:46Z",
+      "side": 1,
+      "message": "This is the setting that allows sysops to select \u0027restricted\u0027 options (block, rangeblock \u0026 degroup) on abusefilters. Restricted options are to be configured per project and in this case only \u0027block\u0027 has been added; therefore \u0027rangeblock\u0027 and \u0027degroup\u0027 will not be made avalaible.",
+      "range": {
+        "startLine": 411,
+        "startChar": 1,
+        "endLine": 411,
+        "endChar": 69
+      },
+      "revId": "2a9cdbb114296e1f51c72ecea2681cf45b263b7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
