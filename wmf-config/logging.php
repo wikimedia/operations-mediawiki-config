@@ -71,7 +71,7 @@ $wmgMonologProcessors = [
 			 * reduce variance of messages that expand to include per-request
 			 * details such as session ids.
 			 */
-			return function( array $record ) {
+			return function ( array $record ) {
 				$nm = $record['message'];
 				if ( strpos( $nm, '<a href=' ) !== false ) {
 					// Remove documentation anchor tags

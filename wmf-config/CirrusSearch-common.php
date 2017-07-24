@@ -178,7 +178,7 @@ $wgCirrusSearchTextcatConfig = [
 	'numBoostedLangs' => 2,
 ];
 
-$wgHooks['CirrusSearchMappingConfig'][] = function( array &$config, $mappingConfigBuilder ) {
+$wgHooks['CirrusSearchMappingConfig'][] = function ( array &$config, $mappingConfigBuilder ) {
 	$config['page']['properties']['popularity_score'] = [
 		'type' => 'double',
 	];

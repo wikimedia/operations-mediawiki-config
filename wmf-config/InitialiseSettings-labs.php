@@ -27,7 +27,7 @@ function wmfLabsOverrideSettings() {
 	// Set configuration string placeholder 'variant' to 'beta'.
 	// Add a wikitag of 'beta' that can be used to merge beta specific and
 	// default settings by using `'+beta' => array(...),`
-	$wgConf->siteParamsCallback = function( $conf, $wiki ) {
+	$wgConf->siteParamsCallback = function ( $conf, $wiki ) {
 		$wikiTags = [ 'beta' ];
 
 		$betaDblistTags = [ 'flow_only_labs' ];

@@ -19,7 +19,7 @@ $wgMobileFrontendLogo = $wgLogo;
 $wgMFForceSecureLogin = false;
 
 // T49647
-$wgHooks['EnterMobileMode'][] = function() {
+$wgHooks['EnterMobileMode'][] = function () {
 	global $wgCentralAuthCookieDomain, $wgHooks;
 	$domainRegexp = '/(?<!\.m)\.wikimedia\.beta\.wmflabs\.org$/';
 	$mobileDomain = '.m.wikimedia.beta.wmflabs.org';
@@ -33,4 +33,3 @@ $wgHooks['EnterMobileMode'][] = function() {
 		}
 	};
 };
-

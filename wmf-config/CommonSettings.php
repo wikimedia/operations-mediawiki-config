@@ -297,7 +297,7 @@ $wgLocalisationCacheConf['storeDirectory'] = "$IP/cache/l10n";
 $wgLocalisationCacheConf['manualRecache'] = true;
 
 // T29320: skip MessageBlobStore::clear(); handle via refreshMessageBlobs.php instead
-$wgHooks['LocalisationCacheRecache'][] = function( $cache, $code, &$allData, &$purgeBlobs = true ) {
+$wgHooks['LocalisationCacheRecache'][] = function ( $cache, $code, &$allData, &$purgeBlobs = true ) {
 	$purgeBlobs = false;
 	return true;
 };
@@ -406,7 +406,7 @@ $wgPasswordPolicy['policies']['default']['PasswordCannotBePopular'] = 100;
 
 // Enforce password policy when users login on other wikis
 if ( $wmgUseCentralAuth ) {
-	$wgHooks['PasswordPoliciesForUser'][] = function( User $user, array &$effectivePolicy ) {
+	$wgHooks['PasswordPoliciesForUser'][] = function ( User $user, array &$effectivePolicy ) {
 		$central = CentralAuthUser::getInstance( $user );
 		if ( !$central->exists() ) {
 			return true;
@@ -1034,7 +1034,7 @@ if ( $wmgUseSecurePoll ) {
 
 	$wgSecurePollUseNamespace = $wmgSecurePollUseNamespace;
 	$wgSecurePollScript = 'auth-api.php';
-	$wgHooks['SecurePoll_JumpUrl'][] = function( $page, &$url ) {
+	$wgHooks['SecurePoll_JumpUrl'][] = function ( $page, &$url ) {
 		global $site, $lang;
 
 		$url = wfAppendQuery( $url, [ 'site' => $site, 'lang' => $lang ] );
@@ -1128,7 +1128,7 @@ $wgEnableUserEmail = true;
 $wgNoFollowLinks = true; // In case the MediaWiki default changed, T44594
 
 # XFF log for vandal tracking
-$wgExtensionFunctions[] = function() {
+$wgExtensionFunctions[] = function () {
 	global $wmfUdp2logDest, $wgRequest;
 	if (
 		isset( $_SERVER['REQUEST_METHOD'] )
@@ -1156,7 +1156,7 @@ if ( $wgDBname === 'enwiki' ) {
 }
 
 if ( $wmgUseFooterContactLink ) {
-	$wgHooks['SkinTemplateOutputPageBeforeExec'][] = function( $sk, &$tpl ) {
+	$wgHooks['SkinTemplateOutputPageBeforeExec'][] = function ( $sk, &$tpl ) {
 		$contactLink = Html::element( 'a', [ 'href' => $sk->msg( 'contact-url' )->escaped() ],
 			$sk->msg( 'contact' )->text() );
 		$tpl->set( 'contact', $contactLink );
@@ -1165,7 +1165,7 @@ if ( $wmgUseFooterContactLink ) {
 	};
 }
 if ( $wmgUseFooterCodeOfConductLink ) {
-	$wgHooks['SkinTemplateOutputPageBeforeExec'][] = function( $sk, &$tpl ) {
+	$wgHooks['SkinTemplateOutputPageBeforeExec'][] = function ( $sk, &$tpl ) {
 		$contactLink = Html::element( 'a', [ 'href' => $sk->msg( 'wm-codeofconduct-url' )->escaped() ],
 			$sk->msg( 'wm-codeofconduct' )->text() );
 		$tpl->set( 'wm-codeofconduct', $contactLink );
@@ -1555,7 +1555,7 @@ function wfGetPrivilegedGroups( $username, $user ) {
 }
 
 // log failed login attempts
-$wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $username ) {
+$wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $username ) {
 	$guessed = false;
 	if ( !$user && $username ) {
 		$user = User::newFromName( $username );
@@ -1582,7 +1582,7 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $u
 	}
 };
 // T150554 log successful attempts too
-$wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $username ) {
+$wgHooks['AuthManagerLoginAuthenticateAudit'][] = function ( $response, $user, $username ) {
 	if ( $response->status === \MediaWiki\Auth\AuthenticationResponse::PASS ) {
 		global $wgRequest;
 		$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
@@ -1602,7 +1602,7 @@ $wgHooks['AuthManagerLoginAuthenticateAudit'][] = function( $response, $user, $u
 	}
 };
 
-$wgHooks['PrefsEmailAudit'][] = function( $user, $old, $new ) {
+$wgHooks['PrefsEmailAudit'][] = function ( $user, $old, $new ) {
 	if ( $user->isAllowed( 'delete' ) ) {
 		global $wgRequest;
 		$headers = function_exists( 'apache_request_headers' ) ? apache_request_headers() : [];
@@ -1621,7 +1621,7 @@ $wgHooks['PrefsEmailAudit'][] = function( $user, $old, $new ) {
 };
 
 // log sysop password changes
-$wgHooks['ChangeAuthenticationDataAudit'][] = function( $req, $status ) {
+$wgHooks['ChangeAuthenticationDataAudit'][] = function ( $req, $status ) {
 	$user = User::newFromName( $req->username );
 	$status = Status::wrap( $status );
 	if ( $user->isAllowed( 'delete' ) && $req instanceof \MediaWiki\Auth\PasswordAuthenticationRequest ) {
@@ -1756,7 +1756,7 @@ if ( $wgDBname === 'enwiki' ) {
 	// Please don't interfere with our hundreds of wikis ability to manage themselves.
 	// Only use this shitty hack for enwiki. Thanks.
 	// -- brion 2008-04-10
-	$wgHooks['getUserPermissionsErrorsExpensive'][] = function( &$title, &$user, $action, &$result ) {
+	$wgHooks['getUserPermissionsErrorsExpensive'][] = function ( &$title, &$user, $action, &$result ) {
 		if ( $action !== 'delete' && $action !== 'move' ) {
 			return true;
 		}
@@ -2481,7 +2481,7 @@ if ( $wmgUseTranslate ) {
 				'cutoff' => 0.65,
 				'use_wikimedia_extra' => true,
 				'config' => [
-					'servers' => array_map( function( $host ) {
+					'servers' => array_map( function ( $host ) {
 						return [
 							'host' => $host,
 							'port' => 9243,
@@ -2917,7 +2917,7 @@ if ( $wmgUseRelatedArticles ) {
 }
 
 // Workaround for T142663 - override flat arrays
-$wgExtensionFunctions[] = function() {
+$wgExtensionFunctions[] = function () {
 	global $wmgRelatedArticlesFooterWhitelistedSkins, $wgRelatedArticlesFooterWhitelistedSkins;
 
 	$wgRelatedArticlesFooterWhitelistedSkins = $wmgRelatedArticlesFooterWhitelistedSkins;
@@ -3310,7 +3310,7 @@ if ( $wmgUseOAuth ) {
 		$wgOAuthGroupsToNotify = [ 'oauthadmin' ];
 	}
 
-	$wgHooks['OAuthReplaceMessage'][] = function( &$msgKey ) {
+	$wgHooks['OAuthReplaceMessage'][] = function ( &$msgKey ) {
 		if ( $msgKey === 'mwoauth-form-privacypolicy-link' ) {
 			$msgKey = 'wikimedia-oauth-privacy-link';
 		}
@@ -3426,7 +3426,7 @@ if ( $wmgAllowLabsAnonEdits ) {
 }
 
 // On Special:Version, link to useful release notes
-$wgHooks['SpecialVersionVersionUrl'][] = function( $wgVersion, &$versionUrl ) {
+$wgHooks['SpecialVersionVersionUrl'][] = function ( $wgVersion, &$versionUrl ) {
 	$matches = [];
 	preg_match( "/^(\d+\.\d+)(?:\.0-)?wmf\.?(\d+)?$/", $wgVersion, $matches );
 	if ( $matches ) {

@@ -27,7 +27,7 @@ if ( !defined( 'HHVM_VERSION' ) ) {
  */
 define( 'E_FATAL', E_ERROR | ( 1 << 24 ) );
 
-set_error_handler( function( $errno, $message, $file, $line, $context, /* nonstandard! */ $backtrace ) {
+set_error_handler( function ( $errno, $message, $file, $line, $context, /* nonstandard! */ $backtrace ) {
 	syslog( LOG_ERR, json_encode( [
 		'message'   => $message,
 		'file'      => $file,

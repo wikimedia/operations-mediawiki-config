@@ -48,4 +48,3 @@ class DBList {
 		return in_array( $dbname, self::$wiki_projects );
 	}
 }
-

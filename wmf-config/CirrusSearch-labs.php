@@ -57,4 +57,3 @@ $wgCirrusSearchReplicas = '0-1';
 
 # Quirks for elasticsearch >5 <5.3
 $wgCirrusSearchElasticQuirks['query_string_max_determinized_states'] = true;
-

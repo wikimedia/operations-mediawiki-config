@@ -36,7 +36,7 @@ if ( $wmgMobileFrontend ) {
 		$wgGroupPermissions['sysop']['jsonconfig-flush'] = true;
 	}
 
-	$wgHooks['EnterMobileMode'][] = function() {
+	$wgHooks['EnterMobileMode'][] = function () {
 		global $wgCentralAuthCookieDomain, $wgHooks, $wgIncludeLegacyJavaScript;
 
 		// Disable loading of legacy wikibits in the mobile web experience
