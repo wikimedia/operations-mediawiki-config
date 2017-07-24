@@ -405,6 +405,13 @@ switch ( $wgDBname ) {
 
 if ( $wmfRealm === 'labs' ) {
 	// T103060
+	// contentadmin is defined in CommonSettings.php
+	// == 'sysop' minus 'editinterface'-related privs
+	// thus not duplicating if it works as it is
+	$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
+	$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
+	$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
+	$wgAbuseFilterProfile = true; // monitor condition consumption
 	$wgAbuseFilterActions['block'] = true;
 	$wgAbuseFilterBlockDuration = 'indefinite';
 	$wgAbuseFilterAnonBlockDuration = '48 hours';
