@@ -815,6 +815,11 @@ if ( $wmgUseLabeledSectionTransclusion ) {
 if ( $wmgUseSpamBlacklist ) {
 	wfLoadExtension( 'SpamBlacklist' );
 	$wgBlacklistSettings = [
+		'email' => [
+			'files' => [
+				'https://meta.wikimedia.org/w/index.php?title=MediaWiki:Email-blacklist&action=raw&sb_ver=1'
+			],
+		],
 		'spam' => [
 			'files' => [
 				'https://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1'
