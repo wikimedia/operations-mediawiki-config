@@ -18556,7 +18556,9 @@ $wgConf->settings = [
 	'nlwiki' => true, // T139432
 	'plwiki' => true, // T140005
 	'ptwiki' => true, // T139692
+	'rowiki' => true, // T170723
 	'ruwiki' => true, // T139541
+	'sqwiki' => true, // T170723
 	'trwiki' => true, // T139992
 
 	'wikidatawiki' => true, // T130212
@@ -18734,6 +18736,32 @@ $wgConf->settings = [
 		'goodfaith' => [
 			// likelygood, maybebad, likelybad use defaults
 			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.9)' ],
+		],
+	],
+	'sqwiki' => [
+		'damaging' => [
+			// HACK: use recall-based likelygood threshold because it has a higher precision than even precision=0.995
+			'likelygood' => [ 'min' => 0, 'max' => 'filter_rate_at_recall(min_recall=0.9)' ],
+			// maybebad, likelybad, verylikelybad use defaults
+		],
+		'goodfaith' => [
+			// HACK: use recall-based likelygood threshold because it has a higher precision than even precision=0.995
+			'likelygood' => [ 'min' => 'filter_rate_at_recall(min_recall=0.9)', 'max' => 1 ],
+			'maybebad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.15)' ],
+			'likelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.45)' ],
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.9)' ],
+		],
+	],
+	'rowiki' => [
+		'damaging' => [
+			// likelygood, maybebad, likelybad use defaults
+			'verylikelybad' => [ 'min' => 'recall_at_precision(min_precision=0.75)' ],
+		],
+		'goodfaith' => [
+			// HACK: use recall-based likelygood threshold because it has a higher precision than even precision=0.995
+			'likelygood' => [ 'min' => 'filter_rate_at_recall(min_recall=0.9)', 'max' => 1 ],
+			// maybebad, likelybad use defaults
+			'verylikelybad' => [ 'min' => 0, 'max' => 'recall_at_precision(min_precision=0.75)' ],
 		],
 	],
 ],
