@@ -32,7 +32,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 		&& is_writable( '/tmp/xhprof' )
 	) {
 		xhprof_enable();
-		register_shutdown_function( function() {
+		register_shutdown_function( function () {
 			$prof = xhprof_disable();
 			$titleFormat = "%-75s %6s %13s %13s %13s\n";
 			$format = "%-75s %6d %13.3f %13.3f %13.3f%%\n";
@@ -41,7 +41,7 @@ if ( ini_get( 'hhvm.stats.enable_hot_profiler' ) ) {
 				return;
 			}
 			$total = $prof['main()']['wt'];
-			uksort( $prof, function( $a, $b ) use ( $prof ) {
+			uksort( $prof, function ( $a, $b ) use ( $prof ) {
 				if ( $prof[$a]['wt'] < $prof[$b]['wt'] ) {
 					return 1;
 				} elseif ( $prof[$a]['wt'] > $prof[$b]['wt'] ) {
