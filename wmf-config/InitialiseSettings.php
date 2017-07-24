@@ -13494,7 +13494,7 @@ $wgConf->settings = [
 	// * See $wmgUsePopups above for the definition of "stage 0".
 	'itwiki' => 0.01,
 	'huwiki' => 0.01,
-	'itwiki' => 0.01,
+	'ruwiki' => 0.01,
 ],
 
 'wgPopupsStatsvSamplingRate' => [
