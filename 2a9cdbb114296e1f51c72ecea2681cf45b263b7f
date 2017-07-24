@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "6e71af52_13b79982",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2017-07-24T17:58:10Z",
+      "side": 1,
+      "message": "Confusingly, no. This flag means things running inside Cloud VPS (e.g. Beta Cluster in the deployment-prep project). The setting comes from multiversion/MWRealm.php based on the /etc/wikimedia-cluster file that is provisioned by Puppet on each host. Wikitech and labtestwikitech are both operated from servers where $wmfRealm \u003d \u0027production\u0027.\n\nI think these new settings actually belong in the $wgDBname block above using the (horrible) dbname \u0027labswiki\u0027 which means wikitech.\n\nSee also: [[wikitech:Labs labs labs]]",
+      "parentUuid": "6e71af52_3aa5cab1",
+      "range": {
+        "startLine": 406,
+        "startChar": 0,
+        "endLine": 406,
+        "endChar": 27
+      },
+      "revId": "2a9cdbb114296e1f51c72ecea2681cf45b263b7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e71af52_1ab48ee3",
         "filename": "wmf-config/abusefilter.php",
         "patchSetId": 2
