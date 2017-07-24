@@ -271,6 +271,14 @@ switch ( $wgDBname ) {
 		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
 		$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
 		break;
+	case 'labswiki': // wikitech.wikimedia.org
+		$wgGroupPermissions['sysop']['abusefilter-modify-restricted'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-revert'] = true;
+		$wgGroupPermissions['sysop']['abusefilter-view-private'] = true;
+		$wgAbuseFilterActions['block'] = true;
+		$wgAbuseFilterBlockDuration = 'indefinite';
+		$wgAbuseFilterAnonBlockDuration = '31 hours';
+		break;
 	case 'ltwiki':
 		$wgGroupPermissions['*']['abusefilter-log-detail'] = true;
 		$wgGroupPermissions['abusefilter']['abusefilter-modify'] = true;
