@@ -18571,21 +18571,6 @@ $wgConf->settings = [
 		'wp10' => false,
 	],
 ],
-'wgOresDamagingThresholds' => [
-	'default' => [ 'hard' => 0.5, 'soft' => 0.7 ],
-	'fawiki' => [ 'hard' => 0.07, 'soft' => 0.37, 'softest' => 0.9 ], // T130211
-	'wikidatawiki' => [ 'hard' => 0.92, 'soft' => 0.97, 'softest' => 0.99 ], // T130212
-	'nlwiki' => [ 'hard' => 0.39, 'soft' => 0.75, 'softest' => 0.95 ], // T139432
-	'ruwiki' => [ 'hard' => 0.50, 'soft' => 0.73, 'softest' => 0.95 ], // T139541
-	'ptwiki' => [ 'hard' => 0.24, 'soft' => 0.57, 'softest' => 0.94 ], // T139692
-	'trwiki' => [ 'hard' => 0.20, 'soft' => 0.58, 'softest' => 0.92 ], // T139992
-	'plwiki' => [ 'hard' => 0.19, 'soft' => 0.41, 'softest' => 0.92 ], // T140005
-	'enwiki' => [ 'hard' => 0.17, 'soft' => 0.49, 'softest' => 0.96 ], // T140003
-	'cswiki' => [ 'hard' => 0.45, 'soft' => 0.8, 'softest' => 0.88 ], // T151611
-	'etwiki' => [ 'hard' => 0.34, 'soft' => 0.62, 'softest' => 0.95 ], // T159609
-	'hewiki' => [ 'hard' => 0.07, 'soft' => 0.50, 'softest' => 0.94 ], // T161621
-	'frwiki' => [ 'hard' => 0.18, 'soft' => 0.40, 'softest' => 0.51 ], // T165044
-],
 'wgOresFiltersThresholds' => [
 	'default' => [],
 	'enwiki' => [
