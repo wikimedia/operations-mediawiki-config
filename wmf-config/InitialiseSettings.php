@@ -18740,7 +18740,7 @@ $wgConf->settings = [
 	'rowiki' => [
 		'damaging' => [
 			// likelygood, maybebad, likelybad use defaults
-			'verylikelybad' => [ 'min' => 'recall_at_precision(min_precision=0.75)' ],
+			'verylikelybad' => [ 'min' => 'recall_at_precision(min_precision=0.75)', 'max' => 1 ],
 		],
 		'goodfaith' => [
 			// HACK: use recall-based likelygood threshold because it has a higher precision than even precision=0.995
