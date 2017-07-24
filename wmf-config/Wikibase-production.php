@@ -25,7 +25,7 @@ if ( $wmgUseWikibaseRepo ) {
 			'P185',
 		];
 		$wgWBRepoSettings['writeFullEntityIdColumn'] = true;
-		$wgWBRepoSettings['readFullEntityIdColumn'] = false;
+		$wgWBRepoSettings['readFullEntityIdColumn'] = true;
 
 		$wgWBRepoSettings['statementSections']['property'] = [
 			'statements' => null,
