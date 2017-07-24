@@ -70,7 +70,7 @@ class WgConfTestCase extends PHPUnit_Framework_TestCase {
 	 * the only way to achieve that is when leaving the data provider scope.
 	 */
 	function __destruct() {
-		if ( ! empty( $this->globals ) or ! empty( $this->globalsToUnset ) ) {
+		if ( !empty( $this->globals ) || !empty( $this->globalsToUnset ) ) {
 			throw new Exception(
 				__CLASS__ . ": setGlobals() used without restoreGlobals().\n" .
 				"Mangled globals:\n" . var_export( $this->globals, true ) .

@@ -182,7 +182,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['siteGroup'] = $wmgWikibaseSiteGroup;
 	$wgWBClientSettings['otherProjectsLinksByDefault'] = true;
 
-	$wgWBClientSettings['excludeNamespaces'] = function() {
+	$wgWBClientSettings['excludeNamespaces'] = function () {
 		global $wgDBname;
 
 		// @fixme 102 is LiquidThread comments on wikinews and elsewhere?

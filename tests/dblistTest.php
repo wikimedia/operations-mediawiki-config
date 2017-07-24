@@ -120,4 +120,3 @@ class DbListTests extends PHPUnit_Framework_TestCase {
 		$this->assertEquals( $exprDbs, $expectedDbs );
 	}
 }
-

@@ -42,7 +42,7 @@ $wmgThrottlingExceptions[] = [ // T171146
 /**
  * Helper to easily add a throttling request.
  */
-$wgExtensionFunctions[] = function() {
+$wgExtensionFunctions[] = function () {
 	global $wmgThrottlingExceptions, $wgDBname, $wgRequest;
 
 	foreach ( $wmgThrottlingExceptions as $options ) {
