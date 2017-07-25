@@ -49,6 +49,30 @@
     },
     {
       "key": {
+        "uuid": "6e71af52_1ad565ba",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 406,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-07-25T09:42:37Z",
+      "side": 1,
+      "message": "\u003e Confusingly, no [...].\n\nNoted.\n\n \u003e I think these new settings actually belong in the $wgDBname block\n \u003e above using the (horrible) dbname \u0027labswiki\u0027 which means wikitech.\n\nI\u0027ve filed T171570 for requesting a DB rename. Will not happen soon but something that eventually should be done I guess.\n\nWill work on fixing this. Thanks for the quick and detailed review.",
+      "parentUuid": "6e71af52_13b79982",
+      "range": {
+        "startLine": 406,
+        "startChar": 0,
+        "endLine": 406,
+        "endChar": 27
+      },
+      "revId": "2a9cdbb114296e1f51c72ecea2681cf45b263b7f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6e71af52_1ab48ee3",
         "filename": "wmf-config/abusefilter.php",
         "patchSetId": 2
