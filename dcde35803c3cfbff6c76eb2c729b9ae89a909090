@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e71af52_3a9b811d",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-07-25T09:49:01Z",
+      "side": 1,
+      "message": "As I\u0027ve said previously, I hope that given the config at CommonSettings.php, contentadmin inherits these as well. If they do not, we can simply duplicate the entries and add [\u0027contentadmin\u0027] here.",
+      "range": {
+        "startLine": 275,
+        "startChar": 0,
+        "endLine": 277,
+        "endChar": 66
+      },
+      "revId": "dcde35803c3cfbff6c76eb2c729b9ae89a909090",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
