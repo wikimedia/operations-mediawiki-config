@@ -22,6 +22,30 @@
       "revId": "dcde35803c3cfbff6c76eb2c729b9ae89a909090",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "6e71af52_8000046f",
+        "filename": "wmf-config/abusefilter.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 277,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2017-07-25T15:20:57Z",
+      "side": 1,
+      "message": "This file loads before the block in CommonSettings.php where the rights of contentadmin are inherited from sysop for labswiki/labtestwiki, so I think it will work as you hope.",
+      "parentUuid": "6e71af52_3a9b811d",
+      "range": {
+        "startLine": 275,
+        "startChar": 0,
+        "endLine": 277,
+        "endChar": 66
+      },
+      "revId": "dcde35803c3cfbff6c76eb2c729b9ae89a909090",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
