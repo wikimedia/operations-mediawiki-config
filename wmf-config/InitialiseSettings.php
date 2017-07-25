@@ -902,6 +902,7 @@ $wgConf->settings = [
 	'cswikiquote' => '/static/images/project-logos/cswikiquote.png',
 	'dewikiquote' => '/static/images/project-logos/dewikiquote.png',
 	'elwikiquote' => '/static/images/project-logos/elwikiquote.png',
+	'eswikiquote' => '/static/images/project-logos/eswikiquote.png',
 	'eowikiquote' => '/static/images/project-logos/eowikiquote.png',  // T45879
 	'etwikiquote' => '/static/images/project-logos/etwikiquote.png',
 	'fawikiquote' => '/static/images/project-logos/fawikiquote.png',
@@ -1038,6 +1039,7 @@ $wgConf->settings = [
 	'dewikisource' => '/static/images/project-logos/dewikisource.png',
 	'elwikisource' => '/static/images/project-logos/elwikisource.png',
 	'eowikisource' => '/static/images/project-logos/eowikisource.png',
+	'eswikisource' => '/static/images/project-logos/eswikisource.png',
 	'etwikisource' => '/static/images/project-logos/etwikisource.png',
 	'fawikisource' => '/static/images/project-logos/fawikisource.png',
 	'fiwikisource' => '/static/images/project-logos/fiwikisource.png',  // T54019
@@ -1097,12 +1099,13 @@ $wgConf->settings = [
 
 	// Wikivoyage
 	'elwikivoyage' => '/static/images/project-logos/elwikivoyage.png',
-	'fawikivoyage' => '/static/images/project-logos/fawikivoyage.png',  // T73382
-	'fiwikivoyage' => '/static/images/project-logos/fiwikivoyage.png',  // T151570
+	'eswikivoyage' => '/static/images/project-logos/eswikivoyage.png', // T170604
+	'fawikivoyage' => '/static/images/project-logos/fawikivoyage.png', // T73382
+	'fiwikivoyage' => '/static/images/project-logos/fiwikivoyage.png', // T151570
 	'hewikivoyage' => '/static/images/project-logos/hewikivoyage.png',
 	'plwikivoyage' => '/static/images/project-logos/plwikivoyage.png',
-	'ukwikivoyage' => '/static/images/project-logos/ukwikivoyage.png',  // T110370
-	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage.png',  // T61077
+	'ukwikivoyage' => '/static/images/project-logos/ukwikivoyage.png', // T110370
+	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage.png', // T61077
 
 	// Chapter wikis
 	'arwikimedia' => '/static/images/project-logos/arwikimedia.png',
@@ -1587,6 +1590,7 @@ $wgConf->settings = [
 
 	# Wikivoyage
 	'cswikivoyage' => [ '1.5x' => '/static/images/project-logos/cswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/cswikivoyage-2x.png' ], // T150618
+	'eswikivoyage' => [ '1.5x' => '/static/images/project-logos/eswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/eswikivoyage-2x.png' ], // T170604
 	'fiwikivoyage' => [ '1.5x' => '/static/images/project-logos/fiwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/fiwikivoyage-2x.png' ],
 	'viwikivoyage' => [ '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ], // T151570
 
