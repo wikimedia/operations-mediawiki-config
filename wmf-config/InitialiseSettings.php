@@ -11527,7 +11527,10 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
-'wgEnotifMinorEdits' => [
+// This controls whether minor edits trigger
+// an email notification by default.
+// The feature is always available ($wgEnotifMinorEdits).
+'wmgEnotifMinorEditsUserDefault' => [
 	'default' => false,
 	'hiwiki' => true,
 	'huwiki' => true, // T125351
