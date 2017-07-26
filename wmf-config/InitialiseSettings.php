@@ -5167,6 +5167,7 @@ $wgConf->settings = [
 		'wbq_evaluation' => 'debug', // WikibaseQualityConstraints evaluation logs
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 		'wikibase-debug' => 'debug',
+		'WikibaseQualityConstraints' => 'debug',
 		'xenon' => 'debug',
 		'XMP' => 'warning', // T89532
 		'xff' => [ 'logstash' => false ],
