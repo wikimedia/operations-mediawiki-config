@@ -171,10 +171,13 @@ if ( !$globals ) {
 	require "$wmfConfigDir/InitialiseSettings.php";
 
 	$wikiTags = [];
+	# When updating list please run ./docroot/noc/createTxtFileSymlinks.sh
 	foreach ( [ 'private', 'fishbowl', 'special', 'closed', 'flow', 'flaggedrevs', 'small', 'medium',
 			'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-nondefault',
 			'commonsuploads', 'nonbetafeatures', 'group0', 'group1', 'group2', 'wikipedia', 'nonglobal',
-			'wikitech', 'nonecho', 'mobilemainpagelegacy', 'compact-language-links', 'nowikidatadescriptiontaglines',
+			'wikitech', 'nonecho', 'mobilemainpagelegacy', 'compact-language-links',
+			'wikipedia-cyrillic', 'wikipedia-e-acute', 'wikipedia-devanagari',
+			'nowikidatadescriptiontaglines',
 			'related-articles-footer-blacklisted-skins',
 			'top6-wikipedia'
 		] as $tag ) {
