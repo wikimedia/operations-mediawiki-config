@@ -2,6 +2,23 @@
   "comments": [
     {
       "key": {
+        "uuid": "4e7eab26_956946bf",
+        "filename": "scap/plugins/updateinterwikicache.py",
+        "patchSetId": 3
+      },
+      "lineNbr": 30,
+      "author": {
+        "id": 2321
+      },
+      "writtenOn": "2017-07-26T21:01:26Z",
+      "side": 1,
+      "message": "I think this needs to be:\n\n    with open(interwikifile, \u0027w\u0027) as outfile:\n\nWould explain why it\u0027s coming up empty.",
+      "revId": "76648003caee5255f384a8dccc470b335f872357",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "8e742343_cd4ef3c3",
         "filename": "scap/plugins/updateinterwikicache.py",
         "patchSetId": 3
