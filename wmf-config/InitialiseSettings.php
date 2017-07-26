@@ -15383,7 +15383,8 @@ $wgConf->settings = [
 	'cywiki' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-cy.svg',
 		'copyright-width' => 116,
-		'copyright-height' => 18,
+	
+  'copyright-height' => 18,
 	],
 	'frwiki' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
@@ -15392,7 +15393,8 @@ $wgConf->settings = [
 	],
 	'jawiki' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-ja.svg',
-		'copyright-width' => 116,
+		
+  'copyright-width' => 116,
 		'copyright-height' => 18,
 	],
 	'ruwiki' => [
@@ -15423,6 +15425,12 @@ $wgConf->settings = [
 	'srwiki' => [ // T165896
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-sr.svg',
 		'copyright-width' => 122,
+		'copyright-height' => 22,
+	],
+
+	'urwiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-ur.svg',
+		'copyright-width' => 79,
 		'copyright-height' => 22,
 	],
 	'wikivoyage' => [
