@@ -1338,6 +1338,10 @@ $wgInterwikiCache = include_once "$wmfConfigDir/interwiki.php";
 
 $wgEnotifUseJobQ = true;
 
+// Keep this true; it's just whether the feature is available at all, not the default
+// setting. T142727
+$wgEnotifMinorEdits = true;
+
 // Username spoofing / mixed-script / similarity check detection
 wfLoadExtension( 'AntiSpoof' );
 
@@ -1983,7 +1987,10 @@ if ( $wmgWatchlistDefault ) {
 } else {
 	$wgDefaultUserOptions['watchdefault'] = 0;
 }
+
+$wgDefaultUserOptions['enotifminoredits'] = $wmgEnotifMinorEditsUserDefault;
 $wgDefaultUserOptions['enotifwatchlistpages'] = 0;
+
 $wgDefaultUserOptions['usenewrc'] = 0;
 $wgDefaultUserOptions['extendwatchlist'] = 0;
 
