@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "6e71af52_539f53b9",
+        "filename": "phpcs.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 40,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-07-26T00:17:52Z",
+      "side": 1,
+      "message": "Then 0.10.1 and these can go away! :D",
+      "range": {
+        "startLine": 39,
+        "startChar": 0,
+        "endLine": 40,
+        "endChar": 43
+      },
+      "revId": "63d73a18f0a9dfa7f4f6e02648b2e33e15520261",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
