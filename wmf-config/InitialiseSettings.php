@@ -5163,7 +5163,6 @@ $wgConf->settings = [
 		'UpdateRepo' => 'debug',
 		'updateTranstagOnNullRevisions' => 'debug',
 		'upload' => 'debug',
-		'wbq_evaluation' => 'debug', // WikibaseQualityConstraints evaluation logs
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 		'wikibase-debug' => 'debug',
 		'WMDE' => 'debug', // addshore 30/06/2017 Deploy:T168631 Undeploy:T168635
