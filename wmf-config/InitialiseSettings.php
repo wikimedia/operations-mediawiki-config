@@ -15375,7 +15375,17 @@ $wgConf->settings = [
 		'copyright-width' => 79,
 		'copyright-height' => 22,
 	],
+	'arzwiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-ar.svg',
+		'copyright-width' => 79,
+		'copyright-height' => 22,
+	],
 	'bnwiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-bn.svg',
+		'copyright-width' => 92,
+		'copyright-height' => 21,
+	],
+	'bpywiki' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-bn.svg',
 		'copyright-width' => 92,
 		'copyright-height' => 21,
@@ -15385,7 +15395,7 @@ $wgConf->settings = [
 		'copyright-width' => 116,
 		'copyright-height' => 18,
 	],
-	'frwiki' => [
+	'wikipedia-e-acute' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
 		'copyright-width' => 116,
 		'copyright-height' => 18,
@@ -15395,7 +15405,7 @@ $wgConf->settings = [
 		'copyright-width' => 116,
 		'copyright-height' => 18,
 	],
-	'ruwiki' => [
+	'wikipedia-cyrillic' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-ru.svg',
 		'copyright-width' => 126,
 		'copyright-height' => 20,
@@ -15405,7 +15415,7 @@ $wgConf->settings = [
 		'copyright-width' => 95,
 		'copyright-height' => 18,
 	],
-	'hiwiki' => [
+	'wikipedia-devanagari' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-hi.svg',
 		'copyright-width' => 78,
 		'copyright-height' => 18,
