@@ -19053,6 +19053,7 @@ $wgConf->settings = [
 	'default' => true,
 	'wikipedia' => false,
 	'cawiki' => true,
+	'cswiki' => true, // T171588
 	'fiwiki' => true, // T151591
 	'frwiki' => true,
 	'hewiki' => true,
