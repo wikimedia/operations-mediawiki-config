@@ -1,7 +1,7 @@
 <?php
-require_once( __DIR__ . '/defines.php' );
-require_once( __DIR__ . '/MWRealm.php' );
-require_once( __DIR__ . '/vendor/autoload.php' );
+require_once __DIR__ . '/defines.php';
+require_once __DIR__ . '/MWRealm.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 /**
  * Class to handle basic information related to what
@@ -33,8 +33,10 @@ class MWMultiVersion {
 	 * @see getInstanceForWiki
 	 * @see getInstanceForUploadWiki
 	 */
-	private function __construct() {}
-	private function __clone() {}
+	private function __construct() {
+ }
+	private function __clone() {
+ }
 
 	/**
 	 * Create a multiversion object based on a dbname
@@ -120,8 +122,8 @@ class MWMultiVersion {
 	 * internal error.
 	 */
 	public static function destroySingleton() {
-		if( PHP_SAPI !== 'cli' ) {
-			self::error('Can not destroy singleton instance when used ' .
+		if ( PHP_SAPI !== 'cli' ) {
+			self::error( 'Can not destroy singleton instance when used ' .
 				'with non-CLI interface' );
 		}
 		self::$instance = null;
@@ -132,9 +134,9 @@ class MWMultiVersion {
 	 * @param string $serverName the ServerName for this wiki -- $_SERVER['SERVER_NAME']
 	 */
 	private function setSiteInfoForWiki( $serverName ) {
-		$matches = array();
+		$matches = [];
 
-		$staticMappings = array(
+		$staticMappings = [
 			// Production
 			'wikimediafoundation.org' => 'foundation',
 			'test.wikidata.org' => 'testwikidata',
@@ -150,7 +152,7 @@ class MWMultiVersion {
 			// Labs
 			'beta.wmflabs.org' => 'deployment',
 			'wikidata.beta.wmflabs.org' => 'wikidata',
-		);
+		];
 
 		$lang = null;
 		$site = "wikipedia";
@@ -181,10 +183,10 @@ class MWMultiVersion {
 			if ( $matches[2] !== 'wikimedia'
 				|| ( $matches[2] === 'wikimedia' && in_array(
 					$lang,
-					array(
+					[
 						'ar', 'bd', 'be', 'br', 'ca', 'cn', 'co', 'dk', 'ec', 'et', 'fi', 'il', 'mai', 'mk', 'mx', 'nl',
 						'noboard-chapters', 'no', 'nyc', 'nz', 'pa-us', 'pl', 'pt', 'rs', 'ru', 'se', 'tr', 'ua', 'uk', 've', 'wb'
-					)
+					]
 			) ) ) {
 				// wikimedia (non chapters) sites stay as wiki
 				$site = $matches[2];
@@ -299,7 +301,7 @@ class MWMultiVersion {
 			$phpFilename = MEDIAWIKI_DEPLOYMENT_DIR . '/wikiversions.php';
 		}
 
-		$wikiversions = include( $phpFilename );
+		$wikiversions = include $phpFilename;
 
 		if ( !is_array( $wikiversions ) ) {
 			self::error( "Unable to open $phpFilename.\n" );
@@ -362,7 +364,7 @@ class MWMultiVersion {
 		$msg = (string)$msg;
 		if ( PHP_SAPI !== 'cli' ) {
 			$msg = htmlspecialchars( $msg );
-			switch( $httpError ) {
+			switch ( $httpError ) {
 				case 400:
 					$httpMsg = 'Bad Request';
 					break;
@@ -417,7 +419,7 @@ class MWMultiVersion {
 		# Wiki doesn't exist yet?
 		if ( $multiVersion->isMissing() ) {
 			header( "Cache-control: no-cache" ); // same hack as CommonSettings.php
-			include( MEDIAWIKI_DEPLOYMENT_DIR . '/wmf-config/missing.php' );
+			include MEDIAWIKI_DEPLOYMENT_DIR . '/wmf-config/missing.php';
 			exit;
 		}
 

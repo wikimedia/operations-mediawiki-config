@@ -1,5 +1,5 @@
 <?php
-require_once( __DIR__ . '/defines.php' );
+require_once __DIR__ . '/defines.php';
 
 /**
  * Helper class for reading the wikiversions.json file
@@ -25,7 +25,7 @@ class MWWikiversions {
 
 	/**
 	 * @param string $path Path to wikiversions.json
-	 * @param array $wikis Array of wikis array( dbname => version )
+	 * @param array $wikis Array of wikis [ dbname => version ]
 	 */
 	public static function writeWikiVersionsFile( $path, $wikis ) {
 		// 448 == JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE,
@@ -79,7 +79,7 @@ class MWWikiversions {
 			throw new Exception( __METHOD__ . "(): unable to read $dblist.\n" );
 		}
 
-		$dbs = array();
+		$dbs = [];
 		foreach ( $lines as $line ) {
 			// Strip comments ('#' to end-of-line) and trim whitespace.
 			$line = trim( substr( $line, 0, strcspn( $line, '#' ) ) );
@@ -100,6 +100,6 @@ class MWWikiversions {
 	 * @return array List of wiki versions
 	 */
 	public static function getAvailableBranchDirs() {
-		return glob( MEDIAWIKI_DEPLOYMENT_DIR . '/php-*', GLOB_ONLYDIR ) ?: array();
+		return glob( MEDIAWIKI_DEPLOYMENT_DIR . '/php-*', GLOB_ONLYDIR ) ?: [];
 	}
 }

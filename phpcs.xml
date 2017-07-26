@@ -38,7 +38,5 @@
 
 	<exclude-pattern>\.git/</exclude-pattern>
 	<exclude-pattern>vendor/</exclude-pattern>
-	<exclude-pattern>multiversion/</exclude-pattern>
 	<exclude-pattern>wmf-config/PrivateSettings.php</exclude-pattern>
-	<exclude-pattern>docroot/foundation</exclude-pattern>
 </ruleset>
