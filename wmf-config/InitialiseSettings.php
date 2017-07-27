@@ -19058,6 +19058,14 @@ $wgConf->settings = [
 	'votewiki' => false,
 ],
 
+'wmgDebugJobQueueEventBus' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'testwikidatawiki' => true,
+	'mediawikiwiki' => true,
+],
+
 'wmgUseCapiunto' => [
 	'default' => false,
 	'testwiki' => true,
