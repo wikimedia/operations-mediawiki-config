@@ -27,7 +27,7 @@ function wmfRedisConfigByPartition( $base, $partitions ) {
 	return $result;
 }
 
-$wgJobTypeConf['default'] = [
+$jobQueueFederatedConfig = [
 	'class' => 'JobQueueFederated',
 	'configByPartition' => wmfRedisConfigByPartition(
 		$wmgRedisQueueBaseConfig,
@@ -40,6 +40,21 @@ $wgJobTypeConf['default'] = [
 	],
 	'maxPartitionsTry' => 5 // always covers 2+ servers
 ];
+
+if ( $wmgUseEventBus && $wmgDebugJobQueueEventBus ) {
+	$wgJobTypeConf['default'] = [
+		'class' => 'JobQueueSecondTestQueue',
+		'mainqueue' => $jobQueueFederatedConfig,
+		'debugqueue' => [
+			'class' => 'JobQueueEventBus'
+		]
+	];
+} else {
+	$wgJobTypeConf['default'] = $jobQueueFederatedConfig;
+}
+
+unset( $jobQueueFederatedConfig );
+
 // Note: on server failure, this should be changed to any other redis server
 $wgJobQueueAggregator = [
 	'class' => 'JobQueueAggregatorRedis',
