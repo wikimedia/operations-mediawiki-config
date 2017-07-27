@@ -19407,11 +19407,6 @@ $wgConf->settings = [
 	'commonswiki' => [ NS_FILE ],
 ],
 
-// Temporarily enable until 1.30.0-wmf.12 rolls out -RK
-'wgStructuredChangeFiltersEnableExperimentalViews' => [
-	'default' => true,
-],
-
 'wmgUseTimeless' => [
 	'default' => false,
 	'testwiki' => true,
