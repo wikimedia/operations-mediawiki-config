@@ -9962,7 +9962,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'rollbacker' ],
 	],
 	'+incubatorwiki' => [
-		'bureaucrat' => [ 'test-sysop', 'translator', 'import', 'translationadmin' ],
+		'bureaucrat' => [ 'accountcreator', 'import', 'test-sysop', 'translationadmin', 'translator' ],
 	],
 	'+itwiki' => [
 		'bureaucrat' => [ 'rollbacker' ],
@@ -10708,7 +10708,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'rollbacker' ],
 	],
 	'+incubatorwiki' => [
-		'bureaucrat' => [ 'test-sysop', 'translator', 'import', 'translationadmin' ],
+		'bureaucrat' => [ 'accountcreator', 'import', 'test-sysop', 'translationadmin', 'translator' ],
 	],
 	'+itwiki' => [
 		'bureaucrat' => [ 'rollbacker', 'autopatrolled', 'mover' ], // T55913, T102770
@@ -11349,7 +11349,7 @@ $wgConf->settings = [
 	'pflwiki' => [ 'de', 'fr', 'als', 'pdc', 'en' ], // T27996
 	'ptwikisource' => [ 'w', 'b' ],
 	'plwiki' => [ 's', 'b', 'q', 'n', 'wikt' ], // T10546, T22996, T23506
-	'plwikibooks' => [ 'w', 's' ], # bug 8546
+	'plwikibooks' => [ 'w', 's' ], # bug 8546
 	'plwikisource' => [ 'w', 'b', 'q', 'n', 'wikt', 'mul', 'de', 'en', 'es', 'fr', 'it', 'pt', 'sv' ], // T129015
 	'plwiktionary' => [ 'w' ], // T12374
 	'pntwiki' => [ 'en', 'el', 'elwikiversity', 'incubator' ],
@@ -11527,7 +11527,10 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
-'wgEnotifMinorEdits' => [
+// This controls whether minor edits trigger
+// an email notification by default.
+// The feature is always available ($wgEnotifMinorEdits).
+'wmgEnotifMinorEditsUserDefault' => [
 	'default' => false,
 	'hiwiki' => true,
 	'huwiki' => true, // T125351
@@ -13430,7 +13433,7 @@ $wgConf->settings = [
 'wgBetaFeaturesWhitelist' => [
 	'default' => [
 		'visualeditor-enable',               // [Editing] On-going (special permission) – VisualEditor
-		'beta-feature-flow-user-talk-page',  // [Editing] On-going (special permission) – Flow opt-in
+		'beta-feature-flow-user-talk-page',  // [Editing] On-going (special permission) – Flow opt-in
 		'uls-compact-links',                 // [Editing] 2017-11-20 – Compact language links
 		'popups',                            // [Reading] 2017-11-05 – Page Previews
 		'cx',                                // [Editing] 2017-11-20 - ContentTranslation
@@ -15360,7 +15363,7 @@ $wgConf->settings = [
 
 'wgMinervaCustomLogos' => [
 	'default' => [],
-	'wikipedia' => [
+	'wikipedia-english' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
 		'copyright-width' => 116,
 		'copyright-height' => 18,
@@ -15375,7 +15378,22 @@ $wgConf->settings = [
 		'copyright-width' => 79,
 		'copyright-height' => 22,
 	],
+  	'atjwiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-atj.svg',
+		'copyright-width' => 79,
+		'copyright-height' => 22,
+	],
+	'arzwiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-ar.svg',
+		'copyright-width' => 79,
+		'copyright-height' => 22,
+	],
 	'bnwiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-bn.svg',
+		'copyright-width' => 92,
+		'copyright-height' => 21,
+	],
+	'bpywiki' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-bn.svg',
 		'copyright-width' => 92,
 		'copyright-height' => 21,
@@ -15385,7 +15403,7 @@ $wgConf->settings = [
 		'copyright-width' => 116,
 		'copyright-height' => 18,
 	],
-	'frwiki' => [
+	'wikipedia-e-acute' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-fr.svg',
 		'copyright-width' => 116,
 		'copyright-height' => 18,
@@ -15395,7 +15413,7 @@ $wgConf->settings = [
 		'copyright-width' => 116,
 		'copyright-height' => 18,
 	],
-	'ruwiki' => [
+	'wikipedia-cyrillic' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-ru.svg',
 		'copyright-width' => 126,
 		'copyright-height' => 20,
@@ -15405,7 +15423,7 @@ $wgConf->settings = [
 		'copyright-width' => 95,
 		'copyright-height' => 18,
 	],
-	'hiwiki' => [
+	'wikipedia-devanagari' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-hi.svg',
 		'copyright-width' => 78,
 		'copyright-height' => 18,
@@ -16862,6 +16880,11 @@ $wgConf->settings = [
 ],
 'wmgFeaturedFeedsOverrides' => [
 	'default' => [],
+	'dewiki' => [
+		'featured' => [
+			'limit' => 7, // T159664
+		],
+	],
 	'fawiki' => [ // T57884
 		'dyk' => [
 			'frequency' => 'weekly',
@@ -18965,6 +18988,7 @@ $wgConf->settings = [
 	'nlwikivoyage' => false,
 	'svwikivoyage' => false,
 	'cawiki' => true, // T114392
+	'euwiki' => true, // T171763
 ],
 
 'wgWPBSkinBlacklist' => [
@@ -19188,6 +19212,11 @@ $wgConf->settings = [
 	'mediawikiwiki' => true,
 	'labswiki' => true,
 	'labtestwiki' => true,
+],
+
+// Temporarily enable until 1.30.0-wmf.12 rolls out -RK
+'wgStructuredChangeFiltersEnableExperimentalViews' => [
+	'default' => true,
 ],
 
 ];
