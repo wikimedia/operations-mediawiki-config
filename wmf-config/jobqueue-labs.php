@@ -4,16 +4,29 @@
 if ( $wmfRealm == 'labs' ) {  # safe guard
 $jobRedisServer = 'deployment-redis01.eqiad.wmflabs';
 
-$wgJobTypeConf['default'] = [
-	'class'       => 'JobQueueRedis',
-	'redisServer' => $jobRedisServer,
-	'redisConfig' => [
-		'connectTimeout' => 1,
-		'password' => $wmgRedisPassword,
-		'persistent' => defined( 'MEDIAWIKI_JOB_RUNNER' ),
-	],
-	'daemonized' => true
+$jobQueueRedisConfig = [
+    'class'       => 'JobQueueRedis',
+    'redisServer' => $jobRedisServer,
+    'redisConfig' => [
+        'connectTimeout' => 1,
+        'password' => $wmgRedisPassword,
+        'persistent' => defined( 'MEDIAWIKI_JOB_RUNNER' ),
+    ],
+    'daemonized' => true
 ];
+
+if ( $wmgUseEventBus ) {
+    $wgJobTypeConf['default'] = [
+        'class' => 'JobQueueSecondTestQueue',
+        'mainqueue' => $jobQueueRedisConfig,
+        'debugqueue' => [
+            'class' => 'JobQueueEventBus'
+        ]
+    ];
+} else {
+    $wgJobTypeConf['default'] = $jobQueueRedisConfig;
+}
+
 
 $wgJobQueueAggregator = [
 	'class'       => 'JobQueueAggregatorRedis',
@@ -25,5 +38,6 @@ $wgJobQueueAggregator = [
 	'daemonized' => true
 ];
 unset( $jobRedisServer );
+unset( $jobQueueRedisConfig );
 
 } # end safe guard
