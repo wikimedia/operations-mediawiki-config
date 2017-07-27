@@ -15360,7 +15360,7 @@ $wgConf->settings = [
 
 'wgMinervaCustomLogos' => [
 	'default' => [],
-	'wikipedia' => [
+	'wikipedia-english' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',
 		'copyright-width' => 116,
 		'copyright-height' => 18,
