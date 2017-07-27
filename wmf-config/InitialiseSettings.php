@@ -9962,7 +9962,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'rollbacker' ],
 	],
 	'+incubatorwiki' => [
-		'bureaucrat' => [ 'test-sysop', 'translator', 'import', 'translationadmin' ],
+		'bureaucrat' => [ 'accountcreator', 'import', 'test-sysop', 'translationadmin', 'translator' ],
 	],
 	'+itwiki' => [
 		'bureaucrat' => [ 'rollbacker' ],
@@ -10708,7 +10708,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'rollbacker' ],
 	],
 	'+incubatorwiki' => [
-		'bureaucrat' => [ 'test-sysop', 'translator', 'import', 'translationadmin' ],
+		'bureaucrat' => [ 'accountcreator', 'import', 'test-sysop', 'translationadmin', 'translator' ],
 	],
 	'+itwiki' => [
 		'bureaucrat' => [ 'rollbacker', 'autopatrolled', 'mover' ], // T55913, T102770
