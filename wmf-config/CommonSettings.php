@@ -177,6 +177,7 @@ if ( !$globals ) {
 			'commonsuploads', 'nonbetafeatures', 'group0', 'group1', 'group2', 'wikipedia', 'nonglobal',
 			'wikitech', 'nonecho', 'mobilemainpagelegacy', 'compact-language-links',
 			'wikipedia-cyrillic', 'wikipedia-e-acute', 'wikipedia-devanagari',
+			'wikipedia-english',
 			'nowikidatadescriptiontaglines',
 			'related-articles-footer-blacklisted-skins',
 			'top6-wikipedia'
