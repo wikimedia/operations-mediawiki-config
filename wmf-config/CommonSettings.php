@@ -3485,9 +3485,6 @@ if ( $wmgUseRC2UDP ) {
 	];
 }
 
-// Temporarily enable this until 1.30.0-wmf.12 -RK
-$wgStructuredChangeFiltersEnableExperimentalViews = true;
-
 // Confirmed can do anything autoconfirmed can.
 $wgGroupPermissions['confirmed'] = $wgGroupPermissions['autoconfirmed'];
 $wgGroupPermissions['confirmed']['skipcaptcha'] = true;
