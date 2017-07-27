@@ -172,11 +172,13 @@ if ( !$globals ) {
 
 	$wikiTags = [];
 	# When updating list please run ./docroot/noc/createTxtFileSymlinks.sh
+	# Expand computed dblists with ./multiversion/bin/expanddblist
 	foreach ( [ 'private', 'fishbowl', 'special', 'closed', 'flow', 'flaggedrevs', 'small', 'medium',
 			'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-nondefault',
 			'commonsuploads', 'nonbetafeatures', 'group0', 'group1', 'group2', 'wikipedia', 'nonglobal',
 			'wikitech', 'nonecho', 'mobilemainpagelegacy', 'compact-language-links',
 			'wikipedia-cyrillic', 'wikipedia-e-acute', 'wikipedia-devanagari',
+			'wikipedia-english',
 			'nowikidatadescriptiontaglines',
 			'related-articles-footer-blacklisted-skins',
 			'top6-wikipedia'
