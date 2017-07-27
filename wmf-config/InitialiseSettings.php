@@ -245,6 +245,7 @@ $wgConf->settings = [
 	'wikimania2015wiki' => [ 'wm2015' ],
 	'wikimania2016wiki' => [ 'wm2016' ],
 	'wikimania2017wiki' => [ 'wm2017' ],
+	'wikimania2018wiki' => [ 'wm2018' ],
 ],
 
 # wgLocaltimezone @{
@@ -1869,6 +1870,7 @@ $wgConf->settings = [
 	'wikimania2015wiki' => '//wikimania2015.wikimedia.org',
 	'wikimania2016wiki' => '//wikimania2016.wikimedia.org',
 	'wikimania2017wiki' => '//wikimania2017.wikimedia.org',
+	'wikimania2018wiki' => '//wikimania2018.wikimedia.org',
 	'wikimaniateamwiki' => '//wikimaniateam.wikimedia.org',
 	'zerowiki' => '//zero.wikimedia.org'
 ],
@@ -1952,6 +1954,7 @@ $wgConf->settings = [
 	'wikimania2015wiki' => 'https://wikimania2015.wikimedia.org',
 	'wikimania2016wiki' => 'https://wikimania2016.wikimedia.org',
 	'wikimania2017wiki' => 'https://wikimania2017.wikimedia.org',
+	'wikimania2018wiki' => 'https://wikimania2018.wikimedia.org',
 	'wikimaniateamwiki' => 'https://wikimaniateam.wikimedia.org',
 	'zerowiki' => 'https://zero.wikimedia.org',
 ],
@@ -7323,6 +7326,21 @@ $wgConf->settings = [
 		'IRC-url',
 		'Contact-url',
 	],
+	'wikimania2018wiki' => [
+		'pagetitle',
+		'pagetitle-view-mainpage',
+		'Volunteers-url',
+		'Attendees-url',
+		'Press-url',
+		'Sponsors-url',
+		'Questions-url',
+		'FAQ-url',
+		'Site Map-url',
+		'Registration-url',
+		'Schedule-url',
+		'IRC-url',
+		'Contact-url',
+	],
 	'zhwiki' => [
 		'pagetitle-view-mainpage',
 	],
@@ -11421,6 +11439,7 @@ $wgConf->settings = [
 	'wikimania2015wiki' => [ 'en', 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014' ],
 	'wikimania2016wiki' => [ 'en', 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015' ],
 	'wikimania2017wiki' => [ 'en', 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016' ],
+	'wikimania2018wiki' => [ 'en' , 'meta', 'wm2011', 'wm2012', 'wm2013', 'wm2014', 'wm2015', 'wm2016', 'wm2017' ],
 	'wuuwiki' => [ 'en', 'th', 'fr', 'zh', ], // T19484
 	'xhwiki' => [ 'en' ], // T53327
 	'zhwikiquote' => [ 'w', 'b', 'wikt', 's', 'meta', 'commons' ],
@@ -16724,6 +16743,7 @@ $wgConf->settings = [
 	'wikimania2015wiki' => true,
 	'wikimania2016wiki' => true,
 	'wikimania2017wiki' => true,
+	'wikimania2018wiki' => true,
 ],
 'wmgTranslateWorkflowStates' => [
 	'default' => false,
@@ -16804,6 +16824,7 @@ $wgConf->settings = [
 	'wikimania2015wiki' => true,
 	'wikimania2016wiki' => true,
 	'wikimania2017wiki' => true,
+	'wikimania2018wiki' => true,
 ],
 'wmgUseCleanChanges' => [
 	'default' => false,
