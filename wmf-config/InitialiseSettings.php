@@ -15358,7 +15358,7 @@ $wgConf->settings = [
 	'wikitech' => true, // Not behind Varnish
 ],
 
-'wgMinervaCustomLogos' => [
+'wmgMinervaCustomLogos' => [
 	'default' => [],
 	'wikipedia' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-en.svg',

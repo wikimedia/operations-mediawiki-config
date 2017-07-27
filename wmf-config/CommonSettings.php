@@ -2924,6 +2924,10 @@ if ( $wmgUseRelatedArticles ) {
 	}
 }
 
+// wmgMinervaCustomLogos is an array. To ensure default does not get merged
+// with a dblist we need to define it like so.
+$wgMinervaCustomLogos = $wmgMinervaCustomLogos;
+
 // Workaround for T142663 - override flat arrays
 $wgExtensionFunctions[] = function () {
 	global $wmgRelatedArticlesFooterWhitelistedSkins, $wgRelatedArticlesFooterWhitelistedSkins;
