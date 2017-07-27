@@ -19206,6 +19206,12 @@ $wgConf->settings = [
 	'labtestwiki' => true,
 ],
 
+// Temporarily enable until 1.30.0-wmf.12 rolls out -RK
+'wgStructuredChangeFiltersEnableExperimentalViews' => [
+	'default' => true,
+	'group2' => false,
+],
+
 ];
 
 ### WMF Labs override #####
