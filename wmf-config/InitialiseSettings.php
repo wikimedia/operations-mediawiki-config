@@ -902,6 +902,7 @@ $wgConf->settings = [
 	'cswikiquote' => '/static/images/project-logos/cswikiquote.png',
 	'dewikiquote' => '/static/images/project-logos/dewikiquote.png',
 	'elwikiquote' => '/static/images/project-logos/elwikiquote.png',
+	'enwikiquote' => '/static/images/project-logos/enwikiquote.png', // T171810
 	'eswikiquote' => '/static/images/project-logos/eswikiquote.png',
 	'eowikiquote' => '/static/images/project-logos/eowikiquote.png',  // T45879
 	'etwikiquote' => '/static/images/project-logos/etwikiquote.png',
