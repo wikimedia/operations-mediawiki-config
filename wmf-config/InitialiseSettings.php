@@ -1172,6 +1172,7 @@ $wgConf->settings = [
 	'specieswiki' => '/static/images/project-logos/specieswiki.png',
 	'stewardwiki' => '/static/images/project-logos/stewardwiki.png',  // T39700
 	'strategywiki' => '/static/images/project-logos/strategywiki.png',
+	'techcomwiki' => '/static/images/project-logos/techcomwiki.png',
 	'tenwiki' => '/static/images/project-logos/tenwiki.png',
 	'testwiki' => '/static/images/project-logos/testwiki.png',
 	'test2wiki' => '/static/images/project-logos/test2wiki.png',
@@ -1605,6 +1606,7 @@ $wgConf->settings = [
 	'donatewiki' => [ '1.5x' => '/static/images/project-logos/donatewiki-1.5x.png', '2x' => '/static/images/project-logos/donatewiki-2x.png' ],
 	'foundationwiki' => [ '1.5x' => '/static/images/project-logos/foundationwiki-1.5x.png', '2x' => '/static/images/project-logos/foundationwiki-2x.png' ],
 	'metawiki' => [ '1.5x' => '/static/images/project-logos/metawiki-1.5x.png', '2x' => '/static/images/project-logos/metawiki-2x.png' ],
+	'techconductwiki' => [ '1.5x' => '/static/images/project-logos/techconductwiki-1.5x.png', '2x' => '/static/images/project-logos/techconductwiki-2x.png' ],
 	'test2wiki' => [ '1.5x' => '/static/images/project-logos/test2wiki-1.5x.png', '2x' => '/static/images/project-logos/test2wiki-2x.png' ],
 	'votewiki' => [ '1.5x' => '/static/images/project-logos/votewiki-1.5x.png', '2x' => '/static/images/project-logos/votewiki-2x.png' ],
 ],
@@ -1850,6 +1852,7 @@ $wgConf->settings = [
 	'specieswiki' => '//species.wikimedia.org',
 	'stewardwiki' => '//steward.wikimedia.org',
 	'strategywiki' => '//strategy.wikimedia.org',
+	'techconductwiki' => '//techconduct.wikimedia.org', // T165977
 	'testwikidatawiki' => '//test.wikidata.org',
 	'transitionteamwiki' => '//transitionteam.wikimedia.org',
 	'usabilitywiki' => '//usability.wikimedia.org',
@@ -2363,6 +2366,7 @@ $wgConf->settings = [
 	'tawikiquote' => 'விக்கிமேற்கோள்',
 	'tawikisource' => 'விக்கிமூலம்',
 	'tcywiki' => 'ವಿಕಿಪೀಡಿಯ', // T140898
+	'techconductwiki' => 'CoC committee', // T165977
 	'tewiki' => 'వికీపీడియా',
 	'tewikiquote' => 'వికీవ్యాఖ్య', // T89332
 	'tewikisource' => 'వికీసోర్స్', // T52357
@@ -12238,6 +12242,7 @@ $wgConf->settings = [
 	'specieswiki' => '/static/favicon/wikispecies.ico',
 	'stewardwiki' => '/static/favicon/community.ico',
 	'strategywiki' => '/static/favicon/community.ico',
+	'techconductwiki' => '/static/favicon/community.ico',
 	'testwiki' => '/static/favicon/black-globe.ico',
 	'test2wiki' => '/static/favicon/black-globe.ico',
 	'testwikidatawiki' => '/static/favicon/testwikidata.ico',
@@ -17299,6 +17304,19 @@ $wgConf->settings = [
 		829, // Module_talk from Scribunto
 		2301, // Gadget_talk from Gadgets
 		2303, // Gadget_definition_talk from Gadgets
+	],
+	'techconductwiki' => [
+		NS_TALK,
+		NS_USER_TALK,
+		NS_PROJECT_TALK,
+		NS_FILE_TALK,
+		NS_MEDIAWIKI_TALK,
+		NS_TEMPLATE_TALK,
+		NS_HELP_TALK,
+		NS_CATEGORY_TALK,
+		829, /* Module talk */
+		2301, /* Gadget talk */
+		2303, /* Gadget definition talk */
 	],
 ],
 
