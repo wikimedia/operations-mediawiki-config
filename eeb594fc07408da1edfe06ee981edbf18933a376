@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4e7eab26_27013aba",
+        "filename": "dblists/nowikidatadescriptiontaglines.dblist",
+        "patchSetId": 9
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2017-07-28T20:54:36Z",
+      "side": 1,
+      "message": "For making jenkins quiet :D",
+      "parentUuid": "4e7eab26_644d00e0",
+      "range": {
+        "startLine": 166,
+        "startChar": 0,
+        "endLine": 166,
+        "endChar": 13
+      },
+      "revId": "eeb594fc07408da1edfe06ee981edbf18933a376",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e7eab26_04151c9c",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 9
@@ -36,6 +60,30 @@
       "writtenOn": "2017-07-28T20:01:57Z",
       "side": 1,
       "message": "Make sure that the Topic namespace from Flow isn\u0027t named in the same way or we\u0027ll end having two namespaces with the same name, which would likely make things break.",
+      "range": {
+        "startLine": 7012,
+        "startChar": 2,
+        "endLine": 7012,
+        "endChar": 34
+      },
+      "revId": "eeb594fc07408da1edfe06ee981edbf18933a376",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_671662f8",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 7012,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2017-07-28T20:54:36Z",
+      "side": 1,
+      "message": "You mean check the number of the Topic namespace?",
+      "parentUuid": "4e7eab26_04151c9c",
       "range": {
         "startLine": 7012,
         "startChar": 2,
@@ -83,6 +131,30 @@
       "side": 1,
       "message": "Disregard that if it works nonetheless.",
       "parentUuid": "4e7eab26_c427140c",
+      "range": {
+        "startLine": 11290,
+        "startChar": 23,
+        "endLine": 11290,
+        "endChar": 27
+      },
+      "revId": "eeb594fc07408da1edfe06ee981edbf18933a376",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_a71c4a19",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 11290,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2017-07-28T20:54:36Z",
+      "side": 1,
+      "message": "See above, it is the same. But can change if you think it means something.",
+      "parentUuid": "4e7eab26_e4e3309b",
       "range": {
         "startLine": 11290,
         "startChar": 23,
