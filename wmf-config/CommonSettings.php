@@ -2435,6 +2435,12 @@ if ( $wmgUseBabel ) {
 	$wgBabelMainCategory = $wmgBabelMainCategory;
 	$wgBabelDefaultLevel = $wmgBabelDefaultLevel;
 	$wgBabelUseUserLanguage = $wmgBabelUseUserLanguage;
+
+	$wgBabelUseDatabase = true;
+	if ( $wmgUseCentralAuth ) {
+		$wgBabelCentralDb = 'metawiki';
+		$wgBabelCentralApi = 'https://meta.wikimedia.org/w/api.php';
+	}
 }
 
 if ( $wmgUseBounceHandler ) {
