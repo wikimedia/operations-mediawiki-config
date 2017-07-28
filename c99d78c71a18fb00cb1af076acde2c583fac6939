@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_e19a4217",
+        "filename": "static/images/mobile/copyright/wikipedia-wordmark-ur.svg",
+        "patchSetId": 1
+      },
+      "lineNbr": 5,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-07-28T17:37:31Z",
+      "side": 1,
+      "message": "not that it matters.. but nit pick - id should probably be updated..",
+      "revId": "c99d78c71a18fb00cb1af076acde2c583fac6939",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_21912afc",
+        "filename": "static/images/mobile/copyright/wikipedia-wordmark-ur.svg",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-07-28T17:37:31Z",
+      "side": 1,
+      "message": "not that it matters.. but nit pick - id should probably be updated..",
+      "revId": "c99d78c71a18fb00cb1af076acde2c583fac6939",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
