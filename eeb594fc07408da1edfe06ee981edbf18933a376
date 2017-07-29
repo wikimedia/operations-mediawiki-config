@@ -120,6 +120,30 @@
     },
     {
       "key": {
+        "uuid": "4e7eab26_adde6b6e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 7012,
+      "author": {
+        "id": 2945
+      },
+      "writtenOn": "2017-07-29T11:08:18Z",
+      "side": 1,
+      "message": "Oh, now I understand. Will ask on the task. Thank you for notification!",
+      "parentUuid": "4e7eab26_8d3dafba",
+      "range": {
+        "startLine": 7012,
+        "startChar": 2,
+        "endLine": 7012,
+        "endChar": 34
+      },
+      "revId": "eeb594fc07408da1edfe06ee981edbf18933a376",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e7eab26_c427140c",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 9
