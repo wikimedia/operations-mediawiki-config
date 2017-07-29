@@ -115,7 +115,7 @@ $IP/extensions/RevisionSlider/extension.json
 $IP/extensions/RSS/extension.json
 $IP/extensions/SandboxLink/extension.json
 $IP/extensions/Score/extension.json
-$IP/extensions/Scribunto/Scribunto.php
+$IP/extensions/Scribunto/extension.json
 $IP/extensions/SearchExtraNS/extension.json
 $IP/extensions/SecurePoll/extension.json
 $IP/extensions/ShortUrl/extension.json

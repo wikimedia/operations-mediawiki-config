@@ -2859,7 +2859,7 @@ if ( $wmgUseCodeEditorForCore || $wmgUseScribunto || $wmgZeroPortal ) {
 }
 
 if ( $wmgUseScribunto ) {
-	include "$IP/extensions/Scribunto/Scribunto.php";
+	wfLoadExtension( 'Scribunto' );
 	$wgScribuntoUseGeSHi = true;
 	$wgScribuntoUseCodeEditor = true;
 	$wgScribuntoGatherFunctionStats = true;  // ori, 29-Oct-2015
