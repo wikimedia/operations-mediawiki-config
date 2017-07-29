@@ -96,6 +96,30 @@
     },
     {
       "key": {
+        "uuid": "4e7eab26_8d3dafba",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 7012,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-07-29T09:00:24Z",
+      "side": 1,
+      "message": "\u003e You mean check the number of the Topic namespace?\n\nNo. I mean that Flow namespace is also called \"Topic\". So irrespective of the numbering, two namespaces will be called the same, so it may break things or confuse people. That said \u003chttps://phabricator.wikimedia.org/diffusion/EFLW/browse/master/Flow.namespaces.php\u003e does not contain an Hindi translation of the NS for Flow. They should IMHO translate it to a different string to avoid confusion. Thanks.",
+      "parentUuid": "4e7eab26_671662f8",
+      "range": {
+        "startLine": 7012,
+        "startChar": 2,
+        "endLine": 7012,
+        "endChar": 34
+      },
+      "revId": "eeb594fc07408da1edfe06ee981edbf18933a376",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e7eab26_c427140c",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 9
