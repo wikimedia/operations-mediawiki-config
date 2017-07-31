@@ -19162,18 +19162,9 @@ $wgConf->settings = [
 ],
 
 'wmgCirrusSearchEnableArchive' => [
-	'default' => false,
-	'testwiki' => true,
-		'mediawikiwiki' => true,
-		'cawiki' => true,
-		'itwiki' => true,
-		'ruwiki' => true,
-		'fawiki' => true,
-		'dewiki' => true,
-		'frwiki' => true,
-		'plwiki' => true,
-		'arwiki' => true,
-		'enwiki' => true,
+	'default' => true,
+	'wikidatawiki' => false,
+	'testwikidatawiki' => false,
 ],
 
 'wmgUseDynamicSidebar' => [
