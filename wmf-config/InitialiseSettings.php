@@ -327,6 +327,7 @@ $wgConf->settings = [
 	'ilwikimedia' => 'Asia/Tel_Aviv',
 	'itwikivoyage' => 'Europe/Rome', // T43992
 	'hiwikiquote' => 'Asia/Kolkata', // T126185
+	'hiwikiversity' => 'Asia/Kolkata', // T168765
 	'hrwiki' => 'Europe/Berlin',
 	'hrwikibooks' => 'Europe/Zagreb',
 	'hrwikiquote' => 'Europe/Berlin',
@@ -1090,6 +1091,7 @@ $wgConf->settings = [
 	'eswikiversity' => '/static/images/project-logos/eswikiversity.png',
 	'fiwikiversity' => '/static/images/project-logos/fiwikiversity.png',
 	'frwikiversity' => '/static/images/project-logos/frwikiversity.png',
+	'hiwikiversity' => '/static/images/project-logos/hiwikiversity.png',
 	'itwikiversity' => '/static/images/project-logos/itwikiversity.png',
 	'jawikiversity' => '/static/images/project-logos/jawikiversity.png',
 	'kowikiversity' => '/static/images/project-logos/kowikiversity.png',
@@ -1580,6 +1582,7 @@ $wgConf->settings = [
 	'eswikiversity' => [ '1.5x' => '/static/images/project-logos/eswikiversity-1.5x.png', '2x' => '/static/images/project-logos/eswikiversity-2x.png' ],
 	'fiwikiversity' => [ '1.5x' => '/static/images/project-logos/fiwikiversity-1.5x.png', '2x' => '/static/images/project-logos/fiwikiversity-2x.png' ], // T150618
 	'frwikiversity' => [ '1.5x' => '/static/images/project-logos/frwikiversity-1.5x.png', '2x' => '/static/images/project-logos/frwikiversity-2x.png' ], // T150618
+	'hiwikiversity' => [ '1.5x' => '/static/images/project-logos/hiwikiversity-1.5x.png', '2x' => '/static/images/project-logos/hiwikiversity-2x.png' ],
 	'itwikiversity' => [ '1.5x' => '/static/images/project-logos/itwikiversity-1.5x.png', '2x' => '/static/images/project-logos/itwikiversity-2x.png' ], // T150618
 	'jawikiversity' => [ '1.5x' => '/static/images/project-logos/jawikiversity-1.5x.png', '2x' => '/static/images/project-logos/jawikiversity-2x.png' ],
 	'kowikiversity' => [ '1.5x' => '/static/images/project-logos/kowikiversity-1.5x.png', '2x' => '/static/images/project-logos/kowikiversity-2x.png' ], // T150618
@@ -2155,6 +2158,7 @@ $wgConf->settings = [
 	'hewikivoyage' => 'ויקימסע',
 	'hewiktionary' => 'ויקימילון',
 	'hiwiki' => 'विकिपीडिया',
+	'hiwikiversity' => 'विकिविद्यालय', // T168765
 	'hiwikiquote' => 'विकिसूक्ति', // T126185
 	'hiwiktionary' => 'विक्षनरी',
 	'hrwiki' => 'Wikipedija',
@@ -2648,6 +2652,7 @@ $wgConf->settings = [
 	'hewikivoyage' => 'ויקימסע',
 	'hewiktionary' => 'ויקימילון',
 	'hiwiki' => 'विकिपीडिया',
+	'hiwikiversity' => 'विकिविद्यालय',
 	'hiwikiquote' => 'विकिसूक्ति', // T126185
 	'hiwiktionary' => 'विक्षनरी',
 	'hrwiki' => 'Wikipedija',
@@ -7003,6 +7008,16 @@ $wgConf->settings = [
 		110 => 'Transwiki',
 		111 => 'Discussion_Transwiki',
 	],
+	'hiwikiversity' => [
+		100 => 'प्रवेशद्वार', // T168765, Portal
+		101 => 'प्रवेशद्वार_वार्ता', // T168765
+		102 => 'विद्यालय', // T168765, School
+		103 => 'विद्यालय_वार्ता', // T168765
+		104 => 'विषय', // T168765, Topic
+		105 => 'विषय_वार्ता', // T168765
+		106 => 'संग्रह', // T168765, Collection
+		107 => 'संग्रह_वार्ता', // T168765
+	],
 	'itwikiversity' => [
 		100 => 'Area',
 		101 => 'Discussioni_area',
@@ -11296,6 +11311,7 @@ $wgConf->settings = [
 	'hewikisource' => [ 'w', 'wikt', 'q', 'b', 'n' ],
 	'hewikivoyage' => [ 'w', 'wikt', 'b', 'n', 'q', 's', 'commons', 'en', 'de', 'el', 'fr', 'it', 'nl', 'pl', 'pt', 'ro', 'ru', 'sv', 'uk', 'vi' ], // T60527, T61601
 	'hiwiki' => [ 'wikt', 'commons', 'meta', 'species', 'de', 'en', 'en:b', 'en:q', 'en:n', 'en:s', 'en:v', 'es', 'fr', 'ml', 'ne', 'nl', 'ro', 'ru', 'pl', 'pt', 'simple', 'ta' ], // T43757
+	'hiwikiversity' => [ 'en:w', 'betawikiversity', 'en', 'de:v', 'hi:w', 'hi:b' ], // T168765
 	'hiwikiquote' => [ 'w', 'w:en', 'w:sa', 'q:en', 'q:gu', 'q:sa', 'meta', 'mw' ], // T127593
 	'hiwiktionary' => [ 'commons', 'meta', 'w', 'q', 'b', 'species', 'w:en', 'b:en', 'q:en', 's:en', 'v:en', 'voy:en', 'w:es', 'w:fa', 'w:fr', 'w:ml', 'w:ne', 'w:nl', 'w:ro', 'w:ru', 'w:pl', 'w:pt', 'w:simple', 'w:ta', 'w:ur', 'w:mr', 'w:gu', 'w:bh', 'en', 'mg', 'fr', 'es', 'zh', 'ru', 'it', 'pl', 'sv', 'ku', 'el', 'nl', 'de', 'ko', 'it', 'tr', 'ta', 'hu', 'fi', 'kn', 'ja', 'ml', 'my', 'or', 'te', 'fa', 'gu', 'ar', 'th', 'ps', 'simple', 'sw' ], // T132417
 	'hifwiki' => [ 'incubator', 'commons', 'meta', 'species', 'bh', 'de', 'en', 'en:b', 'en:q', 'en:n', 'en:s', 'en:v', 'el', 'es', 'fa', 'fr', 'hi', 'ml', 'ne', 'nl', 'ro', 'ru', 'pa', 'pl', 'pt', 'simple', 'te', 'ta', 'ur' ], // T99826
