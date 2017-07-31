@@ -822,7 +822,7 @@ if ( $wmgUseSpamBlacklist ) {
 	$wgBlacklistSettings = [
 		'email' => [
 			'files' => [
-				'https://meta.wikimedia.org/w/index.php?title=MediaWiki:Email-blacklist&action=raw&sb_ver=1'
+				'https://meta.wikimedia.org/w/index.php?title=Email-blacklist&action=raw&sb_ver=1'
 			],
 		],
 		'spam' => [
