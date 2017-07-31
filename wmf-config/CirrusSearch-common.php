@@ -233,8 +233,9 @@ $wgCirrusSearchEnableCrossProjectSearch = $wmgCirrusSearchEnableCrossProjectSear
 $wgCirrusSearchNewCrossProjectPage = true;
 // Display X results per crossproject
 $wgCirrusSearchNumCrossProjectSearchResults = 1;
-// Order snippets by recall (wiki taht return more results first)
-$wgCirrusSearchCrossProjectOrder = 'recall';
+// Control ordering of crossproject searchresults blocks
+// Must be a valid profile defined in $wgCirrusSearchCrossProjectBlockScoreProfiles
+$wgCirrusSearchCrossProjectOrder = $wmgCirrusSearchCrossProjectOrder;
 
 // Override sister search profiles for specific projects
 $wgCirrusSearchCrossProjectProfiles = [

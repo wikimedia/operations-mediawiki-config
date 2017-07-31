@@ -18135,6 +18135,12 @@ $wgConf->settings = [
 	'itwikivoyage' => true,
 ],
 
+// Tune crossproject ordering
+'wmgCirrusSearchCrossProjectOrder' => [
+	'default' => 'recall',
+	'enwiki' => 'wmf_enwiki', // T171803: 'wikt' always first, 'b' always last, others ordered by recall
+],
+
 // Define list of projects to blacklist from CrossProject search
 // (only effective if SiteMatrix implementation is being used)
 'wmgCirrusSearchCrossProjectSearchBlackList' => [
