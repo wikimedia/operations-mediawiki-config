@@ -102,7 +102,7 @@ $wgLBFactoryConf = [
 		'db2069' => 50,  # D6 3.3TB 160GB, api
 		'db2070' => 400, # C5 3.3TB 160GB
 		'db2071' => 50,  # A6 3.6TB 512GB, api
-		'db2072' => 500, # B6 3.6TB 512GB
+		'db2072' => 500, # B6 3.6TB 512GB, # mariadb 10.1
 	],
 	's2' => [
 		'db2017' => 0,   # B6 2.9TB  96GB, master
