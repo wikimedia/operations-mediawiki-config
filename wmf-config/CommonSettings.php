@@ -998,7 +998,6 @@ if ( $wmgUseContactPage ) {
 		'SenderName' => 'Contact Form on ' . $wgSitename,
 		'RequireDetails' => false,
 		'IncludeIP' => false,
-		'DisplayFormat' => 'table',
 		'RLModules' => [],
 		'RLStyleModules' => [],
 		'AdditionalFields' => [
@@ -1006,7 +1005,6 @@ if ( $wmgUseContactPage ) {
 				'label-message' => 'emailmessage',
 				'type' => 'textarea',
 				'rows' => 20,
-				'cols' => 80,
 				'required' => true,
 			],
 		],
@@ -1021,13 +1019,11 @@ if ( $wmgUseContactPage ) {
 			'SenderEmail' => $wmgNotificationSender,
 			'RequireDetails' => true,
 			'IncludeIP' => true,
-			'DisplayFormat' => 'vform',
 			'AdditionalFields' => [
 				'Text' => [
 					'label-message' => 'emailmessage',
 					'type' => 'textarea',
 					'rows' => 20,
-					'cols' => 80,
 					'required' => true
 				],
 				'Disclaimer' => [

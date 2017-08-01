@@ -20,7 +20,6 @@ $wgContactConfig['affcomusergroup'] = [
 	'SenderEmail' => null,
 	'RequireDetails' => true,
 	'IncludeIP' => false,
-	'DisplayFormat' => 'vform',
 	'RLStyleModules' => [
 		'ext.wikimediamessages.contactpage.affcomusergroup',
 	],
@@ -153,7 +152,6 @@ $wgContactConfig['requestlicense'] = [
 			'label-message' => 'contactpage-license-request-description',
 			'type' => 'textarea',
 			'rows' => 10,
-			'cols' => 80,
 			'required' => true,
 		],
 
@@ -179,28 +177,24 @@ $wgContactConfig['licenseabuse'] = [
 			'label-message' => 'contactpage-license-abuse-description',
 			'type' => 'textarea',
 			'rows' => 5,
-			'cols' => 80,
 			'required' => true,
 		],
 		'Location' => [
 			'label-message' => 'contactpage-license-abuse-location',
 			'type' => 'textarea',
 			'rows' => 5,
-			'cols' => 80,
 			'required' => true,
 		],
 		'TheirContact' => [
 			'label-message' => 'contactpage-license-abuse-theircontact',
 			'type' => 'textarea',
 			'rows' => 5,
-			'cols' => 80,
 			'required' => true,
 		],
 		'YourContact' => [
 			'label-message' => 'contactpage-license-abuse-yourcontact',
 			'type' => 'textarea',
 			'rows' => 5,
-			'cols' => 80,
 			'required' => true,
 		],
 		'TradeMark' => [
