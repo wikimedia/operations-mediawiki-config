@@ -24,7 +24,6 @@ if ( $wmgUseWikibaseRepo ) {
 			'P153',
 			'P185',
 		];
-		$wgWBRepoSettings['writeFullEntityIdColumn'] = true;
 		$wgWBRepoSettings['readFullEntityIdColumn'] = true;
 
 		$wgWBRepoSettings['statementSections']['property'] = [
@@ -112,6 +111,7 @@ if ( $wmgUseWikibaseRepo ) {
 
 	$wgWBQualityConstraintsEnableConstraintsImportFromStatements = true;
 	$wgWBRepoSettings['dispatchingLockManager'] = 'redisLockManager';
+	$wgWBRepoSettings['writeFullEntityIdColumn'] = true;
 }
 
 if ( $wmgUseWikibaseClient ) {
