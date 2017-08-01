@@ -7897,6 +7897,7 @@ $wgConf->settings = [
 			'reupload' => true,
 			'reupload-own' => true,
 			'reupload-shared' => true,
+			'autopatrol' => true, // T167071
 		],
 		'rollbacker' => [ 'rollback' => true ],
 
@@ -7924,6 +7925,10 @@ $wgConf->settings = [
 			'reupload' => true,
 			'reupload-own' => true,
 			'reupload-shared' => true,
+			'autopatrol' => true, // T167071
+		],
+		'autoreview' => [
+			'autopatrol' => true, // T167071
 		],
 	],
 	'+arwikisource' => [
