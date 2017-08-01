@@ -1006,7 +1006,6 @@ if ( $wmgUseContactPage ) {
 				'label-message' => 'emailmessage',
 				'type' => 'textarea',
 				'rows' => 20,
-				'cols' => 80,
 				'required' => true,
 			],
 		],
@@ -1027,7 +1026,6 @@ if ( $wmgUseContactPage ) {
 					'label-message' => 'emailmessage',
 					'type' => 'textarea',
 					'rows' => 20,
-					'cols' => 80,
 					'required' => true
 				],
 				'Disclaimer' => [
