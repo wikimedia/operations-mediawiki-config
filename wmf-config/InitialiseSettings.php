@@ -19058,14 +19058,19 @@ $wgConf->settings = [
 	'default' => false,
 	'mediawikiwiki' => true,
 	'cawiki' => true,
+	'cswiki' => true, // T171588
+	'euwiki' => true, // T167619
 	'fiwiki' => true, // T151591
 	'frwiki' => true,
 	'hewiki' => true,
 	'mkwiki' => true,
 	'nowiki' => true, // T154021
+	'ptwiki' => true, // T168915
 	'ruwiki' => true,
+	'svwiki' => true, // T161032
 	'testwiki' => true,
 	'test2wiki' => true,
+	'uawikimedia' => true, // T164574
 ],
 
 'wgKartographerEnableMapFrame' => [
@@ -19073,15 +19078,18 @@ $wgConf->settings = [
 	'wikipedia' => false,
 	'cawiki' => true,
 	'cswiki' => true, // T171588
+	'euwiki' => true, // T167619
 	'fiwiki' => true, // T151591
 	'frwiki' => true,
 	'hewiki' => true,
 	'mkwiki' => true,
 	'nowiki' => true, // T154021
+	'ptwiki' => true, // T168915
 	'ruwiki' => true,
 	'svwiki' => true, // T161032
 	'testwiki' => true,
 	'test2wiki' => true,
+	'uawikimedia' => true, // T164574
 ],
 
 'wmgUseOATHAuth' => [
