@@ -2766,6 +2766,7 @@ $wgConf->settings = [
 	'newwiki' => 'विकिपिडिया',
 	'newiktionary' => 'विक्सनरी', // T129768
 	'nlwiktionary' => 'WikiWoordenboek',
+	'nlwikinews' => 'Wikinieuws', // T172211
 	'nostalgiawiki' => 'Wikipedia',
 	'nowikibooks' => 'Wikibøker',
 	'nowikinews' => 'Wikinytt',
