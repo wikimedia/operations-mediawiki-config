@@ -13468,6 +13468,29 @@ $wgConf->settings = [
 	'huwiki' => true,
 ],
 
+'wgPopupsPageBlacklist' => [
+	'default' => [
+		'Special:CreateAccount',
+		'Special:GlobalRenameRequest',
+		'Special:UserLogin',
+		'Special:MergeAccount',
+		'Special:ChangeCredentials',
+		'Special:OAuthListConsumers',
+		'Special:GlobalUserRights',
+		'Special:Notifications',
+		'Special:UserRights',
+		'Special:Upload',
+		'Special:VipsTest',
+		'Special:ApiFeatureUsage',
+		'Special:ExpandTemplates',
+		'Special:GadgetUsage',
+		'Special:GraphSandbox',
+		'Special:TemplateSandbox',
+		'Special:MostLinkedFiles',
+		'Special:Book',
+		'Special:CiteThisPage',
+	],
+],
 'wgPopupsAnonsEnabledSamplingRate' => [
 	'default' => 0,
 	'sewikimedia' => 1, // T68374
