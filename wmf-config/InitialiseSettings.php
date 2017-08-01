@@ -15381,6 +15381,11 @@ $wgConf->settings = [
 		'copyright-width' => 79,
 		'copyright-height' => 22,
 	],
+	'atjwiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-atj.svg',
+		'copyright-width' => 133,
+		'copyright-height' => 18,
+	],
 	'bnwiki' => [
 		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-bn.svg',
 		'copyright-width' => 92,
