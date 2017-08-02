@@ -18359,6 +18359,67 @@ $wgConf->settings = [
 
 'wmgCirrusSearchUserTesting' => [
 	'default' => [],
+	'enwiki' => [
+		'ltr' => [
+			'globals' => [
+				'wgCirrusSearchCrossProjectProfiles' => [
+					'b' => [
+						'rescore' => 'wsum_inclinks_pv',
+					],
+					'wikt' => [
+						'rescore' => 'wsum_inclinks_pv',
+					],
+					'voy' => [
+						'rescore' => 'wsum_inclinks_pv',
+					],
+					's' => [
+						'rescore' => 'wsum_inclinks_pv',
+					],
+					'q' => [
+						'rescore' => 'wsum_inclinks_pv',
+					]
+				],
+			],
+			'buckets' => [
+				// control
+				'control' => [
+					'trigger' => 'control',
+				],
+				// ltr with small rescore window
+				'ltr-20' => [
+					'trigger' => 'ltr-20',
+					'globals' => [
+						'wgCirrusSearchRescoreProfile' => 'enwiki-500t-v1-20rs',
+					]
+				],
+				// interleaved ltr with small rescore window
+				'ltr-i-20' => [
+					'trigger' => 'ltr-i-20',
+					'globals' => [
+						'wgCirrusSearchInterleaveConfig' => [
+							'CirrusSearchRescoreProfile' => 'enwiki-500t-v1-20rs',
+						],
+					],
+				],
+				// ltr with large(er) rescore window
+				'ltr-1024' => [
+					'trigger' => 'ltr-1024',
+					'globals' => [
+						'wgCirrusSearchRescoreProfile' => 'enwiki-500t-v1-1024rs',
+					],
+				],
+				// interleaved ltr with large(er) rescore window
+				'ltr-i-1024' => [
+					'trigger' => 'ltr-i-1024',
+					'globals' => [
+						'wgCirrusSearchInterleaveConfig' => [
+							'CirrusSearchRescoreProfile' => 'enwiki-500t-v1-1024rs',
+						],
+					],
+				],
+			],
+		],
+	],
 ],
 
 'wmgCirrusSearchLanguageDetectors' => [
