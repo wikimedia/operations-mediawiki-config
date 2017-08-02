@@ -653,5 +653,9 @@ function wmfLabsSettings() {
 		'wmgMinervaNeue' => [
 			'default' => true,
 		],
+
+		'wgFragmentMode' => [
+			'default' => [ 'html5', 'legacy' ],
+		],
 	];
 } # wmflLabsSettings()
