@@ -30,25 +30,25 @@ Split by cluster:
 	s7.dblist
 */
 
-require_once( __DIR__ . '/multiversion/MWRealm.php' );
-require_once( __DIR__ . '/multiversion/defines.php' );
+require_once __DIR__ . '/multiversion/MWRealm.php';
+require_once __DIR__ . '/multiversion/defines.php';
 
 $base = MEDIAWIKI_STAGING_DIR;
 
 $defaultCluster = 's3';
-$clusterOverrides = loadClusterList(getRealmSpecificFilename( MEDIAWIKI_STAGING_DIR . '/wmf-config/db.php'));
-$clusterAssignments = array();
+$clusterOverrides = loadClusterList( getRealmSpecificFilename( MEDIAWIKI_STAGING_DIR . '/wmf-config/db.php' ) );
+$clusterAssignments = [];
 
 $dbList = $wmfRealm === 'labs' ? 'all-labs' : 'all';
 $all = MWWikiversions::readDbListFile( $dbList );
-listOut('all', $all, false);
-printf("%d wikis listed in " . basename(getRealmSpecificFilename(MEDIAWIKI_DBLIST_DIR . "/all.dblist")) . "...\n", count($all));
+listOut( 'all', $all, false );
+printf( "%d wikis listed in " . basename(getRealmSpecificFilename( MEDIAWIKI_DBLIST_DIR . "/all.dblist" ) ) . "...\n", count( $all ) );
 
 $special = MWWikiversions::readDbListFile( 'special' );
-listOut('special', $special, false);
-printf("%d special wikis to be exempted from wikipedia group...\n", count($special));
+listOut( 'special', $special, false );
+printf( "%d special wikis to be exempted from wikipedia group...\n", count( $special ) );
 
-$suffixes = array(
+$suffixes = [
 	"wiki" => "wikipedia",
 	"wikinews" => "wikinews",
 	"wikibooks" => "wikibooks",
@@ -57,81 +57,84 @@ $suffixes = array(
 	"wiktionary" => "wiktionary",
 	"wikimedia" => "wikimedia",
 	"wikiversity" => "wikiversity",
-	"wikivoyage" => "wikivoyage" );
+	"wikivoyage" => "wikivoyage"
+];
 
-$groups = array();
-$specialMatch = array();
+$groups = [];
+$specialMatch = [];
 
-foreach ($all as $wiki) {
-	if (isset($clusterOverrides[$wiki])) {
+foreach ( $all as $wiki ) {
+	if ( isset( $clusterOverrides[$wiki] ) ) {
 		$cluster = $clusterOverrides[$wiki];
 	} else {
 		$cluster = $defaultCluster;
 	}
 	$clusterAssignments[$cluster][] = $wiki;
 
-	if (in_array($wiki, $special)) {
+	if ( in_array( $wiki, $special ) ) {
 		$specialMatch[] = $wiki;
 		continue;
 	}
-	foreach ($suffixes as $suffix => $group) {
-		if (substr($wiki, -strlen($suffix)) == $suffix) {
+	foreach ( $suffixes as $suffix => $group ) {
+		if ( substr( $wiki, -strlen( $suffix ) ) == $suffix ) {
 			$groups[$group][] = $wiki;
 			continue 2;
 		}
 	}
-	printf("Warning: wiki '%s' matches no known group.\n", $wiki);
+	printf( "Warning: wiki '%s' matches no known group.\n", $wiki );
 }
 
-if (count($special) != count($specialMatch)) {
-	printf("Warning: expected %d special wikis, matched %d.\n",
-		count($special), count($specialMatch));
+if ( count( $special ) != count( $specialMatch ) ) {
+	printf( "Warning: expected %d special wikis, matched %d.\n",
+		count( $special ),
+		count( $specialMatch )
+	);
 }
 
-foreach ($groups as $group => $list) {
-	listOut($group, $list);
+foreach ( $groups as $group => $list ) {
+	listOut( $group, $list );
 }
 
 echo "Writing out db cluster assignments...\n";
 
-foreach ($clusterAssignments as $cluster => $list) {
-	listOut($cluster, $list);
+foreach ( $clusterAssignments as $cluster => $list ) {
+	listOut( $cluster, $list );
 }
 
 echo "Done.\n";
 
-function loadClusterList($file) {
+function loadClusterList( $file ) {
 	$wgDBname = $wgDBuser = $wgDBpassword = '';
 	include( $file );
 
 	return $wgLBFactoryConf['sectionsByDB'];
 }
 
-function listOut($group, $list, $print = true) {
+function listOut( $group, $list, $print = true ) {
 	global $base;
 
-	$filename = getRealmSpecificFilename(MEDIAWIKI_DBLIST_DIR . "/$group.dblist");
+	$filename = getRealmSpecificFilename( MEDIAWIKI_DBLIST_DIR . "/$group.dblist" );
 	if ( $print ) {
-		printf("Listing %d wikis in %s...\n", count($list), $filename);
+		printf( "Listing %d wikis in %s...\n", count( $list ), $filename );
 	}
 
-	$out = fopen("$filename.new", "xt");
-	if ($out) {
-		sort($list);
-		foreach ($list as $wiki) {
-			fwrite($out, "$wiki\n");
+	$out = fopen( "$filename.new", "xt" );
+	if ( $out ) {
+		sort( $list );
+		foreach ( $list as $wiki ) {
+			fwrite( $out, "$wiki\n" );
 		}
-		fclose($out);
+		fclose( $out );
 
-		if (file_exists("$filename.bak")) {
-			unlink("$filename.bak");
+		if ( file_exists( "$filename.bak" ) ) {
+			unlink( "$filename.bak" );
 		}
-		if (file_exists($filename)) {
-			rename($filename, "$filename.bak");
+		if ( file_exists( $filename ) ) {
+			rename( $filename, "$filename.bak" );
 		}
-		rename("$filename.new", $filename);
-		if (file_exists("$filename.bak")) {
-			unlink("$filename.bak");
+		rename( "$filename.new", $filename );
+		if ( file_exists( "$filename.bak" ) ) {
+			unlink( "$filename.bak" );
 		}
 	}
 }
