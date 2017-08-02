@@ -102,3 +102,28 @@ $wgCirrusSearchCreateFrozenIndex = false;
 $wgCirrusSearchIndexDeletes = $wmgCirrusSearchIndexDeletes;
 // Enable searching archive
 $wgCirrusSearchEnableArchive = $wmgCirrusSearchEnableArchive;
+
+// LTR Rescore profile
+$wgCirrusSearchRescoreProfiles['enwiki-500t-v1-20rs'] = $wgCirrusSearchRescoreProfiles['wsum_inclinks_pv'];
+$wgCirrusSearchRescoreProfiles['enwiki-500t-v1-20rs']['unsupported_syntax'] = [ 'full_text_querystring', 'query_string', 'filter_only' ];
+$wgCirrusSearchRescoreProfiles['enwiki-500t-v1-20rs']['fallback_profile'] = 'wsum_inclinks_pv';
+$wgCirrusSearchRescoreProfiles['enwiki-500t-v1-20rs']['rescore'][] = [
+	'window' => 20,
+	'query_weight' => 0.0,
+	'rescore_query_weight' => 1.0,
+	'score_mode' => 'total',
+	'type' => 'ltr',
+	'model' => 'enwiki-500t-v1',
+];
+
+$wgCirrusSearchRescoreProfiles['enwiki-500t-v1-1024rs'] = $wgCirrusSearchRescoreProfiles['wsum_inclinks_pv'];
+$wgCirrusSearchRescoreProfiles['enwiki-500t-v1-1024rs']['unsupported_syntax'] = [ 'full_text_querystring', 'query_string', 'filter_only' ];
+$wgCirrusSearchRescoreProfiles['enwiki-500t-v1-1024rs']['fallback_profile'] = 'wsum_inclinks_pv';
+$wgCirrusSearchRescoreProfiles['enwiki-500t-v1-1024rs']['rescore'][] = [
+	'window' => 20,
+	'query_weight' => 0.0,
+	'rescore_query_weight' => 1.0,
+	'score_mode' => 'total',
+	'type' => 'ltr',
+	'model' => 'enwiki-500t-v1',
+];
