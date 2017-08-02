@@ -170,6 +170,7 @@ if ( !$globals ) {
 	# Get configuration from SiteConfiguration object
 	require "$wmfConfigDir/InitialiseSettings.php";
 
+	# Collect all the dblist tags associated with this wiki
 	$wikiTags = [];
 	# When updating list please run ./docroot/noc/createTxtFileSymlinks.sh
 	# Expand computed dblists with ./multiversion/bin/expanddblist
@@ -181,7 +182,7 @@ if ( !$globals ) {
 			'wikipedia-english',
 			'nowikidatadescriptiontaglines',
 			'related-articles-footer-blacklisted-skins',
-			'top6-wikipedia'
+			'top6-wikipedia', 'rtl'
 		] as $tag ) {
 		$dblist = MWWikiversions::readDbListFile( $tag );
 		if ( in_array( $wgDBname, $dblist ) ) {
