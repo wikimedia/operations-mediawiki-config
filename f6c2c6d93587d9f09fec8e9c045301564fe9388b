@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_7cbd7a62",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2017-08-02T10:47:26Z",
+      "side": 1,
+      "message": "this model does seem to be deployed yet, I see enwiki_32153k_100t on codfw but none on eqiad",
+      "range": {
+        "startLine": 137,
+        "startChar": 15,
+        "endLine": 137,
+        "endChar": 29
+      },
+      "revId": "f6c2c6d93587d9f09fec8e9c045301564fe9388b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_7c3a5ae6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 18363,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2017-08-02T10:47:26Z",
+      "side": 1,
+      "message": "I don\u0027t know if it\u0027s a big deal but interwiki searches will have the ltr model applied for non interleaved buckets.\nWe can prevent this from happening by adding these global globals:\n                                        \u0027wgCirrusSearchCrossProjectProfiles\u0027 \u003d\u003e [\n                                                \u0027b\u0027 \u003d\u003e [\n                                                        \u0027rescore\u0027 \u003d\u003e \u0027wsum_inclinks_pv\u0027,\n                                                ],\n                                                \u0027wikt\u0027 \u003d\u003e [\n                                                        \u0027rescore\u0027 \u003d\u003e \u0027wsum_inclinks_pv\u0027,\n                                                ],\n                                                \u0027voy\u0027 \u003d\u003e [\n                                                        \u0027rescore\u0027 \u003d\u003e \u0027wsum_inclinks_pv\u0027,\n                                                ],\n                                                \u0027s\u0027 \u003d\u003e [\n                                                        \u0027rescore\u0027 \u003d\u003e \u0027wsum_inclinks_pv\u0027,\n                                                ],\n                                                \u0027q\u0027 \u003d\u003e [\n                                                        \u0027rescore\u0027 \u003d\u003e \u0027wsum_inclinks_pv\u0027,\n                                                ]\n                                        ],",
+      "revId": "f6c2c6d93587d9f09fec8e9c045301564fe9388b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_5c351ef2",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 18393,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2017-08-02T10:47:26Z",
+      "side": 1,
+      "message": "1024",
+      "range": {
+        "startLine": 18393,
+        "startChar": 11,
+        "endLine": 18393,
+        "endChar": 13
+      },
+      "revId": "f6c2c6d93587d9f09fec8e9c045301564fe9388b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
