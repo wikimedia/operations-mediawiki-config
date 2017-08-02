@@ -12422,7 +12422,6 @@ $wgConf->settings = [
 	'specieswiki' => '/srv/mediawiki/static/images/sul/wikispecies.png',
 	'incubatorwiki' => '/srv/mediawiki/static/images/sul/incubatorwiki.png',
 	'wikivoyage' => '/srv/mediawiki/static/images/sul/wikivoyage.png',
-	'wikimania2015wiki' => '/srv/mediawiki/static/images/sul/wikimania.png',
 	'loginwiki' => '/srv/mediawiki/static/images/sul/foundation.png',
 	'brwikimedia' => '/srv/mediawiki/static/images/sul/foundation.png',
 ],
