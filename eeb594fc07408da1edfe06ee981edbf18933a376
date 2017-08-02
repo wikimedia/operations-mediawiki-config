@@ -144,6 +144,30 @@
     },
     {
       "key": {
+        "uuid": "4e7eab26_a8107d05",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 9
+      },
+      "lineNbr": 7012,
+      "author": {
+        "id": 287
+      },
+      "writtenOn": "2017-08-02T15:31:21Z",
+      "side": 1,
+      "message": "So this is indeed now a translation specific for their Topic namespace, different than the Flow one.",
+      "parentUuid": "4e7eab26_adde6b6e",
+      "range": {
+        "startLine": 7012,
+        "startChar": 2,
+        "endLine": 7012,
+        "endChar": 34
+      },
+      "revId": "eeb594fc07408da1edfe06ee981edbf18933a376",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e7eab26_c427140c",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 9
