@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "4e7eab26_f6a98279",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 137,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2017-08-02T20:27:54Z",
+      "side": 1,
+      "message": "i\u0027ll get that shipped out today. I\u0027m trying to train up a new model with the latest data/feature values, but if that doesn\u0027t finish in time will upload the older model with 500t",
+      "parentUuid": "4e7eab26_7cbd7a62",
+      "range": {
+        "startLine": 137,
+        "startChar": 15,
+        "endLine": 137,
+        "endChar": 29
+      },
+      "revId": "f6c2c6d93587d9f09fec8e9c045301564fe9388b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e7eab26_7c3a5ae6",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 3
@@ -42,6 +66,24 @@
     },
     {
       "key": {
+        "uuid": "4e7eab26_cb1623ac",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 18363,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2017-08-02T20:27:54Z",
+      "side": 1,
+      "message": "good catch! I hadn\u0027t thought about that. I think it is indeed a good idea to avoid ltr here, it\u0027s pretty expensive to do, and not tuned in any way for the field stats of these other indices.",
+      "parentUuid": "4e7eab26_7c3a5ae6",
+      "revId": "f6c2c6d93587d9f09fec8e9c045301564fe9388b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "4e7eab26_5c351ef2",
         "filename": "wmf-config/InitialiseSettings.php",
         "patchSetId": 3
@@ -53,6 +95,30 @@
       "writtenOn": "2017-08-02T10:47:26Z",
       "side": 1,
       "message": "1024",
+      "range": {
+        "startLine": 18393,
+        "startChar": 11,
+        "endLine": 18393,
+        "endChar": 13
+      },
+      "revId": "f6c2c6d93587d9f09fec8e9c045301564fe9388b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_eb1bdfd2",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 18393,
+      "author": {
+        "id": 776
+      },
+      "writtenOn": "2017-08-02T20:27:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4e7eab26_5c351ef2",
       "range": {
         "startLine": 18393,
         "startChar": 11,
