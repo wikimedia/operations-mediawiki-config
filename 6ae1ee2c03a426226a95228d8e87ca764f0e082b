@@ -22,6 +22,29 @@
       "revId": "6ae1ee2c03a426226a95228d8e87ca764f0e082b",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_bc28bb33",
+        "filename": "refresh-dblist",
+        "patchSetId": 1
+      },
+      "lineNbr": 64,
+      "author": {
+        "id": 3
+      },
+      "writtenOn": "2017-08-02T23:26:06Z",
+      "side": 1,
+      "message": "And this fail too",
+      "range": {
+        "startLine": 64,
+        "startChar": 16,
+        "endLine": 64,
+        "endChar": 18
+      },
+      "revId": "6ae1ee2c03a426226a95228d8e87ca764f0e082b",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
