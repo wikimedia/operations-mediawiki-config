@@ -13503,9 +13503,10 @@ $wgConf->settings = [
 	'default' => false,
 	'sewikimedia' => true, // T68374
 
-	// T136602, T162162: Make Page Previews enabled by default for the stage 0
-	// wikis.
+	// T136602, T162162, T162672: Make Page Previews enabled by default for the
+	// stage 0 and stage 1 wikis.
 	'pp_stage0' => true,
+	'pp_stage1' => true,
 ],
 
 'wgPopupsPageBlacklist' => [
@@ -13538,14 +13539,19 @@ $wgConf->settings = [
 	// T136602: Make Page Previews enabled by default for 90% of anon users for
 	// the stage 0 wikis.
 	'pp_stage0' => 0.9,
+
+	// T162672: Make Page Previews enabled by default for the stage 1 wikis.
+	'pp_stage1' => 1,
 ],
 
 'wmgPopupsBetaFeature' => [
 	'default' => true,
 
-	// Explicitly disable Page Previews as a beta feature for the stage 0 wikis
-	// (reflecting that it's enabled in the wmgUsePopups section above).
+	// Explicitly disable Page Previews as a beta feature for the stage 0 and
+	// stage 1 wikis (reflecting that it's enabled in the wmgUsePopups section
+	// above).
 	'pp_stage0' => false,
+	'pp_stage1' => false,
 
 	'wikidatawiki' => false,
 	'wiktionary' => false,
@@ -13587,8 +13593,10 @@ $wgConf->settings = [
 'wgPopupsGateway' => [
 	'default' => 'mwApiPlain',
 
-	// Make Page Previews use RESTBase for the following stage 0 wikis.
+	// Make Page Previews use RESTBase for the following stage 0 and stage 1
+	// wikis.
 	'pp_stage0' => 'restbasePlain',
+	'pp_stage1' => 'restbasePlain',
 ],
 
 // T160081 (and others): Make sure that Page Previews can detect the many, many
