@@ -29,11 +29,6 @@ if ( file_exists( '/etc/wmflabs-instancename' ) ) {
 	$wgOverrideHostname = trim( file_get_contents( '/etc/wmflabs-instancename' ) );
 }
 
-// stream recent changes to redis
-$wgRCFeeds['redis'] = [
-	'formatter' => 'JSONRCFeedFormatter',
-	'uri'       => "redis://deployment-stream.eqiad.wmflabs:6379/rc.$wgDBname",
-];
 
 $wgProfiler['udphost'] = 'labmon1001.eqiad.wmnet';
 
