@@ -427,42 +427,6 @@ function wmfLabsSettings() {
 			'wikidataclient' => true,
 		],
 
-		'wmgUseORES' => [
-			'default' => false,
-			'wikipedia' => true, // T127661
-		],
-		'wgOresModels' => [
-			'default' => [
-				'damaging' => true,
-				'goodfaith' => false,
-				'reverted' => true,
-				'wp10' => false,
-			],
-			// This is separate because
-			// it uses the real wgOresWikiId
-			// below.
-			'enwiki' => [
-				'damaging' => true,
-				'goodfaith' => true,
-				'reverted' => false,
-				'wp10' => false,
-			],
-			'wikipedia' => [
-				'damaging' => true,
-				'goodfaith' => false,
-				'reverted' => false,
-				'wp10' => false,
-			], // T127661
-		],
-		'wgOresEnabledNamespaces' => [
-			'default' => [],
-			'enwiki' => [ 0 => true ],
-		],
-		'wgOresWikiId' => [
-			'default' => 'testwiki',
-			'enwiki' => 'enwiki',
-		],
-
 		'wmgWikibaseAllowDataAccessInUserLanguage' => [
 			'default' => false,
 			'wikidatawiki' => true,
