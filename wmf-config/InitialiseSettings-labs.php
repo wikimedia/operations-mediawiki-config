@@ -1,14 +1,22 @@
 <?php
-# WARNING: This file is publically viewable on the web.
-#          Do not put private data here.
+# WARNING: This file is publically viewable on the web. Do not put private data here.
 
-/**
- * This file is for overriding the default InitialiseSettings.php with our own
- * stuff. Prefixing a setting key with '-' to override all values from
- * InitialiseSettings.php
- *
- * Please wrap your code in functions to avoid tainting the global namespace.
- */
+# This file holds per-wiki configuration overrides specific to Beta Cluster.
+# Prefixing a setting key with '-' to override all values from InitialiseSettings.php
+# Please wrap your code in functions to avoid tainting the global namespace.
+#
+# Load order:
+#  |-- DefaultSettings.php
+#  |
+#  |-- wmf-config/CommonSettings.php
+#  |   |
+#  |   |-- wmf-config/InitialiseSettings.php
+#  |   |   `-- wmf-config/InitialiseSettings-labs.php
+#  |   |
+#  |   `-- (main stuff in CommonSettings.php)
+#  |
+#  `-- wmf-config/CommonSettings-labs.php
+#
 
 /**
  * Main entry point to override production settings. Supports key beginning with

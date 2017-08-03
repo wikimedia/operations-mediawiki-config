@@ -3,11 +3,19 @@
 
 # ######################################################################
 # CommonSettings.php is the main configuration file of the WMF cluster.
-# It is included by LocalSettings.php
+# This file contains settings common to all (or many) WMF wikis.
 #
-# This file contains settings common to all or many WMF wikis.
-# Per-wiki configuration is done in InitialiseSettings.php (included
-# into this file a little way down).
+# For per-wiki configuration, see InitialiseSettings.php instead.
+#
+# CommonSettings.php is included from LocalSettings.php.
+# LocalSettings.php is loaded by MediaWiki.
+# MediaWiki is loaded from Multiversion entrypoints, such as /w/index.php.
+#
+# At this point, only the following is available:
+# - Multiversion: Predefined globals $wmfRealm and $wmfDatacenter.
+# - MediaWiki (pre-Setup): Predefined global $IP, and loaded Autoloader,
+#                          Defines, Profiler, and DefaultSettings.
+#
 # ######################################################################
 
 use MediaWiki\Logger\LoggerFactory;
