@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_0423aea7",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 19117,
+      "author": {
+        "id": 2177
+      },
+      "writtenOn": "2017-08-03T23:34:29Z",
+      "side": 1,
+      "message": "Hm, this also activates zerowiki, and we don\u0027t want that really. Perhaps better to leave the explicit list of wikis from group0.",
+      "revId": "5188a7e1ce870b0af2bd249dac695836b8b6635d",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
