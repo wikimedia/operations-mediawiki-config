@@ -29,11 +29,23 @@ if ( file_exists( '/etc/wmflabs-instancename' ) ) {
 	$wgOverrideHostname = trim( file_get_contents( '/etc/wmflabs-instancename' ) );
 }
 
-// stream recent changes to redis
-$wgRCFeeds['redis'] = [
-	'formatter' => 'JSONRCFeedFormatter',
-	'uri'       => "redis://deployment-stream.eqiad.wmflabs:6379/rc.$wgDBname",
-];
+
+if ( $wmgUseEventBus ) {
+	wfLoadExtension( 'EventBus' );
+	$wgEventServiceUrl = "{$wmfLocalServices['eventbus']}/v1/events";
+
+	// Configure RecentChange to send recentchange events to EventBus service.
+	// Add a mapping from eventbus:// RCFeed URIs to the EventBusRCFeedEngine.
+	$wgRCEngines['eventbus'] = 'EventBusRCFeedEngine';
+	$wgRCFeeds['eventbus'] = [
+		'formatter' => 'EventBusRCFeedFormatter',
+		// Replace 'http://' in eventbus service endpoint with 'eventbus://'.
+		// This is necessary so that the URI can properly map to an entry in
+		// $wgRCEngines.  This hack can be removed after
+		// https://gerrit.wikimedia.org/r/#/c/330833/ is merged.
+		'uri' => str_replace( 'http://', 'eventbus://', $wgEventServiceUrl )
+	];
+}
 
 $wgProfiler['udphost'] = 'labmon1001.eqiad.wmnet';
 
