@@ -89,7 +89,9 @@ class CheckoutMediaWiki(cli.Application):
         cs_file = os.path.join(self.config['deploy_dir'],
                                'wmf-config', 'CommonSettings.php')
         ls_stub = (
-            '<?php\n# WARNING: This file is publically viewable on the web.' +
+            '<?php\n' +
+            '# Managed by scap (mediawiki-config:/scap/plugins/prep.py)\n' +
+            'WARNING: This file is publically viewable on the web. ' +
             'Do not put private data here.\n' +
             'include_once( "%s" );' % cs_file
         )
