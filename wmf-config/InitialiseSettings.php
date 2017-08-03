@@ -19323,10 +19323,9 @@ $wgConf->settings = [
 ],
 
 'wmgUseCodeMirror' => [
-	'default' => true,
-	'rtl' => false,
-	'wikidatawiki' => false, // Didn't feel well when this was deployed
-	'testwikidatawiki' => false,
+	'default' => false,
+	'simplewiki' => true,
+	'testwiki' => true, // T169284
 ],
 
 'wmgUseParserMigration' => [
