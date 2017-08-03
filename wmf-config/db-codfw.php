@@ -119,6 +119,7 @@ $wgLBFactoryConf = [
 		'db2043' => 50,  # C6 2.9TB 160GB, dump (inactive), vslow
 		'db2050' => 150, # C6 2.9TB 160GB, api
 		'db2057' => 400, # D6 3.3TB 160GB
+		'db2074' => 400, # D6 3.3TB 512GB
 	],
 	's4' => [
 		'db2019' => 0,   # B6 2.9TB  96GB, master
@@ -571,6 +572,7 @@ $wgLBFactoryConf = [
 	'db2071' => '10.192.0.4', # do not remove or comment out
 	'db2072' => '10.192.16.37', # do not remove or comment out
 	'db2073' => '10.192.32.167', # do not remove or comment out
+	'db2074' => '10.192.48.84', # do not remove or comment out
 	'virt1000' => '208.80.154.18', # do not remove or comment out
 	'silver' => '208.80.154.136', # do not remove or comment out
 	'labtestweb2001' => '208.80.153.14', # do not remove or comment out
