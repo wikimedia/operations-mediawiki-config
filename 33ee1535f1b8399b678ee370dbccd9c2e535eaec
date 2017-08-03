@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_7db1eadb",
+        "filename": "dblists/pp_stage1.dblist",
+        "patchSetId": 5
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-03T17:55:21Z",
+      "side": 1,
+      "message": "Great. This is useful as it tells us how it was generated.",
+      "revId": "33ee1535f1b8399b678ee370dbccd9c2e535eaec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_bdb752d2",
+        "filename": "dblists/pp_stage1_raw.dblist",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-03T17:55:21Z",
+      "side": 1,
+      "message": "The existence of this will confuse people outside the team. Let\u0027s remove it.",
+      "revId": "33ee1535f1b8399b678ee370dbccd9c2e535eaec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_9db296e3",
+        "filename": "dblists/pp_stage2.dblist",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-03T17:55:21Z",
+      "side": 1,
+      "message": "Since this is only 2 wikis I\u0027d advise explicitly adding entries for wgPopups \u003d\u003e false\n\nA enwiki definition will always trump a dblist definition.\n\nA dblist is probably not useful here and will only add confusion.",
+      "revId": "33ee1535f1b8399b678ee370dbccd9c2e535eaec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_fda63aa6",
+        "filename": "docroot/noc/conf/pp_stage1_raw.dblist",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-03T17:55:21Z",
+      "side": 1,
+      "message": "The existence of this will confuse people outside the team. Let\u0027s remove it.",
+      "revId": "33ee1535f1b8399b678ee370dbccd9c2e535eaec",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
