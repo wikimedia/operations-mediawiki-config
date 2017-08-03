@@ -19114,10 +19114,11 @@ $wgConf->settings = [
 
 'wmgDebugJobQueueEventBus' => [
 	'default' => false,
-	'testwiki' => true,
-	'test2wiki' => true,
-	'testwikidatawiki' => true,
 	'mediawikiwiki' => true,
+	'test2wiki' => true,
+	'testwiki' => true,
+	'testwikidatawiki' => true,
+	'group1' => true,
 ],
 
 'wmgUseCapiunto' => [
