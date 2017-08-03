@@ -13503,14 +13503,9 @@ $wgConf->settings = [
 	'default' => false,
 	'sewikimedia' => true, // T68374
 
-	// T136602, T162162: Make Page Previews enabled by default for the following
-	// "stage 0" wikis.
-	'itwiki' => true,
-	'ruwiki' => true,
-	'elwiki' => true,
-	'cawiki' => true,
-	'hewiki' => true,
-	'huwiki' => true,
+	// T136602, T162162: Make Page Previews enabled by default for the stage 0
+	// wikis.
+	'pp_stage0' => true,
 ],
 
 'wgPopupsPageBlacklist' => [
@@ -13541,18 +13536,17 @@ $wgConf->settings = [
 	'sewikimedia' => 1, // T68374
 
 	// T136602: Make Page Previews enabled by default for 90% of anon users for
-	// the following stage 0 wikis. As above, note well that enabling Page
-	// Previews by default on hewiki is blocked on T160614.
-	'itwiki' => 0.9,
-	'ruwiki' => 0.9,
-	'elwiki' => 0.9,
-	'cawiki' => 0.9,
-	'hewiki' => 0.9,
-	'huwiki' => 0.9
+	// the stage 0 wikis.
+	'pp_stage0' => 0.9,
 ],
 
 'wmgPopupsBetaFeature' => [
 	'default' => true,
+
+	// Explicitly disable Page Previews as a beta feature for the stage 0 wikis
+	// (reflecting that it's enabled in the wmgUsePopups section above).
+	'pp_stage0' => false,
+
 	'wikidatawiki' => false,
 	'wiktionary' => false,
 	'nonbetafeatures' => false,
@@ -13566,19 +13560,19 @@ $wgConf->settings = [
 	'specieswiki' => false,
 ],
 
-'wgPopupsSchemaSamplingRate' => [
 	// Careful! This value should not be increased without coordination with the
 	// Operations and/or Analytics teams. At the very least, be mindful of the
 	// current rate of Popups events being logged:
 	// https://grafana.wikimedia.org/dashboard/db/eventlogging-schema?var-schema=Popups
-	'default' => 0.001,
+'wgPopupsSchemaSamplingRate' => [
+	'default' => 0.000,
+
+	'pp_stage0' => 0.001,
 
 	// T171325: Increase the per-session sampling rate of the Page Previews
 	// EventLogging instrumentation to 1% of all distinct browser sessions so
-	// that analysis of the stage 0* test can be completed in a reasonable amount
+	// that analysis of the stage 0 test can be completed in a reasonable amount
 	// of time.
-	//
-	// * See $wmgUsePopups above for the definition of "stage 0".
 	'itwiki' => 0.01,
 	'huwiki' => 0.01,
 	'ruwiki' => 0.01,
@@ -13590,28 +13584,11 @@ $wgConf->settings = [
 	'default' => 0.01,
 ],
 
-'wgPopupsAPIUseRESTBase' => [
-	'default' => false,
-
-	// T158221: Make Page Previews use RESTBase for the following stage 0 wikis.
-	'itwiki' => true,
-	'ruwiki' => true,
-	'elwiki' => true,
-	'cawiki' => true,
-	'hewiki' => true,
-	'huwiki' => true,
-],
-
 'wgPopupsGateway' => [
 	'default' => 'mwApiPlain',
 
-	// T158221: Make Page Previews use RESTBase for the following stage 0 wikis.
-	'itwiki' => 'restbasePlain',
-	'ruwiki' => 'restbasePlain',
-	'elwiki' => 'restbasePlain',
-	'cawiki' => 'restbasePlain',
-	'hewiki' => 'restbasePlain',
-	'huwiki' => 'restbasePlain',
+	// Make Page Previews use RESTBase for the following stage 0 wikis.
+	'pp_stage0' => 'restbasePlain',
 ],
 
 // T160081 (and others): Make sure that Page Previews can detect the many, many
