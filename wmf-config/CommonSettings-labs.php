@@ -1,10 +1,21 @@
 <?php
+# WARNING: This file is publically viewable on the web. Do not put private data here.
 
-# WARNING: This file is publically viewable on the web.
-# Do not put private data here.
-
-# This file hold configuration statement overriding CommonSettings.php
+# This file holds configuration overrides specific to Beta Cluster.
 # Should not be loaded on production
+#
+# Load order:
+#  |-- DefaultSettings.php
+#  |
+#  |-- wmf-config/CommonSettings.php
+#  |   |
+#  |   |-- wmf-config/InitialiseSettings.php
+#  |   |   `-- wmf-config/InitialiseSettings-labs.php
+#  |   |
+#  |   `-- (main stuff in CommonSettings.php)
+#  |
+#  `-- wmf-config/CommonSettings-labs.php
+#
 
 if ( $wmfRealm == 'labs' ) {  # safe guard
 // test wiki
