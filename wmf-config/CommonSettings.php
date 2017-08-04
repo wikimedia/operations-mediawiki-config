@@ -2857,18 +2857,21 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 		$wgExtraNamespaces[2600] = 'Topic'; // NS_TOPIC
 	}
 
-	$wgFlowDefaultWikiDb = $wmgFlowDefaultWikiDb;
-	$wgFlowCluster = $wmgFlowCluster;
+	// Migration
+	if ( isset( $wmgFlowDefaultWikiDb ) ) {
+		$wgFlowDefaultWikiDb = $wmgFlowDefaultWikiDb;
+		$wgFlowCluster = $wmgFlowCluster;
+		$wgFlowMaintenanceMode = $wmgFlowMaintenanceMode;
+		$wgFlowEnableOptInBetaFeature = $wmgFlowEnableOptInBetaFeature;
+	}
+
 	$wgFlowExternalStore = $wgDefaultExternalStore;
-	$wgFlowMaintenanceMode = $wmgFlowMaintenanceMode;
 
 	$wgFlowEventLogging = true;
 
 	if ( $wmgFlowAllowAutoconfirmedEdit ) {
 		$wgGroupPermissions['autoconfirmed']['flow-edit-post'] = true;
 	}
-
-	$wgFlowEnableOptInBetaFeature = $wmgFlowEnableOptInBetaFeature;
 }
 
 if ( $wmgUseDisambiguator ) {
