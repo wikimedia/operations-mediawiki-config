@@ -130,8 +130,8 @@ $wgCirrusSearchRescoreProfiles['enwiki-500t-v1-20rs'] = [
 		],
 		[
 			'window' => 20,
-			'query_weight' => 0.0,
-			'rescore_query_weight' => 1.0,
+			'query_weight' => 1.0,
+			'rescore_query_weight' => 10000.0,
 			'score_mode' => 'total',
 			'type' => 'ltr',
 			'model' => 'enwiki_32153k_500t',
