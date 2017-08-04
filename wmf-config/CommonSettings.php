@@ -2841,14 +2841,6 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 		$wgExtraNamespaces[2600] = 'Topic'; // NS_TOPIC
 	}
 
-	// Migration
-	if ( isset( $wmgFlowDefaultWikiDb ) ) {
-		$wgFlowDefaultWikiDb = $wmgFlowDefaultWikiDb;
-		$wgFlowCluster = $wmgFlowCluster;
-		$wgFlowMaintenanceMode = $wmgFlowMaintenanceMode;
-		$wgFlowEnableOptInBetaFeature = $wmgFlowEnableOptInBetaFeature;
-	}
-
 	$wgFlowExternalStore = $wgDefaultExternalStore;
 
 	$wgFlowEventLogging = true;
