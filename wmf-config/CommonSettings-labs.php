@@ -61,10 +61,6 @@ $wgDnsBlacklistUrls   = [
 	'proxies.dnsbl.sorbs.net.',
 ];
 
-if ( $wmgUseOAuth ) {
-	$wgMWOAuthCentralWiki = 'metawiki';
-}
-
 if ( $wmgUseFlow ) {
 	// Override CommonSettings.php, which has:
 	// $wgFlowExternalStore = $wgDefaultExternalStore;
