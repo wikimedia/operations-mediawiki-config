@@ -1068,6 +1068,7 @@ if ( $wmgUsePoolCounter ) {
 
 if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
+	$wgScoreLilypond = '/usr/local/bin/mediawiki-firejail-lilypond';
 	$wgScoreFileBackend = $wmgScoreFileBackend;
 	$wgScorePath = $wmgScorePath;
 }
