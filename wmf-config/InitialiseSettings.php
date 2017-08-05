@@ -2279,6 +2279,7 @@ $wgConf->settings = [
 	'newiki' => 'विकिपीडिया',
 	'newikibooks' => 'विकिपुस्तक', // T124881
 	'nlwiktionary' => 'WikiWoordenboek',
+	'nlwikinews' => 'Wikinieuws', // T172594
 	'noboard_chapterswikimedia' => 'Wikimedia Norway Internal Board',
 	'nostalgiawiki' => 'Wikipedia',
 	'nowikibooks' => 'Wikibøker',
