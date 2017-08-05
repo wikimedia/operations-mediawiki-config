@@ -8271,6 +8271,7 @@ $wgConf->settings = [
 	'+enwikibooks' => [
 		// 'rollbacker' => [ 'rollback' => true ],
 		// 'patroller' => [ 'patrol' => true, 'autopatrol' => true ],
+		'editor' => [ 'autopatrol' => true ], // T172561
 		'flood' => [ 'bot' => true ],
 		'uploader' => [ 'upload' => true, 'reupload' => true ],
 	],
