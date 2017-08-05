@@ -9938,7 +9938,7 @@ $wgConf->settings = [
 	],
 	'+foundationwiki' => [
 		'sysop' => [ 'inactive', 'flood' ],
-		'bureaucrat' => [ 'import', 'transwiki', 'inactive', 'petitiondata' ],
+		'bureaucrat' => [ 'import', 'transwiki', 'inactive', 'petitiondata', 'oauthadmin' ],
 	],
 	'+frwiki' => [
 		'sysop' => [ 'rollbacker' ], // T170780
@@ -10681,7 +10681,7 @@ $wgConf->settings = [
 	],
 	'+foundationwiki' => [
 		'sysop' => [ 'inactive', 'confirmed', 'flood' ],
-		'bureaucrat' => [ 'sysop', 'bureaucrat', 'import', 'transwiki', 'inactive', 'confirmed', 'petitiondata' ],
+		'bureaucrat' => [ 'sysop', 'bureaucrat', 'import', 'transwiki', 'inactive', 'confirmed', 'petitiondata', 'oauthadmin' ],
 	],
 	'+frwiki' => [
 		'sysop' => [ 'rollbacker' ], // T170780
@@ -12512,6 +12512,7 @@ $wgConf->settings = [
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
+	'foundationwiki' => true, // T170301
 ],
 
 # @}
