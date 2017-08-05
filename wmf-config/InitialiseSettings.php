@@ -12510,6 +12510,7 @@ $wgConf->settings = [
 	'default' => true,
 	'private' => false,
 	'fishbowl' => false,
+	'foundationwiki' => true, // T170301
 ],
 
 # @}
