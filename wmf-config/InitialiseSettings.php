@@ -15558,6 +15558,7 @@ $wgConf->settings = [
 'wgMinervaEnableSiteNotice' => [
 	'default' => false,
 	'arwiki' => true,
+	'kowiki' => true, // T172630
 ],
 
 'wgMinervaApplyKnownTemplateHacks' => [
