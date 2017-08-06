@@ -16,15 +16,15 @@ $wgPoolCounterConf = [
 	'CirrusSearch-Search' => [
 		'class' => 'PoolCounter_Client',
 		'timeout' => 15,
-		'workers' => 382,
+		'workers' => 200,
 		'maxqueue' => 600,
 	],
 	// Super common and mostly fast
 	'CirrusSearch-Prefix' => [
 		'class' => 'PoolCounter_Client',
 		'timeout' => 15,
-		'workers' => 432,
-		'maxqueue' => 600,
+		'workers' => 32,
+		'maxqueue' => 60,
 	],
 	// Super common and mostly fast, replaces Prefix (eventually)
 	'CirrusSearch-Completion' => [
