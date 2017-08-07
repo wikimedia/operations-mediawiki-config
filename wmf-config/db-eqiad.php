@@ -154,6 +154,8 @@ $wgLBFactoryConf = [
 		'db1085' => 300, # B3 3.6TB 512GB, api #master for db1102 (sanitarium 3) - T153743
 		'db1088' => 500, # C2 3.6TB 512GB
 		'db1093' => 500, # D2 3.6TB 512GB
+		# 'db1098' => 1,   # B5 3.6TB 512GB, watchlist, recentchanges, contributions, logpager
+
 	],
 	's7' => [
 		'db1062' => 0,   # D4 2.8TB 128GB, master
@@ -398,18 +400,23 @@ $wgLBFactoryConf = [
 		],
 		'watchlist' => [
 			'db1037' => 1,
+			'db1098' => 1,
 		],
 		'recentchanges' => [
 			'db1037' => 1,
+			'db1098' => 1,
 		],
 		'recentchangeslinked' => [
 			'db1037' => 1,
+			'db1098' => 1,
 		],
 		'contributions' => [
 			'db1037' => 1,
+			'db1098' => 1,
 		],
 		'logpager' => [
 			'db1037' => 1,
+			'db1098' => 1,
 		],
 	],
 	's7' => [
@@ -515,6 +522,7 @@ $wgLBFactoryConf = [
 	'db1094' => '10.64.48.153', # do not remove or comment out
 	'db1096' => '10.64.0.163', # do not remove or comment out
 	'db1097' => '10.64.48.11', # do not remove or comment out
+	'db1098' => '10.64.16.83', # do not remove or comment out
 	'db1099' => '10.64.16.84', # do not remove or comment out
 	'db1101' => '10.64.32.198', # do not remove or comment out
 	'db2001' => '10.192.0.4', # do not remove or comment out
