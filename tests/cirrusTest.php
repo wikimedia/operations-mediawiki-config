@@ -243,6 +243,7 @@ class cirrusTests extends WgConfTestCase {
 					'wmgCirrusSearchSimilarityProfile' => 'wmf_defaults',
 					'wmgCirrusSearchRescoreProfile' => 'wsum_inclinks',
 					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
+					'wmgCirrusSearchMaxPhraseTokens' => 10,
 				],
 			],
 			'zh_min_nanwikisource' => [ 'zh_min_nanwikisource', 'wikisource',
