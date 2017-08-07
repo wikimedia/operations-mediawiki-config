@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_a11de115",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 15561,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-08-07T10:28:01Z",
+      "side": 1,
+      "message": "It seems to be custom to add the task number after the config change to track things. Not sure if it is needed here though.",
+      "range": {
+        "startLine": 15561,
+        "startChar": 1,
+        "endLine": 15561,
+        "endChar": 18
+      },
+      "revId": "19b795ed1b4f0133aceba5be8b1be69ad6806551",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
