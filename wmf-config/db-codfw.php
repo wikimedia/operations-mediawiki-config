@@ -119,7 +119,7 @@ $wgLBFactoryConf = [
 		'db2043' => 50,  # C6 2.9TB 160GB, dump (inactive), vslow
 		'db2050' => 150, # C6 2.9TB 160GB, api
 		'db2057' => 400, # D6 3.3TB 160GB
-		'db2074' => 400, # D6 3.3TB 512GB # InnoDB compressed
+		# 'db2074' => 400, # D6 3.3TB 512GB # InnoDB compressed #T171321
 	],
 	's4' => [
 		'db2051' => 0,   # B8 2.9TB 160GB, master
