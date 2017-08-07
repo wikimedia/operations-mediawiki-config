@@ -257,6 +257,9 @@ $wgCirrusSearchCrossProjectShowMultimedia = $wmgCirrusSearchCrossProjectShowMult
 // Configure extra index settings set during index creation
 $wgCirrusSearchExtraIndexSettings = $wmgCirrusSearchExtraIndexSettings;
 
+// Limit on the number of tokens we will run phrase rescores with
+$wgCirrusSearchMaxPhraseTokens = $wmgCirrusSearchMaxPhraseTokens;
+
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php
