@@ -15425,6 +15425,11 @@ $wgConf->settings = [
 		'copyright-width' => 122,
 		'copyright-height' => 22,
 	],
+	'urwiki' => [
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-ur.svg',
+		'copyright-width' => 79,
+		'copyright-height' => 22,
+	],
 	'wikivoyage' => [
 		'copyright' => '/static/images/mobile/copyright/wikivoyage-wordmark-en.svg',
 		'copyright-width' => 96,
