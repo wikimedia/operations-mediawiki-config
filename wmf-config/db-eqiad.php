@@ -399,23 +399,23 @@ $wgLBFactoryConf = [
 		],
 		'watchlist' => [
 			'db1037' => 1,
-			'db1098' => 1,
+			'db1098' => 100,
 		],
 		'recentchanges' => [
 			'db1037' => 1,
-			'db1098' => 1,
+			'db1098' => 100,
 		],
 		'recentchangeslinked' => [
 			'db1037' => 1,
-			'db1098' => 1,
+			'db1098' => 100,
 		],
 		'contributions' => [
 			'db1037' => 1,
-			'db1098' => 1,
+			'db1098' => 100,
 		],
 		'logpager' => [
 			'db1037' => 1,
-			'db1098' => 1,
+			'db1098' => 100,
 		],
 	],
 	's7' => [
