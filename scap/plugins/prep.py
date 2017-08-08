@@ -90,9 +90,9 @@ class CheckoutMediaWiki(cli.Application):
                                'wmf-config', 'CommonSettings.php')
         ls_stub = (
             '<?php\n' +
-            '# Managed by scap (mediawiki-config:/scap/plugins/prep.py)\n' +
+            '/*\nManaged by scap (mediawiki-config:/scap/plugins/prep.py)\n' +
             'WARNING: This file is publically viewable on the web. ' +
-            'Do not put private data here.\n' +
+            'Do not put private data here.\n*/' +
             'include_once( "%s" );' % cs_file
         )
 
