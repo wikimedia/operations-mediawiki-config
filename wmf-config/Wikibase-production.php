@@ -111,6 +111,13 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgWBQualityConstraintsEnableConstraintsImportFromStatements = true;
 	$wgWBRepoSettings['dispatchingLockManager'] = 'redisLockManager';
 	$wgWBRepoSettings['writeFullEntityIdColumn'] = true;
+
+	// T112606
+	$wgRightsPage = 'Wikidata:Copyright';
+	$wgRightsText = 'All structured data from the main and property namespace is available under ' .
+		'the Creative Commons CC0 License; text in the other namespaces is available under ' .
+		'the Creative Commons Attribution-ShareAlike License; additional terms may apply.';
+	$wgRightsUrl = 'creativecommons.org/licenses/by-sa/3.0';
 }
 
 if ( $wmgUseWikibaseClient ) {
