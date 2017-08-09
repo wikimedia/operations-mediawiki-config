@@ -19385,7 +19385,7 @@ $wgConf->settings = [
 'wgShortPagesNamespaceBlacklist' => [
 	'default' => [],
 	// T170687
-	'commons' => [ NS_FILE ],
+	'commonswiki' => [ NS_FILE ],
 ],
 
 // Temporarily enable until 1.30.0-wmf.12 rolls out -RK
