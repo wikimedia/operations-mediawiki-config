@@ -12658,6 +12658,7 @@ $wgConf->settings = [
 	'hifwiki' => true, // T99824
 	'incubatorwiki' => true,
 	'kkwiki' => true, // T149563
+	'knwiki' => true, // T172894
 	'kowiki' => true,
 	'ladwiki' => true, // T32221
 	'lvwiki' => true,
