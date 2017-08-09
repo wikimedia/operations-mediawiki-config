@@ -9922,11 +9922,11 @@ $wgConf->settings = [
 		'sysop' => [ 'curator' ], // T113109
 	],
 	'+eswiki' => [
-		'bureaucrat' => [ 'rollbacker', 'confirmed' ],
+		'bureaucrat' => [ 'rollbacker' ],
 		'sysop' => [ 'rollbacker', 'autopatrolled', 'patroller' ],
 	],
 	'+eswikibooks' => [
-		'bureaucrat' => [ 'flood', 'confirmed' ], // T93371
+		'bureaucrat' => [ 'flood' ], // T93371
 		'sysop' => [ 'rollbacker', 'patroller', 'autopatrolled' ], // T93371, T111455
 	],
 	'+eswikinews' => [
@@ -9939,7 +9939,6 @@ $wgConf->settings = [
 		'sysop' => [ 'autopatrolled' ], // T69557
 	],
 	'+eswikivoyage' => [
-		'bureaucrat' => [ 'confirmed', ], // T49325
 		'sysop' => [ 'rollbacker', 'patroller', 'autopatrolled', ], // T46285, T57665
 	],
 	'+eswiktionary' => [
@@ -10245,7 +10244,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'inactive' ],
 	],
 	'+ptwiki' => [
-		'bureaucrat' => [ 'eliminator', 'confirmed', 'autoreviewer', 'interface-editor', 'accountcreator' ], // T41905, T65750
+		'bureaucrat' => [ 'eliminator', 'autoreviewer', 'interface-editor', 'accountcreator' ], // T41905, T65750
 		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ], // T65750
 	],
 	'+quwiki' => [
@@ -10376,7 +10375,7 @@ $wgConf->settings = [
 	],
 	'+urwiki' => [
 		// T44737, T47643, T120348, T133564, T137888, T139302, T144701
-		'bureaucrat' => [ 'import', 'confirmed', 'abusefilter', 'rollbacker', 'massmessage-sender', 'interface-editor' ],
+		'bureaucrat' => [ 'import', 'abusefilter', 'rollbacker', 'massmessage-sender', 'interface-editor' ],
 		'sysop' => [ 'confirmed', 'abusefilter', 'rollbacker', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender' ],
 	],
 	'+viwiki' => [
@@ -10439,7 +10438,6 @@ $wgConf->settings = [
 		'bureaucrat' => [
 			'bot',
 			'bureaucrat',
-			'confirmed',
 			'contentadmin',
 			'oathauth',
 			'oauthadmin',
@@ -10674,11 +10672,11 @@ $wgConf->settings = [
 		'sysop' => [ 'abusefilter', 'autopatrolled', ],
 	],
 	'+eswiki' => [
-		'bureaucrat' => [ 'rollbacker', 'confirmed' ],
+		'bureaucrat' => [ 'rollbacker' ],
 		'sysop' => [ 'rollbacker', 'autopatrolled', 'patroller' ],
 	],
 	'+eswikibooks' => [
-		'bureaucrat' => [ 'flood', 'confirmed' ],
+		'bureaucrat' => [ 'flood' ],
 		'sysop' => [ 'rollbacker', 'patroller', 'autopatrolled' ], // T111455
 	],
 	'+eswikinews' => [
@@ -10691,7 +10689,6 @@ $wgConf->settings = [
 		'sysop' => [ 'autopatrolled' ], // T69557
 	],
 	'+eswikivoyage' => [
-		'bureaucrat' => [ 'confirmed', ], // T49325
 		'sysop' => [ 'rollbacker', 'patroller', 'autopatrolled', ], // T46285, T57665
 	],
 	'+eswiktionary' => [
@@ -10999,7 +10996,7 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'interface-editor' ], // T133472
 	],
 	'+ptwiki' => [
-		'bureaucrat' => [ 'eliminator', 'confirmed', 'autoreviewer', 'interface-editor', 'accountcreator', 'bureaucrat', 'sysop' ], // T41905, T65750, T107661
+		'bureaucrat' => [ 'eliminator', 'autoreviewer', 'interface-editor', 'accountcreator', 'bureaucrat', 'sysop' ], // T41905, T65750, T107661
 		'sysop' => [ 'rollbacker', 'autoreviewer', 'confirmed', 'accountcreator' ], // T65750
 	],
 	'+ptwikinews' => [
@@ -11142,7 +11139,7 @@ $wgConf->settings = [
 	],
 	'+urwiki' => [
 		// T44737, T47643, T120348, T133564, T137888, T139302, T144701
-		'bureaucrat' => [ 'import', 'confirmed', 'abusefilter', 'rollbacker', 'massmessage-sender', 'interface-editor' ],
+		'bureaucrat' => [ 'import', 'abusefilter', 'rollbacker', 'massmessage-sender', 'interface-editor' ],
 		'sysop' => [ 'confirmed', 'accountcreator', 'filemover', 'autopatrolled', 'massmessage-sender' ],
 	],
 	'+viwiki' => [
@@ -11209,7 +11206,6 @@ $wgConf->settings = [
 		],
 		'bureaucrat' => [
 			'bot',
-			'confirmed',
 			'contentadmin',
 			'flood',
 			'oathauth',
