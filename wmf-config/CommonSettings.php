@@ -184,7 +184,7 @@ if ( !$globals ) {
 	# Expand computed dblists with ./multiversion/bin/expanddblist
 	foreach ( [ 'private', 'fishbowl', 'special', 'closed', 'flow', 'flaggedrevs', 'small', 'medium',
 			'large', 'wikimania', 'wikidata', 'wikidataclient', 'visualeditor-nondefault',
-			'commonsuploads', 'nonbetafeatures', 'group0', 'group1', 'group2', 'wikipedia', 'nonglobal',
+			'commonsuploads', 'nonbetafeatures', 'group0', 'group1', 'group2', 'jobqueue_group1', 'wikipedia', 'nonglobal',
 			'wikitech', 'nonecho', 'mobilemainpagelegacy', 'compact-language-links',
 			'wikipedia-cyrillic', 'wikipedia-e-acute', 'wikipedia-devanagari',
 			'wikipedia-english',
