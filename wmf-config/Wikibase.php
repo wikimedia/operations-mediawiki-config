@@ -125,9 +125,11 @@ if ( $wmgUseWikibaseRepo ) {
 	$wgPropertySuggesterDeprecatedIds = [
 		143, // imported from
 		/**
-		 * Deprecated properties (none at the moment)
+		 * Deprecated properties
 		 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18644427
 		 */
+		1222, // (deprecated) NARA person ID
+		2315, // comment (DEPRECATED)
 		/**
 		 * @see https://www.wikidata.org/w/index.php?oldid=335040857
 		 */
@@ -147,6 +149,8 @@ if ( $wmgUseWikibaseRepo ) {
 		2368, // wikibase-property
 		2535, // math
 		2536, // external-id
+		4045, // tabular-data
+		4047, // geo-shape
 	];
 
 	// Don't try to let users answer captchas if they try to add links
