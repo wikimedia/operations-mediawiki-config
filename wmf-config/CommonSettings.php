@@ -540,7 +540,7 @@ if ( $wmgPrivateWikiUploads ) {
 	$wgFileExtensions[] = 'aif'; // "
 	$wgFileExtensions[] = 'aiff'; // "
 
-	# Becausee I hate having to find print drivers -- tomasz
+	# Because I hate having to find print drivers -- tomasz
 	$wgFileExtensions[] = 'ppd';
 
 	# InDesign & PhotoShop, Illustrator wanted for Chapters logo work
@@ -554,6 +554,11 @@ if ( $wmgPrivateWikiUploads ) {
 
 	# Dia Diagrams files --fred.
 	$wgFileExtensions[] = 'dia';
+
+	# Font files (so we can upload Montserrat to donatewiki) --Roan
+	$wgFileExtensions[] = 'woff';
+	$wgFileExtensions[] = 'woff2';
+
 	// To allow OpenOffice doc formats we need to not blacklist zip files
 	$wgMimeTypeBlacklist = array_diff(
 		$wgMimeTypeBlacklist,
