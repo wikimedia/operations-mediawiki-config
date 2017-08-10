@@ -216,7 +216,6 @@ if ( $wmgUseWikibaseClient ) {
 		];
 
 		$wgWBClientSettings['languageLinkSiteGroup'] = 'wikipedia';
-		$wgWBClientSettings['injectRecentChanges'] = false;
 		$wgWBClientSettings['showExternalRecentChanges'] = false;
 	}
 
