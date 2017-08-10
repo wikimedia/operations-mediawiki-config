@@ -329,6 +329,7 @@ $wgConf->settings = [
 	'itwikivoyage' => 'Europe/Rome', // T43992
 	'hiwikiquote' => 'Asia/Kolkata', // T126185
 	'hiwikiversity' => 'Asia/Kolkata', // T168765
+	'hiwikivoyage' => 'Asia/Kolkata', // T173013
 	'hrwiki' => 'Europe/Berlin',
 	'hrwikibooks' => 'Europe/Zagreb',
 	'hrwikiquote' => 'Europe/Berlin',
@@ -1107,6 +1108,7 @@ $wgConf->settings = [
 	'fawikivoyage' => '/static/images/project-logos/fawikivoyage.png', // T73382
 	'fiwikivoyage' => '/static/images/project-logos/fiwikivoyage.png', // T151570
 	'hewikivoyage' => '/static/images/project-logos/hewikivoyage.png',
+	'hiwikivoyage' => '/static/images/project-logos/hiwikivoyage.png', // T173013
 	'plwikivoyage' => '/static/images/project-logos/plwikivoyage.png',
 	'ukwikivoyage' => '/static/images/project-logos/ukwikivoyage.png', // T110370
 	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage.png', // T61077
@@ -1620,6 +1622,7 @@ $wgConf->settings = [
 	'cswikivoyage' => [ '1.5x' => '/static/images/project-logos/cswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/cswikivoyage-2x.png' ], // T150618
 	'eswikivoyage' => [ '1.5x' => '/static/images/project-logos/eswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/eswikivoyage-2x.png' ], // T170604
 	'fiwikivoyage' => [ '1.5x' => '/static/images/project-logos/fiwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/fiwikivoyage-2x.png' ],
+	'hiwikivoyage' => [ '1.5x' => '/static/images/project-logos/hiwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/hiwikivoyage-2x.png' ], // T173013
 	'viwikivoyage' => [ '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ], // T151570
 
 	# Wikinews
@@ -1743,7 +1746,7 @@ $wgConf->settings = [
 	'aswiki' => '/wiki/ৱিকিপিডিয়া:ফাইল_আপল’ড_বিশেষজ্ঞ',
 	'azbwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=azb', // T106305
 	'bgwiki' => '/wiki/MediaWiki:Uploadtext', // T16836
-	'bnwiki' => '/wiki/উইকিপিডিয়া:আপলোড',
+	'bnwiki' => '/wiki/উইকিপিডিয়া:আপলোড',
 	'bswiki' => '/wiki/Wikipedia:Upload', // T14044
 	'dawiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=da&campaign=dk', // T39662
 	'dewikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=de',
@@ -2048,7 +2051,7 @@ $wgConf->settings = [
 	'azbwiki' => 'ویکی‌پدیا', // T106305
 	'bawiki' => 'Википедия', // T43167
 	'bawikibooks' => 'Викидәреслек', // T173471
-	'bdwikimedia' => 'উইকিমিডিয়া বাংলাদেশ',
+	'bdwikimedia' => 'উইকিমিডিয়া বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
 	'bewiki' => 'Вікіпедыя',
 	'bewikimedia' => 'Wikimedia Belgium',
@@ -2191,6 +2194,7 @@ $wgConf->settings = [
 	'hewiktionary' => 'ויקימילון',
 	'hiwiki' => 'विकिपीडिया',
 	'hiwikiversity' => 'विकिविद्यालय', // T168765
+	'hiwikivoyage' => 'विकियात्रा', // T173013
 	'hiwikiquote' => 'विकिसूक्ति', // T126185
 	'hiwiktionary' => 'विक्षनरी',
 	'hrwiki' => 'Wikipedija',
@@ -2689,6 +2693,7 @@ $wgConf->settings = [
 	'hewiktionary' => 'ויקימילון',
 	'hiwiki' => 'विकिपीडिया',
 	'hiwikiversity' => 'विकिविद्यालय',
+	'hiwikivoyage' => 'विकियात्रा', // T173013
 	'hiwikiquote' => 'विकिसूक्ति', // T126185
 	'hiwiktionary' => 'विक्षनरी',
 	'hrwiki' => 'Wikipedija',
@@ -2997,6 +3002,7 @@ $wgConf->settings = [
 	'gagwiki' => 'Vikipediyanın_laflanması',
 	'guwikiquote' => 'વિકિસૂક્તિની_ચર્ચા', // T121853
 	'guwikisource' => 'વિકિસ્રોત_ચર્ચા',
+	'hiwikivoyage' => 'विकियात्रा_वार्ता', // T173013
 	'hrwikisource' => 'Razgovor_o_Wikizvoru',
 	'hsbwiktionary' => 'Diskusija_k_Wikisłownikej', // T43328
 	'huwikinews' => 'Wikihírek-vita',
