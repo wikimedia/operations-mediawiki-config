@@ -13207,6 +13207,7 @@ $wgConf->settings = [
 	'ptwikibooks' => 'comma', // T29256
 	'guwikisource' => 'any', // T42173
 	'plwikisource' => 'any', // T131771
+	'srwikisource' => 'any', // T172974
 	'wikidatawiki' => 'any', // T144687
 	'zhwikinews' => 'any', // T53604
 ],
