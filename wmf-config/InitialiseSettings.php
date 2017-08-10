@@ -1199,6 +1199,7 @@ $wgConf->settings = [
 	'wikimania2015wiki' => '/static/images/project-logos/wikimania2015wiki.png',  // T50382
 	'wikimania2016wiki' => '/static/images/project-logos/wikimania2016wiki.png',
 	'wikimania2017wiki' => '/static/images/project-logos/wikimania2017wiki.png',  // T122062
+	'wikimania2018wiki' => '/static/images/project-logos/wikimania2017wiki.png',  // T173042
 	'wikimaniateamwiki' => '/static/images/project-logos/wikimaniateamwiki.png',  // T50376
 ],
 # @} end of wgLogo
