@@ -260,7 +260,6 @@ $wgConf->settings = [
 	'atjwiki' => 'America/Montreal', // T167714
 	'barwiki' => 'Europe/Berlin',
 	'bat_smgwiki' => 'Europe/Vilnius',
-	'bawikibooks' => 'Asia/Yekaterinburg', // T173471
 	'bdwikimedia' => 'Asia/Dhaka', // T150252
 	'be_x_oldwiki' => 'Europe/Minsk',
 	'bewiki' => 'Europe/Minsk',
@@ -1200,6 +1199,7 @@ $wgConf->settings = [
 	'wikimania2015wiki' => '/static/images/project-logos/wikimania2015wiki.png',  // T50382
 	'wikimania2016wiki' => '/static/images/project-logos/wikimania2016wiki.png',
 	'wikimania2017wiki' => '/static/images/project-logos/wikimania2017wiki.png',  // T122062
+	'wikimania2018wiki' => '/static/images/project-logos/wikimania2018wiki.png',  // T173042
 	'wikimaniateamwiki' => '/static/images/project-logos/wikimaniateamwiki.png',  // T50376
 ],
 # @} end of wgLogo
@@ -1532,7 +1532,6 @@ $wgConf->settings = [
 	'siwiktionary' => [ '1.5x' => '/static/images/project-logos/siwiktionary-1.5x.png', '2x' => '/static/images/project-logos/siwiktionary-2x.png' ], // T150618
 	'skwiktionary' => [ '1.5x' => '/static/images/project-logos/skwiktionary-1.5x.png', '2x' => '/static/images/project-logos/skwiktionary-2x.png' ], // T150618
 	'slwiktionary' => [ '1.5x' => '/static/images/project-logos/slwiktionary-1.5x.png', '2x' => '/static/images/project-logos/slwiktionary-2x.png' ], // T150618
-	'srwiktionary' => [ '1.5x' => '/static/images/project-logos/srwiktionary-1.5x.png', '2x' => '/static/images/project-logos/srwiktionary-2x.png' ], // T172245
 	'suwiktionary' => [ '1.5x' => '/static/images/project-logos/suwiktionary-1.5x.png', '2x' => '/static/images/project-logos/suwiktionary-2x.png' ], // T150618
 	'svwiktionary' => [ '1.5x' => '/static/images/project-logos/svwiktionary-1.5x.png', '2x' => '/static/images/project-logos/svwiktionary-2x.png' ], // T150618
 	'swwiktionary' => [ '1.5x' => '/static/images/project-logos/swwiktionary-1.5x.png', '2x' => '/static/images/project-logos/swwiktionary-2x.png' ], // T150618
@@ -1566,7 +1565,6 @@ $wgConf->settings = [
 	'zhwikiquote' => [ '1.5x' => '/static/images/project-logos/zhwikiquote-1.5x.png', '2x' => '/static/images/project-logos/zhwikiquote-2x.png' ], // T150618
 
 	# Wikibooks
-	'bawikibooks' => [ '1.5x' => '/static/images/project-logos/bawikibooks-1.5x.png', '2x' => '/static/images/project-logos/bawikibooks-2x.png' ], // T173471
 	'eswikibooks' => [ '1.5x' => '/static/images/project-logos/eswikibooks-1.5x.png', '2x' => '/static/images/project-logos/eswikibooks-2x.png' ], // T170248
 	'srwikibooks' => [ '1.5x' => '/static/images/project-logos/srwikibooks-1.5x.png', '2x' => '/static/images/project-logos/srwikibooks-2x.png' ], // T159534
 	'viwikibooks' => [ '1.5x' => '/static/images/project-logos/viwikibooks-1.5x.png', '2x' => '/static/images/project-logos/viwikibooks-2x.png' ],
@@ -1575,7 +1573,6 @@ $wgConf->settings = [
 	'cswikisource' => [ '1.5x' => '/static/images/project-logos/cswikisource-1.5x.png', '2x' => '/static/images/project-logos/cswikisource-2x.png' ], // T150618
 	'nowikisource' => [ '1.5x' => '/static/images/project-logos/nowikisource-1.5x.png', '2x' => '/static/images/project-logos/nowikisource-2x.png' ], // T167192
 	'pawikisource' => [ '1.5x' => '/static/images/project-logos/pawikisource-1.5x.png', '2x' => '/static/images/project-logos/pawikisource-2x.png' ], // T149522
-	'srwikisource' => [ '1.5x' => '/static/images/project-logos/srwikisource-1.5x.png', '2x' => '/static/images/project-logos/srwikisource-2x.png' ], // T172268
 	'viwikisource' => [ '1.5x' => '/static/images/project-logos/viwikisource-1.5x.png', '2x' => '/static/images/project-logos/viwikisource-2x.png' ],
 
 	# Wikiversity
@@ -1601,9 +1598,6 @@ $wgConf->settings = [
 	'eswikivoyage' => [ '1.5x' => '/static/images/project-logos/eswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/eswikivoyage-2x.png' ], // T170604
 	'fiwikivoyage' => [ '1.5x' => '/static/images/project-logos/fiwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/fiwikivoyage-2x.png' ],
 	'viwikivoyage' => [ '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ], // T151570
-
-	# Wikinews
-	'srwikinews' => [ '1.5x' => '/static/images/project-logos/srwikinews-1.5x.png', '2x' => '/static/images/project-logos/srwikinews-2x.png' ], // T172255
 
 	# Chapter wikis
 	'ecwikimedia' => [ '1.5x' => '/static/images/project-logos/ecwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ecwikimedia-2x.png' ], // T135521
@@ -2026,7 +2020,6 @@ $wgConf->settings = [
 	'azwikisource' => 'Vikimənbə', // T114002
 	'azbwiki' => 'ویکی‌پدیا', // T106305
 	'bawiki' => 'Википедия', // T43167
-	'bawikibooks' => 'Викидәреслек', // T173471
 	'bdwikimedia' => 'উইকিমিডিয়া বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
 	'bewiki' => 'Вікіпедыя',
@@ -2531,7 +2524,6 @@ $wgConf->settings = [
 	'azwiktionary' => 'Vikilüğət', // T128296
 	'azbwiki' => 'ویکی‌پدیا', // T106305
 	'bawiki' => 'Википедия', // T43167
-	'bawikibooks' => 'Викидәреслек', // T173471
 	'bat_smgwiki' => 'Vikipedėjė',
 	'bdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
@@ -2954,7 +2946,6 @@ $wgConf->settings = [
 	'aywiki' => 'Wikipidiyan_Aruskipäwi',
 	'azbwiki' => 'ویکی‌پدیا_دانیشیغی', // T106305
 	'bat_smgwiki' => 'Vikipedėjės_aptarėms',
-	'bawikibooks' => 'Викидәреслек_буйынса_фекерләшеү', // T173471
 	'bdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ_আলোচনা',
 	'bewikisource' => 'Размовы_пра_Вікікрыніцы',
 	'bswiki' => 'Razgovor_s_Wikipedijom', // T115812
@@ -13350,7 +13341,6 @@ $wgConf->settings = [
 'wgApiFrameOptions' => [
 	'default' => 'DENY',
 	'enwiki' => 'SAMEORIGIN', // T41877
-	'zhwiki' => 'SAMEORIGIN', // T173631
 ],
 
 'wmgAltUploadForm' => [ // T35513
