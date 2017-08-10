@@ -328,6 +328,7 @@ $wgConf->settings = [
 	'itwikivoyage' => 'Europe/Rome', // T43992
 	'hiwikiquote' => 'Asia/Kolkata', // T126185
 	'hiwikiversity' => 'Asia/Kolkata', // T168765
+	'hiwikivoyage' => 'Asia/Kolkata', // T173013
 	'hrwiki' => 'Europe/Berlin',
 	'hrwikibooks' => 'Europe/Zagreb',
 	'hrwikiquote' => 'Europe/Berlin',
@@ -1106,6 +1107,7 @@ $wgConf->settings = [
 	'fawikivoyage' => '/static/images/project-logos/fawikivoyage.png', // T73382
 	'fiwikivoyage' => '/static/images/project-logos/fiwikivoyage.png', // T151570
 	'hewikivoyage' => '/static/images/project-logos/hewikivoyage.png',
+	'hiwikivoyage' => '/static/images/project-logos/hiwikivoyage.png', // T173013
 	'plwikivoyage' => '/static/images/project-logos/plwikivoyage.png',
 	'ukwikivoyage' => '/static/images/project-logos/ukwikivoyage.png', // T110370
 	'zhwikivoyage' => '/static/images/project-logos/zhwikivoyage.png', // T61077
@@ -1596,6 +1598,7 @@ $wgConf->settings = [
 	'cswikivoyage' => [ '1.5x' => '/static/images/project-logos/cswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/cswikivoyage-2x.png' ], // T150618
 	'eswikivoyage' => [ '1.5x' => '/static/images/project-logos/eswikivoyage-1.5x.png', '2x' => '/static/images/project-logos/eswikivoyage-2x.png' ], // T170604
 	'fiwikivoyage' => [ '1.5x' => '/static/images/project-logos/fiwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/fiwikivoyage-2x.png' ],
+	'hiwikivoyage' => [ '1.5x' => '/static/images/project-logos/hiwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/hiwikivoyage-2x.png' ], // T173013
 	'viwikivoyage' => [ '1.5x' => '/static/images/project-logos/viwikivoyage-1.5x.png', '2x' => '/static/images/project-logos/viwikivoyage-2x.png' ], // T151570
 
 	# Chapter wikis
@@ -2162,6 +2165,7 @@ $wgConf->settings = [
 	'hewiktionary' => 'ויקימילון',
 	'hiwiki' => 'विकिपीडिया',
 	'hiwikiversity' => 'विकिविद्यालय', // T168765
+	'hiwikivoyage' => 'विकियात्रा', // T173013
 	'hiwikiquote' => 'विकिसूक्ति', // T126185
 	'hiwiktionary' => 'विक्षनरी',
 	'hrwiki' => 'Wikipedija',
@@ -2658,6 +2662,7 @@ $wgConf->settings = [
 	'hewiktionary' => 'ויקימילון',
 	'hiwiki' => 'विकिपीडिया',
 	'hiwikiversity' => 'विकिविद्यालय',
+	'hiwkivoyage' => 'विकियात्रा', // T173013
 	'hiwikiquote' => 'विकिसूक्ति', // T126185
 	'hiwiktionary' => 'विक्षनरी',
 	'hrwiki' => 'Wikipedija',
@@ -2964,6 +2969,7 @@ $wgConf->settings = [
 	'gagwiki' => 'Vikipediyanın_laflanması',
 	'guwikiquote' => 'વિકિસૂક્તિની_ચર્ચા', // T121853
 	'guwikisource' => 'વિકિસ્રોત_ચર્ચા',
+	'hiwikivoyage' => 'विकियात्रा_वार्ता', // T173013
 	'hrwikisource' => 'Razgovor_o_Wikizvoru',
 	'hsbwiktionary' => 'Diskusija_k_Wikisłownikej', // T43328
 	'huwikinews' => 'Wikihírek-vita',
