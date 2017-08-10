@@ -3643,6 +3643,11 @@ $wgConf->settings = [
 		'प्र' => 100,
 		'प्रवा' => 101,
 	],
+	'+hiwikiversity' => [
+		'Portal' => 100, // T172977
+		'School' => 102, // T172977
+		'Collection' => 106, // T172977
+	],
 	'+hrwikisource' => [
 		'Author' => 100,
 		'Author_talk' => 101,
