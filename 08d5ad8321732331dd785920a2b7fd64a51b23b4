@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_604e05c6",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 19202,
+      "author": {
+        "id": 2177
+      },
+      "writtenOn": "2017-08-10T03:08:55Z",
+      "side": 1,
+      "message": "Could this be made as:\n\n  \u0027group1\u0027 \u003d\u003e true,\n  \u0027wikidatawiki\u0027 \u003d\u003e false\n\nperhaps (or the inverse - wikidata first, then group1)? I don\u0027t know if that would work, but it\u0027s worth exploring given the overhead kicking wikidata out creates.",
+      "revId": "08d5ad8321732331dd785920a2b7fd64a51b23b4",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
