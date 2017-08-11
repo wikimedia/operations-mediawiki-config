@@ -8,15 +8,15 @@ if ( !defined( 'DBO_DEFAULT' ) ) {
 # $wgReadOnly = "Wikimedia Sites are currently read-only during maintenance, please try again soon.";
 
 $wmgParserCacheDBs = [
-	'10.64.0.12'   => '10.192.16.170', # pc2004
-	'10.64.32.72'  => '10.192.32.128', # pc2005
-	'10.64.48.128' => '10.192.48.39',  # pc2006
+	'10.64.0.12'   => '10.192.16.170', # pc2004, B5 2.4TB 256GB
+	'10.64.32.72'  => '10.192.32.128', # pc2005, C5 2.4TB 256GB
+	'10.64.48.128' => '10.192.48.39',  # pc2006, D5 2.4TB 256GB
 ];
 
 $wmgOldExtTemplate = [
-	'10.192.16.171' => 1, # es2011
-	'10.192.32.129' => 1, # es2012
-	# '10.192.48.40'  => 1, # es2013 # BBU issues T172265
+	'10.192.16.171' => 1, # es2011, B1 11TB 128GB
+	'10.192.32.129' => 1, # es2012, C1 11TB 128GB
+	# '10.192.48.40'  => 1, # es2013, D1 11TB 128GB # BBU issues T172265
 ];
 
 $wgLBFactoryConf = [
@@ -24,52 +24,60 @@ $wgLBFactoryConf = [
 'class' => 'LBFactoryMulti',
 
 'sectionsByDB' => [
-	'enwiki' => 's1',
+	# s1: enwiki
+	'enwiki'       => 's1',
 
-	# New master
-	'bgwiki' => 's2',
+	# s2: large wikis
+	'bgwiki'       => 's2',
 	'bgwiktionary' => 's2',
-	'cswiki' => 's2',
-	'enwikiquote' => 's2',
+	'cswiki'       => 's2',
+	'enwikiquote'  => 's2',
 	'enwiktionary' => 's2',
-	'eowiki' => 's2',
-	'fiwiki' => 's2',
-	'idwiki' => 's2',
-	'itwiki' => 's2',
-	'nlwiki' => 's2',
-	'nowiki' => 's2',
-	'plwiki' => 's2',
-	'ptwiki' => 's2',
-	'svwiki' => 's2',
-	'thwiki' => 's2',
-	'trwiki' => 's2',
-	'zhwiki' => 's2',
+	'eowiki'       => 's2',
+	'fiwiki'       => 's2',
+	'idwiki'       => 's2',
+	'itwiki'       => 's2',
+	'nlwiki'       => 's2',
+	'nowiki'       => 's2',
+	'plwiki'       => 's2',
+	'ptwiki'       => 's2',
+	'svwiki'       => 's2',
+	'thwiki'       => 's2',
+	'trwiki'       => 's2',
+	'zhwiki'       => 's2',
 
-	'commonswiki' => 's4',
+	# s3 (default)
 
-	'dewiki' => 's5',
+	# s4: commons
+	'commonswiki'  => 's4',
+
+	# s5: dewiki and wikidata
+	'dewiki'       => 's5',
 	'wikidatawiki' => 's5',
 
-	'frwiki' => 's6',
-	'jawiki' => 's6',
-	'ruwiki' => 's6',
+	# s6: large wikis
+	'frwiki'       => 's6',
+	'jawiki'       => 's6',
+	'ruwiki'       => 's6',
 
-	'eswiki' => 's7',
-	'huwiki' => 's7',
-	'hewiki' => 's7',
-	'ukwiki' => 's7',
+	# s7: large wikis, centralauth
+	'eswiki'       => 's7',
+	'huwiki'       => 's7',
+	'hewiki'       => 's7',
+	'ukwiki'       => 's7',
 	'frwiktionary' => 's7',
-	'metawiki' => 's7',
-	'arwiki' => 's7',
-	'centralauth' => 's7',
-	'cawiki' => 's7',
-	'viwiki' => 's7',
-	'fawiki' => 's7',
-	'rowiki' => 's7',
-	'kowiki' => 's7',
+	'metawiki'     => 's7',
+	'arwiki'       => 's7',
+	'centralauth'  => 's7',
+	'cawiki'       => 's7',
+	'viwiki'       => 's7',
+	'fawiki'       => 's7',
+	'rowiki'       => 's7',
+	'kowiki'       => 's7',
 
-	'labswiki' => 'silver',
-	'labtestwiki' => 'labtestweb2001',
+	# labs-related wikis
+	'labswiki'     => 'silver',
+	'labtestwiki'  => 'labtestweb2001',
 ],
 
 # Load lists
@@ -649,19 +657,24 @@ $wgLBFactoryConf = [
 	'cluster25'	=> [ 'blobs table' => 'blobs_cluster25' ],
 ],
 
-# This key must exist for the master switch script to work.
+# This key must exist for the master switch script to work, which means comment and uncomment
+# the individual shards, but leave the 'readOnlyBySection' => [ ], alone.
 #
-# These read only messages should currently be kept,
-# to prevent accidental write to eqiad from codfw,
-# when the master dc is eqiad.
+# When going read only, please change the comment to something appropiate (like a brief idea
+# of what is happening, with a wiki link for further explanation. Avoid linking to external
+# infrastructure if possible (IRC, other webpages) or infrastructure not prepared to absorve
+# large traffic (phabricator) because they tend to collapse. A meta page would be appropiate.
+#
+# Also keep these read only messages if codfw is not the active dc, to prevent accidental writes
+# getting trasmmitted from codfw to eqiad when the master dc is eqiad.
 'readOnlyBySection' => [
-	's1'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-	's2'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-	'DEFAULT' => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.', # s3
-	's4'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-	's5'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-	's6'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
-	's7'      => 'This wiki is in read-only mode for a datacenter switchover test. See https://meta.wikimedia.org/wiki/codfw for more information.',
+	's1'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	's2'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	'DEFAULT' => 'This request is served by a passive datacenter. If you see this something is really wrong.', # s3
+	's4'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	's5'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	's6'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
+	's7'      => 'This request is served by a passive datacenter. If you see this something is really wrong.',
 ],
 
 ];
@@ -670,7 +683,3 @@ $wgDefaultExternalStore = [
 	'DB://cluster24',
 	'DB://cluster25',
 ];
-
-# $wgLBFactoryConf['readOnlyBySection']['s2'] =
-# $wgLBFactoryConf['readOnlyBySection']['s2a'] =
-# 'Emergency maintenance, need more servers up, new estimate ~18:30 UTC';
