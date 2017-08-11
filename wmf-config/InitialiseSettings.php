@@ -19399,6 +19399,13 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wmgUseTimeless' => [
+	'default' => false,
+	'testwiki' => true,
+	'test2wiki' => true,
+	'mediawikiwiki' => 'true',
+],
+
 ];
 
 ### WMF Labs override #####

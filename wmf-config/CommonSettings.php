@@ -650,6 +650,10 @@ if ( $wmgUseCORS ) {
 
 wfLoadSkins( [ 'Vector', 'MonoBook', 'Modern', 'CologneBlue' ] );
 
+if ( $wmgUseTimeless ) {
+	wfLoadSkin( 'Timeless' ); // T154371
+}
+
 // Grants and rights
 // Note these have to be visible on all wikis, not just the ones the
 // extension is enabled on, for proper display in OAuth pages and such.

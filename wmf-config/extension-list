@@ -157,6 +157,7 @@ $IP/extensions/XAnalytics/extension.json
 $IP/extensions/ZeroBanner/extension.json
 $IP/extensions/ZeroPortal/extension.json
 $IP/skins/CologneBlue/skin.json
+$IP/skins/Timeless/skin.json
 $IP/skins/MinervaNeue/skin.json
 $IP/skins/Modern/skin.json
 $IP/skins/MonoBook/skin.json
