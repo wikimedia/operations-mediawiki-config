@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_c50019b2",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19406,
+      "author": {
+        "id": 1001
+      },
+      "writtenOn": "2017-08-11T19:21:10Z",
+      "side": 1,
+      "message": "Technically this will work, but I think using an actual boolean would be more consistent.",
+      "revId": "9345cd71d9176f4c7c019cbf59ef23eb6f098c70",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
