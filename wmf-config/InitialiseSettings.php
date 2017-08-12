@@ -14955,6 +14955,7 @@ $wgConf->settings = [
 	'cawiki' => true, // T161307
 	'frwiki' => true, // T160609
 	'elwiki' => true, // T163074
+	'enwiki' => true, // T173176
 	'hewiki' => true, // T161804
 	'ilowiki' => true, // T164230
 	'itwiki' => true, // T160932
