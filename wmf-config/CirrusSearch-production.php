@@ -102,4 +102,3 @@ $wgCirrusSearchCreateFrozenIndex = false;
 $wgCirrusSearchIndexDeletes = $wmgCirrusSearchIndexDeletes;
 // Enable searching archive
 $wgCirrusSearchEnableArchive = $wmgCirrusSearchEnableArchive;
-
