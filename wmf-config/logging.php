@@ -136,7 +136,7 @@ $wmgMonologLoggerCalls = [
 	'useMicrosecondTimestamps' => [ false ],
 ];
 
-$wmgMonologConfig =  [
+$wmgMonologConfig = [
 	'loggers' => [
 		// Template for all undefined log channels
 		'@default' => [

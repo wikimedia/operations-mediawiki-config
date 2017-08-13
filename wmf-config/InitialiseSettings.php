@@ -12355,13 +12355,13 @@ $wgConf->settings = [
 	'trwiki' => [
 		'autoreview' => [
 			'&', // AND
-			[ APCOND_AGE, 7*86400 ],
+			[ APCOND_AGE, 7 * 86400 ],
 			[ APCOND_EDITCOUNT, 30 ],
 			// autopromote conditions handled by FlaggedRevs (constants not yet defined):
 			[ 70821 /*APCOND_FR_EDITSUMMARYCOUNT*/, 5 ],
 			[ 70823 /*APCOND_FR_UNIQUEPAGECOUNT*/, 5 ],
 			[ 70827 /*APCOND_FR_EDITSPACING*/, 7, 7 ],
-			[ 70824 /*APCOND_FR_CONTENTEDITCOUNT*/, 20, 2*86400 ],
+			[ 70824 /*APCOND_FR_CONTENTEDITCOUNT*/, 20, 2 * 86400 ],
 			[ 70822 /*APCOND_FR_NEVERBOCKED*/ ],
 			[ 70829 /*APCOND_FR_MAXREVERTEDEDITRATIO*/, .03 ],
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
@@ -12371,13 +12371,13 @@ $wgConf->settings = [
 		],
 		'patroller' => [
 			'&', // AND
-			[ APCOND_AGE, 15*86400 ],
+			[ APCOND_AGE, 15 * 86400 ],
 			[ APCOND_EDITCOUNT, 150 ],
 			// autopromote conditions handled by FlaggedRevs (constants not yet defined):
 			[ 70821 /*APCOND_FR_EDITSUMMARYCOUNT*/, 25 ],
 			[ 70823 /*APCOND_FR_UNIQUEPAGECOUNT*/, 10 ],
 			[ 70827 /*APCOND_FR_EDITSPACING*/, 7, 15 ],
-			[ 70824 /*APCOND_FR_CONTENTEDITCOUNT*/, 100, 1*86400 ],
+			[ 70824 /*APCOND_FR_CONTENTEDITCOUNT*/, 100, 1 * 86400 ],
 			[ 70822 /*APCOND_FR_NEVERBOCKED*/ ],
 			[ 70829 /*APCOND_FR_MAXREVERTEDEDITRATIO*/, .03 ],
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],

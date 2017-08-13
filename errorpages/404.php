@@ -26,7 +26,7 @@ if ( preg_match( '/(%2f)/i', $path, $matches )
 	$target = '/wiki' . $path;
 }
 $encTarget = htmlspecialchars( $target );
-$outputHtml=<<<END
+$outputHtml = <<<END
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <meta charset="utf-8">
