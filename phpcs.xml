@@ -9,7 +9,6 @@
 		<exclude name="MediaWiki.Commenting.FunctionComment.MissingReturn" />
 		<exclude name="MediaWiki.Commenting.IllegalSingleLineComment.IllegalSingleLineCommentStart" />
 		<exclude name="MediaWiki.ControlStructures.AssignmentInControlStructures.AssignmentInControlStructures" />
-		<exclude name="MediaWiki.ExtraCharacters.CharacterBeforePHPOpeningTag.Found" />
 		<exclude name="MediaWiki.NamingConventions.PrefixedGlobalFunctions.wfPrefix" />
 		<exclude name="MediaWiki.NamingConventions.ValidGlobalName.wgPrefix" />
 		<exclude name="MediaWiki.Usage.SuperGlobalsUsage.SuperGlobals" />
@@ -29,6 +28,9 @@
 	<rule ref="Generic.Files.LineLength.TooLong">
 		<severity>0</severity>
 	</rule>
+	<rule ref="Generic.PHP.CharacterBeforePHPOpeningTag.Found">
+		<severity>0</severity>
+	</rule>
 	<rule ref="Generic.PHP.NoSilencedErrors.Discouraged">
 		<severity>0</severity>
 	</rule>
@@ -36,7 +38,9 @@
 		<severity>0</severity>
 	</rule>
 
-	<exclude-pattern>\.git/</exclude-pattern>
-	<exclude-pattern>vendor/</exclude-pattern>
+	<exclude-pattern>multiversion/</exclude-pattern>
 	<exclude-pattern>wmf-config/PrivateSettings.php</exclude-pattern>
+	<exclude-pattern>docroot/</exclude-pattern>
 </ruleset>
+
+
