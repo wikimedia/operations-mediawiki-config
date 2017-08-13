@@ -6,7 +6,7 @@
 $wmgRedisQueueBaseConfig = [
 	'class' => 'JobQueueRedis',
 	'redisConfig' => [
-		'connectTimeout' => .300,
+		'connectTimeout' => 0.300,
 		'password' => $wmgRedisPassword,
 		'compression' => 'gzip',
 		# 'persistent' => defined( 'MEDIAWIKI_JOB_RUNNER' )
@@ -71,4 +71,4 @@ $wgJobQueueAggregator = [
 	]
 ];
 
-$wgJobSerialCommitThreshold = .100; // 100 ms
+$wgJobSerialCommitThreshold = 0.100; // 100 ms

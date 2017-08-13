@@ -3817,7 +3817,7 @@ $wgConf->settings = [
 		'トーク' => NS_TALK,
 		'利用者・トーク' => NS_USER_TALK,
 		'Wikipedia・トーク' => NS_PROJECT_TALK,
-		'ファイル・トーク' => NS_IMAGE_TALK,
+		'ファイル・トーク' => NS_FILE_TALK,
 		'MediaWiki・トーク' => NS_MEDIAWIKI_TALK,
 		'テンプレート' => NS_TEMPLATE,
 		'テンプレート・トーク' => NS_TEMPLATE_TALK,
@@ -3960,8 +3960,8 @@ $wgConf->settings = [
 		'വിസം' => NS_PROJECT_TALK,
 		'ഉ' => NS_USER,
 		'ഉസം' => NS_USER_TALK,
-		'പ്ര' => NS_IMAGE,
-		'പ്രസം' => NS_IMAGE_TALK,
+		'പ്ര' => NS_FILE,
+		'പ്രസം' => NS_FILE_TALK,
 		'ഫ' => NS_TEMPLATE,
 		'ഫസം' => NS_TEMPLATE_TALK,
 		'വ' => NS_CATEGORY,
@@ -4087,8 +4087,8 @@ $wgConf->settings = [
 	'+nowikimedia' => [
 		'Brukar' => NS_USER,
 		'Brukardiskusjon' => NS_USER_TALK,
-		'Fil' => NS_IMAGE,
-		'Fildiskusjon' => NS_IMAGE_TALK,
+		'Fil' => NS_FILE,
+		'Fildiskusjon' => NS_FILE_TALK,
 		'Wikimedia_Noreg' => NS_PROJECT,
 		'Wikimedia_Norga' => NS_PROJECT,
 	],
@@ -4439,7 +4439,7 @@ $wgConf->settings = [
 	],
 	'+vecwiki' => [
 		'WP' => NS_PROJECT,
-		'Immagine' => NS_IMAGE,
+		'Immagine' => NS_FILE,
 	],
 	'+viwikibooks' => [
 		'Subject' => 102,
@@ -11783,7 +11783,7 @@ $wgConf->settings = [
 		NS_USER => 'noindex,follow',
 		NS_USER_TALK => 'noindex,follow',
 		NS_PROJECT_TALK => 'noindex,follow',
-		NS_IMAGE_TALK => 'noindex,follow',
+		NS_FILE_TALK => 'noindex,follow',
 		NS_MEDIAWIKI_TALK => 'noindex,follow',
 		NS_TEMPLATE_TALK => 'noindex,follow',
 		NS_HELP_TALK => 'noindex,follow',
@@ -11801,7 +11801,7 @@ $wgConf->settings = [
 		NS_USER => 'noindex,follow', // T38181
 		NS_USER_TALK => 'noindex,follow',
 		NS_PROJECT_TALK => 'noindex,follow',
-		NS_IMAGE_TALK => 'noindex,follow',
+		NS_FILE_TALK => 'noindex,follow',
 		NS_MEDIAWIKI_TALK => 'noindex,follow',
 		NS_TEMPLATE_TALK => 'noindex,follow',
 		NS_HELP_TALK => 'noindex,follow',
@@ -11838,7 +11838,7 @@ $wgConf->settings = [
 		NS_USER => 'noindex,follow',
 		NS_USER_TALK => 'noindex,follow',
 		NS_PROJECT_TALK => 'noindex,follow',
-		NS_IMAGE_TALK => 'noindex,follow',
+		NS_FILE_TALK => 'noindex,follow',
 		NS_MEDIAWIKI_TALK => 'noindex,follow',
 		NS_TEMPLATE_TALK => 'noindex,follow',
 		NS_HELP_TALK => 'noindex,follow',
@@ -12359,12 +12359,12 @@ $wgConf->settings = [
 		NS_FILE_TALK => [ 'editinterface' ],
 	],
 	'+eswiki' => [
-		NS_IMAGE => [ 'editinterface' ],
-		NS_IMAGE_TALK => [ 'editinterface' ],
+		NS_FILE => [ 'editinterface' ],
+		NS_FILE_TALK => [ 'editinterface' ],
 		828 => [ 'autoconfirmed' ], // T55558 - Module:
 	],
 	'+ptwiki' => [
-		NS_IMAGE => [ 'autoconfirmed' ],
+		NS_FILE => [ 'autoconfirmed' ],
 	],
 	'ruwiki' => [
 		106 => [ 'autoconfirmed' ],
@@ -12376,8 +12376,8 @@ $wgConf->settings = [
 		NS_USER_TALK => [ 'editallpages' ],
 		NS_PROJECT => [ 'editallpages' ],
 		NS_PROJECT_TALK => [ 'editallpages' ],
-		NS_IMAGE => [ 'editallpages' ],
-		NS_IMAGE_TALK => [ 'editallpages' ],
+		NS_FILE => [ 'editallpages' ],
+		NS_FILE_TALK => [ 'editallpages' ],
 		NS_MEDIAWIKI => [ 'editallpages' ],
 		NS_MEDIAWIKI_TALK => [ 'editallpages' ],
 		NS_TEMPLATE => [ 'editallpages' ],
@@ -12540,7 +12540,7 @@ $wgConf->settings = [
 			[ 70827 /*APCOND_FR_EDITSPACING*/, 7, 7 ],
 			[ 70824 /*APCOND_FR_CONTENTEDITCOUNT*/, 20, 2 * 86400 ],
 			[ 70822 /*APCOND_FR_NEVERBOCKED*/ ],
-			[ 70829 /*APCOND_FR_MAXREVERTEDEDITRATIO*/, .03 ],
+			[ 70829 /*APCOND_FR_MAXREVERTEDEDITRATIO*/, 0.03 ],
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bureaucrat' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
@@ -12556,7 +12556,7 @@ $wgConf->settings = [
 			[ 70827 /*APCOND_FR_EDITSPACING*/, 7, 15 ],
 			[ 70824 /*APCOND_FR_CONTENTEDITCOUNT*/, 100, 1 * 86400 ],
 			[ 70822 /*APCOND_FR_NEVERBOCKED*/ ],
-			[ 70829 /*APCOND_FR_MAXREVERTEDEDITRATIO*/, .03 ],
+			[ 70829 /*APCOND_FR_MAXREVERTEDEDITRATIO*/, 0.03 ],
 			[ '!', [ APCOND_INGROUPS, 'sysop' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bureaucrat' ] ],
 			[ '!', [ APCOND_INGROUPS, 'bot' ] ],
@@ -18236,7 +18236,7 @@ $wgConf->settings = [
 
 'wmgCirrusSearchPreferRecentDefaultDecayPortion' => [
 	'default' => 0,
-	'wikinews' => .6,
+	'wikinews' => 0.6,
 ],
 
 'wmgCirrusSearchWeightsOverrides' => [
