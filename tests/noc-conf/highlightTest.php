@@ -7,7 +7,7 @@ class NocConfHighlightTest extends PHPUnit_Framework_TestCase {
 		parent::setUp();
 
 		$common = dirname( dirname( __DIR__ ) );
-		$wmfConfigDir =  "$common/wmf-config";
+		$wmfConfigDir = "$common/wmf-config";
 		$this->nocConfDir = "$common/docroot/noc/conf";
 
 		// Created various files to test with
