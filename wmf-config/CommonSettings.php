@@ -659,7 +659,7 @@ if (
 	$wgVectorPrintLogo = [
 		'width' => $wgMinervaCustomLogos['copyright-width'],
 		'height' => $wgMinervaCustomLogos['copyright-height'],
-		'url' =>  $wgMinervaCustomLogos['copyright'],
+		'url' => $wgMinervaCustomLogos['copyright'],
 	];
 }
 
@@ -2538,8 +2538,8 @@ if ( $wmgUseTranslate ) {
 		// NOTE: these settings are also used for the labs cluster
 		// where codfw may not be available
 		$wgTranslateClustersAndMirrors = [
-			'eqiad' => isset ( $wmfAllServices['codfw']['search'] ) ? [ 'codfw' ] : [],
-			'codfw' => isset ( $wmfAllServices['eqiad']['search'] ) ? [ 'eqiad' ] : [],
+			'eqiad' => isset( $wmfAllServices['codfw']['search'] ) ? [ 'codfw' ] : [],
+			'codfw' => isset( $wmfAllServices['eqiad']['search'] ) ? [ 'eqiad' ] : [],
 		];
 		foreach ( $wgTranslateClustersAndMirrors as $cluster => $mirrors ) {
 			if ( !isset( $wmfAllServices[$cluster]['search'] ) ) {

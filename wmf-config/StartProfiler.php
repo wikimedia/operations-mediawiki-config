@@ -16,4 +16,3 @@
 require_once __DIR__ . '/profiler.php';
 
 $wgProfiler = $wmgProfiler;
-
