@@ -670,7 +670,7 @@ if ( $wgDBname == 'alswiki' ) {
 # All wikis...
 
 # Rights for Bureaucrats (b/c)
-if ( isset ( $wgGroupPermissions['reviewer'] ) ) {
+if ( isset( $wgGroupPermissions['reviewer'] ) ) {
 	if ( !in_array( 'reviewer', $wgAddGroups['bureaucrat'] ) ) {
 		$wgAddGroups['bureaucrat'][] = 'reviewer'; // promote to full reviewers
 	}
