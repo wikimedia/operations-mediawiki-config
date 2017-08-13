@@ -159,7 +159,7 @@ if ( $wmgUseBounceHandler ) {
 }
 
 if ( $wmgUseTimedMediaHandler ) {
-	$wgMwEmbedModuleConfig[ 'MediaWiki.ApiProviders' ] =  [
+	$wgMwEmbedModuleConfig[ 'MediaWiki.ApiProviders' ] = [
 	"commons" => [
 		'url' => '//commons.wikimedia.beta.wmflabs.org/w/api.php'
 	] ];

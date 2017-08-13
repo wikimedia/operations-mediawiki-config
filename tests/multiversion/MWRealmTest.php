@@ -54,10 +54,12 @@ class MWRealmTests extends PHPUnit_Framework_TestCase {
 		$old['realm']      = $wmfRealm;
 		$old['datacenter'] = $wmfDatacenter;
 
-		if ( $realm      !== null ) { $wmfRealm = $realm;
-  }
-		if ( $datacenter !== null ) { $wmfDatacenter = $datacenter;
-  }
+		if ( $realm !== null ) {
+			$wmfRealm = $realm;
+		}
+		if ( $datacenter !== null ) {
+			$wmfDatacenter = $datacenter;
+		}
 
 		# The function requires a real path:
 		$basePath = self::$fixturesDir . "/";
