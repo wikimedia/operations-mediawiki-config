@@ -638,7 +638,7 @@ $wgLBFactoryConf = [
 		'10.64.48.114' => 1, # es1017
 		'10.64.48.116' => 1, # es1019
 	],
-	# ExtensionStore shard1 - initially for AFTv5
+	# ExtensionStore shard1
 	'extension1' => [
 		'10.64.16.20' => 0, # db1031, master
 		'10.64.16.18' => 1, # db1029
