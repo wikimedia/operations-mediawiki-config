@@ -31,7 +31,7 @@ $wgExtensionFunctions[] = function () {
 		if ( isset( $throttleIP ) && !in_array( $ip, (array)$throttleIP ) ) {
 			continue;
 		}
-		if ( isset ( $options['range'] ) && !IP::isInRanges( $ip, (array)$options['range'] ) ) {
+		if ( isset( $options['range'] ) && !IP::isInRanges( $ip, (array)$options['range'] ) ) {
 			continue;
 		}
 
