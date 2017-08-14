@@ -1,11 +1,14 @@
 #!/usr/bin/env php
 <?php
 require_once dirname( __DIR__ ) . '/MWWikiversions.php';
-$param = trim( $argv[1] );
-if ( !$param ) {
-	print "Usage: expanddblist [<dblist>, <dblistname> or <expression>]";
+
+if ( $argc < 2 ) {
+	print "Usage: expanddblist [<dblist>, <dblistname> or <expression>]\nb";
 	exit( 1 );
 }
+
+$param = trim( $argv[1] );
+
 foreach ( MWWikiversions::evalDbListExpression( $param ) as $wiki ) {
 	echo "$wiki\n";
 }
