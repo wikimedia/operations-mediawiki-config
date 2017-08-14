@@ -1,21 +1,33 @@
 <?php
 
 class NocDblistTest extends PHPUnit_Framework_TestCase {
+
+	private static function getDblists( $dir ) {
+		$files = [];
+
+		foreach ( scandir( $dir ) as $fname ) {
+			if ( substr( $fname, -strlen( '.dblist' ) ) === '.dblist' ) {
+				$files[] = $fname;
+			}
+		}
+
+		return $files;
+	}
+
 	public function testNocDblists() {
 		$common = dirname( dirname( __DIR__ ) );
 		$dblistsDir =  "$common/dblists/";
 		$nocConfDir = "$common/docroot/noc/conf/";
 
-		$existingLinks = [];
-		foreach ( scandir( $nocConfDir ) as $fname ) {
-			if ( substr( $fname, -strlen( '.dblist' ) ) === '.dblist' ) {
-				$linkDestination = readlink( $nocConfDir . $fname );
-				$this->assertEquals( $linkDestination, '../../../dblists/' . $fname );
-				$existingLinks[] = substr( $linkDestination, strlen( '../../../dblists/' ) );
-			}
+		$existingLinks = self::getDblists( $nocConfDir );
+
+		foreach ( $existingLinks as $fname ) {
+			$linkDestination = readlink( $nocConfDir . $fname );
+			$this->assertEquals( $linkDestination, '../../../dblists/' . $fname );
 		}
-		$expectedLinks = array_values( array_diff( scandir( $dblistsDir ), [ '.', '..' ] ) );
+		$expectedLinks = self::getDblists( $dblistsDir );
 
 		$this->assertEquals( $expectedLinks, $existingLinks );
 	}
+
 }
