@@ -1,0 +1,8 @@
+# + all (reglar public wikis enabled by default)
+# - private.dblist (private wikis)
+# - fishbowl.dblist (editting restricted)
+# - closed.dblist (closed wikis)
+# - deleted.dblist (deleted wikis)
+# - wikitech.dblist (wikitech)
+# - wikimania.dblist
+%% all.dblist - private.dblist - fishbowl.dblist - closed.dblist - deleted.dblist - wikitech.dblist - wikimania.dblist
