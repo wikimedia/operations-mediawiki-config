@@ -10130,6 +10130,9 @@ $wgConf->settings = [
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'bot', 'patroller', 'autopatrolled' ],
 		'sysop' => [ 'autopatrolled', 'patroller' ],
 	],
+	'+nowiktionary' => [
+		'sysop' => [ 'transwiki' ],  // T172365
+	],
 	'+nowikimedia' => [
 		'sysop' => [ 'translationadmin' ], // T152490
 	],
@@ -10880,6 +10883,9 @@ $wgConf->settings = [
 	'+nowikibooks' => [
 		'bureaucrat' => [ 'bot', 'patroller', 'autopatrolled' ],
 		'sysop' => [ 'autopatrolled', 'patroller' ],
+	],
+	'+nowiktionary' => [
+		'sysop' => [ 'transwiki' ], // T172365
 	],
 	'+nowikimedia' => [
 		'sysop' => [ 'translationadmin' ], // T152490
