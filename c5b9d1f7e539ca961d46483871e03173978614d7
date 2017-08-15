@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_fa7cc01c",
+        "filename": "scap/plugins/prep.py",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-08-15T21:59:31Z",
+      "side": 1,
+      "message": "Maybe one more newline after this so include_once is not straight up against the end slash of */ which looks a bit off.\n\n\n /*\n Foo\n Bar.*/include_once( \"\" );",
+      "revId": "c5b9d1f7e539ca961d46483871e03173978614d7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
