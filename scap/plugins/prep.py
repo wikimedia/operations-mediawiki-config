@@ -91,7 +91,7 @@ class CheckoutMediaWiki(cli.Application):
         ls_stub = (
             '<?php\n' +
             '# Managed by scap (mediawiki-config:/scap/plugins/prep.py)\n' +
-            'WARNING: This file is publically viewable on the web. ' +
+            '# WARNING: This file is publically viewable on the web. ' +
             'Do not put private data here.\n' +
             'include_once( "%s" );' % cs_file
         )
