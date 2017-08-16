@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_8bd8d023",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 19202,
+      "author": {
+        "id": 2177
+      },
+      "writtenOn": "2017-08-16T14:58:43Z",
+      "side": 1,
+      "message": "Let\u0027s add\n\n  \u0027private\u0027 \u003d\u003e false,\n\nas well to the mix to be on the safe side",
+      "revId": "050313564aa9eeccb75f2a532318aef8e51b126a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
