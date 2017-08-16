@@ -28,13 +28,12 @@ $wmgThrottlingExceptions = [];
 # ];
 ## Add throttling definitions below.
 
-
-$wmgThrottlingExceptions[] = [ // T171146
-	'from' => '2017-07-21T07:00 +7:00',
-	'to' => '2017-07-21T15:00 +7:00',
-	'range' => '117.74.120.0/21',
-	'dbname' => [ 'jvwiki', 'idwiki' ],
-	'value' => 150 // 125 pupils/5 classes excepted
+$wmgThrottlingExceptions[] = [
+	'from' => '2017-09-29T12:00 UTC',
+	'to' => '2017-09-30T02:00 UTC',
+	'range' => [ '186.67.125.0/24', '163.247.67.20/30', '163.247.67.24/29', '163.247.67.32/28', '163.247.67.48/29', '163.247.67.56/30', '163.247.67.60/31', '163.247.67.62/32' ],
+	'dbname' => [ 'eswiki', 'enwiki', 'commonswiki', 'wikidatawiki' ],
+	'value' => 120 // 100 expected
 ];
 
 ## Add throttling definitions above.
