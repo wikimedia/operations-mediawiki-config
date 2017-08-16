@@ -1094,6 +1094,10 @@ if ( $wmgUseSecurePoll ) {
 	$wgSecurePollCreateWikiGroups = [
 		'securepollglobal' => 'securepoll-dblist-securepollglobal'
 	];
+	// T173393 - This is number of days after the election ends, not
+	// number of days after the vote was cast. Lower to 60 days so that
+	// overall time retained is not > 90 days.
+	$wgSecurePollKeepPrivateInfoDays = 60;
 }
 
 // PoolCounter
