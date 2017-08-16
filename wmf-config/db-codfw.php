@@ -146,7 +146,7 @@ $wgLBFactoryConf = [
 		'db2053' => 100, # D6 2.9TB 160GB, dump (inactive), vslow
 		'db2060' => 100, # D6 3.3TB 160GB, api
 		'db2067' => 400, # D6 3.3TB 160GB
-		# 'db2076' => 400, # B1 3.3TB 512GB # fixing dup entries
+		'db2076' => 400, # B1 3.3TB 512GB
 	],
 	's7' => [
 		'db2029' => 0,   # B6 2.9TB  96GB, master
