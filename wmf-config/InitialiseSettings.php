@@ -18393,12 +18393,11 @@ $wgConf->settings = [
 ],
 // @} end of wmgCirrusSearchRecycleCompletionSuggesterIndex
 
-// Disable phrase rescore on zh queries with too many tokens.
+// Disable phrase rescore on queries with too many tokens.
 // Bandaid for T169498, should be removed when a proper
 // fix is determined
 'wmgCirrusSearchMaxPhraseTokens' => [
-	'default' => 'null',
-	'zh' => 10,
+	'default' => 10,
 ],
 
 // Configure ICU Folding, 'default': controlled by cirrus
