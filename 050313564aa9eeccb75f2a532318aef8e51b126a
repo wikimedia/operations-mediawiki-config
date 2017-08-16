@@ -16,6 +16,24 @@
       "revId": "050313564aa9eeccb75f2a532318aef8e51b126a",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_cbffb82f",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 19202,
+      "author": {
+        "id": 2681
+      },
+      "writtenOn": "2017-08-16T15:43:07Z",
+      "side": 1,
+      "message": "Doesn\u0027t matter because we also check if EventBus itself is installed and for private wikis it\u0027s not.",
+      "parentUuid": "4e7eab26_8bd8d023",
+      "revId": "050313564aa9eeccb75f2a532318aef8e51b126a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
