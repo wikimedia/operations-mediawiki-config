@@ -13215,6 +13215,7 @@ $wgConf->settings = [
 	'guwikisource' => 'any', // T42173
 	'plwikisource' => 'any', // T131771
 	'srwikisource' => 'any', // T172974
+	'srwikiquote' => 'any', // T172974
 	'wikidatawiki' => 'any', // T144687
 	'zhwikinews' => 'any', // T53604
 ],
