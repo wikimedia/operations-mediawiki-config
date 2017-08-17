@@ -260,6 +260,7 @@ $wgConf->settings = [
 	'atjwiki' => 'America/Montreal', // T167714
 	'barwiki' => 'Europe/Berlin',
 	'bat_smgwiki' => 'Europe/Vilnius',
+	'bawikibooks' => 'Asia/Yekaterinburg', // T173471
 	'bdwikimedia' => 'Asia/Dhaka', // T150252
 	'be_x_oldwiki' => 'Europe/Minsk',
 	'bewiki' => 'Europe/Minsk',
@@ -1564,6 +1565,7 @@ $wgConf->settings = [
 	'zhwikiquote' => [ '1.5x' => '/static/images/project-logos/zhwikiquote-1.5x.png', '2x' => '/static/images/project-logos/zhwikiquote-2x.png' ], // T150618
 
 	# Wikibooks
+	'bawikibooks' => [ '1.5x' => '/static/images/project-logos/bawikibooks-1.5x.png', '2x' => '/static/images/project-logos/bawikibooks-2x.png' ], // T173471
 	'eswikibooks' => [ '1.5x' => '/static/images/project-logos/eswikibooks-1.5x.png', '2x' => '/static/images/project-logos/eswikibooks-2x.png' ], // T170248
 	'srwikibooks' => [ '1.5x' => '/static/images/project-logos/srwikibooks-1.5x.png', '2x' => '/static/images/project-logos/srwikibooks-2x.png' ], // T159534
 	'viwikibooks' => [ '1.5x' => '/static/images/project-logos/viwikibooks-1.5x.png', '2x' => '/static/images/project-logos/viwikibooks-2x.png' ],
@@ -2019,6 +2021,7 @@ $wgConf->settings = [
 	'azwikisource' => 'Vikimənbə', // T114002
 	'azbwiki' => 'ویکی‌پدیا', // T106305
 	'bawiki' => 'Википедия', // T43167
+	'bawikibooks' => 'Викидәреслек', // T173471
 	'bdwikimedia' => 'উইকিমিডিয়া বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
 	'bewiki' => 'Вікіпедыя',
@@ -2523,6 +2526,7 @@ $wgConf->settings = [
 	'azwiktionary' => 'Vikilüğət', // T128296
 	'azbwiki' => 'ویکی‌پدیا', // T106305
 	'bawiki' => 'Википедия', // T43167
+	'bawikibooks' => 'Викидәреслек', // T173471
 	'bat_smgwiki' => 'Vikipedėjė',
 	'bdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
@@ -2945,6 +2949,7 @@ $wgConf->settings = [
 	'aywiki' => 'Wikipidiyan_Aruskipäwi',
 	'azbwiki' => 'ویکی‌پدیا_دانیشیغی', // T106305
 	'bat_smgwiki' => 'Vikipedėjės_aptarėms',
+	'bawikibooks' => 'Викидәреслек_буйынса_фекерләшеү', // T173471
 	'bdwikimedia' => 'উইকিমিডিয়া_বাংলাদেশ_আলোচনা',
 	'bewikisource' => 'Размовы_пра_Вікікрыніцы',
 	'bswiki' => 'Razgovor_s_Wikipedijom', // T115812
