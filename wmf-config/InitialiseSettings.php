@@ -6672,6 +6672,8 @@ $wgConf->settings = [
 		105 => 'שיחת_מדף', # bookshelf talk
 	],
 	'hiwikibooks' => [
+		102 => 'रसोई', // Cookbook, T173398
+		103 => 'रसोई_वार्ता', // Cookbooks talk, T173398
 		106 => 'विषय', // Subject, T133440
 		107 => 'विषय_चर्चा', // Subject talk, T133440
 	],
