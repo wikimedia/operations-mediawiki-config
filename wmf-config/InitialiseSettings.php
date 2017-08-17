@@ -19349,10 +19349,8 @@ $wgConf->settings = [
 	'testwiki' => true, // T110170
 ],
 
-// Enable LoginNotify on testwiki (T165007)
 'wmgUseLoginNotify' => [
-	'default' => false,
-	'testwiki' => true,
+	'default' => true,
 ],
 
 'wmgUseCodeMirror' => [
