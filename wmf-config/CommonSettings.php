@@ -1975,7 +1975,7 @@ if ( $wmgUseTemplateStyles ) {
 	wfLoadExtension( 'TemplateStyles' );
 }
 
-if ( $wmgUseLoginNotify ) {
+if ( $wmgUseLoginNotify && $wmgUseEcho ) {
 	wfLoadExtension( 'LoginNotify' );
 	$wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
 

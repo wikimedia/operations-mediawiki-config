@@ -19370,8 +19370,7 @@ $wgConf->settings = [
 ],
 
 'wmgUseLoginNotify' => [
-	'default' => true,
-	'nonecho' => false,
+	'default' => true, // But disabled on wikis without Echo in CommonSettings.php
 ],
 
 'wmgUseCodeMirror' => [
