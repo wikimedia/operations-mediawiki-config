@@ -83,18 +83,24 @@ class Clean(main.AbstractSync):
         if not os.path.isdir(stage_dir):
             raise ValueError('No such branch exists, aborting')
 
-        commands = {
-            'clean-l10nupdate-cache':
-                ['sudo', '-u', 'www-data', 'rm', '-fR',
-                 '/var/lib/l10nupdate/caches/cache-%s' % branch],
-            'clean-l10nupdate-owned-files':
-                ['sudo', '-u', 'l10nupdate', 'find', stage_dir,
-                 '-user', 'l10nupdate', '-delete'],
-            'clean-l10n-bootstrap':
-                ['rm', '-fR', os.path.join(
-                    self.config['stage_dir'], 'wmf-config',
-                    'ExtensionMessages-%s.php' % branch)],
-        }
+        command_list = []
+
+        command_list.append([
+            'clean-l10nupdate-cache',
+            ['sudo', '-u', 'www-data', 'rm', '-fR',
+             '/var/lib/l10nupdate/caches/cache-%s' % branch]
+        ])
+        command_list.append([
+            'clean-l10nupdate-owned-files',
+            ['sudo', '-u', 'l10nupdate', 'find', stage_dir,
+             '-user', 'l10nupdate', '-delete']
+        ])
+        command_list.append([
+            'clean-l10n-bootstrap',
+            ['rm', '-fR', os.path.join(
+             self.config['stage_dir'], 'wmf-config',
+             'ExtensionMessages-%s.php' % branch)]
+        ])
 
         logger = self.get_logger()
 
@@ -115,20 +121,30 @@ class Clean(main.AbstractSync):
                 with utils.cd(stage_dir):
                     if subprocess.call(gerrit_prune_cmd) != 0:
                         logger.info('Failed to prune core branch')
-            commands['cleaning-branch'] = ['rm', '-fR', stage_dir]
-            commands['cleaning-patches'] = [
-                'rm' '-fR', os.path.join('/srv/patches', branch)]
+            command_list.append([
+                'cleaning-branch',
+                ['rm', '-fR', stage_dir]
+            ])
+            command_list.append([
+                'cleaning-patches',
+                ['rm' '-fR', os.path.join('/srv/patches', branch)]
+            ])
         else:
             regex = r'".*\.?({0})$"'.format('|'.join(DELETABLE_TYPES))
-            commands['cleaning-branch'] = ['find', stage_dir, '-type', 'f',
-                                           '-regextype', 'posix-extended',
-                                           '-regex', regex, '-delete']
+            command_list.append([
+                'cleaning-branch',
+                ['find', stage_dir, '-type', 'f',
+                 '-regextype', 'posix-extended',
+                 '-regex', regex, '-delete']
+            ])
 
-        for name, command in commands.iteritems():
+        for command_signature in command_list:
+            name = command_signature[0]
+            command = command_signature[1]
             with log.Timer(name + '-' + branch, self.get_stats()):
                 try:
-                    subprocess.call(command)
-                except subprocess.CalledProcessError:
+                    subprocess.check_call(command)
+                except (subprocess.CalledProcessError, OSError):
                     logger.warning('Command failed [%s]: %s' % (
                         name, ' '.join(command)))
 
