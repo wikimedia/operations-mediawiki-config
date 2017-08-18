@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_8d93f603",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19354,
+      "author": {
+        "id": 78
+      },
+      "writtenOn": "2017-08-18T21:05:55Z",
+      "side": 0,
+      "message": "Removing this might be confusing to people looking to see which wikis the extension is active on. Perhaps add a comment like:\n\u0027default\u0027 \u003d\u003e true, // but disabled on non-echo wikis in CommonSettings.php",
+      "range": {
+        "startLine": 19354,
+        "startChar": 1,
+        "endLine": 19354,
+        "endChar": 19
+      },
+      "revId": "3ed56e90b461f296f15885042ed4e1a585b6c23a",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
