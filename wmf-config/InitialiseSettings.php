@@ -19351,7 +19351,6 @@ $wgConf->settings = [
 
 'wmgUseLoginNotify' => [
 	'default' => true,
-	'nonecho' => false,
 ],
 
 'wmgUseCodeMirror' => [
