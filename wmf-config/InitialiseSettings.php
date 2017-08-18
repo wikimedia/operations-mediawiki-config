@@ -14907,6 +14907,8 @@ $wgConf->settings = [
 	// group 0
 	'testwiki' => true,
 	'test2wiki' => true,
+	'testwikidatawiki' => true,
+	'mediawikiwiki' => true,
 ],
 
 // Whether to use OOUI to render the buttons on EditPage.php
