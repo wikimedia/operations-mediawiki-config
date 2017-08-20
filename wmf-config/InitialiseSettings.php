@@ -13346,6 +13346,7 @@ $wgConf->settings = [
 'wgApiFrameOptions' => [
 	'default' => 'DENY',
 	'enwiki' => 'SAMEORIGIN', // T41877
+	'zhwiki' => 'SAMEORIGIN', // T173631
 ],
 
 'wmgAltUploadForm' => [ // T35513
