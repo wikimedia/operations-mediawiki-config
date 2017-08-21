@@ -22,6 +22,30 @@
       "revId": "59a18f36642888981ff16f55dd6addf931713a68",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_833c1e2e",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 1202,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-08-21T17:12:08Z",
+      "side": 1,
+      "message": "Indeed. Rebasing and fixing.",
+      "parentUuid": "4e7eab26_28ee69eb",
+      "range": {
+        "startLine": 1202,
+        "startChar": 54,
+        "endLine": 1202,
+        "endChar": 71
+      },
+      "revId": "59a18f36642888981ff16f55dd6addf931713a68",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
