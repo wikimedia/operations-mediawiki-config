@@ -67,9 +67,6 @@ if ( $wmgMobileFrontend ) {
 
 	$wgMFEnableBeta = true;
 
-	// Allow editing for non-JavaScript users
-	$wgMFAllowNonJavaScriptEditing = true;
-
 	// Turn on volunteer recruitment
 	$wgMFEnableJSConsoleRecruitment = true;
 
