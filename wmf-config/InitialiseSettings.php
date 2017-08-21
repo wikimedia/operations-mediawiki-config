@@ -17191,6 +17191,7 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'test2wiki' => true,
 	'enwiki' => true,
+	'ptwiki' => true, // T173768
 ],
 
 'wmgEnableGeoData' => [
