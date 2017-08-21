@@ -17299,7 +17299,7 @@ $wgConf->settings = [
 	'default' => true,
 ],
 'wmgEchoEmailFooterAddress' => [
-	'default' => 'Wikimedia Foundation, 149 New Montgomery St., 6th Fl., San Francisco, CA 94105, USA',
+	'default' => 'Wikimedia Foundation, 1 Montgomery Street, Suite 1600, San Francisco, CA 94104, USA',
 ],
 'wmgEchoSiteNotificationIconUrl' => [
 	'default' => false,
