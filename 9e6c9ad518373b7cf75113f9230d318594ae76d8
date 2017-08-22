@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_da076083",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 1080,
+      "author": {
+        "id": 2483
+      },
+      "writtenOn": "2017-08-22T17:01:35Z",
+      "side": 1,
+      "message": "Let\u0027s first only enable firejail; when we\u0027ve established that it works by itself, we can look into the followup changes for safe mode.",
+      "revId": "9e6c9ad518373b7cf75113f9230d318594ae76d8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
