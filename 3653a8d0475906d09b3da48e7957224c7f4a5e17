@@ -16,6 +16,24 @@
       "revId": "3653a8d0475906d09b3da48e7957224c7f4a5e17",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_c013f268",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1727,
+      "author": {
+        "id": 1267
+      },
+      "writtenOn": "2017-08-22T20:52:15Z",
+      "side": 1,
+      "message": "It\u0027s not. Thanks for catching that, I only rebased this on master and have no clue how that ended up there. I\u0027ll do another rebase.",
+      "parentUuid": "4e7eab26_001eda74",
+      "revId": "3653a8d0475906d09b3da48e7957224c7f4a5e17",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
