@@ -19373,9 +19373,8 @@ $wgConf->settings = [
 ],
 
 'wmgUseCodeMirror' => [
-	'default' => false,
-	'simplewiki' => true,
-	'testwiki' => true, // T169284
+	'default' => true,
+	'rtl' => false, // T170001
 ],
 
 'wmgUseParserMigration' => [
