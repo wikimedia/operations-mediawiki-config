@@ -17315,8 +17315,8 @@ $wgConf->settings = [
 ],
 
 'wgEchoPerUserBlacklist' => [
-	'default' => false,
-	'metawiki' => true,
+	'default' => true,
+	'nonecho' => false,
 ],
 
 // Thanks should be enabled for wikis with Echo
