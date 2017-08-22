@@ -1716,7 +1716,7 @@ $wgConf->settings = [
 	'aswiki' => '/wiki/ৱিকিপিডিয়া:ফাইল_আপল’ড_বিশেষজ্ঞ',
 	'azbwiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=azb', // T106305
 	'bgwiki' => '/wiki/MediaWiki:Uploadtext', // T16836
-	'bnwiki' => '/wiki/উইকিপিডিয়া:আপলোড',
+	'bnwiki' => '/wiki/উইকিপিডিয়া:আপলোড',
 	'bswiki' => '/wiki/Wikipedia:Upload', // T14044
 	'dawiki' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=da&campaign=dk', // T39662
 	'dewikisource' => '//commons.wikimedia.org/wiki/Special:UploadWizard?uselang=de',
@@ -2019,7 +2019,7 @@ $wgConf->settings = [
 	'azwikisource' => 'Vikimənbə', // T114002
 	'azbwiki' => 'ویکی‌پدیا', // T106305
 	'bawiki' => 'Википедия', // T43167
-	'bdwikimedia' => 'উইকিমিডিয়া বাংলাদেশ',
+	'bdwikimedia' => 'উইকিমিডিয়া বাংলাদেশ',
 	'be_x_oldwiki' => 'Вікіпэдыя',
 	'bewiki' => 'Вікіпедыя',
 	'bewikimedia' => 'Wikimedia Belgium',
@@ -19334,9 +19334,8 @@ $wgConf->settings = [
 ],
 
 'wmgUseCodeMirror' => [
-	'default' => false,
-	'simplewiki' => true,
-	'testwiki' => true, // T169284
+	'default' => true,
+	'rtl' => false,
 ],
 
 'wmgUseParserMigration' => [
