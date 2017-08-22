@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_001eda74",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1727,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2017-08-22T20:51:03Z",
+      "side": 1,
+      "message": "Is this change expected? It\u0027s not mentioned at the commit msg.",
+      "revId": "3653a8d0475906d09b3da48e7957224c7f4a5e17",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
