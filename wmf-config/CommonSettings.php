@@ -2945,13 +2945,10 @@ if ( $wmgUseInsider ) {
 
 if ( $wmgUseRelatedArticles ) {
 	wfLoadExtension( 'RelatedArticles' );
-	if ( $wmgRelatedArticlesShowInFooter ) {
-		$wgRelatedArticlesShowInSidebar = false;
-		$wgRelatedArticlesShowInFooter = true;
-		$wgRelatedArticlesLoggingBucketSize = 0.01;
-		$wgRelatedArticlesUseCirrusSearch = $wmgRelatedArticlesUseCirrusSearch;
-		$wgRelatedArticlesOnlyUseCirrusSearch = false;
-	}
+
+	$wgRelatedArticlesLoggingBucketSize = 0.01;
+	$wgRelatedArticlesUseCirrusSearch = $wmgRelatedArticlesUseCirrusSearch;
+	$wgRelatedArticlesOnlyUseCirrusSearch = false;
 }
 
 // Workaround for T142663 - override flat arrays
