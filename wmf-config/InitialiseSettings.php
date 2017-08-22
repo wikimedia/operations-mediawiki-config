@@ -17630,10 +17630,6 @@ $wgConf->settings = [
 	'frwikinews' => true, // T143480
 ],
 
-'wmgRelatedArticlesShowInFooter' => [
-	'default' => true, // T164391, T143480
-],
-
 'wgRelatedArticlesCardLimit' => [
 	'default' => 3,
 	'wikivoyage' => 9,
