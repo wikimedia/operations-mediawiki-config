@@ -13583,20 +13583,6 @@ $wgConf->settings = [
 		'Special:Book',
 	],
 ],
-'wgPopupsAnonsEnabledSamplingRate' => [
-	'default' => 0,
-	'sewikimedia' => 1, // T68374
-
-	// T136602: Make Page Previews enabled by default for 90% of anon users for
-	// the stage 0 wikis.
-	'pp_stage0' => 0.9,
-
-	// T162672: Make Page Previews enabled by default for the stage 1 wikis.
-	'pp_stage1' => 1,
-
-	'enwiki' => 0,
-	'dewiki' => 0,
-],
 
 'wmgPopupsBetaFeature' => [
 	'default' => true,
@@ -13621,27 +13607,6 @@ $wgConf->settings = [
 
 	'enwiki' => true,
 	'dewiki' => true,
-],
-
-	// Careful! This value should not be increased without coordination with the
-	// Operations and/or Analytics teams. At the very least, be mindful of the
-	// current rate of Popups events being logged:
-	// https://grafana.wikimedia.org/dashboard/db/eventlogging-schema?var-schema=Popups
-'wgPopupsSchemaSamplingRate' => [
-	'default' => 0.000,
-
-	'pp_stage0' => 0.001,
-
-	// T171325: Increase the per-session sampling rate of the Page Previews
-	// EventLogging instrumentation to 1% of all distinct browser sessions so
-	// that analysis of the stage 0 test can be completed in a reasonable amount
-	// of time.
-	'itwiki' => 0.01,
-	'huwiki' => 0.01,
-	'ruwiki' => 0.01,
-
-	'enwiki' => 0,
-	'dewiki' => 0,
 ],
 
 'wgPopupsStatsvSamplingRate' => [
