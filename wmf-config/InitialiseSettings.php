@@ -5205,7 +5205,8 @@ $wgConf->settings = [
 		'DBTransaction' => 'debug',
 		'DBReplication' => 'warning',
 		'DBConnection' => 'error',
-		'DBQuery' => 'warning'
+		'DBQuery' => 'warning',
+		'LoginNotify' => 'debug',
 	],
 
 	'+private' => [
