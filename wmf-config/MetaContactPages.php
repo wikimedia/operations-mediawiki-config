@@ -113,6 +113,7 @@ $wgContactConfig['requestlicense'] = [
 	'AdditionalFields' => [
 		'Username' => [
 			'type' => 'text',
+			'required' => true,
 			'label-message' => 'contactpage-license-request-username',
 		],
 		'Site' => [
@@ -121,6 +122,7 @@ $wgContactConfig['requestlicense'] = [
 		],
 		'Group' => [
 			'type' => 'text',
+			'required' => true,
 			'label-message' => 'contactpage-license-request-group',
 		],
 		'Title' => [
