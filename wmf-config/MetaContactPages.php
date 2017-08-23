@@ -122,7 +122,6 @@ $wgContactConfig['requestlicense'] = [
 		],
 		'Group' => [
 			'type' => 'text',
-			'required' => true,
 			'label-message' => 'contactpage-license-request-group',
 		],
 		'Title' => [
