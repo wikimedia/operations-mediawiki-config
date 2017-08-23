@@ -145,7 +145,6 @@ $wgContactConfig['requestlicense'] = [
 				'contactpage-license-request-use-tv' => 'tv',
 			],
 			'default' => 'online',
-			'required' => true,
 		],
 
 		'Description' => [
