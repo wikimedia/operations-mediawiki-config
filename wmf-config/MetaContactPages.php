@@ -137,6 +137,7 @@ $wgContactConfig['requestlicense'] = [
 		],
 		'ProposedUse' => [
 			'type' => 'selectorother',
+			'required' => true,
 			'label-message' => 'contactpage-license-request-use-proposed',
 			'options-messages' => [
 				'contactpage-license-request-use-online' => 'online',
