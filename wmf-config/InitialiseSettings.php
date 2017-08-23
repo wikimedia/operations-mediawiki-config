@@ -10088,7 +10088,7 @@ $wgConf->settings = [
 	],
 	'+mediawikiwiki' => [
 		'sysop' => [ 'autopatrolled' ],
-		'bureaucrat' => [ 'autopatrolled', 'transwiki', 'import', 'translationadmin' ],
+		'bureaucrat' => [ 'autopatrolled', 'transwiki', 'import', 'translationadmin', 'accountcreator' ],
 	],
 	'+metawiki' => [
 		'bureaucrat' => [ 'centralnoticeadmin', 'flood', 'uploader', 'translationadmin' ], // T48639, T110674
