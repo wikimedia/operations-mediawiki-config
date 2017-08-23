@@ -553,6 +553,19 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		// T165018: Make Page Previews (Popups) use RESTBase's page summary endpoint
+		// and consume the HTML returned.
+		'wgPopupsGateway' => [
+			'default' => 'restbaseHTML',
+		],
+
+		// To allow us to test EventLogging in the beta cluster we log all events
+		'wgPopupsSchemaSamplingRate' => [
+			'default' => 1,
+		],
+		'wgPopupsStatsvSamplingRate' => [
+			'default' => 1,
+		],
 		'wgEnableRcFiltersBetaFeature' => [
 			'default' => true,
 		],
@@ -564,33 +577,10 @@ function wmfLabsSettings() {
 		'wmgUsePopups' => [
 			'default' => true,
 		],
-
-		'-wmgPopupsBetaFeature' => [
+		'wmgPopupsBetaFeature' => [
 			'default' => false,
 		],
-
-		// T171853: For 25% of anonymous user sessions, Page Previews will be
-		// enabled by default as well as the instrumentation; for 25%, PP will be
-		// disabled by default; for 50%, PP will be disabled as will the
-		// instrumentation.
-		'-wgPopupsAnonsExperimentalGroupSize' => [
-			'default' => 0.25,
-		],
-
-		// T171853: Enable PP EventLogging instrumentation on enwiki only so that we
-		// can prove the killswitch works.
-		'-wgPopupsEventLogging' => [
-			'default' => false,
-			'enwiki' => true,
-		],
-
-		// T165018: Make Page Previews (Popups) use RESTBase's page summary endpoint
-		// and consume the HTML returned.
-		'-wgPopupsGateway' => [
-			'default' => 'restbaseHTML',
-		],
-
-		'-wgPopupsStatsvSamplingRate' => [
+		'wgPopupsAnonsEnabledSamplingRate' => [
 			'default' => 1,
 		],
 
