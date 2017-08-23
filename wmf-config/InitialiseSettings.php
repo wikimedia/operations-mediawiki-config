@@ -13570,7 +13570,6 @@ $wgConf->settings = [
 		'Special:TemplateSandbox',
 		'Special:MostLinkedFiles',
 		'Special:Book',
-		'Special:CiteThisPage',
 	],
 ],
 'wgPopupsAnonsEnabledSamplingRate' => [
