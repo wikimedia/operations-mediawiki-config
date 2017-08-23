@@ -560,9 +560,6 @@ function wmfLabsSettings() {
 		],
 
 		// To allow us to test EventLogging in the beta cluster we log all events
-		'wgPopupsSchemaSamplingRate' => [
-			'default' => 1,
-		],
 		'wgPopupsStatsvSamplingRate' => [
 			'default' => 1,
 		],
@@ -579,9 +576,6 @@ function wmfLabsSettings() {
 		],
 		'wmgPopupsBetaFeature' => [
 			'default' => false,
-		],
-		'wgPopupsAnonsEnabledSamplingRate' => [
-			'default' => 1,
 		],
 
 		'wmgUseCollaborationKit' => [
