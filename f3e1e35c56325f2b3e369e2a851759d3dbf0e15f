@@ -1,0 +1,38 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_c79d410e",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 577,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-23T20:27:47Z",
+      "side": 1,
+      "message": "mw.config.get(\u0027wgPopupsAnonsExperimentalGroupSize\u0027) is 0 on beta cluster. This hasn\u0027t worked.",
+      "revId": "f3e1e35c56325f2b3e369e2a851759d3dbf0e15f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_a798351f",
+        "filename": "wmf-config/InitialiseSettings-labs.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 582,
+      "author": {
+        "id": 94
+      },
+      "writtenOn": "2017-08-23T20:27:47Z",
+      "side": 1,
+      "message": "I think the correct thing to do is here is replace \u0027-wg\u0027 with \u0027wg\u0027\n\nThese should override any defaults in InitialiseSettings.php",
+      "revId": "f3e1e35c56325f2b3e369e2a851759d3dbf0e15f",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
