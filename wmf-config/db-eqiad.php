@@ -166,10 +166,10 @@ $wgLBFactoryConf = [
 	],
 	's7' => [
 		'db1062' => 0,   # D4 2.8TB 128GB, master
-		# 'db1033' => 0,   # B2 1.4TB  64GB, old master
 		'db1028' => 0,   # B1 1.4TB  64GB, vslow, dump
 		'db1034' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager
 		# 'db1039' => 0,   # B2 1.4TB  64GB
+		'db1069' => 0,   # D1 2.8TB 160GB, vslow, dump, old master 
 		'db1079' => 300, # A2 3.6TB 512GB, api #master for db1102 (sanitarium 3)
 		'db1086' => 500, # B3 3.6TB 512GB, api
 		'db1094' => 500, # D2 3.6TB 512GB
@@ -432,10 +432,12 @@ $wgLBFactoryConf = [
 	],
 	's7' => [
 		'vslow' => [
-			'db1028' => 1,
+			'db1028' => 10,
+			'db1069' => 1,
 		],
 		'dump' => [
-			'db1028' => 1,
+			'db1028' => 10,
+			'db1069' => 1,
 		],
 		'api' => [
 			'db1079' => 100,
@@ -475,7 +477,6 @@ $wgLBFactoryConf = [
 	'db1026' => '10.64.16.15', # do not remove or comment out
 	'db1028' => '10.64.16.17', # do not remove or comment out
 	'db1030' => '10.64.16.19', # do not remove or comment out
-	'db1033' => '10.64.16.22', # do not remove or comment out
 	'db1034' => '10.64.16.23', # do not remove or comment out
 	'db1035' => '10.64.16.24', # do not remove or comment out
 	'db1036' => '10.64.16.25', # do not remove or comment out
@@ -504,6 +505,7 @@ $wgLBFactoryConf = [
 	'db1066' => '10.64.48.21', # do not remove or comment out
 	'db1067' => '10.64.48.22', # do not remove or comment out
 	'db1068' => '10.64.48.23', # do not remove or comment out
+	'db1069' => '10.64.48.24', # do not remove or comment out
 	'db1070' => '10.64.48.25', # do not remove or comment out
 	'db1071' => '10.64.48.26', # do not remove or comment out
 	'db1072' => '10.64.16.39', # do not remove or comment out
