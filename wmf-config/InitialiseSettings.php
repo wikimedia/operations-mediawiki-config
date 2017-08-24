@@ -13554,7 +13554,7 @@ $wgConf->settings = [
 	'default' => [
 		'Special:CreateAccount',
 		'Special:GlobalRenameRequest',
-		'Special:UserLogin',
+		'Special:Userlogin',
 		'Special:MergeAccount',
 		'Special:ChangeCredentials',
 		'Special:OAuthListConsumers',
