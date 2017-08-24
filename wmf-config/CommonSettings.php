@@ -1870,6 +1870,7 @@ if ( $wmgUseElectronPdfService ) {
 # Various system to allow/prevent flooding
 # (including exemptions for scheduled outreach events)
 require "$wmfConfigDir/throttle.php";
+require "$wmfConfigDir/throttle-analyze.php";
 
 if ( $wmgUseNewUserMessage ) {
 	wfLoadExtension( 'NewUserMessage' );
