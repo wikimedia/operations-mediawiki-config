@@ -574,7 +574,7 @@ function wmfLabsSettings() {
 		// disabled by default; for 50%, PP will be disabled as will the
 		// instrumentation.
 		'-wgPopupsAnonsExperimentalGroupSize' => [
-			'default' => 0.25,
+			'default' => 0.5,
 		],
 
 		// T171853: Enable PP EventLogging instrumentation on enwiki only so that we
