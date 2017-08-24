@@ -561,7 +561,7 @@ function wmfLabsSettings() {
 		//
 		// Note well that the Popups extension is only loaded when either
 		// wmgUsePopups or wmgPopupsBetaFeature is truthy.
-		'wmgUsePopups' => [
+		'-wmgUsePopups' => [
 			'default' => true,
 		],
 
