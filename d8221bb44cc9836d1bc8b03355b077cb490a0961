@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_c611b858",
+        "filename": "wmf-config/db-eqiad.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 435,
+      "author": {
+        "id": 3731
+      },
+      "writtenOn": "2017-08-25T05:04:35Z",
+      "side": 1,
+      "message": "Just curiosity, why db1028 would serve more traffic if it has poorer HW?",
+      "revId": "d8221bb44cc9836d1bc8b03355b077cb490a0961",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
