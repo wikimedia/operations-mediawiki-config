@@ -13545,9 +13545,6 @@ $wgConf->settings = [
 	// stage 0 and stage 1 wikis.
 	'pp_stage0' => true,
 	'pp_stage1' => true,
-
-	'enwiki' => false,
-	'dewiki' => false,
 ],
 
 'wgPopupsPageBlacklist' => [
@@ -13574,28 +13571,7 @@ $wgConf->settings = [
 ],
 
 'wmgPopupsBetaFeature' => [
-	'default' => true,
-
-	// Explicitly disable Page Previews as a beta feature for the stage 0 and
-	// stage 1 wikis (reflecting that it's enabled in the wmgUsePopups section
-	// above).
-	'pp_stage0' => false,
-	'pp_stage1' => false,
-
-	'wikidatawiki' => false,
-	'wiktionary' => false,
-	'nonbetafeatures' => false,
-	// T164740
-	'wikibooks' => false,
-	'wikisource' => false,
-	'wikinews' => false,
-	'wikiversity' => false,
-	'commonswiki' => false,
-	// T166894
-	'specieswiki' => false,
-
-	'enwiki' => true,
-	'dewiki' => true,
+	'default' => false,
 ],
 
 'wgPopupsStatsvSamplingRate' => [
@@ -13604,16 +13580,24 @@ $wgConf->settings = [
 	'default' => 0.01,
 ],
 
+'PopupsAnonsExperimentalGroupSize' => [
+	// Read: Enable previews for all anonymous users by default, which is the current behaviour on all wikis except enwiki and dewiki per T162672. 
+	'default' => 0,
+	'enwiki' => 0.006,
+	'dewiki' => 0.016,
+],
+
+'wgPopupsEventLogging' => [
+	'default' => false,
+	'enwiki' => true,
+	'dewiki' => true,
+],
+
 'wgPopupsGateway' => [
 	'default' => 'mwApiPlain',
 
-	// Make Page Previews use RESTBase for the following stage 0 and stage 1
-	// wikis.
-	'pp_stage0' => 'restbasePlain',
-	'pp_stage1' => 'restbasePlain',
-
-	'enwiki' => 'mwApiPlain',
-	'dewiki' => 'mwApiPlain',
+	// Make Page Previews use RESTBase for all wikipedias
+	'wikipedia' => 'restbasePlain',
 ],
 
 // T160081 (and others): Make sure that Page Previews can detect the many, many
