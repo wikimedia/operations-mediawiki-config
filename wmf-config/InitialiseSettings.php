@@ -14900,6 +14900,11 @@ $wgConf->settings = [
 	'test2wiki' => true,
 	'testwikidatawiki' => true,
 	'mediawikiwiki' => true,
+
+	// opt-in (T124742)
+	'nlwiki' => true, // @Krinkle
+	'plwiki' => true, // @MatmaRex
+	'svwiki' => true, // @Nirmos
 ],
 
 'wgCiteResponsiveReferences' => [
