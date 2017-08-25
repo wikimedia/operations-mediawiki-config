@@ -15561,6 +15561,11 @@ $wgConf->settings = [
 		'copyright-width' => 105,
 		'copyright-height' => 18,
 	],
+	'zh_classicalwiki' => [ // T173408
+		'copyright' => '/static/images/mobile/copyright/wikipedia-wordmark-zh-c.svg',
+		'copyright-width' => 80,
+		'copyright-height' => 18,
+	],
 ],
 'wgMFPhotoUploadEndpoint' => [
 	'default' => '//commons.m.wikimedia.org/w/api.php',
