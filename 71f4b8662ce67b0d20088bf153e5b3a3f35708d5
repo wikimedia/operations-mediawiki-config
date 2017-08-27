@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_436b6f16",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-08-27T12:04:27Z",
+      "side": 1,
+      "message": "Can you please specify here that this is for dty.wikipedia. It currently gives the impression that this is for all WMF sites. Thanks :)",
+      "revId": "71f4b8662ce67b0d20088bf153e5b3a3f35708d5",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
