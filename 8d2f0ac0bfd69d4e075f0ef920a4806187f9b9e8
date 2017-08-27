@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_beea68d4",
+        "filename": "wmf-config/throttle-analyze.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 2470
+      },
+      "writtenOn": "2017-08-27T20:21:30Z",
+      "side": 1,
+      "message": "if ( gettype( $options[\u0027dbname\u0027] ) \u003d\u003d \u0027string\u0027 ) {\nshould do it",
+      "range": {
+        "startLine": 39,
+        "startChar": 2,
+        "endLine": 39,
+        "endChar": 48
+      },
+      "revId": "8d2f0ac0bfd69d4e075f0ef920a4806187f9b9e8",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
