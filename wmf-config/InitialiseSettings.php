@@ -17292,6 +17292,7 @@ $wgConf->settings = [
 // Format: 'blahwiki' => [ 'web' => [ 'emailuser' => false ], 'email' => [ 'reverted' => true ] ]
 'wmgEchoDefaultUserSubscriptions' => [
 	'default' => [],
+	'hewiki' => [ 'email' => [ 'login-success' => true, 'login-fail' => true ] ]
 ],
 
 'wmgEchoMentionStatusNotifications' => [
