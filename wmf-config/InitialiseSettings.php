@@ -9837,6 +9837,9 @@ $wgConf->settings = [
 		'sysop' => [ 'inactive', 'flood' ],
 		'bureaucrat' => [ 'import', 'transwiki', 'inactive' ],
 	],
+	'+dtywiki' => [
+		'sysop' => [ 'transwiki' ], // T174226
+	],
 	'+elwiki' => [
 		'bureaucrat' => [ 'accountcreator' ], // T61997
 	],
@@ -10578,6 +10581,9 @@ $wgConf->settings = [
 	'+donatewiki' => [
 		'sysop' => [ 'inactive', 'confirmed', 'flood' ],
 		'bureaucrat' => [ 'sysop', 'bureaucrat', 'import', 'transwiki', 'inactive', 'confirmed' ],
+	],
+	'+dtywiki' => [
+		'sysop' => [ 'transwiki' ], // T174226
 	],
 	'+elwiki' => [
 		'bureaucrat' => [ 'accountcreator' ], // T61997
