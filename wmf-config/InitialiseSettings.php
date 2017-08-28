@@ -9596,9 +9596,15 @@ $wgConf->settings = [
 		],
 	],
 	'wikidata' => [
+		'*' => [
+			'item-redirect' => false, // T174345
+			'item-merge' => false, // T174345
+		],
 		'autoconfirmed' => [
 			'patrol' => true, // T58203
 			'autopatrol' => true, // T58203
+			'item-redirect' => true, // T174345
+			'item-merge' => true, // T174345
 		],
 		'rollbacker' => [
 			'rollback' => true, // T47165
