@@ -571,10 +571,6 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
-		'wgStructuredChangeFiltersOnWatchlist' => [
-			'default' => true,
-		],
-
 		'wgStructuredChangeFiltersShowPreference' => [
 			'default' => true,
 		],
