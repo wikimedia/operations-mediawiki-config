@@ -1079,7 +1079,7 @@ if ( $wmgUseScore ) {
 	wfLoadExtension( 'Score' );
 	$wgScoreSafeMode = true;
 	$wgScoreLilypond = '/usr/local/bin/mediawiki-firejail-lilypond';
-	$wgScoreAbc2Ly = '/usr/local/bin/mediawiki-firejail-abc2ly';
+	// $wgScoreAbc2Ly = '/usr/local/bin/mediawiki-firejail-abc2ly';
 	$wgScoreTimidity = '/usr/local/bin/mediawiki-firejail-timidity';
 	$wgScoreFileBackend = $wmgScoreFileBackend;
 	$wgScorePath = $wmgScorePath;
