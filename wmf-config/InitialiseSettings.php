@@ -18963,7 +18963,7 @@ $wgConf->settings = [
 	'default' => true,
 ],
 'wgStructuredChangeFiltersOnWatchlist' => [
-	'default' => false,
+	'default' => true,
 ],
 
 ### End (roughly) of general extensions ########################
