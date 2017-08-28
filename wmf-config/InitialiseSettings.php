@@ -18965,6 +18965,10 @@ $wgConf->settings = [
 'wgEnableRcFiltersBetaFeature' => [
 	'default' => true,
 ],
+'wgStructuredChangeFiltersOnWatchlist' => [
+	'default' => false,
+],
+
 ### End (roughly) of general extensions ########################
 
 'wgUseTidy' => [
