@@ -13591,7 +13591,7 @@ $wgConf->settings = [
 	'default' => 0.01,
 ],
 
-'PopupsAnonsExperimentalGroupSize' => [
+'wgPopupsAnonsExperimentalGroupSize' => [
 	// Read: Enable previews for all anonymous users by default, which is the current behaviour on all wikis except enwiki and dewiki per T162672.
 	'default' => 0,
 	'enwiki' => 0.006,
