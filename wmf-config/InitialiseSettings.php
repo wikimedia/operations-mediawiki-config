@@ -13556,6 +13556,9 @@ $wgConf->settings = [
 	// stage 0 and stage 1 wikis.
 	'pp_stage0' => true,
 	'pp_stage1' => true,
+	// T172291
+	'enwiki' => true,
+	'dewiki' => true,
 ],
 
 'wgPopupsPageBlacklist' => [
