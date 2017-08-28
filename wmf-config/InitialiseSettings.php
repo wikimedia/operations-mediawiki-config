@@ -8143,6 +8143,8 @@ $wgConf->settings = [
 			'deletedhistory' => true,
 			'deletedtext' => true,
 			'abusefilter-log-detail' => true,
+			'abusefilter-view-private' => true, // T174357
+			'abusefilter-log-private' => true, // T174357
 		],
 		'epcoordinator' => [ 'noratelimit' => true ], // T131684
 		'rollbacker' => [ 'rollback' => true, ], // T126931
