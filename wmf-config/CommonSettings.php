@@ -1083,6 +1083,7 @@ if ( $wmgUseScore ) {
 	$wgScoreTimidity = '/usr/local/bin/mediawiki-firejail-timidity';
 	$wgScoreFileBackend = $wmgScoreFileBackend;
 	$wgScorePath = $wmgScorePath;
+	$wgScoreSafeMode = false;
 }
 
 $wgHiddenPrefs[] = 'realname';
