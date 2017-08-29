@@ -57,19 +57,18 @@ avwiktionary
 aywiki
 aywikibooks
 aywiktionary
+azbwiki
 azwiki
 azwikibooks
 azwikiquote
 azwikisource
 azwiktionary
-azbwiki
 barwiki
 bat_smgwiki
 bawiki
 bawikibooks
 bclwiki
 bdwikimedia
-be_x_oldwiki
 betawikiversity
 bewiki
 bewikibooks
@@ -77,6 +76,7 @@ bewikimedia
 bewikiquote
 bewikisource
 bewiktionary
+be_x_oldwiki
 bgwiki
 bgwikibooks
 bgwikinews
@@ -192,6 +192,7 @@ dzwiki
 dzwiktionary
 ecwikimedia
 eewiki
+electcomwiki
 elwiki
 elwikibooks
 elwikinews
@@ -316,8 +317,8 @@ hewiktionary
 hifwiki
 hiwiki
 hiwikibooks
-hiwikiversity
 hiwikiquote
+hiwikiversity
 hiwiktionary
 howiki
 hrwiki
@@ -592,10 +593,10 @@ orwiktionary
 oswiki
 otrs_wikiwiki
 outreachwiki
-pa_uswikimedia
 pagwiki
 pamwiki
 papwiki
+pa_uswikimedia
 pawiki
 pawikibooks
 pawikisource
@@ -757,8 +758,8 @@ tawikiquote
 tawikisource
 tawiktionary
 tcywiki
-tenwiki
 techconductwiki
+tenwiki
 test2wiki
 testwiki
 testwikidatawiki
@@ -899,7 +900,6 @@ zh_min_nanwikibooks
 zh_min_nanwikiquote
 zh_min_nanwikisource
 zh_min_nanwiktionary
-zh_yuewiki
 zhwiki
 zhwikibooks
 zhwikinews
@@ -907,6 +907,7 @@ zhwikiquote
 zhwikisource
 zhwikivoyage
 zhwiktionary
+zh_yuewiki
 zuwiki
 zuwikibooks
 zuwiktionary
