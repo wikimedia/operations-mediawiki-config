@@ -97,9 +97,8 @@ class Clean(main.AbstractSync):
         ])
         command_list.append([
             'clean-l10n-bootstrap',
-            ['rm', '-fR', os.path.join(
-             self.config['stage_dir'], 'wmf-config',
-             'ExtensionMessages-%s.php' % branch)]
+            ['rm', '-fR', os.path.join(self.config['stage_dir'], 'wmf-config',
+                                       'ExtensionMessages-%s.php' % branch)]
         ])
 
         logger = self.get_logger()
