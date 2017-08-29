@@ -256,6 +256,9 @@ $wgCirrusSearchExtraIndexSettings = $wmgCirrusSearchExtraIndexSettings;
 // Limit on the number of tokens we will run phrase rescores with
 $wgCirrusSearchMaxPhraseTokens = $wmgCirrusSearchMaxPhraseTokens;
 
+// Enable the search relevance survey where configured
+$wgWMESearchRelevancePages = $wmgWMESearchRelevancePages
+
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
 # - CirrusSearch-production.php

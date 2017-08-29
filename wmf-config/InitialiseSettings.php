@@ -19393,6 +19393,11 @@ $wgConf->settings = [
 	'testwikidatawiki' => false,
 ],
 
+'wmgWMESearchRelevancePages' => [
+	'default' => [],
+	'enwiki' => include __DIR__ . '/CirrusSearch-rel-survey.php',
+],
+
 'wmgUseDynamicSidebar' => [
 	'default' => false,
 	'labswiki' => true,
