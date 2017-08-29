@@ -1920,11 +1920,6 @@ if ( $wmgUseCodeReview ) {
 # AbuseFilter
 wfLoadExtension( 'AbuseFilter' );
 include "$wmfConfigDir/abusefilter.php";
-if ( isset( $wmgAbuseFilterEmergencyDisableThreshold ) ) {
-	$wgAbuseFilterEmergencyDisableThreshold = $wmgAbuseFilterEmergencyDisableThreshold;
-	$wgAbuseFilterEmergencyDisableCount = $wmgAbuseFilterEmergencyDisableCount;
-	$wgAbuseFilterEmergencyDisableAge = $wmgAbuseFilterEmergencyDisableAge;
-}
 
 if ( $wmgUsePdfHandler ) {
 	wfLoadExtension( 'PdfHandler' );
