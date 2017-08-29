@@ -1904,6 +1904,10 @@ if ( $wmgUseCodeReview ) {
 # AbuseFilter
 wfLoadExtension( 'AbuseFilter' );
 include "$wmfConfigDir/abusefilter.php";
+if ( $wmgUseGlobalAbuseFilters ) {
+	$wgAbuseFilterCentralDB = $wmgAbuseFilterCentralDB;
+	$wgAbuseFilterIsCentral = ( $wgDBname === $wgAbuseFilterCentralDB );
+}
 
 if ( $wmgUsePdfHandler ) {
 	wfLoadExtension( 'PdfHandler' );
@@ -3145,11 +3149,6 @@ if ( $wmgUsePageImages ) {
 if ( $wmgUseSearchExtraNS ) {
 	wfLoadExtension( 'SearchExtraNS' );
 	$wgSearchExtraNamespaces = $wmgSearchExtraNamespaces;
-}
-
-if ( $wmgUseGlobalAbuseFilters ) {
-	$wgAbuseFilterCentralDB = $wmgAbuseFilterCentralDB;
-	$wgAbuseFilterIsCentral = ( $wgDBname === $wgAbuseFilterCentralDB );
 }
 
 if ( $wmgZeroPortal || $wmgUseGraph || $wmgZeroBanner ) {
