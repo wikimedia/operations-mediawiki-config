@@ -1969,6 +1969,7 @@ $wgConf->settings = [
 	'specieswiki' => 'https://species.wikimedia.org',
 	'stewardwiki' => 'https://steward.wikimedia.org',
 	'strategywiki' => 'https://strategy.wikimedia.org',
+	'techconductwiki' => 'https://techconduct.wikimedia.org', // T165977
 	'testwikidatawiki' => 'https://test.wikidata.org',
 	'transitionteamwiki' => 'https://transitionteam.wikimedia.org',
 	'usabilitywiki' => 'https://usability.wikimedia.org',
