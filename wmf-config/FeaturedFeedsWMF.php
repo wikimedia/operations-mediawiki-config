@@ -4,13 +4,7 @@
  * Feed settings for WMF projects
  */
 
-$wgHooks['FeaturedFeeds::getFeeds'][] = 'wfFeaturedFeedsWMF_getFeeds';
-
-/**
- * @param array &$feeds
- * @return bool
- */
-function wfFeaturedFeedsWMF_getFeeds( &$feeds ) {
+$wgHooks['FeaturedFeeds::getFeeds'][] = function( &$feeds ) {
 	global $wgConf, $wmgFeaturedFeedsOverrides;
 	list( $site, $lang ) = $wgConf->siteFromDB( wfGetDB( DB_SLAVE )->getDBname() );
 	$media = [
