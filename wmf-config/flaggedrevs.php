@@ -123,13 +123,6 @@ if ( $wgDBname == 'alswiki' ) {
 	unset( $wgGroupPermissions['editor'], $wgGroupPermissions['autoreview'] );
 	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], [ 'editor', 'autoreview' ] );
 	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'editor', 'autoreview' ] );
-} elseif ( $wgDBname == 'testwiki' && false ) {
-	// Disabled temporarily, give testwiki enwiki's settings instead --Roan May 7 2012
-	$wgGroupsAddToSelf['*'][] = 'editor';
-	$wgGroupsAddToSelf['*'][] = 'reviewer';
-	$wgGroupsRemoveFromSelf['*'][] = 'editor';
-	$wgGroupsRemoveFromSelf['*'][] = 'reviewer';
-	$wgFlaggedRevsAutopromote = $wmfStandardAutoPromote;
 } elseif ( $wgDBname == 'test2wiki' ) {
 	$wgFlaggedRevsNamespaces[] = NS_CATEGORY;
 	$wgFlaggedRevsTags['accuracy']['levels'] = 1;
@@ -219,9 +212,7 @@ if ( $wgDBname == 'alswiki' ) {
 		'benchmarks' => 1,
 		'email' => false
 	];
- } elseif ( $wgDBname == 'enwiki' || $wgDBname == 'testwiki' ) {
-	// Temporarily give testwiki enwiki's settings instead, for testing PageTriage --Roan 2012-05-07
-
+ } elseif ( $wgDBname == 'enwiki' ) {
 	$wgFlaggedRevsNamespaces = [ NS_MAIN, NS_PROJECT ];
 	# Show only on a per-page basis
 	$wgFlaggedRevsOverride = false;
@@ -252,10 +243,6 @@ if ( $wgDBname == 'alswiki' ) {
 	unset( $wgGroupPermissions['editor'], $wgGroupPermissions['autoreview'] );
 	$wgAddGroups['sysop'] = array_diff( $wgAddGroups['sysop'], [ 'editor', 'autoreview' ] );
 	$wgRemoveGroups['sysop'] = array_diff( $wgRemoveGroups['sysop'], [ 'editor', 'autoreview' ] );
-	# Reviewers can patrol on testwiki (T93798)
-	if ( $wgDBname == 'testwiki' ) {
-		$wgGroupPermissions['reviewer']['patrol'] = true;
-	}
  } elseif ( $wgDBname == 'enwikibooks' ) {
 	$wgFlaggedRevsOverride = false;
 	// Cookbook, WikiJunior
