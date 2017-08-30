@@ -1715,6 +1715,10 @@ if ( $wmgUseCentralNotice ) {
 	if ( $wgDBname === 'testwiki' ) {
 		$wgCentralPagePath = "//test.wikipedia.org/w/index.php";
 		$wgCentralSelectedBannerDispatcher = "//test.wikipedia.org/w/index.php?title=Special:BannerLoader";
+
+		// No caching for banners on testwiki, so we can develop them there a bit faster - NeilK 2012-01-16
+		// Never set this to zero on a highly trafficked wiki, there are server-melting consequences
+		$wgNoticeBannerMaxAge = 0;
 	} else {
 		$wgCentralPagePath = "//{$wmfHostnames['meta']}/w/index.php";
 		$wgCentralSelectedBannerDispatcher = "//{$wmfHostnames['meta']}/w/index.php?title=Special:BannerLoader";
@@ -1726,27 +1730,17 @@ if ( $wmgUseCentralNotice ) {
 	$wgNoticeReporterDomains = 'https://donate.wikimedia.org';
 
 	$wgCentralDBname = 'metawiki';
-	if ( $wmfRealm == 'production' && $wgDBname === 'testwiki' ) {
-		# test.wikipedia.org has its own central database:
-		$wgCentralDBname = 'testwiki';
-	}
-
 	$wgNoticeInfrastructure = false;
-	if ( $wgDBname === 'metawiki' ) {
-		$wgNoticeInfrastructure = true;
-	}
 	if ( $wmfRealm == 'production' && $wgDBname === 'testwiki' ) {
+		// test.wikipedia.org has its own central database:
+		$wgCentralDBname = 'testwiki';
+		$wgNoticeInfrastructure = true;
+	} elseif ( $wgDBname === 'metawiki' ) {
 		$wgNoticeInfrastructure = true;
 	}
 
 	// Set fundraising banners to use HTTPS on foundation wiki
 	$wgNoticeFundraisingUrl = 'https://donate.wikimedia.org/wiki/Special:LandingCheck';
-
-	// No caching for banners on testwiki, so we can develop them there a bit faster - NeilK 2012-01-16
-	// Never set this to zero on a highly trafficked wiki, there are server-melting consequences
-	if ( $wgDBname === 'testwiki' ) {
-		$wgNoticeBannerMaxAge = 0;
-	}
 
 	// Enable the CentralNotice/Translate integration
 	$wgNoticeUseTranslateExtension = true;
