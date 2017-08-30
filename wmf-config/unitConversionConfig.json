@@ -101,12 +101,6 @@
         "label": "volt",
         "siLabel": "volt"
     },
-    "Q25267": {
-        "factor": "1",
-        "unit": "Q25267",
-        "label": "degrees Celsius",
-        "siLabel": "degrees Celsius"
-    },
     "Q25269": {
         "factor": "1",
         "unit": "Q25269",
