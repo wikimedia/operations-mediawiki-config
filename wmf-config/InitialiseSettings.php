@@ -17881,6 +17881,7 @@ $wgConf->settings = [
 	'napwiki' => true,
 	'nnwiki' => true,
 	'orwiki' => true,
+	'sqwiki' => true,
 	'testwiki' => true,
 	'test2wiki' => true,
 	'testwikidatawiki' => true,
