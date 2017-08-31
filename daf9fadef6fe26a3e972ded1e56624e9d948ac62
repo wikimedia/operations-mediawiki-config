@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_5b6013a0",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1911,
+      "author": {
+        "id": 5095
+      },
+      "writtenOn": "2017-08-31T19:00:26Z",
+      "side": 1,
+      "message": "We should check for each individual $wmg_____ variable before assigning.\n\nAnd if we are deploying this to all wikis do we even need to keep this block?",
+      "range": {
+        "startLine": 1907,
+        "startChar": 0,
+        "endLine": 1911,
+        "endChar": 1
+      },
+      "revId": "daf9fadef6fe26a3e972ded1e56624e9d948ac62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
