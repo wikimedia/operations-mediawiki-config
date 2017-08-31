@@ -64,7 +64,14 @@ if ( !$selectedFilePath ) {
 		// Which is a problem if our PWD is not the same dir (such as in unit tests).
 		$selectedFilePath = realpath( $selectedFilePath );
 		// Figure out path to selected file in the mediawiki-config repository
-		$selectedFileRepoPath = ( basename( dirname( $selectedFilePath ) ) === 'wmf-config' ? 'wmf-config/' : '' ) . $selectedFileName;
+		$baseDir = basename( dirname( $selectedFilePath ) );
+		if ( in_array( $baseDir, [ 'dblists', 'wmf-config' ] ) ) {
+		{
+			$selectedFileRepoPath = $baseDir . '/' . $selectedFileName;
+		} else {
+			$selectedFileRepoPath = '';
+		}
+		
 		if ( substr( $selectedFileName, -4 ) === '.php' ) {
 			$hlHtml = highlight_file( $selectedFilePath, true );
 			$hlHtml = str_replace( '&nbsp;', ' ', $hlHtml ); // https://bugzilla.wikimedia.org/19253
