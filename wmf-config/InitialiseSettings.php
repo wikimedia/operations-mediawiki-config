@@ -12956,9 +12956,17 @@ $wgConf->settings = [
 		'default' => 86400,
 	],
 ],
-
 'wgAbuseFilterParserClass' => [
 	'default' => 'AbuseFilterParser',
+],
+'wgAbuseFilterRuntimeProfile' => [
+	'default' => false,
+	'commonswiki' => true,
+	'enwiki' => true,
+	'mediawikiwiki' => true,
+	'metawiki' => true,
+	'testwiki' => true,
+	'wikidatawiki' => true,
 ],
 # @}
 
