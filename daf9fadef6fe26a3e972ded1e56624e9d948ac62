@@ -22,6 +22,30 @@
       "revId": "daf9fadef6fe26a3e972ded1e56624e9d948ac62",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_5b97b3ee",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 1911,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2017-08-31T19:39:30Z",
+      "side": 1,
+      "message": "No we don\u0027t cuz we\u0027re removing them all at once.",
+      "parentUuid": "4e7eab26_5b6013a0",
+      "range": {
+        "startLine": 1907,
+        "startChar": 0,
+        "endLine": 1911,
+        "endChar": 1
+      },
+      "revId": "daf9fadef6fe26a3e972ded1e56624e9d948ac62",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
