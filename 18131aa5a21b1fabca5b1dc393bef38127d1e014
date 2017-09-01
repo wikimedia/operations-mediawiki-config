@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_41c6e41a",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 4
+      },
+      "lineNbr": 1357,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-09-01T03:51:30Z",
+      "side": 1,
+      "message": "This can\u0027t be right. The file is returning an array, but without the variable assignment this goes nowhere.",
+      "range": {
+        "startLine": 1357,
+        "startChar": 1,
+        "endLine": 1357,
+        "endChar": 15
+      },
+      "revId": "18131aa5a21b1fabca5b1dc393bef38127d1e014",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
