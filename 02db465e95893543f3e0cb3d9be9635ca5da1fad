@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_817a8ce5",
+        "filename": "wmf-config/etcd.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 19,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-09-01T03:48:36Z",
+      "side": 1,
+      "message": "This is no longer the case :)",
+      "range": {
+        "startLine": 19,
+        "startChar": 32,
+        "endLine": 19,
+        "endChar": 61
+      },
+      "revId": "02db465e95893543f3e0cb3d9be9635ca5da1fad",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
