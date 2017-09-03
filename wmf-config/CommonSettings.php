@@ -2572,6 +2572,8 @@ if ( $wmgUseTranslate ) {
 			'shi-tfng' => 'Translate in shi please.',
 			'shi-latn' => 'Translate in shi please.',
 
+			'sr-cyrl' => 'Translate in sr please.',
+			'sr-latn' => 'Translate in sr please.',
 			'sr-ec' => 'Translate in sr please.',
 			'sr-el' => 'Translate in sr please.',
 
