@@ -145,7 +145,6 @@ $wgLBFactoryConf = [
 	's5' => [
 		'db1063' => 0,   # C5 2.8TB 128GB, master
 		# 'db1049' => 1,   # B1 2.8TB  64GB, old master
-		# 'db1045' => 1,   # B2 1.4TB  64GB, watchlist, recentchanges, contributions, logpager # T172679
 		'db1070' => 50,  # D1 2.8TB 160GB, vslow, dump #ROW based replication - master for db1095
 		'db1071' => 50,  # D1 2.8TB 160GB, api
 		'db1082' => 300, # A2 3.6TB 512GB, api
@@ -373,27 +372,22 @@ $wgLBFactoryConf = [
 			'db1082' => 1,
 		],
 		'watchlist' => [
-			# 'db1045' => 1,
 			'db1096' => 1,
 			'db1099' => 1,
 		],
 		'recentchanges' => [
-			# 'db1045' => 1,
 			'db1096' => 1,
 			'db1099' => 1,
 		],
 		'recentchangeslinked' => [
-			# 'db1045' => 1,
 			'db1096' => 1,
 			'db1099' => 1,
 		],
 		'contributions' => [
-			# 'db1045' => 1,
 			'db1096' => 1,
 			'db1099' => 1,
 		],
 		'logpager' => [
-			# 'db1045' => 1,
 			'db1096' => 1,
 			'db1099' => 1,
 		],
@@ -480,7 +474,6 @@ $wgLBFactoryConf = [
 	'db1039' => '10.64.16.28', # do not remove or comment out
 	'db1043' => '10.64.16.32', # do not remove or comment out
 	'db1044' => '10.64.16.33', # do not remove or comment out
-	'db1045' => '10.64.16.34', # do not remove or comment out
 	'db1047' => '10.64.16.36', # do not remove or comment out
 	'db1049' => '10.64.16.144', # do not remove or comment out
 	'db1050' => '10.64.16.145', # do not remove or comment out
