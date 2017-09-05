@@ -3,6 +3,9 @@
 if ( $wmgUseWikibaseRepo ) {
 	if ( $wgDBname === 'testwikidatawiki' ) {
 		$wgPropertySuggesterClassifyingPropertyIds = [ 7 ];
+		$wgPropertySuggesterInitialSuggestions = [ 7 ];
+		$wgPropertySuggesterDeprecatedIds = [ 107 ];
+
 		$wgWBRepoSettings['formatterUrlProperty'] = 'P368';
 
 		$wgWBRepoSettings['badgeItems'] = [
@@ -35,6 +38,8 @@ if ( $wmgUseWikibaseRepo ) {
 		];
 	} else {
 		$wgPropertySuggesterClassifyingPropertyIds = [ 31, 279 ]; // T169060
+		$wgPropertySuggesterInitialSuggestions = [ 31, 279 ];
+		$wgPropertySuggesterDeprecatedIds = [ 107 ];
 
 		$wgWBRepoSettings['sparqlEndpoint'] = 'https://query.wikidata.org/sparql';
 
