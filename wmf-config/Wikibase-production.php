@@ -159,15 +159,8 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['readFullEntityIdColumn'] = false;
 
 	// T142103
-	$wgWBClientEchoNotificationWikis = array_diff(
-		MWWikiversions::readDbListFile( 'wikidataclient' ),
-		[ 'dewiki', 'enwiki', 'frwiki' ]
-	);
-
-	if ( in_array( $wgDBname, $wgWBClientEchoNotificationWikis ) ) {
-		$wgWBClientSettings['sendEchoNotification'] = true;
-		$wgWBClientSettings['echoIcon'] = [ 'url' => '/static/images/wikibase/echoIcon.svg' ];
-	}
+	$wgWBClientSettings['sendEchoNotification'] = true;
+	$wgWBClientSettings['echoIcon'] = [ 'url' => '/static/images/wikibase/echoIcon.svg' ];
 
 	$wgWBClientSettings['disabledUsageAspects'] = [ 'C' ];
 }
