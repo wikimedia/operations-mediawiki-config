@@ -84,6 +84,8 @@ $wgCirrusSearchWikimediaExtraPlugin = [
 		'use_extra_timeout', // More accurate timeout (T152895)
 	],
 	'super_detect_noop' => true,
+	// TODO: remove once elastic 5.5.2 is deployed on all search clusters
+	'super_detect_noop_enable_native' => true,
 	'id_hash_mod_filter' => true,
 	'documentVersion' => true,
 	'token_count_router' => true,
