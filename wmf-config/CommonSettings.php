@@ -1989,6 +1989,10 @@ if ( $wmgUseCodeMirror ) {
 	$wgCodeMirrorBetaFeature = true;
 }
 
+if ( $wmgUseArticleCreationWorkflow ) {
+	wfLoadExtension( 'ArticleCreationWorkflow' );
+}
+
 $wgDefaultUserOptions['thumbsize'] = $wmgThumbsizeIndex;
 $wgDefaultUserOptions['showhiddencats'] = $wmgShowHiddenCats;
 
