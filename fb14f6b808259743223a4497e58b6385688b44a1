@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_75605acd",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 17662,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-09-05T20:58:36Z",
+      "side": 1,
+      "message": "Please add the ticket number as a comment for further reference. Like:\n\n  \u0027zhwikivoyage\u0027 \u003d\u003e false, // T174979",
+      "revId": "fb14f6b808259743223a4497e58b6385688b44a1",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
