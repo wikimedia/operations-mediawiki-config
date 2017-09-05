@@ -53,7 +53,9 @@ foreach ( $datacenters as $specificDC ) {
 		'parallelize'        => 'implicit',
 		'cacheAuthInfo'      => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
-		'readAffinity'       => ( $specificDC === $wmfDatacenter )
+		'readAffinity'       => ( $specificDC === $wmfDatacenter ),
+		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
+		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ]
 	];
 	$wgFileBackends[] = [ // backend config for wiki's access to shared repo
 		'class'              => 'SwiftFileBackend',
@@ -78,7 +80,9 @@ foreach ( $datacenters as $specificDC ) {
 		'parallelize'        => 'implicit',
 		'cacheAuthInfo'      => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
-		'readAffinity'       => ( $specificDC === $wmfDatacenter )
+		'readAffinity'       => ( $specificDC === $wmfDatacenter ),
+		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
+		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ]
 	];
 	$wgFileBackends[] = [ // backend config for wiki's access to shared files
 		'class'              => 'SwiftFileBackend',
@@ -96,7 +100,9 @@ foreach ( $datacenters as $specificDC ) {
 		'parallelize'        => 'implicit',
 		'cacheAuthInfo'      => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
-		'readAffinity'       => ( $specificDC === $wmfDatacenter )
+		'readAffinity'       => ( $specificDC === $wmfDatacenter ),
+		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
+		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ]
 	];
 	$wgFileBackends[] = [ // backend config for wiki's access to shared test repo
 		'class'              => 'SwiftFileBackend',
@@ -111,7 +117,9 @@ foreach ( $datacenters as $specificDC ) {
 		'parallelize'        => 'implicit',
 		'cacheAuthInfo'      => true,
 		// When used by FileBackendMultiWrite, read from this cluster if it's the local one
-		'readAffinity'       => ( $specificDC === $wmfDatacenter )
+		'readAffinity'       => ( $specificDC === $wmfDatacenter ),
+		'readUsers'           => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ],
+		'writeUsers'          => [ $wmfSwiftConfig[$specificDC]['thumborUser'] ]
 	];
 }
 /* end DC-specific Swift backend config */
