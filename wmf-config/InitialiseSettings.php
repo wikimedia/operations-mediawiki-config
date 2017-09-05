@@ -19382,6 +19382,10 @@ $wgConf->settings = [
 	'rtl' => false, // T170001
 ],
 
+'wmgUseArticleCreationWorkflow' => [
+	'default' => false,
+],
+
 'wmgUseParserMigration' => [
 	'default' => true,
 ],
