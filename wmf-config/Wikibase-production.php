@@ -159,10 +159,7 @@ if ( $wmgUseWikibaseClient ) {
 	$wgWBClientSettings['readFullEntityIdColumn'] = false;
 
 	// T142103
-	$wgWBClientEchoNotificationWikis = array_diff(
-		MWWikiversions::readDbListFile( 'wikidataclient' ),
-		[ 'dewiki', 'enwiki', 'frwiki' ]
-	);
+	$wgWBClientEchoNotificationWikis = true;
 
 	if ( in_array( $wgDBname, $wgWBClientEchoNotificationWikis ) ) {
 		$wgWBClientSettings['sendEchoNotification'] = true;
