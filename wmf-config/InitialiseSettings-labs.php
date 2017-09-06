@@ -471,7 +471,8 @@ function wmfLabsSettings() {
 		],
 
 		'wmgUseArticleCreationWorkflow' => [
-			'default' => true,
+			'default' => false,
+			'simplewiki' => true,
 		],
 
 		// Ensure ?action=credits isn't break and allow to work
