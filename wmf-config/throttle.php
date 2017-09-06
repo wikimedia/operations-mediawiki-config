@@ -37,4 +37,3 @@ $wmgThrottlingExceptions[] = [
 ];
 
 ## Add throttling definitions above.
-
