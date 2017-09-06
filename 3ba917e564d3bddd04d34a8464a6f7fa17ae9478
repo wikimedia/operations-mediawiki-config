@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_8298237e",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 342,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2017-09-06T21:20:18Z",
+      "side": 1,
+      "message": "* Spacing.\n* You want to match the future prod settings, excluding autoconfirmed.\n* Leave a comment that 0 is NS_MAIN.",
+      "range": {
+        "startLine": 342,
+        "startChar": 31,
+        "endLine": 342,
+        "endChar": 33
+      },
+      "revId": "3ba917e564d3bddd04d34a8464a6f7fa17ae9478",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
