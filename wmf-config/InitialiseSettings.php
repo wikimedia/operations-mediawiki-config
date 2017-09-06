@@ -477,8 +477,6 @@ $wgConf->settings = [
 # @} end of wgLocaltimezone
 
 # wgLogo @{
-// $stdlogo gives the path to the local copy of Wiki.png on the relevant wiki,
-// e.g. for simplewiktionary: '//upload.wikimedia.org/wiktionary/simple/b/bc/Wiki.png'
 'wgLogo' => [
 	// Projects
 	'default' => '/static/images/project-logos/default.png',

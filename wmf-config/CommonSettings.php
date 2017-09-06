@@ -208,7 +208,6 @@ if ( !$globals ) {
 		'lang'    => $lang,
 		'docRoot' => $_SERVER['DOCUMENT_ROOT'],
 		'site'    => $site,
-		'stdlogo' => "//{$wmfHostnames['upload']}/$site/$lang/b/bc/Wiki.png" ,
 	];
 	// Add a per-language tag as well
 	$wikiTags[] = $wgConf->get( 'wgLanguageCode', $wgDBname, $dbSuffix, $confParams, $wikiTags );
