@@ -336,6 +336,12 @@ if ( $wmgUseLoginNotify ) {
 	$wgLoginNotifyAttemptsNewIP = 1;
 }
 
+
+if ( $wmgUseArticleCreationWorkflow ) {
+	wfLoadExtension( 'ArticleCreationWorkflow' );
+	$wgArticleCreationWorkflows = [[ 'namespaces' => [0], 'excludeRight' => 'sysop' ]];
+}
+
 $wgStructuredChangeFiltersEnableExperimentalViews = true;
 $wgStructuredChangeFiltersEnableLiveUpdate = true;
 
