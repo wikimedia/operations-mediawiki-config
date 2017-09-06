@@ -5228,6 +5228,7 @@ $wgConf->settings = [
 		'DBConnection' => 'error',
 		'DBQuery' => 'warning',
 		'LoginNotify' => 'debug',
+		'WMDE' => 'debug', // WMDE & Addshore T174948 (Can be removed after 2017/10/14)
 	],
 
 	'+private' => [
