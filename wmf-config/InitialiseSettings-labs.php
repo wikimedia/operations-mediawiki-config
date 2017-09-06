@@ -350,13 +350,13 @@ function wmfLabsSettings() {
 			'flow_only_labs' => true,
 		],
 		# No separate Flow DB or cluster (yet) for labs.
-		'-wgFlowDefaultWikiDb' => [
+		'-wmgFlowDefaultWikiDb' => [
 			'default' => false,
 		],
-		'-wgFlowCluster' => [
+		'-wmgFlowCluster' => [
 			'default' => false,
 		],
-		'wgFlowEnableOptInBetaFeature' => [
+		'wmgFlowEnableOptInBetaFeature' => [
 			'enwiki' => true,
 			'hewiki' => true,
 		],

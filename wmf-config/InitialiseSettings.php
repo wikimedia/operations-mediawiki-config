@@ -17441,19 +17441,19 @@ $wgConf->settings = [
 	'default' => true,
 ],
 // Use separate database on extension1 cluster for all non-private wikis.
-'wgFlowDefaultWikiDb' => [
+'wmgFlowDefaultWikiDb' => [
 	'default' => 'flowdb',
 	'private' => false,
 	'wikitech' => false, // T127792
 ],
-'wgFlowCluster' => [
+'wmgFlowCluster' => [
 	'default' => 'extension1',
 	'private' => false,
 ],
-'wgFlowMaintenanceMode' => [
+'wmgFlowMaintenanceMode' => [
 	'default' => false,
 ],
-'wgFlowEnableOptInBetaFeature' => [
+'wmgFlowEnableOptInBetaFeature' => [
 	'default' => false,
 	'testwiki' => true,
 
