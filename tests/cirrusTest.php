@@ -99,7 +99,6 @@ class cirrusTests extends WgConfTestCase {
 			'lang'    => $lang,
 			'docRoot' => $_SERVER['DOCUMENT_ROOT'],
 			'site'    => $site,
-			'stdlogo' => "//" ,
 		];
 		// Add a per-language tag as well
 		$wikiTags[] = $wgConf->get( 'wgLanguageCode', $wgDBname, $dbSuffix, $confParams, $wikiTags );
@@ -178,7 +177,6 @@ class cirrusTests extends WgConfTestCase {
 				'lang' => $lang,
 				'docRoot' => '/dev/null',
 				'site' => $site,
-				'stdlogo' => 'file://dev/null',
 			] );
 			foreach ( $indexTypes as $indexType ) {
 				// only commonswiki has the file index
