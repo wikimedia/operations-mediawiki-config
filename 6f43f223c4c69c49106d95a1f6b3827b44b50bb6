@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_42d6bbf7",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 342,
+      "author": {
+        "id": 43
+      },
+      "writtenOn": "2017-09-06T21:24:36Z",
+      "side": 1,
+      "message": "This should be a string, not array: https://github.com/wikimedia/mediawiki-extensions-ArticleCreationWorkflow/blob/master/includes/Workflow.php#L64",
+      "range": {
+        "startLine": 342,
+        "startChar": 45,
+        "endLine": 342,
+        "endChar": 73
+      },
+      "revId": "6f43f223c4c69c49106d95a1f6b3827b44b50bb6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
