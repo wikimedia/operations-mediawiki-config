@@ -39,7 +39,38 @@ if ( $wmgUseWikibaseRepo ) {
 	} else {
 		$wgPropertySuggesterClassifyingPropertyIds = [ 31, 279 ]; // T169060
 		$wgPropertySuggesterInitialSuggestions = [ 31, 279 ];
-		$wgPropertySuggesterDeprecatedIds = [ 107 ];
+
+		// T72346
+		$wgPropertySuggesterDeprecatedIds = [
+			143, // imported from
+			/**
+			 * Deprecated properties
+			 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18644427
+			 */
+			1222, // (deprecated) NARA person ID
+			2315, // comment (DEPRECATED)
+			/**
+			 * @see https://www.wikidata.org/w/index.php?oldid=335040857
+			 */
+			646, // Freebase ID
+			/**
+			 * Sandbox properties
+			 * @see https://www.wikidata.org/wiki/Special:WhatLinksHere/Q18720640
+			 */
+			368,  // commonsMedia
+			369,  // wikibase-item
+			370,  // string
+			578,  // time
+			626,  // globe-coordinate
+			855,  // url
+			1106, // quantity
+			1450, // monolingualtext
+			2368, // wikibase-property
+			2535, // math
+			2536, // external-id
+			4045, // tabular-data
+			4047, // geo-shape
+		];
 
 		$wgWBRepoSettings['sparqlEndpoint'] = 'https://query.wikidata.org/sparql';
 
