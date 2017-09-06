@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_9ddde475",
+        "filename": "rpc/RunSingleJob.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 16
+      },
+      "writtenOn": "2017-09-06T23:31:46Z",
+      "side": 1,
+      "message": "Do all strings have this? If not, is it something a user can cause to appear themselves by being clever?",
+      "revId": "1c42798c2b6381a8eeba7d2975409b77882a2220",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
