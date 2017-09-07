@@ -16,6 +16,24 @@
       "revId": "f5817b0de256db06410985a4bb0c21d83e5d4ff6",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_9ec71b9a",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 17852,
+      "author": {
+        "id": 920
+      },
+      "writtenOn": "2017-09-07T11:21:09Z",
+      "side": 1,
+      "message": "It will work. See for example:\n\u0027wgKartographerEnableMapFrame\u0027 \u003d\u003e [\n        \u0027default\u0027 \u003d\u003e true,\n        \u0027wikipedia\u0027 \u003d\u003e false,\n        \u0027cawiki\u0027 \u003d\u003e true,\n        \u0027cswiki\u0027 \u003d\u003e true, // T171588\n        \u0027euwiki\u0027 \u003d\u003e true, // T167619\n        \u0027fiwiki\u0027 \u003d\u003e true, // T151591\n        \u0027frwiki\u0027 \u003d\u003e true,\n        \u0027hewiki\u0027 \u003d\u003e true,\n        \u0027mkwiki\u0027 \u003d\u003e true,\n        \u0027nowiki\u0027 \u003d\u003e true, // T154021\n        \u0027ptwiki\u0027 \u003d\u003e true, // T168915\n        \u0027ruwiki\u0027 \u003d\u003e true,\n        \u0027svwiki\u0027 \u003d\u003e true, // T161032\n        \u0027testwiki\u0027 \u003d\u003e true,\n        \u0027test2wiki\u0027 \u003d\u003e true,\n],",
+      "parentUuid": "4e7eab26_1ed32b66",
+      "revId": "f5817b0de256db06410985a4bb0c21d83e5d4ff6",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
