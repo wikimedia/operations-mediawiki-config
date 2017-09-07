@@ -16,6 +16,24 @@
       "revId": "1c42798c2b6381a8eeba7d2975409b77882a2220",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_d8e4da0c",
+        "filename": "rpc/RunSingleJob.php",
+        "patchSetId": 8
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 2177
+      },
+      "writtenOn": "2017-09-07T07:16:52Z",
+      "side": 1,
+      "message": "No, only base64-encoded ones do. Basically, these fields contain binary payloads and we encode them and prefix the string with this so that we know that. In theory, a user could fill a string field with this and exploit vulnerabilities in the decoder that way, but if that\u0027s the case we have much bigger problems in MW itself.",
+      "parentUuid": "4e7eab26_9ddde475",
+      "revId": "1c42798c2b6381a8eeba7d2975409b77882a2220",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
