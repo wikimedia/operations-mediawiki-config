@@ -14962,9 +14962,10 @@ $wgConf->settings = [
 	'mswiki' => true, // T165247
 	'nowiki' => true, // T160362
 
-	'enwiktionary' => true, // T160933
-
-	'wikiquote' => true, // T159895
+	// Wiki families
+	'wiktionary' => true, // T159895 overall, T160933 for enwikt
+	'wikiquote' => true, // T159895 overall
+	'wikivoyage' => true, // T159895 overall
 ],
 
 'wmgUseRSSExtension' => [
