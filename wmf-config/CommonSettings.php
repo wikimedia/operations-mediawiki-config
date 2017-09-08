@@ -232,7 +232,7 @@ extract( $globals );
 
 # Private settings such as passwords, that shouldn't be published
 # Needs to be before db.php
-require "$wmfConfigDir/PrivateSettings.php";
+require "$wmfConfigDir/../private/PrivateSettings.php";
 
 $wgMemCachedServers = [];
 
