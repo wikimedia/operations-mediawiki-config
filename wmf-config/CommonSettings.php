@@ -1999,6 +1999,7 @@ if ( $wmgUseCodeMirror ) {
 	$wgCodeMirrorBetaFeature = true;
 }
 
+// Must be loaded BEFORE VisualEditor, or things will break
 if ( $wmgUseArticleCreationWorkflow ) {
 	wfLoadExtension( 'ArticleCreationWorkflow' );
 }
