@@ -663,7 +663,7 @@ $wgAvailableRights[] = 'autoreviewrestore';
 $wgAvailableRights[] = 'stablesettings';
 $wgAvailableRights[] = 'review';
 $wgAvailableRights[] = 'unreviewedpages';
-$wgAvailableRights[] = 'movestable';
+wgAvailableRights[] = 'movestable';
 $wgAvailableRights[] = 'validate';
 $wgGrantPermissions['editprotected']['movestable'] = true;
 
@@ -701,6 +701,12 @@ $wgGrantPermissions['editpage']['item-term'] = true;
 $wgGrantPermissions['editpage']['item-merge'] = true;
 $wgGrantPermissions['editpage']['property-term'] = true;
 $wgGrantPermissions['editpage']['item-redirect'] = true;
+
+// Extension:NeswsLetter, so that they are available for global groups --MA 2017.09.09
+$wgAvailableRights[] = 'newsletter-create';
+$wgAvailableRights[] = 'newsletter-delete';
+$wgAvailableRights[] = 'newsletter-manage';
+$wgAvailableRights[] = 'newsletter-restore';
 
 // Enable a "viewdeletedfile" userright for [[m:Global deleted image review]] (T16801)
 $wgAvailableRights[] = 'viewdeletedfile';
