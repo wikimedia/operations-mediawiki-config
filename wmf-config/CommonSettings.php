@@ -702,6 +702,12 @@ $wgGrantPermissions['editpage']['item-merge'] = true;
 $wgGrantPermissions['editpage']['property-term'] = true;
 $wgGrantPermissions['editpage']['item-redirect'] = true;
 
+// Extension:NeswsLetter, so that they are available for global groups --MA 2017.09.09
+$wgAvailableRights[] = 'newsletter-create';
+$wgAvailableRights[] = 'newsletter-delete';
+$wgAvailableRights[] = 'newsletter-manage';
+$wgAvailableRights[] = 'newsletter-restore';
+
 // Enable a "viewdeletedfile" userright for [[m:Global deleted image review]] (T16801)
 $wgAvailableRights[] = 'viewdeletedfile';
 $wgHooks['TitleQuickPermissions'][] = function ( Title $title, User $user, $action, &$errors, $doExpensiveQueries, $short ) {
