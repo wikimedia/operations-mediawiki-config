@@ -19192,6 +19192,7 @@ $wgConf->settings = [
 	'test2wiki' => true,
 	// T125000, T115023, T140717, T145328, T142963
 	// T110837, T121999, T114334, T152344, T163662
+	'ruwikimedia' => true, // T175356
 	'wikivoyage' => true,
 	'plwikivoyage' => false,
 	'fawikivoyage' => false,
