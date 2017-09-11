@@ -19466,7 +19466,8 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
-	'frwikinews' => true, // T154371
+	'frwiki' => true, // T154371
+	'frwikinews' => true,
 	'frwikisource' => true,
 	'frwikiversity' => true,
 ],
