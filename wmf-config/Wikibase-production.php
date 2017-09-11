@@ -171,7 +171,6 @@ if ( $wmgUseWikibaseClient ) {
 		$wgWBClientSettings['repoUrl'] = 'https://www.wikidata.org';
 		$wgWBClientSettings['repoConceptBaseUri'] = 'http://www.wikidata.org/entity/';
 		$wgArticlePlaceholderImageProperty = 'P18';
-		$wgWBClientSettings['wikiPageUpdaterDbBatchSize'] = 20;
 	}
 
 	$wgWBClientSettings['badgeClassNames'] = [
