@@ -19474,6 +19474,7 @@ $wgConf->settings = [
 	'frwikinews' => true, // T154371
 	'frwikisource' => true,
 	'frwikiversity' => true,
+	'frwiktionary' => true,
 ],
 
 // T175725
