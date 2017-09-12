@@ -257,13 +257,6 @@ $wgMaxUserDBWriteDuration = 3;
 # This should be lower than 'max lag' in the LBFactory conf.
 $wgAPIMaxLagThreshold = 3;
 
-# Allow master queries (leave logging in beta)
-$wgTrxProfilerLimits['PostSend'] = [
-	'readQueryTime' => 5,
-	'writeQueryTime' => 1,
-	'maxAffected' => 1000,
-];
-
 ini_set( 'memory_limit', $wmgMemoryLimit );
 
 # Rewrite commands given to wfShellWikiCmd() to use Het-Deploy
