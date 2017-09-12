@@ -575,6 +575,10 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		'wgStructuredChangeFiltersShowPreference' => [
+			'default' => true,
+		],
+
 		// Enable page previews for everyone in labs (T162672)
 		//
 		// Note well that the Popups extension is only loaded when either
