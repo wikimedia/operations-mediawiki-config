@@ -19426,6 +19426,28 @@ $wgConf->settings = [
 	'testwikidatawiki' => false,
 ],
 
+'wmgCirrusSearchMLRModel' => [
+	'default' => false,
+	'arwiki' => '20170905_arwiki_v1',
+	'fawiki' => '20170905_fawiki_v1',
+	'jawiki' => '20170905_jawiki_v1',
+	'svwiki' => '20170905_svwiki_v1',
+	'frwiki' => '20170905_frwiki_v1',
+	'itwiki' => '20170905_itwiki_v1',
+	'ptwiki' => '20170905_ptwiki_v1',
+	'ruwiki' => '20170905_ruwiki_v1',
+	'dewiki' => '20170905_dewiki_v1',
+	'fiwiki' => '20170908_fiwiki_v1',
+	'hewiki' => '20170908_hewiki_v1',
+	'idwiki' => '20170908_idwiki_v1',
+	'kowiki' => '20170908_kowiki_v1',
+	'nlwiki' => '20170908_nlwiki_v1',
+	'nowiki' => '20170908_nowiki_v1',
+	'plwiki' => '20170908_plwiki_v1',
+	'viwiki' => '20170908_viwiki_v1',
+	'zhwiki' => '20170908_zhwiki_v1',
+],
+
 'wmgWMESearchRelevancePages' => [
 	'default' => [],
 	'enwiki' => include __DIR__ . '/CirrusSearch-rel-survey.php',
