@@ -37,9 +37,6 @@ $wgCirrusSearchClusterOverrides = $wmgCirrusSearchClusterOverrides;
 // (textcat) searches
 $wgCirrusSearchFullTextClusterOverrides = $wmgCirrusSearchClusterOverrides;
 
-# Enable user testing
-$wgCirrusSearchUserTesting = $wmgCirrusSearchUserTesting;
-
 # Turn off leading wildcard matches, they are a very slow and inefficient query
 $wgCirrusSearchAllowLeadingWildcard = false;
 
@@ -258,6 +255,46 @@ $wgCirrusSearchMaxPhraseTokens = $wmgCirrusSearchMaxPhraseTokens;
 
 // Enable the search relevance survey where configured
 $wgWMESearchRelevancePages = $wmgWMESearchRelevancePages;
+
+if ( $wmgCirrusSearchMLRModel ) {
+	// LTR Rescore profile
+	$wgCirrusSearchRescoreProfiles['mlr-1024rs'] = [
+		'i18n_msg' => 'cirrussearch-qi-profile-wsum-inclinks-pv',
+		'supported_namespaces' => 'content',
+		'unsupported_syntax' => [ 'full_text_querystring', 'query_string', 'filter_only' ],
+		'fallback_profile' => $wmgCirrusSearchMLRModelFallback,
+		'rescore' => [
+			[
+				'window' => 8192,
+				'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
+				'query_weight' => 1.0,
+				'rescore_query_weight' => 1.0,
+				'score_mode' => 'total',
+				'type' => 'function_score',
+				'function_chain' => 'wsum_inclinks_pv'
+			],
+			[
+				'window' => 8192,
+				'window_size_override' => 'CirrusSearchFunctionRescoreWindowSize',
+				'query_weight' => 1.0,
+				'rescore_query_weight' => 1.0,
+				'score_mode' => 'multiply',
+				'type' => 'function_score',
+				'function_chain' => 'optional_chain'
+			],
+			[
+				'window' => 1024,
+				'query_weight' => 1.0,
+				'rescore_query_weight' => 10000.0,
+				'score_mode' => 'total',
+				'type' => 'ltr',
+				'model' => $wmgCirrusSearchMLRModel,
+			],
+		],
+	];
+
+	$wgCirrusSearchUserTesting = $wmgCirrusSearchUserTesting;
+}
 
 # Load per realm specific configuration, either:
 # - CirrusSearch-labs.php
