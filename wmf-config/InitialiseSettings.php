@@ -17347,7 +17347,6 @@ $wgConf->settings = [
 		NS_TEMPLATE_TALK,
 		NS_HELP_TALK,
 		NS_CATEGORY_TALK,
-		NS_NEWSLETTER_TALK,
 		101, /* Manual talk */
 		103, /* Extension talk */
 		105, /* API talk */
@@ -17357,6 +17356,7 @@ $wgConf->settings = [
 		1199, /* Translations talk */
 		2301, /* Gadget talk */
 		2303, /* Gadget definition talk */
+		5501, /* Newsletter talk from Newsletter extension */
 	],
 	'officewiki' => [
 		NS_TALK,
