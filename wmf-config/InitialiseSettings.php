@@ -19474,6 +19474,14 @@ $wgConf->settings = [
 	'frwikiversity' => true,
 ],
 
+// T175725
+'wgFragmentMode' => [
+	'default' => [ 'legacy' ],
+	'testwiki' => [ 'legacy', 'html5' ],
+	'test2wiki' => [ 'legacy', 'html5' ],
+	'testwikidatawiki' => [ 'legacy', 'html5' ],
+],
+
 ];
 
 ### WMF Labs override #####
