@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_30bcf9d4",
+        "filename": "wmf-config/CirrusSearch-production.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 142,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2017-09-12T07:30:18Z",
+      "side": 0,
+      "message": "so we drop the 20 results rescore option?",
+      "revId": "6348b74d4fffca8892465f6c9f5631598ec767ef",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
