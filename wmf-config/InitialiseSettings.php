@@ -17334,7 +17334,8 @@ $wgConf->settings = [
 ],
 
 // Before updating wmgFlowNamespaces, you must run populateContentModel.php (from core) on
-// the affected namespaces.
+// the affected namespaces.  See
+// https://www.mediawiki.org/wiki/Extension:Flow#Enabling_or_disabling_Flow
 'wmgFlowNamespaces' => [
 	'default' => [],
 	'mediawikiwiki' => [
@@ -17346,6 +17347,7 @@ $wgConf->settings = [
 		NS_TEMPLATE_TALK,
 		NS_HELP_TALK,
 		NS_CATEGORY_TALK,
+		NS_NEWSLETTER_TALK,
 		101, /* Manual talk */
 		103, /* Extension talk */
 		105, /* API talk */
