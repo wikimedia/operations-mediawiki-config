@@ -17346,6 +17346,7 @@ $wgConf->settings = [
 		NS_TEMPLATE_TALK,
 		NS_HELP_TALK,
 		NS_CATEGORY_TALK,
+		NS_NEWSLETTER_TALK,
 		101, /* Manual talk */
 		103, /* Extension talk */
 		105, /* API talk */

@@ -702,7 +702,7 @@ $wgGrantPermissions['editpage']['item-merge'] = true;
 $wgGrantPermissions['editpage']['property-term'] = true;
 $wgGrantPermissions['editpage']['item-redirect'] = true;
 
-// Extension:NeswsLetter, so that they are available for global groups --MA 2017.09.09
+// Extension:Newsletter, so that they are available for global groups --MA 2017.09.09
 $wgAvailableRights[] = 'newsletter-create';
 $wgAvailableRights[] = 'newsletter-delete';
 $wgAvailableRights[] = 'newsletter-manage';
