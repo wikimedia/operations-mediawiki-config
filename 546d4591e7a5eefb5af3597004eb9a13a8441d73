@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_fc93a3a4",
+        "filename": "wmf-config/CirrusSearch-common.php",
+        "patchSetId": 5
+      },
+      "lineNbr": 265,
+      "author": {
+        "id": 2638
+      },
+      "writtenOn": "2017-09-13T08:56:03Z",
+      "side": 1,
+      "message": "nitpick should be wsum_inclinks (_pv one is only used by enwiki)\nMaybe using $wmgCirrusSearchRescoreProfile would do the trick?",
+      "range": {
+        "startLine": 265,
+        "startChar": 25,
+        "endLine": 265,
+        "endChar": 41
+      },
+      "revId": "546d4591e7a5eefb5af3597004eb9a13a8441d73",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
