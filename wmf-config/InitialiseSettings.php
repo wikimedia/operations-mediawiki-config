@@ -19472,11 +19472,17 @@ $wgConf->settings = [
 	'testwiki' => true,
 	'test2wiki' => true,
 	'mediawikiwiki' => true,
-	'frwiki' => true, // T154371
+	// T154371
+	'commonswiki' => true,
+	'enwikisource' => true,
+	'dewiki' => true,
+	'frwiki' => true,
 	'frwikinews' => true,
 	'frwikisource' => true,
 	'frwikiversity' => true,
 	'frwiktionary' => true,
+	'hewiki' => true,
+	'hewikisource' => true,
 ],
 
 // T175725
