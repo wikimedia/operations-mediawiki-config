@@ -11979,7 +11979,7 @@ $wgConf->settings = [
 
 'wgPageLanguageUseDB' => [
 	'default' => false,
-	'wikisource' => true, // T175622
+	'sourceswiki' => true, // T175622
 	// overridden to true in CommonSettings for wikis using the Translate extension
 ],
 
