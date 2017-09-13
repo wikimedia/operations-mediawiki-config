@@ -2226,7 +2226,7 @@ if ( $wmgUseLinter ) {
 	wfLoadExtension( 'Linter' );
 }
 
-if ( !isset( $wgVirtualRestConfig ) && ( $wmgUseRestbaseVRS || $wmgUseParsoid ) ) {
+if ( !isset( $wgVirtualRestConfig ) && ( $wmgUseRestbaseVRS || $wmgUseParsoid || $wmgUseCollection ) ) {
 	$wgVirtualRestConfig = [
 		'modules' => [],
 		'global' => [
@@ -2258,6 +2258,15 @@ if ( $wmgUseParsoid ) {
 		'domain' => $wgCanonicalServer,
 		'forwardCookies' => $wmgParsoidForwardCookies,
 		'restbaseCompat' => false
+	];
+}
+
+if ( $wmgUseCollection ) {
+	$wgVirtualRestConfig['modules']['electron'] = [
+		'url' => $wmfLocalServices['electron'],
+		'options' => [
+			'accessKey' => $wmgElectronSecret, // set in private repo
+		],
 	];
 }
 

@@ -35,7 +35,8 @@ $wmfAllServices['eqiad'] = [
 	],
 	'etcd' => 'deployment-etcd-01.deployment-prep.eqiad.wmflabs:2379',
 	'mediaSwiftAuth' => 'http://deployment-ms-fe02.deployment-prep.eqiad.wmflabs/auth',
-	'mediaSwiftStore' => 'http://deployment-ms-fe02.deployment-prep.eqiad.wmflabs/v1/AUTH_mw'
+	'mediaSwiftStore' => 'http://deployment-ms-fe02.deployment-prep.eqiad.wmflabs/v1/AUTH_mw',
+	'electron' => 'http://deployment-pdfrender02.deployment-prep.eqiad.wmflabs:5252',
 ];
 
 ### Logstash
