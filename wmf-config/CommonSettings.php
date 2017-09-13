@@ -2268,6 +2268,16 @@ if ( $wmgUseCollection ) {
 			'accessKey' => $wmgElectronSecret, // set in private repo
 		],
 	];
+
+	// HACK T175868 prevent random users from accessing the test page
+	$wgHooks['SpecialPageBeforeExecute'][] = function ( SpecialPage $special, $subPage ) {
+		if (
+			$special->getName() === 'RenderBook' && $subPage === 'test'
+			&& !preg_match( '/ \(WMF\)$/', $special->getUser()->getName() )
+		) {
+			return false;
+		}
+	};
 }
 
 if ( $wmgUseVisualEditor ) {
