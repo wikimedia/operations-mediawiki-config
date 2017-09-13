@@ -19416,6 +19416,10 @@ $wgConf->settings = [
 	],
 ],
 
+'wgArticleCreationLandingPage' => [
+	'default' => 'Project:New user landing page',
+],
+
 'wmgUseParserMigration' => [
 	'default' => true,
 ],
