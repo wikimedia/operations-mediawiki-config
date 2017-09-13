@@ -277,7 +277,7 @@ class cirrusTests extends WgConfTestCase {
 			'enwiki' => [ 'enwiki', 'wiki',
 				[
 					'wmgCirrusSearchSimilarityProfile' => 'wmf_defaults',
-					'wmgCirrusSearchRescoreProfile' => 'wsum_inclinks_pv',
+					'wmgCirrusSearchRescoreProfile' => 'mlr-1024rs',
 					'wmgCirrusSearchFullTextQueryBuilderProfile' => 'perfield_builder',
 				],
 			],
