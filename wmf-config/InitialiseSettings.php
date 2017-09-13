@@ -18098,7 +18098,7 @@ $wgConf->settings = [
 'wmgCirrusSearchRescoreProfile' => [
 	'default' => 'wsum_inclinks',
 	'commonswiki' => 'classic_noboostlinks',
-	'enwiki' => 'wsum_inclinks_pv',
+	'enwiki' => 'mlr-1024rs',
 	// Uses the lang tag, list of spaceless languages
 	// (see https://www.mediawiki.org/wiki/User:TJones_(WMF)/Notes/Spaceless_Writing_Systems_and_Wiki-Projects)
 	"bo" => "classic",
@@ -19408,6 +19408,7 @@ $wgConf->settings = [
 
 'wmgCirrusSearchMLRModel' => [
 	'default' => false,
+	'enwiki' => '20170911_enwiki_v1',
 	'arwiki' => '20170905_arwiki_v1',
 	'fawiki' => '20170905_fawiki_v1',
 	'jawiki' => '20170905_jawiki_v1',
