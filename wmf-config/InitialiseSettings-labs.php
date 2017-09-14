@@ -466,7 +466,7 @@ function wmfLabsSettings() {
 			'nonecho' => false,
 		],
 
-		'wmgUseCodeMirror' => [
+		'-wmgUseCodeMirror' => [
 			'default' => true,
 		],
 
