@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_6a635ba8",
+        "filename": "wmf-config/CommonSettings-labs.php",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 34
+      },
+      "writtenOn": "2017-09-14T15:46:09Z",
+      "side": 1,
+      "message": "This has, in fact, been merged :-)",
+      "range": {
+        "startLine": 45,
+        "startChar": 5,
+        "endLine": 45,
+        "endChar": 58
+      },
+      "revId": "88b08263258f8e016208d5185c92a3207dbd9851",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
