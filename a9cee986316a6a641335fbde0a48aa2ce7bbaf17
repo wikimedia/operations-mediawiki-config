@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_edb1a5f5",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 366
+      },
+      "writtenOn": "2017-09-14T18:05:06Z",
+      "side": 1,
+      "message": "+ Bug: T175095",
+      "revId": "a9cee986316a6a641335fbde0a48aa2ce7bbaf17",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
