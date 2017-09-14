@@ -337,7 +337,6 @@ if ( $wmgUseLoginNotify ) {
 }
 
 $wgStructuredChangeFiltersEnableExperimentalViews = true;
-$wgStructuredChangeFiltersEnableLiveUpdate = true;
 
 $wgMessageCacheType = CACHE_ACCEL;
 
