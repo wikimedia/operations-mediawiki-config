@@ -19000,6 +19000,12 @@ $wgConf->settings = [
 	'donatewiki' => false,
 ],
 
+'wgTidyConfig' => [
+	'default' => null,
+	'mediawikiwiki' => [ 'driver' => 'RemexHtml' ],
+	'testwiki' => [ 'driver' => 'RemexHtml' ],
+],
+
 // Cache ResourceLoader modules in localStorage
 'wgResourceLoaderStorageEnabled' => [
 	'default' => true,
