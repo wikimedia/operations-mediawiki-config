@@ -22,6 +22,30 @@
       "revId": "6e9fb25d93987fbb89f4a5b92449648d05b92958",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "4e7eab26_aa25c305",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 2269,
+      "author": {
+        "id": 389
+      },
+      "writtenOn": "2017-09-14T16:43:04Z",
+      "side": 1,
+      "message": "It would if anything else wanted to run a SpecialPageBeforeExecute hook for this specific special page, but there is no reason why they would. And in any case \"no need to look nice\" goes for that as well - nothing will link to Special:RenderBook/test so it\u0027s not a problem if it looks broken or uses the wrong styles or anything, as long as it does not execute.",
+      "parentUuid": "4e7eab26_67b87426",
+      "range": {
+        "startLine": 2269,
+        "startChar": 10,
+        "endLine": 2269,
+        "endChar": 16
+      },
+      "revId": "6e9fb25d93987fbb89f4a5b92449648d05b92958",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
