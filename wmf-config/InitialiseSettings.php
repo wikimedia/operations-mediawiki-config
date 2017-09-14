@@ -8593,9 +8593,6 @@ $wgConf->settings = [
 	'+gawiki' => [
 		'rollbacker' => [ 'rollback' => true ],
 	],
-	'gomwiki' => [
-		'sysop' => [ 'flow-create-board' => true ], // T139226
-	],
 	'guwiki' => [ // T119787
 		'rollbacker' => [ 'rollback' => true ],
 		'autopatrolled' => [ 'autopatrol' => true ],
@@ -9035,7 +9032,7 @@ $wgConf->settings = [
 		'communityapps' => [ 'view-community-applications' => true ],
 		'flood' => [ 'bot' => true ], // T86237
 		'user' => [ 'massmessage' => true, ], // T66978
-		'sysop' => [ 'importupload' => true, 'flow-create-board' => true ], // T101663
+		'sysop' => [ 'importupload' => true, ], // T101663
 		'securepoll' => [ 'securepoll-create-poll' => true, 'editinterface' => true ],
 	],
 	'+ombudsmenwiki' => [

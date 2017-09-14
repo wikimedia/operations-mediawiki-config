@@ -2875,6 +2875,12 @@ if ( $wmgUseFlow && $wmgUseParsoid ) {
 	}
 
 	$wgFlowEnableOptInBetaFeature = $wmgFlowEnableOptInBetaFeature;
+
+	// On wikis that have Flow as a beta feature or in an entire namespace,
+	// give sysops the right to create and move Flow boards
+	if ( $wgFlowEnableOptInBetaFeature || $wmgFlowNamespaces ) {
+		$wgGroupPermissions['sysop']['flow-create-board'] = true;
+	}
 }
 
 if ( $wmgUseDisambiguator ) {
