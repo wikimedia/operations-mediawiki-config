@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e7eab26_67b87426",
+        "filename": "wmf-config/CommonSettings.php",
+        "patchSetId": 3
+      },
+      "lineNbr": 2269,
+      "author": {
+        "id": 1963
+      },
+      "writtenOn": "2017-09-14T13:32:43Z",
+      "side": 1,
+      "message": "Will this `false` cause a problem similar to the one in https://gerrit.wikimedia.org/r/#/c/372591/?",
+      "range": {
+        "startLine": 2269,
+        "startChar": 10,
+        "endLine": 2269,
+        "endChar": 16
+      },
+      "revId": "6e9fb25d93987fbb89f4a5b92449648d05b92958",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
+    }
+  ]
+}
