@@ -19496,12 +19496,9 @@ $wgConf->settings = [
 	'frwiktionary' => true,
 ],
 
-// T175725
+// T152540
 'wgFragmentMode' => [
-	'default' => [ 'legacy' ],
-	'testwiki' => [ 'legacy', 'html5' ],
-	'test2wiki' => [ 'legacy', 'html5' ],
-	'testwikidatawiki' => [ 'legacy', 'html5' ],
+	'default' => [ 'legacy', 'html5' ],
 ],
 
 ];
