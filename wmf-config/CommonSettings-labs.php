@@ -366,6 +366,10 @@ if ( $wmgUse3d && $wmgUseMultimediaViewer ) {
 	$wg3dProcessor = [ '/usr/bin/xvfb-run', '-a', '-s', '-ac -screen 0 1280x1024x24' ,'/srv/deployment/3d2png/deploy/src/3d2png.js' ];
 }
 
+if( $wmgUseNewWikiDiff2Extension ) {
+	$wgWikiDiff2MovedParagraphDetectionCutoff = 25;
+}
+
 $wgAuthManagerAutoConfig['preauth'][GuanacoProvider::class] = [
 	'class' => GuanacoProvider::class,
 	'sort' => 0,
