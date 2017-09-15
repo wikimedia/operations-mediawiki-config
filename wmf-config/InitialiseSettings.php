@@ -18988,6 +18988,12 @@ $wgConf->settings = [
 'wgStructuredChangeFiltersOnWatchlist' => [
 	'default' => true,
 ],
+'wgStructuredChangeFiltersShowPreference' => [
+	'default' => false,
+	'cawiki' => true,
+	'frwiki' => true,
+	'hewiki' => true,
+],
 
 ### End (roughly) of general extensions ########################
 
