@@ -123,6 +123,7 @@ $wgConf->settings = [
 	'zh_yuewiki' => 'yue',
 
 	# Chapter wikis (xxwikimedia)
+	'amwikimedia' => 'hy',
 	'arwikimedia' => 'es',
 	'bdwikimedia' => 'bn',
 	'bewikimedia' => 'en',
@@ -251,6 +252,7 @@ $wgConf->settings = [
 # wgLocaltimezone @{
 'wgLocaltimezone' => [
 	'alswiki' => 'Europe/Berlin',
+	'amwikimedia' => 'Asia/Yerevan', // T176042
 	'arbcom_cswiki' => 'Europe/Prague', // T151731
 	'arbcom_dewiki' => 'Europe/Berlin',
 	'arbcom_fiwiki' => 'Europe/Helsinki',
@@ -1626,6 +1628,7 @@ $wgConf->settings = [
 	'srwikinews' => [ '1.5x' => '/static/images/project-logos/srwikinews-1.5x.png', '2x' => '/static/images/project-logos/srwikinews-2x.png' ], // T172255
 
 	# Chapter wikis
+	'amwikimedia' => [ '1.5x' => '/static/images/project-logos/amwikimedia-1.5x.png', '2x' => '/static/images/project-logos/amwikimedia-2x.png' ], // T176042
 	'ecwikimedia' => [ '1.5x' => '/static/images/project-logos/ecwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ecwikimedia-2x.png' ], // T135521
 	'maiwikimedia' => [ '1.5x' => '/static/images/project-logos/maiwikimedia-1.5x.png', '2x' => '/static/images/project-logos/maiwikimedia-2x.png' ],
 	'ptwikimedia' => [ '1.5x' => '/static/images/project-logos/ptwikimedia-1.5x.png', '2x' => '/static/images/project-logos/ptwikimedia-2x.png' ], // T126832
@@ -1838,6 +1841,7 @@ $wgConf->settings = [
 
 	// Individual wikis
 	'advisorywiki' => '//advisory.wikimedia.org',
+	'amwikimedia' => '//am.wikimedia.org',
 	'arwikimedia' => '//ar.wikimedia.org',
 	'auditcomwiki' => '//auditcom.wikimedia.org',
 	'be_x_oldwiki' => '//be-tarask.wikipedia.org',
@@ -1925,6 +1929,7 @@ $wgConf->settings = [
 
 	// Individual wikis
 	'advisorywiki' => 'https://advisory.wikimedia.org',
+	'amwikimedia' => 'https://am.wikimedia.org',
 	'arwikimedia' => 'https://ar.wikimedia.org',
 	'auditcomwiki' => 'https://auditcom.wikimedia.org',
 	'be_x_oldwiki' => 'https://be-tarask.wikipedia.org',
@@ -2017,6 +2022,7 @@ $wgConf->settings = [
 	'abwiki' => 'Авикипедиа',
 	'advisorywiki' => 'Advisory Board',
 	'adywiki' => 'Википедие', // T125501
+	'amwikimedia' => 'Վիքիմեդիա Հայաստանը', // T176042
 	'angwiki' => 'Wikipǣdia', // T58634
 	'angwikisource' => 'Wicifruma',
 	'angwiktionary' => 'Wikiwordbōc', // T58634
