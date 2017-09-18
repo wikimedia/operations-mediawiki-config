@@ -15004,6 +15004,9 @@ $wgConf->settings = [
 	'nlwiktionary' => true, // @Krinkle
 	'plwiki' => true, // @MatmaRex
 	'svwiki' => true, // @Nirmos
+
+	// Roll out
+	'wiktionary' => true,
 ],
 
 'wgCiteResponsiveReferences' => [
