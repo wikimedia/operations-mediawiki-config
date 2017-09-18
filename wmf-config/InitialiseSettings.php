@@ -5213,6 +5213,7 @@ $wgConf->settings = [
 		'torblock' => 'debug',
 		'ts_badpass' => 'debug',
 		'UpdateRepo' => 'debug',
+		'updateBetaFeaturesUserCounts' => 'info', // T175637
 		'updateTranstagOnNullRevisions' => 'debug',
 		'upload' => 'debug',
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
