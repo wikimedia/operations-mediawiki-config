@@ -8907,6 +8907,12 @@ $wgConf->settings = [
 		'oauthadmin' => [ // T142123
 			'autopatrol' => true,
 		],
+		'patroller' => [ // T176079
+			'autopatrol' => true,
+			'patrol' => true,
+			'patrolmarks' => true,
+			'rollback' => true,
+		],
 		'steward' => [
 			'centralauth-rename' => true,
 			'userrights-interwiki' => true,
@@ -10116,7 +10122,7 @@ $wgConf->settings = [
 	],
 	'+metawiki' => [
 		'bureaucrat' => [ 'centralnoticeadmin', 'flood', 'uploader', 'translationadmin' ], // T48639, T110674
-		'sysop' => [ 'autopatrolled', 'massmessage-sender' ], // T59611
+		'sysop' => [ 'autopatrolled', 'massmessage-sender', 'patroller' ], // T59611, T176079
 	],
 	'+mkwiki' => [
 		'bureaucrat' => [ 'patroller', 'autopatrolled', 'autoreviewed' ],
@@ -10871,7 +10877,7 @@ $wgConf->settings = [
 	],
 	'+metawiki' => [
 		'bureaucrat' => [ 'flood', 'translationadmin', 'centralnoticeadmin', 'uploader' ], // T39198, T52287, T110674
-		'sysop' => [ 'autopatrolled', 'massmessage-sender' ], // T59611
+		'sysop' => [ 'autopatrolled', 'massmessage-sender', 'patroller' ], // T59611, T176079
 	],
 	'+mkwiki' => [
 		'bureaucrat' => [ 'patroller', 'autopatrolled', 'autoreviewed' ],
