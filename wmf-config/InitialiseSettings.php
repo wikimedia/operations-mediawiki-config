@@ -13585,9 +13585,6 @@ $wgConf->settings = [
 	// stage 0 and stage 1 wikis.
 	'pp_stage0' => true,
 	'pp_stage1' => true,
-	// T172291
-	'enwiki' => true,
-	'dewiki' => true,
 ],
 
 'wgPopupsPageBlacklist' => [
@@ -13615,6 +13612,8 @@ $wgConf->settings = [
 
 'wmgPopupsBetaFeature' => [
 	'default' => false,
+	'enwiki' => true,
+	'dewiki' => true,
 ],
 
 'wgPopupsStatsvSamplingRate' => [
@@ -13624,16 +13623,12 @@ $wgConf->settings = [
 ],
 
 'wgPopupsAnonsExperimentalGroupSize' => [
-	// Read: Enable previews for all anonymous users by default, which is the current behaviour on all wikis except enwiki and dewiki per T162672.
+	// Read: Enable previews for all anonymous users by default.
 	'default' => 0,
-	'enwiki' => 0.06,
-	'dewiki' => 0.16,
 ],
 
 'wgPopupsEventLogging' => [
 	'default' => false,
-	'enwiki' => true,
-	'dewiki' => true,
 ],
 
 'wgPopupsGateway' => [
