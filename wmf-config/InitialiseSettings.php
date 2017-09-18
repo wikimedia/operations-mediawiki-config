@@ -5212,6 +5212,7 @@ $wgConf->settings = [
 		'ts_badpass' => 'debug',
 		'UpdateRepo' => 'debug',
 		'updateTranstagOnNullRevisions' => 'debug',
+		'updateBetaFeaturesUserCounts' => 'info', // T175637
 		'upload' => 'debug',
 		'wfLogDBError' => 'debug', // Former $wgDBerrorLog
 		'wikibase-debug' => 'debug',
