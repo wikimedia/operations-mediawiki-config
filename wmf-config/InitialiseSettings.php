@@ -14930,14 +14930,15 @@ $wgConf->settings = [
 	'mediawikiwiki' => true,
 
 	// opt-in (T124742)
-	'plwiki' => true, // @MatmaRex
-	'svwiki' => true, // @Nirmos
+	'metawiki' => true, // @Krinkle
 	'nlwiki' => true, // @Krinkle
 	'nlwikibooks' => true, // @Krinkle
 	'nlwikinews' => true, // @Krinkle
 	'nlwikiquote' => true, // @Krinkle
 	'nlwikisource' => true, // @Krinkle
 	'nlwiktionary' => true, // @Krinkle
+	'plwiki' => true, // @MatmaRex
+	'svwiki' => true, // @Nirmos
 ],
 
 'wgCiteResponsiveReferences' => [
