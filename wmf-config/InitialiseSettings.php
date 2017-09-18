@@ -14965,6 +14965,7 @@ $wgConf->settings = [
 	'mediawikiwiki' => true,
 
 	// opt-in (T124742)
+	'commonswiki' => true, // @Krinkle
 	'metawiki' => true, // @Krinkle
 	'nlwiki' => true, // @Krinkle
 	'nlwikibooks' => true, // @Krinkle
