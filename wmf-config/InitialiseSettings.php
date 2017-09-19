@@ -17596,13 +17596,6 @@ $wgConf->settings = [
 	],
 ],
 
-// Suggestions
-'wmgContentTranslationEnableSuggestions' => [
-	'default' => false,
-	'testwiki' => true,
-	'wikipedia' => true,
-],
-
 'wmgUseMapSources' => [
 	'default' => false,
 	'wikivoyage' => true,

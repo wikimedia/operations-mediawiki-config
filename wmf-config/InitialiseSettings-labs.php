@@ -315,9 +315,6 @@ function wmfLabsSettings() {
 		'wmgContentTranslationCampaigns' => [
 			'default' => [ 'newarticle' ],
 		],
-		'wmgContentTranslationEnableSuggestions' => [
-			'default' => true,
-		],
 
 		// Whether Compact Links is Beta feature
 		'wmgULSCompactLanguageLinksBetaFeature' => [
