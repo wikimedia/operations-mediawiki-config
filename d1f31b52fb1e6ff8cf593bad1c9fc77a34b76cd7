@@ -22,6 +22,29 @@
       "revId": "d1f31b52fb1e6ff8cf593bad1c9fc77a34b76cd7",
       "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "2e7b3738_68915a9c",
+        "filename": "wmf-config/InitialiseSettings.php",
+        "patchSetId": 1
+      },
+      "lineNbr": 7973,
+      "author": {
+        "id": 787
+      },
+      "writtenOn": "2017-09-19T23:15:43Z",
+      "side": 1,
+      "message": "As Krinkle mentions above, if you add this you\u0027ll avoid editting to unregistered users but you open the gate from non members to create accounts and edit, and remove from registered users some of the rights granted to them on fishbowl wikis without the need for them to become autoconfirmed. I suggest you just simply remove this unless this was intended :)",
+      "range": {
+        "startLine": 7971,
+        "startChar": 0,
+        "endLine": 7973,
+        "endChar": 5
+      },
+      "revId": "d1f31b52fb1e6ff8cf593bad1c9fc77a34b76cd7",
+      "serverId": "e9e9afe9-4712-486d-8885-f54b72dd1951",
+      "unresolved": false
     }
   ]
 }
