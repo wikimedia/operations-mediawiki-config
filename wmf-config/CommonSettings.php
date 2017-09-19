@@ -2523,7 +2523,7 @@ if ( $wmgUseTranslate ) {
 	if ( $wmgUseTranslationMemory ) {
 		// Switch to 'eqiad' or 'codfw' if you plan to bring down
 		// the elastic cluster equals to $wmfDatacenter
-		$wgTranslateTranslationDefaultService = $wmfDatacenter;
+		$wgTranslateTranslationDefaultService = 'codfw';
 
 		// If the downtime is long (> 10mins) consider disabling
 		// mirroring in this var to avoid logspam about ttm updates
