@@ -19460,7 +19460,7 @@ $wgConf->settings = [
 
 'wmgCirrusSearchMLRModel' => [
 	'default' => false,
-	'enwiki' => '20170911_enwiki_v1',
+	'enwiki' => 'enwiki_32153k_500t',
 	'arwiki' => '20170905_arwiki_v1',
 	'fawiki' => '20170905_fawiki_v1',
 	'jawiki' => '20170905_jawiki_v1',
