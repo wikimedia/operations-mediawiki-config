@@ -132,14 +132,8 @@ if ( $wmgUseWikibaseRepo ) {
 	// on either Item or Property pages. T86453
 	$wgCaptchaTriggersOnNamespace[NS_MAIN]['addurl'] = false;
 	$wgCaptchaTriggersOnNamespace[WB_NS_PROPERTY]['addurl'] = false;
-	if ( $wgDBname === 'testwikidatawiki' ) {
-		// Enable Cirrus on test.wikidata.org
-		$wgWBRepoSettings['entitySearch']['useCirrus'] = true;
-	} else {
-		// Soft-enable Cirrus usage for wbsearchentities
-		// Cirrus search will be used if useCirrus=1 parameter is set
-		$wgWBRepoSettings['entitySearch']['useCirrus'] = null;
-	}
+	// Cirrus usage for wbsearchentities is on
+	$wgWBRepoSettings['entitySearch']['useCirrus'] = true;
 }
 
 if ( $wmgUseWikibaseClient ) {
