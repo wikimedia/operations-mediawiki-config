@@ -5141,8 +5141,8 @@ $wgConf->settings = [
 		'cite' => 'debug',
 		'Cognate' => 'debug', // WMDE & Addshore
 		'collection' => 'debug', // -cscott for T73675
-		'csp' => 'info',
-		'csp-report-only' => 'info',
+		'csp' => [ 'logstash' => false, 'upd2log' => 'info' ],
+		'csp-report-only' => [ 'logstash' => false, 'upd2log' => 'info' ],
 		'DBPerformance' => [ 'logstash' => 'debug', 'udp2log' => 'warning' ],
 		'deprecated' => 'debug',
 		'diff' => 'debug',
