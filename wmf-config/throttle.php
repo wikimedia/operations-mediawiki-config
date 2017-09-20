@@ -44,27 +44,11 @@ $wmgThrottlingExceptions[] = [
 	'value' => 120 // 100 expected
 ];
 
-$wmgThrottlingExceptions[] = [ // T175534 (1)
-	'from' => '2017-09-16T10:00 +8:00',
-	'to' => '2017-09-16T17:00 +8:00',
-	'IP' => '140.114.51.248',
-	'dbname' => [ 'commonswiki', 'zhwiki' ],
-	'value' => 80, // 50 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T175534 (2)
-	'from' => '2017-09-17T09:00 +8:00',
-	'to' => '2017-09-17T16:00 +8:00',
-	'IP' => '140.114.51.248',
-	'dbname' => [ 'commonswiki', 'zhwiki' ],
-	'value' => 80, // 50 expected
-];
-
-$wmgThrottlingExceptions[] = [ // T175700
-	'from'   => '2017-09-15T10:00 +1:00',
-	'to'     => '2017-09-15T18:00 +1:00',
-	'range'  => '130.88.64.0/24',
-	'dbname' => [ 'enwiki' ],
-	'value'  => 30 // 20 expected
+$wmgThrottlingExceptions[]  = [ // T176287 - John Michael Kohler Art Center
+	'from'   => '2017-09-21T13:00-05:00', // Central
+	'to'     => '2017-09-26T22:00-05:00',
+	'IP'  => '192.168.50.52',
+	'dbname' => [ 'enwiki', 'commonswiki' ],
+	'value'  => 100, // 100 expected participants (not specified)
 ];
 ## Add throttling definitions above.
