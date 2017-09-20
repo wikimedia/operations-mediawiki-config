@@ -17435,6 +17435,7 @@ $wgConf->settings = [
 		829, // Module_talk from Scribunto
 		2301, // Gadget_talk from Gadgets
 		2303, // Gadget_definition_talk from Gadgets
+		5501, // T176199 Newsletter talk from Newsletter extension
 	],
 	'cawiki' => [
 		NS_PROJECT_TALK, // T99117
@@ -19445,6 +19446,7 @@ $wgConf->settings = [
 	'default' => false,
 	'testwiki' => true, // T110170
 	'mediawikiwiki' => true, // T110170
+	'officewiki' => true, // T176199
 ],
 
 'wmgUseLoginNotify' => [
