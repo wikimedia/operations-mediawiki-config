@@ -4920,6 +4920,11 @@ $wgConf->settings = [
 	'default' => true,
 ],
 
+'wgEnableUserEmailBlacklist' => [
+	'default' => false,
+	'metawiki' => true,
+],
+
 'wgAutoConfirmCount' => [
 	'default' => 0,
 	'arwiki' => 50, // T14123
