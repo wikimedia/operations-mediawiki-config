@@ -19399,6 +19399,14 @@ $wgConf->settings = [
 	'wikipedia' => 0.001,
 ],
 
+'wgWMEPrintEnabled' => [
+	'default' => true  // T176341
+],
+
+'wgWMEPrintSamplingRate' => [
+	'default' => 0.1  // T176341
+],
+
 'wmgUsePageViewInfo' => [
 	'default' => true,
 	'private' => false,
