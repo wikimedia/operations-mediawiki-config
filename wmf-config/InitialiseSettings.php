@@ -19503,7 +19503,6 @@ $wgConf->settings = [
 
 'wmgWMESearchRelevancePages' => [
 	'default' => [],
-	'enwiki' => include __DIR__ . '/CirrusSearch-rel-survey.php',
 ],
 
 'wmgUseDynamicSidebar' => [
