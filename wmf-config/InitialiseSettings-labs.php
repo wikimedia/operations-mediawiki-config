@@ -502,6 +502,10 @@ function wmfLabsSettings() {
 			'default' => true,
 		],
 
+		'wmgUseAdvancedSearch' => [
+			'default' => true,
+		],
+
 		// Test Wikidata descriptions on mobile: T127250
 		'wgMFDisplayWikibaseDescriptions' => [
 			'enwiki' => [
